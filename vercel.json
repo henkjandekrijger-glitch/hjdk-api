@@ -1,0 +1,77 @@
+{
+ "crons": [
+  {
+   "path": "/api/hjdk/iterate",
+   "schedule": "17 */6 * * *"
+  },
+  {
+   "path": "/api/bol/learn",
+   "schedule": "41 */6 * * *"
+  },
+  {
+   "path": "/api/pinterest/post",
+   "schedule": "15 7 * * *"
+  }
+ ],
+ "rewrites": [
+  {
+   "source": "/",
+   "destination": "/api/home"
+  },
+  {
+   "source": "/setup",
+   "destination": "/api/setup"
+  },
+  {
+   "source": "/pins",
+   "destination": "/api/pinterest?op=pins"
+  },
+  {
+   "source": "/api/pinterest/:op",
+   "destination": "/api/pinterest?op=:op"
+  },
+  {
+   "source": "/api/bol/:op",
+   "destination": "/api/bol?op=:op"
+  },
+  {
+   "source": "/api/amz/:op",
+   "destination": "/api/amz?op=:op"
+  },
+  {
+   "source": "/t/:page",
+   "destination": "/api/t?page=:page"
+  },
+  {
+   "source": "/b/:slug",
+   "destination": "/api/b?slug=:slug"
+  },
+  {
+   "source": "/api/hjdk/stats/:rest*",
+   "destination": "/api/hjdk/stats?p=:rest*"
+  }
+ ],
+ "headers": [
+  {
+   "source": "/api/(.*)",
+   "headers": [
+    {
+     "key": "Access-Control-Allow-Origin",
+     "value": "*"
+    },
+    {
+     "key": "Access-Control-Allow-Methods",
+     "value": "GET,POST,OPTIONS"
+    },
+    {
+     "key": "Access-Control-Allow-Headers",
+     "value": "Content-Type,x-hjdk-token"
+    },
+    {
+     "key": "Cache-Control",
+     "value": "no-store"
+    }
+   ]
+  }
+ ]
+}
