@@ -30,17 +30,28 @@ export default async function handler(req, res) {
       return res.status(200).json(out);
     }
     if (op === 'pick') {
+      // Slim: alleen een product als het ECHT bij de pagina past. Pagina's over Yoors zelf, nieuws, updates enz. krijgen niets (ok:false, reason).
       const q = clean(url.searchParams.get('q') || '').slice(0, 120); if (!q) return res.status(400).json({ ok: false, error: 'q ontbreekt' });
+      const NOGO = /\b(yoors|payout|payouts|uitbetaling|deadline|update|updates|community|creators?|nieuwsbrief|newsletter|platform|beleid|policy|voorwaarden|terms|we luisteren|jullie vragen|bedankt|welkom|welcome|introductie|verdien|earn|referral|wedstrijd|contest|winnaar|winner|maandoverzicht|overzicht|column|opinie|mening|gedicht|poem|verhaal|story|dagboek|diary|nieuws|news|politiek|politics|verkiezing|oorlog|war|overleden|rip)\b/i;
+      if (NOGO.test(q)) return res.status(200).json({ ok: false, product: null, term: '', reason: 'nogo' });
       const term = termFromTitle(q) || q.toLowerCase();
-      const key = 'hjdk:pick:' + country + ':' + term.slice(0, 80);
-      try { const c = await kv.get(key); if (c && c.at && Date.now() - c.at < 24 * 3600 * 1000) return res.status(200).json({ ok: !!c.product, product: c.product || null, term, cached: true }); } catch (e) {}
-      let product = null, error = '';
-      try { const r = await searchCached(term, { country, size: 10, sort: 'RELEVANCE' }); const cands = r.products.filter(p => p.price != null && p.image);
-        // voorkeur: goed beoordeeld én niet te goedkoop (commissie = prijs × percentage); binnen de top-5 op relevantie
-        const score = p => (Math.min(5, p.rating || 3.5)) + (p.price >= 20 ? 1 : 0) + (p.price >= 40 ? 0.5 : 0) - (p.price < 10 ? 1 : 0);
-        product = cands.slice(0, 5).sort((a, b) => score(b) - score(a))[0] || cands[0] || r.products[0] || null; } catch (e) { error = String(e && e.message || e).slice(0, 160); }
-      if (!error) { try { await kv.set(key, { at: Date.now(), product }); } catch (e) {} }
-      return res.status(200).json({ ok: !!product, product, term, error: error || undefined });
+      const toks = term.split(' ').filter(w => w.length >= 4);
+      if (!toks.length) return res.status(200).json({ ok: false, product: null, term, reason: 'te weinig houvast' });
+      const key = 'hjdk:pick2:' + country + ':' + term.slice(0, 80);
+      try { const c = await kv.get(key); if (c && c.at && Date.now() - c.at < 24 * 3600 * 1000) return res.status(200).json({ ok: !!c.product, product: c.product || null, term, fit: c.fit, reason: c.reason, cached: true }); } catch (e) {}
+      let product = null, error = '', fit = 0, reason = '';
+      try { const r = await searchCached(term, { country, size: 10, sort: 'RELEVANCE' });
+        // pasvorm: hoeveel van de titelwoorden (>=4 letters, stam van 5) komen terug in de producttitel
+        const stem = w => w.slice(0, 5);
+        const fitOf = p => { const t = String(p.title || '').toLowerCase(); const hits = toks.filter(w => t.indexOf(stem(w)) >= 0).length; return hits / toks.length; };
+        const cands = r.products.filter(p => p.price != null && p.image).map(p => Object.assign({}, p, { fit: fitOf(p) })).filter(p => p.fit >= (toks.length <= 2 ? 0.5 : 0.34));
+        // voorkeur: pasvorm eerst, dan beoordeling en niet te goedkoop (commissie = prijs × percentage)
+        const score = p => p.fit * 3 + Math.min(5, p.rating || 3.5) / 5 + (p.price >= 20 ? 0.5 : 0) + (p.price >= 40 ? 0.25 : 0) - (p.price < 10 ? 0.5 : 0);
+        product = cands.slice(0, 6).sort((a, b) => score(b) - score(a))[0] || null;
+        if (product) { fit = product.fit; delete product.fit; } else reason = r.products.length ? 'geen passend product' : 'geen resultaat';
+      } catch (e) { error = String(e && e.message || e).slice(0, 160); }
+      if (!error) { try { await kv.set(key, { at: Date.now(), product, fit, reason }); } catch (e) {} }
+      return res.status(200).json({ ok: !!product, product, term, fit, reason: reason || undefined, error: error || undefined });
     }
     if (op === 'search') {
       const q = clean(url.searchParams.get('q') || '').slice(0, 120);
@@ -132,6 +143,22 @@ export default async function handler(req, res) {
       const out = { ok: true, from, to, days, orders: orders.length, matched, unmatched, posted, postedList, byPct, minClicks, advies: { zonesUitsluiten: exclude, zonesMetOrders: keep, paginasOpCommissie: pageRank, layouts }, zones, pageZone };
       try { await kv.set('hjdk:learn:v1', { at: Date.now(), from, to, zones, pages, layouts, byPct }); } catch (e) {}
       return res.status(200).json(out);
+    }
+    if (op === 'popular') {
+      // Lezersfavorieten: producten die Yoors-lezers via onze bruggen/banners het vaakst bekeken (eigen tellers), met foto en prijs. 1 uur cache.
+      const ck = 'hjdk:popular:v1';
+      try { const c = await kv.get(ck); if (c && c.at && Date.now() - c.at < 3600 * 1000) return res.status(200).json({ ok: true, products: c.products, cached: true }); } catch (e) {}
+      let keys = [], cursor = '0';
+      for (let i = 0; i < 20; i++) { const [c, ks] = await kv.scan(cursor, { match: 'hjdk:bridge3:*', count: 500 }); cursor = c; keys = keys.concat(ks.filter(k => !/:last:|:amz:/.test(k))); if (cursor === '0') break; }
+      const vals = keys.length ? await kv.mget(...keys) : [];
+      const cand = [];
+      keys.forEach((k, i) => { const v = vals[i]; if (!v || !v.products) return; const slug = k.replace('hjdk:bridge3:', ''); v.products.forEach(p => { if (p.image && p.price != null) cand.push({ slug, id: p.id, title: p.name || p.title, url: p.url, image: p.image, price: p.price, rating: p.rating, delivery: p.delivery || '' }); }); });
+      const ckeys = cand.map(c => 'c:hjdk6-brp-' + c.slug + '-' + c.id + '-clk');
+      const clicks = ckeys.length ? await kv.mget(...ckeys) : [];
+      cand.forEach((c, i) => { c.clicks = Number(clicks[i]) || 0; });
+      const seen = {}; const products = cand.sort((a, b) => b.clicks - a.clicks).filter(c => { if (seen[c.id]) return false; seen[c.id] = 1; return true; }).slice(0, 8);
+      try { await kv.set(ck, { at: Date.now(), products }); } catch (e) {}
+      return res.status(200).json({ ok: true, products });
     }
     return res.status(400).json({ error: 'bad op', op });
   } catch (e) { return res.status(500).json({ ok: false, error: String(e && e.message || e).slice(0, 200) }); }
