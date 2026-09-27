@@ -20,7 +20,7 @@ const MD_POSTBACK = 'https://postback.mondiad.com/track?uid=31070&clickid={click
 const PA_POSTBACK = 'https://ad.propellerads.com/conversion.php?aid=3772727&pid=&tid=151850&visitor_id={clickid}&payout=0.01';
 const pbFor = (src) => /propeller|propads|^pa$/i.test(String(src || '')) ? PA_POSTBACK : MD_POSTBACK;
 const CACHE_MS = 6 * 3600 * 1000; // artikel + prijzen elke 6 uur verversen
-const VARIANTS = ['one', 'list', 'duo', 'direct']; // duo = bol én Amazon naast elkaar met beide prijzen (alleen als er Amazon-sleutels zijn en een passend product)
+const VARIANTS = ['one', 'list', 'duo']; // v21: 'direct' (automatische doorverwijzing naar bol) is definitief weg — bol-voorwaarden 3.12(i): geen advertentieverkeer rechtstreeks naar bol // duo = bol én Amazon naast elkaar met beide prijzen (alleen als er Amazon-sleutels zijn en een passend product)
 const VCODE = { one: 'o', list: 'l', duo: 'u', direct: 'd' };
 // 'direct' scoort per definitie 100% kliks en mag dus niet meelopen in de kliktest; hij krijgt een vast aandeel (bol-cijfers per subid-suffix -d/-o/-l zeggen wat hij waard is)
 const LEARN = ['one', 'list'];
@@ -170,7 +170,7 @@ export default async function handler(req, res) {
   const top = ranked[0];
   const amz = await loadAmz(slug, top.name || slugWords(slug)); // null zonder Amazon-sleutels of zonder passend product
   const learn = amz ? LEARN.concat('duo') : LEARN;
-  let variant = VARIANTS.indexOf(String(q.v || '')) >= 0 ? String(q.v) : (String(q.m || '') === 'r' ? 'direct' : '');
+  let variant = VARIANTS.indexOf(String(q.v || '')) >= 0 ? String(q.v) : ''; // ?m=r (direct) wordt genegeerd sinds v21
   if (variant === 'duo' && !amz) variant = '';
   // leren op orders (uit /api/bol/learn, per lay-out over alle pagina's): zodra er ≥5 orders zijn, kiest de helft van de bezoekers de lay-out met de hoogste commissie per 1.000 kliks
   let orderPick = '';
@@ -180,8 +180,7 @@ export default async function handler(req, res) {
     if (totalOrders >= 5) { cands.sort((p, q) => (q.x.commissionPer1000 || 0) - (p.x.commissionPer1000 || 0)); if (cands[0] && (cands[0].x.commissionPer1000 || 0) > 0) orderPick = cands[0].v; } } catch (e) {}
   if (!variant && orderPick && Math.random() < 0.5) variant = orderPick;
   if (!variant) {
-    if (Math.random() < DIRECT_SHARE) variant = 'direct';
-    else { let best = -1; learn.forEach(v => { const hum = st['hjdk6-brv-' + slug + '-' + v + '-hum'], arr = st['hjdk6-brv-' + slug + '-' + v + '-arr'], clk = st['hjdk6-brv-' + slug + '-' + v + '-clk']; const n = hum > 0 ? hum : arr; const s = betaSample(clk, Math.max(0, n - clk)); if (s > best) { best = s; variant = v; } }); }
+    { let best = -1; learn.forEach(v => { const hum = st['hjdk6-brv-' + slug + '-' + v + '-hum'], arr = st['hjdk6-brv-' + slug + '-' + v + '-arr'], clk = st['hjdk6-brv-' + slug + '-' + v + '-clk']; const n = hum > 0 ? hum : arr; const s = betaSample(clk, Math.max(0, n - clk)); if (s > best) { best = s; variant = v; } }); }
   }
   const shown = variant === 'list' ? ranked.slice(0, 5) : [top];
   // aankomst tellen (server: telt ook bots; vergelijk met -view en -hum)
