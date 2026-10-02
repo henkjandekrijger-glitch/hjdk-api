@@ -1,0 +1,343 @@
+{
+  "site": { "name": "Keuzehulp", "tagline": "In 3 vragen naar het product dat bij jou past — met de prijs van vandaag bij bol.", "owner": "AdsFair B.V., Albert Plesmanplein 20, 2805 AB Gouda", "email": "henkjan@adsfair.xyz" },
+  "items": [
+    {
+      "slug": "airfryer", "cat": "Koken", "pct": 7, "term": "airfryer", "title": "Welke airfryer past bij jou?", "h1": "Airfryer kiezen: welke maat en welk type?",
+      "intro": "Een airfryer die te klein is, gebruik je twee keer en zet je dan in de kast. Te groot neemt je halve aanrecht in. Drie vragen en je weet welke inhoud, welk type en welk budget bij jouw keuken past.",
+      "questions": [
+        { "q": "Voor hoeveel personen kook je meestal?", "options": [
+          { "label": "1–2 personen", "must": ["3,5", "4 l", "4l", "4,2", "compact", "mini"], "max": 110 },
+          { "label": "3–4 personen", "must": ["5", "5,5", "6 l", "6l", "6,2", "xl"], "min": 60 },
+          { "label": "5 of meer", "must": ["8", "9", "10", "11", "dual", "xxl", "double"], "min": 90 } ] },
+        { "q": "Wat vind je het belangrijkst?", "options": [
+          { "label": "Gewoon snel en goed frituren", "add": "" },
+          { "label": "Twee gerechten tegelijk", "add": "dual zone", "must": ["dual", "2 lades", "twee lades", "double"] },
+          { "label": "Ook bakken, grillen en ontdooien", "add": "multifunctioneel", "must": ["grill", "oven", "multi", "11-in-1", "9-in-1", "8-in-1"] } ] },
+        { "q": "Wat is je budget?", "options": [
+          { "label": "Tot €80", "max": 80 }, { "label": "€80–150", "min": 70, "max": 160 }, { "label": "Prijs maakt niet uit", "min": 100 } ] } ],
+      "uitleg": "Reken 1 tot 1,5 liter inhoud per persoon: 4 liter is genoeg voor twee, een gezin heeft 6 liter of meer nodig. Een dual-zone-airfryer heeft twee lades met elk een eigen temperatuur, handig als je friet en kip tegelijk wilt, maar hij is breed. Let op het vermogen (1.500–2.000 W is gangbaar) en op een uitneembare, vaatwasserbestendige mand: dat scheelt elke dag schoonmaakwerk.",
+      "fouten": ["Te klein kopen omdat hij er compact uitziet: een 3,5 liter-mand is vol met één zak friet.", "Alleen op het wattage letten; de maatvoering en de luchtstroom bepalen het resultaat.", "Een model zonder losse mand kiezen, waardoor je de hele bak moet afwassen."]
+    },
+    {
+      "slug": "koffiezetapparaat", "cat": "Koken", "pct": 7, "term": "koffiezetapparaat", "title": "Welk koffiezetapparaat past bij jou?", "h1": "Koffiezetapparaat kiezen: bonen, cups of filter?",
+      "intro": "Koffie zet je elke dag. Een verkeerde keuze irriteert dus ook elke dag: te duur in gebruik, te veel schoonmaken of gewoon niet lekker. Drie vragen bepalen welk type bij je past.",
+      "questions": [
+        { "q": "Hoe wil je koffie zetten?", "options": [
+          { "label": "Met verse bonen (volautomaat)", "term": "volautomatische koffiemachine bonen", "min": 200 },
+          { "label": "Met cups of pads", "term": "koffiecupmachine", "max": 200 },
+          { "label": "Filterkoffie, een hele pot", "term": "filterkoffiezetapparaat", "max": 150 } ] },
+        { "q": "Drink je ook cappuccino of latte?", "options": [
+          { "label": "Ja, graag met echt melkschuim", "must": ["melk", "cappuccino", "latte", "schuim"] },
+          { "label": "Nee, gewoon zwarte koffie", "add": "" } ] },
+        { "q": "Hoeveel kopjes per dag in huis?", "options": [
+          { "label": "1–3", "add": "" }, { "label": "4–8", "add": "" }, { "label": "Meer dan 8 (groot gezin of kantoor)", "min": 120 } ] } ],
+      "uitleg": "Een volautomaat is duur in aanschaf maar het goedkoopst per kopje (bonen kosten 10–15 cent per kop); cups kosten 30–45 cent per kop maar vragen nul onderhoud. Filterkoffie is het goedkoopst en het beste bij grote hoeveelheden. Wil je melkschuim, kies dan een machine met een geïntegreerd melksysteem; losse opschuimers zijn gedoe.",
+      "fouten": ["Een volautomaat kopen en het ontkalken overslaan: binnen een jaar is hij stuk.", "Cups kiezen voor een gezin van vier: dat is 100 euro per maand aan koffie.", "Een goedkope espressomachine zonder drukpomp (minder dan 15 bar) verwachten die crema geeft."]
+    },
+    {
+      "slug": "keukenmachine", "cat": "Koken", "pct": 7, "term": "keukenmachine", "title": "Welke keukenmachine past bij jou?", "h1": "Keukenmachine kiezen: kom, vermogen en accessoires",
+      "intro": "Een keukenmachine koop je voor tien jaar. De kom-inhoud en het vermogen bepalen of je er brooddeeg mee kneedt of alleen slagroom klopt. Drie vragen en je weet welke klasse je nodig hebt.",
+      "questions": [
+        { "q": "Wat ga je er vooral mee doen?", "options": [
+          { "label": "Taarten en cake bakken", "add": "mixer", "must": ["mixer", "kom", "klop"] },
+          { "label": "Brood- en pizzadeeg kneden", "add": "kneden deeg", "must": ["kneed", "deeg", "1000", "1200", "1500"], "min": 150 },
+          { "label": "Alles: hakken, raspen, mixen én kneden", "add": "foodprocessor", "must": ["food", "processor", "multi", "snijd", "rasp"] } ] },
+        { "q": "Voor hoeveel personen?", "options": [
+          { "label": "1–2", "must": ["3", "3,5", "4", "compact"], "max": 250 }, { "label": "3–5", "must": ["4,5", "5", "5,5"], "min": 100 }, { "label": "Grote hoeveelheden", "must": ["6", "6,5", "7", "xl"], "min": 200 } ] },
+        { "q": "Budget?", "options": [ { "label": "Tot €150", "max": 150 }, { "label": "€150–400", "min": 140, "max": 420 }, { "label": "Topklasse", "min": 350 } ] } ],
+      "uitleg": "Voor deeg heb je een planetaire mixer met minimaal 1.000 watt en een metalen kom van 4,5 liter of meer nodig. Voor hakken en raspen is een foodprocessor met schijven handiger dan een mixer met opzetstukken. Een zware machine (8 kg of meer) wandelt niet over het aanrecht bij het kneden.",
+      "fouten": ["Een lichte, goedkope mixer kopen voor brooddeeg: de motor brandt door.", "De kom te groot kiezen voor kleine porties: de garde raakt het deeg niet.", "Vergeten te checken of de kom en de hulpstukken in de vaatwasser mogen."]
+    },
+    {
+      "slug": "blender", "cat": "Koken", "pct": 7, "term": "blender", "title": "Welke blender past bij jou?", "h1": "Blender kiezen: smoothies, soep of alles?",
+      "intro": "Een blender voor smoothies is iets anders dan een blender voor hete soep of ijs. Drie vragen bepalen of je een staafmixer, een blender-to-go of een krachtige standblender nodig hebt.",
+      "questions": [
+        { "q": "Wat maak je het vaakst?", "options": [
+          { "label": "Smoothies voor onderweg", "term": "blender to go", "must": ["to go", "to-go", "fles", "portable", "draagbaar"], "max": 90 },
+          { "label": "Soep, saus en babyvoeding", "term": "staafmixer", "max": 120 },
+          { "label": "Alles, ook ijs, noten en groene smoothies", "term": "standblender krachtig", "must": ["1200", "1500", "1800", "2000", "high", "power", "ijs"], "min": 70 } ] },
+        { "q": "Hoeveel personen?", "options": [ { "label": "1", "add": "" }, { "label": "2–4", "must": ["1,5", "1.5", "1,75", "2 l", "2l"] }, { "label": "Meer", "min": 80 } ] },
+        { "q": "Budget?", "options": [ { "label": "Tot €50", "max": 50 }, { "label": "€50–150", "min": 45, "max": 160 }, { "label": "Prijs maakt niet uit", "min": 100 } ] } ],
+      "uitleg": "Voor bevroren fruit en ijs heb je minimaal 1.000 watt en stevige messen nodig; een blender van 300 watt stokt. Een staafmixer is onverslaanbaar voor soep in de pan en neemt geen ruimte in. Blenders-to-go zijn ideaal voor één persoon, maar de accu-modellen zijn te zwak voor hard fruit.",
+      "fouten": ["Een accu-blender kopen voor bevroren fruit.", "Een glazen kan willen zonder te kijken naar het gewicht (2–3 kg).", "Geen pulse-stand: dan wordt alles puree in plaats van gehakt."]
+    },
+    {
+      "slug": "pannenset", "cat": "Koken", "pct": 7, "term": "pannenset", "title": "Welke pannenset past bij jou?", "h1": "Pannenset kiezen: inductie, coating en maat",
+      "intro": "Pannen moeten bij je kookplaat, je kookstijl en je vaatwasser passen. Drie vragen en je weet welk materiaal en welke set je nodig hebt.",
+      "questions": [
+        { "q": "Op wat voor kookplaat kook je?", "options": [
+          { "label": "Inductie", "must": ["inductie"] }, { "label": "Gas", "add": "" }, { "label": "Keramisch of elektrisch", "add": "" } ] },
+        { "q": "Hoe kook je?", "options": [
+          { "label": "Snel en makkelijk, weinig schoonmaken", "add": "anti-aanbak", "must": ["anti-aanbak", "antiaanbak", "keramisch", "non-stick"] },
+          { "label": "Ik bak graag hard aan (vlees, wok)", "add": "rvs", "must": ["rvs", "roestvrij", "gietijzer", "carbon"] },
+          { "label": "Zo gezond en duurzaam mogelijk", "add": "rvs zonder coating", "must": ["rvs", "roestvrij", "gietijzer"] } ] },
+        { "q": "Voor hoeveel personen?", "options": [ { "label": "1–2", "must": ["3-delig", "4-delig", "16", "18", "20"], "max": 150 }, { "label": "3–4", "must": ["5-delig", "6-delig", "7-delig", "24", "28"] }, { "label": "Groot gezin", "must": ["8-delig", "9-delig", "10-delig", "11-delig", "12-delig", "28", "30"], "min": 80 } ] } ],
+      "uitleg": "Op inductie werkt alleen een pan met magnetische bodem; staat 'inductie' niet in de titel, dan is het gokken. Anti-aanbak gaat twee tot vier jaar mee en mag niet te heet; rvs en gietijzer gaan een leven lang mee maar vragen techniek. Een set van vijf pannen is voor de meeste huishoudens genoeg: twee koekenpannen, twee kookpannen en een soeppan.",
+      "fouten": ["Anti-aanbakpannen op de hoogste stand voorverwarmen: de coating is binnen een jaar weg.", "Een set van twaalf delen kopen waarvan je er vier gebruikt.", "Deksels van glas zonder stoomgaatje: ze kletteren en spetteren."]
+    },
+    {
+      "slug": "stofzuiger", "cat": "Huishouden", "pct": 7, "term": "stofzuiger", "title": "Welke stofzuiger past bij jou?", "h1": "Stofzuiger kiezen: steel, robot of slede?",
+      "intro": "Een steelstofzuiger is handig, een robot is lui en een sledestofzuiger is krachtig. Welke bij jou past hangt af van je vloer, je huisdieren en hoe groot je huis is. Drie vragen.",
+      "questions": [
+        { "q": "Hoe groot is je huis?", "options": [
+          { "label": "Appartement, tot 70 m²", "term": "steelstofzuiger", "must": ["steel", "snoerloos", "draadloos", "accu"] },
+          { "label": "Eengezinswoning, 70–150 m²", "add": "" },
+          { "label": "Groot huis met trappen", "min": 150 } ] },
+        { "q": "Huisdieren of lang haar in huis?", "options": [
+          { "label": "Ja, veel haren", "must": ["dier", "pet", "haar", "animal"], "min": 120 },
+          { "label": "Nee", "add": "" } ] },
+        { "q": "Wat wil je?", "options": [
+          { "label": "Zo min mogelijk zelf doen", "term": "robotstofzuiger", "must": ["robot"], "min": 150 },
+          { "label": "Snel even tussendoor", "term": "steelstofzuiger snoerloos", "must": ["steel", "snoerloos", "draadloos"] },
+          { "label": "Maximale zuigkracht", "term": "sledestofzuiger", "must": ["slede", "met snoer", "snoer"] } ] } ],
+      "uitleg": "Een snoerloze steelstofzuiger moet minimaal 40 minuten op één acculading halen en een losse borstel voor haren hebben. Een robot werkt alleen goed als hij een kaart maakt (laser/lidar) en drempels van 2 cm neemt; met dweilfunctie doet hij ook de keukenvloer. Voor dik tapijt en veel haar blijft een sledestofzuiger met snoer het sterkst en het goedkoopst.",
+      "fouten": ["Een accu-steelstofzuiger van 20 minuten kopen voor een groot huis.", "Een robot zonder kaartfunctie: die botst en mist hoeken.", "Het filtertype negeren: zonder HEPA-filter blaast hij fijnstof terug."]
+    },
+    {
+      "slug": "robotstofzuiger", "cat": "Huishouden", "pct": 7, "term": "robotstofzuiger", "title": "Welke robotstofzuiger past bij jou?", "h1": "Robotstofzuiger kiezen: dweilen, kaart en huisdieren",
+      "intro": "Een goede robot stofzuigt elke dag zonder dat je het merkt. Een slechte blijft hangen onder de bank. Drie vragen bepalen welke functies je echt nodig hebt.",
+      "questions": [
+        { "q": "Welke vloeren heb je?", "options": [
+          { "label": "Vooral harde vloer (laminaat, tegels)", "add": "dweilen", "must": ["dweil", "mop", "nat"] },
+          { "label": "Veel tapijt", "must": ["tapijt", "carpet", "zuigkracht", "pa"] },
+          { "label": "Gemengd", "add": "" } ] },
+        { "q": "Huisdieren?", "options": [ { "label": "Ja", "must": ["dier", "pet", "haar"], "min": 200 }, { "label": "Nee", "add": "" } ] },
+        { "q": "Hoeveel gemak wil je?", "options": [
+          { "label": "Zelf legen is prima", "max": 350 },
+          { "label": "Zelfledigend station", "must": ["station", "zelfledigend", "auto-empty", "leegstation"], "min": 250 },
+          { "label": "Alles automatisch: legen, dweil wassen, water", "must": ["station", "wast", "wassen", "omni", "complete"], "min": 500 } ] } ],
+      "uitleg": "Laser-navigatie (lidar) is de belangrijkste eigenschap: daarmee maakt hij een kaart, stel je no-go-zones in en mist hij geen kamer. Een zelfledigend station is het verschil tussen één keer per maand en elke dag het bakje legen. Dweilen werkt alleen echt met roterende moppen die het station zelf wast; een natte doek die meesleept is niet meer dan stof vegen.",
+      "fouten": ["Een robot zonder lidar kopen omdat hij goedkoop is.", "Een dweilrobot op tapijt laten rijden zonder tapijtherkenning.", "Vergeten dat hij 10 cm hoogte onder meubels nodig heeft."]
+    },
+    {
+      "slug": "strijkijzer", "cat": "Huishouden", "pct": 7, "term": "strijkijzer", "title": "Strijkijzer, stoomgenerator of kledingstomer?", "h1": "Strijken: welk apparaat past bij jouw was?",
+      "intro": "Strijk je drie overhemden per week of een hele mand per dag? Dat bepaalt of een gewoon stoomstrijkijzer genoeg is, of dat een stoomgenerator of een kledingstomer je uren bespaart.",
+      "questions": [
+        { "q": "Hoeveel strijk je?", "options": [
+          { "label": "Af en toe een paar stuks", "term": "stoomstrijkijzer", "max": 90 },
+          { "label": "Elke week een mand", "term": "stoomstrijkijzer", "must": ["stoom", "2400", "2600", "2800", "3000"], "min": 40 },
+          { "label": "Veel, voor het hele gezin", "term": "stoomgenerator", "must": ["generator", "stoomstation", "bar"], "min": 100 } ] },
+        { "q": "Wat strijk je vooral?", "options": [
+          { "label": "Overhemden en blouses", "add": "" },
+          { "label": "Jurken, pakken, gordijnen (hangend)", "term": "kledingstomer", "must": ["stomer", "steamer", "kleding"] },
+          { "label": "Beddengoed en lakens", "term": "stoomgenerator", "must": ["generator", "stoomstation"] } ] },
+        { "q": "Budget?", "options": [ { "label": "Tot €50", "max": 50 }, { "label": "€50–150", "min": 45, "max": 160 }, { "label": "Prijs maakt niet uit", "min": 120 } ] } ],
+      "uitleg": "Stoom doet het werk, niet de druk van je arm: let op de stoomstoot (minimaal 150 g/min) en de continue stoom. Een stoomgenerator heeft een losse watertank en 5–8 bar druk, waardoor je in de helft van de tijd klaar bent. Een kledingstomer strijkt niet strak, maar haalt kreukels uit hangende kleding in een minuut.",
+      "fouten": ["Een strijkijzer van 1.200 watt kopen: hij koelt af bij elke stoomstoot.", "Een stoomgenerator zonder antikalkpatroon in een hardwatergebied.", "Verwachten dat een kledingstomer een overhemd strak krijgt."]
+    },
+    {
+      "slug": "wasmachine", "cat": "Huishouden", "pct": 7, "term": "wasmachine", "title": "Welke wasmachine past bij jou?", "h1": "Wasmachine kiezen: vulgewicht, energie en geluid",
+      "intro": "Een wasmachine gaat tien jaar mee en draait honderden keren per jaar. Vulgewicht, energielabel en geluid bepalen samen de kosten en het gemak. Drie vragen.",
+      "questions": [
+        { "q": "Hoeveel personen in huis?", "options": [
+          { "label": "1–2", "must": ["6 kg", "6kg", "7 kg", "7kg"], "max": 600 },
+          { "label": "3–4", "must": ["8 kg", "8kg", "9 kg", "9kg"] },
+          { "label": "5 of meer", "must": ["10 kg", "10kg", "11 kg", "12 kg"], "min": 450 } ] },
+        { "q": "Waar staat hij?", "options": [
+          { "label": "In of naast een woonruimte (geluid telt)", "must": ["stil", "db", "silent", "inverter"], "min": 400 },
+          { "label": "Op zolder of in de berging", "add": "" } ] },
+        { "q": "Wat telt het meest?", "options": [
+          { "label": "Zuinig (laag verbruik)", "must": ["a-10", "a -10", "label a", "energieklasse a"], "min": 400 },
+          { "label": "Snel (korte programma's)", "must": ["snel", "quick", "15", "speed"] },
+          { "label": "Goedkoop in aanschaf", "max": 450 } ] } ],
+      "uitleg": "Reken 1,5–2 kg per persoon; 8 kg is de gulden middenweg. Energielabel A scheelt bij 250 wasbeurten per jaar zo'n 30 euro per jaar ten opzichte van C. Een invertermotor is stiller en gaat langer mee; 1.400 toeren centrifugeren maakt de was droger en bespaart drogerkosten.",
+      "fouten": ["Te klein kopen en dan twee keer draaien.", "Niet meten: de meeste machines zijn 60 cm breed en 85 cm hoog, maar de diepte varieert van 45 tot 65 cm.", "Een machine zonder automatische dosering kiezen als je altijd te veel wasmiddel gebruikt."]
+    },
+    {
+      "slug": "luchtreiniger", "cat": "Huishouden", "pct": 7, "term": "luchtreiniger", "title": "Welke luchtreiniger past bij jouw ruimte?", "h1": "Luchtreiniger kiezen: m², filter en geluid",
+      "intro": "Een luchtreiniger werkt alleen als hij groot genoeg is voor de ruimte en de juiste filters heeft. Drie vragen bepalen welke klasse je nodig hebt.",
+      "questions": [
+        { "q": "Hoe groot is de ruimte?", "options": [
+          { "label": "Slaapkamer, tot 20 m²", "must": ["20 m", "25 m", "30 m", "compact", "slaapkamer"], "max": 200 },
+          { "label": "Woonkamer, 20–50 m²", "must": ["40 m", "45 m", "50 m", "60 m", "70 m"], "min": 100 },
+          { "label": "Grote open ruimte, 50 m² of meer", "must": ["80 m", "90 m", "100 m", "120 m", "xl"], "min": 200 } ] },
+        { "q": "Waarom wil je er een?", "options": [
+          { "label": "Hooikoorts, huisstofmijt, allergie", "must": ["hepa"] },
+          { "label": "Huisdieren of geurtjes", "must": ["koolstof", "carbon", "geur"] },
+          { "label": "Fijnstof, rook, gezonde lucht", "must": ["hepa", "pm2", "sensor"] } ] },
+        { "q": "Staat hij in de slaapkamer?", "options": [ { "label": "Ja, moet stil zijn", "must": ["stil", "db", "nacht", "sleep", "slaap"] }, { "label": "Nee", "add": "" } ] } ],
+      "uitleg": "Kijk naar de CADR (schone lucht per uur) en de aanbevolen m²; neem een model dat voor minimaal 1,5× jouw ruimte is bedoeld, dan draait hij stil op een lage stand. Een echt HEPA-13-filter vangt pollen en fijnstof; een koolstoffilter is nodig tegen geur. Reken filterkosten mee: 30–80 euro per jaar.",
+      "fouten": ["Te klein kopen voor de ruimte: hij draait altijd op de hoogste, luidste stand.", "Een ionisator of 'UV' nemen in plaats van een HEPA-filter.", "De filters niet vervangen; na een jaar doet hij niets meer."]
+    },
+    {
+      "slug": "matras", "cat": "Wonen", "pct": 7, "term": "matras", "title": "Welk matras past bij jou?", "h1": "Matras kiezen: hardheid, materiaal en maat",
+      "intro": "Je ligt er een derde van je leven op. De juiste hardheid hangt af van je gewicht en je slaaphouding, niet van wat de buurman fijn vindt. Drie vragen.",
+      "questions": [
+        { "q": "Welke maat?", "options": [
+          { "label": "90 × 200 (eenpersoons)", "must": ["90x200", "90 x 200", "90x210", "90 x 210"] },
+          { "label": "140 × 200", "must": ["140x200", "140 x 200"] },
+          { "label": "160 × 200 of 180 × 200", "must": ["160x200", "160 x 200", "180x200", "180 x 200"] } ] },
+        { "q": "Hoe slaap je meestal?", "options": [
+          { "label": "Op mijn zij", "add": "", "must": ["medium", "zacht", "traagschuim", "memory"] },
+          { "label": "Op mijn rug", "add": "", "must": ["medium", "stevig", "pocketvering", "koudschuim"] },
+          { "label": "Op mijn buik", "add": "", "must": ["stevig", "hard", "firm", "koudschuim", "pocketvering"] } ] },
+        { "q": "Wat is belangrijk?", "options": [
+          { "label": "Koel slapen", "must": ["pocketvering", "koel", "ventil", "gel"] },
+          { "label": "Zacht en drukverlagend", "must": ["traagschuim", "memory", "latex"] },
+          { "label": "Scherpe prijs", "max": 250 } ] } ],
+      "uitleg": "Zijslapers hebben een iets zachter matras nodig zodat schouder en heup wegzakken; buikslapers juist een stevig matras. Boven de 90 kg lichaamsgewicht kies je altijd één hardheid steviger. Pocketvering ventileert het best, traagschuim verdeelt de druk het best; koudschuim is de goedkope allrounder. Minimaal 20 cm dik voor volwassenen.",
+      "fouten": ["Een te hard matras kopen 'voor de rug': zijslapers krijgen juist pijn.", "Niet letten op de hardheidsklasse bij een zwaarder gewicht.", "Een dun matras (minder dan 16 cm) voor dagelijks gebruik."]
+    },
+    {
+      "slug": "dekbed", "cat": "Wonen", "pct": 7, "term": "dekbed", "title": "Welk dekbed past bij jou?", "h1": "Dekbed kiezen: warmteklasse, vulling en maat",
+      "intro": "Te warm, te koud, te zwaar: een dekbed is persoonlijk. Drie vragen en je weet welke warmteklasse en vulling bij jou passen.",
+      "questions": [
+        { "q": "Welke maat?", "options": [
+          { "label": "140 × 200 (eenpersoons)", "must": ["140x200", "140 x 200", "140x220", "140 x 220"] },
+          { "label": "200 × 200 (tweepersoons)", "must": ["200x200", "200 x 200", "200x220", "200 x 220"] },
+          { "label": "240 × 220 (lits-jumeaux)", "must": ["240x220", "240 x 220", "240x200"] } ] },
+        { "q": "Heb je het snel warm of snel koud?", "options": [
+          { "label": "Snel warm, ik zweet 's nachts", "must": ["zomer", "koel", "licht", "enkel", "cool"] },
+          { "label": "Gemiddeld", "must": ["4-seizoenen", "4 seizoenen", "all season", "vierseizoenen"] },
+          { "label": "Snel koud", "must": ["winter", "warm", "extra warm", "dons"] } ] },
+        { "q": "Welke vulling?", "options": [
+          { "label": "Synthetisch (wasbaar, allergievrij)", "must": ["synthetisch", "polyester", "microvezel", "anti-allergie", "wasbaar"] },
+          { "label": "Dons of veren (licht en warm)", "must": ["dons", "veren", "donzen"], "min": 60 },
+          { "label": "Wol of katoen (natuurlijk)", "must": ["wol", "katoen", "tencel", "bamboe"] } ] } ],
+      "uitleg": "Een 4-seizoenendekbed is twee dekbedden met drukknopen: dun in de zomer, samen in de winter — de beste keuze als je het niet weet. Dons is het lichtst en isoleert het best, maar is niet wasbaar op 60 graden; synthetisch wel, ideaal bij huisstofmijt. Lits-jumeaux-maat 240 × 220 voorkomt het gevecht om het dekbed.",
+      "fouten": ["Een te klein dekbed voor een 180-bed: koude randen.", "Dons kopen bij een huisstofmijtallergie.", "Alleen op gewicht letten; de warmteklasse (1–4) zegt meer."]
+    },
+    {
+      "slug": "bureaustoel", "cat": "Wonen", "pct": 7, "term": "bureaustoel", "title": "Welke bureaustoel past bij jou?", "h1": "Bureaustoel kiezen: zituren, lengte en verstelbaarheid",
+      "intro": "Acht uur per dag op een verkeerde stoel voel je in je rug en nek. Drie vragen bepalen welke verstelmogelijkheden je echt nodig hebt en wat een eerlijke prijs is.",
+      "questions": [
+        { "q": "Hoeveel uur per dag zit je?", "options": [
+          { "label": "Tot 2 uur", "max": 150 },
+          { "label": "2–6 uur", "must": ["ergonomisch", "verstelbaar", "lendensteun"], "min": 80 },
+          { "label": "Hele werkdagen (6+ uur)", "must": ["ergonomisch", "lendensteun", "4d", "synchro", "nen"], "min": 180 } ] },
+        { "q": "Je lengte?", "options": [
+          { "label": "Tot 1,70 m", "add": "" },
+          { "label": "1,70–1,85 m", "add": "" },
+          { "label": "Langer dan 1,85 m of zwaarder dan 110 kg", "must": ["hoge rug", "xl", "150 kg", "130 kg", "120 kg", "groot"], "min": 150 } ] },
+        { "q": "Wat telt?", "options": [
+          { "label": "Koel zitten (mesh)", "must": ["mesh", "netweave", "gaas"] },
+          { "label": "Zacht en gestoffeerd", "must": ["stof", "gestoffeerd", "kussen"] },
+          { "label": "Mooi in de woonkamer", "add": "design" } ] } ],
+      "uitleg": "Voor hele werkdagen zijn drie dingen verplicht: verstelbare lendensteun, zitdiepte-verstelling en een synchroonmechanisme dat meebeweegt. Armleuningen in hoogte én breedte verstelbaar voorkomen nekklachten. Mesh ventileert, maar een stoffen zitting met koudschuim zit comfortabeler dan 4 uur. Een NEN-EN-1335-keurmerk betekent dat de maten kloppen.",
+      "fouten": ["Een gamingstoel kopen voor kantoorwerk: mooi, maar vaak zonder lendensteun en zitdiepte-verstelling.", "Geen rekening houden met het gewicht: standaard tot 110 kg.", "Een stoel zonder proefperiode kiezen; 30 dagen retour is standaard bij bol."]
+    },
+    {
+      "slug": "scheerapparaat", "cat": "Verzorging", "pct": 7, "term": "scheerapparaat", "title": "Welk scheerapparaat past bij jou?", "h1": "Scheerapparaat kiezen: nat of droog, baard of glad",
+      "intro": "Een gladde kaak, een strakke baard of allebei: dat bepaalt of je een scheerapparaat, een trimmer of een combinatie nodig hebt. Drie vragen.",
+      "questions": [
+        { "q": "Wat wil je?", "options": [
+          { "label": "Elke dag gladscheren", "term": "scheerapparaat", "must": ["scheer"] },
+          { "label": "Baard trimmen en bijhouden", "term": "baardtrimmer", "must": ["trimmer", "baard"] },
+          { "label": "Alles: scheren, trimmen, lichaam", "term": "scheerapparaat multigroom", "must": ["multi", "groom", "all-in-one", "set"] } ] },
+        { "q": "Hoe is je huid?", "options": [
+          { "label": "Gevoelig, snel irritatie", "must": ["gevoelig", "sensitive", "nat", "wet", "skin"] },
+          { "label": "Normaal", "add": "" } ] },
+        { "q": "Wil je onder de douche kunnen scheren?", "options": [ { "label": "Ja, nat en droog", "must": ["nat", "wet", "douche", "waterdicht", "wet & dry"] }, { "label": "Nee, droog is prima", "add": "" } ] } ],
+      "uitleg": "Roterende apparaten (drie koppen) zijn het best bij een gevoelige huid en langere haren; folie-apparaten scheren gladder bij dagelijks gebruik. Nat-en-droog is meer dan een douche-optie: met scheergel scheer je zachter. Reken op nieuwe scheerkoppen elke 1,5–2 jaar (20–40 euro).",
+      "fouten": ["Een goedkoop apparaat met een vaste kop kopen: die volgt je kaaklijn niet.", "Trimmer kopen zonder lengtestanden onder de 1 mm als je stoppels wilt.", "Scheerkoppen nooit vervangen en denken dat het apparaat slecht is."]
+    },
+    {
+      "slug": "elektrische-tandenborstel", "cat": "Verzorging", "pct": 7, "term": "elektrische tandenborstel", "title": "Welke elektrische tandenborstel past bij jou?", "h1": "Elektrische tandenborstel kiezen: sonisch of roterend",
+      "intro": "Tandartsen zijn het eens: elektrisch poetst beter dan handmatig. Welke dan? Drie vragen bepalen of je een sonische of roterende borstel nodig hebt en welke functies de moeite waard zijn.",
+      "questions": [
+        { "q": "Wat heb je nu?", "options": [
+          { "label": "Nog nooit elektrisch gepoetst", "max": 80 },
+          { "label": "Een goedkope elektrische, wil beter", "min": 40 },
+          { "label": "Wil het beste voor mijn tandvlees", "must": ["sonisch", "sonic", "drukssensor", "druksensor"], "min": 70 } ] },
+        { "q": "Heb je gevoelig tandvlees of tanden?", "options": [
+          { "label": "Ja", "must": ["sensitive", "gevoelig", "sonisch", "sonic", "druksensor"] },
+          { "label": "Nee", "add": "" } ] },
+        { "q": "Voor wie?", "options": [
+          { "label": "Voor mezelf", "add": "" },
+          { "label": "Voor twee personen (dubbelpak)", "must": ["duo", "2 stuks", "dubbel", "2-pack", "twee"] },
+          { "label": "Voor een kind", "term": "elektrische tandenborstel kind", "must": ["kind", "kids", "junior"], "max": 60 } ] } ],
+      "uitleg": "Roterende borstels (ronde kop) verwijderen iets meer plak; sonische borstels (langwerpige kop) zijn zachter voor tandvlees en voelen vertrouwder. Een druksensor voorkomt dat je te hard poetst — de belangrijkste functie. Een timer van 2 minuten is standaard; apps en 'poetsmodi' zijn luxe. Opzetborstels kosten 3–8 euro per stuk, elke 3 maanden.",
+      "fouten": ["De duurste kopen voor de app, en de druksensor vergeten.", "Een borstel met een exotische opzetborstel-maat die alleen het merk verkoopt (duur).", "Niet opletten of de accu 2 weken meegaat; handig voor vakantie."]
+    },
+    {
+      "slug": "stijltang", "cat": "Verzorging", "pct": 7, "term": "stijltang", "title": "Welke stijltang of föhn past bij jouw haar?", "h1": "Stijltang, krultang of föhn: welke past bij jouw haartype?",
+      "intro": "Dik, dun, krullend of fijn haar vraagt om een andere temperatuur en een andere plaat. Drie vragen en je weet welk apparaat je haar niet beschadigt.",
+      "questions": [
+        { "q": "Wat wil je doen?", "options": [
+          { "label": "Steil maken", "term": "stijltang", "must": ["stijl", "straight"] },
+          { "label": "Krullen of golven", "term": "krultang", "must": ["krul", "curl", "wave"] },
+          { "label": "Snel drogen en in model", "term": "fohn", "must": ["föhn", "fohn", "haardroger", "dryer", "airstyler"] } ] },
+        { "q": "Hoe is je haar?", "options": [
+          { "label": "Fijn of beschadigd", "must": ["keramisch", "ionen", "ion", "temperatuur", "150", "160"] },
+          { "label": "Normaal", "add": "" },
+          { "label": "Dik, krullend of lang", "must": ["230", "titanium", "breed", "wide", "2200", "2400"] } ] },
+        { "q": "Budget?", "options": [ { "label": "Tot €40", "max": 40 }, { "label": "€40–120", "min": 35, "max": 130 }, { "label": "Topklasse", "min": 100 } ] } ],
+      "uitleg": "Fijn haar: nooit boven 180 graden, keramische of toermalijnplaten en een regelbare temperatuur. Dik haar: titaniumplaten tot 230 graden en een brede plaat (3–4 cm) zodat je in minder halen klaar bent. Bij föhns is een ionenfunctie wat pluis tegenhoudt; wattage boven 2.000 is alleen nodig bij lang, dik haar.",
+      "fouten": ["Zonder vaste temperatuurinstelling kopen: dan staat hij altijd op het heetst.", "Een smalle plaat voor lang, dik haar.", "Hittebescherming overslaan; geen apparaat lost dat op."]
+    },
+    {
+      "slug": "hardloopschoenen", "cat": "Kleding & schoenen", "pct": 7, "term": "hardloopschoenen", "title": "Welke hardloopschoenen passen bij jou?", "h1": "Hardloopschoenen kiezen: afstand, ondergrond en voettype",
+      "intro": "De verkeerde hardloopschoen geeft blessures, de juiste maakt lopen licht. Drie vragen bepalen welk type demping en welke zool je nodig hebt.",
+      "questions": [
+        { "q": "Voor wie?", "options": [
+          { "label": "Dames", "must": ["dames", "women", "vrouw"] },
+          { "label": "Heren", "must": ["heren", "men", "man"] } ] },
+        { "q": "Waar loop je?", "options": [
+          { "label": "Asfalt en fietspaden", "add": "road", "must": ["road", "weg", "running"] },
+          { "label": "Bos en onverhard", "term": "trailrunning schoenen", "must": ["trail"] },
+          { "label": "Loopband", "add": "" } ] },
+        { "q": "Hoe ver en hoe vaak?", "options": [
+          { "label": "Beginner, 2–5 km", "must": ["demping", "cushion", "neutraal"], "max": 110 },
+          { "label": "Regelmatig, 5–15 km", "must": ["demping", "neutraal", "stabil"], "min": 60 },
+          { "label": "Lange afstanden of wedstrijd", "must": ["carbon", "race", "marathon", "lichtgewicht", "speed"], "min": 100 } ] } ],
+      "uitleg": "Beginners en zwaardere lopers hebben maximale demping nodig; dat bespaart knieën. 'Neutraal' is goed voor de meeste voeten; 'stabiliteit' alleen als je naar binnen kantelt (overpronatie, versleten binnenkant van je oude zool). Koop een halve maat groter dan je gewone schoen: je voet zet uit tijdens het lopen.",
+      "fouten": ["Dezelfde maat als je sneakers nemen: zwarte teennagels.", "Trailschoenen op asfalt dragen; de noppen slijten in weken.", "Een carbonschoen als beginner: te stijf, te duur."]
+    },
+    {
+      "slug": "winterjas", "cat": "Kleding & schoenen", "pct": 7, "term": "winterjas", "title": "Welke winterjas past bij jou?", "h1": "Winterjas kiezen: warmte, regen en fietsen",
+      "intro": "In Nederland moet een winterjas drie dingen kunnen: warm houden, regen weren en op de fiets niet opkruipen. Drie vragen en je weet welk type bij jouw dagen past.",
+      "questions": [
+        { "q": "Voor wie?", "options": [
+          { "label": "Dames", "must": ["dames", "women", "vrouw"] },
+          { "label": "Heren", "must": ["heren", "men", "man"] },
+          { "label": "Kind", "term": "winterjas kind", "must": ["kind", "kids", "jongens", "meisjes", "junior"] } ] },
+        { "q": "Hoe gebruik je hem vooral?", "options": [
+          { "label": "Fietsen naar werk of school", "must": ["waterdicht", "regen", "parka", "fiets", "wind"] },
+          { "label": "Wandelen en buiten zijn", "must": ["parka", "lang", "gevoerd", "dons", "outdoor"] },
+          { "label": "Netjes, naar kantoor of uit", "must": ["wol", "mantel", "trenchcoat", "wollen", "lang"] } ] },
+        { "q": "Wat telt het meest?", "options": [
+          { "label": "Zo warm mogelijk", "must": ["dons", "gewatteerd", "puffer", "gevoerd", "-10", "warm"] },
+          { "label": "Echt waterdicht", "must": ["waterdicht", "10.000", "membraan", "regen"] },
+          { "label": "Licht en compact", "must": ["licht", "lightweight", "puffer", "opvouwbaar"] } ] } ],
+      "uitleg": "Dons is het warmst per gram maar verliest zijn isolatie als het nat wordt; synthetische vulling (puffer) is iets zwaarder maar blijft warm in regen. Voor de fiets: minimaal waterkolom 5.000 mm, een capuchon die niet wegwaait en een lengte tot over de bovenbenen. Koop vóór november: vanaf december zijn de populaire maten op.",
+      "fouten": ["Een donsjas voor de fiets in de regen.", "Op maat kopen zonder ruimte voor een trui eronder.", "Wachten tot het vriest: dan is de keuze weg en de prijs hoger."]
+    },
+    {
+      "slug": "laptoptas", "cat": "Mode-accessoires", "pct": 6, "term": "laptoptas", "title": "Welke laptoptas of rugzak past bij jou?", "h1": "Laptoptas of rugzak kiezen: maat, rug en stijl",
+      "intro": "Een tas die niet bij je laptopmaat past, is geld weggooien. En een rugzak voor dagelijks woon-werk is iets anders dan een tas voor klantbezoek. Drie vragen.",
+      "questions": [
+        { "q": "Welke laptopmaat?", "options": [
+          { "label": "13–14 inch", "must": ["13", "14"] },
+          { "label": "15–16 inch", "must": ["15", "15,6", "16"] },
+          { "label": "17 inch", "must": ["17"] } ] },
+        { "q": "Hoe draag je hem het liefst?", "options": [
+          { "label": "Rugzak (fiets, OV)", "term": "laptop rugzak", "must": ["rugzak", "backpack"] },
+          { "label": "Schoudertas of aktetas", "term": "laptoptas schouder", "must": ["schouder", "aktetas", "messenger", "tas"] },
+          { "label": "Trolley / reizen", "term": "laptop trolley", "must": ["trolley", "wielen", "rol"] } ] },
+        { "q": "Welke uitstraling?", "options": [
+          { "label": "Zakelijk, leer of leerlook", "must": ["leer", "leather", "cognac", "zwart"] , "min": 40 },
+          { "label": "Sportief, waterafstotend", "must": ["water", "nylon", "sport"] },
+          { "label": "Zo goedkoop mogelijk", "max": 40 } ] } ],
+      "uitleg": "Meet je laptop: een 15,6-inch past niet in een 15-inch vak van een krap merk. Voor dagelijks fietsen is een rugzak met gewatteerde rugplaat en regenhoes de beste keuze; let op een apart, gevoerd laptopvak. Leer gaat jaren mee maar weegt 1,5–2 kg leeg; nylon is de helft.",
+      "fouten": ["De laptopmaat gokken in plaats van meten.", "Geen gevoerd vak: de hoeken van je laptop slijten door.", "Een tas zonder trolleyband als je veel reist."]
+    },
+    {
+      "slug": "koffer", "cat": "Mode-accessoires", "pct": 6, "term": "koffer", "title": "Welke koffer past bij jouw reis?", "h1": "Koffer kiezen: handbagage-maten, wielen en materiaal",
+      "intro": "Handbagage die net te groot is, kost 50 euro aan de gate. Een koffer met slechte wielen kost je rug. Drie vragen en je weet welke maat en welk type je nodig hebt.",
+      "questions": [
+        { "q": "Waarvoor?", "options": [
+          { "label": "Handbagage (vliegen zonder bijbetalen)", "term": "handbagage koffer", "must": ["handbagage", "55", "cabin", "40 x", "40x"], "max": 150 },
+          { "label": "Ruimbagage, 1–2 weken", "must": ["66", "68", "70", "75", "medium", "large"] },
+          { "label": "Set van 2 of 3 koffers", "term": "kofferset", "must": ["set", "3-delig", "2-delig", "3 delig"] } ] },
+        { "q": "Hard of zacht?", "options": [
+          { "label": "Hardcase (sterk, waterdicht)", "must": ["hard", "abs", "polycarbonaat", "pc", "hardcase"] },
+          { "label": "Zacht (lichter, buitenvakken)", "must": ["zacht", "soft", "stof", "nylon"] } ] },
+        { "q": "Wat telt?", "options": [
+          { "label": "Zo licht mogelijk", "must": ["licht", "lightweight", "2,", "2.", "kg"] },
+          { "label": "Oersterk, veel reizen", "must": ["polycarbonaat", "tsa", "garantie", "samsonite", "premium"], "min": 90 },
+          { "label": "Scherpe prijs", "max": 70 } ] } ],
+      "uitleg": "Handbagage: 55 × 40 × 20 cm (KLM, Transavia 55 × 35 × 25, Ryanair 40 × 20 × 25 gratis) — check de maatschappij vóór je koopt. Vier dubbele wielen (spinner) rollen moeiteloos rechtop; twee wielen zijn robuuster op straat. Polycarbonaat is lichter en sterker dan ABS. Een TSA-slot is verplicht voor de VS.",
+      "fouten": ["De buitenmaat inclusief wielen vergeten: dan past hij niet in de meetbak.", "ABS kopen voor frequente vluchten; die barst.", "Een set kopen waarvan de grootste nooit wordt gebruikt."]
+    }
+  ]
+}
