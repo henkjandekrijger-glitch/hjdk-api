@@ -1,0 +1,139 @@
+{
+  "crons": [
+    {
+      "path": "/api/hjdk/iterate",
+      "schedule": "17 */6 * * *"
+    },
+    {
+      "path": "/api/bol/learn",
+      "schedule": "41 */6 * * *"
+    },
+    {
+      "path": "/api/pinterest/post",
+      "schedule": "15 7 * * *"
+    },
+    {
+      "path": "/api/nl/daily",
+      "schedule": "*/15 5-8 * * *"
+    },
+    {
+      "path": "/api/kz/dag",
+      "schedule": "*/15 6-8 * * *"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/home"
+    },
+    {
+      "source": "/setup",
+      "destination": "/api/setup"
+    },
+    {
+      "source": "/keuzehulp",
+      "destination": "/api/kz"
+    },
+    {
+      "source": "/keuzehulp/sitemap.xml",
+      "destination": "/api/kz?op=sitemap"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/api/kz?op=robots"
+    },
+    {
+      "source": "/llms.txt",
+      "destination": "/api/kz?op=llms"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/api/kz?op=sitemap"
+    },
+    {
+      "source": "/keuzehulp/:slug",
+      "destination": "/api/kz?slug=:slug"
+    },
+    {
+      "source": "/api/kz/:op",
+      "destination": "/api/kz?op=:op"
+    },
+    {
+      "source": "/leads",
+      "destination": "/api/lc?op=leads"
+    },
+    {
+      "source": "/subs",
+      "destination": "/api/nl?op=subs"
+    },
+    {
+      "source": "/api/nl/:op",
+      "destination": "/api/nl?op=:op"
+    },
+    {
+      "source": "/api/lc/:op",
+      "destination": "/api/lc?op=:op"
+    },
+    {
+      "source": "/pins",
+      "destination": "/api/pinterest?op=pins"
+    },
+    {
+      "source": "/api/pinterest/:op",
+      "destination": "/api/pinterest?op=:op"
+    },
+    {
+      "source": "/api/bol/:op",
+      "destination": "/api/bol?op=:op"
+    },
+    {
+      "source": "/api/amz/:op",
+      "destination": "/api/amz?op=:op"
+    },
+    {
+      "source": "/:slug([a-z0-9-]+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?!hjdk-api\\.vercel\\.app).*"
+        }
+      ],
+      "destination": "/api/kz?slug=:slug"
+    },
+    {
+      "source": "/t/:page",
+      "destination": "/api/t?page=:page"
+    },
+    {
+      "source": "/b/:slug",
+      "destination": "/api/b?slug=:slug"
+    },
+    {
+      "source": "/api/hjdk/stats/:rest*",
+      "destination": "/api/hjdk/stats?p=:rest*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET,POST,OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type,x-hjdk-token"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
+  ]
+}
