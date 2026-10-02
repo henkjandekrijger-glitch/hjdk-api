@@ -11,6 +11,10 @@
   {
    "path": "/api/pinterest/post",
    "schedule": "15 7 * * *"
+  },
+  {
+   "path": "/api/nl/daily",
+   "schedule": "*/15 5-8 * * *"
   }
  ],
  "rewrites": [
@@ -23,8 +27,32 @@
    "destination": "/api/setup"
   },
   {
+   "source": "/keuzehulp",
+   "destination": "/api/kz"
+  },
+  {
+   "source": "/keuzehulp/sitemap.xml",
+   "destination": "/api/kz?op=sitemap"
+  },
+  {
+   "source": "/keuzehulp/:slug",
+   "destination": "/api/kz?slug=:slug"
+  },
+  {
+   "source": "/api/kz/:op",
+   "destination": "/api/kz?op=:op"
+  },
+  {
    "source": "/leads",
    "destination": "/api/lc?op=leads"
+  },
+  {
+   "source": "/subs",
+   "destination": "/api/nl?op=subs"
+  },
+  {
+   "source": "/api/nl/:op",
+   "destination": "/api/nl?op=:op"
   },
   {
    "source": "/api/lc/:op",
@@ -45,6 +73,16 @@
   {
    "source": "/api/amz/:op",
    "destination": "/api/amz?op=:op"
+  },
+  {
+   "source": "/:slug([a-z0-9-]+)",
+   "has": [
+    {
+     "type": "host",
+     "value": "(?!hjdk-api\\.vercel\\.app).*"
+    }
+   ],
+   "destination": "/api/kz?slug=:slug"
   },
   {
    "source": "/t/:page",
