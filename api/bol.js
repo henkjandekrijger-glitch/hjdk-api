@@ -105,6 +105,7 @@ export default async function handler(req, res) {
       const num = v => Number(v) || 0;
       const parse = s => { s = String(s || '');
         const m = s.match(/^(br|t)_([a-z0-9-]+?)-Z(\d+)-([a-z])(?:-([a-z0-9]{10}))?$/i); if (m) return { kind: m[1], page: m[2], zone: m[3], layout: m[4], code: m[5] || '' };
+        const z = s.match(/^kz_([a-z0-9-]+?)-(\d+)(?:-Z(\d+))?(?:-([a-z0-9]{10}))?$/i); if (z) return { kind: 'kz', page: 'kz:' + z[1], zone: z[3] || 'organisch', layout: 'k', code: z[4] || '' }; // kz_ = keuzehulp.best (slug-route[-Zzone[-clickidcode]])
         const k = s.match(/^(pk|yp)_([a-z0-9-]+?)(?:-Z.*)?$/i); if (k) return { kind: k[1], page: 'yoors:' + k[2], zone: 'yoors', layout: k[1] === 'pk' ? 'p' : 'a', code: '' }; // pk_ = bol-banner op een Yoors-pagina (engine 6.26+), yp_ = eigen productlink in een Yoors-artikel
         if (/^pick(-|$)/.test(s)) return { kind: 'pk', page: 'yoors:(onbekend)', zone: 'yoors', layout: 'p', code: '' };
         return null; };
