@@ -7,7 +7,7 @@
 import { kv } from '../lib/db.js';
 import { searchCached } from '../lib/bol.js';
 import seed from '../data/kz.json' with { type: 'json' };
-import seed2 from '../data/kz2.json' with { type: 'json' };
+const seed2 = { items: [] }; // alles staat nu in één bestand (data/kz.json)
 const UPDATED = '2026-10-02';
 
 const BOL_SITE = '1229920';

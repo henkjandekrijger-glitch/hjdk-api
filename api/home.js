@@ -18,9 +18,8 @@ const KEUZEHULPEN = [
 const THEMAS = [['keuken-klein', 'Slim kiezen voor een kleine keuken'], ['huishouden', 'Huishouden slim aanpakken']];
 const esc = s => String(s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-import kz from './kz.js';
 export default async function handler(req, res) {
-  try { const host = String(req.headers.host || ''); if (host && !/vercel\.app$|^localhost/.test(host)) return kz(req, res); } catch (e) {} /* eigen domein (keuzehulp): startpagina = keuzehulp-overzicht */
+  try { const host = String(req.headers.host || ''); if (host && !/vercel\.app$|^localhost/.test(host)) { const kz = (await import('./kz.js')).default; return kz(req, res); } } catch (e) {} /* eigen domein: keuzehulp; faalt dat, dan gewoon deze pagina */ /* eigen domein (keuzehulp): startpagina = keuzehulp-overzicht */
   res.setHeader('cache-control', 'public, max-age=300');
   const html = `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yoors Keuzehulp — korte productgidsen voor een klein huis</title>
 <meta name="description" content="Korte, eerlijke keuzehulpen van Yoors (yoo.rs) voor huishouden en een kleine keuken, met actuele prijzen van bol.">
