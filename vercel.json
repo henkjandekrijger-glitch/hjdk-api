@@ -35,6 +35,18 @@
    "destination": "/api/kz?op=sitemap"
   },
   {
+   "source": "/robots.txt",
+   "destination": "/api/kz?op=robots"
+  },
+  {
+   "source": "/llms.txt",
+   "destination": "/api/kz?op=llms"
+  },
+  {
+   "source": "/sitemap.xml",
+   "destination": "/api/kz?op=sitemap"
+  },
+  {
    "source": "/keuzehulp/:slug",
    "destination": "/api/kz?slug=:slug"
   },
