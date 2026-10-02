@@ -37,9 +37,9 @@ export default async function handler(req, res) {
       const term = termFromTitle(q) || q.toLowerCase();
       const toks = term.split(' ').filter(w => w.length >= 4);
       if (!toks.length) return res.status(200).json({ ok: false, product: null, term, reason: 'te weinig houvast' });
-      const key = 'hjdk:pick2:' + country + ':' + term.slice(0, 80);
-      try { const c = await kv.get(key); if (c && c.at && Date.now() - c.at < 24 * 3600 * 1000) return res.status(200).json({ ok: !!c.product, product: c.product || null, term, fit: c.fit, reason: c.reason, cached: true }); } catch (e) {}
-      let product = null, error = '', fit = 0, reason = '';
+      const key = 'hjdk:pick3:' + country + ':' + term.slice(0, 80); // v23: ook 'alts' (andere passende producten voor extra kaarten)
+      try { const c = await kv.get(key); if (c && c.at && Date.now() - c.at < 24 * 3600 * 1000) return res.status(200).json({ ok: !!c.product, product: c.product || null, alts: c.alts || [], term, fit: c.fit, reason: c.reason, cached: true }); } catch (e) {}
+      let product = null, alts = [], error = '', fit = 0, reason = '';
       try { const r = await searchCached(term, { country, size: 10, sort: 'RELEVANCE' });
         // pasvorm: hoeveel van de titelwoorden (>=4 letters, stam van 5) komen terug in de producttitel
         const stem = w => w.slice(0, 5);
@@ -47,11 +47,12 @@ export default async function handler(req, res) {
         const cands = r.products.filter(p => p.price != null && p.image).map(p => Object.assign({}, p, { fit: fitOf(p) })).filter(p => p.fit >= (toks.length <= 2 ? 0.5 : 0.34));
         // voorkeur: pasvorm eerst, dan beoordeling en niet te goedkoop (commissie = prijs × percentage)
         const score = p => p.fit * 3 + Math.min(5, p.rating || 3.5) / 5 + (p.price >= 20 ? 0.5 : 0) + (p.price >= 40 ? 0.25 : 0) - (p.price < 10 ? 0.5 : 0);
-        product = cands.slice(0, 6).sort((a, b) => score(b) - score(a))[0] || null;
-        if (product) { fit = product.fit; delete product.fit; } else reason = r.products.length ? 'geen passend product' : 'geen resultaat';
+        const sorted = cands.slice(0, 8).sort((a, b) => score(b) - score(a));
+        product = sorted[0] || null;
+        if (product) { fit = product.fit; delete product.fit; alts = sorted.slice(1, 5).filter(a => a.id !== product.id).map(a => { const x = Object.assign({}, a); delete x.fit; return x; }); } else reason = r.products.length ? 'geen passend product' : 'geen resultaat';
       } catch (e) { error = String(e && e.message || e).slice(0, 160); }
-      if (!error) { try { await kv.set(key, { at: Date.now(), product, fit, reason }); } catch (e) {} }
-      return res.status(200).json({ ok: !!product, product, term, fit, reason: reason || undefined, error: error || undefined });
+      if (!error) { try { await kv.set(key, { at: Date.now(), product, alts, fit, reason }); } catch (e) {} }
+      return res.status(200).json({ ok: !!product, product, alts, term, fit, reason: reason || undefined, error: error || undefined });
     }
     if (op === 'search') {
       const q = clean(url.searchParams.get('q') || '').slice(0, 120);

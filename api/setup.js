@@ -7,7 +7,7 @@ import { paapi, forgetAmzCreds } from '../lib/amz.js';
 import { getApp as pinApp, authUrl as pinAuthUrl, tokenStatus as pinStatus } from '../lib/pinterest.js';
 import { randomBytes } from 'node:crypto';
 
-const KEYS = ['BOL_CLIENT_ID', 'BOL_CLIENT_SECRET', 'BOL_REPORT_CLIENT_ID', 'BOL_REPORT_CLIENT_SECRET', 'AMZ_ACCESS_KEY', 'AMZ_SECRET_KEY', 'AMZ_PARTNER_TAG', 'AMZ_MARKETPLACE', 'PINTEREST_APP_ID', 'PINTEREST_APP_SECRET', 'RESEND_API_KEY'];
+const KEYS = ['BOL_CLIENT_ID', 'BOL_CLIENT_SECRET', 'BOL_REPORT_CLIENT_ID', 'BOL_REPORT_CLIENT_SECRET', 'AMZ_ACCESS_KEY', 'AMZ_SECRET_KEY', 'AMZ_PARTNER_TAG', 'AMZ_MARKETPLACE', 'PINTEREST_APP_ID', 'PINTEREST_APP_SECRET', 'RESEND_API_KEY', 'GOOGLE_CLIENT_ID'];
 const esc = s => String(s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 async function status() {
