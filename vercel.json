@@ -23,9 +23,17 @@
     {
       "path": "/api/kz/trends",
       "schedule": "20 4 * * *"
+    },
+    {
+      "path": "/api/kz/pushwatch",
+      "schedule": "5 9 * * *"
     }
   ],
   "rewrites": [
+    {
+      "source": "/sw.js",
+      "destination": "/api/kz?op=sw"
+    },
     {
       "source": "/",
       "destination": "/api/home"

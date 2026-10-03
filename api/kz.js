@@ -11,6 +11,7 @@
 import { createHmac } from 'node:crypto';
 import { kv } from '../lib/db.js';
 import { searchCached } from '../lib/bol.js';
+import { vapid, sendPush, subHash } from '../lib/push.js';
 import seed from '../data/kz.json' with { type: 'json' };
 const seed2 = { items: [] }; // alles staat nu in één bestand (data/kz.json)
 const UPDATED = '2026-10-03';
@@ -149,6 +150,36 @@ const ABO = [
   { h: 'Elke dag één nieuwe keuzehulp in je mail', p: 'Morgen komt er weer een bij. Wil je hem als eerste? Eén korte mail per ochtend, geen reclame, afmelden met één klik.' },
   { h: 'Mis geen enkele keuzehulp meer', p: 'We voegen elke dag een nieuwe toe. Laat je e-mail achter en je krijgt hem elke ochtend, met de prijs van die dag.' },
   { h: 'Twijfel je vaker? Dan maken we elke dag één keuze makkelijk', p: 'Elke ochtend een korte keuzehulp: drie vragen, één eerlijk advies. En je mag altijd terugmailen welke je mist.' }];
+/* Meldingen per keuzehulp: prijsalarm, beter model, of (bij item.pushNote) regels die veranderen. Hooguit één melding per week per persoon. */
+const PUSH = [
+  { h: t => 'Prijsalarm: ' + t, p: 'Krijg een melding als de prijs van jouw advies daalt of als er een beter model is.' },
+  { h: t => 'Blijf op de hoogte over ' + t, p: 'Eén melding als er iets verandert dat jouw keuze beïnvloedt: een lagere prijs of een beter model.' }
+];
+const PUSH_GAP = 7 * 86400 * 1000;
+function pushBox(item, v) {
+  const a = PUSH[v] || PUSH[0]; const t = item.term || item.title;
+  return `<div class="txt" id="push" data-v="${v}" style="border:2px solid #14213d"><h2>🔔 ${esc(a.h(t))}</h2><p style="margin:0 0 12px;color:#44403c">${esc(a.p)}${item.pushNote ? ' ' + esc(item.pushNote) : ''}</p>
+<button type="button" id="pushb" class="btn" style="border:0;cursor:pointer;background:#14213d">Zet meldingen aan</button>
+<p id="pushst" style="font-size:14px;color:#0f766e;font-weight:700;margin:10px 0 0;display:none"></p>
+<p style="font-size:13px;color:#78716c;margin:10px 0 0">Hooguit één melding per week. Geen reclame. Uitzetten kan altijd in je browser.</p></div>
+<script>(function(){var S=${JSON.stringify(item.slug)},V=${v},H='/api/hjdk/stats/hits',Q=new URLSearchParams(location.search),Z=(Q.get('zoneid')||'').replace(/\\D/g,'').slice(0,12),b=document.getElementById('pushb'),st=document.getElementById('pushst');
+function hit(k){try{navigator.sendBeacon(H,new Blob([JSON.stringify({hits:[[k,1]]})],{type:'text/plain'}))}catch(e){}}
+function say(t){st.textContent=t;st.style.display=''}
+function u8(s){s=s.replace(/-/g,'+').replace(/_/g,'/');while(s.length%4)s+='=';var r=atob(s),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return a}
+var ok=('serviceWorker' in navigator)&&('PushManager' in window)&&('Notification' in window);
+hit('hjdk6-kz-push-imp');hit('hjdk6-kz-push-v'+V+'-imp');
+var on=false;try{on=!!localStorage.getItem('kz_push_'+S)}catch(e){}
+if(on&&ok&&Notification.permission==='granted'){b.style.display='none';say('Meldingen staan aan voor deze keuzehulp.');return}
+if(!ok){b.textContent='Liever per mail';b.addEventListener('click',function(){hit('hjdk6-kz-push-nosupport-mail');var a=document.getElementById('abo');if(a)a.scrollIntoView({behavior:'smooth'})});hit('hjdk6-kz-push-nosupport');return}
+if(Notification.permission==='denied'){b.style.display='none';say('Meldingen staan uit in je browser. Wil je toch op de hoogte blijven? Gebruik de mail hieronder.');return}
+b.addEventListener('click',function(){hit('hjdk6-kz-push-click');hit('hjdk6-kz-push-v'+V+'-click');b.disabled=true;b.textContent='Even geduld…';
+navigator.serviceWorker.register('/sw.js').then(function(reg){return Notification.requestPermission().then(function(p){if(p!=='granted'){hit('hjdk6-kz-push-denied');b.style.display='none';say('Geen probleem — je krijgt geen meldingen.');throw 0}
+return fetch('/api/kz/vapid').then(function(r){return r.json()}).then(function(j){return navigator.serviceWorker.ready.then(function(r2){return r2.pushManager.getSubscription().then(function(s){return s||r2.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:u8(j.key)})})})})})}).then(function(s){
+var r=window.__kzCur?window.__kzCur():'';return fetch('/api/kz/pushsub',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({sub:s.toJSON(),slug:S,v:V,zone:Z,cid:window.__kzCID||'',r:r})}).then(function(x){return x.json()})}).then(function(j){if(!j||!j.ok)throw 1;
+hit('hjdk6-kz-push-ok');hit('hjdk6-kz-push-v'+V+'-ok');hit('hjdk6-kz-push-'+S+'-ok');if(Z)hit('hjdk6-kz-paid-'+Z+'-sub');var PB=window.__kzPB;if(PB&&!window.__kzPBfired){window.__kzPBfired=1;try{fetch(PB,{mode:'no-cors',keepalive:true})}catch(e){}}
+try{localStorage.setItem('kz_push_'+S,'1')}catch(e){}b.style.display='none';say('Top! Je krijgt een melding als er iets verandert. Hooguit één per week.')}).catch(function(e){if(e===0)return;hit('hjdk6-kz-push-fail');b.disabled=false;b.textContent='Zet meldingen aan';say('Dat lukte niet in deze browser. Probeer het nog eens of gebruik de mail hieronder.')})})})();</script>`;
+}
+
 function aboBox(v, slug, clientId) {
   const a = ABO[v] || ABO[0];
   return `<div class="txt abo" id="abo" data-v="${v}" style="border:2px solid #0f766e;background:#f0fdfa"><h2>${esc(a.h)}</h2><p style="margin:0 0 12px;color:#44403c">${esc(a.p)}</p>
@@ -184,11 +215,12 @@ async function page(item, res, req) {
   if (code) { try { await kv.set('hjdk:cid:' + code, { c: clickid, s: src || 'propellerads', z: zone, g: 'kz:' + item.slug, v: 'k', at: Date.now() }, { ex: 10 * 86400 }); } catch (e) {} }
   if (zone || clickid) { hits.push(['c:hjdk6-kz-paid-view', 1], ['c:hjdk6-kz-paid-' + (zone || '0') + '-view', 1], ['c:hjdk6-kz-paid-' + (zone || '0') + '-' + item.slug + '-view', 1]); if (creative) hits.push(['c:hjdk6-kzc-' + creative + '-view', 1]); }
   if (src === 'mail') { const m = String(q.get('m') || '').replace(/[^a-z0-9]/gi, '').slice(0, 12), si = String(q.get('s') || '').replace(/\D/g, '').slice(0, 2); hits.push(['c:hjdk6-kz-mail-clk', 1]); if (m) hits.push(['c:hjdk6-kz-mail-' + m + '-clk', 1]); if (si) hits.push(['c:hjdk6-kz-ms-v' + si + '-clk', 1]); }
+  if (src === 'push') { const m = String(q.get('m') || '').replace(/[^a-z0-9]/gi, '').slice(0, 16); hits.push(['c:hjdk6-kz-push-clk', 1]); if (m) hits.push(['c:hjdk6-kz-pm-' + m + '-clk', 1]); }
   if (hits.length) { try { await kv.incrMany(hits); } catch (e) {} }
   const postback = clickid ? pbFor(src).replace('{clickid}', encodeURIComponent(clickid)) : '';
   const same = all.filter(i => i.cat === item.cat && i.slug !== item.slug).slice(0, 5); const other = all.filter(i => i.cat !== item.cat).sort(() => 0.5 - Math.random()).slice(0, Math.max(3, 8 - same.length)); /* altijd 6–8 interne links per pagina */
   const route0 = item.questions.map(() => 0);
-  const [adv, aboV, clientId] = await Promise.all([advise(item, route0, tag), pickVariant('hjdk6-kz-abo', ABO.length, 'sub', 'imp'), googleClientId()]);
+  const [adv, aboV, clientId, pushV] = await Promise.all([advise(item, route0, tag), pickVariant('hjdk6-kz-abo', ABO.length, 'sub', 'imp'), googleClientId(), pickVariant('hjdk6-kz-push', PUSH.length, 'ok', 'imp')]);
   const nieuw = newest(all); const nieuwHtml = nieuw && nieuw.slug !== item.slug && nieuw.publishAt === TODAY() ? `<p style="margin:0 0 10px;font-size:14px"><span style="background:#0f766e;color:#fff;font-size:11px;letter-spacing:.06em;padding:3px 8px;border-radius:999px;font-weight:700">NIEUW VANDAAG</span> <a href="/keuzehulp/${esc(nieuw.slug)}">${esc(nieuw.title)}</a></p>` : '';
   const paid = !!(zone || clickid);
   const qs = item.questions.map((q, qi) => `<div class="q" data-q="${qi}"><h2>${qi + 1}. ${esc(q.q)}</h2><div class="opts">${q.options.map((o, oi) => `<button class="opt${oi === 0 && !paid ? ' on' : ''}" data-o="${oi}" type="button">${esc(o.label)}</button>`).join('')}</div></div>`).join('');
@@ -201,13 +233,14 @@ async function page(item, res, req) {
     ...(item.faq && item.faq.length ? [{ '@type': 'FAQPage', mainEntity: item.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []) ] });
   const body = `<script>window.__kzPB=${JSON.stringify(postback)};window.__kzCID=${JSON.stringify(code)};</script><article>${paid ? `<div class="hero" style="padding-bottom:6px"><h1 style="margin-bottom:6px">${esc(item.h1)}</h1><p style="margin:0;color:#0f766e;font-weight:700">Tik je antwoorden — ${item.questions.length} vragen, klaar in 20 seconden. Je advies verschijnt direct.</p></div>\n${qs}\n${kort}` : `<div class="hero">${nieuwHtml}${crumbs}<div class="cat" style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#78716c;margin-top:10px">${esc(item.cat)} · keuzehulp · bijgewerkt ${UPDATED}</div><h1>${esc(item.h1)}</h1><p>${esc(item.intro)}</p></div>\n${kort}\n${qs}`}
 <div class="adv" id="adv"><h2 style="font-size:19px;margin:8px 0 10px">Jouw advies <span id="advn" style="color:#78716c;font-weight:400;font-size:14px"></span></h2><div id="advl">${adv.products.map(productCard).join('') || '<p>Even geduld, we halen de prijzen van vandaag op…</p>'}</div><p class="disc">Prijzen van vandaag bij bol; wij kiezen op pasvorm bij jouw antwoorden, beoordeling en prijs. Geen betaalde plaatsing.${item.partners && item.partners.length ? ' Links naar ' + esc([...new Set(item.partners.map(p => p.shop))].join(', ')) + ' zijn ook partnerlinks: wij krijgen een vergoeding als je daar koopt, jij betaalt niets extra.' : ''}</p></div>
+${pushBox(item, pushV)}
 <div class="txt"><h2>Waar je op moet letten</h2><p>${esc(item.uitleg)}</p></div>
 <div class="txt"><h2>Veelgemaakte fouten</h2><ul>${item.fouten.map(f => '<li>' + esc(f) + '</li>').join('')}</ul></div>
 ${aboBox(aboV, item.slug, clientId)}
 ${faqHtml(item)}
 ${related}
 <p class="disc">Liever mailen? <a href="mailto:${esc(SITE.email)}?subject=Keuzehulp%20gevraagd:%20">${esc(SITE.email)}</a> — we maken er een keuzehulp van.</p></article>
-<script>(function(){var S=${JSON.stringify(item.slug)},A='${'/api/kz/advies'}',H='/api/hjdk/stats/hits',Z=${JSON.stringify(zone)},CR=${JSON.stringify(creative)},C=${JSON.stringify(code)},PB=${JSON.stringify(postback)},pbDone=false;var n=document.querySelectorAll('.q').length;var cur=[];for(var i=0;i<n;i++)cur.push(0);
+<script>(function(){var S=${JSON.stringify(item.slug)},A='${'/api/kz/advies'}',H='/api/hjdk/stats/hits',Z=${JSON.stringify(zone)},CR=${JSON.stringify(creative)},C=${JSON.stringify(code)},PB=${JSON.stringify(postback)},pbDone=false;var n=document.querySelectorAll('.q').length;var cur=[];for(var i=0;i<n;i++)cur.push(0);window.__kzCur=function(){return cur.join('-')};
 function hit(k){try{navigator.sendBeacon(H,new Blob([JSON.stringify({hits:[[k,1]]})],{type:'text/plain'}))}catch(e){}}
 function eur(v){return '€'+Number(v).toFixed(2).replace('.',',')}
 function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -321,6 +354,60 @@ export default async function handler(req, res) {
       const z = String(url.searchParams.get('z') || '').replace(/\D/g, '').slice(0, 12), c = String(url.searchParams.get('c') || '').replace(/[^a-z0-9]/g, '').slice(0, 10);
       const adv = await advise(item, route, (z ? '-Z' + z : '') + (c ? '-' + c : '')); return res.status(200).json({ ok: true, slug: item.slug, route: route.join('-'), term: adv.term, products: adv.products });
     }
+    /* ---------- meldingen (web push) ---------- */
+    if (op === 'sw') { // service worker op /sw.js: haalt bij elke push zelf de tekst op en opent bij een klik de juiste keuzehulp
+      res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('service-worker-allowed', '/'); res.setHeader('cache-control', 'no-cache');
+      return res.status(200).send(`self.addEventListener('install',function(e){self.skipWaiting()});self.addEventListener('activate',function(e){e.waitUntil(self.clients.claim())});
+self.addEventListener('push',function(e){e.waitUntil(self.registration.pushManager.getSubscription().then(function(s){return fetch('/api/kz/pushmsg',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({e:s&&s.endpoint})})}).then(function(r){return r.json()}).catch(function(){return null}).then(function(m){if(!m||!m.title)m={title:'Keuzehulp',body:'Er is nieuws over een keuzehulp die je volgt.',url:'/keuzehulp?utm_source=push'};return self.registration.showNotification(m.title,{body:m.body,icon:'/img/kz-teal.png',badge:'/img/kz-teal.png',tag:m.tag||'kz',data:{url:m.url}})}))});
+self.addEventListener('notificationclick',function(e){e.notification.close();var u=(e.notification.data&&e.notification.data.url)||'/keuzehulp';e.waitUntil(self.clients.openWindow(u))});`);
+    }
+    if (op === 'vapid') { res.setHeader('cache-control', 'public, max-age=3600'); const v = await vapid(); return res.status(200).json({ key: v.pub }); }
+    if (op === 'pushsub') { // aanmelden voor meldingen bij één keuzehulp (met de antwoordroute, zodat het prijsalarm over jouw advies gaat)
+      if (req.method !== 'POST') return res.status(405).end(); res.setHeader('cache-control', 'no-store'); let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
+      const ep = String(b.sub && b.sub.endpoint || ''); if (!/^https:\/\//.test(ep) || ep.length > 800) return res.status(400).json({ ok: false, error: 'ongeldig' });
+      const sl = String(b.slug || '').replace(/[^a-z0-9-]/g, '').slice(0, 60); const item = sl ? await getItem(sl) : null; if (!item) return res.status(400).json({ ok: false, error: 'onbekende keuzehulp' });
+      const r = String(b.r || '').replace(/[^0-9-]/g, '').slice(0, 20); const h = subHash(ep);
+      const cur = (await kv.get('hjdk:kz:ps:' + h)) || { e: ep, at: Date.now(), slugs: {}, last: 0, zone: String(b.zone || '').replace(/\D/g, '').slice(0, 12), v: parseInt(b.v, 10) || 0 };
+      const nieuwSlug = !cur.slugs[sl]; cur.slugs[sl] = r || cur.slugs[sl] || ''; cur.e = ep; await kv.set('hjdk:kz:ps:' + h, cur);
+      if (nieuwSlug) { const lk = 'hjdk:kz:pslug:' + sl; const l = (await kv.get(lk)) || []; if (l.indexOf(h) < 0) { l.push(h); await kv.set(lk, l.slice(-20000)); } const all = (await kv.get('hjdk:kz:pall')) || []; if (all.indexOf(h) < 0) { all.push(h); await kv.set('hjdk:kz:pall', all.slice(-50000)); } }
+      try { await kv.incrMany([['c:hjdk6-kz-push-subs', nieuwSlug ? 1 : 0]].filter(x => x[1])); } catch (e) {}
+      return res.status(200).json({ ok: true, nieuw: nieuwSlug });
+    }
+    if (op === 'pushmsg') { // de service worker vraagt de tekst van de melding op
+      res.setHeader('cache-control', 'no-store'); let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
+      const ep = String(b.e || ''); const h = ep ? subHash(ep) : ''; let m = null;
+      if (h) { const q = (await kv.get('hjdk:kz:pq:' + h)) || []; m = q.shift() || null; await kv.set('hjdk:kz:pq:' + h, q, { ex: 14 * 86400 }); }
+      if (m) { try { await kv.incrMany([['c:hjdk6-kz-push-shown', 1], ['c:hjdk6-kz-pm-' + m.id + '-shown', 1]]); } catch (e) {} }
+      return res.status(200).json(m || {});
+    }
+    if (op === 'notify' || op === 'pushwatch') { // notify (sleutel): eigen bericht naar volgers van een keuzehulp; pushwatch (cron): prijsalarm en beter model per gevolgde antwoordroute
+      res.setHeader('cache-control', 'no-store');
+      const wk = process.env.KZ_WRITE_KEY || (await secrets()).KZ_WRITE_KEY || ''; const tok = url.searchParams.get('token') || req.headers['x-hjdk-token'] || '';
+      if (op === 'notify' && !((process.env.HJDK_TOKEN && tok === process.env.HJDK_TOKEN) || (wk && tok === wk))) return res.status(401).json({ error: 'token' });
+      let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
+      const P = k => String(b[k] != null ? b[k] : (url.searchParams.get(k) || ''));
+      const base = await mailBase(); const now = Date.now(); const out = { ok: true, verstuurd: 0, overgeslagen_week: 0, weg: 0, fout: 0, berichten: [] };
+      // berichten bepalen: [{slug, route|null, title, body}]
+      const msgs = [];
+      if (op === 'notify') { const sl = P('slug').replace(/[^a-z0-9-]/g, ''); const t = P('title').slice(0, 60), bd = P('body').slice(0, 160); if (!sl || !t || !bd) return res.status(400).json({ ok: false, error: 'slug, title en body nodig' }); if (!(await getItem(sl))) return res.status(400).json({ ok: false, error: 'onbekende keuzehulp' }); msgs.push({ slug: sl, route: null, title: t, body: bd }); }
+      else { // per keuzehulp met volgers: per gevolgde route het beste advies vergelijken met vorige keer
+        const items = await allItems(); for (const it of items) { const l = (await kv.get('hjdk:kz:pslug:' + it.slug)) || []; if (!l.length) continue;
+          const subs = (await kv.mget(...l.slice(0, 500).map(h => 'hjdk:kz:ps:' + h))).filter(Boolean); const routes = new Set(subs.map(x => (x.slugs && x.slugs[it.slug]) || '').map(r => r || it.questions.map(() => 0).join('-')));
+          for (const r of routes) { const route = r.split('-').map(x => parseInt(x, 10) || 0); const adv = await advise(it, route, '-push'); const best = (adv.products || []).find(p => p.price != null); if (!best) continue;
+            const wkey = 'hjdk:kz:pw:' + it.slug + ':' + r; const prev = await kv.get(wkey); await kv.set(wkey, { id: best.id, price: best.price, title: best.title, at: now });
+            if (!prev) continue; const kort = String(best.title).split(/[,(|]/)[0].slice(0, 70);
+            if (prev.id === best.id && best.price <= prev.price * 0.92) msgs.push({ slug: it.slug, route: r, def: it.questions.map(() => 0).join('-'), title: 'Prijsdaling: ' + (it.term || it.title).slice(0, 40), body: kort + ' nu ' + eur(best.price) + ' (was ' + eur(prev.price) + ').' });
+            else if (prev.id !== best.id && prev.at < now - 2 * 86400 * 1000) msgs.push({ slug: it.slug, route: r, def: it.questions.map(() => 0).join('-'), title: 'Nieuw advies: ' + (it.term || it.title).slice(0, 40), body: 'Voor jouw antwoorden is nu dit de beste keus: ' + kort + ' (' + eur(best.price) + ').' }); } } }
+      for (const m of msgs) { const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 6); const l = (await kv.get('hjdk:kz:pslug:' + m.slug)) || []; let sent = 0;
+        const murl = base + '/keuzehulp/' + m.slug + '?utm_source=push&m=' + id + (m.route ? '#a=' + m.route : '');
+        for (let i = 0; i < l.length; i += 25) { const chunk = l.slice(i, i + 25); const subs = await kv.mget(...chunk.map(h => 'hjdk:kz:ps:' + h));
+          await Promise.all(chunk.map(async (h, j) => { const sb = subs[j]; if (!sb || !sb.e) return; if (m.route && ((sb.slugs && sb.slugs[m.slug]) || m.def) !== m.route) return; if (!sb.slugs || !(m.slug in sb.slugs)) return; if (sb.last && now - sb.last < PUSH_GAP) { out.overgeslagen_week++; return; }
+            const q = (await kv.get('hjdk:kz:pq:' + h)) || []; q.push({ id, title: m.title, body: m.body, url: murl, tag: 'kz-' + m.slug }); await kv.set('hjdk:kz:pq:' + h, q.slice(-3), { ex: 14 * 86400 });
+            const r = await sendPush(sb.e); if (r.ok) { sent++; sb.last = now; await kv.set('hjdk:kz:ps:' + h, sb); } else if (r.gone) { out.weg++; await kv.set('hjdk:kz:ps:' + h, { dood: now }, { ex: 60 }); } else out.fout++; })); }
+        out.verstuurd += sent; const log = (await kv.get('hjdk:kz:pmsgs')) || []; log.unshift({ id, slug: m.slug, route: m.route, title: m.title, body: m.body, at: now, verstuurd: sent }); await kv.set('hjdk:kz:pmsgs', log.slice(0, 100)); out.berichten.push({ id, slug: m.slug, title: m.title, verstuurd: sent });
+        try { await kv.incrMany([['c:hjdk6-kz-push-sent', sent || 0], ['c:hjdk6-kz-pm-' + id + '-sent', sent || 0]].filter(x => x[1])); } catch (e) {} }
+      return res.status(200).json(out);
+    }
     if (op === 'trends') { // cron (dagelijks): Google Trends NL ophalen en bewaren; koppelen aan keuzehulpen
       res.setHeader('cache-control', 'no-store'); let terms = [];
       try { const r = await fetch('https://trends.google.com/trending/rss?geo=NL', { headers: { 'user-agent': 'Mozilla/5.0 (keuzehulp.best trendcheck)' } }); const xml = await r.text();
@@ -429,22 +516,26 @@ export default async function handler(req, res) {
       const U = await usage(); const funnel = Object.keys(U).filter(s => have.has(s)).map(s => { const b = U[s]; return { slug: s, bezoeken: b.page, vraag1: b.q0, vraag2: b.q1, vraag3: b.q2, advies: b.adv, bolKliks: b.clk, afgehaakt_voor_vraag1: Math.max(0, b.page - b.q0), afgehaakt_voor_advies: Math.max(0, b.q0 - b.adv), klik_pct: b.adv ? Math.round(b.clk / b.adv * 1000) / 10 : null }; }).sort((a, b) => b.bezoeken - a.bezoeken);
       const top = o => Object.entries(o).sort((a, b) => b[1] - a[1]).slice(0, 100).map(([q, n]) => ({ q, n }));
       // abonnees, mails, aanmeldblok-varianten, betaald verkeer per zone/creative, en de wachtrij (publishAt in de toekomst)
-      const cnt = {}; cursor = '0'; try { for (let i = 0; i < 20; i++) { const [c, keys] = await kv.scan(cursor, { match: 'c:hjdk6-kz*', count: 1000 }); cursor = c; const vals = keys.length ? await kv.mget(...keys) : []; keys.forEach((k, j) => { if (/^c:hjdk6-kz-(abo|subs|welkom|mail|ms|paid|unsub|vraag)|^c:hjdk6-kzc-/.test(k)) cnt[k.slice(2)] = Number(vals[j]) || 0; }); if (cursor === '0') break; } } catch (e) {}
+      const cnt = {}; cursor = '0'; try { for (let i = 0; i < 20; i++) { const [c, keys] = await kv.scan(cursor, { match: 'c:hjdk6-kz*', count: 1000 }); cursor = c; const vals = keys.length ? await kv.mget(...keys) : []; keys.forEach((k, j) => { if (/^c:hjdk6-kz-(abo|subs|welkom|mail|ms|paid|unsub|vraag|push|pm-)|^c:hjdk6-kzc-/.test(k)) cnt[k.slice(2)] = Number(vals[j]) || 0; }); if (cursor === '0') break; } } catch (e) {}
       const g = k => cnt[k] || 0; const zones = {}, creatives = {};
       Object.keys(cnt).forEach(k => { let m = k.match(/^hjdk6-kz-paid-(\d+)-(view|start|clk|sub)$/); if (m) { const z = zones[m[1]] || (zones[m[1]] = { zone: m[1], bezoeken: 0, gestart: 0, bolKliks: 0, inschrijvingen: 0 }); z[m[2] === 'view' ? 'bezoeken' : m[2] === 'start' ? 'gestart' : m[2] === 'clk' ? 'bolKliks' : 'inschrijvingen'] = cnt[k]; } m = k.match(/^hjdk6-kzc-(\d+)-(view|start|clk)$/); if (m) { const c = creatives[m[1]] || (creatives[m[1]] = { creative: m[1], bezoeken: 0, gestart: 0, bolKliks: 0 }); c[m[2] === 'view' ? 'bezoeken' : m[2] === 'start' ? 'gestart' : 'bolKliks'] = cnt[k]; } });
       const pct = (a, b) => b ? Math.round(a / b * 1000) / 10 : null;
       const allF = await allItems(true); const wachtrij = allF.filter(i => i.publishAt && i.publishAt > TODAY()).map(i => ({ slug: i.slug, publishAt: i.publishAt })).sort((a, b) => a.publishAt.localeCompare(b.publishAt));
       const subsList = (await kv.get(LIST)) || [];
+      const pmsgs = (await kv.get('hjdk:kz:pmsgs')) || []; const perSlug = Object.keys(cnt).filter(k => /^hjdk6-kz-push-[a-z0-9-]+-ok$/.test(k) && !/^hjdk6-kz-push-v\d+-ok$/.test(k)).map(k => ({ slug: k.slice(14, -3), aangezet: cnt[k] })).sort((a, b) => b.aangezet - a.aangezet);
+      const meldingen = { aangezet: g('hjdk6-kz-push-ok'), blokGetoond: g('hjdk6-kz-push-imp'), knopGeklikt: g('hjdk6-kz-push-click'), geweigerd: g('hjdk6-kz-push-denied'), nietOndersteund: g('hjdk6-kz-push-nosupport'), mislukt: g('hjdk6-kz-push-fail'), aanmeld_pct: pct(g('hjdk6-kz-push-ok'), g('hjdk6-kz-push-imp')),
+        varianten: PUSH.map((a, i) => ({ v: i, kop: a.h('…'), getoond: g('hjdk6-kz-push-v' + i + '-imp'), aangezet: g('hjdk6-kz-push-v' + i + '-ok'), pct: pct(g('hjdk6-kz-push-v' + i + '-ok'), g('hjdk6-kz-push-v' + i + '-imp')) })), perKeuzehulp: perSlug.slice(0, 30),
+        verstuurd: g('hjdk6-kz-push-sent'), getoondOpToestel: g('hjdk6-kz-push-shown'), geklikt: g('hjdk6-kz-push-clk'), laatsteBerichten: pmsgs.slice(0, 10).map(m => ({ id: m.id, slug: m.slug, titel: m.title, at: new Date(m.at).toISOString().slice(0, 16), verstuurd: m.verstuurd, getoond: g('hjdk6-kz-pm-' + m.id + '-shown'), geklikt: g('hjdk6-kz-pm-' + m.id + '-clk') })) };
       const TR = await trendsNow(); const trendsOut = { dag: TR.dag || null, metKeuzehulp: TR.terms.filter(x => x.keuzehulpen && x.keuzehulpen.length).map(x => ({ zoekwoord: x.t, verkeer: x.traffic, keuzehulpen: x.keuzehulpen })), zonderKeuzehulp: TR.terms.filter(x => !(x.keuzehulpen && x.keuzehulpen.length)).map(x => ({ zoekwoord: x.t, verkeer: x.traffic, nieuws: x.nieuws })) }; const seizoen = seasonsNow().map(x => ({ naam: x.naam, tot: x.tot, keuzehulpen: x.slugs.filter(sl => items.some(i => i.slug === sl)), ontbreekt: x.slugs.filter(sl => !items.some(i => i.slug === sl)) }));
       if (openbaar) return res.status(200).json({ ok: true, totaalKeuzehulpen: items.length, wachtrij: wachtrij.length, seizoen, trends: trendsOut, vandaag: (items.find(i => i.publishAt === TODAY()) || {}).slug || null, abonnees: subsList.length, aanmeldblokGetoond: g('hjdk6-kz-abo-imp'), afgemeld: g('hjdk6-kz-unsub'), mailVerstuurd: Object.keys(cnt).filter(k => /^hjdk6-kz-mail-d\d+-sent$/.test(k)).reduce((a, k) => a + cnt[k], 0), mailKliks: g('hjdk6-kz-mail-clk'), verzoeken: vragen.length,
         betaald: { bezoeken: g('hjdk6-kz-paid-view'), gestart: g('hjdk6-kz-paid-start'), bolKliks: g('hjdk6-kz-paid-clk'), inschrijvingen: g('hjdk6-kz-paid-sub'), klik_pct: pct(g('hjdk6-kz-paid-clk'), g('hjdk6-kz-paid-view')), zones: Object.values(zones).sort((a, b) => b.bezoeken - a.bezoeken).slice(0, 40), creatives: Object.values(creatives).sort((a, b) => b.bezoeken - a.bezoeken) },
-        trechterTop: funnel.slice(0, 15), zonderResultaat: top(miss).slice(0, 25) });
+        trechterTop: funnel.slice(0, 15), zonderResultaat: top(miss).slice(0, 25), meldingen });
       return res.status(200).json({ ok: true, totaalKeuzehulpen: items.length, wachtrij, seizoen, trends: trendsOut, vandaag: (items.find(i => i.publishAt === TODAY()) || {}).slug || null,
         inbox: { doorgestuurd: g('hjdk6-kz-inbound-ok'), mislukt: g('hjdk6-kz-inbound-fail'), laatste: ((await kv.get('hjdk:kz:inbox')) || []).slice(0, 20) }, abonnees: { totaal: subsList.length, viaGoogle: g('hjdk6-kz-abo-src-google'), viaEmail: g('hjdk6-kz-abo-src-email'), afgemeld: g('hjdk6-kz-unsub'), welkomstmailOk: g('hjdk6-kz-welkom-ok'), welkomstmailMislukt: g('hjdk6-kz-welkom-fail'), aanmeldblokGetoond: g('hjdk6-kz-abo-imp'), aanmeld_pct: pct(subsList.length, g('hjdk6-kz-abo-imp')),
           varianten: ABO.map((a, i) => ({ v: i, kop: a.h, getoond: g('hjdk6-kz-abo-v' + i + '-imp'), inschrijvingen: g('hjdk6-kz-abo-v' + i + '-sub'), pct: pct(g('hjdk6-kz-abo-v' + i + '-sub'), g('hjdk6-kz-abo-v' + i + '-imp')) })) },
         mail: { verstuurd: Object.keys(cnt).filter(k => /^hjdk6-kz-mail-d\d+-sent$/.test(k)).reduce((a, k) => a + cnt[k], 0), geopend: g('hjdk6-kz-mail-open'), kliksNaarSite: g('hjdk6-kz-mail-clk'), onderwerpen: MS.map((f, i) => ({ s: i, voorbeeld: f('Welke airfryer past bij jou?'), verstuurd: g('hjdk6-kz-ms-v' + i + '-sent'), kliks: g('hjdk6-kz-ms-v' + i + '-clk') })) },
         betaald: { bezoeken: g('hjdk6-kz-paid-view'), gestart: g('hjdk6-kz-paid-start'), bolKliks: g('hjdk6-kz-paid-clk'), inschrijvingen: g('hjdk6-kz-paid-sub'), klik_pct: pct(g('hjdk6-kz-paid-clk'), g('hjdk6-kz-paid-view')), zones: Object.values(zones).sort((a, b) => b.bezoeken - a.bezoeken), creatives: Object.values(creatives).sort((a, b) => b.bezoeken - a.bezoeken) },
-        verzoeken: vragen.slice(0, 200).map(v => Object.assign({}, v, v.audio ? { luister: '/api/kz/audio?id=' + v.audio + '&token=…' } : {})), zonderResultaat: top(miss), alleZoekopdrachten: top(all), trechter: funnel });
+        verzoeken: vragen.slice(0, 200).map(v => Object.assign({}, v, v.audio ? { luister: '/api/kz/audio?id=' + v.audio + '&token=…' } : {})), zonderResultaat: top(miss), alleZoekopdrachten: top(all), trechter: funnel, meldingen });
     }
     if (op === 'list') { const items = await allItems(); return res.status(200).json({ ok: true, n: items.length, items: items.map(i => ({ slug: i.slug, title: i.title, cat: i.cat, pct: i.pct })) }); }
     if (op === 'sitemap') { const items = await allItems(); const base = baseOf(req); res.setHeader('content-type', 'application/xml'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ['/keuzehulp', '/keuzehulp/over'].concat(items.map(i => '/keuzehulp/' + i.slug)).map(p => '<url><loc>' + esc(base + pathOf(req, p)) + '</loc><lastmod>' + UPDATED + '</lastmod></url>').join('') + '</urlset>'); }
@@ -453,7 +544,7 @@ export default async function handler(req, res) {
       const items = await allItems(); const base = baseOf(req); res.setHeader('content-type', 'text/plain; charset=utf-8');
       return res.status(200).send('# ' + SITE.name + '\n\n> ' + SITE.tagline + ' Onafhankelijke keuzehulpen in het Nederlands; elk advies noemt producten met de prijs van vandaag bij bol.com. Uitgave van ' + SITE.owner + '.\n\n## Keuzehulpen\n\n' + items.map(i => '- [' + i.title + '](' + base + pathOf(req, '/keuzehulp/' + i.slug) + '): ' + (i.kort || i.intro)).join('\n') + '\n\n## Over\n\n- [Over ons](' + base + pathOf(req, '/keuzehulp/over') + ')\n- Contact: ' + SITE.email + '\n'); }
     if (slug === 'over') { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(shell('Over ' + SITE.name, 'Wie wij zijn en hoe wij kiezen', `<div class="hero"><h1>Over ${esc(SITE.name)}</h1></div><div class="txt"><p>${esc(SITE.name)} helpt je kiezen zonder ruis: drie vragen, één advies, de prijs van vandaag. We verdienen een kleine vergoeding van bol als je via onze link koopt; dat beïnvloedt nooit welk product we adviseren. Merken kunnen geen plek kopen.</p><p>${esc(SITE.name)} is een uitgave van ${esc(SITE.owner)}. Vragen of een fout gezien? Mail <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a>.</p></div>`)); }
-    if (slug === 'privacy') { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(shell('Privacy — ' + SITE.name, 'Wat we wel en niet bijhouden', `<div class="hero"><h1>Privacy</h1></div><div class="txt"><p>We slaan geen persoonsgegevens op als je een keuzehulp gebruikt. We tellen anoniem welke antwoorden en producten gekozen worden om de adviezen te verbeteren (geen cookies van ons, geen profielen). Klik je door naar bol, dan gelden daar de voorwaarden en cookies van bol. Laat je een e-mailadres achter voor de dagelijkse keuzehulp-mail, dan gebruiken we dat alleen daarvoor; afmelden kan met één klik in elke mail. Spreek je een verzoek in, dan bewaren we die opname maximaal 60 dagen om er een keuzehulp van te maken. Kom je via een advertentie, dan tellen we anoniem per advertentie of je de keuzehulp gebruikt. Verantwoordelijke: ${esc(SITE.owner)}, ${esc(SITE.email)}.</p></div>`)); }
+    if (slug === 'privacy') { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(shell('Privacy — ' + SITE.name, 'Wat we wel en niet bijhouden', `<div class="hero"><h1>Privacy</h1></div><div class="txt"><p>We slaan geen persoonsgegevens op als je een keuzehulp gebruikt. We tellen anoniem welke antwoorden en producten gekozen worden om de adviezen te verbeteren (geen cookies van ons, geen profielen). Klik je door naar bol, dan gelden daar de voorwaarden en cookies van bol. Laat je een e-mailadres achter voor de dagelijkse keuzehulp-mail, dan gebruiken we dat alleen daarvoor; afmelden kan met één klik in elke mail. Spreek je een verzoek in, dan bewaren we die opname maximaal 60 dagen om er een keuzehulp van te maken. Kom je via een advertentie, dan tellen we anoniem per advertentie of je de keuzehulp gebruikt. Zet je meldingen aan, dan bewaren we alleen het technische meldingsadres van je browser en welke keuzehulp (en antwoorden) je volgt, om je hooguit één keer per week te laten weten dat de prijs is gedaald, er een beter model is of de regels zijn veranderd. Uitzetten kan altijd in je browser; daarna verwijderen we het adres zodra een melding niet meer aankomt. Verantwoordelijke: ${esc(SITE.owner)}, ${esc(SITE.email)}.</p></div>`)); }
     if (!slug) return home(res, req);
     const item = await getItem(slug, !!process.env.HJDK_TOKEN && url.searchParams.get('preview') === process.env.HJDK_TOKEN); if (!item) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(404).send(shell('Niet gevonden', '', '<div class="hero"><h1>Deze keuzehulp bestaat (nog) niet</h1><p><a href="/keuzehulp">Bekijk alle keuzehulpen →</a></p></div>')); }
     return page(item, res, req);
