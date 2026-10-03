@@ -241,7 +241,7 @@ export default async function handler(req, res) {
 ${btn(top, true)}${alts}${duo}
 <small>${disc}<br><a class="s2" href="${esc(a.article)}?utm_source=bridge&zoneid=${zone}">Volledige keuzehulp op yoo.rs</a></small></div></main>
 <div class="stk" id="stk"><div class="stp">${esc(top.name.slice(0, 40))}${top.price != null ? ' · ' + eur(top.price) : ''}</div>${btn(top, true)}</div>
-<script>(function(){var A='https://hjdk-api.vercel.app/api/hjdk/stats/hits',S=${JSON.stringify(slug)},Z=${JSON.stringify(zone)},V=${JSON.stringify(variant)},B=${JSON.stringify(String(bi))},C=${JSON.stringify(cid)},PB=${JSON.stringify(postback)};
+<script>(function(){var A='/api/hjdk/stats/hits',S=${JSON.stringify(slug)},Z=${JSON.stringify(zone)},V=${JSON.stringify(variant)},B=${JSON.stringify(String(bi))},C=${JSON.stringify(cid)},PB=${JSON.stringify(postback)};
 function send(hs){try{var b=JSON.stringify({hits:hs});if(navigator.sendBeacon&&navigator.sendBeacon(A,new Blob([b],{type:'text/plain'})))return;fetch(A,{method:'POST',keepalive:true,headers:{'content-type':'text/plain'},body:b});}catch(e){}}
 function base(m){var h=[['hjdk6-br-'+S+'-'+m,1],['hjdk6-brz-'+Z+'-'+m,1]];if(m!=='view'){h.push(['hjdk6-brv-'+S+'-'+V+'-'+m,1]);h.push(['hjdk6-brb-'+S+'-'+B+'-'+m,1]);}return h;}
 send(base('view'));

@@ -69,7 +69,7 @@ ${layout === 'zoek' ? '<div class="top">' + searchBox + '</div>' : ''}
 ${rows.map(rowHtml).join('') || '<p>Even geen producten gevonden. Probeer een zoekwoord.</p>'}
 ${layout === 'grid' ? '<div class="top">' + searchBox + '</div>' : ''}
 <small>Affiliate-links: yoo.rs ontvangt een vergoeding van bol, de prijs verandert niet. Prijzen komen van bol en kunnen wijzigen.</small></main>
-<script>(function(){var A='https://hjdk-api.vercel.app/api/hjdk/stats/hits',P=${JSON.stringify(pageId)},Z=${JSON.stringify(zone)},L=${JSON.stringify(layout)},T=${JSON.stringify(isTest)},PB=${JSON.stringify(postback)};
+<script>(function(){var A='/api/hjdk/stats/hits',P=${JSON.stringify(pageId)},Z=${JSON.stringify(zone)},L=${JSON.stringify(layout)},T=${JSON.stringify(isTest)},PB=${JSON.stringify(postback)};
 function send(hs){if(T)return;try{var b=JSON.stringify({hits:hs});if(navigator.sendBeacon&&navigator.sendBeacon(A,new Blob([b],{type:'text/plain'})))return;fetch(A,{method:'POST',keepalive:true,headers:{'content-type':'text/plain'},body:b});}catch(e){}}
 var vid='';try{vid=localStorage.getItem('hjdk-vid')||'';if(!vid){vid=Math.random().toString(36).slice(2)+Date.now().toString(36);localStorage.setItem('hjdk-vid',vid);}}catch(e){}
 var day=new Date().toISOString().slice(0,10);function once(m){try{var k='hjdk-t-'+P+'-'+m+'-'+day;if(localStorage.getItem(k))return false;localStorage.setItem(k,'1');}catch(e){}return true;}
