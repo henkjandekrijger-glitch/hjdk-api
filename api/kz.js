@@ -72,13 +72,13 @@ function newest(items) { const dated = items.filter(i => i.publishAt).sort((a, b
 
 // Gebruik en trechter per keuzehulp uit de tellers (c:hjdk6-kz-<slug>-page / -q0 / -q1 / -q2 / -adv / -clk), 1 uur cache.
 async function usage() {
-  try { const c = await kv.get('hjdk:kz:usage'); if (c && c.at && Date.now() - c.at < 3600 * 1000) return c.by; } catch (e) {}
+  try { const c = await kv.get('hjdk:kz:usage2'); if (c && c.at && Date.now() - c.at < 3600 * 1000) return c.by; } catch (e) {}
   const by = {}; let cursor = '0';
-  try { for (let i = 0; i < 40; i++) { const [c, keys] = await kv.scan(cursor, { match: 'c:hjdk6-kz-*', count: 1000 }); cursor = c;
+  try { const t0 = Date.now(); for (let i = 0; i < 5000 && Date.now() - t0 < 6000; i++) { const [c, keys] = await kv.scan(cursor, { match: 'c:hjdk6-kz-*', count: 5000 }); cursor = c;
       const vals = keys.length ? await kv.mget(...keys) : [];
       keys.forEach((k, j) => { const m = k.match(/^c:hjdk6-kz-(.+)-(page|q0|q1|q2|adv|clk)$/); if (!m) return; const b = by[m[1]] || (by[m[1]] = { page: 0, q0: 0, q1: 0, q2: 0, adv: 0, clk: 0 }); b[m[2]] += Number(vals[j]) || 0; });
       if (cursor === '0') break; } } catch (e) {}
-  try { await kv.set('hjdk:kz:usage', { at: Date.now(), by }); } catch (e) {}
+  try { await kv.set('hjdk:kz:usage2', { at: Date.now(), by }); } catch (e) {}
   return by;
 }
 // score voor de volgorde op de startpagina: bol-kliks wegen 5x, een afgemaakt advies 2x, een bezoek 1x; nieuwe keuzehulpen krijgen een kans (Thompson)
@@ -511,12 +511,12 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
       const openbaar = op === 'status'; res.setHeader('cache-control', 'no-store');
       if (!openbaar && (!process.env.HJDK_TOKEN || url.searchParams.get('token') !== process.env.HJDK_TOKEN)) return res.status(401).json({ error: 'token' });
       const miss = {}, all = {}; let cursor = '0';
-      try { for (let i = 0; i < 20; i++) { const [c, keys] = await kv.scan(cursor, { match: 'c:hjdk6-kzq*', count: 1000 }); cursor = c; const vals = keys.length ? await kv.mget(...keys) : []; keys.forEach((k, j) => { const v = Number(vals[j]) || 0; if (k.startsWith('c:hjdk6-kzq0-')) miss[k.slice(13).replace(/_/g, ' ')] = v; else if (k.startsWith('c:hjdk6-kzq-') && k !== 'c:hjdk6-kzq-hits') all[k.slice(12).replace(/_/g, ' ')] = v; }); if (cursor === '0') break; } } catch (e) {}
+      try { const t1 = Date.now(); for (let i = 0; i < 5000 && Date.now() - t1 < 5000; i++) { const [c, keys] = await kv.scan(cursor, { match: 'c:hjdk6-kzq*', count: 5000 }); cursor = c; const vals = keys.length ? await kv.mget(...keys) : []; keys.forEach((k, j) => { const v = Number(vals[j]) || 0; if (k.startsWith('c:hjdk6-kzq0-')) miss[k.slice(13).replace(/_/g, ' ')] = v; else if (k.startsWith('c:hjdk6-kzq-') && k !== 'c:hjdk6-kzq-hits') all[k.slice(12).replace(/_/g, ' ')] = v; }); if (cursor === '0') break; } } catch (e) {}
       const vragen = (await kv.get('hjdk:kz:vragen')) || []; const items = await allItems(); const have = new Set(items.map(i => i.slug));
       const U = await usage(); const funnel = Object.keys(U).filter(s => have.has(s)).map(s => { const b = U[s]; return { slug: s, bezoeken: b.page, vraag1: b.q0, vraag2: b.q1, vraag3: b.q2, advies: b.adv, bolKliks: b.clk, afgehaakt_voor_vraag1: Math.max(0, b.page - b.q0), afgehaakt_voor_advies: Math.max(0, b.q0 - b.adv), klik_pct: b.adv ? Math.round(b.clk / b.adv * 1000) / 10 : null }; }).sort((a, b) => b.bezoeken - a.bezoeken);
       const top = o => Object.entries(o).sort((a, b) => b[1] - a[1]).slice(0, 100).map(([q, n]) => ({ q, n }));
       // abonnees, mails, aanmeldblok-varianten, betaald verkeer per zone/creative, en de wachtrij (publishAt in de toekomst)
-      const cnt = {}; cursor = '0'; try { for (let i = 0; i < 20; i++) { const [c, keys] = await kv.scan(cursor, { match: 'c:hjdk6-kz*', count: 1000 }); cursor = c; const vals = keys.length ? await kv.mget(...keys) : []; keys.forEach((k, j) => { if (/^c:hjdk6-kz-(abo|subs|welkom|mail|ms|paid|unsub|vraag|push|pm-)|^c:hjdk6-kzc-/.test(k)) cnt[k.slice(2)] = Number(vals[j]) || 0; }); if (cursor === '0') break; } } catch (e) {}
+      const cnt = {}; cursor = '0'; try { const t2 = Date.now(); for (let i = 0; i < 5000 && Date.now() - t2 < 8000; i++) { const [c, keys] = await kv.scan(cursor, { match: 'c:hjdk6-kz*', count: 5000 }); cursor = c; const vals = keys.length ? await kv.mget(...keys) : []; keys.forEach((k, j) => { if (/^c:hjdk6-kz-(abo|subs|welkom|mail|ms|paid|unsub|vraag|push|pm-)|^c:hjdk6-kzc-/.test(k)) cnt[k.slice(2)] = Number(vals[j]) || 0; }); if (cursor === '0') break; } } catch (e) {}
       const g = k => cnt[k] || 0; const zones = {}, creatives = {};
       Object.keys(cnt).forEach(k => { let m = k.match(/^hjdk6-kz-paid-(\d+)-(view|start|clk|sub)$/); if (m) { const z = zones[m[1]] || (zones[m[1]] = { zone: m[1], bezoeken: 0, gestart: 0, bolKliks: 0, inschrijvingen: 0 }); z[m[2] === 'view' ? 'bezoeken' : m[2] === 'start' ? 'gestart' : m[2] === 'clk' ? 'bolKliks' : 'inschrijvingen'] = cnt[k]; } m = k.match(/^hjdk6-kzc-(\d+)-(view|start|clk)$/); if (m) { const c = creatives[m[1]] || (creatives[m[1]] = { creative: m[1], bezoeken: 0, gestart: 0, bolKliks: 0 }); c[m[2] === 'view' ? 'bezoeken' : m[2] === 'start' ? 'gestart' : 'bolKliks'] = cnt[k]; } });
       const pct = (a, b) => b ? Math.round(a / b * 1000) / 10 : null;

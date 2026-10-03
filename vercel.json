@@ -151,5 +151,10 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "api/kz.js": {
+      "maxDuration": 30
+    }
+  }
 }
