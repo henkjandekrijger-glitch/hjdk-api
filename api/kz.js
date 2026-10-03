@@ -57,6 +57,7 @@ async function getItem(slug, withFuture) { const all = await allItems(withFuture
 // Seizoenskalender NL: in dit venster komen deze keuzehulpen bovenaan ("Nu actueel") en krijgen ze voorrang in de dagmail
 const SEASON = [
   { key: 'halloween', naam: 'Halloween', van: '10-01', tot: '10-31', slugs: ['halloween-kostuum-kind', 'halloween-kostuum-volwassene', 'halloween-decoratie', 'schmink-kind'] },
+  { key: 'saldering', naam: 'Einde salderen (1 jan 2027)', van: '10-01', tot: '12-31', slugs: ['thuisbatterij'] },
   { key: 'herfst', naam: 'Herfst & winter', van: '10-01', tot: '12-31', slugs: ['winterjas-kind', 'snowboots-kind', 'donsdekbed', 'elektrische-deken', 'elektrische-kachel', 'luchtbevochtiger', 'lichtwekker', 'regenjas-kind', 'infraroodpaneel'] },
   { key: 'sinterklaas', naam: 'Sinterklaas', van: '10-15', tot: '12-05', slugs: ['schoencadeautjes', 'sinterklaas-cadeau-8-12', 'cadeau-kind-5-jaar', 'cadeau-peuter', 'sinterklaasspel', 'loopfiets', 'kinderfiets', 'tablet-kind'] },
   { key: 'blackfriday', naam: 'Black Friday', van: '11-15', tot: '12-01', slugs: ['airfryer', 'robotstofzuiger', 'koptelefoon', 'smartwatch', 'e-reader', 'soundbar', 'printer'] },
@@ -95,13 +96,26 @@ async function advise(item, route, tag) {
   let ranked = products.map(p => Object.assign({}, p, { s: score(p), hits: hitsOf(p) })).sort((a, b) => b.s - a.s);
   const ids = ranked.slice(0, 12).map(p => 'c:hjdk6-kz-' + item.slug + '-' + p.id + '-clk');
   try { const clk = ids.length ? await kv.mget(...ids) : []; ranked.slice(0, 12).forEach((p, i) => { p.s += Math.min(3, (Number(clk[i]) || 0) / 10); }); ranked = ranked.sort((a, b) => b.s - a.s); } catch (e) {}
-  const top = ranked.slice(0, 8); if (!top.length) return { key, term, products: [] };
+  const partner = pickPartner(item, route, key);
+  const top = ranked.slice(0, 8); if (!top.length) return { key, term, products: partner ? [partner] : [] };
   const best = top[0];
   const fits = p => !must.length || p.hits >= Math.max(1, best.hits - 1); /* alternatieven moeten bij de antwoorden blijven passen */
   const cheaper = top.filter(p => p.id !== best.id && fits(p) && p.price < best.price && (p.rating || 0) >= 4 && !(min && p.price < min * 0.6)).sort((a, b) => a.price - b.price)[0] || null;
   const premium = top.filter(p => p.id !== best.id && fits(p) && (!cheaper || p.id !== cheaper.id) && p.price > best.price).sort((a, b) => b.price - a.price)[0] || null;
   const out = [{ role: 'Ons advies', p: best }]; if (cheaper) out.push({ role: 'Goedkoper alternatief', p: cheaper }); if (premium) out.push({ role: 'Als je meer wilt', p: premium });
-  return { key, term, products: out.map(x => ({ role: x.role, id: x.p.id, title: x.p.title, image: x.p.image, price: x.p.price, strike: x.p.strike, rating: x.p.rating, delivery: x.p.delivery, url: bolLink(x.p.url, key) })) };
+  const list = out.map(x => ({ role: x.role, id: x.p.id, title: x.p.title, image: x.p.image, price: x.p.price, strike: x.p.strike, rating: x.p.rating, delivery: x.p.delivery, url: bolLink(x.p.url, key) }));
+  if (partner) list.push(partner);
+  return { key, term, products: list };
+}
+/* partnerproducten buiten bol (bijv. Jackery via Impact): kies het product dat het best bij de antwoorden past; prijs tonen we niet (die staat live bij de fabrikant) */
+const IMPACT = { Jackery: 'https://itjackery.pxf.io/c/3526280/1762660/20686' };
+function partnerLink(shop, url, key) { const b = IMPACT[shop]; return b ? b + '?subId1=' + encodeURIComponent(key) + '&u=' + encodeURIComponent(url) : url; }
+function pickPartner(item, route, key) {
+  if (!item.partners || !item.partners.length) return null;
+  const sc = p => (p.fit || []).reduce((n, f, i) => n + (Array.isArray(f) && f.indexOf(route[i]) >= 0 ? (i === 0 ? 3 : 1) : 0), 0);
+  const best = item.partners.map(p => ({ p, s: sc(p) })).filter(x => !x.p.fit || (x.p.fit[0] || []).indexOf(route[0]) >= 0).sort((a, b) => b.s - a.s)[0];
+  if (!best) return null; const p = best.p;
+  return { role: 'Direct bij ' + p.shop, id: p.id, title: p.title, image: p.image, price: null, shop: p.shop, url: partnerLink(p.shop, p.url, key) };
 }
 
 const CSS = `*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,system-ui,Segoe UI,Roboto,sans-serif;background:#fbfaf7;color:#14213d}a{color:#0f766e}
@@ -127,7 +141,7 @@ function shell(title, desc, body, canonical, extraHead) {
 }
 
 function productCard(x, i) {
-  return `<div class="pr${i === 0 ? ' best' : ''}"><a href="${esc(x.url)}" target="_blank" rel="sponsored noopener nofollow" data-kz="${esc(x.id)}"><img src="${esc(x.image)}" alt="" loading="lazy"></a><div><div class="role">${esc(x.role)}</div><div class="t">${esc(String(x.title).slice(0, 90))}</div><div class="m"><b>${eur(x.price)}</b>${x.strike && x.strike > x.price ? '<s>' + eur(x.strike) + '</s>' : ''}${x.rating != null ? ' · ★ ' + Number(x.rating).toFixed(1).replace('.', ',') : ''}${x.delivery && /morgen/i.test(x.delivery) ? ' · morgen in huis' : ''}</div><a class="btn" href="${esc(x.url)}" target="_blank" rel="sponsored noopener nofollow" data-kz="${esc(x.id)}">Bekijk bij bol →</a></div></div>`;
+  return `<div class="pr${i === 0 ? ' best' : ''}"><a href="${esc(x.url)}" target="_blank" rel="sponsored noopener nofollow" data-kz="${esc(x.id)}"><img src="${esc(x.image)}" alt="" loading="lazy"></a><div><div class="role">${esc(x.role)}</div><div class="t">${esc(String(x.title).slice(0, 90))}</div><div class="m">${x.price == null ? 'Actuele prijs en acties bij ' + esc(x.shop || 'de winkel') : '<b>' + eur(x.price) + '</b>'}${x.strike && x.strike > x.price ? '<s>' + eur(x.strike) + '</s>' : ''}${x.rating != null ? ' · ★ ' + Number(x.rating).toFixed(1).replace('.', ',') : ''}${x.delivery && /morgen/i.test(x.delivery) ? ' · morgen in huis' : ''}</div><a class="btn" href="${esc(x.url)}" target="_blank" rel="sponsored noopener nofollow" data-kz="${esc(x.id)}">Bekijk bij ${esc(x.shop || 'bol')} →</a></div></div>`;
 }
 
 // Aanmeldblok: elke dag één nieuwe keuzehulp per mail. Drie teksten, Thompson op c:hjdk6-kz-abo-v<i>-imp / -sub. Daaronder: "mis je er een? typ of spreek in".
@@ -186,7 +200,7 @@ async function page(item, res, req) {
     { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Keuzehulp', item: base + pathOf(req, '/keuzehulp') }, { '@type': 'ListItem', position: 2, name: item.cat }, { '@type': 'ListItem', position: 3, name: item.title, item: url }] },
     ...(item.faq && item.faq.length ? [{ '@type': 'FAQPage', mainEntity: item.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []) ] });
   const body = `<script>window.__kzPB=${JSON.stringify(postback)};window.__kzCID=${JSON.stringify(code)};</script><article>${paid ? `<div class="hero" style="padding-bottom:6px"><h1 style="margin-bottom:6px">${esc(item.h1)}</h1><p style="margin:0;color:#0f766e;font-weight:700">Tik je antwoorden — ${item.questions.length} vragen, klaar in 20 seconden. Je advies verschijnt direct.</p></div>\n${qs}\n${kort}` : `<div class="hero">${nieuwHtml}${crumbs}<div class="cat" style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#78716c;margin-top:10px">${esc(item.cat)} · keuzehulp · bijgewerkt ${UPDATED}</div><h1>${esc(item.h1)}</h1><p>${esc(item.intro)}</p></div>\n${kort}\n${qs}`}
-<div class="adv" id="adv"><h2 style="font-size:19px;margin:8px 0 10px">Jouw advies <span id="advn" style="color:#78716c;font-weight:400;font-size:14px"></span></h2><div id="advl">${adv.products.map(productCard).join('') || '<p>Even geduld, we halen de prijzen van vandaag op…</p>'}</div><p class="disc">Prijzen van vandaag bij bol; wij kiezen op pasvorm bij jouw antwoorden, beoordeling en prijs. Geen betaalde plaatsing.</p></div>
+<div class="adv" id="adv"><h2 style="font-size:19px;margin:8px 0 10px">Jouw advies <span id="advn" style="color:#78716c;font-weight:400;font-size:14px"></span></h2><div id="advl">${adv.products.map(productCard).join('') || '<p>Even geduld, we halen de prijzen van vandaag op…</p>'}</div><p class="disc">Prijzen van vandaag bij bol; wij kiezen op pasvorm bij jouw antwoorden, beoordeling en prijs. Geen betaalde plaatsing.${item.partners && item.partners.length ? ' Links naar ' + esc([...new Set(item.partners.map(p => p.shop))].join(', ')) + ' zijn ook partnerlinks: wij krijgen een vergoeding als je daar koopt, jij betaalt niets extra.' : ''}</p></div>
 <div class="txt"><h2>Waar je op moet letten</h2><p>${esc(item.uitleg)}</p></div>
 <div class="txt"><h2>Veelgemaakte fouten</h2><ul>${item.fouten.map(f => '<li>' + esc(f) + '</li>').join('')}</ul></div>
 ${aboBox(aboV, item.slug, clientId)}
@@ -197,7 +211,7 @@ ${related}
 function hit(k){try{navigator.sendBeacon(H,new Blob([JSON.stringify({hits:[[k,1]]})],{type:'text/plain'}))}catch(e){}}
 function eur(v){return '€'+Number(v).toFixed(2).replace('.',',')}
 function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-function card(x,i){return '<div class="pr'+(i===0?' best':'')+'"><a href="'+esc(x.url)+'" target="_blank" rel="sponsored noopener nofollow" data-kz="'+esc(x.id)+'"><img src="'+esc(x.image)+'" alt=""></a><div><div class="role">'+esc(x.role)+'</div><div class="t">'+esc(String(x.title).slice(0,90))+'</div><div class="m"><b>'+eur(x.price)+'</b>'+(x.strike&&x.strike>x.price?'<s>'+eur(x.strike)+'</s>':'')+(x.rating!=null?' · ★ '+Number(x.rating).toFixed(1).replace('.',','):'')+(x.delivery&&/morgen/i.test(x.delivery)?' · morgen in huis':'')+'</div><a class="btn" href="'+esc(x.url)+'" target="_blank" rel="sponsored noopener nofollow" data-kz="'+esc(x.id)+'">Bekijk bij bol →</a></div></div>'}
+function card(x,i){return '<div class="pr'+(i===0?' best':'')+'"><a href="'+esc(x.url)+'" target="_blank" rel="sponsored noopener nofollow" data-kz="'+esc(x.id)+'"><img src="'+esc(x.image)+'" alt=""></a><div><div class="role">'+esc(x.role)+'</div><div class="t">'+esc(String(x.title).slice(0,90))+'</div><div class="m">'+(x.price==null?'Actuele prijs en acties bij '+esc(x.shop||'de winkel'):'<b>'+eur(x.price)+'</b>')+(x.strike&&x.strike>x.price?'<s>'+eur(x.strike)+'</s>':'')+(x.rating!=null?' · ★ '+Number(x.rating).toFixed(1).replace('.',','):'')+(x.delivery&&/morgen/i.test(x.delivery)?' · morgen in huis':'')+'</div><a class="btn" href="'+esc(x.url)+'" target="_blank" rel="sponsored noopener nofollow" data-kz="'+esc(x.id)+'">Bekijk bij '+esc(x.shop||'bol')+' →</a></div></div>'}
 var t=null;function load(){var r=cur.join('-');document.getElementById('advn').textContent='wordt bijgewerkt…';fetch(A+'?slug='+encodeURIComponent(S)+'&a='+r+(Z?'&z='+Z:'')+(C?'&c='+C:'')).then(function(x){return x.json()}).then(function(j){var l=document.getElementById('advl');l.innerHTML=(j.products||[]).map(card).join('')||'<p>Geen passend product gevonden met deze antwoorden. Probeer een andere combinatie.</p>';document.getElementById('advn').textContent='';hit('hjdk6-kz-'+S+'-r'+r+'-imp');if(!done.adv){done.adv=1;hit('hjdk6-kz-'+S+'-adv')}(j.products||[]).forEach(function(p){hit('hjdk6-kz-'+S+'-'+p.id+'-imp')});try{history.replaceState(null,'','#a='+r)}catch(e){}}).catch(function(){document.getElementById('advn').textContent=''})}
 var done={};document.querySelectorAll('.q').forEach(function(q){var qi=+q.getAttribute('data-q');q.querySelectorAll('.opt').forEach(function(b){b.addEventListener('click',function(){q.querySelectorAll('.opt').forEach(function(x){x.classList.remove('on')});b.classList.add('on');cur[qi]=+b.getAttribute('data-o');hit('hjdk6-kz-'+S+'-q'+qi+'-'+cur[qi]);if(!done['q'+qi]){done['q'+qi]=1;hit('hjdk6-kz-'+S+'-q'+qi);if(!done.start){done.start=1;if(Z||C){hit('hjdk6-kz-paid-start');hit('hjdk6-kz-paid-'+(Z||'0')+'-start');if(CR)hit('hjdk6-kzc-'+CR+'-start')}if(PB&&!pbDone){pbDone=true;try{fetch(PB,{mode:'no-cors',keepalive:true})}catch(e2){}}}}clearTimeout(t);t=setTimeout(load,250);var adv=document.getElementById('adv');if(qi===n-1&&adv){adv.scrollIntoView({behavior:'smooth',block:'start'})}})})});
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-kz]');if(a){hit('hjdk6-kz-'+S+'-'+a.getAttribute('data-kz')+'-clk');hit('hjdk6-kz-'+S+'-r'+cur.join('-')+'-clk');hit('hjdk6-kz-'+S+'-clk');hit('hjdk6-kz-clk');if(Z||C){hit('hjdk6-kz-paid-clk');hit('hjdk6-kz-paid-'+(Z||'0')+'-clk');hit('hjdk6-kz-paid-'+(Z||'0')+'-'+S+'-clk');if(CR)hit('hjdk6-kzc-'+CR+'-clk')}if(PB&&!pbDone){pbDone=true;try{fetch(PB,{mode:'no-cors',keepalive:true})}catch(e2){}}}},true);

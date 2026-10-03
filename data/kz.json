@@ -15678,6 +15678,2525 @@
     }
    ],
    "publishAt": "2026-10-22"
+  },
+  {
+   "slug": "halloween-kostuum-kind",
+   "cat": "Speelgoed",
+   "pct": 6,
+   "term": "halloween kostuum kind",
+   "title": "Welk Halloween-kostuum past bij jouw kind?",
+   "h1": "Halloween-kostuum voor een kind kiezen: eng of leuk?",
+   "kort": "Kies op leeftijd: kleuters willen schattig en comfortabel, kinderen van 6 tot 10 jaar een herkenbaar personage en tieners iets echt engs. Let altijd op brandveilig materiaal en een goede pasvorm.",
+   "intro": "Een Halloween-kostuum moet passen, warm genoeg zijn en vooral door je kind zelf gekozen worden. Beantwoord drie vragen over leeftijd, sfeer en budget en je ziet kostuums die daarbij passen.",
+   "questions": [
+    {
+     "q": "Hoe oud is je kind?",
+     "options": [
+      {
+       "label": "Peuter of kleuter, 2 tot 5 jaar",
+       "term": "halloween kostuum peuter",
+       "max": 30
+      },
+      {
+       "label": "Basisschool, 6 tot 10 jaar",
+       "add": "kind 6 jaar"
+      },
+      {
+       "label": "Tiener, 11 jaar of ouder",
+       "term": "halloween kostuum tiener",
+       "min": 20
+      }
+     ]
+    },
+    {
+     "q": "Eng of leuk?",
+     "options": [
+      {
+       "label": "Lekker eng en griezelig",
+       "must": [
+        "skelet",
+        "zombie",
+        "vampier",
+        "duivel",
+        "heks",
+        "spook"
+       ]
+      },
+      {
+       "label": "Leuk en schattig",
+       "must": [
+        "pompoen",
+        "spook",
+        "vleermuis",
+        "kat",
+        "heks",
+        "dier"
+       ]
+      },
+      {
+       "label": "Maakt niet uit",
+       "add": ""
+      }
+     ]
+    },
+    {
+     "q": "Wat is je budget?",
+     "options": [
+      {
+       "label": "Zo voordelig mogelijk",
+       "max": 20
+      },
+      {
+       "label": "Gemiddeld",
+       "min": 20,
+       "max": 40
+      },
+      {
+       "label": "Complete set met accessoires",
+       "min": 30,
+       "must": [
+        "set",
+        "compleet",
+        "accessoires",
+        "kostuum"
+       ]
+      }
+     ]
+    }
+   ],
+   "uitleg": "Kijk bij een kinderkostuum eerst naar de maat en de stof. Kleding in kindermaten is meestal ingedeeld op lengte of leeftijd, en een kostuum dat te lang is, is de belangrijkste oorzaak van struikelen in het donker. Kies bij voorkeur materiaal dat vlamvertragend is en voldoet aan de Europese speelgoedveiligheidsnorm; dat staat meestal op het label. Een kostuum van dun polyester is goedkoop maar koud, dus reken op een trui of thermokleding eronder, want de meeste rondes zijn buiten en eind oktober is het vaak koud en nat. Een masker dat het hele gezicht bedekt, beperkt het zicht en de ademhaling; kies bij jonge kinderen liever een hoed, capuchon of schmink. Controleer of het kind zelf naar het toilet kan zonder het kostuum helemaal uit te trekken. Een losse cape of staart is handig, want die kan af als het te warm wordt. Bij kleuters werkt een eenvoudig kostuum met een duidelijk personage het best: zij willen vooral herkend worden.",
+   "fouten": [
+    "Een kostuum kopen dat te lang of te wijd is, waardoor je kind erover struikelt.",
+    "Een masker kiezen dat het zicht of de ademhaling beperkt.",
+    "Vergeten dat het buiten koud is: geen ruimte voor een warme laag eronder."
+   ],
+   "faq": [
+    {
+     "q": "Moet een kinderkostuum brandveilig zijn?",
+     "a": "Ja, kies een kostuum met een CE-markering en liefst vlamvertragend materiaal; dat staat op het label."
+    },
+    {
+     "q": "Hoe vind ik de goede maat?",
+     "a": "Meet de lengte van je kind en vergelijk die met de maattabel van het kostuum; kies liever een maat groter dan te klein, maar niet te lang."
+    },
+    {
+     "q": "Hoe houd ik mijn kind warm onder het kostuum?",
+     "a": "Draag thermokleding of een dunne trui onder het kostuum en kies een kostuum dat ruim genoeg zit om dat toe te laten."
+    }
+   ],
+   "publishAt": "2026-10-03"
+  },
+  {
+   "slug": "halloween-kostuum-volwassene",
+   "cat": "Kleding & schoenen",
+   "pct": 7,
+   "term": "halloween kostuum volwassene",
+   "title": "Welk Halloween-kostuum past bij jou?",
+   "h1": "Halloween-kostuum voor volwassenen: eng, grappig of simpel?",
+   "kort": "Voor een feest met vrienden kies je iets opvallends, voor werk iets subtiels en met je partner een setje dat samen werkt. Let op de maat en of je erin kunt zitten en dansen.",
+   "intro": "Een goed Halloween-kostuum voor volwassenen hangt af van waar je het draagt, hoe ver je wilt gaan en hoeveel je wilt uitgeven. Drie vragen en je weet welke kant je op moet.",
+   "questions": [
+    {
+     "q": "Waar draag je het?",
+     "options": [
+      {
+       "label": "Op een feest met vrienden",
+       "add": "feest"
+      },
+      {
+       "label": "Op werk of op kantoor",
+       "term": "halloween accessoires volwassene",
+       "max": 25
+      },
+      {
+       "label": "Samen met mijn partner",
+       "term": "halloween koppel kostuum",
+       "must": [
+        "koppel",
+        "paar",
+        "set",
+        "2 stuks",
+        "partner"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Eng of grappig?",
+     "options": [
+      {
+       "label": "Eng en griezelig",
+       "must": [
+        "skelet",
+        "zombie",
+        "vampier",
+        "duivel",
+        "heks",
+        "horror"
+       ]
+      },
+      {
+       "label": "Grappig en opvallend",
+       "must": [
+        "grappig",
+        "pompoen",
+        "opblaasbaar",
+        "dino",
+        "clown",
+        "banaan"
+       ]
+      },
+      {
+       "label": "Subtiel of simpel",
+       "term": "halloween accessoires volwassene",
+       "max": 30
+      }
+     ]
+    },
+    {
+     "q": "Wat is je budget?",
+     "options": [
+      {
+       "label": "Tot ongeveer 30 euro",
+       "max": 30
+      },
+      {
+       "label": "Tussen 30 en 60 euro",
+       "min": 30,
+       "max": 60
+      },
+      {
+       "label": "Ik wil iets wat opvalt, dat mag kosten",
+       "min": 50
+      }
+     ]
+    }
+   ],
+   "uitleg": "Begin bij de gelegenheid. Op een feest mag je kostuum groot zijn, maar op werk wil je kunnen werken: kies dan een hoofdband, een masker voor één oog, make-up of een opvallend kledingstuk in plaats van een volledig pak. Let bij kostuums vooral op de maattabel. Veel kostuums vallen eenheidsmaat uit en zijn voor lange of brede mensen te krap; kijk dus naar borstomvang, taille en lengte in plaats van alleen S, M of L. Goedkope kostuums van dun polyester zijn warm en laten weinig lucht door, wat op een druk feest vervelend wordt. Een los pak met broek, jas en accessoires is flexibeler dan een jumpsuit, want je kunt het onderdeel voor onderdeel uitdoen. Ga je als koppel, kies dan twee kostuums die samen een verhaal vormen, zoals jager en prooi of twee personages uit dezelfde film. Reken extra budget voor schmink, pruik en schoenen, want die maken het kostuum pas echt af.",
+   "fouten": [
+    "Een kostuum kopen op basis van de afbeelding zonder de maattabel te lezen.",
+    "Een volledig pak kiezen voor een avond waar je moet kunnen zitten, eten en dansen.",
+    "Pas op het laatste moment bestellen, waardoor je maat uitverkocht is."
+   ],
+   "faq": [
+    {
+     "q": "Wat draag ik naar werk met Halloween?",
+     "a": "Kies een kleine, subtiele variant: een hoofdband, een masker of make-up, zodat je gewoon kunt werken."
+    },
+    {
+     "q": "Hoe kies ik de goede maat?",
+     "a": "Gebruik de maattabel van het kostuum en meet borst, taille en lengte; eenheidsmaat valt vaak klein."
+    },
+    {
+     "q": "Welke kostuums zijn leuk als koppel?",
+     "a": "Twee kostuums die bij elkaar horen, bijvoorbeeld vampier en vampierjager, werken beter dan twee losse kostuums."
+    }
+   ],
+   "publishAt": "2026-10-03"
+  },
+  {
+   "slug": "halloween-decoratie",
+   "cat": "Wonen",
+   "pct": 4,
+   "term": "halloween decoratie",
+   "title": "Welke Halloween-decoratie past bij jou?",
+   "h1": "Halloween-decoratie voor huis en tuin kiezen",
+   "kort": "Voor buiten kies je weerbestendige decoratie met led-verlichting, binnen kun je met papier, stof en kleine lichtjes werken. Heb je jonge kinderen, kies dan vrolijk in plaats van eng.",
+   "intro": "Van een pompoenenrij op de stoep tot spinnenwebben in de woonkamer: Halloween-decoratie kun je op veel manieren inzetten. Beantwoord drie vragen en zie wat past bij jouw huis.",
+   "questions": [
+    {
+     "q": "Waar wil je versieren?",
+     "options": [
+      {
+       "label": "Binnen",
+       "term": "halloween decoratie binnen"
+      },
+      {
+       "label": "Buiten, in de tuin of voor de deur",
+       "term": "halloween decoratie buiten",
+       "must": [
+        "buiten",
+        "tuin",
+        "waterdicht",
+        "weerbestendig"
+       ]
+      },
+      {
+       "label": "Allebei",
+       "add": ""
+      }
+     ]
+    },
+    {
+     "q": "Eng of vrolijk?",
+     "options": [
+      {
+       "label": "Echt eng, met skeletten en spinnen",
+       "must": [
+        "skelet",
+        "spin",
+        "spook",
+        "zombie",
+        "bloed",
+        "grafsteen"
+       ]
+      },
+      {
+       "label": "Vrolijk en kindvriendelijk",
+       "must": [
+        "pompoen",
+        "spook",
+        "vleermuis",
+        "slinger",
+        "heks"
+       ],
+       "max": 30
+      },
+      {
+       "label": "Een mix van beide",
+       "add": ""
+      }
+     ]
+    },
+    {
+     "q": "Met of zonder verlichting?",
+     "options": [
+      {
+       "label": "Met led-lichtjes",
+       "add": "led",
+       "must": [
+        "led",
+        "licht",
+        "verlichting"
+       ]
+      },
+      {
+       "label": "Zonder licht",
+       "add": ""
+      },
+      {
+       "label": "Maakt niet uit",
+       "add": ""
+      }
+     ]
+    }
+   ],
+   "uitleg": "Kies decoratie op basis van de plek. Voor buiten moet het spul tegen regen en wind kunnen; zoek op waterbestendig of voor buiten geschikt en zorg dat grafstenen en skeletten worden vastgezet met haringen, anders waaien ze weg. Led-verlichting op batterijen is veilig en heeft geen stopcontact nodig, maar controleer of er een timer op zit, want anders zijn de batterijen na een paar avonden leeg. Kaarsen met echte vlam in pompoenen zijn mooi, maar bij kinderen en droge bladeren niet verstandig; gebruik liever led-theelichtjes. Voor binnen werkt een combinatie van een slinger, een kleine kunstpompoen en spinnenweb het beste en het is snel op te ruimen. Houd bij kleine kinderen rekening met kleine losse onderdelen die ze kunnen inslikken, en met wat ze eng vinden: een nepspin kan voor een kleuter te veel zijn. Bewaar alles na afloop droog in één doos, dan kun je het volgend jaar hergebruiken en bespaar je geld.",
+   "fouten": [
+    "Decoratie voor binnen buiten ophangen, waardoor het na één regenbui kapot is.",
+    "Echte kaarsen gebruiken in pompoenen of tussen droge bladeren.",
+    "Te eng versieren terwijl er jonge kinderen in huis of in de buurt wonen."
+   ],
+   "faq": [
+    {
+     "q": "Welke verlichting is veilig voor buiten?",
+     "a": "Kies led-verlichting die waterbestendig is, bij voorkeur op batterijen met een timer."
+    },
+    {
+     "q": "Hoe voorkom ik dat decoratie wegwaait?",
+     "a": "Zet grafstenen en figuren vast met haringen of een steen en hang lichte slingers op een beschutte plek."
+    },
+    {
+     "q": "Wanneer hang ik Halloween-decoratie op?",
+     "a": "De meeste mensen beginnen een week of twee vooraf; begin eind oktober als je het niet te lang wilt laten hangen."
+    }
+   ],
+   "publishAt": "2026-10-04"
+  },
+  {
+   "slug": "schmink-kind",
+   "cat": "Verzorging",
+   "pct": 6,
+   "term": "schmink kinderen",
+   "title": "Welke schmink past bij jouw kind?",
+   "h1": "Schmink voor kinderen kiezen: veilig en makkelijk te verwijderen",
+   "kort": "Kies schmink op waterbasis die dermatologisch getest is en makkelijk afgewassen kan worden. Een set met meerdere kleuren is handig voor meerdere gezichtjes; losse kleuren zijn beter voor een specifiek ontwerp.",
+   "intro": "Schmink raakt de gevoelige huid van je kind, dus kwaliteit en samenstelling zijn belangrijk. Drie vragen en je weet wat je moet kopen en waar je op moet letten.",
+   "questions": [
+    {
+     "q": "Hoe is de huid van je kind?",
+     "options": [
+      {
+       "label": "Gevoelig of eczeem",
+       "term": "schmink kinderen hypoallergeen",
+       "must": [
+        "hypoallergeen",
+        "dermatologisch",
+        "gevoelige",
+        "huidvriendelijk"
+       ]
+      },
+      {
+       "label": "Normale huid",
+       "add": ""
+      },
+      {
+       "label": "Mijn kind heeft vaak last van roodheid",
+       "must": [
+        "hypoallergeen",
+        "dermatologisch",
+        "gevoelige",
+        "huidvriendelijk"
+       ],
+       "add": "dermatologisch getest"
+      }
+     ]
+    },
+    {
+     "q": "Welk type schmink?",
+     "options": [
+      {
+       "label": "Op waterbasis",
+       "must": [
+        "waterbasis",
+        "water",
+        "aqua"
+       ]
+      },
+      {
+       "label": "Crayons of stiften",
+       "term": "schmink stiften kinderen",
+       "must": [
+        "stift",
+        "crayon",
+        "potlood"
+       ]
+      },
+      {
+       "label": "Maakt niet uit",
+       "add": ""
+      }
+     ]
+    },
+    {
+     "q": "Set of losse kleuren?",
+     "options": [
+      {
+       "label": "Complete set met veel kleuren",
+       "add": "set",
+       "must": [
+        "set",
+        "palet",
+        "doos"
+       ]
+      },
+      {
+       "label": "Een klein setje voor één gezicht",
+       "max": 12
+      },
+      {
+       "label": "Losse kleuren, bijvoorbeeld zwart en wit",
+       "term": "schmink zwart wit",
+       "max": 10
+      }
+     ]
+    }
+   ],
+   "uitleg": "Gebruik voor kinderen altijd schmink die is bedoeld voor de huid in het gezicht. Gewone verf of knutselmateriaal is niet voor de huid gemaakt. Kijk naar het label: schmink in de EU moet voldoen aan de cosmeticaregels en de ingrediënten vermelden. Schmink op waterbasis is het makkelijkst: het gaat er met water en milde zeep af en laat weinig vlekken achter op kleding. Crayons en stiften zijn handig voor kleine kinderen die niet stil blijven zitten, maar geven minder dekking. Heeft je kind een gevoelige huid, doe dan eerst een test op de binnenkant van de arm en wacht een uur voor je begint. Schmink nooit in de buurt van de ogen en gebruik geen glitter die niet voor het gezicht bedoeld is. Een set met acht tot twaalf kleuren is genoeg voor de meeste ontwerpen; zwart, wit en rood zijn het vaakst op. Gebruik schone sponsjes en kwasten en bewaar het potje afgesloten, zodat de schmink niet uitdroogt.",
+   "fouten": [
+    "Knutselverf of ander materiaal gebruiken dat niet voor de huid bedoeld is.",
+    "Niet testen op een klein stukje huid terwijl het kind gevoelig is.",
+    "Schmink dichtbij de ogen aanbrengen of glitter gebruiken die niet voor het gezicht is."
+   ],
+   "faq": [
+    {
+     "q": "Hoe verwijder ik schmink van kinderen?",
+     "a": "Schmink op waterbasis gaat er af met water en milde zeep; voor hardnekkige kleuren gebruik je een reinigingsdoekje of babyolie."
+    },
+    {
+     "q": "Is schmink veilig bij eczeem?",
+     "a": "Kies hypoallergene schmink, test eerst op de arm en overleg bij twijfel met de huisarts."
+    },
+    {
+     "q": "Hoe lang blijft schmink goed?",
+     "a": "Ongeopend meestal één tot twee jaar; gebruik geen schmink die opdroogt of vreemd ruikt."
+    }
+   ],
+   "publishAt": "2026-10-04"
+  },
+  {
+   "slug": "winterjas-kind",
+   "cat": "Kleding & schoenen",
+   "pct": 7,
+   "term": "winterjas kind",
+   "title": "Welke winterjas past bij jouw kind?",
+   "h1": "Winterjas voor een kind kiezen: warm, droog en met ruimte om te groeien",
+   "kort": "Kies een waterdichte, gevoerde jas met een ruime pasvorm, een capuchon en reflecterende details. Voor fietsen naar school is winddicht belangrijk, voor spelen is een stevige stof met extra warmte handiger.",
+   "intro": "Een kind groeit snel en speelt in alle weer. Een goede winterjas is warm, droog en comfortabel. Beantwoord drie vragen over leeftijd, gebruik en regen en zie wat past.",
+   "questions": [
+    {
+     "q": "Hoe oud is je kind?",
+     "options": [
+      {
+       "label": "Peuter of kleuter, tot 5 jaar",
+       "term": "winterjas peuter"
+      },
+      {
+       "label": "Basisschool, 6 tot 11 jaar",
+       "term": "winterjas kinderen"
+      },
+      {
+       "label": "Tiener, 12 jaar of ouder",
+       "term": "winterjas tiener",
+       "min": 40
+      }
+     ]
+    },
+    {
+     "q": "Waarvoor gebruik je hem vooral?",
+     "options": [
+      {
+       "label": "Fietsen naar school",
+       "must": [
+        "winddicht",
+        "reflecterend",
+        "reflecterende",
+        "reflectie"
+       ]
+      },
+      {
+       "label": "Buiten spelen",
+       "must": [
+        "gevoerd",
+        "warm",
+        "teddy",
+        "gewatteerd"
+       ]
+      },
+      {
+       "label": "Korte stukjes lopen en met de auto",
+       "add": ""
+      }
+     ]
+    },
+    {
+     "q": "Moet de jas waterdicht zijn?",
+     "options": [
+      {
+       "label": "Ja, echt waterdicht",
+       "must": [
+        "waterdicht"
+       ]
+      },
+      {
+       "label": "Waterafstotend is genoeg",
+       "must": [
+        "waterafstotend",
+        "water"
+       ]
+      },
+      {
+       "label": "Niet belangrijk",
+       "add": ""
+      }
+     ]
+    }
+   ],
+   "uitleg": "Een goede winterjas voor een kind heeft drie dingen: warmte, bescherming tegen natheid en bewegingsruimte. Kijk naar de vulling: synthetische vulling, zoals polyester, blijft ook warm als de jas nat wordt en is makkelijk te wassen; dons is lichter en warmer, maar duurder en gevoeliger voor vocht. Let op de waterkolom: vanaf ongeveer 5000 mm is een jas geschikt voor dagelijks gebruik in de regen, afgeplakte naden maken een groot verschil. Een capuchon die vastzit is veiliger dan een los exemplaar, een met koordjes kan op het schoolplein gevaarlijk zijn, dus kies er een met klittenband of elastiek. Kies de maat niet te groot, een jas die een maat te groot is, voelt koud en zit in de weg. Reflecterende details zijn nuttig als je kind in het donker naar school fietst. Gebruik een jas met opstaande kraag en elastische manchetten om kou buiten te houden, en een rits met een kinbeschermer.",
+   "fouten": [
+    "Een jas kopen die twee maten te groot is, waardoor hij koud aanvoelt en in de weg zit.",
+    "Alleen op waterafstotend letten terwijl het kind elke dag door de regen fietst.",
+    "Een jas met koorden bij de capuchon kiezen die kunnen blijven haken."
+   ],
+   "faq": [
+    {
+     "q": "Hoeveel waterkolom is genoeg?",
+     "a": "Vanaf ongeveer 5000 mm is een jas geschikt voor dagelijks gebruik in de regen."
+    },
+    {
+     "q": "Dons of synthetisch voor kinderen?",
+     "a": "Synthetisch is praktischer omdat het ook warm blijft als het nat wordt en makkelijk te wassen is."
+    },
+    {
+     "q": "Welke maat moet ik kopen?",
+     "a": "Kies de maat die nu goed past, met ruimte voor een trui eronder, en niet meer dan één maat groter."
+    }
+   ],
+   "publishAt": "2026-10-06"
+  },
+  {
+   "slug": "snowboots-kind",
+   "cat": "Kleding & schoenen",
+   "pct": 7,
+   "term": "snowboots kind",
+   "title": "Welke snowboots passen bij jouw kind?",
+   "h1": "Snowboots voor kinderen kiezen: warm, droog en makkelijk aan te trekken",
+   "kort": "Kies waterdichte boots met een warme voering, een stroeve zool en een sluiting die je kind zelf kan bedienen. Neem bij kinderen een halve tot hele maat groter, zodat er ruimte is voor dikke sokken.",
+   "intro": "In Nederland heb je meestal vaker natte kou dan echte sneeuw, maar ook dan wil je dat de voeten droog en warm blijven. Beantwoord drie vragen over maat, weer en sluiting.",
+   "questions": [
+    {
+     "q": "Hoe oud is je kind?",
+     "options": [
+      {
+       "label": "Peuter of kleuter, tot 5 jaar",
+       "term": "snowboots peuter",
+       "max": 50
+      },
+      {
+       "label": "Basisschool, 6 tot 11 jaar",
+       "term": "snowboots kinderen"
+      },
+      {
+       "label": "Tiener",
+       "term": "snowboots tiener",
+       "min": 30
+      }
+     ]
+    },
+    {
+     "q": "Wat voor weer?",
+     "options": [
+      {
+       "label": "Echte sneeuw en vorst",
+       "must": [
+        "snowboots",
+        "sneeuw",
+        "gevoerd",
+        "winter"
+       ]
+      },
+      {
+       "label": "Vooral natte kou en regen",
+       "must": [
+        "waterdicht",
+        "regen",
+        "gevoerd"
+       ]
+      },
+      {
+       "label": "Allebei",
+       "add": "waterdicht"
+      }
+     ]
+    },
+    {
+     "q": "Welke sluiting?",
+     "options": [
+      {
+       "label": "Klittenband",
+       "must": [
+        "klittenband",
+        "klit"
+       ]
+      },
+      {
+       "label": "Veters",
+       "must": [
+        "veter"
+       ]
+      },
+      {
+       "label": "Rits of instap",
+       "must": [
+        "rits",
+        "instap",
+        "elastiek"
+       ]
+      }
+     ]
+    }
+   ],
+   "uitleg": "Bij kindersnowboots draait alles om droge en warme voeten. Waterdicht moet echt waterdicht zijn, dus geen waterafstotend, en liefst met een afgeplakte tong zodat er geen water door de sluiting komt. Een warme voering van fleece of teddy is nuttig, maar een voering die klam wordt, maakt de boot koud; kies voor een uitneembare binnenzool zodat je die kunt laten drogen. Een zool met diep profiel en een rubberen rand geeft grip op ijs en natte tegels. Koop de maat met vingers ruimte, ongeveer een centimeter voor de teen, want te strakke boots koelen de voeten sneller af omdat de warme lucht niet kan circuleren. Klittenband is handig voor jonge kinderen, veters geven een betere pasvorm bij oudere kinderen en een elastisch koord met knijper is snel. Controleer of de boot lekker licht is, want zware laarzen vermoeien en maken kinderen niet blij. Droog ze na gebruik op kamertemperatuur, niet op de verwarming, anders gaat het materiaal kapot.",
+   "fouten": [
+    "Waterafstotend verwarren met waterdicht, waardoor de voeten toch nat worden.",
+    "Een maat kopen die te strak zit, waardoor de voeten juist sneller koud worden.",
+    "Natte laarzen op de verwarming drogen, waardoor lijm en materiaal beschadigen."
+   ],
+   "faq": [
+    {
+     "q": "Hoeveel groter moet de maat zijn?",
+     "a": "Kies een halve tot hele maat groter en laat ongeveer een centimeter ruimte voor de teen."
+    },
+    {
+     "q": "Zijn snowboots ook geschikt voor regen?",
+     "a": "Ja, mits ze echt waterdicht zijn; bij droge kou zijn ze soms te warm."
+    },
+    {
+     "q": "Klittenband of veters?",
+     "a": "Klittenband is makkelijker voor jonge kinderen; veters passen beter bij oudere kinderen."
+    }
+   ],
+   "publishAt": "2026-10-08"
+  },
+  {
+   "slug": "donsdekbed",
+   "cat": "Wonen",
+   "pct": 4,
+   "term": "donsdekbed winter",
+   "title": "Welk winterdekbed kies je?",
+   "h1": "Winterdekbed of donsdekbed kiezen: maat, warmte en vulling",
+   "kort": "Kies de maat die bij je bed past, een warmteklasse die bij je slaapgedrag past en een vulling die bij je gezondheid past. Bij allergie kies je een wasbaar, anti-allergisch synthetisch dekbed of een gecertificeerd dons.",
+   "intro": "Een goed winterdekbed houdt je warm zonder dat je gaat zweten. Het hangt af van de maat, de warmteklasse en de vulling. Beantwoord drie vragen en je weet wat je zoekt.",
+   "questions": [
+    {
+     "q": "Welke maat heb je nodig?",
+     "options": [
+      {
+       "label": "1-persoons, 140 x 200 cm",
+       "add": "140x200",
+       "must": [
+        "140"
+       ]
+      },
+      {
+       "label": "2-persoons, 200 x 200 cm",
+       "add": "200x200",
+       "must": [
+        "200"
+       ]
+      },
+      {
+       "label": "Extra groot, 240 x 220 cm",
+       "add": "240x220",
+       "must": [
+        "240"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Hoe warm wil je het hebben?",
+     "options": [
+      {
+       "label": "Ik heb het snel koud",
+       "must": [
+        "extra warm",
+        "warmteklasse 4",
+        "warmteklasse 5",
+        "winter"
+       ]
+      },
+      {
+       "label": "Gewoon lekker warm",
+       "add": ""
+      },
+      {
+       "label": "Ik slaap warm",
+       "must": [
+        "warmteklasse 2",
+        "warmteklasse 3",
+        "licht",
+        "4-seizoenen"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Welke vulling?",
+     "options": [
+      {
+       "label": "Dons",
+       "term": "donsdekbed",
+       "must": [
+        "dons",
+        "donzen",
+        "eendendons",
+        "ganzendons"
+       ]
+      },
+      {
+       "label": "Synthetisch",
+       "term": "synthetisch dekbed",
+       "must": [
+        "synthetisch",
+        "polyester",
+        "microvezel",
+        "vezel"
+       ]
+      },
+      {
+       "label": "Ik heb een allergie",
+       "term": "anti allergie dekbed",
+       "must": [
+        "allergie",
+        "anti-allergisch",
+        "huisstofmijt",
+        "hypoallergeen"
+       ]
+      }
+     ]
+    }
+   ],
+   "uitleg": "De maat is de eerste keuze. Een eenpersoons dekbed is meestal 140 x 200 cm, een tweepersoons 200 x 200 of 240 x 220 cm; kies bij twee slapers liever twee losse dekbedden of een extra breed exemplaar als jullie vaak om de deken strijden. De warmteklasse loopt meestal van 1 tot 5, waarbij 1 en 2 licht zijn voor de zomer en 4 en 5 bij kou horen; wie sneller koud heeft, kiest extra warm. Dons is licht, ademend en warm, maar het is duurder en vergt zorg, en het is niet iets voor iedereen met een allergie. Synthetische vulling is goedkoper, wasbaar op hoge temperatuur en blijft ook warm als het vochtig is. Bij een allergie voor huisstofmijt kies je een dekbed dat op 60 graden gewassen mag worden of een met een geteste hoes. Een dekbed met doorgestikte vakken verdeelt de vulling beter dan een dekbed zonder vakken. Verwacht voor een goed dekbed dat het jaren meegaat, dus kijk liever naar kwaliteit dan alleen naar de prijs.",
+   "fouten": [
+    "Een dekbed kopen dat te klein is voor het bed, zodat je kou krijgt aan de zijkanten.",
+    "Een te warm dekbed kiezen voor een goed verwarmde slaapkamer.",
+    "Dons kopen bij een allergie zonder te letten op de hoes en de wasbaarheid."
+   ],
+   "faq": [
+    {
+     "q": "Welke warmteklasse heb ik nodig in de winter?",
+     "a": "Voor de meeste mensen is een extra warm dekbed (klasse 4) genoeg, tenzij de slaapkamer niet wordt verwarmd."
+    },
+    {
+     "q": "Is dons beter dan synthetisch?",
+     "a": "Dons is lichter en ademender, synthetisch is goedkoper en makkelijker te wassen; beide kunnen goed zijn."
+    },
+    {
+     "q": "Hoe vaak moet ik een dekbed wassen?",
+     "a": "Gemiddeld één tot twee keer per jaar; bij allergie vaker en op minimaal 60 graden als de wasaanwijzing dat toelaat."
+    }
+   ],
+   "publishAt": "2026-10-10"
+  },
+  {
+   "slug": "infraroodpaneel",
+   "cat": "Wonen",
+   "pct": 4,
+   "term": "infraroodpaneel",
+   "title": "Welk infraroodpaneel past bij jouw ruimte?",
+   "h1": "Infraroodpaneel of elektrische bijverwarming kiezen",
+   "kort": "Reken ongeveer 50 tot 70 watt per vierkante meter voor bijverwarming. Een paneel aan de wand of het plafond warmt mensen direct op, en een thermostaat zorgt dat het niet onnodig aan blijft staan.",
+   "intro": "Een infraroodpaneel verwarmt mensen en voorwerpen in plaats van de lucht, handig als bijverwarming in een koude kamer. Het vermogen, de plek en de bediening bepalen of het bij jouw ruimte past.",
+   "questions": [
+    {
+     "q": "Hoe groot is de ruimte?",
+     "options": [
+      {
+       "label": "Klein, tot ongeveer 12 m²",
+       "must": [
+        "300",
+        "350",
+        "400",
+        "450"
+       ]
+      },
+      {
+       "label": "Middelgroot, 12 tot 25 m²",
+       "must": [
+        "500",
+        "600",
+        "700",
+        "800"
+       ]
+      },
+      {
+       "label": "Groot, meer dan 25 m²",
+       "must": [
+        "900",
+        "1000",
+        "1200",
+        "1500"
+       ],
+       "min": 100
+      }
+     ]
+    },
+    {
+     "q": "Waar komt het paneel?",
+     "options": [
+      {
+       "label": "Aan de wand",
+       "must": [
+        "wand"
+       ]
+      },
+      {
+       "label": "Aan het plafond",
+       "must": [
+        "plafond"
+       ]
+      },
+      {
+       "label": "Vrijstaand en verplaatsbaar",
+       "must": [
+        "vrijstaand",
+        "staander",
+        "voet",
+        "wiel"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Welke bediening wil je?",
+     "options": [
+      {
+       "label": "Met thermostaat",
+       "must": [
+        "thermostaat"
+       ]
+      },
+      {
+       "label": "Met wifi of app",
+       "must": [
+        "wifi",
+        "app",
+        "slim"
+       ]
+      },
+      {
+       "label": "Simpel aan en uit",
+       "add": ""
+      }
+     ]
+    }
+   ],
+   "uitleg": "Een infraroodpaneel is geen vervanging voor centrale verwarming, maar wel een goede aanvulling in een kamer die je weinig gebruikt, zoals een werkplek, badkamer of zolder. Reken ruwweg 50 tot 70 watt per vierkante meter voor een goed geïsoleerde ruimte en meer als de isolatie slecht is. Let op het vermogen en niet alleen op het formaat: een groot paneel hoeft niet krachtiger te zijn dan een klein. Een ingebouwde thermostaat of een externe thermostaat zorgt dat het paneel aan en uit schakelt bij de ingestelde temperatuur, waardoor je minder stroom verbruikt. Hang het paneel op een plek waar je zit, niet achter een bank of gordijn, want infrarood werkt via directe straling. Voor een plafondmontage is een lage montagehoogte van ongeveer 2,5 meter ideaal. Het paneel wordt heet, dus hang het niet in de buurt van kinderen en kies bij voorkeur een model met aanraakbeveiliging. Bereken eerst wat een uur gebruik kost met je eigen stroomtarief, want elektrische verwarming is duurder dan gas.",
+   "fouten": [
+    "Een te klein paneel kiezen voor een slecht geïsoleerde ruimte.",
+    "Het paneel achter meubels of gordijnen hangen, waardoor de straling wordt tegengehouden.",
+    "Geen thermostaat gebruiken, waardoor het paneel onnodig lang aan blijft."
+   ],
+   "faq": [
+    {
+     "q": "Hoeveel watt heb ik nodig?",
+     "a": "Reken ongeveer 50 tot 70 watt per vierkante meter bij redelijke isolatie."
+    },
+    {
+     "q": "Is infraroodverwarming zuinig?",
+     "a": "Het is efficiënt voor lokale warmte, maar elektrische verwarming blijft duurder dan gas; gebruik het gericht en met thermostaat."
+    },
+    {
+     "q": "Kan ik zelf een paneel ophangen?",
+     "a": "Ja, aan de wand is dat meestal simpel met schroeven en pluggen; sluit het aan op een geschikt stopcontact en houd afstand tot brandbare materialen."
+    }
+   ],
+   "publishAt": "2026-10-12"
+  },
+  {
+   "slug": "regenjas-kind",
+   "cat": "Kleding & schoenen",
+   "pct": 7,
+   "term": "regenjas kind",
+   "title": "Welke regenjas past bij jouw kind?",
+   "h1": "Regenjas voor een kind kiezen: gevoerd of ongevoerd?",
+   "kort": "Voor fietsen naar school kies je een waterdichte jas met reflecterende details en een ruime capuchon. Een gevoerde jas is beter in de herfst, een ongevoerde jas is veelzijdiger en droogt sneller.",
+   "intro": "Kinderen zijn de hele dag buiten, dus een goede regenjas is niet alleen praktisch maar ook comfortabel. Drie vragen over gebruik, voering en maat en je ziet wat past.",
+   "questions": [
+    {
+     "q": "Waarvoor gebruikt je kind hem vooral?",
+     "options": [
+      {
+       "label": "Fietsen naar school",
+       "must": [
+        "reflecterend",
+        "reflecterende",
+        "reflectie",
+        "fiets"
+       ]
+      },
+      {
+       "label": "Spelen en wandelen",
+       "must": [
+        "waterdicht",
+        "regenjas",
+        "outdoor"
+       ]
+      },
+      {
+       "label": "Een beetje van alles",
+       "add": ""
+      }
+     ]
+    },
+    {
+     "q": "Gevoerd of ongevoerd?",
+     "options": [
+      {
+       "label": "Gevoerd, voor herfst en koude regen",
+       "must": [
+        "gevoerd",
+        "fleece",
+        "teddy"
+       ]
+      },
+      {
+       "label": "Ongevoerd, voor lente en zomer",
+       "must": [
+        "ongevoerd",
+        "licht",
+        "lichtgewicht",
+        "zomer"
+       ]
+      },
+      {
+       "label": "Maakt niet uit",
+       "add": ""
+      }
+     ]
+    },
+    {
+     "q": "Hoe oud is je kind?",
+     "options": [
+      {
+       "label": "Peuter of kleuter, tot 5 jaar",
+       "term": "regenjas peuter"
+      },
+      {
+       "label": "Basisschool, 6 tot 11 jaar",
+       "term": "regenjas kinderen"
+      },
+      {
+       "label": "Tiener",
+       "term": "regenjas tiener",
+       "min": 25
+      }
+     ]
+    }
+   ],
+   "uitleg": "Een goede regenjas voor kinderen is waterdicht en niet alleen waterafstotend. Kijk naar de waterkolom: vanaf ongeveer 3000 mm houdt de jas normale regen tegen, en afgeplakte naden voorkomen lekken. Een gevoerde regenjas, met fleece of katoen, is warm in de herfst, maar droogt langzaam en is daardoor minder handig als hij elke dag nat wordt. Een ongevoerde jas kun je combineren met een trui of vest en is door het hele jaar bruikbaar. Voor fietsende kinderen zijn reflecterende strepen belangrijk, want de herfst is donker. Een capuchon die over de fietshelm past, scheelt veel, net als een hoge kraag en een lange rug. Kies de maat een beetje ruim, maar niet te veel, want mouwen die over de handen hangen, zijn lastig bij het fietsen. Lekker licht is het verstandigst: een zware jas laat kinderen niet graag aantrekken. Controleer of de rits een beschermflap heeft, zodat er geen water door de rits komt. Wassen kan meestal op 30 graden, maar volg het etiket.",
+   "fouten": [
+    "Een jas kopen die alleen waterafstotend is en na een kwartier doorlekt.",
+    "Geen aandacht besteden aan reflecterende details voor een kind dat in het donker fietst.",
+    "Een maat te groot nemen waardoor de mouwen over de handen vallen."
+   ],
+   "faq": [
+    {
+     "q": "Wat is een goede waterkolom voor kinderen?",
+     "a": "Vanaf ongeveer 3000 mm houdt een jas normale regen tegen; kies meer voor veel fietsen."
+    },
+    {
+     "q": "Is een gevoerde regenjas beter?",
+     "a": "In de herfst wel, maar een ongevoerde jas is veelzijdiger en droogt sneller."
+    },
+    {
+     "q": "Past de capuchon over een helm?",
+     "a": "Kies een jas met een ruime capuchon of een verstelbare, zodat hij ook over de fietshelm past."
+    }
+   ],
+   "publishAt": "2026-10-14"
+  },
+  {
+   "slug": "sinterklaasspel",
+   "cat": "Speelgoed",
+   "pct": 6,
+   "term": "sinterklaas spel",
+   "title": "Welk pakjesavondspel past bij jouw gezelschap?",
+   "h1": "Sinterklaasspel kiezen: dobbelspel voor pakjesavond",
+   "kort": "Voor een groep van vijf tot acht spelers werkt een dobbelspel met cadeautjes die worden doorgegeven het best. Kies bij jonge kinderen een eenvoudige variant en bij volwassenen een spel met wat meer tactiek.",
+   "intro": "Een Sinterklaasspel maakt pakjesavond gezelliger en voorkomt dat iedereen alleen maar uitpakt. Het aantal spelers, de leeftijd en de vraag of je cadeautjes toevoegt bepalen welk spel past.",
+   "questions": [
+    {
+     "q": "Met hoeveel spelers?",
+     "options": [
+      {
+       "label": "Klein gezelschap, 2 tot 4 spelers",
+       "must": [
+        "2",
+        "3",
+        "4"
+       ]
+      },
+      {
+       "label": "Gezin of vrienden, 5 tot 8 spelers",
+       "must": [
+        "5",
+        "6",
+        "7",
+        "8"
+       ]
+      },
+      {
+       "label": "Grote groep, meer dan 8 spelers",
+       "add": "groep",
+       "must": [
+        "groep",
+        "10",
+        "12",
+        "party"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Wie spelen er mee?",
+     "options": [
+      {
+       "label": "Kinderen tot ongeveer 8 jaar",
+       "add": "kinderen"
+      },
+      {
+       "label": "Kinderen en volwassenen samen",
+       "add": "familie"
+      },
+      {
+       "label": "Alleen volwassenen",
+       "add": "volwassenen"
+      }
+     ]
+    },
+    {
+     "q": "Met of zonder cadeautjes?",
+     "options": [
+      {
+       "label": "Met cadeautjes erbij",
+       "add": "cadeau",
+       "must": [
+        "cadeau",
+        "pakjes",
+        "surprise"
+       ]
+      },
+      {
+       "label": "Zonder cadeautjes, alleen het spel",
+       "add": ""
+      },
+      {
+       "label": "Maakt niet uit",
+       "add": ""
+      }
+     ]
+    }
+   ],
+   "uitleg": "Een pakjesavondspel draait meestal om dobbelstenen, kaarten of een verhaal dat wordt voorgelezen, waarbij cadeautjes van hand tot hand gaan. Het beste spel is er een dat in tien tot twintig minuten klaar is, zodat de jongste spelers niet afhaken. Let op de leeftijdsaanduiding op de doos: spellen met veel tekst zijn voor kinderen onder de zeven vaak te moeilijk, en spellen met veel stelen kunnen bij jonge kinderen tranen opleveren. Voor een gemengd gezelschap werkt een eenvoudig dobbelspel met een kleine kans op winst het best, want zo hebben ook de kleinsten een eerlijke kans. Spreek van tevoren af hoeveel cadeautjes iedereen inlegt en wat de maximumwaarde is, bijvoorbeeld vijf euro; dat voorkomt discussie. Zorg dat alle cadeautjes ongeveer even groot zijn, zodat niemand teleurgesteld is door de grootte van het pakje. Kies een spel dat ook met een andere groepsgrootte werkt, zodat je het volgend jaar opnieuw kunt gebruiken, en bewaar de regels bij de doos.",
+   "fouten": [
+    "Een spel kopen dat te moeilijk is voor de jongste speler en dus snel verveelt.",
+    "Vooraf niet afspreken hoeveel cadeautjes en welke waarde iedereen inlegt.",
+    "Een spel kiezen voor te veel of te weinig spelers voor het gezelschap."
+   ],
+   "faq": [
+    {
+     "q": "Hoeveel cadeautjes heb ik nodig?",
+     "a": "Meestal één cadeautje per speler, maar controleer de regels van het spel; sommige varianten gebruiken meer."
+    },
+    {
+     "q": "Wat is een goede maximale waarde per cadeau?",
+     "a": "Spreek een bedrag af dat iedereen prettig vindt, zoals vijf of tien euro, zodat de cadeaus ongeveer gelijk zijn."
+    },
+    {
+     "q": "Hoe lang duurt een dobbelspel?",
+     "a": "Meestal tien tot twintig minuten, afhankelijk van het aantal spelers en de regels."
+    }
+   ],
+   "publishAt": "2026-10-20"
+  },
+  {
+   "slug": "schoencadeautjes",
+   "cat": "Speelgoed",
+   "pct": 6,
+   "term": "schoencadeautjes sinterklaas",
+   "title": "Welke schoencadeautjes passen bij jou?",
+   "h1": "Schoencadeautjes voor Sinterklaas: snoep, speelgoed of een boek?",
+   "kort": "Kies per kind één klein cadeautje dat past bij de leeftijd: iets lekkers, iets om mee te spelen of iets om te lezen. Houd het per schoen rond 5 tot 10 euro en verras met een mix.",
+   "intro": "Een schoen zet je vaak meerdere avonden, dus je hebt kleine cadeautjes nodig die leuk zijn, passen en het budget niet laten ontsporen. Beantwoord drie vragen en je ziet wat bij jouw kind past.",
+   "questions": [
+    {
+     "q": "Hoe oud is het kind?",
+     "options": [
+      {
+       "label": "Peuter of kleuter (1–5 jaar)",
+       "add": "peuter"
+      },
+      {
+       "label": "Basisschool (6–12 jaar)",
+       "add": "kinderen"
+      },
+      {
+       "label": "Tiener (13+)",
+       "add": "tiener"
+      }
+     ]
+    },
+    {
+     "q": "Wat mag een cadeautje kosten?",
+     "options": [
+      {
+       "label": "Tot 5 euro",
+       "max": 5
+      },
+      {
+       "label": "5 tot 10 euro",
+       "min": 5,
+       "max": 10
+      },
+      {
+       "label": "10 tot 15 euro",
+       "min": 10,
+       "max": 15
+      },
+      {
+       "label": "Meer dan 15 euro",
+       "min": 15
+      }
+     ]
+    },
+    {
+     "q": "Wat wil je in de schoen stoppen?",
+     "options": [
+      {
+       "label": "Snoep en chocolade",
+       "term": "chocoladeletter pepernoten",
+       "must": [
+        "chocolade",
+        "letter",
+        "pepernoten",
+        "snoep",
+        "marsepein"
+       ]
+      },
+      {
+       "label": "Klein speelgoed",
+       "term": "klein speelgoed cadeau kinderen"
+      },
+      {
+       "label": "Een boek",
+       "term": "kinderboek",
+       "must": [
+        "boek"
+       ]
+      }
+     ]
+    }
+   ],
+   "uitleg": "Een goed schoencadeautje is klein, past letterlijk in een schoen en is meteen leuk. Voor peuters en kleuters werkt zacht of groot genoeg speelgoed: een stempelset, een autootje, een dierenfiguur. Let op losse onderdelen kleiner dan 3 centimeter, want die zijn niet veilig onder de 3 jaar. Op de basisschool zijn verzamelbare figuurtjes, stickers, kleurpotloden en kleine puzzels favoriet. Tieners waarderen iets praktisch en eigens, zoals een mooi notitieboekje, oordoppen of een kleine gadget. Boeken zijn een uitstekende optie als je er één kiest dat past bij een bestaande interesse. Rond de 5 tot 10 euro per cadeautje kun je met een mix van lekker, speelbaar en leesbaar de hele schoenperiode doorkomen zonder dat het duur wordt. Houd een lijstje bij van wat al in de schoen zat, zodat je geen dubbele cadeaus koopt en elke dag iets anders kunt verrassen.",
+   "fouten": [
+    "Speelgoed met kleine losse onderdelen kopen voor een kind onder de 3 jaar.",
+    "Alles in één keer uitgeven, zodat de laatste schoenmomenten leeg zijn.",
+    "Alleen snoep geven en geen cadeautje waar het kind langer plezier van heeft."
+   ],
+   "faq": [
+    {
+     "q": "Hoeveel mag een schoencadeautje kosten?",
+     "a": "Meestal 3 tot 10 euro per keer. Bij meerdere schoenmomenten is het handig om vooraf een totaalbudget te bepalen."
+    },
+    {
+     "q": "Welke cadeautjes passen goed in een schoen?",
+     "a": "Kleine boekjes, stickers, figuurtjes, chocoladeletters, pepernoten, stempels en kleine puzzels."
+    },
+    {
+     "q": "Wat kan ik geven aan een kind dat al alles heeft?",
+     "a": "Kies iets om mee te doen of te beleven, zoals een knutselset, een kaartspel of een klein experimenteerpakket."
+    }
+   ],
+   "publishAt": "2026-10-18"
+  },
+  {
+   "slug": "sinterklaas-cadeau-8-12",
+   "cat": "Speelgoed",
+   "pct": 6,
+   "term": "cadeau kind 8-12 jaar",
+   "title": "Welk Sinterklaascadeau past bij een kind van 8 tot 12?",
+   "h1": "Sinterklaascadeau voor een kind van 8 tot 12 jaar",
+   "kort": "Kies op basis van wat het kind echt graag doet: bouwen, gamen, creatief bezig zijn of buiten spelen. Een cadeau dat past bij die interesse wordt veel vaker gebruikt dan een populair product dat er niet bij aansluit.",
+   "intro": "Kinderen van 8 tot 12 hebben duidelijke voorkeuren en zijn kritisch. Met drie vragen kom je uit bij een cadeau dat past bij de interesse, het budget en de manier waarop het kind graag speelt.",
+   "questions": [
+    {
+     "q": "Waar is het kind het meest mee bezig?",
+     "options": [
+      {
+       "label": "Bouwen en puzzelen",
+       "term": "bouwset kinderen",
+       "must": [
+        "bouw",
+        "lego",
+        "set",
+        "puzzel",
+        "constructie"
+       ]
+      },
+      {
+       "label": "Gamen",
+       "term": "gaming cadeau kinderen",
+       "must": [
+        "game",
+        "gaming",
+        "controller",
+        "switch",
+        "playstation"
+       ]
+      },
+      {
+       "label": "Creatief bezig zijn",
+       "term": "knutselset kinderen",
+       "must": [
+        "knutsel",
+        "teken",
+        "schilder",
+        "creatief",
+        "maak"
+       ]
+      },
+      {
+       "label": "Buiten spelen",
+       "term": "buitenspeelgoed kinderen",
+       "must": [
+        "buiten",
+        "step",
+        "skate",
+        "bal",
+        "frisbee",
+        "skateboard"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Wat is het budget?",
+     "options": [
+      {
+       "label": "Tot 20 euro",
+       "max": 20
+      },
+      {
+       "label": "20 tot 50 euro",
+       "min": 20,
+       "max": 50
+      },
+      {
+       "label": "Meer dan 50 euro",
+       "min": 50
+      }
+     ]
+    },
+    {
+     "q": "Speelt het kind liever samen of alleen?",
+     "options": [
+      {
+       "label": "Samen met anderen",
+       "add": "spel samen",
+       "must": [
+        "spel",
+        "2 spelers",
+        "gezelschapsspel",
+        "coöperatief",
+        "multiplayer"
+       ]
+      },
+      {
+       "label": "Alleen of in eigen tempo",
+       "add": "solo"
+      },
+      {
+       "label": "Allebei",
+       "add": ""
+      }
+     ]
+    }
+   ],
+   "uitleg": "Op deze leeftijd verschuift speelgoed van fantasie naar uitdaging en zelfstandigheid. Bouwsets met 500 tot 1500 onderdelen zijn lang bezig houdend en hebben vaak een duidelijke handleiding. Wie graag gamet, heeft meer aan een extra controller, een headset of een spel dat bij de bestaande console past dan aan een compleet nieuw systeem. Let altijd op de leeftijdsaanduiding, zoals PEGI, en kies liever een spel voor meerdere spelers als er broers of zussen zijn. Creatieve kinderen houden van sets waarmee ze iets eigens maken: sieraden, tekenen, klei of een modelbouwset. Voor buiten zijn een step, een skateboard met bescherming of een badmintonset praktisch en gezond. Een cadeau dat het kind samen met vrienden of familie kan gebruiken, wordt meestal het langst gebruikt. Vraag desnoods stiekem aan een vriendje of ouder wat er al in huis is, zodat je geen dubbel cadeau koopt.",
+   "fouten": [
+    "Een cadeau kiezen dat jij leuk vindt, in plaats van wat het kind bezighoudt.",
+    "De leeftijdsaanduiding op games en bouwsets negeren, waardoor het te makkelijk of te moeilijk is.",
+    "Een duur cadeau kopen zonder te controleren of het kind al iets vergelijkbaars heeft."
+   ],
+   "faq": [
+    {
+     "q": "Wat is een goed budget voor een Sinterklaascadeau?",
+     "a": "Dat verschilt per gezin. Gebruikelijk is 15 tot 50 euro, afhankelijk van of het de hoofdcadeau of een extra is."
+    },
+    {
+     "q": "Wat doe ik als het kind alles al heeft?",
+     "a": "Kies een uitbreiding op een bestaande hobby of een cadeau om samen te doen, zoals een spel of een bouwproject."
+    },
+    {
+     "q": "Zijn games een goed cadeau op deze leeftijd?",
+     "a": "Ja, mits je op de PEGI-leeftijd let en afspraken maakt over speeltijd. Kies bij voorkeur een spel dat past bij de bestaande console."
+    }
+   ],
+   "publishAt": "2026-10-22"
+  },
+  {
+   "slug": "kerstcadeau-partner",
+   "cat": "Wonen",
+   "pct": 4,
+   "term": "cadeau voor haar of hem kerst",
+   "title": "Welk kerstcadeau past bij jouw partner?",
+   "h1": "Kerstcadeau voor je partner: persoonlijk of praktisch?",
+   "kort": "Kijk naar wat je partner dagelijks doet en mist. Een cadeau dat aansluit op een hobby of een wens, ook als het klein is, is persoonlijker dan een duur cadeau dat nergens aan raakt.",
+   "intro": "Een kerstcadeau voor je partner mag ruim zijn, maar het moet vooral kloppen. Met drie vragen kom je bij cadeaus die passen bij de hobby, het budget en de sfeer die jullie samen hebben.",
+   "questions": [
+    {
+     "q": "Wat past het best bij je partner?",
+     "options": [
+      {
+       "label": "Een hobby of sport",
+       "term": "hobby cadeau",
+       "must": [
+        "set",
+        "pakket",
+        "kit",
+        "starter"
+       ]
+      },
+      {
+       "label": "Koken en lekker eten",
+       "term": "kookcadeau",
+       "must": [
+        "kook",
+        "keuken",
+        "pan",
+        "mes",
+        "bak",
+        "cadeau"
+       ]
+      },
+      {
+       "label": "Ontspannen en thuis zijn",
+       "term": "ontspanning cadeau",
+       "must": [
+        "plaid",
+        "kaars",
+        "massage",
+        "bad",
+        "spa",
+        "deken",
+        "pyjama"
+       ]
+      },
+      {
+       "label": "Techniek en gadgets",
+       "term": "gadget cadeau",
+       "must": [
+        "slim",
+        "draadloos",
+        "bluetooth",
+        "gadget",
+        "smart",
+        "speaker"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Wat is je budget?",
+     "options": [
+      {
+       "label": "Tot 30 euro",
+       "max": 30
+      },
+      {
+       "label": "30 tot 75 euro",
+       "min": 30,
+       "max": 75
+      },
+      {
+       "label": "75 tot 150 euro",
+       "min": 75,
+       "max": 150
+      },
+      {
+       "label": "Meer dan 150 euro",
+       "min": 150
+      }
+     ]
+    },
+    {
+     "q": "Persoonlijk of praktisch?",
+     "options": [
+      {
+       "label": "Persoonlijk en sfeervol",
+       "add": "persoonlijk",
+       "must": [
+        "persoonlijk",
+        "gepersonaliseerd",
+        "foto",
+        "naam",
+        "cadeauset"
+       ]
+      },
+      {
+       "label": "Praktisch en bruikbaar",
+       "add": "nuttig"
+      },
+      {
+       "label": "Een mix van beide",
+       "add": ""
+      }
+     ]
+    }
+   ],
+   "uitleg": "Een goed cadeau voor je partner begint met luisteren: wat noemde hij of zij de afgelopen maanden dat kapot ging, op was of nog ontbrak? Vervang dat in een betere versie en je bent vaak dichter bij de roos dan met een verrassing die je zelf bedenkt. Bij een hobby werkt een uitbreiding of kwaliteitsupgrade het best, bijvoorbeeld beter gereedschap, een beginnerspakket voor iets nieuws of een boek van een favoriete maker. Voor ontspannen kies je iets waar je samen van geniet: een zachte plaid, geurkaarsen of een massageset. Techniek werkt als het echt past bij het dagelijks gebruik. Persoonlijk betekent niet per se een bedrukt product; een kleine handgeschreven kaart bij het cadeau doet al veel. Plan de aankoop ruim op tijd, zodat je niet in december moet kiezen wat er nog over is, en vergeet de verpakking niet.",
+   "fouten": [
+    "Een cadeau kopen dat je zelf wilt hebben, in plaats van wat je partner mist.",
+    "Op het laatste moment kopen, waardoor de keuze en levertijd tegenvallen.",
+    "Alleen op prijs sturen: een duur cadeau zonder band met jullie voelt onpersoonlijk."
+   ],
+   "faq": [
+    {
+     "q": "Hoeveel geef je uit aan een kerstcadeau voor je partner?",
+     "a": "Dat verschilt sterk. Spreek eventueel een bedrag af; veel stellen kiezen voor 30 tot 100 euro."
+    },
+    {
+     "q": "Wat geef je als je partner alles al heeft?",
+     "a": "Kies een ervaring of een luxe versie van iets dagelijks, zoals goede koffie, een pyjama of een avond uit."
+    },
+    {
+     "q": "Is een zelfgemaakt cadeau beter?",
+     "a": "Niet per se, maar het kan persoonlijker zijn. Combineer bijvoorbeeld een klein gekocht cadeau met een zelfgeschreven kaart of een gezamenlijke activiteit."
+    }
+   ],
+   "publishAt": "2026-11-02"
+  },
+  {
+   "slug": "kerstcadeau-collega",
+   "cat": "Wonen",
+   "pct": 4,
+   "term": "cadeau secret santa",
+   "title": "Welk kerstcadeau past bij een collega of voor secret santa?",
+   "h1": "Kerstcadeau voor een collega of secret santa van 10 tot 25 euro",
+   "kort": "Houd het neutraal en veilig: iets eetbaars of drinkbaars of een klein nuttig spulletje dat bijna iedereen kan gebruiken. Grappig mag, zolang het niet persoonlijk of grensoverschrijdend is.",
+   "intro": "Bij een collega of secret santa weet je vaak weinig over de smaak van de ander. Drie vragen helpen je een cadeau tussen 10 en 25 euro te kiezen dat wordt gewaardeerd en niet ongemakkelijk is.",
+   "questions": [
+    {
+     "q": "Wat is het budget?",
+     "options": [
+      {
+       "label": "Tot 10 euro",
+       "max": 10
+      },
+      {
+       "label": "10 tot 15 euro",
+       "min": 10,
+       "max": 15
+      },
+      {
+       "label": "15 tot 25 euro",
+       "min": 15,
+       "max": 25
+      }
+     ]
+    },
+    {
+     "q": "Grappig of nuttig?",
+     "options": [
+      {
+       "label": "Grappig",
+       "term": "grappig cadeau",
+       "must": [
+        "grappig",
+        "fun",
+        "gek",
+        "leuk",
+        "humor"
+       ]
+      },
+      {
+       "label": "Nuttig",
+       "term": "nuttig cadeau kantoor",
+       "must": [
+        "set",
+        "houder",
+        "mok",
+        "fles",
+        "organizer",
+        "lamp",
+        "kaars"
+       ]
+      },
+      {
+       "label": "Een mix",
+       "add": ""
+      }
+     ]
+    },
+    {
+     "q": "Eten of drinken, of spul?",
+     "options": [
+      {
+       "label": "Eten of drinken",
+       "term": "cadeau eten drinken",
+       "must": [
+        "chocola",
+        "koffie",
+        "thee",
+        "wijn",
+        "bier",
+        "noten",
+        "borrel",
+        "kaas",
+        "cadeaubox",
+        "koekjes"
+       ]
+      },
+      {
+       "label": "Iets om te gebruiken",
+       "term": "cadeau voor collega",
+       "must": [
+        "set",
+        "houder",
+        "mok",
+        "kaars",
+        "plaid",
+        "notitie",
+        "fles"
+       ]
+      },
+      {
+       "label": "Een mix van beide",
+       "add": ""
+      }
+     ]
+    }
+   ],
+   "uitleg": "Een cadeau voor een collega moet vooral veilig zijn: iets waarmee je niemand tekortdoet en waarvoor niemand zich hoeft te schamen. Eten en drinken scoren daarom hoog, bijvoorbeeld een mooie chocolade, een kleine proeverij van koffie of thee, of zoutjes voor bij een borrel. Houd rekening met dieetwensen en alcohol; vraag er desnoods omheen of kies iets zonder. Nuttig spul werkt ook, zoals een goede mok, een thermosfles, een leuke bureau-organizer, een zachte plaid of een geurkaars. Bij secret santa mag er een grapje in zitten, maar kies liever iets luchtigs dan iets dat over uiterlijk, leeftijd of privé gaat. Vaak is het beter om een klein cadeau mooi te verpakken dan een duurder cadeau te kopen. Zet het bedrag in de uitnodiging en houd je eraan, zodat het eerlijk blijft voor iedereen. Een kaartje met een korte, vriendelijke boodschap maakt het af.",
+   "fouten": [
+    "Een cadeau kiezen dat te persoonlijk is of kan overkomen als een steek onder water.",
+    "Alcohol geven zonder te weten of de collega drinkt.",
+    "Boven of ver onder het afgesproken budget gaan, waardoor het scheef voelt."
+   ],
+   "faq": [
+    {
+     "q": "Wat is een normaal bedrag voor een collega?",
+     "a": "Bij secret santa meestal 10 tot 25 euro. Als je individueel iets geeft is 5 tot 15 euro gebruikelijk."
+    },
+    {
+     "q": "Wat geef je als je de collega niet goed kent?",
+     "a": "Iets eetbaars, zoals chocolade, koffie of thee, of een mooie mok. Dat past bij bijna iedereen."
+    },
+    {
+     "q": "Mag een cadeau grappig zijn?",
+     "a": "Ja, zolang het niet gaat over uiterlijk, gezondheid of privé. Houd het luchtig en laat het niet ten koste van de ontvanger gaan."
+    }
+   ],
+   "publishAt": "2026-11-04"
+  },
+  {
+   "slug": "kerstpakket",
+   "cat": "Koken",
+   "pct": 4,
+   "term": "kerstpakket",
+   "title": "Welk kerstpakket past bij jou?",
+   "h1": "Kerstpakket of cadeaubox kiezen voor personeel of familie",
+   "kort": "Voor personeel kies je een neutraal en ruim pakket met houdbare producten. Voor familie mag het persoonlijker, met eten, drinken of verzorging die past bij de ontvanger. Houd rekening met dieetwensen en alcohol.",
+   "intro": "Een kerstpakket moet bij de ontvanger passen en binnen het budget blijven. Met drie vragen vind je een pakket of cadeaubox dat past bij personeel, familie of vrienden.",
+   "questions": [
+    {
+     "q": "Voor wie is het pakket?",
+     "options": [
+      {
+       "label": "Personeel of zakelijke relaties",
+       "add": "zakelijk"
+      },
+      {
+       "label": "Familie of vrienden",
+       "add": "cadeaubox"
+      },
+      {
+       "label": "Mezelf, als traktatie",
+       "add": ""
+      }
+     ]
+    },
+    {
+     "q": "Wat moet erin zitten?",
+     "options": [
+      {
+       "label": "Eten en lekkers",
+       "term": "kerstpakket eten",
+       "must": [
+        "chocola",
+        "koekjes",
+        "noten",
+        "kaas",
+        "borrel",
+        "delicatessen",
+        "eten",
+        "gourmet",
+        "snoep"
+       ]
+      },
+      {
+       "label": "Drank",
+       "term": "kerstpakket drank",
+       "must": [
+        "wijn",
+        "bier",
+        "thee",
+        "koffie",
+        "likeur",
+        "drank",
+        "jenever",
+        "whisky",
+        "gin"
+       ]
+      },
+      {
+       "label": "Verzorging en ontspanning",
+       "term": "verzorging cadeauset",
+       "must": [
+        "verzorging",
+        "bad",
+        "zeep",
+        "lotion",
+        "crème",
+        "creme",
+        "geur",
+        "kaars",
+        "spa"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Budget per pakket?",
+     "options": [
+      {
+       "label": "Tot 25 euro",
+       "max": 25
+      },
+      {
+       "label": "25 tot 50 euro",
+       "min": 25,
+       "max": 50
+      },
+      {
+       "label": "Meer dan 50 euro",
+       "min": 50
+      }
+     ]
+    }
+   ],
+   "uitleg": "Een kerstpakket is geslaagd als iedereen er iets in vindt dat hij of zij kan gebruiken. Voor personeel werkt een brede mix: houdbare lekkernijen, iets te drinken en een kleine luxe. Kies producten die niet binnen een week bederven en maak het mogelijk om zonder alcohol te kiezen. Voor familie en vrienden mag het persoonlijker zijn, bijvoorbeeld een vaste favoriet als koffie, thee of een lokale delicatesse. Verzorgingsboxen zijn populair omdat ze zelden dubbel zijn; let op huidtype en allergieën. Kijk naar de inhoud in plaats van naar de grootte van de doos, want veel verpakking betekent niet veel waarde. Controleer houdbaarheid, leverdatum en of het pakket stevig verpakt wordt. Bestel liefst in november, want populaire pakketten raken in december uitverkocht. Voor bedrijven kan een bedrag tot een bepaalde grens per medewerker belastingtechnisch gunstig zijn; vraag dat na bij je boekhouder.",
+   "fouten": [
+    "Een pakket vol alcohol sturen zonder alternatief.",
+    "Te laat bestellen waardoor de levering na kerst aankomt.",
+    "Naar de grootte van de doos kijken in plaats van naar de inhoud."
+   ],
+   "faq": [
+    {
+     "q": "Hoeveel kost een kerstpakket gemiddeld?",
+     "a": "Er is geen vaste prijs. Voor personeel liggen pakketten vaak tussen 25 en 75 euro, voor privé tussen 15 en 50 euro."
+    },
+    {
+     "q": "Wanneer moet ik bestellen?",
+     "a": "Het beste in november. Dan heb je de meeste keuze en ruime levertijd."
+    },
+    {
+     "q": "Wat doe ik met dieetwensen?",
+     "a": "Kies een pakket zonder alcohol of met een vegetarische en notenvrije optie, of vraag het vooraf na."
+    }
+   ],
+   "publishAt": "2026-11-06"
+  },
+  {
+   "slug": "kerstservies",
+   "cat": "Koken",
+   "pct": 4,
+   "term": "kerstservies",
+   "title": "Welk kerstservies past bij jou?",
+   "h1": "Kerstservies en tafeldecoratie kiezen: klassiek of modern?",
+   "kort": "Reken per persoon vier tot vijf onderdelen en kies een kleur die je het hele jaar ook kunt gebruiken. Let op vaatwasserbestendig materiaal, anders ben je na het diner extra tijd kwijt.",
+   "intro": "Een mooie kersttafel begint met servies dat past bij de gelegenheid en bij jouw stijl. Drie vragen helpen je kiezen tussen klassiek en modern en voorkomen dat je te weinig of te veel koopt.",
+   "questions": [
+    {
+     "q": "Voor hoeveel personen dek je?",
+     "options": [
+      {
+       "label": "2 tot 4 personen",
+       "add": "4 personen"
+      },
+      {
+       "label": "6 personen",
+       "add": "6 personen"
+      },
+      {
+       "label": "8 personen of meer",
+       "add": "8 personen"
+      }
+     ]
+    },
+    {
+     "q": "Welke stijl past bij je?",
+     "options": [
+      {
+       "label": "Klassiek: rood, groen, goud",
+       "term": "kerstservies klassiek",
+       "must": [
+        "rood",
+        "groen",
+        "goud",
+        "klassiek",
+        "kerst"
+       ]
+      },
+      {
+       "label": "Modern: wit, zwart, zilver",
+       "term": "kerstservies modern",
+       "must": [
+        "wit",
+        "zwart",
+        "zilver",
+        "modern",
+        "mat"
+       ]
+      },
+      {
+       "label": "Neutraal en het hele jaar bruikbaar",
+       "term": "servies set wit",
+       "must": [
+        "wit",
+        "grijs",
+        "creme",
+        "naturel",
+        "set"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Wat is belangrijk?",
+     "options": [
+      {
+       "label": "Vaatwasserbestendig",
+       "add": "vaatwasserbestendig",
+       "must": [
+        "vaatwasser"
+       ]
+      },
+      {
+       "label": "Mooie tafeldecoratie erbij",
+       "term": "tafeldecoratie kerst",
+       "must": [
+        "tafel",
+        "loper",
+        "servet",
+        "kaars",
+        "placemat",
+        "decoratie"
+       ]
+      },
+      {
+       "label": "Zo goedkoop mogelijk",
+       "max": 60
+      }
+     ]
+    }
+   ],
+   "uitleg": "Een compleet kerstservies bestaat uit dinerborden, dessertborden, kommen of soepborden en bekers of glazen. Reken op vier tot vijf onderdelen per persoon en neem een paar extra voor het geval er iets breekt. Porselein en aardewerk zijn mooi en stevig, maar controleer of ze vaatwasserbestendig zijn en of het decor niet verkleurt of dof wordt. Kerstdecoraties werken sfeervol met zilver, goud of rood, maar een wit of grijs servies is ook flexibel: je maakt het feestelijk met een tafelloper, servetten, kaarsen en groen. Modern servies kiest vaak voor mat glazuur en een rustige tint. Controleer de afmetingen van de borden, want sommige sets hebben kleine dinerborden. Reken ook op opbergruimte en eventueel op dubbelgebruik: een servies dat je ook in januari kunt gebruiken, is een betere aankoop dan een set die elk jaar in de kast verdwijnt.",
+   "fouten": [
+    "Servies kopen zonder te controleren of het in de vaatwasser mag.",
+    "Te weinig onderdelen kopen voor het aantal gasten en geen reserve hebben.",
+    "Een servies kiezen met een sterk kerstdecor dat je maar twee weken per jaar gebruikt."
+   ],
+   "faq": [
+    {
+     "q": "Hoeveel onderdelen heb ik per persoon nodig?",
+     "a": "Reken op een dinerbord, dessertbord, kom en beker of glas, dus vier of vijf per persoon."
+    },
+    {
+     "q": "Kan kerstservies in de vaatwasser?",
+     "a": "Vaak wel, maar niet altijd. Handgeschilderd of goud decor kan verkleuren; check de productomschrijving."
+    },
+    {
+     "q": "Hoe maak ik een kersttafel zonder kerstservies?",
+     "a": "Gebruik wit servies en voeg een tafelloper, servetten, kaarsen en wat groen of rode accenten toe."
+    }
+   ],
+   "publishAt": "2026-11-08"
+  },
+  {
+   "slug": "oliebollen",
+   "cat": "Koken",
+   "pct": 4,
+   "term": "friteuse",
+   "title": "Welke friteuse of oliebollenpan past bij jou?",
+   "h1": "Oliebollen bakken: friteuse of oliebollenpan?",
+   "kort": "Voor 4 tot 6 personen: een elektrische friteuse met temperatuurregeling van minimaal 2 liter olie. Voor grote porties en buiten: een pan op gas. Kies altijd een model met veiligheidsvoorzieningen en filter tegen geur.",
+   "intro": "Oliebollen bakken lukt het best bij een stabiele temperatuur. Welke friteuse of pan past, hangt af van het aantal personen, de keuken en hoeveel geur je accepteert. Drie vragen brengen je op weg.",
+   "questions": [
+    {
+     "q": "Voor hoeveel personen bak je?",
+     "options": [
+      {
+       "label": "2 tot 4 personen",
+       "term": "friteuse 2 liter",
+       "must": [
+        "friteuse"
+       ],
+       "max": 100
+      },
+      {
+       "label": "5 tot 8 personen",
+       "term": "friteuse 3 liter",
+       "must": [
+        "friteuse"
+       ]
+      },
+      {
+       "label": "Meer dan 8, of voor een feest",
+       "term": "grote friteuse",
+       "must": [
+        "friteuse",
+        "gas",
+        "oliebollen"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Elektrisch of op gas?",
+     "options": [
+      {
+       "label": "Elektrisch, binnen",
+       "term": "elektrische friteuse",
+       "must": [
+        "friteuse",
+        "elektrisch"
+       ]
+      },
+      {
+       "label": "Op gas, buiten of in de schuur",
+       "term": "frituurpan gas",
+       "must": [
+        "gas",
+        "buiten",
+        "friteuse"
+       ]
+      },
+      {
+       "label": "Maakt me niet uit",
+       "add": ""
+      }
+     ]
+    },
+    {
+     "q": "Wat vind je belangrijk?",
+     "options": [
+      {
+       "label": "Veiligheid",
+       "add": "veiligheid",
+       "must": [
+        "veilig",
+        "thermostaat",
+        "beveiliging",
+        "deksel",
+        "koude zone"
+       ]
+      },
+      {
+       "label": "Weinig geur",
+       "add": "geurfilter",
+       "must": [
+        "filter",
+        "geur",
+        "geurfilter"
+       ]
+      },
+      {
+       "label": "Gemakkelijk schoonmaken",
+       "add": "vaatwasser",
+       "must": [
+        "vaatwasser",
+        "afneembaar",
+        "demonteerbaar"
+       ]
+      }
+     ]
+    }
+   ],
+   "uitleg": "Voor oliebollen is een constante temperatuur van ongeveer 180 graden belangrijk: te koud en de bol wordt vet, te heet en hij is buiten bruin en van binnen rauw. Een elektrische friteuse met instelbare thermostaat en minimaal 2 liter olie is voor een gezin handig; bij 4 tot 6 personen bak je zo in drie of vier rondes. Een model met afneembare onderdelen is makkelijker schoon te maken en een koolstoffilter in het deksel vermindert de geur in huis. Op gas bak je grotere hoeveelheden, maar dat doe je altijd buiten en niet onbeheerd. Gebruik nooit water bij een olievlam; een deksel of een blusdeken is het veiligst. Voor het bakken zelf zijn een ijsknijper of lepel, een schuimspaan en keukenpapier handig. Laat de olie na gebruik afkoelen en gooi hem niet door de gootsteen, maar lever hem in bij de gemeente of een winkel.",
+   "fouten": [
+    "Een te kleine friteuse kiezen voor het aantal personen, waardoor je uren staat te bakken.",
+    "Geen thermometer of thermostaat gebruiken, met rauwe of vette oliebollen als gevolg.",
+    "Hete olie in de gootsteen gooien in plaats van afgekoeld inleveren."
+   ],
+   "faq": [
+    {
+     "q": "Hoeveel olie heb ik nodig?",
+     "a": "Reken op minimaal 2 liter bij een elektrische friteuse. Volg altijd de markering voor minimum en maximum."
+    },
+    {
+     "q": "Kan ik oliebollen in een airfryer maken?",
+     "a": "Dat geeft een ander resultaat. Voor echte oliebollen is frituren in olie nodig."
+    },
+    {
+     "q": "Hoe voorkom ik dat het hele huis naar frituur ruikt?",
+     "a": "Gebruik een friteuse met geurfilter, ventileer goed en sluit de deur naar andere kamers."
+    }
+   ],
+   "publishAt": "2026-11-20"
+  },
+  {
+   "slug": "vuurwerkbril-en-veiligheid",
+   "cat": "Gezondheid",
+   "pct": 4,
+   "term": "vuurwerkbril",
+   "title": "Welke vuurwerkbril en oordoppen passen bij jou?",
+   "h1": "Vuurwerkbril, oordoppen en veilig oud en nieuw met kinderen",
+   "kort": "Draag altijd een goed passende vuurwerkbril als je zelf afsteekt, en oordoppen of gehoorbescherming voor kinderen die kijken. Kinderen steken zelf geen vuurwerk af. Zorg ook voor een rustige plek voor huisdieren.",
+   "intro": "Oud en nieuw is leuk, maar ook het moment met de meeste oog- en gehoorschade. Beantwoord drie vragen en je ziet welke bescherming past bij leeftijd, rol en huisdier.",
+   "questions": [
+    {
+     "q": "Hoe oud is het kind?",
+     "options": [
+      {
+       "label": "Jonger dan 6 jaar",
+       "term": "gehoorbescherming kind",
+       "must": [
+        "kind",
+        "baby",
+        "kids",
+        "junior"
+       ]
+      },
+      {
+       "label": "6 tot 12 jaar",
+       "term": "vuurwerkbril kind",
+       "must": [
+        "kind",
+        "kids",
+        "junior"
+       ]
+      },
+      {
+       "label": "Ouder dan 12 jaar of volwassen",
+       "add": ""
+      }
+     ]
+    },
+    {
+     "q": "Wat ga je doen?",
+     "options": [
+      {
+       "label": "Zelf vuurwerk afsteken",
+       "term": "vuurwerkbril",
+       "must": [
+        "bril",
+        "veiligheidsbril",
+        "vuurwerk"
+       ]
+      },
+      {
+       "label": "Alleen kijken",
+       "term": "oordoppen",
+       "must": [
+        "oordop",
+        "gehoorbescherming",
+        "oorbescherming",
+        "oorkap"
+       ]
+      },
+      {
+       "label": "Allebei, in de buurt van anderen",
+       "add": "oordoppen"
+      }
+     ]
+    },
+    {
+     "q": "Heb je een huisdier?",
+     "options": [
+      {
+       "label": "Hond of kat",
+       "term": "rustgevend huisdier vuurwerk",
+       "must": [
+        "hond",
+        "kat",
+        "huisdier",
+        "rust",
+        "angst"
+       ]
+      },
+      {
+       "label": "Ander huisdier",
+       "add": ""
+      },
+      {
+       "label": "Geen huisdier",
+       "add": ""
+      }
+     ]
+    }
+   ],
+   "uitleg": "Een vuurwerkbril moet de ogen aan de zijkant afsluiten en voldoen aan de Europese norm EN 166. Draag hem altijd bij het afsteken, ook als je denkt dat je ver genoeg weg staat; fragmenten en vonken vliegen onverwacht. Een gewone bril of zonnebril is geen bescherming. Voor het gehoor zijn oordoppen met een demping van minimaal 20 decibel handig voor volwassenen en kinderen vanaf een jaar of 5. Voor baby's en peuters is een kinderoorkap veiliger dan losse doppen, die ze kunnen inslikken. Kinderen steken zelf geen vuurwerk af, ook geen siervuurwerk of sterretjes zonder directe begeleiding van een volwassene. Huisdieren hebben het vaak zwaar: houd honden en katten binnen, sluit de gordijnen, zet rustige muziek aan en geef ze een veilige schuilplek. Bewaar vuurwerk buiten bereik van kinderen en volg de regels van je gemeente over wanneer en waar je mag afsteken.",
+   "fouten": [
+    "Een gewone bril of zonnebril dragen in plaats van een vuurwerkbril met zijafdichting.",
+    "Losse oordoppen geven aan kleine kinderen die ze kunnen inslikken.",
+    "Een huisdier mee naar buiten nemen of alleen laten in een kamer met uitzicht op het vuurwerk."
+   ],
+   "faq": [
+    {
+     "q": "Is een vuurwerkbril verplicht?",
+     "a": "Er is geen wettelijke plicht om hem te dragen, maar het afsteken zonder oogbescherming is ronduit riskant. Het wordt dringend aangeraden."
+    },
+    {
+     "q": "Vanaf welke leeftijd mag een kind vuurwerk afsteken?",
+     "a": "Kinderen steken zelf geen vuurwerk af. Voor consumentenvuurwerk geldt een minimumleeftijd van 16 jaar."
+    },
+    {
+     "q": "Hoe help ik mijn hond of kat tijdens oud en nieuw?",
+     "a": "Houd ze binnen in een rustige kamer, sluit de gordijnen, zet muziek aan en laat ze nooit alleen buiten."
+    }
+   ],
+   "publishAt": "2026-11-24"
+  },
+  {
+   "slug": "nieuwjaar-fitness",
+   "cat": "Sport",
+   "pct": 4,
+   "term": "hometrainer",
+   "title": "Welk fitnessapparaat past bij jou?",
+   "h1": "Thuis fitnessen in het nieuwe jaar: hometrainer, crosstrainer of loopband?",
+   "kort": "Weinig ruimte en gewrichtsvriendelijk: een hometrainer. Een volledige training met weinig impact: een crosstrainer. Hardlopen of wandelen thuis: een loopband, maar die heeft de meeste ruimte nodig en is het luidst.",
+   "intro": "Een apparaat dat je gebruikt is beter dan een duur apparaat in de hoek. Met drie vragen kies je tussen hometrainer, crosstrainer en loopband op basis van je doel, de ruimte en je budget.",
+   "questions": [
+    {
+     "q": "Wat is je doel?",
+     "options": [
+      {
+       "label": "Conditie opbouwen en afvallen, rustig aan",
+       "term": "hometrainer",
+       "must": [
+        "hometrainer",
+        "fiets"
+       ]
+      },
+      {
+       "label": "Volledige training met weinig impact",
+       "term": "crosstrainer",
+       "must": [
+        "crosstrainer"
+       ]
+      },
+      {
+       "label": "Hardlopen of stevig wandelen",
+       "term": "loopband",
+       "must": [
+        "loopband"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Hoeveel ruimte heb je?",
+     "options": [
+      {
+       "label": "Weinig, het moet opklapbaar zijn",
+       "add": "opklapbaar",
+       "must": [
+        "opklapbaar",
+        "inklapbaar",
+        "compact",
+        "klapbaar"
+       ]
+      },
+      {
+       "label": "Een eigen hoek",
+       "add": ""
+      },
+      {
+       "label": "Een hele kamer",
+       "add": "",
+       "min": 300
+      }
+     ]
+    },
+    {
+     "q": "Wat is je budget?",
+     "options": [
+      {
+       "label": "Tot 300 euro",
+       "max": 300
+      },
+      {
+       "label": "300 tot 700 euro",
+       "min": 300,
+       "max": 700
+      },
+      {
+       "label": "Meer dan 700 euro",
+       "min": 700
+      }
+     ]
+    }
+   ],
+   "uitleg": "Een hometrainer is het meest compact en belast de gewrichten het minst; kies een model met een zware vliegwiel en een soepele weerstandsregeling, en let op een goed afstelbaar zadel. Een crosstrainer traint armen, benen en romp tegelijk met weinig impact, maar vraagt meer ruimte en is duurder bij een goede kwaliteit. Een loopband is het meest geschikt voor hardlopen, maar heeft een vaste loopvlakbreedte nodig van minimaal 40 centimeter en een motor van enkele pk's om niet te snel te slijten. Controleer altijd het maximale gebruikersgewicht en de afmetingen van het apparaat, ook opgeklapt. Reken op geluid: magnetische weerstand is stiller dan wrijving. Begin bescheiden met drie keer per week 20 tot 30 minuten, want een vast ritme houdt je langer vol dan een groot voornemen. Een goede ondergrond onder het toestel beschermt zowel de vloer als de buren.",
+   "fouten": [
+    "Een apparaat kopen zonder te meten of het in huis past, ook opgeklapt.",
+    "Het goedkoopste model nemen, waardoor het kraakt en na drie maanden wiebelt.",
+    "Te groot starten en na twee weken stoppen in plaats van een haalbaar ritme op te bouwen."
+   ],
+   "faq": [
+    {
+     "q": "Wat is het beste voor afvallen?",
+     "a": "Het apparaat dat je volhoudt. Alle drie verbranden calorieën; consistentie en voeding zijn belangrijker dan het type."
+    },
+    {
+     "q": "Hoeveel ruimte heb ik nodig?",
+     "a": "Een hometrainer heeft ongeveer 1 vierkante meter nodig, een crosstrainer iets meer en een loopband zo'n 2 tot 3 meter in de lengte."
+    },
+    {
+     "q": "Is een goedkope loopband de moeite waard?",
+     "a": "Onder de 300 euro zijn ze vooral geschikt voor wandelen. Voor hardlopen heb je een sterkere motor en een breder loopvlak nodig."
+    }
+   ],
+   "publishAt": "2026-12-27"
+  },
+  {
+   "slug": "slee",
+   "cat": "Speelgoed",
+   "pct": 6,
+   "term": "slee kinderen",
+   "title": "Welke slee past bij jouw kind?",
+   "h1": "Slee voor kinderen kiezen: hout, kunststof of opblaasbaar?",
+   "kort": "Voor jonge kinderen: een stevige houten of kunststof slee met touw en rugsteun. Voor steile hellingen: een slee met rem of besturing. Voor weinig sneeuw of een korte helling: een lichte kunststof slee of opblaasbare sneeuwband.",
+   "intro": "Een slee moet passen bij de leeftijd van je kind, de sneeuw en de helling waar je gebruik van maakt. Met drie vragen kom je uit bij een veilige keuze voor de eerste sneeuwdag.",
+   "questions": [
+    {
+     "q": "Hoe oud is het kind?",
+     "options": [
+      {
+       "label": "Peuter of kleuter (2–5 jaar)",
+       "add": "peuter",
+       "must": [
+        "peuter",
+        "kind",
+        "kleuter",
+        "rugleuning",
+        "touw"
+       ]
+      },
+      {
+       "label": "Basisschool (6–12 jaar)",
+       "add": "kinderen"
+      },
+      {
+       "label": "Tiener of samen met een volwassene",
+       "add": "2 personen",
+       "must": [
+        "2",
+        "twee",
+        "tweepersoons",
+        "volwassene"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Waar ga je sleeën?",
+     "options": [
+      {
+       "label": "Een zachte, lage helling of de tuin",
+       "term": "slee kunststof",
+       "must": [
+        "kunststof",
+        "plastic",
+        "sneeuwbob",
+        "sleetje",
+        "opblaas"
+       ]
+      },
+      {
+       "label": "Een steile helling of een heuvel",
+       "term": "slee met rem",
+       "must": [
+        "rem",
+        "stuur",
+        "besturing",
+        "stuurslee",
+        "ijzer",
+        "metaal",
+        "hout"
+       ]
+      },
+      {
+       "label": "Weinig of natte sneeuw",
+       "term": "sneeuwslee",
+       "must": [
+        "kunststof",
+        "plastic",
+        "opblaasbaar",
+        "sneeuwband",
+        "glij"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Welk materiaal heeft je voorkeur?",
+     "options": [
+      {
+       "label": "Hout, klassiek en stevig",
+       "term": "houten slee",
+       "must": [
+        "hout",
+        "houten"
+       ]
+      },
+      {
+       "label": "Kunststof, licht en goedkoop",
+       "term": "kunststof slee",
+       "must": [
+        "kunststof",
+        "plastic"
+       ],
+       "max": 40
+      },
+      {
+       "label": "Opblaasbaar, zacht en compact",
+       "term": "opblaasbare slee",
+       "must": [
+        "opblaas",
+        "opblaasbaar",
+        "sneeuwband"
+       ]
+      }
+     ]
+    }
+   ],
+   "uitleg": "Een houten slee met metalen ski's is stevig, houdt goed spoor en gaat jaren mee, maar is zwaarder en glijdt het best op platgereden sneeuw. Een kunststof slee is licht, goedkoop en glijdt ook in zachte sneeuw, maar kan onder koude omstandigheden scheuren en is minder goed te sturen. Opblaasbare sleeën of sneeuwbanden zijn zacht en gemakkelijk op te bergen, maar zijn onbetrouwbaar bij scherpe stenen of takken en hebben weinig controle. Voor jonge kinderen is een rugleuning en een koord om te trekken belangrijk; een gordel of voetsteun voorkomt dat ze eruit glijden. Kies voor een helling met bomen of een weg onderaan nooit een slee zonder rem of stuur. Draag een helm, vooral bij steile hellingen, en ga altijd samen met een volwassene als je kind jonger dan 6 is. Let ook op de maximale belasting: een slee voor twee personen moet minstens 100 kilo aankunnen. Controleer de slee voor gebruik op scheuren, losse onderdelen en vervormde ski's.",
+   "fouten": [
+    "Een slee kopen zonder rem of stuur voor een steile helling met obstakels.",
+    "Een goedkope opblaasbare slee gebruiken op een helling met stenen of takken.",
+    "Zonder helm en zonder toezicht sleeën met jonge kinderen."
+   ],
+   "faq": [
+    {
+     "q": "Vanaf welke leeftijd kan een kind sleeën?",
+     "a": "Vanaf ongeveer 2 jaar op een lage helling met een volwassene erbij en een slee met rugleuning of gordel."
+    },
+    {
+     "q": "Is hout beter dan kunststof?",
+     "a": "Hout is stevig en gaat lang mee, maar is zwaarder. Kunststof is lichter en goedkoper en werkt prima bij zachte sneeuw."
+    },
+    {
+     "q": "Heb ik een helm nodig voor sleeën?",
+     "a": "Ja, aanbevolen vooral bij steile hellingen. Een skihelm of fietshelm is geschikt."
+    }
+   ],
+   "publishAt": "2026-11-10"
+  },
+  {
+   "slug": "thuisbatterij",
+   "cat": "Klussen",
+   "pct": 4,
+   "term": "thuisbatterij",
+   "publishAt": "2026-10-03",
+   "title": "Welke thuisbatterij past bij jou?",
+   "h1": "Thuisbatterij kiezen: plug-in, vast of powerstation?",
+   "intro": "Op 1 januari 2027 stopt de salderingsregeling. Zonnestroom die je overdag teruglevert, levert daarna minder op, en sommige leveranciers rekenen er zelfs kosten voor. Een thuisbatterij bewaart die stroom voor de avond. Drie vragen en je weet welk type en welke maat bij jou past.",
+   "questions": [
+    {
+     "q": "Waarvoor wil je hem vooral gebruiken?",
+     "options": [
+      {
+       "label": "Eigen zonnestroom 's avonds gebruiken",
+       "term": "thuisbatterij",
+       "must": [
+        "thuisbatterij",
+        "plug-in",
+        "plug in",
+        "solarflow",
+        "solix",
+        "homewizard",
+        "marstek",
+        "stream",
+        "homepower",
+        "solarvault"
+       ]
+      },
+      {
+       "label": "Stroom houden bij een storing",
+       "term": "powerstation noodstroom",
+       "must": [
+        "powerstation",
+        "power station",
+        "noodstroom",
+        "explorer",
+        "delta",
+        "ups",
+        "back-up",
+        "backup"
+       ]
+      },
+      {
+       "label": "Kamperen, camper of tuinhuis",
+       "term": "draagbare powerstation",
+       "must": [
+        "powerstation",
+        "power station",
+        "draagbaar",
+        "portable",
+        "explorer",
+        "camping"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Hoe wil je hem aansluiten?",
+     "options": [
+      {
+       "label": "Gewoon in het stopcontact",
+       "add": "plug-in",
+       "must": [
+        "plug-in",
+        "plug in",
+        "stekker",
+        "stopcontact"
+       ]
+      },
+      {
+       "label": "Vast, door een installateur",
+       "add": "hybride omvormer",
+       "must": [
+        "hybride",
+        "omvormer",
+        "fase",
+        "installatie"
+       ]
+      },
+      {
+       "label": "Weet ik nog niet",
+       "add": ""
+      }
+     ]
+    },
+    {
+     "q": "Wat is je budget?",
+     "options": [
+      {
+       "label": "Tot €700",
+       "max": 700
+      },
+      {
+       "label": "€700–1.500",
+       "min": 600,
+       "max": 1600
+      },
+      {
+       "label": "Meer dan €1.500",
+       "min": 1300
+      }
+     ]
+    }
+   ],
+   "uitleg": "Kijk eerst hoeveel stroom je op een zonnige dag teruglevert; dat staat in de app van je slimme meter of omvormer. Een batterij die veel groter is dan dat overschot, staat het grootste deel van het jaar half leeg. Een plug-in batterij steek je zelf in het stopcontact en levert een beperkt vermogen aan je huis: ideaal om de basis (koelkast, router, verlichting) 's avonds op zonnestroom te laten draaien. Een vaste batterij met hybride omvormer laat je door een installateur plaatsen en kan veel meer leveren. Heb je een dynamisch energiecontract, kies dan een model met een app die op de uurprijzen kan laden en ontladen. Wil je stroom houden bij een storing, controleer dan of er een noodstroomfunctie op zit: veel thuisbatterijen schakelen bij uitval gewoon uit, een powerstation met eigen stopcontacten niet.",
+   "fouten": [
+    "Denken dat elke thuisbatterij stroom geeft bij een storing; dat doet alleen een model met noodstroom- of back-upfunctie.",
+    "Een batterij kopen die veel groter is dan je dagelijkse overschot aan zonnestroom.",
+    "Verwachten dat een plug-in batterij je hele huis draait; hij levert een beperkt vermogen via één stopcontact.",
+    "Niet checken of de app werkt met je slimme meter (P1-poort) en met een dynamisch contract."
+   ],
+   "kort": "Zonnepanelen en vanaf 2027 minder vergoeding voor teruglevering? Kies een plug-in thuisbatterij die past bij je dagelijkse overschot. Wil je stroom bij een storing, kies dan een powerstation of een batterij met noodstroomfunctie. Vast in de meterkast is krachtiger, maar vraagt een installateur.",
+   "faq": [
+    {
+     "q": "Is een thuisbatterij na 2027 rendabel?",
+     "a": "Dat hangt af van hoeveel je teruglevert en van je contract. Met veel overschot, terugleverkosten of een dynamisch contract wordt hij interessanter. Reken het na met je jaarafrekening."
+    },
+    {
+     "q": "Mag ik een plug-in thuisbatterij zelf aansluiten?",
+     "a": "Een plug-in model gaat in een gewoon stopcontact. Check bij je netbeheerder of je hem moet aanmelden via energieleveren.nl."
+    },
+    {
+     "q": "Werkt een thuisbatterij bij een stroomstoring?",
+     "a": "Alleen als hij een noodstroom- of back-upfunctie heeft. Een powerstation met eigen stopcontacten blijft werken; veel plug-in batterijen schakelen uit."
+    },
+    {
+     "q": "Hoeveel kWh heb ik nodig?",
+     "a": "Ongeveer wat je op een gewone dag teruglevert en 's avonds weer verbruikt. Voor veel huishoudens met zonnepanelen is dat een paar kWh."
+    }
+   ],
+   "partners": [
+    {
+     "id": "jk-homepower-2000-ultra",
+     "shop": "Jackery",
+     "title": "Jackery HomePower 2000 Ultra plug-in thuisbatterij",
+     "image": "https://cdn.shopify.com/s/files/1/0650/6092/9623/files/HomePower_2000_Ultra_1-800x800.png?v=1769572007",
+     "url": "https://nl.jackery.com/products/homepower-2000-ultra",
+     "fit": [
+      [
+       0
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       0,
+       1
+      ]
+     ]
+    },
+    {
+     "id": "jk-solarvault-3-pro-max-ac",
+     "shop": "Jackery",
+     "title": "Jackery SolarVault 3 Pro Max AC thuisbatterij",
+     "image": "https://cdn.shopify.com/s/files/1/0650/6092/9623/files/ac-1_652f8651-f37a-418c-b555-f3c42ba4854a.webp?v=1785728491",
+     "url": "https://nl.jackery.com/products/solarvault-3-pro-max-ac",
+     "fit": [
+      [
+       0
+      ],
+      [
+       0,
+       1,
+       2
+      ],
+      [
+       1,
+       2
+      ]
+     ]
+    },
+    {
+     "id": "jk-solarvault-3-pro-max-ac-p1",
+     "shop": "Jackery",
+     "title": "Jackery SolarVault 3 Pro Max AC + P1-uitlezer",
+     "image": "https://cdn.shopify.com/s/files/1/0650/6092/9623/files/P1_S3ProMax-AC_S3BP2500.png?v=1774600948",
+     "url": "https://nl.jackery.com/products/solarvault-3-pro-max-ac-p1",
+     "fit": [
+      [
+       0
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    },
+    {
+     "id": "jk-explorer-2000-v2",
+     "shop": "Jackery",
+     "title": "Jackery Explorer 2000 v2 draagbaar energiestation",
+     "image": "https://cdn.shopify.com/s/files/1/0650/6092/9623/files/E2000v2_1.webp?v=1779782184",
+     "url": "https://nl.jackery.com/products/explorer-2000-v2-portable-power-station",
+     "fit": [
+      [
+       1,
+       2
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       1
+      ]
+     ]
+    },
+    {
+     "id": "jk-explorer-3000-v2",
+     "shop": "Jackery",
+     "title": "Jackery Explorer 3000 v2 draagbaar energiestation",
+     "image": "https://cdn.shopify.com/s/files/1/0650/6092/9623/files/E3000v2-800x800.webp?v=1780237821",
+     "url": "https://nl.jackery.com/products/explorer-3000-v2-portable-power-station",
+     "fit": [
+      [
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       2
+      ]
+     ]
+    },
+    {
+     "id": "jk-solar-generator-300-plus",
+     "shop": "Jackery",
+     "title": "Jackery Solar Generator 300 Plus met zonnepaneel",
+     "image": "https://cdn.shopify.com/s/files/1/0695/1105/3598/files/sg1300PLUS-40w.jpg?v=1703038073",
+     "url": "https://nl.jackery.com/products/solar-generator-300-plus",
+     "fit": [
+      [
+       2
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       0
+      ]
+     ]
+    }
+   ]
   }
  ]
 }
