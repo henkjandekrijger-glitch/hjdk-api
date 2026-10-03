@@ -126,12 +126,13 @@ export default async function handler(req, res) {
         try {
           const done = await kv.get('hjdk:opb:' + oid); if (done) continue;
           const cid = await kv.get('hjdk:cid:' + p.code); if (!cid || !cid.c) continue;
-          const isPA = /propeller|propads|^pa$/i.test(String(cid.s || ''));
+          const isPA = /propeller|propads|^pa$/i.test(String(cid.s || '')); const isRA = /richads|^ra$/i.test(String(cid.s || ''));
           const pb = isPA ? 'https://ad.propellerads.com/conversion.php?aid=3772727&pid=&tid=151850&visitor_id=' + encodeURIComponent(cid.c) + '&goal=2&payout=' + com.toFixed(2)
+                   : isRA ? 'https://us.ahows.co/log?action=conversion&key=' + encodeURIComponent(cid.c) + '&payout=' + com.toFixed(2)
                           : 'https://postback.mondiad.com/track?uid=31070&clickid=' + encodeURIComponent(cid.c) + '&payout=' + com.toFixed(2);
           const pr = await fetch(pb).catch(() => null);
-          await kv.set('hjdk:opb:' + oid, { at: Date.now(), status: pr ? pr.status : 0, net: isPA ? 'propellerads' : 'mondiad', zone: p.zone, page: p.page, commission: com }, { ex: 45 * 86400 });
-          posted++; postedList.push({ order: oid, net: isPA ? 'propellerads' : 'mondiad', zone: p.zone, page: p.page, commission: com, status: pr ? pr.status : 0 });
+          await kv.set('hjdk:opb:' + oid, { at: Date.now(), status: pr ? pr.status : 0, net: isPA ? 'propellerads' : isRA ? 'richads' : 'mondiad', zone: p.zone, page: p.page, commission: com }, { ex: 45 * 86400 });
+          posted++; postedList.push({ order: oid, net: isPA ? 'propellerads' : isRA ? 'richads' : 'mondiad', zone: p.zone, page: p.page, commission: com, status: pr ? pr.status : 0 });
         } catch (e) {}
       }
       const per1k = o => { for (const k in o) { const x = o[k]; x.commission = Math.round(x.commission * 100) / 100; x.revenue = Math.round(x.revenue * 100) / 100; x.commissionPer1000 = x.clicks ? Math.round(x.commission / x.clicks * 1000 * 100) / 100 : null; } return o; };
