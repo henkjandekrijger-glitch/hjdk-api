@@ -5,6 +5,7 @@
 //   GET  /pins                                -> pagina om URL's in de wachtrij te zetten (HJDK-token)
 //   POST /api/pinterest/queue {token, urls}   -> wachtrij vullen; regel: <url> | <bordnaam optioneel>
 import { kv } from '../lib/db.js';
+import kzSeed from '../data/kz.json' with { type: 'json' };
 import { getApp, exchangeCode, tokenStatus, listBoards, ensureBoard, createPin } from '../lib/pinterest.js';
 
 const QUEUE = 'hjdk:pins:queue', LOG = 'hjdk:pins:log';
@@ -46,6 +47,14 @@ async function autoCandidates(limit) {
   return res;
 }
 
+// keuzehulp.best: elke run één keuzehulp pinnen die nog niet gepind is (nieuwste eerst)
+async function kzCandidate() {
+  const today = new Date().toISOString().slice(0, 10);
+  const items = (kzSeed.items || []).filter(i => !i.publishAt || i.publishAt <= today).sort((a, b) => String(b.publishAt || '').localeCompare(String(a.publishAt || '')));
+  for (const i of items) { const done = await kv.get('hjdk:pins:done:kz-' + i.slug); if (!done) return { url: 'https://keuzehulp.best/' + i.slug, slug: 'kz-' + i.slug, board: 'Keuzehulpen: slim kiezen' }; }
+  return null;
+}
+
 export default async function handler(req, res) {
   res.setHeader('cache-control', 'no-store');
   const url = new URL(req.url, 'http://x');
@@ -81,7 +90,7 @@ export default async function handler(req, res) {
       const n = Math.max(1, Math.min(5, Number(url.searchParams.get('n')) || 2));
       const status = await tokenStatus(); if (!/^verbonden/.test(status)) return res.status(200).json({ ok: false, error: 'Pinterest ' + status });
       let queue = (await kv.get(QUEUE)) || []; const log = (await kv.get(LOG)) || []; const done = [];
-      const todo = queue.slice(0, n); if (todo.length < n) todo.push(...(await autoCandidates(n - todo.length)));
+      const todo = queue.slice(0, n); const kzc = await kzCandidate(); if (kzc) todo.push(kzc); if (todo.length < n + (kzc ? 1 : 0)) todo.push(...(await autoCandidates(n + (kzc ? 1 : 0) - todo.length)));
       for (const item of todo) {
         const info = await pageInfo(item.url);
         const slug = item.slug || item.url.replace(/^https?:\/\/(www\.)?yoo\.rs\//, '').replace(/\.html$/, '-html').replace(/[^a-z0-9-]/gi, '-').toLowerCase();
