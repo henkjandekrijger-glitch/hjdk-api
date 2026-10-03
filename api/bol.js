@@ -51,7 +51,7 @@ export default async function handler(req, res) {
         product = sorted[0] || null;
         if (product) { fit = product.fit; delete product.fit; alts = sorted.slice(1, 5).filter(a => a.id !== product.id).map(a => { const x = Object.assign({}, a); delete x.fit; return x; }); } else reason = r.products.length ? 'geen passend product' : 'geen resultaat';
       } catch (e) { error = String(e && e.message || e).slice(0, 160); }
-      if (!error) { try { await kv.set(key, { at: Date.now(), product, alts, fit, reason }); } catch (e) {} }
+      if (!error) { try { await kv.set(key, { at: Date.now(), product, alts, fit, reason }, { ex: 2 * 86400 }); } catch (e) {} }
       return res.status(200).json({ ok: !!product, product, alts, term, fit, reason: reason || undefined, error: error || undefined });
     }
     if (op === 'search') {

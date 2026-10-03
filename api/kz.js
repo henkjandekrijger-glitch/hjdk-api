@@ -340,6 +340,16 @@ async function notifyVraag(v, audioB64, mime) {
   return sendMail(key, SITE.email, 'Keuzehulp gevraagd: ' + String(v.q || 'ingesproken').slice(0, 60), html, extra);
 }
 
+/* Opruimen: verlopen caches (bol-zoekresultaten van >20 min, oude pick-versies) weggooien. De database liep vol (OOM) doordat die zonder vervaltijd bleven staan. */
+const RUIM = ['hjdk:bolq:*', 'hjdk:pick:*', 'hjdk:pick2:*'];
+async function opruimen(budgetMs) {
+  const t0 = Date.now(); const out = { weg: 0, perGroep: {}, klaar: true };
+  for (const match of RUIM) { let cu = '0'; let n = 0;
+    do { if (Date.now() - t0 > budgetMs) { out.klaar = false; break; } const [c, keys] = await kv.scan(cu, { match, count: 5000 }); cu = String(c); if (keys.length) { await kv.del(keys); n += keys.length; } } while (cu !== '0');
+    out.perGroep[match] = n; out.weg += n; if (!out.klaar) break; }
+  out.seconden = Math.round((Date.now() - t0) / 100) / 10; return out;
+}
+
 export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x');
   const op = url.searchParams.get('op') || '';
@@ -354,6 +364,7 @@ export default async function handler(req, res) {
       const z = String(url.searchParams.get('z') || '').replace(/\D/g, '').slice(0, 12), c = String(url.searchParams.get('c') || '').replace(/[^a-z0-9]/g, '').slice(0, 10);
       const adv = await advise(item, route, (z ? '-Z' + z : '') + (c ? '-' + c : '')); return res.status(200).json({ ok: true, slug: item.slug, route: route.join('-'), term: adv.term, products: adv.products });
     }
+    if (op === 'opruimen') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(Object.assign({ ok: true }, await opruimen(25000))); }
     /* ---------- meldingen (web push) ---------- */
     if (op === 'sw') { // service worker op /sw.js: haalt bij elke push zelf de tekst op en opent bij een klik de juiste keuzehulp
       res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('service-worker-allowed', '/'); res.setHeader('cache-control', 'no-cache');
@@ -517,7 +528,7 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
       const top = o => Object.entries(o).sort((a, b) => b[1] - a[1]).slice(0, 100).map(([q, n]) => ({ q, n }));
       // abonnees, mails, aanmeldblok-varianten, betaald verkeer per zone/creative, en de wachtrij (publishAt in de toekomst)
       const cnt = {}; const diag = { scans: 0, sleutels: 0, fout: null }; cursor = '0'; try { const t2 = Date.now(); for (let i = 0; i < 5000 && Date.now() - t2 < 8000; i++) { const [c, keys] = await kv.scan(cursor, { match: 'c:hjdk6-kz*', count: 5000 }); cursor = String(c); diag.scans++; diag.sleutels += keys.length; const vals = keys.length ? await kv.mget(...keys) : []; keys.forEach((k, j) => { if (/^c:hjdk6-kz-(abo|subs|welkom|mail|ms|paid|unsub|vraag|push|pm-)|^c:hjdk6-kzc-/.test(k)) cnt[k.slice(2)] = Number(vals[j]) || 0; }); if (cursor === '0') break; } } catch (e) { diag.fout = String(e && e.message || e).slice(0, 200); }
-      try { const dv = await kv.mget('c:hjdk6-kz-paid-view', 'c:hjdk6-kz-thuisbatterij-page', 'c:hjdk6-kz-push-imp', 'c:hjdk6-kz-abo-imp'); diag.direct = { paidView: dv[0], thuisbatterijPage: dv[1], pushImp: dv[2], aboImp: dv[3] }; diag.redisIngesteld = !!(process.env.KV_REDIS_URL || process.env.REDIS_URL); try { await kv.set('hjdk:kz:schrijftest', { at: Date.now() }, { ex: 600 }); diag.schrijven = 'ok'; } catch (e) { diag.schrijven = 'FOUT: ' + String(e && e.message || e).slice(0, 200); }
+      try { const dv = await kv.mget('c:hjdk6-kz-paid-view', 'c:hjdk6-kz-thuisbatterij-page', 'c:hjdk6-kz-push-imp', 'c:hjdk6-kz-abo-imp'); diag.direct = { paidView: dv[0], thuisbatterijPage: dv[1], pushImp: dv[2], aboImp: dv[3] }; diag.redisIngesteld = !!(process.env.KV_REDIS_URL || process.env.REDIS_URL); try { await kv.set('hjdk:kz:schrijftest', { at: Date.now() }, { ex: 600 }); diag.schrijven = 'ok'; } catch (e) { diag.schrijven = 'FOUT: ' + String(e && e.message || e).slice(0, 200); } if (/OOM/.test(diag.schrijven)) { try { diag.opgeruimd = await opruimen(15000); await kv.set('hjdk:kz:schrijftest', { at: Date.now() }, { ex: 600 }); diag.schrijvenNaOpruimen = 'ok'; } catch (e) { diag.schrijvenNaOpruimen = 'FOUT: ' + String(e && e.message || e).slice(0, 160); } }
       try { await kv.incr('c:hjdk6-kz-schrijftest'); diag.tellen = 'ok'; } catch (e) { diag.tellen = 'FOUT: ' + String(e && e.message || e).slice(0, 200); }
       try { const info = String(await kv.raw(['INFO', 'memory'])); const pick = k => ((info.match(new RegExp('^' + k + ':(.*)$', 'm')) || [])[1] || '').trim(); diag.geheugen = { gebruikt: pick('used_memory_human'), max: pick('maxmemory_human'), beleid: pick('maxmemory_policy') }; } catch (e) { diag.geheugen = 'onbekend: ' + String(e && e.message || e).slice(0, 120); }
       try { diag.aantalSleutels = Number(await kv.raw(['DBSIZE'])); } catch (e) {}
