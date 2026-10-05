@@ -129,6 +129,19 @@
      "q": "Kan ik een hele kip bereiden?",
      "a": "In een mand van 6 liter of meer past een kip van 1,2 kg."
     }
+   ],
+   "verwant": [
+    "combimagnetron",
+    "multicooker",
+    "inductiekookplaat",
+    "pannenset",
+    "koekenpan",
+    "braadpan",
+    "messenset",
+    "keukenmachine",
+    "blender",
+    "staafmixer",
+    "wafelijzer"
    ]
   },
   {
@@ -216,6 +229,14 @@
      "q": "Welke volautomaat voor beginners?",
      "a": "Een model met één draaiknop en een automatisch spoelprogramma; ingewikkelde menu's blijven ongebruikt."
     }
+   ],
+   "verwant": [
+    "bonenmachine",
+    "waterkoker",
+    "broodrooster",
+    "bruiswatermachine",
+    "broodbakmachine",
+    "slowjuicer"
    ]
   },
   {
@@ -337,6 +358,19 @@
      "q": "Welke kominhoud?",
      "a": "4,5–5 liter voor een gezin; 3,5 liter voor 1–2 personen."
     }
+   ],
+   "verwant": [
+    "messenset",
+    "blender",
+    "braadpan",
+    "staafmixer",
+    "koekenpan",
+    "wafelijzer",
+    "pannenset",
+    "inductiekookplaat",
+    "multicooker",
+    "combimagnetron",
+    "airfryer"
    ]
   },
   {
@@ -446,6 +480,19 @@
      "q": "Staafmixer of blender?",
      "a": "Staafmixer voor soep en kleine porties in de pan; blender voor smoothies en grote hoeveelheden."
     }
+   ],
+   "verwant": [
+    "keukenmachine",
+    "staafmixer",
+    "messenset",
+    "wafelijzer",
+    "braadpan",
+    "koekenpan",
+    "pannenset",
+    "inductiekookplaat",
+    "multicooker",
+    "combimagnetron",
+    "airfryer"
    ]
   },
   {
@@ -570,6 +617,19 @@
      "q": "Rvs of keramische coating?",
      "a": "Rvs voor aanbakken en lang meegaan; keramisch is makkelijker maar slijt sneller."
     }
+   ],
+   "verwant": [
+    "inductiekookplaat",
+    "koekenpan",
+    "multicooker",
+    "braadpan",
+    "combimagnetron",
+    "messenset",
+    "airfryer",
+    "keukenmachine",
+    "blender",
+    "staafmixer",
+    "wafelijzer"
    ]
   },
   {
@@ -675,6 +735,14 @@
      "q": "Met of zonder zak?",
      "a": "Zonder zak is goedkoper in gebruik; met zak is hygiënischer bij allergie."
     }
+   ],
+   "verwant": [
+    "robotstofzuiger",
+    "dweilrobot",
+    "kruimeldief",
+    "raamwisser",
+    "stoomreiniger",
+    "hogedrukreiniger"
    ]
   },
   {
@@ -782,6 +850,14 @@
      "q": "Kan hij over drempels?",
      "a": "De meeste tot 2 cm; hogere drempels zijn een probleem."
     }
+   ],
+   "verwant": [
+    "stofzuiger",
+    "dweilrobot",
+    "kruimeldief",
+    "raamwisser",
+    "stoomreiniger",
+    "hogedrukreiniger"
    ]
   },
   {
@@ -890,6 +966,13 @@
      "q": "Hoe voorkom ik kalk?",
      "a": "Gebruik een antikalkpatroon of gefilterd water en spoel maandelijks."
     }
+   ],
+   "verwant": [
+    "droogrek",
+    "strijkplank",
+    "wasdroger",
+    "stoomreiniger",
+    "wasmachine"
    ]
   },
   {
@@ -1003,6 +1086,13 @@
      "q": "Wat is automatische dosering?",
      "a": "De machine doseert wasmiddel zelf op basis van gewicht en vuil: minder verbruik en geen restanten."
     }
+   ],
+   "verwant": [
+    "wasdroger",
+    "droogrek",
+    "strijkijzer",
+    "strijkplank",
+    "stoomreiniger"
    ]
   },
   {
@@ -1119,6 +1209,16 @@
      "q": "Moet hij de hele dag aan?",
      "a": "Ja, op de laagste stand; luchtreinigers werken alleen bij continu gebruik."
     }
+   ],
+   "verwant": [
+    "luchtontvochtiger",
+    "luchtbevochtiger",
+    "ventilator",
+    "elektrische-kachel",
+    "infraroodpaneel",
+    "radiatorventilator",
+    "slimme-thermostaat",
+    "rookmelder"
    ]
   },
   {
@@ -1243,6 +1343,19 @@
      "q": "Pocketvering of traagschuim?",
      "a": "Pocketvering slaapt koeler en veerkrachtiger; traagschuim omsluit en verdeelt druk, maar is warmer."
     }
+   ],
+   "verwant": [
+    "boxspring",
+    "lattenbodem",
+    "dekbed",
+    "donsdekbed",
+    "dekbedovertrek",
+    "hoofdkussen",
+    "matrastopper",
+    "verduisterende-gordijnen",
+    "lichtwekker",
+    "warmwaterkruik",
+    "elektrische-deken"
    ]
   },
   {
@@ -1372,6 +1485,19 @@
      "q": "Hoe vaak vervangen?",
      "a": "Dons 10–15 jaar, synthetisch 5–8 jaar; was synthetisch 2× per jaar."
     }
+   ],
+   "verwant": [
+    "lattenbodem",
+    "donsdekbed",
+    "boxspring",
+    "dekbedovertrek",
+    "matras",
+    "hoofdkussen",
+    "matrastopper",
+    "verduisterende-gordijnen",
+    "lichtwekker",
+    "warmwaterkruik",
+    "elektrische-deken"
    ]
   },
   {
@@ -1483,6 +1609,17 @@
      "q": "Hoeveel moet een goede stoel kosten?",
      "a": "Voor dagelijks gebruik 200–400 euro; daaronder ontbreken meestal de verstelmogelijkheden."
     }
+   ],
+   "verwant": [
+    "zit-sta-bureau",
+    "monitor",
+    "bureaulamp",
+    "laptop",
+    "laptop-school",
+    "laptoptas",
+    "printer",
+    "mesh-wifi",
+    "koptelefoon"
    ]
   },
   {
@@ -1583,6 +1720,16 @@
      "q": "Kan ik onder de douche scheren?",
      "a": "Alleen met een nat-en-droog model (wet & dry, IPX7)."
     }
+   ],
+   "verwant": [
+    "baardtrimmer",
+    "stijltang",
+    "haarstyler",
+    "ipl-ontharing",
+    "elektrische-tandenborstel",
+    "dagcreme",
+    "led-masker",
+    "parfum"
    ]
   },
   {
@@ -1686,6 +1833,16 @@
      "q": "Vanaf welke leeftijd elektrisch voor kinderen?",
      "a": "Vanaf 3 jaar met een kindermodel met zachte haren en lage snelheid."
     }
+   ],
+   "verwant": [
+    "ipl-ontharing",
+    "dagcreme",
+    "haarstyler",
+    "led-masker",
+    "stijltang",
+    "parfum",
+    "baardtrimmer",
+    "scheerapparaat"
    ]
   },
   {
@@ -1800,6 +1957,16 @@
      "q": "Hoe voorkom ik haarschade?",
      "a": "Altijd hittebescherming, nooit op nat haar stijlen, en zo laag mogelijk in temperatuur."
     }
+   ],
+   "verwant": [
+    "baardtrimmer",
+    "haarstyler",
+    "scheerapparaat",
+    "ipl-ontharing",
+    "elektrische-tandenborstel",
+    "dagcreme",
+    "led-masker",
+    "parfum"
    ]
   },
   {
@@ -1912,6 +2079,18 @@
      "q": "Welke maat?",
      "a": "Een halve tot hele maat groter dan je gewone schoen, met een duim ruimte voor de tenen."
     }
+   ],
+   "verwant": [
+    "sport-bh",
+    "sporthorloge",
+    "smartwatch",
+    "yogamat",
+    "dumbbells",
+    "hometrainer",
+    "loopband",
+    "roeitrainer",
+    "nieuwjaar-fitness",
+    "massagegun"
    ]
   },
   {
@@ -2045,6 +2224,15 @@
      "q": "Welke lengte voor de fiets?",
      "a": "Tot over de bovenbenen (parka-lengte) en een capuchon die niet wegwaait."
     }
+   ],
+   "verwant": [
+    "regenjas",
+    "sporthorloge",
+    "sneeuwketting",
+    "snowboots-kind",
+    "wandelsokken",
+    "skibril",
+    "wandelschoenen"
    ]
   },
   {
@@ -2162,6 +2350,20 @@
      "q": "Is leer de moeite?",
      "a": "Leer gaat 10+ jaar mee en oogt zakelijk, maar weegt 1,5–2 kg leeg."
     }
+   ],
+   "verwant": [
+    "laptop-school",
+    "printer",
+    "koffer",
+    "powerbank",
+    "laptop",
+    "mesh-wifi",
+    "draadloze-oordopjes",
+    "bureaulamp",
+    "koptelefoon",
+    "monitor",
+    "bureaustoel",
+    "zit-sta-bureau"
    ]
   },
   {
@@ -2286,6 +2488,11 @@
      "q": "Hoeveel liter voor een week?",
      "a": "40–55 liter per persoon; twee weken 65–80 liter."
     }
+   ],
+   "verwant": [
+    "laptoptas",
+    "powerbank",
+    "draadloze-oordopjes"
    ]
   },
   {
@@ -2392,6 +2599,19 @@
      "q": "Hoe vaak moet ik slijpen?",
      "a": "Wekelijks even aanzetten met een aanzetstaal, elk half jaar echt slijpen op een wetsteen of bij een slijper."
     }
+   ],
+   "verwant": [
+    "braadpan",
+    "keukenmachine",
+    "koekenpan",
+    "blender",
+    "pannenset",
+    "staafmixer",
+    "inductiekookplaat",
+    "wafelijzer",
+    "multicooker",
+    "combimagnetron",
+    "airfryer"
    ]
   },
   {
@@ -2503,6 +2723,14 @@
      "q": "Hoe vaak ontkalken?",
      "a": "Bij hard water elke 2–4 weken met azijn of citroenzuur; dan gaat hij jaren mee."
     }
+   ],
+   "verwant": [
+    "koffiezetapparaat",
+    "broodrooster",
+    "bonenmachine",
+    "bruiswatermachine",
+    "broodbakmachine",
+    "slowjuicer"
    ]
   },
   {
@@ -2620,6 +2848,14 @@
      "q": "Is rvs beter dan plastic?",
      "a": "Rvs oogt mooier en is stevig, maar wordt heet aan de buitenkant. Kies dan een model met dubbele wand."
     }
+   ],
+   "verwant": [
+    "waterkoker",
+    "bruiswatermachine",
+    "koffiezetapparaat",
+    "broodbakmachine",
+    "bonenmachine",
+    "slowjuicer"
    ]
   },
   {
@@ -2746,6 +2982,19 @@
      "q": "Verbruikt een slowcooker veel stroom?",
      "a": "Nee: 150–250 watt, acht uur lang is ongeveer 1,5 kWh, minder dan een uur oven."
     }
+   ],
+   "verwant": [
+    "combimagnetron",
+    "inductiekookplaat",
+    "airfryer",
+    "pannenset",
+    "koekenpan",
+    "braadpan",
+    "messenset",
+    "keukenmachine",
+    "blender",
+    "staafmixer",
+    "wafelijzer"
    ]
   },
   {
@@ -2852,6 +3101,14 @@
      "q": "Mag ik sap of siroop in de fles bruisen?",
      "a": "Niet in de machine; voeg siroop toe nadat het water gebruist is."
     }
+   ],
+   "verwant": [
+    "broodrooster",
+    "broodbakmachine",
+    "waterkoker",
+    "slowjuicer",
+    "koffiezetapparaat",
+    "bonenmachine"
    ]
   },
   {
@@ -2970,6 +3227,12 @@
      "q": "Hoeveel dB is stil?",
      "a": "Tot 44 dB hoor je niets in de woonkamer; 46–48 dB is normaal; boven 50 dB is luid."
     }
+   ],
+   "verwant": [
+    "koelkast",
+    "tafelmodel-vaatwasser",
+    "inductiekookplaat",
+    "combimagnetron"
    ]
   },
   {
@@ -3089,6 +3352,13 @@
      "q": "Heeft een warmtepompdroger een afvoer nodig?",
      "a": "Nee, het water gaat in een reservoir of via een slangetje naar de afvoer van de wasmachine."
     }
+   ],
+   "verwant": [
+    "wasmachine",
+    "droogrek",
+    "strijkijzer",
+    "strijkplank",
+    "stoomreiniger"
    ]
   },
   {
@@ -3204,6 +3474,19 @@
      "q": "Hoeveel bar is genoeg?",
      "a": "3–4 bar voor huishoudelijk gebruik; 5 bar helpt bij voegen en ovens."
     }
+   ],
+   "verwant": [
+    "strijkplank",
+    "raamwisser",
+    "hogedrukreiniger",
+    "strijkijzer",
+    "kruimeldief",
+    "droogrek",
+    "dweilrobot",
+    "wasdroger",
+    "robotstofzuiger",
+    "wasmachine",
+    "stofzuiger"
    ]
   },
   {
@@ -3323,6 +3606,20 @@
      "q": "Is een plafondventilator de moeite?",
      "a": "Voor dagelijks gebruik ja: stil, zuinig en niets op de vloer. Alleen vaste montage nodig."
     }
+   ],
+   "verwant": [
+    "luchtbevochtiger",
+    "elektrische-kachel",
+    "zonnebrand",
+    "barbecue",
+    "luchtontvochtiger",
+    "infraroodpaneel",
+    "loungeset",
+    "luchtreiniger",
+    "radiatorventilator",
+    "trampoline",
+    "slimme-thermostaat",
+    "rookmelder"
    ]
   },
   {
@@ -3445,6 +3742,13 @@
      "q": "Hoe droog ik sneller binnen?",
      "a": "Zet het rek bij een open raam of een ventilator; een ontvochtiger halveert de droogtijd."
     }
+   ],
+   "verwant": [
+    "wasdroger",
+    "strijkijzer",
+    "wasmachine",
+    "strijkplank",
+    "stoomreiniger"
    ]
   },
   {
@@ -3568,6 +3872,19 @@
      "q": "Kan ik traagschuim wassen?",
      "a": "Niet de kern, wel de hoes. Lucht de kern regelmatig."
     }
+   ],
+   "verwant": [
+    "dekbedovertrek",
+    "matrastopper",
+    "donsdekbed",
+    "verduisterende-gordijnen",
+    "dekbed",
+    "lichtwekker",
+    "lattenbodem",
+    "warmwaterkruik",
+    "boxspring",
+    "elektrische-deken",
+    "matras"
    ]
   },
   {
@@ -3681,6 +3998,19 @@
      "q": "Moet ik een gedeeld matras nemen?",
      "a": "Bij 160 cm en breder is dat verstandig als jullie verschillend wegen of slapen; een tweepersoonstopper verbergt de naad."
     }
+   ],
+   "verwant": [
+    "matras",
+    "lattenbodem",
+    "dekbed",
+    "donsdekbed",
+    "dekbedovertrek",
+    "hoofdkussen",
+    "matrastopper",
+    "verduisterende-gordijnen",
+    "lichtwekker",
+    "warmwaterkruik",
+    "elektrische-deken"
    ]
   },
   {
@@ -3801,6 +4131,17 @@
      "q": "Kan ik mijn eigen blad gebruiken?",
      "a": "Ja, de meeste frames zijn los te koop en passen bladen van 110–180 cm."
     }
+   ],
+   "verwant": [
+    "bureaustoel",
+    "monitor",
+    "bureaulamp",
+    "laptop",
+    "laptop-school",
+    "laptoptas",
+    "printer",
+    "mesh-wifi",
+    "koptelefoon"
    ]
   },
   {
@@ -3920,6 +4261,14 @@
      "q": "Kan een kleed over vloerverwarming?",
      "a": "Ja, mits dun en met open rug (geen rubber). Dikke, hoogpolige kleden houden warmte tegen."
     }
+   ],
+   "verwant": [
+    "bank",
+    "leeslamp",
+    "eettafel",
+    "plaid",
+    "televisie",
+    "kledingkast"
    ]
   },
   {
@@ -4036,6 +4385,20 @@
      "q": "Gordijn of rolgordijn voor de slaapkamer?",
      "a": "Een rolgordijn in de dag lekt licht langs de randen; gordijnen met overlap zijn donkerder. Combineer voor volledig donker."
     }
+   ],
+   "verwant": [
+    "matrastopper",
+    "lichtwekker",
+    "kinderstoel",
+    "hoofdkussen",
+    "warmwaterkruik",
+    "babyfoon",
+    "dekbedovertrek",
+    "elektrische-deken",
+    "babymatras",
+    "donsdekbed",
+    "kinderbed",
+    "dekbed"
    ]
   },
   {
@@ -4157,6 +4520,14 @@
      "q": "Kan ik een kast zelf in elkaar zetten?",
      "a": "Ja, maar reken op 3–5 uur en twee personen voor kasten boven 150 cm breed."
     }
+   ],
+   "verwant": [
+    "televisie",
+    "plaid",
+    "eettafel",
+    "leeslamp",
+    "vloerkleed",
+    "bank"
    ]
   },
   {
@@ -4277,6 +4648,17 @@
      "q": "Is een monitor light bar de moeite?",
      "a": "Ja bij een klein bureau: hij verlicht het bureau zonder spiegeling en neemt geen ruimte in."
     }
+   ],
+   "verwant": [
+    "monitor",
+    "laptop",
+    "bureaustoel",
+    "laptop-school",
+    "zit-sta-bureau",
+    "laptoptas",
+    "printer",
+    "mesh-wifi",
+    "koptelefoon"
    ]
   },
   {
@@ -4387,6 +4769,16 @@
      "q": "Hoe lang gaat de lamp mee?",
      "a": "250.000–400.000 flitsen: genoeg voor 10+ jaar volledig lichaam."
     }
+   ],
+   "verwant": [
+    "haarstyler",
+    "elektrische-tandenborstel",
+    "stijltang",
+    "dagcreme",
+    "baardtrimmer",
+    "led-masker",
+    "scheerapparaat",
+    "parfum"
    ]
   },
   {
@@ -4518,6 +4910,20 @@
      "q": "Wat is het verschil tussen EDT en EDP?",
      "a": "De concentratie: EDP is sterker en houdt langer, EDT lichter en frisser."
     }
+   ],
+   "verwant": [
+    "led-masker",
+    "kerstcadeau-collega",
+    "smartwatch",
+    "dagcreme",
+    "kerstcadeau-partner",
+    "massagekussen",
+    "elektrische-tandenborstel",
+    "kerstpakket",
+    "ipl-ontharing",
+    "badjas",
+    "haarstyler",
+    "stijltang"
    ]
   },
   {
@@ -4634,6 +5040,16 @@
      "q": "Dag- en nachtcrème: moet dat echt?",
      "a": "Niet per se. Een nachtcrème is rijker en bevat actieve stoffen (retinol) die niet in de zon mogen."
     }
+   ],
+   "verwant": [
+    "elektrische-tandenborstel",
+    "led-masker",
+    "ipl-ontharing",
+    "parfum",
+    "haarstyler",
+    "stijltang",
+    "baardtrimmer",
+    "scheerapparaat"
    ]
   },
   {
@@ -4754,6 +5170,20 @@
      "q": "Mag ik hem op mijn nek gebruiken?",
      "a": "Op de spieren naast de nekwervels op lage stand, nooit op de wervels of de voorkant van de hals."
     }
+   ],
+   "verwant": [
+    "nieuwjaar-fitness",
+    "massagekussen",
+    "roeitrainer",
+    "personenweegschaal",
+    "loopband",
+    "koortsthermometer",
+    "hometrainer",
+    "bloeddrukmeter",
+    "dumbbells",
+    "yogamat",
+    "smartwatch",
+    "sporthorloge"
    ]
   },
   {
@@ -4865,6 +5295,15 @@
      "q": "Wifi of bluetooth?",
      "a": "Wifi als meerdere mensen wegen en je het automatisch wilt; bluetooth is goedkoper en volstaat voor één persoon."
     }
+   ],
+   "verwant": [
+    "koortsthermometer",
+    "massagekussen",
+    "handdoeken",
+    "badjas",
+    "bloeddrukmeter",
+    "massagegun",
+    "regendouche"
    ]
   },
   {
@@ -4986,6 +5425,12 @@
      "q": "Hoe loop ik ze in?",
      "a": "Eerst een week dagelijks een uur dragen, dan korte wandelingen; pas daarna een dagtocht."
     }
+   ],
+   "verwant": [
+    "wandelsokken",
+    "regenjas",
+    "winterjas",
+    "sporthorloge"
    ]
   },
   {
@@ -5118,6 +5563,18 @@
      "q": "Regenjas of poncho voor de fiets?",
      "a": "Een poncho is luchtiger en dekt het stuur; een jas is windbestendiger en netter. Voor dagelijks woon-werk wint de lange jas."
     }
+   ],
+   "verwant": [
+    "wandelsokken",
+    "winterjas",
+    "loopfiets",
+    "wandelschoenen",
+    "sporthorloge",
+    "kinderfiets",
+    "fietsstoeltje",
+    "fietsverlichting",
+    "fietsendrager",
+    "e-bike"
    ]
   },
   {
@@ -5249,6 +5706,18 @@
      "q": "Hoe lang gaat een sport-bh mee?",
      "a": "6–12 maanden bij 3× per week sporten; daarna is de steun merkbaar minder."
     }
+   ],
+   "verwant": [
+    "hardloopschoenen",
+    "sporthorloge",
+    "smartwatch",
+    "yogamat",
+    "dumbbells",
+    "hometrainer",
+    "loopband",
+    "roeitrainer",
+    "nieuwjaar-fitness",
+    "massagegun"
    ]
   },
   {
@@ -5381,6 +5850,20 @@
      "q": "Is een duurder horloge beter voor slaap?",
      "a": "Niet per se; Garmin, Fitbit en Amazfit meten slaap goed en gaan een week mee. Batterijduur is belangrijker dan prijs."
     }
+   ],
+   "verwant": [
+    "sporthorloge",
+    "yogamat",
+    "parfum",
+    "massagekussen",
+    "sport-bh",
+    "dumbbells",
+    "kerstcadeau-collega",
+    "kerstpakket",
+    "hardloopschoenen",
+    "hometrainer",
+    "kerstcadeau-partner",
+    "badjas"
    ]
   },
   {
@@ -5499,6 +5982,13 @@
      "q": "Hoe lang gaat een kinderwagen mee?",
      "a": "Tot 3–4 jaar (15–22 kg). Een tweede kind later: let op de garantie en reserveonderdelen."
     }
+   ],
+   "verwant": [
+    "buggy",
+    "autostoel",
+    "draagzak",
+    "fietsstoeltje",
+    "babyfoon"
    ]
   },
   {
@@ -5622,6 +6112,16 @@
      "q": "Past elke isofix-stoel in elke auto?",
      "a": "Bijna, maar niet altijd. Check de voertuiglijst op de site van de stoelfabrikant."
     }
+   ],
+   "verwant": [
+    "buggy",
+    "draagzak",
+    "dashcam",
+    "fietsendrager",
+    "kinderwagen",
+    "fietsstoeltje",
+    "sneeuwketting",
+    "babyfoon"
    ]
   },
   {
@@ -5745,6 +6245,18 @@
      "q": "Is een ademhalingsmonitor nodig?",
      "a": "Medisch niet; het geeft sommige ouders rust, maar valse alarmen komen voor."
     }
+   ],
+   "verwant": [
+    "fietsstoeltje",
+    "babymatras",
+    "kinderstoel",
+    "draagzak",
+    "kinderbed",
+    "verduisterende-gordijnen",
+    "autostoel",
+    "commode",
+    "buggy",
+    "kinderwagen"
    ]
   },
   {
@@ -5869,6 +6381,13 @@
      "q": "Doek of gespzak?",
      "a": "Doek voor knus en vanaf geboorte; gespzak voor snelheid en zwaardere kinderen. Veel ouders hebben beide."
     }
+   ],
+   "verwant": [
+    "autostoel",
+    "fietsstoeltje",
+    "buggy",
+    "babyfoon",
+    "kinderwagen"
    ]
   },
   {
@@ -5982,6 +6501,13 @@
      "q": "Moet ik een hoeslaken én een molton?",
      "a": "Een molton beschermt het matras tegen vocht; een hoeslaken erover. Twee sets is handig bij nachtelijke ongelukjes."
     }
+   ],
+   "verwant": [
+    "kinderbed",
+    "babyfoon",
+    "commode",
+    "kinderstoel",
+    "verduisterende-gordijnen"
    ]
   },
   {
@@ -6117,6 +6643,13 @@
      "q": "Hoe vaak wassen?",
      "a": "Elke 2–4 weken de hoes; het kussen zelf luchten en eens per kwartaal wassen als dat kan."
     }
+   ],
+   "verwant": [
+    "hondenvoer",
+    "kattenbak",
+    "kattenvoer",
+    "krabpaal",
+    "gps-tracker-hond"
    ]
   },
   {
@@ -6243,6 +6776,13 @@
      "q": "Welk strooisel past bij welke bak?",
      "a": "Zelfreinigend: klontvormend strooisel. Open en gesloten: alles; klontvormend is het makkelijkst te scheppen."
     }
+   ],
+   "verwant": [
+    "hondenvoer",
+    "kattenvoer",
+    "hondenmand",
+    "krabpaal",
+    "gps-tracker-hond"
    ]
   },
   {
@@ -6358,6 +6898,18 @@
      "q": "Wat is een goed vliegwielgewicht?",
      "a": "6–8 kg voor fitness, 10 kg+ voor spinning en intervaltraining."
     }
+   ],
+   "verwant": [
+    "dumbbells",
+    "loopband",
+    "yogamat",
+    "roeitrainer",
+    "smartwatch",
+    "nieuwjaar-fitness",
+    "sporthorloge",
+    "massagegun",
+    "sport-bh",
+    "hardloopschoenen"
    ]
   },
   {
@@ -6479,6 +7031,18 @@
      "q": "Zijn verstelbare dumbbells veilig?",
      "a": "Merken met vergrendeling (Bowflex, PowerBlock, ATX) wel. Controleer vóór elke set of de schijven vast zitten."
     }
+   ],
+   "verwant": [
+    "yogamat",
+    "hometrainer",
+    "smartwatch",
+    "loopband",
+    "sporthorloge",
+    "roeitrainer",
+    "sport-bh",
+    "nieuwjaar-fitness",
+    "hardloopschoenen",
+    "massagegun"
    ]
   },
   {
@@ -6599,6 +7163,13 @@
      "q": "Wat kost onderhoud?",
      "a": "Mesjes elke 1–2 maanden (10–20 euro per set), accu na 4–6 jaar."
     }
+   ],
+   "verwant": [
+    "accu-grasmaaier",
+    "heggenschaar",
+    "hogedrukreiniger",
+    "loungeset",
+    "barbecue"
    ]
   },
   {
@@ -6728,6 +7299,16 @@
      "q": "Is een kamado het geld waard?",
      "a": "Als je rookt, bakt en lang gaart ja; voor alleen worstjes is een houtskoolketel genoeg."
     }
+   ],
+   "verwant": [
+    "loungeset",
+    "ventilator",
+    "hogedrukreiniger",
+    "zonnebrand",
+    "trampoline",
+    "heggenschaar",
+    "robotmaaier",
+    "accu-grasmaaier"
    ]
   },
   {
@@ -6849,6 +7430,11 @@
      "q": "Is brushless het geld waard?",
      "a": "Bij regelmatig gebruik ja: meer kracht, langer op een accu en geen koolborstels vervangen."
     }
+   ],
+   "verwant": [
+    "decoupeerzaag",
+    "ladder",
+    "hogedrukreiniger"
    ]
   },
   {
@@ -6958,6 +7544,12 @@
      "q": "Is een app nodig?",
      "a": "Handig voor het overzicht en om te delen met de huisarts, maar een meter met geheugen voor 60 metingen volstaat."
     }
+   ],
+   "verwant": [
+    "koortsthermometer",
+    "personenweegschaal",
+    "massagekussen",
+    "massagegun"
    ]
   },
   {
@@ -7088,6 +7680,20 @@
      "q": "Is houten speelgoed beter?",
      "a": "Niet per se, wel duurzamer en stiller. Kijk naar wat het kind ermee kan, niet naar het materiaal."
     }
+   ],
+   "verwant": [
+    "cadeau-peuter",
+    "luisterbox-kind",
+    "cadeau-kind-5-jaar",
+    "kindercamera",
+    "bordspel",
+    "karaoke-set-kind",
+    "sinterklaasspel",
+    "knutselset",
+    "sinterklaas-cadeau-8-12",
+    "bouwset",
+    "schoencadeautjes",
+    "puzzel"
    ]
   },
   {
@@ -7222,6 +7828,20 @@
      "q": "Hoe weet ik of een spel te moeilijk is?",
      "a": "Kijk naar de 'complexiteit' op BoardGameGeek: onder 2,0 is familie, boven 3,0 is voor ervaren spelers."
     }
+   ],
+   "verwant": [
+    "sinterklaasspel",
+    "cadeau-kind-5-jaar",
+    "sinterklaas-cadeau-8-12",
+    "cadeau-peuter",
+    "schoencadeautjes",
+    "speelgoed-cadeau",
+    "luisterbox-kind",
+    "kindercamera",
+    "karaoke-set-kind",
+    "knutselset",
+    "bouwset",
+    "puzzel"
    ]
   },
   {
@@ -7344,6 +7964,20 @@
      "q": "Bedraad of draadloos voor muziek thuis?",
      "a": "Bedraad klinkt bij gelijke prijs beter en heeft nooit een lege accu; draadloos is handiger."
     }
+   ],
+   "verwant": [
+    "mesh-wifi",
+    "bluetooth-speaker",
+    "draadloze-oordopjes",
+    "printer",
+    "soundbar",
+    "beamer",
+    "laptoptas",
+    "televisie",
+    "spelcomputer",
+    "laptop-school",
+    "gaming-headset",
+    "laptop"
    ]
   },
   {
@@ -7466,6 +8100,11 @@
      "q": "E-reader of tablet?",
      "a": "Voor lezen: e-reader (geen spiegeling, weken batterij, rust). Een tablet is voor alles behalve lang lezen."
     }
+   ],
+   "verwant": [
+    "tablet",
+    "tablet-kind",
+    "leeslamp"
    ]
   },
   {
@@ -7592,6 +8231,17 @@
      "q": "Twee monitoren of één ultrawide?",
      "a": "Ultrawide (34 inch) heeft geen naad en is netter; twee schermen zijn goedkoper en flexibeler."
     }
+   ],
+   "verwant": [
+    "bureaustoel",
+    "bureaulamp",
+    "zit-sta-bureau",
+    "laptop",
+    "laptop-school",
+    "laptoptas",
+    "printer",
+    "mesh-wifi",
+    "koptelefoon"
    ]
   },
   {
@@ -7709,6 +8359,20 @@
      "q": "Wat is het verschil tussen grill en hetelucht?",
      "a": "Grill is bovenwarmte voor bruinen; hetelucht is een ventilator met verwarming die als oven werkt."
     }
+   ],
+   "verwant": [
+    "airfryer",
+    "multicooker",
+    "inductiekookplaat",
+    "tafelmodel-vaatwasser",
+    "pannenset",
+    "vaatwasser",
+    "koekenpan",
+    "koelkast",
+    "braadpan",
+    "messenset",
+    "keukenmachine",
+    "blender"
    ]
   },
   {
@@ -7829,6 +8493,20 @@
      "q": "Is inductie zuiniger dan gas?",
      "a": "Ja, het rendement is 85–90% tegenover 40–55% bij gas; per maaltijd zo'n 20–30% minder energie."
     }
+   ],
+   "verwant": [
+    "multicooker",
+    "pannenset",
+    "tafelmodel-vaatwasser",
+    "combimagnetron",
+    "koekenpan",
+    "vaatwasser",
+    "airfryer",
+    "braadpan",
+    "koelkast",
+    "messenset",
+    "keukenmachine",
+    "blender"
    ]
   },
   {
@@ -7955,6 +8633,12 @@
      "q": "Hoe lang gaat een koelkast mee?",
      "a": "10–15 jaar; een oude koelkast verbruikt vaak het dubbele van een nieuwe."
     }
+   ],
+   "verwant": [
+    "vaatwasser",
+    "tafelmodel-vaatwasser",
+    "inductiekookplaat",
+    "combimagnetron"
    ]
   },
   {
@@ -8069,6 +8753,14 @@
      "q": "Kan ik ook deeg maken voor pizza?",
      "a": "Ja, met het deegprogramma kneedt en rijst de machine en bak je zelf in de oven."
     }
+   ],
+   "verwant": [
+    "bruiswatermachine",
+    "slowjuicer",
+    "broodrooster",
+    "waterkoker",
+    "koffiezetapparaat",
+    "bonenmachine"
    ]
   },
   {
@@ -8167,6 +8859,14 @@
      "q": "Kan ik ook notenmelk maken?",
      "a": "Met een slowjuicer wel (amandelen geweekt); een centrifuge niet."
     }
+   ],
+   "verwant": [
+    "broodbakmachine",
+    "bruiswatermachine",
+    "broodrooster",
+    "waterkoker",
+    "koffiezetapparaat",
+    "bonenmachine"
    ]
   },
   {
@@ -8294,6 +8994,19 @@
      "q": "Hoe maak ik hem schoon?",
      "a": "Met warm water en een zachte spons; ingebrande resten weken met water en soda."
     }
+   ],
+   "verwant": [
+    "koekenpan",
+    "messenset",
+    "pannenset",
+    "keukenmachine",
+    "inductiekookplaat",
+    "blender",
+    "multicooker",
+    "staafmixer",
+    "combimagnetron",
+    "wafelijzer",
+    "airfryer"
    ]
   },
   {
@@ -8404,6 +9117,14 @@
      "q": "Werkt hij op huisdierharen?",
      "a": "Alleen met een gemotoriseerde borstel; een gewone zuigmond laat haren in de stof zitten."
     }
+   ],
+   "verwant": [
+    "dweilrobot",
+    "raamwisser",
+    "robotstofzuiger",
+    "stoomreiniger",
+    "stofzuiger",
+    "hogedrukreiniger"
    ]
   },
   {
@@ -8514,6 +9235,14 @@
      "q": "Werkt een raamrobot echt?",
      "a": "Op grote, vlakke ramen zonder sponning goed; hoeken en randen blijven 1–2 cm over."
     }
+   ],
+   "verwant": [
+    "kruimeldief",
+    "stoomreiniger",
+    "dweilrobot",
+    "hogedrukreiniger",
+    "robotstofzuiger",
+    "stofzuiger"
    ]
   },
   {
@@ -8637,6 +9366,16 @@
      "q": "Helpt een ontvochtiger tegen schimmel?",
      "a": "Ja, onder 60% luchtvochtigheid groeit schimmel niet. Bestaande schimmel moet je wel verwijderen."
     }
+   ],
+   "verwant": [
+    "luchtreiniger",
+    "luchtbevochtiger",
+    "ventilator",
+    "elektrische-kachel",
+    "infraroodpaneel",
+    "radiatorventilator",
+    "slimme-thermostaat",
+    "rookmelder"
    ]
   },
   {
@@ -8764,6 +9503,19 @@
      "q": "Is een elektrische kachel veilig 's nachts?",
      "a": "Oliegevulde radiatoren met kantelbeveiliging en thermostaat zijn de veiligste keuze; ventilatorkachels liever niet."
     }
+   ],
+   "verwant": [
+    "ventilator",
+    "infraroodpaneel",
+    "elektrische-deken",
+    "luchtbevochtiger",
+    "radiatorventilator",
+    "warmwaterkruik",
+    "luchtontvochtiger",
+    "slimme-thermostaat",
+    "luchtreiniger",
+    "rookmelder",
+    "thuisbatterij"
    ]
   },
   {
@@ -8881,6 +9633,20 @@
      "q": "Kan ik erop slapen met de deken aan?",
      "a": "Op de laagste stand en met automatische uitschakeling kan dat; de fabrikant adviseert meestal voorverwarmen en dan uit."
     }
+   ],
+   "verwant": [
+    "warmwaterkruik",
+    "elektrische-kachel",
+    "lichtwekker",
+    "infraroodpaneel",
+    "verduisterende-gordijnen",
+    "radiatorventilator",
+    "matrastopper",
+    "slimme-thermostaat",
+    "hoofdkussen",
+    "thuisbatterij",
+    "dekbedovertrek",
+    "donsdekbed"
    ]
   },
   {
@@ -9011,6 +9777,14 @@
      "q": "Welke maat voor een kamer van 20 m²?",
      "a": "Een 3-zits van 200–220 cm of een compacte hoekbank van 230 × 160 cm; houd 80 cm looppad vrij."
     }
+   ],
+   "verwant": [
+    "vloerkleed",
+    "leeslamp",
+    "eettafel",
+    "plaid",
+    "televisie",
+    "kledingkast"
    ]
   },
   {
@@ -9133,6 +9907,14 @@
      "q": "Eiken of mangohout?",
      "a": "Eiken is harder en lichter van kleur, mangohout goedkoper en warmer van kleur maar gevoeliger voor krassen."
     }
+   ],
+   "verwant": [
+    "leeslamp",
+    "plaid",
+    "vloerkleed",
+    "televisie",
+    "bank",
+    "kledingkast"
    ]
   },
   {
@@ -9252,6 +10034,19 @@
      "q": "Is een spiraalbodem beter?",
      "a": "Nee, spiraalbodems zijn verouderd en te zacht voor moderne matrassen."
     }
+   ],
+   "verwant": [
+    "boxspring",
+    "dekbed",
+    "matras",
+    "donsdekbed",
+    "dekbedovertrek",
+    "hoofdkussen",
+    "matrastopper",
+    "verduisterende-gordijnen",
+    "lichtwekker",
+    "warmwaterkruik",
+    "elektrische-deken"
    ]
   },
   {
@@ -9373,6 +10168,19 @@
      "q": "Welke maat voor een 180-bed?",
      "a": "240 × 220 cm (lits-jumeaux) of twee overtrekken van 140 × 220 als je aparte dekbedden hebt."
     }
+   ],
+   "verwant": [
+    "donsdekbed",
+    "hoofdkussen",
+    "dekbed",
+    "matrastopper",
+    "lattenbodem",
+    "verduisterende-gordijnen",
+    "boxspring",
+    "lichtwekker",
+    "matras",
+    "warmwaterkruik",
+    "elektrische-deken"
    ]
   },
   {
@@ -9495,6 +10303,11 @@
      "q": "Egyptisch katoen: is dat de moeite?",
      "a": "Echte Egyptische langvezel is zachter en sterker; let op het keurmerk, de term wordt vaak misbruikt."
     }
+   ],
+   "verwant": [
+    "regendouche",
+    "personenweegschaal",
+    "badjas"
    ]
   },
   {
@@ -9610,6 +10423,11 @@
      "q": "Thermostaat of mengkraan?",
      "a": "Thermostaat: constante temperatuur en veiliger; meerprijs 50–100 euro, het waard."
     }
+   ],
+   "verwant": [
+    "handdoeken",
+    "personenweegschaal",
+    "badjas"
    ]
   },
   {
@@ -9732,6 +10550,16 @@
      "q": "Is een luchtbevochtiger goed voor baby's?",
      "a": "Bij droge lucht ja, met een verdamper of warme nevel die schoon blijft; houd hem buiten bereik en reinig wekelijks."
     }
+   ],
+   "verwant": [
+    "luchtontvochtiger",
+    "ventilator",
+    "luchtreiniger",
+    "elektrische-kachel",
+    "infraroodpaneel",
+    "radiatorventilator",
+    "slimme-thermostaat",
+    "rookmelder"
    ]
   },
   {
@@ -9846,6 +10674,19 @@
      "q": "Is Philips het geld waard?",
      "a": "De lichtkwaliteit en bediening zijn beter; voor een basisfunctie voldoet een model van 40–60 euro."
     }
+   ],
+   "verwant": [
+    "verduisterende-gordijnen",
+    "warmwaterkruik",
+    "matrastopper",
+    "elektrische-deken",
+    "hoofdkussen",
+    "dekbedovertrek",
+    "donsdekbed",
+    "dekbed",
+    "lattenbodem",
+    "boxspring",
+    "matras"
    ]
   },
   {
@@ -9972,6 +10813,12 @@
      "q": "Hoe vaak opnieuw smeren?",
      "a": "Elke 2 uur en na zwemmen of zweten, ongeacht de factor."
     }
+   ],
+   "verwant": [
+    "ventilator",
+    "barbecue",
+    "loungeset",
+    "trampoline"
    ]
   },
   {
@@ -10092,6 +10939,13 @@
      "q": "Blad of aan tafel?",
      "a": "Een blad is handig bij knoeien en kleine kinderen; aan tafel eten stimuleert meedoen vanaf 1,5 jaar."
     }
+   ],
+   "verwant": [
+    "babyfoon",
+    "verduisterende-gordijnen",
+    "babymatras",
+    "kinderbed",
+    "commode"
    ]
   },
   {
@@ -10214,6 +11068,13 @@
      "q": "Tot wanneer gebruik je een commode?",
      "a": "Tot het kind zelf de luier uit is of te zwaar wordt om te tillen, meestal 2–2,5 jaar."
     }
+   ],
+   "verwant": [
+    "kinderbed",
+    "babymatras",
+    "babyfoon",
+    "kinderstoel",
+    "verduisterende-gordijnen"
    ]
   },
   {
@@ -10324,6 +11185,17 @@
      "q": "Hoe meet ik de zadelhoogte?",
      "a": "Binnenbeenlengte met schoenen minus 2–3 cm = laagste zadelstand die je nodig hebt."
     }
+   ],
+   "verwant": [
+    "kinderfiets",
+    "regenjas",
+    "trampoline",
+    "fietsstoeltje",
+    "slee",
+    "fietsverlichting",
+    "hoverboard",
+    "fietsendrager",
+    "e-bike"
    ]
   },
   {
@@ -10449,6 +11321,17 @@
      "q": "Terugtraprem of handrem?",
      "a": "Handremmen zijn beter te doseren en leren voor later; een terugtraprem is intuïtief voor kleintjes. Veel fietsen hebben beide."
     }
+   ],
+   "verwant": [
+    "loopfiets",
+    "trampoline",
+    "fietsstoeltje",
+    "slee",
+    "fietsverlichting",
+    "regenjas",
+    "hoverboard",
+    "fietsendrager",
+    "e-bike"
    ]
   },
   {
@@ -10572,6 +11455,13 @@
      "q": "Is een halfhoogslaper veilig?",
      "a": "Vanaf 4–5 jaar met een rand van minimaal 16 cm boven het matras en een stevige trap."
     }
+   ],
+   "verwant": [
+    "commode",
+    "babymatras",
+    "babyfoon",
+    "kinderstoel",
+    "verduisterende-gordijnen"
    ]
   },
   {
@@ -10690,6 +11580,16 @@
      "q": "Hoe lang gaat een trampoline mee?",
      "a": "5–10 jaar; de mat en het randkussen zijn na 3–5 jaar aan vervanging toe."
     }
+   ],
+   "verwant": [
+    "kinderfiets",
+    "slee",
+    "loungeset",
+    "loopfiets",
+    "hoverboard",
+    "barbecue",
+    "ventilator",
+    "zonnebrand"
    ]
   },
   {
@@ -10817,6 +11717,13 @@
      "q": "Hoeveel voer per dag?",
      "a": "De tabel op de zak is een start; houd de hond op gewicht (ribben voelbaar, taille zichtbaar) en pas aan."
     }
+   ],
+   "verwant": [
+    "hondenmand",
+    "kattenbak",
+    "kattenvoer",
+    "krabpaal",
+    "gps-tracker-hond"
    ]
   },
   {
@@ -10937,6 +11844,13 @@
      "q": "Mag mijn kat vegetarisch?",
      "a": "Nee; katten zijn echte vleeseters en hebben taurine en arachidonzuur uit dierlijke bronnen nodig."
     }
+   ],
+   "verwant": [
+    "kattenbak",
+    "krabpaal",
+    "hondenvoer",
+    "gps-tracker-hond",
+    "hondenmand"
    ]
   },
   {
@@ -11064,6 +11978,14 @@
      "q": "Voorwiel- of middenmotor?",
      "a": "Middenmotor voor natuurlijk gevoel, heuvels en bagage; voorwielmotor is goedkoper en prima voor vlak, kort gebruik."
     }
+   ],
+   "verwant": [
+    "fietsendrager",
+    "fietsverlichting",
+    "fietsstoeltje",
+    "kinderfiets",
+    "loopfiets",
+    "regenjas"
    ]
   },
   {
@@ -11191,6 +12113,18 @@
      "q": "Welke maat voor lange mensen?",
      "a": "Vanaf 1,85 m een mat van 200 cm; standaard is 183 cm."
     }
+   ],
+   "verwant": [
+    "smartwatch",
+    "dumbbells",
+    "sporthorloge",
+    "hometrainer",
+    "sport-bh",
+    "loopband",
+    "hardloopschoenen",
+    "roeitrainer",
+    "nieuwjaar-fitness",
+    "massagegun"
    ]
   },
   {
@@ -11295,6 +12229,17 @@
      "q": "Hoeveel kogeldruk heeft mijn trekhaak?",
      "a": "Staat op het typeplaatje van de trekhaak, meestal 50–100 kg. Drager plus fietsen moet daaronder blijven."
     }
+   ],
+   "verwant": [
+    "e-bike",
+    "fietsverlichting",
+    "autostoel",
+    "fietsstoeltje",
+    "dashcam",
+    "kinderfiets",
+    "sneeuwketting",
+    "loopfiets",
+    "regenjas"
    ]
   },
   {
@@ -11431,6 +12376,13 @@
      "q": "Wat is mulchen?",
      "a": "Het gras wordt fijngehakt en blijft liggen als voeding; je hoeft niets af te voeren."
     }
+   ],
+   "verwant": [
+    "robotmaaier",
+    "heggenschaar",
+    "hogedrukreiniger",
+    "loungeset",
+    "barbecue"
    ]
   },
   {
@@ -11550,6 +12502,13 @@
      "q": "Hoe vaak slijpen?",
      "a": "Eens per seizoen, of laat het doen; hars na elk gebruik verwijderen houdt de messen scherp."
     }
+   ],
+   "verwant": [
+    "robotmaaier",
+    "hogedrukreiniger",
+    "accu-grasmaaier",
+    "loungeset",
+    "barbecue"
    ]
   },
   {
@@ -11670,6 +12629,20 @@
      "q": "Wat is het verschil tussen K2 en K4?",
      "a": "Druk en debiet (110/360 tegenover 130/420 bar/liter) en een sterkere, watergekoelde motor bij de K4."
     }
+   ],
+   "verwant": [
+    "stoomreiniger",
+    "heggenschaar",
+    "loungeset",
+    "ladder",
+    "raamwisser",
+    "robotmaaier",
+    "barbecue",
+    "decoupeerzaag",
+    "kruimeldief",
+    "accu-grasmaaier",
+    "accuboormachine",
+    "dweilrobot"
    ]
   },
   {
@@ -11798,6 +12771,16 @@
      "q": "Hoe onderhoud ik teak?",
      "a": "Jaarlijks schoonmaken; olie alleen als je de bruine kleur wilt houden, anders laten vergrijzen."
     }
+   ],
+   "verwant": [
+    "hogedrukreiniger",
+    "barbecue",
+    "trampoline",
+    "heggenschaar",
+    "ventilator",
+    "robotmaaier",
+    "zonnebrand",
+    "accu-grasmaaier"
    ]
   },
   {
@@ -11913,6 +12896,11 @@
      "q": "Hoe voorkom ik splinters?",
      "a": "Zaag met de goede kant naar beneden, gebruik een fijn blad, pendelslag uit en plak schilderstape op de zaaglijn."
     }
+   ],
+   "verwant": [
+    "accuboormachine",
+    "ladder",
+    "hogedrukreiniger"
    ]
   },
   {
@@ -12037,6 +13025,11 @@
      "q": "Hoe zet ik een ladder veilig?",
      "a": "Hoek 75° (1 meter uit voor elke 4 meter hoogte), stabilisatiebalk onder, 1 meter boven de dakrand uit laten steken."
     }
+   ],
+   "verwant": [
+    "decoupeerzaag",
+    "hogedrukreiniger",
+    "accuboormachine"
    ]
   },
   {
@@ -12153,6 +13146,14 @@
      "q": "Hoe meet ik goed in het oor?",
      "a": "Trek het oor iets naar achteren en omhoog (bij kinderen naar achteren), richt op het trommelvlies en meet beide oren."
     }
+   ],
+   "verwant": [
+    "schmink-kind",
+    "bloeddrukmeter",
+    "personenweegschaal",
+    "elektrische-tandenborstel-kind",
+    "massagekussen",
+    "massagegun"
    ]
   },
   {
@@ -12271,6 +13272,18 @@
      "q": "Shiatsu of trilmassage?",
      "a": "Shiatsu kneedt en werkt dieper; trillen is oppervlakkig en vooral ontspannend."
     }
+   ],
+   "verwant": [
+    "personenweegschaal",
+    "massagegun",
+    "smartwatch",
+    "kerstpakket",
+    "koortsthermometer",
+    "parfum",
+    "badjas",
+    "bloeddrukmeter",
+    "kerstcadeau-collega",
+    "kerstcadeau-partner"
    ]
   },
   {
@@ -12407,6 +13420,17 @@
      "q": "Wat is een goede accuduur?",
      "a": "10 uur of meer bij normaal gebruik; fabrikanten noemen vaak 15–18 uur bij video afspelen."
     }
+   ],
+   "verwant": [
+    "laptop",
+    "laptoptas",
+    "bureaulamp",
+    "printer",
+    "monitor",
+    "mesh-wifi",
+    "bureaustoel",
+    "koptelefoon",
+    "zit-sta-bureau"
    ]
   },
   {
@@ -12540,6 +13564,11 @@
      "q": "Is een kindertablet de moeite?",
      "a": "Tot 6 jaar wel (hoes, inhoud, garantie bij schade); daarna is een gewone tablet met hoes beter."
     }
+   ],
+   "verwant": [
+    "tablet",
+    "leeslamp",
+    "e-reader"
    ]
   },
   {
@@ -12660,6 +13689,17 @@
      "q": "Laser of inkjet voor thuis?",
      "a": "Zelden printen: laser. Vaak en in kleur: inkttank. Foto's: inkjet met 6 kleuren."
     }
+   ],
+   "verwant": [
+    "laptoptas",
+    "mesh-wifi",
+    "laptop-school",
+    "koptelefoon",
+    "laptop",
+    "bureaulamp",
+    "monitor",
+    "bureaustoel",
+    "zit-sta-bureau"
    ]
   },
   {
@@ -12782,6 +13822,15 @@
      "q": "Bluetooth of wifi?",
      "a": "Bluetooth voor onderweg en simpel; wifi (Sonos, AirPlay) voor beter geluid thuis en multiroom."
     }
+   ],
+   "verwant": [
+    "soundbar",
+    "koptelefoon",
+    "televisie",
+    "draadloze-oordopjes",
+    "beamer",
+    "spelcomputer",
+    "gaming-headset"
    ]
   },
   {
@@ -12904,6 +13953,11 @@
      "q": "Kan ik mijn laptop opladen met een powerbank?",
      "a": "Ja, met USB-C Power Delivery van minimaal 65 W en een laptop die via USB-C laadt."
     }
+   ],
+   "verwant": [
+    "laptoptas",
+    "draadloze-oordopjes",
+    "koffer"
    ]
   },
   {
@@ -13031,6 +14085,17 @@
      "q": "Kan ik mijn providermodem houden?",
      "a": "Ja; zet de wifi daarvan uit en sluit het mesh-basisstation er met een kabel op aan."
     }
+   ],
+   "verwant": [
+    "printer",
+    "koptelefoon",
+    "laptoptas",
+    "laptop-school",
+    "laptop",
+    "bureaulamp",
+    "monitor",
+    "bureaustoel",
+    "zit-sta-bureau"
    ]
   },
   {
@@ -13156,6 +14221,17 @@
      "q": "Hoe lang gaat een kunstboom mee?",
      "a": "8–12 jaar bij voorzichtig opbergen; de ingebouwde verlichting is vaak het eerst stuk."
     }
+   ],
+   "verwant": [
+    "kerstverlichting",
+    "kerstservies",
+    "kerstpakket",
+    "kerstcadeau-partner",
+    "kerstcadeau-collega",
+    "adventskalender",
+    "gourmetstel",
+    "raclette",
+    "fondueset"
    ]
   },
   {
@@ -13294,6 +14370,17 @@
      "q": "Is slimme verlichting (Twinkly) de moeite?",
      "a": "Voor effecten en kleuren via app ja; voor warm wit en een timer is een gewone led-set goedkoper en net zo mooi."
     }
+   ],
+   "verwant": [
+    "kunstkerstboom",
+    "kerstservies",
+    "kerstpakket",
+    "kerstcadeau-partner",
+    "kerstcadeau-collega",
+    "adventskalender",
+    "gourmetstel",
+    "raclette",
+    "fondueset"
    ]
   },
   {
@@ -13406,7 +14493,15 @@
      "a": "Na elke dweilbeurt, tenzij je station dat automatisch doet. Droog ze daarna goed om geurtjes te voorkomen."
     }
    ],
-   "publishAt": "2026-10-03"
+   "publishAt": "2026-10-03",
+   "verwant": [
+    "robotstofzuiger",
+    "kruimeldief",
+    "stofzuiger",
+    "raamwisser",
+    "stoomreiniger",
+    "hogedrukreiniger"
+   ]
   },
   {
    "slug": "elektrische-tandenborstel-kind",
@@ -13518,7 +14613,11 @@
      "a": "Twee minuten, twee keer per dag. Een timer in de borstel helpt daarbij."
     }
    ],
-   "publishAt": "2026-10-04"
+   "publishAt": "2026-10-04",
+   "verwant": [
+    "schmink-kind",
+    "koortsthermometer"
+   ]
   },
   {
    "slug": "strijkplank",
@@ -13631,7 +14730,14 @@
      "a": "Ja, mits je de afmetingen van je plank kent. Meet lengte en breedte op voordat je bestelt."
     }
    ],
-   "publishAt": "2026-10-05"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "strijkijzer",
+    "stoomreiniger",
+    "droogrek",
+    "wasdroger",
+    "wasmachine"
+   ]
   },
   {
    "slug": "tafelmodel-vaatwasser",
@@ -13753,7 +14859,13 @@
      "a": "Per wasbeurt wel, maar je draait hem vaker. Kijk dus naar het energielabel."
     }
    ],
-   "publishAt": "2026-10-06"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "vaatwasser",
+    "inductiekookplaat",
+    "koelkast",
+    "combimagnetron"
+   ]
   },
   {
    "slug": "bonenmachine",
@@ -13862,7 +14974,15 @@
      "a": "Liever niet. Ze kunnen de molen verstoppen; kies droge of matig oliehoudende bonen."
     }
    ],
-   "publishAt": "2026-10-07"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "koffiezetapparaat",
+    "waterkoker",
+    "broodrooster",
+    "bruiswatermachine",
+    "broodbakmachine",
+    "slowjuicer"
+   ]
   },
   {
    "slug": "soundbar",
@@ -13977,7 +15097,16 @@
      "a": "Meet de hoogte tussen standaard en tv. Veel soundbars zijn 6 tot 10 cm hoog."
     }
    ],
-   "publishAt": "2026-10-08"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "televisie",
+    "bluetooth-speaker",
+    "koptelefoon",
+    "draadloze-oordopjes",
+    "beamer",
+    "spelcomputer",
+    "gaming-headset"
+   ]
   },
   {
    "slug": "sporthorloge",
@@ -14088,7 +15217,21 @@
      "a": "Met gps meestal 10 tot 40 uur, afhankelijk van het model en de instellingen."
     }
    ],
-   "publishAt": "2026-10-09"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "sport-bh",
+    "smartwatch",
+    "winterjas",
+    "hardloopschoenen",
+    "yogamat",
+    "regenjas",
+    "dumbbells",
+    "wandelsokken",
+    "hometrainer",
+    "wandelschoenen",
+    "loopband",
+    "roeitrainer"
+   ]
   },
   {
    "slug": "leeslamp",
@@ -14210,7 +15353,18 @@
      "a": "Niet verplicht, maar handig. In bed wil je het licht zachter dan aan een bureau."
     }
    ],
-   "publishAt": "2026-10-10"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "tablet-kind",
+    "vloerkleed",
+    "eettafel",
+    "tablet",
+    "bank",
+    "plaid",
+    "e-reader",
+    "televisie",
+    "kledingkast"
+   ]
   },
   {
    "slug": "buggy",
@@ -14335,7 +15489,14 @@
      "a": "Hoe lichter, hoe makkelijker. Onder 8 kg is voor de meeste ouders goed te dragen."
     }
    ],
-   "publishAt": "2026-10-11"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "kinderwagen",
+    "autostoel",
+    "draagzak",
+    "fietsstoeltje",
+    "babyfoon"
+   ]
   },
   {
    "slug": "fietsstoeltje",
@@ -14463,7 +15624,20 @@
      "a": "Het is wettelijk niet verplicht, maar wel aan te raden. Zorg voor een helm die goed past."
     }
    ],
-   "publishAt": "2026-10-12"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "draagzak",
+    "babyfoon",
+    "fietsverlichting",
+    "kinderfiets",
+    "autostoel",
+    "fietsendrager",
+    "loopfiets",
+    "buggy",
+    "e-bike",
+    "regenjas",
+    "kinderwagen"
+   ]
   },
   {
    "slug": "sneeuwketting",
@@ -14573,7 +15747,15 @@
      "a": "Een textielen sneeuwsok is makkelijker te monteren en lichter, maar slijt sneller en is niet overal wettelijk toegestaan als vervanging van kettingen. Het is vooral een noodoplossing."
     }
    ],
-   "publishAt": "2026-10-13"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "skibril",
+    "winterjas",
+    "dashcam",
+    "snowboots-kind",
+    "autostoel",
+    "fietsendrager"
+   ]
   },
   {
    "slug": "warmwaterkruik",
@@ -14692,7 +15874,21 @@
      "a": "Liever niet bij baby's. Voor peuters en ouder: gebruik een kruik met hoes, vul hem met warm water en haal hem eruit voor ze gaan slapen als het even kan."
     }
    ],
-   "publishAt": "2026-10-14"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "lichtwekker",
+    "elektrische-deken",
+    "verduisterende-gordijnen",
+    "elektrische-kachel",
+    "matrastopper",
+    "infraroodpaneel",
+    "hoofdkussen",
+    "radiatorventilator",
+    "dekbedovertrek",
+    "slimme-thermostaat",
+    "donsdekbed",
+    "thuisbatterij"
+   ]
   },
   {
    "slug": "skibril",
@@ -14813,7 +16009,15 @@
      "a": "Alleen een OTG-model. Een gewone skibril drukt je eigen bril tegen je gezicht."
     }
    ],
-   "publishAt": "2026-10-15"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "slee",
+    "sneeuwketting",
+    "regenjas-kind",
+    "winterjas",
+    "snowboots-kind",
+    "winterjas-kind"
+   ]
   },
   {
    "slug": "wandelsokken",
@@ -14937,7 +16141,13 @@
      "a": "Een dunne, strakke sok die je onder je wandelsok draagt. Hij zorgt dat de wrijving tussen twee sokken plaatsvindt en niet op je huid."
     }
    ],
-   "publishAt": "2026-10-16"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "wandelschoenen",
+    "regenjas",
+    "winterjas",
+    "sporthorloge"
+   ]
   },
   {
    "slug": "cadeau-kind-5-jaar",
@@ -15042,7 +16252,21 @@
      "a": "Let op het CE-teken en de leeftijdsaanduiding op de doos. Speelgoed met kleine onderdelen is vanaf 3 jaar toegestaan, maar let op bij jongere broertjes of zusjes."
     }
    ],
-   "publishAt": "2026-10-17"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "bordspel",
+    "cadeau-peuter",
+    "sinterklaasspel",
+    "speelgoed-cadeau",
+    "sinterklaas-cadeau-8-12",
+    "luisterbox-kind",
+    "schoencadeautjes",
+    "kindercamera",
+    "karaoke-set-kind",
+    "knutselset",
+    "bouwset",
+    "puzzel"
+   ]
   },
   {
    "slug": "adventskalender",
@@ -15162,7 +16386,21 @@
      "a": "Ja, met een lege kalender of 24 zakjes en eigen cadeautjes. Dat is vaak goedkoper en persoonlijker."
     }
    ],
-   "publishAt": "2026-10-18"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "spelcomputer",
+    "kerstcadeau-collega",
+    "gourmetstel",
+    "hoverboard",
+    "kerstcadeau-partner",
+    "raclette",
+    "kindersmartwatch",
+    "kerstpakket",
+    "fondueset",
+    "puzzel",
+    "kerstservies",
+    "bouwset"
+   ]
   },
   {
    "slug": "fondueset",
@@ -15291,7 +16529,21 @@
      "a": "Elektrisch is veiliger en regelbaar. Een brander geeft meer sfeer maar je moet de brandstof zelf kopen en kunt de temperatuur minder goed regelen."
     }
    ],
-   "publishAt": "2026-10-19"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "raclette",
+    "gps-tracker-hond",
+    "gourmetstel",
+    "adventskalender",
+    "vuurwerkbril-en-veiligheid",
+    "kerstcadeau-collega",
+    "oliebollen",
+    "kerstcadeau-partner",
+    "kerstpakket",
+    "kerstservies",
+    "kunstkerstboom",
+    "kerstverlichting"
+   ]
   },
   {
    "slug": "gourmetstel",
@@ -15417,7 +16669,21 @@
      "a": "Gebruik een antiaanbaklaag, bak niet te heet en vermijd overmatig vet of marinade met suiker."
     }
    ],
-   "publishAt": "2026-10-20"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "adventskalender",
+    "raclette",
+    "vuurwerkbril-en-veiligheid",
+    "kerstcadeau-collega",
+    "fondueset",
+    "oliebollen",
+    "kerstcadeau-partner",
+    "gps-tracker-hond",
+    "kerstpakket",
+    "kerstservies",
+    "kunstkerstboom",
+    "kerstverlichting"
+   ]
   },
   {
    "slug": "raclette",
@@ -15542,7 +16808,21 @@
      "a": "Vaak wel: de meeste moderne sets hebben een grillplaat en pannetjes, zodat je allebei kunt doen."
     }
    ],
-   "publishAt": "2026-10-21"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "gourmetstel",
+    "fondueset",
+    "adventskalender",
+    "vuurwerkbril-en-veiligheid",
+    "gps-tracker-hond",
+    "kerstcadeau-collega",
+    "oliebollen",
+    "kerstcadeau-partner",
+    "kerstpakket",
+    "kerstservies",
+    "kunstkerstboom",
+    "kerstverlichting"
+   ]
   },
   {
    "slug": "cadeau-peuter",
@@ -15677,7 +16957,21 @@
      "a": "Voor een peuter is 10 tot 30 euro meestal ruim voldoende. Veel aandacht en samen spelen is belangrijker dan een duur cadeau."
     }
    ],
-   "publishAt": "2026-10-22"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "cadeau-kind-5-jaar",
+    "speelgoed-cadeau",
+    "bordspel",
+    "luisterbox-kind",
+    "sinterklaasspel",
+    "kindercamera",
+    "sinterklaas-cadeau-8-12",
+    "karaoke-set-kind",
+    "schoencadeautjes",
+    "knutselset",
+    "bouwset",
+    "puzzel"
+   ]
   },
   {
    "slug": "halloween-kostuum-kind",
@@ -15784,7 +17078,12 @@
      "a": "Draag thermokleding of een dunne trui onder het kostuum en kies een kostuum dat ruim genoeg zit om dat toe te laten."
     }
    ],
-   "publishAt": "2026-10-03"
+   "publishAt": "2026-10-03",
+   "verwant": [
+    "halloween-kostuum-volwassene",
+    "halloween-decoratie",
+    "schmink-kind"
+   ]
   },
   {
    "slug": "halloween-kostuum-volwassene",
@@ -15892,7 +17191,12 @@
      "a": "Twee kostuums die bij elkaar horen, bijvoorbeeld vampier en vampierjager, werken beter dan twee losse kostuums."
     }
    ],
-   "publishAt": "2026-10-03"
+   "publishAt": "2026-10-03",
+   "verwant": [
+    "halloween-kostuum-kind",
+    "halloween-decoratie",
+    "schmink-kind"
+   ]
   },
   {
    "slug": "halloween-decoratie",
@@ -16001,7 +17305,12 @@
      "a": "De meeste mensen beginnen een week of twee vooraf; begin eind oktober als je het niet te lang wilt laten hangen."
     }
    ],
-   "publishAt": "2026-10-04"
+   "publishAt": "2026-10-04",
+   "verwant": [
+    "halloween-kostuum-volwassene",
+    "schmink-kind",
+    "halloween-kostuum-kind"
+   ]
   },
   {
    "slug": "schmink-kind",
@@ -16112,7 +17421,14 @@
      "a": "Ongeopend meestal één tot twee jaar; gebruik geen schmink die opdroogt of vreemd ruikt."
     }
    ],
-   "publishAt": "2026-10-04"
+   "publishAt": "2026-10-04",
+   "verwant": [
+    "halloween-decoratie",
+    "elektrische-tandenborstel-kind",
+    "koortsthermometer",
+    "halloween-kostuum-volwassene",
+    "halloween-kostuum-kind"
+   ]
   },
   {
    "slug": "winterjas-kind",
@@ -16212,7 +17528,13 @@
      "a": "Kies de maat die nu goed past, met ruimte voor een trui eronder, en niet meer dan één maat groter."
     }
    ],
-   "publishAt": "2026-10-06"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "snowboots-kind",
+    "regenjas-kind",
+    "slee",
+    "skibril"
+   ]
   },
   {
    "slug": "snowboots-kind",
@@ -16316,7 +17638,15 @@
      "a": "Klittenband is makkelijker voor jonge kinderen; veters passen beter bij oudere kinderen."
     }
    ],
-   "publishAt": "2026-10-08"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "winterjas-kind",
+    "regenjas-kind",
+    "winterjas",
+    "slee",
+    "sneeuwketting",
+    "skibril"
+   ]
   },
   {
    "slug": "donsdekbed",
@@ -16437,7 +17767,20 @@
      "a": "Gemiddeld één tot twee keer per jaar; bij allergie vaker en op minimaal 60 graden als de wasaanwijzing dat toelaat."
     }
    ],
-   "publishAt": "2026-10-10"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "dekbed",
+    "dekbedovertrek",
+    "lattenbodem",
+    "hoofdkussen",
+    "boxspring",
+    "matrastopper",
+    "matras",
+    "verduisterende-gordijnen",
+    "lichtwekker",
+    "warmwaterkruik",
+    "elektrische-deken"
+   ]
   },
   {
    "slug": "infraroodpaneel",
@@ -16552,7 +17895,20 @@
      "a": "Ja, aan de wand is dat meestal simpel met schroeven en pluggen; sluit het aan op een geschikt stopcontact en houd afstand tot brandbare materialen."
     }
    ],
-   "publishAt": "2026-10-12"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "elektrische-kachel",
+    "radiatorventilator",
+    "ventilator",
+    "slimme-thermostaat",
+    "elektrische-deken",
+    "luchtbevochtiger",
+    "rookmelder",
+    "thuisbatterij",
+    "warmwaterkruik",
+    "luchtontvochtiger",
+    "luchtreiniger"
+   ]
   },
   {
    "slug": "regenjas-kind",
@@ -16655,7 +18011,13 @@
      "a": "Kies een jas met een ruime capuchon of een verstelbare, zodat hij ook over de fietshelm past."
     }
    ],
-   "publishAt": "2026-10-14"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "snowboots-kind",
+    "slee",
+    "winterjas-kind",
+    "skibril"
+   ]
   },
   {
    "slug": "sinterklaasspel",
@@ -16759,7 +18121,21 @@
      "a": "Meestal tien tot twintig minuten, afhankelijk van het aantal spelers en de regels."
     }
    ],
-   "publishAt": "2026-10-20"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "sinterklaas-cadeau-8-12",
+    "bordspel",
+    "schoencadeautjes",
+    "cadeau-kind-5-jaar",
+    "cadeau-peuter",
+    "speelgoed-cadeau",
+    "luisterbox-kind",
+    "kindercamera",
+    "karaoke-set-kind",
+    "knutselset",
+    "bouwset",
+    "puzzel"
+   ]
   },
   {
    "slug": "schoencadeautjes",
@@ -16859,7 +18235,21 @@
      "a": "Kies iets om mee te doen of te beleven, zoals een knutselset, een kaartspel of een klein experimenteerpakket."
     }
    ],
-   "publishAt": "2026-10-18"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "sinterklaas-cadeau-8-12",
+    "sinterklaasspel",
+    "bordspel",
+    "cadeau-kind-5-jaar",
+    "cadeau-peuter",
+    "speelgoed-cadeau",
+    "luisterbox-kind",
+    "kindercamera",
+    "karaoke-set-kind",
+    "knutselset",
+    "bouwset",
+    "puzzel"
+   ]
   },
   {
    "slug": "sinterklaas-cadeau-8-12",
@@ -16984,7 +18374,21 @@
      "a": "Ja, mits je op de PEGI-leeftijd let en afspraken maakt over speeltijd. Kies bij voorkeur een spel dat past bij de bestaande console."
     }
    ],
-   "publishAt": "2026-10-22"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "schoencadeautjes",
+    "sinterklaasspel",
+    "bordspel",
+    "cadeau-kind-5-jaar",
+    "cadeau-peuter",
+    "speelgoed-cadeau",
+    "luisterbox-kind",
+    "kindercamera",
+    "karaoke-set-kind",
+    "knutselset",
+    "bouwset",
+    "puzzel"
+   ]
   },
   {
    "slug": "kerstcadeau-partner",
@@ -17116,7 +18520,21 @@
      "a": "Niet per se, maar het kan persoonlijker zijn. Combineer bijvoorbeeld een klein gekocht cadeau met een zelfgeschreven kaart of een gezamenlijke activiteit."
     }
    ],
-   "publishAt": "2026-11-02"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "kerstpakket",
+    "kerstcadeau-collega",
+    "kerstservies",
+    "adventskalender",
+    "parfum",
+    "kunstkerstboom",
+    "gourmetstel",
+    "smartwatch",
+    "kerstverlichting",
+    "raclette",
+    "massagekussen",
+    "fondueset"
+   ]
   },
   {
    "slug": "kerstcadeau-collega",
@@ -17239,7 +18657,21 @@
      "a": "Ja, zolang het niet gaat over uiterlijk, gezondheid of privé. Houd het luchtig en laat het niet ten koste van de ontvanger gaan."
     }
    ],
-   "publishAt": "2026-11-04"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "kerstcadeau-partner",
+    "adventskalender",
+    "parfum",
+    "kerstpakket",
+    "gourmetstel",
+    "smartwatch",
+    "kerstservies",
+    "raclette",
+    "massagekussen",
+    "kunstkerstboom",
+    "fondueset",
+    "kerstverlichting"
+   ]
   },
   {
    "slug": "kerstpakket",
@@ -17357,7 +18789,21 @@
      "a": "Kies een pakket zonder alcohol of met een vegetarische en notenvrije optie, of vraag het vooraf na."
     }
    ],
-   "publishAt": "2026-11-06"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "kerstservies",
+    "kerstcadeau-partner",
+    "massagekussen",
+    "badjas",
+    "kunstkerstboom",
+    "kerstcadeau-collega",
+    "smartwatch",
+    "kerstverlichting",
+    "adventskalender",
+    "parfum",
+    "gourmetstel",
+    "raclette"
+   ]
   },
   {
    "slug": "kerstservies",
@@ -17473,7 +18919,18 @@
      "a": "Gebruik wit servies en voeg een tafelloper, servetten, kaarsen en wat groen of rode accenten toe."
     }
    ],
-   "publishAt": "2026-11-08"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "kunstkerstboom",
+    "kerstpakket",
+    "kerstverlichting",
+    "kerstcadeau-partner",
+    "kerstcadeau-collega",
+    "adventskalender",
+    "gourmetstel",
+    "raclette",
+    "fondueset"
+   ]
   },
   {
    "slug": "oliebollen",
@@ -17595,7 +19052,14 @@
      "a": "Gebruik een friteuse met geurfilter, ventileer goed en sluit de deur naar andere kamers."
     }
    ],
-   "publishAt": "2026-11-20"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "vuurwerkbril-en-veiligheid",
+    "gourmetstel",
+    "raclette",
+    "fondueset",
+    "gps-tracker-hond"
+   ]
   },
   {
    "slug": "vuurwerkbril-en-veiligheid",
@@ -17708,7 +19172,17 @@
      "a": "Houd ze binnen in een rustige kamer, sluit de gordijnen, zet muziek aan en laat ze nooit alleen buiten."
     }
    ],
-   "publishAt": "2026-11-24"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "oliebollen",
+    "gourmetstel",
+    "beveiligingscamera",
+    "raclette",
+    "videodeurbel",
+    "fondueset",
+    "rookmelder",
+    "gps-tracker-hond"
+   ]
   },
   {
    "slug": "nieuwjaar-fitness",
@@ -17810,7 +19284,19 @@
      "a": "Onder de 300 euro zijn ze vooral geschikt voor wandelen. Voor hardlopen heb je een sterkere motor en een breder loopvlak nodig."
     }
    ],
-   "publishAt": "2026-12-27"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "roeitrainer",
+    "massagegun",
+    "loopband",
+    "hometrainer",
+    "dumbbells",
+    "yogamat",
+    "smartwatch",
+    "sporthorloge",
+    "sport-bh",
+    "hardloopschoenen"
+   ]
   },
   {
    "slug": "slee",
@@ -17944,7 +19430,17 @@
      "a": "Ja, aanbevolen vooral bij steile hellingen. Een skihelm of fietshelm is geschikt."
     }
    ],
-   "publishAt": "2026-11-10"
+   "publishAt": "2026-10-05",
+   "verwant": [
+    "trampoline",
+    "hoverboard",
+    "regenjas-kind",
+    "skibril",
+    "kinderfiets",
+    "snowboots-kind",
+    "loopfiets",
+    "winterjas-kind"
+   ]
   },
   {
    "slug": "thuisbatterij",
@@ -18197,7 +19693,15 @@
      ]
     }
    ],
-   "pushNote": "Ook als de regels rond salderen of terugleverkosten veranderen."
+   "pushNote": "Ook als de regels rond salderen of terugleverkosten veranderen.",
+   "verwant": [
+    "slimme-thermostaat",
+    "radiatorventilator",
+    "infraroodpaneel",
+    "elektrische-kachel",
+    "elektrische-deken",
+    "warmwaterkruik"
+   ]
   }
  ]
 }

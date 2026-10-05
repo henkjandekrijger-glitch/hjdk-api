@@ -38,11 +38,11 @@
     },
     {
       "path": "/api/kzmaak/signalen",
-      "schedule": "50 3 * * *"
+      "schedule": "50 2 * * *"
     },
     {
       "path": "/api/kzmaak/dag",
-      "schedule": "*/15 4-5 * * *"
+      "schedule": "*/10 3-9 * * *"
     }
   ],
   "rewrites": [

@@ -2,25 +2,26 @@
 // Geen Claude-account, geen chat en geen computer nodig. Alles (plan, stand, lessen, fouten) staat in Redis en op /api/kzmaak/status.
 //
 //   /api/kzmaak/signalen   cron 03:50 UTC   signalen verzamelen: Google-autocomplete NL/BE (dagelijkse meting -> eigen tijdreeks, stijgers),
-//                                           Google Trends NL/BE, bol populair, zoekopdrachten op de site zonder resultaat, verzoeken, seizoenskalender
-//   /api/kzmaak/dag        cron */15 4-5    per ronde één stap: plan maken (Claude kiest onderwerpen) of één keuzehulp maken -> toetsen bij bol
+//                                           Google Trends NL/BE, bol populair, zoekopdrachten op de site zonder resultaat, verzoeken, seizoenskalender,
+//                                           en wat echt verdient: bol Reporting API (30 dagen kliks, orders, commissie per keuzehulp en categorie, verkochte producten)
+//   /api/kzmaak/dag        cron */10 3-9    per ronde één stap: plan maken (Claude kiest onderwerpen) of één keuzehulp maken -> toetsen bij bol
 //                                           (elke antwoordroute moet een passend product vinden) -> publiceren -> IndexNow. Stopt bij het dagdoel.
 //   /api/kzmaak/status     openbaar         stand: dagdoel, plan van vandaag, gemaakt, mislukt (met reden), signalen, tokenverbruik
 //   /api/kzmaak/nu?token=HJDK_TOKEN        één stap nu (&extra=1 = boven het dagdoel, &dry=1 = maken en toetsen zonder publiceren, &onderwerp=slug)
 //
-// Instellingen (optioneel, env): KZ_PER_DAG (standaard 2), ANTHROPIC_MODEL. Sleutel: ANTHROPIC_API_KEY in env of via /setup.
+// Instellingen (optioneel, env): KZ_PER_DAG (standaard 8, max 20), ANTHROPIC_MODEL. Sleutel: ANTHROPIC_API_KEY in env of via /setup.
 import { kv } from '../lib/db.js';
-import { searchCached, catalog } from '../lib/bol.js';
+import { searchCached, catalog, getToken } from '../lib/bol.js';
 import seed from '../data/kz.json' with { type: 'json' };
 
 const DAY = () => new Date().toISOString().slice(0, 10);
 const addDays = (d, n) => new Date(Date.parse(d + 'T12:00:00Z') + n * 864e5).toISOString().slice(0, 10);
 const DOMAIN = 'https://' + ((seed.site && seed.site.domain) || 'keuzehulp.best');
 const INDEXNOW_KEY = '466971cbc1bbe43e6bb64a94465e4470';
-const PER_DAG = () => Math.max(0, Math.min(6, Number(process.env.KZ_PER_DAG || 2)));
-const MAX_CLAUDE_PER_DAG = 16;
+const PER_DAG = () => Math.max(0, Math.min(20, Number(process.env.KZ_PER_DAG || 8)));
+const MAX_CLAUDE = () => PER_DAG() * 4 + 6; // plafond op Claude-aanroepen per dag (plan + schrijven + herstel)
 const MODELS = [...new Set([process.env.ANTHROPIC_MODEL, 'claude-sonnet-5-5', 'claude-sonnet-4-5'].filter(Boolean))];
-const K = { plan: d => 'hjdk:kz:maak:plan:' + d, log: 'hjdk:kz:maak:log', sig: 'hjdk:kz:signalen', sigDag: d => 'hjdk:kz:sig:dag:' + d, lock: 'hjdk:kz:maak:lock', tok: d => 'c:hjdk6-kzmaak-tokens-' + d, calls: d => 'c:hjdk6-kzmaak-calls-' + d, lessen: 'hjdk:kz:maak:lessen' };
+const K = { plan: d => 'hjdk:kz:maak:plan:' + d, log: 'hjdk:kz:maak:log', sig: 'hjdk:kz:signalen', sigDag: d => 'hjdk:kz:sig:dag:' + d, lock: 'hjdk:kz:maak:lock', tok: d => 'c:hjdk6-kzmaak-tokens-' + d, calls: d => 'c:hjdk6-kzmaak-calls-' + d, lessen: 'hjdk:kz:maak:lessen', verd: 'hjdk:kz:verdiensten' };
 const RESERVED = new Set(['over', 'privacy', 'setup', 'leads', 'subs', 'pins', 'keuzehulp', 'categorie', 'api', 't', 'b', 'sitemap', 'robots', 'llms', 'llms-full', 'sw', 'status', 'admin']);
 const catSlug = c => String(c).toLowerCase().replace(/&/g, 'en').replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '');
 const CATS = [...new Set(seed.items.map(i => i.cat))].filter(c => seed.items.filter(i => i.cat === c).length >= 2);
@@ -90,7 +91,7 @@ function jsonUit(txt) { const s = String(txt || '').replace(/```(?:json)?/g, '')
 
 async function claude(system, user, maxTokens) {
   const d = DAY(); const n = Number(await kv.get(K.calls(d)).catch(() => 0)) || 0;
-  if (n >= MAX_CLAUDE_PER_DAG) throw new Error('daglimiet Claude-aanroepen bereikt (' + MAX_CLAUDE_PER_DAG + ')');
+  if (n >= MAX_CLAUDE()) throw new Error('daglimiet Claude-aanroepen bereikt (' + MAX_CLAUDE() + ')');
   const key = await anthropicKey(); if (!key) throw new Error('ANTHROPIC_API_KEY ontbreekt: zet hem op /setup (of in Vercel)');
   let last = '';
   for (const model of MODELS) {
@@ -141,6 +142,30 @@ async function zonderResultaat() {
   const vals = await kv.mget(...keys.slice(0, 1000)).catch(() => []);
   return keys.slice(0, 1000).map((k, i) => ({ q: k.replace('c:hjdk6-kzq0-', '').replace(/_/g, ' '), n: Number(vals[i]) || 0 })).sort((a, b) => b.n - a.n).slice(0, 40);
 }
+// wat echt geld oplevert: bol Reporting API v2, laatste 30 dagen. Keuzehulp-subids: kz_<slug>-<route>[-Z<zone>][-<code>].
+// Alle orders tellen mee als koopsignaal (ook via Yoors/brugpagina's): welke producttypes kopen jouw bezoekers echt?
+const REP = 'https://api.bol.com/marketing/affiliate/reports/v2';
+async function verdiensten(best) {
+  const d = DAY(), from = addDays(d, -29); const t = await getToken('report'); if (t.error) return { ok: false, fout: t.error };
+  const pull = async path => { const r = await fetch(REP + path + '?startDate=' + from + '&endDate=' + d, { headers: { authorization: 'Bearer ' + t.token, accept: 'application/json' } }); const txt = await r.text(); if (!r.ok) throw new Error('bol report ' + r.status + ' ' + txt.slice(0, 120)); const j = JSON.parse(txt); return Array.isArray(j) ? j : (j.results || j.items || j.data || j.rows || []); };
+  let orders = [], promo = []; try { [orders, promo] = await Promise.all([pull('/order-report'), pull('/promotion-report')]); } catch (e) { return { ok: false, fout: String(e.message || e).slice(0, 160) }; }
+  const num = v => Number(v) || 0; const slugOf = s => { const m = String(s || '').match(/^kz_([a-z0-9-]+?)-\d+/i); return m ? m[1].toLowerCase() : null; };
+  const catOf = {}; best.forEach(b => { catOf[b.slug] = b.cat; });
+  const mk = () => ({ kliks: 0, orders: 0, commissie: 0, omzet: 0 }); const kz = {}, cat = {}, prod = {}, pct = {}; const tot = { orders: 0, commissie: 0, kzKliks: 0, kzOrders: 0, kzCommissie: 0 };
+  const add = (o, k, f, v) => { if (!k) return; const x = o[k] || (o[k] = mk()); x[f] += v; };
+  promo.forEach(r => { const s = slugOf(r.subId); if (!s) return; const c = num(r.clicks); tot.kzKliks += c; add(kz, s, 'kliks', c); add(cat, catOf[s], 'kliks', c); });
+  orders.forEach(r => { const com = num(r.commission != null ? r.commission : r.commissionOriginal), rev = num(r.priceExclVat != null ? r.priceExclVat : r.revenueExclVat); const s = slugOf(r.subId); tot.orders++; tot.commissie += com;
+    if (s) { tot.kzOrders++; tot.kzCommissie += com; add(kz, s, 'orders', 1); add(kz, s, 'commissie', com); add(kz, s, 'omzet', rev); add(cat, catOf[s], 'orders', 1); add(cat, catOf[s], 'commissie', com); }
+    if (r.productTitle) { const k = String(r.productTitle).slice(0, 80) + (r.commissionPercentage != null ? ' [' + r.commissionPercentage + '%]' : ''); add(prod, k, 'orders', 1); add(prod, k, 'commissie', com); add(prod, k, 'omzet', rev); prod[k].via = s ? 'keuzehulp ' + s : 'andere site'; }
+    if (r.commissionPercentage != null) { add(pct, r.commissionPercentage + '%', 'orders', 1); add(pct, r.commissionPercentage + '%', 'commissie', com); } });
+  const lijst = o => Object.entries(o).map(([k, x]) => Object.assign({ k, kliks: x.kliks, orders: x.orders, commissie: Math.round(x.commissie * 100) / 100, per1000kliks: x.kliks >= 50 ? Math.round(x.commissie / x.kliks * 1000 * 100) / 100 : null }, x.via ? { via: x.via, omzet: Math.round(x.omzet) } : {}));
+  const kzL = lijst(kz), catL = lijst(cat);
+  return { ok: true, periode: from + ' t/m ' + d, totaal: { orders: tot.orders, commissie: Math.round(tot.commissie * 100) / 100, keuzehulpKliks: tot.kzKliks, keuzehulpOrders: tot.kzOrders, keuzehulpCommissie: Math.round(tot.kzCommissie * 100) / 100 },
+    besteKeuzehulpen: kzL.filter(x => x.orders > 0).sort((a, b) => b.commissie - a.commissie).slice(0, 25),
+    categorieen: catL.sort((a, b) => (b.per1000kliks || 0) - (a.per1000kliks || 0) || b.commissie - a.commissie),
+    veelKliksGeenOrders: kzL.filter(x => x.kliks >= 100 && !x.orders).sort((a, b) => b.kliks - a.kliks).slice(0, 15).map(x => x.k + ' (' + x.kliks + ' kliks)'),
+    verkochteProducten: lijst(prod).sort((a, b) => b.commissie - a.commissie).slice(0, 40), commissiePercentages: lijst(pct) };
+}
 async function signalen() {
   const d = DAY(); const t0 = Date.now();
   const letters = 'abcdefghijklmnoprstuvwz'.split(''); const jobs = [];
@@ -156,11 +181,12 @@ async function signalen() {
   const rij = top.map(([k, nu]) => { const gem = prev.length ? prev.reduce((a, p) => a + (Number(p[k]) || 0), 0) / prev.length : 0; return { k, nu, gem: Math.round(gem * 10) / 10, nieuw: prev.length >= 3 && prev.every(p => !p[k]), vb: vb[k] }; });
   const stijgers = prev.length ? rij.filter(r => r.nu - r.gem >= 4).sort((a, b) => (b.nu - b.gem) - (a.nu - a.gem)).slice(0, 40) : [];
   const nieuw = rij.filter(r => r.nieuw).sort((a, b) => b.nu - a.nu).slice(0, 25);
-  const [nl, be, bol, zr] = await Promise.all([trendsRss('NL'), trendsRss('BE'), bolPopulair(), zonderResultaat()]);
+  const [nl, be, bol, zr, vd] = await Promise.all([trendsRss('NL'), trendsRss('BE'), bolPopulair(), zonderResultaat(), bestaande().then(verdiensten).catch(e => ({ ok: false, fout: String(e.message || e).slice(0, 160) }))]);
+  try { await kv.set(K.verd, Object.assign({ dag: d }, vd)); } catch (e) {}
   let verzoeken = []; try { verzoeken = ((await kv.get('hjdk:kz:vragen')) || []).filter(v => v.q && Date.now() - v.at < 60 * 864e5).map(v => v.q).slice(0, 40); } catch (e) {}
-  const out = { dag: d, metingen: { autocompleteVragen: jobs.length, suggesties: ruw, dagenHistorie: prev.length }, topVraag: rij.slice(0, 40).map(r => r.vb), stijgers, nieuw, trends: { nl, be }, bolPopulair: bol.slice(0, 40), zonderResultaat: zr, verzoeken, momenten: momenten(d), ms: Date.now() - t0 };
+  const out = { dag: d, metingen: { autocompleteVragen: jobs.length, suggesties: ruw, dagenHistorie: prev.length }, topVraag: rij.slice(0, 40).map(r => r.vb), stijgers, nieuw, trends: { nl, be }, bolPopulair: bol.slice(0, 40), zonderResultaat: zr, verzoeken, momenten: momenten(d), verdiensten: vd.ok ? { totaal: vd.totaal, categorieen: vd.categorieen.slice(0, 12), besteKeuzehulpen: vd.besteKeuzehulpen.slice(0, 15), veelKliksGeenOrders: vd.veelKliksGeenOrders, verkochteProducten: vd.verkochteProducten.slice(0, 30) } : { fout: vd.fout }, ms: Date.now() - t0 };
   await kv.set(K.sig, out);
-  await log({ stap: 'signalen', ok: true, suggesties: ruw, stijgers: stijgers.length, nieuw: nieuw.length, ms: out.ms });
+  await log({ stap: 'signalen', ok: true, suggesties: ruw, stijgers: stijgers.length, nieuw: nieuw.length, bolOrders30d: vd.ok ? vd.totaal.orders : 'fout: ' + vd.fout, ms: out.ms });
   return out;
 }
 
@@ -169,11 +195,11 @@ async function maakPlan(d, extraUitsluiten) {
   const sig = (await kv.get(K.sig)) || {}; const best = await bestaande(); const have = new Set(best.map(b => b.slug).concat(extraUitsluiten || []));
   const lessen = (await kv.get(K.lessen)) || [];
   const start = STARTLIJST.filter(x => (!x.vanaf || x.vanaf <= d) && !have.has(x.slug)).slice(0, 14);
-  const system = 'Je bent de hoofdredacteur van keuzehulp.best: onafhankelijke Nederlandse keuzehulpen (3 vragen -> 1 passend product bij bol.com met de prijs van vandaag). Je kiest welke nieuwe keuzehulpen er vandaag bij komen. Een goed onderwerp: (1) een producttype dat mensen in Nederland en België echt zoeken met koopintentie ("welke X kopen", "beste X"), (2) waar verkeerd kiezen echt kan (minstens twee keuzes die ertoe doen: maat, type, gebruik, budget), (3) breed verkrijgbaar bij bol.com, bij voorkeur vanaf zo\'n 25 euro, (4) geen dubbel van een bestaande keuzehulp (een andere zoekintentie mag wel: oordopjes naast koptelefoon), (5) geen medicijnen, supplementen, wapens, vapes, vuurwerk, erotiek, alcohol of tabak, en geen losse merken of modellen. Voorrang: verzoeken van bezoekers en zoekopdrachten op de site zonder resultaat, dan onderwerpen waarvan de piek over 2 tot 9 weken valt (Google heeft aanlooptijd nodig), dan sterke stijgers in de zoekdata, dan de startlijst. Nieuwsonderwerpen uit Google Trends zijn alleen bruikbaar als er een duidelijke koopvraag achter zit. Antwoord alleen met JSON.';
+  const system = 'Je bent de hoofdredacteur van keuzehulp.best: onafhankelijke Nederlandse keuzehulpen (3 vragen -> 1 passend product bij bol.com met de prijs van vandaag). Je kiest welke nieuwe keuzehulpen er vandaag bij komen. Een goed onderwerp: (1) een producttype dat mensen in Nederland en België echt zoeken met koopintentie ("welke X kopen", "beste X"), (2) waar verkeerd kiezen echt kan (minstens twee keuzes die ertoe doen: maat, type, gebruik, budget), (3) breed verkrijgbaar bij bol.com, bij voorkeur vanaf zo\'n 25 euro, (4) geen dubbel van een bestaande keuzehulp (een andere zoekintentie mag wel: oordopjes naast koptelefoon), (5) geen medicijnen, supplementen, wapens, vapes, vuurwerk, erotiek, alcohol of tabak, en geen losse merken of modellen. Voorrang: verzoeken van bezoekers en zoekopdrachten op de site zonder resultaat; dan wat echt geld oplevert (zie verdiensten: producttypes die via de sites al verkocht worden maar nog geen eigen keuzehulp hebben, en onderwerpen in categorieen met de meeste commissie per 1.000 bol-kliks; hoe meer orders er zijn, hoe zwaarder dit weegt; maak geen extra onderwerpen in de buurt van keuzehulpen met veel kliks en geen orders); dan onderwerpen waarvan de piek over 2 tot 9 weken valt (Google heeft aanlooptijd nodig); dan sterke stijgers in de zoekdata; dan de startlijst. Een duur product bij een hoog commissiepercentage weegt zwaarder dan een goedkoop product. Bouw de site breed uit: vul ook gaten in categorieen met weinig keuzehulpen, en kies onderwerpen die logisch naast bestaande keuzehulpen staan (wie een kinderwagen zoekt, zoekt ook een autostoel), zodat ze naar elkaar kunnen linken. Nieuwsonderwerpen uit Google Trends zijn alleen bruikbaar als er een duidelijke koopvraag achter zit. Antwoord alleen met JSON.';
   const user = JSON.stringify({
-    datum: d, aantalNodig: 8, toegestaneCategorieen: CATS,
+    datum: d, aantalNodig: Math.max(8, PER_DAG() * 2), toegestaneCategorieen: CATS, aantalPerCategorie: Object.fromEntries(CATS.map(c => [c, best.filter(b => b.cat === c).length])),
     bestaandeSlugs: best.map(b => b.slug).join(', '),
-    signalen: { verzoekenVanBezoekers: sig.verzoeken || [], zoekopdrachtenZonderResultaat: sig.zonderResultaat || [], stijgersInGoogleZoekvragen: (sig.stijgers || []).map(s => s.vb || s.k), nieuwInGoogleZoekvragen: (sig.nieuw || []).map(s => s.vb || s.k), veelGezochtNu: sig.topVraag || [], googleTrendsNL: (sig.trends && sig.trends.nl || []).map(t => t.t), googleTrendsBE: (sig.trends && sig.trends.be || []).map(t => t.t), bolPopulairNu: sig.bolPopulair || [], komendeMomenten: momenten(d) },
+    signalen: { verzoekenVanBezoekers: sig.verzoeken || [], zoekopdrachtenZonderResultaat: sig.zonderResultaat || [], stijgersInGoogleZoekvragen: (sig.stijgers || []).map(s => s.vb || s.k), nieuwInGoogleZoekvragen: (sig.nieuw || []).map(s => s.vb || s.k), veelGezochtNu: sig.topVraag || [], googleTrendsNL: (sig.trends && sig.trends.nl || []).map(t => t.t), googleTrendsBE: (sig.trends && sig.trends.be || []).map(t => t.t), bolPopulairNu: sig.bolPopulair || [], komendeMomenten: momenten(d), verdiensten: sig.verdiensten || null, commissiePercentagePerCategorie: Object.fromEntries(CATS.map(c => [c, pctFor(c) + '%'])) },
     startlijst: start, lessenUitEerdereRondes: lessen.slice(0, 12),
     formaat: { plan: [{ slug: 'kleine-letters-met-streepjes', term: 'het gewone zoekwoord waarmee bol de juiste producten toont', cat: 'een van de toegestane categorieen', waarom: 'korte reden met het signaal', bron: 'verzoek | zonder-resultaat | seizoen | stijger | startlijst | trend' }] }
   });
@@ -184,7 +210,7 @@ async function maakPlan(d, extraUitsluiten) {
     if (!slug || have.has(slug) || RESERVED.has(slug) || plan.some(x => x.slug === slug)) return;
     plan.push({ slug, term: String(p.term || slug.replace(/-/g, ' ')).slice(0, 60), cat: CATS.includes(p.cat) ? p.cat : (start.find(s => s.slug === slug) || {}).cat || 'Wonen', waarom: String(p.waarom || '').slice(0, 200), bron: String(p.bron || '').slice(0, 30) });
   });
-  start.forEach(s => { if (plan.length < 8 && !plan.some(x => x.slug === s.slug)) plan.push(Object.assign({ bron: 'startlijst' }, s)); }); // vangnet
+  start.forEach(s => { if (plan.length < Math.max(8, PER_DAG() * 2) && !plan.some(x => x.slug === s.slug)) plan.push(Object.assign({ bron: 'startlijst' }, s)); }); // vangnet
   return plan;
 }
 
@@ -213,12 +239,13 @@ function schemaFouten(it) {
   if (!Array.isArray(it.faq) || it.faq.length < 3 || it.faq.some(x => !x || !x.q || !x.a)) f.push('minstens 3 faq met q en a');
   return f;
 }
-function netjes(it, cand) {
+function netjes(it, cand, slugs) {
   const s = v => String(v == null ? '' : v).replace(/\s+/g, ' ').trim();
   const out = { slug: cand.slug, cat: CATS.includes(it.cat) ? it.cat : cand.cat, pct: pctFor(CATS.includes(it.cat) ? it.cat : cand.cat), term: s(it.term || cand.term).toLowerCase(), title: s(it.title), h1: s(it.h1), intro: s(it.intro),
     questions: (it.questions || []).map(q => ({ q: s(q.q), options: (q.options || []).map(o => { const x = { label: s(o.label) }; if (Array.isArray(o.must) && o.must.length) x.must = [...new Set(o.must.map(m => s(m).toLowerCase()).filter(Boolean))].slice(0, 10); if (o.add) x.add = s(o.add).toLowerCase(); if (o.term) x.term = s(o.term).toLowerCase(); if (typeof o.min === 'number' && o.min > 0) x.min = Math.round(o.min); if (typeof o.max === 'number' && o.max > 0) x.max = Math.round(o.max); return x; }) })),
     uitleg: s(it.uitleg), fouten: (it.fouten || []).map(s).filter(Boolean).slice(0, 5), kort: s(it.kort), faq: (it.faq || []).filter(x => x && x.q && x.a).map(x => ({ q: s(x.q), a: s(x.a) })).slice(0, 7) };
   if (it.seoTitle) out.seoTitle = s(it.seoTitle).slice(0, 65); if (it.metaDesc) out.metaDesc = s(it.metaDesc).slice(0, 160);
+  if (Array.isArray(it.verwant) && slugs) out.verwant = [...new Set(it.verwant.map(x => s(x).toLowerCase()))].filter(x => x !== cand.slug && slugs.has(x)).slice(0, 8);
   return out;
 }
 
@@ -239,21 +266,24 @@ Regels:
 - 'faq': 4–6 vragen, zoveel mogelijk de echte zoekvragen hieronder (netjes geformuleerd), elk antwoord 1–2 zinnen, feitelijk, zonder prijzen die veranderen.
 - 'title': "Welke X past bij jou?". 'h1': "X kiezen: …?" met het zoekwoord. 'seoTitle': maximaal 60 tekens, met "X kopen" of "welke X", eindigt op "| Keuzehulp". 'metaDesc': maximaal 155 tekens, noemt "3 vragen" en "prijs van vandaag bij bol". 'intro': 2–3 zinnen over wat er misgaat als je verkeerd kiest en wat je hier krijgt.
 - 'term': het gewone zoekwoord (enkelvoud) waarmee bol de juiste producten laat zien.
-Antwoord alleen met één JSON-object met precies de velden van de voorbeelden plus seoTitle en metaDesc.`;
+- 'verwant': 4–8 slugs uit de lijst bestaande keuzehulpen die een koper van dit product er ook bij nodig heeft of ernaast vergelijkt (alleen echte verbanden, geen opvulling). De site linkt deze pagina's aan elkaar.
+- Noem in 'uitleg', 'fouten' of 'faq', alleen waar het de lezer echt helpt, 1–3 van die verwante producten bij hun gewone naam (bijvoorbeeld "een topper op je matras"); de site maakt daar automatisch een link van naar hun keuzehulp.
+Antwoord alleen met één JSON-object met precies de velden van de voorbeelden plus seoTitle, metaDesc en verwant.`;
 async function maakItem(cand, d) {
+  const best = await bestaande(); const slugs = new Set(best.map(b => b.slug));
   const r = await searchCached(cand.term, { country: 'NL', size: 48, sort: 'RELEVANCE' }).catch(() => ({ products: [] }));
   const prods = (r.products || []).filter(p => p.price != null && p.image);
   if (prods.length < 12) return { ok: false, waarom: 'te weinig aanbod bij bol voor "' + cand.term + '" (' + prods.length + ')' };
   const qs = ['welke ' + cand.term + ' ', cand.term + ' ', 'hoeveel ' + cand.term, 'beste ' + cand.term + ' ', cand.term + ' of '];
   const sug = [...new Set((await pool(qs, 5, q => suggest(q, 'nl'))).flat().filter(Boolean))].slice(0, 30);
-  const user = 'Onderwerp: ' + cand.term + ' (slug ' + cand.slug + ', categorie ' + cand.cat + '). Waarom nu: ' + (cand.waarom || '-') + '. Datum: ' + d + '.\n\nEchte producten bij bol voor "' + cand.term + '" (titel — prijs):\n' + prods.slice(0, 40).map(p => '- ' + p.title.slice(0, 100) + ' — €' + p.price).join('\n') + '\n\nEchte zoekvragen van Nederlanders (Google):\n' + (sug.length ? sug.map(s => '- ' + s).join('\n') : '- (geen)') + '\n\nVoorbeeld 1:\n' + JSON.stringify(VB1) + '\n\nVoorbeeld 2:\n' + JSON.stringify(VB2);
+  const user = 'Onderwerp: ' + cand.term + ' (slug ' + cand.slug + ', categorie ' + cand.cat + '). Waarom nu: ' + (cand.waarom || '-') + '. Datum: ' + d + '.\n\nEchte producten bij bol voor "' + cand.term + '" (titel — prijs):\n' + prods.slice(0, 40).map(p => '- ' + p.title.slice(0, 100) + ' — €' + p.price).join('\n') + '\n\nEchte zoekvragen van Nederlanders (Google):\n' + (sug.length ? sug.map(s => '- ' + s).join('\n') : '- (geen)') + '\n\nBestaande keuzehulpen (slug: titel) voor \'verwant\':\n' + best.filter(b => b.slug !== cand.slug).map(b => b.slug + ': ' + (b.title || '')).join('\n') + '\n\nVoorbeeld 1:\n' + JSON.stringify(VB1) + '\n\nVoorbeeld 2:\n' + JSON.stringify(VB2);
   let item, fouten, check, model;
-  try { const a = await claude(SCHRIJF, user, 4500); model = a.model; item = netjes(jsonUit(a.txt), cand); } catch (e) { return { ok: false, waarom: 'schrijven mislukt: ' + String(e.message || e).slice(0, 160) }; }
+  try { const a = await claude(SCHRIJF, user, 4500); model = a.model; item = netjes(jsonUit(a.txt), cand, slugs); } catch (e) { return { ok: false, waarom: 'schrijven mislukt: ' + String(e.message || e).slice(0, 160) }; }
   fouten = schemaFouten(item);
   if (!fouten.length) check = await toets(item);
   if (fouten.length || !check.geslaagd) { // één herstelronde met de echte bol-resultaten van de routes die niets passends vonden
     const probleem = fouten.length ? 'Opbouwfouten: ' + fouten.join('; ') : 'Bij ' + check.fout.length + ' van de ' + check.routes + ' antwoordroutes vindt de site geen passend product. Per route de zoekterm, de filters en wat bol teruggeeft:\n' + JSON.stringify(check.fout.slice(0, 12).map(x => ({ route: x.route, term: x.term, must: x.must, min: x.min, max: x.max, besteGevonden: x.best, bolGeeft: x.voorbeeld })));
-    try { const a = await claude(SCHRIJF, user + '\n\nJouw eerste versie:\n' + JSON.stringify(item) + '\n\n' + probleem + '\n\nPas must, add, term, min, max en zo nodig de opties aan zodat elke route een passend product vindt. Geef het complete, gecorrigeerde JSON-object terug.', 4500); item = netjes(jsonUit(a.txt), cand); } catch (e) { return { ok: false, waarom: 'herstel mislukt: ' + String(e.message || e).slice(0, 160) }; }
+    try { const a = await claude(SCHRIJF, user + '\n\nJouw eerste versie:\n' + JSON.stringify(item) + '\n\n' + probleem + '\n\nPas must, add, term, min, max en zo nodig de opties aan zodat elke route een passend product vindt. Geef het complete, gecorrigeerde JSON-object terug.', 4500); item = netjes(jsonUit(a.txt), cand, slugs); } catch (e) { return { ok: false, waarom: 'herstel mislukt: ' + String(e.message || e).slice(0, 160) }; }
     fouten = schemaFouten(item); if (fouten.length) return { ok: false, waarom: 'opbouw klopt niet: ' + fouten.join('; ') };
     check = await toets(item);
   }
@@ -264,7 +294,7 @@ async function indexnow(urls) { try { const r = await fetch('https://api.indexno
 async function publiceer(item, cand, d) {
   const it = Object.assign({}, item, { publishAt: d, updatedAt: d, gemaakt: 'kzmaak', bron: cand.bron || '', waarom: cand.waarom || '' });
   await kv.set('hjdk:kz:' + it.slug, it); const idx = (await kv.get('hjdk:kz:index')) || []; if (idx.indexOf(it.slug) < 0) { idx.push(it.slug); await kv.set('hjdk:kz:index', idx); }
-  const st = await indexnow([DOMAIN + '/' + it.slug, DOMAIN + '/', DOMAIN + '/categorie/' + catSlug(it.cat), DOMAIN + '/llms.txt', DOMAIN + '/llms-full.txt']);
+  const st = await indexnow([DOMAIN + '/' + it.slug, DOMAIN + '/', DOMAIN + '/categorie/' + catSlug(it.cat), DOMAIN + '/llms.txt', DOMAIN + '/llms-full.txt'].concat((it.verwant || []).map(v => DOMAIN + '/' + v)));
   return { url: DOMAIN + '/' + it.slug, indexnow: st };
 }
 
@@ -275,7 +305,7 @@ async function stap(opts) {
   if (!o.extra && !o.dry && plan.klaar.length >= PER_DAG()) return { gedaan: 'niets', reden: 'dagdoel gehaald (' + plan.klaar.length + '/' + PER_DAG() + ')' };
   const have = new Set((await bestaande()).map(b => b.slug));
   let cand = o.onderwerp ? (plan.lijst.find(x => x.slug === o.onderwerp) || STARTLIJST.find(x => x.slug === o.onderwerp) || { slug: o.onderwerp, term: o.onderwerp.replace(/-/g, ' '), cat: 'Wonen', bron: 'handmatig' }) : plan.lijst.find(x => !have.has(x.slug) && !plan.mislukt.some(m => m.slug === x.slug));
-  if (!cand && (plan.plannen || 1) < 2) { const p = await maakPlan(d, plan.mislukt.map(m => m.slug)); plan.lijst = plan.lijst.concat(p.filter(x => !plan.lijst.some(y => y.slug === x.slug))); plan.plannen = 2; await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); cand = plan.lijst.find(x => !have.has(x.slug) && !plan.mislukt.some(m => m.slug === x.slug)); }
+  if (!cand && (plan.plannen || 1) < 4) { const p = await maakPlan(d, plan.mislukt.map(m => m.slug)); plan.lijst = plan.lijst.concat(p.filter(x => !plan.lijst.some(y => y.slug === x.slug))); plan.plannen = (plan.plannen || 1) + 1; await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); cand = plan.lijst.find(x => !have.has(x.slug) && !plan.mislukt.some(m => m.slug === x.slug)); }
   if (!cand) return { gedaan: 'niets', reden: 'geen onderwerpen meer in het plan van vandaag' };
   const t0 = Date.now(); const r = await maakItem(cand, d);
   if (o.dry) return { gedaan: 'proef', onderwerp: cand, resultaat: r, ms: Date.now() - t0 };
@@ -302,7 +332,7 @@ export default async function handler(req, res) {
       const d = DAY(); const [plan, lg, sig, tk, calls, best] = await Promise.all([kv.get(K.plan(d)), kv.get(K.log), kv.get(K.sig), kv.get(K.tok(d)), kv.get(K.calls(d)), bestaande()]);
       const sleutel = process.env.ANTHROPIC_API_KEY ? 'env' : ((await secrets()).ANTHROPIC_API_KEY ? 'setup' : 'ontbreekt');
       const gemaakt = best.filter(b => b.gemaakt === 'kzmaak').sort((a, b) => String(b.publishAt).localeCompare(String(a.publishAt))).map(b => ({ slug: b.slug, dag: b.publishAt, url: DOMAIN + '/' + b.slug }));
-      return res.status(200).json({ ok: true, nu: new Date().toISOString(), instellingen: { perDag: PER_DAG(), modellen: MODELS, claudeSleutel: sleutel, maxClaudeAanroepenPerDag: MAX_CLAUDE_PER_DAG }, vandaag: plan ? { klaar: plan.klaar, mislukt: plan.mislukt, nogInPlan: plan.lijst.filter(x => !plan.klaar.some(k => k.slug === x.slug) && !plan.mislukt.some(m => m.slug === x.slug)).map(x => x.slug + ' — ' + (x.waarom || '')) } : null, claudeVandaag: { aanroepen: Number(calls) || 0, tokens: Number(tk) || 0 }, totaalKeuzehulpen: best.length, doorDezeRondeGemaakt: gemaakt.length, gemaakt: gemaakt.slice(0, 60), startlijstNogTeGaan: STARTLIJST.filter(x => !best.some(b => b.slug === x.slug)).map(x => x.slug + (x.vanaf ? ' (vanaf ' + x.vanaf + ')' : '')), signalen: sig ? { dag: sig.dag, metingen: sig.metingen, stijgers: (sig.stijgers || []).slice(0, 15).map(s => s.vb || s.k), nieuw: (sig.nieuw || []).slice(0, 10).map(s => s.vb || s.k), zonderResultaat: (sig.zonderResultaat || []).slice(0, 10), verzoeken: (sig.verzoeken || []).slice(0, 10), momenten: sig.momenten } : null, laatsteRondes: (lg || []).slice(0, 30), lessen: ((await kv.get(K.lessen)) || []).slice(0, 15) });
+      return res.status(200).json({ ok: true, nu: new Date().toISOString(), instellingen: { perDag: PER_DAG(), modellen: MODELS, claudeSleutel: sleutel, maxClaudeAanroepenPerDag: MAX_CLAUDE() }, vandaag: plan ? { klaar: plan.klaar, mislukt: plan.mislukt, nogInPlan: plan.lijst.filter(x => !plan.klaar.some(k => k.slug === x.slug) && !plan.mislukt.some(m => m.slug === x.slug)).map(x => x.slug + ' — ' + (x.waarom || '')) } : null, claudeVandaag: { aanroepen: Number(calls) || 0, tokens: Number(tk) || 0 }, totaalKeuzehulpen: best.length, doorDezeRondeGemaakt: gemaakt.length, gemaakt: gemaakt.slice(0, 60), startlijstNogTeGaan: STARTLIJST.filter(x => !best.some(b => b.slug === x.slug)).map(x => x.slug + (x.vanaf ? ' (vanaf ' + x.vanaf + ')' : '')), signalen: sig ? { dag: sig.dag, metingen: sig.metingen, stijgers: (sig.stijgers || []).slice(0, 15).map(s => s.vb || s.k), nieuw: (sig.nieuw || []).slice(0, 10).map(s => s.vb || s.k), zonderResultaat: (sig.zonderResultaat || []).slice(0, 10), verzoeken: (sig.verzoeken || []).slice(0, 10), momenten: sig.momenten } : null, verdiensten30Dagen: await kv.get(K.verd).then(v => v ? (v.ok ? { periode: v.periode, totaal: v.totaal, categorieen: (v.categorieen || []).slice(0, 10), besteKeuzehulpen: (v.besteKeuzehulpen || []).slice(0, 10), veelKliksGeenOrders: v.veelKliksGeenOrders, verkochteProducten: (v.verkochteProducten || []).slice(0, 15) } : { fout: v.fout }) : null).catch(() => null), laatsteRondes: (lg || []).slice(0, 30), lessen: ((await kv.get(K.lessen)) || []).slice(0, 15) });
     }
     if (op === 'signalen') { if (!isCron && !isToken) return res.status(401).json({ error: 'alleen cron of token' }); const s = await signalen(); return res.status(200).json({ ok: true, dag: s.dag, metingen: s.metingen, stijgers: s.stijgers.slice(0, 10), nieuw: s.nieuw.slice(0, 10), ms: s.ms }); }
     if (op === 'dag' || op === 'nu') {
@@ -311,7 +341,7 @@ export default async function handler(req, res) {
       const lock = await kv.raw(['SET', K.lock, String(Date.now()), 'NX', 'EX', '290']).catch(() => 'OK');
       if (lock !== 'OK') return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'er draait al een ronde' });
       try {
-        if (op === 'dag' && !(await kv.get(K.sig).then(s => s && s.dag === DAY()).catch(() => false))) { try { await signalen(); } catch (e) { await log({ stap: 'signalen', ok: false, waarom: String(e.message || e).slice(0, 160) }); } }
+        if (!(await kv.get(K.sig).then(s => s && s.dag === DAY()).catch(() => false))) { try { await signalen(); } catch (e) { await log({ stap: 'signalen', ok: false, waarom: String(e.message || e).slice(0, 160) }); } }
         const o = { extra: url.searchParams.get('extra') === '1', dry: url.searchParams.get('dry') === '1', onderwerp: String(url.searchParams.get('onderwerp') || '').replace(/[^a-z0-9-]/g, '') || null };
         let r = await stap(o); if (op === 'nu' && r.gedaan === 'plan') r = Object.assign({ plan: r.plan.map(x => x.slug) }, await stap(o)); // handmatig: plan én eerste keuzehulp in één klik
         return res.status(200).json(Object.assign({ ok: true }, r));
