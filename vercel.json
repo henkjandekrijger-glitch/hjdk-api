@@ -35,6 +35,14 @@
     {
       "path": "/api/kz/indexnow",
       "schedule": "35 6 * * *"
+    },
+    {
+      "path": "/api/kzmaak/signalen",
+      "schedule": "50 3 * * *"
+    },
+    {
+      "path": "/api/kzmaak/dag",
+      "schedule": "*/15 4-5 * * *"
     }
   ],
   "rewrites": [
@@ -89,6 +97,10 @@
     {
       "source": "/keuzehulp/:slug",
       "destination": "/api/kz?slug=:slug"
+    },
+    {
+      "source": "/api/kzmaak/:op",
+      "destination": "/api/kzmaak?op=:op"
     },
     {
       "source": "/api/kz/:op",
@@ -179,6 +191,9 @@
   "functions": {
     "api/kz.js": {
       "maxDuration": 30
+    },
+    "api/kzmaak.js": {
+      "maxDuration": 300
     }
   }
 }
