@@ -16,7 +16,9 @@ import seed from '../data/kz.json' with { type: 'json' };
 const seed2 = { items: [] }; // alles staat nu in één bestand (data/kz.json)
 const UPDATED = '2026-10-03';
 
-const BOL_SITE = '1229920';
+// bol Site_ID: keuzehulp.best is een eigen kanaal bij bol (geactiveerd 5 okt 2026). Zet BOL_SITE_KZ (Vercel of /setup); tot dan valt hij terug op Yoors.
+let BOL_SITE = '1229920'; const SITE_KZ = { at: 0 };
+async function siteKz() { if (Date.now() - SITE_KZ.at < 300000) return BOL_SITE; SITE_KZ.at = Date.now(); try { const v = String(process.env.BOL_SITE_KZ || (await secrets()).BOL_SITE_KZ || '').replace(/\D/g, ''); if (v.length >= 5) BOL_SITE = v; } catch (e) {} return BOL_SITE; }
 const esc = s => String(s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const eur = v => '€' + Number(v).toFixed(2).replace('.', ',');
 const SITE = seed.site;
@@ -512,6 +514,7 @@ async function opruimen(budgetMs) {
 
 const PIN_VERIFY = { v: '', at: 0 }; // Pinterest-websiteclaim (meta p:domain_verify), via env of /setup, 10 min in het geheugen
 export default async function handler(req, res) {
+  await siteKz();
   if (Date.now() - PIN_VERIFY.at > 600000) { PIN_VERIFY.at = Date.now(); try { PIN_VERIFY.v = String(process.env.PINTEREST_VERIFY || (await secrets()).PINTEREST_VERIFY || '').replace(/[^a-zA-Z0-9]/g, '').slice(0, 64); } catch (e) {} }
   try { const host = String(req.headers.host || ''); if (host && !/vercel\.app$|^localhost/.test(host) && typeof res.send === 'function' && !res.__kzLinks) { const send0 = res.send.bind(res); res.__kzLinks = 1; res.send = b => send0(typeof b === 'string' && b.indexOf('<html') >= 0 ? b.replace(/href="\/keuzehulp(?=[\/"#?])\/?/g, 'href="/') : b); } } catch (e) {} /* interne links op keuzehulp.best wijzen direct naar de canonieke URL */
   const url = new URL(req.url, 'http://x');
