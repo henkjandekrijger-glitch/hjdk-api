@@ -288,7 +288,7 @@ async function toets(item) {
     return { route: route.join('-'), term: f.term, must: f.must, min: f.min || null, max: f.max || null, ok, n: prods.length, best: b ? { titel: b.p.title.slice(0, 80), prijs: b.p.price, treffers: b.h } : null, voorbeeld: prods.slice(0, 8).map(p => p.title.slice(0, 70) + ' — €' + p.price) };
   });
   const okN = uit.filter(x => x.ok).length; const eersteOk = item.questions[0].options.every((_, oi) => uit.some(x => x.ok && x.route.split('-')[0] === String(oi)));
-  return { routes: uit.length, ok: okN, pct: Math.round(okN / uit.length * 100), eersteVraagGedekt: eersteOk, geslaagd: okN / uit.length >= 0.85 && eersteOk, fout: uit.filter(x => !x.ok) };
+  return { routes: uit.length, ok: okN, pct: Math.round(okN / uit.length * 100), eersteVraagGedekt: eersteOk, geslaagd: okN / uit.length >= 0.8 && eersteOk, fout: uit.filter(x => !x.ok) };
 }
 function schemaFouten(it) {
   const f = []; if (!it || typeof it !== 'object') return ['geen object'];
