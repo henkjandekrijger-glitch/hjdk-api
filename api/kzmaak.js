@@ -103,23 +103,26 @@ async function pool(list, n, fn) { const out = new Array(list.length); let i = 0
 async function log(e) { try { const l = (await kv.get(K.log)) || []; l.unshift(Object.assign({ at: new Date().toISOString() }, e)); await kv.set(K.log, l.slice(0, 300)); } catch (x) {} }
 const median = a => { const s = a.filter(x => typeof x === 'number').sort((x, y) => x - y); return s.length ? s[Math.floor(s.length / 2)] : 4; };
 const pctFor = cat => median(seed.items.filter(i => i.cat === cat).map(i => i.pct));
-function jsonUit(txt) { const s = String(txt || '').replace(/```(?:json)?/g, ''); const a = s.indexOf('{'), b = s.lastIndexOf('}'); if (a < 0 || b < a) throw new Error('geen JSON in het antwoord'); return JSON.parse(s.slice(a, b + 1)); }
+function jsonUit(txt) { const s = String(txt || '').replace(/```(?:json)?/g, ''); const a = s.indexOf('{'), b = s.lastIndexOf('}'); if (a < 0 || b < a) throw new Error('geen JSON in het antwoord: ' + s.slice(0, 160).replace(/\s+/g, ' ')); try { return JSON.parse(s.slice(a, b + 1)); } catch (e) { throw new Error('JSON niet leesbaar (' + String(e.message).slice(0, 60) + '): ' + s.slice(a, a + 120).replace(/\s+/g, ' ')); } }
 
 async function claude(system, user, maxTokens) {
   const d = DAY(); const n = Number(await kv.get(K.calls(d)).catch(() => 0)) || 0;
   if (n >= MAX_CLAUDE()) throw new Error('daglimiet Claude-aanroepen bereikt (' + MAX_CLAUDE() + ')');
   const rt = await claudeRoute(); if (!rt) throw new Error('geen toegang tot Claude: geen ANTHROPIC_API_KEY en geen Vercel OIDC-token');
-  let last = ''; const gw = rt.kind === 'gateway';
-  for (const model of (gw ? GW_MODELS : MODELS)) {
-    const r = await fetch(gw ? 'https://ai-gateway.vercel.sh/v1/messages' : 'https://api.anthropic.com/v1/messages', { method: 'POST', headers: Object.assign({ 'anthropic-version': '2023-06-01', 'content-type': 'application/json' }, gw ? { authorization: 'Bearer ' + rt.key } : { 'x-api-key': rt.key }), body: JSON.stringify({ model, max_tokens: maxTokens || 4000, system, messages: [{ role: 'user', content: user }] }) });
+  let last = ''; const gw = rt.kind === 'gateway'; let think = true;
+  for (const model of (gw ? GW_MODELS : MODELS)) for (let poging = 0; poging < 2; poging++) {
+    const r = await fetch(gw ? 'https://ai-gateway.vercel.sh/v1/messages' : 'https://api.anthropic.com/v1/messages', { method: 'POST', headers: Object.assign({ 'anthropic-version': '2023-06-01', 'content-type': 'application/json' }, gw ? { authorization: 'Bearer ' + rt.key } : { 'x-api-key': rt.key }), body: JSON.stringify(Object.assign({ model, max_tokens: maxTokens || 4000, system, messages: [{ role: 'user', content: user }] }, think ? { thinking: { type: 'disabled' } } : {})) });
     const j = await r.json().catch(() => ({}));
     if (r.ok) {
-      const txt = (j.content || []).filter(c => c.type === 'text').map(c => c.text).join('');
+      const txt = (Array.isArray(j.content) ? j.content : []).filter(c => c.type === 'text').map(c => c.text).join('') || (typeof j.content === 'string' ? j.content : '');
       try { await kv.incrMany([[K.calls(d), 1], [K.tok(d), ((j.usage && j.usage.input_tokens) || 0) + ((j.usage && j.usage.output_tokens) || 0)]]); } catch (e) {}
-      return { txt, model };
+      if (!txt.trim()) throw new Error('leeg antwoord van ' + model + ' (stop: ' + j.stop_reason + ', blokken: ' + (Array.isArray(j.content) ? j.content.map(c => c.type).join(',') : typeof j.content) + ')');
+      return { txt, model, stop: j.stop_reason };
     }
-    last = r.status + ' ' + ((j.error && j.error.message) || '');
-    if (!(r.status === 404 || ((r.status === 400 || r.status === 422) && /model/i.test(last)))) break; // alleen bij een onbekend model het volgende proberen
+    last = r.status + ' ' + ((j.error && j.error.message) || JSON.stringify(j).slice(0, 120));
+    if (think && r.status === 400 && /thinking/i.test(last)) { think = false; continue; } // model kent 'thinking: disabled' niet: zonder opnieuw
+    if (!(r.status === 404 || ((r.status === 400 || r.status === 422) && /model/i.test(last)))) throw new Error('Claude ' + (gw ? 'via AI Gateway' : 'API') + ': ' + last.slice(0, 200)); // alleen bij een onbekend model het volgende proberen
+    break;
   }
   throw new Error('Claude API: ' + last.slice(0, 200));
 }
@@ -260,8 +263,8 @@ async function maakPlan(d, extraUitsluiten) {
     startlijst: start, lessenUitEerdereRondes: lessen.slice(0, 12),
     formaat: { plan: [{ slug: 'kleine-letters-met-streepjes', term: 'het gewone zoekwoord waarmee bol de juiste producten toont', cat: 'een van de toegestane categorieen', waarom: 'korte reden met het signaal', bron: 'verzoek | zonder-resultaat | geld | seizoen | dag | weer | nieuws | stijger | startlijst | trend' }], uitgelicht: [{ naam: 'korte kop, bv. Eerste nachtvorst of Sinterklaas over 3 weken', waarom: 'een zin', slugs: ['3 tot 8 bestaande slugs'] }], ververs: ['bestaande slugs, hooguit ' + VERVERS()] }
   });
-  const { txt } = await claude(system, user, 4000);
-  const j = jsonUit(txt); const plan = [];
+  let j = {}; try { const a = await claude(system, user, 8000); j = jsonUit(a.txt); } catch (e) { await log({ stap: 'plan', ok: false, waarom: 'planner: ' + String(e.message || e).slice(0, 220) + ' — vangnet: startlijst' }); }
+  const plan = [];
   try { const ok = new Set(best.map(b => b.slug)); const blokken = (j.uitgelicht || []).map(u => ({ naam: String(u.naam || '').slice(0, 60), waarom: String(u.waarom || '').slice(0, 160), slugs: (u.slugs || []).map(String).filter(x => ok.has(x)).slice(0, 8) })).filter(u => u.naam && u.slugs.length >= 2).slice(0, 4); if (blokken.length) await kv.set(K.uit, { dag: d, blokken }); plan.ververs = (j.ververs || []).map(String).filter(x => ok.has(x)).slice(0, VERVERS()); } catch (e) {}
   (j.plan || []).forEach(p => {
     const slug = String(p.slug || '').toLowerCase().replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
@@ -437,7 +440,7 @@ export default async function handler(req, res) {
       if (lock !== 'OK') return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'er draait al een ronde' });
       const t0 = Date.now(); const stappen = [];
       try {
-        if (!(await kv.get(K.sig).then(s => s && s.dag === DAY()).catch(() => false))) { try { await signalen(); } catch (e) { await log({ stap: 'signalen', ok: false, waarom: String(e.message || e).slice(0, 160) }); } }
+        if (!(await kv.get(K.sig).then(s => s && s.dag === DAY() && s.weer).catch(() => false))) { try { await signalen(); } catch (e) { await log({ stap: 'signalen', ok: false, waarom: String(e.message || e).slice(0, 160) }); } }
         const o = { extra: url.searchParams.get('extra') === '1', dry: url.searchParams.get('dry') === '1', onderwerp: String(url.searchParams.get('onderwerp') || '').replace(/[^a-z0-9-]/g, '') || null };
         // meerdere stappen per aanroep zolang er tijd is (elke stap ~30–90 s), zodat 10+ keuzehulpen per ochtend ruim lukt
         for (let n = 0; n < 6; n++) { const r = await stap(o); stappen.push(r); if (o.dry || o.onderwerp || r.gedaan === 'niets' || Date.now() - t0 > 150000) break; }
