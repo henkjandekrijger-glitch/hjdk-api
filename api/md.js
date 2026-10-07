@@ -151,7 +151,7 @@ export default async function handler(req, res) {
     if (op === 'koppel') {
       const st = await mdState(); const tok = url.searchParams.get('token');
       if (st && st.refresh_token && !st.fout && !(process.env.HJDK_TOKEN && tok === process.env.HJDK_TOKEN)) return res.status(200).send('<p style="font:16px system-ui;padding:24px">Mondiad is al gekoppeld. <a href="/api/md/status">Status bekijken</a></p>');
-      const loc = await mdStart(base + '/api/md/callback'); res.statusCode = 302; res.setHeader('location', loc); return res.end();
+      const loc = await mdStart(base + '/api/md/callback'); if (url.searchParams.get('toon')) return res.status(200).json({ ok: true, authorize: loc }); res.statusCode = 302; res.setHeader('location', loc); return res.end();
     }
     if (op === 'callback') {
       const err = url.searchParams.get('error'); if (err) return res.status(400).send('<p style="font:16px system-ui;padding:24px">Mondiad gaf een fout: ' + String(err).replace(/[<>]/g, '') + '. <a href="/api/md/koppel">Opnieuw proberen</a></p>');
