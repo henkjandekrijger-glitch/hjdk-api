@@ -17,7 +17,7 @@ const SITE = 'https://keuzehulp.best';
 const E = (k, d) => { const v = Number(process.env[k]); return Number.isFinite(v) && v > 0 ? v : d; };
 const MAX_ACTIEF = () => E('MD_MAX', 12), NIEUW_PER_DAG = () => E('MD_NIEUW_PER_DAG', 2), MIN_SALDO = () => E('MD_MIN_SALDO', 4);
 const BIEDING = () => (process.env.MD_BIEDING || 'CPC').toUpperCase(); // CPC geeft volume; CPA leverde bijna niets (Mondiad levert pas als er conversies zijn)
-const START_BOD = () => E('MD_BOD', BIEDING() === 'CPC' ? 0.006 : 0.02), MAX_BOD = () => E('MD_MAX_BOD', BIEDING() === 'CPC' ? 0.02 : 0.06), DAG = () => Math.max(10, E('MD_DAG_PER_CAMPAGNE', 10)), TOTAAL = () => E('MD_TOTAAL_PER_CAMPAGNE', 15); // Mondiad: dagbudget min $10, per zone min $2; het totaalbudget is de echte rem
+const START_BOD = () => E('MD_BOD', BIEDING() === 'CPC' ? 0.018 : 0.02), MAX_BOD = () => E('MD_MAX_BOD', BIEDING() === 'CPC' ? 0.03 : 0.06), DAG = () => Math.max(10, E('MD_DAG_PER_CAMPAGNE', 10)), TOTAAL = () => E('MD_TOTAAL_PER_CAMPAGNE', 15); // NL in-page push kost gemiddeld ~$0,02 per klik; lager bieden = alleen restverkeer (bots). Mondiad: dagbudget min $10, per zone min $2; het totaalbudget is de echte rem
 const DEFAULT_SLUGS = ['thuisbatterij', 'robotstofzuiger', 'boxspring', 'wasmachine', 'koelkast', 'e-bike', 'vaatwasser', 'bank', 'wasdroger', 'airfryer', 'matras', 'elektrische-deken']; // hoge orderwaarde x hoge bol-commissie (wonen/huishouden 7%) eerst, tot de bol-cijfers het overnemen
 const K = { log: 'hjdk:md:log', zwart: 'hjdk:md:zwart', laatste: 'hjdk:md:laatste', lock: 'hjdk:md:lock', dag: d => 'hjdk:md:dag:' + d };
 const DAY = (o = 0) => new Date(Date.now() + o * 864e5).toISOString().slice(0, 10);
