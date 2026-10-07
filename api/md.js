@@ -150,12 +150,21 @@ export default async function handler(req, res) {
   try {
     if (op === 'koppel') {
       const st = await mdState(); const tok = url.searchParams.get('token');
-      if (st && st.refresh_token && !st.fout && !(process.env.HJDK_TOKEN && tok === process.env.HJDK_TOKEN)) return res.status(200).send('<p style="font:16px system-ui;padding:24px">Mondiad is al gekoppeld. <a href="/api/md/status">Status bekijken</a></p>');
-      const redir = url.searchParams.get('redir') === 'local' ? 'http://localhost:53682/callback' : base + '/api/md/callback'; const loc = await mdStart(redir); if (url.searchParams.get('toon')) return res.status(200).json({ ok: true, authorize: loc }); res.statusCode = 302; res.setHeader('location', loc); return res.end();
+      if (st && st.refresh_token && !st.fout && !url.searchParams.get('opnieuw') && !(process.env.HJDK_TOKEN && tok === process.env.HJDK_TOKEN)) return res.status(200).send('<p style="font:16px system-ui;padding:24px">Mondiad is al gekoppeld. <a href="/api/md/status">Status bekijken</a> · <a href="/api/md/koppel?opnieuw=1">opnieuw koppelen</a></p>');
+      // Mondiad staat alleen een terugkeer naar localhost toe; daarom: inloggen in een nieuw tabblad, daarna het adres uit de adresbalk hier plakken.
+      const loc = await mdStart('http://localhost:53682/callback'); if (url.searchParams.get('toon')) return res.status(200).json({ ok: true, authorize: loc });
+      res.setHeader('content-type', 'text/html; charset=utf-8');
+      return res.status(200).send(`<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mondiad koppelen</title><div style="font:17px/1.5 system-ui;max-width:600px;margin:32px auto;padding:0 16px;color:#1c1917">
+<h1 style="color:#0f766e;margin:0 0 8px">Mondiad koppelen</h1><p>Eenmalig. Daarna leert de keuzehulp-lus elk uur zelf in de cloud.</p>
+<p><b>1.</b> <a href="${loc}" target="_blank" rel="noopener" style="background:#0f766e;color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;display:inline-block">Open Mondiad en log in</a><br><span style="font-size:15px;color:#57534e">Vul je Client ID en Client secret in (staan op advertiser.mondiad.com/profile/api, of maak daar een nieuwe sleutel).</span></p>
+<p><b>2.</b> Na het inloggen opent een pagina die niet laadt (localhost). Dat klopt. Kopieer het hele adres uit de adresbalk en plak het hier:</p>
+<form action="/api/md/callback" method="get"><input name="plak" required placeholder="http://localhost:53682/callback?code=..." style="width:100%;font:16px system-ui;padding:12px;border:1px solid #d6d3d1;border-radius:10px;box-sizing:border-box"><button style="margin-top:10px;background:#f59e0b;border:0;padding:12px 18px;border-radius:10px;font:600 16px system-ui">Koppelen</button></form>
+<p style="font-size:14px;color:#78716c">Deze link werkt 30 minuten; daarna deze pagina vernieuwen.</p></div>`);
     }
     if (op === 'callback') {
       const err = url.searchParams.get('error'); if (err) return res.status(400).send('<p style="font:16px system-ui;padding:24px">Mondiad gaf een fout: ' + String(err).replace(/[<>]/g, '') + '. <a href="/api/md/koppel">Opnieuw proberen</a></p>');
-      await mdCallback(String(url.searchParams.get('code') || ''), String(url.searchParams.get('state') || ''));
+      let code = String(url.searchParams.get('code') || ''), state = String(url.searchParams.get('state') || ''); const plak = url.searchParams.get('plak'); if (plak) { try { const u = new URL(String(plak).trim()); code = u.searchParams.get('code') || ''; state = u.searchParams.get('state') || ''; if (u.searchParams.get('error')) throw new Error(u.searchParams.get('error_description') || u.searchParams.get('error')); } catch (e) { return res.status(400).send('<p style="font:16px system-ui;padding:24px">Dat adres klopt niet (' + String(e.message).replace(/[<>]/g, '') + '). <a href="/api/md/koppel">Opnieuw</a></p>'); } }
+      await mdCallback(code, state);
       let acc = null; try { acc = await md('mondiad_get_current_account', {}); } catch (e) {}
       await log({ soort: 'gekoppeld', wat: 'Mondiad', waarom: acc && acc.account ? 'account ' + acc.account.accountId : 'ok' });
       return res.status(200).send('<div style="font:17px system-ui;max-width:560px;margin:40px auto;padding:0 16px"><h1 style="color:#0f766e">Mondiad is gekoppeld</h1><p>' + (acc && acc.account ? 'Account ' + acc.account.accountId + ', saldo $' + num(acc.account.accountBalance).toFixed(2) + '.' : '') + ' De leerlus draait vanaf nu elk uur zelf in de cloud.</p><p><a href="/api/md/status">Bekijk wat hij doet →</a></p></div>');
