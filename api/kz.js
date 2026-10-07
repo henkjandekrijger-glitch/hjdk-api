@@ -172,10 +172,12 @@ const ABO = [
 /* Meldingen per keuzehulp: prijsalarm, beter model, of (bij item.pushNote) regels die veranderen. Hooguit één melding per week per persoon. */
 const PUSH = [
   { h: t => 'Prijsalarm: ' + t, p: 'Krijg een melding als de prijs van jouw advies daalt of als er een beter model is.' },
-  { h: t => 'Blijf op de hoogte over ' + t, p: 'Eén melding als er iets verandert dat jouw keuze beïnvloedt: een lagere prijs of een beter model.' }
+  { h: t => 'Blijf op de hoogte over ' + t, p: 'Eén melding als er iets verandert dat jouw keuze beïnvloedt: een lagere prijs of een beter model.' },
+  { h: t => 'Black Friday-alarm: ' + t, p: 'Wij houden de prijs van jouw advies in de gaten tot en met Black Friday en melden het zodra hij echt zakt. Gratis.' },
+  { h: t => 'Elke dag de beste deal voor ' + t, p: 'Eén korte melding per dag met de flinkste prijsdaling bij bol, gekozen bij jouw advies.' }
 ];
 const PUSH_GAP = 7 * 86400 * 1000;
-function pushBox(item, v) {
+function pushBox(item, v, m) {
   const a = PUSH[v] || PUSH[0]; const t = item.term || item.title;
   return `<div class="txt" id="push" data-v="${v}" style="border:2px solid #14213d"><h2>🔔 ${esc(a.h(t))}</h2><p style="margin:0 0 12px;color:#44403c">${esc(a.p)}${item.pushNote ? ' ' + esc(item.pushNote) : ''}</p>
 <button type="button" id="pushb" class="btn" style="border:0;cursor:pointer;background:#14213d">Zet meldingen aan</button>
@@ -191,11 +193,14 @@ var on=false;try{on=!!localStorage.getItem('kz_push_'+S)}catch(e){}
 if(on&&ok&&Notification.permission==='granted'){b.style.display='none';say('Meldingen staan aan voor deze keuzehulp.');return}
 if(!ok){b.textContent='Liever per mail';b.addEventListener('click',function(){hit('hjdk6-kz-push-nosupport-mail');var a=document.getElementById('abo');if(a)a.scrollIntoView({behavior:'smooth'})});hit('hjdk6-kz-push-nosupport');return}
 if(Notification.permission==='denied'){b.style.display='none';say('Meldingen staan uit in je browser. Wil je toch op de hoogte blijven? Gebruik de mail hieronder.');return}
+var M=${m||0},asked=0;hit('hjdk6-kz-pushm-v'+M+'-imp');window.__kzPushM=M;window.__kzPushAsk=function(){if(asked||on||Notification.permission!=='default')return;asked=1;hit('hjdk6-kz-pushm-v'+M+'-ask');b.click()};
+if(M===1)document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('.opt'))window.__kzPushAsk()},true);
+if(M===2)document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('a[href*="partner.bol.com"]'))setTimeout(window.__kzPushAsk,0)},true);
 b.addEventListener('click',function(){hit('hjdk6-kz-push-click');hit('hjdk6-kz-push-v'+V+'-click');b.disabled=true;b.textContent='Even geduld…';
 navigator.serviceWorker.register('/sw.js').then(function(reg){return Notification.requestPermission().then(function(p){if(p!=='granted'){hit('hjdk6-kz-push-denied');b.style.display='none';say('Geen probleem — je krijgt geen meldingen.');throw 0}
 return fetch('/api/kz/vapid').then(function(r){return r.json()}).then(function(j){return navigator.serviceWorker.ready.then(function(r2){return r2.pushManager.getSubscription().then(function(s){return s||r2.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:u8(j.key)})})})})})}).then(function(s){
 var r=window.__kzCur?window.__kzCur():'';return fetch('/api/kz/pushsub',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({sub:s.toJSON(),slug:S,v:V,zone:Z,cid:window.__kzCID||'',r:r})}).then(function(x){return x.json()})}).then(function(j){if(!j||!j.ok)throw 1;
-hit('hjdk6-kz-push-ok');hit('hjdk6-kz-push-v'+V+'-ok');hit('hjdk6-kz-push-'+S+'-ok');if(Z)hit('hjdk6-kz-paid-'+Z+'-sub');if(window.__kzConv)window.__kzConv('push');
+hit('hjdk6-kz-push-ok');hit('hjdk6-kz-push-v'+V+'-ok');hit('hjdk6-kz-pushm-v'+(window.__kzPushM||0)+'-ok');hit('hjdk6-kz-push-'+S+'-ok');if(Z)hit('hjdk6-kz-paid-'+Z+'-sub');if(window.__kzConv)window.__kzConv('push');
 try{localStorage.setItem('kz_push_'+S,'1')}catch(e){}b.style.display='none';say('Top! Je krijgt een melding als er iets verandert. Hooguit één per week.')}).catch(function(e){if(e===0)return;hit('hjdk6-kz-push-fail');b.disabled=false;b.textContent='Zet meldingen aan';say('Dat lukte niet in deze browser. Probeer het nog eens of gebruik de mail hieronder.')})})})();</script>`;
 }
 
@@ -373,14 +378,14 @@ async function page(item, res, req) {
   if (code) { try { await kv.set('hjdk:cid:' + code, { c: clickid, s: src || 'propellerads', z: zone, g: 'kz:' + item.slug, v: 'k', at: Date.now() }, { ex: 10 * 86400 }); } catch (e) {} }
   if (zone || clickid) { hits.push(['c:hjdk6-kz-paid-view', 1], ['c:hjdk6-kz-paid-' + (zone || '0') + '-view', 1], ['c:hjdk6-kz-paid-' + (zone || '0') + '-' + item.slug + '-view', 1]); if (creative) hits.push(['c:hjdk6-kzc-' + creative + '-view', 1]); }
   if (src === 'mail') { const m = String(q.get('m') || '').replace(/[^a-z0-9]/gi, '').slice(0, 12), si = String(q.get('s') || '').replace(/\D/g, '').slice(0, 2); hits.push(['c:hjdk6-kz-mail-clk', 1]); if (m) hits.push(['c:hjdk6-kz-mail-' + m + '-clk', 1]); if (si) hits.push(['c:hjdk6-kz-ms-v' + si + '-clk', 1]); }
-  if (src === 'push') { const m = String(q.get('m') || '').replace(/[^a-z0-9]/gi, '').slice(0, 16); hits.push(['c:hjdk6-kz-push-clk', 1]); if (m) hits.push(['c:hjdk6-kz-pm-' + m + '-clk', 1]); }
+  if (src === 'push') { const m = String(q.get('m') || '').replace(/[^a-z0-9]/gi, '').slice(0, 16); hits.push(['c:hjdk6-kz-push-clk', 1]); if (m) hits.push(['c:hjdk6-kz-pm-' + m + '-clk', 1]);  const hk = String(q.get('h') || '').replace(/[^a-z0-9]/gi, '').slice(0, 12); if (hk) hits.push(['c:hjdk6-kz-ph-' + hk + '-clk', 1]); }
   const bh = botHits(req, item.slug); if (bh.length) hits.push(...bh);
   else if (!zone && !clickid && src !== 'mail' && src !== 'push') { const hk = herkomst(req, q); if (hk !== 'intern') hits.push(['c:hjdk6-kz-org-' + item.slug, 1], ['c:hjdk6-kz-org-src-' + hk, 1], ['c:hjdk6-kz-orgd-' + DAYK(), 1], ['c:hjdk6-kz-orgd-' + DAYK() + '-' + hk, 1]); }
   if (hits.length) { try { await kv.incrMany(hits); } catch (e) {} }
   const postback = clickid ? pbFor(src).replace('{clickid}', encodeURIComponent(clickid)) : '';
   const rel = relatedFor(item, all, 8); const lk = linker(item, all); /* altijd 8 vaste interne links per pagina + links in de tekst */
   const route0 = item.questions.map(() => 0);
-  const [adv, aboV, clientId, pushV] = await Promise.all([advise(item, route0, tag), pickVariant('hjdk6-kz-abo', ABO.length, 'sub', 'imp'), googleClientId(), pickVariant('hjdk6-kz-push', PUSH.length, 'ok', 'imp')]);
+  const [adv, aboV, clientId, pushV, pushM] = await Promise.all([advise(item, route0, tag), pickVariant('hjdk6-kz-abo', ABO.length, 'sub', 'imp'), googleClientId(), pickVariant('hjdk6-kz-push', PUSH.length, 'ok', 'imp'), pickVariant('hjdk6-kz-pushm', 3, 'ok', 'imp')]); // pushM: 0 = alleen knop, 1 = vragen bij eerste antwoord, 2 = vragen bij klik naar bol (lerend)
   const nieuw = newest(all); const nieuwHtml = nieuw && nieuw.slug !== item.slug && nieuw.publishAt === TODAY() ? `<p style="margin:0 0 10px;font-size:14px"><span style="background:#0f766e;color:#fff;font-size:11px;letter-spacing:.06em;padding:3px 8px;border-radius:999px;font-weight:700">NIEUW VANDAAG</span> <a href="/keuzehulp/${esc(nieuw.slug)}">${esc(nieuw.title)}</a></p>` : '';
   const paid = !!(zone || clickid);
   const qs = item.questions.map((q, qi) => `<div class="q" data-q="${qi}"><h2>${qi + 1}. ${esc(q.q)}</h2><div class="opts">${q.options.map((o, oi) => `<button class="opt${oi === 0 && !paid ? ' on' : ''}" data-o="${oi}" type="button">${esc(o.label)}</button>`).join('')}</div></div>`).join('');
@@ -394,7 +399,7 @@ async function page(item, res, req) {
     ...(item.faq && item.faq.length ? [{ '@type': 'FAQPage', mainEntity: item.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []) ] });
   const body = `<script>window.__kzPB=${JSON.stringify(postback)};window.__kzCID=${JSON.stringify(code)};window.__kzConv=function(w){if(!window.__kzPB||window.__kzPBfired)return;window.__kzPBfired=1;var ok=false;try{ok=navigator.sendBeacon('/api/kz/conv',new Blob([JSON.stringify({c:window.__kzCID,w:w})],{type:'text/plain'}))}catch(e){}if(!ok){try{fetch(window.__kzPB,{mode:'no-cors',keepalive:true})}catch(e){}}};(function(){if(!window.__kzPB)return;var t=0,act=false;['scroll','touchstart','click','keydown'].forEach(function(ev){addEventListener(ev,function(){act=true},{passive:true})});var iv=setInterval(function(){if(document.visibilityState==='visible')t++;if(t>=20&&act){clearInterval(iv);try{navigator.sendBeacon('/api/hjdk/stats/hits',new Blob([JSON.stringify({hits:[['hjdk6-kz-paid-engaged',1]]})],{type:'text/plain'}))}catch(e){}window.__kzConv('engaged')}},1000)})();</script><article>${paid ? `<div class="hero" style="padding-bottom:6px"><h1 style="margin-bottom:6px">${esc(item.h1)}</h1><p style="margin:0;color:#0f766e;font-weight:700">Tik je antwoorden — ${item.questions.length} vragen, klaar in 20 seconden. Je advies verschijnt direct.</p></div>\n${adv.products && adv.products[0] ? '<div class="adv" style="margin:8px 0 2px"><h2 style="font-size:15px;margin:4px 0 8px;color:#78716c;font-weight:600">Geen tijd? Ons standaardadvies:</h2>' + productCard(Object.assign({}, adv.products[0], { role: 'Standaardadvies' }), 0) + '</div><p style="margin:4px 0 0;font-weight:700">Of beantwoord de vragen voor jouw beste keuze:</p>' : ''}\n${qs}\n${kort}` : `<div class="hero">${nieuwHtml}${crumbs}<div class="cat" style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#78716c;margin-top:10px">${esc(item.cat)} · keuzehulp · bijgewerkt <time datetime="${esc(itemDate(item))}">${esc(itemDate(item))}</time></div><h1>${esc(item.h1)}</h1><p>${esc(item.intro)}</p>${item.actueel && (!item.actueelTot || item.actueelTot >= TODAY()) ? `<p style="margin:10px 0 0;padding:10px 12px;background:#fef3c7;border-radius:10px;font-size:15px"><b>Nu actueel:</b> ${esc(item.actueel)}</p>` : ''}</div>\n${kort}\n${qs}`}
 <div class="adv" id="adv"><h2 style="font-size:19px;margin:8px 0 10px">Jouw advies <span id="advn" style="color:#78716c;font-weight:400;font-size:14px"></span></h2><div id="advl">${adv.products.map(productCard).join('') || '<p>Even geduld, we halen de prijzen van vandaag op…</p>'}</div><p class="disc">Prijzen van vandaag bij bol; wij kiezen op pasvorm bij jouw antwoorden, beoordeling en prijs. Geen betaalde plaatsing.${item.partners && item.partners.length ? ' Links naar ' + esc([...new Set(item.partners.map(p => p.shop))].join(', ')) + ' zijn ook partnerlinks: wij krijgen een vergoeding als je daar koopt, jij betaalt niets extra.' : ''}</p></div>
-${pushBox(item, pushV)}
+${pushBox(item, pushV, pushM)}
 <div class="txt"><h2>Waar je op moet letten</h2><p>${lk(item.uitleg)}</p></div>
 <div class="txt"><h2>Veelgemaakte fouten</h2><ul>${item.fouten.map(f => '<li>' + lk(f) + '</li>').join('')}</ul></div>
 ${aboBox(aboV, item.slug, clientId)}
@@ -565,6 +570,23 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
       if (h) { const q = (await kv.get('hjdk:kz:pq:' + h)) || []; m = q.shift() || null; await kv.set('hjdk:kz:pq:' + h, q, { ex: 14 * 86400 }); }
       if (m) { try { await kv.incrMany([['c:hjdk6-kz-push-shown', 1], ['c:hjdk6-kz-pm-' + m.id + '-shown', 1]]); } catch (e) {} }
       return res.status(200).json(m || {});
+    }
+    if (op === 'pushdag') { // cron elke dag 17:30 NL: iedere volger één melding met de beste deal bij zijn keuzehulp; de kop (hook) leert op kliks
+      res.setHeader('cache-control', 'no-store'); const now = Date.now(); const base = await mailBase(); const dc = await dealsCache(); const deals = (dc && dc.deals) || [];
+      if (!deals.length) return res.status(200).json({ ok: false, error: 'geen deals in cache' });
+      const kort = t => String(t || '').split(/[,(|]/)[0].replace(/\s+/g, ' ').trim().slice(0, 60);
+      const PH = [d => ({ t: '-' + Math.round(d.disc * 100) + '%: ' + kort(d.title), b: 'Nu ' + eur(d.price) + ' (was ' + eur(d.strike) + ') bij bol.' }), (d, it) => ({ t: 'Prijsalarm ' + (it ? (it.term || it.title) : 'deal').slice(0, 30), b: kort(d.title) + ' zakte naar ' + eur(d.price) + '.' }), d => ({ t: 'Vandaag flink lager geprijsd', b: kort(d.title) + ' voor ' + eur(d.price) + ' in plaats van ' + eur(d.strike) + '.' }), d => ({ t: 'Black Friday komt eraan', b: 'Deze is nu al ' + Math.round(d.disc * 100) + '% goedkoper: ' + kort(d.title) + '.' })];
+      const items = await allItems(); const seen = new Set(); const out = { ok: true, verstuurd: 0, al: 0, weg: 0, fout: 0, perHook: {} };
+      for (const it of items) { const l = (await kv.get('hjdk:kz:pslug:' + it.slug)) || []; const words = String(it.term || it.slug).toLowerCase().split(/[\s-]+/).filter(w => w.length > 3);
+        const match = deals.find(d => words.some(w => String(d.title).toLowerCase().includes(w)));
+        for (let i = 0; i < l.length && out.verstuurd < 800; i += 25) { const chunk = l.slice(i, i + 25).filter(h => !seen.has(h)); chunk.forEach(h => seen.add(h)); if (!chunk.length) continue; const subs = await kv.mget(...chunk.map(h => 'hjdk:kz:ps:' + h));
+          await Promise.all(chunk.map(async (h, j) => { const sb = subs[j]; if (!sb || !sb.e) return; if (sb.dag && now - sb.dag < 20 * 3600e3) { out.al++; return; }
+            const d = match || deals[(seen.size + j) % Math.min(10, deals.length)]; const v = await pickVariant('hjdk6-kz-ph', PH.length, 'clk', 'sent'); const msg = PH[v](d, match ? it : null); const id = now.toString(36) + h.slice(0, 4);
+            const murl = base + (match ? '/keuzehulp/' + it.slug : '/deals') + '?utm_source=push&m=' + id + '&h=v' + v;
+            const q = (await kv.get('hjdk:kz:pq:' + h)) || []; q.push({ id, title: msg.t.slice(0, 60), body: msg.b.slice(0, 140), url: murl, tag: 'kz-dag' }); await kv.set('hjdk:kz:pq:' + h, q.slice(-3), { ex: 3 * 86400 });
+            const r = await sendPush(sb.e); if (r.ok) { out.verstuurd++; sb.dag = now; await kv.set('hjdk:kz:ps:' + h, sb); out.perHook['v' + v] = (out.perHook['v' + v] || 0) + 1; try { await kv.incrMany([['c:hjdk6-kz-ph-v' + v + '-sent', 1], ['c:hjdk6-kz-push-sent', 1]]); } catch (e) {} }
+            else if (r.gone) { out.weg++; await kv.set('hjdk:kz:ps:' + h, { dood: now }, { ex: 60 }); } else out.fout++; })); } }
+      return res.status(200).json(out);
     }
     if (op === 'notify' || op === 'pushwatch') { // notify (sleutel): eigen bericht naar volgers van een keuzehulp; pushwatch (cron): prijsalarm en beter model per gevolgde antwoordroute
       res.setHeader('cache-control', 'no-store');

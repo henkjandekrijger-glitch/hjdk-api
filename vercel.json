@@ -51,6 +51,10 @@
     {
       "path": "/api/md/ronde",
       "schedule": "7 * * * *"
+    },
+    {
+      "path": "/api/kz/pushdag",
+      "schedule": "30 15 * * *"
     }
   ],
   "rewrites": [
