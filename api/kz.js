@@ -735,6 +735,21 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
         verzoeken: vragen.slice(0, 200).map(v => Object.assign({}, v, v.audio ? { luister: '/api/kz/audio?id=' + v.audio + '&token=…' } : {})), zonderResultaat: top(miss), alleZoekopdrachten: top(all), trechter: funnel, meldingen });
     }
     if (op === 'list') { const items = await allItems(); return res.status(200).json({ ok: true, n: items.length, items: items.map(i => ({ slug: i.slug, title: i.title, cat: i.cat, pct: i.pct })) }); }
+    if (op === 'pincsv') { // Pinterest "Bulk create Pins": max 200 pins, ingepland over de komende dagen (n per dag), seizoen/actueel eerst, daarna alle keuzehulpen, steeds een ander beeld
+      const items = await allItems(); const base = DOMAIN; const perDag = Math.max(1, Math.min(25, Number(url.searchParams.get('n')) || 10)); const dagen = Math.max(1, Math.min(30, Number(url.searchParams.get('dagen')) || Math.floor(200 / perDag)));
+      const board = String(url.searchParams.get('bord') || 'Keuzehulpen').slice(0, 50); const start = /^\d{4}-\d{2}-\d{2}$/.test(url.searchParams.get('start') || '') ? url.searchParams.get('start') : new Date(Date.now() + 864e5).toISOString().slice(0, 10);
+      const voorrang = []; const seen = new Set(); const add = i => { if (i && !seen.has(i.slug)) { seen.add(i.slug); voorrang.push(i); } };
+      (await uitgelichtNu()).forEach(b => b.slugs.forEach(sl => add(items.find(i => i.slug === sl)))); seasonsNow().forEach(z => z.slugs.forEach(sl => add(items.find(i => i.slug === sl))));
+      recent(items, 40).forEach(add); items.slice().sort((a, b) => a.slug.localeCompare(b.slug)).forEach(add);
+      const q = s => '"' + String(s == null ? '' : s).replace(/"/g, '""').replace(/[\r\n]+/g, ' ') + '"'; const out = ['Title,Media URL,Pinterest board,Thumbnail,Description,Link,Publish date,Keywords'];
+      const totaal = Math.min(200, perDag * dagen);
+      for (let k = 0; k < totaal; k++) { const i = voorrang[k % voorrang.length]; const ronde = Math.floor(k / voorrang.length); const v = [0, 2, 3, 1][ronde % 4];
+        const dag = new Date(start + 'T06:00:00Z'); dag.setUTCDate(dag.getUTCDate() + Math.floor(k / perDag)); dag.setUTCMinutes(dag.getUTCMinutes() + (k % perDag) * Math.floor(900 / perDag));
+        const titel = (v >= 2 ? (i.h1 || i.title) : i.title); const desc = ((i.kort || i.intro || '') + ' In 3 vragen naar het product dat bij jou past, met de prijs van vandaag bij bol. Gratis en eerlijk advies van keuzehulp.best.').slice(0, 490);
+        out.push([q(String(titel).slice(0, 100)), q(base + '/pin/' + i.slug + '-' + v + '.png'), q(board), q(''), q(desc), q(base + '/keuzehulp/' + i.slug + '?utm_source=pinterest&utm_medium=pin&utm_campaign=csv'), q(dag.toISOString().slice(0, 19)), q([i.cat, i.term, 'keuzehulp', 'kopen'].filter(Boolean).join(', '))].join(',')); }
+      res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('access-control-allow-origin', '*'); res.setHeader('cache-control', 'no-store'); res.setHeader('content-disposition', 'inline; filename="keuzehulp-pins.csv"');
+      return res.status(200).send(out.join('\n'));
+    }
     if (op === 'rss' || op === 'pinfeed') { // RSS voor feedlezers/AI én Pinterest automatisch publiceren (Pinterest leest de feed elke dag en maakt van elk nieuw item een pin)
       const items = await allItems(); const base = baseOf(req); const d = TODAY(); const x = t => String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
       const bh = botHits(req, op); if (bh.length) { try { await kv.incrMany(bh); } catch (e) {} }

@@ -55,6 +55,10 @@
   ],
   "rewrites": [
     {
+      "source": "/pinterest.csv",
+      "destination": "/api/kz?op=pincsv"
+    },
+    {
       "source": "/api/md/:op",
       "destination": "/api/md?op=:op"
     },
