@@ -166,10 +166,10 @@ async function statusPagina(st, laatste, logl) {
   let bol = null; try { const r = await fetch(SITE + '/api/bol/report?from=' + vandaag + '&to=' + vandaag + '&what=promotion&only=sites'); const j = await r.json(); bol = { tot: j.total || {}, sites: j.bySite || {} }; } catch (e) {}
   let kz = null; try { const r = await fetch(SITE + '/api/kz/status'); kz = await r.json(); } catch (e) {}
   const kzSite = bol ? Object.entries(bol.sites).find(([k]) => /1547300/.test(k)) : null;
-  const eur = v => '€' + num(v).toFixed(2).replace('.', ','), usd = v => '$' + num(v).toFixed(2);
+  const eur = v => '€' + num(v).toFixed(2).replace('.', ','), usd = v => '$' + num(v).toFixed(2).replace('.', ',');
   const kaart = (t, v, sub) => `<div class="k"><div class="kt">${hx(t)}</div><div class="kv">${v}</div>${sub ? `<div class="ks">${sub}</div>` : ''}</div>`;
   const besl = logl.slice(0, 25).map(b => `<li><span class="t">${hx(nlTijd(b.at))}</span> <b>${hx(SOORT_NL[b.soort] || b.soort)}</b>: ${hx(String(b.wat || '').replace(/^(\d+) \(([^)]+)\)$/, '$2'))}${b.waarom ? ' — ' + hx(String(b.waarom).replace(/[{}"\\]/g, '').slice(0, 160)) : ''}</li>`).join('');
-  const rijen = camps.map(c => `<tr><td>${hx(c.slug)}</td><td>${hx(c.status)}</td><td>${hx(c.soort)} · ${usd(c.bod).replace('$0.', '$0,')}</td><td class="n">${c.kliks}</td><td class="n">${usd(c.kosten)}</td></tr>`).join('');
+  const rijen = camps.map(c => `<tr><td>${hx(c.slug)}</td><td>${hx(c.status)}</td><td>${hx(c.soort)} · $${c.bod.toFixed(3).replace('.', ',')}</td><td class="n">${c.kliks}</td><td class="n">${usd(c.kosten)}</td></tr>`).join('');
   return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Keuzehulp status</title>
 <style>:root{--bg:#fafaf9;--card:#fff;--ink:#1c1917;--mut:#78716c;--line:#e7e5e4;--acc:#0f766e}@media(prefers-color-scheme:dark){:root{--bg:#1c1917;--card:#292524;--ink:#f5f5f4;--mut:#a8a29e;--line:#44403c;--acc:#5eead4}}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,sans-serif}main{max-width:860px;margin:0 auto;padding:20px 16px 40px}h1{font-size:24px;margin:0 0 4px}h2{font-size:18px;margin:28px 0 10px}.mut{color:var(--mut);font-size:14px}
