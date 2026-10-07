@@ -191,7 +191,7 @@ export default async function handler(req, res) {
     if (op === 'tools') { const { mdTools } = await import('../lib/mdmcp.js'); return res.status(200).json({ ok: true, tools: await mdTools() }); }
     // status
     const st = await mdState(); const laatste = await kv.get(K.laatste); const logl = ((await kv.get(K.log)) || []).slice(0, 80);
-    return res.status(200).json({ ok: true, gekoppeld: !!(st && st.refresh_token), sleutelInVercel: await mdHeeftSleutel(), koppelFout: st && st.fout || null, koppelLink: base + '/api/md/koppel',
+    return res.status(200).json({ ok: true, gekoppeld: !!(st && st.refresh_token), sleutelInVercel: await mdHeeftSleutel(), mondiadVariabelenGezien: Object.keys(process.env).filter(k => /mondiad/i.test(k)), koppelFout: st && st.fout || null, koppelLink: base + '/api/md/koppel',
       instellingen: { maxActieveCampagnes: MAX_ACTIEF(), nieuwePerDag: NIEUW_PER_DAG(), startbod: START_BOD(), maxBod: MAX_BOD(), dagbudgetPerCampagne: DAG(), totaalPerCampagne: TOTAAL(), minSaldo: MIN_SALDO() },
       laatsteRonde: laatste || null, logboek: logl });
   } catch (e) { return res.status(200).json({ ok: false, fout: String(e && e.message || e) }); }
