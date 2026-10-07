@@ -72,7 +72,7 @@ async function ronde(droog) {
     if (!/PAUSED|REJECTED|FINISHED/i.test(c.status)) { try { for (const r of rows(await md('mondiad_campaign_report', { startDate: van, endDate: tot, breakdown: 'CREATIVE_ID', campaignId: c.id, size: 100 }))) { const id = String(r.creativeId || r.creative || ''); if (!id) continue; const x = pc.cr[id] || (pc.cr[id] = { kliks: 0, vert: 0 }); x.kliks += num(r.clicks); x.vert += num(r.impressions); } } catch (e) {} }
   }
   const zs = Object.keys(zMd);
-  const eigen = {}; if (zs.length) { const keys = []; zs.forEach(z => ['view', 'start', 'clk', 'conv'].forEach(s => keys.push('c:hjdk6-kz-paid-' + z + '-' + s))); const vals = []; for (let i = 0; i < keys.length; i += 400) vals.push(...await kv.mget(...keys.slice(i, i + 400))); zs.forEach((z, i) => { eigen[z] = { aankomst: num(vals[i * 4]), gestart: num(vals[i * 4 + 1]), bol: num(vals[i * 4 + 2]), conv: num(vals[i * 4 + 3]) }; }); }
+  const eigen = {}; if (zs.length) { const keys = []; const KS = ['view', 'start', 'clk', 'conv', 'v2', 'mens', 'eng']; zs.forEach(z => KS.forEach(s => keys.push('c:hjdk6-kz-paid-' + z + '-' + s))); const vals = []; for (let i = 0; i < keys.length; i += 420) vals.push(...await kv.mget(...keys.slice(i, i + 420))); const L = KS.length; zs.forEach((z, i) => { eigen[z] = { aankomst: num(vals[i * L]), gestart: num(vals[i * L + 1]), bol: num(vals[i * L + 2]), conv: num(vals[i * L + 3]), v2: num(vals[i * L + 4]), mens: num(vals[i * L + 5]), eng: num(vals[i * L + 6]) }; }); }
   let leer = {}; try { leer = (await kv.get('hjdk:learn:v1')) || {}; } catch (e) {}
   const lz = leer.zones || {}, lp = leer.pages || {};
   // ---- 1. zones ----
@@ -83,11 +83,13 @@ async function ronde(droog) {
     let waarom = '';
     if (m.kliks >= 40 && o.aankomst < 0.3 * m.kliks) waarom = `nep: ${m.kliks} kliks bij Mondiad, maar ${o.aankomst} kwamen aan`;
     else if (o.aankomst >= 80 && o.gestart === 0 && o.bol === 0) waarom = `dood: ${o.aankomst} bezoekers, niemand deed iets`;
+    else if (o.v2 >= 25 && o.mens < 0.2 * o.v2) waarom = `geen echte mensen: van ${o.v2} bezoekers bewogen er maar ${o.mens} (scrollen/tikken)`;
+    else if (o.v2 >= 60 && o.eng === 0 && o.bol === 0) waarom = `${o.v2} bezoekers, niemand bleef 20 seconden en niemand klikte naar bol`;
     else if (o.aankomst >= 250 && o.bol === 0) waarom = `${o.aankomst} bezoekers en geen enkele bol-klik`;
     else if (num(b.clicks) >= 500 && num(b.orders) === 0) waarom = `${b.clicks} bol-kliks en geen bestelling`;
     if (waarom) { nieuwZwart.push(z); zwart.add(z); B('zone uit', z, waarom); continue; }
     const rate = o.aankomst ? o.bol / o.aankomst : 0;
-    if (num(b.orders) > 0) goed[z] = 2; else if (o.aankomst >= 40 && rate >= 1.5 * gem && o.bol >= 3) goed[z] = 1.5; }
+    if (num(b.orders) > 0) goed[z] = 2; else if (o.aankomst >= 40 && rate >= 1.5 * gem && o.bol >= 3) goed[z] = 1.5; else if (o.v2 >= 25 && o.mens >= 0.6 * o.v2 && o.eng >= 0.25 * o.v2) goed[z] = 1.3; } // echte mensen die blijven = meer verkeer van die plek
   // ---- 2+3. per campagne: zwarte lijst, zone-biedingen, advertenties, bod ----
   const vandaag = (await kv.get(K.dag(DAY()))) || { nieuweCampagnes: 0, nieuweTeksten: {}, uit: 0 };
   for (const pc of Object.values(perCamp)) { const c = pc.c; if (/PAUSED|REJECTED|FINISHED/i.test(c.status)) continue;
@@ -134,7 +136,7 @@ async function ronde(droog) {
     let tmpl = null; try { const t = (lopend[0] || Object.values(perCamp)[0]); if (t) tmpl = (rows(await md('mondiad_get_campaign_details', { ids: [String(t.c.id)] })) || [])[0]; } catch (e) {}
     for (const slug of kandidaten.slice(0, ruimte)) { const it = alle.find(i => i.slug === slug); const vs = await teksten(it, [], 4); const img = droog ? { icon: '', image: '' } : await beelden(slug);
       if (!droog && (!img.icon || !img.image)) { B('fout', 'nieuwe campagne ' + slug, 'beelden uploaden mislukt'); continue; }
-      const camp = Object.assign({ adType: ['IN_PAGE_PUSH'], bidType: 'CPA', countryTargeting: ['NL', 'BE'], countryTargetingMode: 'WHITE_LIST', deviceTargeting: [4, 5], deviceTargetingMode: 'WHITE_LIST', languageTargeting: [137], languageTargetingMode: 'WHITE_LIST', trafficType: ['MAINSTREAM'], landingPageType: 'MAINSTREAM', frequencyCap: { frequency: 1, duration: 24, actionType: 'IMPRESSION', actionScope: 'CAMPAIGN' }, dayPartingTimezone: 'Europe/Amsterdam', hideReferrer: true }, tmpl ? { deviceTargeting: tmpl.deviceTargeting, languageTargeting: tmpl.languageTargeting, frequencyCap: tmpl.frequencyCap } : {}, {
+      const camp = Object.assign({ adType: ['IN_PAGE_PUSH'], bidType: 'CPA', countryTargeting: (process.env.MD_LANDEN || 'NL').split(','), countryTargetingMode: 'WHITE_LIST', deviceTargeting: [4, 5], deviceTargetingMode: 'WHITE_LIST', languageTargeting: [137], languageTargetingMode: 'WHITE_LIST', trafficType: ['MAINSTREAM'], landingPageType: 'MAINSTREAM', frequencyCap: { frequency: 1, duration: 24, actionType: 'IMPRESSION', actionScope: 'CAMPAIGN' }, dayPartingTimezone: 'Europe/Amsterdam', hideReferrer: true }, tmpl ? { deviceTargeting: tmpl.deviceTargeting, languageTargeting: tmpl.languageTargeting, frequencyCap: tmpl.frequencyCap } : {}, {
         name: 'KZ-MD | ' + slug + ' | NL-BE | IPP CPA | ' + DAY().replace(/-/g, ''), status: 'Pending', runAfterModeration: true, bid: START_BOD(), dailyBudget: DAG(), budget: TOTAAL(), zoneIdDailyBudget: 2,
         url: SITE + '/keuzehulp/' + slug + '?utm_source=mondiad&utm_medium=ipp&utm_campaign=kzmd-' + slug + '&clickid=[clickid]&zoneid=[zoneid]&campaignid=[campaignid]&creativeid=[creativeid]',
         zoneIdListMode: 'BLACK_LIST', zoneIdList: [...zwart].map(Number).filter(Boolean),
