@@ -16,7 +16,7 @@ import { md, mdStart, mdCallback, mdState } from '../lib/mdmcp.js';
 const SITE = 'https://keuzehulp.best';
 const E = (k, d) => { const v = Number(process.env[k]); return Number.isFinite(v) && v > 0 ? v : d; };
 const MAX_ACTIEF = () => E('MD_MAX', 8), NIEUW_PER_DAG = () => E('MD_NIEUW_PER_DAG', 2), MIN_SALDO = () => E('MD_MIN_SALDO', 4);
-const START_BOD = () => E('MD_BOD', 0.02), MAX_BOD = () => E('MD_MAX_BOD', 0.06), DAG = () => E('MD_DAG_PER_CAMPAGNE', 5), TOTAAL = () => E('MD_TOTAAL_PER_CAMPAGNE', 30);
+const START_BOD = () => E('MD_BOD', 0.02), MAX_BOD = () => E('MD_MAX_BOD', 0.06), DAG = () => Math.max(10, E('MD_DAG_PER_CAMPAGNE', 10)), TOTAAL = () => E('MD_TOTAAL_PER_CAMPAGNE', 15); // Mondiad: dagbudget min $10, per zone min $2; het totaalbudget is de echte rem
 const DEFAULT_SLUGS = ['airfryer', 'matras', 'halloween-kostuum-kind', 'robotstofzuiger', 'thuisbatterij', 'elektrische-deken'];
 const K = { log: 'hjdk:md:log', zwart: 'hjdk:md:zwart', laatste: 'hjdk:md:laatste', lock: 'hjdk:md:lock', dag: d => 'hjdk:md:dag:' + d };
 const DAY = (o = 0) => new Date(Date.now() + o * 864e5).toISOString().slice(0, 10);
@@ -62,14 +62,14 @@ async function ronde(droog) {
   const acc = await md('mondiad_get_current_account', {}); const saldo = num(acc && acc.account && acc.account.accountBalance);
   const camps = rows(await md('mondiad_list_campaigns', { url: 'keuzehulp', size: 300, excludeStatuses: ['ARCHIVED', 'ARCHIVED_COMPLETED'], responseFields: ['ID', 'NAME', 'STATUS', 'BID', 'BID_TYPE', 'DAILY_BUDGET', 'URL', 'CLICKS', 'SPENT', 'CONVERSIONS', 'REMAINING'] }))
     .filter(c => /utm_source=mondiad/.test(c.url || '') && /keuzehulp/.test(c.url || ''));
-  const actief = camps.filter(c => !/PAUSED|REJECTED|FINISHED/.test(c.status));
+  const actief = camps.filter(c => !/PAUSED|REJECTED|FINISHED/i.test(c.status));
   const van = DAY(-13), tot = DAY();
   // ---- verzamelen: Mondiad per zone en per advertentie, eigen tellers, bol-orders ----
   const zMd = {}, perCamp = {};
   for (const c of camps) {
     const pc = perCamp[c.id] = { c, slug: slugOf(c.url), zones: {}, cr: {}, kliks: 0, kosten: 0 };
     try { for (const r of rows(await md('mondiad_campaign_report', { startDate: van, endDate: tot, breakdown: 'ZONE_ID', campaignId: c.id, size: 500 }))) { const z = String(r.zoneId); const x = pc.zones[z] || (pc.zones[z] = { kliks: 0, vert: 0, kosten: 0 }); x.kliks += num(r.clicks); x.vert += num(r.impressions); x.kosten += num(r.spent); pc.kliks += num(r.clicks); pc.kosten += num(r.spent); const g = zMd[z] || (zMd[z] = { kliks: 0, kosten: 0 }); g.kliks += num(r.clicks); g.kosten += num(r.spent); } } catch (e) { B('fout', 'rapport zones ' + c.id, String(e.message).slice(0, 120)); }
-    if (!/PAUSED|REJECTED|FINISHED/.test(c.status)) { try { for (const r of rows(await md('mondiad_campaign_report', { startDate: van, endDate: tot, breakdown: 'CREATIVE_ID', campaignId: c.id, size: 100 }))) { const id = String(r.creativeId || r.creative || ''); if (!id) continue; const x = pc.cr[id] || (pc.cr[id] = { kliks: 0, vert: 0 }); x.kliks += num(r.clicks); x.vert += num(r.impressions); } } catch (e) {} }
+    if (!/PAUSED|REJECTED|FINISHED/i.test(c.status)) { try { for (const r of rows(await md('mondiad_campaign_report', { startDate: van, endDate: tot, breakdown: 'CREATIVE_ID', campaignId: c.id, size: 100 }))) { const id = String(r.creativeId || r.creative || ''); if (!id) continue; const x = pc.cr[id] || (pc.cr[id] = { kliks: 0, vert: 0 }); x.kliks += num(r.clicks); x.vert += num(r.impressions); } } catch (e) {} }
   }
   const zs = Object.keys(zMd);
   const eigen = {}; if (zs.length) { const keys = []; zs.forEach(z => ['view', 'start', 'clk', 'conv'].forEach(s => keys.push('c:hjdk6-kz-paid-' + z + '-' + s))); const vals = []; for (let i = 0; i < keys.length; i += 400) vals.push(...await kv.mget(...keys.slice(i, i + 400))); zs.forEach((z, i) => { eigen[z] = { aankomst: num(vals[i * 4]), gestart: num(vals[i * 4 + 1]), bol: num(vals[i * 4 + 2]), conv: num(vals[i * 4 + 3]) }; }); }
@@ -90,11 +90,11 @@ async function ronde(droog) {
     if (num(b.orders) > 0) goed[z] = 2; else if (o.aankomst >= 40 && rate >= 1.5 * gem && o.bol >= 3) goed[z] = 1.5; }
   // ---- 2+3. per campagne: zwarte lijst, zone-biedingen, advertenties, bod ----
   const vandaag = (await kv.get(K.dag(DAY()))) || { nieuweCampagnes: 0, nieuweTeksten: {}, uit: 0 };
-  for (const pc of Object.values(perCamp)) { const c = pc.c; if (/PAUSED|REJECTED|FINISHED/.test(c.status)) continue;
+  for (const pc of Object.values(perCamp)) { const c = pc.c; if (/PAUSED|REJECTED|FINISHED/i.test(c.status)) continue;
     let det = null; try { det = (rows(await md('mondiad_get_campaign_details', { ids: [String(c.id)] })) || [])[0]; } catch (e) {} if (!det) continue;
     const upd = { id: c.id };
     const cur = new Set((det.zoneIdList || []).map(String)); const voeg = [...zwart].filter(z => !cur.has(z));
-    if (det.zoneIdListMode === 'BLACK_LIST' && voeg.length) { upd.zoneIdList = [...cur, ...voeg].map(Number).filter(Boolean); upd.zoneIdListMode = 'BLACK_LIST'; B('zwarte lijst', c.id + ' (' + pc.slug + ')', '+' + voeg.length + ' zones'); }
+    if (/black/i.test(det.zoneIdListMode || '') && voeg.length) { upd.zoneIdList = [...cur, ...voeg].map(Number).filter(Boolean); upd.zoneIdListMode = 'BLACK_LIST'; B('zwarte lijst', c.id + ' (' + pc.slug + ')', '+' + voeg.length + ' zones'); }
     const bod = num(det.bid) || START_BOD(); const zb = {}; (det.zoneCustomBids || []).forEach(x => { zb[String(x.zoneId)] = num(x.bid); });
     let zbVer = false; for (const [z, f] of Object.entries(goed)) { if (!pc.zones[z]) continue; const nb = r4(Math.min(MAX_BOD(), bod * f)); if (!zb[z] || zb[z] < nb) { zb[z] = nb; zbVer = true; B('zone hoger bod', z + ' in ' + c.id, 'x' + f + ' -> $' + nb); } }
     if (zbVer) upd.zoneCustomBids = Object.entries(zb).map(([zoneId, b]) => ({ zoneId: Number(zoneId), bid: b }));
@@ -111,9 +111,14 @@ async function ronde(droog) {
     if (!vandaag.nieuweTeksten[c.id] && crs.length < 8 && crs.length) { const ref = (best[0] || crs[0]); const it = (await items()).find(i => i.slug === pc.slug) || { slug: pc.slug, title: pc.slug === 'home' ? 'Twijfel je wat je moet kopen?' : 'Welke ' + pc.slug.replace(/-/g, ' ') + ' past bij jou?', kort: pc.slug === 'home' ? '160+ gratis keuzehulpen: 3 vragen en je weet welke je moet hebben' : '' };
       const al = new Set(crs.map(x => String(x.title).toLowerCase())); const v = (await teksten(it, best.slice(0, 3), 4)).find(x => !al.has(String(x.title).toLowerCase())); if (v) { B('nieuwe advertentie', c.id + ' (' + pc.slug + ')', '"' + v.title + '" / "' + v.description + '"'); if (!droog) { try { await md('mondiad_create_creative', { creative: { campaignId: c.id, title: v.title, description: v.description, icon: ref.icon, image: ref.image, tag: 'kz-' + pc.slug.slice(0, 12) + '-' + DAY().slice(5).replace('-', ''), status: 'PENDING' } }); vandaag.nieuweTeksten[c.id] = 1; } catch (e) { B('fout', 'nieuwe advertentie ' + c.id, String(e.message).slice(0, 160)); } } } }
   }
+  // goed lopende campagne waarvan het totaalbudget op is: bijvullen (één keer per dag per campagne)
+  for (const pc of Object.values(perCamp)) { if (!/FINISHED/i.test(pc.c.status) || vandaag['vul' + pc.c.id]) continue;
+    const a = Object.keys(pc.zones).reduce((x, z) => x + (eigen[z] ? eigen[z].aankomst : 0), 0), b = Object.keys(pc.zones).reduce((x, z) => x + (eigen[z] ? eigen[z].bol : 0), 0);
+    if (a >= 50 && b / a >= gem && saldo >= MIN_SALDO()) { let det = null; try { det = (rows(await md('mondiad_get_campaign_details', { ids: [String(pc.c.id)] })) || [])[0]; } catch (e) {} if (!det) continue; const nb = Math.round((num(det.budget) + TOTAAL()) * 100) / 100;
+      B('budget bijgevuld', pc.c.id + ' (' + pc.slug + ')', `${b} bol-kliks op ${a} bezoekers; totaalbudget $${det.budget} -> $${nb}`); if (!droog) { try { await md('mondiad_update_campaign', { json: JSON.stringify({ id: pc.c.id, budget: nb }) }); vandaag['vul' + pc.c.id] = 1; } catch (e) { B('fout', 'bijvullen ' + pc.c.id, String(e.message).slice(0, 120)); } } } }
   // ---- 3. portefeuille ----
   const waarde = pc => { const p = lp['kz:' + pc.slug] || {}; return (num(p.commission) + num(p.clicks) * 0.004) / (pc.kosten + 0.5); };
-  const lopend = Object.values(perCamp).filter(pc => !/PAUSED|REJECTED|FINISHED/.test(pc.c.status));
+  const lopend = Object.values(perCamp).filter(pc => !/PAUSED|REJECTED|FINISHED/i.test(pc.c.status));
   if (lopend.length > 4 && vandaag.uit < 1) { const kand = lopend.filter(pc => pc.kosten >= 3 && !num((lp['kz:' + pc.slug] || {}).orders)).sort((a, b) => waarde(a) - waarde(b))[0];
     const med = lopend.map(waarde).sort((a, b) => a - b)[Math.floor(lopend.length / 2)];
     if (kand && waarde(kand) < 0.5 * med) { B('campagne uit', kand.c.id + ' (' + kand.slug + ')', `$${kand.kosten.toFixed(2)} uitgegeven, laagste opbrengst per dollar`); if (!droog) { try { try { await md('mondiad_update_campaign', { json: JSON.stringify({ id: kand.c.id, status: 'PAUSED' }) }); } catch (e1) { await md('mondiad_update_campaign', { json: JSON.stringify({ id: kand.c.id, dailyBudget: 1 }) }); B('campagne afgeknepen', kand.c.id, 'pauzeren via de API kan niet; dagbudget naar $1'); } vandaag.uit++; } catch (e) { B('fout', 'pauzeren ' + kand.c.id, String(e.message).slice(0, 120)); } } } }
@@ -129,7 +134,7 @@ async function ronde(droog) {
     for (const slug of kandidaten.slice(0, ruimte)) { const it = alle.find(i => i.slug === slug); const vs = await teksten(it, [], 4); const img = droog ? { icon: '', image: '' } : await beelden(slug);
       if (!droog && (!img.icon || !img.image)) { B('fout', 'nieuwe campagne ' + slug, 'beelden uploaden mislukt'); continue; }
       const camp = Object.assign({ adType: ['IN_PAGE_PUSH'], bidType: 'CPA', countryTargeting: ['NL', 'BE'], countryTargetingMode: 'WHITE_LIST', deviceTargeting: [4, 5], deviceTargetingMode: 'WHITE_LIST', languageTargeting: [137], languageTargetingMode: 'WHITE_LIST', trafficType: ['MAINSTREAM'], landingPageType: 'MAINSTREAM', frequencyCap: { frequency: 1, duration: 24, actionType: 'IMPRESSION', actionScope: 'CAMPAIGN' }, dayPartingTimezone: 'Europe/Amsterdam', hideReferrer: true }, tmpl ? { deviceTargeting: tmpl.deviceTargeting, languageTargeting: tmpl.languageTargeting, frequencyCap: tmpl.frequencyCap } : {}, {
-        name: 'KZ-MD | ' + slug + ' | NL-BE | IPP CPA | ' + DAY().replace(/-/g, ''), status: 'Pending', runAfterModeration: true, bid: START_BOD(), dailyBudget: DAG(), budget: TOTAAL(), zoneIdDailyBudget: 1,
+        name: 'KZ-MD | ' + slug + ' | NL-BE | IPP CPA | ' + DAY().replace(/-/g, ''), status: 'Pending', runAfterModeration: true, bid: START_BOD(), dailyBudget: DAG(), budget: TOTAAL(), zoneIdDailyBudget: 2,
         url: SITE + '/keuzehulp/' + slug + '?utm_source=mondiad&utm_medium=ipp&utm_campaign=kzmd-' + slug + '&clickid=[clickid]&zoneid=[zoneid]&campaignid=[campaignid]&creativeid=[creativeid]',
         zoneIdListMode: 'BLACK_LIST', zoneIdList: [...zwart].map(Number).filter(Boolean),
         creatives: vs.map((v, i) => ({ title: v.title, description: v.description, icon: img.icon, image: img.image, tag: 'kz-' + slug.slice(0, 12) + '-' + (i + 1), status: 'PENDING' })) });
