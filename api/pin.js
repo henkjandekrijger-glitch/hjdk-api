@@ -21,15 +21,29 @@ export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x');
   const m = String(url.searchParams.get('p') || '').match(/^([a-z0-9-]+?)(?:-(\d))?(?:\.png)?$/);
   const slug = m ? m[1] : String(url.searchParams.get('slug') || '').replace(/[^a-z0-9-]/g, '');
-  const v = Math.max(0, Math.min(3, Number(m && m[2] != null ? m[2] : url.searchParams.get('v')) || 0));
+  const v = Math.max(0, Math.min(9, Number(m && m[2] != null ? m[2] : url.searchParams.get('v')) || 0)); // 0-3 pin 1000x1500, 8 = advertentiebeeld 720x360 (2:1), 9 = icoon 256x256
   const it = slug ? await itemFor(slug) : null;
   if (!it) { res.statusCode = 404; return res.end('onbekend'); }
   let prods = []; try { const r = await searchCached(it.term, { country: 'NL', size: 24, sort: 'RELEVANCE' }); prods = (r.products || []).filter(p => p.image && p.price != null); } catch (e) {}
-  const prod = prods.length ? prods[Math.min(prods.length - 1, v >= 2 ? 1 + ((v - 2) % 3) : 0)] : null;
+  const prod = prods.length ? prods[Math.min(prods.length - 1, v >= 2 && v < 8 ? 1 + ((v - 2) % 3) : 0)] : null;
   const prijzen = prods.map(p => p.price).filter(x => x > 0).sort((a, b) => a - b);
   const vanaf = prijzen.length ? '€' + Math.floor(prijzen[Math.floor(prijzen.length * 0.1)]).toLocaleString('nl-NL') : '';
-  const kop = v === 1 && it.actueel ? it.title : v >= 2 ? (it.h1 || it.title) : it.title;
+  const kop = v === 1 && it.actueel ? it.title : v >= 2 && v < 8 ? (it.h1 || it.title) : it.title;
   const sub = v === 1 && it.actueel ? it.actueel : (it.kort || it.intro || '');
+  if (v === 8 || v === 9) {
+    try {
+      const W = v === 9 ? 256 : 720, H = v === 9 ? 256 : 360;
+      const el = v === 9
+        ? h('div', { width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center', background: '#ffffff' }, prod ? [{ type: 'img', props: { src: prod.image, width: 232, height: 232, style: { objectFit: 'contain' } } }] : [h('div', { fontSize: 120, fontWeight: 800, color: '#0f766e', fontFamily: 'Inter' }, 'K')])
+        : h('div', { width: '100%', height: '100%', background: '#0f766e', fontFamily: 'Inter', alignItems: 'center' }, [
+            h('div', { width: 330, height: 330, margin: 15, background: '#ffffff', borderRadius: 24, alignItems: 'center', justifyContent: 'center' }, prod ? [{ type: 'img', props: { src: prod.image, width: 300, height: 300, style: { objectFit: 'contain' } } }] : []),
+            h('div', { flexDirection: 'column', flexGrow: 1, padding: '0 22px 0 8px' }, [h('div', { fontSize: kop.length > 34 ? 30 : 36, fontWeight: 800, color: '#ffffff', lineHeight: 1.12 }, kop), h('div', { marginTop: 18, background: '#f59e0b', color: '#1c1917', fontSize: 22, fontWeight: 800, padding: '10px 18px', borderRadius: 999, alignSelf: 'flex-start' }, 'Doe de 3 vragen')])
+          ]);
+      const buf = Buffer.from(await new ImageResponse(el, { width: W, height: H, fonts: FONTS }).arrayBuffer());
+      res.setHeader('content-type', 'image/png'); res.setHeader('cache-control', 'public, max-age=86400, s-maxage=86400');
+      return res.end(buf);
+    } catch (e) { res.statusCode = 500; return res.end('beeld mislukt: ' + String(e && e.message || e).slice(0, 120)); }
+  }
   try {
     const el = h('div', { width: '100%', height: '100%', flexDirection: 'column', background: '#fafaf9', fontFamily: 'Inter' }, [
       h('div', { flexDirection: 'column', background: '#0f766e', padding: '60px 64px 54px' }, [
