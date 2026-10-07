@@ -50,7 +50,7 @@
     },
     {
       "path": "/api/md/ronde",
-      "schedule": "7 * * * *"
+      "schedule": "7,37 * * * *"
     },
     {
       "path": "/api/kz/pushdag",
