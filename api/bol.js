@@ -90,7 +90,13 @@ export default async function handler(req, res) {
         if (r.commissionPercentage != null) add(byPct, String(r.commissionPercentage) + '%', r); // welk commissiepercentage de orders opleveren (7% = Koken & Huishouden/Wonen/Kleding/Verzorging, 6/4/2,5% = lager)
         if (r.productTitle) add(byProduct, String(r.productTitle).slice(0, 70) + (r.commissionPercentage != null ? ' [' + r.commissionPercentage + '%]' : ''), r); }
       const round = o => { for (const k in o) { o[k].commission = Math.round(o[k].commission * 100) / 100; o[k].revenue = Math.round(o[k].revenue * 100) / 100; } return o; };
-      return res.status(200).json({ ok: true, what, from, to, n: rows.length, total: round(total).all, byDay: round(byDay), bySite: round(bySite), byGroup: round(byGroup), byPct: round(byPct), byProduct: round(byProduct) });
+      // bron per klik: -Z<zone> = betaald (zone van het advertentienetwerk), kz_ zonder zone = gewoon bezoek op keuzehulp.best, de rest = yoors.nl-pagina's
+      const bron = s => { s = String(s || ''); const z = (s.match(/-Z(\d+)/) || [])[1]; return z ? 'betaald zone ' + z : /^kz_/.test(s) ? 'keuzehulp.best onbetaald' : s ? 'yoors.nl' : '(geen subId)'; };
+      const byDayBron = {}, byDayGroup = {}, bySubId = {};
+      for (const r of rows) { const d = r.date || r.orderDate || '?'; add(byDayBron[d] || (byDayBron[d] = {}), bron(r.subId), r); add(byDayGroup[d] || (byDayGroup[d] = {}), grp(r.subId) + ' · ' + bron(r.subId), r); add(bySubId, String(r.subId || '(leeg)'), r); }
+      for (const d in byDayBron) { round(byDayBron[d]); round(byDayGroup[d]); }
+      const subTop = Object.entries(round(bySubId)).sort((a, b) => b[1].clicks - a[1].clicks).slice(0, 150).map(([s, x]) => Object.assign({ subId: s }, x));
+      return res.status(200).json({ ok: true, what, from, to, n: rows.length, total: round(total).all, byDay: round(byDay), byDayBron, byDayGroup, bySite: round(bySite), byGroup: round(byGroup), byPct: round(byPct), byProduct: round(byProduct), subIds: subTop });
     }
     if (op === 'learn') {
       // Leren op ORDERS (cron elke 6 uur, ook handmatig): bol-orders van de laatste `days` dagen koppelen aan pagina/zone/lay-out/clickid,
