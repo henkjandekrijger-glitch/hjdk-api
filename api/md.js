@@ -11,7 +11,7 @@
 //      en elke dag nieuwe proberen; slechtste dichtzetten. Bod omhoog als een goede campagne te weinig verkeer krijgt.
 //   4. Bewaking: saldo, dagbudget, alles gelogd.
 import { kv } from '../lib/db.js';
-import { md, mdStart, mdCallback, mdState } from '../lib/mdmcp.js';
+import { md, mdStart, mdCallback, mdState, mdAutoLogin, mdHeeftSleutel } from '../lib/mdmcp.js';
 
 const SITE = 'https://keuzehulp.best';
 const E = (k, d) => { const v = Number(process.env[k]); return Number.isFinite(v) && v > 0 ? v : d; };
@@ -156,6 +156,7 @@ export default async function handler(req, res) {
     if (op === 'koppel') {
       const st = await mdState(); const tok = url.searchParams.get('token');
       if (st && st.refresh_token && !st.fout && !url.searchParams.get('opnieuw') && !(process.env.HJDK_TOKEN && tok === process.env.HJDK_TOKEN)) return res.status(200).send('<p style="font:16px system-ui;padding:24px">Mondiad is al gekoppeld. <a href="/api/md/status">Status bekijken</a> · <a href="/api/md/koppel?opnieuw=1">opnieuw koppelen</a></p>');
+      if (await mdHeeftSleutel()) { try { await mdAutoLogin(); const acc = await md('mondiad_get_current_account', {}); await log({ soort: 'gekoppeld', wat: 'Mondiad (automatisch met sleutel)', waarom: 'account ' + (acc && acc.account && acc.account.accountId) }); return res.status(200).send('<p style="font:17px system-ui;padding:24px">Mondiad is automatisch gekoppeld met de sleutel uit Vercel (account ' + (acc && acc.account ? acc.account.accountId + ', saldo $' + num(acc.account.accountBalance).toFixed(2) : '?') + '). <a href="/api/md/status">Status</a></p>'); } catch (e) { await log({ soort: 'fout', wat: 'automatisch koppelen', waarom: String(e.message).slice(0, 200) }); } }
       // Mondiad staat alleen een terugkeer naar localhost toe; daarom: inloggen in een nieuw tabblad, daarna het adres uit de adresbalk hier plakken.
       const loc = await mdStart('http://localhost:53682/callback'); if (url.searchParams.get('toon')) return res.status(200).json({ ok: true, authorize: loc });
       res.setHeader('content-type', 'text/html; charset=utf-8');
@@ -181,10 +182,16 @@ export default async function handler(req, res) {
       catch (e) { await log({ soort: 'fout', wat: 'ronde', waarom: String(e.message).slice(0, 200) }); return res.status(200).json({ ok: false, fout: String(e.message), koppelen: /gekoppeld|verlopen|verversen/i.test(String(e.message)) ? base + '/api/md/koppel' : undefined }); }
       finally { if (!droog) { try { await kv.set(K.lock, 0, { ex: 5 }); } catch (e) {} } }
     }
+    if (op === 'call') { // Mondiad voor al je andere projecten: POST {tool, args} met header x-hjdk-token (HJDK_TOKEN). Eén koppeling, overal bruikbaar.
+      const tk = req.headers['x-hjdk-token'] || url.searchParams.get('token'); if (!process.env.HJDK_TOKEN || tk !== process.env.HJDK_TOKEN) return res.status(401).json({ ok: false, fout: 'token' });
+      let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
+      const tool = String(b.tool || url.searchParams.get('tool') || ''); if (!/^mondiad_[a-z_]+$/.test(tool)) return res.status(400).json({ ok: false, fout: 'tool ontbreekt' });
+      return res.status(200).json({ ok: true, result: await md(tool, b.args || {}) });
+    }
     if (op === 'tools') { const { mdTools } = await import('../lib/mdmcp.js'); return res.status(200).json({ ok: true, tools: await mdTools() }); }
     // status
     const st = await mdState(); const laatste = await kv.get(K.laatste); const logl = ((await kv.get(K.log)) || []).slice(0, 80);
-    return res.status(200).json({ ok: true, gekoppeld: !!(st && st.refresh_token), koppelFout: st && st.fout || null, koppelLink: base + '/api/md/koppel',
+    return res.status(200).json({ ok: true, gekoppeld: !!(st && st.refresh_token), sleutelInVercel: await mdHeeftSleutel(), koppelFout: st && st.fout || null, koppelLink: base + '/api/md/koppel',
       instellingen: { maxActieveCampagnes: MAX_ACTIEF(), nieuwePerDag: NIEUW_PER_DAG(), startbod: START_BOD(), maxBod: MAX_BOD(), dagbudgetPerCampagne: DAG(), totaalPerCampagne: TOTAAL(), minSaldo: MIN_SALDO() },
       laatsteRonde: laatste || null, logboek: logl });
   } catch (e) { return res.status(200).json({ ok: false, fout: String(e && e.message || e) }); }
