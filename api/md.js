@@ -69,7 +69,7 @@ async function ronde(droog) {
   const zMd = {}, perCamp = {};
   for (const c of camps) {
     const pc = perCamp[c.id] = { c, slug: slugOf(c.url), zones: {}, cr: {}, kliks: 0, kosten: 0 };
-    try { for (const r of rows(await md('mondiad_campaign_report', { startDate: van, endDate: tot, breakdown: 'ZONE_ID', campaignId: c.id, size: 500 }))) { const z = String(r.zoneId); const x = pc.zones[z] || (pc.zones[z] = { kliks: 0, vert: 0, kosten: 0 }); x.kliks += num(r.clicks); x.vert += num(r.impressions); x.kosten += num(r.spent); pc.kliks += num(r.clicks); pc.kosten += num(r.spent); const g = zMd[z] || (zMd[z] = { kliks: 0, kosten: 0 }); g.kliks += num(r.clicks); g.kosten += num(r.spent); } } catch (e) { B('fout', 'rapport zones ' + c.id, String(e.message).slice(0, 120)); }
+    try { for (const r of rows(await md('mondiad_campaign_report', { startDate: van, endDate: tot, breakdown: 'ZONE_ID', campaignId: c.id, size: 500 }))) { const z = String(r.zoneId); const x = pc.zones[z] || (pc.zones[z] = { kliks: 0, vert: 0, kosten: 0 }); x.kliks += num(r.clicks); x.vert += num(r.impressions); x.kosten += num(r.spent); pc.kliks += num(r.clicks); pc.kosten += num(r.spent); const g = zMd[z] || (zMd[z] = { kliks: 0, kosten: 0, vert: 0 }); g.kliks += num(r.clicks); g.kosten += num(r.spent); g.vert += num(r.impressions); } } catch (e) { B('fout', 'rapport zones ' + c.id, String(e.message).slice(0, 120)); }
     if (!/PAUSED|REJECTED|FINISHED/i.test(c.status)) { try { for (const r of rows(await md('mondiad_campaign_report', { startDate: van, endDate: tot, breakdown: 'CREATIVE_ID', campaignId: c.id, size: 100 }))) { const id = String(r.creativeId || r.creative || ''); if (!id) continue; const x = pc.cr[id] || (pc.cr[id] = { kliks: 0, vert: 0 }); x.kliks += num(r.clicks); x.vert += num(r.impressions); } } catch (e) {} }
   }
   const zs = Object.keys(zMd);
@@ -79,18 +79,26 @@ async function ronde(droog) {
   // ---- 1. zones ----
   const zwart = new Set(((await kv.get(K.zwart)) || []).map(String)); const nieuwZwart = [];
   let totA = 0, totB = 0; zs.forEach(z => { totA += eigen[z].aankomst; totB += eigen[z].bol; }); const gem = totA ? totB / totA : 0.02;
-  const goed = {};
-  for (const z of zs) { if (zwart.has(z)) continue; const m = zMd[z], o = eigen[z], b = lz[z] || {};
+  const goed = {}, slecht = {}, zoneTabel = [];
+  // kwaliteit per plek: echte mens (beweegt), blijft 20s, start de keuzehulp, klikt naar bol. Met een kleine voorkennis zodat 2 bezoekers niets beslissen.
+  let sQ = 0, sN = 0; zs.forEach(z => { const o = eigen[z]; if (o.v2 >= 5) { sQ += o.mens + 2 * o.eng + 4 * o.gestart + 10 * o.bol; sN += o.v2; } }); const qGem = sN ? sQ / sN : 0.8;
+  const kwal = o => (o.mens + 2 * o.eng + 4 * o.gestart + 10 * o.bol + qGem * 8) / (o.v2 + 8);
+  for (const z of zs) { const m = zMd[z], o = eigen[z], b = lz[z] || {}; const ctr = m.vert ? m.kliks / m.vert : 0; const q = kwal(o);
+    const rij = { plek: z, kliks: m.kliks, getoond: m.vert, ctr: r4(ctr), kwamAan: o.aankomst, gemeten: o.v2, mens: o.mens, bleef: o.eng, gestart: o.gestart, naarBol: o.bol, kwaliteit: r4(q / (qGem || 1)), oordeel: zwart.has(z) ? 'uitgesloten' : 'test' }; zoneTabel.push(rij);
+    if (zwart.has(z)) continue;
     let waarom = '';
-    if (m.kliks >= 40 && o.aankomst < 0.3 * m.kliks) waarom = `nep: ${m.kliks} kliks bij Mondiad, maar ${o.aankomst} kwamen aan`;
-    else if (o.aankomst >= 80 && o.gestart === 0 && o.bol === 0) waarom = `dood: ${o.aankomst} bezoekers, niemand deed iets`;
-    else if (o.v2 >= 25 && o.mens < 0.2 * o.v2) waarom = `geen echte mensen: van ${o.v2} bezoekers bewogen er maar ${o.mens} (scrollen/tikken)`;
-    else if (o.v2 >= 60 && o.eng === 0 && o.bol === 0) waarom = `${o.v2} bezoekers, niemand bleef 20 seconden en niemand klikte naar bol`;
+    if (m.kliks >= 15 && o.aankomst < 0.4 * m.kliks) waarom = `nep: ${m.kliks} kliks bij Mondiad, maar ${o.aankomst} kwamen aan`;
+    else if (m.kliks >= 10 && ctr >= 0.15 && o.v2 >= 6 && o.mens < 0.5 * o.v2) waarom = `klikfraude of misklikken: ${(ctr * 100).toFixed(0)}% van wie het zag klikte, maar maar ${o.mens} van ${o.v2} bewogen`;
+    else if (o.v2 >= 12 && o.mens < 0.25 * o.v2) waarom = `geen echte mensen: van ${o.v2} bezoekers bewogen er maar ${o.mens} (scrollen/tikken)`;
+    else if (o.aankomst >= 60 && o.gestart === 0 && o.bol === 0) waarom = `dood: ${o.aankomst} bezoekers, niemand deed iets`;
+    else if (o.v2 >= 40 && o.eng === 0 && o.bol === 0) waarom = `${o.v2} bezoekers, niemand bleef 20 seconden en niemand klikte naar bol`;
     else if (o.aankomst >= 250 && o.bol === 0) waarom = `${o.aankomst} bezoekers en geen enkele bol-klik`;
     else if (num(b.clicks) >= 500 && num(b.orders) === 0) waarom = `${b.clicks} bol-kliks en geen bestelling`;
-    if (waarom) { nieuwZwart.push(z); zwart.add(z); B('zone uit', z, waarom); continue; }
+    if (waarom) { nieuwZwart.push(z); zwart.add(z); rij.oordeel = 'uitgesloten'; rij.waarom = waarom; B('zone uit', z, waarom); continue; }
     const rate = o.aankomst ? o.bol / o.aankomst : 0;
-    if (num(b.orders) > 0) goed[z] = 2; else if (o.aankomst >= 40 && rate >= 1.5 * gem && o.bol >= 3) goed[z] = 1.5; else if (o.v2 >= 25 && o.mens >= 0.6 * o.v2 && o.eng >= 0.25 * o.v2) goed[z] = 1.3; } // echte mensen die blijven = meer verkeer van die plek
+    if (num(b.orders) > 0) goed[z] = 2; else if (o.aankomst >= 40 && rate >= 1.5 * gem && o.bol >= 3) goed[z] = 1.5; else if (o.v2 >= 10 && q >= 1.4 * qGem) goed[z] = 1.4; else if (o.v2 >= 25 && o.mens >= 0.6 * o.v2 && o.eng >= 0.25 * o.v2) goed[z] = 1.3; // echte mensen die blijven = meer verkeer van die plek
+    else if (o.v2 >= 10 && q < 0.6 * qGem) slecht[z] = 0.6; // twijfelachtig: niet uitsluiten, wel minder betalen
+    rij.oordeel = goed[z] ? 'goed: hoger bod' : slecht[z] ? 'matig: lager bod' : 'test'; }
   // ---- 2+3. per campagne: zwarte lijst, zone-biedingen, advertenties, bod ----
   const vandaag = (await kv.get(K.dag(DAY()))) || { nieuweCampagnes: 0, nieuweTeksten: {}, uit: 0 };
   for (const pc of Object.values(perCamp)) { const c = pc.c; if (/PAUSED|REJECTED|FINISHED/i.test(c.status)) continue;
@@ -100,10 +108,15 @@ async function ronde(droog) {
     if (/black/i.test(det.zoneIdListMode || '') && voeg.length) { upd.zoneIdList = [...cur, ...voeg].map(Number).filter(Boolean); upd.zoneIdListMode = 'BLACK_LIST'; B('zwarte lijst', c.id + ' (' + pc.slug + ')', '+' + voeg.length + ' zones'); }
     const bod = num(det.bid) || START_BOD(); const zb = {}; (det.zoneCustomBids || []).forEach(x => { zb[String(x.zoneId)] = num(x.bid); });
     let zbVer = false; for (const [z, f] of Object.entries(goed)) { if (!pc.zones[z]) continue; const nb = r4(Math.min(MAX_BOD(), bod * f)); if (!zb[z] || zb[z] < nb) { zb[z] = nb; zbVer = true; B('zone hoger bod', z + ' in ' + c.id, 'x' + f + ' -> $' + nb); } }
+    for (const [z, f] of Object.entries(slecht)) { if (!pc.zones[z]) continue; const nb = r4(Math.max(0.001, bod * f)); if (zb[z] == null || zb[z] > nb) { zb[z] = nb; zbVer = true; B('zone lager bod', z + ' in ' + c.id, 'weinig echte mensen; x' + f + ' -> $' + nb); } }
+    for (const z of zwart) if (zb[z] != null) { delete zb[z]; zbVer = true; }
     if (zbVer) upd.zoneCustomBids = Object.entries(zb).map(([zoneId, b]) => ({ zoneId: Number(zoneId), bid: b }));
     // te weinig verkeer terwijl de campagne goed doorklikt: bod omhoog
     const cA = Object.keys(pc.zones).reduce((a, z) => a + (eigen[z] ? eigen[z].aankomst : 0), 0), cB = Object.keys(pc.zones).reduce((a, z) => a + (eigen[z] ? eigen[z].bol : 0), 0);
     if (pc.kliks < 14 * 20 && cA >= 20 && cB >= 3 && gem > 0 && cB / cA >= gem && bod < MAX_BOD()) { upd.bid = r4(Math.min(MAX_BOD(), bod * 1.2)); B('bod omhoog', c.id + ' (' + pc.slug + ')', `weinig verkeer (${pc.kliks} kliks/14d) maar goede doorklik; $${bod} -> $${upd.bid}`); }
+    // CPC met te weinig volume, maar de bezoekers zijn echte mensen: bod stapsgewijs omhoog (meer veilingen winnen bij goede plekken)
+    if (!upd.bid && String(c.bidType || det.bidType || '').toUpperCase() === 'CPC' && bod < MAX_BOD() && !vandaag['bod' + c.id]) { const zz = Object.keys(pc.zones).filter(z => !zwart.has(z) && eigen[z]); const v2 = zz.reduce((a, z) => a + eigen[z].v2, 0); const qs = zz.reduce((a, z) => a + kwal(eigen[z]) * eigen[z].v2, 0); const dagen = Math.max(1, Math.min(14, Math.ceil((Date.now() - new Date(det.createdAt || det.startDate || Date.now() - 864e5).getTime()) / 864e5)));
+      if (pc.kliks / dagen < 40 && v2 >= 8 && qs / v2 >= qGem) { upd.bid = r4(Math.min(MAX_BOD(), bod * 1.25)); vandaag['bod' + c.id] = 1; B('bod omhoog', c.id + ' (' + pc.slug + ')', `echte mensen (${v2} gemeten bezoekers, kwaliteit ${(qs / v2 / (qGem || 1)).toFixed(2)}x gemiddeld) maar weinig kliks; $${bod} -> $${upd.bid}`); } }
     if (Object.keys(upd).length > 1 && !droog) { try { await md('mondiad_update_campaign', { json: JSON.stringify(upd) }); } catch (e) { B('fout', 'bijwerken ' + c.id, String(e.message).slice(0, 160)); } }
     // advertenties: zwakste uit, één nieuwe variant per dag
     const crs = (det.creatives || []).filter(x => x.status === 'ACTIVE' || x.status === 'PENDING');
@@ -146,14 +159,14 @@ async function ronde(droog) {
       if (!droog) { try { const r = await md('mondiad_create_campaign', { campaign: camp }); vandaag.nieuweCampagnes++; B('aangemaakt', slug, JSON.stringify(r).slice(0, 120)); } catch (e) { B('fout', 'aanmaken ' + slug, String(e.message).slice(0, 200)); } } }
   }
   if (!droog) { await kv.set(K.zwart, [...zwart]); await kv.set(K.dag(DAY()), vandaag, { ex: 3 * 86400 }); }
-  const samen = { at: new Date().toISOString(), droog: !!droog, saldo, campagnes: camps.map(c => ({ id: c.id, slug: slugOf(c.url), status: c.status, bod: c.bid, dagbudget: c.dailyBudget, kliks: c.clicks, kosten: c.spent, conversies: c.conversions })), zonesGezien: zs.length, zwarteLijst: zwart.size, nieuwZwart: nieuwZwart.length, gemiddeldeBolKlikPerBezoek: r4(gem), besluiten };
+  const samen = { at: new Date().toISOString(), droog: !!droog, saldo, campagnes: camps.map(c => ({ id: c.id, slug: slugOf(c.url), status: c.status, bod: c.bid, dagbudget: c.dailyBudget, kliks: c.clicks, kosten: c.spent, conversies: c.conversions })), zonesGezien: zs.length, zones: zoneTabel.sort((a, b) => b.kliks - a.kliks).slice(0, 60), zwarteLijst: zwart.size, nieuwZwart: nieuwZwart.length, gemiddeldeBolKlikPerBezoek: r4(gem), besluiten };
   if (!droog) { await kv.set(K.laatste, samen); for (const b of besluiten) await log(b); }
   return samen;
 }
 
 
 const STATUS_NL = { RUNNING: 'loopt', PENDING: 'wacht op goedkeuring', PAUSED: 'gepauzeerd', FINISHED: 'budget op', DAILY_LIMIT_REACHED: 'dagbudget op', REJECTED: 'afgekeurd', NO_ACTIVE_CREATIVES: 'geen advertentie actief', OFF_ACCOUNT_BUDGET: 'saldo op', WAITING_START_DATE: 'start later' };
-const SOORT_NL = { 'zone uit': 'Advertentieplek uitgesloten', 'zwarte lijst': 'Zwarte lijst bijgewerkt', 'zone hoger bod': 'Hoger bod op goede plek', 'bod omhoog': 'Bod verhoogd', 'nieuwe advertentie': 'Nieuwe advertentietekst', 'advertentie uit': 'Zwakke advertentie uitgezet', 'nieuwe campagne': 'Nieuwe campagne voorbereid', aangemaakt: 'Campagne aangemaakt', 'campagne uit': 'Campagne stilgezet', 'budget bijgevuld': 'Budget bijgevuld', 'let op': 'Let op', fout: 'Fout', gekoppeld: 'Gekoppeld' };
+const SOORT_NL = { 'zone uit': 'Advertentieplek uitgesloten', 'zwarte lijst': 'Zwarte lijst bijgewerkt', 'zone hoger bod': 'Hoger bod op goede plek', 'zone lager bod': 'Lager bod op matige plek', 'bod omhoog': 'Bod verhoogd', 'nieuwe advertentie': 'Nieuwe advertentietekst', 'advertentie uit': 'Zwakke advertentie uitgezet', 'nieuwe campagne': 'Nieuwe campagne voorbereid', aangemaakt: 'Campagne aangemaakt', 'campagne uit': 'Campagne stilgezet', 'budget bijgevuld': 'Budget bijgevuld', 'let op': 'Let op', fout: 'Fout', gekoppeld: 'Gekoppeld' };
 const hx = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const nlTijd = iso => { try { return new Date(iso).toLocaleString('nl-NL', { timeZone: 'Europe/Amsterdam', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }); } catch (e) { return iso; } };
 async function statusPagina(st, laatste, logl) {
@@ -169,6 +182,7 @@ async function statusPagina(st, laatste, logl) {
   const eur = v => '€' + num(v).toFixed(2).replace('.', ','), usd = v => '$' + num(v).toFixed(2).replace('.', ',');
   const kaart = (t, v, sub) => `<div class="k"><div class="kt">${hx(t)}</div><div class="kv">${v}</div>${sub ? `<div class="ks">${sub}</div>` : ''}</div>`;
   const besl = logl.slice(0, 25).map(b => `<li><span class="t">${hx(nlTijd(b.at))}</span> <b>${hx(SOORT_NL[b.soort] || b.soort)}</b>: ${hx(String(b.wat || '').replace(/^(\d+) \(([^)]+)\)$/, '$2'))}${b.waarom ? ' — ' + hx(String(b.waarom).replace(/[{}"\\]/g, '').slice(0, 160)) : ''}</li>`).join('');
+  const zrij = ((laatste && laatste.zones) || []).filter(z => z.kliks > 0 || z.kwamAan > 0).slice(0, 30).map(z => `<tr><td>${hx(z.plek)}</td><td class="n">${z.kliks}</td><td class="n">${z.kwamAan}</td><td class="n">${z.mens}</td><td class="n">${z.bleef}</td><td class="n">${z.gestart}</td><td class="n">${z.naarBol}</td><td>${hx(z.oordeel)}</td></tr>`).join('');
   const rijen = camps.map(c => `<tr><td>${hx(c.slug)}</td><td>${hx(c.status)}</td><td>${hx(c.soort)} · $${c.bod.toFixed(3).replace('.', ',')}</td><td class="n">${c.kliks}</td><td class="n">${usd(c.kosten)}</td></tr>`).join('');
   return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Keuzehulp status</title>
 <style>:root{--bg:#fafaf9;--card:#fff;--ink:#1c1917;--mut:#78716c;--line:#e7e5e4;--acc:#0f766e}@media(prefers-color-scheme:dark){:root{--bg:#1c1917;--card:#292524;--ink:#f5f5f4;--mut:#a8a29e;--line:#44403c;--acc:#5eead4}}
@@ -186,6 +200,7 @@ ${kaart('Aanmeldingen', kz ? num(kz.abonnees) + ' mail' : '?', kz && kz.meldinge
 ${kaart('Plekken uitgesloten', laatste ? num(laatste.zwarteLijst) : 0, 'geen echte mensen of geen bol-kliks')}
 </div>
 <h2>Campagnes bij Mondiad</h2><div class="tw"><table><tr><th>Keuzehulp</th><th>Status</th><th>Betaling · bod</th><th class="n">Kliks vandaag</th><th class="n">Kosten vandaag</th></tr>${rijen || '<tr><td colspan="5">Geen campagnes gevonden</td></tr>'}</table></div>
+<h2>Advertentieplekken (14 dagen)</h2><div class="mut" style="margin-bottom:8px">Per plek waar onze advertentie stond: hoeveel er klikten, hoeveel echt aankwamen, hoeveel echt bewogen (mens), bleven (20 sec), de keuzehulp startten en naar bol gingen.</div><div class="tw"><table><tr><th>Plek</th><th class="n">Kliks</th><th class="n">Kwam aan</th><th class="n">Mens</th><th class="n">Bleef</th><th class="n">Gestart</th><th class="n">Naar bol</th><th>Oordeel</th></tr>${zrij || '<tr><td colspan="8">Nog geen gegevens</td></tr>'}</table></div>
 <h2>Wat de lus besloot</h2><ul>${besl || '<li>Nog niets.</li>'}</ul>
 <p class="mut" style="margin-top:24px">Bestellingen bij bol komen vaak pas 1 tot een paar dagen na de klik binnen.</p></main></body></html>`;
 }
