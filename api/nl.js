@@ -19,7 +19,7 @@ const FROM = () => process.env.NL_FROM || 'Yoors deals <deals@yoo.rs>';
 const SUBJECTS = ['De 12 beste bol-deals van vandaag (lezers kochten deze het vaakst)', 'Vandaag scherp geprijsd bij bol — voordat het weer omhoog gaat', 'Jouw deals-alert: dit kopen Yoors-lezers nu', 'Nieuwe prijzen bij bol vanochtend — de 12 die eruit springen'];
 
 async function secrets() { try { return (await kv.get('hjdk:secrets')) || {}; } catch (e) { return {}; } }
-async function resendKey() { if (process.env.RESEND_API_KEY) return process.env.RESEND_API_KEY; return (await secrets()).RESEND_API_KEY || ''; }
+async function resendKey() { if (process.env.RESEND_API_KEY || process.env.RESEND) return process.env.RESEND_API_KEY || process.env.RESEND; return (await secrets()).RESEND_API_KEY || ''; }
 async function googleClientId() { if (process.env.GOOGLE_CLIENT_ID) return process.env.GOOGLE_CLIENT_ID; return (await secrets()).GOOGLE_CLIENT_ID || ''; }
 async function hmacKey() { if (process.env.HJDK_TOKEN) return process.env.HJDK_TOKEN; let s = await secrets(); if (!s.NL_HMAC) { s.NL_HMAC = Math.random().toString(36).slice(2) + Date.now().toString(36); try { await kv.set('hjdk:secrets', s); } catch (e) {} } return s.NL_HMAC; }
 async function sig(email) { return createHmac('sha256', await hmacKey()).update(String(email).toLowerCase()).digest('hex').slice(0, 24); }

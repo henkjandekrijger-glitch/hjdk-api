@@ -39,7 +39,7 @@ async function pickVariant(prefix, n, succ, fail) { // Thompson: kies variant op
   let best = 0, bs = -1; for (let i = 0; i < n; i++) { const f = Number(counts[i * 2]) || 0, s = Number(counts[i * 2 + 1]) || 0; const x = betaSample(s, Math.max(0, f - s)); if (x > bs) { bs = x; best = i; } } return best;
 }
 async function secrets() { try { return (await kv.get('hjdk:secrets')) || {}; } catch (e) { return {}; } }
-async function resendKey() { if (process.env.RESEND_API_KEY) return process.env.RESEND_API_KEY; return (await secrets()).RESEND_API_KEY || ''; }
+async function resendKey() { if (process.env.RESEND_API_KEY || process.env.RESEND) return process.env.RESEND_API_KEY || process.env.RESEND; return (await secrets()).RESEND_API_KEY || ''; }
 async function googleClientId() { if (process.env.GOOGLE_CLIENT_ID) return process.env.GOOGLE_CLIENT_ID; return (await secrets()).GOOGLE_CLIENT_ID || ''; }
 async function hmacKey() { if (process.env.HJDK_TOKEN) return process.env.HJDK_TOKEN; let s = await secrets(); if (!s.NL_HMAC) { s.NL_HMAC = Math.random().toString(36).slice(2) + Date.now().toString(36); try { await kv.set('hjdk:secrets', s); } catch (e) {} } return s.NL_HMAC; }
 async function sig(email) { return createHmac('sha256', await hmacKey()).update(String(email).toLowerCase()).digest('hex').slice(0, 24); }
