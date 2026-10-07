@@ -151,6 +151,45 @@ async function ronde(droog) {
   return samen;
 }
 
+
+const STATUS_NL = { RUNNING: 'loopt', PENDING: 'wacht op goedkeuring', PAUSED: 'gepauzeerd', FINISHED: 'budget op', DAILY_LIMIT_REACHED: 'dagbudget op', REJECTED: 'afgekeurd', NO_ACTIVE_CREATIVES: 'geen advertentie actief', OFF_ACCOUNT_BUDGET: 'saldo op', WAITING_START_DATE: 'start later' };
+const SOORT_NL = { 'zone uit': 'Advertentieplek uitgesloten', 'zwarte lijst': 'Zwarte lijst bijgewerkt', 'zone hoger bod': 'Hoger bod op goede plek', 'bod omhoog': 'Bod verhoogd', 'nieuwe advertentie': 'Nieuwe advertentietekst', 'advertentie uit': 'Zwakke advertentie uitgezet', 'nieuwe campagne': 'Nieuwe campagne voorbereid', aangemaakt: 'Campagne aangemaakt', 'campagne uit': 'Campagne stilgezet', 'budget bijgevuld': 'Budget bijgevuld', 'let op': 'Let op', fout: 'Fout', gekoppeld: 'Gekoppeld' };
+const hx = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const nlTijd = iso => { try { return new Date(iso).toLocaleString('nl-NL', { timeZone: 'Europe/Amsterdam', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }); } catch (e) { return iso; } };
+async function statusPagina(st, laatste, logl) {
+  const vandaag = DAY(); let camps = [], tot = { kliks: 0, kosten: 0 }, saldo = laatste ? laatste.saldo : null;
+  try { const ids = new Set(((laatste && laatste.campagnes) || []).map(c => String(c.id))); const rep = rows(await md('mondiad_campaign_report', { startDate: vandaag, endDate: vandaag, breakdown: 'CAMPAIGN', size: 300 })); const per = {}; rep.forEach(r => { per[String(r.campaignId)] = r; });
+    const lijst = rows(await md('mondiad_list_campaigns', { url: 'keuzehulp', size: 300, excludeStatuses: ['ARCHIVED', 'ARCHIVED_COMPLETED'], responseFields: ['ID', 'NAME', 'STATUS', 'BID', 'BID_TYPE', 'URL'] })).filter(c => /utm_source=mondiad/.test(c.url || ''));
+    camps = lijst.map(c => { const r = per[String(c.id)] || {}; return { id: c.id, slug: slugOf(c.url), status: STATUS_NL[String(c.status).toUpperCase()] || String(c.status).toLowerCase(), soort: String(c.bidType).toUpperCase() === 'CPC' ? 'per klik' : 'per resultaat', bod: num(c.bid), kliks: num(r.clicks), kosten: num(r.spent) }; }).sort((a, b) => b.kliks - a.kliks);
+    camps.forEach(c => { tot.kliks += c.kliks; tot.kosten += c.kosten; });
+    const acc = await md('mondiad_get_current_account', {}); saldo = num(acc && acc.account && acc.account.accountBalance); } catch (e) {}
+  let bol = null; try { const r = await fetch(SITE + '/api/bol/report?from=' + vandaag + '&to=' + vandaag + '&what=promotion&only=sites'); const j = await r.json(); bol = { tot: j.total || {}, sites: j.bySite || {} }; } catch (e) {}
+  let kz = null; try { const r = await fetch(SITE + '/api/kz/status'); kz = await r.json(); } catch (e) {}
+  const kzSite = bol ? Object.entries(bol.sites).find(([k]) => /1547300/.test(k)) : null;
+  const eur = v => '€' + num(v).toFixed(2).replace('.', ','), usd = v => '$' + num(v).toFixed(2);
+  const kaart = (t, v, sub) => `<div class="k"><div class="kt">${hx(t)}</div><div class="kv">${v}</div>${sub ? `<div class="ks">${sub}</div>` : ''}</div>`;
+  const besl = logl.slice(0, 25).map(b => `<li><span class="t">${hx(nlTijd(b.at))}</span> <b>${hx(SOORT_NL[b.soort] || b.soort)}</b>: ${hx(String(b.wat || '').replace(/^(\d+) \(([^)]+)\)$/, '$2'))}${b.waarom ? ' — ' + hx(String(b.waarom).replace(/[{}"\\]/g, '').slice(0, 160)) : ''}</li>`).join('');
+  const rijen = camps.map(c => `<tr><td>${hx(c.slug)}</td><td>${hx(c.status)}</td><td>${hx(c.soort)} · ${usd(c.bod).replace('$0.', '$0,')}</td><td class="n">${c.kliks}</td><td class="n">${usd(c.kosten)}</td></tr>`).join('');
+  return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Keuzehulp status</title>
+<style>:root{--bg:#fafaf9;--card:#fff;--ink:#1c1917;--mut:#78716c;--line:#e7e5e4;--acc:#0f766e}@media(prefers-color-scheme:dark){:root{--bg:#1c1917;--card:#292524;--ink:#f5f5f4;--mut:#a8a29e;--line:#44403c;--acc:#5eead4}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,sans-serif}main{max-width:860px;margin:0 auto;padding:20px 16px 40px}h1{font-size:24px;margin:0 0 4px}h2{font-size:18px;margin:28px 0 10px}.mut{color:var(--mut);font-size:14px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}.k{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}.kt{font-size:13px;color:var(--mut)}.kv{font-size:24px;font-weight:700;margin-top:2px}.ks{font-size:13px;color:var(--mut)}
+.tw{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:12px}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);white-space:nowrap}th{color:var(--mut);font-weight:600}td.n,th.n{text-align:right}
+ul{padding-left:18px;margin:0}li{margin:0 0 8px}.t{color:var(--mut);font-size:13px}</style></head><body><main>
+<h1>Keuzehulp: hoe staat het?</h1><div class="mut">Bijgewerkt ${hx(nlTijd(new Date().toISOString()))} (Nederlandse tijd) · de lerende lus draait elk half uur${st && st.refresh_token ? '' : ' · <b>Mondiad niet gekoppeld</b>'}</div>
+<h2>Vandaag</h2><div class="g">
+${kaart('Bestellingen bij bol', bol ? num(bol.tot.orders) : '?', bol ? 'commissie ' + eur(bol.tot.commission) : '')}
+${kaart('Kliks naar bol', bol ? num(bol.tot.clicks) : '?', kzSite ? 'waarvan Keuzehulp-site ' + num(kzSite[1].clicks) : 'Keuzehulp-site nog 0')}
+${kaart('Mondiad-kliks (keuzehulp)', tot.kliks, 'kosten ' + usd(tot.kosten))}
+${kaart('Mondiad-saldo', saldo != null ? usd(saldo) : '?', '')}
+${kaart('Aanmeldingen', kz ? num(kz.abonnees) + ' mail' : '?', kz && kz.meldingen ? num(kz.meldingen.aangezet) + ' push' : '')}
+${kaart('Plekken uitgesloten', laatste ? num(laatste.zwarteLijst) : 0, 'geen echte mensen of geen bol-kliks')}
+</div>
+<h2>Campagnes bij Mondiad</h2><div class="tw"><table><tr><th>Keuzehulp</th><th>Status</th><th>Betaling · bod</th><th class="n">Kliks vandaag</th><th class="n">Kosten vandaag</th></tr>${rijen || '<tr><td colspan="5">Geen campagnes gevonden</td></tr>'}</table></div>
+<h2>Wat de lus besloot</h2><ul>${besl || '<li>Nog niets.</li>'}</ul>
+<p class="mut" style="margin-top:24px">Bestellingen bij bol komen vaak pas 1 tot een paar dagen na de klik binnen.</p></main></body></html>`;
+}
+
 export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x'); const op = (url.searchParams.get('op') || url.pathname.split('/').pop() || 'status').toLowerCase();
   OIDC = String(req.headers['x-vercel-oidc-token'] || '');
@@ -193,10 +232,12 @@ export default async function handler(req, res) {
       return res.status(200).json({ ok: true, result: await md(tool, b.args || {}) });
     }
     if (op === 'tools') { const { mdTools } = await import('../lib/mdmcp.js'); return res.status(200).json({ ok: true, tools: await mdTools() }); }
-    // status
+    // status: alleen met de geheime sleutel (?k=...). Eenmalig aanmaken met ?maak=1 zolang er nog geen sleutel is.
+    let sk = process.env.MD_STATUS_KEY || await kv.get('hjdk:md:statuskey');
+    if (!sk && url.searchParams.get('maak')) { sk = Math.random().toString(36).slice(2, 10) + Math.random().toString(36).slice(2, 8); await kv.set('hjdk:md:statuskey', sk); return res.status(200).json({ ok: true, link: base + '/api/md/status?k=' + sk }); }
+    if (!sk || url.searchParams.get('k') !== sk) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(403).send('<p style="font:16px system-ui;padding:24px">Deze pagina is privé.</p>'); }
     const st = await mdState(); const laatste = await kv.get(K.laatste); const logl = ((await kv.get(K.log)) || []).slice(0, 80);
-    return res.status(200).json({ ok: true, gekoppeld: !!(st && st.refresh_token), sleutelInVercel: await mdHeeftSleutel(), mondiadVariabelenGezien: Object.keys(process.env).filter(k => /mondiad/i.test(k)), koppelFout: st && st.fout || null, koppelLink: base + '/api/md/koppel',
-      instellingen: { maxActieveCampagnes: MAX_ACTIEF(), nieuwePerDag: NIEUW_PER_DAG(), startbod: START_BOD(), maxBod: MAX_BOD(), dagbudgetPerCampagne: DAG(), totaalPerCampagne: TOTAAL(), minSaldo: MIN_SALDO() },
-      laatsteRonde: laatste || null, logboek: logl });
+    if (url.searchParams.get('json')) return res.status(200).json({ ok: true, gekoppeld: !!(st && st.refresh_token), laatsteRonde: laatste || null, logboek: logl });
+    res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(await statusPagina(st, laatste, logl));
   } catch (e) { return res.status(200).json({ ok: false, fout: String(e && e.message || e) }); }
 }
