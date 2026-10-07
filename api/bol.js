@@ -96,7 +96,8 @@ export default async function handler(req, res) {
       for (const r of rows) { const d = r.date || r.orderDate || '?'; add(byDayBron[d] || (byDayBron[d] = {}), bron(r.subId), r); add(byDayGroup[d] || (byDayGroup[d] = {}), grp(r.subId) + ' · ' + bron(r.subId), r); add(bySubId, String(r.subId || '(leeg)'), r); }
       for (const d in byDayBron) { round(byDayBron[d]); round(byDayGroup[d]); }
       const subTop = Object.entries(round(bySubId)).sort((a, b) => b[1].clicks - a[1].clicks).slice(0, 150).map(([s, x]) => Object.assign({ subId: s }, x));
-      return res.status(200).json({ ok: true, what, from, to, n: rows.length, total: round(total).all, byDay: round(byDay), byDayBron, byDayGroup, bySite: round(bySite), byGroup: round(byGroup), byPct: round(byPct), byProduct: round(byProduct), subIds: subTop });
+      if (url.searchParams.get('only') === 'sites') return res.status(200).json({ ok: true, what, from, to, bySite: round(bySite), total: round(total).all });
+      return res.status(200).json({ ok: true, what, from, to, n: rows.length, total: round(total).all, bySite: round(bySite), byDay: round(byDay), byDayBron, byDayGroup, byGroup: round(byGroup), byPct: round(byPct), byProduct: round(byProduct), subIds: subTop });
     }
     if (op === 'learn') {
       // Leren op ORDERS (cron elke 6 uur, ook handmatig): bol-orders van de laatste `days` dagen koppelen aan pagina/zone/lay-out/clickid,
