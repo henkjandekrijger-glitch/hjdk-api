@@ -16,8 +16,8 @@ import seed from '../data/kz.json' with { type: 'json' };
 const seed2 = { items: [] }; // alles staat nu in één bestand (data/kz.json)
 const UPDATED = '2026-10-03';
 
-// bol Site_ID: keuzehulp.best is een eigen kanaal bij bol (geactiveerd 5 okt 2026). Zet BOL_SITE_KZ (Vercel of /setup); tot dan valt hij terug op Yoors.
-let BOL_SITE = '1229920'; const SITE_KZ = { at: 0 };
+// bol Site_ID van keuzehulp.best = 1547300 (eigen kanaal "Keuzehulp", geactiveerd 5 okt 2026). BOL_SITE_KZ (Vercel of /setup) kan hem overschrijven.
+let BOL_SITE = '1547300'; const SITE_KZ = { at: 0 };
 async function siteKz() { if (Date.now() - SITE_KZ.at < 300000) return BOL_SITE; SITE_KZ.at = Date.now(); try { const v = String(process.env.BOL_SITE_KZ || (await secrets()).BOL_SITE_KZ || '').replace(/\D/g, ''); if (v.length >= 5) BOL_SITE = v; } catch (e) {} return BOL_SITE; }
 const esc = s => String(s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const eur = v => '€' + Number(v).toFixed(2).replace('.', ',');
