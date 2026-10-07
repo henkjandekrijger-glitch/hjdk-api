@@ -4,12 +4,16 @@
 //   /api/kzmaak/signalen   cron 03:50 UTC   signalen verzamelen: Google-autocomplete NL/BE (dagelijkse meting -> eigen tijdreeks, stijgers),
 //                                           Google Trends NL/BE, bol populair, zoekopdrachten op de site zonder resultaat, verzoeken, seizoenskalender,
 //                                           en wat echt verdient: bol Reporting API (30 dagen kliks, orders, commissie per keuzehulp en categorie, verkochte producten)
-//   /api/kzmaak/dag        cron */10 3-9    per ronde één stap: plan maken (Claude kiest onderwerpen) of één keuzehulp maken -> toetsen bij bol
+//   /api/kzmaak/dag        cron */10 3-12   per ronde een paar stappen: plan maken (Claude kiest onderwerpen) of één keuzehulp maken -> toetsen bij bol
 //                                           (elke antwoordroute moet een passend product vinden) -> publiceren -> IndexNow. Stopt bij het dagdoel.
 //   /api/kzmaak/status     openbaar         stand: dagdoel, plan van vandaag, gemaakt, mislukt (met reden), signalen, tokenverbruik
 //   /api/kzmaak/nu?token=HJDK_TOKEN        één stap nu (&extra=1 = boven het dagdoel, &dry=1 = maken en toetsen zonder publiceren, &onderwerp=slug)
 //
-// Instellingen (optioneel, env): KZ_PER_DAG (standaard 8, max 20), ANTHROPIC_MODEL. Sleutel: ANTHROPIC_API_KEY in env of via /setup.
+// Instellingen (optioneel, env): KZ_PER_DAG (standaard 12, max 30), KZ_VERVERS_PER_DAG (standaard 3), ANTHROPIC_MODEL.
+// Claude: eigen sleutel (ANTHROPIC_API_KEY in env of via /setup) of, zonder sleutel, via Vercel AI Gateway met het OIDC-token van dit project (geen sleutel nodig).
+// Lerend: per gemaakte keuzehulp telt kz.js organische bezoeken (Google, Bing, ChatGPT, Perplexity, Pinterest ...) en AI-crawlers; de planner krijgt elke ochtend
+// te zien welke bronnen en categorieën verkeer en orders opleveren en stuurt daarop. Seizoen, dag en maatschappij: kalender, weer (Open-Meteo), nieuws (NOS, NU.nl, VRT),
+// Google Trends, schoolvakanties. Elke dag ook 'uitgelicht' (wat nu speelt, bovenaan de site, in de mail en op Pinterest) en verversing van pagina's die nu actueel zijn.
 import { kv } from '../lib/db.js';
 import { searchCached, catalog, getToken } from '../lib/bol.js';
 import seed from '../data/kz.json' with { type: 'json' };
@@ -18,10 +22,13 @@ const DAY = () => new Date().toISOString().slice(0, 10);
 const addDays = (d, n) => new Date(Date.parse(d + 'T12:00:00Z') + n * 864e5).toISOString().slice(0, 10);
 const DOMAIN = 'https://' + ((seed.site && seed.site.domain) || 'keuzehulp.best');
 const INDEXNOW_KEY = '466971cbc1bbe43e6bb64a94465e4470';
-const PER_DAG = () => Math.max(0, Math.min(20, Number(process.env.KZ_PER_DAG || 8)));
-const MAX_CLAUDE = () => PER_DAG() * 4 + 6; // plafond op Claude-aanroepen per dag (plan + schrijven + herstel)
+const PER_DAG = () => Math.max(0, Math.min(30, Number(process.env.KZ_PER_DAG || 12)));
+const VERVERS = () => Math.max(0, Math.min(10, Number(process.env.KZ_VERVERS_PER_DAG || 3)));
+const MAX_CLAUDE = () => PER_DAG() * 4 + VERVERS() + 12; // plafond op Claude-aanroepen per dag (plannen + schrijven + herstel + verversen)
 const MODELS = [...new Set([process.env.ANTHROPIC_MODEL, 'claude-sonnet-5-5', 'claude-sonnet-4-5'].filter(Boolean))];
-const K = { plan: d => 'hjdk:kz:maak:plan:' + d, log: 'hjdk:kz:maak:log', sig: 'hjdk:kz:signalen', sigDag: d => 'hjdk:kz:sig:dag:' + d, lock: 'hjdk:kz:maak:lock', tok: d => 'c:hjdk6-kzmaak-tokens-' + d, calls: d => 'c:hjdk6-kzmaak-calls-' + d, lessen: 'hjdk:kz:maak:lessen', verd: 'hjdk:kz:verdiensten' };
+const GW_MODELS = [...new Set([process.env.GATEWAY_MODEL, 'anthropic/claude-sonnet-5.5', 'anthropic/claude-sonnet-5', 'anthropic/claude-sonnet-4.5'].filter(Boolean))];
+let OIDC_HDR = ''; // OIDC-token uit de request-header (Vercel zet het op elke functie-aanroep), als het niet in env staat
+const K = { plan: d => 'hjdk:kz:maak:plan:' + d, log: 'hjdk:kz:maak:log', sig: 'hjdk:kz:signalen', sigDag: d => 'hjdk:kz:sig:dag:' + d, lock: 'hjdk:kz:maak:lock', tok: d => 'c:hjdk6-kzmaak-tokens-' + d, calls: d => 'c:hjdk6-kzmaak-calls-' + d, lessen: 'hjdk:kz:maak:lessen', verd: 'hjdk:kz:verdiensten', prest: 'hjdk:kz:prestaties', uit: 'hjdk:kz:uitgelicht' };
 const RESERVED = new Set(['over', 'privacy', 'setup', 'leads', 'subs', 'pins', 'keuzehulp', 'categorie', 'api', 't', 'b', 'sitemap', 'robots', 'llms', 'llms-full', 'sw', 'status', 'admin']);
 const catSlug = c => String(c).toLowerCase().replace(/&/g, 'en').replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '');
 const CATS = [...new Set(seed.items.map(i => i.cat))].filter(c => seed.items.filter(i => i.cat === c).length >= 2);
@@ -72,17 +79,26 @@ const STARTLIJST = [
 // seizoenskalender: momenten waar mensen 1–9 weken van tevoren naar zoeken (SEO heeft aanlooptijd nodig)
 function nthWeekday(y, m, wd, n) { const d = new Date(Date.UTC(y, m - 1, 1)); let c = 0; while (true) { if (d.getUTCDay() === wd && ++c === n) return d.toISOString().slice(0, 10); d.setUTCDate(d.getUTCDate() + 1); } }
 function easter(y) { const a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30, i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451), mo = Math.floor((h + l - 7 * m + 114) / 31), da = ((h + l - 7 * m + 114) % 31) + 1; return y + '-' + String(mo).padStart(2, '0') + '-' + String(da).padStart(2, '0'); }
-function momenten(d) {
-  const out = []; [Number(d.slice(0, 4)), Number(d.slice(0, 4)) + 1].forEach(y => {
-    const bf = addDays(nthWeekday(y, 11, 4, 4), 1);
-    [['Halloween', y + '-10-31'], ['Black Friday (acties vanaf ~10 nov)', bf], ['Sinterklaas', y + '-12-05'], ['Kerst', y + '-12-25'], ['Oud en nieuw', y + '-12-31'], ['Goede voornemens', y + '-01-02'], ['Valentijnsdag', y + '-02-14'], ['Pasen', easter(y)], ['Koningsdag', y + '-04-27'], ['Hooikoorts', y + '-04-01'], ['Moederdag', nthWeekday(y, 5, 0, 2)], ['Vaderdag', nthWeekday(y, 6, 0, 3)], ['Zomer en hitte', y + '-06-21'], ['Zomervakantie', y + '-07-10'], ['Terug naar school', y + '-08-25'], ['Stookseizoen', y + '-10-01'], ['Tuinseizoen', y + '-03-20']].forEach(([n, dt]) => { const w = Math.round((Date.parse(dt) - Date.parse(d)) / 864e5); if (w >= 7 && w <= 63) out.push({ moment: n, datum: dt, overDagen: w }); });
-  });
+function lastSunday(y, m) { const d = new Date(Date.UTC(y, m, 0)); while (d.getUTCDay() !== 0) d.setUTCDate(d.getUTCDate() - 1); return d.toISOString().slice(0, 10); }
+function kalender(y) { // vaste en berekende momenten in NL/BE waar mensen iets voor kopen of regelen
+  const e = easter(y), bf = addDays(nthWeekday(y, 11, 4, 4), 1), kd = new Date(Date.UTC(y, 3, 27)).getUTCDay() === 0 ? y + '-04-26' : y + '-04-27';
+  return [['Blue Monday en goede voornemens', nthWeekday(y, 1, 1, 3)], ['Valentijnsdag', y + '-02-14'], ['Carnaval', addDays(e, -49)], ['Zomertijd (klok vooruit)', lastSunday(y, 3)], ['Tuinseizoen', y + '-03-20'], ['Hooikoorts', y + '-04-01'], ['Pasen', e], ['Koningsdag', kd], ['Bevrijdingsdag', y + '-05-05'], ['Moederdag', nthWeekday(y, 5, 0, 2)], ['Hemelvaart', addDays(e, 39)], ['Pinksteren', addDays(e, 49)], ['Vaderdag', nthWeekday(y, 6, 0, 3)], ['Zomer en hitte', y + '-06-21'], ['Festivalseizoen', y + '-06-01'], ['Zomervakantie', y + '-07-10'], ['Terug naar school', y + '-08-25'], ['Prinsjesdag (koopkracht)', nthWeekday(y, 9, 2, 3)], ['Stookseizoen', y + '-10-01'], ['Dierendag', y + '-10-04'], ['Dag van de Leraar', y + '-10-05'], ['Wintertijd (klok terug, donkere avonden)', lastSunday(y, 10)], ['Halloween', y + '-10-31'], ['Sint-Maarten en Singles Day', y + '-11-11'], ['Black Friday (acties vanaf ~10 nov)', bf], ['Cyber Monday', addDays(bf, 3)], ['Sinterklaas', y + '-12-05'], ['Kerst', y + '-12-25'], ['Oud en nieuw', y + '-12-31']];
+}
+function momenten(d, van, tot) { // standaard 7–63 dagen vooruit (Google heeft aanlooptijd nodig); met van/tot ook 'nu' (0–14 dagen)
+  const lo = van == null ? 7 : van, hi = tot == null ? 63 : tot; const out = [];
+  [Number(d.slice(0, 4)) - 1, Number(d.slice(0, 4)), Number(d.slice(0, 4)) + 1].forEach(y => kalender(y).forEach(([n, dt]) => { const w = Math.round((Date.parse(dt) - Date.parse(d)) / 864e5); if (w >= lo && w <= hi) out.push({ moment: n, datum: dt, overDagen: w }); }));
   return out.sort((a, b) => a.overDagen - b.overDagen);
 }
 
 // ---------- hulpjes ----------
 async function secrets() { try { return (await kv.get('hjdk:secrets')) || {}; } catch (e) { return {}; } }
 async function anthropicKey() { return process.env.ANTHROPIC_API_KEY || (await secrets()).ANTHROPIC_API_KEY || ''; }
+async function claudeRoute() { // welke weg naar Claude: eigen sleutel, AI Gateway-sleutel, of AI Gateway via het OIDC-token van dit Vercel-project
+  const k = await anthropicKey(); if (k) return { kind: 'anthropic', key: k, label: process.env.ANTHROPIC_API_KEY ? 'eigen sleutel (env)' : 'eigen sleutel (setup)' };
+  if (process.env.AI_GATEWAY_API_KEY) return { kind: 'gateway', key: process.env.AI_GATEWAY_API_KEY, label: 'Vercel AI Gateway (sleutel)' };
+  const o = process.env.VERCEL_OIDC_TOKEN || OIDC_HDR; if (o) return { kind: 'gateway', key: o, label: 'Vercel AI Gateway (OIDC, geen sleutel nodig)' };
+  return null;
+}
 async function pool(list, n, fn) { const out = new Array(list.length); let i = 0; await Promise.all(Array.from({ length: Math.max(1, Math.min(n, list.length)) }, async () => { while (i < list.length) { const k = i++; try { out[k] = await fn(list[k], k); } catch (e) { out[k] = null; } } })); return out; }
 async function log(e) { try { const l = (await kv.get(K.log)) || []; l.unshift(Object.assign({ at: new Date().toISOString() }, e)); await kv.set(K.log, l.slice(0, 300)); } catch (x) {} }
 const median = a => { const s = a.filter(x => typeof x === 'number').sort((x, y) => x - y); return s.length ? s[Math.floor(s.length / 2)] : 4; };
@@ -92,10 +108,10 @@ function jsonUit(txt) { const s = String(txt || '').replace(/```(?:json)?/g, '')
 async function claude(system, user, maxTokens) {
   const d = DAY(); const n = Number(await kv.get(K.calls(d)).catch(() => 0)) || 0;
   if (n >= MAX_CLAUDE()) throw new Error('daglimiet Claude-aanroepen bereikt (' + MAX_CLAUDE() + ')');
-  const key = await anthropicKey(); if (!key) throw new Error('ANTHROPIC_API_KEY ontbreekt: zet hem op /setup (of in Vercel)');
-  let last = '';
-  for (const model of MODELS) {
-    const r = await fetch('https://api.anthropic.com/v1/messages', { method: 'POST', headers: { 'x-api-key': key, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' }, body: JSON.stringify({ model, max_tokens: maxTokens || 4000, system, messages: [{ role: 'user', content: user }] }) });
+  const rt = await claudeRoute(); if (!rt) throw new Error('geen toegang tot Claude: geen ANTHROPIC_API_KEY en geen Vercel OIDC-token');
+  let last = ''; const gw = rt.kind === 'gateway';
+  for (const model of (gw ? GW_MODELS : MODELS)) {
+    const r = await fetch(gw ? 'https://ai-gateway.vercel.sh/v1/messages' : 'https://api.anthropic.com/v1/messages', { method: 'POST', headers: Object.assign({ 'anthropic-version': '2023-06-01', 'content-type': 'application/json' }, gw ? { authorization: 'Bearer ' + rt.key } : { 'x-api-key': rt.key }), body: JSON.stringify({ model, max_tokens: maxTokens || 4000, system, messages: [{ role: 'user', content: user }] }) });
     const j = await r.json().catch(() => ({}));
     if (r.ok) {
       const txt = (j.content || []).filter(c => c.type === 'text').map(c => c.text).join('');
@@ -103,14 +119,14 @@ async function claude(system, user, maxTokens) {
       return { txt, model };
     }
     last = r.status + ' ' + ((j.error && j.error.message) || '');
-    if (!(r.status === 404 || (r.status === 400 && /model/i.test(last)))) break; // alleen bij een onbekend model het volgende proberen
+    if (!(r.status === 404 || ((r.status === 400 || r.status === 422) && /model/i.test(last)))) break; // alleen bij een onbekend model het volgende proberen
   }
   throw new Error('Claude API: ' + last.slice(0, 200));
 }
 
 async function bestaande() { // alles wat er is of al ingepland staat (seed + Redis), ook toekomstige publicaties
   const out = seed.items.map(i => ({ slug: i.slug, title: i.title, term: i.term, cat: i.cat }));
-  try { const idx = (await kv.get('hjdk:kz:index')) || []; const vals = idx.length ? await kv.mget(...idx.map(s => 'hjdk:kz:' + s)) : []; vals.forEach(v => { if (v && v.slug && !out.some(o => o.slug === v.slug)) out.push({ slug: v.slug, title: v.title, term: v.term, cat: v.cat, publishAt: v.publishAt, gemaakt: v.gemaakt }); }); } catch (e) {}
+  try { const idx = (await kv.get('hjdk:kz:index')) || []; const vals = idx.length ? await kv.mget(...idx.map(s => 'hjdk:kz:' + s)) : []; vals.forEach(v => { if (v && v.slug && !out.some(o => o.slug === v.slug)) out.push({ slug: v.slug, title: v.title, term: v.term, cat: v.cat, publishAt: v.publishAt, gemaakt: v.gemaakt, bron: v.bron }); }); } catch (e) {}
   return out;
 }
 
@@ -166,6 +182,46 @@ async function verdiensten(best) {
     veelKliksGeenOrders: kzL.filter(x => x.kliks >= 100 && !x.orders).sort((a, b) => b.kliks - a.kliks).slice(0, 15).map(x => x.k + ' (' + x.kliks + ' kliks)'),
     verkochteProducten: lijst(prod).sort((a, b) => b.commissie - a.commissie).slice(0, 40), commissiePercentages: lijst(pct) };
 }
+// ---------- dag en maatschappij: weer, nieuws, schoolvakanties ----------
+async function getText(url, ms) { const c = new AbortController(); const t = setTimeout(() => c.abort(), ms || 8000); try { const r = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (keuzehulp.best; dagelijkse signalen)' }, signal: c.signal }); clearTimeout(t); return r.ok ? await r.text() : ''; } catch (e) { clearTimeout(t); return ''; } }
+async function weer() { // Open-Meteo (gratis, geen sleutel): 8 dagen voor De Bilt en Brussel, vertaald naar koopmomenten
+  const plekken = [['Nederland (De Bilt)', 52.10, 5.18], ['België (Brussel)', 50.85, 4.35]]; const out = [];
+  await pool(plekken, 2, async ([naam, la, lo]) => {
+    const t = await getText('https://api.open-meteo.com/v1/forecast?latitude=' + la + '&longitude=' + lo + '&daily=temperature_2m_max,temperature_2m_min,precipitation_sum,snowfall_sum,wind_gusts_10m_max&timezone=Europe%2FAmsterdam&forecast_days=8'); if (!t) return;
+    let j; try { j = JSON.parse(t).daily; } catch (e) { return; } if (!j || !j.time) return;
+    const mx = j.temperature_2m_max, mn = j.temperature_2m_min, rn = j.precipitation_sum, sn = j.snowfall_sum, wi = j.wind_gusts_10m_max; const ev = [];
+    if (mn.some(x => x < 0)) ev.push('nachtvorst op komst (min ' + Math.min(...mn).toFixed(0) + ' °C)'); if (mx.filter(x => x < 5).length >= 3) ev.push('koude dagen (max onder 5 °C)');
+    if (mx.filter(x => x >= 27).length >= 3) ev.push('hittegolf (max ' + Math.max(...mx).toFixed(0) + ' °C)'); else if (mx.some(x => x >= 25)) ev.push('zomerse dag(en)');
+    if (sn.some(x => x > 0.5)) ev.push('sneeuw verwacht'); if (wi.some(x => x >= 75)) ev.push('storm (windstoten ' + Math.max(...wi).toFixed(0) + ' km/u)'); if (rn.reduce((a, b) => a + b, 0) > 35) ev.push('natte week (' + rn.reduce((a, b) => a + b, 0).toFixed(0) + ' mm)');
+    out.push({ waar: naam, komendeWeek: 'max ' + Math.min(...mx).toFixed(0) + '–' + Math.max(...mx).toFixed(0) + ' °C, min ' + Math.min(...mn).toFixed(0) + ' °C, regen ' + rn.reduce((a, b) => a + b, 0).toFixed(0) + ' mm', opvallend: ev });
+  });
+  return out;
+}
+const FEEDS = [['NOS', 'https://feeds.nos.nl/nosnieuwsalgemeen'], ['NOS economie', 'https://feeds.nos.nl/nosnieuwseconomie'], ['NU.nl', 'https://www.nu.nl/rss/Algemeen'], ['NU.nl economie', 'https://www.nu.nl/rss/Economie'], ['VRT NWS', 'https://www.vrt.be/vrtnws/nl.rss.articles.xml']];
+async function nieuws() { // koppen van vandaag: wat speelt er in de maatschappij (energie, koopkracht, weer, veiligheid, gezondheid ...)
+  const out = []; await pool(FEEDS, 5, async ([bron, url]) => { const x = await getText(url); const re = /<(?:item|entry)\b[\s\S]*?<title[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/title>/g; let m, n = 0; while ((m = re.exec(x)) && n < 12) { const t = m[1].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#039;|&apos;/g, "'").replace(/&quot;/g, '"').trim(); if (t) { out.push(bron + ': ' + t.slice(0, 140)); n++; } } });
+  return out.slice(0, 50);
+}
+async function schoolvakanties(d) { // rijksoverheid open data; als dat niet lukt, valt dit signaal weg
+  const t = await getText('https://opendata.rijksoverheid.nl/v1/sources/rijksoverheid/infotypes/schoolholidays?output=json', 9000); if (!t) return [];
+  let j; try { j = JSON.parse(t); } catch (e) { return []; } const out = [];
+  (Array.isArray(j) ? j : [j]).forEach(doc => ((doc && doc.content) || []).forEach(c => (c.vacations || []).forEach(v => (v.regions || []).forEach(r => { const st = String(r.startdate || '').slice(0, 10); if (!st) return; const w = Math.round((Date.parse(st) - Date.parse(d)) / 864e5); if (w >= -3 && w <= 63) out.push({ vakantie: String(v.type || '').trim(), regio: r.region, start: st, eind: String(r.enddate || '').slice(0, 10), overDagen: w }); }))));
+  const seen = new Set(); return out.filter(x => { const k = x.vakantie + x.start; if (seen.has(k)) return false; seen.add(k); return true; }).sort((a, b) => a.overDagen - b.overDagen).slice(0, 8);
+}
+// ---------- zelflerend: wat leveren de keuzehulpen op (organisch bezoek, AI-crawlers, bol-kliks, orders) ----------
+const BOTS = ['googlebot', 'bingbot', 'gptbot', 'oai-searchbot', 'chatgpt-user', 'claudebot', 'claude-user', 'perplexitybot', 'perplexity-user', 'applebot', 'duckduckbot', 'meta', 'amazonbot'];
+const AI_BOTS = new Set(['gptbot', 'oai-searchbot', 'chatgpt-user', 'claudebot', 'claude-user', 'perplexitybot', 'perplexity-user', 'applebot', 'meta', 'amazonbot']);
+async function prestaties(best, vd) {
+  const live = best.filter(b => !b.publishAt || b.publishAt <= DAY()); const keys = [];
+  live.forEach(b => { keys.push('c:hjdk6-kz-org-' + b.slug, 'c:hjdk6-kz-' + b.slug + '-clk'); BOTS.forEach(x => keys.push('c:hjdk6-kz-bot-' + x + '-' + b.slug)); });
+  const vals = []; for (let i = 0; i < keys.length; i += 800) { try { (await kv.mget(...keys.slice(i, i + 800))).forEach(v => vals.push(Number(v) || 0)); } catch (e) { keys.slice(i, i + 800).forEach(() => vals.push(0)); } }
+  const per = 2 + BOTS.length; const orders = {}; ((vd && vd.besteKeuzehulpen) || []).forEach(x => { orders[x.k] = x; });
+  const rows = live.map((b, i) => { const o = i * per; const bots = {}; let ai = 0, zoek = 0; BOTS.forEach((x, k) => { const n = vals[o + 2 + k]; if (n) bots[x] = n; if (AI_BOTS.has(x)) ai += n; else zoek += n; }); return { slug: b.slug, cat: b.cat, bron: b.bron || (b.gemaakt === 'kzmaak' ? '?' : 'handmatig'), gemaakt: b.gemaakt === 'kzmaak', dag: b.publishAt || '', org: vals[o], bolKliks: vals[o + 1], aiCrawls: ai, zoekCrawls: zoek, orders: (orders[b.slug] || {}).orders || 0, commissie: (orders[b.slug] || {}).commissie || 0 }; });
+  const groep = f => { const g = {}; rows.forEach(r => { const k = f(r); if (!k) return; const x = g[k] || (g[k] = { paginas: 0, org: 0, aiCrawls: 0, orders: 0, commissie: 0 }); x.paginas++; x.org += r.org; x.aiCrawls += r.aiCrawls; x.orders += r.orders; x.commissie = Math.round((x.commissie + r.commissie) * 100) / 100; }); return Object.entries(g).map(([k, x]) => Object.assign({ k, orgPerPagina: Math.round(x.org / x.paginas * 10) / 10 }, x)).sort((a, b) => b.orgPerPagina - a.orgPerPagina); };
+  let totOrg = {}, totBot = {}; try { const ks = ['google', 'bing', 'duckduckgo', 'chatgpt', 'perplexity', 'copilot', 'gemini', 'claude', 'pinterest', 'social', 'direct', 'overig']; const v1 = await kv.mget(...ks.map(k => 'c:hjdk6-kz-org-src-' + k)); ks.forEach((k, i) => { if (Number(v1[i])) totOrg[k] = Number(v1[i]); }); const v2 = await kv.mget(...BOTS.map(k => 'c:hjdk6-kz-bott-' + k)); BOTS.forEach((k, i) => { if (Number(v2[i])) totBot[k] = Number(v2[i]); }); } catch (e) {}
+  const oud = rows.filter(r => r.gemaakt && r.dag && r.dag <= addDays(DAY(), -14));
+  return { organischPerBron: totOrg, crawlersTotaal: totBot, perBron: groep(r => r.gemaakt ? r.bron : null), perCategorie: groep(r => r.cat), besteOrganisch: rows.filter(r => r.org || r.aiCrawls).sort((a, b) => (b.org * 3 + b.aiCrawls) - (a.org * 3 + a.aiCrawls)).slice(0, 25), zonderBereikNa14Dagen: oud.filter(r => !r.org && !r.aiCrawls && !r.zoekCrawls).map(r => r.slug).slice(0, 30), gemaakteAantal: rows.filter(r => r.gemaakt).length };
+}
 async function signalen() {
   const d = DAY(); const t0 = Date.now();
   const letters = 'abcdefghijklmnoprstuvwz'.split(''); const jobs = [];
@@ -181,12 +237,13 @@ async function signalen() {
   const rij = top.map(([k, nu]) => { const gem = prev.length ? prev.reduce((a, p) => a + (Number(p[k]) || 0), 0) / prev.length : 0; return { k, nu, gem: Math.round(gem * 10) / 10, nieuw: prev.length >= 3 && prev.every(p => !p[k]), vb: vb[k] }; });
   const stijgers = prev.length ? rij.filter(r => r.nu - r.gem >= 4).sort((a, b) => (b.nu - b.gem) - (a.nu - a.gem)).slice(0, 40) : [];
   const nieuw = rij.filter(r => r.nieuw).sort((a, b) => b.nu - a.nu).slice(0, 25);
-  const [nl, be, bol, zr, vd] = await Promise.all([trendsRss('NL'), trendsRss('BE'), bolPopulair(), zonderResultaat(), bestaande().then(verdiensten).catch(e => ({ ok: false, fout: String(e.message || e).slice(0, 160) }))]);
+  const best0 = await bestaande(); const [nl, be, bol, zr, vd, wr, nw, sv] = await Promise.all([trendsRss('NL'), trendsRss('BE'), bolPopulair(), zonderResultaat(), verdiensten(best0).catch(e => ({ ok: false, fout: String(e.message || e).slice(0, 160) })), weer().catch(() => []), nieuws().catch(() => []), schoolvakanties(d).catch(() => [])]);
   try { await kv.set(K.verd, Object.assign({ dag: d }, vd)); } catch (e) {}
+  let pr = null; try { pr = await prestaties(best0, vd.ok ? vd : null); await kv.set(K.prest, Object.assign({ dag: d }, pr)); } catch (e) {}
   let verzoeken = []; try { verzoeken = ((await kv.get('hjdk:kz:vragen')) || []).filter(v => v.q && Date.now() - v.at < 60 * 864e5).map(v => v.q).slice(0, 40); } catch (e) {}
-  const out = { dag: d, metingen: { autocompleteVragen: jobs.length, suggesties: ruw, dagenHistorie: prev.length }, topVraag: rij.slice(0, 40).map(r => r.vb), stijgers, nieuw, trends: { nl, be }, bolPopulair: bol.slice(0, 40), zonderResultaat: zr, verzoeken, momenten: momenten(d), verdiensten: vd.ok ? { totaal: vd.totaal, categorieen: vd.categorieen.slice(0, 12), besteKeuzehulpen: vd.besteKeuzehulpen.slice(0, 15), veelKliksGeenOrders: vd.veelKliksGeenOrders, verkochteProducten: vd.verkochteProducten.slice(0, 30) } : { fout: vd.fout }, ms: Date.now() - t0 };
+  const out = { dag: d, metingen: { autocompleteVragen: jobs.length, suggesties: ruw, dagenHistorie: prev.length }, topVraag: rij.slice(0, 40).map(r => r.vb), stijgers, nieuw, trends: { nl, be }, bolPopulair: bol.slice(0, 40), zonderResultaat: zr, verzoeken, momenten: momenten(d), nu: momenten(d, -1, 14), weer: wr, nieuws: nw, schoolvakanties: sv, prestaties: pr ? { organischPerBron: pr.organischPerBron, perBron: pr.perBron, perCategorie: pr.perCategorie.slice(0, 15), besteOrganisch: pr.besteOrganisch.slice(0, 15), zonderBereikNa14Dagen: pr.zonderBereikNa14Dagen } : null, verdiensten: vd.ok ? { totaal: vd.totaal, categorieen: vd.categorieen.slice(0, 12), besteKeuzehulpen: vd.besteKeuzehulpen.slice(0, 15), veelKliksGeenOrders: vd.veelKliksGeenOrders, verkochteProducten: vd.verkochteProducten.slice(0, 30) } : { fout: vd.fout }, ms: Date.now() - t0 };
   await kv.set(K.sig, out);
-  await log({ stap: 'signalen', ok: true, suggesties: ruw, stijgers: stijgers.length, nieuw: nieuw.length, bolOrders30d: vd.ok ? vd.totaal.orders : 'fout: ' + vd.fout, ms: out.ms });
+  await log({ stap: 'signalen', ok: true, suggesties: ruw, stijgers: stijgers.length, nieuw: nieuw.length, weer: wr.map(w => w.opvallend.join(', ') || 'rustig').join(' | '), nieuwskoppen: nw.length, vakanties: sv.length, organisch: pr ? Object.values(pr.organischPerBron).reduce((a, b) => a + b, 0) : 0, bolOrders30d: vd.ok ? vd.totaal.orders : 'fout: ' + vd.fout, ms: out.ms });
   return out;
 }
 
@@ -195,23 +252,24 @@ async function maakPlan(d, extraUitsluiten) {
   const sig = (await kv.get(K.sig)) || {}; const best = await bestaande(); const have = new Set(best.map(b => b.slug).concat(extraUitsluiten || []));
   const lessen = (await kv.get(K.lessen)) || [];
   const start = STARTLIJST.filter(x => (!x.vanaf || x.vanaf <= d) && !have.has(x.slug)).slice(0, 14);
-  const system = 'Je bent de hoofdredacteur van keuzehulp.best: onafhankelijke Nederlandse keuzehulpen (3 vragen -> 1 passend product bij bol.com met de prijs van vandaag). Je kiest welke nieuwe keuzehulpen er vandaag bij komen. Een goed onderwerp: (1) een producttype dat mensen in Nederland en België echt zoeken met koopintentie ("welke X kopen", "beste X"), (2) waar verkeerd kiezen echt kan (minstens twee keuzes die ertoe doen: maat, type, gebruik, budget), (3) breed verkrijgbaar bij bol.com, bij voorkeur vanaf zo\'n 25 euro, (4) geen dubbel van een bestaande keuzehulp (een andere zoekintentie mag wel: oordopjes naast koptelefoon), (5) geen medicijnen, supplementen, wapens, vapes, vuurwerk, erotiek, alcohol of tabak, en geen losse merken of modellen. Voorrang: verzoeken van bezoekers en zoekopdrachten op de site zonder resultaat; dan wat echt geld oplevert (zie verdiensten: producttypes die via de sites al verkocht worden maar nog geen eigen keuzehulp hebben, en onderwerpen in categorieen met de meeste commissie per 1.000 bol-kliks; hoe meer orders er zijn, hoe zwaarder dit weegt; maak geen extra onderwerpen in de buurt van keuzehulpen met veel kliks en geen orders); dan onderwerpen waarvan de piek over 2 tot 9 weken valt (Google heeft aanlooptijd nodig); dan sterke stijgers in de zoekdata; dan de startlijst. Een duur product bij een hoog commissiepercentage weegt zwaarder dan een goedkoop product. Bouw de site breed uit: vul ook gaten in categorieen met weinig keuzehulpen, en kies onderwerpen die logisch naast bestaande keuzehulpen staan (wie een kinderwagen zoekt, zoekt ook een autostoel), zodat ze naar elkaar kunnen linken. Nieuwsonderwerpen uit Google Trends zijn alleen bruikbaar als er een duidelijke koopvraag achter zit. Antwoord alleen met JSON.';
+  const system = 'Je bent de hoofdredacteur van keuzehulp.best: onafhankelijke Nederlandse keuzehulpen (3 vragen -> 1 passend product bij bol.com met de prijs van vandaag). Je kiest welke nieuwe keuzehulpen er vandaag bij komen. Een goed onderwerp: (1) een producttype dat mensen in Nederland en België echt zoeken met koopintentie ("welke X kopen", "beste X"), (2) waar verkeerd kiezen echt kan (minstens twee keuzes die ertoe doen: maat, type, gebruik, budget), (3) breed verkrijgbaar bij bol.com, bij voorkeur vanaf zo\'n 25 euro, (4) geen dubbel van een bestaande keuzehulp (een andere zoekintentie mag wel: oordopjes naast koptelefoon), (5) geen medicijnen, supplementen, wapens, vapes, vuurwerk, erotiek, alcohol of tabak, en geen losse merken of modellen. Voorrang: verzoeken van bezoekers en zoekopdrachten op de site zonder resultaat; dan wat echt geld oplevert (zie verdiensten: producttypes die via de sites al verkocht worden maar nog geen eigen keuzehulp hebben, en onderwerpen in categorieen met de meeste commissie per 1.000 bol-kliks; hoe meer orders er zijn, hoe zwaarder dit weegt; maak geen extra onderwerpen in de buurt van keuzehulpen met veel kliks en geen orders); dan onderwerpen waarvan de piek over 2 tot 9 weken valt (Google heeft aanlooptijd nodig); dan sterke stijgers in de zoekdata; dan de startlijst. Een duur product bij een hoog commissiepercentage weegt zwaarder dan een goedkoop product. Bouw de site breed uit: vul ook gaten in categorieen met weinig keuzehulpen, en kies onderwerpen die logisch naast bestaande keuzehulpen staan (wie een kinderwagen zoekt, zoekt ook een autostoel), zodat ze naar elkaar kunnen linken. Speel in op seizoen, dag en maatschappij: het weer van de komende week (vorst, storm, hitte), het nieuws (energieprijzen, koopkracht, veiligheid, gezondheid, nieuwe regels), schoolvakanties en momenten die over 0 tot 9 weken vallen; nieuws en Google Trends zijn alleen bruikbaar als er een duidelijke koopvraag achter zit. Leer van de resultaten (prestaties): kies meer onderwerpen uit bronnen en categorieen die organisch bezoek, AI-crawlers en orders opleveren, en minder uit bronnen waarvan pagina\'s na 14 dagen nog geen bereik hebben. Geef daarnaast (1) "uitgelicht": 2 tot 4 blokken met bestaande keuzehulpen die vandaag het meest actueel zijn (moment, weer of nieuws van nu), en (2) "ververs": bestaande slugs die nu actueel zijn en een actuele tekst verdienen. Antwoord alleen met JSON.';
   const user = JSON.stringify({
     datum: d, aantalNodig: Math.max(8, PER_DAG() * 2), toegestaneCategorieen: CATS, aantalPerCategorie: Object.fromEntries(CATS.map(c => [c, best.filter(b => b.cat === c).length])),
     bestaandeSlugs: best.map(b => b.slug).join(', '),
-    signalen: { verzoekenVanBezoekers: sig.verzoeken || [], zoekopdrachtenZonderResultaat: sig.zonderResultaat || [], stijgersInGoogleZoekvragen: (sig.stijgers || []).map(s => s.vb || s.k), nieuwInGoogleZoekvragen: (sig.nieuw || []).map(s => s.vb || s.k), veelGezochtNu: sig.topVraag || [], googleTrendsNL: (sig.trends && sig.trends.nl || []).map(t => t.t), googleTrendsBE: (sig.trends && sig.trends.be || []).map(t => t.t), bolPopulairNu: sig.bolPopulair || [], komendeMomenten: momenten(d), verdiensten: sig.verdiensten || null, commissiePercentagePerCategorie: Object.fromEntries(CATS.map(c => [c, pctFor(c) + '%'])) },
+    signalen: { verzoekenVanBezoekers: sig.verzoeken || [], zoekopdrachtenZonderResultaat: sig.zonderResultaat || [], stijgersInGoogleZoekvragen: (sig.stijgers || []).map(s => s.vb || s.k), nieuwInGoogleZoekvragen: (sig.nieuw || []).map(s => s.vb || s.k), veelGezochtNu: sig.topVraag || [], googleTrendsNL: (sig.trends && sig.trends.nl || []).map(t => t.t), googleTrendsBE: (sig.trends && sig.trends.be || []).map(t => t.t), bolPopulairNu: sig.bolPopulair || [], komendeMomenten: momenten(d), momentenNu: momenten(d, -1, 14), weerKomendeWeek: sig.weer || [], nieuwsVandaag: sig.nieuws || [], schoolvakanties: sig.schoolvakanties || [], prestaties: sig.prestaties || null, verdiensten: sig.verdiensten || null, commissiePercentagePerCategorie: Object.fromEntries(CATS.map(c => [c, pctFor(c) + '%'])) },
     startlijst: start, lessenUitEerdereRondes: lessen.slice(0, 12),
-    formaat: { plan: [{ slug: 'kleine-letters-met-streepjes', term: 'het gewone zoekwoord waarmee bol de juiste producten toont', cat: 'een van de toegestane categorieen', waarom: 'korte reden met het signaal', bron: 'verzoek | zonder-resultaat | seizoen | stijger | startlijst | trend' }] }
+    formaat: { plan: [{ slug: 'kleine-letters-met-streepjes', term: 'het gewone zoekwoord waarmee bol de juiste producten toont', cat: 'een van de toegestane categorieen', waarom: 'korte reden met het signaal', bron: 'verzoek | zonder-resultaat | geld | seizoen | dag | weer | nieuws | stijger | startlijst | trend' }], uitgelicht: [{ naam: 'korte kop, bv. Eerste nachtvorst of Sinterklaas over 3 weken', waarom: 'een zin', slugs: ['3 tot 8 bestaande slugs'] }], ververs: ['bestaande slugs, hooguit ' + VERVERS()] }
   });
-  const { txt } = await claude(system, user, 2500);
+  const { txt } = await claude(system, user, 4000);
   const j = jsonUit(txt); const plan = [];
+  try { const ok = new Set(best.map(b => b.slug)); const blokken = (j.uitgelicht || []).map(u => ({ naam: String(u.naam || '').slice(0, 60), waarom: String(u.waarom || '').slice(0, 160), slugs: (u.slugs || []).map(String).filter(x => ok.has(x)).slice(0, 8) })).filter(u => u.naam && u.slugs.length >= 2).slice(0, 4); if (blokken.length) await kv.set(K.uit, { dag: d, blokken }); plan.ververs = (j.ververs || []).map(String).filter(x => ok.has(x)).slice(0, VERVERS()); } catch (e) {}
   (j.plan || []).forEach(p => {
     const slug = String(p.slug || '').toLowerCase().replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
     if (!slug || have.has(slug) || RESERVED.has(slug) || plan.some(x => x.slug === slug)) return;
     plan.push({ slug, term: String(p.term || slug.replace(/-/g, ' ')).slice(0, 60), cat: CATS.includes(p.cat) ? p.cat : (start.find(s => s.slug === slug) || {}).cat || 'Wonen', waarom: String(p.waarom || '').slice(0, 200), bron: String(p.bron || '').slice(0, 30) });
   });
   start.forEach(s => { if (plan.length < Math.max(8, PER_DAG() * 2) && !plan.some(x => x.slug === s.slug)) plan.push(Object.assign({ bron: 'startlijst' }, s)); }); // vangnet
-  return plan;
+  return { lijst: plan, ververs: plan.ververs || [] };
 }
 
 // ---------- toetsen: vindt elke antwoordroute een passend product bij bol? (zelfde logica als advise() in kz.js) ----------
@@ -276,7 +334,7 @@ async function maakItem(cand, d) {
   if (prods.length < 12) return { ok: false, waarom: 'te weinig aanbod bij bol voor "' + cand.term + '" (' + prods.length + ')' };
   const qs = ['welke ' + cand.term + ' ', cand.term + ' ', 'hoeveel ' + cand.term, 'beste ' + cand.term + ' ', cand.term + ' of '];
   const sug = [...new Set((await pool(qs, 5, q => suggest(q, 'nl'))).flat().filter(Boolean))].slice(0, 30);
-  const user = 'Onderwerp: ' + cand.term + ' (slug ' + cand.slug + ', categorie ' + cand.cat + '). Waarom nu: ' + (cand.waarom || '-') + '. Datum: ' + d + '.\n\nEchte producten bij bol voor "' + cand.term + '" (titel — prijs):\n' + prods.slice(0, 40).map(p => '- ' + p.title.slice(0, 100) + ' — €' + p.price).join('\n') + '\n\nEchte zoekvragen van Nederlanders (Google):\n' + (sug.length ? sug.map(s => '- ' + s).join('\n') : '- (geen)') + '\n\nBestaande keuzehulpen (slug: titel) voor \'verwant\':\n' + best.filter(b => b.slug !== cand.slug).map(b => b.slug + ': ' + (b.title || '')).join('\n') + '\n\nVoorbeeld 1:\n' + JSON.stringify(VB1) + '\n\nVoorbeeld 2:\n' + JSON.stringify(VB2);
+  const user = 'Onderwerp: ' + cand.term + ' (slug ' + cand.slug + ', categorie ' + cand.cat + '). Waarom nu: ' + (cand.waarom || '-') + '. Datum: ' + d + '.\n\nEchte producten bij bol voor "' + cand.term + '" (titel — prijs):\n' + prods.slice(0, 40).map(p => '- ' + p.title.slice(0, 100) + ' — €' + p.price).join('\n') + '\n\nEchte zoekvragen van Nederlanders (Google):\n' + (sug.length ? sug.map(s => '- ' + s).join('\n') : '- (geen)') + '\n\nBestaande keuzehulpen (slugs) om uit te kiezen voor \'verwant\':\n' + best.filter(b => b.slug !== cand.slug).map(b => b.slug).join(', ') + '\n\nVoorbeeld 1:\n' + JSON.stringify(VB1) + '\n\nVoorbeeld 2:\n' + JSON.stringify(VB2);
   let item, fouten, check, model;
   try { const a = await claude(SCHRIJF, user, 4500); model = a.model; item = netjes(jsonUit(a.txt), cand, slugs); } catch (e) { return { ok: false, waarom: 'schrijven mislukt: ' + String(e.message || e).slice(0, 160) }; }
   fouten = schemaFouten(item);
@@ -298,14 +356,44 @@ async function publiceer(item, cand, d) {
   return { url: DOMAIN + '/' + it.slug, indexnow: st };
 }
 
+// ---------- verversen: bestaande keuzehulpen die nu actueel zijn een actuele tekst geven (vragen en productkeuze blijven gelijk) ----------
+const VERVERS_SYS = `Je werkt een bestaande keuzehulp van keuzehulp.best bij zodat hij aansluit op wat nu speelt (seizoen, moment, weer of nieuws), voor Google en AI-assistenten.
+Regels: gewoon, direct Nederlands (je/jij), geen hype, geen uitroeptekens, geen verzonnen cijfers of tests, niets dat over een paar weken onwaar is zonder datum.
+Je verandert de vragen en opties NIET. Je herschrijft alleen: seoTitle (max 60 tekens, eindigt op "| Keuzehulp"), metaDesc (max 155 tekens, noemt "3 vragen" en "prijs van vandaag bij bol"), intro (2–3 zinnen), kort (1–2 zinnen, max 45 woorden, het directe antwoord), uitleg (70–130 woorden), fouten (3), faq (4–6, echte zoekvragen, antwoorden 1–2 zinnen), en actueel: één zin die zegt waarom dit nu speelt (bijv. "Sinterklaas valt op 5 december: bestel uiterlijk eind november."), plus actueelTot (datum JJJJ-MM-DD waarna die zin niet meer klopt).
+Antwoord alleen met één JSON-object met precies die velden.`;
+async function volledigItem(slug) { try { const v = await kv.get('hjdk:kz:' + slug); if (v && v.slug && !v.override) return v; const s0 = seed.items.find(i => i.slug === slug); return s0 ? Object.assign({}, s0, v && v.override ? v : {}) : (v || null); } catch (e) { return seed.items.find(i => i.slug === slug) || null; } }
+async function verversItem(slug, d, plan) {
+  const it = await volledigItem(slug); if (!it) return { ok: false, waarom: 'onbekende keuzehulp' };
+  const sig = (await kv.get(K.sig)) || {}; const r = await searchCached(it.term, { country: 'NL', size: 24, sort: 'RELEVANCE' }).catch(() => ({ products: [] }));
+  const ctx = { datum: d, momentenNu: momenten(d, -1, 21), weer: sig.weer || [], nieuws: (sig.nieuws || []).slice(0, 25), uitgelicht: ((await kv.get(K.uit)) || {}).blokken || [] };
+  const user = 'Keuzehulp (huidige versie):\n' + JSON.stringify({ slug: it.slug, title: it.title, h1: it.h1, term: it.term, cat: it.cat, intro: it.intro, kort: it.kort, uitleg: it.uitleg, fouten: it.fouten, faq: it.faq, vragen: it.questions.map(q => q.q + ' [' + q.options.map(o => o.label).join(' | ') + ']') }) + '\n\nWat nu speelt:\n' + JSON.stringify(ctx) + '\n\nEchte producten bij bol nu (titel — prijs):\n' + (r.products || []).slice(0, 20).map(p => '- ' + String(p.title).slice(0, 90) + ' — €' + p.price).join('\n');
+  let j; try { j = jsonUit((await claude(VERVERS_SYS, user, 3000)).txt); } catch (e) { return { ok: false, waarom: 'verversen mislukt: ' + String(e.message || e).slice(0, 140) }; }
+  const s1 = v => String(v == null ? '' : v).replace(/\s+/g, ' ').trim(); const upd = {};
+  ['seoTitle', 'metaDesc', 'intro', 'kort', 'uitleg', 'actueel'].forEach(k => { if (s1(j[k]).length > 10) upd[k] = s1(j[k]); });
+  if (upd.seoTitle) upd.seoTitle = upd.seoTitle.slice(0, 65); if (upd.metaDesc) upd.metaDesc = upd.metaDesc.slice(0, 160); if (upd.actueel) upd.actueel = upd.actueel.slice(0, 220);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(s1(j.actueelTot))) upd.actueelTot = s1(j.actueelTot); else if (upd.actueel) upd.actueelTot = addDays(d, 21);
+  if (Array.isArray(j.fouten) && j.fouten.length >= 3) upd.fouten = j.fouten.map(s1).filter(Boolean).slice(0, 5);
+  if (Array.isArray(j.faq) && j.faq.length >= 3) upd.faq = j.faq.filter(x => x && x.q && x.a).map(x => ({ q: s1(x.q), a: s1(x.a) })).slice(0, 7);
+  if (Object.keys(upd).length < 4) return { ok: false, waarom: 'te weinig bruikbare velden terug' };
+  const isSeed = seed.items.some(i => i.slug === slug); const cur = (await kv.get('hjdk:kz:' + slug)) || {};
+  const next = isSeed ? Object.assign({}, cur && cur.override ? cur : {}, upd, { slug, override: true, updatedAt: d, ververst: d }) : Object.assign({}, it, upd, { updatedAt: d, ververst: d });
+  await kv.set('hjdk:kz:' + slug, next); const idx = (await kv.get('hjdk:kz:index')) || []; if (idx.indexOf(slug) < 0) { idx.push(slug); await kv.set('hjdk:kz:index', idx); }
+  const st = await indexnow([DOMAIN + '/' + slug, DOMAIN + '/', DOMAIN + '/categorie/' + catSlug(it.cat)]);
+  return { ok: true, actueel: upd.actueel || '', indexnow: st };
+}
+
 // ---------- één stap van de dagronde ----------
 async function stap(opts) {
   const d = DAY(); const o = opts || {}; let plan = (await kv.get(K.plan(d))) || null;
-  if (!plan) { const p = await maakPlan(d); plan = { dag: d, at: new Date().toISOString(), lijst: p, klaar: [], mislukt: [], plannen: 1 }; await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); await log({ stap: 'plan', ok: true, onderwerpen: p.map(x => x.slug) }); return { gedaan: 'plan', plan: p }; }
-  if (!o.extra && !o.dry && plan.klaar.length >= PER_DAG()) return { gedaan: 'niets', reden: 'dagdoel gehaald (' + plan.klaar.length + '/' + PER_DAG() + ')' };
+  if (!plan) { const p = await maakPlan(d); plan = { dag: d, at: new Date().toISOString(), lijst: p.lijst, ververs: p.ververs, verversKlaar: [], klaar: [], mislukt: [], plannen: 1 }; await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); await log({ stap: 'plan', ok: true, onderwerpen: p.lijst.map(x => x.slug), ververs: p.ververs }); return { gedaan: 'plan', plan: p.lijst, ververs: p.ververs }; }
+  if (!o.extra && !o.dry && !o.onderwerp && plan.klaar.length >= PER_DAG()) {
+    const vk = plan.verversKlaar || []; const v = (plan.ververs || []).find(x => vk.indexOf(x) < 0);
+    if (v && vk.length < VERVERS()) { const t0 = Date.now(); const r = await verversItem(v, d, plan); plan.verversKlaar = vk.concat(v); await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); await log({ stap: 'ververs', ok: r.ok, slug: v, actueel: r.actueel, waarom: r.waarom, ms: Date.now() - t0 }); return { gedaan: r.ok ? 'ververst' : 'ververs-mislukt', onderwerp: v, waarom: r.waarom }; }
+    return { gedaan: 'niets', reden: 'dagdoel gehaald (' + plan.klaar.length + '/' + PER_DAG() + ')' };
+  }
   const have = new Set((await bestaande()).map(b => b.slug));
   let cand = o.onderwerp ? (plan.lijst.find(x => x.slug === o.onderwerp) || STARTLIJST.find(x => x.slug === o.onderwerp) || { slug: o.onderwerp, term: o.onderwerp.replace(/-/g, ' '), cat: 'Wonen', bron: 'handmatig' }) : plan.lijst.find(x => !have.has(x.slug) && !plan.mislukt.some(m => m.slug === x.slug));
-  if (!cand && (plan.plannen || 1) < 4) { const p = await maakPlan(d, plan.mislukt.map(m => m.slug)); plan.lijst = plan.lijst.concat(p.filter(x => !plan.lijst.some(y => y.slug === x.slug))); plan.plannen = (plan.plannen || 1) + 1; await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); cand = plan.lijst.find(x => !have.has(x.slug) && !plan.mislukt.some(m => m.slug === x.slug)); }
+  if (!cand && (plan.plannen || 1) < 4) { const p = (await maakPlan(d, plan.mislukt.map(m => m.slug))).lijst; plan.lijst = plan.lijst.concat(p.filter(x => !plan.lijst.some(y => y.slug === x.slug))); plan.plannen = (plan.plannen || 1) + 1; await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); cand = plan.lijst.find(x => !have.has(x.slug) && !plan.mislukt.some(m => m.slug === x.slug)); }
   if (!cand) return { gedaan: 'niets', reden: 'geen onderwerpen meer in het plan van vandaag' };
   const t0 = Date.now(); const r = await maakItem(cand, d);
   if (o.dry) return { gedaan: 'proef', onderwerp: cand, resultaat: r, ms: Date.now() - t0 };
@@ -322,29 +410,38 @@ async function stap(opts) {
 }
 
 export default async function handler(req, res) {
-  res.setHeader('cache-control', 'no-store');
+  res.setHeader('cache-control', 'no-store'); OIDC_HDR = String(req.headers['x-vercel-oidc-token'] || '');
   const url = new URL(req.url, 'http://x'); const op = url.searchParams.get('op') || 'status';
   const tok = url.searchParams.get('token') || req.headers['x-hjdk-token'] || '';
   const isToken = !!process.env.HJDK_TOKEN && tok === process.env.HJDK_TOKEN;
   const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
   try {
     if (op === 'status') {
-      const d = DAY(); const [plan, lg, sig, tk, calls, best] = await Promise.all([kv.get(K.plan(d)), kv.get(K.log), kv.get(K.sig), kv.get(K.tok(d)), kv.get(K.calls(d)), bestaande()]);
-      const sleutel = process.env.ANTHROPIC_API_KEY ? 'env' : ((await secrets()).ANTHROPIC_API_KEY ? 'setup' : 'ontbreekt');
-      const gemaakt = best.filter(b => b.gemaakt === 'kzmaak').sort((a, b) => String(b.publishAt).localeCompare(String(a.publishAt))).map(b => ({ slug: b.slug, dag: b.publishAt, url: DOMAIN + '/' + b.slug }));
-      return res.status(200).json({ ok: true, nu: new Date().toISOString(), instellingen: { perDag: PER_DAG(), modellen: MODELS, claudeSleutel: sleutel, maxClaudeAanroepenPerDag: MAX_CLAUDE() }, vandaag: plan ? { klaar: plan.klaar, mislukt: plan.mislukt, nogInPlan: plan.lijst.filter(x => !plan.klaar.some(k => k.slug === x.slug) && !plan.mislukt.some(m => m.slug === x.slug)).map(x => x.slug + ' — ' + (x.waarom || '')) } : null, claudeVandaag: { aanroepen: Number(calls) || 0, tokens: Number(tk) || 0 }, totaalKeuzehulpen: best.length, doorDezeRondeGemaakt: gemaakt.length, gemaakt: gemaakt.slice(0, 60), startlijstNogTeGaan: STARTLIJST.filter(x => !best.some(b => b.slug === x.slug)).map(x => x.slug + (x.vanaf ? ' (vanaf ' + x.vanaf + ')' : '')), signalen: sig ? { dag: sig.dag, metingen: sig.metingen, stijgers: (sig.stijgers || []).slice(0, 15).map(s => s.vb || s.k), nieuw: (sig.nieuw || []).slice(0, 10).map(s => s.vb || s.k), zonderResultaat: (sig.zonderResultaat || []).slice(0, 10), verzoeken: (sig.verzoeken || []).slice(0, 10), momenten: sig.momenten } : null, verdiensten30Dagen: await kv.get(K.verd).then(v => v ? (v.ok ? { periode: v.periode, totaal: v.totaal, categorieen: (v.categorieen || []).slice(0, 10), besteKeuzehulpen: (v.besteKeuzehulpen || []).slice(0, 10), veelKliksGeenOrders: v.veelKliksGeenOrders, verkochteProducten: (v.verkochteProducten || []).slice(0, 15) } : { fout: v.fout }) : null).catch(() => null), laatsteRondes: (lg || []).slice(0, 30), lessen: ((await kv.get(K.lessen)) || []).slice(0, 15) });
+      const d = DAY(); const [plan, lg, sig, tk, calls, best, pr, uit, rt] = await Promise.all([kv.get(K.plan(d)), kv.get(K.log), kv.get(K.sig), kv.get(K.tok(d)), kv.get(K.calls(d)), bestaande(), kv.get(K.prest), kv.get(K.uit), claudeRoute()]);
+      const gemaakt = best.filter(b => b.gemaakt === 'kzmaak').sort((a, b) => String(b.publishAt).localeCompare(String(a.publishAt))).map(b => ({ slug: b.slug, dag: b.publishAt, bron: b.bron || '', url: DOMAIN + '/' + b.slug }));
+      return res.status(200).json({ ok: true, nu: new Date().toISOString(), instellingen: { perDag: PER_DAG(), verversPerDag: VERVERS(), claude: rt ? rt.label : 'ontbreekt', maxClaudeAanroepenPerDag: MAX_CLAUDE() },
+        vandaag: plan ? { klaar: plan.klaar, mislukt: plan.mislukt, ververst: plan.verversKlaar || [], nogInPlan: plan.lijst.filter(x => !plan.klaar.some(k => k.slug === x.slug) && !plan.mislukt.some(m => m.slug === x.slug)).map(x => x.slug + ' — ' + (x.bron || '') + ': ' + (x.waarom || '')) } : null,
+        claudeVandaag: { aanroepen: Number(calls) || 0, tokens: Number(tk) || 0 }, totaalKeuzehulpen: best.length, doorDezeRondeGemaakt: gemaakt.length, gemaakt: gemaakt.slice(0, 60),
+        uitgelichtVandaag: uit || null,
+        geleerd: pr ? { dag: pr.dag, organischBezoekPerBron: pr.organischPerBron, crawlersTotaal: pr.crawlersTotaal, perBron: pr.perBron, perCategorie: (pr.perCategorie || []).slice(0, 12), besteOrganisch: (pr.besteOrganisch || []).slice(0, 12), zonderBereikNa14Dagen: pr.zonderBereikNa14Dagen } : null,
+        signalen: sig ? { dag: sig.dag, metingen: sig.metingen, momentenNu: sig.nu, komendeMomenten: sig.momenten, weer: sig.weer, schoolvakanties: sig.schoolvakanties, nieuwskoppen: (sig.nieuws || []).slice(0, 12), stijgers: (sig.stijgers || []).slice(0, 15).map(s => s.vb || s.k), zonderResultaat: (sig.zonderResultaat || []).slice(0, 10), verzoeken: (sig.verzoeken || []).slice(0, 10) } : null,
+        startlijstNogTeGaan: STARTLIJST.filter(x => !best.some(b => b.slug === x.slug)).map(x => x.slug + (x.vanaf ? ' (vanaf ' + x.vanaf + ')' : '')),
+        verdiensten30Dagen: await kv.get(K.verd).then(v => v ? (v.ok ? { periode: v.periode, totaal: v.totaal, categorieen: (v.categorieen || []).slice(0, 10), besteKeuzehulpen: (v.besteKeuzehulpen || []).slice(0, 10), veelKliksGeenOrders: v.veelKliksGeenOrders, verkochteProducten: (v.verkochteProducten || []).slice(0, 15) } : { fout: v.fout }) : null).catch(() => null),
+        laatsteRondes: (lg || []).slice(0, 40), lessen: ((await kv.get(K.lessen)) || []).slice(0, 15) });
     }
-    if (op === 'signalen') { if (!isCron && !isToken) return res.status(401).json({ error: 'alleen cron of token' }); const s = await signalen(); return res.status(200).json({ ok: true, dag: s.dag, metingen: s.metingen, stijgers: s.stijgers.slice(0, 10), nieuw: s.nieuw.slice(0, 10), ms: s.ms }); }
+    if (op === 'signalen') { if (!isCron && !isToken) return res.status(401).json({ error: 'alleen cron of token' }); const s = await signalen(); return res.status(200).json({ ok: true, dag: s.dag, metingen: s.metingen, weer: s.weer, nieuws: (s.nieuws || []).length, stijgers: s.stijgers.slice(0, 10), ms: s.ms }); }
     if (op === 'dag' || op === 'nu') {
       if (op === 'dag' && !isCron && !isToken) return res.status(401).json({ error: 'alleen cron of token' });
       if (op === 'nu' && !isToken) return res.status(401).json({ error: 'token' });
-      const lock = await kv.raw(['SET', K.lock, String(Date.now()), 'NX', 'EX', '290']).catch(() => 'OK');
+      const lock = await kv.raw(['SET', K.lock, String(Date.now()), 'NX', 'EX', '295']).catch(() => 'OK');
       if (lock !== 'OK') return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'er draait al een ronde' });
+      const t0 = Date.now(); const stappen = [];
       try {
         if (!(await kv.get(K.sig).then(s => s && s.dag === DAY()).catch(() => false))) { try { await signalen(); } catch (e) { await log({ stap: 'signalen', ok: false, waarom: String(e.message || e).slice(0, 160) }); } }
         const o = { extra: url.searchParams.get('extra') === '1', dry: url.searchParams.get('dry') === '1', onderwerp: String(url.searchParams.get('onderwerp') || '').replace(/[^a-z0-9-]/g, '') || null };
-        let r = await stap(o); if (op === 'nu' && r.gedaan === 'plan') r = Object.assign({ plan: r.plan.map(x => x.slug) }, await stap(o)); // handmatig: plan én eerste keuzehulp in één klik
-        return res.status(200).json(Object.assign({ ok: true }, r));
+        // meerdere stappen per aanroep zolang er tijd is (elke stap ~30–90 s), zodat 10+ keuzehulpen per ochtend ruim lukt
+        for (let n = 0; n < 6; n++) { const r = await stap(o); stappen.push(r); if (o.dry || o.onderwerp || r.gedaan === 'niets' || Date.now() - t0 > 150000) break; }
+        return res.status(200).json({ ok: true, stappen, ms: Date.now() - t0 });
       } finally { try { await kv.del([K.lock]); } catch (e) {} }
     }
     return res.status(404).json({ error: 'onbekende op' });

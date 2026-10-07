@@ -10,7 +10,7 @@
     },
     {
       "path": "/api/pinterest/post",
-      "schedule": "15 7 * * *"
+      "schedule": "15 6-21 * * *"
     },
     {
       "path": "/api/nl/daily",
@@ -42,10 +42,30 @@
     },
     {
       "path": "/api/kzmaak/dag",
-      "schedule": "*/10 3-9 * * *"
+      "schedule": "*/10 3-12 * * *"
+    },
+    {
+      "path": "/api/kz/dealsrefresh",
+      "schedule": "25 */3 * * *"
     }
   ],
   "rewrites": [
+    {
+      "source": "/pin/:p",
+      "destination": "/api/pin?p=:p"
+    },
+    {
+      "source": "/feed.xml",
+      "destination": "/api/kz?op=rss"
+    },
+    {
+      "source": "/rss.xml",
+      "destination": "/api/kz?op=rss"
+    },
+    {
+      "source": "/pinterest.xml",
+      "destination": "/api/kz?op=pinfeed"
+    },
     {
       "source": "/llms-full.txt",
       "destination": "/api/kz?op=llmsfull"
@@ -190,10 +210,13 @@
   ],
   "functions": {
     "api/kz.js": {
-      "maxDuration": 30
+      "maxDuration": 60
     },
     "api/kzmaak.js": {
       "maxDuration": 300
+    },
+    "api/pin.js": {
+      "maxDuration": 30
     }
   }
 }

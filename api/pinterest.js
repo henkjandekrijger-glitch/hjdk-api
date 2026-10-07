@@ -47,12 +47,13 @@ async function autoCandidates(limit) {
   return res;
 }
 
-// keuzehulp.best: elke run één keuzehulp pinnen die nog niet gepind is (nieuwste eerst)
-async function kzCandidate() {
-  const today = new Date().toISOString().slice(0, 10);
-  const items = (kzSeed.items || []).filter(i => !i.publishAt || i.publishAt <= today).sort((a, b) => String(b.publishAt || '').localeCompare(String(a.publishAt || '')));
-  for (const i of items) { const done = await kv.get('hjdk:pins:done:kz-' + i.slug); if (!done) return { url: 'https://keuzehulp.best/' + i.slug, slug: 'kz-' + i.slug, board: 'Keuzehulpen: slim kiezen' }; }
-  return null;
+// keuzehulp.best: per run een paar keuzehulpen pinnen die nog niet gepind zijn (nieuwste eerst, ook de dagelijks gemaakte), met het eigen pin-beeld
+async function kzCandidates(k) {
+  const today = new Date().toISOString().slice(0, 10); let extra = [];
+  try { const idx = (await kv.get('hjdk:kz:index')) || []; const vals = idx.length ? await kv.mget(...idx.map(s => 'hjdk:kz:' + s)) : []; extra = vals.filter(v => v && v.slug && v.title && !v.override); } catch (e) {}
+  const seen = new Set(); const items = extra.concat(kzSeed.items || []).filter(i => { if (seen.has(i.slug)) return false; seen.add(i.slug); return !i.publishAt || i.publishAt <= today; }).sort((a, b) => String(b.publishAt || '').localeCompare(String(a.publishAt || '')));
+  const out = []; for (const i of items) { if (out.length >= k) break; const done = await kv.get('hjdk:pins:done:kz-' + i.slug); if (!done) out.push({ url: 'https://keuzehulp.best/' + i.slug + '?utm_source=pinterest&utm_medium=pin', slug: 'kz-' + i.slug, board: 'Keuzehulpen ' + String(i.cat || 'slim kiezen').toLowerCase(), kz: i }); }
+  return out;
 }
 
 export default async function handler(req, res) {
@@ -90,17 +91,17 @@ export default async function handler(req, res) {
       const n = Math.max(1, Math.min(5, Number(url.searchParams.get('n')) || 2));
       const status = await tokenStatus(); if (!/^verbonden/.test(status)) return res.status(200).json({ ok: false, error: 'Pinterest ' + status });
       let queue = (await kv.get(QUEUE)) || []; const log = (await kv.get(LOG)) || []; const done = [];
-      const todo = queue.slice(0, n); const kzc = await kzCandidate(); if (kzc) todo.push(kzc); if (todo.length < n + (kzc ? 1 : 0)) todo.push(...(await autoCandidates(n + (kzc ? 1 : 0) - todo.length)));
+      const todo = queue.slice(0, n); const kzs = await kzCandidates(Math.max(0, Math.min(10, Number(process.env.KZ_PINS_PER_RUN || 2)))); todo.push(...kzs); if (todo.length < n + kzs.length) todo.push(...(await autoCandidates(n + kzs.length - todo.length)));
       for (const item of todo) {
-        const info = await pageInfo(item.url);
+        const info = item.kz ? { title: item.kz.title, image: 'https://keuzehulp.best/pin/' + item.kz.slug + '-0.png', desc: (item.kz.kort || item.kz.intro || '') + ' In 3 vragen naar het product dat bij jou past, met de prijs van vandaag bij bol.' } : await pageInfo(item.url);
         const slug = item.slug || item.url.replace(/^https?:\/\/(www\.)?yoo\.rs\//, '').replace(/\.html$/, '-html').replace(/[^a-z0-9-]/gi, '-').toLowerCase();
         let entry = { at: Date.now(), url: item.url, board: '', ok: false };
         if (info.error || !info.image) { entry.error = info.error || 'geen afbeelding (og:image) op de pagina'; }
         else {
           try {
             const boardName = item.board || boardFor(info.title + ' ' + slug);
-            const boardId = await ensureBoard(boardName, 'Ideeën en tips van Yoors (yoo.rs)');
-            const desc = (info.desc || info.title) + ' Lees het hele artikel op yoo.rs.';
+            const boardId = await ensureBoard(boardName, item.kz ? 'Keuzehulpen van keuzehulp.best: in 3 vragen naar het product dat bij jou past, met de prijs van vandaag.' : 'Ideeën en tips van Yoors (yoo.rs)');
+            const desc = item.kz ? info.desc : (info.desc || info.title) + ' Lees het hele artikel op yoo.rs.';
             const pin = await createPin({ boardId, title: info.title, description: desc, link: item.url, imageUrl: info.image, altText: info.title });
             entry = Object.assign(entry, { ok: true, board: boardName, title: info.title, pinId: pin.id });
           } catch (e) { entry.error = String(e && e.message || e).slice(0, 200); }
