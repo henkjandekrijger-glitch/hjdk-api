@@ -15,8 +15,9 @@ import { md, mdStart, mdCallback, mdState, mdAutoLogin, mdHeeftSleutel } from '.
 
 const SITE = 'https://keuzehulp.best';
 const E = (k, d) => { const v = Number(process.env[k]); return Number.isFinite(v) && v > 0 ? v : d; };
-const MAX_ACTIEF = () => E('MD_MAX', 8), NIEUW_PER_DAG = () => E('MD_NIEUW_PER_DAG', 2), MIN_SALDO = () => E('MD_MIN_SALDO', 4);
-const START_BOD = () => E('MD_BOD', 0.02), MAX_BOD = () => E('MD_MAX_BOD', 0.06), DAG = () => Math.max(10, E('MD_DAG_PER_CAMPAGNE', 10)), TOTAAL = () => E('MD_TOTAAL_PER_CAMPAGNE', 15); // Mondiad: dagbudget min $10, per zone min $2; het totaalbudget is de echte rem
+const MAX_ACTIEF = () => E('MD_MAX', 12), NIEUW_PER_DAG = () => E('MD_NIEUW_PER_DAG', 2), MIN_SALDO = () => E('MD_MIN_SALDO', 4);
+const BIEDING = () => (process.env.MD_BIEDING || 'CPC').toUpperCase(); // CPC geeft volume; CPA leverde bijna niets (Mondiad levert pas als er conversies zijn)
+const START_BOD = () => E('MD_BOD', BIEDING() === 'CPC' ? 0.006 : 0.02), MAX_BOD = () => E('MD_MAX_BOD', BIEDING() === 'CPC' ? 0.02 : 0.06), DAG = () => Math.max(10, E('MD_DAG_PER_CAMPAGNE', 10)), TOTAAL = () => E('MD_TOTAAL_PER_CAMPAGNE', 15); // Mondiad: dagbudget min $10, per zone min $2; het totaalbudget is de echte rem
 const DEFAULT_SLUGS = ['thuisbatterij', 'robotstofzuiger', 'boxspring', 'wasmachine', 'koelkast', 'e-bike', 'vaatwasser', 'bank', 'wasdroger', 'airfryer', 'matras', 'elektrische-deken']; // hoge orderwaarde x hoge bol-commissie (wonen/huishouden 7%) eerst, tot de bol-cijfers het overnemen
 const K = { log: 'hjdk:md:log', zwart: 'hjdk:md:zwart', laatste: 'hjdk:md:laatste', lock: 'hjdk:md:lock', dag: d => 'hjdk:md:dag:' + d };
 const DAY = (o = 0) => new Date(Date.now() + o * 864e5).toISOString().slice(0, 10);
@@ -120,7 +121,7 @@ async function ronde(droog) {
       B('budget bijgevuld', pc.c.id + ' (' + pc.slug + ')', `${b} bol-kliks op ${a} bezoekers; totaalbudget $${det.budget} -> $${nb}`); if (!droog) { try { await md('mondiad_update_campaign', { json: JSON.stringify({ id: pc.c.id, budget: nb }) }); vandaag['vul' + pc.c.id] = 1; } catch (e) { B('fout', 'bijvullen ' + pc.c.id, String(e.message).slice(0, 120)); } } } }
   // ---- 3. portefeuille ----
   const waarde = pc => { const p = lp['kz:' + pc.slug] || {}; return (num(p.commission) + num(p.clicks) * 0.004) / (pc.kosten + 0.5); };
-  const lopend = Object.values(perCamp).filter(pc => !/PAUSED|REJECTED|FINISHED/i.test(pc.c.status));
+  const lopend = Object.values(perCamp).filter(pc => !/PAUSED|REJECTED|FINISHED/i.test(pc.c.status) && !(String(pc.c.bidType || '').toUpperCase() === 'CPA' && pc.kliks < 100));
   if (lopend.length > 4 && vandaag.uit < 1) { const kand = lopend.filter(pc => pc.kosten >= 3 && !num((lp['kz:' + pc.slug] || {}).orders)).sort((a, b) => waarde(a) - waarde(b))[0];
     const med = lopend.map(waarde).sort((a, b) => a - b)[Math.floor(lopend.length / 2)];
     if (kand && waarde(kand) < 0.5 * med) { B('campagne uit', kand.c.id + ' (' + kand.slug + ')', `$${kand.kosten.toFixed(2)} uitgegeven, laagste opbrengst per dollar`); if (!droog) { try { try { await md('mondiad_update_campaign', { json: JSON.stringify({ id: kand.c.id, status: 'PAUSED' }) }); } catch (e1) { await md('mondiad_update_campaign', { json: JSON.stringify({ id: kand.c.id, dailyBudget: 1 }) }); B('campagne afgeknepen', kand.c.id, 'pauzeren via de API kan niet; dagbudget naar $1'); } vandaag.uit++; } catch (e) { B('fout', 'pauzeren ' + kand.c.id, String(e.message).slice(0, 120)); } } } }
@@ -136,8 +137,8 @@ async function ronde(droog) {
     let tmpl = null; try { const t = (lopend[0] || Object.values(perCamp)[0]); if (t) tmpl = (rows(await md('mondiad_get_campaign_details', { ids: [String(t.c.id)] })) || [])[0]; } catch (e) {}
     for (const slug of kandidaten.slice(0, ruimte)) { const it = alle.find(i => i.slug === slug); const vs = await teksten(it, [], 4); const img = droog ? { icon: '', image: '' } : await beelden(slug);
       if (!droog && (!img.icon || !img.image)) { B('fout', 'nieuwe campagne ' + slug, 'beelden uploaden mislukt'); continue; }
-      const camp = Object.assign({ adType: ['IN_PAGE_PUSH'], bidType: 'CPA', countryTargeting: (process.env.MD_LANDEN || 'NL').split(','), countryTargetingMode: 'WHITE_LIST', deviceTargeting: [4, 5], deviceTargetingMode: 'WHITE_LIST', languageTargeting: [137], languageTargetingMode: 'WHITE_LIST', trafficType: ['MAINSTREAM'], landingPageType: 'MAINSTREAM', frequencyCap: { frequency: 1, duration: 24, actionType: 'IMPRESSION', actionScope: 'CAMPAIGN' }, dayPartingTimezone: 'Europe/Amsterdam', hideReferrer: true }, tmpl ? { deviceTargeting: tmpl.deviceTargeting, languageTargeting: tmpl.languageTargeting, frequencyCap: tmpl.frequencyCap } : {}, {
-        name: 'KZ-MD | ' + slug + ' | NL-BE | IPP CPA | ' + DAY().replace(/-/g, ''), status: 'Pending', runAfterModeration: true, bid: START_BOD(), dailyBudget: DAG(), budget: TOTAAL(), zoneIdDailyBudget: 2,
+      const camp = Object.assign({ adType: ['IN_PAGE_PUSH'], bidType: BIEDING(), countryTargeting: (process.env.MD_LANDEN || 'NL').split(','), countryTargetingMode: 'WHITE_LIST', deviceTargeting: [4, 5], deviceTargetingMode: 'WHITE_LIST', languageTargeting: [137], languageTargetingMode: 'WHITE_LIST', trafficType: ['MAINSTREAM'], landingPageType: 'MAINSTREAM', frequencyCap: { frequency: 1, duration: 24, actionType: 'IMPRESSION', actionScope: 'CAMPAIGN' }, dayPartingTimezone: 'Europe/Amsterdam', hideReferrer: true }, tmpl ? { deviceTargeting: tmpl.deviceTargeting, languageTargeting: tmpl.languageTargeting, frequencyCap: tmpl.frequencyCap } : {}, {
+        name: 'KZ-MD ' + BIEDING() + ' | ' + slug + ' | NL | IPP | ' + DAY().replace(/-/g, ''), status: 'Pending', runAfterModeration: true, bid: START_BOD(), dailyBudget: DAG(), budget: TOTAAL(), zoneIdDailyBudget: 2,
         url: SITE + '/keuzehulp/' + slug + '?utm_source=mondiad&utm_medium=ipp&utm_campaign=kzmd-' + slug + '&clickid=[clickid]&zoneid=[zoneid]&campaignid=[campaignid]&creativeid=[creativeid]',
         zoneIdListMode: 'BLACK_LIST', zoneIdList: [...zwart].map(Number).filter(Boolean),
         creatives: vs.map((v, i) => ({ title: v.title, description: v.description, icon: img.icon, image: img.image, tag: 'kz-' + slug.slice(0, 12) + '-' + (i + 1), status: 'PENDING' })) });
