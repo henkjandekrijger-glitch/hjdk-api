@@ -17,7 +17,7 @@ const SITE = 'https://keuzehulp.best';
 const E = (k, d) => { const v = Number(process.env[k]); return Number.isFinite(v) && v > 0 ? v : d; };
 const MAX_ACTIEF = () => E('MD_MAX', 8), NIEUW_PER_DAG = () => E('MD_NIEUW_PER_DAG', 2), MIN_SALDO = () => E('MD_MIN_SALDO', 4);
 const START_BOD = () => E('MD_BOD', 0.02), MAX_BOD = () => E('MD_MAX_BOD', 0.06), DAG = () => Math.max(10, E('MD_DAG_PER_CAMPAGNE', 10)), TOTAAL = () => E('MD_TOTAAL_PER_CAMPAGNE', 15); // Mondiad: dagbudget min $10, per zone min $2; het totaalbudget is de echte rem
-const DEFAULT_SLUGS = ['airfryer', 'matras', 'halloween-kostuum-kind', 'robotstofzuiger', 'thuisbatterij', 'elektrische-deken'];
+const DEFAULT_SLUGS = ['thuisbatterij', 'robotstofzuiger', 'boxspring', 'wasmachine', 'koelkast', 'e-bike', 'vaatwasser', 'bank', 'wasdroger', 'airfryer', 'matras', 'elektrische-deken']; // hoge orderwaarde x hoge bol-commissie (wonen/huishouden 7%) eerst, tot de bol-cijfers het overnemen
 const K = { log: 'hjdk:md:log', zwart: 'hjdk:md:zwart', laatste: 'hjdk:md:laatste', lock: 'hjdk:md:lock', dag: d => 'hjdk:md:dag:' + d };
 const DAY = (o = 0) => new Date(Date.now() + o * 864e5).toISOString().slice(0, 10);
 const r4 = x => Math.round(x * 10000) / 10000;
@@ -100,7 +100,7 @@ async function ronde(droog) {
     if (zbVer) upd.zoneCustomBids = Object.entries(zb).map(([zoneId, b]) => ({ zoneId: Number(zoneId), bid: b }));
     // te weinig verkeer terwijl de campagne goed doorklikt: bod omhoog
     const cA = Object.keys(pc.zones).reduce((a, z) => a + (eigen[z] ? eigen[z].aankomst : 0), 0), cB = Object.keys(pc.zones).reduce((a, z) => a + (eigen[z] ? eigen[z].bol : 0), 0);
-    if (pc.kliks < 14 * 20 && cA >= 20 && cB / cA >= gem && bod < MAX_BOD()) { upd.bid = r4(Math.min(MAX_BOD(), bod * 1.2)); B('bod omhoog', c.id + ' (' + pc.slug + ')', `weinig verkeer (${pc.kliks} kliks/14d) maar goede doorklik; $${bod} -> $${upd.bid}`); }
+    if (pc.kliks < 14 * 20 && cA >= 20 && cB >= 3 && gem > 0 && cB / cA >= gem && bod < MAX_BOD()) { upd.bid = r4(Math.min(MAX_BOD(), bod * 1.2)); B('bod omhoog', c.id + ' (' + pc.slug + ')', `weinig verkeer (${pc.kliks} kliks/14d) maar goede doorklik; $${bod} -> $${upd.bid}`); }
     if (Object.keys(upd).length > 1 && !droog) { try { await md('mondiad_update_campaign', { json: JSON.stringify(upd) }); } catch (e) { B('fout', 'bijwerken ' + c.id, String(e.message).slice(0, 160)); } }
     // advertenties: zwakste uit, één nieuwe variant per dag
     const crs = (det.creatives || []).filter(x => x.status === 'ACTIVE' || x.status === 'PENDING');
@@ -123,8 +123,9 @@ async function ronde(droog) {
     const med = lopend.map(waarde).sort((a, b) => a - b)[Math.floor(lopend.length / 2)];
     if (kand && waarde(kand) < 0.5 * med) { B('campagne uit', kand.c.id + ' (' + kand.slug + ')', `$${kand.kosten.toFixed(2)} uitgegeven, laagste opbrengst per dollar`); if (!droog) { try { try { await md('mondiad_update_campaign', { json: JSON.stringify({ id: kand.c.id, status: 'PAUSED' }) }); } catch (e1) { await md('mondiad_update_campaign', { json: JSON.stringify({ id: kand.c.id, dailyBudget: 1 }) }); B('campagne afgeknepen', kand.c.id, 'pauzeren via de API kan niet; dagbudget naar $1'); } vandaag.uit++; } catch (e) { B('fout', 'pauzeren ' + kand.c.id, String(e.message).slice(0, 120)); } } } }
   const heeft = new Set(lopend.map(pc => pc.slug));
-  let kandidaten = []; try { const u = await kv.get('hjdk:kz:uitgelicht'); JSON.stringify(u || '').replace(/"([a-z0-9]+(?:-[a-z0-9]+)*)"/g, (m, s) => { kandidaten.push(s); return m; }); } catch (e) {}
-  kandidaten.push(...Object.entries(lp).filter(([k]) => k.startsWith('kz:')).sort((a, b) => num(b[1].orders) - num(a[1].orders) || num(b[1].clicks) - num(a[1].clicks)).map(([k]) => k.slice(3)), ...DEFAULT_SLUGS);
+  let uit = []; try { const u = await kv.get('hjdk:kz:uitgelicht'); JSON.stringify(u || '').replace(/"([a-z0-9]+(?:-[a-z0-9]+)*)"/g, (m, s2) => { uit.push(s2); return m; }); } catch (e) {}
+  // volgorde = waar de omzet zit: eerst wat bij bol al bestellingen/kliks gaf, dan hoge orderwaarde, dan seizoen/actueel
+  let kandidaten = [...Object.entries(lp).filter(([k, x]) => k.startsWith('kz:') && (num(x.orders) > 0 || num(x.clicks) >= 20)).sort((a, b) => num(b[1].commission) - num(a[1].commission) || num(b[1].orders) - num(a[1].orders) || num(b[1].clicks) - num(a[1].clicks)).map(([k]) => k.slice(3)), ...DEFAULT_SLUGS, ...uit];
   const alle = await items(); const bestaat = new Set(alle.map(i => i.slug));
   kandidaten = [...new Set(kandidaten)].filter(s => bestaat.has(s) && !heeft.has(s));
   const ruimte = Math.min(MAX_ACTIEF() - lopend.length, NIEUW_PER_DAG() - vandaag.nieuweCampagnes);
