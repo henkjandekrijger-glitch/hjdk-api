@@ -58,6 +58,7 @@ async function beelden(slug) {
 }
 
 async function ronde(droog) {
+  if (process.env.MD_KZ_AAN !== '1' && !droog) { const st = { at: new Date().toISOString(), uit: true, waarom: 'Betaald verkeer voor keuzehulp staat uit (besluit 8 okt 2026). Weer aan: zet MD_KZ_AAN=1 in Vercel.' }; return st; }
   ITEMS = null;
   const besluiten = []; const B = (soort, wat, waarom) => besluiten.push({ soort, wat, waarom });
   const acc = await md('mondiad_get_current_account', {}); const saldo = num(acc && acc.account && acc.account.accountBalance);
