@@ -173,13 +173,16 @@ async function verdiensten(best) {
   const mk = () => ({ kliks: 0, orders: 0, commissie: 0, omzet: 0 }); const kz = {}, cat = {}, prod = {}, pct = {}; const tot = { orders: 0, commissie: 0, kzKliks: 0, kzOrders: 0, kzCommissie: 0 };
   const add = (o, k, f, v) => { if (!k) return; const x = o[k] || (o[k] = mk()); x[f] += v; };
   promo.forEach(r => { const s = slugOf(r.subId); if (!s) return; const c = num(r.clicks); tot.kzKliks += c; add(kz, s, 'kliks', c); add(cat, catOf[s], 'kliks', c); });
-  orders.forEach(r => { const com = num(r.commission != null ? r.commission : r.commissionOriginal), rev = num(r.priceExclVat != null ? r.priceExclVat : r.revenueExclVat); const s = slugOf(r.subId); tot.orders++; tot.commissie += com;
+  const bronOf = sub => { const m = String(sub || '').match(/-(ads-bing|ads-google|google|bing|pinterest|chatgpt|direct|overig|social|mail|push|betaald|perplexity|copilot|gemini|duckduckgo)$/); return m ? m[1] : 'onbekend'; }; const perBron = {};
+  promo.forEach(r => { if (slugOf(r.subId)) add(perBron, bronOf(r.subId), 'kliks', num(r.clicks)); });
+  orders.forEach(r => { const com = num(r.commission != null ? r.commission : r.commissionOriginal), rev = num(r.priceExclVat != null ? r.priceExclVat : r.revenueExclVat); const s = slugOf(r.subId); tot.orders++; tot.commissie += com; if (s) { add(perBron, bronOf(r.subId), 'orders', 1); add(perBron, bronOf(r.subId), 'commissie', com); }
     if (s) { tot.kzOrders++; tot.kzCommissie += com; add(kz, s, 'orders', 1); add(kz, s, 'commissie', com); add(kz, s, 'omzet', rev); add(cat, catOf[s], 'orders', 1); add(cat, catOf[s], 'commissie', com); }
     if (r.productTitle) { const k = String(r.productTitle).slice(0, 80) + (r.commissionPercentage != null ? ' [' + r.commissionPercentage + '%]' : ''); add(prod, k, 'orders', 1); add(prod, k, 'commissie', com); add(prod, k, 'omzet', rev); prod[k].via = s ? 'keuzehulp ' + s : 'andere site'; }
     if (r.commissionPercentage != null) { add(pct, r.commissionPercentage + '%', 'orders', 1); add(pct, r.commissionPercentage + '%', 'commissie', com); } });
   const lijst = o => Object.entries(o).map(([k, x]) => Object.assign({ k, kliks: x.kliks, orders: x.orders, commissie: Math.round(x.commissie * 100) / 100, per1000kliks: x.kliks >= 50 ? Math.round(x.commissie / x.kliks * 1000 * 100) / 100 : null }, x.via ? { via: x.via, omzet: Math.round(x.omzet) } : {}));
   const kzL = lijst(kz), catL = lijst(cat);
   return { ok: true, periode: from + ' t/m ' + d, totaal: { orders: tot.orders, commissie: Math.round(tot.commissie * 100) / 100, keuzehulpKliks: tot.kzKliks, keuzehulpOrders: tot.kzOrders, keuzehulpCommissie: Math.round(tot.kzCommissie * 100) / 100 },
+    perBron: lijst(perBron),
     besteKeuzehulpen: kzL.filter(x => x.orders > 0).sort((a, b) => b.commissie - a.commissie).slice(0, 25),
     categorieen: catL.sort((a, b) => (b.per1000kliks || 0) - (a.per1000kliks || 0) || b.commissie - a.commissie),
     veelKliksGeenOrders: kzL.filter(x => x.kliks >= 100 && !x.orders).sort((a, b) => b.kliks - a.kliks).slice(0, 15).map(x => x.k + ' (' + x.kliks + ' kliks)'),

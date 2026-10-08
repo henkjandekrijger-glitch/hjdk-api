@@ -27,7 +27,7 @@ export async function score(site, dagen) {
     if (soort === 'bron') { const B = perBron[k] || (perBron[k] = { bezoeken: 0, starts: 0, winkelkliks: 0 }); if (t === 'hv') { B.bezoeken += v; D.bezoeken += v; } if (t === 'hss') B.starts += v; if (t === 'hcs') B.winkelkliks += v; }
     else { const X = perPag[k] || (perPag[k] = { weergaven: 0, starts: 0, winkelkliks: 0 }); if (t === 'hp') { X.weergaven += v; D.weergaven += v; } if (t === 'hs') { X.starts += v; D.starts += v; } if (t === 'hc') { X.winkelkliks += v; D.winkelkliks += v; } } });
   const catOf = Object.fromEntries(pages.map(x => [x.slug, x.cat]));
-  let geld = null; if (site === 'kz') { try { const v = await kv.get('hjdk:kz:verdiensten'); if (v && v.ok) geld = { periode: v.periode, keuzehulpOrders: v.totaal.keuzehulpOrders, keuzehulpCommissie: v.totaal.keuzehulpCommissie, perKeuzehulp: v.besteKeuzehulpen }; } catch (e) {} }
+  let geld = null; if (site === 'kz') { try { const v = await kv.get('hjdk:kz:verdiensten'); if (v && v.ok) geld = { periode: v.periode, keuzehulpOrders: v.totaal.keuzehulpOrders, keuzehulpCommissie: v.totaal.keuzehulpCommissie, perBron: v.perBron || [], perKeuzehulp: v.besteKeuzehulpen }; } catch (e) {} }
   const pag = Object.entries(perPag).map(([slug, x]) => Object.assign({ slug, cat: catOf[slug] || '' }, x, { klikPct: x.weergaven ? Math.round(1000 * x.winkelkliks / x.weergaven) / 10 : 0 })).sort((a, b) => b.weergaven - a.weergaven);
   // beslisregels (over de gekozen periode)
   const aanpassen = pag.filter(x => x.slug !== 'home' && x.weergaven >= 15 && x.winkelkliks === 0).map(x => x.slug).slice(0, 5);
