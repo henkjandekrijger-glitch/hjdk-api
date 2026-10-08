@@ -19,7 +19,7 @@ import { md } from '../lib/mdmcp.js';
 import { look } from '../lib/look.js';
 import seed from '../data/shop-seed.json' with { type: 'json' };
 
-const LAND = () => (process.env.SHOP_LAND || 'https://hjdk-api.vercel.app').replace(/\/$/, '');
+const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
 const SHOP = 'https://yoo.rs/shop';
 const PB = { pa: 'https://ad.propellerads.com/conversion.php?aid=3772727&pid=&tid=151850&visitor_id={clickid}', md: 'https://postback.mondiad.com/track?uid=31070&clickid={clickid}' };
 const NAAM = 'SHOP-LUS'; // elke campagne met dit in de naam hoort bij de lus
@@ -87,9 +87,9 @@ async function rangorde(cat, vast) {
   const gezien = new Set(await smembers(K.set('p'))); const tel = await productTellers(kand.filter(i => gezien.has(i.id)).map(i => i.id));
   return kand.map(i => { const u = tel[i.id] || { himp: 0, hklik: 0, imp: 0, klik: 0, cart: 0, koop: 0 }; const g = gisteren[i.id] || [i.v, i.f];
     const n = u.himp + 0.3 * u.imp, k = u.hklik + u.klik + 3 * u.cart + 12 * u.koop;
-    const ctr = vast ? (k + 0.6) / (n + 8) : beta(k + 0.6, Math.max(0.5, n - Math.min(n, u.hklik + u.klik)) + 7.4);
+    const ctr = vast ? (k + 2) / (n + 26) : beta(k + 2, Math.max(0, n - Math.min(n, u.hklik + u.klik)) + 24); // voorkennis: ~8% klikt door; pas met echte bezoekers verschuift de volgorde
     const shop = 1 + 0.25 * Math.min(8, i.f) + 0.03 * Math.min(40, i.v) + 0.4 * Math.max(0, i.f - g[1]) + 0.05 * Math.max(0, i.v - g[0]);
-    return { id: i.id, score: ctr * seizoen(i) * shop * (start.has(i.id) ? 1.6 : 1) * (i.p <= 50 ? 1.15 : 1), n: Math.round(n), k, thema: themaVan(i) }; }).sort((a, b) => b.score - a.score);
+    const sz = seizoen(i); return { id: i.id, score: ctr * sz * shop * (start.has(i.id) ? 1.6 : 1) * (i.p <= 50 ? 1.15 : 1), n: Math.round(n), k, thema: themaVan(i), reden: sz > 1 || i.f > 0 || k > 0 }; }).sort((a, b) => b.score - a.score);
 }
 
 // ---------------- Claude voor advertentieteksten (Vercel AI Gateway met het OIDC-token van dit project; anders eigen sleutel; anders sjabloon) ----------------
@@ -150,7 +150,7 @@ async function ronde(droog) {
   if (!cat.terugval) { let ruimte = NIEUWE_ADS_PER_DAG() - num(vandaag.nieuweAds);
     // eerst: een tweede tekst voor het product dat het best doorklikt; dan: het beste product dat nog geen advertentie heeft
     const kand = []; const besteMetData = vastRang.find(r => r.k >= 3 && metAd.has(r.id) && ads.filter(a => a.pid === r.id && !a.uit).length < 3); if (besteMetData) kand.push(besteMetData.id);
-    rang.filter(r => !metAd.has(r.id) && !!perId[r.id].img).slice(0, 4).forEach(r => kand.push(r.id));
+    rang.filter(r => !metAd.has(r.id) && r.reden).slice(0, 4).forEach(r => kand.push(r.id)); // alleen producten met een reden: in het seizoen, bewaard in de shop of al doorkliks
     for (const pid of kand) { if (ruimte <= 0) break; const it = perId[pid]; const t = droog ? { title: kortTitel(it), desc: 'Nu in de Yoors Shop voor ' + eur(it.p), bron: 'droog' } : await nieuweTekst(it, besteAds, ads); if (!t) continue;
       ads.push({ pid, title: t.title, desc: t.desc, at: Date.now(), bron: t.bron }); metAd.add(pid); adsVer = true; ruimte--; vandaag.nieuweAds = num(vandaag.nieuweAds) + 1; B('nieuwe advertentie', it.t.slice(0, 60), `"${t.title}" / "${t.desc}"`); } }
   if (adsVer && !droog) await kv.set(K.ads, ads.slice(-200));
@@ -290,7 +290,7 @@ async function baken(req, res) {
   return res.status(204).end();
 }
 
-// Pixel voor de shop: <img src="https://hjdk-api.vercel.app/api/shop/px?c={hj}&w=cart|koop"> met de hj-waarde uit de landings-URL.
+// Pixel voor de shop: <img src="https://keuzehulp.best/api/shop/px?c={hj}&w=cart|koop"> met de hj-waarde uit de landings-URL.
 async function pixel(req, res, url) {
   const code = String(url.searchParams.get('c') || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); const w = url.searchParams.get('w') === 'koop' ? 'koop' : 'cart';
   if (code) { try { const rec = await kv.get(K.rec(code)); if (rec && !rec['x' + w]) { rec['x' + w] = Date.now(); const net = rec.s; const keys = ['sh-' + net + '-' + w, 'sh-d' + D8() + '-' + net + '-' + w]; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-' + w); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-' + w); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-' + w); if (rec.p) keys.push('sh-p-' + pk(rec.p) + '-' + w); await inc(keys); await kv.set(K.rec(code), rec, { ex: 30 * 86400 }); if (w === 'koop') await log({ soort: 'bestelling', wat: 'via ' + (net === 'md' ? 'Mondiad' : net === 'pa' ? 'PropellerAds' : 'eigen verkeer'), waarom: 'plek ' + (rec.z || '?') + ', advertentie ' + (rec.a || '?') }); } } catch (e) {} }
@@ -365,10 +365,11 @@ export default async function handler(req, res) {
       catch (e) { await log({ soort: 'fout', wat: 'ronde', waarom: String(e.message).slice(0, 200) }); return res.status(200).json({ ok: false, fout: String(e.message) }); }
       finally { if (!droog) { try { await kv.set(K.lock, 0, { ex: 5 }); } catch (e) {} } }
     }
-    if (op === 'palog' || op === 'catalogus') { // schrijven: alleen met de gedeelde sleutel
+    if (op === 'palog' || op === 'catalogus' || op === 'adweg') { // schrijven: alleen met de gedeelde sleutel
       let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
       const s = await geheim(); const k = String(req.headers['x-shop-sleutel'] || b.k || ''); if (!s || k !== s) return res.status(401).json({ ok: false, fout: 'sleutel' });
       if (op === 'catalogus') { const items = (Array.isArray(b.items) ? b.items : []).map(compact).filter(i => pidOk(i.id) && i.t && i.p > 0); if (items.length < 10) return res.status(400).json({ ok: false, fout: 'te weinig producten' }); await bewaarCatalogus(items, 'aangeleverd'); return res.status(200).json({ ok: true, producten: items.length }); }
+      if (op === 'adweg') { const ads = await advertenties(); let n = 0; for (const a of ads) if (!a.uit && a.title === String(b.title || '')) { a.uit = String(b.waarom || 'handmatig uitgezet'); n++; } if (n) await kv.set(K.ads, ads); return res.status(200).json({ ok: true, uitgezet: n }); }
       const l = (await kv.get(K.palog)) || []; const e = b.log || {}; l.unshift(Object.assign({ at: new Date().toISOString() }, e)); await kv.set(K.palog, l.slice(0, 120));
       if (b.staat && typeof b.staat === 'object') await kv.set('hjdk:shop:pastaat:' + DAY(), b.staat, { ex: 3 * 86400 });
       if (b.map && typeof b.map === 'object') { const m = (await kv.get(K.crmap)) || {}; for (const [id, v] of Object.entries(b.map)) { if (/^\d+$/.test(id) && v && pidOk(v.pid)) { m['pa:' + id] = v.pid; m['t:pa:' + id] = String(v.title || '').slice(0, 60); } } await kv.set(K.crmap, m); }
