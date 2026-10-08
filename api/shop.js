@@ -398,8 +398,8 @@ async function pixel(req, res, url) {
 }
 
 // ---------------- advertentiebeeld ----------------
-// De productfoto zelf, op maat gesneden als JPEG (klein bestand, ook als de bron webp of png is). icon = 192x192, md = 720x360 (Mondiad), pa = 492x328 (PropellerAds), ca = 360x240 (Clickadu, breder dan 362 mag daar niet).
-const MATEN = { icon: [192, 192, 'cover'], md: [720, 360, 'contain'], pa: [492, 328, 'contain'], ca: [360, 240, 'contain'] };
+// De productfoto zelf, op maat gesneden als JPEG (klein bestand, ook als de bron webp of png is). icon = 192x192, md = 720x360 (Mondiad), pa = 492x328 (PropellerAds), ca = 360x180 (Clickadu staat hooguit 362x182 toe).
+const MATEN = { icon: [192, 192, 'cover'], md: [720, 360, 'contain'], pa: [492, 328, 'contain'], ca: [360, 180, 'contain'] };
 async function plaatje(req, res, url) {
   const cat = await catalog(); const it = cat.items.find(i => i.id === pidOk(url.searchParams.get('p'))); const m = MATEN[String(url.searchParams.get('t') || 'icon')] || MATEN.icon;
   if (!it || !it.img) { res.statusCode = 404; return res.end('onbekend product'); }
