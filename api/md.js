@@ -110,7 +110,7 @@ async function ronde(droog) {
     let zbVer = false; for (const [z, f] of Object.entries(goed)) { if (!pc.zones[z]) continue; const nb = r4(Math.min(MAX_BOD(), bod * f)); if (!zb[z] || zb[z] < nb) { zb[z] = nb; zbVer = true; B('zone hoger bod', z + ' in ' + c.id, 'x' + f + ' -> $' + nb); } }
     for (const [z, f] of Object.entries(slecht)) { if (!pc.zones[z]) continue; const nb = r4(Math.max(0.001, bod * f)); if (zb[z] == null || zb[z] > nb) { zb[z] = nb; zbVer = true; B('zone lager bod', z + ' in ' + c.id, 'weinig echte mensen; x' + f + ' -> $' + nb); } }
     for (const z of zwart) if (zb[z] != null) { delete zb[z]; zbVer = true; }
-    if (zbVer) upd.zoneCustomBids = Object.entries(zb).map(([zoneId, b]) => ({ zoneId: Number(zoneId), bid: b }));
+    if (zbVer && String(c.bidType || det.bidType || '').toUpperCase() !== 'CPA') upd.zoneCustomBids = Object.entries(zb).map(([zoneId, b]) => ({ zoneId: Number(zoneId), bid: b }));
     // te weinig verkeer terwijl de campagne goed doorklikt: bod omhoog
     const cA = Object.keys(pc.zones).reduce((a, z) => a + (eigen[z] ? eigen[z].aankomst : 0), 0), cB = Object.keys(pc.zones).reduce((a, z) => a + (eigen[z] ? eigen[z].bol : 0), 0);
     if (pc.kliks < 14 * 20 && cA >= 20 && cB >= 3 && gem > 0 && cB / cA >= gem && bod < MAX_BOD()) { upd.bid = r4(Math.min(MAX_BOD(), bod * 1.2)); B('bod omhoog', c.id + ' (' + pc.slug + ')', `weinig verkeer (${pc.kliks} kliks/14d) maar goede doorklik; $${bod} -> $${upd.bid}`); }
