@@ -1,0 +1,41 @@
+{
+  "opmerking": "Startset van de shop-lus (8 okt 2026): terugval-catalogus als yoo.rs even niet bereikbaar is, plus de eerste advertenties. De lus vult en vervangt dit zelf.",
+  "items": [
+    { "id": "oc_4174004463419393", "t": "DIY Boek Nook Magische Bibliotheek Houten Boekensteun", "p": 50, "b": "Art Bizniz", "c": "hobby", "s": "diy", "img": "https://cdn.orderchamp.com/listings/592a79fb-db36-4ea8-a9d6-530f531f92c1.jpg" },
+    { "id": "oc_4174004430323714", "t": "DIY Boek Nook Alice in Wonderland Boeksteun Hout Kit", "p": 35, "b": "Art Bizniz", "c": "hobby", "s": "diy", "img": "https://cdn.orderchamp.com/listings/2acd3343-1353-4f91-8c7e-b5c903233051.jpg" },
+    { "id": "oc_4174004462272513", "t": "DIY Boek Nook Kit Hout 26,3x19x10cm voor Creatieve Geesten", "p": 50, "b": "Art Bizniz", "c": "hobby", "s": "diy", "img": "https://cdn.orderchamp.com/listings/8ce910c6-989c-46f3-af57-d413acc12ac7.jpg" },
+    { "id": "oc_4174004462911489", "t": "Muziekdoos DIY 3D Houten Puzzel Sneeuw Wereld Art Bizniz", "p": 25, "b": "Art Bizniz", "c": "hobby", "s": "diy", "img": "https://cdn.orderchamp.com/listings/586ad102-c441-41dc-ac80-011283ace66f.jpg" },
+    { "id": "oc_4174004436271105", "t": "3D Houten Puzzel Muziekdoos Circus Troupe", "p": 25, "b": "Art Bizniz", "c": "hobby", "s": "diy", "img": "https://cdn.orderchamp.com/listings/b348ddef-b5f0-4da0-a6e2-1603ff750b2d.jpg" },
+    { "id": "oc_4174003627704321", "t": "Cortenstaal Skull Lantaarn voor Gothic Decor", "p": 25, "b": "Rostikal", "c": "wonen", "s": "kaarsen", "img": "https://cdn.orderchamp.com/listings/bc38831e-c7e8-46be-b693-f7207282959b.jpg" },
+    { "id": "oc_4174004365934594", "t": "Houten Puzzel Vleermuis Eco-Vriendelijk Berken Medium", "p": 25, "b": "Art Bizniz", "c": "hobby", "s": "diy", "img": "https://cdn.orderchamp.com/listings/18184db4-7151-4617-a999-7f5d2cb37324.jpg" },
+    { "id": "oc_4174005828042753", "t": "Pompoen Specerij Dip Dye Kaarsenset van Vivi", "p": 20, "b": "by Vivi.", "c": "overig", "s": "overig", "img": "https://cdn.orderchamp.com/listings/7245d3e3-091d-452b-b9e0-e0eb681a42cb.jpg" },
+    { "id": "oc_4174003301285890", "t": "Zwarte Liliano Lantaarn voor Warme Herfstverlichting", "p": 50, "b": "Mica Decorations", "c": "wonen", "s": "verlichting", "img": "https://cdn.orderchamp.com/listings/94712200-8f89-4aaf-a5d4-cfa22a3a2102.jpg" },
+    { "id": "oc_4174003366658049", "t": "Lantaarn Pietra Antraciet van Portugese Terracotta", "p": 25, "b": "Mica Decorations", "c": "wonen", "s": "verlichting", "img": "https://cdn.orderchamp.com/listings/f45eb737-b1e4-4d29-8c22-3ddd56cc0966.jpg" },
+    { "id": "oc_4174003629801473", "t": "Metalen Lantaarn Roestige Ster Uitgesneden 35cm", "p": 35, "b": "Rostikal", "c": "wonen", "s": "kaarsen", "img": "https://cdn.orderchamp.com/listings/6474847b-253f-40db-b9d9-1732ef9bbe04.jpg" },
+    { "id": "oc_4174003404046337", "t": "Zachte en Warme Antraciet Plaid voor Koude Avonden", "p": 20, "b": "Mica Decorations", "c": "wonen", "s": "textiel", "img": "https://cdn.orderchamp.com/listings/ed613732-77f5-49d0-a9b4-b1da2b426b40.jpg" },
+    { "id": "oc_4174003404292098", "t": "Beige Fleece Plaid Warm en Zacht Mica Decorations", "p": 20, "b": "Mica Decorations", "c": "wonen", "s": "textiel", "img": "https://cdn.orderchamp.com/listings/129dd7fb-5454-4c69-b2c5-46a19d451bc3.jpg" },
+    { "id": "oc_4174003404570626", "t": "Donkerbruin Fleece Dekentje Cozy en Warm Mica Decorations", "p": 20, "b": "Mica Decorations", "c": "wonen", "s": "textiel", "img": "https://cdn.orderchamp.com/listings/0c02a57b-f609-4b60-b5aa-391ebe08785e.jpg" }
+  ],
+  "ads": [
+    { "pid": "oc_4174004463419393", "title": "Bouw je eigen book nook", "desc": "Magische bibliotheek voor in je boekenkast" },
+    { "pid": "oc_4174004430323714", "title": "Book nook: Alice in Wonderland", "desc": "Houten bouwpakket voor tussen je boeken" },
+    { "pid": "oc_4174004462272513", "title": "Project voor de herfstvakantie", "desc": "Bouw een mini-wereld voor in je boekenkast" },
+    { "pid": "oc_4174004462911489", "title": "Bouw je eigen muziekdoos", "desc": "3D houten bouwpakket met melodie, €25" },
+    { "pid": "oc_4174004436271105", "title": "Muziekdoos om zelf te bouwen", "desc": "Houten circus dat echt muziek maakt, €25" },
+    { "pid": "oc_4174003627704321", "title": "Skull lantaarn voor Halloween", "desc": "Van cortenstaal, sfeervol met een kaarsje" },
+    { "pid": "oc_4174004365934594", "title": "Houten vleermuis-puzzel", "desc": "Leuk Halloween-project van berkenhout, €25" },
+    { "pid": "oc_4174005828042753", "title": "Pumpkin spice kaarsenset", "desc": "Dip dye kaarsen in herfstkleuren, €20" },
+    { "pid": "oc_4174003301285890", "title": "Lantaarn voor donkere avonden", "desc": "Zwarte lantaarn Liliano, sfeer in huis" },
+    { "pid": "oc_4174003366658049", "title": "Terracotta lantaarn, €25", "desc": "Antraciet lantaarn van Portugees terracotta" },
+    { "pid": "oc_4174003404046337", "title": "Warme plaid voor op de bank", "desc": "Zacht fleece in antraciet, €20" },
+    { "pid": "oc_4174003404292098", "title": "Fleece plaid voor €20", "desc": "Warm en zacht, in beige" },
+    { "pid": "oc_4174003404570626", "title": "Koud op de bank?", "desc": "Donkerbruine fleece plaid, €20" }
+  ],
+  "themas": {
+    "hobby": { "tot": "12-31", "van": "01-01", "extra": 1.0, "woorden": ["book nook", "boek nook", "boeknook", "booknook", "muziekdoos", "3d houten puzzel", "bouwpakket"] },
+    "halloween": { "van": "09-15", "tot": "10-31", "extra": 1.6, "woorden": ["halloween", "skull", "vleermuis", "pompoen", "pumpkin"] },
+    "herfst": { "van": "09-15", "tot": "02-28", "extra": 1.2, "woorden": ["plaid", "fleece", "deken", "lantaarn", "kaars", "wol"] },
+    "sint": { "van": "11-01", "tot": "12-05", "extra": 1.8, "woorden": ["sinterklaas", "schoen zet", "pakjesavond"] },
+    "kerst": { "van": "11-10", "tot": "12-24", "extra": 1.6, "woorden": ["kerst", "xmas", "christmas"] }
+  }
+}

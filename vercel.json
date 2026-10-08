@@ -59,9 +59,25 @@
     {
       "path": "/api/wtbmaak/dag",
       "schedule": "*/10 3-16 * * *"
+    },
+    {
+      "path": "/api/shop/ronde",
+      "schedule": "23 5-21 * * *"
     }
   ],
   "rewrites": [
+    {
+      "source": "/api/shop/:op",
+      "destination": "/api/shop?op=:op"
+    },
+    {
+      "source": "/shop",
+      "destination": "/api/shop?op=land"
+    },
+    {
+      "source": "/shop/:p",
+      "destination": "/api/shop?op=land&p=:p"
+    },
     {
       "source": "/",
       "has": [
@@ -340,6 +356,9 @@
     },
     "api/wtb.js": {
       "maxDuration": 30
+    },
+    "api/shop.js": {
+      "maxDuration": 300
     }
   }
 }
