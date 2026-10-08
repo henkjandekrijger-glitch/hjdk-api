@@ -55,9 +55,107 @@
     {
       "path": "/api/kz/pushdag",
       "schedule": "30 15 * * *"
+    },
+    {
+      "path": "/api/wtbmaak/dag",
+      "schedule": "*/10 3-16 * * *"
     }
   ],
   "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?op=home"
+    },
+    {
+      "source": "/robots.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?op=robots"
+    },
+    {
+      "source": "/sitemap.xml",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?op=sitemap"
+    },
+    {
+      "source": "/llms.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?op=llms"
+    },
+    {
+      "source": "/llms-full.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?op=llmsfull"
+    },
+    {
+      "source": "/7c1e4b9a2f6d48e3a05b9c71d2e8f4a6.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?op=ixkey"
+    },
+    {
+      "source": "/about",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?op=about"
+    },
+    {
+      "source": "/privacy",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?op=privacy"
+    },
+    {
+      "source": "/:slug([a-z0-9-]+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?slug=:slug"
+    },
+    {
+      "source": "/api/wtbmaak/:op",
+      "destination": "/api/wtbmaak?op=:op"
+    },
     {
       "source": "/pinterest.csv",
       "destination": "/api/kz?op=pincsv"
@@ -236,6 +334,12 @@
     },
     "api/md.js": {
       "maxDuration": 300
+    },
+    "api/wtbmaak.js": {
+      "maxDuration": 300
+    },
+    "api/wtb.js": {
+      "maxDuration": 30
     }
   }
 }
