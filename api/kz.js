@@ -8,6 +8,7 @@
 //        direct een welkomstmail en elke ochtend de nieuwe (cron /api/kz/dag); terugmailen (reply-to) of inspreken (microfoon -> /api/kz/vraag met audio, komt als bijlage
 //        in je mail); betaald verkeer (?clickid=&zoneid=&utm_source=propellerads) telt per zone/creative, meldt bol-klik én inschrijving als conversie (goal 1) en
 //        orders via /api/bol/learn (goal 2); aanmeldblok en onderwerpregel leren (Thompson). Beheer: /api/kz/stats?token=
+import { look, ACCENTS } from '../lib/look.js';
 import { createHmac } from 'node:crypto';
 import { kv } from '../lib/db.js';
 import { searchCached } from '../lib/bol.js';
@@ -136,16 +137,7 @@ function pickPartner(item, route, key) {
   return { role: 'Direct bij ' + p.shop, id: p.id, title: p.title, image: p.image, price: null, shop: p.shop, url: partnerLink(p.shop, p.url, key) };
 }
 
-const CSS = `*{box-sizing:border-box}body{margin:0;font:16px/1.6 -apple-system,system-ui,Segoe UI,Roboto,sans-serif;background:#fbfaf7;color:#14213d}a{color:#0f766e}
-header{background:#fff;border-bottom:1px solid #e7e5e4}header .in{max-width:960px;margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:900;font-size:20px;letter-spacing:-.02em;color:#14213d;text-decoration:none}.logo span{color:#0f766e}nav a{color:#44403c;text-decoration:none;margin-left:16px;font-size:14px}
-main{max-width:960px;margin:0 auto;padding:28px 18px 60px}.hero{padding:34px 0 10px}.hero h1{font-size:34px;line-height:1.15;letter-spacing:-.02em;margin:0 0 10px}.hero p{font-size:18px;color:#44403c;max-width:640px;margin:0 0 18px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:18px 0}.card{background:#fff;border:1px solid #e7e5e4;border-radius:16px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,.04);text-decoration:none;color:#14213d;display:block}.card:hover{border-color:#0f766e}.card .cat{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#78716c}.card h3{margin:6px 0 4px;font-size:17px;line-height:1.3}.card p{margin:0;color:#57534e;font-size:14px}
-.q{background:#fff;border:1px solid #e7e5e4;border-radius:16px;padding:20px;margin:14px 0}.q h2{margin:0 0 12px;font-size:19px}.opts{display:flex;flex-wrap:wrap;gap:8px}.opt{border:1.5px solid #d6d3d1;background:#fff;border-radius:999px;padding:10px 16px;font:600 15px system-ui;cursor:pointer;color:#14213d}.opt.on{background:#0f766e;border-color:#0f766e;color:#fff}
-.adv{margin:18px 0}.pr{display:grid;grid-template-columns:110px 1fr;gap:16px;background:#fff;border:1px solid #e7e5e4;border-radius:16px;padding:16px;margin:0 0 12px;align-items:center}.pr.best{border:2px solid #0f766e;box-shadow:0 8px 30px rgba(15,118,110,.12)}.pr img{width:110px;height:110px;object-fit:contain;border-radius:10px;background:#fff}.pr .role{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#0f766e;font-weight:700}.pr .t{font-weight:700;margin:2px 0 4px;line-height:1.3}.pr .m{color:#57534e;font-size:14px;margin-bottom:10px}.pr .m b{color:#14213d;font-size:18px}.pr .m s{color:#a8a29e;margin-left:6px}.btn{display:inline-block;background:#0f766e;color:#fff;text-decoration:none;font-weight:800;padding:12px 18px;border-radius:12px;font-size:15px}.btn.sec{background:#f5f5f4;color:#14213d}
-.txt{background:#fff;border:1px solid #e7e5e4;border-radius:16px;padding:20px;margin:14px 0}.txt h2{font-size:19px;margin:0 0 8px}.txt ul{margin:0;padding-left:20px}.txt li{margin:6px 0}
-.disc{color:#78716c;font-size:13px;margin:14px 0 0}footer{border-top:1px solid #e7e5e4;color:#78716c;font-size:13px;padding:22px 18px;max-width:960px;margin:0 auto}footer a{color:#57534e}
-@media(max-width:600px){.hero h1{font-size:27px}.pr{grid-template-columns:84px 1fr;gap:12px}.pr img{width:84px;height:84px}}`;
+const CSS = look(ACCENTS.keuzehulp, { dark: false }); // huisstijl van nexy.help, accent groenblauw (licht: veel oude inline kleuren)
 
 const INDEXNOW_KEY = '466971cbc1bbe43e6bb64a94465e4470'; /* openbare IndexNow-sleutel (staat ook als /466971cbc1bbe43e6bb64a94465e4470.txt); geen geheim */
 const catSlug = c => String(c).toLowerCase().replace(/&/g, 'en').replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '');
@@ -154,9 +146,9 @@ const pathOf = (req, p) => p.replace(/^\/keuzehulp(?=\/|$)/, '') || '/';
 const canon = p => DOMAIN + pathOf(null, p);
 function shell(title, desc, body, canonical, extraHead) {
   return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">${SITE.gsc ? '<meta name="google-site-verification" content="' + esc(SITE.gsc) + '">' : ''}${SITE.bing ? '<meta name="msvalidate.01" content="' + esc(SITE.bing) + '">' : ''}${PIN_VERIFY.v ? '<meta name="p:domain_verify" content="' + esc(PIN_VERIFY.v) + '">' : ''}<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"><link rel="alternate" type="application/rss+xml" title="Nieuwe keuzehulpen" href="/feed.xml">${canonical ? '<link rel="canonical" href="' + esc(canonical) + '">' : ''}<meta property="og:type" content="article"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="${esc(SITE.name)}">${extraHead || ''}<style>${CSS}</style></head><body>
-<header><div class="in"><a class="logo" href="/keuzehulp">Keuze<span>hulp</span></a><nav><a href="/keuzehulp">Alle keuzehulpen</a><a href="/keuzehulp/over">Over ons</a></nav></div></header>
-<main>${body}</main>
-<footer>${esc(SITE.name)} is een onafhankelijke keuzehulp van ${esc(SITE.owner)}, samengesteld door <a href="https://www.linkedin.com/in/henkjandekrijger" rel="author noopener" target="_blank">Henkjan de Krijger</a> · <a href="/keuzehulp/over">Over ons</a> · <a href="/keuzehulp/privacy">Privacy</a> · <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a><br>Affiliate-vermelding: als je via onze link iets koopt bij bol, ontvangen wij een vergoeding. De prijs die je betaalt verandert daardoor niet. Prijzen en beoordelingen komen rechtstreeks van bol en worden elke 20 minuten ververst.</footer>
+<header class="topbar"><div class="wrap"><a class="mark" href="/keuzehulp">keuze<em>hulp</em></a><nav class="topnav" aria-label="Menu"><a href="/keuzehulp">Alle keuzehulpen</a><a href="/deals">Deals</a><a href="/keuzehulp/over">Over ons</a></nav></div></header>
+<main><div class="wrap">${body}</div></main>
+<footer><div class="wrap">${esc(SITE.name)} is een onafhankelijke keuzehulp van ${esc(SITE.owner)}, samengesteld door <a href="https://www.linkedin.com/in/henkjandekrijger" rel="author noopener" target="_blank">Henkjan de Krijger</a> · <a href="/keuzehulp/over">Over ons</a> · <a href="/keuzehulp/privacy">Privacy</a> · <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a><br>Affiliate-vermelding: als je via onze link iets koopt bij bol, ontvangen wij een vergoeding. De prijs die je betaalt verandert daardoor niet. Prijzen en beoordelingen komen rechtstreeks van bol en worden elke 20 minuten ververst.</div></footer>
 </body></html>`;
 }
 

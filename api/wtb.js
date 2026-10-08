@@ -2,6 +2,7 @@
 // Routes (vercel.json, op host): / , /<slug>, /sitemap.xml, /robots.txt, /llms.txt, /llms-full.txt, /<indexnow-sleutel>.txt, /about, /privacy
 // API: /api/wtb?op=advice&slug=..&a=0-1-2 (producten voor de antwoorden), /api/wtb?op=status (openbaar overzicht)
 import { kv } from '../lib/db.js';
+import { look, ACCENTS } from '../lib/look.js';
 import { MARKETS, marketFor, K, DAY, esc, items, amzSearch, amzReady, searchLink, INDEXNOW_KEY } from '../lib/wtb.js';
 
 const BOTS = [['googlebot', /Googlebot|Google-InspectionTool|GoogleOther/i], ['bingbot', /bingbot/i], ['oai-searchbot', /OAI-SearchBot/i], ['chatgpt-user', /ChatGPT-User/i], ['gptbot', /GPTBot/i], ['claude', /Claude-User|Claude-SearchBot|ClaudeBot|anthropic-ai/i], ['perplexity', /Perplexity/i], ['applebot', /Applebot/i], ['meta', /meta-external|facebookexternalhit/i], ['amazonbot', /Amazonbot/i], ['duckduck', /DuckDuck/i]];
@@ -28,22 +29,12 @@ async function advice(m, it, a) {
   return out;
 }
 
-const CSS = `*{box-sizing:border-box}body{margin:0;font:17px/1.6 -apple-system,system-ui,"Segoe UI",Roboto,sans-serif;background:#fbfaf6;color:#1b1f2a}a{color:#1d4ed8}
-header{background:#fff;border-bottom:1px solid #e8e5dc}header .in{max-width:880px;margin:0 auto;padding:14px 18px;display:flex;justify-content:space-between;align-items:center}.logo{font-weight:900;font-size:20px;color:#1b1f2a;text-decoration:none;letter-spacing:-.02em}.logo b{color:#c2410c}nav a{color:#4b5563;text-decoration:none;font-size:14px;margin-left:14px}
-main{max-width:880px;margin:0 auto;padding:22px 18px 60px}h1{font-size:32px;line-height:1.15;letter-spacing:-.02em;margin:10px 0 8px}.lead{font-size:18px;color:#3f4652;margin:0 0 14px}.meta{font-size:13px;color:#6b7280}
-.answer{background:#fff7ed;border-left:4px solid #c2410c;border-radius:12px;padding:14px 16px;margin:14px 0;font-size:17px}
-.q{background:#fff;border:1px solid #e8e5dc;border-radius:16px;padding:18px;margin:12px 0}.q h2{font-size:18px;margin:0 0 10px}.opts{display:flex;flex-wrap:wrap;gap:8px}.opt{border:1.5px solid #d6d3cb;background:#fff;border-radius:999px;padding:10px 15px;font:600 15px system-ui;cursor:pointer;color:#1b1f2a}.opt.on{background:#1b1f2a;border-color:#1b1f2a;color:#fff}
-.pr{display:grid;grid-template-columns:110px 1fr;gap:14px;background:#fff;border:1px solid #e8e5dc;border-radius:16px;padding:14px;margin:0 0 10px;align-items:center}.pr.best{border:2px solid #c2410c;box-shadow:0 8px 28px rgba(194,65,12,.12)}.pr img{width:110px;height:110px;object-fit:contain}.role{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#c2410c;font-weight:800}.t{font-weight:700;line-height:1.3;margin:2px 0 6px}.price{font-size:18px;font-weight:800}
-.btn{display:inline-block;background:#c2410c;color:#fff;text-decoration:none;font-weight:800;padding:11px 16px;border-radius:12px;font-size:15px;margin-top:6px}.btn.sec{background:#1b1f2a}
-.box{background:#fff;border:1px solid #e8e5dc;border-radius:16px;padding:18px;margin:14px 0}.box h2{font-size:19px;margin:0 0 8px}.box ul{margin:0;padding-left:20px}.box li{margin:6px 0}.ai{border-left:4px solid #1d4ed8}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}.card{display:block;background:#fff;border:1px solid #e8e5dc;border-radius:14px;padding:14px;text-decoration:none;color:#1b1f2a}.card:hover{border-color:#c2410c}.card .c{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#6b7280}.card h3{font-size:16px;margin:4px 0 0;line-height:1.3}
-.disc{font-size:12.5px;color:#6b7280;margin:10px 0 0}footer{max-width:880px;margin:0 auto;padding:22px 18px;color:#6b7280;font-size:13px;border-top:1px solid #e8e5dc}
-@media(max-width:600px){h1{font-size:26px}.pr{grid-template-columns:80px 1fr}.pr img{width:80px;height:80px}}`;
+const CSS = m => look(ACCENTS[m.id === 'us' ? 'whichtobuy' : 'kaufberater']); // huisstijl van nexy.help, eigen accentkleur per site
 function shell(m, o) {
   const base = 'https://' + m.host;
-  return `<!doctype html><html lang="${m.locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(o.title)}</title><meta name="description" content="${esc(o.desc)}"><link rel="canonical" href="${base}${o.path}"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"><link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"><meta property="og:title" content="${esc(o.title)}"><meta property="og:description" content="${esc(o.desc)}"><meta property="og:type" content="${o.og || 'website'}"><meta property="og:url" content="${base}${o.path}">${o.image ? `<meta property="og:image" content="${esc(o.image)}">` : ''}${o.ld ? `<script type="application/ld+json">${JSON.stringify(o.ld).replace(/</g, '\\u003c')}</script>` : ''}<style>${CSS}</style></head><body>
-<header><div class="in"><a class="logo" href="/">${m.id === 'us' ? 'Which<b>To</b>Buy' : 'Kauf<b>berater</b>'}</a><nav><a href="/">${m.s.all}</a><a href="/about">${m.s.about}</a></nav></div></header><main>${o.body}</main>
-<footer>${esc(m.s.disc)} · <a href="/about">${m.s.about}</a> · <a href="/privacy">Privacy</a><br>${m.id === 'de' ? 'Impressum: AdsFair B.V., Albert Plesmanplein 20, 2805 AB Gouda, Niederlande · KvK 60126035' : 'AdsFair B.V., Albert Plesmanplein 20, 2805 AB Gouda, Netherlands'} · ${m.name} by Henkjan de Krijger</footer>
+  return `<!doctype html><html lang="${m.locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(o.title)}</title><meta name="description" content="${esc(o.desc)}"><link rel="canonical" href="${base}${o.path}"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"><link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"><meta property="og:title" content="${esc(o.title)}"><meta property="og:description" content="${esc(o.desc)}"><meta property="og:type" content="${o.og || 'website'}"><meta property="og:url" content="${base}${o.path}">${o.image ? `<meta property="og:image" content="${esc(o.image)}">` : ''}${o.ld ? `<script type="application/ld+json">${JSON.stringify(o.ld).replace(/</g, '\\u003c')}</script>` : ''}<style>${CSS(m)}</style></head><body>
+<header class="topbar"><div class="wrap"><a class="mark" href="/">${m.id === 'us' ? 'which<em>to</em>buy' : 'kauf<em>berater</em>'}</a><nav class="topnav" aria-label="Menu"><a href="/">${m.s.all}</a><a href="/about">${m.s.about}</a></nav></div></header><main><div class="wrap">${o.body}</div></main>
+<footer><div class="wrap"><div class="fl"><a href="/">${m.name}</a><a href="/about">${m.s.about}</a><a href="/privacy">Privacy</a><a href="/llms.txt">llms.txt</a><a href="/sitemap.xml">Sitemap</a></div><div>${esc(m.s.disc)} · <a href="/about">${m.s.about}</a> · <a href="/privacy">Privacy</a><br>${m.id === 'de' ? 'Impressum: AdsFair B.V., Albert Plesmanplein 20, 2805 AB Gouda, Niederlande · KvK 60126035' : 'AdsFair B.V., Albert Plesmanplein 20, 2805 AB Gouda, Netherlands'} · ${m.name} by Henkjan de Krijger</div></div></footer>
 <script>window.__h=function(k){try{navigator.sendBeacon('/api/hjdk/stats/hits',new Blob([JSON.stringify({hits:[[k,1]]})],{type:'text/plain'}))}catch(e){}};</script></body></html>`;
 }
 function card(m, p, i) {
@@ -66,15 +57,15 @@ async function page(m, it, all, req) {
     { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: m.name, item: base + '/' }, { '@type': 'ListItem', position: 2, name: it.title, item: base + '/' + it.slug }] },
     ...((it.faq || []).length ? [{ '@type': 'FAQPage', mainEntity: it.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
     ...(adv.products.length ? [{ '@type': 'ItemList', name: it.title, itemListElement: adv.products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title.slice(0, 110), url: p.url })) }] : []) ] };
-  const body = `<p class="meta">${esc(it.cat)} · ${esc(s.updated)} <time datetime="${esc(upd)}">${esc(upd)}</time> · ${esc(s.by)} Henkjan de Krijger</p><h1>${esc(it.h1)}</h1><p class="lead">${esc(it.intro)}</p>
-<div class="answer">${esc(it.kort)}</div>
-<h2 style="font-size:20px;margin:22px 0 4px">${esc(s.q)}</h2>${qs}
+  const body = `<p class="crumbs"><a href="/">${esc(m.name)}</a> › ${esc(it.cat)}</p><p class="kicker">${esc(it.cat)}</p><h1>${esc(it.h1)}</h1><p class="standfirst">${esc(it.intro)}</p>
+<div class="answer"><p><strong>${esc(it.kort)}</strong></p></div><p class="meta">${esc(s.updated)} <time datetime="${esc(upd)}">${esc(upd)}</time> · ${esc(s.by)} Henkjan de Krijger</p>
+<h2>${esc(s.q)}</h2>${qs}
 <div id="adv" style="margin:14px 0">${adviceHtml(m, adv)}</div>
 ${(it.aiMiss || []).length ? `<div class="box ai"><h2>${esc(s.aimiss)}</h2><ul>${it.aiMiss.map(x => '<li>' + esc(x) + '</li>').join('')}</ul></div>` : ''}
 <div class="box"><h2>${esc(s.guide)}</h2>${String(it.guide || '').split(/\n+/).filter(Boolean).map(p => '<p>' + esc(p) + '</p>').join('')}</div>
 ${(it.mistakes || []).length ? `<div class="box"><h2>${esc(s.mistakes)}</h2><ul>${it.mistakes.map(x => '<li>' + esc(x) + '</li>').join('')}</ul></div>` : ''}
-${(it.faq || []).length ? `<div class="box"><h2>${esc(s.faq)}</h2>${it.faq.map(f => `<h3 style="font-size:16px;margin:12px 0 4px">${esc(f.q)}</h3><p style="margin:0">${esc(f.a)}</p>`).join('')}</div>` : ''}
-${rel.length ? `<div class="box"><h2>${esc(s.related)}</h2><div class="grid">${rel.map(r => `<a class="card" href="/${esc(r.slug)}"><div class="c">${esc(r.cat)}</div><h3>${esc(r.title)}</h3></a>`).join('')}</div></div>` : ''}
+${(it.faq || []).length ? `<h2>${esc(s.faq)}</h2>${it.faq.map(f => `<details class="faq"><summary>${esc(f.q)}</summary><div class="a"><p>${esc(f.a)}</p></div></details>`).join('')}` : ''}
+${rel.length ? `<h2>${esc(s.related)}</h2><ul class="cards">${rel.map(r => `<li><a href="/${esc(r.slug)}">${esc(r.title)}</a><p>${esc(String(r.kort || '').slice(0, 140))}</p></li>`).join('')}</ul>` : ''}
 <p class="disc">${esc(s.disc)}</p>
 <script>(function(){var S=${JSON.stringify(it.slug)},M=${JSON.stringify(m.id)},n=document.querySelectorAll('.q').length,cur=[],t=null,st=0;for(var i=0;i<n;i++)cur.push(0);var h=window.__h||function(){};
 function load(){fetch('/api/wtb?op=advice&m='+M+'&slug='+encodeURIComponent(S)+'&a='+cur.join('-')+'&html=1').then(function(r){return r.json()}).then(function(j){if(j&&j.html)document.getElementById('adv').innerHTML=j.html;h('wtb-'+M+'-'+S+'-adv')}).catch(function(){})}
@@ -85,8 +76,8 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 function home(m, all) {
   const s = m.s; const cats = {}; all.forEach(i => { (cats[i.cat] = cats[i.cat] || []).push(i); });
   const newest = all.slice().sort((a, b) => String(b.publishAt || '').localeCompare(String(a.publishAt || ''))).slice(0, 12);
-  const body = `<h1>${esc(s.hero)}</h1><p class="lead">${esc(s.heroP)}</p>${newest.length ? `<div class="grid">${newest.map(r => `<a class="card" href="/${esc(r.slug)}"><div class="c">${esc(r.cat)}</div><h3>${esc(r.title)}</h3></a>`).join('')}</div>` : `<p class="meta">${esc(s.wait)}</p>`}
-${Object.keys(cats).sort().map(c => `<div class="box"><h2>${esc(c)}</h2><ul>${cats[c].map(i => `<li><a href="/${esc(i.slug)}">${esc(i.title)}</a></li>`).join('')}</ul></div>`).join('')}<p class="disc">${esc(s.disc)}</p>`;
+  const body = `<p class="kicker">${esc(m.name)}</p><h1>${esc(s.hero)}</h1><p class="standfirst">${esc(s.heroP)}</p>${newest.length ? `<ul class="cards">${newest.map(r => `<li><a href="/${esc(r.slug)}">${esc(r.title)}</a><p>${esc(String(r.kort || '').slice(0, 140))}</p></li>`).join('')}</ul>` : `<p class="meta">${esc(s.wait)}</p>`}
+${Object.keys(cats).sort().map(c => `<h2>${esc(c)}</h2><ul class="cards">${cats[c].map(i => `<li><a href="/${esc(i.slug)}">${esc(i.title)}</a></li>`).join('')}</ul>`).join('')}<p class="disc">${esc(s.disc)}</p>`;
   const base = 'https://' + m.host;
   return shell(m, { title: m.name + (m.id === 'us' ? ' — Buying guides that ask 3 questions' : ' — Kaufberatung in 3 Fragen'), desc: s.heroP, path: '/', body, ld: { '@context': 'https://schema.org', '@graph': [{ '@type': 'WebSite', name: m.name, url: base, inLanguage: m.locale }, { '@type': 'Organization', name: m.name, url: base, founder: { '@type': 'Person', name: 'Henkjan de Krijger' } }] } });
 }
