@@ -771,8 +771,9 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
       const totaal = Math.min(200, perDag * dagen);
       for (let k = 0; k < totaal; k++) { const i = voorrang[k % voorrang.length]; const ronde = Math.floor(k / voorrang.length); const v = [0, 2, 3, 1][ronde % 4];
         const dag = new Date(start + 'T06:00:00Z'); dag.setUTCDate(dag.getUTCDate() + Math.floor(k / perDag)); dag.setUTCMinutes(dag.getUTCMinutes() + (k % perDag) * Math.floor(900 / perDag));
-        const titel = ronde === 0 ? i.title : ronde === 1 && i.h1 && i.h1 !== i.title ? i.h1 : i.title.replace(/\?$/, '') + ' — ' + ['eerlijk advies', 'prijs van vandaag', 'in 3 vragen', 'zo kies je'][ronde % 4]; // Pinterest weigert dubbele titels in één bestand const desc = ((i.kort || i.intro || '') + ' In 3 vragen naar het product dat bij jou past, met de prijs van vandaag bij bol. Gratis en eerlijk advies van keuzehulp.best.').slice(0, 490);
-        out.push([q(String(titel).slice(0, 100)), q(base + '/pin/' + i.slug + '-' + v + '.png'), q(board), q(''), q(desc), q(base + '/keuzehulp/' + i.slug + '?utm_source=pinterest&utm_medium=pin&utm_campaign=csv'), q(dag.toISOString().slice(0, 19)), q([i.cat, i.term, 'keuzehulp', 'kopen'].filter(Boolean).join(', '))].join(',')); }
+        const titel = ronde === 0 ? i.title : ronde === 1 && i.h1 && i.h1 !== i.title ? i.h1 : i.title.replace(/\?$/, '') + ' — ' + ['eerlijk advies', 'prijs van vandaag', 'in 3 vragen', 'zo kies je'][ronde % 4]; // Pinterest weigert dubbele titels in één bestand
+        const desc = ((i.kort || i.intro || '') + ' In 3 vragen naar het product dat bij jou past, met de prijs van vandaag bij bol. Gratis en eerlijk advies van keuzehulp.best.').slice(0, 490);
+        out.push([q(String(titel).slice(0, 100)), q(base + '/pin/' + i.slug + '-' + v + '.png'), q(board), q(''), q(desc), q(base + '/' + i.slug + '?utm_source=pinterest&utm_medium=pin&utm_campaign=csv'), q(dag.toISOString().slice(0, 19)), q([i.cat, i.term, 'keuzehulp', 'kopen'].filter(Boolean).join(', '))].join(',')); }
       res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('access-control-allow-origin', '*'); res.setHeader('cache-control', 'no-store'); res.setHeader('content-disposition', 'inline; filename="keuzehulp-pins.csv"');
       return res.status(200).send(out.join('\n'));
     }
