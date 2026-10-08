@@ -3,6 +3,7 @@
 // API: /api/wtb?op=advice&slug=..&a=0-1-2 (producten voor de antwoorden), /api/wtb?op=status (openbaar overzicht)
 import { kv } from '../lib/db.js';
 import { look, ACCENTS } from '../lib/look.js';
+import { colourTag, colourReport } from '../lib/kleur.js';
 import { MARKETS, marketFor, K, DAY, esc, items, amzSearch, amzReady, searchLink, INDEXNOW_KEY } from '../lib/wtb.js';
 
 const BOTS = [['googlebot', /Googlebot|Google-InspectionTool|GoogleOther/i], ['bingbot', /bingbot/i], ['oai-searchbot', /OAI-SearchBot/i], ['chatgpt-user', /ChatGPT-User/i], ['gptbot', /GPTBot/i], ['claude', /Claude-User|Claude-SearchBot|ClaudeBot|anthropic-ai/i], ['perplexity', /Perplexity/i], ['applebot', /Applebot/i], ['meta', /meta-external|facebookexternalhit/i], ['amazonbot', /Amazonbot/i], ['duckduck', /DuckDuck/i]];
@@ -46,6 +47,8 @@ function adviceHtml(m, adv) {
   return `<div class="pr best" style="grid-template-columns:1fr"><div><div class="role">${esc(m.s.fallback)}</div><div class="t">${esc(adv.kws)}</div><a class="btn" href="${esc(adv.link)}" rel="sponsored nofollow noopener" target="_blank" data-amz="search">${esc(m.s.seeAll)} →</a></div></div>`;
 }
 
+// antwoordblok zoals nexy.help: alleen de eerste zin vet
+function firstBold(t) { t = String(t || ''); const x = t.match(/^([\s\S]+?[.!?])(\s+[\s\S]+)$/); return x ? '<strong>' + esc(x[1]) + '</strong>' + esc(x[2]) : '<strong>' + esc(t) + '</strong>'; }
 async function page(m, it, all, req) {
   const s = m.s; const base = 'https://' + m.host; const a0 = (it.questions || []).map(() => 0);
   const adv = await advice(m, it, a0);
@@ -58,7 +61,7 @@ async function page(m, it, all, req) {
     ...((it.faq || []).length ? [{ '@type': 'FAQPage', mainEntity: it.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
     ...(adv.products.length ? [{ '@type': 'ItemList', name: it.title, itemListElement: adv.products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title.slice(0, 110), url: p.url })) }] : []) ] };
   const body = `<p class="crumbs"><a href="/">${esc(m.name)}</a> › ${esc(it.cat)}</p><p class="kicker">${esc(it.cat)}</p><h1>${esc(it.h1)}</h1><p class="standfirst">${esc(it.intro)}</p>
-<div class="answer"><p><strong>${esc(it.kort)}</strong></p></div><p class="meta">${esc(s.updated)} <time datetime="${esc(upd)}">${esc(upd)}</time> · ${esc(s.by)} Henkjan de Krijger</p>
+<div class="answer"><p>${firstBold(it.kort)}</p></div><p class="meta">${esc(s.updated)}&nbsp;<time datetime="${esc(upd)}">${esc(upd)}</time> · ${esc(s.by)} Henkjan de Krijger</p>
 <h2>${esc(s.q)}</h2>${qs}
 <div id="adv" style="margin:14px 0">${adviceHtml(m, adv)}</div>
 ${(it.aiMiss || []).length ? `<div class="box ai"><h2>${esc(s.aimiss)}</h2><ul>${it.aiMiss.map(x => '<li>' + esc(x) + '</li>').join('')}</ul></div>` : ''}
@@ -93,6 +96,7 @@ export default async function handler(req, res) {
   if (op === 'status') { // openbaar overzicht, beide markten
     const out = { ok: true, amazonApi: amzReady(), markten: {} };
     for (const m of Object.values(MARKETS)) { const all = await items(m); const plan = await kv.get(K.plan(m.id, DAY())).catch(() => null); out.markten[m.id] = { site: 'https://' + m.host, tag: m.tag(), gidsen: all.length, vandaag: plan ? { gepland: (plan.topics || []).length, gemaakt: (plan.topics || []).filter(t => t.status === 'live').length, mislukt: (plan.topics || []).filter(t => t.status === 'fout').length } : null, nieuwste: all.slice(-5).map(i => ({ slug: i.slug, blindspot: i.blind && i.blind.score })) }; }
+    out.kleurtest = { keuzehulp: await colourReport('keuzehulp', 'kz'), whichtobuy: await colourReport('whichtobuy', 'wtbus'), kaufberater: await colourReport('kaufberater', 'wtbde') };
     out.log = ((await kv.get(K.log)) || []).slice(0, 30);
     res.setHeader('cache-control', 'no-store'); return res.status(200).json(out);
   }
@@ -115,11 +119,12 @@ export default async function handler(req, res) {
     return res.status(200).json(Object.assign({ ok: true }, q.get('html') ? { html: adviceHtml(m, adv) } : adv));
   }
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=0, must-revalidate');
-  if (op === 'about') return res.status(200).send(about(m));
-  if (op === 'privacy') return res.status(200).send(privacy(m));
-  if (op === 'home' || path === '/') { await count(m, req, q, ''); return res.status(200).send(home(m, all)); }
+  const tag = await colourTag(m.id === 'us' ? 'whichtobuy' : 'kaufberater', 'wtb' + m.id, 'a[data-amz]', true); const send = h => res.status(200).send(String(h).replace('</head>', tag + '</head>'));
+  if (op === 'about') return send(about(m));
+  if (op === 'privacy') return send(privacy(m));
+  if (op === 'home' || path === '/') { await count(m, req, q, ''); return send(home(m, all)); }
   const it = all.find(i => i.slug === path.slice(1));
   if (!it) { res.setHeader('cache-control', 'no-store'); return res.status(404).send(shell(m, { title: '404 — ' + m.name, desc: '', path: '/', body: `<h1>404</h1><p><a href="/">${esc(m.s.home)}</a></p>` })); }
   await count(m, req, q, it.slug);
-  return res.status(200).send(await page(m, it, all, req));
+  return send(await page(m, it, all, req));
 }
