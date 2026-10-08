@@ -67,6 +67,10 @@
     {
       "path": "/api/gsc?op=dag",
       "schedule": "40 2 * * *"
+    },
+    {
+      "path": "/api/score?op=dag",
+      "schedule": "30 2 * * *"
     }
   ],
   "rewrites": [
@@ -376,6 +380,9 @@
     },
     "api/gsc.js": {
       "maxDuration": 300
+    },
+    "api/score.js": {
+      "maxDuration": 60
     }
   }
 }

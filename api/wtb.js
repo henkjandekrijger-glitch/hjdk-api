@@ -3,7 +3,7 @@
 // API: /api/wtb?op=advice&slug=..&a=0-1-2 (producten voor de antwoorden), /api/wtb?op=status (openbaar overzicht)
 import { kv } from '../lib/db.js';
 import { look, ACCENTS } from '../lib/look.js';
-import { colourTag, colourReport } from '../lib/kleur.js';
+import { colourTag, colourReport, measureTag } from '../lib/kleur.js';
 import { MARKETS, marketFor, K, DAY, esc, items, amzSearch, amzReady, searchLink, INDEXNOW_KEY } from '../lib/wtb.js';
 
 const BOTS = [['googlebot', /Googlebot|Google-InspectionTool|GoogleOther/i], ['bingbot', /bingbot/i], ['oai-searchbot', /OAI-SearchBot/i], ['chatgpt-user', /ChatGPT-User/i], ['gptbot', /GPTBot/i], ['claude', /Claude-User|Claude-SearchBot|ClaudeBot|anthropic-ai/i], ['perplexity', /Perplexity/i], ['applebot', /Applebot/i], ['meta', /meta-external|facebookexternalhit/i], ['amazonbot', /Amazonbot/i], ['duckduck', /DuckDuck/i]];
@@ -53,7 +53,8 @@ function firstBold(t) { t = String(t || ''); const x = t.match(/^([\s\S]+?[.!?])
 async function page(m, it, all, req) {
   const s = m.s; const base = 'https://' + m.host; const a0 = (it.questions || []).map(() => 0);
   const adv = await advice(m, it, a0);
-  const rel = all.filter(x => x.slug !== it.slug).sort((x, y) => (y.cat === it.cat) - (x.cat === it.cat)).slice(0, 8);
+  const boost = new Set((await kv.get('hjdk:gsc:' + m.id + ':boost').catch(() => null)) || []); const sc = x => (x.cat === it.cat ? 2 : 0) + (boost.has(x.slug) ? 1 : 0);
+  const rel = all.filter(x => x.slug !== it.slug).sort((x, y) => sc(y) - sc(x)).slice(0, 8);
   const qs = (it.questions || []).map((q, qi) => `<div class="q" data-q="${qi}"><h2>${qi + 1}. ${esc(q.q)}</h2><div class="opts">${(q.options || []).map((o, oi) => `<button class="opt" type="button" data-o="${oi}">${esc(o.label)}</button>`).join('')}</div></div>`).join('');
   const upd = it.updatedAt || it.publishAt || DAY();
   const ld = { '@context': 'https://schema.org', '@graph': [
@@ -121,7 +122,7 @@ export default async function handler(req, res) {
     return res.status(200).json(Object.assign({ ok: true }, q.get('html') ? { html: adviceHtml(m, adv) } : adv));
   }
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=0, must-revalidate');
-  const tag = await colourTag(m.id === 'us' ? 'whichtobuy' : 'kaufberater', 'wtb' + m.id, 'a[data-amz]', true); const send = h => res.status(200).send(String(h).replace('</head>', tag + '</head>'));
+  const tag = (await colourTag(m.id === 'us' ? 'whichtobuy' : 'kaufberater', 'wtb' + m.id, 'a[data-amz]', true, m.id)) + measureTag('wtb' + m.id, 'a[data-amz]', '.opt'); const send = h => res.status(200).send(String(h).replace('</head>', tag + '</head>'));
   if (op === 'about') return send(about(m));
   if (op === 'privacy') return send(privacy(m));
   if (op === 'home' || path === '/') { await count(m, req, q, ''); return send(home(m, all)); }

@@ -9,7 +9,9 @@
 //        in je mail); betaald verkeer (?clickid=&zoneid=&utm_source=propellerads) telt per zone/creative, meldt bol-klik én inschrijving als conversie (goal 1) en
 //        orders via /api/bol/learn (goal 2); aanmeldblok en onderwerpregel leren (Thompson). Beheer: /api/kz/stats?token=
 import { look, ACCENTS } from '../lib/look.js';
-import { colourTag } from '../lib/kleur.js';
+import { colourTag, measureTag } from '../lib/kleur.js';
+const MEETTAG = measureTag('kz', 'a[data-kz],a[data-deal],a[href*="bol.com"]', '.opt');
+const BOOST = { set: new Set(), at: 0 }; // slugs met zoekkansen (positie 4-20), 10 min in het geheugen
 let COLTAG = ''; // kleurtest-kopscript, per verzoek ververst in de handler
 import { createHmac } from 'node:crypto';
 import { kv } from '../lib/db.js';
@@ -147,7 +149,7 @@ const baseOf = req => DOMAIN; /* één canonieke host: het eigen domein */
 const pathOf = (req, p) => p.replace(/^\/keuzehulp(?=\/|$)/, '') || '/';
 const canon = p => DOMAIN + pathOf(null, p);
 function shell(title, desc, body, canonical, extraHead) {
-  return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">${SITE.gsc ? '<meta name="google-site-verification" content="' + esc(SITE.gsc) + '">' : ''}${SITE.bing ? '<meta name="msvalidate.01" content="' + esc(SITE.bing) + '">' : ''}${PIN_VERIFY.v ? '<meta name="p:domain_verify" content="' + esc(PIN_VERIFY.v) + '">' : ''}<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"><link rel="alternate" type="application/rss+xml" title="Nieuwe keuzehulpen" href="/feed.xml">${canonical ? '<link rel="canonical" href="' + esc(canonical) + '">' : ''}<meta property="og:type" content="article"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="${esc(SITE.name)}">${extraHead || ''}<style>${CSS}</style>${COLTAG}</head><body>
+  return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">${SITE.gsc ? '<meta name="google-site-verification" content="' + esc(SITE.gsc) + '">' : ''}${SITE.bing ? '<meta name="msvalidate.01" content="' + esc(SITE.bing) + '">' : ''}${PIN_VERIFY.v ? '<meta name="p:domain_verify" content="' + esc(PIN_VERIFY.v) + '">' : ''}<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"><link rel="alternate" type="application/rss+xml" title="Nieuwe keuzehulpen" href="/feed.xml">${canonical ? '<link rel="canonical" href="' + esc(canonical) + '">' : ''}<meta property="og:type" content="article"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="${esc(SITE.name)}">${extraHead || ''}<style>${CSS}</style>${COLTAG}${MEETTAG}</head><body>
 <header class="topbar"><div class="wrap"><a class="mark" href="/keuzehulp">keuze<em>hulp</em></a><nav class="topnav" aria-label="Menu"><a href="/keuzehulp">Alle keuzehulpen</a><a href="/deals">Deals</a><a href="/keuzehulp/over">Over ons</a></nav></div></header>
 <main><div class="wrap">${body}</div></main>
 <footer><div class="wrap">${esc(SITE.name)} is een onafhankelijke keuzehulp van ${esc(SITE.owner)}, samengesteld door <a href="https://www.linkedin.com/in/henkjandekrijger" rel="author noopener" target="_blank">Henkjan de Krijger</a> · <a href="/keuzehulp/over">Over ons</a> · <a href="/keuzehulp/privacy">Privacy</a> · <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a><br>Affiliate-vermelding: als je via onze link iets koopt bij bol, ontvangen wij een vergoeding. De prijs die je betaalt verandert daardoor niet. Prijzen en beoordelingen komen rechtstreeks van bol en worden elke 20 minuten ververst.</div></footer>
@@ -341,7 +343,8 @@ function relatedFor(item, all, n) {
   n = n || 8; const live = all.filter(i => i.slug !== item.slug); const bySlug = new Map(live.map(i => [i.slug, i])); const out = [];
   const add = i => { if (i && out.length < n && !out.some(o => o.slug === i.slug)) out.push(i); };
   const cur = (item.verwant || []).map(s => bySlug.get(s)).filter(Boolean);
-  cur.slice(0, 5).forEach(add);                                                             // 1. door de redactie gekozen verwante keuzehulpen
+  cur.slice(0, 5).forEach(add);
+  live.filter(i => BOOST.set.has(i.slug) && i.cat === item.cat).slice(0, 2).forEach(add);           // 1b. pagina's die in Google op positie 4-20 staan: extra interne links (Search Console-leerlus)                                                             // 1. door de redactie gekozen verwante keuzehulpen
   live.filter(i => (i.verwant || []).indexOf(item.slug) >= 0).sort((a, b) => String(b.publishAt || '').localeCompare(String(a.publishAt || '')) || a.slug.localeCompare(b.slug)).slice(0, 2).forEach(add); // 2. nieuwste keuzehulpen die hiernaar verwijzen (zo krijgt een nieuwe pagina meteen links terug)
   cur.slice(5).forEach(add);
   const t = rtoks(item); live.map(i => { let sc = 0; rtoks(i).forEach(w => { if (t.has(w)) sc += 2; }); if (i.cat === item.cat) sc += 1; return { i, sc }; }).filter(x => x.sc >= 3).sort((a, b) => b.sc - a.sc || a.i.slug.localeCompare(b.i.slug)).slice(0, 4).forEach(x => add(x.i)); // 3. inhoudelijk verwant
@@ -522,7 +525,8 @@ async function opruimen(budgetMs) {
 
 const PIN_VERIFY = { v: '', at: 0 }; // Pinterest-websiteclaim (meta p:domain_verify), via env of /setup, 10 min in het geheugen
 export default async function handler(req, res) {
-  try { COLTAG = await colourTag('keuzehulp', 'kz', 'a[data-kz],a[data-deal],a[href*="bol.com"]', false); } catch (e) { COLTAG = ''; }
+  if (Date.now() - BOOST.at > 600000) { BOOST.at = Date.now(); try { BOOST.set = new Set((await kv.get('hjdk:gsc:kz:boost')) || []); } catch (e) {} }
+  try { COLTAG = await colourTag('keuzehulp', 'kz', 'a[data-kz],a[data-deal],a[href*="bol.com"]', false, 'kz'); } catch (e) { COLTAG = ''; }
   await siteKz();
   if (Date.now() - PIN_VERIFY.at > 600000) { PIN_VERIFY.at = Date.now(); try { PIN_VERIFY.v = String(process.env.PINTEREST_VERIFY || (await secrets()).PINTEREST_VERIFY || '4963a53ed69385410ca1c84a0d306499').replace(/[^a-zA-Z0-9]/g, '').slice(0, 64); } catch (e) {} }
   try { const host = String(req.headers.host || ''); if (host && !/vercel\.app$|^localhost/.test(host) && typeof res.send === 'function' && !res.__kzLinks) { const send0 = res.send.bind(res); res.__kzLinks = 1; res.send = b => send0(typeof b === 'string' && b.indexOf('<html') >= 0 ? b.replace(/href="\/keuzehulp(?=[\/"#?])\/?/g, 'href="/') : b); } } catch (e) {} /* interne links op keuzehulp.best wijzen direct naar de canonieke URL */

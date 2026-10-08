@@ -59,6 +59,17 @@ async function ronde(oidc) {
       const m = id === 'kz' ? null : MARKETS[id]; const its = m ? await wtbItems(m) : await kzItems();
       const rs = await rows(prop, 28, oidc); const a = analyse(rs, its);
       const fixes = []; const bySlug = Object.fromEntries(its.map(i => [i.slug, i]));
+      // eerst de kansen (positie 4-20): titel die begint met de woorden van die zoekvraag, als die er nog niet in staan
+      const perKans = {}; a.kansen.forEach(k => { (perKans[k.slug] = perKans[k.slug] || []).push(k); });
+      for (const [slug, ks] of Object.entries(perKans).sort((x, y) => y[1].reduce((t, k) => t + k.imp, 0) - x[1].reduce((t, k) => t + k.imp, 0))) {
+        if (fixes.length >= 3) break; const it = bySlug[slug]; if (!it) continue; if (it.titleFixAt && (Date.now() - Date.parse(it.titleFixAt)) < 21 * 864e5) continue;
+        const titel = String(it.seoTitle || it.h1 || it.title || '').toLowerCase(); const q0 = ks[0].q.toLowerCase(); const mist = q0.split(/\s+/).filter(w => w.length > 3 && !titel.includes(w));
+        if (!mist.length) continue; const p = { slug, imp: ks.reduce((t, k) => t + k.imp, 0), clicks: 0, pos: ks[0].pos, topQ: ks.map(k => k.q).slice(0, 6), ctr: 0 };
+        try { const nieuw = await herschrijf(m ? m.lang : 'nl', it, p, oidc); if (m) await fixWtb(m, it, nieuw, p); else await fixKz(it, nieuw, p); fixes.push({ slug, waarom: 'positie ' + ks[0].pos + ' op "' + ks[0].q + '"', oud: it.seoTitle || it.h1, nieuw: nieuw.seoTitle }); }
+        catch (e) { fixes.push({ slug, fout: String(e.message).slice(0, 100) }); }
+      }
+      // en meer interne links naar die pagina's (de sites zetten ze vooraan bij 'ook handig' binnen dezelfde categorie)
+      try { await kv.set('hjdk:gsc:' + id + ':boost', [...new Set(a.kansen.map(k => k.slug))].slice(0, 12)); } catch (e) {}
       for (const p of a.laagCtr) {
         if (fixes.length >= 3) break; const it = bySlug[p.slug]; if (!it) continue;
         if (it.titleFixAt && (Date.now() - Date.parse(it.titleFixAt)) < 21 * 864e5) continue;
@@ -77,7 +88,7 @@ async function ronde(oidc) {
       try { await kv.set(doneKey, [...done].slice(-2000)); } catch (e) {}
       const urls = [...new Set([...fixes.filter(f => f.nieuw), ...faqs.filter(f => f.vragen)].map(f => 'https://' + host + '/' + f.slug))];
       if (urls.length) { if (m) await wtbIndexnow(m, urls); else await fetch('https://api.indexnow.org/indexnow', { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify({ host, key: KZ_INDEXNOW, keyLocation: 'https://' + host + '/' + KZ_INDEXNOW + '.txt', urlList: urls }) }).catch(() => {}); }
-      const res = { host, prop, dag: DAY(), totaal: a.totaal, open: a.open, laagCtr: a.laagCtr.map(p => ({ slug: p.slug, imp: p.imp, clicks: p.clicks, pos: p.pos, topQ: p.topQ })), titelsVernieuwd: fixes, faqErbij: faqs, subvragen: a.subvragen.slice(0, 30) };
+      const res = { host, prop, dag: DAY(), totaal: a.totaal, open: a.open, laagCtr: a.laagCtr.map(p => ({ slug: p.slug, imp: p.imp, clicks: p.clicks, pos: p.pos, topQ: p.topQ })), titelsVernieuwd: fixes, faqErbij: faqs, subvragen: a.subvragen.slice(0, 30), kansen: a.kansen.slice(0, 20) };
       await kv.set('hjdk:gsc:' + id, res); out.sites[id] = { host, totaal: a.totaal, open: a.open.length, laagCtr: a.laagCtr.length, titelsVernieuwd: fixes.length, faqErbij: faqs.reduce((t, f) => t + ((f.vragen || []).length), 0) };
     } catch (e) { out.sites[id] = { host, fout: String(e.message).slice(0, 200) }; }
   }
