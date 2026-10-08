@@ -104,13 +104,15 @@ const kortTitel = it => { let t = it.t.replace(/\s+(van|by|door)\s+[A-Z][\w .&-]
 async function nieuweTekst(it, beste, bestaand) {
   const j = await claudeJson(`Schrijf 3 Nederlandse push-advertenties voor dit product uit de Yoors Shop (webshop, verzonden vanuit Europa, 14 dagen retour): "${it.t}" van ${it.b || 'onbekend merk'}, ${eur(it.p)}${it.pf ? ' (vanaf-prijs)' : ''}, categorie ${it.c}/${it.s}. Vandaag is het ${DAY()}.
 Wat tot nu toe het meest doorklikte naar de shop: ${beste.length ? beste.map(b => '"' + b.title + '" / "' + b.desc + '"').join('; ') : 'nog niets bekend'}.
-Regels: titel hooguit 30 tekens, tekst hooguit 45 tekens. Eerlijk: verzin geen eigenschappen die niet in de productnaam staan, geen nep-urgentie, geen 'gratis', geen korting noemen. Noem de prijs alleen exact zoals hierboven. Concreet en nieuwsgierig makend, elke variant een andere invalshoek (cadeau, seizoen of moment, zelf doen, sfeer in huis). Gewone spreektaal, geen uitroeptekens. Antwoord alleen JSON: {"varianten":[{"title":"","desc":""}]}`);
+Regels: titel hooguit 30 tekens, tekst hooguit 40 tekens. Eerlijk: verzin geen eigenschappen die niet in de productnaam staan, geen nep-urgentie, geen 'gratis', geen korting noemen. Noem de prijs alleen exact zoals hierboven. Concreet en nieuwsgierig makend, elke variant een andere invalshoek (cadeau, seizoen of moment, zelf doen, sfeer in huis). Gewone spreektaal, geen uitroeptekens. Antwoord alleen JSON: {"varianten":[{"title":"","desc":""}]}`);
   const al = new Set(bestaand.map(a => a.title.toLowerCase()));
-  const v = (j && Array.isArray(j.varianten) ? j.varianten : []).map(x => ({ title: String(x.title || '').trim(), desc: String(x.desc || x.description || '').trim() })).filter(x => x.title && x.desc && x.title.length <= 30 && x.desc.length <= 45 && !al.has(x.title.toLowerCase()));
+  const v = (j && Array.isArray(j.varianten) ? j.varianten : []).map(x => ({ title: String(x.title || '').trim(), desc: String(x.desc || x.description || '').trim() })).filter(x => x.title && x.desc && x.title.length <= 30 && x.desc.length <= 40 && !al.has(x.title.toLowerCase()));
   if (v.length) return Object.assign({ bron: 'claude' }, v[0]);
-  const t = kortTitel(it); return al.has(t.toLowerCase()) ? null : { title: t, desc: ('Nu in de Yoors Shop voor ' + eur(it.p)).slice(0, 45), bron: 'sjabloon' };
+  const t = kortTitel(it); return al.has(t.toLowerCase()) ? null : { title: t, desc: ('Nu in de Yoors Shop voor ' + eur(it.p)).slice(0, 40), bron: 'sjabloon' };
 }
-async function advertenties() { let a = null; try { a = await kv.get(K.ads); } catch (e) {} if (!Array.isArray(a) || !a.length) { a = seed.ads.map(x => Object.assign({ at: Date.now(), bron: 'start' }, x)); try { await kv.set(K.ads, a); } catch (e) {} } return a; }
+async function advertenties() { let a = null; try { a = await kv.get(K.ads); } catch (e) {} if (!Array.isArray(a) || !a.length) { a = seed.ads.map(x => Object.assign({ at: Date.now(), bron: 'start' }, x)); try { await kv.set(K.ads, a); } catch (e) {} }
+  let ver = false; for (const s of seed.ads) { const x = a.find(q => q.pid === s.pid && q.title === s.title); if (x && x.bron === 'start' && x.desc !== s.desc) { x.desc = s.desc; ver = true; } } // startteksten volgen het bestand (PropellerAds: tekst hooguit 40 tekens)
+  if (ver) { try { await kv.set(K.ads, a); } catch (e) {} } return a; }
 const prijsInTekst = a => { const m = (a.title + ' ' + a.desc).match(/€\s?(\d+(?:[.,]\d{1,2})?)/); return m ? Number(m[1].replace(',', '.')) : null; };
 const beeld = (pid, t) => LAND() + '/api/shop/img?p=' + encodeURIComponent(pid) + '&t=' + t;
 
