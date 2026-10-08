@@ -163,6 +163,16 @@
       "destination": "/api/wtb?op=privacy"
     },
     {
+      "source": "/:slug(google[0-9a-f]+\\.html)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?slug=:slug"
+    },
+    {
       "source": "/:slug([a-z0-9-]+)",
       "has": [
         {

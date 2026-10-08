@@ -30,6 +30,7 @@ async function advice(m, it, a) {
   return out;
 }
 
+const GSC_FILES = ['googleed5fc2c42fb5c26d.html']; // Search Console-verificatiebestanden (henkjandekrijger@gmail.com)
 const CSS = m => look(ACCENTS[m.id === 'us' ? 'whichtobuy' : 'kaufberater']); // huisstijl van nexy.help, eigen accentkleur per site
 function shell(m, o) {
   const base = 'https://' + m.host;
@@ -102,6 +103,7 @@ export default async function handler(req, res) {
   }
   const m = marketFor(req); if (!m) return res.status(404).send('unknown site');
   const path = '/' + String(q.get('slug') || '');
+  if (GSC_FILES.includes(path.slice(1))) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send('google-site-verification: ' + path.slice(1)); } // eigendomsbewijs Search Console
   if (op === 'robots') { res.setHeader('content-type', 'text/plain'); return res.status(200).send(`# Buying guides may be read and cited by search engines and AI assistants. Summary: https://${m.host}/llms.txt\nUser-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: https://${m.host}/sitemap.xml\n`); }
   if (op === 'ixkey') { res.setHeader('content-type', 'text/plain'); return res.status(200).send(INDEXNOW_KEY); }
   const all = await items(m);
