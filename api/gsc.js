@@ -67,9 +67,13 @@ export default async function handler(req, res) {
   try {
     if (op === 'whoami') { const c = claims(oidc); let google = null; try { const l = await sites(oidc); google = { ok: true, eigendommen: l.length, sites: Object.fromEntries(Object.entries(SITES).map(([k, h]) => [h, !!propFor(l, h)])) }; } catch (e) { google = { ok: false, fout: String(e.message).slice(0, 200) }; } return res.status(200).json({ ok: !!c, iss: c && c.iss, aud: c && c.aud, sub: c && c.sub, google }); }
     if (op === 'status') { const v = await kv.mget('hjdk:gsc:kz', 'hjdk:gsc:us', 'hjdk:gsc:de', 'hjdk:gsc:log'); return res.status(200).json({ ok: true, keuzehulp: v[0], whichtobuy: v[1], kaufberater: v[2], log: (v[3] || []).slice(0, 20) }); }
+    if (op === 'dag' && !isCron && !isToken) { // zonder token: hooguit eens per 6 uur (alleen lezen + max 3 titels per site)
+      const last = await kv.get('hjdk:gsc:lastrun').catch(() => 0); if (last && Date.now() - last < 6 * 3600e3) return res.status(429).json({ ok: false, fout: 'laatste ronde was minder dan 6 uur geleden', status: '/api/gsc?op=status' });
+      await kv.set('hjdk:gsc:lastrun', Date.now()); return res.status(200).json(Object.assign({ ok: true }, await ronde(oidc)));
+    }
     if (!isCron && !isToken) return res.status(401).json({ error: 'alleen cron of token' });
     if (op === 'sites') return res.status(200).json({ ok: true, sites: await sites(oidc) });
-    if (op === 'dag') return res.status(200).json(Object.assign({ ok: true }, await ronde(oidc)));
+    if (op === 'dag') { await kv.set('hjdk:gsc:lastrun', Date.now()); return res.status(200).json(Object.assign({ ok: true }, await ronde(oidc))); }
     return res.status(400).json({ error: 'onbekende op' });
   } catch (e) { await log({ wat: op, fout: String(e.message).slice(0, 300) }); return res.status(500).json({ ok: false, fout: String(e.message).slice(0, 300) }); }
 }
