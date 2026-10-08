@@ -8,6 +8,7 @@
 //   /api/shop/voorpa             gegevens voor de PropellerAds-lus (project propellerads-mcp): advertenties, tellers per plek en advertentie
 //   /api/shop/palog              de PropellerAds-lus meldt hier wat hij deed
 //   /api/shop/overzicht?k=...    leerlus-overzicht in gewone taal (alleen-lezen, deelbaar; eenmalig aanmaken met ?maak=1)
+//   /api/shop/briefing?k=...     briefing voor Babita: wat de shop moet teruggeven, met de actuele stand per punt
 //   /api/shop/babita?k=...       het PHP-bestand waarmee de shop winkelwagen en bestellingen terugmeldt
 //   /api/shop/maakmd             (met sleutel) maakt een Mondiad-campagne voor een thema
 // Wat hij leert, elk uur:
@@ -55,28 +56,38 @@ let OIDC = '';
 
 // ---------------- catalogus ----------------
 let CAT = null, CAT_AT = 0;
-const compact = x => ({ id: String(x.id), t: String(x.title || '').trim(), p: num(x.price), pf: !!x.price_from, op: x.original_price ? num(x.original_price) : 0, b: String(x.brand || '').trim(), c: String(x.shop_category || ''), s: String(x.shop_sub || ''), img: String(((x.photos || [])[0] || {}).src || '').split('?')[0], v: num(x.views), f: num(x.favourites), sc: num(x.score), l: num(x.launched_at), r: num(x.rating), rc: num(x.rating_count), fs: !!x.free_shipping });
+const compactBasis = x => ({ id: String(x.id), t: String(x.title || '').trim(), p: num(x.price), pf: !!x.price_from, op: x.original_price ? num(x.original_price) : 0, b: String(x.brand || '').trim(), c: String(x.shop_category || ''), s: String(x.shop_sub || ''), img: String(((x.photos || [])[0] || {}).src || '').split('?')[0], v: num(x.views), f: num(x.favourites), sc: num(x.score), l: num(x.launched_at), r: num(x.rating), rc: num(x.rating_count), fs: !!x.free_shipping });
+// Velden die de shop er op verzoek bij levert (zie /api/shop/briefing). Ontbreekt een veld, dan blijft het weg en rekent de lus zonder.
+// Openbaar: in_stock, delivery_days, shipping_cost. Afgeschermd (alleen met header X-Lus-Key): sold_7d, sold_30d, cart_7d, margin of cost_price.
+const VELDEN = [['vr', 'in_stock'], ['lt', 'delivery_days'], ['vk', 'shipping_cost'], ['so7', 'sold_7d'], ['so30', 'sold_30d'], ['ca7', 'cart_7d'], ['mg', 'margin']];
+const compact = x => { const o = compactBasis(x); if (x.in_stock != null) o.vr = !(x.in_stock === false || x.in_stock === 0 || x.in_stock === '0' || x.in_stock === 'false'); if (x.delivery_days != null) o.lt = num(x.delivery_days); if (x.shipping_cost != null) o.vk = num(x.shipping_cost); if (x.sold_7d != null) o.so7 = num(x.sold_7d); if (x.sold_30d != null) o.so30 = num(x.sold_30d); if (x.cart_7d != null) o.ca7 = num(x.cart_7d); const mg = x.margin != null ? num(x.margin) : x.cost_price != null ? num(x.price) - num(x.cost_price) : null; if (mg != null) o.mg = Math.round(mg * 100) / 100; return o; };
+const UA = 'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Mobile Safari/537.36';
+const shopKop = () => Object.assign({ 'user-agent': UA, accept: 'application/json', 'accept-language': 'nl-NL,nl;q=0.9' }, process.env.SHOP_FEED_KEY ? { 'x-lus-key': process.env.SHOP_FEED_KEY } : {});
 async function catalog(vers) {
   if (!vers && CAT && Date.now() - CAT_AT < 300000) return CAT;
   let c = null; try { c = await kv.get(K.cat); } catch (e) {}
   if (!c || !Array.isArray(c.items) || !c.items.length) c = { at: 0, items: seed.items.map(i => Object.assign({ v: 0, f: 0, sc: 0, l: 0 }, i)), terugval: true };
   CAT = c; CAT_AT = Date.now(); return c;
 }
-async function bewaarCatalogus(items, bron) {
-  const c = { at: Date.now(), bron, items }; await kv.set(K.cat, c); CAT = c; CAT_AT = Date.now();
+async function bewaarCatalogus(items, bron, extra) {
+  const c = Object.assign({ at: Date.now(), bron, items }, extra || {}); await kv.set(K.cat, c); CAT = c; CAT_AT = Date.now();
   try { if (!(await kv.get(K.snap(DAY())))) { const s = {}; items.forEach(i => { if (i.v || i.f) s[i.id] = [i.v, i.f]; }); await kv.set(K.snap(DAY()), s, { ex: 40 * 86400 }); } } catch (e) {}
   return c;
 }
 async function sync() { // de shop zelf vertelt wat er te koop is, wat het kost en wat bekeken/bewaard wordt
   const items = []; let off = 0;
   for (let i = 0; i < 80; i++) {
-    const r = await fetch(SHOP + '/api/shop?lang=nl&offset=' + off, { headers: { 'user-agent': 'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Mobile Safari/537.36', accept: 'application/json', 'accept-language': 'nl-NL,nl;q=0.9' } });
+    const r = await fetch(SHOP + '/api/shop?lang=nl&offset=' + off, { headers: shopKop() });
     if (!r.ok) throw new Error('shop gaf HTTP ' + r.status);
     const j = await r.json(); const l = j.items || []; l.forEach(x => items.push(compact(x)));
     if (j.next == null || !l.length) break; off = j.next;
   }
   if (items.length < 10) throw new Error('shop gaf maar ' + items.length + ' producten');
-  return bewaarCatalogus(items, 'shop');
+  // wat staat er al van de briefing? (voor de vinkjes op /api/shop/briefing)
+  const velden = {}; for (const [k, n] of VELDEN) velden[n] = items.filter(i => i[k] !== undefined).length;
+  let devKnop = null; try { const h = await (await fetch(SHOP, { headers: { 'user-agent': UA, 'accept-language': 'nl-NL,nl;q=0.9' } })).text(); devKnop = h.includes('sh-dev-add'); } catch (e) {}
+  let zoek = null; try { const r = await fetch(SHOP + '/api/search-terms?days=7', { headers: shopKop() }); if (r.ok) { const j = await r.json(); const l = Array.isArray(j) ? j : (j.items || j.terms || []); zoek = l.map(x => ({ t: String(x.term || x.q || '').toLowerCase().trim().slice(0, 60), n: num(x.count), r: x.results == null ? null : num(x.results) })).filter(x => x.t).slice(0, 50); } } catch (e) {}
+  return bewaarCatalogus(items, 'shop', { velden, devKnop, zoek, engels: items.filter(i => engels(i.t)).length });
 }
 async function geheim() { let s = process.env.SHOP_SLEUTEL || ''; if (!s) { try { s = (await kv.get(K.sleutel)) || ''; } catch (e) {} } return String(s || ''); }
 
@@ -89,16 +100,18 @@ const engels = t => / (for|with|by|and|the|of|from) /i.test(' ' + t + ' ') && !/
 function gam(k) { let s = 0; const n = Math.max(1, Math.round(k)); for (let i = 0; i < n; i++) s += -Math.log(1 - Math.random()); return s * (k / n); }
 const beta = (a, b) => { const x = gam(a), y = gam(b); return x / (x + y); };
 async function productTellers(pids) { const KS = ['himp', 'hklik', 'imp', 'klik', 'cart', 'koop']; const out = {}; if (!pids.length) return out; const keys = []; pids.forEach(p => KS.forEach(s => keys.push('c:sh-p-' + pk(p) + '-' + s))); const vals = []; for (let i = 0; i < keys.length; i += 480) vals.push(...await kv.mget(...keys.slice(i, i + 480))); pids.forEach((p, i) => { const o = {}; KS.forEach((s, j) => { o[s] = num(vals[i * KS.length + j]); }); out[p] = o; }); return out; }
-// Rangorde: eigen doorkliks (Thompson, zodat nieuwe producten ook een kans krijgen) x seizoen x wat de shop zelf ziet (bekeken, bewaard) x startset.
+// Rangorde: eigen doorkliks (Thompson, zodat nieuwe producten ook een kans krijgen) x seizoen x wat de shop zelf ziet (bekeken, bewaard, verkocht) x marge x waar bezoekers op zoeken x startset.
 async function rangorde(cat, vast) {
   const start = new Set(seed.ads.map(a => a.pid)); let gisteren = {}; try { gisteren = (await kv.get(K.snap(DAY(-1)))) || {}; } catch (e) {}
-  const kand = cat.items.filter(i => i.img && i.p >= 8 && i.p <= 150);
+  const kand = cat.items.filter(i => i.img && i.p >= 8 && i.p <= 150 && i.vr !== false); // uitverkocht komt niet vooraan
+  const zoek = (cat.zoek || []).filter(z => z.t.length >= 4 && z.n >= 2).slice(0, 25).map(z => z.t);
   const gezien = new Set(await smembers(K.set('p'))); const tel = await productTellers(kand.filter(i => gezien.has(i.id)).map(i => i.id));
   return kand.map(i => { const u = tel[i.id] || { himp: 0, hklik: 0, imp: 0, klik: 0, cart: 0, koop: 0 }; const g = gisteren[i.id] || [i.v, i.f];
     const n = u.himp + 0.3 * u.imp, k = u.hklik + u.klik + 3 * u.cart + 12 * u.koop;
     const ctr = vast ? (k + 2) / (n + 26) : beta(k + 2, Math.max(0, n - Math.min(n, u.hklik + u.klik)) + 24); // voorkennis: ~8% klikt door; pas met echte bezoekers verschuift de volgorde
-    const shop = 1 + 0.25 * Math.min(8, i.f) + 0.03 * Math.min(40, i.v) + 0.4 * Math.max(0, i.f - g[1]) + 0.05 * Math.max(0, i.v - g[0]);
-    const sz = seizoen(i), en = engels(i.t); return { id: i.id, score: ctr * sz * shop * (start.has(i.id) ? 1.6 : 1) * (i.p <= 50 ? 1.15 : 1) * (en ? 0.35 : 1), n: Math.round(n), k, thema: themaVan(i), reden: !en && (sz > 1 || i.f > 0 || k > 0) }; }).sort((a, b) => b.score - a.score);
+    const shop = 1 + 0.25 * Math.min(8, i.f) + 0.03 * Math.min(40, i.v) + 0.4 * Math.max(0, i.f - g[1]) + 0.05 * Math.max(0, i.v - g[0]) + 0.6 * Math.min(8, num(i.so7)) + 0.1 * Math.min(20, num(i.so30)) + 0.15 * Math.min(12, num(i.ca7)); // wat de shop zelf ziet: bewaard, bekeken, verkocht, in winkelwagen
+    const marge = i.mg == null ? 1 : Math.max(0.4, Math.min(2, i.mg / 8)); const tl = i.t.toLowerCase(); const gezocht = zoek.some(z => tl.includes(z));
+    const sz = seizoen(i), en = engels(i.t); return { id: i.id, score: ctr * sz * shop * marge * (gezocht ? 1.3 : 1) * (start.has(i.id) ? 1.6 : 1) * (i.p <= 50 ? 1.15 : 1) * (en ? 0.35 : 1), n: Math.round(n), k, thema: themaVan(i), reden: !en && (sz > 1 || i.f > 0 || k > 0 || num(i.so7) > 0 || gezocht) }; }).sort((a, b) => b.score - a.score);
 }
 
 // ---------------- Claude voor advertentieteksten (Vercel AI Gateway met het OIDC-token van dit project; anders eigen sleutel; anders sjabloon) ----------------
@@ -280,9 +293,9 @@ async function land(req, res, url) {
   let clickid = String(q.get('clickid') || '').replace(/[^A-Za-z0-9_.-]/g, '').slice(0, 120); if (/^(subid|clickid|click_id|visitor_id)$/i.test(clickid)) clickid = '';
   const zone = plekId(q.get('zoneid')), cr = digits(q.get('creativeid')), camp = digits(q.get('campaignid'));
   const cat = await catalog(); const perId = {}; cat.items.forEach(i => { perId[i.id] = i; });
-  let top = null; try { top = await kv.get(K.top); } catch (e) {} const topIds = (top && top.ids && top.ids.length ? top.ids : seed.ads.map(a => a.pid)).filter(id => perId[id]);
-  let pid = pidOk(q.get('p')); if (pid && !perId[pid]) pid = '';
-  if (!pid && cr && net !== 'x') { try { const m = (await kv.get(K.crmap)) || {}; if (perId[m[net + ':' + cr]]) pid = m[net + ':' + cr]; } catch (e) {} }
+  let top = null; try { top = await kv.get(K.top); } catch (e) {} const topIds = (top && top.ids && top.ids.length ? top.ids : seed.ads.map(a => a.pid)).filter(id => perId[id] && perId[id].vr !== false);
+  let pid = pidOk(q.get('p')); if (pid && (!perId[pid] || perId[pid].vr === false)) pid = '';
+  if (!pid && cr && net !== 'x') { try { const m = (await kv.get(K.crmap)) || {}; if (perId[m[net + ':' + cr]] && perId[m[net + ':' + cr]].vr !== false) pid = m[net + ':' + cr]; } catch (e) {} }
   if (!pid) pid = topIds[0] || cat.items[0].id;
   const held = perId[pid]; const thema = (top && top.thema && top.thema[pid]) || themaVan(held);
   const zelfde = topIds.filter(id => id !== pid && ((top && top.thema && top.thema[id]) || themaVan(perId[id])) === thema).slice(0, 3);
@@ -317,7 +330,7 @@ ${held.b ? `<p class="brand">${esc(held.b)}</p>` : '<p class="brand">Yoors Shop<
 <h1>${esc(held.t)}</h1>
 <p class="prijs">${held.pf ? '<small>vanaf </small>' : ''}${esc(eur(held.p))}</p>
 <a class="koop" href="${esc(uit(pid, 'h'))}">Bekijk in de shop</a>
-<ul class="zeker"><li>14 dagen retourneren: niet tevreden, geld terug</li><li>Veilig betalen via PayPal</li><li>Verzonden vanuit Europa, met track &amp; trace</li></ul>
+<ul class="zeker"><li>14 dagen retourneren: niet tevreden, geld terug</li><li>Veilig betalen via PayPal</li><li>Verzonden vanuit Europa, met track &amp; trace</li>${held.lt ? `<li>Bezorgd in ${held.lt} ${held.lt === 1 ? 'werkdag' : 'werkdagen'}</li>` : ''}${held.vk === 0 ? '<li>Gratis verzending</li>' : held.vk ? `<li>Verzending ${esc(eur(held.vk))}</li>` : ''}</ul>
 ${meer.length ? `<h2>Ook populair vandaag</h2><div class="pg">${meer.map(kaart).join('')}</div>` : ''}
 <a class="alles" href="${esc('/api/shop/uit?p=alles' + (code ? '&c=' + code : '') + '&pos=alles')}">Bekijk alle ${cat.items.length >= 100 ? cat.items.length + ' ' : ''}producten</a>
 </main>
@@ -360,6 +373,7 @@ async function baken(req, res) {
 async function pixel(req, res, url) {
   const q = url.searchParams; const code = String(q.get('c') || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); const w = q.get('w') === 'koop' ? 'koop' : 'cart';
   const v = Math.max(0, Math.min(100000, num(q.get('v')))); const order = String(q.get('o') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40);
+  try { await kv.set('hjdk:shop:pxlaatst:' + w, { at: Date.now(), test: /^test/i.test(code), bedrag: v, order: !!order }); } catch (e) {}
   if (code) { try { const rec = await kv.get(K.rec(code)); const merk = w + (w === 'koop' && order ? ':' + order : '');
     if (rec && !(rec.px && rec.px[merk])) { rec.px = rec.px || {}; rec.px[merk] = Date.now(); const net = rec.s; const keys = ['sh-' + net + '-' + w, 'sh-d' + D8() + '-' + net + '-' + w]; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-' + w); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-' + w); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-' + w); if (rec.p) keys.push('sh-p-' + pk(rec.p) + '-' + w);
       await inc(keys);
@@ -436,15 +450,100 @@ pre{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;paddi
 <h2>Advertentieplekken</h2><p class="uitleg">De beste plekken per netwerk. Plekken zonder echte mensen of zonder doorkliks sluit de lus zelf uit.</p>${tabel('<th>Netwerk</th><th>Plek</th><th class="n">Bezoekers</th><th class="n">Echte mensen</th><th class="n">Bleven</th><th class="n">Naar de shop</th><th class="n">Bestellingen</th>', plRij, 'Nog geen bezoekers', 7)}
 ${uitRij ? `<h3>Uitgesloten plekken</h3>${tabel('<th>Netwerk</th><th>Plek</th><th>Waarom</th>', uitRij, '', 3)}` : ''}
 <h2>Wat de lus besloot</h2><ul class="b">${besl || '<li>Nog niets.</li>'}</ul>
-<h2 id="babita">Voor Babita: bestellingen doorgeven vanuit de shop</h2>
-<p class="uitleg">Nu weet de lus alleen wie doorklikt naar de shop. Zodra de shop ook "in winkelwagen" en "betaald" terugmeldt, leert hij op echte bestellingen en gaan die als conversie naar Mondiad, RichAds en PropellerAds. Voor Mondiad en RichAds zit dat nog niet in Yoors; dit ene bestand regelt het voor alle netwerken.</p>
-<ol class="st"><li><b>Download het bestand</b>: <a href="/api/shop/babita?k=${esc(sk)}">yoors-shop-conversies.php</a> en zet het in de shop-code.</li>
-<li><b>Op elke shop-pagina</b>, voordat er uitvoer is: <code>ShopConversies::onthoud($_GET);</code><br><span class="t">Onthoudt het kenmerk <code>hj</code> uit de URL in een cookie van 7 dagen.</span></li>
-<li><b>Als iets in de winkelwagen gaat</b>: <code>ShopConversies::winkelwagen();</code></li>
-<li><b>Bij het starten van de betaling</b>, bewaar bij de order: <code>$kenmerk = ShopConversies::voorOrder();</code></li>
-<li><b>Zodra de betaling binnen is</b> (PayPal bevestigd), een keer per order: <code>ShopConversies::betaald($orderId, $bedragInEuro, $kenmerk);</code></li></ol>
-<p class="uitleg">Testen: open <code>yoo.rs/shop/?hj=test123</code>, leg iets in de winkelwagen en reken af. De aanroepen moeten HTTP 200 geven; zet <code>LOG</code> in het bestand tijdelijk op <code>true</code> om ze in de PHP-errorlog te zien. Wat er technisch gebeurt: de shop roept <code>${esc(LAND())}/api/shop/px?c=&lt;hj&gt;&amp;w=koop&amp;v=&lt;bedrag&gt;&amp;o=&lt;ordernummer&gt;</code> aan; de lus zoekt de klik erbij en meldt hem aan het juiste netwerk.</p>
+<h2 id="babita">Voor Babita</h2>
+<p class="uitleg">Nu weet de lus alleen wie doorklikt naar de shop. Wat de shop moet teruggeven om op bestellingen en marge te sturen, staat met voorbeelden en de actuele stand in de briefing.</p>
+<p><a class="btn" href="/api/shop/briefing?k=${esc(sk)}">Open de briefing voor Babita</a> &nbsp; <a class="btn ghost" href="/api/shop/babita?k=${esc(sk)}">Download yoors-shop-conversies.php</a></p>
 <p class="note">Uitgesloten plekken: Mondiad ${laatste && laatste.mondiad ? num(laatste.mondiad.zwarteLijst) : 0}, PropellerAds ${pa ? num(pa.zwarteLijst) : 0}, RichAds ${ra ? num(ra.zwarteLijst) : 0}. Advertenties in de bibliotheek: ${laatste ? num(laatste.advertenties) : 0}. Catalogus: ${laatste ? num(laatste.catalogus.producten) + ' producten' + (laatste.catalogus.terugval ? ' (startset; de shop was niet bereikbaar)' : '') : '?'}. Deze pagina is alleen-lezen: er staan geen sleutels op en je kunt er niets mee wijzigen.</p></main></body></html>`;
+}
+
+// ---------------- briefing voor Babita: wat de shop moet teruggeven, met de actuele stand ----------------
+async function briefingPagina(sk) {
+  const cat = await catalog(true); const n = cat.items.length; const v = cat.velden || {}; const px = {}; for (const w of ['cart', 'koop']) { try { px[w] = await kv.get('hjdk:shop:pxlaatst:' + w); } catch (e) {} }
+  const en = cat.items.filter(i => engels(i.t));
+  const ok = t => `<span class="ok">✓ ${esc(t)}</span>`, nee = t => `<span class="nee">○ ${esc(t)}</span>`, half = t => `<span class="half">• ${esc(t)}</span>`;
+  const veld = (namen) => { const c = namen.map(x => num(v[x])); const min = Math.min(...c), max = Math.max(...c); return !max ? nee('staat er nog niet') : min >= 0.9 * n ? ok('staat erin bij ' + min + ' van ' + n + ' producten') : half(namen.map((x, i) => x + ' ' + c[i]).join(', ') + ' van ' + n + ' producten'); };
+  const pxStand = !px.cart && !px.koop ? nee('nog geen aanroep gezien') : (px.koop ? (px.koop.test ? half : ok)('betaald: laatste aanroep ' + nlTijd(new Date(px.koop.at).toISOString()) + (px.koop.test ? ' (test)' : '') + (px.koop.order ? '' : ', zonder ordernummer') + (px.koop.bedrag ? '' : ', zonder bedrag')) : nee('betaald: nog niet gezien')) + '<br>' + (px.cart ? ok('winkelwagen: laatste aanroep ' + nlTijd(new Date(px.cart.at).toISOString())) : nee('winkelwagen: nog niet gezien'));
+  const stand = [
+    ['1', 'Winkelwagen en betaalde bestelling terugmelden', pxStand],
+    ['2', 'Voorraad, levertijd en verzendkosten in de productlijst', veld(['in_stock', 'delivery_days', 'shipping_cost'])],
+    ['3', 'Verkocht, winkelwagen en marge (afgeschermd)', veld(['sold_7d', 'sold_30d', 'cart_7d', 'margin'])],
+    ['4', 'Zoekwoorden van bezoekers', cat.zoek ? ok(cat.zoek.length + ' zoekwoorden ontvangen') : nee('adres bestaat nog niet')],
+    ['5', 'Nederlandse titels', en.length ? half('nog ' + en.length + ' van ' + n + ' producten met een Engelse titel') : ok('alles vertaald')],
+    ['6', 'Ontwikkelaarsknop verbergen voor bezoekers', cat.devKnop === false ? ok('niet meer zichtbaar') : cat.devKnop === true ? nee('nog zichtbaar zonder inloggen') : half('niet kunnen controleren')]
+  ].map(r => `<tr><td class="nr">${r[0]}</td><td>${esc(r[1])}</td><td>${r[2]}</td></tr>`).join('');
+  const vt = rijen => `<div class="tw"><table><tr><th>Veld</th><th>Type</th><th>Voorbeeld</th><th>Betekenis</th></tr>${rijen.map(r => `<tr><td><code>${r[0]}</code></td><td>${r[1]}</td><td><code>${r[2]}</code></td><td class="wrap2">${r[3]}</td></tr>`).join('')}</table></div>`;
+  return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><title>Briefing voor Babita: Yoors Shop en de leerlus</title>
+<style>${look(ACC)}.wrap{max-width:52rem}.tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:0 0 14px}table{border-collapse:collapse;width:100%;font-size:.9375rem}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--ink-3);font-weight:650}tr:last-child td{border-bottom:0}td.nr{font-weight:700;width:2rem}td.wrap2{min-width:15rem}
+.ok{color:#15803d;font-weight:650}.nee{color:#b91c1c;font-weight:650}.half{color:#b45309;font-weight:650}@media (prefers-color-scheme:dark){.ok{color:#4ade80}.nee{color:#f87171}.half{color:#fbbf24}}
+pre{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:14px;overflow-x:auto;font-size:.875rem;line-height:1.5;margin:0 0 14px}code{font-size:.9em}ol.st{padding-left:20px;margin:0 0 14px}ol.st li{margin:0 0 10px}h1{font-size:1.875rem}h2{margin-top:44px}.klaar{border-left:3px solid var(--acc);padding:2px 0 2px 14px;color:var(--ink-2);margin:0 0 14px}.t{color:var(--ink-3);font-size:.8125rem}</style></head><body><main class="wrap">
+<p class="kicker">Yoors Shop · voor Babita</p><h1>Briefing: wat de shop moet teruggeven</h1>
+<p class="standfirst">Er lopen betaalde campagnes naar de Yoors Shop via Mondiad, PropellerAds en RichAds. Een lus in de cloud stuurt ze elk uur bij, maar ziet nu alleen wie doorklikt naar de shop. Met de zes punten hieronder ziet hij ook wat er verkocht wordt en wat het oplevert. De volgorde is de volgorde van belang: punt 1 levert het meeste op.</p>
+<p class="meta">Stand van ${esc(nlTijd(new Date().toISOString()))} (Nederlandse tijd). De lus kijkt elk uur zelf of iets er staat; je hoeft niets af te melden. <a href="/api/shop/overzicht?k=${esc(sk)}">Naar het leerlus-overzicht</a></p>
+<h2 style="margin-top:28px">Stand</h2><div class="tw"><table><tr><th></th><th>Punt</th><th>Stand</th></tr>${stand}</table></div>
+
+<h2>1. Winkelwagen en betaalde bestelling terugmelden</h2>
+<p>Elke bezoeker uit een campagne komt binnen met een kenmerk in de URL, bijvoorbeeld <code>yoo.rs/shop/product/oc_123?utm_source=mondiad&amp;hj=abc123</code>. De shop onthoudt dat kenmerk en meldt terug als die bezoeker iets in de winkelwagen legt en als hij betaald heeft. De lus zoekt er de klik bij en geeft de bestelling door aan het juiste advertentienetwerk. Voor Mondiad en RichAds zit dat nog niet in Yoors; dit ene bestand regelt het voor alle netwerken.</p>
+<ol class="st"><li><a href="/api/shop/babita?k=${esc(sk)}"><b>Download yoors-shop-conversies.php</b></a> en zet het in de shop-code.</li>
+<li>Op elke shop-pagina, voordat er uitvoer is: <code>ShopConversies::onthoud($_GET);</code></li>
+<li>Als iets in de winkelwagen gaat: <code>ShopConversies::winkelwagen();</code></li>
+<li>Bij het starten van de betaling, bewaar bij de order: <code>$kenmerk = ShopConversies::voorOrder();</code></li>
+<li>Zodra de betaling binnen is (PayPal bevestigd), een keer per order: <code>ShopConversies::betaald($orderId, $bedragInEuro, $kenmerk);</code></li></ol>
+<p>Stap 4 en 5 zijn zo gemaakt dat het ook werkt als PayPal de bevestiging via een webhook stuurt; dan is er geen cookie, maar het kenmerk staat bij de order. Een aanroep die mislukt houdt de shop nooit op: het bestand wacht hooguit 3 seconden en vangt elke fout af.</p>
+<p class="klaar"><b>Klaar als:</b> je <code>yoo.rs/shop/?hj=test123</code> opent, iets in de winkelwagen legt en afrekent, en hierboven bij punt 1 twee keer "laatste aanroep" met de tijd van je test staat.</p>
+
+<h2>2. Voorraad, levertijd en verzendkosten in de productlijst</h2>
+<p>De lus haalt elk uur <code>GET /shop/api/shop?lang=nl&amp;offset=0</code> op. Per product staan daar al <code>id</code>, <code>title</code>, <code>price</code>, <code>views</code> en <code>favourites</code>. Voeg per product deze drie velden toe. Ze mogen openbaar zijn; ze staan ook op de productpagina.</p>
+${vt([['in_stock', 'true of false', 'true', 'Nu te bestellen. Bij <code>false</code> zet de lus het product niet meer vooraan.'], ['delivery_days', 'getal', '3', 'Werkdagen tot bezorging in Nederland. Komt op de landingspagina te staan.'], ['shipping_cost', 'getal, in euro', '4.95', 'Verzendkosten naar Nederland. <code>0</code> betekent gratis verzending.']])}
+<p class="klaar"><b>Klaar als:</b> bij punt 2 hierboven staat dat de velden er bij (bijna) alle producten in zitten.</p>
+
+<h2>3. Verkocht, winkelwagen en marge (afgeschermd)</h2>
+<p>Dezelfde productlijst, maar deze vier velden alleen meesturen als de aanvraag de header <code>X-Lus-Key</code> met de juiste sleutel heeft. De sleutel krijg je van Henkjan; hij staat bewust niet op deze pagina. Zonder sleutel of met een verkeerde sleutel: de velden weglaten en verder gewoon antwoorden, geen foutmelding.</p>
+${vt([['sold_7d', 'getal', '4', 'Stuks verkocht in de laatste 7 dagen.'], ['sold_30d', 'getal', '11', 'Stuks verkocht in de laatste 30 dagen.'], ['cart_7d', 'getal', '9', 'Keer in een winkelwagen gelegd in de laatste 7 dagen.'], ['margin', 'getal, in euro', '8.40', 'Wat er per stuk overblijft: verkoopprijs min inkoop min de verzending die wij betalen. Heb je alleen de inkoopprijs, stuur dan <code>cost_price</code>; dan rekent de lus het zelf uit.']])}
+<pre>{
+  "id": "oc_4174003627704321",
+  "title": "Cortenstaal Skull Lantaarn voor Gothic Decor",
+  "price": 25,
+  "views": 31,
+  "favourites": 2,
+  "in_stock": true,
+  "delivery_days": 3,
+  "shipping_cost": 4.95,
+  "sold_7d": 4,
+  "sold_30d": 11,
+  "cart_7d": 9,
+  "margin": 8.40
+}</pre>
+<p class="klaar"><b>Klaar als:</b> bij punt 3 hierboven staat dat de velden erin zitten. De lus stuurt dan op wat verkoopt en wat geld oplevert, in plaats van op wat veel kliks trekt.</p>
+
+<h2>4. Zoekwoorden van bezoekers</h2>
+<p>Nieuw adres: <code>GET /shop/api/search-terms?days=7</code>, ook alleen met de header <code>X-Lus-Key</code>. Het geeft de 50 meest gebruikte zoekopdrachten in de shop over die dagen. Als de shop zoekopdrachten nog niet bewaart, is dat het eerste stuk: bij elke zoekactie op <code>/shop/search?q=...</code> het zoekwoord, de datum en het aantal gevonden producten opslaan.</p>
+<pre>{
+  "items": [
+    { "term": "book nook", "count": 14, "results": 9 },
+    { "term": "kerstballen", "count": 6, "results": 2 },
+    { "term": "adventskalender", "count": 5, "results": 0 }
+  ]
+}</pre>
+<p><code>results: 0</code> is juist waardevol: daar zocht iemand iets wat de shop niet heeft.</p>
+<p class="klaar"><b>Klaar als:</b> bij punt 4 hierboven staat hoeveel zoekwoorden er ontvangen zijn.</p>
+
+<h2>5. Nederlandse titels</h2>
+<p>Met <code>?lang=nl</code> hebben ${en.length} van de ${n} producten nog een Engelse titel. Die adverteert de lus niet, en op een Nederlandse pagina zet hij ze niet vooraan. Het gaat om deze producten:</p>
+<details class="faq"><summary>Lijst van ${en.length} producten met een Engelse titel</summary><div class="a"><div class="tw"><table><tr><th>Id</th><th>Titel nu</th></tr>${en.map(i => `<tr><td><a href="${SHOP}/product/${esc(i.id)}"><code>${esc(i.id)}</code></a></td><td>${esc(i.t)}</td></tr>`).join('')}</table></div></div></details>
+<p class="klaar"><b>Klaar als:</b> bij punt 5 hierboven "alles vertaald" staat. De telling is een schatting op woorden als "for", "with" en "by"; een enkele merknaam kan blijven hangen.</p>
+
+<h2>6. Ontwikkelaarsknop verbergen</h2>
+<p>Op <code>yoo.rs/shop</code> staat als eerste kaart "Populair product toevoegen, alleen voor ontwikkelaars". Die is ook zichtbaar voor bezoekers die niet zijn ingelogd; een betaalde bezoeker ziet hem dus als eerste product. Alleen tonen aan ingelogde ontwikkelaars.</p>
+<p class="klaar"><b>Klaar als:</b> bij punt 6 hierboven "niet meer zichtbaar" staat.</p>
+
+<h2>Wat je niet hoeft te doen</h2>
+<ul><li><b>PropellerAds</b> zit al in Yoors en blijft zoals het is. Bezoekers via de leerlus hebben geen PropellerAds-kenmerk in de URL, dus de bestaande melding gaat voor hen niet af en er wordt niets dubbel geteld.</li>
+<li><b>Google Analytics</b>: geen werk nodig. De links uit de campagnes hebben wel <code>utm_source</code>, <code>utm_campaign</code> en <code>utm_content</code>, dus in GA zijn ze terug te vinden.</li>
+<li><b>Campagnes, biedingen en advertenties</b>: dat doet de lus zelf.</li></ul>
+
+<h2>Vragen</h2>
+<p>Via Henkjan. Loopt iets anders dan hier staat, bijvoorbeeld andere veldnamen die al bestaan: geef ze door, dan past de lus zich aan in plaats van de shop.</p>
+<p class="note">Deze pagina is alleen-lezen: er staan geen sleutels op en je kunt er niets mee wijzigen.</p></main></body></html>`;
 }
 
 export default async function handler(req, res) {
@@ -484,6 +583,7 @@ export default async function handler(req, res) {
     if (!sk && url.searchParams.get('maak')) { sk = randomBytes(15).toString('hex'); await kv.set(K.statuskey, sk); return res.status(200).json({ ok: true, link: LAND() + '/api/shop/overzicht?k=' + sk }); }
     if (!sk || url.searchParams.get('k') !== sk) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(403).send('<p style="font:16px system-ui;padding:24px">Deze pagina is privé.</p>'); }
     if (url.searchParams.get('json')) return res.status(200).json({ ok: true, laatste: await kv.get(K.laatste), pa: ((await kv.get(K.palog)) || []).slice(0, 5), ra: ((await kv.get(K.ralog)) || []).slice(0, 5), logboek: ((await kv.get(K.log)) || []).slice(0, 80), vandaag: await dagTotaal(DAY()) });
+    if (op === 'briefing') { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(await briefingPagina(sk)); }
     if (op === 'babita') { res.setHeader('content-type', 'application/x-php; charset=utf-8'); res.setHeader('content-disposition', 'attachment; filename="yoors-shop-conversies.php"'); return res.status(200).send(SHOP_PHP); }
     res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(await statusPagina(sk));
   } catch (e) { return res.status(200).json({ ok: false, fout: String(e && e.message || e) }); }
