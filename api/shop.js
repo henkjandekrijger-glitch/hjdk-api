@@ -23,6 +23,7 @@ import { md } from '../lib/mdmcp.js';
 import { look } from '../lib/look.js';
 import seed from '../data/shop-seed.json' with { type: 'json' };
 import { SHOP_PHP } from '../lib/shopphp.js';
+import { adviesPagina } from '../lib/shopadvies.js';
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
 const SHOP = 'https://yoo.rs/shop';
@@ -145,6 +146,7 @@ async function tellers(net, soort, ids) { const out = {}; if (!ids.length) retur
 // Aantal verschillende apparaten per plek (alleen voor plekken met genoeg bezoekers). Zet het in o.uniek.
 async function metUniek(net, zones) { for (const [z, o] of Object.entries(zones)) { if (num(o.view) < 20) continue; try { const n = num(await kv.raw(['PFCOUNT', K.hll(net, z)])); if (n > 0) { o.uniek = n; o.uniekVan = num(await kv.get('c:sh-' + net + '-z' + z + '-hv')) || 0; } } catch (e) {} } return zones; }
 async function dagTotaal(dag) { const nets = ['md', 'pa', 'ra', 'ca', 'x']; const keys = []; nets.forEach(n => SOORTEN.forEach(s => keys.push('c:sh-d' + dag.replace(/-/g, '') + '-' + n + '-' + s))); const v = await kv.mget(...keys); const out = {}; nets.forEach((n, i) => { out[n] = {}; SOORTEN.forEach((s, j) => { out[n][s] = num(v[i * SOORTEN.length + j]); }); }); return out; }
+async function netTotaal() { const nets = ['md', 'pa', 'ra', 'ca', 'x']; const keys = []; nets.forEach(n => SOORTEN.forEach(s => keys.push('c:sh-' + n + '-' + s))); const v = await kv.mget(...keys); const out = {}; nets.forEach((n, i) => { out[n] = {}; SOORTEN.forEach((s, j) => { out[n][s] = num(v[i * SOORTEN.length + j]); }); }); return out; }
 // Oordeel over een advertentieplek. netKliks = kliks volgens het netwerk, o = onze eigen tellers.
 function plekOordeel(netKliks, o, gemKlik) {
   if (netKliks >= 15 && o.view < 0.4 * netKliks) return { uit: `nep: ${netKliks} kliks volgens het netwerk, maar ${o.view} kwamen aan` };
@@ -344,7 +346,7 @@ ${held.b ? `<p class="brand">${esc(held.b)}</p>` : '<p class="brand">Yoors Shop<
 <h1>${esc(held.t)}</h1>
 <p class="prijs">${held.pf ? '<small>vanaf </small>' : ''}${esc(eur(held.p))}</p>
 <a class="koop" href="${esc(uit(pid, 'h'))}">Bekijk in de shop</a>
-<ul class="zeker"><li>14 dagen retourneren: niet tevreden, geld terug</li><li>Veilig betalen via PayPal</li><li>Verzonden vanuit Europa, met track &amp; trace</li>${held.lt ? `<li>Bezorgd in ${held.lt} ${held.lt === 1 ? 'werkdag' : 'werkdagen'}</li>` : ''}${held.vk === 0 ? '<li>Gratis verzending</li>' : held.vk ? `<li>Verzending ${esc(eur(held.vk))}</li>` : ''}</ul>
+<ul class="zeker"><li>14 dagen retourneren: niet tevreden, geld terug</li><li>Betalen met iDEAL, PayPal of creditcard</li><li>Verzonden vanuit Europa, met track &amp; trace</li>${held.lt ? `<li>Bezorgd in ${held.lt} ${held.lt === 1 ? 'werkdag' : 'werkdagen'}</li>` : ''}${held.vk === 0 ? '<li>Gratis verzending</li>' : held.vk ? `<li>Verzending ${esc(eur(held.vk))}</li>` : ''}</ul>
 ${meer.length ? `<h2>Ook populair vandaag</h2><div class="pg">${meer.map(kaart).join('')}</div>` : ''}
 <a class="alles" href="${esc('/api/shop/uit?p=alles' + (code ? '&c=' + code : '') + '&pos=alles')}">Bekijk alle ${cat.items.length >= 100 ? cat.items.length + ' ' : ''}producten</a>
 </main>
@@ -367,7 +369,7 @@ async function uitgang(req, res, url) {
     if (rec && !rec.kl) { if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-klik'); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-klik'); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-klik'); rec.kl = Date.now(); }
     if (rec && rec.c && !rec.conv && PB[net]) { let st = 0; try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(PB[net].replace('{clickid}', encodeURIComponent(rec.c)), { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (e) {} rec.conv = Date.now(); rec.pb = st; keys.push('sh-' + net + '-conv', 'sh-d' + D8() + '-' + net + '-conv', 'sh-' + net + '-pb' + (st || 0)); if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-conv'); }
     await inc(keys); if (rec) { try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} } }
-  const utm = 'utm_source=' + (net === 'x' ? 'shoplus' : NETTEN[net].toLowerCase()) + '&utm_medium=push&utm_campaign=shoplus' + (it ? '&utm_content=' + encodeURIComponent(pk(it.id)) : '') + (code ? '&hj=' + code : '');
+  const utm = 'utm_source=' + (net === 'x' ? 'shoplus' : NETTEN[net].toLowerCase()) + '&utm_medium=push&utm_campaign=shoplus' + (it ? '&utm_content=' + encodeURIComponent(pk(it.id)) : '') + (code ? '&hj=' + code : '') + '&lang=nl'; // de shop kiest anders de taal van de telefoon; de afrekenpagina is nog Engels
   res.statusCode = 302; res.setHeader('location', (it ? SHOP + '/product/' + encodeURIComponent(it.id) : SHOP) + '?' + utm); res.setHeader('cache-control', 'no-store'); return res.end();
 }
 
@@ -466,7 +468,8 @@ ${uitRij ? `<h3>Uitgesloten plekken</h3>${tabel('<th>Netwerk</th><th>Plek</th><t
 <h2>Wat de lus besloot</h2><ul class="b">${besl || '<li>Nog niets.</li>'}</ul>
 <h2 id="babita">Voor Babita</h2>
 <p class="uitleg">Nu weet de lus alleen wie doorklikt naar de shop. Wat de shop moet teruggeven om op bestellingen en marge te sturen, staat met voorbeelden en de actuele stand in de briefing.</p>
-<p><a class="btn" href="/api/shop/briefing?k=${esc(sk)}">Open de briefing voor Babita</a> &nbsp; <a class="btn ghost" href="/api/shop/babita?k=${esc(sk)}">Download yoors-shop-conversies.php</a></p>
+<p><a class="btn" href="/api/shop/advies?k=${esc(sk)}">Wat de campagnes leren en wat de verkoop tegenhoudt</a></p>
+<p><a class="btn ghost" href="/api/shop/briefing?k=${esc(sk)}">Wat de shop moet teruggeven</a> &nbsp; <a class="btn ghost" href="/api/shop/babita?k=${esc(sk)}">Download yoors-shop-conversies.php</a></p>
 <p class="note">Uitgesloten plekken: Mondiad ${laatste && laatste.mondiad ? num(laatste.mondiad.zwarteLijst) : 0}, PropellerAds ${pa ? num(pa.zwarteLijst) : 0}, RichAds ${ra ? num(ra.zwarteLijst) : 0}, Clickadu ${ca ? num(ca.zwarteLijst) : 0}. Advertenties in de bibliotheek: ${laatste ? num(laatste.advertenties) : 0}. Catalogus: ${laatste ? num(laatste.catalogus.producten) + ' producten' + (laatste.catalogus.terugval ? ' (startset; de shop was niet bereikbaar)' : '') : '?'}. Deze pagina is alleen-lezen: er staan geen sleutels op en je kunt er niets mee wijzigen.</p></main></body></html>`;
 }
 
@@ -613,6 +616,12 @@ export default async function handler(req, res) {
       } while (cur !== '0' && gezien < 30000);
       o.secTotKlik.sort((a, b) => a - b); o.verschillendeApparaten = Object.keys(o.apparaten).length; o.vaakstTerug = Math.max(0, ...Object.values(o.apparaten)); delete o.apparaten;
       return res.status(200).json(Object.assign({ ok: true }, o)); }
+    if (op === 'advies') { // briefing voor Babita: wat de campagnes leren (live) en wat de verkoop in de shop tegenhoudt
+      const l = (await kv.get(K.laatste)) || {}; const eerste = async k => ((await kv.get(k)) || [])[0] || {}; const somK = x => ((x && x.campagnes) || []).reduce((a, c) => a + num(c.kostenVandaag), 0);
+      let px = false; try { px = !!(await kv.get('hjdk:shop:pxlaatst:koop')) || !!(await kv.get('hjdk:shop:pxlaatst:cart')); } catch (e) {}
+      const les = (await kv.get(K.lessen)) || {};
+      res.setHeader('content-type', 'text/html; charset=utf-8');
+      return res.status(200).send(adviesPagina({ sk, css: look(ACC), esc, vandaag: await dagTotaal(DAY()), totaal: await netTotaal(), kosten: { md: somK(l.mondiad), pa: somK(await eerste(K.palog)), ra: somK(await eerste(K.ralog)), ca: somK(await eerste(K.calog)) }, inz: l.inzicht || null, lessen: les.lessen || [], bijgewerkt: nlTijd(new Date().toISOString()), pxGezien: px })); }
     if (op === 'briefing') { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(await briefingPagina(sk)); }
     if (op === 'babita') { res.setHeader('content-type', 'application/x-php; charset=utf-8'); res.setHeader('content-disposition', 'attachment; filename="yoors-shop-conversies.php"'); return res.status(200).send(SHOP_PHP); }
     res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(await statusPagina(sk));
