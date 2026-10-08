@@ -39,11 +39,13 @@ async function blindTest(m, t) {
 
 async function maakPlan(m) {
   const all = await items(m); const plan0 = await kv.get(K.plan(m.id, DAY())); if (plan0) return plan0;
-  const [trends, les] = await Promise.all([trendsRss(m.geo), leer(m, all)]);
+  const [trends, les, gsc] = await Promise.all([trendsRss(m.geo), leer(m, all), kv.get('hjdk:gsc:' + m.id).catch(() => null)]);
+  const gscOpen = ((gsc && gsc.open) || []).slice(0, 25).map(x => x.q + ' (' + x.imp + ' impressions, pos ' + x.pos + ')');
   const n = m.perDay(); const cand = Math.min(30, Math.round(n * 1.8));
   const sys = `You plan buying guides for ${m.name} (${m.host}), market ${m.geo}, language ${m.lang}, monetized via Amazon (${m.amazon}). Goal: organic traffic from Google, Bing and AI assistants (ChatGPT search, Perplexity, Copilot, Gemini) that converts to Amazon purchases. Pick topics where AI assistants are BLIND: product categories that change fast (new models every year, new standards like Wi-Fi 7, Qi2, USB-C PD 3.1, Matter, OLED/mini-LED, heat pumps), new-in-2025/2026 product types, seasonal moments in the next 8 weeks (Halloween, Black Friday/Cyber Monday, holidays${m.id === 'de' ? ', Nikolaus, Weihnachten' : ', Thanksgiving, Christmas'}), and specific long-tail needs (e.g. 'for small apartments', 'for pet hair', 'under ${m.id === 'us' ? '$100' : '100 €'}'). Prefer higher order values (>${m.id === 'us' ? '$40' : '40 €'}) and categories Amazon sells well. Never duplicate an existing topic. Reply ONLY JSON.`;
   const user = `Today: ${DAY()}. Existing guides (do not repeat): ${all.map(i => i.slug).join(', ') || 'none yet'}.
 Google Trends today (${m.geo}): ${trends.join(' | ') || 'n/a'}.
+Google Search Console: searches where Google ALREADY shows our site but no guide answers them yet. Turn each one that is a product buying question into a topic FIRST and mark it "gsc":true: ${gscOpen.join(' | ') || 'none yet'}.
 What performs so far (views/starts/Amazon clicks per guide; traffic sources; AI crawler visits): ${JSON.stringify({ top: les.top, cats: les.cats, src: les.src, bots: les.bots })}.
 Give ${cand} candidate topics: {"topics":[{"slug":"lowercase-ascii-hyphen in ${m.lang}","term":"Amazon search keywords in ${m.lang}","title":"the buyer question in ${m.lang}, e.g. ${m.id === 'us' ? 'Which robot vacuum for pet hair?' : 'Welcher Saugroboter für Tierhaare?'}","cat":"category in ${m.lang}","demand":1-5,"why":"short: why buyers search this now and why AI answers are likely outdated or vague"}]}`;
   const r = await claude(sys, user, { max: 5000, oidc: OIDC }); const j = json(r.txt);
@@ -51,7 +53,7 @@ Give ${cand} candidate topics: {"topics":[{"slug":"lowercase-ascii-hyphen in ${m
   let topics = (j.topics || []).map(t => Object.assign({}, t, { slug: String(t.slug || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) })).filter(t => t.slug && t.term && !have.has(t.slug) && !seen.has(t.slug) && seen.add(t.slug));
   // blinde-vlektest per kandidaat (snel model), dan rangschikken op vraag x blinde vlek
   for (let i = 0; i < topics.length; i += 5) await Promise.all(topics.slice(i, i + 5).map(async t => { try { t.blind = await blindTest(m, t); } catch (e) { t.blind = { score: 0.3, fout: String(e.message).slice(0, 80) }; } }));
-  topics = topics.sort((a, b) => (Number(b.demand) || 3) * (0.5 + b.blind.score) - (Number(a.demand) || 3) * (0.5 + a.blind.score)).slice(0, n).map(t => Object.assign(t, { status: 'todo' }));
+  topics = topics.sort((a, b) => (Number(b.demand) || 3) * (0.5 + b.blind.score) * (b.gsc ? 2 : 1) - (Number(a.demand) || 3) * (0.5 + a.blind.score) * (a.gsc ? 2 : 1)).slice(0, n).map(t => Object.assign(t, { status: 'todo' }));
   const plan = { dag: DAY(), at: Date.now(), topics, trends: trends.slice(0, 10) };
   await kv.set(K.plan(m.id, DAY()), plan, { ex: 4 * 86400 });
   try { const b = (await kv.get(K.blind(m.id))) || []; await kv.set(K.blind(m.id), [...topics.map(t => ({ dag: DAY(), slug: t.slug, score: t.blind.score, conf: t.blind.conf, jaar: t.blind.jaar, avail: t.blind.avail, gaps: t.blind.gaps })), ...b].slice(0, 400)); } catch (e) {}
