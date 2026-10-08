@@ -524,7 +524,7 @@ const PIN_VERIFY = { v: '', at: 0 }; // Pinterest-websiteclaim (meta p:domain_ve
 export default async function handler(req, res) {
   try { COLTAG = await colourTag('keuzehulp', 'kz', 'a[data-kz],a[data-deal],a[href*="bol.com"]', false); } catch (e) { COLTAG = ''; }
   await siteKz();
-  if (Date.now() - PIN_VERIFY.at > 600000) { PIN_VERIFY.at = Date.now(); try { PIN_VERIFY.v = String(process.env.PINTEREST_VERIFY || (await secrets()).PINTEREST_VERIFY || '').replace(/[^a-zA-Z0-9]/g, '').slice(0, 64); } catch (e) {} }
+  if (Date.now() - PIN_VERIFY.at > 600000) { PIN_VERIFY.at = Date.now(); try { PIN_VERIFY.v = String(process.env.PINTEREST_VERIFY || (await secrets()).PINTEREST_VERIFY || '4963a53ed69385410ca1c84a0d306499').replace(/[^a-zA-Z0-9]/g, '').slice(0, 64); } catch (e) {} }
   try { const host = String(req.headers.host || ''); if (host && !/vercel\.app$|^localhost/.test(host) && typeof res.send === 'function' && !res.__kzLinks) { const send0 = res.send.bind(res); res.__kzLinks = 1; res.send = b => send0(typeof b === 'string' && b.indexOf('<html') >= 0 ? b.replace(/href="\/keuzehulp(?=[\/"#?])\/?/g, 'href="/') : b); } } catch (e) {} /* interne links op keuzehulp.best wijzen direct naar de canonieke URL */
   const url = new URL(req.url, 'http://x');
   const op = url.searchParams.get('op') || '';
