@@ -595,6 +595,11 @@ export default async function handler(req, res) {
     let sk = process.env.SHOP_STATUS_KEY || await kv.get(K.statuskey);
     if (!sk && url.searchParams.get('maak')) { sk = randomBytes(15).toString('hex'); await kv.set(K.statuskey, sk); return res.status(200).json({ ok: true, link: LAND() + '/api/shop/overzicht?k=' + sk }); }
     if (!sk || url.searchParams.get('k') !== sk) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(403).send('<p style="font:16px system-ui;padding:24px">Deze pagina is privé.</p>'); }
+    if (url.searchParams.get('json') === 'kort') { // korte stand per netwerk (voor een snelle tussenstand)
+      const l = await kv.get(K.laatste); const eerste = async k => ((await kv.get(k)) || [])[0] || null;
+      const kortNet = x => x ? { at: x.at, samenvatting: x.samenvatting, saldo: x.saldo, campagnes: (x.campagnes || []).map(c => ({ id: c.id, thema: (String(c.naam).match(/thema=([a-z]+)/) || [])[1], status: c.status, bod: c.bod, kliks: num(c.kliksVandaag), kosten: num(c.kostenVandaag), bezoekers: num((c.eigen || {}).view), doorkliks: num((c.eigen || {}).klik) })), besluiten: (x.besluiten || []).slice(0, 12) } : null;
+      const les = (await kv.get(K.lessen)) || {};
+      return res.status(200).json({ ok: true, vandaag: await dagTotaal(DAY()), mondiad: l && l.mondiad ? kortNet(Object.assign({ at: l.at, besluiten: l.besluiten }, l.mondiad)) : null, pa: kortNet(await eerste(K.palog)), ra: kortNet(await eerste(K.ralog)), ca: kortNet(await eerste(K.calog)), lessen: { at: les.at, regels: les.lessen || [] } }); }
     if (url.searchParams.get('json')) return res.status(200).json({ ok: true, laatste: await kv.get(K.laatste), pa: ((await kv.get(K.palog)) || []).slice(0, 5), ra: ((await kv.get(K.ralog)) || []).slice(0, 5), ca: ((await kv.get(K.calog)) || []).slice(0, 5), logboek: ((await kv.get(K.log)) || []).slice(0, 80), vandaag: await dagTotaal(DAY()) });
     if (op === 'plek') { // controle van een advertentieplek: hoe snel klikken bezoekers door, zijn het steeds dezelfde apparaten
       const n = String(url.searchParams.get('net') || 'pa').replace(/[^a-z]/g, ''); const z = plekId(url.searchParams.get('z'));
