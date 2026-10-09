@@ -24,7 +24,7 @@ const DOMAIN = 'https://' + ((seed.site && seed.site.domain) || 'keuzehulp.best'
 const INDEXNOW_KEY = '466971cbc1bbe43e6bb64a94465e4470';
 const PER_DAG = () => Math.max(0, Math.min(30, Number(process.env.KZ_PER_DAG || 12)));
 const VERVERS = () => Math.max(0, Math.min(10, Number(process.env.KZ_VERVERS_PER_DAG || 3)));
-const MAX_CLAUDE = () => PER_DAG() * 4 + VERVERS() + 12; // plafond op Claude-aanroepen per dag (plannen + schrijven + herstel + verversen)
+const MAX_CLAUDE = () => PER_DAG() * 4 + VERVERS() + 12 + 40 * 4; /* + ruimte voor extra rondes (max 40 extra keuzehulpen per dag) */ // plafond op Claude-aanroepen per dag (plannen + schrijven + herstel + verversen)
 const MODELS = [...new Set([process.env.ANTHROPIC_MODEL, 'claude-sonnet-5-5', 'claude-sonnet-4-5'].filter(Boolean))];
 const GW_MODELS = [...new Set([process.env.GATEWAY_MODEL, 'anthropic/claude-sonnet-5.5', 'anthropic/claude-sonnet-5', 'anthropic/claude-sonnet-4.5'].filter(Boolean))];
 let OIDC_HDR = ''; // OIDC-token uit de request-header (Vercel zet het op elke functie-aanroep), als het niet in env staat
@@ -391,6 +391,27 @@ async function verversItem(slug, d, plan) {
 }
 
 // ---------- één stap van de dagronde ----------
+// ---------- extra ronde: onderbelichte zoekvragen + blinde vlekken van AI-assistenten ----------
+async function maakBlindPlan(d, n) {
+  const best = await bestaande(); const have = new Set(best.map(b => b.slug));
+  const gsc = (await kv.get('hjdk:gsc:kz').catch(() => null)) || {}; const sig = (await kv.get(K.sig)) || {};
+  const system = 'Je bent de hoofdredacteur van keuzehulp.best (Nederlandse keuzehulpen: 3 vragen -> 1 passend product bij bol.com met de prijs van vandaag). Kies ' + n + ' NIEUWE keuzehulpen die (1) een echte Nederlandse/Belgische koopvraag beantwoorden die Google nog slecht beantwoordt (specifiek: doelgroep, situatie, ruimte, budget, of nieuwe regel), of (2) een BLINDE VLEK zijn van AI-assistenten zoals ChatGPT: producttypes die in 2025-2026 veranderd zijn (nieuwe standaarden zoals Qi2, USB-C verplicht, Wi-Fi 7, Matter, nieuwe energielabels, nieuwe regels zoals de verplichte fietshelm-discussie of het einde van de salderingsregeling per 2027, nieuwe productcategorieën), waar een AI uit zijn geheugen verouderd advies geeft. Elk onderwerp moet bij bol.com breed verkrijgbaar zijn (meerdere merken, vanaf ~20 euro), minstens twee keuzes hebben die ertoe doen, en geen dubbel zijn van een bestaande keuzehulp (een duidelijk andere zoekintentie mag: "luchtontvochtiger slaapkamer" naast "luchtontvochtiger" NIET, "thuisbatterij na einde saldering" naast "thuisbatterij" WEL als de intentie echt anders is). Geen medicijnen, supplementen, wapens, vapes, vuurwerk, erotiek, alcohol of tabak, geen losse merken of modellen. Antwoord ALLEEN JSON.';
+  const user = JSON.stringify({ datum: d, aantal: n, toegestaneCategorieen: CATS, bestaandeSlugs: best.map(b => b.slug).join(', '),
+    zoekvragenWaarvoorGoogleOnsAlToont: [...(gsc.open || []).map(x => x.q), ...(gsc.subvragen || []).map(x => x.q)].slice(0, 40),
+    stijgendeZoekvragenNL: (sig.stijgers || []).map(x => x.vb || x.k).slice(0, 30), nieuweZoekvragenNL: (sig.nieuw || []).map(x => x.vb || x.k).slice(0, 20), komendeMomenten: momenten(d),
+    formaat: { plan: [{ slug: 'kleine-letters-met-streepjes', term: 'zoekwoord waarmee bol de juiste producten toont', cat: 'een van de toegestane categorieen', waarom: 'welke zoekvraag of welke blinde vlek (wat een AI nu fout zegt)', bron: 'blinde-vlek | onderbelicht | search-console' }] } });
+  const a = await claude(system, user, 6000); const j = jsonUit(a.txt); const out = [];
+  (j.plan || []).forEach(p => { const slug = String(p.slug || '').toLowerCase().replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
+    if (!slug || have.has(slug) || RESERVED.has(slug) || out.some(x => x.slug === slug)) return;
+    out.push({ slug, term: String(p.term || slug.replace(/-/g, ' ')).slice(0, 60), cat: CATS.includes(p.cat) ? p.cat : 'Wonen', waarom: String(p.waarom || '').slice(0, 200), bron: String(p.bron || 'blinde-vlek').slice(0, 30) }); });
+  return out;
+}
+async function extraRonde(n) {
+  const d = DAY(); let plan = (await kv.get(K.plan(d))) || null; if (!plan) { await stap({}); plan = await kv.get(K.plan(d)); }
+  plan.mislukt = plan.mislukt.filter(m => !/402|credit balance|daglimiet/.test(m.waarom || '')); /* mislukt door tegoed of limiet: opnieuw proberen */
+  const have = new Set((await bestaande()).map(b => b.slug)); const open = plan.lijst.filter(x => !have.has(x.slug) && !plan.mislukt.some(m => m.slug === x.slug) && /blinde|onderbelicht|search/.test(x.bron || ''));
+  if (open.length < 5 && (plan.blindPlannen || 0) < 4) { const extra = await maakBlindPlan(d, n); plan.lijst = extra.concat(plan.lijst.filter(x => !extra.some(e => e.slug === x.slug))); plan.blindPlannen = (plan.blindPlannen || 0) + 1; await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); await log({ stap: 'plan-extra', ok: true, onderwerpen: extra.map(x => x.slug) }); }
+}
 async function stap(opts) {
   const d = DAY(); const o = opts || {}; let plan = (await kv.get(K.plan(d))) || null;
   if (!plan) { const p = await maakPlan(d); plan = { dag: d, at: new Date().toISOString(), lijst: p.lijst, ververs: p.ververs, verversKlaar: [], klaar: [], mislukt: [], plannen: 1 }; await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); await log({ stap: 'plan', ok: true, onderwerpen: p.lijst.map(x => x.slug), ververs: p.ververs }); return { gedaan: 'plan', plan: p.lijst, ververs: p.ververs }; }
@@ -438,6 +459,15 @@ export default async function handler(req, res) {
         laatsteRondes: (lg || []).slice(0, 40), lessen: ((await kv.get(K.lessen)) || []).slice(0, 15) });
     }
     if (op === 'signalen') { if (!isCron && !isToken) return res.status(401).json({ error: 'alleen cron of token' }); const s = await signalen(); return res.status(200).json({ ok: true, dag: s.dag, metingen: s.metingen, weer: s.weer, nieuws: (s.nieuws || []).length, stijgers: s.stijgers.slice(0, 10), ms: s.ms }); }
+    if (op === 'extra') { // extra ronde op verzoek: onderbelichte zoekvragen en blinde vlekken; openbaar maar begrensd (max 40 extra per dag, één tegelijk)
+      const d = DAY(); const cnt = Number(await kv.get('c:kzmaak-extra-' + d).catch(() => 0)) || 0; if (cnt >= 40) return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'dagmaximum extra (40) bereikt' });
+      const lock = await kv.raw(['SET', K.lock, String(Date.now()), 'NX', 'EX', '295']).catch(() => 'OK'); if (lock !== 'OK') return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'er draait al een ronde' });
+      const t0 = Date.now(); const stappen = [];
+      try { await extraRonde(Math.max(10, Math.min(30, Number(url.searchParams.get('n')) || 25)));
+        for (let k = 0; k < 8; k++) { const r = await stap({ extra: true }); stappen.push(r); if (r.gedaan === 'gepubliceerd') await kv.incrMany([['c:kzmaak-extra-' + d, 1]]); if (r.gedaan === 'niets' || Date.now() - t0 > 200000) break; }
+        return res.status(200).json({ ok: true, stappen: stappen.map(x => ({ gedaan: x.gedaan, onderwerp: x.onderwerp, url: x.url, waarom: x.waarom })), ms: Date.now() - t0 });
+      } finally { try { await kv.del([K.lock]); } catch (e) {} }
+    }
     if (op === 'dag' || op === 'nu') {
       if (op === 'dag' && !isCron && !isToken) return res.status(401).json({ error: 'alleen cron of token' });
       if (op === 'nu' && !isToken) return res.status(401).json({ error: 'token' });
