@@ -469,6 +469,8 @@ export default async function handler(req, res) {
         laatsteRondes: (lg || []).slice(0, 40), lessen: ((await kv.get(K.lessen)) || []).slice(0, 15) });
     }
     if (op === 'signalen') { if (!isCron && !isToken) return res.status(401).json({ error: 'alleen cron of token' }); const s = await signalen(); return res.status(200).json({ ok: true, dag: s.dag, metingen: s.metingen, weer: s.weer, nieuws: (s.nieuws || []).length, stijgers: s.stijgers.slice(0, 10), ms: s.ms }); }
+    if (op === 'kort') { const d = DAY(); const plan = (await kv.get(K.plan(d))) || {}; const have = new Set((await bestaande()).map(b => b.slug));
+      return res.status(200).json({ ok: true, dag: d, klaar: (plan.klaar || []).map(x => (x.slug || x) + ' (' + (x.bron || '') + ')'), mislukt: (plan.mislukt || []).slice(-8).map(m => m.slug + ': ' + String(m.waarom || '').slice(0, 60)), open: (plan.lijst || []).filter(x => !have.has(x.slug) && !(plan.mislukt || []).some(m => m.slug === x.slug)).slice(0, 12).map(x => x.slug + ' (' + x.bron + ')'), totaal: have.size, extraVandaag: Number(await kv.get('c:kzmaak-extra-' + d).catch(() => 0)) || 0 }); }
     if (op === 'speer') { // speerpunt nu verdiepen (openbaar, hooguit 1x per week per pagina)
       const sp = ((await kv.get('hjdk:kz:speerpunt')) || {}); const lijst = sp.speer && sp.speer.length ? sp.speer : ['printer']; const slug = url.searchParams.get('slug') || lijst[0];
       if (!lijst.includes(slug)) return res.status(400).json({ ok: false, fout: 'geen speerpunt', speerpunten: lijst });
