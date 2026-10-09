@@ -15,7 +15,7 @@ const BOOST = { set: new Set(), at: 0 };
 const SPEER = { speer: ['printer'], hubs: [], at: 0 }; // speerpunten (eerst scoren) en knooppunten (scoren al: geven door), 10 min in het geheugen
 const kzNorm = x => String(x || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 function kzNaam(item) { // productnaam zoals mensen 'keuzehulp <naam>' zoeken
-  if (item.naam) return item.naam; let n = String(item.slug || '').replace(/^beste-/, '').replace(/-(kiezen|kopen|keuzehulp)$/, '').replace(/-/g, ' ');
+  if (item.naam) return item.naam; let n = String(item.slug || '').replace(/^beste-/, '').replace(/-(kiezen|kopen|keuzehulp)$/, '').replace(/-/g, ' ').replace(/\b([a-z]) (?=[a-z]{3})/g, '$1-');
   const t = String(item.term || '').toLowerCase().trim(); if (t && kzNorm(t) === kzNorm(n)) n = t; return n;
 }
 function kzTitle(item) {
@@ -452,7 +452,7 @@ async function kerstHub(res, req) {
   const items = await allItems(); const base = baseOf(req); const U = await usage().catch(() => ({}));
   const isCad = i => /cadeau|kerst|sinterklaas|schoencadeau|advent|surprise/i.test(i.slug + ' ' + i.title);
   const cad = items.filter(isCad).sort((a, b) => popScore(U[b.slug]) - popScore(U[a.slug]) || a.slug.localeCompare(b.slug));
-  const gift = items.filter(i => !isCad(i) && /Speelgoed|Elektronica|Verzorging|Koken|Sport|Mode/i.test(i.cat)).sort((a, b) => popScore(U[b.slug]) - popScore(U[a.slug])).slice(0, 18);
+  const gift = items.filter(i => !isCad(i) && !/halloween|schmink|kostuum|carnaval/i.test(i.slug) && /Speelgoed|Elektronica|Verzorging|Koken|Sport|Mode/i.test(i.cat)).sort((a, b) => popScore(U[b.slug]) - popScore(U[a.slug])).slice(0, 18);
   const card = i => `<a class="card" href="/${esc(i.slug)}"><div class="cat">${esc(i.cat)}</div><h3>Keuzehulp ${esc(kzNaam(i))}</h3><p>${esc(String(i.kort || i.intro || '').slice(0, 110))}</p></a>`;
   const faq = [
     ['Wanneer moet ik kerstcadeaus bestellen?', 'Bij bol komt veel de volgende dag binnen, maar rond kerst is het druk. Bestel uiterlijk zo\'n 20 december; zoek je een koopje, kijk dan eerst rond Black Friday (27 november).'],
