@@ -3,7 +3,7 @@
 //    (kzmaak en wtbmaak zetten die vooraan in hun onderwerpenlijst); 3) pagina's met te lage CTR -> nieuwe titel + omschrijving (max 3 per site per dag, 21 dagen rust per pagina).
 // Routes: /api/gsc?op=status (openbaar overzicht), op=whoami (welk Vercel-token, zonder het token zelf), op=dag (cron of token=HJDK_TOKEN), op=sites (token).
 import { kv } from '../lib/db.js';
-import { SITES, claims, sites, propFor, rows, analyse } from '../lib/gsc.js';
+import { SITES, SITEMAPS, claims, sites, propFor, rows, analyse, submitSitemap, sitemapInfo } from '../lib/gsc.js';
 import { MARKETS, items as wtbItems, K as WK, claude, json, indexnow as wtbIndexnow } from '../lib/wtb.js';
 import seed from '../data/kz.json' with { type: 'json' };
 
@@ -51,10 +51,17 @@ async function saveFaq(m, it, nieuw) {
   const base = it.faq || []; await kv.set(key, Object.assign({}, cur || {}, { slug: it.slug, override: true, faq: [...((cur && cur.faq) || base), ...nieuw], updatedAt: DAY() }));
   const idx = (await kv.get('hjdk:kz:index')) || []; if (!idx.includes(it.slug)) { idx.push(it.slug); await kv.set('hjdk:kz:index', idx); }
 }
+// sitemap eens per dag opnieuw indienen, zodat Google nieuwe keuzehulpen sneller ophaalt
+async function smap(id, prop, oidc, force) {
+  try { if (!force && (await kv.get('hjdk:gsc:smap:' + id)) === DAY()) return { ok: true, al: 'vandaag ingediend' };
+    const r = await submitSitemap(prop, SITEMAPS[id], oidc); if (r.ok) await kv.set('hjdk:gsc:smap:' + id, DAY(), { ex: 172800 }); return r;
+  } catch (e) { return { ok: false, fout: String(e.message).slice(0, 160) }; }
+}
 async function ronde(oidc) {
   const lijst = await sites(oidc); const out = { dag: DAY(), eigendommen: lijst, sites: {} };
   for (const [id, host] of Object.entries(SITES)) {
     const prop = propFor(lijst, host); if (!prop) { out.sites[id] = { host, fout: 'geen toegang in Search Console' }; continue; }
+    out.sitemaps = out.sitemaps || {}; out.sitemaps[id] = await smap(id, prop, oidc);
     try {
       const m = id === 'kz' ? null : MARKETS[id]; const its = m ? await wtbItems(m) : await kzItems();
       const rs = await rows(prop, 28, oidc); const a = analyse(rs, its);
@@ -92,7 +99,7 @@ async function ronde(oidc) {
       await kv.set('hjdk:gsc:' + id, res); out.sites[id] = { host, totaal: a.totaal, open: a.open.length, laagCtr: a.laagCtr.length, titelsVernieuwd: fixes.length, faqErbij: faqs.reduce((t, f) => t + ((f.vragen || []).length), 0) };
     } catch (e) { out.sites[id] = { host, fout: String(e.message).slice(0, 200) }; }
   }
-  await log({ wat: 'ronde', sites: out.sites }); return out;
+  await log({ wat: 'ronde', sites: out.sites, sitemaps: out.sitemaps }); return out;
 }
 
 export default async function handler(req, res) {
@@ -102,6 +109,9 @@ export default async function handler(req, res) {
   try {
     if (op === 'whoami') { const c = claims(oidc); let google = null; try { const l = await sites(oidc); google = { ok: true, eigendommen: l.length, sites: Object.fromEntries(Object.entries(SITES).map(([k, h]) => [h, !!propFor(l, h)])) }; } catch (e) { google = { ok: false, fout: String(e.message).slice(0, 200) }; } return res.status(200).json({ ok: !!c, iss: c && c.iss, aud: c && c.aud, sub: c && c.sub, google }); }
     if (op === 'status') { const v = await kv.mget('hjdk:gsc:kz', 'hjdk:gsc:us', 'hjdk:gsc:de', 'hjdk:gsc:log'); return res.status(200).json({ ok: true, keuzehulp: v[0], whichtobuy: v[1], kaufberater: v[2], log: (v[3] || []).slice(0, 20) }); }
+    if (op === 'sitemaps') { // openbaar: indienen (hooguit eens per dag per site) + wat Google ervan heeft gelezen
+      const l = await sites(oidc); const out = {}; for (const [id, host] of Object.entries(SITES)) { const prop = propFor(l, host); if (!prop) { out[host] = { fout: 'geen toegang' }; continue; } out[host] = { indienen: await smap(id, prop, oidc), google: await sitemapInfo(prop, oidc).catch(e => String(e.message).slice(0, 120)) }; }
+      return res.status(200).json({ ok: true, sitemaps: out }); }
     if (op === 'dag' && !isCron && !isToken) { // zonder token: hooguit eens per 2 uur (alleen lezen + max 3 titels per site)
       const last = await kv.get('hjdk:gsc:lastrun').catch(() => 0); if (last && Date.now() - last < 2 * 3600e3) return res.status(429).json({ ok: false, fout: 'laatste ronde was minder dan 2 uur geleden', status: '/api/gsc?op=status' });
       await kv.set('hjdk:gsc:lastrun', Date.now()); return res.status(200).json(Object.assign({ ok: true }, await ronde(oidc)));
