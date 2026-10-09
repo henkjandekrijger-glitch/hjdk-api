@@ -384,5 +384,18 @@
     "api/score.js": {
       "maxDuration": 60
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/keuzehulp/:slug((?!categorie$)[a-z0-9-]+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/:slug",
+      "permanent": true
+    }
+  ]
 }
