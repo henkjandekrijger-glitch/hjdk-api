@@ -20,7 +20,7 @@ async function log(e) { try { const l = (await kv.get('hjdk:gsc:log')) || []; l.
 
 // nieuwe titel en omschrijving voor een pagina die wel getoond, maar niet aangeklikt wordt
 async function herschrijf(lang, it, p, oidc) {
-  const sys = `You write search result snippets (title tag + meta description) that get clicked. Language: ${lang === 'nl' ? 'Dutch (je-vorm)' : lang === 'de' ? 'German (du-Form)' : 'US English'}. The page is a buying guide that asks 3 questions and gives one product pick with today's price. Rules: title max 60 characters, starts with the words searchers actually use, includes the year 2026 only if it helps, no clickbait, no ALL CAPS, no brand names unless in the queries. Description 120-155 characters: say what the reader gets (a clear pick in 3 questions, current prices, what to watch out for). Reply ONLY JSON {"seoTitle":"","metaDesc":""}.`;
+  const sys = `You write search result snippets (title tag + meta description) that get clicked. Language: ${lang === 'nl' ? 'Dutch (je-vorm)' : lang === 'de' ? 'German (du-Form)' : 'US English'}. The page is a buying guide that asks 3 questions and gives one product pick with today's price. Rules: title max 60 characters, starts with the words searchers actually use${lang === 'nl' ? ' (Dutch: begin with "Keuzehulp <producttype>:" unless the queries clearly use other first words, e.g. "beste ...")' : ''}, includes the year 2026 only if it helps, no clickbait, no ALL CAPS, no brand names unless in the queries. Description 120-155 characters: say what the reader gets (a clear pick in 3 questions, current prices, what to watch out for). Reply ONLY JSON {"seoTitle":"","metaDesc":""}.`;
   const user = JSON.stringify({ huidigeTitel: it.seoTitle || it.h1 || it.title, huidigeOmschrijving: it.metaDesc || it.kort || it.intro, zoekvragenWaarvoorGetoond: p.topQ, vertoningen: p.imp, kliks: p.clicks, gemiddeldePositie: p.pos });
   const r = await claude(sys, user, { fast: true, max: 400, oidc }); const j = json(r.txt);
   const t = String(j.seoTitle || '').trim().slice(0, 70), d = String(j.metaDesc || '').trim().slice(0, 170);
@@ -57,6 +57,20 @@ async function smap(id, prop, oidc, force) {
     const r = await submitSitemap(prop, SITEMAPS[id], oidc); if (r.ok) await kv.set('hjdk:gsc:smap:' + id, DAY(), { ex: 172800 }); return r;
   } catch (e) { return { ok: false, fout: String(e.message).slice(0, 160) }; }
 }
+// speerpunten: pagina's die we als eerste naar de top duwen (zoekvragen met 'keuzehulp' = onze domeinnaam, en pagina's dicht bij pagina 1);
+// knooppunten: pagina's die al kliks of een topplek hebben en hun gezag via interne links doorgeven aan verwante keuzehulpen
+function speerKies(rs, its) {
+  const slugOf = u => { try { return new URL(u).pathname.replace(/^\/(keuzehulp\/)?/, '').replace(/\/$/, ''); } catch (e) { return ''; } };
+  const ok = new Set(its.map(i => i.slug)); const P = {};
+  rs.forEach(r => { const s = slugOf(r.page); if (!ok.has(s)) return; const x = P[s] || (P[s] = { s, imp: 0, clicks: 0, posW: 0, kw: 0, near: 0, qs: [] }); x.imp += r.imp; x.clicks += r.clicks; x.posW += r.pos * r.imp; x.qs.push([r.q, r.imp]);
+    if (/keuzehulp/i.test(r.q) && r.pos <= 40) x.kw += r.imp * (r.pos <= 25 ? 2 : 1); if (r.pos >= 3.5 && r.pos <= 25.5) x.near += r.imp; });
+  const L = Object.values(P).map(x => Object.assign(x, { pos: x.posW / Math.max(1, x.imp) }));
+  const hubs = L.filter(x => x.clicks > 0 || (x.imp >= 5 && x.pos <= 5)).sort((a, b) => b.clicks - a.clicks || a.pos - b.pos).map(x => x.s).slice(0, 6);
+  let speer = L.filter(x => !hubs.includes(x.s) && (x.kw > 0 || x.near > 0)).sort((a, b) => (b.kw * 3 + b.near) - (a.kw * 3 + a.near)).map(x => x.s).slice(0, 3);
+  if (!speer.length && ok.has('printer')) speer = ['printer'];
+  const vragen = Object.fromEntries(speer.map(s => [s, (P[s] ? P[s].qs : []).sort((a, b) => b[1] - a[1]).map(q => q[0]).slice(0, 10)]));
+  return { dag: DAY(), speer, hubs, vragen };
+}
 async function ronde(oidc) {
   const lijst = await sites(oidc); const out = { dag: DAY(), eigendommen: lijst, sites: {} };
   for (const [id, host] of Object.entries(SITES)) {
@@ -64,7 +78,7 @@ async function ronde(oidc) {
     out.sitemaps = out.sitemaps || {}; out.sitemaps[id] = await smap(id, prop, oidc);
     try {
       const m = id === 'kz' ? null : MARKETS[id]; const its = m ? await wtbItems(m) : await kzItems();
-      const rs = await rows(prop, 28, oidc); const a = analyse(rs, its);
+      const rs = await rows(prop, 28, oidc); const a = analyse(rs, its); if (id === 'kz') { try { const sp = speerKies(rs, its); await kv.set('hjdk:kz:speerpunt', sp); out.speerpunt = sp; } catch (e) {} }
       const fixes = []; const bySlug = Object.fromEntries(its.map(i => [i.slug, i]));
       // eerst de kansen (positie 4-20): titel die begint met de woorden van die zoekvraag, als die er nog niet in staan
       const perKans = {}; a.kansen.forEach(k => { (perKans[k.slug] = perKans[k.slug] || []).push(k); });
@@ -99,7 +113,7 @@ async function ronde(oidc) {
       await kv.set('hjdk:gsc:' + id, res); out.sites[id] = { host, totaal: a.totaal, open: a.open.length, laagCtr: a.laagCtr.length, titelsVernieuwd: fixes.length, faqErbij: faqs.reduce((t, f) => t + ((f.vragen || []).length), 0) };
     } catch (e) { out.sites[id] = { host, fout: String(e.message).slice(0, 200) }; }
   }
-  await log({ wat: 'ronde', sites: out.sites, sitemaps: out.sitemaps }); return out;
+  await log({ wat: 'ronde', sites: out.sites, sitemaps: out.sitemaps, speerpunt: out.speerpunt }); return out;
 }
 
 export default async function handler(req, res) {
@@ -108,7 +122,7 @@ export default async function handler(req, res) {
   const isCron = /vercel-cron/i.test(String(req.headers['user-agent'] || '')); const isToken = !!process.env.HJDK_TOKEN && url.searchParams.get('token') === process.env.HJDK_TOKEN;
   try {
     if (op === 'whoami') { const c = claims(oidc); let google = null; try { const l = await sites(oidc); google = { ok: true, eigendommen: l.length, sites: Object.fromEntries(Object.entries(SITES).map(([k, h]) => [h, !!propFor(l, h)])) }; } catch (e) { google = { ok: false, fout: String(e.message).slice(0, 200) }; } return res.status(200).json({ ok: !!c, iss: c && c.iss, aud: c && c.aud, sub: c && c.sub, google }); }
-    if (op === 'status') { const v = await kv.mget('hjdk:gsc:kz', 'hjdk:gsc:us', 'hjdk:gsc:de', 'hjdk:gsc:log'); return res.status(200).json({ ok: true, keuzehulp: v[0], whichtobuy: v[1], kaufberater: v[2], log: (v[3] || []).slice(0, 20) }); }
+    if (op === 'status') { const v = await kv.mget('hjdk:gsc:kz', 'hjdk:gsc:us', 'hjdk:gsc:de', 'hjdk:gsc:log', 'hjdk:kz:speerpunt'); return res.status(200).json({ ok: true, speerpunt: v[4], keuzehulp: v[0], whichtobuy: v[1], kaufberater: v[2], log: (v[3] || []).slice(0, 20) }); }
     if (op === 'sitemaps') { // openbaar: indienen (hooguit eens per dag per site) + wat Google ervan heeft gelezen
       const l = await sites(oidc); const out = {}; for (const [id, host] of Object.entries(SITES)) { const prop = propFor(l, host); if (!prop) { out[host] = { fout: 'geen toegang' }; continue; } out[host] = { indienen: await smap(id, prop, oidc), google: await sitemapInfo(prop, oidc).catch(e => String(e.message).slice(0, 120)) }; }
       return res.status(200).json({ ok: true, sitemaps: out }); }

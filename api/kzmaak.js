@@ -29,7 +29,7 @@ const MODELS = [...new Set([process.env.ANTHROPIC_MODEL, 'claude-sonnet-5-5', 'c
 const GW_MODELS = [...new Set([process.env.GATEWAY_MODEL, 'anthropic/claude-sonnet-5.5', 'anthropic/claude-sonnet-5', 'anthropic/claude-sonnet-4.5'].filter(Boolean))];
 let OIDC_HDR = ''; // OIDC-token uit de request-header (Vercel zet het op elke functie-aanroep), als het niet in env staat
 const K = { plan: d => 'hjdk:kz:maak:plan:' + d, log: 'hjdk:kz:maak:log', sig: 'hjdk:kz:signalen', sigDag: d => 'hjdk:kz:sig:dag:' + d, lock: 'hjdk:kz:maak:lock', tok: d => 'c:hjdk6-kzmaak-tokens-' + d, calls: d => 'c:hjdk6-kzmaak-calls-' + d, lessen: 'hjdk:kz:maak:lessen', verd: 'hjdk:kz:verdiensten', prest: 'hjdk:kz:prestaties', uit: 'hjdk:kz:uitgelicht' };
-const RESERVED = new Set(['over', 'privacy', 'setup', 'leads', 'subs', 'pins', 'keuzehulp', 'categorie', 'api', 't', 'b', 'sitemap', 'robots', 'llms', 'llms-full', 'sw', 'status', 'admin']);
+const RESERVED = new Set(['over', 'kerstcadeau', 'privacy', 'setup', 'leads', 'subs', 'pins', 'keuzehulp', 'categorie', 'api', 't', 'b', 'sitemap', 'robots', 'llms', 'llms-full', 'sw', 'status', 'admin']);
 const catSlug = c => String(c).toLowerCase().replace(/&/g, 'en').replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '');
 const CATS = [...new Set(seed.items.map(i => i.cat))].filter(c => seed.items.filter(i => i.cat === c).length >= 2);
 
@@ -271,6 +271,7 @@ async function maakPlan(d, extraUitsluiten) {
   let j = {}; try { const a = await claude(system, user, 8000); j = jsonUit(a.txt); } catch (e) { await log({ stap: 'plan', ok: false, waarom: 'planner: ' + String(e.message || e).slice(0, 220) + ' — vangnet: startlijst' }); }
   const plan = [];
   try { const ok = new Set(best.map(b => b.slug)); const blokken = (j.uitgelicht || []).map(u => ({ naam: String(u.naam || '').slice(0, 60), waarom: String(u.waarom || '').slice(0, 160), slugs: (u.slugs || []).map(String).filter(x => ok.has(x)).slice(0, 8) })).filter(u => u.naam && u.slugs.length >= 2).slice(0, 4); if (blokken.length) await kv.set(K.uit, { dag: d, blokken }); plan.ververs = [...new Set([...(besl.adviesblokAanpassen || []), ...(j.ververs || []).map(String)])].filter(x => ok.has(x)).slice(0, VERVERS()); /* scorebord: veel weergaven maar geen winkelklik -> eerst verversen */ } catch (e) {}
+  try { const sp = ((await kv.get('hjdk:kz:speerpunt')) || {}).speer || []; const due = []; for (const x of sp) { if ((await kv.get('hjdk:kz:speer:last:' + x)) == null) due.push(x); } if (due.length) plan.ververs = [...new Set([due[0], ...(plan.ververs || [])])].slice(0, VERVERS()); } catch (e) {} /* speerpunt: elke week een diepere, actuele versie */
   (j.plan || []).forEach(p => {
     const slug = String(p.slug || '').toLowerCase().replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
     if (!slug || have.has(slug) || RESERVED.has(slug) || plan.some(x => x.slug === slug)) return;
@@ -367,21 +368,29 @@ async function publiceer(item, cand, d) {
 // ---------- verversen: bestaande keuzehulpen die nu actueel zijn een actuele tekst geven (vragen en productkeuze blijven gelijk) ----------
 const VERVERS_SYS = `Je werkt een bestaande keuzehulp van keuzehulp.best bij zodat hij aansluit op wat nu speelt (seizoen, moment, weer of nieuws), voor Google en AI-assistenten.
 Regels: gewoon, direct Nederlands (je/jij), geen hype, geen uitroeptekens, geen verzonnen cijfers of tests, niets dat over een paar weken onwaar is zonder datum.
-Je verandert de vragen en opties NIET. Je herschrijft alleen: seoTitle (max 60 tekens, eindigt op "| Keuzehulp"), metaDesc (max 155 tekens, noemt "3 vragen" en "prijs van vandaag bij bol"), intro (2–3 zinnen), kort (1–2 zinnen, max 45 woorden, het directe antwoord), uitleg (70–130 woorden), fouten (3), faq (4–6, echte zoekvragen, antwoorden 1–2 zinnen), en actueel: één zin die zegt waarom dit nu speelt (bijv. "Sinterklaas valt op 5 december: bestel uiterlijk eind november."), plus actueelTot (datum JJJJ-MM-DD waarna die zin niet meer klopt).
+Je verandert de vragen en opties NIET. Je herschrijft alleen: seoTitle (max 62 tekens, begint met "Keuzehulp <producttype>: " en dan de belofte, bv. "Keuzehulp printer: welke past bij jouw gebruik?"), metaDesc (max 155 tekens, noemt "3 vragen" en "prijs van vandaag bij bol"), intro (2–3 zinnen), kort (1–2 zinnen, max 45 woorden, het directe antwoord), uitleg (70–130 woorden), fouten (3), faq (4–6, echte zoekvragen, antwoorden 1–2 zinnen), en actueel: één zin die zegt waarom dit nu speelt (bijv. "Sinterklaas valt op 5 december: bestel uiterlijk eind november."), plus actueelTot (datum JJJJ-MM-DD waarna die zin niet meer klopt).
 Antwoord alleen met één JSON-object met precies die velden.`;
 async function volledigItem(slug) { try { const v = await kv.get('hjdk:kz:' + slug); if (v && v.slug && !v.override) return v; const s0 = seed.items.find(i => i.slug === slug); return s0 ? Object.assign({}, s0, v && v.override ? v : {}) : (v || null); } catch (e) { return seed.items.find(i => i.slug === slug) || null; } }
+// speerpunt: zoekvragen waarvoor Google deze pagina toont (Search Console) + 'keuzehulp <product>'
+async function speerCtx(slug) {
+  const sp = ((await kv.get('hjdk:kz:speerpunt').catch(() => null)) || {}); if (!(sp.speer || []).includes(slug)) return {};
+  const g = (await kv.get('hjdk:gsc:kz').catch(() => null)) || {}; const qs = new Set(['keuzehulp ' + slug.replace(/-/g, ' ')]);
+  [...(g.kansen || []), ...(g.subvragen || [])].filter(x => x.slug === slug).forEach(x => qs.add(x.q)); ((sp.vragen || {})[slug] || []).forEach(q => qs.add(q));
+  await kv.set('hjdk:kz:speer:last:' + slug, DAY(), { ex: 7 * 86400 }).catch(() => {});
+  return { speer: { zoekvragen: [...qs].slice(0, 15) } };
+}
 async function verversItem(slug, d, plan) {
   const it = await volledigItem(slug); if (!it) return { ok: false, waarom: 'onbekende keuzehulp' };
   const sig = (await kv.get(K.sig)) || {}; const r = await searchCached(it.term, { country: 'NL', size: 24, sort: 'RELEVANCE' }).catch(() => ({ products: [] }));
   const ctx = { datum: d, momentenNu: momenten(d, -1, 21), weer: sig.weer || [], nieuws: (sig.nieuws || []).slice(0, 25), uitgelicht: ((await kv.get(K.uit)) || {}).blokken || [] };
-  const user = 'Keuzehulp (huidige versie):\n' + JSON.stringify({ slug: it.slug, title: it.title, h1: it.h1, term: it.term, cat: it.cat, intro: it.intro, kort: it.kort, uitleg: it.uitleg, fouten: it.fouten, faq: it.faq, vragen: it.questions.map(q => q.q + ' [' + q.options.map(o => o.label).join(' | ') + ']') }) + '\n\nWat nu speelt:\n' + JSON.stringify(ctx) + '\n\nEchte producten bij bol nu (titel — prijs):\n' + (r.products || []).slice(0, 20).map(p => '- ' + String(p.title).slice(0, 90) + ' — €' + p.price).join('\n');
-  let j; try { j = jsonUit((await claude(VERVERS_SYS, user, 3000)).txt); } catch (e) { return { ok: false, waarom: 'verversen mislukt: ' + String(e.message || e).slice(0, 140) }; }
+  const user = 'Keuzehulp (huidige versie):\n' + JSON.stringify({ slug: it.slug, title: it.title, h1: it.h1, term: it.term, cat: it.cat, intro: it.intro, kort: it.kort, uitleg: it.uitleg, fouten: it.fouten, faq: it.faq, vragen: it.questions.map(q => q.q + ' [' + q.options.map(o => o.label).join(' | ') + ']') }) + '\n\nWat nu speelt:\n' + JSON.stringify(ctx) + (plan && plan.speer ? '\n\nSPEERPUNT: dit is een pagina die we bovenaan Google willen krijgen. Maak hem HET beste antwoord op deze echte zoekvragen (elke vraag moet letterlijk of bijna letterlijk beantwoord worden in kort, uitleg of faq): ' + JSON.stringify(plan.speer.zoekvragen || []) + '. Uitleg mag hier 150-230 woorden zijn en faq 6-8 vragen; noem concrete keuzecriteria met getallen (bijv. kosten per pagina, watt, liter) waar dat klopt.' : '') + '\n\nEchte producten bij bol nu (titel — prijs):\n' + (r.products || []).slice(0, 20).map(p => '- ' + String(p.title).slice(0, 90) + ' — €' + p.price).join('\n');
+  let j; try { j = jsonUit((await claude(VERVERS_SYS, user, plan && plan.speer ? 4500 : 3000)).txt); } catch (e) { return { ok: false, waarom: 'verversen mislukt: ' + String(e.message || e).slice(0, 140) }; }
   const s1 = v => String(v == null ? '' : v).replace(/\s+/g, ' ').trim(); const upd = {};
   ['seoTitle', 'metaDesc', 'intro', 'kort', 'uitleg', 'actueel'].forEach(k => { if (s1(j[k]).length > 10) upd[k] = s1(j[k]); });
   if (upd.seoTitle) upd.seoTitle = upd.seoTitle.slice(0, 65); if (upd.metaDesc) upd.metaDesc = upd.metaDesc.slice(0, 160); if (upd.actueel) upd.actueel = upd.actueel.slice(0, 220);
   if (/^\d{4}-\d{2}-\d{2}$/.test(s1(j.actueelTot))) upd.actueelTot = s1(j.actueelTot); else if (upd.actueel) upd.actueelTot = addDays(d, 21);
   if (Array.isArray(j.fouten) && j.fouten.length >= 3) upd.fouten = j.fouten.map(s1).filter(Boolean).slice(0, 5);
-  if (Array.isArray(j.faq) && j.faq.length >= 3) upd.faq = j.faq.filter(x => x && x.q && x.a).map(x => ({ q: s1(x.q), a: s1(x.a) })).slice(0, 7);
+  if (Array.isArray(j.faq) && j.faq.length >= 3) upd.faq = j.faq.filter(x => x && x.q && x.a).map(x => ({ q: s1(x.q), a: s1(x.a) })).slice(0, plan && plan.speer ? 8 : 7);
   if (Object.keys(upd).length < 4) return { ok: false, waarom: 'te weinig bruikbare velden terug' };
   const isSeed = seed.items.some(i => i.slug === slug); const cur = (await kv.get('hjdk:kz:' + slug)) || {};
   const next = isSeed ? Object.assign({}, cur && cur.override ? cur : {}, upd, { slug, override: true, updatedAt: d, ververst: d }) : Object.assign({}, it, upd, { updatedAt: d, ververst: d });
@@ -417,7 +426,7 @@ async function stap(opts) {
   if (!plan) { const p = await maakPlan(d); plan = { dag: d, at: new Date().toISOString(), lijst: p.lijst, ververs: p.ververs, verversKlaar: [], klaar: [], mislukt: [], plannen: 1 }; await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); await log({ stap: 'plan', ok: true, onderwerpen: p.lijst.map(x => x.slug), ververs: p.ververs }); return { gedaan: 'plan', plan: p.lijst, ververs: p.ververs }; }
   if (!o.extra && !o.dry && !o.onderwerp && plan.klaar.length >= PER_DAG()) {
     const vk = plan.verversKlaar || []; const v = (plan.ververs || []).find(x => vk.indexOf(x) < 0);
-    if (v && vk.length < VERVERS()) { const t0 = Date.now(); const r = await verversItem(v, d, plan); plan.verversKlaar = vk.concat(v); await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); await log({ stap: 'ververs', ok: r.ok, slug: v, actueel: r.actueel, waarom: r.waarom, ms: Date.now() - t0 }); return { gedaan: r.ok ? 'ververst' : 'ververs-mislukt', onderwerp: v, waarom: r.waarom }; }
+    if (v && vk.length < VERVERS()) { const t0 = Date.now(); const r = await verversItem(v, d, Object.assign({}, plan, await speerCtx(v))); plan.verversKlaar = vk.concat(v); await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); await log({ stap: 'ververs', ok: r.ok, slug: v, actueel: r.actueel, waarom: r.waarom, ms: Date.now() - t0 }); return { gedaan: r.ok ? 'ververst' : 'ververs-mislukt', onderwerp: v, waarom: r.waarom }; }
     return { gedaan: 'niets', reden: 'dagdoel gehaald (' + plan.klaar.length + '/' + PER_DAG() + ')' };
   }
   const have = new Set((await bestaande()).map(b => b.slug));
@@ -459,6 +468,13 @@ export default async function handler(req, res) {
         laatsteRondes: (lg || []).slice(0, 40), lessen: ((await kv.get(K.lessen)) || []).slice(0, 15) });
     }
     if (op === 'signalen') { if (!isCron && !isToken) return res.status(401).json({ error: 'alleen cron of token' }); const s = await signalen(); return res.status(200).json({ ok: true, dag: s.dag, metingen: s.metingen, weer: s.weer, nieuws: (s.nieuws || []).length, stijgers: s.stijgers.slice(0, 10), ms: s.ms }); }
+    if (op === 'speer') { // speerpunt nu verdiepen (openbaar, hooguit 1x per week per pagina)
+      const sp = ((await kv.get('hjdk:kz:speerpunt')) || {}); const lijst = sp.speer && sp.speer.length ? sp.speer : ['printer']; const slug = url.searchParams.get('slug') || lijst[0];
+      if (!lijst.includes(slug)) return res.status(400).json({ ok: false, fout: 'geen speerpunt', speerpunten: lijst });
+      if ((await kv.get('hjdk:kz:speer:last:' + slug)) != null) return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'deze week al verdiept', slug });
+      const ctx = await speerCtx(slug); if (!ctx.speer) { await kv.set('hjdk:kz:speer:last:' + slug, DAY(), { ex: 7 * 86400 }); ctx.speer = { zoekvragen: ['keuzehulp ' + slug.replace(/-/g, ' ')] }; }
+      const r = await verversItem(slug, DAY(), ctx); await log({ stap: 'speerpunt', ok: r.ok, slug, waarom: r.waarom }); return res.status(200).json(Object.assign({ slug, zoekvragen: ctx.speer.zoekvragen }, r));
+    }
     if (op === 'extra') { // extra ronde op verzoek: onderbelichte zoekvragen en blinde vlekken; openbaar maar begrensd (max 40 extra per dag, één tegelijk)
       const d = DAY(); const cnt = Number(await kv.get('c:kzmaak-extra-' + d).catch(() => 0)) || 0; if (cnt >= 40) return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'dagmaximum extra (40) bereikt' });
       const lock = await kv.raw(['SET', K.lock, String(Date.now()), 'NX', 'EX', '295']).catch(() => 'OK'); if (lock !== 'OK') return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'er draait al een ronde' });
