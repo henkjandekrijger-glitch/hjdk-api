@@ -71,6 +71,14 @@
     {
       "path": "/api/score?op=dag",
       "schedule": "30 2 * * *"
+    },
+    {
+      "path": "/api/kzmaak?op=extra&thema=kerst&n=25",
+      "schedule": "30 13 * * *"
+    },
+    {
+      "path": "/api/kzmaak?op=extra&thema=kerst&n=25&r=2",
+      "schedule": "5 14 * * *"
     }
   ],
   "rewrites": [

@@ -482,7 +482,7 @@ export default async function handler(req, res) {
       const d = DAY(); const cnt = Number(await kv.get('c:kzmaak-extra-' + d).catch(() => 0)) || 0; if (cnt >= 60) return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'dagmaximum extra (60) bereikt' });
       const lock = await kv.raw(['SET', K.lock, String(Date.now()), 'NX', 'EX', '295']).catch(() => 'OK'); if (lock !== 'OK') return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'er draait al een ronde' });
       const t0 = Date.now(); const stappen = [];
-      try { const thema = THEMA[url.searchParams.get('thema')] ? url.searchParams.get('thema') : ''; await extraRonde(Math.max(10, Math.min(30, Number(url.searchParams.get('n')) || 25)), thema);
+      try { const thema = THEMA[url.searchParams.get('thema')] && !(url.searchParams.get('thema') === 'kerst' && DAY() > '2026-12-20') ? url.searchParams.get('thema') : ''; await extraRonde(Math.max(10, Math.min(30, Number(url.searchParams.get('n')) || 25)), thema);
         for (let k = 0; k < 8; k++) { const r = await stap({ extra: true }); stappen.push(r); if (r.gedaan === 'gepubliceerd') await kv.incrMany([['c:kzmaak-extra-' + d, 1]]); if (r.gedaan === 'niets' || Date.now() - t0 > 200000) break; }
         return res.status(200).json({ ok: true, stappen: stappen.map(x => ({ gedaan: x.gedaan, onderwerp: x.onderwerp, url: x.url, waarom: x.waarom })), ms: Date.now() - t0 });
       } finally { try { await kv.del([K.lock]); } catch (e) {} }
