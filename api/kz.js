@@ -15,7 +15,7 @@ const BOOST = { set: new Set(), at: 0 };
 const SPEER = { speer: ['printer'], hubs: [], at: 0 }; // speerpunten (eerst scoren) en knooppunten (scoren al: geven door), 10 min in het geheugen
 const kzNorm = x => String(x || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 function kzNaam(item) { // productnaam zoals mensen 'keuzehulp <naam>' zoeken
-  if (item.naam) return item.naam; let n = String(item.slug || '').replace(/^beste-/, '').replace(/-(kiezen|kopen|keuzehulp)$/, '').replace(/-/g, ' ').replace(/\b([a-z]) (?=[a-z]{3})/g, '$1-');
+  if (item.naam) return item.naam; let n = String(item.slug || '').replace(/^beste-/, '').replace(/-(kiezen|kopen|keuzehulp)$/, '').replace(/-/g, ' ').replace(/^([a-z]) /, '$1-').replace(/ ([a-z])(?= |$)/g, '-$1');
   const t = String(item.term || '').toLowerCase().trim(); if (t && kzNorm(t) === kzNorm(n)) n = t; return n;
 }
 function kzTitle(item) {
