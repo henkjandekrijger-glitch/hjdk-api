@@ -3,7 +3,7 @@
 //    (kzmaak en wtbmaak zetten die vooraan in hun onderwerpenlijst); 3) pagina's met te lage CTR -> nieuwe titel + omschrijving (max 3 per site per dag, 21 dagen rust per pagina).
 // Routes: /api/gsc?op=status (openbaar overzicht), op=whoami (welk Vercel-token, zonder het token zelf), op=dag (cron of token=HJDK_TOKEN), op=sites (token).
 import { kv } from '../lib/db.js';
-import { SITES, SITEMAPS, claims, sites, propFor, rows, analyse, submitSitemap, sitemapInfo } from '../lib/gsc.js';
+import { SITES, SITEMAPS, claims, sites, propFor, rows, analyse, submitSitemap, sitemapInfo, ruis } from '../lib/gsc.js';
 import { MARKETS, items as wtbItems, K as WK, claude, json, indexnow as wtbIndexnow } from '../lib/wtb.js';
 import seed from '../data/kz.json' with { type: 'json' };
 
@@ -62,7 +62,7 @@ async function smap(id, prop, oidc, force) {
 function speerKies(rs, its) {
   const slugOf = u => { try { return new URL(u).pathname.replace(/^\/(keuzehulp\/)?/, '').replace(/\/$/, ''); } catch (e) { return ''; } };
   const ok = new Set(its.map(i => i.slug)); const P = {};
-  rs.forEach(r => { const s = slugOf(r.page); if (!ok.has(s)) return; const x = P[s] || (P[s] = { s, imp: 0, clicks: 0, posW: 0, kw: 0, near: 0, qs: [] }); x.imp += r.imp; x.clicks += r.clicks; x.posW += r.pos * r.imp; x.qs.push([r.q, r.imp]);
+  rs.forEach(r => { const s = slugOf(r.page); if (!ok.has(s) || ruis(r.q)) return; const x = P[s] || (P[s] = { s, imp: 0, clicks: 0, posW: 0, kw: 0, near: 0, qs: [] }); x.imp += r.imp; x.clicks += r.clicks; x.posW += r.pos * r.imp; x.qs.push([r.q, r.imp]);
     if (/keuzehulp/i.test(r.q) && r.pos <= 40) x.kw += r.imp * (r.pos <= 25 ? 2 : 1); if (r.pos >= 3.5 && r.pos <= 25.5) x.near += r.imp; });
   const L = Object.values(P).map(x => Object.assign(x, { pos: x.posW / Math.max(1, x.imp) }));
   const hubs = L.filter(x => x.clicks > 0 || (x.imp >= 5 && x.pos <= 5)).sort((a, b) => b.clicks - a.clicks || a.pos - b.pos).map(x => x.s).slice(0, 6);
