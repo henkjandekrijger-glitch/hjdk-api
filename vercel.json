@@ -403,6 +403,9 @@
     },
     "api/score.js": {
       "maxDuration": 60
+    },
+    "api/gads.js": {
+      "maxDuration": 120
     }
   },
   "redirects": [
