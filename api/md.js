@@ -243,6 +243,13 @@ export default async function handler(req, res) {
       catch (e) { await log({ soort: 'fout', wat: 'ronde', waarom: String(e.message).slice(0, 200) }); return res.status(200).json({ ok: false, fout: String(e.message), koppelen: /gekoppeld|verlopen|verversen/i.test(String(e.message)) ? base + '/api/md/koppel' : undefined }); }
       finally { if (!droog) { try { await kv.set(K.lock, 0, { ex: 5 }); } catch (e) {} } }
     }
+    if (op === 'wacht') { // verspillingswacht voor alle Mondiad-campagnes (lib/mdwacht.js), elke 10 minuten via cron
+      const droog = !!url.searchParams.get('droog'); const ua = String(req.headers['user-agent'] || '').toLowerCase(); const tk = req.headers['x-hjdk-token'] || url.searchParams.get('token');
+      if (!droog && !ua.startsWith('vercel-cron') && !(process.env.HJDK_TOKEN && tk === process.env.HJDK_TOKEN)) return res.status(404).json({ ok: false });
+      const { mdWacht } = await import('../lib/mdwacht.js'); const out = await mdWacht(droog);
+      return res.status(200).json(Object.assign({ ok: true }, droog ? out : { samenvatting: out.samenvatting, fouten: out.fouten }));
+    }
+    if (op === 'wachtlog') { const l = (await kv.get('hjdk:md:wacht:log')) || []; return res.status(200).json({ ok: true, log: l.slice(0, Number(url.searchParams.get('n')) || 20) }); }
     if (op === 'call') { // Mondiad voor al je andere projecten: POST {tool, args} met header x-hjdk-token (HJDK_TOKEN). Eén koppeling, overal bruikbaar.
       const tk = req.headers['x-hjdk-token'] || url.searchParams.get('token'); if (!process.env.HJDK_TOKEN || tk !== process.env.HJDK_TOKEN) return res.status(401).json({ ok: false, fout: 'token' });
       let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
