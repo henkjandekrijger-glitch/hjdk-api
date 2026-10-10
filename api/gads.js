@@ -2,13 +2,15 @@
 // /api/gads?op=status            wat werkt er, wat ontbreekt (openbaar, geen geheimen)
 // /api/gads?op=volumes&land=nl&q=wie bel je bij lekkage|wat kost een loodgieter   exacte cijfers voor vaste termen (token=HJDK_TOKEN of cron)
 // /api/gads?op=ideeen&land=us&q=who to call for water leak|roof leak&vraag=1      ideeën rond startwoorden; vraag=1 houdt alleen vragende termen
-// POST met {land, q:[...]} kan ook voor lange lijsten. Uitkomsten worden 30 dagen bewaard onder hjdk:gads:vol:<land>:<term>.
+// POST met {land, q:[...]} kan ook voor lange lijsten. Vanuit elk ander Vercel-project: fetch('https://keuzehulp.best/api/gads?op=volumes', {method:'POST', headers:{authorization:'Bearer '+process.env.GADS_TOKEN,'content-type':'application/json'}, body: JSON.stringify({land:'us', q:[...]})}). Uitkomsten worden 30 dagen bewaard onder hjdk:gads:vol:<land>:<term>.
 import { kv } from '../lib/db.js';
 import { cfg, toegang, volumes, ideeen, VRAAG, LAND } from '../lib/gads.js';
 import { claims } from '../lib/gsc.js';
 
 const DAY = () => new Date().toISOString().slice(0, 10);
-const mag = req => { const t = process.env.HJDK_TOKEN; const q = req.query || {}; return (t && (q.token === t || req.headers['x-hjdk-token'] === t)) || String(req.headers['user-agent'] || '').includes('vercel-cron'); };
+// toegang voor ALLE Vercel-projecten: stuur een van de gedeelde team-tokens mee (GADS_TOKEN of HJDK_TOKEN) via ?token=, header x-hjdk-token of Authorization: Bearer
+const mag = req => { const q = req.query || {}; const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''); const given = [q.token, req.headers['x-hjdk-token'], bearer].filter(Boolean);
+  const ok = [process.env.GADS_TOKEN, process.env.HJDK_TOKEN].filter(Boolean); return given.some(g => ok.includes(g)) || String(req.headers['user-agent'] || '').includes('vercel-cron'); };
 const lijst = v => (Array.isArray(v) ? v : String(v || '').split(/[|\n]/)).map(s => String(s).trim()).filter(Boolean);
 
 export default async function handler(req, res) {
