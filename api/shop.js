@@ -137,6 +137,8 @@ Regels: titel hooguit 30 tekens, tekst hooguit 40 tekens. Eerlijk: verzin geen e
 async function advertenties() { let a = null; try { a = await kv.get(K.ads); } catch (e) {} if (!Array.isArray(a) || !a.length) { a = seed.ads.map(x => Object.assign({ at: Date.now(), bron: 'start' }, x)); try { await kv.set(K.ads, a); } catch (e) {} }
   let ver = false; for (const s of seed.ads) { const x = a.find(q => q.pid === s.pid && q.title === s.title); if (!x) { a.push(Object.assign({ at: Date.now(), bron: 'start' }, s)); ver = true; } else if (x.bron === 'start' && x.desc !== s.desc) { x.desc = s.desc; ver = true; } } // startteksten volgen het bestand (PropellerAds: tekst hooguit 40 tekens)
   if (ver) { try { await kv.set(K.ads, a); } catch (e) {} } return a; }
+// Zelfde tekst, met de prijs vervangen door de actuele prijs. Alleen als de tekst binnen de maten blijft (titel 30, tekst 40 tekens).
+const metNieuwePrijs = (a, p) => { const re = /€\s?\d+(?:[.,]\d{1,2})?/; const t = String(a.title).replace(re, eur(p)), d = String(a.desc).replace(re, eur(p)); return (t !== a.title || d !== a.desc) && t.length <= 30 && d.length <= 40 ? { title: t, desc: d } : null; };
 const prijsInTekst = a => { const m = (a.title + ' ' + a.desc).match(/€\s?(\d+(?:[.,]\d{1,2})?)/); return m ? Number(m[1].replace(',', '.')) : null; };
 const beeld = (pid, t) => LAND() + '/api/shop/img?p=' + encodeURIComponent(pid) + '&t=' + t;
 
@@ -169,9 +171,14 @@ async function ronde(droog) {
   const vandaag = (await kv.get(K.dag(DAY()))) || { nieuweAds: 0, mdAds: {}, bod: {}, vul: {} };
   // 2. advertenties: prijs of product veranderd -> uit; rangorde; nieuwe teksten voor de beste producten
   let ads = await advertenties(); let adsVer = false;
-  for (const a of ads) { if (a.uit) continue; const it = perId[a.pid]; const pr = prijsInTekst(a);
+  for (const a of ads) { if (a.uit) { const it0 = perId[a.pid]; const nw0 = it0 && /^prijs is nu/.test(a.uit) ? metNieuwePrijs(a, it0.p) : null; // eerder uitgezet om de prijs: alsnog een bijgewerkte tekst
+      if (nw0 && !ads.some(x => x.pid === a.pid && x.title === nw0.title && x.desc === nw0.desc)) { ads.push({ pid: a.pid, title: nw0.title, desc: nw0.desc, at: Date.now(), bron: 'prijs bijgewerkt' }); adsVer = true; B('advertentie bijgewerkt', nw0.title, `"${nw0.title}" / "${nw0.desc}"`); }
+      continue; }
+    const it = perId[a.pid]; const pr = prijsInTekst(a);
     if (!it && !cat.terugval) { a.uit = 'product niet meer in de shop'; adsVer = true; B('advertentie uit', a.title, a.uit); }
-    else if (it && pr != null && Math.abs(pr - it.p) > 0.005) { a.uit = `prijs is nu ${eur(it.p)}, in de tekst staat ${eur(pr)}`; adsVer = true; B('advertentie uit', a.title, a.uit); } }
+    else if (it && pr != null && Math.abs(pr - it.p) > 0.005) { a.uit = `prijs is nu ${eur(it.p)}, in de tekst staat ${eur(pr)}`; adsVer = true; B('advertentie uit', a.title, a.uit);
+      // dezelfde tekst met de nieuwe prijs komt ervoor in de plaats, zodat een advertentie die werkt niet verdwijnt
+      const nw = metNieuwePrijs(a, it.p); if (nw && !ads.some(x => x.pid === a.pid && x.title === nw.title && x.desc === nw.desc)) { ads.push({ pid: a.pid, title: nw.title, desc: nw.desc, at: Date.now(), bron: 'prijs bijgewerkt' }); B('advertentie bijgewerkt', nw.title, `"${nw.title}" / "${nw.desc}"`); } } }
   const rang = await rangorde(cat, false); const vastRang = await rangorde(cat, true);
   const top = rang.slice(0, 40).map(r => r.id);
   const metAd = new Set(ads.filter(a => !a.uit).map(a => a.pid));
@@ -267,13 +274,14 @@ async function lessen(inz, dag, droog) {
   // Opnieuw schrijven zodra het beeld echt veranderd is (anderhalf keer zoveel bezoekers of doorkliks), en altijd nog een keer in de laatste ronde van de dag.
   const doorkliks = inz.themas.reduce((a, t) => a + t.doorkliks, 0);
   const slot = new Date().getUTCHours() >= 21 && oud && Date.now() - Date.parse(oud.at) > 45 * 60000;
-  if (droog || bezoekers < 40 || (oud && oud.dag === DAY() && !slot && bezoekers < 1.5 * num(oud.bezoekers) && doorkliks < 1.5 * num(oud.doorkliks) + 5)) return oud;
+  const rommel = l => /\.\.\.|…|niet precies/i.test(l); const slecht = oud && (oud.lessen || []).some(rommel);
+  if (droog || bezoekers < 40 || (oud && oud.dag === DAY() && !slot && !slecht && bezoekers < 1.5 * num(oud.bezoekers) && doorkliks < 1.5 * num(oud.doorkliks) + 5)) return oud;
   let meetKoop = false; try { meetKoop = !!(await kv.get('hjdk:shop:pxlaatst:koop')) || !!(await kv.get('hjdk:shop:pxlaatst:cart')); } catch (e) {}
   const plekTop = Object.entries(inz.plekken || {}).flatMap(([n, l]) => l.slice(0, 4).map(z => ({ netwerk: NETTEN[n], plek: z.plek, bezoekers: z.bezoekers, echteMensen: z.mensen, doorkliks: z.doorkliks })));
   const j = await claudeJson(`Je bent mediabuyer voor de Yoors Shop (Nederlandse webshop). Hieronder de cijfers van betaald push-verkeer via een landingspagina: per thema, per advertentie, per uur en per netwerk. "doorklik" = de bezoeker klikte door naar de productpagina in de shop. Schrijf hooguit 6 lessen in gewoon Nederlands, elk een zin van hooguit 25 woorden, concreet en met het getal erbij. Alleen wat de cijfers echt laten zien; bij minder dan 30 bezoekers op een regel trek je geen conclusie. Geen jargon, geen opsommingstekens, geen gedachtestreepjes. Komt het grootste deel van de doorkliks van een enkele advertentieplek, zeg dat dan eerlijk in een van de lessen: de cijfers per advertentie zijn dan minder betrouwbaar. ${meetKoop ? '' : 'Let op: de shop geeft winkelwagen en bestellingen nog niet door, dus die staan op 0 omdat ze niet gemeten worden. Trek daar geen conclusie uit en schrijf niet dat het na de doorklik misgaat; noem hooguit dat aankopen nog niet meetbaar zijn. '}Sluit af met een les over wat we hierna het best kunnen testen.
 Cijfers: ${JSON.stringify({ vandaag: dag, totaalDoorkliks: doorkliks, plekken: plekTop, themas: inz.themas, advertenties: inz.advertenties.slice(0, 20).map(a => ({ titel: a.titel, tekst: a.tekst, bezoekers: a.bezoekers, echtPct: a.echtPct, doorkliks: a.doorkliks, bestellingen: a.bestellingen })), uren: inz.uren }).slice(0, 9000)}
 Antwoord alleen JSON: {"lessen":["..."]}`);
-  const l = (j && Array.isArray(j.lessen) ? j.lessen : []).map(x => String(x).trim()).filter(Boolean).slice(0, 6);
+  const l = (j && Array.isArray(j.lessen) ? j.lessen : []).map(x => String(x).trim()).filter(x => x && !rommel(x)).slice(0, 6);
   if (!l.length) return oud; const nieuw = { dag: DAY(), at: new Date().toISOString(), bezoekers, doorkliks, lessen: l, eerder: [...(oud && oud.dag !== DAY() ? [{ dag: oud.dag, lessen: oud.lessen }] : []), ...((oud && oud.eerder) || [])].slice(0, 14) };
   try { await kv.set(K.lessen, nieuw); } catch (e) {} return nieuw;
 }
