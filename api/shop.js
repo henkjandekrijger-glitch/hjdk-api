@@ -420,7 +420,7 @@ async function voorNet(net) {
   const zones = await metUniek(net, await tellers(net, 'z', await smembers(K.set('z', net)))), cr = await tellers(net, 'a', await smembers(K.set('a', net))), camp = await tellers(net, 'k', await smembers(K.set('k', net)));
   return { at: new Date().toISOString(), net, naam: NAAM, land: LAND() + '/shop', vandaag: (await dagTotaal(DAY()))[net],
     ads: ads.filter(a => perId[a.pid] && !!perId[a.pid].img).map(a => ({ pid: a.pid, title: a.title, desc: a.desc, uit: a.uit || null, rang: volg.indexOf(a.pid), thema: themaVan(perId[a.pid]), icon: beeld(a.pid, 'icon'), image: beeld(a.pid, net === 'ra' ? 'md' : net === 'ca' ? 'ca' : 'pa') })),
-    zones, creatives: cr, campagnes: camp, staat: (await kv.get('hjdk:shop:' + net + 'staat:' + DAY())) || {} };
+    zones, creatives: cr, campagnes: camp, staat: (await kv.get('hjdk:shop:' + net + 'staat:' + DAY())) || {}, staatGisteren: (await kv.get('hjdk:shop:' + net + 'staat:' + DAY(-1))) || {} };
 }
 
 // ---------------- statuspagina ----------------
