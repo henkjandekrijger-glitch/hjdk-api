@@ -149,7 +149,7 @@ async function tellers(net, soort, ids) { const out = {}; if (!ids.length) retur
 async function metUniek(net, zones) { for (const [z, o] of Object.entries(zones)) { if (num(o.view) < 20) continue; try { const n = num(await kv.raw(['PFCOUNT', K.hll(net, z)])); if (n > 0) { o.uniek = n; o.uniekVan = num(await kv.get('c:sh-' + net + '-z' + z + '-hv')) || 0; } } catch (e) {} } return zones; }
 // Hoe de productpagina en de afrekenpagina er nu bij staan, gemeten als Nederlandse telefoon zonder account. Hooguit eens per uur opgehaald.
 async function shopStand(pid) {
-  const key = 'hjdk:shop:stand:' + pid; try { const c = await kv.get(key); if (c && Date.now() - c.at < 36e5) return c; } catch (e) {}
+  const key = 'hjdk:shop:stand2:' + pid; try { const c = await kv.get(key); if (c && Date.now() - c.at < 36e5) return c; } catch (e) {}
   const kop = { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': 'nl-NL,nl;q=0.9' };
   const haal = async pad => { const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 6000); try { const r = await fetch('https://yoo.rs' + pad, { headers: kop, signal: ac.signal }); return r.ok ? await r.text() : ''; } catch (e) { return ''; } finally { clearTimeout(t); } };
   const [p, c] = await Promise.all([haal('/product/' + pid + '?lang=nl'), haal('/shop/checkout/' + pid + '?lang=nl')]);
@@ -158,7 +158,7 @@ async function shopStand(pid) {
   const o = { at: Date.now(), gast: has(c, 'Geen account nodig'), afrekenNl: has(c, 'Totaal te betalen') && !has(c, 'Total to pay'), geenFee: has(p, '"buyer_protection":false') || has(c, '"buyer_protection":false'),
     koopblokBoven: has(p, '.pdp > .buybox{order:2}'), balkVanafStart: has(p, 'from the start, except while'), bundelLeeg: has(p, "row(self, 'is-this', true, true) + opts.map((p) => row(p, '', false, false))"),
     thuisbezorgd: has(p, 'Thuisbezorgd'), idealBijKnop: has(p, 'Betalen met iDEAL'), geldTerug: has(p, 'Niet goed? Geld terug'), verkoper: has(p, 'Verkocht door Yoors Shop'), adres: has(p, '2805 AB Gouda'),
-    affiliate: has(p, 'Maak content over dit product'), registreren: has(p, '>Registreren<') || has(p, 'Registreren</a>'), sportBuiten: has(p, '"category":"Sports & outdoors"'), motorUitleg: has(p, 'batterijmotor') && !/niet meegeleverd|zit er niet bij/i.test(p),
+    affiliate: has(p, 'Maak content over dit product'), registreren: has(p, '>Registreren<') || has(p, 'Registreren</a>'), sportBuiten: /"category":"Sports (&|\\u0026|&amp;) outdoors"/.test(p) || /class="crumb"[\s\S]{0,600}Sport (&amp;|&) buiten/.test(p), motorUitleg: has(p, 'batterijmotor') && !/niet meegeleverd|zit er niet bij/i.test(p),
     fotos: fotos ? (fotos.match(/"src"/g) || []).length : null, shipDays: ship, afrekenDagen: (c.match(/Thuisbezorgd, ([0-9–-]+ werkdagen)/) || [])[1] || null, shippingCost: (p.match(/"shipping_cost":([^,]*),/) || [])[1] || null };
   try { await kv.set(key, o, { ex: 6 * 3600 }); } catch (e) {} return o;
 }
