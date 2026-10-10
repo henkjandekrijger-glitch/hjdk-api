@@ -24,6 +24,7 @@ import { look } from '../lib/look.js';
 import seed from '../data/shop-seed.json' with { type: 'json' };
 import { SHOP_PHP } from '../lib/shopphp.js';
 import { adviesPagina } from '../lib/shopadvies.js';
+import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
 const SHOP = 'https://yoo.rs/shop';
@@ -383,12 +384,57 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   return res.status(200).send(html);
 }
 
+// ---------------- cadeau-keuzehulpen (keuzehulp.best/cadeau/<gids>) ----------------
+async function hulp(req, res, url) {
+  const q = url.searchParams; const slug = String(q.get('g') || '');
+  if (!GIDSEN[slug]) { res.statusCode = 302; res.setHeader('location', '/cadeau/' + GIDS_IDS[0]); return res.end(); }
+  const ua = req.headers['user-agent'] || ''; const bot = isBot(ua); const src = String(q.get('utm_source') || '').toLowerCase(); const net = netVan(src);
+  let clickid = String(q.get('clickid') || '').replace(/[^A-Za-z0-9_.-]/g, '').slice(0, 120); if (/^(subid|clickid|click_id|visitor_id)$/i.test(clickid) || /[{}$\[\]]/.test(String(q.get('clickid') || ''))) clickid = '';
+  const zone = plekId(q.get('zoneid')), cr = digits(q.get('creativeid')), camp = digits(q.get('campaignid'));
+  const cat = await catalog(); const P = productenVoor(slug, cat.items);
+  const code = clickid && net !== 'x' ? shortId(net + ':' + clickid) : '';
+  if (!bot) {
+    let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), { c: clickid, s: net, z: zone, a: cr, k: camp, p: '', g: slug, at: Date.now(), h: apparaat(req) }, { ex: 7 * 86400 }); } catch (e) {} }
+    if (nieuw) { const keys = ['sh-' + net + '-view', 'sh-d' + D8() + '-' + net + '-view', 'sh-u' + nlUur() + '-view', 'sh-h-' + slug + '-view', 'sh-h-' + slug + '-' + net + '-view', 'sh-hd' + D8() + '-' + slug + '-view'];
+      if (zone) keys.push('sh-' + net + '-z' + zone + '-view', 'sh-' + net + '-z' + zone + '-hv'); if (cr) keys.push('sh-' + net + '-a' + cr + '-view'); if (camp) keys.push('sh-' + net + '-k' + camp + '-view');
+      if (zone) { try { await kv.raw(['PFADD', K.hll(net, zone), apparaat(req)]); await kv.raw(['EXPIRE', K.hll(net, zone), String(30 * 86400)]); } catch (e) {} }
+      await inc(keys); if (zone) await sadd(K.set('z', net), zone); if (cr) await sadd(K.set('a', net), cr); if (camp) await sadd(K.set('k', net), camp); }
+  }
+  const html = hulpPagina({ slug, producten: P, code, land: LAND(), andere: GIDS_IDS.filter(x => x !== slug).map(x => [x, GIDSEN[x].titel]) });
+  res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', code || q.toString().length > 2 + slug.length + 3 ? 'no-store' : 'public, max-age=0, s-maxage=600');
+  return res.status(200).send(html);
+}
+async function hulpBaken(req, res) {
+  let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
+  const g = String(b.g || ''); const gids = GIDSEN[g]; if (!gids || isBot(req.headers['user-agent'])) return res.status(204).end();
+  const k = String(b.k || ''); const v = String(b.v || '').replace(/[^a-z0-9]/gi, '').slice(0, 12).toLowerCase();
+  if (!(k === 'klaar' || gids.vragen.some(x => x.k === k && x.o.some(o => o[0] === v)))) return res.status(204).end();
+  const code = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); let rec = null, net = 'x';
+  if (code) { try { rec = await kv.get(K.rec(code)); if (rec) net = rec.s; } catch (e) {} }
+  if (rec) { rec.hq = rec.hq || {}; if (rec.hq[k]) return res.status(204).end(); rec.hq[k] = v; try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} }
+  const keys = k === 'klaar' ? ['sh-h-' + g + '-klaar', 'sh-h-' + g + '-' + net + '-klaar'] : ['sh-h-' + g + '-q-' + k + '-' + v, 'sh-h-' + g + '-' + net + '-q-' + k + '-' + v];
+  if (num(b.n) === 0 && k !== 'klaar') keys.push('sh-h-' + g + '-start', 'sh-h-' + g + '-' + net + '-start');
+  await inc(keys); return res.status(204).end();
+}
+async function hulpStand() {
+  const nets = ['x', 'md', 'pa', 'ra', 'ca']; const out = {};
+  for (const g of GIDS_IDS) { const gids = GIDSEN[g]; const keys = []; const namen = [];
+    for (const s of ['view', 'start', 'klaar', 'klik', 'klikq']) { keys.push('c:sh-h-' + g + '-' + s); namen.push(['tot', s]); }
+    for (const n of nets) for (const s of ['view', 'start', 'klaar', 'klik']) { keys.push('c:sh-h-' + g + '-' + n + '-' + s); namen.push([n, s]); }
+    for (const v of gids.vragen) for (const o of v.o) { keys.push('c:sh-h-' + g + '-q-' + v.k + '-' + o[0]); namen.push(['q', v.k + ':' + o[1]]); }
+    const vals = await kv.mget(...keys); const o = { totaal: {}, per_netwerk: {}, antwoorden: {} };
+    namen.forEach(([a, s], i) => { const n = num(vals[i]); if (a === 'tot') o.totaal[s] = n; else if (a === 'q') o.antwoorden[s] = n; else if (n) { (o.per_netwerk[a] = o.per_netwerk[a] || {})[s] = n; } });
+    out[g] = o; }
+  return out;
+}
+
 async function uitgang(req, res, url) {
   const q = url.searchParams; const p = String(q.get('p') || ''); const code = String(q.get('c') || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); const pos = String(q.get('pos') || '').replace(/[^a-z0-9]/gi, '').slice(0, 6);
   const cat = await catalog(); const it = p === 'alles' ? null : cat.items.find(i => i.id === pidOk(p));
   let rec = null; if (code) { try { rec = await kv.get(K.rec(code)); } catch (e) {} } const net = rec ? rec.s : 'x';
   const mens = (rec && rec.m) || (q.get('h') === '1' && num(q.get('ms')) >= 600); const bot = isBot(req.headers['user-agent']);
   if (mens && !bot) { const keys = ['sh-' + net + '-klik', 'sh-d' + D8() + '-' + net + '-klik', 'sh-u' + nlUur() + '-klik']; if (it) keys.push('sh-p-' + pk(it.id) + (pos === 'h' || pos === 'logo' ? '-hklik' : '-klik'));
+    const gg = String(q.get('g') || ''); if (GIDSEN[gg]) { keys.push('sh-h-' + gg + '-klik', 'sh-h-' + gg + '-' + net + '-klik', 'sh-hd' + D8() + '-' + gg + '-klik'); if (num(q.get('q')) > 0) keys.push('sh-h-' + gg + '-klikq'); }
     if (rec && !rec.kl) { if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-klik'); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-klik'); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-klik'); rec.kl = Date.now(); }
     if (rec && rec.c && !rec.conv && PB[net]) { let st = 0; try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(PB[net].replace('{clickid}', encodeURIComponent(rec.c)), { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (e) {} rec.conv = Date.now(); rec.pb = st; keys.push('sh-' + net + '-conv', 'sh-d' + D8() + '-' + net + '-conv', 'sh-' + net + '-pb' + (st || 0)); if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-conv'); }
     await inc(keys); if (rec) { try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} } }
@@ -594,6 +640,8 @@ export default async function handler(req, res) {
     if (op === 'land') return await land(req, res, url);
     if (op === 'uit') return await uitgang(req, res, url);
     if (op === 'b') return await baken(req, res);
+    if (op === 'hb') return await hulpBaken(req, res);
+    if (op === 'hulp') return await hulp(req, res, url);
     if (op === 'px') return await pixel(req, res, url);
     if (op === 'img') return await plaatje(req, res, url);
     res.setHeader('cache-control', 'no-store');
@@ -628,6 +676,7 @@ export default async function handler(req, res) {
       const les = (await kv.get(K.lessen)) || {};
       return res.status(200).json({ ok: true, vandaag: await dagTotaal(DAY()), mondiad: l && l.mondiad ? kortNet(Object.assign({ at: l.at, besluiten: l.besluiten }, l.mondiad)) : null, pa: kortNet(await eerste(K.palog)), ra: kortNet(await eerste(K.ralog)), ca: kortNet(await eerste(K.calog)), lessen: { at: les.at, regels: les.lessen || [] }, claudefout: await kv.get('hjdk:shop:claudefout') }); }
     if (url.searchParams.get('json')) return res.status(200).json({ ok: true, laatste: await kv.get(K.laatste), pa: ((await kv.get(K.palog)) || []).slice(0, 5), ra: ((await kv.get(K.ralog)) || []).slice(0, 5), ca: ((await kv.get(K.calog)) || []).slice(0, 5), logboek: ((await kv.get(K.log)) || []).slice(0, 80), vandaag: await dagTotaal(DAY()) });
+    if (op === 'hulpstand') return res.status(200).json({ ok: true, at: new Date().toISOString(), gidsen: await hulpStand() });
     if (op === 'plek') { // controle van een advertentieplek: hoe snel klikken bezoekers door, zijn het steeds dezelfde apparaten
       const n = String(url.searchParams.get('net') || 'pa').replace(/[^a-z]/g, ''); const z = plekId(url.searchParams.get('z'));
       const o = { net: n, plek: z, bezoeken: 0, mens: 0, doorklik: 0, gemeld: 0, secTotKlik: [], producten: {}, uren: {}, apparaten: {} }; let cur = '0', gezien = 0;

@@ -83,6 +83,14 @@
   ],
   "rewrites": [
     {
+      "source": "/cadeau/:g",
+      "destination": "/api/shop?op=hulp&g=:g"
+    },
+    {
+      "source": "/cadeau",
+      "destination": "/api/shop?op=hulp"
+    },
+    {
       "source": "/api/shop/:op",
       "destination": "/api/shop?op=:op"
     },
