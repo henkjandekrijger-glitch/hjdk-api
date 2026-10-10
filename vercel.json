@@ -227,6 +227,10 @@
       "destination": "/api/kz?op=rss"
     },
     {
+      "source": "/pinterest-kerst.xml",
+      "destination": "/api/kz?op=pinfeed&bord=kerst"
+    },
+    {
       "source": "/pinterest.xml",
       "destination": "/api/kz?op=pinfeed"
     },

@@ -12,6 +12,17 @@ import { look, ACCENTS } from '../lib/look.js';
 import { colourTag, measureTag } from '../lib/kleur.js';
 const MEETTAG = measureTag('kz', 'a[data-kz],a[data-deal],a[href*="bol.com"]', '.opt');
 const BOOST = { set: new Set(), at: 0 };
+async function pinStats(items, d) { // 14 dagen Pinterest-resultaat per keuzehulp en per beeldvariant; 1x per dag berekend
+  const ck = 'hjdk:kz:pinstat:' + d; try { const c = await kv.get(ck); if (c && c.bestV != null) return c; } catch (e) {}
+  const days = Array.from({ length: 14 }, (_, k) => new Date(Date.now() - k * 864e5).toISOString().slice(0, 10)); const keys = [], idx = [];
+  items.forEach(i => days.forEach(dd => { keys.push('c:kz-sp-' + dd + '-pinterest-' + i.slug); idx.push([i.slug, 'v']); keys.push('c:kz-sc-' + dd + '-pinterest-' + i.slug); idx.push([i.slug, 'c']); }));
+  days.forEach(dd => [0, 1, 2, 3].forEach(v => { keys.push('c:kz-pvv-' + dd + '-v' + v); idx.push(['#v', v]); }));
+  const vals = []; for (let k = 0; k < keys.length; k += 500) { try { (await kv.mget(...keys.slice(k, k + 500))).forEach(x => vals.push(Number(x) || 0)); } catch (e) { keys.slice(k, k + 500).forEach(() => vals.push(0)); } }
+  const slug = {}, vv = [0, 0, 0, 0]; idx.forEach(([a, b], k) => { const n = vals[k]; if (!n) return; if (a === '#v') vv[b] += n; else { const x = slug[a] || (slug[a] = { v: 0, c: 0 }); x[b] += n; } });
+  const pub = [0, 0, 0, 0]; try { const logs = await kv.mget(...days.map(dd => 'hjdk:kz:pinlog:' + dd)); logs.forEach(l => { if (l) [0, 1, 2, 3].forEach(v => { pub[v] += Number(l['v' + v]) || 0; }); }); } catch (e) {}
+  const rate = [0, 1, 2, 3].map(v => (vv[v] + 1) / (pub[v] + 4)); const bestV = rate.indexOf(Math.max(...rate));
+  const out = { dag: d, slug, varianten: vv, gepubliceerd: pub, bestV }; try { await kv.set(ck, out, { ex: 2 * 86400 }); } catch (e) {} return out;
+}
 const SPEER = { speer: ['printer'], hubs: [], at: 0 }; // speerpunten (eerst scoren) en knooppunten (scoren al: geven door), 10 min in het geheugen
 const kzNorm = x => String(x || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 function kzNaam(item) { // productnaam zoals mensen 'keuzehulp <naam>' zoeken
@@ -834,14 +845,21 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
       let rows = [];
       if (op === 'rss') rows = items.slice().sort((a, b) => itemDate(b).localeCompare(itemDate(a))).slice(0, 80).map(i => ({ it: i, guid: base + '/' + i.slug, v: 0, title: i.title, when: itemDate(i) }));
       else {
-        const max = Math.max(1, Math.min(100, Number(process.env.KZ_PINS_PER_DAG || 30))); const seen = new Set(); const add = (i, v, why) => { if (!i || seen.has(i.slug) || rows.length >= max) return; seen.add(i.slug); rows.push({ it: i, v, why }); };
-        recent(items, 30).filter(i => i.publishAt && i.publishAt >= new Date(Date.now() - 864e5).toISOString().slice(0, 10)).forEach(i => add(i, 0, 'nieuw'));
-        (await uitgelichtNu()).forEach(b => b.slugs.forEach(sl => add(items.find(i => i.slug === sl), 1, b.naam)));
-        seasonsNow().forEach(z => z.slugs.forEach(sl => add(items.find(i => i.slug === sl), 1, z.naam)));
-        const ring = items.slice().sort((a, b) => a.slug.localeCompare(b.slug)); const dn = Math.floor(Date.now() / 864e5); for (let k = 0; k < ring.length && rows.length < max; k++) add(ring[(dn * max + k) % ring.length], 2 + (Math.floor(dn / Math.max(1, Math.ceil(ring.length / max))) % 2), 'evergreen');
-        rows = rows.map(r => ({ it: r.it, v: r.v, why: r.why, guid: base + '/' + r.it.slug + '#pin-' + (r.why === 'nieuw' ? 'nieuw' : d), title: r.v === 1 && r.why ? r.it.title.replace(/\?$/, '') + ' — ' + r.why : r.v >= 2 ? (r.it.h1 || r.it.title) : r.it.title, when: d }));
+        // Pinterest leert mee: welke keuzehulpen en welk beeld (v0-v3) via Pinterest bezoek en winkelkliks opleveren (14 dagen), elke dag opnieuw
+        const bord = String(url.searchParams.get('bord') || '').toLowerCase(); const kerst = bord === 'kerst';
+        const isCad = i => /cadeau|kerst|sinterklaas|schoencadeau|advent|surprise/i.test(i.slug + ' ' + i.title);
+        const pool = kerst ? items.filter(isCad) : items;
+        const max = kerst ? 15 : Math.max(1, Math.min(100, Number(process.env.KZ_PINS_PER_DAG || 30)));
+        const st = await pinStats(items, d); const bestV = st.bestV; const seen = new Set();
+        const add = (i, v, why) => { if (!i || seen.has(i.slug) || rows.length >= max) return; seen.add(i.slug); rows.push({ it: i, v, why }); };
+        recent(pool, 30).filter(i => i.publishAt && i.publishAt >= new Date(Date.now() - 864e5).toISOString().slice(0, 10)).forEach(i => add(i, 0, 'nieuw'));
+        pool.filter(i => st.slug[i.slug]).sort((a, b) => (st.slug[b.slug].c * 5 + st.slug[b.slug].v) - (st.slug[a.slug].c * 5 + st.slug[a.slug].v)).slice(0, 8).forEach(i => add(i, bestV, 'loopt goed'));
+        if (!kerst) { (await uitgelichtNu()).forEach(b => b.slugs.forEach(sl => add(items.find(i => i.slug === sl), bestV, b.naam))); seasonsNow().forEach(z => z.slugs.forEach(sl => add(items.find(i => i.slug === sl), bestV, z.naam))); }
+        const ring = pool.slice().sort((a, b) => a.slug.localeCompare(b.slug)); const dn = Math.floor(Date.now() / 864e5); for (let k = 0; k < ring.length && rows.length < max; k++) add(ring[(dn * max + k) % ring.length], k % 3 === 0 ? (dn + k) % 4 : bestV, kerst ? 'Kerstcadeau 2026' : 'evergreen');
+        try { const lk = 'hjdk:kz:pinlog:' + d + (kerst ? ':kerst' : ''); if (!(await kv.get(lk))) { const cnt = { v0: 0, v1: 0, v2: 0, v3: 0 }; rows.forEach(r => { cnt['v' + r.v] = (cnt['v' + r.v] || 0) + 1; }); await kv.set(lk, cnt, { ex: 40 * 86400 }); } } catch (e) {}
+        rows = rows.map(r => ({ it: r.it, v: r.v, why: r.why, guid: base + '/' + r.it.slug + '#pin' + (kerst ? 'x' : '') + '-' + (r.why === 'nieuw' ? 'nieuw' : d), title: (r.why && r.why !== 'evergreen' && r.why !== 'nieuw' && r.why !== 'loopt goed') ? r.it.title.replace(/\?$/, '') + ' — ' + r.why : r.v >= 2 ? (r.it.h1 || r.it.title) : r.it.title, when: d, bord: kerst ? 'kerst' : 'main' }));
       }
-      const body = rows.map(r => { const i = r.it; const link = base + '/' + i.slug + (op === 'pinfeed' ? '?utm_source=pinterest&utm_medium=pin' : ''); const img = base + '/pin/' + i.slug + '-' + r.v + '.png'; const desc = (i.kort || i.intro) + ' In 3 vragen naar het product dat bij jou past, met de prijs van vandaag bij bol.';
+      const body = rows.map(r => { const i = r.it; const link = base + '/' + i.slug + (op === 'pinfeed' ? '?utm_source=pinterest&utm_medium=pin&utm_campaign=' + (r.bord || 'main') + '&utm_content=v' + r.v : ''); const img = base + '/pin/' + i.slug + '-' + r.v + '.png'; const desc = (i.kort || i.intro) + ' In 3 vragen naar het product dat bij jou past, met de prijs van vandaag bij bol.';
         return '<item><title>' + x(String(r.title).slice(0, 100)) + '</title><link>' + x(link) + '</link><guid isPermaLink="false">' + x(r.guid) + '</guid><pubDate>' + new Date(r.when + 'T06:00:00Z').toUTCString() + '</pubDate><category>' + x(i.cat) + '</category><description>' + x(desc.slice(0, 480)) + '</description><enclosure url="' + x(img) + '" type="image/png" length="0"/><media:content url="' + x(img) + '" medium="image" type="image/png" width="1000" height="1500"/></item>'; }).join('\n');
       res.setHeader('content-type', 'application/rss+xml; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=1800');
       return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>' + x(SITE.name + (op === 'pinfeed' ? ' — pins' : ' — nieuwe keuzehulpen')) + '</title><link>' + x(base) + '</link><atom:link href="' + x(base + (op === 'pinfeed' ? '/pinterest.xml' : '/feed.xml')) + '" rel="self" type="application/rss+xml"/><description>' + x(SITE.tagline) + '</description><language>nl-nl</language><lastBuildDate>' + new Date().toUTCString() + '</lastBuildDate>\n' + body + '\n</channel></rss>');
