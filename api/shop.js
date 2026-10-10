@@ -634,6 +634,7 @@ export default async function handler(req, res) {
       const pad = String(url.searchParams.get('u') || '/shop/'); if (!/^\/[\w\/\-?=&.%]*$/.test(pad)) return res.status(400).json({ ok: false });
       const r = await fetch('https://yoo.rs' + pad, { redirect: 'manual', headers: { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': url.searchParams.get('taal') || 'nl-NL,nl;q=0.9' } });
       const html = await r.text(); const tekst = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+      const zoek = url.searchParams.getAll('zoek'); if (zoek.length) { const uit = {}; for (const z of zoek) { const l = []; let i = -1; while (l.length < 4 && (i = html.indexOf(z, i + 1)) >= 0) l.push({ op: i, html: html.slice(Math.max(0, i - 350), i + 450) }); uit[z] = { aantal: html.split(z).length - 1, stukken: l }; } return res.status(200).json({ ok: true, status: r.status, lengte: html.length, uit }); }
       const van = Number(url.searchParams.get('van') || 0);
       return res.status(200).json({ ok: true, status: r.status, location: r.headers.get('location'), lengte: html.length, tekst: tekst.slice(van, van + 12000) }); }
     if (op === 'briefing') { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(await briefingPagina(sk)); }
