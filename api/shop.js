@@ -147,6 +147,21 @@ const SOORTEN = ['view', 'mens', 'eng', 'klik', 'conv', 'cart', 'koop', 'omzet']
 async function tellers(net, soort, ids) { const out = {}; if (!ids.length) return out; const keys = []; ids.forEach(z => SOORTEN.forEach(s => keys.push('c:sh-' + net + '-' + soort + z + '-' + s))); const vals = []; for (let i = 0; i < keys.length; i += 490) vals.push(...await kv.mget(...keys.slice(i, i + 490))); ids.forEach((z, i) => { const o = {}; SOORTEN.forEach((s, j) => { o[s] = num(vals[i * SOORTEN.length + j]); }); out[z] = o; }); return out; }
 // Aantal verschillende apparaten per plek (alleen voor plekken met genoeg bezoekers). Zet het in o.uniek.
 async function metUniek(net, zones) { for (const [z, o] of Object.entries(zones)) { if (num(o.view) < 20) continue; try { const n = num(await kv.raw(['PFCOUNT', K.hll(net, z)])); if (n > 0) { o.uniek = n; o.uniekVan = num(await kv.get('c:sh-' + net + '-z' + z + '-hv')) || 0; } } catch (e) {} } return zones; }
+// Hoe de productpagina en de afrekenpagina er nu bij staan, gemeten als Nederlandse telefoon zonder account. Hooguit eens per uur opgehaald.
+async function shopStand(pid) {
+  const key = 'hjdk:shop:stand:' + pid; try { const c = await kv.get(key); if (c && Date.now() - c.at < 36e5) return c; } catch (e) {}
+  const kop = { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': 'nl-NL,nl;q=0.9' };
+  const haal = async pad => { const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 6000); try { const r = await fetch('https://yoo.rs' + pad, { headers: kop, signal: ac.signal }); return r.ok ? await r.text() : ''; } catch (e) { return ''; } finally { clearTimeout(t); } };
+  const [p, c] = await Promise.all([haal('/product/' + pid + '?lang=nl'), haal('/shop/checkout/' + pid + '?lang=nl')]);
+  if (!p || !c) return null;
+  const has = (h, x) => h.includes(x); const fotos = (p.match(/"photos":\[(.*?)\],"/) || [])[1]; const ship = (p.match(/"ship_days":"([^"]*)"/) || [])[1] || null;
+  const o = { at: Date.now(), gast: has(c, 'Geen account nodig'), afrekenNl: has(c, 'Totaal te betalen') && !has(c, 'Total to pay'), geenFee: has(p, '"buyer_protection":false') || has(c, '"buyer_protection":false'),
+    koopblokBoven: has(p, '.pdp > .buybox{order:2}'), balkVanafStart: has(p, 'from the start, except while'), bundelLeeg: has(p, "row(self, 'is-this', true, true) + opts.map((p) => row(p, '', false, false))"),
+    thuisbezorgd: has(p, 'Thuisbezorgd'), idealBijKnop: has(p, 'Betalen met iDEAL'), geldTerug: has(p, 'Niet goed? Geld terug'), verkoper: has(p, 'Verkocht door Yoors Shop'), adres: has(p, '2805 AB Gouda'),
+    affiliate: has(p, 'Maak content over dit product'), registreren: has(p, '>Registreren<') || has(p, 'Registreren</a>'), sportBuiten: has(p, '"category":"Sports & outdoors"'), motorUitleg: has(p, 'batterijmotor') && !/niet meegeleverd|zit er niet bij/i.test(p),
+    fotos: fotos ? (fotos.match(/"src"/g) || []).length : null, shipDays: ship, afrekenDagen: (c.match(/Thuisbezorgd, ([0-9–-]+ werkdagen)/) || [])[1] || null, shippingCost: (p.match(/"shipping_cost":([^,]*),/) || [])[1] || null };
+  try { await kv.set(key, o, { ex: 6 * 3600 }); } catch (e) {} return o;
+}
 async function dagTotaal(dag) { const nets = ['md', 'pa', 'ra', 'ca', 'x']; const keys = []; nets.forEach(n => SOORTEN.forEach(s => keys.push('c:sh-d' + dag.replace(/-/g, '') + '-' + n + '-' + s))); const v = await kv.mget(...keys); const out = {}; nets.forEach((n, i) => { out[n] = {}; SOORTEN.forEach((s, j) => { out[n][s] = num(v[i * SOORTEN.length + j]); }); }); return out; }
 async function netTotaal() { const nets = ['md', 'pa', 'ra', 'ca', 'x']; const keys = []; nets.forEach(n => SOORTEN.forEach(s => keys.push('c:sh-' + n + '-' + s))); const v = await kv.mget(...keys); const out = {}; nets.forEach((n, i) => { out[n] = {}; SOORTEN.forEach((s, j) => { out[n][s] = num(v[i * SOORTEN.length + j]); }); }); return out; }
 // Oordeel over een advertentieplek. netKliks = kliks volgens het netwerk, o = onze eigen tellers.
@@ -378,7 +393,7 @@ async function uitgang(req, res, url) {
     if (rec && rec.c && !rec.conv && PB[net]) { let st = 0; try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(PB[net].replace('{clickid}', encodeURIComponent(rec.c)), { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (e) {} rec.conv = Date.now(); rec.pb = st; keys.push('sh-' + net + '-conv', 'sh-d' + D8() + '-' + net + '-conv', 'sh-' + net + '-pb' + (st || 0)); if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-conv'); }
     await inc(keys); if (rec) { try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} } }
   const utm = 'utm_source=' + (net === 'x' ? 'shoplus' : NETTEN[net].toLowerCase()) + '&utm_medium=push&utm_campaign=shoplus' + (it ? '&utm_content=' + encodeURIComponent(pk(it.id)) : '') + (code ? '&hj=' + code : '') + '&lang=nl'; // de shop kiest anders de taal van de telefoon; de afrekenpagina is nog Engels
-  res.statusCode = 302; res.setHeader('location', (it ? SHOP + '/product/' + encodeURIComponent(it.id) : SHOP) + '?' + utm); res.setHeader('cache-control', 'no-store'); return res.end();
+  res.statusCode = 302; res.setHeader('location', (it ? 'https://yoo.rs/product/' + encodeURIComponent(it.id) : SHOP) + '?' + utm); res.setHeader('cache-control', 'no-store'); return res.end();
 }
 
 async function baken(req, res) {
@@ -629,7 +644,7 @@ export default async function handler(req, res) {
       let px = false; try { px = !!(await kv.get('hjdk:shop:pxlaatst:koop')) || !!(await kv.get('hjdk:shop:pxlaatst:cart')); } catch (e) {}
       const les = (await kv.get(K.lessen)) || {};
       res.setHeader('content-type', 'text/html; charset=utf-8');
-      return res.status(200).send(adviesPagina({ sk, css: look(ACC), esc, vandaag: await dagTotaal(DAY()), gisteren: await dagTotaal(DAY(-1)), totaal: await netTotaal(), kosten: { md: somK(l.mondiad), pa: somK(await eerste(K.palog)), ra: somK(await eerste(K.ralog)), ca: somK(await eerste(K.calog)) }, inz: l.inzicht || null, lessen: les.lessen || [], bijgewerkt: nlTijd(new Date().toISOString()), pxGezien: px })); }
+      return res.status(200).send(adviesPagina({ sk, css: look(ACC), esc, vandaag: await dagTotaal(DAY()), gisteren: await dagTotaal(DAY(-1)), totaal: await netTotaal(), kosten: { md: somK(l.mondiad), pa: somK(await eerste(K.palog)), ra: somK(await eerste(K.ralog)), ca: somK(await eerste(K.calog)) }, inz: l.inzicht || null, lessen: les.lessen || [], bijgewerkt: nlTijd(new Date().toISOString()), pxGezien: px, stand: await shopStand('oc_4174004347453441').catch(() => null), nlTijd })); }
     if (op === 'bron') { // controle: haalt een pagina van yoo.rs op zoals een Nederlandse telefoon die ziet (alleen yoo.rs, alleen lezen)
       const pad = String(url.searchParams.get('u') || '/shop/'); if (!/^\/[\w\/\-?=&.%]*$/.test(pad)) return res.status(400).json({ ok: false });
       const r = await fetch('https://yoo.rs' + pad, { redirect: 'manual', headers: { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': url.searchParams.get('taal') || 'nl-NL,nl;q=0.9' } });
