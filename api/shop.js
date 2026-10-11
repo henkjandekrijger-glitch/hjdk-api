@@ -38,7 +38,7 @@ const NAAM = 'SHOP-LUS'; // elke campagne met dit in de naam hoort bij de lus
 const ACC = { acc: '#1e3a8a', acc2: '#e8edfb', accD: '#a5b4fc', acc2D: '#161b33' };
 const E = (k, d) => { const v = Number(process.env[k]); return Number.isFinite(v) && v > 0 ? v : d; };
 const MD_MAX_BOD = () => E('SHOP_MD_MAX_BOD', 0.05), MD_BIJVUL = () => E('SHOP_MD_BIJVUL', 10), MIN_SALDO = () => E('SHOP_MIN_SALDO', 5), NIEUWE_ADS_PER_DAG = () => E('SHOP_NIEUWE_ADS', 2), MAX_ADS_PER_CAMPAGNE = () => E('SHOP_MAX_ADS', 10), LEK = () => E('SHOP_LEK', 2);
-const K = { cat: 'hjdk:shop:cat', ads: 'hjdk:shop:ads', top: 'hjdk:shop:top', crmap: 'hjdk:shop:crmap', log: 'hjdk:shop:log', palog: 'hjdk:shop:palog', ralog: 'hjdk:shop:ralog', calog: 'hjdk:shop:calog', laatste: 'hjdk:shop:laatste', lessen: 'hjdk:shop:lessen', zwart: n => 'hjdk:shop:zwart:' + n, lock: 'hjdk:shop:lock', dag: d => 'hjdk:shop:dag:' + d, snap: d => 'hjdk:shop:snap:' + d, rec: c => 'hjdk:shc:' + c, sleutel: 'hjdk:shop:sleutel', statuskey: 'hjdk:shop:statuskey', set: (s, n) => 'hjdk:shop:set:' + s + (n ? ':' + n : ''), hll: (n, z) => 'hjdk:shop:hll:' + n + ':' + z };
+const K = { babitakey: 'hjdk:shop:babitakey', cat: 'hjdk:shop:cat', ads: 'hjdk:shop:ads', top: 'hjdk:shop:top', crmap: 'hjdk:shop:crmap', log: 'hjdk:shop:log', palog: 'hjdk:shop:palog', ralog: 'hjdk:shop:ralog', calog: 'hjdk:shop:calog', laatste: 'hjdk:shop:laatste', lessen: 'hjdk:shop:lessen', zwart: n => 'hjdk:shop:zwart:' + n, lock: 'hjdk:shop:lock', dag: d => 'hjdk:shop:dag:' + d, snap: d => 'hjdk:shop:snap:' + d, rec: c => 'hjdk:shc:' + c, sleutel: 'hjdk:shop:sleutel', statuskey: 'hjdk:shop:statuskey', set: (s, n) => 'hjdk:shop:set:' + s + (n ? ':' + n : ''), hll: (n, z) => 'hjdk:shop:hll:' + n + ':' + z };
 const DAY = (o = 0) => new Date(Date.now() + o * 864e5).toISOString().slice(0, 10);
 const D8 = () => DAY().replace(/-/g, '');
 const nlUur = t => { try { return String(new Date(t || Date.now()).toLocaleString('en-GB', { timeZone: 'Europe/Amsterdam', hour: '2-digit', hour12: false })).slice(0, 2).padStart(2, '0'); } catch (e) { return String(new Date().getUTCHours()).padStart(2, '0'); } };
@@ -689,6 +689,9 @@ export default async function handler(req, res) {
     // status: alleen met de geheime link (?k=...). Eenmalig aanmaken met ?maak=1 zolang er nog geen is.
     let sk = process.env.SHOP_STATUS_KEY || await kv.get(K.statuskey);
     if (!sk && url.searchParams.get('maak')) { sk = randomBytes(15).toString('hex'); await kv.set(K.statuskey, sk); return res.status(200).json({ ok: true, link: LAND() + '/api/shop/overzicht?k=' + sk }); }
+    // Eigen deellink voor Babita: alleen lezen, los van de statussleutel. Eenmalig aangemaakt; de link wordt maar één keer getoond.
+    if (op === 'babitalink') { if (await kv.get(K.babitakey)) return res.status(409).json({ ok: false, fout: 'bestaat al' }); const bk = randomBytes(18).toString('hex'); await kv.set(K.babitakey, bk); return res.status(200).json({ ok: true, link: LAND() + '/api/shop/advies?k=' + bk }); }
+    { const kk = url.searchParams.get('k'); if (kk && sk && kk !== sk) { const bk = await kv.get(K.babitakey); if (bk && kk === bk && !url.searchParams.get('json')) sk = bk; } }
     if (!sk || url.searchParams.get('k') !== sk) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(403).send('<p style="font:16px system-ui;padding:24px">Deze pagina is privé.</p>'); }
     if (url.searchParams.get('json') === 'kort') { // korte stand per netwerk (voor een snelle tussenstand)
       const l = await kv.get(K.laatste); const eerste = async k => ((await kv.get(k)) || [])[0] || null;
