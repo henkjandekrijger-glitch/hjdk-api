@@ -170,6 +170,7 @@ function plekOordeel(netKliks, o, gemKlik) {
   if (netKliks >= 15 && o.view < 0.4 * netKliks) return { uit: `nep: ${netKliks} kliks volgens het netwerk, maar ${o.view} kwamen aan` };
   if (o.view >= 12 && o.mens < 0.25 * o.view) return { uit: `geen echte mensen: van ${o.view} bezoekers bewogen er maar ${o.mens}` };
   if (o.view >= 6 && o.mens === 0) return { uit: `geen echte mensen: ${o.view} bezoekers en niemand bewoog of tikte` };
+  if (o.view >= 50 && o.klik >= 0.5 * o.view && !num(o.koop)) return { uit: `onnatuurlijk: ${o.klik} van ${o.view} bezoekers klikten door, geen verkoop` };
   if (num(o.uniekVan) >= 30 && num(o.uniek) > 0 && o.uniek < 0.34 * o.uniekVan) return { uit: `steeds dezelfde apparaten: ${o.uniekVan} bezoeken vanaf ${o.uniek} apparaten` };
   if (o.view >= 40 && o.klik === 0 && o.eng <= 1) return { uit: `${o.view} bezoekers, niemand bleef en niemand klikte door naar de shop` };
   if (o.view >= 120 && o.klik === 0) return { uit: `${o.view} bezoekers en geen enkele doorklik` };
