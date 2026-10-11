@@ -646,6 +646,25 @@ export default async function handler(req, res) {
     if (op === 'img') return await plaatje(req, res, url);
     res.setHeader('cache-control', 'no-store');
     if (op === 'voorpa') return res.status(200).json(Object.assign({ ok: true }, await voorNet(['ra', 'ca'].includes(url.searchParams.get('net')) ? url.searchParams.get('net') : 'pa')));
+    if (op === 'koopcheck') { // openbaar, alleen lezen: hoe een NL-telefoon de productpagina en de afrekenpagina van yoo.rs nu krijgt (geen sleutels, geen bezoekersdata)
+      const pid = pidOk(url.searchParams.get('p')) || 'oc_4174004347453441';
+      const ck = 'hjdk:shop:koopcheck:' + pid; try { const c = await kv.get(ck); if (c && Date.now() - c.at < 6e5 && !url.searchParams.get('vers')) return res.status(200).json(c); } catch (e) {}
+      const kop = { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': 'nl-NL,nl;q=0.9' };
+      const haal = async pad => { const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 8000); const t0 = Date.now(); try { const r = await fetch('https://yoo.rs' + pad, { headers: kop, signal: ac.signal, redirect: 'manual' }); const h = await r.text(); const tekst = h.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim(); return { pad, status: r.status, ms: Date.now() - t0, location: r.headers.get('location'), bytes: h.length, titel: (h.match(/<title>([^<]*)<\/title>/) || [])[1] || null, tekst: tekst.slice(0, 2500), ideal: /iDEAL/i.test(h), engels: /Add to cart|Buy now|Checkout|Total to pay/.test(tekst), registreer: /Registreren|Sign up|Log in/i.test(tekst) }; } catch (e) { return { pad, fout: String(e.message || e).slice(0, 120), ms: Date.now() - t0 }; } finally { clearTimeout(t); } };
+      const [p, c, s] = await Promise.all([haal('/product/' + pid + '?lang=nl'), haal('/shop/checkout/' + pid + '?lang=nl'), haal('/')]);
+      const o = { ok: true, at: Date.now(), pid, product: p, checkout: c, home: Object.assign({}, s, { tekst: (s.tekst || '').slice(0, 800) }) };
+      try { await kv.set(ck, o, { ex: 3600 }); } catch (e) {} return res.status(200).json(o); }
+    if (op === 'trechter') { // openbaar, alleen totalen: van bezoek naar doorklik per netwerk, per dag en per product; geen apparaten, geen kliknummers
+      const dagen = [0, 1, 2, 3, 4].map(i => DAY(-i)); const perDag = {}; for (const d of dagen) perDag[d] = await dagTotaal(d);
+      const per = { net: {}, product: {}, zone: {} }; let cur = '0', gezien = 0;
+      do { const [cc, keys] = await kv.scan(cur, { match: 'hjdk:shc:*', count: 1000 }); cur = cc;
+        for (let i = 0; i < keys.length; i += 200) { const vals = await kv.mget(...keys.slice(i, i + 200)); gezien += vals.length;
+          for (const r of vals) { if (!r) continue; const zk = r.s + ':' + (r.z || '-');
+            for (const [m, k] of [[per.net, r.s], [per.product, r.p || '-'], [per.zone, zk]]) { const x = m[k] || (m[k] = { bezoek: 0, mens: 0, door: 0, snel: 0, sec: [] }); x.bezoek++; if (r.m) x.mens++; if (r.kl) { x.door++; const sec = (r.kl - r.at) / 1000; x.sec.push(sec); if (sec < 3) x.snel++; } } } }
+      } while (cur !== '0' && gezien < 40000);
+      const kort = m => Object.fromEntries(Object.entries(m).map(([k, x]) => { x.sec.sort((a, b) => a - b); const med = x.sec.length ? Math.round(x.sec[Math.floor(x.sec.length / 2)] * 10) / 10 : null; delete x.sec; x.medSecTotKlik = med; return [k, x]; }));
+      const zones = Object.entries(kort(per.zone)).sort((a, b) => b[1].door - a[1].door).slice(0, 25);
+      return res.status(200).json({ ok: true, at: new Date().toISOString(), records: gezien, totaal: await netTotaal(), perDag, perNet: kort(per.net), perProduct: kort(per.product), topZones: Object.fromEntries(zones), px: { koop: !!(await kv.get('hjdk:shop:pxlaatst:koop')), cart: !!(await kv.get('hjdk:shop:pxlaatst:cart')) } }); }
     if (op === 'ronde') {
       const droog = !!url.searchParams.get('droog');
       if (!droog) { const lk = await kv.get(K.lock); if (lk && Date.now() - lk < 240000) return res.status(200).json({ ok: true, overgeslagen: 'ronde loopt al' }); await kv.set(K.lock, Date.now(), { ex: 300 }); }
