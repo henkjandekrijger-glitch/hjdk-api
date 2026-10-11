@@ -457,14 +457,16 @@ async function baken(req, res) {
 // Pixel voor de shop (zie lib/shopphp.js): /api/shop/px?c=<hj>&w=cart  en  /api/shop/px?c=<hj>&w=koop&v=<bedrag>&o=<ordernummer>
 // Een bestelling telt per plek, advertentie en product, en gaat met het bedrag door naar het netwerk van die klik.
 async function pixel(req, res, url) {
-  const q = url.searchParams; const code = String(q.get('c') || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); const w = q.get('w') === 'koop' ? 'koop' : 'cart';
+  const q = url.searchParams; const code = String(q.get('c') || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); const w = q.get('w') === 'koop' ? 'koop' : 'cart'; // cart = winkelwagen of afrekenpagina geopend (ook w=afreken)
   const v = Math.max(0, Math.min(100000, num(q.get('v')))); const order = String(q.get('o') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40);
   try { await kv.set('hjdk:shop:pxlaatst:' + w, { at: Date.now(), test: /^test/i.test(code), bedrag: v, order: !!order }); } catch (e) {}
   if (code) { try { const rec = await kv.get(K.rec(code)); const merk = w + (w === 'koop' && order ? ':' + order : '');
     if (rec && !(rec.px && rec.px[merk])) { rec.px = rec.px || {}; rec.px[merk] = Date.now(); const net = rec.s; const keys = ['sh-' + net + '-' + w, 'sh-d' + D8() + '-' + net + '-' + w]; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-' + w); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-' + w); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-' + w); if (rec.p) keys.push('sh-p-' + pk(rec.p) + '-' + w);
       await inc(keys);
+      // PropellerAds kent drie doelen: 1 = doorklik naar de shop (meldt de uitgang zelf), 2 = afrekenpagina geopend, 3 = betaald (met bedrag)
+      if (w === 'cart' && net === 'pa' && rec.c && !(rec.px && rec.px.pa2)) { rec.px.pa2 = Date.now(); try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(PB.pa.replace('{clickid}', encodeURIComponent(rec.c)) + '&goal=2', { signal: ctl.signal }); clearTimeout(tm); await inc(['sh-pa-pb2-' + r.status]); } catch (e) {} }
       if (w === 'koop') { let st = 0; if (v > 0) { try { await kv.incrMany([['c:sh-' + net + '-omzet', Math.round(v * 100)], ['c:sh-d' + D8() + '-' + net + '-omzet', Math.round(v * 100)]]); } catch (e) {} }
-        if (rec.c && PB[net] && (net !== 'ra' || !rec.conv)) { try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(PB[net].replace('{clickid}', encodeURIComponent(rec.c)) + (net === 'ra' ? '' : '&payout=' + v.toFixed(2)) + (net === 'pa' ? '&goal=2' : ''), { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (e) {} rec.conv = rec.conv || Date.now(); }
+        if (rec.c && PB[net] && (net !== 'ra' || !rec.conv)) { try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(PB[net].replace('{clickid}', encodeURIComponent(rec.c)) + (net === 'ra' ? '' : '&payout=' + v.toFixed(2)) + (net === 'pa' ? '&goal=3' : ''), { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (e) {} rec.conv = rec.conv || Date.now(); }
         await log({ soort: 'bestelling', wat: (v ? eur(v) + ' ' : '') + 'via ' + (net === 'x' ? 'eigen verkeer' : NETTEN[net]), waarom: 'plek ' + (rec.z || '?') + ', advertentie ' + (rec.a || '?') + (rec.c && PB[net] ? ', gemeld aan het netwerk (HTTP ' + st + ')' : '') }); }
       await kv.set(K.rec(code), rec, { ex: 30 * 86400 }); } } catch (e) {} }
   res.setHeader('content-type', 'image/gif'); res.setHeader('cache-control', 'no-store'); return res.end(Buffer.from('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', 'base64'));
@@ -713,10 +715,10 @@ export default async function handler(req, res) {
       return res.status(200).json(Object.assign({ ok: true }, o)); }
     if (op === 'advies') { // briefing voor Babita: wat de campagnes leren (live) en wat de verkoop in de shop tegenhoudt
       const l = (await kv.get(K.laatste)) || {}; const eerste = async k => ((await kv.get(k)) || [])[0] || {}; const somK = x => ((x && x.campagnes) || []).reduce((a, c) => a + num(c.kostenVandaag), 0);
-      let px = false; try { px = !!(await kv.get('hjdk:shop:pxlaatst:koop')) || !!(await kv.get('hjdk:shop:pxlaatst:cart')); } catch (e) {}
+      let px = false, pxTijd = {}; try { const pk1 = await kv.get('hjdk:shop:pxlaatst:koop'), pc1 = await kv.get('hjdk:shop:pxlaatst:cart'); px = !!pk1 || !!pc1; pxTijd = { koop: pk1 && pk1.at ? nlTijd(new Date(pk1.at).toISOString()) : null, cart: pc1 && pc1.at ? nlTijd(new Date(pc1.at).toISOString()) : null }; } catch (e) {}
       const les = (await kv.get(K.lessen)) || {};
       res.setHeader('content-type', 'text/html; charset=utf-8');
-      return res.status(200).send(adviesPagina({ sk, css: look(ACC), esc, vandaag: await dagTotaal(DAY()), gisteren: await dagTotaal(DAY(-1)), totaal: await netTotaal(), kosten: { md: somK(l.mondiad), pa: somK(await eerste(K.palog)), ra: somK(await eerste(K.ralog)), ca: somK(await eerste(K.calog)) }, inz: l.inzicht || null, lessen: les.lessen || [], bijgewerkt: nlTijd(new Date().toISOString()), pxGezien: px, stand: await shopStand('oc_4174004347453441').catch(() => null), nlTijd })); }
+      return res.status(200).send(adviesPagina({ sk, css: look(ACC), esc, vandaag: await dagTotaal(DAY()), gisteren: await dagTotaal(DAY(-1)), totaal: await netTotaal(), kosten: { md: somK(l.mondiad), pa: somK(await eerste(K.palog)), ra: somK(await eerste(K.ralog)), ca: somK(await eerste(K.calog)) }, inz: l.inzicht || null, lessen: les.lessen || [], bijgewerkt: nlTijd(new Date().toISOString()), pxGezien: px, pxTijd, stand: await shopStand('oc_4174004347453441').catch(() => null), nlTijd })); }
     if (op === 'bron') { // controle: haalt een pagina van yoo.rs op zoals een Nederlandse telefoon die ziet (alleen yoo.rs, alleen lezen)
       const pad = String(url.searchParams.get('u') || '/shop/'); if (!/^\/[\w\/\-?=&.%]*$/.test(pad)) return res.status(400).json({ ok: false });
       const r = await fetch('https://yoo.rs' + pad, { redirect: 'manual', headers: { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': url.searchParams.get('taal') || 'nl-NL,nl;q=0.9' } });
