@@ -1,6 +1,8 @@
 // YOORS SHOP-LUS — betaald verkeer (PropellerAds + Mondiad) naar yoo.rs/shop, volledig lerend. Draait op Vercel, los van Claude-account en laptop.
 //   /shop  en  /shop/<product>   landingspagina: meet per advertentieplek, advertentie en product wie aankomt, wie een echt mens is, wie blijft en wie doorklikt
 //   /api/shop/uit                doorklik naar yoo.rs/shop: telt, en meldt de conversie aan het advertentienetwerk (postback)
+//   directe route (14 okt)       een deel van de betaalde bezoekers (per persoon vast, /api/shop/direct) gaat zonder landingspagina
+//                                in één keer naar de productpagina op yoo.rs, met Clickmind onzichtbaar ertussen (lib/shopdirect.js)
 //   /api/shop/b                  tellers vanaf de landingspagina (echt mens, gebleven)
 //   /api/shop/px                 pixel voor de shop zelf (winkelwagen / aankoop), zodat de lus op echte bestellingen leert
 //   /api/shop/img                advertentiebeeld per product (icoon 192x192, Mondiad 720x360, PropellerAds 492x328)
@@ -25,12 +27,13 @@ import seed from '../data/shop-seed.json' with { type: 'json' };
 import { SHOP_PHP } from '../lib/shopphp.js';
 import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
+import { PB, CM_NET, SOORTEN_DIRECT, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks } from '../lib/shopdirect.js';
+import { verwerkKlik, serverSignalen, laterAf, nieuwId } from '../lib/mensmeter.js';
+import { cidKoppel } from '../lib/wissel.js';
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
 const SHOP = 'https://yoo.rs/shop';
-const PB = { pa: 'https://ad.propellerads.com/conversion.php?aid=3772727&pid=&tid=151850&visitor_id={clickid}', md: 'https://postback.mondiad.com/track?uid=31070&clickid={clickid}', ra: 'https://us.ahows.co/log?action=conversion&key={clickid}' };
-// Clickadu: de terugmeldlink staat per account in Clickadu (Tracking). Zet hem in SHOP_PB_CLICKADU met {clickid} op de plek van de klik-id.
-if (/^https:\/\/\S+\{clickid\}/.test(process.env.SHOP_PB_CLICKADU || '')) PB.ca = process.env.SHOP_PB_CLICKADU.trim();
+// Terugmeldlinks per netwerk (PB) staan in lib/shopdirect.js. Clickadu: zet de link in SHOP_PB_CLICKADU met {clickid} op de plek van de klik-id.
 const NETTEN = { md: 'Mondiad', pa: 'PropellerAds', ra: 'RichAds', ca: 'Clickadu', x: 'Overig' };
 const netVan = src => /mondiad/.test(src) ? 'md' : /propeller/.test(src) ? 'pa' : /richads/.test(src) ? 'ra' : /clickadu/.test(src) ? 'ca' : 'x';
 const plekId = s => { s = String(s || '').replace(/[^A-Za-z0-9]/g, '').toLowerCase().slice(0, 40); return /^(zoneid|siteid|publisherid|sourceid)$/.test(s) ? '' : s; }; // Mondiad en PropellerAds: cijfers; RichAds: site-id van 32 tekens
@@ -144,7 +147,7 @@ const prijsInTekst = a => { const m = (a.title + ' ' + a.desc).match(/€\s?(\d+
 const beeld = (pid, t) => LAND() + '/api/shop/img?p=' + encodeURIComponent(pid) + '&t=' + t;
 
 // ---------------- tellers per netwerk ----------------
-const SOORTEN = ['view', 'mens', 'eng', 'klik', 'conv', 'cart', 'koop', 'omzet'];
+const SOORTEN = ['view', 'mens', 'eng', 'klik', 'conv', 'cart', 'koop', 'omzet', ...SOORTEN_DIRECT]; // view/mens/eng/klik = alleen de landingspagina; dv = aangekomen via de directe route
 async function tellers(net, soort, ids) { const out = {}; if (!ids.length) return out; const keys = []; ids.forEach(z => SOORTEN.forEach(s => keys.push('c:sh-' + net + '-' + soort + z + '-' + s))); const vals = []; for (let i = 0; i < keys.length; i += 490) vals.push(...await kv.mget(...keys.slice(i, i + 490))); ids.forEach((z, i) => { const o = {}; SOORTEN.forEach((s, j) => { o[s] = num(vals[i * SOORTEN.length + j]); }); out[z] = o; }); return out; }
 // Aantal verschillende apparaten per plek (alleen voor plekken met genoeg bezoekers). Zet het in o.uniek.
 async function metUniek(net, zones) { for (const [z, o] of Object.entries(zones)) { if (num(o.view) < 20) continue; try { const n = num(await kv.raw(['PFCOUNT', K.hll(net, z)])); if (n > 0) { o.uniek = n; o.uniekVan = num(await kv.get('c:sh-' + net + '-z' + z + '-hv')) || 0; } } catch (e) {} } return zones; }
@@ -167,7 +170,8 @@ async function dagTotaal(dag) { const nets = ['md', 'pa', 'ra', 'ca', 'x']; cons
 async function netTotaal() { const nets = ['md', 'pa', 'ra', 'ca', 'x']; const keys = []; nets.forEach(n => SOORTEN.forEach(s => keys.push('c:sh-' + n + '-' + s))); const v = await kv.mget(...keys); const out = {}; nets.forEach((n, i) => { out[n] = {}; SOORTEN.forEach((s, j) => { out[n][s] = num(v[i * SOORTEN.length + j]); }); }); return out; }
 // Oordeel over een advertentieplek. netKliks = kliks volgens het netwerk, o = onze eigen tellers.
 function plekOordeel(netKliks, o, gemKlik) {
-  if (netKliks >= 15 && o.view < 0.4 * netKliks) return { uit: `nep: ${netKliks} kliks volgens het netwerk, maar ${o.view} kwamen aan` };
+  const aan = o.view + num(o.dv); // aangekomen: landingspagina plus directe route
+  if (netKliks >= 15 && aan < 0.4 * netKliks) return { uit: `nep: ${netKliks} kliks volgens het netwerk, maar ${aan} kwamen aan` };
   if (o.view >= 12 && o.mens < 0.25 * o.view) return { uit: `geen echte mensen: van ${o.view} bezoekers bewogen er maar ${o.mens}` };
   if (o.view >= 6 && o.mens === 0) return { uit: `geen echte mensen: ${o.view} bezoekers en niemand bewoog of tikte` };
   if (o.view >= 50 && o.klik >= 0.5 * o.view && !num(o.koop)) return { uit: `onnatuurlijk: ${o.klik} van ${o.view} bezoekers klikten door, geen verkoop` };
@@ -225,13 +229,15 @@ async function ronde(droog) {
     let tv = 0, tk = 0; zs.forEach(z => { tv += eigen[z].view; tk += eigen[z].klik; }); const gem = tv >= 30 ? tk / tv : 0.08;
     const zwart = new Set(((await kv.get(K.zwart('md'))) || []).map(String)); const goed = {}; let nieuwZwart = 0;
     for (const z of zs) { if (zwart.has(z)) continue; const o = plekOordeel((zMd[z] || {}).kliks || 0, eigen[z], gem); if (o.uit) { zwart.add(z); nieuwZwart++; B('plek uit (Mondiad)', z, o.uit); } else if (o.goed) goed[z] = o.goed; }
-    const campTel = await tellers('md', 'k', mdCamps.map(c => String(c.id))); const loopt = (await kv.get('hjdk:shop:loopt')) || {};
+    const campTel = await tellers('md', 'k', mdCamps.map(c => String(c.id))); const loopt = (await kv.get('hjdk:shop:loopt')) || {}; const meetShop = (await shopMeet(kv)).aan;
     for (const pc of Object.values(per)) { const c = pc.c; let det = null; try { det = (rows(await md('mondiad_get_campaign_details', { ids: [String(c.id)] })) || [])[0]; } catch (e) {} if (!det) continue;
       const crs = det.creatives || []; for (const x of crs) { const a = ads.find(q => q.title === x.title && q.desc === x.description) || ads.find(q => q.title === x.title); if (a) { crmap['md:' + x.id] = a.pid; crmap['t:md:' + x.id] = a.title; } }
       if (/PAUSED|REJECTED|ARCHIVED|DRAFT/i.test(c.status)) continue;
       const eigenC = campTel[String(c.id)] || {}; const isCpa = String(c.bidType || det.bidType || '').toUpperCase() === 'CPA'; const bod = num(det.bid);
-      // lek: vandaag geld uit, niemand klikt door naar de shop -> stilzetten
-      if ((pc.vandaag.kosten >= LEK() && !num(eigenC.klik)) || (pc.kosten >= 3 * LEK() && pc.kosten / Math.max(1, num(eigenC.klik)) > 0.6)) { B('campagne stil (Mondiad)', c.id + ' ' + c.name.slice(0, 50), `$${pc.kosten.toFixed(2)} uitgegeven (vandaag $${pc.vandaag.kosten.toFixed(2)}) tegen ${num(eigenC.klik)} doorkliks naar de shop`); if (!droog) { try { await md('mondiad_update_campaign', { json: JSON.stringify({ id: c.id, status: 'PAUSED' }) }); } catch (e) { B('fout', 'stilzetten ' + c.id, String(e.message).slice(0, 120)); } } continue; }
+      // lek: vandaag geld uit, niemand klikt door naar de shop -> stilzetten. Met de directe route telt alleen het deel van het geld dat bij de landingspagina hoort,
+      // tot cm.js op yoo.rs meet; daarna telt de eerste tik op de productpagina (da) mee als doorklik.
+      const deelL = landDeel(eigenC, meetShop), doorC = doorkliks(eigenC, meetShop), kL = pc.kosten * deelL, kLv = pc.vandaag.kosten * deelL;
+      if ((kLv >= LEK() && !doorC) || (kL >= 3 * LEK() && kL / Math.max(1, doorC) > 0.6)) { B('campagne stil (Mondiad)', c.id + ' ' + c.name.slice(0, 50), `$${pc.kosten.toFixed(2)} uitgegeven (vandaag $${pc.vandaag.kosten.toFixed(2)}${deelL < 1 ? ', waarvan ' + Math.round(deelL * 100) + '% via de landingspagina' : ''}) tegen ${doorC} doorkliks naar de shop`); if (!droog) { try { await md('mondiad_update_campaign', { json: JSON.stringify({ id: c.id, status: 'PAUSED' }) }); } catch (e) { B('fout', 'stilzetten ' + c.id, String(e.message).slice(0, 120)); } } continue; }
       const upd = { id: c.id };
       const cur = new Set((det.zoneIdList || []).map(String)); const voeg = [...zwart].filter(z => !cur.has(z));
       if (!/white/i.test(det.zoneIdListMode || '') && voeg.length) { upd.zoneIdList = [...cur, ...voeg].map(Number).filter(Boolean); upd.zoneIdListMode = 'BLACK_LIST'; B('zwarte lijst (Mondiad)', String(c.id), '+' + voeg.length + ' plekken'); }
@@ -327,6 +333,34 @@ async function maakMondiad(thema, formaat) {
 // ---------------- landingspagina ----------------
 // Korte, niet-herleidbare vingerafdruk van het apparaat (adres + browser), alleen om te zien of dezelfde bezoeker steeds terugkomt.
 const apparaat = req => { try { return createHash('sha1').update(String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() + '|' + String(req.headers['user-agent'] || '')).digest('hex').slice(0, 8); } catch (e) { return ''; } };
+const leesCookie = (req, naam) => { const m = new RegExp('(?:^|;\\s*)' + naam + '=([^;]+)').exec(String(req.headers.cookie || '')); return m ? decodeURIComponent(m[1]) : ''; };
+// Directe route: Clickmind logt de klik (server: netwerk, datacenter, TLS-vingerafdruk; bewijs voor terugbetaling) en stuurt in één keer door
+// naar de productpagina, met hj (winkelwagen en betaling via de shop) en mmc (Clickmind; cm.js op yoo.rs meldt echt en actie).
+async function direct(req, res, x) {
+  const { net, clickid, zone, cr, camp, pid, code, bot } = x; const test = /^test/i.test(clickid);
+  const prefetch = /prefetch|prerender/i.test(String(req.headers['sec-purpose'] || req.headers.purpose || ''));
+  let mmp = leesCookie(req, 'mmp'); const nieuwP = !/^[0-9a-f]{16}$/.test(mmp); if (nieuwP) mmp = nieuwId(8);
+  let rec = null; try { rec = await kv.get(K.rec(code)); } catch (e) {}
+  const cid = (rec && rec.mmc) || nieuwId(6);
+  const doel = 'https://yoo.rs/product/' + encodeURIComponent(pid) + '?utm_source=' + NETTEN[net].toLowerCase() + '&utm_medium=push&utm_campaign=shoplus&utm_content=' + encodeURIComponent(pk(pid)) + '&hj=' + code + '&mmc=' + cid + '&lang=nl';
+  if (!bot && !prefetch && (!rec || !rec.mmc)) {
+    const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; rec.mmc = cid; if (test) rec.t = 1;
+    try { await Promise.all([kv.set(K.rec(code), rec, { ex: 7 * 86400 }), cidKoppel(kv, { cid, pid: mmp, arm: rec.arm === 'd' ? 'direct' : 'pagina', tag: 'yoors-shop', net: test ? 'test' : CM_NET[net], zone: zone || '-', camp: camp || '-', shop: code })]); } catch (e) {}
+    if (eerst && !test) {
+      const keys = ['sh-' + net + '-dv', 'sh-d' + D8() + '-' + net + '-dv', 'sh-u' + nlUur() + '-dv', 'sh-p-' + pk(pid) + '-dv'];
+      if (zone) keys.push('sh-' + net + '-z' + zone + '-dv', 'sh-' + net + '-z' + zone + '-hv'); if (cr) keys.push('sh-' + net + '-a' + cr + '-dv'); if (camp) keys.push('sh-' + net + '-k' + camp + '-dv');
+      const werk = laterAf(Promise.all([
+        inc(keys), sadd(K.set('p'), pid), zone ? sadd(K.set('z', net), zone) : null, cr ? sadd(K.set('a', net), cr) : null, camp ? sadd(K.set('k', net), camp) : null,
+        zone ? kv.raw(['PFADD', K.hll(net, zone), apparaat(req)]).then(() => kv.raw(['EXPIRE', K.hll(net, zone), String(30 * 86400)])).catch(() => {}) : null,
+        verwerkKlik(kv, { cid, pid: mmp, nieuw: nieuwP, arm: '302', tag: 'yoors-shop', net: CM_NET[net], camp, zone, sub: clickid, cr, kw: pid, doel, p: 'shop' }, serverSignalen(req))
+      ]).catch(e => { console.log('shop direct fout', String(e && e.message || e)); }));
+      await Promise.race([werk, new Promise(r => setTimeout(r, 350))]);
+    }
+  }
+  res.statusCode = 302; res.setHeader('location', doel); res.setHeader('cache-control', 'no-store, private'); res.setHeader('referrer-policy', 'origin'); res.setHeader('x-robots-tag', 'noindex, nofollow');
+  if (nieuwP) res.setHeader('set-cookie', 'mmp=' + mmp + '; Max-Age=15552000; Path=/; Secure; HttpOnly; SameSite=Lax');
+  return res.end();
+}
 async function land(req, res, url) {
   const q = url.searchParams; const ua = req.headers['user-agent'] || ''; const bot = isBot(ua);
   const src = String(q.get('utm_source') || '').toLowerCase(); const net = netVan(src);
@@ -341,8 +375,12 @@ async function land(req, res, url) {
   const zelfde = topIds.filter(id => id !== pid && ((top && top.thema && top.thema[id]) || themaVan(perId[id])) === thema).slice(0, 3);
   const meer = [...zelfde, ...topIds.filter(id => id !== pid && !zelfde.includes(id))].slice(0, 8).map(id => perId[id]);
   const code = clickid && net !== 'x' ? shortId(net + ':' + clickid) : '';
+  // directe route (lib/shopdirect.js): per persoon vast naar deze landingspagina (l) of in één keer naar de productpagina op yoo.rs (d).
+  // Alleen betaald verkeer met een klik-id. Iedereen krijgt dezelfde behandeling, ook wat op een bot lijkt (geen cloaking).
+  // Alleen PropellerAds en Mondiad: hun lussen kennen de directe route (aankomst = view + dv). RichAds en Clickadu blijven op de landingspagina.
+  if (code && (net === 'pa' || net === 'md')) { const f = q.get('arm'); const arm = f === 'd' || f === 'l' ? f : shopArm(apparaat(req), (await directInst(kv)).pct); if (arm === 'd') return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot }); }
   if (!bot) {
-    let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req) }, { ex: 7 * 86400 }); } catch (e) {} }
+    let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, { ex: 7 * 86400 }); } catch (e) {} }
     if (nieuw) { const keys = ['sh-' + net + '-view', 'sh-d' + D8() + '-' + net + '-view', 'sh-u' + nlUur() + '-view', 'sh-p-' + pk(pid) + '-himp'].concat(meer.map(m => 'sh-p-' + pk(m.id) + '-imp'));
       if (zone) keys.push('sh-' + net + '-z' + zone + '-view'); if (cr) keys.push('sh-' + net + '-a' + cr + '-view'); if (camp) keys.push('sh-' + net + '-k' + camp + '-view');
       if (zone) { keys.push('sh-' + net + '-z' + zone + '-hv'); try { await kv.raw(['PFADD', K.hll(net, zone), apparaat(req)]); await kv.raw(['EXPIRE', K.hll(net, zone), String(30 * 86400)]); } catch (e) {} }
@@ -434,12 +472,15 @@ async function uitgang(req, res, url) {
   const cat = await catalog(); const it = p === 'alles' ? null : cat.items.find(i => i.id === pidOk(p));
   let rec = null; if (code) { try { rec = await kv.get(K.rec(code)); } catch (e) {} } const net = rec ? rec.s : 'x';
   const mens = (rec && rec.m) || (q.get('h') === '1' && num(q.get('ms')) >= 600); const bot = isBot(req.headers['user-agent']);
+  // Clickmind-klik-id mee naar de shop, zodat cm.js op yoo.rs ook voor bezoekers via de landingspagina echt en actie meet (vergelijking met de directe route)
+  let mmcNieuw = false; if (rec && !bot && !rec.mmc) { rec.mmc = nieuwId(6); rec.arm = rec.arm || 'l'; mmcNieuw = true; try { await cidKoppel(kv, { cid: rec.mmc, pid: (String(rec.h || '') + '0000000000000000').slice(0, 16), arm: 'pagina', tag: 'yoors-shop', net: CM_NET[net] || 'onbekend', zone: rec.z || '-', camp: rec.k || '-', shop: code }); } catch (e) {} }
   if (mens && !bot) { const keys = ['sh-' + net + '-klik', 'sh-d' + D8() + '-' + net + '-klik', 'sh-u' + nlUur() + '-klik']; if (it) keys.push('sh-p-' + pk(it.id) + (pos === 'h' || pos === 'logo' ? '-hklik' : '-klik'));
     const gg = String(q.get('g') || ''); if (GIDSEN[gg]) { keys.push('sh-h-' + gg + '-klik', 'sh-h-' + gg + '-' + net + '-klik', 'sh-hd' + D8() + '-' + gg + '-klik'); if (num(q.get('q')) > 0) keys.push('sh-h-' + gg + '-klikq'); }
     if (rec && !rec.kl) { if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-klik'); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-klik'); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-klik'); rec.kl = Date.now(); }
     if (rec && rec.c && !rec.conv && PB[net]) { let st = 0; try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(PB[net].replace('{clickid}', encodeURIComponent(rec.c)), { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (e) {} rec.conv = Date.now(); rec.pb = st; keys.push('sh-' + net + '-conv', 'sh-d' + D8() + '-' + net + '-conv', 'sh-' + net + '-pb' + (st || 0)); if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-conv'); }
     await inc(keys); if (rec) { try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} } }
-  const utm = 'utm_source=' + (net === 'x' ? 'shoplus' : NETTEN[net].toLowerCase()) + '&utm_medium=push&utm_campaign=shoplus' + (it ? '&utm_content=' + encodeURIComponent(pk(it.id)) : '') + (code ? '&hj=' + code : '') + '&lang=nl'; // de shop kiest anders de taal van de telefoon; de afrekenpagina is nog Engels
+  else if (mmcNieuw) { try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} }
+  const utm = 'utm_source=' + (net === 'x' ? 'shoplus' : NETTEN[net].toLowerCase()) + '&utm_medium=push&utm_campaign=shoplus' + (it ? '&utm_content=' + encodeURIComponent(pk(it.id)) : '') + (code ? '&hj=' + code : '') + (rec && rec.mmc ? '&mmc=' + rec.mmc : '') + '&lang=nl'; // de shop kiest anders de taal van de telefoon; de afrekenpagina is nog Engels
   res.statusCode = 302; res.setHeader('location', (it ? 'https://yoo.rs/product/' + encodeURIComponent(it.id) : SHOP) + '?' + utm); res.setHeader('cache-control', 'no-store'); return res.end();
 }
 
@@ -490,7 +531,7 @@ async function voorNet(net) {
   const cat = await catalog(); const perId = {}; cat.items.forEach(i => { perId[i.id] = i; }); const ads = await advertenties(); let top = null; try { top = await kv.get(K.top); } catch (e) {}
   const volg = (top && top.ids) || seed.ads.map(a => a.pid);
   const zones = await metUniek(net, await tellers(net, 'z', await smembers(K.set('z', net)))), cr = await tellers(net, 'a', await smembers(K.set('a', net))), camp = await tellers(net, 'k', await smembers(K.set('k', net)));
-  return { at: new Date().toISOString(), net, naam: NAAM, land: LAND() + '/shop', vandaag: (await dagTotaal(DAY()))[net],
+  return { at: new Date().toISOString(), net, naam: NAAM, land: LAND() + '/shop', vandaag: (await dagTotaal(DAY()))[net], direct: Object.assign(await directInst(kv), { meet: (await shopMeet(kv)).aan }), // dmeet: cm.js meet op yoo.rs; zie lib/shopdirect.js voor landDeel en doorkliks
     ads: ads.filter(a => perId[a.pid] && !!perId[a.pid].img).map(a => ({ pid: a.pid, title: a.title, desc: a.desc, uit: a.uit || null, rang: volg.indexOf(a.pid), thema: themaVan(perId[a.pid]), icon: beeld(a.pid, 'icon'), image: beeld(a.pid, net === 'ra' ? 'md' : net === 'ca' ? 'ca' : 'pa') })),
     zones, creatives: cr, campagnes: camp, staat: (await kv.get('hjdk:shop:' + net + 'staat:' + DAY())) || {}, staatGisteren: (await kv.get('hjdk:shop:' + net + 'staat:' + DAY(-1))) || {} };
 }
@@ -657,17 +698,23 @@ export default async function handler(req, res) {
       const [p, c, s] = await Promise.all([haal('/product/' + pid + '?lang=nl'), haal('/shop/checkout/' + pid + '?lang=nl'), haal('/')]);
       const o = { ok: true, at: Date.now(), pid, product: p, checkout: c, home: Object.assign({}, s, { tekst: (s.tekst || '').slice(0, 800) }) };
       try { await kv.set(ck, o, { ex: 3600 }); } catch (e) {} return res.status(200).json(o); }
+    if (op === 'direct') { // directe route: welk deel van de betaalde bezoekers zonder landingspagina naar de shop gaat. Lezen mag iedereen; zetten alleen via de beschermde vercel.app-host (?pct=0..100)
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; const pct = url.searchParams.get('pct');
+      if (pct != null && pct !== '') { if (!/\.vercel\.app$/i.test(host)) return res.status(403).json({ ok: false, fout: 'zetten alleen via de beschermde vercel.app-host' }); const c = await zetDirect(kv, pct, url.searchParams.get('door') || 'beheer'); await log({ soort: 'directe route', wat: c.pct + '% direct naar de productpagina', waarom: 'ingesteld door ' + c.door }); }
+      return res.status(200).json({ ok: true, direct: await directInst(kv), meetOpYoors: await shopMeet(kv), uitleg: 'pct = deel van de betaalde bezoekers (per persoon vast) dat in één keer naar de productpagina op yoo.rs gaat; de rest ziet de landingspagina. meetOpYoors = cm.js op yoo.rs meldt echt en actie.' }); }
     if (op === 'trechter') { // openbaar, alleen totalen: van bezoek naar doorklik per netwerk, per dag en per product; geen apparaten, geen kliknummers
       const dagen = [0, 1, 2, 3, 4].map(i => DAY(-i)); const perDag = {}; for (const d of dagen) perDag[d] = await dagTotaal(d);
-      const per = { net: {}, product: {}, zone: {} }; let cur = '0', gezien = 0;
+      const per = { net: {}, product: {}, zone: {} }; const perArm = {}; let cur = '0', gezien = 0;
       do { const [cc, keys] = await kv.scan(cur, { match: 'hjdk:shc:*', count: 1000 }); cur = cc;
         for (let i = 0; i < keys.length; i += 200) { const vals = await kv.mget(...keys.slice(i, i + 200)); gezien += vals.length;
           for (const r of vals) { if (!r) continue; const zk = r.s + ':' + (r.z || '-');
+            if (r.arm && !r.t) { const ak = r.arm + ':' + r.s; const a = perArm[ak] || (perArm[ak] = { route: r.arm === 'd' ? 'direct naar de productpagina' : 'via de landingspagina', netwerk: NETTEN[r.s] || r.s, aangekomen: 0, doorNaarShop: 0, echtOpShop: 0, tikOpShop: 0, afrekenen: 0, betaald: 0 });
+              a.aangekomen++; if (r.arm === 'd' || r.kl) a.doorNaarShop++; if (r.ym) a.echtOpShop++; if (r.ya) a.tikOpShop++; if (r.px && r.px.cart) a.afrekenen++; if (r.px && Object.keys(r.px).some(k => k.startsWith('koop'))) a.betaald++; }
             for (const [m, k] of [[per.net, r.s], [per.product, r.p || '-'], [per.zone, zk]]) { const x = m[k] || (m[k] = { bezoek: 0, mens: 0, door: 0, snel: 0, sec: [] }); x.bezoek++; if (r.m) x.mens++; if (r.kl) { x.door++; const sec = (r.kl - r.at) / 1000; x.sec.push(sec); if (sec < 3) x.snel++; } } } }
       } while (cur !== '0' && gezien < 40000);
       const kort = m => Object.fromEntries(Object.entries(m).map(([k, x]) => { x.sec.sort((a, b) => a - b); const med = x.sec.length ? Math.round(x.sec[Math.floor(x.sec.length / 2)] * 10) / 10 : null; delete x.sec; x.medSecTotKlik = med; return [k, x]; }));
       const zones = Object.entries(kort(per.zone)).sort((a, b) => b[1].door - a[1].door).slice(0, 25);
-      return res.status(200).json({ ok: true, at: new Date().toISOString(), records: gezien, totaal: await netTotaal(), perDag, perNet: kort(per.net), perProduct: kort(per.product), topZones: Object.fromEntries(zones), px: { koop: !!(await kv.get('hjdk:shop:pxlaatst:koop')), cart: !!(await kv.get('hjdk:shop:pxlaatst:cart')) } }); }
+      return res.status(200).json({ ok: true, at: new Date().toISOString(), records: gezien, direct: await directInst(kv), meetOpYoors: await shopMeet(kv), perRoute: Object.values(perArm).sort((a, b) => b.aangekomen - a.aangekomen), totaal: await netTotaal(), perDag, perNet: kort(per.net), perProduct: kort(per.product), topZones: Object.fromEntries(zones), px: { koop: !!(await kv.get('hjdk:shop:pxlaatst:koop')), cart: !!(await kv.get('hjdk:shop:pxlaatst:cart')) } }); }
     if (op === 'ronde') {
       const droog = !!url.searchParams.get('droog');
       if (!droog) { const lk = await kv.get(K.lock); if (lk && Date.now() - lk < 240000) return res.status(200).json({ ok: true, overgeslagen: 'ronde loopt al' }); await kv.set(K.lock, Date.now(), { ex: 300 }); }
@@ -718,7 +765,7 @@ export default async function handler(req, res) {
       let px = false, pxTijd = {}; try { const pk1 = await kv.get('hjdk:shop:pxlaatst:koop'), pc1 = await kv.get('hjdk:shop:pxlaatst:cart'); px = !!pk1 || !!pc1; pxTijd = { koop: pk1 && pk1.at ? nlTijd(new Date(pk1.at).toISOString()) : null, cart: pc1 && pc1.at ? nlTijd(new Date(pc1.at).toISOString()) : null }; } catch (e) {}
       const les = (await kv.get(K.lessen)) || {};
       res.setHeader('content-type', 'text/html; charset=utf-8');
-      return res.status(200).send(adviesPagina({ sk, css: look(ACC), esc, vandaag: await dagTotaal(DAY()), gisteren: await dagTotaal(DAY(-1)), totaal: await netTotaal(), kosten: { md: somK(l.mondiad), pa: somK(await eerste(K.palog)), ra: somK(await eerste(K.ralog)), ca: somK(await eerste(K.calog)) }, inz: l.inzicht || null, lessen: les.lessen || [], bijgewerkt: nlTijd(new Date().toISOString()), pxGezien: px, pxTijd, stand: await shopStand('oc_4174004347453441').catch(() => null), nlTijd })); }
+      return res.status(200).send(adviesPagina({ sk, css: look(ACC), esc, vandaag: await dagTotaal(DAY()), gisteren: await dagTotaal(DAY(-1)), totaal: await netTotaal(), kosten: { md: somK(l.mondiad), pa: somK(await eerste(K.palog)), ra: somK(await eerste(K.ralog)), ca: somK(await eerste(K.calog)) }, inz: l.inzicht || null, lessen: les.lessen || [], bijgewerkt: nlTijd(new Date().toISOString()), pxGezien: px, pxTijd, stand: await shopStand('oc_4174004347453441').catch(() => null), nlTijd, direct: await directInst(kv), meet: await shopMeet(kv) })); }
     if (op === 'bron') { // controle: haalt een pagina van yoo.rs op zoals een Nederlandse telefoon die ziet (alleen yoo.rs, alleen lezen)
       const pad = String(url.searchParams.get('u') || '/shop/'); if (!/^\/[\w\/\-?=&.%]*$/.test(pad)) return res.status(400).json({ ok: false });
       const r = await fetch('https://yoo.rs' + pad, { redirect: 'manual', headers: { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': url.searchParams.get('taal') || 'nl-NL,nl;q=0.9' } });
