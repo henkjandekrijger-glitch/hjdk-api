@@ -83,9 +83,21 @@
     {
       "path": "/api/md/wacht",
       "schedule": "*/10 * * * *"
+    },
+    {
+      "path": "/api/mm/leer",
+      "schedule": "12 * * * *"
     }
   ],
   "rewrites": [
+    {
+      "source": "/w/:naam",
+      "destination": "/api/mm?op=w&w=:naam"
+    },
+    {
+      "source": "/mmu.js",
+      "destination": "/api/mm?op=mmu"
+    },
     {
       "source": "/go",
       "destination": "/api/mm?op=go"
@@ -424,7 +436,7 @@
       "maxDuration": 120
     },
     "api/mm.js": {
-      "maxDuration": 30
+      "maxDuration": 60
     }
   },
   "redirects": [
