@@ -99,6 +99,10 @@
       "destination": "/api/mm?op=w&w=:naam"
     },
     {
+      "source": "/cm.js",
+      "destination": "/api/mm?op=cm"
+    },
+    {
       "source": "/mmm.js",
       "destination": "/api/mm?op=mmm"
     },

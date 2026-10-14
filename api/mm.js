@@ -24,6 +24,7 @@
 //   /api/mm/overzicht                   alles op één pagina (beschermde host)
 //   /api/mm/terugbetaling?net=propeller&van=&tot=[&formaat=csv]   bewijs per klik voor een terugbetalingsverzoek (beschermde host; indienen alleen op Henkjans woord)
 //   /api/mm/terugdag                    cron: elke dag het dossier van gisteren per netwerk
+//   /cm.js                              CLICKMIND in één regel (uitkomsten, mensmeter bij betaald verkeer, lerende modal)
 //   /mmm.js                             DE LERENDE MODAL (lib/modal.js): <script src="https://whichtobuy.best/mmm.js" data-site="<site>" async></script>; testen met ?mmm=<arm-id> in de pagina-URL
 //   /api/mm/modal?site=&q=&c=&v=&mob=   beslissing per paginabezoek (e-mail, andere site of niets); /api/mm/modalev?mid=&e=toon|klik|sluit|hoofd; /api/mm/modalmail (POST)
 //   /api/mm/modalbeheer[?site=][&j=<json>][&mail=<lijst>&formaat=csv]   instellingen, stand en adressen (beschermde host)
@@ -36,7 +37,7 @@ import { verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, serverSignale
 import { leesWissel, bewaarWissel, alleWissels, kiesArm, soortPersoon, bestemming, wisselKlik, cidKoppel, uitkomst, amazonUitkomst, wisselStand } from '../lib/wissel.js';
 import { leerRonde, instelling } from '../lib/leer.js';
 import { dossier, naarCsv, dagDossiers } from '../lib/terug.js';
-import { modalBeslis, modalEv, modalMail, leesModal, bewaarModal, alleModals, modalStand } from '../lib/modal.js';
+import { modalBeslis, modalEv, modalMail, leesModal, bewaarModal, alleModals, modalStand, catalogus, bewaarCatalogus } from '../lib/modal.js';
 
 // Browserscript: klein, vanilla, alles in try/catch; vertraagt of breekt de pagina nooit.
 const MM_JS = String.raw`/* mensmeter */(function(){var W=window,N=navigator,D=document,M={vid:'',lokaal:null};
@@ -139,13 +140,13 @@ export default async function handler(req, res) {
       const r = await uitkomst(kv, j).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 200) }));
       return req.method === 'POST' ? res.status(204).end() : res.status(r.ok ? 200 : 400).json(r);
     }
-    if (op === 'mmm') { res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=300, s-maxage=300'); cors(res); return res.status(200).send(MMM_JS); }
+    if (op === 'mmm' || op === 'cm') { res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=300, s-maxage=300'); cors(res); return res.status(200).send(op === 'cm' ? CM_JS : MMM_JS); }
     if (op === 'modal' || op === 'modalev' || op === 'modalmail') {
       cors(res); res.setHeader('cache-control', 'no-store');
       if (req.method === 'OPTIONS') return res.status(204).end();
       if (op === 'modal') {
         const c = leesCookie(req, 'mmp');
-        const r = await modalBeslis(kv, { site: q('site'), pid: /^[0-9a-f]{16}$/.test(c) ? c : '', q: q('q'), mmc: q('c'), v: q('v'), mob: q('mob') === '1', abo: q('abo') === '1', test: q('test'), origin: String(req.headers.origin || ''), land: String(req.headers['x-vercel-ip-country'] || '') }).catch(e => ({ toon: false, reden: 'fout' }));
+        const r = await modalBeslis(kv, { site: q('site'), pid: /^[0-9a-f]{16}$/.test(c) ? c : '', q: q('q'), mmc: q('c'), v: q('v'), mob: q('mob') === '1', abo: q('abo') === '1', test: q('test'), origin: String(req.headers.origin || ''), land: String(req.headers['x-vercel-ip-country'] || ''), net: q('net'), zone: q('zone'), ref: q('ref'), uur: q('uur'), hist: { g: q('g'), k: q('k') } }).catch(e => { console.log('cm modal fout', String(e && e.message || e)); return { toon: false, reden: 'fout' }; });
         return res.status(200).json(r);
       }
       if (op === 'modalev') { const r = await modalEv(kv, { mid: q('mid'), e: q('e') }).catch(e => ({ ok: false })); return req.method === 'GET' ? res.status(r.ok ? 200 : 400).json(r) : res.status(204).end(); }
@@ -157,6 +158,7 @@ export default async function handler(req, res) {
     if (op === 'modalbeheer') {
       res.setHeader('cache-control', 'no-store');
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
+      if (q('catalogus')) { if (q('j')) { const r = await bewaarCatalogus(kv, JSON.parse(q('j'))); return res.status(r.ok ? 200 : 400).json(r); } return res.status(200).json({ catalogus: await catalogus(kv) }); }
       if (q('j') || req.method === 'POST') { const j = req.method === 'POST' ? leesJson(req.body) : leesJson(q('j')); const r = await bewaarModal(kv, j); return res.status(r.ok ? 200 : 400).json(r); }
       if (q('mail')) {
         const lijst = String(q('mail')).toLowerCase().replace(/[^a-z0-9-]/g, ''), h = await kv.raw(['HGETALL', 'mm:mail:' + lijst]);
@@ -166,7 +168,7 @@ export default async function handler(req, res) {
         res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('content-disposition', 'attachment; filename="lijst-' + lijst + '.csv"');
         return res.status(200).send(['email,datum,site,arm,netwerk,zone,campagne,land,toestemming,bevestigd'].concat(rijen.map(([e, x]) => [e, x.t, x.site, x.arm, x.net, x.zone, x.camp, x.land, x.toestemming, x.bevestigd ? 'ja' : 'nee'].map(qq).join(','))).join('\n'));
       }
-      if (q('site')) { const m = await leesModal(kv, q('site'), true); if (!m) return res.status(404).json({ ok: false, fout: 'onbekende site' }); return res.status(200).json({ modal: m, stand: await modalStand(kv, m, Number(q('dagen')) || 14), script: '<script src="https://whichtobuy.best/mmm.js" data-site="' + m.site + '" async></script>' }); }
+      if (q('site')) { const m = await leesModal(kv, q('site'), true); if (!m) return res.status(404).json({ ok: false, fout: 'onbekende site' }); const st = await modalStand(kv, m, Number(q('dagen')) || 14); return res.status(200).json({ modal: m, stand: [...st], momenten: st.momenten, varianten: st.varianten, script: '<script src="https://whichtobuy.best/cm.js" data-site="' + m.site + '" async></script>' }); }
       return res.status(200).json({ modals: await alleModals(kv) });
     }
     if (op === 'blok') { res.setHeader('cache-control', 'no-store'); cors(res); const net = netNaam(q('net') || 'propeller'); return res.status(200).json((await kv.get('mm:blok:' + net)) || { zones: [], wachtOpHenkjan: [], aan: false, bijgewerkt: null }); }
@@ -333,63 +335,83 @@ async function wisselRoute(req, res, url, q) {
 }
 
 // Script voor bestemmingen (spel, todayin, finds, MYLEVEL): onthoudt de klik-id (mmc) en meldt een uitkomst met mmUitkomst('aanmelding').
-const MMU_JS = String.raw`/* mensmeter uitkomst */(function(){var W=window;try{var c='',u=new URL(location.href).searchParams.get('mmc')||'';
+const MMU_JS = String.raw`/* clickmind uitkomst */(function(){var W=window,D=document;try{var c='',u=new URL(location.href).searchParams.get('mmc')||'';
 if(/^[0-9a-f]{8,24}$/.test(u)){c=u;try{sessionStorage.setItem('mmc',u);localStorage.setItem('mmc',u+'|'+Date.now())}catch(e){}}
 if(!c){try{c=sessionStorage.getItem('mmc')||'';if(!c){var l=(localStorage.getItem('mmc')||'').split('|');if(l[0]&&Date.now()-Number(l[1]||0)<864e5)c=l[0]}}catch(e){}}
 var gehad={};W.mmUitkomst=function(soort,waarde){try{if(!c||gehad[soort])return;gehad[soort]=1;var x=JSON.stringify({cid:c,soort:soort,waarde:waarde||0,bron:location.host});
 if(!(navigator.sendBeacon&&navigator.sendBeacon('https://whichtobuy.best/api/mm/uitkomst',x))&&W.fetch)fetch('https://whichtobuy.best/api/mm/uitkomst',{method:'POST',body:x,keepalive:true,mode:'no-cors'})}catch(e){}};
-W.mmKlikId=c}catch(e){}})();`;
+W.mmKlikId=c;
+if(c&&!W.mmGeenAuto){var t0=Date.now(),ia=0,echt=function(){if(ia&&D.visibilityState==='visible'&&Date.now()-t0>=3000)W.mmUitkomst('echt')};
+['pointerdown','touchstart','scroll','keydown'].forEach(function(e){D.addEventListener(e,function(){ia=1;echt()},{passive:true,capture:true})});setTimeout(echt,3100);
+D.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href],button,[role=button],input[type=submit]');if(a)W.mmUitkomst('actie')},true);
+D.addEventListener('submit',function(e){var f=e.target;if(f&&f.querySelector&&f.querySelector('input[type=email],input[name*=mail]'))W.mmUitkomst('aanmelding')},true)}
+}catch(e){}})();`;
 
 // De lerende modal in de browser (lib/modal.js): vraagt de server welke arm, meet de gewone klik naar buiten (ook bij de controlegroep),
 // toont op het gekozen moment een kaart (schaduw-DOM, botst niet met de pagina), sluiten met kruisje, 'nee', achtergrond of Escape.
-const MMM_JS = String.raw`/* lerende modal */(function(){var W=window,D=document,N=navigator;
+const MMM_JS = String.raw`/* clickmind modal */(function(){var W=window,D=document,N=navigator;
 function q(f){try{return f()}catch(e){return null}}
 try{if(W.mmModal)return;W.mmModal=1;if(N.webdriver===true)return;
-var S=D.currentScript||q(function(){var a=D.querySelectorAll('script[src*="/mmm.js"]');return a[a.length-1]}),site=S&&S.getAttribute('data-site');if(!site)return;
+var S=D.currentScript||q(function(){var a=D.querySelectorAll('script[src*="/cm.js"],script[src*="/mmm.js"]');return a[a.length-1]}),site=S&&S.getAttribute('data-site');if(!site)return;
 var O=q(function(){return new URL(S.src).origin})||'https://whichtobuy.best',zelf=O===location.origin;
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,String(v))}catch(e){return null}}
 function hex(n){var a=new Uint8Array(n),s='';q(function(){crypto.getRandomValues(a)});for(var i=0;i<n;i++)s+=(a[i]+256).toString(16).slice(1);return s}
 var id=ls('mmq');if(!/^[0-9a-f]{16}$/.test(id||'')){id=hex(8);ls('mmq',id)}
 var vk='mmqv:'+site,v=(+ls(vk)||0)+1;ls(vk,v);
-var U=q(function(){return new URL(location.href).searchParams}),mmc=(U&&U.get('mmc'))||'';
-if(!/^[0-9a-f]{8,24}$/.test(mmc)){var l=(ls('mmc')||'').split('|');mmc=l[0]&&/^[0-9a-f]{8,24}$/.test(l[0])&&Date.now()-Number(l[1]||0)<864e5?l[0]:''}
-var test=(U&&U.get('mmm'))||'',mob=(/Mobi|Android|iPhone|iPad/i.test(N.userAgent||'')||q(function(){return matchMedia('(pointer:coarse)').matches}))?1:0,abo=(ls('mmqa:'+site)==='1')?1:0;
-var B=null,wacht=[],getoond=0,uit=0,vis=0,vs=D.visibilityState==='visible'?Date.now():null,uitgeklikt=0,minMs=8000;
+var U=q(function(){return new URL(location.href).searchParams}),P=function(){for(var i=0;i<arguments.length;i++){var x=U&&U.get(arguments[i]);if(x)return x}return''};
+var mmc=P('mmc');if(!/^[0-9a-f]{8,24}$/.test(mmc)){var l=(ls('mmc')||'').split('|');mmc=l[0]&&/^[0-9a-f]{8,24}$/.test(l[0])&&Date.now()-Number(l[1]||0)<864e5?l[0]:''}
+var test=P('mmm'),mob=(/Mobi|Android|iPhone|iPad/i.test(N.userAgent||'')||q(function(){return matchMedia('(pointer:coarse)').matches}))?1:0,abo=(ls('mmqa:'+site)==='1'||ls('mmqa')==='1')?1:0;
+var rh=q(function(){return D.referrer?new URL(D.referrer).hostname:''})||'',ref=!rh?'direct':rh===location.hostname?'intern':/(^|\.)(google|bing|duckduckgo|yahoo|ecosia|yandex|baidu|startpage|brave)\./.test(rh)?'zoek':/facebook|instagram|t\.co|x\.com|twitter|linkedin|reddit|tiktok|whatsapp|telegram|pinterest/.test(rh)?'social':'ander';
+var hist=q(function(){return JSON.parse(ls('cmh')||'{}')})||{};function hb(k){hist[k]=(+hist[k]||0)+1;ls('cmh',JSON.stringify(hist))}
+var B=null,wacht=[],getoond=0,uit=0,vis=0,vs=D.visibilityState==='visible'?Date.now():null,uitgeklikt=0,minMs=8000,typt=0;
 function visT(){return vis+(vs?Date.now()-vs:0)}
 function ev(e){if(!B){wacht.push(e);return}if(!B.mid)return;var x=O+'/api/mm/modalev?mid='+B.mid+'&e='+e;try{if(!(N.sendBeacon&&N.sendBeacon(x))&&W.fetch)fetch(x,{method:'POST',keepalive:true,mode:'no-cors',credentials:'omit'})}catch(z){}}
 D.addEventListener('click',function(e){try{var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=new URL(a.href,location.href);if(/^https?:$/.test(h.protocol)&&h.host&&h.host!==location.host){uitgeklikt=1;ev('hoofd')}}catch(x){}},true);
+D.addEventListener('focusin',function(e){var t=e.target;if(t&&/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)&&!(t.closest&&t.closest('[data-mmm]')))typt=Date.now()},true);
 D.addEventListener('visibilitychange',function(){if(D.visibilityState==='visible'){vs=Date.now();if(uitgeklikt&&B&&B.arm&&B.arm.moment==='exit')setTimeout(toon,400)}else if(vs){vis+=Date.now()-vs;vs=null}},true);
 W.addEventListener('pageshow',function(e){if(e.persisted&&uitgeklikt&&B&&B.arm&&B.arm.moment==='exit'){vs=Date.now();setTimeout(toon,400)}},true);
+// slim: nooit over een ander venster heen, niet als iemand typt, niet op betaal-, inlog- of winkelwagenpagina's, niet bij een lage mensmeter-score
+function stoor(){if(W.cmGeenModal||D.documentElement.hasAttribute('data-cm-geen'))return 1;
+if(/(checkout|betaal|pay(ment)?|kassa|cart|winkelwagen|login|signin|sign-in|inloggen|account|bestel)/i.test(location.pathname))return 1;
+if(D.visibilityState!=='visible')return 1;if(typt&&Date.now()-typt<15000)return 1;
+var a=D.activeElement;if(a&&(/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)||a.isContentEditable)&&!(a.closest&&a.closest('[data-mmm]')))return 1;
+var dl=D.querySelectorAll('dialog[open],[aria-modal="true"],[role="dialog"],[role="alertdialog"]');for(var i=0;i<dl.length;i++){var r=dl[i].getBoundingClientRect();if(r.width>0&&r.height>0&&!dl[i].closest('[data-mmm]'))return 1}
+var mm=W.mensmeter;if(mm&&mm.lokaal!=null&&mm.lokaal<35)return 1;return 0}
 function klaarVoor(){return !getoond&&!uit&&B&&B.toon&&visT()>=minMs}
-function toon(){if(!klaarVoor())return;getoond=1;ev('toon');q(bouw)}
-function plan(a){minMs=Math.max(0,(+B.min||0)*1000);
-if(a.moment==='tijd'){var w=Math.max(minMs,(+a.sec||20)*1000),iv=setInterval(function(){if(getoond||uit){clearInterval(iv);return}if(visT()>=w){clearInterval(iv);toon()}},1000)}
-else if(a.moment==='scroll'){W.addEventListener('scroll',function(){var h=D.documentElement,y=(W.pageYOffset||h.scrollTop||0)+W.innerHeight,H=Math.max(h.scrollHeight,D.body?D.body.scrollHeight:0)||1;if(y/H>=0.6)toon()},{passive:true})}
+function toon(){if(!klaarVoor())return;if(!test&&stoor())return;getoond=1;ev('toon');hb('g');q(bouw)}
+function plan(a){minMs=Math.max(0,(+B.min||0)*1000);var p=String(a.moment||'exit').split(':'),soort=p[0],n=+p[1]||0;
+if(soort==='tijd'){var w=Math.max(minMs,(n||20)*1000),iv=setInterval(function(){if(getoond||uit){clearInterval(iv);return}if(visT()>=w)toon()},1000)}
+else if(soort==='scroll'){var g=(n||60)/100;W.addEventListener('scroll',function(){var h=D.documentElement,y=(W.pageYOffset||h.scrollTop||0)+W.innerHeight,H=Math.max(h.scrollHeight,D.body?D.body.scrollHeight:0)||1;if(y/H>=g)toon()},{passive:true})}
 else{D.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<=0)toon()},true);
 var maxY=0,tMax=0;W.addEventListener('scroll',function(){var y=W.pageYOffset||0,t=Date.now();if(y>maxY){maxY=y;tMax=t}else if(maxY>W.innerHeight&&maxY-y>W.innerHeight*0.35&&t-tMax<900)toon()},{passive:true})}
 if(test)setTimeout(toon,300)}
 function bouw(){var a=B.arm,host=D.createElement('div');host.setAttribute('data-mmm','1');host.style.cssText='all:initial;position:fixed;left:0;top:0;width:0;height:0;z-index:2147483646';
 var r=host.attachShadow?host.attachShadow({mode:'open'}):host;
 r.innerHTML='<style>*{box-sizing:border-box}.bg{position:fixed;inset:0;background:rgba(15,20,30,.45)}.k{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(92vw,400px);background:#fff;color:#1d2433;border-radius:14px;padding:22px 20px 14px;box-shadow:0 12px 40px rgba(0,0,0,.25);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:left}@media (max-width:640px){.k{top:auto;bottom:0;left:0;transform:none;width:100%;border-radius:16px 16px 0 0;padding-bottom:max(16px,env(safe-area-inset-bottom))}}.t{font-weight:700;font-size:19px;line-height:1.3;margin:0 30px 6px 0}.s{margin:0 0 14px;color:#4a5262}.b{display:block;width:100%;text-align:center;background:#1a56db;color:#fff;border:0;border-radius:10px;padding:13px 14px;font:600 16px system-ui,-apple-system,sans-serif;text-decoration:none;cursor:pointer}.b[disabled]{opacity:.6}input{width:100%;padding:12px;border:1px solid #c9cfdb;border-radius:10px;font:16px system-ui,-apple-system,sans-serif;margin:0 0 10px;color:#1d2433;background:#fff}.n{background:none;border:0;color:#6b7385;font:14px system-ui,-apple-system,sans-serif;margin:8px auto 0;display:block;cursor:pointer;padding:6px}.x{position:absolute;right:6px;top:4px;background:none;border:0;font-size:28px;line-height:1;color:#6b7385;cursor:pointer;padding:6px 10px}.kl{font-size:12px;color:#7a8294;margin:8px 0 0}.fo{color:#b42318;font-size:14px;margin:0 0 8px}</style><div class="bg"></div><div class="k" role="dialog" aria-modal="true" aria-labelledby="t"><button class="x" type="button" aria-label="Close">&times;</button><p class="t" id="t"></p><p class="s"></p><div class="f"></div><button class="n" type="button"></button></div>';
-var $=function(s){return r.querySelector(s)},sluit=function(lees){if(uit)return;uit=1;if(lees)ev('sluit');q(function(){host.remove()});D.removeEventListener('keydown',esc,true)},esc=function(e){if(e.key==='Escape')sluit(1)};
+var $=function(s){return r.querySelector(s)},sluit=function(lees){if(uit)return;uit=1;if(lees){ev('sluit');hb('s')}q(function(){host.remove()});D.removeEventListener('keydown',esc,true)},esc=function(e){if(e.key==='Escape')sluit(1)};
 $('.t').textContent=a.titel||'';$('.s').textContent=a.tekst||'';if(!a.tekst)$('.s').style.display='none';$('.n').textContent=a.nee||'No thanks';
 $('.x').onclick=function(){sluit(1)};$('.n').onclick=function(){sluit(1)};$('.bg').onclick=function(){sluit(1)};D.addEventListener('keydown',esc,true);
 var f=$('.f');
-if(a.soort==='site'){var k=D.createElement('a');k.className='b';k.href=a.href;k.target='_blank';k.rel='noopener';k.textContent=a.knop;k.onclick=function(){ev('klik');setTimeout(function(){sluit(0)},200)};f.appendChild(k);setTimeout(function(){q(function(){k.focus()})},50)}
+if(a.soort==='site'){var k=D.createElement('a');k.className='b';k.href=a.href;k.target='_blank';k.rel='noopener';k.textContent=a.knop;k.onclick=function(){ev('klik');hb('k');setTimeout(function(){sluit(0)},200)};f.appendChild(k);setTimeout(function(){q(function(){k.focus()})},50)}
 else if(a.soort==='email'){var fm=D.createElement('form'),inp=D.createElement('input'),fo=D.createElement('p'),bt=D.createElement('button'),kl=D.createElement('p');
 inp.type='email';inp.required=true;inp.autocomplete='email';inp.placeholder=a.veld||'Your email';inp.setAttribute('aria-label',a.veld||'Email');fo.className='fo';fo.style.display='none';bt.className='b';bt.type='submit';bt.textContent=a.knop;kl.className='kl';kl.textContent=a.klein||'';
 fm.appendChild(inp);fm.appendChild(fo);fm.appendChild(bt);fm.appendChild(kl);f.appendChild(fm);setTimeout(function(){q(function(){inp.focus()})},50);
-var dank=function(){ev('klik');ls('mmqa:'+site,'1');fm.innerHTML='';$('.s').style.display='none';var p=D.createElement('p');p.className='s';p.textContent=a.dank||'Thanks!';fm.appendChild(p);$('.n').textContent='OK';},
+var dank=function(){ev('klik');hb('k');ls('mmqa:'+site,'1');ls('mmqa','1');fm.innerHTML='';$('.s').style.display='none';var p=D.createElement('p');p.className='s';p.textContent=a.dank||'Thanks!';fm.appendChild(p);$('.n').textContent='OK'},
 fout=function(t){bt.disabled=false;fo.textContent=t||'Something went wrong. Please try again.';fo.style.display='block'},
 post=function(eigen){if(!B.mid){dank();return}fetch(O+'/api/mm/modalmail',{method:'POST',body:JSON.stringify({mid:B.mid,email:inp.value,bewaar:!eigen}),credentials:'omit'}).then(function(x){return x.json()}).then(function(j){if(j&&j.ok)dank();else fout(j&&j.fout)})['catch'](function(){fout()})};
 fm.onsubmit=function(e){e.preventDefault();var m=String(inp.value||'').trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)){fout(a.veld||'Email?');return}bt.disabled=true;fo.style.display='none';
-if(typeof W.mmAanmelden==='function'){q(function(){Promise.resolve(W.mmAanmelden(m,{site:site,arm:a.id})).then(function(ok){if(ok)post(1);else fout()},function(){fout()})})}else post(0)}}
+if(a.doel==='moonlighter'&&B.mid){fetch('https://moonlighter.email/api/cm-signup',{method:'POST',body:JSON.stringify({email:m,site:site,mid:B.mid}),credentials:'omit'}).then(function(x){return x.json()}).then(function(j){if(j&&j.ok)post(1);else fout(j&&j.error)})['catch'](function(){fout()})}
+else if(typeof W.mmAanmelden==='function'){q(function(){Promise.resolve(W.mmAanmelden(m,{site:site,arm:a.id})).then(function(ok){if(ok)post(1);else fout()},function(){fout()})})}else post(0)}}
 (D.body||D.documentElement).appendChild(host)}
-var u=O+'/api/mm/modal?site='+encodeURIComponent(site)+'&q='+id+'&c='+mmc+'&v='+v+'&mob='+mob+'&abo='+abo+(test?'&test='+encodeURIComponent(test):'');
+var u=O+'/api/mm/modal?site='+encodeURIComponent(site)+'&q='+id+'&c='+mmc+'&v='+v+'&mob='+mob+'&abo='+abo+'&net='+encodeURIComponent(P('src','net','utm_source','n').slice(0,20))+'&zone='+encodeURIComponent(P('zone','z','zoneid','widget').slice(0,40))+'&ref='+ref+'&uur='+new Date().getHours()+'&g='+(+hist.g||0)+'&k='+(+hist.k||0)+(test?'&test='+encodeURIComponent(test):'');
 fetch(u,{credentials:zelf?'include':'omit'}).then(function(x){return x.json()}).then(function(d){B=d||{};var w=wacht;wacht=[];for(var i=0;i<w.length;i++)ev(w[i]);if(B.toon&&B.arm&&B.arm.soort!=='geen')plan(B.arm)})['catch'](function(){});
-W.mmModalStand=function(){return{site:site,besluit:B,getoond:getoond}};
+W.mmModalStand=function(){return{site:site,besluit:B,getoond:getoond,stoort:stoor()}};
 }catch(e){}})();
 `;
+
+// CLICKMIND in één regel voor elke eigen pagina: uitkomsten (automatisch echt, actie, aanmelding bij een klik-id), de mensmeter (alleen bij
+// betaald verkeer: een zone, klik-id of mmc in de URL) en de lerende modal.  <script src="https://whichtobuy.best/cm.js" data-site="<site>" async></script>
+const CM_JS = MMU_JS + '\n(function(){try{var u=new URL(location.href).searchParams;window.__cmMeet=!!(u.get("zone")||u.get("z")||u.get("zoneid")||u.get("subid")||u.get("clickid")||u.get("mmc"))}catch(e){}})();\nif(window.__cmMeet){' + MM_JS + '}\n' + MMM_JS;
 
 // ---- alles op één pagina (beschermde host) ----
 async function overzicht() {
@@ -411,9 +433,9 @@ async function overzicht() {
   h += '<h2>Lerende modal</h2>';
   if (!mds.length) h += '<p class="s">Nog geen modals.</p>';
   for (const m of mds) {
-    const sta = await modalStand(kv, m, 14);
-    h += '<p><b>' + e(m.site) + '</b> <span class="k ' + (m.uit ? 'u' : '') + '">' + (m.uit ? 'uit' : 'aan') + '</span> op ' + e(m.domeinen.join(', ')) + ', modus ' + e(m.modus) + ', controlegroep minstens ' + Math.round(m.controle * 100) + '%, hoogstens 1 keer per ' + e(m.cap) + ' uur. Waarde (cent): gewone klik ' + e(m.waarde.hoofd) + ', klik in modal ' + e(m.waarde.klik) + ', aanmelding ' + e(m.waarde.aanmelding) + '.<br>Script: <code>&lt;script src="https://whichtobuy.best/mmm.js" data-site="' + e(m.site) + '" async&gt;&lt;/script&gt;</code></p>';
-    h += '<div class="w">' + tabel(['arm', 'soort', 'moment', 'gewicht', 'geleerd', 'bezoekers 14 d', 'getoond', 'klik', 'aanmelding', 'gewone klik', 'gewone klik tegen controle', '$ per 1.000 bezoekers'], sta.map(x => { const a = m.armen.find(y => y.id === x.id) || {}; return [x.id, x.soort, x.moment, a.gewicht, m.leer && m.leer['*'] && m.leer['*'][x.id] != null ? m.leer['*'][x.id] + '%' : '', x.n, p(x.pctToon), x.klik, x.aanmelding, p(x.pctHoofd), x.hoofdTegenControle == null ? '' : (x.hoofdTegenControle > 0 ? '+' : '') + x.hoofdTegenControle + ' pt', x.dollarPer1000 == null ? '' : '$' + x.dollarPer1000]; })) + '</div>';
+    const mm2 = await leesModal(kv, m.site, true) || m; const sta = await modalStand(kv, mm2, 14);
+    h += '<p><b>' + e(m.site) + '</b> <span class="k ' + (m.uit ? 'u' : '') + '">' + (m.uit ? 'uit' : 'aan') + '</span> op ' + e(m.domeinen.join(', ')) + ', modus ' + e(m.modus) + ', controlegroep minstens ' + Math.round(m.controle * 100) + '%, hoogstens 1 keer per ' + e(m.cap) + ' uur. Waarde (cent): gewone klik ' + e(m.waarde.hoofd) + ', klik in modal ' + e(m.waarde.klik) + ', aanmelding ' + e(m.waarde.aanmelding) + '.<br>Script: <code>&lt;script src="https://whichtobuy.best/cm.js" data-site="' + e(m.site) + '" async&gt;&lt;/script&gt;</code><br>Model per bezoeker: ' + (m.model && m.model.arms ? Object.keys(m.model.arms).length + ' armen (bijgewerkt ' + e(String(m.model.at || '').slice(0, 16).replace('T', ' ')) + ')' : 'nog te weinig data') + '. Moment: ' + (m.momLeer ? Object.entries(m.momLeer).sort((a, b) => b[1] - a[1]).map(([k, v]) => e(k) + ' ' + v + '%').join(', ') : 'nog aan het verkennen') + '. Geremd: ' + (m.rem && Object.keys(m.rem).length ? Object.entries(m.rem).map(([k, v]) => e(k) + ' (' + e(v.reden) + ')').join('; ') : 'niets') + '. Teksten van Claude: ' + Object.values(m.varianten || {}).flat().filter(v => v.bron === 'claude').length + '.</p>';
+    h += '<div class="w">' + tabel(['arm', 'soort', 'moment', 'gewicht', 'geleerd', 'bezoekers 14 d', 'getoond', 'klik', 'aanmelding', 'gewone klik', 'gewone klik tegen controle', '$ per 1.000 bezoekers'], sta.map(x => { const a = (mm2.alleArmen || m.armen).find(y => y.id === x.id) || {}; return [x.id, x.soort, x.moment, a.gewicht, m.leer && m.leer['*'] && m.leer['*'][x.id] != null ? m.leer['*'][x.id] + '%' : '', x.n, p(x.pctToon), x.klik, x.aanmelding, p(x.pctHoofd), x.hoofdTegenControle == null ? '' : (x.hoofdTegenControle > 0 ? '+' : '') + x.hoofdTegenControle + ' pt', x.dollarPer1000 == null ? '' : '$' + x.dollarPer1000]; })) + '</div>';
   }
   h += '<h2>Leerronde (elk uur)</h2>';
   if (!leer) h += '<p class="s">Nog niet gedraaid.</p>';
