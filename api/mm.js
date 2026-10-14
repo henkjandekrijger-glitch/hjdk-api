@@ -22,15 +22,19 @@
 //   /api/mm/overzicht                   alles op één pagina (beschermde host)
 //   /api/mm/terugbetaling?net=propeller&van=&tot=[&formaat=csv]   bewijs per klik voor een terugbetalingsverzoek (beschermde host; indienen alleen op Henkjans woord)
 //   /api/mm/terugdag                    cron: elke dag het dossier van gisteren per netwerk
+//   /mmm.js                             DE LERENDE MODAL (lib/modal.js): <script src="https://whichtobuy.best/mmm.js" data-site="<site>" async></script>; testen met ?mmm=<arm-id> in de pagina-URL
+//   /api/mm/modal?site=&q=&c=&v=&mob=   beslissing per paginabezoek (e-mail, andere site of niets); /api/mm/modalev?mid=&e=toon|klik|sluit|hoofd; /api/mm/modalmail (POST)
+//   /api/mm/modalbeheer[?site=][&j=<json>][&mail=<lijst>&formaat=csv]   instellingen, stand en adressen (beschermde host)
 //   /api/mm/zones?net=mondiad&dagen=3   oordeel per zone (zelfde vorm als rereview /api/b/zones, leesbaar voor de Mondiad-wacht)
 //   /api/mm/patronen?dagen=1            botfarms: vingerafdrukken in veel zones of netwerken
 //   /api/mm/stand                       vandaag per netwerk, slechtste zones, datacenterlijst
 // Regels, opslag en uitleg: lib/mensmeter.js.
 import { kv } from '../lib/db.js';
-import { verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, serverSignalen, laterAf, schoon, tagOk, zones, patronen, stand, proef, exporteer, persoon, netNaam } from '../lib/mensmeter.js';
+import { verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, serverSignalen, laterAf, schoon, tagOk, zones, patronen, stand, proef, exporteer, persoon, netNaam, ipInfo } from '../lib/mensmeter.js';
 import { leesWissel, bewaarWissel, alleWissels, kiesArm, soortPersoon, bestemming, wisselKlik, cidKoppel, uitkomst, amazonUitkomst, wisselStand } from '../lib/wissel.js';
 import { leerRonde, instelling } from '../lib/leer.js';
 import { dossier, naarCsv, dagDossiers } from '../lib/terug.js';
+import { modalBeslis, modalEv, modalMail, leesModal, bewaarModal, alleModals, modalStand } from '../lib/modal.js';
 
 // Browserscript: klein, vanilla, alles in try/catch; vertraagt of breekt de pagina nooit.
 const MM_JS = String.raw`/* mensmeter */(function(){var W=window,N=navigator,D=document,M={vid:'',lokaal:null};
@@ -132,6 +136,36 @@ export default async function handler(req, res) {
       const j = req.method === 'POST' ? (leesJson(req.body) || {}) : { cid: q('cid') || q('mmc'), soort: q('soort'), waarde: q('waarde'), bron: q('bron') };
       const r = await uitkomst(kv, j).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 200) }));
       return req.method === 'POST' ? res.status(204).end() : res.status(r.ok ? 200 : 400).json(r);
+    }
+    if (op === 'mmm') { res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=300, s-maxage=300'); cors(res); return res.status(200).send(MMM_JS); }
+    if (op === 'modal' || op === 'modalev' || op === 'modalmail') {
+      cors(res); res.setHeader('cache-control', 'no-store');
+      if (req.method === 'OPTIONS') return res.status(204).end();
+      if (op === 'modal') {
+        const c = leesCookie(req, 'mmp');
+        const r = await modalBeslis(kv, { site: q('site'), pid: /^[0-9a-f]{16}$/.test(c) ? c : '', q: q('q'), mmc: q('c'), v: q('v'), mob: q('mob') === '1', abo: q('abo') === '1', test: q('test'), origin: String(req.headers.origin || ''), land: String(req.headers['x-vercel-ip-country'] || '') }).catch(e => ({ toon: false, reden: 'fout' }));
+        return res.status(200).json(r);
+      }
+      if (op === 'modalev') { const r = await modalEv(kv, { mid: q('mid'), e: q('e') }).catch(e => ({ ok: false })); return req.method === 'GET' ? res.status(r.ok ? 200 : 400).json(r) : res.status(204).end(); }
+      if (req.method !== 'POST') return res.status(405).json({ ok: false, fout: 'POST' });
+      const j = leesJson(req.body) || {}, srv = serverSignalen(req);
+      const r = await modalMail(kv, { mid: j.mid, email: j.email, bewaar: j.bewaar !== false, ipNet: ipInfo(srv.ip).h || ipInfo(srv.ip).net, land: srv.land }).catch(e => ({ ok: false, fout: 'fout' }));
+      return res.status(r.ok ? 200 : 400).json(r);
+    }
+    if (op === 'modalbeheer') {
+      res.setHeader('cache-control', 'no-store');
+      if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
+      if (q('j') || req.method === 'POST') { const j = req.method === 'POST' ? leesJson(req.body) : leesJson(q('j')); const r = await bewaarModal(kv, j); return res.status(r.ok ? 200 : 400).json(r); }
+      if (q('mail')) {
+        const lijst = String(q('mail')).toLowerCase().replace(/[^a-z0-9-]/g, ''), h = await kv.raw(['HGETALL', 'mm:mail:' + lijst]);
+        const rijen = []; if (Array.isArray(h)) { for (let i = 0; i + 1 < h.length; i += 2) rijen.push([String(h[i]), leesJson(h[i + 1]) || {}]); } else for (const [a, b] of Object.entries(h || {})) rijen.push([a, leesJson(b) || {}]);
+        if (q('formaat') !== 'csv') return res.status(200).json({ lijst, aantal: rijen.length });
+        const qq = v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
+        res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('content-disposition', 'attachment; filename="lijst-' + lijst + '.csv"');
+        return res.status(200).send(['email,datum,site,arm,netwerk,zone,campagne,land,toestemming,bevestigd'].concat(rijen.map(([e, x]) => [e, x.t, x.site, x.arm, x.net, x.zone, x.camp, x.land, x.toestemming, x.bevestigd ? 'ja' : 'nee'].map(qq).join(','))).join('\n'));
+      }
+      if (q('site')) { const m = await leesModal(kv, q('site'), true); if (!m) return res.status(404).json({ ok: false, fout: 'onbekende site' }); return res.status(200).json({ modal: m, stand: await modalStand(kv, m, Number(q('dagen')) || 14), script: '<script src="https://whichtobuy.best/mmm.js" data-site="' + m.site + '" async></script>' }); }
+      return res.status(200).json({ modals: await alleModals(kv) });
     }
     if (op === 'blok') { res.setHeader('cache-control', 'no-store'); cors(res); const net = netNaam(q('net') || 'propeller'); return res.status(200).json((await kv.get('mm:blok:' + net)) || { zones: [], wachtOpHenkjan: [], aan: false, bijgewerkt: null }); }
     if (op === 'leer') {
@@ -304,6 +338,57 @@ var gehad={};W.mmUitkomst=function(soort,waarde){try{if(!c||gehad[soort])return;
 if(!(navigator.sendBeacon&&navigator.sendBeacon('https://whichtobuy.best/api/mm/uitkomst',x))&&W.fetch)fetch('https://whichtobuy.best/api/mm/uitkomst',{method:'POST',body:x,keepalive:true,mode:'no-cors'})}catch(e){}};
 W.mmKlikId=c}catch(e){}})();`;
 
+// De lerende modal in de browser (lib/modal.js): vraagt de server welke arm, meet de gewone klik naar buiten (ook bij de controlegroep),
+// toont op het gekozen moment een kaart (schaduw-DOM, botst niet met de pagina), sluiten met kruisje, 'nee', achtergrond of Escape.
+const MMM_JS = String.raw`/* lerende modal */(function(){var W=window,D=document,N=navigator;
+function q(f){try{return f()}catch(e){return null}}
+try{if(W.mmModal)return;W.mmModal=1;if(N.webdriver===true)return;
+var S=D.currentScript||q(function(){var a=D.querySelectorAll('script[src*="/mmm.js"]');return a[a.length-1]}),site=S&&S.getAttribute('data-site');if(!site)return;
+var O=q(function(){return new URL(S.src).origin})||'https://whichtobuy.best',zelf=O===location.origin;
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,String(v))}catch(e){return null}}
+function hex(n){var a=new Uint8Array(n),s='';q(function(){crypto.getRandomValues(a)});for(var i=0;i<n;i++)s+=(a[i]+256).toString(16).slice(1);return s}
+var id=ls('mmq');if(!/^[0-9a-f]{16}$/.test(id||'')){id=hex(8);ls('mmq',id)}
+var vk='mmqv:'+site,v=(+ls(vk)||0)+1;ls(vk,v);
+var U=q(function(){return new URL(location.href).searchParams}),mmc=(U&&U.get('mmc'))||'';
+if(!/^[0-9a-f]{8,24}$/.test(mmc)){var l=(ls('mmc')||'').split('|');mmc=l[0]&&/^[0-9a-f]{8,24}$/.test(l[0])&&Date.now()-Number(l[1]||0)<864e5?l[0]:''}
+var test=(U&&U.get('mmm'))||'',mob=(/Mobi|Android|iPhone|iPad/i.test(N.userAgent||'')||q(function(){return matchMedia('(pointer:coarse)').matches}))?1:0,abo=(ls('mmqa:'+site)==='1')?1:0;
+var B=null,wacht=[],getoond=0,uit=0,vis=0,vs=D.visibilityState==='visible'?Date.now():null,uitgeklikt=0,minMs=8000;
+function visT(){return vis+(vs?Date.now()-vs:0)}
+function ev(e){if(!B){wacht.push(e);return}if(!B.mid)return;var x=O+'/api/mm/modalev?mid='+B.mid+'&e='+e;try{if(!(N.sendBeacon&&N.sendBeacon(x))&&W.fetch)fetch(x,{method:'POST',keepalive:true,mode:'no-cors',credentials:'omit'})}catch(z){}}
+D.addEventListener('click',function(e){try{var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=new URL(a.href,location.href);if(/^https?:$/.test(h.protocol)&&h.host&&h.host!==location.host){uitgeklikt=1;ev('hoofd')}}catch(x){}},true);
+D.addEventListener('visibilitychange',function(){if(D.visibilityState==='visible'){vs=Date.now();if(uitgeklikt&&B&&B.arm&&B.arm.moment==='exit')setTimeout(toon,400)}else if(vs){vis+=Date.now()-vs;vs=null}},true);
+W.addEventListener('pageshow',function(e){if(e.persisted&&uitgeklikt&&B&&B.arm&&B.arm.moment==='exit'){vs=Date.now();setTimeout(toon,400)}},true);
+function klaarVoor(){return !getoond&&!uit&&B&&B.toon&&visT()>=minMs}
+function toon(){if(!klaarVoor())return;getoond=1;ev('toon');q(bouw)}
+function plan(a){minMs=Math.max(0,(+B.min||0)*1000);
+if(a.moment==='tijd'){var w=Math.max(minMs,(+a.sec||20)*1000),iv=setInterval(function(){if(getoond||uit){clearInterval(iv);return}if(visT()>=w){clearInterval(iv);toon()}},1000)}
+else if(a.moment==='scroll'){W.addEventListener('scroll',function(){var h=D.documentElement,y=(W.pageYOffset||h.scrollTop||0)+W.innerHeight,H=Math.max(h.scrollHeight,D.body?D.body.scrollHeight:0)||1;if(y/H>=0.6)toon()},{passive:true})}
+else{D.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<=0)toon()},true);
+var maxY=0,tMax=0;W.addEventListener('scroll',function(){var y=W.pageYOffset||0,t=Date.now();if(y>maxY){maxY=y;tMax=t}else if(maxY>W.innerHeight&&maxY-y>W.innerHeight*0.35&&t-tMax<900)toon()},{passive:true})}
+if(test)setTimeout(toon,300)}
+function bouw(){var a=B.arm,host=D.createElement('div');host.setAttribute('data-mmm','1');host.style.cssText='all:initial;position:fixed;left:0;top:0;width:0;height:0;z-index:2147483646';
+var r=host.attachShadow?host.attachShadow({mode:'open'}):host;
+r.innerHTML='<style>*{box-sizing:border-box}.bg{position:fixed;inset:0;background:rgba(15,20,30,.45)}.k{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(92vw,400px);background:#fff;color:#1d2433;border-radius:14px;padding:22px 20px 14px;box-shadow:0 12px 40px rgba(0,0,0,.25);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:left}@media (max-width:640px){.k{top:auto;bottom:0;left:0;transform:none;width:100%;border-radius:16px 16px 0 0;padding-bottom:max(16px,env(safe-area-inset-bottom))}}.t{font-weight:700;font-size:19px;line-height:1.3;margin:0 30px 6px 0}.s{margin:0 0 14px;color:#4a5262}.b{display:block;width:100%;text-align:center;background:#1a56db;color:#fff;border:0;border-radius:10px;padding:13px 14px;font:600 16px system-ui,-apple-system,sans-serif;text-decoration:none;cursor:pointer}.b[disabled]{opacity:.6}input{width:100%;padding:12px;border:1px solid #c9cfdb;border-radius:10px;font:16px system-ui,-apple-system,sans-serif;margin:0 0 10px;color:#1d2433;background:#fff}.n{background:none;border:0;color:#6b7385;font:14px system-ui,-apple-system,sans-serif;margin:8px auto 0;display:block;cursor:pointer;padding:6px}.x{position:absolute;right:6px;top:4px;background:none;border:0;font-size:28px;line-height:1;color:#6b7385;cursor:pointer;padding:6px 10px}.kl{font-size:12px;color:#7a8294;margin:8px 0 0}.fo{color:#b42318;font-size:14px;margin:0 0 8px}</style><div class="bg"></div><div class="k" role="dialog" aria-modal="true" aria-labelledby="t"><button class="x" type="button" aria-label="Close">&times;</button><p class="t" id="t"></p><p class="s"></p><div class="f"></div><button class="n" type="button"></button></div>';
+var $=function(s){return r.querySelector(s)},sluit=function(lees){if(uit)return;uit=1;if(lees)ev('sluit');q(function(){host.remove()});D.removeEventListener('keydown',esc,true)},esc=function(e){if(e.key==='Escape')sluit(1)};
+$('.t').textContent=a.titel||'';$('.s').textContent=a.tekst||'';if(!a.tekst)$('.s').style.display='none';$('.n').textContent=a.nee||'No thanks';
+$('.x').onclick=function(){sluit(1)};$('.n').onclick=function(){sluit(1)};$('.bg').onclick=function(){sluit(1)};D.addEventListener('keydown',esc,true);
+var f=$('.f');
+if(a.soort==='site'){var k=D.createElement('a');k.className='b';k.href=a.href;k.target='_blank';k.rel='noopener';k.textContent=a.knop;k.onclick=function(){ev('klik');setTimeout(function(){sluit(0)},200)};f.appendChild(k);setTimeout(function(){q(function(){k.focus()})},50)}
+else if(a.soort==='email'){var fm=D.createElement('form'),inp=D.createElement('input'),fo=D.createElement('p'),bt=D.createElement('button'),kl=D.createElement('p');
+inp.type='email';inp.required=true;inp.autocomplete='email';inp.placeholder=a.veld||'Your email';inp.setAttribute('aria-label',a.veld||'Email');fo.className='fo';fo.style.display='none';bt.className='b';bt.type='submit';bt.textContent=a.knop;kl.className='kl';kl.textContent=a.klein||'';
+fm.appendChild(inp);fm.appendChild(fo);fm.appendChild(bt);fm.appendChild(kl);f.appendChild(fm);setTimeout(function(){q(function(){inp.focus()})},50);
+var dank=function(){ev('klik');ls('mmqa:'+site,'1');fm.innerHTML='';$('.s').style.display='none';var p=D.createElement('p');p.className='s';p.textContent=a.dank||'Thanks!';fm.appendChild(p);$('.n').textContent='OK';},
+fout=function(t){bt.disabled=false;fo.textContent=t||'Something went wrong. Please try again.';fo.style.display='block'},
+post=function(eigen){if(!B.mid){dank();return}fetch(O+'/api/mm/modalmail',{method:'POST',body:JSON.stringify({mid:B.mid,email:inp.value,bewaar:!eigen}),credentials:'omit'}).then(function(x){return x.json()}).then(function(j){if(j&&j.ok)dank();else fout(j&&j.fout)})['catch'](function(){fout()})};
+fm.onsubmit=function(e){e.preventDefault();var m=String(inp.value||'').trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)){fout(a.veld||'Email?');return}bt.disabled=true;fo.style.display='none';
+if(typeof W.mmAanmelden==='function'){q(function(){Promise.resolve(W.mmAanmelden(m,{site:site,arm:a.id})).then(function(ok){if(ok)post(1);else fout()},function(){fout()})})}else post(0)}}
+(D.body||D.documentElement).appendChild(host)}
+var u=O+'/api/mm/modal?site='+encodeURIComponent(site)+'&q='+id+'&c='+mmc+'&v='+v+'&mob='+mob+'&abo='+abo+(test?'&test='+encodeURIComponent(test):'');
+fetch(u,{credentials:zelf?'include':'omit'}).then(function(x){return x.json()}).then(function(d){B=d||{};var w=wacht;wacht=[];for(var i=0;i<w.length;i++)ev(w[i]);if(B.toon&&B.arm&&B.arm.soort!=='geen')plan(B.arm)})['catch'](function(){});
+W.mmModalStand=function(){return{site:site,besluit:B,getoond:getoond}};
+}catch(e){}})();
+`;
+
 // ---- alles op één pagina (beschermde host) ----
 async function overzicht() {
   const e = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -319,6 +404,14 @@ async function overzicht() {
     const sta = await wisselStand(kv, w, 7);
     h += '<p><b>' + e(w.naam) + '</b> <span class="k ' + (w.uit ? 'u' : '') + '">' + (w.uit ? 'uit' : 'aan') + '</span> modus ' + e(w.modus) + ', doel ' + e(w.doel) + (w.notitie ? '. ' + e(w.notitie) : '') + (w.regels && w.regels.length ? '<br>Regels: ' + w.regels.map(r => e(r.als) + ' &rarr; ' + e(r.arm)).join(', ') : '') + '<br>Link: <code>https://whichtobuy.best/w/' + e(w.naam) + '?n=propeller&amp;c={campaignid}&amp;z={zoneid}&amp;s=${SUBID}&amp;b={bannerid}</code></p>';
     h += '<div class="w">' + tabel(['arm', 'voor wie', 'bestemming', 'gewicht', 'geleerd', 'kliks 7 d', 'nieuw', 'terug', 'echt', 'actie', 'aanmelding', 'koop', 'Amazon: artikelen / verdiend'], w.armen.map(a => { const x = sta.find(y => y.id === a.id) || {}; return [a.id, a.wie, a.soort === 'amazon' ? (a.k || a.a) + ' (' + a.tag + ', ' + a.variant + ')' : a.url.replace(/\?.*/, ''), a.gewicht, w.leer && w.leer[a.id] != null ? w.leer[a.id] + '%' : '', x.n, x.nieuw, x.terug, x.echt, x.actie, x.aanmelding, x.koop, x.amazon && x.amazon.dagen ? x.amazon.artikelen + ' / $' + Math.round(x.amazon.verdiend * 100) / 100 : '']; })) + '</div>';
+  }
+  const mds = await alleModals(kv).catch(() => []);
+  h += '<h2>Lerende modal</h2>';
+  if (!mds.length) h += '<p class="s">Nog geen modals.</p>';
+  for (const m of mds) {
+    const sta = await modalStand(kv, m, 14);
+    h += '<p><b>' + e(m.site) + '</b> <span class="k ' + (m.uit ? 'u' : '') + '">' + (m.uit ? 'uit' : 'aan') + '</span> op ' + e(m.domeinen.join(', ')) + ', modus ' + e(m.modus) + ', controlegroep minstens ' + Math.round(m.controle * 100) + '%, hoogstens 1 keer per ' + e(m.cap) + ' uur. Waarde (cent): gewone klik ' + e(m.waarde.hoofd) + ', klik in modal ' + e(m.waarde.klik) + ', aanmelding ' + e(m.waarde.aanmelding) + '.<br>Script: <code>&lt;script src="https://whichtobuy.best/mmm.js" data-site="' + e(m.site) + '" async&gt;&lt;/script&gt;</code></p>';
+    h += '<div class="w">' + tabel(['arm', 'soort', 'moment', 'gewicht', 'geleerd', 'bezoekers 14 d', 'getoond', 'klik', 'aanmelding', 'gewone klik', 'gewone klik tegen controle', '$ per 1.000 bezoekers'], sta.map(x => { const a = m.armen.find(y => y.id === x.id) || {}; return [x.id, x.soort, x.moment, a.gewicht, m.leer && m.leer['*'] && m.leer['*'][x.id] != null ? m.leer['*'][x.id] + '%' : '', x.n, p(x.pctToon), x.klik, x.aanmelding, p(x.pctHoofd), x.hoofdTegenControle == null ? '' : (x.hoofdTegenControle > 0 ? '+' : '') + x.hoofdTegenControle + ' pt', x.dollarPer1000 == null ? '' : '$' + x.dollarPer1000]; })) + '</div>';
   }
   h += '<h2>Leerronde (elk uur)</h2>';
   if (!leer) h += '<p class="s">Nog niet gedraaid.</p>';
