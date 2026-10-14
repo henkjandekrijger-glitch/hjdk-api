@@ -122,7 +122,7 @@ export default async function handler(req, res) {
     return res.status(200).json(Object.assign({ ok: true }, q.get('html') ? { html: adviceHtml(m, adv) } : adv));
   }
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=0, must-revalidate');
-  const tag = (await colourTag(m.id === 'us' ? 'whichtobuy' : 'kaufberater', 'wtb' + m.id, 'a[data-amz]', true, m.id)) + measureTag('wtb' + m.id, 'a[data-amz]', '.opt') + '<script src="/mmm.js" data-site="' + (m.id === 'us' ? 'whichtobuy' : 'kaufberater') + '" async></script>'; // lerende modal (lib/modal.js), doet niets zolang hij uit staat const send = h => res.status(200).send(String(h).replace('</head>', tag + '</head>'));
+  const tag = (await colourTag(m.id === 'us' ? 'whichtobuy' : 'kaufberater', 'wtb' + m.id, 'a[data-amz]', true, m.id)) + measureTag('wtb' + m.id, 'a[data-amz]', '.opt') + '<script src="/mmm.js" data-site="' + (m.id === 'us' ? 'whichtobuy' : 'kaufberater') + '" async></script>'; /* lerende modal (lib/modal.js), doet niets zolang hij uit staat */ const send = h => res.status(200).send(String(h).replace('</head>', tag + '</head>'));
   if (op === 'about') return send(about(m));
   if (op === 'privacy') return send(privacy(m));
   if (op === 'home' || path === '/') { await count(m, req, q, ''); return send(home(m, all)); }
