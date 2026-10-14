@@ -87,6 +87,18 @@
   ],
   "rewrites": [
     {
+      "source": "/go",
+      "destination": "/api/mm?op=go"
+    },
+    {
+      "source": "/mm.js",
+      "destination": "/api/mm?op=js"
+    },
+    {
+      "source": "/api/mm/:op",
+      "destination": "/api/mm?op=:op"
+    },
+    {
       "source": "/cadeau/:g",
       "destination": "/api/shop?op=hulp&g=:g"
     },
@@ -410,6 +422,9 @@
     },
     "api/gads.js": {
       "maxDuration": 120
+    },
+    "api/mm.js": {
+      "maxDuration": 30
     }
   },
   "redirects": [
