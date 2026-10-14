@@ -26,7 +26,7 @@
 // Regels, opslag en uitleg: lib/mensmeter.js.
 import { kv } from '../lib/db.js';
 import { verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, serverSignalen, laterAf, schoon, tagOk, zones, patronen, stand, proef, exporteer, persoon, netNaam } from '../lib/mensmeter.js';
-import { leesWissel, bewaarWissel, alleWissels, kiesArm, bestemming, wisselKlik, cidKoppel, uitkomst, amazonUitkomst, wisselStand } from '../lib/wissel.js';
+import { leesWissel, bewaarWissel, alleWissels, kiesArm, soortPersoon, bestemming, wisselKlik, cidKoppel, uitkomst, amazonUitkomst, wisselStand } from '../lib/wissel.js';
 import { leerRonde, instelling } from '../lib/leer.js';
 
 // Browserscript: klein, vanilla, alles in try/catch; vertraagt of breekt de pagina nooit.
@@ -260,8 +260,8 @@ async function wisselRoute(req, res, url, q) {
   let pid = leesCookie(req, 'mmp'); const nieuw = !/^[0-9a-f]{16}$/.test(pid); if (nieuw) pid = nieuwId(8);
   let persoonNu = null; if (!nieuw) { try { const h = await kv.raw(['HGETALL', 'mm:p:' + pid]); const o = {}; if (Array.isArray(h)) for (let i = 0; i + 1 < h.length; i += 2) o[h[i]] = h[i + 1]; else Object.assign(o, h || {}); persoonNu = o; } catch (e) {} }
   // staat de wissel uit, dan krijgt iedereen de eerste arm voor iedereen (geen klik gaat verloren), en het wordt gewoon vastgelegd
-  let keuze = w.uit ? { arm: w.armen.find(a => a.wie === 'alle' || a.wie === 'nieuw'), soort: ['alle'], vast: true } : kiesArm(w, persoonNu, pid);
-  if (!keuze || !keuze.arm) keuze = { arm: w.armen[0], soort: ['alle'], vast: true };
+  let keuze = w.uit ? { arm: w.armen.find(a => a.wie === 'alle' || a.wie === 'nieuw'), soort: [...soortPersoon(persoonNu)], vast: true } : kiesArm(w, persoonNu, pid);
+  if (!keuze || !keuze.arm) keuze = { arm: w.armen[0], soort: [...soortPersoon(persoonNu)], vast: true };
   const cid = nieuwId(6), srv = serverSignalen(req);
   const ctx = { cid, pid, net: netNaam(q('n')), zone: schoon(q('z')), camp: schoon(q('c')), sub: schoon(q('s'), 80), cr: schoon(q('b')), wissel: w.naam, land: srv.land };
   const arm = keuze.arm, doel = bestemming(arm, ctx);
