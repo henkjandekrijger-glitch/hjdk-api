@@ -414,6 +414,33 @@ W.mmModalStand=function(){return{site:site,besluit:B,getoond:getoond,stoort:stoo
 // betaald verkeer: een zone, klik-id of mmc in de URL) en de lerende modal.  <script src="https://whichtobuy.best/cm.js" data-site="<site>" async></script>
 const CM_JS = MMU_JS + '\n(function(){try{var cs=document.currentScript,u=new URL(location.href).searchParams;window.__cmMeet=!(cs&&cs.getAttribute("data-meet")==="0")&&!!(u.get("zone")||u.get("z")||u.get("zoneid")||u.get("subid")||u.get("clickid")||u.get("mmc"))}catch(e){}})();\nif(window.__cmMeet){' + MM_JS + '}\n' + MMM_JS;
 
+// ---- status bovenaan het overzicht: draait alles, en wat wordt per klik (nog) niet gemeten ----
+async function statusBlok({ e, leer, inst, st }) {
+  const N = x => { const n = Number(x); return Number.isFinite(n) ? n : 0; };
+  const nu = Date.now(), min = t => t ? Math.round((nu - Date.parse(t)) / 60000) : null, ago = m => m == null ? 'nooit' : m < 90 ? m + ' min geleden' : Math.round(m / 60) + ' uur geleden';
+  const pil = (ok, t) => '<span class="k ' + (ok ? '' : 'u') + '">' + e(t) + '</span>';
+  const rij = (wat, ok, stand, toel) => '<tr><td><b>' + e(wat) + '</b></td><td>' + pil(ok, ok ? 'goed' : 'let op') + '</td><td>' + stand + '</td><td>' + e(toel || '') + '</td></tr>';
+  const nets = st && st.netwerken ? Object.entries(st.netwerken).filter(([n]) => n !== 'test') : [];
+  const viaGo = nets.reduce((a, [, x]) => a + N(x.viaGo), 0), gemeten = nets.reduce((a, [, x]) => a + N(x.gemeten), 0), bezoek = nets.reduce((a, [, x]) => a + N(x.bezoeken), 0);
+  const laatsteKlik = st && st.laatste && st.laatste[0] ? st.laatste[0].t : null;
+  const mds = await alleModals(kv).catch(() => []); const modAan = mds.filter(m => !m.uit).map(m => m.site);
+  const idx = (((await kv.raw(['SMEMBERS', 'mm:terug:index']).catch(() => [])) || []).map(String)).sort().reverse();
+  let dir = null, meet = null, dv = 0; try { const sd = await import('../lib/shopdirect.js'); dir = await sd.directInst(kv); meet = await sd.shopMeet(kv); const d8 = new Date().toISOString().slice(0, 10).replace(/-/g, ''); dv = (await kv.mget(...['pa', 'md', 'ra', 'ca'].map(n => 'c:sh-d' + d8 + '-' + n + '-dv'))).reduce((a, v) => a + N(v), 0); } catch (x) {}
+  const lm = leer ? min(leer.bijgewerkt) : null, ak = leer && leer.aankomst ? leer.aankomst : {};
+  const zo = st && st.oordelen ? st.oordelen : {}, zTot = N(zo.zwart) + N(zo.verdacht) + N(zo.wit) + N(zo.onbekend);
+  let h = '<h2>Status</h2><div class="w"><table><tr><th>onderdeel</th><th></th><th>stand</th><th>toelichting</th></tr>';
+  h += rij('Klikregister (/go, /w, shop)', min(laatsteKlik) != null && min(laatsteKlik) < 120, 'laatste klik ' + ago(min(laatsteKlik)) + '; vandaag ' + bezoek + ' bezoeken, waarvan ' + viaGo + ' via het klikregister', 'Server per klik: netwerk (ASN), datacenter, TLS-vingerafdruk, land, stad, tijdzone, app, terugkerende persoon.');
+  h += rij('Mensmeter in de browser', gemeten > 0, gemeten + ' van ' + bezoek + ' bezoeken gemeten in de browser (' + (bezoek ? Math.round(gemeten / bezoek * 100) : 0) + '%)', 'Alleen waar een eigen pagina laadt. Directe doorsturen naar Amazon en naar de Yoors-shop meten alleen op de server.');
+  h += rij('Leerronde (elk uur)', lm != null && lm < 75, 'laatste ronde ' + ago(lm), 'Zoneprofielen, botfarms, wissels, modal-modellen, blokvoorstel.');
+  h += rij('Betaald tegen aangekomen (PropellerAds)', !!ak.propellerSleutel && !ak.fout, ak.propellerSleutel ? (ak.fout ? 'fout: ' + e(ak.fout) : 'werkt') : 'nog niet', 'Per zone: kliks die PropellerAds rekent tegen kliks die bij ons aankomen. Komt via de PropellerAds-lus.');
+  h += rij('Zone-oordeel', N(zo.onbekend) < 0.8 * zTot, (zTot - N(zo.onbekend)) + ' van ' + zTot + ' zones beoordeeld (' + N(zo.zwart) + ' zwart, ' + N(zo.wit) + ' wit)', 'Zonder browsermeting kan Clickmind een zone wel als bot herkennen, maar nooit als mens.');
+  h += rij('Blokkeren door Clickmind', !!inst.blokkeren, inst.blokkeren ? 'aan' : 'uit (alleen voorstel)', 'Aanzetten op Henkjans woord; de wachten en lussen blokkeren nu.');
+  h += rij('Terugbetalingsdossier', idx.length > 0, idx.length ? 'laatste: ' + e(idx[0]) : 'eerste dossier vannacht 03:40 UTC', 'Indienen alleen op Henkjans woord.');
+  h += rij('Lerende modal', true, modAan.length ? 'aan op ' + e(modAan.join(', ')) + '; uit op ' + (mds.length - modAan.length) + ' sites' : 'overal uit', '');
+  if (dir) h += rij('Yoors Shop: direct naar de productpagina', !!(meet && meet.aan), dir.pct + '% direct; vandaag ' + dv + ' aangekomen; cm.js op yoo.rs: ' + (meet && meet.aan ? 'meet' : 'nog niet'), 'Zonder cm.js op yoo.rs: geen eerste tik als conversie voor het netwerk en geen mensoordeel per zone.');
+  return h + '</table></div>';
+}
+
 // ---- alles op één pagina (beschermde host) ----
 async function overzicht() {
   const e = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -422,6 +449,7 @@ async function overzicht() {
   const p = (x) => (x == null ? '' : x + '%');
   let h = '<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Clickmind</title><style>body{font:15px/1.45 system-ui,-apple-system,sans-serif;margin:0;padding:16px;color:#1d2433;background:#f6f7fb}h1{font-size:22px;margin:0 0 4px}h2{font-size:17px;margin:26px 0 8px}p.s{color:#5b6475;margin:0 0 12px}table{border-collapse:collapse;background:#fff;width:100%;margin:6px 0;font-size:13px}th,td{border-bottom:1px solid #e6e8ef;padding:6px 8px;text-align:left;vertical-align:top}th{background:#eef0f6;font-weight:600}.k{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;background:#e7f6ec;color:#16653a}.u{background:#fdecea;color:#9b1c1c}.w{overflow-x:auto}code{background:#eef0f6;padding:1px 5px;border-radius:4px;font-size:12px}</style></head><body>';
   h += '<h1>Clickmind</h1><p class="s">Leert van elke klik: klikregister /go, wissel /w, leerronde, terugbetaling en lerende modal.</p><p class="s">Bijgewerkt ' + e(new Date().toISOString().slice(0, 16).replace('T', ' ')) + ' UTC. Blokkeren door de leerronde: <span class="k ' + (inst.blokkeren ? '' : 'u') + '">' + (inst.blokkeren ? 'aan' : 'uit') + '</span></p>';
+  h += await statusBlok({ e, leer, inst, st });
   h += '<h2>/go-proef, vandaag en gisteren</h2><div class="w">' + tabel(['campagne', 'variant', 'tag', 'kliks', 'personen', 'terug', 'herhaalklik 10 min', 'meting gelukt', 'datacenter', 'mobiel'], pr.rijen.filter(r => r.netwerk !== 'test').map(r => [r.campagne, r.variant, r.tag, r.n, r.personen, p(r.pct.terug), p(r.pct.herhaalklik10min), p(r.pct.js), p(r.pct.dc), p(r.pct.mobiel)])) + '</div>';
   h += '<h2>Wissels</h2>';
   if (!ws.length) h += '<p class="s">Nog geen wissels.</p>';
