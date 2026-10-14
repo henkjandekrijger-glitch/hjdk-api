@@ -363,7 +363,7 @@ h2{font-size:1.25rem;margin:34px 0 12px}.pg{display:grid;grid-template-columns:1
 .pc{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}.pc img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:#f3f4f6}
 .pt{display:block;padding:10px 12px 0;font-size:1rem;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.pp{display:block;padding:4px 12px 12px;font-weight:750;font-size:1.0625rem}
 .alles{display:block;text-align:center;margin:18px 0 0;padding:14px;border:1.5px solid var(--ink);border-radius:12px;color:var(--ink);font-weight:700;text-decoration:none}
-footer{margin-top:34px}</style></head><body>
+footer{margin-top:34px}</style><script src="/cm.js" data-site="shop" async></script></head><body>
 <header class="topbar"><div class="wrap"><a class="mark" href="${esc(uit(pid, 'logo'))}">Yoors <em>Shop</em></a><span class="tb">Verzonden vanuit Europa</span></div></header>
 <main class="wrap">
 <a href="${esc(uit(pid, 'h'))}"><img class="hero-img" src="${esc(held.img)}" alt="${esc(held.t)}" width="460" height="460"></a>
