@@ -3,11 +3,10 @@
 Voor de sessie die verdergaat met de Yoors Shop. Gebruik ook de skills campagnes-henkjan en clickmind.
 
 ## Wat er sinds 14 okt draait
-- **Directe route.** Betaalde klikken op `keuzehulp.best/shop` (PropellerAds en Mondiad, alleen met klik-id) gaan per persoon vast:
-  - arm **l**: de landingspagina, zoals eerst;
-  - arm **d**: een 302 in één keer naar `yoo.rs/product/<pid>?...&hj=<kenmerk>&mmc=<Clickmind-klik-id>&lang=nl`.
-  - Standaard 50/50. Per persoon = hash van IP plus user-agent. Iedereen krijgt dezelfde behandeling, ook bots (geen cloaking).
-  - RichAds en Clickadu blijven op de landingspagina. De cadeau-keuzehulpen (`/cadeau/...`) ook.
+- **Directe route, 100% (Henkjan 14 okt: "ik wil dat alles direct gaat").** Alle betaalde klikken met klik-id op `keuzehulp.best/shop` (alle netwerken) gaan met een 302 in één keer naar `yoo.rs/product/<pid>?...&hj=<kenmerk>&mmc=<Clickmind-klik-id>&lang=nl`. Het product is dat van de advertentie (crmap).
+  - De code kan nog splitsen (arm l = landingspagina, arm d = direct, per persoon vast op hash van IP plus user-agent), maar het aandeel staat op 100.
+  - Iedereen krijgt dezelfde behandeling, ook bots (geen cloaking).
+  - De cadeau-keuzehulpen (`/cadeau/...`) blijven een eigen pagina.
   - De campagnelinks zijn niet gewijzigd.
 - **Clickmind onzichtbaar ertussen (arm d).** Elke klik gaat in het klikregister (`verwerkKlik`), met server-signalen, persoon en bewijs voor het terugbetalingsdossier. `mm:cid:<mmc>` krijgt het veld `shop` = het kenmerk.
 - **Uitkomsten.** cm.js op yoo.rs meldt `echt` en `actie` via `/api/mm/uitkomst`. `lib/wissel.js uitkomst()` roept dan `shopUitkomst` aan (`lib/shopdirect.js`).
@@ -29,14 +28,13 @@ Voor de sessie die verdergaat met de Yoors Shop. Gebruik ook de skills campagnes
 
 ## Wat nog openstaat
 1. **Babita zet één regel op alle shoppagina's van yoo.rs:** `<script src="https://whichtobuy.best/cm.js" data-site="yoors" async></script>`.
-   - Zonder die regel krijgt arm d geen doel 1 en ziet PropellerAds de helft van de conversies niet.
+   - Zonder die regel krijgt PropellerAds geen doel 1 meer, alleen afrekenen en betalen. Ook de zone- en lekregels oordelen dan alleen op aankomst; mens en tik tellen pas mee zodra cm.js meet (`meet`).
    - Status staat op haar pagina (`/api/shop/advies?k=<haar link>`, sectie "Nieuw sinds 14 oktober"). Daar staat ook de PropellerAds-uitleg voor haar.
    - Testlink: `keuzehulp.best/shop?utm_source=propellerads&clickid=test-babita&zoneid=1&arm=d`. Testkliks tellen niet en melden niets.
-2. **Oordeel na 3 volle dagen met de regel erop.** Lees `/api/shop/trechter`, onderdeel `perRoute`: per route aangekomen, echt en tik op de shop, afrekenen en betaald.
-   - Maatstaf: afrekenen en betaald per 1.000 betaalde bezoekers. Tot er bestellingen zijn: de tik op de shop.
+2. **Volgen.** Lees `/api/shop/trechter`, onderdeel `perRoute`: aangekomen, echt en tik op de shop, afrekenen en betaald.
+   - Vergelijk met de landingspagina tot 14 okt: 464 doorkliks, 3 winkelwagens, 0 bestellingen.
 3. **Het aandeel direct aanpassen.** Alleen via de beschermde host: `https://hjdk-api-henq.vercel.app/api/shop/direct?pct=<0-100>` (met web_fetch_vercel_url). Lezen: `/api/shop/direct`.
-   - Henkjan beslist het aandeel na de uitslag.
-   - Advies: de winnaar 90%, de andere 10% om te blijven leren.
+   - Henkjan wil 100%. Alleen terug naar een split op zijn woord.
 4. **Hoofddoel van doel 1 naar doel 2 (afrekenpagina).** Pas zodra er een paar afrekeningen per dag binnenkomen. Henkjan beslist.
 5. **Eerlijk risico.** Tot 14 okt kwamen er 464 doorkliks, 3 winkelwagens en 0 bestellingen. Blijft het bij beide routes 0, dan ligt het aan aanbod, prijs, vertrouwen of levertijd, niet aan de route.
    - De afrekenpagina gaf op 14 okt één keer een 502. Daarna weer 200.

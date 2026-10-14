@@ -169,17 +169,19 @@ async function shopStand(pid) {
 async function dagTotaal(dag) { const nets = ['md', 'pa', 'ra', 'ca', 'x']; const keys = []; nets.forEach(n => SOORTEN.forEach(s => keys.push('c:sh-d' + dag.replace(/-/g, '') + '-' + n + '-' + s))); const v = await kv.mget(...keys); const out = {}; nets.forEach((n, i) => { out[n] = {}; SOORTEN.forEach((s, j) => { out[n][s] = num(v[i * SOORTEN.length + j]); }); }); return out; }
 async function netTotaal() { const nets = ['md', 'pa', 'ra', 'ca', 'x']; const keys = []; nets.forEach(n => SOORTEN.forEach(s => keys.push('c:sh-' + n + '-' + s))); const v = await kv.mget(...keys); const out = {}; nets.forEach((n, i) => { out[n] = {}; SOORTEN.forEach((s, j) => { out[n][s] = num(v[i * SOORTEN.length + j]); }); }); return out; }
 // Oordeel over een advertentieplek. netKliks = kliks volgens het netwerk, o = onze eigen tellers.
-function plekOordeel(netKliks, o, gemKlik) {
-  const aan = o.view + num(o.dv); // aangekomen: landingspagina plus directe route
+// Directe route (lib/shopdirect.js): aangekomen = view (landingspagina) + dv (direct). Zodra cm.js op yoo.rs meet (meet), tellen dm (echt mens
+// op de shop) en da (eerste tik op de shop) mee als mens en doorklik; daarvoor oordelen we over mensen en doorkliks alleen op de landingspagina.
+function plekOordeel(netKliks, o, gemKlik, meet = false) {
+  const dv = num(o.dv), aan = o.view + dv, V = o.view + (meet ? dv : 0), M = o.mens + (meet ? num(o.dm) : 0), K = o.klik + (meet ? num(o.da) : 0), E = o.eng + (meet ? num(o.dm) : 0);
   if (netKliks >= 15 && aan < 0.4 * netKliks) return { uit: `nep: ${netKliks} kliks volgens het netwerk, maar ${aan} kwamen aan` };
-  if (o.view >= 12 && o.mens < 0.25 * o.view) return { uit: `geen echte mensen: van ${o.view} bezoekers bewogen er maar ${o.mens}` };
-  if (o.view >= 6 && o.mens === 0) return { uit: `geen echte mensen: ${o.view} bezoekers en niemand bewoog of tikte` };
+  if (V >= 12 && M < 0.25 * V) return { uit: `geen echte mensen: van ${V} bezoekers bewogen er maar ${M}` };
+  if (V >= 6 && M === 0) return { uit: `geen echte mensen: ${V} bezoekers en niemand bewoog of tikte` };
   if (o.view >= 50 && o.klik >= 0.5 * o.view && !num(o.koop)) return { uit: `onnatuurlijk: ${o.klik} van ${o.view} bezoekers klikten door, geen verkoop` };
   if (num(o.uniekVan) >= 30 && num(o.uniek) > 0 && o.uniek < 0.34 * o.uniekVan) return { uit: `steeds dezelfde apparaten: ${o.uniekVan} bezoeken vanaf ${o.uniek} apparaten` };
-  if (o.view >= 40 && o.klik === 0 && o.eng <= 1) return { uit: `${o.view} bezoekers, niemand bleef en niemand klikte door naar de shop` };
-  if (o.view >= 120 && o.klik === 0) return { uit: `${o.view} bezoekers en geen enkele doorklik` };
-  const rate = o.view ? o.klik / o.view : 0;
-  if (o.koop > 0) return { goed: 2 }; if (o.view >= 25 && o.klik >= 3 && rate >= 1.5 * gemKlik) return { goed: 1.5 }; if (o.view >= 25 && o.mens >= 0.6 * o.view && o.eng >= 0.3 * o.view) return { goed: 1.25 };
+  if (V >= 40 && K === 0 && E <= 1) return { uit: `${V} bezoekers, niemand bleef en niemand klikte door naar de shop` };
+  if (V >= 120 && K === 0) return { uit: `${V} bezoekers en geen enkele doorklik` };
+  const rate = V ? K / V : 0;
+  if (o.koop > 0) return { goed: 2 }; if (V >= 25 && K >= 3 && rate >= 1.5 * gemKlik) return { goed: 1.5 }; if (V >= 25 && M >= 0.6 * V && E >= 0.3 * V) return { goed: 1.25 };
   return {};
 }
 
@@ -225,11 +227,11 @@ async function ronde(droog) {
       try { for (const r of rows(await md('mondiad_campaign_report', { startDate: van, endDate: tot, breakdown: 'ZONE_ID', campaignId: c.id, size: 500 }))) { const z = String(r.zoneId); const x = pc.zones[z] || (pc.zones[z] = { kliks: 0, vert: 0, kosten: 0 }); x.kliks += num(r.clicks); x.vert += num(r.impressions); x.kosten += num(r.spent); pc.kliks += num(r.clicks); pc.kosten += num(r.spent); const g = zMd[z] || (zMd[z] = { kliks: 0, vert: 0, kosten: 0 }); g.kliks += num(r.clicks); g.vert += num(r.impressions); g.kosten += num(r.spent); } } catch (e) { B('fout', 'Mondiad zones ' + c.id, String(e.message).slice(0, 120)); }
       try { for (const r of rows(await md('mondiad_campaign_report', { startDate: van, endDate: tot, breakdown: 'CREATIVE_ID', campaignId: c.id, size: 100 }))) { const id = String(r.creativeId || ''); if (id) pc.cr[id] = { kliks: num(r.clicks), vert: num(r.impressions) }; } } catch (e) {}
       try { for (const r of rows(await md('mondiad_campaign_report', { startDate: tot, endDate: tot, breakdown: 'DATE', campaignId: c.id, size: 5 }))) { pc.vandaag.kliks += num(r.clicks); pc.vandaag.kosten += num(r.spent); } } catch (e) {} }
-    const zs = [...new Set([...Object.keys(zMd), ...await smembers(K.set('z', 'md'))])]; const eigen = await metUniek('md', await tellers('md', 'z', zs));
+    const zs = [...new Set([...Object.keys(zMd), ...await smembers(K.set('z', 'md'))])]; const eigen = await metUniek('md', await tellers('md', 'z', zs)); const meetShop = (await shopMeet(kv)).aan;
     let tv = 0, tk = 0; zs.forEach(z => { tv += eigen[z].view; tk += eigen[z].klik; }); const gem = tv >= 30 ? tk / tv : 0.08;
     const zwart = new Set(((await kv.get(K.zwart('md'))) || []).map(String)); const goed = {}; let nieuwZwart = 0;
-    for (const z of zs) { if (zwart.has(z)) continue; const o = plekOordeel((zMd[z] || {}).kliks || 0, eigen[z], gem); if (o.uit) { zwart.add(z); nieuwZwart++; B('plek uit (Mondiad)', z, o.uit); } else if (o.goed) goed[z] = o.goed; }
-    const campTel = await tellers('md', 'k', mdCamps.map(c => String(c.id))); const loopt = (await kv.get('hjdk:shop:loopt')) || {}; const meetShop = (await shopMeet(kv)).aan;
+    for (const z of zs) { if (zwart.has(z)) continue; const o = plekOordeel((zMd[z] || {}).kliks || 0, eigen[z], gem, meetShop); if (o.uit) { zwart.add(z); nieuwZwart++; B('plek uit (Mondiad)', z, o.uit); } else if (o.goed) goed[z] = o.goed; }
+    const campTel = await tellers('md', 'k', mdCamps.map(c => String(c.id))); const loopt = (await kv.get('hjdk:shop:loopt')) || {};
     for (const pc of Object.values(per)) { const c = pc.c; let det = null; try { det = (rows(await md('mondiad_get_campaign_details', { ids: [String(c.id)] })) || [])[0]; } catch (e) {} if (!det) continue;
       const crs = det.creatives || []; for (const x of crs) { const a = ads.find(q => q.title === x.title && q.desc === x.description) || ads.find(q => q.title === x.title); if (a) { crmap['md:' + x.id] = a.pid; crmap['t:md:' + x.id] = a.title; } }
       if (/PAUSED|REJECTED|ARCHIVED|DRAFT/i.test(c.status)) continue;
@@ -377,8 +379,7 @@ async function land(req, res, url) {
   const code = clickid && net !== 'x' ? shortId(net + ':' + clickid) : '';
   // directe route (lib/shopdirect.js): per persoon vast naar deze landingspagina (l) of in één keer naar de productpagina op yoo.rs (d).
   // Alleen betaald verkeer met een klik-id. Iedereen krijgt dezelfde behandeling, ook wat op een bot lijkt (geen cloaking).
-  // Alleen PropellerAds en Mondiad: hun lussen kennen de directe route (aankomst = view + dv). RichAds en Clickadu blijven op de landingspagina.
-  if (code && (net === 'pa' || net === 'md')) { const f = q.get('arm'); const arm = f === 'd' || f === 'l' ? f : shopArm(apparaat(req), (await directInst(kv)).pct); if (arm === 'd') return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot }); }
+  if (code) { const f = q.get('arm'); const arm = f === 'd' || f === 'l' ? f : shopArm(apparaat(req), (await directInst(kv)).pct); if (arm === 'd') return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot }); }
   if (!bot) {
     let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, { ex: 7 * 86400 }); } catch (e) {} }
     if (nieuw) { const keys = ['sh-' + net + '-view', 'sh-d' + D8() + '-' + net + '-view', 'sh-u' + nlUur() + '-view', 'sh-p-' + pk(pid) + '-himp'].concat(meer.map(m => 'sh-p-' + pk(m.id) + '-imp'));
