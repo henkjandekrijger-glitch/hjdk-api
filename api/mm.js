@@ -38,6 +38,7 @@ import { leesWissel, bewaarWissel, alleWissels, kiesArm, soortPersoon, bestemmin
 import { leerRonde, instelling } from '../lib/leer.js';
 import { dossier, naarCsv, dagDossiers } from '../lib/terug.js';
 import { modalBeslis, modalEv, modalMail, leesModal, bewaarModal, alleModals, modalStand, catalogus, bewaarCatalogus } from '../lib/modal.js';
+import { overdracht } from '../lib/overdracht.js';
 
 // Browserscript: klein, vanilla, alles in try/catch; vertraagt of breekt de pagina nooit.
 const MM_JS = String.raw`/* mensmeter */(function(){var W=window,N=navigator,D=document,M={vid:'',lokaal:null};
@@ -146,7 +147,7 @@ export default async function handler(req, res) {
       if (req.method === 'OPTIONS') return res.status(204).end();
       if (op === 'modal') {
         const c = leesCookie(req, 'mmp');
-        const r = await modalBeslis(kv, { site: q('site'), pid: /^[0-9a-f]{16}$/.test(c) ? c : '', q: q('q'), mmc: q('c'), v: q('v'), mob: q('mob') === '1', abo: q('abo') === '1', test: q('test'), origin: String(req.headers.origin || ''), land: String(req.headers['x-vercel-ip-country'] || ''), net: q('net'), zone: q('zone'), ref: q('ref'), uur: q('uur'), hist: { g: q('g'), k: q('k') } }).catch(e => { console.log('cm modal fout', String(e && e.message || e)); return { toon: false, reden: 'fout' }; });
+        const r = await modalBeslis(kv, { site: q('site'), pid: /^[0-9a-f]{16}$/.test(c) ? c : '', q: q('q'), mmc: q('c'), v: q('v'), mob: q('mob') === '1', abo: q('abo') === '1', test: q('test'), origin: String(req.headers.origin || ''), land: String(req.headers['x-vercel-ip-country'] || ''), net: q('net'), zone: q('zone'), ref: q('ref'), uur: q('uur'), hist: { g: q('g'), k: q('k') }, kw: q('kw'), geo: { stad: (() => { try { return decodeURIComponent(String(req.headers['x-vercel-ip-city'] || '')); } catch (x) { return ''; } })(), rg: String(req.headers['x-vercel-ip-country-region'] || ''), cc: String(req.headers['x-vercel-ip-country'] || ''), lat: String(req.headers['x-vercel-ip-latitude'] || ''), lon: String(req.headers['x-vercel-ip-longitude'] || '') } }).catch(e => { console.log('cm modal fout', String(e && e.message || e)); return { toon: false, reden: 'fout' }; });
         return res.status(200).json(r);
       }
       if (op === 'modalev') { const r = await modalEv(kv, { mid: q('mid'), e: q('e') }).catch(e => ({ ok: false })); return req.method === 'GET' ? res.status(r.ok ? 200 : 400).json(r) : res.status(204).end(); }
@@ -155,6 +156,13 @@ export default async function handler(req, res) {
       const r = await modalMail(kv, { mid: j.mid, email: j.email, bewaar: j.bewaar !== false, ipNet: ipInfo(srv.ip).h || ipInfo(srv.ip).net, land: srv.land }).catch(e => ({ ok: false, fout: 'fout' }));
       return res.status(r.ok ? 200 : 400).json(r);
     }
+    if (op === 'overdracht') { // levende overdracht voor andere chats (Todayin-chat, Yoors Shop-chat): elke keer opnieuw opgebouwd uit de live instellingen en cijfers
+      if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
+      const t = await overdracht(kv, { project: q('project') || '' }); res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(t); }
+    if (op === 'tiproef') { // bereikbaarheid van het todayin-formulier vanaf de server, zonder iemand aan te melden (ongeldig adres)
+      if (!beschermd(req)) return res.status(403).json({ ok: false });
+      const r = await fetch((process.env.TODAYIN_URL || 'https://todayin.email') + '/api/ti', { method: 'POST', body: new URLSearchParams({ email: 'geen-adres', src: 'clickmind', ts: '5000', website: '' }), headers: { 'content-type': 'application/x-www-form-urlencoded', 'user-agent': 'Clickmind/1 (+https://whichtobuy.best)' }, redirect: 'manual' }).catch(e => ({ status: 0, text: async () => String(e && e.message || e) }));
+      const h = await r.text().catch(() => ''); return res.status(200).json({ ok: true, status: r.status, bereikbaar: r.status === 400 && /does not look right/i.test(h), begin: h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 200) }); }
     if (op === 'modalbeheer') {
       res.setHeader('cache-control', 'no-store');
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
@@ -171,6 +179,11 @@ export default async function handler(req, res) {
       if (q('site')) { const m = await leesModal(kv, q('site'), true); if (!m) return res.status(404).json({ ok: false, fout: 'onbekende site' }); const st = await modalStand(kv, m, Number(q('dagen')) || 14); return res.status(200).json({ modal: m, stand: [...st], momenten: st.momenten, varianten: st.varianten, script: '<script src="https://whichtobuy.best/cm.js" data-site="' + m.site + '" async></script>' }); }
       return res.status(200).json({ modals: await alleModals(kv) });
     }
+    if (op === 'blokgedaan') { // de uitvoerder in propellerads-mcp meldt wat hij uitsloot (gedeelde SHOP_SLEUTEL)
+      const s = process.env.SHOP_SLEUTEL || ''; if (!s || req.headers['x-shop-sleutel'] !== s) return res.status(401).json({ ok: false });
+      const b = leesJson(req.body) || {}; const net = netNaam(b.net || 'propeller');
+      await kv.raw(['LPUSH', 'mm:blokgedaan:' + net, JSON.stringify({ t: new Date().toISOString(), geblokkeerd: Number(b.geblokkeerd) || 0, samenvatting: String(b.samenvatting || '').slice(0, 300), fouten: (b.fouten || []).slice(0, 5).map(x => String(x).slice(0, 200)), campagnes: (b.campagnes || []).slice(0, 40) })]);
+      await kv.raw(['LTRIM', 'mm:blokgedaan:' + net, 0, 47]); return res.status(200).json({ ok: true }); }
     if (op === 'blok') { res.setHeader('cache-control', 'no-store'); cors(res); const net = netNaam(q('net') || 'propeller'); return res.status(200).json((await kv.get('mm:blok:' + net)) || { zones: [], wachtOpHenkjan: [], aan: false, bijgewerkt: null }); }
     if (op === 'leer') {
       res.setHeader('cache-control', 'no-store');
@@ -352,7 +365,7 @@ D.addEventListener('submit',function(e){var f=e.target;if(f&&f.querySelector&&f.
 const MMM_JS = String.raw`/* clickmind modal */(function(){var W=window,D=document,N=navigator;
 function q(f){try{return f()}catch(e){return null}}
 try{if(W.mmModal)return;W.mmModal=1;if(N.webdriver===true)return;
-var S=D.currentScript||q(function(){var a=D.querySelectorAll('script[src*="/cm.js"],script[src*="/mmm.js"]');return a[a.length-1]}),site=S&&S.getAttribute('data-site');if(!site)return;
+var S=D.currentScript||q(function(){var a=D.querySelectorAll('script[src*="/cm.js"],script[src*="/mmm.js"]');return a[a.length-1]}),site=S&&S.getAttribute('data-site');if(!site)return;var kw=String((S&&S.getAttribute('data-interest'))||q(function(){var x=D.querySelector('meta[name="cm-interest"]');return x&&x.content})||'').slice(0,60);
 var O=q(function(){return new URL(S.src).origin})||'https://whichtobuy.best',zelf=O===location.origin;
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,String(v))}catch(e){return null}}
 function hex(n){var a=new Uint8Array(n),s='';q(function(){crypto.getRandomValues(a)});for(var i=0;i<n;i++)s+=(a[i]+256).toString(16).slice(1);return s}
@@ -401,10 +414,10 @@ var dank=function(){ev('klik');hb('k');ls('mmqa:'+site,'1');ls('mmqa','1');fm.in
 fout=function(t){bt.disabled=false;fo.textContent=t||'Something went wrong. Please try again.';fo.style.display='block'},
 post=function(eigen){if(!B.mid){dank();return}fetch(O+'/api/mm/modalmail',{method:'POST',body:JSON.stringify({mid:B.mid,email:inp.value,bewaar:!eigen}),credentials:'omit'}).then(function(x){return x.json()}).then(function(j){if(j&&j.ok)dank();else fout(j&&j.fout)})['catch'](function(){fout()})};
 fm.onsubmit=function(e){e.preventDefault();var m=String(inp.value||'').trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)){fout(a.veld||'Email?');return}bt.disabled=true;fo.style.display='none';
-if(a.doel==='moonlighter'&&B.mid){fetch('https://moonlighter.email/api/cm-signup',{method:'POST',body:JSON.stringify({email:m,site:site,mid:B.mid}),credentials:'omit'}).then(function(x){return x.json()}).then(function(j){if(j&&j.ok)post(1);else fout(j&&j.error)})['catch'](function(){fout()})}
+if(a.doel==='todayin'){post(0)}else if(a.doel==='moonlighter'&&B.mid){fetch('https://moonlighter.email/api/cm-signup',{method:'POST',body:JSON.stringify({email:m,site:site,mid:B.mid}),credentials:'omit'}).then(function(x){return x.json()}).then(function(j){if(j&&j.ok)post(1);else fout(j&&j.error)})['catch'](function(){fout()})}
 else if(typeof W.mmAanmelden==='function'){q(function(){Promise.resolve(W.mmAanmelden(m,{site:site,arm:a.id})).then(function(ok){if(ok)post(1);else fout()},function(){fout()})})}else post(0)}}
 (D.body||D.documentElement).appendChild(host)}
-var u=O+'/api/mm/modal?site='+encodeURIComponent(site)+'&q='+id+'&c='+mmc+'&v='+v+'&mob='+mob+'&abo='+abo+'&net='+encodeURIComponent(P('src','net','utm_source','n').slice(0,20))+'&zone='+encodeURIComponent(P('zone','z','zoneid','widget').slice(0,40))+'&ref='+ref+'&uur='+new Date().getHours()+'&g='+(+hist.g||0)+'&k='+(+hist.k||0)+(test?'&test='+encodeURIComponent(test):'');
+var u=O+'/api/mm/modal?site='+encodeURIComponent(site)+'&q='+id+'&c='+mmc+'&v='+v+'&mob='+mob+'&abo='+abo+'&net='+encodeURIComponent(P('src','net','utm_source','n').slice(0,20))+'&zone='+encodeURIComponent(P('zone','z','zoneid','widget').slice(0,40))+'&ref='+ref+'&uur='+new Date().getHours()+(kw?'&kw='+encodeURIComponent(kw):'')+'&g='+(+hist.g||0)+'&k='+(+hist.k||0)+(test?'&test='+encodeURIComponent(test):'');
 fetch(u,{credentials:zelf?'include':'omit'}).then(function(x){return x.json()}).then(function(d){B=d||{};var w=wacht;wacht=[];for(var i=0;i<w.length;i++)ev(w[i]);if(B.toon&&B.arm&&B.arm.soort!=='geen')plan(B.arm)})['catch'](function(){});
 W.mmModalStand=function(){return{site:site,besluit:B,getoond:getoond,stoort:stoor()}};
 }catch(e){}})();
@@ -434,7 +447,8 @@ async function statusBlok({ e, leer, inst, st }) {
   h += rij('Leerronde (elk uur)', lm != null && lm < 75, 'laatste ronde ' + ago(lm), 'Zoneprofielen, botfarms, wissels, modal-modellen, blokvoorstel.');
   h += rij('Betaald tegen aangekomen (PropellerAds)', !!ak.propellerSleutel && !ak.fout, ak.propellerSleutel ? (ak.fout ? 'fout: ' + e(ak.fout) : 'werkt') : 'nog niet', 'Per zone: kliks die PropellerAds rekent tegen kliks die bij ons aankomen. Komt via de PropellerAds-lus.');
   h += rij('Zone-oordeel', N(zo.onbekend) < 0.8 * zTot, (zTot - N(zo.onbekend)) + ' van ' + zTot + ' zones beoordeeld (' + N(zo.zwart) + ' zwart, ' + N(zo.wit) + ' wit)', 'Zonder browsermeting kan Clickmind een zone wel als bot herkennen, maar nooit als mens.');
-  h += rij('Blokkeren door Clickmind', !!inst.blokkeren, inst.blokkeren ? 'aan' : 'uit (alleen voorstel)', 'Aanzetten op Henkjans woord; de wachten en lussen blokkeren nu.');
+  let bg = null; try { const l = await kv.raw(['LRANGE', 'mm:blokgedaan:propeller', 0, 0]); bg = l && l[0] ? JSON.parse(l[0]) : null; } catch (x) {}
+  h += rij('Blokkeren door Clickmind', !!inst.blokkeren && (!bg || !(bg.fouten || []).length), inst.blokkeren ? 'aan' + (bg ? '; laatste uitvoering ' + ago(min(bg.t)) + ': ' + e(bg.samenvatting) : '; eerste uitvoering om :20') : 'uit (alleen voorstel)', 'PropellerAds: elk uur om :20 voegt de PropellerAds-lus de zones toe aan de uitsluitlijst van de campagnes waar ze kliks hadden. Nooit de grootste bron van een campagne, nooit zones met echte uitkomsten, nooit iets eraf.');
   h += rij('Terugbetalingsdossier', idx.length > 0, idx.length ? 'laatste: ' + e(idx[0]) : 'eerste dossier vannacht 03:40 UTC', 'Indienen alleen op Henkjans woord.');
   h += rij('Lerende modal', true, modAan.length ? 'aan op ' + e(modAan.join(', ')) + '; uit op ' + (mds.length - modAan.length) + ' sites' : 'overal uit', '');
   if (dir) h += rij('Yoors Shop: direct naar de productpagina', !!(meet && meet.aan), dir.pct + '% direct; vandaag ' + dv + ' aangekomen; cm.js op yoo.rs: ' + (meet && meet.aan ? 'meet' : 'nog niet'), 'Zonder cm.js op yoo.rs: geen eerste tik als conversie voor het netwerk en geen mensoordeel per zone.');

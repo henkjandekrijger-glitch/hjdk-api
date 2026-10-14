@@ -122,12 +122,12 @@ export default async function handler(req, res) {
     return res.status(200).json(Object.assign({ ok: true }, q.get('html') ? { html: adviceHtml(m, adv) } : adv));
   }
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=0, must-revalidate');
-  const tag = (await colourTag(m.id === 'us' ? 'whichtobuy' : 'kaufberater', 'wtb' + m.id, 'a[data-amz]', true, m.id)) + measureTag('wtb' + m.id, 'a[data-amz]', '.opt') + '<script src="/cm.js" data-site="' + (m.id === 'us' ? 'whichtobuy' : 'kaufberater') + '" async></script>'; /* lerende modal (lib/modal.js), doet niets zolang hij uit staat */ const send = h => res.status(200).send(String(h).replace('</head>', tag + '</head>'));
+  const tag = (await colourTag(m.id === 'us' ? 'whichtobuy' : 'kaufberater', 'wtb' + m.id, 'a[data-amz]', true, m.id)) + measureTag('wtb' + m.id, 'a[data-amz]', '.opt') + '<script src="/cm.js" data-site="' + (m.id === 'us' ? 'whichtobuy' : 'kaufberater') + '"__KW__ async></script>'; /* lerende modal (lib/modal.js); data-interest = onderwerp van de gids, de modal vult dat in bij het todayin-aanbod */ const send = (h, kw) => res.status(200).send(String(h).replace('</head>', tag.replace('__KW__', kw ? ' data-interest="' + esc(String(kw).slice(0, 60)) + '"' : '') + '</head>'));
   if (op === 'about') return send(about(m));
   if (op === 'privacy') return send(privacy(m));
   if (op === 'home' || path === '/') { await count(m, req, q, ''); return send(home(m, all)); }
   const it = all.find(i => i.slug === path.slice(1));
   if (!it) { res.setHeader('cache-control', 'no-store'); return res.status(404).send(shell(m, { title: '404 — ' + m.name, desc: '', path: '/', body: `<h1>404</h1><p><a href="/">${esc(m.s.home)}</a></p>` })); }
   await count(m, req, q, it.slug);
-  return send(await page(m, it, all, req));
+  return send(await page(m, it, all, req), it.term);
 }
