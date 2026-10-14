@@ -6,7 +6,7 @@
 //   /go                  klikregister voor Amazon (een advertentie heeft maar één link). Parameters:
 //                        k=<zoekterm> of a=<ASIN> of u=<Amazon-URL>, m=com|de|co.uk|ca..., tag=<tag>, tag2=<tag voor de 302-variant>, split=<% naar 302, standaard 50 als tag2 er is>,
 //                        n=<netwerk> c=<campagne> z=<zone> s=<klik-id netwerk> b=<advertentie> p=<voorvoegsel ascsubtag>
-//                        Elke klik: klik-id (cid) in de ascsubtag (p-cid-zone), persoons-id in eigen cookie (mmp), alle serversignalen naar het register.
+//                        Elke klik: klik-id (cid) en persoons-id (cookie mmp) alleen in ons register; naar Amazon gaat ascsubtag p-zone (nooit per klik, Associates §2(b)).
 //                        Variant js: een lege meetpagina die in ~150 ms browsersignalen meet (vingerafdruk, WebGL, scherm, batterij, netwerk, ...) en doorstuurt.
 //                        Variant 302: direct door. Per persoon vast, zodat de Associates-cijfers per tag de varianten eerlijk vergelijken.
 //   /api/mm/proef?dagen=1               de /go-proef per campagne, variant en tag
@@ -20,6 +20,8 @@
 //   /api/mm/blok?net=propeller          blokvoorstel van de leerronde (openbaar, alleen zone-nummers)
 //   /api/mm/instelling[?j=<json>]       schakelaars, o.a. blokkeren aan/uit (beschermde host)
 //   /api/mm/overzicht                   alles op één pagina (beschermde host)
+//   /api/mm/terugbetaling?net=propeller&van=&tot=[&formaat=csv]   bewijs per klik voor een terugbetalingsverzoek (beschermde host; indienen alleen op Henkjans woord)
+//   /api/mm/terugdag                    cron: elke dag het dossier van gisteren per netwerk
 //   /api/mm/zones?net=mondiad&dagen=3   oordeel per zone (zelfde vorm als rereview /api/b/zones, leesbaar voor de Mondiad-wacht)
 //   /api/mm/patronen?dagen=1            botfarms: vingerafdrukken in veel zones of netwerken
 //   /api/mm/stand                       vandaag per netwerk, slechtste zones, datacenterlijst
@@ -28,6 +30,7 @@ import { kv } from '../lib/db.js';
 import { verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, serverSignalen, laterAf, schoon, tagOk, zones, patronen, stand, proef, exporteer, persoon, netNaam } from '../lib/mensmeter.js';
 import { leesWissel, bewaarWissel, alleWissels, kiesArm, soortPersoon, bestemming, wisselKlik, cidKoppel, uitkomst, amazonUitkomst, wisselStand } from '../lib/wissel.js';
 import { leerRonde, instelling } from '../lib/leer.js';
+import { dossier, naarCsv, dagDossiers } from '../lib/terug.js';
 
 // Browserscript: klein, vanilla, alles in try/catch; vertraagt of breekt de pagina nooit.
 const MM_JS = String.raw`/* mensmeter */(function(){var W=window,N=navigator,D=document,M={vid:'',lokaal:null};
@@ -138,7 +141,13 @@ export default async function handler(req, res) {
       if (q('lees') === '1') return res.status(200).json({ laatst: await kv.get('mm:leer:laatst'), log: ((await kv.raw(['LRANGE', 'mm:leerlog', 0, 47])) || []).map(String) });
       return res.status(200).json(await leerRonde(kv, { droog: q('droog') === '1' }));
     }
-    if (['wissel', 'amazon', 'instelling', 'overzicht'].includes(op)) {
+    if (op === 'terugdag') {
+      res.setHeader('cache-control', 'no-store');
+      const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+      if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
+      return res.status(200).json(await dagDossiers(kv));
+    }
+    if (['wissel', 'amazon', 'instelling', 'overzicht', 'terugbetaling'].includes(op)) {
       res.setHeader('cache-control', 'no-store');
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
       if (op === 'amazon') { const r = await amazonUitkomst(kv, Object.fromEntries(url.searchParams)); return res.status(r.ok ? 200 : 400).json(r); }
@@ -152,6 +161,11 @@ export default async function handler(req, res) {
         return res.status(200).json({ wissels: await alleWissels(kv) });
       }
       if (op === 'overzicht') { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(await overzicht()); }
+      if (op === 'terugbetaling') {
+        const d = await dossier(kv, { net: netNaam(q('net') || 'propeller'), van: q('van'), tot: q('tot') });
+        if (q('formaat') === 'csv') { res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('content-disposition', 'attachment; filename="terugbetaling-' + d.netwerk + '-' + d.van + '_' + d.tot + '.csv"'); return res.status(200).send(naarCsv(d)); }
+        return res.status(200).json(d);
+      }
     }
     if (op === 'zones') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(await zones(kv, { net: q('net') || '', dagen: q('dagen') })); }
     if (op === 'patronen') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(await patronen(kv, { dagen: q('dagen') })); }
@@ -169,17 +183,18 @@ export default async function handler(req, res) {
 const beschermd = req => /\.vercel\.app$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]) && /\.vercel\.app$/i.test(String(req.headers.host || '').split(':')[0]);
 const leesCookie = (req, naam) => { const m = new RegExp('(?:^|;\\s*)' + naam + '=([^;]+)').exec(String(req.headers.cookie || '')); return m ? decodeURIComponent(m[1]) : ''; };
 // bij een fout altijd nog naar Amazon (met de eerste tag), nooit een kapotte klik
-function noodDoel(q) { try { return amazonBouw({ k: q('k'), a: q('a'), u: q('u'), m: q('m'), tag: q('tag'), sub: (q('p') || 'go') + '-x-' + schoon(q('z')) }); } catch (e) { return null; } }
+function noodDoel(q) { try { return amazonBouw({ k: q('k'), a: q('a'), u: q('u'), m: q('m'), tag: q('tag'), sub: (q('p') || 'go') + '-' + schoon(q('z')) }); } catch (e) { return null; } }
 
 async function goKlik(req, res, url, q) {
-  res.setHeader('cache-control', 'no-store, private'); res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('referrer-policy', 'no-referrer');
+  res.setHeader('cache-control', 'no-store, private'); res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('referrer-policy', 'origin');
   const tag1 = q('tag'), tag2 = tagOk(q('tag2')) ? q('tag2') : '';
   if (!tagOk(tag1) || !(q('k') || q('a') || q('u'))) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(400).send('Ongeldige link: nodig zijn tag=<Amazon-tag> en k=<zoekterm>, a=<ASIN> of u=<Amazon-URL>.'); }
   let pid = leesCookie(req, 'mmp'); const nieuw = !/^[0-9a-f]{16}$/.test(pid); if (nieuw) pid = nieuwId(8);
   const split = tag2 ? (q('split') == null || q('split') === '' ? 50 : Number(q('split'))) : (q('v') === '302' ? 100 : 0);
   const arm = armVoor(pid, split), tag = arm === '302' && tag2 ? tag2 : tag1;
   const cid = nieuwId(6), z = schoon(q('z')), pre = String(q('p') || 'go').replace(/[^A-Za-z0-9]/g, '').slice(0, 8) || 'go';
-  const doel = amazonBouw({ k: q('k'), a: q('a'), u: q('u'), m: q('m'), tag, sub: pre + '-' + cid + '-' + (z === '-' ? 'x' : z) });
+  // ascsubtag alleen per zone, nooit per klik of persoon (Associates Program Policies §2(b)); de klik-id staat alleen in ons eigen register
+  const doel = amazonBouw({ k: q('k'), a: q('a'), u: q('u'), m: q('m'), tag, sub: pre + '-' + (z === '-' ? 'x' : z) });
   if (!doel) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(400).send('Ongeldige doel-URL of markt.'); }
   res.setHeader('set-cookie', 'mmp=' + pid + '; Max-Age=15552000; Path=/; Secure; HttpOnly; SameSite=Lax');
   const ctx = { cid, pid, net: netNaam(q('n')), zone: z, camp: schoon(q('c')), arm, tag, cr: schoon(q('b')) };
@@ -200,10 +215,10 @@ async function goKlik(req, res, url, q) {
 // Alles in try/catch; een vangnet stuurt na 600 ms hoe dan ook door, en zonder JavaScript doet de noscript-refresh het.
 function meetPagina(doel, ctx) {
   const J = x => JSON.stringify(x).replace(/</g, '\\u003c').replace(/[\u2028\u2029]/g, '');
-  return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex,nofollow"><title>Amazon</title>'
+  return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="origin"><meta name="robots" content="noindex,nofollow"><title>Amazon</title>'
     + '<noscript><meta http-equiv="refresh" content="0;url=' + esc(doel) + '"></noscript>'
     + '<style>html,body{margin:0;background:#fff}p{font:15px system-ui,-apple-system,sans-serif;color:#666;padding:24px;opacity:0;animation:z .2s 1.2s forwards}@keyframes z{to{opacity:1}}a{color:#06c}</style></head>'
-    + '<body><p>Opening Amazon&hellip; <a href="' + esc(doel) + '" rel="noreferrer">Continue</a></p>'
+    + '<body><p>Opening Amazon&hellip; <a href="' + esc(doel) + '">Continue</a></p>'
     + '<script>var DOEL=' + J(doel) + ',CTX=' + J(ctx) + ';try{setTimeout(function(){location.replace(DOEL)},600)}catch(e){}</script>'
     + '<script>' + GO_JS + '</script></body></html>';
 }
@@ -254,7 +269,7 @@ setTimeout(weg,Math.max(20,150-(now()-t0)));
 
 // ---- DE WISSEL: één link per advertentie, de wissel kiest de bestemming ----
 async function wisselRoute(req, res, url, q) {
-  res.setHeader('cache-control', 'no-store, private'); res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('referrer-policy', 'no-referrer');
+  res.setHeader('cache-control', 'no-store, private'); res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('referrer-policy', 'origin');
   const w = await leesWissel(kv, q('w')).catch(() => null);
   if (!w) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(404).send('Onbekende wissel.'); }
   let pid = leesCookie(req, 'mmp'); const nieuw = !/^[0-9a-f]{16}$/.test(pid); if (nieuw) pid = nieuwId(8);
@@ -302,7 +317,7 @@ async function overzicht() {
   if (!ws.length) h += '<p class="s">Nog geen wissels.</p>';
   for (const w of ws) {
     const sta = await wisselStand(kv, w, 7);
-    h += '<p><b>' + e(w.naam) + '</b> <span class="k ' + (w.uit ? 'u' : '') + '">' + (w.uit ? 'uit' : 'aan') + '</span> modus ' + e(w.modus) + ', doel ' + e(w.doel) + (w.notitie ? '. ' + e(w.notitie) : '') + '<br>Link: <code>https://whichtobuy.best/w/' + e(w.naam) + '?n=propeller&amp;c={campaignid}&amp;z={zoneid}&amp;s=${SUBID}&amp;b={bannerid}</code></p>';
+    h += '<p><b>' + e(w.naam) + '</b> <span class="k ' + (w.uit ? 'u' : '') + '">' + (w.uit ? 'uit' : 'aan') + '</span> modus ' + e(w.modus) + ', doel ' + e(w.doel) + (w.notitie ? '. ' + e(w.notitie) : '') + (w.regels && w.regels.length ? '<br>Regels: ' + w.regels.map(r => e(r.als) + ' &rarr; ' + e(r.arm)).join(', ') : '') + '<br>Link: <code>https://whichtobuy.best/w/' + e(w.naam) + '?n=propeller&amp;c={campaignid}&amp;z={zoneid}&amp;s=${SUBID}&amp;b={bannerid}</code></p>';
     h += '<div class="w">' + tabel(['arm', 'voor wie', 'bestemming', 'gewicht', 'geleerd', 'kliks 7 d', 'nieuw', 'terug', 'echt', 'actie', 'aanmelding', 'koop', 'Amazon: artikelen / verdiend'], w.armen.map(a => { const x = sta.find(y => y.id === a.id) || {}; return [a.id, a.wie, a.soort === 'amazon' ? (a.k || a.a) + ' (' + a.tag + ', ' + a.variant + ')' : a.url.replace(/\?.*/, ''), a.gewicht, w.leer && w.leer[a.id] != null ? w.leer[a.id] + '%' : '', x.n, x.nieuw, x.terug, x.echt, x.actie, x.aanmelding, x.koop, x.amazon && x.amazon.dagen ? x.amazon.artikelen + ' / $' + Math.round(x.amazon.verdiend * 100) / 100 : '']; })) + '</div>';
   }
   h += '<h2>Leerronde (elk uur)</h2>';
@@ -315,6 +330,9 @@ async function overzicht() {
     h += '<p><b>Lijkt op de winnaars</b> (kandidaten voor een eigen campagne of hoger bod, op jouw woord)</p><div class="w">' + tabel(['netwerk', 'zone', 'bezoeken', 'gelijkenis'], (leer.lijktOpWinnaar || []).slice(0, 15).map(m => [m.netwerk, m.zone, m.v, m.gelijkenis])) + '</div>';
     h += '<p><b>Botfarms</b>: ' + e(leer.botfarms.aantal) + ' vingerafdrukken. <b>Zelfde site via twee netwerken</b>: ' + e((leer.zelfdeSiteTweeNetwerken || []).length) + '</p>';
   }
+  const idx = (((await kv.raw(['SMEMBERS', 'mm:terug:index']).catch(() => [])) || []).map(String)).sort().reverse().slice(0, 14);
+  const dos = (await Promise.all(idx.map(k => kv.get('mm:terug:' + k).catch(() => null)))).filter(Boolean);
+  h += '<h2>Terugbetaling (bewijs per klik, indienen alleen op jouw woord)</h2><div class="w">' + tabel(['netwerk', 'dag', 'kliks via ons', 'verdacht', 'sterk bewijs', 'uiterlijk indienen', 'hoe', 'csv'], dos.map(x => [x.netwerk, x.van, x.kliksViaOns, x.verdacht + ' (' + x.pctVerdacht + '%)', x.sterkBewijs, x.uiterlijkIndienen || 'onbekend', x.indienen, '/api/mm/terugbetaling?net=' + x.netwerk + '&van=' + x.van + '&formaat=csv'])) + '</div>';
   h += '<h2>Leerlog</h2><div class="w">' + tabel(['ronde'], (log || []).map(x => [String(x)])) + '</div>';
   h += '<h2>Vandaag per netwerk (mensmeter)</h2><div class="w">' + tabel(['netwerk', 'bezoeken', 'via /go en /w', 'gemeten op pagina', 'mens', 'datacenter', 'headless'], Object.entries(st.netwerken || {}).map(([n, x]) => [n, x.bezoeken, x.viaGo, x.gemeten, p(x.mensPct), p(x.datacenterPct), p(x.headlessPct)])) + '</div>';
   return h + '</body></html>';
