@@ -17,6 +17,7 @@
 //   /w/<naam>?n=&c=&z=&s=&b=            DE WISSEL (lib/wissel.js): kiest per klik de bestemming (Amazon of eigen pagina), per persoon vast
 //   /api/mm/uitkomst?cid=&soort=&waarde=&bron=   bestemming meldt echt, actie, aanmelding of koop (of POST JSON; /mmu.js doet het in de browser)
 //   /api/mm/wissel[?naam=][&j=<json>]   instellingen bekijken of opslaan (beschermde host)
+//   /api/mm/amazonmeter?dag=JJJJ-MM-DD   per Associates-tag betaalde kliks tegen door Amazon getelde kliks, artikelen en omzet (alleen meten; beschermde host)
 //   /api/mm/amazon?dag=&tag=&kliks=&artikelen=&omzet=&verdiend=   Associates per tag per dag, van de dagronde (beschermde host)
 //   /api/mm/leer[?lees=1|droog=1]       leerronde (lib/leer.js; cron elk uur; lezen op de beschermde host)
 //   /api/mm/blok?net=propeller          blokvoorstel van de leerronde (openbaar, alleen zone-nummers)
@@ -198,9 +199,10 @@ export default async function handler(req, res) {
       if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
       return res.status(200).json(await dagDossiers(kv));
     }
-    if (['wissel', 'amazon', 'instelling', 'overzicht', 'terugbetaling'].includes(op)) {
+    if (['wissel', 'amazon', 'amazonmeter', 'instelling', 'overzicht', 'terugbetaling'].includes(op)) {
       res.setHeader('cache-control', 'no-store');
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
+      if (op === 'amazonmeter') { const { amazonMeter } = await import('../lib/amzmeter.js'); const r = await amazonMeter(kv, { dag: q('dag'), tz: q('tz') || undefined }); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'amazon') { const r = await amazonUitkomst(kv, Object.fromEntries(url.searchParams)); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'instelling') {
         if (q('j')) { const j = leesJson(q('j')); if (!j) return res.status(400).json({ ok: false, fout: 'j moet JSON zijn' }); const oud = (await kv.get('mm:instelling')) || {}; const nw = { ...oud, ...j, bijgewerkt: new Date().toISOString() }; if ('blokkeren' in j) nw.blokkeren = j.blokkeren === true; await kv.set('mm:instelling', nw); return res.status(200).json({ ok: true, instelling: nw }); }
