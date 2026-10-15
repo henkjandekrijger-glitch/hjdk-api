@@ -39,6 +39,9 @@ export default async function handler(req, res) {
     if (op === 'ronde' && !mag(req)) { // zonder token: hooguit eens per 6 uur
       const { kv } = await import('../lib/db.js'); const last = await kv.get('zicht:ronde:last').catch(() => 0); if (last && Date.now() - last < 6 * 3600e3) return res.status(429).json({ fout: 'laatste ronde minder dan 6 uur geleden', stand: '/api/zicht?op=stand' });
       await kv.set('zicht:ronde:last', Date.now()); return res.status(200).json(Object.assign({ ok: true }, await ronde(oidc, {}))); }
+    if (op === 'meet' && !mag(req)) { // zonder token: per site hooguit eens per uur
+      const { kv } = await import('../lib/db.js'); const site = String(q.site || 'kz'); const lk = 'zicht:meet:last:' + site; const last = await kv.get(lk).catch(() => 0); if (last && Date.now() - last < 3600e3) return res.status(429).json({ fout: 'deze site is het afgelopen uur al gemeten' });
+      await kv.set(lk, Date.now()); return res.status(200).json({ ok: true, meting: await meet(site, oidc) }); }
     if (!mag(req)) return res.status(401).json({ fout: 'token nodig (ZICHT_TOKEN, GADS_TOKEN of HJDK_TOKEN)' });
     if (op === 'les') return res.status(200).json({ ok: true, les: await voegLesToe(q) });
     if (op === 'proef') return res.status(200).json({ ok: true, proef: await nieuweProef(q) });
