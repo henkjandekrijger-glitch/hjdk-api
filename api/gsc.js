@@ -3,7 +3,7 @@
 //    (kzmaak en wtbmaak zetten die vooraan in hun onderwerpenlijst); 3) pagina's met te lage CTR -> nieuwe titel + omschrijving (max 3 per site per dag, 21 dagen rust per pagina).
 // Routes: /api/gsc?op=status (openbaar overzicht), op=whoami (welk Vercel-token, zonder het token zelf), op=dag (cron of token=HJDK_TOKEN), op=sites (token).
 import { kv } from '../lib/db.js';
-import { SITES, SITEMAPS, claims, sites, propFor, rows, analyse, submitSitemap, sitemapInfo, ruis } from '../lib/gsc.js';
+import { SITES, SITEMAPS, claims, sites, propFor, rows, analyse, submitSitemap, sitemapInfo, ruis, inspect } from '../lib/gsc.js';
 import { MARKETS, items as wtbItems, K as WK, claude, json, indexnow as wtbIndexnow } from '../lib/wtb.js';
 import seed from '../data/kz.json' with { type: 'json' };
 
@@ -117,6 +117,7 @@ async function ronde(oidc) {
 }
 
 export default async function handler(req, res) {
+  const t0 = Date.now();
   const url = new URL(req.url, 'http://x'); const op = url.searchParams.get('op') || 'status'; res.setHeader('cache-control', 'no-store');
   const oidc = String(req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN || '');
   const isCron = /vercel-cron/i.test(String(req.headers['user-agent'] || '')); const isToken = !!process.env.HJDK_TOKEN && url.searchParams.get('token') === process.env.HJDK_TOKEN;
@@ -126,6 +127,18 @@ export default async function handler(req, res) {
     if (op === 'sitemaps') { // openbaar: indienen (hooguit eens per dag per site) + wat Google ervan heeft gelezen
       const l = await sites(oidc); const out = {}; for (const [id, host] of Object.entries(SITES)) { const prop = propFor(l, host); if (!prop) { out[host] = { fout: 'geen toegang' }; continue; } out[host] = { indienen: await smap(id, prop, oidc), google: await sitemapInfo(prop, oidc).catch(e => String(e.message).slice(0, 120)) }; }
       return res.status(200).json({ ok: true, sitemaps: out }); }
+    if (op === 'index') { // openbaar: hoeveel pagina's uit de sitemap staan echt in Google (steekproef of alles, hooguit eens per 6 uur per site)
+      const id = SITES[url.searchParams.get('site')] ? url.searchParams.get('site') : 'kz'; const host = SITES[id]; const ck = 'hjdk:gsc:index:' + id;
+      const c0 = await kv.get(ck).catch(() => null); if (c0 && Date.now() - c0.at < 6 * 3600e3 && !isToken) return res.status(200).json(Object.assign({ ok: true, uitCache: true }, c0));
+      const l = await sites(oidc); const prop = propFor(l, host); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot ' + host });
+      const xml = await (await fetch(SITEMAPS[id])).text(); const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim());
+      const n = Math.min(Number(url.searchParams.get('n')) || 400, 400); const pick = urls.slice(0, n); const out = [];
+      for (let i = 0; i < pick.length; i += 8) { const part = await Promise.all(pick.slice(i, i + 8).map(u => inspect(prop, u, oidc))); out.push(...part); if (Date.now() - t0 > 240e3) break; }
+      const per = {}; out.forEach(x => { const k = x.fout ? 'fout' : (x.staat || x.verdict || 'onbekend'); per[k] = (per[k] || 0) + 1; });
+      const res0 = { at: Date.now(), dag: new Date().toISOString().slice(0, 10), site: host, inSitemap: urls.length, bekeken: out.length, geindexeerd: out.filter(x => x.verdict === 'PASS').length, perStaat: per, nietGeindexeerd: out.filter(x => x.verdict !== 'PASS').slice(0, 60).map(x => ({ url: x.url, staat: x.staat || x.fout, gecrawld: x.gecrawld })) };
+      await kv.set(ck, res0).catch(() => {}); const hist = (await kv.get(ck + ':hist').catch(() => null)) || []; hist.unshift({ dag: res0.dag, inSitemap: res0.inSitemap, bekeken: res0.bekeken, geindexeerd: res0.geindexeerd }); await kv.set(ck + ':hist', hist.slice(0, 60)).catch(() => {});
+      return res.status(200).json(Object.assign({ ok: true }, res0, { historie: hist.slice(0, 14) }));
+    }
     if (op === 'dag' && !isCron && !isToken) { // zonder token: hooguit eens per 2 uur (alleen lezen + max 3 titels per site)
       const last = await kv.get('hjdk:gsc:lastrun').catch(() => 0); if (last && Date.now() - last < 2 * 3600e3) return res.status(429).json({ ok: false, fout: 'laatste ronde was minder dan 2 uur geleden', status: '/api/gsc?op=status' });
       await kv.set('hjdk:gsc:lastrun', Date.now()); return res.status(200).json(Object.assign({ ok: true }, await ronde(oidc)));
