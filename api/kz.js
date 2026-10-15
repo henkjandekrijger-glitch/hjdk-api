@@ -23,7 +23,7 @@ async function pinStats(items, d) { // 14 dagen Pinterest-resultaat per keuzehul
   const rate = [0, 1, 2, 3].map(v => (vv[v] + 1) / (pub[v] + 4)); const bestV = rate.indexOf(Math.max(...rate));
   const out = { dag: d, slug, varianten: vv, gepubliceerd: pub, bestV }; try { await kv.set(ck, out, { ex: 2 * 86400 }); } catch (e) {} return out;
 }
-const SPEER = { speer: ['printer'], hubs: [], at: 0 }; // speerpunten (eerst scoren) en knooppunten (scoren al: geven door), 10 min in het geheugen
+const SPEER = { speer: ['printer'], hubs: [], vind: [], at: 0 }; // speerpunten (eerst scoren) en knooppunten (scoren al: geven door), 10 min in het geheugen
 const kzNorm = x => String(x || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 function kzNaam(item) { // productnaam zoals mensen 'keuzehulp <naam>' zoeken
   if (item.naam) return item.naam; let n = String(item.slug || '').replace(/^beste-/, '').replace(/-(kiezen|kopen|keuzehulp)$/, '').replace(/-/g, ' ').replace(/^([a-z]) /, '$1-').replace(/ ([a-z])(?= |$)/g, '-$1');
@@ -38,7 +38,11 @@ function kzTitle(item) {
 function speerBlok(all, curSlug) { // sitewide: interne links met de exacte zoekterm 'keuzehulp <product>' naar speerpunten en knooppunten
   const by = new Map(all.map(i => [i.slug, i])); const ls = [...new Set([...(SPEER.speer || []), ...(SPEER.hubs || [])])].filter(x => x !== curSlug && by.has(x)).slice(0, 6).map(x => by.get(x));
   const k = TODAY() < KERST.tot && curSlug !== KERST.slug ? '<a href="/' + KERST.slug + '">Keuzehulp kerstcadeau 2026</a> · ' : '';
-  if (!ls.length && !k) return ''; return '<p class="rel" style="margin:18px 0 0"><b>Veel gebruikt:</b> ' + k + ls.map(i => '<a href="/' + esc(i.slug) + '">Keuzehulp ' + esc(kzNaam(i)) + '</a>').join(' · ') + '</p>';
+  // pagina's die Google nog niet kent of nog niet opnam (dagelijkse indexcheck): extra interne links zodat Google ze vindt
+  const vind = (SPEER.vind || []).filter(x => x !== curSlug && by.has(x)); let nv = vind;
+  if (curSlug && vind.length) { let h = 0; for (const c of curSlug) h = (h * 31 + c.charCodeAt(0)) >>> 0; nv = Array.from({ length: Math.min(4, vind.length) }, (_, i) => vind[(h + i * 7) % vind.length]).filter((x, i, a) => a.indexOf(x) === i); }
+  const nieuw = nv.length ? '<p class="rel" style="margin:10px 0 0"><b>' + (curSlug ? 'Ook nieuw' : 'Net toegevoegd') + ':</b> ' + nv.slice(0, curSlug ? 4 : 60).map(x => '<a href="/' + esc(x) + '">Keuzehulp ' + esc(kzNaam(by.get(x))) + '</a>').join(' · ') + '</p>' : '';
+  if (!ls.length && !k && !nieuw) return ''; return (ls.length || k ? '<p class="rel" style="margin:18px 0 0"><b>Veel gebruikt:</b> ' + k + ls.map(i => '<a href="/' + esc(i.slug) + '">Keuzehulp ' + esc(kzNaam(i)) + '</a>').join(' · ') + '</p>' : '') + nieuw;
 } // slugs met zoekkansen (positie 4-20), 10 min in het geheugen
 let COLTAG = ''; // kleurtest-kopscript, per verzoek ververst in de handler
 import { createHmac } from 'node:crypto';
@@ -583,7 +587,7 @@ async function opruimen(budgetMs) {
 const PIN_VERIFY = { v: '', at: 0 }; // Pinterest-websiteclaim (meta p:domain_verify), via env of /setup, 10 min in het geheugen
 export default async function handler(req, res) {
   if (Date.now() - BOOST.at > 600000) { BOOST.at = Date.now(); try { BOOST.set = new Set((await kv.get('hjdk:gsc:kz:boost')) || []); } catch (e) {} }
-  if (Date.now() - SPEER.at > 600000) { SPEER.at = Date.now(); try { const v = await kv.get('hjdk:kz:speerpunt'); if (v && Array.isArray(v.speer)) { SPEER.speer = v.speer.length ? v.speer : ['printer']; SPEER.hubs = v.hubs || []; } } catch (e) {} }
+  if (Date.now() - SPEER.at > 600000) { SPEER.at = Date.now(); try { const v = await kv.get('hjdk:kz:speerpunt'); if (v && Array.isArray(v.speer)) { SPEER.speer = v.speer.length ? v.speer : ['printer']; SPEER.hubs = v.hubs || []; } } catch (e) {} try { const ix = await kv.get('hjdk:gsc:index:kz'); SPEER.vind = ((ix && ix.nietGeindexeerd) || []).filter(x => /onbekend|Gevonden/i.test(String(x.staat || ''))).map(x => { try { return new URL(x.url).pathname.slice(1); } catch (e) { return ''; } }).filter(x => x && !x.includes('/')); } catch (e) {} }
   try { COLTAG = await colourTag('keuzehulp', 'kz', 'a[data-kz],a[data-deal],a[href*="bol.com"]', false, 'kz'); } catch (e) { COLTAG = ''; }
   await siteKz();
   if (Date.now() - PIN_VERIFY.at > 600000) { PIN_VERIFY.at = Date.now(); try { PIN_VERIFY.v = String(process.env.PINTEREST_VERIFY || (await secrets()).PINTEREST_VERIFY || '4963a53ed69385410ca1c84a0d306499').replace(/[^a-zA-Z0-9]/g, '').slice(0, 64); } catch (e) {} }
