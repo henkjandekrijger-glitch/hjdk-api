@@ -201,10 +201,11 @@ export default async function handler(req, res) {
       if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
       return res.status(200).json(await dagDossiers(kv));
     }
-    if (['wissel', 'amazon', 'amazonmeter', 'gosplit', 'instelling', 'overzicht', 'clickmind', 'terugbetaling'].includes(op)) {
+    if (['wissel', 'amazon', 'amazonmeter', 'venster', 'gosplit', 'instelling', 'overzicht', 'clickmind', 'terugbetaling'].includes(op)) {
       res.setHeader('cache-control', 'no-store');
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
       if (op === 'gosplit') { const p = String(q('p') || '').replace(/[^A-Za-z0-9]/g, '').slice(0, 8); if (!p) return res.status(400).json({ ok: false, fout: 'p' }); if (q('pct') != null && q('pct') !== '') { const v = Math.max(0, Math.min(100, Math.round(Number(q('pct'))))); if (!Number.isFinite(v)) return res.status(400).json({ ok: false, fout: 'pct 0-100' }); await kv.set('mm:gosplit:' + p, v); } return res.status(200).json({ ok: true, p, pct: await kv.get('mm:gosplit:' + p), uitleg: '0 = iedereen via de meetpagina (browsermeting), 100 = iedereen direct door, 50 = per persoon vast de helft' }); }
+      if (op === 'venster') { const { vensterPerZone } = await import('../lib/venster.js'); const r = await vensterPerZone(kv, { dag: q('dag') || new Date().toISOString().slice(0, 10), min: Number(q('min')) || 10 }); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'amazonmeter') { const { amazonMeter } = await import('../lib/amzmeter.js'); const r = await amazonMeter(kv, { dag: q('dag'), tz: q('tz') || undefined }); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'amazon') { const r = await amazonUitkomst(kv, Object.fromEntries(url.searchParams)); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'instelling') {
