@@ -35,7 +35,7 @@
 //   /api/mm/stand                       vandaag per netwerk, slechtste zones, datacenterlijst
 // Regels, opslag en uitleg: lib/mensmeter.js.
 import { kv } from '../lib/db.js';
-import { verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, serverSignalen, laterAf, schoon, tagOk, zones, patronen, stand, proef, exporteer, persoon, netNaam, ipInfo } from '../lib/mensmeter.js';
+import { echteTag, verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, serverSignalen, laterAf, schoon, tagOk, zones, patronen, stand, proef, exporteer, persoon, netNaam, ipInfo } from '../lib/mensmeter.js';
 import { leesWissel, bewaarWissel, alleWissels, kiesArm, soortPersoon, bestemming, wisselKlik, cidKoppel, uitkomst, amazonUitkomst, wisselStand } from '../lib/wissel.js';
 import { leerRonde, instelling } from '../lib/leer.js';
 import { dossier, naarCsv, dagDossiers } from '../lib/terug.js';
@@ -242,14 +242,16 @@ function noodDoel(q) { try { return amazonBouw({ k: q('k'), a: q('a'), u: q('u')
 
 async function goKlik(req, res, url, q) {
   res.setHeader('cache-control', 'no-store, private'); res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('referrer-policy', 'origin');
-  const tag1 = q('tag'), tag2 = tagOk(q('tag2')) ? q('tag2') : '';
+  const tag1 = echteTag(q('tag')), tag2 = tagOk(q('tag2')) ? echteTag(q('tag2')) : '';
   if (!tagOk(tag1) || !(q('k') || q('a') || q('u'))) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(400).send('Ongeldige link: nodig zijn tag=<Amazon-tag> en k=<zoekterm>, a=<ASIN> of u=<Amazon-URL>.'); }
   let pid = leesCookie(req, 'mmp'); const nieuw = !/^[0-9a-f]{16}$/.test(pid); if (nieuw) pid = nieuwId(8);
-  const split = tag2 ? (q('split') == null || q('split') === '' ? 50 : Number(q('split'))) : (q('v') === '302' ? 100 : 0);
-  const arm = armVoor(pid, split), tag = arm === '302' && tag2 ? tag2 : tag1;
   const cid = nieuwId(6), z = schoon(q('z')), pre = String(q('p') || 'go').replace(/[^A-Za-z0-9]/g, '').slice(0, 8) || 'go';
-  // ascsubtag alleen per zone, nooit per klik of persoon (Associates Program Policies §2(b)); de klik-id staat alleen in ons eigen register
-  const doel = amazonBouw({ k: q('k'), a: q('a'), u: q('u'), m: q('m'), tag, sub: pre + '-' + (z === '-' ? 'x' : z) });
+  let split = tag2 ? (q('split') == null || q('split') === '' ? 50 : Number(q('split'))) : (q('v') === '302' ? 100 : 0);
+  // variant per voorvoegsel op de server te wisselen zonder de campagnelink aan te raken (mm:gosplit:<p> = 0 meetpagina .. 100 direct)
+  try { const ov = await kv.get('mm:gosplit:' + pre); if (ov != null && Number.isFinite(Number(ov))) split = Number(ov); } catch (e) {}
+  const arm = armVoor(pid, split), tag = arm === '302' && tag2 ? tag2 : tag1;
+  // ascsubtag per zone en advertentie, nooit per klik of persoon (Associates Program Policies §2(b)); de klik-id staat alleen in ons eigen register
+  const cr0 = schoon(q('b'), 14), doel = amazonBouw({ k: q('k'), a: q('a'), u: q('u'), m: q('m'), tag, sub: pre + '-' + (z === '-' ? 'x' : z) + (cr0 && cr0 !== '-' ? '-' + cr0 : '') });
   if (!doel) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(400).send('Ongeldige doel-URL of markt.'); }
   res.setHeader('set-cookie', 'mmp=' + pid + '; Max-Age=15552000; Path=/; Secure; HttpOnly; SameSite=Lax');
   const ctx = { cid, pid, net: netNaam(q('n')), zone: z, camp: schoon(q('c')), arm, tag, cr: schoon(q('b')) };
