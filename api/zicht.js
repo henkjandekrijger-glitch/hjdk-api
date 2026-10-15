@@ -9,6 +9,7 @@
 //   POST /api/zicht?op=site       {id, host, taal, land, merk[], vragen[], gsc?}   een site aanmelden voor de metingen
 //   GET  /api/zicht?op=ronde      cron (dagelijks 05:30 UTC) of met token: meten, beoordelen, herrangschikken, nieuwe inzichten
 // Schrijven: token in Authorization: Bearer, header x-hjdk-token of ?token= (gedeelde team-variabele ZICHT_TOKEN, GADS_TOKEN of HJDK_TOKEN).
+import { vraagAI } from '../lib/zicht.js';
 import { lessen, draaiboek, stand, voegLesToe, nieuweProef, verwerkUitkomst, zetSite, ronde, meet, sites, DAY } from '../lib/zicht.js';
 import { OVERDRACHT_ZICHT } from '../lib/overdracht-zicht.js';
 
@@ -27,6 +28,11 @@ export default async function handler(req, res) {
       const db = await draaiboek(q.site, q.kanaal); const n = Math.min(Number(q.n) || 40, 100);
       if (q.t) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send('Draaiboek vindbaarheid en AI-vermeldingen (' + DAY() + (q.site ? ', site ' + q.site : '') + '). Hoogste score eerst; score = kans dat het werkt (voorkennis + eigen proeven) x effect / moeite.\nToegepast? Meld het: POST /api/zicht?op=proef. Nieuw inzicht? POST /api/zicht?op=les. Uitleg: /api/zicht?op=overdracht\n\n' + tekst(db.slice(0, n))); }
       return res.status(200).json({ ok: true, dag: DAY(), site: q.site || null, lessen: db.slice(0, n) });
+    }
+    if (op === 'llmtest') { // proef van de AI-meting: ruwe vorm van het antwoord (sleutels en bronnen), hooguit 20 per dag
+      const { kv } = await import('../lib/db.js'); const k = 'zicht:llmtest:' + DAY(); const n = Number(await kv.raw(['INCR', k]).catch(() => 0)); if (n > 20) return res.status(429).json({ fout: 'daglimiet' });
+      const j = await vraagAI(q.model || process.env.ZICHT_LLM_MODEL || 'perplexity/sonar', q.q || 'welke airfryer kopen', q.taal || 'nl', oidc); const raw = JSON.stringify(j);
+      return res.status(200).json({ ok: true, sleutels: Object.keys(j), bericht: Object.keys(((j.choices || [])[0] || {}).message || {}), urls: (raw.match(/https?:\/\/[^\s"'<>)\]]+/g) || []).slice(0, 20), tekst: String((((j.choices || [])[0] || {}).message || {}).content || '').slice(0, 600), ruw: raw.slice(0, 2500) });
     }
     if (op === 'stand') return res.status(200).json({ ok: true, dag: DAY(), sites: await stand(q.site) });
     if (op === 'sites') return res.status(200).json({ ok: true, sites: await sites() });
