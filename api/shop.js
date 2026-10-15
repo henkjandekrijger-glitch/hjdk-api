@@ -30,6 +30,7 @@ import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.j
 import { PB, CM_NET, SOORTEN_DIRECT, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks } from '../lib/shopdirect.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId } from '../lib/mensmeter.js';
 import { cidKoppel } from '../lib/wissel.js';
+import { K_KOST, ontvang as margeOntvang, margeStand, zetMarge } from '../lib/shopmarge.js';
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
 const SHOP = 'https://yoo.rs/shop';
@@ -74,6 +75,7 @@ async function catalog(vers) {
   if (!vers && CAT && Date.now() - CAT_AT < 300000) return CAT;
   let c = null; try { c = await kv.get(K.cat); } catch (e) {}
   if (!c || !Array.isArray(c.items) || !c.items.length) c = { at: 0, items: seed.items.map(i => Object.assign({ v: 0, f: 0, sc: 0, l: 0 }, i)), terugval: true };
+  try { zetMarge(c.items, await kv.get(K_KOST)); } catch (e) {} // marge uit de inkoopprijzen die de shop doorgeeft (lib/shopmarge.js), met de live prijs
   CAT = c; CAT_AT = Date.now(); return c;
 }
 async function bewaarCatalogus(items, bron, extra) {
@@ -746,6 +748,9 @@ export default async function handler(req, res) {
     if (op === 'babitalink') { if (await kv.get(K.babitakey)) return res.status(409).json({ ok: false, fout: 'bestaat al' }); const bk = randomBytes(18).toString('hex'); await kv.set(K.babitakey, bk); return res.status(200).json({ ok: true, link: LAND() + '/api/shop/advies?k=' + bk }); }
     { const kk = url.searchParams.get('k'); if (kk && sk && kk !== sk) { const bk = await kv.get(K.babitakey); if (bk && kk === bk && !url.searchParams.get('json')) sk = bk; } }
     if (!sk || url.searchParams.get('k') !== sk) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(403).send('<p style="font:16px system-ui;padding:24px">Deze pagina is privé.</p>'); }
+    if (op === 'marge') { // de shop geeft per product inkoop en eigen verzendkosten door (POST); GET toont wat er nu staat, met de live marge
+      if (req.method === 'POST') { const r = await margeOntvang(kv, req.body); CAT_AT = 0; return res.status(200).json(r); }
+      const st = await margeStand(kv, (await catalog(true)).items); return res.status(200).json(Object.assign({ ok: true }, st, { lijst: st.lijst.slice(0, 200) })); }
     if (url.searchParams.get('json') === 'kort') { // korte stand per netwerk (voor een snelle tussenstand)
       const l = await kv.get(K.laatste); const eerste = async k => ((await kv.get(k)) || [])[0] || null;
       const kortNet = x => x ? { at: x.at, samenvatting: x.samenvatting, saldo: x.saldo, campagnes: (x.campagnes || []).map(c => ({ id: c.id, thema: (String(c.naam).match(/thema=([a-z]+)/) || [])[1], status: c.status, bod: c.bod, kliks: num(c.kliksVandaag), kosten: num(c.kostenVandaag), bezoekers: num((c.eigen || {}).view), doorkliks: num((c.eigen || {}).klik) })), besluiten: (x.besluiten || []).slice(0, 12) } : null;
@@ -768,8 +773,10 @@ export default async function handler(req, res) {
       const l = (await kv.get(K.laatste)) || {}; const eerste = async k => ((await kv.get(k)) || [])[0] || {}; const somK = x => ((x && x.campagnes) || []).reduce((a, c) => a + num(c.kostenVandaag), 0);
       let px = false, pxTijd = {}; try { const pk1 = await kv.get('hjdk:shop:pxlaatst:koop'), pc1 = await kv.get('hjdk:shop:pxlaatst:cart'); px = !!pk1 || !!pc1; pxTijd = { koop: pk1 && pk1.at ? nlTijd(new Date(pk1.at).toISOString()) : null, cart: pc1 && pc1.at ? nlTijd(new Date(pc1.at).toISOString()) : null }; } catch (e) {}
       const les = (await kv.get(K.lessen)) || {};
+      const tt = await netTotaal(); const carts = Object.values(tt).reduce((a, x) => a + num(x.cart), 0), koop = Object.values(tt).reduce((a, x) => a + num(x.koop), 0);
+      const marge = await margeStand(kv, (await catalog()).items, carts >= 10 ? Math.min(1, koop / carts) : 0.3).catch(() => null); if (marge) { marge.link = LAND() + '/api/shop/marge?k=' + url.searchParams.get('k'); marge.carts = carts; marge.koop = koop; }
       res.setHeader('content-type', 'text/html; charset=utf-8');
-      return res.status(200).send(adviesPagina({ sk, css: look(ACC), esc, vandaag: await dagTotaal(DAY()), gisteren: await dagTotaal(DAY(-1)), totaal: await netTotaal(), kosten: { md: somK(l.mondiad), pa: somK(await eerste(K.palog)), ra: somK(await eerste(K.ralog)), ca: somK(await eerste(K.calog)) }, inz: l.inzicht || null, lessen: les.lessen || [], bijgewerkt: nlTijd(new Date().toISOString()), pxGezien: px, pxTijd, stand: await shopStand('oc_4174004347453441').catch(() => null), nlTijd, direct: await directInst(kv), meet: await shopMeet(kv) })); }
+      return res.status(200).send(adviesPagina({ sk, css: look(ACC), esc, vandaag: await dagTotaal(DAY()), gisteren: await dagTotaal(DAY(-1)), totaal: await netTotaal(), kosten: { md: somK(l.mondiad), pa: somK(await eerste(K.palog)), ra: somK(await eerste(K.ralog)), ca: somK(await eerste(K.calog)) }, inz: l.inzicht || null, lessen: les.lessen || [], bijgewerkt: nlTijd(new Date().toISOString()), pxGezien: px, pxTijd, marge, stand: await shopStand('oc_4174004347453441').catch(() => null), nlTijd, direct: await directInst(kv), meet: await shopMeet(kv) })); }
     if (op === 'bron') { // controle: haalt een pagina van yoo.rs op zoals een Nederlandse telefoon die ziet (alleen yoo.rs, alleen lezen)
       const pad = String(url.searchParams.get('u') || '/shop/'); if (!/^\/[\w\/\-?=&.%]*$/.test(pad)) return res.status(400).json({ ok: false });
       const r = await fetch('https://yoo.rs' + pad, { redirect: 'manual', headers: { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': url.searchParams.get('taal') || 'nl-NL,nl;q=0.9' } });
