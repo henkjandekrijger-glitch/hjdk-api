@@ -5,6 +5,7 @@
 //   POST /api/zicht?op=les        {id?, les, kanaal, bewijs, bron, sterkte?, moeite?, risico?}   nieuw inzicht of nieuw bewijs
 //   POST /api/zicht?op=proef      {site, les, urls[], controle[]?, metric: gsc|index|llm, na?: dagen, wat?, van?}   iets toegepast: de lus beoordeelt het zelf
 //   POST /api/zicht?op=uitkomst   {site, les, uitkomst: beter|slechter|gelijk, effect?, toelichting}   zelf gemeten uitkomst melden
+//   POST /api/zicht?op=toegepast {site, les}  markeer een les als al toegepast (zonder proef)
 //   POST /api/zicht?op=site       {id, host, taal, land, merk[], vragen[], gsc?}   een site aanmelden voor de metingen
 //   GET  /api/zicht?op=ronde      cron (dagelijks 05:30 UTC) of met token: meten, beoordelen, herrangschikken, nieuwe inzichten
 // Schrijven: token in Authorization: Bearer, header x-hjdk-token of ?token= (gedeelde team-variabele ZICHT_TOKEN, GADS_TOKEN of HJDK_TOKEN).
@@ -29,10 +30,14 @@ export default async function handler(req, res) {
     }
     if (op === 'stand') return res.status(200).json({ ok: true, dag: DAY(), sites: await stand(q.site) });
     if (op === 'sites') return res.status(200).json({ ok: true, sites: await sites() });
+    if (op === 'ronde' && !mag(req)) { // zonder token: hooguit eens per 6 uur
+      const { kv } = await import('../lib/db.js'); const last = await kv.get('zicht:ronde:last').catch(() => 0); if (last && Date.now() - last < 6 * 3600e3) return res.status(429).json({ fout: 'laatste ronde minder dan 6 uur geleden', stand: '/api/zicht?op=stand' });
+      await kv.set('zicht:ronde:last', Date.now()); return res.status(200).json(Object.assign({ ok: true }, await ronde(oidc, {}))); }
     if (!mag(req)) return res.status(401).json({ fout: 'token nodig (ZICHT_TOKEN, GADS_TOKEN of HJDK_TOKEN)' });
     if (op === 'les') return res.status(200).json({ ok: true, les: await voegLesToe(q) });
     if (op === 'proef') return res.status(200).json({ ok: true, proef: await nieuweProef(q) });
     if (op === 'uitkomst') { if (!['beter', 'slechter', 'gelijk'].includes(q.uitkomst)) return res.status(400).json({ fout: 'uitkomst moet beter, slechter of gelijk zijn' }); return res.status(200).json({ ok: true, les: await verwerkUitkomst(q.les, q.uitkomst, q.effect != null ? Number(q.effect) : NaN, q.site, q.toelichting) }); }
+    if (op === 'toegepast') { const ls = await lessen(); const l = ls.find(e => e.id === q.les); if (!l || !q.site) return res.status(400).json({ fout: 'site en bestaande les nodig' }); const { bewaarLessen } = await import('../lib/zicht.js'); l.toegepast = Object.assign({}, l.toegepast, { [q.site]: q.dag || DAY() }); await bewaarLessen(ls); return res.status(200).json({ ok: true, les: l.id, toegepast: l.toegepast }); }
     if (op === 'site') return res.status(200).json({ ok: true, site: await zetSite(q) });
     if (op === 'meet') return res.status(200).json({ ok: true, meting: await meet(q.site || 'kz', oidc) });
     if (op === 'ronde') return res.status(200).json(Object.assign({ ok: true }, await ronde(oidc, { zonderMeten: !!q.zonderMeten })));
