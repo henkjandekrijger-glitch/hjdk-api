@@ -1,10 +1,12 @@
 // bol-API voor de engine en de /t-pagina's (via rewrite /api/bol/:op):
+//   GET /api/bol/overdracht                    -> overdracht voor andere chats en collega's (gewone tekst)
 //   GET /api/bol/check                          -> werken de sleutels? (nooit de waarden zelf)
 //   GET /api/bol/pick?q=<paginatitel>&country=NL -> één passend product (24u cache): {ok, product:{ean,id,title,url,image,price,strike,rating}}
 //   GET /api/bol/search?q=..&page=1&size=24&sort=RELEVANCE&country=NL -> productlijst (20 min cache)
 //   GET /api/bol/learn[?days=7&min=300]  -> leren op orders: orders koppelen aan pagina/zone/lay-out, conversie goal=2 terugmelden, advies (zones uitsluiten/houden, pagina's op commissie per 1.000 kliks); cron elke 6 uur
 //   GET /api/bol/report?from=YYYY-MM-DD&to=YYYY-MM-DD&what=promotion|orders|commission[&raw=1] -> bol Reporting API v2 (kliks/orders/commissie per dag, site, subid-groep)
 import { kv } from '../lib/db.js';
+import { OVERDRACHT_BOL } from '../lib/overdracht-bol.js';
 import { getToken, getCreds, searchCached, catalog } from '../lib/bol.js';
 
 const clean = s => String(s || '').replace(/\s+/g, ' ').trim();
@@ -22,6 +24,7 @@ export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x');
   const op = url.searchParams.get('op') || url.pathname.replace(/^\/api\/bol\/?/, '').split('/')[0];
   const country = (url.searchParams.get('country') || 'NL').toUpperCase() === 'BE' ? 'BE' : 'NL';
+  if (op === 'overdracht') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(OVERDRACHT_BOL); }
   try {
     if (op === 'check') {
       const out = {};
