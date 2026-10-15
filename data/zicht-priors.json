@@ -1,0 +1,442 @@
+[
+ {
+  "id": "ssr-gids-inhoud",
+  "les": "Zorg dat de vragen, de uitkomst-uitleg, het gekozen product en de FAQ als gewone HTML in de server-respons staan, niet pas na JavaScript.",
+  "kanaal": "llm",
+  "bewijs": "Vercel/MERJ crawl-analyse: GPTBot en ClaudeBot voeren geen JavaScript uit (ze halen JS-bestanden op, ChatGPT 11,5% en Claude 23,8% van de requests, maar lezen client-gerenderde inhoud niet). Alleen Gemini (Google-infra) en AppleBot renderen JS. Bij een interactieve 3-vragen-gids is dit het grootste technische risico.",
+  "bron": "https://vercel.com/blog/the-rise-of-the-ai-crawler",
+  "sterkte": 5,
+  "moeite": 2,
+  "risico": "Geen penalty-risico. Wel: verborgen 'alle uitkomsten'-tekst moet ook zichtbaar zijn voor gebruikers (anders cloaking-achtig)."
+ },
+ {
+  "id": "ai-zoekbots-toelaten",
+  "les": "Laat in robots.txt OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot, Bingbot en Googlebot expliciet toe en controleer dat de host-firewall (Vercel 'Block AI Bots', Cloudflare) ze niet blokkeert.",
+  "kanaal": "llm",
+  "bewijs": "Anthropic: 'Disabling Claude-SearchBot on your site prevents our system from indexing your content for search optimization.' OpenAI vraagt OAI-SearchBot toe te laten voor ChatGPT search (docs-pagina zelf was niet ophaalbaar, bevestigd via SEJ/eseospace). Cloudflare blokkeert sinds 1 juli 2025 AI-crawlers standaard voor nieuwe domeinen; Vercel heeft een WAF-regel 'Block AI Bots'.",
+  "bron": "https://support.claude.com/en/articles/8896518",
+  "sterkte": 4,
+  "moeite": 1,
+  "risico": "Training-bots (GPTBot, ClaudeBot, Google-Extended) zijn een aparte keuze; die blokkeren raakt de zoek-bots niet. platform.openai.com/docs/bots en docs.perplexity.ai/guides/bots kon ik niet direct ophalen."
+ },
+ {
+  "id": "google-extended-is-geen-aio-knop",
+  "les": "Blokkeer Googlebot nooit om AI te weren; Google-Extended regelt alleen training/Gemini-grounding, niet AI Overviews of AI Mode.",
+  "kanaal": "beide",
+  "bewijs": "Google: Search-AI-features worden gestuurd via Googlebot-directives; Google-Extended 'doesn't govern Search itself'. Eis voor AI Overviews/AI Mode: pagina moet 'indexed and eligible to be shown in Google Search with a snippet' zijn.",
+  "bron": "https://developers.google.com/search/docs/appearance/ai-features",
+  "sterkte": 5,
+  "moeite": 1,
+  "risico": "nosnippet/max-snippet beperken ook AI-zichtbaarheid; niet gebruiken op gidspagina's."
+ },
+ {
+  "id": "google-top10-ranken",
+  "les": "Blijf gewoon klassiek SEO doen: een pagina in de Google top 10 heeft de grootste kans om in AI Overviews geciteerd te worden.",
+  "kanaal": "beide",
+  "bewijs": "Ahrefs juli 2025 (1,9M citaties, 1M AIO's): 76,1% van de AIO-citaties rankt in de top 10, mediane positie top-citatie = 2. Ahrefs maart 2026 (863K SERP's, ~4M URL's): nog maar 37,9% in top 10, 36,7% buiten top 100 — toegeschreven aan query fan-out na Gemini 3 (interpretatie, parser ook verbeterd).",
+  "bron": "https://ahrefs.com/blog/ai-overview-citations-top-10/",
+  "sterkte": 4,
+  "moeite": 4,
+  "risico": "Correlatie; rankings blijven nodig maar zijn steeds minder voldoende."
+ },
+ {
+  "id": "fan-out-subvragen-dekken",
+  "les": "Beantwoord per gids ook de deelvragen eromheen (budget, merk A vs B, voor wie niet, onderhoud) zodat de pagina rankt voor de fan-out-zoekopdrachten.",
+  "kanaal": "beide",
+  "bewijs": "Surfer (10K keywords, 33K fan-out queries, dec 2025): pagina's die ranken voor fan-out queries 161% vaker geciteerd; pagina's die voor hoofd- én minstens één fan-out query ranken = 51% van AIO-citaties, alleen hoofdquery <20%; Spearman 0,77. Google bevestigt dat AI Overviews/AI Mode 'multiple related searches across subtopics' uitvoeren.",
+  "bron": "https://searchengineland.com/ai-overview-fan-out-rankings-boost-citation-odds-study-466426",
+  "sterkte": 3,
+  "moeite": 3,
+  "risico": "Vendor-onderzoek, correlatie. Niet uitvullen met dunne extra secties."
+ },
+ {
+  "id": "bing-ranken-voor-chatgpt-copilot",
+  "les": "Behandel Bing als volwaardig kanaal: verifieer de sites in Bing Webmaster Tools en optimaliseer ook voor Bing-rankings.",
+  "kanaal": "llm",
+  "bewijs": "Seer Interactive (feb 2025, ~500 citaties, ~100 vragen, klein): >87% van ChatGPT-search-citaties zat in Bing top 20, tegen 56% match met Google. Microsoft: 'Bing and Copilot search experiences rely on the same core crawling, indexing, and ranking foundation'. Ahrefs (15K long-tail queries, aug 2025) vond echter maar ~8% overlap ChatGPT-citaties met Bing top 10 — beeld dus wisselend.",
+  "bron": "https://www.seerinteractive.com/insights/87-percent-of-searchgpt-citations-match-bings-top-results",
+  "sterkte": 3,
+  "moeite": 2,
+  "risico": "OpenAI noemt Bing niet officieel; er zijn ook berichten (The Information, aug 2025) dat ChatGPT Google-resultaten via SerpApi gebruikte. Niet op één index gokken."
+ },
+ {
+  "id": "indexnow-pushen",
+  "les": "Stuur bij elke nieuwe of gewijzigde gids automatisch een IndexNow-ping (Bing, Yandex, Seznam, Naver, Yep e.a. delen die onderling).",
+  "kanaal": "beide",
+  "bewijs": "IndexNow-documentatie: ingediende URL's worden 'automatically shared with all other participating search engines'; tot 10.000 URL's per POST. Google doet niet mee. Geen garantie op snelle indexering; geen publieke data dat IndexNow ChatGPT-zichtbaarheid verhoogt.",
+  "bron": "https://www.indexnow.org/documentation",
+  "sterkte": 3,
+  "moeite": 1,
+  "risico": "Alleen echt gewijzigde URL's sturen; spammen helpt niet."
+ },
+ {
+  "id": "sitemap-gsc-bwt",
+  "les": "Dien een sitemap in bij Google Search Console én Bing Webmaster Tools en gebruik 'indexering aanvragen' alleen voor een handvol belangrijkste pagina's.",
+  "kanaal": "beide",
+  "bewijs": "Google: 'If you have large numbers of URLs, submit a sitemap'; URL-inspectie heeft een quota; 'Crawling can take anywhere from a few days to a few weeks'; 'requesting a recrawl multiple times for the same URL won't get it crawled any faster.'",
+  "bron": "https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl",
+  "sterkte": 4,
+  "moeite": 1,
+  "risico": "Geen."
+ },
+ {
+  "id": "lastmod-eerlijk",
+  "les": "Zet in de sitemap een lastmod die alleen verandert bij een echte inhoudswijziging; priority en changefreq kunnen weg.",
+  "kanaal": "google",
+  "bewijs": "Google gebruikt lastmod 'if it's consistently and verifiably accurate'; 'Google ignores <priority> and <changefreq> values.' Een copyright-jaarwijziging telt niet als update.",
+  "bron": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
+  "sterkte": 4,
+  "moeite": 1,
+  "risico": "Kunstmatig elke dag lastmod verhogen maakt het signaal onbetrouwbaar en wordt dan genegeerd."
+ },
+ {
+  "id": "interne-links-hub",
+  "les": "Link elke gids vanuit een categorie-hub en vanuit 3-5 verwante gidsen, zodat geen pagina wees is.",
+  "kanaal": "beide",
+  "bewijs": "Google noemt interne links expliciet als SEO-basis voor AI-features. Vercel: AI-crawlers raken 34% 404's (ChatGPT 34,8%, Claude 34,2%) tegen 8,2% bij Googlebot — consistente URL's, redirects en actuele sitemaps verminderen dat. Geen kwantitatieve studie over interne links specifiek voor AI-citaties gevonden.",
+  "bron": "https://developers.google.com/search/docs/appearance/ai-features",
+  "sterkte": 3,
+  "moeite": 2,
+  "risico": "Geen."
+ },
+ {
+  "id": "404-redirects-schoon",
+  "les": "Houd URL's stabiel, zet 301's bij elke hernoeming en controleer logbestanden op 404's van AI-bots.",
+  "kanaal": "llm",
+  "bewijs": "Vercel: 34,82% van ChatGPT-fetches en 34,16% van Claude-fetches eindigt in 404, 14,36% van ChatGPT volgt redirects; Googlebot 8,22% 404.",
+  "bron": "https://vercel.com/blog/the-rise-of-the-ai-crawler",
+  "sterkte": 3,
+  "moeite": 2,
+  "risico": "Geen."
+ },
+ {
+  "id": "statistieken-toevoegen",
+  "les": "Zet in elke gids concrete cijfers (meetwaarden, prijzen, specs, testscores) met bron, in plaats van vage claims.",
+  "kanaal": "llm",
+  "bewijs": "GEO-paper (Aggarwal et al., KDD 2024): Statistics Addition, Quotation Addition en Cite Sources verhoogden zichtbaarheid (position-adjusted word count) met 30-40%, beste methode ~41%; getest ook op Perplexity. SE Ranking (216K pagina's): pagina's met 19+ datapunten 5,4 citaties gem. vs 2,8 bij weinig data.",
+  "bron": "https://arxiv.org/abs/2311.09735",
+  "sterkte": 4,
+  "moeite": 2,
+  "risico": "Cijfers moeten kloppen en herleidbaar zijn; verzonnen statistieken = reputatie- en kwaliteitsrisico. GEO-test was een synthetische 5-bronnen-setting; echte effecten waarschijnlijk kleiner."
+ },
+ {
+  "id": "bronnen-citeren",
+  "les": "Verwijs in de tekst naar gezaghebbende bronnen (fabrikant-specs, onafhankelijke tests, consumentenorganisaties).",
+  "kanaal": "llm",
+  "bewijs": "GEO-paper: Cite Sources gaf +115,1% zichtbaarheid voor bronnen op positie 5, terwijl de nr. 1 gemiddeld 30,3% verloor — vooral kleine/lager gerankte sites profiteren.",
+  "bron": "https://arxiv.org/abs/2311.09735",
+  "sterkte": 3,
+  "moeite": 2,
+  "risico": "Uitgaande links naar concurrenten/winkels bewust kiezen; geen."
+ },
+ {
+  "id": "expertquotes",
+  "les": "Voeg per gids een korte, echte uitspraak van een vakpersoon of tester toe met naam en functie.",
+  "kanaal": "llm",
+  "bewijs": "GEO-paper: Quotation Addition +28% subjective impression. SE Ranking: pagina's met expertquotes 4,1 ChatGPT-citaties vs 2,4 zonder (correlatie).",
+  "bron": "https://www.searchenginejournal.com/new-data-top-factors-influencing-chatgpt-citations",
+  "sterkte": 3,
+  "moeite": 3,
+  "risico": "Verzonnen quotes of personen = misleiding en E-E-A-T-risico. Alleen echte bronnen."
+ },
+ {
+  "id": "antwoord-bovenaan",
+  "les": "Zet de conclusie (welk product voor wie en waarom) in de eerste alinea's, niet alleen na het doorlopen van de 3 vragen.",
+  "kanaal": "llm",
+  "bewijs": "Kevin Indig (SEJ, feb 2026, 18.012 geverifieerde ChatGPT-citaties): 44,2% van citaties komt uit de eerste 30% van de tekst, 31,1% midden, 24,7% laatste derde.",
+  "bron": "https://www.searchenginejournal.com/the-science-of-how-ai-pays-attention/561306/",
+  "sterkte": 3,
+  "moeite": 1,
+  "risico": "Geen; kan wel interactie-ratio verlagen als mensen het antwoord al zien."
+ },
+ {
+  "id": "stellige-taal-entiteiten",
+  "les": "Schrijf stellig en concreet met merk-, model- en eigenschapsnamen ('X is de beste keuze onder 300 euro voor kleine keukens omdat ...'), niet vaag.",
+  "kanaal": "llm",
+  "bewijs": "Indig: definitieve taal in 36,2% van geciteerde tekst vs 20,2% ongeciteerd; geciteerde tekst ~20,6% entiteitsdichtheid vs 5-8% normaal; eenvoudiger leesniveau (Flesch-Kincaid 16 vs 19,1).",
+  "bron": "https://www.searchenginejournal.com/the-science-of-how-ai-pays-attention/561306/",
+  "sterkte": 2,
+  "moeite": 1,
+  "risico": "Correlatie-onderzoek van één auteur."
+ },
+ {
+  "id": "geen-keyword-stuffing",
+  "les": "Stop met zoekwoorden herhalen in titels, URL's en tekst; schrijf natuurlijk.",
+  "kanaal": "beide",
+  "bewijs": "GEO-paper: keyword stuffing deed het op Perplexity ~10% slechter dan geen optimalisatie. SE Ranking: sterk keyword-geoptimaliseerde titels 2,8 citaties vs 5,9 bij lage keyword-match; URL's met hoge keyword-match 2,7 vs 6,4.",
+  "bron": "https://arxiv.org/abs/2311.09735",
+  "sterkte": 3,
+  "moeite": 1,
+  "risico": "Geen; is ook een Google-spamsignaal."
+ },
+ {
+  "id": "versheid-echt-updaten",
+  "les": "Werk gidsen periodiek echt bij (prijzen, nieuwe modellen, uitverkochte producten) en toon een zichtbare 'laatst bijgewerkt'-datum plus dateModified.",
+  "kanaal": "llm",
+  "bewijs": "Ahrefs (17M citaties, jul 2025): AI-assistenten citeren content die 25,7% verser is dan organische resultaten (1.064 vs 1.432 dagen); ChatGPT het sterkst (958 dagen), Google AIO juist niet verser. SE Ranking: binnen 3 maanden bijgewerkt 6 citaties vs 3,6 verouderd. Bing (Canel): 'Gen AIs value fresh content in particular'.",
+  "bron": "https://ahrefs.com/blog/do-ai-assistants-prefer-to-cite-fresh-content/",
+  "sterkte": 4,
+  "moeite": 2,
+  "risico": "Alleen datum aanpassen zonder echte wijziging is misleidend en kan lastmod-vertrouwen kosten."
+ },
+ {
+  "id": "datum-recency-bias",
+  "les": "Zet de publicatie-/updatedatum duidelijk in de tekst en metadata, omdat LLM-rerankers aantoonbaar recentere datums voortrekken.",
+  "kanaal": "llm",
+  "bewijs": "arXiv 2509.11353 (7 LLM's incl. GPT-4o, Llama-3, Qwen-2.5): datum-injectie verschoof top-10 gemiddeld tot 4,78 jaar naar recenter, individuele passages tot 95 posities, paarsgewijze voorkeur tot ~25% omgedraaid.",
+  "bron": "https://arxiv.org/abs/2509.11353",
+  "sterkte": 3,
+  "moeite": 1,
+  "risico": "Labexperiment met rerankers, niet met productie-zoekmachines. Valse datums = misleiding."
+ },
+ {
+  "id": "best-x-lijstformat",
+  "les": "Voeg naast de ene pick een korte 'beste per situatie'-lijst toe (beste budget, beste premium, beste voor X) met onderbouwing per item.",
+  "kanaal": "llm",
+  "bewijs": "Ahrefs (750 ChatGPT-prompts, dec 2025): 'best X'-lijsten waren 43,8% van alle geciteerde paginatypes; 79,1% van de geciteerde lijsten was in 2025 bijgewerkt, 26% in de twee maanden ervoor.",
+  "bron": "https://ahrefs.com/blog/best-lists-research/",
+  "sterkte": 3,
+  "moeite": 2,
+  "risico": "Google-reviewrichtlijn: elk lijst-item moet 'enough substance to stand on its own' hebben, anders thin content."
+ },
+ {
+  "id": "eigen-ervaring-meetwaarden",
+  "les": "Geef per pick eigen bewijs: foto's, metingen, vergelijking met alternatieven, voor- en nadelen en waarom dit 'de beste' is.",
+  "kanaal": "google",
+  "bewijs": "Google reviewrichtlijnen: 'Provide evidence such as visuals, audio, or other links of your own experience'; 'Share quantitative measurements about how something measures up'; best-of claims onderbouwen met first-hand evidence. Geen getal; dit is de officiële maatstaf van het reviews-systeem.",
+  "bron": "https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews",
+  "sterkte": 4,
+  "moeite": 4,
+  "risico": "Zonder eigen bewijs kwalificeren 3-vragen-gidsen snel als 'thin affiliation'."
+ },
+ {
+  "id": "meerdere-winkels",
+  "les": "Link waar mogelijk naar meer dan één winkel (bijv. bol én Coolblue, Amazon én een tweede shop).",
+  "kanaal": "google",
+  "bewijs": "Google: 'Consider including links to multiple sellers to give the reader the option to purchase from their merchant of choice.' Geen kwantitatief effect bekend.",
+  "bron": "https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews",
+  "sterkte": 2,
+  "moeite": 2,
+  "risico": "Kan affiliate-omzet per klik verdunnen."
+ },
+ {
+  "id": "geen-geschaalde-ai-content",
+  "les": "Publiceer niet honderden bijna-identieke AI-gidsen; elke pagina moet iets eigens toevoegen (data, ervaring, unieke vergelijking).",
+  "kanaal": "google",
+  "bewijs": "Google spam-beleid: scaled content abuse = 'many pages are generated for the primary purpose of manipulating search rankings', met als voorbeeld 'Using generative AI tools ... to generate many pages without adding value for users'. Maart 2024-update: '45% less low quality, unoriginal content'. Originality.ai: 1.446 van ~79K gecheckte sites (1,9%) gedeïndexeerd na manual action; 100% van 14 genoemde sites had AI-content, 50% >90%.",
+  "bron": "https://developers.google.com/search/docs/essentials/spam-policies",
+  "sterkte": 5,
+  "moeite": 3,
+  "risico": "Hoogste risico voor jonge template-sites: sitebrede manual action / deïndexering. AI gebruiken mag ('Appropriate use of AI or automation is not against our guidelines', Google feb 2023 — tekst niet opnieuw opgehaald), massaproductie zonder waarde niet."
+ },
+ {
+  "id": "geen-thin-affiliate-template",
+  "les": "Zorg dat gidsen niet alleen productbeschrijvingen van de fabrikant/winkel herhalen in een vast sjabloon.",
+  "kanaal": "google",
+  "bewijs": "Google spam-beleid 'thin affiliation': affiliate-content waarvan productbeschrijvingen van de originele verkoper komen; 'cookie-cutter sites or templates with the same or similar content replicated'. Quality Rater Guidelines jan 2025 (4.6.6): main content die bijna geheel 'auto or AI generated ... with little to no effort' is krijgt de laagste beoordeling.",
+  "bron": "https://developers.google.com/search/docs/essentials/spam-policies",
+  "sterkte": 5,
+  "moeite": 3,
+  "risico": "Drie taalsites met dezelfde structuur: per taal echte lokale inhoud (lokale winkels, prijzen, modellen) voorkomt dat het als replicatie oogt."
+ },
+ {
+  "id": "geen-doorway-paginas",
+  "les": "Maak geen aparte pagina's voor elke kleine zoekvariant ('beste X voor 2 personen', 'voor 3 personen') die naar dezelfde pick leiden; bundel ze.",
+  "kanaal": "google",
+  "bewijs": "Google: 'Doorway abuse is when sites or pages are created to rank for specific, similar search queries.'",
+  "bron": "https://developers.google.com/search/docs/essentials/spam-policies",
+  "sterkte": 4,
+  "moeite": 1,
+  "risico": "Programmatic 'per-variant' pagina's zijn het klassieke doorway-patroon."
+ },
+ {
+  "id": "llms-txt-lage-prio",
+  "les": "Steek geen tijd in llms.txt; het kost weinig maar er is geen bewijs dat het citaties oplevert.",
+  "kanaal": "llm",
+  "bewijs": "SE Ranking (~300K domeinen, nov 2025): 10,13% heeft llms.txt, geen meetbaar effect op citaties; het ML-model werd zelfs beter zonder die variabele. OtterlyAI-logs: 84 van 62.100 AI-bot-requests (~0,1%) naar /llms.txt. Google (Mueller): 'no AI system is currently using the LLMS.txt file'; Illyes: Google ondersteunt het niet.",
+  "bron": "https://www.searchenginejournal.com/llms-txt-shows-no-clear-effect-on-ai-citations-based-on-300k-domains/561542/",
+  "sterkte": 4,
+  "moeite": 1,
+  "risico": "Geen risico, wel verspilde moeite. Als het er al staat: laten staan."
+ },
+ {
+  "id": "schema-geen-ai-hefboom",
+  "les": "Gebruik structured data (Product, FAQ, Breadcrumb) alleen als het exact de zichtbare tekst volgt en voor rich results, niet als AI-citatiehefboom.",
+  "kanaal": "beide",
+  "bewijs": "Ahrefs difference-in-differences (mei 2026, 1.885 pagina's die JSON-LD toevoegden vs 4.000 controles): AIO −4,6%, AI Mode +2,4% en ChatGPT +2,2% (laatste twee niet te onderscheiden van ruis). Google: 'no special schema.org structured data that you need to add'. SE Ranking: FAQ-schema 3,6 citaties vs 4,2 zonder. Bing (Canel, SMX München 2025, via derden) zegt wel dat schema Microsofts LLM's helpt.",
+  "bron": "https://ahrefs.com/blog/schema-ai-citations/",
+  "sterkte": 4,
+  "moeite": 1,
+  "risico": "Ahrefs-cijfers via TechWyse-samenvatting, origineel niet zelf gelezen. Schema dat niet overeenkomt met zichtbare tekst kan manual action opleveren."
+ },
+ {
+  "id": "merkvermeldingen-web",
+  "les": "Werk aan vermeldingen van keuzehulp.best / whichtobuy.best / kaufberater.best op andere sites (artikelen, lijsten, nieuwsbrieven), ook zonder link.",
+  "kanaal": "llm",
+  "bewijs": "Ahrefs (75K merken): Spearman-correlatie met AI Overview-zichtbaarheid: merkvermeldingen op het web 0,664, branded anchors 0,527, branded zoekvolume 0,392, DR 0,326, aantal backlinks 0,218.",
+  "bron": "https://ahrefs.com/blog/ai-overview-brand-correlation/",
+  "sterkte": 3,
+  "moeite": 4,
+  "risico": "Correlatie, gefilterd op DR>40-domeinen; jonge sites vallen buiten die populatie. Gekochte vermeldingen = linkspam-risico."
+ },
+ {
+  "id": "reddit-quora-aanwezigheid",
+  "les": "Beantwoord echte koopvragen op Reddit/Quora (en lokale fora zoals Tweakers, Reddit r/thenetherlands, gutefrage) met inhoudelijke hulp, af en toe met link.",
+  "kanaal": "llm",
+  "bewijs": "Semrush (217K prompts, 248K Reddit-URL's, nov 2025): Reddit #1 op Perplexity, #2 op ChatGPT Search (~13%), #3 op AI Mode (~9%); geciteerde posts mediaan 5-8 upvotes, ~80 woorden, >50% Q&A-threads. Ahrefs (sep 2026): Reddit 18,5% van top-50-citaties in AIO, Quora 4,7%. SE Ranking: veel Reddit-vermeldingen 7 citaties vs 1,8 bij minimale activiteit.",
+  "bron": "https://www.semrush.com/blog/reddit-ai-search-visibility-study/",
+  "sterkte": 3,
+  "moeite": 3,
+  "risico": "Reddit bant zelfpromotie snel; accounts moeten echt bijdragen. Volatiel: ChatGPT-aandeel Reddit zakte van ~60% naar ~10% van antwoorden tussen aug en sep 2025 (Semrush)."
+ },
+ {
+  "id": "youtube-video",
+  "les": "Maak per categorie korte YouTube-video's (bijv. '3 vragen, 1 keuze') en embed ze op de gids.",
+  "kanaal": "beide",
+  "bewijs": "Ahrefs (>3M US-queries, sep 2026): YouTube is het meest geciteerde domein in AI Overviews met 22,9% van de top-50-citaties. Ahrefs: video's worden bijna 2x vaker geciteerd in AIO dan in AI Mode.",
+  "bron": "https://ahrefs.com/blog/most-cited-domains-ai-overviews/",
+  "sterkte": 3,
+  "moeite": 4,
+  "risico": "US-data; NL/DE-aandeel onbekend. Massaal AI-video's maken kan ook YouTube-beleid raken."
+ },
+ {
+  "id": "reviewplatforms",
+  "les": "Zorg dat de sites vermeld staan op review- en vergelijkingsplatforms en directories die bij de niche passen.",
+  "kanaal": "llm",
+  "bewijs": "SE Ranking: domeinen op meerdere reviewplatforms 4,6-6,3 ChatGPT-citaties vs 1,8 zonder (correlatie).",
+  "bron": "https://www.searchenginejournal.com/new-data-top-factors-influencing-chatgpt-citations",
+  "sterkte": 2,
+  "moeite": 3,
+  "risico": "Nepreviews zijn verboden; alleen echte vermeldingen."
+ },
+ {
+  "id": "paginasnelheid-fcp",
+  "les": "Houd de gids licht: First Contentful Paint onder ~0,5 s via statische/edge-rendering en weinig scripts.",
+  "kanaal": "beide",
+  "bewijs": "SE Ranking: FCP <0,4 s gemiddeld 6,7 ChatGPT-citaties vs 2,1 bij >1,13 s (correlatie; snelle sites zijn ook vaak grote sites).",
+  "bron": "https://www.searchenginejournal.com/new-data-top-factors-influencing-chatgpt-citations",
+  "sterkte": 2,
+  "moeite": 2,
+  "risico": "Geen."
+ },
+ {
+  "id": "diepgang-secties",
+  "les": "Maak gidsen niet te mager: richt op een uitleg-sectie van een paar honderd woorden met blokken van ~120-180 woorden per tussenkop naast de interactieve vragen.",
+  "kanaal": "llm",
+  "bewijs": "SE Ranking: <800 woorden 3,2 citaties vs >2.900 woorden 5,1; secties van 120-180 woorden 4,6 vs <50 woorden 2,7. Google reviewrichtlijn zegt echter dat kwaliteit en originaliteit zwaarder wegen dan lengte.",
+  "bron": "https://www.searchenginejournal.com/new-data-top-factors-influencing-chatgpt-citations",
+  "sterkte": 2,
+  "moeite": 3,
+  "risico": "Opvullen met AI-tekst om lengte te halen vergroot het scaled-content-risico."
+ },
+ {
+  "id": "vraag-koppen-faq",
+  "les": "Houd de FAQ met echte vraagkoppen, maar zie het als hulp voor de lezer, niet als bewezen citatie-truc.",
+  "kanaal": "llm",
+  "bewijs": "Tegenstrijdig: Indig vond tekst met vraagtekens 18% geciteerd vs 8,9% zonder, en 78,4% van geciteerde vragen stond in koppen. SE Ranking vond vraag-koppen 3,4 citaties vs 4,3 voor gewone koppen, en FAQ-secties 3,8 vs 4,1 zonder.",
+  "bron": "https://www.searchenginejournal.com/the-science-of-how-ai-pays-attention/561306/",
+  "sterkte": 1,
+  "moeite": 1,
+  "risico": "Geen; bewijs neutraal."
+ },
+ {
+  "id": "engels-voor-nl-de-prompts",
+  "les": "Zet in op whichtobuy.best (Engels) ook voor NL/DE-gebruikers, omdat ChatGPT bij niet-Engelse vragen vaak ook in het Engels zoekt.",
+  "kanaal": "llm",
+  "bewijs": "Peec AI (>10M prompts, feb 2026): 43% van fan-outs bij niet-Engelse prompts gebeurt in het Engels; bij ~78% van de sessies minstens één Engelse subzoekopdracht. Temso (7M citaties, apr 2026): bij Nederlandse prompts citeert ChatGPT 62,2% Nederlandse bronnen, Copilot 66,4%, Google AIO 81,2%, Grok 38,3%; Duits: ChatGPT 66,0%, AIO 89,8%.",
+  "bron": "https://www.temso.ai/data/-Lost-in-Translation-How-AI-Models-Handle-Local-Language-Sources",
+  "sterkte": 3,
+  "moeite": 2,
+  "risico": "Vendor-onderzoek. hreflang tussen de drie sites alleen als het echt vertalingen van dezelfde pagina zijn."
+ },
+ {
+  "id": "aio-en-ai-mode-apart",
+  "les": "Meet AI Overviews en AI Mode los: dezelfde pagina wordt zelden in beide geciteerd, dus resultaten van de een zeggen weinig over de ander.",
+  "kanaal": "beide",
+  "bewijs": "Ahrefs (540K querypaar, sep 2025, US): URL-overlap AI Mode vs AI Overviews 13,7% (top 3: 16,3%). AI Mode citeert Quora 3,5x vaker; AIO citeert video's en kernpagina's (home/categorie) bijna 2x vaker.",
+  "bron": "https://ahrefs.com/blog/ai-overviews-vs-ai-mode",
+  "sterkte": 3,
+  "moeite": 1,
+  "risico": "Geen."
+ },
+ {
+  "id": "bing-ai-performance-meten",
+  "les": "Zet in Bing Webmaster Tools het AI Performance-rapport aan en volg welke gidsen Copilot citeert en op welke 'grounding queries'.",
+  "kanaal": "llm",
+  "bewijs": "Microsoft lanceerde het AI Performance-rapport als public preview in feb 2026: citaties per dag, per pagina en de grounding queries. Casus Search Influence: 19.717 citaties over 86 pagina's, één pagina 69%, top 4 = 90%; daarna 97% daling — citaties zijn geconcentreerd en volatiel.",
+  "bron": "https://www.searchinfluence.com/blog/bing-ai-performance-report-copilot-citations/",
+  "sterkte": 3,
+  "moeite": 1,
+  "risico": "Alleen Copilot; citatie is geen klik."
+ },
+ {
+  "id": "brave-index-claude",
+  "les": "Controleer of de gidsen in Brave Search verschijnen, omdat Claude's webzoekfunctie daarop draait.",
+  "kanaal": "llm",
+  "bewijs": "Simon Willison / TechCrunch (mrt 2025): Anthropic noemt Brave Search als subprocessor, geciteerde resultaten matchten Brave-resultaten exact, en de tool-parameters heetten 'BraveSearchParams'. Geen data over hoe je Brave-indexering versnelt.",
+  "bron": "https://simonwillison.net/2025/Mar/21/anthropic-use-brave/",
+  "sterkte": 2,
+  "moeite": 2,
+  "risico": "Situatie kan sindsdien veranderd zijn (Claude-SearchBot bestaat nu ook)."
+ },
+ {
+  "id": "niet-overfitten-op-platform",
+  "les": "Spreid over Google, Bing, Reddit, YouTube en eigen content; citatiebronnen van AI-platforms verschuiven binnen weken.",
+  "kanaal": "llm",
+  "bewijs": "Semrush (230K prompts, 100M+ citaties, jul-okt 2025): op ChatGPT zakte Reddit van ~60% naar ~10% van antwoorden en Wikipedia van ~55% naar <20%. Profound (680M citaties, aug 2024-jun 2025): Wikipedia 47,9% van ChatGPT's top-10-bronnen, Reddit 46,7% van Perplexity's top 10, Reddit 21% van AIO's top 10.",
+  "bron": "https://www.semrush.com/blog/most-cited-domains-ai/",
+  "sterkte": 3,
+  "moeite": 1,
+  "risico": "Geen."
+ },
+ {
+  "id": "titel-zoekterm-voorop",
+  "les": "Begin de paginatitel met de woorden waarmee mensen zoeken (bijv. 'Keuzehulp printer: ...') en herschrijf titels van pagina's die vertoond maar niet aangeklikt worden.",
+  "kanaal": "google",
+  "bewijs": "Eigen lus keuzehulp.best (gsc-ronde, sinds 9 okt 2026); effect wordt gemeten per herschreven pagina.",
+  "bron": "eigen data",
+  "sterkte": 3,
+  "moeite": 1,
+  "risico": "Niet elke dag dezelfde pagina herschrijven: 21 dagen rust per pagina."
+ },
+ {
+  "id": "faq-uit-zoekvragen",
+  "les": "Zet zoekvragen waarvoor Google een pagina al toont, maar die de pagina niet beantwoordt, als eerlijke FAQ op die pagina.",
+  "kanaal": "beide",
+  "bewijs": "Eigen lus (gsc-ronde, max 4 pagina's per dag); dekt de deelvragen die AI-assistenten ook stellen (fan-out).",
+  "bron": "eigen data",
+  "sterkte": 3,
+  "moeite": 1,
+  "risico": "Alleen echte antwoorden, geen verzonnen productdata."
+ },
+ {
+  "id": "interne-links-niet-geindexeerd",
+  "les": "Link pagina's die Google nog niet kent of nog niet opnam vanaf de homepage en vanaf andere pagina's, zodat Google ze vindt.",
+  "kanaal": "google",
+  "bewijs": "15 okt 2026: 129 van 272 pagina's van keuzehulp.best onbekend bij Google; proef met 80% gelinkt, 20% controle.",
+  "bron": "eigen data",
+  "sterkte": 3,
+  "moeite": 1,
+  "risico": "Geen lange linklijsten die op spam lijken; max 60 op de homepage, 4 per pagina."
+ },
+ {
+  "id": "onderwerpen-uit-vraagdata",
+  "les": "Kies nieuwe pagina's op gemeten vraag (Search Console-vragen zonder pagina, Demand Radar stijgers, zoekvolume), niet op gevoel.",
+  "kanaal": "beide",
+  "bewijs": "Planners van keuzehulp/whichtobuy/kaufberater gebruiken sinds 15 okt 2026 Demand Radar; effect per bron wordt gemeten (vertoningen na 28 dagen).",
+  "bron": "eigen data",
+  "sterkte": 3,
+  "moeite": 2,
+  "risico": ""
+ },
+ {
+  "id": "antwoord-op-subvragen-positie-4-20",
+  "les": "Werk eerst aan pagina's die al op positie 4 tot 20 staan voor een zoekvraag: titel, FAQ en interne links daarheen.",
+  "kanaal": "google",
+  "bewijs": "Eigen lus: 'kansen' uit Search Console krijgen extra interne links en nieuwe titels.",
+  "bron": "eigen data",
+  "sterkte": 3,
+  "moeite": 1,
+  "risico": ""
+ }
+]

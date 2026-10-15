@@ -3,6 +3,7 @@
 //    (kzmaak en wtbmaak zetten die vooraan in hun onderwerpenlijst); 3) pagina's met te lage CTR -> nieuwe titel + omschrijving (max 3 per site per dag, 21 dagen rust per pagina).
 // Routes: /api/gsc?op=status (openbaar overzicht), op=whoami (welk Vercel-token, zonder het token zelf), op=dag (cron of token=HJDK_TOKEN), op=sites (token).
 import { kv } from '../lib/db.js';
+import { nieuweProef } from '../lib/zicht.js';
 import { SITES, SITEMAPS, claims, sites, propFor, rows, analyse, submitSitemap, sitemapInfo, ruis, inspect } from '../lib/gsc.js';
 import { MARKETS, items as wtbItems, K as WK, claude, json, indexnow as wtbIndexnow } from '../lib/wtb.js';
 import seed from '../data/kz.json' with { type: 'json' };
@@ -107,6 +108,9 @@ async function ronde(oidc) {
         vragen.forEach(v => done.add(v.slug + '|' + v.q.toLowerCase()));
       }
       try { await kv.set(doneKey, [...done].slice(-2000)); } catch (e) {}
+      // ZICHT: elke wijziging wordt een proef die de lus over 21 dagen zelf beoordeelt (vertoningen tegen de hele site)
+      for (const f of fixes.filter(f => f.nieuw)) { try { await nieuweProef({ site: id, les: 'titel-zoekterm-voorop', urls: ['https://' + host + '/' + f.slug], metric: 'gsc', wat: 'titel: ' + f.nieuw, van: 'gsc-ronde' }); } catch (e) {} }
+      for (const f of faqs.filter(f => f.vragen)) { try { await nieuweProef({ site: id, les: 'faq-uit-zoekvragen', urls: ['https://' + host + '/' + f.slug], metric: 'gsc', wat: 'faq: ' + f.vragen.join(' | ').slice(0, 200), van: 'gsc-ronde' }); } catch (e) {} }
       const urls = [...new Set([...fixes.filter(f => f.nieuw), ...faqs.filter(f => f.vragen)].map(f => 'https://' + host + '/' + f.slug))];
       if (urls.length) { if (m) await wtbIndexnow(m, urls); else await fetch('https://api.indexnow.org/indexnow', { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify({ host, key: KZ_INDEXNOW, keyLocation: 'https://' + host + '/' + KZ_INDEXNOW + '.txt', urlList: urls }) }).catch(() => {}); }
       const res = { host, prop, dag: DAY(), totaal: a.totaal, open: a.open, laagCtr: a.laagCtr.map(p => ({ slug: p.slug, imp: p.imp, clicks: p.clicks, pos: p.pos, topQ: p.topQ })), titelsVernieuwd: fixes, faqErbij: faqs, subvragen: a.subvragen.slice(0, 30), kansen: a.kansen.slice(0, 20) };
@@ -127,17 +131,21 @@ export default async function handler(req, res) {
     if (op === 'sitemaps') { // openbaar: indienen (hooguit eens per dag per site) + wat Google ervan heeft gelezen
       const l = await sites(oidc); const out = {}; for (const [id, host] of Object.entries(SITES)) { const prop = propFor(l, host); if (!prop) { out[host] = { fout: 'geen toegang' }; continue; } out[host] = { indienen: await smap(id, prop, oidc), google: await sitemapInfo(prop, oidc).catch(e => String(e.message).slice(0, 120)) }; }
       return res.status(200).json({ ok: true, sitemaps: out }); }
-    if (op === 'index') { // openbaar: hoeveel pagina's uit de sitemap staan echt in Google (steekproef of alles, hooguit eens per 6 uur per site)
-      const id = SITES[url.searchParams.get('site')] ? url.searchParams.get('site') : 'kz'; const host = SITES[id]; const ck = 'hjdk:gsc:index:' + id;
-      const c0 = await kv.get(ck).catch(() => null); if (c0 && Date.now() - c0.at < 6 * 3600e3 && !isToken) return res.status(200).json(Object.assign({ ok: true, uitCache: true }, c0));
+    if (op === 'index') { // openbaar: welke pagina's uit de sitemap staan echt in Google; elke ronde de langst niet gecontroleerde eerst, resultaten per URL bewaard
+      const id = SITES[url.searchParams.get('site')] ? url.searchParams.get('site') : 'kz'; const host = SITES[id]; const ck = 'hjdk:gsc:index:' + id; const mk = ck + ':map';
+      const c0 = await kv.get(ck).catch(() => null); if (c0 && Date.now() - c0.at < 6 * 3600e3 && !isToken && !isCron) return res.status(200).json(Object.assign({ ok: true, uitCache: true }, c0, { alles: undefined }));
       const l = await sites(oidc); const prop = propFor(l, host); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot ' + host });
-      const xml = await (await fetch(SITEMAPS[id])).text(); const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim());
-      const n = Math.min(Number(url.searchParams.get('n')) || 400, 400); const pick = urls.slice(0, n); const out = [];
-      for (let i = 0; i < pick.length; i += 8) { const part = await Promise.all(pick.slice(i, i + 8).map(u => inspect(prop, u, oidc))); out.push(...part); if (Date.now() - t0 > 240e3) break; }
-      const per = {}; out.forEach(x => { const k = x.fout ? 'fout' : (x.staat || x.verdict || 'onbekend'); per[k] = (per[k] || 0) + 1; });
-      const res0 = { at: Date.now(), dag: new Date().toISOString().slice(0, 10), site: host, inSitemap: urls.length, bekeken: out.length, geindexeerd: out.filter(x => x.verdict === 'PASS').length, perStaat: per, nietGeindexeerd: out.filter(x => x.verdict !== 'PASS').slice(0, 60).map(x => ({ url: x.url, staat: x.staat || x.fout, gecrawld: x.gecrawld })) };
-      await kv.set(ck, res0).catch(() => {}); const hist = (await kv.get(ck + ':hist').catch(() => null)) || []; hist.unshift({ dag: res0.dag, inSitemap: res0.inSitemap, bekeken: res0.bekeken, geindexeerd: res0.geindexeerd }); await kv.set(ck + ':hist', hist.slice(0, 60)).catch(() => {});
-      return res.status(200).json(Object.assign({ ok: true }, res0, { historie: hist.slice(0, 14) }));
+      const xml = await (await fetch(SITEMAPS[id])).text(); const urls = [...new Set([...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim()))];
+      const map = (await kv.get(mk).catch(() => null)) || {}; const dag = new Date().toISOString().slice(0, 10);
+      // volgorde: nooit bekeken, dan niet geïndexeerd en langst geleden, dan geïndexeerd en langst geleden
+      const todo = urls.slice().sort((x, y) => { const a = map[x], b = map[y]; const ka = !a ? 0 : a.v === 'PASS' ? 2 : 1, kb = !b ? 0 : b.v === 'PASS' ? 2 : 1; return ka - kb || String((a || {}).d || '').localeCompare(String((b || {}).d || '')); });
+      let n = 0; for (let i = 0; i < todo.length; i += 8) { const part = await Promise.all(todo.slice(i, i + 8).map(u => inspect(prop, u, oidc))); part.forEach(x => { if (!x.fout) { map[x.url] = { v: x.verdict, s: x.staat, c: x.gecrawld, d: dag }; n++; } }); if (Date.now() - t0 > 230e3) break; }
+      Object.keys(map).forEach(u => { if (!urls.includes(u)) delete map[u]; }); await kv.set(mk, map).catch(() => {});
+      const alles = urls.filter(u => map[u]).map(u => ({ url: u, verdict: map[u].v, staat: map[u].s, gecrawld: map[u].c, dag: map[u].d }));
+      const per = {}; alles.forEach(x => { const k = x.staat || x.verdict || 'onbekend'; per[k] = (per[k] || 0) + 1; });
+      const res0 = { at: Date.now(), dag, site: host, inSitemap: urls.length, bekeken: alles.length, vandaagBekeken: n, geindexeerd: alles.filter(x => x.verdict === 'PASS').length, perStaat: per, nietGeindexeerd: alles.filter(x => x.verdict !== 'PASS').slice(0, 150).map(x => ({ url: x.url, staat: x.staat, gecrawld: x.gecrawld })), alles };
+      await kv.set(ck, res0).catch(() => {}); const hist = (await kv.get(ck + ':hist').catch(() => null)) || []; const h1 = { dag, inSitemap: res0.inSitemap, bekeken: res0.bekeken, geindexeerd: res0.geindexeerd }; await kv.set(ck + ':hist', [h1, ...hist.filter(x => x.dag !== dag)].slice(0, 90)).catch(() => {});
+      return res.status(200).json(Object.assign({ ok: true }, res0, { alles: undefined, historie: [h1, ...hist.filter(x => x.dag !== dag)].slice(0, 14) }));
     }
     if (op === 'dag' && !isCron && !isToken) { // zonder token: hooguit eens per 2 uur (alleen lezen + max 3 titels per site)
       const last = await kv.get('hjdk:gsc:lastrun').catch(() => 0); if (last && Date.now() - last < 2 * 3600e3) return res.status(429).json({ ok: false, fout: 'laatste ronde was minder dan 2 uur geleden', status: '/api/gsc?op=status' });

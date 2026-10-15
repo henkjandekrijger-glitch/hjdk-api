@@ -95,6 +95,10 @@
     {
       "path": "/api/gsc?op=index&site=kz",
       "schedule": "15 4 * * *"
+    },
+    {
+      "path": "/api/zicht?op=ronde",
+      "schedule": "30 5 * * *"
     }
   ],
   "rewrites": [
@@ -453,6 +457,9 @@
     },
     "api/mm.js": {
       "maxDuration": 60
+    },
+    "api/zicht.js": {
+      "maxDuration": 300
     }
   },
   "redirects": [
