@@ -49,6 +49,9 @@ export default async function handler(req, res) {
     if (op === 'toegepast') { const ls = await lessen(); const l = ls.find(e => e.id === q.les); if (!l || !q.site) return res.status(400).json({ fout: 'site en bestaande les nodig' }); const { bewaarLessen } = await import('../lib/zicht.js'); l.toegepast = Object.assign({}, l.toegepast, { [q.site]: q.dag || DAY() }); await bewaarLessen(ls); return res.status(200).json({ ok: true, les: l.id, toegepast: l.toegepast }); }
     if (op === 'site') return res.status(200).json({ ok: true, site: await zetSite(q) });
     if (op === 'meet') return res.status(200).json({ ok: true, meting: await meet(q.site || 'kz', oidc) });
+    if (op === 'ronde' && q.alsNodig) { // vangnet: alleen draaien als de ochtendronde vandaag niets heeft gemeten (storing, volle database)
+      const { kv } = await import('../lib/db.js'); const d = new Date().toISOString().slice(0, 10); const al = await kv.get('zicht:meting:kz:' + d).catch(() => null);
+      if (al) return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'vandaag al gemeten' }); }
     if (op === 'ronde') return res.status(200).json(Object.assign({ ok: true }, await ronde(oidc, { zonderMeten: !!q.zonderMeten })));
     return res.status(400).json({ fout: 'onbekende op' });
   } catch (e) { return res.status(500).json({ fout: String(e.message || e).slice(0, 300) }); }
