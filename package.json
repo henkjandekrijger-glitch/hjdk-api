@@ -6,6 +6,7 @@
  "dependencies": {
   "@vercel/og": "0.8.5",
   "redis": "^4.7.0",
-  "sharp": "^0.33.5"
+  "sharp": "^0.33.5",
+  "@vercel/blob": "2.8.0"
  }
 }

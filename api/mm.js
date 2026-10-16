@@ -188,6 +188,16 @@ export default async function handler(req, res) {
       await kv.raw(['LPUSH', 'mm:blokgedaan:' + net, JSON.stringify({ t: new Date().toISOString(), geblokkeerd: Number(b.geblokkeerd) || 0, samenvatting: String(b.samenvatting || '').slice(0, 300), fouten: (b.fouten || []).slice(0, 5).map(x => String(x).slice(0, 200)), campagnes: (b.campagnes || []).slice(0, 40) })]);
       await kv.raw(['LTRIM', 'mm:blokgedaan:' + net, 0, 47]); return res.status(200).json({ ok: true }); }
     if (op === 'blok') { res.setHeader('cache-control', 'no-store'); cors(res); const net = netNaam(q('net') || 'propeller'); return res.status(200).json((await kv.get('mm:blok:' + net)) || { zones: [], wachtOpHenkjan: [], aan: false, bijgewerkt: null }); }
+    // ruwe kliklog naar Vercel Blob (elk uur via cron, of met de hand via de beschermde host); ruwstand = wat waar staat
+    if (op === 'ruwarchief' || op === 'ruwstand') {
+      res.setHeader('cache-control', 'no-store');
+      const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+      if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
+      const { archiveer, archiefStand } = await import('../lib/ruwarchief.js');
+      if (op === 'ruwstand') return res.status(200).json(await archiefStand(kv, { dagen: Number(q('dagen')) || 3 }));
+      const d = q('dag'); const r = await archiveer(kv, { dagen: d && /^\d{4}-\d{2}-\d{2}$/.test(d) ? [d] : null });
+      return res.status(r.ok ? 200 : 500).json(r);
+    }
     if (op === 'leer') {
       res.setHeader('cache-control', 'no-store');
       const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
