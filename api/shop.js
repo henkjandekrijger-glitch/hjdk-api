@@ -96,6 +96,13 @@ async function sync() { // de shop zelf vertelt wat er te koop is, wat het kost 
   const velden = {}; for (const [k, n] of VELDEN) velden[n] = items.filter(i => i[k] !== undefined).length;
   let devKnop = null; try { const h = await (await fetch(SHOP, { headers: { 'user-agent': UA, 'accept-language': 'nl-NL,nl;q=0.9' } })).text(); devKnop = h.includes('sh-dev-add'); } catch (e) {}
   let zoek = null; try { const r = await fetch(SHOP + '/api/search-terms?days=7', { headers: shopKop() }); if (r.ok) { const j = await r.json(); const l = Array.isArray(j) ? j : (j.items || j.terms || []); zoek = l.map(x => ({ t: String(x.term || x.q || '').toLowerCase().trim().slice(0, 60), n: num(x.count), r: x.results == null ? null : num(x.results) })).filter(x => x.t).slice(0, 50); } } catch (e) {}
+  // datapagina van de shop (briefing bovenaan Babita's pagina): inkoop per product en de bestellingen met kenmerk
+  try { const r = await fetch(SHOP + '/api/lus-feed', { headers: shopKop() }); const st = { at: Date.now(), status: r.status };
+    if (r.ok) { const j = await r.json(); const prod = Array.isArray(j.products) ? j.products : Array.isArray(j.items) ? j.items : []; const orders = Array.isArray(j.orders) ? j.orders : [];
+      const mk = await margeOntvang(kv, { items: prod.filter(x => x && (x.cost_price != null || x.margin != null)) }); st.producten = prod.length; st.metInkoop = mk.opgeslagen;
+      st.orders = orders.slice(0, 500).map(o => ({ id: String(o.order_id || o.id || '').slice(0, 40), at: String(o.created_at || o.date || '').slice(0, 25), p: String(o.product_id || '').slice(0, 30), n: num(o.quantity || 1), v: num(o.amount), hj: String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14), s: String(o.status || '').slice(0, 20) }));
+      st.betaald = st.orders.filter(o => /paid|betaald/i.test(o.s)).length; st.metHj = st.orders.filter(o => o.hj).length; }
+    await kv.set('hjdk:shop:lusfeed', st); } catch (e) { try { await kv.set('hjdk:shop:lusfeed', { at: Date.now(), fout: String(e.message || e).slice(0, 120) }); } catch (x) {} }
   return bewaarCatalogus(items, 'shop', { velden, devKnop, zoek, engels: items.filter(i => engels(i.t)).length });
 }
 async function geheim() { let s = process.env.SHOP_SLEUTEL || ''; if (!s) { try { s = (await kv.get(K.sleutel)) || ''; } catch (e) {} } return String(s || ''); }
@@ -774,9 +781,10 @@ export default async function handler(req, res) {
       let px = false, pxTijd = {}; try { const pk1 = await kv.get('hjdk:shop:pxlaatst:koop'), pc1 = await kv.get('hjdk:shop:pxlaatst:cart'); px = !!pk1 || !!pc1; pxTijd = { koop: pk1 && pk1.at ? nlTijd(new Date(pk1.at).toISOString()) : null, cart: pc1 && pc1.at ? nlTijd(new Date(pc1.at).toISOString()) : null }; } catch (e) {}
       const les = (await kv.get(K.lessen)) || {};
       const tt = await netTotaal(); const carts = Object.values(tt).reduce((a, x) => a + num(x.cart), 0), koop = Object.values(tt).reduce((a, x) => a + num(x.koop), 0);
+      let feed = null; try { feed = await kv.get('hjdk:shop:lusfeed'); } catch (e) {}
       const marge = await margeStand(kv, (await catalog()).items, carts >= 10 ? Math.min(1, koop / carts) : 0.3).catch(() => null); if (marge) { marge.link = LAND() + '/api/shop/marge?k=' + url.searchParams.get('k'); marge.carts = carts; marge.koop = koop; }
       res.setHeader('content-type', 'text/html; charset=utf-8');
-      return res.status(200).send(adviesPagina({ sk, css: look(ACC), esc, vandaag: await dagTotaal(DAY()), gisteren: await dagTotaal(DAY(-1)), totaal: await netTotaal(), kosten: { md: somK(l.mondiad), pa: somK(await eerste(K.palog)), ra: somK(await eerste(K.ralog)), ca: somK(await eerste(K.calog)) }, inz: l.inzicht || null, lessen: les.lessen || [], bijgewerkt: nlTijd(new Date().toISOString()), pxGezien: px, pxTijd, marge, stand: await shopStand('oc_4174004347453441').catch(() => null), nlTijd, direct: await directInst(kv), meet: await shopMeet(kv) })); }
+      return res.status(200).send(adviesPagina({ sk, css: look(ACC), esc, vandaag: await dagTotaal(DAY()), gisteren: await dagTotaal(DAY(-1)), totaal: await netTotaal(), kosten: { md: somK(l.mondiad), pa: somK(await eerste(K.palog)), ra: somK(await eerste(K.ralog)), ca: somK(await eerste(K.calog)) }, inz: l.inzicht || null, lessen: les.lessen || [], bijgewerkt: nlTijd(new Date().toISOString()), pxGezien: px, pxTijd, marge, feed, stand: await shopStand('oc_4174004347453441').catch(() => null), nlTijd, direct: await directInst(kv), meet: await shopMeet(kv) })); }
     if (op === 'bron') { // controle: haalt een pagina van yoo.rs op zoals een Nederlandse telefoon die ziet (alleen yoo.rs, alleen lezen)
       const pad = String(url.searchParams.get('u') || '/shop/'); if (!/^\/[\w\/\-?=&.%]*$/.test(pad)) return res.status(400).json({ ok: false });
       const r = await fetch('https://yoo.rs' + pad, { redirect: 'manual', headers: { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': url.searchParams.get('taal') || 'nl-NL,nl;q=0.9' } });
