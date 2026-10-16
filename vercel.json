@@ -42,7 +42,7 @@
     },
     {
       "path": "/api/kzmaak/dag",
-      "schedule": "*/10 3-12 * * *"
+      "schedule": "*/10 3-23 * * *"
     },
     {
       "path": "/api/kz/dealsrefresh",
@@ -58,7 +58,7 @@
     },
     {
       "path": "/api/wtbmaak/dag",
-      "schedule": "*/10 3-16 * * *"
+      "schedule": "*/10 3-23 * * *"
     },
     {
       "path": "/api/shop/ronde",
