@@ -42,6 +42,7 @@ function laadSchema() {
 export default async function handler(req, res) {
   const url = new URL(req.url, 'https://keuzehulp.best'), q = url.searchParams, op = q.get('op') || '';
   res.setHeader('x-content-type-options', 'nosniff');
+  if(q.get('tool')==='temu'){const {temuHandler}=await import('../lib/temu-page.js');return temuHandler(req,res);}
   if(q.get('tool')==='battery'){const {batteryHandler}=await import('../lib/stekkerbatterij-page.js');return batteryHandler(req,res);}
   if (['client','rules','theme-client','theme-rules'].includes(op)) {
     res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600'); res.setHeader('x-robots-tag', 'noindex'); return res.status(200).send(op === 'client' ? TOOL_CLIENT : op === 'theme-client' ? THEME_CLIENT : op === 'theme-rules' ? [portionCost, heatCost, themeAdvice].map(fn => 'export ' + fn.toString()).join('\n') : rules());

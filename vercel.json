@@ -127,6 +127,16 @@
   ],
   "rewrites": [
     {
+      "source": "/temu-alternatieven",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=temu&market=nl"
+    },
+    {
       "source": "/stekkerbatterij",
       "has": [
         {
