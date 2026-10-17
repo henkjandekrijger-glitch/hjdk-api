@@ -90,7 +90,7 @@ async function haalFeed() {
     if (!r.ok) { try { st.antwoord = (await r.text()).replace(/\s+/g, ' ').slice(0, 160); } catch (e) {} }
     if (r.ok) { const j = await r.json(); const prod = Array.isArray(j.products) ? j.products : Array.isArray(j.items) ? j.items : []; const orders = Array.isArray(j.orders) ? j.orders : [];
       const mk = await margeOntvang(kv, { items: prod.filter(x => x && (x.cost_price != null || x.margin != null)) }); st.producten = prod.length; st.metInkoop = mk.opgeslagen;
-      st.orders = orders.slice(0, 500).map(o => ({ id: String(o.order_id || o.id || '').slice(0, 40), at: String(o.created_at || o.date || '').slice(0, 25), p: String(o.product_id || '').slice(0, 30), n: num(o.quantity || 1), v: num(o.amount), hj: String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14), s: String(o.status || '').slice(0, 20) }));
+      st.orders = orders.slice(0, 500).map(o => ({ id: String(o.order_id || o.id || '').slice(0, 40), at: String(o.created_at || o.date || '').slice(0, 25), p: String(o.product_id || '').slice(0, 30), n: num(o.quantity || 1), v: num(o.amount), hj: String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14), s: String(o.status || '').slice(0, 20), m: String(o.payment_method || '').slice(0, 16) }));
       st.sleutels = Object.keys(j).slice(0, 20); st.prodVelden = prod[0] ? Object.keys(prod[0]).slice(0, 40) : []; st.orderVelden = orders[0] ? Object.keys(orders[0]).slice(0, 40) : [];
       st.betaald = st.orders.filter(o => /paid|betaald/i.test(o.s)).length; st.metHj = st.orders.filter(o => o.hj).length;
       // controle achteraf: elke betaalde bestelling met kenmerk telt, ook als de directe melding vanuit de shop niet afging (hooguit 9 dagen terug)
