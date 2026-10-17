@@ -30,7 +30,7 @@ Lezen: https://hjdk-api-henq.vercel.app/api/shop/overdracht (met web_fetch_verce
 3. **Productpagina houdt bezoekers niet vast.** 4 tot 5% van de directe bezoekers is een echt mens, tegen 24% op onze eigen landingspagina. Doel 15%. Voorstel aan Babita: voor bezoekers met `hj` een lichte pagina zonder Yoors-menu.
 4. **Database vol op 16 okt (06 tot 14 UTC).** Daardoor kwam 1 tot 3% van de betaalde kliks aan in de meting, en ging er geen signaal naar het netwerk. Opgelost (ruwe kliklog naar Vercel Blob). Controleren: `https://hjdk-api-henq.vercel.app/api/mm/geheugen`.
 5. **CPA-doel $0,01.** Met ongeveer 1 conversie per dag leert PropellerAds niets en koopt het restverkeer (16 okt: 16 campagnes samen $3,20). Een hoger CPA-doel op de beste producten alleen op Henkjans woord.
-6. **Saldo's.** Mondiad stond 16 okt op $0,42, dus alle Mondiad-campagnes stonden stil (OFF_ACCOUNT_BUDGET). PropellerAds: $144, onder de grens van $150. Opwaarderen doet Henkjan.
+6. **Saldo's.** Mondiad staat sinds 16 okt rond $0,40, dus alle Mondiad-campagnes staan stil (OFF_ACCOUNT_BUDGET). PropellerAds zit onder de grens van $150. Actuele saldo's staan in de live stand bovenaan. Opwaarderen doet Henkjan.
 
 ## Campagnes
 - **PropellerAds** (In-Page, NL mobiel, CPA $0,01, $10 per dag): Skull 12011189, Tegeltje 12016745, Kaarsenset 12016748, en 13 losse productcampagnes van 16 okt (12016779-12016796) die de oude themacampagnes vervangen.
