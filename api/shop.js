@@ -86,7 +86,7 @@ async function bewaarCatalogus(items, bron, extra) {
 }
 async function haalFeed() {
   // datapagina van de shop (briefing bovenaan Babita's pagina): inkoop per product en de bestellingen met kenmerk
-  try { const r = await fetch(SHOP + '/api/lus-feed', { headers: shopKop() }); const st = { at: Date.now(), status: r.status, metSleutel: !!process.env.SHOP_FEED_KEY, sleutelLengte: String(process.env.SHOP_FEED_KEY || '').length };
+  try { const r = await fetch(SHOP + '/api/lus-feed', { headers: shopKop() }); const st = { at: Date.now(), status: r.status, metSleutel: !!process.env.SHOP_FEED_KEY, sleutelLengte: String(process.env.SHOP_FEED_KEY || '').length, vingerafdruk: process.env.SHOP_FEED_KEY ? createHash('sha256').update(String(process.env.SHOP_FEED_KEY)).digest('hex').slice(0, 8) : null };
     if (!r.ok) { try { st.antwoord = (await r.text()).replace(/\s+/g, ' ').slice(0, 160); } catch (e) {} }
     if (r.ok) { const j = await r.json(); const prod = Array.isArray(j.products) ? j.products : Array.isArray(j.items) ? j.items : []; const orders = Array.isArray(j.orders) ? j.orders : [];
       const mk = await margeOntvang(kv, { items: prod.filter(x => x && (x.cost_price != null || x.margin != null)) }); st.producten = prod.length; st.metInkoop = mk.opgeslagen;
@@ -750,7 +750,7 @@ export default async function handler(req, res) {
     if (op === 'feedcheck') { // openbaar, alleen tellingen: haalt de datapagina van de shop nu op (zonder de sleutel te tonen)
       const lk = await kv.get('hjdk:shop:feedlock'); if (lk) { const f = await kv.get('hjdk:shop:lusfeed'); return res.status(200).json({ ok: true, wacht: true, stand: f ? { at: f.at, status: f.status, fout: f.fout || null, producten: f.producten, metInkoop: f.metInkoop, bestellingen: (f.orders || []).length, betaald: f.betaald, metHj: f.metHj, nagemeld: f.nagemeld } : null }); }
       await kv.set('hjdk:shop:feedlock', 1, { ex: 60 }); const f = await haalFeed();
-      return res.status(200).json({ ok: true, stand: f ? { at: f.at, status: f.status, metSleutel: f.metSleutel, sleutelLengte: f.sleutelLengte, antwoord: f.antwoord || null, fout: f.fout || null, producten: f.producten, metInkoop: f.metInkoop, bestellingen: (f.orders || []).length, betaald: f.betaald, metHj: f.metHj, nagemeld: f.nagemeld, sleutels: f.sleutels, prodVelden: f.prodVelden, orderVelden: f.orderVelden, statussen: [...new Set((f.orders || []).map(o => o.s))].slice(0, 10) } : null }); }
+      return res.status(200).json({ ok: true, stand: f ? { at: f.at, status: f.status, metSleutel: f.metSleutel, sleutelLengte: f.sleutelLengte, vingerafdruk: f.vingerafdruk, antwoord: f.antwoord || null, fout: f.fout || null, producten: f.producten, metInkoop: f.metInkoop, bestellingen: (f.orders || []).length, betaald: f.betaald, metHj: f.metHj, nagemeld: f.nagemeld, sleutels: f.sleutels, prodVelden: f.prodVelden, orderVelden: f.orderVelden, statussen: [...new Set((f.orders || []).map(o => o.s))].slice(0, 10) } : null }); }
     if (op === 'trechter') { // openbaar, alleen totalen: van bezoek naar doorklik per netwerk, per dag en per product; geen apparaten, geen kliknummers
       const dagen = [0, 1, 2, 3, 4].map(i => DAY(-i)); const perDag = {}; for (const d of dagen) perDag[d] = await dagTotaal(d);
       const per = { net: {}, product: {}, zone: {} }; const perArm = {}; let cur = '0', gezien = 0;
