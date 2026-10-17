@@ -158,8 +158,15 @@ export default async function handler(req, res) {
       const lok = q('lok') === '' || q('lok') == null ? null : Number(q('lok')), sec = Number(q('s')) || 0, act = Number(q('a')) || 0;
       const mens = sec >= c.minSeconden && act >= c.minActies && (lok == null || !Number.isFinite(lok) || lok >= c.minLokaal);
       const qid = /^[0-9a-f]{16}$/.test(String(q('q') || '')) ? String(q('q')) : '';
-      const r = await rtBeslis(kv, { bron: 'pagina', site: String(q('site') || '').slice(0, 40), land: srv.land, dc: d.dc === true, bot: !!(sc.vlag && sc.vlag.hl), gpc: req.headers['sec-gpc'] === '1', mens, id: qid }).catch(() => ({ px: [] }));
+      const r = await rtBeslis(kv, { bron: 'pagina', site: String(q('site') || '').slice(0, 40), land: srv.land, dc: d.dc === true, bot: !!(sc.vlag && sc.vlag.hl), gpc: req.headers['sec-gpc'] === '1', uit: leesCookie(req, 'mmrt') === 'uit', mens, id: qid }).catch(() => ({ px: [] }));
       return res.status(200).json({ px: r.px || [] });
+    }
+    // afmelden voor het Clickmind-publiek (privacypagina): cookie mmrt=uit op dit domein, de pagina zet ook localStorage cmRtUit
+    if (op === 'rtuit') {
+      cors(res); res.setHeader('cache-control', 'no-store');
+      res.setHeader('set-cookie', 'mmrt=uit; Max-Age=31536000; Path=/; Secure; SameSite=Lax');
+      const c = leesCookie(req, 'mmp'); if (/^[0-9a-f]{16}$/.test(c)) { try { await kv.set('mm:rtuit:' + c, 1, { ex: 400 * 86400 }); } catch (e) {} }
+      return res.status(200).json({ ok: true, afgemeld: true });
     }
     if (op === 'modal' || op === 'modalev' || op === 'modalmail') {
       cors(res); res.setHeader('cache-control', 'no-store');
@@ -317,7 +324,7 @@ async function goKlik(req, res, url, q) {
   }
   if (arm === '302' || req.method === 'HEAD') { res.statusCode = 302; res.setHeader('location', doel); return res.end(); }
   // Clickmind-publiek: op de meetpagina alleen voor iemand die eerder bewees een mens te zijn (mm:p echt/actie/aanmelding/koop), zonder datacenter
-  try { const rc = await leesRt(kv); if (rc.aan && rc.go && !prefetch) { const srv = serverSignalen(req), dd = dcVan(srv); const h = await kv.raw(['HGETALL', 'mm:p:' + pid]).catch(() => null); const p = {}; for (let i = 0; h && i < h.length; i += 2) p[h[i]] = h[i + 1]; const mens = soortPersoon(p).has('mens'); const sc = score({ c: null, s: Object.assign({}, srv, dd) }); const r = await rtBeslis(kv, { bron: 'go', land: srv.land, dc: dd.dc === true, bot: !!(sc.vlag && sc.vlag.hl), gpc: req.headers['sec-gpc'] === '1', mens, id: pid }); if (r.px && r.px.length) ctx.rt = r.px; } } catch (e) {}
+  try { const rc = await leesRt(kv); if (rc.aan && rc.go && !prefetch) { const srv = serverSignalen(req), dd = dcVan(srv); const h = await kv.raw(['HGETALL', 'mm:p:' + pid]).catch(() => null); const p = {}; for (let i = 0; h && i < h.length; i += 2) p[h[i]] = h[i + 1]; const mens = soortPersoon(p).has('mens'); const sc = score({ c: null, s: Object.assign({}, srv, dd) }); const uit = leesCookie(req, 'mmrt') === 'uit' || !!(await kv.get('mm:rtuit:' + pid).catch(() => null)); const r = await rtBeslis(kv, { bron: 'go', land: srv.land, dc: dd.dc === true, bot: !!(sc.vlag && sc.vlag.hl), gpc: req.headers['sec-gpc'] === '1', uit, mens, id: pid }); if (r.px && r.px.length) ctx.rt = r.px; } } catch (e) {}
   res.setHeader('content-type', 'text/html; charset=utf-8');
   return res.status(200).send(meetPagina(doel, ctx));
 }
