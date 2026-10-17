@@ -1,3 +1,4 @@
+import { trendingBlock } from '../lib/guide-usage.js';
 import { guideAnswers, guideDecision } from '../lib/us-demand-guides.js';
 import { decisionHtml, guideSections } from '../lib/us-demand-view.js';
 import { koopBlok, koopMeetScript } from '../lib/koopblok.js';
@@ -87,10 +88,11 @@ document.getElementById('share-guide').addEventListener('click',function(){var u
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-amz]');if(a){h('wtb-'+M+'-'+S+'-clk');h('wtb-'+M+'-clk');h('wtb-'+M+'-clkd-'+new Date().toISOString().slice(0,10))}},true);})();</script>`;
   return shell(m, { title: it.seoTitle || it.h1, desc: it.metaDesc || it.intro, path: '/' + it.slug, og: 'article', image: adv.products[0] && adv.products[0].image, ld, body });
 }
-function home(m, all) {
+async function home(m, all) {
+  const trending = await trendingBlock(m.id,all);
   const s = m.s; const cats = {}; all.forEach(i => { (cats[i.cat] = cats[i.cat] || []).push(i); });
   const newest = all.slice().sort((a, b) => (b.priority || 0) - (a.priority || 0) || String(b.publishAt || '').localeCompare(String(a.publishAt || ''))).slice(0, 12);
-  const body = `<p class="kicker">${esc(m.name)}</p><h1>${esc(s.hero)}</h1><p class="standfirst">${esc(s.heroP)}</p>${newest.length ? `<ul class="cards">${newest.map(r => `<li><a href="/${esc(r.slug)}">${esc(r.title)}</a><p>${esc(String(r.kort || '').slice(0, 140))}</p></li>`).join('')}</ul>` : `<p class="meta">${esc(s.wait)}</p>`}
+  const body = `<p class="kicker">${esc(m.name)}</p><h1>${esc(s.hero)}</h1><p class="standfirst">${esc(s.heroP)}</p>${trending}${newest.length ? `<ul class="cards">${newest.map(r => `<li><a href="/${esc(r.slug)}">${esc(r.title)}</a><p>${esc(String(r.kort || '').slice(0, 140))}</p></li>`).join('')}</ul>` : `<p class="meta">${esc(s.wait)}</p>`}
 ${Object.keys(cats).sort().map(c => `<h2>${esc(c)}</h2><ul class="cards">${cats[c].map(i => `<li><a href="/${esc(i.slug)}">${esc(i.title)}</a></li>`).join('')}</ul>`).join('')}<p class="disc">${esc(s.disc)}</p>`;
   const base = 'https://' + m.host;
   return shell(m, { title: m.name + (m.id === 'us' ? ' — Buying guides that ask 3 questions' : ' — Kaufberatung in 3 Fragen'), desc: s.heroP, path: '/', body, ld: { '@context': 'https://schema.org', '@graph': [{ '@type': 'WebSite', name: m.name, url: base, inLanguage: m.locale }, { '@type': 'Organization', name: m.name, url: base, founder: { '@type': 'Person', name: 'Henkjan de Krijger' } }] } });
@@ -134,13 +136,14 @@ export default async function handler(req, res) {
   const tag = (await colourTag(m.id === 'us' ? 'whichtobuy' : 'kaufberater', 'wtb' + m.id, 'a[data-amz]', true, m.id)) + measureTag('wtb' + m.id, 'a[data-amz]', '.opt') + '<script src="/cm.js" data-site="' + (m.id === 'us' ? 'whichtobuy' : 'kaufberater') + '"__KW__ async></script>'; /* lerende modal (lib/modal.js); data-interest = onderwerp van de gids, de modal vult dat in bij het todayin-aanbod */ const send = (h, kw) => res.status(200).send(String(h).replace('</head>', tag.replace('__KW__', kw ? ' data-interest="' + esc(String(kw).slice(0, 60)) + '"' : '') + '</head>'));
   if (op === 'about') return send(about(m));
   if (op === 'privacy') return send(privacy(m));
-  if (op === 'home' || path === '/') { await count(m, req, q, ''); return send(home(m, all)); }
+  if (op === 'home' || path === '/') { await count(m, req, q, ''); return send(await home(m, all)); }
   const it = all.find(i => i.slug === path.slice(1));
   if (!it) { res.setHeader('cache-control', 'no-store'); return res.status(404).send(shell(m, { title: '404 — ' + m.name, desc: '', path: '/', body: `<h1>404</h1><p><a href="/">${esc(m.s.home)}</a></p>` })); }
   if (it.tool) { res.setHeader('location', 'https://' + m.host + '/' + it.slug); return res.status(308).end(); }
   await count(m, req, q, it.slug);
   return send(await page(m, it, all, req), it.term);
 }
+
 
 
 
