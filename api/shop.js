@@ -32,6 +32,7 @@ import { verwerkKlik, serverSignalen, laterAf, nieuwId } from '../lib/mensmeter.
 import { cidKoppel } from '../lib/wissel.js';
 import { K_KOST, ontvang as margeOntvang, margeStand, zetMarge } from '../lib/shopmarge.js';
 import { uurTel, uurStand, lekkenPagina, uurAanvullen } from '../lib/shopuur.js';
+import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdracht.js';
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
 const SHOP = 'https://yoo.rs/shop';
@@ -747,6 +748,18 @@ export default async function handler(req, res) {
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; const pct = url.searchParams.get('pct');
       if (pct != null && pct !== '') { if (!/\.vercel\.app$/i.test(host)) return res.status(403).json({ ok: false, fout: 'zetten alleen via de beschermde vercel.app-host' }); const c = await zetDirect(kv, pct, url.searchParams.get('door') || 'beheer'); await log({ soort: 'directe route', wat: c.pct + '% direct naar de productpagina', waarom: 'ingesteld door ' + c.door }); }
       return res.status(200).json({ ok: true, direct: await directInst(kv), meetOpYoors: await shopMeet(kv), uitleg: 'pct = deel van de betaalde bezoekers (per persoon vast) dat in één keer naar de productpagina op yoo.rs gaat; de rest ziet de landingspagina. meetOpYoors = cm.js op yoo.rs meldt echt en actie.' }); }
+    if (op === 'overdracht') { // levende overdracht voor collega's en andere chats: live stand + OVERDRACHT-YOORS-SHOP.md (alleen op de beschermde vercel.app-host)
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const live = { nu: Date.now() }; const veilig = async f => { try { return await f(); } catch (e) { return null; } };
+      live.uren = await veilig(() => uurStand(kv, 24)); live.sinds = await veilig(() => netTotaal()); live.feed = await veilig(() => kv.get('hjdk:shop:lusfeed'));
+      live.laatst = {}; for (const w of ['cart', 'afreken', 'betaal', 'fout', 'koop', 'koop:ideal', 'koop:paypal']) live.laatst[w] = await veilig(() => kv.get('hjdk:shop:pxlaatst:' + w));
+      live.direct = await veilig(() => directInst(kv)); live.meet = await veilig(() => shopMeet(kv));
+      live.pa = await veilig(async () => ((await kv.get(K.palog)) || [])[0] || null); live.md = await veilig(async () => { const l = await kv.get(K.laatste); return l && l.mondiad ? Object.assign({ at: l.at }, l.mondiad) : null; });
+      live.catalogus = await veilig(async () => (await catalog()).items.length); live.marge = await veilig(async () => Object.keys((await kv.get(K_KOST)) || {}).length);
+      live.geheugen = await veilig(async () => (String(await kv.raw(['INFO', 'memory'])).match(/used_memory_human:(\S+)/) || [])[1] || null);
+      const md = overdrachtTekst(), lv = liveRegels(live); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
+      if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(md.replace(/\n## /, '\n' + lv + '\n## ')); }
+      res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(overdrachtPagina(lv, md, esc)); }
     if (op === 'feedcheck') { // openbaar, alleen tellingen: haalt de datapagina van de shop nu op (zonder de sleutel te tonen)
       const lk = await kv.get('hjdk:shop:feedlock'); if (lk) { const f = await kv.get('hjdk:shop:lusfeed'); return res.status(200).json({ ok: true, wacht: true, stand: f ? { at: f.at, status: f.status, fout: f.fout || null, producten: f.producten, metInkoop: f.metInkoop, bestellingen: (f.orders || []).length, betaald: f.betaald, metHj: f.metHj, nagemeld: f.nagemeld } : null }); }
       await kv.set('hjdk:shop:feedlock', 1, { ex: 60 }); const f = await haalFeed();

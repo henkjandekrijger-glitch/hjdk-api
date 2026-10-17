@@ -552,7 +552,8 @@
       "maxDuration": 30
     },
     "api/shop.js": {
-      "maxDuration": 300
+      "maxDuration": 300,
+      "includeFiles": "OVERDRACHT-YOORS-SHOP.md"
     },
     "api/gsc.js": {
       "maxDuration": 300
