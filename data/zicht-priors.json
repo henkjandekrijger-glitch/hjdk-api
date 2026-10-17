@@ -466,5 +466,16 @@
   "effect": 0.4,
   "moeite": 2,
   "meten": "gsc"
+ },
+ {
+  "id": "zusterlinks-ontdekking",
+  "les": "Laat een nieuwe site die Google nog niet ontdekt gewone links krijgen van een eigen site die Google al vaak leest (voettekst naar de zustersite in een andere taal), naast de sitemap.",
+  "kanaal": "google",
+  "bewijs": "17 okt 2026: sitemaps van whichtobuy.best en kaufberater.best al ruim een week ingediend, toch 75 van 91 (US) en 67 van 68 (DE) pagina's 'onbekend bij Google'; Googlebot las DE 2 keer en US 12 keer in 7 dagen, keuzehulp.best 92 keer. Proeven zusterlinks-us-1017 en zusterlinks-de-1017 meten het effect.",
+  "bron": "eigen data",
+  "sterkte": 2,
+  "moeite": 1,
+  "risico": "Alleen een link naar de homepage van de zustersite, geen linkblokken of uitwisseling met vreemde sites.",
+  "meten": "index"
  }
 ]
