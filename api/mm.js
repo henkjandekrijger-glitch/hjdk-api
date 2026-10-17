@@ -18,6 +18,8 @@
 //   /api/mm/uitkomst?cid=&soort=&waarde=&bron=   bestemming meldt echt, actie, aanmelding of koop (of POST JSON; /mmu.js doet het in de browser)
 //   /api/mm/wissel[?naam=][&j=<json>]   instellingen bekijken of opslaan (beschermde host)
 //   /api/mm/clickmind                    overzicht in gewone taal: netwerken, herkomst (sites/apps), zones, alle data (beschermde host)
+//   /api/mm/rt                         cm.js: welke publieks-pixels mogen afgaan na echt gedrag (lib/retarget.js)
+//   /api/mm/retarget[?j=<json>]        Clickmind-publiek: stand en instelling (beschermde host)
 //   /api/mm/mensgeld?dag=JJJJ-MM-DD   per uniek mens: kliks per mens, herhaalkliks, kosten per mens, dubbel betaald, per tag verdiend per mens (beschermde host)
 //   /api/mm/overlap?dagen=3            welke zoektermen dezelfde mensen aanklikken (beschermde host)
 //   /api/mm/gosplit?p=<voorvoegsel>&pct=0-100 meetpagina of direct door per voorvoegsel van /go-links, zonder de campagnelink aan te raken (beschermde host)
@@ -38,12 +40,13 @@
 //   /api/mm/stand                       vandaag per netwerk, slechtste zones, datacenterlijst
 // Regels, opslag en uitleg: lib/mensmeter.js.
 import { kv } from '../lib/db.js';
-import { echteTag, verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, serverSignalen, laterAf, schoon, tagOk, zones, patronen, stand, proef, exporteer, persoon, netNaam, ipInfo } from '../lib/mensmeter.js';
+import { echteTag, verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, serverSignalen, laterAf, schoon, tagOk, zones, patronen, stand, proef, exporteer, persoon, netNaam, ipInfo, dcVan, score } from '../lib/mensmeter.js';
 import { leesWissel, bewaarWissel, alleWissels, kiesArm, soortPersoon, bestemming, wisselKlik, cidKoppel, uitkomst, amazonUitkomst, wisselStand } from '../lib/wissel.js';
 import { leerRonde, instelling } from '../lib/leer.js';
 import { dossier, naarCsv, dagDossiers } from '../lib/terug.js';
 import { modalBeslis, modalEv, modalMail, leesModal, bewaarModal, alleModals, modalStand, catalogus, bewaarCatalogus } from '../lib/modal.js';
 import { overdracht } from '../lib/overdracht.js';
+import { RT_JS, RT_GO_JS, rtBeslis, leesRt, zetRt, rtStand } from '../lib/retarget.js';
 
 // Browserscript: klein, vanilla, alles in try/catch; vertraagt of breekt de pagina nooit.
 const MM_JS = String.raw`/* mensmeter */(function(){var W=window,N=navigator,D=document,M={vid:'',lokaal:null};
@@ -147,6 +150,17 @@ export default async function handler(req, res) {
       return req.method === 'POST' ? res.status(204).end() : res.status(r.ok ? 200 : 400).json(r);
     }
     if (op === 'mmm' || op === 'cm') { res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=300, s-maxage=300'); cors(res); return res.status(200).send(op === 'cm' ? CM_JS : MMM_JS); }
+    // Clickmind-publiek (lib/retarget.js): cm.js vraagt na echt gedrag op de pagina welke publieks-pixels mogen afgaan
+    if (op === 'rt') {
+      cors(res); res.setHeader('cache-control', 'no-store');
+      if (req.method === 'OPTIONS') return res.status(204).end();
+      const srv = serverSignalen(req), d = dcVan(srv), sc = score({ c: null, s: Object.assign({}, srv, d) }), c = await leesRt(kv);
+      const lok = q('lok') === '' || q('lok') == null ? null : Number(q('lok')), sec = Number(q('s')) || 0, act = Number(q('a')) || 0;
+      const mens = sec >= c.minSeconden && act >= c.minActies && (lok == null || !Number.isFinite(lok) || lok >= c.minLokaal);
+      const qid = /^[0-9a-f]{16}$/.test(String(q('q') || '')) ? String(q('q')) : '';
+      const r = await rtBeslis(kv, { bron: 'pagina', site: String(q('site') || '').slice(0, 40), land: srv.land, dc: d.dc === true, bot: !!(sc.vlag && sc.vlag.hl), gpc: req.headers['sec-gpc'] === '1', mens, id: qid }).catch(() => ({ px: [] }));
+      return res.status(200).json({ px: r.px || [] });
+    }
     if (op === 'modal' || op === 'modalev' || op === 'modalmail') {
       cors(res); res.setHeader('cache-control', 'no-store');
       if (req.method === 'OPTIONS') return res.status(204).end();
@@ -222,7 +236,7 @@ export default async function handler(req, res) {
       if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
       return res.status(200).json(await dagDossiers(kv));
     }
-    if (['wissel', 'amazon', 'amazonmeter', 'venster', 'geheugen', 'termen', 'mdgo', 'mdpauze', 'gosplit', 'instelling', 'overzicht', 'clickmind', 'terugbetaling', 'voorspel', 'voorspelruw', 'mensgeld', 'overlap'].includes(op)) {
+    if (['wissel', 'amazon', 'amazonmeter', 'venster', 'geheugen', 'termen', 'mdgo', 'mdpauze', 'gosplit', 'instelling', 'overzicht', 'clickmind', 'terugbetaling', 'voorspel', 'voorspelruw', 'mensgeld', 'overlap', 'retarget'].includes(op)) {
       res.setHeader('cache-control', 'no-store');
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
       if (op === 'gosplit') { const p = String(q('p') || '').replace(/[^A-Za-z0-9]/g, '').slice(0, 8); if (!p) return res.status(400).json({ ok: false, fout: 'p' }); if (q('pct') != null && q('pct') !== '') { const v = Math.max(0, Math.min(100, Math.round(Number(q('pct'))))); if (!Number.isFinite(v)) return res.status(400).json({ ok: false, fout: 'pct 0-100' }); await kv.set('mm:gosplit:' + p, v); } return res.status(200).json({ ok: true, p, pct: await kv.get('mm:gosplit:' + p), uitleg: '0 = iedereen via de meetpagina (browsermeting), 100 = iedereen direct door, 50 = per persoon vast de helft' }); }
@@ -234,6 +248,7 @@ export default async function handler(req, res) {
       if (op === 'mdgo') { const { mondiadNaarGo } = await import('../lib/mdgo.js'); const ids = String(q('ids') || '').split(',').map(x => x.replace(/\D/g, '')).filter(Boolean).slice(0, 12); if (!ids.length) return res.status(400).json({ ok: false, fout: 'ids=1,2,3' }); const r = await mondiadNaarGo(kv, { ids, p: String(q('p') || 'mdus').replace(/[^A-Za-z0-9]/g, '').slice(0, 8), mal: q('mal') ? String(q('mal')).replace(/\D/g, '') : null, tag: /^[a-z0-9-]{2,30}-2[01]$/.test(String(q('tag') || '')) ? String(q('tag')) : null, droog: q('droog') === '1', forceer: q('forceer') === '1' }); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'termen') { const T = await import('../lib/termles.js'); if (q('k')) return res.status(200).json(await T.termPrijs(q('k'), q('m') || '')); if (q('tag')) return res.status(200).json(await T.tagGeenKoper(kv, q('tag'), { dagen: Number(q('dagen')) || 3 })); return res.status(200).json({ ok: true, lessen: T.LESSEN, grenzen: T.GRENS, verzadiging: await T.verzadiging(kv, { dag: q('dag') }) }); }
       // voorspellers (lib/voorspel.js): welke kenmerken van een klik voorspellen wat hij doet; voorspelruw vult dagen vóór de live tellers aan uit de ruwe log
+      if (op === 'retarget') { const j = q('j'); if (j) { let x = null; try { x = JSON.parse(j); } catch (e) { return res.status(400).json({ ok: false, fout: 'j moet JSON zijn' }); } return res.status(200).json(await zetRt(kv, x)); } return res.status(200).json(await rtStand(kv, { dagen: q('dagen') || 14 })); }
       if (op === 'mensgeld') { const { mensgeld } = await import('../lib/mensgeld.js'); return res.status(200).json(await mensgeld(kv, { dag: q('dag') })); }
       if (op === 'overlap') { const { termOverlap } = await import('../lib/mensgeld.js'); return res.status(200).json(await termOverlap(kv, { dagen: q('dagen') || 3, min: Number(q('min')) || 5 })); }
       if (op === 'voorspel') { const { voorspel } = await import('../lib/voorspel.js'); return res.status(200).json(await voorspel(kv, { dagen: q('dagen') || 7, min: Number(q('min')) || 30 })); }
@@ -301,6 +316,8 @@ async function goKlik(req, res, url, q) {
     await Promise.race([werk, new Promise(r => setTimeout(r, 300))]);
   }
   if (arm === '302' || req.method === 'HEAD') { res.statusCode = 302; res.setHeader('location', doel); return res.end(); }
+  // Clickmind-publiek: op de meetpagina alleen voor iemand die eerder bewees een mens te zijn (mm:p echt/actie/aanmelding/koop), zonder datacenter
+  try { const rc = await leesRt(kv); if (rc.aan && rc.go && !prefetch) { const srv = serverSignalen(req), dd = dcVan(srv); const h = await kv.raw(['HGETALL', 'mm:p:' + pid]).catch(() => null); const p = {}; for (let i = 0; h && i < h.length; i += 2) p[h[i]] = h[i + 1]; const mens = soortPersoon(p).has('mens'); const sc = score({ c: null, s: Object.assign({}, srv, dd) }); const r = await rtBeslis(kv, { bron: 'go', land: srv.land, dc: dd.dc === true, bot: !!(sc.vlag && sc.vlag.hl), gpc: req.headers['sec-gpc'] === '1', mens, id: pid }); if (r.px && r.px.length) ctx.rt = r.px; } } catch (e) {}
   res.setHeader('content-type', 'text/html; charset=utf-8');
   return res.status(200).send(meetPagina(doel, ctx));
 }
@@ -314,6 +331,7 @@ function meetPagina(doel, ctx) {
     + '<style>html,body{margin:0;background:#fff}p{font:15px system-ui,-apple-system,sans-serif;color:#666;padding:24px;opacity:0;animation:z .2s 1.2s forwards}@keyframes z{to{opacity:1}}a{color:#06c}</style></head>'
     + '<body><p>Opening Amazon&hellip; <a href="' + esc(doel) + '">Continue</a></p>'
     + '<script>var DOEL=' + J(doel) + ',CTX=' + J(ctx) + ';try{setTimeout(function(){location.replace(DOEL)},600)}catch(e){}</script>'
+    + (ctx.rt && ctx.rt.length ? '<script>' + RT_GO_JS + '</script>' : '')
     + '<script>' + GO_JS + '</script></body></html>';
 }
 const GO_JS = String.raw`(function(){var W=window,N=navigator,D=document,P=W.performance,t0=P&&P.now?P.now():0,klaar=0,d,wacht=0;
@@ -468,7 +486,7 @@ W.mmModalStand=function(){return{site:site,besluit:B,getoond:getoond,stoort:stoo
 
 // CLICKMIND in één regel voor elke eigen pagina: uitkomsten (automatisch echt, actie, aanmelding bij een klik-id), de mensmeter (alleen bij
 // betaald verkeer: een zone, klik-id of mmc in de URL) en de lerende modal.  <script src="https://whichtobuy.best/cm.js" data-site="<site>" async></script>
-const CM_JS = MMU_JS + '\n(function(){try{var cs=document.currentScript,u=new URL(location.href).searchParams;window.__cmMeet=!(cs&&cs.getAttribute("data-meet")==="0")&&!!(u.get("zone")||u.get("z")||u.get("zoneid")||u.get("subid")||u.get("clickid")||u.get("mmc"))}catch(e){}})();\nif(window.__cmMeet){' + MM_JS + '}\n' + MMM_JS;
+const CM_JS = MMU_JS + '\n(function(){try{var cs=document.currentScript,u=new URL(location.href).searchParams;window.__cmMeet=!(cs&&cs.getAttribute("data-meet")==="0")&&!!(u.get("zone")||u.get("z")||u.get("zoneid")||u.get("subid")||u.get("clickid")||u.get("mmc"))}catch(e){}})();\nif(window.__cmMeet){' + MM_JS + '}\n' + MMM_JS + '\n' + RT_JS;
 
 // ---- status bovenaan het overzicht: draait alles, en wat wordt per klik (nog) niet gemeten ----
 async function statusBlok({ e, leer, inst, st }) {
