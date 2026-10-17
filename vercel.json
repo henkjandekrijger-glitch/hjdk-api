@@ -109,6 +109,18 @@
       "schedule": "30 9,13,17,21 * * *"
     },
     {
+      "path": "/api/gsc?op=index&site=volgende",
+      "schedule": "35 * * * *"
+    },
+    {
+      "path": "/api/zicht?op=ronde&groep=2",
+      "schedule": "50 5 * * *"
+    },
+    {
+      "path": "/api/zicht?op=ronde&groep=2&alsNodig=1",
+      "schedule": "50 9,13,17,21 * * *"
+    },
+    {
       "path": "/api/gsc?op=index&site=us",
       "schedule": "25 4 * * *"
     },

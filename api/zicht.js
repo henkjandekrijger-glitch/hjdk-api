@@ -8,6 +8,11 @@
 //   POST /api/zicht?op=toegepast {site, les}  markeer een les als al toegepast (zonder proef)
 //   POST /api/zicht?op=site       {id, host, taal, land, merk[], vragen[], gsc?}   een site aanmelden voor de metingen
 //   GET  /api/zicht?op=ronde      cron (dagelijks 05:30 UTC) of met token: meten, beoordelen, herrangschikken, nieuwe inzichten
+//   GET  /api/zicht?op=ronde&groep=2  cron 05:50 UTC: dezelfde ronde voor alle andere projecten (lib/zicht.js PROJECT_SITES)
+//   GET  /api/zicht?op=werk[&site=todayin][&t=1]  wat elk project nu moet doen: technische problemen, dan de hoogste open les
+//   GET  /api/zicht?op=tech&site=todayin           laatste techcheck (robots, bots, sitemap, homepage, zicht.json)
+//   GET  /api/zicht?op=controleer&site=todayin     techcheck + zicht.json nu (zonder token hooguit eens per uur per site)
+//   GET  /api/zicht?op=manifest                    uitleg van https://<host>/zicht.json: zo meldt een project zonder token
 // Schrijven: token in Authorization: Bearer, header x-hjdk-token of ?token= (gedeelde team-variabele ZICHT_TOKEN, GADS_TOKEN of HJDK_TOKEN).
 import { vraagAI, gapScan } from '../lib/zicht.js';
 import { lessen, draaiboek, stand, voegLesToe, nieuweProef, verwerkUitkomst, zetSite, ronde, meet, sites, DAY } from '../lib/zicht.js';
@@ -40,6 +45,14 @@ export default async function handler(req, res) {
       const r = await gapScan(vragen, q.taal || 'nl', oidc, q.model); const naam = String(q.naam || 'scan').replace(/[^a-z0-9-]/gi, '').slice(0, 40);
       await kv.set('zicht:gapscan:' + DAY() + ':' + naam, r, { ex: 60 * 86400 }).catch(() => {}); await kv.raw(['LPUSH', 'zicht:gapscan:index', 'zicht:gapscan:' + DAY() + ':' + naam]).catch(() => {}); await kv.raw(['LTRIM', 'zicht:gapscan:index', '0', '49']).catch(() => {}); return res.status(200).json(Object.assign({ ok: true, naam }, r)); }
     if (op === 'stand') return res.status(200).json({ ok: true, dag: DAY(), sites: await stand(q.site) });
+    if (op === 'manifest') { const PJ = await import('../lib/zicht-projecten.js'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(PJ.MANIFEST_UITLEG); }
+    if (op === 'werk') { const PJ = await import('../lib/zicht-projecten.js'); const w = await PJ.werk(await sites(), q.site || null);
+      if (q.t) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send('ZICHT werk per project (' + DAY() + '). Eerst PROBLEMEN, dan de genummerde lessen (hoogste score eerst). Pas toe op een deel van de pagina\'s, houd vergelijkbare als controle en meld het in https://<host>/zicht.json (uitleg: /api/zicht?op=manifest).\n\n' + PJ.werkTekst(w)); }
+      return res.status(200).json({ ok: true, dag: DAY(), werk: w }); }
+    if (op === 'tech') { const PJ = await import('../lib/zicht-projecten.js'); return res.status(200).json({ ok: true, tech: await PJ.techVan(String(q.site || '')) }); }
+    if (op === 'controleer') { const ss = await sites(); const s = ss[String(q.site || '')]; if (!s) return res.status(400).json({ fout: 'onbekende site' });
+      if (!mag(req)) { const { kv } = await import('../lib/db.js'); const lk = 'zicht:controleer:last:' + s.id; const last = await kv.get(lk).catch(() => 0); if (last && Date.now() - last < 3600e3) return res.status(429).json({ fout: 'deze site is het afgelopen uur al gecontroleerd', tech: '/api/zicht?op=tech&site=' + s.id }); await kv.set(lk, Date.now()); }
+      const PJ = await import('../lib/zicht-projecten.js'); return res.status(200).json({ ok: true, site: s.id, controle: await PJ.controleer(s) }); }
     if (op === 'sites') return res.status(200).json({ ok: true, sites: await sites() });
     if (op === 'ronde' && !mag(req)) { // zonder token: hooguit eens per 6 uur
       const { kv } = await import('../lib/db.js'); const last = await kv.get('zicht:ronde:last').catch(() => 0); if (last && Date.now() - last < 6 * 3600e3) return res.status(429).json({ fout: 'laatste ronde minder dan 6 uur geleden', stand: '/api/zicht?op=stand' });
@@ -55,9 +68,9 @@ export default async function handler(req, res) {
     if (op === 'site') return res.status(200).json({ ok: true, site: await zetSite(q) });
     if (op === 'meet') return res.status(200).json({ ok: true, meting: await meet(q.site || 'kz', oidc) });
     if (op === 'ronde' && q.alsNodig) { // vangnet: alleen draaien als de ochtendronde vandaag niets heeft gemeten (storing, volle database)
-      const { kv } = await import('../lib/db.js'); const d = new Date().toISOString().slice(0, 10); const al = await kv.get('zicht:meting:kz:' + d).catch(() => null);
+      const { kv } = await import('../lib/db.js'); const d = new Date().toISOString().slice(0, 10); const al = await kv.get('zicht:meting:' + (Number(q.groep) === 2 ? 'todayin' : 'kz') + ':' + d).catch(() => null);
       if (al) return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'vandaag al gemeten' }); }
-    if (op === 'ronde') return res.status(200).json(Object.assign({ ok: true }, await ronde(oidc, { zonderMeten: !!q.zonderMeten })));
+    if (op === 'ronde') return res.status(200).json(Object.assign({ ok: true }, await ronde(oidc, { zonderMeten: !!q.zonderMeten, groep: Number(q.groep) || 1 })));
     return res.status(400).json({ fout: 'onbekende op' });
   } catch (e) { return res.status(500).json({ fout: String(e.message || e).slice(0, 300) }); }
 }

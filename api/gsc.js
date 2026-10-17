@@ -132,13 +132,23 @@ export default async function handler(req, res) {
       const l = await sites(oidc); const out = {}; for (const [id, host] of Object.entries(SITES)) { const prop = propFor(l, host); if (!prop) { out[host] = { fout: 'geen toegang' }; continue; } out[host] = { indienen: await smap(id, prop, oidc), google: await sitemapInfo(prop, oidc).catch(e => String(e.message).slice(0, 120)) }; }
       return res.status(200).json({ ok: true, sitemaps: out }); }
     if (op === 'index') { // openbaar: welke pagina's uit de sitemap staan echt in Google; elke ronde de langst niet gecontroleerde eerst, resultaten per URL bewaard
-      const id = SITES[url.searchParams.get('site')] ? url.searchParams.get('site') : 'kz'; const host = SITES[id]; const ck = 'hjdk:gsc:index:' + id; const mk = ck + ':map';
+      // 17 okt 2026: ook voor alle andere ZICHT-projecten (lib/zicht.js PROJECT_SITES); site=volgende = de site met Search Console-toegang die het langst niet is bekeken
+      let id = url.searchParams.get('site'); let ZS = {}; if (!SITES[id]) { try { ZS = await (await import('../lib/zicht.js')).sites(); } catch (e) {} }
+      if (id === 'volgende') { const l0 = await sites(oidc); const kand = Object.values(ZS).filter(x => !SITES[x.id] && propFor(l0, x.host));
+        if (!kand.length) return res.status(200).json({ ok: true, niets: 'geen ander project met Search Console-toegang (serviceaccount seo-leerlus@hjdk-seo.iam.gserviceaccount.com toevoegen)' });
+        const at = await Promise.all(kand.map(x => kv.get('hjdk:gsc:index:' + x.id).then(v => (v && v.at) || 0).catch(() => 0))); id = kand[at.indexOf(Math.min(...at))].id; }
+      if (!SITES[id] && !ZS[id]) id = 'kz'; const host = SITES[id] || ZS[id].host; const ck = 'hjdk:gsc:index:' + id; const mk = ck + ':map';
       const c0 = await kv.get(ck).catch(() => null); if (c0 && Date.now() - c0.at < 6 * 3600e3 && !isToken && !isCron) return res.status(200).json(Object.assign({ ok: true, uitCache: true }, c0, { alles: undefined }));
       const l = await sites(oidc); const prop = propFor(l, host); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot ' + host });
-      const xml = await (await fetch(SITEMAPS[id])).text(); const urls = [...new Set([...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim()))];
+      let urls; if (SITEMAPS[id]) { const xml = await (await fetch(SITEMAPS[id])).text(); urls = [...new Set([...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim()))]; }
+      else { const tech = await kv.get('zicht:tech:' + id).catch(() => null); urls = (tech && tech.sitemapVoorbeeld) || [];
+        if (!urls.length) { const xml = await (await fetch('https://' + host + '/sitemap.xml')).text().catch(() => ''); urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim()).filter(u => !/\.xml($|\?)/.test(u)); } }
+      // pagina's van lopende ZICHT-proeven (getest en controle) altijd meenemen en eerst bekijken, zodat de proef te beoordelen is
+      const proefUrls = ((await kv.get('zicht:exp:' + id).catch(() => null)) || []).filter(p => p.status === 'loopt' && p.metric === 'index').flatMap(p => [...(p.urls || []), ...(p.controle || [])]).filter(u => /^https?:\/\//.test(u)).slice(0, 300);
+      urls = [...new Set([...proefUrls, ...urls])]; const isProef = new Set(proefUrls);
       const map = (await kv.get(mk).catch(() => null)) || {}; const dag = new Date().toISOString().slice(0, 10);
       // volgorde: nooit bekeken, dan niet geïndexeerd en langst geleden, dan geïndexeerd en langst geleden
-      const todo = urls.slice().sort((x, y) => { const a = map[x], b = map[y]; const ka = !a ? 0 : a.v === 'PASS' ? 2 : 1, kb = !b ? 0 : b.v === 'PASS' ? 2 : 1; return ka - kb || String((a || {}).d || '').localeCompare(String((b || {}).d || '')); });
+      const todo = urls.slice().sort((x, y) => { const a = map[x], b = map[y]; const ka = !a ? 0 : a.v === 'PASS' ? 2 : 1, kb = !b ? 0 : b.v === 'PASS' ? 2 : 1; const pa = isProef.has(x) && (!a || a.d !== dag) ? 0 : 1, pb = isProef.has(y) && (!b || b.d !== dag) ? 0 : 1; return pa - pb || ka - kb || String((a || {}).d || '').localeCompare(String((b || {}).d || '')); });
       let n = 0; for (let i = 0; i < todo.length; i += 8) { const part = await Promise.all(todo.slice(i, i + 8).map(u => inspect(prop, u, oidc))); part.forEach(x => { if (!x.fout) { map[x.url] = { v: x.verdict, s: x.staat, c: x.gecrawld, d: dag }; n++; } }); if (Date.now() - t0 > 230e3) break; }
       Object.keys(map).forEach(u => { if (!urls.includes(u)) delete map[u]; }); await kv.set(mk, map).catch(() => {});
       const alles = urls.filter(u => map[u]).map(u => ({ url: u, verdict: map[u].v, staat: map[u].s, gecrawld: map[u].c, dag: map[u].d }));
