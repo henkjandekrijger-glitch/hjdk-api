@@ -37,7 +37,7 @@ function shell(m, o) {
   return `<!doctype html><html lang="${m.locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(o.title)}</title><meta name="description" content="${esc(o.desc)}"><link rel="canonical" href="${base}${o.path}"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"><link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"><meta property="og:title" content="${esc(o.title)}"><meta property="og:description" content="${esc(o.desc)}"><meta property="og:type" content="${o.og || 'website'}"><meta property="og:url" content="${base}${o.path}">${o.image ? `<meta property="og:image" content="${esc(o.image)}">` : ''}${o.ld ? `<script type="application/ld+json">${JSON.stringify(o.ld).replace(/</g, '\\u003c')}</script>` : ''}<style>${CSS(m)}</style></head><body>
 <header class="topbar"><div class="wrap"><a class="mark" href="/">${m.id === 'us' ? 'which<em>to</em>buy' : 'kauf<em>berater</em>'}</a><nav class="topnav" aria-label="Menu"><a href="/">${m.s.all}</a><a href="/about">${m.s.about}</a></nav></div></header><main><div class="wrap">${o.body}</div></main>
 <footer><div class="wrap"><div class="fl"><a href="/">${m.name}</a><a href="/about">${m.s.about}</a><a href="/privacy">Privacy</a><a href="/llms.txt">llms.txt</a><a href="/sitemap.xml">Sitemap</a></div><div>${esc(m.s.disc)} · <a href="/about">${m.s.about}</a> · <a href="/privacy">Privacy</a><br>${m.id === 'de' ? 'Impressum: AdsFair B.V., Albert Plesmanplein 20, 2805 AB Gouda, Niederlande · KvK 60126035' : 'AdsFair B.V., Albert Plesmanplein 20, 2805 AB Gouda, Netherlands'} · ${m.name} by Henkjan de Krijger</div></div></footer>
-<script>window.__h=function(k){try{navigator.sendBeacon('/api/hjdk/stats/hits',new Blob([JSON.stringify({hits:[[k,1]]})],{type:'text/plain'}))}catch(e){}};</script></body></html>`;
+<script>window.__h=function(k){try{navigator.sendBeacon('/api/hjdk/stats/hits',new Blob([JSON.stringify({hits:[[k,1]]})],{type:'text/plain'}))}catch(e){}};</script><script defer src="/api/vindbaarheid?op=tracker"></script></body></html>`;
 }
 function card(m, p, i) {
   const role = i === 0 ? m.s.pick : m.s.alt;
@@ -53,7 +53,7 @@ function firstBold(t) { t = String(t || ''); const x = t.match(/^([\s\S]+?[.!?])
 async function page(m, it, all, req) {
   const s = m.s; const base = 'https://' + m.host; const a0 = (it.questions || []).map(() => 0);
   const adv = await advice(m, it, a0);
-  const boost = new Set((await kv.get('hjdk:gsc:' + m.id + ':boost').catch(() => null)) || []); const sc = x => (x.cat === it.cat ? 2 : 0) + (boost.has(x.slug) ? 1 : 0);
+  const boost = new Set((await kv.get('hjdk:gsc:' + m.id + ':boost').catch(() => null)) || []); const sc = x => (x.cat === it.cat ? 2 : 0) + (boost.has(x.slug) ? 1 : 0) + ((it.verwant || []).includes(x.slug) || (x.verwant || []).includes(it.slug) ? 20 : 0);
   const rel = all.filter(x => x.slug !== it.slug).sort((x, y) => sc(y) - sc(x)).slice(0, 8);
   const qs = (it.questions || []).map((q, qi) => `<div class="q" data-q="${qi}"><h2>${qi + 1}. ${esc(q.q)}</h2><div class="opts">${(q.options || []).map((o, oi) => `<button class="opt" type="button" data-o="${oi}">${esc(o.label)}</button>`).join('')}</div></div>`).join('');
   const upd = it.updatedAt || it.publishAt || DAY();
@@ -80,7 +80,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 }
 function home(m, all) {
   const s = m.s; const cats = {}; all.forEach(i => { (cats[i.cat] = cats[i.cat] || []).push(i); });
-  const newest = all.slice().sort((a, b) => String(b.publishAt || '').localeCompare(String(a.publishAt || ''))).slice(0, 12);
+  const newest = all.slice().sort((a, b) => (b.priority || 0) - (a.priority || 0) || String(b.publishAt || '').localeCompare(String(a.publishAt || ''))).slice(0, 12);
   const body = `<p class="kicker">${esc(m.name)}</p><h1>${esc(s.hero)}</h1><p class="standfirst">${esc(s.heroP)}</p>${newest.length ? `<ul class="cards">${newest.map(r => `<li><a href="/${esc(r.slug)}">${esc(r.title)}</a><p>${esc(String(r.kort || '').slice(0, 140))}</p></li>`).join('')}</ul>` : `<p class="meta">${esc(s.wait)}</p>`}
 ${Object.keys(cats).sort().map(c => `<h2>${esc(c)}</h2><ul class="cards">${cats[c].map(i => `<li><a href="/${esc(i.slug)}">${esc(i.title)}</a></li>`).join('')}</ul>`).join('')}<p class="disc">${esc(s.disc)}</p>`;
   const base = 'https://' + m.host;
@@ -132,3 +132,4 @@ export default async function handler(req, res) {
   await count(m, req, q, it.slug);
   return send(await page(m, it, all, req), it.term);
 }
+

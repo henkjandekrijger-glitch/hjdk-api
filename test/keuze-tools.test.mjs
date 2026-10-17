@@ -31,7 +31,7 @@ test('lookup failures never become availability or zero-price claims', () => {
   const domains = ['linden.com', 'linden.nl', 'linden.de'];
   const result = normalizeQuotes({ domains: [{ domain: domains[0], available: true, price: 12.5, renewalPrice: 15, years: 1 }, { domain: domains[1], available: false, price: 'unknown' }] }, domains);
   assert.equal(result[0].available, true); assert.equal(result[0].price, 12.5);
-  assert.equal(result[1].available, false); assert.equal(result[1].price, null);
+  assert.equal(result[1].available, null); assert.equal(result[1].unsupported, true); assert.match(result[1].registry, /sidn/); assert.equal(result[1].price, null);
   assert.equal(result[2].available, null); assert.equal(result[2].renewalPrice, null);
   assert.equal(normalizeQuotes({}, ['linden.com'])[0].available, null);
 });
@@ -71,5 +71,5 @@ test('localized guides have visible answers, matching FAQ schema and canonical m
     assert(extraItems(g.id).some(x => x.slug === g.slug));
   }
   assert(renderLaadpaal([2, 0, 0]).includes('openbaar laden'));
-  assert.equal(extraItems('nl').length, 2);
+  assert.equal(extraItems('nl').length, 4); assert.equal(extraItems('de').length, 3);
 });

@@ -95,7 +95,7 @@ async function allItems(withFuture) {
   const extra = []; try { const idx = (await kv.get('hjdk:kz:index')) || []; const vals = idx.length ? await kv.mget(...idx.map(s => 'hjdk:kz:' + s)) : []; vals.forEach(v => { if (v && v.slug) extra.push(v); }); } catch (e) {}
   const seen = {}; const out = [];
   const ov = {}; extra.forEach(v => { if (v.override) ov[v.slug] = v; });
-  extraItems('nl').concat(seed.items, seed2.items, extra.filter(v => !v.override)).forEach(it0 => { const it = ov[it0.slug] ? Object.assign({}, it0, ov[it0.slug]) : it0; if (!seen[it.slug] && (withFuture || isLive(it))) { seen[it.slug] = 1; out.push(it); } });
+  extraItems('nl').concat(seed.items, seed2.items, extra.filter(v => !v.override)).forEach(it0 => { const it = !it0.tool && ov[it0.slug] ? Object.assign({}, it0, ov[it0.slug]) : it0; if (!seen[it.slug] && (withFuture || isLive(it))) { seen[it.slug] = 1; out.push(it); } });
   return out;
 }
 async function getItem(slug, withFuture) { const all = await allItems(withFuture); return all.find(i => i.slug === slug) || null; }
@@ -191,7 +191,7 @@ function shell(title, desc, body, canonical, extraHead) {
 <header class="topbar"><div class="wrap"><a class="mark" href="/keuzehulp">keuze<em>hulp</em></a><nav class="topnav" aria-label="Menu"><a href="/keuzehulp">Alle keuzehulpen</a><a href="/deals">Deals</a><a href="/keuzehulp/over">Over ons</a></nav></div></header>
 <main><div class="wrap">${body}</div></main>
 <footer><div class="wrap">${esc(SITE.name)} is een onafhankelijke keuzehulp van ${esc(SITE.owner)}, samengesteld door <a href="https://www.linkedin.com/in/henkjandekrijger" rel="author noopener" target="_blank">Henkjan de Krijger</a> · <a href="/keuzehulp/over">Over ons</a> · <a href="/keuzehulp/privacy">Privacy</a> · <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a><br>Affiliate-vermelding: als je via onze link iets koopt bij bol, ontvangen wij een vergoeding. De prijs die je betaalt verandert daardoor niet. Prijzen en beoordelingen komen rechtstreeks van bol en worden elke 20 minuten ververst.</div></footer>
-</body></html>`;
+<script defer src="/api/vindbaarheid?op=tracker"></script></body></html>`;
 }
 
 // antwoordblok zoals nexy.help: alleen de eerste zin vet
@@ -947,3 +947,4 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
     return page(item, res, req);
   } catch (e) { return res.status(500).json({ ok: false, error: String(e && e.message || e).slice(0, 200) }); }
 }
+

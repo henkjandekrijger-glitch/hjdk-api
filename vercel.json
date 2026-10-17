@@ -119,9 +119,57 @@
     {
       "path": "/api/mm/wachtuur",
       "schedule": "47 * * * *"
+    },
+    {
+      "path": "/api/vindbaarheid?op=dag",
+      "schedule": "15 11 * * *"
     }
   ],
   "rewrites": [
+    {
+      "source": "/acai-bowl-maken",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=acai&market=nl"
+    },
+    {
+      "source": "/acai-bowl-zubereiten",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?kaufberater\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=acai&market=de"
+    },
+    {
+      "source": "/verwarmen-met-mobiele-airco",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=heat&market=nl"
+    },
+    {
+      "source": "/heizen-mit-mobiler-split-klimaanlage",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?kaufberater\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=heat&market=de"
+    },
+    {
+      "source": "/vindbaarheid",
+      "destination": "/api/vindbaarheid"
+    },
     {
       "source": "/domeinnaam-kiezen",
       "has": [
@@ -523,6 +571,9 @@
     },
     "api/keuze-tools.js": {
       "maxDuration": 30
+    },
+    "api/vindbaarheid.js": {
+      "maxDuration": 300
     }
   },
   "redirects": [
