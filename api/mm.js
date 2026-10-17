@@ -159,7 +159,7 @@ export default async function handler(req, res) {
       const lok = q('lok') === '' || q('lok') == null ? null : Number(q('lok')), sec = Number(q('s')) || 0, act = Number(q('a')) || 0;
       const mens = sec >= c.minSeconden && act >= c.minActies && (lok == null || !Number.isFinite(lok) || lok >= c.minLokaal);
       const qid = /^[0-9a-f]{16}$/.test(String(q('q') || '')) ? String(q('q')) : '';
-      const r = await rtBeslis(kv, { bron: 'pagina', site: String(q('site') || '').slice(0, 40), land: srv.land, dc: d.dc === true, bot: !!(sc.vlag && sc.vlag.hl), gpc: req.headers['sec-gpc'] === '1', uit: leesCookie(req, 'mmrt') === 'uit', mens, id: qid }).catch(() => ({ px: [] }));
+      const r = await rtBeslis(kv, { bron: 'pagina', site: String(q('site') || '').slice(0, 40), land: srv.land, dc: d.dc === true, bot: !!(sc.vlag && sc.vlag.hl), gpc: req.headers['sec-gpc'] === '1', uit: leesCookie(req, 'mmrt') === 'uit', mens, id: qid, seg: String(q('seg') || '').slice(0, 10) }).catch(() => ({ px: [] }));
       return res.status(200).json({ px: r.px || [] });
     }
     // afmelden voor het Clickmind-publiek (privacypagina): cookie mmrt=uit op dit domein, de pagina zet ook localStorage cmRtUit
