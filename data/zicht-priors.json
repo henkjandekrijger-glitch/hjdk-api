@@ -438,5 +438,33 @@
   "sterkte": 3,
   "moeite": 1,
   "risico": ""
+ },
+ {
+  "id": "situatie-product-prijs-tabel",
+  "les": "Zet op elke keuzehulp een tabel die zonder klikken leesbaar is: per situatie of antwoord één concreet product met de prijs van vandaag en de datum erbij.",
+  "kanaal": "llm",
+  "bewijs": "Eigen gatscan 17 okt 2026 (40 NL-keuzevragen aan Perplexity): bij 'beste X onder €Y' leunde 7 van 10 antwoorden op één dunne bron en zei steeds 'controleer de actuele prijs'; bij situatievragen gaf 0 van 10 een prijs. Product.ai (sep 2026, 220 koopvragen x 5): aanbevelingen 89% en prijzen 87% tegenstrijdig. AI-crawlers voeren geen JavaScript uit, dus het product moet in de HTML staan.",
+  "bron": [
+   "https://www.ecommerce-nation.fr/shopping-ia-fiabilite-chatgpt-gemini-claude-perplexity/",
+   "https://ahrefs.com/blog/do-ai-assistants-prefer-to-cite-fresh-content/"
+  ],
+  "sterkte": 3,
+  "effect": 0.3,
+  "moeite": 2,
+  "meten": "llm"
+ },
+ {
+  "id": "rekenhulp-maatvragen",
+  "les": "Maak voor maat- en rekenvragen (welke maat, hoeveel cm/kg/watt) één sterke rekenpagina met tabel, meetuitleg, vragen als kopjes en een product per maat; geen losse pagina per getal.",
+  "kanaal": "google",
+  "bewijs": "Eigen Search Console okt 2026: maatvragen kinderfiets op positie 4,6 tot 6,6, terwijl 'keuzehulp X' op 20 tot 25 staat. Onderzoek 17 okt: top voor 'welke maat fiets', 'framemaat berekenen' en 'maat fietshelm' bestaat uit statische winkeltabellen, filterpagina's en dunne pagina's die zichzelf tegenspreken; geen enkele rekent lengte, binnenbeen en fietstype samen uit.",
+  "bron": [
+   "https://www.biketotaal.nl/advies/keuzehulp/welke-maat-fiets",
+   "https://webwoordenboek.nl/kenniscentrum/welke-maat-fietshelm-heb-ik-nodig"
+  ],
+  "sterkte": 3,
+  "effect": 0.4,
+  "moeite": 2,
+  "meten": "gsc"
  }
 ]
