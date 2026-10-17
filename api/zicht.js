@@ -38,7 +38,7 @@ export default async function handler(req, res) {
       const { kv } = await import('../lib/db.js'); if (!mag(req)) { const n = Number(await kv.raw(['INCR', 'zicht:gapscan:n:' + DAY()]).catch(() => 0)); if (n > 6) return res.status(429).json({ fout: 'daglimiet gatscan (6)' }); }
       const vragen = (Array.isArray(q.vragen) ? q.vragen : String(q.v || '').split('|')).map(x => String(x).trim()).filter(Boolean).slice(0, 40); if (!vragen.length) return res.status(400).json({ fout: 'geef v=vraag1|vraag2|... of POST {vragen:[...]}' });
       const r = await gapScan(vragen, q.taal || 'nl', oidc, q.model); const naam = String(q.naam || 'scan').replace(/[^a-z0-9-]/gi, '').slice(0, 40);
-      await kv.set('zicht:gapscan:' + DAY() + ':' + naam, r, { ex: 60 * 86400 }).catch(() => {}); return res.status(200).json(Object.assign({ ok: true, naam }, r)); }
+      await kv.set('zicht:gapscan:' + DAY() + ':' + naam, r, { ex: 60 * 86400 }).catch(() => {}); await kv.raw(['LPUSH', 'zicht:gapscan:index', 'zicht:gapscan:' + DAY() + ':' + naam]).catch(() => {}); await kv.raw(['LTRIM', 'zicht:gapscan:index', '0', '49']).catch(() => {}); return res.status(200).json(Object.assign({ ok: true, naam }, r)); }
     if (op === 'stand') return res.status(200).json({ ok: true, dag: DAY(), sites: await stand(q.site) });
     if (op === 'sites') return res.status(200).json({ ok: true, sites: await sites() });
     if (op === 'ronde' && !mag(req)) { // zonder token: hooguit eens per 6 uur
