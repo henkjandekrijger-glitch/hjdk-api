@@ -6,6 +6,7 @@
 //   POST /api/pinterest/queue {token, urls}   -> wachtrij vullen; regel: <url> | <bordnaam optioneel>
 import { kv } from '../lib/db.js';
 import kzSeed from '../data/kz.json' with { type: 'json' };
+import { CONFIG, runDirect } from '../lib/pinterest-direct.js';
 import { getApp, exchangeCode, tokenStatus, listBoards, ensureBoard, createPin } from '../lib/pinterest.js';
 
 const QUEUE = 'hjdk:pins:queue', LOG = 'hjdk:pins:log';
@@ -66,10 +67,12 @@ export default async function handler(req, res) {
       const st = state ? await kv.get('hjdk:pinterest:state:' + state) : null;
       if (!code || !st) return res.status(400).send('Ongeldige of verlopen koppel-link. Ga terug naar /setup en klik opnieuw op "Verbind Pinterest".');
       const app = await getApp(); if (!app) return res.status(400).send('Geen Pinterest app-id/secret ingesteld (zet die eerst via /setup).');
+      await kv.del(['hjdk:pinterest:state:' + state]);
       await exchangeCode(app, code);
+      if (!await kv.get(CONFIG)) await kv.set(CONFIG, {enabled:false, markets:['nl','us','de'], dailyPerMarket:1, standard:false});
       let who = ''; try { const { api } = await import('../lib/pinterest.js'); const u = await api('/user_account'); who = u.username || ''; } catch (e) {}
       res.setHeader('content-type', 'text/html; charset=utf-8');
-      return res.status(200).send('<!doctype html><meta charset="utf-8"><body style="font:17px system-ui;padding:30px"><h2>Pinterest verbonden' + (who ? ' als ' + esc(who) : '') + ' ✓</h2><p>Je kunt dit venster sluiten. Vanaf nu plaatst hjdk-api elke dag pins. Wachtrij en status: <a href="/pins">/pins</a>.</p></body>');
+      return res.status(200).send('<!doctype html><meta charset="utf-8"><body style="font:17px system-ui;padding:30px"><h2>Pinterest verbonden' + (who ? ' als ' + esc(who) : '') + ' ✓</h2><p>Je kunt dit venster sluiten. Ga naar <a href="/api/pin-connect">de eigen Pinterest-planner</a> om Standard-toegang te bevestigen en de planning te starten.</p></body>');
     }
     if (op === 'status') {
       const app = await getApp(); const status = await tokenStatus();
@@ -88,6 +91,10 @@ export default async function handler(req, res) {
       return res.status(200).json({ ok: true, toegevoegd: added, wachtrij: queue.length });
     }
     if (op === 'post') {
+      const bearer = String(req.headers.authorization || '').replace(/^Bearer /i, '');
+      if (!bearer || !((process.env.CRON_SECRET && bearer === process.env.CRON_SECRET) || (process.env.HJDK_TOKEN && bearer === process.env.HJDK_TOKEN))) return res.status(401).json({error:'Alleen de geautoriseerde cron of beheerder kan publiceren'});
+      // Once the direct planner is configured, it owns publication. Legacy queue stays intact.
+      if (await kv.get(CONFIG)) return res.status(200).json(await runDirect());
       const n = Math.max(1, Math.min(5, Number(url.searchParams.get('n')) || 2));
       const status = await tokenStatus(); if (!/^verbonden/.test(status)) return res.status(200).json({ ok: false, error: 'Pinterest ' + status });
       let queue = (await kv.get(QUEUE)) || []; const log = (await kv.get(LOG)) || []; const done = [];
