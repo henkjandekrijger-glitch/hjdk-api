@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { runInNewContext } from 'node:vm';
 import * as core from '../lib/stekkerbatterij.js';
 const {batteryEconomics,batteryAdvice,batteryRoute,bolBatteryLink,amazonBatteryLink,isCompleteBatteryProduct,BATTERY_MODELS,BATTERY_URL}=core;
 test('27 routes give appropriate advice; no-solar, unknown connection and backup do not imply a purchase',()=>{
@@ -55,6 +56,18 @@ test('real offer pipeline excludes service results and keeps source times',async
  const r={headers:{},setHeader(k,v){this.headers[k]=v;},status(n){this.code=n;return this;},send(v){this.body=v;return this;}};
  await m.batteryHandler({method:'GET',url:'/api/keuze-tools?tool=battery&market=nl&a=0-1-0',headers:{}},r);
  assert.equal(r.code,200);assert.equal(r.headers['x-robots-tag'],'index, follow');assert.match(r.body,/regelbare opslag/);assert.match(r.body,/Productprijzen uit de bol-bron/);
+});
+test('generated browser script actually updates recommendations and share URL on a change event',async()=>{
+ const m=await pageModule(),html=m.renderBatteryPage({tag:'yoorsbrug-21'});
+ const cfg=html.match(/<script type="application\/json" id="battery-config">([\s\S]*?)<\/script>/)[1];
+ const script=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)][0][1];
+ const elements=new Map();
+ function el(id){if(!elements.has(id))elements.set(id,{value:'0',innerHTML:'',textContent:'',events:{},addEventListener(k,fn){this.events[k]=fn;}});return elements.get(id);}
+ el('battery-config').textContent=cfg;el('battery-q1').value='2';
+ let replaced='';
+ runInNewContext(script,{document:{getElementById:el,addEventListener(){}},navigator:{sendBeacon(){}},Blob,URL,location:{href:BATTERY_URL},history:{replaceState(a,b,u){replaced=String(u);}},Intl,FormData:class{}});
+ el('battery-choice').events.change();assert.match(el('battery-advice').innerHTML,/Begin met een passend noodstroomontwerp/);assert.match(replaced,/a=0-2-0/);
+ el('battery-q1').value='1';el('battery-choice').events.change();assert.match(el('battery-advice').innerHTML,/regelbare opslag/);assert.match(el('battery-advice').innerHTML,/tag=yoorsbrug-21/);assert.match(el('battery-advice').innerHTML,/s=1547300/);
 });
 test('hosting route and catalog integration keep a single canonical guide',async()=>{
  const v=JSON.parse(await readFile(new URL('../vercel.json',import.meta.url),'utf8'));
