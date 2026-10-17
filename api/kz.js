@@ -152,6 +152,7 @@ async function advise(item, route, tag) {
   picks.forEach(o => { if (o.term) term = o.term; if (o.add) term += ' ' + o.add; if (o.must) must = must.concat(o.must.map(x => x.toLowerCase())); if (o.min) min = Math.max(min, o.min); if (o.max) max = max ? Math.min(max, o.max) : o.max; });
   let products = [], checkedAt = null;
   try { const r = await searchCached(term.trim(), { country: 'NL', size: 48, sort: 'RELEVANCE' }); checkedAt = r.at || null; products = (r.products || []).filter(p => p.price != null && p.image); } catch (e) {}
+  if(item.slug==='thuisbatterij')products=products.filter(p=>!/laten aansluiten|aansluitservice|installatieservice|zoofy|uitbreidingsaccu|expansion battery|accukabel|verlengkabel/i.test(String(p.title||'')));
   const key = 'kz_' + item.slug + '-' + route.join('') + (tag || '');
   const hitsOf = p => { const t = String(p.title).toLowerCase(); return must.filter(m => t.indexOf(m) >= 0).length; };
   const score = p => { const hits = hitsOf(p); let s = hits * 2 + (p.rating || 3.5); if (min && p.price < min) s -= 3; if (max && p.price > max) s -= 3; if (p.strike && p.strike > p.price) s += 0.5; return s; };
@@ -485,7 +486,7 @@ hit('hjdk6-kz-'+S+'-page');})();</script>`;
 const DATUM_NL = d => { const m = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december']; const x = new Date(d + 'T12:00:00Z'); return x.getUTCDate() + ' ' + m[x.getUTCMonth()] + ' ' + x.getUTCFullYear(); };
 const kortTitel = t => { const a = String(t || '').replace(/\s+/g, ' ').trim(); const k = a.split(/\s[-–|,(]\s?|\s\(/)[0].trim(); return (k.length >= 18 ? k : a).slice(0, 70); };
 async function situatieTabel(item) {
-  const k = 'hjdk:kz:sit:' + item.slug; try { const c = await kv.get(k); if (c && c.dag === TODAY()) return c; } catch (e) {}
+  const k = 'hjdk:kz:sit:' + item.slug; try { const c = await kv.get(k); if (c && c.dag === TODAY() && (item.slug !== 'thuisbatterij' || !(c.rijen || []).some(r => /laten aansluiten|aansluitservice|installatieservice|zoofy|uitbreidingsaccu|expansion battery|accukabel|verlengkabel/i.test(String(r.titel || r.product || ''))))) return c; } catch (e) {}
   const qs = item.questions || []; const routes = []; const zero = qs.map(() => 0);
   qs.forEach((q, qi) => { if (!q || !q.options || q.options.length < 2 || q.options.length > 6) return; q.options.forEach((o, oi) => { const r = zero.slice(); r[qi] = oi; routes.push({ r, vraag: q.q, situatie: o.label }); }); });
   const kies = routes.slice(0, 12); const rijen = [];
@@ -955,5 +956,6 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
     return page(item, res, req);
   } catch (e) { return res.status(500).json({ ok: false, error: String(e && e.message || e).slice(0, 200) }); }
 }
+
 
 

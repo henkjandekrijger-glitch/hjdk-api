@@ -127,6 +127,16 @@
   ],
   "rewrites": [
     {
+      "source": "/stekkerbatterij",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=battery&market=nl"
+    },
+    {
       "source": "/acai-bowl-maken",
       "has": [
         {
