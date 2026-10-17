@@ -1,3 +1,5 @@
+import { guideAnswers, guideDecision } from '../lib/us-demand-guides.js';
+import { decisionHtml, guideSections } from '../lib/us-demand-view.js';
 import { koopBlok, koopMeetScript } from '../lib/koopblok.js';
 // WTB-pagina's: whichtobuy.best (VS) en kaufberater.best (DE). Zelfde idee als keuzehulp.best: 3 vragen, 1 eerlijke keuze, prijs van vandaag (Amazon).
 // Routes (vercel.json, op host): / , /<slug>, /sitemap.xml, /robots.txt, /llms.txt, /llms-full.txt, /<indexnow-sleutel>.txt, /about, /privacy
@@ -19,6 +21,7 @@ async function count(m, req, q, slug) {
 
 // producten voor een route: term + zoekwoorden van de gekozen antwoorden, binnen de prijsgrenzen
 async function advice(m, it, a) {
+  if(it.decisionKind){const decision=guideDecision(it,a);return {subject:it.term,slug:it.slug,kws:decision.query,link:searchLink(m,decision.query),products:[],at:null,api:false,decision};}
   const opts = (it.questions || []).map((q, i) => (q.options || [])[a[i] || 0] || {});
   const kws = [it.term, ...opts.map(o => o.kw).filter(Boolean)].join(' ').replace(/\s+/g, ' ').trim();
   let min = 0, max = 1e9; opts.forEach(o => { if (o.min != null) min = Math.max(min, Number(o.min)); if (o.max != null) max = Math.min(max, Number(o.max)); });
@@ -45,6 +48,7 @@ function card(m, p, i) {
   return `<div class="pr${i === 0 ? ' best' : ''}"><a href="${esc(p.url)}" rel="sponsored nofollow noopener" target="_blank" data-amz="${esc(p.asin)}"><img src="${esc(p.image)}" alt="${esc(p.title.slice(0, 80))}" loading="lazy"></a><div><div class="role">${esc(role)}</div><div class="t">${esc(p.title.slice(0, 110))}</div>${p.price != null ? `<div class="price">${esc(p.priceText || m.money(p.price))}</div>` : ''}<a class="btn" href="${esc(p.url)}" rel="sponsored nofollow noopener" target="_blank" data-amz="${esc(p.asin)}">${esc(p.price != null ? m.s.see : m.s.noPrice)} →</a></div></div>`;
 }
 function adviceHtml(m, adv) {
+  if(adv.decision)return decisionHtml(adv.decision,adv.link,esc);
   const buy = koopBlok({ market: m.id, subject: adv.subject || adv.kws, slug: adv.slug || '', products: adv.products, at: adv.at, fallback: adv.link });
   if (adv.products.length) return adv.products.map((p, i) => card(m, p, i)).join('') + `<p class="disc">${esc(m.s.priceNote)} ${esc(new Date(adv.at || Date.now()).toLocaleString(m.locale, { timeZone: m.id === 'us' ? 'America/New_York' : 'Europe/Berlin', dateStyle: 'medium', timeStyle: 'short' }))}; ${esc(m.s.priceNote2)}</p>` + buy;
   return `<div class="pr best" style="grid-template-columns:1fr"><div><div class="role">${esc(m.s.fallback)}</div><div class="t">${esc(adv.kws)}</div><a class="btn" href="${esc(adv.link)}" rel="sponsored nofollow noopener" target="_blank" data-amz="search">${esc(m.s.seeAll)} →</a></div></div>` + buy;
@@ -53,11 +57,11 @@ function adviceHtml(m, adv) {
 // antwoordblok zoals nexy.help: alleen de eerste zin vet
 function firstBold(t) { t = String(t || ''); const x = t.match(/^([\s\S]+?[.!?])(\s+[\s\S]+)$/); return x ? '<strong>' + esc(x[1]) + '</strong>' + esc(x[2]) : '<strong>' + esc(t) + '</strong>'; }
 async function page(m, it, all, req) {
-  const s = m.s; const base = 'https://' + m.host; const a0 = (it.questions || []).map(() => 0);
+  const s = m.s; const base = 'https://' + m.host; const a0 = guideAnswers(it, new URL(req.url,'http://x').searchParams.get('answers'));
   const adv = await advice(m, it, a0);
   const boost = new Set((await kv.get('hjdk:gsc:' + m.id + ':boost').catch(() => null)) || []); const sc = x => (x.cat === it.cat ? 2 : 0) + (boost.has(x.slug) ? 1 : 0) + ((it.verwant || []).includes(x.slug) || (x.verwant || []).includes(it.slug) ? 20 : 0);
   const rel = all.filter(x => x.slug !== it.slug).sort((x, y) => sc(y) - sc(x)).slice(0, 8);
-  const qs = (it.questions || []).map((q, qi) => `<div class="q" data-q="${qi}"><h2>${qi + 1}. ${esc(q.q)}</h2><div class="opts">${(q.options || []).map((o, oi) => `<button class="opt" type="button" data-o="${oi}">${esc(o.label)}</button>`).join('')}</div></div>`).join('');
+  const qs = (it.questions || []).map((q, qi) => `<div class="q" data-q="${qi}" role="group" aria-labelledby="question-${qi}"><h2 id="question-${qi}">${qi + 1}. ${esc(q.q)}</h2><div class="opts">${(q.options || []).map((o, oi) => `<button class="opt${a0[qi] === oi ? ' on' : ''}" type="button" data-o="${oi}" aria-pressed="${a0[qi] === oi}">${esc(o.label)}</button>`).join('')}</div></div>`).join('');
   const upd = it.updatedAt || it.publishAt || DAY();
   const ld = { '@context': 'https://schema.org', '@graph': [
     { '@type': 'Article', headline: it.h1, description: it.metaDesc, inLanguage: m.locale, datePublished: it.publishAt || upd, dateModified: upd, author: { '@type': 'Person', name: 'Henkjan de Krijger', url: 'https://www.linkedin.com/in/henkjandekrijger' }, publisher: { '@type': 'Organization', name: m.name, url: base }, mainEntityOfPage: base + '/' + it.slug, about: { '@type': 'Thing', name: it.term } },
@@ -67,16 +71,19 @@ async function page(m, it, all, req) {
   const body = `<p class="crumbs"><a href="/">${esc(m.name)}</a> › ${esc(it.cat)}</p><p class="kicker">${esc(it.cat)}</p><h1>${esc(it.h1)}</h1><p class="standfirst">${esc(it.intro)}</p>
 <div class="answer"><p>${firstBold(it.kort)}</p></div><p class="meta">${esc(s.updated)}&nbsp;<time datetime="${esc(upd)}">${esc(upd)}</time> · ${esc(s.by)} Henkjan de Krijger</p>
 <h2>${esc(s.q)}</h2>${qs}
-<div id="adv" style="margin:14px 0">${adviceHtml(m, adv)}</div>
+<div class="guide-actions"><button type="button" id="share-guide">Copy this result</button><span id="share-status" role="status"></span></div><p id="advice-status" role="status"></p><div id="adv" aria-live="polite" aria-atomic="true" style="margin:14px 0">${adviceHtml(m, adv)}</div>
+${guideSections(it,esc)}
 ${(it.aiMiss || []).length ? `<div class="box ai"><h2>${esc(s.aimiss)}</h2><ul>${it.aiMiss.map(x => '<li>' + esc(x) + '</li>').join('')}</ul></div>` : ''}
 <div class="box"><h2>${esc(s.guide)}</h2>${String(it.guide || '').split(/\n+/).filter(Boolean).map(p => '<p>' + esc(p) + '</p>').join('')}</div>
 ${(it.mistakes || []).length ? `<div class="box"><h2>${esc(s.mistakes)}</h2><ul>${it.mistakes.map(x => '<li>' + esc(x) + '</li>').join('')}</ul></div>` : ''}
 ${(it.faq || []).length ? `<h2>${esc(s.faq)}</h2>${it.faq.map(f => `<details class="faq"><summary>${esc(f.q)}</summary><div class="a"><p>${esc(f.a)}</p></div></details>`).join('')}` : ''}
 ${rel.length ? `<h2>${esc(s.related)}</h2><ul class="cards">${rel.map(r => `<li><a href="/${esc(r.slug)}">${esc(r.title)}</a><p>${esc(String(r.kort || '').slice(0, 140))}</p></li>`).join('')}</ul>` : ''}
 <p class="disc">${esc(s.disc)}</p>
-<script>(function(){var S=${JSON.stringify(it.slug)},M=${JSON.stringify(m.id)},n=document.querySelectorAll('.q').length,cur=[],t=null,st=0;for(var i=0;i<n;i++)cur.push(0);var h=window.__h||function(){};
-function load(){fetch('/api/wtb?op=advice&m='+M+'&slug='+encodeURIComponent(S)+'&a='+cur.join('-')+'&html=1').then(function(r){return r.json()}).then(function(j){if(j&&j.html)document.getElementById('adv').innerHTML=j.html;h('wtb-'+M+'-'+S+'-adv')}).catch(function(){})}
-document.querySelectorAll('.q').forEach(function(q){var qi=+q.getAttribute('data-q');q.querySelectorAll('.opt').forEach(function(b){b.addEventListener('click',function(){q.querySelectorAll('.opt').forEach(function(x){x.classList.remove('on')});b.classList.add('on');cur[qi]=+b.getAttribute('data-o');if(!st){st=1;h('wtb-'+M+'-'+S+'-start');h('wtb-'+M+'-start')}clearTimeout(t);t=setTimeout(load,200);if(qi===n-1)document.getElementById('adv').scrollIntoView({behavior:'smooth',block:'start'})})})});
+<script>(function(){var S=${JSON.stringify(it.slug)},M=${JSON.stringify(m.id)},cur=${JSON.stringify(a0)},t=null,st=0,seq=0;
+var h=function(k){if(window.__h)window.__h(k)},status=document.getElementById('advice-status');
+function load(){var id=++seq;status.textContent='Updating your recommendation…';document.getElementById('adv').setAttribute('aria-busy','true');fetch('/api/wtb?op=advice&m='+M+'&slug='+encodeURIComponent(S)+'&a='+cur.join('-')+'&html=1').then(function(r){if(!r.ok)throw Error('advice');return r.json()}).then(function(j){if(id!==seq)return;if(!j||!j.html)throw Error('advice');document.getElementById('adv').innerHTML=j.html;document.getElementById('adv').setAttribute('aria-busy','false');status.textContent='Recommendation updated.';h('wtb-'+M+'-'+S+'-adv')}).catch(function(){if(id!==seq)return;document.getElementById('adv').setAttribute('aria-busy','false');status.textContent='Could not update. Reload this page to use your selected answers.';document.getElementById('adv').innerHTML='<p>Your previous result is out of date. Please reload to get a recommendation for your current answers.</p>'})}
+document.querySelectorAll('.q').forEach(function(q){var qi=+q.getAttribute('data-q');q.querySelectorAll('.opt').forEach(function(b){b.addEventListener('click',function(){seq++;q.querySelectorAll('.opt').forEach(function(x){x.classList.remove('on');x.setAttribute('aria-pressed','false')});b.classList.add('on');b.setAttribute('aria-pressed','true');cur[qi]=+b.getAttribute('data-o');var u=new URL(location.href);u.searchParams.set('answers',cur.join('-'));history.replaceState(null,'',u);if(!st){st=1;h('wtb-'+M+'-'+S+'-start');h('wtb-'+M+'-start')}clearTimeout(t);status.textContent='Updating your recommendation…';document.getElementById('adv').setAttribute('aria-busy','true');t=setTimeout(load,200)})})});
+document.getElementById('share-guide').addEventListener('click',function(){var u=new URL('https://${m.host}/'+S);u.searchParams.set('answers',cur.join('-'));var out=document.getElementById('share-status');if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(u.href).then(function(){out.textContent='Link copied with your answers.'},function(){out.textContent='Copy the address from your browser to share this result.'});else out.textContent='Copy the address from your browser to share this result.';h('wtb-'+M+'-'+S+'-share')});
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-amz]');if(a){h('wtb-'+M+'-'+S+'-clk');h('wtb-'+M+'-clk');h('wtb-'+M+'-clkd-'+new Date().toISOString().slice(0,10))}},true);})();</script>`;
   return shell(m, { title: it.seoTitle || it.h1, desc: it.metaDesc || it.intro, path: '/' + it.slug, og: 'article', image: adv.products[0] && adv.products[0].image, ld, body });
 }
@@ -117,8 +124,8 @@ export default async function handler(req, res) {
     return res.status(200).send(head + all.map(i => full ? `## ${i.title}\nURL: https://${m.host}/${i.slug}\nUpdated: ${i.updatedAt || i.publishAt}\n${i.kort}\n${(i.aiMiss || []).map(x => '- ' + x).join('\n')}\n${String(i.guide || '').slice(0, 1500)}\n` : `- [${i.title}](https://${m.host}/${i.slug}): ${i.kort}`).join('\n') + '\n');
   }
   if (op === 'advice') {
-    const it = await kv.get(K.item(m.id, String(q.get('slug') || ''))); if (!it) return res.status(404).json({ ok: false });
-    const a = String(q.get('a') || '').split('-').map(x => Math.max(0, Math.min(5, Number(x) || 0)));
+    const it = all.find(i => i.slug === String(q.get('slug') || '')); if (!it) return res.status(404).json({ ok: false });
+    const a = guideAnswers(it,q.get('a'));
     const adv = await advice(m, it, a); res.setHeader('cache-control', 'public, max-age=600');
     try { await kv.incrMany([['c:wtb-' + m.id + '-' + it.slug + '-r' + a.join('') + '-imp', 1]]); } catch (e) {}
     return res.status(200).json(Object.assign({ ok: true }, q.get('html') ? { html: adviceHtml(m, adv) } : adv));
@@ -134,5 +141,6 @@ export default async function handler(req, res) {
   await count(m, req, q, it.slug);
   return send(await page(m, it, all, req), it.term);
 }
+
 
 
