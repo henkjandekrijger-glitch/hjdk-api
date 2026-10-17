@@ -200,7 +200,7 @@ function shell(title, desc, body, canonical, extraHead) {
 <header class="topbar"><div class="wrap"><a class="mark" href="/keuzehulp">keuze<em>hulp</em></a><nav class="topnav" aria-label="Menu"><a href="/keuzehulp">Alle keuzehulpen</a><a href="/deals">Deals</a><a href="/keuzehulp/over">Over ons</a></nav></div></header>
 <main><div class="wrap">${body}</div></main>
 <footer><div class="wrap">${esc(SITE.name)} is een onafhankelijke keuzehulp van ${esc(SITE.owner)}, samengesteld door <a href="https://www.linkedin.com/in/henkjandekrijger" rel="author noopener" target="_blank">Henkjan de Krijger</a> · <a href="/keuzehulp/over">Over ons</a> · <a href="/keuzehulp/privacy">Privacy</a> · <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a><br>Ook voor kopers in de VS: <a href="https://whichtobuy.best/" hreflang="en" lang="en">whichtobuy.best</a> · in Duitsland: <a href="https://kaufberater.best/" hreflang="de" lang="de">kaufberater.best</a><br>Affiliate-vermelding: als je via onze link iets koopt bij bol, ontvangen wij een vergoeding. De prijs die je betaalt verandert daardoor niet. Prijzen en beoordelingen komen rechtstreeks van bol en worden elke 20 minuten ververst.</div></footer>
-${koopMeetScript()}<script defer src="/api/vindbaarheid?op=tracker"></script></body></html>`;
+${koopMeetScript()}<script defer src="/api/vindbaarheid?op=tracker&v=2"></script></body></html>`;
 }
 
 // antwoordblok zoals nexy.help: alleen de eerste zin vet
