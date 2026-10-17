@@ -128,6 +128,7 @@ export default async function handler(req, res) {
   if (op === 'home' || path === '/') { await count(m, req, q, ''); return send(home(m, all)); }
   const it = all.find(i => i.slug === path.slice(1));
   if (!it) { res.setHeader('cache-control', 'no-store'); return res.status(404).send(shell(m, { title: '404 — ' + m.name, desc: '', path: '/', body: `<h1>404</h1><p><a href="/">${esc(m.s.home)}</a></p>` })); }
+  if (it.tool) { res.setHeader('location', 'https://' + m.host + '/' + it.slug); return res.status(308).end(); }
   await count(m, req, q, it.slug);
   return send(await page(m, it, all, req), it.term);
 }

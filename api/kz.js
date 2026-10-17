@@ -8,6 +8,7 @@
 //        direct een welkomstmail en elke ochtend de nieuwe (cron /api/kz/dag); terugmailen (reply-to) of inspreken (microfoon -> /api/kz/vraag met audio, komt als bijlage
 //        in je mail); betaald verkeer (?clickid=&zoneid=&utm_source=propellerads) telt per zone/creative, meldt bol-klik én inschrijving als conversie (goal 1) en
 //        orders via /api/bol/learn (goal 2); aanmeldblok en onderwerpregel leren (Thompson). Beheer: /api/kz/stats?token=
+import { extraItems } from '../lib/keuze-extra-content.js';
 import { look, ACCENTS } from '../lib/look.js';
 import { colourTag, measureTag } from '../lib/kleur.js';
 const MEETTAG = measureTag('kz', 'a[data-kz],a[data-deal],a[href*="bol.com"]', '.opt');
@@ -94,7 +95,7 @@ async function allItems(withFuture) {
   const extra = []; try { const idx = (await kv.get('hjdk:kz:index')) || []; const vals = idx.length ? await kv.mget(...idx.map(s => 'hjdk:kz:' + s)) : []; vals.forEach(v => { if (v && v.slug) extra.push(v); }); } catch (e) {}
   const seen = {}; const out = [];
   const ov = {}; extra.forEach(v => { if (v.override) ov[v.slug] = v; });
-  seed.items.concat(seed2.items, extra.filter(v => !v.override)).forEach(it0 => { const it = ov[it0.slug] ? Object.assign({}, it0, ov[it0.slug]) : it0; if (!seen[it.slug] && (withFuture || isLive(it))) { seen[it.slug] = 1; out.push(it); } });
+  extraItems('nl').concat(seed.items, seed2.items, extra.filter(v => !v.override)).forEach(it0 => { const it = ov[it0.slug] ? Object.assign({}, it0, ov[it0.slug]) : it0; if (!seen[it.slug] && (withFuture || isLive(it))) { seen[it.slug] = 1; out.push(it); } });
   return out;
 }
 async function getItem(slug, withFuture) { const all = await allItems(withFuture); return all.find(i => i.slug === slug) || null; }
@@ -144,6 +145,7 @@ function popScore(u) { const b = u || { page: 0, adv: 0, clk: 0 }; const s = b.c
 
 // antwoordroute -> filters -> 3 producten (beste, goedkoper, luxer); kliks per product leren mee
 async function advise(item, route, tag) {
+  if (item.tool) return { term: item.term, products: [] };
   const picks = route.map((a, i) => (item.questions[i] && item.questions[i].options[a]) || null).filter(Boolean);
   let term = item.term; let must = [], min = 0, max = 0;
   picks.forEach(o => { if (o.term) term = o.term; if (o.add) term += ' ' + o.add; if (o.must) must = must.concat(o.must.map(x => x.toLowerCase())); if (o.min) min = Math.max(min, o.min); if (o.max) max = max ? Math.min(max, o.max) : o.max; });
@@ -405,6 +407,7 @@ function linker(item, all) { // geeft een functie die tekst escapet en de eerste
     return html; };
 }
 async function page(item, res, req) {
+  if (item.tool) { res.setHeader('location', DOMAIN + '/' + item.slug); return res.status(308).end(); }
   const all = await allItems(); const base = baseOf(req); const url = base + pathOf(req, '/keuzehulp/' + item.slug);
   // betaald verkeer (?utm_source=propellerads&zoneid=&clickid=&creativeid=) en mail (?utm_source=mail&m=&s=): bron bewaren voor conversies en tellers
   const q = new URL(req.url, 'http://x').searchParams; const src = String(q.get('utm_source') || '').toLowerCase().slice(0, 20);

@@ -123,6 +123,46 @@
   ],
   "rewrites": [
     {
+      "source": "/domeinnaam-kiezen",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=domain&market=nl"
+    },
+    {
+      "source": "/laadpaal",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=laadpaal&market=nl"
+    },
+    {
+      "source": "/domain-name",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?whichtobuy\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=domain&market=us"
+    },
+    {
+      "source": "/domain-finden",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?kaufberater\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=domain&market=de"
+    },
+    {
       "source": "/w/:naam",
       "destination": "/api/mm?op=w&w=:naam"
     },
@@ -480,9 +520,22 @@
     },
     "api/zicht.js": {
       "maxDuration": 300
+    },
+    "api/keuze-tools.js": {
+      "maxDuration": 30
     }
   },
   "redirects": [
+    {
+      "source": "/keuzehulp/laadpaal",
+      "destination": "/laadpaal",
+      "permanent": true
+    },
+    {
+      "source": "/keuzehulp/domeinnaam-kiezen",
+      "destination": "/domeinnaam-kiezen",
+      "permanent": true
+    },
     {
       "source": "/keuzehulp/:slug((?!categorie$)[a-z0-9-]+)",
       "has": [
