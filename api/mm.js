@@ -18,6 +18,8 @@
 //   /api/mm/uitkomst?cid=&soort=&waarde=&bron=   bestemming meldt echt, actie, aanmelding of koop (of POST JSON; /mmu.js doet het in de browser)
 //   /api/mm/wissel[?naam=][&j=<json>]   instellingen bekijken of opslaan (beschermde host)
 //   /api/mm/clickmind                    overzicht in gewone taal: netwerken, herkomst (sites/apps), zones, alle data (beschermde host)
+//   /api/mm/mensgeld?dag=JJJJ-MM-DD   per uniek mens: kliks per mens, herhaalkliks, kosten per mens, dubbel betaald, per tag verdiend per mens (beschermde host)
+//   /api/mm/overlap?dagen=3            welke zoektermen dezelfde mensen aanklikken (beschermde host)
 //   /api/mm/gosplit?p=<voorvoegsel>&pct=0-100 meetpagina of direct door per voorvoegsel van /go-links, zonder de campagnelink aan te raken (beschermde host)
 //   /api/mm/amazonmeter?dag=JJJJ-MM-DD   per Associates-tag betaalde kliks tegen door Amazon getelde kliks, artikelen en omzet (alleen meten; beschermde host)
 //   /api/mm/amazon?dag=&tag=&kliks=&artikelen=&omzet=&verdiend=   Associates per tag per dag, van de dagronde (beschermde host)
@@ -220,7 +222,7 @@ export default async function handler(req, res) {
       if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
       return res.status(200).json(await dagDossiers(kv));
     }
-    if (['wissel', 'amazon', 'amazonmeter', 'venster', 'geheugen', 'termen', 'mdgo', 'mdpauze', 'gosplit', 'instelling', 'overzicht', 'clickmind', 'terugbetaling', 'voorspel', 'voorspelruw'].includes(op)) {
+    if (['wissel', 'amazon', 'amazonmeter', 'venster', 'geheugen', 'termen', 'mdgo', 'mdpauze', 'gosplit', 'instelling', 'overzicht', 'clickmind', 'terugbetaling', 'voorspel', 'voorspelruw', 'mensgeld', 'overlap'].includes(op)) {
       res.setHeader('cache-control', 'no-store');
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
       if (op === 'gosplit') { const p = String(q('p') || '').replace(/[^A-Za-z0-9]/g, '').slice(0, 8); if (!p) return res.status(400).json({ ok: false, fout: 'p' }); if (q('pct') != null && q('pct') !== '') { const v = Math.max(0, Math.min(100, Math.round(Number(q('pct'))))); if (!Number.isFinite(v)) return res.status(400).json({ ok: false, fout: 'pct 0-100' }); await kv.set('mm:gosplit:' + p, v); } return res.status(200).json({ ok: true, p, pct: await kv.get('mm:gosplit:' + p), uitleg: '0 = iedereen via de meetpagina (browsermeting), 100 = iedereen direct door, 50 = per persoon vast de helft' }); }
@@ -232,6 +234,8 @@ export default async function handler(req, res) {
       if (op === 'mdgo') { const { mondiadNaarGo } = await import('../lib/mdgo.js'); const ids = String(q('ids') || '').split(',').map(x => x.replace(/\D/g, '')).filter(Boolean).slice(0, 12); if (!ids.length) return res.status(400).json({ ok: false, fout: 'ids=1,2,3' }); const r = await mondiadNaarGo(kv, { ids, p: String(q('p') || 'mdus').replace(/[^A-Za-z0-9]/g, '').slice(0, 8), mal: q('mal') ? String(q('mal')).replace(/\D/g, '') : null, tag: /^[a-z0-9-]{2,30}-2[01]$/.test(String(q('tag') || '')) ? String(q('tag')) : null, droog: q('droog') === '1', forceer: q('forceer') === '1' }); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'termen') { const T = await import('../lib/termles.js'); if (q('k')) return res.status(200).json(await T.termPrijs(q('k'), q('m') || '')); if (q('tag')) return res.status(200).json(await T.tagGeenKoper(kv, q('tag'), { dagen: Number(q('dagen')) || 3 })); return res.status(200).json({ ok: true, lessen: T.LESSEN, grenzen: T.GRENS, verzadiging: await T.verzadiging(kv, { dag: q('dag') }) }); }
       // voorspellers (lib/voorspel.js): welke kenmerken van een klik voorspellen wat hij doet; voorspelruw vult dagen vóór de live tellers aan uit de ruwe log
+      if (op === 'mensgeld') { const { mensgeld } = await import('../lib/mensgeld.js'); return res.status(200).json(await mensgeld(kv, { dag: q('dag') })); }
+      if (op === 'overlap') { const { termOverlap } = await import('../lib/mensgeld.js'); return res.status(200).json(await termOverlap(kv, { dagen: q('dagen') || 3, min: Number(q('min')) || 5 })); }
       if (op === 'voorspel') { const { voorspel } = await import('../lib/voorspel.js'); return res.status(200).json(await voorspel(kv, { dagen: q('dagen') || 7, min: Number(q('min')) || 30 })); }
       if (op === 'voorspelruw') { const { voorspelRuw } = await import('../lib/voorspel.js'); const r = await voorspelRuw(kv, q('dag'), { opnieuw: q('opnieuw') === '1' }); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'geheugen') { const { geheugenPerGroep, geheugenPatroon } = await import('../lib/geheugen.js'); const m = String(q('match') || ''); return res.status(200).json(m ? await geheugenPatroon(kv, { match: m.slice(0, 60) }) : await geheugenPerGroep(kv)); }
