@@ -84,6 +84,21 @@ async function bewaarCatalogus(items, bron, extra) {
   try { if (!(await kv.get(K.snap(DAY())))) { const s = {}; items.forEach(i => { if (i.v || i.f) s[i.id] = [i.v, i.f]; }); await kv.set(K.snap(DAY()), s, { ex: 40 * 86400 }); } } catch (e) {}
   return c;
 }
+async function haalFeed() {
+  // datapagina van de shop (briefing bovenaan Babita's pagina): inkoop per product en de bestellingen met kenmerk
+  try { const r = await fetch(SHOP + '/api/lus-feed', { headers: shopKop() }); const st = { at: Date.now(), status: r.status };
+    if (r.ok) { const j = await r.json(); const prod = Array.isArray(j.products) ? j.products : Array.isArray(j.items) ? j.items : []; const orders = Array.isArray(j.orders) ? j.orders : [];
+      const mk = await margeOntvang(kv, { items: prod.filter(x => x && (x.cost_price != null || x.margin != null)) }); st.producten = prod.length; st.metInkoop = mk.opgeslagen;
+      st.orders = orders.slice(0, 500).map(o => ({ id: String(o.order_id || o.id || '').slice(0, 40), at: String(o.created_at || o.date || '').slice(0, 25), p: String(o.product_id || '').slice(0, 30), n: num(o.quantity || 1), v: num(o.amount), hj: String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14), s: String(o.status || '').slice(0, 20) }));
+      st.sleutels = Object.keys(j).slice(0, 20); st.prodVelden = prod[0] ? Object.keys(prod[0]).slice(0, 40) : []; st.orderVelden = orders[0] ? Object.keys(orders[0]).slice(0, 40) : [];
+      st.betaald = st.orders.filter(o => /paid|betaald/i.test(o.s)).length; st.metHj = st.orders.filter(o => o.hj).length;
+      // controle achteraf: elke betaalde bestelling met kenmerk telt, ook als de directe melding vanuit de shop niet afging (hooguit 9 dagen terug)
+      let nagemeld = 0; for (const o of orders.slice(0, 500)) { const hj = String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); if (!hj || !/paid|betaald/i.test(String(o.status || ''))) continue; const at = Date.parse(o.paid_at || o.created_at || '') || 0; if (at && Date.now() - at > 9 * 864e5) continue;
+        try { const r = await pxVerwerk(hj, 'koop', num(o.amount), String(o.order_id || o.id || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40) || 'feed', o.payment_method || o.methode, 'feed', at || undefined); if (r && !r.dubbel) nagemeld++; } catch (e) {} }
+      st.nagemeld = nagemeld; }
+    await kv.set('hjdk:shop:lusfeed', st); } catch (e) { try { await kv.set('hjdk:shop:lusfeed', { at: Date.now(), fout: String(e.message || e).slice(0, 120) }); } catch (x) {} }
+  try { return await kv.get('hjdk:shop:lusfeed'); } catch (e) { return null; }
+}
 async function sync() { // de shop zelf vertelt wat er te koop is, wat het kost en wat bekeken/bewaard wordt
   const items = []; let off = 0;
   for (let i = 0; i < 80; i++) {
@@ -97,17 +112,7 @@ async function sync() { // de shop zelf vertelt wat er te koop is, wat het kost 
   const velden = {}; for (const [k, n] of VELDEN) velden[n] = items.filter(i => i[k] !== undefined).length;
   let devKnop = null; try { const h = await (await fetch(SHOP, { headers: { 'user-agent': UA, 'accept-language': 'nl-NL,nl;q=0.9' } })).text(); devKnop = h.includes('sh-dev-add'); } catch (e) {}
   let zoek = null; try { const r = await fetch(SHOP + '/api/search-terms?days=7', { headers: shopKop() }); if (r.ok) { const j = await r.json(); const l = Array.isArray(j) ? j : (j.items || j.terms || []); zoek = l.map(x => ({ t: String(x.term || x.q || '').toLowerCase().trim().slice(0, 60), n: num(x.count), r: x.results == null ? null : num(x.results) })).filter(x => x.t).slice(0, 50); } } catch (e) {}
-  // datapagina van de shop (briefing bovenaan Babita's pagina): inkoop per product en de bestellingen met kenmerk
-  try { const r = await fetch(SHOP + '/api/lus-feed', { headers: shopKop() }); const st = { at: Date.now(), status: r.status };
-    if (r.ok) { const j = await r.json(); const prod = Array.isArray(j.products) ? j.products : Array.isArray(j.items) ? j.items : []; const orders = Array.isArray(j.orders) ? j.orders : [];
-      const mk = await margeOntvang(kv, { items: prod.filter(x => x && (x.cost_price != null || x.margin != null)) }); st.producten = prod.length; st.metInkoop = mk.opgeslagen;
-      st.orders = orders.slice(0, 500).map(o => ({ id: String(o.order_id || o.id || '').slice(0, 40), at: String(o.created_at || o.date || '').slice(0, 25), p: String(o.product_id || '').slice(0, 30), n: num(o.quantity || 1), v: num(o.amount), hj: String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14), s: String(o.status || '').slice(0, 20) }));
-      st.betaald = st.orders.filter(o => /paid|betaald/i.test(o.s)).length; st.metHj = st.orders.filter(o => o.hj).length;
-      // controle achteraf: elke betaalde bestelling met kenmerk telt, ook als de directe melding vanuit de shop niet afging (hooguit 9 dagen terug)
-      let nagemeld = 0; for (const o of orders.slice(0, 500)) { const hj = String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); if (!hj || !/paid|betaald/i.test(String(o.status || ''))) continue; const at = Date.parse(o.paid_at || o.created_at || '') || 0; if (at && Date.now() - at > 9 * 864e5) continue;
-        try { const r = await pxVerwerk(hj, 'koop', num(o.amount), String(o.order_id || o.id || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40) || 'feed', o.payment_method || o.methode, 'feed', at || undefined); if (r && !r.dubbel) nagemeld++; } catch (e) {} }
-      st.nagemeld = nagemeld; }
-    await kv.set('hjdk:shop:lusfeed', st); } catch (e) { try { await kv.set('hjdk:shop:lusfeed', { at: Date.now(), fout: String(e.message || e).slice(0, 120) }); } catch (x) {} }
+  await haalFeed();
   return bewaarCatalogus(items, 'shop', { velden, devKnop, zoek, engels: items.filter(i => engels(i.t)).length });
 }
 async function geheim() { let s = process.env.SHOP_SLEUTEL || ''; if (!s) { try { s = (await kv.get(K.sleutel)) || ''; } catch (e) {} } return String(s || ''); }
@@ -741,6 +746,10 @@ export default async function handler(req, res) {
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; const pct = url.searchParams.get('pct');
       if (pct != null && pct !== '') { if (!/\.vercel\.app$/i.test(host)) return res.status(403).json({ ok: false, fout: 'zetten alleen via de beschermde vercel.app-host' }); const c = await zetDirect(kv, pct, url.searchParams.get('door') || 'beheer'); await log({ soort: 'directe route', wat: c.pct + '% direct naar de productpagina', waarom: 'ingesteld door ' + c.door }); }
       return res.status(200).json({ ok: true, direct: await directInst(kv), meetOpYoors: await shopMeet(kv), uitleg: 'pct = deel van de betaalde bezoekers (per persoon vast) dat in één keer naar de productpagina op yoo.rs gaat; de rest ziet de landingspagina. meetOpYoors = cm.js op yoo.rs meldt echt en actie.' }); }
+    if (op === 'feedcheck') { // openbaar, alleen tellingen: haalt de datapagina van de shop nu op (zonder de sleutel te tonen)
+      const lk = await kv.get('hjdk:shop:feedlock'); if (lk) { const f = await kv.get('hjdk:shop:lusfeed'); return res.status(200).json({ ok: true, wacht: true, stand: f ? { at: f.at, status: f.status, fout: f.fout || null, producten: f.producten, metInkoop: f.metInkoop, bestellingen: (f.orders || []).length, betaald: f.betaald, metHj: f.metHj, nagemeld: f.nagemeld } : null }); }
+      await kv.set('hjdk:shop:feedlock', 1, { ex: 60 }); const f = await haalFeed();
+      return res.status(200).json({ ok: true, stand: f ? { at: f.at, status: f.status, fout: f.fout || null, producten: f.producten, metInkoop: f.metInkoop, bestellingen: (f.orders || []).length, betaald: f.betaald, metHj: f.metHj, nagemeld: f.nagemeld, sleutels: f.sleutels, prodVelden: f.prodVelden, orderVelden: f.orderVelden, statussen: [...new Set((f.orders || []).map(o => o.s))].slice(0, 10) } : null }); }
     if (op === 'trechter') { // openbaar, alleen totalen: van bezoek naar doorklik per netwerk, per dag en per product; geen apparaten, geen kliknummers
       const dagen = [0, 1, 2, 3, 4].map(i => DAY(-i)); const perDag = {}; for (const d of dagen) perDag[d] = await dagTotaal(d);
       const per = { net: {}, product: {}, zone: {} }; const perArm = {}; let cur = '0', gezien = 0;
