@@ -1,0 +1,31 @@
+// Public, read-only content studio. Publication requires a separately connected account.
+import {socialCatalog,SOCIAL_MARKETS,pinConcept,pinCsv,pinImageTree} from '../lib/social-keuzehulpen.js';
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export default async function handler(req,res){
+ res.setHeader('x-robots-tag','noindex,nofollow');res.setHeader('cache-control','public,max-age=300');
+ if(!['GET','HEAD'].includes(req.method||'GET'))return res.status(405).end();
+ const q=new URL(req.url,'https://keuzehulp.best').searchParams,op=q.get('op')||'overzicht',market=q.get('site')||'nl';
+ if(!SOCIAL_MARKETS[market])return res.status(400).send('Unknown market');
+ try{
+  const items=await socialCatalog(market);
+  if(op==='beeld'){
+   const item=items.find(x=>x.slug===q.get('slug'));if(!item)return res.status(404).send('Unknown guide');
+   const p=pinConcept(item,market,q.get('v'));
+   const [{ImageResponse},{INTER_500,INTER_800}]=await Promise.all([import('@vercel/og'),import('../lib/pinfont.js')]);
+   const fonts=[{name:'Inter',data:Buffer.from(INTER_500,'base64'),weight:500,style:'normal'},{name:'Inter',data:Buffer.from(INTER_800,'base64'),weight:800,style:'normal'}];
+   const image=new ImageResponse(pinImageTree(p),{width:1000,height:1500,fonts});const buf=Buffer.from(await image.arrayBuffer());
+   if(buf.length<2000)throw new Error('Empty image');res.setHeader('content-type','image/png');res.setHeader('cache-control','public,max-age=86400');return res.status(200).end(buf);
+  }
+  if(op==='csv'||op==='manifest'){
+   const all=items.flatMap(item=>[0,1,2].map(v=>pinConcept(item,market,v)));
+   const offset=Math.max(0,Math.min(all.length,Math.floor(Number(q.get('offset'))||0))),limit=Math.max(1,Math.min(op==='csv'?200:2000,Math.floor(Number(q.get('limit'))||(op==='csv'?30:all.length))));
+   const pins=all.slice(offset,offset+limit);
+   if(op==='manifest')return res.status(200).json({ok:true,market,guides:items.length,pinsTotal:all.length,offset,returned:pins.length,recommendation:'3 editorial concepts per guide; test days 0, 7 and 21. Proposed cadence is a hypothesis, not a Pinterest rule.',publication:'drafts; not published or scheduled; account connection not verified',pins});
+   res.setHeader('content-type','text/csv; charset=utf-8');res.setHeader('content-disposition','attachment; filename="pinterest-'+market+'-'+offset+'.csv"');return res.status(200).send(pinCsv(pins));
+  }
+  if(op!=='overzicht')return res.status(404).send('Unknown operation');
+  const examples=items.slice(0,2);const counts=await Promise.all(Object.keys(SOCIAL_MARKETS).map(async id=>{const list=id===market?items:await socialCatalog(id);return{id,guides:list.length,pins:list.length*3};}));
+  res.setHeader('content-type','text/html; charset=utf-8');
+  return res.status(200).send('<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pinterest-concepten · Keuzehulpen</title><style>body{font:16px/1.6 system-ui;color:#203328;margin:0}main{max-width:1100px;margin:auto;padding:38px 22px}h1{font-size:36px;letter-spacing:-1px}a{color:#16624c}table{border-collapse:collapse;width:100%}td,th{padding:12px;text-align:left;border-bottom:1px solid #ddd}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}img{width:100%;height:auto;border-radius:12px;border:1px solid #ddd}.notice{background:#f2f7f3;padding:20px;border-radius:14px}section{margin:40px 0}@media(max-width:650px){.grid{grid-template-columns:1fr}}</style></head><body><main><p>NL · US · DE</p><h1>Drie Pinterest-concepten per keuzehulp</h1><p>Een keuzevraag, een afweging uit de gids en een koop-/prijs-/voorraadvraag. Elk concept heeft een eigen beeld, titel, beschrijving, bordvoorstel en meetbare link.</p><p class="notice"><strong>Concepten klaar, nog niet gepubliceerd.</strong> De gecontroleerde Pinterest-API is niet verbonden. Bestaande RSS-imports kunnen actief zijn; dat is hier niet bevestigd. Deze pagina publiceert niets. De CSV heeft lege publicatiedatums: bij upload in Pinterest worden die pins direct gepubliceerd. Kies voor een geplande proef eerst de gewenste datums; upload niet de hele bibliotheek tegelijk.</p><table><thead><tr><th>Markt</th><th>Keuzehulpen</th><th>Concepten</th><th>Openen</th></tr></thead><tbody>'+counts.map(x=>'<tr><td>'+x.id.toUpperCase()+'</td><td>'+x.guides+'</td><td>'+x.pins+'</td><td><a href="?site='+x.id+'">Voorbeelden</a> · <a href="?op=csv&site='+x.id+'&limit=30">Eerste 30 als CSV</a> · <a href="?op=manifest&site='+x.id+'">Alle concepten als JSON</a></td></tr>').join('')+'</tbody></table><section><h2>Voorgestelde proef</h2><p>Begin met drie inhoudelijk verschillende concepten per gids, bijvoorbeeld op dag 0, 7 en 21. Start met drie verse pins per dag per taalprofiel en geef voorrang aan tien sterke gidsen per markt. Dit zijn eigen testkeuzes, geen bewezen Pinterest-optimum. Vergelijk na 28 dagen saves, uitgaande kliks, gestarte hulpen, winkelkliks en uiteindelijk bevestigde opbrengst. Maak pas daarna extra concepten voor winnaars.</p><p>Pinterest adviseert originele, relevante inhoud en waarschuwt voor herhaalde duplicaten; het platform schrijft geen vast aantal pins per keuzehulp voor. <a href="https://help.pinterest.com/en/business/article/pin-performance-and-distribution">Bron</a> · <a href="https://business.pinterest.com/tl/blog/how-to-build-audience-pinterest/?change_language=true">Pinterest: inhoud boven vaste aantallen</a></p></section>'+examples.map(item=>'<section><h2>'+esc(item.title||item.h1)+'</h2><div class="grid">'+[0,1,2].map(v=>{const p=pinConcept(item,market,v);return '<article><a href="'+esc(p.image)+'"><img src="'+esc(p.image)+'" alt="'+esc(p.title)+'" width="1000" height="1500" loading="lazy"></a><h3>'+esc(p.angle)+'</h3><p>'+esc(p.title)+'</p><p>'+esc(p.description)+'</p><a href="'+esc(p.target)+'">Test doellink</a></article>';}).join('')+'</div></section>').join('')+'<p>Bronbestand van het kanaalplan: docs/distributie-keuzehulpen.md in de projectrepository.</p></main></body></html>');
+ }catch(e){res.setHeader('cache-control','no-store');return res.status(503).send('Contentstudio tijdelijk niet beschikbaar');}
+}
