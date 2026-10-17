@@ -20,6 +20,7 @@
 //   /api/mm/clickmind                    overzicht in gewone taal: netwerken, herkomst (sites/apps), zones, alle data (beschermde host)
 //   /api/mm/rt                         cm.js: welke publieks-pixels mogen afgaan na echt gedrag (lib/retarget.js)
 //   /api/mm/retarget[?j=<json>]        Clickmind-publiek: stand en instelling (beschermde host)
+//   /api/mm/ctrtest?naam=[&j=<json>]   CTR-test per zoekterm: per advertentie (bannerid) een eigen zoekterm in /go met t=<naam> (lib/ctrtest.js, beschermde host)
 //   /api/mm/mensgeld?dag=JJJJ-MM-DD   per uniek mens: kliks per mens, herhaalkliks, kosten per mens, dubbel betaald, per tag verdiend per mens (beschermde host)
 //   /api/mm/overlap?dagen=3            welke zoektermen dezelfde mensen aanklikken (beschermde host)
 //   /api/mm/gosplit?p=<voorvoegsel>&pct=0-100 meetpagina of direct door per voorvoegsel van /go-links, zonder de campagnelink aan te raken (beschermde host)
@@ -243,7 +244,7 @@ export default async function handler(req, res) {
       if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
       return res.status(200).json(await dagDossiers(kv));
     }
-    if (['wissel', 'amazon', 'amazonmeter', 'venster', 'geheugen', 'termen', 'mdgo', 'mdpauze', 'gosplit', 'instelling', 'overzicht', 'clickmind', 'terugbetaling', 'voorspel', 'voorspelruw', 'mensgeld', 'overlap', 'retarget'].includes(op)) {
+    if (['wissel', 'amazon', 'amazonmeter', 'venster', 'geheugen', 'termen', 'mdgo', 'mdpauze', 'gosplit', 'instelling', 'overzicht', 'clickmind', 'terugbetaling', 'voorspel', 'voorspelruw', 'mensgeld', 'overlap', 'retarget', 'ctrtest'].includes(op)) {
       res.setHeader('cache-control', 'no-store');
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
       if (op === 'gosplit') { const p = String(q('p') || '').replace(/[^A-Za-z0-9]/g, '').slice(0, 8); if (!p) return res.status(400).json({ ok: false, fout: 'p' }); if (q('pct') != null && q('pct') !== '') { const v = Math.max(0, Math.min(100, Math.round(Number(q('pct'))))); if (!Number.isFinite(v)) return res.status(400).json({ ok: false, fout: 'pct 0-100' }); await kv.set('mm:gosplit:' + p, v); } return res.status(200).json({ ok: true, p, pct: await kv.get('mm:gosplit:' + p), uitleg: '0 = iedereen via de meetpagina (browsermeting), 100 = iedereen direct door, 50 = per persoon vast de helft' }); }
@@ -255,6 +256,7 @@ export default async function handler(req, res) {
       if (op === 'mdgo') { const { mondiadNaarGo } = await import('../lib/mdgo.js'); const ids = String(q('ids') || '').split(',').map(x => x.replace(/\D/g, '')).filter(Boolean).slice(0, 12); if (!ids.length) return res.status(400).json({ ok: false, fout: 'ids=1,2,3' }); const r = await mondiadNaarGo(kv, { ids, p: String(q('p') || 'mdus').replace(/[^A-Za-z0-9]/g, '').slice(0, 8), mal: q('mal') ? String(q('mal')).replace(/\D/g, '') : null, tag: /^[a-z0-9-]{2,30}-2[01]$/.test(String(q('tag') || '')) ? String(q('tag')) : null, droog: q('droog') === '1', forceer: q('forceer') === '1' }); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'termen') { const T = await import('../lib/termles.js'); if (q('k')) return res.status(200).json(await T.termPrijs(q('k'), q('m') || '')); if (q('tag')) return res.status(200).json(await T.tagGeenKoper(kv, q('tag'), { dagen: Number(q('dagen')) || 3 })); return res.status(200).json({ ok: true, lessen: T.LESSEN, grenzen: T.GRENS, verzadiging: await T.verzadiging(kv, { dag: q('dag') }) }); }
       // voorspellers (lib/voorspel.js): welke kenmerken van een klik voorspellen wat hij doet; voorspelruw vult dagen vóór de live tellers aan uit de ruwe log
+      if (op === 'ctrtest') { const m = await import('../lib/ctrtest.js'); const j = q('j'); if (j) { let x = null; try { x = JSON.parse(j); } catch (e) { return res.status(400).json({ ok: false, fout: 'j moet JSON zijn' }); } return res.status(200).json(await m.zetTest(kv, x)); } let pa = null; if (q('pa')) { try { pa = JSON.parse(q('pa')); } catch (e) {} } return res.status(200).json(await m.testStand(kv, q('naam'), { dagen: q('dagen') || 7, pa })); }
       if (op === 'retarget') { const j = q('j'); if (j) { let x = null; try { x = JSON.parse(j); } catch (e) { return res.status(400).json({ ok: false, fout: 'j moet JSON zijn' }); } return res.status(200).json(await zetRt(kv, x)); } return res.status(200).json(await rtStand(kv, { dagen: q('dagen') || 14 })); }
       if (op === 'mensgeld') { const { mensgeld } = await import('../lib/mensgeld.js'); return res.status(200).json(await mensgeld(kv, { dag: q('dag') })); }
       if (op === 'overlap') { const { termOverlap } = await import('../lib/mensgeld.js'); return res.status(200).json(await termOverlap(kv, { dagen: q('dagen') || 3, min: Number(q('min')) || 5 })); }
@@ -310,14 +312,18 @@ async function goKlik(req, res, url, q) {
   try { const ov = await kv.get('mm:gosplit:' + pre); if (ov != null && Number.isFinite(Number(ov))) split = Number(ov); } catch (e) {}
   const arm = armVoor(pid, split), tag = arm === '302' && tag2 ? tag2 : tag1;
   // ascsubtag per zone en advertentie, nooit per klik of persoon (Associates Program Policies §2(b)); de klik-id staat alleen in ons eigen register
-  const cr0 = schoon(q('b'), 14), doel = amazonBouw({ k: q('k'), a: q('a'), u: q('u'), m: q('m'), tag, sub: pre + '-' + (z === '-' ? 'x' : z) + (cr0 && cr0 !== '-' ? '-' + cr0 : '') });
+  // CTR-test (lib/ctrtest.js): met t=<test> kiest de advertentie (b={bannerid}) haar eigen zoekterm, zodat één campagne termen eerlijk vergelijkt
+  const cr0 = schoon(q('b'), 14), tNaam = String(q('t') || '').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 20);
+  let kEff = q('k'); if (tNaam && cr0 && cr0 !== '-') { try { const { termVoorAdvertentie } = await import('../lib/ctrtest.js'); const a = await termVoorAdvertentie(kv, tNaam, cr0); if (a && a.k) kEff = a.k; } catch (e) {} }
+  const doel = amazonBouw({ k: kEff, a: q('a'), u: q('u'), m: q('m'), tag, sub: pre + '-' + (z === '-' ? 'x' : z) + (cr0 && cr0 !== '-' ? '-' + cr0 : '') });
   if (!doel) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(400).send('Ongeldige doel-URL of markt.'); }
   res.setHeader('set-cookie', 'mmp=' + pid + '; Max-Age=15552000; Path=/; Secure; HttpOnly; SameSite=Lax');
   const ctx = { cid, pid, net: netNaam(q('n')), zone: z, camp: schoon(q('c')), arm, tag, cr: schoon(q('b')) };
   const prefetch = /prefetch|prerender/i.test(String(req.headers['sec-purpose'] || req.headers.purpose || ''));
   if ((req.method === 'GET' || req.method === 'HEAD') && !prefetch) {
     const werk = laterAf(Promise.all([
-      verwerkKlik(kv, { cid, pid, nieuw, arm, tag, net: q('n'), camp: q('c'), zone: q('z'), sub: q('s'), cr: q('b'), kw: q('k') || q('a') || '', doel, p: pre }, serverSignalen(req)),
+      verwerkKlik(kv, { cid, pid, nieuw, arm, tag, net: q('n'), camp: q('c'), zone: q('z'), sub: q('s'), cr: q('b'), kw: kEff || q('a') || '', doel, p: pre }, serverSignalen(req)),
+      tNaam ? import('../lib/ctrtest.js').then(m => Promise.all(m.telCmds(tNaam, new Date().toISOString().slice(0, 10), cr0, pid).map(c => kv.raw(c)))).catch(() => {}) : null,
       cidKoppel(kv, { cid, pid, arm, tag, net: ctx.net, zone: ctx.zone, camp: ctx.camp })
     ]).catch(e => { console.log('mm go fout', String(e && e.message || e)); }));
     await Promise.race([werk, new Promise(r => setTimeout(r, 300))]);
