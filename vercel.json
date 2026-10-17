@@ -115,6 +115,10 @@
     {
       "path": "/api/gsc?op=index&site=de",
       "schedule": "35 4 * * *"
+    },
+    {
+      "path": "/api/mm/wachtuur",
+      "schedule": "47 * * * *"
     }
   ],
   "rewrites": [
