@@ -26,7 +26,7 @@ Lezen: https://hjdk-api-henq.vercel.app/api/shop/overdracht (met web_fetch_verce
 
 ## Openstaande lekken (stand 17 okt)
 1. **Geen enkele betaling gemeld.** Tot 17 okt 10 winkelwagens en 0 betaald. De betaald-melding kwam alleen bij de test van 12 okt. Vermoeden: `betaald()` zit alleen in de PayPal-code, niet bij iDEAL. Ligt bij Babita (briefing bovenaan haar pagina, 6 stappen met live stand).
-2. **Datapagina weigert onze sleutel.** `yoo.rs/shop/api/lus-feed` geeft 403 "key". De sleutel in de shop moet gelijk zijn aan `SHOP_FEED_KEY` (vingerafdruk sha256: `73211f13`). Henkjan geeft hem aan Babita. Testen: `https://hjdk-api-henq.vercel.app/api/shop/feedcheck`.
+2. **Datapagina werkt (opgelost 17 okt).** `yoo.rs/shop/api/lus-feed` geeft 200 met de sleutel uit de shop (SHOP_FEED_KEY in Vercel gelijkgezet, vingerafdruk `ef89a7cd`, 32 tekens): 1.027 producten, 1.023 met inkoopprijs, 0 bestellingen in de periode. Controle: `https://hjdk-api-henq.vercel.app/api/shop/feedcheck`.
 3. **Productpagina houdt bezoekers niet vast.** 4 tot 5% van de directe bezoekers is een echt mens, tegen 24% op onze eigen landingspagina. Doel 15%. Voorstel aan Babita: voor bezoekers met `hj` een lichte pagina zonder Yoors-menu.
 4. **Database vol op 16 okt (06 tot 14 UTC).** Daardoor kwam 1 tot 3% van de betaalde kliks aan in de meting, en ging er geen signaal naar het netwerk. Opgelost (ruwe kliklog naar Vercel Blob). Controleren: `https://hjdk-api-henq.vercel.app/api/mm/geheugen`.
 5. **CPA-doel $0,01.** Met ongeveer 1 conversie per dag leert PropellerAds niets en koopt het restverkeer (16 okt: 16 campagnes samen $3,20). Een hoger CPA-doel op de beste producten alleen op Henkjans woord.
@@ -59,6 +59,7 @@ Lezen: https://hjdk-api-henq.vercel.app/api/shop/overdracht (met web_fetch_verce
 - PropellerAds-lus: repo propellerads-mcp, `lib/shop.ts` en `app/api/statistiek/route.ts`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 2026-10-17: Datapagina werkt: SHOP_FEED_KEY in Vercel gelijk aan de sleutel in de shop (Henkjan), feedcheck 200 met 1.027 producten en 1.023 inkoopprijzen.
 - 2026-10-17: Google Shopping live: 1.027 producten in Merchant Center (Yoors 5875752564) via de feed van Demand Radar, links met `?lang=nl`; titels met radar-zoektermen lopen. Concurrentiecheck (Dille & Kamille, HEMA, vtwonen, Leen Bakker, Xenos winnen; Yoors nergens in top 10 en 0 keer genoemd door AI) en 7 punten om te concurreren toegevoegd aan Babita's briefing.
 - 2026-10-17: Overdracht levend gemaakt op `/api/shop/overdracht` (live stand plus dit bestand). Babita's briefing samengevoegd tot één blok met 6 stappen en live stand.
 - 2026-10-17: Datapagina staat live bij de shop, maar weigert onze sleutel (403). `feedcheck` gebouwd om het direct te testen.
