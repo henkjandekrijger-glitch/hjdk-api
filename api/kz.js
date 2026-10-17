@@ -909,7 +909,14 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
       res.setHeader('content-type', 'application/rss+xml; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=1800');
       return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>' + x(SITE.name + (op === 'pinfeed' ? ' — pins' : ' — nieuwe keuzehulpen')) + '</title><link>' + x(base) + '</link><atom:link href="' + x(base + (op === 'pinfeed' ? '/pinterest.xml' : '/feed.xml')) + '" rel="self" type="application/rss+xml"/><description>' + x(SITE.tagline) + '</description><language>nl-nl</language><lastBuildDate>' + new Date().toUTCString() + '</lastBuildDate>\n' + body + '\n</channel></rss>');
     }
-    if (op === 'overdracht') { res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex'); return res.status(200).send(await overdrachtKz()); }
+    if (op === 'overdracht') {
+      res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
+      const text=await overdrachtKz(),format=url.searchParams.get('format');
+      const html=format==='html'||(!format&&String(req.headers.accept||'').includes('text/html'));
+      res.setHeader('vary','Accept');res.setHeader('content-type',html?'text/html; charset=utf-8':'text/plain; charset=utf-8');
+      if(html){const {handoverHtml}=await import('../lib/overdracht-page.js');return res.status(200).send(handoverHtml(text));}
+      return res.status(200).send(text);
+    }
     if (op === 'sitemap') { const items = await allItems(); const base = baseOf(req); res.setHeader('content-type', 'application/xml'); res.setHeader('cache-control', 'public, max-age=3600'); const cats = [...new Set(items.map(i => i.cat))];
       const rows = [['/keuzehulp', TODAY()], ['/keuzehulp/deals', TODAY()], ['/keuzehulp/over', UPDATED], ['/keuzehulp/' + KERST.slug, TODAY()], ['/keuzehulp/fietsmaat', '2026-10-17']].concat(cats.map(c => ['/keuzehulp/categorie/' + catSlug(c), items.filter(i => i.cat === c).map(i => i.updatedAt || (i.publishAt && i.publishAt > UPDATED ? i.publishAt : UPDATED)).sort().pop() || UPDATED])).concat(items.map(i => ['/keuzehulp/' + i.slug, i.updatedAt || (i.publishAt && i.publishAt > UPDATED ? i.publishAt : UPDATED)]));
       const cadeau = /keuzehulp\.best/.test(base) ? ['kleine-sinterklaascadeaus', 'kerstcadeau-voor-haar', 'book-nook-kiezen'].map(g => '<url><loc>https://keuzehulp.best/cadeau/' + g + '</loc><lastmod>' + UPDATED + '</lastmod></url>').join('') : '';
