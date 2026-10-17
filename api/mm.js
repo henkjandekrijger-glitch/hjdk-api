@@ -183,6 +183,14 @@ export default async function handler(req, res) {
       const r = await modalMail(kv, { mid: j.mid, email: j.email, bewaar: j.bewaar !== false, ipNet: ipInfo(srv.ip).h || ipInfo(srv.ip).net, land: srv.land }).catch(e => ({ ok: false, fout: 'fout' }));
       return res.status(r.ok ? 200 : 400).json(r);
     }
+    if (op === 'handover') { // handover voor elke chat (Henkjan 17 okt): live stand, open punten en werklog; ?log=<tekst>&wie=<chat> schrijft bij, ?open=<JSON-lijst> zet de open punten
+      if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
+      const H = await import('../lib/handover.js');
+      if (q('log')) return res.status(200).json(await H.logBij(kv, { tekst: q('log'), wie: q('wie') || '' }));
+      if (q('open')) { let l = null; try { l = JSON.parse(q('open')); } catch (e) {} return res.status(l ? 200 : 400).json(l ? await H.zetOpen(kv, l) : { ok: false, fout: 'open=<JSON-lijst>' }); }
+      const t = await H.handover(kv); res.setHeader('cache-control', 'no-store');
+      if (q('vorm') === 'json') return res.status(200).json(t.json);
+      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(t.tekst); }
     if (op === 'overdracht') { // levende overdracht voor andere chats (Todayin-chat, Yoors Shop-chat): elke keer opnieuw opgebouwd uit de live instellingen en cijfers
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
       const t = await overdracht(kv, { project: q('project') || '' }); res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(t); }
