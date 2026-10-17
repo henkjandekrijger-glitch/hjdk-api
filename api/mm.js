@@ -194,7 +194,8 @@ export default async function handler(req, res) {
       const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
       if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
       if (q('lees') === '1') return res.status(200).json({ laatst: await kv.get('mm:wachtuur:laatst'), alarmen: ((await kv.raw(['LRANGE', 'mm:alarm:log', 0, 49]).catch(() => [])) || []).map(x => { try { return JSON.parse(x); } catch (e) { return x; } }), pauzes: ((await kv.raw(['LRANGE', 'mm:mdpauze', 0, 9]).catch(() => [])) || []).map(x => { try { return JSON.parse(x); } catch (e) { return x; } }) });
-      const { wachtUur } = await import('../lib/wachtuur.js'); return res.status(200).json(await wachtUur(kv, { dag: q('dag'), droog: q('droog') === '1' }));
+      const { wachtUur, meldTest } = await import('../lib/wachtuur.js'); if (q('test') === '1') return res.status(200).json(await meldTest());
+      return res.status(200).json(await wachtUur(kv, { dag: q('dag'), droog: q('droog') === '1' }));
     }
     // ruwe kliklog naar Vercel Blob (elk uur via cron, of met de hand via de beschermde host); ruwstand = wat waar staat
     if (op === 'ruwarchief' || op === 'ruwstand') {
