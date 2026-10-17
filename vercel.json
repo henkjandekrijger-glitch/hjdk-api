@@ -127,6 +127,36 @@
   ],
   "rewrites": [
     {
+      "source": "/tweedehands-kleding-verkopen",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=resale&market=nl"
+    },
+    {
+      "source": "/apps-to-sell-clothes-online",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=resale&market=us"
+    },
+    {
+      "source": "/gebrauchte-kleidung-verkaufen",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=resale&market=de"
+    },
+    {
       "source": "/sephora-nederland",
       "has": [
         {
