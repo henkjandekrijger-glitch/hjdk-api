@@ -9,7 +9,7 @@
 //   POST /api/zicht?op=site       {id, host, taal, land, merk[], vragen[], gsc?}   een site aanmelden voor de metingen
 //   GET  /api/zicht?op=ronde      cron (dagelijks 05:30 UTC) of met token: meten, beoordelen, herrangschikken, nieuwe inzichten
 // Schrijven: token in Authorization: Bearer, header x-hjdk-token of ?token= (gedeelde team-variabele ZICHT_TOKEN, GADS_TOKEN of HJDK_TOKEN).
-import { vraagAI } from '../lib/zicht.js';
+import { vraagAI, gapScan } from '../lib/zicht.js';
 import { lessen, draaiboek, stand, voegLesToe, nieuweProef, verwerkUitkomst, zetSite, ronde, meet, sites, DAY } from '../lib/zicht.js';
 import { OVERDRACHT_ZICHT } from '../lib/overdracht-zicht.js';
 
@@ -34,6 +34,11 @@ export default async function handler(req, res) {
       const j = await vraagAI(q.model || process.env.ZICHT_LLM_MODEL || 'perplexity/sonar', q.q || 'welke airfryer kopen', q.taal || 'nl', oidc); const raw = JSON.stringify(j);
       return res.status(200).json({ ok: true, sleutels: Object.keys(j), bericht: Object.keys(((j.choices || [])[0] || {}).message || {}), urls: (raw.match(/https?:\/\/[^\s"'<>)\]]+/g) || []).slice(0, 20), tekst: String((((j.choices || [])[0] || {}).message || {}).content || '').slice(0, 600), ruw: raw.slice(0, 2500) });
     }
+    if (op === 'gapscan') { // gatscan: stel tot 40 keuzevragen aan een AI-assistent en laat zien waar de antwoorden zwak zijn (zonder token hooguit 6 scans per dag)
+      const { kv } = await import('../lib/db.js'); if (!mag(req)) { const n = Number(await kv.raw(['INCR', 'zicht:gapscan:n:' + DAY()]).catch(() => 0)); if (n > 6) return res.status(429).json({ fout: 'daglimiet gatscan (6)' }); }
+      const vragen = (Array.isArray(q.vragen) ? q.vragen : String(q.v || '').split('|')).map(x => String(x).trim()).filter(Boolean).slice(0, 40); if (!vragen.length) return res.status(400).json({ fout: 'geef v=vraag1|vraag2|... of POST {vragen:[...]}' });
+      const r = await gapScan(vragen, q.taal || 'nl', oidc, q.model); const naam = String(q.naam || 'scan').replace(/[^a-z0-9-]/gi, '').slice(0, 40);
+      await kv.set('zicht:gapscan:' + DAY() + ':' + naam, r, { ex: 60 * 86400 }).catch(() => {}); return res.status(200).json(Object.assign({ ok: true, naam }, r)); }
     if (op === 'stand') return res.status(200).json({ ok: true, dag: DAY(), sites: await stand(q.site) });
     if (op === 'sites') return res.status(200).json({ ok: true, sites: await sites() });
     if (op === 'ronde' && !mag(req)) { // zonder token: hooguit eens per 6 uur
