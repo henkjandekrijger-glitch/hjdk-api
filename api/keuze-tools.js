@@ -1,3 +1,4 @@
+import { frontFunnelTag } from '../lib/koop-front.js';
 // Zelfstandige dienstkeuzehulpen binnen de bestaande drie sites.
 // Geen aankoop of domeinregistratie: uitsluitend een openbare beschikbaarheidsopvraag.
 import { createHash } from 'node:crypto';
@@ -84,5 +85,6 @@ export default async function handler(req, res) {
   const bot = /bot|crawl|spider|ChatGPT-User|Claude-User|Perplexity-User/i.test(ua);
   if (bot) { try { await kv.incrMany([['c:' + prefix + slug + '-bot', 1]]); } catch {} }
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', isLaadpaal ? 'public, max-age=300' : 'public, max-age=600'); res.setHeader('x-robots-tag', 'index, follow');
-  return res.status(200).send(html);
+  return res.status(200).send(html.replace('</body>', frontFunnelTag(market, slug) + '</body>'));
 }
+

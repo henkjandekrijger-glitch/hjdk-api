@@ -8,6 +8,7 @@
 //        direct een welkomstmail en elke ochtend de nieuwe (cron /api/kz/dag); terugmailen (reply-to) of inspreken (microfoon -> /api/kz/vraag met audio, komt als bijlage
 //        in je mail); betaald verkeer (?clickid=&zoneid=&utm_source=propellerads) telt per zone/creative, meldt bol-klik én inschrijving als conversie (goal 1) en
 //        orders via /api/bol/learn (goal 2); aanmeldblok en onderwerpregel leren (Thompson). Beheer: /api/kz/stats?token=
+import { renderFront, frontFunnelTag } from '../lib/koop-front.js';
 import { extraItems } from '../lib/keuze-extra-content.js';
 import { look, ACCENTS } from '../lib/look.js';
 import { colourTag, measureTag } from '../lib/kleur.js';
@@ -518,6 +519,16 @@ ${speerBlok(items, KERST.slug)}<p><a href="/keuzehulp">Alle keuzehulpen →</a><
   return res.status(200).send(shell('Keuzehulp kerstcadeau 2026: cadeau per persoon en budget', 'Welk kerstcadeau past bij wie? Kies persoon of budget, beantwoord 3 vragen en zie één passend cadeau met de prijs van vandaag bij bol.', body, base + '/kerstcadeau', ld));
 }
 async function home(res, req) {
+  const q = new URL(req.url, 'https://keuzehulp.best').searchParams;
+  // Preserve established paid-campaign attribution when an existing campaign URL is used.
+  if (q.has('clickid') || q.has('zoneid')) return legacyHome(res, req);
+  res.setHeader('content-type', 'text/html; charset=utf-8');
+  res.setHeader('x-robots-tag', 'index, follow');
+  res.setHeader('cache-control', 'public, max-age=0, must-revalidate');
+  const all = await allItems();
+  return res.status(200).send(renderFront('nl', all, { linkBlock: speerBlok(all, '') }));
+}
+async function legacyHome(res, req) {
   const items0 = await allItems(); const base = baseOf(req); const [U, aboV, clientId] = await Promise.all([usage(), pickVariant('hjdk6-kz-abo', ABO.length, 'sub', 'imp'), googleClientId()]);
   const nieuw = newest(items0); const UG = await uitgelichtNu(); const NW = recent(items0, 12);
   const TR = await trendsNow(); const trendSlugs = []; TR.terms.slice(0, 20).forEach(t => matchTrend(t.t, items0).forEach(sl => { if (trendSlugs.indexOf(sl) < 0) trendSlugs.push(sl); })); const trendItems = trendSlugs.slice(0, 6).map(sl => items0.find(i => i.slug === sl)).filter(Boolean);
@@ -627,6 +638,10 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(204).end();
   try { const host = String(req.headers.host || ''); if (SITE.domain && host === SITE.domain && !domainSeen) { domainSeen = true; await kv.set('hjdk:kz:domainok', { at: Date.now() }); } } catch (e) {} /* eigen domein gezien -> mails linken ernaar */
   const slug = (url.searchParams.get('slug') || '').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 60);
+  if (slug && !['over', 'privacy'].includes(slug) && !op && !res.__fpFunnel) {
+    const originalSend = res.send.bind(res); res.__fpFunnel = true;
+    res.send = body => originalSend(typeof body === 'string' && body.includes('</body>') ? body.replace('</body>', frontFunnelTag('nl', slug) + '</body>') : body);
+  }
   try {
     if (op === 'advies') {
       res.setHeader('cache-control', 'no-store'); res.setHeader('access-control-allow-origin', '*');
@@ -947,4 +962,5 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
     return page(item, res, req);
   } catch (e) { return res.status(500).json({ ok: false, error: String(e && e.message || e).slice(0, 200) }); }
 }
+
 
