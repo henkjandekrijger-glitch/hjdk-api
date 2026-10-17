@@ -38,6 +38,7 @@ Lezen: https://hjdk-api-henq.vercel.app/api/shop/overdracht (met web_fetch_verce
 
 ## Waar de stand staat
 - Babita's pagina met de briefing: `/api/shop/advies?k=<haar link>` (de link heeft Henkjan).
+- Google Shopping en concurrentie: Demand Radar `https://demandradar-ivory.vercel.app/mine/mfiz7lshdw` (feed `https://demandradar-ivory.vercel.app/api/feed?shop=yoors&cc=NL`, Merchant Center Yoors 5875752564, dagelijks 00:00; code in repo demand_radar: lib/feed.js, lib/feedopt.js, lib/compete.js).
 - Per uur: `/api/shop/lekken?k=<haar link>`.
 - Trechter (openbaar, alleen totalen): `/api/shop/trechter`.
 - Datapagina nu ophalen: `/api/shop/feedcheck`.
@@ -58,6 +59,7 @@ Lezen: https://hjdk-api-henq.vercel.app/api/shop/overdracht (met web_fetch_verce
 - PropellerAds-lus: repo propellerads-mcp, `lib/shop.ts` en `app/api/statistiek/route.ts`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 2026-10-17: Google Shopping live: 1.027 producten in Merchant Center (Yoors 5875752564) via de feed van Demand Radar, links met `?lang=nl`; titels met radar-zoektermen lopen. Concurrentiecheck (Dille & Kamille, HEMA, vtwonen, Leen Bakker, Xenos winnen; Yoors nergens in top 10 en 0 keer genoemd door AI) en 7 punten om te concurreren toegevoegd aan Babita's briefing.
 - 2026-10-17: Overdracht levend gemaakt op `/api/shop/overdracht` (live stand plus dit bestand). Babita's briefing samengevoegd tot één blok met 6 stappen en live stand.
 - 2026-10-17: Datapagina staat live bij de shop, maar weigert onze sleutel (403). `feedcheck` gebouwd om het direct te testen.
 - 2026-10-17: Pagina per uur (`/api/shop/lekken`), PHP versie 2 (afrekenen, betaalStart, betaalMislukt, methode), controle achteraf op betaalde bestellingen uit de datapagina.
