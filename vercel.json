@@ -127,6 +127,16 @@
   ],
   "rewrites": [
     {
+      "source": "/sephora-nederland",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=sephora&market=nl"
+    },
+    {
       "source": "/temu-alternatieven",
       "has": [
         {
