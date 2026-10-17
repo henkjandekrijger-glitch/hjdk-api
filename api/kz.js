@@ -471,7 +471,7 @@ hit('hjdk6-kz-'+S+'-page');})();</script>`;
 
 // ---- situatietabel: per situatie één concreet product met de bol-prijs van vandaag, zonder klikken leesbaar (voor lezers, Google en AI-assistenten) ----
 const DATUM_NL = d => { const m = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december']; const x = new Date(d + 'T12:00:00Z'); return x.getUTCDate() + ' ' + m[x.getUTCMonth()] + ' ' + x.getUTCFullYear(); };
-const kortTitel = t => String(t || '').split(/\s[-–|,(]\s?|\s\(/)[0].replace(/\s+/g, ' ').trim().slice(0, 70);
+const kortTitel = t => { const a = String(t || '').replace(/\s+/g, ' ').trim(); const k = a.split(/\s[-–|,(]\s?|\s\(/)[0].trim(); return (k.length >= 18 ? k : a).slice(0, 70); };
 async function situatieTabel(item) {
   const k = 'hjdk:kz:sit:' + item.slug; try { const c = await kv.get(k); if (c && c.dag === TODAY()) return c; } catch (e) {}
   const qs = item.questions || []; const routes = []; const zero = qs.map(() => 0);
