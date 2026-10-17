@@ -1,3 +1,4 @@
+import { koopBlok, koopMeetScript } from '../lib/koopblok.js';
 // KEUZEHULP — interactieve koopgidsen op een eigen domein (3 vragen -> één advies -> bol).
 //   GET /keuzehulp                 overzicht (ook / op het eigen domein)
 //   GET /keuzehulp/<slug>          keuzehulp-pagina (vragen + advies; server-side al gevuld voor Google)
@@ -149,8 +150,8 @@ async function advise(item, route, tag) {
   const picks = route.map((a, i) => (item.questions[i] && item.questions[i].options[a]) || null).filter(Boolean);
   let term = item.term; let must = [], min = 0, max = 0;
   picks.forEach(o => { if (o.term) term = o.term; if (o.add) term += ' ' + o.add; if (o.must) must = must.concat(o.must.map(x => x.toLowerCase())); if (o.min) min = Math.max(min, o.min); if (o.max) max = max ? Math.min(max, o.max) : o.max; });
-  let products = [];
-  try { const r = await searchCached(term.trim(), { country: 'NL', size: 48, sort: 'RELEVANCE' }); products = (r.products || []).filter(p => p.price != null && p.image); } catch (e) {}
+  let products = [], checkedAt = null;
+  try { const r = await searchCached(term.trim(), { country: 'NL', size: 48, sort: 'RELEVANCE' }); checkedAt = r.at || null; products = (r.products || []).filter(p => p.price != null && p.image); } catch (e) {}
   const key = 'kz_' + item.slug + '-' + route.join('') + (tag || '');
   const hitsOf = p => { const t = String(p.title).toLowerCase(); return must.filter(m => t.indexOf(m) >= 0).length; };
   const score = p => { const hits = hitsOf(p); let s = hits * 2 + (p.rating || 3.5); if (min && p.price < min) s -= 3; if (max && p.price > max) s -= 3; if (p.strike && p.strike > p.price) s += 0.5; return s; };
@@ -158,7 +159,7 @@ async function advise(item, route, tag) {
   const ids = ranked.slice(0, 12).map(p => 'c:hjdk6-kz-' + item.slug + '-' + p.id + '-clk');
   try { const clk = ids.length ? await kv.mget(...ids) : []; ranked.slice(0, 12).forEach((p, i) => { p.s += Math.min(3, (Number(clk[i]) || 0) / 10); }); ranked = ranked.sort((a, b) => b.s - a.s); } catch (e) {}
   const partner = pickPartner(item, route, key);
-  const top = ranked.slice(0, 8); if (!top.length) return { key, term, products: partner ? [partner] : [] };
+  const top = ranked.slice(0, 8); if (!top.length) return { key, term, at: checkedAt, products: partner ? [partner] : [] };
   const best = top[0];
   const fits = p => !must.length || p.hits >= Math.max(1, best.hits - 1); /* alternatieven moeten bij de antwoorden blijven passen */
   const cheaper = top.filter(p => p.id !== best.id && fits(p) && p.price < best.price && (p.rating || 0) >= 4 && !(min && p.price < min * 0.6)).sort((a, b) => a.price - b.price)[0] || null;
@@ -166,8 +167,14 @@ async function advise(item, route, tag) {
   const out = [{ role: 'Ons advies', p: best }]; if (cheaper) out.push({ role: 'Goedkoper alternatief', p: cheaper }); if (premium) out.push({ role: 'Als je meer wilt', p: premium });
   const list = out.map(x => ({ role: x.role, id: x.p.id, title: x.p.title, image: x.p.image, price: x.p.price, strike: x.p.strike, rating: x.p.rating, delivery: x.p.delivery, url: bolLink(x.p.url, key) }));
   if (partner) list.push(partner);
-  return { key, term, products: list };
+  return { key, term, at: checkedAt, products: list };
 }
+
+function koopAdvies(item, adv) {
+  const fallback = 'https://partner.bol.com/click/click?p=1&t=url&s=' + BOL_SITE + '&f=TXL&url=' + encodeURIComponent('https://www.bol.com/nl/nl/s/?searchtext=' + encodeURIComponent(adv.term || item.term || kzNaam(item))) + '&subid=' + encodeURIComponent(adv.key || 'kz_' + item.slug + '-koop');
+  return koopBlok({ market: 'nl', subject: kzNaam(item), slug: item.slug, products: adv.products, at: adv.at, fallback });
+}
+
 /* partnerproducten buiten bol (bijv. Jackery via Impact): kies het product dat het best bij de antwoorden past; prijs tonen we niet (die staat live bij de fabrikant) */
 const IMPACT = { Jackery: 'https://itjackery.pxf.io/c/3526280/1762660/20686' };
 function partnerLink(shop, url, key) { const b = IMPACT[shop]; return b ? b + '?subId1=' + encodeURIComponent(key) + '&u=' + encodeURIComponent(url) : url; }
@@ -191,7 +198,7 @@ function shell(title, desc, body, canonical, extraHead) {
 <header class="topbar"><div class="wrap"><a class="mark" href="/keuzehulp">keuze<em>hulp</em></a><nav class="topnav" aria-label="Menu"><a href="/keuzehulp">Alle keuzehulpen</a><a href="/deals">Deals</a><a href="/keuzehulp/over">Over ons</a></nav></div></header>
 <main><div class="wrap">${body}</div></main>
 <footer><div class="wrap">${esc(SITE.name)} is een onafhankelijke keuzehulp van ${esc(SITE.owner)}, samengesteld door <a href="https://www.linkedin.com/in/henkjandekrijger" rel="author noopener" target="_blank">Henkjan de Krijger</a> · <a href="/keuzehulp/over">Over ons</a> · <a href="/keuzehulp/privacy">Privacy</a> · <a href="mailto:${esc(SITE.email)}">${esc(SITE.email)}</a><br>Ook voor kopers in de VS: <a href="https://whichtobuy.best/" hreflang="en" lang="en">whichtobuy.best</a> · in Duitsland: <a href="https://kaufberater.best/" hreflang="de" lang="de">kaufberater.best</a><br>Affiliate-vermelding: als je via onze link iets koopt bij bol, ontvangen wij een vergoeding. De prijs die je betaalt verandert daardoor niet. Prijzen en beoordelingen komen rechtstreeks van bol en worden elke 20 minuten ververst.</div></footer>
-<script defer src="/api/vindbaarheid?op=tracker"></script></body></html>`;
+${koopMeetScript()}<script defer src="/api/vindbaarheid?op=tracker"></script></body></html>`;
 }
 
 // antwoordblok zoals nexy.help: alleen de eerste zin vet
@@ -447,6 +454,7 @@ async function page(item, res, req) {
     ...(item.faq && item.faq.length ? [{ '@type': 'FAQPage', mainEntity: item.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []) ] });
   const body = `<script>window.__kzPB=${JSON.stringify(postback)};window.__kzCID=${JSON.stringify(code)};window.__kzConv=function(w){if(!window.__kzPB||window.__kzPBfired)return;window.__kzPBfired=1;var ok=false;try{ok=navigator.sendBeacon('/api/kz/conv',new Blob([JSON.stringify({c:window.__kzCID,w:w})],{type:'text/plain'}))}catch(e){}if(!ok){try{fetch(window.__kzPB,{mode:'no-cors',keepalive:true})}catch(e){}}};(function(){if(!window.__kzPB)return;var t=0,act=false;var ZZ=${JSON.stringify(zone)},mh=false;['scroll','touchstart','click','keydown','pointermove'].forEach(function(ev){addEventListener(ev,function(){act=true;if(!mh&&ZZ){mh=true;try{navigator.sendBeacon('/api/hjdk/stats/hits',new Blob([JSON.stringify({hits:[['hjdk6-kz-paid-'+ZZ+'-mens',1]]})],{type:'text/plain'}))}catch(e){}}},{passive:true})});var iv=setInterval(function(){if(document.visibilityState==='visible')t++;if(t>=20&&act){clearInterval(iv);try{navigator.sendBeacon('/api/hjdk/stats/hits',new Blob([JSON.stringify({hits:[['hjdk6-kz-paid-engaged',1]].concat(ZZ?[['hjdk6-kz-paid-'+ZZ+'-eng',1]]:[])})],{type:'text/plain'}))}catch(e){}window.__kzConv('engaged')}},1000)})();</script><article>${paid ? `<div class="hero" style="padding-bottom:6px"><h1 style="margin-bottom:6px">${esc(item.h1)}</h1><p style="margin:0;color:var(--ink-2)">Tik je antwoorden — ${item.questions.length} vragen, klaar in 20 seconden. Je advies verschijnt direct.</p></div>\n${fun === 2 ? pushBox(item, pushV, pushM) : ''}${fun === 1 && heroDeal ? '<div class="adv" style="margin:8px 0 2px"><h2 style="font-size:15px;margin:4px 0 8px;color:#b45309;font-weight:600">Vandaag flink in prijs gezakt bij bol:</h2>' + productCard({ id: 'deal', url: bolLink(heroDeal.url, 'kz_' + item.slug + '-9' + tag), image: heroDeal.image, role: 'Onze keuze vandaag · −' + heroDeal.disc + '%', title: heroDeal.title, price: heroDeal.price, strike: heroDeal.strike, rating: heroDeal.rating, shop: 'bol' }, 0) + '</div><p style="margin:10px 0 0;color:var(--ink-2)">Twijfel je of deze bij jou past? Beantwoord de vragen:</p>' : adv.products && adv.products[0] ? '<div class="adv" style="margin:8px 0 2px"><h2 style="font-size:15px;margin:4px 0 8px;color:#78716c;font-weight:600">Geen tijd? Ons standaardadvies:</h2>' + productCard(Object.assign({}, adv.products[0], { role: 'Standaardadvies' }), 0) + '</div><p style="margin:10px 0 0;color:var(--ink-2)">Of beantwoord de vragen voor jouw beste keuze:</p>' : ''}\n${qs}\n${kort}` : `<div class="hero">${nieuwHtml}${crumbs}<div class="cat" style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#78716c;margin-top:10px">Keuzehulp ${esc(kzNaam(item))} · ${esc(item.cat)} · bijgewerkt <time datetime="${esc(itemDate(item))}">${esc(itemDate(item))}</time></div><h1>${esc(item.h1)}</h1><p>${esc(item.intro)}</p>${item.actueel && (!item.actueelTot || item.actueelTot >= TODAY()) ? `<p style="margin:10px 0 0;padding:10px 12px;background:#fef3c7;border-radius:10px;font-size:15px"><b>Nu actueel:</b> ${esc(item.actueel)}</p>` : ''}</div>\n${kort}\n${qs}`}
 <div class="adv" id="adv"><h2 style="font-size:19px;margin:8px 0 10px">Jouw advies <span id="advn" style="color:#78716c;font-weight:400;font-size:14px"></span></h2><div id="advl">${adv.products.map(productCard).join('') || '<p>Even geduld, we halen de prijzen van vandaag op…</p>'}</div><p class="disc">Prijzen van vandaag bij bol; wij kiezen op pasvorm bij jouw antwoorden, beoordeling en prijs. Geen betaalde plaatsing.${item.partners && item.partners.length ? ' Links naar ' + esc([...new Set(item.partners.map(p => p.shop))].join(', ')) + ' zijn ook partnerlinks: wij krijgen een vergoeding als je daar koopt, jij betaalt niets extra.' : ''}</p></div>
+${koopAdvies(item, adv)}
 ${fun === 2 ? '' : pushBox(item, pushV, pushM)}
 ${rekenHtml || ''}
 ${situatieHtml(item, sitT)}
@@ -463,7 +471,7 @@ function hit(k){try{navigator.sendBeacon(H,new Blob([JSON.stringify({hits:[[k,1]
 function eur(v){return '€'+Number(v).toFixed(2).replace('.',',')}
 function esc(s){return String(s||'').replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function card(x,i){return '<div class="pr'+(i===0?' best':'')+'"><a href="'+esc(x.url)+'" target="_blank" rel="sponsored noopener nofollow" data-kz="'+esc(x.id)+'"><img src="'+esc(x.image)+'" alt=""></a><div><div class="role">'+esc(x.role)+'</div><div class="t">'+esc(String(x.title).slice(0,90))+'</div><div class="m">'+(x.price==null?'Actuele prijs en acties bij '+esc(x.shop||'de winkel'):'<b>'+eur(x.price)+'</b>')+(x.strike&&x.strike>x.price?'<s>'+eur(x.strike)+'</s>':'')+(x.rating!=null?' · ★ '+Number(x.rating).toFixed(1).replace('.',','):'')+(x.delivery&&/morgen/i.test(x.delivery)?' · morgen in huis':'')+'</div><a class="btn" href="'+esc(x.url)+'" target="_blank" rel="sponsored noopener nofollow" data-kz="'+esc(x.id)+'">Bekijk bij '+esc(x.shop||'bol')+' →</a></div></div>'}
-var t=null;function load(){var r=cur.join('-');document.getElementById('advn').textContent='wordt bijgewerkt…';fetch(A+'?slug='+encodeURIComponent(S)+'&a='+r+(Z?'&z='+Z:'')+(C?'&c='+C:'')).then(function(x){return x.json()}).then(function(j){var l=document.getElementById('advl');l.innerHTML=(j.products||[]).map(card).join('')||'<p>Geen passend product gevonden met deze antwoorden. Probeer een andere combinatie.</p>';document.getElementById('advn').textContent='';hit('hjdk6-kz-'+S+'-r'+r+'-imp');if(!done.adv){done.adv=1;hit('hjdk6-kz-'+S+'-adv')}(j.products||[]).forEach(function(p){hit('hjdk6-kz-'+S+'-'+p.id+'-imp')});try{history.replaceState(null,'','#a='+r)}catch(e){}}).catch(function(){document.getElementById('advn').textContent=''})}
+var t=null;function load(){var r=cur.join('-');document.getElementById('advn').textContent='wordt bijgewerkt…';fetch(A+'?slug='+encodeURIComponent(S)+'&a='+r+(Z?'&z='+Z:'')+(C?'&c='+C:'')).then(function(x){return x.json()}).then(function(j){var l=document.getElementById('advl');l.innerHTML=(j.products||[]).map(card).join('')||'<p>Geen passend product gevonden met deze antwoorden. Probeer een andere combinatie.</p>';if(j.buyHtml){var kb=document.getElementById('waar-te-koop'),box=document.createElement('div');box.innerHTML=j.buyHtml;if(kb&&box.firstElementChild)kb.innerHTML=box.firstElementChild.innerHTML}document.getElementById('advn').textContent='';hit('hjdk6-kz-'+S+'-r'+r+'-imp');if(!done.adv){done.adv=1;hit('hjdk6-kz-'+S+'-adv')}(j.products||[]).forEach(function(p){hit('hjdk6-kz-'+S+'-'+p.id+'-imp')});try{history.replaceState(null,'','#a='+r)}catch(e){}}).catch(function(){document.getElementById('advn').textContent=''})}
 var done={};document.querySelectorAll('.q').forEach(function(q){var qi=+q.getAttribute('data-q');q.querySelectorAll('.opt').forEach(function(b){b.addEventListener('click',function(){q.querySelectorAll('.opt').forEach(function(x){x.classList.remove('on')});b.classList.add('on');cur[qi]=+b.getAttribute('data-o');hit('hjdk6-kz-'+S+'-q'+qi+'-'+cur[qi]);if(!done['q'+qi]){done['q'+qi]=1;hit('hjdk6-kz-'+S+'-q'+qi);if(!done.start){done.start=1;if(Z||C){hit('hjdk6-kz-paid-start');hit('hjdk6-kz-paid-'+(Z||'0')+'-start');if(CR)hit('hjdk6-kzc-'+CR+'-start')}if(window.__kzConv)window.__kzConv('start');}}clearTimeout(t);t=setTimeout(load,250);var adv=document.getElementById('adv');if(qi===n-1&&adv){adv.scrollIntoView({behavior:'smooth',block:'start'})}})})});
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-kz]');if(a){hit('hjdk6-kz-'+S+'-'+a.getAttribute('data-kz')+'-clk');hit('hjdk6-kz-'+S+'-r'+cur.join('-')+'-clk');hit('hjdk6-kz-'+S+'-clk');hit('hjdk6-kz-clk');if(Z||C){hit('hjdk6-kz-paid-clk');hit('hjdk6-kz-paid-'+(Z||'0')+'-clk');hit('hjdk6-kz-paid-'+(Z||'0')+'-'+S+'-clk');if(CR)hit('hjdk6-kzc-'+CR+'-clk')}if(window.__kzConv)window.__kzConv('start');}},true);
 try{var m=(location.hash||'').match(/a=([\\d-]+)/);if(m){var p=m[1].split('-');var ch=false;p.forEach(function(v,i){if(i<n){var b=document.querySelector('.q[data-q="'+i+'"] .opt[data-o="'+v+'"]');if(b){cur[i]=+v;ch=true;b.parentNode.querySelectorAll('.opt').forEach(function(x){x.classList.remove('on')});b.classList.add('on')}}});if(ch)load()}}catch(e){}
@@ -515,7 +523,7 @@ async function kerstHub(res, req) {
 <div class="txt" id="faq"><h2>Veelgestelde vragen over kerstcadeaus</h2>${faq.map(([q, a]) => `<h3 style="font-size:16px;margin:12px 0 4px">${esc(q)}</h3><p style="margin:0 0 8px;color:#44403c">${esc(a)}</p>`).join('')}</div>
 ${speerBlok(items, KERST.slug)}<p><a href="/keuzehulp">Alle keuzehulpen →</a></p>`;
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=600');
-  return res.status(200).send(shell('Keuzehulp kerstcadeau 2026: cadeau per persoon en budget', 'Welk kerstcadeau past bij wie? Kies persoon of budget, beantwoord 3 vragen en zie één passend cadeau met de prijs van vandaag bij bol.', body, base + '/kerstcadeau', ld));
+  return res.status(200).send(shell('Keuzehulp kerstcadeau 2026: cadeau per persoon en budget', 'Welk kerstcadeau past bij wie? Kies persoon of budget, beantwoord 3 vragen en zie één passend cadeau met de prijs van vandaag bij bol.', body + koopAdvies({ slug: KERST.slug, naam: 'kerstcadeaus', term: 'kerstcadeau' }, { term: 'kerstcadeau', products: [] }), base + '/kerstcadeau', ld));
 }
 async function home(res, req) {
   const items0 = await allItems(); const base = baseOf(req); const [U, aboV, clientId] = await Promise.all([usage(), pickVariant('hjdk6-kz-abo', ABO.length, 'sub', 'imp'), googleClientId()]);
@@ -633,7 +641,7 @@ export default async function handler(req, res) {
       const item = await getItem(slug); if (!item) return res.status(404).json({ ok: false, error: 'onbekend' });
       const route = String(url.searchParams.get('a') || '').split('-').map(x => Math.max(0, Math.min(9, parseInt(x, 10) || 0))).slice(0, item.questions.length); while (route.length < item.questions.length) route.push(0);
       const z = String(url.searchParams.get('z') || '').replace(/\D/g, '').slice(0, 12), c = String(url.searchParams.get('c') || '').replace(/[^a-z0-9]/g, '').slice(0, 10);
-      const adv = await advise(item, route, (z ? '-Z' + z : '') + (c ? '-' + c : '')); return res.status(200).json({ ok: true, slug: item.slug, route: route.join('-'), term: adv.term, products: adv.products });
+      const adv = await advise(item, route, (z ? '-Z' + z : '') + (c ? '-' + c : '')); return res.status(200).json({ ok: true, slug: item.slug, route: route.join('-'), term: adv.term, products: adv.products, buyHtml: koopAdvies(item, adv) });
     }
     if (op === 'conv') { // conversie server-side doorgeven aan het advertentienetwerk (betrouwbaarder dan vanuit de browser); één per klik
       res.setHeader('cache-control', 'no-store'); let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
@@ -947,4 +955,5 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
     return page(item, res, req);
   } catch (e) { return res.status(500).json({ ok: false, error: String(e && e.message || e).slice(0, 200) }); }
 }
+
 

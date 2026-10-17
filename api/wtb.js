@@ -1,3 +1,4 @@
+import { koopBlok, koopMeetScript } from '../lib/koopblok.js';
 // WTB-pagina's: whichtobuy.best (VS) en kaufberater.best (DE). Zelfde idee als keuzehulp.best: 3 vragen, 1 eerlijke keuze, prijs van vandaag (Amazon).
 // Routes (vercel.json, op host): / , /<slug>, /sitemap.xml, /robots.txt, /llms.txt, /llms-full.txt, /<indexnow-sleutel>.txt, /about, /privacy
 // API: /api/wtb?op=advice&slug=..&a=0-1-2 (producten voor de antwoorden), /api/wtb?op=status (openbaar overzicht)
@@ -21,7 +22,7 @@ async function advice(m, it, a) {
   const opts = (it.questions || []).map((q, i) => (q.options || [])[a[i] || 0] || {});
   const kws = [it.term, ...opts.map(o => o.kw).filter(Boolean)].join(' ').replace(/\s+/g, ' ').trim();
   let min = 0, max = 1e9; opts.forEach(o => { if (o.min != null) min = Math.max(min, Number(o.min)); if (o.max != null) max = Math.min(max, Number(o.max)); });
-  const out = { kws, link: searchLink(m, kws), products: [], at: null, api: amzReady() };
+  const out = { kws, subject: it.term || it.title, slug: it.slug, link: searchLink(m, kws), products: [], at: null, api: amzReady() };
   if (!amzReady()) return out;
   const tries = [kws, [it.term, opts[0] && opts[0].kw].filter(Boolean).join(' '), it.term];
   for (const k of [...new Set(tries)]) {
@@ -37,15 +38,16 @@ function shell(m, o) {
   return `<!doctype html><html lang="${m.locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(o.title)}</title><meta name="description" content="${esc(o.desc)}"><link rel="canonical" href="${base}${o.path}"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"><link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"><meta property="og:title" content="${esc(o.title)}"><meta property="og:description" content="${esc(o.desc)}"><meta property="og:type" content="${o.og || 'website'}"><meta property="og:url" content="${base}${o.path}">${o.image ? `<meta property="og:image" content="${esc(o.image)}">` : ''}${o.ld ? `<script type="application/ld+json">${JSON.stringify(o.ld).replace(/</g, '\\u003c')}</script>` : ''}<style>${CSS(m)}</style></head><body>
 <header class="topbar"><div class="wrap"><a class="mark" href="/">${m.id === 'us' ? 'which<em>to</em>buy' : 'kauf<em>berater</em>'}</a><nav class="topnav" aria-label="Menu"><a href="/">${m.s.all}</a><a href="/about">${m.s.about}</a></nav></div></header><main><div class="wrap">${o.body}</div></main>
 <footer><div class="wrap"><div class="fl"><a href="/">${m.name}</a><a href="/about">${m.s.about}</a><a href="/privacy">Privacy</a>${m.id === 'us' ? '<a href="/privacy#opt-out">Do Not Sell or Share My Personal Information</a>' : ''}<a href="/llms.txt">llms.txt</a><a href="/sitemap.xml">Sitemap</a></div><div>${esc(m.s.disc)} · <a href="/about">${m.s.about}</a> · <a href="/privacy">Privacy</a><br>${m.id === 'de' ? 'Impressum: AdsFair B.V., Albert Plesmanplein 20, 2805 AB Gouda, Niederlande · KvK 60126035' : 'AdsFair B.V., Albert Plesmanplein 20, 2805 AB Gouda, Netherlands'} · ${m.name} by Henkjan de Krijger<br>${m.id === 'de' ? 'Auch für Käufer in den USA: <a href="https://whichtobuy.best/" hreflang="en" lang="en">whichtobuy.best</a> · in den Niederlanden: <a href="https://keuzehulp.best/" hreflang="nl" lang="nl">keuzehulp.best</a>' : 'Also for shoppers in Germany: <a href="https://kaufberater.best/" hreflang="de" lang="de">kaufberater.best</a> · in the Netherlands: <a href="https://keuzehulp.best/" hreflang="nl" lang="nl">keuzehulp.best</a>'}</div></div></footer>
-<script>window.__h=function(k){try{navigator.sendBeacon('/api/hjdk/stats/hits',new Blob([JSON.stringify({hits:[[k,1]]})],{type:'text/plain'}))}catch(e){}};</script><script defer src="/api/vindbaarheid?op=tracker"></script></body></html>`;
+<script>window.__h=function(k){try{navigator.sendBeacon('/api/hjdk/stats/hits',new Blob([JSON.stringify({hits:[[k,1]]})],{type:'text/plain'}))}catch(e){}};</script>${koopMeetScript()}<script defer src="/api/vindbaarheid?op=tracker"></script></body></html>`;
 }
 function card(m, p, i) {
   const role = i === 0 ? m.s.pick : m.s.alt;
   return `<div class="pr${i === 0 ? ' best' : ''}"><a href="${esc(p.url)}" rel="sponsored nofollow noopener" target="_blank" data-amz="${esc(p.asin)}"><img src="${esc(p.image)}" alt="${esc(p.title.slice(0, 80))}" loading="lazy"></a><div><div class="role">${esc(role)}</div><div class="t">${esc(p.title.slice(0, 110))}</div>${p.price != null ? `<div class="price">${esc(p.priceText || m.money(p.price))}</div>` : ''}<a class="btn" href="${esc(p.url)}" rel="sponsored nofollow noopener" target="_blank" data-amz="${esc(p.asin)}">${esc(p.price != null ? m.s.see : m.s.noPrice)} →</a></div></div>`;
 }
 function adviceHtml(m, adv) {
-  if (adv.products.length) return adv.products.map((p, i) => card(m, p, i)).join('') + `<p class="disc">${esc(m.s.priceNote)} ${esc(new Date(adv.at || Date.now()).toLocaleString(m.locale, { timeZone: m.id === 'us' ? 'America/New_York' : 'Europe/Berlin', dateStyle: 'medium', timeStyle: 'short' }))}; ${esc(m.s.priceNote2)}</p>`;
-  return `<div class="pr best" style="grid-template-columns:1fr"><div><div class="role">${esc(m.s.fallback)}</div><div class="t">${esc(adv.kws)}</div><a class="btn" href="${esc(adv.link)}" rel="sponsored nofollow noopener" target="_blank" data-amz="search">${esc(m.s.seeAll)} →</a></div></div>`;
+  const buy = koopBlok({ market: m.id, subject: adv.subject || adv.kws, slug: adv.slug || '', products: adv.products, at: adv.at, fallback: adv.link });
+  if (adv.products.length) return adv.products.map((p, i) => card(m, p, i)).join('') + `<p class="disc">${esc(m.s.priceNote)} ${esc(new Date(adv.at || Date.now()).toLocaleString(m.locale, { timeZone: m.id === 'us' ? 'America/New_York' : 'Europe/Berlin', dateStyle: 'medium', timeStyle: 'short' }))}; ${esc(m.s.priceNote2)}</p>` + buy;
+  return `<div class="pr best" style="grid-template-columns:1fr"><div><div class="role">${esc(m.s.fallback)}</div><div class="t">${esc(adv.kws)}</div><a class="btn" href="${esc(adv.link)}" rel="sponsored nofollow noopener" target="_blank" data-amz="search">${esc(m.s.seeAll)} →</a></div></div>` + buy;
 }
 
 // antwoordblok zoals nexy.help: alleen de eerste zin vet
@@ -132,4 +134,5 @@ export default async function handler(req, res) {
   await count(m, req, q, it.slug);
   return send(await page(m, it, all, req), it.term);
 }
+
 

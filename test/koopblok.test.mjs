@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import vm from 'node:vm';
+const source=await fs.readFile(new URL('../lib/koopblok.js',import.meta.url),'utf8');
+const {buyingRows,koopBlok,koopMeetScript}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const now=Date.parse('2026-10-17T16:00:00Z');
+const product={id:'123',title:'Example <model>',url:'https://www.amazon.com/dp/example?tag=retained-20',price:123.45};
+for(const market of ['nl','us','de']){
+ const html=koopBlok({market,subject:'Example',slug:'example',products:[product],at:now-3600e3,now});
+ assert.ok(html.includes('id="waar-te-koop"'));
+ assert.ok(html.includes('Example &lt;model&gt;'));
+ assert.ok(html.includes('2026-10-17T15:00:00.000Z'));
+ assert.ok(html.includes('tag=retained-20'));
+ assert.ok(html.includes(market==='nl'?'data-kz=':'data-amz='));
+ assert.ok(html.includes('sponsored nofollow noopener'));
+ assert.ok(html.includes(market==='us'?'$123.45':market==='de'?'123,45':'123,45'));
+}
+assert.equal(buyingRows('us',[product],now-25*3600e3,now)[0].price,'Check current price');
+assert.equal(buyingRows('us',[product],now+3600e3,now)[0].checked,null);
+assert.equal(buyingRows('us',[{...product,price:NaN}],now,now)[0].price,'Check current price');
+assert.equal(buyingRows('us',[{...product,url:'javascript:alert(1)'}],now,now).length,0);
+assert.equal(buyingRows('nl',[{...product,shop:'Jackery'}],now,now)[0].checked,null);
+assert.ok(buyingRows('nl',[{...product,checkedDate:'2026-10-17'}],null,now)[0].checked);
+const empty=koopBlok({market:'us',subject:'a robot vacuum',fallback:'https://www.amazon.com/s?k=robot&tag=test-20',now});
+assert.ok(empty.includes('No confirmed product offer'));
+assert.ok(empty.includes('tag=test-20'));
+assert.ok(!empty.includes('<time'));
+const domain=koopBlok({market:'de',kind:'domain',now});
+assert.ok(domain.includes('Domainnamen registrieren'));
+assert.ok(!domain.includes('Amazon'));
+assert.throws(()=>koopBlok({market:'fr'}));
+const script=koopMeetScript().replace(/^<script>|<\/script>$/g,'');new vm.Script(script);
+console.log('PASS: NL/EN/DE buying answers, source timestamps and stale prices, escaping, affiliate continuity, unknown stock, safe URLs, domain guidance and tracker syntax');
