@@ -7,6 +7,7 @@
 //   /api/wtbmaak/nu?token=HJDK_TOKEN&m=us|de : één stap nu (&extra=1 boven het dagdoel)
 import { demandRadar } from '../lib/demandradar.js';
 import { kv } from '../lib/db.js';
+import { keepa } from '../lib/cc.js';
 import { MARKETS, K, DAY, log, items, amzSearch, amzReady, claude, json, indexnow } from '../lib/wtb.js';
 
 let OIDC = '';
@@ -43,22 +44,42 @@ async function maakPlan(m) {
   const [trends, les, gsc, dr] = await Promise.all([trendsRss(m.geo), leer(m, all), kv.get('hjdk:gsc:' + m.id).catch(() => null), demandRadar(m.geo).catch(() => [])]);
   const gscOpen = ((gsc && gsc.open) || []).slice(0, 25).map(x => x.q + ' (' + x.imp + ' impressions, pos ' + x.pos + ')');
   const score = (await kv.get('hjdk:score:' + m.id).catch(() => null)) || {}; const best = ((score.beslissingen || {}).meerInCategorie || []);
-  const n = m.perDay(); const cand = Math.min(30, Math.round(n * 1.8));
+  const n = m.perDay(); if (!n) return { dag: DAY(), topics: [] };
+  // Bound output size: the old 18–30-topic response repeatedly broke JSON in DE.
+  const cand = Math.min(12, Math.max(n, Math.round(n * 1.2)));
+  const keepaSignals = [];
+  for (const signal of dr.slice(0, 3)) {
+    try { const k = await keepa(signal.term, m.geo); if (k && !k.fout) keepaSignals.push(k); } catch {}
+  }
   const sys = `You plan buying guides for ${m.name} (${m.host}), market ${m.geo}, language ${m.lang}, monetized via Amazon (${m.amazon}). Goal: organic traffic from Google, Bing and AI assistants (ChatGPT search, Perplexity, Copilot, Gemini) that converts to Amazon purchases. Pick topics where AI assistants are BLIND: product categories that change fast (new models every year, new standards like Wi-Fi 7, Qi2, USB-C PD 3.1, Matter, OLED/mini-LED, heat pumps), new-in-2025/2026 product types, seasonal moments in the next 8 weeks (Halloween, Black Friday/Cyber Monday, holidays${m.id === 'de' ? ', Nikolaus, Weihnachten' : ', Thanksgiving, Christmas'}), and specific long-tail needs (e.g. 'for small apartments', 'for pet hair', 'under ${m.id === 'us' ? '$100' : '100 €'}'). Prefer higher order values (>${m.id === 'us' ? '$40' : '40 €'}) and categories Amazon sells well. Never duplicate an existing topic. Reply ONLY JSON.`;
   const user = `Today: ${DAY()}. Existing guides (do not repeat): ${all.map(i => i.slug).join(', ') || 'none yet'}.
 Google Trends today (${m.geo}): ${trends.join(' | ') || 'n/a'}.
 Demand Radar (our own demand meter for ${m.geo}: measured Google searches per month, yearly growth, whether it is still rising today, and the chance it rises 40%+ in the next 3 months). Product types here with high volume that are rising now or predicted to rise (chance 50%+) get priority right after the Search Console list; use the radar term as the search keyword, mark them "radar":true, skip brands, single models, news and anything not sold on Amazon: ${JSON.stringify(dr.slice(0, 70))}.
+Keepa category demand estimates via DemandRadar (not our affiliate orders, not verified current prices; missing data is unknown): ${JSON.stringify(keepaSignals)}. Use as supporting evidence only. Never invent sales or prices.
 Real-visitor scoreboard (last 7 days): categories that produced Amazon clicks, give these extra topics: ${best.join(', ') || 'none yet'}. Prefer specific buyer questions with a situation or audience and 'best X 2026' questions over broad head terms (big review sites win those).
 Google Search Console: searches where Google ALREADY shows our site but no guide answers them yet. Turn each one that is a product buying question into a topic FIRST and mark it "gsc":true: ${gscOpen.join(' | ') || 'none yet'}.
 What performs so far (views/starts/Amazon clicks per guide; traffic sources; AI crawler visits): ${JSON.stringify({ top: les.top, cats: les.cats, src: les.src, bots: les.bots })}.
+Keep each why field under 120 characters. Group equivalent search phrases into one useful guide; do not create near-duplicate pages for synonyms.
 Give ${cand} candidate topics: {"topics":[{"slug":"lowercase-ascii-hyphen in ${m.lang}","term":"Amazon search keywords in ${m.lang}","title":"the buyer question in ${m.lang}, e.g. ${m.id === 'us' ? 'Which robot vacuum for pet hair?' : 'Welcher Saugroboter für Tierhaare?'}","cat":"category in ${m.lang}","demand":1-5,"why":"short: why buyers search this now and why AI answers are likely outdated or vague"}]}`;
-  const r = await claude(sys, user, { max: 5000, oidc: OIDC }); const j = json(r.txt);
+  let j;
+  try {
+    const r = await claude(sys, user, { max: 9000, oidc: OIDC });
+    if (r.stopReason === 'max_tokens') throw new Error('plan afgebroken door tokenlimiet');
+    j = json(r.txt);
+    if (!Array.isArray(j.topics) || !j.topics.length) throw new Error('leeg plan');
+  } catch (e) {
+    // One bounded smaller retry; never publish repaired fragments of incomplete JSON.
+    const r = await claude(sys, user + '\nPrevious attempt was invalid. Return ONLY 4 complete candidate topics in the same JSON shape. No commentary.', { max: 5000, oidc: OIDC });
+    if (r.stopReason === 'max_tokens') throw new Error('klein plan afgebroken door tokenlimiet');
+    j = json(r.txt);
+    if (!Array.isArray(j.topics) || !j.topics.length) throw new Error('leeg herstelplan');
+  }
   const have = new Set(all.map(i => i.slug)); const seen = new Set();
   let topics = (j.topics || []).map(t => Object.assign({}, t, { slug: String(t.slug || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) })).filter(t => t.slug && t.term && !have.has(t.slug) && !seen.has(t.slug) && seen.add(t.slug));
   // blinde-vlektest per kandidaat (snel model), dan rangschikken op vraag x blinde vlek
   for (let i = 0; i < topics.length; i += 5) await Promise.all(topics.slice(i, i + 5).map(async t => { try { t.blind = await blindTest(m, t); } catch (e) { t.blind = { score: 0.3, fout: String(e.message).slice(0, 80) }; } }));
   topics = topics.sort((a, b) => (Number(b.demand) || 3) * (0.5 + b.blind.score) * (b.gsc ? 2 : 1) * (b.radar ? 1.5 : 1) - (Number(a.demand) || 3) * (0.5 + a.blind.score) * (a.gsc ? 2 : 1) * (a.radar ? 1.5 : 1)).slice(0, n).map(t => Object.assign(t, { status: 'todo' }));
-  const plan = { dag: DAY(), at: Date.now(), topics, trends: trends.slice(0, 10) };
+  const plan = { dag: DAY(), at: Date.now(), topics, trends: trends.slice(0, 10), keepaSignals };
   await kv.set(K.plan(m.id, DAY()), plan, { ex: 4 * 86400 });
   try { const b = (await kv.get(K.blind(m.id))) || []; await kv.set(K.blind(m.id), [...topics.map(t => ({ dag: DAY(), slug: t.slug, score: t.blind.score, conf: t.blind.conf, jaar: t.blind.jaar, avail: t.blind.avail, gaps: t.blind.gaps })), ...b].slice(0, 400)); } catch (e) {}
   await log({ m: m.id, wat: 'plan', n: topics.length, blind: topics.map(t => t.slug + ':' + t.blind.score).join(', ') });
@@ -124,3 +145,4 @@ export default async function handler(req, res) {
   }
   return res.status(200).json({ ok: true, amazonApi: amzReady(), out });
 }
+
