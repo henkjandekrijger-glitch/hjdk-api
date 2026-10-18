@@ -26,6 +26,9 @@
 //   /api/mm/gosplit?p=<voorvoegsel>&pct=0-100 meetpagina of direct door per voorvoegsel van /go-links, zonder de campagnelink aan te raken (beschermde host)
 //   /api/mm/amazonmeter?dag=JJJJ-MM-DD   per Associates-tag betaalde kliks tegen door Amazon getelde kliks, artikelen en omzet (alleen meten; beschermde host)
 //   /api/mm/amazon?dag=&tag=&kliks=&artikelen=&omzet=&verdiend=   Associates per tag per dag, van de dagronde (beschermde host)
+//   /api/mm/amazon  POST { dag, bron, rijen: [{tag,kliks,artikelen,omzet,verdiend}] }   hele dag in één keer (beschermde host)
+//   /api/mm/tagstop?net=propeller        welke campagnes Clickmind stilzet en waarom (lib/tagstop.js; de lus leest dit elk uur)
+//   /api/mm/tagstop?ronde=1[&droog=1]    de ronde nu draaien; ?stand=1 = voorstel plus wat er is uitgevoerd (beschermde host)
 //   /api/mm/cc[?deel=voorstel|wachtrij][&dag=]   Creator Connections: stand, campagnevoorstellen en accepteerwachtrij (lib/cc.js, beschermde host)
 //   /api/mm/cc  POST { soort, rijen }            de aanbiedingenlijst voeden vanuit de ingelogde Associates-pagina (beschermde host)
 //   /api/mm/ccdag                                dagronde: Keepa-check + opbrengstcheck, kiest wat vandaag getest wordt (cron 06:40 UTC)
@@ -242,6 +245,20 @@ export default async function handler(req, res) {
       return res.status(200).json(await verkenGedaan(kv, String(b.sleutel || 'todayin-us'), b.lijst.map(String).filter(z => /^\d{1,12}$/.test(z)).slice(0, 60), b.voorstel || null));
     }
     if (op === 'blok') { res.setHeader('cache-control', 'no-store'); cors(res); const net = netNaam(q('net') || 'propeller'); return res.status(200).json((await kv.get('mm:blok:' + net)) || { zones: [], wachtOpHenkjan: [], aan: false, bijgewerkt: null }); }
+    // Clickmind grijpt in (lib/tagstop.js): welke campagnes moeten stil, per netwerk. Lezen mag iedereen die de lus draait
+    // (zelfde vorm als blok); de uitvoerder meldt terug met tagstopgedaan (gedeelde SHOP_SLEUTEL).
+    if (op === 'tagstopgedaan') {
+      const s = process.env.SHOP_SLEUTEL || ''; if (!s || req.headers['x-shop-sleutel'] !== s) return res.status(401).json({ ok: false });
+      const b = leesJson(req.body) || {}; const net = netNaam(b.net || 'propeller');
+      await kv.raw(['LPUSH', 'mm:tagstopgedaan:' + net, JSON.stringify({ t: new Date().toISOString(), gestopt: Number(b.gestopt) || 0, samenvatting: String(b.samenvatting || '').slice(0, 300), fouten: (b.fouten || []).slice(0, 5).map(x => String(x).slice(0, 200)), campagnes: (b.campagnes || []).slice(0, 40) })]);
+      await kv.raw(['LTRIM', 'mm:tagstopgedaan:' + net, 0, 47]); return res.status(200).json({ ok: true }); }
+    if (op === 'tagstop') {
+      res.setHeader('cache-control', 'no-store'); cors(res); const net = netNaam(q('net') || 'propeller');
+      const m = await import('../lib/tagstop.js');
+      if (q('ronde') === '1') { if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' }); return res.status(200).json(await m.tagRonde(kv, { net, droog: q('droog') === '1' })); }
+      if (q('stand') === '1') { if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' }); return res.status(200).json(await m.tagStand(kv, { net })); }
+      return res.status(200).json((await kv.get('mm:tagstop:' + net)) || { net, campagnes: [], aan: false, bijgewerkt: null });
+    }
     // uurwacht (lib/wachtuur.js): aankomst per netwerk en campagne, geld naar tags zonder kopers, verzadiging. Elk uur op :47; alleen melden.
     if (op === 'wachtuur') {
       res.setHeader('cache-control', 'no-store');
@@ -296,7 +313,15 @@ export default async function handler(req, res) {
       if (op === 'geheugen') { const { geheugenPerGroep, geheugenPatroon } = await import('../lib/geheugen.js'); const m = String(q('match') || ''); return res.status(200).json(m ? await geheugenPatroon(kv, { match: m.slice(0, 60) }) : await geheugenPerGroep(kv)); }
       if (op === 'venster') { const { vensterPerZone } = await import('../lib/venster.js'); const r = await vensterPerZone(kv, { dag: q('dag') || new Date().toISOString().slice(0, 10), min: Number(q('min')) || 10 }); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'amazonmeter') { const { amazonMeter } = await import('../lib/amzmeter.js'); const r = await amazonMeter(kv, { dag: q('dag'), tz: q('tz') || undefined }); return res.status(r.ok ? 200 : 400).json(r); }
-      if (op === 'amazon') { const r = await amazonUitkomst(kv, Object.fromEntries(url.searchParams)); return res.status(r.ok ? 200 : 400).json(r); }
+      if (op === 'amazon') {
+        // hele dagronde in één keer: POST { dag, bron, rijen: [{tag, kliks, artikelen, omzet, verdiend}] }
+        if (req.method === 'POST') {
+          const b = leesJson(req.body) || {}; if (!Array.isArray(b.rijen)) return res.status(400).json({ ok: false, fout: 'body { dag, rijen: [{tag,kliks,artikelen,omzet}] }' });
+          const uit = []; for (const r of b.rijen.slice(0, 60)) uit.push(await amazonUitkomst(kv, { dag: b.dag, bron: b.bron, ...r }));
+          return res.status(200).json({ ok: uit.every(x => x.ok), dag: b.dag, rijen: uit });
+        }
+        const r = await amazonUitkomst(kv, Object.fromEntries(url.searchParams)); return res.status(r.ok ? 200 : 400).json(r);
+      }
       // Creator Connections (lib/cc.js): lijst voeden, dagronde draaien, voorstellen en accepteerwachtrij lezen
       if (op === 'cc' || op === 'ccdag') {
         const m = await import('../lib/cc.js');
