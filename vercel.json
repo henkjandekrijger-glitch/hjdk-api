@@ -139,6 +139,10 @@
     {
       "path": "/api/mm/ccdag",
       "schedule": "40 6 * * *"
+    },
+    {
+      "path": "/api/keuze-updates?op=dag",
+      "schedule": "*/15 * * * *"
     }
   ],
   "rewrites": [
@@ -661,6 +665,9 @@
     },
     "api/vindbaarheid.js": {
       "maxDuration": 300
+    },
+    "api/keuze-updates.js": {
+      "maxDuration": 180
     }
   },
   "redirects": [

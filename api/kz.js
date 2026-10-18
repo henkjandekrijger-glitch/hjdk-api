@@ -792,7 +792,7 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
       const ck = 'hjdk:kz:camp:' + d; let camp = await kv.get(ck);
       if (!camp) { camp = { slug: today.slug, cursor: 0, sent: 0, fail: 0, s: await pickVariant('hjdk6-kz-ms', MS.length, 'clk', 'sent') }; await kv.set(ck, camp, { ex: 3 * 86400 }); }
       const list = (await kv.get(LIST)) || []; const unsubs = new Set(((await kv.get('hjdk:kz:unsubs')) || []));
-      const batch = list.slice(camp.cursor, camp.cursor + 100).filter(s => !unsubs.has(s.email)); const m = 'd' + d.replace(/-/g, '').slice(2); const base = await mailBase(); const subject = MS[camp.s](today.title);
+      const windowSubs = list.slice(camp.cursor, camp.cursor + 100); const muted = await kv.mget(...windowSubs.map(s => 'updates:legacy:' + s.email)); const batch = windowSubs.filter((s, i) => !unsubs.has(s.email) && !muted[i]); const m = 'd' + d.replace(/-/g, '').slice(2); const base = await mailBase(); const subject = MS[camp.s](today.title);
       if (!list.slice(camp.cursor, camp.cursor + 100).length) return res.status(200).json(Object.assign(out, { vandaag: today.slug, klaar: true, verstuurd: camp.sent, abonnees: list.length }));
       const U = await usage(); const szNow = (await uitgelichtNu()).concat(seasonsNow()); const szItem = szNow.length ? szNow[0].slugs.map(sl => items.find(i => i.slug === sl && i.slug !== today.slug)).filter(Boolean)[Math.floor(Math.random() * 3)] : null;
       const pop = items.filter(i => i.slug !== today.slug && (!szItem || i.slug !== szItem.slug)).map(i => Object.assign({}, i, { _s: U[i.slug] ? U[i.slug].clk * 5 + U[i.slug].adv * 2 + U[i.slug].page : 0 })).sort((a, b) => b._s - a._s).slice(0, szItem ? 1 : 2); if (szItem) pop.unshift(Object.assign({}, szItem, { _sz: szNow[0].naam }));
@@ -965,6 +965,7 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
     return page(item, res, req);
   } catch (e) { return res.status(500).json({ ok: false, error: String(e && e.message || e).slice(0, 200) }); }
 }
+
 
 
 
