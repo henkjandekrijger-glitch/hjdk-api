@@ -31,6 +31,8 @@
 //   /api/mm/ccdag                                dagronde: Keepa-check + opbrengstcheck, kiest wat vandaag getest wordt (cron 06:40 UTC)
 //   /api/mm/leer[?lees=1|droog=1]       leerronde (lib/leer.js; cron elk uur; lezen op de beschermde host)
 //   /api/mm/blok?net=propeller          blokvoorstel van de leerronde (openbaar, alleen zone-nummers)
+//   /api/mm/lookalike?project=todayin&land=us   lookalikes op uitkomst (lib/lookalike.js; openbaar, alleen zone-nummers)
+//   /api/mm/verken?sleutel=todayin-us   voorstel witte lijst verkenningscampagne; POST /api/mm/verkengedaan (SHOP_SLEUTEL) = uitgevoerd
 //   /api/mm/instelling[?j=<json>]       schakelaars, o.a. blokkeren aan/uit (beschermde host)
 //   /api/mm/overzicht                   alles op één pagina (beschermde host)
 //   /api/mm/terugbetaling?net=propeller&van=&tot=[&formaat=csv]   bewijs per klik voor een terugbetalingsverzoek (beschermde host; indienen alleen op Henkjans woord)
@@ -222,6 +224,23 @@ export default async function handler(req, res) {
       const b = leesJson(req.body) || {}; const net = netNaam(b.net || 'propeller');
       await kv.raw(['LPUSH', 'mm:blokgedaan:' + net, JSON.stringify({ t: new Date().toISOString(), geblokkeerd: Number(b.geblokkeerd) || 0, samenvatting: String(b.samenvatting || '').slice(0, 300), fouten: (b.fouten || []).slice(0, 5).map(x => String(x).slice(0, 200)), campagnes: (b.campagnes || []).slice(0, 40) })]);
       await kv.raw(['LTRIM', 'mm:blokgedaan:' + net, 0, 47]); return res.status(200).json({ ok: true }); }
+    // lookalikes op uitkomst (lib/lookalike.js, Henkjan 18 okt): openbaar, alleen zone-nummers en aantallen; 1 uur in de cache
+    if (op === 'lookalike') {
+      res.setHeader('cache-control', 'no-store'); cors(res);
+      const project = String(q('project') || 'todayin').replace(/[^a-z]/g, ''), land = String(q('land') || 'us').replace(/[^a-z]/g, '').slice(0, 2), ck = 'mm:lookalike:' + project + '-' + land;
+      const oud = await kv.get(ck).catch(() => null);
+      if (oud && q('vers') !== '1' && Date.now() - Date.parse(oud.bijgewerkt || 0) < 3600e3) return res.status(200).json(oud);
+      const { lookalike } = await import('../lib/lookalike.js');
+      try { const L = await lookalike(kv, { project, land }); await kv.set(ck, L, { ex: 2 * 86400 }); return res.status(200).json(L); } catch (e) { return res.status(oud ? 200 : 500).json(oud || { ok: false, fout: String(e && e.message || e).slice(0, 200) }); }
+    }
+    // verkenner: voorstel voor de witte lijst van de vaste verkenningscampagne (uitvoerder: propellerads-mcp app/api/verken)
+    if (op === 'verken') { res.setHeader('cache-control', 'no-store'); cors(res); const { verkenVoorstel } = await import('../lib/lookalike.js'); try { return res.status(200).json(await verkenVoorstel(kv, String(q('sleutel') || 'todayin-us'))); } catch (e) { return res.status(500).json({ ok: false, fout: String(e && e.message || e).slice(0, 200) }); } }
+    if (op === 'verkengedaan') { // de uitvoerder meldt de lijst die echt op de campagne staat (gedeelde SHOP_SLEUTEL)
+      const s = process.env.SHOP_SLEUTEL || ''; if (!s || req.headers['x-shop-sleutel'] !== s) return res.status(401).json({ ok: false });
+      const b = leesJson(req.body) || {}; const { verkenGedaan } = await import('../lib/lookalike.js');
+      if (!Array.isArray(b.lijst) || !b.lijst.length) return res.status(400).json({ ok: false, fout: 'lege lijst' });
+      return res.status(200).json(await verkenGedaan(kv, String(b.sleutel || 'todayin-us'), b.lijst.map(String).filter(z => /^\d{1,12}$/.test(z)).slice(0, 60), b.voorstel || null));
+    }
     if (op === 'blok') { res.setHeader('cache-control', 'no-store'); cors(res); const net = netNaam(q('net') || 'propeller'); return res.status(200).json((await kv.get('mm:blok:' + net)) || { zones: [], wachtOpHenkjan: [], aan: false, bijgewerkt: null }); }
     // uurwacht (lib/wachtuur.js): aankomst per netwerk en campagne, geld naar tags zonder kopers, verzadiging. Elk uur op :47; alleen melden.
     if (op === 'wachtuur') {
