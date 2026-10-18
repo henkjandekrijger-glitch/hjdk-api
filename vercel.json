@@ -139,10 +139,6 @@
     {
       "path": "/api/mm/ccdag",
       "schedule": "40 6 * * *"
-    },
-    {
-      "path": "/api/keuze-updates?op=dag",
-      "schedule": "*/15 * * * *"
     }
   ],
   "rewrites": [
