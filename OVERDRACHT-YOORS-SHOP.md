@@ -59,6 +59,7 @@ Lezen: https://hjdk-api-henq.vercel.app/api/shop/overdracht (met web_fetch_verce
 - PropellerAds-lus: repo propellerads-mcp, `lib/shop.ts` en `app/api/statistiek/route.ts`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 2026-10-18: Prijsadvies per product in Babita's briefing (`#prijs`, CSV via `/api/shop/prijzen?k=`): marktprijzen bol.com/Amazon.nl/Amazon.de uit Demand Radar (`/api/feed?shop=yoors&cc=NL&prices=1`, elk uur ± 40 producten) + inkoop uit de datapagina → slimste prijs (net onder zelfde product, voorzichtig bij alleen vergelijkbare, minimale marge € 3 én 20%, anders niet adverteren). Plus top 5 van wat de radar voor Yoors ziet. Code `lib/shopprijs.js`.
 - 2026-10-18: Google Shopping-stand (producten in Merchant Center, titels met zoektermen, laatste verversing) staat nu op het shop-overzicht (`/api/shop/overzicht`) en in de live overdracht, live uit Demand Radar (`/api/feed?shop=yoors&cc=NL&status=1`). Van de klantpagina van de radar gehaald (Henkjan: niet voor radarklanten).
 - 2026-10-17: Babita's briefing: korte "Nieuw · 17 oktober"-kader (Google Shopping, wat de shop kan doen) helemaal bovenaan, vóór het rode betaalblok; het volledige stuk stond op een telefoon pas ±3 schermen lager en Henkjan zag het niet.
 - 2026-10-17: Datapagina werkt: SHOP_FEED_KEY in Vercel gelijk aan de sleutel in de shop (Henkjan), feedcheck 200 met 1.027 producten en 1.023 inkoopprijzen.
