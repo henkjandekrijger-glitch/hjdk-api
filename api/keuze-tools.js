@@ -42,6 +42,7 @@ function laadSchema() {
 export default async function handler(req, res) {
   const url = new URL(req.url, 'https://keuzehulp.best'), q = url.searchParams, op = q.get('op') || '';
   res.setHeader('x-content-type-options', 'nosniff');
+  if(q.get('tool')==='energy'){const {energyHandler}=await import('../lib/energie-page.js');return energyHandler(req,res);}
   if(q.get('tool')==='resale'){const {resaleHandler}=await import('../lib/clothes-resale-page.js');return resaleHandler(req,res,url,q.get('market')||'nl');}
   if(q.get('tool')==='sephora'){const {sephoraHandler}=await import('../lib/sephora-page.js');return sephoraHandler(req,res);}
   if(q.get('tool')==='temu'){const {temuHandler}=await import('../lib/temu-page.js');return temuHandler(req,res);}

@@ -139,6 +139,16 @@
   ],
   "rewrites": [
     {
+      "source": "/energieleverancier-vergelijken",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=energy&market=nl"
+    },
+    {
       "source": "/tweedehands-kleding-verkopen",
       "has": [
         {
