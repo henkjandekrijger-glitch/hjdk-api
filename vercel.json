@@ -135,6 +135,10 @@
     {
       "path": "/api/vindbaarheid?op=dag",
       "schedule": "15 11 * * *"
+    },
+    {
+      "path": "/api/mm/ccdag",
+      "schedule": "40 6 * * *"
     }
   ],
   "rewrites": [

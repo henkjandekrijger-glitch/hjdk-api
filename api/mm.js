@@ -26,6 +26,9 @@
 //   /api/mm/gosplit?p=<voorvoegsel>&pct=0-100 meetpagina of direct door per voorvoegsel van /go-links, zonder de campagnelink aan te raken (beschermde host)
 //   /api/mm/amazonmeter?dag=JJJJ-MM-DD   per Associates-tag betaalde kliks tegen door Amazon getelde kliks, artikelen en omzet (alleen meten; beschermde host)
 //   /api/mm/amazon?dag=&tag=&kliks=&artikelen=&omzet=&verdiend=   Associates per tag per dag, van de dagronde (beschermde host)
+//   /api/mm/cc[?deel=voorstel|wachtrij][&dag=]   Creator Connections: stand, campagnevoorstellen en accepteerwachtrij (lib/cc.js, beschermde host)
+//   /api/mm/cc  POST { soort, rijen }            de aanbiedingenlijst voeden vanuit de ingelogde Associates-pagina (beschermde host)
+//   /api/mm/ccdag                                dagronde: Keepa-check + opbrengstcheck, kiest wat vandaag getest wordt (cron 06:40 UTC)
 //   /api/mm/leer[?lees=1|droog=1]       leerronde (lib/leer.js; cron elk uur; lezen op de beschermde host)
 //   /api/mm/blok?net=propeller          blokvoorstel van de leerronde (openbaar, alleen zone-nummers)
 //   /api/mm/instelling[?j=<json>]       schakelaars, o.a. blokkeren aan/uit (beschermde host)
@@ -252,7 +255,7 @@ export default async function handler(req, res) {
       if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
       return res.status(200).json(await dagDossiers(kv));
     }
-    if (['wissel', 'amazon', 'amazonmeter', 'venster', 'geheugen', 'termen', 'mdgo', 'mdpauze', 'gosplit', 'instelling', 'overzicht', 'clickmind', 'terugbetaling', 'voorspel', 'voorspelruw', 'mensgeld', 'overlap', 'retarget', 'ctrtest', 'zonetag'].includes(op)) {
+    if (['wissel', 'amazon', 'amazonmeter', 'venster', 'geheugen', 'termen', 'mdgo', 'mdpauze', 'gosplit', 'instelling', 'overzicht', 'clickmind', 'terugbetaling', 'voorspel', 'voorspelruw', 'mensgeld', 'overlap', 'retarget', 'ctrtest', 'zonetag', 'cc', 'ccdag'].includes(op)) {
       res.setHeader('cache-control', 'no-store');
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
       if (op === 'gosplit') { const p = String(q('p') || '').replace(/[^A-Za-z0-9]/g, '').slice(0, 8); if (!p) return res.status(400).json({ ok: false, fout: 'p' }); if (q('pct') != null && q('pct') !== '') { const v = Math.max(0, Math.min(100, Math.round(Number(q('pct'))))); if (!Number.isFinite(v)) return res.status(400).json({ ok: false, fout: 'pct 0-100' }); await kv.set('mm:gosplit:' + p, v); } return res.status(200).json({ ok: true, p, pct: await kv.get('mm:gosplit:' + p), uitleg: '0 = iedereen via de meetpagina (browsermeting), 100 = iedereen direct door, 50 = per persoon vast de helft' }); }
@@ -275,6 +278,21 @@ export default async function handler(req, res) {
       if (op === 'venster') { const { vensterPerZone } = await import('../lib/venster.js'); const r = await vensterPerZone(kv, { dag: q('dag') || new Date().toISOString().slice(0, 10), min: Number(q('min')) || 10 }); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'amazonmeter') { const { amazonMeter } = await import('../lib/amzmeter.js'); const r = await amazonMeter(kv, { dag: q('dag'), tz: q('tz') || undefined }); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'amazon') { const r = await amazonUitkomst(kv, Object.fromEntries(url.searchParams)); return res.status(r.ok ? 200 : 400).json(r); }
+      // Creator Connections (lib/cc.js): lijst voeden, dagronde draaien, voorstellen en accepteerwachtrij lezen
+      if (op === 'cc' || op === 'ccdag') {
+        const m = await import('../lib/cc.js');
+        const sub = op === 'ccdag' ? 'dag' : String(q('op2') || q('deel') || '').toLowerCase();
+        if (req.method === 'POST' || q('zet')) {
+          const j = leesJson(req.method === 'POST' ? req.body : q('zet'));
+          if (!j || !Array.isArray(j.rijen)) return res.status(400).json({ ok: false, fout: 'body { soort: geaccepteerd|open, rijen: [{asin,merk,titel,epc,prijs,term}] }' });
+          return res.status(200).json(Object.assign({ ok: true }, await m.zet(j.soort, j.rijen)));
+        }
+        if (q('regels')) { const j = leesJson(q('regels')); if (!j) return res.status(400).json({ ok: false, fout: 'regels moet JSON zijn' }); return res.status(200).json({ ok: true, regels: await m.zetRegels(j) }); }
+        if (sub === 'dag') { const r = await m.dagronde({ dag: q('dag'), tag: q('tag'), cc: q('cc') }); return res.status(200).json(Object.assign({ ok: true }, r)); }
+        if (sub === 'wachtrij') { const s = await m.stand(q('dag')); return res.status(200).json({ ok: true, wachtrij: (s.laatsteRonde && s.laatsteRonde.wachtrij) || [] }); }
+        if (sub === 'voorstel') { const s = await m.stand(q('dag')); return res.status(200).json({ ok: true, gekozen: (s.laatsteRonde && s.laatsteRonde.gekozen) || [] }); }
+        return res.status(200).json(Object.assign({ ok: true }, await m.stand(q('dag'))));
+      }
       if (op === 'instelling') {
         if (q('j')) { const j = leesJson(q('j')); if (!j) return res.status(400).json({ ok: false, fout: 'j moet JSON zijn' }); const oud = (await kv.get('mm:instelling')) || {}; const nw = { ...oud, ...j, bijgewerkt: new Date().toISOString() }; if ('blokkeren' in j) nw.blokkeren = j.blokkeren === true; await kv.set('mm:instelling', nw); return res.status(200).json({ ok: true, instelling: nw }); }
         return res.status(200).json(await instelling(kv));
