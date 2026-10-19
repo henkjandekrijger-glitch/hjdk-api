@@ -198,6 +198,13 @@ export default async function handler(req, res) {
       if (req.method !== 'POST' || !given.some(g => ok.includes(g))) return res.status(401).json({ ok: false, fout: 'sleutel' });
       const H = await import('../lib/handover.js'); const b = leesJson(req.body) || {};
       return res.status(200).json(await H.zetProject(kv, b)); }
+    if (op === 'lekketen') { // lekketen van advertentie tot betaling (lib/lekketen.js, Henkjan 19 okt): ?project=mylevel, ?vorm=tekst, ?vers=1
+      if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
+      const L = await import('../lib/lekketen.js'); const u = await L.lekketen(kv, { project: q('project') || 'mylevel', vers: q('vers') === '1' });
+      res.setHeader('cache-control', 'no-store');
+      if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send((u.tekst || L.tekst(u)).join('\n') + '\n'); }
+      return res.status(200).json(u);
+    }
     if (op === 'handover') { // handover voor elke chat (Henkjan 17 okt): live stand, open punten en werklog; ?log=<tekst>&wie=<chat> schrijft bij, ?open=<JSON-lijst> zet de open punten
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
       const H = await import('../lib/handover.js');
