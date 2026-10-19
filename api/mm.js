@@ -199,10 +199,12 @@ export default async function handler(req, res) {
       const H = await import('../lib/handover.js'); const b = leesJson(req.body) || {};
       return res.status(200).json(await H.zetProject(kv, b)); }
     if (op === 'lekketen') { // lekketen van advertentie tot betaling (lib/lekketen.js, Henkjan 19 okt): ?project=mylevel, ?vorm=tekst, ?vers=1
-      if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
-      const L = await import('../lib/lekketen.js'); const u = await L.lekketen(kv, { project: q('project') || 'mylevel', vers: q('vers') === '1' });
+      // Op de beschermde host alles; elders (keuzehulp.best, voor het MyLevel-rapport en de leerlus) alleen de totalen per stap, zonder campagnes
+      const L = await import('../lib/lekketen.js'); const vol = beschermd(req);
+      const u0 = await L.lekketen(kv, { project: q('project') || 'mylevel', vers: vol && q('vers') === '1' });
+      const u = vol ? u0 : Object.assign({}, u0, { campagnes: undefined, tekst: undefined });
       res.setHeader('cache-control', 'no-store');
-      if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send((u.tekst || L.tekst(u)).join('\n') + '\n'); }
+      if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(L.tekst(u, { openbaar: !vol }).join('\n') + '\n'); }
       return res.status(200).json(u);
     }
     if (op === 'handover') { // handover voor elke chat (Henkjan 17 okt): live stand, open punten en werklog; ?log=<tekst>&wie=<chat> schrijft bij, ?open=<JSON-lijst> zet de open punten
