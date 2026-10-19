@@ -9,6 +9,13 @@ Levend document voor collega's en voor elke chat die aan de Yoors Shop-campagnes
 
 Lezen: https://hjdk-api-henq.vercel.app/api/shop/overdracht (met web_fetch_vercel_url). Als platte tekst voor een chat: `?vorm=tekst`. Gebruik bij het werk ook de skills campagnes-henkjan en clickmind.
 
+## Shoptest (sinds 19 okt 2026)
+Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met demand radar en prijs radar en dan gaan we lerend verkeer sturen naar presterend of veel belovend."
+- **Dagkeuze**: `/api/shop/kies` (lib/shopkies.js). 20 producten: vraag uit Demand Radar, niet duurder dan de markt (prijsradar), marge voor advertenties, seizoen, levertijd; geen Engelse titels; 3/4 tot €30 thuisbezorgd, 1/4 van €30 tot €60; hoogstens 3 per categorie en 2 per merk; 10% verkenning. Per dag vastgelegd (`?vers=1` = opnieuw kiezen). Marges staan erin: alleen met de gedeelde sleutel of via de beschermde vercel.app-host.
+- **Per product een campagne**: propellerads-mcp `lib/shoptest.ts`, cron 05:15 UTC en daarna elk uur op :15 (tot 21:15). Kopie van 12016783 met eigen link (`p=<product>`) en drie advertenties (naam en thuisprijs, zelfde bedrag als de koopbalk). CPA $0,01. Zwarte lijst van de bron eraf; alleen relatief slechte plekken erop. Naam: `SHOP-LUS TEST <datum> p=<product>`. Gestarte producten meldt hij terug op `/api/shop/getest`.
+- **Oordeel per product** (Clickmind, relatief): presterend = verkoop; veelbelovend = winkelwagen, of 10+ echte mensen met tikratio boven het gemiddelde; af = verwacht 3+ tikken en 0. Presterend en veelbelovend blijven lopen, af stopt, na 3 testdagen zonder oordeel stopt de campagne. Oude shopcampagnes (zonder p= in de naam) stoppen zodra 5 testcampagnes lopen, tenzij hun product presterend of veelbelovend is. Per product een campagne.
+- **Slots**: eigen plafond SHOP-LUS 35 per dag (Henkjan: "Ik heb meer ruimte deze maand 100 slots").
+
 ## Doel (Henkjan)
 - Direct op verkoop testen: elke advertentieklik gaat via Clickmind in één keer naar de productpagina op yoo.rs. Geen keuzehulpen meer.
 - Eén product per campagne. Producten kiezen met Demand Radar (`https://demandradar-ivory.vercel.app/api/demand?view=products&cc=NL`) plus onze eigen tractie.
@@ -45,10 +52,11 @@ Lezen: https://hjdk-api-henq.vercel.app/api/shop/overdracht (met web_fetch_verce
 - Clickmind: `https://hjdk-api-henq.vercel.app/api/mm/overdracht?project=yoors` en `/api/mm/clickmind`.
 
 ## Vaste regels (Henkjan)
-- Nooit campagnes stoppen of pauzeren, en nooit bod, budget of dagplanning wijzigen zonder Henkjans woord ("los op" of een letterlijke opdracht). Uitzondering: de shop-lussen binnen hun eigen regels, en `vervangt=`.
+- Bod, budget of dagplanning nooit wijzigen zonder Henkjans woord. Stoppen mag volgens de regels: de shoptest (oordeel per product), de relatieve stopregel en `vervangt=`; zie de campagneskill.
+- Plekken alleen blokkeren als ze slechter zijn dan het paginagemiddelde (verwacht 3+ echte mensen of tikken en 0). Tot 19 okt gold een vaste grens van 25% echte mensen terwijl yoo.rs gemiddeld 7,5% haalt: daardoor stonden er 287 plekken uit een campagne.
 - Zones blokkeren mag altijd.
 - Bieden op CPA, nooit op CPC. Gebruikersactiviteit LOW. Hoogstens $10 per dag per campagne.
-- PropellerAds: hoogstens 40 nieuwe starts per dag (nieuwe dag om 05:00 UTC). Een gepauzeerde campagne komt terug als verse kopie.
+- PropellerAds: de shoptest mag tot 35 slots per dag (plafond SHOP-LUS); andere projecten 5 nieuwe starts per dag. Nieuwe dag om 05:00 UTC. Een gepauzeerde campagne komt terug als verse kopie.
 - Sleutels staan als gedeelde Vercel-teamvariabelen. Nooit tonen, ontsleutelen of in een pagina of URL zetten.
 - Babita's pagina's bevatten geen sleutels en geen persoonsgegevens.
 - Kort, gewoon Nederlands, met cijfers. Links geven, geen screenshots.
@@ -59,6 +67,7 @@ Lezen: https://hjdk-api-henq.vercel.app/api/shop/overdracht (met web_fetch_verce
 - PropellerAds-lus: repo propellerads-mcp, `lib/shop.ts` en `app/api/statistiek/route.ts`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 2026-10-19: Shoptest gebouwd (Henkjan: 20 producten per dag lerend testen). Dagkeuze `/api/shop/kies` (lib/shopkies.js), per product een campagne (propellerads-mcp lib/shoptest.ts, cron :15). Shop-lus op de centrale regels: plekken relatief tegen het paginagemiddelde, slots tellen mee, eigen dagrem en bodverhoging eruit, lek-stop relatief. Doorlichting die dag: 7 dagen $6,67, 2.440 kliks, 97 echte mensen op 1.289 aankomsten (7,5%), 15 tikken, 7 afrekenen, 0 betaald; productpagina traag (HTML 2-3 s) en verzending €8,50-18,15 los. Open: iDEAL-testaankoop, lichte productpagina voor betaald verkeer.
 - 2026-10-18: Prijsadvies voorzichtiger: zelfde product eerst; alleen-vergelijkbaar hooguit −15% of +25% per keer, >2,5× zo duur als vergelijkbaar = 'controleren'. Radar telt 'zelfde' met prijs < ½× of > 2× de onze als vergelijkbaar.
 - 2026-10-18: Prijsadvies per product in Babita's briefing (`#prijs`, CSV via `/api/shop/prijzen?k=`): marktprijzen bol.com/Amazon.nl/Amazon.de uit Demand Radar (`/api/feed?shop=yoors&cc=NL&prices=1`, elk uur ± 40 producten) + inkoop uit de datapagina → slimste prijs (net onder zelfde product, voorzichtig bij alleen vergelijkbare, minimale marge € 3 én 20%, anders niet adverteren). Plus top 5 van wat de radar voor Yoors ziet. Code `lib/shopprijs.js`.
 - 2026-10-18: Google Shopping-stand (producten in Merchant Center, titels met zoektermen, laatste verversing) staat nu op het shop-overzicht (`/api/shop/overzicht`) en in de live overdracht, live uit Demand Radar (`/api/feed?shop=yoors&cc=NL&status=1`). Van de klantpagina van de radar gehaald (Henkjan: niet voor radarklanten).
