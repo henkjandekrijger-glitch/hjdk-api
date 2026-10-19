@@ -760,7 +760,7 @@ export default async function handler(req, res) {
       const SRT = ['dv', 'dm', 'da', 'cart', 'koop'], keys = []; items.forEach(i => SRT.forEach(x => keys.push('c:sh-p-' + pk(i.id) + '-' + x)));
       const vals = []; for (let i = 0; i < keys.length; i += 480) vals.push(...await kv.mget(...keys.slice(i, i + 480)));
       const tellers = {}; items.forEach((it, i) => { const o = {}; let iets = 0; SRT.forEach((x, j) => { o[x] = num(vals[i * SRT.length + j]); iets += o[x]; }); if (iets) tellers[it.id] = o; });
-      const strategie = STRATEGIEEN.includes(url.searchParams.get('strategie')) ? url.searchParams.get('strategie') : ((await kv.get(K_STRATEGIE).catch(() => null)) || 'marge');
+      const strategie = STRATEGIEEN.includes(url.searchParams.get('strategie')) ? url.searchParams.get('strategie') : ((await kv.get(K_STRATEGIE).catch(() => null)) || 'auto');
       const uit = kies({ strategie, items, kaart, markt, termen, tellers, getest, seizoen, thema: themaVan, vandaag: dag, n, plaatje: pid => ({ icon: beeld(pid, 'icon'), image: beeld(pid, 'pa'), link: 'https://yoo.rs/product/' + pid + '?lang=nl' }) });
       uit.bronnen = { catalogus: items.length, metInkoop: Object.keys(kaart).length, marktprijzen: Object.keys(markt).length, vraagtermen: termen.length, metVerkeer: Object.keys(tellers).length, alGetest: Object.keys(getest).length };
       await kv.set(ck, uit, { ex: 3 * 86400 }).catch(() => {});
