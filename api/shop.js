@@ -34,7 +34,8 @@ import { K_KOST, ontvang as margeOntvang, margeStand, zetMarge } from '../lib/sh
 import { prijsStand, prijsCsv } from '../lib/shopprijs.js';
 import { uurTel, uurStand, lekkenPagina, uurAanvullen } from '../lib/shopuur.js';
 import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdracht.js';
-import { kies, KIES_REGELS } from '../lib/shopkies.js';
+import { kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
+const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 import { demandRadar } from '../lib/demandradar.js';
 const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
 
@@ -758,7 +759,9 @@ export default async function handler(req, res) {
       const SRT = ['dv', 'dm', 'da', 'cart', 'koop'], keys = []; items.forEach(i => SRT.forEach(x => keys.push('c:sh-p-' + pk(i.id) + '-' + x)));
       const vals = []; for (let i = 0; i < keys.length; i += 480) vals.push(...await kv.mget(...keys.slice(i, i + 480)));
       const tellers = {}; items.forEach((it, i) => { const o = {}; let iets = 0; SRT.forEach((x, j) => { o[x] = num(vals[i * SRT.length + j]); iets += o[x]; }); if (iets) tellers[it.id] = o; });
-      const uit = kies({ items, kaart, markt, termen, tellers, getest, seizoen, thema: themaVan, vandaag: dag, n, plaatje: pid => ({ icon: beeld(pid, 'icon'), image: beeld(pid, 'pa'), link: 'https://yoo.rs/product/' + pid + '?lang=nl' }) });
+      const strategie = STRATEGIEEN.includes(url.searchParams.get('strategie')) ? url.searchParams.get('strategie') : ((await kv.get(K_STRATEGIE).catch(() => null)) || 'marge');
+      if (url.searchParams.get('strategie') && /\.vercel\.app$/i.test(host)) await kv.set(K_STRATEGIE, strategie).catch(() => {}); // vastzetten alleen via de beschermde host
+      const uit = kies({ strategie, items, kaart, markt, termen, tellers, getest, seizoen, thema: themaVan, vandaag: dag, n, plaatje: pid => ({ icon: beeld(pid, 'icon'), image: beeld(pid, 'pa'), link: 'https://yoo.rs/product/' + pid + '?lang=nl' }) });
       uit.bronnen = { catalogus: items.length, metInkoop: Object.keys(kaart).length, marktprijzen: Object.keys(markt).length, vraagtermen: termen.length, metVerkeer: Object.keys(tellers).length, alGetest: Object.keys(getest).length };
       await kv.set(ck, uit, { ex: 3 * 86400 }).catch(() => {});
       return res.status(200).json(Object.assign({ ok: true }, uit)); }
