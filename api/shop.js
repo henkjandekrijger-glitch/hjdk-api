@@ -34,6 +34,9 @@ import { K_KOST, ontvang as margeOntvang, margeStand, zetMarge } from '../lib/sh
 import { prijsStand, prijsCsv } from '../lib/shopprijs.js';
 import { uurTel, uurStand, lekkenPagina, uurAanvullen } from '../lib/shopuur.js';
 import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdracht.js';
+import { kies, KIES_REGELS } from '../lib/shopkies.js';
+import { demandRadar } from '../lib/demandradar.js';
+const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
 const SHOP = 'https://yoo.rs/shop';
@@ -740,6 +743,25 @@ export default async function handler(req, res) {
     if (op === 'img') return await plaatje(req, res, url);
     res.setHeader('cache-control', 'no-store');
     if (op === 'voorpa') return res.status(200).json(Object.assign({ ok: true }, await voorNet(['ra', 'ca'].includes(url.searchParams.get('net')) ? url.searchParams.get('net') : 'pa')));
+    if (op === 'kies' || op === 'getest') { // shoptest (Henkjan 19 okt): elke dag 20 producten lerend testen; lib/shopkies.js. Marges staan erin: alleen met de gedeelde sleutel of via de beschermde vercel.app-host
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; const s = await geheim(); const k = String(req.headers['x-shop-sleutel'] || '');
+      if (!/\.vercel\.app$/i.test(host) && !(s && k === s)) return res.status(404).send('Niet gevonden');
+      if (op === 'getest') { // de PropellerAds-lus meldt welke producten vandaag een campagne kregen (POST {pids})
+        let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
+        const g = (await kv.get(K_GETEST)) || {}; let nieuw = 0; for (const p of (Array.isArray(b.pids) ? b.pids : [])) { const id = pidOk(p); if (id && !g[id]) { g[id] = DAY(); nieuw++; } }
+        if (nieuw) await kv.set(K_GETEST, g); return res.status(200).json({ ok: true, nieuw, totaal: Object.keys(g).length }); }
+      const dag = DAY(), ck = 'hjdk:shop:kies:' + dag, n = Math.max(1, Math.min(40, Number(url.searchParams.get('n')) || KIES_REGELS.n));
+      if (!url.searchParams.get('vers')) { const c = await kv.get(ck).catch(() => null); if (c && c.n >= n) return res.status(200).json(Object.assign({ ok: true, uitCache: true }, c)); }
+      const items = (await catalog(true)).items, kaart = (await kv.get(K_KOST).catch(() => null)) || {}, getest = (await kv.get(K_GETEST).catch(() => null)) || {};
+      let markt = {}; try { const r = await fetch('https://demandradar-ivory.vercel.app/api/feed?shop=yoors&cc=NL&prices=1', { signal: AbortSignal.timeout(8000) }); if (r.ok) markt = ((await r.json()) || {}).items || {}; } catch (e) {}
+      const termen = await demandRadar('NL').catch(() => []);
+      const SRT = ['dv', 'dm', 'da', 'cart', 'koop'], keys = []; items.forEach(i => SRT.forEach(x => keys.push('c:sh-p-' + pk(i.id) + '-' + x)));
+      const vals = []; for (let i = 0; i < keys.length; i += 480) vals.push(...await kv.mget(...keys.slice(i, i + 480)));
+      const tellers = {}; items.forEach((it, i) => { const o = {}; let iets = 0; SRT.forEach((x, j) => { o[x] = num(vals[i * SRT.length + j]); iets += o[x]; }); if (iets) tellers[it.id] = o; });
+      const uit = kies({ items, kaart, markt, termen, tellers, getest, seizoen, thema: themaVan, vandaag: dag, n, plaatje: pid => ({ icon: beeld(pid, 'icon'), image: beeld(pid, 'pa'), link: 'https://yoo.rs/product/' + pid + '?lang=nl' }) });
+      uit.bronnen = { catalogus: items.length, metInkoop: Object.keys(kaart).length, marktprijzen: Object.keys(markt).length, vraagtermen: termen.length, metVerkeer: Object.keys(tellers).length, alGetest: Object.keys(getest).length };
+      await kv.set(ck, uit, { ex: 3 * 86400 }).catch(() => {});
+      return res.status(200).json(Object.assign({ ok: true }, uit)); }
     if (op === 'koopcheck') { // openbaar, alleen lezen: hoe een NL-telefoon de productpagina en de afrekenpagina van yoo.rs nu krijgt (geen sleutels, geen bezoekersdata)
       const pid = pidOk(url.searchParams.get('p')) || 'oc_4174004347453441';
       const ck = 'hjdk:shop:koopcheck:' + pid; try { const c = await kv.get(ck); if (c && Date.now() - c.at < 6e5 && !url.searchParams.get('vers')) return res.status(200).json(c); } catch (e) {}
