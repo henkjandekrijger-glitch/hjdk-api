@@ -12,6 +12,12 @@ Werk hem bij aan het eind van elke chat en na elke grote stap:
 
 Elke nieuwe deploy zet zelf een regel met de commit in het werklog.
 
+De overdracht is de complete werking en stand (Henkjan 19 okt: "Zorg dat op vercel een handover doc staat met complete status en dat dat handover doc altijd wordt bijgewerkt bestaat uit complete werking en status"):
+- Werking van het geheel staat in `lib/werking.js`. Verander je hoe iets werkt (regels, rondes, crons, ingrepen, projecten), werk dan in dezelfde commit `lib/werking.js` bij en zet `WERKING_DATUM` op vandaag.
+- Projecten met een eigen repo sturen elke 15 minuten hun stand en werking (POST /api/mm/handoverzet, gedeelde team-sleutel). MyLevel doet dat vanuit api/cron/lek.js met docs/werking.md. Een nieuw project hoort dat ook te doen.
+- Budget, slots en tempowacht komen live uit propellerads-mcp (/api/wachtlog?stand=1, header x-shop-sleutel).
+- De overdracht waarschuwt zelf als een projectstand ouder is dan 1 uur of als de regels van een project nieuwer zijn dan zijn werking.
+
 ## Per onderdeel
 
 - Werk je aan de Yoors Shop-campagnes (api/shop.js, lib/shop*.js, Babita's pagina, de PropellerAds-lus voor SHOP-LUS)? Lees eerst `OVERDRACHT-YOORS-SHOP.md` en werk hem in dezelfde beurt bij: stand goedzetten en één regel in het logboek (nieuwste bovenaan). Live te lezen op https://hjdk-api-henq.vercel.app/api/shop/overdracht.

@@ -192,6 +192,12 @@ export default async function handler(req, res) {
       const r = await modalMail(kv, { mid: j.mid, email: j.email, bewaar: j.bewaar !== false, ipNet: ipInfo(srv.ip).h || ipInfo(srv.ip).net, land: srv.land }).catch(e => ({ ok: false, fout: 'fout' }));
       return res.status(r.ok ? 200 : 400).json(r);
     }
+    if (op === 'handoverzet') { // projecten sturen hun werking en stand naar de centrale overdracht (Henkjan 19 okt); gedeelde team-sleutel, ook via keuzehulp.best
+      const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''); const given = [req.headers['x-hjdk-token'], bearer].filter(Boolean);
+      const ok = [process.env.ZICHT_TOKEN, process.env.GADS_TOKEN, process.env.HJDK_TOKEN].filter(Boolean);
+      if (req.method !== 'POST' || !given.some(g => ok.includes(g))) return res.status(401).json({ ok: false, fout: 'sleutel' });
+      const H = await import('../lib/handover.js'); const b = leesJson(req.body) || {};
+      return res.status(200).json(await H.zetProject(kv, b)); }
     if (op === 'handover') { // handover voor elke chat (Henkjan 17 okt): live stand, open punten en werklog; ?log=<tekst>&wie=<chat> schrijft bij, ?open=<JSON-lijst> zet de open punten
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
       const H = await import('../lib/handover.js');
