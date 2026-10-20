@@ -19,6 +19,7 @@ import { lessen, draaiboek, stand, voegLesToe, nieuweProef, verwerkUitkomst, zet
 import { organicStatus } from '../lib/organic.js';
 import { OVERDRACHT_ZICHT } from '../lib/overdracht-zicht.js';
 import { leesSkill } from '../lib/skills.js';
+import { zoekVolumes } from '../lib/demandradar.js';
 
 const mag = req => { const q = req.query || {}; const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''); const given = [q.token, req.headers['x-hjdk-token'], bearer].filter(Boolean);
   const ok = [process.env.ZICHT_TOKEN, process.env.GADS_TOKEN, process.env.HJDK_TOKEN].filter(Boolean); return given.some(g => ok.includes(g)) || /vercel-cron/i.test(String(req.headers['user-agent'] || '')); };
@@ -31,6 +32,10 @@ export default async function handler(req, res) {
   const oidc = req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN;
   try {
     if (op === 'overdracht') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(OVERDRACHT_ZICHT); }
+    if (op === 'volumes') { // zoekvolumes (Google Ads, 13 maanden) via demandradar; zonder token hooguit 8 keer per dag, max 60 termen
+      const { kv } = await import('../lib/db.js'); if (!mag(req)) { const n = Number(await kv.raw(['INCR', 'zicht:volumes:n:' + DAY()]).catch(() => 0)); if (n > 8) return res.status(429).json({ fout: 'daglimiet volumes (8)' }); }
+      const kws = String(q.v || '').split('|').map(x => x.trim()).filter(Boolean).slice(0, 60); if (!kws.length) return res.status(400).json({ fout: 'geef v=term1|term2' });
+      return res.status(200).json(await zoekVolumes(kws, q.cc || 'NL')); }
     if (op === 'skill') { const t = leesSkill(q.naam || 'zicht-seo-llm'); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return t ? res.status(200).send(t) : res.status(404).send('skill niet gevonden'); }
     if (op === 'draaiboek' || op === 'playbook') {
       const db = await draaiboek(q.site, q.kanaal); const n = Math.min(Number(q.n) || 40, 100);
