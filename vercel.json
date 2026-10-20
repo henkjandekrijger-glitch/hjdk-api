@@ -143,9 +143,117 @@
     {
       "path": "/api/keuze-tools?tool=autohuur&market=nl&op=reviews",
       "schedule": "20 7,15 * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=cur&op=llm",
+      "schedule": "40 11 * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=cur&op=ping",
+      "schedule": "50 4 * * *"
     }
   ],
   "rewrites": [
+    {
+      "source": "/curacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=nl"
+    },
+    {
+      "source": "/curacao/:s",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=nl&s=:s"
+    },
+    {
+      "source": "/curacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=de"
+    },
+    {
+      "source": "/curacao/:s",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=de&s=:s"
+    },
+    {
+      "source": "/curacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=en"
+    },
+    {
+      "source": "/curacao/:s",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=en&s=:s"
+    },
+    {
+      "source": "/es/curazao",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=es"
+    },
+    {
+      "source": "/es/curazao/:s",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=es&s=:s"
+    },
+    {
+      "source": "/pt/curacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=pt"
+    },
+    {
+      "source": "/pt/curacao/:s",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=pt&s=:s"
+    },
     {
       "source": "/auto-huren-curacao",
       "has": [
