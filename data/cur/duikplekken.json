@@ -3,35 +3,56 @@
  "peildatum": "2026-10-20",
  "onderwerp": {
   "nl": "duikplek",
-  "en": "dive site"
+  "en": "dive site",
+  "de": "Tauchplatz",
+  "es": "sitio de buceo",
+  "pt": "local de mergulho"
  },
  "h1": {
   "nl": "Duiken en snorkelen op Curaçao: welke duikplek past bij jou?",
-  "en": "Diving and snorkeling in Curaçao: which dive site suits you?"
+  "en": "Diving and snorkeling in Curaçao: which dive site suits you?",
+  "de": "Tauchen und Schnorcheln auf Curaçao: Welcher Tauchplatz passt zu dir?",
+  "es": "Buceo y snorkel en Curazao: ¿qué sitio de buceo es el ideal para ti?",
+  "pt": "Mergulho e snorkel em Curaçao: qual local de mergulho combina com você?"
  },
  "titel": {
   "nl": "Duikplekken Curaçao: {n} duik- en snorkelplekken vergeleken",
-  "en": "Curaçao dive sites: {n} dive and snorkel spots compared"
+  "en": "Curaçao dive sites: {n} dive and snorkel spots compared",
+  "de": "Tauchplätze auf Curaçao: {n} Tauch- und Schnorchelplätze im Vergleich",
+  "es": "Sitios de buceo en Curazao: {n} lugares de buceo y snorkel comparados",
+  "pt": "Locais de mergulho em Curaçao: {n} pontos de mergulho e snorkel comparados"
  },
  "metaDesc": {
   "nl": "{n} duik- en snorkelplekken op Curaçao met diepte, niveau, kant of boot, entree en scores. Beantwoord 4 vragen en zie je top 3.",
-  "en": "{n} Curaçao dive and snorkel sites with depth, level, shore or boat, entry fees and ratings. Answer 4 questions and get your top 3."
+  "en": "{n} Curaçao dive and snorkel sites with depth, level, shore or boat, entry fees and ratings. Answer 4 questions and get your top 3.",
+  "de": "{n} Tauch- und Schnorchelplätze auf Curaçao mit Tiefe, Level, Ufer oder Boot, Eintritt und Bewertungen. Beantworte 4 Fragen und erhalte deine Top 3.",
+  "es": "{n} sitios de buceo y snorkel en Curazao con profundidad, nivel, desde la orilla o en bote, entrada y calificaciones. Responde 4 preguntas y recibe tu top 3.",
+  "pt": "{n} locais de mergulho e snorkel em Curaçao com profundidade, nível, da costa ou de barco, entrada e avaliações. Responda 4 perguntas e receba seu top 3."
  },
  "kort": {
   "nl": "We vergeleken 61 duik- en snorkelplekken op Curaçao. De meeste zijn gratis vanaf de kant te doen; alleen strandclubs als Cas Abao ($6 per auto) en Porto Mari ($3 per persoon) vragen entree. Beginners en snorkelaars zitten goed bij Tugboat, Playa Piskado (schildpadden) en Playa Kalki; ervaren duikers kiezen Superior Producer (wrak op 30 m), Watamula of Car Pile.",
-  "en": "We compared 61 dive and snorkel sites in Curaçao. Most are free shore dives; only beach clubs like Cas Abao ($6 per car) and Porto Mari ($3 per person) charge entry. Beginners and snorkelers do well at Tugboat, Playa Piskado (turtles) and Playa Kalki; experienced divers pick the Superior Producer (wreck at 100 ft), Watamula or Car Pile."
+  "en": "We compared 61 dive and snorkel sites in Curaçao. Most are free shore dives; only beach clubs like Cas Abao ($6 per car) and Porto Mari ($3 per person) charge entry. Beginners and snorkelers do well at Tugboat, Playa Piskado (turtles) and Playa Kalki; experienced divers pick the Superior Producer (wreck at 100 ft), Watamula or Car Pile.",
+  "de": "Wir haben 61 Tauch- und Schnorchelplätze auf Curaçao verglichen. Die meisten sind kostenlose Landtauchgänge; nur Beach Clubs wie Cas Abao (6 $ pro Auto) und Porto Mari (3 $ pro Person) verlangen Eintritt. Anfänger und Schnorchler sind am Tugboat, Playa Piskado (Schildkröten) und Playa Kalki gut aufgehoben; erfahrene Taucher wählen die Superior Producer (Wrack in 100 ft), Watamula oder Car Pile.",
+  "es": "Comparamos 61 sitios de buceo y snorkel en Curazao. La mayoría son inmersiones gratuitas desde la orilla; solo los beach clubs como Cas Abao ($6 por auto) y Porto Mari ($3 por persona) cobran entrada. Los principiantes y los que hacen snorkel se lucen en Tugboat, Playa Piskado (tortugas) y Playa Kalki; los buzos con experiencia eligen el Superior Producer (naufragio a 100 ft), Watamula o Car Pile.",
+  "pt": "Comparamos 61 locais de mergulho e snorkel em Curaçao. A maioria são mergulhos gratuitos a partir da costa; só os beach clubs como Cas Abao (US$ 6 por carro) e Porto Mari (US$ 3 por pessoa) cobram entrada. Iniciantes e quem faz snorkel se dão bem no Tugboat, em Playa Piskado (tartarugas) e em Playa Kalki; mergulhadores experientes escolhem o Superior Producer (naufrágio a 100 ft), Watamula ou Car Pile."
  },
  "vragen": [
   {
    "q": {
     "nl": "Ga je duiken of snorkelen?",
-    "en": "Are you diving or snorkeling?"
+    "en": "Are you diving or snorkeling?",
+    "de": "Tauchst du oder schnorchelst du?",
+    "es": "¿Haces buceo o snorkel?",
+    "pt": "Você vai mergulhar ou fazer snorkel?"
    },
    "opties": [
     {
      "label": {
       "nl": "Duiken",
-      "en": "Scuba diving"
+      "en": "Scuba diving",
+      "de": "Gerätetauchen",
+      "es": "Buceo con tanque",
+      "pt": "Mergulho com cilindro"
      },
      "plus": [],
      "min": [],
@@ -40,7 +61,10 @@
     {
      "label": {
       "nl": "Snorkelen",
-      "en": "Snorkeling"
+      "en": "Snorkeling",
+      "de": "Schnorcheln",
+      "es": "Snorkel",
+      "pt": "Snorkel"
      },
      "plus": [
       "snorkelen",
@@ -57,7 +81,10 @@
     {
      "label": {
       "nl": "Allebei, met de groep",
-      "en": "Both, as a group"
+      "en": "Both, as a group",
+      "de": "Beides, als Gruppe",
+      "es": "Ambos, en grupo",
+      "pt": "Os dois, em grupo"
      },
      "plus": [
       "snorkelen",
@@ -73,13 +100,19 @@
   {
    "q": {
     "nl": "Wat is je niveau?",
-    "en": "What's your level?"
+    "en": "What's your level?",
+    "de": "Wie ist dein Level?",
+    "es": "¿Cuál es tu nivel?",
+    "pt": "Qual é o seu nível?"
    },
    "opties": [
     {
      "label": {
       "nl": "Beginner of net gebrevetteerd",
-      "en": "Beginner or newly certified"
+      "en": "Beginner or newly certified",
+      "de": "Anfänger oder frisch zertifiziert",
+      "es": "Principiante o recién certificado",
+      "pt": "Iniciante ou recém-certificado"
      },
      "plus": [
       "beginner"
@@ -94,7 +127,10 @@
     {
      "label": {
       "nl": "Ervaren (Advanced, 30 m)",
-      "en": "Experienced (Advanced, 100 ft)"
+      "en": "Experienced (Advanced, 100 ft)",
+      "de": "Erfahren (Advanced, 30 m / 100 ft)",
+      "es": "Con experiencia (Advanced, 30 m / 100 ft)",
+      "pt": "Experiente (Advanced, 30 m / 100 ft)"
      },
      "plus": [
       "gevorderd",
@@ -109,13 +145,19 @@
   {
    "q": {
     "nl": "Vanaf de kant of met de boot?",
-    "en": "From shore or by boat?"
+    "en": "From shore or by boat?",
+    "de": "Vom Ufer oder vom Boot?",
+    "es": "¿Desde la orilla o en bote?",
+    "pt": "Da costa ou de barco?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "Either is fine"
+      "en": "Either is fine",
+      "de": "Beides ist okay",
+      "es": "Cualquiera de los dos",
+      "pt": "Tanto faz"
      },
      "plus": [],
      "min": [],
@@ -124,7 +166,10 @@
     {
      "label": {
       "nl": "Vanaf de kant, zelf met huurauto",
-      "en": "From shore, on my own by rental car"
+      "en": "From shore, on my own by rental car",
+      "de": "Vom Ufer, auf eigene Faust mit dem Mietwagen",
+      "es": "Desde la orilla, por mi cuenta con auto alquilado",
+      "pt": "Da costa, por conta própria com carro alugado"
      },
      "plus": [
       "shore",
@@ -137,7 +182,10 @@
     {
      "label": {
       "nl": "Met de boot",
-      "en": "By boat"
+      "en": "By boat",
+      "de": "Mit dem Boot",
+      "es": "En bote",
+      "pt": "De barco"
      },
      "plus": [
       "boot"
@@ -150,13 +198,19 @@
   {
    "q": {
     "nl": "Wat wil je vooral zien?",
-    "en": "What do you most want to see?"
+    "en": "What do you most want to see?",
+    "de": "Was möchtest du am liebsten sehen?",
+    "es": "¿Qué es lo que más quieres ver?",
+    "pt": "O que você mais quer ver?"
    },
    "opties": [
     {
      "label": {
       "nl": "Schildpadden",
-      "en": "Turtles"
+      "en": "Turtles",
+      "de": "Schildkröten",
+      "es": "Tortugas",
+      "pt": "Tartarugas"
      },
      "plus": [
       "schildpadden"
@@ -167,7 +221,10 @@
     {
      "label": {
       "nl": "Een wrak",
-      "en": "A wreck"
+      "en": "A wreck",
+      "de": "Ein Wrack",
+      "es": "Un naufragio",
+      "pt": "Um naufrágio"
      },
      "plus": [
       "wrak"
@@ -178,7 +235,10 @@
     {
      "label": {
       "nl": "Koraal en rifvis",
-      "en": "Coral and reef fish"
+      "en": "Coral and reef fish",
+      "de": "Korallen und Riffische",
+      "es": "Corales y peces de arrecife",
+      "pt": "Corais e peixes de recife"
      },
      "plus": [
       "koraal"
@@ -189,7 +249,10 @@
     {
      "label": {
       "nl": "Grote vis (barracuda, haaien, roggen)",
-      "en": "Big fish (barracuda, sharks, rays)"
+      "en": "Big fish (barracuda, sharks, rays)",
+      "de": "Große Fische (Barrakudas, Haie, Rochen)",
+      "es": "Peces grandes (barracudas, tiburones, rayas)",
+      "pt": "Peixes grandes (barracudas, tubarões, raias)"
      },
      "plus": [
       "grotevis"
@@ -207,7 +270,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik, drift",
-    "en": "boat dive, drift"
+    "en": "boat dive, drift",
+    "de": "Bootstauchgang, Drift",
+    "es": "inmersión en bote, a la deriva",
+    "pt": "mergulho de barco, de deriva"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -223,11 +289,17 @@
    "feiten": [
     {
      "nl": "Alleen per boot",
-     "en": "Boat access only"
+     "en": "Boat access only",
+     "de": "Nur mit dem Boot erreichbar",
+     "es": "Solo se llega en bote",
+     "pt": "Acesso só de barco"
     },
     {
      "nl": "Wisselende stroming, driftduik",
-     "en": "Shifting current, drift dive"
+     "en": "Shifting current, drift dive",
+     "de": "Wechselnde Strömung, Drifttauchgang",
+     "es": "Corriente cambiante, inmersión a la deriva",
+     "pt": "Correnteza que muda, mergulho de deriva"
     }
    ],
    "scores": [
@@ -248,6 +320,18 @@
     "en": [
      "Dense, healthy coral and big schools of fish",
      "Turtles and rays spotted"
+    ],
+    "de": [
+     "Dichte, gesunde Korallen und große Fischschwärme",
+     "Schildkröten und Rochen gesichtet"
+    ],
+    "es": [
+     "Corales densos y sanos y grandes cardúmenes",
+     "Se ven tortugas y rayas"
+    ],
+    "pt": [
+     "Corais densos e saudáveis e grandes cardumes",
+     "Tartarugas e raias avistadas"
     ]
    },
    "tegen": {
@@ -258,6 +342,18 @@
     "en": [
      "Current can be strong and change direction",
      "Some surge near the point"
+    ],
+    "de": [
+     "Die Strömung kann stark sein und die Richtung wechseln",
+     "Etwas Dünung an der Landspitze"
+    ],
+    "es": [
+     "La corriente puede ser fuerte y cambiar de dirección",
+     "Algo de oleaje cerca de la punta"
+    ],
+    "pt": [
+     "A correnteza pode ser forte e mudar de direção",
+     "Um pouco de ondulação perto da ponta"
     ]
    },
    "bronnen": [
@@ -273,7 +369,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik",
-    "en": "shore dive"
+    "en": "shore dive",
+    "de": "Landtauchgang",
+    "es": "inmersión desde la orilla",
+    "pt": "mergulho a partir da costa"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -291,7 +390,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "kostenloser Eintritt",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://flipflopwanderers.com/?p=32523",
     "datum": "2026-10"
@@ -299,15 +401,24 @@
    "feiten": [
     {
      "nl": "Instap vanaf steiger of strand",
-     "en": "Entry from jetty or beach"
+     "en": "Entry from jetty or beach",
+     "de": "Einstieg vom Steg oder Strand",
+     "es": "Entrada desde el muelle o la playa",
+     "pt": "Entrada pelo píer ou pela praia"
     },
     {
      "nl": "Duikshop op het strand",
-     "en": "Dive shop on the beach"
+     "en": "Dive shop on the beach",
+     "de": "Tauchshop am Strand",
+     "es": "Tienda de buceo en la playa",
+     "pt": "Loja de mergulho na praia"
     },
     {
      "nl": "Rif op 3 minuten zwemmen",
-     "en": "Reef 3 minutes' swim out"
+     "en": "Reef 3 minutes' swim out",
+     "de": "Riff in 3 Minuten Schwimmen erreichbar",
+     "es": "Arrecife a 3 minutos nadando",
+     "pt": "Recife a 3 minutos nadando"
     }
    ],
    "scores": [
@@ -330,6 +441,21 @@
      "Lots of sponges and coral, reef visible from shore",
      "Well-run dive shop with air and nitrox",
      "Turtles and rays"
+    ],
+    "de": [
+     "Viele Schwämme und Korallen, Riff vom Ufer aus sichtbar",
+     "Gut geführter Tauchshop mit Luft und Nitrox",
+     "Schildkröten und Rochen"
+    ],
+    "es": [
+     "Muchas esponjas y corales, arrecife visible desde la orilla",
+     "Tienda de buceo bien administrada con aire y nitrox",
+     "Tortugas y rayas"
+    ],
+    "pt": [
+     "Muitas esponjas e corais, recife visível da costa",
+     "Loja de mergulho bem administrada, com ar e nitrox",
+     "Tartarugas e raias"
     ]
    },
    "tegen": {
@@ -338,6 +464,15 @@
     ],
     "en": [
      "Stairs from the parking lot, gear has to be carried"
+    ],
+    "de": [
+     "Treppe vom Parkplatz, die Ausrüstung muss getragen werden"
+    ],
+    "es": [
+     "Escaleras desde el estacionamiento, hay que cargar el equipo"
+    ],
+    "pt": [
+     "Escadas a partir do estacionamento, é preciso carregar o equipamento"
     ]
    },
    "bronnen": [
@@ -354,7 +489,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik, snorkelbaai",
-    "en": "shore dive, snorkel cove"
+    "en": "shore dive, snorkel cove",
+    "de": "Landtauchgang, Schnorchelbucht",
+    "es": "inmersión desde la orilla, cala de snorkel",
+    "pt": "mergulho a partir da costa, enseada de snorkel"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -372,7 +510,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "kostenloser Eintritt",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://flipflopwanderers.com/?p=32523",
     "datum": "2026-10"
@@ -380,11 +521,17 @@
    "feiten": [
     {
      "nl": "Tot ongeveer 18 m",
-     "en": "Down to about 18 m (59 ft)"
+     "en": "Down to about 18 m (59 ft)",
+     "de": "Bis etwa 18 m (59 ft)",
+     "es": "Hasta unos 18 m (59 ft)",
+     "pt": "Até cerca de 18 m (59 ft)"
     },
     {
      "nl": "Klein restaurant, alleen contant",
-     "en": "Small cash-only restaurant"
+     "en": "Small cash-only restaurant",
+     "de": "Kleines Restaurant, nur Barzahlung",
+     "es": "Restaurante pequeño, solo efectivo",
+     "pt": "Restaurante pequeno, só dinheiro"
     }
    ],
    "scores": [
@@ -405,6 +552,18 @@
     "en": [
      "Sea turtles almost always near the fishermen",
      "Easy entry down a sandy slope"
+    ],
+    "de": [
+     "Meeresschildkröten fast immer bei den Fischern",
+     "Einfacher Einstieg über einen sandigen Hang"
+    ],
+    "es": [
+     "Casi siempre hay tortugas marinas cerca de los pescadores",
+     "Entrada fácil por una pendiente de arena"
+    ],
+    "pt": [
+     "Tartarugas-marinhas quase sempre perto dos pescadores",
+     "Entrada fácil por uma descida de areia"
     ]
    },
    "tegen": {
@@ -415,6 +574,18 @@
     "en": [
      "Very busy once tour buses arrive",
      "Occasional strong, unpredictable current"
+    ],
+    "de": [
+     "Sehr voll, sobald die Touristenbusse ankommen",
+     "Gelegentlich starke, unberechenbare Strömung"
+    ],
+    "es": [
+     "Muy lleno cuando llegan los buses de turistas",
+     "A veces hay una corriente fuerte e impredecible"
+    ],
+    "pt": [
+     "Muito cheio quando chegam os ônibus de turismo",
+     "Às vezes há correnteza forte e imprevisível"
     ]
    },
    "bronnen": [
@@ -431,7 +602,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik",
-    "en": "shore dive"
+    "en": "shore dive",
+    "de": "Landtauchgang",
+    "es": "inmersión desde la orilla",
+    "pt": "mergulho a partir da costa"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -447,7 +621,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "kostenloser Eintritt",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
     "datum": "2026-01"
@@ -455,7 +632,10 @@
    "feiten": [
     {
      "nl": "Restaurant op de klif",
-     "en": "Cliff-top restaurant"
+     "en": "Cliff-top restaurant",
+     "de": "Restaurant auf der Klippe",
+     "es": "Restaurante en lo alto del acantilado",
+     "pt": "Restaurante no alto do penhasco"
     }
    ],
    "scores": [
@@ -474,6 +654,15 @@
     ],
     "en": [
      "Easy to reach in Westpunt village"
+    ],
+    "de": [
+     "Leicht erreichbar im Dorf Westpunt"
+    ],
+    "es": [
+     "Fácil de llegar en el pueblo de Westpunt"
+    ],
+    "pt": [
+     "Fácil de chegar na vila de Westpunt"
     ]
    },
    "tegen": {
@@ -484,6 +673,18 @@
     "en": [
      "Gets deep quickly",
      "Occasional strong current"
+    ],
+    "de": [
+     "Wird schnell tief",
+     "Gelegentlich starke Strömung"
+    ],
+    "es": [
+     "Se vuelve profundo rápidamente",
+     "A veces hay corriente fuerte"
+    ],
+    "pt": [
+     "Fica fundo rápido",
+     "Às vezes há correnteza forte"
     ]
    },
    "bronnen": [
@@ -497,7 +698,10 @@
    "url": null,
    "soort": {
     "nl": "snorkelbaai",
-    "en": "snorkel cove"
+    "en": "snorkel cove",
+    "de": "Schnorchelbucht",
+    "es": "cala de snorkel",
+    "pt": "enseada de snorkel"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -514,7 +718,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "kostenloser Eintritt",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -522,11 +729,17 @@
    "feiten": [
     {
      "nl": "Snackbar en stoelverhuur",
-     "en": "Snack bar and chair rental"
+     "en": "Snack bar and chair rental",
+     "de": "Imbiss und Liegestuhlverleih",
+     "es": "Snack bar y alquiler de sillas",
+     "pt": "Lanchonete e aluguel de cadeiras"
     },
     {
      "nl": "Snorkelen langs de rotsen",
-     "en": "Snorkel along the rocks"
+     "en": "Snorkel along the rocks",
+     "de": "Schnorcheln entlang der Felsen",
+     "es": "Snorkel a lo largo de las rocas",
+     "pt": "Snorkel ao longo das pedras"
     }
    ],
    "scores": [
@@ -547,6 +760,18 @@
     "en": [
      "Clear water, good snorkeling along the rocks",
      "Quiet on weekdays"
+    ],
+    "de": [
+     "Klares Wasser, gutes Schnorcheln an den Felsen",
+     "Unter der Woche ruhig"
+    ],
+    "es": [
+     "Agua clara, buen snorkel junto a las rocas",
+     "Tranquilo entre semana"
+    ],
+    "pt": [
+     "Água clara, bom snorkel junto às pedras",
+     "Tranquilo durante a semana"
     ]
    },
    "tegen": {
@@ -557,6 +782,18 @@
     "en": [
      "Busy on weekends and with tour buses",
      "Pebbly entry"
+    ],
+    "de": [
+     "Am Wochenende und mit Touristenbussen voll",
+     "Einstieg über Kieselsteine"
+    ],
+    "es": [
+     "Lleno los fines de semana y con los buses de turistas",
+     "Entrada con guijarros"
+    ],
+    "pt": [
+     "Cheio nos fins de semana e com os ônibus de turismo",
+     "Entrada com seixos"
     ]
    },
    "bronnen": [
@@ -571,7 +808,10 @@
    "url": null,
    "soort": {
     "nl": "snorkelbaai",
-    "en": "snorkel cove"
+    "en": "snorkel cove",
+    "de": "Schnorchelbucht",
+    "es": "cala de snorkel",
+    "pt": "enseada de snorkel"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -586,7 +826,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "kostenloser Eintritt",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -594,7 +837,10 @@
    "feiten": [
     {
      "nl": "Kleine baai bij Grote Knip",
-     "en": "Small cove next to Grote Knip"
+     "en": "Small cove next to Grote Knip",
+     "de": "Kleine Bucht neben Grote Knip",
+     "es": "Cala pequeña junto a Grote Knip",
+     "pt": "Enseada pequena ao lado de Grote Knip"
     }
    ],
    "scores": [
@@ -615,6 +861,18 @@
     "en": [
      "Calm water, good snorkeling along the cliffs",
      "Less crowded than Grote Knip"
+    ],
+    "de": [
+     "Ruhiges Wasser, gutes Schnorcheln entlang der Klippen",
+     "Weniger voll als Grote Knip"
+    ],
+    "es": [
+     "Aguas tranquilas, buen snorkel junto a los acantilados",
+     "Menos concurrido que Grote Knip"
+    ],
+    "pt": [
+     "Água calma, bom snorkel junto aos penhascos",
+     "Menos cheio que Grote Knip"
     ]
    },
    "tegen": {
@@ -623,6 +881,15 @@
     ],
     "en": [
      "Watch out for manchineel trees"
+    ],
+    "de": [
+     "Vorsicht vor Manchinelbäumen"
+    ],
+    "es": [
+     "Cuidado con los árboles de manzanillo de playa"
+    ],
+    "pt": [
+     "Cuidado com as árvores de manchineel"
     ]
    },
    "bronnen": [
@@ -636,7 +903,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik",
-    "en": "boat dive"
+    "en": "boat dive",
+    "de": "Bootstauchgang",
+    "es": "inmersión en bote",
+    "pt": "mergulho de barco"
    },
    "plaats": "tussen Klein Knip en Playa Jeremi",
    "tags": [
@@ -649,11 +919,17 @@
    "feiten": [
     {
      "nl": "Neem een lamp mee",
-     "en": "Bring a torch"
+     "en": "Bring a torch",
+     "de": "Nimm eine Taschenlampe mit",
+     "es": "Lleva una linterna",
+     "pt": "Leve uma lanterna"
     },
     {
      "nl": "Pauze op nabij strand",
-     "en": "Surface interval on a beach"
+     "en": "Surface interval on a beach",
+     "de": "Oberflächenpause an einem Strand",
+     "es": "Intervalo en superficie en una playa",
+     "pt": "Intervalo de superfície numa praia"
     }
    ],
    "scores": [],
@@ -665,11 +941,26 @@
     "en": [
      "Turtles and a healthy reef",
      "Few boats and divers"
+    ],
+    "de": [
+     "Schildkröten und ein gesundes Riff",
+     "Wenige Boote und Taucher"
+    ],
+    "es": [
+     "Tortugas y un arrecife sano",
+     "Pocos botes y buzos"
+    ],
+    "pt": [
+     "Tartarugas e um recife saudável",
+     "Poucos barcos e mergulhadores"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.divein.com/diving/destination/diving-curacao/",
@@ -682,7 +973,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik, snorkelbaai",
-    "en": "shore dive, snorkel cove"
+    "en": "shore dive, snorkel cove",
+    "de": "Landtauchgang, Schnorchelbucht",
+    "es": "inmersión desde la orilla, cala de snorkel",
+    "pt": "mergulho a partir da costa, enseada de snorkel"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -696,7 +990,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "kostenloser Eintritt",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -704,7 +1001,10 @@
    "feiten": [
     {
      "nl": "Vooral lokale bezoekers",
-     "en": "Mostly local visitors"
+     "en": "Mostly local visitors",
+     "de": "Meist einheimische Besucher",
+     "es": "Visitantes mayormente locales",
+     "pt": "Visitantes quase todos locais"
     }
    ],
    "scores": [
@@ -723,6 +1023,15 @@
     ],
     "en": [
      "Quiet, mostly local visitors"
+    ],
+    "de": [
+     "Ruhig, meist einheimische Besucher"
+    ],
+    "es": [
+     "Tranquilo, visitantes mayormente locales"
+    ],
+    "pt": [
+     "Tranquilo, visitantes quase todos locais"
     ]
    },
    "tegen": {
@@ -731,6 +1040,15 @@
     ],
     "en": [
      "No shade"
+    ],
+    "de": [
+     "Kein Schatten"
+    ],
+    "es": [
+     "Sin sombra"
+    ],
+    "pt": [
+     "Sem sombra"
     ]
    },
    "bronnen": [
@@ -745,7 +1063,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik, snorkelbaai",
-    "en": "shore dive, snorkel cove"
+    "en": "shore dive, snorkel cove",
+    "de": "Landtauchgang, Schnorchelbucht",
+    "es": "inmersión desde la orilla, cala de snorkel",
+    "pt": "mergulho a partir da costa, enseada de snorkel"
    },
    "plaats": "Lagun",
    "tags": [
@@ -763,7 +1084,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "kostenloser Eintritt",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -771,11 +1095,17 @@
    "feiten": [
     {
      "nl": "Smalle baai tussen kliffen",
-     "en": "Narrow channel between cliffs"
+     "en": "Narrow channel between cliffs",
+     "de": "Schmaler Kanal zwischen Klippen",
+     "es": "Canal estrecho entre acantilados",
+     "pt": "Canal estreito entre penhascos"
     },
     {
      "nl": "Duikcentrum aan de baai",
-     "en": "Dive center at the cove"
+     "en": "Dive center at the cove",
+     "de": "Tauchzentrum an der Bucht",
+     "es": "Centro de buceo en la cala",
+     "pt": "Centro de mergulho na enseada"
     }
    ],
    "scores": [
@@ -796,6 +1126,18 @@
     "en": [
      "Calm water, fine for beginners",
      "Turtles and a rich reef on both sides"
+    ],
+    "de": [
+     "Ruhiges Wasser, auch für Anfänger geeignet",
+     "Schildkröten und ein reiches Riff auf beiden Seiten"
+    ],
+    "es": [
+     "Aguas tranquilas, aptas para principiantes",
+     "Tortugas y un arrecife rico a ambos lados"
+    ],
+    "pt": [
+     "Água calma, boa para iniciantes",
+     "Tartarugas e um recife rico dos dois lados"
     ]
    },
    "tegen": {
@@ -804,6 +1146,15 @@
     ],
     "en": [
      "Fishing boats in the cove"
+    ],
+    "de": [
+     "Fischerboote in der Bucht"
+    ],
+    "es": [
+     "Botes de pesca en la cala"
+    ],
+    "pt": [
+     "Barcos de pesca na enseada"
     ]
    },
    "bronnen": [
@@ -818,7 +1169,10 @@
    "url": null,
    "soort": {
     "nl": "vliegtuigwrak",
-    "en": "plane wreck"
+    "en": "plane wreck",
+    "de": "Flugzeugwrack",
+    "es": "naufragio de avión",
+    "pt": "naufrágio de avião"
    },
    "plaats": "westkust",
    "tags": [
@@ -831,7 +1185,10 @@
    "feiten": [
     {
      "nl": "Fokker in 2006 afgezonken",
-     "en": "Fokker sunk on purpose in 2006"
+     "en": "Fokker sunk on purpose in 2006",
+     "de": "Fokker, 2006 absichtlich versenkt",
+     "es": "Fokker hundido a propósito en 2006",
+     "pt": "Fokker afundado de propósito em 2006"
     }
    ],
    "scores": [],
@@ -841,11 +1198,23 @@
     ],
     "en": [
      "Wreck on sand with turtles and morays"
+    ],
+    "de": [
+     "Wrack auf Sand mit Schildkröten und Muränen"
+    ],
+    "es": [
+     "Naufragio sobre arena con tortugas y morenas"
+    ],
+    "pt": [
+     "Naufrágio na areia com tartarugas e moreias"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/activity/elvins-plane-wreck",
@@ -858,7 +1227,10 @@
    "url": null,
    "soort": {
     "nl": "wandduik",
-    "en": "wall dive"
+    "en": "wall dive",
+    "de": "Steilwandtauchgang",
+    "es": "inmersión en pared",
+    "pt": "mergulho em parede"
    },
    "plaats": "westkust",
    "tags": [
@@ -872,7 +1244,10 @@
    "feiten": [
     {
      "nl": "Boei verplaatst naar rustiger plek",
-     "en": "Buoy moved to a calmer spot"
+     "en": "Buoy moved to a calmer spot",
+     "de": "Boje an eine ruhigere Stelle verlegt",
+     "es": "Boya movida a un lugar más tranquilo",
+     "pt": "Boia movida para um lugar mais calmo"
     }
    ],
    "scores": [],
@@ -882,6 +1257,15 @@
     ],
     "en": [
      "Steep wall with big gorgonians and schooling jacks"
+    ],
+    "de": [
+     "Steile Wand mit großen Gorgonien und Makrelenschwärmen"
+    ],
+    "es": [
+     "Pared empinada con grandes gorgonias y cardúmenes de jureles"
+    ],
+    "pt": [
+     "Parede íngreme com grandes gorgônias e cardumes de xaréus"
     ]
    },
    "tegen": {
@@ -890,6 +1274,15 @@
     ],
     "en": [
      "Named for its strong current"
+    ],
+    "de": [
+     "Benannt nach seiner starken Strömung"
+    ],
+    "es": [
+     "Se llama así por su fuerte corriente"
+    ],
+    "pt": [
+     "Tem esse nome por causa da forte correnteza"
     ]
    },
    "bronnen": [
@@ -903,7 +1296,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik, wrak",
-    "en": "shore dive, wreck"
+    "en": "shore dive, wreck",
+    "de": "Landtauchgang, Wrack",
+    "es": "inmersión desde la orilla, naufragio",
+    "pt": "mergulho a partir da costa, naufrágio"
    },
    "plaats": "Santa Cruz",
    "tags": [
@@ -916,11 +1312,17 @@
    "feiten": [
     {
      "nl": "Wrak op ongeveer 6 m",
-     "en": "Wreck at about 6 m (20 ft)"
+     "en": "Wreck at about 6 m (20 ft)",
+     "de": "Wrack in etwa 6 m (20 ft)",
+     "es": "Naufragio a unos 6 m (20 ft)",
+     "pt": "Naufrágio a cerca de 6 m (20 ft)"
     },
     {
      "nl": "Zwart zandstrand",
-     "en": "Black sand beach"
+     "en": "Black sand beach",
+     "de": "Strand mit schwarzem Sand",
+     "es": "Playa de arena negra",
+     "pt": "Praia de areia preta"
     }
    ],
    "scores": [
@@ -941,11 +1343,26 @@
     "en": [
      "Upside-down wreck, garden eels and brain coral",
      "Remote and quiet"
+    ],
+    "de": [
+     "Kopfüber liegendes Wrack, Röhrenaale und Hirnkorallen",
+     "Abgelegen und ruhig"
+    ],
+    "es": [
+     "Naufragio boca abajo, anguilas de jardín y corales cerebro",
+     "Apartado y tranquilo"
+    ],
+    "pt": [
+     "Naufrágio de cabeça para baixo, enguias-de-jardim e corais-cérebro",
+     "Isolado e tranquilo"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/activity/santu-pretu",
@@ -959,7 +1376,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik",
-    "en": "boat dive"
+    "en": "boat dive",
+    "de": "Bootstauchgang",
+    "es": "inmersión en bote",
+    "pt": "mergulho de barco"
    },
    "plaats": "bij Santa Cruz",
    "tags": [
@@ -973,11 +1393,17 @@
    "feiten": [
     {
      "nl": "Paddenstoelvormig sterkoraal",
-     "en": "Mushroom-shaped star coral"
+     "en": "Mushroom-shaped star coral",
+     "de": "Pilzförmige Sternkoralle",
+     "es": "Coral estrella en forma de hongo",
+     "pt": "Coral-estrela em forma de cogumelo"
     },
     {
      "nl": "Vaak gecombineerd met Blue Room",
-     "en": "Often paired with the Blue Room"
+     "en": "Often paired with the Blue Room",
+     "de": "Oft zusammen mit dem Blue Room getaucht",
+     "es": "Suele combinarse con el Blue Room",
+     "pt": "Muitas vezes combinado com o Blue Room"
     }
    ],
    "scores": [],
@@ -989,6 +1415,18 @@
     "en": [
      "Unique coral shapes, great for photos",
      "Turtles, morays and nurse sharks"
+    ],
+    "de": [
+     "Einzigartige Korallenformen, super für Fotos",
+     "Schildkröten, Muränen und Ammenhaie"
+    ],
+    "es": [
+     "Formas de coral únicas, ideales para fotos",
+     "Tortugas, morenas y tiburones nodriza"
+    ],
+    "pt": [
+     "Formas de coral únicas, ótimas para fotos",
+     "Tartarugas, moreias e tubarões-lixa"
     ]
    },
    "tegen": {
@@ -999,6 +1437,18 @@
     "en": [
      "Has declined from heavy traffic",
      "Dense coral, watch your fins"
+    ],
+    "de": [
+     "Durch viel Verkehr schlechter geworden",
+     "Dichte Korallen, pass mit den Flossen auf"
+    ],
+    "es": [
+     "Ha empeorado por el mucho tráfico",
+     "Corales densos, cuidado con las aletas"
+    ],
+    "pt": [
+     "Piorou por causa do grande movimento",
+     "Corais densos, cuidado com as nadadeiras"
     ]
    },
    "bronnen": [
@@ -1017,7 +1467,10 @@
    "url": null,
    "soort": {
     "nl": "grot, snorkel en duik",
-    "en": "cave, snorkel and dive"
+    "en": "cave, snorkel and dive",
+    "de": "Höhle, Schnorcheln und Tauchen",
+    "es": "cueva, snorkel y buceo",
+    "pt": "caverna, snorkel e mergulho"
    },
    "plaats": "bij Santa Cruz",
    "tags": [
@@ -1029,11 +1482,17 @@
    "feiten": [
     {
      "nl": "Ingang op ongeveer 5 m",
-     "en": "Entrance at about 5 m (16 ft)"
+     "en": "Entrance at about 5 m (16 ft)",
+     "de": "Eingang in etwa 5 m (16 ft)",
+     "es": "Entrada a unos 5 m (16 ft)",
+     "pt": "Entrada a cerca de 5 m (16 ft)"
     },
     {
      "nl": "Best rond het middaguur",
-     "en": "Best around midday"
+     "en": "Best around midday",
+     "de": "Am besten um die Mittagszeit",
+     "es": "Mejor alrededor del mediodía",
+     "pt": "Melhor por volta do meio-dia"
     }
    ],
    "scores": [],
@@ -1043,6 +1502,15 @@
     ],
     "en": [
      "Blue light inside the cave with silversides"
+    ],
+    "de": [
+     "Blaues Licht in der Höhle mit Glasfischschwärmen"
+    ],
+    "es": [
+     "Luz azul dentro de la cueva con cardúmenes de pejerreyes"
+    ],
+    "pt": [
+     "Luz azul dentro da caverna com cardumes de peixes-rei"
     ]
    },
    "tegen": {
@@ -1051,6 +1519,15 @@
     ],
     "en": [
      "Guide advised for getting in and out"
+    ],
+    "de": [
+     "Mit Guide ein- und aussteigen empfohlen"
+    ],
+    "es": [
+     "Se recomienda un guía para entrar y salir"
+    ],
+    "pt": [
+     "Recomenda-se guia para entrar e sair"
     ]
    },
    "bronnen": [
@@ -1066,7 +1543,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik, open zee",
-    "en": "boat dive, open water"
+    "en": "boat dive, open water",
+    "de": "Bootstauchgang, offenes Wasser",
+    "es": "inmersión en bote, mar abierto",
+    "pt": "mergulho de barco, mar aberto"
    },
    "plaats": "ingang Santa Marthabaai",
    "tags": [
@@ -1080,7 +1560,10 @@
    "feiten": [
     {
      "nl": "Onbeschut, instap soms ruw",
-     "en": "Exposed, entry sometimes rough"
+     "en": "Exposed, entry sometimes rough",
+     "de": "Exponiert, der Einstieg ist manchmal rau",
+     "es": "Expuesto, la entrada a veces es difícil",
+     "pt": "Exposto, a entrada às vezes é difícil"
     }
    ],
    "scores": [
@@ -1099,6 +1582,15 @@
     ],
     "en": [
      "Chance of eagle rays, barracuda and sharks"
+    ],
+    "de": [
+     "Chance auf Adlerrochen, Barrakudas und Haie"
+    ],
+    "es": [
+     "Posibilidad de ver rayas águila, barracudas y tiburones"
+    ],
+    "pt": [
+     "Chance de ver raias-águia, barracudas e tubarões"
     ]
    },
    "tegen": {
@@ -1107,6 +1599,15 @@
     ],
     "en": [
      "Rough conditions, for experienced divers"
+    ],
+    "de": [
+     "Raue Bedingungen, für erfahrene Taucher"
+    ],
+    "es": [
+     "Condiciones duras, para buzos con experiencia"
+    ],
+    "pt": [
+     "Condições duras, para mergulhadores experientes"
     ]
    },
    "bronnen": [
@@ -1120,7 +1621,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik",
-    "en": "shore dive"
+    "en": "shore dive",
+    "de": "Landtauchgang",
+    "es": "inmersión desde la orilla",
+    "pt": "mergulho a partir da costa"
    },
    "plaats": "Santa Marthabaai",
    "tags": [
@@ -1133,7 +1637,10 @@
    "feiten": [
     {
      "nl": "5 minuten zwemmen naar de boei",
-     "en": "5-minute swim to the buoy"
+     "en": "5-minute swim to the buoy",
+     "de": "5 Minuten Schwimmen bis zur Boje",
+     "es": "5 minutos nadando hasta la boya",
+     "pt": "5 minutos nadando até a boia"
     }
    ],
    "scores": [],
@@ -1143,11 +1650,23 @@
     ],
     "en": [
      "Lots of black coral and schools of snapper"
+    ],
+    "de": [
+     "Viel Schwarze Koralle und Schnapperschwärme"
+    ],
+    "es": [
+     "Mucho coral negro y cardúmenes de pargos"
+    ],
+    "pt": [
+     "Muito coral-negro e cardumes de vermelhos"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/activity/sponge-forest-playa-hulu-rediho-black-coral-garden",
@@ -1160,7 +1679,10 @@
    "url": null,
    "soort": {
     "nl": "vliegtuigwrak",
-    "en": "plane wreck"
+    "en": "plane wreck",
+    "de": "Flugzeugwrack",
+    "es": "naufragio de avión",
+    "pt": "naufrágio de avião"
    },
    "plaats": "Santa Marthabaai",
    "tags": [
@@ -1173,7 +1695,10 @@
    "feiten": [
     {
      "nl": "Gemarkeerd met een boei",
-     "en": "Marked by a buoy"
+     "en": "Marked by a buoy",
+     "de": "Mit einer Boje markiert",
+     "es": "Marcado con una boya",
+     "pt": "Marcado com uma boia"
     }
    ],
    "scores": [],
@@ -1183,11 +1708,23 @@
     ],
     "en": [
      "Overgrown small plane, good for macro"
+    ],
+    "de": [
+     "Bewachsenes kleines Flugzeug, gut für Makro"
+    ],
+    "es": [
+     "Avioneta cubierta de vida marina, buena para macro"
+    ],
+    "pt": [
+     "Aviãozinho coberto de vida marinha, bom para macro"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/activity/airplane-wreck",
@@ -1200,7 +1737,10 @@
    "url": null,
    "soort": {
     "nl": "hellend rif",
-    "en": "sloping reef"
+    "en": "sloping reef",
+    "de": "abfallendes Riff",
+    "es": "arrecife en pendiente",
+    "pt": "recife em declive"
    },
    "plaats": "bij Playa Hulu",
    "tags": [
@@ -1211,7 +1751,10 @@
    "feiten": [
     {
      "nl": "Sponzen op een hellende wand",
-     "en": "Sponges on a sloping wall"
+     "en": "Sponges on a sloping wall",
+     "de": "Schwämme an einer abfallenden Wand",
+     "es": "Esponjas en una pared inclinada",
+     "pt": "Esponjas numa parede inclinada"
     }
    ],
    "scores": [],
@@ -1221,11 +1764,23 @@
     ],
     "en": [
      "One of the island's most colorful sponge sites"
+    ],
+    "de": [
+     "Einer der farbenprächtigsten Schwammplätze der Insel"
+    ],
+    "es": [
+     "Uno de los sitios con esponjas más coloridos de la isla"
+    ],
+    "pt": [
+     "Um dos locais de esponjas mais coloridos da ilha"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/activity/sponge-forest-playa-hulu-rediho-black-coral-garden",
@@ -1238,7 +1793,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik",
-    "en": "shore dive"
+    "en": "shore dive",
+    "de": "Landtauchgang",
+    "es": "inmersión desde la orilla",
+    "pt": "mergulho a partir da costa"
    },
    "plaats": "Santa Martha",
    "tags": [
@@ -1249,7 +1807,10 @@
    "feiten": [
     {
      "nl": "Klein afgelegen strandje",
-     "en": "Small secluded beach"
+     "en": "Small secluded beach",
+     "de": "Kleiner, abgeschiedener Strand",
+     "es": "Playa pequeña y apartada",
+     "pt": "Praia pequena e isolada"
     }
    ],
    "scores": [],
@@ -1259,11 +1820,23 @@
     ],
     "en": [
      "Almost empty on weekdays"
+    ],
+    "de": [
+     "Unter der Woche fast leer"
+    ],
+    "es": [
+     "Casi vacío entre semana"
+    ],
+    "pt": [
+     "Quase vazio durante a semana"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/activity/sponge-forest-playa-hulu-rediho-black-coral-garden"
@@ -1275,7 +1848,10 @@
    "url": null,
    "soort": {
     "nl": "rifhelling",
-    "en": "reef slope"
+    "en": "reef slope",
+    "de": "Riffhang",
+    "es": "talud del arrecife",
+    "pt": "declive do recife"
    },
    "plaats": "bij Playa Hulu",
    "tags": [
@@ -1287,7 +1863,10 @@
    "feiten": [
     {
      "nl": "Ligt aan open zee",
-     "en": "Exposed to open sea"
+     "en": "Exposed to open sea",
+     "de": "Dem offenen Meer ausgesetzt",
+     "es": "Expuesto al mar abierto",
+     "pt": "Exposto ao mar aberto"
     }
    ],
    "scores": [],
@@ -1297,6 +1876,15 @@
     ],
     "en": [
      "Untouched reef sloping into deep water"
+    ],
+    "de": [
+     "Unberührtes Riff, das in tiefes Wasser abfällt"
+    ],
+    "es": [
+     "Arrecife virgen que baja hacia aguas profundas"
+    ],
+    "pt": [
+     "Recife intocado que desce para águas profundas"
     ]
    },
    "tegen": {
@@ -1305,6 +1893,15 @@
     ],
     "en": [
      "Choppy waves and some current"
+    ],
+    "de": [
+     "Kabbelige Wellen und etwas Strömung"
+    ],
+    "es": [
+     "Oleaje picado y algo de corriente"
+    ],
+    "pt": [
+     "Ondas agitadas e alguma correnteza"
     ]
    },
    "bronnen": [
@@ -1318,7 +1915,10 @@
    "url": null,
    "soort": {
     "nl": "begeleide kantduik",
-    "en": "guided shore dive"
+    "en": "guided shore dive",
+    "de": "geführter Landtauchgang",
+    "es": "inmersión guiada desde la orilla",
+    "pt": "mergulho guiado a partir da costa"
    },
    "plaats": "bij Porto Mari",
    "tags": [
@@ -1330,7 +1930,10 @@
    "feiten": [
     {
      "nl": "Privéstrand, alleen begeleid",
-     "en": "Private beach, guided only"
+     "en": "Private beach, guided only",
+     "de": "Privatstrand, nur mit Guide",
+     "es": "Playa privada, solo con guía",
+     "pt": "Praia privada, só com guia"
     }
    ],
    "scores": [],
@@ -1340,11 +1943,23 @@
     ],
     "en": [
      "Lively coral, few divers"
+    ],
+    "de": [
+     "Lebendige Korallen, wenige Taucher"
+    ],
+    "es": [
+     "Corales llenos de vida, pocos buzos"
+    ],
+    "pt": [
+     "Corais cheios de vida, poucos mergulhadores"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://flipflopwanderers.com/?p=32523"
@@ -1356,7 +1971,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik, dubbel rif",
-    "en": "shore dive, double reef"
+    "en": "shore dive, double reef",
+    "de": "Landtauchgang, Doppelriff",
+    "es": "inmersión desde la orilla, arrecife doble",
+    "pt": "mergulho a partir da costa, recife duplo"
    },
    "plaats": "Sint Willibrordus",
    "tags": [
@@ -1373,7 +1991,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon",
-     "en": "per person"
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
     },
     "bron": "https://www.undercurrent.org/UCnow/dive_reviews/Curacao/Various_report_11869.html",
     "datum": "2026-10"
@@ -1381,15 +2002,24 @@
    "feiten": [
     {
      "nl": "Tot ongeveer 30 m",
-     "en": "Down to about 30 m (98 ft)"
+     "en": "Down to about 30 m (98 ft)",
+     "de": "Bis etwa 30 m (98 ft)",
+     "es": "Hasta unos 30 m (98 ft)",
+     "pt": "Até cerca de 30 m (98 ft)"
     },
     {
      "nl": "Twee riffen met vallei",
-     "en": "Two reefs with a valley"
+     "en": "Two reefs with a valley",
+     "de": "Zwei Riffe mit einem Tal dazwischen",
+     "es": "Dos arrecifes con un valle en medio",
+     "pt": "Dois recifes com um vale no meio"
     },
     {
      "nl": "Duikshop en restaurant",
-     "en": "Dive shop and restaurant"
+     "en": "Dive shop and restaurant",
+     "de": "Tauchshop und Restaurant",
+     "es": "Tienda de buceo y restaurante",
+     "pt": "Loja de mergulho e restaurante"
     }
    ],
    "scores": [
@@ -1412,6 +2042,21 @@
      "Double reef: enough for several dives",
      "Easy navigation, gradual entry",
      "Friendly dive shop"
+    ],
+    "de": [
+     "Doppelriff: genug für mehrere Tauchgänge",
+     "Einfache Orientierung, sanfter Einstieg",
+     "Freundlicher Tauchshop"
+    ],
+    "es": [
+     "Arrecife doble: suficiente para varias inmersiones",
+     "Fácil de orientarse, entrada gradual",
+     "Tienda de buceo amable"
+    ],
+    "pt": [
+     "Recife duplo: dá para vários mergulhos",
+     "Fácil de se orientar, entrada gradual",
+     "Loja de mergulho simpática"
     ]
    },
    "tegen": {
@@ -1422,6 +2067,18 @@
     "en": [
      "Longest swim to the reef (5 to 8 minutes)",
      "Crowded, especially Friday afternoons"
+    ],
+    "de": [
+     "Längster Weg zum Riff (5 bis 8 Minuten Schwimmen)",
+     "Voll, besonders freitagnachmittags"
+    ],
+    "es": [
+     "El tramo más largo hasta el arrecife (5 a 8 minutos nadando)",
+     "Lleno, sobre todo los viernes por la tarde"
+    ],
+    "pt": [
+     "O trecho mais longo até o recife (5 a 8 minutos nadando)",
+     "Cheio, principalmente nas tardes de sexta"
     ]
    },
    "bronnen": [
@@ -1438,7 +2095,10 @@
    "url": null,
    "soort": {
     "nl": "snorkelbaai",
-    "en": "snorkel cove"
+    "en": "snorkel cove",
+    "de": "Schnorchelbucht",
+    "es": "cala de snorkel",
+    "pt": "enseada de snorkel"
    },
    "plaats": "Sint Willibrordus",
    "tags": [
@@ -1454,7 +2114,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "kostenloser Eintritt",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
     "datum": "2026-01"
@@ -1462,7 +2125,10 @@
    "feiten": [
     {
      "nl": "Schaduw van bomen en palapa's",
-     "en": "Shade from trees and palapas"
+     "en": "Shade from trees and palapas",
+     "de": "Schatten unter Bäumen und Palapas",
+     "es": "Sombra de árboles y palapas",
+     "pt": "Sombra de árvores e palapas"
     }
    ],
    "scores": [
@@ -1483,6 +2149,18 @@
     "en": [
      "Calm, clear water",
      "Turtles if you swim farther out"
+    ],
+    "de": [
+     "Ruhiges, klares Wasser",
+     "Schildkröten, wenn du weiter rausschwimmst"
+    ],
+    "es": [
+     "Aguas tranquilas y claras",
+     "Tortugas si nadas más lejos"
+    ],
+    "pt": [
+     "Água calma e clara",
+     "Tartarugas se você nadar mais longe"
     ]
    },
    "tegen": {
@@ -1491,6 +2169,15 @@
     ],
     "en": [
      "Packed with local families on Sundays"
+    ],
+    "de": [
+     "Sonntags voll mit einheimischen Familien"
+    ],
+    "es": [
+     "Los domingos está lleno de familias locales"
+    ],
+    "pt": [
+     "Aos domingos fica lotado de famílias locais"
     ]
    },
    "bronnen": [
@@ -1504,7 +2191,10 @@
    "url": "http://www.casabaobeach.com/",
    "soort": {
     "nl": "kantduik, strandclub",
-    "en": "shore dive, beach club"
+    "en": "shore dive, beach club",
+    "de": "Landtauchgang, Beach Club",
+    "es": "inmersión desde la orilla, beach club",
+    "pt": "mergulho a partir da costa, beach club"
    },
    "plaats": "bij Sint Willibrordus",
    "tags": [
@@ -1520,7 +2210,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per auto (max 4 personen), zondag $7",
-     "en": "per car (up to 4 people), $7 on Sundays"
+     "en": "per car (up to 4 people), $7 on Sundays",
+     "de": "pro Auto (bis 4 Personen), sonntags 7 $",
+     "es": "por auto (hasta 4 personas), $7 los domingos",
+     "pt": "por carro (até 4 pessoas), US$ 7 aos domingos"
     },
     "bron": "https://flipflopwanderers.com/?p=32523",
     "datum": "2026-10"
@@ -1528,11 +2221,17 @@
    "feiten": [
     {
      "nl": "Duikshop met nitrox",
-     "en": "Dive shop with nitrox"
+     "en": "Dive shop with nitrox",
+     "de": "Tauchshop mit Nitrox",
+     "es": "Tienda de buceo con nitrox",
+     "pt": "Loja de mergulho com nitrox"
     },
     {
      "nl": "Touw markeert de terugweg",
-     "en": "Rope marks the way back"
+     "en": "Rope marks the way back",
+     "de": "Ein Seil zeigt den Weg zurück",
+     "es": "Una cuerda marca el camino de regreso",
+     "pt": "Uma corda indica o caminho de volta"
     }
    ],
    "scores": [
@@ -1563,6 +2262,21 @@
      "Easy wall to navigate, even solo",
      "Sandy entry to settle into your gear",
      "All facilities in one place"
+    ],
+    "de": [
+     "Leicht zu navigierende Wand, auch allein",
+     "Sandiger Einstieg, um dich in Ruhe an die Ausrüstung zu gewöhnen",
+     "Alles an einem Ort"
+    ],
+    "es": [
+     "Pared fácil de recorrer, incluso en solitario",
+     "Entrada de arena para acomodarte con el equipo",
+     "Todas las instalaciones en un solo lugar"
+    ],
+    "pt": [
+     "Parede fácil de percorrer, até sozinho",
+     "Entrada na areia para você se ajeitar com o equipamento",
+     "Toda a estrutura em um só lugar"
     ]
    },
    "tegen": {
@@ -1573,6 +2287,18 @@
     "en": [
      "Entry fee per car",
      "Busy when cruise buses arrive"
+    ],
+    "de": [
+     "Eintritt pro Auto",
+     "Voll, wenn die Kreuzfahrtbusse kommen"
+    ],
+    "es": [
+     "Entrada por auto",
+     "Lleno cuando llegan los buses de los cruceros"
+    ],
+    "pt": [
+     "Entrada por carro",
+     "Cheio quando chegam os ônibus dos cruzeiros"
     ]
    },
    "bronnen": [
@@ -1590,7 +2316,10 @@
    "url": null,
    "soort": {
     "nl": "huisrif via steiger",
-    "en": "house reef from pier"
+    "en": "house reef from pier",
+    "de": "Hausriff vom Pier aus",
+    "es": "arrecife de la casa desde el muelle",
+    "pt": "recife da casa a partir do píer"
    },
    "plaats": "Coral Estate",
    "tags": [
@@ -1607,7 +2336,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "kostenloser Eintritt",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://www.undercurrent.org/UCnow/dive_reviews/Curacao/Various_report_11869.html",
     "datum": "2026-10"
@@ -1615,11 +2347,17 @@
    "feiten": [
     {
      "nl": "Eerst melden bij de duikshop",
-     "en": "Check in at the dive shop first"
+     "en": "Check in at the dive shop first",
+     "de": "Melde dich zuerst im Tauchshop",
+     "es": "Regístrate primero en la tienda de buceo",
+     "pt": "Faça o check-in primeiro na loja de mergulho"
     },
     {
      "nl": "Lockers, douches, kleedruimte",
-     "en": "Lockers, showers, changing rooms"
+     "en": "Lockers, showers, changing rooms",
+     "de": "Schließfächer, Duschen, Umkleiden",
+     "es": "Casilleros, duchas, vestuarios",
+     "pt": "Armários, chuveiros, vestiários"
     }
    ],
    "scores": [],
@@ -1631,6 +2369,18 @@
     "en": [
      "Reef balls at 15 to 20 ft for the safety stop",
      "Turtles, barracuda and parrotfish"
+    ],
+    "de": [
+     "Reef Balls in 15 bis 20 ft für den Sicherheitsstopp",
+     "Schildkröten, Barrakudas und Papageifische"
+    ],
+    "es": [
+     "Reef balls a 15 a 20 ft para la parada de seguridad",
+     "Tortugas, barracudas y peces loro"
+    ],
+    "pt": [
+     "Reef balls a 15 a 20 ft para a parada de segurança",
+     "Tartarugas, barracudas e peixes-papagaio"
     ]
    },
    "tegen": {
@@ -1641,6 +2391,18 @@
     "en": [
      "Small gear-up area, little shade",
      "ID check at the gate"
+    ],
+    "de": [
+     "Kleiner Bereich zum Ausrüsten, wenig Schatten",
+     "Ausweiskontrolle am Tor"
+    ],
+    "es": [
+     "Zona pequeña para equiparse, poca sombra",
+     "Control de identificación en la entrada"
+    ],
+    "pt": [
+     "Área pequena para se equipar, pouca sombra",
+     "Checagem de identidade no portão"
     ]
    },
    "bronnen": [
@@ -1654,7 +2416,10 @@
    "url": null,
    "soort": {
     "nl": "diepe wandduik",
-    "en": "deep wall dive"
+    "en": "deep wall dive",
+    "de": "Tiefer Wandtauchgang",
+    "es": "inmersión profunda en pared",
+    "pt": "mergulho profundo em parede"
    },
    "plaats": "Bullenbaai",
    "tags": [
@@ -1668,7 +2433,10 @@
    "feiten": [
     {
      "nl": "Steile wand",
-     "en": "Sheer vertical wall"
+     "en": "Sheer vertical wall",
+     "de": "Senkrechte Steilwand",
+     "es": "Pared completamente vertical",
+     "pt": "Parede totalmente vertical"
     }
    ],
    "scores": [],
@@ -1678,6 +2446,15 @@
     ],
     "en": [
      "Large sea fans, jacks and few crowds"
+    ],
+    "de": [
+     "Große Gorgonien, Makrelen und kaum Andrang"
+    ],
+    "es": [
+     "Grandes abanicos de mar, jureles y poca gente"
+    ],
+    "pt": [
+     "Grandes leques-do-mar, xaréus e pouca gente"
     ]
    },
    "tegen": {
@@ -1686,6 +2463,15 @@
     ],
     "en": [
      "Very deep, watch your limits"
+    ],
+    "de": [
+     "Sehr tief, kenne deine Grenzen"
+    ],
+    "es": [
+     "Muy profundo, respeta tus límites"
+    ],
+    "pt": [
+     "Muito fundo, respeite seus limites"
     ]
    },
    "bronnen": [
@@ -1699,7 +2485,10 @@
    "url": null,
    "soort": {
     "nl": "baai, rif",
-    "en": "bay, reef"
+    "en": "bay, reef",
+    "de": "Bucht, Riff",
+    "es": "bahía, arrecife",
+    "pt": "baía, recife"
    },
    "plaats": "Slangenbaai",
    "tags": [
@@ -1712,7 +2501,10 @@
    "feiten": [
     {
      "nl": "Nachtduik met lamp aanbevolen",
-     "en": "Night dive with torch recommended"
+     "en": "Night dive with torch recommended",
+     "de": "Nachttauchgang mit Taschenlampe empfohlen",
+     "es": "Se recomienda inmersión nocturna con linterna",
+     "pt": "Recomenda-se mergulho noturno com lanterna"
     }
    ],
    "scores": [],
@@ -1722,11 +2514,23 @@
     ],
     "en": [
      "Big schools of fish, rays and green turtles"
+    ],
+    "de": [
+     "Große Fischschwärme, Rochen und Grüne Meeresschildkröten"
+    ],
+    "es": [
+     "Grandes cardúmenes, rayas y tortugas verdes"
+    ],
+    "pt": [
+     "Grandes cardumes, raias e tartarugas-verdes"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.divein.com/diving/destination/diving-curacao/",
@@ -1740,7 +2544,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik",
-    "en": "shore dive"
+    "en": "shore dive",
+    "de": "Landtauchgang",
+    "es": "inmersión desde la orilla",
+    "pt": "mergulho a partir da costa"
    },
    "plaats": "Sint Michiel",
    "tags": [
@@ -1751,7 +2558,10 @@
    "feiten": [
     {
      "nl": "Vissersdorp aan een baai",
-     "en": "Fishing village on a bay"
+     "en": "Fishing village on a bay",
+     "de": "Fischerdorf an einer Bucht",
+     "es": "Pueblo de pescadores en una bahía",
+     "pt": "Vila de pescadores numa baía"
     }
    ],
    "scores": [
@@ -1770,11 +2580,23 @@
     ],
     "en": [
      "Local and quiet"
+    ],
+    "de": [
+     "Einheimisch und ruhig"
+    ],
+    "es": [
+     "Local y tranquilo"
+    ],
+    "pt": [
+     "Local e tranquilo"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.colemanconcierge.com/?p=19551",
@@ -1788,7 +2610,10 @@
    "url": "http://www.kokomo-beach.com/",
    "soort": {
     "nl": "kantduik, strandclub",
-    "en": "shore dive, beach club"
+    "en": "shore dive, beach club",
+    "de": "Landtauchgang, Beach Club",
+    "es": "inmersión desde la orilla, beach club",
+    "pt": "mergulho a partir da costa, beach club"
    },
    "plaats": "Vaersenbaai",
    "tags": [
@@ -1804,7 +2629,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "kostenloser Eintritt",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
     "datum": "2026-01"
@@ -1812,11 +2640,17 @@
    "feiten": [
     {
      "nl": "Tot ongeveer 30 m",
-     "en": "Down to about 30 m (98 ft)"
+     "en": "Down to about 30 m (98 ft)",
+     "de": "Bis etwa 30 m (98 ft)",
+     "es": "Hasta unos 30 m (98 ft)",
+     "pt": "Até cerca de 30 m (98 ft)"
     },
     {
      "nl": "Rif begint vlak bij de kant",
-     "en": "Reef starts close to shore"
+     "en": "Reef starts close to shore",
+     "de": "Das Riff beginnt nah am Ufer",
+     "es": "El arrecife empieza cerca de la orilla",
+     "pt": "O recife começa perto da costa"
     }
    ],
    "scores": [
@@ -1845,6 +2679,18 @@
     "en": [
      "Reef close to shore with sponges and brain coral",
      "Good snorkeling on the right side of the bay"
+    ],
+    "de": [
+     "Riff nah am Ufer mit Schwämmen und Hirnkorallen",
+     "Gutes Schnorcheln auf der rechten Seite der Bucht"
+    ],
+    "es": [
+     "Arrecife cercano a la orilla con esponjas y corales cerebro",
+     "Buen snorkel en el lado derecho de la bahía"
+    ],
+    "pt": [
+     "Recife perto da costa com esponjas e corais-cérebro",
+     "Bom snorkel no lado direito da baía"
     ]
    },
    "tegen": {
@@ -1853,6 +2699,15 @@
     ],
     "en": [
      "Busy on weekends with DJs"
+    ],
+    "de": [
+     "Am Wochenende voll, mit DJs"
+    ],
+    "es": [
+     "Lleno los fines de semana, con DJs"
+    ],
+    "pt": [
+     "Cheio nos fins de semana, com DJs"
     ]
    },
    "bronnen": [
@@ -1869,7 +2724,10 @@
    "url": null,
    "soort": {
     "nl": "autowrakken, diep",
-    "en": "car wrecks, deep"
+    "en": "car wrecks, deep",
+    "de": "Autowracks, tief",
+    "es": "naufragios de autos, profundo",
+    "pt": "carcaças de carros, fundo"
    },
    "plaats": "Vaersenbaai",
    "tags": [
@@ -1884,7 +2742,10 @@
    "feiten": [
     {
      "nl": "Tientallen autowrakken",
-     "en": "Dozens of car wrecks"
+     "en": "Dozens of car wrecks",
+     "de": "Dutzende Autowracks",
+     "es": "Decenas de autos hundidos",
+     "pt": "Dezenas de carros afundados"
     }
    ],
    "scores": [],
@@ -1894,6 +2755,15 @@
     ],
     "en": [
      "Unusual spot for photos"
+    ],
+    "de": [
+     "Ungewöhnlicher Ort für Fotos"
+    ],
+    "es": [
+     "Lugar poco común para fotos"
+    ],
+    "pt": [
+     "Lugar incomum para fotos"
     ]
    },
    "tegen": {
@@ -1902,6 +2772,15 @@
     ],
     "en": [
      "Deep, needs directions from shore"
+    ],
+    "de": [
+     "Tief, vom Ufer aus brauchst du eine Wegbeschreibung"
+    ],
+    "es": [
+     "Profundo, desde la orilla necesitas indicaciones"
+    ],
+    "pt": [
+     "Fundo, a partir da costa você precisa de orientação"
     ]
    },
    "bronnen": [
@@ -1914,7 +2793,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik",
-    "en": "shore dive"
+    "en": "shore dive",
+    "de": "Landtauchgang",
+    "es": "inmersión desde la orilla",
+    "pt": "mergulho a partir da costa"
    },
    "plaats": "Piscadera",
    "tags": [
@@ -1926,7 +2808,10 @@
    "feiten": [
     {
      "nl": "5 minuten van de cruiseterminal",
-     "en": "5 minutes from the cruise terminal"
+     "en": "5 minutes from the cruise terminal",
+     "de": "5 Minuten vom Kreuzfahrtterminal",
+     "es": "A 5 minutos de la terminal de cruceros",
+     "pt": "A 5 minutos do terminal de cruzeiros"
     }
    ],
    "scores": [],
@@ -1936,11 +2821,23 @@
     ],
     "en": [
      "Handy for a half day from a cruise stop"
+    ],
+    "de": [
+     "Praktisch für einen halben Tag bei einem Kreuzfahrt-Stopp"
+    ],
+    "es": [
+     "Práctico para medio día durante una escala de crucero"
+    ],
+    "pt": [
+     "Prático para meio dia numa parada de cruzeiro"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.colemanconcierge.com/?p=19551",
@@ -1953,7 +2850,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik, resortbaai",
-    "en": "shore dive, resort bay"
+    "en": "shore dive, resort bay",
+    "de": "Landtauchgang, Resortbucht",
+    "es": "inmersión desde la orilla, bahía del resort",
+    "pt": "mergulho a partir da costa, baía do resort"
    },
    "plaats": "Blue Bay",
    "tags": [
@@ -1967,7 +2867,10 @@
    "feiten": [
     {
      "nl": "Wand en koraaltuin",
-     "en": "Wall and coral garden"
+     "en": "Wall and coral garden",
+     "de": "Wand und Korallengarten",
+     "es": "Pared y jardín de coral",
+     "pt": "Parede e jardim de corais"
     }
    ],
    "scores": [
@@ -1988,11 +2891,26 @@
     "en": [
      "Wall and coral garden within swimming distance",
      "Barracuda, jacks and soft corals"
+    ],
+    "de": [
+     "Wand und Korallengarten in Schwimmdistanz",
+     "Barrakudas, Makrelen und Weichkorallen"
+    ],
+    "es": [
+     "Pared y jardín de coral a distancia nadando",
+     "Barracudas, jureles y corales blandos"
+    ],
+    "pt": [
+     "Parede e jardim de corais a uma curta distância nadando",
+     "Barracudas, xaréus e corais moles"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/article/best-shore-diving-spots-curacao",
@@ -2007,7 +2925,10 @@
    "url": null,
    "soort": {
     "nl": "boot- of kantduik",
-    "en": "boat or shore dive"
+    "en": "boat or shore dive",
+    "de": "Boots- oder Landtauchgang",
+    "es": "inmersión en bote o desde la orilla",
+    "pt": "mergulho de barco ou a partir da costa"
    },
    "plaats": "Otrobanda",
    "tags": [
@@ -2022,7 +2943,10 @@
    "feiten": [
     {
      "nl": "Kant bij de waterfabriek",
-     "en": "Shore entry near the water plant"
+     "en": "Shore entry near the water plant",
+     "de": "Einstieg vom Ufer in der Nähe des Wasserwerks",
+     "es": "Entrada desde la orilla cerca de la planta de agua",
+     "pt": "Entrada pela costa perto da usina de água"
     }
    ],
    "scores": [],
@@ -2032,6 +2956,15 @@
     ],
     "en": [
      "Rare double reef, turtles"
+    ],
+    "de": [
+     "Seltenes Doppelriff, Schildkröten"
+    ],
+    "es": [
+     "Arrecife doble poco común, tortugas"
+    ],
+    "pt": [
+     "Recife duplo raro, tartarugas"
     ]
    },
    "tegen": {
@@ -2040,6 +2973,15 @@
     ],
     "en": [
      "Sometimes a drift due to current"
+    ],
+    "de": [
+     "Manchmal ein Drifttauchgang wegen der Strömung"
+    ],
+    "es": [
+     "A veces se hace a la deriva por la corriente"
+    ],
+    "pt": [
+     "Às vezes vira mergulho de deriva por causa da correnteza"
     ]
    },
    "bronnen": [
@@ -2054,7 +2996,10 @@
    "url": null,
    "soort": {
     "nl": "wrak, diep",
-    "en": "wreck, deep"
+    "en": "wreck, deep",
+    "de": "Wrack, tief",
+    "es": "naufragio, profundo",
+    "pt": "naufrágio, fundo"
    },
    "plaats": "bij de Mega Pier, Otrobanda",
    "tags": [
@@ -2069,15 +3014,24 @@
    "feiten": [
     {
      "nl": "Op ongeveer 30 m",
-     "en": "At about 30 m (100 ft)"
+     "en": "At about 30 m (100 ft)",
+     "de": "In etwa 30 m (100 ft)",
+     "es": "A unos 30 m (100 ft)",
+     "pt": "A cerca de 30 m (100 ft)"
     },
     {
      "nl": "Vrachtschip, gezonken 1977",
-     "en": "Freighter, sank in 1977"
+     "en": "Freighter, sank in 1977",
+     "de": "Frachter, 1977 gesunken",
+     "es": "Carguero hundido en 1977",
+     "pt": "Cargueiro afundado em 1977"
     },
     {
      "nl": "Niet als er cruiseschepen liggen",
-     "en": "Closed when cruise ships are docked"
+     "en": "Closed when cruise ships are docked",
+     "de": "Gesperrt, wenn Kreuzfahrtschiffe im Hafen liegen",
+     "es": "Cerrado cuando hay cruceros atracados",
+     "pt": "Fechado quando há navios de cruzeiro atracados"
     }
    ],
    "scores": [
@@ -2106,6 +3060,18 @@
     "en": [
      "Upright wreck with holds and bridge to explore",
      "Barracuda and schools of tarpon"
+    ],
+    "de": [
+     "Aufrecht stehendes Wrack mit Laderäumen und Brücke zum Erkunden",
+     "Barrakudas und Tarponschwärme"
+    ],
+    "es": [
+     "Naufragio erguido con bodegas y puente para explorar",
+     "Barracudas y cardúmenes de sábalos"
+    ],
+    "pt": [
+     "Naufrágio em pé, com porões e ponte para explorar",
+     "Barracudas e cardumes de tarpões"
     ]
    },
    "tegen": {
@@ -2114,6 +3080,15 @@
     ],
     "en": [
      "Only when no cruise ship is in port"
+    ],
+    "de": [
+     "Nur wenn kein Kreuzfahrtschiff im Hafen liegt"
+    ],
+    "es": [
+     "Solo cuando no hay ningún crucero en el puerto"
+    ],
+    "pt": [
+     "Só quando não há nenhum navio de cruzeiro no porto"
     ]
    },
    "bronnen": [
@@ -2131,7 +3106,10 @@
    "url": null,
    "soort": {
     "nl": "vliegtuigresten",
-    "en": "plane debris"
+    "en": "plane debris",
+    "de": "Flugzeugtrümmer",
+    "es": "restos de avión",
+    "pt": "destroços de avião"
    },
    "plaats": "bij Marriott, Piscadera",
    "tags": [
@@ -2142,7 +3120,10 @@
    "feiten": [
     {
      "nl": "Resten van een vliegtuigcrash",
-     "en": "Remains of a plane crash"
+     "en": "Remains of a plane crash",
+     "de": "Überreste eines Flugzeugabsturzes",
+     "es": "Restos de un accidente aéreo",
+     "pt": "Restos de um acidente aéreo"
     }
    ],
    "scores": [],
@@ -2152,6 +3133,15 @@
     ],
     "en": [
      "Wing and parts between sandy patches"
+    ],
+    "de": [
+     "Tragfläche und Teile zwischen Sandflächen"
+    ],
+    "es": [
+     "Un ala y partes entre zonas de arena"
+    ],
+    "pt": [
+     "Uma asa e peças entre trechos de areia"
     ]
    },
    "tegen": {
@@ -2160,6 +3150,15 @@
     ],
     "en": [
      "Hard to find without a guide"
+    ],
+    "de": [
+     "Ohne Guide schwer zu finden"
+    ],
+    "es": [
+     "Difícil de encontrar sin guía"
+    ],
+    "pt": [
+     "Difícil de achar sem guia"
     ]
    },
    "bronnen": [
@@ -2172,7 +3171,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik",
-    "en": "shore dive"
+    "en": "shore dive",
+    "de": "Landtauchgang",
+    "es": "inmersión desde la orilla",
+    "pt": "mergulho a partir da costa"
    },
    "plaats": "Marie Pampoen",
    "tags": [
@@ -2188,7 +3190,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "kostenloser Eintritt",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://www.duikersgids.nl/duikstekken/marie-pampoen",
     "datum": "2026-10"
@@ -2196,11 +3201,17 @@
    "feiten": [
     {
      "nl": "Instap vanuit klein haventje",
-     "en": "Entry from a small harbor"
+     "en": "Entry from a small harbor",
+     "de": "Einstieg von einem kleinen Hafen",
+     "es": "Entrada desde un puerto pequeño",
+     "pt": "Entrada por um pequeno porto"
     },
     {
      "nl": "Snel dieper dan 30 m",
-     "en": "Quickly deeper than 30 m"
+     "en": "Quickly deeper than 30 m",
+     "de": "Wird schnell tiefer als 30 m",
+     "es": "Pasa rápido de los 30 m de profundidad",
+     "pt": "Passa rápido dos 30 m de profundidade"
     }
    ],
    "scores": [],
@@ -2212,6 +3223,18 @@
     "en": [
      "Easy entry without surf",
      "Tarpon and big morays"
+    ],
+    "de": [
+     "Einfacher Einstieg ohne Brandung",
+     "Tarpune und große Muränen"
+    ],
+    "es": [
+     "Entrada fácil sin oleaje",
+     "Sábalos y grandes morenas"
+    ],
+    "pt": [
+     "Entrada fácil, sem arrebentação",
+     "Tarpões e grandes moreias"
     ]
    },
    "tegen": {
@@ -2222,6 +3245,18 @@
     "en": [
      "Gets deep fast",
      "Boat traffic and sharp scrap metal"
+    ],
+    "de": [
+     "Wird schnell tief",
+     "Bootsverkehr und scharfes Altmetall"
+    ],
+    "es": [
+     "Se vuelve profundo rápidamente",
+     "Tráfico de botes y chatarra afilada"
+    ],
+    "pt": [
+     "Fica fundo rápido",
+     "Movimento de barcos e sucata cortante"
     ]
    },
    "bronnen": [
@@ -2235,7 +3270,10 @@
    "url": null,
    "soort": {
     "nl": "autowrakken op de wand",
-    "en": "car wrecks on the wall"
+    "en": "car wrecks on the wall",
+    "de": "Autowracks an der Wand",
+    "es": "autos hundidos en la pared",
+    "pt": "carros afundados na parede"
    },
    "plaats": "Marie Pampoen",
    "tags": [
@@ -2253,11 +3291,17 @@
    "feiten": [
     {
      "nl": "Wrakken van 28 tot 50 m",
-     "en": "Wrecks from 28 to 50 m"
+     "en": "Wrecks from 28 to 50 m",
+     "de": "Wracks zwischen 28 und 50 m",
+     "es": "Naufragios de 28 a 50 m",
+     "pt": "Naufrágios de 28 a 50 m"
     },
     {
      "nl": "Oude auto's en vrachtwagens",
-     "en": "Old cars and trucks"
+     "en": "Old cars and trucks",
+     "de": "Alte Autos und Lastwagen",
+     "es": "Autos y camiones viejos",
+     "pt": "Carros e caminhões antigos"
     }
    ],
    "scores": [
@@ -2276,6 +3320,15 @@
     ],
     "en": [
      "Lots of fish, tarpon and barracuda"
+    ],
+    "de": [
+     "Viele Fische, Tarpune und Barrakudas"
+    ],
+    "es": [
+     "Muchos peces, sábalos y barracudas"
+    ],
+    "pt": [
+     "Muitos peixes, tarpões e barracudas"
     ]
    },
    "tegen": {
@@ -2286,6 +3339,18 @@
     "en": [
      "Wrecks are decaying, once is enough",
      "Deep with sometimes strong current"
+    ],
+    "de": [
+     "Die Wracks zerfallen, einmal reicht",
+     "Tief, manchmal starke Strömung"
+    ],
+    "es": [
+     "Los naufragios se están deteriorando, con una vez basta",
+     "Profundo, a veces con corriente fuerte"
+    ],
+    "pt": [
+     "Os naufrágios estão se deteriorando, uma vez basta",
+     "Fundo, às vezes com correnteza forte"
     ]
    },
    "bronnen": [
@@ -2301,7 +3366,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik",
-    "en": "shore dive"
+    "en": "shore dive",
+    "de": "Landtauchgang",
+    "es": "inmersión desde la orilla",
+    "pt": "mergulho a partir da costa"
    },
    "plaats": "Marie Pampoen",
    "tags": [
@@ -2314,7 +3382,10 @@
    "feiten": [
     {
      "nl": "Tot ongeveer 18 m",
-     "en": "Down to about 18 m (59 ft)"
+     "en": "Down to about 18 m (59 ft)",
+     "de": "Bis etwa 18 m (59 ft)",
+     "es": "Hasta unos 18 m (59 ft)",
+     "pt": "Até cerca de 18 m (59 ft)"
     }
    ],
    "scores": [],
@@ -2326,11 +3397,26 @@
     "en": [
      "Easy shore entry and calm water",
      "Less dived than Oswaldo's"
+    ],
+    "de": [
+     "Einfacher Einstieg vom Ufer und ruhiges Wasser",
+     "Weniger betaucht als Oswaldo's"
+    ],
+    "es": [
+     "Entrada fácil desde la orilla y aguas tranquilas",
+     "Menos visitado que Oswaldo's"
+    ],
+    "pt": [
+     "Entrada fácil pela costa e água calma",
+     "Menos mergulhado que Oswaldo's"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/article/best-shore-diving-spots-curacao",
@@ -2345,7 +3431,10 @@
    "url": null,
    "soort": {
     "nl": "huisrif resort",
-    "en": "resort house reef"
+    "en": "resort house reef",
+    "de": "Hausriff eines Resorts",
+    "es": "arrecife de la casa de un resort",
+    "pt": "recife da casa de um resort"
    },
    "plaats": "Sunscape, Willemstad",
    "tags": [
@@ -2358,7 +3447,10 @@
    "feiten": [
     {
      "nl": "Alleen voor Sunscape-gasten",
-     "en": "Sunscape guests only"
+     "en": "Sunscape guests only",
+     "de": "Nur für Sunscape-Gäste",
+     "es": "Solo para huéspedes de Sunscape",
+     "pt": "Só para hóspedes do Sunscape"
     }
    ],
    "scores": [],
@@ -2368,6 +3460,15 @@
     ],
     "en": [
      "Easy, pretty reef dive"
+    ],
+    "de": [
+     "Einfacher, schöner Riff-Tauchgang"
+    ],
+    "es": [
+     "Inmersión de arrecife fácil y bonita"
+    ],
+    "pt": [
+     "Mergulho de recife fácil e bonito"
     ]
    },
    "tegen": {
@@ -2376,6 +3477,15 @@
     ],
     "en": [
      "Not open to non-guests"
+    ],
+    "de": [
+     "Für Nicht-Gäste nicht zugänglich"
+    ],
+    "es": [
+     "No está abierto a quienes no son huéspedes"
+    ],
+    "pt": [
+     "Não é aberto a quem não é hóspede"
     ]
    },
    "bronnen": [
@@ -2389,7 +3499,10 @@
    "url": null,
    "soort": {
     "nl": "rif en tec-wrak",
-    "en": "reef and tech wreck"
+    "en": "reef and tech wreck",
+    "de": "Riff und Tech-Wrack",
+    "es": "arrecife y naufragio técnico",
+    "pt": "recife e naufrágio técnico"
    },
    "plaats": "LionsDive, Seaquarium",
    "tags": [
@@ -2405,11 +3518,17 @@
    "feiten": [
     {
      "nl": "Koraalkwekerij in ondiep water",
-     "en": "Coral nursery in shallow water"
+     "en": "Coral nursery in shallow water",
+     "de": "Korallenzucht im flachen Wasser",
+     "es": "Vivero de corales en aguas poco profundas",
+     "pt": "Berçário de corais em águas rasas"
     },
     {
      "nl": "Wrak op 120 tot 145 m",
-     "en": "Wreck at 120 to 145 m"
+     "en": "Wreck at 120 to 145 m",
+     "de": "Wrack in 120 bis 145 m",
+     "es": "Naufragio a 120 a 145 m",
+     "pt": "Naufrágio a 120 a 145 m"
     }
    ],
    "scores": [],
@@ -2421,6 +3540,18 @@
     "en": [
      "See the Reef Renewal coral nursery",
      "Turtles and rays"
+    ],
+    "de": [
+     "Sieh dir die Korallenzucht von Reef Renewal an",
+     "Schildkröten und Rochen"
+    ],
+    "es": [
+     "Visita el vivero de corales de Reef Renewal",
+     "Tortugas y rayas"
+    ],
+    "pt": [
+     "Conheça o berçário de corais da Reef Renewal",
+     "Tartarugas e raias"
     ]
    },
    "tegen": {
@@ -2429,6 +3560,15 @@
     ],
     "en": [
      "Wreck is for technical divers only"
+    ],
+    "de": [
+     "Das Wrack ist nur für Tec-Taucher"
+    ],
+    "es": [
+     "El naufragio es solo para buzos técnicos"
+    ],
+    "pt": [
+     "O naufrágio é só para mergulhadores técnicos"
     ]
    },
    "bronnen": [
@@ -2444,7 +3584,10 @@
    "url": null,
    "soort": {
     "nl": "wrakken, diep",
-    "en": "wrecks, deep"
+    "en": "wrecks, deep",
+    "de": "Wracks, tief",
+    "es": "naufragios, profundo",
+    "pt": "naufrágios, fundo"
    },
    "plaats": "Seaquarium/Mambo",
    "tags": [
@@ -2461,11 +3604,17 @@
    "feiten": [
     {
      "nl": "Twee sleepbootwrakken rond 45 m",
-     "en": "Two tugboat wrecks around 150 ft"
+     "en": "Two tugboat wrecks around 150 ft",
+     "de": "Zwei Schleppwracks in rund 150 ft",
+     "es": "Dos naufragios de remolcadores a unos 150 ft",
+     "pt": "Dois naufrágios de rebocadores a cerca de 150 ft"
     },
     {
      "nl": "Ketel van wrak uit 1884",
-     "en": "Boiler of an 1884 wreck"
+     "en": "Boiler of an 1884 wreck",
+     "de": "Kessel eines Wracks von 1884",
+     "es": "Caldera de un naufragio de 1884",
+     "pt": "Caldeira de um naufrágio de 1884"
     }
    ],
    "scores": [],
@@ -2477,6 +3626,18 @@
     "en": [
      "Anchors and a propeller at 20 to 35 m",
      "Dive center and restaurant on the beach"
+    ],
+    "de": [
+     "Anker und ein Propeller in 20 bis 35 m",
+     "Tauchzentrum und Restaurant am Strand"
+    ],
+    "es": [
+     "Anclas y una hélice a 20 a 35 m",
+     "Centro de buceo y restaurante en la playa"
+    ],
+    "pt": [
+     "Âncoras e uma hélice a 20 a 35 m",
+     "Centro de mergulho e restaurante na praia"
     ]
    },
    "tegen": {
@@ -2487,6 +3648,18 @@
     "en": [
      "Strong, shifting current",
      "Visibility sometimes poor, boat traffic"
+    ],
+    "de": [
+     "Starke, wechselnde Strömung",
+     "Sicht manchmal schlecht, Bootsverkehr"
+    ],
+    "es": [
+     "Corriente fuerte y cambiante",
+     "Visibilidad a veces mala, tráfico de botes"
+    ],
+    "pt": [
+     "Correnteza forte e variável",
+     "Visibilidade às vezes ruim, movimento de barcos"
     ]
    },
    "bronnen": [
@@ -2501,7 +3674,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik",
-    "en": "boat dive"
+    "en": "boat dive",
+    "de": "Bootstauchgang",
+    "es": "inmersión en bote",
+    "pt": "mergulho de barco"
    },
    "plaats": "bij LionsDive",
    "tags": [
@@ -2515,7 +3691,10 @@
    "feiten": [
     {
      "nl": "Ondiep en diep deel",
-     "en": "Shallow and deep sections"
+     "en": "Shallow and deep sections",
+     "de": "Flache und tiefe Abschnitte",
+     "es": "Zonas poco profundas y profundas",
+     "pt": "Trechos rasos e fundos"
     }
    ],
    "scores": [],
@@ -2525,11 +3704,23 @@
     ],
     "en": [
      "Deep walls, healthy reef, rays and turtles"
+    ],
+    "de": [
+     "Tiefe Wände, gesundes Riff, Rochen und Schildkröten"
+    ],
+    "es": [
+     "Paredes profundas, arrecife sano, rayas y tortugas"
+    ],
+    "pt": [
+     "Paredes profundas, recife saudável, raias e tartarugas"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/article/best-boat-diving-spots-curacao",
@@ -2543,7 +3734,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik, ondiep wrak",
-    "en": "boat dive, shallow wreck"
+    "en": "boat dive, shallow wreck",
+    "de": "Bootstauchgang, flaches Wrack",
+    "es": "inmersión en bote, naufragio poco profundo",
+    "pt": "mergulho de barco, naufrágio raso"
    },
    "plaats": "bij Mambo",
    "tags": [
@@ -2557,7 +3751,10 @@
    "feiten": [
     {
      "nl": "Wrak op ongeveer 12 m",
-     "en": "Wreck at about 12 m (40 ft)"
+     "en": "Wreck at about 12 m (40 ft)",
+     "de": "Wrack in etwa 12 m (40 ft)",
+     "es": "Naufragio a unos 12 m (40 ft)",
+     "pt": "Naufrágio a cerca de 12 m (40 ft)"
     }
    ],
    "scores": [],
@@ -2569,6 +3766,18 @@
     "en": [
      "Shallow, for all levels",
      "Fully covered in sponges"
+    ],
+    "de": [
+     "Für alle Level geeignet, flach",
+     "Komplett mit Schwämmen bedeckt"
+    ],
+    "es": [
+     "Poco profundo, para todos los niveles",
+     "Totalmente cubierto de esponjas"
+    ],
+    "pt": [
+     "Raso, para todos os níveis",
+     "Totalmente coberto de esponjas"
     ]
    },
    "tegen": {
@@ -2577,6 +3786,15 @@
     ],
     "en": [
      "Boat only, sometimes current"
+    ],
+    "de": [
+     "Nur mit dem Boot, manchmal Strömung"
+    ],
+    "es": [
+     "Solo en bote, a veces con corriente"
+    ],
+    "pt": [
+     "Só de barco, às vezes com correnteza"
     ]
    },
    "bronnen": [
@@ -2591,7 +3809,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik",
-    "en": "boat dive"
+    "en": "boat dive",
+    "de": "Bootstauchgang",
+    "es": "inmersión en bote",
+    "pt": "mergulho de barco"
    },
    "plaats": "voor Jan Thiel",
    "tags": [
@@ -2603,7 +3824,10 @@
    "feiten": [
     {
      "nl": "Lagune met koraalkoppen",
-     "en": "Lagoon with coral heads"
+     "en": "Lagoon with coral heads",
+     "de": "Lagune mit Korallenblöcken",
+     "es": "Laguna con cabezos de coral",
+     "pt": "Lagoa com cabeços de coral"
     }
    ],
    "scores": [],
@@ -2613,11 +3837,23 @@
     ],
     "en": [
      "One of the best coral dives"
+    ],
+    "de": [
+     "Einer der besten Korallentauchgänge"
+    ],
+    "es": [
+     "Una de las mejores inmersiones de coral"
+    ],
+    "pt": [
+     "Um dos melhores mergulhos de coral"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://flipflopwanderers.com/?p=32523",
@@ -2631,7 +3867,10 @@
    "url": null,
    "soort": {
     "nl": "drift langs wand",
-    "en": "wall drift"
+    "en": "wall drift",
+    "de": "Wanddrift",
+    "es": "deriva en pared",
+    "pt": "deriva em parede"
    },
    "plaats": "bij Jan Thiel",
    "tags": [
@@ -2644,7 +3883,10 @@
    "feiten": [
     {
      "nl": "Rif en wand, drift",
-     "en": "Reef and wall, drift"
+     "en": "Reef and wall, drift",
+     "de": "Riff und Wand, Drift",
+     "es": "Arrecife y pared, a la deriva",
+     "pt": "Recife e parede, de deriva"
     }
    ],
    "scores": [],
@@ -2654,11 +3896,23 @@
     ],
     "en": [
      "Wall with drift"
+    ],
+    "de": [
+     "Wand mit Drift"
+    ],
+    "es": [
+     "Pared con deriva"
+    ],
+    "pt": [
+     "Parede com deriva"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://travel.padi.com/dive-sites/northern-curacao",
@@ -2672,7 +3926,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik, strand",
-    "en": "shore dive, beach"
+    "en": "shore dive, beach",
+    "de": "Landtauchgang, Strand",
+    "es": "inmersión desde la orilla, playa",
+    "pt": "mergulho a partir da costa, praia"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -2688,7 +3945,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon strandentree, na 16:30 gratis",
-     "en": "per person beach entry, free after 4:30 p.m."
+     "en": "per person beach entry, free after 4:30 p.m.",
+     "de": "Strandeintritt pro Person, ab 16:30 Uhr kostenlos",
+     "es": "Entrada a la playa por persona, gratis después de las 4:30 p. m.",
+     "pt": "Entrada na praia por pessoa, grátis depois das 16h30"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -2696,11 +3956,17 @@
    "feiten": [
     {
      "nl": "Zeilbootwrak op 5 m",
-     "en": "Sailboat wreck at 5 m"
+     "en": "Sailboat wreck at 5 m",
+     "de": "Segelbootwrack in 5 m",
+     "es": "Naufragio de un velero a 5 m",
+     "pt": "Naufrágio de um veleiro a 5 m"
     },
     {
      "nl": "Rif begint op 9 m",
-     "en": "Reef starts at 9 m"
+     "en": "Reef starts at 9 m",
+     "de": "Das Riff beginnt bei 9 m",
+     "es": "El arrecife empieza a los 9 m",
+     "pt": "O recife começa aos 9 m"
     }
    ],
    "scores": [
@@ -2721,6 +3987,18 @@
     "en": [
      "Easy entry, dive center and showers",
      "Good for beginners and courses"
+    ],
+    "de": [
+     "Einfacher Einstieg, Tauchzentrum und Duschen",
+     "Gut für Anfänger und Kurse"
+    ],
+    "es": [
+     "Entrada fácil, centro de buceo y duchas",
+     "Bueno para principiantes y cursos"
+    ],
+    "pt": [
+     "Entrada fácil, centro de mergulho e chuveiros",
+     "Bom para iniciantes e cursos"
     ]
    },
    "tegen": {
@@ -2731,6 +4009,18 @@
     "en": [
      "The bay itself is shallow with little to see",
      "Busy and touristy"
+    ],
+    "de": [
+     "Die Bucht selbst ist flach und bietet wenig zu sehen",
+     "Voll und touristisch"
+    ],
+    "es": [
+     "La bahía en sí es poco profunda y hay poco que ver",
+     "Concurrido y turístico"
+    ],
+    "pt": [
+     "A baía em si é rasa e tem pouco a ver",
+     "Cheio e turístico"
     ]
    },
    "bronnen": [
@@ -2745,7 +4035,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik, wand",
-    "en": "boat dive, wall"
+    "en": "boat dive, wall",
+    "de": "Bootstauchgang, Wand",
+    "es": "inmersión en bote, pared",
+    "pt": "mergulho de barco, parede"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -2759,11 +4052,17 @@
    "feiten": [
     {
      "nl": "Wand tot 40 m",
-     "en": "Wall down to 40 m"
+     "en": "Wall down to 40 m",
+     "de": "Wand bis 40 m",
+     "es": "Pared hasta 40 m",
+     "pt": "Parede até 40 m"
     },
     {
      "nl": "Niet meer vanaf de kant",
-     "en": "No longer reachable from shore"
+     "en": "No longer reachable from shore",
+     "de": "Vom Ufer aus nicht mehr erreichbar",
+     "es": "Ya no se llega desde la orilla",
+     "pt": "Não dá mais para chegar pela costa"
     }
    ],
    "scores": [],
@@ -2775,6 +4074,18 @@
     "en": [
      "Barracuda, mackerel and tarpon",
      "Seahorses on the plateau"
+    ],
+    "de": [
+     "Barrakudas, Makrelen und Tarpune",
+     "Seepferdchen auf dem Plateau"
+    ],
+    "es": [
+     "Barracudas, caballas y sábalos",
+     "Caballitos de mar en la meseta"
+    ],
+    "pt": [
+     "Barracudas, cavalas e tarpões",
+     "Cavalos-marinhos no platô"
     ]
    },
    "tegen": {
@@ -2783,6 +4094,15 @@
     ],
     "en": [
      "Current can change direction"
+    ],
+    "de": [
+     "Die Strömung kann die Richtung wechseln"
+    ],
+    "es": [
+     "La corriente puede cambiar de dirección"
+    ],
+    "pt": [
+     "A correnteza pode mudar de direção"
     ]
    },
    "bronnen": [
@@ -2796,7 +4116,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik, drift",
-    "en": "boat dive, drift"
+    "en": "boat dive, drift",
+    "de": "Bootstauchgang, Drift",
+    "es": "inmersión en bote, a la deriva",
+    "pt": "mergulho de barco, de deriva"
    },
    "plaats": "bij Jan Thiel",
    "tags": [
@@ -2811,11 +4134,17 @@
    "feiten": [
     {
      "nl": "Tot 36 m",
-     "en": "Down to 36 m"
+     "en": "Down to 36 m",
+     "de": "Bis 36 m",
+     "es": "Hasta 36 m",
+     "pt": "Até 36 m"
     },
     {
      "nl": "Grote zuilkoralen",
-     "en": "Large pillar corals"
+     "en": "Large pillar corals",
+     "de": "Große Säulenkorallen",
+     "es": "Grandes corales pilar",
+     "pt": "Grandes corais-pilar"
     }
    ],
    "scores": [],
@@ -2827,6 +4156,18 @@
     "en": [
      "Impressive pillar corals and drop-offs",
      "Jacks, tarpon and barracuda"
+    ],
+    "de": [
+     "Beeindruckende Säulenkorallen und Steilabfälle",
+     "Makrelen, Tarpune und Barrakudas"
+    ],
+    "es": [
+     "Impresionantes corales pilar y desniveles",
+     "Jureles, sábalos y barracudas"
+    ],
+    "pt": [
+     "Corais-pilar impressionantes e quebras de profundidade",
+     "Xaréus, tarpões e barracudas"
     ]
    },
    "tegen": {
@@ -2835,6 +4176,15 @@
     ],
     "en": [
      "Strong current, experience needed"
+    ],
+    "de": [
+     "Starke Strömung, Erfahrung nötig"
+    ],
+    "es": [
+     "Corriente fuerte, se necesita experiencia"
+    ],
+    "pt": [
+     "Correnteza forte, é preciso ter experiência"
     ]
    },
    "bronnen": [
@@ -2848,7 +4198,10 @@
    "url": null,
    "soort": {
     "nl": "baai, rif",
-    "en": "cove, reef"
+    "en": "cove, reef",
+    "de": "Bucht, Riff",
+    "es": "cala, arrecife",
+    "pt": "enseada, recife"
    },
    "plaats": "Caracasbaai",
    "tags": [
@@ -2859,7 +4212,10 @@
    "feiten": [
     {
      "nl": "Doordeweeks bijna leeg",
-     "en": "Nearly empty on weekdays"
+     "en": "Nearly empty on weekdays",
+     "de": "Unter der Woche fast leer",
+     "es": "Casi vacío entre semana",
+     "pt": "Quase vazio durante a semana"
     }
    ],
    "scores": [],
@@ -2869,11 +4225,23 @@
     ],
     "en": [
      "Quiet cove"
+    ],
+    "de": [
+     "Ruhige Bucht"
+    ],
+    "es": [
+     "Cala tranquila"
+    ],
+    "pt": [
+     "Enseada tranquila"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/activity/playa-hundu-lost-anchor",
@@ -2887,7 +4255,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik, wand",
-    "en": "boat dive, wall"
+    "en": "boat dive, wall",
+    "de": "Bootstauchgang, Wand",
+    "es": "inmersión en bote, pared",
+    "pt": "mergulho de barco, parede"
    },
    "plaats": "Caracasbaai",
    "tags": [
@@ -2900,7 +4271,10 @@
    "feiten": [
     {
      "nl": "Tot 36 m",
-     "en": "Down to 36 m"
+     "en": "Down to 36 m",
+     "de": "Bis 36 m",
+     "es": "Hasta 36 m",
+     "pt": "Até 36 m"
     }
    ],
    "scores": [],
@@ -2912,6 +4286,18 @@
     "en": [
      "Beautiful coral and lots of fish",
      "Good visibility, around 25 m"
+    ],
+    "de": [
+     "Schöne Korallen und viele Fische",
+     "Gute Sicht, etwa 25 m"
+    ],
+    "es": [
+     "Corales hermosos y muchos peces",
+     "Buena visibilidad, unos 25 m"
+    ],
+    "pt": [
+     "Corais lindos e muitos peixes",
+     "Boa visibilidade, cerca de 25 m"
     ]
    },
    "tegen": {
@@ -2920,6 +4306,15 @@
     ],
     "en": [
      "Pleasure boats nearby"
+    ],
+    "de": [
+     "Vergnügungsboote in der Nähe"
+    ],
+    "es": [
+     "Botes de recreo cerca"
+    ],
+    "pt": [
+     "Barcos de passeio por perto"
     ]
    },
    "bronnen": [
@@ -2934,7 +4329,10 @@
    "url": null,
    "soort": {
     "nl": "ondiep wrak, kant",
-    "en": "shallow wreck, shore"
+    "en": "shallow wreck, shore",
+    "de": "Flaches Wrack, vom Ufer",
+    "es": "naufragio poco profundo, desde la orilla",
+    "pt": "naufrágio raso, a partir da costa"
    },
    "plaats": "Caracasbaai",
    "tags": [
@@ -2952,7 +4350,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "kostenloser Eintritt",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://flipflopwanderers.com/?p=32523",
     "datum": "2026-10"
@@ -2960,15 +4361,24 @@
    "feiten": [
     {
      "nl": "Wrak op ongeveer 5 m",
-     "en": "Wreck at about 5 m (16 ft)"
+     "en": "Wreck at about 5 m (16 ft)",
+     "de": "Wrack in etwa 5 m (16 ft)",
+     "es": "Naufragio a unos 5 m (16 ft)",
+     "pt": "Naufrágio a cerca de 5 m (16 ft)"
     },
     {
      "nl": "Wand verder uit tot 30 m+",
-     "en": "Wall farther out to 30 m+"
+     "en": "Wall farther out to 30 m+",
+     "de": "Wand weiter draußen bis über 30 m",
+     "es": "Pared más afuera hasta más de 30 m",
+     "pt": "Parede mais afastada, a mais de 30 m"
     },
     {
      "nl": "Kleine strandbar",
-     "en": "Small beach bar"
+     "en": "Small beach bar",
+     "de": "Kleine Strandbar",
+     "es": "Pequeño bar de playa",
+     "pt": "Pequeno bar de praia"
     }
    ],
    "scores": [
@@ -2989,6 +4399,18 @@
     "en": [
      "Overgrown wreck, fine for snorkelers",
      "Seahorses, octopus and morays"
+    ],
+    "de": [
+     "Bewachsenes Wrack, auch für Schnorchler geeignet",
+     "Seepferdchen, Kraken und Muränen"
+    ],
+    "es": [
+     "Naufragio cubierto de vida marina, bueno también para snorkel",
+     "Caballitos de mar, pulpos y morenas"
+    ],
+    "pt": [
+     "Naufrágio coberto de vida marinha, bom também para snorkel",
+     "Cavalos-marinhos, polvos e moreias"
     ]
    },
    "tegen": {
@@ -3001,6 +4423,21 @@
      "Busy when cruise ships are in",
      "Some say the reef is damaged",
      "Entry over rubble"
+    ],
+    "de": [
+     "Voll, wenn Kreuzfahrtschiffe da sind",
+     "Manche sagen, das Riff sei beschädigt",
+     "Einstieg über Geröll"
+    ],
+    "es": [
+     "Lleno cuando hay cruceros",
+     "Algunos dicen que el arrecife está dañado",
+     "Entrada sobre piedras sueltas"
+    ],
+    "pt": [
+     "Cheio quando há navios de cruzeiro",
+     "Alguns dizem que o recife está danificado",
+     "Entrada sobre pedregulhos"
     ]
    },
    "bronnen": [
@@ -3018,7 +4455,10 @@
    "url": null,
    "soort": {
     "nl": "kantduik, wand",
-    "en": "shore dive, wall"
+    "en": "shore dive, wall",
+    "de": "Landtauchgang, Wand",
+    "es": "inmersión desde la orilla, pared",
+    "pt": "mergulho a partir da costa, parede"
    },
    "plaats": "Caracasbaai",
    "tags": [
@@ -3037,7 +4477,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "kostenloser Eintritt",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://flipflopwanderers.com/?p=32523",
     "datum": "2026-10"
@@ -3045,11 +4488,17 @@
    "feiten": [
     {
      "nl": "Wand tot ongeveer 50 m",
-     "en": "Wall to about 50 m"
+     "en": "Wall to about 50 m",
+     "de": "Wand bis etwa 50 m",
+     "es": "Pared hasta unos 50 m",
+     "pt": "Parede até cerca de 50 m"
     },
     {
      "nl": "Geen voorzieningen",
-     "en": "No facilities"
+     "en": "No facilities",
+     "de": "Keine Einrichtungen",
+     "es": "Sin instalaciones",
+     "pt": "Sem estrutura"
     }
    ],
    "scores": [
@@ -3070,6 +4519,18 @@
     "en": [
      "Lots of fish, healthy coral, turtles",
      "Old shark fence covered in coral"
+    ],
+    "de": [
+     "Viele Fische, gesunde Korallen, Schildkröten",
+     "Alter Haizaun voller Korallen"
+    ],
+    "es": [
+     "Muchos peces, corales sanos, tortugas",
+     "Antigua valla antitiburones cubierta de coral"
+    ],
+    "pt": [
+     "Muitos peixes, corais saudáveis, tartarugas",
+     "Antiga cerca anti-tubarão coberta de corais"
     ]
    },
    "tegen": {
@@ -3080,6 +4541,18 @@
     "en": [
      "Strong current around the corner",
      "Car break-ins in the parking lot"
+    ],
+    "de": [
+     "Starke Strömung um die Ecke",
+     "Autoaufbrüche auf dem Parkplatz"
+    ],
+    "es": [
+     "Corriente fuerte al doblar la esquina",
+     "Robos a autos en el estacionamiento"
+    ],
+    "pt": [
+     "Correnteza forte na curva",
+     "Arrombamentos de carros no estacionamento"
     ]
    },
    "bronnen": [
@@ -3096,7 +4569,10 @@
    "url": null,
    "soort": {
     "nl": "rif",
-    "en": "reef"
+    "en": "reef",
+    "de": "Riff",
+    "es": "arrecife",
+    "pt": "recife"
    },
    "plaats": "tegenover Santa Barbara",
    "tags": [
@@ -3108,7 +4584,10 @@
    "feiten": [
     {
      "nl": "Over de geul bij Santa Barbara",
-     "en": "Across the channel from Barbara Beach"
+     "en": "Across the channel from Barbara Beach",
+     "de": "Gegenüber von Barbara Beach, auf der anderen Seite des Kanals",
+     "es": "Al otro lado del canal frente a Barbara Beach",
+     "pt": "Do outro lado do canal, em frente a Barbara Beach"
     }
    ],
    "scores": [],
@@ -3118,11 +4597,23 @@
     ],
     "en": [
      "Barracuda at the point"
+    ],
+    "de": [
+     "Barrakudas an der Landspitze"
+    ],
+    "es": [
+     "Barracudas en la punta"
+    ],
+    "pt": [
+     "Barracudas na ponta"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/activity/barracuda-pointpunti-piku",
@@ -3136,7 +4627,10 @@
    "url": null,
    "soort": {
     "nl": "ondiepe macroduik",
-    "en": "shallow macro dive"
+    "en": "shallow macro dive",
+    "de": "flacher Makrotauchgang",
+    "es": "inmersión macro poco profunda",
+    "pt": "mergulho macro raso"
    },
    "plaats": "bij Santa Barbara",
    "tags": [
@@ -3148,7 +4642,10 @@
    "feiten": [
     {
      "nl": "Ondiep plateau naast drop-off",
-     "en": "Shallow plateau next to a drop-off"
+     "en": "Shallow plateau next to a drop-off",
+     "de": "Flaches Plateau neben einem Abfall",
+     "es": "Meseta poco profunda junto a un desnivel",
+     "pt": "Platô raso ao lado de uma quebra"
     }
    ],
    "scores": [],
@@ -3158,6 +4655,15 @@
     ],
     "en": [
      "Easy macro dive with morays and scorpionfish"
+    ],
+    "de": [
+     "Einfacher Makrotauchgang mit Muränen und Skorpionfischen"
+    ],
+    "es": [
+     "Inmersión macro fácil con morenas y peces escorpión"
+    ],
+    "pt": [
+     "Mergulho macro fácil com moreias e peixes-escorpião"
     ]
    },
    "tegen": {
@@ -3166,6 +4672,15 @@
     ],
     "en": [
      "Fewer eels than before"
+    ],
+    "de": [
+     "Weniger Muränen als früher"
+    ],
+    "es": [
+     "Menos morenas que antes"
+    ],
+    "pt": [
+     "Menos moreias do que antes"
     ]
    },
    "bronnen": [
@@ -3180,7 +4695,10 @@
    "url": null,
    "soort": {
     "nl": "zandplateau, rif",
-    "en": "sand plateau, reef"
+    "en": "sand plateau, reef",
+    "de": "Sandplateau, Riff",
+    "es": "meseta de arena, arrecife",
+    "pt": "platô de areia, recife"
    },
    "plaats": "Fuikbaai",
    "tags": [
@@ -3192,7 +4710,10 @@
    "feiten": [
     {
      "nl": "Mild, goed zicht",
-     "en": "Mild current, good visibility"
+     "en": "Mild current, good visibility",
+     "de": "Leichte Strömung, gute Sicht",
+     "es": "Corriente suave, buena visibilidad",
+     "pt": "Correnteza fraca, boa visibilidade"
     }
    ],
    "scores": [],
@@ -3202,11 +4723,23 @@
     ],
     "en": [
      "Lots of sponges and juvenile fish, good for photos"
+    ],
+    "de": [
+     "Viele Schwämme und Jungfische, gut für Fotos"
+    ],
+    "es": [
+     "Muchas esponjas y peces juveniles, ideal para fotos"
+    ],
+    "pt": [
+     "Muitas esponjas e peixes jovens, ótimo para fotos"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.divein.com/diving/destination/diving-curacao/",
@@ -3220,7 +4753,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik",
-    "en": "boat dive"
+    "en": "boat dive",
+    "de": "Bootstauchgang",
+    "es": "inmersión en bote",
+    "pt": "mergulho de barco"
    },
    "plaats": "bij Fuikbaai",
    "tags": [
@@ -3234,7 +4770,10 @@
    "feiten": [
     {
      "nl": "Vaak drift richting Smokey's",
-     "en": "Often a drift toward Smokey's"
+     "en": "Often a drift toward Smokey's",
+     "de": "Oft eine Drift in Richtung Smokey's",
+     "es": "A menudo se va a la deriva hacia Smokey's",
+     "pt": "Muitas vezes é uma deriva em direção a Smokey's"
     }
    ],
    "scores": [],
@@ -3246,11 +4785,26 @@
     "en": [
      "Fine coral, turtles and eagle rays",
      "Rarely visited"
+    ],
+    "de": [
+     "Feine Korallen, Schildkröten und Adlerrochen",
+     "Selten besucht"
+    ],
+    "es": [
+     "Corales finos, tortugas y rayas águila",
+     "Rara vez visitado"
+    ],
+    "pt": [
+     "Corais delicados, tartarugas e raias-águia",
+     "Raramente visitado"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/activity/kathys-paradise-smokey",
@@ -3264,7 +4818,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik, drift",
-    "en": "boat dive, drift"
+    "en": "boat dive, drift",
+    "de": "Bootstauchgang, Drift",
+    "es": "inmersión en bote, a la deriva",
+    "pt": "mergulho de barco, de deriva"
    },
    "plaats": "bij Fuikbaai",
    "tags": [
@@ -3278,7 +4835,10 @@
    "feiten": [
     {
      "nl": "30 minuten varen",
-     "en": "30-minute boat ride"
+     "en": "30-minute boat ride",
+     "de": "30 Minuten Bootsfahrt",
+     "es": "30 minutos en bote",
+     "pt": "30 minutos de barco"
     }
    ],
    "scores": [],
@@ -3290,11 +4850,26 @@
     "en": [
      "Nearly untouched reef",
      "Sharks and stingrays at the drop-off"
+    ],
+    "de": [
+     "Fast unberührtes Riff",
+     "Haie und Stachelrochen am Abfall"
+    ],
+    "es": [
+     "Arrecife casi virgen",
+     "Tiburones y rayas látigo en el desnivel"
+    ],
+    "pt": [
+     "Recife quase intocado",
+     "Tubarões e raias na quebra de profundidade"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.divein.com/diving/destination/diving-curacao/",
@@ -3308,7 +4883,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik, diepe wand",
-    "en": "boat dive, deep wall"
+    "en": "boat dive, deep wall",
+    "de": "Bootstauchgang, tiefe Wand",
+    "es": "inmersión en bote, pared profunda",
+    "pt": "mergulho de barco, parede profunda"
    },
    "plaats": "Oostpunt",
    "tags": [
@@ -3323,7 +4901,10 @@
    "feiten": [
     {
      "nl": "Wand tot ongeveer 37 m",
-     "en": "Wall to about 37 m (120 ft)"
+     "en": "Wall to about 37 m (120 ft)",
+     "de": "Wand bis etwa 37 m (120 ft)",
+     "es": "Pared hasta unos 37 m (120 ft)",
+     "pt": "Parede até cerca de 37 m (120 ft)"
     }
    ],
    "scores": [],
@@ -3333,6 +4914,15 @@
     ],
     "en": [
      "Spectacular wall, chance of sharks and mantas"
+    ],
+    "de": [
+     "Spektakuläre Wand, Chance auf Haie und Mantas"
+    ],
+    "es": [
+     "Pared espectacular, posibilidad de ver tiburones y mantas"
+    ],
+    "pt": [
+     "Parede espetacular, chance de ver tubarões e mantas"
     ]
    },
    "tegen": {
@@ -3341,6 +4931,15 @@
     ],
     "en": [
      "Long, sometimes rough boat trip"
+    ],
+    "de": [
+     "Lange, manchmal raue Bootsfahrt"
+    ],
+    "es": [
+     "Viaje en bote largo y a veces agitado"
+    ],
+    "pt": [
+     "Viagem de barco longa e às vezes agitada"
     ]
    },
    "bronnen": [
@@ -3354,7 +4953,10 @@
    "url": null,
    "soort": {
     "nl": "wand op de punt",
-    "en": "wall on the point"
+    "en": "wall on the point",
+    "de": "Wand an der Landspitze",
+    "es": "pared en la punta",
+    "pt": "parede na ponta"
    },
    "plaats": "Oostpunt",
    "tags": [
@@ -3366,7 +4968,10 @@
    "feiten": [
     {
      "nl": "Meest oostelijke duikplek",
-     "en": "Easternmost dive site"
+     "en": "Easternmost dive site",
+     "de": "Östlichster Tauchplatz",
+     "es": "El sitio de buceo más al este",
+     "pt": "O local de mergulho mais a leste"
     }
    ],
    "scores": [],
@@ -3376,6 +4981,15 @@
     ],
     "en": [
      "Pagoda-shaped formations and many species"
+    ],
+    "de": [
+     "Pagodenförmige Formationen und viele Arten"
+    ],
+    "es": [
+     "Formaciones en forma de pagoda y muchas especies"
+    ],
+    "pt": [
+     "Formações em forma de pagode e muitas espécies"
     ]
    },
    "tegen": {
@@ -3384,6 +4998,15 @@
     ],
     "en": [
      "Current and waves change quickly"
+    ],
+    "de": [
+     "Strömung und Wellen ändern sich schnell"
+    ],
+    "es": [
+     "La corriente y las olas cambian rápido"
+    ],
+    "pt": [
+     "A correnteza e as ondas mudam rápido"
     ]
    },
    "bronnen": [
@@ -3396,7 +5019,10 @@
    "url": null,
    "soort": {
     "nl": "bootduik, drift",
-    "en": "boat dive, drift"
+    "en": "boat dive, drift",
+    "de": "Bootstauchgang, Drift",
+    "es": "inmersión en bote, a la deriva",
+    "pt": "mergulho de barco, de deriva"
    },
    "plaats": "Oostpunt",
    "tags": [
@@ -3410,11 +5036,17 @@
    "feiten": [
     {
      "nl": "Alleen per boot",
-     "en": "Boat access only"
+     "en": "Boat access only",
+     "de": "Nur mit dem Boot erreichbar",
+     "es": "Solo se llega en bote",
+     "pt": "Acesso só de barco"
     },
     {
      "nl": "Vaak samen met Klein Curaçao",
-     "en": "Often combined with Klein Curaçao"
+     "en": "Often combined with Klein Curaçao",
+     "de": "Oft mit Klein Curaçao kombiniert",
+     "es": "A menudo se combina con Klein Curazao",
+     "pt": "Muitas vezes combinado com Klein Curaçao"
     }
    ],
    "scores": [],
@@ -3426,11 +5058,26 @@
     "en": [
      "Untouched coral and big sea fans",
      "Reef sharks, eagle rays and tarpon"
+    ],
+    "de": [
+     "Unberührte Korallen und große Gorgonien",
+     "Riffhaie, Adlerrochen und Tarpune"
+    ],
+    "es": [
+     "Corales virgenes y grandes abanicos de mar",
+     "Tiburones de arrecife, rayas águila y sábalos"
+    ],
+    "pt": [
+     "Corais intocados e grandes leques-do-mar",
+     "Tubarões-de-recife, raias-águia e tarpões"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.divein.com/diving/destination/diving-curacao/",
@@ -3444,7 +5091,10 @@
    "url": null,
    "soort": {
     "nl": "eiland, boottocht",
-    "en": "island, boat trip"
+    "en": "island, boat trip",
+    "de": "Insel, Bootsausflug",
+    "es": "isla, excursión en bote",
+    "pt": "ilha, passeio de barco"
    },
    "plaats": "Klein Curaçao",
    "tags": [
@@ -3459,7 +5109,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon (boottocht, $135 tot $170)",
-     "en": "per person (boat trip, $135 to $170)"
+     "en": "per person (boat trip, $135 to $170)",
+     "de": "pro Person (Bootsausflug, 135 bis 170 $)",
+     "es": "por persona (excursión en bote, $135 a $170)",
+     "pt": "por pessoa (passeio de barco, US$ 135 a US$ 170)"
     },
     "bron": "https://www.mycuracaoguide.com/klein-curacao",
     "datum": "2026-10"
@@ -3467,11 +5120,17 @@
    "feiten": [
     {
      "nl": "1,5 uur varen",
-     "en": "1.5-hour boat ride"
+     "en": "1.5-hour boat ride",
+     "de": "1,5 Stunden Bootsfahrt",
+     "es": "1,5 horas en bote",
+     "pt": "1,5 hora de barco"
     },
     {
      "nl": "Onbewoond eiland",
-     "en": "Uninhabited island"
+     "en": "Uninhabited island",
+     "de": "Unbewohnte Insel",
+     "es": "Isla deshabitada",
+     "pt": "Ilha desabitada"
     }
    ],
    "scores": [
@@ -3492,6 +5151,18 @@
     "en": [
      "Clear water and turtles",
      "Chance of sharks and big fish"
+    ],
+    "de": [
+     "Klares Wasser und Schildkröten",
+     "Chance auf Haie und Großfische"
+    ],
+    "es": [
+     "Agua clara y tortugas",
+     "Posibilidad de ver tiburones y peces grandes"
+    ],
+    "pt": [
+     "Água clara e tartarugas",
+     "Chance de ver tubarões e peixes grandes"
     ]
    },
    "tegen": {
@@ -3502,6 +5173,18 @@
     "en": [
      "Crossing is often rough",
      "Little shade"
+    ],
+    "de": [
+     "Die Überfahrt ist oft rau",
+     "Wenig Schatten"
+    ],
+    "es": [
+     "La travesía suele ser agitada",
+     "Poca sombra"
+    ],
+    "pt": [
+     "A travessia costuma ser agitada",
+     "Pouca sombra"
     ]
    },
    "bronnen": [
@@ -3518,7 +5201,10 @@
    "url": "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html",
    "uitleg": {
     "nl": "Reviews en scores per duikplek en strand; boekt ook begeleide duiken en snorkeltochten.",
-    "en": "Reviews and ratings per dive site and beach; also books guided dives and snorkel trips."
+    "en": "Reviews and ratings per dive site and beach; also books guided dives and snorkel trips.",
+    "de": "Bewertungen und Ratings pro Tauchplatz und Strand; außerdem kannst du geführte Tauchgänge und Schnorchelausflüge buchen.",
+    "es": "Reseñas y calificaciones por sitio de buceo y playa; también permite reservar inmersiones guiadas y excursiones de snorkel.",
+    "pt": "Avaliações e notas por local de mergulho e praia; também é possível reservar mergulhos guiados e passeios de snorkel."
    }
   },
   {
@@ -3526,7 +5212,10 @@
    "url": "https://travel.padi.com/dive-sites/northern-curacao",
    "uitleg": {
     "nl": "Duikplekkenlijst met maximale diepte en boekingen bij PADI-centra.",
-    "en": "Dive site list with max depth and bookings at PADI centers."
+    "en": "Dive site list with max depth and bookings at PADI centers.",
+    "de": "Liste der Tauchplätze mit maximaler Tiefe und Buchung bei PADI-Centern.",
+    "es": "Lista de sitios de buceo con profundidad máxima y reservas en centros PADI.",
+    "pt": "Lista de locais de mergulho com profundidade máxima e reservas em centros PADI."
    }
   },
   {
@@ -3534,7 +5223,10 @@
    "url": "https://curacao.com/en/category/scuba-diving-and-snorkeling",
    "uitleg": {
     "nl": "Officiële lijst van 46 duik- en snorkelplekken met korte beschrijving.",
-    "en": "Official list of 46 dive and snorkel sites with short descriptions."
+    "en": "Official list of 46 dive and snorkel sites with short descriptions.",
+    "de": "Offizielle Liste mit 46 Tauch- und Schnorchelplätzen samt Kurzbeschreibung.",
+    "es": "Lista oficial de 46 sitios de buceo y snorkel con descripciones breves.",
+    "pt": "Lista oficial de 46 locais de mergulho e snorkel com descrições curtas."
    }
   },
   {
@@ -3542,119 +5234,191 @@
    "url": "https://www.duikersgids.nl/en/tugboat-curacao",
    "uitleg": {
     "nl": "Nederlandse duikplekgids met diepte, stroming en logboekreviews van duikers.",
-    "en": "Dutch dive site guide with depth, current and divers' logbook reviews."
+    "en": "Dutch dive site guide with depth, current and divers' logbook reviews.",
+    "de": "Niederländischer Tauchplatzführer mit Tiefe, Strömung und Logbuch-Bewertungen von Tauchern.",
+    "es": "Guía neerlandesa de sitios de buceo con profundidad, corriente y reseñas del logbook de otros buzos.",
+    "pt": "Guia holandês de locais de mergulho com profundidade, correnteza e avaliações do logbook de mergulhadores."
    }
   }
  ],
  "tips": [
   {
    "nl": "Een oppervlakteboei (SMB) is op Curaçao verplicht bij duiken; zorg dat je er een bij je hebt.",
-   "en": "A surface marker buoy is required for diving in Curaçao; bring one."
+   "en": "A surface marker buoy is required for diving in Curaçao; bring one.",
+   "de": "Für das Tauchen auf Curaçao ist eine Oberflächenboje Pflicht; nimm eine mit.",
+   "es": "Para bucear en Curazao se exige una boya de superficie; lleva una.",
+   "pt": "Para mergulhar em Curaçao é obrigatório usar uma boia de superfície; leve uma."
   },
   {
    "nl": "Laat niets achter in je huurauto: bij Directors Bay en andere afgelegen plekken wordt ingebroken.",
-   "en": "Leave nothing in your rental car: break-ins happen at Directors Bay and other remote spots."
+   "en": "Leave nothing in your rental car: break-ins happen at Directors Bay and other remote spots.",
+   "de": "Lass nichts im Mietwagen liegen: An der Directors Bay und anderen abgelegenen Stellen kommt es zu Autoaufbrüchen.",
+   "es": "No dejes nada en el auto alquilado: hay robos a autos en Directors Bay y otros lugares apartados.",
+   "pt": "Não deixe nada no carro alugado: há arrombamentos em Directors Bay e em outros lugares isolados."
   },
   {
    "nl": "De Superior Producer kan alleen als er geen cruiseschip aan de Mega Pier ligt; vraag je duikshop naar het schema.",
-   "en": "The Superior Producer can only be dived when no cruise ship is at the Mega Pier; ask your dive shop for the schedule."
+   "en": "The Superior Producer can only be dived when no cruise ship is at the Mega Pier; ask your dive shop for the schedule.",
+   "de": "Die Superior Producer kann nur betaucht werden, wenn kein Kreuzfahrtschiff am Mega Pier liegt; frag deinen Tauchshop nach dem Fahrplan.",
+   "es": "El Superior Producer solo se puede bucear cuando no hay ningún crucero en el Mega Pier; pregunta el calendario en tu tienda de buceo.",
+   "pt": "O Superior Producer só pode ser mergulhado quando não há nenhum navio de cruzeiro no Mega Pier; pergunte a agenda na sua loja de mergulho."
   },
   {
    "nl": "Bij Cas Abao, Porto Mari, Playa Kalki en Jan Thiel zit een duikshop op het strand waar je flessen en lood huurt en kunt spoelen.",
-   "en": "Cas Abao, Porto Mari, Playa Kalki and Jan Thiel have a dive shop on the beach for tanks, weights and rinsing."
+   "en": "Cas Abao, Porto Mari, Playa Kalki and Jan Thiel have a dive shop on the beach for tanks, weights and rinsing.",
+   "de": "Cas Abao, Porto Mari, Playa Kalki und Jan Thiel haben einen Tauchshop am Strand für Flaschen, Blei und zum Abspülen.",
+   "es": "En Cas Abao, Porto Mari, Playa Kalki y Jan Thiel hay una tienda de buceo en la playa para tanques, pesas y enjuague.",
+   "pt": "Em Cas Abao, Porto Mari, Playa Kalki e Jan Thiel há uma loja de mergulho na praia para cilindros, pesos e enxágue."
   },
   {
    "nl": "Bij Playa Piskado zie je bijna altijd schildpadden; ga vroeg, voor de tourbussen komen.",
-   "en": "You'll almost always see turtles at Playa Piskado; go early, before the tour buses arrive."
+   "en": "You'll almost always see turtles at Playa Piskado; go early, before the tour buses arrive.",
+   "de": "An der Playa Piskado siehst du fast immer Schildkröten; geh früh hin, bevor die Touristenbusse kommen.",
+   "es": "En Playa Piskado casi siempre verás tortugas; ve temprano, antes de que lleguen los buses de turistas.",
+   "pt": "Em Playa Piskado você quase sempre vê tartarugas; vá cedo, antes de chegarem os ônibus de turismo."
   },
   {
    "nl": "Watamula, Mushroom Forest, Beacon Point en Oostpunt kan je alleen met de boot; die plekken hebben vaak stroming.",
-   "en": "Watamula, Mushroom Forest, Beacon Point and East Point are boat-only and often have current."
+   "en": "Watamula, Mushroom Forest, Beacon Point and East Point are boat-only and often have current.",
+   "de": "Watamula, Mushroom Forest, Beacon Point und East Point sind nur per Boot erreichbar und haben oft Strömung.",
+   "es": "Watamula, Mushroom Forest, Beacon Point y East Point son solo en bote y a menudo tienen corriente.",
+   "pt": "Watamula, Mushroom Forest, Beacon Point e East Point só são acessíveis de barco e muitas vezes têm correnteza."
   },
   {
    "nl": "Klein Curaçao ligt 1,5 uur varen; de overtocht is vaak ruw, neem iets tegen zeeziekte.",
-   "en": "Klein Curaçao is a 1.5-hour boat ride; the crossing is often rough, so bring seasickness medicine."
+   "en": "Klein Curaçao is a 1.5-hour boat ride; the crossing is often rough, so bring seasickness medicine.",
+   "de": "Klein Curaçao ist 1,5 Stunden mit dem Boot entfernt; die Überfahrt ist oft rau, nimm also Mittel gegen Seekrankheit mit.",
+   "es": "Klein Curazao queda a 1,5 horas en bote; la travesía suele ser agitada, así que lleva medicina para el mareo.",
+   "pt": "Klein Curaçao fica a 1,5 hora de barco; a travessia costuma ser agitada, então leve remédio para enjoo."
   }
  ],
  "faq": [
   {
    "q": {
     "nl": "Wat is de beste duikplek op Curaçao?",
-    "en": "What is the best dive site in Curaçao?"
+    "en": "What is the best dive site in Curaçao?",
+    "de": "Was ist der beste Tauchplatz auf Curaçao?",
+    "es": "¿Cuál es el mejor sitio de buceo en Curazao?",
+    "pt": "Qual é o melhor local de mergulho em Curaçao?"
    },
    "a": {
     "nl": "Voor beginners: Tugboat (wrak op 5 m) en Playa Kalki. Voor ervaren duikers: de Superior Producer (wrak op 30 m), Watamula en Beacon Point. Klein Curaçao en Oostpunt hebben het meest ongerepte koraal.",
-    "en": "For beginners: Tugboat (wreck at 16 ft) and Playa Kalki. For experienced divers: the Superior Producer (wreck at 100 ft), Watamula and Beacon Point. Klein Curaçao and East Point have the most untouched coral."
+    "en": "For beginners: Tugboat (wreck at 16 ft) and Playa Kalki. For experienced divers: the Superior Producer (wreck at 100 ft), Watamula and Beacon Point. Klein Curaçao and East Point have the most untouched coral.",
+    "de": "Für Anfänger: Tugboat (Wrack in 16 ft) und Playa Kalki. Für erfahrene Taucher: die Superior Producer (Wrack in 100 ft), Watamula und Beacon Point. Klein Curaçao und East Point haben die unberührtesten Korallen.",
+    "es": "Para principiantes: Tugboat (naufragio a 16 ft) y Playa Kalki. Para buzos con experiencia: el Superior Producer (naufragio a 100 ft), Watamula y Beacon Point. Klein Curazao y East Point tienen los corales más vírgenes.",
+    "pt": "Para iniciantes: Tugboat (naufrágio a 16 ft) e Playa Kalki. Para mergulhadores experientes: o Superior Producer (naufrágio a 100 ft), Watamula e Beacon Point. Klein Curaçao e East Point têm os corais mais intocados."
    }
   },
   {
    "q": {
     "nl": "Waar zie je schildpadden op Curaçao?",
-    "en": "Where can you see turtles in Curaçao?"
+    "en": "Where can you see turtles in Curaçao?",
+    "de": "Wo kann man auf Curaçao Schildkröten sehen?",
+    "es": "¿Dónde se pueden ver tortugas en Curazao?",
+    "pt": "Onde dá para ver tartarugas em Curaçao?"
    },
    "a": {
     "nl": "Playa Piskado (Playa Grandi) in Westpunt is de bekendste plek: schildpadden komen af op de vissers. Ook bij Playa Lagun, Directors Bay, Daaibooi en Klein Curaçao zie je ze vaak.",
-    "en": "Playa Piskado (Playa Grandi) in Westpunt is the best-known spot: turtles gather near the fishermen. You'll also often see them at Playa Lagun, Directors Bay, Daaibooi and Klein Curaçao."
+    "en": "Playa Piskado (Playa Grandi) in Westpunt is the best-known spot: turtles gather near the fishermen. You'll also often see them at Playa Lagun, Directors Bay, Daaibooi and Klein Curaçao.",
+    "de": "Die Playa Piskado (Playa Grandi) in Westpunt ist der bekannteste Ort: Dort versammeln sich Schildkröten bei den Fischern. Oft siehst du sie auch an der Playa Lagun, der Directors Bay, in Daaibooi und auf Klein Curaçao.",
+    "es": "Playa Piskado (Playa Grandi) en Westpunt es el lugar más conocido: las tortugas se juntan cerca de los pescadores. También las verás a menudo en Playa Lagun, Directors Bay, Daaibooi y Klein Curazao.",
+    "pt": "Playa Piskado (Playa Grandi), em Westpunt, é o lugar mais conhecido: as tartarugas se reúnem perto dos pescadores. Você também as vê com frequência em Playa Lagun, Directors Bay, Daaibooi e Klein Curaçao."
    }
   },
   {
    "q": {
     "nl": "Kun je op Curaçao zelf vanaf de kant duiken?",
-    "en": "Can you shore dive on your own in Curaçao?"
+    "en": "Can you shore dive on your own in Curaçao?",
+    "de": "Kann man auf Curaçao allein vom Ufer aus tauchen?",
+    "es": "¿Se puede bucear solo desde la orilla en Curazao?",
+    "pt": "Dá para mergulhar sozinho a partir da costa em Curaçao?"
    },
    "a": {
     "nl": "Ja. De meeste plekken zijn kantduiken met een huurauto en huurflessen. Je hebt een buddy en een verplichte oppervlakteboei nodig. Bekende kantduiken zijn Tugboat, Cas Abao, Porto Mari, Playa Kalki en Directors Bay.",
-    "en": "Yes. Most sites are shore dives you can do with a rental car and rented tanks. You need a buddy and a required surface marker buoy. Popular shore dives are Tugboat, Cas Abao, Porto Mari, Playa Kalki and Directors Bay."
+    "en": "Yes. Most sites are shore dives you can do with a rental car and rented tanks. You need a buddy and a required surface marker buoy. Popular shore dives are Tugboat, Cas Abao, Porto Mari, Playa Kalki and Directors Bay.",
+    "de": "Ja. Die meisten Plätze sind Landtauchgänge, die du mit Mietwagen und geliehenen Flaschen machen kannst. Du brauchst einen Buddy und eine Oberflächenboje, die Pflicht ist. Beliebte Landtauchgänge sind Tugboat, Cas Abao, Porto Mari, Playa Kalki und die Directors Bay.",
+    "es": "Sí. La mayoría de los sitios son inmersiones desde la orilla que puedes hacer con un auto alquilado y tanques de alquiler. Necesitas un compañero de buceo y una boya de superficie, que es obligatoria. Las inmersiones desde la orilla más populares son Tugboat, Cas Abao, Porto Mari, Playa Kalki y Directors Bay.",
+    "pt": "Sim. A maioria dos locais são mergulhos a partir da costa, que você pode fazer com carro alugado e cilindros alugados. Você precisa de um parceiro de mergulho e de uma boia de superfície, que é obrigatória. Mergulhos populares a partir da costa são Tugboat, Cas Abao, Porto Mari, Playa Kalki e Directors Bay."
    }
   },
   {
    "q": {
     "nl": "Wat kost toegang tot de duikstranden?",
-    "en": "How much is entry to the dive beaches?"
+    "en": "How much is entry to the dive beaches?",
+    "de": "Wie viel kostet der Eintritt zu den Tauchstränden?",
+    "es": "¿Cuánto cuesta la entrada a las playas de buceo?",
+    "pt": "Quanto custa a entrada nas praias de mergulho?"
    },
    "a": {
     "nl": "De meeste plekken zijn gratis. Cas Abao vraagt $6 per auto (zondag $7), Porto Mari $3 per persoon en Jan Thiel $3 per persoon overdag.",
-    "en": "Most sites are free. Cas Abao charges $6 per car ($7 on Sundays), Porto Mari $3 per person and Jan Thiel $3 per person during the day."
+    "en": "Most sites are free. Cas Abao charges $6 per car ($7 on Sundays), Porto Mari $3 per person and Jan Thiel $3 per person during the day.",
+    "de": "Die meisten Plätze sind kostenlos. Cas Abao kostet 6 $ pro Auto (sonntags 7 $), Porto Mari 3 $ pro Person und Jan Thiel tagsüber 3 $ pro Person.",
+    "es": "La mayoría de los sitios son gratis. Cas Abao cobra $6 por auto ($7 los domingos), Porto Mari $3 por persona y Jan Thiel $3 por persona durante el día.",
+    "pt": "A maioria dos locais é gratuita. Cas Abao cobra US$ 6 por carro (US$ 7 aos domingos), Porto Mari US$ 3 por pessoa e Jan Thiel US$ 3 por pessoa durante o dia."
    }
   },
   {
    "q": {
     "nl": "Hoe diep ligt de Superior Producer?",
-    "en": "How deep is the Superior Producer?"
+    "en": "How deep is the Superior Producer?",
+    "de": "Wie tief liegt die Superior Producer?",
+    "es": "¿A qué profundidad está el Superior Producer?",
+    "pt": "Qual é a profundidade do Superior Producer?"
    },
    "a": {
     "nl": "Het vrachtschip ligt rechtop op ongeveer 30 m, met de stuurhut rond 24 m. Het is een duik voor ervaren duikers en kan alleen als er geen cruiseschip ligt.",
-    "en": "The freighter sits upright at about 100 ft, with the wheelhouse around 80 ft. It is a dive for experienced divers and only possible when no cruise ship is docked."
+    "en": "The freighter sits upright at about 100 ft, with the wheelhouse around 80 ft. It is a dive for experienced divers and only possible when no cruise ship is docked.",
+    "de": "Der Frachter liegt aufrecht in etwa 100 ft, das Steuerhaus in rund 80 ft. Der Tauchgang ist für erfahrene Taucher und nur möglich, wenn kein Kreuzfahrtschiff angedockt ist.",
+    "es": "El carguero está erguido a unos 100 ft, con la timonera a unos 80 ft. Es una inmersión para buzos con experiencia y solo es posible cuando no hay ningún crucero atracado.",
+    "pt": "O cargueiro está em pé a cerca de 100 ft, com a casa do leme a cerca de 80 ft. É um mergulho para mergulhadores experientes e só é possível quando não há nenhum navio de cruzeiro atracado."
    }
   },
   {
    "q": {
     "nl": "Waar kun je het beste snorkelen op Curaçao?",
-    "en": "Where is the best snorkeling in Curaçao?"
+    "en": "Where is the best snorkeling in Curaçao?",
+    "de": "Wo kann man auf Curaçao am besten schnorcheln?",
+    "es": "¿Dónde se puede hacer el mejor snorkel en Curazao?",
+    "pt": "Onde é o melhor lugar para fazer snorkel em Curaçao?"
    },
    "a": {
     "nl": "Tugboat in Caracasbaai (wrak op 5 m), Playa Piskado (schildpadden), Playa Lagun, Grote Knip en Cas Abao. De Blue Room is een grot waar je met een boottocht in snorkelt.",
-    "en": "Tugboat in Caracas Bay (wreck at 16 ft), Playa Piskado (turtles), Playa Lagun, Grote Knip and Cas Abao. The Blue Room is a sea cave you snorkel into on a boat trip."
+    "en": "Tugboat in Caracas Bay (wreck at 16 ft), Playa Piskado (turtles), Playa Lagun, Grote Knip and Cas Abao. The Blue Room is a sea cave you snorkel into on a boat trip.",
+    "de": "Tugboat in der Caracas Bay (Wrack in 16 ft), Playa Piskado (Schildkröten), Playa Lagun, Grote Knip und Cas Abao. Der Blue Room ist eine Meereshöhle, in die du bei einem Bootsausflug hineinschnorchelst.",
+    "es": "Tugboat en Caracas Bay (naufragio a 16 ft), Playa Piskado (tortugas), Playa Lagun, Grote Knip y Cas Abao. El Blue Room es una cueva marina a la que entras haciendo snorkel en una excursión en bote.",
+    "pt": "Tugboat na Caracas Bay (naufrágio a 16 ft), Playa Piskado (tartarugas), Playa Lagun, Grote Knip e Cas Abao. O Blue Room é uma caverna marinha em que você entra com snorkel num passeio de barco."
    }
   },
   {
    "q": {
     "nl": "Waar is de Mushroom Forest?",
-    "en": "Where is Mushroom Forest?"
+    "en": "Where is Mushroom Forest?",
+    "de": "Wo ist der Mushroom Forest?",
+    "es": "¿Dónde queda el Mushroom Forest?",
+    "pt": "Onde fica o Mushroom Forest?"
    },
    "a": {
     "nl": "Bij Playa Santa Cruz aan de westkust. Je bereikt hem per boot, vaak gecombineerd met de Blue Room. De koraalformaties lijken op grote paddenstoelen.",
-    "en": "Near Playa Santa Cruz on the west coast. You reach it by boat, often combined with the Blue Room. The coral formations look like giant mushrooms."
+    "en": "Near Playa Santa Cruz on the west coast. You reach it by boat, often combined with the Blue Room. The coral formations look like giant mushrooms.",
+    "de": "In der Nähe der Playa Santa Cruz an der Westküste. Du erreichst ihn per Boot, oft in Kombination mit dem Blue Room. Die Korallenformationen sehen aus wie riesige Pilze.",
+    "es": "Cerca de Playa Santa Cruz, en la costa oeste. Se llega en bote, a menudo combinado con el Blue Room. Las formaciones de coral parecen hongos gigantes.",
+    "pt": "Perto de Playa Santa Cruz, na costa oeste. Chega-se de barco, muitas vezes combinado com o Blue Room. As formações de coral parecem cogumelos gigantes."
    }
   },
   {
    "q": {
     "nl": "Hoeveel duikplekken heeft Curaçao?",
-    "en": "How many dive sites does Curaçao have?"
+    "en": "How many dive sites does Curaçao have?",
+    "de": "Wie viele Tauchplätze hat Curaçao?",
+    "es": "¿Cuántos sitios de buceo tiene Curazao?",
+    "pt": "Quantos locais de mergulho Curaçao tem?"
    },
    "a": {
     "nl": "Het toeristenbureau noemt meer dan 70 duikplekken; op deze pagina staan er 61 met diepte, toegang en scores.",
-    "en": "The tourist board cites more than 70 dive sites; this page lists 61 with depth, access and ratings."
+    "en": "The tourist board cites more than 70 dive sites; this page lists 61 with depth, access and ratings.",
+    "de": "Die Tourismusbehörde nennt mehr als 70 Tauchplätze; diese Seite listet 61 mit Tiefe, Zugang und Bewertungen.",
+    "es": "La oficina de turismo menciona más de 70 sitios de buceo; esta página lista 61 con profundidad, acceso y calificaciones.",
+    "pt": "O órgão de turismo cita mais de 70 locais de mergulho; esta página lista 61 com profundidade, acesso e avaliações."
    }
   }
  ],
@@ -3701,10 +5465,21 @@
    "What are the best dive sites in Curaçao for beginners?",
    "Where can I snorkel with turtles in Curaçao?",
    "Which Curaçao dive sites can I shore dive on my own?"
+  ],
+  "de": [
+   "Was sind die besten Tauchplätze auf Curaçao für Anfänger?",
+   "Wo kann ich auf Curaçao mit Schildkröten schnorcheln?",
+   "Bei welchen Tauchplätzen auf Curaçao kann ich allein vom Ufer tauchen?"
+  ],
+  "es": [
+   "¿Cuáles son los mejores sitios de buceo en Curazao para principiantes?",
+   "¿Dónde puedo hacer snorkel con tortugas en Curazao?",
+   "¿En qué sitios de buceo de Curazao puedo bucear solo desde la orilla?"
+  ],
+  "pt": [
+   "Quais são os melhores locais de mergulho em Curaçao para iniciantes?",
+   "Onde posso fazer snorkel com tartarugas em Curaçao?",
+   "Em quais locais de mergulho de Curaçao posso mergulhar sozinho a partir da costa?"
   ]
- },
- "talen": [
-  "nl",
-  "en"
- ]
+ }
 }
