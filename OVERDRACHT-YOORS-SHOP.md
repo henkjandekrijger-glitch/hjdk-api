@@ -42,7 +42,7 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 7. **Volume.** Bij $0,01 CPA zo'n 20 à 25 echte mensen per dag; met 0,2% koopkans is 0 verkopen te verwachten. Meer volume via Google Shopping of een hoger bod op de beste producten, alleen op Henkjans woord.
 
 ## Campagnes
-- **PropellerAds** (In-Page, NL mobiel, CPA $0,01): 20 testcampagnes van 20 okt, een per product (12032192-12032229, naam `SHOP-LUS TEST 2026-10-20 p=<product>`), plus Skull 12011189 en Whiskyset 12016783 (ook het sjabloon voor de kopieën). De live stand bovenaan toont wat er nu loopt.
+- **PropellerAds** (In-Page, NL mobiel, CPA $0,01): 20 testcampagnes van 20 okt, een per product (12032192-12032229, naam `SHOP-LUS TEST 2026-10-20 p=<product>`), plus Skull 12011189 en Whiskyset 12016783 (ook het sjabloon voor de kopieën). Lokker: **12032438** `SHOP-LUS LOKKER 2026-10-20 p=oc_4174004451622913` (Uil Spaarpot, $10/dag, $30 totaal, link utm_campaign=lokker-51622913); shoptest en stopregel laten hem met rust. De advertenties noemen de prijs die nu in de shop staat (€16,59, elders €35,50); gaat de prijs omlaag, dan de drie creatives (27577583-85) bijwerken. De live stand bovenaan toont wat er nu loopt.
 - **Mondiad:** alle 21 shopcampagnes staan op gepauzeerd (stand 20 okt).
 
 ## Waar de stand staat
@@ -69,6 +69,7 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - PropellerAds-lus: repo propellerads-mcp, `lib/shop.ts` en `app/api/statistiek/route.ts`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 2026-10-20: Lokkercampagne live op Henkjans woord ("Zet de lokker maar live in aparte campagne"): PA 12032438, kopie van test 12032192 met eigen advertenties en link. Shopprijs stond nog op €16,59, dus de advertentie noemt €16,59 (53% onder €35,50 elders), niet de lokkerprijs. propellerads-mcp 6138321: `SHOP-LUS LOKKER` valt buiten shoptest-opruimen ("dubbel") en de stopregel.
 - 2026-10-20: Lokker: `/api/shop/lokker` (lib/shopkies.js lokkers) rangschikt producten om onder de inkoopprijs te zetten (vraag uit Demand Radar, korting all-in tegen elders, bundel per merk). Beste: 3D Houten Uil Spaarpot (oc_4174004451622913), voorstel €9,95 (thuis €16,40 tegen €35,50 elders). Babita kan de pagina openen met haar eigen link (`?k=`). Prijs wijzigen doet de shop; daarna een eigen lokkercampagne. Ook: presterend en veelbelovend krijgen altijd een plek in de dagkeuze (5 van de 8 veelbelovende gestart, 12032272-12032278); Mondiad per product (`/api/shop/mdtest`) staat klaar maar is nog niet gestart.
 - 2026-10-20: Shoptest lag stil: 18 testcampagnes van 19 okt na $0,11-0,15 gestopt door de relatieve stopregel, en alle starts van 20 okt geweigerd omdat "2026-10-20" in de naam als Amazon-tag (-20) gold. Beide hersteld in propellerads-mcp (fa2a46e): stopregel laat SHOP-LUS TEST aan het oordeel per product, tag moet een letter hebben. Daarna 20 nieuwe testcampagnes gestart (12032192-12032229). Mondiad: alle 21 shopcampagnes gepauzeerd.
 - 2026-10-19: Tweede doorlichting (andere chat) verwerkt in de lekkenlijst. Dagkeuze adverteert alleen wat all-in niet duurder is dan elders (181 afgewezen). yoors.shop-welkomstpagina met "100.000 klanten" gemeld als eerlijkheidsfout.
