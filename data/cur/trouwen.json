@@ -3,35 +3,56 @@
  "peildatum": "2026-10-20",
  "onderwerp": {
   "nl": "trouwlocatie of weddingplanner",
-  "en": "wedding venue or planner"
+  "en": "wedding venue or planner",
+  "de": "Hochzeitslocation oder Hochzeitsplaner",
+  "es": "lugar de boda o organizador de bodas",
+  "pt": "local de casamento ou cerimonialista"
  },
  "h1": {
   "nl": "Trouwen op Curaçao: welke locatie of weddingplanner past bij jullie?",
-  "en": "Getting married in Curaçao: which venue or planner fits you?"
+  "en": "Getting married in Curaçao: which venue or planner fits you?",
+  "de": "Heiraten auf Curaçao: Welche Location oder welcher Planer passt zu dir?",
+  "es": "Casarse en Curazao: ¿qué lugar u organizador es el indicado para ti?",
+  "pt": "Casar em Curaçao: qual local ou cerimonialista combina com você?"
  },
  "titel": {
   "nl": "Trouwen op Curaçao: {n} locaties en weddingplanners",
-  "en": "Curaçao wedding: {n} venues and wedding planners"
+  "en": "Curaçao wedding: {n} venues and wedding planners",
+  "de": "Hochzeit auf Curaçao: {n} Locations und Hochzeitsplaner",
+  "es": "Boda en Curazao: {n} lugares y organizadores de bodas",
+  "pt": "Casamento em Curaçao: {n} locais e cerimonialistas"
  },
  "metaDesc": {
   "nl": "{n} trouwlocaties en weddingplanners op Curaçao: resorts, landhuizen en stranden, met Tripadvisor-scores, pakketprijzen en papieren.",
-  "en": "{n} wedding venues and planners in Curaçao: resorts, plantation houses and beaches, with Tripadvisor ratings, package prices and paperwork."
+  "en": "{n} wedding venues and planners in Curaçao: resorts, plantation houses and beaches, with Tripadvisor ratings, package prices and paperwork.",
+  "de": "{n} Hochzeitslocations und Planer auf Curaçao: Resorts, Plantagenhäuser und Strände, mit Tripadvisor-Bewertungen, Paketpreisen und Papierkram.",
+  "es": "{n} lugares y organizadores de bodas en Curazao: resorts, casas de plantación y playas, con calificaciones de Tripadvisor, precios de paquetes y trámites.",
+  "pt": "{n} locais e cerimonialistas de casamento em Curaçao: resorts, casas de plantação e praias, com avaliações do Tripadvisor, preços de pacotes e documentação."
  },
  "kort": {
   "nl": "Een bruiloft op Curaçao kost gemiddeld zo'n $10.000 per stel; resortpakketten lopen van gratis (bij genoeg overnachtingen) tot boven $12.000. Kleinschalig kan bij Zoetry (tot ongeveer 20 gasten) of Papagayo (tot ongeveer 30), groot bij Dreams of ACOYA. Voor een wettig huwelijk lever je de papieren minstens 2 maanden vooraf in bij de burgerlijke stand.",
-  "en": "A Curaçao wedding averages about $10,000 per couple; resort packages run from free (with enough room nights) to over $12,000. Go small at Zoetry (about 20 guests) or Papagayo (about 30), or big at Dreams or ACOYA. For a legal marriage, file your documents with the civil registry at least 2 months ahead."
+  "en": "A Curaçao wedding averages about $10,000 per couple; resort packages run from free (with enough room nights) to over $12,000. Go small at Zoetry (about 20 guests) or Papagayo (about 30), or big at Dreams or ACOYA. For a legal marriage, file your documents with the civil registry at least 2 months ahead.",
+  "de": "Eine Hochzeit auf Curaçao kostet im Schnitt etwa 10.000 $ pro Paar; Resortpakete reichen von kostenlos (bei genug Zimmernächten) bis über 12.000 $. Klein feierst du im Zoetry (etwa 20 Gäste) oder im Papagayo (etwa 30), groß im Dreams oder ACOYA. Für eine rechtsgültige Ehe reichst du deine Unterlagen mindestens 2 Monate vorher beim Standesamt ein.",
+  "es": "Una boda en Curazao cuesta en promedio unos $10.000 por pareja; los paquetes de resort van desde gratis (con suficientes noches de habitación) hasta más de $12.000. Para algo pequeño, Zoetry (unos 20 invitados) o Papagayo (unos 30); para algo grande, Dreams o ACOYA. Para un matrimonio legal, presenta tus documentos en el registro civil con al menos 2 meses de anticipación.",
+  "pt": "Um casamento em Curaçao custa em média cerca de US$ 10.000 por casal; os pacotes de resort vão de grátis (com diárias suficientes) a mais de US$ 12.000. Para algo pequeno, Zoetry (cerca de 20 convidados) ou Papagayo (cerca de 30); para algo grande, Dreams ou ACOYA. Para um casamento legal, entregue seus documentos ao registro civil com pelo menos 2 meses de antecedência."
  },
  "vragen": [
   {
    "q": {
     "nl": "Wat zoek je?",
-    "en": "What are you looking for?"
+    "en": "What are you looking for?",
+    "de": "Wonach suchst du?",
+    "es": "¿Qué estás buscando?",
+    "pt": "O que você está procurando?"
    },
    "opties": [
     {
      "label": {
       "nl": "Een trouwlocatie",
-      "en": "A venue"
+      "en": "A venue",
+      "de": "Eine Location",
+      "es": "Un lugar",
+      "pt": "Um local"
      },
      "plus": [
       "locatie"
@@ -42,7 +63,10 @@
     {
      "label": {
       "nl": "Een weddingplanner",
-      "en": "A wedding planner"
+      "en": "A wedding planner",
+      "de": "Einen Hochzeitsplaner",
+      "es": "Un organizador de bodas",
+      "pt": "Um cerimonialista"
      },
      "plus": [
       "planner"
@@ -55,13 +79,19 @@
   {
    "q": {
     "nl": "Welke sfeer?",
-    "en": "What style?"
+    "en": "What style?",
+    "de": "Welcher Stil?",
+    "es": "¿Qué estilo?",
+    "pt": "Qual estilo?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "Doesn't matter"
+      "en": "Doesn't matter",
+      "de": "Egal",
+      "es": "No importa",
+      "pt": "Tanto faz"
      },
      "plus": [],
      "min": [],
@@ -70,7 +100,10 @@
     {
      "label": {
       "nl": "Op het strand",
-      "en": "On the beach"
+      "en": "On the beach",
+      "de": "Am Strand",
+      "es": "En la playa",
+      "pt": "Na praia"
      },
      "plus": [
       "strand"
@@ -81,7 +114,10 @@
     {
      "label": {
       "nl": "Historisch landhuis",
-      "en": "Historic plantation house"
+      "en": "Historic plantation house",
+      "de": "Historisches Plantagenhaus",
+      "es": "Casa de plantación histórica",
+      "pt": "Casa de plantação histórica"
      },
      "plus": [
       "landhuis"
@@ -92,7 +128,10 @@
     {
      "label": {
       "nl": "Resort met alles geregeld",
-      "en": "Resort with everything handled"
+      "en": "Resort with everything handled",
+      "de": "Resort, das alles übernimmt",
+      "es": "Resort que se encarga de todo",
+      "pt": "Resort que cuida de tudo"
      },
      "plus": [
       "resort",
@@ -106,13 +145,19 @@
   {
    "q": {
     "nl": "Hoeveel gasten?",
-    "en": "How many guests?"
+    "en": "How many guests?",
+    "de": "Wie viele Gäste?",
+    "es": "¿Cuántos invitados?",
+    "pt": "Quantos convidados?"
    },
    "opties": [
     {
      "label": {
       "nl": "Weet ik nog niet",
-      "en": "Not sure yet"
+      "en": "Not sure yet",
+      "de": "Noch unklar",
+      "es": "Aún no lo sé",
+      "pt": "Ainda não sei"
      },
      "plus": [],
      "min": [],
@@ -121,7 +166,10 @@
     {
      "label": {
       "nl": "Klein, tot ongeveer 30",
-      "en": "Small, up to about 30"
+      "en": "Small, up to about 30",
+      "de": "Klein, bis etwa 30",
+      "es": "Pequeña, hasta unos 30",
+      "pt": "Pequeno, até cerca de 30"
      },
      "plus": [
       "kleinschalig"
@@ -134,7 +182,10 @@
     {
      "label": {
       "nl": "Groot feest",
-      "en": "Big party"
+      "en": "Big party",
+      "de": "Große Feier",
+      "es": "Gran fiesta",
+      "pt": "Festa grande"
      },
      "plus": [
       "groot"
@@ -149,13 +200,19 @@
   {
    "q": {
     "nl": "Budget?",
-    "en": "Budget?"
+    "en": "Budget?",
+    "de": "Budget?",
+    "es": "¿Presupuesto?",
+    "pt": "Orçamento?"
    },
    "opties": [
     {
      "label": {
       "nl": "Gemiddeld",
-      "en": "Mid-range"
+      "en": "Mid-range",
+      "de": "Mittel",
+      "es": "Medio",
+      "pt": "Médio"
      },
      "plus": [],
      "min": [],
@@ -164,7 +221,10 @@
     {
      "label": {
       "nl": "Zo voordelig mogelijk",
-      "en": "As low as possible"
+      "en": "As low as possible",
+      "de": "So niedrig wie möglich",
+      "es": "Lo más bajo posible",
+      "pt": "O mais baixo possível"
      },
      "plus": [
       "budget"
@@ -177,7 +237,10 @@
     {
      "label": {
       "nl": "Luxe",
-      "en": "Luxury"
+      "en": "Luxury",
+      "de": "Luxus",
+      "es": "Lujo",
+      "pt": "Luxo"
      },
      "plus": [
       "luxe"
@@ -197,7 +260,10 @@
    "url": null,
    "soort": {
     "nl": "weddingplanner",
-    "en": "wedding planner"
+    "en": "wedding planner",
+    "de": "Hochzeitsplaner",
+    "es": "organizador de bodas",
+    "pt": "cerimonialista"
    },
    "plaats": null,
    "tags": [
@@ -208,11 +274,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance",
@@ -225,7 +297,10 @@
    "url": null,
    "soort": {
     "nl": "weddingplanner",
-    "en": "wedding planner"
+    "en": "wedding planner",
+    "de": "Hochzeitsplaner",
+    "es": "organizador de bodas",
+    "pt": "cerimonialista"
    },
    "plaats": null,
    "tags": [
@@ -236,11 +311,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance"
@@ -252,7 +333,10 @@
    "url": null,
    "soort": {
     "nl": "weddingplanner",
-    "en": "wedding planner"
+    "en": "wedding planner",
+    "de": "Hochzeitsplaner",
+    "es": "organizador de bodas",
+    "pt": "cerimonialista"
    },
    "plaats": null,
    "tags": [
@@ -263,11 +347,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance"
@@ -279,7 +369,10 @@
    "url": null,
    "soort": {
     "nl": "weddingplanner",
-    "en": "wedding planner"
+    "en": "wedding planner",
+    "de": "Hochzeitsplaner",
+    "es": "organizador de bodas",
+    "pt": "cerimonialista"
    },
    "plaats": null,
    "tags": [
@@ -290,11 +383,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance",
@@ -307,7 +406,10 @@
    "url": null,
    "soort": {
     "nl": "weddingplanner",
-    "en": "wedding planner"
+    "en": "wedding planner",
+    "de": "Hochzeitsplaner",
+    "es": "organizador de bodas",
+    "pt": "cerimonialista"
    },
    "plaats": null,
    "tags": [
@@ -318,11 +420,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance"
@@ -334,7 +442,10 @@
    "url": null,
    "soort": {
     "nl": "weddingplanner",
-    "en": "wedding planner"
+    "en": "wedding planner",
+    "de": "Hochzeitsplaner",
+    "es": "organizador de bodas",
+    "pt": "cerimonialista"
    },
    "plaats": null,
    "tags": [
@@ -345,11 +456,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance"
@@ -361,7 +478,10 @@
    "url": null,
    "soort": {
     "nl": "weddingplanner",
-    "en": "wedding planner"
+    "en": "wedding planner",
+    "de": "Hochzeitsplaner",
+    "es": "organizador de bodas",
+    "pt": "cerimonialista"
    },
    "plaats": null,
    "tags": [
@@ -372,11 +492,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance"
@@ -388,7 +514,10 @@
    "url": null,
    "soort": {
     "nl": "weddingplanner",
-    "en": "wedding planner"
+    "en": "wedding planner",
+    "de": "Hochzeitsplaner",
+    "es": "organizador de bodas",
+    "pt": "cerimonialista"
    },
    "plaats": null,
    "tags": [
@@ -399,11 +528,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://beachbride.com/vendors/planner/curacao/"
@@ -415,7 +550,10 @@
    "url": null,
    "soort": {
     "nl": "weddingplanner",
-    "en": "wedding planner"
+    "en": "wedding planner",
+    "de": "Hochzeitsplaner",
+    "es": "organizador de bodas",
+    "pt": "cerimonialista"
    },
    "plaats": null,
    "tags": [
@@ -426,11 +564,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://beachbride.com/vendors/planner/curacao/"
@@ -442,7 +586,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Zuidwestkust",
    "tags": [
@@ -455,21 +602,33 @@
    "feiten": [
     {
      "nl": "Alleen volwassenen",
-     "en": "Adults only"
+     "en": "Adults only",
+     "de": "Nur für Erwachsene",
+     "es": "Solo adultos",
+     "pt": "Somente adultos"
     },
     {
      "nl": "All-inclusive",
-     "en": "All-inclusive"
+     "en": "All-inclusive",
+     "de": "All-inclusive",
+     "es": "Todo incluido",
+     "pt": "All inclusive"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance",
@@ -483,7 +642,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Zuidwestkust",
    "tags": [
@@ -496,7 +658,10 @@
    "feiten": [
     {
      "nl": "Van elopement tot meerdaags feest",
-     "en": "From elopement to multi-day event"
+     "en": "From elopement to multi-day event",
+     "de": "Von der Hochzeit zu zweit bis zum mehrtägigen Event",
+     "es": "Desde una boda íntima hasta un evento de varios días",
+     "pt": "De um casamento a dois a um evento de vários dias"
     }
    ],
    "scores": [
@@ -511,11 +676,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance",
@@ -529,7 +700,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Zuidwestkust, 20 min van Willemstad",
    "tags": [
@@ -543,7 +717,10 @@
    "feiten": [
     {
      "nl": "All-inclusive, gericht op prijs",
-     "en": "Value-focused all-inclusive"
+     "en": "Value-focused all-inclusive",
+     "de": "All-inclusive mit gutem Preis-Leistungs-Verhältnis",
+     "es": "Todo incluido con buena relación calidad-precio",
+     "pt": "All inclusive com bom custo-benefício"
     }
    ],
    "scores": [
@@ -558,11 +735,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance",
@@ -576,7 +759,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Zuidwestkust",
    "tags": [
@@ -590,17 +776,26 @@
    "feiten": [
     {
      "nl": "Tot ongeveer 20 gasten",
-     "en": "Up to about 20 guests"
+     "en": "Up to about 20 guests",
+     "de": "Bis etwa 20 Gäste",
+     "es": "Hasta unos 20 invitados",
+     "pt": "Até cerca de 20 convidados"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://blog.destinationweddings.com/best-destination-wedding-venues-curacao",
@@ -613,7 +808,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Piscadera Bay",
    "tags": [
@@ -625,11 +823,17 @@
    "feiten": [
     {
      "nl": "Klein tot middelgroot",
-     "en": "Intimate to mid-size"
+     "en": "Intimate to mid-size",
+     "de": "Von klein bis mittelgroß",
+     "es": "De íntimo a mediano",
+     "pt": "De íntimo a médio porte"
     },
     {
      "nl": "Pakketten in prijsklassen",
-     "en": "Tiered packages"
+     "en": "Tiered packages",
+     "de": "Gestaffelte Pakete",
+     "es": "Paquetes por niveles",
+     "pt": "Pacotes em níveis"
     }
    ],
    "scores": [
@@ -644,11 +848,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance",
@@ -662,7 +872,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -683,11 +896,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance",
@@ -701,7 +920,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Mambo Beach",
    "tags": [
@@ -724,11 +946,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance",
@@ -742,7 +970,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Mambo Beach",
    "tags": [
@@ -765,11 +996,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance",
@@ -783,7 +1020,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Dr. Hugenholtzweg, Willemstad",
    "tags": [
@@ -795,11 +1035,17 @@
    "feiten": [
     {
      "nl": "Eigen weddingplanners",
-     "en": "In-house wedding planners"
+     "en": "In-house wedding planners",
+     "de": "Hauseigene Hochzeitsplaner",
+     "es": "Organizadores de bodas propios",
+     "pt": "Cerimonialistas próprios"
     },
     {
      "nl": "Binnen- en buitenruimtes",
-     "en": "Indoor and outdoor spaces"
+     "en": "Indoor and outdoor spaces",
+     "de": "Räume drinnen und draußen",
+     "es": "Espacios interiores y exteriores",
+     "pt": "Espaços internos e externos"
     }
    ],
    "scores": [
@@ -814,11 +1060,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance",
@@ -832,7 +1084,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -845,7 +1100,10 @@
    "feiten": [
     {
      "nl": "Privéstrand",
-     "en": "Private beach"
+     "en": "Private beach",
+     "de": "Privatstrand",
+     "es": "Playa privada",
+     "pt": "Praia privativa"
     }
    ],
    "scores": [
@@ -860,11 +1118,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance",
@@ -877,7 +1141,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -890,11 +1157,17 @@
    "feiten": [
     {
      "nl": "Tot ongeveer 30 gasten",
-     "en": "Up to about 30 guests"
+     "en": "Up to about 30 guests",
+     "de": "Bis etwa 30 Gäste",
+     "es": "Hasta unos 30 invitados",
+     "pt": "Até cerca de 30 convidados"
     },
     {
      "nl": "Alleen villa's",
-     "en": "All villas"
+     "en": "All villas",
+     "de": "Nur Villen",
+     "es": "Solo villas",
+     "pt": "Somente vilas"
     }
    ],
    "scores": [
@@ -909,11 +1182,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://blog.destinationweddings.com/best-destination-wedding-venues-curacao",
@@ -926,7 +1205,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Penstraat, Willemstad",
    "tags": [
@@ -948,11 +1230,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.avilabeachhotel.com/?p=2544",
@@ -965,7 +1253,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": null,
    "tags": [
@@ -977,11 +1268,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacao.com/en/weddings-and-romance"
@@ -993,7 +1290,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Piscadera",
    "tags": [
@@ -1005,11 +1305,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding"
@@ -1021,7 +1327,10 @@
    "url": null,
    "soort": {
     "nl": "resort",
-    "en": "resort"
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
    },
    "plaats": "Otrobanda",
    "tags": [
@@ -1033,11 +1342,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding"
@@ -1049,7 +1364,10 @@
    "url": null,
    "soort": {
     "nl": "landhuis",
-    "en": "plantation house"
+    "en": "plantation house",
+    "de": "Plantagenhaus",
+    "es": "casa de plantación",
+    "pt": "casa de plantação"
    },
    "plaats": null,
    "tags": [
@@ -1060,7 +1378,10 @@
    "feiten": [
     {
      "nl": "Historisch, met tuinen",
-     "en": "Historic, with gardens"
+     "en": "Historic, with gardens",
+     "de": "Historisch, mit Gärten",
+     "es": "Histórico, con jardines",
+     "pt": "Histórico, com jardins"
     }
    ],
    "scores": [
@@ -1075,11 +1396,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding",
@@ -1092,7 +1419,10 @@
    "url": null,
    "soort": {
     "nl": "landhuis",
-    "en": "plantation house"
+    "en": "plantation house",
+    "de": "Plantagenhaus",
+    "es": "casa de plantación",
+    "pt": "casa de plantação"
    },
    "plaats": null,
    "tags": [
@@ -1103,17 +1433,26 @@
    "feiten": [
     {
      "nl": "Historisch, met tuinen",
-     "en": "Historic, with gardens"
+     "en": "Historic, with gardens",
+     "de": "Historisch, mit Gärten",
+     "es": "Histórico, con jardines",
+     "pt": "Histórico, com jardins"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding"
@@ -1125,7 +1464,10 @@
    "url": null,
    "soort": {
     "nl": "landhuis",
-    "en": "plantation house"
+    "en": "plantation house",
+    "de": "Plantagenhaus",
+    "es": "casa de plantación",
+    "pt": "casa de plantação"
    },
    "plaats": null,
    "tags": [
@@ -1136,17 +1478,26 @@
    "feiten": [
     {
      "nl": "Historisch, met tuinen",
-     "en": "Historic, with gardens"
+     "en": "Historic, with gardens",
+     "de": "Historisch, mit Gärten",
+     "es": "Histórico, con jardines",
+     "pt": "Histórico, com jardins"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding"
@@ -1158,7 +1509,10 @@
    "url": null,
    "soort": {
     "nl": "strand",
-    "en": "beach"
+    "en": "beach",
+    "de": "Strand",
+    "es": "Playa",
+    "pt": "Praia"
    },
    "plaats": null,
    "tags": [
@@ -1179,11 +1533,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding",
@@ -1196,7 +1556,10 @@
    "url": null,
    "soort": {
     "nl": "strand",
-    "en": "beach"
+    "en": "beach",
+    "de": "Strand",
+    "es": "Playa",
+    "pt": "Praia"
    },
    "plaats": null,
    "tags": [
@@ -1217,11 +1580,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding",
@@ -1234,7 +1603,10 @@
    "url": null,
    "soort": {
     "nl": "strand",
-    "en": "beach"
+    "en": "beach",
+    "de": "Strand",
+    "es": "Playa",
+    "pt": "Praia"
    },
    "plaats": null,
    "tags": [
@@ -1255,11 +1627,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding",
@@ -1272,7 +1650,10 @@
    "url": null,
    "soort": {
     "nl": "strand",
-    "en": "beach"
+    "en": "beach",
+    "de": "Strand",
+    "es": "Playa",
+    "pt": "Praia"
    },
    "plaats": null,
    "tags": [
@@ -1293,11 +1674,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding",
@@ -1310,7 +1697,10 @@
    "url": null,
    "soort": {
     "nl": "grot",
-    "en": "cave"
+    "en": "cave",
+    "de": "Höhle",
+    "es": "cueva",
+    "pt": "caverna"
    },
    "plaats": "Hato",
    "tags": [
@@ -1321,17 +1711,26 @@
    "feiten": [
     {
      "nl": "Ongewone locatie",
-     "en": "Unusual setting"
+     "en": "Unusual setting",
+     "de": "Ungewöhnlicher Ort",
+     "es": "Un lugar poco común",
+     "pt": "Um cenário incomum"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding"
@@ -1343,7 +1742,10 @@
    "url": null,
    "soort": {
     "nl": "aquarium",
-    "en": "aquarium"
+    "en": "aquarium",
+    "de": "Aquarium",
+    "es": "acuario",
+    "pt": "aquário"
    },
    "plaats": "Bapor Kibra",
    "tags": [
@@ -1354,11 +1756,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding"
@@ -1371,7 +1779,10 @@
    "url": "https://beachbride.com/destinations/curacao/",
    "uitleg": {
     "nl": "Amerikaanse gids met lijst van planners op Curaçao en uitleg over papieren.",
-    "en": "US guide listing Curaçao planners and explaining the paperwork."
+    "en": "US guide listing Curaçao planners and explaining the paperwork.",
+    "de": "US-Ratgeber mit einer Liste von Planern auf Curaçao und Erklärungen zum Papierkram.",
+    "es": "Guía estadounidense que lista organizadores de Curazao y explica los trámites.",
+    "pt": "Guia americano que lista cerimonialistas de Curaçao e explica a documentação."
    }
   },
   {
@@ -1379,7 +1790,10 @@
    "url": "https://www.destinationweddings.com/destinations/caribbean/curacao",
    "uitleg": {
     "nl": "Reisbureau voor bestemmingsbruiloften; boekt resortpakketten en gastenkamers.",
-    "en": "Destination wedding travel agency; books resort packages and guest rooms."
+    "en": "Destination wedding travel agency; books resort packages and guest rooms.",
+    "de": "Reisebüro für Destination Weddings; bucht Resortpakete und Gästezimmer.",
+    "es": "Agencia de viajes para bodas en destino; reserva paquetes de resort y habitaciones para invitados.",
+    "pt": "Agência de viagens para destination weddings; reserva pacotes de resort e quartos para convidados."
    }
   },
   {
@@ -1387,91 +1801,145 @@
    "url": "https://honeymoons.com/curacao-wedding",
    "uitleg": {
     "nl": "Boekt bruiloften en huwelijksreizen in onder meer Sandals Royal Curaçao.",
-    "en": "Books weddings and honeymoons at resorts such as Sandals Royal Curaçao."
+    "en": "Books weddings and honeymoons at resorts such as Sandals Royal Curaçao.",
+    "de": "Bucht Hochzeiten und Flitterwochen in Resorts wie dem Sandals Royal Curaçao.",
+    "es": "Reserva bodas y lunas de miel en resorts como Sandals Royal Curaçao.",
+    "pt": "Reserva casamentos e luas de mel em resorts como o Sandals Royal Curaçao."
    }
   }
  ],
  "tips": [
   {
    "nl": "Lever de aanvraag en papieren minstens 2 maanden vooraf in en kom uiterlijk 3 dagen voor de ceremonie persoonlijk langs.",
-   "en": "File your request and documents at least 2 months ahead, and appear in person no later than 3 days before the ceremony."
+   "en": "File your request and documents at least 2 months ahead, and appear in person no later than 3 days before the ceremony.",
+   "de": "Reich deinen Antrag und die Unterlagen mindestens 2 Monate vorher ein und erscheine spätestens 3 Tage vor der Trauung persönlich.",
+   "es": "Presenta tu solicitud y los documentos con al menos 2 meses de anticipación, y preséntate en persona a más tardar 3 días antes de la ceremonia.",
+   "pt": "Entregue o pedido e os documentos com pelo menos 2 meses de antecedência e compareça pessoalmente no máximo 3 dias antes da cerimônia."
   },
   {
    "nl": "Documenten mogen niet ouder zijn dan 6 maanden op de trouwdag.",
-   "en": "Documents may be no more than 6 months old on the wedding day."
+   "en": "Documents may be no more than 6 months old on the wedding day.",
+   "de": "Die Unterlagen dürfen am Hochzeitstag höchstens 6 Monate alt sein.",
+   "es": "Los documentos no pueden tener más de 6 meses el día de la boda.",
+   "pt": "Os documentos podem ter no máximo 6 meses no dia do casamento."
   },
   {
    "nl": "Trouw je wettig buiten het gemeentehuis, dan heb je zes volwassen getuigen nodig; planner of locatie kan die regelen.",
-   "en": "A legal ceremony outside the registry office needs six adult witnesses; your planner or venue can arrange them."
+   "en": "A legal ceremony outside the registry office needs six adult witnesses; your planner or venue can arrange them.",
+   "de": "Für eine rechtsgültige Trauung außerhalb des Standesamts brauchst du sechs erwachsene Trauzeugen; dein Planer oder die Location kann sie organisieren.",
+   "es": "Una ceremonia legal fuera del registro civil requiere seis testigos adultos; tu organizador o el lugar pueden conseguirlos.",
+   "pt": "Uma cerimônia legal fora do cartório exige seis testemunhas adultas; o seu cerimonialista ou o local pode providenciá-las."
   },
   {
    "nl": "Sommige resorts geven het basispakket gratis bij een minimum aantal overnachtingen.",
-   "en": "Some resorts include the basic package free with a minimum number of room nights."
+   "en": "Some resorts include the basic package free with a minimum number of room nights.",
+   "de": "Manche Resorts enthalten das Basispaket kostenlos, wenn du eine Mindestzahl an Zimmernächten buchst.",
+   "es": "Algunos resorts incluyen el paquete básico gratis con un mínimo de noches de habitación.",
+   "pt": "Alguns resorts incluem o pacote básico de graça com um número mínimo de diárias."
   },
   {
    "nl": "Een eigen getuige moet minstens 21 zijn; stuur naam, adres, geboortedatum en paspoortkopie mee.",
-   "en": "Your own witness must be at least 21; send their name, address, date of birth and passport copy."
+   "en": "Your own witness must be at least 21; send their name, address, date of birth and passport copy.",
+   "de": "Dein eigener Trauzeuge muss mindestens 21 sein; schick Name, Adresse, Geburtsdatum und eine Passkopie.",
+   "es": "Tu propio testigo debe tener al menos 21 años; envía su nombre, dirección, fecha de nacimiento y copia del pasaporte.",
+   "pt": "A sua própria testemunha deve ter pelo menos 21 anos; envie nome, endereço, data de nascimento e cópia do passaporte."
   }
  ],
  "faq": [
   {
    "q": {
     "nl": "Kun je als toerist wettig trouwen op Curaçao?",
-    "en": "Can tourists legally marry in Curaçao?"
+    "en": "Can tourists legally marry in Curaçao?",
+    "de": "Können Touristen auf Curaçao rechtsgültig heiraten?",
+    "es": "¿Pueden casarse legalmente los turistas en Curazao?",
+    "pt": "Turistas podem se casar legalmente em Curaçao?"
    },
    "a": {
     "nl": "Ja. Je stuurt een ondertekende brief met twee voorkeursdata naar de gemeente en levert de papieren minstens 2 maanden vooraf in bij de burgerlijke stand (Kranshi) in Willemstad.",
-    "en": "Yes. You send a signed letter with two preferred dates to the municipality and file your documents with the civil registry (Kranshi) in Willemstad at least 2 months ahead."
+    "en": "Yes. You send a signed letter with two preferred dates to the municipality and file your documents with the civil registry (Kranshi) in Willemstad at least 2 months ahead.",
+    "de": "Ja. Du schickst der Gemeinde einen unterschriebenen Brief mit zwei Wunschterminen und reichst deine Unterlagen mindestens 2 Monate vorher beim Standesamt (Kranshi) in Willemstad ein.",
+    "es": "Sí. Envías a la municipalidad una carta firmada con dos fechas preferidas y presentas tus documentos en el registro civil (Kranshi) de Willemstad con al menos 2 meses de anticipación.",
+    "pt": "Sim. Você envia ao município uma carta assinada com duas datas de preferência e entrega seus documentos ao registro civil (Kranshi) em Willemstad com pelo menos 2 meses de antecedência."
    }
   },
   {
    "q": {
     "nl": "Welke papieren heb je nodig om op Curaçao te trouwen?",
-    "en": "What documents do you need to marry in Curaçao?"
+    "en": "What documents do you need to marry in Curaçao?",
+    "de": "Welche Unterlagen braucht man für eine Heirat auf Curaçao?",
+    "es": "¿Qué documentos se necesitan para casarse en Curazao?",
+    "pt": "Quais documentos são necessários para casar em Curaçao?"
    },
    "a": {
     "nl": "Geboorteakten met namen van de ouders, een internationale verklaring van ongehuwd zijn met apostille, eventueel echtscheidingsvonnis of overlijdensakte, en kopieën van de paspoorten. Niet ouder dan 6 maanden; vertaling nodig als ze niet in het Nederlands, Engels of Spaans zijn.",
-    "en": "Birth certificates listing your parents, an international certificate of no impediment with apostille, any divorce decree or death certificate, and passport copies. No older than 6 months; translate anything not in Dutch, English or Spanish."
+    "en": "Birth certificates listing your parents, an international certificate of no impediment with apostille, any divorce decree or death certificate, and passport copies. No older than 6 months; translate anything not in Dutch, English or Spanish.",
+    "de": "Geburtsurkunden mit den Namen deiner Eltern, ein internationales Ehefähigkeitszeugnis mit Apostille, gegebenenfalls Scheidungsurteil oder Sterbeurkunde und Passkopien. Nicht älter als 6 Monate; alles, was nicht auf Niederländisch, Englisch oder Spanisch ist, muss übersetzt werden.",
+    "es": "Actas de nacimiento que indiquen a tus padres, un certificado internacional de soltería con apostilla, la sentencia de divorcio o el acta de defunción si corresponde, y copias del pasaporte. Con no más de 6 meses de antigüedad; traduce todo lo que no esté en neerlandés, inglés o español.",
+    "pt": "Certidões de nascimento com o nome dos seus pais, um certificado internacional de estado civil (sem impedimento para casar) com apostila, sentença de divórcio ou certidão de óbito, se houver, e cópias do passaporte. Com no máximo 6 meses; traduza tudo que não estiver em holandês, inglês ou espanhol."
    }
   },
   {
    "q": {
     "nl": "Wat kost trouwen op Curaçao?",
-    "en": "How much does a Curaçao wedding cost?"
+    "en": "How much does a Curaçao wedding cost?",
+    "de": "Was kostet eine Hochzeit auf Curaçao?",
+    "es": "¿Cuánto cuesta una boda en Curazao?",
+    "pt": "Quanto custa um casamento em Curaçao?"
    },
    "a": {
     "nl": "Gemiddeld ongeveer $10.085 per stel volgens DestinationWeddings.com. Resortpakketten: $1.000-2.500 (basis), $3.500-6.000 (midden), $7.500-12.000+ (luxe). BeachBride noemt $10.000 tot $35.000.",
-    "en": "About $10,085 per couple on average per DestinationWeddings.com. Resort packages: $1,000-2,500 (basic), $3,500-6,000 (mid), $7,500-12,000+ (high end). BeachBride cites $10,000 to $35,000."
+    "en": "About $10,085 per couple on average per DestinationWeddings.com. Resort packages: $1,000-2,500 (basic), $3,500-6,000 (mid), $7,500-12,000+ (high end). BeachBride cites $10,000 to $35,000.",
+    "de": "Laut DestinationWeddings.com im Schnitt etwa 10.085 $ pro Paar. Resortpakete: 1.000 bis 2.500 $ (Basis), 3.500 bis 6.000 $ (mittel), 7.500 bis 12.000 $ und mehr (gehobenes Segment). BeachBride nennt 10.000 bis 35.000 $.",
+    "es": "Unos $10.085 por pareja en promedio según DestinationWeddings.com. Paquetes de resort: $1.000 a $2.500 (básico), $3.500 a $6.000 (medio), $7.500 a $12.000 o más (alta gama). BeachBride cita de $10.000 a $35.000.",
+    "pt": "Cerca de US$ 10.085 por casal em média, segundo o DestinationWeddings.com. Pacotes de resort: US$ 1.000 a US$ 2.500 (básico), US$ 3.500 a US$ 6.000 (intermediário), US$ 7.500 a US$ 12.000 ou mais (alto padrão). A BeachBride cita de US$ 10.000 a US$ 35.000."
    }
   },
   {
    "q": {
     "nl": "Hoeveel getuigen heb je nodig?",
-    "en": "How many witnesses do you need?"
+    "en": "How many witnesses do you need?",
+    "de": "Wie viele Trauzeugen braucht man?",
+    "es": "¿Cuántos testigos se necesitan?",
+    "pt": "Quantas testemunhas são necessárias?"
    },
    "a": {
     "nl": "Bij een wettige ceremonie buiten het gemeentehuis zes volwassen getuigen. Een eigen getuige moet minstens 21 zijn.",
-    "en": "A legal ceremony outside the registry office needs six adult witnesses. Your own witness must be at least 21."
+    "en": "A legal ceremony outside the registry office needs six adult witnesses. Your own witness must be at least 21.",
+    "de": "Für eine rechtsgültige Trauung außerhalb des Standesamts brauchst du sechs erwachsene Trauzeugen. Dein eigener Trauzeuge muss mindestens 21 sein.",
+    "es": "Una ceremonia legal fuera del registro civil requiere seis testigos adultos. Tu propio testigo debe tener al menos 21 años.",
+    "pt": "Uma cerimônia legal fora do cartório exige seis testemunhas adultas. A sua própria testemunha deve ter pelo menos 21 anos."
    }
   },
   {
    "q": {
     "nl": "Is een huwelijk op Curaçao geldig in de VS en Nederland?",
-    "en": "Is a Curaçao marriage valid in the US and the Netherlands?"
+    "en": "Is a Curaçao marriage valid in the US and the Netherlands?",
+    "de": "Ist eine Ehe von Curaçao in den USA und den Niederlanden gültig?",
+    "es": "¿Es válido un matrimonio celebrado en Curazao en Estados Unidos y los Países Bajos?",
+    "pt": "Um casamento celebrado em Curaçao é válido nos EUA e nos Países Baixos?"
    },
    "a": {
     "nl": "BeachBride meldt dat het in de VS erkend wordt. Curaçao hoort bij het Koninkrijk der Nederlanden en gebruikt het Nederlandse systeem van burgerlijke stand.",
-    "en": "BeachBride says it is recognized in the US. Curaçao is part of the Kingdom of the Netherlands and uses a Dutch-style civil registry."
+    "en": "BeachBride says it is recognized in the US. Curaçao is part of the Kingdom of the Netherlands and uses a Dutch-style civil registry.",
+    "de": "BeachBride sagt, sie wird in den USA anerkannt. Curaçao gehört zum Königreich der Niederlande und hat ein Personenstandsregister nach niederländischem Muster.",
+    "es": "BeachBride dice que se reconoce en Estados Unidos. Curazao forma parte del Reino de los Países Bajos y usa un registro civil de estilo neerlandés.",
+    "pt": "A BeachBride diz que é reconhecido nos EUA. Curaçao faz parte do Reino dos Países Baixos e usa um registro civil nos moldes holandeses."
    }
   },
   {
    "q": {
     "nl": "Welke resorts doen bruiloften op Curaçao?",
-    "en": "Which resorts host weddings in Curaçao?"
+    "en": "Which resorts host weddings in Curaçao?",
+    "de": "Welche Resorts richten Hochzeiten auf Curaçao aus?",
+    "es": "¿Qué resorts organizan bodas en Curazao?",
+    "pt": "Quais resorts realizam casamentos em Curaçao?"
    },
    "a": {
     "nl": "Onder meer Sandals Royal Curaçao, Dreams, Sunscape, Zoetry, Marriott, Renaissance Wind Creek, ACOYA, Baoase, Papagayo en de twee Corendon-resorts bij Mambo Beach.",
-    "en": "Among them Sandals Royal Curaçao, Dreams, Sunscape, Zoetry, Marriott, Renaissance Wind Creek, ACOYA, Baoase, Papagayo and the two Corendon resorts at Mambo Beach."
+    "en": "Among them Sandals Royal Curaçao, Dreams, Sunscape, Zoetry, Marriott, Renaissance Wind Creek, ACOYA, Baoase, Papagayo and the two Corendon resorts at Mambo Beach.",
+    "de": "Unter anderem das Sandals Royal Curaçao, Dreams, Sunscape, Zoetry, Marriott, Renaissance Wind Creek, ACOYA, Baoase, Papagayo und die beiden Corendon-Resorts am Mambo Beach.",
+    "es": "Entre ellos, Sandals Royal Curaçao, Dreams, Sunscape, Zoetry, Marriott, Renaissance Wind Creek, ACOYA, Baoase, Papagayo y los dos resorts Corendon en Mambo Beach.",
+    "pt": "Entre eles, Sandals Royal Curaçao, Dreams, Sunscape, Zoetry, Marriott, Renaissance Wind Creek, ACOYA, Baoase, Papagayo e os dois resorts Corendon na Mambo Beach."
    }
   }
  ],
@@ -1512,10 +1980,21 @@
    "What are the legal requirements to get married in Curaçao?",
    "What are the best wedding venues in Curaçao?",
    "How much does a destination wedding in Curaçao cost?"
+  ],
+  "de": [
+   "Welche rechtlichen Voraussetzungen gibt es für eine Heirat auf Curaçao?",
+   "Was sind die besten Hochzeitslocations auf Curaçao?",
+   "Was kostet eine Destination Wedding auf Curaçao?"
+  ],
+  "es": [
+   "¿Cuáles son los requisitos legales para casarse en Curazao?",
+   "¿Cuáles son los mejores lugares para bodas en Curazao?",
+   "¿Cuánto cuesta una boda en destino en Curazao?"
+  ],
+  "pt": [
+   "Quais são os requisitos legais para casar em Curaçao?",
+   "Quais são os melhores locais de casamento em Curaçao?",
+   "Quanto custa um destination wedding em Curaçao?"
   ]
- },
- "talen": [
-  "nl",
-  "en"
- ]
+ }
 }
