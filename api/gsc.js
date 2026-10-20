@@ -136,6 +136,10 @@ export default async function handler(req, res) {
   const oidc = String(req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN || '');
   const isCron = /vercel-cron/i.test(String(req.headers['user-agent'] || '')); const isToken = !!process.env.HJDK_TOKEN && url.searchParams.get('token') === process.env.HJDK_TOKEN;
   try {
+    if (op === 'merchant') { // Merchant Center Yoors (Henkjan 20 okt: "Check merchant center of ik die kan verbeteren"): account- en productmeldingen via de Merchant API, zelfde serviceaccount als Search Console
+      if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const { merchantStand } = await import('../lib/merchant.js'); return res.status(200).json(await merchantStand(await token(oidc, 'https://www.googleapis.com/auth/content'), url.searchParams.get('account') || '5875752564'));
+    }
     if (op === 'whoami') { const c = claims(oidc); let google = null; try { const l = await sites(oidc); google = { ok: true, eigendommen: l.length, sites: Object.fromEntries(Object.entries(SITES).map(([k, h]) => [h, !!propFor(l, h)])) }; } catch (e) { google = { ok: false, fout: String(e.message).slice(0, 200) }; } return res.status(200).json({ ok: !!c, iss: c && c.iss, aud: c && c.aud, sub: c && c.sub, google }); }
     if (op === 'totalen') {
       const lijst = await sites(oidc); const out = {};
