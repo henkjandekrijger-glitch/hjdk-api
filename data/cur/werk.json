@@ -1,1 +1,1256 @@
-{"id":"werk","peildatum":"2026-10-20","items":[]}
+{
+ "id": "werk",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "werk zoeken",
+  "en": "job search"
+ },
+ "h1": {
+  "nl": "Werken op Curaçao: welke vacaturesite, uitzendbureau of stagebureau past bij jou?",
+  "en": "Working in Curaçao: which job site, agency or internship program fits you?"
+ },
+ "titel": {
+  "nl": "Werk op Curaçao: {n} vacaturesites, bureaus en werkgevers",
+  "en": "Jobs in Curaçao: {n} job sites, agencies and employers"
+ },
+ "metaDesc": {
+  "nl": "{n} manieren om werk of stage op Curaçao te vinden: vacaturesites, uitzend- en stagebureaus, grote werkgevers en vergunningen. Minimumloon 2026: Cg 11,93 per uur.",
+  "en": "{n} ways to find a job or internship in Curaçao: job sites, staffing and internship agencies, major employers and permits. 2026 minimum wage: Cg 11.93 an hour."
+ },
+ "kort": {
+  "nl": "We zetten {n} kanalen op een rij. Nederlanders hebben geen werkvergunning nodig maar wel een verklaring van rechtswege, en mogen beginnen zodra die is aangevraagd; andere nationaliteiten hebben een werkvergunning nodig. Het minimumloon is sinds 1 januari 2026 Cg 11,93 per uur (Cg 2.067,87 per maand). Voor stages is Wereldstap het best beoordeeld (4,6 bij 104 reviews op Trustpilot); voor zorg en onderwijs werven CMC, VPCO en de overheid actief in Nederland.",
+  "en": "We list {n} channels. Dutch citizens don't need a work permit but do need an admission-by-right declaration, and can start once they've applied; other nationalities need a work permit. Minimum wage has been Cg 11.93 an hour (Cg 2,067.87 a month) since January 1, 2026. For internships, Wereldstap has the best rating (4.6 from 104 Trustpilot reviews); for healthcare and teaching, CMC, VPCO and the government recruit actively in the Netherlands."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wie ben je?",
+    "en": "Who are you?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Nederlandse professional",
+      "en": "Dutch professional"
+     },
+     "plus": [
+      "nl-sprekend",
+      "vacaturesite",
+      "werving"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Student of stagiair",
+      "en": "Student or intern"
+     },
+     "plus": [
+      "stage"
+     ],
+     "min": [],
+     "vereist": "stage"
+    },
+    {
+     "label": {
+      "nl": "Geen Nederlands paspoort",
+      "en": "Not a Dutch passport holder"
+     },
+     "plus": [
+      "werkvergunning-hulp",
+      "werving"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Remote werker",
+      "en": "Remote worker"
+     },
+     "plus": [
+      "remote"
+     ],
+     "min": [],
+     "vereist": "remote"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "In welke sector?",
+    "en": "Which sector?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Any sector"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Zorg",
+      "en": "Healthcare"
+     },
+     "plus": [
+      "zorg"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Horeca en toerisme",
+      "en": "Hospitality and tourism"
+     },
+     "plus": [
+      "horeca"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Onderwijs",
+      "en": "Education"
+     },
+     "plus": [
+      "onderwijs"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Overheid",
+      "en": "Government"
+     },
+     "plus": [
+      "overheid"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Uitzendwerk of beveiliging",
+      "en": "Temp work or security"
+     },
+     "plus": [
+      "uitzend"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat heb je nodig?",
+    "en": "What do you need?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Vacatures zoeken",
+      "en": "Job listings"
+     },
+     "plus": [
+      "vacaturesite",
+      "werving"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Een stageplek met begeleiding",
+      "en": "An internship with support"
+     },
+     "plus": [
+      "stage"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Hulp met vergunning",
+      "en": "Permit help"
+     },
+     "plus": [
+      "werkvergunning-hulp"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Werkplek of werkgever op afstand",
+      "en": "A workspace or remote employer"
+     },
+     "plus": [
+      "remote"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "curacao-nu-vacatures",
+   "naam": "Curacao.nu vacatures",
+   "url": "https://curacao.nu",
+   "soort": {
+    "nl": "nieuwssite met vacaturebank",
+    "en": "news site with job board"
+   },
+   "plaats": null,
+   "tags": [
+    "vacaturesite",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ook Aruba.nu en Bonaire.nu",
+     "en": "Also runs Aruba.nu, Bonaire.nu"
+    },
+    {
+     "nl": "Nederlandstalig",
+     "en": "Dutch-language"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.nu/?p=99812"
+   ]
+  },
+  {
+   "id": "indeed",
+   "naam": "Indeed (vacatures Curaçao)",
+   "url": "https://nl.indeed.com",
+   "soort": {
+    "nl": "internationale vacaturesite",
+    "en": "international job board"
+   },
+   "plaats": null,
+   "tags": [
+    "vacaturesite",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Filter op Curaçao",
+     "en": "Filter by Curaçao"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://nl.indeed.com/Caribisch-Gebied-vacatures-in-Nederlandse-Antillen",
+    "https://nl.indeed.com/Business-Management-vacatures-in-Cura%C3%A7ao"
+   ]
+  },
+  {
+   "id": "youngcapital",
+   "naam": "YoungCapital: werken op Curaçao",
+   "url": "https://www.youngcapital.nl",
+   "soort": {
+    "nl": "uitzendbureau voor jongeren",
+    "en": "staffing agency for young people"
+   },
+   "plaats": null,
+   "tags": [
+    "uitzend",
+    "werving",
+    "horeca",
+    "zorg",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Overheid, zorg en horeca",
+     "en": "Government, healthcare, hospitality"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.youngcapital.nl/werken-in-het-buitenland/werken-in/curacao"
+   ]
+  },
+  {
+   "id": "360talent",
+   "naam": "360talent Security",
+   "url": "http://www.360talentsecurity.nl",
+   "soort": {
+    "nl": "uitzendbureau beveiliging",
+    "en": "security staffing agency"
+   },
+   "plaats": "Nederland en Curaçao",
+   "tags": [
+    "uitzend",
+    "werving",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Beveiligers in loondienst en uitzend",
+     "en": "Security guards, direct or temp"
+    },
+    {
+     "nl": "Kantoor ook op Curaçao",
+     "en": "Office on Curaçao too"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://nl.indeed.com/cmp/360talent-2"
+   ]
+  },
+  {
+   "id": "wereldstap-curacao",
+   "naam": "Wereldstap Curaçao (Wereldstage)",
+   "url": "https://www.wereldstage.com",
+   "soort": {
+    "nl": "stagebureau sinds 2000",
+    "en": "internship agency since 2000"
+   },
+   "plaats": null,
+   "tags": [
+    "stage",
+    "werving",
+    "nl-sprekend",
+    "werkvergunning-hulp"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Stages, tussenjaar, Wereldjob",
+     "en": "Internships, gap year, work stints"
+    },
+    {
+     "nl": "Regelt huisvesting en ophalen",
+     "en": "Arranges housing and airport pickup"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 104,
+     "peildatum": "2026-10-20",
+     "bron": "https://nl.trustpilot.com/review/www.wereldstage.com"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijk, behulpzaam team ter plaatse",
+     "Duidelijke communicatie voor en tijdens de stage",
+     "Goede mix van activiteiten en vrije tijd"
+    ],
+    "en": [
+     "Friendly, helpful team on the island",
+     "Clear communication before and during the stay",
+     "Good mix of activities and free time"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Soms rommelige organisatie en late informatie",
+     "Klachten over huisvesting zonder keuze",
+     "Lang wachten op ophalen van het vliegveld"
+    ],
+    "en": [
+     "Sometimes disorganized, with late information",
+     "Complaints about assigned housing",
+     "Long waits for airport pickup"
+    ]
+   },
+   "bronnen": [
+    "https://nl.trustpilot.com/review/www.wereldstage.com",
+    "https://www.studiekeuze123.nl/caribisch/ondersteunende-organisaties"
+   ]
+  },
+  {
+   "id": "stagebureau-curacao-bo",
+   "naam": "Stagebureau Curaçao (Bo Curaçao)",
+   "url": "https://bocuracao.nl/",
+   "soort": {
+    "nl": "stagebemiddeling",
+    "en": "internship placement"
+   },
+   "plaats": "Amsterdam",
+   "tags": [
+    "stage",
+    "werving",
+    "nl-sprekend",
+    "werkvergunning-hulp"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Helpt met huisvesting en vervoer",
+     "en": "Helps with housing and transport"
+    },
+    {
+     "nl": "Twee pakketten of losse diensten",
+     "en": "Two packages or single services"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mijnzzp.nl/Bedrijven/Stagebureau-Curacao"
+   ]
+  },
+  {
+   "id": "tui-stages-curacao",
+   "naam": "TUI stages op Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "stages bij reisorganisatie",
+    "en": "travel company internships"
+   },
+   "plaats": null,
+   "tags": [
+    "stage",
+    "horeca",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Retail, HR, marketing, facilitair",
+     "en": "Retail, HR, marketing, facilities"
+    },
+    {
+     "nl": "Start februari en september",
+     "en": "Starts February and September"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://flexa.careers/jobs/tui-stage-retail-cura-ao-februari-2027-6a884d17803ec29080eff4de",
+    "https://flexa.careers/in/jobs/tui-stage-human-resources-cura-ao-februari-2027-69f86861df6abb2ff85f0167",
+    "https://flexa.careers/in/jobs/tui-stage-marketing-cura-ao-februari-2027-6a310ddac5cbe3f36ad04913"
+   ]
+  },
+  {
+   "id": "my-curacao-guide-stage",
+   "naam": "My Curaçao Guide stages",
+   "url": "https://www.mycuracaoguide.com",
+   "soort": {
+    "nl": "stage bij excursiebureau",
+    "en": "internship at a tour company"
+   },
+   "plaats": null,
+   "tags": [
+    "stage",
+    "horeca",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Instroom februari en september",
+     "en": "Intake in February and September"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/Vacature_Stagiaire_Februari_2026.pdf",
+    "https://mycuracaoguide.com/Vacature_Stagiaire_September_2025_-_My_Curacao_Guide.pdf"
+   ]
+  },
+  {
+   "id": "bocobay",
+   "naam": "Bocobay",
+   "url": null,
+   "soort": {
+    "nl": "hotelgroep, luxe hospitality",
+    "en": "luxury hospitality group"
+   },
+   "plaats": null,
+   "tags": [
+    "horeca",
+    "stage"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ook hospitality-stages",
+     "en": "Hospitality internships too"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.careers-page.com/bocobay/job/X9674W5Y",
+    "https://nl.indeed.com/cmp/Bocobay"
+   ]
+  },
+  {
+   "id": "cmc",
+   "naam": "Curaçao Medical Center (CMC)",
+   "url": "https://careers.cmc.cw",
+   "soort": {
+    "nl": "ziekenhuis, grootste zorgwerkgever",
+    "en": "hospital, largest healthcare employer"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "zorg",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Waarneming specialist tot 3 maanden",
+     "en": "Locum specialists up to 3 months"
+    },
+    {
+     "nl": "Geen open sollicitaties",
+     "en": "No open applications"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://careers.cmc.cw/en/substitutions/",
+    "https://www.neurologie.nl/wp-content/uploads/2022/01/2022-01-Vacature-06-ANIOS-Curacao-Medical-Center-2021-doorlopend.pdf"
+   ]
+  },
+  {
+   "id": "vpco",
+   "naam": "VPCO (protestants-christelijk onderwijs)",
+   "url": null,
+   "soort": {
+    "nl": "schoolbestuur",
+    "en": "school board"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "onderwijs",
+    "stage",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Werft ook leraren uit Nederland",
+     "en": "Also recruits Dutch teachers"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.hogeschoolrotterdam.nl/contentassets/249969a90dc54ec6b2d1579d395b419b/internationaal-vacature-lwg-febrari-2026-vpco.pdf",
+    "https://nl.indeed.com/cmp/Vpco"
+   ]
+  },
+  {
+   "id": "gobierno-curacao",
+   "naam": "Land Curaçao (overheid)",
+   "url": "https://gobiernu.cw",
+   "soort": {
+    "nl": "overheid, ministeries",
+    "en": "government ministries"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "overheid",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "244 vacatures gemeld",
+     "en": "244 openings reported"
+    },
+    {
+     "nl": "Werft ook in Amsterdam",
+     "en": "Also recruits in Amsterdam"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/government-of-curacao-has-244-vacancies-in-public-sector",
+    "https://www.curacaochronicle.com/post/local/curacao-government-targets-talent-at-national-career-fair-in-amsterdam"
+   ]
+  },
+  {
+   "id": "toelatingsorganisatie",
+   "naam": "Toelatingsorganisatie Curaçao (Immigratiedienst)",
+   "url": "https://immigrationcur.org",
+   "soort": {
+    "nl": "overheid, vergunningen",
+    "en": "government, permits"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "werkvergunning-hulp",
+    "nl-sprekend",
+    "overheid"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Verklaring van rechtswege voor Nederlanders",
+     "en": "Admission by right for Dutch"
+    },
+    {
+     "nl": "Vergunning voor andere nationaliteiten",
+     "en": "Permit for other nationalities"
+    },
+    {
+     "nl": "Beslist binnen vier maanden",
+     "en": "Decides within four months"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://immigrationcur.org/en//toelating",
+    "https://www.doingbusinessdutchcaribbean.com/curacao/immigration-requirements-cur/dutch-citizens-cur/",
+    "https://immigrationcur.org/en/dep/vergunning-en-verklaring/"
+   ]
+  },
+  {
+   "id": "kgmc",
+   "naam": "Kabinet van de Gevolmachtigde Minister van Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "vertegenwoordiging in Den Haag",
+    "en": "Curaçao's office in The Hague"
+   },
+   "plaats": "Den Haag",
+   "tags": [
+    "werkvergunning-hulp",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Voorwaarden wonen en werken",
+     "en": "Rules for living and working"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.nederlandwereldwijd.nl/wonen-werken/verhuizen-naar-aruba-curacao-of-sint-maarten"
+   ]
+  },
+  {
+   "id": "at-home-in-curacao",
+   "naam": "@HOME in Curaçao",
+   "url": "https://www.athomeincuracao.com",
+   "soort": {
+    "nl": "remote-work programma",
+    "en": "remote work program"
+   },
+   "plaats": null,
+   "tags": [
+    "remote",
+    "werkvergunning-hulp"
+   ],
+   "prijs": {
+    "bedrag": 294,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per aanvraag (ANG 535)",
+     "en": "per application (ANG 535)"
+    },
+    "bron": "https://www.athomeincuracao.com/faq",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "6 maanden, verlengbaar tot 1 jaar",
+     "en": "6 months, extendable to 1 year"
+    },
+    {
+     "nl": "Geen Curaçaose inkomstenbelasting",
+     "en": "No Curaçao income tax"
+    },
+    {
+     "nl": "Besluit in circa 2 weken",
+     "en": "Decision in about 2 weeks"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.athomeincuracao.com/faq",
+    "https://www.lonelyplanet.com/articles/curacao-long-term-stays"
+   ]
+  },
+  {
+   "id": "workspot-curacao",
+   "naam": "Workspot Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "coworking, historisch pand",
+    "en": "coworking in a historic building"
+   },
+   "plaats": "Scharloo, Willemstad",
+   "tags": [
+    "remote"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Bitterstraat 17",
+     "en": "Bitterstraat 17"
+    },
+    {
+     "nl": "Eerste coworking van Curaçao",
+     "en": "Curaçao's first coworking space"
+    },
+    {
+     "nl": "24 uur toegang, printen",
+     "en": "24-hour access, printing"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Coworker",
+     "score": 4.33,
+     "max": 5,
+     "aantal": 2,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.coworker.com/netherlands-antilles/willemstad/workspot-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Werken in een monumentaal pand op de Werelderfgoedlijst",
+     "Ontspannen sfeer zonder strenge stilteregels",
+     "Vriendelijke mix van lokale ondernemers en nomads"
+    ],
+    "en": [
+     "You work in a historic UNESCO-listed building",
+     "Relaxed vibe without strict quiet rules",
+     "Friendly mix of local founders and digital nomads"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.coworker.com/netherlands-antilles/willemstad/workspot-curacao"
+   ]
+  },
+  {
+   "id": "curacao-coworking",
+   "naam": "Curaçao Coworking",
+   "url": null,
+   "soort": {
+    "nl": "coworking",
+    "en": "coworking"
+   },
+   "plaats": "Pietermaai, Willemstad",
+   "tags": [
+    "remote"
+   ],
+   "prijs": {
+    "bedrag": 20,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per dag (vanaf)",
+     "en": "per day (from)"
+    },
+    "bron": "https://www.coworker.com/netherlands-antilles/willemstad/workspot-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Abraham de Veerstraat 9",
+     "en": "Abraham de Veerstraat 9"
+    },
+    {
+     "nl": "24/7 toegang voor maandleden",
+     "en": "24/7 access for monthly members"
+    },
+    {
+     "nl": "Wifi ca. 103 Mbit/s download",
+     "en": "Wi-Fi about 103 Mbps down"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.coworker.com/netherlands-antilles/willemstad/curacao-coworking",
+    "https://workfrom.co/curacao-coworking-willemstad-267541",
+    "https://www.coworker.com/netherlands-antilles/willemstad/workspot-curacao"
+   ]
+  },
+  {
+   "id": "coworld-curacao",
+   "naam": "coWorld coworking community Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "coworking",
+    "en": "coworking"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "remote"
+   ],
+   "prijs": {
+    "bedrag": 30,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per dag (vanaf)",
+     "en": "per day (from)"
+    },
+    "bron": "https://www.coworker.com/netherlands-antilles/willemstad/workspot-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Hoogstraat 18",
+     "en": "Hoogstraat 18"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.coworker.com/netherlands-antilles/willemstad/coworld-coworking-community-curacao/review",
+    "https://www.coworker.com/netherlands-antilles/willemstad/workspot-curacao"
+   ]
+  },
+  {
+   "id": "rivermate",
+   "naam": "Rivermate (employer of record)",
+   "url": "https://rivermate.com",
+   "soort": {
+    "nl": "internationale EOR-dienst",
+    "en": "international employer of record"
+   },
+   "plaats": null,
+   "tags": [
+    "remote",
+    "werving"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Neemt lokaal personeel in dienst",
+     "en": "Hires local staff for you"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://rivermate.com/employer-of-record/curacao",
+    "https://rivermate.com/nl/gidsen/curacao/recruitment"
+   ]
+  },
+  {
+   "id": "safeguard-global",
+   "naam": "Safeguard Global (payroll Curaçao)",
+   "url": "https://safeguardglobal.com",
+   "soort": {
+    "nl": "internationale payroll",
+    "en": "international payroll"
+   },
+   "plaats": null,
+   "tags": [
+    "remote"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://safeguardglobal.com/global-reach/payroll-in-curacao"
+   ]
+  },
+  {
+   "id": "national-career-fair",
+   "naam": "National Career Fair: Working in the Caribbean",
+   "url": null,
+   "soort": {
+    "nl": "banenbeurs in de RAI",
+    "en": "career fair at RAI Amsterdam"
+   },
+   "plaats": "RAI Amsterdam",
+   "tags": [
+    "werving",
+    "overheid",
+    "zorg",
+    "onderwijs",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ruim 70 werkgevers",
+     "en": "More than 70 employers"
+    },
+    {
+     "nl": "Overheid, scholen, zorg",
+     "en": "Government, schools, healthcare"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/caribbean-employers-target-dutch-talent-at-major-recruitment-fair-in-amsterdam",
+    "https://www.curacaochronicle.com/post/local/curacao-government-targets-talent-at-national-career-fair-in-amsterdam"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "LinkedIn",
+   "url": "https://www.linkedin.com/jobs/",
+   "uitleg": {
+    "nl": "Veel Curaçaose werkgevers en recruiters werven via LinkedIn; zoek op locatie Curaçao.",
+    "en": "Many Curaçao employers and recruiters hire on LinkedIn; search by location Curaçao."
+   }
+  },
+  {
+   "naam": "Indeed",
+   "url": "https://nl.indeed.com/Caribisch-Gebied-vacatures-in-Nederlandse-Antillen",
+   "uitleg": {
+    "nl": "Toont ook Nederlandse vacatures bij een zoekopdracht op Curaçao; controleer de werklocatie.",
+    "en": "Also shows jobs in the Netherlands when you search for Curaçao; check the job location."
+   }
+  },
+  {
+   "naam": "Flexa",
+   "url": "https://flexa.careers/jobs/tui-stage-retail-cura-ao-februari-2027-6a884d17803ec29080eff4de",
+   "uitleg": {
+    "nl": "Vacatureplatform waarop TUI zijn stages op Curaçao plaatst.",
+    "en": "Job platform where TUI posts its Curaçao internships."
+   }
+  },
+  {
+   "naam": "Studiekeuze123 Caribisch",
+   "url": "https://www.studiekeuze123.nl/caribisch/ondersteunende-organisaties",
+   "uitleg": {
+    "nl": "Lijst van organisaties die studenten tussen Nederland en de eilanden begeleiden.",
+    "en": "List of organizations that support students moving between the Netherlands and the islands."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Nederlanders die niet op de eilanden zijn geboren vragen een verklaring van rechtswege aan bij de Toelatingsorganisatie; je mag werken zodra de aanvraag is ingediend.",
+   "en": "Dutch citizens not born on the islands apply for an admission-by-right declaration with the Admission Office; you can work once the application is filed."
+  },
+  {
+   "nl": "Voor een stage heb je altijd een verklaring of vergunning met doel stage nodig, ook voor een korte stage.",
+   "en": "An internship always requires a declaration or permit for that purpose, even a short one."
+  },
+  {
+   "nl": "Zonder Nederlands paspoort heb je een werkvergunning nodig; sinds 2025 moeten werkgevers expats na maximaal vijf jaar vervangen door lokaal personeel.",
+   "en": "Without a Dutch passport you need a work permit; since 2025 employers must replace expats with local staff after five years at most."
+  },
+  {
+   "nl": "Het minimumloon vanaf 21 jaar is Cg 11,93 per uur; op 18 jaar is het 75%, Cg 8,95.",
+   "en": "Minimum wage from age 21 is Cg 11.93 an hour; at 18 it is 75%, Cg 8.95."
+  },
+  {
+   "nl": "Werk je voor een buitenlandse werkgever, dan geeft @HOME in Curaçao je zes maanden verblijf voor ANG 535, eenmaal verlengbaar.",
+   "en": "If you work for a foreign employer, @HOME in Curaçao gives you six months' stay for ANG 535, renewable once."
+  },
+  {
+   "nl": "Zoek je zorg- of onderwijswerk, kijk dan naar de jaarlijkse banenbeurs Working in the Caribbean in de RAI, met ruim 70 werkgevers in 2026.",
+   "en": "For healthcare or teaching jobs, check the annual Working in the Caribbean fair at RAI Amsterdam, with more than 70 employers in 2026."
+  },
+  {
+   "nl": "CMC neemt geen open sollicitaties aan: solliciteer op een vacature via vacatures.cmc.cw of mail recruitment@cmc.cw.",
+   "en": "CMC doesn't accept open applications: apply to a listed vacancy at vacatures.cmc.cw or email recruitment@cmc.cw."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Heb ik als Nederlander een werkvergunning nodig op Curaçao?",
+    "en": "Do Dutch citizens need a work permit in Curaçao?"
+   },
+   "a": {
+    "nl": "Nee. Ben je niet op de eilanden geboren, dan vraag je een verklaring van rechtswege aan bij de Toelatingsorganisatie. Je mag beginnen met werken zodra die aanvraag is ingediend, en de beslissing volgt binnen vier maanden.",
+    "en": "No. If you weren't born on the islands, you apply for an admission-by-right declaration with the Admission Office. You can start working once you've applied, and a decision follows within four months."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is het minimumloon op Curaçao in 2026?",
+    "en": "What is the minimum wage in Curaçao in 2026?"
+   },
+   "a": {
+    "nl": "Sinds 1 januari 2026 Cg 11,93 bruto per uur, of Cg 2.067,87 per maand bij 40 uur, vanaf 21 jaar. Jongeren krijgen een percentage: 90% op 20 jaar, 85% op 19, 75% op 18 en 65% op 16 en 17.",
+    "en": "Since January 1, 2026, Cg 11.93 gross an hour, or Cg 2,067.87 a month at 40 hours, from age 21. Younger workers get a share: 90% at 20, 85% at 19, 75% at 18 and 65% at 16 and 17."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe vind ik een stage op Curaçao?",
+    "en": "How do I find an internship in Curaçao?"
+   },
+   "a": {
+    "nl": "Via stagebureaus zoals Wereldstap Curaçao of Stagebureau Curaçao (Bo Curaçao), die ook huisvesting regelen, of direct bij bedrijven als TUI en My Curaçao Guide, die stagiairs zoeken voor februari en september.",
+    "en": "Through agencies like Wereldstap Curaçao or Stagebureau Curaçao (Bo Curaçao), which also arrange housing, or directly with companies such as TUI and My Curaçao Guide, which hire interns for February and September."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke vergunning heb ik nodig voor een stage op Curaçao?",
+    "en": "What permit do I need for an internship in Curaçao?"
+   },
+   "a": {
+    "nl": "Nederlanders vragen een verklaring van rechtswege met doel stage aan, andere nationaliteiten een verblijfsvergunning voor stage. Dat geldt ongeacht de duur van de stage; de stageovereenkomst telt mee als bewijs van middelen.",
+    "en": "Dutch citizens apply for an admission-by-right declaration for an internship; other nationalities apply for an internship residence permit. This applies whatever the length; the internship agreement counts as proof of means."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kan ik als niet-Nederlander op Curaçao werken?",
+    "en": "Can non-Dutch citizens work in Curaçao?"
+   },
+   "a": {
+    "nl": "Ja, met een werkvergunning die je werkgever aanvraagt. Sinds februari 2025 moet een werkgever een expat na maximaal vijf jaar vervangen door iemand uit het bevolkingsregister, met een jaar overgangstijd.",
+    "en": "Yes, with a work permit your employer applies for. Since February 2025 employers must replace an expat with someone from the local population register after five years at most, with a one-year transition."
+   }
+  },
+  {
+   "q": {
+    "nl": "Mag ik remote werken vanaf Curaçao?",
+    "en": "Can I work remotely from Curaçao?"
+   },
+   "a": {
+    "nl": "Ja. Met @HOME in Curaçao mag je zes maanden blijven en voor een buitenlandse werkgever werken, eenmaal verlengbaar tot een jaar, voor ANG 535 (ongeveer $294). Je betaalt dan geen Curaçaose inkomstenbelasting.",
+    "en": "Yes. @HOME in Curaçao lets you stay six months and work for a foreign employer, renewable once to a year, for ANG 535 (about $294). You don't pay Curaçao income tax."
+   }
+  },
+  {
+   "q": {
+    "nl": "Verdien je op Curaçao minder dan in Nederland?",
+    "en": "Do you earn less in Curaçao than in the Netherlands?"
+   },
+   "a": {
+    "nl": "Meestal wel. YoungCapital noemt de salarissen lager dan in Nederland, en ruim een derde van de beroepsbevolking verdient het minimumloon.",
+    "en": "Usually, yes. YoungCapital says pay is lower than in the Netherlands, and more than a third of the workforce earns minimum wage."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke sectoren zoeken het meest personeel op Curaçao?",
+    "en": "Which sectors hire the most in Curaçao?"
+   },
+   "a": {
+    "nl": "Zorg, onderwijs, overheid en toerisme. CMC kampt met een tekort aan specialisten, de overheid meldde 244 vacatures en hotels en excursiebedrijven nemen veel stagiairs aan.",
+    "en": "Healthcare, education, government and tourism. CMC is short of specialists, the government reported 244 openings, and hotels and tour companies take on many interns."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "werken op curaçao",
+   "vacatures curaçao",
+   "stage curaçao",
+   "uitzendbureau curaçao",
+   "minimumloon curaçao",
+   "werkvergunning curaçao"
+  ],
+  "en": [
+   "jobs in curacao",
+   "curacao job vacancies",
+   "work permit curacao",
+   "internship curacao",
+   "curacao minimum wage",
+   "recruitment agency curacao"
+  ],
+  "es": [
+   "trabajo en curazao",
+   "empleos curazao",
+   "permiso de trabajo curazao",
+   "salario mínimo curazao"
+  ],
+  "pt": [
+   "trabalhar em curaçao",
+   "vagas curaçao",
+   "visto de trabalho curaçao",
+   "salário mínimo curaçao"
+  ],
+  "de": [
+   "arbeiten auf curaçao",
+   "jobs curaçao",
+   "praktikum curaçao",
+   "arbeitserlaubnis curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Hoe vind ik als Nederlander werk op Curaçao?",
+   "Welk stagebureau is goed voor een stage op Curaçao?",
+   "Heb ik een werkvergunning nodig om op Curaçao te werken?"
+  ],
+  "en": [
+   "How can I find a job in Curacao as a foreigner?",
+   "What is the minimum wage in Curacao in 2026?",
+   "Do Dutch citizens need a work permit for Curacao?"
+  ]
+ },
+ "reviewGewicht": 0.3,
+ "talen": [
+  "nl",
+  "en"
+ ]
+}

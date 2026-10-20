@@ -1,1 +1,928 @@
-{"id":"zorg","peildatum":"2026-10-20","items":[]}
+{
+ "id": "zorg",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "arts, ziekenhuis of apotheek",
+  "en": "doctor, hospital or pharmacy"
+ },
+ "h1": {
+  "nl": "Ziek of gewond op Curaçao: waar moet je heen?",
+  "en": "Sick or hurt in Curaçao: where should you go?"
+ },
+ "titel": {
+  "nl": "Dokter op Curaçao: {n} ziekenhuizen, huisartsen en apotheken",
+  "en": "Doctor in Curaçao: {n} hospitals, GPs and pharmacies"
+ },
+ "metaDesc": {
+  "nl": "Ambulance 912, spoedeisende hulp in het CMC, de huisartsenpost en dokters voor toeristen. {n} zorgadressen op Curaçao met tijden en nummers.",
+  "en": "Ambulance 912, the CMC emergency room, the after-hours GP and doctors for tourists. {n} healthcare options in Curaçao with hours and numbers."
+ },
+ "kort": {
+  "nl": "Bel 912 voor een ambulance. Het Curaçao Medical Center (CMC) in Otrobanda is het enige ziekenhuis met IC en heeft een decompressietank voor duikers. Als toerist ga je voor gewone klachten naar MedPoint (dagelijks 8:00-20:00, ook huisbezoek, Nederlands- en Engelstalig) of 's avonds en in het weekend naar de huisartsenpost.",
+  "en": "Call 912 for an ambulance. Curaçao Medical Center (CMC) in Otrobanda is the only hospital with an ICU and has a decompression chamber for divers. For everyday problems, tourists use MedPoint (daily 8 am to 8 pm, house calls, Dutch and English) or the after-hours GP post in the evening and on weekends."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat heb je nodig?",
+    "en": "What do you need?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Een dokter",
+      "en": "A doctor"
+     },
+     "plus": [
+      "huisarts"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ziekenhuis of spoedeisende hulp",
+      "en": "Hospital or emergency room"
+     },
+     "plus": [
+      "ziekenhuis",
+      "spoed"
+     ],
+     "min": [],
+     "vereist": "ziekenhuis"
+    },
+    {
+     "label": {
+      "nl": "Apotheek",
+      "en": "Pharmacy"
+     },
+     "plus": [
+      "apotheek"
+     ],
+     "min": [],
+     "vereist": "apotheek"
+    },
+    {
+     "label": {
+      "nl": "Tandarts",
+      "en": "Dentist"
+     },
+     "plus": [
+      "tandarts"
+     ],
+     "min": [],
+     "vereist": "tandarts"
+    },
+    {
+     "label": {
+      "nl": "Hulp na een duikongeval",
+      "en": "Help after a dive accident"
+     },
+     "plus": [
+      "duikers"
+     ],
+     "min": [],
+     "vereist": "duikers"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Ben je toerist of woon je hier?",
+    "en": "Are you visiting or do you live here?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Toerist",
+      "en": "Visitor"
+     },
+     "plus": [
+      "toerist"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ik woon op Curaçao",
+      "en": "I live in Curaçao"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Hoe dringend is het?",
+    "en": "How urgent is it?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Kan vandaag of morgen",
+      "en": "Today or tomorrow is fine"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Nu, 's avonds of in het weekend",
+      "en": "Right now, evening or weekend"
+     },
+     "plus": [
+      "spoed",
+      "24-uur"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Welke taal wil je spreken?",
+    "en": "Which language do you prefer?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit, Engels gaat",
+      "en": "Doesn't matter, English is fine"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Liefst Nederlands",
+      "en": "Dutch if possible"
+     },
+     "plus": [
+      "nl-sprekend"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "cmc",
+   "naam": "Curaçao Medical Center (CMC)",
+   "url": "https://cmc.cw",
+   "soort": {
+    "nl": "hoofdziekenhuis",
+    "en": "main hospital"
+   },
+   "plaats": "J.H.J. Hamelbergweg, Otrobanda",
+   "tags": [
+    "ziekenhuis",
+    "spoed",
+    "24-uur",
+    "toerist",
+    "duikers",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Spoed 24/7, nummer 910",
+     "en": "24/7 ER, dial 910"
+    },
+    {
+     "nl": "Enige IC van het eiland",
+     "en": "Only ICU on the island"
+    },
+    {
+     "nl": "Decompressietank tot 10 personen",
+     "en": "Decompression chamber, up to 10 people"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/questions/health-and-vaccinations/where-should-i-go-if-i-need-medical-attention-while-visiting-curacao",
+    "https://www.curacao.com/en/questions/health-and-vaccinations/how-many-hospitals-does-curacao-have",
+    "https://relaxedcuracao.com/en/static/emergency",
+    "https://www.gov.uk/foreign-travel-advice/curacao/health",
+    "https://www.mycuracaoguide.com/about-curacao/healthcare"
+   ]
+  },
+  {
+   "id": "cmc-decompressie",
+   "naam": "Decompressietank CMC (duikongevallen)",
+   "url": "https://cmc.cw",
+   "soort": {
+    "nl": "hyperbare kamer",
+    "en": "hyperbaric chamber"
+   },
+   "plaats": "CMC, Otrobanda",
+   "tags": [
+    "duikers",
+    "spoed",
+    "ziekenhuis",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Plaats voor 10 personen",
+     "en": "Room for 10 people"
+    },
+    {
+     "nl": "Bij duikongeval eerst 912 bellen",
+     "en": "After a dive accident call 912 first"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://relaxedcuracao.com/en/static/emergency"
+   ]
+  },
+  {
+   "id": "advent-hospital",
+   "naam": "Antillean Adventist Hospital (Advent Hospital)",
+   "url": null,
+   "soort": {
+    "nl": "particulier ziekenhuis",
+    "en": "private hospital"
+   },
+   "plaats": null,
+   "tags": [
+    "ziekenhuis"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Specialisten en algemene zorg",
+     "en": "Specialists and general care"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/questions/health-and-vaccinations/how-many-hospitals-does-curacao-have",
+    "https://www.gov.uk/foreign-travel-advice/curacao/health"
+   ]
+  },
+  {
+   "id": "taams-kliniek",
+   "naam": "Taams Kliniek",
+   "url": null,
+   "soort": {
+    "nl": "particuliere kliniek",
+    "en": "private clinic"
+   },
+   "plaats": null,
+   "tags": [
+    "ziekenhuis"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Breed aanbod specialisten",
+     "en": "Wide range of specialists"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/questions/health-and-vaccinations/how-many-hospitals-does-curacao-have",
+    "https://www.gov.uk/foreign-travel-advice/curacao/health"
+   ]
+  },
+  {
+   "id": "huisartsenpost",
+   "naam": "Huisartsenpost Curaçao (HAP)",
+   "url": "https://hap.cw",
+   "soort": {
+    "nl": "spoedpost huisarts",
+    "en": "after-hours GP"
+   },
+   "plaats": null,
+   "tags": [
+    "huisarts",
+    "spoed",
+    "toerist"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ma-vr 17:00-08:00",
+     "en": "Mon-Fri 5 pm-8 am"
+    },
+    {
+     "nl": "Weekend en feestdagen 24 uur",
+     "en": "Weekends and holidays 24 hours"
+    },
+    {
+     "nl": "Tel. +5999 462 9252",
+     "en": "Phone +5999 462 9252"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://relaxedcuracao.com/en/static/emergency",
+    "https://www.curacao.com/en/questions/health-and-vaccinations/where-should-i-go-if-i-need-medical-attention-while-visiting-curacao",
+    "https://www.mycuracaoguide.com/about-curacao/healthcare"
+   ]
+  },
+  {
+   "id": "medpoint",
+   "naam": "MedPoint Curaçao",
+   "url": "https://medpointcuracao.com",
+   "soort": {
+    "nl": "huisarts voor toeristen",
+    "en": "doctor for tourists"
+   },
+   "plaats": null,
+   "tags": [
+    "huisarts",
+    "toerist",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Dagelijks 8:00-20:00",
+     "en": "Daily 8 am-8 pm"
+    },
+    {
+     "nl": "Huisbezoek, video of praktijk",
+     "en": "House call, video or clinic"
+    },
+    {
+     "nl": "Nederlands- en Engelstalige artsen",
+     "en": "Dutch- and English-speaking doctors"
+    },
+    {
+     "nl": "WhatsApp +599 9 524 2944",
+     "en": "WhatsApp +599 9 524 2944"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://naarcuracao.com/en/medical-care-for-tourists",
+    "https://www.curacao.com/en/questions/health-and-vaccinations/where-should-i-go-if-i-need-medical-attention-while-visiting-curacao",
+    "https://www.curacaochronicle.com/post/local/medical-post-to-open-at-mambo-beach-for-tourists"
+   ]
+  },
+  {
+   "id": "medpoint-mambo",
+   "naam": "MedPoint post Mambo Beach",
+   "url": null,
+   "soort": {
+    "nl": "strandpost",
+    "en": "beach medical post"
+   },
+   "plaats": "Mambo Beach",
+   "tags": [
+    "huisarts",
+    "toerist",
+    "nl-sprekend",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Met Kontiki Beach Resort",
+     "en": "With Kontiki Beach Resort"
+    },
+    {
+     "nl": "Artsen dagelijks 8:00-21:00",
+     "en": "Doctors daily 8 am-9 pm"
+    },
+    {
+     "nl": "Aangekondigd december 2025",
+     "en": "Announced December 2025"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/medical-post-to-open-at-mambo-beach-for-tourists"
+   ]
+  },
+  {
+   "id": "h2care",
+   "naam": "H2Care Medical Service",
+   "url": "https://h2carecuracao.com",
+   "soort": {
+    "nl": "zorg voor toeristen en expats",
+    "en": "care for tourists and expats"
+   },
+   "plaats": null,
+   "tags": [
+    "huisarts",
+    "toerist"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/questions/health-and-vaccinations/where-should-i-go-if-i-need-medical-attention-while-visiting-curacao"
+   ]
+  },
+  {
+   "id": "health-online",
+   "naam": "Health Online",
+   "url": "https://healthonline.app",
+   "soort": {
+    "nl": "videoconsult",
+    "en": "video consultation"
+   },
+   "plaats": null,
+   "tags": [
+    "huisarts",
+    "toerist"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Consult vanuit je verblijf",
+     "en": "Consult from your accommodation"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/questions/health-and-vaccinations/where-should-i-go-if-i-need-medical-attention-while-visiting-curacao"
+   ]
+  },
+  {
+   "id": "benu-dominguito",
+   "naam": "BENU Apotheek Dominguito",
+   "url": "https://www.benucaribbean.com",
+   "soort": {
+    "nl": "apotheekketen",
+    "en": "pharmacy chain"
+   },
+   "plaats": "Caracasbaaiweg 164",
+   "tags": [
+    "apotheek",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ma-za 8:00-19:00",
+     "en": "Mon-Sat 8 am-7 pm"
+    },
+    {
+     "nl": "Tel. +5999 461 7988",
+     "en": "Phone +5999 461 7988"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/about-curacao/healthcare",
+    "https://www.mycuracaoguide.com/discover/benu-pharmacy-caribbean"
+   ]
+  },
+  {
+   "id": "benu-otrobanda",
+   "naam": "BENU Apotheek Otrobanda",
+   "url": "https://www.benucaribbean.com",
+   "soort": {
+    "nl": "apotheekketen",
+    "en": "pharmacy chain"
+   },
+   "plaats": "Pater Euwensweg 46, Otrobanda",
+   "tags": [
+    "apotheek",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ma-za 8:00-19:00",
+     "en": "Mon-Sat 8 am-7 pm"
+    },
+    {
+     "nl": "Tel. +5999 462 5633",
+     "en": "Phone +5999 462 5633"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/about-curacao/healthcare"
+   ]
+  },
+  {
+   "id": "benu-palu-blanku",
+   "naam": "BENU Apotheek Palu Blanku",
+   "url": "https://www.benucaribbean.com",
+   "soort": {
+    "nl": "apotheekketen",
+    "en": "pharmacy chain"
+   },
+   "plaats": "Frater Radulphusweg 1",
+   "tags": [
+    "apotheek",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ma-za 8:00-19:00",
+     "en": "Mon-Sat 8 am-7 pm"
+    },
+    {
+     "nl": "Tel. +5999 735 2999",
+     "en": "Phone +5999 735 2999"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/about-curacao/healthcare"
+   ]
+  },
+  {
+   "id": "botika-tera-cora",
+   "naam": "Botika Tera Cora",
+   "url": null,
+   "soort": {
+    "nl": "buurtapotheek",
+    "en": "neighborhood pharmacy"
+   },
+   "plaats": "Tera Cora, naast supermarkt California",
+   "tags": [
+    "apotheek"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://relaxedcuracao.com/en/static/emergency"
+   ]
+  },
+  {
+   "id": "botika-na-warda",
+   "naam": "Dienstapotheek (Botika na Warda)",
+   "url": null,
+   "soort": {
+    "nl": "nachtdienst",
+    "en": "night duty pharmacy"
+   },
+   "plaats": null,
+   "tags": [
+    "apotheek",
+    "spoed"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Minstens twee open 19:00-08:00",
+     "en": "At least two open 7 pm-8 am"
+    },
+    {
+     "nl": "Rooster bij hotel of Botika di Servisio",
+     "en": "Schedule via hotel or Botika di Servisio"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://relaxedcuracao.com/en/static/emergency",
+    "https://www.curacao.com/en/questions/health-and-vaccinations/are-there-pharmacies-available-in-curacao"
+   ]
+  },
+  {
+   "id": "botika-di-servisio",
+   "naam": "Botika di Servisio",
+   "url": null,
+   "soort": {
+    "nl": "apotheekgroep",
+    "en": "pharmacy group"
+   },
+   "plaats": null,
+   "tags": [
+    "apotheek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Verspreid over het eiland",
+     "en": "Locations island-wide"
+    },
+    {
+     "nl": "Ma-za 8:00-19:00",
+     "en": "Mon-Sat 8 am-7 pm"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/about-curacao/healthcare"
+   ]
+  },
+  {
+   "id": "bwa-tandartsen",
+   "naam": "BWA Tandartsen",
+   "url": "https://www.tandartscuracao.com",
+   "soort": {
+    "nl": "tandartspraktijk",
+    "en": "dental practice"
+   },
+   "plaats": "Hoogstraat 14, Willemstad",
+   "tags": [
+    "tandarts",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Controle, implantaten, wortelkanaal",
+     "en": "Checkups, implants, root canals"
+    },
+    {
+     "nl": "Tel. +5999 462 5620",
+     "en": "Phone +5999 462 5620"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/discover/bwa-tandartsen"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Je reisverzekering (alarmcentrale)",
+   "url": null,
+   "uitleg": {
+    "nl": "Bel bij een opname of verwijzing meteen je verzekeraar. Je betaalt vaak eerst zelf en declareert daarna met bon en medisch verslag.",
+    "en": "Call your insurer right away if you're admitted or referred. You often pay first and claim later with the receipt and medical report."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Ambulance: 912. Politie en brandweer: 911. Kustwacht: 913. Spoednummer CMC: 910 (stuurt geen ambulance).",
+   "en": "Ambulance: 912. Police and fire: 911. Coast Guard: 913. CMC emergency line: 910 (does not dispatch ambulances)."
+  },
+  {
+   "nl": "Apotheken zijn meestal ma-za 8:00-19:00 open en op zondag dicht. 's Nachts zijn er minstens twee Botika na Warda open.",
+   "en": "Pharmacies usually open Mon-Sat 8 am to 7 pm and close Sunday. At night at least two duty pharmacies (Botika na Warda) stay open."
+  },
+  {
+   "nl": "Je EHIC/GHIC geldt niet op Curaçao. Neem een reisverzekering met dekking voor behandeling en repatriëring.",
+   "en": "Your EHIC or GHIC card is not valid in Curaçao. Get travel insurance that covers treatment and medical evacuation."
+  },
+  {
+   "nl": "Bij MedPoint betaal je ter plekke met pin en krijg je een medisch verslag en bon voor je verzekeraar.",
+   "en": "At MedPoint you pay on the spot by card and get a medical report and receipt for your insurer."
+  },
+  {
+   "nl": "In een resort? Bel eerst de receptie: die regelt vaak een arts.",
+   "en": "Staying at a resort? Call the front desk first; they often arrange a doctor."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wat is het alarmnummer op Curaçao?",
+    "en": "What is the emergency number in Curaçao?"
+   },
+   "a": {
+    "nl": "912 voor een ambulance, 911 voor politie en brandweer, 913 voor de kustwacht en 917 voor de toeristenpolitie.",
+    "en": "912 for an ambulance, 911 for police and fire, 913 for the Coast Guard and 917 for the tourist police."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar ga je als toerist naar de dokter op Curaçao?",
+    "en": "Where do tourists see a doctor in Curaçao?"
+   },
+   "a": {
+    "nl": "Overdag naar MedPoint Curaçao (8:00-20:00, ook huisbezoek) of H2Care. 's Avonds, 's nachts en in het weekend naar de huisartsenpost (+5999 462 9252).",
+    "en": "During the day MedPoint Curaçao (8 am to 8 pm, house calls too) or H2Care. Evenings, nights and weekends, the after-hours GP post (+5999 462 9252)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost een dokter voor toeristen op Curaçao?",
+    "en": "How much does a doctor cost for tourists in Curaçao?"
+   },
+   "a": {
+    "nl": "Je betaalt zelf en declareert bij je verzekeraar. Avond, weekend en huisbezoek kosten bij MedPoint meer dan een consult in de praktijk.",
+    "en": "You pay yourself and claim from your insurer. At MedPoint, evenings, weekends and house calls cost more than a clinic visit."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke verzekering wordt geaccepteerd?",
+    "en": "Which insurance is accepted?"
+   },
+   "a": {
+    "nl": "Toeristen met een Nederlandse of Amerikaanse zorg- of reisverzekering zijn meestal gedekt, maar betalen vaak eerst zelf. De EHIC geldt niet.",
+    "en": "Visitors with Dutch or US health or travel insurance are usually covered but often pay first. The EHIC is not valid."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welk ziekenhuis is het dichtst bij de resorts?",
+    "en": "Which hospital is closest to the resorts?"
+   },
+   "a": {
+    "nl": "Bijna alle spoedzorg gaat naar het CMC in Otrobanda, het enige ziekenhuis met IC. De ambulance of arts beslist naar welk ziekenhuis je gaat.",
+    "en": "Nearly all emergency care goes to the CMC in Otrobanda, the only hospital with an ICU. The ambulance crew or doctor decides where you go."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is er een decompressietank voor duikers?",
+    "en": "Is there a decompression chamber for divers?"
+   },
+   "a": {
+    "nl": "Ja, in het CMC, met plaats voor 10 personen. Bel bij een duikongeval 912.",
+    "en": "Yes, at the CMC, with room for 10 people. After a dive accident, call 912."
+   }
+  },
+  {
+   "q": {
+    "nl": "Zijn apotheken op zondag open?",
+    "en": "Are pharmacies open on Sunday?"
+   },
+   "a": {
+    "nl": "Gewone botika's zijn zondag dicht. Er zijn altijd dienstapotheken (Botika na Warda); de receptie van je hotel weet welke.",
+    "en": "Regular pharmacies close Sunday. Duty pharmacies (Botika na Warda) are always open; your hotel desk knows which."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "huisarts curaçao toerist",
+   "huisartsenpost curaçao",
+   "ziekenhuis curaçao",
+   "apotheek curaçao zondag",
+   "tandarts curaçao"
+  ],
+  "en": [
+   "doctor in curacao",
+   "curacao hospital",
+   "urgent care curacao",
+   "pharmacy curacao",
+   "emergency number curacao"
+  ],
+  "es": [
+   "hospital curazao",
+   "médico en curazao",
+   "farmacia curazao"
+  ],
+  "pt": [
+   "hospital curaçao",
+   "médico em curaçao"
+  ],
+  "de": [
+   "arzt curaçao",
+   "krankenhaus curaçao",
+   "apotheke curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Waar kan ik als toerist naar de huisarts op Curaçao?",
+   "Welke apotheek is 's nachts open op Curaçao?",
+   "Wat moet ik doen bij een duikongeval op Curaçao?"
+  ],
+  "en": [
+   "Where can a tourist see a doctor in Curaçao?",
+   "Which pharmacy is open at night in Curaçao?",
+   "Is there a hyperbaric chamber in Curaçao for divers?"
+  ]
+ },
+ "reviewGewicht": 0.5,
+ "talen": [
+  "nl",
+  "en"
+ ]
+}

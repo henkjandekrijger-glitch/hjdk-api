@@ -1,1 +1,2670 @@
-{"id":"kinderen","peildatum":"2026-10-20","items":[]}
+{
+ "id": "kinderen",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "uitje of school met kinderen",
+  "en": "kids activity or school"
+ },
+ "h1": {
+  "nl": "Curaçao met kinderen: welk uitje, strand of welke school past bij jullie?",
+  "en": "Curaçao with kids: which outing, beach or school fits your family?"
+ },
+ "titel": {
+  "nl": "Curaçao met kinderen: {n} uitjes, stranden en scholen",
+  "en": "Curaçao with kids: {n} outings, beaches and schools"
+ },
+ "metaDesc": {
+  "nl": "{n} kinderuitjes, rustige stranden en scholen op Curaçao vergeleken, met Tripadvisor-scores, prijzen en leeftijden. Kies in 4 vragen.",
+  "en": "{n} kid-friendly outings, calm beaches and schools in Curaçao compared, with Tripadvisor ratings, prices and ages. Pick in 4 questions."
+ },
+ "kort": {
+  "nl": "Voor jonge kinderen scoren het Children's Museum (5,0 op Tripadvisor), de Sea Aquarium (4,1 uit ruim 2.100 reviews) en rustige stranden als Kokomo Beach met gratis entree het best. Hato Caves kost ongeveer $10 per persoon, een Dolphin Encounter $114. Wie verhuist kiest tussen Engelstalige scholen (ISC, CAPS, CAISS) en een tiental Nederlandstalige scholen.",
+  "en": "For young kids, the Children's Museum (5.0 on Tripadvisor), the Sea Aquarium (4.1 from over 2,100 reviews) and calm beaches like Kokomo Beach with free entry are the safest bets. Hato Caves runs about $10 per person and a Dolphin Encounter $114. Families moving here choose between English-language schools (ISC, CAPS, CAISS) and about ten Dutch-language schools."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat zoek je?",
+    "en": "What are you looking for?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Een dagje uit",
+      "en": "A day out"
+     },
+     "plus": [
+      "uitje"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Een kindvriendelijk strand",
+      "en": "A kid-friendly beach"
+     },
+     "plus": [
+      "strand"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Iets binnen, bij hitte of regen",
+      "en": "Something indoors, for heat or rain"
+     },
+     "plus": [
+      "binnen"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Een school (we verhuizen)",
+      "en": "A school (we're moving)"
+     },
+     "plus": [
+      "school"
+     ],
+     "min": [],
+     "vereist": "school"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Hoe oud zijn de kinderen?",
+    "en": "How old are the kids?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Gemengd of maakt niet uit",
+      "en": "Mixed ages or doesn't matter"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Peuters en kleuters (0-6)",
+      "en": "Toddlers and preschoolers (0-6)"
+     },
+     "plus": [
+      "peuters"
+     ],
+     "min": [
+      "tieners"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Tieners (10+)",
+      "en": "Teens (10+)"
+     },
+     "plus": [
+      "tieners"
+     ],
+     "min": [
+      "peuters"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat weegt zwaar?",
+    "en": "What matters most?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Niets in het bijzonder",
+      "en": "Nothing in particular"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Gratis",
+      "en": "Free"
+     },
+     "plus": [
+      "gratis"
+     ],
+     "min": [
+      "entree"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Iets met dieren",
+      "en": "Animals"
+     },
+     "plus": [
+      "dieren"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Onderwijs in het Engels",
+      "en": "Teaching in English"
+     },
+     "plus": [
+      "internationaal-en"
+     ],
+     "min": [
+      "nl-onderwijs"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Onderwijs in het Nederlands",
+      "en": "Teaching in Dutch"
+     },
+     "plus": [
+      "nl-onderwijs"
+     ],
+     "min": [
+      "internationaal-en"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Waar verblijf je?",
+    "en": "Where are you staying?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Oost (Jan Thiel, Mambo, Caracasbaai)",
+      "en": "East (Jan Thiel, Mambo, Caracas Bay)"
+     },
+     "plus": [
+      "oost"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Willemstad en omgeving",
+      "en": "Willemstad area"
+     },
+     "plus": [
+      "midden"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Westpunt en Banda Abou",
+      "en": "Westpunt and Banda Abou"
+     },
+     "plus": [
+      "westpunt"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "curacao-sea-aquarium",
+   "naam": "Curaçao Sea Aquarium",
+   "url": null,
+   "soort": {
+    "nl": "aquarium",
+    "en": "aquarium"
+   },
+   "plaats": "Bapor Kibra (Mambo Beach)",
+   "tags": [
+    "uitje",
+    "dieren",
+    "entree",
+    "peuters",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Touch tanks en flamingo's voeren",
+     "en": "Touch tanks and flamingo feeding"
+    },
+    {
+     "nl": "Bezoek duurt 2 tot 3 uur",
+     "en": "Visit takes 2 to 3 hours"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 2198,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d286262-Reviews-Curacao_Sea_Aquarium-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Kinderen genieten van haaien en flamingo's voeren",
+     "Gidsen geduldig en met veel kennis",
+     "Prijs vinden bezoekers redelijk"
+    ],
+    "en": [
+     "Kids love the shark and flamingo feedings",
+     "Guides are patient and knowledgeable",
+     "Visitors call the price fair"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Betaalde fotopakketten niet altijd compleet geleverd",
+     "Tripadvisor boekt het niet vanwege dierenwelzijnsregels"
+    ],
+    "en": [
+     "Paid photo packages not always fully delivered",
+     "Tripadvisor won't sell tickets under its animal welfare rules"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d286262-Reviews-Curacao_Sea_Aquarium-Willemstad_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families",
+    "https://papagayo.com/curacao-tips/things-to-do/10-curacao-activities-your-kids-will-love"
+   ]
+  },
+  {
+   "id": "dolphin-academy",
+   "naam": "Dolphin Academy Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "dolfijnen",
+    "en": "dolphins"
+   },
+   "plaats": "Bapor Kibra (bij Sea Aquarium)",
+   "tags": [
+    "uitje",
+    "dieren",
+    "entree",
+    "oost"
+   ],
+   "prijs": {
+    "bedrag": 114,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "Dolphin Encounter per persoon",
+     "en": "Dolphin Encounter per person"
+    },
+    "bron": "https://www.mycuracaoguide.com/blogs/best-things-to-do-with-kids-in-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Ontmoeten, zwemmen of duiken",
+     "en": "Meet, swim or dive"
+    },
+    {
+     "nl": "Lagune en open zee",
+     "en": "Lagoon and open sea"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 3004,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-zfg11867-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-zfg11867-Curacao.html",
+    "https://www.mycuracaoguide.com/blogs/best-things-to-do-with-kids-in-curacao",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "ostrich-farm",
+   "naam": "Curaçao Ostrich Farm",
+   "url": null,
+   "soort": {
+    "nl": "struisvogelboerderij",
+    "en": "ostrich farm"
+   },
+   "plaats": null,
+   "tags": [
+    "uitje",
+    "dieren",
+    "entree",
+    "peuters"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Safaririt en struisvogels voeren",
+     "en": "Safari ride and ostrich feeding"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/article/curacao-for-families",
+    "https://www.avilabeachhotel.com/curacao-tips/things-to-do/top-10-kids-activities-curacao/"
+   ]
+  },
+  {
+   "id": "hato-caves",
+   "naam": "Hato Caves",
+   "url": null,
+   "soort": {
+    "nl": "grot",
+    "en": "cave"
+   },
+   "plaats": "Hato, bij het vliegveld",
+   "tags": [
+    "uitje",
+    "binnen",
+    "entree",
+    "midden"
+   ],
+   "prijs": {
+    "bedrag": 10,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "entree per persoon (volgens bezoekers 2025-2026)",
+     "en": "admission per person (per 2025-2026 visitors)"
+    },
+    "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d147987-Reviews-Hato_Caves-Willemstad_Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Grot van ongeveer 300.000 jaar",
+     "en": "Cave about 300,000 years old"
+    },
+    {
+     "nl": "Rondleiding 40 tot 60 minuten",
+     "en": "Tour of 40 to 60 minutes"
+    },
+    {
+     "nl": "Gratis parkeren",
+     "en": "Free parking"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 1874,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d147987-Reviews-Hato_Caves-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gidsen vertellen goed over de geschiedenis",
+     "Kort bezoek met leuningen en verharde paden",
+     "Vleermuizen en mooie rotsvormen"
+    ],
+    "en": [
+     "Guides explain the history well",
+     "Short visit with handrails and paved paths",
+     "Bats and striking rock formations"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Warm binnen, ga vroeg",
+     "Steile trap naar de ingang",
+     "Druk als er bustours zijn"
+    ],
+    "en": [
+     "Hot inside, go early",
+     "Steep stairs up to the entrance",
+     "Crowded when tour buses arrive"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d147987-Reviews-Hato_Caves-Willemstad_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "christoffelpark",
+   "naam": "Christoffelpark",
+   "url": null,
+   "soort": {
+    "nl": "nationaal park",
+    "en": "national park"
+   },
+   "plaats": "Landhuis Savonet, Westpunt",
+   "tags": [
+    "uitje",
+    "entree",
+    "tieners",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "8 wandelroutes",
+     "en": "8 hiking trails"
+    },
+    {
+     "nl": "Hoogste punt 372 meter",
+     "en": "Highest point 372 m"
+    },
+    {
+     "nl": "Kassa sluit om 13:30",
+     "en": "Ticket office closes 1:30 pm"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 45,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g1724323-d13834145-Reviews-Christoffelpark-Sabana_Westpunt_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g1724323-d13834145-Reviews-Christoffelpark-Sabana_Westpunt_Curacao.html",
+    "https://www.christoffelpark.org",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "shete-boka",
+   "naam": "Shete Boka National Park",
+   "url": null,
+   "soort": {
+    "nl": "nationaal park",
+    "en": "national park"
+   },
+   "plaats": "Noordkust",
+   "tags": [
+    "uitje",
+    "entree",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "10 km noordkust",
+     "en": "10 km of north coast"
+    },
+    {
+     "nl": "Bekende blaasgat Boka Tabla",
+     "en": "Famous Boka Tabla blowhole"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 2498,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147277-d2619383-Reviews-Shete_Boka_National_Park-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147277-d2619383-Reviews-Shete_Boka_National_Park-Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "curacao-zoo",
+   "naam": "Curaçao Zoo",
+   "url": null,
+   "soort": {
+    "nl": "dierentuin",
+    "en": "zoo"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "uitje",
+    "dieren",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 2.9,
+     "max": 5,
+     "aantal": 54,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d1830820-Reviews-Curacao_Zoo-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d1830820-Reviews-Curacao_Zoo-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "kura-hulanda-museum",
+   "naam": "Museum Kura Hulanda",
+   "url": null,
+   "soort": {
+    "nl": "museum",
+    "en": "museum"
+   },
+   "plaats": "Otrobanda",
+   "tags": [
+    "uitje",
+    "binnen",
+    "entree",
+    "tieners",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Wereldculturen en slavernijgeschiedenis",
+     "en": "World cultures and slavery history"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 1424,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d184815-Reviews-Kura_Hulanda_Museum-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d184815-Reviews-Kura_Hulanda_Museum-Willemstad_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "childrens-museum",
+   "naam": "Children's Museum Curaçao",
+   "url": "https://www.childrensmuseumcuracao.org",
+   "soort": {
+    "nl": "kindermuseum",
+    "en": "children's museum"
+   },
+   "plaats": "Rooi Catootje 1",
+   "tags": [
+    "uitje",
+    "binnen",
+    "entree",
+    "peuters",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Voor 1 tot 10 jaar",
+     "en": "For ages 1 to 10"
+    },
+    {
+     "nl": "Airco en buitenspeeltuin",
+     "en": "Air-conditioned plus outdoor playground"
+    },
+    {
+     "nl": "STEM-zaterdagen",
+     "en": "STEM Saturdays"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 18,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d13389569-Reviews-Children_s_Museum_Curacao-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d13389569-Reviews-Children_s_Museum_Curacao-Willemstad_Curacao.html",
+    "https://www.childrensmuseumcuracao.org",
+    "https://www.mycuracaoguide.com/blogs/best-things-to-do-with-kids-in-curacao",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "mini-waves",
+   "naam": "Mini Waves",
+   "url": "https://www.mini-waves.com",
+   "soort": {
+    "nl": "mini-bootjes",
+    "en": "mini boats"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "uitje",
+    "entree",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Kinderen sturen eigen elektrisch bootje",
+     "en": "Kids steer their own electric boat"
+    },
+    {
+     "nl": "Kapiteinsdiploma",
+     "en": "Captain's diploma"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/best-things-to-do-with-kids-in-curacao",
+    "https://www.avilabeachhotel.com/curacao-tips/things-to-do/top-10-kids-activities-curacao/"
+   ]
+  },
+  {
+   "id": "amazonia",
+   "naam": "Amazonia Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "dierenpark",
+    "en": "animal park"
+   },
+   "plaats": null,
+   "tags": [
+    "uitje",
+    "dieren",
+    "entree"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Rondleiding 45 tot 60 minuten",
+     "en": "Guided tour of 45 to 60 minutes"
+    },
+    {
+     "nl": "Slangen, vogels en apen",
+     "en": "Snakes, birds and monkeys"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/best-things-to-do-with-kids-in-curacao",
+    "https://www.curacao.com/en/article/curacao-for-families",
+    "https://www.avilabeachhotel.com/curacao-tips/things-to-do/top-10-kids-activities-curacao/"
+   ]
+  },
+  {
+   "id": "brakkeput-minigolf",
+   "naam": "Minigolf en speeltuin Brakkeput Mei Mei",
+   "url": null,
+   "soort": {
+    "nl": "minigolf",
+    "en": "mini golf"
+   },
+   "plaats": "Brakkeput Mei Mei, Spaanse Water",
+   "tags": [
+    "uitje",
+    "entree",
+    "peuters",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "18 holes door tropische tuin",
+     "en": "18 holes through a tropical garden"
+    },
+    {
+     "nl": "Speeltuin inbegrepen bij golf",
+     "en": "Playground included with golf"
+    },
+    {
+     "nl": "Overdag en 's avonds",
+     "en": "Day or night"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/article/curacao-for-families",
+    "https://www.avilabeachhotel.com/curacao-tips/things-to-do/top-10-kids-activities-curacao/",
+    "https://papagayo.com/curacao-tips/things-to-do/10-curacao-activities-your-kids-will-love"
+   ]
+  },
+  {
+   "id": "kidis-park",
+   "naam": "Kidi's Park (Sambil)",
+   "url": null,
+   "soort": {
+    "nl": "binnenspeeltuin",
+    "en": "indoor playground"
+   },
+   "plaats": "Sambil Mall",
+   "tags": [
+    "uitje",
+    "binnen",
+    "entree",
+    "peuters",
+    "midden"
+   ],
+   "prijs": {
+    "bedrag": 35,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per uur (bezoeker 2025)",
+     "en": "per hour (2025 visitor)"
+    },
+    "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d21282041-Reviews-Kidi_s_Park-Willemstad_Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Sokken meenemen",
+     "en": "Bring socks"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.4,
+     "max": 5,
+     "aantal": 7,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d21282041-Reviews-Kidi_s_Park-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goede plek voor jonge kinderen bij hitte of regen",
+     "Vriendelijk personeel"
+    ],
+    "en": [
+     "Good spot for young kids in heat or rain",
+     "Friendly staff"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Uurprijs vinden sommigen hoog",
+     "Eén melding over slechte hulp na een ongelukje"
+    ],
+    "en": [
+     "Some find the hourly rate high",
+     "One report of poor help after a child got hurt"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d21282041-Reviews-Kidi_s_Park-Willemstad_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families",
+    "https://papagayo.com/curacao-tips/things-to-do/10-curacao-activities-your-kids-will-love"
+   ]
+  },
+  {
+   "id": "xtreme-zone",
+   "naam": "Xtreme Zone trampolinepark",
+   "url": null,
+   "soort": {
+    "nl": "trampolinepark",
+    "en": "trampoline park"
+   },
+   "plaats": "Sambil Mall",
+   "tags": [
+    "uitje",
+    "binnen",
+    "entree",
+    "tieners",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "dushi-bowling",
+   "naam": "Dushi Bowling",
+   "url": null,
+   "soort": {
+    "nl": "bowling",
+    "en": "bowling"
+   },
+   "plaats": "Sambil Mall",
+   "tags": [
+    "uitje",
+    "binnen",
+    "entree",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 2.5,
+     "max": 5,
+     "aantal": 2,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d21274718-Reviews-Dushi_Bowling-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d21274718-Reviews-Dushi_Bowling-Willemstad_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "sambil",
+   "naam": "Sambil Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "winkelcentrum",
+    "en": "shopping mall"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "binnen",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Bowling, trampolines, speeltuin, bioscoop",
+     "en": "Bowling, trampolines, playground, cinema"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.6,
+     "max": 5,
+     "aantal": 346,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d6825396-Reviews-Sambil_Curacao-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Schoon en overzichtelijk",
+     "Alles bij elkaar, met supermarkt en bioscoop"
+    ],
+    "en": [
+     "Clean and easy to get around",
+     "Everything in one place, with supermarket and cinema"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Winkels pas om 11 uur open",
+     "Ver van toeristengebied, auto nodig"
+    ],
+    "en": [
+     "Stores open only at 11 am",
+     "Far from tourist areas, you need a car"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d6825396-Reviews-Sambil_Curacao-Willemstad_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "the-movies",
+   "naam": "The Movies Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "bioscoop",
+    "en": "movie theater"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "binnen",
+    "entree",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "IMAX-scherm",
+     "en": "IMAX screen"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 5,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d10538771-Reviews-The_Movies_Curacao-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d10538771-Reviews-The_Movies_Curacao-Willemstad_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "caribbean-cinemas",
+   "naam": "Caribbean Cinemas Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "bioscoop",
+    "en": "movie theater"
+   },
+   "plaats": "Sambil Mall",
+   "tags": [
+    "binnen",
+    "entree",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d28840843-Reviews-Caribbean_Cinemas_Curacao-Willemstad_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "arcane-vr",
+   "naam": "Arcane VR",
+   "url": null,
+   "soort": {
+    "nl": "VR-games",
+    "en": "VR gaming"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "binnen",
+    "entree",
+    "tieners",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 145,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d34047997-Reviews-Arcane_VR-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d34047997-Reviews-Arcane_VR-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "hofi-mango",
+   "naam": "Hofi Mango (zipline)",
+   "url": null,
+   "soort": {
+    "nl": "zipline en natuur",
+    "en": "zipline and nature"
+   },
+   "plaats": null,
+   "tags": [
+    "uitje",
+    "entree",
+    "tieners"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 89,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d25033588-Reviews-Hofi_Mango-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d25033588-Reviews-Hofi_Mango-Willemstad_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "sea-trek",
+   "naam": "Sea TREK helmduiken",
+   "url": null,
+   "soort": {
+    "nl": "helmduiken",
+    "en": "helmet diving"
+   },
+   "plaats": null,
+   "tags": [
+    "uitje",
+    "entree",
+    "tieners"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Leeftijd 8 tot 80",
+     "en": "Ages 8 to 80"
+    },
+    {
+     "nl": "Geen duikbrevet nodig",
+     "en": "No scuba certification needed"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "substation",
+   "naam": "Substation Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "onderzeeër",
+    "en": "submarine"
+   },
+   "plaats": null,
+   "tags": [
+    "uitje",
+    "entree"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Onderzeeër naar rif en wrakken",
+     "en": "Submarine to reef and wrecks"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/best-things-to-do-with-kids-in-curacao"
+   ]
+  },
+  {
+   "id": "crystal-clear-canoe",
+   "naam": "Crystal Clear Canoe Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "doorzichtige kano",
+    "en": "clear canoe"
+   },
+   "plaats": null,
+   "tags": [
+    "uitje",
+    "entree"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "rock-climbing",
+   "naam": "Rock Climbing Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "klimmen",
+    "en": "rock climbing"
+   },
+   "plaats": "Tafelberg",
+   "tags": [
+    "uitje",
+    "entree",
+    "tieners"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vanaf 10 jaar",
+     "en": "Ages 10 and up"
+    },
+    {
+     "nl": "3 uur wandelen en klimmen",
+     "en": "3-hour hike and climb"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "zapata-flyboard",
+   "naam": "Zapata Flyboard Caribbean",
+   "url": null,
+   "soort": {
+    "nl": "flyboarden",
+    "en": "flyboarding"
+   },
+   "plaats": null,
+   "tags": [
+    "uitje",
+    "entree",
+    "tieners"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vanaf 10 jaar",
+     "en": "Ages 10 and up"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "maritime-museum",
+   "naam": "Maritiem Museum Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "museum",
+    "en": "museum"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "binnen",
+    "entree",
+    "tieners",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ook havenrondvaart",
+     "en": "Harbor tours too"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 357,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d148724-Reviews-Maritime_Museum_Curacao-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d148724-Reviews-Maritime_Museum_Curacao-Willemstad_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "trolley-train",
+   "naam": "Trolley Train Willemstad",
+   "url": null,
+   "soort": {
+    "nl": "stadstrein",
+    "en": "city train"
+   },
+   "plaats": "Fort Amsterdam, Punda",
+   "tags": [
+    "uitje",
+    "entree",
+    "peuters",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Rit van 75 minuten",
+     "en": "75-minute ride"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://papagayo.com/curacao-tips/things-to-do/10-curacao-activities-your-kids-will-love"
+   ]
+  },
+  {
+   "id": "rif-mangrove-park",
+   "naam": "Curaçao Rif Mangrove Park",
+   "url": null,
+   "soort": {
+    "nl": "natuurpark",
+    "en": "nature park"
+   },
+   "plaats": "Otrobanda",
+   "tags": [
+    "uitje",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 77,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d24160847-Reviews-Curacao_Rif_Mangrove_Park-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d24160847-Reviews-Curacao_Rif_Mangrove_Park-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "rancho-mi-famia",
+   "naam": "Rancho Mi Famia",
+   "url": null,
+   "soort": {
+    "nl": "paardrijden",
+    "en": "horseback riding"
+   },
+   "plaats": null,
+   "tags": [
+    "uitje",
+    "dieren",
+    "entree"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 130,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d26554272-Reviews-Rancho_Mi_Famia-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d26554272-Reviews-Rancho_Mi_Famia-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "zoutpannen-jan-thiel",
+   "naam": "Zoutpannen Jan Thiel (flamingo's)",
+   "url": null,
+   "soort": {
+    "nl": "natuur",
+    "en": "nature"
+   },
+   "plaats": "Natuurpark Den Dunki, Caracasbaaiweg",
+   "tags": [
+    "uitje",
+    "dieren",
+    "gratis",
+    "peuters",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Gratis",
+     "en": "Free"
+    },
+    {
+     "nl": "Flamingo's vooral 's ochtends",
+     "en": "Flamingos best in the morning"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.avilabeachhotel.com/curacao-tips/things-to-do/top-10-kids-activities-curacao/"
+   ]
+  },
+  {
+   "id": "flamingo-sint-willibrordus",
+   "naam": "Flamingo's Sint Willibrordus",
+   "url": null,
+   "soort": {
+    "nl": "natuur",
+    "en": "nature"
+   },
+   "plaats": "Sint Willibrordus",
+   "tags": [
+    "uitje",
+    "dieren",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 418,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g3754516-d4509315-Reviews-Flamingo_Sanctuary_Sint_Willibrordus-Sint_Willibrordus_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g3754516-d4509315-Reviews-Flamingo_Sanctuary_Sint_Willibrordus-Sint_Willibrordus_Curacao.html"
+   ]
+  },
+  {
+   "id": "kokomo-beach",
+   "naam": "Kokomo Beach",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach"
+   },
+   "plaats": "Vaersenbaai",
+   "tags": [
+    "strand",
+    "gratis",
+    "peuters",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Gratis entree",
+     "en": "Free entry"
+    },
+    {
+     "nl": "Rustig water voor kleintjes",
+     "en": "Calm water for little ones"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 598,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d8018217-Reviews-Kokomo_Beach-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d8018217-Reviews-Kokomo_Beach-Willemstad_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "jan-thiel-beach",
+   "naam": "Jan Thiel Beach",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "strand",
+    "entree",
+    "peuters",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Rustig water",
+     "en": "Calm water"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 1238,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d2529778-Reviews-Jan_Thiel_Beach-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d2529778-Reviews-Jan_Thiel_Beach-Willemstad_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "mambo-beach",
+   "naam": "Mambo Beach",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach"
+   },
+   "plaats": "Bapor Kibra",
+   "tags": [
+    "strand",
+    "entree",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 1539,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147277-d1234018-Reviews-Mambo_Beach-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147277-d1234018-Reviews-Mambo_Beach-Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "cas-abao",
+   "naam": "Cas Abao Beach",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach"
+   },
+   "plaats": "Sint Willibrordus",
+   "tags": [
+    "strand",
+    "entree",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Douches, toiletten, ligbedden",
+     "en": "Showers, restrooms, loungers"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 2834,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147277-d2169353-Reviews-Cas_Abao_Beach-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147277-d2169353-Reviews-Cas_Abao_Beach-Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "porto-mari",
+   "naam": "Playa Porto Mari",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach"
+   },
+   "plaats": "Sint Willibrordus",
+   "tags": [
+    "strand",
+    "entree",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Zacht aflopend",
+     "en": "Gentle entry"
+    },
+    {
+     "nl": "Schildpadden en varkens",
+     "en": "Sea turtles and pigs"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 1829,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g3754516-d2169479-Reviews-Playa_Porto_Marie-Sint_Willibrordus_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g3754516-d2169479-Reviews-Playa_Porto_Marie-Sint_Willibrordus_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "grote-knip",
+   "naam": "Grote Knip (Kenepa Grandi)",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "strand",
+    "gratis",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Gratis entree",
+     "en": "Free entry"
+    },
+    {
+     "nl": "40 minuten van Willemstad",
+     "en": "40 minutes from Willemstad"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 5094,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g1724323-d7395327-Reviews-Grote_Knip-Sabana_Westpunt_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g1724323-d7395327-Reviews-Grote_Knip-Sabana_Westpunt_Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "blue-bay",
+   "naam": "Blue Bay Beach",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach"
+   },
+   "plaats": "Sint Michiel",
+   "tags": [
+    "strand",
+    "entree",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 830,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d7709519-Reviews-Blue_Bay_Beach-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d7709519-Reviews-Blue_Bay_Beach-Willemstad_Curacao.html",
+    "https://www.avilabeachhotel.com/curacao-tips/things-to-do/top-10-kids-activities-curacao/"
+   ]
+  },
+  {
+   "id": "playa-lagun",
+   "naam": "Playa Lagun",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach"
+   },
+   "plaats": "Lagun",
+   "tags": [
+    "strand",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 1018,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g3671745-d2169453-Reviews-Playa_Lagun-Lagun_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g3671745-d2169453-Reviews-Playa_Lagun-Lagun_Curacao.html"
+   ]
+  },
+  {
+   "id": "klein-curacao",
+   "naam": "Klein Curaçao (boottocht)",
+   "url": null,
+   "soort": {
+    "nl": "eilandtrip",
+    "en": "island trip"
+   },
+   "plaats": "Zuidoost van Curaçao",
+   "tags": [
+    "uitje",
+    "strand",
+    "entree"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Onbewoond eiland met vuurtoren",
+     "en": "Uninhabited island with lighthouse"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 1453,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147277-d150220-Reviews-Klein_Little_Curacao-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147277-d150220-Reviews-Klein_Little_Curacao-Curacao.html",
+    "https://www.curacao.com/en/article/curacao-for-families"
+   ]
+  },
+  {
+   "id": "parental-rental",
+   "naam": "Parental Rental Curaçao",
+   "url": "https://www.parentalrental.nl",
+   "soort": {
+    "nl": "verhuur babyspullen",
+    "en": "baby gear rental"
+   },
+   "plaats": null,
+   "tags": [
+    "peuters"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Buggy, autostoel, bedje bezorgd",
+     "en": "Stroller, car seat, crib delivered"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/best-things-to-do-with-kids-in-curacao"
+   ]
+  },
+  {
+   "id": "isc",
+   "naam": "International School of Curaçao (ISC)",
+   "url": null,
+   "soort": {
+    "nl": "Engelstalig K-12",
+    "en": "English K-12"
+   },
+   "plaats": "Emmastad",
+   "tags": [
+    "school",
+    "internationaal-en",
+    "tieners",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Opgericht rond 1970",
+     "en": "Founded around 1970"
+    },
+    {
+     "nl": "Ongeveer 200 leerlingen",
+     "en": "About 200 students"
+    },
+    {
+     "nl": "Ook Nederlands, Frans, Spaans",
+     "en": "Also Dutch, French, Spanish"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/International_School_of_Cura%C3%A7ao",
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  },
+  {
+   "id": "caps",
+   "naam": "Curaçao American Preparatory School (CAPS)",
+   "url": null,
+   "soort": {
+    "nl": "Engelstalig, kleuter t/m high school",
+    "en": "English, kindergarten to high school"
+   },
+   "plaats": null,
+   "tags": [
+    "school",
+    "internationaal-en"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  },
+  {
+   "id": "caiss",
+   "naam": "Curaçao Advanced International Secondary School (CAISS)",
+   "url": null,
+   "soort": {
+    "nl": "Engelstalig",
+    "en": "English-language"
+   },
+   "plaats": null,
+   "tags": [
+    "school",
+    "internationaal-en"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  },
+  {
+   "id": "eis-sint-antonius",
+   "naam": "English Immersion School (Sint Antonius College)",
+   "url": null,
+   "soort": {
+    "nl": "Engels immersie, 4-6 jaar",
+    "en": "English immersion, ages 4-6"
+   },
+   "plaats": "Santa Maria",
+   "tags": [
+    "school",
+    "internationaal-en",
+    "peuters",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Geen schoolgeld genoemd",
+     "en": "No school fees listed"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  },
+  {
+   "id": "schroederschool",
+   "naam": "Schroederschool",
+   "url": null,
+   "soort": {
+    "nl": "Nederlandstalig, particulier",
+    "en": "Dutch-language, private"
+   },
+   "plaats": null,
+   "tags": [
+    "school",
+    "nl-onderwijs"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Hoog schoolgeld",
+     "en": "High tuition"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  },
+  {
+   "id": "vespucci-college",
+   "naam": "Vespucci College",
+   "url": null,
+   "soort": {
+    "nl": "Nederlandstalig voortgezet",
+    "en": "Dutch-language secondary"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "school",
+    "nl-onderwijs",
+    "tieners"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Onderzocht door NL-inspectie",
+     "en": "Reviewed by Dutch school inspectorate"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.onderwijsinspectie.nl/binaries/onderwijsinspectie/documenten/rapporten/2021/12/22/kwaliteitsonderzoek-vo-het-vespucci-college/Kwaliteitsonderzoek+Vespucci+College+in+Willemstad+Cura%C3%A7ao.pdf"
+   ]
+  },
+  {
+   "id": "ntc-curacao",
+   "naam": "NTC-onderwijs Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "Nederlandse taal en cultuur",
+    "en": "Dutch language and culture"
+   },
+   "plaats": null,
+   "tags": [
+    "school",
+    "nl-onderwijs",
+    "tieners"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Aanvullende NL-lessen voortgezet",
+     "en": "Extra Dutch lessons, secondary"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.onderwijsinspectie.nl/binaries/onderwijsinspectie/documenten/rapporten/2022/02/18/kwaliteitsonderzoek-ntc-vo-ntc-curacao/Kwaliteitsonderzoek+NTC-vo+Cura%C3%A7ao.pdf"
+   ]
+  },
+  {
+   "id": "radulphus-college",
+   "naam": "Radulphus College",
+   "url": null,
+   "soort": {
+    "nl": "katholiek, Nederlands systeem",
+    "en": "Catholic, Dutch system"
+   },
+   "plaats": null,
+   "tags": [
+    "school",
+    "nl-onderwijs",
+    "tieners"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  },
+  {
+   "id": "santa-margaretha",
+   "naam": "Santa Margaretha College",
+   "url": null,
+   "soort": {
+    "nl": "katholiek, Nederlandstalig",
+    "en": "Catholic, Dutch-language"
+   },
+   "plaats": null,
+   "tags": [
+    "school",
+    "nl-onderwijs"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  },
+  {
+   "id": "sint-franciscus",
+   "naam": "Sint Franciscus College",
+   "url": null,
+   "soort": {
+    "nl": "katholiek, Nederlandstalig",
+    "en": "Catholic, Dutch-language"
+   },
+   "plaats": null,
+   "tags": [
+    "school",
+    "nl-onderwijs"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  },
+  {
+   "id": "santa-famia",
+   "naam": "Santa Famia",
+   "url": null,
+   "soort": {
+    "nl": "katholiek, Nederlandstalig",
+    "en": "Catholic, Dutch-language"
+   },
+   "plaats": null,
+   "tags": [
+    "school",
+    "nl-onderwijs"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  },
+  {
+   "id": "maria-auxiliadora",
+   "naam": "Maria Auxiliadora College",
+   "url": null,
+   "soort": {
+    "nl": "katholiek, Nederlandstalig",
+    "en": "Catholic, Dutch-language"
+   },
+   "plaats": null,
+   "tags": [
+    "school",
+    "nl-onderwijs"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  },
+  {
+   "id": "marnix-school",
+   "naam": "Marnixschool",
+   "url": null,
+   "soort": {
+    "nl": "protestants, Nederlandstalig",
+    "en": "Protestant, Dutch-language"
+   },
+   "plaats": null,
+   "tags": [
+    "school",
+    "nl-onderwijs"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  },
+  {
+   "id": "johan-van-walbeeck",
+   "naam": "Johan van Walbeeckschool",
+   "url": null,
+   "soort": {
+    "nl": "openbaar, Nederlandstalig",
+    "en": "public, Dutch-language"
+   },
+   "plaats": null,
+   "tags": [
+    "school",
+    "nl-onderwijs"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  },
+  {
+   "id": "albert-schweitzer",
+   "naam": "Dr. Albert Schweitzerschool",
+   "url": null,
+   "soort": {
+    "nl": "protestants, Nederlandstalig",
+    "en": "Protestant, Dutch-language"
+   },
+   "plaats": null,
+   "tags": [
+    "school",
+    "nl-onderwijs"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  },
+  {
+   "id": "romerschool",
+   "naam": "Römerschool",
+   "url": null,
+   "soort": {
+    "nl": "openbaar, Nederlandstalig",
+    "en": "public, Dutch-language"
+   },
+   "plaats": null,
+   "tags": [
+    "school",
+    "nl-onderwijs"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/schools-for-all/"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "My Curaçao Guide",
+   "url": "https://www.mycuracaoguide.com",
+   "uitleg": {
+    "nl": "Verkoopt tours zoals de Dolphin Encounter en heeft een lijst met kinderactiviteiten.",
+    "en": "Sells tours such as the Dolphin Encounter and keeps a list of kids' activities."
+   }
+  },
+  {
+   "naam": "Tripadvisor",
+   "url": "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html",
+   "uitleg": {
+    "nl": "Reviews en scores; verkoopt geen tickets voor de Sea Aquarium vanwege zijn dierenwelzijnsregels.",
+    "en": "Reviews and ratings; it doesn't sell Sea Aquarium tickets under its animal welfare rules."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Ga vroeg naar Hato Caves: binnen wordt het warm en later komen de bussen.",
+   "en": "Go to Hato Caves early: it gets hot inside and tour buses arrive later."
+  },
+  {
+   "nl": "Kokomo Beach en Grote Knip hebben gratis entree; veel stranden in het oosten rekenen entree of ligbedhuur.",
+   "en": "Kokomo Beach and Grote Knip have free entry; many east-side beaches charge entry or lounger fees."
+  },
+  {
+   "nl": "Neem sokken mee naar Kidi's Park in Sambil.",
+   "en": "Bring socks to Kidi's Park at Sambil."
+  },
+  {
+   "nl": "Christoffelpark: de kassa sluit om 13:30, dus plan het 's ochtends.",
+   "en": "Christoffelpark: the ticket office closes at 1:30 pm, so go in the morning."
+  },
+  {
+   "nl": "Autostoeltjes, buggy en bedje kun je laten bezorgen via Parental Rental.",
+   "en": "Parental Rental can deliver car seats, a stroller and a crib to your rental."
+  },
+  {
+   "nl": "Flamingo's bij de zoutpannen van Jan Thiel zie je gratis, het best 's ochtends.",
+   "en": "You can see flamingos at the Jan Thiel salt pans for free, best in the morning."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wat kun je met kinderen doen op Curaçao?",
+    "en": "What is there to do with kids in Curaçao?"
+   },
+   "a": {
+    "nl": "De meest bezochte uitjes zijn de Sea Aquarium, Dolphin Academy, Hato Caves, de struisvogelboerderij en het Children's Museum. Bij regen of hitte zijn Sambil (trampolines, bowling, speeltuin, bioscoop) en de bioscopen een uitweg.",
+    "en": "The most visited are the Sea Aquarium, Dolphin Academy, Hato Caves, the Ostrich Farm and the Children's Museum. For heat or rain, Sambil (trampolines, bowling, playground, cinema) and the movie theaters work well."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welk strand op Curaçao is het best voor kleine kinderen?",
+    "en": "Which Curaçao beach is best for small kids?"
+   },
+   "a": {
+    "nl": "Kokomo Beach (gratis, rustig water) en Jan Thiel Beach hebben kalm water. Porto Mari loopt zacht af. Op Cas Abao zijn douches en toiletten.",
+    "en": "Kokomo Beach (free, calm water) and Jan Thiel Beach have calm water. Porto Mari has a gentle entry. Cas Abao has showers and restrooms."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost Hato Caves?",
+    "en": "How much is Hato Caves?"
+   },
+   "a": {
+    "nl": "Bezoekers betaalden in 2025 en 2026 ongeveer $10 per persoon. De rondleiding duurt 40 tot 60 minuten.",
+    "en": "Visitors paid about $10 per person in 2025 and 2026. The tour takes 40 to 60 minutes."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost zwemmen met dolfijnen op Curaçao?",
+    "en": "How much does swimming with dolphins cost in Curaçao?"
+   },
+   "a": {
+    "nl": "De Dolphin Encounter bij Dolphin Academy kost $114 per persoon via My Curaçao Guide. Zwemmen en duiken met dolfijnen zijn duurdere programma's.",
+    "en": "The Dolphin Encounter at Dolphin Academy is $114 per person through My Curaçao Guide. Swim and dive programs cost more."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is er een trampolinepark op Curaçao?",
+    "en": "Is there a trampoline park in Curaçao?"
+   },
+   "a": {
+    "nl": "Ja, Xtreme Zone in winkelcentrum Sambil, naast Dushi Bowling en speeltuin Kidi's Park.",
+    "en": "Yes, Xtreme Zone at Sambil mall, next to Dushi Bowling and Kidi's Park playground."
+   }
+  },
+  {
+   "q": {
+    "nl": "Zijn er Engelstalige scholen op Curaçao?",
+    "en": "Are there English-language schools in Curaçao?"
+   },
+   "a": {
+    "nl": "Ja: International School of Curaçao (K-12, Emmastad, ongeveer 200 leerlingen), Curaçao American Preparatory School en CAISS. Sint Antonius College heeft een Engels immersieprogramma voor 4 tot 6 jaar.",
+    "en": "Yes: International School of Curaçao (K-12, Emmastad, about 200 students), Curaçao American Preparatory School and CAISS. Sint Antonius College runs an English immersion program for ages 4 to 6."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke Nederlandstalige scholen zijn er op Curaçao?",
+    "en": "Which Dutch-language schools are there in Curaçao?"
+   },
+   "a": {
+    "nl": "Onder meer Vespucci College, Radulphus College, Schroederschool (particulier), Marnixschool, Johan van Walbeeckschool, Dr. Albert Schweitzerschool, Römerschool en de katholieke scholen Santa Margaretha, Sint Franciscus, Santa Famia en Maria Auxiliadora.",
+    "en": "Among them Vespucci College, Radulphus College, Schroederschool (private), Marnixschool, Johan van Walbeeckschool, Dr. Albert Schweitzerschool, Römerschool and the Catholic schools Santa Margaretha, Sint Franciscus, Santa Famia and Maria Auxiliadora."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "curaçao met kinderen",
+   "curaçao kinderen uitjes",
+   "kindvriendelijk strand curaçao",
+   "school curaçao emigreren",
+   "nederlandse school curaçao"
+  ],
+  "en": [
+   "curacao with kids",
+   "things to do in curacao with kids",
+   "kid friendly beaches curacao",
+   "international school curacao",
+   "curacao family activities"
+  ],
+  "es": [
+   "curazao con niños",
+   "que hacer en curazao con niños",
+   "colegios en curazao"
+  ],
+  "pt": [
+   "curaçao com crianças",
+   "o que fazer em curaçao com crianças"
+  ],
+  "de": [
+   "curaçao mit kindern",
+   "curaçao kinder ausflüge",
+   "schule curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Wat zijn leuke uitjes op Curaçao met een peuter?",
+   "Welk strand op Curaçao is het veiligst voor kleine kinderen?",
+   "Welke Nederlandstalige school is goed op Curaçao als we emigreren?"
+  ],
+  "en": [
+   "What are the best things to do in Curaçao with young kids?",
+   "Which beach in Curaçao is calmest for toddlers?",
+   "What international schools are there in Curaçao for expat families?"
+  ]
+ },
+ "talen": [
+  "nl",
+  "en"
+ ]
+}

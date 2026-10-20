@@ -1,1 +1,1521 @@
-{"id":"trouwen","peildatum":"2026-10-20","items":[]}
+{
+ "id": "trouwen",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "trouwlocatie of weddingplanner",
+  "en": "wedding venue or planner"
+ },
+ "h1": {
+  "nl": "Trouwen op Curaçao: welke locatie of weddingplanner past bij jullie?",
+  "en": "Getting married in Curaçao: which venue or planner fits you?"
+ },
+ "titel": {
+  "nl": "Trouwen op Curaçao: {n} locaties en weddingplanners",
+  "en": "Curaçao wedding: {n} venues and wedding planners"
+ },
+ "metaDesc": {
+  "nl": "{n} trouwlocaties en weddingplanners op Curaçao: resorts, landhuizen en stranden, met Tripadvisor-scores, pakketprijzen en papieren.",
+  "en": "{n} wedding venues and planners in Curaçao: resorts, plantation houses and beaches, with Tripadvisor ratings, package prices and paperwork."
+ },
+ "kort": {
+  "nl": "Een bruiloft op Curaçao kost gemiddeld zo'n $10.000 per stel; resortpakketten lopen van gratis (bij genoeg overnachtingen) tot boven $12.000. Kleinschalig kan bij Zoetry (tot ongeveer 20 gasten) of Papagayo (tot ongeveer 30), groot bij Dreams of ACOYA. Voor een wettig huwelijk lever je de papieren minstens 2 maanden vooraf in bij de burgerlijke stand.",
+  "en": "A Curaçao wedding averages about $10,000 per couple; resort packages run from free (with enough room nights) to over $12,000. Go small at Zoetry (about 20 guests) or Papagayo (about 30), or big at Dreams or ACOYA. For a legal marriage, file your documents with the civil registry at least 2 months ahead."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat zoek je?",
+    "en": "What are you looking for?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Een trouwlocatie",
+      "en": "A venue"
+     },
+     "plus": [
+      "locatie"
+     ],
+     "min": [],
+     "vereist": "locatie"
+    },
+    {
+     "label": {
+      "nl": "Een weddingplanner",
+      "en": "A wedding planner"
+     },
+     "plus": [
+      "planner"
+     ],
+     "min": [],
+     "vereist": "planner"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Welke sfeer?",
+    "en": "What style?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Op het strand",
+      "en": "On the beach"
+     },
+     "plus": [
+      "strand"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Historisch landhuis",
+      "en": "Historic plantation house"
+     },
+     "plus": [
+      "landhuis"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Resort met alles geregeld",
+      "en": "Resort with everything handled"
+     },
+     "plus": [
+      "resort",
+      "all-in-pakket"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Hoeveel gasten?",
+    "en": "How many guests?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Weet ik nog niet",
+      "en": "Not sure yet"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Klein, tot ongeveer 30",
+      "en": "Small, up to about 30"
+     },
+     "plus": [
+      "kleinschalig"
+     ],
+     "min": [
+      "groot"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Groot feest",
+      "en": "Big party"
+     },
+     "plus": [
+      "groot"
+     ],
+     "min": [
+      "kleinschalig"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Budget?",
+    "en": "Budget?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Gemiddeld",
+      "en": "Mid-range"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Zo voordelig mogelijk",
+      "en": "As low as possible"
+     },
+     "plus": [
+      "budget"
+     ],
+     "min": [
+      "luxe"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Luxe",
+      "en": "Luxury"
+     },
+     "plus": [
+      "luxe"
+     ],
+     "min": [
+      "budget"
+     ],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "kc-events",
+   "naam": "KC Events",
+   "url": null,
+   "soort": {
+    "nl": "weddingplanner",
+    "en": "wedding planner"
+   },
+   "plaats": null,
+   "tags": [
+    "planner"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance",
+    "https://beachbride.com/vendors/planner/curacao/"
+   ]
+  },
+  {
+   "id": "celebrations",
+   "naam": "Celebrations!",
+   "url": null,
+   "soort": {
+    "nl": "weddingplanner",
+    "en": "wedding planner"
+   },
+   "plaats": null,
+   "tags": [
+    "planner"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance"
+   ]
+  },
+  {
+   "id": "eventi-diverso",
+   "naam": "Eventi Diverso Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "weddingplanner",
+    "en": "wedding planner"
+   },
+   "plaats": null,
+   "tags": [
+    "planner"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance"
+   ]
+  },
+  {
+   "id": "all-about-happiness",
+   "naam": "All about Happiness Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "weddingplanner",
+    "en": "wedding planner"
+   },
+   "plaats": null,
+   "tags": [
+    "planner"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance",
+    "https://beachbride.com/vendors/planner/curacao/"
+   ]
+  },
+  {
+   "id": "nestor-g-zavarce",
+   "naam": "Nestor G Zavarce",
+   "url": null,
+   "soort": {
+    "nl": "weddingplanner",
+    "en": "wedding planner"
+   },
+   "plaats": null,
+   "tags": [
+    "planner"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance"
+   ]
+  },
+  {
+   "id": "unique-wedding",
+   "naam": "Unique Wedding and Party Services",
+   "url": null,
+   "soort": {
+    "nl": "weddingplanner",
+    "en": "wedding planner"
+   },
+   "plaats": null,
+   "tags": [
+    "planner"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance"
+   ]
+  },
+  {
+   "id": "bankasa",
+   "naam": "BanKasa Wedding Planners",
+   "url": null,
+   "soort": {
+    "nl": "weddingplanner",
+    "en": "wedding planner"
+   },
+   "plaats": null,
+   "tags": [
+    "planner"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance"
+   ]
+  },
+  {
+   "id": "cheers-unique-planners",
+   "naam": "Cheers! by Unique Planners",
+   "url": null,
+   "soort": {
+    "nl": "weddingplanner",
+    "en": "wedding planner"
+   },
+   "plaats": null,
+   "tags": [
+    "planner"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://beachbride.com/vendors/planner/curacao/"
+   ]
+  },
+  {
+   "id": "loof-events",
+   "naam": "LOOF Events",
+   "url": null,
+   "soort": {
+    "nl": "weddingplanner",
+    "en": "wedding planner"
+   },
+   "plaats": null,
+   "tags": [
+    "planner"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://beachbride.com/vendors/planner/curacao/"
+   ]
+  },
+  {
+   "id": "sandals-royal",
+   "naam": "Sandals Royal Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Zuidwestkust",
+   "tags": [
+    "locatie",
+    "resort",
+    "luxe",
+    "all-in-pakket"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Alleen volwassenen",
+     "en": "Adults only"
+    },
+    {
+     "nl": "All-inclusive",
+     "en": "All-inclusive"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance",
+    "https://blog.destinationweddings.com/best-destination-wedding-venues-curacao",
+    "https://www.sandals.co.uk/curacao/weddings/"
+   ]
+  },
+  {
+   "id": "dreams",
+   "naam": "Dreams Curaçao Resort, Spa & Casino",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Zuidwestkust",
+   "tags": [
+    "locatie",
+    "resort",
+    "all-in-pakket",
+    "groot"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Van elopement tot meerdaags feest",
+     "en": "From elopement to multi-day event"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.1,
+     "max": 5,
+     "aantal": 2326,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Hotel_Review-g147278-d19141400-Reviews-Dreams_Curacao_Resort_Spa_Casino-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance",
+    "https://blog.destinationweddings.com/best-destination-wedding-venues-curacao",
+    "https://www.tripadvisor.com/Hotel_Review-g147278-d19141400-Reviews-Dreams_Curacao_Resort_Spa_Casino-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "sunscape",
+   "naam": "Sunscape Curaçao Resort, Spa & Casino",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Zuidwestkust, 20 min van Willemstad",
+   "tags": [
+    "locatie",
+    "resort",
+    "all-in-pakket",
+    "budget",
+    "groot"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "All-inclusive, gericht op prijs",
+     "en": "Value-focused all-inclusive"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 10340,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Hotel_Review-g147278-d254238-Reviews-Sunscape_Curacao_Resort_Spa_Casino-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance",
+    "https://blog.destinationweddings.com/best-destination-wedding-venues-curacao",
+    "https://www.tripadvisor.com/Hotel_Review-g147278-d254238-Reviews-Sunscape_Curacao_Resort_Spa_Casino-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "zoetry",
+   "naam": "Zoetry Curaçao Resort & Spa",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Zuidwestkust",
+   "tags": [
+    "locatie",
+    "resort",
+    "luxe",
+    "kleinschalig",
+    "all-in-pakket"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Tot ongeveer 20 gasten",
+     "en": "Up to about 20 guests"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://blog.destinationweddings.com/best-destination-wedding-venues-curacao",
+    "https://www.hyattinclusivecollection.com/pt/resorts-hotels/zoetry/curacao/curacao-resort-spa/events/weddings-honeymoons/wedding-packages"
+   ]
+  },
+  {
+   "id": "marriott",
+   "naam": "Curaçao Marriott Beach Resort",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Piscadera Bay",
+   "tags": [
+    "locatie",
+    "resort",
+    "strand"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Klein tot middelgroot",
+     "en": "Intimate to mid-size"
+    },
+    {
+     "nl": "Pakketten in prijsklassen",
+     "en": "Tiered packages"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 1055,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Hotel_Review-g147278-d150663-Reviews-Curacao_Marriott_Beach_Resort-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance",
+    "https://blog.destinationweddings.com/best-destination-wedding-venues-curacao",
+    "https://www.tripadvisor.com/Hotel_Review-g147278-d150663-Reviews-Curacao_Marriott_Beach_Resort-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "renaissance",
+   "naam": "Renaissance Wind Creek Curaçao Resort",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "locatie",
+    "resort"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 3231,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Hotel_Review-g147278-d1201318-Reviews-Renaissance_Wind_Creek_Curacao_Resort-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance",
+    "https://blog.destinationweddings.com/best-destination-wedding-venues-curacao",
+    "https://www.tripadvisor.com/Hotel_Review-g147278-d1201318-Reviews-Renaissance_Wind_Creek_Curacao_Resort-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "the-rif",
+   "naam": "The Rif at Mangrove Beach Corendon Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Mambo Beach",
+   "tags": [
+    "locatie",
+    "resort",
+    "all-in-pakket",
+    "strand"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 1069,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Hotel_Review-g147278-d26803015-Reviews-The_Rif_At_Mangrove_Beach_Corendon_Curacao_All_inclusive_Curio_By_Hilton-Willemstad_C.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance",
+    "https://blog.destinationweddings.com/best-destination-wedding-venues-curacao",
+    "https://www.tripadvisor.com/Hotel_Review-g147278-d26803015-Reviews-The_Rif_At_Mangrove_Beach_Corendon_Curacao_All_inclusive_Curio_By_Hilton-Willemstad_C.html"
+   ]
+  },
+  {
+   "id": "corendon-mangrove",
+   "naam": "Mangrove Beach Corendon Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Mambo Beach",
+   "tags": [
+    "locatie",
+    "resort",
+    "all-in-pakket",
+    "strand"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 2074,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Hotel_Review-g147278-d19849230-Reviews-Mangrove_Beach_Corendon_Curacao_All_Inclusive_Resort_Curio_by_Hilton-Willemstad_Curac.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance",
+    "https://blog.destinationweddings.com/best-destination-wedding-venues-curacao",
+    "https://www.tripadvisor.com/Hotel_Review-g147278-d19849230-Reviews-Mangrove_Beach_Corendon_Curacao_All_Inclusive_Resort_Curio_by_Hilton-Willemstad_Curac.html"
+   ]
+  },
+  {
+   "id": "acoya",
+   "naam": "ACOYA Curaçao Resort, Villas & Spa",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Dr. Hugenholtzweg, Willemstad",
+   "tags": [
+    "locatie",
+    "resort",
+    "groot"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Eigen weddingplanners",
+     "en": "In-house wedding planners"
+    },
+    {
+     "nl": "Binnen- en buitenruimtes",
+     "en": "Indoor and outdoor spaces"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 1033,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Hotel_Review-g147278-d6556483-Reviews-ACOYA_Curacao_Resort_Villas_Spa-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance",
+    "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding",
+    "https://www.tripadvisor.com/Hotel_Review-g147278-d6556483-Reviews-ACOYA_Curacao_Resort_Villas_Spa-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "baoase",
+   "naam": "Baoase Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "locatie",
+    "resort",
+    "strand",
+    "luxe"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Privéstrand",
+     "en": "Private beach"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 1146,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Hotel_Review-g147278-d1519028-Reviews-Baoase_Curacao-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance",
+    "https://www.tripadvisor.com/Hotel_Review-g147278-d1519028-Reviews-Baoase_Curacao-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "papagayo",
+   "naam": "Papagayo Beach Resort",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "locatie",
+    "resort",
+    "kleinschalig",
+    "strand"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Tot ongeveer 30 gasten",
+     "en": "Up to about 30 guests"
+    },
+    {
+     "nl": "Alleen villa's",
+     "en": "All villas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 1435,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Hotel_Review-g15293005-d240969-Reviews-Papagayo_Beach_Resort-Jan_Thiel_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://blog.destinationweddings.com/best-destination-wedding-venues-curacao",
+    "https://www.tripadvisor.com/Hotel_Review-g15293005-d240969-Reviews-Papagayo_Beach_Resort-Jan_Thiel_Curacao.html"
+   ]
+  },
+  {
+   "id": "avila",
+   "naam": "Avila Beach Hotel",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Penstraat, Willemstad",
+   "tags": [
+    "locatie",
+    "resort",
+    "strand"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 3246,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Hotel_Review-g147278-d148585-Reviews-Avila_Beach_Hotel-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.avilabeachhotel.com/?p=2544",
+    "https://www.tripadvisor.com/Hotel_Review-g147278-d148585-Reviews-Avila_Beach_Hotel-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "capital-c",
+   "naam": "Capital Ç",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": null,
+   "tags": [
+    "locatie",
+    "resort"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.com/en/weddings-and-romance"
+   ]
+  },
+  {
+   "id": "floris-suite",
+   "naam": "Floris Suite Hotel & Spa",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Piscadera",
+   "tags": [
+    "locatie",
+    "resort"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding"
+   ]
+  },
+  {
+   "id": "kura-hulanda-village",
+   "naam": "Kura Hulanda Village & Spa",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort"
+   },
+   "plaats": "Otrobanda",
+   "tags": [
+    "locatie",
+    "resort"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding"
+   ]
+  },
+  {
+   "id": "landhuis-chobolobo",
+   "naam": "Landhuis Chobolobo",
+   "url": null,
+   "soort": {
+    "nl": "landhuis",
+    "en": "plantation house"
+   },
+   "plaats": null,
+   "tags": [
+    "locatie",
+    "landhuis"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Historisch, met tuinen",
+     "en": "Historic, with gardens"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 893,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-zfg11867-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-zfg11867-Curacao.html"
+   ]
+  },
+  {
+   "id": "landhuis-brakkeput",
+   "naam": "Landhuis Brakkeput Mei Mei",
+   "url": null,
+   "soort": {
+    "nl": "landhuis",
+    "en": "plantation house"
+   },
+   "plaats": null,
+   "tags": [
+    "locatie",
+    "landhuis"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Historisch, met tuinen",
+     "en": "Historic, with gardens"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding"
+   ]
+  },
+  {
+   "id": "landhuis-daniel",
+   "naam": "Landhuis Daniel",
+   "url": null,
+   "soort": {
+    "nl": "landhuis",
+    "en": "plantation house"
+   },
+   "plaats": null,
+   "tags": [
+    "locatie",
+    "landhuis"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Historisch, met tuinen",
+     "en": "Historic, with gardens"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding"
+   ]
+  },
+  {
+   "id": "cas-abao",
+   "naam": "Cas Abao Beach",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach"
+   },
+   "plaats": null,
+   "tags": [
+    "locatie",
+    "strand"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 2834,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147277-d2169353-Reviews-Cas_Abao_Beach-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding",
+    "https://www.tripadvisor.com/Attraction_Review-g147277-d2169353-Reviews-Cas_Abao_Beach-Curacao.html"
+   ]
+  },
+  {
+   "id": "grote-knip",
+   "naam": "Grote Knip (Kenepa Grandi)",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach"
+   },
+   "plaats": null,
+   "tags": [
+    "locatie",
+    "strand"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 5094,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g1724323-d7395327-Reviews-Grote_Knip-Sabana_Westpunt_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding",
+    "https://www.tripadvisor.com/Attraction_Review-g1724323-d7395327-Reviews-Grote_Knip-Sabana_Westpunt_Curacao.html"
+   ]
+  },
+  {
+   "id": "porto-mari",
+   "naam": "Playa Porto Mari",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach"
+   },
+   "plaats": null,
+   "tags": [
+    "locatie",
+    "strand"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 1829,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g3754516-d2169479-Reviews-Playa_Porto_Marie-Sint_Willibrordus_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding",
+    "https://www.tripadvisor.com/Attraction_Review-g3754516-d2169479-Reviews-Playa_Porto_Marie-Sint_Willibrordus_Curacao.html"
+   ]
+  },
+  {
+   "id": "mambo-beach",
+   "naam": "Mambo Beach",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach"
+   },
+   "plaats": null,
+   "tags": [
+    "locatie",
+    "strand"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 1539,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147277-d1234018-Reviews-Mambo_Beach-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding",
+    "https://www.tripadvisor.com/Attraction_Review-g147277-d1234018-Reviews-Mambo_Beach-Curacao.html"
+   ]
+  },
+  {
+   "id": "hato-caves",
+   "naam": "Hato Caves",
+   "url": null,
+   "soort": {
+    "nl": "grot",
+    "en": "cave"
+   },
+   "plaats": "Hato",
+   "tags": [
+    "locatie",
+    "kleinschalig"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ongewone locatie",
+     "en": "Unusual setting"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding"
+   ]
+  },
+  {
+   "id": "sea-aquarium",
+   "naam": "Curaçao Sea Aquarium",
+   "url": null,
+   "soort": {
+    "nl": "aquarium",
+    "en": "aquarium"
+   },
+   "plaats": "Bapor Kibra",
+   "tags": [
+    "locatie"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.acoyacuracao.com/blogs/wedding-venues-in-curacao-plan-your-dream-wedding"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "BeachBride",
+   "url": "https://beachbride.com/destinations/curacao/",
+   "uitleg": {
+    "nl": "Amerikaanse gids met lijst van planners op Curaçao en uitleg over papieren.",
+    "en": "US guide listing Curaçao planners and explaining the paperwork."
+   }
+  },
+  {
+   "naam": "DestinationWeddings.com",
+   "url": "https://www.destinationweddings.com/destinations/caribbean/curacao",
+   "uitleg": {
+    "nl": "Reisbureau voor bestemmingsbruiloften; boekt resortpakketten en gastenkamers.",
+    "en": "Destination wedding travel agency; books resort packages and guest rooms."
+   }
+  },
+  {
+   "naam": "Honeymoons.com",
+   "url": "https://honeymoons.com/curacao-wedding",
+   "uitleg": {
+    "nl": "Boekt bruiloften en huwelijksreizen in onder meer Sandals Royal Curaçao.",
+    "en": "Books weddings and honeymoons at resorts such as Sandals Royal Curaçao."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Lever de aanvraag en papieren minstens 2 maanden vooraf in en kom uiterlijk 3 dagen voor de ceremonie persoonlijk langs.",
+   "en": "File your request and documents at least 2 months ahead, and appear in person no later than 3 days before the ceremony."
+  },
+  {
+   "nl": "Documenten mogen niet ouder zijn dan 6 maanden op de trouwdag.",
+   "en": "Documents may be no more than 6 months old on the wedding day."
+  },
+  {
+   "nl": "Trouw je wettig buiten het gemeentehuis, dan heb je zes volwassen getuigen nodig; planner of locatie kan die regelen.",
+   "en": "A legal ceremony outside the registry office needs six adult witnesses; your planner or venue can arrange them."
+  },
+  {
+   "nl": "Sommige resorts geven het basispakket gratis bij een minimum aantal overnachtingen.",
+   "en": "Some resorts include the basic package free with a minimum number of room nights."
+  },
+  {
+   "nl": "Een eigen getuige moet minstens 21 zijn; stuur naam, adres, geboortedatum en paspoortkopie mee.",
+   "en": "Your own witness must be at least 21; send their name, address, date of birth and passport copy."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Kun je als toerist wettig trouwen op Curaçao?",
+    "en": "Can tourists legally marry in Curaçao?"
+   },
+   "a": {
+    "nl": "Ja. Je stuurt een ondertekende brief met twee voorkeursdata naar de gemeente en levert de papieren minstens 2 maanden vooraf in bij de burgerlijke stand (Kranshi) in Willemstad.",
+    "en": "Yes. You send a signed letter with two preferred dates to the municipality and file your documents with the civil registry (Kranshi) in Willemstad at least 2 months ahead."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke papieren heb je nodig om op Curaçao te trouwen?",
+    "en": "What documents do you need to marry in Curaçao?"
+   },
+   "a": {
+    "nl": "Geboorteakten met namen van de ouders, een internationale verklaring van ongehuwd zijn met apostille, eventueel echtscheidingsvonnis of overlijdensakte, en kopieën van de paspoorten. Niet ouder dan 6 maanden; vertaling nodig als ze niet in het Nederlands, Engels of Spaans zijn.",
+    "en": "Birth certificates listing your parents, an international certificate of no impediment with apostille, any divorce decree or death certificate, and passport copies. No older than 6 months; translate anything not in Dutch, English or Spanish."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost trouwen op Curaçao?",
+    "en": "How much does a Curaçao wedding cost?"
+   },
+   "a": {
+    "nl": "Gemiddeld ongeveer $10.085 per stel volgens DestinationWeddings.com. Resortpakketten: $1.000-2.500 (basis), $3.500-6.000 (midden), $7.500-12.000+ (luxe). BeachBride noemt $10.000 tot $35.000.",
+    "en": "About $10,085 per couple on average per DestinationWeddings.com. Resort packages: $1,000-2,500 (basic), $3,500-6,000 (mid), $7,500-12,000+ (high end). BeachBride cites $10,000 to $35,000."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoeveel getuigen heb je nodig?",
+    "en": "How many witnesses do you need?"
+   },
+   "a": {
+    "nl": "Bij een wettige ceremonie buiten het gemeentehuis zes volwassen getuigen. Een eigen getuige moet minstens 21 zijn.",
+    "en": "A legal ceremony outside the registry office needs six adult witnesses. Your own witness must be at least 21."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is een huwelijk op Curaçao geldig in de VS en Nederland?",
+    "en": "Is a Curaçao marriage valid in the US and the Netherlands?"
+   },
+   "a": {
+    "nl": "BeachBride meldt dat het in de VS erkend wordt. Curaçao hoort bij het Koninkrijk der Nederlanden en gebruikt het Nederlandse systeem van burgerlijke stand.",
+    "en": "BeachBride says it is recognized in the US. Curaçao is part of the Kingdom of the Netherlands and uses a Dutch-style civil registry."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke resorts doen bruiloften op Curaçao?",
+    "en": "Which resorts host weddings in Curaçao?"
+   },
+   "a": {
+    "nl": "Onder meer Sandals Royal Curaçao, Dreams, Sunscape, Zoetry, Marriott, Renaissance Wind Creek, ACOYA, Baoase, Papagayo en de twee Corendon-resorts bij Mambo Beach.",
+    "en": "Among them Sandals Royal Curaçao, Dreams, Sunscape, Zoetry, Marriott, Renaissance Wind Creek, ACOYA, Baoase, Papagayo and the two Corendon resorts at Mambo Beach."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "trouwen op curaçao",
+   "trouwlocatie curaçao",
+   "weddingplanner curaçao",
+   "trouwen curaçao kosten",
+   "trouwen op het strand curaçao"
+  ],
+  "en": [
+   "curacao wedding",
+   "curacao wedding venues",
+   "curacao wedding planner",
+   "destination wedding curacao",
+   "getting married in curacao requirements"
+  ],
+  "es": [
+   "boda en curazao",
+   "casarse en curazao"
+  ],
+  "pt": [
+   "casamento em curaçao"
+  ],
+  "de": [
+   "heiraten auf curaçao",
+   "hochzeit curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Wat heb ik nodig om wettig te trouwen op Curaçao?",
+   "Wat is een mooie trouwlocatie op Curaçao voor 30 gasten?",
+   "Welke weddingplanner op Curaçao is aan te raden?"
+  ],
+  "en": [
+   "What are the legal requirements to get married in Curaçao?",
+   "What are the best wedding venues in Curaçao?",
+   "How much does a destination wedding in Curaçao cost?"
+  ]
+ },
+ "talen": [
+  "nl",
+  "en"
+ ]
+}

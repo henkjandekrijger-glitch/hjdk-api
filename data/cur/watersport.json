@@ -1,1 +1,2544 @@
-{"id":"watersport","peildatum":"2026-10-20","items":[]}
+{
+ "id": "watersport",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "watersport en sport",
+  "en": "water sports and activities"
+ },
+ "h1": {
+  "nl": "Kitesurfen, SUP, vissen of golf op Curaçao: welke aanbieder past bij jou?",
+  "en": "Kitesurfing, SUP, fishing or golf in Curaçao: which provider fits you?"
+ },
+ "titel": {
+  "nl": "Watersport op Curaçao: {n} scholen, verhuur en charters",
+  "en": "Curaçao water sports: {n} schools, rentals and charters"
+ },
+ "metaDesc": {
+  "nl": "{n} aanbieders op Curaçao vergeleken: kitescholen, windsurf, SUP, kajak, jetski, zeilen, visboten, golf, spa en sportscholen, met prijzen en scores.",
+  "en": "{n} Curaçao providers compared: kite schools, windsurfing, SUP, kayak, jet ski, sailing, fishing boats, golf, spas and gyms, with prices and ratings."
+ },
+ "kort": {
+  "nl": "We vergeleken {n} aanbieders. Kitesurfen doe je vooral in de Sint Jorisbaai (vier scholen), windsurfen en SUP op het vlakke Spaanse Water, waar een SUP-mangrovetour $74 kost en een windsurfles $68. Een visboot huur je vanaf $550 tot $899 per boot; YKnot Fishing scoort 4,9 bij 297 reviews op FishingBooker. Een dagpas voor de sportschool kost XCG 10 tot 30.",
+  "en": "We compared {n} providers. Kitesurfing happens mostly in St. Joris Bay (four schools), while windsurfing and SUP happen on the flat Spanish Water, where a SUP mangrove tour costs $74 and a windsurf lesson $68. Fishing boats run $550 to $899 per boat; YKnot Fishing rates 4.9 from 297 reviews on FishingBooker. A gym day pass costs XCG 10 to 30."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat wil je doen?",
+    "en": "What do you want to do?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Not sure yet"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Kitesurfen",
+      "en": "Kitesurfing"
+     },
+     "plus": [
+      "kitesurf"
+     ],
+     "min": [],
+     "vereist": "kitesurf"
+    },
+    {
+     "label": {
+      "nl": "Windsurfen of wingfoilen",
+      "en": "Windsurfing or wingfoiling"
+     },
+     "plus": [
+      "windsurf"
+     ],
+     "min": [],
+     "vereist": "windsurf"
+    },
+    {
+     "label": {
+      "nl": "SUP of kajak",
+      "en": "SUP or kayak"
+     },
+     "plus": [
+      "sup",
+      "kajak"
+     ],
+     "min": [
+      "golf",
+      "spa",
+      "sportschool"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Jetski",
+      "en": "Jet ski"
+     },
+     "plus": [
+      "jetski"
+     ],
+     "min": [],
+     "vereist": "jetski"
+    },
+    {
+     "label": {
+      "nl": "Zeilen of een boot huren",
+      "en": "Sailing or renting a boat"
+     },
+     "plus": [
+      "zeilen",
+      "boot"
+     ],
+     "min": [
+      "golf",
+      "spa",
+      "sportschool"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Vissen op zee",
+      "en": "Deep-sea fishing"
+     },
+     "plus": [
+      "vissen"
+     ],
+     "min": [],
+     "vereist": "vissen"
+    },
+    {
+     "label": {
+      "nl": "Golf",
+      "en": "Golf"
+     },
+     "plus": [
+      "golf"
+     ],
+     "min": [],
+     "vereist": "golf"
+    },
+    {
+     "label": {
+      "nl": "Spa of massage",
+      "en": "Spa or massage"
+     },
+     "plus": [
+      "spa"
+     ],
+     "min": [],
+     "vereist": "spa"
+    },
+    {
+     "label": {
+      "nl": "Sportschool of yoga",
+      "en": "Gym or yoga"
+     },
+     "plus": [
+      "sportschool",
+      "yoga"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Hoeveel ervaring heb je?",
+    "en": "How much experience do you have?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Eerste keer",
+      "en": "First time"
+     },
+     "plus": [
+      "beginner",
+      "les",
+      "kinderen"
+     ],
+     "min": [
+      "gevorderd"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Een beetje ervaring",
+      "en": "Some experience"
+     },
+     "plus": [
+      "les",
+      "verhuur"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Gevorderd of pro",
+      "en": "Advanced or pro"
+     },
+     "plus": [
+      "gevorderd",
+      "verhuur"
+     ],
+     "min": [
+      "beginner"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Les, huren of met schipper?",
+    "en": "Lesson, rental or with a captain?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "No preference"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Les met instructeur",
+      "en": "Lesson with an instructor"
+     },
+     "plus": [
+      "les"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Zelf huren",
+      "en": "Rent and go"
+     },
+     "plus": [
+      "verhuur"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Met schipper of gids",
+      "en": "With a captain or guide"
+     },
+     "plus": [
+      "boot",
+      "zeilen",
+      "vissen"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Waar op het eiland?",
+    "en": "Where on the island?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anywhere"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Jan Thiel",
+      "en": "Jan Thiel"
+     },
+     "plus": [
+      "jan-thiel"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Mambo Beach",
+      "en": "Mambo Beach"
+     },
+     "plus": [
+      "mambo"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Oost (Spaanse Water, Sint Joris)",
+      "en": "East (Spanish Water, St. Joris)"
+     },
+     "plus": [
+      "oost"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Willemstad en midden",
+      "en": "Willemstad and central"
+     },
+     "plus": [
+      "midden"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "West (Banda Abou)",
+      "en": "West (Banda Abou)"
+     },
+     "plus": [
+      "westpunt"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "awa-salu-kiteboarding",
+   "naam": "Awa Salu Kiteboarding Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "kiteschool en shop",
+    "en": "kite school and shop"
+   },
+   "plaats": "Sint Jorisbaai",
+   "tags": [
+    "kitesurf",
+    "les",
+    "beginner",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Les op de A-spot, Sint Joris",
+     "en": "Lessons at the A-spot, St. Joris"
+    },
+    {
+     "nl": "Radio-intercom tijdens les",
+     "en": "Radio intercom during lessons"
+    },
+    {
+     "nl": "Weekcursus mogelijk",
+     "en": "One-week course available"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/awa-salu-kiteboarding-curacao",
+    "https://www.lokalee.app/en/tours/the-kiteboarder",
+    "https://magpie.travel/things-to-do/the-kiteboarder/e98ff0d1-b9b7-47b0-9920-a4da2fc174e8",
+    "https://www.urlaubstracker.de/surfen-curacao/"
+   ]
+  },
+  {
+   "id": "blue-wave-kitesurfing",
+   "naam": "Blue Wave Kitesurfing",
+   "url": "https://www.bluewavekitesurfing.com/",
+   "soort": {
+    "nl": "kiteschool",
+    "en": "kite school"
+   },
+   "plaats": "Sint Jorisbaai",
+   "tags": [
+    "kitesurf",
+    "les",
+    "beginner",
+    "gevorderd",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Lessen voor beginners en gevorderden",
+     "en": "Lessons for beginners and advanced"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/blue-wave-kitesurfing",
+    "https://www.curacao.com/en/category/water-activities"
+   ]
+  },
+  {
+   "id": "nix-kite-school",
+   "naam": "NIX Kite School Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "kiteschool",
+    "en": "kite school"
+   },
+   "plaats": "Sint Jorisbaai",
+   "tags": [
+    "kitesurf",
+    "les",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.urlaubstracker.de/surfen-curacao/"
+   ]
+  },
+  {
+   "id": "curacao-kiteboarding-school",
+   "naam": "Curaçao Kiteboarding School (Funsport)",
+   "url": "http://www.funsportcuracao.com",
+   "soort": {
+    "nl": "kiteschool",
+    "en": "kite school"
+   },
+   "plaats": "Sint Jorisbaai",
+   "tags": [
+    "kitesurf",
+    "les",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Constante oostpassaat",
+     "en": "Steady easterly trade wind"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.inyourpocket.com/dutch-caribbean/curacao/venues/Curacao-Kiteboarding-School"
+   ]
+  },
+  {
+   "id": "kiteboarding-curacao",
+   "naam": "Kiteboarding Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "kiteschool, IKO",
+    "en": "kite school, IKO"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "kitesurf",
+    "les",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "IKO-instructeurs",
+     "en": "IKO-certified instructors"
+    },
+    {
+     "nl": "Begeleiding met boot en radio",
+     "en": "Boat and radio support"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/discover/windsurfing/",
+    "https://www.urlaubstracker.de/surfen-curacao/"
+   ]
+  },
+  {
+   "id": "windsurfing-curacao",
+   "naam": "Windsurfing Curaçao (Surfspot Curaçao)",
+   "url": null,
+   "soort": {
+    "nl": "surfschool met bar",
+    "en": "surf school with bar"
+   },
+   "plaats": "Spaanse Water, Caracasbaaiweg",
+   "tags": [
+    "windsurf",
+    "les",
+    "verhuur",
+    "beginner",
+    "kinderen",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Kinderprogramma",
+     "en": "Kids program"
+    },
+    {
+     "nl": "Ook verhuur en verkoop",
+     "en": "Also rentals and sales"
+    },
+    {
+     "nl": "Vlak, beschut water",
+     "en": "Flat, sheltered water"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.surf-magazin.de/en/spots-and-areas/international/overseas/spot-guide-the-best-windsurfing-spots-on-curacao/",
+    "https://www.curacao.com/en/activity/windsurfing-curacao",
+    "https://www.mycuracaoguide.com/discover/windsurfing/",
+    "https://www.urlaubstracker.de/surfen-curacao/"
+   ]
+  },
+  {
+   "id": "sup-curacao",
+   "naam": "SUP Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "SUP, windsurf, wingfoil",
+    "en": "SUP, windsurf, wingfoil"
+   },
+   "plaats": "Surfspot Curaçao, Caracasbaai",
+   "tags": [
+    "sup",
+    "windsurf",
+    "les",
+    "beginner",
+    "kinderen",
+    "oost"
+   ],
+   "prijs": {
+    "bedrag": 74,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon, SUP-mangrovetour 2 uur",
+     "en": "per person, 2-hour SUP mangrove tour"
+    },
+    "bron": "https://www.mycuracaoguide.com/sup-canoeing-kayaking",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Windsurfles 1,5 uur $68",
+     "en": "1.5-hour windsurf lesson $68"
+    },
+    {
+     "nl": "Wingfoil privéles $158",
+     "en": "Private wingfoil lesson $158"
+    },
+    {
+     "nl": "Windsurf vanaf 12 jaar",
+     "en": "Windsurfing from age 12"
+    },
+    {
+     "nl": "Wingfoil vanaf 10 jaar",
+     "en": "Wingfoiling from age 10"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/sup-canoeing-kayaking",
+    "https://www.mycuracaoguide.com/blogs/water-activities-in-curacao",
+    "https://www.curacao.com/en/activity/sup-curacao",
+    "https://www.mycuracaoguide.com/book-tours/stand-up-paddle"
+   ]
+  },
+  {
+   "id": "sup-and-kayak-adventure",
+   "naam": "SUP and Kayak Adventure Curaçao",
+   "url": "https://www.supandkayakadventurecuracao.com/",
+   "soort": {
+    "nl": "verhuur SUP en kajak",
+    "en": "SUP and kayak rental"
+   },
+   "plaats": "Kleine Knip, Banda Abou",
+   "tags": [
+    "sup",
+    "kajak",
+    "verhuur",
+    "beginner",
+    "kinderen",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ook SUP-fietsen en seascooters",
+     "en": "Also SUP bikes and sea scooters"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/sup-and-kayak-adventure-curacao"
+   ]
+  },
+  {
+   "id": "ryan-de-jongh-kayak",
+   "naam": "Ryan de Jongh's Kayak Experience",
+   "url": null,
+   "soort": {
+    "nl": "kajaktour mangroven",
+    "en": "mangrove kayak tour"
+   },
+   "plaats": "Piscaderabaai",
+   "tags": [
+    "kajak",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Door de mangroven",
+     "en": "Through the mangroves"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/ryan-de-jonghs-kayak-experience"
+   ]
+  },
+  {
+   "id": "clear-kayak-photoshoot",
+   "naam": "Clear Kayak Photoshoot",
+   "url": null,
+   "soort": {
+    "nl": "doorzichtige kajak",
+    "en": "clear kayak"
+   },
+   "plaats": null,
+   "tags": [
+    "kajak"
+   ],
+   "prijs": {
+    "bedrag": 125,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Foto's en video inbegrepen",
+     "en": "Photos and video included"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 272,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d26021502-Curacao_Clear_Kayak_Photoshoot_FREE_Videoshoot_Cocktails_Shots-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Foto's als aandenken inbegrepen"
+    ],
+    "en": [
+     "Photos to take home included"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d26021502-Curacao_Clear_Kayak_Photoshoot_FREE_Videoshoot_Cocktails_Shots-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html"
+   ]
+  },
+  {
+   "id": "sup-mangrove-eco-tour",
+   "naam": "Guided SUP mangrove eco tour (beginners)",
+   "url": null,
+   "soort": {
+    "nl": "SUP-tour",
+    "en": "SUP tour"
+   },
+   "plaats": null,
+   "tags": [
+    "sup",
+    "beginner",
+    "kinderen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Geschikt voor beginners",
+     "en": "Beginner friendly"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 133,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.co.uk/Attractions-g147278-Activities-c55-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustig peddelen door de mangroven"
+    ],
+    "en": [
+     "Calm paddling through the mangroves"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.co.uk/Attractions-g147278-Activities-c55-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "clear-canoe-tugboat",
+   "naam": "Clear Canoe Tour Tugboat Beach",
+   "url": null,
+   "soort": {
+    "nl": "doorzichtige kano",
+    "en": "clear canoe"
+   },
+   "plaats": "Tugboat Beach, Caracasbaai",
+   "tags": [
+    "kajak",
+    "oost"
+   ],
+   "prijs": {
+    "bedrag": 60,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon, 1,5 uur",
+     "en": "per person, 1.5 hours"
+    },
+    "bron": "https://www.mycuracaoguide.com/sup-canoeing-kayaking",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Vanaf 12 jaar",
+     "en": "Ages 12 and up"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/sup-canoeing-kayaking",
+    "https://www.mycuracaoguide.com/blogs/water-activities-in-curacao"
+   ]
+  },
+  {
+   "id": "broski-tours",
+   "naam": "Broski Tours Curaçao",
+   "url": "https://broskitours.com/",
+   "soort": {
+    "nl": "jetskitours westkust",
+    "en": "west coast jet ski tours"
+   },
+   "plaats": "Playa Santa Cruz",
+   "tags": [
+    "jetski",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Langs Grote Knip en Lagun",
+     "en": "Past Grote Knip and Lagun"
+    },
+    {
+     "nl": "Soms schildpadden en Blue Room",
+     "en": "Turtles and Blue Room possible"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/broski-tours-curacao"
+   ]
+  },
+  {
+   "id": "blue-coast-watersports",
+   "naam": "Blue Coast Watersports",
+   "url": null,
+   "soort": {
+    "nl": "jetskitour",
+    "en": "jet ski tour"
+   },
+   "plaats": "Papagayo Beach Hotel, Jan Thiel",
+   "tags": [
+    "jetski",
+    "jan-thiel"
+   ],
+   "prijs": {
+    "bedrag": 195,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per tour van 1 uur",
+     "en": "per 1-hour tour"
+    },
+    "bron": "https://www.mycuracaoguide.com/blogs/water-activities-in-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Coast Scouting-tour, 1 uur",
+     "en": "Coast Scouting tour, 1 hour"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/water-activities-in-curacao"
+   ]
+  },
+  {
+   "id": "jetski-piscadera",
+   "naam": "Jetski Adventure Piscadera",
+   "url": null,
+   "soort": {
+    "nl": "jetski",
+    "en": "jet ski"
+   },
+   "plaats": "Piscaderabaai",
+   "tags": [
+    "jetski",
+    "midden"
+   ],
+   "prijs": {
+    "bedrag": 135,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per jetski (max 2 personen)",
+     "en": "per jet ski (up to 2 people)"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "1 uur",
+     "en": "1 hour"
+    },
+    {
+     "nl": "Geen vaarbewijs nodig",
+     "en": "No license needed"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 35,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d33140347-Jetski_Adventure_Piscadera-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Hoge score, korte activiteit"
+    ],
+    "en": [
+     "High score, short activity"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d33140347-Jetski_Adventure_Piscadera-Curacao.html",
+    "https://curacaoactivities.com/tours/water-sports-curacao/",
+    "https://www.mycuracaoguide.com/blogs/water-activities-in-curacao"
+   ]
+  },
+  {
+   "id": "maxie-sailing",
+   "naam": "Maxie Sailing Curaçao",
+   "url": "https://www.maxiesailing.com/",
+   "soort": {
+    "nl": "privé zeiljacht 48 voet",
+    "en": "private 48-foot sailing yacht"
+   },
+   "plaats": "Seru Boca Marina, Santa Barbara",
+   "tags": [
+    "zeilen",
+    "boot",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Geen gemengde groepen",
+     "en": "No mixed groups"
+    },
+    {
+     "nl": "Familiebedrijf, eigenaren als crew",
+     "en": "Family-run, owners crew it"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/maxie-sailing-curacao"
+   ]
+  },
+  {
+   "id": "casador-sailing",
+   "naam": "Casador, klassiek zeiljacht 68 voet",
+   "url": null,
+   "soort": {
+    "nl": "privécharter zeiljacht",
+    "en": "private sailing yacht charter"
+   },
+   "plaats": null,
+   "tags": [
+    "zeilen",
+    "boot"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 29,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147278-Activities-c40-t233-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147278-Activities-c40-t233-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "el-capitano",
+   "naam": "El Capitano Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "boot huren zonder vaarbewijs",
+    "en": "boat rental, no license"
+   },
+   "plaats": null,
+   "tags": [
+    "boot",
+    "verhuur"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Zelf varen, geen vaarbewijs",
+     "en": "Drive yourself, no license"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/el-capitano-curacao",
+    "https://www.curacao.com/en/category/water-activities"
+   ]
+  },
+  {
+   "id": "caribiooh-boats",
+   "naam": "Caribiooh!",
+   "url": null,
+   "soort": {
+    "nl": "bootverhuur",
+    "en": "boat rental"
+   },
+   "plaats": null,
+   "tags": [
+    "boot",
+    "verhuur"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/caribiooh-boats",
+    "https://www.curacao.com/en/category/water-activities"
+   ]
+  },
+  {
+   "id": "soluna-rentals",
+   "naam": "Soluna Rentals",
+   "url": null,
+   "soort": {
+    "nl": "bootverhuur",
+    "en": "boat rental"
+   },
+   "plaats": null,
+   "tags": [
+    "boot",
+    "verhuur"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/soluna-rentals",
+    "https://www.curacao.com/en/category/water-activities"
+   ]
+  },
+  {
+   "id": "sloep-huren-curacao",
+   "naam": "Sloep huren Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "sloepverhuur",
+    "en": "sloop boat rental"
+   },
+   "plaats": null,
+   "tags": [
+    "boot",
+    "verhuur"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/sloep-huren-curacao",
+    "https://www.curacao.com/en/category/water-activities"
+   ]
+  },
+  {
+   "id": "tiki-boats-rental",
+   "naam": "Tiki Boats Rental",
+   "url": null,
+   "soort": {
+    "nl": "tikiboot huren",
+    "en": "tiki boat rental"
+   },
+   "plaats": "Spaanse Water",
+   "tags": [
+    "boot",
+    "verhuur",
+    "oost"
+   ],
+   "prijs": {
+    "bedrag": 269,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per boot, 4 uur, 6 tot 8 personen",
+     "en": "per boat, 4 hours, 6 to 8 people"
+    },
+    "bron": "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/",
+    "datum": "2026-10"
+   },
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/tiki-boats-rental",
+    "https://www.curacao.com/en/category/water-activities",
+    "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/"
+   ]
+  },
+  {
+   "id": "discover-curacao-charters",
+   "naam": "Discover Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "privé bootcharter",
+    "en": "private boat charter"
+   },
+   "plaats": null,
+   "tags": [
+    "boot"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/discover-curacao",
+    "https://www.curacao.com/en/category/water-activities"
+   ]
+  },
+  {
+   "id": "yacht-charter-curacao",
+   "naam": "Yacht Charter Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "jachtcharter",
+    "en": "yacht charter"
+   },
+   "plaats": null,
+   "tags": [
+    "boot",
+    "zeilen"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/yacht-charter-curacao",
+    "https://www.curacao.com/en/category/water-activities"
+   ]
+  },
+  {
+   "id": "miramar-boat-trips",
+   "naam": "Miramar Boat Trips",
+   "url": null,
+   "soort": {
+    "nl": "privé jachtcharter",
+    "en": "private yacht charter"
+   },
+   "plaats": null,
+   "tags": [
+    "boot"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/miramar-boat-trips",
+    "https://www.curacao.com/en/category/water-activities"
+   ]
+  },
+  {
+   "id": "fish-charter-curacao",
+   "naam": "Fish Charter Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "vissen op zee",
+    "en": "sport fishing"
+   },
+   "plaats": "Kima Kalki Marina, Spaanse Water",
+   "tags": [
+    "vissen",
+    "boot",
+    "beginner",
+    "oost"
+   ],
+   "prijs": {
+    "bedrag": 160,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person"
+    },
+    "bron": "https://www.mycuracaoguide.com/fishing-charters",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Open groepstrip, di en vr",
+     "en": "Shared trip, Tue and Fri"
+    },
+    {
+     "nl": "Halve dag privé $850",
+     "en": "Private half day $850"
+    },
+    {
+     "nl": "Hele dag privé $1.350",
+     "en": "Private full day $1,350"
+    },
+    {
+     "nl": "Hengels en drinken inbegrepen",
+     "en": "Gear and drinks included"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Groepstrip maakt vissen per persoon betaalbaar"
+    ],
+    "en": [
+     "Shared trip keeps fishing affordable per person"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/fishing-charters",
+    "https://www.mycuracaoguide.com/en/fishing-charters",
+    "https://www.curacao.com/en/activity/fish-charter-curacao"
+   ]
+  },
+  {
+   "id": "curacao-fishing",
+   "naam": "Curaçao Fishing (Panga Hey Swa)",
+   "url": "https://www.curacaofishing.com/",
+   "soort": {
+    "nl": "kleine boot, max 3 personen",
+    "en": "small boat, up to 3 people"
+   },
+   "plaats": "Daaibooi",
+   "tags": [
+    "vissen",
+    "boot",
+    "gevorderd",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Boot van 25 voet",
+     "en": "25-foot boat"
+    },
+    {
+     "nl": "Zelf vissen, geen dekknecht",
+     "en": "You fish it yourself, no mate"
+    },
+    {
+     "nl": "Tonijn, wahoo, marlijn",
+     "en": "Tuna, wahoo, marlin"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/curacao-fishing"
+   ]
+  },
+  {
+   "id": "yknot-fishing",
+   "naam": "YKnot Fishing Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "visboot privé",
+    "en": "private fishing boat"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "vissen",
+    "boot"
+   ],
+   "prijs": {
+    "bedrag": 650,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per boot, vanaf",
+     "en": "per boat, from"
+    },
+    "bron": "https://fishingbooker.com/destinations/country/cw",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Tweede boot: 4,9 bij 19",
+     "en": "Second boat: 4.9 from 19"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "FishingBooker",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 297,
+     "peildatum": "2026-10-20",
+     "bron": "https://fishingbooker.com/destinations/country/cw"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://fishingbooker.com/destinations/country/cw"
+   ]
+  },
+  {
+   "id": "wazapap-charters",
+   "naam": "Wazapap Private Charters",
+   "url": null,
+   "soort": {
+    "nl": "visboot privé",
+    "en": "private fishing boat"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "vissen",
+    "boot"
+   ],
+   "prijs": {
+    "bedrag": 650,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per boot, vanaf",
+     "en": "per boat, from"
+    },
+    "bron": "https://fishingbooker.com/destinations/country/cw",
+    "datum": "2026-10"
+   },
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "FishingBooker",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 186,
+     "peildatum": "2026-10-20",
+     "bron": "https://fishingbooker.com/destinations/country/cw"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://fishingbooker.com/destinations/country/cw"
+   ]
+  },
+  {
+   "id": "la-menta-boattrips",
+   "naam": "La Menta Boattrips",
+   "url": null,
+   "soort": {
+    "nl": "visboot privé",
+    "en": "private fishing boat"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "vissen",
+    "boot"
+   ],
+   "prijs": {
+    "bedrag": 650,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per boot, vanaf",
+     "en": "per boat, from"
+    },
+    "bron": "https://fishingbooker.com/destinations/country/cw",
+    "datum": "2026-10"
+   },
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "FishingBooker",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 180,
+     "peildatum": "2026-10-20",
+     "bron": "https://fishingbooker.com/destinations/country/cw"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://fishingbooker.com/destinations/country/cw"
+   ]
+  },
+  {
+   "id": "fish-curacao-papucho",
+   "naam": "Fish Curaçao (Papucho IV)",
+   "url": null,
+   "soort": {
+    "nl": "visboot privé",
+    "en": "private fishing boat"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "vissen",
+    "boot"
+   ],
+   "prijs": {
+    "bedrag": 800,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per boot, vanaf",
+     "en": "per boat, from"
+    },
+    "bron": "https://fishingbooker.com/destinations/country/cw",
+    "datum": "2026-10"
+   },
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "FishingBooker",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 109,
+     "peildatum": "2026-10-20",
+     "bron": "https://fishingbooker.com/destinations/country/cw"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://fishingbooker.com/destinations/country/cw"
+   ]
+  },
+  {
+   "id": "speedy-boat-trips",
+   "naam": "Speedy Boat Trips",
+   "url": null,
+   "soort": {
+    "nl": "visboot privé",
+    "en": "private fishing boat"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "vissen",
+    "boot"
+   ],
+   "prijs": {
+    "bedrag": 800,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per boot, vanaf",
+     "en": "per boat, from"
+    },
+    "bron": "https://fishingbooker.com/destinations/country/cw",
+    "datum": "2026-10"
+   },
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "FishingBooker",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 42,
+     "peildatum": "2026-10-20",
+     "bron": "https://fishingbooker.com/destinations/country/cw"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://fishingbooker.com/destinations/country/cw"
+   ]
+  },
+  {
+   "id": "patron-charters",
+   "naam": "Patron Charters",
+   "url": null,
+   "soort": {
+    "nl": "visboot privé",
+    "en": "private fishing boat"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "vissen",
+    "boot"
+   ],
+   "prijs": {
+    "bedrag": 600,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per boot, vanaf",
+     "en": "per boat, from"
+    },
+    "bron": "https://fishingbooker.com/destinations/country/cw",
+    "datum": "2026-10"
+   },
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "FishingBooker",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 13,
+     "peildatum": "2026-10-20",
+     "bron": "https://fishingbooker.com/destinations/country/cw"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://fishingbooker.com/destinations/country/cw",
+    "https://fishingbooker.com/sr/profile/view/258248"
+   ]
+  },
+  {
+   "id": "waves-curacao",
+   "naam": "Waves Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "visboot privé",
+    "en": "private fishing boat"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "vissen",
+    "boot"
+   ],
+   "prijs": {
+    "bedrag": 550,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per boot, vanaf",
+     "en": "per boat, from"
+    },
+    "bron": "https://fishingbooker.com/destinations/country/cw",
+    "datum": "2026-10"
+   },
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "FishingBooker",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 1,
+     "peildatum": "2026-10-20",
+     "bron": "https://fishingbooker.com/destinations/country/cw"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://fishingbooker.com/destinations/country/cw",
+    "https://fishingbooker.com/charters/view/50764"
+   ]
+  },
+  {
+   "id": "paranda-boat-trips",
+   "naam": "Paranda Boat Trips",
+   "url": null,
+   "soort": {
+    "nl": "visboot privé",
+    "en": "private fishing boat"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "vissen",
+    "boot"
+   ],
+   "prijs": {
+    "bedrag": 750,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per boot, vanaf",
+     "en": "per boat, from"
+    },
+    "bron": "https://fishingbooker.com/destinations/country/cw",
+    "datum": "2026-10"
+   },
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "FishingBooker",
+     "score": 3.6,
+     "max": 5,
+     "aantal": 4,
+     "peildatum": "2026-10-20",
+     "bron": "https://fishingbooker.com/destinations/country/cw"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://fishingbooker.com/destinations/country/cw"
+   ]
+  },
+  {
+   "id": "dream-catchers-sport-fishing",
+   "naam": "Dream Catchers Sport Fishing",
+   "url": null,
+   "soort": {
+    "nl": "visboot privé",
+    "en": "private fishing boat"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "vissen",
+    "boot"
+   ],
+   "prijs": {
+    "bedrag": 800,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per boot, vanaf",
+     "en": "per boat, from"
+    },
+    "bron": "https://fishingbooker.com/destinations/country/cw",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Nieuw op FishingBooker",
+     "en": "New on FishingBooker"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://fishingbooker.com/destinations/country/cw"
+   ]
+  },
+  {
+   "id": "blue-bay-golf",
+   "naam": "Blue Bay Golf",
+   "url": null,
+   "soort": {
+    "nl": "golfbaan aan zee",
+    "en": "oceanfront golf course"
+   },
+   "plaats": "Blue Bay",
+   "tags": [
+    "golf",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.top100golfcourses.com/golf-course/blue-bay/reviews/23688",
+    "https://www.1golf.eu/es/club/blue-bay-golf/criticas/"
+   ]
+  },
+  {
+   "id": "old-quarry-golf",
+   "naam": "Old Quarry Golf Course",
+   "url": null,
+   "soort": {
+    "nl": "golfbaan bij Sandals",
+    "en": "golf course at Sandals"
+   },
+   "plaats": "Santa Barbara Plantation",
+   "tags": [
+    "golf",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.sandals.com/golf/curacao/",
+    "https://www.1golf.eu/club/old-quarry-golf-course/bewertungen/",
+    "https://www.leadingcourses.com/fr/clubs/cara%C3%AFbes+cura%C3%A7ao/old-quarry-golf-course-cura%C3%A7ao"
+   ]
+  },
+  {
+   "id": "kura-hulanda-spa",
+   "naam": "Kura Hulanda Village & Spa",
+   "url": null,
+   "soort": {
+    "nl": "hotelspa",
+    "en": "hotel spa"
+   },
+   "plaats": "Otrobanda, Willemstad",
+   "tags": [
+    "spa",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://ie.hotels.com/ho199281/kura-hulanda-village-spa-willemstad-curacao"
+   ]
+  },
+  {
+   "id": "lionsdive-spa",
+   "naam": "The Spa at LionsDive",
+   "url": null,
+   "soort": {
+    "nl": "resortspa",
+    "en": "resort spa"
+   },
+   "plaats": "Bapor Kibra, bij Mambo Beach",
+   "tags": [
+    "spa",
+    "mambo"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.lionsdive.com/sports-wellness/spa-at-lionsdive-the-spa/"
+   ]
+  },
+  {
+   "id": "baoase-spa",
+   "naam": "Baoase Spa",
+   "url": null,
+   "soort": {
+    "nl": "openlucht spa aan het strand",
+    "en": "open-air beachfront spa"
+   },
+   "plaats": "Cornelisbaai",
+   "tags": [
+    "spa",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://spaandbeautytoday.com/articles/baoase-luxury-resort-in-curacao-offers-dreamy-massages-and-island-inspired-treatments-in-open-air-spa-gazebos-at-the-beach"
+   ]
+  },
+  {
+   "id": "avila-spa",
+   "naam": "Avila Beach Hotel spa",
+   "url": null,
+   "soort": {
+    "nl": "hotelspa",
+    "en": "hotel spa"
+   },
+   "plaats": "Penstraat, Willemstad",
+   "tags": [
+    "spa",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.avilabeachhotel.com/?p=890"
+   ]
+  },
+  {
+   "id": "oasis-8-the-experience",
+   "naam": "8, The Experience (Oasis Coral Estate)",
+   "url": null,
+   "soort": {
+    "nl": "wellnessresort",
+    "en": "wellness resort"
+   },
+   "plaats": "Sint Willibrordus",
+   "tags": [
+    "spa",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://spaandbeautytoday.com/articles/spa-profile-8-the-experience-at-oasis-coral-estate-beach-dive-wellness-resort"
+   ]
+  },
+  {
+   "id": "zoetry-spa",
+   "naam": "Zoetry Curaçao Resort & Spa",
+   "url": null,
+   "soort": {
+    "nl": "all-inclusive resortspa",
+    "en": "all-inclusive resort spa"
+   },
+   "plaats": null,
+   "tags": [
+    "spa"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://be.hotels.com/fr/ho230208/zoetry-curacao-resort-spa-all-inclusive-willemstad-curacao"
+   ]
+  },
+  {
+   "id": "the-challenge",
+   "naam": "The Challenge",
+   "url": "https://the-challenge.net",
+   "soort": {
+    "nl": "sport- en healthclub",
+    "en": "sports and health club"
+   },
+   "plaats": "Kaya Adriátiko, Jan Thiel",
+   "tags": [
+    "sportschool",
+    "yoga",
+    "jan-thiel"
+   ],
+   "prijs": {
+    "bedrag": 30,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per losse les",
+     "en": "per single visit"
+    },
+    "bron": "https://www.naarcuracao.com/en/gym-and-crossfit-on-curacao/",
+    "datum": "2025-04"
+   },
+   "feiten": [
+    {
+     "nl": "Week XCG 90",
+     "en": "One week XCG 90"
+    },
+    {
+     "nl": "Ook yogalessen",
+     "en": "Yoga classes too"
+    },
+    {
+     "nl": "Korting voor stagiairs",
+     "en": "Discount for interns"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.naarcuracao.com/en/gym-and-crossfit-on-curacao/"
+   ]
+  },
+  {
+   "id": "bluemaxx-health-club",
+   "naam": "BlueMaxx Health Club",
+   "url": null,
+   "soort": {
+    "nl": "sportschool",
+    "en": "gym"
+   },
+   "plaats": "Mambo Beach Boulevard",
+   "tags": [
+    "sportschool",
+    "mambo"
+   ],
+   "prijs": {
+    "bedrag": 30,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per dag",
+     "en": "per day"
+    },
+    "bron": "https://www.naarcuracao.com/en/gym-and-crossfit-on-curacao/",
+    "datum": "2025-04"
+   },
+   "feiten": [
+    {
+     "nl": "Week XCG 125",
+     "en": "One week XCG 125"
+    },
+    {
+     "nl": "Maand XCG 150",
+     "en": "One month XCG 150"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.naarcuracao.com/en/gym-and-crossfit-on-curacao/",
+    "https://www.facebook.com/Bluemaxxhealthclub"
+   ]
+  },
+  {
+   "id": "oxygen-fitness-zone",
+   "naam": "Oxygen Fitness Zone",
+   "url": "https://oxygenfitnesszonecuracao.com",
+   "soort": {
+    "nl": "sportschool in Sambil",
+    "en": "gym in Sambil mall"
+   },
+   "plaats": "Sambil, Willemstad",
+   "tags": [
+    "sportschool",
+    "yoga",
+    "midden"
+   ],
+   "prijs": {
+    "bedrag": 50,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per 3 dagen",
+     "en": "per 3 days"
+    },
+    "bron": "https://www.naarcuracao.com/en/gym-and-crossfit-on-curacao/",
+    "datum": "2025-04"
+   },
+   "feiten": [
+    {
+     "nl": "Maand $82",
+     "en": "One month $82"
+    },
+    {
+     "nl": "Ook yogalessen",
+     "en": "Yoga classes too"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.naarcuracao.com/en/gym-and-crossfit-on-curacao/"
+   ]
+  },
+  {
+   "id": "forza-house-of-fitness",
+   "naam": "Forza House of Fitness",
+   "url": null,
+   "soort": {
+    "nl": "sportschool, budget",
+    "en": "budget gym"
+   },
+   "plaats": "Hanenberg",
+   "tags": [
+    "sportschool",
+    "midden"
+   ],
+   "prijs": {
+    "bedrag": 10,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per dag",
+     "en": "per day"
+    },
+    "bron": "https://www.naarcuracao.com/en/gym-and-crossfit-on-curacao/",
+    "datum": "2025-04"
+   },
+   "feiten": [
+    {
+     "nl": "Week XCG 35",
+     "en": "One week XCG 35"
+    },
+    {
+     "nl": "Inschrijving XCG 20",
+     "en": "Sign-up fee XCG 20"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.naarcuracao.com/en/gym-and-crossfit-on-curacao/",
+    "https://www.facebook.com/Forza.houseoffitness"
+   ]
+  },
+  {
+   "id": "crossfit-damacor",
+   "naam": "CrossFit Damacor",
+   "url": "https://crossfitdamacor.com",
+   "soort": {
+    "nl": "CrossFit en HYROX",
+    "en": "CrossFit and HYROX"
+   },
+   "plaats": "Chuchubiweg, bij de zoo",
+   "tags": [
+    "sportschool",
+    "beginner",
+    "midden"
+   ],
+   "prijs": {
+    "bedrag": 35,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per les",
+     "en": "per class"
+    },
+    "bron": "https://www.naarcuracao.com/en/gym-and-crossfit-on-curacao/",
+    "datum": "2025-04"
+   },
+   "feiten": [
+    {
+     "nl": "Week XCG 125",
+     "en": "One week XCG 125"
+    },
+    {
+     "nl": "3-daagse basiscursus XCG 95",
+     "en": "3-day Fundamentals XCG 95"
+    },
+    {
+     "nl": "15% studentenkorting",
+     "en": "15% student discount"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.naarcuracao.com/en/gym-and-crossfit-on-curacao/"
+   ]
+  },
+  {
+   "id": "lionsdive-gym",
+   "naam": "The Gym at LionsDive",
+   "url": null,
+   "soort": {
+    "nl": "hotelsportschool",
+    "en": "hotel gym"
+   },
+   "plaats": "Bapor Kibra, bij Mambo Beach",
+   "tags": [
+    "sportschool",
+    "mambo"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.lionsdive.com/sports-wellness/the-gym-at-lionsdive-fitness-center/"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "FishingBooker",
+   "url": "https://fishingbooker.com/destinations/country/cw",
+   "uitleg": {
+    "nl": "Vergelijkt 14 vischarters op Curaçao met reviews en prijzen vanaf $550 per boot.",
+    "en": "Compares 14 fishing charters in Curaçao with reviews and prices from $550 per boat."
+   }
+  },
+  {
+   "naam": "Tripadvisor",
+   "url": "https://www.tripadvisor.com/Attractions-g147278-Activities-c40-t233-Willemstad_Curacao.html",
+   "uitleg": {
+    "nl": "Reviews en boekingen voor jetski, kajak, zeiltochten en privéboten.",
+    "en": "Reviews and bookings for jet ski, kayak, sailing trips and private boats."
+   }
+  },
+  {
+   "naam": "Curaçao Tourist Board",
+   "url": "https://www.curacao.com/en/category/water-activities",
+   "uitleg": {
+    "nl": "Officiële lijst van kite-, SUP-, jetski-, vis- en bootaanbieders met contactgegevens.",
+    "en": "Official list of kite, SUP, jet ski, fishing and boat providers with contact details."
+   }
+  },
+  {
+   "naam": "My Curaçao Guide",
+   "url": "https://www.mycuracaoguide.com/blogs/water-activities-in-curacao",
+   "uitleg": {
+    "nl": "Boekt SUP-, windsurf-, jetski- en vistochten met vaste prijzen in dollars.",
+    "en": "Books SUP, windsurf, jet ski and fishing trips at fixed dollar prices."
+   }
+  },
+  {
+   "naam": "NaarCuracao",
+   "url": "https://www.naarcuracao.com/en/gym-and-crossfit-on-curacao/",
+   "uitleg": {
+    "nl": "Overzicht van sportscholen en CrossFit met dagpasprijzen.",
+    "en": "Overview of gyms and CrossFit with day-pass prices."
+   }
+  },
+  {
+   "naam": "ResortPass",
+   "url": "https://www.resortpass.com/s/cw/hotel-day-passes",
+   "uitleg": {
+    "nl": "Verkoopt dagpassen voor hotelzwembaden en spa's op Curaçao.",
+    "en": "Sells day passes to hotel pools and spas in Curaçao."
+   }
+  },
+  {
+   "naam": "BookRetreats",
+   "url": "https://www.bookretreats.com/s/yoga-retreats/curacao",
+   "uitleg": {
+    "nl": "Meerdaagse yoga- en meditatieretreats op Curaçao.",
+    "en": "Multi-day yoga and meditation retreats in Curaçao."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Kitesurfen doe je in de Sint Jorisbaai aan de oostkant: daar staat de passaatwind het meest constant en zitten vier kitescholen.",
+   "en": "Kitesurfing happens in St. Joris Bay on the east side, where the trade wind is steadiest and four kite schools operate."
+  },
+  {
+   "nl": "Voor je eerste windsurf- of SUP-les is het Spaanse Water het rustigst: vlak water, beschut door mangroven.",
+   "en": "For a first windsurf or SUP lesson, Spanish Water is the calmest choice: flat water sheltered by mangroves."
+  },
+  {
+   "nl": "Een visboot deel je het goedkoopst via de open groepstrip van Fish Charter Curaçao ($160 per persoon, dinsdag en vrijdag).",
+   "en": "The cheapest way to fish is the shared trip with Fish Charter Curaçao ($160 per person, Tuesday and Friday)."
+  },
+  {
+   "nl": "Bij privévischarters betaal je per boot ($550 tot $899); met zes man aan boord kost het per persoon ongeveer $100 tot $150.",
+   "en": "Private fishing charters are priced per boat ($550 to $899); with six people aboard that works out to about $100 to $150 each."
+  },
+  {
+   "nl": "Voor een jetski heb je geen vaarbewijs nodig; tours van een uur kosten $135 tot $195.",
+   "en": "You don't need a license for a jet ski; one-hour tours cost $135 to $195."
+  },
+  {
+   "nl": "Sportscholen rekenen in Caribische gulden (XCG): een dagpas kost XCG 10 bij Forza en XCG 30 bij The Challenge of BlueMaxx.",
+   "en": "Gyms charge in Caribbean guilders (XCG): a day pass is XCG 10 at Forza and XCG 30 at The Challenge or BlueMaxx."
+  },
+  {
+   "nl": "Stagiairs en studenten krijgen korting bij The Challenge en 15% bij CrossFit Damacor.",
+   "en": "Interns and students get discounts at The Challenge and 15% off at CrossFit Damacor."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Waar kan ik kitesurfen op Curaçao?",
+    "en": "Where can I kitesurf in Curaçao?"
+   },
+   "a": {
+    "nl": "Vooral in de Sint Jorisbaai aan de oostkant. Daar zitten Awa Salu, Blue Wave Kitesurfing, NIX Kite School en Curaçao Kiteboarding School. Kiteboarding Curaçao werkt vanaf het schiereiland bij Caracasbaai met boot- en radiobegeleiding.",
+    "en": "Mostly in St. Joris Bay on the east side, home to Awa Salu, Blue Wave Kitesurfing, NIX Kite School and Curaçao Kiteboarding School. Kiteboarding Curaçao works from the Caracasbaai peninsula with boat and radio support."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost een windsurfles op Curaçao?",
+    "en": "How much is a windsurf lesson in Curaçao?"
+   },
+   "a": {
+    "nl": "Bij SUP Curaçao op het Spaanse Water kost een windsurfles van 1,5 uur $68 per persoon, vanaf 12 jaar. Een privéles wingfoilen kost $158.",
+    "en": "At SUP Curaçao on Spanish Water a 1.5-hour windsurf lesson costs $68 per person, ages 12 and up. A private wingfoil lesson costs $158."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar kan ik SUP'en of kajakken op Curaçao?",
+    "en": "Where can I paddleboard or kayak in Curaçao?"
+   },
+   "a": {
+    "nl": "Op het Spaanse Water (SUP-mangrovetour $74), bij Tugboat Beach (doorzichtige kano $60), in de Piscaderabaai (Ryan de Jongh's kajaktour) en bij Kleine Knip, waar SUP and Kayak Adventure verhuurt.",
+    "en": "On Spanish Water (SUP mangrove tour $74), at Tugboat Beach (clear canoe $60), in Piscadera Bay (Ryan de Jongh's kayak tour) and at Kleine Knip, where SUP and Kayak Adventure rents boards and kayaks."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost diepzeevissen op Curaçao?",
+    "en": "How much does deep-sea fishing cost in Curaçao?"
+   },
+   "a": {
+    "nl": "Een open groepstrip kost $160 per persoon. Een privéboot kost $550 tot $899 voor een halve dag en $1.350 voor een hele dag bij Fish Charter Curaçao, met $75 per extra persoon boven zes.",
+    "en": "A shared trip costs $160 per person. A private boat runs $550 to $899 for a half day, and $1,350 for a full day with Fish Charter Curaçao, plus $75 per extra person over six."
+   }
+  },
+  {
+   "q": {
+    "nl": "Heb ik een vaarbewijs nodig voor een jetski of huurboot?",
+    "en": "Do I need a license for a jet ski or rental boat?"
+   },
+   "a": {
+    "nl": "Nee voor de jetskitours in de Piscaderabaai, en ook niet bij El Capitano, waar je zelf een boot vaart zonder vaarbewijs.",
+    "en": "No for the jet ski tours in Piscadera Bay, and not at El Capitano either, where you drive a boat yourself without a license."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke golfbanen heeft Curaçao?",
+    "en": "What golf courses does Curaçao have?"
+   },
+   "a": {
+    "nl": "Blue Bay Golf aan de westkant van Willemstad, aan zee, en Old Quarry Golf Course bij Santa Barbara Plantation, verbonden aan Sandals Royal Curaçao.",
+    "en": "Blue Bay Golf on the ocean west of Willemstad, and Old Quarry Golf Course at Santa Barbara Plantation, linked to Sandals Royal Curaçao."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost een sportschool voor toeristen op Curaçao?",
+    "en": "How much is a gym day pass in Curaçao?"
+   },
+   "a": {
+    "nl": "Van XCG 10 per dag bij Forza tot XCG 30 bij The Challenge en BlueMaxx. Oxygen Fitness Zone in Sambil vraagt $50 voor drie dagen. Prijzen zijn van april 2025.",
+    "en": "From XCG 10 a day at Forza to XCG 30 at The Challenge and BlueMaxx. Oxygen Fitness Zone in Sambil charges $50 for three days. Prices are from April 2025."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kan ik yoga doen op Curaçao?",
+    "en": "Can I do yoga in Curaçao?"
+   },
+   "a": {
+    "nl": "Ja. The Challenge in Jan Thiel en Oxygen Fitness Zone in Sambil geven yogalessen, en via BookRetreats boek je meerdaagse yogaretreats.",
+    "en": "Yes. The Challenge in Jan Thiel and Oxygen Fitness Zone in Sambil offer yoga classes, and BookRetreats lists multi-day yoga retreats."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "kitesurfen curaçao",
+   "windsurfen curaçao",
+   "sup curaçao",
+   "vissen curaçao",
+   "jetski curaçao",
+   "golf curaçao",
+   "sportschool curaçao"
+  ],
+  "en": [
+   "kitesurfing curacao",
+   "windsurfing curacao",
+   "paddleboard curacao",
+   "fishing charter curacao",
+   "jet ski curacao",
+   "golf curacao",
+   "gym curacao"
+  ],
+  "es": [
+   "kitesurf curazao",
+   "pesca deportiva curazao",
+   "paddle surf curazao",
+   "moto acuática curazao",
+   "golf curazao"
+  ],
+  "pt": [
+   "kitesurf curaçao",
+   "pesca curaçao",
+   "stand up paddle curaçao",
+   "jet ski curaçao",
+   "golfe curaçao"
+  ],
+  "de": [
+   "kitesurfen curaçao",
+   "windsurfen curaçao",
+   "hochseeangeln curaçao",
+   "sup curaçao",
+   "golf curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Waar kan ik het best kitesurfles nemen op Curaçao?",
+   "Wat kost een vischarter op Curaçao en welke is goed?",
+   "Waar kan ik SUP'en of windsurfen op het Spaanse Water?"
+  ],
+  "en": [
+   "Where is the best place to take kitesurfing lessons in Curacao?",
+   "How much is a deep-sea fishing charter in Curacao and which one is good?",
+   "Where can I paddleboard or windsurf on Spanish Water in Curacao?"
+  ]
+ },
+ "talen": [
+  "nl",
+  "en"
+ ]
+}
