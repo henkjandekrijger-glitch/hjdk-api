@@ -16,6 +16,7 @@
 // Schrijven: token in Authorization: Bearer, header x-hjdk-token of ?token= (gedeelde team-variabele ZICHT_TOKEN, GADS_TOKEN of HJDK_TOKEN).
 import { vraagAI, gapScan } from '../lib/zicht.js';
 import { lessen, draaiboek, stand, voegLesToe, nieuweProef, verwerkUitkomst, zetSite, ronde, meet, sites, DAY } from '../lib/zicht.js';
+import { organicStatus } from '../lib/organic.js';
 import { OVERDRACHT_ZICHT } from '../lib/overdracht-zicht.js';
 
 const mag = req => { const q = req.query || {}; const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''); const given = [q.token, req.headers['x-hjdk-token'], bearer].filter(Boolean);
@@ -44,6 +45,13 @@ export default async function handler(req, res) {
       const vragen = (Array.isArray(q.vragen) ? q.vragen : String(q.v || '').split('|')).map(x => String(x).trim()).filter(Boolean).slice(0, 40); if (!vragen.length) return res.status(400).json({ fout: 'geef v=vraag1|vraag2|... of POST {vragen:[...]}' });
       const r = await gapScan(vragen, q.taal || 'nl', oidc, q.model); const naam = String(q.naam || 'scan').replace(/[^a-z0-9-]/gi, '').slice(0, 40);
       await kv.set('zicht:gapscan:' + DAY() + ':' + naam, r, { ex: 60 * 86400 }).catch(() => {}); await kv.raw(['LPUSH', 'zicht:gapscan:index', 'zicht:gapscan:' + DAY() + ':' + naam]).catch(() => {}); await kv.raw(['LTRIM', 'zicht:gapscan:index', '0', '49']).catch(() => {}); return res.status(200).json(Object.assign({ ok: true, naam }, r)); }
+    if (op === 'organisch') {
+      const ids = q.site ? [q.site].filter(s => ['kz', 'us', 'de'].includes(s)) : ['kz', 'us', 'de'];
+      const { MARKETS } = await import('../lib/wtb.js');
+      const result = await Promise.all(ids.map(id => organicStatus(id, id === 'kz' ? Number(process.env.KZ_PER_DAG || 12) : MARKETS[id].perDay())));
+      if (q.t) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send('ORGANISCHE GROEI — ' + DAY() + '\n\n' + result.map(x => x.site.toUpperCase() + ': ' + x.budget.inGoogle + '/' + x.budget.gecontroleerd + ' gecontroleerde URL’s in Google (indexcontrole ' + x.budget.indexDag + ').\nAutomatische nieuwbouw maximaal ' + x.budget.perDag + '/dag. ' + x.budget.reden + '\nGoogle: ' + (x.google.totaal ? x.google.totaal.imp + ' vertoningen, ' + x.google.totaal.clicks + ' kliks' : 'volledige totalen nog niet gemeten') + '. ' + x.google.basis + '\n' + x.prioriteit + '\n' + x.kansen.map(p => '- /' + p.slug + ': ' + p.vragen.map(v => v.vraag + ' (positie ' + v.positie + ')').join('; ')).join('\n') + '\n' + x.interpretatie).join('\n\n')); }
+      return res.status(200).json({ ok: true, sites: result });
+    }
     if (op === 'stand') return res.status(200).json({ ok: true, dag: DAY(), sites: await stand(q.site) });
     if (op === 'manifest') { const PJ = await import('../lib/zicht-projecten.js'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(PJ.MANIFEST_UITLEG); }
     if (op === 'werk') { const PJ = await import('../lib/zicht-projecten.js'); const w = await PJ.werk(await sites(), q.site || null);

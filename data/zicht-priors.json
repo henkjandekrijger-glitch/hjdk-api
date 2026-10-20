@@ -480,15 +480,17 @@
  },
  {
   "id": "zoekbezoek-alleen-met-gsc",
-  "les": "Tel bezoek met Google als herkomst pas als zoekbezoek als Search Console kliks laat zien; een eigen telling op de verwijzer alleen telt ook bots en andere Google-diensten mee.",
+  "les": "Vergelijk echte Google-site-totalen met verwijzer-tellers, met hun eigen periodes. Een Google-verwijzer is geen bevestigde zoekklik; nul zichtbare zoekvraag-kliks bewijst ook geen bots.",
   "kanaal": "google",
-  "bewijs": "20 okt 2026: eigen teller gaf in 7 dagen 81 (NL), 53 (US) en 43 (DE) bezoeken met Google als herkomst, terwijl Search Console in 28 dagen 0 kliks toont en voor US en DE zelfs 0 vertoningen. Sinds 20 okt zet de ZICHT-meting dat apart als googleOnbevestigd.",
+  "bewijs": "Google Search Console anonimiseert zoekvragen: paginazoekvraagregels zijn geen volledig site-totaal. Vraag totalen zonder query-dimensie op. Google loopt minimaal twee dagen achter; de verwijzer-teller meet een andere periode en definitie.",
   "bron": "eigen data",
   "sterkte": 3,
   "effect": 0.3,
   "moeite": 1,
-  "risico": "Geen; alleen eerlijker meten.",
-  "meten": "gsc"
+  "risico": "Noem ruwe verwijzer-bezoeken onbevestigd; concludeer niet zonder onderzoek dat het bots zijn.",
+  "meten": "gsc",
+  "revisie": 2,
+  "status": "regel"
  },
  {
   "id": "niet-sneller-bouwen-dan-google-ontdekt",
@@ -501,5 +503,45 @@
   "moeite": 1,
   "risico": "Veel automatisch gemaakte pagina's die niet geindexeerd raken kunnen als geschaalde inhoud gaan tellen.",
   "meten": "index"
+ },
+ {
+  "id": "google-totalen-zonder-queryfilter",
+  "les": "Gebruik volledige Google-site-totalen voor bereik en kliks; gebruik zoekvraagregels alleen om onderwerpen en posities te kiezen. Toon exacte meetperiode en houd ontbrekende data onbekend.",
+  "kanaal": "google",
+  "bewijs": "Search Analytics combineert zonder dimensies alle waarden; query-dimensies kunnen anonieme zoekvragen en andere rijen missen. Sinds 20 okt opgehaald via op=totalen.",
+  "bron": "https://developers.google.com/webmaster-tools/v1/searchanalytics/query",
+  "sterkte": 4,
+  "moeite": 1,
+  "status": "regel"
+ },
+ {
+  "id": "proef-vergelijkbare-meetvensters",
+  "les": "Beoordeel SEO-proeven met dezelfde meetdefinitie, gescheiden tijdvensters, verse URL-inspecties en voldoende behandelde en controlepagina’s. Bescherm lopende proefpagina’s tegen andere automatische wijzigingen.",
+  "kanaal": "beide",
+  "bewijs": "Audit 20 okt: de oude lus kon 1 indexwaarneming zonder controle of overlappende 28-dagenvensters al als beter registreren. Meetguards en controlegroepen toegevoegd; nog geen groeieffect aangetoond.",
+  "bron": "lib/organic-policy.js; test/organic-policy.test.cjs",
+  "sterkte": 4,
+  "moeite": 1,
+  "status": "regel"
+ },
+ {
+  "id": "ai-vast-panel-echte-citaten",
+  "les": "Vergelijk AI-antwoorden op hetzelfde vaste vragenpanel, taal en model. Tel echte broncitaten apart van merkvermeldingen; generiek which to buy bewijst geen vermelding van whichtobuy.best.",
+  "kanaal": "llm",
+  "bewijs": "Audit 20 okt: vragen roteerden dagelijks en merkwoorden konden een treffer opleveren zonder broncitaat. Panel blijft nu 28 dagen vast met model/panelhash; twee dagmetingen krijgen geen winnaar.",
+  "bron": "lib/zicht.js",
+  "sterkte": 4,
+  "moeite": 1,
+  "status": "regel"
+ },
+ {
+  "id": "nieuwbouw-rem-bij-indexachterstand",
+  "les": "Beperk tijdelijk automatische nieuwbouw bij grote indexachterstand en geef bestaande zoekkansen voorrang. Meet of indexering en zoekkliks verbeteren voordat het normale tempo terugkomt.",
+  "kanaal": "google",
+  "bewijs": "20 okt: NL 113/466, US 6/123, DE 1/95 URL’s geïndexeerd. Werkafspraak 2 NL, 1 US, 1 DE per dag bij minder dan 50% indexering met voldoende verse dekking. Geen door Google opgegeven grens en nog geen bewezen oorzakelijk effect.",
+  "bron": "lib/organic-policy.js; https://keuzehulp.best/api/zicht?op=organisch&t=1",
+  "sterkte": 2,
+  "moeite": 1,
+  "risico": "Jonge sites hebben tijd nodig; lage indexering kan ook door kwaliteit, duplicatie of ontdekking komen. Deze rem alleen lost die oorzaken niet op."
  }
 ]

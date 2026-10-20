@@ -15,6 +15,7 @@
 // te zien welke bronnen en categorieën verkeer en orders opleveren en stuurt daarop. Seizoen, dag en maatschappij: kalender, weer (Open-Meteo), nieuws (NOS, NU.nl, VRT),
 // Google Trends, schoolvakanties. Elke dag ook 'uitgelicht' (wat nu speelt, bovenaan de site, in de mail en op Pinterest) en verversing van pagina's die nu actueel zijn.
 import { kv } from '../lib/db.js';
+import { organicStatus } from '../lib/organic.js';
 import { demandRadar } from '../lib/demandradar.js';
 import { searchCached, catalog, getToken } from '../lib/bol.js';
 import seed from '../data/kz.json' with { type: 'json' };
@@ -429,10 +430,12 @@ async function extraRonde(n, thema) {
 async function stap(opts) {
   const d = DAY(); const o = opts || {}; let plan = (await kv.get(K.plan(d))) || null;
   if (!plan) { const p = await maakPlan(d); plan = { dag: d, at: new Date().toISOString(), lijst: p.lijst, ververs: p.ververs, verversKlaar: [], klaar: [], mislukt: [], plannen: 1 }; await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); await log({ stap: 'plan', ok: true, onderwerpen: p.lijst.map(x => x.slug), ververs: p.ververs }); return { gedaan: 'plan', plan: p.lijst, ververs: p.ververs }; }
-  if (!o.extra && !o.dry && !o.onderwerp && plan.klaar.length >= PER_DAG()) {
-    const vk = plan.verversKlaar || []; const v = (plan.ververs || []).find(x => vk.indexOf(x) < 0);
+  const organic = await organicStatus('kz', PER_DAG());
+  if (!o.dry && !o.onderwerp && (organic.budget.begrensd || !o.extra) && plan.klaar.length >= organic.budget.perDag) {
+    const running = ((await kv.get('zicht:exp:kz').catch(() => null)) || []).filter(p => p.status === 'loopt' && p.metric === 'gsc'); const protectedUrls = new Set(running.flatMap(p => [...(p.urls || []), ...(p.controle || [])]));
+    const vk = plan.verversKlaar || []; const v = (plan.ververs || []).find(x => vk.indexOf(x) < 0 && !protectedUrls.has(DOMAIN + '/' + x));
     if (v && vk.length < VERVERS()) { const t0 = Date.now(); const r = await verversItem(v, d, Object.assign({}, plan, await speerCtx(v))); plan.verversKlaar = vk.concat(v); await kv.set(K.plan(d), plan, { ex: 20 * 86400 }); await log({ stap: 'ververs', ok: r.ok, slug: v, actueel: r.actueel, waarom: r.waarom, ms: Date.now() - t0 }); return { gedaan: r.ok ? 'ververst' : 'ververs-mislukt', onderwerp: v, waarom: r.waarom }; }
-    return { gedaan: 'niets', reden: 'dagdoel gehaald (' + plan.klaar.length + '/' + PER_DAG() + ')' };
+    return { gedaan: 'niets', reden: 'dagdoel gehaald (' + plan.klaar.length + '/' + organic.budget.perDag + '). ' + organic.budget.reden, organisch: organic.budget };
   }
   const have = new Set((await bestaande()).map(b => b.slug));
   let cand = o.onderwerp ? (plan.lijst.find(x => x.slug === o.onderwerp) || STARTLIJST.find(x => x.slug === o.onderwerp) || { slug: o.onderwerp, term: o.onderwerp.replace(/-/g, ' '), cat: 'Wonen', bron: 'handmatig' }) : plan.lijst.find(x => !have.has(x.slug) && !plan.mislukt.some(m => m.slug === x.slug));
@@ -462,7 +465,7 @@ export default async function handler(req, res) {
     if (op === 'status') {
       const d = DAY(); const [plan, lg, sig, tk, calls, best, pr, uit, rt] = await Promise.all([kv.get(K.plan(d)), kv.get(K.log), kv.get(K.sig), kv.get(K.tok(d)), kv.get(K.calls(d)), bestaande(), kv.get(K.prest), kv.get(K.uit), claudeRoute()]);
       const gemaakt = best.filter(b => b.gemaakt === 'kzmaak').sort((a, b) => String(b.publishAt).localeCompare(String(a.publishAt))).map(b => ({ slug: b.slug, dag: b.publishAt, bron: b.bron || '', url: DOMAIN + '/' + b.slug }));
-      return res.status(200).json({ ok: true, nu: new Date().toISOString(), instellingen: { perDag: PER_DAG(), verversPerDag: VERVERS(), claude: rt ? rt.label : 'ontbreekt', maxClaudeAanroepenPerDag: MAX_CLAUDE() },
+      return res.status(200).json({ ok: true, nu: new Date().toISOString(), organisch: await organicStatus('kz', PER_DAG()), instellingen: { perDag: PER_DAG(), verversPerDag: VERVERS(), claude: rt ? rt.label : 'ontbreekt', maxClaudeAanroepenPerDag: MAX_CLAUDE() },
         vandaag: plan ? { klaar: plan.klaar, mislukt: plan.mislukt, ververst: plan.verversKlaar || [], nogInPlan: plan.lijst.filter(x => !plan.klaar.some(k => k.slug === x.slug) && !plan.mislukt.some(m => m.slug === x.slug)).map(x => x.slug + ' — ' + (x.bron || '') + ': ' + (x.waarom || '')) } : null,
         claudeVandaag: { aanroepen: Number(calls) || 0, tokens: Number(tk) || 0 }, totaalKeuzehulpen: best.length, doorDezeRondeGemaakt: gemaakt.length, gemaakt: gemaakt.slice(0, 60),
         uitgelichtVandaag: uit || null,
@@ -482,7 +485,7 @@ export default async function handler(req, res) {
       const ctx = await speerCtx(slug); if (!ctx.speer) { await kv.set('hjdk:kz:speer:last:' + slug, DAY(), { ex: 7 * 86400 }); ctx.speer = { zoekvragen: ['keuzehulp ' + slug.replace(/-/g, ' ')] }; }
       const r = await verversItem(slug, DAY(), ctx); await log({ stap: 'speerpunt', ok: r.ok, slug, waarom: r.waarom }); return res.status(200).json(Object.assign({ slug, zoekvragen: ctx.speer.zoekvragen }, r));
     }
-    if (op === 'extra') { // extra ronde op verzoek: onderbelichte zoekvragen en blinde vlekken; openbaar maar begrensd (max 40 extra per dag, één tegelijk)
+    if (op === 'extra') { const organic = await organicStatus('kz', PER_DAG()); const current = await kv.get(K.plan(DAY())).catch(() => null); if (organic.budget.begrensd && (current?.klaar || []).length >= organic.budget.perDag) return res.status(200).json({ ok: true, gedaan: 'niets', reden: organic.budget.reden, organisch: organic.budget }); // extra ronde op verzoek: onderbelichte zoekvragen en blinde vlekken; openbaar maar begrensd (max 40 extra per dag, één tegelijk)
       const d = DAY(); const cnt = Number(await kv.get('c:kzmaak-extra-' + d).catch(() => 0)) || 0; if (cnt >= 60) return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'dagmaximum extra (60) bereikt' });
       const lock = await kv.raw(['SET', K.lock, String(Date.now()), 'NX', 'EX', '295']).catch(() => 'OK'); if (lock !== 'OK') return res.status(200).json({ ok: true, gedaan: 'niets', reden: 'er draait al een ronde' });
       const t0 = Date.now(); const stappen = [];

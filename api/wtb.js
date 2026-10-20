@@ -6,6 +6,8 @@ import { koopBlok, koopMeetScript } from '../lib/koopblok.js';
 // Routes (vercel.json, op host): / , /<slug>, /sitemap.xml, /robots.txt, /llms.txt, /llms-full.txt, /<indexnow-sleutel>.txt, /about, /privacy
 // API: /api/wtb?op=advice&slug=..&a=0-1-2 (producten voor de antwoorden), /api/wtb?op=status (openbaar overzicht)
 import { kv } from '../lib/db.js';
+import { organicStatus } from '../lib/organic.js';
+import { contentDate } from '../lib/organic-policy.js';
 import { look, ACCENTS } from '../lib/look.js';
 import { colourTag, colourReport, measureTag } from '../lib/kleur.js';
 import { MARKETS, marketFor, K, DAY, esc, items, amzSearch, amzReady, searchLink, INDEXNOW_KEY } from '../lib/wtb.js';
@@ -63,14 +65,14 @@ async function page(m, it, all, req) {
   const boost = new Set((await kv.get('hjdk:gsc:' + m.id + ':boost').catch(() => null)) || []); const sc = x => (x.cat === it.cat ? 2 : 0) + (boost.has(x.slug) ? 1 : 0) + ((it.verwant || []).includes(x.slug) || (x.verwant || []).includes(it.slug) ? 20 : 0);
   const rel = all.filter(x => x.slug !== it.slug).sort((x, y) => sc(y) - sc(x)).slice(0, 8);
   const qs = (it.questions || []).map((q, qi) => `<div class="q" data-q="${qi}" role="group" aria-labelledby="question-${qi}"><h2 id="question-${qi}">${qi + 1}. ${esc(q.q)}</h2><div class="opts">${(q.options || []).map((o, oi) => `<button class="opt${a0[qi] === oi ? ' on' : ''}" type="button" data-o="${oi}" aria-pressed="${a0[qi] === oi}">${esc(o.label)}</button>`).join('')}</div></div>`).join('');
-  const upd = it.updatedAt || it.publishAt || DAY();
+  const upd = contentDate(it);
   const ld = { '@context': 'https://schema.org', '@graph': [
-    { '@type': 'Article', headline: it.h1, description: it.metaDesc, inLanguage: m.locale, datePublished: it.publishAt || upd, dateModified: upd, author: { '@type': 'Person', name: 'Henkjan de Krijger', url: 'https://www.linkedin.com/in/henkjandekrijger' }, publisher: { '@type': 'Organization', name: m.name, url: base }, mainEntityOfPage: base + '/' + it.slug, about: { '@type': 'Thing', name: it.term } },
+    { '@type': 'Article', headline: it.h1, description: it.metaDesc, inLanguage: m.locale, ...(it.publishAt ? { datePublished: it.publishAt } : {}), ...(upd ? { dateModified: upd } : {}), author: { '@type': 'Person', name: 'Henkjan de Krijger', url: 'https://www.linkedin.com/in/henkjandekrijger' }, publisher: { '@type': 'Organization', name: m.name, url: base }, mainEntityOfPage: base + '/' + it.slug, about: { '@type': 'Thing', name: it.term } },
     { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: m.name, item: base + '/' }, { '@type': 'ListItem', position: 2, name: it.title, item: base + '/' + it.slug }] },
     ...((it.faq || []).length ? [{ '@type': 'FAQPage', mainEntity: it.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
     ...(adv.products.length ? [{ '@type': 'ItemList', name: it.title, itemListElement: adv.products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title.slice(0, 110), url: p.url })) }] : []) ] };
   const body = `<p class="crumbs"><a href="/">${esc(m.name)}</a> › ${esc(it.cat)}</p><p class="kicker">${esc(it.cat)}</p><h1>${esc(it.h1)}</h1><p class="standfirst">${esc(it.intro)}</p>
-<div class="answer"><p>${firstBold(it.kort)}</p></div><p class="meta">${esc(s.updated)}&nbsp;<time datetime="${esc(upd)}">${esc(upd)}</time> · ${esc(s.by)} Henkjan de Krijger</p>
+<div class="answer"><p>${firstBold(it.kort)}</p></div><p class="meta">${upd ? `${esc(s.updated)}&nbsp;<time datetime="${esc(upd)}">${esc(upd)}</time> · ` : ""}${esc(s.by)} Henkjan de Krijger</p>
 <h2>${esc(s.q)}</h2>${qs}
 <div class="guide-actions"><button type="button" id="share-guide">Copy this result</button><span id="share-status" role="status"></span></div><p id="advice-status" role="status"></p><div id="adv" aria-live="polite" aria-atomic="true" style="margin:14px 0">${adviceHtml(m, adv)}</div>
 ${guideSections(it,esc)}
@@ -108,7 +110,7 @@ export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x'); const q = url.searchParams; const op = q.get('op') || 'page';
   if (op === 'status') { // openbaar overzicht, beide markten
     const out = { ok: true, amazonApi: amzReady(), markten: {} };
-    for (const m of Object.values(MARKETS)) { const all = await items(m); const plan = await kv.get(K.plan(m.id, DAY())).catch(() => null); out.markten[m.id] = { site: 'https://' + m.host, tag: m.tag(), gidsen: all.length, vandaag: plan ? { gepland: (plan.topics || []).length, gemaakt: (plan.topics || []).filter(t => t.status === 'live').length, mislukt: (plan.topics || []).filter(t => t.status === 'fout').length } : null, nieuwste: all.slice(-5).map(i => ({ slug: i.slug, blindspot: i.blind && i.blind.score })) }; }
+    for (const m of Object.values(MARKETS)) { const all = await items(m); const plan = await kv.get(K.plan(m.id, DAY())).catch(() => null); out.markten[m.id] = { site: 'https://' + m.host, tag: m.tag(), gidsen: all.length, organisch: await organicStatus(m.id, m.perDay()), vandaag: plan ? { gepland: (plan.topics || []).length, gemaakt: (plan.topics || []).filter(t => t.status === 'live').length, mislukt: (plan.topics || []).filter(t => t.status === 'fout').length } : null, nieuwste: all.slice(-5).map(i => ({ slug: i.slug, blindspot: i.blind && i.blind.score })) }; }
     out.kleurtest = { keuzehulp: await colourReport('keuzehulp', 'kz'), whichtobuy: await colourReport('whichtobuy', 'wtbus'), kaufberater: await colourReport('kaufberater', 'wtbde') };
     out.log = ((await kv.get(K.log)) || []).slice(0, 30);
     res.setHeader('cache-control', 'no-store'); return res.status(200).json(out);
@@ -119,7 +121,7 @@ export default async function handler(req, res) {
   if (op === 'robots') { res.setHeader('content-type', 'text/plain'); return res.status(200).send(`# Buying guides may be read and cited by search engines and AI assistants. Summary: https://${m.host}/llms.txt\nUser-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: https://${m.host}/sitemap.xml\n`); }
   if (op === 'ixkey') { res.setHeader('content-type', 'text/plain'); return res.status(200).send(INDEXNOW_KEY); }
   const all = await items(m);
-  if (op === 'sitemap') { res.setHeader('content-type', 'application/xml; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://${m.host}/</loc><lastmod>${DAY()}</lastmod></url><url><loc>https://${m.host}/about</loc></url>${all.map(i => `<url><loc>https://${m.host}/${i.slug}</loc><lastmod>${esc(i.updatedAt || i.publishAt || DAY())}</lastmod></url>`).join('')}</urlset>`); }
+  if (op === 'sitemap') { res.setHeader('content-type', 'application/xml; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://${m.host}/</loc></url><url><loc>https://${m.host}/about</loc></url>${all.map(i => `<url><loc>https://${m.host}/${i.slug}</loc>${contentDate(i) ? `<lastmod>${esc(contentDate(i))}</lastmod>` : ""}</url>`).join('')}</urlset>`); }
   if (op === 'llms' || op === 'llmsfull') {
     res.setHeader('content-type', 'text/plain; charset=utf-8'); const full = op === 'llmsfull';
     const head = m.id === 'us' ? `# ${m.name}\n\n> Buying guides for the US market, written for products on sale now (2026) and linked to live Amazon results. Each guide asks 3 questions and gives one pick. Guides list what AI answers often get wrong (outdated models, old standards).\n\n` : `# ${m.name}\n\n> Kaufberater für Deutschland, geschrieben für Produkte, die heute verkauft werden (2026), verlinkt mit aktuellen Amazon-Ergebnissen. Jeder Ratgeber stellt 3 Fragen und gibt eine Empfehlung. Ratgeber nennen, was KI-Antworten oft falsch machen (veraltete Modelle, alte Standards).\n\n`;
@@ -143,7 +145,3 @@ export default async function handler(req, res) {
   await count(m, req, q, it.slug);
   return send(await page(m, it, all, req), it.term);
 }
-
-
-
-

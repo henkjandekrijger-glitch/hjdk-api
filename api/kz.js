@@ -14,6 +14,7 @@ import { extraItems } from '../lib/keuze-extra-content.js';
 import { look, ACCENTS } from '../lib/look.js';
 import { colourTag, measureTag } from '../lib/kleur.js';
 const MEETTAG = measureTag('kz', 'a[data-kz],a[data-deal],a[href*="bol.com"]', '.opt');
+import { organicOpportunities } from '../lib/organic-policy.js';
 const BOOST = { set: new Set(), at: 0 };
 async function pinStats(items, d) { // 14 dagen Pinterest-resultaat per keuzehulp en per beeldvariant; 1x per dag berekend
   const ck = 'hjdk:kz:pinstat:' + d; try { const c = await kv.get(ck); if (c && c.bestV != null) return c; } catch (e) {}
@@ -628,7 +629,7 @@ async function opruimen(budgetMs) {
 const PIN_VERIFY = { v: '', at: 0 }; // Pinterest-websiteclaim (meta p:domain_verify), via env of /setup, 10 min in het geheugen
 export default async function handler(req, res) {
   if (Date.now() - BOOST.at > 600000) { BOOST.at = Date.now(); try { BOOST.set = new Set((await kv.get('hjdk:gsc:kz:boost')) || []); } catch (e) {} }
-  if (Date.now() - SPEER.at > 600000) { SPEER.at = Date.now(); try { const v = await kv.get('hjdk:kz:speerpunt'); if (v && Array.isArray(v.speer)) { SPEER.speer = v.speer.length ? v.speer : ['printer']; SPEER.hubs = v.hubs || []; } } catch (e) {} try { const ix = await kv.get('hjdk:gsc:index:kz'); SPEER.vind = ((ix && ix.nietGeindexeerd) || []).filter(x => /onbekend|Gevonden/i.test(String(x.staat || ''))).map(x => { try { return new URL(x.url).pathname.slice(1); } catch (e) { return ''; } }).filter(x => x && !x.includes('/') && !isControle(x)); } catch (e) {} }
+  if (Date.now() - SPEER.at > 600000) { SPEER.at = Date.now(); try { const v = await kv.get('hjdk:kz:speerpunt'); if (v && Array.isArray(v.speer)) { SPEER.speer = v.speer.length ? v.speer : ['printer']; SPEER.hubs = v.hubs || []; } const g = await kv.get('hjdk:gsc:kz'); const focus = organicOpportunities(g).map(x => x.slug).slice(0, 3); if (focus.length) SPEER.speer = focus; } catch (e) {} try { const ix = await kv.get('hjdk:gsc:index:kz'); SPEER.vind = ((ix && ix.nietGeindexeerd) || []).filter(x => /onbekend|Gevonden/i.test(String(x.staat || ''))).map(x => { try { return new URL(x.url).pathname.slice(1); } catch (e) { return ''; } }).filter(x => x && !x.includes('/') && !isControle(x)); } catch (e) {} }
   try { COLTAG = await colourTag('keuzehulp', 'kz', 'a[data-kz],a[data-deal],a[href*="bol.com"]', false, 'kz'); } catch (e) { COLTAG = ''; }
   await siteKz();
   if (Date.now() - PIN_VERIFY.at > 600000) { PIN_VERIFY.at = Date.now(); try { PIN_VERIFY.v = String(process.env.PINTEREST_VERIFY || (await secrets()).PINTEREST_VERIFY || '4963a53ed69385410ca1c84a0d306499').replace(/[^a-zA-Z0-9]/g, '').slice(0, 64); } catch (e) {} }
@@ -918,9 +919,9 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
       return res.status(200).send(text);
     }
     if (op === 'sitemap') { const items = await allItems(); const base = baseOf(req); res.setHeader('content-type', 'application/xml'); res.setHeader('cache-control', 'public, max-age=3600'); const cats = [...new Set(items.map(i => i.cat))];
-      const rows = [['/keuzehulp', TODAY()], ['/keuzehulp/deals', TODAY()], ['/keuzehulp/over', UPDATED], ['/keuzehulp/' + KERST.slug, TODAY()], ['/keuzehulp/fietsmaat', '2026-10-17']].concat(cats.map(c => ['/keuzehulp/categorie/' + catSlug(c), items.filter(i => i.cat === c).map(i => i.updatedAt || (i.publishAt && i.publishAt > UPDATED ? i.publishAt : UPDATED)).sort().pop() || UPDATED])).concat(items.map(i => ['/keuzehulp/' + i.slug, i.updatedAt || (i.publishAt && i.publishAt > UPDATED ? i.publishAt : UPDATED)]));
+      const rows = [['/keuzehulp', null], ['/keuzehulp/deals', null], ['/keuzehulp/over', UPDATED], ['/keuzehulp/' + KERST.slug, null], ['/keuzehulp/fietsmaat', '2026-10-17']].concat(cats.map(c => ['/keuzehulp/categorie/' + catSlug(c), items.filter(i => i.cat === c).map(i => i.updatedAt || (i.publishAt && i.publishAt > UPDATED ? i.publishAt : UPDATED)).sort().pop() || UPDATED])).concat(items.map(i => ['/keuzehulp/' + i.slug, i.updatedAt || (i.publishAt && i.publishAt > UPDATED ? i.publishAt : UPDATED)]));
       const cadeau = /keuzehulp\.best/.test(base) ? ['kleine-sinterklaascadeaus', 'kerstcadeau-voor-haar', 'book-nook-kiezen'].map(g => '<url><loc>https://keuzehulp.best/cadeau/' + g + '</loc><lastmod>' + UPDATED + '</lastmod></url>').join('') : '';
-      return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + rows.map(([p, d]) => '<url><loc>' + esc(base + pathOf(req, p)) + '</loc><lastmod>' + d + '</lastmod></url>').join('') + cadeau + '</urlset>'); }
+      return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + rows.map(([p, d]) => '<url><loc>' + esc(base + pathOf(req, p)) + '</loc>' + (d ? '<lastmod>' + esc(d) + '</lastmod>' : '') + '</url>').join('') + cadeau + '</urlset>'); }
     if (op === 'robots') { const base = baseOf(req); res.setHeader('content-type', 'text/plain'); const ai = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Bingbot', 'Googlebot'];
       return res.status(200).send('# Keuzehulpen mogen gelezen en geciteerd worden door zoekmachines en AI-assistenten. Samenvatting: ' + base + '/llms.txt , alles: ' + base + '/llms-full.txt\n\n' + ai.map(b => 'User-agent: ' + b + '\nAllow: /\nDisallow: /setup\n').join('\n') + '\nUser-agent: *\nAllow: /\nDisallow: /setup\nDisallow: /leads\nDisallow: /subs\n\nSitemap: ' + base + pathOf(req, '/keuzehulp/sitemap.xml') + '\n'); }
     if (op === 'llmsfull') { // llms-full.txt: alle keuzehulpen volledig uitgeschreven (vragen, wat elke keuze betekent, uitleg, fouten, FAQ) voor AI-assistenten
@@ -952,7 +953,7 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
       return res.status(200).send('# ' + SITE.name + '\n\n> ' + SITE.tagline + ' Onafhankelijke keuzehulpen in het Nederlands; elk advies noemt producten met de prijs van vandaag bij bol.com. Uitgave van ' + SITE.owner + '.\n\n' + [...new Set(items.map(i => i.cat))].sort().map(c => '## ' + c + ' ([alle](' + base + pathOf(req, '/keuzehulp/categorie/' + catSlug(c)) + '))\n\n' + items.filter(i => i.cat === c).map(i => '- [' + i.title + '](' + base + pathOf(req, '/keuzehulp/' + i.slug) + '): ' + (i.kort || i.intro)).join('\n')).join('\n\n') + '\n\n## Rekenhulpen\n\n- [Welke maat fiets heb ik nodig? Framemaat berekenen](' + base + pathOf(req, '/keuzehulp/fietsmaat') + '): framemaat stadsfiets en e-bike = binnenbeen x 0,66; racefiets x 0,67; mountainbike x 0,57. Met tabellen per lengte.\n- [Maat kinderfiets](' + base + pathOf(req, '/keuzehulp/kinderfiets-maat-bepalen') + '): 16 inch bij 105-120 cm (4-6 jaar), 20 inch bij 120-135 cm (6-8 jaar), 24 inch bij 130-150 cm (8-11 jaar).\n- [Maat fietshelm](' + base + pathOf(req, '/keuzehulp/fietshelm-kind') + '): XS 46-51 cm, S 51-55 cm, M 54-58 cm, L 58-62 cm hoofdomtrek.' + '\n\n## Over\n\n- [Over ons](' + base + pathOf(req, '/keuzehulp/over') + ')\n- Contact: ' + SITE.email + '\n'); }
     if (slug === KERST.slug) return kerstHub(res, req);
     if (slug === 'fietsmaat') { const base = baseOf(req); const u = base + pathOf(req, '/keuzehulp/fietsmaat'); const p = await fietsmaatPagina(bolLink); const ld = jsonld({ '@context': 'https://schema.org', '@graph': [
-        { '@type': 'Article', headline: 'Welke maat fiets heb ik nodig? Framemaat berekenen', inLanguage: 'nl', datePublished: '2026-10-17', dateModified: TODAY(), author: { '@type': 'Person', name: 'Henkjan de Krijger', url: 'https://www.linkedin.com/in/henkjandekrijger' }, publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: u },
+        { '@type': 'Article', headline: 'Welke maat fiets heb ik nodig? Framemaat berekenen', inLanguage: 'nl', datePublished: '2026-10-17', dateModified: '2026-10-17', author: { '@type': 'Person', name: 'Henkjan de Krijger', url: 'https://www.linkedin.com/in/henkjandekrijger' }, publisher: { '@type': 'Organization', name: SITE.name }, mainEntityOfPage: u },
         { '@type': 'FAQPage', mainEntity: p.faq.map(f => ({ '@type': 'Question', name: f[0], acceptedAnswer: { '@type': 'Answer', text: f[1] } })) }] });
       try { await kv.incrMany([['c:hjdk6-kz-fietsmaat-page', 1]]); } catch (e) {}
       res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=600');
@@ -965,8 +966,3 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
     return page(item, res, req);
   } catch (e) { return res.status(500).json({ ok: false, error: String(e && e.message || e).slice(0, 200) }); }
 }
-
-
-
-
-

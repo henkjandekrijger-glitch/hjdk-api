@@ -7,6 +7,7 @@
 //   /api/wtbmaak/nu?token=HJDK_TOKEN&m=us|de : één stap nu (&extra=1 boven het dagdoel)
 import { demandRadar } from '../lib/demandradar.js';
 import { kv } from '../lib/db.js';
+import { organicStatus } from '../lib/organic.js';
 import { keepa } from '../lib/cc.js';
 import { MARKETS, K, DAY, log, items, amzSearch, amzReady, claude, json, indexnow } from '../lib/wtb.js';
 
@@ -113,7 +114,8 @@ async function stap(m, extra) {
   const plan = await maakPlan(m); const todo = plan.topics.find(t => t.status === 'todo');
   const live = plan.topics.filter(t => t.status === 'live').length;
   if (!todo) return { m: m.id, klaar: true, live };
-  if (!extra && live >= m.perDay()) return { m: m.id, dagdoel: true, live };
+  const organic = await organicStatus(m.id, m.perDay());
+  if ((organic.budget.begrensd || !extra) && live >= organic.budget.perDag) return { m: m.id, dagdoel: true, live, organisch: organic.budget };
   todo.status = 'bezig'; await kv.set(K.plan(m.id, DAY()), plan, { ex: 4 * 86400 });
   try {
     const it = await schrijf(m, todo); const tt = await toets(m, it);
@@ -146,4 +148,3 @@ export default async function handler(req, res) {
   }
   return res.status(200).json({ ok: true, amazonApi: amzReady(), out });
 }
-
