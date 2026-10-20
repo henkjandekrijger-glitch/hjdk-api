@@ -41,6 +41,21 @@ Iedere chat en elk project gebruikt hetzelfde draaiboek en voedt het. Zo leert a
 - Les uit de scan van 17 okt 2026: AI beantwoordt maatvragen zelf goed (daar is geen AI-gat), maar bij 'beste X onder EUR Y' en situatievragen leunt het op één dunne bron zonder actuele prijs. Een tabel per situatie met product en prijs van vandaag, zonder klikken leesbaar, vult dat gat.
 - In Google zitten de kansen juist wel in maat- en rekenvragen met een zwakke top: één sterke rekenpagina per echte vraag, met tabel, meetuitleg, vragen als kopjes en een product per maat.
 
+## Controlelijst bij elke wijziging (uit de audit van 20 okt 2026)
+
+- **hreflang:** elke taalversie noemt alle andere en zichzelf, plus x-default. Mist er één, dan negeert Google de hele set. Alleen tussen echte vertalingen, nooit tussen verschillende gidsen per markt.
+- **Clusters linken onderling:** elke onderwerppagina linkt naar 6 onderwerpen uit dezelfde groep, 2 uit een andere en naar de hub, als gewone links in de HTML (lib/cur.js meerBlok).
+- **Hub en voorpagina openen met een kort antwoord:** feiten uit de eigen pagina's (met bron daar) en 5 tot 6 FAQ's met FAQPage. Geen nieuwe cijfers zonder bron.
+- **Antwoord past bij de lezer van die taal:** DE begint bij vertrek uit Duitsland, ES en PT bij Zuid-Amerika, niet bij de VS.
+- **Schema:** auteur en uitgever zijn de site als organisatie (geen persoonsnaam, Henkjan 20 okt). In lijsten krijgt elk item een type (Hotel, Restaurant, Beach) met land CW en plaats. Geen aggregateRating met scores van derden.
+- **Titels:** hooguit ~60 tekens, description hooguit 155.
+- **Geen gedachtestreepjes** in titels, beschrijvingen, llms.txt of zichtbare tekst. Controleer met grep op het teken voor elke push.
+- **Afbeeldingen:** alt met de productnaam, plus breedte en hoogte.
+- **llms.txt:** per onderwerp en taal een eigen kopje, en de intro noemt alle soorten inhoud.
+- **Eerst de lijst, dan de vragen:** mensen en AI willen een korte 'beste voor'-lijst met tabel en de prijs van vandaag. De keuzehulp staat eronder als knop, niet als drempel (les keuzehulp-als-knop-niet-drempel).
+- **Nog open:** pagina's aan de rand van Vercel bewaren (s-maxage) kan pas als de telling van AI-crawlers niet meer op de server hangt (telBot). Ook nog open: de zoekindex van de NL-voorpagina (88 KB) pas laden bij gebruik, en afgekapte slugs in api/wtbmaak.js.
+- **Een audit doe je met een aparte agent die alleen leest:** die controleert de live pagina's, sitemap, llms.txt en robots per host en levert een lijst met bestand en regel. Daarna voer je de top uit en zet je proeven in START_PROEVEN.
+
 ## Na elke wijziging: terugmelden
 
 Zonder terugmelding leert niemand ervan.
