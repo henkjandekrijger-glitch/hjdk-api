@@ -3,35 +3,56 @@
  "peildatum": "2026-10-20",
  "onderwerp": {
   "nl": "uitgaansplek",
-  "en": "nightlife spot"
+  "en": "nightlife spot",
+  "de": "Ausgehtipp",
+  "es": "lugar para salir de noche",
+  "pt": "lugar para sair à noite"
  },
  "h1": {
   "nl": "Uitgaan op Curaçao: welke beachclub, bar of club past bij jouw avond?",
-  "en": "Curaçao nightlife: which beach club, bar or club fits your night?"
+  "en": "Curaçao nightlife: which beach club, bar or club fits your night?",
+  "de": "Nachtleben auf Curaçao: Welcher Beach Club, welche Bar oder welcher Club passt zu deinem Abend?",
+  "es": "Vida nocturna en Curazao: ¿qué beach club, bar o discoteca va con tu noche?",
+  "pt": "Vida noturna em Curaçao: qual beach club, bar ou balada combina com a sua noite?"
  },
  "titel": {
   "nl": "Uitgaan op Curaçao: {n} beachclubs, bars en clubs vergeleken",
-  "en": "Curaçao Nightlife: {n} Beach Clubs, Bars and Clubs Compared"
+  "en": "Curaçao Nightlife: {n} Beach Clubs, Bars and Clubs Compared",
+  "de": "Nachtleben auf Curaçao: {n} Beach Clubs, Bars und Clubs im Vergleich",
+  "es": "Vida nocturna en Curazao: {n} beach clubs, bares y discotecas comparados",
+  "pt": "Vida noturna em Curaçao: {n} beach clubs, bares e baladas comparados"
  },
  "metaDesc": {
   "nl": "{n} uitgaansplekken op Curaçao met Google- en Tripadvisor-scores, vaste feestavonden, happy hours en entree. Kies wat bij jouw avond past.",
-  "en": "{n} Curaçao nightlife spots with Google and Tripadvisor ratings, weekly party nights, happy hours and entry fees. Pick the one that fits your night."
+  "en": "{n} Curaçao nightlife spots with Google and Tripadvisor ratings, weekly party nights, happy hours and entry fees. Pick the one that fits your night.",
+  "de": "{n} Orte für das Nachtleben auf Curaçao mit Bewertungen von Google und Tripadvisor, wöchentlichen Partyabenden, Happy Hours und Eintrittspreisen. Such dir den aus, der zu deinem Abend passt.",
+  "es": "{n} lugares de vida nocturna en Curazao con valoraciones de Google y Tripadvisor, noches de fiesta semanales, happy hours y precios de entrada. Elige el que va con tu noche.",
+  "pt": "{n} lugares de vida noturna em Curaçao com avaliações do Google e do Tripadvisor, noites de festa semanais, happy hours e preços de entrada. Escolha o que combina com a sua noite."
  },
  "kort": {
   "nl": "We vergeleken {n} uitgaansplekken op Curaçao, van beachclubs en bars tot clubs en casino's. Mambo Beach kost $4,50 entree en Jan Thiel $3 (na 16:30 gratis); Kokomo en Karakter zijn gratis. Voor dansen tot laat ga je naar Wet & Wild (vrijdag en zondag tot 02:00), voor livemuziek naar Mundo Bizarro op donderdag of Blues bij Avila, en voor de zonsondergang naar Karakter (4,4 uit 2.394 Google-reviews) of Kokomo Beach.",
-  "en": "We compared {n} Curaçao nightlife spots, from beach clubs and bars to nightclubs and casinos. Mambo Beach charges $4.50 entry and Jan Thiel $3 (free after 4:30 p.m.); Kokomo and Karakter are free. For dancing late go to Wet & Wild (open until 2 a.m. Friday and Sunday), for live music try Mundo Bizarro on Thursday or Blues at Avila, and for sunset drinks head to Karakter (4.4 from 2,394 Google reviews) or Kokomo Beach."
+  "en": "We compared {n} Curaçao nightlife spots, from beach clubs and bars to nightclubs and casinos. Mambo Beach charges $4.50 entry and Jan Thiel $3 (free after 4:30 p.m.); Kokomo and Karakter are free. For dancing late go to Wet & Wild (open until 2 a.m. Friday and Sunday), for live music try Mundo Bizarro on Thursday or Blues at Avila, and for sunset drinks head to Karakter (4.4 from 2,394 Google reviews) or Kokomo Beach.",
+  "de": "Wir haben {n} Orte des Nachtlebens auf Curaçao verglichen, von Beach Clubs und Bars bis zu Nachtclubs und Casinos. Mambo Beach kostet 4,50 $ Eintritt und Jan Thiel 3 $ (ab 16:30 Uhr gratis); Kokomo und Karakter sind kostenlos. Zum Tanzen bis spät geh ins Wet & Wild (Freitag und Sonntag bis 2 Uhr geöffnet), für Livemusik probier Mundo Bizarro am Donnerstag oder Blues at Avila, und für Drinks bei Sonnenuntergang geh ins Karakter (4,4 bei 2.394 Google-Bewertungen) oder an den Kokomo Beach.",
+  "es": "Comparamos {n} lugares de vida nocturna en Curazao, desde beach clubs y bares hasta discotecas y casinos. Mambo Beach cobra $4.50 de entrada y Jan Thiel $3 (gratis después de las 4:30 p. m.); Kokomo y Karakter son gratis. Para bailar hasta tarde ve a Wet & Wild (abierto hasta las 2 a. m. el viernes y el domingo), para música en vivo prueba Mundo Bizarro el jueves o Blues at Avila, y para tragos al atardecer ve a Karakter (4.4 con 2,394 reseñas en Google) o a Kokomo Beach.",
+  "pt": "Comparamos {n} lugares de vida noturna em Curaçao, de beach clubs e bares a baladas e cassinos. Mambo Beach cobra $4.50 de entrada e Jan Thiel $3 (grátis depois das 16h30); Kokomo e Karakter são grátis. Para dançar até tarde vá ao Wet & Wild (aberto até as 2h na sexta e no domingo), para música ao vivo experimente o Mundo Bizarro na quinta ou o Blues at Avila, e para drinks no pôr do sol vá ao Karakter (4,4 com 2.394 avaliações no Google) ou à Kokomo Beach."
  },
  "vragen": [
   {
    "q": {
     "nl": "Wat voor avond zoek je?",
-    "en": "What kind of night are you after?"
+    "en": "What kind of night are you after?",
+    "de": "Worauf hast du heute Abend Lust?",
+    "es": "¿Qué tipo de noche buscas?",
+    "pt": "Que tipo de noite você procura?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "Anything goes"
+      "en": "Anything goes",
+      "de": "Alles ist möglich",
+      "es": "Lo que sea",
+      "pt": "Qualquer coisa"
      },
      "plus": [],
      "min": [],
@@ -40,7 +61,10 @@
     {
      "label": {
       "nl": "Rustig borrelen bij zonsondergang",
-      "en": "Chill sunset drinks"
+      "en": "Chill sunset drinks",
+      "de": "Entspannte Drinks bei Sonnenuntergang",
+      "es": "Tragos tranquilos al atardecer",
+      "pt": "Drinks tranquilos no pôr do sol"
      },
      "plus": [
       "zonsondergang",
@@ -55,7 +79,10 @@
     {
      "label": {
       "nl": "Dag op een beachclub",
-      "en": "A beach club day"
+      "en": "A beach club day",
+      "de": "Ein Tag im Beach Club",
+      "es": "Un día de beach club",
+      "pt": "Um dia de beach club"
      },
      "plus": [
       "beachclub",
@@ -69,7 +96,10 @@
     {
      "label": {
       "nl": "Dansen tot laat",
-      "en": "Dancing late"
+      "en": "Dancing late",
+      "de": "Bis spät tanzen",
+      "es": "Bailar hasta tarde",
+      "pt": "Dançar até tarde"
      },
      "plus": [
       "dansen",
@@ -84,7 +114,10 @@
     {
      "label": {
       "nl": "Livemuziek",
-      "en": "Live music"
+      "en": "Live music",
+      "de": "Livemusik",
+      "es": "Música en vivo",
+      "pt": "Música ao vivo"
      },
      "plus": [
       "live-muziek"
@@ -95,7 +128,10 @@
     {
      "label": {
       "nl": "Casino",
-      "en": "Casino"
+      "en": "Casino",
+      "de": "Casino",
+      "es": "Casino",
+      "pt": "Cassino"
      },
      "plus": [
       "casino"
@@ -108,13 +144,19 @@
   {
    "q": {
     "nl": "In welke buurt?",
-    "en": "Which area?"
+    "en": "Which area?",
+    "de": "Welche Gegend?",
+    "es": "¿Qué zona?",
+    "pt": "Qual região?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "Doesn't matter"
+      "en": "Doesn't matter",
+      "de": "Egal",
+      "es": "No importa",
+      "pt": "Tanto faz"
      },
      "plus": [],
      "min": [],
@@ -123,7 +165,10 @@
     {
      "label": {
       "nl": "Stad: Pietermaai, Punda, Otrobanda",
-      "en": "Town: Pietermaai, Punda, Otrobanda"
+      "en": "Town: Pietermaai, Punda, Otrobanda",
+      "de": "Stadt: Pietermaai, Punda, Otrobanda",
+      "es": "Ciudad: Pietermaai, Punda, Otrobanda",
+      "pt": "Cidade: Pietermaai, Punda, Otrobanda"
      },
      "plus": [
       "pietermaai",
@@ -136,7 +181,10 @@
     {
      "label": {
       "nl": "Mambo Beach",
-      "en": "Mambo Beach"
+      "en": "Mambo Beach",
+      "de": "Mambo Beach",
+      "es": "Mambo Beach",
+      "pt": "Mambo Beach"
      },
      "plus": [
       "mambo"
@@ -147,7 +195,10 @@
     {
      "label": {
       "nl": "Jan Thiel",
-      "en": "Jan Thiel"
+      "en": "Jan Thiel",
+      "de": "Jan Thiel",
+      "es": "Jan Thiel",
+      "pt": "Jan Thiel"
      },
      "plus": [
       "jan-thiel"
@@ -158,7 +209,10 @@
     {
      "label": {
       "nl": "Westkant",
-      "en": "West side"
+      "en": "West side",
+      "de": "Westseite",
+      "es": "Zona oeste",
+      "pt": "Lado oeste"
      },
      "plus": [
       "westpunt"
@@ -171,13 +225,19 @@
   {
    "q": {
     "nl": "Met wie wil je uitgaan?",
-    "en": "What kind of crowd do you want?"
+    "en": "What kind of crowd do you want?",
+    "de": "Was für Leute möchtest du treffen?",
+    "es": "¿Qué tipo de gente quieres encontrar?",
+    "pt": "Que tipo de público você quer?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "Doesn't matter"
+      "en": "Doesn't matter",
+      "de": "Egal",
+      "es": "No importa",
+      "pt": "Tanto faz"
      },
      "plus": [],
      "min": [],
@@ -186,7 +246,10 @@
     {
      "label": {
       "nl": "Vooral locals",
-      "en": "Mostly locals"
+      "en": "Mostly locals",
+      "de": "Hauptsächlich Einheimische",
+      "es": "Sobre todo locales",
+      "pt": "Principalmente moradores locais"
      },
      "plus": [
       "lokaal-publiek"
@@ -199,7 +262,10 @@
     {
      "label": {
       "nl": "Gemengd",
-      "en": "A mix"
+      "en": "A mix",
+      "de": "Gemischt",
+      "es": "Una mezcla",
+      "pt": "Uma mistura"
      },
      "plus": [
       "lokaal-publiek",
@@ -211,7 +277,10 @@
     {
      "label": {
       "nl": "Andere toeristen",
-      "en": "Other visitors"
+      "en": "Other visitors",
+      "de": "Andere Urlauber",
+      "es": "Otros turistas",
+      "pt": "Outros turistas"
      },
      "plus": [
       "toeristen"
@@ -224,13 +293,19 @@
   {
    "q": {
     "nl": "Wat is je budget?",
-    "en": "What's your budget?"
+    "en": "What's your budget?",
+    "de": "Wie hoch ist dein Budget?",
+    "es": "¿Cuál es tu presupuesto?",
+    "pt": "Qual é o seu orçamento?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "Doesn't matter"
+      "en": "Doesn't matter",
+      "de": "Egal",
+      "es": "No importa",
+      "pt": "Tanto faz"
      },
      "plus": [],
      "min": [],
@@ -239,7 +314,10 @@
     {
      "label": {
       "nl": "Zuinig, happy hour en geen entree",
-      "en": "Tight, happy hour and no entry fee"
+      "en": "Tight, happy hour and no entry fee",
+      "de": "Knapp, Happy Hour und kein Eintritt",
+      "es": "Ajustado, happy hour y sin entrada",
+      "pt": "Apertado, happy hour e sem entrada"
      },
      "plus": [
       "happy-hour",
@@ -253,7 +331,10 @@
     {
      "label": {
       "nl": "Mag wat kosten",
-      "en": "Happy to splurge"
+      "en": "Happy to splurge",
+      "de": "Ich darf gern mehr ausgeben",
+      "es": "Puedo darme un gusto",
+      "pt": "Pode gastar mais"
      },
      "plus": [
       "cocktails",
@@ -272,7 +353,10 @@
    "url": "https://www.maderoocean.club/",
    "soort": {
     "nl": "beachclub",
-    "en": "beach club"
+    "en": "beach club",
+    "de": "Beach Club",
+    "es": "beach club",
+    "pt": "beach club"
    },
    "plaats": "Mambo Beach (Bapor Kibrá)",
    "tags": [
@@ -291,7 +375,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "entree strand per persoon",
-     "en": "beach entry per person"
+     "en": "beach entry per person",
+     "de": "Strandeintritt pro Person",
+     "es": "entrada a la playa por persona",
+     "pt": "entrada na praia por pessoa"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-10"
@@ -299,11 +386,17 @@
    "feiten": [
     {
      "nl": "Vrijdag happy hour met live muziek",
-     "en": "Friday happy hour with live music"
+     "en": "Friday happy hour with live music",
+     "de": "Happy Hour am Freitag mit Livemusik",
+     "es": "Happy hour el viernes con música en vivo",
+     "pt": "Happy hour na sexta com música ao vivo"
     },
     {
      "nl": "Woensdag Dia Latino, vrijdag Cuban Night",
-     "en": "Wednesday Dia Latino, Friday Cuban Night"
+     "en": "Wednesday Dia Latino, Friday Cuban Night",
+     "de": "Mittwoch Dia Latino, Freitag Cuban Night",
+     "es": "Miércoles Dia Latino, viernes Cuban Night",
+     "pt": "Quarta Dia Latino, sexta Cuban Night"
     }
    ],
    "scores": [
@@ -332,6 +425,18 @@
     "en": [
      "Calm, shallow water with everything within walking distance",
      "Turns into a big open-air party after sunset"
+    ],
+    "de": [
+     "Ruhiges, flaches Wasser und alles zu Fuß erreichbar",
+     "Wird nach Sonnenuntergang zu einer großen Open-Air-Party"
+    ],
+    "es": [
+     "Agua tranquila y poco profunda, con todo a pocos pasos",
+     "Se convierte en una gran fiesta al aire libre después del atardecer"
+    ],
+    "pt": [
+     "Água calma e rasa, com tudo a pé",
+     "Vira uma grande festa ao ar livre depois do pôr do sol"
     ]
    },
    "tegen": {
@@ -342,6 +447,18 @@
     "en": [
      "Crowded and touristy, especially on cruise ship days",
      "Keep an eye on your belongings"
+    ],
+    "de": [
+     "Voll und touristisch, besonders an Kreuzfahrttagen",
+     "Pass auf deine Sachen auf"
+    ],
+    "es": [
+     "Lleno y turístico, sobre todo los días de cruceros",
+     "Cuida tus pertenencias"
+    ],
+    "pt": [
+     "Cheio e turístico, principalmente em dias de cruzeiro",
+     "Fique de olho nos seus pertences"
     ]
    },
    "bronnen": [
@@ -358,7 +475,10 @@
    "url": "https://www.wetandwildcuracao.com/",
    "soort": {
     "nl": "beachclub, laat open",
-    "en": "beach club, late hours"
+    "en": "beach club, late hours",
+    "de": "Beach Club, bis spät geöffnet",
+    "es": "beach club, abierto hasta tarde",
+    "pt": "beach club, aberto até tarde"
    },
    "plaats": "Mambo Beach (Bapor Kibrá)",
    "tags": [
@@ -375,15 +495,24 @@
    "feiten": [
     {
      "nl": "Vrijdag en zondag open tot 02:00",
-     "en": "Fri and Sun until 2 a.m."
+     "en": "Fri and Sun until 2 a.m.",
+     "de": "Fr und So bis 2 Uhr",
+     "es": "Vie y dom hasta las 2 a. m.",
+     "pt": "Sex e dom até as 2h"
     },
     {
      "nl": "Zondag de drukste avond",
-     "en": "Sunday is the busiest night"
+     "en": "Sunday is the busiest night",
+     "de": "Sonntag ist der vollste Abend",
+     "es": "El domingo es la noche más concurrida",
+     "pt": "O domingo é a noite mais movimentada"
     },
     {
      "nl": "Zondag twee happy hours",
-     "en": "Two happy hours on Sunday"
+     "en": "Two happy hours on Sunday",
+     "de": "Zwei Happy Hours am Sonntag",
+     "es": "Dos happy hours el domingo",
+     "pt": "Duas happy hours no domingo"
     }
    ],
    "scores": [
@@ -412,6 +541,18 @@
     "en": [
      "High-energy vibe with a dance floor on the sand",
      "Parties run late, longer than the neighbors"
+    ],
+    "de": [
+     "Mitreißende Stimmung mit Tanzfläche im Sand",
+     "Die Partys gehen länger als bei den Nachbarn"
+    ],
+    "es": [
+     "Ambiente enérgico con pista de baile en la arena",
+     "Las fiestas se alargan más que en los vecinos"
+    ],
+    "pt": [
+     "Clima animado com pista de dança na areia",
+     "As festas vão mais tarde que as dos vizinhos"
     ]
    },
    "tegen": {
@@ -420,6 +561,15 @@
     ],
     "en": [
      "Quieter by day, it really comes alive at night"
+    ],
+    "de": [
+     "Tagsüber ruhiger, abends wird es richtig lebendig"
+    ],
+    "es": [
+     "Más tranquilo de día, por la noche cobra vida de verdad"
+    ],
+    "pt": [
+     "Mais tranquilo de dia, à noite ganha vida de verdade"
     ]
    },
    "bronnen": [
@@ -436,7 +586,10 @@
    "url": "https://cabanabeachcuracao.com/",
    "soort": {
     "nl": "beachclub",
-    "en": "beach club"
+    "en": "beach club",
+    "de": "Beach Club",
+    "es": "beach club",
+    "pt": "beach club"
    },
    "plaats": "Mambo Beach (Bapor Kibrá)",
    "tags": [
@@ -452,11 +605,17 @@
    "feiten": [
     {
      "nl": "Woensdag Cabana Nights: band plus DJ",
-     "en": "Wednesday Cabana Nights: band then DJ"
+     "en": "Wednesday Cabana Nights: band then DJ",
+     "de": "Mittwoch Cabana Nights: erst Band, dann DJ",
+     "es": "Miércoles Cabana Nights: primero banda, luego DJ",
+     "pt": "Quarta Cabana Nights: primeiro banda, depois DJ"
     },
     {
      "nl": "Alleen pinnen of creditcard",
-     "en": "Card payments only, no cash"
+     "en": "Card payments only, no cash",
+     "de": "Nur Kartenzahlung, kein Bargeld",
+     "es": "Solo pago con tarjeta, sin efectivo",
+     "pt": "Só pagamento com cartão, sem dinheiro"
     }
    ],
    "scores": [
@@ -485,11 +644,26 @@
     "en": [
      "Lively, the music starts early",
      "Service right at your sunbed"
+    ],
+    "de": [
+     "Lebhaft, die Musik beginnt früh",
+     "Bedienung direkt an deiner Liege"
+    ],
+    "es": [
+     "Animado, la música empieza temprano",
+     "Servicio directo en tu tumbona"
+    ],
+    "pt": [
+     "Animado, a música começa cedo",
+     "Atendimento direto na sua espreguiçadeira"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/discover/cabana-beach-2",
@@ -504,7 +678,10 @@
    "url": "http://www.bonitacuracao.com/",
    "soort": {
     "nl": "beachclub",
-    "en": "beach club"
+    "en": "beach club",
+    "de": "Beach Club",
+    "es": "beach club",
+    "pt": "beach club"
    },
    "plaats": "Mambo Beach Boulevard",
    "tags": [
@@ -517,15 +694,24 @@
    "feiten": [
     {
      "nl": "Ruim 200 ligbedden",
-     "en": "Over 200 sunbeds"
+     "en": "Over 200 sunbeds",
+     "de": "Über 200 Sonnenliegen",
+     "es": "Más de 200 tumbonas",
+     "pt": "Mais de 200 espreguiçadeiras"
     },
     {
      "nl": "Dagelijks happy hour 17:30-19:00",
-     "en": "Daily happy hour 5:30-7 p.m."
+     "en": "Daily happy hour 5:30-7 p.m.",
+     "de": "Täglich Happy Hour von 17:30 bis 19 Uhr",
+     "es": "Happy hour diaria de 5:30 a 7 p. m.",
+     "pt": "Happy hour diária das 17h30 às 19h"
     },
     {
      "nl": "Vrijdag open tot 01:00",
-     "en": "Open until 1 a.m. Friday"
+     "en": "Open until 1 a.m. Friday",
+     "de": "Freitag bis 1 Uhr geöffnet",
+     "es": "Abierto hasta la 1 a. m. el viernes",
+     "pt": "Aberto até 1h na sexta"
     }
    ],
    "scores": [
@@ -546,11 +732,26 @@
     "en": [
      "Laid-back vibe, good for groups of friends",
      "Plenty of shade"
+    ],
+    "de": [
+     "Entspannte Stimmung, gut für Freundesgruppen",
+     "Viel Schatten"
+    ],
+    "es": [
+     "Ambiente relajado, bueno para grupos de amigos",
+     "Mucha sombra"
+    ],
+    "pt": [
+     "Clima descontraído, bom para grupos de amigos",
+     "Bastante sombra"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=15924042003504018726",
@@ -565,7 +766,10 @@
    "url": "https://www.rileksbeach.com/",
    "soort": {
     "nl": "beachbar met rooftop",
-    "en": "beach bar with rooftop"
+    "en": "beach bar with rooftop",
+    "de": "Strandbar mit Rooftop",
+    "es": "bar de playa con terraza en la azotea",
+    "pt": "bar de praia com rooftop"
    },
    "plaats": "Mambo Beach (Bapor Kibrá)",
    "tags": [
@@ -581,11 +785,17 @@
    "feiten": [
     {
      "nl": "Vrijdag live muziek",
-     "en": "Live music on Friday"
+     "en": "Live music on Friday",
+     "de": "Livemusik am Freitag",
+     "es": "Música en vivo el viernes",
+     "pt": "Música ao vivo na sexta"
     },
     {
      "nl": "Zaterdag Sunset Sessions met DJ",
-     "en": "Saturday Sunset Sessions with DJs"
+     "en": "Saturday Sunset Sessions with DJs",
+     "de": "Samstag Sunset Sessions mit DJs",
+     "es": "Sábado Sunset Sessions con DJs",
+     "pt": "Sábado Sunset Sessions com DJs"
     }
    ],
    "scores": [
@@ -604,11 +814,23 @@
     ],
     "en": [
      "Relaxed vibe, less hectic than the big clubs"
+    ],
+    "de": [
+     "Entspannte Stimmung, weniger hektisch als in den großen Clubs"
+    ],
+    "es": [
+     "Ambiente relajado, menos agitado que los clubes grandes"
+    ],
+    "pt": [
+     "Clima descontraído, menos agitado que as baladas grandes"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=14114154041252356756",
@@ -622,7 +844,10 @@
    "url": "http://www.moodbeachcuracao.com/",
    "soort": {
     "nl": "luxe beachclub",
-    "en": "upscale beach club"
+    "en": "upscale beach club",
+    "de": "Beach Club der gehobenen Klasse",
+    "es": "beach club elegante",
+    "pt": "beach club sofisticado"
    },
    "plaats": "Mambo Beach (Bapor Kibrá)",
    "tags": [
@@ -636,11 +861,17 @@
    "feiten": [
     {
      "nl": "Daybeds en cabana's",
-     "en": "Daybeds and cabanas"
+     "en": "Daybeds and cabanas",
+     "de": "Daybeds und Cabanas",
+     "es": "Camas balinesas y cabañas",
+     "pt": "Daybeds e cabanas"
     },
     {
      "nl": "Alleen pinnen of creditcard",
-     "en": "Card payments only, no cash"
+     "en": "Card payments only, no cash",
+     "de": "Nur Kartenzahlung, kein Bargeld",
+     "es": "Solo pago con tarjeta, sin efectivo",
+     "pt": "Só pagamento com cartão, sem dinheiro"
     }
    ],
    "scores": [
@@ -669,11 +900,26 @@
     "en": [
      "Cocktails brought to your daybed",
      "Calmer and more upscale than the rest of Mambo"
+    ],
+    "de": [
+     "Cocktails direkt ans Daybed",
+     "Ruhiger und eleganter als der Rest von Mambo"
+    ],
+    "es": [
+     "Cócteles servidos en tu cama balinesa",
+     "Más tranquilo y elegante que el resto de Mambo"
+    ],
+    "pt": [
+     "Coquetéis servidos no seu daybed",
+     "Mais tranquilo e sofisticado que o resto de Mambo"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=8460594876070703917",
@@ -688,7 +934,10 @@
    "url": "https://www.maderoocean.club/",
    "soort": {
     "nl": "beachclub en evenementen",
-    "en": "beach club and events"
+    "en": "beach club and events",
+    "de": "Beach Club und Events",
+    "es": "beach club y eventos",
+    "pt": "beach club e eventos"
    },
    "plaats": "Mambo Beach Boulevard",
    "tags": [
@@ -703,11 +952,17 @@
    "feiten": [
     {
      "nl": "Zwembad, cabana's en DJ-sets",
-     "en": "Pool, cabanas and DJ sets"
+     "en": "Pool, cabanas and DJ sets",
+     "de": "Pool, Cabanas und DJ-Sets",
+     "es": "Piscina, cabañas y sets de DJ",
+     "pt": "Piscina, cabanas e sets de DJ"
     },
     {
      "nl": "Grote evenementen met artiesten",
-     "en": "Big events with touring artists"
+     "en": "Big events with touring artists",
+     "de": "Große Events mit internationalen Künstlern",
+     "es": "Grandes eventos con artistas internacionales",
+     "pt": "Grandes eventos com artistas internacionais"
     }
    ],
    "scores": [
@@ -728,6 +983,18 @@
     "en": [
      "Good food and quick service at the loungers by day",
      "Well-made cocktails"
+    ],
+    "de": [
+     "Tagsüber gutes Essen und schneller Service an den Liegen",
+     "Gut gemachte Cocktails"
+    ],
+    "es": [
+     "De día, buena comida y servicio rápido en las tumbonas",
+     "Cócteles bien preparados"
+    ],
+    "pt": [
+     "De dia, boa comida e atendimento rápido nas espreguiçadeiras",
+     "Coquetéis bem feitos"
     ]
    },
    "tegen": {
@@ -740,6 +1007,21 @@
      "Slow service in the evening",
      "Loungers are expensive",
      "Service quality is inconsistent"
+    ],
+    "de": [
+     "Langsamer Service am Abend",
+     "Die Liegen sind teuer",
+     "Die Servicequalität schwankt"
+    ],
+    "es": [
+     "Servicio lento por la noche",
+     "Las tumbonas son caras",
+     "La calidad del servicio es irregular"
+    ],
+    "pt": [
+     "Atendimento lento à noite",
+     "As espreguiçadeiras são caras",
+     "A qualidade do atendimento é irregular"
     ]
    },
    "bronnen": [
@@ -755,7 +1037,10 @@
    "url": "https://www.chillcuracao.com/",
    "soort": {
     "nl": "beachbar",
-    "en": "beach bar"
+    "en": "beach bar",
+    "de": "Strandbar",
+    "es": "bar de playa",
+    "pt": "bar de praia"
    },
    "plaats": "Mambo Beach (Bapor Kibrá)",
    "tags": [
@@ -772,11 +1057,17 @@
    "feiten": [
     {
      "nl": "Vrijdag vanaf 17:00 DJ, Latin",
-     "en": "Friday DJ from 5 p.m., Latin"
+     "en": "Friday DJ from 5 p.m., Latin",
+     "de": "Freitag DJ ab 17 Uhr, Latin",
+     "es": "Viernes DJ desde las 5 p. m., latino",
+     "pt": "Sexta DJ a partir das 17h, latino"
     },
     {
      "nl": "Vrijdag drankjes half geld",
-     "en": "Half-price drinks on Friday"
+     "en": "Half-price drinks on Friday",
+     "de": "Getränke am Freitag zum halben Preis",
+     "es": "Tragos a mitad de precio el viernes",
+     "pt": "Drinks pela metade do preço na sexta"
     }
    ],
    "scores": [
@@ -805,11 +1096,26 @@
     "en": [
      "Hammocks and dining with your feet in the sand",
      "Party atmosphere during happy hour"
+    ],
+    "de": [
+     "Hängematten und Essen mit den Füßen im Sand",
+     "Partystimmung während der Happy Hour"
+    ],
+    "es": [
+     "Hamacas y comida con los pies en la arena",
+     "Ambiente de fiesta durante la happy hour"
+    ],
+    "pt": [
+     "Redes e refeições com os pés na areia",
+     "Clima de festa durante a happy hour"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=12319949217504287363",
@@ -824,7 +1130,10 @@
    "url": null,
    "soort": {
     "nl": "kleine beachbar",
-    "en": "small beach bar"
+    "en": "small beach bar",
+    "de": "kleine Strandbar",
+    "es": "pequeño bar de playa",
+    "pt": "pequeno bar de praia"
    },
    "plaats": "Seaquarium Beach",
    "tags": [
@@ -837,7 +1146,10 @@
    "feiten": [
     {
      "nl": "Dagelijks happy hour 17:00-21:00",
-     "en": "Daily happy hour 5-9 p.m."
+     "en": "Daily happy hour 5-9 p.m.",
+     "de": "Täglich Happy Hour von 17 bis 21 Uhr",
+     "es": "Happy hour diaria de 5 a 9 p. m.",
+     "pt": "Happy hour diária das 17h às 21h"
     }
    ],
    "scores": [
@@ -856,11 +1168,23 @@
     ],
     "en": [
      "Local music and a smaller, quieter setting"
+    ],
+    "de": [
+     "Lokale Musik und ein kleinerer, ruhigerer Rahmen"
+    ],
+    "es": [
+     "Música local y un ambiente más pequeño y tranquilo"
+    ],
+    "pt": [
+     "Música local e um ambiente menor e mais tranquilo"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=2217493582230933423",
@@ -873,7 +1197,10 @@
    "url": "https://hemingwaycuracao.com/",
    "soort": {
     "nl": "beachbar bij LionsDive",
-    "en": "beach bar at LionsDive"
+    "en": "beach bar at LionsDive",
+    "de": "Strandbar im LionsDive",
+    "es": "bar de playa en LionsDive",
+    "pt": "bar de praia no LionsDive"
    },
    "plaats": "Mambo Beach (LionsDive)",
    "tags": [
@@ -890,11 +1217,17 @@
    "feiten": [
     {
      "nl": "Zondag Cubaanse salsaband",
-     "en": "Cuban salsa band on Sunday"
+     "en": "Cuban salsa band on Sunday",
+     "de": "Kubanische Salsa-Band am Sonntag",
+     "es": "Banda de salsa cubana el domingo",
+     "pt": "Banda de salsa cubana no domingo"
     },
     {
      "nl": "Live muziek vr, za, zo",
-     "en": "Live music Fri, Sat, Sun"
+     "en": "Live music Fri, Sat, Sun",
+     "de": "Livemusik Fr, Sa, So",
+     "es": "Música en vivo vie, sáb y dom",
+     "pt": "Música ao vivo sex, sáb e dom"
     }
    ],
    "scores": [
@@ -923,11 +1256,26 @@
     "en": [
      "Popular for sunset dinner before going out",
      "Early happy hour"
+    ],
+    "de": [
+     "Beliebt für ein Abendessen bei Sonnenuntergang vor dem Ausgehen",
+     "Frühe Happy Hour"
+    ],
+    "es": [
+     "Popular para cenar al atardecer antes de salir",
+     "Happy hour temprana"
+    ],
+    "pt": [
+     "Popular para jantar no pôr do sol antes de sair",
+     "Happy hour cedo"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=17472752883565867796",
@@ -942,7 +1290,10 @@
    "url": "http://www.facebook.com/clubxmambo",
    "soort": {
     "nl": "nachtclub",
-    "en": "nightclub"
+    "en": "nightclub",
+    "de": "Nachtclub",
+    "es": "discoteca",
+    "pt": "balada"
    },
    "plaats": "Mambo Beach Boulevard",
    "tags": [
@@ -955,11 +1306,17 @@
    "feiten": [
     {
      "nl": "Bovenverdieping van Mambo Boulevard",
-     "en": "Top floor of Mambo Boulevard"
+     "en": "Top floor of Mambo Boulevard",
+     "de": "Oberste Etage des Mambo Boulevard",
+     "es": "Último piso del Mambo Boulevard",
+     "pt": "Último andar do Mambo Boulevard"
     },
     {
      "nl": "Vrijdag en zaterdag themafeesten",
-     "en": "Theme nights Fri and Sat"
+     "en": "Theme nights Fri and Sat",
+     "de": "Motto-Abende Fr und Sa",
+     "es": "Noches temáticas vie y sáb",
+     "pt": "Noites temáticas sex e sáb"
     }
    ],
    "scores": [
@@ -978,11 +1335,23 @@
     ],
     "en": [
      "Open late, for after the beach clubs"
+    ],
+    "de": [
+     "Spät geöffnet, für nach den Beach Clubs"
+    ],
+    "es": [
+     "Abierto hasta tarde, para después de los beach clubs"
+    ],
+    "pt": [
+     "Aberto até tarde, para depois dos beach clubs"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=5226006013826721281",
@@ -996,7 +1365,10 @@
    "url": null,
    "soort": {
     "nl": "nachtclub",
-    "en": "nightclub"
+    "en": "nightclub",
+    "de": "Nachtclub",
+    "es": "discoteca",
+    "pt": "balada"
    },
    "plaats": "Mambo Beach Boulevard",
    "tags": [
@@ -1008,7 +1380,10 @@
    "feiten": [
     {
      "nl": "Afterparty na Mambo Beach",
-     "en": "After-party spot for Mambo Beach"
+     "en": "After-party spot for Mambo Beach",
+     "de": "Afterparty-Ort für Mambo Beach",
+     "es": "Lugar de after para Mambo Beach",
+     "pt": "Lugar de after-party para Mambo Beach"
     }
    ],
    "scores": [
@@ -1027,11 +1402,23 @@
     ],
     "en": [
      "Keeps going when the beach clubs close"
+    ],
+    "de": [
+     "Geht weiter, wenn die Beach Clubs schließen"
+    ],
+    "es": [
+     "Sigue cuando los beach clubs cierran"
+    ],
+    "pt": [
+     "Continua quando os beach clubs fecham"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=10988035517746358476",
@@ -1045,7 +1432,10 @@
    "url": "http://www.janthielbeach.com/zanzibar-beach-curacao",
    "soort": {
     "nl": "beachclub",
-    "en": "beach club"
+    "en": "beach club",
+    "de": "Beach Club",
+    "es": "beach club",
+    "pt": "beach club"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1064,7 +1454,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "entree strand p.p., na 16:30 gratis",
-     "en": "beach entry per person, free after 4:30 p.m."
+     "en": "beach entry per person, free after 4:30 p.m.",
+     "de": "Strandeintritt pro Person, ab 16:30 Uhr gratis",
+     "es": "entrada a la playa por persona, gratis después de las 4:30 p. m.",
+     "pt": "entrada na praia por pessoa, grátis depois das 16h30"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-10"
@@ -1072,7 +1465,10 @@
    "feiten": [
     {
      "nl": "Zaterdag happy hour, dan livemuziek",
-     "en": "Saturday happy hour, then live music"
+     "en": "Saturday happy hour, then live music",
+     "de": "Happy Hour am Samstag, danach Livemusik",
+     "es": "Happy hour el sábado, luego música en vivo",
+     "pt": "Happy hour no sábado, depois música ao vivo"
     }
    ],
    "scores": [
@@ -1101,6 +1497,18 @@
     "en": [
      "The Saturday afternoon party spot of Jan Thiel",
      "Calm water and loungers"
+    ],
+    "de": [
+     "Der Samstagnachmittags-Partyort von Jan Thiel",
+     "Ruhiges Wasser und Liegen"
+    ],
+    "es": [
+     "El lugar de fiesta de los sábados por la tarde en Jan Thiel",
+     "Agua tranquila y tumbonas"
+    ],
+    "pt": [
+     "O ponto de festa de sábado à tarde em Jan Thiel",
+     "Água calma e espreguiçadeiras"
     ]
    },
    "tegen": {
@@ -1109,6 +1517,15 @@
     ],
     "en": [
      "Very crowded and touristy"
+    ],
+    "de": [
+     "Sehr voll und touristisch"
+    ],
+    "es": [
+     "Muy lleno y turístico"
+    ],
+    "pt": [
+     "Muito cheio e turístico"
     ]
    },
    "bronnen": [
@@ -1125,7 +1542,10 @@
    "url": "https://www.janthielbeach.com/kokos/",
    "soort": {
     "nl": "beachclub, rustige kant",
-    "en": "beach club, quiet side"
+    "en": "beach club, quiet side",
+    "de": "Beach Club, ruhige Seite",
+    "es": "beach club, lado tranquilo",
+    "pt": "beach club, lado tranquilo"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1140,7 +1560,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "entree strand p.p., na 16:30 gratis",
-     "en": "beach entry per person, free after 4:30 p.m."
+     "en": "beach entry per person, free after 4:30 p.m.",
+     "de": "Strandeintritt pro Person, ab 16:30 Uhr gratis",
+     "es": "entrada a la playa por persona, gratis después de las 4:30 p. m.",
+     "pt": "entrada na praia por pessoa, grátis depois das 16h30"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-10"
@@ -1148,7 +1571,10 @@
    "feiten": [
     {
      "nl": "Open tot zonsondergang",
-     "en": "Open until sunset"
+     "en": "Open until sunset",
+     "de": "Bis Sonnenuntergang geöffnet",
+     "es": "Abierto hasta el atardecer",
+     "pt": "Aberto até o pôr do sol"
     }
    ],
    "scores": [
@@ -1167,11 +1593,23 @@
     ],
     "en": [
      "On the quiet side of Jan Thiel Beach"
+    ],
+    "de": [
+     "Auf der ruhigen Seite des Jan Thiel Beach"
+    ],
+    "es": [
+     "En el lado tranquilo de Jan Thiel Beach"
+    ],
+    "pt": [
+     "No lado tranquilo de Jan Thiel Beach"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=11503887281190585798",
@@ -1185,7 +1623,10 @@
    "url": "https://www.janthielbeach.com/nl/restaurants/zest-restaurant/",
    "soort": {
     "nl": "strandcafé",
-    "en": "beach cafe"
+    "en": "beach cafe",
+    "de": "Strandcafé",
+    "es": "café de playa",
+    "pt": "café de praia"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1201,7 +1642,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "entree strand p.p., na 16:30 gratis",
-     "en": "beach entry per person, free after 4:30 p.m."
+     "en": "beach entry per person, free after 4:30 p.m.",
+     "de": "Strandeintritt pro Person, ab 16:30 Uhr gratis",
+     "es": "entrada a la playa por persona, gratis después de las 4:30 p. m.",
+     "pt": "entrada na praia por pessoa, grátis depois das 16h30"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-10"
@@ -1209,11 +1653,17 @@
    "feiten": [
     {
      "nl": "Donderdag Sangria & Beats 15-19",
-     "en": "Thursday Sangria & Beats 3-7 p.m."
+     "en": "Thursday Sangria & Beats 3-7 p.m.",
+     "de": "Donnerstag Sangria & Beats von 15 bis 19 Uhr",
+     "es": "Jueves Sangria & Beats de 3 a 7 p. m.",
+     "pt": "Quinta Sangria & Beats das 15h às 19h"
     },
     {
      "nl": "Vrijdag spritz happy hour 18-19",
-     "en": "Friday spritz happy hour 6-7 p.m."
+     "en": "Friday spritz happy hour 6-7 p.m.",
+     "de": "Spritz-Happy-Hour am Freitag von 18 bis 19 Uhr",
+     "es": "Happy hour de spritz el viernes de 6 a 7 p. m.",
+     "pt": "Happy hour de spritz na sexta das 18h às 19h"
     }
    ],
    "scores": [
@@ -1240,11 +1690,23 @@
     ],
     "en": [
      "Tables right on the sand"
+    ],
+    "de": [
+     "Tische direkt im Sand"
+    ],
+    "es": [
+     "Mesas directamente en la arena"
+    ],
+    "pt": [
+     "Mesas direto na areia"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=12051214979316464088",
@@ -1259,7 +1721,10 @@
    "url": "https://www.janthielbeach.com/nl/restaurants/tinto-bar-y-cocina/",
    "soort": {
     "nl": "Latijns restaurant-bar",
-    "en": "Latin restaurant and bar"
+    "en": "Latin restaurant and bar",
+    "de": "Lateinamerikanisches Restaurant mit Bar",
+    "es": "Restaurante y bar latino",
+    "pt": "Restaurante e bar latino"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1282,11 +1747,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=4586683096753031104",
@@ -1299,7 +1770,10 @@
    "url": "http://www.mojitosandbites.com/",
    "soort": {
     "nl": "sportsbar",
-    "en": "sports bar"
+    "en": "sports bar",
+    "de": "Sportbar",
+    "es": "bar deportivo",
+    "pt": "bar esportivo"
    },
    "plaats": "Papagayo Plaza, Jan Thiel",
    "tags": [
@@ -1312,7 +1786,10 @@
    "feiten": [
     {
      "nl": "Eerste verdieping Papagayo Plaza",
-     "en": "First floor of Papagayo Plaza"
+     "en": "First floor of Papagayo Plaza",
+     "de": "Erster Stock der Papagayo Plaza",
+     "es": "Primer piso de Papagayo Plaza",
+     "pt": "Primeiro andar da Papagayo Plaza"
     }
    ],
    "scores": [
@@ -1327,11 +1804,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=16108193588797056985",
@@ -1344,7 +1827,10 @@
    "url": null,
    "soort": {
     "nl": "beachclub bij resort",
-    "en": "resort beach club"
+    "en": "resort beach club",
+    "de": "Resort-Beach-Club",
+    "es": "beach club de resort",
+    "pt": "beach club de resort"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1358,7 +1844,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "entree strand p.p., na 16:30 gratis",
-     "en": "beach entry per person, free after 4:30 p.m."
+     "en": "beach entry per person, free after 4:30 p.m.",
+     "de": "Strandeintritt pro Person, ab 16:30 Uhr gratis",
+     "es": "entrada a la playa por persona, gratis después de las 4:30 p. m.",
+     "pt": "entrada na praia por pessoa, grátis depois das 16h30"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-10"
@@ -1366,7 +1855,10 @@
    "feiten": [
     {
      "nl": "Bij resort met zwembad",
-     "en": "Resort beach club with pool"
+     "en": "Resort beach club with pool",
+     "de": "Resort-Beach-Club mit Pool",
+     "es": "Beach club de resort con piscina",
+     "pt": "Beach club de resort com piscina"
     }
    ],
    "scores": [
@@ -1389,11 +1881,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://wanderlog.com/list/geoCategory/1554502",
@@ -1407,7 +1905,10 @@
    "url": "http://www.kokomo-beach.com/",
    "soort": {
     "nl": "strandpaviljoen",
-    "en": "beach pavilion"
+    "en": "beach pavilion",
+    "de": "Strandpavillon",
+    "es": "pabellón de playa",
+    "pt": "pavilhão de praia"
    },
    "plaats": "Vaersenbaai",
    "tags": [
@@ -1421,7 +1922,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "Eintritt frei",
+     "es": "entrada gratis",
+     "pt": "entrada grátis"
     },
     "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
     "datum": "2026-10"
@@ -1429,11 +1933,17 @@
    "feiten": [
     {
      "nl": "Maandelijks full moon party, 18+",
-     "en": "Monthly full moon party, 18+"
+     "en": "Monthly full moon party, 18+",
+     "de": "Monatliche Vollmondparty, ab 18",
+     "es": "Fiesta mensual de luna llena, mayores de 18",
+     "pt": "Festa mensal de lua cheia, 18+"
     },
     {
      "nl": "Full moon 22:00-05:00",
-     "en": "Full moon party 10 p.m.-5 a.m."
+     "en": "Full moon party 10 p.m.-5 a.m.",
+     "de": "Vollmondparty von 22 bis 5 Uhr",
+     "es": "Fiesta de luna llena de 10 p. m. a 5 a. m.",
+     "pt": "Festa de lua cheia das 22h às 5h"
     }
    ],
    "scores": [
@@ -1462,6 +1972,18 @@
     "en": [
      "Lively beach bar at sunset",
      "Good snorkeling in the bay"
+    ],
+    "de": [
+     "Lebhafte Strandbar bei Sonnenuntergang",
+     "Gutes Schnorcheln in der Bucht"
+    ],
+    "es": [
+     "Bar de playa animado al atardecer",
+     "Buen snorkel en la bahía"
+    ],
+    "pt": [
+     "Bar de praia animado no pôr do sol",
+     "Bom snorkel na baía"
     ]
    },
    "tegen": {
@@ -1470,6 +1992,15 @@
     ],
     "en": [
      "Busy weekends with DJs"
+    ],
+    "de": [
+     "An Wochenenden viel los, mit DJs"
+    ],
+    "es": [
+     "Concurrido los fines de semana, con DJs"
+    ],
+    "pt": [
+     "Movimentado nos fins de semana, com DJs"
     ]
    },
    "bronnen": [
@@ -1485,7 +2016,10 @@
    "url": "http://www.piratebaycuracao.com/",
    "soort": {
     "nl": "beachclub",
-    "en": "beach club"
+    "en": "beach club",
+    "de": "Beach Club",
+    "es": "beach club",
+    "pt": "beach club"
    },
    "plaats": "Piscaderabaai",
    "tags": [
@@ -1498,11 +2032,17 @@
    "feiten": [
     {
      "nl": "Weekend live muziek",
-     "en": "Live music on weekends"
+     "en": "Live music on weekends",
+     "de": "Livemusik am Wochenende",
+     "es": "Música en vivo los fines de semana",
+     "pt": "Música ao vivo nos fins de semana"
     },
     {
      "nl": "Dagelijks open tot 23:30",
-     "en": "Open daily until 11:30 p.m."
+     "en": "Open daily until 11:30 p.m.",
+     "de": "Täglich bis 23:30 Uhr geöffnet",
+     "es": "Abierto todos los días hasta las 11:30 p. m.",
+     "pt": "Aberto todos os dias até as 23h30"
     }
    ],
    "scores": [
@@ -1529,11 +2069,23 @@
     ],
     "en": [
      "Well-equipped beach with quiet corners"
+    ],
+    "de": [
+     "Gut ausgestatteter Strand mit ruhigen Ecken"
+    ],
+    "es": [
+     "Playa bien equipada con rincones tranquilos"
+    ],
+    "pt": [
+     "Praia bem equipada com cantos tranquilos"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=17234540677901858088",
@@ -1547,7 +2099,10 @@
    "url": null,
    "soort": {
     "nl": "resortstrand met beachbar",
-    "en": "resort beach with bar"
+    "en": "resort beach with bar",
+    "de": "Resort-Strand mit Bar",
+    "es": "playa de resort con bar",
+    "pt": "praia de resort com bar"
    },
    "plaats": "Blue Bay, Sint Michiel",
    "tags": [
@@ -1562,11 +2117,17 @@
    "feiten": [
     {
      "nl": "Gratis concertreeks om de paar maanden",
-     "en": "Free concert series every few months"
+     "en": "Free concert series every few months",
+     "de": "Kostenlose Konzertreihe alle paar Monate",
+     "es": "Ciclo de conciertos gratis cada pocos meses",
+     "pt": "Série de shows grátis a cada poucos meses"
     },
     {
      "nl": "Toegang tegen entreeprijs",
-     "en": "Entry fee to access the beach"
+     "en": "Entry fee to access the beach",
+     "de": "Eintritt für den Strandzugang",
+     "es": "Se paga entrada para acceder a la playa",
+     "pt": "Cobra-se entrada para acessar a praia"
     }
    ],
    "scores": [
@@ -1585,11 +2146,23 @@
     ],
     "en": [
      "Private beach with shade and a reef to snorkel"
+    ],
+    "de": [
+     "Privatstrand mit Schatten und einem Riff zum Schnorcheln"
+    ],
+    "es": [
+     "Playa privada con sombra y un arrecife para hacer snorkel"
+    ],
+    "pt": [
+     "Praia privativa com sombra e um recife para snorkel"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://wanderlog.com/list/geoCategory/1584101",
@@ -1603,7 +2176,10 @@
    "url": "http://www.karaktercuracao.com/",
    "soort": {
     "nl": "beachclub met restaurant",
-    "en": "beach club and restaurant"
+    "en": "beach club and restaurant",
+    "de": "Beach Club und Restaurant",
+    "es": "beach club y restaurante",
+    "pt": "beach club e restaurante"
    },
    "plaats": "Coral Estate, Rif St. Marie",
    "tags": [
@@ -1619,7 +2195,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "Eintritt frei",
+     "es": "entrada gratis",
+     "pt": "entrada grátis"
     },
     "bron": "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
     "datum": "2026-10"
@@ -1627,7 +2206,10 @@
    "feiten": [
     {
      "nl": "Restaurant vaak vooraf reserveren",
-     "en": "Restaurant often needs booking"
+     "en": "Restaurant often needs booking",
+     "de": "Im Restaurant muss man oft reservieren",
+     "es": "En el restaurante suele hacer falta reservar",
+     "pt": "No restaurante muitas vezes é preciso reservar"
     }
    ],
    "scores": [
@@ -1656,6 +2238,18 @@
     "en": [
      "Romantic, with great sunset views",
      "Calm setting"
+    ],
+    "de": [
+     "Romantisch, mit toller Aussicht auf den Sonnenuntergang",
+     "Ruhige Umgebung"
+    ],
+    "es": [
+     "Romántico, con vistas increíbles del atardecer",
+     "Ambiente tranquilo"
+    ],
+    "pt": [
+     "Romântico, com vista incrível do pôr do sol",
+     "Ambiente calmo"
     ]
    },
    "tegen": {
@@ -1666,6 +2260,18 @@
     "en": [
      "Remote, you need a car",
      "No sandy entry, steps only"
+    ],
+    "de": [
+     "Abgelegen, du brauchst ein Auto",
+     "Kein Sandzugang, nur Treppen"
+    ],
+    "es": [
+     "Apartado, necesitas auto",
+     "Sin acceso por arena, solo escaleras"
+    ],
+    "pt": [
+     "Isolado, você precisa de carro",
+     "Sem acesso pela areia, só escadas"
     ]
    },
    "bronnen": [
@@ -1681,7 +2287,10 @@
    "url": "http://www.playafortirestaurant.com/",
    "soort": {
     "nl": "restaurant-bar aan zee",
-    "en": "seaside restaurant and bar"
+    "en": "seaside restaurant and bar",
+    "de": "Restaurant und Bar am Meer",
+    "es": "restaurante y bar junto al mar",
+    "pt": "restaurante e bar à beira-mar"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -1705,11 +2314,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=9688876435122645696",
@@ -1722,7 +2337,10 @@
    "url": null,
    "soort": {
     "nl": "bar & grill",
-    "en": "bar and grill"
+    "en": "bar and grill",
+    "de": "Bar und Grill",
+    "es": "bar y parrilla",
+    "pt": "bar e grill"
    },
    "plaats": "Sint Michiel",
    "tags": [
@@ -1752,11 +2370,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
@@ -1768,7 +2392,10 @@
    "url": null,
    "soort": {
     "nl": "lokale bar & grill",
-    "en": "local bar and grill"
+    "en": "local bar and grill",
+    "de": "Lokale Bar und Grill",
+    "es": "bar y parrilla local",
+    "pt": "bar e grill local"
    },
    "plaats": "Caracasbaaiweg",
    "tags": [
@@ -1798,11 +2425,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
@@ -1814,7 +2447,10 @@
    "url": "https://www.sainttropezcuracao.com/",
    "soort": {
     "nl": "dayclub met infinity pool",
-    "en": "day club with infinity pool"
+    "en": "day club with infinity pool",
+    "de": "Day Club mit Infinity-Pool",
+    "es": "day club con piscina infinita",
+    "pt": "day club com piscina infinita"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -1830,11 +2466,17 @@
    "feiten": [
     {
      "nl": "Vrijdagavond DJ-feest",
-     "en": "Friday night DJ party"
+     "en": "Friday night DJ party",
+     "de": "Freitagabend DJ-Party",
+     "es": "Fiesta con DJ el viernes por la noche",
+     "pt": "Festa com DJ na sexta à noite"
     },
     {
      "nl": "Infinity pool aan zee",
-     "en": "Infinity pool by the sea"
+     "en": "Infinity pool by the sea",
+     "de": "Infinity-Pool am Meer",
+     "es": "Piscina infinita junto al mar",
+     "pt": "Piscina infinita à beira-mar"
     }
    ],
    "scores": [
@@ -1863,11 +2505,26 @@
     "en": [
      "Infinity pool with sunsets over the water",
      "Stylish day-to-night parties"
+    ],
+    "de": [
+     "Infinity-Pool mit Sonnenuntergängen über dem Wasser",
+     "Stilvolle Partys vom Tag bis in die Nacht"
+    ],
+    "es": [
+     "Piscina infinita con atardeceres sobre el agua",
+     "Fiestas con estilo del día a la noche"
+    ],
+    "pt": [
+     "Piscina infinita com pôr do sol sobre a água",
+     "Festas estilosas do dia à noite"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=17663129691983451497",
@@ -1881,7 +2538,10 @@
    "url": "https://www.mundobizarrocuracao.com/",
    "soort": {
     "nl": "bar-restaurant",
-    "en": "bar and restaurant"
+    "en": "bar and restaurant",
+    "de": "Bar und Restaurant",
+    "es": "bar y restaurante",
+    "pt": "bar e restaurante"
    },
    "plaats": "Pietermaai (Nieuwestraat)",
    "tags": [
@@ -1899,11 +2559,17 @@
    "feiten": [
     {
      "nl": "Donderdag live muziek en salsa",
-     "en": "Thursday live music and salsa"
+     "en": "Thursday live music and salsa",
+     "de": "Donnerstag Livemusik und Salsa",
+     "es": "Jueves música en vivo y salsa",
+     "pt": "Quinta música ao vivo e salsa"
     },
     {
      "nl": "Dinsdag tangoles",
-     "en": "Tango lessons on Tuesday"
+     "en": "Tango lessons on Tuesday",
+     "de": "Tangokurse am Dienstag",
+     "es": "Clases de tango el martes",
+     "pt": "Aulas de tango na terça"
     }
    ],
    "scores": [
@@ -1932,11 +2598,26 @@
     "en": [
      "Quirky decor and good signature cocktails",
      "Salsa nights draw both locals and visitors"
+    ],
+    "de": [
+     "Ausgefallene Einrichtung und gute Signature-Cocktails",
+     "Die Salsa-Abende ziehen Einheimische und Besucher an"
+    ],
+    "es": [
+     "Decoración original y buenos cócteles de la casa",
+     "Las noches de salsa atraen tanto a locales como a visitantes"
+    ],
+    "pt": [
+     "Decoração diferente e bons coquetéis autorais",
+     "As noites de salsa atraem moradores e visitantes"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=8836676202561566008",
@@ -1951,7 +2632,10 @@
    "url": "http://www.milescuracao.com/",
    "soort": {
     "nl": "jazzcafé",
-    "en": "jazz bar"
+    "en": "jazz bar",
+    "de": "Jazzbar",
+    "es": "bar de jazz",
+    "pt": "bar de jazz"
    },
    "plaats": "Pietermaai (Nieuwestraat 42)",
    "tags": [
@@ -1966,11 +2650,17 @@
    "feiten": [
     {
      "nl": "Jazz op vinyl, bordspellen",
-     "en": "Vinyl jazz and board games"
+     "en": "Vinyl jazz and board games",
+     "de": "Jazz auf Vinyl und Brettspiele",
+     "es": "Jazz en vinilo y juegos de mesa",
+     "pt": "Jazz em vinil e jogos de tabuleiro"
     },
     {
      "nl": "Soms jamsessies van lokale muzikanten",
-     "en": "Local musicians sometimes jam"
+     "en": "Local musicians sometimes jam",
+     "de": "Einheimische Musiker jammen manchmal mit",
+     "es": "A veces músicos locales hacen jam sessions",
+     "pt": "Às vezes músicos locais fazem jam sessions"
     }
    ],
    "scores": [
@@ -1989,11 +2679,23 @@
     ],
     "en": [
      "Relaxed night out with jazz"
+    ],
+    "de": [
+     "Entspannter Abend mit Jazz"
+    ],
+    "es": [
+     "Noche relajada con jazz"
+    ],
+    "pt": [
+     "Noite descontraída com jazz"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=10502969937605536349",
@@ -2007,7 +2709,10 @@
    "url": "https://www.bluescuracao.com/",
    "soort": {
     "nl": "bar op een pier",
-    "en": "bar on a pier"
+    "en": "bar on a pier",
+    "de": "Bar auf einem Pier",
+    "es": "bar en un muelle",
+    "pt": "bar em um píer"
    },
    "plaats": "Penstraat (Avila Beach Hotel)",
    "tags": [
@@ -2022,11 +2727,17 @@
    "feiten": [
     {
      "nl": "Jazz en blues: do, za",
-     "en": "Jazz and blues Thu, Sat"
+     "en": "Jazz and blues Thu, Sat",
+     "de": "Jazz und Blues Do, Sa",
+     "es": "Jazz y blues jue y sáb",
+     "pt": "Jazz e blues qui e sáb"
     },
     {
      "nl": "Dinsdag gesloten",
-     "en": "Closed Tuesday"
+     "en": "Closed Tuesday",
+     "de": "Dienstag geschlossen",
+     "es": "Cerrado los martes",
+     "pt": "Fechado às terças"
     }
    ],
    "scores": [
@@ -2045,11 +2756,23 @@
     ],
     "en": [
      "Great sunset views from the pier"
+    ],
+    "de": [
+     "Tolle Aussicht auf den Sonnenuntergang vom Pier"
+    ],
+    "es": [
+     "Vistas geniales del atardecer desde el muelle"
+    ],
+    "pt": [
+     "Vista incrível do pôr do sol a partir do píer"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=17170320413144020376",
@@ -2063,7 +2786,10 @@
    "url": "http://www.bijblauw.com/",
    "soort": {
     "nl": "restaurant-bar aan zee",
-    "en": "seaside restaurant and bar"
+    "en": "seaside restaurant and bar",
+    "de": "Restaurant und Bar am Meer",
+    "es": "restaurante y bar junto al mar",
+    "pt": "restaurante e bar à beira-mar"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2087,11 +2813,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=11445677996169328477",
@@ -2104,7 +2836,10 @@
    "url": null,
    "soort": {
     "nl": "sportsbar",
-    "en": "sports bar"
+    "en": "sports bar",
+    "de": "Sportbar",
+    "es": "bar deportivo",
+    "pt": "bar esportivo"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2117,7 +2852,10 @@
    "feiten": [
     {
      "nl": "Tv's voor live sport",
-     "en": "TVs for live sports"
+     "en": "TVs for live sports",
+     "de": "Fernseher für Live-Sport",
+     "es": "Televisores para deportes en vivo",
+     "pt": "TVs para esportes ao vivo"
     }
    ],
    "scores": [
@@ -2146,6 +2884,18 @@
     "en": [
      "Great burgers and friendly, fast service",
      "Sports atmosphere and a terrace"
+    ],
+    "de": [
+     "Tolle Burger und freundlicher, schneller Service",
+     "Sportstimmung und eine Terrasse"
+    ],
+    "es": [
+     "Hamburguesas geniales y servicio amable y rápido",
+     "Ambiente deportivo y una terraza"
+    ],
+    "pt": [
+     "Hambúrgueres ótimos e atendimento simpático e rápido",
+     "Clima esportivo e um terraço"
     ]
    },
    "tegen": {
@@ -2154,6 +2904,15 @@
     ],
     "en": [
      "Quiet in the daytime, basic bar food"
+    ],
+    "de": [
+     "Tagsüber ruhig, einfaches Baressen"
+    ],
+    "es": [
+     "Tranquilo de día, comida sencilla de bar"
+    ],
+    "pt": [
+     "Tranquilo de dia, comida simples de bar"
     ]
    },
    "bronnen": [
@@ -2168,7 +2927,10 @@
    "url": null,
    "soort": {
     "nl": "restaurant-bar",
-    "en": "restaurant and bar"
+    "en": "restaurant and bar",
+    "de": "Restaurant und Bar",
+    "es": "restaurante y bar",
+    "pt": "restaurante e bar"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2199,11 +2961,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
@@ -2215,7 +2983,10 @@
    "url": null,
    "soort": {
     "nl": "bar & keuken",
-    "en": "bar and kitchen"
+    "en": "bar and kitchen",
+    "de": "Bar und Küche",
+    "es": "bar y cocina",
+    "pt": "bar e cozinha"
    },
    "plaats": "Penstraat",
    "tags": [
@@ -2246,11 +3017,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
@@ -2262,7 +3039,10 @@
    "url": null,
    "soort": {
     "nl": "restaurant-bar aan zee",
-    "en": "seaside restaurant and bar"
+    "en": "seaside restaurant and bar",
+    "de": "Restaurant und Bar am Meer",
+    "es": "restaurante y bar junto al mar",
+    "pt": "restaurante e bar à beira-mar"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2293,11 +3073,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
@@ -2309,7 +3095,10 @@
    "url": null,
    "soort": {
     "nl": "pub",
-    "en": "pub"
+    "en": "pub",
+    "de": "Pub",
+    "es": "pub",
+    "pt": "pub"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2339,11 +3128,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
@@ -2355,7 +3150,10 @@
    "url": null,
    "soort": {
     "nl": "wekelijks straatfeest",
-    "en": "weekly street party"
+    "en": "weekly street party",
+    "de": "wöchentliche Straßenparty",
+    "es": "fiesta callejera semanal",
+    "pt": "festa de rua semanal"
    },
    "plaats": "Punda",
    "tags": [
@@ -2371,15 +3169,24 @@
    "feiten": [
     {
      "nl": "Elke donderdag vanaf circa 16:00",
-     "en": "Every Thursday from about 4 p.m."
+     "en": "Every Thursday from about 4 p.m.",
+     "de": "Jeden Donnerstag ab etwa 16 Uhr",
+     "es": "Todos los jueves desde las 4 p. m. aproximadamente",
+     "pt": "Toda quinta a partir das 16h, mais ou menos"
     },
     {
      "nl": "Vuurwerk rond 20:00",
-     "en": "Fireworks around 8 p.m."
+     "en": "Fireworks around 8 p.m.",
+     "de": "Feuerwerk gegen 20 Uhr",
+     "es": "Fuegos artificiales hacia las 8 p. m.",
+     "pt": "Fogos de artifício por volta das 20h"
     },
     {
      "nl": "Bij Gomezplein en Emmabrug",
-     "en": "Around Gomezplein and Queen Emma Bridge"
+     "en": "Around Gomezplein and Queen Emma Bridge",
+     "de": "Rund um den Gomezplein und die Queen-Emma-Brücke",
+     "es": "Alrededor de Gomezplein y el puente Queen Emma",
+     "pt": "Em volta da Gomezplein e da Ponte Queen Emma"
     }
    ],
    "scores": [],
@@ -2389,11 +3196,23 @@
     ],
     "en": [
      "Live music, dancers and food stalls in the streets"
+    ],
+    "de": [
+     "Livemusik, Tänzer und Essensstände in den Straßen"
+    ],
+    "es": [
+     "Música en vivo, bailarines y puestos de comida en las calles"
+    ],
+    "pt": [
+     "Música ao vivo, dançarinos e barracas de comida nas ruas"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://fodors.com/world/caribbean/curacao/things-to-do/nightlife",
@@ -2407,7 +3226,10 @@
    "url": "http://www.pleincafewilhelmina.com/",
    "soort": {
     "nl": "grand café op plein",
-    "en": "grand cafe on a square"
+    "en": "grand cafe on a square",
+    "de": "Grand Café an einem Platz",
+    "es": "grand café en una plaza",
+    "pt": "grand café em uma praça"
    },
    "plaats": "Punda (Wilhelminaplein)",
    "tags": [
@@ -2429,11 +3251,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=1246811530854535573"
@@ -2445,7 +3273,10 @@
    "url": null,
    "soort": {
     "nl": "café aan het water",
-    "en": "waterfront cafe"
+    "en": "waterfront cafe",
+    "de": "Café am Wasser",
+    "es": "café frente al agua",
+    "pt": "café à beira d'água"
    },
    "plaats": "Punda (Handelskade 4)",
    "tags": [
@@ -2481,11 +3312,23 @@
     ],
     "en": [
      "Terrace on the Handelskade waterfront"
+    ],
+    "de": [
+     "Terrasse an der Uferpromenade Handelskade"
+    ],
+    "es": [
+     "Terraza en el paseo marítimo de Handelskade"
+    ],
+    "pt": [
+     "Terraço na orla da Handelskade"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=3443189187924348582",
@@ -2499,7 +3342,10 @@
    "url": null,
    "soort": {
     "nl": "bistro-bar",
-    "en": "bistro and bar"
+    "en": "bistro and bar",
+    "de": "Bistro und Bar",
+    "es": "bistró y bar",
+    "pt": "bistrô e bar"
    },
    "plaats": "Punda (Columbusstraat)",
    "tags": [
@@ -2536,6 +3382,18 @@
     "en": [
      "Good mojitos and fresh juices",
      "Friendly service and good value"
+    ],
+    "de": [
+     "Gute Mojitos und frische Säfte",
+     "Freundlicher Service und gutes Preis-Leistungs-Verhältnis"
+    ],
+    "es": [
+     "Buenos mojitos y jugos frescos",
+     "Servicio amable y buena relación calidad-precio"
+    ],
+    "pt": [
+     "Bons mojitos e sucos frescos",
+     "Atendimento simpático e bom custo-benefício"
     ]
    },
    "tegen": {
@@ -2544,6 +3402,15 @@
     ],
     "en": [
      "Limited shaded seating"
+    ],
+    "de": [
+     "Wenig schattige Sitzplätze"
+    ],
+    "es": [
+     "Pocos asientos con sombra"
+    ],
+    "pt": [
+     "Poucos lugares com sombra"
     ]
    },
    "bronnen": [
@@ -2556,7 +3423,10 @@
    "url": "https://www.facebook.com/nettobar",
    "soort": {
     "nl": "oudste bar van het eiland",
-    "en": "island's oldest bar"
+    "en": "island's oldest bar",
+    "de": "älteste Bar der Insel",
+    "es": "el bar más antiguo de la isla",
+    "pt": "o bar mais antigo da ilha"
    },
    "plaats": "Otrobanda (Breedestraat 143)",
    "tags": [
@@ -2570,11 +3440,17 @@
    "feiten": [
     {
      "nl": "Sinds 1954",
-     "en": "Open since 1954"
+     "en": "Open since 1954",
+     "de": "Seit 1954 geöffnet",
+     "es": "Abierto desde 1954",
+     "pt": "Aberto desde 1954"
     },
     {
      "nl": "Bekend om groene rum",
-     "en": "Known for its green rum"
+     "en": "Known for its green rum",
+     "de": "Bekannt für seinen grünen Rum",
+     "es": "Conocido por su ron verde",
+     "pt": "Conhecido pelo seu rum verde"
     }
    ],
    "scores": [
@@ -2603,11 +3479,26 @@
     "en": [
      "Real local atmosphere and live music",
      "Famous Ròm Bèrdè green rum"
+    ],
+    "de": [
+     "Echte lokale Atmosphäre und Livemusik",
+     "Berühmter grüner Rum Ròm Bèrdè"
+    ],
+    "es": [
+     "Ambiente local auténtico y música en vivo",
+     "El famoso ron verde Ròm Bèrdè"
+    ],
+    "pt": [
+     "Clima local autêntico e música ao vivo",
+     "O famoso rum verde Ròm Bèrdè"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=10359894721870902708",
@@ -2623,7 +3514,10 @@
    "url": "http://www.de-gouverneur.com/",
    "soort": {
     "nl": "grand café met terras",
-    "en": "grand cafe with terrace"
+    "en": "grand cafe with terrace",
+    "de": "Grand Café mit Terrasse",
+    "es": "grand café con terraza",
+    "pt": "grand café com terraço"
    },
    "plaats": "Otrobanda",
    "tags": [
@@ -2636,7 +3530,10 @@
    "feiten": [
     {
      "nl": "Uitzicht op Annabaai en Punda",
-     "en": "Views over Anna Bay to Punda"
+     "en": "Views over Anna Bay to Punda",
+     "de": "Blick über die Anna Bay nach Punda",
+     "es": "Vistas de la bahía de Santa Anna hacia Punda",
+     "pt": "Vista da baía de Santa Ana em direção a Punda"
     }
    ],
    "scores": [
@@ -2659,11 +3556,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=318131966522289745",
@@ -2676,7 +3579,10 @@
    "url": null,
    "soort": {
     "nl": "bar-diner",
-    "en": "bar and diner"
+    "en": "bar and diner",
+    "de": "Bar und Diner",
+    "es": "bar y diner",
+    "pt": "bar e diner"
    },
    "plaats": "Otrobanda (De Rouvilleweg)",
    "tags": [
@@ -2706,11 +3612,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
@@ -2722,7 +3634,10 @@
    "url": null,
    "soort": {
     "nl": "bars in oud fort",
-    "en": "bars in an old fort"
+    "en": "bars in an old fort",
+    "de": "Bars in einem alten Fort",
+    "es": "bares en un fuerte antiguo",
+    "pt": "bares em um forte antigo"
    },
    "plaats": "Otrobanda",
    "tags": [
@@ -2736,11 +3651,17 @@
    "feiten": [
     {
      "nl": "Livebands op centraal podium",
-     "en": "Live bands on a central stage"
+     "en": "Live bands on a central stage",
+     "de": "Live-Bands auf einer zentralen Bühne",
+     "es": "Bandas en vivo en un escenario central",
+     "pt": "Bandas ao vivo em um palco central"
     },
     {
      "nl": "Dagelijks open tot 23:00",
-     "en": "Open daily until 11 p.m."
+     "en": "Open daily until 11 p.m.",
+     "de": "Täglich bis 23 Uhr geöffnet",
+     "es": "Abierto todos los días hasta las 11 p. m.",
+     "pt": "Aberto todos os dias até as 23h"
     }
    ],
    "scores": [
@@ -2767,11 +3688,23 @@
     ],
     "en": [
      "A beer with views of Anna Bay"
+    ],
+    "de": [
+     "Ein Bier mit Blick auf die Anna Bay"
+    ],
+    "es": [
+     "Una cerveza con vista a la bahía de Santa Anna"
+    ],
+    "pt": [
+     "Uma cerveja com vista para a baía de Santa Ana"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://fodors.com/world/caribbean/curacao/things-to-do/nightlife",
@@ -2785,7 +3718,10 @@
    "url": null,
    "soort": {
     "nl": "gastrobar",
-    "en": "gastro bar"
+    "en": "gastro bar",
+    "de": "Gastrobar",
+    "es": "gastrobar",
+    "pt": "gastrobar"
    },
    "plaats": "Willemstad (Pen Square)",
    "tags": [
@@ -2814,11 +3750,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
@@ -2830,7 +3772,10 @@
    "url": "https://www.omundo.cw/",
    "soort": {
     "nl": "restaurant met livemuziek",
-    "en": "restaurant with live music"
+    "en": "restaurant with live music",
+    "de": "Restaurant mit Livemusik",
+    "es": "restaurante con música en vivo",
+    "pt": "restaurante com música ao vivo"
    },
    "plaats": "Zuikertuintjeweg",
    "tags": [
@@ -2853,11 +3798,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=6075607806477735582",
@@ -2870,7 +3821,10 @@
    "url": null,
    "soort": {
     "nl": "lokale bar",
-    "en": "local bar"
+    "en": "local bar",
+    "de": "lokale Bar",
+    "es": "bar local",
+    "pt": "bar local"
    },
    "plaats": "Santa Rosaweg",
    "tags": [
@@ -2883,11 +3837,17 @@
    "feiten": [
     {
      "nl": "Donderdag Red Cup Night",
-     "en": "Thursday Red Cup Night"
+     "en": "Thursday Red Cup Night",
+     "de": "Donnerstag Red Cup Night",
+     "es": "Jueves Red Cup Night",
+     "pt": "Quinta Red Cup Night"
     },
     {
      "nl": "Elke dag laat open",
-     "en": "Open late every day"
+     "en": "Open late every day",
+     "de": "Jeden Tag bis spät geöffnet",
+     "es": "Abierto hasta tarde todos los días",
+     "pt": "Aberto até tarde todos os dias"
     }
    ],
    "scores": [
@@ -2914,6 +3874,15 @@
     ],
     "en": [
      "Relaxed, music not too loud"
+    ],
+    "de": [
+     "Entspannt, die Musik ist nicht zu laut"
+    ],
+    "es": [
+     "Relajado, la música no está muy fuerte"
+    ],
+    "pt": [
+     "Descontraído, a música não é muito alta"
     ]
    },
    "tegen": {
@@ -2922,6 +3891,15 @@
     ],
     "en": [
      "Low Tripadvisor score from few reviews"
+    ],
+    "de": [
+     "Niedrige Tripadvisor-Bewertung bei wenigen Bewertungen"
+    ],
+    "es": [
+     "Puntuación baja en Tripadvisor con pocas reseñas"
+    ],
+    "pt": [
+     "Nota baixa no Tripadvisor com poucas avaliações"
     ]
    },
    "bronnen": [
@@ -2938,7 +3916,10 @@
    "url": null,
    "soort": {
     "nl": "Braziliaanse lounge",
-    "en": "Brazilian lounge"
+    "en": "Brazilian lounge",
+    "de": "Brasilianische Lounge",
+    "es": "lounge brasileño",
+    "pt": "lounge brasileiro"
    },
    "plaats": "Loostraat",
    "tags": [
@@ -2951,7 +3932,10 @@
    "feiten": [
     {
      "nl": "Live Braziliaanse muziek",
-     "en": "Live Brazilian music"
+     "en": "Live Brazilian music",
+     "de": "Brasilianische Livemusik",
+     "es": "Música brasileña en vivo",
+     "pt": "Música brasileira ao vivo"
     }
    ],
    "scores": [
@@ -2966,11 +3950,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=8803362223739545533",
@@ -2983,7 +3973,10 @@
    "url": "http://www.lacasadelhabano-curacao.com/",
    "soort": {
     "nl": "sigarenlounge",
-    "en": "cigar lounge"
+    "en": "cigar lounge",
+    "de": "Zigarrenlounge",
+    "es": "lounge de cigarros",
+    "pt": "lounge de charutos"
    },
    "plaats": "Schottegatweg Oost",
    "tags": [
@@ -3019,11 +4012,26 @@
     "en": [
      "Large cigar selection and knowledgeable staff",
      "Quiet, intimate setting"
+    ],
+    "de": [
+     "Große Zigarrenauswahl und fachkundiges Personal",
+     "Ruhige, intime Atmosphäre"
+    ],
+    "es": [
+     "Gran selección de cigarros y personal con conocimiento",
+     "Ambiente tranquilo e íntimo"
+    ],
+    "pt": [
+     "Grande seleção de charutos e equipe experiente",
+     "Ambiente calmo e intimista"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=14714848196823097017",
@@ -3038,7 +4046,10 @@
    "url": null,
    "soort": {
     "nl": "nachtclub",
-    "en": "nightclub"
+    "en": "nightclub",
+    "de": "Nachtclub",
+    "es": "discoteca",
+    "pt": "balada"
    },
    "plaats": "Nieuwe Caracasbaaiweg",
    "tags": [
@@ -3050,7 +4061,10 @@
    "feiten": [
     {
      "nl": "DJ-feesten",
-     "en": "DJ parties"
+     "en": "DJ parties",
+     "de": "DJ-Partys",
+     "es": "Fiestas con DJ",
+     "pt": "Festas com DJ"
     }
    ],
    "scores": [
@@ -3065,11 +4079,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps?cid=2918220289180457870",
@@ -3083,7 +4103,10 @@
    "url": null,
    "soort": {
     "nl": "lokale bar",
-    "en": "local bar"
+    "en": "local bar",
+    "de": "lokale Bar",
+    "es": "bar local",
+    "pt": "bar local"
    },
    "plaats": "Graham Bellstraat",
    "tags": [
@@ -3105,11 +4128,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
@@ -3121,7 +4150,10 @@
    "url": null,
    "soort": {
     "nl": "sportsbar",
-    "en": "sports bar"
+    "en": "sports bar",
+    "de": "Sportbar",
+    "es": "bar deportivo",
+    "pt": "bar esportivo"
    },
    "plaats": null,
    "tags": [
@@ -3142,11 +4174,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html"
@@ -3158,7 +4196,10 @@
    "url": null,
    "soort": {
     "nl": "casino in resort",
-    "en": "resort casino"
+    "en": "resort casino",
+    "de": "Resort-Casino",
+    "es": "casino de resort",
+    "pt": "cassino de resort"
    },
    "plaats": "Otrobanda (Renaissance, Rif Fort)",
    "tags": [
@@ -3170,21 +4211,33 @@
    "feiten": [
     {
      "nl": "250 gokkasten, 12 speeltafels",
-     "en": "250 slots, 12 table games"
+     "en": "250 slots, 12 table games",
+     "de": "250 Spielautomaten, 12 Spieltische",
+     "es": "250 tragamonedas, 12 mesas de juego",
+     "pt": "250 caça-níqueis, 12 mesas de jogo"
     },
     {
      "nl": "Geopend december 2019",
-     "en": "Opened December 2019"
+     "en": "Opened December 2019",
+     "de": "Im Dezember 2019 eröffnet",
+     "es": "Abrió en diciembre de 2019",
+     "pt": "Inaugurado em dezembro de 2019"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/new-owners-invest-more-than-45-million-guilders-wind-creek-carnival-casino-curacao-opens-doors-at-renaissance",
@@ -3197,7 +4250,10 @@
    "url": null,
    "soort": {
     "nl": "casino in resort",
-    "en": "resort casino"
+    "en": "resort casino",
+    "de": "Resort-Casino",
+    "es": "casino de resort",
+    "pt": "cassino de resort"
    },
    "plaats": "bij Mambo Beach (Sunscape)",
    "tags": [
@@ -3209,21 +4265,33 @@
    "feiten": [
     {
      "nl": "Ruim 300 gokkasten, bingo",
-     "en": "300+ slots and bingo"
+     "en": "300+ slots and bingo",
+     "de": "Über 300 Spielautomaten und Bingo",
+     "es": "Más de 300 tragamonedas y bingo",
+     "pt": "Mais de 300 caça-níqueis e bingo"
     },
     {
      "nl": "Speel-om-te-leren tafels",
-     "en": "Learn-to-play tables for beginners"
+     "en": "Learn-to-play tables for beginners",
+     "de": "Lern-Tische zum Ausprobieren für Anfänger",
+     "es": "Mesas para aprender a jugar, para principiantes",
+     "pt": "Mesas para aprender a jogar, para iniciantes"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.inyourpocket.com/dutch-caribbean/curacao/articles/top-5-casinos-in-curacao-for-2023",
@@ -3237,7 +4305,10 @@
    "url": null,
    "soort": {
     "nl": "casino in resort",
-    "en": "resort casino"
+    "en": "resort casino",
+    "de": "Resort-Casino",
+    "es": "casino de resort",
+    "pt": "cassino de resort"
    },
    "plaats": "Piscadera (Dreams Curaçao)",
    "tags": [
@@ -3248,17 +4319,26 @@
    "feiten": [
     {
      "nl": "Bingozaal en sportweddenschappen",
-     "en": "Bingo hall and sports betting"
+     "en": "Bingo hall and sports betting",
+     "de": "Bingosaal und Sportwetten",
+     "es": "Sala de bingo y apuestas deportivas",
+     "pt": "Salão de bingo e apostas esportivas"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.inyourpocket.com/dutch-caribbean/curacao/articles/top-5-casinos-in-curacao-for-2023",
@@ -3272,7 +4352,10 @@
    "url": null,
    "soort": {
     "nl": "hotelcasino",
-    "en": "hotel casino"
+    "en": "hotel casino",
+    "de": "Hotel-Casino",
+    "es": "casino de hotel",
+    "pt": "cassino de hotel"
    },
    "plaats": "Otrobanda",
    "tags": [
@@ -3283,21 +4366,33 @@
    "feiten": [
     {
      "nl": "Ruim 270 gokkasten",
-     "en": "270+ slot machines"
+     "en": "270+ slot machines",
+     "de": "Über 270 Spielautomaten",
+     "es": "Más de 270 tragamonedas",
+     "pt": "Mais de 270 caça-níqueis"
     },
     {
      "nl": "Sportweddenschap-kiosken",
-     "en": "Sportsbook betting kiosks"
+     "en": "Sportsbook betting kiosks",
+     "de": "Wettterminals für Sportwetten",
+     "es": "Terminales de apuestas deportivas",
+     "pt": "Terminais de apostas esportivas"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.inyourpocket.com/dutch-caribbean/curacao/articles/top-5-casinos-in-curacao-for-2023"
@@ -3309,7 +4404,10 @@
    "url": null,
    "soort": {
     "nl": "hotelcasino",
-    "en": "hotel casino"
+    "en": "hotel casino",
+    "de": "Hotel-Casino",
+    "es": "casino de hotel",
+    "pt": "cassino de hotel"
    },
    "plaats": "Willemstad (Trupial Inn)",
    "tags": [
@@ -3320,21 +4418,33 @@
    "feiten": [
     {
      "nl": "Dagelijks 10:00-04:00",
-     "en": "Daily 10 a.m.-4 a.m."
+     "en": "Daily 10 a.m.-4 a.m.",
+     "de": "Täglich von 10 bis 4 Uhr",
+     "es": "Todos los días de 10 a. m. a 4 a. m.",
+     "pt": "Todos os dias das 10h às 4h"
     },
     {
      "nl": "192 gokkasten",
-     "en": "192 slot machines"
+     "en": "192 slot machines",
+     "de": "192 Spielautomaten",
+     "es": "192 tragamonedas",
+     "pt": "192 caça-níqueis"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.inyourpocket.com/dutch-caribbean/curacao/articles/top-5-casinos-in-curacao-for-2023"
@@ -3346,7 +4456,10 @@
    "url": null,
    "soort": {
     "nl": "casino",
-    "en": "casino"
+    "en": "casino",
+    "de": "Casino",
+    "es": "casino",
+    "pt": "cassino"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -3358,7 +4471,10 @@
    "feiten": [
     {
      "nl": "Open tot in de vroege ochtend",
-     "en": "Open until the early morning"
+     "en": "Open until the early morning",
+     "de": "Bis in die frühen Morgenstunden geöffnet",
+     "es": "Abierto hasta la madrugada",
+     "pt": "Aberto até de madrugada"
     }
    ],
    "scores": [
@@ -3373,11 +4489,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao",
@@ -3390,7 +4512,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal casino",
-    "en": "local casino"
+    "en": "local casino",
+    "de": "lokales Casino",
+    "es": "casino local",
+    "pt": "cassino local"
    },
    "plaats": "Pater Euwensweg",
    "tags": [
@@ -3411,11 +4536,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
@@ -3427,7 +4558,10 @@
    "url": null,
    "soort": {
     "nl": "hotelcasino",
-    "en": "hotel casino"
+    "en": "hotel casino",
+    "de": "Hotel-Casino",
+    "es": "casino de hotel",
+    "pt": "cassino de hotel"
    },
    "plaats": "Punda",
    "tags": [
@@ -3439,11 +4573,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
@@ -3457,7 +4597,10 @@
    "url": "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html",
    "uitleg": {
     "nl": "Lijst met bars, clubs en georganiseerde avonden zoals een partybus en bar crawl in Otrobanda, met reviews.",
-    "en": "List of bars, clubs and organized nights such as a party bus and an Otrobanda bar crawl, with reviews."
+    "en": "List of bars, clubs and organized nights such as a party bus and an Otrobanda bar crawl, with reviews.",
+    "de": "Liste mit Bars, Clubs und organisierten Abenden wie einem Party-Bus und einer Kneipentour durch Otrobanda, mit Bewertungen.",
+    "es": "Lista de bares, discotecas y noches organizadas, como un bus de fiesta y un recorrido de bares por Otrobanda, con reseñas.",
+    "pt": "Lista de bares, baladas e noites organizadas, como um ônibus de festa e um bar crawl em Otrobanda, com avaliações."
    }
   },
   {
@@ -3465,119 +4608,191 @@
    "url": "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao",
    "uitleg": {
     "nl": "Lokale gids met vaste feestavonden en happy hours per beachclub.",
-    "en": "Local guide listing weekly party nights and happy hours per beach club."
+    "en": "Local guide listing weekly party nights and happy hours per beach club.",
+    "de": "Lokaler Guide mit den wöchentlichen Partyabenden und Happy Hours jedes Beach Clubs.",
+    "es": "Guía local con las noches de fiesta semanales y las happy hours de cada beach club.",
+    "pt": "Guia local com as noites de festa semanais e as happy hours de cada beach club."
    }
   }
  ],
  "tips": [
   {
    "nl": "Mambo Beach rekent $4,50 entree per persoon; Jan Thiel $3, na 16:30 gratis. Kokomo en Karakter zijn gratis.",
-   "en": "Mambo Beach charges $4.50 per person; Jan Thiel $3, free after 4:30 p.m. Kokomo and Karakter are free."
+   "en": "Mambo Beach charges $4.50 per person; Jan Thiel $3, free after 4:30 p.m. Kokomo and Karakter are free.",
+   "de": "Mambo Beach kostet 4,50 $ pro Person; Jan Thiel 3 $, ab 16:30 Uhr gratis. Kokomo und Karakter sind kostenlos.",
+   "es": "Mambo Beach cuesta $4.50 por persona; Jan Thiel $3, gratis después de las 4:30 p. m. Kokomo y Karakter son gratis.",
+   "pt": "Mambo Beach custa $4.50 por pessoa; Jan Thiel $3, grátis depois das 16h30. Kokomo e Karakter são grátis."
   },
   {
    "nl": "Donderdag is de drukste doordeweekse avond: Punda Vibes vanaf circa 16:00 met vuurwerk rond 20:00, daarna salsa bij Mundo Bizarro.",
-   "en": "Thursday is the big weeknight: Punda Vibes from about 4 p.m. with fireworks around 8 p.m., then salsa at Mundo Bizarro."
+   "en": "Thursday is the big weeknight: Punda Vibes from about 4 p.m. with fireworks around 8 p.m., then salsa at Mundo Bizarro.",
+   "de": "Donnerstag ist der große Abend unter der Woche: Punda Vibes ab etwa 16 Uhr mit Feuerwerk gegen 20 Uhr, danach Salsa im Mundo Bizarro.",
+   "es": "El jueves es la gran noche entre semana: Punda Vibes desde las 4 p. m. aproximadamente con fuegos artificiales hacia las 8 p. m., y luego salsa en Mundo Bizarro.",
+   "pt": "A quinta é a grande noite da semana: Punda Vibes a partir das 16h, mais ou menos, com fogos de artifício por volta das 20h, e depois salsa no Mundo Bizarro."
   },
   {
    "nl": "Cabana Beach en Mood Beach zijn cashless: neem een pinpas of creditcard mee.",
-   "en": "Cabana Beach and Mood Beach are cashless, so bring a debit or credit card."
+   "en": "Cabana Beach and Mood Beach are cashless, so bring a debit or credit card.",
+   "de": "Cabana Beach und Mood Beach nehmen kein Bargeld, bring also eine Debit- oder Kreditkarte mit.",
+   "es": "Cabana Beach y Mood Beach no aceptan efectivo, así que lleva una tarjeta de débito o crédito.",
+   "pt": "Cabana Beach e Mood Beach não aceitam dinheiro, então leve um cartão de débito ou crédito."
   },
   {
    "nl": "Mambo is in het weekend en op cruisedagen het drukst; houd je spullen in de gaten.",
-   "en": "Mambo is busiest on weekends and cruise ship days; keep an eye on your belongings."
+   "en": "Mambo is busiest on weekends and cruise ship days; keep an eye on your belongings.",
+   "de": "Mambo ist an Wochenenden und an Kreuzfahrttagen am vollsten; pass auf deine Sachen auf.",
+   "es": "Mambo está más lleno los fines de semana y los días de cruceros; cuida tus pertenencias.",
+   "pt": "Mambo fica mais cheio nos fins de semana e em dias de cruzeiro; fique de olho nos seus pertences."
   },
   {
    "nl": "Op casinowinst gaat 5% belasting af.",
-   "en": "Casino winnings are taxed at 5%."
+   "en": "Casino winnings are taxed at 5%.",
+   "de": "Casino-Gewinne werden mit 5 % besteuert.",
+   "es": "Las ganancias de casino pagan un impuesto del 5 %.",
+   "pt": "Os ganhos de cassino são tributados em 5%."
   },
   {
    "nl": "Van Otrobanda naar Mambo Beach is ongeveer 15 minuten met de taxi; Karakter en Playa Forti liggen ver weg, daar heb je een auto nodig.",
-   "en": "Mambo Beach is about a 15-minute taxi ride from Otrobanda; Karakter and Playa Forti are far out and need a car."
+   "en": "Mambo Beach is about a 15-minute taxi ride from Otrobanda; Karakter and Playa Forti are far out and need a car.",
+   "de": "Mambo Beach ist etwa 15 Minuten Taxifahrt von Otrobanda entfernt; Karakter und Playa Forti liegen weit draußen und sind nur mit dem Auto erreichbar.",
+   "es": "Mambo Beach queda a unos 15 minutos en taxi de Otrobanda; Karakter y Playa Forti están lejos y necesitas auto.",
+   "pt": "Mambo Beach fica a cerca de 15 minutos de táxi de Otrobanda; Karakter e Playa Forti ficam longe e exigem carro."
   },
   {
    "nl": "Kokomo houdt elke maand een full moon party (18+, 22:00-05:00); kijk voor de datum op de site.",
-   "en": "Kokomo holds a monthly full moon party (18+, 10 p.m.-5 a.m.); check its website for the date."
+   "en": "Kokomo holds a monthly full moon party (18+, 10 p.m.-5 a.m.); check its website for the date.",
+   "de": "Das Kokomo veranstaltet jeden Monat eine Vollmondparty (ab 18, 22 bis 5 Uhr); das Datum findest du auf der Website.",
+   "es": "Kokomo organiza una fiesta mensual de luna llena (mayores de 18, de 10 p. m. a 5 a. m.); mira la fecha en su sitio web.",
+   "pt": "O Kokomo faz uma festa de lua cheia todo mês (18+, das 22h às 5h); confira a data no site."
   }
  ],
  "faq": [
   {
    "q": {
     "nl": "Waar ga je uit op Curaçao?",
-    "en": "Where do you go out in Curaçao?"
+    "en": "Where do you go out in Curaçao?",
+    "de": "Wo gehst du auf Curaçao aus?",
+    "es": "¿Adónde se sale de noche en Curazao?",
+    "pt": "Onde se sai à noite em Curaçao?"
    },
    "a": {
     "nl": "De drie uitgaanscentra zijn Mambo Beach (beachclubs als Wet & Wild, Cabana en Chill), Jan Thiel (Zanzibar, Zest, Koko's) en de stad: Pietermaai voor bars als Mundo Bizarro en Miles Jazz Cafe, Punda en Otrobanda voor Netto Bar en Rif Fort.",
-    "en": "The three main areas are Mambo Beach (beach clubs like Wet & Wild, Cabana and Chill), Jan Thiel (Zanzibar, Zest, Koko's) and town: Pietermaai for bars like Mundo Bizarro and Miles Jazz Cafe, Punda and Otrobanda for Netto Bar and Rif Fort."
+    "en": "The three main areas are Mambo Beach (beach clubs like Wet & Wild, Cabana and Chill), Jan Thiel (Zanzibar, Zest, Koko's) and town: Pietermaai for bars like Mundo Bizarro and Miles Jazz Cafe, Punda and Otrobanda for Netto Bar and Rif Fort.",
+    "de": "Die drei wichtigsten Gegenden sind Mambo Beach (Beach Clubs wie Wet & Wild, Cabana und Chill), Jan Thiel (Zanzibar, Zest, Koko's) und die Stadt: Pietermaai mit Bars wie Mundo Bizarro und Miles Jazz Cafe, Punda und Otrobanda mit Netto Bar und Rif Fort.",
+    "es": "Las tres zonas principales son Mambo Beach (beach clubs como Wet & Wild, Cabana y Chill), Jan Thiel (Zanzibar, Zest, Koko's) y la ciudad: Pietermaai, con bares como Mundo Bizarro y Miles Jazz Cafe, y Punda y Otrobanda, con Netto Bar y Rif Fort.",
+    "pt": "As três áreas principais são Mambo Beach (beach clubs como Wet & Wild, Cabana e Chill), Jan Thiel (Zanzibar, Zest, Koko's) e a cidade: Pietermaai, com bares como Mundo Bizarro e Miles Jazz Cafe, e Punda e Otrobanda, com Netto Bar e Rif Fort."
    }
   },
   {
    "q": {
     "nl": "Moet je betalen voor Mambo Beach?",
-    "en": "Do you have to pay for Mambo Beach?"
+    "en": "Do you have to pay for Mambo Beach?",
+    "de": "Muss man für Mambo Beach Eintritt zahlen?",
+    "es": "¿Hay que pagar para entrar a Mambo Beach?",
+    "pt": "Precisa pagar para entrar na Mambo Beach?"
    },
    "a": {
     "nl": "Ja, de entree is $4,50 per persoon. Jan Thiel kost $3 en is na 16:30 gratis.",
-    "en": "Yes, entry is $4.50 per person. Jan Thiel costs $3 and is free after 4:30 p.m."
+    "en": "Yes, entry is $4.50 per person. Jan Thiel costs $3 and is free after 4:30 p.m.",
+    "de": "Ja, der Eintritt kostet 4,50 $ pro Person. Jan Thiel kostet 3 $ und ist ab 16:30 Uhr gratis.",
+    "es": "Sí, la entrada cuesta $4.50 por persona. Jan Thiel cuesta $3 y es gratis después de las 4:30 p. m.",
+    "pt": "Sim, a entrada custa $4.50 por pessoa. Jan Thiel custa $3 e é grátis depois das 16h30."
    }
   },
   {
    "q": {
     "nl": "Wat is er op donderdagavond te doen op Curaçao?",
-    "en": "What is there to do on Thursday night in Curaçao?"
+    "en": "What is there to do on Thursday night in Curaçao?",
+    "de": "Was kann man donnerstagabends auf Curaçao unternehmen?",
+    "es": "¿Qué hacer el jueves por la noche en Curazao?",
+    "pt": "O que fazer na quinta à noite em Curaçao?"
    },
    "a": {
     "nl": "Punda Vibes: een straatfeest rond het Gomezplein en de Emmabrug met livemuziek, eetkraampjes en vuurwerk rond 20:00. Daarna is er salsa en livemuziek bij Mundo Bizarro en Red Cup Night in Bar P.",
-    "en": "Punda Vibes, a street party around Gomezplein and Queen Emma Bridge with live music, food stalls and fireworks around 8 p.m. Afterward there's salsa and live music at Mundo Bizarro and Red Cup Night at Bar P."
+    "en": "Punda Vibes, a street party around Gomezplein and Queen Emma Bridge with live music, food stalls and fireworks around 8 p.m. Afterward there's salsa and live music at Mundo Bizarro and Red Cup Night at Bar P.",
+    "de": "Punda Vibes, eine Straßenparty rund um den Gomezplein und die Queen-Emma-Brücke mit Livemusik, Essensständen und Feuerwerk gegen 20 Uhr. Danach gibt es Salsa und Livemusik im Mundo Bizarro und die Red Cup Night in der Bar P.",
+    "es": "Punda Vibes, una fiesta callejera alrededor de Gomezplein y el puente Queen Emma con música en vivo, puestos de comida y fuegos artificiales hacia las 8 p. m. Después hay salsa y música en vivo en Mundo Bizarro y Red Cup Night en Bar P.",
+    "pt": "Punda Vibes, uma festa de rua em volta da Gomezplein e da Ponte Queen Emma, com música ao vivo, barracas de comida e fogos de artifício por volta das 20h. Depois tem salsa e música ao vivo no Mundo Bizarro e a Red Cup Night no Bar P."
    }
   },
   {
    "q": {
     "nl": "Waar zie je de zonsondergang met een drankje?",
-    "en": "Where can you watch the sunset with a drink?"
+    "en": "Where can you watch the sunset with a drink?",
+    "de": "Wo kannst du bei einem Drink den Sonnenuntergang sehen?",
+    "es": "¿Dónde ver el atardecer con un trago?",
+    "pt": "Onde ver o pôr do sol com um drink?"
    },
    "a": {
     "nl": "Karakter bij Coral Estate en Kokomo Beach zijn het populairst. In de stad zitten Blues op de pier van Avila en Saint Tropez Ocean Club in Pietermaai goed.",
-    "en": "Karakter at Coral Estate and Kokomo Beach are the most popular. In town, try Blues on the Avila pier or Saint Tropez Ocean Club in Pietermaai."
+    "en": "Karakter at Coral Estate and Kokomo Beach are the most popular. In town, try Blues on the Avila pier or Saint Tropez Ocean Club in Pietermaai.",
+    "de": "Karakter im Coral Estate und der Kokomo Beach sind am beliebtesten. In der Stadt probier Blues auf dem Pier der Avila oder den Saint Tropez Ocean Club in Pietermaai.",
+    "es": "Karakter en Coral Estate y Kokomo Beach son los más populares. En la ciudad, prueba Blues en el muelle del Avila o Saint Tropez Ocean Club en Pietermaai.",
+    "pt": "Karakter, no Coral Estate, e Kokomo Beach são os mais populares. Na cidade, experimente o Blues no píer do Avila ou o Saint Tropez Ocean Club, em Pietermaai."
    }
   },
   {
    "q": {
     "nl": "Hoe lang zijn de clubs open op Curaçao?",
-    "en": "How late are clubs open in Curaçao?"
+    "en": "How late are clubs open in Curaçao?",
+    "de": "Wie lange haben die Clubs auf Curaçao geöffnet?",
+    "es": "¿Hasta qué hora abren las discotecas en Curazao?",
+    "pt": "Até que horas as baladas ficam abertas em Curaçao?"
    },
    "a": {
     "nl": "Wet & Wild is vrijdag en zondag open tot 02:00 en soms tot 04:00. Club x Mambo en Live 973 op Mambo Boulevard zijn de plekken voor daarna.",
-    "en": "Wet & Wild stays open until 2 a.m. Friday and Sunday, sometimes until 4 a.m. Club x Mambo and Live 973 on Mambo Boulevard are where people go after that."
+    "en": "Wet & Wild stays open until 2 a.m. Friday and Sunday, sometimes until 4 a.m. Club x Mambo and Live 973 on Mambo Boulevard are where people go after that.",
+    "de": "Das Wet & Wild hat freitags und sonntags bis 2 Uhr geöffnet, manchmal bis 4 Uhr. Danach geht man ins Club x Mambo und ins Live 973 am Mambo Boulevard.",
+    "es": "Wet & Wild abre hasta las 2 a. m. el viernes y el domingo, a veces hasta las 4 a. m. Después la gente va a Club x Mambo y a Live 973, en Mambo Boulevard.",
+    "pt": "O Wet & Wild fica aberto até as 2h na sexta e no domingo, às vezes até as 4h. Depois disso o pessoal vai para o Club x Mambo e o Live 973, no Mambo Boulevard."
    }
   },
   {
    "q": {
     "nl": "Waar is livemuziek op Curaçao?",
-    "en": "Where is live music in Curaçao?"
+    "en": "Where is live music in Curaçao?",
+    "de": "Wo gibt es Livemusik auf Curaçao?",
+    "es": "¿Dónde hay música en vivo en Curazao?",
+    "pt": "Onde tem música ao vivo em Curaçao?"
    },
    "a": {
     "nl": "Blues bij Avila heeft jazz en blues op donderdag en zaterdag, Hemingway een Cubaanse salsaband op zondag, Mundo Bizarro livemuziek op donderdag en Rif Fort Village bands op het podium.",
-    "en": "Blues at Avila has jazz and blues on Thursday and Saturday, Hemingway a Cuban salsa band on Sunday, Mundo Bizarro live music on Thursday, and Rif Fort Village bands on its stage."
+    "en": "Blues at Avila has jazz and blues on Thursday and Saturday, Hemingway a Cuban salsa band on Sunday, Mundo Bizarro live music on Thursday, and Rif Fort Village bands on its stage.",
+    "de": "Im Blues at Avila gibt es donnerstags und samstags Jazz und Blues, im Hemingway sonntags eine kubanische Salsa-Band, im Mundo Bizarro donnerstags Livemusik und im Rif Fort Village spielen Bands auf der Bühne.",
+    "es": "Blues at Avila tiene jazz y blues los jueves y sábados, Hemingway una banda de salsa cubana los domingos, Mundo Bizarro música en vivo los jueves, y en Rif Fort Village tocan bandas en su escenario.",
+    "pt": "O Blues at Avila tem jazz e blues às quintas e sábados, o Hemingway uma banda de salsa cubana aos domingos, o Mundo Bizarro música ao vivo às quintas, e no Rif Fort Village há bandas no palco."
    }
   },
   {
    "q": {
     "nl": "Welke casino's zijn er op Curaçao?",
-    "en": "What casinos are there in Curaçao?"
+    "en": "What casinos are there in Curaçao?",
+    "de": "Welche Casinos gibt es auf Curaçao?",
+    "es": "¿Qué casinos hay en Curazao?",
+    "pt": "Quais cassinos existem em Curaçao?"
    },
    "a": {
     "nl": "Het grootste is Wind Creek Carnival Casino bij Renaissance in Otrobanda (250 gokkasten, 12 tafels). Verder Princess Casino bij Sunscape, het casino van Dreams, Awasa, Hill Ross bij Trupial Inn en Diamond Casino op Jan Thiel. Op winst gaat 5% belasting af.",
-    "en": "The biggest is Wind Creek Carnival Casino at the Renaissance in Otrobanda (250 slots, 12 tables). Others include Princess Casino at Sunscape, the Dreams casino, Awasa, Hill Ross at Trupial Inn and Diamond Casino at Jan Thiel. Winnings are taxed at 5%."
+    "en": "The biggest is Wind Creek Carnival Casino at the Renaissance in Otrobanda (250 slots, 12 tables). Others include Princess Casino at Sunscape, the Dreams casino, Awasa, Hill Ross at Trupial Inn and Diamond Casino at Jan Thiel. Winnings are taxed at 5%.",
+    "de": "Das größte ist das Wind Creek Carnival Casino im Renaissance in Otrobanda (250 Automaten, 12 Tische). Weitere sind das Princess Casino im Sunscape, das Dreams Casino, Awasa, Hill Ross im Trupial Inn und das Diamond Casino in Jan Thiel. Gewinne werden mit 5 % besteuert.",
+    "es": "El más grande es Wind Creek Carnival Casino, en el Renaissance de Otrobanda (250 tragamonedas, 12 mesas). Otros son Princess Casino en Sunscape, el casino de Dreams, Awasa, Hill Ross en Trupial Inn y Diamond Casino en Jan Thiel. Las ganancias pagan un impuesto del 5 %.",
+    "pt": "O maior é o Wind Creek Carnival Casino, no Renaissance, em Otrobanda (250 caça-níqueis, 12 mesas). Outros são o Princess Casino no Sunscape, o cassino do Dreams, o Awasa, o Hill Ross no Trupial Inn e o Diamond Casino em Jan Thiel. Os ganhos são tributados em 5%."
    }
   },
   {
    "q": {
     "nl": "Wat is de oudste bar van Curaçao?",
-    "en": "What is the oldest bar in Curaçao?"
+    "en": "What is the oldest bar in Curaçao?",
+    "de": "Welche ist die älteste Bar auf Curaçao?",
+    "es": "¿Cuál es el bar más antiguo de Curazao?",
+    "pt": "Qual é o bar mais antigo de Curaçao?"
    },
    "a": {
     "nl": "Netto Bar in Otrobanda, sinds 1954, bekend om de groene rum (Ròm Bèrdè). Scoort 4,5 uit 553 Google-reviews.",
-    "en": "Netto Bar in Otrobanda, open since 1954 and known for its green rum (Ròm Bèrdè). It rates 4.5 from 553 Google reviews."
+    "en": "Netto Bar in Otrobanda, open since 1954 and known for its green rum (Ròm Bèrdè). It rates 4.5 from 553 Google reviews.",
+    "de": "Die Netto Bar in Otrobanda, seit 1954 geöffnet und bekannt für ihren grünen Rum (Ròm Bèrdè). Sie hat 4,5 bei 553 Google-Bewertungen.",
+    "es": "Netto Bar, en Otrobanda, abierto desde 1954 y conocido por su ron verde (Ròm Bèrdè). Tiene 4.5 con 553 reseñas en Google.",
+    "pt": "O Netto Bar, em Otrobanda, aberto desde 1954 e conhecido pelo seu rum verde (Ròm Bèrdè). Tem nota 4,5 com 553 avaliações no Google."
    }
   }
  ],
@@ -3629,10 +4844,21 @@
    "Where is the best nightlife in Curaçao?",
    "Which beach club in Curaçao is best for a party?",
    "Where can I watch the sunset with cocktails in Curaçao?"
+  ],
+  "de": [
+   "Wo ist das beste Nachtleben auf Curaçao?",
+   "Welcher Beach Club auf Curaçao ist am besten zum Feiern?",
+   "Wo kann ich auf Curaçao bei Cocktails den Sonnenuntergang sehen?"
+  ],
+  "es": [
+   "¿Dónde está la mejor vida nocturna de Curazao?",
+   "¿Qué beach club de Curazao es mejor para fiesta?",
+   "¿Dónde puedo ver el atardecer con cócteles en Curazao?"
+  ],
+  "pt": [
+   "Onde fica a melhor vida noturna de Curaçao?",
+   "Qual beach club de Curaçao é o melhor para festa?",
+   "Onde posso ver o pôr do sol com coquetéis em Curaçao?"
   ]
- },
- "talen": [
-  "nl",
-  "en"
- ]
+ }
 }
