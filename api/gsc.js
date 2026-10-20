@@ -136,6 +136,14 @@ export default async function handler(req, res) {
   const oidc = String(req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN || '');
   const isCron = /vercel-cron/i.test(String(req.headers['user-agent'] || '')); const isToken = !!process.env.HJDK_TOKEN && url.searchParams.get('token') === process.env.HJDK_TOKEN;
   try {
+    if (op === 'yoors') { // Yoors Shop in Search Console (Henkjan 20 okt "Nu ook bing voor console"): eigendom zoeken en sitemaps indienen
+      if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const l = await sites(oidc); const prop = propFor(l, 'yoo.rs');
+      if (!prop) return res.status(200).json({ ok: false, fout: 'serviceaccount heeft geen toegang tot yoo.rs in Search Console', eigendommen: l, oplossing: 'Search Console > yoo.rs > Instellingen > Gebruikers en rechten > Gebruiker toevoegen: seo-leerlus@hjdk-seo.iam.gserviceaccount.com (Volledig)' });
+      const maps = ['https://keuzehulp.best/api/shop/sitemap', 'https://yoo.rs/sitemap/xml/sitemap-image-index.xml']; const uit = {};
+      for (const m of maps) uit[m] = await submitSitemap(prop, m, oidc);
+      return res.status(200).json({ ok: true, eigendom: prop, sitemaps: uit });
+    }
     if (op === 'merchant') { // Merchant Center Yoors (Henkjan 20 okt: "Check merchant center of ik die kan verbeteren"): account- en productmeldingen via de Merchant API, zelfde serviceaccount als Search Console
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const { merchantStand } = await import('../lib/merchant.js'); const { token } = await import('../lib/gsc.js'); return res.status(200).json(await merchantStand(await token(oidc, 'https://www.googleapis.com/auth/content'), url.searchParams.get('account') || '5875752564', { dev: url.searchParams.get('dev') || '' }));

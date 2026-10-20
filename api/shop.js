@@ -764,6 +764,11 @@ export default async function handler(req, res) {
     if (op === 'img') return await plaatje(req, res, url);
     res.setHeader('cache-control', 'no-store');
     if (op === 'voorpa') return res.status(200).json(Object.assign({ ok: true }, await voorNet(['ra', 'ca'].includes(url.searchParams.get('net')) ? url.searchParams.get('net') : 'pa')));
+    if (op === 'sitemap') { // openbare sitemap van alle shopproducten op yoo.rs (20 okt: yoo.rs/sitemap.xml werkt niet); ingediend bij Google en Bing voor yoo.rs
+      const items = (await catalog(true)).items || []; const nu = new Date().toISOString().slice(0, 10);
+      const xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n<url><loc>https://yoo.rs/shop</loc><lastmod>' + nu + '</lastmod></url>\n' + items.map(i => '<url><loc>https://yoo.rs/product/' + encodeURIComponent(i.id) + '?lang=nl</loc><lastmod>' + nu + '</lastmod></url>').join('\n') + '\n</urlset>';
+      res.setHeader('content-type', 'application/xml; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(200).send(xml);
+    }
     if (op === 'prompt') { // kant-en-klare opdracht voor Babita's Claude Code (lib/shopprompt.js), live cijfers; met haar eigen link of via de beschermde host
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; const bk = await kv.get(K.babitakey).catch(() => null); const k = url.searchParams.get('k');
       if (!/\.vercel\.app$/i.test(host) && !(bk && k === bk)) return res.status(404).send('Niet gevonden');
