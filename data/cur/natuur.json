@@ -3,35 +3,56 @@
  "peildatum": "2026-10-20",
  "onderwerp": {
   "nl": "natuurgebied",
-  "en": "nature spot"
+  "en": "nature spot",
+  "de": "Naturort",
+  "es": "lugar natural",
+  "pt": "local natural"
  },
  "h1": {
   "nl": "Natuur op Curaçao: welk park, welke wandeling of welke natuurplek past bij jou?",
-  "en": "Nature on Curaçao: which park, hike or outdoor spot suits you?"
+  "en": "Nature on Curaçao: which park, hike or outdoor spot suits you?",
+  "de": "Natur auf Curaçao: Welcher Park, welche Wanderung oder welcher Ort draußen passt zu dir?",
+  "es": "Naturaleza en Curazao: ¿qué parque, caminata o lugar al aire libre te conviene?",
+  "pt": "Natureza em Curaçao: qual parque, trilha ou lugar ao ar livre combina com você?"
  },
  "titel": {
   "nl": "Natuur op Curaçao: {n} parken, wandelingen en plekken",
-  "en": "Curaçao Nature: {n} Parks, Hikes and Wildlife Spots"
+  "en": "Curaçao Nature: {n} Parks, Hikes and Wildlife Spots",
+  "de": "Natur auf Curaçao: {n} Parks, Wanderungen und Orte für Tiere",
+  "es": "Naturaleza en Curazao: {n} parques, caminatas y lugares para ver fauna",
+  "pt": "Natureza em Curaçao: {n} parques, trilhas e lugares para ver animais"
  },
  "metaDesc": {
   "nl": "{n} natuurplekken op Curaçao vergeleken: Christoffelpark, Shete Boka, flamingo's, schildpadden, grotten. Met entreeprijzen, openingstijden en reviewscores.",
-  "en": "{n} Curaçao nature spots compared: Christoffel Park, Shete Boka, flamingos, turtles, caves. With entry fees, hours and review scores."
+  "en": "{n} Curaçao nature spots compared: Christoffel Park, Shete Boka, flamingos, turtles, caves. With entry fees, hours and review scores.",
+  "de": "{n} Naturorte auf Curaçao im Vergleich: Christoffel Park, Shete Boka, Flamingos, Schildkröten, Höhlen. Mit Eintrittspreisen, Öffnungszeiten und Bewertungen.",
+  "es": "{n} lugares naturales de Curazao comparados: Parque Christoffel, Shete Boka, flamencos, tortugas, cuevas. Con precios de entrada, horarios y calificaciones.",
+  "pt": "{n} lugares naturais de Curaçao comparados: Parque Christoffel, Shete Boka, flamingos, tartarugas, cavernas. Com preços de entrada, horários e notas."
  },
  "kort": {
   "nl": "We vergeleken 33 natuurplekken en buitenactiviteiten op Curaçao. De nationale parken Christoffelpark en Shete Boka kosten $15 per volwassene; flamingo's bij Jan Kok, schildpadden bij Playa Grandi en Watamula zijn gratis. Wandelaars kiezen de Christoffelberg (start vóór 10:00), wie met kinderen of een rolstoel gaat kiest Rif Mangrove Park of Shete Boka.",
-  "en": "We compared 33 nature spots and outdoor activities on Curaçao. The national parks, Christoffel and Shete Boka, cost $15 per adult; flamingos at Jan Kok, turtles at Playa Grandi and Watamula Hole are free. Hikers should pick Mount Christoffel (start before 10 a.m.); families or wheelchair users do best at Rif Mangrove Park or Shete Boka."
+  "en": "We compared 33 nature spots and outdoor activities on Curaçao. The national parks, Christoffel and Shete Boka, cost $15 per adult; flamingos at Jan Kok, turtles at Playa Grandi and Watamula Hole are free. Hikers should pick Mount Christoffel (start before 10 a.m.); families or wheelchair users do best at Rif Mangrove Park or Shete Boka.",
+  "de": "Wir haben 33 Naturorte und Outdoor-Aktivitäten auf Curaçao verglichen. Die Nationalparks Christoffel und Shete Boka kosten 15 $ pro Erwachsenem; Flamingos bei Jan Kok, Schildkröten am Playa Grandi und das Watamula Hole sind kostenlos. Wer wandern will, nimmt den Mount Christoffel (Start vor 10 Uhr); Familien und Rollstuhlfahrer sind im Rif Mangrove Park oder in Shete Boka am besten aufgehoben.",
+  "es": "Comparamos 33 lugares naturales y actividades al aire libre en Curazao. Los parques nacionales Christoffel y Shete Boka cuestan $15 por adulto; los flamencos en Jan Kok, las tortugas en Playa Grandi y el Watamula Hole son gratis. Para caminar, lo mejor es el Mount Christoffel (empieza antes de las 10 a. m.); las familias y quienes usan silla de ruedas estarán mejor en el Rif Mangrove Park o en Shete Boka.",
+  "pt": "Comparamos 33 lugares naturais e atividades ao ar livre em Curaçao. Os parques nacionais Christoffel e Shete Boka custam $15 por adulto; os flamingos em Jan Kok, as tartarugas em Playa Grandi e o Watamula Hole são gratuitos. Para fazer trilha, o melhor é o Mount Christoffel (comece antes das 10h); famílias e cadeirantes se dão melhor no Rif Mangrove Park ou em Shete Boka."
  },
  "vragen": [
   {
    "q": {
     "nl": "Wat wil je vooral doen?",
-    "en": "What do you mainly want to do?"
+    "en": "What do you mainly want to do?",
+    "de": "Was möchtest du vor allem machen?",
+    "es": "¿Qué quieres hacer principalmente?",
+    "pt": "O que você quer fazer principalmente?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit, gewoon de natuur in",
-      "en": "Doesn't matter, just get outdoors"
+      "en": "Doesn't matter, just get outdoors",
+      "de": "Egal, Hauptsache draußen",
+      "es": "Da igual, solo quiero estar al aire libre",
+      "pt": "Tanto faz, só quero ficar ao ar livre"
      },
      "plus": [],
      "min": [],
@@ -40,7 +61,10 @@
     {
      "label": {
       "nl": "Wandelen of klimmen",
-      "en": "Hike or climb"
+      "en": "Hike or climb",
+      "de": "Wandern oder klettern",
+      "es": "Caminar o escalar",
+      "pt": "Fazer trilha ou escalar"
      },
      "plus": [
       "wandelen",
@@ -52,7 +76,10 @@
     {
      "label": {
       "nl": "Dieren zien (flamingo's, schildpadden, vogels)",
-      "en": "See animals (flamingos, turtles, birds)"
+      "en": "See animals (flamingos, turtles, birds)",
+      "de": "Tiere sehen (Flamingos, Schildkröten, Vögel)",
+      "es": "Ver animales (flamencos, tortugas, aves)",
+      "pt": "Ver animais (flamingos, tartarugas, aves)"
      },
      "plus": [
       "flamingo",
@@ -65,7 +92,10 @@
     {
      "label": {
       "nl": "Grotten en ruige kust",
-      "en": "Caves and wild coast"
+      "en": "Caves and wild coast",
+      "de": "Höhlen und wilde Küste",
+      "es": "Cuevas y costa salvaje",
+      "pt": "Cavernas e costa selvagem"
      },
      "plus": [
       "grotten",
@@ -77,7 +107,10 @@
     {
      "label": {
       "nl": "Iets makkelijks met kinderen",
-      "en": "Something easy with kids"
+      "en": "Something easy with kids",
+      "de": "Etwas Leichtes mit Kindern",
+      "es": "Algo fácil con niños",
+      "pt": "Algo fácil com crianças"
      },
      "plus": [
       "kinderen",
@@ -93,13 +126,19 @@
   {
    "q": {
     "nl": "Hoe fit ben je?",
-    "en": "How fit are you?"
+    "en": "How fit are you?",
+    "de": "Wie fit bist du?",
+    "es": "¿Qué tan en forma estás?",
+    "pt": "Qual é a sua forma física?"
    },
    "opties": [
     {
      "label": {
       "nl": "Gemiddeld",
-      "en": "Average"
+      "en": "Average",
+      "de": "Durchschnittlich",
+      "es": "Normal",
+      "pt": "Média"
      },
      "plus": [],
      "min": [],
@@ -108,7 +147,10 @@
     {
      "label": {
       "nl": "Liever rustig aan",
-      "en": "I prefer to take it easy"
+      "en": "I prefer to take it easy",
+      "de": "Ich nehme es lieber ruhig",
+      "es": "Prefiero ir con calma",
+      "pt": "Prefiro ir com calma"
      },
      "plus": [
       "makkelijk"
@@ -121,7 +163,10 @@
     {
      "label": {
       "nl": "Sportief, ik wil zweten",
-      "en": "Fit, I want a workout"
+      "en": "Fit, I want a workout",
+      "de": "Fit, ich will mich auspowern",
+      "es": "En forma, quiero un buen ejercicio",
+      "pt": "Em forma, quero um bom treino"
      },
      "plus": [
       "zwaar",
@@ -133,7 +178,10 @@
     {
      "label": {
       "nl": "Rolstoel of slecht ter been",
-      "en": "Wheelchair or limited mobility"
+      "en": "Wheelchair or limited mobility",
+      "de": "Rollstuhl oder eingeschränkte Mobilität",
+      "es": "Silla de ruedas o movilidad reducida",
+      "pt": "Cadeira de rodas ou mobilidade reduzida"
      },
      "plus": [
       "rolstoel",
@@ -150,13 +198,19 @@
   {
    "q": {
     "nl": "Welke kant van het eiland?",
-    "en": "Which part of the island?"
+    "en": "Which part of the island?",
+    "de": "Welcher Teil der Insel?",
+    "es": "¿Qué parte de la isla?",
+    "pt": "Que parte da ilha?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit, we rijden",
-      "en": "Doesn't matter, we'll drive"
+      "en": "Doesn't matter, we'll drive",
+      "de": "Egal, wir fahren mit dem Auto",
+      "es": "Da igual, iremos en coche",
+      "pt": "Tanto faz, vamos de carro"
      },
      "plus": [],
      "min": [],
@@ -165,7 +219,10 @@
     {
      "label": {
       "nl": "West (Westpunt, Banda Abou)",
-      "en": "West (Westpunt, Banda Abou)"
+      "en": "West (Westpunt, Banda Abou)",
+      "de": "Westen (Westpunt, Banda Abou)",
+      "es": "Oeste (Westpunt, Banda Abou)",
+      "pt": "Oeste (Westpunt, Banda Abou)"
      },
      "plus": [
       "westpunt"
@@ -176,7 +233,10 @@
     {
      "label": {
       "nl": "Midden (Willemstad, Sint Willibrordus)",
-      "en": "Central (Willemstad, Sint Willibrordus)"
+      "en": "Central (Willemstad, Sint Willibrordus)",
+      "de": "Mitte (Willemstad, Sint Willibrordus)",
+      "es": "Centro (Willemstad, Sint Willibrordus)",
+      "pt": "Centro (Willemstad, Sint Willibrordus)"
      },
      "plus": [
       "midden"
@@ -187,7 +247,10 @@
     {
      "label": {
       "nl": "Oost (Jan Thiel, Spaanse Water)",
-      "en": "East (Jan Thiel, Spanish Water)"
+      "en": "East (Jan Thiel, Spanish Water)",
+      "de": "Osten (Jan Thiel, Spanish Water)",
+      "es": "Este (Jan Thiel, Spanish Water)",
+      "pt": "Leste (Jan Thiel, Spanish Water)"
      },
      "plus": [
       "oost"
@@ -200,13 +263,19 @@
   {
    "q": {
     "nl": "Wil je entree betalen?",
-    "en": "Okay with paying entry?"
+    "en": "Okay with paying entry?",
+    "de": "Ist Eintritt okay?",
+    "es": "¿Te parece bien pagar entrada?",
+    "pt": "Tudo bem pagar entrada?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "Doesn't matter"
+      "en": "Doesn't matter",
+      "de": "Egal",
+      "es": "Da igual",
+      "pt": "Tanto faz"
      },
      "plus": [],
      "min": [],
@@ -215,7 +284,10 @@
     {
      "label": {
       "nl": "Liefst gratis",
-      "en": "Free if possible"
+      "en": "Free if possible",
+      "de": "Wenn möglich kostenlos",
+      "es": "Gratis si es posible",
+      "pt": "De graça, se possível"
      },
      "plus": [
       "gratis"
@@ -235,7 +307,10 @@
    "url": "https://www.christoffelpark.org/",
    "soort": {
     "nl": "nationaal park",
-    "en": "national park"
+    "en": "national park",
+    "de": "Nationalpark",
+    "es": "parque nacional",
+    "pt": "parque nacional"
    },
    "plaats": "Savonet, Westpunt",
    "tags": [
@@ -251,7 +326,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene, kind 6-12 $2",
-     "en": "per adult, kids 6-12 $2"
+     "en": "per adult, kids 6-12 $2",
+     "de": "pro Erwachsenem, Kinder 6 bis 12 Jahre 2 $",
+     "es": "por adulto, niños de 6 a 12 años $2",
+     "pt": "por adulto, crianças de 6 a 12 anos $2"
     },
     "bron": "https://www.christoffelpark.org/opening-hours-fees",
     "datum": "2026-10"
@@ -259,15 +337,24 @@
    "feiten": [
     {
      "nl": "Open 6:00 tot 15:00",
-     "en": "Open 6 a.m. to 3 p.m."
+     "en": "Open 6 a.m. to 3 p.m.",
+     "de": "Geöffnet von 6 bis 15 Uhr",
+     "es": "Abierto de 6 a. m. a 3 p. m.",
+     "pt": "Aberto das 6h às 15h"
     },
     {
      "nl": "Acht wandelroutes, zonder gids",
-     "en": "Eight trails, no guide needed"
+     "en": "Eight trails, no guide needed",
+     "de": "Acht Wanderwege, kein Guide nötig",
+     "es": "Ocho senderos, no hace falta guía",
+     "pt": "Oito trilhas, sem necessidade de guia"
     },
     {
      "nl": "Onder 6 jaar gratis",
-     "en": "Free under age 6"
+     "en": "Free under age 6",
+     "de": "Kostenlos unter 6 Jahren",
+     "es": "Gratis para menores de 6 años",
+     "pt": "Grátis para menores de 6 anos"
     }
    ],
    "scores": [
@@ -296,6 +383,18 @@
     "en": [
      "Many trails, from short shady walks to a summit hike",
      "Chance of white-tailed deer and lots of birds"
+    ],
+    "de": [
+     "Viele Wege, von kurzen Spaziergängen im Schatten bis zur Gipfelwanderung",
+     "Mit etwas Glück siehst du Weißwedelhirsche und viele Vögel"
+    ],
+    "es": [
+     "Muchos senderos, desde caminatas cortas a la sombra hasta la subida a la cima",
+     "Posibilidad de ver venados de cola blanca y muchas aves"
+    ],
+    "pt": [
+     "Muitas trilhas, de caminhadas curtas na sombra até a subida ao topo",
+     "Chance de ver cervos-de-cauda-branca e muitas aves"
     ]
    },
    "tegen": {
@@ -306,6 +405,18 @@
     "en": [
      "Very hot after 10 a.m., come early",
      "Deer don't always show up"
+    ],
+    "de": [
+     "Nach 10 Uhr sehr heiß, komm früh",
+     "Die Hirsche zeigen sich nicht immer"
+    ],
+    "es": [
+     "Muy caluroso después de las 10 a. m., ven temprano",
+     "Los venados no siempre aparecen"
+    ],
+    "pt": [
+     "Muito quente depois das 10h, chegue cedo",
+     "Os cervos nem sempre aparecem"
     ]
    },
    "bronnen": [
@@ -321,7 +432,10 @@
    "url": "https://www.christoffelpark.org/hiking-trails",
    "soort": {
     "nl": "bergtocht, hoogste punt",
-    "en": "summit hike, highest point"
+    "en": "summit hike, highest point",
+    "de": "Gipfelwanderung, höchster Punkt",
+    "es": "subida a la cima, el punto más alto",
+    "pt": "trilha até o topo, o ponto mais alto"
    },
    "plaats": "Christoffelpark, Westpunt",
    "tags": [
@@ -337,7 +451,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene, kind 6-12 $2",
-     "en": "per adult, kids 6-12 $2"
+     "en": "per adult, kids 6-12 $2",
+     "de": "pro Erwachsenem, Kinder 6 bis 12 Jahre 2 $",
+     "es": "por adulto, niños de 6 a 12 años $2",
+     "pt": "por adulto, crianças de 6 a 12 anos $2"
     },
     "bron": "https://www.christoffelpark.org/opening-hours-fees",
     "datum": "2026-10"
@@ -345,15 +462,24 @@
    "feiten": [
     {
      "nl": "Starten uiterlijk 10:00",
-     "en": "Must start by 10 a.m."
+     "en": "Must start by 10 a.m.",
+     "de": "Start spätestens um 10 Uhr",
+     "es": "Hay que empezar antes de las 10 a. m.",
+     "pt": "É preciso começar até as 10h"
     },
     {
      "nl": "2 tot 3 uur heen en terug",
-     "en": "2 to 3 hours round trip"
+     "en": "2 to 3 hours round trip",
+     "de": "2 bis 3 Stunden hin und zurück",
+     "es": "2 a 3 horas ida y vuelta",
+     "pt": "2 a 3 horas ida e volta"
     },
     {
      "nl": "Neem 2 liter water mee",
-     "en": "Bring 2 liters of water"
+     "en": "Bring 2 liters of water",
+     "de": "2 Liter Wasser mitnehmen",
+     "es": "Lleva 2 litros de agua",
+     "pt": "Leve 2 litros de água"
     }
    ],
    "scores": [
@@ -374,6 +500,18 @@
     "en": [
      "360-degree view over the whole island",
      "Trail alternates shade and open stretches"
+    ],
+    "de": [
+     "360-Grad-Blick über die ganze Insel",
+     "Der Weg wechselt zwischen Schatten und offenen Abschnitten"
+    ],
+    "es": [
+     "Vista de 360 grados de toda la isla",
+     "El sendero alterna tramos con sombra y tramos al descubierto"
+    ],
+    "pt": [
+     "Vista de 360 graus de toda a ilha",
+     "A trilha alterna trechos com sombra e trechos abertos"
     ]
    },
    "tegen": {
@@ -386,6 +524,21 @@
      "Last 15 minutes are steep rock scrambling",
      "Arriving late means heat and hard parking",
      "Spiny cacti along the trail"
+    ],
+    "de": [
+     "Die letzten 15 Minuten sind steiles Klettern über Fels",
+     "Wer spät kommt, erwischt Hitze und schlechte Parkplätze",
+     "Stachelige Kakteen am Weg"
+    ],
+    "es": [
+     "Los últimos 15 minutos son una trepada empinada por roca",
+     "Si llegas tarde, te encuentras con calor y poco estacionamiento",
+     "Cactus espinosos a lo largo del sendero"
+    ],
+    "pt": [
+     "Os últimos 15 minutos são uma escalada íngreme na rocha",
+     "Quem chega tarde enfrenta calor e dificuldade para estacionar",
+     "Cactos espinhosos ao longo da trilha"
     ]
    },
    "bronnen": [
@@ -402,7 +555,10 @@
    "url": "https://www.christoffelpark.org/hiking-trails",
    "soort": {
     "nl": "makkelijke parkroutes",
-    "en": "easy park trails"
+    "en": "easy park trails",
+    "de": "einfache Wege im Park",
+    "es": "senderos fáciles del parque",
+    "pt": "trilhas fáceis do parque"
    },
    "plaats": "Christoffelpark, noordkust",
    "tags": [
@@ -419,7 +575,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene, kind 6-12 $2",
-     "en": "per adult, kids 6-12 $2"
+     "en": "per adult, kids 6-12 $2",
+     "de": "pro Erwachsenem, Kinder 6 bis 12 Jahre 2 $",
+     "es": "por adulto, niños de 6 a 12 años $2",
+     "pt": "por adulto, crianças de 6 a 12 anos $2"
     },
     "bron": "https://www.christoffelpark.org/opening-hours-fees",
     "datum": "2026-10"
@@ -427,15 +586,24 @@
    "feiten": [
     {
      "nl": "Boka Grandi-trail 1,5 uur",
-     "en": "Boka Grandi trail 1.5 hours"
+     "en": "Boka Grandi trail 1.5 hours",
+     "de": "Boka-Grandi-Weg, 1,5 Stunden",
+     "es": "Sendero Boka Grandi, 1,5 horas",
+     "pt": "Trilha Boka Grandi, 1,5 hora"
     },
     {
      "nl": "Gele trail 20 min, schaduw",
-     "en": "Yellow trail 20 min, shaded"
+     "en": "Yellow trail 20 min, shaded",
+     "de": "Gelber Weg, 20 Min., schattig",
+     "es": "Sendero amarillo, 20 min, con sombra",
+     "pt": "Trilha amarela, 20 min, com sombra"
     },
     {
      "nl": "Groene trail 40 min, makkelijk",
-     "en": "Green trail 40 min, easy"
+     "en": "Green trail 40 min, easy",
+     "de": "Grüner Weg, 40 Min., leicht",
+     "es": "Sendero verde, 40 min, fácil",
+     "pt": "Trilha verde, 40 min, fácil"
     }
    ],
    "scores": [
@@ -456,11 +624,26 @@
     "en": [
      "Quiet route past plantation, forest and salt pan",
      "Good for birds like parakeets and troupials"
+    ],
+    "de": [
+     "Ruhige Route an Plantage, Wald und Salzpfanne vorbei",
+     "Gut für Vögel wie Sittiche und Trupiale"
+    ],
+    "es": [
+     "Ruta tranquila junto a una plantación, bosque y salina",
+     "Ideal para ver aves como periquitos y turpiales"
+    ],
+    "pt": [
+     "Rota tranquila passando por plantação, floresta e salina",
+     "Bom para ver aves como periquitos e sofrês"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.christoffelpark.org/hiking-trails",
@@ -474,7 +657,10 @@
    "url": "https://www.christoffelpark.org/hiking-trails",
    "soort": {
     "nl": "route met gids",
-    "en": "guided-only trail"
+    "en": "guided-only trail",
+    "de": "Wanderweg nur mit Guide",
+    "es": "sendero solo con guía",
+    "pt": "trilha somente com guia"
    },
    "plaats": "Christoffelpark, Westpunt",
    "tags": [
@@ -488,11 +674,17 @@
    "feiten": [
     {
      "nl": "Alleen met gids",
-     "en": "Guide required"
+     "en": "Guide required",
+     "de": "Guide ist Pflicht",
+     "es": "Guía obligatorio",
+     "pt": "Guia obrigatório"
     },
     {
      "nl": "Boeken via Carmabi",
-     "en": "Book through Carmabi"
+     "en": "Book through Carmabi",
+     "de": "Buchung über Carmabi",
+     "es": "Reserva a través de Carmabi",
+     "pt": "Reserva pela Carmabi"
     }
    ],
    "scores": [],
@@ -502,11 +694,23 @@
     ],
     "en": [
      "Less crowded than Mount Christoffel"
+    ],
+    "de": [
+     "Weniger voll als der Mount Christoffel"
+    ],
+    "es": [
+     "Menos concurrido que el Mount Christoffel"
+    ],
+    "pt": [
+     "Menos movimentado que o Mount Christoffel"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.christoffelpark.org/hiking-trails",
@@ -519,7 +723,10 @@
    "url": "https://www.christoffelpark.org/",
    "soort": {
     "nl": "natuur- en plantagemuseum",
-    "en": "nature and plantation museum"
+    "en": "nature and plantation museum",
+    "de": "Natur- und Plantagenmuseum",
+    "es": "museo de naturaleza y plantación",
+    "pt": "museu da natureza e da plantação"
    },
    "plaats": "Ingang Christoffelpark",
    "tags": [
@@ -533,7 +740,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon, los ticket; gratis bij parkentree",
-     "en": "per person, museum only; included with park entry"
+     "en": "per person, museum only; included with park entry",
+     "de": "pro Person, nur Museum; im Parkeintritt enthalten",
+     "es": "por persona, solo el museo; incluido en la entrada al parque",
+     "pt": "por pessoa, só o museu; incluído na entrada do parque"
     },
     "bron": "https://www.christoffelpark.org/opening-hours-fees",
     "datum": "2026-10"
@@ -541,11 +751,17 @@
    "feiten": [
     {
      "nl": "Open 6:00 tot 14:00",
-     "en": "Open 6 a.m. to 2 p.m."
+     "en": "Open 6 a.m. to 2 p.m.",
+     "de": "Geöffnet von 6 bis 14 Uhr",
+     "es": "Abierto de 6 a. m. a 2 p. m.",
+     "pt": "Aberto das 6h às 14h"
     },
     {
      "nl": "Expositie Nos Naturalesa",
-     "en": "Nos Naturalesa exhibit"
+     "en": "Nos Naturalesa exhibit",
+     "de": "Ausstellung Nos Naturalesa",
+     "es": "Exposición Nos Naturalesa",
+     "pt": "Exposição Nos Naturalesa"
     }
    ],
    "scores": [],
@@ -555,11 +771,23 @@
     ],
     "en": [
      "Good intro before exploring the park's nature"
+    ],
+    "de": [
+     "Guter Einstieg, bevor du die Natur im Park erkundest"
+    ],
+    "es": [
+     "Buena introducción antes de explorar la naturaleza del parque"
+    ],
+    "pt": [
+     "Boa introdução antes de explorar a natureza do parque"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.christoffelpark.org/opening-hours-fees",
@@ -573,7 +801,10 @@
    "url": null,
    "soort": {
     "nl": "jeepsafari",
-    "en": "jeep safari"
+    "en": "jeep safari",
+    "de": "Jeep-Safari",
+    "es": "safari en jeep",
+    "pt": "safári de jipe"
    },
    "plaats": "Christoffelpark",
    "tags": [
@@ -587,7 +818,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene, parkentree inbegrepen",
-     "en": "per adult, park entry included"
+     "en": "per adult, park entry included",
+     "de": "pro Erwachsenem, Parkeintritt inklusive",
+     "es": "por adulto, entrada al parque incluida",
+     "pt": "por adulto, entrada do parque incluída"
     },
     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11448545-National_Park_Jeep_Safari-Curacao.html",
     "datum": "2026-10"
@@ -595,15 +829,24 @@
    "feiten": [
     {
      "nl": "6 uur",
-     "en": "6 hours"
+     "en": "6 hours",
+     "de": "6 Stunden",
+     "es": "6 horas",
+     "pt": "6 horas"
     },
     {
      "nl": "Maximaal 16 personen",
-     "en": "Maximum 16 people"
+     "en": "Maximum 16 people",
+     "de": "Maximal 16 Personen",
+     "es": "Máximo 16 personas",
+     "pt": "Máximo de 16 pessoas"
     },
     {
      "nl": "Vanaf 6 jaar",
-     "en": "Ages 6 and up"
+     "en": "Ages 6 and up",
+     "de": "Ab 6 Jahren",
+     "es": "Desde los 6 años",
+     "pt": "A partir de 6 anos"
     }
    ],
    "scores": [
@@ -624,6 +867,18 @@
     "en": [
      "Guides explain nature and culture well",
      "Scenic north coast stops"
+    ],
+    "de": [
+     "Die Guides erklären Natur und Kultur richtig gut",
+     "Schöne Stopps an der Nordküste"
+    ],
+    "es": [
+     "Los guías explican muy bien la naturaleza y la cultura",
+     "Paradas panorámicas en la costa norte"
+    ],
+    "pt": [
+     "Os guias explicam muito bem a natureza e a cultura",
+     "Paradas panorâmicas na costa norte"
     ]
    },
    "tegen": {
@@ -632,6 +887,15 @@
     ],
     "en": [
      "Bumpy roads, hard on bad backs"
+    ],
+    "de": [
+     "Holprige Straßen, nichts für einen schlechten Rücken"
+    ],
+    "es": [
+     "Caminos con baches, difíciles para quien tiene mala espalda"
+    ],
+    "pt": [
+     "Estradas esburacadas, ruins para quem tem problema nas costas"
     ]
    },
    "bronnen": [
@@ -644,7 +908,10 @@
    "url": "http://www.shetebokapark.org/",
    "soort": {
     "nl": "nationaal park, noordkust",
-    "en": "national park, north coast"
+    "en": "national park, north coast",
+    "de": "Nationalpark, Nordküste",
+    "es": "parque nacional, costa norte",
+    "pt": "parque nacional, costa norte"
    },
    "plaats": "Noordkust bij Westpunt",
    "tags": [
@@ -660,7 +927,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene, alleen contant",
-     "en": "per adult, cash only"
+     "en": "per adult, cash only",
+     "de": "pro Erwachsenem, nur Bargeld",
+     "es": "por adulto, solo efectivo",
+     "pt": "por adulto, somente dinheiro"
     },
     "bron": "https://wanderlog.com/place/details/561995",
     "datum": "2026-10"
@@ -668,15 +938,24 @@
    "feiten": [
     {
      "nl": "Open 8:00 tot 16:00",
-     "en": "Open 8 a.m. to 4 p.m."
+     "en": "Open 8 a.m. to 4 p.m.",
+     "de": "Geöffnet von 8 bis 16 Uhr",
+     "es": "Abierto de 8 a. m. a 4 p. m.",
+     "pt": "Aberto das 8h às 16h"
     },
     {
      "nl": "Kassa sluit om 15:00",
-     "en": "Ticket office closes 3 p.m."
+     "en": "Ticket office closes 3 p.m.",
+     "de": "Die Kasse schließt um 15 Uhr",
+     "es": "La taquilla cierra a las 3 p. m.",
+     "pt": "A bilheteria fecha às 15h"
     },
     {
      "nl": "Bijna 10 km kustlijn",
-     "en": "Almost 10 km of coastline"
+     "en": "Almost 10 km of coastline",
+     "de": "Fast 10 km Küste",
+     "es": "Casi 10 km de costa",
+     "pt": "Quase 10 km de costa"
     }
    ],
    "scores": [
@@ -707,6 +986,21 @@
      "Waves crash into the inlets with real force",
      "Short walks from each parking area",
      "Friendly staff at the entrance"
+    ],
+    "de": [
+     "Die Wellen krachen mit echter Wucht in die Buchten",
+     "Kurze Wege ab jedem Parkplatz",
+     "Freundliches Personal am Eingang"
+    ],
+    "es": [
+     "Las olas se estrellan con fuerza en las calas",
+     "Caminatas cortas desde cada estacionamiento",
+     "Personal amable en la entrada"
+    ],
+    "pt": [
+     "As ondas batem com força nas enseadas",
+     "Caminhadas curtas a partir de cada estacionamento",
+     "Equipe simpática na entrada"
     ]
    },
    "tegen": {
@@ -719,6 +1013,21 @@
      "No shade anywhere, bring water",
      "Swimming mostly unsafe due to currents",
      "Narrow, winding road between the inlets"
+    ],
+    "de": [
+     "Nirgends Schatten, nimm Wasser mit",
+     "Baden meist unsicher wegen der Strömungen",
+     "Schmale, kurvige Straße zwischen den Buchten"
+    ],
+    "es": [
+     "No hay sombra en ningún lado, lleva agua",
+     "Bañarse suele ser peligroso por las corrientes",
+     "Camino estrecho y sinuoso entre las calas"
+    ],
+    "pt": [
+     "Não há sombra em lugar nenhum, leve água",
+     "Nadar geralmente é perigoso por causa das correntes",
+     "Estrada estreita e sinuosa entre as enseadas"
     ]
    },
    "bronnen": [
@@ -735,7 +1044,10 @@
    "url": "http://www.shetebokapark.org/",
    "soort": {
     "nl": "zeegrot in Shete Boka",
-    "en": "sea cave in Shete Boka"
+    "en": "sea cave in Shete Boka",
+    "de": "Meereshöhle in Shete Boka",
+    "es": "cueva marina en Shete Boka",
+    "pt": "caverna marinha em Shete Boka"
    },
    "plaats": "Shete Boka, noordkust",
    "tags": [
@@ -751,7 +1063,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene, alleen contant",
-     "en": "per adult, cash only"
+     "en": "per adult, cash only",
+     "de": "pro Erwachsenem, nur Bargeld",
+     "es": "por adulto, solo efectivo",
+     "pt": "por adulto, somente dinheiro"
     },
     "bron": "https://wanderlog.com/place/details/561995",
     "datum": "2026-10"
@@ -759,11 +1074,17 @@
    "feiten": [
     {
      "nl": "Trap naar de grotmond",
-     "en": "Steps down to the cave"
+     "en": "Steps down to the cave",
+     "de": "Stufen hinunter zur Höhle",
+     "es": "Escalones hasta la cueva",
+     "pt": "Degraus até a caverna"
     },
     {
      "nl": "Binnen Shete Boka-entree",
-     "en": "Included in Shete Boka entry"
+     "en": "Included in Shete Boka entry",
+     "de": "Im Eintritt für Shete Boka enthalten",
+     "es": "Incluida en la entrada a Shete Boka",
+     "pt": "Incluída na entrada de Shete Boka"
     }
    ],
    "scores": [
@@ -792,6 +1113,18 @@
     "en": [
      "From inside the cave you watch waves roll in",
      "Short walk from the parking area"
+    ],
+    "de": [
+     "Aus der Höhle siehst du die Wellen hereinrollen",
+     "Kurzer Fußweg vom Parkplatz"
+    ],
+    "es": [
+     "Desde dentro de la cueva ves entrar las olas",
+     "Caminata corta desde el estacionamiento"
+    ],
+    "pt": [
+     "De dentro da caverna você vê as ondas chegando",
+     "Caminhada curta a partir do estacionamento"
     ]
    },
    "tegen": {
@@ -800,6 +1133,15 @@
     ],
     "en": [
      "Risky in rough surf and bad weather"
+    ],
+    "de": [
+     "Bei hohem Seegang und schlechtem Wetter riskant"
+    ],
+    "es": [
+     "Riesgoso con oleaje fuerte y mal tiempo"
+    ],
+    "pt": [
+     "Arriscado com mar agitado e mau tempo"
     ]
    },
    "bronnen": [
@@ -814,7 +1156,10 @@
    "url": "http://www.shetebokapark.org/",
    "soort": {
     "nl": "natuurlijke rotsbrug",
-    "en": "natural rock bridge"
+    "en": "natural rock bridge",
+    "de": "natürliche Felsbrücke",
+    "es": "puente natural de roca",
+    "pt": "ponte natural de rocha"
    },
    "plaats": "Shete Boka, noordkust",
    "tags": [
@@ -829,7 +1174,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene, alleen contant",
-     "en": "per adult, cash only"
+     "en": "per adult, cash only",
+     "de": "pro Erwachsenem, nur Bargeld",
+     "es": "por adulto, solo efectivo",
+     "pt": "por adulto, somente dinheiro"
     },
     "bron": "https://wanderlog.com/place/details/561995",
     "datum": "2026-10"
@@ -837,11 +1185,17 @@
    "feiten": [
     {
      "nl": "Natuurlijke brug van kalksteen",
-     "en": "Natural limestone bridge"
+     "en": "Natural limestone bridge",
+     "de": "Natürliche Kalksteinbrücke",
+     "es": "Puente natural de piedra caliza",
+     "pt": "Ponte natural de calcário"
     },
     {
      "nl": "Makkelijk gemarkeerd pad",
-     "en": "Easy marked trail"
+     "en": "Easy marked trail",
+     "de": "Leichter, markierter Weg",
+     "es": "Sendero fácil y señalizado",
+     "pt": "Trilha fácil e sinalizada"
     }
    ],
    "scores": [
@@ -860,11 +1214,23 @@
     ],
     "en": [
      "Quieter than Boka Tabla and easy to walk"
+    ],
+    "de": [
+     "Ruhiger als Boka Tabla und leicht zu laufen"
+    ],
+    "es": [
+     "Más tranquilo que Boka Tabla y fácil de recorrer"
+    ],
+    "pt": [
+     "Mais tranquilo que Boka Tabla e fácil de percorrer"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "http://www.shetebokapark.org/",
@@ -878,7 +1244,10 @@
    "url": "http://www.shetebokapark.org/",
    "soort": {
     "nl": "blaasgat in Shete Boka",
-    "en": "blowhole in Shete Boka"
+    "en": "blowhole in Shete Boka",
+    "de": "Blasloch in Shete Boka",
+    "es": "soplador (blowhole) en Shete Boka",
+    "pt": "blowhole (buraco que sopra) em Shete Boka"
    },
    "plaats": "Shete Boka, noordkust",
    "tags": [
@@ -892,7 +1261,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene, alleen contant",
-     "en": "per adult, cash only"
+     "en": "per adult, cash only",
+     "de": "pro Erwachsenem, nur Bargeld",
+     "es": "por adulto, solo efectivo",
+     "pt": "por adulto, somente dinheiro"
     },
     "bron": "https://wanderlog.com/place/details/561995",
     "datum": "2026-10"
@@ -900,11 +1272,17 @@
    "feiten": [
     {
      "nl": "Knal als van een pistool",
-     "en": "Gunshot-like boom of waves"
+     "en": "Gunshot-like boom of waves",
+     "de": "Wellen mit einem Knall wie ein Schuss",
+     "es": "Un estallido de las olas parecido a un disparo",
+     "pt": "Um estrondo das ondas parecido com um tiro"
     },
     {
      "nl": "Binnen Shete Boka-entree",
-     "en": "Included in Shete Boka entry"
+     "en": "Included in Shete Boka entry",
+     "de": "Im Eintritt für Shete Boka enthalten",
+     "es": "Incluida en la entrada a Shete Boka",
+     "pt": "Incluída na entrada de Shete Boka"
     }
    ],
    "scores": [],
@@ -914,6 +1292,15 @@
     ],
     "en": [
      "Impressive when the swell is high"
+    ],
+    "de": [
+     "Beeindruckend bei hohem Wellengang"
+    ],
+    "es": [
+     "Impresionante cuando hay mucho oleaje"
+    ],
+    "pt": [
+     "Impressionante quando o mar está agitado"
     ]
    },
    "tegen": {
@@ -922,6 +1309,15 @@
     ],
     "en": [
      "Little action on calm days"
+    ],
+    "de": [
+     "An ruhigen Tagen passiert kaum etwas"
+    ],
+    "es": [
+     "Los días de calma casi no pasa nada"
+    ],
+    "pt": [
+     "Em dias calmos quase não acontece nada"
     ]
    },
    "bronnen": [
@@ -936,7 +1332,10 @@
    "url": "http://www.shetebokapark.org/",
    "soort": {
     "nl": "schildpaddenstrandje",
-    "en": "turtle nesting cove"
+    "en": "turtle nesting cove",
+    "de": "Bucht, in der Schildkröten nisten",
+    "es": "cala donde anidan tortugas",
+    "pt": "enseada onde as tartarugas desovam"
    },
    "plaats": "Shete Boka, noordkust",
    "tags": [
@@ -950,7 +1349,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene, alleen contant",
-     "en": "per adult, cash only"
+     "en": "per adult, cash only",
+     "de": "pro Erwachsenem, nur Bargeld",
+     "es": "por adulto, solo efectivo",
+     "pt": "por adulto, somente dinheiro"
     },
     "bron": "https://wanderlog.com/place/details/561995",
     "datum": "2026-10"
@@ -958,11 +1360,17 @@
    "feiten": [
     {
      "nl": "Zeeschildpadden leggen hier eieren",
-     "en": "Sea turtles nest here"
+     "en": "Sea turtles nest here",
+     "de": "Hier nisten Meeresschildkröten",
+     "es": "Aquí anidan tortugas marinas",
+     "pt": "Aqui as tartarugas-marinhas desovam"
     },
     {
      "nl": "Nestseizoen mei tot december",
-     "en": "Nesting season May to December"
+     "en": "Nesting season May to December",
+     "de": "Nistzeit von Mai bis Dezember",
+     "es": "Temporada de anidación de mayo a diciembre",
+     "pt": "Temporada de desova de maio a dezembro"
     }
    ],
    "scores": [],
@@ -972,11 +1380,23 @@
     ],
     "en": [
      "Small beach between the cliffs"
+    ],
+    "de": [
+     "Kleiner Strand zwischen den Klippen"
+    ],
+    "es": [
+     "Pequeña playa entre los acantilados"
+    ],
+    "pt": [
+     "Pequena praia entre as falésias"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "http://www.shetebokapark.org/",
@@ -990,7 +1410,10 @@
    "url": null,
    "soort": {
     "nl": "blaasgat, gratis",
-    "en": "blowhole, free"
+    "en": "blowhole, free",
+    "de": "Blasloch, kostenlos",
+    "es": "soplador (blowhole), gratis",
+    "pt": "blowhole (buraco que sopra), grátis"
    },
    "plaats": "Noordwestpunt, voorbij Westpunt",
    "tags": [
@@ -1003,7 +1426,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis",
-     "en": "free"
+     "en": "free",
+     "de": "kostenlos",
+     "es": "gratis",
+     "pt": "grátis"
     },
     "bron": "https://www.takeyourbackpack.com/backpacking-in-curacao/visit-watamula-hole/",
     "datum": "2026-10"
@@ -1011,15 +1437,24 @@
    "feiten": [
     {
      "nl": "Geen kassa of hek",
-     "en": "No gate or ticket booth"
+     "en": "No gate or ticket booth",
+     "de": "Kein Tor und kein Kassenhäuschen",
+     "es": "Sin puerta ni taquilla",
+     "pt": "Sem portão nem bilheteria"
     },
     {
      "nl": "Reken op 30 tot 60 minuten",
-     "en": "Plan 30 to 60 minutes"
+     "en": "Plan 30 to 60 minutes",
+     "de": "Plane 30 bis 60 Minuten ein",
+     "es": "Calcula de 30 a 60 minutos",
+     "pt": "Reserve de 30 a 60 minutos"
     },
     {
      "nl": "Laatste stuk onverhard",
-     "en": "Last stretch is unpaved"
+     "en": "Last stretch is unpaved",
+     "de": "Das letzte Stück ist unbefestigt",
+     "es": "El último tramo no está pavimentado",
+     "pt": "O último trecho não é pavimentado"
     }
    ],
    "scores": [
@@ -1048,6 +1483,18 @@
     "en": [
      "Spectacular with wind and a rising tide",
      "Beautiful at sunset"
+    ],
+    "de": [
+     "Spektakulär bei Wind und steigender Flut",
+     "Schön bei Sonnenuntergang"
+    ],
+    "es": [
+     "Espectacular con viento y marea creciente",
+     "Precioso al atardecer"
+    ],
+    "pt": [
+     "Espetacular com vento e maré enchendo",
+     "Lindo ao pôr do sol"
     ]
    },
    "tegen": {
@@ -1060,6 +1507,21 @@
      "Calm days mean little action",
      "Sharp coral rock wrecks flip-flops",
      "No shade and no swimming"
+    ],
+    "de": [
+     "Bei Flaute ist wenig los",
+     "Scharfer Korallenfels macht Flip-Flops kaputt",
+     "Kein Schatten und kein Baden"
+    ],
+    "es": [
+     "Los días sin viento hay poco que ver",
+     "La roca de coral afilada destruye las chanclas",
+     "Sin sombra y sin poder bañarse"
+    ],
+    "pt": [
+     "Em dias sem vento há pouco para ver",
+     "A rocha de coral afiada acaba com as chinelas",
+     "Sem sombra e sem poder nadar"
     ]
    },
    "bronnen": [
@@ -1074,7 +1536,10 @@
    "url": "http://curacaohatocaves.com/",
    "soort": {
     "nl": "grot met rondleiding",
-    "en": "guided cave tour"
+    "en": "guided cave tour",
+    "de": "Höhlenführung",
+    "es": "visita guiada a la cueva",
+    "pt": "visita guiada à caverna"
    },
    "plaats": "Hato, bij het vliegveld",
    "tags": [
@@ -1089,7 +1554,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene, kind 4-12 $8",
-     "en": "per adult, kids 4-12 $8"
+     "en": "per adult, kids 4-12 $8",
+     "de": "pro Erwachsenem, Kinder 4 bis 12 Jahre 8 $",
+     "es": "por adulto, niños de 4 a 12 años $8",
+     "pt": "por adulto, crianças de 4 a 12 anos $8"
     },
     "bron": "https://curacaohatocaves.com/",
     "datum": "2026-10"
@@ -1097,19 +1565,31 @@
    "feiten": [
     {
      "nl": "Elk heel uur, 9:00 tot 15:00",
-     "en": "Tours on the hour, 9 a.m.-3 p.m."
+     "en": "Tours on the hour, 9 a.m.-3 p.m.",
+     "de": "Führungen zur vollen Stunde, 9 bis 15 Uhr",
+     "es": "Visitas cada hora en punto, de 9 a. m. a 3 p. m.",
+     "pt": "Visitas a cada hora cheia, das 9h às 15h"
     },
     {
      "nl": "Rondleiding duurt 45 minuten",
-     "en": "Tour lasts 45 minutes"
+     "en": "Tour lasts 45 minutes",
+     "de": "Die Führung dauert 45 Minuten",
+     "es": "La visita dura 45 minutos",
+     "pt": "A visita dura 45 minutos"
     },
     {
      "nl": "49 treden naar de ingang",
-     "en": "49 steps to the entrance"
+     "en": "49 steps to the entrance",
+     "de": "49 Stufen bis zum Eingang",
+     "es": "49 escalones hasta la entrada",
+     "pt": "49 degraus até a entrada"
     },
     {
      "nl": "Kolonie zeldzame vleermuizen",
-     "en": "Colony of rare bats"
+     "en": "Colony of rare bats",
+     "de": "Kolonie seltener Fledermäuse",
+     "es": "Colonia de murciélagos poco comunes",
+     "pt": "Colônia de morcegos raros"
     }
    ],
    "scores": [
@@ -1138,6 +1618,18 @@
     "en": [
      "Guide covers formations, legends and history",
      "Easy to combine with a city visit"
+    ],
+    "de": [
+     "Der Guide erklärt Formationen, Legenden und Geschichte",
+     "Lässt sich leicht mit einem Stadtbesuch verbinden"
+    ],
+    "es": [
+     "El guía explica las formaciones, las leyendas y la historia",
+     "Fácil de combinar con una visita a la ciudad"
+    ],
+    "pt": [
+     "O guia explica as formações, as lendas e a história",
+     "Fácil de combinar com um passeio pela cidade"
     ]
    },
    "tegen": {
@@ -1146,6 +1638,15 @@
     ],
     "en": [
      "Entry only on a guided tour"
+    ],
+    "de": [
+     "Eintritt nur mit Führung"
+    ],
+    "es": [
+     "Solo se entra con visita guiada"
+    ],
+    "pt": [
+     "Só se entra com visita guiada"
     ]
    },
    "bronnen": [
@@ -1160,7 +1661,10 @@
    "url": null,
    "soort": {
     "nl": "zeegrot, zwemmen",
-    "en": "sea cave, swim-in"
+    "en": "sea cave, swim-in",
+    "de": "Meereshöhle zum Hineinschwimmen",
+    "es": "cueva marina a la que se llega nadando",
+    "pt": "caverna marinha para entrar a nado"
    },
    "plaats": "Bij Santa Cruz, westkust",
    "tags": [
@@ -1173,11 +1677,17 @@
    "feiten": [
     {
      "nl": "Alleen zwemmend of per boot",
-     "en": "Reachable only by swimming or boat"
+     "en": "Reachable only by swimming or boat",
+     "de": "Nur schwimmend oder per Boot erreichbar",
+     "es": "Solo se llega nadando o en barco",
+     "pt": "Só se chega a nado ou de barco"
     },
     {
      "nl": "Veel boottochten stoppen hier",
-     "en": "Many boat trips stop here"
+     "en": "Many boat trips stop here",
+     "de": "Viele Bootstouren halten hier",
+     "es": "Muchos paseos en barco paran aquí",
+     "pt": "Muitos passeios de barco param aqui"
     }
    ],
    "scores": [
@@ -1204,11 +1714,23 @@
     ],
     "en": [
      "Glowing blue water inside the cave"
+    ],
+    "de": [
+     "Leuchtend blaues Wasser in der Höhle"
+    ],
+    "es": [
+     "Agua azul brillante dentro de la cueva"
+    ],
+    "pt": [
+     "Água azul brilhante dentro da caverna"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html",
@@ -1221,7 +1743,10 @@
    "url": null,
    "soort": {
     "nl": "vissersstrand met schildpadden",
-    "en": "fishing beach with turtles"
+    "en": "fishing beach with turtles",
+    "de": "Fischerstrand mit Schildkröten",
+    "es": "playa de pescadores con tortugas",
+    "pt": "praia de pescadores com tartarugas"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -1237,7 +1762,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "Eintritt frei",
+     "es": "entrada gratuita",
+     "pt": "entrada gratuita"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -1245,11 +1773,17 @@
    "feiten": [
     {
      "nl": "Schildpadden bij de steiger",
-     "en": "Turtles near the pier"
+     "en": "Turtles near the pier",
+     "de": "Schildkröten in der Nähe des Stegs",
+     "es": "Tortugas cerca del muelle",
+     "pt": "Tartarugas perto do píer"
     },
     {
      "nl": "Snackbar en souvenirwinkel",
-     "en": "Snack bar and souvenir shop"
+     "en": "Snack bar and souvenir shop",
+     "de": "Imbiss und Souvenirladen",
+     "es": "Puesto de comida y tienda de souvenirs",
+     "pt": "Lanchonete e loja de souvenirs"
     }
    ],
    "scores": [
@@ -1268,6 +1802,15 @@
     ],
     "en": [
      "Green sea turtles almost every day"
+    ],
+    "de": [
+     "Grüne Meeresschildkröten fast jeden Tag"
+    ],
+    "es": [
+     "Tortugas verdes casi todos los días"
+    ],
+    "pt": [
+     "Tartarugas-verdes quase todos os dias"
     ]
    },
    "tegen": {
@@ -1278,6 +1821,18 @@
     "en": [
      "Very crowded when tour buses arrive",
      "Rocky entry, not a lounging beach"
+    ],
+    "de": [
+     "Sehr voll, wenn Reisebusse ankommen",
+     "Felsiger Einstieg, kein Strand zum Liegen"
+    ],
+    "es": [
+     "Muy lleno cuando llegan los autobuses turísticos",
+     "Entrada rocosa, no es una playa para tumbarse"
+    ],
+    "pt": [
+     "Muito cheio quando chegam os ônibus de turismo",
+     "Entrada rochosa, não é praia para ficar deitado"
     ]
    },
    "bronnen": [
@@ -1291,7 +1846,10 @@
    "url": null,
    "soort": {
     "nl": "onbewoond eiland",
-    "en": "uninhabited island"
+    "en": "uninhabited island",
+    "de": "unbewohnte Insel",
+    "es": "isla deshabitada",
+    "pt": "ilha desabitada"
    },
    "plaats": "25 km zuidoost, alleen per boot",
    "tags": [
@@ -1306,7 +1864,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon (boottocht, $135 tot $170)",
-     "en": "per person (boat trip, $135 to $170)"
+     "en": "per person (boat trip, $135 to $170)",
+     "de": "pro Person (Bootstour, 135 bis 170 $)",
+     "es": "por persona (paseo en barco, $135 a $170)",
+     "pt": "por pessoa (passeio de barco, $135 a $170)"
     },
     "bron": "https://www.mycuracaoguide.com/klein-curacao",
     "datum": "2026-10"
@@ -1314,11 +1875,17 @@
    "feiten": [
     {
      "nl": "Alleen per boot",
-     "en": "Boat access only"
+     "en": "Boat access only",
+     "de": "Nur per Boot erreichbar",
+     "es": "Solo se llega en barco",
+     "pt": "Só se chega de barco"
     },
     {
      "nl": "Vuurtoren en scheepswrak",
-     "en": "Lighthouse and shipwreck"
+     "en": "Lighthouse and shipwreck",
+     "de": "Leuchtturm und Schiffswrack",
+     "es": "Faro y naufragio",
+     "pt": "Farol e naufrágio"
     }
    ],
    "scores": [
@@ -1339,6 +1906,18 @@
     "en": [
      "Clear water and sea turtles",
      "Long white beach with no buildings"
+    ],
+    "de": [
+     "Klares Wasser und Meeresschildkröten",
+     "Langer weißer Strand ohne Gebäude"
+    ],
+    "es": [
+     "Agua cristalina y tortugas marinas",
+     "Larga playa blanca sin construcciones"
+    ],
+    "pt": [
+     "Água clara e tartarugas-marinhas",
+     "Longa praia branca sem construções"
     ]
    },
    "tegen": {
@@ -1349,6 +1928,18 @@
     "en": [
      "Crossing is often rough",
      "Little shade"
+    ],
+    "de": [
+     "Die Überfahrt ist oft ruppig",
+     "Wenig Schatten"
+    ],
+    "es": [
+     "La travesía suele ser agitada",
+     "Poca sombra"
+    ],
+    "pt": [
+     "A travessia costuma ser agitada",
+     "Pouca sombra"
     ]
    },
    "bronnen": [
@@ -1362,7 +1953,10 @@
    "url": null,
    "soort": {
     "nl": "zoutpan met uitkijkpunt",
-    "en": "salt pan with lookout"
+    "en": "salt pan with lookout",
+    "de": "Salzpfanne mit Aussichtspunkt",
+    "es": "salina con mirador",
+    "pt": "salina com mirante"
    },
    "plaats": "Sint Willibrordus",
    "tags": [
@@ -1379,7 +1973,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis, kijken vanaf de weg",
-     "en": "free, viewing from the road"
+     "en": "free, viewing from the road",
+     "de": "kostenlos, Blick von der Straße",
+     "es": "gratis, se ve desde la carretera",
+     "pt": "grátis, vista da estrada"
     },
     "bron": "https://www.cliffvilla.com/westpunt-blog/curaaos-pink-flamingo-guide",
     "datum": "2026-10"
@@ -1387,15 +1984,24 @@
    "feiten": [
     {
      "nl": "Parkeren langs de hoofdweg",
-     "en": "Park along the main road"
+     "en": "Park along the main road",
+     "de": "An der Hauptstraße parken",
+     "es": "Estaciona junto a la carretera principal",
+     "pt": "Estacione ao longo da estrada principal"
     },
     {
      "nl": "Kort pad naar uitkijkplatform",
-     "en": "Short path to viewing platform"
+     "en": "Short path to viewing platform",
+     "de": "Kurzer Pfad zur Aussichtsplattform",
+     "es": "Sendero corto hasta la plataforma de observación",
+     "pt": "Trilha curta até a plataforma de observação"
     },
     {
      "nl": "Ook steltlopers en reigers",
-     "en": "Also waders and herons"
+     "en": "Also waders and herons",
+     "de": "Auch Watvögel und Reiher",
+     "es": "También aves zancudas y garzas",
+     "pt": "Também aves pernaltas e garças"
     }
    ],
    "scores": [
@@ -1416,6 +2022,18 @@
     "en": [
      "Easiest flamingo spot to reach on the island",
      "Birds to see year-round"
+    ],
+    "de": [
+     "Der am leichtesten erreichbare Flamingo-Platz der Insel",
+     "Vögel das ganze Jahr über"
+    ],
+    "es": [
+     "El lugar más fácil de la isla para ver flamencos",
+     "Aves durante todo el año"
+    ],
+    "pt": [
+     "O lugar mais fácil da ilha para ver flamingos",
+     "Aves o ano todo"
     ]
    },
    "tegen": {
@@ -1426,6 +2044,18 @@
     "en": [
      "Flamingos are often far off, bring binoculars",
      "No shade"
+    ],
+    "de": [
+     "Die Flamingos sind oft weit weg, nimm ein Fernglas mit",
+     "Kein Schatten"
+    ],
+    "es": [
+     "Los flamencos suelen estar lejos, lleva binoculares",
+     "Sin sombra"
+    ],
+    "pt": [
+     "Os flamingos costumam ficar longe, leve binóculos",
+     "Sem sombra"
     ]
    },
    "bronnen": [
@@ -1440,7 +2070,10 @@
    "url": null,
    "soort": {
     "nl": "wandelgebied, ongemarkeerd",
-    "en": "hiking area, unmarked"
+    "en": "hiking area, unmarked",
+    "de": "Wandergebiet ohne Markierung",
+    "es": "zona de caminatas sin señalizar",
+    "pt": "área de trilhas sem sinalização"
    },
    "plaats": "Bij Porto Mari, Sint Willibrordus",
    "tags": [
@@ -1454,15 +2087,24 @@
    "feiten": [
     {
      "nl": "Ruïne van een oud landhuis",
-     "en": "Ruins of an old plantation house"
+     "en": "Ruins of an old plantation house",
+     "de": "Ruinen eines alten Plantagenhauses",
+     "es": "Ruinas de una antigua casa de plantación",
+     "pt": "Ruínas de uma antiga casa de plantação"
     },
     {
      "nl": "Vogeltoren aan de route",
-     "en": "Bird-watching tower on route"
+     "en": "Bird-watching tower on route",
+     "de": "Vogelbeobachtungsturm an der Route",
+     "es": "Torre de observación de aves en la ruta",
+     "pt": "Torre de observação de aves no caminho"
     },
     {
      "nl": "Reservaat zelf niet te voet",
-     "en": "Sanctuary itself closed on foot"
+     "en": "Sanctuary itself closed on foot",
+     "de": "Das Schutzgebiet selbst ist zu Fuß nicht zugänglich",
+     "es": "El santuario en sí está cerrado a pie",
+     "pt": "O santuário em si é fechado para visitas a pé"
     }
    ],
    "scores": [
@@ -1481,6 +2123,15 @@
     ],
     "en": [
      "Chance of parakeets, caracaras and wild pigs"
+    ],
+    "de": [
+     "Mit Glück siehst du Sittiche, Karakaras und Wildschweine"
+    ],
+    "es": [
+     "Posibilidad de ver periquitos, caracaras y cerdos salvajes"
+    ],
+    "pt": [
+     "Chance de ver periquitos, caracarás e porcos selvagens"
     ]
    },
    "tegen": {
@@ -1491,6 +2142,18 @@
     "en": [
      "Trails unmarked, easy to lose your way",
      "Thorny brush and fallen cacti"
+    ],
+    "de": [
+     "Wege nicht markiert, man verläuft sich leicht",
+     "Dorniges Gestrüpp und umgestürzte Kakteen"
+    ],
+    "es": [
+     "Senderos sin señalizar, es fácil perderse",
+     "Matorral espinoso y cactus caídos"
+    ],
+    "pt": [
+     "Trilhas sem sinalização, é fácil se perder",
+     "Mato espinhoso e cactos caídos"
     ]
    },
    "bronnen": [
@@ -1504,7 +2167,10 @@
    "url": null,
    "soort": {
     "nl": "nieuw nationaal park",
-    "en": "new national park"
+    "en": "new national park",
+    "de": "neuer Nationalpark",
+    "es": "nuevo parque nacional",
+    "pt": "novo parque nacional"
    },
    "plaats": "Sint Willibrordus",
    "tags": [
@@ -1518,15 +2184,24 @@
    "feiten": [
     {
      "nl": "Beheerd door Carmabi",
-     "en": "Managed by Carmabi"
+     "en": "Managed by Carmabi",
+     "de": "Verwaltet von Carmabi",
+     "es": "Administrado por Carmabi",
+     "pt": "Administrado pela Carmabi"
     },
     {
      "nl": "Nog in ontwikkeling",
-     "en": "Still under development"
+     "en": "Still under development",
+     "de": "Noch im Aufbau",
+     "es": "Todavía en desarrollo",
+     "pt": "Ainda em desenvolvimento"
     },
     {
      "nl": "Wandelen, mountainbiken en kajakken",
-     "en": "Hiking, mountain biking, kayaking"
+     "en": "Hiking, mountain biking, kayaking",
+     "de": "Wandern, Mountainbiken, Kajakfahren",
+     "es": "Senderismo, ciclismo de montaña, kayak",
+     "pt": "Trilhas, mountain bike, caiaque"
     }
    ],
    "scores": [
@@ -1545,11 +2220,23 @@
     ],
     "en": [
      "Still quiet, few visitors"
+    ],
+    "de": [
+     "Noch ruhig, wenige Besucher"
+    ],
+    "es": [
+     "Todavía tranquilo, con pocos visitantes"
+    ],
+    "pt": [
+     "Ainda tranquilo, com poucos visitantes"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.carmabi.org/presskit-serulargupark",
@@ -1562,7 +2249,10 @@
    "url": null,
    "soort": {
     "nl": "vogelplek bij de zoutpan",
-    "en": "salt pan bird spot"
+    "en": "salt pan bird spot",
+    "de": "Salzpfanne zur Vogelbeobachtung",
+    "es": "salina para observar aves",
+    "pt": "salina para observação de aves"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1575,11 +2265,17 @@
    "feiten": [
     {
      "nl": "Op de Caribbean Birding Trail",
-     "en": "On the Caribbean Birding Trail"
+     "en": "On the Caribbean Birding Trail",
+     "de": "Auf dem Caribbean Birding Trail",
+     "es": "En el Caribbean Birding Trail",
+     "pt": "No Caribbean Birding Trail"
     },
     {
      "nl": "Flamingo's niet altijd aanwezig",
-     "en": "Flamingos not always present"
+     "en": "Flamingos not always present",
+     "de": "Flamingos sind nicht immer da",
+     "es": "Los flamencos no siempre están",
+     "pt": "Os flamingos nem sempre estão presentes"
     }
    ],
    "scores": [],
@@ -1589,11 +2285,23 @@
     ],
     "en": [
      "Close to the east-side hotels"
+    ],
+    "de": [
+     "Nah an den Hotels im Osten"
+    ],
+    "es": [
+     "Cerca de los hoteles del este"
+    ],
+    "pt": [
+     "Perto dos hotéis do leste"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://caribbeanbirdingtrail.org/?p=6438",
@@ -1606,7 +2314,10 @@
    "url": "http://www.mangrovepark.org/",
    "soort": {
     "nl": "mangrovepark in de stad",
-    "en": "city mangrove park"
+    "en": "city mangrove park",
+    "de": "Mangrovenpark in der Stadt",
+    "es": "parque de manglar en la ciudad",
+    "pt": "parque de manguezal na cidade"
    },
    "plaats": "Otrobanda, Willemstad",
    "tags": [
@@ -1624,7 +2335,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene, kind 6-12 $2",
-     "en": "per adult, kids 6-12 $2"
+     "en": "per adult, kids 6-12 $2",
+     "de": "pro Erwachsenem, Kinder 6 bis 12 Jahre 2 $",
+     "es": "por adulto, niños de 6 a 12 años $2",
+     "pt": "por adulto, crianças de 6 a 12 anos $2"
     },
     "bron": "https://www.mangrovepark.org/opening-hours-fees",
     "datum": "2026-10"
@@ -1632,15 +2346,24 @@
    "feiten": [
     {
      "nl": "1,08 km plankenpad, rolstoelvriendelijk",
-     "en": "1.08 km boardwalk, wheelchair friendly"
+     "en": "1.08 km boardwalk, wheelchair friendly",
+     "de": "1,08 km Holzsteg, rollstuhlgerecht",
+     "es": "Pasarela de madera de 1,08 km, accesible para sillas de ruedas",
+     "pt": "Passarela de madeira de 1,08 km, acessível para cadeiras de rodas"
     },
     {
      "nl": "Kajaktour $25, vanaf 6 jaar",
-     "en": "Kayak tour $25, age 6+"
+     "en": "Kayak tour $25, age 6+",
+     "de": "Kajaktour 25 $, ab 6 Jahren",
+     "es": "Tour en kayak $25, desde 6 años",
+     "pt": "Passeio de caiaque $25, a partir de 6 anos"
     },
     {
      "nl": "Open 8:00 tot 17:00",
-     "en": "Open 8 a.m. to 5 p.m."
+     "en": "Open 8 a.m. to 5 p.m.",
+     "de": "Geöffnet von 8 bis 17 Uhr",
+     "es": "Abierto de 8 a. m. a 5 p. m.",
+     "pt": "Aberto das 8h às 17h"
     }
    ],
    "scores": [
@@ -1669,11 +2392,26 @@
     "en": [
      "Quiet green spot right by the cruise pier",
      "Kayak through the mangrove channels"
+    ],
+    "de": [
+     "Ruhiger grüner Ort direkt am Kreuzfahrtpier",
+     "Mit dem Kajak durch die Mangrovenkanäle"
+    ],
+    "es": [
+     "Un rincón verde y tranquilo junto al muelle de cruceros",
+     "En kayak por los canales del manglar"
+    ],
+    "pt": [
+     "Um cantinho verde e tranquilo ao lado do píer de cruzeiros",
+     "De caiaque pelos canais do manguezal"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "http://www.mangrovepark.org/",
@@ -1688,7 +2426,10 @@
    "url": null,
    "soort": {
     "nl": "grote kalme baai",
-    "en": "large calm bay"
+    "en": "large calm bay",
+    "de": "große ruhige Bucht",
+    "es": "bahía grande y tranquila",
+    "pt": "baía grande e calma"
    },
    "plaats": "Spaanse Water, oost",
    "tags": [
@@ -1703,7 +2444,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon, SUP-tour 2 uur",
-     "en": "per person, 2-hour SUP tour"
+     "en": "per person, 2-hour SUP tour",
+     "de": "pro Person, 2-stündige SUP-Tour",
+     "es": "por persona, tour de SUP de 2 horas",
+     "pt": "por pessoa, passeio de SUP de 2 horas"
     },
     "bron": "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao",
     "datum": "2026-10"
@@ -1711,11 +2455,17 @@
    "feiten": [
     {
      "nl": "Kind onder 12 gratis mee op board",
-     "en": "Kids under 12 ride free on board"
+     "en": "Kids under 12 ride free on board",
+     "de": "Kinder unter 12 fahren kostenlos an Bord mit",
+     "es": "Los niños menores de 12 años viajan gratis a bordo",
+     "pt": "Crianças menores de 12 anos viajam grátis a bordo"
     },
     {
      "nl": "Ook windsurfles",
-     "en": "Windsurf lessons too"
+     "en": "Windsurf lessons too",
+     "de": "Auch Windsurf-Kurse",
+     "es": "También clases de windsurf",
+     "pt": "Também aulas de windsurf"
     }
    ],
    "scores": [],
@@ -1725,11 +2475,23 @@
     ],
     "en": [
      "Flat water, good for beginners"
+    ],
+    "de": [
+     "Flaches Wasser, gut für Anfänger"
+    ],
+    "es": [
+     "Aguas planas, buenas para principiantes"
+    ],
+    "pt": [
+     "Água calma, boa para iniciantes"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao"
@@ -1741,7 +2503,10 @@
    "url": "http://curacao-sea-aquarium.com/",
    "soort": {
     "nl": "aquarium",
-    "en": "aquarium"
+    "en": "aquarium",
+    "de": "Aquarium",
+    "es": "acuario",
+    "pt": "aquário"
    },
    "plaats": "Bapor Kibra",
    "tags": [
@@ -1755,7 +2520,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.mycuracaoguide.com/curacao-sea-aquarium",
     "datum": "2026-10"
@@ -1763,11 +2531,17 @@
    "feiten": [
     {
      "nl": "Vlak bij Mambo Beach",
-     "en": "Next to Mambo Beach"
+     "en": "Next to Mambo Beach",
+     "de": "Neben dem Mambo Beach",
+     "es": "Junto a Mambo Beach",
+     "pt": "Ao lado de Mambo Beach"
     },
     {
      "nl": "Dolfijnenprogramma's apart te boeken",
-     "en": "Dolphin programs booked separately"
+     "en": "Dolphin programs booked separately",
+     "de": "Delfinprogramme werden separat gebucht",
+     "es": "Los programas con delfines se reservan aparte",
+     "pt": "Os programas com golfinhos são reservados separadamente"
     }
    ],
    "scores": [
@@ -1794,11 +2568,23 @@
     ],
     "en": [
      "Easy to combine with Mambo Beach"
+    ],
+    "de": [
+     "Lässt sich leicht mit dem Mambo Beach verbinden"
+    ],
+    "es": [
+     "Fácil de combinar con Mambo Beach"
+    ],
+    "pt": [
+     "Fácil de combinar com Mambo Beach"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/curacao-sea-aquarium",
@@ -1811,7 +2597,10 @@
    "url": "https://curacaoostrichfarm.com/",
    "soort": {
     "nl": "struisvogelboerderij",
-    "en": "ostrich farm"
+    "en": "ostrich farm",
+    "de": "Straußenfarm",
+    "es": "granja de avestruces",
+    "pt": "fazenda de avestruzes"
    },
    "plaats": "Groot Sint Joris",
    "tags": [
@@ -1824,15 +2613,24 @@
    "feiten": [
     {
      "nl": "Jeeptour elk uur",
-     "en": "Jeep tour every hour"
+     "en": "Jeep tour every hour",
+     "de": "Jeep-Tour jede Stunde",
+     "es": "Tour en jeep cada hora",
+     "pt": "Passeio de jipe a cada hora"
     },
     {
      "nl": "Open 9:00 tot 17:00",
-     "en": "Open 9 a.m. to 5 p.m."
+     "en": "Open 9 a.m. to 5 p.m.",
+     "de": "Geöffnet von 9 bis 17 Uhr",
+     "es": "Abierto de 9 a. m. a 5 p. m.",
+     "pt": "Aberto das 9h às 17h"
     },
     {
      "nl": "Restaurant met struisvogelvlees",
-     "en": "Restaurant serves ostrich"
+     "en": "Restaurant serves ostrich",
+     "de": "Im Restaurant gibt es Straußenfleisch",
+     "es": "El restaurante sirve carne de avestruz",
+     "pt": "O restaurante serve carne de avestruz"
     }
    ],
    "scores": [
@@ -1861,6 +2659,18 @@
     "en": [
      "Fun and educational, especially for kids",
      "Hand-feeding the ostriches"
+    ],
+    "de": [
+     "Spaßig und lehrreich, besonders für Kinder",
+     "Strauße von Hand füttern"
+    ],
+    "es": [
+     "Divertido y educativo, sobre todo para niños",
+     "Dar de comer a los avestruces con la mano"
+    ],
+    "pt": [
+     "Divertido e educativo, principalmente para crianças",
+     "Dar comida na mão para os avestruzes"
     ]
    },
    "tegen": {
@@ -1869,6 +2679,15 @@
     ],
     "en": [
      "A bit pricey"
+    ],
+    "de": [
+     "Etwas teuer"
+    ],
+    "es": [
+     "Un poco caro"
+    ],
+    "pt": [
+     "Um pouco caro"
     ]
    },
    "bronnen": [
@@ -1883,7 +2702,10 @@
    "url": "https://www.curaloefarm.com/",
    "soort": {
     "nl": "aloëplantage met rondleiding",
-    "en": "aloe farm tour"
+    "en": "aloe farm tour",
+    "de": "Aloe-Farm-Führung",
+    "es": "visita a la granja de aloe",
+    "pt": "visita à fazenda de aloe"
    },
    "plaats": "Kaminda Mitologia, oost",
    "tags": [
@@ -1897,7 +2719,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon, kind $5, alleen doordeweeks",
-     "en": "per person, kids $5, weekdays only"
+     "en": "per person, kids $5, weekdays only",
+     "de": "pro Person, Kinder 5 $, nur werktags",
+     "es": "por persona, niños $5, solo entre semana",
+     "pt": "por pessoa, crianças $5, somente em dias úteis"
     },
     "bron": "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao",
     "datum": "2026-10"
@@ -1905,11 +2730,17 @@
    "feiten": [
     {
      "nl": "Rondleiding van 1 uur",
-     "en": "One-hour tour"
+     "en": "One-hour tour",
+     "de": "Einstündige Führung",
+     "es": "Visita de una hora",
+     "pt": "Visita de uma hora"
     },
     {
      "nl": "Weekendworkshop $24",
-     "en": "Weekend workshop $24"
+     "en": "Weekend workshop $24",
+     "de": "Wochenend-Workshop 24 $",
+     "es": "Taller de fin de semana $24",
+     "pt": "Oficina de fim de semana $24"
     }
    ],
    "scores": [
@@ -1928,11 +2759,23 @@
     ],
     "en": [
      "Short, cheap outing, pairs well with the ostrich farm"
+    ],
+    "de": [
+     "Kurzer, günstiger Ausflug, passt gut zur Straußenfarm"
+    ],
+    "es": [
+     "Salida corta y barata, combina bien con la granja de avestruces"
+    ],
+    "pt": [
+     "Passeio curto e barato, combina bem com a fazenda de avestruzes"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao"
@@ -1944,7 +2787,10 @@
    "url": "https://www.dinahveeris.com/",
    "soort": {
     "nl": "kruidentuin",
-    "en": "herb garden"
+    "en": "herb garden",
+    "de": "Kräutergarten",
+    "es": "jardín de hierbas",
+    "pt": "jardim de ervas"
    },
    "plaats": "Seru Grandi",
    "tags": [
@@ -1956,15 +2802,24 @@
    "feiten": [
     {
      "nl": "Open 9:00 tot 18:00",
-     "en": "Open 9 a.m. to 6 p.m."
+     "en": "Open 9 a.m. to 6 p.m.",
+     "de": "Geöffnet von 9 bis 18 Uhr",
+     "es": "Abierto de 9 a. m. a 6 p. m.",
+     "pt": "Aberto das 9h às 18h"
     },
     {
      "nl": "Zondag gesloten",
-     "en": "Closed Sundays"
+     "en": "Closed Sundays",
+     "de": "Sonntags geschlossen",
+     "es": "Cerrado los domingos",
+     "pt": "Fechado aos domingos"
     },
     {
      "nl": "Twee rondleidingen per dag",
-     "en": "Two guided tours daily"
+     "en": "Two guided tours daily",
+     "de": "Zwei Führungen täglich",
+     "es": "Dos visitas guiadas al día",
+     "pt": "Duas visitas guiadas por dia"
     }
    ],
    "scores": [
@@ -1991,6 +2846,15 @@
     ],
     "en": [
      "Lots of info on native medicinal plants"
+    ],
+    "de": [
+     "Viele Infos zu heimischen Heilpflanzen"
+    ],
+    "es": [
+     "Mucha información sobre plantas medicinales nativas"
+    ],
+    "pt": [
+     "Muita informação sobre plantas medicinais nativas"
     ]
    },
    "tegen": {
@@ -1999,6 +2863,15 @@
     ],
     "en": [
      "Garden can look poorly maintained"
+    ],
+    "de": [
+     "Der Garten wirkt manchmal ungepflegt"
+    ],
+    "es": [
+     "El jardín a veces se ve descuidado"
+    ],
+    "pt": [
+     "O jardim às vezes parece mal cuidado"
     ]
    },
    "bronnen": [
@@ -2013,7 +2886,10 @@
    "url": "https://hofipastor.org/",
    "soort": {
     "nl": "klein natuurgebied",
-    "en": "small nature preserve"
+    "en": "small nature preserve",
+    "de": "kleines Naturschutzgebiet",
+    "es": "pequeña reserva natural",
+    "pt": "pequena reserva natural"
    },
    "plaats": "Barber",
    "tags": [
@@ -2026,15 +2902,24 @@
    "feiten": [
     {
      "nl": "Eeuwenoude kapokboom",
-     "en": "Centuries-old kapok tree"
+     "en": "Centuries-old kapok tree",
+     "de": "Jahrhundertealter Kapokbaum",
+     "es": "Ceiba (kapok) de siglos de antigüedad",
+     "pt": "Sumaúma (kapok) com séculos de idade"
     },
     {
      "nl": "Twee routes, samen 45 minuten",
-     "en": "Two trails, 45 minutes total"
+     "en": "Two trails, 45 minutes total",
+     "de": "Zwei Wege, insgesamt 45 Minuten",
+     "es": "Dos senderos, 45 minutos en total",
+     "pt": "Duas trilhas, 45 minutos no total"
     },
     {
      "nl": "Vrijdag gesloten",
-     "en": "Closed Fridays"
+     "en": "Closed Fridays",
+     "de": "Freitags geschlossen",
+     "es": "Cerrado los viernes",
+     "pt": "Fechado às sextas-feiras"
     }
    ],
    "scores": [
@@ -2063,6 +2948,18 @@
     "en": [
      "The huge kapok with tall buttress roots",
      "View from the yellow trail"
+    ],
+    "de": [
+     "Der riesige Kapok mit hohen Brettwurzeln",
+     "Aussicht vom gelben Weg"
+    ],
+    "es": [
+     "La enorme ceiba con altas raíces tabulares",
+     "Vista desde el sendero amarillo"
+    ],
+    "pt": [
+     "A enorme sumaúma com raízes tabulares altas",
+     "Vista da trilha amarela"
     ]
    },
    "tegen": {
@@ -2073,6 +2970,18 @@
     "en": [
      "Gate sometimes shut during opening hours",
      "Trails themselves are unremarkable"
+    ],
+    "de": [
+     "Das Tor ist während der Öffnungszeiten manchmal zu",
+     "Die Wege selbst sind unspektakulär"
+    ],
+    "es": [
+     "A veces la puerta está cerrada en horario de apertura",
+     "Los senderos en sí no tienen nada especial"
+    ],
+    "pt": [
+     "Às vezes o portão está fechado durante o horário de funcionamento",
+     "As trilhas em si não têm nada de especial"
     ]
    },
    "bronnen": [
@@ -2087,7 +2996,10 @@
    "url": null,
    "soort": {
     "nl": "plantage met rondleiding",
-    "en": "plantation tour"
+    "en": "plantation tour",
+    "de": "Plantagenführung",
+    "es": "visita a la plantación",
+    "pt": "visita à plantação"
    },
    "plaats": "Santa Cruz, Banda Abou",
    "tags": [
@@ -2103,7 +3015,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon, kind 4-12 $8",
-     "en": "per person, kids 4-12 $8"
+     "en": "per person, kids 4-12 $8",
+     "de": "pro Person, Kinder 4 bis 12 Jahre 8 $",
+     "es": "por persona, niños de 4 a 12 años $8",
+     "pt": "por pessoa, crianças de 4 a 12 anos $8"
     },
     "bron": "https://www.mycuracaoguide.com/nl/book-tours/hofi-mango-guided-tour",
     "datum": "2026-10"
@@ -2111,15 +3026,24 @@
    "feiten": [
     {
      "nl": "Mangobos met 800+ bomen",
-     "en": "Mango forest, 800+ trees"
+     "en": "Mango forest, 800+ trees",
+     "de": "Mangowald mit über 800 Bäumen",
+     "es": "Bosque de mangos con más de 800 árboles",
+     "pt": "Floresta de mangueiras com mais de 800 árvores"
     },
     {
      "nl": "Rondleiding 1 tot 1,5 uur",
-     "en": "Tour 1 to 1.5 hours"
+     "en": "Tour 1 to 1.5 hours",
+     "de": "Führung 1 bis 1,5 Stunden",
+     "es": "Visita de 1 a 1,5 horas",
+     "pt": "Visita de 1 a 1,5 hora"
     },
     {
      "nl": "Start tussen 7:30 en 10:30",
-     "en": "Starts 7:30 to 10:30 a.m."
+     "en": "Starts 7:30 to 10:30 a.m.",
+     "de": "Start zwischen 7:30 und 10:30 Uhr",
+     "es": "Salidas entre las 7:30 y las 10:30 a. m.",
+     "pt": "Início entre 7h30 e 10h30"
     }
    ],
    "scores": [
@@ -2138,6 +3062,15 @@
     ],
     "en": [
      "Guides get a lot of praise"
+    ],
+    "de": [
+     "Die Guides werden viel gelobt"
+    ],
+    "es": [
+     "Los guías reciben muchos elogios"
+    ],
+    "pt": [
+     "Os guias recebem muitos elogios"
     ]
    },
    "tegen": {
@@ -2146,6 +3079,15 @@
     ],
     "en": [
      "Limited hot lunch options"
+    ],
+    "de": [
+     "Wenig warme Mittagsoptionen"
+    ],
+    "es": [
+     "Pocas opciones de almuerzo caliente"
+    ],
+    "pt": [
+     "Poucas opções de almoço quente"
     ]
    },
    "bronnen": [
@@ -2160,7 +3102,10 @@
    "url": "https://curacaoactivities.com/tour/zipline-adventures-hofi-mango/",
    "soort": {
     "nl": "zipline, eerste van het eiland",
-    "en": "zipline, island's first"
+    "en": "zipline, island's first",
+    "de": "Zipline, die erste der Insel",
+    "es": "tirolesa, la primera de la isla",
+    "pt": "tirolesa, a primeira da ilha"
    },
    "plaats": "Hofi Mango, Banda Abou",
    "tags": [
@@ -2174,7 +3119,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon, kind $69",
-     "en": "per person, kids $69"
+     "en": "per person, kids $69",
+     "de": "pro Person, Kinder 69 $",
+     "es": "por persona, niños $69",
+     "pt": "por pessoa, crianças $69"
     },
     "bron": "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao",
     "datum": "2026-10"
@@ -2182,11 +3130,17 @@
    "feiten": [
     {
      "nl": "Vijf lijnen over de plantage",
-     "en": "Five lines over the plantation"
+     "en": "Five lines over the plantation",
+     "de": "Fünf Lines über die Plantage",
+     "es": "Cinco tramos sobre la plantación",
+     "pt": "Cinco tirolesas sobre a plantação"
     },
     {
      "nl": "Ongeveer 75 minuten",
-     "en": "About 75 minutes"
+     "en": "About 75 minutes",
+     "de": "Etwa 75 Minuten",
+     "es": "Unos 75 minutos",
+     "pt": "Cerca de 75 minutos"
     }
    ],
    "scores": [],
@@ -2196,6 +3150,15 @@
     ],
     "en": [
      "Pairs with the mango forest walk"
+    ],
+    "de": [
+     "Passt gut zum Spaziergang durch den Mangowald"
+    ],
+    "es": [
+     "Combina bien con el paseo por el bosque de mangos"
+    ],
+    "pt": [
+     "Combina bem com a caminhada pela floresta de mangueiras"
     ]
    },
    "tegen": {
@@ -2204,6 +3167,15 @@
     ],
     "en": [
      "Weight limit, check before booking"
+    ],
+    "de": [
+     "Gewichtsgrenze, vor dem Buchen prüfen"
+    ],
+    "es": [
+     "Hay límite de peso, revísalo antes de reservar"
+    ],
+    "pt": [
+     "Há limite de peso, confira antes de reservar"
     ]
    },
    "bronnen": [
@@ -2218,7 +3190,10 @@
    "url": null,
    "soort": {
     "nl": "klimmen, via ferrata, abseilen",
-    "en": "climbing, via ferrata, rappelling"
+    "en": "climbing, via ferrata, rappelling",
+    "de": "Klettern, Klettersteig, Abseilen",
+    "es": "escalada, vía ferrata, rápel",
+    "pt": "escalada, via ferrata, rapel"
    },
    "plaats": "Tafelberg, Santa Barbara",
    "tags": [
@@ -2233,7 +3208,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon, volledige tour 4,5 uur",
-     "en": "per person, full 4.5-hour tour"
+     "en": "per person, full 4.5-hour tour",
+     "de": "pro Person, volle Tour 4,5 Stunden",
+     "es": "por persona, tour completo de 4,5 horas",
+     "pt": "por pessoa, passeio completo de 4,5 horas"
     },
     "bron": "https://www.mycuracaoguide.com/book-tours/full-tour-rock-climbing",
     "datum": "2026-10"
@@ -2241,15 +3219,24 @@
    "feiten": [
     {
      "nl": "Vanaf 6 jaar",
-     "en": "Ages 6 and up"
+     "en": "Ages 6 and up",
+     "de": "Ab 6 Jahren",
+     "es": "Desde los 6 años",
+     "pt": "A partir de 6 anos"
     },
     {
      "nl": "Kortere tours vanaf $80",
-     "en": "Shorter tours from $80"
+     "en": "Shorter tours from $80",
+     "de": "Kürzere Touren ab 80 $",
+     "es": "Tours más cortos desde $80",
+     "pt": "Passeios mais curtos a partir de $80"
     },
     {
      "nl": "Zonsondergangwandeling $20",
-     "en": "Sunset hike $20"
+     "en": "Sunset hike $20",
+     "de": "Sonnenuntergangswanderung 20 $",
+     "es": "Caminata al atardecer $20",
+     "pt": "Trilha ao pôr do sol $20"
     }
    ],
    "scores": [
@@ -2272,6 +3259,21 @@
      "Patient guides who adapt routes to your level",
      "Works for beginners and experienced climbers",
      "Safety is well handled"
+    ],
+    "de": [
+     "Geduldige Guides, die die Route an dein Niveau anpassen",
+     "Für Anfänger und erfahrene Kletterer geeignet",
+     "Die Sicherheit ist gut geregelt"
+    ],
+    "es": [
+     "Guías pacientes que adaptan la ruta a tu nivel",
+     "Sirve para principiantes y escaladores con experiencia",
+     "La seguridad está bien manejada"
+    ],
+    "pt": [
+     "Guias pacientes que adaptam o roteiro ao seu nível",
+     "Serve para iniciantes e escaladores experientes",
+     "A segurança é bem cuidada"
     ]
    },
    "tegen": {
@@ -2280,6 +3282,15 @@
     ],
     "en": [
      "Little shade, pick a morning tour"
+    ],
+    "de": [
+     "Wenig Schatten, buch eine Tour am Morgen"
+    ],
+    "es": [
+     "Poca sombra, elige un tour por la mañana"
+    ],
+    "pt": [
+     "Pouca sombra, escolha um passeio de manhã"
     ]
    },
    "bronnen": [
@@ -2293,7 +3304,10 @@
    "url": null,
    "soort": {
     "nl": "tafelberg met uitzicht",
-    "en": "table mountain hike"
+    "en": "table mountain hike",
+    "de": "Wanderung auf den Tafelberg",
+    "es": "caminata a la montaña de cima plana",
+    "pt": "trilha na montanha de topo plano"
    },
    "plaats": "Santa Barbara Plantation",
    "tags": [
@@ -2308,7 +3322,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon, met gids",
-     "en": "per person, guided"
+     "en": "per person, guided",
+     "de": "pro Person, mit Guide",
+     "es": "por persona, con guía",
+     "pt": "por pessoa, com guia"
     },
     "bron": "https://theabroadguide.com/tafelberg-hiking-experience/",
     "datum": "2026-10"
@@ -2316,15 +3333,24 @@
    "feiten": [
     {
      "nl": "4 tot 5 uur",
-     "en": "4 to 5 hours"
+     "en": "4 to 5 hours",
+     "de": "4 bis 5 Stunden",
+     "es": "4 a 5 horas",
+     "pt": "4 a 5 horas"
     },
     {
      "nl": "Woensdag tot zondag",
-     "en": "Wednesday to Sunday"
+     "en": "Wednesday to Sunday",
+     "de": "Mittwoch bis Sonntag",
+     "es": "De miércoles a domingo",
+     "pt": "De quarta a domingo"
     },
     {
      "nl": "Ophalen tegen meerprijs",
-     "en": "Pickup costs extra"
+     "en": "Pickup costs extra",
+     "de": "Abholung kostet extra",
+     "es": "La recogida cuesta extra",
+     "pt": "O transporte de ida custa extra"
     }
    ],
    "scores": [],
@@ -2336,6 +3362,18 @@
     "en": [
      "Wide views over the coast and bays",
      "Guides get a lot of praise"
+    ],
+    "de": [
+     "Weite Aussicht über Küste und Buchten",
+     "Die Guides werden viel gelobt"
+    ],
+    "es": [
+     "Amplias vistas de la costa y las bahías",
+     "Los guías reciben muchos elogios"
+    ],
+    "pt": [
+     "Vistas amplas da costa e das baías",
+     "Os guias recebem muitos elogios"
     ]
    },
    "tegen": {
@@ -2344,6 +3382,15 @@
     ],
     "en": [
      "Steep and uneven, fitness needed"
+    ],
+    "de": [
+     "Steil und uneben, Fitness nötig"
+    ],
+    "es": [
+     "Empinado e irregular, hace falta buena condición física"
+    ],
+    "pt": [
+     "Íngreme e irregular, exige condicionamento físico"
     ]
    },
    "bronnen": [
@@ -2356,7 +3403,10 @@
    "url": null,
    "soort": {
     "nl": "kustwandeling",
-    "en": "coastal hike"
+    "en": "coastal hike",
+    "de": "Küstenwanderung",
+    "es": "caminata costera",
+    "pt": "trilha costeira"
    },
    "plaats": "Landhuis Ascension, noordkust",
    "tags": [
@@ -2369,11 +3419,17 @@
    "feiten": [
     {
      "nl": "Start bij Landhuis Ascension",
-     "en": "Starts at Landhuis Ascension"
+     "en": "Starts at Landhuis Ascension",
+     "de": "Start am Landhuis Ascension",
+     "es": "Sale de Landhuis Ascension",
+     "pt": "Começa no Landhuis Ascension"
     },
     {
      "nl": "Door bos en cactusvelden",
-     "en": "Through forest and cactus fields"
+     "en": "Through forest and cactus fields",
+     "de": "Durch Wald und Kaktusfelder",
+     "es": "Por bosque y campos de cactus",
+     "pt": "Por floresta e campos de cactos"
     }
    ],
    "scores": [],
@@ -2383,6 +3439,15 @@
     ],
     "en": [
      "Watch turtles swim below the cliff"
+    ],
+    "de": [
+     "Von der Klippe aus Schildkröten beim Schwimmen zusehen"
+    ],
+    "es": [
+     "Desde el acantilado se ven nadar las tortugas"
+    ],
+    "pt": [
+     "Do alto da falésia dá para ver as tartarugas nadando"
     ]
    },
    "tegen": {
@@ -2391,6 +3456,15 @@
     ],
     "en": [
      "Rocky path through cacti"
+    ],
+    "de": [
+     "Steiniger Pfad durch Kakteen"
+    ],
+    "es": [
+     "Sendero rocoso entre cactus"
+    ],
+    "pt": [
+     "Trilha rochosa entre cactos"
     ]
    },
    "bronnen": [
@@ -2403,7 +3477,10 @@
    "url": null,
    "soort": {
     "nl": "tropische tuin, zelf lopen",
-    "en": "tropical garden, self-guided"
+    "en": "tropical garden, self-guided",
+    "de": "tropischer Garten, auf eigene Faust",
+    "es": "jardín tropical, visita por tu cuenta",
+    "pt": "jardim tropical, visita por conta própria"
    },
    "plaats": null,
    "tags": [
@@ -2416,7 +3493,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "vanaf, tot $35 naar leeftijd en dag",
-     "en": "from, up to $35 by age and day"
+     "en": "from, up to $35 by age and day",
+     "de": "ab, bis zu 35 $ je nach Alter und Tag",
+     "es": "desde, hasta $35 según la edad y el día",
+     "pt": "a partir de, até $35 conforme a idade e o dia"
     },
     "bron": "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao",
     "datum": "2026-10"
@@ -2424,11 +3504,17 @@
    "feiten": [
     {
      "nl": "Open 10:00 tot 17:00",
-     "en": "Open 10 a.m. to 5 p.m."
+     "en": "Open 10 a.m. to 5 p.m.",
+     "de": "Geöffnet von 10 bis 17 Uhr",
+     "es": "Abierto de 10 a. m. a 5 p. m.",
+     "pt": "Aberto das 10h às 17h"
     },
     {
      "nl": "Zwembad inbegrepen",
-     "en": "Pool access included"
+     "en": "Pool access included",
+     "de": "Poolnutzung inklusive",
+     "es": "Acceso a la piscina incluido",
+     "pt": "Acesso à piscina incluído"
     }
    ],
    "scores": [],
@@ -2438,6 +3524,15 @@
     ],
     "en": [
      "Green and shady, a contrast to the dry island"
+    ],
+    "de": [
+     "Grün und schattig, ein Kontrast zur trockenen Insel"
+    ],
+    "es": [
+     "Verde y con sombra, un contraste con la isla seca"
+    ],
+    "pt": [
+     "Verde e sombreado, um contraste com a ilha seca"
     ]
    },
    "tegen": {
@@ -2446,6 +3541,15 @@
     ],
     "en": [
      "Animal sightings not guaranteed"
+    ],
+    "de": [
+     "Tiere sind nicht garantiert"
+    ],
+    "es": [
+     "No se garantiza ver animales"
+    ],
+    "pt": [
+     "Não há garantia de ver animais"
     ]
    },
    "bronnen": [
@@ -2459,7 +3563,10 @@
    "url": "https://www.carmabi.org/",
    "uitleg": {
     "nl": "Beheerder van Christoffelpark, Shete Boka, Rif Mangrove Park en Seru Largu. Boekt rondleidingen, de safari en begeleide beklimmingen.",
-    "en": "Manages Christoffel, Shete Boka, Rif Mangrove Park and Seru Largu. Books guided hikes, the safari and guided climbs."
+    "en": "Manages Christoffel, Shete Boka, Rif Mangrove Park and Seru Largu. Books guided hikes, the safari and guided climbs.",
+    "de": "Verwaltet Christoffel, Shete Boka, Rif Mangrove Park und Seru Largu. Bucht geführte Wanderungen, die Safari und geführte Klettertouren.",
+    "es": "Administra Christoffel, Shete Boka, Rif Mangrove Park y Seru Largu. Reserva caminatas guiadas, el safari y escaladas con guía.",
+    "pt": "Administra Christoffel, Shete Boka, Rif Mangrove Park e Seru Largu. Reservas de trilhas guiadas, do safári e de escaladas com guia."
    }
   },
   {
@@ -2467,7 +3574,10 @@
    "url": "https://www.mycuracaoguide.com/",
    "uitleg": {
     "nl": "Lokale boekingssite voor o.a. klimtours, Hofi Mango, suppen en de Aloe Farm.",
-    "en": "Local booking site for climbing tours, Hofi Mango, SUP and the Aloe Farm."
+    "en": "Local booking site for climbing tours, Hofi Mango, SUP and the Aloe Farm.",
+    "de": "Lokale Buchungsseite für Klettertouren, Hofi Mango, SUP und die Aloe Farm.",
+    "es": "Sitio local de reservas para tours de escalada, Hofi Mango, SUP y la Aloe Farm.",
+    "pt": "Site local de reservas para passeios de escalada, Hofi Mango, SUP e a Aloe Farm."
    }
   },
   {
@@ -2475,7 +3585,10 @@
    "url": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html",
    "uitleg": {
     "nl": "Reviews van natuurplekken en boeken van tours zoals jeepsafari's.",
-    "en": "Reviews of nature spots and booking for tours like jeep safaris."
+    "en": "Reviews of nature spots and booking for tours like jeep safaris.",
+    "de": "Bewertungen zu Naturorten und Buchung von Touren wie Jeep-Safaris.",
+    "es": "Reseñas de lugares naturales y reservas de tours como safaris en jeep.",
+    "pt": "Avaliações de lugares naturais e reservas de passeios como safáris de jipe."
    }
   },
   {
@@ -2483,129 +3596,207 @@
    "url": "https://www.getyourguide.com/",
    "uitleg": {
     "nl": "Boekt eilandtours die Shete Boka, Hato Caves en flamingo's combineren.",
-    "en": "Books island tours that combine Shete Boka, Hato Caves and flamingos."
+    "en": "Books island tours that combine Shete Boka, Hato Caves and flamingos.",
+    "de": "Bucht Inseltouren, die Shete Boka, die Hato-Höhlen und Flamingos verbinden.",
+    "es": "Reserva tours por la isla que combinan Shete Boka, las Cuevas de Hato y los flamencos.",
+    "pt": "Reserva passeios pela ilha que combinam Shete Boka, as Cavernas de Hato e os flamingos."
    }
   }
  ],
  "tips": [
   {
    "nl": "Begin de Christoffelberg zo vroeg mogelijk: het park opent om 6:00 en na 10:00 mag je niet meer aan de klim beginnen.",
-   "en": "Start Mount Christoffel as early as you can: the park opens at 6 a.m. and you can't start the climb after 10 a.m."
+   "en": "Start Mount Christoffel as early as you can: the park opens at 6 a.m. and you can't start the climb after 10 a.m.",
+   "de": "Starte den Mount Christoffel so früh wie möglich: Der Park öffnet um 6 Uhr, und nach 10 Uhr darfst du den Aufstieg nicht mehr beginnen.",
+   "es": "Empieza el Mount Christoffel lo más temprano que puedas: el parque abre a las 6 a. m. y no se puede iniciar la subida después de las 10 a. m.",
+   "pt": "Comece o Mount Christoffel o mais cedo possível: o parque abre às 6h e não dá para iniciar a subida depois das 10h."
   },
   {
    "nl": "Neem contant geld mee naar Shete Boka: entree is $15 per volwassene en briefjes van $100 worden niet aangenomen.",
-   "en": "Bring cash to Shete Boka: entry is $15 per adult and $100 bills aren't accepted."
+   "en": "Bring cash to Shete Boka: entry is $15 per adult and $100 bills aren't accepted.",
+   "de": "Nimm Bargeld nach Shete Boka mit: Der Eintritt kostet 15 $ pro Erwachsenem, und 100-Dollar-Scheine werden nicht angenommen.",
+   "es": "Lleva efectivo a Shete Boka: la entrada cuesta $15 por adulto y no aceptan billetes de $100.",
+   "pt": "Leve dinheiro em espécie para Shete Boka: a entrada custa $15 por adulto e notas de $100 não são aceitas."
   },
   {
    "nl": "Shete Boka is sinds 1 juli 2026 open van 8:00 tot 16:00, de kassa sluit om 15:00.",
-   "en": "Since July 1, 2026, Shete Boka is open 8 a.m. to 4 p.m.; the ticket office closes at 3 p.m."
+   "en": "Since July 1, 2026, Shete Boka is open 8 a.m. to 4 p.m.; the ticket office closes at 3 p.m.",
+   "de": "Seit dem 1. Juli 2026 ist Shete Boka von 8 bis 16 Uhr geöffnet; die Kasse schließt um 15 Uhr.",
+   "es": "Desde el 1 de julio de 2026, Shete Boka abre de 8 a. m. a 4 p. m.; la taquilla cierra a las 3 p. m.",
+   "pt": "Desde 1º de julho de 2026, Shete Boka funciona das 8h às 16h; a bilheteria fecha às 15h."
   },
   {
    "nl": "Flamingo's zie je het best vroeg in de ochtend of laat in de middag; een verrekijker helpt.",
-   "en": "Flamingos are most active early morning and late afternoon; binoculars help."
+   "en": "Flamingos are most active early morning and late afternoon; binoculars help.",
+   "de": "Flamingos sind früh am Morgen und am späten Nachmittag am aktivsten; ein Fernglas hilft.",
+   "es": "Los flamencos están más activos temprano por la mañana y al final de la tarde; unos binoculares ayudan.",
+   "pt": "Os flamingos ficam mais ativos de manhã cedo e no fim da tarde; binóculos ajudam."
   },
   {
    "nl": "Watamula en de baaien van Shete Boka zijn het mooist bij wind en opkomend tij; op een windstille dag gebeurt er weinig.",
-   "en": "Watamula and the Shete Boka inlets are best with wind and a rising tide; calm days are a letdown."
+   "en": "Watamula and the Shete Boka inlets are best with wind and a rising tide; calm days are a letdown.",
+   "de": "Watamula und die Buchten von Shete Boka sind bei Wind und steigender Flut am besten; an ruhigen Tagen ist es eine Enttäuschung.",
+   "es": "Watamula y las calas de Shete Boka son mejores con viento y marea creciente; los días de calma decepcionan.",
+   "pt": "Watamula e as enseadas de Shete Boka são melhores com vento e maré enchendo; em dias calmos, é decepcionante."
   },
   {
    "nl": "Draag dichte schoenen op de noordkust: het koraalgesteente is scherp genoeg om door slippers te gaan.",
-   "en": "Wear closed shoes on the north coast: the coral rock is sharp enough to cut through flip-flops."
+   "en": "Wear closed shoes on the north coast: the coral rock is sharp enough to cut through flip-flops.",
+   "de": "Zieh an der Nordküste geschlossene Schuhe an: Der Korallenfels ist scharf genug, um Flip-Flops zu durchschneiden.",
+   "es": "Usa zapatos cerrados en la costa norte: la roca de coral es tan afilada que corta las chanclas.",
+   "pt": "Use sapatos fechados na costa norte: a rocha de coral é afiada o bastante para cortar chinelas."
   },
   {
    "nl": "Bewoners met sèdula betalen in de parken van Carmabi CG 2 in plaats van $15.",
-   "en": "Residents with a sèdula pay CG 2 instead of $15 at the Carmabi parks."
+   "en": "Residents with a sèdula pay CG 2 instead of $15 at the Carmabi parks.",
+   "de": "Einwohner mit sèdula zahlen in den Carmabi-Parks CG 2 statt 15 $.",
+   "es": "Los residentes con sèdula pagan CG 2 en lugar de $15 en los parques de Carmabi.",
+   "pt": "Residentes com sèdula pagam CG 2 em vez de $15 nos parques da Carmabi."
   }
  ],
  "faq": [
   {
    "q": {
     "nl": "Wat kost Christoffelpark?",
-    "en": "How much is Christoffel Park?"
+    "en": "How much is Christoffel Park?",
+    "de": "Was kostet der Christoffel Park?",
+    "es": "¿Cuánto cuesta el Parque Christoffel?",
+    "pt": "Quanto custa o Parque Christoffel?"
    },
    "a": {
     "nl": "$15 per volwassene, $2 voor kinderen van 6 tot 12 en gratis onder 6 jaar. Het Savonet Museum zit erbij. Open dagelijks 6:00 tot 15:00, kassa sluit om 13:30.",
-    "en": "$15 per adult, $2 for kids 6 to 12, free under 6. The Savonet Museum is included. Open daily 6 a.m. to 3 p.m.; the ticket office closes at 1:30 p.m."
+    "en": "$15 per adult, $2 for kids 6 to 12, free under 6. The Savonet Museum is included. Open daily 6 a.m. to 3 p.m.; the ticket office closes at 1:30 p.m.",
+    "de": "15 $ pro Erwachsenem, 2 $ für Kinder von 6 bis 12 Jahren, kostenlos unter 6. Das Savonet-Museum ist inbegriffen. Täglich von 6 bis 15 Uhr geöffnet; die Kasse schließt um 13:30 Uhr.",
+    "es": "$15 por adulto, $2 para niños de 6 a 12 años, gratis para menores de 6. El Museo Savonet está incluido. Abierto todos los días de 6 a. m. a 3 p. m.; la taquilla cierra a la 1:30 p. m.",
+    "pt": "$15 por adulto, $2 para crianças de 6 a 12 anos, grátis para menores de 6. O Museu Savonet está incluído. Aberto todos os dias das 6h às 15h; a bilheteria fecha às 13h30."
    }
   },
   {
    "q": {
     "nl": "Hoe lang duurt de beklimming van de Christoffelberg?",
-    "en": "How long does the Mount Christoffel hike take?"
+    "en": "How long does the Mount Christoffel hike take?",
+    "de": "Wie lange dauert die Wanderung auf den Mount Christoffel?",
+    "es": "¿Cuánto dura la caminata al Mount Christoffel?",
+    "pt": "Quanto tempo dura a trilha do Mount Christoffel?"
    },
    "a": {
     "nl": "Twee tot drie uur heen en terug: ongeveer drie uur vanaf het bezoekerscentrum, twee uur vanaf de voet van de berg. Het laatste stuk is klauteren. Start tussen 6:00 en 10:00 en neem 2 liter water mee.",
-    "en": "Two to three hours round trip: about three from the visitor center, two from the base. The last stretch is a scramble. Start between 6 and 10 a.m. and bring 2 liters of water."
+    "en": "Two to three hours round trip: about three from the visitor center, two from the base. The last stretch is a scramble. Start between 6 and 10 a.m. and bring 2 liters of water.",
+    "de": "Zwei bis drei Stunden hin und zurück: etwa drei ab dem Besucherzentrum, zwei ab dem Fuß des Bergs. Das letzte Stück ist Kletterei. Starte zwischen 6 und 10 Uhr und nimm 2 Liter Wasser mit.",
+    "es": "De dos a tres horas ida y vuelta: unas tres desde el centro de visitantes, dos desde la base. El último tramo es una trepada. Empieza entre las 6 y las 10 a. m. y lleva 2 litros de agua.",
+    "pt": "De duas a três horas ida e volta: cerca de três a partir do centro de visitantes, duas a partir da base. O último trecho é uma escalada. Comece entre 6h e 10h e leve 2 litros de água."
    }
   },
   {
    "q": {
     "nl": "Waar zie je flamingo's op Curaçao?",
-    "en": "Where can you see flamingos on Curaçao?"
+    "en": "Where can you see flamingos on Curaçao?",
+    "de": "Wo kann man auf Curaçao Flamingos sehen?",
+    "es": "¿Dónde se pueden ver flamencos en Curazao?",
+    "pt": "Onde se podem ver flamingos em Curaçao?"
    },
    "a": {
     "nl": "Het makkelijkst bij de zoutpan van Jan Kok bij Sint Willibrordus, gratis vanaf de weg en een uitkijkplatform. Soms ook bij Rif Sint Marie en de zoutpannen van Jan Thiel.",
-    "en": "Most easily at the Jan Kok salt pan near Sint Willibrordus, free from the road and a viewing platform. Sometimes also at Rif Sint Marie and the Jan Thiel salt pans."
+    "en": "Most easily at the Jan Kok salt pan near Sint Willibrordus, free from the road and a viewing platform. Sometimes also at Rif Sint Marie and the Jan Thiel salt pans.",
+    "de": "Am einfachsten an der Salzpfanne Jan Kok bei Sint Willibrordus, kostenlos von der Straße und von einer Aussichtsplattform. Manchmal auch bei Rif Sint Marie und an den Salzpfannen von Jan Thiel.",
+    "es": "Lo más fácil es en la salina de Jan Kok, cerca de Sint Willibrordus, gratis desde la carretera y desde una plataforma de observación. A veces también en Rif Sint Marie y en las salinas de Jan Thiel.",
+    "pt": "O mais fácil é na salina de Jan Kok, perto de Sint Willibrordus, grátis da estrada e de uma plataforma de observação. Às vezes também em Rif Sint Marie e nas salinas de Jan Thiel."
    }
   },
   {
    "q": {
     "nl": "Waar zwem je met schildpadden op Curaçao?",
-    "en": "Where can you swim with turtles on Curaçao?"
+    "en": "Where can you swim with turtles on Curaçao?",
+    "de": "Wo kann man auf Curaçao mit Schildkröten schwimmen?",
+    "es": "¿Dónde se puede nadar con tortugas en Curazao?",
+    "pt": "Onde se pode nadar com tartarugas em Curaçao?"
    },
    "a": {
     "nl": "Bij Playa Grandi (Playa Piskado) in Westpunt zwemmen bijna dagelijks groene zeeschildpadden bij de vissersboten, gratis. Ook op Klein Curaçao zie je ze vaak.",
-    "en": "At Playa Grandi (Playa Piskado) in Westpunt, green sea turtles swim near the fishing boats almost daily, free. They're also common at Klein Curaçao."
+    "en": "At Playa Grandi (Playa Piskado) in Westpunt, green sea turtles swim near the fishing boats almost daily, free. They're also common at Klein Curaçao.",
+    "de": "Am Playa Grandi (Playa Piskado) in Westpunt schwimmen fast täglich Grüne Meeresschildkröten bei den Fischerbooten, kostenlos. Auch auf Klein Curaçao sind sie häufig.",
+    "es": "En Playa Grandi (Playa Piskado), en Westpunt, las tortugas verdes nadan casi todos los días cerca de los botes de pesca, gratis. También son comunes en Klein Curazao.",
+    "pt": "Em Playa Grandi (Playa Piskado), em Westpunt, as tartarugas-verdes nadam quase todos os dias perto dos barcos de pesca, de graça. Elas também são comuns em Klein Curaçao."
    }
   },
   {
    "q": {
     "nl": "Wat kost Shete Boka en wanneer is het open?",
-    "en": "How much is Shete Boka and when is it open?"
+    "en": "How much is Shete Boka and when is it open?",
+    "de": "Was kostet Shete Boka und wann ist es geöffnet?",
+    "es": "¿Cuánto cuesta Shete Boka y cuál es su horario?",
+    "pt": "Quanto custa Shete Boka e qual é o horário?"
    },
    "a": {
     "nl": "$15 per volwassene, contant. Sinds 1 juli 2026 open van 8:00 tot 16:00; de kassa sluit om 15:00.",
-    "en": "$15 per adult, cash. Since July 1, 2026, open 8 a.m. to 4 p.m.; the ticket office closes at 3 p.m."
+    "en": "$15 per adult, cash. Since July 1, 2026, open 8 a.m. to 4 p.m.; the ticket office closes at 3 p.m.",
+    "de": "15 $ pro Erwachsenem, bar. Seit dem 1. Juli 2026 von 8 bis 16 Uhr geöffnet; die Kasse schließt um 15 Uhr.",
+    "es": "$15 por adulto, en efectivo. Desde el 1 de julio de 2026 abre de 8 a. m. a 4 p. m.; la taquilla cierra a las 3 p. m.",
+    "pt": "$15 por adulto, em dinheiro. Desde 1º de julho de 2026 abre das 8h às 16h; a bilheteria fecha às 15h."
    }
   },
   {
    "q": {
     "nl": "Kun je zwemmen in Shete Boka?",
-    "en": "Can you swim at Shete Boka?"
+    "en": "Can you swim at Shete Boka?",
+    "de": "Kann man in Shete Boka baden?",
+    "es": "¿Se puede nadar en Shete Boka?",
+    "pt": "Dá para nadar em Shete Boka?"
    },
    "a": {
     "nl": "Bijna nergens: de stroming langs de noordkust is te sterk. Vraag bij de ingang naar de plekken waar het wel kan.",
-    "en": "Hardly anywhere: currents on the north coast are too strong. Ask at the entrance about the few safe spots."
+    "en": "Hardly anywhere: currents on the north coast are too strong. Ask at the entrance about the few safe spots.",
+    "de": "Kaum irgendwo: Die Strömungen an der Nordküste sind zu stark. Frag am Eingang nach den wenigen sicheren Stellen.",
+    "es": "Casi en ningún lado: las corrientes de la costa norte son demasiado fuertes. Pregunta en la entrada por los pocos lugares seguros.",
+    "pt": "Quase em nenhum lugar: as correntes da costa norte são fortes demais. Pergunte na entrada sobre os poucos pontos seguros."
    }
   },
   {
    "q": {
     "nl": "Wat kosten de Hato Caves?",
-    "en": "How much are the Hato Caves?"
+    "en": "How much are the Hato Caves?",
+    "de": "Was kosten die Hato-Höhlen?",
+    "es": "¿Cuánto cuestan las Cuevas de Hato?",
+    "pt": "Quanto custam as Cavernas de Hato?"
    },
    "a": {
     "nl": "$10 voor volwassenen en $8 voor kinderen van 4 tot 12. Rondleidingen van 45 minuten elk heel uur van 9:00 tot 15:00. Er zijn 49 treden naar de ingang.",
-    "en": "$10 for adults and $8 for kids 4 to 12. 45-minute tours on the hour from 9 a.m. to 3 p.m. There are 49 steps up to the entrance."
+    "en": "$10 for adults and $8 for kids 4 to 12. 45-minute tours on the hour from 9 a.m. to 3 p.m. There are 49 steps up to the entrance.",
+    "de": "10 $ für Erwachsene und 8 $ für Kinder von 4 bis 12 Jahren. Führungen von 45 Minuten zur vollen Stunde, 9 bis 15 Uhr. Es sind 49 Stufen bis zum Eingang.",
+    "es": "$10 para adultos y $8 para niños de 4 a 12 años. Visitas de 45 minutos cada hora en punto, de 9 a. m. a 3 p. m. Hay 49 escalones hasta la entrada.",
+    "pt": "$10 para adultos e $8 para crianças de 4 a 12 anos. Visitas de 45 minutos a cada hora cheia, das 9h às 15h. São 49 degraus até a entrada."
    }
   },
   {
    "q": {
     "nl": "Welke natuurplek is rolstoeltoegankelijk?",
-    "en": "Which nature spot is wheelchair accessible?"
+    "en": "Which nature spot is wheelchair accessible?",
+    "de": "Welcher Naturort ist rollstuhlgerecht?",
+    "es": "¿Qué lugar natural es accesible para sillas de ruedas?",
+    "pt": "Qual lugar natural é acessível para cadeiras de rodas?"
    },
    "a": {
     "nl": "Rif Mangrove Park in Otrobanda heeft een plankenpad van 1,08 km dat geschikt is voor rolstoelen. Entree $15, open 8:00 tot 17:00.",
-    "en": "Rif Mangrove Park in Otrobanda has a 1.08 km wheelchair-friendly boardwalk. Entry $15, open 8 a.m. to 5 p.m."
+    "en": "Rif Mangrove Park in Otrobanda has a 1.08 km wheelchair-friendly boardwalk. Entry $15, open 8 a.m. to 5 p.m.",
+    "de": "Der Rif Mangrove Park in Otrobanda hat einen 1,08 km langen rollstuhlgerechten Holzsteg. Eintritt 15 $, geöffnet von 8 bis 17 Uhr.",
+    "es": "El Rif Mangrove Park, en Otrobanda, tiene una pasarela de madera de 1,08 km accesible para sillas de ruedas. Entrada $15, abierto de 8 a. m. a 5 p. m.",
+    "pt": "O Rif Mangrove Park, em Otrobanda, tem uma passarela de madeira de 1,08 km acessível para cadeiras de rodas. Entrada $15, aberto das 8h às 17h."
    }
   },
   {
    "q": {
     "nl": "Is Watamula gratis?",
-    "en": "Is Watamula Hole free?"
+    "en": "Is Watamula Hole free?",
+    "de": "Ist das Watamula Hole kostenlos?",
+    "es": "¿El Watamula Hole es gratis?",
+    "pt": "O Watamula Hole é gratuito?"
    },
    "a": {
     "nl": "Ja, er is geen kassa of hek. Ga bij wind en opkomend tij, draag stevige schoenen en reken op 30 tot 60 minuten.",
-    "en": "Yes, there's no gate or ticket booth. Go with wind and a rising tide, wear sturdy shoes and plan 30 to 60 minutes."
+    "en": "Yes, there's no gate or ticket booth. Go with wind and a rising tide, wear sturdy shoes and plan 30 to 60 minutes.",
+    "de": "Ja, es gibt kein Tor und kein Kassenhäuschen. Komm bei Wind und steigender Flut, zieh feste Schuhe an und plane 30 bis 60 Minuten ein.",
+    "es": "Sí, no hay puerta ni taquilla. Ve con viento y marea creciente, usa calzado resistente y calcula de 30 a 60 minutos.",
+    "pt": "Sim, não há portão nem bilheteria. Vá com vento e maré enchendo, use calçado resistente e reserve de 30 a 60 minutos."
    }
   }
  ],
@@ -2666,10 +3857,21 @@
    "What are the best nature spots on Curaçao?",
    "How hard is the Mount Christoffel hike and what time should I start?",
    "Where can I see flamingos and sea turtles on Curaçao without a tour?"
+  ],
+  "de": [
+   "Was sind die schönsten Naturorte auf Curaçao?",
+   "Wie schwer ist die Wanderung auf den Mount Christoffel und wann sollte ich starten?",
+   "Wo sehe ich auf Curaçao Flamingos und Meeresschildkröten ohne Tour?"
+  ],
+  "es": [
+   "¿Cuáles son los mejores lugares naturales de Curazao?",
+   "¿Qué tan difícil es la caminata al Mount Christoffel y a qué hora conviene empezar?",
+   "¿Dónde puedo ver flamencos y tortugas marinas en Curazao sin tour?"
+  ],
+  "pt": [
+   "Quais são os melhores lugares naturais de Curaçao?",
+   "Qual é a dificuldade da trilha do Mount Christoffel e a que horas devo começar?",
+   "Onde posso ver flamingos e tartarugas-marinhas em Curaçao sem fazer um passeio?"
   ]
- },
- "talen": [
-  "nl",
-  "en"
- ]
+ }
 }
