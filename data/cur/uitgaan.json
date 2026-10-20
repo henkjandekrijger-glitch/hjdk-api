@@ -1,1 +1,3638 @@
-{"id":"uitgaan","peildatum":"2026-10-20","items":[]}
+{
+ "id": "uitgaan",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "uitgaansplek",
+  "en": "nightlife spot"
+ },
+ "h1": {
+  "nl": "Uitgaan op Curaçao: welke beachclub, bar of club past bij jouw avond?",
+  "en": "Curaçao nightlife: which beach club, bar or club fits your night?"
+ },
+ "titel": {
+  "nl": "Uitgaan op Curaçao: {n} beachclubs, bars en clubs vergeleken",
+  "en": "Curaçao Nightlife: {n} Beach Clubs, Bars and Clubs Compared"
+ },
+ "metaDesc": {
+  "nl": "{n} uitgaansplekken op Curaçao met Google- en Tripadvisor-scores, vaste feestavonden, happy hours en entree. Kies wat bij jouw avond past.",
+  "en": "{n} Curaçao nightlife spots with Google and Tripadvisor ratings, weekly party nights, happy hours and entry fees. Pick the one that fits your night."
+ },
+ "kort": {
+  "nl": "We vergeleken {n} uitgaansplekken op Curaçao, van beachclubs en bars tot clubs en casino's. Mambo Beach kost $4,50 entree en Jan Thiel $3 (na 16:30 gratis); Kokomo en Karakter zijn gratis. Voor dansen tot laat ga je naar Wet & Wild (vrijdag en zondag tot 02:00), voor livemuziek naar Mundo Bizarro op donderdag of Blues bij Avila, en voor de zonsondergang naar Karakter (4,4 uit 2.394 Google-reviews) of Kokomo Beach.",
+  "en": "We compared {n} Curaçao nightlife spots, from beach clubs and bars to nightclubs and casinos. Mambo Beach charges $4.50 entry and Jan Thiel $3 (free after 4:30 p.m.); Kokomo and Karakter are free. For dancing late go to Wet & Wild (open until 2 a.m. Friday and Sunday), for live music try Mundo Bizarro on Thursday or Blues at Avila, and for sunset drinks head to Karakter (4.4 from 2,394 Google reviews) or Kokomo Beach."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat voor avond zoek je?",
+    "en": "What kind of night are you after?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anything goes"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Rustig borrelen bij zonsondergang",
+      "en": "Chill sunset drinks"
+     },
+     "plus": [
+      "zonsondergang",
+      "cocktails",
+      "rustig"
+     ],
+     "min": [
+      "nachtclub"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Dag op een beachclub",
+      "en": "A beach club day"
+     },
+     "plus": [
+      "beachclub",
+      "happy-hour"
+     ],
+     "min": [
+      "nachtclub"
+     ],
+     "vereist": "beachclub"
+    },
+    {
+     "label": {
+      "nl": "Dansen tot laat",
+      "en": "Dancing late"
+     },
+     "plus": [
+      "dansen",
+      "nachtclub",
+      "wekelijkse-party"
+     ],
+     "min": [
+      "rustig"
+     ],
+     "vereist": "dansen"
+    },
+    {
+     "label": {
+      "nl": "Livemuziek",
+      "en": "Live music"
+     },
+     "plus": [
+      "live-muziek"
+     ],
+     "min": [],
+     "vereist": "live-muziek"
+    },
+    {
+     "label": {
+      "nl": "Casino",
+      "en": "Casino"
+     },
+     "plus": [
+      "casino"
+     ],
+     "min": [],
+     "vereist": "casino"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "In welke buurt?",
+    "en": "Which area?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Stad: Pietermaai, Punda, Otrobanda",
+      "en": "Town: Pietermaai, Punda, Otrobanda"
+     },
+     "plus": [
+      "pietermaai",
+      "punda",
+      "otrobanda"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Mambo Beach",
+      "en": "Mambo Beach"
+     },
+     "plus": [
+      "mambo"
+     ],
+     "min": [],
+     "vereist": "mambo"
+    },
+    {
+     "label": {
+      "nl": "Jan Thiel",
+      "en": "Jan Thiel"
+     },
+     "plus": [
+      "jan-thiel"
+     ],
+     "min": [],
+     "vereist": "jan-thiel"
+    },
+    {
+     "label": {
+      "nl": "Westkant",
+      "en": "West side"
+     },
+     "plus": [
+      "westpunt"
+     ],
+     "min": [],
+     "vereist": "westpunt"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Met wie wil je uitgaan?",
+    "en": "What kind of crowd do you want?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Vooral locals",
+      "en": "Mostly locals"
+     },
+     "plus": [
+      "lokaal-publiek"
+     ],
+     "min": [
+      "toeristen"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Gemengd",
+      "en": "A mix"
+     },
+     "plus": [
+      "lokaal-publiek",
+      "toeristen"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Andere toeristen",
+      "en": "Other visitors"
+     },
+     "plus": [
+      "toeristen"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat is je budget?",
+    "en": "What's your budget?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Zuinig, happy hour en geen entree",
+      "en": "Tight, happy hour and no entry fee"
+     },
+     "plus": [
+      "happy-hour",
+      "lokaal-publiek"
+     ],
+     "min": [
+      "entree"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Mag wat kosten",
+      "en": "Happy to splurge"
+     },
+     "plus": [
+      "cocktails",
+      "beachclub"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "mambo-beach-club",
+   "naam": "Mambo Beach Club",
+   "url": "https://www.maderoocean.club/",
+   "soort": {
+    "nl": "beachclub",
+    "en": "beach club"
+   },
+   "plaats": "Mambo Beach (Bapor Kibrá)",
+   "tags": [
+    "beachclub",
+    "mambo",
+    "entree",
+    "happy-hour",
+    "live-muziek",
+    "wekelijkse-party",
+    "toeristen",
+    "lokaal-publiek",
+    "dansen"
+   ],
+   "prijs": {
+    "bedrag": 4.5,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "entree strand per persoon",
+     "en": "beach entry per person"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Vrijdag happy hour met live muziek",
+     "en": "Friday happy hour with live music"
+    },
+    {
+     "nl": "Woensdag Dia Latino, vrijdag Cuban Night",
+     "en": "Wednesday Dia Latino, Friday Cuban Night"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 855,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=9087809372428562997"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 567,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/1554502"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Kalm, ondiep water en alles op loopafstand",
+     "Na zonsondergang een groot openluchtfeest"
+    ],
+    "en": [
+     "Calm, shallow water with everything within walking distance",
+     "Turns into a big open-air party after sunset"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Druk en toeristisch, vooral als er cruiseschepen liggen",
+     "Let op je spullen"
+    ],
+    "en": [
+     "Crowded and touristy, especially on cruise ship days",
+     "Keep an eye on your belongings"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=9087809372428562997",
+    "https://wanderlog.com/list/geoCategory/1554502",
+    "https://www.klm.com/travel-guide/inspiration/curacao-s-beach-clubs",
+    "https://www.caribjournal.com/2025/09/21/mambo-curacao-day-clubs/",
+    "https://nomadicniko.com/curacao/beaches/"
+   ]
+  },
+  {
+   "id": "wet-wild",
+   "naam": "Wet & Wild Beach Club",
+   "url": "https://www.wetandwildcuracao.com/",
+   "soort": {
+    "nl": "beachclub, laat open",
+    "en": "beach club, late hours"
+   },
+   "plaats": "Mambo Beach (Bapor Kibrá)",
+   "tags": [
+    "beachclub",
+    "mambo",
+    "dansen",
+    "wekelijkse-party",
+    "happy-hour",
+    "lokaal-publiek",
+    "toeristen",
+    "live-muziek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vrijdag en zondag open tot 02:00",
+     "en": "Fri and Sun until 2 a.m."
+    },
+    {
+     "nl": "Zondag de drukste avond",
+     "en": "Sunday is the busiest night"
+    },
+    {
+     "nl": "Zondag twee happy hours",
+     "en": "Two happy hours on Sunday"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 728,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=4386986771107974737"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 128,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Energieke sfeer met dansvloer in het zand",
+     "Feest tot laat, langer open dan de buren"
+    ],
+    "en": [
+     "High-energy vibe with a dance floor on the sand",
+     "Parties run late, longer than the neighbors"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Overdag rustiger, het leeft vooral 's avonds"
+    ],
+    "en": [
+     "Quieter by day, it really comes alive at night"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=4386986771107974737",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html",
+    "https://www.klm.com/travel-guide/inspiration/curacao-s-beach-clubs",
+    "https://en.hoteles.com/go/curacao/best-nightlife-curacao",
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
+   ]
+  },
+  {
+   "id": "cabana-beach",
+   "naam": "Cabana Beach Club",
+   "url": "https://cabanabeachcuracao.com/",
+   "soort": {
+    "nl": "beachclub",
+    "en": "beach club"
+   },
+   "plaats": "Mambo Beach (Bapor Kibrá)",
+   "tags": [
+    "beachclub",
+    "mambo",
+    "live-muziek",
+    "wekelijkse-party",
+    "dansen",
+    "happy-hour",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Woensdag Cabana Nights: band plus DJ",
+     "en": "Wednesday Cabana Nights: band then DJ"
+    },
+    {
+     "nl": "Alleen pinnen of creditcard",
+     "en": "Card payments only, no cash"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 938,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 1149,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Levendig, muziek begint vroeg",
+     "Bediening aan je ligbed"
+    ],
+    "en": [
+     "Lively, the music starts early",
+     "Service right at your sunbed"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/discover/cabana-beach-2",
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao",
+    "https://www.caribjournal.com/2025/09/21/mambo-curacao-day-clubs/",
+    "https://www.corendon.nl/inspiratie/uitgaan-op-curacao"
+   ]
+  },
+  {
+   "id": "bonita-beach-club",
+   "naam": "Bonita Beach Club",
+   "url": "http://www.bonitacuracao.com/",
+   "soort": {
+    "nl": "beachclub",
+    "en": "beach club"
+   },
+   "plaats": "Mambo Beach Boulevard",
+   "tags": [
+    "beachclub",
+    "mambo",
+    "happy-hour",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ruim 200 ligbedden",
+     "en": "Over 200 sunbeds"
+    },
+    {
+     "nl": "Dagelijks happy hour 17:30-19:00",
+     "en": "Daily happy hour 5:30-7 p.m."
+    },
+    {
+     "nl": "Vrijdag open tot 01:00",
+     "en": "Open until 1 a.m. Friday"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 806,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=15924042003504018726"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Ontspannen sfeer, fijn met een groep",
+     "Genoeg schaduw"
+    ],
+    "en": [
+     "Laid-back vibe, good for groups of friends",
+     "Plenty of shade"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=15924042003504018726",
+    "https://wanderlog.com/list/geoCategory/1554502",
+    "https://www.hoteles.com/go/curacao/car-best-beach-bars-curacao",
+    "https://www.caribjournal.com/2025/09/21/mambo-curacao-day-clubs/"
+   ]
+  },
+  {
+   "id": "rileks",
+   "naam": "Rilèks Beach Bar & Rooftop",
+   "url": "https://www.rileksbeach.com/",
+   "soort": {
+    "nl": "beachbar met rooftop",
+    "en": "beach bar with rooftop"
+   },
+   "plaats": "Mambo Beach (Bapor Kibrá)",
+   "tags": [
+    "beachclub",
+    "bar",
+    "mambo",
+    "happy-hour",
+    "live-muziek",
+    "zonsondergang",
+    "wekelijkse-party"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vrijdag live muziek",
+     "en": "Live music on Friday"
+    },
+    {
+     "nl": "Zaterdag Sunset Sessions met DJ",
+     "en": "Saturday Sunset Sessions with DJs"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 77,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=14114154041252356756"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Relaxte sfeer, minder druk dan de grote clubs"
+    ],
+    "en": [
+     "Relaxed vibe, less hectic than the big clubs"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=14114154041252356756",
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao",
+    "https://www.caribjournal.com/2025/09/21/mambo-curacao-day-clubs/"
+   ]
+  },
+  {
+   "id": "mood-beach",
+   "naam": "Mood Beach Club",
+   "url": "http://www.moodbeachcuracao.com/",
+   "soort": {
+    "nl": "luxe beachclub",
+    "en": "upscale beach club"
+   },
+   "plaats": "Mambo Beach (Bapor Kibrá)",
+   "tags": [
+    "beachclub",
+    "mambo",
+    "cocktails",
+    "toeristen",
+    "rustig"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Daybeds en cabana's",
+     "en": "Daybeds and cabanas"
+    },
+    {
+     "nl": "Alleen pinnen of creditcard",
+     "en": "Card payments only, no cash"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 849,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=8460594876070703917"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 473,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Cocktails worden aan je bed gebracht",
+     "Rustiger en meer luxe dan de rest van Mambo"
+    ],
+    "en": [
+     "Cocktails brought to your daybed",
+     "Calmer and more upscale than the rest of Mambo"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=8460594876070703917",
+    "https://www.hoteles.com/go/curacao/car-best-beach-bars-curacao",
+    "https://www.caribjournal.com/2025/09/21/mambo-curacao-day-clubs/",
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "madero-ocean-club",
+   "naam": "Madero Ocean Club",
+   "url": "https://www.maderoocean.club/",
+   "soort": {
+    "nl": "beachclub en evenementen",
+    "en": "beach club and events"
+   },
+   "plaats": "Mambo Beach Boulevard",
+   "tags": [
+    "beachclub",
+    "mambo",
+    "live-muziek",
+    "dansen",
+    "toeristen",
+    "cocktails"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Zwembad, cabana's en DJ-sets",
+     "en": "Pool, cabanas and DJ sets"
+    },
+    {
+     "nl": "Grote evenementen met artiesten",
+     "en": "Big events with touring artists"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.4,
+     "max": 5,
+     "aantal": 305,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=8071306502104362170"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Overdag goed eten en snelle bediening bij de bedden",
+     "Goede cocktails"
+    ],
+    "en": [
+     "Good food and quick service at the loungers by day",
+     "Well-made cocktails"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "'s Avonds trage bediening",
+     "Ligbedden duur",
+     "Service wisselt sterk"
+    ],
+    "en": [
+     "Slow service in the evening",
+     "Loungers are expensive",
+     "Service quality is inconsistent"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=8071306502104362170",
+    "https://wanderlog.com/place/details/4352589",
+    "https://www.corendon.nl/inspiratie/uitgaan-op-curacao",
+    "https://www.hoteles.com/go/curacao/car-best-beach-bars-curacao"
+   ]
+  },
+  {
+   "id": "chill-beach",
+   "naam": "Chill Beach Bar & Grill",
+   "url": "https://www.chillcuracao.com/",
+   "soort": {
+    "nl": "beachbar",
+    "en": "beach bar"
+   },
+   "plaats": "Mambo Beach (Bapor Kibrá)",
+   "tags": [
+    "bar",
+    "beachclub",
+    "mambo",
+    "happy-hour",
+    "wekelijkse-party",
+    "dansen",
+    "lokaal-publiek",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vrijdag vanaf 17:00 DJ, Latin",
+     "en": "Friday DJ from 5 p.m., Latin"
+    },
+    {
+     "nl": "Vrijdag drankjes half geld",
+     "en": "Half-price drinks on Friday"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 843,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=12319949217504287363"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 569,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Hangmatten en eten met je voeten in het zand",
+     "Feestelijke sfeer bij happy hour"
+    ],
+    "en": [
+     "Hammocks and dining with your feet in the sand",
+     "Party atmosphere during happy hour"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=12319949217504287363",
+    "https://www.corendon.nl/inspiratie/uitgaan-op-curacao",
+    "https://www.hoteles.com/go/curacao/car-best-beach-bars-curacao",
+    "https://wanderlog.com/list/geoCategory/1554502"
+   ]
+  },
+  {
+   "id": "cafe-40b",
+   "naam": "Cafe 40 B",
+   "url": null,
+   "soort": {
+    "nl": "kleine beachbar",
+    "en": "small beach bar"
+   },
+   "plaats": "Seaquarium Beach",
+   "tags": [
+    "bar",
+    "mambo",
+    "happy-hour",
+    "rustig"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Dagelijks happy hour 17:00-21:00",
+     "en": "Daily happy hour 5-9 p.m."
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 33,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=2217493582230933423"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Lokale muziek en een kleinere, rustige setting"
+    ],
+    "en": [
+     "Local music and a smaller, quieter setting"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=2217493582230933423",
+    "https://www.hoteles.com/go/curacao/car-best-beach-bars-curacao"
+   ]
+  },
+  {
+   "id": "hemingway",
+   "naam": "Hemingway Beach Bar & Restaurant",
+   "url": "https://hemingwaycuracao.com/",
+   "soort": {
+    "nl": "beachbar bij LionsDive",
+    "en": "beach bar at LionsDive"
+   },
+   "plaats": "Mambo Beach (LionsDive)",
+   "tags": [
+    "bar",
+    "mambo",
+    "live-muziek",
+    "zonsondergang",
+    "happy-hour",
+    "toeristen",
+    "wekelijkse-party",
+    "dansen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Zondag Cubaanse salsaband",
+     "en": "Cuban salsa band on Sunday"
+    },
+    {
+     "nl": "Live muziek vr, za, zo",
+     "en": "Live music Fri, Sat, Sun"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 1962,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=17472752883565867796"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 1041,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Populair voor eten bij zonsondergang voor het uitgaan",
+     "Vroege happy hour"
+    ],
+    "en": [
+     "Popular for sunset dinner before going out",
+     "Early happy hour"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=17472752883565867796",
+    "https://www.klm.com/travel-guide/inspiration/curacao-s-beach-clubs",
+    "https://www.hoteles.com/go/curacao/car-best-beach-bars-curacao",
+    "https://www.villaseashell.com/post/curacaos-amazing-nightlife"
+   ]
+  },
+  {
+   "id": "club-x-mambo",
+   "naam": "Club x Mambo BLVD",
+   "url": "http://www.facebook.com/clubxmambo",
+   "soort": {
+    "nl": "nachtclub",
+    "en": "nightclub"
+   },
+   "plaats": "Mambo Beach Boulevard",
+   "tags": [
+    "nachtclub",
+    "mambo",
+    "dansen",
+    "wekelijkse-party"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Bovenverdieping van Mambo Boulevard",
+     "en": "Top floor of Mambo Boulevard"
+    },
+    {
+     "nl": "Vrijdag en zaterdag themafeesten",
+     "en": "Theme nights Fri and Sat"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.6,
+     "max": 5,
+     "aantal": 11,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=5226006013826721281"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Laat open, voor na de beachclubs"
+    ],
+    "en": [
+     "Open late, for after the beach clubs"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=5226006013826721281",
+    "https://www.pilotplans.com/blog/curacao-nightlife",
+    "https://wanderlog.com/list/geoCategory/1584101"
+   ]
+  },
+  {
+   "id": "live-973",
+   "naam": "Live 973",
+   "url": null,
+   "soort": {
+    "nl": "nachtclub",
+    "en": "nightclub"
+   },
+   "plaats": "Mambo Beach Boulevard",
+   "tags": [
+    "nachtclub",
+    "mambo",
+    "dansen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Afterparty na Mambo Beach",
+     "en": "After-party spot for Mambo Beach"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.2,
+     "max": 5,
+     "aantal": 14,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=10988035517746358476"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gaat door als de beachclubs sluiten"
+    ],
+    "en": [
+     "Keeps going when the beach clubs close"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=10988035517746358476",
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao",
+    "https://wanderlog.com/list/geoCategory/1584101"
+   ]
+  },
+  {
+   "id": "zanzibar",
+   "naam": "Zanzibar Beach & Restaurant",
+   "url": "http://www.janthielbeach.com/zanzibar-beach-curacao",
+   "soort": {
+    "nl": "beachclub",
+    "en": "beach club"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "beachclub",
+    "jan-thiel",
+    "entree",
+    "happy-hour",
+    "live-muziek",
+    "wekelijkse-party",
+    "lokaal-publiek",
+    "toeristen",
+    "zonsondergang"
+   ],
+   "prijs": {
+    "bedrag": 3,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "entree strand p.p., na 16:30 gratis",
+     "en": "beach entry per person, free after 4:30 p.m."
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Zaterdag happy hour, dan livemuziek",
+     "en": "Saturday happy hour, then live music"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 4119,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=1502708725799099480"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 3.5,
+     "max": 5,
+     "aantal": 1184,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Zaterdagmiddag de feestplek van Jan Thiel",
+     "Kalm water en ligbedden"
+    ],
+    "en": [
+     "The Saturday afternoon party spot of Jan Thiel",
+     "Calm water and loungers"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Erg druk en toeristisch"
+    ],
+    "en": [
+     "Very crowded and touristy"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=1502708725799099480",
+    "https://www.corendon.nl/inspiratie/uitgaan-op-curacao",
+    "https://fodors.com/world/caribbean/curacao/things-to-do/nightlife",
+    "https://wanderlog.com/list/geoCategory/1554502",
+    "https://nomadicniko.com/curacao/beaches/"
+   ]
+  },
+  {
+   "id": "kokos",
+   "naam": "Koko's Beach Club & Restaurant",
+   "url": "https://www.janthielbeach.com/kokos/",
+   "soort": {
+    "nl": "beachclub, rustige kant",
+    "en": "beach club, quiet side"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "beachclub",
+    "jan-thiel",
+    "entree",
+    "rustig",
+    "toeristen"
+   ],
+   "prijs": {
+    "bedrag": 3,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "entree strand p.p., na 16:30 gratis",
+     "en": "beach entry per person, free after 4:30 p.m."
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Open tot zonsondergang",
+     "en": "Open until sunset"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 793,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=11503887281190585798"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustige kant van Jan Thiel Beach"
+    ],
+    "en": [
+     "On the quiet side of Jan Thiel Beach"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=11503887281190585798",
+    "https://www.hoteles.com/go/curacao/car-best-beach-bars-curacao",
+    "https://nomadicniko.com/curacao/beaches/"
+   ]
+  },
+  {
+   "id": "zest",
+   "naam": "Zest Restaurant & Beach Cafe",
+   "url": "https://www.janthielbeach.com/nl/restaurants/zest-restaurant/",
+   "soort": {
+    "nl": "strandcafé",
+    "en": "beach cafe"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "beachclub",
+    "jan-thiel",
+    "entree",
+    "happy-hour",
+    "cocktails",
+    "toeristen"
+   ],
+   "prijs": {
+    "bedrag": 3,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "entree strand p.p., na 16:30 gratis",
+     "en": "beach entry per person, free after 4:30 p.m."
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Donderdag Sangria & Beats 15-19",
+     "en": "Thursday Sangria & Beats 3-7 p.m."
+    },
+    {
+     "nl": "Vrijdag spritz happy hour 18-19",
+     "en": "Friday spritz happy hour 6-7 p.m."
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 1549,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=12051214979316464088"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 3.5,
+     "max": 5,
+     "aantal": 1161,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/1554502"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Tafels in het zand"
+    ],
+    "en": [
+     "Tables right on the sand"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=12051214979316464088",
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao",
+    "https://wanderlog.com/list/geoCategory/1554502",
+    "https://nomadicniko.com/curacao/beaches/"
+   ]
+  },
+  {
+   "id": "tinto",
+   "naam": "Tinto Bar y Cocina",
+   "url": "https://www.janthielbeach.com/nl/restaurants/tinto-bar-y-cocina/",
+   "soort": {
+    "nl": "Latijns restaurant-bar",
+    "en": "Latin restaurant and bar"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "bar",
+    "jan-thiel",
+    "cocktails",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 464,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=4586683096753031104"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=4586683096753031104",
+    "https://www.villaseashell.com/post/curacaos-amazing-nightlife"
+   ]
+  },
+  {
+   "id": "mojitos-bites",
+   "naam": "Mojitos & Bites",
+   "url": "http://www.mojitosandbites.com/",
+   "soort": {
+    "nl": "sportsbar",
+    "en": "sports bar"
+   },
+   "plaats": "Papagayo Plaza, Jan Thiel",
+   "tags": [
+    "bar",
+    "jan-thiel",
+    "cocktails",
+    "dansen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Eerste verdieping Papagayo Plaza",
+     "en": "First floor of Papagayo Plaza"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 245,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=16108193588797056985"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=16108193588797056985",
+    "https://www.villaseashell.com/post/curacaos-amazing-nightlife"
+   ]
+  },
+  {
+   "id": "papagayo-beach-club",
+   "naam": "Papagayo Beach Club",
+   "url": null,
+   "soort": {
+    "nl": "beachclub bij resort",
+    "en": "resort beach club"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "beachclub",
+    "jan-thiel",
+    "entree",
+    "toeristen"
+   ],
+   "prijs": {
+    "bedrag": 3,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "entree strand p.p., na 16:30 gratis",
+     "en": "beach entry per person, free after 4:30 p.m."
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Bij resort met zwembad",
+     "en": "Resort beach club with pool"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 424,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/1554502"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 1001,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/1554502"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/1554502",
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao",
+    "https://www.villaseashell.com/post/curacaos-amazing-nightlife"
+   ]
+  },
+  {
+   "id": "kokomo-beach",
+   "naam": "Kokomo Beach",
+   "url": "http://www.kokomo-beach.com/",
+   "soort": {
+    "nl": "strandpaviljoen",
+    "en": "beach pavilion"
+   },
+   "plaats": "Vaersenbaai",
+   "tags": [
+    "beachclub",
+    "zonsondergang",
+    "dansen",
+    "toeristen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Maandelijks full moon party, 18+",
+     "en": "Monthly full moon party, 18+"
+    },
+    {
+     "nl": "Full moon 22:00-05:00",
+     "en": "Full moon party 10 p.m.-5 a.m."
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 5753,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=9388400039833017325"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 940,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/1554502"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gezellige beachbar bij zonsondergang",
+     "Goed snorkelen in de baai"
+    ],
+    "en": [
+     "Lively beach bar at sunset",
+     "Good snorkeling in the bay"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Druk in het weekend met DJ's"
+    ],
+    "en": [
+     "Busy weekends with DJs"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=9388400039833017325",
+    "https://www.corendon.nl/inspiratie/uitgaan-op-curacao",
+    "https://www.villaseashell.com/post/curacaos-amazing-nightlife",
+    "https://wanderlog.com/list/geoCategory/1554502"
+   ]
+  },
+  {
+   "id": "pirate-bay",
+   "naam": "Pirate Bay Beach Club & Restaurant",
+   "url": "http://www.piratebaycuracao.com/",
+   "soort": {
+    "nl": "beachclub",
+    "en": "beach club"
+   },
+   "plaats": "Piscaderabaai",
+   "tags": [
+    "beachclub",
+    "live-muziek",
+    "happy-hour",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Weekend live muziek",
+     "en": "Live music on weekends"
+    },
+    {
+     "nl": "Dagelijks open tot 23:30",
+     "en": "Open daily until 11:30 p.m."
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 2935,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=17234540677901858088"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 3.5,
+     "max": 5,
+     "aantal": 1766,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/1584101"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goed uitgerust strand met rustige plekken"
+    ],
+    "en": [
+     "Well-equipped beach with quiet corners"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=17234540677901858088",
+    "https://wanderlog.com/list/geoCategory/1584101",
+    "https://www.hoteles.com/go/curacao/car-best-beach-bars-curacao"
+   ]
+  },
+  {
+   "id": "blue-bay-beach-club",
+   "naam": "Blue Bay Beach Club (Blend Beach Bar)",
+   "url": null,
+   "soort": {
+    "nl": "resortstrand met beachbar",
+    "en": "resort beach with bar"
+   },
+   "plaats": "Blue Bay, Sint Michiel",
+   "tags": [
+    "beachclub",
+    "bar",
+    "entree",
+    "live-muziek",
+    "rustig",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Gratis concertreeks om de paar maanden",
+     "en": "Free concert series every few months"
+    },
+    {
+     "nl": "Toegang tegen entreeprijs",
+     "en": "Entry fee to access the beach"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 1538,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/1584101"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Privéstrand met schaduw en rif om te snorkelen"
+    ],
+    "en": [
+     "Private beach with shade and a reef to snorkel"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/1584101",
+    "https://www.hoteles.com/go/curacao/car-best-beach-bars-curacao",
+    "https://wanderlog.com/list/geoCategory/1554502"
+   ]
+  },
+  {
+   "id": "karakter",
+   "naam": "Karakter Beach Club & Lounge",
+   "url": "http://www.karaktercuracao.com/",
+   "soort": {
+    "nl": "beachclub met restaurant",
+    "en": "beach club and restaurant"
+   },
+   "plaats": "Coral Estate, Rif St. Marie",
+   "tags": [
+    "beachclub",
+    "westpunt",
+    "zonsondergang",
+    "rustig",
+    "cocktails",
+    "toeristen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Restaurant vaak vooraf reserveren",
+     "en": "Restaurant often needs booking"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 2394,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=6787870368831837398"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 2863,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Romantisch, mooie zonsondergang",
+     "Rustige sfeer"
+    ],
+    "en": [
+     "Romantic, with great sunset views",
+     "Calm setting"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Afgelegen, je hebt een auto nodig",
+     "Geen zandinstap, via trap"
+    ],
+    "en": [
+     "Remote, you need a car",
+     "No sandy entry, steps only"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=6787870368831837398",
+    "https://wanderlog.com/list/geoCategory/1554502",
+    "https://wanderlog.com/list/geoCategory/1584101",
+    "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/"
+   ]
+  },
+  {
+   "id": "playa-forti",
+   "naam": "Restaurant Playa Forti",
+   "url": "http://www.playafortirestaurant.com/",
+   "soort": {
+    "nl": "restaurant-bar aan zee",
+    "en": "seaside restaurant and bar"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "bar",
+    "westpunt",
+    "zonsondergang",
+    "rustig",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 1402,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=9688876435122645696"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=9688876435122645696",
+    "https://www.frommers.com/destinations/curacao/nightlife/overview"
+   ]
+  },
+  {
+   "id": "niffo-huts",
+   "naam": "The Niffo Huts",
+   "url": null,
+   "soort": {
+    "nl": "bar & grill",
+    "en": "bar and grill"
+   },
+   "plaats": "Sint Michiel",
+   "tags": [
+    "bar",
+    "rustig",
+    "lokaal-publiek"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 682,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 93,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "local-snek",
+   "naam": "Local Snek",
+   "url": null,
+   "soort": {
+    "nl": "lokale bar & grill",
+    "en": "local bar and grill"
+   },
+   "plaats": "Caracasbaaiweg",
+   "tags": [
+    "bar",
+    "lokaal-publiek",
+    "rustig"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 44,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 3,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "saint-tropez",
+   "naam": "Saint Tropez Ocean Club",
+   "url": "https://www.sainttropezcuracao.com/",
+   "soort": {
+    "nl": "dayclub met infinity pool",
+    "en": "day club with infinity pool"
+   },
+   "plaats": "Pietermaai",
+   "tags": [
+    "beachclub",
+    "pietermaai",
+    "zonsondergang",
+    "cocktails",
+    "dansen",
+    "wekelijkse-party",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vrijdagavond DJ-feest",
+     "en": "Friday night DJ party"
+    },
+    {
+     "nl": "Infinity pool aan zee",
+     "en": "Infinity pool by the sea"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 1642,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=17663129691983451497"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 878,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Infinity pool en zonsondergang boven zee",
+     "Stijlvol feest van dag naar nacht"
+    ],
+    "en": [
+     "Infinity pool with sunsets over the water",
+     "Stylish day-to-night parties"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=17663129691983451497",
+    "https://fodors.com/world/caribbean/curacao/things-to-do/nightlife",
+    "https://wanderlog.com/list/geoCategory/1554502"
+   ]
+  },
+  {
+   "id": "mundo-bizarro",
+   "naam": "Mundo Bizarro",
+   "url": "https://www.mundobizarrocuracao.com/",
+   "soort": {
+    "nl": "bar-restaurant",
+    "en": "bar and restaurant"
+   },
+   "plaats": "Pietermaai (Nieuwestraat)",
+   "tags": [
+    "bar",
+    "pietermaai",
+    "live-muziek",
+    "dansen",
+    "cocktails",
+    "wekelijkse-party",
+    "lokaal-publiek",
+    "toeristen",
+    "happy-hour"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Donderdag live muziek en salsa",
+     "en": "Thursday live music and salsa"
+    },
+    {
+     "nl": "Dinsdag tangoles",
+     "en": "Tango lessons on Tuesday"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 1200,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=8836676202561566008"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 1087,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Bijzonder interieur en goede cocktails",
+     "Salsa dansen trekt locals en bezoekers"
+    ],
+    "en": [
+     "Quirky decor and good signature cocktails",
+     "Salsa nights draw both locals and visitors"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=8836676202561566008",
+    "https://fodors.com/world/caribbean/curacao/things-to-do/nightlife",
+    "https://www.corendon.nl/inspiratie/uitgaan-op-curacao",
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
+   ]
+  },
+  {
+   "id": "miles-jazz-cafe",
+   "naam": "Miles Jazz Cafe",
+   "url": "http://www.milescuracao.com/",
+   "soort": {
+    "nl": "jazzcafé",
+    "en": "jazz bar"
+   },
+   "plaats": "Pietermaai (Nieuwestraat 42)",
+   "tags": [
+    "bar",
+    "pietermaai",
+    "live-muziek",
+    "rustig",
+    "cocktails",
+    "lokaal-publiek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Jazz op vinyl, bordspellen",
+     "en": "Vinyl jazz and board games"
+    },
+    {
+     "nl": "Soms jamsessies van lokale muzikanten",
+     "en": "Local musicians sometimes jam"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 340,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=10502969937605536349"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Ontspannen avond met jazz"
+    ],
+    "en": [
+     "Relaxed night out with jazz"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=10502969937605536349",
+    "https://fodors.com/world/caribbean/curacao/things-to-do/nightlife",
+    "https://www.villaseashell.com/post/curacaos-amazing-nightlife"
+   ]
+  },
+  {
+   "id": "blues",
+   "naam": "Blues Bar & Restaurant (Avila)",
+   "url": "https://www.bluescuracao.com/",
+   "soort": {
+    "nl": "bar op een pier",
+    "en": "bar on a pier"
+   },
+   "plaats": "Penstraat (Avila Beach Hotel)",
+   "tags": [
+    "bar",
+    "pietermaai",
+    "live-muziek",
+    "zonsondergang",
+    "cocktails",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Jazz en blues: do, za",
+     "en": "Jazz and blues Thu, Sat"
+    },
+    {
+     "nl": "Dinsdag gesloten",
+     "en": "Closed Tuesday"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 476,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=17170320413144020376"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Prachtige zonsondergang vanaf de pier"
+    ],
+    "en": [
+     "Great sunset views from the pier"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=17170320413144020376",
+    "https://www.hoteles.com/go/curacao/car-best-beach-bars-curacao",
+    "https://www.frommers.com/destinations/curacao/nightlife/overview"
+   ]
+  },
+  {
+   "id": "bijblauw",
+   "naam": "BijBlauw",
+   "url": "http://www.bijblauw.com/",
+   "soort": {
+    "nl": "restaurant-bar aan zee",
+    "en": "seaside restaurant and bar"
+   },
+   "plaats": "Pietermaai",
+   "tags": [
+    "bar",
+    "pietermaai",
+    "zonsondergang",
+    "cocktails",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 1327,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=11445677996169328477"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=11445677996169328477",
+    "https://www.villaseashell.com/post/curacaos-amazing-nightlife"
+   ]
+  },
+  {
+   "id": "blackjack",
+   "naam": "BlackJack Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "sportsbar",
+    "en": "sports bar"
+   },
+   "plaats": "Pietermaai",
+   "tags": [
+    "bar",
+    "pietermaai",
+    "cocktails",
+    "lokaal-publiek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Tv's voor live sport",
+     "en": "TVs for live sports"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 239,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=16389644368780737999"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 10,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goede burgers en vriendelijke, snelle bediening",
+     "Sportsfeer en terras"
+    ],
+    "en": [
+     "Great burgers and friendly, fast service",
+     "Sports atmosphere and a terrace"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Overdag stil, gewone barhap"
+    ],
+    "en": [
+     "Quiet in the daytime, basic bar food"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=16389644368780737999",
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao",
+    "https://www.pilotplans.com/blog/curacao-nightlife"
+   ]
+  },
+  {
+   "id": "kome",
+   "naam": "Kome",
+   "url": null,
+   "soort": {
+    "nl": "restaurant-bar",
+    "en": "restaurant and bar"
+   },
+   "plaats": "Pietermaai",
+   "tags": [
+    "bar",
+    "pietermaai",
+    "cocktails",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 1641,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 2092,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "mosacana",
+   "naam": "MosaCaña Bar & Kitchen",
+   "url": null,
+   "soort": {
+    "nl": "bar & keuken",
+    "en": "bar and kitchen"
+   },
+   "plaats": "Penstraat",
+   "tags": [
+    "bar",
+    "pietermaai",
+    "cocktails",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 917,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 1037,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "de-heeren-at-sea",
+   "naam": "De Heeren @ Sea",
+   "url": null,
+   "soort": {
+    "nl": "restaurant-bar aan zee",
+    "en": "seaside restaurant and bar"
+   },
+   "plaats": "Pietermaai",
+   "tags": [
+    "bar",
+    "pietermaai",
+    "zonsondergang",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 1103,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 897,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "bluebird-gastro-pub",
+   "naam": "Bluebird Gastro Pub",
+   "url": null,
+   "soort": {
+    "nl": "pub",
+    "en": "pub"
+   },
+   "plaats": "Pietermaai",
+   "tags": [
+    "bar",
+    "pietermaai",
+    "rustig"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 104,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 21,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "punda-vibes",
+   "naam": "Punda Vibes (donderdag)",
+   "url": null,
+   "soort": {
+    "nl": "wekelijks straatfeest",
+    "en": "weekly street party"
+   },
+   "plaats": "Punda",
+   "tags": [
+    "punda",
+    "live-muziek",
+    "wekelijkse-party",
+    "dansen",
+    "lokaal-publiek",
+    "toeristen",
+    "happy-hour"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elke donderdag vanaf circa 16:00",
+     "en": "Every Thursday from about 4 p.m."
+    },
+    {
+     "nl": "Vuurwerk rond 20:00",
+     "en": "Fireworks around 8 p.m."
+    },
+    {
+     "nl": "Bij Gomezplein en Emmabrug",
+     "en": "Around Gomezplein and Queen Emma Bridge"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Livemuziek, dansers en eetkraampjes op straat"
+    ],
+    "en": [
+     "Live music, dancers and food stalls in the streets"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://fodors.com/world/caribbean/curacao/things-to-do/nightlife",
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao",
+    "https://wanderlog.com/list/geoCategory/1554502"
+   ]
+  },
+  {
+   "id": "plein-cafe-wilhelmina",
+   "naam": "Plein Café Wilhelmina",
+   "url": "http://www.pleincafewilhelmina.com/",
+   "soort": {
+    "nl": "grand café op plein",
+    "en": "grand cafe on a square"
+   },
+   "plaats": "Punda (Wilhelminaplein)",
+   "tags": [
+    "bar",
+    "punda",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 1397,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=1246811530854535573"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=1246811530854535573"
+   ]
+  },
+  {
+   "id": "iguana-cafe",
+   "naam": "Iguana Café",
+   "url": null,
+   "soort": {
+    "nl": "café aan het water",
+    "en": "waterfront cafe"
+   },
+   "plaats": "Punda (Handelskade 4)",
+   "tags": [
+    "bar",
+    "punda",
+    "live-muziek",
+    "toeristen",
+    "cocktails"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 1943,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=3443189187924348582"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 2616,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Terras aan de Handelskade met uitzicht op het water"
+    ],
+    "en": [
+     "Terrace on the Handelskade waterfront"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=3443189187924348582",
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao",
+    "https://www.villaseashell.com/post/curacaos-amazing-nightlife"
+   ]
+  },
+  {
+   "id": "la-boheme",
+   "naam": "La Bohème Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "bistro-bar",
+    "en": "bistro and bar"
+   },
+   "plaats": "Punda (Columbusstraat)",
+   "tags": [
+    "bar",
+    "punda",
+    "cocktails",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 1630,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 818,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goede mojito's en sappen",
+     "Vriendelijk en goede prijs-kwaliteit"
+    ],
+    "en": [
+     "Good mojitos and fresh juices",
+     "Friendly service and good value"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Weinig plekken in de schaduw"
+    ],
+    "en": [
+     "Limited shaded seating"
+    ]
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "netto-bar",
+   "naam": "Netto Bar",
+   "url": "https://www.facebook.com/nettobar",
+   "soort": {
+    "nl": "oudste bar van het eiland",
+    "en": "island's oldest bar"
+   },
+   "plaats": "Otrobanda (Breedestraat 143)",
+   "tags": [
+    "bar",
+    "otrobanda",
+    "lokaal-publiek",
+    "live-muziek",
+    "rustig"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Sinds 1954",
+     "en": "Open since 1954"
+    },
+    {
+     "nl": "Bekend om groene rum",
+     "en": "Known for its green rum"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 553,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=10359894721870902708"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 66,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Echte lokale sfeer en livemuziek",
+     "Beroemde Ròm Bèrdè"
+    ],
+    "en": [
+     "Real local atmosphere and live music",
+     "Famous Ròm Bèrdè green rum"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=10359894721870902708",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html",
+    "https://www.corendon.nl/inspiratie/uitgaan-op-curacao",
+    "https://www.pilotplans.com/blog/curacao-nightlife",
+    "https://wanderlog.com/list/geoCategory/1584101"
+   ]
+  },
+  {
+   "id": "gouverneur",
+   "naam": "Grand Café Gouverneur De Rouville",
+   "url": "http://www.de-gouverneur.com/",
+   "soort": {
+    "nl": "grand café met terras",
+    "en": "grand cafe with terrace"
+   },
+   "plaats": "Otrobanda",
+   "tags": [
+    "bar",
+    "otrobanda",
+    "cocktails",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Uitzicht op Annabaai en Punda",
+     "en": "Views over Anna Bay to Punda"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 2817,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=318131966522289745"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 4232,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=318131966522289745",
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "the-captain",
+   "naam": "The Captain",
+   "url": null,
+   "soort": {
+    "nl": "bar-diner",
+    "en": "bar and diner"
+   },
+   "plaats": "Otrobanda (De Rouvilleweg)",
+   "tags": [
+    "bar",
+    "otrobanda",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 343,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 277,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "rif-fort-village",
+   "naam": "Rif Fort Village (bars en podium)",
+   "url": null,
+   "soort": {
+    "nl": "bars in oud fort",
+    "en": "bars in an old fort"
+   },
+   "plaats": "Otrobanda",
+   "tags": [
+    "bar",
+    "otrobanda",
+    "live-muziek",
+    "toeristen",
+    "happy-hour"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Livebands op centraal podium",
+     "en": "Live bands on a central stage"
+    },
+    {
+     "nl": "Dagelijks open tot 23:00",
+     "en": "Open daily until 11 p.m."
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 6751,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 1808,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Biertje met uitzicht op de Annabaai"
+    ],
+    "en": [
+     "A beer with views of Anna Bay"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://fodors.com/world/caribbean/curacao/things-to-do/nightlife",
+    "https://en.hoteles.com/go/curacao/best-nightlife-curacao",
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "bklyn",
+   "naam": "BKLYN",
+   "url": null,
+   "soort": {
+    "nl": "gastrobar",
+    "en": "gastro bar"
+   },
+   "plaats": "Willemstad (Pen Square)",
+   "tags": [
+    "bar",
+    "cocktails"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 311,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 67,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "omundo",
+   "naam": "Omundo",
+   "url": "https://www.omundo.cw/",
+   "soort": {
+    "nl": "restaurant met livemuziek",
+    "en": "restaurant with live music"
+   },
+   "plaats": "Zuikertuintjeweg",
+   "tags": [
+    "bar",
+    "live-muziek",
+    "dansen",
+    "lokaal-publiek"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 436,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=6075607806477735582"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=6075607806477735582",
+    "https://www.villaseashell.com/post/curacaos-amazing-nightlife"
+   ]
+  },
+  {
+   "id": "bar-p",
+   "naam": "BAR P Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "lokale bar",
+    "en": "local bar"
+   },
+   "plaats": "Santa Rosaweg",
+   "tags": [
+    "bar",
+    "lokaal-publiek",
+    "happy-hour",
+    "wekelijkse-party"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Donderdag Red Cup Night",
+     "en": "Thursday Red Cup Night"
+    },
+    {
+     "nl": "Elke dag laat open",
+     "en": "Open late every day"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.8,
+     "max": 5,
+     "aantal": 73,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=2154221205219117617"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 2.4,
+     "max": 5,
+     "aantal": 7,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Ontspannen, muziek niet te hard"
+    ],
+    "en": [
+     "Relaxed, music not too loud"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Lage Tripadvisor-score uit weinig reviews"
+    ],
+    "en": [
+     "Low Tripadvisor score from few reviews"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=2154221205219117617",
+    "https://www.corendon.nl/inspiratie/uitgaan-op-curacao",
+    "https://www.pilotplans.com/blog/curacao-nightlife",
+    "https://wanderlog.com/list/geoCategory/1584101",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html"
+   ]
+  },
+  {
+   "id": "obaar",
+   "naam": "OBaAR Brazilian Lounge",
+   "url": null,
+   "soort": {
+    "nl": "Braziliaanse lounge",
+    "en": "Brazilian lounge"
+   },
+   "plaats": "Loostraat",
+   "tags": [
+    "bar",
+    "live-muziek",
+    "dansen",
+    "cocktails"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Live Braziliaanse muziek",
+     "en": "Live Brazilian music"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 162,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=8803362223739545533"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=8803362223739545533",
+    "https://www.pilotplans.com/blog/curacao-nightlife"
+   ]
+  },
+  {
+   "id": "la-casa-del-habano",
+   "naam": "La Casa del Habano",
+   "url": "http://www.lacasadelhabano-curacao.com/",
+   "soort": {
+    "nl": "sigarenlounge",
+    "en": "cigar lounge"
+   },
+   "plaats": "Schottegatweg Oost",
+   "tags": [
+    "bar",
+    "rustig",
+    "cocktails"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 114,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=14714848196823097017"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 1,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Groot sigarenaanbod en deskundig personeel",
+     "Rustige, intieme setting"
+    ],
+    "en": [
+     "Large cigar selection and knowledgeable staff",
+     "Quiet, intimate setting"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=14714848196823097017",
+    "https://www.pilotplans.com/blog/curacao-nightlife",
+    "https://wanderlog.com/list/geoCategory/1584101",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html"
+   ]
+  },
+  {
+   "id": "emporio",
+   "naam": "Emporio Grand Café",
+   "url": null,
+   "soort": {
+    "nl": "nachtclub",
+    "en": "nightclub"
+   },
+   "plaats": "Nieuwe Caracasbaaiweg",
+   "tags": [
+    "nachtclub",
+    "dansen",
+    "lokaal-publiek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "DJ-feesten",
+     "en": "DJ parties"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 233,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=2918220289180457870"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=2918220289180457870",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html",
+    "https://www.villaseashell.com/post/curacaos-amazing-nightlife"
+   ]
+  },
+  {
+   "id": "curadise",
+   "naam": "Curadise Bar Restaurant",
+   "url": null,
+   "soort": {
+    "nl": "lokale bar",
+    "en": "local bar"
+   },
+   "plaats": "Graham Bellstraat",
+   "tags": [
+    "bar",
+    "lokaal-publiek",
+    "rustig"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 75,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "sopranos",
+   "naam": "Sopranos Sports Bar and Pizzeria",
+   "url": null,
+   "soort": {
+    "nl": "sportsbar",
+    "en": "sports bar"
+   },
+   "plaats": null,
+   "tags": [
+    "bar",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.8,
+     "max": 5,
+     "aantal": 107,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html"
+   ]
+  },
+  {
+   "id": "wind-creek-carnival-casino",
+   "naam": "Wind Creek Carnival Casino",
+   "url": null,
+   "soort": {
+    "nl": "casino in resort",
+    "en": "resort casino"
+   },
+   "plaats": "Otrobanda (Renaissance, Rif Fort)",
+   "tags": [
+    "casino",
+    "otrobanda",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "250 gokkasten, 12 speeltafels",
+     "en": "250 slots, 12 table games"
+    },
+    {
+     "nl": "Geopend december 2019",
+     "en": "Opened December 2019"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/new-owners-invest-more-than-45-million-guilders-wind-creek-carnival-casino-curacao-opens-doors-at-renaissance",
+    "https://www.inyourpocket.com/dutch-caribbean/curacao/articles/top-5-casinos-in-curacao-for-2023"
+   ]
+  },
+  {
+   "id": "princess-casino",
+   "naam": "Princess Casino (Sunscape)",
+   "url": null,
+   "soort": {
+    "nl": "casino in resort",
+    "en": "resort casino"
+   },
+   "plaats": "bij Mambo Beach (Sunscape)",
+   "tags": [
+    "casino",
+    "mambo",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ruim 300 gokkasten, bingo",
+     "en": "300+ slots and bingo"
+    },
+    {
+     "nl": "Speel-om-te-leren tafels",
+     "en": "Learn-to-play tables for beginners"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.inyourpocket.com/dutch-caribbean/curacao/articles/top-5-casinos-in-curacao-for-2023",
+    "https://www.worldcasinodirectory.com/curacao/willemstad/closed-casinos",
+    "https://en.hoteles.com/go/curacao/best-nightlife-curacao"
+   ]
+  },
+  {
+   "id": "dreams-casino",
+   "naam": "Dreams Casino (voorheen Hilton)",
+   "url": null,
+   "soort": {
+    "nl": "casino in resort",
+    "en": "resort casino"
+   },
+   "plaats": "Piscadera (Dreams Curaçao)",
+   "tags": [
+    "casino",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Bingozaal en sportweddenschappen",
+     "en": "Bingo hall and sports betting"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.inyourpocket.com/dutch-caribbean/curacao/articles/top-5-casinos-in-curacao-for-2023",
+    "https://en.hoteles.com/go/curacao/best-nightlife-curacao",
+    "https://www.curacaochronicle.com/post/main/hilton-becomes-dreams-resort/"
+   ]
+  },
+  {
+   "id": "awasa-casino",
+   "naam": "Awasa Casino (Otrobanda Hotel)",
+   "url": null,
+   "soort": {
+    "nl": "hotelcasino",
+    "en": "hotel casino"
+   },
+   "plaats": "Otrobanda",
+   "tags": [
+    "casino",
+    "otrobanda"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ruim 270 gokkasten",
+     "en": "270+ slot machines"
+    },
+    {
+     "nl": "Sportweddenschap-kiosken",
+     "en": "Sportsbook betting kiosks"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.inyourpocket.com/dutch-caribbean/curacao/articles/top-5-casinos-in-curacao-for-2023"
+   ]
+  },
+  {
+   "id": "hill-ross-casino",
+   "naam": "Hill Ross Casino (Trupial Inn)",
+   "url": null,
+   "soort": {
+    "nl": "hotelcasino",
+    "en": "hotel casino"
+   },
+   "plaats": "Willemstad (Trupial Inn)",
+   "tags": [
+    "casino",
+    "lokaal-publiek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Dagelijks 10:00-04:00",
+     "en": "Daily 10 a.m.-4 a.m."
+    },
+    {
+     "nl": "192 gokkasten",
+     "en": "192 slot machines"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.inyourpocket.com/dutch-caribbean/curacao/articles/top-5-casinos-in-curacao-for-2023"
+   ]
+  },
+  {
+   "id": "diamond-casino",
+   "naam": "Diamond Beach Casino",
+   "url": null,
+   "soort": {
+    "nl": "casino",
+    "en": "casino"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "casino",
+    "jan-thiel",
+    "toeristen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Open tot in de vroege ochtend",
+     "en": "Open until the early morning"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.3,
+     "max": 5,
+     "aantal": 40,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao",
+    "https://www.pilotplans.com/blog/curacao-nightlife"
+   ]
+  },
+  {
+   "id": "aqua-casino",
+   "naam": "Aqua Casino",
+   "url": null,
+   "soort": {
+    "nl": "lokaal casino",
+    "en": "local casino"
+   },
+   "plaats": "Pater Euwensweg",
+   "tags": [
+    "casino",
+    "lokaal-publiek"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 9,
+     "peildatum": "2026-10-20",
+     "bron": "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/247949/best-bars-and-drinks-in-curacao"
+   ]
+  },
+  {
+   "id": "san-marco-casino",
+   "naam": "San Marco Hotel & Casino",
+   "url": null,
+   "soort": {
+    "nl": "hotelcasino",
+    "en": "hotel casino"
+   },
+   "plaats": "Punda",
+   "tags": [
+    "casino",
+    "punda"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://au.trip.com/hotels/willemstad-hotels-list-62137",
+    "https://www.hotelscombined.com.sg/Place/Curacao.htm"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Tripadvisor (Nightlife Curaçao)",
+   "url": "https://www.tripadvisor.com/Attractions-g147277-Activities-c20-Curacao.html",
+   "uitleg": {
+    "nl": "Lijst met bars, clubs en georganiseerde avonden zoals een partybus en bar crawl in Otrobanda, met reviews.",
+    "en": "List of bars, clubs and organized nights such as a party bus and an Otrobanda bar crawl, with reviews."
+   }
+  },
+  {
+   "naam": "My Curaçao Guide",
+   "url": "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao",
+   "uitleg": {
+    "nl": "Lokale gids met vaste feestavonden en happy hours per beachclub.",
+    "en": "Local guide listing weekly party nights and happy hours per beach club."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Mambo Beach rekent $4,50 entree per persoon; Jan Thiel $3, na 16:30 gratis. Kokomo en Karakter zijn gratis.",
+   "en": "Mambo Beach charges $4.50 per person; Jan Thiel $3, free after 4:30 p.m. Kokomo and Karakter are free."
+  },
+  {
+   "nl": "Donderdag is de drukste doordeweekse avond: Punda Vibes vanaf circa 16:00 met vuurwerk rond 20:00, daarna salsa bij Mundo Bizarro.",
+   "en": "Thursday is the big weeknight: Punda Vibes from about 4 p.m. with fireworks around 8 p.m., then salsa at Mundo Bizarro."
+  },
+  {
+   "nl": "Cabana Beach en Mood Beach zijn cashless: neem een pinpas of creditcard mee.",
+   "en": "Cabana Beach and Mood Beach are cashless, so bring a debit or credit card."
+  },
+  {
+   "nl": "Mambo is in het weekend en op cruisedagen het drukst; houd je spullen in de gaten.",
+   "en": "Mambo is busiest on weekends and cruise ship days; keep an eye on your belongings."
+  },
+  {
+   "nl": "Op casinowinst gaat 5% belasting af.",
+   "en": "Casino winnings are taxed at 5%."
+  },
+  {
+   "nl": "Van Otrobanda naar Mambo Beach is ongeveer 15 minuten met de taxi; Karakter en Playa Forti liggen ver weg, daar heb je een auto nodig.",
+   "en": "Mambo Beach is about a 15-minute taxi ride from Otrobanda; Karakter and Playa Forti are far out and need a car."
+  },
+  {
+   "nl": "Kokomo houdt elke maand een full moon party (18+, 22:00-05:00); kijk voor de datum op de site.",
+   "en": "Kokomo holds a monthly full moon party (18+, 10 p.m.-5 a.m.); check its website for the date."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Waar ga je uit op Curaçao?",
+    "en": "Where do you go out in Curaçao?"
+   },
+   "a": {
+    "nl": "De drie uitgaanscentra zijn Mambo Beach (beachclubs als Wet & Wild, Cabana en Chill), Jan Thiel (Zanzibar, Zest, Koko's) en de stad: Pietermaai voor bars als Mundo Bizarro en Miles Jazz Cafe, Punda en Otrobanda voor Netto Bar en Rif Fort.",
+    "en": "The three main areas are Mambo Beach (beach clubs like Wet & Wild, Cabana and Chill), Jan Thiel (Zanzibar, Zest, Koko's) and town: Pietermaai for bars like Mundo Bizarro and Miles Jazz Cafe, Punda and Otrobanda for Netto Bar and Rif Fort."
+   }
+  },
+  {
+   "q": {
+    "nl": "Moet je betalen voor Mambo Beach?",
+    "en": "Do you have to pay for Mambo Beach?"
+   },
+   "a": {
+    "nl": "Ja, de entree is $4,50 per persoon. Jan Thiel kost $3 en is na 16:30 gratis.",
+    "en": "Yes, entry is $4.50 per person. Jan Thiel costs $3 and is free after 4:30 p.m."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is er op donderdagavond te doen op Curaçao?",
+    "en": "What is there to do on Thursday night in Curaçao?"
+   },
+   "a": {
+    "nl": "Punda Vibes: een straatfeest rond het Gomezplein en de Emmabrug met livemuziek, eetkraampjes en vuurwerk rond 20:00. Daarna is er salsa en livemuziek bij Mundo Bizarro en Red Cup Night in Bar P.",
+    "en": "Punda Vibes, a street party around Gomezplein and Queen Emma Bridge with live music, food stalls and fireworks around 8 p.m. Afterward there's salsa and live music at Mundo Bizarro and Red Cup Night at Bar P."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar zie je de zonsondergang met een drankje?",
+    "en": "Where can you watch the sunset with a drink?"
+   },
+   "a": {
+    "nl": "Karakter bij Coral Estate en Kokomo Beach zijn het populairst. In de stad zitten Blues op de pier van Avila en Saint Tropez Ocean Club in Pietermaai goed.",
+    "en": "Karakter at Coral Estate and Kokomo Beach are the most popular. In town, try Blues on the Avila pier or Saint Tropez Ocean Club in Pietermaai."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe lang zijn de clubs open op Curaçao?",
+    "en": "How late are clubs open in Curaçao?"
+   },
+   "a": {
+    "nl": "Wet & Wild is vrijdag en zondag open tot 02:00 en soms tot 04:00. Club x Mambo en Live 973 op Mambo Boulevard zijn de plekken voor daarna.",
+    "en": "Wet & Wild stays open until 2 a.m. Friday and Sunday, sometimes until 4 a.m. Club x Mambo and Live 973 on Mambo Boulevard are where people go after that."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar is livemuziek op Curaçao?",
+    "en": "Where is live music in Curaçao?"
+   },
+   "a": {
+    "nl": "Blues bij Avila heeft jazz en blues op donderdag en zaterdag, Hemingway een Cubaanse salsaband op zondag, Mundo Bizarro livemuziek op donderdag en Rif Fort Village bands op het podium.",
+    "en": "Blues at Avila has jazz and blues on Thursday and Saturday, Hemingway a Cuban salsa band on Sunday, Mundo Bizarro live music on Thursday, and Rif Fort Village bands on its stage."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke casino's zijn er op Curaçao?",
+    "en": "What casinos are there in Curaçao?"
+   },
+   "a": {
+    "nl": "Het grootste is Wind Creek Carnival Casino bij Renaissance in Otrobanda (250 gokkasten, 12 tafels). Verder Princess Casino bij Sunscape, het casino van Dreams, Awasa, Hill Ross bij Trupial Inn en Diamond Casino op Jan Thiel. Op winst gaat 5% belasting af.",
+    "en": "The biggest is Wind Creek Carnival Casino at the Renaissance in Otrobanda (250 slots, 12 tables). Others include Princess Casino at Sunscape, the Dreams casino, Awasa, Hill Ross at Trupial Inn and Diamond Casino at Jan Thiel. Winnings are taxed at 5%."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is de oudste bar van Curaçao?",
+    "en": "What is the oldest bar in Curaçao?"
+   },
+   "a": {
+    "nl": "Netto Bar in Otrobanda, sinds 1954, bekend om de groene rum (Ròm Bèrdè). Scoort 4,5 uit 553 Google-reviews.",
+    "en": "Netto Bar in Otrobanda, open since 1954 and known for its green rum (Ròm Bèrdè). It rates 4.5 from 553 Google reviews."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "uitgaan curaçao",
+   "beachclub curaçao",
+   "mambo beach",
+   "jan thiel uitgaan",
+   "pietermaai bars",
+   "punda vibes",
+   "curaçao nachtleven"
+  ],
+  "en": [
+   "curacao nightlife",
+   "curacao beach clubs",
+   "best bars curacao",
+   "mambo beach curacao",
+   "willemstad nightlife",
+   "curacao casinos",
+   "punda vibes thursday"
+  ],
+  "es": [
+   "vida nocturna curazao",
+   "beach club curazao",
+   "bares curazao",
+   "discotecas curazao"
+  ],
+  "pt": [
+   "vida noturna curaçao",
+   "beach club curaçao",
+   "bares curaçao",
+   "baladas curaçao"
+  ],
+  "de": [
+   "nachtleben curaçao",
+   "beach club curaçao",
+   "bars willemstad",
+   "ausgehen curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Waar kun je het beste uitgaan op Curaçao?",
+   "Welke beachclub op Curaçao is het leukst voor een feestje?",
+   "Waar is livemuziek op Curaçao op donderdag?"
+  ],
+  "en": [
+   "Where is the best nightlife in Curaçao?",
+   "Which beach club in Curaçao is best for a party?",
+   "Where can I watch the sunset with cocktails in Curaçao?"
+  ]
+ },
+ "talen": [
+  "nl",
+  "en"
+ ]
+}
