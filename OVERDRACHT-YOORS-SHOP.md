@@ -42,8 +42,8 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 7. **Volume.** Bij $0,01 CPA zo'n 20 à 25 echte mensen per dag; met 0,2% koopkans is 0 verkopen te verwachten. Meer volume via Google Shopping of een hoger bod op de beste producten, alleen op Henkjans woord.
 
 ## Campagnes
-- **PropellerAds** (In-Page, NL mobiel, CPA $0,01, $10 per dag): Skull 12011189, Tegeltje 12016745, Kaarsenset 12016748, en 13 losse productcampagnes van 16 okt (12016779-12016796) die de oude themacampagnes vervangen.
-- **Mondiad:** Skull 150578. De drie oude keuzehulp-campagnes (149472-149474) staan nog; stoppen alleen op Henkjans woord.
+- **PropellerAds** (In-Page, NL mobiel, CPA $0,01): 20 testcampagnes van 20 okt, een per product (12032192-12032229, naam `SHOP-LUS TEST 2026-10-20 p=<product>`), plus Skull 12011189 en Whiskyset 12016783 (ook het sjabloon voor de kopieën). De live stand bovenaan toont wat er nu loopt.
+- **Mondiad:** alle 21 shopcampagnes staan op gepauzeerd (stand 20 okt).
 
 ## Waar de stand staat
 - Babita's pagina met de briefing: `/api/shop/advies?k=<haar link>` (de link heeft Henkjan).
@@ -69,6 +69,7 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - PropellerAds-lus: repo propellerads-mcp, `lib/shop.ts` en `app/api/statistiek/route.ts`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 2026-10-20: Shoptest lag stil: 18 testcampagnes van 19 okt na $0,11-0,15 gestopt door de relatieve stopregel, en alle starts van 20 okt geweigerd omdat "2026-10-20" in de naam als Amazon-tag (-20) gold. Beide hersteld in propellerads-mcp (fa2a46e): stopregel laat SHOP-LUS TEST aan het oordeel per product, tag moet een letter hebben. Daarna 20 nieuwe testcampagnes gestart (12032192-12032229). Mondiad: alle 21 shopcampagnes gepauzeerd.
 - 2026-10-19: Tweede doorlichting (andere chat) verwerkt in de lekkenlijst. Dagkeuze adverteert alleen wat all-in niet duurder is dan elders (181 afgewezen). yoors.shop-welkomstpagina met "100.000 klanten" gemeld als eerlijkheidsfout.
 - 2026-10-19: Shoptest gebouwd (Henkjan: 20 producten per dag lerend testen). Dagkeuze `/api/shop/kies` (lib/shopkies.js), per product een campagne (propellerads-mcp lib/shoptest.ts, cron :15). Shop-lus op de centrale regels: plekken relatief tegen het paginagemiddelde, slots tellen mee, eigen dagrem en bodverhoging eruit, lek-stop relatief. Doorlichting die dag: 7 dagen $6,67, 2.440 kliks, 97 echte mensen op 1.289 aankomsten (7,5%), 15 tikken, 7 afrekenen, 0 betaald; productpagina traag (HTML 2-3 s) en verzending €8,50-18,15 los. Open: iDEAL-testaankoop, lichte productpagina voor betaald verkeer.
 - 2026-10-18: Prijsadvies voorzichtiger: zelfde product eerst; alleen-vergelijkbaar hooguit −15% of +25% per keer, >2,5× zo duur als vergelijkbaar = 'controleren'. Radar telt 'zelfde' met prijs < ½× of > 2× de onze als vergelijkbaar.
