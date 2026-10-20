@@ -1,1 +1,4736 @@
-{"peildatum":"2026-10-20","gepubliceerd":"2026-10-20","verhuurders":[],"faq":[],"tips":[]}
+{
+ "peildatum": "2026-10-20",
+ "gepubliceerd": "2026-10-20",
+ "verhuurders": [
+  {
+   "id": "prins-car-rental",
+   "naam": "Prins Car Rental",
+   "type": "lokaal",
+   "plaats": "FD Rooseveltweg 362 (vlak bij luchthaven), shuttle + aflevering",
+   "url": null,
+   "ophalen": [
+    "shuttle",
+    "vliegveld",
+    "aflevering",
+    "kantoor"
+   ],
+   "prijs": {
+    "bedrag": 39.95,
+    "valuta": "EUR",
+    "bron": "https://www.economybookings.com/en/suppliers/prins-car-rental/cur",
+    "datum": "okt 2026",
+    "usd": 43.95
+   },
+   "prijsVanaf": 43.95,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": true,
+   "automaat": true,
+   "suv": false,
+   "volledigVerzekerd": true,
+   "schadeKlachten": false,
+   "creditcardNodig": true,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 2686,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJo7tPfCidhI4RRBzG_KyJhK0"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 593,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.co.uk/Attraction_Review-g147278-d21498916-Reviews-Prins_Car_Rental_Curacao-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Snelle shuttle van en naar de luchthaven, bijna geen wachttijd",
+     "Heldere communicatie via WhatsApp, duidelijke instructies vooraf",
+     "Schone, nieuwere auto's met verzekering inbegrepen; reviewers zien geen verborgen kosten",
+     "Schade vooraf vastgelegd met video-rondgang en rapport per mail"
+    ],
+    "en": [
+     "Fast airport shuttle both ways, almost no waiting",
+     "Clear communication on WhatsApp, with clear instructions in advance",
+     "Clean, newer cars with insurance included; reviewers report no hidden fees",
+     "Existing damage recorded upfront with a video walkaround and emailed report"
+    ],
+    "de": [
+     "Schneller Shuttle zum und vom Flughafen, kaum Wartezeit",
+     "Klare Kommunikation per WhatsApp, verständliche Anweisungen vorab",
+     "Saubere, neuere Autos inklusive Versicherung; laut Bewertungen keine versteckten Kosten",
+     "Vorschäden werden vorab per Video-Rundgang und Bericht per E-Mail dokumentiert"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Vrijwel geen klachten; soms een ouder model dan bij een eerder bezoek",
+     "Raakt vol in drukke periodes (forum: uitverkocht); in december soms minimale huurduur"
+    ],
+    "en": [
+     "Hardly any complaints; occasionally an older model than on a previous visit",
+     "Sells out in busy periods (per forum); sometimes a minimum rental period in December"
+    ],
+    "de": [
+     "Kaum Beschwerden; gelegentlich ein älteres Modell als beim letzten Besuch",
+     "In Stoßzeiten ausgebucht (laut Forum); im Dezember teils Mindestmietdauer"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJo7tPfCidhI4RRBzG_KyJhK0",
+    "https://www.tripadvisor.co.uk/Attraction_Review-g147278-d21498916-Reviews-Prins_Car_Rental_Curacao-Willemstad_Curacao.html",
+    "https://www.tripadvisor.com/ShowTopic-g147277-i583-k15265691-Car_rental_and_parking-Curacao.html",
+    "https://www.economybookings.com/en/suppliers/prins-car-rental/cur",
+    "https://www.tripadvisor.co.uk/Attractions-g147278-Activities-c59-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "de-vos-car-rental",
+   "naam": "De Vos Car Rental",
+   "type": "lokaal",
+   "plaats": "Brakkeput Abou / Jan Thiel; aflevering hotel/luchthaven",
+   "url": null,
+   "ophalen": [
+    "vliegveld",
+    "aflevering"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": {
+    "nl": "geen borg",
+    "en": "no deposit",
+    "de": "keine Kaution"
+   },
+   "borgLaag": true,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 1547,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJeznJEDx9g44RT_3s1v1ZAP8"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Geen borg en geen creditcard nodig (meerdere reviewers en tipscuracao.nl)",
+     "Ophalen en afleveren bij hotel of luchthaven",
+     "Schone, betrouwbare auto met volle tank",
+     "Veel terugkerende klanten"
+    ],
+    "en": [
+     "No deposit and no credit card needed (several reviewers and tipscuracao.nl)",
+     "Pickup and drop-off at your hotel or the airport",
+     "Clean, reliable car with a full tank",
+     "Lots of repeat customers"
+    ],
+    "de": [
+     "Keine Kaution und keine Kreditkarte nötig (mehrere Bewertungen und tipscuracao.nl)",
+     "Abholung und Rückgabe am Hotel oder Flughafen",
+     "Sauberes, zuverlässiges Auto mit vollem Tank",
+     "Viele Stammkunden"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen terugkerende nadelen in de zichtbare reviews",
+     "Ophaal- en brengservice luchthaven soms tegen een kleine toeslag"
+    ],
+    "en": [
+     "No recurring downsides in the visible reviews",
+     "Airport pickup and drop-off sometimes costs a small extra fee"
+    ],
+    "de": [
+     "Keine wiederkehrenden Nachteile in den sichtbaren Bewertungen",
+     "Flughafen-Abhol- und Bringservice teils gegen kleinen Aufpreis"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJeznJEDx9g44RT_3s1v1ZAP8",
+    "https://www.tipscuracao.nl/auto-huren-op-curacao-tips/"
+   ]
+  },
+  {
+   "id": "auto-huren-curacao",
+   "naam": "Auto Huren Curaçao",
+   "type": "lokaal",
+   "plaats": "Kaya Karibe, Jan Thiel (bij Sunscape); aflevering",
+   "url": null,
+   "ophalen": [
+    "aflevering"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 1009,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJGfGcFMF9g44R-MiVM7PUEXQ"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Snelle, persoonlijke communicatie via WhatsApp",
+     "Auto op tijd afgeleverd en opgehaald",
+     "Nieuwe auto's (o.a. Jimny), betaalbaar",
+     "Tips over het eiland"
+    ],
+    "en": [
+     "Quick, personal communication on WhatsApp",
+     "Car delivered and picked up on time",
+     "New cars (including the Jimny) at affordable prices",
+     "Tips about the island"
+    ],
+    "de": [
+     "Schnelle, persönliche Kommunikation per WhatsApp",
+     "Auto pünktlich geliefert und abgeholt",
+     "Neue Autos (u. a. Jimny) zu bezahlbaren Preisen",
+     "Tipps zur Insel"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen terugkerende nadelen in de zichtbare reviews"
+    ],
+    "en": [
+     "No recurring downsides in the visible reviews"
+    ],
+    "de": [
+     "Keine wiederkehrenden Nachteile in den sichtbaren Bewertungen"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJGfGcFMF9g44R-MiVM7PUEXQ",
+    "https://www.mycuracaoguide.com/traveling-to-curacao/car-rentals"
+   ]
+  },
+  {
+   "id": "smart-wheels-car-rental",
+   "naam": "Smart Wheels Car Rental",
+   "type": "lokaal",
+   "plaats": "Mega Cruise Terminal (cruisehaven), Willemstad",
+   "url": "https://smartwheelscuracao.com",
+   "ophalen": [
+    "vliegveld",
+    "aflevering"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": {
+    "nl": "geen borg",
+    "en": "no deposit",
+    "de": "keine Kaution"
+   },
+   "borgLaag": true,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": true,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 1225,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJYYyA0KCDhI4R0jc4TpI3Zls"
+    },
+    {
+     "platform": "Trustpilot",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 353,
+     "peildatum": "2026-10-20",
+     "bron": "https://uk.trustpilot.com/review/smartwheelscuracao.com"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Ideaal voor cruisepassagiers: kantoor in de terminal",
+     "Snelle, goed georganiseerde uitgifte en duidelijke inleverinstructies, ook op video",
+     "Nieuwere, schone auto's",
+     "Goed bereikbaar via WhatsApp"
+    ],
+    "en": [
+     "Great for cruise passengers: the office is inside the terminal",
+     "Fast, well-organized pickup and clear return instructions, including a video",
+     "Newer, clean cars",
+     "Easy to reach on WhatsApp"
+    ],
+    "de": [
+     "Ideal für Kreuzfahrtgäste: Büro direkt im Terminal",
+     "Schnelle, gut organisierte Übergabe und klare Rückgabeanleitung, auch per Video",
+     "Neuere, saubere Autos",
+     "Per WhatsApp gut erreichbar"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Wachttijd als veel cruisegasten tegelijk komen",
+     "Soms technische of schoonmaakproblemen (touchscreen, ramen, banden)",
+     "Klacht over hogere boete voor zand of natte stoelen dan bij boeking afgesproken",
+     "Vroege inlevertijd bij dagverhuur"
+    ],
+    "en": [
+     "Waits when lots of cruise passengers arrive at once",
+     "Occasional technical or cleanliness issues (touchscreen, windows, tires)",
+     "A complaint about a sand or wet-seat fee higher than agreed at booking",
+     "Early return time on day rentals"
+    ],
+    "de": [
+     "Wartezeit, wenn viele Kreuzfahrtgäste gleichzeitig kommen",
+     "Gelegentlich technische oder Sauberkeitsprobleme (Touchscreen, Fenster, Reifen)",
+     "Beschwerde über eine höhere Gebühr für Sand oder nasse Sitze als bei der Buchung vereinbart",
+     "Frühe Rückgabezeit bei Tagesmiete"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJYYyA0KCDhI4R0jc4TpI3Zls",
+    "https://uk.trustpilot.com/review/smartwheelscuracao.com",
+    "https://dk.trustpilot.com/review/smartwheelscuracao.com",
+    "https://www.tropicdrive.com/"
+   ]
+  },
+  {
+   "id": "cura-explore-car-rentals",
+   "naam": "Cura Explore Car Rentals",
+   "type": "lokaal",
+   "plaats": "FD Rooseveltweg 348 (bij luchthaven)",
+   "url": null,
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 537,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJTX300cidhI4R4As4Ov66hzE"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Ophalen op de luchthaven binnen ~10 min, soms met de huurauto zelf",
+     "Snel en duidelijk via WhatsApp",
+     "Nieuwe, schone auto's; eerlijke prijs",
+     "Huren zonder creditcard mogelijk (eigen site)"
+    ],
+    "en": [
+     "Airport pickup within about 10 minutes, sometimes in the rental car itself",
+     "Fast and clear on WhatsApp",
+     "New, clean cars at a fair price",
+     "You can rent without a credit card (per their website)"
+    ],
+    "de": [
+     "Abholung am Flughafen in etwa 10 Minuten, manchmal direkt mit dem Mietwagen",
+     "Schnell und klar per WhatsApp",
+     "Neue, saubere Autos zum fairen Preis",
+     "Miete ohne Kreditkarte möglich (laut eigener Website)"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen terugkerende nadelen; één reviewer betaalde in CAD en vond dat duurder"
+    ],
+    "en": [
+     "No recurring downsides; one reviewer paid in CAD and found it pricier"
+    ],
+    "de": [
+     "Keine wiederkehrenden Nachteile; ein Kunde zahlte in CAD und fand das teurer"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJTX300cidhI4R4As4Ov66hzE",
+    "https://cura-explore.com/heeft-u-een-credit-card-nodig/"
+   ]
+  },
+  {
+   "id": "dushi-rentals-curacao",
+   "naam": "Dushi Rentals Curaçao",
+   "type": "lokaal",
+   "plaats": "FD Rooseveltweg 358 (bij luchthaven); aflevering hotel",
+   "url": null,
+   "ophalen": [
+    "aflevering",
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 465,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJzYHqeHJ9g44Rrnx0jj0fKyM"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Makkelijk boeken via WhatsApp of website, korting bij vooruitbetalen",
+     "Aflevering bij je hotel, busje naar de luchthaven bij inleveren",
+     "Vriendelijk en reageert snel"
+    ],
+    "en": [
+     "Easy booking via WhatsApp or website, with a discount for prepaying",
+     "Delivery to your hotel, and a van to the airport when you return the car",
+     "Friendly and quick to respond"
+    ],
+    "de": [
+     "Einfach per WhatsApp oder Website buchen, Rabatt bei Vorauszahlung",
+     "Lieferung ans Hotel, bei Rückgabe ein Kleinbus zum Flughafen",
+     "Freundlich und schnell in der Antwort"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Losse klacht over vieze, oude auto (kakkerlakken) en niet de geboekte auto",
+     "Eén reviewer kreeg tijdens de huur al een verzoek om een review"
+    ],
+    "en": [
+     "One complaint about a dirty, old car with roaches that wasn't the one booked",
+     "One reviewer was asked for a review while still renting"
+    ],
+    "de": [
+     "Einzelne Beschwerde über ein schmutziges, altes Auto mit Kakerlaken, nicht das gebuchte",
+     "Ein Kunde wurde schon während der Miete um eine Bewertung gebeten"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJzYHqeHJ9g44Rrnx0jj0fKyM"
+   ]
+  },
+  {
+   "id": "united-car-rental",
+   "naam": "United Car Rental",
+   "type": "lokaal",
+   "plaats": "Pater Euwensweg 70-2, Willemstad",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 437,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJv0KcNM2dhI4R_X9VL6SX-qY"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Transparant, geen verborgen kosten, borg zonder problemen terug",
+     "Nieuwe auto's, vaak Kia Picanto of Corolla",
+     "Tankstation tegenover het kantoor"
+    ],
+    "en": [
+     "Transparent, no hidden fees, deposit returned without trouble",
+     "New cars, often a Kia Picanto or Corolla",
+     "Gas station right across from the office"
+    ],
+    "de": [
+     "Transparent, keine versteckten Kosten, Kaution problemlos zurück",
+     "Neue Autos, oft Kia Picanto oder Corolla",
+     "Tankstelle gegenüber dem Büro"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Ophalen op de luchthaven niet altijd vooraf geregeld, dus wachten",
+     "Een reviewer noemt kwaliteitsproblemen"
+    ],
+    "en": [
+     "Airport pickup isn't always arranged in advance, so you may wait",
+     "One reviewer mentions quality problems"
+    ],
+    "de": [
+     "Abholung am Flughafen nicht immer vorab geregelt, also Wartezeit",
+     "Ein Kunde nennt Qualitätsprobleme"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJv0KcNM2dhI4R_X9VL6SX-qY"
+   ]
+  },
+  {
+   "id": "advance-car-rental",
+   "naam": "Advance Car Rental",
+   "type": "lokaal",
+   "plaats": "FD Rooseveltweg 511D (bij luchthaven) + ophalen bij cruiseterminal",
+   "url": null,
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": true,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 327,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJd0Mwqx-dhI4R66zCA-0K1u4"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 40,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d27631526-Reviews-Advance_Car_Rental-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Persoonlijk contact met de eigenaar, snel via mail of WhatsApp",
+     "Verzekering inbegrepen",
+     "Geschikt voor cruise-dagtrips: afgifte vlak bij de terminal, GPS met stranden erin",
+     "Shuttle vanaf de luchthaven"
+    ],
+    "en": [
+     "Personal contact with the owner, quick by email or WhatsApp",
+     "Insurance included",
+     "Good for cruise day trips: handover near the terminal, GPS preloaded with beaches",
+     "Shuttle from the airport"
+    ],
+    "de": [
+     "Persönlicher Kontakt mit dem Inhaber, schnell per Mail oder WhatsApp",
+     "Versicherung inklusive",
+     "Gut für Kreuzfahrt-Tagesausflüge: Übergabe nahe dem Terminal, Navi mit vorprogrammierten Stränden",
+     "Shuttle vom Flughafen"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen terugkerende nadelen gevonden"
+    ],
+    "en": [
+     "No recurring downsides found"
+    ],
+    "de": [
+     "Keine wiederkehrenden Nachteile gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJd0Mwqx-dhI4R66zCA-0K1u4",
+    "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d27631526-Reviews-Advance_Car_Rental-Curacao.html",
+    "https://www.tripadvisor.com/ShowTopic-g147278-i584-k10462491-The_best_car_rental-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "just-drive-car-rental",
+   "naam": "Just Drive Car Rental",
+   "type": "lokaal",
+   "plaats": "FD Rooseveltweg 409 (bij luchthaven), shuttle",
+   "url": null,
+   "ophalen": [
+    "shuttle",
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": {
+    "nl": "geen borg",
+    "en": "no deposit",
+    "de": "keine Kaution"
+   },
+   "borgLaag": true,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": true,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 324,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJBbzyJR2dhI4RXwZntZ_A4S8"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Snelle shuttle, in een paar minuten weg",
+     "Verzekering inbegrepen, geen borg, geen verborgen kosten (reviewers)",
+     "Lage all-in prijs; bestaande schade vooraf vastgelegd"
+    ],
+    "en": [
+     "Fast shuttle, on the road in a few minutes",
+     "Insurance included, no deposit, no hidden fees (per reviewers)",
+     "Low all-in price; existing damage recorded upfront"
+    ],
+    "de": [
+     "Schneller Shuttle, in wenigen Minuten unterwegs",
+     "Versicherung inklusive, keine Kaution, keine versteckten Kosten (laut Bewertungen)",
+     "Niedriger Komplettpreis; Vorschäden werden vorab dokumentiert"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Soms kleine technische mankementen (afstandsbediening), wel opgelost",
+     "Snel volgeboekt in het hoogseizoen (forum)",
+     "Minimale huurduur in drukke periodes (oud forum)"
+    ],
+    "en": [
+     "Occasional minor glitches (key fob), which got fixed",
+     "Books up fast in high season (per forum)",
+     "Minimum rental period in busy times (older forum post)"
+    ],
+    "de": [
+     "Gelegentlich kleine technische Mängel (Fernbedienung), wurden aber behoben",
+     "In der Hochsaison schnell ausgebucht (laut Forum)",
+     "Mindestmietdauer in Stoßzeiten (älterer Forenbeitrag)"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJBbzyJR2dhI4RXwZntZ_A4S8",
+    "https://www.tripadvisor.com/ShowTopic-g147277-i583-k15265691-Car_rental_and_parking-Curacao.html"
+   ]
+  },
+  {
+   "id": "d-d-car-rental",
+   "naam": "D&D Car Rental",
+   "type": "lokaal",
+   "plaats": "FD Rooseveltweg 409 (bij luchthaven), shuttle of hotelaflevering",
+   "url": "https://ddcarrental.com",
+   "ophalen": [
+    "shuttle",
+    "vliegveld",
+    "aflevering",
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 285,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJP9OBzFadhI4RT2mSEF2SZu8"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Volledige aanrijdingsdekking inbegrepen",
+     "Shuttle van en naar de luchthaven, hulp met bagage",
+     "Moderne, schone auto's; korting bij contante betaling",
+     "Forum: goedkoop en efficiënt"
+    ],
+    "en": [
+     "Full collision coverage included",
+     "Airport shuttle both ways, help with luggage",
+     "Modern, clean cars; discount for paying cash",
+     "Forum users call it cheap and efficient"
+    ],
+    "de": [
+     "Volle Kollisionsdeckung inklusive",
+     "Shuttle zum und vom Flughafen, Hilfe mit dem Gepäck",
+     "Moderne, saubere Autos; Rabatt bei Barzahlung",
+     "Im Forum: günstig und effizient"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Snel uitverkocht (forum)",
+     "Geen terugkerende klachten gevonden"
+    ],
+    "en": [
+     "Sells out fast (per forum)",
+     "No recurring complaints found"
+    ],
+    "de": [
+     "Schnell ausgebucht (laut Forum)",
+     "Keine wiederkehrenden Beschwerden gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJP9OBzFadhI4RT2mSEF2SZu8",
+    "https://www.tripadvisor.com/ShowTopic-g147277-i583-k15265691-Car_rental_and_parking-Curacao.html",
+    "https://www.tripadvisor.com/ShowTopic-g147278-i584-k10462491-The_best_car_rental-Willemstad_Curacao.html",
+    "https://www.villaseashell.com/post/car-rental-curacao-top-tips"
+   ]
+  },
+  {
+   "id": "ruseler-car-rentals",
+   "naam": "Ruseler Car Rentals",
+   "type": "lokaal",
+   "plaats": "Kaya Adriatiko, Jan Thiel",
+   "url": "https://ruselercarrentals.lovable.app",
+   "ophalen": [
+    "aflevering"
+   ],
+   "prijs": {
+    "bedrag": 55,
+    "valuta": "USD",
+    "bron": "https://ruselercarrentals.lovable.app/en/cars/hyundai-i10",
+    "datum": "okt 2026",
+    "usd": 55
+   },
+   "prijsVanaf": 55,
+   "borg": {
+    "nl": "geen borg",
+    "en": "no deposit",
+    "de": "keine Kaution"
+   },
+   "borgLaag": true,
+   "eigenRisico": {
+    "valuta": "USD",
+    "bedrag": 495.0
+   },
+   "minLeeftijd": 21,
+   "jeep": true,
+   "zevenPersoons": false,
+   "automaat": true,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": false,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 305,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJe4bLP8F9g44RuSTh9DFJzHE"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Eerlijk, geen verborgen kosten",
+     "Nieuwe, schone auto's; snel mee, ook zonder reservering",
+     "Coulant bij te laat inleveren"
+    ],
+    "en": [
+     "Honest, no hidden fees",
+     "New, clean cars; quick to get going, even without a reservation",
+     "Lenient about late returns"
+    ],
+    "de": [
+     "Ehrlich, keine versteckten Kosten",
+     "Neue, saubere Autos; schnell unterwegs, auch ohne Reservierung",
+     "Kulant bei verspäteter Rückgabe"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Beperkte openingstijden (wo tot eind week, tot 12:00)",
+     "Geen terugkerende klachten gevonden"
+    ],
+    "en": [
+     "Limited opening hours (Wed to end of week, until noon)",
+     "No recurring complaints found"
+    ],
+    "de": [
+     "Eingeschränkte Öffnungszeiten (Mi bis Wochenende, bis 12 Uhr)",
+     "Keine wiederkehrenden Beschwerden gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJe4bLP8F9g44RuSTh9DFJzHE",
+    "https://ruselercarrentals.lovable.app/en/about",
+    "https://ruselercarrentals.lovable.app/en/cars/hyundai-i10",
+    "https://ruselercarrentals.lovable.app/en/jeep-rental-curacao"
+   ]
+  },
+  {
+   "id": "the-shop-curacao-rental",
+   "naam": "The Shop Curaçao Rental",
+   "type": "lokaal",
+   "plaats": "Heintjekool, Willemstad",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 304,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJiTf88HSDhI4Rm3sxCCy_G1U"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Transparant: video van conditie, km-stand en tank bij uitgifte",
+     "Ophalen en terugbrengen bij luchthaven of hotel",
+     "Persoonlijk contact met de eigenaar, plus tips"
+    ],
+    "en": [
+     "Transparent: video of the condition, mileage and fuel level at pickup",
+     "Pickup and return at the airport or your hotel",
+     "Personal contact with the owner, plus tips"
+    ],
+    "de": [
+     "Transparent: Video von Zustand, Kilometerstand und Tank bei Übergabe",
+     "Abholung und Rückgabe am Flughafen oder Hotel",
+     "Persönlicher Kontakt mit dem Inhaber, dazu Tipps"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen terugkerende nadelen gevonden"
+    ],
+    "en": [
+     "No recurring downsides found"
+    ],
+    "de": [
+     "Keine wiederkehrenden Nachteile gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJiTf88HSDhI4Rm3sxCCy_G1U"
+   ]
+  },
+  {
+   "id": "autoverhuur-willemstad",
+   "naam": "Autoverhuur Willemstad",
+   "type": "lokaal",
+   "plaats": "Kaminda Elektrishen 28, Salinja",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 301,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJq71TE2p9g44RV1r8UqOaj4A"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Snelle communicatie, problemen direct opgelost",
+     "Op tijd op de luchthaven; levering op de gewenste locatie",
+     "Schone auto's"
+    ],
+    "en": [
+     "Fast communication, problems solved right away",
+     "On time at the airport; delivery wherever you want",
+     "Clean cars"
+    ],
+    "de": [
+     "Schnelle Kommunikation, Probleme sofort gelöst",
+     "Pünktlich am Flughafen; Lieferung an den Wunschort",
+     "Saubere Autos"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "In het weekend gesloten",
+     "Geen terugkerende klachten gevonden"
+    ],
+    "en": [
+     "Closed on weekends",
+     "No recurring complaints found"
+    ],
+    "de": [
+     "Am Wochenende geschlossen",
+     "Keine wiederkehrenden Beschwerden gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJq71TE2p9g44RV1r8UqOaj4A"
+   ]
+  },
+  {
+   "id": "r-r-car-rental",
+   "naam": "R&R Car Rental",
+   "type": "lokaal",
+   "plaats": "Willemstad (ophalen luchthaven/hotel)",
+   "url": null,
+   "ophalen": [
+    "vliegveld",
+    "aflevering"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": true,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 284,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJS89Hx6h9g44RF-acgyrEYpA"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "All-risk verzekering in de prijs",
+     "Eigenaar haalt zelf op en brengt terug",
+     "Video van de auto bij uitgifte",
+     "Contant betalen kan"
+    ],
+    "en": [
+     "Full coverage insurance included in the price",
+     "The owner handles pickup and drop-off personally",
+     "Video of the car at pickup",
+     "You can pay in cash"
+    ],
+    "de": [
+     "Vollkaskoversicherung im Preis enthalten",
+     "Der Inhaber holt selbst ab und bringt zurück",
+     "Video vom Auto bei der Übergabe",
+     "Barzahlung möglich"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Kleine auto's (Chevy Spark) in budgetklasse; borg niet contant"
+    ],
+    "en": [
+     "Small budget cars (Chevy Spark); the deposit can't be paid in cash"
+    ],
+    "de": [
+     "Kleine Autos (Chevy Spark) in der Budgetklasse; Kaution nicht in bar"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJS89Hx6h9g44RF-acgyrEYpA"
+   ]
+  },
+  {
+   "id": "low-budget-autoverhuur-curacao",
+   "naam": "Low Budget Autoverhuur Curaçao",
+   "type": "lokaal",
+   "plaats": "Dr. Lensweg 13, Willemstad; aflevering hotel",
+   "url": null,
+   "ophalen": [
+    "aflevering"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 255,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJYV2ny0J9g44RqBzS1M0IfZw"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 7,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.co.uk/Attraction_Review-g147278-d21333853-Reviews-Low_budget_autoverhuur_Curacao-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Nederlands eigenaarsechtpaar, persoonlijk en flexibel",
+     "Auto afgeleverd en opgehaald bij je hotel",
+     "Eerlijke voorwaarden en prijs (o.a. Suzuki Jimny)"
+    ],
+    "en": [
+     "Run by a Dutch couple, personal and flexible",
+     "Car delivered to and picked up from your hotel",
+     "Fair terms and prices (including the Suzuki Jimny)"
+    ],
+    "de": [
+     "Von einem niederländischen Ehepaar geführt, persönlich und flexibel",
+     "Auto wird am Hotel geliefert und abgeholt",
+     "Faire Bedingungen und Preise (u. a. Suzuki Jimny)"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen terugkerende nadelen; deels handgeschakelde auto's"
+    ],
+    "en": [
+     "No recurring downsides; some cars have a manual transmission"
+    ],
+    "de": [
+     "Keine wiederkehrenden Nachteile; teils Autos mit Schaltgetriebe"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJYV2ny0J9g44RqBzS1M0IfZw",
+    "https://www.tripadvisor.co.uk/Attractions-g147278-Activities-c59-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "emma-rentals",
+   "naam": "Emma Rentals",
+   "type": "lokaal",
+   "plaats": "Saturnusstraat 30B (op afspraak), aflevering",
+   "url": null,
+   "ophalen": [
+    "aflevering"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 246,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJXygSp4B9g44RNIXyXAD5P8c"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Aflevering en ophalen bij je Airbnb of hotel",
+     "Geen verborgen kosten, geen opdringerige verkoop",
+     "Extra's zoals koelbox en CarPlay"
+    ],
+    "en": [
+     "Delivery and pickup at your Airbnb or hotel",
+     "No hidden fees, no pushy upselling",
+     "Extras like a cooler and CarPlay"
+    ],
+    "de": [
+     "Lieferung und Abholung an deinem Airbnb oder Hotel",
+     "Keine versteckten Kosten, kein aufdringlicher Verkauf",
+     "Extras wie Kühlbox und CarPlay"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen terugkerende nadelen gevonden"
+    ],
+    "en": [
+     "No recurring downsides found"
+    ],
+    "de": [
+     "Keine wiederkehrenden Nachteile gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJXygSp4B9g44RNIXyXAD5P8c"
+   ]
+  },
+  {
+   "id": "flex-car-rental-curacao",
+   "naam": "Flex Car Rental Curaçao",
+   "type": "lokaal",
+   "plaats": "Kaminda George Willems 68A1",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 243,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJx-pziAiArgURjnOlTN3J5Ys"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Grote auto's en busjes voor groepen",
+     "Flexibel bij gewijzigde vluchten",
+     "Persoonlijke opvolging tijdens de huur"
+    ],
+    "en": [
+     "Large cars and vans for groups",
+     "Flexible when flights change",
+     "Personal check-ins during the rental"
+    ],
+    "de": [
+     "Große Autos und Kleinbusse für Gruppen",
+     "Flexibel bei geänderten Flügen",
+     "Persönliche Betreuung während der Miete"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen terugkerende nadelen gevonden"
+    ],
+    "en": [
+     "No recurring downsides found"
+    ],
+    "de": [
+     "Keine wiederkehrenden Nachteile gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJx-pziAiArgURjnOlTN3J5Ys"
+   ]
+  },
+  {
+   "id": "attached-family-car-rental",
+   "naam": "Attached Family Car Rental",
+   "type": "lokaal",
+   "plaats": "Willemstad (Abraham Mendez Chumaceiro Blvd)",
+   "url": "https://attachedcars.com",
+   "ophalen": [
+    "vliegveld",
+    "aflevering"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": {
+    "nl": "geen borg",
+    "en": "no deposit",
+    "de": "keine Kaution"
+   },
+   "borgLaag": true,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": false,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 229,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJAY-FPJNGqEIRpeXbOaTWu_E"
+    },
+    {
+     "platform": "Trustpilot",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 42,
+     "peildatum": "2026-10-20",
+     "bron": "https://uk.trustpilot.com/review/attachedcars.com"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Medewerker wacht op de luchthaven, auto staat voor de deur",
+     "Geen druk tot extra verzekering of creditcardblokkade (Trustpilot)",
+     "Nieuwe, schone auto's; ook Spaanstalig",
+     "Hulp bij problemen buiten de huur (bankpas, lekke band)"
+    ],
+    "en": [
+     "A staff member waits at the airport with the car right outside",
+     "No pressure for extra insurance or a credit card hold (per Trustpilot)",
+     "New, clean cars; Spanish spoken too",
+     "Help with problems beyond the rental (bank card, flat tire)"
+    ],
+    "de": [
+     "Ein Mitarbeiter wartet am Flughafen, das Auto steht direkt vor der Tür",
+     "Kein Druck zu Zusatzversicherung oder Kreditkartenblockierung (laut Trustpilot)",
+     "Neue, saubere Autos; auch auf Spanisch",
+     "Hilfe auch bei Problemen außerhalb der Miete (Bankkarte, Reifenpanne)"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen negatieve reviews gevonden (Trustpilot: 0 reviews van 1-3 sterren)",
+     "Weinig reviews op Trustpilot; bedrijf vraagt er niet actief om"
+    ],
+    "en": [
+     "No negative reviews found (Trustpilot: zero 1 to 3 star reviews)",
+     "Few Trustpilot reviews; the company doesn't actively ask for them"
+    ],
+    "de": [
+     "Keine negativen Bewertungen gefunden (Trustpilot: keine mit 1 bis 3 Sternen)",
+     "Wenige Bewertungen auf Trustpilot; die Firma bittet nicht aktiv darum"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJAY-FPJNGqEIRpeXbOaTWu_E",
+    "https://uk.trustpilot.com/review/attachedcars.com"
+   ]
+  },
+  {
+   "id": "wheels-2-go",
+   "naam": "Wheels 2 Go",
+   "type": "lokaal",
+   "plaats": "Bapor Kibra 3 (Mambo/Seaquarium-gebied)",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 226,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJj4eimBN9g44RRJJK1aGgKCc"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 1,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.co.uk/Attraction_Review-g147278-d33990416-Reviews-Wheels_2_Go-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Punctueel bij ophalen en inleveren op de luchthaven",
+     "Lage borg (reviewer: beste in de markt)",
+     "Forum: vriendelijk, geen geannuleerde reserveringen"
+    ],
+    "en": [
+     "Punctual for airport pickup and return",
+     "Low deposit (one reviewer: best on the market)",
+     "Forum users say friendly, no canceled reservations"
+    ],
+    "de": [
+     "Pünktlich bei Abholung und Rückgabe am Flughafen",
+     "Niedrige Kaution (laut einem Kunden die beste am Markt)",
+     "Im Forum: freundlich, keine stornierten Reservierungen"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen terugkerende nadelen gevonden"
+    ],
+    "en": [
+     "No recurring downsides found"
+    ],
+    "de": [
+     "Keine wiederkehrenden Nachteile gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJj4eimBN9g44RRJJK1aGgKCc",
+    "https://www.tripadvisor.com/ShowTopic-g147277-i583-k15265691-Car_rental_and_parking-Curacao.html"
+   ]
+  },
+  {
+   "id": "k-import-car-rental",
+   "naam": "K Import & Car Rental",
+   "type": "lokaal",
+   "plaats": "Kaya Alonso de Ojeda 12",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 187,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJOxSfn5p9g44RR0FyzSSPZHk"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Geen verborgen kosten",
+     "Ophalen en afleveren op de luchthaven",
+     "Concurrerende prijs, schone auto"
+    ],
+    "en": [
+     "No hidden fees",
+     "Airport pickup and drop-off",
+     "Competitive price, clean car"
+    ],
+    "de": [
+     "Keine versteckten Kosten",
+     "Abholung und Rückgabe am Flughafen",
+     "Konkurrenzfähiger Preis, sauberes Auto"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen terugkerende nadelen gevonden"
+    ],
+    "en": [
+     "No recurring downsides found"
+    ],
+    "de": [
+     "Keine wiederkehrenden Nachteile gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJOxSfn5p9g44RR0FyzSSPZHk"
+   ]
+  },
+  {
+   "id": "mb-equipment-curacao",
+   "naam": "MB Equipment Curaçao",
+   "type": "lokaal",
+   "plaats": "Santa Rosaweg 102",
+   "url": "https://mb-equipment.com",
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": true,
+   "zevenPersoons": false,
+   "automaat": true,
+   "suv": true,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 153,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJk2myXA19g44R0vx0YvcGlPU"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Jeep Wrangler en pick-ups (duikers)",
+     "Snel bereikbaar via WhatsApp, lost problemen direct op",
+     "Goede prijs-kwaliteit"
+    ],
+    "en": [
+     "Jeep Wranglers and pickup trucks (for divers)",
+     "Quick to reach on WhatsApp, fixes problems right away",
+     "Good value for money"
+    ],
+    "de": [
+     "Jeep Wrangler und Pick-ups (für Taucher)",
+     "Schnell per WhatsApp erreichbar, löst Probleme sofort",
+     "Gutes Preis-Leistungs-Verhältnis"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen terugkerende nadelen gevonden"
+    ],
+    "en": [
+     "No recurring downsides found"
+    ],
+    "de": [
+     "Keine wiederkehrenden Nachteile gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJk2myXA19g44R0vx0YvcGlPU",
+    "https://www.mycuracaoguide.com/discover/mb-equipment"
+   ]
+  },
+  {
+   "id": "youbi-car-rental",
+   "naam": "Youbi Car Rental",
+   "type": "lokaal",
+   "plaats": "Kaya Seru di Mahuma (bij luchthaven)",
+   "url": null,
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 130,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJ93-kejSdhI4RNh5MhxEw0ro"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gratis shuttle van de luchthaven",
+     "Betalen bij aankomst",
+     "Snelle hulp, ook na vertrek (vergeten spullen)"
+    ],
+    "en": [
+     "Free airport shuttle",
+     "Pay on arrival",
+     "Quick help, even after you've left (forgotten items)"
+    ],
+    "de": [
+     "Kostenloser Flughafen-Shuttle",
+     "Bezahlung bei Ankunft",
+     "Schnelle Hilfe, auch nach der Abreise (vergessene Sachen)"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Zondag gesloten",
+     "Geen terugkerende klachten gevonden"
+    ],
+    "en": [
+     "Closed on Sundays",
+     "No recurring complaints found"
+    ],
+    "de": [
+     "Sonntags geschlossen",
+     "Keine wiederkehrenden Beschwerden gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJ93-kejSdhI4RNh5MhxEw0ro"
+   ]
+  },
+  {
+   "id": "stuart-car-rental",
+   "naam": "Stuart Car Rental",
+   "type": "lokaal",
+   "plaats": "Kaya Fraternan di Skèrpènè 11",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 129,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJ94yoCkRjg44RNc2HKlvpllo"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Auto staat klaar op de luchthaven of bij je hotel",
+     "Snel via WhatsApp, verlengen gaat makkelijk",
+     "Kleine auto's, handig bij parkeren"
+    ],
+    "en": [
+     "Car is ready at the airport or your hotel",
+     "Quick on WhatsApp, easy to extend",
+     "Small cars that are easy to park"
+    ],
+    "de": [
+     "Auto steht am Flughafen oder Hotel bereit",
+     "Schnell per WhatsApp, Verlängerung unkompliziert",
+     "Kleine Autos, praktisch beim Parken"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen terugkerende nadelen gevonden"
+    ],
+    "en": [
+     "No recurring downsides found"
+    ],
+    "de": [
+     "Keine wiederkehrenden Nachteile gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJ94yoCkRjg44RNc2HKlvpllo"
+   ]
+  },
+  {
+   "id": "right-side-car-rental",
+   "naam": "Right Side Car Rental",
+   "type": "lokaal",
+   "plaats": "Architectenweg 5G",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 106,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJjxcPBPN9g44R6ydJDxi9blo"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijk, aflevering en ophalen op de luchthaven",
+     "Lage prijzen"
+    ],
+    "en": [
+     "Friendly, with airport delivery and pickup",
+     "Low prices"
+    ],
+    "de": [
+     "Freundlich, Übergabe und Abholung am Flughafen",
+     "Niedrige Preise"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Oude auto's (~150.000 km), accuproblemen",
+     "Alleen WhatsApp, geen nette bevestiging; ophalen met ongemarkeerde auto",
+     "Tank niet vol bij uitgifte"
+    ],
+    "en": [
+     "Old cars (around 150,000 km), battery problems",
+     "WhatsApp only, no proper confirmation; pickup in an unmarked car",
+     "Tank not full at pickup"
+    ],
+    "de": [
+     "Alte Autos (ca. 150.000 km), Batterieprobleme",
+     "Nur WhatsApp, keine ordentliche Bestätigung; Abholung mit unmarkiertem Auto",
+     "Tank bei Übergabe nicht voll"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJjxcPBPN9g44R6ydJDxi9blo",
+    "https://www.tropicdrive.com/"
+   ]
+  },
+  {
+   "id": "move-it-car-rental",
+   "naam": "Move It Car Rental",
+   "type": "lokaal",
+   "plaats": "Margrietlaan 13; levering luchthaven",
+   "url": null,
+   "ophalen": [
+    "vliegveld",
+    "aflevering"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": true,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 80,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJFW0uCdqdhI4RAMl-34TZpeM"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 66,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.co.uk/Attraction_Review-g147278-d25385353-Reviews-Move_It_Car_Rental-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Nieuwe Jeep Wranglers (soft top)",
+     "Eigenaar wacht op de luchthaven met de auto",
+     "Geen creditcard nodig, alleen de bevestigingsmail",
+     "Volle tank"
+    ],
+    "en": [
+     "New Jeep Wranglers (soft top)",
+     "The owner meets you at the airport with the car",
+     "No credit card needed, just the confirmation email",
+     "Full tank"
+    ],
+    "de": [
+     "Neue Jeep Wrangler (Softtop)",
+     "Der Inhaber wartet mit dem Auto am Flughafen",
+     "Keine Kreditkarte nötig, nur die Bestätigungsmail",
+     "Voller Tank"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen negatieve reviews gevonden"
+    ],
+    "en": [
+     "No negative reviews found"
+    ],
+    "de": [
+     "Keine negativen Bewertungen gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJFW0uCdqdhI4RAMl-34TZpeM",
+    "https://www.tripadvisor.co.uk/Attraction_Review-g147278-d25385353-Reviews-Move_It_Car_Rental-Willemstad_Curacao.html",
+    "https://www.tripadvisor.co.uk/Attractions-g147278-Activities-c59-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "u-drive-car-rental",
+   "naam": "U Drive Car Rental",
+   "type": "lokaal",
+   "plaats": "Willemstad; levering luchthaven/hotel",
+   "url": null,
+   "ophalen": [
+    "vliegveld",
+    "aflevering"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 80,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.co.uk/Attraction_Review-g147278-d25382482-Reviews-U_Drive_Car_Rental-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Meet & greet op de luchthaven, levering bij hotel of condo",
+     "Reageert snel, voor, tijdens en na de huur",
+     "Lagere borg dan elders (reviewer)",
+     "Schone auto's met CarPlay"
+    ],
+    "en": [
+     "Meet and greet at the airport, delivery to your hotel or condo",
+     "Responsive before, during and after the rental",
+     "Lower deposit than elsewhere (per a reviewer)",
+     "Clean cars with CarPlay"
+    ],
+    "de": [
+     "Meet & Greet am Flughafen, Lieferung ans Hotel oder Apartment",
+     "Schnelle Antworten vor, während und nach der Miete",
+     "Niedrigere Kaution als anderswo (laut einem Kunden)",
+     "Saubere Autos mit CarPlay"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen klachten in de zichtbare reviews"
+    ],
+    "en": [
+     "No complaints in the visible reviews"
+    ],
+    "de": [
+     "Keine Beschwerden in den sichtbaren Bewertungen"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.co.uk/Attraction_Review-g147278-d25382482-Reviews-U_Drive_Car_Rental-Willemstad_Curacao.html",
+    "https://www.tripadvisor.co.uk/Attractions-g147278-Activities-c59-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "silver-deal-car-rental",
+   "naam": "Silver Deal Car Rental",
+   "type": "lokaal",
+   "plaats": "Kaya Seru di Mahuma",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 24,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJudXRC--dhI4RaBKiDLlhDrA"
+    },
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 75,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.trustpilot.com/review/silverdealcarrental.com"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Redt klanten van wie de reservering elders mislukte",
+     "Snelle communicatie via WhatsApp, ophalen op de luchthaven",
+     "Tips en extra's (snorkels, koelbox)"
+    ],
+    "en": [
+     "Bails out customers whose booking fell through elsewhere",
+     "Fast WhatsApp replies, airport pickup",
+     "Tips and extras (snorkel gear, cooler)"
+    ],
+    "de": [
+     "Hilft Kunden aus, deren Buchung anderswo geplatzt ist",
+     "Schnelle Kommunikation per WhatsApp, Abholung am Flughafen",
+     "Tipps und Extras (Schnorchel, Kühlbox)"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Soms een klein mankement aan de auto",
+     "Eén onduidelijke 1-sterreview op Trustpilot"
+    ],
+    "en": [
+     "Occasionally a minor issue with the car",
+     "One unclear 1-star review on Trustpilot"
+    ],
+    "de": [
+     "Manchmal ein kleiner Mangel am Auto",
+     "Eine unklare 1-Stern-Bewertung auf Trustpilot"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJudXRC--dhI4RaBKiDLlhDrA",
+    "https://www.trustpilot.com/review/silverdealcarrental.com"
+   ]
+  },
+  {
+   "id": "victory-car-rental",
+   "naam": "Victory Car Rental",
+   "type": "lokaal",
+   "plaats": "Weg naar Hato",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 62,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJlYStGtKdhI4RXXGavuXVXY8"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Levering op de luchthaven, terugrit bij vertrek",
+     "Auto's in goede staat, reageert snel"
+    ],
+    "en": [
+     "Delivery at the airport and a ride back when you leave",
+     "Cars in good shape, quick to respond"
+    ],
+    "de": [
+     "Lieferung am Flughafen, Rückfahrt zum Abflug",
+     "Autos in gutem Zustand, schnelle Antworten"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen nadelen gevonden"
+    ],
+    "en": [
+     "No downsides found"
+    ],
+    "de": [
+     "Keine Nachteile gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJlYStGtKdhI4RXXGavuXVXY8"
+   ]
+  },
+  {
+   "id": "acacia-bon4rent-car-rental",
+   "naam": "Acacia Bon4rent Car Rental",
+   "type": "lokaal",
+   "plaats": "Kaya Acacia 61",
+   "url": "https://www.bon4rent-curacao.nl",
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": true,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 54,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJEyPHSiJ9g44RYsvxCMBndFQ"
+    },
+    {
+     "platform": "Trustpilot",
+     "score": 3.2,
+     "max": 5,
+     "aantal": 1,
+     "peildatum": "2026-10-20",
+     "bron": "https://de.trustpilot.com/review/www.bon4rent-curacao.nl"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Nieuwe Kia's, aflevering bij je accommodatie",
+     "Ook langdurige huur (stagiairs) met maandelijkse check"
+    ],
+    "en": [
+     "New Kias, delivered to where you're staying",
+     "Long-term rentals too (interns), with a monthly check"
+    ],
+    "de": [
+     "Neue Kias, Lieferung an deine Unterkunft",
+     "Auch Langzeitmiete (Praktikanten) mit monatlichem Check"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Trustpilot (1 review, nov 2025): pech, geen hulp, borg van €375 ingehouden"
+    ],
+    "en": [
+     "Trustpilot (1 review, Nov 2025): breakdown, no help, €375 deposit kept"
+    ],
+    "de": [
+     "Trustpilot (1 Bewertung, Nov. 2025): Panne, keine Hilfe, Kaution von 375 € einbehalten"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJEyPHSiJ9g44RYsvxCMBndFQ",
+    "https://de.trustpilot.com/review/www.bon4rent-curacao.nl",
+    "https://uk.trustpilot.com/review/www.bon4rent-curacao.nl"
+   ]
+  },
+  {
+   "id": "tropikal-rentals-curacao",
+   "naam": "Tropikal Rentals Curaçao",
+   "type": "lokaal",
+   "plaats": "Seru Loraweg 146",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 53,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJX0-Ok1F9g44RkwRxw0e9D5o"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Eigen garage en monteur: problemen binnen 1 à 2 uur opgelost",
+     "Ophalen op de luchthaven",
+     "Goede service in drukke periodes (carnaval)"
+    ],
+    "en": [
+     "Own garage and mechanic: problems fixed within 1 to 2 hours",
+     "Airport pickup",
+     "Good service during busy times (Carnival)"
+    ],
+    "de": [
+     "Eigene Werkstatt und Mechaniker: Probleme in 1 bis 2 Stunden gelöst",
+     "Abholung am Flughafen",
+     "Guter Service in Stoßzeiten (Karneval)"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Oudere auto's met kleine mankementen"
+    ],
+    "en": [
+     "Older cars with minor defects"
+    ],
+    "de": [
+     "Ältere Autos mit kleinen Mängeln"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJX0-Ok1F9g44RkwRxw0e9D5o"
+   ]
+  },
+  {
+   "id": "livcuracao-car-rental",
+   "naam": "LivCuracao Car Rental",
+   "type": "lokaal",
+   "plaats": "Kaya Vivaldi 5",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 52,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJdWjXb5d9g44RtIceOhG_lEQ"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Nieuwe auto's, ook een elektrische Fiat 500",
+     "Persoonlijke overdracht bij je Airbnb",
+     "Flexibel bij vertraagde vluchten"
+    ],
+    "en": [
+     "New cars, including an electric Fiat 500",
+     "Personal handover at your Airbnb",
+     "Flexible with delayed flights"
+    ],
+    "de": [
+     "Neue Autos, auch ein elektrischer Fiat 500",
+     "Persönliche Übergabe an deinem Airbnb",
+     "Flexibel bei verspäteten Flügen"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen nadelen gevonden"
+    ],
+    "en": [
+     "No downsides found"
+    ],
+    "de": [
+     "Keine Nachteile gefunden"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJdWjXb5d9g44RtIceOhG_lEQ",
+    "https://www.mycuracaoguide.com/traveling-to-curacao/car-rentals"
+   ]
+  },
+  {
+   "id": "curacao-jeep-experience",
+   "naam": "Curaçao Jeep Experience",
+   "type": "lokaal",
+   "plaats": "Willemstad",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": true,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 40,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJESSDtK2ChI4Rf8gL8Q8is40"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Open jeeps (Suzuki Samurai), levering op locatie",
+     "24-uurs pechhulp",
+     "Helpt bij geannuleerde vluchten"
+    ],
+    "en": [
+     "Open-top jeeps (Suzuki Samurai), delivered to your location",
+     "24-hour roadside assistance",
+     "Helps out when flights get canceled"
+    ],
+    "de": [
+     "Offene Jeeps (Suzuki Samurai), Lieferung vor Ort",
+     "24-Stunden-Pannenhilfe",
+     "Hilft bei annullierten Flügen"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Mix van verhuur en tours, weinig reviews over alleen de huur"
+    ],
+    "en": [
+     "Mix of rentals and tours, few reviews about the rental alone"
+    ],
+    "de": [
+     "Mix aus Vermietung und Touren, wenige Bewertungen nur zur Miete"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJESSDtK2ChI4Rf8gL8Q8is40"
+   ]
+  },
+  {
+   "id": "abc-car-rental",
+   "naam": "ABC Car Rental",
+   "type": "lokaal",
+   "plaats": "Seru Loraweg 99-93",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 27,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJ2TscR2R9g44RbLTcWFNrxxk"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Nieuwe, schone auto's",
+     "Flexibel ophalen en afleveren"
+    ],
+    "en": [
+     "New, clean cars",
+     "Flexible pickup and drop-off"
+    ],
+    "de": [
+     "Neue, saubere Autos",
+     "Flexible Abholung und Rückgabe"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Weinig reviews"
+    ],
+    "en": [
+     "Few reviews"
+    ],
+    "de": [
+     "Wenige Bewertungen"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJ2TscR2R9g44RbLTcWFNrxxk"
+   ]
+  },
+  {
+   "id": "curadise-car-rental",
+   "naam": "Curadise Car Rental",
+   "type": "lokaal",
+   "plaats": "Kaya Bologna",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 12,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJP7_s4MuDhI4RmbKNyD8fnmU"
+    },
+    {
+     "platform": "Trustpilot",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 55,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.trustpilot.com/review/curadisecarrental.com"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Flexibel en oplossingsgericht, snel via WhatsApp",
+     "Maandelijkse autocheck bij langdurige huur"
+    ],
+    "en": [
+     "Flexible and solution-minded, quick on WhatsApp",
+     "Monthly car check on long-term rentals"
+    ],
+    "de": [
+     "Flexibel und lösungsorientiert, schnell per WhatsApp",
+     "Monatlicher Autocheck bei Langzeitmiete"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Oudere auto's met mankementen (lekke banden, kofferbak)",
+     "Klachten over terugbetaling en onbereikbaarheid na afloop",
+     "14% 1-sterreviews op Trustpilot"
+    ],
+    "en": [
+     "Older cars with defects (flat tires, trunk)",
+     "Complaints about refunds and being unreachable afterward",
+     "14% of Trustpilot reviews are 1-star"
+    ],
+    "de": [
+     "Ältere Autos mit Mängeln (platte Reifen, Kofferraum)",
+     "Beschwerden über Rückerstattung und schlechte Erreichbarkeit danach",
+     "14 % 1-Stern-Bewertungen auf Trustpilot"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJP7_s4MuDhI4RmbKNyD8fnmU",
+    "https://www.trustpilot.com/review/curadisecarrental.com"
+   ]
+  },
+  {
+   "id": "boric-car-rental",
+   "naam": "Boric Car Rental",
+   "type": "lokaal",
+   "plaats": "FD Rooseveltweg 282 + hotels",
+   "url": "http://www.boriccar.com",
+   "ophalen": [
+    "shuttle",
+    "aflevering"
+   ],
+   "prijs": {
+    "bedrag": 36.37,
+    "valuta": "USD",
+    "bron": "https://www.discovercars.com/curacao",
+    "datum": "2026-10-19 (zoekopdracht 22-30 okt 2026)",
+    "usd": 36.37
+   },
+   "prijsVanaf": 36.37,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": true,
+   "automaat": true,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": true,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 335,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJuZnGOXx9g44R3QGvatA4VZ0"
+    },
+    {
+     "platform": "Economybookings",
+     "score": 8.0,
+     "max": 10,
+     "aantal": 258,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.economybookings.com/en/suppliers/boric-car-rental/curacao"
+    },
+    {
+     "platform": "Easyterra",
+     "score": 8.4,
+     "max": 10,
+     "aantal": null,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.easyterra.com/boric-car/car-rental-curacao-airport.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Shuttle vanaf de luchthaven (~10 min)",
+     "Nieuwe, schone auto's; schade gedocumenteerd",
+     "Geen gedoe bij inleveren, alleen tanken"
+    ],
+    "en": [
+     "Airport shuttle (about 10 minutes)",
+     "New, clean cars; damage documented",
+     "Hassle-free return, just refuel"
+    ],
+    "de": [
+     "Shuttle vom Flughafen (ca. 10 Min.)",
+     "Neue, saubere Autos; Schäden dokumentiert",
+     "Unkomplizierte Rückgabe, nur volltanken"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Eén balie, dus extra wachttijd",
+     "Discussie over dekking na aanrijding ondanks volledige verzekering",
+     "Ontwijkende reactie op vragen over de borg"
+    ],
+    "en": [
+     "Only one counter, so extra waiting",
+     "Dispute over coverage after a collision despite full insurance",
+     "Evasive answers to questions about the deposit"
+    ],
+    "de": [
+     "Nur ein Schalter, daher längere Wartezeit",
+     "Streit um die Deckung nach einem Unfall trotz Vollversicherung",
+     "Ausweichende Antworten auf Fragen zur Kaution"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJuZnGOXx9g44R3QGvatA4VZ0",
+    "https://www.economybookings.com/en/suppliers/boric-car-rental/curacao",
+    "https://www.autorentalnews.com/81740/global-snapshot-how-a-curacao-car-rental-company-strives-to-be-one-of-the-biggest",
+    "https://www.discovercars.com/curacao",
+    "https://www.economybookings.com/en/suppliers/boric-car-rental/cur",
+    "https://www.autorentalnews.com/news/global-snapshot-how-a-curacao-car-rental-company-strives-to-be-one-of-the-biggest"
+   ]
+  },
+  {
+   "id": "noordstar-rent-a-car",
+   "naam": "Noordstar Rent a Car",
+   "type": "lokaal",
+   "plaats": "George Maduroweg (afgifte bij luchthaven)",
+   "url": null,
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.8,
+     "max": 5,
+     "aantal": 67,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJO-9Iu0R9g44RLlw21rDQ1ws"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goedkoper dan de balies op de luchthaven",
+     "Behulpzaam bij lastige inleverwensen"
+    ],
+    "en": [
+     "Cheaper than the airport counters",
+     "Helpful with complicated return requests"
+    ],
+    "de": [
+     "Günstiger als die Schalter am Flughafen",
+     "Hilfsbereit bei komplizierten Rückgabewünschen"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geboekte auto niet klaar of niemand op de luchthaven (Google en forum)",
+     "Oude auto's met mankementen",
+     "Reageert slecht op WhatsApp; vaag contract, strenge schadevoorwaarden"
+    ],
+    "en": [
+     "Booked car not ready or nobody at the airport (Google and forum)",
+     "Old cars with defects",
+     "Poor WhatsApp responses; vague contract, strict damage terms"
+    ],
+    "de": [
+     "Gebuchtes Auto nicht bereit oder niemand am Flughafen (Google und Forum)",
+     "Alte Autos mit Mängeln",
+     "Reagiert schlecht auf WhatsApp; vager Vertrag, strenge Schadensbedingungen"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJO-9Iu0R9g44RLlw21rDQ1ws",
+    "https://www.tripadvisor.com/ShowTopic-g147278-i584-k10462491-The_best_car_rental-Willemstad_Curacao.html",
+    "https://www.tripadvisor.com/ShowTopic-g147277-i583-k7229631-Noordstar_and_Alamo_car_rental-Curacao.html"
+   ]
+  },
+  {
+   "id": "ace-rent-a-car",
+   "naam": "ACE Rent A Car",
+   "type": "internationaal",
+   "plaats": "FD Rooseveltweg 282 (shuttle)",
+   "url": null,
+   "ophalen": [
+    "balie",
+    "shuttle",
+    "vliegveld"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": true,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 2.3,
+     "max": 5,
+     "aantal": 42,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJtxMNvvmChI4Rqx-vw18fJMI"
+    },
+    {
+     "platform": "KAYAK",
+     "score": 6.2,
+     "max": 10,
+     "aantal": null,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.kayak.com/Budget-Car-Rentals-Willemstad.CUR.ABUDGET.cla.ksp"
+    },
+    {
+     "platform": "Economybookings",
+     "score": 5.6,
+     "max": 10,
+     "aantal": null,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.economybookings.com/en/suppliers/boric-car-rental/curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goedkoop, vriendelijk personeel",
+     "Snelle shuttle"
+    ],
+    "en": [
+     "Cheap, with friendly staff",
+     "Fast shuttle"
+    ],
+    "de": [
+     "Günstig, freundliches Personal",
+     "Schneller Shuttle"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "$1.000 borg, terug na 7 tot 14 dagen",
+     "Schadeclaims bij inleveren (o.a. voor modder)",
+     "Oude auto's, niet de geboekte klasse"
+    ],
+    "en": [
+     "$1,000 deposit, returned after 7 to 14 days",
+     "Damage claims at return (including for mud)",
+     "Old cars, not the class you booked"
+    ],
+    "de": [
+     "1.000 $ Kaution, Rückzahlung nach 7 bis 14 Tagen",
+     "Schadensforderungen bei Rückgabe (u. a. wegen Schlamm)",
+     "Alte Autos, nicht die gebuchte Klasse"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJtxMNvvmChI4Rqx-vw18fJMI",
+    "https://www.rentcars.com/en/company/ace/curacao/airports/cur-hato-willemstad-willemstad",
+    "https://www.cheapflights.co.nz/car-rentals/Curacao/"
+   ]
+  },
+  {
+   "id": "alamo",
+   "naam": "Alamo",
+   "type": "internationaal",
+   "plaats": "Luchthaven Hato (balie aankomsthal)",
+   "url": null,
+   "ophalen": [
+    "balie",
+    "vliegveld"
+   ],
+   "prijs": {
+    "bedrag": 58,
+    "valuta": "EUR",
+    "bron": "https://www.skyscanner.ie/car-rental-from/cur/car-rental-from-curacao-airport.html",
+    "datum": "okt 2026",
+    "usd": 63.8
+   },
+   "prijsVanaf": 63.8,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": 25,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": true,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": true,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 67,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJ1-v8SH6dhI4RSemlmh5h4Mw"
+    },
+    {
+     "platform": "KAYAK",
+     "score": 10.0,
+     "max": 10,
+     "aantal": null,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.kayak.com/Budget-Car-Rentals-Willemstad.CUR.ABUDGET.cla.ksp"
+    },
+    {
+     "platform": "Economybookings",
+     "score": 9.3,
+     "max": 10,
+     "aantal": null,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.economybookings.com/en/suppliers/boric-car-rental/curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Efficiënte balie op de luchthaven",
+     "Slijtage vooraf vastgelegd, geen onterechte claims",
+     "Vriendelijk personeel"
+    ],
+    "en": [
+     "Efficient airport counter",
+     "Wear and tear recorded upfront, no unfair claims",
+     "Friendly staff"
+    ],
+    "de": [
+     "Effizienter Schalter am Flughafen",
+     "Gebrauchsspuren vorab erfasst, keine unberechtigten Forderungen",
+     "Freundliches Personal"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Buiten wachten bij uitgifte (één medewerker)",
+     "Soms een vieze auto (mieren, geur)",
+     "Druk bij externe verzekering (Expedia): eerst zelf betalen"
+    ],
+    "en": [
+     "Waiting outside at pickup (one staff member)",
+     "Sometimes a dirty car (ants, odor)",
+     "Pressure if you have outside insurance (Expedia): you pay upfront yourself"
+    ],
+    "de": [
+     "Warten draußen bei der Übergabe (ein Mitarbeiter)",
+     "Manchmal ein schmutziges Auto (Ameisen, Geruch)",
+     "Druck bei externer Versicherung (Expedia): erst selbst zahlen"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJ1-v8SH6dhI4RSemlmh5h4Mw",
+    "https://relaxedcuracao.com/en/?p=9246",
+    "https://www.alamo.com/en/car-rental-locations/cw.html",
+    "https://www.skyscanner.ie/car-rental-from/cur/car-rental-from-curacao-airport.html"
+   ]
+  },
+  {
+   "id": "national",
+   "naam": "National",
+   "type": "internationaal",
+   "plaats": "Luchthaven Hato + FD Rooseveltweg 449 + Jan Thiel",
+   "url": null,
+   "ophalen": [
+    "balie"
+   ],
+   "prijs": {
+    "bedrag": 71,
+    "valuta": "EUR",
+    "bron": "https://www.skyscanner.ie/car-rental-from/cur/car-rental-from-curacao-airport.html",
+    "datum": "okt 2026",
+    "usd": 78.1
+   },
+   "prijsVanaf": 78.1,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": {
+    "valuta": "USD",
+    "bedrag": 500.0
+   },
+   "minLeeftijd": 23,
+   "jeep": false,
+   "zevenPersoons": true,
+   "automaat": true,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": true,
+   "creditcardNodig": true,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 13,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJY7RsNB2dhI4R9UslGPyXFxc"
+    },
+    {
+     "platform": "KAYAK",
+     "score": 10.0,
+     "max": 10,
+     "aantal": null,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.kayak.com/Budget-Car-Rentals-Willemstad.CUR.ABUDGET.cla.ksp"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Soepel ophalen en inleveren",
+     "Hielp last-minute en bij 48 uur vertraging",
+     "Locaties op de luchthaven en in Jan Thiel"
+    ],
+    "en": [
+     "Smooth pickup and return",
+     "Helped out last minute and during a 48-hour delay",
+     "Locations at the airport and in Jan Thiel"
+    ],
+    "de": [
+     "Reibungslose Abholung und Rückgabe",
+     "Half kurzfristig und bei 48 Stunden Verspätung",
+     "Standorte am Flughafen und in Jan Thiel"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Staat van de auto soms maar 'oké'",
+     "tabiji.ai noemt een Tripadvisor-melding over schadeclaims (niet geverifieerd)"
+    ],
+    "en": [
+     "Car condition sometimes just 'okay'",
+     "tabiji.ai cites a Tripadvisor report about damage claims (unverified)"
+    ],
+    "de": [
+     "Zustand des Autos manchmal nur 'okay'",
+     "tabiji.ai nennt einen Tripadvisor-Bericht über Schadensforderungen (nicht verifiziert)"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJY7RsNB2dhI4R9UslGPyXFxc",
+    "https://tabiji.ai/scams/curacao/",
+    "https://www.nationalcar.com/en/car-rental-locations/cw/curacao-international-airport-kp14.html",
+    "https://www.traveldailynews.com/column/featured-articles/top-six-car-rental-companies-in-curacao/",
+    "https://www.skyscanner.ie/car-rental-from/cur/car-rental-from-curacao-airport.html"
+   ]
+  },
+  {
+   "id": "enterprise",
+   "naam": "Enterprise",
+   "type": "internationaal",
+   "plaats": "Luchthaven Hato + hotels",
+   "url": null,
+   "ophalen": [
+    "balie",
+    "aflevering"
+   ],
+   "prijs": {
+    "bedrag": 92,
+    "valuta": "USD",
+    "bron": "https://www.discovercars.com/curacao",
+    "datum": "2026-10-19 (zoekopdracht 22-30 okt 2026)",
+    "usd": 92
+   },
+   "prijsVanaf": 92,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": {
+    "valuta": "USD",
+    "bedrag": 500.0
+   },
+   "minLeeftijd": 23,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": true,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 8,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJhauF05adhI4RqEWpOy-J2lo"
+    },
+    {
+     "platform": "KAYAK",
+     "score": 7.5,
+     "max": 10,
+     "aantal": null,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.kayak.com/Budget-Car-Rentals-Willemstad.CUR.ABUDGET.cla.ksp"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Zeer vriendelijk baliepersoneel",
+     "Snel een auto"
+    ],
+    "en": [
+     "Very friendly counter staff",
+     "Quick to get a car"
+    ],
+    "de": [
+     "Sehr freundliches Schalterpersonal",
+     "Schnell ein Auto"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen shuttle vanaf de cruisehaven",
+     "Weinig reviews"
+    ],
+    "en": [
+     "No shuttle from the cruise port",
+     "Few reviews"
+    ],
+    "de": [
+     "Kein Shuttle vom Kreuzfahrthafen",
+     "Wenige Bewertungen"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJhauF05adhI4RqEWpOy-J2lo",
+    "https://www.enterprise.com/en/car-rental-locations/cw/curacao-international-airport-kp16.html",
+    "https://www.discovercars.com/curacao"
+   ]
+  },
+  {
+   "id": "sixt",
+   "naam": "Sixt",
+   "type": "internationaal",
+   "plaats": "Luchthaven Hato + Sunscape",
+   "url": null,
+   "ophalen": [
+    "balie",
+    "vliegveld"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": 23,
+   "jeep": false,
+   "zevenPersoons": true,
+   "automaat": false,
+   "suv": true,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 353,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJKzOoh_ychI4R6G6H9Z_18rM"
+    },
+    {
+     "platform": "KAYAK",
+     "score": 3.3,
+     "max": 10,
+     "aantal": 6,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.kayak.com/Sixt-Car-Rentals-Willemstad.CUR.ASIXT.cla.ksp"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Behulpzame medewerkers, soms een upgrade",
+     "Geen onterechte kosten bij inleveren (sommige reviewers)"
+    ],
+    "en": [
+     "Helpful staff, sometimes an upgrade",
+     "No unfair charges at return (per some reviewers)"
+    ],
+    "de": [
+     "Hilfsbereite Mitarbeiter, manchmal ein Upgrade",
+     "Keine unberechtigten Kosten bei Rückgabe (laut manchen Kunden)"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Eindprijs aan de balie fors hoger dan online",
+     "Bestaande schade op de klant afgeschoven (foto's redden een reviewer)",
+     "Strenge schoonmaakkosten",
+     "Auto niet klaar, wachttijd"
+    ],
+    "en": [
+     "Final price at the counter much higher than online",
+     "Existing damage blamed on the customer (photos saved one reviewer)",
+     "Strict cleaning fees",
+     "Car not ready, so you wait"
+    ],
+    "de": [
+     "Endpreis am Schalter deutlich höher als online",
+     "Vorschäden dem Kunden angelastet (Fotos retteten einen Kunden)",
+     "Strenge Reinigungsgebühren",
+     "Auto nicht bereit, Wartezeit"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJKzOoh_ychI4R6G6H9Z_18rM",
+    "https://www.kayak.com/Sixt-Car-Rentals-Willemstad.CUR.ASIXT.cla.ksp",
+    "https://www.sixt.com/car-rental/curacao/willemstad/curacao-intl-airport-hato/",
+    "https://www.franchising.com/news/20140702_sixt_expands_its_network_in_the_caribbean.html"
+   ]
+  },
+  {
+   "id": "europcar",
+   "naam": "Europcar",
+   "type": "internationaal",
+   "plaats": "Weg naar Westpunt bij Juan Domingo (shuttle)",
+   "url": null,
+   "ophalen": [
+    "balie",
+    "shuttle"
+   ],
+   "prijs": {
+    "bedrag": 43.12,
+    "valuta": "USD",
+    "bron": "https://www.discovercars.com/curacao",
+    "datum": "2026-10-19 (zoekopdracht 22-30 okt 2026)",
+    "usd": 43.12
+   },
+   "prijsVanaf": 43.12,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": true,
+   "zevenPersoons": true,
+   "automaat": true,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": true,
+   "creditcardNodig": true,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.4,
+     "max": 5,
+     "aantal": 191,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJoSS_cdCchI4REYZ4uaM29a8"
+    },
+    {
+     "platform": "KAYAK",
+     "score": 6.9,
+     "max": 10,
+     "aantal": 6,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.kayak.com/Europcar-Car-Rentals-Willemstad.CUR.AEUROPCAR.cla.ksp"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Shuttle met airco, korte wachttijd",
+     "Snelle uitgifte, gratis wifi op kantoor"
+    ],
+    "en": [
+     "Air-conditioned shuttle, short wait",
+     "Fast pickup, free Wi-Fi at the office"
+    ],
+    "de": [
+     "Shuttle mit Klimaanlage, kurze Wartezeit",
+     "Schnelle Übergabe, kostenloses WLAN im Büro"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Schadeclaims bij inleveren (o.a. USD 500, $250 voor krasje), zonder kopie schaderapport",
+     "Verplichte bijverkoop van verzekering en brandstof",
+     "Oude auto's met defecten (accu, ramen)"
+    ],
+    "en": [
+     "Damage claims at return ($500, $250 for a scratch) with no copy of the damage report",
+     "Forced upsell of insurance and fuel",
+     "Old cars with defects (battery, windows)"
+    ],
+    "de": [
+     "Schadensforderungen bei Rückgabe (u. a. 500 USD, 250 $ für einen Kratzer) ohne Kopie des Schadensberichts",
+     "Aufgezwungener Zusatzverkauf von Versicherung und Tankfüllung",
+     "Alte Autos mit Defekten (Batterie, Fenster)"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJoSS_cdCchI4REYZ4uaM29a8",
+    "https://www.kayak.com/Europcar-Car-Rentals-Willemstad.CUR.AEUROPCAR.cla.ksp",
+    "https://www.economybookings.com/en/suppliers/europcar/cur",
+    "https://www.discovercars.com/curacao",
+    "https://www.skyscanner.ie/car-rental-from/cur/car-rental-from-curacao-airport.html"
+   ]
+  },
+  {
+   "id": "budget",
+   "naam": "Budget",
+   "type": "internationaal",
+   "plaats": "Luchthaven, hoofdkantoor FD Rooseveltweg, Avila Hotel, Jan Thiel",
+   "url": "http://www.curacao-budgetcar.com",
+   "ophalen": [
+    "balie",
+    "vliegveld",
+    "aflevering"
+   ],
+   "prijs": {
+    "bedrag": 32,
+    "valuta": "USD",
+    "bron": "https://www.inyourpocket.com/dutch-caribbean/Curacao/venues/Budget",
+    "datum": "onbekend (directory)",
+    "usd": 32
+   },
+   "prijsVanaf": 32,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": true,
+   "automaat": true,
+   "suv": true,
+   "volledigVerzekerd": false,
+   "schadeKlachten": true,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps (luchthaven)",
+     "score": 2.6,
+     "max": 5,
+     "aantal": 87,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJPyTj7PychI4RCgEn5SvrD2g"
+    },
+    {
+     "platform": "Google Maps (hoofdkantoor)",
+     "score": 2.3,
+     "max": 5,
+     "aantal": 12,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJE3HcTR2dhI4RgjBq-hOU7hg"
+    },
+    {
+     "platform": "Google Maps (Avila)",
+     "score": 3.4,
+     "max": 5,
+     "aantal": 29,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJUzDvB2OChI4R5hp8PKBJIpw"
+    },
+    {
+     "platform": "Google Maps (Jan Thiel)",
+     "score": 3.3,
+     "max": 5,
+     "aantal": 22,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJuwOIFMF9g44RpAYD8oQMLF4"
+    },
+    {
+     "platform": "KAYAK",
+     "score": 7.4,
+     "max": 10,
+     "aantal": 21,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.kayak.com/Budget-Car-Rentals-Willemstad.CUR.ABUDGET.cla.ksp"
+    },
+    {
+     "platform": "Economybookings",
+     "score": 8.4,
+     "max": 10,
+     "aantal": null,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.economybookings.com/en/suppliers/boric-car-rental/curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Snelle afhandeling (KAYAK, jan 2026)",
+     "Vervangende auto bij pech"
+    ],
+    "en": [
+     "Fast service (KAYAK, Jan 2026)",
+     "Replacement car after a breakdown"
+    ],
+    "de": [
+     "Schnelle Abwicklung (KAYAK, Jan. 2026)",
+     "Ersatzwagen bei Panne"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "$1.000 borg; meldingen dat de borg als betaling werd geboekt of niet terugkwam",
+     "Schadeclaims bij inleveren (schaafplek, kofferbak $1.200)",
+     "Oude of vieze auto's, kleinere klasse dan geboekt",
+     "Iedereen hetzelfde tijdslot, dus wachten (Jan Thiel)"
+    ],
+    "en": [
+     "$1,000 deposit; reports of it being charged as a payment or never refunded",
+     "Damage claims at return (a scuff, $1,200 for the trunk)",
+     "Old or dirty cars, smaller class than booked",
+     "Everyone gets the same time slot, so you wait (Jan Thiel)"
+    ],
+    "de": [
+     "1.000 $ Kaution; Berichte, dass sie als Zahlung gebucht oder nicht erstattet wurde",
+     "Schadensforderungen bei Rückgabe (Schramme, Kofferraum 1.200 $)",
+     "Alte oder schmutzige Autos, kleinere Klasse als gebucht",
+     "Alle bekommen dasselbe Zeitfenster, also Warten (Jan Thiel)"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJPyTj7PychI4RCgEn5SvrD2g",
+    "https://www.kayak.com/Budget-Car-Rentals-Willemstad.CUR.ABUDGET.cla.ksp",
+    "https://tabiji.ai/scams/curacao/",
+    "https://www.inyourpocket.com/dutch-caribbean/Curacao/venues/Budget",
+    "https://www.traveldailynews.com/column/featured-articles/top-six-car-rental-companies-in-curacao/",
+    "https://www.skyscanner.co.in/car-hire/provider-at-airport/686/cur"
+   ]
+  },
+  {
+   "id": "avis",
+   "naam": "Avis",
+   "type": "internationaal",
+   "plaats": "Luchthaven Hato + cruisehaven/Renaissance",
+   "url": null,
+   "ophalen": [
+    "balie",
+    "vliegveld",
+    "aflevering"
+   ],
+   "prijs": {
+    "bedrag": 68.5,
+    "valuta": "USD",
+    "bron": "https://www.discovercars.com/curacao",
+    "datum": "2026-10-19 (zoekopdracht 22-30 okt 2026)",
+    "usd": 68.5
+   },
+   "prijsVanaf": 68.5,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": {
+    "valuta": "USD",
+    "bedrag": 500.0
+   },
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": true,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 2.2,
+     "max": 5,
+     "aantal": 107,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJr_dBjfychI4R3tFYJcrhecs"
+    },
+    {
+     "platform": "KAYAK",
+     "score": 7.6,
+     "max": 10,
+     "aantal": 6,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.kayak.com/Avis-Car-Rentals-Willemstad.AAVIS.3112.cl.ksp"
+    },
+    {
+     "platform": "Economybookings",
+     "score": 7.0,
+     "max": 10,
+     "aantal": null,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.economybookings.com/en/suppliers/boric-car-rental/curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Balie op de luchthaven",
+     "Vriendelijk baliepersoneel",
+     "Kantoor bij de cruisepier (forum)"
+    ],
+    "en": [
+     "Counter at the airport",
+     "Friendly counter staff",
+     "Office near the cruise pier (per forum)"
+    ],
+    "de": [
+     "Schalter am Flughafen",
+     "Freundliches Schalterpersonal",
+     "Büro am Kreuzfahrtanleger (laut Forum)"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Lange wachttijden (tot 2 uur), één medewerker",
+     "Oude, gedeukte, vieze auto's (150.000 km)",
+     "Slechte hulp bij pech (forum)"
+    ],
+    "en": [
+     "Long waits (up to 2 hours), one staff member",
+     "Old, dented, dirty cars (150,000 km)",
+     "Poor help with breakdowns (per forum)"
+    ],
+    "de": [
+     "Lange Wartezeiten (bis zu 2 Stunden), ein Mitarbeiter",
+     "Alte, verbeulte, schmutzige Autos (150.000 km)",
+     "Schlechte Hilfe bei Pannen (laut Forum)"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJr_dBjfychI4R3tFYJcrhecs",
+    "https://www.kayak.com/Avis-Car-Rentals-Willemstad.AAVIS.3112.cl.ksp",
+    "https://www.tripadvisor.com/ShowTopic-g147278-i584-k10462491-The_best_car_rental-Willemstad_Curacao.html",
+    "https://www.avis.com/en/locations/lat/an/willemstad/cur",
+    "https://www.discovercars.com/curacao",
+    "https://www.skyscanner.ie/car-rental-from/cur/car-rental-from-curacao-airport.html"
+   ]
+  },
+  {
+   "id": "payless",
+   "naam": "Payless",
+   "type": "internationaal",
+   "plaats": "Luchthaven (zelfde balie/telefoon als Avis) + Kaya Seru Mahuma",
+   "url": null,
+   "ophalen": [
+    "balie",
+    "shuttle"
+   ],
+   "prijs": {
+    "bedrag": 38,
+    "valuta": "USD",
+    "bron": "https://www.kayak.com/Payless-Car-Rentals-Willemstad.CUR.APAYLESS.cla.ksp",
+    "datum": "weergave 15-10-2026",
+    "usd": 38
+   },
+   "prijsVanaf": 38,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "KAYAK",
+     "score": 4.5,
+     "max": 10,
+     "aantal": 4,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.kayak.com/Payless-Car-Rentals-Willemstad.CUR.APAYLESS.cla.ksp"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Snelle afhandeling (mrt 2025)"
+    ],
+    "en": [
+     "Fast service (Mar 2025)"
+    ],
+    "de": [
+     "Schnelle Abwicklung (März 2025)"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen auto beschikbaar ondanks bevestigde reservering",
+     "Extra kosten, geen reactie van de klantenservice"
+    ],
+    "en": [
+     "No car available despite a confirmed reservation",
+     "Extra charges, no response from customer service"
+    ],
+    "de": [
+     "Kein Auto verfügbar trotz bestätigter Reservierung",
+     "Zusatzkosten, keine Antwort vom Kundenservice"
+    ]
+   },
+   "bronnen": [
+    "https://www.kayak.com/Payless-Car-Rentals-Willemstad.CUR.APAYLESS.cla.ksp",
+    "https://www.cheapflights.co.nz/car-rentals/Curacao/"
+   ]
+  },
+  {
+   "id": "hertz-thrifty-dollar",
+   "naam": "Hertz / Thrifty / Dollar",
+   "type": "internationaal",
+   "plaats": "Luchthaven Hato + FD Rooseveltweg 503 + Sunscape/Marriott",
+   "url": "http://www.thrifty-curacao.com",
+   "ophalen": [
+    "balie",
+    "shuttle",
+    "aflevering"
+   ],
+   "prijs": {
+    "bedrag": 30,
+    "valuta": "USD",
+    "bron": "https://www.inyourpocket.com/dutch-caribbean/curacao/venues/thrifty",
+    "datum": "onbekend (directory)",
+    "usd": 30
+   },
+   "prijsVanaf": 30,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": true,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": true,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps (Hertz luchthaven)",
+     "score": 2.2,
+     "max": 5,
+     "aantal": 30,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJv-BcpJadhI4RtTSywzN9f5A"
+    },
+    {
+     "platform": "Google Maps (Hertz/Dollar/Thrifty kantoor)",
+     "score": 2.3,
+     "max": 5,
+     "aantal": 26,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJx6GcDyCdhI4RSeKZdYVit7w"
+    },
+    {
+     "platform": "Google Maps (Thrifty luchthaven)",
+     "score": 2.4,
+     "max": 5,
+     "aantal": 7,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJNVa7RRlzg44Re4NCpxOTsTw"
+    },
+    {
+     "platform": "Google Maps (Dollar luchthaven)",
+     "score": 2.9,
+     "max": 5,
+     "aantal": 10,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJJUEOAv2chI4R82EQ9a6ZL1o"
+    },
+    {
+     "platform": "KAYAK (Hertz)",
+     "score": 7.2,
+     "max": 10,
+     "aantal": 5,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.kayak.com/Hertz-Car-Rentals-Willemstad.CUR.AHERTZ.cla.ksp"
+    },
+    {
+     "platform": "KAYAK (Thrifty)",
+     "score": 5.0,
+     "max": 10,
+     "aantal": null,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.kayak.com/Budget-Car-Rentals-Willemstad.CUR.ABUDGET.cla.ksp"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Snel ophalen en inleveren als het goed gaat",
+     "Soms een upgrade"
+    ],
+    "en": [
+     "Quick pickup and return when things go right",
+     "Sometimes an upgrade"
+    ],
+    "de": [
+     "Schnelle Abholung und Rückgabe, wenn alles klappt",
+     "Manchmal ein Upgrade"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Reservering geannuleerd of 'geen auto' bij aankomst in het hoogseizoen",
+     "Ongevraagd dure verzekering toegevoegd of verplicht gesteld",
+     "Wachttijden tot 3 uur, één medewerker",
+     "Borg niet teruggestort, brandstof dubbel gerekend; vieze auto's (kakkerlakken)"
+    ],
+    "en": [
+     "Reservation canceled or 'no car' on arrival in high season",
+     "Pricey insurance added without asking or made mandatory",
+     "Waits up to 3 hours, one staff member",
+     "Deposit not refunded, fuel charged twice; dirty cars (roaches)"
+    ],
+    "de": [
+     "Reservierung storniert oder 'kein Auto' bei Ankunft in der Hochsaison",
+     "Teure Versicherung ungefragt hinzugefügt oder als Pflicht dargestellt",
+     "Wartezeiten bis zu 3 Stunden, ein Mitarbeiter",
+     "Kaution nicht erstattet, Sprit doppelt berechnet; schmutzige Autos (Kakerlaken)"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJv-BcpJadhI4RtTSywzN9f5A",
+    "https://www.google.com/maps/place/?q=place_id:ChIJx6GcDyCdhI4RSeKZdYVit7w",
+    "https://www.google.com/maps/place/?q=place_id:ChIJNVa7RRlzg44Re4NCpxOTsTw",
+    "https://www.google.com/maps/place/?q=place_id:ChIJJUEOAv2chI4R82EQ9a6ZL1o",
+    "https://www.hertz.com/us/en/location/curacao/curacaoisland/curt51",
+    "https://www.skyscanner.ie/car-rental-from/cur/car-rental-from-curacao-airport.html",
+    "https://www.inyourpocket.com/dutch-caribbean/curacao/venues/thrifty",
+    "https://www.autorentalnews.com/68123/thrifty-adds-locations-in-brazil-and-curacao",
+    "https://www.skyscanner.de/mietwagen/anbieter-am-flughafen/731/cur",
+    "https://kurabotanica.com/curacao/hato-airport-curacao/"
+   ]
+  },
+  {
+   "id": "keddy-by-europcar",
+   "naam": "Keddy by Europcar",
+   "type": "internationaal",
+   "plaats": "Luchthaven",
+   "url": null,
+   "ophalen": [
+    "vliegveld"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.vipcars.com/car-rental/curacao?curr=USD"
+   ]
+  },
+  {
+   "id": "fox-rent-a-car",
+   "naam": "Fox Rent A Car",
+   "type": "internationaal",
+   "plaats": "Luchthaven",
+   "url": null,
+   "ophalen": [
+    "vliegveld"
+   ],
+   "prijs": {
+    "bedrag": 45.26,
+    "valuta": "EUR",
+    "bron": "https://www.economybookings.com/en/suppliers/fox/cur",
+    "datum": "okt 2026",
+    "usd": 49.79
+   },
+   "prijsVanaf": 49.79,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": true,
+   "zevenPersoons": false,
+   "automaat": true,
+   "suv": false,
+   "creditcardNodig": true,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.economybookings.com/en/suppliers/fox/cur",
+    "https://www.expedia.com/Fox-Rental-Cars-at-Europcar.v128451.Car-Rental-Guide-Location"
+   ]
+  },
+  {
+   "id": "green-motion",
+   "naam": "Green Motion",
+   "type": "internationaal",
+   "plaats": "Meet & greet buiten terminal (bellen bij aankomst)",
+   "url": null,
+   "ophalen": [
+    "balie",
+    "vliegveld"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://greenmotion.com/locations/cura%C3%A7ao/cura%C3%A7ao-international-airport",
+    "https://www.autorentalnews.com/news/green-motion-expands-in-dutch-caribbean"
+   ]
+  },
+  {
+   "id": "carwiz",
+   "naam": "Carwiz",
+   "type": "internationaal",
+   "plaats": "Hato International Airport",
+   "url": null,
+   "ophalen": [
+    "vliegveld",
+    "kantoor"
+   ],
+   "prijs": {
+    "bedrag": 49.62,
+    "valuta": "EUR",
+    "bron": "https://www.economybookings.com/en/suppliers/carwiz/cur",
+    "datum": "okt 2026",
+    "usd": 54.58
+   },
+   "prijsVanaf": 54.58,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": true,
+   "zevenPersoons": true,
+   "automaat": false,
+   "suv": false,
+   "creditcardNodig": true,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.carwiz.rent/en/news/carwiz-strengthens-its-strategic-presence-in-the-caribbean-by-entering-curacao-and-the-dominican-republic/",
+    "https://www.economybookings.com/en/suppliers/carwiz/cur",
+    "https://www.rentcars.com/en/companies/curacao"
+   ]
+  },
+  {
+   "id": "america-car-rental",
+   "naam": "America Car Rental",
+   "type": "lokaal",
+   "plaats": "Gratis shuttle",
+   "url": null,
+   "ophalen": [
+    "shuttle"
+   ],
+   "prijs": {
+    "bedrag": 39,
+    "valuta": "EUR",
+    "bron": "https://www.skyscanner.ie/car-rental-from/cur/car-rental-from-curacao-airport.html",
+    "datum": "okt 2026",
+    "usd": 42.9
+   },
+   "prijsVanaf": 42.9,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": true,
+   "suv": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.skyscanner.ie/car-rental-from/cur/car-rental-from-curacao-airport.html"
+   ]
+  },
+  {
+   "id": "ross-rental-cars",
+   "naam": "Ross Rental Cars",
+   "type": "lokaal",
+   "plaats": "Gratis shuttle vanaf luchthaven",
+   "url": null,
+   "ophalen": [
+    "shuttle",
+    "vliegveld"
+   ],
+   "prijs": {
+    "bedrag": 77.4,
+    "valuta": "USD",
+    "bron": "https://www.discovercars.com/curacao",
+    "datum": "2026-10-19 (zoekopdracht 22-30 okt 2026)",
+    "usd": 77.4
+   },
+   "prijsVanaf": 77.4,
+   "borg": {
+    "nl": "lage borg",
+    "en": "low deposit",
+    "de": "niedrige Kaution"
+   },
+   "borgLaag": true,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": true,
+   "zevenPersoons": true,
+   "automaat": false,
+   "suv": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Discover Cars",
+     "score": 8.7,
+     "max": 10,
+     "aantal": 787
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": false,
+   "bronnen": [
+    "https://www.discovercars.com/curacao",
+    "https://www.discovercars.com/partners/rossrentalcars",
+    "https://www.discovercars.com/curacao/willemstad/willemstad-curacao-hato-airport-area"
+   ]
+  },
+  {
+   "id": "flexways",
+   "naam": "Flexways",
+   "type": "lokaal",
+   "plaats": "Oudewater 16",
+   "url": null,
+   "ophalen": [
+    "vliegveld"
+   ],
+   "prijs": {
+    "bedrag": 64.07,
+    "valuta": "USD",
+    "bron": "https://www.discovercars.com/curacao",
+    "datum": "2026-10-19 (zoekopdracht 22-30 okt 2026)",
+    "usd": 64.07
+   },
+   "prijsVanaf": 64.07,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": true,
+   "zevenPersoons": true,
+   "automaat": true,
+   "suv": false,
+   "creditcardNodig": true,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.discovercars.com/curacao",
+    "https://www.economybookings.com/en/suppliers/flexways/cur"
+   ]
+  },
+  {
+   "id": "nu-car-rentals",
+   "naam": "NU Car Rentals",
+   "type": "lokaal",
+   "plaats": "F.D. Rooseveltweg 526",
+   "url": null,
+   "ophalen": [
+    "shuttle"
+   ],
+   "prijs": {
+    "bedrag": 80.21,
+    "valuta": "USD",
+    "bron": "https://www.discovercars.com/curacao",
+    "datum": "2026-10-19 (zoekopdracht 22-30 okt 2026)",
+    "usd": 80.21
+   },
+   "prijsVanaf": 80.21,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": true,
+   "zevenPersoons": true,
+   "automaat": false,
+   "suv": false,
+   "creditcardNodig": true,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.discovercars.com/curacao",
+    "https://www.economybookings.com/en/suppliers/nu/cur"
+   ]
+  },
+  {
+   "id": "palm-trees-car-rental",
+   "naam": "Palm Trees Car Rental",
+   "type": "lokaal",
+   "plaats": "Plasa Margaret Abraham (opgave)",
+   "url": null,
+   "ophalen": [
+    "vliegveld",
+    "aflevering"
+   ],
+   "prijs": {
+    "bedrag": 40.98,
+    "valuta": "USD",
+    "bron": "https://www.discovercars.com/curacao",
+    "datum": "2026-10-19 (zoekopdracht 22-30 okt 2026)",
+    "usd": 40.98
+   },
+   "prijsVanaf": 40.98,
+   "borg": {
+    "nl": "lage borg",
+    "en": "low deposit",
+    "de": "niedrige Kaution"
+   },
+   "borgLaag": true,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": true,
+   "automaat": true,
+   "suv": false,
+   "creditcardNodig": true,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.discovercars.com/curacao",
+    "https://www.economybookings.com/en/suppliers/palm-trees-car-rental/cur"
+   ]
+  },
+  {
+   "id": "xdrive-mobility",
+   "naam": "XDrive Mobility",
+   "type": "lokaal",
+   "plaats": "Meet & greet (Skyscanner FAQ); luchthaven + stad",
+   "url": null,
+   "ophalen": [
+    "vliegveld"
+   ],
+   "prijs": {
+    "bedrag": 43,
+    "valuta": "EUR",
+    "bron": "https://www.skyscanner.ie/car-rental-from/cur/car-rental-from-curacao-airport.html",
+    "datum": "okt 2026",
+    "usd": 47.3
+   },
+   "prijsVanaf": 47.3,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": true,
+   "suv": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.skyscanner.ie/car-rental-from/cur/car-rental-from-curacao-airport.html",
+    "https://www.economybookings.com/suppliers/xdrive-mobility/curacao"
+   ]
+  },
+  {
+   "id": "aco-rent-a-car",
+   "naam": "Aco Rent A Car",
+   "type": "lokaal",
+   "plaats": "Dr. W.P. Maalweg 3-C, Saliña",
+   "url": null,
+   "ophalen": [
+    "vliegveld"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "creditcardNodig": true,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.economybookings.com/en/suppliers/aco-rent-a-car/cur"
+   ]
+  },
+  {
+   "id": "cdo-rent-a-car",
+   "naam": "CDO Rent a car",
+   "type": "lokaal",
+   "plaats": "Luchthaven",
+   "url": null,
+   "ophalen": [
+    "vliegveld"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.vipcars.com/car-rental/curacao?curr=USD"
+   ]
+  },
+  {
+   "id": "exclusive",
+   "naam": "Exclusive",
+   "type": "lokaal",
+   "plaats": "Luchthaven",
+   "url": null,
+   "ophalen": [
+    "vliegveld"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.skyscanner.ie/car-rental-from/cur/car-rental-from-curacao-airport.html"
+   ]
+  },
+  {
+   "id": "esteem-car-rental",
+   "naam": "Esteem Car Rental",
+   "type": "lokaal",
+   "plaats": "Luchthaven",
+   "url": null,
+   "ophalen": [
+    "vliegveld"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.skyscanner.ie/car-rental-from/cur/car-rental-from-curacao-airport.html"
+   ]
+  },
+  {
+   "id": "reliable-car-rental",
+   "naam": "Reliable Car Rental",
+   "type": "lokaal",
+   "plaats": null,
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.tropicdrive.com/"
+   ]
+  },
+  {
+   "id": "bonbini-wheels",
+   "naam": "Bonbini Wheels",
+   "type": "lokaal",
+   "plaats": "24/7 ophalen/brengen, persoonlijke overdracht",
+   "url": "https://bonbiniwheels.com",
+   "ophalen": [
+    "aflevering"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": {
+    "nl": "geen borg",
+    "en": "no deposit",
+    "de": "keine Kaution"
+   },
+   "borgLaag": true,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": true,
+   "suv": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://it.trustpilot.com/review/bonbiniwheels.com"
+   ]
+  },
+  {
+   "id": "mister-paradise",
+   "naam": "Mister Paradise",
+   "type": "lokaal",
+   "plaats": null,
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.mycuracaoguide.com/traveling-to-curacao/car-rentals"
+   ]
+  },
+  {
+   "id": "drivic-car-rental",
+   "naam": "Drivic Car Rental",
+   "type": "lokaal",
+   "plaats": null,
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://www.tripadvisor.co.uk/Attractions-g147278-Activities-c59-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "acoya-economic-car-rental",
+   "naam": "ACOYA Economic Car Rental",
+   "type": "lokaal",
+   "plaats": "Op het resort (lobby)",
+   "url": null,
+   "ophalen": [
+    "aflevering"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": {
+    "nl": "creditcard of contant",
+    "en": "credit card or cash",
+    "de": "Kreditkarte oder bar"
+   },
+   "borgLaag": true,
+   "eigenRisico": null,
+   "minLeeftijd": 21,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "creditcardNodig": false,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://ai.acoyacuracao.com/blog/mastering-island-mobility-acoya-free-shuttles-on-site-car-rental-curacao/"
+   ]
+  },
+  {
+   "id": "baoase-car-rental",
+   "naam": "Baoase Car Rental",
+   "type": "lokaal",
+   "plaats": "Baoase resort",
+   "url": null,
+   "ophalen": [
+    "aflevering"
+   ],
+   "prijs": {
+    "bedrag": 49,
+    "valuta": "USD",
+    "bron": "https://baoase.com/wp-content/uploads/2026/07/Baoase-Car-Rental-Brochure-2026.pdf",
+    "datum": "brochure 2026",
+    "usd": 49
+   },
+   "prijsVanaf": 49,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": true,
+   "zevenPersoons": true,
+   "automaat": true,
+   "suv": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "geenReviews": true,
+   "bronnen": [
+    "https://baoase.com/wp-content/uploads/2026/07/Baoase-Car-Rental-Brochure-2026.pdf"
+   ]
+  }
+ ],
+ "brokers": [
+  {
+   "id": "sunny-cars",
+   "naam": "Sunny Cars",
+   "type": "broker",
+   "plaats": "Levert via o.a. Budget, Dollar, Noordstar, National",
+   "url": "https://www.sunnycars.nl",
+   "ophalen": [
+    "balie",
+    "shuttle",
+    "vliegveld",
+    "aflevering"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": {
+    "nl": "geen borg",
+    "en": "no deposit",
+    "de": "keine Kaution"
+   },
+   "borgLaag": true,
+   "eigenRisico": null,
+   "minLeeftijd": 25,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [
+     "All-in met afgekocht eigen risico (tipscuracao.nl)"
+    ],
+    "en": [
+     "All-inclusive with the deductible waived (per tipscuracao.nl)"
+    ],
+    "de": [
+     "Rundum-Paket ohne Selbstbeteiligung (laut tipscuracao.nl)"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Via Sunny Cars een auto van Budget, Dollar of Noordstar: slechte staat, tekenen vóór inspectie"
+    ],
+    "en": [
+     "Sunny Cars customers got cars from Budget, Dollar or Noordstar in poor shape, or had to sign before inspection"
+    ],
+    "de": [
+     "Sunny-Cars-Kunden bekamen Autos von Budget, Dollar oder Noordstar in schlechtem Zustand oder mussten vor der Prüfung unterschreiben"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJhZ51vfh9g44RRw5FFgAIikg",
+    "https://www.google.com/maps/place/?q=place_id:ChIJO-9Iu0R9g44RLlw21rDQ1ws",
+    "https://www.tipscuracao.nl/auto-huren-op-curacao-tips/",
+    "https://www.sunnycars.nl/en/car-rental/curacao-international-airport/",
+    "https://www.anwb.nl/auto/huren/curacao"
+   ]
+  },
+  {
+   "id": "corendon-autohuur",
+   "naam": "Corendon Autohuur",
+   "type": "broker",
+   "plaats": "Partner niet genoemd op site",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": true,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Vanaf 1 nov 2026: all-risk incl. banden, bodem en glas; borg USD 200"
+    ],
+    "en": [
+     "From Nov 1, 2026: full coverage including tires, underbody and glass; $200 deposit"
+    ],
+    "de": [
+     "Ab 1. Nov. 2026: Vollkasko inkl. Reifen, Unterboden und Glas; Kaution 200 USD"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Strikte creditcardeis: fysieke kaart met PIN op naam van de hoofdbestuurder",
+     "Oude voorwaarden: eigen risico USD 500, afkoop alleen aan de balie"
+    ],
+    "en": [
+     "Strict credit card rule: a physical card with PIN in the main driver's name",
+     "Old terms: $500 deductible, waiver only at the counter"
+    ],
+    "de": [
+     "Strenge Kreditkartenpflicht: physische Karte mit PIN auf den Namen des Hauptfahrers",
+     "Alte Bedingungen: 500 USD Selbstbeteiligung, Ablösung nur am Schalter"
+    ]
+   },
+   "bronnen": [
+    "https://www.corendon.nl/autohuur-curacao"
+   ]
+  },
+  {
+   "id": "tropicdrive-com",
+   "naam": "TropicDrive.com",
+   "type": "broker",
+   "plaats": "Online, gelanceerd nov 2025",
+   "url": "https://www.tropicdrive.com",
+   "ophalen": [
+    "vliegveld",
+    "aflevering"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": {
+    "nl": "creditcard of contant",
+    "en": "credit card or cash",
+    "de": "Kreditkarte oder bar"
+   },
+   "borgLaag": true,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": false,
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/tropicdrivecom-launches-first-car-rental-platform-with-live-comparison-and-online-booking-in-curacao",
+    "https://www.tropicdrive.com/"
+   ]
+  },
+  {
+   "id": "autohurenopcuracao-nl",
+   "naam": "autohurenopcuracao.nl",
+   "type": "broker",
+   "plaats": "Online",
+   "url": "https://autohurenopcuracao.nl",
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Trustpilot",
+     "score": 3.8,
+     "max": 5,
+     "aantal": 2,
+     "peildatum": "2026-10-20",
+     "bron": "https://uk.trustpilot.com/review/autohurenopcuracao.nl"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Snelle service (1 review, sep 2026)"
+    ],
+    "en": [
+     "Fast service (1 review, Sep 2026)"
+    ],
+    "de": [
+     "Schneller Service (1 Bewertung, Sept. 2026)"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Reviewer: alleen een doorgeefluik, uiteindelijk geen auto beschikbaar (2023)"
+    ],
+    "en": [
+     "One reviewer: just a middleman, and in the end no car was available (2023)"
+    ],
+    "de": [
+     "Ein Kunde: nur ein Vermittler, am Ende kein Auto verfügbar (2023)"
+    ]
+   },
+   "bronnen": [
+    "https://uk.trustpilot.com/review/autohurenopcuracao.nl",
+    "https://nl.trustpilot.com/review/autohurenopcuracao.nl"
+   ]
+  },
+  {
+   "id": "caribbean-rentals",
+   "naam": "Caribbean Rentals (caribbeanrentalcars.com)",
+   "type": "broker",
+   "plaats": "Newark, VS",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Trustpilot",
+     "score": 2.5,
+     "max": 5,
+     "aantal": 7,
+     "peildatum": "2026-10-20",
+     "bron": "https://nl-be.trustpilot.com/review/caribbeanrentalcars.com"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": []
+   },
+   "tegen": {
+    "nl": [
+     "Geen auto en geen kantoor op de luchthaven, geen terugbetaling, onbereikbaar"
+    ],
+    "en": [
+     "No car and no office at the airport, no refund, unreachable"
+    ],
+    "de": [
+     "Kein Auto und kein Büro am Flughafen, keine Rückerstattung, nicht erreichbar"
+    ]
+   },
+   "bronnen": [
+    "https://nl-be.trustpilot.com/review/caribbeanrentalcars.com"
+   ]
+  }
+ ],
+ "nietBevestigd": [
+  "A+ Jeep Rental Curaçao",
+  "Blue Eye Car Rental",
+  "Oost West Car Rental",
+  "Verwoerd Auto Verhuur (Cura Rental Cars)",
+  "Ducks United"
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Welke autoverhuurder op Curaçao heeft de beste reviews?",
+    "en": "Which car rental company in Curaçao has the best reviews?",
+    "de": "Welche Autovermietung auf Curaçao hat die besten Bewertungen?"
+   },
+   "a": {
+    "nl": "Op Google scoren lokale verhuurders veel hoger dan de merken op het vliegveld. Prins Car Rental heeft het meeste reviews (4,9 uit 2.686 op Google, 4,9 op Tripadvisor), De Vos 5,0 uit 1.547, Smart Wheels 4,7 uit 1.225. Avis, Hertz en Thrifty zitten op Google rond de 2,2 tot 2,4. Kijk ook naar het aantal reviews: een 5,0 uit 30 reviews zegt minder dan een 4,8 uit 1.000.",
+    "en": "On Google, local companies score far higher than the airport brands. Prins Car Rental has the most reviews (4.9 from 2,686 on Google, 4.9 on Tripadvisor), De Vos 5.0 from 1,547, Smart Wheels 4.7 from 1,225. Avis, Hertz and Thrifty sit around 2.2 to 2.4 on Google. Look at the review count too: a 5.0 from 30 reviews says less than a 4.8 from 1,000.",
+    "de": "Bei Google schneiden lokale Vermieter deutlich besser ab als die Marken am Flughafen. Prins Car Rental hat die meisten Bewertungen (4,9 aus 2.686 bei Google, 4,9 bei Tripadvisor), De Vos 5,0 aus 1.547, Smart Wheels 4,7 aus 1.225. Avis, Hertz und Thrifty liegen bei Google um 2,2 bis 2,4. Achte auch auf die Anzahl: eine 5,0 aus 30 Bewertungen sagt weniger als eine 4,8 aus 1.000."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kan ik op Curaçao een auto huren zonder borg of zonder creditcard?",
+    "en": "Can I rent a car in Curaçao with no deposit or without a credit card?",
+    "de": "Kann ich auf Curaçao ohne Kaution oder ohne Kreditkarte ein Auto mieten?"
+   },
+   "a": {
+    "nl": "Ja, bij een deel van de lokale verhuurders. Volgens reviews vragen onder meer De Vos, Just Drive en Move It vaak geen borg of creditcard. De internationale merken blokkeren meestal 500 tot 1.000 dollar op je creditcard. In de tabel hieronder zie je per verhuurder wat bekend is over de borg.",
+    "en": "Yes, with some of the local companies. According to reviews, De Vos, Just Drive and Move It among others often ask for no deposit or credit card. The international brands usually put a hold of 500 to 1,000 dollars on your credit card. The table below shows what is known about each company's deposit.",
+    "de": "Ja, bei einem Teil der lokalen Vermieter. Laut Bewertungen verlangen unter anderem De Vos, Just Drive und Move It oft keine Kaution oder Kreditkarte. Die internationalen Marken blockieren meist 500 bis 1.000 Dollar auf der Kreditkarte. In der Tabelle unten siehst du, was je Vermieter über die Kaution bekannt ist."
+   }
+  },
+  {
+   "q": {
+    "nl": "Lokale verhuurder of een bekend merk op het vliegveld?",
+    "en": "Local company or a big brand at the airport?",
+    "de": "Lokaler Vermieter oder bekannte Marke am Flughafen?"
+   },
+   "a": {
+    "nl": "In reviews komen bij de merken op het vliegveld steeds dezelfde klachten terug: schadeclaims bij het inleveren, een borg die laat of niet terugkomt, verzekering die aan de balie wordt toegevoegd en lange rijen. Lokale verhuurders halen je meestal op met een shuttle of bezorgen de auto bij je hotel en regelen veel via WhatsApp. Hun nadeel: in het hoogseizoen zijn ze snel volgeboekt, en bij de goedkoopste lokale partijen zijn de auto's soms oud.",
+    "en": "Reviews of the airport brands keep raising the same complaints: damage claims at return, deposits refunded late or not at all, insurance added at the desk and long lines. Local companies usually pick you up with a shuttle or deliver the car to your hotel and handle a lot over WhatsApp. Their downside: they book up fast in high season, and the cheapest local outfits sometimes have old cars.",
+    "de": "Bei den Marken am Flughafen tauchen in Bewertungen immer wieder dieselben Beschwerden auf: Schadensforderungen bei der Rückgabe, eine Kaution, die spät oder gar nicht zurückkommt, Versicherungen, die am Schalter hinzugefügt werden, und lange Warteschlangen. Lokale Vermieter holen dich meist mit einem Shuttle ab oder bringen das Auto ans Hotel und regeln viel über WhatsApp. Ihr Nachteil: In der Hochsaison sind sie schnell ausgebucht, und bei den günstigsten lokalen Anbietern sind die Autos manchmal alt."
+   }
+  },
+  {
+   "q": {
+    "nl": "Aan welke kant van de weg rijd je op Curaçao?",
+    "en": "Which side of the road do you drive on in Curaçao?",
+    "de": "Auf welcher Straßenseite fährt man auf Curaçao?"
+   },
+   "a": {
+    "nl": "Rechts, net als in Nederland. Je rijdt met een gewone auto overal op het eiland; voor onverharde wegen naar sommige stranden in het westen is een hogere auto of jeep prettiger.",
+    "en": "On the right, like in the US. A regular car gets you everywhere on the island; for the dirt roads to some beaches in the west a higher car or jeep is more comfortable.",
+    "de": "Rechts, wie in Deutschland. Mit einem normalen Auto kommst du überall auf der Insel hin; für die Schotterwege zu manchen Stränden im Westen ist ein höheres Auto oder ein Jeep angenehmer."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is mijn rijbewijs geldig op Curaçao?",
+    "en": "Is my driver's license valid in Curaçao?",
+    "de": "Gilt mein Führerschein auf Curaçao?"
+   },
+   "a": {
+    "nl": "Ja. Een Nederlands rijbewijs is geldig, ook om een auto te huren; een internationaal rijbewijs is niet nodig (ANWB). Verhuurders vragen vaak een of twee jaar rijervaring en een creditcard op naam van de hoofdbestuurder, behalve de lokale verhuurders die geen borg vragen.",
+    "en": "Yes. Tourists can drive and rent on their home license; an international driving permit is not required. Rental companies often ask for one or two years of driving experience and a credit card in the main driver's name, except the local companies that take no deposit.",
+    "de": "Ja. Ein EU-Führerschein reicht zum Fahren und Mieten, ein internationaler Führerschein ist nicht nötig. Vermieter verlangen oft ein bis zwei Jahre Fahrpraxis und eine Kreditkarte auf den Namen des Hauptfahrers, außer den lokalen Vermietern ohne Kaution."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is de minimumleeftijd om op Curaçao een auto te huren?",
+    "en": "What is the minimum age to rent a car in Curaçao?",
+    "de": "Wie alt muss man sein, um auf Curaçao ein Auto zu mieten?"
+   },
+   "a": {
+    "nl": "Dat verschilt per verhuurder. Enterprise, National en Sixt hanteren 23 jaar, Alamo 25. Bij een deel van de lokale verhuurders, zoals Ruseler en Acoya, kun je vanaf 21 huren. Ben je jonger, vraag het dan vooraf na.",
+    "en": "It depends on the company. Enterprise, National and Sixt use 23, Alamo 25. Some local companies, such as Ruseler and Acoya, rent from age 21. If you are younger, ask before you book.",
+    "de": "Das hängt vom Vermieter ab. Enterprise, National und Sixt verlangen 23 Jahre, Alamo 25. Bei einigen lokalen Vermietern wie Ruseler und Acoya geht es ab 21. Bist du jünger, frag vorher nach."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe hoog is het eigen risico en wat dekt de verzekering?",
+    "en": "How high is the excess and what does the insurance cover?",
+    "de": "Wie hoch ist die Selbstbeteiligung und was deckt die Versicherung?"
+   },
+   "a": {
+    "nl": "Een eigen risico van ongeveer 400 tot 500 dollar komt veel voor. Vraag na of banden, glas en de onderkant van de auto zijn gedekt, want daar gaat het in klachten vaak mis.",
+    "en": "An excess of around 400 to 500 dollars is common. Ask whether tires, glass and the underside of the car are covered, because that is where complaints often come from.",
+    "de": "Eine Selbstbeteiligung von etwa 400 bis 500 Dollar ist üblich. Frag nach, ob Reifen, Glas und Unterboden versichert sind, denn genau dort entstehen oft Beschwerden."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat moet ik doen bij een ongeluk op Curaçao?",
+    "en": "What should I do after an accident in Curaçao?",
+    "de": "Was muss ich nach einem Unfall auf Curaçao tun?"
+   },
+   "a": {
+    "nl": "Laat de auto staan, bel 9233 (Road Service) of Forensys (+599 9 461 3282) en meld het direct bij de verhuurder. Wie de auto verplaatst voordat de schade is opgenomen, loopt het risico dat de verzekering niet uitkeert.",
+    "en": "Leave the car where it is, call 9233 (Road Service) or Forensys (+599 9 461 3282) and tell the rental company right away. If you move the car before the damage is recorded, the insurance may refuse to pay.",
+    "de": "Lass das Auto stehen, ruf 9233 (Road Service) oder Forensys (+599 9 461 3282) an und melde es sofort dem Vermieter. Wer das Auto bewegt, bevor der Schaden aufgenommen ist, riskiert, dass die Versicherung nicht zahlt."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kan ik beter op het vliegveld huren of de auto laten bezorgen?",
+    "en": "Is it better to rent at the airport or have the car delivered?",
+    "de": "Lieber am Flughafen mieten oder das Auto bringen lassen?"
+   },
+   "a": {
+    "nl": "Op vliegveld Hato zitten vooral de internationale merken met een balie. Veel lokale verhuurders zitten vlak bij het vliegveld aan de FD Rooseveltweg en halen je op met een shuttle, of bezorgen de auto bij je hotel of appartement. Kies in de keuzehulp hierboven hoe je de auto wilt ophalen.",
+    "en": "The desks at Hato airport are mostly the international brands. Many local companies are right next to the airport on FD Rooseveltweg and pick you up with a shuttle, or deliver the car to your hotel or rental. Choose your pick-up method in the tool above.",
+    "de": "Am Flughafen Hato haben vor allem die internationalen Marken einen Schalter. Viele lokale Vermieter sitzen direkt am Flughafen an der FD Rooseveltweg und holen dich mit einem Shuttle ab oder bringen das Auto zu deinem Hotel oder Apartment. Wähle oben aus, wie du das Auto abholen willst."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Maak foto's of een video van de hele auto, ook banden, onderkant, interieur, tank en km-stand. Laat bestaande schade op het formulier zetten voordat je tekent.",
+   "en": "Take photos or video of the whole car, including tires, underside, interior, fuel gauge and mileage. Have existing damage written on the form before you sign.",
+   "de": "Mach Fotos oder ein Video vom ganzen Auto, auch von Reifen, Unterboden, Innenraum, Tank und Kilometerstand. Lass Vorschäden ins Formular eintragen, bevor du unterschreibst."
+  },
+  {
+   "nl": "Teken niets voordat je de auto hebt gezien. Bewaar de uitgifte- en inleverpapieren en je laatste tankbon.",
+   "en": "Don't sign anything before you've seen the car. Keep your pickup and return paperwork and your last gas receipt.",
+   "de": "Unterschreib nichts, bevor du das Auto gesehen hast. Heb die Übergabe- und Rückgabepapiere und den letzten Tankbeleg auf."
+  },
+  {
+   "nl": "Schadeclaims bij inleveren voor kleine of bestaande schade komen vooral voor bij luchthavenmerken. Vraag daarom bij uitgifte altijd een kopie van het schaderapport.",
+   "en": "Damage claims at return for small or preexisting damage happen mostly with the airport brands. Always ask for a copy of the damage report at pickup.",
+   "de": "Schadensforderungen bei Rückgabe für kleine oder alte Schäden gibt es vor allem bei den Flughafenmarken. Lass dir bei der Übergabe immer eine Kopie des Schadensberichts geben."
+  },
+  {
+   "nl": "Grote merken blokkeren vaak $500 tot 1.000 borg op je creditcard, en soms werd die als betaling geboekt of kwam die weken niet terug. Betwist onterechte afschrijvingen via je creditcardmaatschappij.",
+   "en": "Big brands often put a $500 to $1,000 hold on your credit card, and some renters saw it charged as a payment or waited weeks to get it back. Dispute unfair charges through your credit card company.",
+   "de": "Große Anbieter blockieren oft 500 bis 1.000 $ Kaution auf deiner Kreditkarte, und manchmal wurde sie als Zahlung gebucht oder kam wochenlang nicht zurück. Fechte unberechtigte Abbuchungen über deine Kreditkartenfirma an."
+  },
+  {
+   "nl": "Check wat de verzekering dekt (banden, glas, onderkant) en hoe hoog het eigen risico is, vaak rond USD 400 tot 500. Aan de balie wordt verzekering soms ongevraagd toegevoegd, dus vergelijk de eindprijs met je online boeking.",
+   "en": "Check what the insurance covers (tires, glass, underside) and how high the deductible is, often around $400 to $500. Counters sometimes add insurance without asking, so compare the final price with your online booking.",
+   "de": "Prüf, was die Versicherung abdeckt (Reifen, Glas, Unterboden) und wie hoch die Selbstbeteiligung ist, oft etwa 400 bis 500 USD. Am Schalter wird manchmal ungefragt eine Versicherung hinzugefügt, also vergleich den Endpreis mit deiner Online-Buchung."
+  },
+  {
+   "nl": "Bij een ongeluk laat je de auto staan, bel je Forensys (9233) en informeer je meteen de verhuurder. Anders vervalt je dekking.",
+   "en": "If you have an accident, leave the car where it is, call Forensys (9233) and tell the rental company right away. Otherwise your coverage lapses.",
+   "de": "Bei einem Unfall lässt du das Auto stehen, rufst Forensys an (9233) und informierst sofort den Vermieter. Sonst erlischt dein Versicherungsschutz."
+  },
+  {
+   "nl": "Boek vroeg in het hoogseizoen. Lokale verhuurders raken vol, en bij sommige grote merken werd de reservering geannuleerd of stond er geen auto klaar.",
+   "en": "Book early for high season. Local companies sell out, and some big brands have canceled reservations or had no car waiting.",
+   "de": "Buch in der Hochsaison früh. Lokale Vermieter sind schnell voll, und bei manchen großen Marken wurde die Reservierung storniert oder es stand kein Auto bereit."
+  },
+  {
+   "nl": "Lokale verhuurders werken vaak zonder borg of creditcard en met all-in verzekering. Ze halen je op met een shuttle of leveren de auto bij je af.",
+   "en": "Local companies often work without a deposit or credit card and include all-in insurance. They pick you up by shuttle or bring the car to you.",
+   "de": "Lokale Vermieter verzichten oft auf Kaution und Kreditkarte und bieten eine Rundum-Versicherung. Sie holen dich mit dem Shuttle ab oder bringen dir das Auto."
+  },
+  {
+   "nl": "Laat niets zichtbaar in de auto liggen, want bij strandparkeerplaatsen zoals Mambo wordt ingebroken. Let ook op zand en natte stoelen: schoonmaakboetes van $50 tot 150 komen voor.",
+   "en": "Don't leave anything visible in the car, since break-ins happen at beach parking lots like Mambo. Also watch out for sand and wet seats, because cleaning fees run $50 to $150.",
+   "de": "Lass nichts sichtbar im Auto liegen, denn an Strandparkplätzen wie Mambo wird eingebrochen. Achte auch auf Sand und nasse Sitze, Reinigungsgebühren von 50 bis 150 $ kommen vor."
+  },
+  {
+   "nl": "Tanken: eerst bij de kassa betalen met het pompnummer, daarna tanken. Creditcards worden aan de pomp meestal niet geaccepteerd, pin en contant wel. Buiten Willemstad zijn weinig tankstations.",
+   "en": "Gas: pay at the register first with your pump number, then fill up. Credit cards are usually not accepted at the pump; debit and cash are. There are few gas stations outside Willemstad.",
+   "de": "Tanken: erst an der Kasse mit der Säulennummer bezahlen, dann tanken. Kreditkarten werden an der Tankstelle meist nicht angenommen, EC-Karte und Bargeld schon. Außerhalb von Willemstad gibt es wenige Tankstellen."
+  },
+  {
+   "nl": "Je eigen autoverzekering dekt Curaçao meestal niet. Dekking via je creditcard moet je vooraf bij de kaartuitgever navragen.",
+   "en": "Your own car insurance usually does not cover Curaçao. Check any credit card coverage with your card issuer before you go.",
+   "de": "Deine eigene Autoversicherung deckt Curaçao meist nicht ab. Ob deine Kreditkarte etwas abdeckt, klär vorher mit dem Kartenanbieter."
+  }
+ ]
+}
