@@ -1,1 +1,2755 @@
-{"id":"evenementen","peildatum":"2026-10-20","items":[]}
+{
+ "id": "evenementen",
+ "peildatum": "2026-10-20",
+ "reviewGewicht": 0,
+ "onderwerp": {
+  "nl": "evenement",
+  "en": "event"
+ },
+ "h1": {
+  "nl": "Evenementen op Curaçao: welk feest of festival past bij jou en wanneer?",
+  "en": "Events in Curaçao: which festival or party fits you, and when?"
+ },
+ "titel": {
+  "nl": "Evenementen Curaçao 2026-2027: {n} feesten op datum",
+  "en": "Curaçao Events 2026-2027: {n} Festivals and Parties by Date"
+ },
+ "metaDesc": {
+  "nl": "Carnaval, Seú, North Sea Jazz, Fuikdag en wekelijkse feesten: {n} evenementen op Curaçao met data voor 2026 en 2027, plaats en prijs.",
+  "en": "Carnival, Seú, North Sea Jazz, Fuik Day and weekly parties: {n} Curaçao events with 2026 and 2027 dates, location and price."
+ },
+ "kort": {
+  "nl": "Het drukste feestseizoen is januari en februari: carnaval 2027 loopt van de paardenparade op 24 januari tot de Gran Marcha op 7 februari en de slotparade op 9 februari, kijken langs de route is gratis. Daarna volgen Seú op tweede paasdag (29 maart 2027), Koningsdag op 27 april en North Sea Jazz begin september (3-daagse kaart 2026: €370). Elke week is er Punda Vibes op donderdagavond en strandfeesten op Mambo Beach, Jan Thiel en Kokomo in het weekend.",
+  "en": "The busiest party season is January and February: Carnival 2027 runs from the horse parade on January 24 to the Gran Marcha on February 7 and the final parade on February 9, and watching from the route is free. Then comes Seú on Easter Monday (March 29, 2027), King's Day on April 27 and North Sea Jazz in early September (2026 three-day pass: €370). Every week there is Punda Vibes on Thursday night and beach parties at Mambo Beach, Jan Thiel and Kokomo on weekends."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Waar heb je zin in?",
+    "en": "What are you into?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anything"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Muziek en feest",
+      "en": "Music and parties"
+     },
+     "plus": [
+      "muziek",
+      "feest"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Cultuur en traditie",
+      "en": "Culture and tradition"
+     },
+     "plus": [
+      "cultuur",
+      "carnaval"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Sport",
+      "en": "Sports"
+     },
+     "plus": [
+      "sport"
+     ],
+     "min": [],
+     "vereist": "sport"
+    },
+    {
+     "label": {
+      "nl": "Eten",
+      "en": "Food"
+     },
+     "plus": [
+      "eten"
+     ],
+     "min": [],
+     "vereist": "eten"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wanneer ben je op Curaçao?",
+    "en": "When are you in Curaçao?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Weet ik nog niet",
+      "en": "Not sure yet"
+     },
+     "plus": [
+      "jaarlijks"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Januari of februari",
+      "en": "January or February"
+     },
+     "plus": [
+      "jan-feb",
+      "carnaval"
+     ],
+     "min": [],
+     "vereist": "jan-feb"
+    },
+    {
+     "label": {
+      "nl": "Maart of april",
+      "en": "March or April"
+     },
+     "plus": [
+      "mrt-apr"
+     ],
+     "min": [],
+     "vereist": "mrt-apr"
+    },
+    {
+     "label": {
+      "nl": "Mei of juni",
+      "en": "May or June"
+     },
+     "plus": [
+      "mei-jun"
+     ],
+     "min": [],
+     "vereist": "mei-jun"
+    },
+    {
+     "label": {
+      "nl": "Juli of augustus",
+      "en": "July or August"
+     },
+     "plus": [
+      "jul-aug"
+     ],
+     "min": [],
+     "vereist": "jul-aug"
+    },
+    {
+     "label": {
+      "nl": "September of oktober",
+      "en": "September or October"
+     },
+     "plus": [
+      "sep-okt"
+     ],
+     "min": [],
+     "vereist": "sep-okt"
+    },
+    {
+     "label": {
+      "nl": "November of december",
+      "en": "November or December"
+     },
+     "plus": [
+      "nov-dec"
+     ],
+     "min": [],
+     "vereist": "nov-dec"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Ga je met kinderen?",
+    "en": "Are you bringing kids?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Nee",
+      "en": "No"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ja",
+      "en": "Yes"
+     },
+     "plus": [
+      "kinderen"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat mag het kosten?",
+    "en": "What's your budget?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Liefst gratis",
+      "en": "Free if possible"
+     },
+     "plus": [
+      "gratis"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Op het strand",
+      "en": "On the beach"
+     },
+     "plus": [
+      "strand"
+     ],
+     "min": [],
+     "vereist": "strand"
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "festival-di-tumba",
+   "naam": "Festival di Tumba",
+   "url": null,
+   "soort": {
+    "nl": "carnavalsmuziek, wedstrijd",
+    "en": "carnival music contest"
+   },
+   "plaats": "Festival Center, Brievengat",
+   "tags": [
+    "carnaval",
+    "muziek",
+    "cultuur",
+    "feest",
+    "jaarlijks",
+    "jan-feb",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "2026: 26 t/m 30 januari",
+     "en": "2026: Jan 26 to 30"
+    },
+    {
+     "nl": "Vijf avonden, finale op vrijdag",
+     "en": "Five nights, final on Friday"
+    },
+    {
+     "nl": "Winnaar wordt carnavalslied",
+     "en": "Winner becomes the carnival road march"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Hier hoor je de tumba's die de hele carnavalstijd draaien",
+     "Mix van gevestigde artiesten en nieuw talent"
+    ],
+    "en": [
+     "You hear the songs that play all carnival season",
+     "Mix of established artists and new talent"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Openingsavond 2026 begon laat en was rustig"
+    ],
+    "en": [
+     "The 2026 opening night started late and felt quiet"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/festival-di-tumba-opens-with-delayed-and-low-key-first-night-in-brievengat",
+    "https://www.curacaochronicle.com/post/local/thirty-finalists-announced-ahead-of-tumba-festival-grand-finale",
+    "https://www.curacao.com/en/article/curacaos-best-festivals-and-cultural-events-a-travelers-guide"
+   ]
+  },
+  {
+   "id": "marcha-di-kabai",
+   "naam": "Marcha di Kabai (paardenparade)",
+   "url": null,
+   "soort": {
+    "nl": "carnavalsparade te paard",
+    "en": "carnival horse parade"
+   },
+   "plaats": "Otrobanda tot Jan Noorduynweg",
+   "tags": [
+    "carnaval",
+    "cultuur",
+    "gratis",
+    "kinderen",
+    "jaarlijks",
+    "jan-feb",
+    "willemstad"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "kijken langs de route",
+     "en": "watching along the route"
+    },
+    "bron": "https://www.naarcuracao.com/en/?p=56011",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2027: zondag 24 januari",
+     "en": "2027: Sunday, January 24"
+    },
+    {
+     "nl": "16.00 tot 21.00 uur",
+     "en": "4 to 9 p.m."
+    },
+    {
+     "nl": "Start Pater Euwensweg",
+     "en": "Starts at Pater Euwensweg"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Rustiger dan de grote parades, goed met kinderen"
+    ],
+    "en": [
+     "Calmer than the big parades, good with kids"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Start loopt vaak 1 tot 2 uur uit"
+    ],
+    "en": [
+     "Start often runs 1 to 2 hours late"
+    ]
+   },
+   "bronnen": [
+    "https://www.naarcuracao.com/en/?p=56011"
+   ]
+  },
+  {
+   "id": "kinderparade",
+   "naam": "Kinderparade (Marcha di Hubenil)",
+   "url": null,
+   "soort": {
+    "nl": "carnavalsparade voor kinderen",
+    "en": "children's carnival parade"
+   },
+   "plaats": "Palù Blanku tot Brionplein",
+   "tags": [
+    "carnaval",
+    "kinderen",
+    "gratis",
+    "feest",
+    "jaarlijks",
+    "jan-feb",
+    "willemstad"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "kijken langs de route",
+     "en": "watching along the route"
+    },
+    "bron": "https://www.naarcuracao.com/en/?p=56011",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2026: zondag 8 februari",
+     "en": "2026: Sunday, February 8"
+    },
+    {
+     "nl": "2027: zondag 31 januari",
+     "en": "2027: Sunday, January 31"
+    },
+    {
+     "nl": "14.00 tot 19.00 uur",
+     "en": "2 to 7 p.m."
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Kinderen in eigen kostuums, vrolijke familiesfeer"
+    ],
+    "en": [
+     "Kids in their own costumes, cheerful family mood"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Start loopt vaak 1 tot 2 uur uit"
+    ],
+    "en": [
+     "Start often runs 1 to 2 hours late"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/unknown/full-schedule-announced-for-curacao-carnival-2026-with-parades-and-festivities-across-the-island",
+    "https://www.naarcuracao.com/en/?p=56011"
+   ]
+  },
+  {
+   "id": "tienerparade",
+   "naam": "Tienerparade",
+   "url": null,
+   "soort": {
+    "nl": "avondparade voor tieners",
+    "en": "teen evening parade"
+   },
+   "plaats": "Rooseveltweg tot Brionplein",
+   "tags": [
+    "carnaval",
+    "feest",
+    "gratis",
+    "jaarlijks",
+    "jan-feb",
+    "willemstad"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "kijken langs de route",
+     "en": "watching along the route"
+    },
+    "bron": "https://www.naarcuracao.com/en/?p=56011",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2026: vrijdag 13 februari",
+     "en": "2026: Friday, February 13"
+    },
+    {
+     "nl": "2027: vrijdag 5 februari",
+     "en": "2027: Friday, February 5"
+    },
+    {
+     "nl": "18.00 tot 23.00 uur",
+     "en": "6 to 11 p.m."
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [
+     "Start loopt vaak 1 tot 2 uur uit"
+    ],
+    "en": [
+     "Start often runs 1 to 2 hours late"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/unknown/full-schedule-announced-for-curacao-carnival-2026-with-parades-and-festivities-across-the-island",
+    "https://www.naarcuracao.com/en/?p=56011"
+   ]
+  },
+  {
+   "id": "bandabou-parade",
+   "naam": "Bandabou-parade",
+   "url": null,
+   "soort": {
+    "nl": "carnavalsparade op het platteland",
+    "en": "countryside carnival parade"
+   },
+   "plaats": "Barber, Bandabou",
+   "tags": [
+    "carnaval",
+    "cultuur",
+    "gratis",
+    "kinderen",
+    "jaarlijks",
+    "jan-feb"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "kijken langs de route",
+     "en": "watching along the route"
+    },
+    "bron": "https://www.naarcuracao.com/en/?p=56011",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2026: zaterdag 14 februari",
+     "en": "2026: Saturday, February 14"
+    },
+    {
+     "nl": "2027: zaterdag 6 februari",
+     "en": "2027: Saturday, February 6"
+    },
+    {
+     "nl": "Eindigt bij Centro Deportivo Barber",
+     "en": "Ends at Centro Deportivo Barber"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Dorpsgevoel en trots van de westkant van het eiland"
+    ],
+    "en": [
+     "Village feel and pride of the island's west side"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Start loopt vaak 1 tot 2 uur uit"
+    ],
+    "en": [
+     "Start often runs 1 to 2 hours late"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/unknown/full-schedule-announced-for-curacao-carnival-2026-with-parades-and-festivities-across-the-island",
+    "https://www.naarcuracao.com/en/?p=56011"
+   ]
+  },
+  {
+   "id": "gran-marcha",
+   "naam": "Gran Marcha (grote carnavalsoptocht)",
+   "url": null,
+   "soort": {
+    "nl": "hoofdparade carnaval",
+    "en": "main carnival parade"
+   },
+   "plaats": "Rooseveltweg tot Brionplein, Otrobanda",
+   "tags": [
+    "carnaval",
+    "feest",
+    "muziek",
+    "gratis",
+    "jaarlijks",
+    "jan-feb",
+    "willemstad"
+   ],
+   "prijs": {
+    "bedrag": 850,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "meelopen met een groep, vanaf",
+     "en": "to join a group, from"
+    },
+    "bron": "https://www.naarcuracao.com/en/?p=56011",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2026: zondag 15 februari",
+     "en": "2026: Sunday, February 15"
+    },
+    {
+     "nl": "2027: zondag 7 februari",
+     "en": "2027: Sunday, February 7"
+    },
+    {
+     "nl": "11.00 tot 19.00 uur",
+     "en": "11 a.m. to 7 p.m."
+    },
+    {
+     "nl": "Kijken langs de route gratis",
+     "en": "Watching along the route is free"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Grootste dag van het carnaval, hele dag muziek op straat",
+     "Je kunt met kostuum meelopen in een groep"
+    ],
+    "en": [
+     "Biggest day of carnival, music in the streets all day",
+     "You can join a group in costume"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Start loopt vaak 1 tot 2 uur uit",
+     "Zoek vroeg een schaduwplek langs de route"
+    ],
+    "en": [
+     "Start often runs 1 to 2 hours late",
+     "Find a shaded spot along the route early"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/unknown/full-schedule-announced-for-curacao-carnival-2026-with-parades-and-festivities-across-the-island",
+    "https://www.naarcuracao.com/en/?p=56011",
+    "https://www.curacao.com/en/article/curacaos-best-festivals-and-cultural-events-a-travelers-guide"
+   ]
+  },
+  {
+   "id": "tiener-afscheidsparade",
+   "naam": "Afscheidsparade jeugd en tieners",
+   "url": null,
+   "soort": {
+    "nl": "parade op carnavalsmaandag",
+    "en": "Carnival Monday parade"
+   },
+   "plaats": "Route van de Gran Marcha",
+   "tags": [
+    "carnaval",
+    "kinderen",
+    "gratis",
+    "jaarlijks",
+    "jan-feb",
+    "willemstad"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "kijken langs de route",
+     "en": "watching along the route"
+    },
+    "bron": "https://www.naarcuracao.com/en/?p=56011",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2026: maandag 16 februari",
+     "en": "2026: Monday, February 16"
+    },
+    {
+     "nl": "2027: maandag 8 februari",
+     "en": "2027: Monday, February 8"
+    },
+    {
+     "nl": "Carnavalsmaandag is vrije dag",
+     "en": "Carnival Monday is a public holiday"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [
+     "Start loopt vaak 1 tot 2 uur uit"
+    ],
+    "en": [
+     "Start often runs 1 to 2 hours late"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/unknown/full-schedule-announced-for-curacao-carnival-2026-with-parades-and-festivities-across-the-island",
+    "https://www.naarcuracao.com/en/?p=56011",
+    "https://holidaydb.com/guides/public-holidays/curacao/2027"
+   ]
+  },
+  {
+   "id": "marcha-di-despedida",
+   "naam": "Marcha di Despedida en verbranding Rei Momo",
+   "url": null,
+   "soort": {
+    "nl": "lichtjesparade, slot carnaval",
+    "en": "parade of lights, carnival finale"
+   },
+   "plaats": "Route van de Gran Marcha, eindigt Brionplein",
+   "tags": [
+    "carnaval",
+    "feest",
+    "muziek",
+    "gratis",
+    "jaarlijks",
+    "jan-feb",
+    "willemstad"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "kijken langs de route",
+     "en": "watching along the route"
+    },
+    "bron": "https://www.naarcuracao.com/en/?p=56011",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2026: dinsdag 17 februari",
+     "en": "2026: Tuesday, February 17"
+    },
+    {
+     "nl": "2027: dinsdag 9 februari",
+     "en": "2027: Tuesday, February 9"
+    },
+    {
+     "nl": "Rond middernacht gaat Momo in vlammen",
+     "en": "King Momo burns around midnight"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Parade in het donker met verlichte kostuums",
+     "Duizenden mensen langs de route"
+    ],
+    "en": [
+     "Night parade with lit-up costumes",
+     "Thousands of people along the route"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Verbranding liep in eerdere jaren flink uit",
+     "In 2026 vuurwerk en lasershow in plaats van verbranding"
+    ],
+    "en": [
+     "The burning has run very late in past years",
+     "In 2026 fireworks and lasers replaced the burning"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/unknown/full-schedule-announced-for-curacao-carnival-2026-with-parades-and-festivities-across-the-island",
+    "https://www.naarcuracao.com/en/?p=56011",
+    "https://www.curacaochronicle.com/post/local/rei-momo-farewell-closes-curacao-carnival-with-fireworks-and-laser-show",
+    "https://www.curacaochronicle.com/post/local/late-burning-of-king-momo-sparks-ongoing-controversy-around-carnival-closing"
+   ]
+  },
+  {
+   "id": "marcha-di-seu",
+   "naam": "Marcha di Seú (oogstfeest)",
+   "url": null,
+   "soort": {
+    "nl": "oogstparade, traditie",
+    "en": "harvest parade, tradition"
+   },
+   "plaats": "Rooseveltweg en route door Willemstad",
+   "tags": [
+    "cultuur",
+    "muziek",
+    "gratis",
+    "kinderen",
+    "jaarlijks",
+    "mrt-apr",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Op tweede paasdag",
+     "en": "On Easter Monday"
+    },
+    {
+     "nl": "2026: 6 april, 40 groepen",
+     "en": "2026: April 6, 40 groups"
+    },
+    {
+     "nl": "2027: maandag 29 maart",
+     "en": "2027: Monday, March 29"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Traditionele dans en zang, meer Curaçaos dan carnaval"
+    ],
+    "en": [
+     "Traditional dance and song, more local than carnival"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Discussie dat de oogstwortels verdwijnen achter kostuums"
+    ],
+    "en": [
+     "Debate that the harvest roots fade behind costumes"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/thousands-celebrate-marcha-di-seu-2026-as-debate-grows-over-tradition",
+    "https://holidaydb.com/guides/public-holidays/curacao/2027"
+   ]
+  },
+  {
+   "id": "seu-bandabou",
+   "naam": "Seú-parade Bandabou",
+   "url": null,
+   "soort": {
+    "nl": "oogstparade op het platteland",
+    "en": "countryside harvest parade"
+   },
+   "plaats": "Hofi Abou tot Veld di Barber",
+   "tags": [
+    "cultuur",
+    "muziek",
+    "gratis",
+    "kinderen",
+    "jaarlijks",
+    "mrt-apr"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "2026: zondag 12 april",
+     "en": "2026: Sunday, April 12"
+    },
+    {
+     "nl": "Start 13.00 uur",
+     "en": "Starts at 1 p.m."
+    },
+    {
+     "nl": "Na afloop muziek en eten",
+     "en": "Music and food afterward"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/de/event/seu-harvest-parade-of-the-bandabou-region-2026"
+   ]
+  },
+  {
+   "id": "blueseas-festival",
+   "naam": "Curaçao International BlueSeas Festival",
+   "url": null,
+   "soort": {
+    "nl": "blues en roots festival",
+    "en": "blues and roots festival"
+   },
+   "plaats": "Kura Hulanda en Pietermaai",
+   "tags": [
+    "muziek",
+    "feest",
+    "jaarlijks",
+    "mrt-apr",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "2026: 2 t/m 4 april",
+     "en": "2026: April 2 to 4"
+    },
+    {
+     "nl": "Openingsconcert Kura Hulanda Village",
+     "en": "Opening concert at Kura Hulanda Village"
+    },
+    {
+     "nl": "Meerdere podia in Pietermaai",
+     "en": "Several stages in Pietermaai"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Kleinschalig festival in de straten van Pietermaai"
+    ],
+    "en": [
+     "Small-scale festival in the streets of Pietermaai"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/unknown/international-blues-artists-headline-curacao-blueseas-festival-2026",
+    "https://www.curacao.com/en/article/curacaos-best-festivals-and-cultural-events-a-travelers-guide"
+   ]
+  },
+  {
+   "id": "ciff",
+   "naam": "Curaçao International Film Festival (CIFF)",
+   "url": null,
+   "soort": {
+    "nl": "filmfestival",
+    "en": "film festival"
+   },
+   "plaats": "The Movies, Otrobanda",
+   "tags": [
+    "cultuur",
+    "jaarlijks",
+    "mrt-apr",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "2027: 13 t/m 18 april",
+     "en": "2027: April 13 to 18"
+    },
+    {
+     "nl": "Bijna 70 films in 2025",
+     "en": "Nearly 70 films in 2025"
+    },
+    {
+     "nl": "Caribische films in competitie",
+     "en": "Caribbean films in competition"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Recordbezoek en uitverkochte voorstellingen in 2025"
+    ],
+    "en": [
+     "Record attendance and sold-out screenings in 2025"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Populaire films raken snel uitverkocht"
+    ],
+    "en": [
+     "Popular screenings sell out fast"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/curacao-international-film-festival-announces-2027-dates",
+    "https://www.curacaochronicle.com/post/local/record-attendance-at-11th-curacao-international-film-festival-new-awards-and-extra-day-planned-for-2026"
+   ]
+  },
+  {
+   "id": "merkado-amor-pa-otrobanda",
+   "naam": "Merkado Amor pa Otrobanda",
+   "url": null,
+   "soort": {
+    "nl": "buurtmarkt",
+    "en": "neighborhood market"
+   },
+   "plaats": "Otrobanda",
+   "tags": [
+    "cultuur",
+    "eten",
+    "kinderen",
+    "jaarlijks",
+    "mrt-apr",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Meerdere edities per jaar",
+     "en": "Several editions a year"
+    },
+    {
+     "nl": "2025: rond Seú en Koningsdag",
+     "en": "2025: around Seú and King's Day"
+    },
+    {
+     "nl": "Georganiseerd door Kaya Kaya",
+     "en": "Run by the Kaya Kaya team"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/kaya-kaya-festival-transforms-into-a-year-round-cultural-movement"
+   ]
+  },
+  {
+   "id": "koningsdag-otrobanda",
+   "naam": "Koningsdag Otrobanda",
+   "url": null,
+   "soort": {
+    "nl": "straatfeest, vrijmarkt",
+    "en": "street party, flea market"
+   },
+   "plaats": "Brionplein, Breedestraat, Rif Fort",
+   "tags": [
+    "feest",
+    "muziek",
+    "eten",
+    "gratis",
+    "kinderen",
+    "jaarlijks",
+    "mrt-apr",
+    "willemstad"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "toegang, behalve Kingsfest",
+     "en": "entry, except Kingsfest"
+    },
+    "bron": "https://www.curacaochronicle.com/post/local/kings-day-otrobanda-2026-a-district-wide-celebration-connecting-culture-community-and-experience",
+    "datum": "2026-04"
+   },
+   "feiten": [
+    {
+     "nl": "Elk jaar 27 april",
+     "en": "Every year on April 27"
+    },
+    {
+     "nl": "2026: 08.00 tot middernacht",
+     "en": "2026: 8 a.m. to midnight"
+    },
+    {
+     "nl": "Ruim 100 kraampjes",
+     "en": "More than 100 stalls"
+    },
+    {
+     "nl": "Kinderhoek op Brionplein",
+     "en": "Kids' area on Brionplein"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Hele wijk doet mee met dj's, eten en markt"
+    ],
+    "en": [
+     "Whole district joins in with DJs, food and market"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Kingsfest op Matthey Wharf vraagt een los kaartje"
+    ],
+    "en": [
+     "Kingsfest at Matthey Wharf needs a separate ticket"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/kings-day-otrobanda-2026-a-district-wide-celebration-connecting-culture-community-and-experience",
+    "https://www.curacao.com/en/article/curacaos-best-festivals-and-cultural-events-a-travelers-guide",
+    "https://holidaydb.com/guides/public-holidays/curacao/2027"
+   ]
+  },
+  {
+   "id": "mcb-caribbean-legends-pro-am",
+   "naam": "MCB Caribbean Legends Pro-Am",
+   "url": "https://bluebay-curacao.com/mcb-caribbean-legends-pro-am-2026/",
+   "soort": {
+    "nl": "golftoernooi",
+    "en": "golf tournament"
+   },
+   "plaats": "Blue Bay Golf, Sint Michiel",
+   "tags": [
+    "sport",
+    "jaarlijks",
+    "mei-jun"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "2026: 1 t/m 3 mei",
+     "en": "2026: May 1 to 3"
+    },
+    {
+     "nl": "Legends Tour, profs 50+",
+     "en": "Legends Tour, pros over 50"
+    },
+    {
+     "nl": "Grotere editie gepland in 2027",
+     "en": "Bigger edition planned for 2027"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/international-golf-legends-head-to-curacao-for-mcb-caribbean-legends-pro-am-2026"
+   ]
+  },
+  {
+   "id": "velas-curacao",
+   "naam": "Velas Curaçao (tall ships)",
+   "url": null,
+   "soort": {
+    "nl": "grote zeilschepen in de haven",
+    "en": "tall ships in the harbor"
+   },
+   "plaats": "Sint Annabaai, Willemstad",
+   "tags": [
+    "cultuur",
+    "kinderen",
+    "mei-jun",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "2026: 2 t/m 8 mei",
+     "en": "2026: May 2 to 8"
+    },
+    {
+     "nl": "Zeilschepen uit diverse landen",
+     "en": "Sailing ships from several countries"
+    },
+    {
+     "nl": "Eenmalige editie, geen vaste datum",
+     "en": "One-off edition, no fixed date"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/military-exercises-and-demonstrations-planned-around-annabaai-ahead-of-velas-curacao-2026"
+   ]
+  },
+  {
+   "id": "dia-di-san-juan",
+   "naam": "Fiesta di San Juan",
+   "url": null,
+   "soort": {
+    "nl": "vreugdevuur, traditie",
+    "en": "bonfire, tradition"
+   },
+   "plaats": "Club Union Boneriano, Suffisant",
+   "tags": [
+    "cultuur",
+    "feest",
+    "jaarlijks",
+    "mei-jun"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Avond van 23 juni",
+     "en": "Evening of June 23"
+    },
+    {
+     "nl": "Vuur rond 23.30 uur",
+     "en": "Bonfire around 11:30 p.m."
+    },
+    {
+     "nl": "Over het vuur springen",
+     "en": "People jump over the fire"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Oude traditie die regen en geluk moet brengen"
+    ],
+    "en": [
+     "Old tradition meant to bring rain and luck"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://1000awesomethingsaboutcuracao.com/2012/11/01/866-fiesta-di-san-juan/"
+   ]
+  },
+  {
+   "id": "dine-out-week",
+   "naam": "Curaçao Dine Out Week",
+   "url": null,
+   "soort": {
+    "nl": "restaurantweek",
+    "en": "restaurant week"
+   },
+   "plaats": "Restaurants door het hele eiland",
+   "tags": [
+    "eten",
+    "jaarlijks",
+    "mei-jun",
+    "jul-aug"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "2025: 25 juni t/m 5 juli",
+     "en": "2025: June 25 to July 5"
+    },
+    {
+     "nl": "Ruim 35 restaurants",
+     "en": "More than 35 restaurants"
+    },
+    {
+     "nl": "Vaste prijs lunch en diner",
+     "en": "Fixed-price lunch and dinner"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/curacao-launches-first-ever-dine-out-week-with-over-35-restaurants-participating"
+   ]
+  },
+  {
+   "id": "dia-di-emancipashon",
+   "naam": "Dia di Emancipashon (afschaffing slavernij)",
+   "url": null,
+   "soort": {
+    "nl": "herdenking",
+    "en": "commemoration"
+   },
+   "plaats": "Fort Amsterdam, Punda",
+   "tags": [
+    "cultuur",
+    "jaarlijks",
+    "jul-aug",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elk jaar 1 juli",
+     "en": "Every year on July 1"
+    },
+    {
+     "nl": "Ceremonie met tumba-ritme",
+     "en": "Ceremony with tumba rhythm"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/emancipation-day-celebrated-on-curacao-with-historic-energy-and-unity"
+   ]
+  },
+  {
+   "id": "dia-di-himno-i-bandera",
+   "naam": "Dia di Himno i Bandera (vlag- en volksliedjesdag)",
+   "url": null,
+   "soort": {
+    "nl": "nationale feestdag",
+    "en": "national holiday"
+   },
+   "plaats": "Hele eiland",
+   "tags": [
+    "cultuur",
+    "gratis",
+    "jaarlijks",
+    "jul-aug"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elk jaar 2 juli",
+     "en": "Every year on July 2"
+    },
+    {
+     "nl": "Officiële vrije dag",
+     "en": "Official public holiday"
+    },
+    {
+     "nl": "Motortocht Easy Riders Curaçao",
+     "en": "Easy Riders motorcycle ride"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/article/curacaos-best-festivals-and-cultural-events-a-travelers-guide",
+    "https://holidaydb.com/guides/public-holidays/curacao/2027",
+    "https://www.curacaotouristboard.com/?p=8605"
+   ]
+  },
+  {
+   "id": "dia-di-lucha-pa-libertat",
+   "naam": "Dia di Lucha pa Libertat (Tula-dag)",
+   "url": null,
+   "soort": {
+    "nl": "herdenking slavenopstand 1795",
+    "en": "1795 slave revolt remembrance"
+   },
+   "plaats": "Parke Lucha pa Libertat",
+   "tags": [
+    "cultuur",
+    "jaarlijks",
+    "jul-aug"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elk jaar 17 augustus",
+     "en": "Every year on August 17"
+    },
+    {
+     "nl": "2026: start 17.00 uur",
+     "en": "2026: starts at 5 p.m."
+    },
+    {
+     "nl": "Eert Tula en zijn strijders",
+     "en": "Honors Tula and his fighters"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/curacao-announces-2026-cultural-and-commemorative-events-calendar"
+   ]
+  },
+  {
+   "id": "kaya-kaya",
+   "naam": "Kaya Kaya (straatfestival Otrobanda)",
+   "url": null,
+   "soort": {
+    "nl": "straatkunst en muziekfestival",
+    "en": "street art and music festival"
+   },
+   "plaats": "Ser'i Otrobanda",
+   "tags": [
+    "muziek",
+    "cultuur",
+    "eten",
+    "feest",
+    "jaarlijks",
+    "jul-aug",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Meestal in augustus",
+     "en": "Usually in August"
+    },
+    {
+     "nl": "Groot festival om de twee jaar",
+     "en": "Full festival every two years"
+    },
+    {
+     "nl": "2025: street party, 10.000 bezoekers",
+     "en": "2025: street party, 10,000 visitors"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Muurschilderingen blijven het hele jaar staan",
+     "Meerdere podia met soca, reggae, jazz en tumba"
+    ],
+    "en": [
+     "Murals stay up all year",
+     "Several stages with soca, reggae, jazz and tumba"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Bezoekersaantal is begrensd, vroeg gaan"
+    ],
+    "en": [
+     "Visitor numbers are capped, go early"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/kaya-kaya-festival-transforms-into-a-year-round-cultural-movement",
+    "https://www.curacaochronicle.com/post/local/kaya-kaya-2026-preparations-underway-for-new-edition-of-cultural-festival",
+    "https://www.curacao.com/en/article/curacaos-best-festivals-and-cultural-events-a-travelers-guide"
+   ]
+  },
+  {
+   "id": "curacao-north-sea-jazz",
+   "naam": "Curaçao North Sea Jazz Festival",
+   "url": null,
+   "soort": {
+    "nl": "groot muziekfestival",
+    "en": "major music festival"
+   },
+   "plaats": "World Trade Center, Piscadera",
+   "tags": [
+    "muziek",
+    "feest",
+    "jaarlijks",
+    "sep-okt"
+   ],
+   "prijs": {
+    "bedrag": 195,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "dagkaart (2025)",
+     "en": "day ticket (2025)"
+    },
+    "bron": "https://islaguru.com/articles/curacao-north-sea-jazz-festival-2025",
+    "datum": "2025-08"
+   },
+   "feiten": [
+    {
+     "nl": "2026: 3 t/m 5 september",
+     "en": "2026: September 3 to 5"
+    },
+    {
+     "nl": "Twaalfde editie in 2026",
+     "en": "Twelfth edition in 2026"
+    },
+    {
+     "nl": "3-daagse kaart 2026: €370",
+     "en": "2026 three-day pass: €370"
+    },
+    {
+     "nl": "Gratis openingsconcert in de stad",
+     "en": "Free opening concert downtown"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Wereldsterren als J Balvin, Toto en The Jacksons in 2026",
+     "Meeste optredens in de open lucht"
+    ],
+    "en": [
+     "Big names like J Balvin, Toto and The Jacksons in 2026",
+     "Most shows are outdoors"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "All-inclusive pakketten rond het festival snel uitverkocht"
+    ],
+    "en": [
+     "All-inclusive festival packages sell out fast"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/curacao-north-sea-jazz-festival-to-return-in-september-2026",
+    "https://islaguru.com/articles/curacao-north-sea-jazz-festival-2025",
+    "https://corendon.nl/jazz",
+    "https://www.curacao.com/en/article/curacaos-best-festivals-and-cultural-events-a-travelers-guide"
+   ]
+  },
+  {
+   "id": "tri-curacao-aquathlon",
+   "naam": "Tri Curaçao jeugd-aquathlons",
+   "url": null,
+   "soort": {
+    "nl": "zwemmen en lopen voor jeugd",
+    "en": "swim and run for kids"
+   },
+   "plaats": "Kokomo Beach",
+   "tags": [
+    "sport",
+    "kinderen",
+    "strand",
+    "jaarlijks",
+    "sep-okt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "2026: start 19 september",
+     "en": "2026: starts September 19"
+    },
+    {
+     "nl": "Leeftijd 9 tot 17",
+     "en": "Ages 9 to 17"
+    },
+    {
+     "nl": "Serie eindigt met kampioenschap",
+     "en": "Series ends with a championship"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/tri-curacao-to-launch-2026-youth-aquathlon-series-at-kokomo-beach"
+   ]
+  },
+  {
+   "id": "kultura-week",
+   "naam": "Cultuurweek (Siman di Kultura)",
+   "url": null,
+   "soort": {
+    "nl": "week vol cultuur",
+    "en": "culture week"
+   },
+   "plaats": "Hele eiland",
+   "tags": [
+    "cultuur",
+    "jaarlijks",
+    "sep-okt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "2026: 27 sept t/m 4 okt",
+     "en": "2026: Sep 27 to Oct 4"
+    },
+    {
+     "nl": "Thema: van Curaçao naar de wereld",
+     "en": "Theme: from Curaçao to the world"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/curacao-announces-2026-cultural-and-commemorative-events-calendar"
+   ]
+  },
+  {
+   "id": "pride-curacao",
+   "naam": "Curaçao Pride",
+   "url": "https://www.curacaopride.org",
+   "soort": {
+    "nl": "lhbti-festivalweek",
+    "en": "LGBTQ festival week"
+   },
+   "plaats": "Otrobanda, Punda en stranden",
+   "tags": [
+    "feest",
+    "muziek",
+    "cultuur",
+    "jaarlijks",
+    "sep-okt",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Eind september, begin oktober",
+     "en": "Late September, early October"
+    },
+    {
+     "nl": "2025: 30 sept t/m 5 okt",
+     "en": "2025: Sep 30 to Oct 5"
+    },
+    {
+     "nl": "Parade vanaf Rif Fort",
+     "en": "Parade starts at Rif Fort"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Parade, strandfeesten en clubavonden in één week"
+    ],
+    "en": [
+     "Parade, beach parties and club nights in one week"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaopride.org/?p=11074",
+    "https://www.curacaochronicle.com/post/local/curacao-pride-parade-celebrates-love-equality-and-diversity"
+   ]
+  },
+  {
+   "id": "herdenking-1795",
+   "naam": "Herdenking van de gedode vrijheidsstrijders",
+   "url": null,
+   "soort": {
+    "nl": "herdenking",
+    "en": "commemoration"
+   },
+   "plaats": null,
+   "tags": [
+    "cultuur",
+    "jaarlijks",
+    "sep-okt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elk jaar 3 oktober",
+     "en": "Every year on October 3"
+    },
+    {
+     "nl": "Eert Tula en de helden van 1795",
+     "en": "Honors Tula and the 1795 heroes"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/curacao-announces-2026-cultural-and-commemorative-events-calendar"
+   ]
+  },
+  {
+   "id": "dia-di-pais-korsou",
+   "naam": "Dia di Pais Kòrsou (Curaçao-dag, 10/10)",
+   "url": null,
+   "soort": {
+    "nl": "nationale feestdag, straatfeest",
+    "en": "national holiday, street party"
+   },
+   "plaats": "Punda, Willemstad",
+   "tags": [
+    "cultuur",
+    "feest",
+    "muziek",
+    "eten",
+    "gratis",
+    "kinderen",
+    "jaarlijks",
+    "sep-okt",
+    "willemstad"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "toegang",
+     "en": "entry"
+    },
+    "bron": "https://www.curacaochronicle.com/post/local/celebrate-the-diversity-of-curacao-during-the-1010-celebration-in-punda",
+    "datum": "2024-10"
+   },
+   "feiten": [
+    {
+     "nl": "Elk jaar 10 oktober",
+     "en": "Every year on October 10"
+    },
+    {
+     "nl": "Officiële vrije dag",
+     "en": "Official public holiday"
+    },
+    {
+     "nl": "Straatfeest Punda vanaf 10.00 uur",
+     "en": "Punda street party from 10 a.m."
+    },
+    {
+     "nl": "Avondconcert lokale artiesten",
+     "en": "Evening concert with local artists"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Eten en muziek uit veel landen op Hanchi Snoa"
+    ],
+    "en": [
+     "Food and music from many countries on Hanchi Snoa"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/celebrate-the-diversity-of-curacao-during-the-1010-celebration-in-punda",
+    "https://www.curacaochronicle.com/post/local/curacao-announces-2026-cultural-and-commemorative-events-calendar",
+    "https://holidaydb.com/guides/public-holidays/curacao/2027"
+   ]
+  },
+  {
+   "id": "kai-orgel-week",
+   "naam": "Ka'i Òrgel-week",
+   "url": null,
+   "soort": {
+    "nl": "week van het draaiorgel",
+    "en": "barrel organ week"
+   },
+   "plaats": null,
+   "tags": [
+    "cultuur",
+    "muziek",
+    "jaarlijks",
+    "nov-dec"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "2026: 15 t/m 22 november",
+     "en": "2026: November 15 to 22"
+    },
+    {
+     "nl": "Lokale cilinderpiano-traditie",
+     "en": "Local cylinder piano tradition"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/curacao-announces-2026-cultural-and-commemorative-events-calendar"
+   ]
+  },
+  {
+   "id": "klm-curacao-marathon",
+   "naam": "KLM Curaçao Marathon",
+   "url": "https://klmcuracaomarathon.com/en",
+   "soort": {
+    "nl": "hardloopevenement",
+    "en": "running event"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "sport",
+    "jaarlijks",
+    "nov-dec",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "5 km: zaterdag 28 nov 2026",
+     "en": "5K: Saturday, Nov 28, 2026"
+    },
+    {
+     "nl": "Overige: zondag 29 nov 2026",
+     "en": "Others: Sunday, Nov 29, 2026"
+    },
+    {
+     "nl": "Marathon, halve, 10 en 5 km",
+     "en": "Full, half, 10K and 5K"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://aims-worldrunning.org/articles/2777-race-date-for-klm-curacao-marathon-21-1k-10k-5k-cur-changed.html",
+    "https://www.marathons.com/en/events/klm-curacao-marathon_aUQHH"
+   ]
+  },
+  {
+   "id": "punda-kerstboom",
+   "naam": "Kerstboom aansteken in Punda",
+   "url": null,
+   "soort": {
+    "nl": "start kerstseizoen",
+    "en": "start of the holiday season"
+   },
+   "plaats": "Bij de Koningin Emmabrug, Punda",
+   "tags": [
+    "feest",
+    "kinderen",
+    "jaarlijks",
+    "nov-dec",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Eind november, op donderdag",
+     "en": "Late November, on a Thursday"
+    },
+    {
+     "nl": "2025: 27 nov om 18.45 uur",
+     "en": "2025: Nov 27 at 6:45 p.m."
+    },
+    {
+     "nl": "Kerstman, kraampjes en live muziek",
+     "en": "Santa, stalls and live music"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/punda-lights-up-christmas-season-on-thursday-with-tree-lighting-music-and-festivities"
+   ]
+  },
+  {
+   "id": "dia-di-autonomia",
+   "naam": "Dia di Autonomia (Da Costa Gomez-dag)",
+   "url": null,
+   "soort": {
+    "nl": "herdenking",
+    "en": "commemoration"
+   },
+   "plaats": null,
+   "tags": [
+    "cultuur",
+    "jaarlijks",
+    "nov-dec"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elk jaar 15 december",
+     "en": "Every year on December 15"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/curacao-announces-2026-cultural-and-commemorative-events-calendar"
+   ]
+  },
+  {
+   "id": "kooyman-vuurwerk",
+   "naam": "Vuurwerkshow Kooyman",
+   "url": null,
+   "soort": {
+    "nl": "grote vuurwerkshow",
+    "en": "big fireworks show"
+   },
+   "plaats": "Kooyman, Zeelandia",
+   "tags": [
+    "feest",
+    "kinderen",
+    "jaarlijks",
+    "nov-dec",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "30 december om 21.00 uur",
+     "en": "December 30 at 9 p.m."
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Volgens lokale pers een hoogtepunt van de jaarwisseling"
+    ],
+    "en": [
+     "Local press calls it a New Year's highlight"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/pagara-firecrackers-light-up-willemstad-during-curacaos-new-year-celebrations"
+   ]
+  },
+  {
+   "id": "pagara-pietermaai",
+   "naam": "Pagara-straatfeest Pietermaai",
+   "url": null,
+   "soort": {
+    "nl": "oudjaarsfeest met pagara's",
+    "en": "New Year's Eve firecracker party"
+   },
+   "plaats": "Nieuwestraat, Pietermaai",
+   "tags": [
+    "feest",
+    "muziek",
+    "eten",
+    "jaarlijks",
+    "nov-dec",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "31 december, pagara om 14.00 uur",
+     "en": "December 31, pagara at 2 p.m."
+    },
+    {
+     "nl": "Daarna live muziek en straateten",
+     "en": "Then live music and street food"
+    },
+    {
+     "nl": "Ook pagara's bij Oasis en Mahaai",
+     "en": "Also pagaras at Oasis and Mahaai"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Lange rijen vuurwerk midden op de dag, unieke traditie"
+    ],
+    "en": [
+     "Long strings of firecrackers in daylight, a unique tradition"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/pagara-firecrackers-light-up-willemstad-during-curacaos-new-year-celebrations"
+   ]
+  },
+  {
+   "id": "ban-tende-tiru-brionplein",
+   "naam": "Ban Tende Tiru den Union (Brionplein)",
+   "url": null,
+   "soort": {
+    "nl": "oudjaarsbijeenkomst",
+    "en": "New Year's Eve gathering"
+   },
+   "plaats": "Brionplein, Otrobanda",
+   "tags": [
+    "cultuur",
+    "feest",
+    "jaarlijks",
+    "nov-dec",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "31 december",
+     "en": "December 31"
+    },
+    {
+     "nl": "Culturele afsluiting van het jaar",
+     "en": "Cultural close of the year"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/curacao-announces-2026-cultural-and-commemorative-events-calendar"
+   ]
+  },
+  {
+   "id": "fuikdag",
+   "naam": "Fuikdag (bootfeest Fuikbaai)",
+   "url": null,
+   "soort": {
+    "nl": "bootfeest op zee",
+    "en": "boat party at sea"
+   },
+   "plaats": "Fuikbaai, oostkant",
+   "tags": [
+    "feest",
+    "muziek",
+    "jaarlijks",
+    "jan-feb"
+   ],
+   "prijs": {
+    "bedrag": 350,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "plek op een catamaran met open bar",
+     "en": "spot on a catamaran with open bar"
+    },
+    "bron": "https://www.naarcuracao.com/en/tour-item/fuik-day/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Eerste zondag van januari",
+     "en": "First Sunday of January"
+    },
+    {
+     "nl": "2027: zondag 3 januari",
+     "en": "2027: Sunday, January 3"
+    },
+    {
+     "nl": "Alleen per boot bereikbaar",
+     "en": "Only reachable by boat"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Honderden boten naast elkaar met dj's"
+    ],
+    "en": [
+     "Hundreds of boats side by side with DJs"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Strenge controles op zee, geen watertaxi's of drankverkoop"
+    ],
+    "en": [
+     "Strict checks at sea, no water taxis or drink sales"
+    ]
+   },
+   "bronnen": [
+    "https://www.naarcuracao.com/en/tour-item/fuik-day/",
+    "https://www.curacaochronicle.com/post/local/authorities-announce-strict-controls-at-sea-and-along-coast-during-fuikdag-2026",
+    "https://www.curacaochronicle.com/post/local/fuikdag-rules-no-water-taxis-or-alcohol-sales",
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
+   ]
+  },
+  {
+   "id": "punda-vibes",
+   "naam": "Punda Vibes (donderdagavond)",
+   "url": null,
+   "soort": {
+    "nl": "wekelijks straatfeest",
+    "en": "weekly street party"
+   },
+   "plaats": "Punda, Willemstad",
+   "tags": [
+    "muziek",
+    "feest",
+    "eten",
+    "kinderen",
+    "willemstad",
+    "wekelijks",
+    "jan-feb",
+    "mrt-apr",
+    "mei-jun",
+    "jul-aug",
+    "sep-okt",
+    "nov-dec"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elke donderdag vanaf 17.00 uur",
+     "en": "Every Thursday from 5 p.m."
+    },
+    {
+     "nl": "Vuurwerk om 20.15 uur",
+     "en": "Fireworks at 8:15 p.m."
+    },
+    {
+     "nl": "Drijvende markt tot 19.00 uur",
+     "en": "Floating market until 7 p.m."
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Live bands en kraampjes met lokale snacks",
+     "Goed te combineren met eten in Punda"
+    ],
+    "en": [
+     "Live bands and stalls with local snacks",
+     "Easy to combine with dinner in Punda"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.lionsdive.com/curacao/4-tips-for-enjoying-punda-vibes-every-thursday/",
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
+   ]
+  },
+  {
+   "id": "mundo-bizarro-salsa",
+   "naam": "Salsa-avond Mundo Bizarro",
+   "url": null,
+   "soort": {
+    "nl": "salsa-avond",
+    "en": "salsa night"
+   },
+   "plaats": "Nieuwestraat, Pietermaai",
+   "tags": [
+    "muziek",
+    "feest",
+    "willemstad",
+    "wekelijks",
+    "jan-feb",
+    "mrt-apr",
+    "mei-jun",
+    "jul-aug",
+    "sep-okt",
+    "nov-dec"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elke donderdag",
+     "en": "Every Thursday"
+    },
+    {
+     "nl": "Cubaans café in Pietermaai",
+     "en": "Cuban-style cafe in Pietermaai"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao",
+    "https://www.salsavida.com/guides/curacao/"
+   ]
+  },
+  {
+   "id": "zest-sangria-beats",
+   "naam": "Sangria & Beats bij Zest",
+   "url": null,
+   "soort": {
+    "nl": "middagfeest op het strand",
+    "en": "afternoon beach party"
+   },
+   "plaats": "Jan Thiel Beach",
+   "tags": [
+    "muziek",
+    "feest",
+    "strand",
+    "wekelijks",
+    "jan-feb",
+    "mrt-apr",
+    "mei-jun",
+    "jul-aug",
+    "sep-okt",
+    "nov-dec"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elke donderdag 15.00 tot 19.00",
+     "en": "Every Thursday 3 to 7 p.m."
+    },
+    {
+     "nl": "Vrijdag spritz happy hour 18-19",
+     "en": "Friday spritz happy hour 6-7 p.m."
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
+   ]
+  },
+  {
+   "id": "cabana-beach-woensdag",
+   "naam": "Woensdag happy hour Cabana Beach",
+   "url": null,
+   "soort": {
+    "nl": "strandbar avond",
+    "en": "beach bar night"
+   },
+   "plaats": "Mambo Beach Boulevard",
+   "tags": [
+    "feest",
+    "strand",
+    "wekelijks",
+    "jan-feb",
+    "mrt-apr",
+    "mei-jun",
+    "jul-aug",
+    "sep-okt",
+    "nov-dec"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elke woensdag",
+     "en": "Every Wednesday"
+    },
+    {
+     "nl": "Happy hour 20.00 tot 21.00",
+     "en": "Happy hour 8 to 9 p.m."
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
+   ]
+  },
+  {
+   "id": "wet-wild-vrijdag",
+   "naam": "Wet & Wild vrijdagavond",
+   "url": null,
+   "soort": {
+    "nl": "strandclub met dj",
+    "en": "beach club with DJ"
+   },
+   "plaats": "Mambo Beach",
+   "tags": [
+    "muziek",
+    "feest",
+    "strand",
+    "wekelijks",
+    "jan-feb",
+    "mrt-apr",
+    "mei-jun",
+    "jul-aug",
+    "sep-okt",
+    "nov-dec"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elke vrijdag, dj",
+     "en": "Every Friday, DJ"
+    },
+    {
+     "nl": "Happy hour 20.00 tot 21.00",
+     "en": "Happy hour 8 to 9 p.m."
+    },
+    {
+     "nl": "Daarna Club Live 973",
+     "en": "Then on to Club Live 973"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
+   ]
+  },
+  {
+   "id": "rileks-mambo",
+   "naam": "Rileks Beach Bar (vrijdag live, zaterdag sunset)",
+   "url": null,
+   "soort": {
+    "nl": "strandbar met live muziek",
+    "en": "beach bar with live music"
+   },
+   "plaats": "Mambo Beach",
+   "tags": [
+    "muziek",
+    "feest",
+    "strand",
+    "wekelijks",
+    "jan-feb",
+    "mrt-apr",
+    "mei-jun",
+    "jul-aug",
+    "sep-okt",
+    "nov-dec"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vrijdag live muziek",
+     "en": "Friday live music"
+    },
+    {
+     "nl": "Zaterdag sunset sessions met dj's",
+     "en": "Saturday sunset sessions with DJs"
+    },
+    {
+     "nl": "Zondag Sunday Vibes",
+     "en": "Sunday Vibes on Sundays"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
+   ]
+  },
+  {
+   "id": "zanzibar-zaterdag",
+   "naam": "Zanzibar zaterdag",
+   "url": null,
+   "soort": {
+    "nl": "strandbar met dj's",
+    "en": "beach bar with DJs"
+   },
+   "plaats": "Jan Thiel Beach",
+   "tags": [
+    "muziek",
+    "feest",
+    "strand",
+    "wekelijks",
+    "jan-feb",
+    "mrt-apr",
+    "mei-jun",
+    "jul-aug",
+    "sep-okt",
+    "nov-dec"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elke zaterdag",
+     "en": "Every Saturday"
+    },
+    {
+     "nl": "Happy hour en live dj's",
+     "en": "Happy hour and live DJs"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
+   ]
+  },
+  {
+   "id": "wet-wild-zondag",
+   "naam": "Wet & Wild Sunday",
+   "url": null,
+   "soort": {
+    "nl": "zondagsfeest op het strand",
+    "en": "Sunday beach party"
+   },
+   "plaats": "Mambo Beach",
+   "tags": [
+    "muziek",
+    "feest",
+    "strand",
+    "wekelijks",
+    "jan-feb",
+    "mrt-apr",
+    "mei-jun",
+    "jul-aug",
+    "sep-okt",
+    "nov-dec"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elke zondag",
+     "en": "Every Sunday"
+    },
+    {
+     "nl": "Caribische band 17.00 tot 19.00",
+     "en": "Caribbean band 5 to 7 p.m."
+    },
+    {
+     "nl": "Mojitobar en dj",
+     "en": "Mojito bar and DJ"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
+   ]
+  },
+  {
+   "id": "kokomo-sunday-funday",
+   "naam": "Sunday Funday bij Kokomo Beach",
+   "url": null,
+   "soort": {
+    "nl": "zondagmiddag strandfeest",
+    "en": "Sunday afternoon beach party"
+   },
+   "plaats": "Kokomo Beach, Vaersenbaai",
+   "tags": [
+    "muziek",
+    "feest",
+    "strand",
+    "gratis",
+    "wekelijks",
+    "jan-feb",
+    "mrt-apr",
+    "mei-jun",
+    "jul-aug",
+    "sep-okt",
+    "nov-dec"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "toegang strand, bedjes betaald",
+     "en": "beach entry, loungers extra"
+    },
+    "bron": "https://www.naarcuracao.com/en/?p=53730",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Elke zondagmiddag",
+     "en": "Every Sunday afternoon"
+    },
+    {
+     "nl": "Happy hour 17.00 tot 18.00",
+     "en": "Happy hour 5 to 6 p.m."
+    },
+    {
+     "nl": "Dj en live act",
+     "en": "DJ and a live act"
+    },
+    {
+     "nl": "15 minuten van Willemstad",
+     "en": "15 minutes from Willemstad"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.naarcuracao.com/en/?p=53730"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Curaçao Tourist Board (curacao.com)",
+   "url": "https://www.curacao.com/en/article/curacaos-best-festivals-and-cultural-events-a-travelers-guide",
+   "uitleg": {
+    "nl": "Officiële toerismesite met evenementenpagina's per jaar; geen kaartverkoop.",
+    "en": "Official tourism site with event pages per year; does not sell tickets."
+   }
+  },
+  {
+   "naam": "Curaçao Chronicle",
+   "url": "https://www.curacaochronicle.com",
+   "uitleg": {
+    "nl": "Engelstalig nieuws met de actuele data en programma's van carnaval, Seú en festivals.",
+    "en": "English-language news with current dates and schedules for carnival, Seú and festivals."
+   }
+  },
+  {
+   "naam": "NaarCuracao.com",
+   "url": "https://www.naarcuracao.com/en/tour-item/fuik-day/",
+   "uitleg": {
+    "nl": "Verkoopt Fuikdag-plekken op boten en zet het carnavalsschema met routes online.",
+    "en": "Sells Fuik Day boat spots and posts the carnival schedule with routes."
+   }
+  },
+  {
+   "naam": "Corendon",
+   "url": "https://corendon.nl/jazz",
+   "uitleg": {
+    "nl": "Pakketreizen met vlucht, hotel en 3-daagse North Sea Jazz-kaart.",
+    "en": "Package trips with flight, hotel and a three-day North Sea Jazz pass."
+   }
+  },
+  {
+   "naam": "My Curaçao Guide",
+   "url": "https://www.mycuracaoguide.com/punda-vibes-tours",
+   "uitleg": {
+    "nl": "Overzicht van uitgaansavonden per dag en tours naar Punda Vibes.",
+    "en": "Overview of nightlife by day of the week and tours to Punda Vibes."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Carnavalsparades beginnen vaak 1 tot 2 uur later dan gepland; neem water, een stoeltje en zoek schaduw langs de route.",
+   "en": "Carnival parades often start 1 to 2 hours late; bring water and a folding chair and find shade along the route."
+  },
+  {
+   "nl": "Carnavalsmaandag (8 februari 2027) en tweede paasdag (29 maart 2027) zijn vrije dagen; veel winkels en kantoren zijn dan dicht.",
+   "en": "Carnival Monday (February 8, 2027) and Easter Monday (March 29, 2027) are public holidays; many shops and offices close."
+  },
+  {
+   "nl": "Meelopen in de Gran Marcha kan via een carnavalsgroep, vanaf ongeveer $850 inclusief kostuum.",
+   "en": "You can walk in the Gran Marcha with a carnival group, from about $850 including costume."
+  },
+  {
+   "nl": "Voor Fuikdag heb je een plek op een boot nodig; de baai is niet over land bereikbaar en er is op het water geen drankverkoop.",
+   "en": "For Fuik Day you need a spot on a boat; the bay can't be reached by land and drinks aren't sold on the water."
+  },
+  {
+   "nl": "Boek vlucht en hotel voor North Sea Jazz ruim op tijd; all-inclusive pakketten bij The Rif en Mangrove Beach waren voor 2026 uitverkocht.",
+   "en": "Book flights and hotels for North Sea Jazz early; all-inclusive packages at The Rif and Mangrove Beach sold out for 2026."
+  },
+  {
+   "nl": "Op 31 december branden overdag lange pagara's in Pietermaai (14.00 uur) en bij Oasis (15.00 uur); de grote vuurwerkshow van Kooyman is op 30 december.",
+   "en": "On December 31, long pagara firecracker strings go off by day in Pietermaai (2 p.m.) and at Oasis (3 p.m.); the big Kooyman fireworks show is on December 30."
+  },
+  {
+   "nl": "Op donderdag kun je Punda Vibes vanaf 17.00 uur combineren met salsa bij Mundo Bizarro in Pietermaai.",
+   "en": "On Thursdays you can pair Punda Vibes from 5 p.m. with salsa at Mundo Bizarro in Pietermaai."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wanneer is carnaval op Curaçao in 2027?",
+    "en": "When is Carnival in Curaçao in 2027?"
+   },
+   "a": {
+    "nl": "De paardenparade is op zondag 24 januari, de kinderparade op 31 januari, de Gran Marcha op zondag 7 februari en de slotparade met het afscheid van Rei Momo op dinsdag 9 februari 2027. Het Festival di Tumba is eind januari.",
+    "en": "The horse parade is on Sunday, January 24, the children's parade on January 31, the Gran Marcha on Sunday, February 7 and the closing parade with King Momo's farewell on Tuesday, February 9, 2027. The Tumba Festival is in late January."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is Seú?",
+    "en": "What is Seú?"
+   },
+   "a": {
+    "nl": "Seú is het oogstfeest van Curaçao met traditionele dans, zang en kostuums. De grote Marcha di Seú trekt op tweede paasdag door Willemstad (2026: 40 groepen); een week later volgt een parade in Bandabou.",
+    "en": "Seú is Curaçao's harvest festival with traditional dance, song and costumes. The big Marcha di Seú moves through Willemstad on Easter Monday (40 groups in 2026), and a parade in Bandabou follows about a week later."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wanneer is North Sea Jazz op Curaçao?",
+    "en": "When is Curaçao North Sea Jazz?"
+   },
+   "a": {
+    "nl": "De editie van 2026 was van 3 tot en met 5 september bij het World Trade Center in Piscadera. Een dagkaart kostte in 2025 $195, een 3-daagse kaart in 2026 €370. De data voor 2027 zijn nog niet bekend.",
+    "en": "The 2026 edition ran September 3 to 5 at the World Trade Center in Piscadera. A day ticket cost $195 in 2025 and a three-day pass €370 in 2026. 2027 dates haven't been announced yet."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke grote evenementen zijn er per maand?",
+    "en": "What are the biggest events by month?"
+   },
+   "a": {
+    "nl": "Januari: Fuikdag en Tumba Festival. Februari: carnaval. Maart/april: Seú, BlueSeas, filmfestival en Koningsdag. Mei: golf Pro-Am. Juli: Emancipatiedag en Vlagdag. Augustus: Tula-dag en Kaya Kaya. September: North Sea Jazz. Oktober: Pride en Curaçao-dag. November: KLM Marathon. December: pagara's en oud en nieuw.",
+    "en": "January: Fuik Day and the Tumba Festival. February: Carnival. March/April: Seú, BlueSeas, the film festival and King's Day. May: golf Pro-Am. July: Emancipation Day and Flag Day. August: Tula Day and Kaya Kaya. September: North Sea Jazz. October: Pride and Curaçao Day. November: KLM Marathon. December: pagaras and New Year's Eve."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is er elke week te doen op Curaçao?",
+    "en": "What's on every week in Curaçao?"
+   },
+   "a": {
+    "nl": "Donderdag: Punda Vibes vanaf 17.00 uur met vuurwerk om 20.15 uur, en salsa bij Mundo Bizarro. Vrijdag en zondag: Wet & Wild op Mambo Beach. Zaterdag: Zanzibar op Jan Thiel. Zondagmiddag: Sunday Funday bij Kokomo Beach.",
+    "en": "Thursday: Punda Vibes from 5 p.m. with fireworks at 8:15 p.m., plus salsa at Mundo Bizarro. Friday and Sunday: Wet & Wild at Mambo Beach. Saturday: Zanzibar at Jan Thiel. Sunday afternoon: Sunday Funday at Kokomo Beach."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is Fuikdag?",
+    "en": "What is Fuik Day?"
+   },
+   "a": {
+    "nl": "Een groot bootfeest in de Fuikbaai op de eerste zondag van januari, in 2027 op 3 januari. Je hebt een plek op een boot nodig; een plek op een catamaran met open bar kost rond $350.",
+    "en": "A big boat party in Fuik Bay on the first Sunday of January, January 3 in 2027. You need a spot on a boat; a catamaran spot with an open bar costs around $350."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is carnaval op Curaçao gratis?",
+    "en": "Is Curaçao Carnival free?"
+   },
+   "a": {
+    "nl": "Ja, kijken langs de route van de parades is gratis. Wie zelf wil meelopen, betaalt een carnavalsgroep vanaf ongeveer $850 inclusief kostuum.",
+    "en": "Yes, watching the parades from the route is free. If you want to walk in one, a carnival group charges from about $850 including costume."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke evenementen zijn leuk met kinderen?",
+    "en": "Which events are good with kids?"
+   },
+   "a": {
+    "nl": "De kinderparade en paardenparade tijdens carnaval, Seú op tweede paasdag, Koningsdag in Otrobanda met een kinderhoek op Brionplein, het 10/10-feest in Punda en Punda Vibes op donderdag.",
+    "en": "The children's parade and horse parade at carnival, Seú on Easter Monday, King's Day in Otrobanda with a kids' area on Brionplein, the 10/10 party in Punda and Punda Vibes on Thursdays."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe vier je oud en nieuw op Curaçao?",
+    "en": "How do people celebrate New Year's Eve in Curaçao?"
+   },
+   "a": {
+    "nl": "Met pagara's: lange slingers vuurwerk die overdag worden afgestoken, onder meer in Pietermaai om 14.00 uur met een straatfeest erna. Op 30 december is er een grote vuurwerkshow bij Kooyman in Zeelandia, en op 3 januari 2027 volgt Fuikdag.",
+    "en": "With pagaras: long strings of firecrackers set off by day, including in Pietermaai at 2 p.m. followed by a street party. There is a big fireworks show at Kooyman in Zeelandia on December 30, and Fuik Day follows on January 3, 2027."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "evenementen curaçao",
+   "carnaval curaçao 2027",
+   "curaçao agenda",
+   "seú curaçao",
+   "fuikdag",
+   "north sea jazz curaçao",
+   "punda vibes",
+   "feestdagen curaçao"
+  ],
+  "en": [
+   "curacao events",
+   "curacao carnival 2027",
+   "things to do in curacao this week",
+   "curacao north sea jazz",
+   "fuik day curacao",
+   "curacao festivals",
+   "punda vibes"
+  ],
+  "es": [
+   "eventos curazao",
+   "carnaval de curazao 2027",
+   "curaçao north sea jazz",
+   "festivales en curazao"
+  ],
+  "pt": [
+   "eventos curaçao",
+   "carnaval curaçao",
+   "festivais em curaçao"
+  ],
+  "de": [
+   "curaçao veranstaltungen",
+   "karneval curaçao",
+   "curaçao festivals",
+   "curaçao feiertage"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Wanneer is het carnaval op Curaçao in 2027 en wat moet ik zien?",
+   "Welke feesten en festivals zijn er op Curaçao als ik in april ga?",
+   "Wat is er elke week te doen op Curaçao, zoals Punda Vibes?"
+  ],
+  "en": [
+   "When is Curaçao Carnival 2027 and which parades should I see?",
+   "What festivals happen in Curaçao in September?",
+   "What weekly parties and events are there in Curaçao?"
+  ]
+ },
+ "talen": [
+  "nl",
+  "en"
+ ]
+}
