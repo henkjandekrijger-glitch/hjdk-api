@@ -21,6 +21,7 @@ De overdracht is de complete werking en stand (Henkjan 19 okt: "Zorg dat op verc
 ## Per onderdeel
 
 - Werk je aan de Yoors Shop-campagnes (api/shop.js, lib/shop*.js, Babita's pagina, de PropellerAds-lus voor SHOP-LUS)? Lees eerst `OVERDRACHT-YOORS-SHOP.md` en werk hem in dezelfde beurt bij: stand goedzetten en één regel in het logboek (nieuwste bovenaan). Live te lezen op https://hjdk-api-henq.vercel.app/api/shop/overdracht.
+- Werk je aan keuzehulpen (keuzehulp.best, whichtobuy.best, kaufberater.best), vindbaarheid in Google/Bing of vermeldingen in AI-assistenten? Volg de skill in `.claude/skills/zicht-seo-llm/SKILL.md` (ook live: https://hjdk-api-henq.vercel.app/api/zicht?op=skill) en lees eerst de levende overdracht https://hjdk-api-henq.vercel.app/api/kz?op=overdracht. Werk in dezelfde commit het logboek in `lib/overdracht-kz-tekst.js` bij. Wijzig je de werkwijze, pas dan de skill in de repo aan: die is de bron, niet een Claude-account.
 - Werk je aan Clickmind? De overdracht daarvan bouwt zichzelf op uit `lib/overdracht.js` (https://hjdk-api-henq.vercel.app/api/mm/overdracht); zet nieuwe vaste kennis daar.
 - Werk je aan de Amazon-blanket, Mondiad of CTR-tests? Vaste kennis in `lib/handover.js` en in de skill campagnes-henkjan.
 

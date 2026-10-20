@@ -18,6 +18,7 @@ import { vraagAI, gapScan } from '../lib/zicht.js';
 import { lessen, draaiboek, stand, voegLesToe, nieuweProef, verwerkUitkomst, zetSite, ronde, meet, sites, DAY } from '../lib/zicht.js';
 import { organicStatus } from '../lib/organic.js';
 import { OVERDRACHT_ZICHT } from '../lib/overdracht-zicht.js';
+import { leesSkill } from '../lib/skills.js';
 
 const mag = req => { const q = req.query || {}; const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''); const given = [q.token, req.headers['x-hjdk-token'], bearer].filter(Boolean);
   const ok = [process.env.ZICHT_TOKEN, process.env.GADS_TOKEN, process.env.HJDK_TOKEN].filter(Boolean); return given.some(g => ok.includes(g)) || /vercel-cron/i.test(String(req.headers['user-agent'] || '')); };
@@ -30,6 +31,7 @@ export default async function handler(req, res) {
   const oidc = req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN;
   try {
     if (op === 'overdracht') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(OVERDRACHT_ZICHT); }
+    if (op === 'skill') { const t = leesSkill(q.naam || 'zicht-seo-llm'); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return t ? res.status(200).send(t) : res.status(404).send('skill niet gevonden'); }
     if (op === 'draaiboek' || op === 'playbook') {
       const db = await draaiboek(q.site, q.kanaal); const n = Math.min(Number(q.n) || 40, 100);
       if (q.t) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send('Draaiboek vindbaarheid en AI-vermeldingen (' + DAY() + (q.site ? ', site ' + q.site : '') + '). Hoogste score eerst; score = kans dat het werkt (voorkennis + eigen proeven) x effect / moeite.\nToegepast? Meld het: POST /api/zicht?op=proef. Nieuw inzicht? POST /api/zicht?op=les. Uitleg: /api/zicht?op=overdracht\n\n' + tekst(db.slice(0, n))); }
