@@ -3,35 +3,56 @@
  "peildatum": "2026-10-20",
  "onderwerp": {
   "nl": "excursie",
-  "en": "excursion"
+  "en": "excursion",
+  "de": "Ausflug",
+  "es": "excursión",
+  "pt": "passeio"
  },
  "h1": {
   "nl": "Excursies op Curaçao: welke tour past bij jou?",
-  "en": "Curaçao excursions: which tour is right for you?"
+  "en": "Curaçao excursions: which tour is right for you?",
+  "de": "Ausflüge auf Curaçao: Welche Tour passt zu dir?",
+  "es": "Excursiones en Curazao: ¿qué tour es el indicado para ti?",
+  "pt": "Passeios em Curaçao: qual deles combina com você?"
  },
  "titel": {
   "nl": "Excursies Curaçao vergelijken: {n} tours met prijzen en scores",
-  "en": "Curaçao Excursions Compared: {n} Tours, Prices and Ratings"
+  "en": "Curaçao Excursions Compared: {n} Tours, Prices and Ratings",
+  "de": "Ausflüge auf Curaçao im Vergleich: {n} Touren, Preise und Bewertungen",
+  "es": "Excursiones en Curazao comparadas: {n} tours, precios y calificaciones",
+  "pt": "Passeios em Curaçao comparados: {n} passeios, preços e avaliações"
  },
  "metaDesc": {
   "nl": "{n} excursies op Curaçao naast elkaar: Klein Curaçao, schildpadden, catamaran, jeep en quad. Prijzen per persoon en reviewscores.",
-  "en": "{n} Curaçao tours side by side: Klein Curaçao, sea turtles, catamarans, jeep and ATV. Prices per person and review scores."
+  "en": "{n} Curaçao tours side by side: Klein Curaçao, sea turtles, catamarans, jeep and ATV. Prices per person and review scores.",
+  "de": "{n} Touren auf Curaçao im Vergleich: Klein Curaçao, Meeresschildkröten, Katamarane, Jeep und Quad. Preise pro Person und Bewertungen.",
+  "es": "{n} tours de Curazao lado a lado: Klein Curazao, tortugas marinas, catamaranes, jeep y cuatrimoto. Precios por persona y calificaciones.",
+  "pt": "{n} passeios em Curaçao lado a lado: Klein Curaçao, tartarugas-marinhas, catamarãs, jipe e quadriciclo. Preços por pessoa e notas das avaliações."
  },
  "kort": {
   "nl": "We vergeleken {n} excursies op Curaçao. Een dagtocht naar Klein Curaçao kost $135 tot $170 per persoon; Powerboat Caribbean is het snelst (40 tot 45 minuten varen, 4,9 op Tripadvisor) en Irie Tours en BlueFinn ($140) varen vrijwel dagelijks met open bar. Snorkelen met schildpadden kan vanaf $75, een zonsondergangtocht vanaf $75 en een stadswandeling vanaf $33.",
-  "en": "We compared {n} Curaçao excursions. A Klein Curaçao day trip runs $135 to $170 per person; Powerboat Caribbean is the fastest (40 to 45 minutes each way, 4.9 on Tripadvisor), while Irie Tours and BlueFinn ($140) sail almost daily with an open bar. Turtle snorkel tours start at $75, sunset sails at $75 and a Willemstad walking tour at $33."
+  "en": "We compared {n} Curaçao excursions. A Klein Curaçao day trip runs $135 to $170 per person; Powerboat Caribbean is the fastest (40 to 45 minutes each way, 4.9 on Tripadvisor), while Irie Tours and BlueFinn ($140) sail almost daily with an open bar. Turtle snorkel tours start at $75, sunset sails at $75 and a Willemstad walking tour at $33.",
+  "de": "Wir haben {n} Ausflüge auf Curaçao verglichen. Ein Tagesausflug nach Klein Curaçao kostet $135 bis $170 pro Person; Powerboat Caribbean ist am schnellsten (40 bis 45 Minuten pro Strecke, 4.9 bei Tripadvisor), während Irie Tours und BlueFinn ($140) fast täglich mit offener Bar fahren. Schildkröten-Schnorcheltouren beginnen bei $75, Sonnenuntergangsfahrten bei $75 und ein Stadtrundgang durch Willemstad bei $33.",
+  "es": "Comparamos {n} excursiones en Curazao. Una excursión de un día a Klein Curazao cuesta de $135 a $170 por persona; Powerboat Caribbean es la más rápida (40 a 45 minutos por trayecto, 4.9 en Tripadvisor), mientras que Irie Tours y BlueFinn ($140) navegan casi todos los días con barra libre. Los tours de snorkel con tortugas empiezan en $75, los paseos al atardecer en $75 y un recorrido a pie por Willemstad en $33.",
+  "pt": "Comparamos {n} passeios em Curaçao. Um bate-volta a Klein Curaçao custa de $135 a $170 por pessoa; o Powerboat Caribbean é o mais rápido (40 a 45 minutos por trecho, 4.9 no Tripadvisor), enquanto Irie Tours e BlueFinn ($140) saem quase todos os dias com open bar. Passeios de snorkel com tartarugas começam em $75, passeios ao pôr do sol em $75 e uma caminhada por Willemstad em $33."
  },
  "vragen": [
   {
    "q": {
     "nl": "Wat voor uitje zoek je?",
-    "en": "What kind of outing are you looking for?"
+    "en": "What kind of outing are you looking for?",
+    "de": "Was für einen Ausflug suchst du?",
+    "es": "¿Qué tipo de salida buscas?",
+    "pt": "Que tipo de passeio você procura?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "No preference"
+      "en": "No preference",
+      "de": "Keine Vorliebe",
+      "es": "Sin preferencia",
+      "pt": "Sem preferência"
      },
      "plus": [],
      "min": [],
@@ -40,7 +61,10 @@
     {
      "label": {
       "nl": "Dagtocht naar Klein Curaçao",
-      "en": "Day trip to Klein Curaçao"
+      "en": "Day trip to Klein Curaçao",
+      "de": "Tagesausflug nach Klein Curaçao",
+      "es": "Excursión de un día a Klein Curazao",
+      "pt": "Bate-volta a Klein Curaçao"
      },
      "plus": [
       "klein-curacao"
@@ -51,7 +75,10 @@
     {
      "label": {
       "nl": "Snorkelen met schildpadden",
-      "en": "Snorkeling with sea turtles"
+      "en": "Snorkeling with sea turtles",
+      "de": "Schnorcheln mit Meeresschildkröten",
+      "es": "Snorkel con tortugas marinas",
+      "pt": "Snorkel com tartarugas-marinhas"
      },
      "plus": [
       "schildpadden",
@@ -63,7 +90,10 @@
     {
      "label": {
       "nl": "Zonsondergang of feest op het water",
-      "en": "Sunset or party on the water"
+      "en": "Sunset or party on the water",
+      "de": "Sonnenuntergang oder Party auf dem Wasser",
+      "es": "Atardecer o fiesta en el agua",
+      "pt": "Pôr do sol ou festa na água"
      },
      "plus": [
       "zonsondergang",
@@ -75,7 +105,10 @@
     {
      "label": {
       "nl": "Jeep, quad of buggy",
-      "en": "Jeep, ATV or buggy"
+      "en": "Jeep, ATV or buggy",
+      "de": "Jeep, Quad oder Buggy",
+      "es": "Jeep, cuatrimoto o buggy",
+      "pt": "Jipe, quadriciclo ou buggy"
      },
      "plus": [
       "offroad",
@@ -87,7 +120,10 @@
     {
      "label": {
       "nl": "Stad, cultuur en dieren",
-      "en": "City, culture and animals"
+      "en": "City, culture and animals",
+      "de": "Stadt, Kultur und Tiere",
+      "es": "Ciudad, cultura y animales",
+      "pt": "Cidade, cultura e animais"
      },
      "plus": [
       "stadstour",
@@ -103,13 +139,19 @@
   {
    "q": {
     "nl": "Met wie ga je?",
-    "en": "Who's coming along?"
+    "en": "Who's coming along?",
+    "de": "Wer kommt mit?",
+    "es": "¿Quiénes van?",
+    "pt": "Quem vai junto?"
    },
    "opties": [
     {
      "label": {
       "nl": "Met z'n tweeën of vrienden",
-      "en": "Couple or friends"
+      "en": "Couple or friends",
+      "de": "Paar oder Freunde",
+      "es": "Pareja o amigos",
+      "pt": "Casal ou amigos"
      },
      "plus": [],
      "min": [],
@@ -118,7 +160,10 @@
     {
      "label": {
       "nl": "Gezin met kinderen",
-      "en": "Family with kids"
+      "en": "Family with kids",
+      "de": "Familie mit Kindern",
+      "es": "Familia con niños",
+      "pt": "Família com crianças"
      },
      "plus": [
       "kinderen"
@@ -132,7 +177,10 @@
     {
      "label": {
       "nl": "Cruisepassagier, beperkte tijd",
-      "en": "Cruise passenger with limited time"
+      "en": "Cruise passenger with limited time",
+      "de": "Kreuzfahrtgast mit wenig Zeit",
+      "es": "Pasajero de crucero con poco tiempo",
+      "pt": "Passageiro de cruzeiro com pouco tempo"
      },
      "plus": [
       "cruise-gast",
@@ -147,7 +195,10 @@
     {
      "label": {
       "nl": "Groep die feest wil",
-      "en": "Group looking to party"
+      "en": "Group looking to party",
+      "de": "Gruppe, die feiern will",
+      "es": "Grupo que quiere fiesta",
+      "pt": "Grupo que quer festa"
      },
      "plus": [
       "feest",
@@ -161,13 +212,19 @@
   {
    "q": {
     "nl": "Wat weegt het zwaarst?",
-    "en": "What matters most?"
+    "en": "What matters most?",
+    "de": "Was ist dir am wichtigsten?",
+    "es": "¿Qué es lo más importante para ti?",
+    "pt": "O que é mais importante para você?"
    },
    "opties": [
     {
      "label": {
       "nl": "Beste reviews",
-      "en": "Best reviews"
+      "en": "Best reviews",
+      "de": "Beste Bewertungen",
+      "es": "Mejores calificaciones",
+      "pt": "Melhores avaliações"
      },
      "plus": [],
      "min": [],
@@ -176,7 +233,10 @@
     {
      "label": {
       "nl": "Laagste prijs",
-      "en": "Lowest price"
+      "en": "Lowest price",
+      "de": "Niedrigster Preis",
+      "es": "Precio más bajo",
+      "pt": "Menor preço"
      },
      "plus": [
       "budget"
@@ -187,7 +247,10 @@
     {
      "label": {
       "nl": "Kleine groep",
-      "en": "Small group"
+      "en": "Small group",
+      "de": "Kleine Gruppe",
+      "es": "Grupo pequeño",
+      "pt": "Grupo pequeno"
      },
      "plus": [
       "kleine-groep"
@@ -198,7 +261,10 @@
     {
      "label": {
       "nl": "Eten en drinken inbegrepen",
-      "en": "Food and drinks included"
+      "en": "Food and drinks included",
+      "de": "Essen und Getränke inklusive",
+      "es": "Comida y bebidas incluidas",
+      "pt": "Comida e bebida incluídas"
      },
      "plus": [
       "eten-inbegrepen"
@@ -211,13 +277,19 @@
   {
    "q": {
     "nl": "Hoe lang mag het duren, en word je snel zeeziek?",
-    "en": "How long, and do you get seasick?"
+    "en": "How long, and do you get seasick?",
+    "de": "Wie lange, und wirst du leicht seekrank?",
+    "es": "¿Cuánto tiempo y te mareas fácilmente?",
+    "pt": "Quanto tempo e você enjoa fácil no mar?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "No preference"
+      "en": "No preference",
+      "de": "Keine Vorliebe",
+      "es": "Sin preferencia",
+      "pt": "Sem preferência"
      },
      "plus": [],
      "min": [],
@@ -226,7 +298,10 @@
     {
      "label": {
       "nl": "Halve dag",
-      "en": "Half day"
+      "en": "Half day",
+      "de": "Halber Tag",
+      "es": "Medio día",
+      "pt": "Meio dia"
      },
      "plus": [
       "halve-dag"
@@ -239,7 +314,10 @@
     {
      "label": {
       "nl": "Hele dag",
-      "en": "Full day"
+      "en": "Full day",
+      "de": "Ganzer Tag",
+      "es": "Día completo",
+      "pt": "Dia inteiro"
      },
      "plus": [
       "hele-dag"
@@ -250,7 +328,10 @@
     {
      "label": {
       "nl": "Ik word snel zeeziek",
-      "en": "I get seasick easily"
+      "en": "I get seasick easily",
+      "de": "Ich werde leicht seekrank",
+      "es": "Me mareo fácilmente",
+      "pt": "Enjoo com facilidade"
      },
      "plus": [
       "korte-overtocht",
@@ -272,7 +353,10 @@
    "url": null,
    "soort": {
     "nl": "catamaran",
-    "en": "catamaran"
+    "en": "catamaran",
+    "de": "Katamaran",
+    "es": "catamarán",
+    "pt": "catamarã"
    },
    "plaats": "Jan Thiel (Zanzibar) / Mood Beach",
    "tags": [
@@ -290,7 +374,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
     "datum": "2026-10"
@@ -298,19 +385,31 @@
    "feiten": [
     {
      "nl": "Ongeveer 8 uur",
-     "en": "About 8 hours"
+     "en": "About 8 hours",
+     "de": "Etwa 8 Stunden",
+     "es": "Unas 8 horas",
+     "pt": "Cerca de 8 horas"
     },
     {
      "nl": "Open bar vanaf 12:30",
-     "en": "Open bar from 12:30"
+     "en": "Open bar from 12:30",
+     "de": "Offene Bar ab 12:30",
+     "es": "Barra libre desde las 12:30",
+     "pt": "Open bar a partir das 12h30"
     },
     {
      "nl": "Geen strandhuis, wel palapa's",
-     "en": "No beach house, palapas available"
+     "en": "No beach house, palapas available",
+     "de": "Kein Strandhaus, Palapas vorhanden",
+     "es": "Sin casa de playa, hay palapas",
+     "pt": "Sem casa de praia, há palapas"
     },
     {
      "nl": "Transfer $19 extra",
-     "en": "Transfer $19 extra"
+     "en": "Transfer $19 extra",
+     "de": "Transfer $19 extra",
+     "es": "Traslado $19 extra",
+     "pt": "Traslado $19 extra"
     }
    ],
    "scores": [
@@ -341,6 +440,21 @@
      "Friendly crew and a good BBQ lunch",
      "Relaxed vibe and good music on board",
      "Works well for families with kids"
+    ],
+    "de": [
+     "Freundliche Crew und ein gutes BBQ-Mittagessen",
+     "Entspannte Stimmung und gute Musik an Bord",
+     "Passt gut für Familien mit Kindern"
+    ],
+    "es": [
+     "Tripulación amable y un buen almuerzo de BBQ",
+     "Ambiente relajado y buena música a bordo",
+     "Funciona bien para familias con niños"
+    ],
+    "pt": [
+     "Tripulação simpática e um bom almoço de churrasco",
+     "Clima descontraído e boa música a bordo",
+     "Funciona bem para famílias com crianças"
     ]
    },
    "tegen": {
@@ -351,6 +465,18 @@
     "en": [
      "Crossing takes close to two hours, seasickness is common",
      "Meeting point instructions can be confusing"
+    ],
+    "de": [
+     "Die Überfahrt dauert fast zwei Stunden, Seekrankheit ist häufig",
+     "Die Hinweise zum Treffpunkt können verwirrend sein"
+    ],
+    "es": [
+     "La travesía dura casi dos horas, los mareos son comunes",
+     "Las indicaciones del punto de encuentro pueden ser confusas"
+    ],
+    "pt": [
+     "A travessia leva quase duas horas, e enjoo é comum",
+     "As instruções do ponto de encontro podem confundir"
     ]
    },
    "bronnen": [
@@ -366,7 +492,10 @@
    "url": null,
    "soort": {
     "nl": "catamaran",
-    "en": "catamaran"
+    "en": "catamaran",
+    "de": "Katamaran",
+    "es": "catamarán",
+    "pt": "catamarã"
    },
    "plaats": "Mood Beach (Bapor Kibra)",
    "tags": [
@@ -382,7 +511,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
     "datum": "2026-10"
@@ -390,15 +522,24 @@
    "feiten": [
     {
      "nl": "Alleen op maandag",
-     "en": "Mondays only"
+     "en": "Mondays only",
+     "de": "Nur montags",
+     "es": "Solo los lunes",
+     "pt": "Só às segundas"
     },
     {
      "nl": "Vertrek 11:00",
-     "en": "Departs 11:00 a.m."
+     "en": "Departs 11:00 a.m.",
+     "de": "Abfahrt 11:00 Uhr",
+     "es": "Salida a las 11:00 a. m.",
+     "pt": "Saída às 11h"
     },
     {
      "nl": "Open bar en BBQ",
-     "en": "Open bar and BBQ"
+     "en": "Open bar and BBQ",
+     "de": "Offene Bar und BBQ",
+     "es": "Barra libre y BBQ",
+     "pt": "Open bar e churrasco"
     }
    ],
    "scores": [
@@ -419,6 +560,18 @@
     "en": [
      "Klein Curaçao and a sunset sail in one day",
      "Later start, no early morning"
+    ],
+    "de": [
+     "Klein Curaçao und eine Sonnenuntergangsfahrt an einem Tag",
+     "Späterer Start, kein frühes Aufstehen"
+    ],
+    "es": [
+     "Klein Curazao y un paseo al atardecer en un solo día",
+     "Salida más tarde, sin madrugar"
+    ],
+    "pt": [
+     "Klein Curaçao e um passeio ao pôr do sol no mesmo dia",
+     "Saída mais tarde, sem acordar cedo"
     ]
    },
    "tegen": {
@@ -427,6 +580,15 @@
     ],
     "en": [
      "Fills up fast and only runs Mondays"
+    ],
+    "de": [
+     "Ist schnell ausgebucht und fährt nur montags"
+    ],
+    "es": [
+     "Se llena rápido y solo sale los lunes"
+    ],
+    "pt": [
+     "Lota rápido e só sai às segundas"
     ]
    },
    "bronnen": [
@@ -441,7 +603,10 @@
    "url": null,
    "soort": {
     "nl": "catamaran",
-    "en": "catamaran"
+    "en": "catamaran",
+    "de": "Katamaran",
+    "es": "catamarán",
+    "pt": "catamarã"
    },
    "plaats": "Caracasbaai",
    "tags": [
@@ -457,7 +622,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d19406505-Klein_Curacao_Adventure_Day_Trip-Curacao.html",
     "datum": "2026-10"
@@ -465,15 +633,24 @@
    "feiten": [
     {
      "nl": "Vaart dagelijks",
-     "en": "Sails daily"
+     "en": "Sails daily",
+     "de": "Fährt täglich",
+     "es": "Sale todos los días",
+     "pt": "Sai todos os dias"
     },
     {
      "nl": "Ontbijt, BBQ en open bar",
-     "en": "Breakfast, BBQ and open bar"
+     "en": "Breakfast, BBQ and open bar",
+     "de": "Frühstück, BBQ und offene Bar",
+     "es": "Desayuno, BBQ y barra libre",
+     "pt": "Café da manhã, churrasco e open bar"
     },
     {
      "nl": "Ongeveer 9 uur",
-     "en": "About 9 hours"
+     "en": "About 9 hours",
+     "de": "Etwa 9 Stunden",
+     "es": "Unas 9 horas",
+     "pt": "Cerca de 9 horas"
     }
    ],
    "scores": [
@@ -504,6 +681,21 @@
      "Friendly, upbeat crew",
      "Plenty of food and drinks, alcohol included",
      "Departs every day, easy to fit in"
+    ],
+    "de": [
+     "Freundliche, gut gelaunte Crew",
+     "Viel Essen und Getränke, Alkohol inklusive",
+     "Fährt jeden Tag, lässt sich leicht einplanen"
+    ],
+    "es": [
+     "Tripulación amable y animada",
+     "Mucha comida y bebida, alcohol incluido",
+     "Sale todos los días, fácil de incluir en el plan"
+    ],
+    "pt": [
+     "Tripulação simpática e animada",
+     "Muita comida e bebida, álcool incluído",
+     "Sai todos os dias, fácil de encaixar na viagem"
     ]
    },
    "tegen": {
@@ -516,6 +708,21 @@
      "Loud music on board",
      "Rowdy fellow passengers on some trips",
      "Long day and no beach house"
+    ],
+    "de": [
+     "Laute Musik an Bord",
+     "Bei manchen Fahrten laute Mitreisende",
+     "Langer Tag und kein Strandhaus"
+    ],
+    "es": [
+     "Música alta a bordo",
+     "En algunos viajes, pasajeros escandalosos",
+     "Día largo y sin casa de playa"
+    ],
+    "pt": [
+     "Música alta a bordo",
+     "Em algumas saídas, passageiros barulhentos",
+     "Dia longo e sem casa de praia"
     ]
    },
    "bronnen": [
@@ -531,7 +738,10 @@
    "url": null,
    "soort": {
     "nl": "motorjacht met strandhuis",
-    "en": "motor yacht with beach house"
+    "en": "motor yacht with beach house",
+    "de": "Motoryacht mit Strandhaus",
+    "es": "yate a motor con casa de playa",
+    "pt": "iate a motor com casa de praia"
    },
    "plaats": "Santa Barbara Beach",
    "tags": [
@@ -548,7 +758,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.mycuracaoguide.com/klein-curacao",
     "datum": "2026-10"
@@ -556,19 +769,31 @@
    "feiten": [
     {
      "nl": "Strandhuis met ligbedden en douche",
-     "en": "Beach house, loungers and shower"
+     "en": "Beach house, loungers and shower",
+     "de": "Strandhaus, Liegen und Dusche",
+     "es": "Casa de playa, tumbonas y ducha",
+     "pt": "Casa de praia, espreguiçadeiras e chuveiro"
     },
     {
      "nl": "Alcohol doordeweeks extra",
-     "en": "Alcohol extra on weekdays"
+     "en": "Alcohol extra on weekdays",
+     "de": "Alkohol werktags extra",
+     "es": "Alcohol aparte entre semana",
+     "pt": "Álcool à parte nos dias úteis"
     },
     {
      "nl": "Weekend Supreme: $170 inclusief alcohol",
-     "en": "Weekend Supreme: $170 with alcohol"
+     "en": "Weekend Supreme: $170 with alcohol",
+     "de": "Weekend Supreme: $170 mit Alkohol",
+     "es": "Weekend Supreme: $170 con alcohol",
+     "pt": "Weekend Supreme: $170 com álcool"
     },
     {
      "nl": "Overtocht ongeveer 1 uur",
-     "en": "Crossing about 1 hour"
+     "en": "Crossing about 1 hour",
+     "de": "Überfahrt etwa 1 Stunde",
+     "es": "Travesía de aproximadamente 1 hora",
+     "pt": "Travessia de cerca de 1 hora"
     }
    ],
    "scores": [
@@ -599,6 +824,21 @@
      "Helpful crew, also when people get seasick",
      "Good beach setup with shade, loungers and restrooms",
      "Tasty breakfast and lunch"
+    ],
+    "de": [
+     "Hilfsbereite Crew, auch bei Seekrankheit",
+     "Gute Strandausstattung mit Schatten, Liegen und Toiletten",
+     "Leckeres Frühstück und Mittagessen"
+    ],
+    "es": [
+     "Tripulación servicial, también cuando alguien se marea",
+     "Buena instalación en la playa con sombra, tumbonas y baños",
+     "Desayuno y almuerzo sabrosos"
+    ],
+    "pt": [
+     "Tripulação prestativa, inclusive com quem enjoa",
+     "Boa estrutura na praia, com sombra, espreguiçadeiras e banheiros",
+     "Café da manhã e almoço gostosos"
     ]
    },
    "tegen": {
@@ -611,6 +851,21 @@
      "Confusion over which drinks cost extra",
      "Crowded, with up to 70 guests",
      "Smaller replacement boat used during maintenance"
+    ],
+    "de": [
+     "Unklarheit, welche Getränke extra kosten",
+     "Voll, mit bis zu 70 Gästen",
+     "Kleineres Ersatzboot während der Wartung"
+    ],
+    "es": [
+     "Confusión sobre qué bebidas se cobran aparte",
+     "Lleno, con hasta 70 pasajeros",
+     "Se usa un bote de reemplazo más pequeño durante el mantenimiento"
+    ],
+    "pt": [
+     "Confusão sobre quais bebidas são cobradas à parte",
+     "Lotado, com até 70 pessoas",
+     "Barco reserva menor durante a manutenção"
     ]
    },
    "bronnen": [
@@ -627,7 +882,10 @@
    "url": null,
    "soort": {
     "nl": "motorschip met strandhuis",
-    "en": "motor vessel with beach house"
+    "en": "motor vessel with beach house",
+    "de": "Motorschiff mit Strandhaus",
+    "es": "embarcación a motor con casa de playa",
+    "pt": "embarcação a motor com casa de praia"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -644,7 +902,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d26130560-Klein_Curacao_Full_Day_Boat_Trip-Curacao.html",
     "datum": "2026-10"
@@ -652,19 +913,31 @@
    "feiten": [
     {
      "nl": "Vertrek 7:00, boarden 6:30",
-     "en": "Departs 7:00, boarding 6:30"
+     "en": "Departs 7:00, boarding 6:30",
+     "de": "Abfahrt 7:00 Uhr, Einschiffung 6:30 Uhr",
+     "es": "Salida a las 7:00, embarque a las 6:30",
+     "pt": "Saída às 7h, embarque às 6h30"
     },
     {
      "nl": "Strandhuis met ligstoelen",
-     "en": "Beach house with lounge chairs"
+     "en": "Beach house with lounge chairs",
+     "de": "Strandhaus mit Liegestühlen",
+     "es": "Casa de playa con sillas reclinables",
+     "pt": "Casa de praia com espreguiçadeiras"
     },
     {
      "nl": "Cocktails $10 extra",
-     "en": "Cocktails $10 extra"
+     "en": "Cocktails $10 extra",
+     "de": "Cocktails $10 extra",
+     "es": "Cócteles $10 extra",
+     "pt": "Coquetéis $10 extra"
     },
     {
      "nl": "Tot 75 gasten",
-     "en": "Up to 75 guests"
+     "en": "Up to 75 guests",
+     "de": "Bis zu 75 Gäste",
+     "es": "Hasta 75 pasajeros",
+     "pt": "Até 75 pessoas"
     }
    ],
    "scores": [
@@ -695,6 +968,21 @@
      "Well-organized, friendly crew",
      "Plenty of breakfast, BBQ lunch and soft drinks",
      "Shade and lounge chairs on the island"
+    ],
+    "de": [
+     "Gut organisiert, freundliche Crew",
+     "Reichlich Frühstück, BBQ-Mittagessen und alkoholfreie Getränke",
+     "Schatten und Liegestühle auf der Insel"
+    ],
+    "es": [
+     "Bien organizado, tripulación amable",
+     "Mucho desayuno, almuerzo BBQ y bebidas sin alcohol",
+     "Sombra y sillas reclinables en la isla"
+    ],
+    "pt": [
+     "Bem organizado, tripulação simpática",
+     "Muito café da manhã, almoço de churrasco e refrigerantes",
+     "Sombra e espreguiçadeiras na ilha"
     ]
    },
    "tegen": {
@@ -707,6 +995,21 @@
      "Crossing of 1.5 to 2 hours, often rough",
      "Very early departure",
      "Recent complaints about cleanliness around the food"
+    ],
+    "de": [
+     "Überfahrt von 1.5 bis 2 Stunden, oft rau",
+     "Sehr frühe Abfahrt",
+     "Neuere Beschwerden über Sauberkeit rund um das Essen"
+    ],
+    "es": [
+     "Travesía de 1.5 a 2 horas, a menudo agitada",
+     "Salida muy temprano",
+     "Quejas recientes sobre la limpieza en torno a la comida"
+    ],
+    "pt": [
+     "Travessia de 1.5 a 2 horas, muitas vezes agitada",
+     "Saída muito cedo",
+     "Reclamações recentes sobre a limpeza na área da comida"
     ]
    },
    "bronnen": [
@@ -723,7 +1026,10 @@
    "url": null,
    "soort": {
     "nl": "speedboot",
-    "en": "powerboat"
+    "en": "powerboat",
+    "de": "Motorboot",
+    "es": "lancha",
+    "pt": "lancha"
    },
    "plaats": "Surfspot, Jan Thiel",
    "tags": [
@@ -740,7 +1046,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d16808309-Klein_Curacao_Powerboat_Adventure-Curacao.html",
     "datum": "2026-10"
@@ -748,19 +1057,31 @@
    "feiten": [
     {
      "nl": "Overtocht 40 tot 45 minuten",
-     "en": "Crossing 40 to 45 minutes"
+     "en": "Crossing 40 to 45 minutes",
+     "de": "Überfahrt 40 bis 45 Minuten",
+     "es": "Travesía de 40 a 45 minutos",
+     "pt": "Travessia de 40 a 45 minutos"
     },
     {
      "nl": "Maximaal 18 gasten",
-     "en": "Maximum 18 guests"
+     "en": "Maximum 18 guests",
+     "de": "Höchstens 18 Gäste",
+     "es": "Máximo 18 pasajeros",
+     "pt": "No máximo 18 pessoas"
     },
     {
      "nl": "Vanaf 6 jaar",
-     "en": "Ages 6 and up"
+     "en": "Ages 6 and up",
+     "de": "Ab 6 Jahren",
+     "es": "Desde los 6 años",
+     "pt": "A partir de 6 anos"
     },
     {
      "nl": "Bier en wijn inbegrepen",
-     "en": "Beer and wine included"
+     "en": "Beer and wine included",
+     "de": "Bier und Wein inklusive",
+     "es": "Cerveza y vino incluidos",
+     "pt": "Cerveja e vinho incluídos"
     }
    ],
    "scores": [
@@ -783,6 +1104,21 @@
      "Quick crossing leaves more time on the beach",
      "Less seasickness than on the big boats",
      "Good lunch and attentive guides"
+    ],
+    "de": [
+     "Die schnelle Überfahrt lässt mehr Zeit am Strand",
+     "Weniger Seekrankheit als auf den großen Booten",
+     "Gutes Mittagessen und aufmerksame Guides"
+    ],
+    "es": [
+     "La travesía rápida deja más tiempo en la playa",
+     "Menos mareos que en los barcos grandes",
+     "Buen almuerzo y guías atentos"
+    ],
+    "pt": [
+     "A travessia rápida deixa mais tempo na praia",
+     "Menos enjoo do que nos barcos grandes",
+     "Bom almoço e guias atenciosos"
     ]
    },
    "tegen": {
@@ -795,6 +1131,21 @@
      "The ride is bumpy and wet",
      "Little shade on the island",
      "Life jackets not required for adults"
+    ],
+    "de": [
+     "Die Fahrt ist holprig und nass",
+     "Wenig Schatten auf der Insel",
+     "Schwimmwesten für Erwachsene nicht vorgeschrieben"
+    ],
+    "es": [
+     "El trayecto es movido y mojado",
+     "Poca sombra en la isla",
+     "Los chalecos salvavidas no son obligatorios para adultos"
+    ],
+    "pt": [
+     "O trajeto é balançado e molhado",
+     "Pouca sombra na ilha",
+     "Colete salva-vidas não é obrigatório para adultos"
     ]
    },
    "bronnen": [
@@ -809,7 +1160,10 @@
    "url": null,
    "soort": {
     "nl": "catamaranjacht",
-    "en": "catamaran yacht"
+    "en": "catamaran yacht",
+    "de": "Katamaran-Yacht",
+    "es": "yate catamarán",
+    "pt": "iate catamarã"
    },
    "plaats": "Kima Kalki Marina, Spaanse Water",
    "tags": [
@@ -827,7 +1181,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon",
-     "en": "per person"
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
     },
     "bron": "https://naarcuracao.com/en/klein-curacao-best-trips-comparison",
     "datum": "2026-10"
@@ -835,15 +1192,24 @@
    "feiten": [
     {
      "nl": "Overdekt deel met airco",
-     "en": "Shaded, air-conditioned cabin"
+     "en": "Shaded, air-conditioned cabin",
+     "de": "Schattige, klimatisierte Kabine",
+     "es": "Cabina con sombra y aire acondicionado",
+     "pt": "Cabine com sombra e ar-condicionado"
     },
     {
      "nl": "Cocktails tegen betaling",
-     "en": "Cocktails cost extra"
+     "en": "Cocktails cost extra",
+     "de": "Cocktails kosten extra",
+     "es": "Los cócteles cuestan extra",
+     "pt": "Os coquetéis custam extra"
     },
     {
      "nl": "Geen ophaalservice",
-     "en": "No hotel pickup"
+     "en": "No hotel pickup",
+     "de": "Kein Hotelabholservice",
+     "es": "Sin recogida en el hotel",
+     "pt": "Sem busca no hotel"
     }
    ],
    "scores": [
@@ -866,6 +1232,21 @@
      "Attentive, warm crew",
      "Good breakfast and BBQ lunch",
      "Cool, shaded cabin"
+    ],
+    "de": [
+     "Aufmerksame, herzliche Crew",
+     "Gutes Frühstück und BBQ-Mittagessen",
+     "Kühle, schattige Kabine"
+    ],
+    "es": [
+     "Tripulación atenta y cálida",
+     "Buen desayuno y almuerzo BBQ",
+     "Cabina fresca y con sombra"
+    ],
+    "pt": [
+     "Tripulação atenciosa e acolhedora",
+     "Bom café da manhã e almoço de churrasco",
+     "Cabine fresca e com sombra"
     ]
    },
    "tegen": {
@@ -878,6 +1259,21 @@
      "Rough outbound crossing, some seasickness",
      "Not enough chairs and shade on the beach",
      "Cocktails cost extra"
+    ],
+    "de": [
+     "Raue Hinfahrt, etwas Seekrankheit",
+     "Zu wenige Stühle und zu wenig Schatten am Strand",
+     "Cocktails kosten extra"
+    ],
+    "es": [
+     "Ida agitada, algo de mareo",
+     "Faltan sillas y sombra en la playa",
+     "Los cócteles cuestan extra"
+    ],
+    "pt": [
+     "Ida agitada, algum enjoo",
+     "Faltam cadeiras e sombra na praia",
+     "Os coquetéis custam extra"
     ]
    },
    "bronnen": [
@@ -892,7 +1288,10 @@
    "url": null,
    "soort": {
     "nl": "motorjacht",
-    "en": "motor yacht"
+    "en": "motor yacht",
+    "de": "Motoryacht",
+    "es": "yate a motor",
+    "pt": "iate a motor"
    },
    "plaats": null,
    "tags": [
@@ -908,7 +1307,10 @@
     "valuta": "EUR",
     "eenheid": {
      "nl": "per persoon",
-     "en": "per person"
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
     },
     "bron": "https://klein-curacao.nl/en/klein-curacao-prices/",
     "datum": "2026-10"
@@ -916,15 +1318,24 @@
    "feiten": [
     {
      "nl": "Maximaal 30 personen",
-     "en": "Maximum 30 people"
+     "en": "Maximum 30 people",
+     "de": "Höchstens 30 Personen",
+     "es": "Máximo 30 personas",
+     "pt": "No máximo 30 pessoas"
     },
     {
      "nl": "Kinderen 50% korting",
-     "en": "Kids 50% off"
+     "en": "Kids 50% off",
+     "de": "Kinder 50% Rabatt",
+     "es": "Niños 50% de descuento",
+     "pt": "Crianças com 50% de desconto"
     },
     {
      "nl": "Ontbijt, BBQ en drankjes",
-     "en": "Breakfast, BBQ and drinks"
+     "en": "Breakfast, BBQ and drinks",
+     "de": "Frühstück, BBQ und Getränke",
+     "es": "Desayuno, BBQ y bebidas",
+     "pt": "Café da manhã, churrasco e bebidas"
     }
    ],
    "scores": [],
@@ -934,11 +1345,23 @@
     ],
     "en": [
      "Smaller group than the large Klein Curaçao boats"
+    ],
+    "de": [
+     "Kleinere Gruppe als auf den großen Klein-Curaçao-Booten"
+    ],
+    "es": [
+     "Grupo más pequeño que en los barcos grandes a Klein Curazao"
+    ],
+    "pt": [
+     "Grupo menor do que nos barcos grandes de Klein Curaçao"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://klein-curacao.nl/en/klein-curacao-prices/",
@@ -951,7 +1374,10 @@
    "url": null,
    "soort": {
     "nl": "busje met gids",
-    "en": "guided minibus"
+    "en": "guided minibus",
+    "de": "Geführte Tour im Minibus",
+    "es": "minibús con guía",
+    "pt": "minibus com guia"
    },
    "plaats": "Westpunt (ophalen bij hotel of cruiseterminal)",
    "tags": [
@@ -967,7 +1393,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
     "datum": "2026-10"
@@ -975,19 +1404,31 @@
    "feiten": [
     {
      "nl": "4,5 uur",
-     "en": "4.5 hours"
+     "en": "4.5 hours",
+     "de": "4.5 Stunden",
+     "es": "4.5 horas",
+     "pt": "4.5 horas"
     },
     {
      "nl": "Maximaal 13 personen",
-     "en": "Maximum 13 people"
+     "en": "Maximum 13 people",
+     "de": "Höchstens 13 Personen",
+     "es": "Máximo 13 personas",
+     "pt": "No máximo 13 pessoas"
     },
     {
      "nl": "Gratis onderwaterfoto's",
-     "en": "Free underwater photos"
+     "en": "Free underwater photos",
+     "de": "Kostenlose Unterwasserfotos",
+     "es": "Fotos submarinas gratis",
+     "pt": "Fotos subaquáticas grátis"
     },
     {
      "nl": "Lunch niet inbegrepen",
-     "en": "Lunch not included"
+     "en": "Lunch not included",
+     "de": "Mittagessen nicht inklusive",
+     "es": "Almuerzo no incluido",
+     "pt": "Almoço não incluído"
     }
    ],
    "scores": [
@@ -1010,6 +1451,21 @@
      "Guide knows a lot about the turtles",
      "Close turtle encounters, photos included",
      "Small group and a relaxed pace"
+    ],
+    "de": [
+     "Der Guide weiß viel über die Schildkröten",
+     "Nahe Begegnungen mit Schildkröten, Fotos inklusive",
+     "Kleine Gruppe und entspanntes Tempo"
+    ],
+    "es": [
+     "El guía sabe mucho sobre las tortugas",
+     "Encuentros cercanos con tortugas, fotos incluidas",
+     "Grupo pequeño y ritmo relajado"
+    ],
+    "pt": [
+     "O guia sabe muito sobre as tartarugas",
+     "Encontros de perto com tartarugas, fotos incluídas",
+     "Grupo pequeno e ritmo tranquilo"
     ]
    },
    "tegen": {
@@ -1020,6 +1476,18 @@
     "en": [
      "Rocky entry, water shoes needed",
      "Deep water, hard for weak swimmers"
+    ],
+    "de": [
+     "Felsiger Einstieg, Wasserschuhe nötig",
+     "Tiefes Wasser, schwierig für schwache Schwimmer"
+    ],
+    "es": [
+     "Entrada rocosa, se necesitan zapatos de agua",
+     "Agua profunda, difícil para quienes nadan poco"
+    ],
+    "pt": [
+     "Entrada rochosa, sapatilhas de água necessárias",
+     "Água funda, difícil para quem nada mal"
     ]
    },
    "bronnen": [
@@ -1033,7 +1501,10 @@
    "url": null,
    "soort": {
     "nl": "bustour",
-    "en": "bus tour"
+    "en": "bus tour",
+    "de": "Bustour",
+    "es": "tour en bus",
+    "pt": "passeio de ônibus"
    },
    "plaats": "ophalen bij hotel of cruiseterminal",
    "tags": [
@@ -1049,7 +1520,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
     "datum": "2026-10"
@@ -1057,15 +1531,24 @@
    "feiten": [
     {
      "nl": "4 tot 5 uur",
-     "en": "4 to 5 hours"
+     "en": "4 to 5 hours",
+     "de": "4 bis 5 Stunden",
+     "es": "4 a 5 horas",
+     "pt": "4 a 5 horas"
     },
     {
      "nl": "Vanaf 4 jaar",
-     "en": "Ages 4 and up"
+     "en": "Ages 4 and up",
+     "de": "Ab 4 Jahren",
+     "es": "Desde los 4 años",
+     "pt": "A partir de 4 anos"
     },
     {
      "nl": "Snorkel en vest inbegrepen",
-     "en": "Mask and vest included"
+     "en": "Mask and vest included",
+     "de": "Maske und Weste inklusive",
+     "es": "Máscara y chaleco incluidos",
+     "pt": "Máscara e colete incluídos"
     }
    ],
    "scores": [
@@ -1086,6 +1569,18 @@
     "en": [
      "Entertaining, informative guide",
      "Most guests see turtles"
+    ],
+    "de": [
+     "Unterhaltsamer, informativer Guide",
+     "Die meisten Gäste sehen Schildkröten"
+    ],
+    "es": [
+     "Guía entretenido e informativo",
+     "La mayoría de los pasajeros ve tortugas"
+    ],
+    "pt": [
+     "Guia divertido e informativo",
+     "A maioria dos passageiros vê tartarugas"
     ]
    },
    "tegen": {
@@ -1096,6 +1591,18 @@
     "en": [
      "Short time with the turtles and on the beach",
      "Bus problems and late pickups"
+    ],
+    "de": [
+     "Wenig Zeit bei den Schildkröten und am Strand",
+     "Probleme mit dem Bus und verspätete Abholung"
+    ],
+    "es": [
+     "Poco tiempo con las tortugas y en la playa",
+     "Problemas con el bus y recogidas tardías"
+    ],
+    "pt": [
+     "Pouco tempo com as tartarugas e na praia",
+     "Problemas com o ônibus e atrasos na busca"
     ]
    },
    "bronnen": [
@@ -1109,7 +1616,10 @@
    "url": null,
    "soort": {
     "nl": "bustour",
-    "en": "bus tour"
+    "en": "bus tour",
+    "de": "Bustour",
+    "es": "tour en bus",
+    "pt": "passeio de ônibus"
    },
    "plaats": "ophalen bij hotel of cruiseterminal",
    "tags": [
@@ -1125,7 +1635,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
     "datum": "2026-10"
@@ -1133,15 +1646,24 @@
    "feiten": [
     {
      "nl": "5 tot 6 uur",
-     "en": "5 to 6 hours"
+     "en": "5 to 6 hours",
+     "de": "5 bis 6 Stunden",
+     "es": "5 a 6 horas",
+     "pt": "5 a 6 horas"
     },
     {
      "nl": "Entree Hato-grotten inbegrepen",
-     "en": "Hato Caves entry included"
+     "en": "Hato Caves entry included",
+     "de": "Eintritt in die Hato Caves inklusive",
+     "es": "Entrada a las cuevas de Hato incluida",
+     "pt": "Entrada nas cavernas de Hato incluída"
     },
     {
      "nl": "Maximaal 42 personen",
-     "en": "Maximum 42 people"
+     "en": "Maximum 42 people",
+     "de": "Höchstens 42 Personen",
+     "es": "Máximo 42 personas",
+     "pt": "No máximo 42 pessoas"
     }
    ],
    "scores": [
@@ -1162,6 +1684,18 @@
     "en": [
      "Guides share a lot of island history",
      "Snorkeling with turtles is the highlight"
+    ],
+    "de": [
+     "Die Guides erzählen viel über die Geschichte der Insel",
+     "Schnorcheln mit Schildkröten ist das Highlight"
+    ],
+    "es": [
+     "Los guías cuentan mucho sobre la historia de la isla",
+     "El snorkel con tortugas es lo mejor"
+    ],
+    "pt": [
+     "Os guias contam muito sobre a história da ilha",
+     "O snorkel com tartarugas é o ponto alto"
     ]
    },
    "tegen": {
@@ -1172,6 +1706,18 @@
     "en": [
      "Last beach stop is often crowded",
      "A lot of time on the bus"
+    ],
+    "de": [
+     "Der letzte Strandstopp ist oft voll",
+     "Viel Zeit im Bus"
+    ],
+    "es": [
+     "La última parada en la playa suele estar llena",
+     "Mucho tiempo en el bus"
+    ],
+    "pt": [
+     "A última parada na praia costuma estar cheia",
+     "Muito tempo no ônibus"
     ]
    },
    "bronnen": [
@@ -1185,7 +1731,10 @@
    "url": null,
    "soort": {
     "nl": "snorkelboot",
-    "en": "snorkel boat"
+    "en": "snorkel boat",
+    "de": "Schnorchelboot",
+    "es": "bote de snorkel",
+    "pt": "barco de snorkel"
    },
    "plaats": null,
    "tags": [
@@ -1199,7 +1748,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d19406504-Snorkel_Cruise_with_BBQ_Lunch_and_Open_Bar-Curacao.html",
     "datum": "2026-10"
@@ -1207,11 +1759,17 @@
    "feiten": [
     {
      "nl": "4 tot 5 uur",
-     "en": "4 to 5 hours"
+     "en": "4 to 5 hours",
+     "de": "4 bis 5 Stunden",
+     "es": "4 a 5 horas",
+     "pt": "4 a 5 horas"
     },
     {
      "nl": "BBQ-lunch en open bar",
-     "en": "BBQ lunch and open bar"
+     "en": "BBQ lunch and open bar",
+     "de": "BBQ-Mittagessen und offene Bar",
+     "es": "Almuerzo BBQ y barra libre",
+     "pt": "Almoço de churrasco e open bar"
     }
    ],
    "scores": [
@@ -1232,6 +1790,18 @@
     "en": [
      "Good BBQ and fresh fruit",
      "Snorkel gear included"
+    ],
+    "de": [
+     "Gutes BBQ und frisches Obst",
+     "Schnorchelausrüstung inklusive"
+    ],
+    "es": [
+     "Buen BBQ y fruta fresca",
+     "Equipo de snorkel incluido"
+    ],
+    "pt": [
+     "Bom churrasco e frutas frescas",
+     "Equipamento de snorkel incluído"
     ]
    },
    "tegen": {
@@ -1240,6 +1810,15 @@
     ],
     "en": [
      "Loud music on board"
+    ],
+    "de": [
+     "Laute Musik an Bord"
+    ],
+    "es": [
+     "Música alta a bordo"
+    ],
+    "pt": [
+     "Música alta a bordo"
     ]
    },
    "bronnen": [
@@ -1253,7 +1832,10 @@
    "url": null,
    "soort": {
     "nl": "dagtour",
-    "en": "day tour"
+    "en": "day tour",
+    "de": "Tagestour",
+    "es": "tour de un día",
+    "pt": "passeio de um dia"
    },
    "plaats": "westkust",
    "tags": [
@@ -1266,7 +1848,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d24135142-West_Coast_Full_Day_Tour_with_Beaches_BBQ_and_Blue_Room-Curacao.html",
     "datum": "2026-10"
@@ -1274,11 +1859,17 @@
    "feiten": [
     {
      "nl": "Meer dan 6 uur",
-     "en": "Over 6 hours"
+     "en": "Over 6 hours",
+     "de": "Über 6 Stunden",
+     "es": "Más de 6 horas",
+     "pt": "Mais de 6 horas"
     },
     {
      "nl": "Stranden, BBQ en Blue Room",
-     "en": "Beaches, BBQ and Blue Room"
+     "en": "Beaches, BBQ and Blue Room",
+     "de": "Strände, BBQ und Blue Room",
+     "es": "Playas, BBQ y Blue Room",
+     "pt": "Praias, churrasco e Blue Room"
     }
    ],
    "scores": [
@@ -1299,6 +1890,18 @@
     "en": [
      "Punctual pickup and drop-off",
      "Beautiful beaches and snorkeling"
+    ],
+    "de": [
+     "Pünktliche Abholung und Rückfahrt",
+     "Wunderschöne Strände und Schnorcheln"
+    ],
+    "es": [
+     "Recogida y regreso puntuales",
+     "Playas hermosas y snorkel"
+    ],
+    "pt": [
+     "Busca e retorno pontuais",
+     "Praias lindas e snorkel"
     ]
    },
    "tegen": {
@@ -1307,6 +1910,15 @@
     ],
     "en": [
      "Little commentary from the guide on some trips"
+    ],
+    "de": [
+     "Bei manchen Touren wenig Erklärungen vom Guide"
+    ],
+    "es": [
+     "En algunos tours, el guía comenta poco"
+    ],
+    "pt": [
+     "Em alguns passeios, o guia fala pouco"
     ]
    },
    "bronnen": [
@@ -1320,7 +1932,10 @@
    "url": null,
    "soort": {
     "nl": "bustour",
-    "en": "bus tour"
+    "en": "bus tour",
+    "de": "Bustour",
+    "es": "tour en bus",
+    "pt": "passeio de ônibus"
    },
    "plaats": "westkust",
    "tags": [
@@ -1333,7 +1948,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/AttractionProductReview-g15293005-d16808294-All_West_Beach_Hopping_Tour-Jan_Thiel_Curacao.html",
     "datum": "2026-10"
@@ -1341,11 +1959,17 @@
    "feiten": [
     {
      "nl": "Meer dan 6 uur",
-     "en": "Over 6 hours"
+     "en": "Over 6 hours",
+     "de": "Über 6 Stunden",
+     "es": "Más de 6 horas",
+     "pt": "Mais de 6 horas"
     },
     {
      "nl": "Meerdere stranden aan de westkant",
-     "en": "Several west-side beaches"
+     "en": "Several west-side beaches",
+     "de": "Mehrere Strände im Westen",
+     "es": "Varias playas del oeste",
+     "pt": "Várias praias do lado oeste"
     }
    ],
    "scores": [
@@ -1366,6 +1990,18 @@
     "en": [
      "Enthusiastic guides",
      "Lots of beach time for the money"
+    ],
+    "de": [
+     "Begeisterte Guides",
+     "Viel Strandzeit für das Geld"
+    ],
+    "es": [
+     "Guías entusiastas",
+     "Mucho tiempo de playa por lo que cuesta"
+    ],
+    "pt": [
+     "Guias entusiasmados",
+     "Muito tempo de praia pelo preço"
     ]
    },
    "tegen": {
@@ -1374,6 +2010,15 @@
     ],
     "en": [
      "Can feel more like transport than a tour"
+    ],
+    "de": [
+     "Kann sich eher wie ein Transport als wie eine Tour anfühlen"
+    ],
+    "es": [
+     "Puede parecer más un traslado que un tour"
+    ],
+    "pt": [
+     "Pode parecer mais um transporte do que um passeio"
     ]
    },
    "bronnen": [
@@ -1387,7 +2032,10 @@
    "url": null,
    "soort": {
     "nl": "dagtour",
-    "en": "day tour"
+    "en": "day tour",
+    "de": "Tagestour",
+    "es": "tour de un día",
+    "pt": "passeio de um dia"
    },
    "plaats": "vertrek Jan Thiel",
    "tags": [
@@ -1401,7 +2049,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
     "datum": "2026-10"
@@ -1409,11 +2060,17 @@
    "feiten": [
     {
      "nl": "Meer dan 6 uur",
-     "en": "Over 6 hours"
+     "en": "Over 6 hours",
+     "de": "Über 6 Stunden",
+     "es": "Más de 6 horas",
+     "pt": "Mais de 6 horas"
     },
     {
      "nl": "Grotten, schildpadden en strand",
-     "en": "Caves, turtles and beach"
+     "en": "Caves, turtles and beach",
+     "de": "Höhlen, Schildkröten und Strand",
+     "es": "Cuevas, tortugas y playa",
+     "pt": "Cavernas, tartarugas e praia"
     }
    ],
    "scores": [
@@ -1432,11 +2089,23 @@
     ],
     "en": [
      "Caves and snorkeling combined in one day"
+    ],
+    "de": [
+     "Höhlen und Schnorcheln an einem Tag kombiniert"
+    ],
+    "es": [
+     "Cuevas y snorkel combinados en un solo día"
+    ],
+    "pt": [
+     "Cavernas e snorkel combinados no mesmo dia"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/AttractionProductReview-g15293005-d18275441-Hato_Caves_Turtles_Beach-Jan_Thiel_Curacao.html",
@@ -1449,7 +2118,10 @@
    "url": "https://adventuretourscuracao.com/",
    "soort": {
     "nl": "speedboot",
-    "en": "speedboat"
+    "en": "speedboat",
+    "de": "Schnellboot",
+    "es": "lancha rápida",
+    "pt": "lancha rápida"
    },
    "plaats": "Caracasbaai",
    "tags": [
@@ -1464,7 +2136,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11483790-Blue_Room_and_Beach_Tour_Curacao_by_Speedboat-Curacao.html",
     "datum": "2026-10"
@@ -1472,15 +2147,24 @@
    "feiten": [
     {
      "nl": "5 uur",
-     "en": "5 hours"
+     "en": "5 hours",
+     "de": "5 Stunden",
+     "es": "5 horas",
+     "pt": "5 horas"
     },
     {
      "nl": "Maximaal 22 personen",
-     "en": "Maximum 22 people"
+     "en": "Maximum 22 people",
+     "de": "Höchstens 22 Personen",
+     "es": "Máximo 22 personas",
+     "pt": "No máximo 22 pessoas"
     },
     {
      "nl": "Lunch en snorkelset inbegrepen",
-     "en": "Lunch and snorkel gear included"
+     "en": "Lunch and snorkel gear included",
+     "de": "Mittagessen und Schnorchelausrüstung inklusive",
+     "es": "Almuerzo y equipo de snorkel incluidos",
+     "pt": "Almoço e equipamento de snorkel incluídos"
     }
    ],
    "scores": [
@@ -1509,6 +2193,18 @@
     "en": [
      "Knowledgeable, friendly guides",
      "The Blue Room cave is the highlight"
+    ],
+    "de": [
+     "Kenntnisreiche, freundliche Guides",
+     "Die Blue-Room-Höhle ist das Highlight"
+    ],
+    "es": [
+     "Guías conocedores y amables",
+     "La cueva Blue Room es lo mejor"
+    ],
+    "pt": [
+     "Guias experientes e simpáticos",
+     "A caverna Blue Room é o ponto alto"
     ]
    },
    "tegen": {
@@ -1519,6 +2215,18 @@
     "en": [
      "Often canceled in choppy water",
      "Last-minute changes to the start point"
+    ],
+    "de": [
+     "Wird bei unruhigem Wasser oft abgesagt",
+     "Kurzfristige Änderungen des Startpunkts"
+    ],
+    "es": [
+     "Se cancela a menudo con el mar picado",
+     "Cambios de último momento en el punto de salida"
+    ],
+    "pt": [
+     "Costuma ser cancelado com o mar agitado",
+     "Mudanças de última hora no ponto de partida"
     ]
    },
    "bronnen": [
@@ -1532,7 +2240,10 @@
    "url": null,
    "soort": {
     "nl": "snorkelboot",
-    "en": "snorkel boat"
+    "en": "snorkel boat",
+    "de": "Schnorchelboot",
+    "es": "bote de snorkel",
+    "pt": "barco de snorkel"
    },
    "plaats": "zuidkust",
    "tags": [
@@ -1545,7 +2256,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon",
-     "en": "per person"
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
     },
     "bron": "https://curacaoactivities.com/tour/tugboat-blue-room-curacao-snorkeling-tour/",
     "datum": "2026-10"
@@ -1553,11 +2267,17 @@
    "feiten": [
     {
      "nl": "Tugboat-wrak en Blue Room",
-     "en": "Tugboat wreck and Blue Room"
+     "en": "Tugboat wreck and Blue Room",
+     "de": "Tugboat-Wrack und Blue Room",
+     "es": "Naufragio Tugboat y Blue Room",
+     "pt": "Naufrágio Tugboat e Blue Room"
     },
     {
      "nl": "BBQ-lunch inbegrepen",
-     "en": "BBQ lunch included"
+     "en": "BBQ lunch included",
+     "de": "BBQ-Mittagessen inklusive",
+     "es": "Almuerzo BBQ incluido",
+     "pt": "Almoço de churrasco incluído"
     }
    ],
    "scores": [],
@@ -1567,11 +2287,23 @@
     ],
     "en": [
      "Two well-known snorkel spots in one trip"
+    ],
+    "de": [
+     "Zwei bekannte Schnorchelplätze in einer Tour"
+    ],
+    "es": [
+     "Dos conocidos lugares de snorkel en un solo tour"
+    ],
+    "pt": [
+     "Dois pontos de snorkel famosos em um só passeio"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://curacaoactivities.com/tour/tugboat-blue-room-curacao-snorkeling-tour/",
@@ -1584,7 +2316,10 @@
    "url": null,
    "soort": {
     "nl": "seabob-tour",
-    "en": "Seabob tour"
+    "en": "Seabob tour",
+    "de": "Seabob-Tour",
+    "es": "tour en Seabob",
+    "pt": "passeio de Seabob"
    },
    "plaats": "Caracasbaai (Tugboat)",
    "tags": [
@@ -1596,7 +2331,10 @@
    "feiten": [
     {
      "nl": "Onderwaterscooter bij het Tugboat-wrak",
-     "en": "Underwater scooter at the Tugboat wreck"
+     "en": "Underwater scooter at the Tugboat wreck",
+     "de": "Unterwasserscooter am Tugboat-Wrack",
+     "es": "Scooter submarino en el naufragio Tugboat",
+     "pt": "Scooter subaquático no naufrágio Tugboat"
     }
    ],
    "scores": [
@@ -1615,11 +2353,23 @@
     ],
     "en": [
      "Highly rated by its reviewers"
+    ],
+    "de": [
+     "Von den Bewertenden sehr gut bewertet"
+    ],
+    "es": [
+     "Muy bien calificado por quienes lo reseñaron"
+    ],
+    "pt": [
+     "Muito bem avaliado por quem fez o passeio"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
@@ -1631,7 +2381,10 @@
    "url": null,
    "soort": {
     "nl": "onderwaterscooter",
-    "en": "underwater scooter"
+    "en": "underwater scooter",
+    "de": "Unterwasserscooter",
+    "es": "scooter submarino",
+    "pt": "scooter subaquático"
    },
    "plaats": "Boka Sami, Sint Michiel",
    "tags": [
@@ -1644,7 +2397,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
     "datum": "2026-10"
@@ -1652,19 +2408,31 @@
    "feiten": [
     {
      "nl": "Ongeveer 1 uur 15",
-     "en": "About 1 hour 15 min"
+     "en": "About 1 hour 15 min",
+     "de": "Etwa 1 Stunde 15 Min.",
+     "es": "Unas 1 hora 15 min",
+     "pt": "Cerca de 1 hora e 15 min"
     },
     {
      "nl": "Maximaal 5 personen",
-     "en": "Maximum 5 people"
+     "en": "Maximum 5 people",
+     "de": "Höchstens 5 Personen",
+     "es": "Máximo 5 personas",
+     "pt": "No máximo 5 pessoas"
     },
     {
      "nl": "Vanaf 10 jaar",
-     "en": "Ages 10 and up"
+     "en": "Ages 10 and up",
+     "de": "Ab 10 Jahren",
+     "es": "Desde los 10 años",
+     "pt": "A partir de 10 anos"
     },
     {
      "nl": "Geen duikervaring nodig",
-     "en": "No diving experience needed"
+     "en": "No diving experience needed",
+     "de": "Keine Taucherfahrung nötig",
+     "es": "No se necesita experiencia de buceo",
+     "pt": "Não precisa de experiência de mergulho"
     }
    ],
    "scores": [
@@ -1687,6 +2455,21 @@
      "Patient instructors, guests feel safe",
      "Doable for non-swimmers",
      "Fish, coral and sometimes turtles"
+    ],
+    "de": [
+     "Geduldige Instruktoren, Gäste fühlen sich sicher",
+     "Auch für Nichtschwimmer machbar",
+     "Fische, Korallen und manchmal Schildkröten"
+    ],
+    "es": [
+     "Instructores pacientes, los pasajeros se sienten seguros",
+     "Posible incluso para quienes no saben nadar",
+     "Peces, corales y a veces tortugas"
+    ],
+    "pt": [
+     "Instrutores pacientes, os participantes se sentem seguros",
+     "Dá para fazer mesmo sem saber nadar",
+     "Peixes, corais e às vezes tartarugas"
     ]
    },
    "tegen": {
@@ -1697,6 +2480,18 @@
     "en": [
      "Photo package costs extra, about $45",
      "Seasickness or ear pressure in waves"
+    ],
+    "de": [
+     "Das Fotopaket kostet extra, etwa $45",
+     "Seekrankheit oder Druck auf den Ohren bei Wellen"
+    ],
+    "es": [
+     "El paquete de fotos cuesta extra, unos $45",
+     "Mareo o presión en los oídos con oleaje"
+    ],
+    "pt": [
+     "O pacote de fotos custa extra, cerca de $45",
+     "Enjoo ou pressão nos ouvidos com ondas"
     ]
    },
    "bronnen": [
@@ -1710,7 +2505,10 @@
    "url": null,
    "soort": {
     "nl": "helmduiken",
-    "en": "helmet diving"
+    "en": "helmet diving",
+    "de": "Helmtauchen",
+    "es": "buceo con casco",
+    "pt": "mergulho com capacete"
    },
    "plaats": "Surf & Turf, Willemstad",
    "tags": [
@@ -1724,7 +2522,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d24096954-Curacao_Helmet_Diving_Walk_the_Ocean_Floor_No_Swimming_Required-Curacao.html",
     "datum": "2026-10"
@@ -1732,19 +2533,31 @@
    "feiten": [
     {
      "nl": "Zwemmen niet nodig",
-     "en": "No swimming required"
+     "en": "No swimming required",
+     "de": "Schwimmen ist nicht nötig",
+     "es": "No hace falta saber nadar",
+     "pt": "Não é preciso saber nadar"
     },
     {
      "nl": "Vanaf 8 jaar",
-     "en": "Ages 8 and up"
+     "en": "Ages 8 and up",
+     "de": "Ab 8 Jahren",
+     "es": "Desde los 8 años",
+     "pt": "A partir de 8 anos"
     },
     {
      "nl": "Maximaal 12 personen",
-     "en": "Maximum 12 people"
+     "en": "Maximum 12 people",
+     "de": "Höchstens 12 Personen",
+     "es": "Máximo 12 personas",
+     "pt": "No máximo 12 pessoas"
     },
     {
      "nl": "20 tot 30 minuten onderwater",
-     "en": "20 to 30 minutes underwater"
+     "en": "20 to 30 minutes underwater",
+     "de": "20 bis 30 Minuten unter Wasser",
+     "es": "20 a 30 minutos bajo el agua",
+     "pt": "20 a 30 minutos debaixo d'água"
     }
    ],
    "scores": [
@@ -1765,6 +2578,18 @@
     "en": [
      "Patient staff, feels safe",
      "Feeding fish up close"
+    ],
+    "de": [
+     "Geduldiges Personal, man fühlt sich sicher",
+     "Fische aus nächster Nähe füttern"
+    ],
+    "es": [
+     "Personal paciente, uno se siente seguro",
+     "Dar de comer a los peces de cerca"
+    ],
+    "pt": [
+     "Equipe paciente, dá para se sentir seguro",
+     "Alimentar os peixes de pertinho"
     ]
    },
    "tegen": {
@@ -1775,6 +2600,18 @@
     "en": [
      "Photos and video cost $50 extra",
      "Pickups sometimes late"
+    ],
+    "de": [
+     "Fotos und Video kosten $50 extra",
+     "Abholung manchmal verspätet"
+    ],
+    "es": [
+     "Las fotos y el video cuestan $50 extra",
+     "A veces las recogidas llegan tarde"
+    ],
+    "pt": [
+     "Fotos e vídeo custam $50 extra",
+     "A busca às vezes atrasa"
     ]
    },
    "bronnen": [
@@ -1788,7 +2625,10 @@
    "url": null,
    "soort": {
     "nl": "dolfijnenprogramma",
-    "en": "dolphin program"
+    "en": "dolphin program",
+    "de": "Delfinprogramm",
+    "es": "programa con delfines",
+    "pt": "programa com golfinhos"
    },
    "plaats": "Bapor Kibra (Sea Aquarium)",
    "tags": [
@@ -1801,7 +2641,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.mycuracaoguide.com/dolphins-curacao",
     "datum": "2026-10"
@@ -1809,19 +2652,31 @@
    "feiten": [
     {
      "nl": "Encounter $114, Swim $194",
-     "en": "Encounter $114, Swim $194"
+     "en": "Encounter $114, Swim $194",
+     "de": "Encounter $114, Swim $194",
+     "es": "Encounter $114, Swim $194",
+     "pt": "Encounter $114, Swim $194"
     },
     {
      "nl": "Dolphin Snorkel $210",
-     "en": "Dolphin Snorkel $210"
+     "en": "Dolphin Snorkel $210",
+     "de": "Dolphin Snorkel $210",
+     "es": "Dolphin Snorkel $210",
+     "pt": "Dolphin Snorkel $210"
     },
     {
      "nl": "Sea Aquarium-entree inbegrepen",
-     "en": "Sea Aquarium entry included"
+     "en": "Sea Aquarium entry included",
+     "de": "Eintritt ins Sea Aquarium inklusive",
+     "es": "Entrada al Sea Aquarium incluida",
+     "pt": "Entrada no Sea Aquarium incluída"
     },
     {
      "nl": "Programma's duren 1,5 uur",
-     "en": "Programs last 1.5 hours"
+     "en": "Programs last 1.5 hours",
+     "de": "Die Programme dauern 1.5 Stunden",
+     "es": "Los programas duran 1.5 horas",
+     "pt": "Os programas duram 1.5 horas"
     }
    ],
    "scores": [
@@ -1840,11 +2695,23 @@
     ],
     "en": [
      "Popular with families with kids"
+    ],
+    "de": [
+     "Beliebt bei Familien mit Kindern"
+    ],
+    "es": [
+     "Popular entre familias con niños"
+    ],
+    "pt": [
+     "Popular entre famílias com crianças"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/dolphins-curacao",
@@ -1857,7 +2724,10 @@
    "url": null,
    "soort": {
     "nl": "aquarium",
-    "en": "aquarium"
+    "en": "aquarium",
+    "de": "Aquarium",
+    "es": "acuario",
+    "pt": "aquário"
    },
    "plaats": "Bapor Kibra",
    "tags": [
@@ -1871,7 +2741,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.mycuracaoguide.com/curacao-sea-aquarium",
     "datum": "2026-10"
@@ -1879,15 +2752,24 @@
    "feiten": [
     {
      "nl": "Ocean Lens kind $29",
-     "en": "Ocean Lens child $29"
+     "en": "Ocean Lens child $29",
+     "de": "Ocean Lens Kind $29",
+     "es": "Ocean Lens niño $29",
+     "pt": "Ocean Lens criança $29"
     },
     {
      "nl": "Animal Encounter snorkel $75",
-     "en": "Animal Encounter snorkel $75"
+     "en": "Animal Encounter snorkel $75",
+     "de": "Animal Encounter Schnorcheln $75",
+     "es": "Animal Encounter snorkel $75",
+     "pt": "Animal Encounter snorkel $75"
     },
     {
      "nl": "Vanaf 8 jaar voor programma's",
-     "en": "Programs from age 8"
+     "en": "Programs from age 8",
+     "de": "Programme ab 8 Jahren",
+     "es": "Programas desde los 8 años",
+     "pt": "Programas a partir de 8 anos"
     }
    ],
    "scores": [
@@ -1906,11 +2788,23 @@
     ],
     "en": [
      "Easy to combine with Mambo Beach"
+    ],
+    "de": [
+     "Lässt sich leicht mit Mambo Beach kombinieren"
+    ],
+    "es": [
+     "Fácil de combinar con Mambo Beach"
+    ],
+    "pt": [
+     "Fácil de combinar com Mambo Beach"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/curacao-sea-aquarium",
@@ -1923,7 +2817,10 @@
    "url": null,
    "soort": {
     "nl": "onderzeeër",
-    "en": "submarine"
+    "en": "submarine",
+    "de": "U-Boot",
+    "es": "submarino",
+    "pt": "submarino"
    },
    "plaats": "Sea Aquarium, Bapor Kibra",
    "tags": [
@@ -1935,7 +2832,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon",
-     "en": "per person"
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
     },
     "bron": "https://www.mycuracaoguide.com/curacao-sea-aquarium",
     "datum": "2026-10"
@@ -1943,15 +2843,24 @@
    "feiten": [
     {
      "nl": "Wreck Dive $450, 1 uur",
-     "en": "Wreck Dive $450, 1 hour"
+     "en": "Wreck Dive $450, 1 hour",
+     "de": "Wreck Dive $450, 1 Stunde",
+     "es": "Wreck Dive $450, 1 hora",
+     "pt": "Wreck Dive $450, 1 hora"
     },
     {
      "nl": "Explorer Dive $650",
-     "en": "Explorer Dive $650"
+     "en": "Explorer Dive $650",
+     "de": "Explorer Dive $650",
+     "es": "Explorer Dive $650",
+     "pt": "Explorer Dive $650"
     },
     {
      "nl": "Aquarium-entree niet inbegrepen",
-     "en": "Aquarium entry not included"
+     "en": "Aquarium entry not included",
+     "de": "Eintritt ins Aquarium nicht inklusive",
+     "es": "Entrada al acuario no incluida",
+     "pt": "Entrada no aquário não incluída"
     }
    ],
    "scores": [],
@@ -1961,11 +2870,23 @@
     ],
     "en": [
      "Rare chance to go very deep"
+    ],
+    "de": [
+     "Seltene Gelegenheit, sehr tief zu tauchen"
+    ],
+    "es": [
+     "Oportunidad poco común de bajar muy profundo"
+    ],
+    "pt": [
+     "Chance rara de descer bem fundo"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/curacao-sea-aquarium",
@@ -1978,7 +2899,10 @@
    "url": null,
    "soort": {
     "nl": "halfonderzeeër",
-    "en": "semi-submarine"
+    "en": "semi-submarine",
+    "de": "Halbtaucher-U-Boot",
+    "es": "semisubmarino",
+    "pt": "semissubmarino"
    },
    "plaats": null,
    "tags": [
@@ -1993,7 +2917,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon",
-     "en": "per person"
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
     },
     "bron": "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/",
     "datum": "2026-10"
@@ -2001,11 +2928,17 @@
    "feiten": [
     {
      "nl": "Ongeveer 1 uur",
-     "en": "About 1 hour"
+     "en": "About 1 hour",
+     "de": "Etwa 1 Stunde",
+     "es": "Alrededor de 1 hora",
+     "pt": "Cerca de 1 hora"
     },
     {
      "nl": "Niet nat worden",
-     "en": "You stay dry"
+     "en": "You stay dry",
+     "de": "Du bleibst trocken",
+     "es": "Te quedas seco",
+     "pt": "Você fica seco"
     }
    ],
    "scores": [],
@@ -2015,11 +2948,23 @@
     ],
     "en": [
      "See the reef without swimming"
+    ],
+    "de": [
+     "Das Riff sehen, ohne zu schwimmen"
+    ],
+    "es": [
+     "Ver el arrecife sin nadar"
+    ],
+    "pt": [
+     "Ver o recife sem nadar"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/"
@@ -2031,7 +2976,10 @@
    "url": null,
    "soort": {
     "nl": "grot met gids",
-    "en": "guided cave"
+    "en": "guided cave",
+    "de": "geführte Höhle",
+    "es": "cueva con guía",
+    "pt": "caverna guiada"
    },
    "plaats": "Hato, bij het vliegveld",
    "tags": [
@@ -2044,7 +2992,10 @@
    "feiten": [
     {
      "nl": "Rondleiding met gids",
-     "en": "Guided walk inside"
+     "en": "Guided walk inside",
+     "de": "Geführter Rundgang im Inneren",
+     "es": "Recorrido guiado por dentro",
+     "pt": "Visita guiada por dentro"
     }
    ],
    "scores": [
@@ -2063,11 +3014,23 @@
     ],
     "en": [
      "Easy to combine with a city visit"
+    ],
+    "de": [
+     "Lässt sich leicht mit einem Stadtbesuch kombinieren"
+    ],
+    "es": [
+     "Fácil de combinar con una visita a la ciudad"
+    ],
+    "pt": [
+     "Fácil de combinar com uma visita à cidade"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
@@ -2079,7 +3042,10 @@
    "url": null,
    "soort": {
     "nl": "nationaal park",
-    "en": "national park"
+    "en": "national park",
+    "de": "Nationalpark",
+    "es": "parque nacional",
+    "pt": "parque nacional"
    },
    "plaats": "noordkust, Banda Abou",
    "tags": [
@@ -2091,11 +3057,17 @@
    "feiten": [
     {
      "nl": "Woeste noordkust met blaasgaten",
-     "en": "Wild north coast with blowholes"
+     "en": "Wild north coast with blowholes",
+     "de": "Wilde Nordküste mit Blowholes",
+     "es": "Costa norte salvaje con soplones",
+     "pt": "Costa norte selvagem com gêiseres marinhos"
     },
     {
      "nl": "Ook in eilandtours inbegrepen",
-     "en": "Included in many island tours"
+     "en": "Included in many island tours",
+     "de": "In vielen Inseltouren enthalten",
+     "es": "Incluido en muchos tours por la isla",
+     "pt": "Incluído em muitos passeios pela ilha"
     }
    ],
    "scores": [
@@ -2114,11 +3086,23 @@
     ],
     "en": [
      "Impressive waves at Boca Tabla"
+    ],
+    "de": [
+     "Beeindruckende Wellen bei Boca Tabla"
+    ],
+    "es": [
+     "Olas impresionantes en Boca Tabla"
+    ],
+    "pt": [
+     "Ondas impressionantes em Boca Tabla"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
@@ -2130,7 +3114,10 @@
    "url": null,
    "soort": {
     "nl": "eilandtour",
-    "en": "island tour"
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
    },
    "plaats": "ophalen bij hotel of cruiseterminal",
    "tags": [
@@ -2144,7 +3131,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
     "datum": "2026-10"
@@ -2152,19 +3142,31 @@
    "feiten": [
     {
      "nl": "6 uur",
-     "en": "6 hours"
+     "en": "6 hours",
+     "de": "6 Stunden",
+     "es": "6 horas",
+     "pt": "6 horas"
     },
     {
      "nl": "Shete Boka en flamingo's",
-     "en": "Shete Boka and flamingos"
+     "en": "Shete Boka and flamingos",
+     "de": "Shete Boka und Flamingos",
+     "es": "Shete Boka y flamencos",
+     "pt": "Shete Boka e flamingos"
     },
     {
      "nl": "Blue Curaçao-proeverij",
-     "en": "Blue Curaçao tasting"
+     "en": "Blue Curaçao tasting",
+     "de": "Blue-Curaçao-Verkostung",
+     "es": "Degustación de Blue Curazao",
+     "pt": "Degustação de Blue Curaçao"
     },
     {
      "nl": "Lunch niet inbegrepen",
-     "en": "Lunch not included"
+     "en": "Lunch not included",
+     "de": "Mittagessen nicht inklusive",
+     "es": "Almuerzo no incluido",
+     "pt": "Almoço não incluído"
     }
    ],
    "scores": [
@@ -2185,6 +3187,18 @@
     "en": [
      "Guide knows the island's history well",
      "On-time pickup, air-conditioned vehicle"
+    ],
+    "de": [
+     "Der Guide kennt die Geschichte der Insel gut",
+     "Pünktliche Abholung, klimatisiertes Fahrzeug"
+    ],
+    "es": [
+     "El guía conoce bien la historia de la isla",
+     "Recogida puntual, vehículo con aire acondicionado"
+    ],
+    "pt": [
+     "O guia conhece bem a história da ilha",
+     "Busca pontual, veículo com ar-condicionado"
     ]
    },
    "tegen": {
@@ -2195,6 +3209,18 @@
     "en": [
      "Bumpy, cramped ride",
      "Short stops, little beach time"
+    ],
+    "de": [
+     "Holprige, enge Fahrt",
+     "Kurze Stopps, wenig Zeit am Strand"
+    ],
+    "es": [
+     "Viaje con baches y apretado",
+     "Paradas cortas, poco tiempo de playa"
+    ],
+    "pt": [
+     "Viagem balançada e apertada",
+     "Paradas curtas, pouco tempo de praia"
     ]
    },
    "bronnen": [
@@ -2208,7 +3234,10 @@
    "url": null,
    "soort": {
     "nl": "jeepsafari",
-    "en": "jeep safari"
+    "en": "jeep safari",
+    "de": "Jeep-Safari",
+    "es": "safari en jeep",
+    "pt": "safári de jipe"
    },
    "plaats": "Christoffelpark",
    "tags": [
@@ -2221,7 +3250,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11448545-National_Park_Jeep_Safari-Curacao.html",
     "datum": "2026-10"
@@ -2229,19 +3261,31 @@
    "feiten": [
     {
      "nl": "6 uur",
-     "en": "6 hours"
+     "en": "6 hours",
+     "de": "6 Stunden",
+     "es": "6 horas",
+     "pt": "6 horas"
     },
     {
      "nl": "Maximaal 16 personen",
-     "en": "Maximum 16 people"
+     "en": "Maximum 16 people",
+     "de": "Höchstens 16 Personen",
+     "es": "Máximo 16 personas",
+     "pt": "No máximo 16 pessoas"
     },
     {
      "nl": "Vanaf 6 jaar",
-     "en": "Ages 6 and up"
+     "en": "Ages 6 and up",
+     "de": "Ab 6 Jahren",
+     "es": "Desde los 6 años",
+     "pt": "A partir de 6 anos"
     },
     {
      "nl": "Entree Christoffel inbegrepen",
-     "en": "Christoffel entry included"
+     "en": "Christoffel entry included",
+     "de": "Eintritt zum Christoffel inklusive",
+     "es": "Entrada a Christoffel incluida",
+     "pt": "Entrada em Christoffel incluída"
     }
    ],
    "scores": [
@@ -2262,6 +3306,18 @@
     "en": [
      "Guides explain nature and culture well",
      "Scenic north coast stops"
+    ],
+    "de": [
+     "Die Guides erklären Natur und Kultur gut",
+     "Landschaftlich schöne Stopps an der Nordküste"
+    ],
+    "es": [
+     "Los guías explican bien la naturaleza y la cultura",
+     "Paradas pintorescas en la costa norte"
+    ],
+    "pt": [
+     "Os guias explicam bem a natureza e a cultura",
+     "Paradas pitorescas na costa norte"
     ]
    },
    "tegen": {
@@ -2270,6 +3326,15 @@
     ],
     "en": [
      "Bumpy roads, hard on bad backs"
+    ],
+    "de": [
+     "Holprige Straßen, schlecht für einen empfindlichen Rücken"
+    ],
+    "es": [
+     "Caminos con baches, malos para la espalda"
+    ],
+    "pt": [
+     "Estradas esburacadas, ruins para quem tem problema nas costas"
     ]
    },
    "bronnen": [
@@ -2283,7 +3348,10 @@
    "url": null,
    "soort": {
     "nl": "jeepsafari",
-    "en": "jeep safari"
+    "en": "jeep safari",
+    "de": "Jeep-Safari",
+    "es": "safari en jeep",
+    "pt": "safári de jipe"
    },
    "plaats": "Shete Boka, Cas Abao",
    "tags": [
@@ -2298,7 +3366,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
     "datum": "2026-10"
@@ -2306,15 +3377,24 @@
    "feiten": [
     {
      "nl": "6 uur",
-     "en": "6 hours"
+     "en": "6 hours",
+     "de": "6 Stunden",
+     "es": "6 horas",
+     "pt": "6 horas"
     },
     {
      "nl": "Maximaal 16 personen",
-     "en": "Maximum 16 people"
+     "en": "Maximum 16 people",
+     "de": "Höchstens 16 Personen",
+     "es": "Máximo 16 personas",
+     "pt": "No máximo 16 pessoas"
     },
     {
      "nl": "Entree Cas Abao inbegrepen",
-     "en": "Cas Abao entry included"
+     "en": "Cas Abao entry included",
+     "de": "Eintritt zu Cas Abao inklusive",
+     "es": "Entrada a Cas Abao incluida",
+     "pt": "Entrada em Cas Abao incluída"
     }
    ],
    "scores": [
@@ -2335,6 +3415,18 @@
     "en": [
      "Snorkeling with turtles and nice beaches",
      "Knowledgeable guide"
+    ],
+    "de": [
+     "Schnorcheln mit Schildkröten und schöne Strände",
+     "Kenntnisreicher Guide"
+    ],
+    "es": [
+     "Snorkel con tortugas y playas lindas",
+     "Guía con mucho conocimiento"
+    ],
+    "pt": [
+     "Snorkel com tartarugas e praias bonitas",
+     "Guia experiente"
     ]
    },
    "tegen": {
@@ -2345,6 +3437,18 @@
     "en": [
      "Open vehicle is bumpy and cramped",
      "Lunch extra, long lines, cash only"
+    ],
+    "de": [
+     "Das offene Fahrzeug ist holprig und eng",
+     "Mittagessen extra, lange Schlangen, nur Barzahlung"
+    ],
+    "es": [
+     "El vehículo abierto es incómodo y apretado",
+     "Almuerzo aparte, largas filas, solo efectivo"
+    ],
+    "pt": [
+     "O veículo aberto é balançado e apertado",
+     "Almoço à parte, filas longas, só dinheiro"
     ]
    },
    "bronnen": [
@@ -2358,7 +3462,10 @@
    "url": null,
    "soort": {
     "nl": "jeepsafari",
-    "en": "jeep safari"
+    "en": "jeep safari",
+    "de": "Jeep-Safari",
+    "es": "safari en jeep",
+    "pt": "safári de jipe"
    },
    "plaats": null,
    "tags": [
@@ -2372,7 +3479,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
     "datum": "2026-10"
@@ -2380,15 +3490,24 @@
    "feiten": [
     {
      "nl": "Ongeveer 4 uur",
-     "en": "About 4 hours"
+     "en": "About 4 hours",
+     "de": "Etwa 4 Stunden",
+     "es": "Unas 4 horas",
+     "pt": "Cerca de 4 horas"
     },
     {
      "nl": "Ophalen bij hotel",
-     "en": "Hotel pickup"
+     "en": "Hotel pickup",
+     "de": "Hotelabholung",
+     "es": "Recogida en el hotel",
+     "pt": "Busca no hotel"
     },
     {
      "nl": "Snorkelset inbegrepen",
-     "en": "Snorkel gear included"
+     "en": "Snorkel gear included",
+     "de": "Schnorchelausrüstung inklusive",
+     "es": "Equipo de snorkel incluido",
+     "pt": "Equipamento de snorkel incluído"
     }
    ],
    "scores": [
@@ -2407,11 +3526,23 @@
     ],
     "en": [
      "Cheapest jeep and snorkel combo"
+    ],
+    "de": [
+     "Günstigste Kombi aus Jeep und Schnorcheln"
+    ],
+    "es": [
+     "La combinación de jeep y snorkel más barata"
+    ],
+    "pt": [
+     "O combo de jipe e snorkel mais barato"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
@@ -2424,7 +3555,10 @@
    "url": null,
    "soort": {
     "nl": "jeepsafari",
-    "en": "jeep safari"
+    "en": "jeep safari",
+    "de": "Jeep-Safari",
+    "es": "safari en jeep",
+    "pt": "safári de jipe"
    },
    "plaats": "westkust",
    "tags": [
@@ -2436,7 +3570,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
     "datum": "2026-10"
@@ -2444,7 +3581,10 @@
    "feiten": [
     {
      "nl": "Stranden aan de westkant",
-     "en": "West side beaches"
+     "en": "West side beaches",
+     "de": "Strände im Westen",
+     "es": "Playas del oeste",
+     "pt": "Praias do lado oeste"
     }
    ],
    "scores": [
@@ -2463,11 +3603,23 @@
     ],
     "en": [
      "High score across many reviews"
+    ],
+    "de": [
+     "Hohe Bewertung bei vielen Rezensionen"
+    ],
+    "es": [
+     "Calificación alta con muchas reseñas"
+    ],
+    "pt": [
+     "Nota alta com muitas avaliações"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
@@ -2479,7 +3631,10 @@
    "url": null,
    "soort": {
     "nl": "jeepsafari",
-    "en": "jeep safari"
+    "en": "jeep safari",
+    "de": "Jeep-Safari",
+    "es": "safari en jeep",
+    "pt": "safári de jipe"
    },
    "plaats": "Porto Mari",
    "tags": [
@@ -2491,7 +3646,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
     "datum": "2026-10"
@@ -2499,7 +3657,10 @@
    "feiten": [
     {
      "nl": "Grot, kunuku en Porto Mari",
-     "en": "Cave, countryside and Porto Mari"
+     "en": "Cave, countryside and Porto Mari",
+     "de": "Höhle, Landschaft und Porto Mari",
+     "es": "Cueva, campo y Porto Mari",
+     "pt": "Caverna, interior e Porto Mari"
     }
    ],
    "scores": [
@@ -2518,11 +3679,23 @@
     ],
     "en": [
      "Mix of countryside and beach"
+    ],
+    "de": [
+     "Mischung aus Landschaft und Strand"
+    ],
+    "es": [
+     "Mezcla de campo y playa"
+    ],
+    "pt": [
+     "Mistura de interior e praia"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
@@ -2534,7 +3707,10 @@
    "url": null,
    "soort": {
     "nl": "quadtour",
-    "en": "ATV tour"
+    "en": "ATV tour",
+    "de": "Quad-Tour",
+    "es": "tour en cuatrimoto",
+    "pt": "passeio de quadriciclo"
    },
    "plaats": "Koraalspechtweg, Willemstad",
    "tags": [
@@ -2548,7 +3724,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per ATV (max 2 personen)",
-     "en": "per ATV (up to 2 people)"
+     "en": "per ATV (up to 2 people)",
+     "de": "pro Quad (bis zu 2 Personen)",
+     "es": "por cuatrimoto (hasta 2 personas)",
+     "pt": "por quadriciclo (até 2 pessoas)"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
     "datum": "2026-10"
@@ -2556,15 +3735,24 @@
    "feiten": [
     {
      "nl": "4 tot 6 uur",
-     "en": "4 to 6 hours"
+     "en": "4 to 6 hours",
+     "de": "4 bis 6 Stunden",
+     "es": "4 a 6 horas",
+     "pt": "4 a 6 horas"
     },
     {
      "nl": "Helm en water inbegrepen",
-     "en": "Helmet and water included"
+     "en": "Helmet and water included",
+     "de": "Helm und Wasser inklusive",
+     "es": "Casco y agua incluidos",
+     "pt": "Capacete e água incluídos"
     },
     {
      "nl": "Ophalen tegen meerprijs",
-     "en": "Pickup costs extra"
+     "en": "Pickup costs extra",
+     "de": "Abholung kostet extra",
+     "es": "La recogida cuesta extra",
+     "pt": "A busca custa extra"
     }
    ],
    "scores": [
@@ -2593,6 +3781,18 @@
     "en": [
      "Friendly guides who take photos",
      "Varied route: windmills, cave, Kokomo, flamingos"
+    ],
+    "de": [
+     "Freundliche Guides, die Fotos machen",
+     "Abwechslungsreiche Route: Windmühlen, Höhle, Kokomo, Flamingos"
+    ],
+    "es": [
+     "Guías amables que sacan fotos",
+     "Ruta variada: molinos de viento, cueva, Kokomo, flamencos"
+    ],
+    "pt": [
+     "Guias simpáticos que tiram fotos",
+     "Rota variada: moinhos de vento, caverna, Kokomo, flamingos"
     ]
    },
    "tegen": {
@@ -2603,6 +3803,18 @@
     "en": [
      "Photos sometimes delivered late",
      "Occasional equipment problems"
+    ],
+    "de": [
+     "Fotos kommen manchmal verspätet",
+     "Gelegentlich Probleme mit der Ausrüstung"
+    ],
+    "es": [
+     "A veces las fotos llegan tarde",
+     "Problemas ocasionales con el equipo"
+    ],
+    "pt": [
+     "Às vezes as fotos chegam atrasadas",
+     "Problemas ocasionais com o equipamento"
     ]
    },
    "bronnen": [
@@ -2616,7 +3828,10 @@
    "url": null,
    "soort": {
     "nl": "quadtour",
-    "en": "ATV tour"
+    "en": "ATV tour",
+    "de": "Quad-Tour",
+    "es": "tour en cuatrimoto",
+    "pt": "passeio de quadriciclo"
    },
    "plaats": "Seru Fortunaweg, Willemstad",
    "tags": [
@@ -2630,7 +3845,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d33455494-Curacao_ATV_Westpoint_beach_hopping_off_road_adventure-Curacao.html",
     "datum": "2026-10"
@@ -2638,15 +3856,24 @@
    "feiten": [
     {
      "nl": "3 uur",
-     "en": "3 hours"
+     "en": "3 hours",
+     "de": "3 Stunden",
+     "es": "3 horas",
+     "pt": "3 horas"
     },
     {
      "nl": "Vanaf 18 jaar",
-     "en": "Ages 18 and up"
+     "en": "Ages 18 and up",
+     "de": "Ab 18 Jahren",
+     "es": "Desde los 18 años",
+     "pt": "A partir de 18 anos"
     },
     {
      "nl": "Geen ophaalservice",
-     "en": "No pickup"
+     "en": "No pickup",
+     "de": "Keine Abholung",
+     "es": "Sin recogida",
+     "pt": "Sem busca"
     }
    ],
    "scores": [
@@ -2667,6 +3894,18 @@
     "en": [
      "Friendly, knowledgeable guides",
      "Mix of caves, beaches and swims"
+    ],
+    "de": [
+     "Freundliche, kenntnisreiche Guides",
+     "Mischung aus Höhlen, Stränden und Schwimmstopps"
+    ],
+    "es": [
+     "Guías amables y con mucho conocimiento",
+     "Mezcla de cuevas, playas y baños"
+    ],
+    "pt": [
+     "Guias simpáticos e experientes",
+     "Mistura de cavernas, praias e mergulhos"
     ]
    },
    "tegen": {
@@ -2677,6 +3916,18 @@
     "en": [
      "Guide can be pushy about sales",
      "Hotel pickup costs a lot extra"
+    ],
+    "de": [
+     "Der Guide kann beim Verkauf aufdringlich sein",
+     "Hotelabholung kostet deutlich extra"
+    ],
+    "es": [
+     "El guía puede ser insistente con las ventas",
+     "La recogida en el hotel cuesta bastante extra"
+    ],
+    "pt": [
+     "O guia pode ser insistente nas vendas",
+     "A busca no hotel custa bem mais"
     ]
    },
    "bronnen": [
@@ -2690,7 +3941,10 @@
    "url": null,
    "soort": {
     "nl": "buggytour",
-    "en": "buggy tour"
+    "en": "buggy tour",
+    "de": "Buggy-Tour",
+    "es": "tour en buggy",
+    "pt": "passeio de buggy"
    },
    "plaats": "westkust",
    "tags": [
@@ -2703,7 +3957,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
     "datum": "2026-10"
@@ -2711,7 +3968,10 @@
    "feiten": [
     {
      "nl": "Buggy voor twee",
-     "en": "Two-seat buggy"
+     "en": "Two-seat buggy",
+     "de": "Zweisitziger Buggy",
+     "es": "Buggy de dos plazas",
+     "pt": "Buggy de dois lugares"
     }
    ],
    "scores": [
@@ -2730,11 +3990,23 @@
     ],
     "en": [
      "Top score among buggy tours"
+    ],
+    "de": [
+     "Beste Bewertung unter den Buggy-Touren"
+    ],
+    "es": [
+     "La mejor calificación entre los tours en buggy"
+    ],
+    "pt": [
+     "Melhor nota entre os passeios de buggy"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
@@ -2746,7 +4018,10 @@
    "url": null,
    "soort": {
     "nl": "quadtour",
-    "en": "ATV tour"
+    "en": "ATV tour",
+    "de": "Quad-Tour",
+    "es": "tour en cuatrimoto",
+    "pt": "passeio de quadriciclo"
    },
    "plaats": "oostkust",
    "tags": [
@@ -2759,7 +4034,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per groep",
-     "en": "per group"
+     "en": "per group",
+     "de": "pro Gruppe",
+     "es": "por grupo",
+     "pt": "por grupo"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
     "datum": "2026-10"
@@ -2767,7 +4045,10 @@
    "feiten": [
     {
      "nl": "Halve dag oostkant",
-     "en": "Half day, east side"
+     "en": "Half day, east side",
+     "de": "Halber Tag, Ostseite",
+     "es": "Medio día, lado este",
+     "pt": "Meio dia, lado leste"
     }
    ],
    "scores": [
@@ -2786,11 +4067,23 @@
     ],
     "en": [
      "Popular, with many reviews"
+    ],
+    "de": [
+     "Beliebt, mit vielen Bewertungen"
+    ],
+    "es": [
+     "Popular, con muchas reseñas"
+    ],
+    "pt": [
+     "Popular, com muitas avaliações"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
@@ -2802,7 +4095,10 @@
    "url": "https://www.atvbuggytours.com/",
    "soort": {
     "nl": "quad en buggy",
-    "en": "ATV and buggy"
+    "en": "ATV and buggy",
+    "de": "Quad und Buggy",
+    "es": "Cuatrimoto y buggy",
+    "pt": "Quadriciclo e buggy"
    },
    "plaats": null,
    "tags": [
@@ -2814,7 +4110,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per buggy (max 2 personen)",
-     "en": "per buggy (up to 2 people)"
+     "en": "per buggy (up to 2 people)",
+     "de": "pro Buggy (bis zu 2 Personen)",
+     "es": "por buggy (hasta 2 personas)",
+     "pt": "por buggy (até 2 pessoas)"
     },
     "bron": "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/",
     "datum": "2026-10"
@@ -2822,11 +4121,17 @@
    "feiten": [
     {
      "nl": "Oostkust-tour 2,5 uur",
-     "en": "East coast tour 2.5 hours"
+     "en": "East coast tour 2.5 hours",
+     "de": "Tour entlang der Ostküste, 2.5 Stunden",
+     "es": "Tour por la costa este de 2.5 horas",
+     "pt": "Passeio pela costa leste de 2.5 horas"
     },
     {
      "nl": "Helm, bril en water",
-     "en": "Helmet, goggles and water"
+     "en": "Helmet, goggles and water",
+     "de": "Helm, Schutzbrille und Wasser",
+     "es": "Casco, gafas y agua",
+     "pt": "Capacete, óculos e água"
     }
    ],
    "scores": [],
@@ -2836,11 +4141,23 @@
     ],
     "en": [
      "Shorter ride, fits in an afternoon"
+    ],
+    "de": [
+     "Kürzere Fahrt, passt in einen Nachmittag"
+    ],
+    "es": [
+     "Recorrido más corto, cabe en una tarde"
+    ],
+    "pt": [
+     "Passeio mais curto, cabe numa tarde"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.atvbuggytours.com/",
@@ -2853,7 +4170,10 @@
    "url": null,
    "soort": {
     "nl": "wandeltour",
-    "en": "walking tour"
+    "en": "walking tour",
+    "de": "Stadtrundgang",
+    "es": "recorrido a pie",
+    "pt": "caminhada guiada"
    },
    "plaats": "Otrobanda, Willemstad",
    "tags": [
@@ -2869,7 +4189,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html",
     "datum": "2026-10"
@@ -2877,15 +4200,24 @@
    "feiten": [
     {
      "nl": "1,5 tot 2 uur",
-     "en": "1.5 to 2 hours"
+     "en": "1.5 to 2 hours",
+     "de": "1.5 bis 2 Stunden",
+     "es": "1.5 a 2 horas",
+     "pt": "1.5 a 2 horas"
     },
     {
      "nl": "Maximaal 16 personen",
-     "en": "Maximum 16 people"
+     "en": "Maximum 16 people",
+     "de": "Höchstens 16 Personen",
+     "es": "Máximo 16 personas",
+     "pt": "No máximo 16 pessoas"
     },
     {
      "nl": "Start bij Rif Fort",
-     "en": "Starts at Rif Fort"
+     "en": "Starts at Rif Fort",
+     "de": "Start am Rif Fort",
+     "es": "Sale de Rif Fort",
+     "pt": "Começa no Rif Fort"
     }
    ],
    "scores": [
@@ -2906,6 +4238,18 @@
     "en": [
      "Guides bring history and culture to life",
      "Murals and colorful streets of Otrobanda"
+    ],
+    "de": [
+     "Die Guides lassen Geschichte und Kultur lebendig werden",
+     "Wandbilder und bunte Straßen in Otrobanda"
+    ],
+    "es": [
+     "Los guías dan vida a la historia y la cultura",
+     "Murales y calles de colores en Otrobanda"
+    ],
+    "pt": [
+     "Os guias dão vida à história e à cultura",
+     "Murais e ruas coloridas em Otrobanda"
     ]
    },
    "tegen": {
@@ -2916,6 +4260,18 @@
     "en": [
      "Water handed out late, bring your own",
      "Brisk pace with some uphill walking"
+    ],
+    "de": [
+     "Wasser wird spät verteilt, bring dein eigenes mit",
+     "Zügiges Tempo mit einigen Anstiegen"
+    ],
+    "es": [
+     "El agua se reparte tarde, lleva la tuya",
+     "Ritmo rápido con algunas subidas"
+    ],
+    "pt": [
+     "A água é distribuída tarde, leve a sua",
+     "Ritmo puxado, com algumas subidas"
     ]
    },
    "bronnen": [
@@ -2929,7 +4285,10 @@
    "url": null,
    "soort": {
     "nl": "stadstour",
-    "en": "city tour"
+    "en": "city tour",
+    "de": "Stadttour",
+    "es": "tour por la ciudad",
+    "pt": "city tour"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -2943,7 +4302,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html",
     "datum": "2026-10"
@@ -2951,7 +4313,10 @@
    "feiten": [
     {
      "nl": "4 uur",
-     "en": "4 hours"
+     "en": "4 hours",
+     "de": "4 Stunden",
+     "es": "4 horas",
+     "pt": "4 horas"
     }
    ],
    "scores": [
@@ -2970,6 +4335,15 @@
     ],
     "en": [
      "Good if you only have a few hours"
+    ],
+    "de": [
+     "Gut, wenn du nur ein paar Stunden hast"
+    ],
+    "es": [
+     "Bueno si solo tienes unas horas"
+    ],
+    "pt": [
+     "Bom se você tem só algumas horas"
     ]
    },
    "tegen": {
@@ -2978,6 +4352,15 @@
     ],
     "en": [
      "Easy to forget swimwear for the beach stop"
+    ],
+    "de": [
+     "Die Badesachen für den Strandstopp vergisst man leicht"
+    ],
+    "es": [
+     "Es fácil olvidar el traje de baño para la parada en la playa"
+    ],
+    "pt": [
+     "É fácil esquecer a roupa de banho para a parada na praia"
     ]
    },
    "bronnen": [
@@ -2991,7 +4374,10 @@
    "url": null,
    "soort": {
     "nl": "amfibiebus",
-    "en": "amphibious bus"
+    "en": "amphibious bus",
+    "de": "Amphibienbus",
+    "es": "bus anfibio",
+    "pt": "ônibus anfíbio"
    },
    "plaats": "Waaigat, Willemstad",
    "tags": [
@@ -3007,7 +4393,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d26444730-Bus_That_Drives_Into_the_Ocean_Unique_Curacao_Amphibious_Tour-Curacao.html",
     "datum": "2026-10"
@@ -3015,15 +4404,24 @@
    "feiten": [
     {
      "nl": "2 uur",
-     "en": "2 hours"
+     "en": "2 hours",
+     "de": "2 Stunden",
+     "es": "2 horas",
+     "pt": "2 horas"
     },
     {
      "nl": "Rijdt Spaanse Water in",
-     "en": "Drives into Spanish Water"
+     "en": "Drives into Spanish Water",
+     "de": "Fährt ins Spanish Water hinein",
+     "es": "Se mete en Spanish Water",
+     "pt": "Entra na água em Spanish Water"
     },
     {
      "nl": "Gratis parkeren",
-     "en": "Free parking"
+     "en": "Free parking",
+     "de": "Kostenloses Parken",
+     "es": "Estacionamiento gratis",
+     "pt": "Estacionamento gratuito"
     }
    ],
    "scores": [
@@ -3044,6 +4442,18 @@
     "en": [
      "Funny guides with local facts",
      "Kids love the splash into the water"
+    ],
+    "de": [
+     "Lustige Guides mit Fakten über die Insel",
+     "Kinder lieben den Sprung ins Wasser"
+    ],
+    "es": [
+     "Guías divertidos con datos locales",
+     "A los niños les encanta el chapuzón"
+    ],
+    "pt": [
+     "Guias engraçados com curiosidades locais",
+     "As crianças adoram o mergulho na água"
     ]
    },
    "tegen": {
@@ -3052,6 +4462,15 @@
     ],
     "en": [
      "Only one bathroom stop"
+    ],
+    "de": [
+     "Nur ein Toilettenstopp"
+    ],
+    "es": [
+     "Solo una parada para ir al baño"
+    ],
+    "pt": [
+     "Só uma parada para o banheiro"
     ]
    },
    "bronnen": [
@@ -3065,7 +4484,10 @@
    "url": null,
    "soort": {
     "nl": "eilandtour",
-    "en": "island tour"
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
    },
    "plaats": null,
    "tags": [
@@ -3078,7 +4500,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html",
     "datum": "2026-10"
@@ -3086,7 +4511,10 @@
    "feiten": [
     {
      "nl": "Grotten, flamingo's en strand",
-     "en": "Caves, flamingos and beach"
+     "en": "Caves, flamingos and beach",
+     "de": "Höhlen, Flamingos und Strand",
+     "es": "Cuevas, flamencos y playa",
+     "pt": "Cavernas, flamingos e praia"
     }
    ],
    "scores": [
@@ -3105,11 +4533,23 @@
     ],
     "en": [
      "Many highlights in one tour"
+    ],
+    "de": [
+     "Viele Highlights in einer Tour"
+    ],
+    "es": [
+     "Muchos puntos destacados en un solo tour"
+    ],
+    "pt": [
+     "Muitos destaques em um só passeio"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/AttractionProductReview-g147278-d11479015-Curacao_Highlights_tour_Hato_Caves_Flamingos_Beach_Time-Willemstad_Curacao.html",
@@ -3122,7 +4562,10 @@
    "url": null,
    "soort": {
     "nl": "rondleiding",
-    "en": "guided tour"
+    "en": "guided tour",
+    "de": "Geführte Tour",
+    "es": "tour guiado",
+    "pt": "passeio guiado"
    },
    "plaats": "Salinja, Willemstad",
    "tags": [
@@ -3136,7 +4579,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html",
     "datum": "2026-10"
@@ -3144,7 +4590,10 @@
    "feiten": [
     {
      "nl": "Rondleiding met proeverij",
-     "en": "Guided tour with tasting"
+     "en": "Guided tour with tasting",
+     "de": "Geführte Tour mit Verkostung",
+     "es": "Tour guiado con degustación",
+     "pt": "Passeio guiado com degustação"
     }
    ],
    "scores": [
@@ -3163,11 +4612,23 @@
     ],
     "en": [
      "Cheap and close to town"
+    ],
+    "de": [
+     "Günstig und nah an der Stadt"
+    ],
+    "es": [
+     "Barato y cerca de la ciudad"
+    ],
+    "pt": [
+     "Barato e perto da cidade"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/AttractionProductReview-g147277-d13000407-Guided_Tour_at_the_Curacao_Liqueur_Distillery-Curacao.html",
@@ -3180,7 +4641,10 @@
    "url": null,
    "soort": {
     "nl": "zonsondergangcruise",
-    "en": "sunset cruise"
+    "en": "sunset cruise",
+    "de": "Sonnenuntergangsfahrt",
+    "es": "paseo al atardecer",
+    "pt": "passeio ao pôr do sol"
    },
    "plaats": "Spaanse Water",
    "tags": [
@@ -3195,7 +4659,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
     "datum": "2026-10"
@@ -3203,11 +4670,17 @@
    "feiten": [
     {
      "nl": "2 tot 3 uur",
-     "en": "2 to 3 hours"
+     "en": "2 to 3 hours",
+     "de": "2 bis 3 Stunden",
+     "es": "2 a 3 horas",
+     "pt": "2 a 3 horas"
     },
     {
      "nl": "Open bar en hapjes",
-     "en": "Open bar and finger food"
+     "en": "Open bar and finger food",
+     "de": "Offene Bar und Fingerfood",
+     "es": "Barra libre y bocadillos",
+     "pt": "Open bar e petiscos"
     }
    ],
    "scores": [
@@ -3226,6 +4699,15 @@
     ],
     "en": [
      "Cheapest sunset sail with an open bar"
+    ],
+    "de": [
+     "Günstigste Sonnenuntergangsfahrt mit offener Bar"
+    ],
+    "es": [
+     "El paseo al atardecer más barato con barra libre"
+    ],
+    "pt": [
+     "O passeio ao pôr do sol mais barato com open bar"
     ]
    },
    "tegen": {
@@ -3234,6 +4716,15 @@
     ],
     "en": [
      "Loud music"
+    ],
+    "de": [
+     "Laute Musik"
+    ],
+    "es": [
+     "Música alta"
+    ],
+    "pt": [
+     "Música alta"
     ]
    },
    "bronnen": [
@@ -3247,7 +4738,10 @@
    "url": null,
    "soort": {
     "nl": "zonsondergangcruise",
-    "en": "sunset cruise"
+    "en": "sunset cruise",
+    "de": "Sonnenuntergangsfahrt",
+    "es": "paseo al atardecer",
+    "pt": "passeio ao pôr do sol"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -3262,7 +4756,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
     "datum": "2026-10"
@@ -3270,11 +4767,17 @@
    "feiten": [
     {
      "nl": "2,5 uur",
-     "en": "2.5 hours"
+     "en": "2.5 hours",
+     "de": "2.5 Stunden",
+     "es": "2.5 horas",
+     "pt": "2.5 horas"
     },
     {
      "nl": "Open bar en hapjes",
-     "en": "Open bar and bites"
+     "en": "Open bar and bites",
+     "de": "Offene Bar und Häppchen",
+     "es": "Barra libre y bocaditos",
+     "pt": "Open bar e petiscos"
     }
    ],
    "scores": [
@@ -3293,11 +4796,23 @@
     ],
     "en": [
      "Relaxed vibe and good crew"
+    ],
+    "de": [
+     "Entspannte Stimmung und gute Crew"
+    ],
+    "es": [
+     "Ambiente relajado y buena tripulación"
+    ],
+    "pt": [
+     "Clima descontraído e boa tripulação"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/AttractionProductReview-g147277-d16672414-Catamaran_Sunset_Cruise_with_open_bar_and_bites-Curacao.html",
@@ -3310,7 +4825,10 @@
    "url": null,
    "soort": {
     "nl": "feestcruise",
-    "en": "party cruise"
+    "en": "party cruise",
+    "de": "Partyfahrt",
+    "es": "paseo de fiesta",
+    "pt": "passeio de festa"
    },
    "plaats": "Kima Kalki Marina",
    "tags": [
@@ -3324,7 +4842,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
     "datum": "2026-10"
@@ -3332,15 +4853,24 @@
    "feiten": [
     {
      "nl": "3 uur",
-     "en": "3 hours"
+     "en": "3 hours",
+     "de": "3 Stunden",
+     "es": "3 horas",
+     "pt": "3 horas"
     },
     {
      "nl": "16 tot 60 jaar",
-     "en": "Ages 16 to 60"
+     "en": "Ages 16 to 60",
+     "de": "Von 16 bis 60 Jahren",
+     "es": "De 16 a 60 años",
+     "pt": "De 16 a 60 anos"
     },
     {
      "nl": "DJ en live optreden",
-     "en": "DJ and live performer"
+     "en": "DJ and live performer",
+     "de": "DJ und Live-Künstler",
+     "es": "DJ y artista en vivo",
+     "pt": "DJ e artista ao vivo"
     }
    ],
    "scores": [
@@ -3361,6 +4891,18 @@
     "en": [
      "Friendly crew",
      "Music, DJ and violinist at sunset"
+    ],
+    "de": [
+     "Freundliche Crew",
+     "Musik, DJ und Geigerin bei Sonnenuntergang"
+    ],
+    "es": [
+     "Tripulación amable",
+     "Música, DJ y violinista al atardecer"
+    ],
+    "pt": [
+     "Tripulação simpática",
+     "Música, DJ e violinista ao pôr do sol"
     ]
    },
    "tegen": {
@@ -3371,6 +4913,18 @@
     "en": [
      "Cocktails cost extra",
      "Small portions"
+    ],
+    "de": [
+     "Cocktails kosten extra",
+     "Kleine Portionen"
+    ],
+    "es": [
+     "Los cócteles cuestan extra",
+     "Porciones pequeñas"
+    ],
+    "pt": [
+     "Os coquetéis custam extra",
+     "Porções pequenas"
     ]
    },
    "bronnen": [
@@ -3384,7 +4938,10 @@
    "url": null,
    "soort": {
     "nl": "feestboot",
-    "en": "party boat"
+    "en": "party boat",
+    "de": "Partyboot",
+    "es": "barco de fiesta",
+    "pt": "barco de festa"
    },
    "plaats": "Fuikbaai",
    "tags": [
@@ -3399,7 +4956,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon",
-     "en": "per person"
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
     },
     "bron": "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/",
     "datum": "2026-10"
@@ -3407,11 +4967,17 @@
    "feiten": [
     {
      "nl": "5,5 uur",
-     "en": "5.5 hours"
+     "en": "5.5 hours",
+     "de": "5.5 Stunden",
+     "es": "5.5 horas",
+     "pt": "5.5 horas"
     },
     {
      "nl": "BBQ-lunch en drankjes",
-     "en": "BBQ lunch and drinks"
+     "en": "BBQ lunch and drinks",
+     "de": "BBQ-Mittagessen und Getränke",
+     "es": "Almuerzo BBQ y bebidas",
+     "pt": "Almoço de churrasco e bebidas"
     }
    ],
    "scores": [],
@@ -3421,11 +4987,23 @@
     ],
     "en": [
      "Party on the water at a fair price"
+    ],
+    "de": [
+     "Party auf dem Wasser zu einem fairen Preis"
+    ],
+    "es": [
+     "Fiesta en el agua a buen precio"
+    ],
+    "pt": [
+     "Festa na água por um preço justo"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/"
@@ -3437,7 +5015,10 @@
    "url": null,
    "soort": {
     "nl": "privéboot",
-    "en": "private boat"
+    "en": "private boat",
+    "de": "Privatboot",
+    "es": "bote privado",
+    "pt": "barco privativo"
    },
    "plaats": null,
    "tags": [
@@ -3451,7 +5032,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per groep",
-     "en": "per group"
+     "en": "per group",
+     "de": "pro Gruppe",
+     "es": "por grupo",
+     "pt": "por grupo"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
     "datum": "2026-10"
@@ -3459,11 +5043,17 @@
    "feiten": [
     {
      "nl": "3 of 4 uur",
-     "en": "3 or 4 hours"
+     "en": "3 or 4 hours",
+     "de": "3 oder 4 Stunden",
+     "es": "3 o 4 horas",
+     "pt": "3 ou 4 horas"
     },
     {
      "nl": "Alleen jouw groep",
-     "en": "Your group only"
+     "en": "Your group only",
+     "de": "Nur deine Gruppe",
+     "es": "Solo tu grupo",
+     "pt": "Só o seu grupo"
     }
    ],
    "scores": [
@@ -3482,11 +5072,23 @@
     ],
     "en": [
      "Your own pace and stops"
+    ],
+    "de": [
+     "Eigenes Tempo und eigene Stopps"
+    ],
+    "es": [
+     "Tu propio ritmo y tus propias paradas"
+    ],
+    "pt": [
+     "No seu ritmo e com as suas paradas"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html"
@@ -3498,7 +5100,10 @@
    "url": null,
    "soort": {
     "nl": "bootverhuur",
-    "en": "boat rental"
+    "en": "boat rental",
+    "de": "Bootsvermietung",
+    "es": "alquiler de bote",
+    "pt": "aluguel de barco"
    },
    "plaats": "Spaanse Water",
    "tags": [
@@ -3512,7 +5117,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per boot (6 tot 8 personen)",
-     "en": "per boat (6 to 8 people)"
+     "en": "per boat (6 to 8 people)",
+     "de": "pro Boot (6 bis 8 Personen)",
+     "es": "por bote (6 a 8 personas)",
+     "pt": "por barco (6 a 8 pessoas)"
     },
     "bron": "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/",
     "datum": "2026-10"
@@ -3520,11 +5128,17 @@
    "feiten": [
     {
      "nl": "4 uur varen",
-     "en": "4 hours on the water"
+     "en": "4 hours on the water",
+     "de": "4 Stunden auf dem Wasser",
+     "es": "4 horas en el agua",
+     "pt": "4 horas na água"
     },
     {
      "nl": "BBQ en koelbox aan boord",
-     "en": "BBQ and cooler on board"
+     "en": "BBQ and cooler on board",
+     "de": "BBQ und Kühlbox an Bord",
+     "es": "BBQ y hielera a bordo",
+     "pt": "Churrasco e caixa térmica a bordo"
     }
    ],
    "scores": [],
@@ -3534,11 +5148,23 @@
     ],
     "en": [
      "Cheap per person with a full boat"
+    ],
+    "de": [
+     "Günstig pro Person bei vollem Boot"
+    ],
+    "es": [
+     "Barato por persona con el bote lleno"
+    ],
+    "pt": [
+     "Barato por pessoa com o barco cheio"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/"
@@ -3550,7 +5176,10 @@
    "url": null,
    "soort": {
     "nl": "jetski",
-    "en": "jet ski"
+    "en": "jet ski",
+    "de": "Jetski",
+    "es": "moto acuática",
+    "pt": "jet ski"
    },
    "plaats": "Piscaderabaai",
    "tags": [
@@ -3562,7 +5191,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per jetski (max 2 personen)",
-     "en": "per jet ski (up to 2 people)"
+     "en": "per jet ski (up to 2 people)",
+     "de": "pro Jetski (bis zu 2 Personen)",
+     "es": "por moto acuática (hasta 2 personas)",
+     "pt": "por jet ski (até 2 pessoas)"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
     "datum": "2026-10"
@@ -3570,7 +5202,10 @@
    "feiten": [
     {
      "nl": "1 uur",
-     "en": "1 hour"
+     "en": "1 hour",
+     "de": "1 Stunde",
+     "es": "1 hora",
+     "pt": "1 hora"
     }
    ],
    "scores": [
@@ -3589,11 +5224,23 @@
     ],
     "en": [
      "High score, short activity"
+    ],
+    "de": [
+     "Hohe Bewertung, kurze Aktivität"
+    ],
+    "es": [
+     "Calificación alta, actividad corta"
+    ],
+    "pt": [
+     "Nota alta, atividade curta"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/AttractionProductReview-g147277-d33140347-Jetski_Adventure_Piscadera-Curacao.html",
@@ -3606,7 +5253,10 @@
    "url": null,
    "soort": {
     "nl": "doorzichtige kajak",
-    "en": "clear kayak"
+    "en": "clear kayak",
+    "de": "durchsichtiges Kajak",
+    "es": "kayak transparente",
+    "pt": "caiaque transparente"
    },
    "plaats": null,
    "tags": [
@@ -3619,7 +5269,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
-     "en": "per adult"
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html",
     "datum": "2026-10"
@@ -3627,7 +5280,10 @@
    "feiten": [
     {
      "nl": "Foto's en video inbegrepen",
-     "en": "Photos and video included"
+     "en": "Photos and video included",
+     "de": "Fotos und Video inklusive",
+     "es": "Fotos y video incluidos",
+     "pt": "Fotos e vídeo incluídos"
     }
    ],
    "scores": [
@@ -3646,11 +5302,23 @@
     ],
     "en": [
      "Photos to take home included"
+    ],
+    "de": [
+     "Fotos zum Mitnehmen inklusive"
+    ],
+    "es": [
+     "Fotos para llevar incluidas"
+    ],
+    "pt": [
+     "Fotos para levar para casa incluídas"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/AttractionProductReview-g147277-d26021502-Curacao_Clear_Kayak_Photoshoot_FREE_Videoshoot_Cocktails_Shots-Curacao.html",
@@ -3663,7 +5331,10 @@
    "url": null,
    "soort": {
     "nl": "SUP-tour",
-    "en": "SUP tour"
+    "en": "SUP tour",
+    "de": "SUP-Tour",
+    "es": "tour de SUP",
+    "pt": "passeio de SUP"
    },
    "plaats": null,
    "tags": [
@@ -3675,7 +5346,10 @@
    "feiten": [
     {
      "nl": "Geschikt voor beginners",
-     "en": "Beginner friendly"
+     "en": "Beginner friendly",
+     "de": "Anfängerfreundlich",
+     "es": "Apto para principiantes",
+     "pt": "Bom para iniciantes"
     }
    ],
    "scores": [
@@ -3694,11 +5368,23 @@
     ],
     "en": [
      "Calm paddling through the mangroves"
+    ],
+    "de": [
+     "Ruhiges Paddeln durch die Mangroven"
+    ],
+    "es": [
+     "Remada tranquila por los manglares"
+    ],
+    "pt": [
+     "Remada tranquila pelos manguezais"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.co.uk/Attractions-g147278-Activities-c55-Willemstad_Curacao.html"
@@ -3710,7 +5396,10 @@
    "url": null,
    "soort": {
     "nl": "vissen op zee",
-    "en": "sport fishing"
+    "en": "sport fishing",
+    "de": "Sportfischen",
+    "es": "pesca deportiva",
+    "pt": "pesca esportiva"
    },
    "plaats": "Kima Kalki Marina",
    "tags": [
@@ -3723,7 +5412,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon",
-     "en": "per person"
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
     },
     "bron": "https://www.mycuracaoguide.com/fishing-charters",
     "datum": "2026-10"
@@ -3731,19 +5423,31 @@
    "feiten": [
     {
      "nl": "Open groepstrip, di en vr",
-     "en": "Shared trip, Tue and Fri"
+     "en": "Shared trip, Tue and Fri",
+     "de": "Gemeinsame Tour, Di und Fr",
+     "es": "Salida compartida, martes y viernes",
+     "pt": "Saída compartilhada, terça e sexta"
     },
     {
      "nl": "Halve dag privé $850",
-     "en": "Private half day $850"
+     "en": "Private half day $850",
+     "de": "Privater halber Tag $850",
+     "es": "Medio día privado $850",
+     "pt": "Meio dia privativo $850"
     },
     {
      "nl": "Hele dag privé $1.350",
-     "en": "Private full day $1,350"
+     "en": "Private full day $1,350",
+     "de": "Privater ganzer Tag $1,350",
+     "es": "Día completo privado $1,350",
+     "pt": "Dia inteiro privativo $1,350"
     },
     {
      "nl": "Hengels en drinken inbegrepen",
-     "en": "Gear and drinks included"
+     "en": "Gear and drinks included",
+     "de": "Ausrüstung und Getränke inklusive",
+     "es": "Equipo y bebidas incluidos",
+     "pt": "Equipamento e bebidas incluídos"
     }
    ],
    "scores": [],
@@ -3753,11 +5457,23 @@
     ],
     "en": [
      "Shared trip keeps fishing affordable per person"
+    ],
+    "de": [
+     "Die gemeinsame Tour hält das Angeln pro Person erschwinglich"
+    ],
+    "es": [
+     "La salida compartida hace que pescar sea asequible por persona"
+    ],
+    "pt": [
+     "A saída compartilhada deixa a pesca acessível por pessoa"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/fishing-charters"
@@ -3770,7 +5486,10 @@
    "url": "https://www.viator.com/Curacao-tours/4WD-ATV-and-Off-Road-Tours/d725-g9-c32",
    "uitleg": {
     "nl": "Boekt tours van lokale aanbieders, met reviews per tour. Prijs is meestal gelijk aan direct boeken.",
-    "en": "Books tours from local operators with reviews per tour. Prices are usually the same as booking direct."
+    "en": "Books tours from local operators with reviews per tour. Prices are usually the same as booking direct.",
+    "de": "Bucht Touren lokaler Anbieter mit Bewertungen pro Tour. Die Preise sind meist dieselben wie bei direkter Buchung.",
+    "es": "Reserva tours de operadores locales, con reseñas por tour. Los precios suelen ser los mismos que reservando directamente.",
+    "pt": "Reserva passeios de operadores locais, com avaliações por passeio. Os preços costumam ser os mesmos da reserva direta."
    }
   },
   {
@@ -3778,7 +5497,10 @@
    "url": "https://www.getyourguide.com/spaanse-water-l192288/swim-with-turtles-at-turtle-bay-boat-trip-blue-room-cave-t613602/",
    "uitleg": {
     "nl": "Boekingsplatform met gratis annuleren tot 24 uur vooraf bij veel tours.",
-    "en": "Booking platform with free cancellation up to 24 hours ahead on many tours."
+    "en": "Booking platform with free cancellation up to 24 hours ahead on many tours.",
+    "de": "Buchungsplattform mit kostenloser Stornierung bis 24 Stunden vorher bei vielen Touren.",
+    "es": "Plataforma de reservas con cancelación gratis hasta 24 horas antes en muchos tours.",
+    "pt": "Plataforma de reservas com cancelamento gratuito até 24 horas antes em muitos passeios."
    }
   },
   {
@@ -3786,7 +5508,10 @@
    "url": "https://www.mycuracaoguide.com/klein-curacao",
    "uitleg": {
     "nl": "Lokale boekingssite die Klein Curaçao-boten naast elkaar zet.",
-    "en": "Local booking site that compares Klein Curaçao boats side by side."
+    "en": "Local booking site that compares Klein Curaçao boats side by side.",
+    "de": "Lokale Buchungsseite, die die Boote nach Klein Curaçao nebeneinander vergleicht.",
+    "es": "Sitio de reservas local que compara lado a lado los barcos a Klein Curazao.",
+    "pt": "Site de reservas local que compara lado a lado os barcos para Klein Curaçao."
    }
   },
   {
@@ -3794,7 +5519,10 @@
    "url": "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/",
    "uitleg": {
     "nl": "Nederlandstalige boekingssite met 49 Curaçao-excursies en prijzen.",
-    "en": "Dutch booking site listing 49 Curaçao excursions with prices."
+    "en": "Dutch booking site listing 49 Curaçao excursions with prices.",
+    "de": "Niederländische Buchungsseite mit 49 Ausflügen auf Curaçao samt Preisen.",
+    "es": "Sitio de reservas neerlandés con 49 excursiones en Curazao y sus precios.",
+    "pt": "Site de reservas holandês com 49 passeios em Curaçao e seus preços."
    }
   },
   {
@@ -3802,7 +5530,10 @@
    "url": "https://klein-curacao.nl/en/klein-curacao-prices/",
    "uitleg": {
     "nl": "Vergelijkt de Klein Curaçao-boten met prijzen in euro.",
-    "en": "Compares Klein Curaçao boats with prices in euros."
+    "en": "Compares Klein Curaçao boats with prices in euros.",
+    "de": "Vergleicht Boote nach Klein Curaçao mit Preisen in Euro.",
+    "es": "Compara barcos a Klein Curazao con precios en euros.",
+    "pt": "Compara barcos para Klein Curaçao com preços em euros."
    }
   },
   {
@@ -3810,119 +5541,191 @@
    "url": "https://curacaoactivities.com/",
    "uitleg": {
     "nl": "Boekingssite voor snorkeltours en jeepsafari's.",
-    "en": "Booking site for snorkel tours and jeep safaris."
+    "en": "Booking site for snorkel tours and jeep safaris.",
+    "de": "Buchungsseite für Schnorcheltouren und Jeep-Safaris.",
+    "es": "Sitio de reservas para tours de snorkel y safaris en jeep.",
+    "pt": "Site de reservas para passeios de snorkel e safáris de jipe."
    }
   }
  ],
  "tips": [
   {
    "nl": "Klein Curaçao-boten vertrekken tussen 7:00 en 8:30. De heenweg gaat tegen de stroming in en is vaak ruw; neem een middel tegen zeeziekte in voor vertrek.",
-   "en": "Klein Curaçao boats leave between 7:00 and 8:30 a.m. The outbound leg runs against the current and is often rough, so take seasickness medication before you board."
+   "en": "Klein Curaçao boats leave between 7:00 and 8:30 a.m. The outbound leg runs against the current and is often rough, so take seasickness medication before you board.",
+   "de": "Die Boote nach Klein Curaçao legen zwischen 7:00 und 8:30 Uhr ab. Die Hinfahrt läuft gegen die Strömung und ist oft rau, nimm also vor dem Einsteigen ein Mittel gegen Seekrankheit.",
+   "es": "Los barcos a Klein Curazao salen entre las 7:00 y las 8:30 a. m. La ida va contra la corriente y suele ser agitada, así que toma una pastilla para el mareo antes de subir.",
+   "pt": "Os barcos para Klein Curaçao saem entre 7h e 8h30. A ida é contra a correnteza e costuma ser agitada, então tome um remédio para enjoo antes de embarcar."
   },
   {
    "nl": "Kinderen betalen op de meeste Klein Curaçao-boten ongeveer de helft.",
-   "en": "Kids pay about half price on most Klein Curaçao boats."
+   "en": "Kids pay about half price on most Klein Curaçao boats.",
+   "de": "Kinder zahlen auf den meisten Booten nach Klein Curaçao etwa den halben Preis.",
+   "es": "Los niños pagan más o menos la mitad en la mayoría de los barcos a Klein Curazao.",
+   "pt": "As crianças pagam cerca de metade na maioria dos barcos para Klein Curaçao."
   },
   {
    "nl": "Let op wat 'open bar' betekent: bij Miss Ann en Mermaid zit alcohol doordeweeks niet in de prijs, bij BlueFinn en Irie Tours wel.",
-   "en": "Check what open bar means: Miss Ann and Mermaid charge for alcohol on weekdays, while BlueFinn and Irie Tours include it."
+   "en": "Check what open bar means: Miss Ann and Mermaid charge for alcohol on weekdays, while BlueFinn and Irie Tours include it.",
+   "de": "Schau, was offene Bar bedeutet: Miss Ann und Mermaid berechnen werktags Alkohol, bei BlueFinn und Irie Tours ist er inklusive.",
+   "es": "Fíjate qué significa barra libre: Miss Ann y Mermaid cobran el alcohol entre semana, mientras que BlueFinn e Irie Tours lo incluyen.",
+   "pt": "Veja o que open bar significa: Miss Ann e Mermaid cobram o álcool nos dias úteis, enquanto BlueFinn e Irie Tours o incluem."
   },
   {
    "nl": "Hotelvervoer kost vaak $15 tot $19 per persoon extra. Met een huurauto rij je zelf naar Jan Thiel, Caracasbaai of Santa Barbara.",
-   "en": "Hotel transfers often add $15 to $19 per person. With a rental car you can drive yourself to Jan Thiel, Caracas Bay or Santa Barbara."
+   "en": "Hotel transfers often add $15 to $19 per person. With a rental car you can drive yourself to Jan Thiel, Caracas Bay or Santa Barbara.",
+   "de": "Hoteltransfers kosten oft $15 bis $19 pro Person extra. Mit einem Mietwagen kannst du selbst nach Jan Thiel, zur Caracas Bay oder nach Santa Barbara fahren.",
+   "es": "Los traslados desde el hotel suelen sumar $15 a $19 por persona. Con auto de alquiler puedes ir tú mismo a Jan Thiel, Caracas Bay o Santa Barbara.",
+   "pt": "Os traslados do hotel costumam somar $15 a $19 por pessoa. Com carro alugado você pode ir por conta própria a Jan Thiel, Caracas Bay ou Santa Barbara."
   },
   {
    "nl": "Cruisepassagiers: kies een tour die bij de cruiseterminal ophaalt en maximaal 5 uur duurt, zoals een schildpaddentour of de amfibiebus.",
-   "en": "Cruise passengers: pick a tour with cruise terminal pickup that lasts 5 hours or less, such as a turtle tour or the amphibious bus."
+   "en": "Cruise passengers: pick a tour with cruise terminal pickup that lasts 5 hours or less, such as a turtle tour or the amphibious bus.",
+   "de": "Kreuzfahrtgäste: Wähle eine Tour mit Abholung am Kreuzfahrtterminal, die höchstens 5 Stunden dauert, etwa eine Schildkrötentour oder den Amphibienbus.",
+   "es": "Pasajeros de crucero: elige un tour con recogida en la terminal de cruceros que dure 5 horas o menos, como un tour de tortugas o el bus anfibio.",
+   "pt": "Passageiros de cruzeiro: escolha um passeio com busca no terminal de cruzeiros que dure no máximo 5 horas, como o passeio das tartarugas ou o ônibus anfíbio."
   },
   {
    "nl": "Neem waterschoenen mee voor snorkelstranden aan de westkant; de instap is vaak rotsig.",
-   "en": "Bring water shoes for west-side snorkel beaches; the entry is often rocky."
+   "en": "Bring water shoes for west-side snorkel beaches; the entry is often rocky.",
+   "de": "Nimm Wasserschuhe für die Schnorchelstrände im Westen mit; der Einstieg ist oft felsig.",
+   "es": "Lleva zapatos de agua para las playas de snorkel del oeste; la entrada suele ser rocosa.",
+   "pt": "Leve sapatilhas de água para as praias de snorkel do lado oeste; a entrada costuma ser rochosa."
   },
   {
    "nl": "Bij een quadtour is de prijs vaak per voertuig voor twee personen. Reken dat om naar een prijs per persoon voor je vergelijkt.",
-   "en": "ATV tour prices are often per vehicle for two people. Work out the price per person before you compare."
+   "en": "ATV tour prices are often per vehicle for two people. Work out the price per person before you compare.",
+   "de": "Die Preise für Quad-Touren gelten oft pro Fahrzeug für zwei Personen. Rechne den Preis pro Person aus, bevor du vergleichst.",
+   "es": "Los precios de los tours en cuatrimoto suelen ser por vehículo para dos personas. Calcula el precio por persona antes de comparar.",
+   "pt": "Os preços dos passeios de quadriciclo costumam ser por veículo para duas pessoas. Calcule o preço por pessoa antes de comparar."
   }
  ],
  "faq": [
   {
    "q": {
     "nl": "Wat kost een dagtocht naar Klein Curaçao?",
-    "en": "How much is a Klein Curaçao day trip?"
+    "en": "How much is a Klein Curaçao day trip?",
+    "de": "Wie viel kostet ein Tagesausflug nach Klein Curaçao?",
+    "es": "¿Cuánto cuesta una excursión de un día a Klein Curazao?",
+    "pt": "Quanto custa um bate-volta a Klein Curaçao?"
    },
    "a": {
     "nl": "Tussen $135 en $170 per volwassene, inclusief lunch en meestal ontbijt. Kinderen betalen vaak de helft. Hotelvervoer kost $17 tot $19 extra.",
-    "en": "Between $135 and $170 per adult, including lunch and usually breakfast. Kids often pay half. Hotel transfers cost $17 to $19 extra."
+    "en": "Between $135 and $170 per adult, including lunch and usually breakfast. Kids often pay half. Hotel transfers cost $17 to $19 extra.",
+    "de": "Zwischen $135 und $170 pro Erwachsenem, inklusive Mittagessen und meist Frühstück. Kinder zahlen oft die Hälfte. Hoteltransfers kosten $17 bis $19 extra.",
+    "es": "Entre $135 y $170 por adulto, con almuerzo y normalmente desayuno incluidos. Los niños suelen pagar la mitad. Los traslados desde el hotel cuestan $17 a $19 extra.",
+    "pt": "Entre $135 e $170 por adulto, com almoço e, em geral, café da manhã incluídos. As crianças costumam pagar metade. Os traslados do hotel custam $17 a $19 extra."
    }
   },
   {
    "q": {
     "nl": "Welke boot naar Klein Curaçao is het best?",
-    "en": "Which Klein Curaçao boat is best?"
+    "en": "Which Klein Curaçao boat is best?",
+    "de": "Welches Boot nach Klein Curaçao ist das beste?",
+    "es": "¿Cuál es el mejor barco a Klein Curazao?",
+    "pt": "Qual é o melhor barco para Klein Curaçao?"
    },
    "a": {
     "nl": "Wie snel zeeziek wordt kiest Powerboat Caribbean (40 tot 45 minuten, 4,9). Voor comfort met strandhuis: Miss Ann of Mermaid. Voor alcohol inbegrepen en dagelijks vertrek: BlueFinn of Irie Tours.",
-    "en": "If you get seasick, go with Powerboat Caribbean (40 to 45 minutes, 4.9). For comfort and a beach house, Miss Ann or Mermaid. For drinks included and daily departures, BlueFinn or Irie Tours."
+    "en": "If you get seasick, go with Powerboat Caribbean (40 to 45 minutes, 4.9). For comfort and a beach house, Miss Ann or Mermaid. For drinks included and daily departures, BlueFinn or Irie Tours.",
+    "de": "Wenn du leicht seekrank wirst, nimm Powerboat Caribbean (40 bis 45 Minuten, 4.9). Für Komfort und ein Strandhaus Miss Ann oder Mermaid. Für inklusive Getränke und tägliche Abfahrten BlueFinn oder Irie Tours.",
+    "es": "Si te mareas, elige Powerboat Caribbean (40 a 45 minutos, 4.9). Para comodidad y casa de playa, Miss Ann o Mermaid. Para bebidas incluidas y salidas diarias, BlueFinn o Irie Tours.",
+    "pt": "Se você enjoa, vá de Powerboat Caribbean (40 a 45 minutos, 4.9). Para conforto e casa de praia, Miss Ann ou Mermaid. Para bebidas incluídas e saídas diárias, BlueFinn ou Irie Tours."
    }
   },
   {
    "q": {
     "nl": "Hoe lang duurt de overtocht naar Klein Curaçao?",
-    "en": "How long is the boat ride to Klein Curaçao?"
+    "en": "How long is the boat ride to Klein Curaçao?",
+    "de": "Wie lange dauert die Bootsfahrt nach Klein Curaçao?",
+    "es": "¿Cuánto dura el viaje en bote a Klein Curazao?",
+    "pt": "Quanto tempo dura a viagem de barco até Klein Curaçao?"
    },
    "a": {
     "nl": "Met de speedboot 40 tot 50 minuten, met Miss Ann ongeveer een uur en met de grote catamarans tot 1 uur en 45 minuten.",
-    "en": "About 40 to 50 minutes by powerboat, around an hour with Miss Ann, and up to 1 hour 45 minutes on the big catamarans."
+    "en": "About 40 to 50 minutes by powerboat, around an hour with Miss Ann, and up to 1 hour 45 minutes on the big catamarans.",
+    "de": "Etwa 40 bis 50 Minuten mit dem Motorboot, rund eine Stunde mit der Miss Ann und bis zu 1 Stunde 45 Minuten auf den großen Katamaranen.",
+    "es": "Unos 40 a 50 minutos en lancha, alrededor de una hora con Miss Ann y hasta 1 hora 45 minutos en los catamaranes grandes.",
+    "pt": "Cerca de 40 a 50 minutos de lancha, cerca de uma hora com o Miss Ann e até 1 hora e 45 minutos nos catamarãs grandes."
    }
   },
   {
    "q": {
     "nl": "Waar zwem je met schildpadden op Curaçao?",
-    "en": "Where can you swim with sea turtles in Curaçao?"
+    "en": "Where can you swim with sea turtles in Curaçao?",
+    "de": "Wo kann man auf Curaçao mit Meeresschildkröten schwimmen?",
+    "es": "¿Dónde se puede nadar con tortugas marinas en Curazao?",
+    "pt": "Onde dá para nadar com tartarugas-marinhas em Curaçao?"
    },
    "a": {
     "nl": "Vooral bij Playa Piskado (Playa Grandi) in Westpunt, Playa Lagun en op Klein Curaçao. Georganiseerde schildpaddentours kosten $75 tot $107.",
-    "en": "Mainly at Playa Piskado (Playa Grandi) in Westpunt, Playa Lagun and Klein Curaçao. Guided turtle tours cost $75 to $107."
+    "en": "Mainly at Playa Piskado (Playa Grandi) in Westpunt, Playa Lagun and Klein Curaçao. Guided turtle tours cost $75 to $107.",
+    "de": "Hauptsächlich am Playa Piskado (Playa Grandi) in Westpunt, am Playa Lagun und auf Klein Curaçao. Geführte Schildkrötentouren kosten $75 bis $107.",
+    "es": "Sobre todo en Playa Piskado (Playa Grandi) en Westpunt, en Playa Lagun y en Klein Curazao. Los tours guiados de tortugas cuestan de $75 a $107.",
+    "pt": "Principalmente em Playa Piskado (Playa Grandi), em Westpunt, em Playa Lagun e em Klein Curaçao. Os passeios guiados de tartarugas custam de $75 a $107."
    }
   },
   {
    "q": {
     "nl": "Welke excursie is geschikt voor cruisepassagiers?",
-    "en": "Which excursions work for cruise passengers?"
+    "en": "Which excursions work for cruise passengers?",
+    "de": "Welche Ausflüge eignen sich für Kreuzfahrtgäste?",
+    "es": "¿Qué excursiones sirven para pasajeros de crucero?",
+    "pt": "Quais passeios servem para passageiros de cruzeiro?"
    },
    "a": {
     "nl": "Tours die bij de cruiseterminal ophalen en 2 tot 5 uur duren, zoals de schildpaddentours van Curacao Safari Tours en Samurai, de amfibiebus of een wandeltour door Willemstad.",
-    "en": "Tours with cruise terminal pickup that last 2 to 5 hours, like the turtle tours by Curacao Safari Tours and Samurai, the amphibious bus or a Willemstad walking tour."
+    "en": "Tours with cruise terminal pickup that last 2 to 5 hours, like the turtle tours by Curacao Safari Tours and Samurai, the amphibious bus or a Willemstad walking tour.",
+    "de": "Touren mit Abholung am Kreuzfahrtterminal, die 2 bis 5 Stunden dauern, etwa die Schildkrötentouren von Curacao Safari Tours und Samurai, der Amphibienbus oder ein Stadtrundgang durch Willemstad.",
+    "es": "Tours con recogida en la terminal de cruceros que duran de 2 a 5 horas, como los tours de tortugas de Curacao Safari Tours y Samurai, el bus anfibio o un recorrido a pie por Willemstad.",
+    "pt": "Passeios com busca no terminal de cruzeiros que duram de 2 a 5 horas, como os passeios de tartarugas da Curacao Safari Tours e da Samurai, o ônibus anfíbio ou uma caminhada por Willemstad."
    }
   },
   {
    "q": {
     "nl": "Wat kost een quadtour op Curaçao?",
-    "en": "How much is an ATV tour in Curaçao?"
+    "en": "How much is an ATV tour in Curaçao?",
+    "de": "Wie viel kostet eine Quad-Tour auf Curaçao?",
+    "es": "¿Cuánto cuesta un tour en cuatrimoto en Curazao?",
+    "pt": "Quanto custa um passeio de quadriciclo em Curaçao?"
    },
    "a": {
     "nl": "Ongeveer $100 per persoon voor 3 uur, of $173 tot $229 per voertuig voor twee personen. Ophalen kost vaak extra.",
-    "en": "Roughly $100 per person for 3 hours, or $173 to $229 per vehicle for two people. Pickup often costs extra."
+    "en": "Roughly $100 per person for 3 hours, or $173 to $229 per vehicle for two people. Pickup often costs extra.",
+    "de": "Etwa $100 pro Person für 3 Stunden oder $173 bis $229 pro Fahrzeug für zwei Personen. Die Abholung kostet oft extra.",
+    "es": "Alrededor de $100 por persona por 3 horas, o $173 a $229 por vehículo para dos personas. La recogida suele costar extra.",
+    "pt": "Cerca de $100 por pessoa por 3 horas, ou $173 a $229 por veículo para duas pessoas. A busca costuma custar extra."
    }
   },
   {
    "q": {
     "nl": "Wat kost een zonsondergangcruise?",
-    "en": "How much is a sunset cruise?"
+    "en": "How much is a sunset cruise?",
+    "de": "Wie viel kostet eine Sonnenuntergangsfahrt?",
+    "es": "¿Cuánto cuesta un paseo al atardecer?",
+    "pt": "Quanto custa um passeio ao pôr do sol?"
    },
    "a": {
     "nl": "Een catamaran met open bar van 2 tot 3 uur kost $75 tot $79 per persoon. Een feestcruise met DJ kost rond $145.",
-    "en": "A 2 to 3 hour catamaran sail with open bar costs $75 to $79 per person. A party cruise with a DJ runs around $145."
+    "en": "A 2 to 3 hour catamaran sail with open bar costs $75 to $79 per person. A party cruise with a DJ runs around $145.",
+    "de": "Eine 2- bis 3-stündige Katamaranfahrt mit offener Bar kostet $75 bis $79 pro Person. Eine Partyfahrt mit DJ kostet etwa $145.",
+    "es": "Un paseo en catamarán de 2 a 3 horas con barra libre cuesta de $75 a $79 por persona. Un paseo de fiesta con DJ cuesta unos $145.",
+    "pt": "Um passeio de catamarã de 2 a 3 horas com open bar custa de $75 a $79 por pessoa. Um passeio de festa com DJ custa cerca de $145."
    }
   },
   {
    "q": {
     "nl": "Wat kost zwemmen met dolfijnen op Curaçao?",
-    "en": "How much does it cost to swim with dolphins in Curaçao?"
+    "en": "How much does it cost to swim with dolphins in Curaçao?",
+    "de": "Wie viel kostet es, auf Curaçao mit Delfinen zu schwimmen?",
+    "es": "¿Cuánto cuesta nadar con delfines en Curazao?",
+    "pt": "Quanto custa nadar com golfinhos em Curaçao?"
    },
    "a": {
     "nl": "Bij Dolphin Academy kost een Encounter $114, een Swim $194 en een Dolphin Snorkel $210, inclusief entree van het Sea Aquarium.",
-    "en": "At Dolphin Academy an Encounter is $114, a Swim $194 and a Dolphin Snorkel $210, including Sea Aquarium entry."
+    "en": "At Dolphin Academy an Encounter is $114, a Swim $194 and a Dolphin Snorkel $210, including Sea Aquarium entry.",
+    "de": "Bei der Dolphin Academy kostet ein Encounter $114, ein Swim $194 und ein Dolphin Snorkel $210, jeweils inklusive Eintritt ins Sea Aquarium.",
+    "es": "En Dolphin Academy un Encounter cuesta $114, un Swim $194 y un Dolphin Snorkel $210, con entrada al Sea Aquarium incluida.",
+    "pt": "Na Dolphin Academy, um Encounter custa $114, um Swim $194 e um Dolphin Snorkel $210, com entrada no Sea Aquarium incluída."
    }
   }
  ],
@@ -3947,20 +5750,30 @@
   ],
   "es": [
    "excursiones curazao",
-   "klein curazao tour",
-   "snorkel tortugas curazao",
-   "tour en cuatrimoto curazao"
+   "excursión en bote a klein curazao",
+   "mejor tour klein curazao",
+   "tour de snorkel curazao tortugas",
+   "tour en cuatrimoto curazao",
+   "paseo al atardecer curazao",
+   "excursiones de crucero curazao"
   ],
   "pt": [
    "passeios curaçao",
-   "klein curaçao passeio de barco",
-   "snorkel com tartarugas curaçao"
+   "passeio de barco klein curaçao",
+   "melhor passeio klein curaçao",
+   "passeio de snorkel curaçao tartarugas",
+   "passeio de quadriciclo curaçao",
+   "passeio ao pôr do sol curaçao",
+   "passeios de cruzeiro curaçao"
   ],
   "de": [
-   "curaçao ausflüge",
-   "klein curaçao bootstour",
-   "schnorcheln schildkröten curaçao",
-   "quad tour curaçao"
+   "Ausflüge Curaçao",
+   "Bootsausflug Klein Curaçao",
+   "beste Tour Klein Curaçao",
+   "Schnorcheltour Curaçao Schildkröten",
+   "Quad-Tour Curaçao",
+   "Sonnenuntergangsfahrt Curaçao",
+   "Kreuzfahrt-Ausflüge Curaçao"
   ]
  },
  "llmVragen": {
@@ -3973,6 +5786,21 @@
    "What's the best Klein Curaçao boat trip?",
    "What should I do in Curaçao on a cruise stop of six hours?",
    "Which Curaçao snorkel tour lets you swim with sea turtles?"
+  ],
+  "de": [
+   "Was ist der beste Bootsausflug nach Klein Curaçao?",
+   "Was kann ich auf Curaçao bei einem sechsstündigen Kreuzfahrt-Stopp unternehmen?",
+   "Welche Schnorcheltour auf Curaçao erlaubt es, mit Meeresschildkröten zu schwimmen?"
+  ],
+  "es": [
+   "¿Cuál es la mejor excursión en bote a Klein Curazao?",
+   "¿Qué puedo hacer en Curazao en una escala de crucero de seis horas?",
+   "¿Qué tour de snorkel de Curazao permite nadar con tortugas marinas?"
+  ],
+  "pt": [
+   "Qual é o melhor passeio de barco a Klein Curaçao?",
+   "O que posso fazer em Curaçao numa parada de cruzeiro de seis horas?",
+   "Qual passeio de snorkel em Curaçao permite nadar com tartarugas-marinhas?"
   ]
  }
 }

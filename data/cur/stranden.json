@@ -3,35 +3,56 @@
  "peildatum": "2026-10-20",
  "onderwerp": {
   "nl": "strand",
-  "en": "beach"
+  "en": "beach",
+  "de": "Strand",
+  "es": "Playa",
+  "pt": "Praia"
  },
  "h1": {
   "nl": "Stranden op Curaçao: welk strand past bij jou?",
-  "en": "Curaçao beaches: which beach is right for you?"
+  "en": "Curaçao beaches: which beach is right for you?",
+  "de": "Strände auf Curaçao: Welcher Strand passt zu dir?",
+  "es": "Playas de Curazao: ¿cuál es la playa para ti?",
+  "pt": "Praias de Curaçao: qual praia combina com você?"
  },
  "titel": {
   "nl": "Stranden Curaçao vergelijken: {n} stranden, entree en scores",
-  "en": "Curaçao Beaches Compared: {n} Beaches, Fees and Ratings"
+  "en": "Curaçao Beaches Compared: {n} Beaches, Fees and Ratings",
+  "de": "Strände auf Curaçao im Vergleich: {n} Strände, Eintritt und Bewertungen",
+  "es": "Playas de Curazao comparadas: {n} playas, entradas y calificaciones",
+  "pt": "Praias de Curaçao comparadas: {n} praias, entradas e avaliações"
  },
  "metaDesc": {
   "nl": "{n} stranden op Curaçao met entreeprijs, voorzieningen, snorkelen en schildpadden. Welk strand past bij jou?",
-  "en": "{n} Curaçao beaches with entry fees, facilities, snorkeling and turtles. Find the beach that fits you."
+  "en": "{n} Curaçao beaches with entry fees, facilities, snorkeling and turtles. Find the beach that fits you.",
+  "de": "{n} Strände auf Curaçao mit Eintritt, Ausstattung, Schnorcheln und Schildkröten. Finde den Strand, der zu dir passt.",
+  "es": "{n} playas de Curazao con precio de entrada, servicios, snorkel y tortugas. Encuentra la playa que va contigo.",
+  "pt": "{n} praias de Curaçao com entrada, estrutura, snorkel e tartarugas. Encontre a praia que combina com você."
  },
  "kort": {
   "nl": "We vergeleken {n} stranden op Curaçao. De meeste stranden aan de westkant zijn gratis; betaalde stranden kosten $3 tot $4,50 per persoon of $6 per auto (Cas Abao). Grote Knip scoort het best (4,5 uit 5.098 reviews), voor kinderen zijn Porto Mari en Cas Abao het fijnst en voor schildpadden ga je naar Playa Piskado of Playa Lagun.",
-  "en": "We compared {n} Curaçao beaches. Most west-side beaches are free; paid beaches charge $3 to $4.50 per person or $6 per car (Cas Abao). Grote Knip rates highest (4.5 from 5,098 reviews), Porto Mari and Cas Abao work best with kids, and for turtles head to Playa Piskado or Playa Lagun."
+  "en": "We compared {n} Curaçao beaches. Most west-side beaches are free; paid beaches charge $3 to $4.50 per person or $6 per car (Cas Abao). Grote Knip rates highest (4.5 from 5,098 reviews), Porto Mari and Cas Abao work best with kids, and for turtles head to Playa Piskado or Playa Lagun.",
+  "de": "Wir haben {n} Strände auf Curaçao verglichen. Die meisten Strände im Westen sind kostenlos; kostenpflichtige Strände verlangen $3 bis $4.50 pro Person oder $6 pro Auto (Cas Abao). Grote Knip ist am besten bewertet (4.5 bei 5,098 Bewertungen), Porto Mari und Cas Abao eignen sich am besten für Kinder, und Schildkröten siehst du am Playa Piskado oder Playa Lagun.",
+  "es": "Comparamos {n} playas de Curazao. La mayoría de las playas del oeste son gratis; las de pago cobran $3 a $4.50 por persona o $6 por auto (Cas Abao). Grote Knip tiene la mejor calificación (4.5 con 5,098 reseñas), Porto Mari y Cas Abao son las mejores con niños, y para ver tortugas ve a Playa Piskado o Playa Lagun.",
+  "pt": "Comparamos {n} praias de Curaçao. A maioria das praias do lado oeste é gratuita; as pagas cobram $3 a $4.50 por pessoa ou $6 por carro (Cas Abao). Grote Knip tem a melhor nota (4.5 em 5,098 avaliações), Porto Mari e Cas Abao são as melhores com crianças, e para ver tartarugas vá a Playa Piskado ou Playa Lagun."
  },
  "vragen": [
   {
    "q": {
     "nl": "Wat wil je vooral doen?",
-    "en": "What do you mainly want to do?"
+    "en": "What do you mainly want to do?",
+    "de": "Was möchtest du hauptsächlich machen?",
+    "es": "¿Qué quieres hacer principalmente?",
+    "pt": "O que você quer fazer principalmente?"
    },
    "opties": [
     {
      "label": {
       "nl": "Gewoon een mooi strand",
-      "en": "Just a nice beach"
+      "en": "Just a nice beach",
+      "de": "Einfach ein schöner Strand",
+      "es": "Solo una linda playa",
+      "pt": "Só uma praia bonita"
      },
      "plus": [],
      "min": [],
@@ -40,7 +61,10 @@
     {
      "label": {
       "nl": "Snorkelen",
-      "en": "Snorkeling"
+      "en": "Snorkeling",
+      "de": "Schnorcheln",
+      "es": "Snorkel",
+      "pt": "Snorkel"
      },
      "plus": [
       "snorkelen",
@@ -52,7 +76,10 @@
     {
      "label": {
       "nl": "Relaxen met voorzieningen",
-      "en": "Relax with facilities"
+      "en": "Relax with facilities",
+      "de": "Entspannen mit Ausstattung",
+      "es": "Relajarse con servicios",
+      "pt": "Relaxar com estrutura"
      },
      "plus": [
       "voorzieningen",
@@ -64,7 +91,10 @@
     {
      "label": {
       "nl": "Feest en beachclubs",
-      "en": "Party and beach clubs"
+      "en": "Party and beach clubs",
+      "de": "Party und Beach Clubs",
+      "es": "Fiesta y beach clubs",
+      "pt": "Festa e beach clubs"
      },
      "plus": [
       "feest",
@@ -78,7 +108,10 @@
     {
      "label": {
       "nl": "Rust en natuur",
-      "en": "Peace and nature"
+      "en": "Peace and nature",
+      "de": "Ruhe und Natur",
+      "es": "Tranquilidad y naturaleza",
+      "pt": "Sossego e natureza"
      },
      "plus": [
       "rustig",
@@ -94,13 +127,19 @@
   {
    "q": {
     "nl": "Ga je met kinderen?",
-    "en": "Are you bringing kids?"
+    "en": "Are you bringing kids?",
+    "de": "Kommen Kinder mit?",
+    "es": "¿Vienen niños?",
+    "pt": "Vão crianças?"
    },
    "opties": [
     {
      "label": {
       "nl": "Nee",
-      "en": "No"
+      "en": "No",
+      "de": "Nein",
+      "es": "No",
+      "pt": "Não"
      },
      "plus": [],
      "min": [],
@@ -109,7 +148,10 @@
     {
      "label": {
       "nl": "Ja, kleine kinderen",
-      "en": "Yes, small kids"
+      "en": "Yes, small kids",
+      "de": "Ja, kleine Kinder",
+      "es": "Sí, niños pequeños",
+      "pt": "Sim, crianças pequenas"
      },
      "plus": [
       "kinderen",
@@ -121,7 +163,10 @@
     {
      "label": {
       "nl": "Ja, oudere kinderen",
-      "en": "Yes, older kids"
+      "en": "Yes, older kids",
+      "de": "Ja, ältere Kinder",
+      "es": "Sí, niños más grandes",
+      "pt": "Sim, crianças maiores"
      },
      "plus": [
       "kinderen",
@@ -135,13 +180,19 @@
   {
    "q": {
     "nl": "Waar verblijf je?",
-    "en": "Where are you staying?"
+    "en": "Where are you staying?",
+    "de": "Wo übernachtest du?",
+    "es": "¿Dónde te hospedas?",
+    "pt": "Onde você vai ficar?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit, we rijden",
-      "en": "Doesn't matter, we'll drive"
+      "en": "Doesn't matter, we'll drive",
+      "de": "Egal, wir fahren mit dem Auto",
+      "es": "Da igual, vamos en auto",
+      "pt": "Tanto faz, vamos de carro"
      },
      "plus": [],
      "min": [],
@@ -150,7 +201,10 @@
     {
      "label": {
       "nl": "West (Banda Abou, Westpunt)",
-      "en": "West (Banda Abou, Westpunt)"
+      "en": "West (Banda Abou, Westpunt)",
+      "de": "Westen (Banda Abou, Westpunt)",
+      "es": "Oeste (Banda Abou, Westpunt)",
+      "pt": "Oeste (Banda Abou, Westpunt)"
      },
      "plus": [
       "westpunt"
@@ -161,7 +215,10 @@
     {
      "label": {
       "nl": "Midden (Willemstad, Piscadera, Blue Bay)",
-      "en": "Central (Willemstad, Piscadera, Blue Bay)"
+      "en": "Central (Willemstad, Piscadera, Blue Bay)",
+      "de": "Mitte (Willemstad, Piscadera, Blue Bay)",
+      "es": "Centro (Willemstad, Piscadera, Blue Bay)",
+      "pt": "Centro (Willemstad, Piscadera, Blue Bay)"
      },
      "plus": [
       "midden"
@@ -172,7 +229,10 @@
     {
      "label": {
       "nl": "Oost (Mambo, Jan Thiel, Spaanse Water)",
-      "en": "East (Mambo, Jan Thiel, Spanish Water)"
+      "en": "East (Mambo, Jan Thiel, Spanish Water)",
+      "de": "Osten (Mambo, Jan Thiel, Spanish Water)",
+      "es": "Este (Mambo, Jan Thiel, Spanish Water)",
+      "pt": "Leste (Mambo, Jan Thiel, Spanish Water)"
      },
      "plus": [
       "oost"
@@ -185,13 +245,19 @@
   {
    "q": {
     "nl": "Wil je entree betalen?",
-    "en": "Do you mind paying an entry fee?"
+    "en": "Do you mind paying an entry fee?",
+    "de": "Stört dich ein Eintrittspreis?",
+    "es": "¿Te molesta pagar entrada?",
+    "pt": "Você se importa de pagar entrada?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "Doesn't matter"
+      "en": "Doesn't matter",
+      "de": "Egal",
+      "es": "Da igual",
+      "pt": "Tanto faz"
      },
      "plus": [],
      "min": [],
@@ -200,7 +266,10 @@
     {
      "label": {
       "nl": "Liefst gratis",
-      "en": "Free only, please"
+      "en": "Free only, please",
+      "de": "Bitte nur kostenlose",
+      "es": "Solo gratis, por favor",
+      "pt": "Só gratuitas, por favor"
      },
      "plus": [
       "gratis"
@@ -213,7 +282,10 @@
     {
      "label": {
       "nl": "Betalen voor voorzieningen is prima",
-      "en": "Happy to pay for facilities"
+      "en": "Happy to pay for facilities",
+      "de": "Ich zahle gern für Ausstattung",
+      "es": "Con gusto pago por los servicios",
+      "pt": "Pago com prazer pela estrutura"
      },
      "plus": [
       "entree",
@@ -232,7 +304,10 @@
    "url": null,
    "soort": {
     "nl": "baai, wit zand",
-    "en": "cove, white sand"
+    "en": "cove, white sand",
+    "de": "Bucht, weißer Sand",
+    "es": "cala, arena blanca",
+    "pt": "enseada, areia branca"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -246,7 +321,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -254,15 +332,24 @@
    "feiten": [
     {
      "nl": "Zeer populaire fotoplek",
-     "en": "Most photographed beach"
+     "en": "Most photographed beach",
+     "de": "Der meistfotografierte Strand",
+     "es": "La playa más fotografiada",
+     "pt": "A praia mais fotografada"
     },
     {
      "nl": "Snackbar, stoelverhuur",
-     "en": "Snack bar, chair rental"
+     "en": "Snack bar, chair rental",
+     "de": "Imbiss, Liegenverleih",
+     "es": "Snack bar, alquiler de sillas",
+     "pt": "Lanchonete, aluguel de cadeiras"
     },
     {
      "nl": "Weinig schaduw",
-     "en": "Little shade"
+     "en": "Little shade",
+     "de": "Wenig Schatten",
+     "es": "Poca sombra",
+     "pt": "Pouca sombra"
     }
    ],
    "scores": [
@@ -283,6 +370,18 @@
     "en": [
      "Clear turquoise water and snorkeling along the rocks",
      "Quiet on weekdays"
+    ],
+    "de": [
+     "Klares türkisfarbenes Wasser und Schnorcheln entlang der Felsen",
+     "Unter der Woche ruhig"
+    ],
+    "es": [
+     "Agua turquesa y cristalina, con snorkel junto a las rocas",
+     "Tranquila entre semana"
+    ],
+    "pt": [
+     "Água turquesa e cristalina, com snorkel junto às pedras",
+     "Tranquila durante a semana"
     ]
    },
    "tegen": {
@@ -293,6 +392,18 @@
     "en": [
      "Busy on weekends and when tour buses arrive",
      "Water gets deep fast, pebbly entry"
+    ],
+    "de": [
+     "Voll am Wochenende und wenn Reisebusse ankommen",
+     "Das Wasser wird schnell tief, steiniger Einstieg"
+    ],
+    "es": [
+     "Llena los fines de semana y cuando llegan los buses de turistas",
+     "El agua se vuelve profunda rápido, entrada con piedras"
+    ],
+    "pt": [
+     "Cheia nos fins de semana e quando chegam os ônibus de turismo",
+     "A água fica funda rápido, entrada com pedrinhas"
     ]
    },
    "bronnen": [
@@ -308,7 +419,10 @@
    "url": null,
    "soort": {
     "nl": "kleine baai",
-    "en": "small cove"
+    "en": "small cove",
+    "de": "kleine Bucht",
+    "es": "cala pequeña",
+    "pt": "enseada pequena"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -325,7 +439,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -333,11 +450,17 @@
    "feiten": [
     {
      "nl": "Bewaker bij parkeerplaats",
-     "en": "Guard at the parking lot"
+     "en": "Guard at the parking lot",
+     "de": "Wächter auf dem Parkplatz",
+     "es": "Vigilante en el estacionamiento",
+     "pt": "Vigilante no estacionamento"
     },
     {
      "nl": "Snackbar",
-     "en": "Snack bar"
+     "en": "Snack bar",
+     "de": "Imbiss",
+     "es": "Snack bar",
+     "pt": "Lanchonete"
     }
    ],
    "scores": [
@@ -360,6 +483,21 @@
      "Calm water and soft sand",
      "Less crowded than Grote Knip",
      "Good snorkeling along the cliffs"
+    ],
+    "de": [
+     "Ruhiges Wasser und weicher Sand",
+     "Weniger voll als Grote Knip",
+     "Gutes Schnorcheln entlang der Klippen"
+    ],
+    "es": [
+     "Agua tranquila y arena suave",
+     "Menos concurrida que Grote Knip",
+     "Buen snorkel junto a los acantilados"
+    ],
+    "pt": [
+     "Água calma e areia macia",
+     "Menos cheia que Grote Knip",
+     "Bom snorkel junto às falésias"
     ]
    },
    "tegen": {
@@ -368,6 +506,15 @@
     ],
     "en": [
      "Watch out for manchineel trees"
+    ],
+    "de": [
+     "Vorsicht vor Manchinelbäumen"
+    ],
+    "es": [
+     "Cuidado con los manzanillos"
+    ],
+    "pt": [
+     "Cuidado com as mancenilheiras"
     ]
    },
    "bronnen": [
@@ -382,7 +529,10 @@
    "url": null,
    "soort": {
     "nl": "smalle vissersbaai",
-    "en": "narrow fishing cove"
+    "en": "narrow fishing cove",
+    "de": "schmale Fischerbucht",
+    "es": "cala estrecha de pescadores",
+    "pt": "enseada estreita de pescadores"
    },
    "plaats": "Lagun",
    "tags": [
@@ -399,7 +549,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -407,11 +560,17 @@
    "feiten": [
     {
      "nl": "Restaurants net boven het strand",
-     "en": "Restaurants just above the beach"
+     "en": "Restaurants just above the beach",
+     "de": "Restaurants direkt über dem Strand",
+     "es": "Restaurantes justo encima de la playa",
+     "pt": "Restaurantes logo acima da praia"
     },
     {
      "nl": "Waterschoenen handig",
-     "en": "Water shoes help"
+     "en": "Water shoes help",
+     "de": "Wasserschuhe helfen",
+     "es": "Los zapatos de agua ayudan",
+     "pt": "Sapatilhas de água ajudam"
     }
    ],
    "scores": [
@@ -432,6 +591,18 @@
     "en": [
      "Rich reef with lots of fish on both sides",
      "Calm water in almost any weather"
+    ],
+    "de": [
+     "Reiches Riff mit vielen Fischen auf beiden Seiten",
+     "Ruhiges Wasser bei fast jedem Wetter"
+    ],
+    "es": [
+     "Arrecife rico con muchos peces a ambos lados",
+     "Agua tranquila casi con cualquier clima"
+    ],
+    "pt": [
+     "Recife rico, com muitos peixes dos dois lados",
+     "Água calma com quase qualquer tempo"
     ]
    },
    "tegen": {
@@ -440,6 +611,15 @@
     ],
     "en": [
      "Fishing boats share the sand"
+    ],
+    "de": [
+     "Fischerboote teilen sich den Sand"
+    ],
+    "es": [
+     "Los botes de pesca comparten la arena"
+    ],
+    "pt": [
+     "Barcos de pesca dividem a areia"
     ]
    },
    "bronnen": [
@@ -454,7 +634,10 @@
    "url": null,
    "soort": {
     "nl": "vissersstrand",
-    "en": "fishing beach"
+    "en": "fishing beach",
+    "de": "Fischerstrand",
+    "es": "playa de pescadores",
+    "pt": "praia de pescadores"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -468,7 +651,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -476,11 +662,17 @@
    "feiten": [
     {
      "nl": "Schildpadden bij de steiger",
-     "en": "Turtles at the pier"
+     "en": "Turtles at the pier",
+     "de": "Schildkröten am Steg",
+     "es": "Tortugas junto al muelle",
+     "pt": "Tartarugas perto do píer"
     },
     {
      "nl": "Snackbar en souvenirwinkel",
-     "en": "Snack bar and souvenir shop"
+     "en": "Snack bar and souvenir shop",
+     "de": "Imbiss und Souvenirshop",
+     "es": "Snack bar y tienda de souvenirs",
+     "pt": "Lanchonete e loja de souvenirs"
     }
    ],
    "scores": [
@@ -499,6 +691,15 @@
     ],
     "en": [
      "Green sea turtles almost every day"
+    ],
+    "de": [
+     "Grüne Meeresschildkröten fast jeden Tag"
+    ],
+    "es": [
+     "Tortugas verdes casi todos los días"
+    ],
+    "pt": [
+     "Tartarugas-verdes quase todos os dias"
     ]
    },
    "tegen": {
@@ -509,6 +710,18 @@
     "en": [
      "Very crowded when tour buses arrive",
      "Rocky entry, not a lounging beach"
+    ],
+    "de": [
+     "Sehr voll, wenn Reisebusse ankommen",
+     "Felsiger Einstieg, kein Strand zum Liegen"
+    ],
+    "es": [
+     "Muy llena cuando llegan los buses de turistas",
+     "Entrada rocosa, no es una playa para recostarse"
+    ],
+    "pt": [
+     "Muito cheia quando chegam os ônibus de turismo",
+     "Entrada rochosa, não é praia para ficar deitado"
     ]
    },
    "bronnen": [
@@ -524,7 +737,10 @@
    "url": null,
    "soort": {
     "nl": "klifstrand",
-    "en": "cliff beach"
+    "en": "cliff beach",
+    "de": "Klippenstrand",
+    "es": "playa de acantilado",
+    "pt": "praia de falésia"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -538,7 +754,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
     },
     "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
     "datum": "2026-01"
@@ -546,11 +765,17 @@
    "feiten": [
     {
      "nl": "Klifspringen vanaf 14 meter",
-     "en": "Cliff jumping from 45 feet"
+     "en": "Cliff jumping from 45 feet",
+     "de": "Klippenspringen aus 45 Fuß",
+     "es": "Saltos desde el acantilado de 45 pies",
+     "pt": "Saltos da falésia de 45 pés"
     },
     {
      "nl": "Restaurant op de klif",
-     "en": "Clifftop restaurant"
+     "en": "Clifftop restaurant",
+     "de": "Restaurant auf der Klippe",
+     "es": "Restaurante en lo alto del acantilado",
+     "pt": "Restaurante no alto da falésia"
     }
    ],
    "scores": [
@@ -569,6 +794,15 @@
     ],
     "en": [
      "View from the clifftop restaurant"
+    ],
+    "de": [
+     "Aussicht vom Restaurant auf der Klippe"
+    ],
+    "es": [
+     "Vista desde el restaurante del acantilado"
+    ],
+    "pt": [
+     "Vista do restaurante da falésia"
     ]
    },
    "tegen": {
@@ -577,6 +811,15 @@
     ],
     "en": [
      "Drops off fast, not for small kids"
+    ],
+    "de": [
+     "Fällt schnell ab, nichts für kleine Kinder"
+    ],
+    "es": [
+     "Se hace profunda rápido, no apta para niños pequeños"
+    ],
+    "pt": [
+     "Fica funda rápido, não é para crianças pequenas"
     ]
    },
    "bronnen": [
@@ -591,7 +834,10 @@
    "url": null,
    "soort": {
     "nl": "baai",
-    "en": "bay"
+    "en": "bay",
+    "de": "Bucht",
+    "es": "bahía",
+    "pt": "baía"
    },
    "plaats": "Lagun",
    "tags": [
@@ -606,7 +852,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -614,11 +863,17 @@
    "feiten": [
     {
      "nl": "Geen voorzieningen",
-     "en": "No facilities"
+     "en": "No facilities",
+     "de": "Keine Einrichtungen",
+     "es": "Sin servicios",
+     "pt": "Sem estrutura"
     },
     {
      "nl": "Neem eten en drinken mee",
-     "en": "Bring food and drinks"
+     "en": "Bring food and drinks",
+     "de": "Bring Essen und Getränke mit",
+     "es": "Lleva comida y bebidas",
+     "pt": "Leve comida e bebida"
     }
    ],
    "scores": [
@@ -639,6 +894,18 @@
     "en": [
      "Quiet, mostly locals",
      "Kids can play and climb the rocks"
+    ],
+    "de": [
+     "Ruhig, meist Einheimische",
+     "Kinder können spielen und auf den Felsen klettern"
+    ],
+    "es": [
+     "Tranquila, sobre todo locales",
+     "Los niños pueden jugar y trepar por las rocas"
+    ],
+    "pt": [
+     "Tranquila, quase só moradores",
+     "As crianças podem brincar e escalar as pedras"
     ]
    },
    "tegen": {
@@ -647,6 +914,15 @@
     ],
     "en": [
      "No shade"
+    ],
+    "de": [
+     "Kein Schatten"
+    ],
+    "es": [
+     "Sin sombra"
+    ],
+    "pt": [
+     "Sem sombra"
     ]
    },
    "bronnen": [
@@ -661,7 +937,10 @@
    "url": null,
    "soort": {
     "nl": "kleine baai",
-    "en": "small cove"
+    "en": "small cove",
+    "de": "kleine Bucht",
+    "es": "cala pequeña",
+    "pt": "enseada pequena"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -674,7 +953,10 @@
    "feiten": [
     {
      "nl": "Onderdeel van schildpaddentours",
-     "en": "Stop on turtle tours"
+     "en": "Stop on turtle tours",
+     "de": "Stopp bei Schildkrötentouren",
+     "es": "Parada en los tours de tortugas",
+     "pt": "Parada nos passeios de tartarugas"
     }
    ],
    "scores": [
@@ -693,11 +975,23 @@
     ],
     "en": [
      "Quiet cove for snorkeling"
+    ],
+    "de": [
+     "Ruhige Bucht zum Schnorcheln"
+    ],
+    "es": [
+     "Cala tranquila para hacer snorkel"
+    ],
+    "pt": [
+     "Enseada tranquila para snorkel"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
@@ -710,7 +1004,10 @@
    "url": null,
    "soort": {
     "nl": "baai",
-    "en": "bay"
+    "en": "bay",
+    "de": "Bucht",
+    "es": "bahía",
+    "pt": "baía"
    },
    "plaats": "Santa Marta",
    "tags": [
@@ -736,11 +1033,23 @@
     ],
     "en": [
      "Few visitors"
+    ],
+    "de": [
+     "Wenige Besucher"
+    ],
+    "es": [
+     "Pocos visitantes"
+    ],
+    "pt": [
+     "Poucos visitantes"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
@@ -752,7 +1061,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal strand",
-    "en": "local beach"
+    "en": "local beach",
+    "de": "Strand der Einheimischen",
+    "es": "playa local",
+    "pt": "praia local"
    },
    "plaats": "Santa Cruz",
    "tags": [
@@ -766,7 +1078,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -774,11 +1089,17 @@
    "feiten": [
     {
      "nl": "Vertrekpunt boot naar Blue Room",
-     "en": "Boats leave for Blue Room"
+     "en": "Boats leave for Blue Room",
+     "de": "Von hier fahren Boote zum Blue Room",
+     "es": "De aquí salen botes a Blue Room",
+     "pt": "Daqui saem barcos para o Blue Room"
     },
     {
      "nl": "Palmen en schuilhutten",
-     "en": "Palms and shelters"
+     "en": "Palms and shelters",
+     "de": "Palmen und Unterstände",
+     "es": "Palmeras y refugios",
+     "pt": "Palmeiras e abrigos"
     }
    ],
    "scores": [
@@ -797,6 +1118,15 @@
     ],
     "en": [
      "Quiet with few tourists"
+    ],
+    "de": [
+     "Ruhig, wenige Touristen"
+    ],
+    "es": [
+     "Tranquila, con pocos turistas"
+    ],
+    "pt": [
+     "Tranquila, com poucos turistas"
     ]
    },
    "tegen": {
@@ -805,6 +1135,15 @@
     ],
     "en": [
      "Litter on the beach"
+    ],
+    "de": [
+     "Müll am Strand"
+    ],
+    "es": [
+     "Basura en la playa"
+    ],
+    "pt": [
+     "Lixo na praia"
     ]
    },
    "bronnen": [
@@ -818,7 +1157,10 @@
    "url": null,
    "soort": {
     "nl": "zwart zand",
-    "en": "black sand"
+    "en": "black sand",
+    "de": "schwarzer Sand",
+    "es": "arena negra",
+    "pt": "areia preta"
    },
    "plaats": "Banda Abou",
    "tags": [
@@ -830,7 +1172,10 @@
    "feiten": [
     {
      "nl": "Donker zand, zeldzaam op Curaçao",
-     "en": "Dark sand, rare on Curaçao"
+     "en": "Dark sand, rare on Curaçao",
+     "de": "Dunkler Sand, selten auf Curaçao",
+     "es": "Arena oscura, rara en Curazao",
+     "pt": "Areia escura, rara em Curaçao"
     }
    ],
    "scores": [
@@ -849,11 +1194,23 @@
     ],
     "en": [
      "Remote and quiet"
+    ],
+    "de": [
+     "Abgelegen und ruhig"
+    ],
+    "es": [
+     "Apartada y tranquila"
+    ],
+    "pt": [
+     "Isolada e tranquila"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
@@ -865,7 +1222,10 @@
    "url": null,
    "soort": {
     "nl": "beheerd strand",
-    "en": "managed beach"
+    "en": "managed beach",
+    "de": "bewirtschafteter Strand",
+    "es": "playa administrada",
+    "pt": "praia administrada"
    },
    "plaats": "Banda Abou",
    "tags": [
@@ -882,7 +1242,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per auto (max 4 personen), zondag $7",
-     "en": "per car (up to 4 people), $7 on Sundays"
+     "en": "per car (up to 4 people), $7 on Sundays",
+     "de": "pro Auto (bis zu 4 Personen), sonntags $7",
+     "es": "por auto (hasta 4 personas), $7 los domingos",
+     "pt": "por carro (até 4 pessoas), $7 aos domingos"
     },
     "bron": "https://curatogo.com/beach.html?id=cas",
     "datum": "2026-10"
@@ -890,15 +1253,24 @@
    "feiten": [
     {
      "nl": "Open 8:00 tot 18:00",
-     "en": "Open 8 a.m. to 6 p.m."
+     "en": "Open 8 a.m. to 6 p.m.",
+     "de": "Geöffnet von 8 bis 18 Uhr",
+     "es": "Abierta de 8 a. m. a 6 p. m.",
+     "pt": "Aberta das 8h às 18h"
     },
     {
      "nl": "Ligstoel $3 extra",
-     "en": "Lounge chair $3 extra"
+     "en": "Lounge chair $3 extra",
+     "de": "Liege $3 extra",
+     "es": "Silla reclinable $3 extra",
+     "pt": "Espreguiçadeira $3 extra"
     },
     {
      "nl": "Duikcentrum en douches",
-     "en": "Dive center and showers"
+     "en": "Dive center and showers",
+     "de": "Tauchcenter und Duschen",
+     "es": "Centro de buceo y duchas",
+     "pt": "Centro de mergulho e chuveiros"
     }
    ],
    "scores": [
@@ -921,6 +1293,21 @@
      "Soft sand and gentle entry, good with kids",
      "Good snorkeling along the rocks",
      "Every facility in one place"
+    ],
+    "de": [
+     "Weicher Sand und sanfter Einstieg, gut mit Kindern",
+     "Gutes Schnorcheln entlang der Felsen",
+     "Alle Einrichtungen an einem Ort"
+    ],
+    "es": [
+     "Arena suave y entrada gradual, buena con niños",
+     "Buen snorkel junto a las rocas",
+     "Todos los servicios en un solo lugar"
+    ],
+    "pt": [
+     "Areia macia e entrada suave, boa com crianças",
+     "Bom snorkel junto às pedras",
+     "Toda a estrutura num só lugar"
     ]
    },
    "tegen": {
@@ -931,6 +1318,18 @@
     "en": [
      "Busy when cruise buses arrive",
      "No cell service"
+    ],
+    "de": [
+     "Voll, wenn Kreuzfahrtbusse ankommen",
+     "Kein Handyempfang"
+    ],
+    "es": [
+     "Llena cuando llegan los buses de cruceros",
+     "Sin señal de celular"
+    ],
+    "pt": [
+     "Cheia quando chegam os ônibus dos cruzeiros",
+     "Sem sinal de celular"
     ]
    },
    "bronnen": [
@@ -947,7 +1346,10 @@
    "url": null,
    "soort": {
     "nl": "beheerd strand",
-    "en": "managed beach"
+    "en": "managed beach",
+    "de": "bewirtschafteter Strand",
+    "es": "playa administrada",
+    "pt": "praia administrada"
    },
    "plaats": "Landgoed Porto Mari",
    "tags": [
@@ -964,7 +1366,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon, onder 5 jaar gratis",
-     "en": "per person, under 5 free"
+     "en": "per person, under 5 free",
+     "de": "pro Person, unter 5 Jahren frei",
+     "es": "por persona, menores de 5 gratis",
+     "pt": "por pessoa, menores de 5 grátis"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -972,15 +1377,24 @@
    "feiten": [
     {
      "nl": "Dubbel rif vanaf het strand",
-     "en": "Double reef from shore"
+     "en": "Double reef from shore",
+     "de": "Doppeltes Riff direkt vom Ufer",
+     "es": "Doble arrecife desde la orilla",
+     "pt": "Recife duplo a partir da margem"
     },
     {
      "nl": "Ligstoel $3,50",
-     "en": "Lounge chair $3.50"
+     "en": "Lounge chair $3.50",
+     "de": "Liege $3.50",
+     "es": "Silla reclinable $3.50",
+     "pt": "Espreguiçadeira $3.50"
     },
     {
      "nl": "Wilde varkens op het strand",
-     "en": "Wild pigs roam the beach"
+     "en": "Wild pigs roam the beach",
+     "de": "Wildschweine laufen über den Strand",
+     "es": "Cerdos salvajes andan por la playa",
+     "pt": "Porcos selvagens andam pela praia"
     }
    ],
    "scores": [
@@ -1003,6 +1417,21 @@
      "Very gentle entry, a family favorite",
      "Snorkeling between two reefs",
      "Clean, tidy facilities"
+    ],
+    "de": [
+     "Sehr sanfter Einstieg, ein Favorit bei Familien",
+     "Schnorcheln zwischen zwei Riffen",
+     "Saubere, gepflegte Einrichtungen"
+    ],
+    "es": [
+     "Entrada muy suave, favorita de las familias",
+     "Snorkel entre dos arrecifes",
+     "Instalaciones limpias y cuidadas"
+    ],
+    "pt": [
+     "Entrada muito suave, queridinha das famílias",
+     "Snorkel entre dois recifes",
+     "Instalações limpas e bem cuidadas"
     ]
    },
    "tegen": {
@@ -1013,6 +1442,18 @@
     "en": [
      "Crowded, especially Friday afternoons",
      "Pigs go after food in bags"
+    ],
+    "de": [
+     "Voll, besonders freitagnachmittags",
+     "Die Schweine gehen auf Essen in Taschen los"
+    ],
+    "es": [
+     "Llena, sobre todo los viernes por la tarde",
+     "Los cerdos van tras la comida que hay en las bolsas"
+    ],
+    "pt": [
+     "Cheia, principalmente nas tardes de sexta",
+     "Os porcos vão atrás de comida nas sacolas"
     ]
    },
    "bronnen": [
@@ -1029,7 +1470,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal strand",
-    "en": "local beach"
+    "en": "local beach",
+    "de": "Strand der Einheimischen",
+    "es": "playa local",
+    "pt": "praia local"
    },
    "plaats": "Sint Willibrordus",
    "tags": [
@@ -1046,7 +1490,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
     },
     "bron": "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
     "datum": "2026-01"
@@ -1054,11 +1501,17 @@
    "feiten": [
     {
      "nl": "Gratis parkeren",
-     "en": "Free parking"
+     "en": "Free parking",
+     "de": "Kostenloses Parken",
+     "es": "Estacionamiento gratis",
+     "pt": "Estacionamento gratuito"
     },
     {
      "nl": "Kleine strandbar",
-     "en": "Small beach bar"
+     "en": "Small beach bar",
+     "de": "Kleine Strandbar",
+     "es": "Pequeño bar de playa",
+     "pt": "Pequeno bar de praia"
     }
    ],
    "scores": [
@@ -1081,6 +1534,21 @@
      "Calm, clear water",
      "Turtles if you swim farther out",
      "Shade from trees and palapas"
+    ],
+    "de": [
+     "Ruhiges, klares Wasser",
+     "Schildkröten, wenn du weiter hinausschwimmst",
+     "Schatten von Bäumen und Palapas"
+    ],
+    "es": [
+     "Agua tranquila y cristalina",
+     "Tortugas si nadas más lejos",
+     "Sombra de árboles y palapas"
+    ],
+    "pt": [
+     "Água calma e cristalina",
+     "Tartarugas se você nadar mais longe",
+     "Sombra de árvores e palapas"
     ]
    },
    "tegen": {
@@ -1089,6 +1557,15 @@
     ],
     "en": [
      "Packed with local families on Sundays"
+    ],
+    "de": [
+     "Sonntags voller einheimischer Familien"
+    ],
+    "es": [
+     "Los domingos está llena de familias locales"
+    ],
+    "pt": [
+     "Aos domingos fica lotada de famílias locais"
     ]
    },
    "bronnen": [
@@ -1103,7 +1580,10 @@
    "url": null,
    "soort": {
     "nl": "beachclub",
-    "en": "beach club"
+    "en": "beach club",
+    "de": "Beach Club",
+    "es": "beach club",
+    "pt": "beach club"
    },
    "plaats": "Rif Sint Marie",
    "tags": [
@@ -1118,7 +1598,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
     },
     "bron": "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
     "datum": "2026-01"
@@ -1126,11 +1609,17 @@
    "feiten": [
     {
      "nl": "Bedjes gratis bij bestelling",
-     "en": "Loungers free if you order"
+     "en": "Loungers free if you order",
+     "de": "Liegen gratis bei einer Bestellung",
+     "es": "Las tumbonas son gratis si consumes",
+     "pt": "As espreguiçadeiras são grátis se você consumir"
     },
     {
      "nl": "Trap het water in",
-     "en": "Stone steps into the sea"
+     "en": "Stone steps into the sea",
+     "de": "Steintreppen ins Meer",
+     "es": "Escalones de piedra hacia el mar",
+     "pt": "Degraus de pedra até o mar"
     }
    ],
    "scores": [],
@@ -1140,6 +1629,15 @@
     ],
     "en": [
      "Calm setting with a restaurant"
+    ],
+    "de": [
+     "Ruhige Atmosphäre mit Restaurant"
+    ],
+    "es": [
+     "Ambiente tranquilo con restaurante"
+    ],
+    "pt": [
+     "Ambiente calmo com restaurante"
     ]
    },
    "tegen": {
@@ -1148,6 +1646,15 @@
     ],
     "en": [
      "No sandy entry, steps only"
+    ],
+    "de": [
+     "Kein sandiger Einstieg, nur Treppen"
+    ],
+    "es": [
+     "Sin entrada de arena, solo escalones"
+    ],
+    "pt": [
+     "Sem entrada de areia, só degraus"
     ]
    },
    "bronnen": [
@@ -1161,7 +1668,10 @@
    "url": null,
    "soort": {
     "nl": "beachclub",
-    "en": "beach club"
+    "en": "beach club",
+    "de": "Beach Club",
+    "es": "beach club",
+    "pt": "beach club"
    },
    "plaats": "Vaersenbaai",
    "tags": [
@@ -1176,7 +1686,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
     },
     "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
     "datum": "2026-01"
@@ -1184,11 +1697,17 @@
    "feiten": [
     {
      "nl": "Ligbedden tegen betaling",
-     "en": "Loungers cost extra"
+     "en": "Loungers cost extra",
+     "de": "Liegen kosten extra",
+     "es": "Las tumbonas cuestan extra",
+     "pt": "As espreguiçadeiras custam extra"
     },
     {
      "nl": "Bekend om de zeeschommel",
-     "en": "Known for its sea swing"
+     "en": "Known for its sea swing",
+     "de": "Bekannt für die Schaukel im Meer",
+     "es": "Conocida por su columpio en el mar",
+     "pt": "Conhecida pelo balanço no mar"
     }
    ],
    "scores": [
@@ -1209,6 +1728,18 @@
     "en": [
      "Lively beach bar at sunset",
      "Good snorkeling on the right side"
+    ],
+    "de": [
+     "Lebhafte Strandbar bei Sonnenuntergang",
+     "Gutes Schnorcheln auf der rechten Seite"
+    ],
+    "es": [
+     "Animado bar de playa al atardecer",
+     "Buen snorkel en el lado derecho"
+    ],
+    "pt": [
+     "Bar de praia animado ao pôr do sol",
+     "Bom snorkel do lado direito"
     ]
    },
    "tegen": {
@@ -1217,6 +1748,15 @@
     ],
     "en": [
      "Busy weekends with DJs"
+    ],
+    "de": [
+     "Am Wochenende voll, mit DJs"
+    ],
+    "es": [
+     "Llena los fines de semana, con DJs"
+    ],
+    "pt": [
+     "Cheia nos fins de semana, com DJs"
     ]
    },
    "bronnen": [
@@ -1232,7 +1772,10 @@
    "url": null,
    "soort": {
     "nl": "resortstrand",
-    "en": "resort beach"
+    "en": "resort beach",
+    "de": "Hotelstrand",
+    "es": "playa de resort",
+    "pt": "praia de resort"
    },
    "plaats": "Blue Bay, Sint Michiel",
    "tags": [
@@ -1246,7 +1789,10 @@
    "feiten": [
     {
      "nl": "Ligstoelen en restaurants",
-     "en": "Loungers and restaurants"
+     "en": "Loungers and restaurants",
+     "de": "Liegen und Restaurants",
+     "es": "Tumbonas y restaurantes",
+     "pt": "Espreguiçadeiras e restaurantes"
     }
    ],
    "scores": [
@@ -1267,11 +1813,26 @@
     "en": [
      "Easy swimming with resort comfort",
      "Reef off the left point"
+    ],
+    "de": [
+     "Entspannt schwimmen mit Hotelkomfort",
+     "Riff an der linken Landspitze"
+    ],
+    "es": [
+     "Nadar con tranquilidad y la comodidad de un resort",
+     "Arrecife en la punta izquierda"
+    ],
+    "pt": [
+     "Nadar com tranquilidade e o conforto de um resort",
+     "Recife na ponta da esquerda"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
@@ -1285,7 +1846,10 @@
    "url": null,
    "soort": {
     "nl": "vissersdorp",
-    "en": "fishing village"
+    "en": "fishing village",
+    "de": "Fischerdorf",
+    "es": "pueblo de pescadores",
+    "pt": "vila de pescadores"
    },
    "plaats": "Sint Michiel",
    "tags": [
@@ -1297,7 +1861,10 @@
    "feiten": [
     {
      "nl": "Startplek Aquafari",
-     "en": "Aquafari meeting point"
+     "en": "Aquafari meeting point",
+     "de": "Treffpunkt für Aquafari",
+     "es": "Punto de encuentro de Aquafari",
+     "pt": "Ponto de encontro do Aquafari"
     }
    ],
    "scores": [
@@ -1316,11 +1883,23 @@
     ],
     "en": [
      "Local and quiet"
+    ],
+    "de": [
+     "Einheimisch und ruhig"
+    ],
+    "es": [
+     "Local y tranquilo"
+    ],
+    "pt": [
+     "Local e tranquilo"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
@@ -1332,7 +1911,10 @@
    "url": null,
    "soort": {
     "nl": "stadsstrand",
-    "en": "city beach"
+    "en": "city beach",
+    "de": "Stadtstrand",
+    "es": "playa urbana",
+    "pt": "praia urbana"
    },
    "plaats": "Marie Pampoen, Willemstad",
    "tags": [
@@ -1357,6 +1939,15 @@
     ],
     "en": [
      "Close to Willemstad"
+    ],
+    "de": [
+     "Nah bei Willemstad"
+    ],
+    "es": [
+     "Cerca de Willemstad"
+    ],
+    "pt": [
+     "Perto de Willemstad"
     ]
    },
    "tegen": {
@@ -1365,6 +1956,15 @@
     ],
     "en": [
      "Low score on few reviews"
+    ],
+    "de": [
+     "Niedrige Bewertung bei wenigen Rezensionen"
+    ],
+    "es": [
+     "Calificación baja con pocas reseñas"
+    ],
+    "pt": [
+     "Nota baixa com poucas avaliações"
     ]
    },
    "bronnen": [
@@ -1377,7 +1977,10 @@
    "url": null,
    "soort": {
     "nl": "strandboulevard",
-    "en": "beach strip"
+    "en": "beach strip",
+    "de": "Strandabschnitt",
+    "es": "franja de playa",
+    "pt": "faixa de praia"
    },
    "plaats": "Bapor Kibra",
    "tags": [
@@ -1392,7 +1995,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon",
-     "en": "per person"
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -1400,15 +2006,24 @@
    "feiten": [
     {
      "nl": "Ongeveer 40 winkels en restaurants",
-     "en": "About 40 shops and restaurants"
+     "en": "About 40 shops and restaurants",
+     "de": "Etwa 40 Geschäfte und Restaurants",
+     "es": "Unas 40 tiendas y restaurantes",
+     "pt": "Cerca de 40 lojas e restaurantes"
     },
     {
      "nl": "Golfbreker, vlak water",
-     "en": "Breakwater, flat water"
+     "en": "Breakwater, flat water",
+     "de": "Wellenbrecher, flaches Wasser",
+     "es": "Rompeolas, agua poco profunda",
+     "pt": "Quebra-mar, água rasa"
     },
     {
      "nl": "Speeltuin en waterpark",
-     "en": "Playground and inflatable water park"
+     "en": "Playground and inflatable water park",
+     "de": "Spielplatz und aufblasbarer Wasserpark",
+     "es": "Parque infantil y parque acuático inflable",
+     "pt": "Parquinho e parque aquático inflável"
     }
    ],
    "scores": [
@@ -1429,6 +2044,18 @@
     "en": [
      "Shallow, calm water for small kids",
      "Everything within walking distance"
+    ],
+    "de": [
+     "Flaches, ruhiges Wasser für kleine Kinder",
+     "Alles zu Fuß erreichbar"
+    ],
+    "es": [
+     "Agua baja y tranquila para niños pequeños",
+     "Todo a poca distancia a pie"
+    ],
+    "pt": [
+     "Água rasa e calma para crianças pequenas",
+     "Tudo a pé"
     ]
    },
    "tegen": {
@@ -1437,6 +2064,15 @@
     ],
     "en": [
      "Crowded and touristy"
+    ],
+    "de": [
+     "Voll und touristisch"
+    ],
+    "es": [
+     "Concurrida y turística"
+    ],
+    "pt": [
+     "Cheia e turística"
     ]
    },
    "bronnen": [
@@ -1452,7 +2088,10 @@
    "url": null,
    "soort": {
     "nl": "beachclub",
-    "en": "beach club"
+    "en": "beach club",
+    "de": "Beach Club",
+    "es": "beach club",
+    "pt": "beach club"
    },
    "plaats": "Bapor Kibra",
    "tags": [
@@ -1464,7 +2103,10 @@
    "feiten": [
     {
      "nl": "Naast Mambo Beach",
-     "en": "Next to Mambo Beach"
+     "en": "Next to Mambo Beach",
+     "de": "Neben Mambo Beach",
+     "es": "Junto a Mambo Beach",
+     "pt": "Ao lado de Mambo Beach"
     }
    ],
    "scores": [
@@ -1483,11 +2125,23 @@
     ],
     "en": [
      "Facilities close to town"
+    ],
+    "de": [
+     "Einrichtungen nah an der Stadt"
+    ],
+    "es": [
+     "Servicios cerca de la ciudad"
+    ],
+    "pt": [
+     "Estrutura perto da cidade"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
@@ -1500,7 +2154,10 @@
    "url": null,
    "soort": {
     "nl": "beachclubs",
-    "en": "beach clubs"
+    "en": "beach clubs",
+    "de": "Beach Clubs",
+    "es": "beach clubs",
+    "pt": "beach clubs"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1515,7 +2172,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon, na 16:30 gratis",
-     "en": "per person, free after 4:30 p.m."
+     "en": "per person, free after 4:30 p.m.",
+     "de": "pro Person, ab 16:30 Uhr frei",
+     "es": "por persona, gratis después de las 4:30 p. m.",
+     "pt": "por pessoa, grátis depois das 16h30"
     },
     "bron": "https://nomadicniko.com/curacao/beaches/",
     "datum": "2026-01"
@@ -1523,15 +2183,24 @@
    "feiten": [
     {
      "nl": "Beschutte lagune",
-     "en": "Sheltered lagoon"
+     "en": "Sheltered lagoon",
+     "de": "Geschützte Lagune",
+     "es": "Laguna protegida",
+     "pt": "Lagoa protegida"
     },
     {
      "nl": "Speeltuin en ijswinkel",
-     "en": "Playground and ice cream shop"
+     "en": "Playground and ice cream shop",
+     "de": "Spielplatz und Eisdiele",
+     "es": "Parque infantil y heladería",
+     "pt": "Parquinho e sorveteria"
     },
     {
      "nl": "Ligbedden extra",
-     "en": "Loungers extra"
+     "en": "Loungers extra",
+     "de": "Liegen extra",
+     "es": "Tumbonas aparte",
+     "pt": "Espreguiçadeiras à parte"
     }
    ],
    "scores": [
@@ -1552,6 +2221,18 @@
     "en": [
      "Very calm water, easy for families",
      "Plenty of beach clubs and restaurants"
+    ],
+    "de": [
+     "Sehr ruhiges Wasser, einfach für Familien",
+     "Viele Beach Clubs und Restaurants"
+    ],
+    "es": [
+     "Agua muy tranquila, fácil para familias",
+     "Muchos beach clubs y restaurantes"
+    ],
+    "pt": [
+     "Água muito calma, fácil para famílias",
+     "Muitos beach clubs e restaurantes"
     ]
    },
    "tegen": {
@@ -1560,6 +2241,15 @@
     ],
     "en": [
      "Very crowded and touristy"
+    ],
+    "de": [
+     "Sehr voll und touristisch"
+    ],
+    "es": [
+     "Muy concurrida y turística"
+    ],
+    "pt": [
+     "Muito cheia e turística"
     ]
    },
    "bronnen": [
@@ -1575,7 +2265,10 @@
    "url": null,
    "soort": {
     "nl": "beachclub",
-    "en": "beach club"
+    "en": "beach club",
+    "de": "Beach Club",
+    "es": "beach club",
+    "pt": "beach club"
    },
    "plaats": "Caracasbaai",
    "tags": [
@@ -1588,7 +2281,10 @@
    "feiten": [
     {
      "nl": "Bar en ligbedden",
-     "en": "Bar and loungers"
+     "en": "Bar and loungers",
+     "de": "Bar und Liegen",
+     "es": "Bar y tumbonas",
+     "pt": "Bar e espreguiçadeiras"
     }
    ],
    "scores": [],
@@ -1598,6 +2294,15 @@
     ],
     "en": [
      "Weekend vibe with music"
+    ],
+    "de": [
+     "Wochenendstimmung mit Musik"
+    ],
+    "es": [
+     "Ambiente de fin de semana con música"
+    ],
+    "pt": [
+     "Clima de fim de semana com música"
     ]
    },
    "tegen": {
@@ -1606,6 +2311,15 @@
     ],
     "en": [
      "Fills with locals from town on weekends"
+    ],
+    "de": [
+     "Am Wochenende voll mit Leuten aus der Stadt"
+    ],
+    "es": [
+     "Los fines de semana se llena de gente de la ciudad"
+    ],
+    "pt": [
+     "Nos fins de semana enche de gente da cidade"
     ]
    },
    "bronnen": [
@@ -1618,7 +2332,10 @@
    "url": null,
    "soort": {
     "nl": "baai",
-    "en": "bay"
+    "en": "bay",
+    "de": "Bucht",
+    "es": "bahía",
+    "pt": "baía"
    },
    "plaats": "Caracasbaai",
    "tags": [
@@ -1630,7 +2347,10 @@
    "feiten": [
     {
      "nl": "Restaurant aan het eind",
-     "en": "Restaurant at the far end"
+     "en": "Restaurant at the far end",
+     "de": "Restaurant am anderen Ende",
+     "es": "Restaurante en el otro extremo",
+     "pt": "Restaurante na outra ponta"
     }
    ],
    "scores": [],
@@ -1640,11 +2360,23 @@
     ],
     "en": [
      "Popular with snorkelers and divers"
+    ],
+    "de": [
+     "Beliebt bei Schnorchlern und Tauchern"
+    ],
+    "es": [
+     "Popular entre quienes hacen snorkel y buceo"
+    ],
+    "pt": [
+     "Popular entre quem faz snorkel e mergulho"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://nomadicniko.com/curacao/beaches/"
@@ -1656,7 +2388,10 @@
    "url": null,
    "soort": {
     "nl": "snorkelstrand",
-    "en": "snorkel beach"
+    "en": "snorkel beach",
+    "de": "Schnorchelstrand",
+    "es": "playa de snorkel",
+    "pt": "praia de snorkel"
    },
    "plaats": "Caracasbaai",
    "tags": [
@@ -1671,7 +2406,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
     },
     "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
     "datum": "2026-01"
@@ -1679,11 +2417,17 @@
    "feiten": [
     {
      "nl": "Ondiep wrak vlakbij",
-     "en": "Shallow wreck nearby"
+     "en": "Shallow wreck nearby",
+     "de": "Flaches Wrack in der Nähe",
+     "es": "Naufragio poco profundo cerca",
+     "pt": "Naufrágio raso por perto"
     },
     {
      "nl": "Beachbar en duikcentrum",
-     "en": "Beach bar and dive center"
+     "en": "Beach bar and dive center",
+     "de": "Strandbar und Tauchcenter",
+     "es": "Bar de playa y centro de buceo",
+     "pt": "Bar de praia e centro de mergulho"
     }
    ],
    "scores": [],
@@ -1693,6 +2437,15 @@
     ],
     "en": [
      "One of the best free snorkel spots"
+    ],
+    "de": [
+     "Einer der besten kostenlosen Schnorchelplätze"
+    ],
+    "es": [
+     "Uno de los mejores lugares gratis para hacer snorkel"
+    ],
+    "pt": [
+     "Um dos melhores pontos de snorkel gratuitos"
     ]
    },
    "tegen": {
@@ -1701,6 +2454,15 @@
     ],
     "en": [
      "Rubble entry"
+    ],
+    "de": [
+     "Einstieg über Geröll"
+    ],
+    "es": [
+     "Entrada con escombros"
+    ],
+    "pt": [
+     "Entrada com cascalho"
     ]
    },
    "bronnen": [
@@ -1715,7 +2477,10 @@
    "url": null,
    "soort": {
     "nl": "baai",
-    "en": "bay"
+    "en": "bay",
+    "de": "Bucht",
+    "es": "bahía",
+    "pt": "baía"
    },
    "plaats": "Caracasbaai",
    "tags": [
@@ -1730,7 +2495,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "gratis toegang",
-     "en": "free entry"
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
     },
     "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
     "datum": "2026-01"
@@ -1738,7 +2506,10 @@
    "feiten": [
     {
      "nl": "Geen voorzieningen",
-     "en": "No facilities"
+     "en": "No facilities",
+     "de": "Keine Einrichtungen",
+     "es": "Sin servicios",
+     "pt": "Sem estrutura"
     }
    ],
    "scores": [],
@@ -1748,6 +2519,15 @@
     ],
     "en": [
      "Quiet and scenic"
+    ],
+    "de": [
+     "Ruhig und malerisch"
+    ],
+    "es": [
+     "Tranquila y pintoresca"
+    ],
+    "pt": [
+     "Tranquila e pitoresca"
     ]
    },
    "tegen": {
@@ -1756,6 +2536,15 @@
     ],
     "en": [
      "Current near the point"
+    ],
+    "de": [
+     "Strömung an der Landspitze"
+    ],
+    "es": [
+     "Corriente cerca de la punta"
+    ],
+    "pt": [
+     "Correnteza perto da ponta"
     ]
    },
    "bronnen": [
@@ -1768,7 +2557,10 @@
    "url": null,
    "soort": {
     "nl": "resortstrand",
-    "en": "resort beach"
+    "en": "resort beach",
+    "de": "Hotelstrand",
+    "es": "playa de resort",
+    "pt": "praia de resort"
    },
    "plaats": "Spaanse Water",
    "tags": [
@@ -1779,7 +2571,10 @@
    "feiten": [
     {
      "nl": "Vertrek Miss Ann-boot",
-     "en": "Miss Ann boat departs here"
+     "en": "Miss Ann boat departs here",
+     "de": "Hier legt die Miss Ann ab",
+     "es": "Aquí sale el Miss Ann",
+     "pt": "Daqui sai o Miss Ann"
     }
    ],
    "scores": [
@@ -1798,6 +2593,15 @@
     ],
     "en": [
      "Free parking for the boat"
+    ],
+    "de": [
+     "Kostenloses Parken für das Boot"
+    ],
+    "es": [
+     "Estacionamiento gratis para quienes toman el bote"
+    ],
+    "pt": [
+     "Estacionamento gratuito para quem pega o barco"
     ]
    },
    "tegen": {
@@ -1806,6 +2610,15 @@
     ],
     "en": [
      "Very low score on few reviews"
+    ],
+    "de": [
+     "Sehr niedrige Bewertung bei wenigen Rezensionen"
+    ],
+    "es": [
+     "Calificación muy baja con pocas reseñas"
+    ],
+    "pt": [
+     "Nota muito baixa com poucas avaliações"
     ]
    },
    "bronnen": [
@@ -1818,7 +2631,10 @@
    "url": null,
    "soort": {
     "nl": "noordkust",
-    "en": "north coast"
+    "en": "north coast",
+    "de": "Nordküste",
+    "es": "costa norte",
+    "pt": "costa norte"
    },
    "plaats": "noordoostkust",
    "tags": [
@@ -1830,7 +2646,10 @@
    "feiten": [
     {
      "nl": "Ruwe noordkust",
-     "en": "Rough north coast"
+     "en": "Rough north coast",
+     "de": "Raue Nordküste",
+     "es": "Costa norte agitada",
+     "pt": "Costa norte agitada"
     }
    ],
    "scores": [
@@ -1849,6 +2668,15 @@
     ],
     "en": [
      "Remote and wild"
+    ],
+    "de": [
+     "Abgelegen und wild"
+    ],
+    "es": [
+     "Apartada y salvaje"
+    ],
+    "pt": [
+     "Isolada e selvagem"
     ]
    },
    "tegen": {
@@ -1857,6 +2685,15 @@
     ],
     "en": [
      "Low Tripadvisor score"
+    ],
+    "de": [
+     "Niedrige Tripadvisor-Bewertung"
+    ],
+    "es": [
+     "Calificación baja en Tripadvisor"
+    ],
+    "pt": [
+     "Nota baixa no Tripadvisor"
     ]
    },
    "bronnen": [
@@ -1869,7 +2706,10 @@
    "url": null,
    "soort": {
     "nl": "kleine baai",
-    "en": "small cove"
+    "en": "small cove",
+    "de": "kleine Bucht",
+    "es": "cala pequeña",
+    "pt": "enseada pequena"
    },
    "plaats": null,
    "tags": [
@@ -1894,11 +2734,23 @@
     ],
     "en": [
      "Few visitors"
+    ],
+    "de": [
+     "Wenige Besucher"
+    ],
+    "es": [
+     "Pocos visitantes"
+    ],
+    "pt": [
+     "Poucos visitantes"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
@@ -1910,7 +2762,10 @@
    "url": null,
    "soort": {
     "nl": "onbewoond eiland",
-    "en": "uninhabited island"
+    "en": "uninhabited island",
+    "de": "unbewohnte Insel",
+    "es": "isla deshabitada",
+    "pt": "ilha desabitada"
    },
    "plaats": "25 km zuidoost, alleen per boot",
    "tags": [
@@ -1924,7 +2779,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per persoon (boottocht, $135 tot $170)",
-     "en": "per person (boat trip, $135 to $170)"
+     "en": "per person (boat trip, $135 to $170)",
+     "de": "pro Person (Bootsausflug, $135 bis $170)",
+     "es": "por persona (excursión en bote, $135 a $170)",
+     "pt": "por pessoa (passeio de barco, $135 a $170)"
     },
     "bron": "https://www.mycuracaoguide.com/klein-curacao",
     "datum": "2026-10"
@@ -1932,11 +2790,17 @@
    "feiten": [
     {
      "nl": "Alleen per boot",
-     "en": "Boat access only"
+     "en": "Boat access only",
+     "de": "Nur mit dem Boot erreichbar",
+     "es": "Solo se llega en bote",
+     "pt": "Acesso só de barco"
     },
     {
      "nl": "Vuurtoren en scheepswrak",
-     "en": "Lighthouse and shipwreck"
+     "en": "Lighthouse and shipwreck",
+     "de": "Leuchtturm und Schiffswrack",
+     "es": "Faro y naufragio",
+     "pt": "Farol e naufrágio"
     }
    ],
    "scores": [
@@ -1957,6 +2821,18 @@
     "en": [
      "Clear water and sea turtles",
      "Long white beach with no buildings"
+    ],
+    "de": [
+     "Klares Wasser und Meeresschildkröten",
+     "Langer weißer Strand ohne Gebäude"
+    ],
+    "es": [
+     "Agua cristalina y tortugas marinas",
+     "Playa larga y blanca, sin construcciones"
+    ],
+    "pt": [
+     "Água cristalina e tartarugas-marinhas",
+     "Praia longa e branca, sem construções"
     ]
    },
    "tegen": {
@@ -1967,6 +2843,18 @@
     "en": [
      "Crossing is often rough",
      "Little shade"
+    ],
+    "de": [
+     "Die Überfahrt ist oft rau",
+     "Wenig Schatten"
+    ],
+    "es": [
+     "La travesía suele ser agitada",
+     "Poca sombra"
+    ],
+    "pt": [
+     "A travessia costuma ser agitada",
+     "Pouca sombra"
     ]
    },
    "bronnen": [
@@ -1982,7 +2870,10 @@
    "url": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
    "uitleg": {
     "nl": "Reviews en scores per strand; geen boekingen nodig voor stranden.",
-    "en": "Reviews and ratings per beach; beaches need no booking."
+    "en": "Reviews and ratings per beach; beaches need no booking.",
+    "de": "Bewertungen und Ratings pro Strand; Strände müssen nicht gebucht werden.",
+    "es": "Reseñas y calificaciones por playa; las playas no requieren reserva.",
+    "pt": "Avaliações e notas por praia; as praias não precisam de reserva."
    }
   },
   {
@@ -1990,7 +2881,10 @@
    "url": "https://curatogo.com/beach.html?id=cas",
    "uitleg": {
     "nl": "Lokale strandgids met openingstijden en entreeprijzen.",
-    "en": "Local beach guide with opening hours and entry fees."
+    "en": "Local beach guide with opening hours and entry fees.",
+    "de": "Lokaler Strandführer mit Öffnungszeiten und Eintrittspreisen.",
+    "es": "Guía local de playas con horarios y precios de entrada.",
+    "pt": "Guia local de praias com horários e preços de entrada."
    }
   },
   {
@@ -1998,119 +2892,191 @@
    "url": "https://www.viator.com/Curacao-tours/4WD-ATV-and-Off-Road-Tours/d725-g9-c32",
    "uitleg": {
     "nl": "Zonder auto bereik je de westkant via een tour die entree vaak al inbegrijpt.",
-    "en": "Without a car you can reach the west side on a tour that often includes entry."
+    "en": "Without a car you can reach the west side on a tour that often includes entry.",
+    "de": "Ohne Auto erreichst du den Westen mit einer Tour, bei der der Eintritt oft inklusive ist.",
+    "es": "Sin auto puedes llegar al oeste con un tour que a menudo incluye la entrada.",
+    "pt": "Sem carro dá para chegar ao lado oeste num passeio que muitas vezes inclui a entrada."
    }
   }
  ],
  "tips": [
   {
    "nl": "Neem contant geld mee: bij Cas Abao, Porto Mari, Mambo en Jan Thiel betaal je bij de ingang.",
-   "en": "Bring cash: you pay at the gate at Cas Abao, Porto Mari, Mambo and Jan Thiel."
+   "en": "Bring cash: you pay at the gate at Cas Abao, Porto Mari, Mambo and Jan Thiel.",
+   "de": "Bring Bargeld mit: An der Kasse zahlst du bei Cas Abao, Porto Mari, Mambo und Jan Thiel.",
+   "es": "Lleva efectivo: se paga en la entrada de Cas Abao, Porto Mari, Mambo y Jan Thiel.",
+   "pt": "Leve dinheiro em espécie: o pagamento é na entrada em Cas Abao, Porto Mari, Mambo e Jan Thiel."
   },
   {
    "nl": "Kom voor 10:00 naar Grote Knip en Playa Piskado; daarna komen de tourbussen.",
-   "en": "Get to Grote Knip and Playa Piskado before 10 a.m.; the tour buses come after that."
+   "en": "Get to Grote Knip and Playa Piskado before 10 a.m.; the tour buses come after that.",
+   "de": "Sei vor 10 Uhr bei Grote Knip und Playa Piskado; danach kommen die Reisebusse.",
+   "es": "Llega a Grote Knip y Playa Piskado antes de las 10 a. m.; después llegan los buses de turistas.",
+   "pt": "Chegue a Grote Knip e Playa Piskado antes das 10h; depois disso chegam os ônibus de turismo."
   },
   {
    "nl": "Waterschoenen zijn handig bij Grote Knip, Playa Lagun, Playa Piskado en Tugboat; de instap is rotsig of kiezelig.",
-   "en": "Water shoes help at Grote Knip, Playa Lagun, Playa Piskado and Tugboat, where the entry is rocky or pebbly."
+   "en": "Water shoes help at Grote Knip, Playa Lagun, Playa Piskado and Tugboat, where the entry is rocky or pebbly.",
+   "de": "Wasserschuhe helfen bei Grote Knip, Playa Lagun, Playa Piskado und Tugboat, wo der Einstieg felsig oder steinig ist.",
+   "es": "Los zapatos de agua ayudan en Grote Knip, Playa Lagun, Playa Piskado y Tugboat, donde la entrada es rocosa o con piedras.",
+   "pt": "Sapatilhas de água ajudam em Grote Knip, Playa Lagun, Playa Piskado e Tugboat, onde a entrada é rochosa ou de pedrinhas."
   },
   {
    "nl": "Jan Thiel is na 16:30 gratis.",
-   "en": "Jan Thiel is free after 4:30 p.m."
+   "en": "Jan Thiel is free after 4:30 p.m.",
+   "de": "Jan Thiel ist ab 16:30 Uhr kostenlos.",
+   "es": "Jan Thiel es gratis después de las 4:30 p. m.",
+   "pt": "Jan Thiel é gratuita depois das 16h30."
   },
   {
    "nl": "Ga niet onder manchinelbomen zitten (onder meer bij Kleine Knip); sap en vruchten zijn giftig.",
-   "en": "Don't sit under manchineel trees (Kleine Knip has them); the sap and fruit are toxic."
+   "en": "Don't sit under manchineel trees (Kleine Knip has them); the sap and fruit are toxic.",
+   "de": "Setz dich nicht unter Manchinelbäume (Kleine Knip hat welche); Saft und Früchte sind giftig.",
+   "es": "No te sientes bajo manzanillos (Kleine Knip tiene); la savia y los frutos son tóxicos.",
+   "pt": "Não sente embaixo de mancenilheiras (Kleine Knip tem); a seiva e os frutos são tóxicos."
   },
   {
    "nl": "Laat niets zichtbaar in de auto bij gratis stranden aan de westkant.",
-   "en": "Leave nothing visible in your car at free west-side beaches."
+   "en": "Leave nothing visible in your car at free west-side beaches.",
+   "de": "Lass an kostenlosen Stränden im Westen nichts sichtbar im Auto liegen.",
+   "es": "No dejes nada a la vista en el auto en las playas gratis del oeste.",
+   "pt": "Não deixe nada à vista no carro nas praias gratuitas do lado oeste."
   },
   {
    "nl": "Op zondag zitten Daaibooi en Grote Knip vol met lokale gezinnen.",
-   "en": "On Sundays, Daaibooi and Grote Knip fill up with local families."
+   "en": "On Sundays, Daaibooi and Grote Knip fill up with local families.",
+   "de": "Sonntags füllen sich Daaibooi und Grote Knip mit einheimischen Familien.",
+   "es": "Los domingos, Daaibooi y Grote Knip se llenan de familias locales.",
+   "pt": "Aos domingos, Daaibooi e Grote Knip enchem de famílias locais."
   }
  ],
  "faq": [
   {
    "q": {
     "nl": "Wat is het mooiste strand van Curaçao?",
-    "en": "What's the most beautiful beach in Curaçao?"
+    "en": "What's the most beautiful beach in Curaçao?",
+    "de": "Was ist der schönste Strand auf Curaçao?",
+    "es": "¿Cuál es la playa más bonita de Curazao?",
+    "pt": "Qual é a praia mais bonita de Curaçao?"
    },
    "a": {
     "nl": "Grote Knip (Kenepa Grandi) scoort het best op Tripadvisor: 4,5 uit 5.098 reviews. Porto Mari volgt met 4,5 uit 1.833.",
-    "en": "Grote Knip (Kenepa Grandi) rates highest on Tripadvisor at 4.5 from 5,098 reviews. Porto Mari follows with 4.5 from 1,833."
+    "en": "Grote Knip (Kenepa Grandi) rates highest on Tripadvisor at 4.5 from 5,098 reviews. Porto Mari follows with 4.5 from 1,833.",
+    "de": "Grote Knip (Kenepa Grandi) ist bei Tripadvisor mit 4.5 bei 5,098 Bewertungen am besten bewertet. Porto Mari folgt mit 4.5 bei 1,833.",
+    "es": "Grote Knip (Kenepa Grandi) tiene la mejor calificación en Tripadvisor: 4.5 con 5,098 reseñas. Le sigue Porto Mari con 4.5 y 1,833.",
+    "pt": "Grote Knip (Kenepa Grandi) tem a melhor nota no Tripadvisor: 4.5 em 5,098 avaliações. Porto Mari vem em seguida, com 4.5 em 1,833."
    }
   },
   {
    "q": {
     "nl": "Welke stranden op Curaçao zijn gratis?",
-    "en": "Which Curaçao beaches are free?"
+    "en": "Which Curaçao beaches are free?",
+    "de": "Welche Strände auf Curaçao sind kostenlos?",
+    "es": "¿Qué playas de Curazao son gratis?",
+    "pt": "Quais praias de Curaçao são gratuitas?"
    },
    "a": {
     "nl": "Onder meer Grote Knip, Kleine Knip, Playa Lagun, Playa Piskado, Playa Jeremi, Daaibooi, Kokomo en Tugboat Beach. Bij Kokomo betaal je alleen voor ligbedden.",
-    "en": "Among others Grote Knip, Kleine Knip, Playa Lagun, Playa Piskado, Playa Jeremi, Daaibooi, Kokomo and Tugboat Beach. At Kokomo you only pay for loungers."
+    "en": "Among others Grote Knip, Kleine Knip, Playa Lagun, Playa Piskado, Playa Jeremi, Daaibooi, Kokomo and Tugboat Beach. At Kokomo you only pay for loungers.",
+    "de": "Unter anderem Grote Knip, Kleine Knip, Playa Lagun, Playa Piskado, Playa Jeremi, Daaibooi, Kokomo und Tugboat Beach. Bei Kokomo zahlst du nur für Liegen.",
+    "es": "Entre otras, Grote Knip, Kleine Knip, Playa Lagun, Playa Piskado, Playa Jeremi, Daaibooi, Kokomo y Tugboat Beach. En Kokomo solo pagas por las tumbonas.",
+    "pt": "Entre outras, Grote Knip, Kleine Knip, Playa Lagun, Playa Piskado, Playa Jeremi, Daaibooi, Kokomo e Tugboat Beach. Em Kokomo você paga só pelas espreguiçadeiras."
    }
   },
   {
    "q": {
     "nl": "Wat kost de entree van Cas Abao?",
-    "en": "How much is entry at Cas Abao?"
+    "en": "How much is entry at Cas Abao?",
+    "de": "Wie viel kostet der Eintritt bei Cas Abao?",
+    "es": "¿Cuánto cuesta la entrada a Cas Abao?",
+    "pt": "Quanto custa a entrada em Cas Abao?"
    },
    "a": {
     "nl": "$6 per auto met maximaal 4 personen van maandag tot zaterdag, $7 op zondag en feestdagen. Een ligstoel kost $3 extra.",
-    "en": "$6 per car with up to 4 people Monday to Saturday, $7 on Sundays and holidays. A lounge chair is $3 extra."
+    "en": "$6 per car with up to 4 people Monday to Saturday, $7 on Sundays and holidays. A lounge chair is $3 extra.",
+    "de": "$6 pro Auto mit bis zu 4 Personen von Montag bis Samstag, $7 sonntags und an Feiertagen. Eine Liege kostet $3 extra.",
+    "es": "$6 por auto con hasta 4 personas de lunes a sábado, $7 los domingos y feriados. Una silla reclinable cuesta $3 extra.",
+    "pt": "$6 por carro com até 4 pessoas de segunda a sábado, $7 aos domingos e feriados. Uma espreguiçadeira custa $3 extra."
    }
   },
   {
    "q": {
     "nl": "Waar kun je op Curaçao met schildpadden zwemmen?",
-    "en": "Where can you swim with turtles in Curaçao?"
+    "en": "Where can you swim with turtles in Curaçao?",
+    "de": "Wo kann man auf Curaçao mit Schildkröten schwimmen?",
+    "es": "¿Dónde se puede nadar con tortugas en Curazao?",
+    "pt": "Onde dá para nadar com tartarugas em Curaçao?"
    },
    "a": {
     "nl": "Bij Playa Piskado (Playa Grandi) in Westpunt, bij Playa Lagun, verder uit bij Daaibooi en op Klein Curaçao.",
-    "en": "At Playa Piskado (Playa Grandi) in Westpunt, at Playa Lagun, farther out at Daaibooi, and on Klein Curaçao."
+    "en": "At Playa Piskado (Playa Grandi) in Westpunt, at Playa Lagun, farther out at Daaibooi, and on Klein Curaçao.",
+    "de": "Am Playa Piskado (Playa Grandi) in Westpunt, am Playa Lagun, weiter draußen bei Daaibooi und auf Klein Curaçao.",
+    "es": "En Playa Piskado (Playa Grandi) en Westpunt, en Playa Lagun, más lejos de la orilla en Daaibooi y en Klein Curazao.",
+    "pt": "Em Playa Piskado (Playa Grandi), em Westpunt, em Playa Lagun, mais longe da margem em Daaibooi e em Klein Curaçao."
    }
   },
   {
    "q": {
     "nl": "Welk strand is het best met kleine kinderen?",
-    "en": "Which beach is best with small kids?"
+    "en": "Which beach is best with small kids?",
+    "de": "Welcher Strand ist am besten für kleine Kinder?",
+    "es": "¿Qué playa es mejor para niños pequeños?",
+    "pt": "Qual praia é melhor para crianças pequenas?"
    },
    "a": {
     "nl": "Porto Mari en Cas Abao hebben een geleidelijke instap en alle voorzieningen. Mambo Beach en Jan Thiel hebben vlak water achter een golfbreker en een speeltuin.",
-    "en": "Porto Mari and Cas Abao have a gentle entry and full facilities. Mambo Beach and Jan Thiel have flat water behind a breakwater and a playground."
+    "en": "Porto Mari and Cas Abao have a gentle entry and full facilities. Mambo Beach and Jan Thiel have flat water behind a breakwater and a playground.",
+    "de": "Porto Mari und Cas Abao haben einen sanften Einstieg und alle Einrichtungen. Mambo Beach und Jan Thiel haben flaches Wasser hinter einem Wellenbrecher und einen Spielplatz.",
+    "es": "Porto Mari y Cas Abao tienen entrada gradual y todos los servicios. Mambo Beach y Jan Thiel tienen agua baja detrás de un rompeolas y un parque infantil.",
+    "pt": "Porto Mari e Cas Abao têm entrada suave e estrutura completa. Mambo Beach e Jan Thiel têm água rasa atrás de um quebra-mar e parquinho."
    }
   },
   {
    "q": {
     "nl": "Waar is het beste snorkelen vanaf het strand?",
-    "en": "Where's the best snorkeling from shore?"
+    "en": "Where's the best snorkeling from shore?",
+    "de": "Wo kann man am besten vom Ufer aus schnorcheln?",
+    "es": "¿Dónde está el mejor snorkel desde la orilla?",
+    "pt": "Onde é o melhor snorkel a partir da margem?"
    },
    "a": {
     "nl": "Playa Lagun, Tugboat Beach (wrak), Porto Mari (dubbel rif), Kleine Knip en Cas Abao.",
-    "en": "Playa Lagun, Tugboat Beach (wreck), Porto Mari (double reef), Kleine Knip and Cas Abao."
+    "en": "Playa Lagun, Tugboat Beach (wreck), Porto Mari (double reef), Kleine Knip and Cas Abao.",
+    "de": "Playa Lagun, Tugboat Beach (Wrack), Porto Mari (Doppelriff), Kleine Knip und Cas Abao.",
+    "es": "Playa Lagun, Tugboat Beach (naufragio), Porto Mari (arrecife doble), Kleine Knip y Cas Abao.",
+    "pt": "Playa Lagun, Tugboat Beach (naufrágio), Porto Mari (recife duplo), Kleine Knip e Cas Abao."
    }
   },
   {
    "q": {
     "nl": "Wat kost Mambo Beach?",
-    "en": "How much is Mambo Beach?"
+    "en": "How much is Mambo Beach?",
+    "de": "Wie viel kostet Mambo Beach?",
+    "es": "¿Cuánto cuesta Mambo Beach?",
+    "pt": "Quanto custa Mambo Beach?"
    },
    "a": {
     "nl": "Ongeveer $4,50 per persoon. Ligbedden huur je apart bij de beachclubs; de boulevard met winkels is gratis.",
-    "en": "About $4.50 per person. Loungers are rented separately from the beach clubs; the shopping boulevard is free."
+    "en": "About $4.50 per person. Loungers are rented separately from the beach clubs; the shopping boulevard is free.",
+    "de": "Etwa $4.50 pro Person. Liegen werden separat von den Beach Clubs vermietet; die Einkaufsmeile ist kostenlos.",
+    "es": "Unos $4.50 por persona. Las tumbonas se alquilan aparte en los beach clubs; el bulevar comercial es gratis.",
+    "pt": "Cerca de $4.50 por pessoa. As espreguiçadeiras são alugadas à parte nos beach clubs; o boulevard de compras é gratuito."
    }
   },
   {
    "q": {
     "nl": "Welk strand is het rustigst?",
-    "en": "Which beach is the quietest?"
+    "en": "Which beach is the quietest?",
+    "de": "Welcher Strand ist am ruhigsten?",
+    "es": "¿Cuál es la playa más tranquila?",
+    "pt": "Qual é a praia mais tranquila?"
    },
    "a": {
     "nl": "Playa Jeremi, Kleine Knip doordeweeks, Santa Martha Baai, Directors Bay en Santu Pretu. Daar zijn weinig of geen voorzieningen.",
-    "en": "Playa Jeremi, Kleine Knip on weekdays, Santa Martha Bay, Directors Bay and Santu Pretu. Facilities there are few or none."
+    "en": "Playa Jeremi, Kleine Knip on weekdays, Santa Martha Bay, Directors Bay and Santu Pretu. Facilities there are few or none.",
+    "de": "Playa Jeremi, Kleine Knip unter der Woche, Santa Martha Bay, Directors Bay und Santu Pretu. Dort gibt es wenige oder gar keine Einrichtungen.",
+    "es": "Playa Jeremi, Kleine Knip entre semana, Santa Martha Bay, Directors Bay y Santu Pretu. Allí hay pocos servicios o ninguno.",
+    "pt": "Playa Jeremi, Kleine Knip durante a semana, Santa Martha Bay, Directors Bay e Santu Pretu. Lá a estrutura é pouca ou nenhuma."
    }
   }
  ],
@@ -2133,17 +3099,27 @@
   ],
   "es": [
    "playas de curazao",
-   "mejores playas curazao",
-   "playas gratis curazao"
+   "mejores playas de curazao",
+   "playas gratis curazao",
+   "playas de curazao para familias",
+   "mejor playa para snorkel curazao",
+   "precio de entrada cas abao"
   ],
   "pt": [
    "praias de curaçao",
-   "melhores praias curaçao"
+   "melhores praias de curaçao",
+   "praias gratuitas curaçao",
+   "praias de curaçao para famílias",
+   "melhor praia para snorkel curaçao",
+   "preço de entrada cas abao"
   ],
   "de": [
-   "strände curaçao",
-   "schönste strände curaçao",
-   "curaçao strand eintritt"
+   "Strände Curaçao",
+   "beste Strände Curaçao",
+   "kostenlose Strände Curaçao",
+   "Strände Curaçao für Familien",
+   "bester Schnorchelstrand Curaçao",
+   "Cas Abao Eintritt"
   ]
  },
  "llmVragen": {
@@ -2156,6 +3132,21 @@
    "What are the best beaches in Curaçao?",
    "Which Curaçao beach is best for snorkeling with turtles?",
    "Do Curaçao beaches charge an entrance fee?"
+  ],
+  "de": [
+   "Was sind die besten Strände auf Curaçao?",
+   "Welcher Strand auf Curaçao eignet sich am besten zum Schnorcheln mit Schildkröten?",
+   "Verlangen die Strände auf Curaçao Eintritt?"
+  ],
+  "es": [
+   "¿Cuáles son las mejores playas de Curazao?",
+   "¿Qué playa de Curazao es mejor para hacer snorkel con tortugas?",
+   "¿Cobran entrada las playas de Curazao?"
+  ],
+  "pt": [
+   "Quais são as melhores praias de Curaçao?",
+   "Qual praia de Curaçao é a melhor para fazer snorkel com tartarugas?",
+   "As praias de Curaçao cobram entrada?"
   ]
  }
 }

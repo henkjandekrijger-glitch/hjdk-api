@@ -3,35 +3,56 @@
  "peildatum": "2026-10-20",
  "onderwerp": {
   "nl": "hotel of resort",
-  "en": "hotel or resort"
+  "en": "hotel or resort",
+  "de": "Hotel oder Resort",
+  "es": "hotel o resort",
+  "pt": "hotel ou resort"
  },
  "h1": {
   "nl": "Hotel op Curaçao: welk hotel of resort past bij jou?",
-  "en": "Curaçao hotels: which hotel or resort is right for you?"
+  "en": "Curaçao hotels: which hotel or resort is right for you?",
+  "de": "Hotels auf Curaçao: Welches Hotel oder Resort passt zu dir?",
+  "es": "Hoteles en Curazao: ¿qué hotel o resort es el indicado para ti?",
+  "pt": "Hotéis em Curaçao: qual hotel ou resort combina com você?"
  },
  "titel": {
   "nl": "Hotels Curaçao vergelijken: {n} hotels en resorts",
-  "en": "Curaçao Hotels Compared: {n} Hotels and Resorts"
+  "en": "Curaçao Hotels Compared: {n} Hotels and Resorts",
+  "de": "Hotels auf Curaçao im Vergleich: {n} Hotels und Resorts",
+  "es": "Hoteles de Curazao comparados: {n} hoteles y resorts",
+  "pt": "Hotéis de Curaçao comparados: {n} hotéis e resorts"
  },
  "metaDesc": {
   "nl": "{n} hotels en resorts op Curaçao naast elkaar: all-inclusive of niet, welke wijk, scores van Tripadvisor en Booking en prijzen vanaf.",
-  "en": "{n} Curaçao hotels and resorts side by side: all-inclusive or not, which area, Tripadvisor and Booking scores, and starting prices."
+  "en": "{n} Curaçao hotels and resorts side by side: all-inclusive or not, which area, Tripadvisor and Booking scores, and starting prices.",
+  "de": "{n} Hotels und Resorts auf Curaçao im Vergleich: All-inclusive oder nicht, welche Gegend, Bewertungen bei Tripadvisor und Booking und Preise ab.",
+  "es": "{n} hoteles y resorts de Curazao lado a lado: todo incluido o no, qué zona, calificaciones en Tripadvisor y Booking, y precios desde.",
+  "pt": "{n} hotéis e resorts de Curaçao lado a lado: tudo incluído ou não, qual região, notas no Tripadvisor e no Booking e preços a partir de."
  },
  "kort": {
   "nl": "We zetten 76 hotels en resorts op Curaçao naast elkaar, waarvan 9 all-inclusive. Tripadvisor-prijzen voor een standaardkamer beginnen rond $172 per nacht (Kunuku, all-inclusive) en lopen op tot $980 of meer (Baoase). Voor stellen scoren Sandals Royal (alleen 18+) en Baoase het hoogst, gezinnen zitten goed bij Sunscape of Kunuku, en wie zelf wil eten en duiken kiest Avila, LionsDive of Scuba Lodge.",
-  "en": "We compare 76 hotels and resorts on Curaçao, 9 of them all-inclusive. Tripadvisor rates for a standard room start around $172 a night (Kunuku, all-inclusive) and run to $980 or more (Baoase). Couples rate Sandals Royal (18+ only) and Baoase highest, families do well at Sunscape or Kunuku, and if you'd rather eat out and dive, look at Avila, LionsDive or Scuba Lodge."
+  "en": "We compare 76 hotels and resorts on Curaçao, 9 of them all-inclusive. Tripadvisor rates for a standard room start around $172 a night (Kunuku, all-inclusive) and run to $980 or more (Baoase). Couples rate Sandals Royal (18+ only) and Baoase highest, families do well at Sunscape or Kunuku, and if you'd rather eat out and dive, look at Avila, LionsDive or Scuba Lodge.",
+  "de": "Wir vergleichen 76 Hotels und Resorts auf Curaçao, 9 davon All-inclusive. Die Tripadvisor-Preise für ein Standardzimmer beginnen bei etwa $172 pro Nacht (Kunuku, All-inclusive) und reichen bis $980 oder mehr (Baoase). Paare bewerten Sandals Royal (nur ab 18) und Baoase am besten, Familien sind bei Sunscape oder Kunuku gut aufgehoben, und wenn du lieber auswärts isst und tauchst, schau dir Avila, LionsDive oder Scuba Lodge an.",
+  "es": "Comparamos 76 hoteles y resorts de Curazao, 9 de ellos todo incluido. Las tarifas de Tripadvisor para una habitación estándar van desde unos $172 por noche (Kunuku, todo incluido) hasta $980 o más (Baoase). Las parejas califican mejor a Sandals Royal (solo mayores de 18) y a Baoase, las familias están bien en Sunscape o Kunuku, y si prefieres comer afuera y bucear, mira Avila, LionsDive o Scuba Lodge.",
+  "pt": "Comparamos 76 hotéis e resorts em Curaçao, 9 deles com tudo incluído. As diárias do Tripadvisor para um quarto standard vão de cerca de $172 por noite (Kunuku, tudo incluído) a $980 ou mais (Baoase). Os casais avaliam melhor o Sandals Royal (só maiores de 18) e o Baoase, as famílias se dão bem no Sunscape ou no Kunuku, e se você prefere comer fora e mergulhar, veja o Avila, o LionsDive ou o Scuba Lodge."
  },
  "vragen": [
   {
    "q": {
     "nl": "Met wie reis je?",
-    "en": "Who are you traveling with?"
+    "en": "Who are you traveling with?",
+    "de": "Mit wem reist du?",
+    "es": "¿Con quién viajas?",
+    "pt": "Com quem você vai viajar?"
    },
    "opties": [
     {
      "label": {
       "nl": "Met z'n tweeën",
-      "en": "As a couple"
+      "en": "As a couple",
+      "de": "Als Paar",
+      "es": "En pareja",
+      "pt": "Em casal"
      },
      "plus": [
       "adults-only",
@@ -44,7 +65,10 @@
     {
      "label": {
       "nl": "Gezin met kinderen",
-      "en": "Family with kids"
+      "en": "Family with kids",
+      "de": "Familie mit Kindern",
+      "es": "Familia con niños",
+      "pt": "Família com crianças"
      },
      "plus": [
       "kindvriendelijk",
@@ -59,7 +83,10 @@
     {
      "label": {
       "nl": "Met vrienden",
-      "en": "With friends"
+      "en": "With friends",
+      "de": "Mit Freunden",
+      "es": "Con amigos",
+      "pt": "Com amigos"
      },
      "plus": [
       "appartement-keuken",
@@ -72,7 +99,10 @@
     {
      "label": {
       "nl": "Solo of om te duiken",
-      "en": "Solo or to dive"
+      "en": "Solo or to dive",
+      "de": "Allein oder zum Tauchen",
+      "es": "Solo o para bucear",
+      "pt": "Sozinho ou para mergulhar"
      },
      "plus": [
       "duiken",
@@ -86,13 +116,19 @@
   {
    "q": {
     "nl": "Wil je all-inclusive?",
-    "en": "Do you want all-inclusive?"
+    "en": "Do you want all-inclusive?",
+    "de": "Möchtest du All-inclusive?",
+    "es": "¿Quieres todo incluido?",
+    "pt": "Você quer tudo incluído?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "Doesn't matter"
+      "en": "Doesn't matter",
+      "de": "Egal",
+      "es": "Da igual",
+      "pt": "Tanto faz"
      },
      "plus": [],
      "min": [],
@@ -101,7 +137,10 @@
     {
      "label": {
       "nl": "Ja, alles inbegrepen",
-      "en": "Yes, everything included"
+      "en": "Yes, everything included",
+      "de": "Ja, alles inklusive",
+      "es": "Sí, todo incluido",
+      "pt": "Sim, tudo incluído"
      },
      "plus": [
       "all-inclusive"
@@ -112,7 +151,10 @@
     {
      "label": {
       "nl": "Nee, ik eet liever buiten de deur",
-      "en": "No, I'd rather eat out"
+      "en": "No, I'd rather eat out",
+      "de": "Nein, ich esse lieber auswärts",
+      "es": "No, prefiero comer afuera",
+      "pt": "Não, prefiro comer fora"
      },
      "plus": [
       "appartement-keuken"
@@ -127,13 +169,19 @@
   {
    "q": {
     "nl": "Waar wil je verblijven?",
-    "en": "Where do you want to stay?"
+    "en": "Where do you want to stay?",
+    "de": "Wo möchtest du wohnen?",
+    "es": "¿Dónde quieres alojarte?",
+    "pt": "Onde você quer ficar?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "Doesn't matter"
+      "en": "Doesn't matter",
+      "de": "Egal",
+      "es": "Da igual",
+      "pt": "Tanto faz"
      },
      "plus": [],
      "min": [],
@@ -142,7 +190,10 @@
     {
      "label": {
       "nl": "Strandleven: Jan Thiel of Mambo",
-      "en": "Beach life: Jan Thiel or Mambo"
+      "en": "Beach life: Jan Thiel or Mambo",
+      "de": "Strandleben: Jan Thiel oder Mambo",
+      "es": "Vida de playa: Jan Thiel o Mambo",
+      "pt": "Vida de praia: Jan Thiel ou Mambo"
      },
      "plus": [
       "jan-thiel",
@@ -155,7 +206,10 @@
     {
      "label": {
       "nl": "Rustig westen: Westpunt, Lagun",
-      "en": "Quiet west: Westpunt, Lagun"
+      "en": "Quiet west: Westpunt, Lagun",
+      "de": "Ruhiger Westen: Westpunt, Lagun",
+      "es": "Oeste tranquilo: Westpunt, Lagun",
+      "pt": "Oeste tranquilo: Westpunt, Lagun"
      },
      "plus": [
       "westpunt"
@@ -166,7 +220,10 @@
     {
      "label": {
       "nl": "Stad en cultuur: Pietermaai, Punda, Otrobanda",
-      "en": "City and culture: Pietermaai, Punda, Otrobanda"
+      "en": "City and culture: Pietermaai, Punda, Otrobanda",
+      "de": "Stadt und Kultur: Pietermaai, Punda, Otrobanda",
+      "es": "Ciudad y cultura: Pietermaai, Punda, Otrobanda",
+      "pt": "Cidade e cultura: Pietermaai, Punda, Otrobanda"
      },
      "plus": [
       "pietermaai-punda",
@@ -178,7 +235,10 @@
     {
      "label": {
       "nl": "Aan zee vlak bij de stad: Piscadera",
-      "en": "By the sea near town: Piscadera"
+      "en": "By the sea near town: Piscadera",
+      "de": "Am Meer nahe der Stadt: Piscadera",
+      "es": "Junto al mar y cerca de la ciudad: Piscadera",
+      "pt": "À beira-mar perto da cidade: Piscadera"
      },
      "plus": [
       "piscadera"
@@ -191,13 +251,19 @@
   {
    "q": {
     "nl": "Wat is je budget?",
-    "en": "What's your budget?"
+    "en": "What's your budget?",
+    "de": "Was ist dein Budget?",
+    "es": "¿Cuál es tu presupuesto?",
+    "pt": "Qual é o seu orçamento?"
    },
    "opties": [
     {
      "label": {
       "nl": "Middenklasse",
-      "en": "Mid-range"
+      "en": "Mid-range",
+      "de": "Mittelklasse",
+      "es": "Gama media",
+      "pt": "Faixa intermediária"
      },
      "plus": [
       "strand-aan-hotel",
@@ -209,7 +275,10 @@
     {
      "label": {
       "nl": "Zo zuinig mogelijk",
-      "en": "As cheap as possible"
+      "en": "As cheap as possible",
+      "de": "So günstig wie möglich",
+      "es": "Lo más barato posible",
+      "pt": "O mais barato possível"
      },
      "plus": [
       "budget",
@@ -223,7 +292,10 @@
     {
      "label": {
       "nl": "Luxe mag",
-      "en": "Luxury is fine"
+      "en": "Luxury is fine",
+      "de": "Luxus ist in Ordnung",
+      "es": "El lujo no es problema",
+      "pt": "Luxo não é problema"
      },
      "plus": [
       "luxe"
@@ -243,7 +315,10 @@
    "url": "https://www.sandals.com/royal-curacao/",
    "soort": {
     "nl": "all-inclusive, alleen stellen",
-    "en": "all-inclusive, couples only"
+    "en": "all-inclusive, couples only",
+    "de": "All-inclusive, nur für Paare",
+    "es": "todo incluido, solo parejas",
+    "pt": "tudo incluído, só casais"
    },
    "plaats": "Santa Barbara Plantation (oost)",
    "tags": [
@@ -258,15 +333,24 @@
    "feiten": [
     {
      "nl": "Vanaf 18 jaar, alleen stellen",
-     "en": "Adults 18+, couples only"
+     "en": "Adults 18+, couples only",
+     "de": "Nur Erwachsene ab 18, nur Paare",
+     "es": "Solo adultos mayores de 18, solo parejas",
+     "pt": "Só adultos maiores de 18, só casais"
     },
     {
      "nl": "Gratis vliegveldtransfer",
-     "en": "Free airport shuttle"
+     "en": "Free airport shuttle",
+     "de": "Kostenloser Flughafentransfer",
+     "es": "Traslado gratis desde el aeropuerto",
+     "pt": "Traslado gratuito do aeroporto"
     },
     {
      "nl": "Naast Old Quarry golfbaan",
-     "en": "Next to Old Quarry golf course"
+     "en": "Next to Old Quarry golf course",
+     "de": "Neben dem Golfplatz Old Quarry",
+     "es": "Junto al campo de golf Old Quarry",
+     "pt": "Ao lado do campo de golfe Old Quarry"
     }
    ],
    "scores": [
@@ -299,6 +383,24 @@
      "Grounds and gardens well kept",
      "Food is fresh and varied",
      "Diving and snorkel trips are included"
+    ],
+    "de": [
+     "Personal freundlich und aufmerksam, besonders das Animations- und das Tauchteam",
+     "Gelände und Gärten gut gepflegt",
+     "Das Essen ist frisch und abwechslungsreich",
+     "Tauch- und Schnorchelausflüge sind inklusive"
+    ],
+    "es": [
+     "Personal amable y atento, sobre todo el equipo de entretenimiento y el de buceo",
+     "Jardines y terrenos bien cuidados",
+     "La comida es fresca y variada",
+     "Las salidas de buceo y snorkel están incluidas"
+    ],
+    "pt": [
+     "Equipe simpática e atenciosa, principalmente a de entretenimento e a de mergulho",
+     "Áreas externas e jardins bem cuidados",
+     "A comida é fresca e variada",
+     "Os passeios de mergulho e snorkel estão incluídos"
     ]
    },
    "tegen": {
@@ -311,6 +413,21 @@
      "Pool and beach loungers get claimed very early",
      "Restaurants often fully booked, reservations needed",
      "Remote, far from other sights"
+    ],
+    "de": [
+     "Pool- und Strandliegen sind sehr früh besetzt",
+     "Restaurants oft ausgebucht, Reservierung nötig",
+     "Abgelegen, weit weg von anderen Sehenswürdigkeiten"
+    ],
+    "es": [
+     "Las tumbonas de la piscina y la playa se ocupan muy temprano",
+     "Los restaurantes suelen estar llenos, hay que reservar",
+     "Apartado, lejos de otros atractivos"
+    ],
+    "pt": [
+     "As espreguiçadeiras da piscina e da praia são ocupadas muito cedo",
+     "Os restaurantes costumam estar lotados, é preciso reservar",
+     "Isolado, longe de outras atrações"
     ]
    },
    "bronnen": [
@@ -326,7 +443,10 @@
    "url": null,
    "soort": {
     "nl": "all-inclusive resort",
-    "en": "all-inclusive resort"
+    "en": "all-inclusive resort",
+    "de": "All-inclusive-Resort",
+    "es": "resort todo incluido",
+    "pt": "resort tudo incluído"
    },
    "plaats": "Piscaderabaai",
    "tags": [
@@ -342,7 +462,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.kayak.com/Willemstad-Hotels-Curacao-Caribbean-Resort.5351952.ksp",
     "datum": "2026-10"
@@ -350,15 +473,24 @@
    "feiten": [
     {
      "nl": "Voorheen Hilton Curaçao",
-     "en": "Formerly the Hilton Curaçao"
+     "en": "Formerly the Hilton Curaçao",
+     "de": "Früher das Hilton Curaçao",
+     "es": "Antes el Hilton Curazao",
+     "pt": "Antigo Hilton Curaçao"
     },
     {
      "nl": "Kidsclub en casino",
-     "en": "Kids' club and casino"
+     "en": "Kids' club and casino",
+     "de": "Kinderclub und Casino",
+     "es": "Club infantil y casino",
+     "pt": "Clube infantil e cassino"
     },
     {
      "nl": "Alle kamers met balkon",
-     "en": "All rooms have a balcony"
+     "en": "All rooms have a balcony",
+     "de": "Alle Zimmer haben einen Balkon",
+     "es": "Todas las habitaciones tienen balcón",
+     "pt": "Todos os quartos têm varanda"
     }
    ],
    "scores": [
@@ -389,6 +521,21 @@
      "Beachfront setting with a nice pool",
      "Friendly bar and entertainment staff",
      "Plenty of food options, some guests say"
+    ],
+    "de": [
+     "Lage direkt am Strand mit schönem Pool",
+     "Freundliches Bar- und Animationspersonal",
+     "Viele Essensoptionen, sagen manche Gäste"
+    ],
+    "es": [
+     "Frente a la playa, con una linda piscina",
+     "Personal de bar y entretenimiento amable",
+     "Muchas opciones de comida, según algunos huéspedes"
+    ],
+    "pt": [
+     "De frente para a praia, com uma piscina bonita",
+     "Equipe de bar e entretenimento simpática",
+     "Muitas opções de comida, segundo alguns hóspedes"
     ]
    },
    "tegen": {
@@ -401,6 +548,21 @@
      "Dated rooms, AC often unreliable",
      "Buffet food often cold or bland",
      "Many guests feel it is overpriced"
+    ],
+    "de": [
+     "Veraltete Zimmer, Klimaanlage oft unzuverlässig",
+     "Das Buffet ist oft kalt oder fade",
+     "Viele Gäste finden es überteuert"
+    ],
+    "es": [
+     "Habitaciones anticuadas, el aire acondicionado suele fallar",
+     "La comida del bufé suele estar fría o insípida",
+     "Muchos huéspedes lo consideran caro para lo que ofrece"
+    ],
+    "pt": [
+     "Quartos ultrapassados, ar-condicionado muitas vezes não funciona direito",
+     "A comida do buffet costuma estar fria ou sem graça",
+     "Muitos hóspedes acham caro demais"
     ]
    },
    "bronnen": [
@@ -416,7 +578,10 @@
    "url": "https://hyattinclusivecollection.com/en/resorts-hotels/sunscape/curacao/curacao-resort-spa-casino",
    "soort": {
     "nl": "all-inclusive resort",
-    "en": "all-inclusive resort"
+    "en": "all-inclusive resort",
+    "de": "All-inclusive-Resort",
+    "es": "resort todo incluido",
+    "pt": "resort tudo incluído"
    },
    "plaats": "Mambo Beach / Seaquarium",
    "tags": [
@@ -431,7 +596,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.tripadvisor.com/Hotel_Review-d254238",
     "datum": "2026-10"
@@ -439,15 +607,24 @@
    "feiten": [
     {
      "nl": "Vier zwembaden",
-     "en": "Four pools"
+     "en": "Four pools",
+     "de": "Vier Pools",
+     "es": "Cuatro piscinas",
+     "pt": "Quatro piscinas"
     },
     {
      "nl": "Kids- en tienerclub",
-     "en": "Kids' and teens' club"
+     "en": "Kids' and teens' club",
+     "de": "Kinder- und Teenie-Club",
+     "es": "Club para niños y adolescentes",
+     "pt": "Clube para crianças e adolescentes"
     },
     {
      "nl": "Gratis shuttle naar de stad",
-     "en": "Free shuttle to town"
+     "en": "Free shuttle to town",
+     "de": "Kostenloser Shuttle in die Stadt",
+     "es": "Traslado gratis al centro",
+     "pt": "Traslado gratuito para a cidade"
     }
    ],
    "scores": [
@@ -478,6 +655,21 @@
      "Calm water behind the breakwater, good snorkeling",
      "Friendly staff",
      "Pools and entertainment for families"
+    ],
+    "de": [
+     "Ruhiges Wasser hinter dem Wellenbrecher, gutes Schnorcheln",
+     "Freundliches Personal",
+     "Pools und Unterhaltung für Familien"
+    ],
+    "es": [
+     "Agua tranquila detrás del rompeolas, buen snorkel",
+     "Personal amable",
+     "Piscinas y entretenimiento para familias"
+    ],
+    "pt": [
+     "Água calma atrás do quebra-mar, bom snorkel",
+     "Equipe simpática",
+     "Piscinas e entretenimento para famílias"
     ]
    },
    "tegen": {
@@ -490,6 +682,21 @@
      "Dated rooms with AC and upkeep problems",
      "Little variety at the buffet",
      "Slow service and uneven cleaning"
+    ],
+    "de": [
+     "Veraltete Zimmer mit Problemen bei Klimaanlage und Instandhaltung",
+     "Wenig Abwechslung am Buffet",
+     "Langsamer Service und ungleichmäßige Sauberkeit"
+    ],
+    "es": [
+     "Habitaciones anticuadas con problemas de aire acondicionado y mantenimiento",
+     "Poca variedad en el bufé",
+     "Servicio lento y limpieza irregular"
+    ],
+    "pt": [
+     "Quartos ultrapassados, com problemas de ar-condicionado e manutenção",
+     "Pouca variedade no buffet",
+     "Atendimento lento e limpeza irregular"
     ]
    },
    "bronnen": [
@@ -505,7 +712,10 @@
    "url": "https://hyattinclusivecollection.com/en/resorts-hotels/zoetry/curacao/curacao-resort-spa",
    "soort": {
     "nl": "all-inclusive, vanaf 18",
-    "en": "all-inclusive, 18+"
+    "en": "all-inclusive, 18+",
+    "de": "All-inclusive, ab 18",
+    "es": "todo incluido, mayores de 18",
+    "pt": "tudo incluído, maiores de 18"
    },
    "plaats": "Piscaderabaai",
    "tags": [
@@ -520,7 +730,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.tripadvisor.com/23764604",
     "datum": "2026-10"
@@ -528,11 +741,17 @@
    "feiten": [
     {
      "nl": "Vanaf 18 jaar",
-     "en": "Adults 18+"
+     "en": "Adults 18+",
+     "de": "Erwachsene ab 18",
+     "es": "Adultos mayores de 18",
+     "pt": "Adultos maiores de 18"
     },
     {
      "nl": "Voorheen Floris Suite Hotel",
-     "en": "Formerly the Floris Suite Hotel"
+     "en": "Formerly the Floris Suite Hotel",
+     "de": "Früher das Floris Suite Hotel",
+     "es": "Antes el Floris Suite Hotel",
+     "pt": "Antigo Floris Suite Hotel"
     }
    ],
    "scores": [
@@ -563,6 +782,21 @@
      "Spacious, comfortable rooms",
      "Quiet, surrounded by lush gardens",
      "Close to the airport and downtown"
+    ],
+    "de": [
+     "Geräumige, bequeme Zimmer",
+     "Ruhig, umgeben von üppigen Gärten",
+     "Nah am Flughafen und an der Innenstadt"
+    ],
+    "es": [
+     "Habitaciones amplias y cómodas",
+     "Tranquilo, rodeado de jardines frondosos",
+     "Cerca del aeropuerto y del centro"
+    ],
+    "pt": [
+     "Quartos espaçosos e confortáveis",
+     "Tranquilo, cercado de jardins exuberantes",
+     "Perto do aeroporto e do centro"
     ]
    },
    "tegen": {
@@ -575,6 +809,21 @@
      "Service friendly but inconsistent",
      "Housekeeping gaps, some report mold",
      "Few dining options, dishes sometimes run out"
+    ],
+    "de": [
+     "Service freundlich, aber unbeständig",
+     "Lücken bei der Zimmerreinigung, manche berichten von Schimmel",
+     "Wenige Restaurants, Gerichte sind manchmal aus"
+    ],
+    "es": [
+     "Servicio amable pero irregular",
+     "Fallas en la limpieza de las habitaciones, algunos reportan moho",
+     "Pocas opciones para comer, a veces se acaban los platos"
+    ],
+    "pt": [
+     "Atendimento simpático, mas irregular",
+     "Falhas na limpeza dos quartos, alguns relatam mofo",
+     "Poucas opções para comer, às vezes os pratos acabam"
     ]
    },
    "bronnen": [
@@ -590,7 +839,10 @@
    "url": null,
    "soort": {
     "nl": "all-inclusive resort",
-    "en": "all-inclusive resort"
+    "en": "all-inclusive resort",
+    "de": "All-inclusive-Resort",
+    "es": "resort todo incluido",
+    "pt": "resort tudo incluído"
    },
    "plaats": "Otrobanda (Rif)",
    "tags": [
@@ -605,7 +857,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation",
     "datum": "2026-10"
@@ -613,11 +868,17 @@
    "feiten": [
     {
      "nl": "Vier zwembaden, waaronder infinity pool",
-     "en": "Four pools, including an infinity pool"
+     "en": "Four pools, including an infinity pool",
+     "de": "Vier Pools, darunter ein Infinity-Pool",
+     "es": "Cuatro piscinas, incluida una infinita",
+     "pt": "Quatro piscinas, incluindo uma de borda infinita"
     },
     {
      "nl": "Tien restaurants en bars",
-     "en": "Ten restaurants and bars"
+     "en": "Ten restaurants and bars",
+     "de": "Zehn Restaurants und Bars",
+     "es": "Diez restaurantes y bares",
+     "pt": "Dez restaurantes e bares"
     }
    ],
    "scores": [
@@ -648,6 +909,21 @@
      "Nice setting close to Willemstad and the sea",
      "Lots of pools and places to eat",
      "Spacious rooms"
+    ],
+    "de": [
+     "Schöne Lage nahe Willemstad und am Meer",
+     "Viele Pools und Essensmöglichkeiten",
+     "Geräumige Zimmer"
+    ],
+    "es": [
+     "Linda ubicación cerca de Willemstad y del mar",
+     "Muchas piscinas y lugares para comer",
+     "Habitaciones amplias"
+    ],
+    "pt": [
+     "Bela localização, perto de Willemstad e do mar",
+     "Muitas piscinas e lugares para comer",
+     "Quartos espaçosos"
     ]
    },
    "tegen": {
@@ -660,6 +936,21 @@
      "Extra fees make it pricey",
      "Inconsistent service",
      "Mixed upkeep, cleanliness and noise"
+    ],
+    "de": [
+     "Zusatzgebühren machen es teuer",
+     "Unbeständiger Service",
+     "Gemischte Eindrücke bei Instandhaltung, Sauberkeit und Lärm"
+    ],
+    "es": [
+     "Los cargos extra lo encarecen",
+     "Servicio irregular",
+     "Opiniones mixtas sobre mantenimiento, limpieza y ruido"
+    ],
+    "pt": [
+     "As taxas extras deixam tudo mais caro",
+     "Atendimento irregular",
+     "Opiniões mistas sobre manutenção, limpeza e barulho"
     ]
    },
    "bronnen": [
@@ -675,7 +966,10 @@
    "url": null,
    "soort": {
     "nl": "all-inclusive resort",
-    "en": "all-inclusive resort"
+    "en": "all-inclusive resort",
+    "de": "All-inclusive-Resort",
+    "es": "resort todo incluido",
+    "pt": "resort tudo incluído"
    },
    "plaats": "Otrobanda (Rif)",
    "tags": [
@@ -689,7 +983,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation",
     "datum": "2026-10"
@@ -697,7 +994,10 @@
    "feiten": [
     {
      "nl": "Naast Mangrove Beach Corendon",
-     "en": "Next to Mangrove Beach Corendon"
+     "en": "Next to Mangrove Beach Corendon",
+     "de": "Neben Mangrove Beach Corendon",
+     "es": "Junto a Mangrove Beach Corendon",
+     "pt": "Ao lado do Mangrove Beach Corendon"
     }
    ],
    "scores": [
@@ -720,11 +1020,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation",
@@ -738,7 +1044,10 @@
    "url": null,
    "soort": {
     "nl": "all-inclusive, gezinnen",
-    "en": "all-inclusive, families"
+    "en": "all-inclusive, families",
+    "de": "All-inclusive, Familien",
+    "es": "todo incluido, familias",
+    "pt": "tudo incluído, famílias"
    },
    "plaats": "Daniel (midden)",
    "tags": [
@@ -752,7 +1061,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.tripadvisor.com/Hotel_Review-d3668485",
     "datum": "2026-10"
@@ -760,15 +1072,24 @@
    "feiten": [
     {
      "nl": "Voorheen Kunuku Aqua Resort",
-     "en": "Formerly Kunuku Aqua Resort"
+     "en": "Formerly Kunuku Aqua Resort",
+     "de": "Früher Kunuku Aqua Resort",
+     "es": "Antes Kunuku Aqua Resort",
+     "pt": "Antigo Kunuku Aqua Resort"
     },
     {
      "nl": "Zwembaden met glijbanen",
-     "en": "Pools with water slides"
+     "en": "Pools with water slides",
+     "de": "Pools mit Wasserrutschen",
+     "es": "Piscinas con toboganes",
+     "pt": "Piscinas com toboáguas"
     },
     {
      "nl": "Niet aan het strand",
-     "en": "Not on the beach"
+     "en": "Not on the beach",
+     "de": "Nicht am Strand",
+     "es": "No está en la playa",
+     "pt": "Não fica na praia"
     }
    ],
    "scores": [
@@ -799,6 +1120,21 @@
      "Very family-oriented",
      "Central base for exploring the island",
      "Several pools and a water park"
+    ],
+    "de": [
+     "Sehr familienfreundlich",
+     "Zentraler Ausgangspunkt, um die Insel zu erkunden",
+     "Mehrere Pools und ein Wasserpark"
+    ],
+    "es": [
+     "Muy orientado a las familias",
+     "Base central para recorrer la isla",
+     "Varias piscinas y un parque acuático"
+    ],
+    "pt": [
+     "Muito voltado para famílias",
+     "Base central para explorar a ilha",
+     "Várias piscinas e um parque aquático"
     ]
    },
    "tegen": {
@@ -811,6 +1147,21 @@
      "Extra charges and uneven cleanliness",
      "Inconsistent service",
      "Occasional noise"
+    ],
+    "de": [
+     "Zusatzkosten und ungleichmäßige Sauberkeit",
+     "Unbeständiger Service",
+     "Gelegentlich Lärm"
+    ],
+    "es": [
+     "Cargos extra y limpieza irregular",
+     "Servicio irregular",
+     "Ruido de vez en cuando"
+    ],
+    "pt": [
+     "Cobranças extras e limpeza irregular",
+     "Atendimento irregular",
+     "Barulho de vez em quando"
     ]
    },
    "bronnen": [
@@ -826,7 +1177,10 @@
    "url": null,
    "soort": {
     "nl": "lodge, all-inclusive",
-    "en": "lodge, all-inclusive"
+    "en": "lodge, all-inclusive",
+    "de": "Lodge, All-inclusive",
+    "es": "lodge, todo incluido",
+    "pt": "lodge, tudo incluído"
    },
    "plaats": "Westpunt (Playa Kalki)",
    "tags": [
@@ -841,25 +1195,40 @@
    "feiten": [
     {
      "nl": "Twee zwembaden, drie restaurants",
-     "en": "Two pools, three restaurants"
+     "en": "Two pools, three restaurants",
+     "de": "Zwei Pools, drei Restaurants",
+     "es": "Dos piscinas, tres restaurantes",
+     "pt": "Duas piscinas, três restaurantes"
     },
     {
      "nl": "Rif voor de kust",
-     "en": "Reef right off the beach"
+     "en": "Reef right off the beach",
+     "de": "Riff direkt vor dem Strand",
+     "es": "Arrecife justo frente a la playa",
+     "pt": "Recife logo em frente à praia"
     },
     {
      "nl": "Geen uitgaansleven in de buurt",
-     "en": "No nightlife nearby"
+     "en": "No nightlife nearby",
+     "de": "Kein Nachtleben in der Nähe",
+     "es": "Sin vida nocturna cerca",
+     "pt": "Sem vida noturna por perto"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.oyster.com/sabana-westpunt/hotels/",
@@ -874,7 +1243,10 @@
    "url": null,
    "soort": {
     "nl": "all-inclusive, nieuw",
-    "en": "all-inclusive, new"
+    "en": "all-inclusive, new",
+    "de": "All-inclusive, neu",
+    "es": "todo incluido, nuevo",
+    "pt": "tudo incluído, novo"
    },
    "plaats": "Penstraat (bij Pietermaai)",
    "tags": [
@@ -888,25 +1260,40 @@
    "feiten": [
     {
      "nl": "Opent 16 november 2026",
-     "en": "Opens November 16, 2026"
+     "en": "Opens November 16, 2026",
+     "de": "Eröffnung am 16. November 2026",
+     "es": "Abre el 16 de noviembre de 2026",
+     "pt": "Abre em 16 de novembro de 2026"
     },
     {
      "nl": "300 kamers, alleen volwassenen",
-     "en": "300 rooms, adults only"
+     "en": "300 rooms, adults only",
+     "de": "300 Zimmer, nur für Erwachsene",
+     "es": "300 habitaciones, solo adultos",
+     "pt": "300 quartos, só adultos"
     },
     {
      "nl": "Aangekondigd vanaf ruim $600",
-     "en": "Announced from upper $600s"
+     "en": "Announced from upper $600s",
+     "de": "Angekündigt im oberen $600er-Bereich",
+     "es": "Anunciado desde los $600 altos",
+     "pt": "Anunciado na faixa alta dos $600"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/the-pyrmont-curacao-sets-november-16-opening-for-new-300-room-luxury-all-inclusive-resort",
@@ -919,7 +1306,10 @@
    "url": null,
    "soort": {
     "nl": "strandresort",
-    "en": "beach resort"
+    "en": "beach resort",
+    "de": "Strandresort",
+    "es": "resort de playa",
+    "pt": "resort de praia"
    },
    "plaats": "Rif St. Marie (west)",
    "tags": [
@@ -932,7 +1322,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation",
     "datum": "2026-10"
@@ -941,11 +1334,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation",
@@ -958,7 +1357,10 @@
    "url": null,
    "soort": {
     "nl": "keten, strandresort",
-    "en": "chain beach resort"
+    "en": "chain beach resort",
+    "de": "Strandresort einer Kette",
+    "es": "resort de playa de cadena",
+    "pt": "resort de praia de rede"
    },
    "plaats": "Piscaderabaai",
    "tags": [
@@ -972,7 +1374,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation",
     "datum": "2026-10"
@@ -980,11 +1385,17 @@
    "feiten": [
     {
      "nl": "336 kamers",
-     "en": "336 rooms"
+     "en": "336 rooms",
+     "de": "336 Zimmer",
+     "es": "336 habitaciones",
+     "pt": "336 quartos"
     },
     {
      "nl": "Gerenoveerd voor $37 miljoen",
-     "en": "Renovated for $37 million"
+     "en": "Renovated for $37 million",
+     "de": "Für $37 Millionen renoviert",
+     "es": "Renovado por $37 millones",
+     "pt": "Reformado por $37 milhões"
     }
    ],
    "scores": [
@@ -1023,6 +1434,21 @@
      "Warm, attentive staff",
      "Nice grounds, pools and private beach",
      "Spacious rooms, close to Willemstad"
+    ],
+    "de": [
+     "Herzliches, aufmerksames Personal",
+     "Schönes Gelände, Pools und Privatstrand",
+     "Geräumige Zimmer, nah bei Willemstad"
+    ],
+    "es": [
+     "Personal cálido y atento",
+     "Lindos jardines, piscinas y playa privada",
+     "Habitaciones amplias, cerca de Willemstad"
+    ],
+    "pt": [
+     "Equipe acolhedora e atenciosa",
+     "Áreas externas bonitas, piscinas e praia privativa",
+     "Quartos espaçosos, perto de Willemstad"
     ]
    },
    "tegen": {
@@ -1033,6 +1459,18 @@
     "en": [
      "Food and extras are expensive",
      "Housekeeping sometimes late or missed"
+    ],
+    "de": [
+     "Essen und Extras sind teuer",
+     "Zimmerreinigung manchmal verspätet oder ausgelassen"
+    ],
+    "es": [
+     "La comida y los extras son caros",
+     "La limpieza de la habitación a veces llega tarde o se omite"
+    ],
+    "pt": [
+     "Comida e extras são caros",
+     "A limpeza do quarto às vezes atrasa ou é esquecida"
     ]
    },
    "bronnen": [
@@ -1049,7 +1487,10 @@
    "url": null,
    "soort": {
     "nl": "keten, stadsresort",
-    "en": "chain city resort"
+    "en": "chain city resort",
+    "de": "Stadtresort einer Kette",
+    "es": "resort urbano de cadena",
+    "pt": "resort urbano de rede"
    },
    "plaats": "Otrobanda (Rif Fort)",
    "tags": [
@@ -1062,7 +1503,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.tripadvisor.com/1201318",
     "datum": "2026-10"
@@ -1070,15 +1514,24 @@
    "feiten": [
     {
      "nl": "Zoutwater infinity pool",
-     "en": "Saltwater infinity pool"
+     "en": "Saltwater infinity pool",
+     "de": "Salzwasser-Infinity-Pool",
+     "es": "Piscina infinita de agua salada",
+     "pt": "Piscina de borda infinita de água salgada"
     },
     {
      "nl": "Eigen strandje",
-     "en": "Private beach"
+     "en": "Private beach",
+     "de": "Privatstrand",
+     "es": "Playa privada",
+     "pt": "Praia privativa"
     },
     {
      "nl": "Casino op het terrein",
-     "en": "On-site casino"
+     "en": "On-site casino",
+     "de": "Casino im Haus",
+     "es": "Casino en el hotel",
+     "pt": "Cassino no hotel"
     }
    ],
    "scores": [
@@ -1109,6 +1562,21 @@
      "Central location, much within walking distance",
      "Friendly, attentive staff",
      "Spacious clean rooms and the infinity pool"
+    ],
+    "de": [
+     "Zentrale Lage, vieles zu Fuß erreichbar",
+     "Freundliches, aufmerksames Personal",
+     "Geräumige, saubere Zimmer und der Infinity-Pool"
+    ],
+    "es": [
+     "Ubicación céntrica, mucho queda a poca distancia a pie",
+     "Personal amable y atento",
+     "Habitaciones amplias y limpias, y la piscina infinita"
+    ],
+    "pt": [
+     "Localização central, muita coisa a pé",
+     "Equipe simpática e atenciosa",
+     "Quartos espaçosos e limpos e a piscina de borda infinita"
     ]
    },
    "tegen": {
@@ -1119,6 +1587,18 @@
     "en": [
      "Noise from music and nightlife in the evening",
      "Value gets the lowest sub-score"
+    ],
+    "de": [
+     "Abends Lärm von Musik und Nachtleben",
+     "Das Preis-Leistungs-Verhältnis bekommt die niedrigste Teilbewertung"
+    ],
+    "es": [
+     "Por la noche, ruido de música y vida nocturna",
+     "La relación calidad-precio recibe la puntuación parcial más baja"
+    ],
+    "pt": [
+     "À noite, barulho de música e da vida noturna",
+     "O custo-benefício recebe a menor nota parcial"
     ]
    },
    "bronnen": [
@@ -1134,7 +1614,10 @@
    "url": "https://www.avilabeachhotel.com/",
    "soort": {
     "nl": "familiebedrijf, strandhotel",
-    "en": "family-run beach hotel"
+    "en": "family-run beach hotel",
+    "de": "Familiengeführtes Strandhotel",
+    "es": "hotel de playa familiar",
+    "pt": "hotel de praia familiar"
    },
    "plaats": "Penstraat (Pietermaai)",
    "tags": [
@@ -1148,7 +1631,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.tripadvisor.com/Hotel_Review-d148585",
     "datum": "2026-10"
@@ -1156,11 +1642,17 @@
    "feiten": [
     {
      "nl": "Twee eigen stranden",
-     "en": "Private beaches"
+     "en": "Private beaches",
+     "de": "Private Strände",
+     "es": "Playas privadas",
+     "pt": "Praias privativas"
     },
     {
      "nl": "Vier restaurants op het terrein",
-     "en": "Four on-site restaurants"
+     "en": "Four on-site restaurants",
+     "de": "Vier Restaurants im Haus",
+     "es": "Cuatro restaurantes en el hotel",
+     "pt": "Quatro restaurantes no hotel"
     }
    ],
    "scores": [
@@ -1199,6 +1691,21 @@
      "Beach plus downtown within walking distance",
      "Warm, attentive service",
      "Snorkeling right off the private beach"
+    ],
+    "de": [
+     "Strand und Innenstadt zu Fuß erreichbar",
+     "Herzlicher, aufmerksamer Service",
+     "Schnorcheln direkt am Privatstrand"
+    ],
+    "es": [
+     "Playa y centro a poca distancia a pie",
+     "Servicio cálido y atento",
+     "Snorkel justo en la playa privada"
+    ],
+    "pt": [
+     "Praia e centro a pé",
+     "Atendimento acolhedor e atencioso",
+     "Snorkel logo na praia privativa"
     ]
    },
    "tegen": {
@@ -1211,6 +1718,21 @@
      "High rates and extra charges",
      "Sparse furnishings, some noise",
      "Only one beach towel per guest"
+    ],
+    "de": [
+     "Hohe Preise und Zusatzgebühren",
+     "Spärliche Einrichtung, etwas Lärm",
+     "Nur ein Strandtuch pro Gast"
+    ],
+    "es": [
+     "Tarifas altas y cargos extra",
+     "Mobiliario escaso, algo de ruido",
+     "Solo una toalla de playa por huésped"
+    ],
+    "pt": [
+     "Diárias altas e taxas extras",
+     "Mobília simples, algum barulho",
+     "Só uma toalha de praia por hóspede"
     ]
    },
    "bronnen": [
@@ -1226,7 +1748,10 @@
    "url": "https://baoase.com/",
    "soort": {
     "nl": "luxe villaresort",
-    "en": "luxury villa resort"
+    "en": "luxury villa resort",
+    "de": "Luxus-Villenresort",
+    "es": "resort de villas de lujo",
+    "pt": "resort de villas de luxo"
    },
    "plaats": "Cornelisbaai (oost)",
    "tags": [
@@ -1239,7 +1764,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.tripadvisor.com/Hotel_Review-d1519028",
     "datum": "2026-10"
@@ -1247,11 +1775,17 @@
    "feiten": [
     {
      "nl": "Villa's met eigen zwembad",
-     "en": "Villas with private pools"
+     "en": "Villas with private pools",
+     "de": "Villen mit eigenem Pool",
+     "es": "Villas con piscina privada",
+     "pt": "Villas com piscina privativa"
     },
     {
      "nl": "Tripadvisor Best of the Best",
-     "en": "Tripadvisor Best of the Best"
+     "en": "Tripadvisor Best of the Best",
+     "de": "Tripadvisor Best of the Best",
+     "es": "Tripadvisor Best of the Best",
+     "pt": "Tripadvisor Best of the Best"
     }
    ],
    "scores": [
@@ -1282,6 +1816,21 @@
      "Beautiful oceanfront setting",
      "Personal, attentive service",
      "Elegant, very clean rooms"
+    ],
+    "de": [
+     "Wunderschöne Lage direkt am Meer",
+     "Persönlicher, aufmerksamer Service",
+     "Elegante, sehr saubere Zimmer"
+    ],
+    "es": [
+     "Hermosa ubicación frente al mar",
+     "Servicio personalizado y atento",
+     "Habitaciones elegantes y muy limpias"
+    ],
+    "pt": [
+     "Linda localização de frente para o mar",
+     "Atendimento pessoal e atencioso",
+     "Quartos elegantes e muito limpos"
     ]
    },
    "tegen": {
@@ -1294,6 +1843,21 @@
      "Very expensive",
      "Construction noise in recent reviews",
      "Some find the food underwhelming for the price"
+    ],
+    "de": [
+     "Sehr teuer",
+     "Baulärm in neueren Bewertungen",
+     "Manche finden das Essen für den Preis enttäuschend"
+    ],
+    "es": [
+     "Muy caro",
+     "Ruido de obras en reseñas recientes",
+     "Algunos encuentran la comida decepcionante para el precio"
+    ],
+    "pt": [
+     "Muito caro",
+     "Barulho de obras em avaliações recentes",
+     "Alguns acham a comida decepcionante pelo preço"
     ]
    },
    "bronnen": [
@@ -1310,7 +1874,10 @@
    "url": "https://www.lionsdive.com/",
    "soort": {
     "nl": "strandresort met duikschool",
-    "en": "beach resort with dive shop"
+    "en": "beach resort with dive shop",
+    "de": "Strandresort mit Tauchbasis",
+    "es": "resort de playa con tienda de buceo",
+    "pt": "resort de praia com loja de mergulho"
    },
    "plaats": "Bapor Kibra (Mambo)",
    "tags": [
@@ -1324,7 +1891,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.tripadvisor.com/150222",
     "datum": "2026-10"
@@ -1332,11 +1902,17 @@
    "feiten": [
     {
      "nl": "50-meter sportbad",
-     "en": "50-meter lap pool"
+     "en": "50-meter lap pool",
+     "de": "50-Meter-Schwimmbecken",
+     "es": "Piscina de 50 metros para nadar largos",
+     "pt": "Piscina de 50 metros para nado"
     },
     {
      "nl": "Naast Mambo Beach Boulevard",
-     "en": "Next to Mambo Beach Boulevard"
+     "en": "Next to Mambo Beach Boulevard",
+     "de": "Neben dem Mambo Beach Boulevard",
+     "es": "Junto al Mambo Beach Boulevard",
+     "pt": "Ao lado do Mambo Beach Boulevard"
     }
    ],
    "scores": [
@@ -1367,6 +1943,21 @@
      "Beachfront location by Mambo Beach",
      "Friendly, helpful staff",
      "Private beach and pools"
+    ],
+    "de": [
+     "Direkt am Strand bei Mambo Beach",
+     "Freundliches, hilfsbereites Personal",
+     "Privatstrand und Pools"
+    ],
+    "es": [
+     "Frente a la playa, junto a Mambo Beach",
+     "Personal amable y servicial",
+     "Playa privada y piscinas"
+    ],
+    "pt": [
+     "De frente para a praia, perto de Mambo Beach",
+     "Equipe simpática e prestativa",
+     "Praia privativa e piscinas"
     ]
    },
    "tegen": {
@@ -1379,6 +1970,21 @@
      "Slow service at the front desk and restaurants",
      "Noise",
      "Pricey for what you get"
+    ],
+    "de": [
+     "Langsamer Service an der Rezeption und in den Restaurants",
+     "Lärm",
+     "Teuer für das, was man bekommt"
+    ],
+    "es": [
+     "Servicio lento en la recepción y los restaurantes",
+     "Ruido",
+     "Caro para lo que ofrece"
+    ],
+    "pt": [
+     "Atendimento lento na recepção e nos restaurantes",
+     "Barulho",
+     "Caro para o que oferece"
     ]
    },
    "bronnen": [
@@ -1393,7 +1999,10 @@
    "url": null,
    "soort": {
     "nl": "strandresort",
-    "en": "beach resort"
+    "en": "beach resort",
+    "de": "Strandresort",
+    "es": "resort de playa",
+    "pt": "resort de praia"
    },
    "plaats": "Bapor Kibra (Mambo)",
    "tags": [
@@ -1406,7 +2015,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.tripadvisor.com/1418873",
     "datum": "2026-10"
@@ -1440,6 +2052,21 @@
      "On the beach near Mambo Beach",
      "Spacious rooms",
      "Friendly staff"
+    ],
+    "de": [
+     "Am Strand nahe Mambo Beach",
+     "Geräumige Zimmer",
+     "Freundliches Personal"
+    ],
+    "es": [
+     "En la playa, cerca de Mambo Beach",
+     "Habitaciones amplias",
+     "Personal amable"
+    ],
+    "pt": [
+     "Na praia, perto de Mambo Beach",
+     "Quartos espaçosos",
+     "Equipe simpática"
     ]
    },
    "tegen": {
@@ -1452,6 +2079,21 @@
      "Pricey for the service",
      "Inconsistent service",
      "Noise from events and clubs"
+    ],
+    "de": [
+     "Teuer für den Service",
+     "Unbeständiger Service",
+     "Lärm von Events und Clubs"
+    ],
+    "es": [
+     "Caro para el servicio",
+     "Servicio irregular",
+     "Ruido de eventos y clubes"
+    ],
+    "pt": [
+     "Caro para o atendimento",
+     "Atendimento irregular",
+     "Barulho de eventos e boates"
     ]
    },
    "bronnen": [
@@ -1466,7 +2108,10 @@
    "url": "https://www.papagayo.com/",
    "soort": {
     "nl": "strandresort",
-    "en": "beach resort"
+    "en": "beach resort",
+    "de": "Strandresort",
+    "es": "resort de playa",
+    "pt": "resort de praia"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1479,7 +2124,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.tripadvisor.com/4780018",
     "datum": "2026-10"
@@ -1513,6 +2161,21 @@
      "Right on Jan Thiel Beach",
      "Friendly staff",
      "Pools and beach access"
+    ],
+    "de": [
+     "Direkt am Jan Thiel Beach",
+     "Freundliches Personal",
+     "Pools und Strandzugang"
+    ],
+    "es": [
+     "Justo en Jan Thiel Beach",
+     "Personal amable",
+     "Piscinas y acceso a la playa"
+    ],
+    "pt": [
+     "Bem em Jan Thiel Beach",
+     "Equipe simpática",
+     "Piscinas e acesso à praia"
     ]
    },
    "tegen": {
@@ -1525,6 +2188,21 @@
      "Mixed cleanliness and upkeep",
      "Inconsistent service",
      "Noise and closures from events"
+    ],
+    "de": [
+     "Gemischte Eindrücke bei Sauberkeit und Instandhaltung",
+     "Unbeständiger Service",
+     "Lärm und Schließungen wegen Events"
+    ],
+    "es": [
+     "Opiniones mixtas sobre limpieza y mantenimiento",
+     "Servicio irregular",
+     "Ruido y cierres por eventos"
+    ],
+    "pt": [
+     "Opiniões mistas sobre limpeza e manutenção",
+     "Atendimento irregular",
+     "Barulho e fechamentos por causa de eventos"
     ]
    },
    "bronnen": [
@@ -1539,7 +2217,10 @@
    "url": "https://www.papagayo.com/",
    "soort": {
     "nl": "villa's en appartementen",
-    "en": "villas and apartments"
+    "en": "villas and apartments",
+    "de": "Villen und Apartments",
+    "es": "villas y apartamentos",
+    "pt": "villas e apartamentos"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1559,11 +2240,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://app-aws-test.booking.com/district/cw/willemstad/janthiel.en-gb.html",
@@ -1576,7 +2263,10 @@
    "url": null,
    "soort": {
     "nl": "appartementen",
-    "en": "apartments"
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1606,11 +2296,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://app-aws-test.booking.com/district/cw/willemstad/janthiel.en-gb.html",
@@ -1625,7 +2321,10 @@
    "url": null,
    "soort": {
     "nl": "villaresort",
-    "en": "villa resort"
+    "en": "villa resort",
+    "de": "Villenresort",
+    "es": "resort de villas",
+    "pt": "resort de villas"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1638,15 +2337,24 @@
    "feiten": [
     {
      "nl": "Ruim 95 kamers en villa's",
-     "en": "About 95 rooms and villas"
+     "en": "About 95 rooms and villas",
+     "de": "Etwa 95 Zimmer und Villen",
+     "es": "Unas 95 habitaciones y villas",
+     "pt": "Cerca de 95 quartos e villas"
     },
     {
      "nl": "Zoutwaterzwembaden",
-     "en": "Saltwater pools"
+     "en": "Saltwater pools",
+     "de": "Salzwasser-Pools",
+     "es": "Piscinas de agua salada",
+     "pt": "Piscinas de água salgada"
     },
     {
      "nl": "Ontbijt $20 extra",
-     "en": "Breakfast $20 extra"
+     "en": "Breakfast $20 extra",
+     "de": "Frühstück $20 extra",
+     "es": "Desayuno $20 extra",
+     "pt": "Café da manhã $20 extra"
     }
    ],
    "scores": [
@@ -1677,6 +2385,21 @@
      "Quiet, green grounds with birds",
      "Friendly staff",
      "Villas with kitchens, walk to Jan Thiel Beach"
+    ],
+    "de": [
+     "Ruhiges, grünes Gelände mit Vögeln",
+     "Freundliches Personal",
+     "Villen mit Küche, zu Fuß zum Jan Thiel Beach"
+    ],
+    "es": [
+     "Terreno verde y tranquilo con aves",
+     "Personal amable",
+     "Villas con cocina, a pie hasta Jan Thiel Beach"
+    ],
+    "pt": [
+     "Área verde e tranquila, com pássaros",
+     "Equipe simpática",
+     "Villas com cozinha, a pé até Jan Thiel Beach"
     ]
    },
    "tegen": {
@@ -1689,6 +2412,21 @@
      "Some rooms damp, lots of mosquitoes",
      "Hilly, often need a taxi",
      "Some living areas lack AC"
+    ],
+    "de": [
+     "Manche Zimmer feucht, viele Mücken",
+     "Hügelig, oft braucht man ein Taxi",
+     "In manchen Wohnbereichen gibt es keine Klimaanlage"
+    ],
+    "es": [
+     "Algunas habitaciones húmedas, muchos mosquitos",
+     "Con cuestas, muchas veces se necesita taxi",
+     "Algunas áreas de estar no tienen aire acondicionado"
+    ],
+    "pt": [
+     "Alguns quartos úmidos, muitos mosquitos",
+     "Terreno com ladeiras, muitas vezes é preciso táxi",
+     "Algumas salas não têm ar-condicionado"
     ]
    },
    "bronnen": [
@@ -1702,7 +2440,10 @@
    "url": null,
    "soort": {
     "nl": "duikresort, appartementen",
-    "en": "dive resort, apartments"
+    "en": "dive resort, apartments",
+    "de": "Tauchresort, Apartments",
+    "es": "resort de buceo, apartamentos",
+    "pt": "resort de mergulho, apartamentos"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1716,15 +2457,24 @@
    "feiten": [
     {
      "nl": "189 studio's, appartementen, bungalows",
-     "en": "189 studios, apartments, bungalows"
+     "en": "189 studios, apartments, bungalows",
+     "de": "189 Studios, Apartments, Bungalows",
+     "es": "189 estudios, apartamentos, bungalós",
+     "pt": "189 studios, apartamentos, bangalôs"
     },
     {
      "nl": "Allemaal met kitchenette",
-     "en": "All with a kitchenette"
+     "en": "All with a kitchenette",
+     "de": "Alle mit Kochnische",
+     "es": "Todos con cocineta",
+     "pt": "Todos com cozinha compacta"
     },
     {
      "nl": "Gratis fietsen",
-     "en": "Free bikes"
+     "en": "Free bikes",
+     "de": "Kostenlose Fahrräder",
+     "es": "Bicicletas gratis",
+     "pt": "Bicicletas grátis"
     }
    ],
    "scores": [
@@ -1747,6 +2497,21 @@
      "Calm, clear water, good for snorkeling",
      "The on-site restaurant Salu is well liked",
      "Jan Thiel Beach is a four-minute walk"
+    ],
+    "de": [
+     "Ruhiges, klares Wasser, gut zum Schnorcheln",
+     "Das Restaurant Salu im Haus ist beliebt",
+     "Jan Thiel Beach ist vier Minuten zu Fuß entfernt"
+    ],
+    "es": [
+     "Agua tranquila y cristalina, buena para snorkel",
+     "El restaurante Salu del hotel gusta mucho",
+     "Jan Thiel Beach queda a cuatro minutos a pie"
+    ],
+    "pt": [
+     "Água calma e cristalina, boa para snorkel",
+     "O restaurante Salu, no hotel, é bem avaliado",
+     "Jan Thiel Beach fica a quatro minutos a pé"
     ]
    },
    "tegen": {
@@ -1759,6 +2524,21 @@
      "Housekeeping only every three days",
      "Beds not comfortable",
      "Extra charges for loungers and coffee pods"
+    ],
+    "de": [
+     "Zimmerreinigung nur alle drei Tage",
+     "Betten nicht bequem",
+     "Aufpreis für Liegen und Kaffeekapseln"
+    ],
+    "es": [
+     "Limpieza de habitación solo cada tres días",
+     "Camas incómodas",
+     "Cargos extra por tumbonas y cápsulas de café"
+    ],
+    "pt": [
+     "Limpeza do quarto só a cada três dias",
+     "Camas desconfortáveis",
+     "Cobrança extra por espreguiçadeiras e cápsulas de café"
     ]
    },
    "bronnen": [
@@ -1772,7 +2552,10 @@
    "url": null,
    "soort": {
     "nl": "hostel-hotel",
-    "en": "hostel-hotel"
+    "en": "hostel-hotel",
+    "de": "Hostel-Hotel",
+    "es": "hostal-hotel",
+    "pt": "hostel-hotel"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1783,7 +2566,10 @@
    "feiten": [
     {
      "nl": "Gratis fietsen",
-     "en": "Free bikes"
+     "en": "Free bikes",
+     "de": "Kostenlose Fahrräder",
+     "es": "Bicicletas gratis",
+     "pt": "Bicicletas grátis"
     }
    ],
    "scores": [
@@ -1798,11 +2584,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://app-aws-test.booking.com/district/cw/willemstad/janthiel.en-gb.html",
@@ -1816,7 +2608,10 @@
    "url": null,
    "soort": {
     "nl": "appartementen",
-    "en": "apartments"
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1837,11 +2632,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://app-aws-test.booking.com/district/cw/willemstad/janthiel.en-gb.html"
@@ -1853,7 +2654,10 @@
    "url": null,
    "soort": {
     "nl": "boetiekhotel",
-    "en": "boutique hotel"
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1873,11 +2677,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://app-aws-test.booking.com/district/cw/willemstad/janthiel.en-gb.html"
@@ -1889,7 +2699,10 @@
    "url": null,
    "soort": {
     "nl": "appartementen",
-    "en": "apartments"
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1909,11 +2722,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://app-aws-test.booking.com/district/cw/willemstad/janthiel.en-gb.html"
@@ -1925,7 +2744,10 @@
    "url": null,
    "soort": {
     "nl": "gastenverblijf, vanaf 16",
-    "en": "guesthouse, 16+"
+    "en": "guesthouse, 16+",
+    "de": "Gästehaus, ab 16",
+    "es": "casa de huéspedes, mayores de 16",
+    "pt": "pousada, maiores de 16"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1936,11 +2758,17 @@
    "feiten": [
     {
      "nl": "Vanaf 16 jaar",
-     "en": "Ages 16+"
+     "en": "Ages 16+",
+     "de": "Ab 16 Jahren",
+     "es": "Mayores de 16",
+     "pt": "Maiores de 16"
     },
     {
      "nl": "Geen restaurant of bar",
-     "en": "No restaurant or bar"
+     "en": "No restaurant or bar",
+     "de": "Kein Restaurant, keine Bar",
+     "es": "Sin restaurante ni bar",
+     "pt": "Sem restaurante nem bar"
     }
    ],
    "scores": [
@@ -1955,11 +2783,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://app-aws-test.booking.com/district/cw/willemstad/janthiel.en-gb.html",
@@ -1972,7 +2806,10 @@
    "url": null,
    "soort": {
     "nl": "boetiekhotel, adults-only",
-    "en": "boutique hotel, adults only"
+    "en": "boutique hotel, adults only",
+    "de": "Boutique-Hotel, nur für Erwachsene",
+    "es": "hotel boutique, solo adultos",
+    "pt": "hotel boutique, só adultos"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -1993,11 +2830,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://app-aws-test.booking.com/district/cw/willemstad/janthiel.en-gb.html"
@@ -2009,7 +2852,10 @@
    "url": null,
    "soort": {
     "nl": "lodge",
-    "en": "lodge"
+    "en": "lodge",
+    "de": "Lodge",
+    "es": "lodge",
+    "pt": "lodge"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -2020,11 +2866,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://ca.trip.com/hotels/country/curacao.html"
@@ -2036,7 +2888,10 @@
    "url": null,
    "soort": {
     "nl": "strandresort",
-    "en": "beach resort"
+    "en": "beach resort",
+    "de": "Strandresort",
+    "es": "resort de playa",
+    "pt": "resort de praia"
    },
    "plaats": "Jan Thiel",
    "tags": [
@@ -2047,11 +2902,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.hotelscombined.com.sg/Place/Curacao.htm"
@@ -2063,7 +2924,10 @@
    "url": null,
    "soort": {
     "nl": "golf- en strandresort",
-    "en": "golf and beach resort"
+    "en": "golf and beach resort",
+    "de": "Golf- und Strandresort",
+    "es": "resort de golf y playa",
+    "pt": "resort de golfe e praia"
    },
    "plaats": "Blue Bay (Sint Michiel)",
    "tags": [
@@ -2075,7 +2939,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation",
     "datum": "2026-10"
@@ -2083,17 +2950,26 @@
    "feiten": [
     {
      "nl": "Eigen 18-holes golfbaan",
-     "en": "Own 18-hole golf course"
+     "en": "Own 18-hole golf course",
+     "de": "Eigener 18-Loch-Golfplatz",
+     "es": "Campo de golf propio de 18 hoyos",
+     "pt": "Campo de golfe próprio de 18 buracos"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation",
@@ -2106,7 +2982,10 @@
    "url": null,
    "soort": {
     "nl": "appartementen",
-    "en": "apartments"
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
    },
    "plaats": "Piscaderabaai",
    "tags": [
@@ -2117,11 +2996,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.cvent.com/venues/zh-CHT/results/Cura%C3%A7ao?p=1"
@@ -2133,7 +3018,10 @@
    "url": null,
    "soort": {
     "nl": "resort met villa's",
-    "en": "resort with villas"
+    "en": "resort with villas",
+    "de": "Resort mit Villen",
+    "es": "resort con villas",
+    "pt": "resort com villas"
    },
    "plaats": "Willemstad",
    "tags": [],
@@ -2151,11 +3039,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
@@ -2168,7 +3062,10 @@
    "url": null,
    "soort": {
     "nl": "appartementen",
-    "en": "apartments"
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
    },
    "plaats": "Bapor Kibra (Mambo)",
    "tags": [
@@ -2179,7 +3076,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation",
     "datum": "2026-10"
@@ -2197,11 +3097,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation",
@@ -2214,7 +3120,10 @@
    "url": null,
    "soort": {
     "nl": "suites",
-    "en": "suites"
+    "en": "suites",
+    "de": "Suiten",
+    "es": "suites",
+    "pt": "suítes"
    },
    "plaats": "Willemstad",
    "tags": [],
@@ -2232,11 +3141,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137"
@@ -2248,7 +3163,10 @@
    "url": null,
    "soort": {
     "nl": "strandresort",
-    "en": "beach resort"
+    "en": "beach resort",
+    "de": "Strandresort",
+    "es": "resort de playa",
+    "pt": "resort de praia"
    },
    "plaats": "Lagun (west)",
    "tags": [
@@ -2259,11 +3177,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.hotelscombined.com.sg/Place/Curacao.htm"
@@ -2275,7 +3199,10 @@
    "url": null,
    "soort": {
     "nl": "duikhotel",
-    "en": "dive hotel"
+    "en": "dive hotel",
+    "de": "Tauchhotel",
+    "es": "hotel de buceo",
+    "pt": "hotel de mergulho"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2288,7 +3215,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.tripadvisor.com/1535133",
     "datum": "2026-10"
@@ -2296,7 +3226,10 @@
    "feiten": [
     {
      "nl": "Eigen PADI-duikcentrum",
-     "en": "Own PADI dive center"
+     "en": "Own PADI dive center",
+     "de": "Eigenes PADI-Tauchcenter",
+     "es": "Centro de buceo PADI propio",
+     "pt": "Centro de mergulho PADI próprio"
     }
    ],
    "scores": [
@@ -2327,6 +3260,21 @@
      "Warm, helpful staff",
      "Walk to Pietermaai and downtown",
      "Spacious, clean rooms"
+    ],
+    "de": [
+     "Herzliches, hilfsbereites Personal",
+     "Zu Fuß nach Pietermaai und in die Innenstadt",
+     "Geräumige, saubere Zimmer"
+    ],
+    "es": [
+     "Personal cálido y servicial",
+     "A pie hasta Pietermaai y el centro",
+     "Habitaciones amplias y limpias"
+    ],
+    "pt": [
+     "Equipe acolhedora e prestativa",
+     "A pé até Pietermaai e o centro",
+     "Quartos espaçosos e limpos"
     ]
    },
    "tegen": {
@@ -2339,6 +3287,21 @@
      "Occasional noise",
      "Rooms don't always match the photos",
      "Pools feel cold"
+    ],
+    "de": [
+     "Gelegentlich Lärm",
+     "Zimmer entsprechen nicht immer den Fotos",
+     "Die Pools fühlen sich kalt an"
+    ],
+    "es": [
+     "Ruido de vez en cuando",
+     "Las habitaciones no siempre coinciden con las fotos",
+     "Las piscinas se sienten frías"
+    ],
+    "pt": [
+     "Barulho de vez em quando",
+     "Os quartos nem sempre são como nas fotos",
+     "As piscinas parecem frias"
     ]
    },
    "bronnen": [
@@ -2353,7 +3316,10 @@
    "url": null,
    "soort": {
     "nl": "boetiekhotel",
-    "en": "boutique hotel"
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2373,11 +3339,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
@@ -2390,7 +3362,10 @@
    "url": null,
    "soort": {
     "nl": "boetiekhotel",
-    "en": "boutique hotel"
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2410,11 +3385,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137"
@@ -2426,7 +3407,10 @@
    "url": null,
    "soort": {
     "nl": "boetiekhotel",
-    "en": "boutique hotel"
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2446,11 +3430,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137"
@@ -2462,7 +3452,10 @@
    "url": null,
    "soort": {
     "nl": "stadshotel",
-    "en": "city hotel"
+    "en": "city hotel",
+    "de": "Stadthotel",
+    "es": "hotel urbano",
+    "pt": "hotel urbano"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2482,11 +3475,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137"
@@ -2498,7 +3497,10 @@
    "url": null,
    "soort": {
     "nl": "boetiekhotel",
-    "en": "boutique hotel"
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2518,11 +3520,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
@@ -2535,7 +3543,10 @@
    "url": null,
    "soort": {
     "nl": "boetiekhotel",
-    "en": "boutique hotel"
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2555,11 +3566,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137"
@@ -2571,7 +3588,10 @@
    "url": null,
    "soort": {
     "nl": "boetiekhotel",
-    "en": "boutique hotel"
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2591,11 +3611,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
@@ -2608,7 +3634,10 @@
    "url": null,
    "soort": {
     "nl": "boetiekhotel",
-    "en": "boutique hotel"
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2620,7 +3649,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per nacht",
-     "en": "per night"
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
     },
     "bron": "https://www.expedia.com/Pietermaai-District-Willemstad-Hotels-Boutique-Hotel.0-n553248633981708186-0-tBoutiqueHotel.Travel-Guide-Filter-Hotels",
     "datum": "2026-10"
@@ -2638,11 +3670,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.expedia.com/Pietermaai-District-Willemstad-Hotels-Boutique-Hotel.0-n553248633981708186-0-tBoutiqueHotel.Travel-Guide-Filter-Hotels",
@@ -2656,7 +3694,10 @@
    "url": null,
    "soort": {
     "nl": "boetiekhotel",
-    "en": "boutique hotel"
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
    },
    "plaats": "Pietermaai",
    "tags": [
@@ -2667,11 +3708,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://cdn.fodors.com/world/caribbean/curacao/places/willemstad/hotels"
@@ -2683,7 +3730,10 @@
    "url": null,
    "soort": {
     "nl": "stadshotel",
-    "en": "city hotel"
+    "en": "city hotel",
+    "de": "Stadthotel",
+    "es": "hotel urbano",
+    "pt": "hotel urbano"
    },
    "plaats": "Punda",
    "tags": [
@@ -2704,11 +3754,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
@@ -2721,7 +3777,10 @@
    "url": null,
    "soort": {
     "nl": "hotel, vanaf 16",
-    "en": "hotel, 16+"
+    "en": "hotel, 16+",
+    "de": "Hotel, ab 16",
+    "es": "hotel, mayores de 16",
+    "pt": "hotel, maiores de 16"
    },
    "plaats": "Scharloo",
    "tags": [
@@ -2733,7 +3792,10 @@
    "feiten": [
     {
      "nl": "Vanaf 16 jaar",
-     "en": "Ages 16+"
+     "en": "Ages 16+",
+     "de": "Ab 16 Jahren",
+     "es": "Mayores de 16",
+     "pt": "Maiores de 16"
     }
    ],
    "scores": [
@@ -2748,11 +3810,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.reischeck.nl/adults-only-hotels-curacao/",
@@ -2766,7 +3834,10 @@
    "url": null,
    "soort": {
     "nl": "hostel",
-    "en": "hostel"
+    "en": "hostel",
+    "de": "Hostel",
+    "es": "hostal",
+    "pt": "hostel"
    },
    "plaats": "Scharloo",
    "tags": [
@@ -2777,7 +3848,10 @@
    "feiten": [
     {
      "nl": "Licht ontbijt inbegrepen",
-     "en": "Light breakfast included"
+     "en": "Light breakfast included",
+     "de": "Leichtes Frühstück inklusive",
+     "es": "Desayuno ligero incluido",
+     "pt": "Café da manhã simples incluído"
     }
    ],
    "scores": [
@@ -2792,11 +3866,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.reischeck.nl/adults-only-hotels-curacao/",
@@ -2809,7 +3889,10 @@
    "url": null,
    "soort": {
     "nl": "stadshotel",
-    "en": "city hotel"
+    "en": "city hotel",
+    "de": "Stadthotel",
+    "es": "hotel urbano",
+    "pt": "hotel urbano"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -2829,11 +3912,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://app-aws-test.booking.com/district/cw/willemstad/janthiel.en-gb.html",
@@ -2846,7 +3935,10 @@
    "url": null,
    "soort": {
     "nl": "stadshotel",
-    "en": "city hotel"
+    "en": "city hotel",
+    "de": "Stadthotel",
+    "es": "hotel urbano",
+    "pt": "hotel urbano"
    },
    "plaats": "Otrobanda",
    "tags": [
@@ -2867,11 +3959,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137"
@@ -2883,7 +3981,10 @@
    "url": null,
    "soort": {
     "nl": "boetiekhotel",
-    "en": "boutique hotel"
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
    },
    "plaats": "Otrobanda",
    "tags": [
@@ -2903,11 +4004,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137"
@@ -2919,7 +4026,10 @@
    "url": null,
    "soort": {
     "nl": "keten",
-    "en": "chain"
+    "en": "chain",
+    "de": "Kette",
+    "es": "cadena",
+    "pt": "rede"
    },
    "plaats": "Otrobanda",
    "tags": [
@@ -2939,11 +4049,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137"
@@ -2955,7 +4071,10 @@
    "url": null,
    "soort": {
     "nl": "stadshotel",
-    "en": "city hotel"
+    "en": "city hotel",
+    "de": "Stadthotel",
+    "es": "hotel urbano",
+    "pt": "hotel urbano"
    },
    "plaats": "Otrobanda",
    "tags": [
@@ -2976,11 +4095,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
@@ -2993,7 +4118,10 @@
    "url": null,
    "soort": {
     "nl": "keten",
-    "en": "chain"
+    "en": "chain",
+    "de": "Kette",
+    "es": "cadena",
+    "pt": "rede"
    },
    "plaats": "Otrobanda",
    "tags": [
@@ -3013,11 +4141,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
@@ -3030,7 +4164,10 @@
    "url": null,
    "soort": {
     "nl": "stadshotel",
-    "en": "city hotel"
+    "en": "city hotel",
+    "de": "Stadthotel",
+    "es": "hotel urbano",
+    "pt": "hotel urbano"
    },
    "plaats": "Otrobanda",
    "tags": [
@@ -3051,11 +4188,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137"
@@ -3067,7 +4210,10 @@
    "url": null,
    "soort": {
     "nl": "stadshotel",
-    "en": "city hotel"
+    "en": "city hotel",
+    "de": "Stadthotel",
+    "es": "hotel urbano",
+    "pt": "hotel urbano"
    },
    "plaats": "Otrobanda",
    "tags": [
@@ -3088,11 +4234,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
@@ -3105,7 +4257,10 @@
    "url": null,
    "soort": {
     "nl": "stadshotel",
-    "en": "city hotel"
+    "en": "city hotel",
+    "de": "Stadthotel",
+    "es": "hotel urbano",
+    "pt": "hotel urbano"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -3126,11 +4281,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
@@ -3143,7 +4304,10 @@
    "url": null,
    "soort": {
     "nl": "boetiekhotel",
-    "en": "boutique hotel"
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
    },
    "plaats": "Willemstad",
    "tags": [],
@@ -3161,11 +4325,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137"
@@ -3177,7 +4347,10 @@
    "url": null,
    "soort": {
     "nl": "appartementen",
-    "en": "apartments"
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
    },
    "plaats": "Piscadera",
    "tags": [
@@ -3198,11 +4371,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137"
@@ -3214,7 +4393,10 @@
    "url": null,
    "soort": {
     "nl": "natuurresort",
-    "en": "nature resort"
+    "en": "nature resort",
+    "de": "Naturresort",
+    "es": "resort de naturaleza",
+    "pt": "resort de natureza"
    },
    "plaats": "Willemstad",
    "tags": [],
@@ -3232,11 +4414,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137"
@@ -3248,7 +4436,10 @@
    "url": null,
    "soort": {
     "nl": "budgethotel",
-    "en": "budget hotel"
+    "en": "budget hotel",
+    "de": "Budgethotel",
+    "es": "hotel económico",
+    "pt": "hotel econômico"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -3268,11 +4459,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
@@ -3286,7 +4483,10 @@
    "url": null,
    "soort": {
     "nl": "budgethotel",
-    "en": "budget hotel"
+    "en": "budget hotel",
+    "de": "Budgethotel",
+    "es": "hotel económico",
+    "pt": "hotel econômico"
    },
    "plaats": "Bij de luchthaven",
    "tags": [
@@ -3306,11 +4506,17 @@
    ],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.hotelscombined.com.sg/Place/Curacao.htm",
@@ -3323,7 +4529,10 @@
    "url": null,
    "soort": {
     "nl": "stadshotel",
-    "en": "city hotel"
+    "en": "city hotel",
+    "de": "Stadthotel",
+    "es": "hotel urbano",
+    "pt": "hotel urbano"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -3334,11 +4543,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.hotelscombined.com.sg/Place/Curacao.htm"
@@ -3350,7 +4565,10 @@
    "url": null,
    "soort": {
     "nl": "stadshotel",
-    "en": "city hotel"
+    "en": "city hotel",
+    "de": "Stadthotel",
+    "es": "hotel urbano",
+    "pt": "hotel urbano"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -3361,11 +4579,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.hotelscombined.com.sg/Place/Curacao.htm"
@@ -3377,7 +4601,10 @@
    "url": null,
    "soort": {
     "nl": "appartementen",
-    "en": "apartments"
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -3388,11 +4615,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.hotelscombined.com.sg/Place/Curacao.htm"
@@ -3404,7 +4637,10 @@
    "url": null,
    "soort": {
     "nl": "appartementen",
-    "en": "apartments"
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -3415,11 +4651,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.hotelscombined.com.sg/Place/Curacao.htm"
@@ -3431,7 +4673,10 @@
    "url": null,
    "soort": {
     "nl": "appartementen",
-    "en": "apartments"
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -3442,11 +4687,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.hotelscombined.com.sg/Place/Curacao.htm"
@@ -3458,7 +4709,10 @@
    "url": null,
    "soort": {
     "nl": "landhuis",
-    "en": "plantation house"
+    "en": "plantation house",
+    "de": "Plantagenhaus",
+    "es": "casa de plantación",
+    "pt": "casa de plantação"
    },
    "plaats": "Willemstad",
    "tags": [],
@@ -3467,11 +4721,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://booking.com/reviews/country/cw.html"
@@ -3483,7 +4743,10 @@
    "url": null,
    "soort": {
     "nl": "appartementen",
-    "en": "apartments"
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
    },
    "plaats": "Willemstad",
    "tags": [],
@@ -3492,11 +4755,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://booking.com/reviews/country/cw.html"
@@ -3508,7 +4777,10 @@
    "url": null,
    "soort": {
     "nl": "landhuis",
-    "en": "plantation house"
+    "en": "plantation house",
+    "de": "Plantagenhaus",
+    "es": "casa de plantación",
+    "pt": "casa de plantação"
    },
    "plaats": "Daniel (midden)",
    "tags": [
@@ -3520,25 +4792,40 @@
    "feiten": [
     {
      "nl": "Zeven eenvoudige kamers",
-     "en": "Seven simple rooms"
+     "en": "Seven simple rooms",
+     "de": "Sieben einfache Zimmer",
+     "es": "Siete habitaciones sencillas",
+     "pt": "Sete quartos simples"
     },
     {
      "nl": "17e-eeuws landhuis",
-     "en": "17th-century plantation house"
+     "en": "17th-century plantation house",
+     "de": "Plantagenhaus aus dem 17. Jahrhundert",
+     "es": "Casa de plantación del siglo XVII",
+     "pt": "Casa de plantação do século XVII"
     },
     {
      "nl": "Duikschool op het terrein",
-     "en": "On-site dive school"
+     "en": "On-site dive school",
+     "de": "Tauchschule im Haus",
+     "es": "Escuela de buceo en el hotel",
+     "pt": "Escola de mergulho no hotel"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.klm.com/travel-guide/inspiration/curacao-s-romantic-boutique-hotels",
@@ -3551,7 +4838,10 @@
    "url": null,
    "soort": {
     "nl": "landhuis",
-    "en": "plantation house"
+    "en": "plantation house",
+    "de": "Plantagenhaus",
+    "es": "casa de plantación",
+    "pt": "casa de plantação"
    },
    "plaats": "Barber (west)",
    "tags": [
@@ -3562,11 +4852,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.hotelscombined.com.sg/Place/Curacao.htm"
@@ -3578,7 +4874,10 @@
    "url": null,
    "soort": {
     "nl": "lodge",
-    "en": "lodge"
+    "en": "lodge",
+    "de": "Lodge",
+    "es": "lodge",
+    "pt": "lodge"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -3590,11 +4889,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.hotelscombined.com.sg/Place/Curacao.htm"
@@ -3606,7 +4911,10 @@
    "url": null,
    "soort": {
     "nl": "appartementen",
-    "en": "apartments"
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
    },
    "plaats": "Westpunt (Playa Kalki)",
    "tags": [
@@ -3620,21 +4928,33 @@
    "feiten": [
     {
      "nl": "Acht appartementen met keuken",
-     "en": "Eight apartments with kitchens"
+     "en": "Eight apartments with kitchens",
+     "de": "Acht Apartments mit Küche",
+     "es": "Ocho apartamentos con cocina",
+     "pt": "Oito apartamentos com cozinha"
     },
     {
      "nl": "Huurauto nodig",
-     "en": "Rental car needed"
+     "en": "Rental car needed",
+     "de": "Mietwagen nötig",
+     "es": "Se necesita auto de alquiler",
+     "pt": "Precisa de carro alugado"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.oyster.com/sabana-westpunt/hotels/"
@@ -3646,7 +4966,10 @@
    "url": null,
    "soort": {
     "nl": "duikresort, appartementen",
-    "en": "dive resort, apartments"
+    "en": "dive resort, apartments",
+    "de": "Tauchresort, Apartments",
+    "es": "resort de buceo, apartamentos",
+    "pt": "resort de mergulho, apartamentos"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -3659,25 +4982,40 @@
    "feiten": [
     {
      "nl": "30 appartementen met zeezicht",
-     "en": "30 sea-view apartments"
+     "en": "30 sea-view apartments",
+     "de": "30 Apartments mit Meerblick",
+     "es": "30 apartamentos con vista al mar",
+     "pt": "30 apartamentos com vista para o mar"
     },
     {
      "nl": "Trap naar het rif",
-     "en": "Steps down to the reef"
+     "en": "Steps down to the reef",
+     "de": "Stufen hinunter zum Riff",
+     "es": "Escalones hasta el arrecife",
+     "pt": "Degraus até o recife"
     },
     {
      "nl": "Geen restaurant",
-     "en": "No restaurant"
+     "en": "No restaurant",
+     "de": "Kein Restaurant",
+     "es": "Sin restaurante",
+     "pt": "Sem restaurante"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.oyster.com/sabana-westpunt/hotels/"
@@ -3689,7 +5027,10 @@
    "url": null,
    "soort": {
     "nl": "duikappartementen",
-    "en": "dive apartments"
+    "en": "dive apartments",
+    "de": "Tauchapartments",
+    "es": "apartamentos de buceo",
+    "pt": "apartamentos de mergulho"
    },
    "plaats": "Lagun (west)",
    "tags": [
@@ -3701,17 +5042,26 @@
    "feiten": [
     {
      "nl": "Zelf koken, à-la-carterestaurant",
-     "en": "Self-catering, a la carte restaurant"
+     "en": "Self-catering, a la carte restaurant",
+     "de": "Selbstversorgung, À-la-carte-Restaurant",
+     "es": "Con cocina propia, restaurante a la carta",
+     "pt": "Com cozinha própria, restaurante à la carte"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.reischeck.nl/adults-only-hotels-curacao/"
@@ -3723,7 +5073,10 @@
    "url": null,
    "soort": {
     "nl": "appartementen",
-    "en": "apartments"
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
    },
    "plaats": "Westpunt",
    "tags": [
@@ -3734,11 +5087,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://booking.com/reviews/country/cw.html"
@@ -3751,7 +5110,10 @@
    "url": "https://www.booking.com/country/cw.html",
    "uitleg": {
     "nl": "Grootste aanbod, ook kleine appartementen en guesthouses; scores op 10 van geverifieerde gasten.",
-    "en": "Largest selection, including small apartments and guesthouses; scores out of 10 from verified guests."
+    "en": "Largest selection, including small apartments and guesthouses; scores out of 10 from verified guests.",
+    "de": "Größte Auswahl, auch kleine Apartments und Gästehäuser; Bewertung auf einer 10er-Skala von verifizierten Gästen.",
+    "es": "La mayor selección, incluidos apartamentos pequeños y casas de huéspedes; calificaciones sobre 10 de huéspedes verificados.",
+    "pt": "Maior seleção, incluindo apartamentos pequenos e pousadas; notas em escala de 10 de hóspedes verificados."
    }
   },
   {
@@ -3759,7 +5121,10 @@
    "url": "https://www.expedia.com/",
    "uitleg": {
     "nl": "Zelfde groep, vaak met pakketten vlucht plus hotel; scores op 10.",
-    "en": "Same company, often with flight plus hotel packages; scores out of 10."
+    "en": "Same company, often with flight plus hotel packages; scores out of 10.",
+    "de": "Dieselbe Firma, oft mit Flug-plus-Hotel-Paketen; Bewertung auf einer 10er-Skala.",
+    "es": "La misma empresa, a menudo con paquetes de vuelo más hotel; calificaciones sobre 10.",
+    "pt": "A mesma empresa, muitas vezes com pacotes de voo mais hotel; notas em escala de 10."
    }
   },
   {
@@ -3767,7 +5132,10 @@
    "url": "https://www.tripadvisor.com/",
    "uitleg": {
     "nl": "Meeste reviews per hotel en prijsvergelijking; score op 5.",
-    "en": "Most reviews per hotel plus price comparison; score out of 5."
+    "en": "Most reviews per hotel plus price comparison; score out of 5.",
+    "de": "Die meisten Bewertungen pro Hotel plus Preisvergleich; Bewertung auf einer 5er-Skala.",
+    "es": "La mayor cantidad de reseñas por hotel y comparación de precios; calificación sobre 5.",
+    "pt": "Mais avaliações por hotel e comparação de preços; nota em escala de 5."
    }
   },
   {
@@ -3775,7 +5143,10 @@
    "url": "https://www.kayak.com/",
    "uitleg": {
     "nl": "Zoekt prijzen bij veel boekingssites tegelijk; eigen score op 10.",
-    "en": "Searches many booking sites at once; own score out of 10."
+    "en": "Searches many booking sites at once; own score out of 10.",
+    "de": "Durchsucht viele Buchungsseiten gleichzeitig; eigene Bewertung auf einer 10er-Skala.",
+    "es": "Busca en muchos sitios de reservas a la vez; calificación propia sobre 10.",
+    "pt": "Pesquisa vários sites de reserva ao mesmo tempo; nota própria em escala de 10."
    }
   },
   {
@@ -3783,7 +5154,10 @@
    "url": "https://www.trip.com/",
    "uitleg": {
     "nl": "Boekingssite met eigen reviewscores op 10.",
-    "en": "Booking site with its own review scores out of 10."
+    "en": "Booking site with its own review scores out of 10.",
+    "de": "Buchungsseite mit eigenen Bewertungen auf einer 10er-Skala.",
+    "es": "Sitio de reservas con sus propias calificaciones sobre 10.",
+    "pt": "Site de reservas com notas próprias em escala de 10."
    }
   },
   {
@@ -3791,7 +5165,10 @@
    "url": "https://www.corendon.nl/",
    "uitleg": {
     "nl": "Nederlandse reisorganisatie met eigen resort (Mangrove Beach) en pakketreizen.",
-    "en": "Dutch tour operator that owns Mangrove Beach and sells packages."
+    "en": "Dutch tour operator that owns Mangrove Beach and sells packages.",
+    "de": "Niederländischer Reiseveranstalter, dem Mangrove Beach gehört und der Pauschalreisen verkauft.",
+    "es": "Operador turístico neerlandés que es dueño de Mangrove Beach y vende paquetes.",
+    "pt": "Operadora de turismo holandesa que é dona do Mangrove Beach e vende pacotes."
    }
   },
   {
@@ -3799,119 +5176,191 @@
    "url": "https://www.tui.nl/",
    "uitleg": {
     "nl": "Pakketreizen vanuit Nederland en België, vaak met eigen vluchten.",
-    "en": "Package trips from the Netherlands and Belgium, often with its own flights."
+    "en": "Package trips from the Netherlands and Belgium, often with its own flights.",
+    "de": "Pauschalreisen aus den Niederlanden und Belgien, oft mit eigenen Flügen.",
+    "es": "Viajes en paquete desde los Países Bajos y Bélgica, a menudo con vuelos propios.",
+    "pt": "Pacotes de viagem da Holanda e da Bélgica, muitas vezes com voos próprios."
    }
   }
  ],
  "tips": [
   {
    "nl": "Tripadvisor-prijzen zijn gemiddelden voor een standaardkamer zonder belastingen; reken er bij boeken nog toeslagen bij.",
-   "en": "Tripadvisor rates are averages for a standard room before taxes; expect added fees when you book."
+   "en": "Tripadvisor rates are averages for a standard room before taxes; expect added fees when you book.",
+   "de": "Die Tripadvisor-Preise sind Durchschnittswerte für ein Standardzimmer vor Steuern; beim Buchen kommen Gebühren dazu.",
+   "es": "Las tarifas de Tripadvisor son promedios para una habitación estándar antes de impuestos; al reservar se suman cargos.",
+   "pt": "As diárias do Tripadvisor são médias para um quarto standard antes dos impostos; ao reservar, entram taxas adicionais."
   },
   {
    "nl": "Hilton Curaçao bestaat niet meer: het hotel aan de Piscaderabaai is nu Dreams Curaçao. Het Floris Suite Hotel is nu Zoëtry.",
-   "en": "The Hilton Curaçao is gone: the Piscadera Bay hotel is now Dreams Curaçao. The Floris Suite Hotel is now Zoëtry."
+   "en": "The Hilton Curaçao is gone: the Piscadera Bay hotel is now Dreams Curaçao. The Floris Suite Hotel is now Zoëtry.",
+   "de": "Das Hilton Curaçao gibt es nicht mehr: Das Hotel an der Piscadera Bay heißt jetzt Dreams Curaçao. Das Floris Suite Hotel heißt jetzt Zoëtry.",
+   "es": "El Hilton Curazao ya no existe: el hotel de Piscadera Bay ahora es Dreams Curaçao. El Floris Suite Hotel ahora es Zoëtry.",
+   "pt": "O Hilton Curaçao não existe mais: o hotel da Piscadera Bay agora é o Dreams Curaçao. O Floris Suite Hotel agora é o Zoëtry."
   },
   {
    "nl": "Westpunt is rustig en ver van de stad; volgens Oyster heb je daar een huurauto nodig.",
-   "en": "Westpunt is quiet and far from town; Oyster says you'll need a rental car there."
+   "en": "Westpunt is quiet and far from town; Oyster says you'll need a rental car there.",
+   "de": "Westpunt ist ruhig und weit von der Stadt entfernt; laut Oyster brauchst du dort einen Mietwagen.",
+   "es": "Westpunt es tranquilo y queda lejos de la ciudad; según Oyster, allí necesitas auto de alquiler.",
+   "pt": "Westpunt é tranquilo e fica longe da cidade; segundo o Oyster, lá você vai precisar de carro alugado."
   },
   {
    "nl": "Rond Mambo Beach (Kontiki, LionsDive, Sunscape) klagen gasten over lawaai van clubs en feesten.",
-   "en": "Around Mambo Beach (Kontiki, LionsDive, Sunscape) guests mention noise from clubs and events."
+   "en": "Around Mambo Beach (Kontiki, LionsDive, Sunscape) guests mention noise from clubs and events.",
+   "de": "Rund um Mambo Beach (Kontiki, LionsDive, Sunscape) erwähnen Gäste Lärm von Clubs und Events.",
+   "es": "Alrededor de Mambo Beach (Kontiki, LionsDive, Sunscape) los huéspedes mencionan ruido de clubes y eventos.",
+   "pt": "Em torno de Mambo Beach (Kontiki, LionsDive, Sunscape), os hóspedes mencionam barulho de boates e eventos."
   },
   {
    "nl": "Bij Sandals zijn ligbedden aan zwembad en strand vroeg in de ochtend al bezet, volgens meerdere reviews.",
-   "en": "At Sandals, several reviews say pool and beach loungers are taken early in the morning."
+   "en": "At Sandals, several reviews say pool and beach loungers are taken early in the morning.",
+   "de": "Bei Sandals schreiben mehrere Bewertungen, dass Pool- und Strandliegen schon früh am Morgen besetzt sind.",
+   "es": "En Sandals, varias reseñas dicen que las tumbonas de la piscina y la playa se ocupan temprano en la mañana.",
+   "pt": "No Sandals, várias avaliações dizem que as espreguiçadeiras da piscina e da praia são ocupadas logo cedo."
   },
   {
    "nl": "Jan Thiel is heuvelachtig: bij Morena en Chogogo noemen gasten dat je vaak een taxi of auto nodig hebt.",
-   "en": "Jan Thiel is hilly: guests at Morena and Chogogo say you often need a taxi or car."
+   "en": "Jan Thiel is hilly: guests at Morena and Chogogo say you often need a taxi or car.",
+   "de": "Jan Thiel ist hügelig: Gäste von Morena und Chogogo sagen, dass man oft ein Taxi oder Auto braucht.",
+   "es": "Jan Thiel tiene cuestas: los huéspedes de Morena y Chogogo dicen que muchas veces hace falta taxi o auto.",
+   "pt": "Jan Thiel tem ladeiras: hóspedes do Morena e do Chogogo dizem que muitas vezes é preciso táxi ou carro."
   },
   {
    "nl": "The Pyrmont, het eerste all-inclusive van Marriott op Curaçao, opent op 16 november 2026 met 300 kamers voor volwassenen.",
-   "en": "The Pyrmont, Marriott's first all-inclusive on Curaçao, opens November 16, 2026, with 300 adults-only rooms."
+   "en": "The Pyrmont, Marriott's first all-inclusive on Curaçao, opens November 16, 2026, with 300 adults-only rooms.",
+   "de": "Das Pyrmont, das erste All-inclusive-Haus von Marriott auf Curaçao, eröffnet am 16. November 2026 mit 300 Zimmern nur für Erwachsene.",
+   "es": "El Pyrmont, el primer todo incluido de Marriott en Curazao, abre el 16 de noviembre de 2026 con 300 habitaciones solo para adultos.",
+   "pt": "O Pyrmont, o primeiro tudo incluído da Marriott em Curaçao, abre em 16 de novembro de 2026 com 300 quartos só para adultos."
   }
  ],
  "faq": [
   {
    "q": {
     "nl": "Welke all-inclusive resorts zijn er op Curaçao?",
-    "en": "Which all-inclusive resorts are there on Curaçao?"
+    "en": "Which all-inclusive resorts are there on Curaçao?",
+    "de": "Welche All-inclusive-Resorts gibt es auf Curaçao?",
+    "es": "¿Qué resorts todo incluido hay en Curazao?",
+    "pt": "Quais resorts tudo incluído existem em Curaçao?"
    },
    "a": {
     "nl": "Sandals Royal Curaçao (alleen stellen, 18+), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (18+), Mangrove Beach Corendon en The Rif (Otrobanda), Kunuku Resort (Daniel, met glijbanen), Kura Hulanda Lodge (Westpunt) en vanaf 16 november 2026 The Pyrmont (18+).",
-    "en": "Sandals Royal Curaçao (couples only, 18+), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (18+), Mangrove Beach Corendon and The Rif (Otrobanda), Kunuku Resort (Daniel, with water slides), Kura Hulanda Lodge (Westpunt), and from November 16, 2026, The Pyrmont (18+)."
+    "en": "Sandals Royal Curaçao (couples only, 18+), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (18+), Mangrove Beach Corendon and The Rif (Otrobanda), Kunuku Resort (Daniel, with water slides), Kura Hulanda Lodge (Westpunt), and from November 16, 2026, The Pyrmont (18+).",
+    "de": "Sandals Royal Curaçao (nur Paare, ab 18), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (ab 18), Mangrove Beach Corendon und The Rif (Otrobanda), Kunuku Resort (Daniel, mit Wasserrutschen), Kura Hulanda Lodge (Westpunt) und ab dem 16. November 2026 The Pyrmont (ab 18).",
+    "es": "Sandals Royal Curaçao (solo parejas, mayores de 18), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (mayores de 18), Mangrove Beach Corendon y The Rif (Otrobanda), Kunuku Resort (Daniel, con toboganes), Kura Hulanda Lodge (Westpunt) y, desde el 16 de noviembre de 2026, The Pyrmont (mayores de 18).",
+    "pt": "Sandals Royal Curaçao (só casais, maiores de 18), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (maiores de 18), Mangrove Beach Corendon e The Rif (Otrobanda), Kunuku Resort (Daniel, com toboáguas), Kura Hulanda Lodge (Westpunt) e, a partir de 16 de novembro de 2026, The Pyrmont (maiores de 18)."
    }
   },
   {
    "q": {
     "nl": "Wat is het beste gebied om te verblijven op Curaçao?",
-    "en": "What is the best area to stay in Curaçao?"
+    "en": "What is the best area to stay in Curaçao?",
+    "de": "Welche Gegend ist auf Curaçao am besten zum Übernachten?",
+    "es": "¿Cuál es la mejor zona para alojarse en Curazao?",
+    "pt": "Qual é a melhor região para se hospedar em Curaçao?"
    },
    "a": {
     "nl": "Voor strand en uitgaan Jan Thiel of Mambo Beach, voor cultuur en restaurants Pietermaai, Punda en Otrobanda, voor zee dicht bij de stad Piscadera, en voor rust en duiken het westen rond Westpunt en Lagun. Westpunt ligt ver van de stad, dus reken op een huurauto.",
-    "en": "For beaches and nightlife, Jan Thiel or Mambo Beach; for culture and restaurants, Pietermaai, Punda and Otrobanda; for the sea close to town, Piscadera; and for quiet and diving, the west around Westpunt and Lagun. Westpunt is far from town, so plan on a rental car."
+    "en": "For beaches and nightlife, Jan Thiel or Mambo Beach; for culture and restaurants, Pietermaai, Punda and Otrobanda; for the sea close to town, Piscadera; and for quiet and diving, the west around Westpunt and Lagun. Westpunt is far from town, so plan on a rental car.",
+    "de": "Für Strände und Nachtleben Jan Thiel oder Mambo Beach; für Kultur und Restaurants Pietermaai, Punda und Otrobanda; für das Meer nahe der Stadt Piscadera; und für Ruhe und Tauchen der Westen um Westpunt und Lagun. Westpunt liegt weit von der Stadt entfernt, plane also einen Mietwagen ein.",
+    "es": "Para playas y vida nocturna, Jan Thiel o Mambo Beach; para cultura y restaurantes, Pietermaai, Punda y Otrobanda; para el mar cerca de la ciudad, Piscadera; y para tranquilidad y buceo, el oeste, alrededor de Westpunt y Lagun. Westpunt queda lejos de la ciudad, así que cuenta con un auto de alquiler.",
+    "pt": "Para praias e vida noturna, Jan Thiel ou Mambo Beach; para cultura e restaurantes, Pietermaai, Punda e Otrobanda; para o mar perto da cidade, Piscadera; e para sossego e mergulho, o oeste, em torno de Westpunt e Lagun. Westpunt fica longe da cidade, então conte com um carro alugado."
    }
   },
   {
    "q": {
     "nl": "Welke hotels op Curaçao zijn alleen voor volwassenen?",
-    "en": "Which Curaçao hotels are adults-only?"
+    "en": "Which Curaçao hotels are adults-only?",
+    "de": "Welche Hotels auf Curaçao sind nur für Erwachsene?",
+    "es": "¿Qué hoteles de Curazao son solo para adultos?",
+    "pt": "Quais hotéis de Curaçao são só para adultos?"
    },
    "a": {
     "nl": "Sandals Royal en Zoëtry (allebei 18+, all-inclusive), The Pyrmont (opent november 2026), en kleinere adressen zoals Casa Amalia in Jan Thiel en The Ritz Village in Scharloo (allebei vanaf 16 jaar).",
-    "en": "Sandals Royal and Zoëtry (both 18+, all-inclusive), The Pyrmont (opens November 2026), plus smaller places like Casa Amalia in Jan Thiel and The Ritz Village in Scharloo (both 16+)."
+    "en": "Sandals Royal and Zoëtry (both 18+, all-inclusive), The Pyrmont (opens November 2026), plus smaller places like Casa Amalia in Jan Thiel and The Ritz Village in Scharloo (both 16+).",
+    "de": "Sandals Royal und Zoëtry (beide ab 18, All-inclusive), The Pyrmont (eröffnet im November 2026) sowie kleinere Häuser wie Casa Amalia in Jan Thiel und The Ritz Village in Scharloo (beide ab 16).",
+    "es": "Sandals Royal y Zoëtry (ambos para mayores de 18, todo incluido), The Pyrmont (abre en noviembre de 2026), además de lugares más pequeños como Casa Amalia en Jan Thiel y The Ritz Village en Scharloo (ambos para mayores de 16).",
+    "pt": "Sandals Royal e Zoëtry (ambos para maiores de 18, tudo incluído), The Pyrmont (abre em novembro de 2026), além de lugares menores como Casa Amalia, em Jan Thiel, e The Ritz Village, em Scharloo (ambos para maiores de 16)."
    }
   },
   {
    "q": {
     "nl": "Sandals of Dreams op Curaçao: wat is het verschil?",
-    "en": "Sandals vs. Dreams Curaçao: what's the difference?"
+    "en": "Sandals vs. Dreams Curaçao: what's the difference?",
+    "de": "Sandals oder Dreams Curaçao: Was ist der Unterschied?",
+    "es": "Sandals vs. Dreams Curazao: ¿cuál es la diferencia?",
+    "pt": "Sandals ou Dreams Curaçao: qual é a diferença?"
    },
    "a": {
     "nl": "Sandals Royal is alleen voor stellen vanaf 18 en scoort 8,6 op Hotels.com (115 reviews). Dreams aan de Piscaderabaai is ook voor gezinnen, heeft een kidsclub en scoort 3,1 van 5 op Tripadvisor (2.328 reviews) en 7,1 op Kayak; daar klagen gasten vooral over gedateerde kamers en de airco.",
-    "en": "Sandals Royal is couples-only, 18+, and scores 8.6 on Hotels.com (115 reviews). Dreams on Piscadera Bay also takes families, has a kids' club, and scores 3.1 out of 5 on Tripadvisor (2,328 reviews) and 7.1 on Kayak; guests mostly complain about dated rooms and the AC."
+    "en": "Sandals Royal is couples-only, 18+, and scores 8.6 on Hotels.com (115 reviews). Dreams on Piscadera Bay also takes families, has a kids' club, and scores 3.1 out of 5 on Tripadvisor (2,328 reviews) and 7.1 on Kayak; guests mostly complain about dated rooms and the AC.",
+    "de": "Sandals Royal ist nur für Paare ab 18 und kommt bei Hotels.com auf 8.6 (115 Bewertungen). Dreams an der Piscadera Bay nimmt auch Familien auf, hat einen Kinderclub und kommt bei Tripadvisor auf 3.1 von 5 (2,328 Bewertungen) und bei Kayak auf 7.1; Gäste beschweren sich meist über veraltete Zimmer und die Klimaanlage.",
+    "es": "Sandals Royal es solo para parejas mayores de 18 y tiene 8.6 en Hotels.com (115 reseñas). Dreams, en Piscadera Bay, también recibe familias, tiene club infantil y obtiene 3.1 de 5 en Tripadvisor (2,328 reseñas) y 7.1 en Kayak; los huéspedes se quejan sobre todo de habitaciones anticuadas y del aire acondicionado.",
+    "pt": "O Sandals Royal é só para casais maiores de 18 e tem nota 8.6 no Hotels.com (115 avaliações). O Dreams, na Piscadera Bay, também recebe famílias, tem clube infantil e nota 3.1 de 5 no Tripadvisor (2,328 avaliações) e 7.1 no Kayak; os hóspedes reclamam principalmente de quartos ultrapassados e do ar-condicionado."
    }
   },
   {
    "q": {
     "nl": "Welk hotel op Curaçao is het beste om vanaf het strand te snorkelen?",
-    "en": "Which Curaçao hotel is best for snorkeling from the beach?"
+    "en": "Which Curaçao hotel is best for snorkeling from the beach?",
+    "de": "Welches Hotel auf Curaçao eignet sich am besten zum Schnorcheln vom Strand aus?",
+    "es": "¿Qué hotel de Curazao es mejor para hacer snorkel desde la playa?",
+    "pt": "Qual hotel de Curaçao é o melhor para fazer snorkel a partir da praia?"
    },
    "a": {
     "nl": "In reviews komen Avila Beach Hotel (snorkelen vanaf het eigen strand), Sunscape (rustig water achter de golfbreker) en Chogogo in Jan Thiel (helder, kalm water) terug. In het westen heeft Kura Hulanda Lodge een rif voor de kust en bij Marazul loop je via een trap het rif op.",
-    "en": "Reviews point to Avila Beach Hotel (snorkeling off its private beach), Sunscape (calm water behind the breakwater) and Chogogo in Jan Thiel (clear, calm water). In the west, Kura Hulanda Lodge has a reef right off the beach, and Marazul has steps down to the reef."
+    "en": "Reviews point to Avila Beach Hotel (snorkeling off its private beach), Sunscape (calm water behind the breakwater) and Chogogo in Jan Thiel (clear, calm water). In the west, Kura Hulanda Lodge has a reef right off the beach, and Marazul has steps down to the reef.",
+    "de": "Die Bewertungen nennen das Avila Beach Hotel (Schnorcheln am Privatstrand), Sunscape (ruhiges Wasser hinter dem Wellenbrecher) und Chogogo in Jan Thiel (klares, ruhiges Wasser). Im Westen hat die Kura Hulanda Lodge ein Riff direkt vor dem Strand, und Marazul hat Stufen hinunter zum Riff.",
+    "es": "Las reseñas apuntan al Avila Beach Hotel (snorkel en su playa privada), Sunscape (agua tranquila detrás del rompeolas) y Chogogo en Jan Thiel (agua cristalina y tranquila). En el oeste, Kura Hulanda Lodge tiene un arrecife justo frente a la playa y Marazul tiene escalones hasta el arrecife.",
+    "pt": "As avaliações indicam o Avila Beach Hotel (snorkel na praia privativa), o Sunscape (água calma atrás do quebra-mar) e o Chogogo, em Jan Thiel (água calma e cristalina). No oeste, o Kura Hulanda Lodge tem um recife logo em frente à praia e o Marazul tem degraus até o recife."
    }
   },
   {
    "q": {
     "nl": "Bestaat het Hilton op Curaçao nog?",
-    "en": "Is there still a Hilton on Curaçao?"
+    "en": "Is there still a Hilton on Curaçao?",
+    "de": "Gibt es auf Curaçao noch ein Hilton?",
+    "es": "¿Todavía hay un Hilton en Curazao?",
+    "pt": "Ainda existe um Hilton em Curaçao?"
    },
    "a": {
     "nl": "Het oude Hilton aan de Piscaderabaai is omgebouwd tot Dreams Curaçao. Hilton zit nog wel op het eiland via Mangrove Beach Corendon en The Rif, die onder het Curio by Hilton-label vallen.",
-    "en": "The old Hilton on Piscadera Bay became Dreams Curaçao. Hilton is still on the island through Mangrove Beach Corendon and The Rif, which are part of Curio by Hilton."
+    "en": "The old Hilton on Piscadera Bay became Dreams Curaçao. Hilton is still on the island through Mangrove Beach Corendon and The Rif, which are part of Curio by Hilton.",
+    "de": "Das alte Hilton an der Piscadera Bay wurde zum Dreams Curaçao. Hilton ist weiterhin auf der Insel vertreten, und zwar mit Mangrove Beach Corendon und The Rif, die zu Curio by Hilton gehören.",
+    "es": "El antiguo Hilton de Piscadera Bay pasó a ser Dreams Curaçao. Hilton sigue en la isla con Mangrove Beach Corendon y The Rif, que forman parte de Curio by Hilton.",
+    "pt": "O antigo Hilton da Piscadera Bay virou o Dreams Curaçao. A Hilton continua na ilha com o Mangrove Beach Corendon e o The Rif, que fazem parte da Curio by Hilton."
    }
   },
   {
    "q": {
     "nl": "Wat is het goedkoopste all-inclusive hotel op Curaçao?",
-    "en": "What is the cheapest all-inclusive on Curaçao?"
+    "en": "What is the cheapest all-inclusive on Curaçao?",
+    "de": "Welches ist das günstigste All-inclusive auf Curaçao?",
+    "es": "¿Cuál es el todo incluido más barato de Curazao?",
+    "pt": "Qual é o tudo incluído mais barato de Curaçao?"
    },
    "a": {
     "nl": "Kunuku Resort in Daniel begint op Tripadvisor rond $172 per nacht voor een standaardkamer, zonder belastingen. Het ligt niet aan het strand en is vooral op gezinnen gericht.",
-    "en": "Kunuku Resort in Daniel starts around $172 a night for a standard room on Tripadvisor, before taxes. It's not on the beach and is mainly aimed at families."
+    "en": "Kunuku Resort in Daniel starts around $172 a night for a standard room on Tripadvisor, before taxes. It's not on the beach and is mainly aimed at families.",
+    "de": "Das Kunuku Resort in Daniel beginnt bei Tripadvisor bei etwa $172 pro Nacht für ein Standardzimmer, vor Steuern. Es liegt nicht am Strand und richtet sich vor allem an Familien.",
+    "es": "Kunuku Resort, en Daniel, parte de unos $172 por noche por una habitación estándar en Tripadvisor, antes de impuestos. No está en la playa y está pensado sobre todo para familias.",
+    "pt": "O Kunuku Resort, em Daniel, começa em cerca de $172 por noite por um quarto standard no Tripadvisor, antes dos impostos. Não fica na praia e é voltado principalmente para famílias."
    }
   },
   {
    "q": {
     "nl": "Welk hotel op Curaçao is goed voor duikers?",
-    "en": "Which Curaçao hotel is good for divers?"
+    "en": "Which Curaçao hotel is good for divers?",
+    "de": "Welches Hotel auf Curaçao ist gut für Taucher?",
+    "es": "¿Qué hotel de Curazao es bueno para buceadores?",
+    "pt": "Qual hotel de Curaçao é bom para mergulhadores?"
    },
    "a": {
     "nl": "LionsDive (Mambo), Scuba Lodge (Pietermaai, eigen PADI-centrum, 4,7 van 5 op Tripadvisor), Chogogo (Jan Thiel) en in het westen Marazul, Bahia Appartementen en Kura Hulanda Lodge. Bij Sandals zit duiken in de prijs.",
-    "en": "LionsDive (Mambo), Scuba Lodge (Pietermaai, own PADI center, 4.7 out of 5 on Tripadvisor), Chogogo (Jan Thiel), and out west Marazul, Bahia Apartments and Kura Hulanda Lodge. At Sandals, diving is included."
+    "en": "LionsDive (Mambo), Scuba Lodge (Pietermaai, own PADI center, 4.7 out of 5 on Tripadvisor), Chogogo (Jan Thiel), and out west Marazul, Bahia Apartments and Kura Hulanda Lodge. At Sandals, diving is included.",
+    "de": "LionsDive (Mambo), Scuba Lodge (Pietermaai, eigenes PADI-Center, 4.7 von 5 bei Tripadvisor), Chogogo (Jan Thiel) und im Westen Marazul, Bahia Apartments und Kura Hulanda Lodge. Bei Sandals ist Tauchen inklusive.",
+    "es": "LionsDive (Mambo), Scuba Lodge (Pietermaai, centro PADI propio, 4.7 de 5 en Tripadvisor), Chogogo (Jan Thiel) y, en el oeste, Marazul, Bahia Apartments y Kura Hulanda Lodge. En Sandals el buceo está incluido.",
+    "pt": "LionsDive (Mambo), Scuba Lodge (Pietermaai, centro PADI próprio, 4.7 de 5 no Tripadvisor), Chogogo (Jan Thiel) e, no oeste, Marazul, Bahia Apartments e Kura Hulanda Lodge. No Sandals, o mergulho está incluído."
    }
   }
  ],
@@ -3934,19 +5383,28 @@
    "sandals curacao vs dreams curacao"
   ],
   "es": [
-   "hoteles en curazao",
-   "curazao todo incluido",
-   "mejores resorts curazao"
+   "hoteles curazao",
+   "resorts todo incluido curazao",
+   "mejores resorts en curazao",
+   "curazao solo adultos",
+   "dónde alojarse en curazao",
+   "sandals curazao vs dreams curazao"
   ],
   "pt": [
-   "hotéis em curaçao",
-   "curaçao all inclusive",
-   "melhores resorts curaçao"
+   "hotéis curaçao",
+   "resorts tudo incluído curaçao",
+   "melhores resorts em curaçao",
+   "curaçao só adultos",
+   "onde ficar em curaçao",
+   "sandals curaçao ou dreams curaçao"
   ],
   "de": [
-   "hotel curaçao",
-   "curaçao all inclusive",
-   "beste hotels curaçao"
+   "Hotels Curaçao",
+   "All-inclusive-Resorts Curaçao",
+   "beste Resorts Curaçao",
+   "Curaçao nur für Erwachsene",
+   "Wo übernachten auf Curaçao",
+   "Sandals Curaçao oder Dreams Curaçao"
   ]
  },
  "llmVragen": {
@@ -3959,6 +5417,21 @@
    "What's the best all-inclusive resort in Curaçao for couples?",
    "Should I stay in Jan Thiel, Mambo Beach or Willemstad on Curaçao?",
    "Which Curaçao hotel has the best snorkeling right from the beach?"
+  ],
+  "de": [
+   "Was ist das beste All-inclusive-Resort auf Curaçao für Paare?",
+   "Soll ich auf Curaçao in Jan Thiel, am Mambo Beach oder in Willemstad übernachten?",
+   "Welches Hotel auf Curaçao hat das beste Schnorcheln direkt am Strand?"
+  ],
+  "es": [
+   "¿Cuál es el mejor resort todo incluido de Curazao para parejas?",
+   "¿Debería alojarme en Jan Thiel, Mambo Beach o Willemstad en Curazao?",
+   "¿Qué hotel de Curazao tiene el mejor snorkel directamente desde la playa?"
+  ],
+  "pt": [
+   "Qual é o melhor resort tudo incluído de Curaçao para casais?",
+   "Devo ficar em Jan Thiel, Mambo Beach ou Willemstad em Curaçao?",
+   "Qual hotel de Curaçao tem o melhor snorkel direto da praia?"
   ]
  }
 }
