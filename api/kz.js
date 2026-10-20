@@ -654,7 +654,7 @@ export default async function handler(req, res) {
   if (Date.now() - PIN_VERIFY.at > 600000) { PIN_VERIFY.at = Date.now(); try { PIN_VERIFY.v = String(process.env.PINTEREST_VERIFY || (await secrets()).PINTEREST_VERIFY || '4963a53ed69385410ca1c84a0d306499').replace(/[^a-zA-Z0-9]/g, '').slice(0, 64); } catch (e) {} }
   try { const host = String(req.headers.host || ''); if (host && !/vercel\.app$|^localhost/.test(host) && typeof res.send === 'function' && !res.__kzLinks) { const send0 = res.send.bind(res); res.__kzLinks = 1; res.send = b => send0(typeof b === 'string' && b.indexOf('<html') >= 0 ? b.replace(/href="\/keuzehulp(?=[\/"#?])\/?/g, 'href="/') : b); } } catch (e) {} /* interne links op keuzehulp.best wijzen direct naar de canonieke URL */
   const url = new URL(req.url, 'http://x');
-  ONTWERP2 = url.searchParams.get('ontwerp') === '2';
+  ONTWERP2 = url.searchParams.get('ontwerp') !== '1'; // nieuwe huisstijl is standaard (Henkjan 20 okt), ?ontwerp=1 toont de oude
   const op = url.searchParams.get('op') || '';
   if (req.method === 'OPTIONS') return res.status(204).end();
   try { const host = String(req.headers.host || ''); if (SITE.domain && host === SITE.domain && !domainSeen) { domainSeen = true; await kv.set('hjdk:kz:domainok', { at: Date.now() }); } } catch (e) {} /* eigen domein gezien -> mails linken ernaar */
