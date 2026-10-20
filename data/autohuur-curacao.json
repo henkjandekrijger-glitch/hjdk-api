@@ -69,6 +69,18 @@
      "Klare Kommunikation per WhatsApp, verständliche Anweisungen vorab",
      "Saubere, neuere Autos inklusive Versicherung; laut Bewertungen keine versteckten Kosten",
      "Vorschäden werden vorab per Video-Rundgang und Bericht per E-Mail dokumentiert"
+    ],
+    "es": [
+     "Traslado rápido al aeropuerto en ambos sentidos, casi sin espera",
+     "Comunicación clara por WhatsApp, con instrucciones claras de antemano",
+     "Autos limpios y más nuevos con seguro incluido; los clientes no reportan cargos ocultos",
+     "Los daños existentes se registran al inicio con un video del auto y un informe por correo"
+    ],
+    "pt": [
+     "Traslado rápido do aeroporto, na ida e na volta, quase sem espera",
+     "Comunicação clara pelo WhatsApp, com instruções claras com antecedência",
+     "Carros limpos e mais novos com seguro incluído; os clientes não relatam taxas ocultas",
+     "Os danos existentes são registrados no início com um vídeo do carro e um relatório por e-mail"
     ]
    },
    "tegen": {
@@ -83,6 +95,14 @@
     "de": [
      "Kaum Beschwerden; gelegentlich ein älteres Modell als beim letzten Besuch",
      "In Stoßzeiten ausgebucht (laut Forum); im Dezember teils Mindestmietdauer"
+    ],
+    "es": [
+     "Casi no hay quejas; a veces es un modelo más viejo que en una visita anterior",
+     "Se agota en temporada alta (según un foro); a veces hay un período mínimo de alquiler en diciembre"
+    ],
+    "pt": [
+     "Quase não há reclamações; às vezes é um modelo mais antigo do que em uma visita anterior",
+     "Esgota na alta temporada (segundo um fórum); às vezes há um período mínimo de aluguel em dezembro"
     ]
    },
    "bronnen": [
@@ -108,7 +128,9 @@
    "borg": {
     "nl": "geen borg",
     "en": "no deposit",
-    "de": "keine Kaution"
+    "de": "keine Kaution",
+    "es": "sin depósito",
+    "pt": "sem caução"
    },
    "borgLaag": true,
    "eigenRisico": null,
@@ -148,6 +170,18 @@
      "Abholung und Rückgabe am Hotel oder Flughafen",
      "Sauberes, zuverlässiges Auto mit vollem Tank",
      "Viele Stammkunden"
+    ],
+    "es": [
+     "Sin depósito y sin tarjeta de crédito (varios clientes y tipscuracao.nl)",
+     "Entrega y devolución en tu hotel o en el aeropuerto",
+     "Auto limpio y confiable con el tanque lleno",
+     "Muchos clientes que repiten"
+    ],
+    "pt": [
+     "Sem caução e sem cartão de crédito (vários clientes e tipscuracao.nl)",
+     "Retirada e devolução no seu hotel ou no aeroporto",
+     "Carro limpo e confiável com o tanque cheio",
+     "Muitos clientes que voltam"
     ]
    },
    "tegen": {
@@ -162,6 +196,14 @@
     "de": [
      "Keine wiederkehrenden Nachteile in den sichtbaren Bewertungen",
      "Flughafen-Abhol- und Bringservice teils gegen kleinen Aufpreis"
+    ],
+    "es": [
+     "Sin desventajas recurrentes en las reseñas visibles",
+     "La entrega y devolución en el aeropuerto a veces tienen un pequeño costo extra"
+    ],
+    "pt": [
+     "Sem pontos negativos recorrentes nas avaliações visíveis",
+     "A retirada e a devolução no aeroporto às vezes têm uma pequena taxa extra"
     ]
    },
    "bronnen": [
@@ -219,6 +261,18 @@
      "Auto pünktlich geliefert und abgeholt",
      "Neue Autos (u. a. Jimny) zu bezahlbaren Preisen",
      "Tipps zur Insel"
+    ],
+    "es": [
+     "Comunicación rápida y personal por WhatsApp",
+     "El auto se entrega y se recoge a tiempo",
+     "Autos nuevos (incluido el Jimny) a precios accesibles",
+     "Consejos sobre la isla"
+    ],
+    "pt": [
+     "Comunicação rápida e pessoal pelo WhatsApp",
+     "O carro é entregue e buscado no horário",
+     "Carros novos (incluindo o Jimny) a preços acessíveis",
+     "Dicas sobre a ilha"
     ]
    },
    "tegen": {
@@ -230,6 +284,12 @@
     ],
     "de": [
      "Keine wiederkehrenden Nachteile in den sichtbaren Bewertungen"
+    ],
+    "es": [
+     "Sin desventajas recurrentes en las reseñas visibles"
+    ],
+    "pt": [
+     "Sem pontos negativos recorrentes nas avaliações visíveis"
     ]
    },
    "bronnen": [
@@ -252,7 +312,9 @@
    "borg": {
     "nl": "geen borg",
     "en": "no deposit",
-    "de": "keine Kaution"
+    "de": "keine Kaution",
+    "es": "sin depósito",
+    "pt": "sem caução"
    },
    "borgLaag": true,
    "eigenRisico": null,
@@ -300,6 +362,18 @@
      "Schnelle, gut organisierte Übergabe und klare Rückgabeanleitung, auch per Video",
      "Neuere, saubere Autos",
      "Per WhatsApp gut erreichbar"
+    ],
+    "es": [
+     "Ideal para pasajeros de cruceros: la oficina está dentro de la terminal",
+     "Entrega rápida y bien organizada e instrucciones claras de devolución, incluso con video",
+     "Autos más nuevos y limpios",
+     "Fácil de contactar por WhatsApp"
+    ],
+    "pt": [
+     "Ótimo para passageiros de cruzeiro: o escritório fica dentro do terminal",
+     "Retirada rápida e bem organizada e instruções claras de devolução, inclusive com vídeo",
+     "Carros mais novos e limpos",
+     "Fácil de contatar pelo WhatsApp"
     ]
    },
    "tegen": {
@@ -320,6 +394,18 @@
      "Gelegentlich technische oder Sauberkeitsprobleme (Touchscreen, Fenster, Reifen)",
      "Beschwerde über eine höhere Gebühr für Sand oder nasse Sitze als bei der Buchung vereinbart",
      "Frühe Rückgabezeit bei Tagesmiete"
+    ],
+    "es": [
+     "Esperas cuando llegan muchos pasajeros de cruceros a la vez",
+     "Problemas técnicos o de limpieza ocasionales (pantalla táctil, ventanas, llantas)",
+     "Una queja por un cargo por arena o asientos mojados más alto que lo acordado al reservar",
+     "Hora de devolución temprana en los alquileres por día"
+    ],
+    "pt": [
+     "Esperas quando chegam muitos passageiros de cruzeiro ao mesmo tempo",
+     "Problemas técnicos ou de limpeza ocasionais (tela sensível ao toque, vidros, pneus)",
+     "Uma reclamação por uma taxa de areia ou bancos molhados maior do que a combinada na reserva",
+     "Horário de devolução cedo nos aluguéis de um dia"
     ]
    },
    "bronnen": [
@@ -379,6 +465,18 @@
      "Schnell und klar per WhatsApp",
      "Neue, saubere Autos zum fairen Preis",
      "Miete ohne Kreditkarte möglich (laut eigener Website)"
+    ],
+    "es": [
+     "Recogida en el aeropuerto en unos 10 minutos, a veces en el mismo auto de alquiler",
+     "Rápidos y claros por WhatsApp",
+     "Autos nuevos y limpios a un precio justo",
+     "Puedes alquilar sin tarjeta de crédito (según su sitio web)"
+    ],
+    "pt": [
+     "Retirada no aeroporto em cerca de 10 minutos, às vezes no próprio carro alugado",
+     "Rápidos e claros pelo WhatsApp",
+     "Carros novos e limpos a um preço justo",
+     "Você pode alugar sem cartão de crédito (segundo o site deles)"
     ]
    },
    "tegen": {
@@ -390,6 +488,12 @@
     ],
     "de": [
      "Keine wiederkehrenden Nachteile; ein Kunde zahlte in CAD und fand das teurer"
+    ],
+    "es": [
+     "Sin desventajas recurrentes; un cliente pagó en CAD y le pareció más caro"
+    ],
+    "pt": [
+     "Sem pontos negativos recorrentes; um cliente pagou em CAD e achou mais caro"
     ]
    },
    "bronnen": [
@@ -445,6 +549,16 @@
      "Einfach per WhatsApp oder Website buchen, Rabatt bei Vorauszahlung",
      "Lieferung ans Hotel, bei Rückgabe ein Kleinbus zum Flughafen",
      "Freundlich und schnell in der Antwort"
+    ],
+    "es": [
+     "Reserva fácil por WhatsApp o por el sitio web, con descuento por pagar por adelantado",
+     "Entrega en tu hotel y una van al aeropuerto cuando devuelves el auto",
+     "Amables y rápidos para responder"
+    ],
+    "pt": [
+     "Reserva fácil pelo WhatsApp ou pelo site, com desconto para pagamento antecipado",
+     "Entrega no seu hotel e uma van até o aeroporto quando você devolve o carro",
+     "Simpáticos e rápidos para responder"
     ]
    },
    "tegen": {
@@ -459,6 +573,14 @@
     "de": [
      "Einzelne Beschwerde über ein schmutziges, altes Auto mit Kakerlaken, nicht das gebuchte",
      "Ein Kunde wurde schon während der Miete um eine Bewertung gebeten"
+    ],
+    "es": [
+     "Una queja por un auto sucio y viejo con cucarachas que no era el reservado",
+     "A un cliente le pidieron una reseña mientras todavía tenía el auto alquilado"
+    ],
+    "pt": [
+     "Uma reclamação por um carro sujo e velho com baratas que não era o reservado",
+     "Um cliente foi solicitado a deixar uma avaliação enquanto ainda estava com o carro alugado"
     ]
    },
    "bronnen": [
@@ -510,6 +632,16 @@
      "Transparent, keine versteckten Kosten, Kaution problemlos zurück",
      "Neue Autos, oft Kia Picanto oder Corolla",
      "Tankstelle gegenüber dem Büro"
+    ],
+    "es": [
+     "Transparente, sin cargos ocultos, el depósito se devolvió sin problemas",
+     "Autos nuevos, a menudo un Kia Picanto o un Corolla",
+     "Gasolinera justo enfrente de la oficina"
+    ],
+    "pt": [
+     "Transparente, sem taxas ocultas, a caução foi devolvida sem problemas",
+     "Carros novos, muitas vezes um Kia Picanto ou um Corolla",
+     "Posto de gasolina bem em frente ao escritório"
     ]
    },
    "tegen": {
@@ -524,6 +656,14 @@
     "de": [
      "Abholung am Flughafen nicht immer vorab geregelt, also Wartezeit",
      "Ein Kunde nennt Qualitätsprobleme"
+    ],
+    "es": [
+     "La recogida en el aeropuerto no siempre se coordina de antemano, así que puede que esperes",
+     "Un cliente menciona problemas de calidad"
+    ],
+    "pt": [
+     "A retirada no aeroporto nem sempre é combinada com antecedência, então você pode ter que esperar",
+     "Um cliente menciona problemas de qualidade"
     ]
    },
    "bronnen": [
@@ -588,6 +728,18 @@
      "Versicherung inklusive",
      "Gut für Kreuzfahrt-Tagesausflüge: Übergabe nahe dem Terminal, Navi mit vorprogrammierten Stränden",
      "Shuttle vom Flughafen"
+    ],
+    "es": [
+     "Contacto personal con el dueño, rápido por correo o WhatsApp",
+     "Seguro incluido",
+     "Bueno para excursiones de un día desde el crucero: entrega cerca de la terminal, GPS con las playas ya cargadas",
+     "Traslado desde el aeropuerto"
+    ],
+    "pt": [
+     "Contato pessoal com o dono, rápido por e-mail ou WhatsApp",
+     "Seguro incluído",
+     "Bom para passeios de um dia de quem vem de cruzeiro: retirada perto do terminal, GPS com as praias já carregadas",
+     "Traslado do aeroporto"
     ]
    },
    "tegen": {
@@ -599,6 +751,12 @@
     ],
     "de": [
      "Keine wiederkehrenden Nachteile gefunden"
+    ],
+    "es": [
+     "No se encontraron desventajas recurrentes"
+    ],
+    "pt": [
+     "Não foram encontrados pontos negativos recorrentes"
     ]
    },
    "bronnen": [
@@ -622,7 +780,9 @@
    "borg": {
     "nl": "geen borg",
     "en": "no deposit",
-    "de": "keine Kaution"
+    "de": "keine Kaution",
+    "es": "sin depósito",
+    "pt": "sem caução"
    },
    "borgLaag": true,
    "eigenRisico": null,
@@ -659,6 +819,16 @@
      "Schneller Shuttle, in wenigen Minuten unterwegs",
      "Versicherung inklusive, keine Kaution, keine versteckten Kosten (laut Bewertungen)",
      "Niedriger Komplettpreis; Vorschäden werden vorab dokumentiert"
+    ],
+    "es": [
+     "Traslado rápido, en la carretera en pocos minutos",
+     "Seguro incluido, sin depósito, sin cargos ocultos (según los clientes)",
+     "Precio total bajo; los daños existentes se registran al inicio"
+    ],
+    "pt": [
+     "Traslado rápido, na estrada em poucos minutos",
+     "Seguro incluído, sem caução, sem taxas ocultas (segundo os clientes)",
+     "Preço final baixo; os danos existentes são registrados no início"
     ]
    },
    "tegen": {
@@ -676,6 +846,16 @@
      "Gelegentlich kleine technische Mängel (Fernbedienung), wurden aber behoben",
      "In der Hochsaison schnell ausgebucht (laut Forum)",
      "Mindestmietdauer in Stoßzeiten (älterer Forenbeitrag)"
+    ],
+    "es": [
+     "Pequeños fallos ocasionales (llave electrónica), que se arreglaron",
+     "Se llena rápido en temporada alta (según un foro)",
+     "Período mínimo de alquiler en épocas de mucha demanda (publicación antigua en un foro)"
+    ],
+    "pt": [
+     "Pequenas falhas ocasionais (chave eletrônica), que foram resolvidas",
+     "Lota rápido na alta temporada (segundo um fórum)",
+     "Período mínimo de aluguel em épocas de muita procura (post antigo em um fórum)"
     ]
    },
    "bronnen": [
@@ -736,6 +916,18 @@
      "Shuttle zum und vom Flughafen, Hilfe mit dem Gepäck",
      "Moderne, saubere Autos; Rabatt bei Barzahlung",
      "Im Forum: günstig und effizient"
+    ],
+    "es": [
+     "Cobertura total de colisión incluida",
+     "Traslado al aeropuerto en ambos sentidos, ayuda con el equipaje",
+     "Autos modernos y limpios; descuento por pagar en efectivo",
+     "Los usuarios del foro lo describen como barato y eficiente"
+    ],
+    "pt": [
+     "Cobertura total de colisão incluída",
+     "Traslado do aeroporto, na ida e na volta, com ajuda com a bagagem",
+     "Carros modernos e limpos; desconto para pagamento em dinheiro",
+     "Os usuários do fórum o descrevem como barato e eficiente"
     ]
    },
    "tegen": {
@@ -750,6 +942,14 @@
     "de": [
      "Schnell ausgebucht (laut Forum)",
      "Keine wiederkehrenden Beschwerden gefunden"
+    ],
+    "es": [
+     "Se agota rápido (según un foro)",
+     "No se encontraron quejas recurrentes"
+    ],
+    "pt": [
+     "Esgota rápido (segundo um fórum)",
+     "Não foram encontradas reclamações recorrentes"
     ]
    },
    "bronnen": [
@@ -779,7 +979,9 @@
    "borg": {
     "nl": "geen borg",
     "en": "no deposit",
-    "de": "keine Kaution"
+    "de": "keine Kaution",
+    "es": "sin depósito",
+    "pt": "sem caução"
    },
    "borgLaag": true,
    "eigenRisico": {
@@ -819,6 +1021,16 @@
      "Ehrlich, keine versteckten Kosten",
      "Neue, saubere Autos; schnell unterwegs, auch ohne Reservierung",
      "Kulant bei verspäteter Rückgabe"
+    ],
+    "es": [
+     "Honestos, sin cargos ocultos",
+     "Autos nuevos y limpios; te pones en marcha rápido, incluso sin reserva",
+     "Flexibles con las devoluciones tardías"
+    ],
+    "pt": [
+     "Honestos, sem taxas ocultas",
+     "Carros novos e limpos; você sai rápido, mesmo sem reserva",
+     "Flexíveis com devoluções atrasadas"
     ]
    },
    "tegen": {
@@ -833,6 +1045,14 @@
     "de": [
      "Eingeschränkte Öffnungszeiten (Mi bis Wochenende, bis 12 Uhr)",
      "Keine wiederkehrenden Beschwerden gefunden"
+    ],
+    "es": [
+     "Horario limitado (de miércoles a fin de semana, hasta el mediodía)",
+     "No se encontraron quejas recurrentes"
+    ],
+    "pt": [
+     "Horário limitado (de quarta-feira até o fim de semana, até o meio-dia)",
+     "Não foram encontradas reclamações recorrentes"
     ]
    },
    "bronnen": [
@@ -887,6 +1107,16 @@
      "Transparent: Video von Zustand, Kilometerstand und Tank bei Übergabe",
      "Abholung und Rückgabe am Flughafen oder Hotel",
      "Persönlicher Kontakt mit dem Inhaber, dazu Tipps"
+    ],
+    "es": [
+     "Transparentes: video del estado del auto, kilometraje y nivel de combustible al recogerlo",
+     "Entrega y devolución en el aeropuerto o en tu hotel",
+     "Contacto personal con el dueño, además de consejos"
+    ],
+    "pt": [
+     "Transparentes: vídeo do estado do carro, quilometragem e nível de combustível na retirada",
+     "Retirada e devolução no aeroporto ou no seu hotel",
+     "Contato pessoal com o dono, além de dicas"
     ]
    },
    "tegen": {
@@ -898,6 +1128,12 @@
     ],
     "de": [
      "Keine wiederkehrenden Nachteile gefunden"
+    ],
+    "es": [
+     "No se encontraron desventajas recurrentes"
+    ],
+    "pt": [
+     "Não foram encontrados pontos negativos recorrentes"
     ]
    },
    "bronnen": [
@@ -949,6 +1185,16 @@
      "Schnelle Kommunikation, Probleme sofort gelöst",
      "Pünktlich am Flughafen; Lieferung an den Wunschort",
      "Saubere Autos"
+    ],
+    "es": [
+     "Comunicación rápida, los problemas se resuelven de inmediato",
+     "Puntuales en el aeropuerto; entrega donde quieras",
+     "Autos limpios"
+    ],
+    "pt": [
+     "Comunicação rápida, os problemas são resolvidos na hora",
+     "Pontuais no aeroporto; entrega onde você quiser",
+     "Carros limpos"
     ]
    },
    "tegen": {
@@ -963,6 +1209,14 @@
     "de": [
      "Am Wochenende geschlossen",
      "Keine wiederkehrenden Beschwerden gefunden"
+    ],
+    "es": [
+     "Cerrado los fines de semana",
+     "No se encontraron quejas recurrentes"
+    ],
+    "pt": [
+     "Fechado nos fins de semana",
+     "Não foram encontradas reclamações recorrentes"
     ]
    },
    "bronnen": [
@@ -1020,6 +1274,18 @@
      "Der Inhaber holt selbst ab und bringt zurück",
      "Video vom Auto bei der Übergabe",
      "Barzahlung möglich"
+    ],
+    "es": [
+     "Seguro de cobertura total incluido en el precio",
+     "El dueño se encarga personalmente de la entrega y la devolución",
+     "Video del auto al recogerlo",
+     "Puedes pagar en efectivo"
+    ],
+    "pt": [
+     "Seguro com cobertura total incluído no preço",
+     "O dono cuida pessoalmente da retirada e da devolução",
+     "Vídeo do carro na retirada",
+     "Você pode pagar em dinheiro"
     ]
    },
    "tegen": {
@@ -1031,6 +1297,12 @@
     ],
     "de": [
      "Kleine Autos (Chevy Spark) in der Budgetklasse; Kaution nicht in bar"
+    ],
+    "es": [
+     "Autos económicos pequeños (Chevy Spark); el depósito no se puede pagar en efectivo"
+    ],
+    "pt": [
+     "Carros econômicos pequenos (Chevy Spark); a caução não pode ser paga em dinheiro"
     ]
    },
    "bronnen": [
@@ -1092,6 +1364,16 @@
      "Von einem niederländischen Ehepaar geführt, persönlich und flexibel",
      "Auto wird am Hotel geliefert und abgeholt",
      "Faire Bedingungen und Preise (u. a. Suzuki Jimny)"
+    ],
+    "es": [
+     "Lo lleva una pareja holandesa, trato personal y flexible",
+     "El auto se entrega y se recoge en tu hotel",
+     "Condiciones y precios justos (incluido el Suzuki Jimny)"
+    ],
+    "pt": [
+     "Administrada por um casal holandês, atendimento pessoal e flexível",
+     "O carro é entregue e buscado no seu hotel",
+     "Condições e preços justos (incluindo o Suzuki Jimny)"
     ]
    },
    "tegen": {
@@ -1103,6 +1385,12 @@
     ],
     "de": [
      "Keine wiederkehrenden Nachteile; teils Autos mit Schaltgetriebe"
+    ],
+    "es": [
+     "Sin desventajas recurrentes; algunos autos son de transmisión manual"
+    ],
+    "pt": [
+     "Sem pontos negativos recorrentes; alguns carros têm câmbio manual"
     ]
    },
    "bronnen": [
@@ -1157,6 +1445,16 @@
      "Lieferung und Abholung an deinem Airbnb oder Hotel",
      "Keine versteckten Kosten, kein aufdringlicher Verkauf",
      "Extras wie Kühlbox und CarPlay"
+    ],
+    "es": [
+     "Entrega y recogida en tu Airbnb o en tu hotel",
+     "Sin cargos ocultos, sin presión para comprar extras",
+     "Extras como una hielera y CarPlay"
+    ],
+    "pt": [
+     "Entrega e retirada no seu Airbnb ou no seu hotel",
+     "Sem taxas ocultas, sem pressão para vender extras",
+     "Extras como cooler e CarPlay"
     ]
    },
    "tegen": {
@@ -1168,6 +1466,12 @@
     ],
     "de": [
      "Keine wiederkehrenden Nachteile gefunden"
+    ],
+    "es": [
+     "No se encontraron desventajas recurrentes"
+    ],
+    "pt": [
+     "Não foram encontrados pontos negativos recorrentes"
     ]
    },
    "bronnen": [
@@ -1219,6 +1523,16 @@
      "Große Autos und Kleinbusse für Gruppen",
      "Flexibel bei geänderten Flügen",
      "Persönliche Betreuung während der Miete"
+    ],
+    "es": [
+     "Autos grandes y vans para grupos",
+     "Flexibles cuando cambian los vuelos",
+     "Contacto personal durante el alquiler"
+    ],
+    "pt": [
+     "Carros grandes e vans para grupos",
+     "Flexíveis quando os voos mudam",
+     "Contato pessoal durante o aluguel"
     ]
    },
    "tegen": {
@@ -1230,6 +1544,12 @@
     ],
     "de": [
      "Keine wiederkehrenden Nachteile gefunden"
+    ],
+    "es": [
+     "No se encontraron desventajas recurrentes"
+    ],
+    "pt": [
+     "Não foram encontrados pontos negativos recorrentes"
     ]
    },
    "bronnen": [
@@ -1251,7 +1571,9 @@
    "borg": {
     "nl": "geen borg",
     "en": "no deposit",
-    "de": "keine Kaution"
+    "de": "keine Kaution",
+    "es": "sin depósito",
+    "pt": "sem caução"
    },
    "borgLaag": true,
    "eigenRisico": null,
@@ -1299,6 +1621,18 @@
      "Kein Druck zu Zusatzversicherung oder Kreditkartenblockierung (laut Trustpilot)",
      "Neue, saubere Autos; auch auf Spanisch",
      "Hilfe auch bei Problemen außerhalb der Miete (Bankkarte, Reifenpanne)"
+    ],
+    "es": [
+     "Un empleado te espera en el aeropuerto con el auto justo afuera",
+     "Sin presión para contratar seguro extra ni retener la tarjeta de crédito (según Trustpilot)",
+     "Autos nuevos y limpios; también hablan español",
+     "Ayuda con problemas más allá del alquiler (tarjeta bancaria, llanta pinchada)"
+    ],
+    "pt": [
+     "Um funcionário espera por você no aeroporto com o carro logo na saída",
+     "Sem pressão para contratar seguro extra nem bloquear o cartão de crédito (segundo o Trustpilot)",
+     "Carros novos e limpos; também falam espanhol",
+     "Ajuda com problemas além do aluguel (cartão do banco, pneu furado)"
     ]
    },
    "tegen": {
@@ -1313,6 +1647,14 @@
     "de": [
      "Keine negativen Bewertungen gefunden (Trustpilot: keine mit 1 bis 3 Sternen)",
      "Wenige Bewertungen auf Trustpilot; die Firma bittet nicht aktiv darum"
+    ],
+    "es": [
+     "No se encontraron reseñas negativas (Trustpilot: cero reseñas de 1 a 3 estrellas)",
+     "Pocas reseñas en Trustpilot; la empresa no las pide activamente"
+    ],
+    "pt": [
+     "Não foram encontradas avaliações negativas (Trustpilot: zero avaliações de 1 a 3 estrelas)",
+     "Poucas avaliações no Trustpilot; a empresa não as pede ativamente"
     ]
    },
    "bronnen": [
@@ -1373,6 +1715,16 @@
      "Pünktlich bei Abholung und Rückgabe am Flughafen",
      "Niedrige Kaution (laut einem Kunden die beste am Markt)",
      "Im Forum: freundlich, keine stornierten Reservierungen"
+    ],
+    "es": [
+     "Puntuales en la entrega y devolución en el aeropuerto",
+     "Depósito bajo (un cliente: el mejor del mercado)",
+     "Los usuarios del foro dicen que son amables y que no cancelan reservas"
+    ],
+    "pt": [
+     "Pontuais na retirada e na devolução no aeroporto",
+     "Caução baixa (um cliente: a melhor do mercado)",
+     "Os usuários do fórum dizem que são simpáticos e que não cancelam reservas"
     ]
    },
    "tegen": {
@@ -1384,6 +1736,12 @@
     ],
     "de": [
      "Keine wiederkehrenden Nachteile gefunden"
+    ],
+    "es": [
+     "No se encontraron desventajas recurrentes"
+    ],
+    "pt": [
+     "Não foram encontrados pontos negativos recorrentes"
     ]
    },
    "bronnen": [
@@ -1436,6 +1794,16 @@
      "Keine versteckten Kosten",
      "Abholung und Rückgabe am Flughafen",
      "Konkurrenzfähiger Preis, sauberes Auto"
+    ],
+    "es": [
+     "Sin cargos ocultos",
+     "Entrega y devolución en el aeropuerto",
+     "Precio competitivo, auto limpio"
+    ],
+    "pt": [
+     "Sem taxas ocultas",
+     "Retirada e devolução no aeroporto",
+     "Preço competitivo, carro limpo"
     ]
    },
    "tegen": {
@@ -1447,6 +1815,12 @@
     ],
     "de": [
      "Keine wiederkehrenden Nachteile gefunden"
+    ],
+    "es": [
+     "No se encontraron desventajas recurrentes"
+    ],
+    "pt": [
+     "Não foram encontrados pontos negativos recorrentes"
     ]
    },
    "bronnen": [
@@ -1498,6 +1872,16 @@
      "Jeep Wrangler und Pick-ups (für Taucher)",
      "Schnell per WhatsApp erreichbar, löst Probleme sofort",
      "Gutes Preis-Leistungs-Verhältnis"
+    ],
+    "es": [
+     "Jeep Wranglers y camionetas (para buzos)",
+     "Se les contacta rápido por WhatsApp, resuelven los problemas de inmediato",
+     "Buena relación calidad-precio"
+    ],
+    "pt": [
+     "Jeep Wranglers e picapes (para mergulhadores)",
+     "Fáceis de contatar rápido pelo WhatsApp, resolvem os problemas na hora",
+     "Boa relação custo-benefício"
     ]
    },
    "tegen": {
@@ -1509,6 +1893,12 @@
     ],
     "de": [
      "Keine wiederkehrenden Nachteile gefunden"
+    ],
+    "es": [
+     "No se encontraron desventajas recurrentes"
+    ],
+    "pt": [
+     "Não foram encontrados pontos negativos recorrentes"
     ]
    },
    "bronnen": [
@@ -1563,6 +1953,16 @@
      "Kostenloser Flughafen-Shuttle",
      "Bezahlung bei Ankunft",
      "Schnelle Hilfe, auch nach der Abreise (vergessene Sachen)"
+    ],
+    "es": [
+     "Traslado gratis al aeropuerto",
+     "Pago al llegar",
+     "Ayuda rápida, incluso después de que te vas (objetos olvidados)"
+    ],
+    "pt": [
+     "Traslado gratuito do aeroporto",
+     "Pagamento na chegada",
+     "Ajuda rápida, mesmo depois que você vai embora (objetos esquecidos)"
     ]
    },
    "tegen": {
@@ -1577,6 +1977,14 @@
     "de": [
      "Sonntags geschlossen",
      "Keine wiederkehrenden Beschwerden gefunden"
+    ],
+    "es": [
+     "Cerrado los domingos",
+     "No se encontraron quejas recurrentes"
+    ],
+    "pt": [
+     "Fechado aos domingos",
+     "Não foram encontradas reclamações recorrentes"
     ]
    },
    "bronnen": [
@@ -1628,6 +2036,16 @@
      "Auto steht am Flughafen oder Hotel bereit",
      "Schnell per WhatsApp, Verlängerung unkompliziert",
      "Kleine Autos, praktisch beim Parken"
+    ],
+    "es": [
+     "El auto está listo en el aeropuerto o en tu hotel",
+     "Rápidos por WhatsApp, fácil de extender el alquiler",
+     "Autos pequeños y fáciles de estacionar"
+    ],
+    "pt": [
+     "O carro está pronto no aeroporto ou no seu hotel",
+     "Rápidos pelo WhatsApp, fácil de prorrogar o aluguel",
+     "Carros pequenos e fáceis de estacionar"
     ]
    },
    "tegen": {
@@ -1639,6 +2057,12 @@
     ],
     "de": [
      "Keine wiederkehrenden Nachteile gefunden"
+    ],
+    "es": [
+     "No se encontraron desventajas recurrentes"
+    ],
+    "pt": [
+     "Não foram encontrados pontos negativos recorrentes"
     ]
    },
    "bronnen": [
@@ -1687,6 +2111,14 @@
     "de": [
      "Freundlich, Übergabe und Abholung am Flughafen",
      "Niedrige Preise"
+    ],
+    "es": [
+     "Amables, con entrega y recogida en el aeropuerto",
+     "Precios bajos"
+    ],
+    "pt": [
+     "Simpáticos, com entrega e retirada no aeroporto",
+     "Preços baixos"
     ]
    },
    "tegen": {
@@ -1704,6 +2136,16 @@
      "Alte Autos (ca. 150.000 km), Batterieprobleme",
      "Nur WhatsApp, keine ordentliche Bestätigung; Abholung mit unmarkiertem Auto",
      "Tank bei Übergabe nicht voll"
+    ],
+    "es": [
+     "Autos viejos (unos 150,000 km), problemas con la batería",
+     "Solo por WhatsApp, sin una confirmación formal; entrega en un auto sin identificar",
+     "El tanque no estaba lleno al recoger el auto"
+    ],
+    "pt": [
+     "Carros velhos (cerca de 150.000 km), problemas com a bateria",
+     "Só pelo WhatsApp, sem confirmação formal; retirada em um carro sem identificação",
+     "O tanque não estava cheio na retirada"
     ]
    },
    "bronnen": [
@@ -1770,6 +2212,18 @@
      "Der Inhaber wartet mit dem Auto am Flughafen",
      "Keine Kreditkarte nötig, nur die Bestätigungsmail",
      "Voller Tank"
+    ],
+    "es": [
+     "Jeep Wranglers nuevos (con techo de lona)",
+     "El dueño te recibe en el aeropuerto con el auto",
+     "No se necesita tarjeta de crédito, solo el correo de confirmación",
+     "Tanque lleno"
+    ],
+    "pt": [
+     "Jeep Wranglers novos (com capota de lona)",
+     "O dono recebe você no aeroporto com o carro",
+     "Não precisa de cartão de crédito, só o e-mail de confirmação",
+     "Tanque cheio"
     ]
    },
    "tegen": {
@@ -1781,6 +2235,12 @@
     ],
     "de": [
      "Keine negativen Bewertungen gefunden"
+    ],
+    "es": [
+     "No se encontraron reseñas negativas"
+    ],
+    "pt": [
+     "Não foram encontradas avaliações negativas"
     ]
    },
    "bronnen": [
@@ -1840,6 +2300,18 @@
      "Schnelle Antworten vor, während und nach der Miete",
      "Niedrigere Kaution als anderswo (laut einem Kunden)",
      "Saubere Autos mit CarPlay"
+    ],
+    "es": [
+     "Recibimiento en el aeropuerto, entrega en tu hotel o condominio",
+     "Atentos antes, durante y después del alquiler",
+     "Depósito más bajo que en otros lugares (según un cliente)",
+     "Autos limpios con CarPlay"
+    ],
+    "pt": [
+     "Recepção no aeroporto, entrega no seu hotel ou condomínio",
+     "Atenciosos antes, durante e depois do aluguel",
+     "Caução mais baixa do que em outros lugares (segundo um cliente)",
+     "Carros limpos com CarPlay"
     ]
    },
    "tegen": {
@@ -1851,6 +2323,12 @@
     ],
     "de": [
      "Keine Beschwerden in den sichtbaren Bewertungen"
+    ],
+    "es": [
+     "Sin quejas en las reseñas visibles"
+    ],
+    "pt": [
+     "Sem reclamações nas avaliações visíveis"
     ]
    },
    "bronnen": [
@@ -1911,6 +2389,16 @@
      "Hilft Kunden aus, deren Buchung anderswo geplatzt ist",
      "Schnelle Kommunikation per WhatsApp, Abholung am Flughafen",
      "Tipps und Extras (Schnorchel, Kühlbox)"
+    ],
+    "es": [
+     "Ayuda a clientes cuya reserva falló en otro lugar",
+     "Respuestas rápidas por WhatsApp, recogida en el aeropuerto",
+     "Consejos y extras (equipo de snorkel, hielera)"
+    ],
+    "pt": [
+     "Ajuda clientes cuja reserva deu errado em outro lugar",
+     "Respostas rápidas pelo WhatsApp, retirada no aeroporto",
+     "Dicas e extras (equipamento de snorkel, cooler)"
     ]
    },
    "tegen": {
@@ -1925,6 +2413,14 @@
     "de": [
      "Manchmal ein kleiner Mangel am Auto",
      "Eine unklare 1-Stern-Bewertung auf Trustpilot"
+    ],
+    "es": [
+     "A veces un problema menor con el auto",
+     "Una reseña de 1 estrella poco clara en Trustpilot"
+    ],
+    "pt": [
+     "Às vezes um problema pequeno com o carro",
+     "Uma avaliação de 1 estrela pouco clara no Trustpilot"
     ]
    },
    "bronnen": [
@@ -1974,6 +2470,14 @@
     "de": [
      "Lieferung am Flughafen, Rückfahrt zum Abflug",
      "Autos in gutem Zustand, schnelle Antworten"
+    ],
+    "es": [
+     "Entrega en el aeropuerto y traslado de regreso cuando te vas",
+     "Autos en buen estado, rápidos para responder"
+    ],
+    "pt": [
+     "Entrega no aeroporto e carona de volta quando você vai embora",
+     "Carros em bom estado, rápidos para responder"
     ]
    },
    "tegen": {
@@ -1985,6 +2489,12 @@
     ],
     "de": [
      "Keine Nachteile gefunden"
+    ],
+    "es": [
+     "No se encontraron desventajas"
+    ],
+    "pt": [
+     "Não foram encontrados pontos negativos"
     ]
    },
    "bronnen": [
@@ -2041,6 +2551,14 @@
     "de": [
      "Neue Kias, Lieferung an deine Unterkunft",
      "Auch Langzeitmiete (Praktikanten) mit monatlichem Check"
+    ],
+    "es": [
+     "Kias nuevos, entregados donde te hospedas",
+     "También alquileres de larga duración (pasantes), con revisión mensual"
+    ],
+    "pt": [
+     "Kias novos, entregues onde você está hospedado",
+     "Também aluguéis de longa duração (estagiários), com revisão mensal"
     ]
    },
    "tegen": {
@@ -2052,6 +2570,12 @@
     ],
     "de": [
      "Trustpilot (1 Bewertung, Nov. 2025): Panne, keine Hilfe, Kaution von 375 € einbehalten"
+    ],
+    "es": [
+     "Trustpilot (1 reseña, nov. 2025): avería, sin ayuda, se quedaron con el depósito de €375"
+    ],
+    "pt": [
+     "Trustpilot (1 avaliação, nov. 2025): pane, sem ajuda, ficaram com a caução de €375"
     ]
    },
    "bronnen": [
@@ -2105,6 +2629,16 @@
      "Eigene Werkstatt und Mechaniker: Probleme in 1 bis 2 Stunden gelöst",
      "Abholung am Flughafen",
      "Guter Service in Stoßzeiten (Karneval)"
+    ],
+    "es": [
+     "Taller y mecánico propios: los problemas se arreglan en 1 a 2 horas",
+     "Recogida en el aeropuerto",
+     "Buen servicio en épocas de mucha demanda (Carnaval)"
+    ],
+    "pt": [
+     "Oficina e mecânico próprios: os problemas são resolvidos em 1 a 2 horas",
+     "Retirada no aeroporto",
+     "Bom atendimento em épocas de muita procura (Carnaval)"
     ]
    },
    "tegen": {
@@ -2116,6 +2650,12 @@
     ],
     "de": [
      "Ältere Autos mit kleinen Mängeln"
+    ],
+    "es": [
+     "Autos más viejos con defectos menores"
+    ],
+    "pt": [
+     "Carros mais velhos com defeitos pequenos"
     ]
    },
    "bronnen": [
@@ -2167,6 +2707,16 @@
      "Neue Autos, auch ein elektrischer Fiat 500",
      "Persönliche Übergabe an deinem Airbnb",
      "Flexibel bei verspäteten Flügen"
+    ],
+    "es": [
+     "Autos nuevos, incluido un Fiat 500 eléctrico",
+     "Entrega personal en tu Airbnb",
+     "Flexibles con los vuelos retrasados"
+    ],
+    "pt": [
+     "Carros novos, incluindo um Fiat 500 elétrico",
+     "Entrega pessoal no seu Airbnb",
+     "Flexíveis com voos atrasados"
     ]
    },
    "tegen": {
@@ -2178,6 +2728,12 @@
     ],
     "de": [
      "Keine Nachteile gefunden"
+    ],
+    "es": [
+     "No se encontraron desventajas"
+    ],
+    "pt": [
+     "Não foram encontrados pontos negativos"
     ]
    },
    "bronnen": [
@@ -2230,6 +2786,16 @@
      "Offene Jeeps (Suzuki Samurai), Lieferung vor Ort",
      "24-Stunden-Pannenhilfe",
      "Hilft bei annullierten Flügen"
+    ],
+    "es": [
+     "Jeeps descapotables (Suzuki Samurai), entregados donde estés",
+     "Asistencia en carretera las 24 horas",
+     "Ayudan cuando se cancelan los vuelos"
+    ],
+    "pt": [
+     "Jipes abertos (Suzuki Samurai), entregues onde você estiver",
+     "Assistência na estrada 24 horas",
+     "Ajudam quando os voos são cancelados"
     ]
    },
    "tegen": {
@@ -2241,6 +2807,12 @@
     ],
     "de": [
      "Mix aus Vermietung und Touren, wenige Bewertungen nur zur Miete"
+    ],
+    "es": [
+     "Combinan alquiler y tours, pocas reseñas solo del alquiler"
+    ],
+    "pt": [
+     "Combinam aluguel e passeios, poucas avaliações só do aluguel"
     ]
    },
    "bronnen": [
@@ -2289,6 +2861,14 @@
     "de": [
      "Neue, saubere Autos",
      "Flexible Abholung und Rückgabe"
+    ],
+    "es": [
+     "Autos nuevos y limpios",
+     "Entrega y devolución flexibles"
+    ],
+    "pt": [
+     "Carros novos e limpos",
+     "Retirada e devolução flexíveis"
     ]
    },
    "tegen": {
@@ -2300,6 +2880,12 @@
     ],
     "de": [
      "Wenige Bewertungen"
+    ],
+    "es": [
+     "Pocas reseñas"
+    ],
+    "pt": [
+     "Poucas avaliações"
     ]
    },
    "bronnen": [
@@ -2356,6 +2942,14 @@
     "de": [
      "Flexibel und lösungsorientiert, schnell per WhatsApp",
      "Monatlicher Autocheck bei Langzeitmiete"
+    ],
+    "es": [
+     "Flexibles y orientados a soluciones, rápidos por WhatsApp",
+     "Revisión mensual del auto en alquileres de larga duración"
+    ],
+    "pt": [
+     "Flexíveis e voltados a soluções, rápidos pelo WhatsApp",
+     "Revisão mensal do carro em aluguéis de longa duração"
     ]
    },
    "tegen": {
@@ -2373,6 +2967,16 @@
      "Ältere Autos mit Mängeln (platte Reifen, Kofferraum)",
      "Beschwerden über Rückerstattung und schlechte Erreichbarkeit danach",
      "14 % 1-Stern-Bewertungen auf Trustpilot"
+    ],
+    "es": [
+     "Autos viejos con defectos (llantas pinchadas, baúl)",
+     "Quejas por reembolsos y por no poder contactarlos después",
+     "El 14% de las reseñas de Trustpilot son de 1 estrella"
+    ],
+    "pt": [
+     "Carros velhos com defeitos (pneus furados, porta-malas)",
+     "Reclamações sobre reembolsos e por não conseguir contato depois",
+     "14% das avaliações do Trustpilot são de 1 estrela"
     ]
    },
    "bronnen": [
@@ -2450,6 +3054,16 @@
      "Shuttle vom Flughafen (ca. 10 Min.)",
      "Neue, saubere Autos; Schäden dokumentiert",
      "Unkomplizierte Rückgabe, nur volltanken"
+    ],
+    "es": [
+     "Traslado al aeropuerto (unos 10 minutos)",
+     "Autos nuevos y limpios; los daños quedan documentados",
+     "Devolución sin complicaciones, solo hay que llenar el tanque"
+    ],
+    "pt": [
+     "Traslado do aeroporto (cerca de 10 minutos)",
+     "Carros novos e limpos; os danos são documentados",
+     "Devolução sem complicações, só abastecer"
     ]
    },
    "tegen": {
@@ -2467,6 +3081,16 @@
      "Nur ein Schalter, daher längere Wartezeit",
      "Streit um die Deckung nach einem Unfall trotz Vollversicherung",
      "Ausweichende Antworten auf Fragen zur Kaution"
+    ],
+    "es": [
+     "Solo hay un mostrador, así que hay más espera",
+     "Disputa sobre la cobertura después de una colisión a pesar del seguro completo",
+     "Respuestas evasivas a las preguntas sobre el depósito"
+    ],
+    "pt": [
+     "Só há um balcão, então a espera é maior",
+     "Disputa sobre a cobertura após uma colisão apesar do seguro completo",
+     "Respostas evasivas às perguntas sobre a caução"
     ]
    },
    "bronnen": [
@@ -2522,6 +3146,14 @@
     "de": [
      "Günstiger als die Schalter am Flughafen",
      "Hilfsbereit bei komplizierten Rückgabewünschen"
+    ],
+    "es": [
+     "Más barato que los mostradores del aeropuerto",
+     "Ayudan con devoluciones complicadas"
+    ],
+    "pt": [
+     "Mais barato que os balcões do aeroporto",
+     "Ajudam com devoluções complicadas"
     ]
    },
    "tegen": {
@@ -2539,6 +3171,16 @@
      "Gebuchtes Auto nicht bereit oder niemand am Flughafen (Google und Forum)",
      "Alte Autos mit Mängeln",
      "Reagiert schlecht auf WhatsApp; vager Vertrag, strenge Schadensbedingungen"
+    ],
+    "es": [
+     "El auto reservado no estaba listo o no había nadie en el aeropuerto (Google y foro)",
+     "Autos viejos con defectos",
+     "Mala respuesta por WhatsApp; contrato poco claro, condiciones estrictas por daños"
+    ],
+    "pt": [
+     "O carro reservado não estava pronto ou não havia ninguém no aeroporto (Google e fórum)",
+     "Carros velhos com defeitos",
+     "Respostas ruins pelo WhatsApp; contrato vago, regras rígidas para danos"
     ]
    },
    "bronnen": [
@@ -2609,6 +3251,14 @@
     "de": [
      "Günstig, freundliches Personal",
      "Schneller Shuttle"
+    ],
+    "es": [
+     "Barato, con personal amable",
+     "Traslado rápido"
+    ],
+    "pt": [
+     "Barato, com funcionários simpáticos",
+     "Traslado rápido"
     ]
    },
    "tegen": {
@@ -2626,6 +3276,16 @@
      "1.000 $ Kaution, Rückzahlung nach 7 bis 14 Tagen",
      "Schadensforderungen bei Rückgabe (u. a. wegen Schlamm)",
      "Alte Autos, nicht die gebuchte Klasse"
+    ],
+    "es": [
+     "Depósito de $1,000, devuelto después de 7 a 14 días",
+     "Reclamos por daños al devolver (incluso por lodo)",
+     "Autos viejos, no de la categoría reservada"
+    ],
+    "pt": [
+     "Caução de $1.000, devolvida após 7 a 14 dias",
+     "Cobranças por danos na devolução (inclusive por lama)",
+     "Carros velhos, não da categoria reservada"
     ]
    },
    "bronnen": [
@@ -2704,6 +3364,16 @@
      "Effizienter Schalter am Flughafen",
      "Gebrauchsspuren vorab erfasst, keine unberechtigten Forderungen",
      "Freundliches Personal"
+    ],
+    "es": [
+     "Mostrador eficiente en el aeropuerto",
+     "El desgaste se registra al inicio, sin reclamos injustos",
+     "Personal amable"
+    ],
+    "pt": [
+     "Balcão eficiente no aeroporto",
+     "O desgaste é registrado no início, sem cobranças injustas",
+     "Funcionários simpáticos"
     ]
    },
    "tegen": {
@@ -2721,6 +3391,16 @@
      "Warten draußen bei der Übergabe (ein Mitarbeiter)",
      "Manchmal ein schmutziges Auto (Ameisen, Geruch)",
      "Druck bei externer Versicherung (Expedia): erst selbst zahlen"
+    ],
+    "es": [
+     "Esperas afuera al recoger el auto (un solo empleado)",
+     "A veces el auto está sucio (hormigas, mal olor)",
+     "Presión si tienes seguro externo (Expedia): pagas tú primero"
+    ],
+    "pt": [
+     "Espera do lado de fora na retirada (um só funcionário)",
+     "Às vezes o carro está sujo (formigas, mau cheiro)",
+     "Pressão se você tem seguro externo (Expedia): você paga primeiro"
     ]
    },
    "bronnen": [
@@ -2794,6 +3474,16 @@
      "Reibungslose Abholung und Rückgabe",
      "Half kurzfristig und bei 48 Stunden Verspätung",
      "Standorte am Flughafen und in Jan Thiel"
+    ],
+    "es": [
+     "Entrega y devolución sin problemas",
+     "Ayudaron a última hora y durante un retraso de 48 horas",
+     "Sucursales en el aeropuerto y en Jan Thiel"
+    ],
+    "pt": [
+     "Retirada e devolução sem problemas",
+     "Ajudaram de última hora e durante um atraso de 48 horas",
+     "Unidades no aeroporto e em Jan Thiel"
     ]
    },
    "tegen": {
@@ -2808,6 +3498,14 @@
     "de": [
      "Zustand des Autos manchmal nur 'okay'",
      "tabiji.ai nennt einen Tripadvisor-Bericht über Schadensforderungen (nicht verifiziert)"
+    ],
+    "es": [
+     "El estado del auto a veces es solo 'regular'",
+     "tabiji.ai cita un informe de Tripadvisor sobre reclamos por daños (sin verificar)"
+    ],
+    "pt": [
+     "O estado do carro às vezes é só 'razoável'",
+     "O tabiji.ai cita um relato do Tripadvisor sobre cobranças por danos (não verificado)"
     ]
    },
    "bronnen": [
@@ -2880,6 +3578,14 @@
     "de": [
      "Sehr freundliches Schalterpersonal",
      "Schnell ein Auto"
+    ],
+    "es": [
+     "Personal de mostrador muy amable",
+     "Consigues un auto rápido"
+    ],
+    "pt": [
+     "Funcionários de balcão muito simpáticos",
+     "Você consegue um carro rápido"
     ]
    },
    "tegen": {
@@ -2894,6 +3600,14 @@
     "de": [
      "Kein Shuttle vom Kreuzfahrthafen",
      "Wenige Bewertungen"
+    ],
+    "es": [
+     "No hay traslado desde el puerto de cruceros",
+     "Pocas reseñas"
+    ],
+    "pt": [
+     "Não há traslado do porto de cruzeiros",
+     "Poucas avaliações"
     ]
    },
    "bronnen": [
@@ -2955,6 +3669,14 @@
     "de": [
      "Hilfsbereite Mitarbeiter, manchmal ein Upgrade",
      "Keine unberechtigten Kosten bei Rückgabe (laut manchen Kunden)"
+    ],
+    "es": [
+     "Personal servicial, a veces con mejora de categoría",
+     "Sin cargos injustos al devolver (según algunos clientes)"
+    ],
+    "pt": [
+     "Funcionários prestativos, às vezes com upgrade",
+     "Sem cobranças injustas na devolução (segundo alguns clientes)"
     ]
    },
    "tegen": {
@@ -2975,6 +3697,18 @@
      "Vorschäden dem Kunden angelastet (Fotos retteten einen Kunden)",
      "Strenge Reinigungsgebühren",
      "Auto nicht bereit, Wartezeit"
+    ],
+    "es": [
+     "El precio final en el mostrador es mucho más alto que en línea",
+     "Culpan al cliente por daños que ya existían (las fotos salvaron a un cliente)",
+     "Cargos estrictos por limpieza",
+     "El auto no está listo, así que hay que esperar"
+    ],
+    "pt": [
+     "O preço final no balcão é bem mais alto do que online",
+     "Culpam o cliente por danos que já existiam (as fotos salvaram um cliente)",
+     "Taxas rígidas de limpeza",
+     "O carro não está pronto, então é preciso esperar"
     ]
    },
    "bronnen": [
@@ -3043,6 +3777,14 @@
     "de": [
      "Shuttle mit Klimaanlage, kurze Wartezeit",
      "Schnelle Übergabe, kostenloses WLAN im Büro"
+    ],
+    "es": [
+     "Traslado con aire acondicionado, poca espera",
+     "Entrega rápida, Wi-Fi gratis en la oficina"
+    ],
+    "pt": [
+     "Traslado com ar-condicionado, pouca espera",
+     "Retirada rápida, Wi-Fi grátis no escritório"
     ]
    },
    "tegen": {
@@ -3060,6 +3802,16 @@
      "Schadensforderungen bei Rückgabe (u. a. 500 USD, 250 $ für einen Kratzer) ohne Kopie des Schadensberichts",
      "Aufgezwungener Zusatzverkauf von Versicherung und Tankfüllung",
      "Alte Autos mit Defekten (Batterie, Fenster)"
+    ],
+    "es": [
+     "Reclamos por daños al devolver ($500, $250 por un rayón) sin copia del informe de daños",
+     "Venta forzada de seguro y combustible",
+     "Autos viejos con defectos (batería, ventanas)"
+    ],
+    "pt": [
+     "Cobranças por danos na devolução ($500, $250 por um arranhão) sem cópia do relatório de danos",
+     "Venda forçada de seguro e combustível",
+     "Carros velhos com defeitos (bateria, vidros)"
     ]
    },
    "bronnen": [
@@ -3162,6 +3914,14 @@
     "de": [
      "Schnelle Abwicklung (KAYAK, Jan. 2026)",
      "Ersatzwagen bei Panne"
+    ],
+    "es": [
+     "Servicio rápido (KAYAK, ene. 2026)",
+     "Auto de reemplazo después de una avería"
+    ],
+    "pt": [
+     "Atendimento rápido (KAYAK, jan. 2026)",
+     "Carro substituto após uma pane"
     ]
    },
    "tegen": {
@@ -3182,6 +3942,18 @@
      "Schadensforderungen bei Rückgabe (Schramme, Kofferraum 1.200 $)",
      "Alte oder schmutzige Autos, kleinere Klasse als gebucht",
      "Alle bekommen dasselbe Zeitfenster, also Warten (Jan Thiel)"
+    ],
+    "es": [
+     "Depósito de $1,000; hay reportes de que se cobró como pago o nunca se devolvió",
+     "Reclamos por daños al devolver (un roce, $1,200 por el baúl)",
+     "Autos viejos o sucios, de una categoría menor a la reservada",
+     "Todos tienen el mismo horario, así que hay que esperar (Jan Thiel)"
+    ],
+    "pt": [
+     "Caução de $1.000; há relatos de que foi cobrada como pagamento ou nunca devolvida",
+     "Cobranças por danos na devolução (um arranhão, $1.200 pelo porta-malas)",
+     "Carros velhos ou sujos, de categoria menor do que a reservada",
+     "Todos recebem o mesmo horário, então é preciso esperar (Jan Thiel)"
     ]
    },
    "bronnen": [
@@ -3267,6 +4039,16 @@
      "Schalter am Flughafen",
      "Freundliches Schalterpersonal",
      "Büro am Kreuzfahrtanleger (laut Forum)"
+    ],
+    "es": [
+     "Mostrador en el aeropuerto",
+     "Personal de mostrador amable",
+     "Oficina cerca del muelle de cruceros (según un foro)"
+    ],
+    "pt": [
+     "Balcão no aeroporto",
+     "Funcionários de balcão simpáticos",
+     "Escritório perto do cais dos cruzeiros (segundo um fórum)"
     ]
    },
    "tegen": {
@@ -3284,6 +4066,16 @@
      "Lange Wartezeiten (bis zu 2 Stunden), ein Mitarbeiter",
      "Alte, verbeulte, schmutzige Autos (150.000 km)",
      "Schlechte Hilfe bei Pannen (laut Forum)"
+    ],
+    "es": [
+     "Esperas largas (hasta 2 horas), un solo empleado",
+     "Autos viejos, abollados y sucios (150,000 km)",
+     "Mala ayuda con averías (según un foro)"
+    ],
+    "pt": [
+     "Esperas longas (até 2 horas), um só funcionário",
+     "Carros velhos, amassados e sujos (150.000 km)",
+     "Ajuda ruim com panes (segundo um fórum)"
     ]
    },
    "bronnen": [
@@ -3343,6 +4135,12 @@
     ],
     "de": [
      "Schnelle Abwicklung (März 2025)"
+    ],
+    "es": [
+     "Servicio rápido (mar. 2025)"
+    ],
+    "pt": [
+     "Atendimento rápido (mar. 2025)"
     ]
    },
    "tegen": {
@@ -3357,6 +4155,14 @@
     "de": [
      "Kein Auto verfügbar trotz bestätigter Reservierung",
      "Zusatzkosten, keine Antwort vom Kundenservice"
+    ],
+    "es": [
+     "No había auto disponible a pesar de tener una reserva confirmada",
+     "Cargos adicionales, sin respuesta del servicio al cliente"
+    ],
+    "pt": [
+     "Não havia carro disponível apesar de uma reserva confirmada",
+     "Cobranças extras, sem resposta do atendimento ao cliente"
     ]
    },
    "bronnen": [
@@ -3456,6 +4262,14 @@
     "de": [
      "Schnelle Abholung und Rückgabe, wenn alles klappt",
      "Manchmal ein Upgrade"
+    ],
+    "es": [
+     "Entrega y devolución rápidas cuando todo sale bien",
+     "A veces una mejora de categoría"
+    ],
+    "pt": [
+     "Retirada e devolução rápidas quando tudo dá certo",
+     "Às vezes um upgrade"
     ]
    },
    "tegen": {
@@ -3476,6 +4290,18 @@
      "Teure Versicherung ungefragt hinzugefügt oder als Pflicht dargestellt",
      "Wartezeiten bis zu 3 Stunden, ein Mitarbeiter",
      "Kaution nicht erstattet, Sprit doppelt berechnet; schmutzige Autos (Kakerlaken)"
+    ],
+    "es": [
+     "Reserva cancelada o 'sin auto' al llegar en temporada alta",
+     "Seguro caro agregado sin preguntar o impuesto como obligatorio",
+     "Esperas de hasta 3 horas, un solo empleado",
+     "Depósito no devuelto, combustible cobrado dos veces; autos sucios (cucarachas)"
+    ],
+    "pt": [
+     "Reserva cancelada ou 'sem carro' na chegada na alta temporada",
+     "Seguro caro adicionado sem perguntar ou imposto como obrigatório",
+     "Esperas de até 3 horas, um só funcionário",
+     "Caução não devolvida, combustível cobrado duas vezes; carros sujos (baratas)"
     ]
    },
    "bronnen": [
@@ -3515,12 +4341,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -3557,12 +4387,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -3595,12 +4429,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -3639,12 +4477,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -3683,12 +4525,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -3716,7 +4562,9 @@
    "borg": {
     "nl": "lage borg",
     "en": "low deposit",
-    "de": "niedrige Kaution"
+    "de": "niedrige Kaution",
+    "es": "depósito bajo",
+    "pt": "caução baixa"
    },
    "borgLaag": true,
    "eigenRisico": null,
@@ -3737,12 +4585,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": false,
    "bronnen": [
@@ -3781,12 +4633,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -3824,12 +4680,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -3858,7 +4718,9 @@
    "borg": {
     "nl": "lage borg",
     "en": "low deposit",
-    "de": "niedrige Kaution"
+    "de": "niedrige Kaution",
+    "es": "depósito bajo",
+    "pt": "caução baixa"
    },
    "borgLaag": true,
    "eigenRisico": null,
@@ -3872,12 +4734,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -3915,12 +4781,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -3952,12 +4822,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -3988,12 +4862,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -4024,12 +4902,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -4060,12 +4942,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -4094,12 +4980,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -4120,7 +5010,9 @@
    "borg": {
     "nl": "geen borg",
     "en": "no deposit",
-    "de": "keine Kaution"
+    "de": "keine Kaution",
+    "es": "sin depósito",
+    "pt": "sem caução"
    },
    "borgLaag": true,
    "eigenRisico": null,
@@ -4134,12 +5026,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -4168,12 +5064,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -4202,12 +5102,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -4228,7 +5132,9 @@
    "borg": {
     "nl": "creditcard of contant",
     "en": "credit card or cash",
-    "de": "Kreditkarte oder bar"
+    "de": "Kreditkarte oder bar",
+    "es": "tarjeta de crédito o efectivo",
+    "pt": "cartão de crédito ou dinheiro"
    },
    "borgLaag": true,
    "eigenRisico": null,
@@ -4242,12 +5148,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -4284,12 +5194,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "geenReviews": true,
    "bronnen": [
@@ -4315,7 +5229,9 @@
    "borg": {
     "nl": "geen borg",
     "en": "no deposit",
-    "de": "keine Kaution"
+    "de": "keine Kaution",
+    "es": "sin depósito",
+    "pt": "sem caução"
    },
    "borgLaag": true,
    "eigenRisico": null,
@@ -4337,6 +5253,12 @@
     ],
     "de": [
      "Rundum-Paket ohne Selbstbeteiligung (laut tipscuracao.nl)"
+    ],
+    "es": [
+     "Todo incluido con el deducible eliminado (según tipscuracao.nl)"
+    ],
+    "pt": [
+     "Tudo incluído com a franquia zerada (segundo tipscuracao.nl)"
     ]
    },
    "tegen": {
@@ -4348,6 +5270,12 @@
     ],
     "de": [
      "Sunny-Cars-Kunden bekamen Autos von Budget, Dollar oder Noordstar in schlechtem Zustand oder mussten vor der Prüfung unterschreiben"
+    ],
+    "es": [
+     "Los clientes de Sunny Cars recibieron autos de Budget, Dollar o Noordstar en mal estado, o tuvieron que firmar antes de la inspección"
+    ],
+    "pt": [
+     "Clientes da Sunny Cars receberam carros da Budget, Dollar ou Noordstar em mau estado, ou tiveram que assinar antes da inspeção"
     ]
    },
    "bronnen": [
@@ -4388,6 +5316,12 @@
     ],
     "de": [
      "Ab 1. Nov. 2026: Vollkasko inkl. Reifen, Unterboden und Glas; Kaution 200 USD"
+    ],
+    "es": [
+     "Desde el 1 de noviembre de 2026: cobertura total que incluye llantas, parte inferior y vidrios; depósito de $200"
+    ],
+    "pt": [
+     "A partir de 1º de novembro de 2026: cobertura total incluindo pneus, parte inferior e vidros; caução de $200"
     ]
    },
    "tegen": {
@@ -4402,6 +5336,14 @@
     "de": [
      "Strenge Kreditkartenpflicht: physische Karte mit PIN auf den Namen des Hauptfahrers",
      "Alte Bedingungen: 500 USD Selbstbeteiligung, Ablösung nur am Schalter"
+    ],
+    "es": [
+     "Regla estricta de tarjeta de crédito: tarjeta física con PIN a nombre del conductor principal",
+     "Condiciones antiguas: deducible de $500, exención solo en el mostrador"
+    ],
+    "pt": [
+     "Regra rígida de cartão de crédito: cartão físico com senha no nome do motorista principal",
+     "Condições antigas: franquia de $500, isenção só no balcão"
     ]
    },
    "bronnen": [
@@ -4423,7 +5365,9 @@
    "borg": {
     "nl": "creditcard of contant",
     "en": "credit card or cash",
-    "de": "Kreditkarte oder bar"
+    "de": "Kreditkarte oder bar",
+    "es": "tarjeta de crédito o efectivo",
+    "pt": "cartão de crédito ou dinheiro"
    },
    "borgLaag": true,
    "eigenRisico": null,
@@ -4439,12 +5383,16 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/tropicdrivecom-launches-first-car-rental-platform-with-live-comparison-and-online-booking-in-curacao",
@@ -4490,6 +5438,12 @@
     ],
     "de": [
      "Schneller Service (1 Bewertung, Sept. 2026)"
+    ],
+    "es": [
+     "Servicio rápido (1 reseña, sep. 2026)"
+    ],
+    "pt": [
+     "Atendimento rápido (1 avaliação, set. 2026)"
     ]
    },
    "tegen": {
@@ -4501,6 +5455,12 @@
     ],
     "de": [
      "Ein Kunde: nur ein Vermittler, am Ende kein Auto verfügbar (2023)"
+    ],
+    "es": [
+     "Un cliente: solo un intermediario, y al final no había auto disponible (2023)"
+    ],
+    "pt": [
+     "Um cliente: só um intermediário, e no fim não havia carro disponível (2023)"
     ]
    },
    "bronnen": [
@@ -4541,7 +5501,9 @@
    "voor": {
     "nl": [],
     "en": [],
-    "de": []
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [
@@ -4552,6 +5514,12 @@
     ],
     "de": [
      "Kein Auto und kein Büro am Flughafen, keine Rückerstattung, nicht erreichbar"
+    ],
+    "es": [
+     "Sin auto y sin oficina en el aeropuerto, sin reembolso, imposible de contactar"
+    ],
+    "pt": [
+     "Sem carro e sem escritório no aeroporto, sem reembolso, impossível de contatar"
     ]
    },
    "bronnen": [
@@ -4571,108 +5539,144 @@
    "q": {
     "nl": "Welke autoverhuurder op Curaçao heeft de beste reviews?",
     "en": "Which car rental company in Curaçao has the best reviews?",
-    "de": "Welche Autovermietung auf Curaçao hat die besten Bewertungen?"
+    "de": "Welche Autovermietung auf Curaçao hat die besten Bewertungen?",
+    "es": "¿Qué empresa de alquiler de autos en Curazao tiene las mejores reseñas?",
+    "pt": "Qual locadora de carros em Curaçao tem as melhores avaliações?"
    },
    "a": {
     "nl": "Op Google scoren lokale verhuurders veel hoger dan de merken op het vliegveld. Prins Car Rental heeft het meeste reviews (4,9 uit 2.686 op Google, 4,9 op Tripadvisor), De Vos 5,0 uit 1.547, Smart Wheels 4,7 uit 1.225. Avis, Hertz en Thrifty zitten op Google rond de 2,2 tot 2,4. Kijk ook naar het aantal reviews: een 5,0 uit 30 reviews zegt minder dan een 4,8 uit 1.000.",
     "en": "On Google, local companies score far higher than the airport brands. Prins Car Rental has the most reviews (4.9 from 2,686 on Google, 4.9 on Tripadvisor), De Vos 5.0 from 1,547, Smart Wheels 4.7 from 1,225. Avis, Hertz and Thrifty sit around 2.2 to 2.4 on Google. Look at the review count too: a 5.0 from 30 reviews says less than a 4.8 from 1,000.",
-    "de": "Bei Google schneiden lokale Vermieter deutlich besser ab als die Marken am Flughafen. Prins Car Rental hat die meisten Bewertungen (4,9 aus 2.686 bei Google, 4,9 bei Tripadvisor), De Vos 5,0 aus 1.547, Smart Wheels 4,7 aus 1.225. Avis, Hertz und Thrifty liegen bei Google um 2,2 bis 2,4. Achte auch auf die Anzahl: eine 5,0 aus 30 Bewertungen sagt weniger als eine 4,8 aus 1.000."
+    "de": "Bei Google schneiden lokale Vermieter deutlich besser ab als die Marken am Flughafen. Prins Car Rental hat die meisten Bewertungen (4,9 aus 2.686 bei Google, 4,9 bei Tripadvisor), De Vos 5,0 aus 1.547, Smart Wheels 4,7 aus 1.225. Avis, Hertz und Thrifty liegen bei Google um 2,2 bis 2,4. Achte auch auf die Anzahl: eine 5,0 aus 30 Bewertungen sagt weniger als eine 4,8 aus 1.000.",
+    "es": "En Google, las empresas locales tienen puntajes mucho más altos que las marcas del aeropuerto. Prins Car Rental tiene más reseñas (4.9 con 2,686 en Google, 4.9 en Tripadvisor), De Vos 5.0 con 1,547, Smart Wheels 4.7 con 1,225. Avis, Hertz y Thrifty rondan entre 2.2 y 2.4 en Google. Fíjate también en la cantidad de reseñas: un 5.0 con 30 reseñas dice menos que un 4.8 con 1,000.",
+    "pt": "No Google, as locadoras locais têm notas bem mais altas do que as marcas do aeroporto. A Prins Car Rental tem mais avaliações (4,9 com 2.686 no Google, 4,9 no Tripadvisor), a De Vos 5,0 com 1.547, a Smart Wheels 4,7 com 1.225. Avis, Hertz e Thrifty ficam entre 2,2 e 2,4 no Google. Olhe também o número de avaliações: um 5,0 com 30 avaliações diz menos do que um 4,8 com 1.000."
    }
   },
   {
    "q": {
     "nl": "Kan ik op Curaçao een auto huren zonder borg of zonder creditcard?",
     "en": "Can I rent a car in Curaçao with no deposit or without a credit card?",
-    "de": "Kann ich auf Curaçao ohne Kaution oder ohne Kreditkarte ein Auto mieten?"
+    "de": "Kann ich auf Curaçao ohne Kaution oder ohne Kreditkarte ein Auto mieten?",
+    "es": "¿Puedo alquilar un auto en Curazao sin depósito o sin tarjeta de crédito?",
+    "pt": "Posso alugar um carro em Curaçao sem caução ou sem cartão de crédito?"
    },
    "a": {
     "nl": "Ja, bij een deel van de lokale verhuurders. Volgens reviews vragen onder meer De Vos, Just Drive en Move It vaak geen borg of creditcard. De internationale merken blokkeren meestal 500 tot 1.000 dollar op je creditcard. In de tabel hieronder zie je per verhuurder wat bekend is over de borg.",
     "en": "Yes, with some of the local companies. According to reviews, De Vos, Just Drive and Move It among others often ask for no deposit or credit card. The international brands usually put a hold of 500 to 1,000 dollars on your credit card. The table below shows what is known about each company's deposit.",
-    "de": "Ja, bei einem Teil der lokalen Vermieter. Laut Bewertungen verlangen unter anderem De Vos, Just Drive und Move It oft keine Kaution oder Kreditkarte. Die internationalen Marken blockieren meist 500 bis 1.000 Dollar auf der Kreditkarte. In der Tabelle unten siehst du, was je Vermieter über die Kaution bekannt ist."
+    "de": "Ja, bei einem Teil der lokalen Vermieter. Laut Bewertungen verlangen unter anderem De Vos, Just Drive und Move It oft keine Kaution oder Kreditkarte. Die internationalen Marken blockieren meist 500 bis 1.000 Dollar auf der Kreditkarte. In der Tabelle unten siehst du, was je Vermieter über die Kaution bekannt ist.",
+    "es": "Sí, con algunas de las empresas locales. Según las reseñas, De Vos, Just Drive y Move It, entre otras, a menudo no piden depósito ni tarjeta de crédito. Las marcas internacionales suelen retener entre 500 y 1,000 dólares en tu tarjeta de crédito. La tabla de abajo muestra lo que se sabe del depósito de cada empresa.",
+    "pt": "Sim, com algumas das locadoras locais. Segundo as avaliações, De Vos, Just Drive e Move It, entre outras, muitas vezes não pedem caução nem cartão de crédito. As marcas internacionais costumam bloquear de 500 a 1.000 dólares no seu cartão de crédito. A tabela abaixo mostra o que se sabe sobre a caução de cada empresa."
    }
   },
   {
    "q": {
     "nl": "Lokale verhuurder of een bekend merk op het vliegveld?",
     "en": "Local company or a big brand at the airport?",
-    "de": "Lokaler Vermieter oder bekannte Marke am Flughafen?"
+    "de": "Lokaler Vermieter oder bekannte Marke am Flughafen?",
+    "es": "¿Una empresa local o una marca grande en el aeropuerto?",
+    "pt": "Locadora local ou uma marca grande no aeroporto?"
    },
    "a": {
     "nl": "In reviews komen bij de merken op het vliegveld steeds dezelfde klachten terug: schadeclaims bij het inleveren, een borg die laat of niet terugkomt, verzekering die aan de balie wordt toegevoegd en lange rijen. Lokale verhuurders halen je meestal op met een shuttle of bezorgen de auto bij je hotel en regelen veel via WhatsApp. Hun nadeel: in het hoogseizoen zijn ze snel volgeboekt, en bij de goedkoopste lokale partijen zijn de auto's soms oud.",
     "en": "Reviews of the airport brands keep raising the same complaints: damage claims at return, deposits refunded late or not at all, insurance added at the desk and long lines. Local companies usually pick you up with a shuttle or deliver the car to your hotel and handle a lot over WhatsApp. Their downside: they book up fast in high season, and the cheapest local outfits sometimes have old cars.",
-    "de": "Bei den Marken am Flughafen tauchen in Bewertungen immer wieder dieselben Beschwerden auf: Schadensforderungen bei der Rückgabe, eine Kaution, die spät oder gar nicht zurückkommt, Versicherungen, die am Schalter hinzugefügt werden, und lange Warteschlangen. Lokale Vermieter holen dich meist mit einem Shuttle ab oder bringen das Auto ans Hotel und regeln viel über WhatsApp. Ihr Nachteil: In der Hochsaison sind sie schnell ausgebucht, und bei den günstigsten lokalen Anbietern sind die Autos manchmal alt."
+    "de": "Bei den Marken am Flughafen tauchen in Bewertungen immer wieder dieselben Beschwerden auf: Schadensforderungen bei der Rückgabe, eine Kaution, die spät oder gar nicht zurückkommt, Versicherungen, die am Schalter hinzugefügt werden, und lange Warteschlangen. Lokale Vermieter holen dich meist mit einem Shuttle ab oder bringen das Auto ans Hotel und regeln viel über WhatsApp. Ihr Nachteil: In der Hochsaison sind sie schnell ausgebucht, und bei den günstigsten lokalen Anbietern sind die Autos manchmal alt.",
+    "es": "Las reseñas de las marcas del aeropuerto repiten las mismas quejas: reclamos por daños al devolver, depósitos devueltos tarde o nunca, seguro agregado en el mostrador y filas largas. Las empresas locales suelen recogerte con un traslado o llevar el auto a tu hotel, y resuelven mucho por WhatsApp. Su desventaja: se llenan rápido en temporada alta, y las locales más baratas a veces tienen autos viejos.",
+    "pt": "As avaliações das marcas do aeroporto repetem as mesmas reclamações: cobranças por danos na devolução, cauções devolvidas tarde ou nunca, seguro adicionado no balcão e filas longas. As locadoras locais costumam buscar você com um traslado ou levar o carro ao seu hotel, e resolvem muita coisa pelo WhatsApp. O ponto negativo delas: lotam rápido na alta temporada, e as locais mais baratas às vezes têm carros velhos."
    }
   },
   {
    "q": {
     "nl": "Aan welke kant van de weg rijd je op Curaçao?",
     "en": "Which side of the road do you drive on in Curaçao?",
-    "de": "Auf welcher Straßenseite fährt man auf Curaçao?"
+    "de": "Auf welcher Straßenseite fährt man auf Curaçao?",
+    "es": "¿Por qué lado de la carretera se conduce en Curazao?",
+    "pt": "De que lado da pista se dirige em Curaçao?"
    },
    "a": {
     "nl": "Rechts, net als in Nederland. Je rijdt met een gewone auto overal op het eiland; voor onverharde wegen naar sommige stranden in het westen is een hogere auto of jeep prettiger.",
     "en": "On the right, like in the US. A regular car gets you everywhere on the island; for the dirt roads to some beaches in the west a higher car or jeep is more comfortable.",
-    "de": "Rechts, wie in Deutschland. Mit einem normalen Auto kommst du überall auf der Insel hin; für die Schotterwege zu manchen Stränden im Westen ist ein höheres Auto oder ein Jeep angenehmer."
+    "de": "Rechts, wie in Deutschland. Mit einem normalen Auto kommst du überall auf der Insel hin; für die Schotterwege zu manchen Stränden im Westen ist ein höheres Auto oder ein Jeep angenehmer.",
+    "es": "Por la derecha, como en Estados Unidos. Un auto normal te lleva a cualquier parte de la isla; para los caminos de tierra a algunas playas del oeste, un auto más alto o un jeep es más cómodo.",
+    "pt": "Pela direita, como nos Estados Unidos. Um carro comum leva você a qualquer lugar da ilha; para as estradas de terra até algumas praias do oeste, um carro mais alto ou um jipe é mais confortável."
    }
   },
   {
    "q": {
     "nl": "Is mijn rijbewijs geldig op Curaçao?",
     "en": "Is my driver's license valid in Curaçao?",
-    "de": "Gilt mein Führerschein auf Curaçao?"
+    "de": "Gilt mein Führerschein auf Curaçao?",
+    "es": "¿Es válida mi licencia de conducir en Curazao?",
+    "pt": "Minha carteira de motorista vale em Curaçao?"
    },
    "a": {
     "nl": "Ja. Een Nederlands rijbewijs is geldig, ook om een auto te huren; een internationaal rijbewijs is niet nodig (ANWB). Verhuurders vragen vaak een of twee jaar rijervaring en een creditcard op naam van de hoofdbestuurder, behalve de lokale verhuurders die geen borg vragen.",
     "en": "Yes. Tourists can drive and rent on their home license; an international driving permit is not required. Rental companies often ask for one or two years of driving experience and a credit card in the main driver's name, except the local companies that take no deposit.",
-    "de": "Ja. Ein EU-Führerschein reicht zum Fahren und Mieten, ein internationaler Führerschein ist nicht nötig. Vermieter verlangen oft ein bis zwei Jahre Fahrpraxis und eine Kreditkarte auf den Namen des Hauptfahrers, außer den lokalen Vermietern ohne Kaution."
+    "de": "Ja. Ein EU-Führerschein reicht zum Fahren und Mieten, ein internationaler Führerschein ist nicht nötig. Vermieter verlangen oft ein bis zwei Jahre Fahrpraxis und eine Kreditkarte auf den Namen des Hauptfahrers, außer den lokalen Vermietern ohne Kaution.",
+    "es": "Sí. Los turistas pueden conducir y alquilar con su licencia de su país; no se requiere un permiso internacional de conducir. Las empresas de alquiler suelen pedir uno o dos años de experiencia y una tarjeta de crédito a nombre del conductor principal, salvo las empresas locales que no piden depósito.",
+    "pt": "Sim. Os turistas podem dirigir e alugar com a carteira do próprio país; não é preciso uma permissão internacional para dirigir. As locadoras costumam pedir um ou dois anos de experiência e um cartão de crédito no nome do motorista principal, exceto as locadoras locais que não pedem caução."
    }
   },
   {
    "q": {
     "nl": "Wat is de minimumleeftijd om op Curaçao een auto te huren?",
     "en": "What is the minimum age to rent a car in Curaçao?",
-    "de": "Wie alt muss man sein, um auf Curaçao ein Auto zu mieten?"
+    "de": "Wie alt muss man sein, um auf Curaçao ein Auto zu mieten?",
+    "es": "¿Cuál es la edad mínima para alquilar un auto en Curazao?",
+    "pt": "Qual é a idade mínima para alugar um carro em Curaçao?"
    },
    "a": {
     "nl": "Dat verschilt per verhuurder. Enterprise, National en Sixt hanteren 23 jaar, Alamo 25. Bij een deel van de lokale verhuurders, zoals Ruseler en Acoya, kun je vanaf 21 huren. Ben je jonger, vraag het dan vooraf na.",
     "en": "It depends on the company. Enterprise, National and Sixt use 23, Alamo 25. Some local companies, such as Ruseler and Acoya, rent from age 21. If you are younger, ask before you book.",
-    "de": "Das hängt vom Vermieter ab. Enterprise, National und Sixt verlangen 23 Jahre, Alamo 25. Bei einigen lokalen Vermietern wie Ruseler und Acoya geht es ab 21. Bist du jünger, frag vorher nach."
+    "de": "Das hängt vom Vermieter ab. Enterprise, National und Sixt verlangen 23 Jahre, Alamo 25. Bei einigen lokalen Vermietern wie Ruseler und Acoya geht es ab 21. Bist du jünger, frag vorher nach.",
+    "es": "Depende de la empresa. Enterprise, National y Sixt piden 23 años, Alamo 25. Algunas empresas locales, como Ruseler y Acoya, alquilan desde los 21. Si eres más joven, pregunta antes de reservar.",
+    "pt": "Depende da locadora. Enterprise, National e Sixt exigem 23 anos, Alamo 25. Algumas locadoras locais, como Ruseler e Acoya, alugam a partir dos 21. Se você for mais jovem, pergunte antes de reservar."
    }
   },
   {
    "q": {
     "nl": "Hoe hoog is het eigen risico en wat dekt de verzekering?",
     "en": "How high is the excess and what does the insurance cover?",
-    "de": "Wie hoch ist die Selbstbeteiligung und was deckt die Versicherung?"
+    "de": "Wie hoch ist die Selbstbeteiligung und was deckt die Versicherung?",
+    "es": "¿De cuánto es el deducible y qué cubre el seguro?",
+    "pt": "Qual é o valor da franquia e o que o seguro cobre?"
    },
    "a": {
     "nl": "Een eigen risico van ongeveer 400 tot 500 dollar komt veel voor. Vraag na of banden, glas en de onderkant van de auto zijn gedekt, want daar gaat het in klachten vaak mis.",
     "en": "An excess of around 400 to 500 dollars is common. Ask whether tires, glass and the underside of the car are covered, because that is where complaints often come from.",
-    "de": "Eine Selbstbeteiligung von etwa 400 bis 500 Dollar ist üblich. Frag nach, ob Reifen, Glas und Unterboden versichert sind, denn genau dort entstehen oft Beschwerden."
+    "de": "Eine Selbstbeteiligung von etwa 400 bis 500 Dollar ist üblich. Frag nach, ob Reifen, Glas und Unterboden versichert sind, denn genau dort entstehen oft Beschwerden.",
+    "es": "Un deducible de entre 400 y 500 dólares es lo común. Pregunta si cubre llantas, vidrios y la parte inferior del auto, porque de ahí vienen muchas quejas.",
+    "pt": "Uma franquia de cerca de 400 a 500 dólares é comum. Pergunte se cobre pneus, vidros e a parte inferior do carro, porque é daí que vêm muitas reclamações."
    }
   },
   {
    "q": {
     "nl": "Wat moet ik doen bij een ongeluk op Curaçao?",
     "en": "What should I do after an accident in Curaçao?",
-    "de": "Was muss ich nach einem Unfall auf Curaçao tun?"
+    "de": "Was muss ich nach einem Unfall auf Curaçao tun?",
+    "es": "¿Qué debo hacer después de un accidente en Curazao?",
+    "pt": "O que devo fazer depois de um acidente em Curaçao?"
    },
    "a": {
     "nl": "Laat de auto staan, bel 9233 (Road Service) of Forensys (+599 9 461 3282) en meld het direct bij de verhuurder. Wie de auto verplaatst voordat de schade is opgenomen, loopt het risico dat de verzekering niet uitkeert.",
     "en": "Leave the car where it is, call 9233 (Road Service) or Forensys (+599 9 461 3282) and tell the rental company right away. If you move the car before the damage is recorded, the insurance may refuse to pay.",
-    "de": "Lass das Auto stehen, ruf 9233 (Road Service) oder Forensys (+599 9 461 3282) an und melde es sofort dem Vermieter. Wer das Auto bewegt, bevor der Schaden aufgenommen ist, riskiert, dass die Versicherung nicht zahlt."
+    "de": "Lass das Auto stehen, ruf 9233 (Road Service) oder Forensys (+599 9 461 3282) an und melde es sofort dem Vermieter. Wer das Auto bewegt, bevor der Schaden aufgenommen ist, riskiert, dass die Versicherung nicht zahlt.",
+    "es": "Deja el auto donde está, llama al 9233 (Road Service) o a Forensys (+599 9 461 3282) y avisa de inmediato a la empresa de alquiler. Si mueves el auto antes de que se registre el daño, el seguro puede negarse a pagar.",
+    "pt": "Deixe o carro onde está, ligue para 9233 (Road Service) ou para a Forensys (+599 9 461 3282) e avise a locadora imediatamente. Se você mover o carro antes de o dano ser registrado, o seguro pode se recusar a pagar."
    }
   },
   {
    "q": {
     "nl": "Kan ik beter op het vliegveld huren of de auto laten bezorgen?",
     "en": "Is it better to rent at the airport or have the car delivered?",
-    "de": "Lieber am Flughafen mieten oder das Auto bringen lassen?"
+    "de": "Lieber am Flughafen mieten oder das Auto bringen lassen?",
+    "es": "¿Es mejor alquilar en el aeropuerto o que te entreguen el auto?",
+    "pt": "É melhor alugar no aeroporto ou receber o carro onde você está?"
    },
    "a": {
     "nl": "Op vliegveld Hato zitten vooral de internationale merken met een balie. Veel lokale verhuurders zitten vlak bij het vliegveld aan de FD Rooseveltweg en halen je op met een shuttle, of bezorgen de auto bij je hotel of appartement. Kies in de keuzehulp hierboven hoe je de auto wilt ophalen.",
     "en": "The desks at Hato airport are mostly the international brands. Many local companies are right next to the airport on FD Rooseveltweg and pick you up with a shuttle, or deliver the car to your hotel or rental. Choose your pick-up method in the tool above.",
-    "de": "Am Flughafen Hato haben vor allem die internationalen Marken einen Schalter. Viele lokale Vermieter sitzen direkt am Flughafen an der FD Rooseveltweg und holen dich mit einem Shuttle ab oder bringen das Auto zu deinem Hotel oder Apartment. Wähle oben aus, wie du das Auto abholen willst."
+    "de": "Am Flughafen Hato haben vor allem die internationalen Marken einen Schalter. Viele lokale Vermieter sitzen direkt am Flughafen an der FD Rooseveltweg und holen dich mit einem Shuttle ab oder bringen das Auto zu deinem Hotel oder Apartment. Wähle oben aus, wie du das Auto abholen willst.",
+    "es": "Los mostradores del aeropuerto de Hato son sobre todo de las marcas internacionales. Muchas empresas locales están justo al lado del aeropuerto, en la FD Rooseveltweg, y te recogen con un traslado o llevan el auto a tu hotel o alojamiento. Elige cómo quieres recoger el auto en la herramienta de arriba.",
+    "pt": "Os balcões do aeroporto de Hato são principalmente das marcas internacionais. Muitas locadoras locais ficam bem ao lado do aeroporto, na FD Rooseveltweg, e buscam você com um traslado ou levam o carro ao seu hotel ou hospedagem. Escolha como quer retirar o carro na ferramenta acima."
    }
   }
  ],
@@ -4680,57 +5684,79 @@
   {
    "nl": "Maak foto's of een video van de hele auto, ook banden, onderkant, interieur, tank en km-stand. Laat bestaande schade op het formulier zetten voordat je tekent.",
    "en": "Take photos or video of the whole car, including tires, underside, interior, fuel gauge and mileage. Have existing damage written on the form before you sign.",
-   "de": "Mach Fotos oder ein Video vom ganzen Auto, auch von Reifen, Unterboden, Innenraum, Tank und Kilometerstand. Lass Vorschäden ins Formular eintragen, bevor du unterschreibst."
+   "de": "Mach Fotos oder ein Video vom ganzen Auto, auch von Reifen, Unterboden, Innenraum, Tank und Kilometerstand. Lass Vorschäden ins Formular eintragen, bevor du unterschreibst.",
+   "es": "Toma fotos o video de todo el auto, incluidas las llantas, la parte inferior, el interior, el indicador de combustible y el kilometraje. Pide que los daños existentes queden escritos en el formulario antes de firmar.",
+   "pt": "Tire fotos ou faça um vídeo do carro inteiro, incluindo pneus, parte inferior, interior, medidor de combustível e quilometragem. Peça para anotar os danos existentes no formulário antes de assinar."
   },
   {
    "nl": "Teken niets voordat je de auto hebt gezien. Bewaar de uitgifte- en inleverpapieren en je laatste tankbon.",
    "en": "Don't sign anything before you've seen the car. Keep your pickup and return paperwork and your last gas receipt.",
-   "de": "Unterschreib nichts, bevor du das Auto gesehen hast. Heb die Übergabe- und Rückgabepapiere und den letzten Tankbeleg auf."
+   "de": "Unterschreib nichts, bevor du das Auto gesehen hast. Heb die Übergabe- und Rückgabepapiere und den letzten Tankbeleg auf.",
+   "es": "No firmes nada antes de ver el auto. Guarda los papeles de entrega y devolución y tu último recibo de gasolina.",
+   "pt": "Não assine nada antes de ver o carro. Guarde os papéis de retirada e devolução e o seu último recibo de combustível."
   },
   {
    "nl": "Schadeclaims bij inleveren voor kleine of bestaande schade komen vooral voor bij luchthavenmerken. Vraag daarom bij uitgifte altijd een kopie van het schaderapport.",
    "en": "Damage claims at return for small or preexisting damage happen mostly with the airport brands. Always ask for a copy of the damage report at pickup.",
-   "de": "Schadensforderungen bei Rückgabe für kleine oder alte Schäden gibt es vor allem bei den Flughafenmarken. Lass dir bei der Übergabe immer eine Kopie des Schadensberichts geben."
+   "de": "Schadensforderungen bei Rückgabe für kleine oder alte Schäden gibt es vor allem bei den Flughafenmarken. Lass dir bei der Übergabe immer eine Kopie des Schadensberichts geben.",
+   "es": "Los reclamos por daños pequeños o ya existentes al devolver ocurren sobre todo con las marcas del aeropuerto. Pide siempre una copia del informe de daños al recoger el auto.",
+   "pt": "As cobranças por danos pequenos ou já existentes na devolução acontecem principalmente com as marcas do aeroporto. Peça sempre uma cópia do relatório de danos na retirada."
   },
   {
    "nl": "Grote merken blokkeren vaak $500 tot 1.000 borg op je creditcard, en soms werd die als betaling geboekt of kwam die weken niet terug. Betwist onterechte afschrijvingen via je creditcardmaatschappij.",
    "en": "Big brands often put a $500 to $1,000 hold on your credit card, and some renters saw it charged as a payment or waited weeks to get it back. Dispute unfair charges through your credit card company.",
-   "de": "Große Anbieter blockieren oft 500 bis 1.000 $ Kaution auf deiner Kreditkarte, und manchmal wurde sie als Zahlung gebucht oder kam wochenlang nicht zurück. Fechte unberechtigte Abbuchungen über deine Kreditkartenfirma an."
+   "de": "Große Anbieter blockieren oft 500 bis 1.000 $ Kaution auf deiner Kreditkarte, und manchmal wurde sie als Zahlung gebucht oder kam wochenlang nicht zurück. Fechte unberechtigte Abbuchungen über deine Kreditkartenfirma an.",
+   "es": "Las marcas grandes suelen retener entre $500 y $1,000 en tu tarjeta de crédito, y algunos clientes vieron que se cobró como pago o esperaron semanas para recuperarlo. Disputa los cargos injustos con la empresa de tu tarjeta.",
+   "pt": "As marcas grandes costumam bloquear de $500 a $1.000 no seu cartão de crédito, e alguns clientes viram o valor ser cobrado como pagamento ou esperaram semanas para recuperá-lo. Conteste cobranças injustas com a operadora do seu cartão."
   },
   {
    "nl": "Check wat de verzekering dekt (banden, glas, onderkant) en hoe hoog het eigen risico is, vaak rond USD 400 tot 500. Aan de balie wordt verzekering soms ongevraagd toegevoegd, dus vergelijk de eindprijs met je online boeking.",
    "en": "Check what the insurance covers (tires, glass, underside) and how high the deductible is, often around $400 to $500. Counters sometimes add insurance without asking, so compare the final price with your online booking.",
-   "de": "Prüf, was die Versicherung abdeckt (Reifen, Glas, Unterboden) und wie hoch die Selbstbeteiligung ist, oft etwa 400 bis 500 USD. Am Schalter wird manchmal ungefragt eine Versicherung hinzugefügt, also vergleich den Endpreis mit deiner Online-Buchung."
+   "de": "Prüf, was die Versicherung abdeckt (Reifen, Glas, Unterboden) und wie hoch die Selbstbeteiligung ist, oft etwa 400 bis 500 USD. Am Schalter wird manchmal ungefragt eine Versicherung hinzugefügt, also vergleich den Endpreis mit deiner Online-Buchung.",
+   "es": "Revisa qué cubre el seguro (llantas, vidrios, parte inferior) y de cuánto es el deducible, a menudo entre $400 y $500. En los mostradores a veces agregan seguro sin preguntar, así que compara el precio final con tu reserva en línea.",
+   "pt": "Verifique o que o seguro cobre (pneus, vidros, parte inferior) e qual é o valor da franquia, muitas vezes entre $400 e $500. Nos balcões, às vezes adicionam seguro sem perguntar, então compare o preço final com a sua reserva online."
   },
   {
    "nl": "Bij een ongeluk laat je de auto staan, bel je Forensys (9233) en informeer je meteen de verhuurder. Anders vervalt je dekking.",
    "en": "If you have an accident, leave the car where it is, call Forensys (9233) and tell the rental company right away. Otherwise your coverage lapses.",
-   "de": "Bei einem Unfall lässt du das Auto stehen, rufst Forensys an (9233) und informierst sofort den Vermieter. Sonst erlischt dein Versicherungsschutz."
+   "de": "Bei einem Unfall lässt du das Auto stehen, rufst Forensys an (9233) und informierst sofort den Vermieter. Sonst erlischt dein Versicherungsschutz.",
+   "es": "Si tienes un accidente, deja el auto donde está, llama a Forensys (9233) y avisa de inmediato a la empresa de alquiler. De lo contrario, tu cobertura se pierde.",
+   "pt": "Se você sofrer um acidente, deixe o carro onde está, ligue para a Forensys (9233) e avise a locadora imediatamente. Caso contrário, sua cobertura é perdida."
   },
   {
    "nl": "Boek vroeg in het hoogseizoen. Lokale verhuurders raken vol, en bij sommige grote merken werd de reservering geannuleerd of stond er geen auto klaar.",
    "en": "Book early for high season. Local companies sell out, and some big brands have canceled reservations or had no car waiting.",
-   "de": "Buch in der Hochsaison früh. Lokale Vermieter sind schnell voll, und bei manchen großen Marken wurde die Reservierung storniert oder es stand kein Auto bereit."
+   "de": "Buch in der Hochsaison früh. Lokale Vermieter sind schnell voll, und bei manchen großen Marken wurde die Reservierung storniert oder es stand kein Auto bereit.",
+   "es": "Reserva con anticipación para la temporada alta. Las empresas locales se agotan, y algunas marcas grandes han cancelado reservas o no tenían auto esperando.",
+   "pt": "Reserve com antecedência para a alta temporada. As locadoras locais esgotam, e algumas marcas grandes cancelaram reservas ou não tinham carro à espera."
   },
   {
    "nl": "Lokale verhuurders werken vaak zonder borg of creditcard en met all-in verzekering. Ze halen je op met een shuttle of leveren de auto bij je af.",
    "en": "Local companies often work without a deposit or credit card and include all-in insurance. They pick you up by shuttle or bring the car to you.",
-   "de": "Lokale Vermieter verzichten oft auf Kaution und Kreditkarte und bieten eine Rundum-Versicherung. Sie holen dich mit dem Shuttle ab oder bringen dir das Auto."
+   "de": "Lokale Vermieter verzichten oft auf Kaution und Kreditkarte und bieten eine Rundum-Versicherung. Sie holen dich mit dem Shuttle ab oder bringen dir das Auto.",
+   "es": "Las empresas locales suelen trabajar sin depósito ni tarjeta de crédito e incluyen seguro todo incluido. Te recogen con un traslado o te llevan el auto.",
+   "pt": "As locadoras locais costumam trabalhar sem caução nem cartão de crédito e incluem seguro completo. Elas buscam você com um traslado ou levam o carro até você."
   },
   {
    "nl": "Laat niets zichtbaar in de auto liggen, want bij strandparkeerplaatsen zoals Mambo wordt ingebroken. Let ook op zand en natte stoelen: schoonmaakboetes van $50 tot 150 komen voor.",
    "en": "Don't leave anything visible in the car, since break-ins happen at beach parking lots like Mambo. Also watch out for sand and wet seats, because cleaning fees run $50 to $150.",
-   "de": "Lass nichts sichtbar im Auto liegen, denn an Strandparkplätzen wie Mambo wird eingebrochen. Achte auch auf Sand und nasse Sitze, Reinigungsgebühren von 50 bis 150 $ kommen vor."
+   "de": "Lass nichts sichtbar im Auto liegen, denn an Strandparkplätzen wie Mambo wird eingebrochen. Achte auch auf Sand und nasse Sitze, Reinigungsgebühren von 50 bis 150 $ kommen vor.",
+   "es": "No dejes nada a la vista en el auto, ya que hay robos en estacionamientos de playas como Mambo. Cuidado también con la arena y los asientos mojados, porque los cargos de limpieza van de $50 a $150.",
+   "pt": "Não deixe nada à vista no carro, pois há arrombamentos em estacionamentos de praias como Mambo. Cuidado também com areia e bancos molhados, porque as taxas de limpeza vão de $50 a $150."
   },
   {
    "nl": "Tanken: eerst bij de kassa betalen met het pompnummer, daarna tanken. Creditcards worden aan de pomp meestal niet geaccepteerd, pin en contant wel. Buiten Willemstad zijn weinig tankstations.",
    "en": "Gas: pay at the register first with your pump number, then fill up. Credit cards are usually not accepted at the pump; debit and cash are. There are few gas stations outside Willemstad.",
-   "de": "Tanken: erst an der Kasse mit der Säulennummer bezahlen, dann tanken. Kreditkarten werden an der Tankstelle meist nicht angenommen, EC-Karte und Bargeld schon. Außerhalb von Willemstad gibt es wenige Tankstellen."
+   "de": "Tanken: erst an der Kasse mit der Säulennummer bezahlen, dann tanken. Kreditkarten werden an der Tankstelle meist nicht angenommen, EC-Karte und Bargeld schon. Außerhalb von Willemstad gibt es wenige Tankstellen.",
+   "es": "Gasolina: primero paga en la caja indicando tu número de bomba, y luego carga. Por lo general no se aceptan tarjetas de crédito en la bomba; sí tarjetas de débito y efectivo. Hay pocas gasolineras fuera de Willemstad.",
+   "pt": "Combustível: primeiro pague no caixa informando o número da bomba, depois abasteça. Em geral não se aceitam cartões de crédito na bomba; débito e dinheiro sim. Há poucos postos fora de Willemstad."
   },
   {
    "nl": "Je eigen autoverzekering dekt Curaçao meestal niet. Dekking via je creditcard moet je vooraf bij de kaartuitgever navragen.",
    "en": "Your own car insurance usually does not cover Curaçao. Check any credit card coverage with your card issuer before you go.",
-   "de": "Deine eigene Autoversicherung deckt Curaçao meist nicht ab. Ob deine Kreditkarte etwas abdeckt, klär vorher mit dem Kartenanbieter."
+   "de": "Deine eigene Autoversicherung deckt Curaçao meist nicht ab. Ob deine Kreditkarte etwas abdeckt, klär vorher mit dem Kartenanbieter.",
+   "es": "Tu seguro de auto personal normalmente no cubre Curazao. Consulta con el emisor de tu tarjeta de crédito qué cobertura incluye antes de viajar.",
+   "pt": "O seguro do seu carro pessoal normalmente não cobre Curaçao. Consulte a operadora do seu cartão de crédito sobre a cobertura antes de viajar."
   }
  ]
 }
