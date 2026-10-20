@@ -477,5 +477,29 @@
   "moeite": 1,
   "risico": "Alleen een link naar de homepage van de zustersite, geen linkblokken of uitwisseling met vreemde sites.",
   "meten": "index"
+ },
+ {
+  "id": "zoekbezoek-alleen-met-gsc",
+  "les": "Tel bezoek met Google als herkomst pas als zoekbezoek als Search Console kliks laat zien; een eigen telling op de verwijzer alleen telt ook bots en andere Google-diensten mee.",
+  "kanaal": "google",
+  "bewijs": "20 okt 2026: eigen teller gaf in 7 dagen 81 (NL), 53 (US) en 43 (DE) bezoeken met Google als herkomst, terwijl Search Console in 28 dagen 0 kliks toont en voor US en DE zelfs 0 vertoningen. Sinds 20 okt zet de ZICHT-meting dat apart als googleOnbevestigd.",
+  "bron": "eigen data",
+  "sterkte": 3,
+  "effect": 0.3,
+  "moeite": 1,
+  "risico": "Geen; alleen eerlijker meten.",
+  "meten": "gsc"
+ },
+ {
+  "id": "niet-sneller-bouwen-dan-google-ontdekt",
+  "les": "Maak op een jonge site niet sneller nieuwe pagina's dan Google ze ontdekt; zolang het merendeel 'onbekend bij Google' is, eerst bestaande pagina's sterker maken en in de index krijgen.",
+  "kanaal": "google",
+  "bewijs": "20 okt 2026: keuzehulp.best 113 van 466 pagina's in Google, 300 'onbekend bij Google', ook vaste pagina's als /stofzuiger, /smartwatch en /robotmaaier. Het aantal geindexeerde pagina's bleef 112-113 van 15 tot 20 okt terwijl er 12 nieuwe per dag bij kwamen. Googlebot las de site 41 keer in 7 dagen.",
+  "bron": "eigen data",
+  "sterkte": 2,
+  "effect": 0.5,
+  "moeite": 1,
+  "risico": "Veel automatisch gemaakte pagina's die niet geindexeerd raken kunnen als geschaalde inhoud gaan tellen.",
+  "meten": "index"
  }
 ]
