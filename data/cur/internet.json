@@ -3,35 +3,56 @@
  "peildatum": "2026-10-20",
  "onderwerp": {
   "nl": "internetaanbieder",
-  "en": "internet provider"
+  "en": "internet provider",
+  "de": "Internetanbieter",
+  "es": "proveedor de internet",
+  "pt": "provedor de internet"
  },
  "h1": {
   "nl": "Internet op Curaçao: welke aanbieder past bij jou?",
-  "en": "Internet in Curaçao: which provider is right for you?"
+  "en": "Internet in Curaçao: which provider is right for you?",
+  "de": "Internet auf Curaçao: Welcher Anbieter ist der richtige für dich?",
+  "es": "Internet en Curazao: ¿qué proveedor te conviene?",
+  "pt": "Internet em Curaçao: qual provedor é o certo para você?"
  },
  "titel": {
   "nl": "Internet op Curaçao vergelijken: {n} aanbieders en prijzen",
-  "en": "Curaçao internet and mobile plans: {n} options compared"
+  "en": "Curaçao internet and mobile plans: {n} options compared",
+  "de": "Internet und Mobilfunktarife auf Curaçao: {n} Optionen im Vergleich",
+  "es": "Internet y planes móviles en Curazao: {n} opciones comparadas",
+  "pt": "Internet e planos de celular em Curaçao: {n} opções comparadas"
  },
  "metaDesc": {
   "nl": "Thuisinternet en mobiel op Curaçao: Flow, Digicel, Qonèkt en Starlink naast elkaar, met prijzen in XCG, snelheden en Google-reviews.",
-  "en": "Home internet and mobile plans in Curaçao: Flow, Digicel, Qonèkt and Starlink side by side, with XCG prices, speeds and Google reviews."
+  "en": "Home internet and mobile plans in Curaçao: Flow, Digicel, Qonèkt and Starlink side by side, with XCG prices, speeds and Google reviews.",
+  "de": "Heiminternet und Mobilfunktarife auf Curaçao: Flow, Digicel, Qonèkt und Starlink im direkten Vergleich, mit Preisen in XCG, Geschwindigkeiten und Google-Bewertungen.",
+  "es": "Internet para el hogar y planes móviles en Curazao: Flow, Digicel, Qonèkt y Starlink lado a lado, con precios en XCG, velocidades y reseñas de Google.",
+  "pt": "Internet residencial e planos de celular em Curaçao: Flow, Digicel, Qonèkt e Starlink lado a lado, com preços em XCG, velocidades e avaliações do Google."
  },
  "kort": {
   "nl": "Op Curaçao kies je thuis vooral tussen Flow en Digicel+ glasvezel (vanaf XCG 209 per maand voor 250 Mbit/s met tv), met Qonèkt als nieuwe glasvezelaanbieder en Starlink sinds 14 oktober 2026. Digicel+ had het snelste vaste internet in de Ookla-meting van 2025, Flow het snelste mobiele netwerk. Prepaid data begint bij Digicel op XCG 65 voor 8 GB per 30 dagen.",
-  "en": "In Curaçao, home internet mostly comes down to Flow or Digicel+ fiber (from XCG 209 a month for 250 Mbps with TV), with Qonèkt as a new fiber provider and Starlink live since October 14, 2026. Digicel+ had the fastest fixed internet in Ookla's 2025 report, Flow the fastest mobile network. Prepaid data at Digicel starts at XCG 65 for 8 GB per 30 days."
+  "en": "In Curaçao, home internet mostly comes down to Flow or Digicel+ fiber (from XCG 209 a month for 250 Mbps with TV), with Qonèkt as a new fiber provider and Starlink live since October 14, 2026. Digicel+ had the fastest fixed internet in Ookla's 2025 report, Flow the fastest mobile network. Prepaid data at Digicel starts at XCG 65 for 8 GB per 30 days.",
+  "de": "Beim Heiminternet auf Curaçao läuft es meist auf Flow oder Digicel+ Glasfaser hinaus (ab XCG 209 im Monat für 250 Mbps mit TV), dazu kommt Qonèkt als neuer Glasfaseranbieter und Starlink, das seit dem 14. Oktober 2026 verfügbar ist. Digicel+ hatte im Ookla-Bericht 2025 das schnellste Festnetzinternet, Flow das schnellste Mobilfunknetz. Prepaid-Daten bei Digicel beginnen bei XCG 65 für 8 GB pro 30 Tage.",
+  "es": "En Curazao, el internet para el hogar se reduce casi siempre a Flow o a la fibra de Digicel+ (desde XCG 209 al mes por 250 Mbps con TV), con Qonèkt como nuevo proveedor de fibra y Starlink disponible desde el 14 de octubre de 2026. Digicel+ tuvo el internet fijo más rápido en el informe de Ookla de 2025 y Flow la red móvil más rápida. Los datos prepago de Digicel empiezan en XCG 65 por 8 GB cada 30 días.",
+  "pt": "Em Curaçao, a internet residencial se resume em geral a Flow ou à fibra da Digicel+ (a partir de XCG 209 por mês por 250 Mbps com TV), com a Qonèkt como nova provedora de fibra e a Starlink disponível desde 14 de outubro de 2026. A Digicel+ teve a internet fixa mais rápida no relatório da Ookla de 2025, e a Flow, a rede móvel mais rápida. Os dados pré-pagos da Digicel começam em XCG 65 por 8 GB a cada 30 dias."
  },
  "vragen": [
   {
    "q": {
     "nl": "Wat zoek je?",
-    "en": "What do you need?"
+    "en": "What do you need?",
+    "de": "Was brauchst du?",
+    "es": "¿Qué necesitas?",
+    "pt": "O que você precisa?"
    },
    "opties": [
     {
      "label": {
       "nl": "Thuisinternet",
-      "en": "Home internet"
+      "en": "Home internet",
+      "de": "Heiminternet",
+      "es": "Internet para el hogar",
+      "pt": "Internet residencial"
      },
      "plus": [
       "thuis-internet"
@@ -42,7 +63,10 @@
     {
      "label": {
       "nl": "Mobiel abonnement of prepaid",
-      "en": "Mobile plan or prepaid"
+      "en": "Mobile plan or prepaid",
+      "de": "Mobilfunktarif oder Prepaid",
+      "es": "Plan móvil o prepago",
+      "pt": "Plano de celular ou pré-pago"
      },
      "plus": [
       "mobiel"
@@ -53,7 +77,10 @@
     {
      "label": {
       "nl": "Allebei, liefst in één bundel",
-      "en": "Both, ideally bundled"
+      "en": "Both, ideally bundled",
+      "de": "Beides, am besten im Paket",
+      "es": "Ambos, de preferencia en paquete",
+      "pt": "Os dois, de preferência em pacote"
      },
      "plus": [
       "bundel",
@@ -68,13 +95,19 @@
   {
    "q": {
     "nl": "Hoe gebruik je internet?",
-    "en": "How do you use the internet?"
+    "en": "How do you use the internet?",
+    "de": "Wie nutzt du das Internet?",
+    "es": "¿Cómo usas internet?",
+    "pt": "Como você usa a internet?"
    },
    "opties": [
     {
      "label": {
       "nl": "Gemiddeld: surfen, video, social",
-      "en": "Average: browsing, video, social"
+      "en": "Average: browsing, video, social",
+      "de": "Durchschnittlich: Surfen, Video, soziale Medien",
+      "es": "Uso medio: navegar, video, redes sociales",
+      "pt": "Uso médio: navegar, vídeo, redes sociais"
      },
      "plus": [],
      "min": [],
@@ -83,7 +116,10 @@
     {
      "label": {
       "nl": "Licht: mail en WhatsApp",
-      "en": "Light: email and WhatsApp"
+      "en": "Light: email and WhatsApp",
+      "de": "Wenig: E-Mail und WhatsApp",
+      "es": "Poco: correo y WhatsApp",
+      "pt": "Pouco: e-mail e WhatsApp"
      },
      "plus": [
       "budget"
@@ -94,7 +130,10 @@
     {
      "label": {
       "nl": "Veel streamen of thuiswerken",
-      "en": "Lots of streaming or working from home"
+      "en": "Lots of streaming or working from home",
+      "de": "Viel Streaming oder Arbeiten von zu Hause",
+      "es": "Mucho streaming o trabajo desde casa",
+      "pt": "Muito streaming ou trabalho em casa"
      },
      "plus": [
       "snel",
@@ -106,7 +145,10 @@
     {
      "label": {
       "nl": "Gamen",
-      "en": "Gaming"
+      "en": "Gaming",
+      "de": "Gaming",
+      "es": "Videojuegos",
+      "pt": "Jogos online"
      },
      "plus": [
       "glasvezel",
@@ -122,13 +164,19 @@
   {
    "q": {
     "nl": "Prepaid of abonnement?",
-    "en": "Prepaid or a monthly plan?"
+    "en": "Prepaid or a monthly plan?",
+    "de": "Prepaid oder Monatsvertrag?",
+    "es": "¿Prepago o plan mensual?",
+    "pt": "Pré-pago ou plano mensal?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "No preference"
+      "en": "No preference",
+      "de": "Keine Präferenz",
+      "es": "Sin preferencia",
+      "pt": "Sem preferência"
      },
      "plus": [],
      "min": [],
@@ -137,7 +185,10 @@
     {
      "label": {
       "nl": "Prepaid, zelf opwaarderen",
-      "en": "Prepaid, top up myself"
+      "en": "Prepaid, top up myself",
+      "de": "Prepaid, ich lade selbst auf",
+      "es": "Prepago, yo mismo recargo",
+      "pt": "Pré-pago, eu mesmo recarrego"
      },
      "plus": [
       "prepaid"
@@ -148,7 +199,10 @@
     {
      "label": {
       "nl": "Vast abonnement",
-      "en": "Monthly plan"
+      "en": "Monthly plan",
+      "de": "Monatsvertrag",
+      "es": "Plan mensual",
+      "pt": "Plano mensal"
      },
      "plus": [
       "postpaid",
@@ -162,13 +216,19 @@
   {
    "q": {
     "nl": "Wat vind je het belangrijkst?",
-    "en": "What matters most to you?"
+    "en": "What matters most to you?",
+    "de": "Was ist dir am wichtigsten?",
+    "es": "¿Qué es lo más importante para ti?",
+    "pt": "O que é mais importante para você?"
    },
    "opties": [
     {
      "label": {
       "nl": "Betrouwbaarheid en service",
-      "en": "Reliability and support"
+      "en": "Reliability and support",
+      "de": "Zuverlässigkeit und Support",
+      "es": "Confiabilidad y soporte",
+      "pt": "Confiabilidade e suporte"
      },
      "plus": [
       "glasvezel",
@@ -180,7 +240,10 @@
     {
      "label": {
       "nl": "Laagste prijs",
-      "en": "Lowest price"
+      "en": "Lowest price",
+      "de": "Niedrigster Preis",
+      "es": "El precio más bajo",
+      "pt": "O menor preço"
      },
      "plus": [
       "budget"
@@ -191,7 +254,10 @@
     {
      "label": {
       "nl": "Hoogste snelheid",
-      "en": "Top speed"
+      "en": "Top speed",
+      "de": "Höchste Geschwindigkeit",
+      "es": "La máxima velocidad",
+      "pt": "A maior velocidade"
      },
      "plus": [
       "snel"
@@ -209,7 +275,10 @@
    "url": null,
    "soort": {
     "nl": "grootste aanbieder",
-    "en": "largest provider"
+    "en": "largest provider",
+    "de": "größter Anbieter",
+    "es": "mayor proveedor",
+    "pt": "maior provedor"
    },
    "plaats": "Schottegatweg Zuid (winkel)",
    "tags": [
@@ -220,15 +289,24 @@
    "feiten": [
     {
      "nl": "Grootste internetaanbieder van Curaçao",
-     "en": "Largest internet provider on Curaçao"
+     "en": "Largest internet provider on Curaçao",
+     "de": "Größter Internetanbieter auf Curaçao",
+     "es": "Mayor proveedor de internet de Curazao",
+     "pt": "Maior provedor de internet de Curaçao"
     },
     {
      "nl": "Onderdeel van Liberty Latin America",
-     "en": "Part of Liberty Latin America"
+     "en": "Part of Liberty Latin America",
+     "de": "Teil von Liberty Latin America",
+     "es": "Parte de Liberty Latin America",
+     "pt": "Parte da Liberty Latin America"
     },
     {
      "nl": "Oude pakketten omgezet okt 2025",
-     "en": "Old plans migrated Oct 2025"
+     "en": "Old plans migrated Oct 2025",
+     "de": "Alte Tarife im Oktober 2025 umgestellt",
+     "es": "Planes antiguos migrados en octubre de 2025",
+     "pt": "Planos antigos migrados em outubro de 2025"
     }
    ],
    "scores": [
@@ -247,6 +325,15 @@
     ],
     "en": [
      "Wide network: available almost everywhere on the island"
+    ],
+    "de": [
+     "Großes Netz: fast überall auf der Insel verfügbar"
+    ],
+    "es": [
+     "Red amplia: disponible casi en toda la isla"
+    ],
+    "pt": [
+     "Rede ampla: disponível em quase toda a ilha"
     ]
    },
    "tegen": {
@@ -259,6 +346,21 @@
      "Outages that sometimes last days, also in 2026",
      "Long wait times by phone and WhatsApp",
      "Measured speed often stays below what you pay for"
+    ],
+    "de": [
+     "Ausfälle, die manchmal Tage dauern, auch 2026",
+     "Lange Wartezeiten am Telefon und bei WhatsApp",
+     "Gemessene Geschwindigkeit bleibt oft unter dem, was du bezahlst"
+    ],
+    "es": [
+     "Caídas que a veces duran días, también en 2026",
+     "Largas esperas por teléfono y WhatsApp",
+     "La velocidad medida suele quedar por debajo de lo que pagas"
+    ],
+    "pt": [
+     "Quedas que às vezes duram dias, também em 2026",
+     "Longas esperas por telefone e WhatsApp",
+     "A velocidade medida muitas vezes fica abaixo do que você paga"
     ]
    },
    "bronnen": [
@@ -276,7 +378,10 @@
    "url": null,
    "soort": {
     "nl": "mobiel netwerk",
-    "en": "mobile network"
+    "en": "mobile network",
+    "de": "Mobilfunknetz",
+    "es": "red móvil",
+    "pt": "rede móvel"
    },
    "plaats": "Schottegatweg Zuid (winkel)",
    "tags": [
@@ -289,7 +394,10 @@
     "valuta": "XCG",
     "eenheid": {
      "nl": "per extra 1 GB (prepaid)",
-     "en": "per extra 1 GB (prepaid)"
+     "en": "per extra 1 GB (prepaid)",
+     "de": "pro zusätzliches 1 GB (Prepaid)",
+     "es": "por 1 GB adicional (prepago)",
+     "pt": "por 1 GB extra (pré-pago)"
     },
     "bron": "https://saily.com/nl/blog/simkaart-curacao/",
     "datum": "2026-08"
@@ -297,15 +405,24 @@
    "feiten": [
     {
      "nl": "Chippie is het prepaidmerk van Flow",
-     "en": "Chippie is Flow's prepaid brand"
+     "en": "Chippie is Flow's prepaid brand",
+     "de": "Chippie ist die Prepaid-Marke von Flow",
+     "es": "Chippie es la marca prepago de Flow",
+     "pt": "Chippie é a marca pré-paga da Flow"
     },
     {
      "nl": "Toeristen-SIM 3 GB: ca. €26",
-     "en": "Tourist SIM 3 GB: about €26"
+     "en": "Tourist SIM 3 GB: about €26",
+     "de": "Touristen-SIM mit 3 GB: etwa €26",
+     "es": "SIM para turistas de 3 GB: unos €26",
+     "pt": "SIM para turistas de 3 GB: cerca de €26"
     },
     {
      "nl": "Drie Ookla-prijzen in juni 2026",
-     "en": "Three Ookla awards in June 2026"
+     "en": "Three Ookla awards in June 2026",
+     "de": "Drei Ookla-Auszeichnungen im Juni 2026",
+     "es": "Tres premios de Ookla en junio de 2026",
+     "pt": "Três prêmios da Ookla em junho de 2026"
     }
    ],
    "scores": [
@@ -326,6 +443,18 @@
     "en": [
      "Fastest mobile internet in Ookla's measurements",
      "SIM also sold at supermarket desks such as Van den Tweel"
+    ],
+    "de": [
+     "Schnellstes mobiles Internet in den Messungen von Ookla",
+     "SIM-Karten gibt es auch an Supermarkt-Schaltern wie Van den Tweel"
+    ],
+    "es": [
+     "Internet móvil más rápido en las mediciones de Ookla",
+     "También venden SIM en mostradores de supermercados como Van den Tweel"
+    ],
+    "pt": [
+     "Internet móvel mais rápida nas medições da Ookla",
+     "Chips também são vendidos em balcões de supermercados como o Van den Tweel"
     ]
    },
    "tegen": {
@@ -336,6 +465,18 @@
     "en": [
      "Unfriendly counter staff and long lines in the store",
      "Customer service is slow to answer on WhatsApp"
+    ],
+    "de": [
+     "Unfreundliches Personal am Schalter und lange Schlangen im Laden",
+     "Der Kundenservice antwortet auf WhatsApp langsam"
+    ],
+    "es": [
+     "Personal poco amable en el mostrador y largas filas en la tienda",
+     "El servicio al cliente tarda en responder por WhatsApp"
+    ],
+    "pt": [
+     "Atendentes pouco simpáticos no balcão e filas longas na loja",
+     "O atendimento demora a responder no WhatsApp"
     ]
    },
    "bronnen": [
@@ -352,7 +493,10 @@
    "url": "https://digicelgroup.com/cw/en/home-and-entertainment/home-internet",
    "soort": {
     "nl": "glasvezel + tv",
-    "en": "fiber + TV"
+    "en": "fiber + TV",
+    "de": "Glasfaser + TV",
+    "es": "fibra + TV",
+    "pt": "fibra + TV"
    },
    "plaats": "Biesheuvel (hoofdkantoor)",
    "tags": [
@@ -366,7 +510,10 @@
     "valuta": "XCG",
     "eenheid": {
      "nl": "per maand, 250 Mbit/s + tv",
-     "en": "per month, 250 Mbps + TV"
+     "en": "per month, 250 Mbps + TV",
+     "de": "pro Monat, 250 Mbps + TV",
+     "es": "por mes, 250 Mbps + TV",
+     "pt": "por mês, 250 Mbps + TV"
     },
     "bron": "https://digicelgroup.com/cw/en/home-and-entertainment/home-internet",
     "datum": "2026-10"
@@ -374,19 +521,31 @@
    "feiten": [
     {
      "nl": "250 tot 600 Mbit/s download",
-     "en": "250 to 600 Mbps download"
+     "en": "250 to 600 Mbps download",
+     "de": "250 bis 600 Mbps Download",
+     "es": "250 a 600 Mbps de bajada",
+     "pt": "250 a 600 Mbps de download"
     },
     {
      "nl": "600 Mbit/s: XCG 399 per maand",
-     "en": "600 Mbps: XCG 399 per month"
+     "en": "600 Mbps: XCG 399 per month",
+     "de": "600 Mbps: XCG 399 pro Monat",
+     "es": "600 Mbps: XCG 399 al mes",
+     "pt": "600 Mbps: XCG 399 por mês"
     },
     {
      "nl": "Modem en installatie gratis",
-     "en": "Free modem and installation"
+     "en": "Free modem and installation",
+     "de": "Modem und Installation kostenlos",
+     "es": "Módem e instalación gratis",
+     "pt": "Modem e instalação grátis"
     },
     {
      "nl": "Voorheen TRES Networks, sinds 2022",
-     "en": "Formerly TRES Networks, since 2022"
+     "en": "Formerly TRES Networks, since 2022",
+     "de": "Früher TRES Networks, seit 2022",
+     "es": "Antes TRES Networks, desde 2022",
+     "pt": "Antes TRES Networks, desde 2022"
     }
    ],
    "scores": [
@@ -417,6 +576,21 @@
      "Fastest fixed internet per Ookla (86 Mbps average)",
      "Stable fiber, good value for the money",
      "Some faults fixed within a day after reporting"
+    ],
+    "de": [
+     "Schnellstes Festnetzinternet laut Ookla (86 Mbps im Schnitt)",
+     "Stabile Glasfaser, gutes Preis-Leistungs-Verhältnis",
+     "Manche Störungen nach der Meldung innerhalb eines Tages behoben"
+    ],
+    "es": [
+     "Internet fijo más rápido según Ookla (86 Mbps en promedio)",
+     "Fibra estable, buena relación calidad-precio",
+     "Algunas fallas se arreglaron en un día tras reportarlas"
+    ],
+    "pt": [
+     "Internet fixa mais rápida segundo a Ookla (86 Mbps em média)",
+     "Fibra estável, bom custo-benefício",
+     "Algumas falhas foram resolvidas em um dia após o aviso"
     ]
    },
    "tegen": {
@@ -429,6 +603,21 @@
      "A technical fault can take more than a week to fix",
      "Long lines at the main office",
      "Fiber is not available in every neighborhood"
+    ],
+    "de": [
+     "Eine technische Störung kann mehr als eine Woche dauern",
+     "Lange Schlangen in der Hauptfiliale",
+     "Glasfaser gibt es nicht in jedem Viertel"
+    ],
+    "es": [
+     "Una falla técnica puede tardar más de una semana en repararse",
+     "Largas filas en la oficina principal",
+     "La fibra no llega a todos los barrios"
+    ],
+    "pt": [
+     "Uma falha técnica pode levar mais de uma semana para ser resolvida",
+     "Filas longas na agência principal",
+     "A fibra não está disponível em todos os bairros"
     ]
    },
    "bronnen": [
@@ -445,7 +634,10 @@
    "url": "https://www.digicelgroup.com/cw/en/postpaid",
    "soort": {
     "nl": "mobiel netwerk",
-    "en": "mobile network"
+    "en": "mobile network",
+    "de": "Mobilfunknetz",
+    "es": "red móvil",
+    "pt": "rede móvel"
    },
    "plaats": "Biesheuvel, Otrobanda, Sambil",
    "tags": [
@@ -460,7 +652,10 @@
     "valuta": "XCG",
     "eenheid": {
      "nl": "per 30 dagen, 8 GB prepaid",
-     "en": "per 30 days, 8 GB prepaid"
+     "en": "per 30 days, 8 GB prepaid",
+     "de": "pro 30 Tage, 8 GB Prepaid",
+     "es": "por 30 días, 8 GB prepago",
+     "pt": "por 30 dias, 8 GB pré-pago"
     },
     "bron": "https://digicelgroup.com/cw/en/mega-data-plans",
     "datum": "2026-10"
@@ -468,19 +663,31 @@
    "feiten": [
     {
      "nl": "30 dagen 35 GB: XCG 100",
-     "en": "30 days 35 GB: XCG 100"
+     "en": "30 days 35 GB: XCG 100",
+     "de": "30 Tage mit 35 GB: XCG 100",
+     "es": "30 días con 35 GB: XCG 100",
+     "pt": "30 dias com 35 GB: XCG 100"
     },
     {
      "nl": "Abonnement vanaf XCG 95 (10 GB)",
-     "en": "Plans from XCG 95 (10 GB)"
+     "en": "Plans from XCG 95 (10 GB)",
+     "de": "Tarife ab XCG 95 (10 GB)",
+     "es": "Planes desde XCG 95 (10 GB)",
+     "pt": "Planos a partir de XCG 95 (10 GB)"
     },
     {
      "nl": "Dagbundel 2 GB: XCG 6,50",
-     "en": "Day pass 2 GB: XCG 6.50"
+     "en": "Day pass 2 GB: XCG 6.50",
+     "de": "Tagespass mit 2 GB: XCG 6.50",
+     "es": "Pase de un día con 2 GB: XCG 6.50",
+     "pt": "Passe de um dia com 2 GB: XCG 6.50"
     },
     {
      "nl": "eSIM voor toeristen",
-     "en": "eSIM for tourists"
+     "en": "eSIM for tourists",
+     "de": "eSIM für Touristen",
+     "es": "eSIM para turistas",
+     "pt": "eSIM para turistas"
     }
    ],
    "scores": [
@@ -509,6 +716,18 @@
     "en": [
      "Tourist bundles are cheap compared to roaming",
      "Personal help in the store with plan questions"
+    ],
+    "de": [
+     "Touristenpakete sind im Vergleich zum Roaming günstig",
+     "Persönliche Hilfe im Laden bei Fragen zum Tarif"
+    ],
+    "es": [
+     "Los paquetes para turistas son baratos frente al roaming",
+     "Ayuda personal en la tienda con dudas sobre los planes"
+    ],
+    "pt": [
+     "Os pacotes para turistas são baratos comparados ao roaming",
+     "Ajuda pessoal na loja com dúvidas sobre os planos"
     ]
    },
    "tegen": {
@@ -521,6 +740,21 @@
      "Long lines just to get a SIM card",
      "Topping up in the app does not always work",
      "Wrong data bundle on account, slow to fix"
+    ],
+    "de": [
+     "Lange Schlangen nur für eine SIM-Karte",
+     "Aufladen in der App klappt nicht immer",
+     "Falsches Datenpaket im Konto, wird langsam korrigiert"
+    ],
+    "es": [
+     "Largas filas solo para conseguir una SIM",
+     "Recargar en la app no siempre funciona",
+     "Paquete de datos equivocado en la cuenta, tardan en corregirlo"
+    ],
+    "pt": [
+     "Filas longas só para conseguir um chip",
+     "Recarregar pelo app nem sempre funciona",
+     "Pacote de dados errado na conta, demora para corrigir"
     ]
    },
    "bronnen": [
@@ -537,7 +771,10 @@
    "url": null,
    "soort": {
     "nl": "nieuwe glasvezel",
-    "en": "new fiber"
+    "en": "new fiber",
+    "de": "neues Glasfasernetz",
+    "es": "nueva red de fibra",
+    "pt": "nova rede de fibra"
    },
    "plaats": "Vidanova, St. Joris (eerste wijken)",
    "tags": [
@@ -548,19 +785,31 @@
    "feiten": [
     {
      "nl": "Concessie sinds juni 2025",
-     "en": "Licensed since June 2025"
+     "en": "Licensed since June 2025",
+     "de": "Lizenz seit Juni 2025",
+     "es": "Con licencia desde junio de 2025",
+     "pt": "Licenciada desde junho de 2025"
     },
     {
      "nl": "Dochter van Aqualectra-moeder IUH",
-     "en": "Owned by Aqualectra parent IUH"
+     "en": "Owned by Aqualectra parent IUH",
+     "de": "Gehört zu IUH, der Muttergesellschaft von Aqualectra",
+     "es": "Pertenece a IUH, la matriz de Aqualectra",
+     "pt": "Pertence à IUH, controladora da Aqualectra"
     },
     {
      "nl": "Ondergrondse glasvezel",
-     "en": "Underground fiber network"
+     "en": "Underground fiber network",
+     "de": "Unterirdisches Glasfasernetz",
+     "es": "Red de fibra subterránea",
+     "pt": "Rede de fibra subterrânea"
     },
     {
      "nl": "Eerst Vidanova, St. Joris, Brievengat",
-     "en": "First Vidanova, St. Joris, Brievengat"
+     "en": "First Vidanova, St. Joris, Brievengat",
+     "de": "Zuerst Vidanova, St. Joris, Brievengat",
+     "es": "Primero Vidanova, St. Joris, Brievengat",
+     "pt": "Primeiro Vidanova, St. Joris, Brievengat"
     }
    ],
    "scores": [],
@@ -570,11 +819,23 @@
     ],
     "en": [
      "New competitor promising low prices"
+    ],
+    "de": [
+     "Neuer Konkurrent mit dem Versprechen niedriger Preise"
+    ],
+    "es": [
+     "Nuevo competidor que promete precios bajos"
+    ],
+    "pt": [
+     "Novo concorrente que promete preços baixos"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/main/qonekt-launches-with-official-license-promises-to-revolutionize-telecommunications-in-curacao",
@@ -587,7 +848,10 @@
    "url": null,
    "soort": {
     "nl": "satelliet",
-    "en": "satellite"
+    "en": "satellite",
+    "de": "Satellit",
+    "es": "satélite",
+    "pt": "satélite"
    },
    "plaats": null,
    "tags": [
@@ -598,15 +862,24 @@
    "feiten": [
     {
      "nl": "Officieel live sinds 14 oktober 2026",
-     "en": "Officially live since October 14, 2026"
+     "en": "Officially live since October 14, 2026",
+     "de": "Offiziell verfügbar seit dem 14. Oktober 2026",
+     "es": "Disponible oficialmente desde el 14 de octubre de 2026",
+     "pt": "Disponível oficialmente desde 14 de outubro de 2026"
     },
     {
      "nl": "Eerst beschikbaarheid per adres checken",
-     "en": "Check availability per address first"
+     "en": "Check availability per address first",
+     "de": "Prüfe zuerst die Verfügbarkeit pro Adresse",
+     "es": "Primero revisa la disponibilidad por dirección",
+     "pt": "Confira primeiro a disponibilidade por endereço"
     },
     {
      "nl": "Werkt los van Flow-kabels",
-     "en": "Works independently of Flow's cables"
+     "en": "Works independently of Flow's cables",
+     "de": "Funktioniert unabhängig von den Kabeln von Flow",
+     "es": "Funciona sin depender de los cables de Flow",
+     "pt": "Funciona independente dos cabos da Flow"
     }
    ],
    "scores": [],
@@ -616,11 +889,23 @@
     ],
     "en": [
      "Over 200 Mbps and stable, users on Curaçao say"
+    ],
+    "de": [
+     "Über 200 Mbps und stabil, sagen Nutzer auf Curaçao"
+    ],
+    "es": [
+     "Más de 200 Mbps y estable, dicen usuarios en Curazao"
+    ],
+    "pt": [
+     "Mais de 200 Mbps e estável, dizem usuários em Curaçao"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://teslanorth.com/2026/10/14/starlink-curacao-launch",
@@ -634,7 +919,10 @@
    "url": null,
    "soort": {
     "nl": "lokale verkoper",
-    "en": "local reseller"
+    "en": "local reseller",
+    "de": "lokaler Händler",
+    "es": "revendedor local",
+    "pt": "revendedor local"
    },
    "plaats": "Spanish Water",
    "tags": [
@@ -645,11 +933,17 @@
    "feiten": [
     {
      "nl": "Verkoopt en installeert Starlink-kits",
-     "en": "Sells and installs Starlink kits"
+     "en": "Sells and installs Starlink kits",
+     "de": "Verkauft und installiert Starlink-Sets",
+     "es": "Vende e instala kits de Starlink",
+     "pt": "Vende e instala kits Starlink"
     },
     {
      "nl": "Ook de Starlink Mini",
-     "en": "Also the Starlink Mini"
+     "en": "Also the Starlink Mini",
+     "de": "Auch den Starlink Mini",
+     "es": "También el Starlink Mini",
+     "pt": "Também o Starlink Mini"
     }
    ],
    "scores": [
@@ -670,11 +964,26 @@
     "en": [
      "Explains setup and the app step by step",
      "Available for questions after the purchase"
+    ],
+    "de": [
+     "Erklärt Einrichtung und App Schritt für Schritt",
+     "Auch nach dem Kauf bei Fragen erreichbar"
+    ],
+    "es": [
+     "Explica la instalación y la app paso a paso",
+     "Disponible para consultas después de la compra"
+    ],
+    "pt": [
+     "Explica a instalação e o app passo a passo",
+     "Disponível para dúvidas depois da compra"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps/place/?q=place_id:ChIJn6bXNYh9g44Rr19AxbI8Ynw",
@@ -688,7 +997,10 @@
    "url": "https://saily.com/esim-curacao/",
    "uitleg": {
     "nl": "Reis-eSIM met data op het Curaçaose netwerk; handig voor de eerste weken voor je een lokale SIM hebt.",
-    "en": "Travel eSIM with data on Curaçao's networks; handy for your first weeks before you get a local SIM."
+    "en": "Travel eSIM with data on Curaçao's networks; handy for your first weeks before you get a local SIM.",
+    "de": "Reise-eSIM mit Daten in den Netzen von Curaçao; praktisch für die ersten Wochen, bevor du eine lokale SIM hast.",
+    "es": "eSIM de viaje con datos en las redes de Curazao; útil para las primeras semanas, antes de tener una SIM local.",
+    "pt": "eSIM de viagem com dados nas redes de Curaçao; prático para as primeiras semanas, antes de ter um chip local."
    }
   },
   {
@@ -696,7 +1008,10 @@
    "url": "https://esim.holafly.com/nl/blog/internet-curacao/",
    "uitleg": {
     "nl": "Reis-eSIM met onbeperkte data; duurder per GB dan een lokale bundel.",
-    "en": "Travel eSIM with unlimited data; pricier per GB than a local bundle."
+    "en": "Travel eSIM with unlimited data; pricier per GB than a local bundle.",
+    "de": "Reise-eSIM mit unbegrenzten Daten; pro GB teurer als ein lokales Paket.",
+    "es": "eSIM de viaje con datos ilimitados; más cara por GB que un paquete local.",
+    "pt": "eSIM de viagem com dados ilimitados; mais cara por GB do que um pacote local."
    }
   },
   {
@@ -704,7 +1019,10 @@
    "url": "https://www.keepgo.com/collections/prepaid-mobile-data-bundle-curacao",
    "uitleg": {
     "nl": "Verkoopt prepaid databundels op het Digicel- en Flow-netwerk.",
-    "en": "Sells prepaid data bundles that run on the Digicel and Flow networks."
+    "en": "Sells prepaid data bundles that run on the Digicel and Flow networks.",
+    "de": "Verkauft Prepaid-Datenpakete, die in den Netzen von Digicel und Flow laufen.",
+    "es": "Vende paquetes de datos prepago que funcionan en las redes de Digicel y Flow.",
+    "pt": "Vende pacotes de dados pré-pagos que funcionam nas redes da Digicel e da Flow."
    }
   },
   {
@@ -712,115 +1030,184 @@
    "url": "https://esimdb.com/curacao/nomad",
    "uitleg": {
     "nl": "Vergelijker van reis-eSIM's voor Curaçao.",
-    "en": "Comparison site for Curaçao travel eSIMs."
+    "en": "Comparison site for Curaçao travel eSIMs.",
+    "de": "Vergleichsseite für Reise-eSIMs auf Curaçao.",
+    "es": "Sitio de comparación de eSIM de viaje para Curazao.",
+    "pt": "Site de comparação de eSIMs de viagem para Curaçao."
    }
   }
  ],
  "tips": [
   {
    "nl": "De gulden heet sinds 31 maart 2025 Caribische gulden (XCG) en is 1 op 1 gelijk aan de oude NAf/ANG; Digicel noemt sommige prijzen nog in ANG.",
-   "en": "The guilder became the Caribbean guilder (XCG) on March 31, 2025, at 1 to 1 with the old NAf/ANG; Digicel still lists some prices in ANG."
+   "en": "The guilder became the Caribbean guilder (XCG) on March 31, 2025, at 1 to 1 with the old NAf/ANG; Digicel still lists some prices in ANG.",
+   "de": "Der Gulden wurde am 31. März 2025 zum Karibischen Gulden (XCG), im Verhältnis 1 zu 1 zum alten NAf/ANG; Digicel nennt manche Preise noch in ANG.",
+   "es": "El florín pasó a ser el florín del Caribe (XCG) el 31 de marzo de 2025, a razón de 1 a 1 con el antiguo NAf/ANG; Digicel todavía muestra algunos precios en ANG.",
+   "pt": "O florim virou o florim do Caribe (XCG) em 31 de março de 2025, na proporção de 1 para 1 com o antigo NAf/ANG; a Digicel ainda lista alguns preços em ANG."
   },
   {
    "nl": "Bij Digicel+ betaal je een borg bij aansluiten; vraag vooraf hoe hoog die is.",
-   "en": "Digicel+ asks for a deposit when you sign up; ask how much before you commit."
+   "en": "Digicel+ asks for a deposit when you sign up; ask how much before you commit.",
+   "de": "Digicel+ verlangt bei Vertragsabschluss eine Kaution; frag nach der Höhe, bevor du dich festlegst.",
+   "es": "Digicel+ pide un depósito al contratar; pregunta cuánto es antes de comprometerte.",
+   "pt": "A Digicel+ pede um depósito na contratação; pergunte quanto é antes de se comprometer."
   },
   {
    "nl": "Werk je thuis? Neem een mobiele databundel of Starlink als reserve: Flow had in juni 2025 bijna een dag lang een eilandbrede storing.",
-   "en": "Working from home? Keep a mobile data plan or Starlink as backup: Flow had an island-wide outage of almost a full day in June 2025."
+   "en": "Working from home? Keep a mobile data plan or Starlink as backup: Flow had an island-wide outage of almost a full day in June 2025.",
+   "de": "Arbeitest du von zu Hause? Halte einen Mobilfunktarif oder Starlink als Reserve bereit: Im Juni 2025 fiel Flow auf der ganzen Insel fast einen ganzen Tag aus.",
+   "es": "¿Trabajas desde casa? Ten un plan de datos móvil o Starlink de respaldo: en junio de 2025 Flow tuvo una caída en toda la isla de casi un día completo.",
+   "pt": "Trabalha em casa? Tenha um plano de dados móvel ou a Starlink como reserva: em junho de 2025 a Flow teve uma queda em toda a ilha de quase um dia inteiro."
   },
   {
    "nl": "Een lokale SIM registreren kan alleen met paspoort of ander geldig ID.",
-   "en": "You need a passport or other valid ID to register a local SIM."
+   "en": "You need a passport or other valid ID to register a local SIM.",
+   "de": "Zum Registrieren einer lokalen SIM brauchst du einen Reisepass oder einen anderen gültigen Ausweis.",
+   "es": "Necesitas pasaporte u otro documento de identidad válido para registrar una SIM local.",
+   "pt": "Você precisa de passaporte ou outro documento de identidade válido para registrar um chip local."
   },
   {
    "nl": "SIM-kaarten op de luchthaven zijn vaak duurder dan in de stad of bij supermarktbalies.",
-   "en": "SIM cards at the airport are often pricier than in town or at supermarket service desks."
+   "en": "SIM cards at the airport are often pricier than in town or at supermarket service desks.",
+   "de": "SIM-Karten am Flughafen sind oft teurer als in der Stadt oder an Supermarkt-Schaltern.",
+   "es": "Las SIM del aeropuerto suelen ser más caras que en la ciudad o en los mostradores de supermercados.",
+   "pt": "Os chips do aeroporto costumam ser mais caros do que na cidade ou nos balcões de supermercados."
   },
   {
    "nl": "Vraag bij Qonèkt eerst of jouw wijk al is aangesloten; de uitrol begon in Vidanova en St. Joris.",
-   "en": "Ask Qonèkt whether your neighborhood is connected yet; the rollout started in Vidanova and St. Joris."
+   "en": "Ask Qonèkt whether your neighborhood is connected yet; the rollout started in Vidanova and St. Joris.",
+   "de": "Frag bei Qonèkt nach, ob dein Viertel schon angeschlossen ist; der Ausbau begann in Vidanova und St. Joris.",
+   "es": "Pregunta a Qonèkt si tu barrio ya está conectado; el despliegue empezó en Vidanova y St. Joris.",
+   "pt": "Pergunte à Qonèkt se o seu bairro já está conectado; a expansão começou em Vidanova e St. Joris."
   }
  ],
  "faq": [
   {
    "q": {
     "nl": "Welke internetaanbieders zijn er op Curaçao?",
-    "en": "Which internet providers are there in Curaçao?"
+    "en": "Which internet providers are there in Curaçao?",
+    "de": "Welche Internetanbieter gibt es auf Curaçao?",
+    "es": "¿Qué proveedores de internet hay en Curazao?",
+    "pt": "Quais provedores de internet existem em Curaçao?"
    },
    "a": {
     "nl": "Flow en Digicel+ zijn de twee grote aanbieders voor thuisinternet. Qonèkt (Aquatel) kreeg in juni 2025 een concessie voor glasvezel, en Starlink is sinds 14 oktober 2026 officieel beschikbaar. Teramobil heeft een mobiele concessie, maar moest uiterlijk eind 2025 actief zijn.",
-    "en": "Flow and Digicel+ are the two main home internet providers. Qonèkt (Aquatel) received a fiber license in June 2025, and Starlink has been officially available since October 14, 2026. Teramobil holds a mobile license but had to be up and running by the end of 2025."
+    "en": "Flow and Digicel+ are the two main home internet providers. Qonèkt (Aquatel) received a fiber license in June 2025, and Starlink has been officially available since October 14, 2026. Teramobil holds a mobile license but had to be up and running by the end of 2025.",
+    "de": "Flow und Digicel+ sind die beiden wichtigsten Anbieter für Heiminternet. Qonèkt (Aquatel) erhielt im Juni 2025 eine Glasfaserlizenz, und Starlink ist seit dem 14. Oktober 2026 offiziell verfügbar. Teramobil hat eine Mobilfunklizenz, hätte aber bis Ende 2025 in Betrieb sein müssen.",
+    "es": "Flow y Digicel+ son los dos proveedores principales de internet para el hogar. Qonèkt (Aquatel) recibió una licencia de fibra en junio de 2025 y Starlink está disponible oficialmente desde el 14 de octubre de 2026. Teramobil tiene una licencia móvil, pero debía estar operando a fines de 2025.",
+    "pt": "Flow e Digicel+ são os dois principais provedores de internet residencial. A Qonèkt (Aquatel) recebeu licença de fibra em junho de 2025, e a Starlink está oficialmente disponível desde 14 de outubro de 2026. A Teramobil tem licença de telefonia móvel, mas deveria estar funcionando até o fim de 2025."
    }
   },
   {
    "q": {
     "nl": "Wat kost glasvezel op Curaçao?",
-    "en": "How much does fiber internet cost in Curaçao?"
+    "en": "How much does fiber internet cost in Curaçao?",
+    "de": "Was kostet Glasfaserinternet auf Curaçao?",
+    "es": "¿Cuánto cuesta el internet de fibra en Curazao?",
+    "pt": "Quanto custa a internet de fibra em Curaçao?"
    },
    "a": {
     "nl": "Digicel+ glasvezel kost XCG 209 per maand voor 250/100 Mbit/s met 84 tv-zenders, oplopend tot XCG 399 voor 600/250 Mbit/s (prijzen inclusief belasting, oktober 2026).",
-    "en": "Digicel+ fiber costs XCG 209 a month for 250/100 Mbps with 84 TV channels, up to XCG 399 for 600/250 Mbps (tax included, October 2026)."
+    "en": "Digicel+ fiber costs XCG 209 a month for 250/100 Mbps with 84 TV channels, up to XCG 399 for 600/250 Mbps (tax included, October 2026).",
+    "de": "Digicel+ Glasfaser kostet XCG 209 im Monat für 250/100 Mbps mit 84 TV-Sendern, bis zu XCG 399 für 600/250 Mbps (inklusive Steuern, Oktober 2026).",
+    "es": "La fibra de Digicel+ cuesta XCG 209 al mes por 250/100 Mbps con 84 canales de TV, hasta XCG 399 por 600/250 Mbps (impuestos incluidos, octubre de 2026).",
+    "pt": "A fibra da Digicel+ custa XCG 209 por mês por 250/100 Mbps com 84 canais de TV, até XCG 399 por 600/250 Mbps (impostos incluídos, outubro de 2026)."
    }
   },
   {
    "q": {
     "nl": "Is Starlink beschikbaar op Curaçao?",
-    "en": "Is Starlink available in Curaçao?"
+    "en": "Is Starlink available in Curaçao?",
+    "de": "Gibt es Starlink auf Curaçao?",
+    "es": "¿Hay Starlink en Curazao?",
+    "pt": "A Starlink está disponível em Curaçao?"
    },
    "a": {
     "nl": "Ja. Starlink ging op 14 oktober 2026 officieel live op Curaçao. Daarvoor gebruikten mensen kits uit Nederland of de VS met een reisabonnement. Check eerst op de site van Starlink of jouw adres al kan worden aangesloten.",
-    "en": "Yes. Starlink officially launched in Curaçao on October 14, 2026. Before that, people used kits bought in the Netherlands or the US on a travel plan. Check Starlink's site first to see if your address can be served."
+    "en": "Yes. Starlink officially launched in Curaçao on October 14, 2026. Before that, people used kits bought in the Netherlands or the US on a travel plan. Check Starlink's site first to see if your address can be served.",
+    "de": "Ja. Starlink startete am 14. Oktober 2026 offiziell auf Curaçao. Davor nutzten Leute Sets, die sie in den Niederlanden oder den USA mit einem Reisetarif gekauft hatten. Prüfe zuerst auf der Starlink-Seite, ob deine Adresse versorgt werden kann.",
+    "es": "Sí. Starlink se lanzó oficialmente en Curazao el 14 de octubre de 2026. Antes, la gente usaba kits comprados en los Países Bajos o en EE. UU. con un plan de viaje. Revisa primero el sitio de Starlink para ver si tu dirección tiene cobertura.",
+    "pt": "Sim. A Starlink foi lançada oficialmente em Curaçao em 14 de outubro de 2026. Antes disso, as pessoas usavam kits comprados na Holanda ou nos EUA com um plano de viagem. Confira primeiro o site da Starlink para ver se o seu endereço é atendido."
    }
   },
   {
    "q": {
     "nl": "Welke aanbieder heeft het snelste internet op Curaçao?",
-    "en": "Which provider has the fastest internet in Curaçao?"
+    "en": "Which provider has the fastest internet in Curaçao?",
+    "de": "Welcher Anbieter hat das schnellste Internet auf Curaçao?",
+    "es": "¿Qué proveedor tiene el internet más rápido de Curazao?",
+    "pt": "Qual provedor tem a internet mais rápida de Curaçao?"
    },
    "a": {
     "nl": "Volgens Ookla (eerste helft 2025) had Digicel+ het snelste vaste internet, gemiddeld 86 Mbit/s download en 47 upload. Op mobiel was Flow (Chippie) het snelst met ongeveer 39 Mbit/s.",
-    "en": "According to Ookla (first half of 2025), Digicel+ had the fastest fixed internet, averaging 86 Mbps down and 47 up. On mobile, Flow (Chippie) was fastest at about 39 Mbps."
+    "en": "According to Ookla (first half of 2025), Digicel+ had the fastest fixed internet, averaging 86 Mbps down and 47 up. On mobile, Flow (Chippie) was fastest at about 39 Mbps.",
+    "de": "Laut Ookla (erstes Halbjahr 2025) hatte Digicel+ das schnellste Festnetzinternet mit durchschnittlich 86 Mbps im Download und 47 im Upload. Mobil war Flow (Chippie) mit etwa 39 Mbps am schnellsten.",
+    "es": "Según Ookla (primer semestre de 2025), Digicel+ tuvo el internet fijo más rápido, con un promedio de 86 Mbps de bajada y 47 de subida. En móvil, Flow (Chippie) fue la más rápida con unos 39 Mbps.",
+    "pt": "Segundo a Ookla (primeiro semestre de 2025), a Digicel+ teve a internet fixa mais rápida, com média de 86 Mbps de download e 47 de upload. No celular, a Flow (Chippie) foi a mais rápida, com cerca de 39 Mbps."
    }
   },
   {
    "q": {
     "nl": "Is Chippie hetzelfde als Flow?",
-    "en": "Is Chippie the same as Flow?"
+    "en": "Is Chippie the same as Flow?",
+    "de": "Ist Chippie dasselbe wie Flow?",
+    "es": "¿Chippie es lo mismo que Flow?",
+    "pt": "Chippie é a mesma coisa que Flow?"
    },
    "a": {
     "nl": "Ja. Chippie was het mobiele merk van UTS. Liberty Latin America kocht UTS in 2019 en bracht het onder de naam Flow. Chippie is nu het prepaidmerk van Flow.",
-    "en": "Yes. Chippie was UTS's mobile brand. Liberty Latin America bought UTS in 2019 and rebranded it as Flow. Chippie is now Flow's prepaid brand."
+    "en": "Yes. Chippie was UTS's mobile brand. Liberty Latin America bought UTS in 2019 and rebranded it as Flow. Chippie is now Flow's prepaid brand.",
+    "de": "Ja. Chippie war die Mobilfunkmarke von UTS. Liberty Latin America kaufte UTS 2019 und benannte sie in Flow um. Chippie ist heute die Prepaid-Marke von Flow.",
+    "es": "Sí. Chippie era la marca móvil de UTS. Liberty Latin America compró UTS en 2019 y la renombró como Flow. Hoy Chippie es la marca prepago de Flow.",
+    "pt": "Sim. Chippie era a marca de celular da UTS. A Liberty Latin America comprou a UTS em 2019 e a rebatizou como Flow. Hoje a Chippie é a marca pré-paga da Flow."
    }
   },
   {
    "q": {
     "nl": "Wat kost een prepaid databundel op Curaçao?",
-    "en": "How much is a prepaid data plan in Curaçao?"
+    "en": "How much is a prepaid data plan in Curaçao?",
+    "de": "Was kostet ein Prepaid-Datentarif auf Curaçao?",
+    "es": "¿Cuánto cuesta un plan de datos prepago en Curazao?",
+    "pt": "Quanto custa um plano de dados pré-pago em Curaçao?"
    },
    "a": {
     "nl": "Bij Digicel kost 2 GB voor 1 dag XCG 6,50, 8 GB voor 30 dagen XCG 65 en 35 GB voor 30 dagen XCG 100. Bij Flow/Chippie kost 1 GB extra XCG 10.",
-    "en": "At Digicel, 2 GB for 1 day is XCG 6.50, 8 GB for 30 days is XCG 65 and 35 GB for 30 days is XCG 100. At Flow/Chippie, an extra 1 GB is XCG 10."
+    "en": "At Digicel, 2 GB for 1 day is XCG 6.50, 8 GB for 30 days is XCG 65 and 35 GB for 30 days is XCG 100. At Flow/Chippie, an extra 1 GB is XCG 10.",
+    "de": "Bei Digicel kosten 2 GB für 1 Tag XCG 6.50, 8 GB für 30 Tage XCG 65 und 35 GB für 30 Tage XCG 100. Bei Flow/Chippie kostet ein zusätzliches 1 GB XCG 10.",
+    "es": "En Digicel, 2 GB por 1 día cuestan XCG 6.50, 8 GB por 30 días cuestan XCG 65 y 35 GB por 30 días cuestan XCG 100. En Flow/Chippie, 1 GB adicional cuesta XCG 10.",
+    "pt": "Na Digicel, 2 GB por 1 dia custam XCG 6.50, 8 GB por 30 dias custam XCG 65 e 35 GB por 30 dias custam XCG 100. Na Flow/Chippie, 1 GB extra custa XCG 10."
    }
   },
   {
    "q": {
     "nl": "Waarom zijn er zoveel klachten over Flow?",
-    "en": "Why do so many people complain about Flow?"
+    "en": "Why do so many people complain about Flow?",
+    "de": "Warum beschweren sich so viele über Flow?",
+    "es": "¿Por qué tanta gente se queja de Flow?",
+    "pt": "Por que tanta gente reclama da Flow?"
    },
    "a": {
     "nl": "Flow had een eilandbrede storing op 14 juni 2025 en weken van onderbrekingen begin 2026, onder meer door een platformmigratie waarbij zo'n 7.000 klanten op het oude systeem bleven. De toezichthouder RAC vroeg Flow in 2025 om uitleg.",
-    "en": "Flow had an island-wide outage on June 14, 2025, and weeks of interruptions in early 2026, partly from a platform migration that left about 7,000 customers on the old system. Regulator RAC demanded an explanation from Flow in 2025."
+    "en": "Flow had an island-wide outage on June 14, 2025, and weeks of interruptions in early 2026, partly from a platform migration that left about 7,000 customers on the old system. Regulator RAC demanded an explanation from Flow in 2025.",
+    "de": "Flow hatte am 14. Juni 2025 einen Ausfall auf der ganzen Insel und Anfang 2026 wochenlange Unterbrechungen, teils durch eine Plattformumstellung, bei der rund 7,000 Kunden im alten System blieben. Die Aufsichtsbehörde RAC verlangte 2025 eine Erklärung von Flow.",
+    "es": "Flow tuvo una caída en toda la isla el 14 de junio de 2025 y semanas de interrupciones a comienzos de 2026, en parte por una migración de plataforma que dejó a unos 7,000 clientes en el sistema antiguo. El regulador RAC exigió una explicación a Flow en 2025.",
+    "pt": "A Flow teve uma queda em toda a ilha em 14 de junho de 2025 e semanas de interrupções no início de 2026, em parte por uma migração de plataforma que deixou cerca de 7,000 clientes no sistema antigo. O regulador RAC exigiu uma explicação da Flow em 2025."
    }
   },
   {
    "q": {
     "nl": "Wat kost een mobiel abonnement bij Digicel?",
-    "en": "How much is a Digicel monthly mobile plan?"
+    "en": "How much is a Digicel monthly mobile plan?",
+    "de": "Was kostet ein monatlicher Mobilfunktarif bei Digicel?",
+    "es": "¿Cuánto cuesta un plan móvil mensual de Digicel?",
+    "pt": "Quanto custa um plano de celular mensal da Digicel?"
    },
    "a": {
     "nl": "Digicel-abonnementen lopen van XCG 95 per maand (10 GB) tot XCG 235 per maand (80 GB, onbeperkt bellen ook internationaal).",
-    "en": "Digicel plans run from XCG 95 a month (10 GB) to XCG 235 a month (80 GB, unlimited calls including international)."
+    "en": "Digicel plans run from XCG 95 a month (10 GB) to XCG 235 a month (80 GB, unlimited calls including international).",
+    "de": "Die Tarife von Digicel reichen von XCG 95 im Monat (10 GB) bis XCG 235 im Monat (80 GB, unbegrenzte Anrufe auch ins Ausland).",
+    "es": "Los planes de Digicel van desde XCG 95 al mes (10 GB) hasta XCG 235 al mes (80 GB, llamadas ilimitadas incluidas las internacionales).",
+    "pt": "Os planos da Digicel vão de XCG 95 por mês (10 GB) a XCG 235 por mês (80 GB, ligações ilimitadas, inclusive internacionais)."
    }
   }
  ],
@@ -875,6 +1262,21 @@
    "What is the best internet provider in Curacao for remote work?",
    "Is Starlink available in Curacao and how does it compare to Flow?",
    "Which mobile plan should I get as a resident of Curacao?"
+  ],
+  "de": [
+   "Welcher ist der beste Internetanbieter auf Curaçao für Remote-Arbeit?",
+   "Gibt es Starlink auf Curaçao und wie schneidet es im Vergleich zu Flow ab?",
+   "Welchen Mobilfunktarif sollte ich als Einwohner von Curaçao nehmen?"
+  ],
+  "es": [
+   "¿Cuál es el mejor proveedor de internet en Curazao para trabajo remoto?",
+   "¿Hay Starlink en Curazao y cómo se compara con Flow?",
+   "¿Qué plan móvil me conviene como residente de Curazao?"
+  ],
+  "pt": [
+   "Qual é o melhor provedor de internet em Curaçao para trabalho remoto?",
+   "A Starlink está disponível em Curaçao e como ela se compara à Flow?",
+   "Qual plano de celular devo escolher como residente de Curaçao?"
   ]
  },
  "reviewGewicht": 0.3

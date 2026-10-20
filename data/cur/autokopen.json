@@ -3,35 +3,56 @@
  "peildatum": "2026-10-20",
  "onderwerp": {
   "nl": "autodealer",
-  "en": "car dealer"
+  "en": "car dealer",
+  "de": "Autohändler",
+  "es": "concesionario de autos",
+  "pt": "revendedora de carros"
  },
  "h1": {
   "nl": "Auto kopen op Curaçao: welke dealer of occasion past bij jou?",
-  "en": "Buying a car in Curaçao: which dealer or used car fits you?"
+  "en": "Buying a car in Curaçao: which dealer or used car fits you?",
+  "de": "Ein Auto auf Curaçao kaufen: Welcher Händler oder welcher Gebrauchtwagen passt zu dir?",
+  "es": "Comprar un auto en Curazao: ¿qué concesionario o auto usado te conviene?",
+  "pt": "Comprar um carro em Curaçao: qual loja ou carro usado combina com você?"
  },
  "titel": {
   "nl": "Auto kopen op Curaçao: {n} dealers en occasions vergeleken",
-  "en": "Buying a car in Curaçao: {n} dealers compared"
+  "en": "Buying a car in Curaçao: {n} dealers compared",
+  "de": "Ein Auto auf Curaçao kaufen: {n} Händler im Vergleich",
+  "es": "Comprar un auto en Curazao: {n} concesionarios comparados",
+  "pt": "Comprar um carro em Curaçao: {n} lojas comparadas"
  },
  "metaDesc": {
   "nl": "Alle autodealers en occasionhandels op Curaçao met Google-reviews, merken en wat je betaalt aan invoerrecht als je zelf een auto meeneemt.",
-  "en": "Every car dealer and used-car lot in Curaçao with Google reviews, brands, and the import duty you pay if you ship your own car."
+  "en": "Every car dealer and used-car lot in Curaçao with Google reviews, brands, and the import duty you pay if you ship your own car.",
+  "de": "Alle Autohändler und Gebrauchtwagenplätze auf Curaçao mit Google-Bewertungen, Marken und dem Einfuhrzoll, den du zahlst, wenn du dein eigenes Auto verschiffst.",
+  "es": "Todos los concesionarios y lotes de autos usados de Curazao con reseñas de Google, marcas y el arancel de importación que pagas si envías tu propio auto.",
+  "pt": "Todas as concessionárias e lojas de seminovos de Curaçao com avaliações do Google, marcas e o imposto de importação que você paga se enviar o seu próprio carro."
  },
  "kort": {
   "nl": "Op Curaçao vind je 23 dealers en occasionhandels, van Toyota (Garage Cordia) en Kia/Nissan (Universal Motors) tot elektrische merken bij All to Car en Total Motors. Voor een occasion scoren Autobedrijf Willemstad (4,6 uit 253 reviews) en Occasions@SeriDomi goed. Neem je zelf een auto mee, dan rekent een verscheper met 27% invoerrecht over de CIF-waarde plus 9% omzetbelasting, tenzij je verhuist en de auto al een jaar op je naam staat.",
-  "en": "Curaçao has 23 dealers and used-car lots, from Toyota (Garage Cordia) and Kia/Nissan (Universal Motors) to electric brands at All to Car and Total Motors. For a used car, Autobedrijf Willemstad (4.6 from 253 reviews) and Occasions@SeriDomi score well. If you ship your own car, a shipper quotes 27% import duty on the CIF value plus 9% sales tax, unless you are moving and the car has been yours for at least a year."
+  "en": "Curaçao has 23 dealers and used-car lots, from Toyota (Garage Cordia) and Kia/Nissan (Universal Motors) to electric brands at All to Car and Total Motors. For a used car, Autobedrijf Willemstad (4.6 from 253 reviews) and Occasions@SeriDomi score well. If you ship your own car, a shipper quotes 27% import duty on the CIF value plus 9% sales tax, unless you are moving and the car has been yours for at least a year.",
+  "de": "Auf Curaçao gibt es 23 Händler und Gebrauchtwagenplätze, von Toyota (Garage Cordia) und Kia/Nissan (Universal Motors) bis zu Elektromarken bei All to Car und Total Motors. Bei Gebrauchten schneiden Autobedrijf Willemstad (4.6 aus 253 Bewertungen) und Occasions@SeriDomi gut ab. Wenn du dein eigenes Auto verschiffst, nennt ein Spediteur 27% Einfuhrzoll auf den CIF-Wert plus 9% Umsatzsteuer, es sei denn, du ziehst um und das Auto gehört dir seit mindestens einem Jahr.",
+  "es": "Curazao tiene 23 concesionarios y lotes de autos usados, desde Toyota (Garage Cordia) y Kia/Nissan (Universal Motors) hasta marcas eléctricas en All to Car y Total Motors. Para un auto usado, Autobedrijf Willemstad (4.6 con 253 reseñas) y Occasions@SeriDomi tienen buena puntuación. Si envías tu propio auto, un transportista cotiza 27% de arancel de importación sobre el valor CIF más 9% de impuesto a las ventas, salvo que te mudes y el auto sea tuyo desde hace al menos un año.",
+  "pt": "Curaçao tem 23 concessionárias e lojas de seminovos, de Toyota (Garage Cordia) e Kia/Nissan (Universal Motors) a marcas elétricas na All to Car e na Total Motors. Para seminovos, a Autobedrijf Willemstad (4.6 com 253 avaliações) e a Occasions@SeriDomi vão bem. Se você enviar o seu próprio carro, uma transportadora cobra 27% de imposto de importação sobre o valor CIF mais 9% de imposto sobre vendas, a menos que você esteja se mudando e o carro seja seu há pelo menos um ano."
  },
  "vragen": [
   {
    "q": {
     "nl": "Nieuw of tweedehands?",
-    "en": "New or used?"
+    "en": "New or used?",
+    "de": "Neu oder gebraucht?",
+    "es": "¿Nuevo o usado?",
+    "pt": "Novo ou usado?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "No preference"
+      "en": "No preference",
+      "de": "Keine Präferenz",
+      "es": "Sin preferencia",
+      "pt": "Sem preferência"
      },
      "plus": [],
      "min": [],
@@ -40,7 +61,10 @@
     {
      "label": {
       "nl": "Nieuw",
-      "en": "New"
+      "en": "New",
+      "de": "Neu",
+      "es": "Nuevo",
+      "pt": "Novo"
      },
      "plus": [
       "nieuw"
@@ -51,7 +75,10 @@
     {
      "label": {
       "nl": "Occasion",
-      "en": "Used"
+      "en": "Used",
+      "de": "Gebraucht",
+      "es": "Usado",
+      "pt": "Usado"
      },
      "plus": [
       "occasion",
@@ -63,7 +90,10 @@
     {
      "label": {
       "nl": "Leasen",
-      "en": "Lease"
+      "en": "Lease",
+      "de": "Leasing",
+      "es": "Leasing",
+      "pt": "Leasing"
      },
      "plus": [
       "lease"
@@ -76,13 +106,19 @@
   {
    "q": {
     "nl": "Wat is je budget?",
-    "en": "What is your budget?"
+    "en": "What is your budget?",
+    "de": "Wie hoch ist dein Budget?",
+    "es": "¿Cuál es tu presupuesto?",
+    "pt": "Qual é o seu orçamento?"
    },
    "opties": [
     {
      "label": {
       "nl": "Middenklasse",
-      "en": "Mid-range"
+      "en": "Mid-range",
+      "de": "Mittel",
+      "es": "Medio",
+      "pt": "Médio"
      },
      "plus": [],
      "min": [],
@@ -91,7 +127,10 @@
     {
      "label": {
       "nl": "Zo voordelig mogelijk",
-      "en": "As cheap as possible"
+      "en": "As cheap as possible",
+      "de": "So günstig wie möglich",
+      "es": "Lo más barato posible",
+      "pt": "O mais barato possível"
      },
      "plus": [
       "budget",
@@ -105,7 +144,10 @@
     {
      "label": {
       "nl": "Luxe of premium",
-      "en": "Luxury or premium"
+      "en": "Luxury or premium",
+      "de": "Luxus oder Premium",
+      "es": "Lujo o premium",
+      "pt": "Luxo ou premium"
      },
      "plus": [
       "luxe"
@@ -120,13 +162,19 @@
   {
    "q": {
     "nl": "Wat voor auto zoek je?",
-    "en": "What kind of car are you after?"
+    "en": "What kind of car are you after?",
+    "de": "Was für ein Auto suchst du?",
+    "es": "¿Qué tipo de auto buscas?",
+    "pt": "Que tipo de carro você procura?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "No preference"
+      "en": "No preference",
+      "de": "Keine Präferenz",
+      "es": "Sin preferencia",
+      "pt": "Sem preferência"
      },
      "plus": [],
      "min": [],
@@ -135,7 +183,10 @@
     {
      "label": {
       "nl": "SUV of pick-up",
-      "en": "SUV or pickup"
+      "en": "SUV or pickup",
+      "de": "SUV oder Pickup",
+      "es": "SUV o camioneta pickup",
+      "pt": "SUV ou picape"
      },
      "plus": [
       "suv"
@@ -146,7 +197,10 @@
     {
      "label": {
       "nl": "Elektrisch",
-      "en": "Electric"
+      "en": "Electric",
+      "de": "Elektro",
+      "es": "Eléctrico",
+      "pt": "Elétrico"
      },
      "plus": [
       "elektrisch"
@@ -157,7 +211,10 @@
     {
      "label": {
       "nl": "Klein en zuinig",
-      "en": "Small and economical"
+      "en": "Small and economical",
+      "de": "Klein und sparsam",
+      "es": "Pequeño y económico",
+      "pt": "Pequeno e econômico"
      },
      "plus": [
       "budget"
@@ -172,13 +229,19 @@
   {
    "q": {
     "nl": "Heb je financiering nodig?",
-    "en": "Do you need financing?"
+    "en": "Do you need financing?",
+    "de": "Brauchst du eine Finanzierung?",
+    "es": "¿Necesitas financiamiento?",
+    "pt": "Você precisa de financiamento?"
    },
    "opties": [
     {
      "label": {
       "nl": "Nee, ik betaal zelf of via mijn bank",
-      "en": "No, I pay myself or through my bank"
+      "en": "No, I pay myself or through my bank",
+      "de": "Nein, ich zahle selbst oder über meine Bank",
+      "es": "No, pago yo mismo o a través de mi banco",
+      "pt": "Não, eu pago ou financio pelo meu banco"
      },
      "plus": [],
      "min": [],
@@ -187,7 +250,10 @@
     {
      "label": {
       "nl": "Ja, lease of financiering",
-      "en": "Yes, leasing or financing"
+      "en": "Yes, leasing or financing",
+      "de": "Ja, Leasing oder Finanzierung",
+      "es": "Sí, leasing o financiamiento",
+      "pt": "Sim, leasing ou financiamento"
      },
      "plus": [
       "lease",
@@ -199,7 +265,10 @@
     {
      "label": {
       "nl": "Ik wil vooral goed onderhoud erbij",
-      "en": "Mainly good servicing afterwards"
+      "en": "Mainly good servicing afterwards",
+      "de": "Vor allem guter Service danach",
+      "es": "Sobre todo buen servicio posventa",
+      "pt": "Principalmente um bom serviço depois da compra"
      },
      "plus": [
       "onderhoud"
@@ -217,7 +286,10 @@
    "url": null,
    "soort": {
     "nl": "Toyota-dealer",
-    "en": "Toyota dealer"
+    "en": "Toyota dealer",
+    "de": "Toyota-Händler",
+    "es": "concesionario Toyota",
+    "pt": "concessionária Toyota"
    },
    "plaats": "Kaya Jacob Posner 39",
    "tags": [
@@ -230,11 +302,17 @@
    "feiten": [
     {
      "nl": "Dealer van Toyota",
-     "en": "Toyota dealer"
+     "en": "Toyota dealer",
+     "de": "Toyota-Händler",
+     "es": "concesionario Toyota",
+     "pt": "concessionária Toyota"
     },
     {
      "nl": "Personenauto's en pick-ups",
-     "en": "Cars and pickup trucks"
+     "en": "Cars and pickup trucks",
+     "de": "Autos und Pickups",
+     "es": "Autos y camionetas pickup",
+     "pt": "Carros e picapes"
     }
    ],
    "scores": [
@@ -257,6 +335,21 @@
      "Parts usually in stock",
      "New cars and trucks fairly priced",
      "Friendly, skilled service department"
+    ],
+    "de": [
+     "Ersatzteile meist auf Lager",
+     "Neuwagen und Pickups zu fairen Preisen",
+     "Freundliche, kompetente Werkstatt"
+    ],
+    "es": [
+     "Repuestos casi siempre en stock",
+     "Autos y pickups nuevos a precios justos",
+     "Taller amable y competente"
+    ],
+    "pt": [
+     "Peças geralmente em estoque",
+     "Carros e picapes novos com preço justo",
+     "Oficina simpática e competente"
     ]
    },
    "tegen": {
@@ -267,6 +360,18 @@
     "en": [
      "Parts are expensive",
      "Complaint about a delivered trim that differed from the showroom car"
+    ],
+    "de": [
+     "Ersatzteile sind teuer",
+     "Beschwerde über eine gelieferte Ausstattung, die vom Ausstellungsfahrzeug abwich"
+    ],
+    "es": [
+     "Los repuestos son caros",
+     "Queja por una versión entregada que no coincidía con el auto de exhibición"
+    ],
+    "pt": [
+     "As peças são caras",
+     "Reclamação sobre um acabamento entregue diferente do carro da exposição"
     ]
    },
    "bronnen": [
@@ -279,7 +384,10 @@
    "url": null,
    "soort": {
     "nl": "Kia- en Nissan-dealer",
-    "en": "Kia and Nissan dealer"
+    "en": "Kia and Nissan dealer",
+    "de": "Kia- und Nissan-Händler",
+    "es": "concesionario Kia y Nissan",
+    "pt": "concessionária Kia e Nissan"
    },
    "plaats": "Junostraat 6, Saliña",
    "tags": [
@@ -293,11 +401,17 @@
    "feiten": [
     {
      "nl": "Enige Kia-dealer op het eiland",
-     "en": "Only Kia dealer on the island"
+     "en": "Only Kia dealer on the island",
+     "de": "Einziger Kia-Händler auf der Insel",
+     "es": "Único concesionario Kia de la isla",
+     "pt": "Única concessionária Kia da ilha"
     },
     {
      "nl": "Ook importeur van Nissan",
-     "en": "Also imports Nissan"
+     "en": "Also imports Nissan",
+     "de": "Importiert auch Nissan",
+     "es": "También importa Nissan",
+     "pt": "Também importa Nissan"
     }
    ],
    "scores": [
@@ -318,6 +432,18 @@
     "en": [
      "Friendly sales advisors",
      "Good welcome at the first service visit"
+    ],
+    "de": [
+     "Freundliche Verkaufsberater",
+     "Gute Betreuung beim ersten Service"
+    ],
+    "es": [
+     "Asesores de ventas amables",
+     "Buena atención en la primera revisión"
+    ],
+    "pt": [
+     "Consultores de vendas simpáticos",
+     "Bom atendimento na primeira revisão"
     ]
    },
    "tegen": {
@@ -328,6 +454,18 @@
     "en": [
      "Nissan parts: up to 6 weeks wait",
      "Customer service can be slow"
+    ],
+    "de": [
+     "Nissan-Teile: bis zu 6 Wochen Wartezeit",
+     "Der Kundenservice kann langsam sein"
+    ],
+    "es": [
+     "Repuestos de Nissan: hasta 6 semanas de espera",
+     "El servicio al cliente puede ser lento"
+    ],
+    "pt": [
+     "Peças da Nissan: até 6 semanas de espera",
+     "O atendimento ao cliente pode ser lento"
     ]
    },
    "bronnen": [
@@ -340,7 +478,10 @@
    "url": null,
    "soort": {
     "nl": "dealer en werkplaats",
-    "en": "dealer and service"
+    "en": "dealer and service",
+    "de": "Händler und Werkstatt",
+    "es": "concesionario y taller",
+    "pt": "concessionária e oficina"
    },
    "plaats": "Elias R.A. Moreno Boulevard 1",
    "tags": [
@@ -351,7 +492,10 @@
    "feiten": [
     {
      "nl": "Ook zaterdagochtend open",
-     "en": "Also open Saturday mornings"
+     "en": "Also open Saturday mornings",
+     "de": "Auch samstagvormittags geöffnet",
+     "es": "También abre los sábados por la mañana",
+     "pt": "Também abre aos sábados de manhã"
     }
    ],
    "scores": [
@@ -372,6 +516,18 @@
     "en": [
      "Sales staff know the cars and take their time",
      "Easy car drop-off for maintenance"
+    ],
+    "de": [
+     "Das Verkaufsteam kennt die Autos und nimmt sich Zeit",
+     "Einfache Fahrzeugabgabe für die Wartung"
+    ],
+    "es": [
+     "Los vendedores conocen los autos y se toman su tiempo",
+     "Es fácil dejar el auto para mantenimiento"
+    ],
+    "pt": [
+     "A equipe de vendas conhece os carros e dedica tempo ao cliente",
+     "Fácil deixar o carro para manutenção"
     ]
    },
    "tegen": {
@@ -380,6 +536,15 @@
     ],
     "en": [
      "Things sometimes take a long time"
+    ],
+    "de": [
+     "Manches dauert manchmal lange"
+    ],
+    "es": [
+     "A veces las cosas tardan mucho"
+    ],
+    "pt": [
+     "Às vezes as coisas demoram"
     ]
    },
    "bronnen": [
@@ -392,7 +557,10 @@
    "url": null,
    "soort": {
     "nl": "dealer Great Wall/Haval",
-    "en": "Great Wall/Haval dealer"
+    "en": "Great Wall/Haval dealer",
+    "de": "Great-Wall/Haval-Händler",
+    "es": "concesionario Great Wall/Haval",
+    "pt": "concessionária Great Wall/Haval"
    },
    "plaats": "Weg naar Welgelegen 38",
    "tags": [
@@ -405,7 +573,10 @@
    "feiten": [
     {
      "nl": "Verkoopt o.a. Haval-SUV's",
-     "en": "Sells Haval SUVs, among others"
+     "en": "Sells Haval SUVs, among others",
+     "de": "Verkauft unter anderem Haval-SUVs",
+     "es": "Vende, entre otros, SUV Haval",
+     "pt": "Vende, entre outros, SUVs Haval"
     }
    ],
    "scores": [
@@ -428,6 +599,21 @@
      "Friendly, helpful staff",
      "Service department is good and efficient",
      "Clean, air-conditioned showroom"
+    ],
+    "de": [
+     "Freundliches, hilfsbereites Personal",
+     "Die Werkstatt ist gut und effizient",
+     "Sauberer, klimatisierter Ausstellungsraum"
+    ],
+    "es": [
+     "Personal amable y servicial",
+     "El taller es bueno y eficiente",
+     "Sala de exhibición limpia y con aire acondicionado"
+    ],
+    "pt": [
+     "Equipe simpática e prestativa",
+     "A oficina é boa e eficiente",
+     "Showroom limpo e com ar-condicionado"
     ]
    },
    "tegen": {
@@ -436,6 +622,15 @@
     ],
     "en": [
      "You sometimes have to find a salesperson yourself"
+    ],
+    "de": [
+     "Manchmal muss man sich einen Verkäufer selbst suchen"
+    ],
+    "es": [
+     "A veces tienes que buscar tú mismo a un vendedor"
+    ],
+    "pt": [
+     "Às vezes você mesmo precisa procurar um vendedor"
     ]
    },
    "bronnen": [
@@ -448,7 +643,10 @@
    "url": null,
    "soort": {
     "nl": "dealer",
-    "en": "dealer"
+    "en": "dealer",
+    "de": "Händler",
+    "es": "concesionario",
+    "pt": "concessionária"
    },
    "plaats": "Kaya Tula 44, Seru Domi",
    "tags": [
@@ -459,11 +657,17 @@
    "feiten": [
     {
      "nl": "Pendelbus bij onderhoudsbeurt",
-     "en": "Shuttle ride during servicing"
+     "en": "Shuttle ride during servicing",
+     "de": "Fahrdienst während der Wartung",
+     "es": "Servicio de traslado durante el mantenimiento",
+     "pt": "Transporte durante a manutenção"
     },
     {
      "nl": "Zelfde terrein als BMW-dealer",
-     "en": "Same site as the BMW dealer"
+     "en": "Same site as the BMW dealer",
+     "de": "Gleiches Gelände wie der BMW-Händler",
+     "es": "En el mismo local que el concesionario BMW",
+     "pt": "No mesmo local da concessionária BMW"
     }
    ],
    "scores": [
@@ -484,6 +688,18 @@
     "en": [
      "Shuttle to work or home while your car is serviced",
      "Clear showroom with info at every car"
+    ],
+    "de": [
+     "Fahrdienst zur Arbeit oder nach Hause, während dein Auto gewartet wird",
+     "Übersichtlicher Ausstellungsraum mit Infos an jedem Auto"
+    ],
+    "es": [
+     "Traslado al trabajo o a casa mientras revisan tu auto",
+     "Sala de exhibición clara, con información en cada auto"
+    ],
+    "pt": [
+     "Transporte até o trabalho ou em casa enquanto seu carro está em manutenção",
+     "Showroom claro, com informações em cada carro"
     ]
    },
    "tegen": {
@@ -492,6 +708,15 @@
     ],
     "en": [
      "Appointments sometimes go wrong, hard to reach by phone"
+    ],
+    "de": [
+     "Termine laufen manchmal schief, telefonisch schwer erreichbar"
+    ],
+    "es": [
+     "A veces las citas fallan y cuesta contactarlos por teléfono"
+    ],
+    "pt": [
+     "Os agendamentos às vezes dão errado e é difícil falar por telefone"
     ]
    },
    "bronnen": [
@@ -504,7 +729,10 @@
    "url": null,
    "soort": {
     "nl": "BMW-dealer",
-    "en": "BMW dealer"
+    "en": "BMW dealer",
+    "de": "BMW-Händler",
+    "es": "concesionario BMW",
+    "pt": "concessionária BMW"
    },
    "plaats": "Kaya Tula 44, Seru Domi",
    "tags": [
@@ -516,7 +744,10 @@
    "feiten": [
     {
      "nl": "Dealer van BMW",
-     "en": "BMW dealer"
+     "en": "BMW dealer",
+     "de": "BMW-Händler",
+     "es": "concesionario BMW",
+     "pt": "concessionária BMW"
     }
    ],
    "scores": [
@@ -535,6 +766,15 @@
     ],
     "en": [
      "Renovated, customer-friendly reception"
+    ],
+    "de": [
+     "Renovierter, kundenfreundlicher Empfang"
+    ],
+    "es": [
+     "Recepción renovada y amable con el cliente"
+    ],
+    "pt": [
+     "Recepção reformada e voltada ao cliente"
     ]
    },
    "tegen": {
@@ -543,6 +783,15 @@
     ],
     "en": [
      "Mixed experiences with service"
+    ],
+    "de": [
+     "Gemischte Erfahrungen mit dem Service"
+    ],
+    "es": [
+     "Experiencias mixtas con el servicio"
+    ],
+    "pt": [
+     "Experiências mistas com o serviço"
     ]
    },
    "bronnen": [
@@ -555,7 +804,10 @@
    "url": null,
    "soort": {
     "nl": "occasions",
-    "en": "used cars"
+    "en": "used cars",
+    "de": "Gebrauchtwagen",
+    "es": "autos usados",
+    "pt": "carros usados"
    },
    "plaats": "Kaya Tula, Seru Domi",
    "tags": [
@@ -566,7 +818,10 @@
    "feiten": [
     {
      "nl": "Hoort bij Crown Automotives",
-     "en": "Part of Crown Automotives"
+     "en": "Part of Crown Automotives",
+     "de": "Teil von Crown Automotives",
+     "es": "Parte de Crown Automotives",
+     "pt": "Parte da Crown Automotives"
     }
    ],
    "scores": [
@@ -589,11 +844,29 @@
      "Cars are checked before sale",
      "Fast paperwork, car delivered clean",
      "Service history comes with the car"
+    ],
+    "de": [
+     "Autos werden vor dem Verkauf geprüft",
+     "Schneller Papierkram, Auto sauber übergeben",
+     "Scheckheft kommt mit dem Auto"
+    ],
+    "es": [
+     "Los autos se revisan antes de venderse",
+     "Trámites rápidos, auto entregado limpio",
+     "El historial de mantenimiento viene con el auto"
+    ],
+    "pt": [
+     "Os carros são revisados antes da venda",
+     "Papelada rápida, carro entregue limpo",
+     "O histórico de revisões vem com o carro"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps/place/?q=place_id:ChIJH38wcvCChI4Rw7JdwbbqV30"
@@ -605,7 +878,10 @@
    "url": null,
    "soort": {
     "nl": "Seat-dealer",
-    "en": "Seat dealer"
+    "en": "Seat dealer",
+    "de": "Seat-Händler",
+    "es": "concesionario Seat",
+    "pt": "concessionária Seat"
    },
    "plaats": "Seru Loraweg",
    "tags": [
@@ -617,7 +893,10 @@
    "feiten": [
     {
      "nl": "Zelfde groep als VW en Audi",
-     "en": "Same group as VW and Audi"
+     "en": "Same group as VW and Audi",
+     "de": "Gleiche Gruppe wie VW und Audi",
+     "es": "Mismo grupo que VW y Audi",
+     "pt": "Mesmo grupo da VW e da Audi"
     }
    ],
    "scores": [
@@ -638,6 +917,18 @@
     "en": [
      "Customers keep coming back for years",
      "Clean showroom, good customer service"
+    ],
+    "de": [
+     "Kunden kommen über Jahre wieder",
+     "Sauberer Ausstellungsraum, guter Kundenservice"
+    ],
+    "es": [
+     "Los clientes vuelven durante años",
+     "Sala de exhibición limpia, buen servicio al cliente"
+    ],
+    "pt": [
+     "Os clientes voltam por anos",
+     "Showroom limpo, bom atendimento ao cliente"
     ]
    },
    "tegen": {
@@ -646,6 +937,15 @@
     ],
     "en": [
      "Servicing is on the pricey side"
+    ],
+    "de": [
+     "Die Wartung ist eher teuer"
+    ],
+    "es": [
+     "El mantenimiento es algo caro"
+    ],
+    "pt": [
+     "A manutenção é meio cara"
     ]
    },
    "bronnen": [
@@ -658,7 +958,10 @@
    "url": null,
    "soort": {
     "nl": "VW-dealer",
-    "en": "VW dealer"
+    "en": "VW dealer",
+    "de": "VW-Händler",
+    "es": "concesionario VW",
+    "pt": "concessionária VW"
    },
    "plaats": "Seru Loraweg",
    "tags": [
@@ -669,7 +972,10 @@
    "feiten": [
     {
      "nl": "Onderdeel van Prowin",
-     "en": "Part of Prowin"
+     "en": "Part of Prowin",
+     "de": "Teil von Prowin",
+     "es": "Parte de Prowin",
+     "pt": "Parte da Prowin"
     }
    ],
    "scores": [
@@ -690,6 +996,18 @@
     "en": [
      "Clear, transparent sales process",
      "Good after-sales service"
+    ],
+    "de": [
+     "Klarer, transparenter Verkaufsprozess",
+     "Guter Kundendienst nach dem Kauf"
+    ],
+    "es": [
+     "Proceso de venta claro y transparente",
+     "Buen servicio posventa"
+    ],
+    "pt": [
+     "Processo de venda claro e transparente",
+     "Bom pós-venda"
     ]
    },
    "tegen": {
@@ -698,6 +1016,15 @@
     ],
     "en": [
      "Parts not always in stock, sometimes months of waiting"
+    ],
+    "de": [
+     "Ersatzteile nicht immer auf Lager, manchmal monatelange Wartezeit"
+    ],
+    "es": [
+     "Repuestos no siempre en stock, a veces meses de espera"
+    ],
+    "pt": [
+     "Peças nem sempre em estoque, às vezes meses de espera"
     ]
    },
    "bronnen": [
@@ -710,7 +1037,10 @@
    "url": null,
    "soort": {
     "nl": "Audi-dealer",
-    "en": "Audi dealer"
+    "en": "Audi dealer",
+    "de": "Audi-Händler",
+    "es": "concesionario Audi",
+    "pt": "concessionária Audi"
    },
    "plaats": "Seru Loraweg",
    "tags": [
@@ -722,7 +1052,10 @@
    "feiten": [
     {
      "nl": "Onderdeel van Prowin",
-     "en": "Part of Prowin"
+     "en": "Part of Prowin",
+     "de": "Teil von Prowin",
+     "es": "Parte de Prowin",
+     "pt": "Parte da Prowin"
     }
    ],
    "scores": [
@@ -741,11 +1074,23 @@
     ],
     "en": [
      "Patient, helpful sales staff"
+    ],
+    "de": [
+     "Geduldige, hilfsbereite Verkäufer"
+    ],
+    "es": [
+     "Vendedores pacientes y serviciales"
+    ],
+    "pt": [
+     "Vendedores pacientes e prestativos"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps/place/?q=place_id:ChIJsXGyuWh9g44RaKHh3p2OaWw"
@@ -757,7 +1102,10 @@
    "url": null,
    "soort": {
     "nl": "Porsche-dealer",
-    "en": "Porsche dealer"
+    "en": "Porsche dealer",
+    "de": "Porsche-Händler",
+    "es": "concesionario Porsche",
+    "pt": "concessionária Porsche"
    },
    "plaats": "Seru Loraweg",
    "tags": [
@@ -769,7 +1117,10 @@
    "feiten": [
     {
      "nl": "Onderdeel van Prowin",
-     "en": "Part of Prowin"
+     "en": "Part of Prowin",
+     "de": "Teil von Prowin",
+     "es": "Parte de Prowin",
+     "pt": "Parte da Prowin"
     }
    ],
    "scores": [
@@ -788,11 +1139,23 @@
     ],
     "en": [
      "Few reviews, but positive"
+    ],
+    "de": [
+     "Wenige Bewertungen, aber positiv"
+    ],
+    "es": [
+     "Pocas reseñas, pero positivas"
+    ],
+    "pt": [
+     "Poucas avaliações, mas positivas"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps/place/?q=place_id:ChIJ63z2qHp9g44RW1VtPFrxM7Q"
@@ -804,7 +1167,10 @@
    "url": null,
    "soort": {
     "nl": "Mercedes-dealer",
-    "en": "Mercedes dealer"
+    "en": "Mercedes dealer",
+    "de": "Mercedes-Händler",
+    "es": "concesionario Mercedes",
+    "pt": "concessionária Mercedes"
    },
    "plaats": "Jan Noorduynweg",
    "tags": [
@@ -816,7 +1182,10 @@
    "feiten": [
     {
      "nl": "Dealer van Mercedes-Benz",
-     "en": "Mercedes-Benz dealer"
+     "en": "Mercedes-Benz dealer",
+     "de": "Mercedes-Benz-Händler",
+     "es": "concesionario Mercedes-Benz",
+     "pt": "concessionária Mercedes-Benz"
     }
    ],
    "scores": [
@@ -835,11 +1204,23 @@
     ],
     "en": [
      "Good follow-up after the first visit"
+    ],
+    "de": [
+     "Gute Nachbetreuung nach dem ersten Besuch"
+    ],
+    "es": [
+     "Buen seguimiento después de la primera visita"
+    ],
+    "pt": [
+     "Bom acompanhamento depois da primeira visita"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps/place/?q=place_id:ChIJ8T2AAdichI4R0v-zlcMeZjg"
@@ -851,7 +1232,10 @@
    "url": null,
    "soort": {
     "nl": "Mazda-dealer",
-    "en": "Mazda dealer"
+    "en": "Mazda dealer",
+    "de": "Mazda-Händler",
+    "es": "concesionario Mazda",
+    "pt": "concessionária Mazda"
    },
    "plaats": "Kaya Buena Vista",
    "tags": [
@@ -863,7 +1247,10 @@
    "feiten": [
     {
      "nl": "Dealer van Mazda",
-     "en": "Mazda dealer"
+     "en": "Mazda dealer",
+     "de": "Mazda-Händler",
+     "es": "concesionario Mazda",
+     "pt": "concessionária Mazda"
     }
    ],
    "scores": [
@@ -884,6 +1271,18 @@
     "en": [
      "Knowledgeable staff",
      "Good after-sales service"
+    ],
+    "de": [
+     "Kompetentes Personal",
+     "Guter Kundendienst nach dem Kauf"
+    ],
+    "es": [
+     "Personal con buen conocimiento",
+     "Buen servicio posventa"
+    ],
+    "pt": [
+     "Equipe que entende do assunto",
+     "Bom pós-venda"
     ]
    },
    "tegen": {
@@ -892,6 +1291,15 @@
     ],
     "en": [
      "Hard to find, at the back of a business park"
+    ],
+    "de": [
+     "Schwer zu finden, hinten in einem Gewerbepark"
+    ],
+    "es": [
+     "Difícil de encontrar, al fondo de un parque empresarial"
+    ],
+    "pt": [
+     "Difícil de achar, no fundo de um parque empresarial"
     ]
    },
    "bronnen": [
@@ -904,7 +1312,10 @@
    "url": null,
    "soort": {
     "nl": "Jeep, Chrysler, Dodge",
-    "en": "Jeep, Chrysler, Dodge"
+    "en": "Jeep, Chrysler, Dodge",
+    "de": "Jeep, Chrysler, Dodge",
+    "es": "Jeep, Chrysler, Dodge",
+    "pt": "Jeep, Chrysler, Dodge"
    },
    "plaats": "Weg naar Welgelegen",
    "tags": [
@@ -917,7 +1328,10 @@
    "feiten": [
     {
      "nl": "Jeep, Chrysler en Dodge",
-     "en": "Jeep, Chrysler and Dodge"
+     "en": "Jeep, Chrysler and Dodge",
+     "de": "Jeep, Chrysler und Dodge",
+     "es": "Jeep, Chrysler y Dodge",
+     "pt": "Jeep, Chrysler e Dodge"
     }
    ],
    "scores": [
@@ -938,6 +1352,18 @@
     "en": [
      "Skilled and honest",
      "Clean, well-kept premises"
+    ],
+    "de": [
+     "Kompetent und ehrlich",
+     "Sauberes, gepflegtes Gelände"
+    ],
+    "es": [
+     "Competentes y honestos",
+     "Instalaciones limpias y bien cuidadas"
+    ],
+    "pt": [
+     "Competentes e honestos",
+     "Instalações limpas e bem cuidadas"
     ]
    },
    "tegen": {
@@ -946,6 +1372,15 @@
     ],
     "en": [
      "Not the cheapest"
+    ],
+    "de": [
+     "Nicht der Günstigste"
+    ],
+    "es": [
+     "No es el más barato"
+    ],
+    "pt": [
+     "Não é o mais barato"
     ]
    },
    "bronnen": [
@@ -958,7 +1393,10 @@
    "url": null,
    "soort": {
     "nl": "Renault-dealer en werkplaats",
-    "en": "Renault dealer and service"
+    "en": "Renault dealer and service",
+    "de": "Renault-Händler und Werkstatt",
+    "es": "concesionario y taller Renault",
+    "pt": "concessionária e oficina Renault"
    },
    "plaats": "Scherpenheuvel West 7",
    "tags": [
@@ -970,7 +1408,10 @@
    "feiten": [
     {
      "nl": "Verkoopt en onderhoudt Renault",
-     "en": "Sells and services Renault"
+     "en": "Sells and services Renault",
+     "de": "Verkauft und wartet Renault",
+     "es": "Vende y repara Renault",
+     "pt": "Vende e faz manutenção de Renault"
     }
    ],
    "scores": [
@@ -991,6 +1432,18 @@
     "en": [
      "Friendly people, good communication",
      "Parts get ordered if not in stock"
+    ],
+    "de": [
+     "Freundliche Leute, gute Kommunikation",
+     "Fehlende Teile werden bestellt"
+    ],
+    "es": [
+     "Gente amable, buena comunicación",
+     "Los repuestos que faltan se piden"
+    ],
+    "pt": [
+     "Pessoal simpático, boa comunicação",
+     "Peças que não estão em estoque são encomendadas"
     ]
    },
    "tegen": {
@@ -1001,6 +1454,18 @@
     "en": [
      "After-sales service is uneven",
      "Diagnostics are expensive"
+    ],
+    "de": [
+     "Der Kundendienst ist unterschiedlich gut",
+     "Diagnosen sind teuer"
+    ],
+    "es": [
+     "El servicio posventa es irregular",
+     "Los diagnósticos son caros"
+    ],
+    "pt": [
+     "O pós-venda é irregular",
+     "Os diagnósticos são caros"
     ]
    },
    "bronnen": [
@@ -1013,7 +1478,10 @@
    "url": null,
    "soort": {
     "nl": "Chinese merken, ook EV",
-    "en": "Chinese brands, incl. EV"
+    "en": "Chinese brands, incl. EV",
+    "de": "Chinesische Marken, auch E-Autos",
+    "es": "Marcas chinas, incluidos eléctricos",
+    "pt": "Marcas chinesas, inclusive elétricos"
    },
    "plaats": "Veeris 53",
    "tags": [
@@ -1026,15 +1494,24 @@
    "feiten": [
     {
      "nl": "Changan, BAW, Wuling, Dongfeng",
-     "en": "Changan, BAW, Wuling, Dongfeng"
+     "en": "Changan, BAW, Wuling, Dongfeng",
+     "de": "Changan, BAW, Wuling, Dongfeng",
+     "es": "Changan, BAW, Wuling, Dongfeng",
+     "pt": "Changan, BAW, Wuling, Dongfeng"
     },
     {
      "nl": "Elektrisch, hybride en plug-in",
-     "en": "Electric, hybrid and plug-in"
+     "en": "Electric, hybrid and plug-in",
+     "de": "Elektro, Hybrid und Plug-in",
+     "es": "Eléctricos, híbridos e híbridos enchufables",
+     "pt": "Elétricos, híbridos e híbridos plug-in"
     },
     {
      "nl": "Ook vestiging op Aruba",
-     "en": "Also has an Aruba showroom"
+     "en": "Also has an Aruba showroom",
+     "de": "Hat auch einen Ausstellungsraum auf Aruba",
+     "es": "También tiene sala de exhibición en Aruba",
+     "pt": "Também tem showroom em Aruba"
     }
    ],
    "scores": [],
@@ -1044,11 +1521,23 @@
     ],
     "en": [
      "Wide range of electric and hybrid cars"
+    ],
+    "de": [
+     "Große Auswahl an Elektro- und Hybridautos"
+    ],
+    "es": [
+     "Gran variedad de autos eléctricos e híbridos"
+    ],
+    "pt": [
+     "Grande variedade de carros elétricos e híbridos"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps/place/?q=place_id:ChIJLULtgymDhI4RDf5OtJnepk0",
@@ -1061,7 +1550,10 @@
    "url": null,
    "soort": {
     "nl": "elektrische voertuigen",
-    "en": "electric vehicles"
+    "en": "electric vehicles",
+    "de": "Elektrofahrzeuge",
+    "es": "vehículos eléctricos",
+    "pt": "veículos elétricos"
    },
    "plaats": "Kaya Jacob Posner 22",
    "tags": [
@@ -1073,7 +1565,10 @@
    "feiten": [
     {
      "nl": "Ook e-scooters en e-bikes",
-     "en": "Also e-scooters and e-bikes"
+     "en": "Also e-scooters and e-bikes",
+     "de": "Auch E-Roller und E-Bikes",
+     "es": "También scooters y bicicletas eléctricas",
+     "pt": "Também scooters e bicicletas elétricas"
     }
    ],
    "scores": [
@@ -1094,11 +1589,26 @@
     "en": [
      "Electric cars at relatively low prices",
      "Help with repairs, even outside warranty"
+    ],
+    "de": [
+     "Elektroautos zu relativ niedrigen Preisen",
+     "Hilfe bei Reparaturen, auch außerhalb der Garantie"
+    ],
+    "es": [
+     "Autos eléctricos a precios relativamente bajos",
+     "Ayuda con reparaciones, incluso fuera de garantía"
+    ],
+    "pt": [
+     "Carros elétricos a preços relativamente baixos",
+     "Ajuda com reparos, mesmo fora da garantia"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps/place/?q=place_id:ChIJFzHnwBqDhI4RQ_oo5oTaLyQ"
@@ -1110,7 +1620,10 @@
    "url": null,
    "soort": {
     "nl": "elektrische auto's",
-    "en": "electric cars"
+    "en": "electric cars",
+    "de": "Elektroautos",
+    "es": "autos eléctricos",
+    "pt": "carros elétricos"
    },
    "plaats": "Caracasbaaiweg 53",
    "tags": [
@@ -1121,7 +1634,10 @@
    "feiten": [
     {
      "nl": "Gespecialiseerd in elektrisch",
-     "en": "Focused on electric cars"
+     "en": "Focused on electric cars",
+     "de": "Spezialisiert auf Elektroautos",
+     "es": "Especializado en autos eléctricos",
+     "pt": "Especializada em carros elétricos"
     }
    ],
    "scores": [
@@ -1140,11 +1656,23 @@
     ],
     "en": [
      "Good service and attention to detail"
+    ],
+    "de": [
+     "Guter Service und Liebe zum Detail"
+    ],
+    "es": [
+     "Buen servicio y atención al detalle"
+    ],
+    "pt": [
+     "Bom serviço e atenção aos detalhes"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps/place/?q=place_id:ChIJGQaHmFF9g44R5ooCamy8p_Q"
@@ -1156,7 +1684,10 @@
    "url": null,
    "soort": {
     "nl": "occasions en verhuur",
-    "en": "used cars and rental"
+    "en": "used cars and rental",
+    "de": "Gebrauchtwagen und Vermietung",
+    "es": "autos usados y alquiler",
+    "pt": "carros usados e aluguel"
    },
    "plaats": "Gosieweg",
    "tags": [
@@ -1167,7 +1698,10 @@
    "feiten": [
     {
      "nl": "Ook zaterdag tot 19.00 open",
-     "en": "Open Saturdays until 7 p.m."
+     "en": "Open Saturdays until 7 p.m.",
+     "de": "Samstags bis 19 Uhr geöffnet",
+     "es": "Abre los sábados hasta las 7 p. m.",
+     "pt": "Abre aos sábados até as 19h"
     }
    ],
    "scores": [
@@ -1190,11 +1724,29 @@
      "Used cars at a fair price",
      "Sales staff answer questions honestly",
      "Helpful for people new to the island"
+    ],
+    "de": [
+     "Gebrauchtwagen zu einem fairen Preis",
+     "Das Verkaufsteam beantwortet Fragen ehrlich",
+     "Hilfreich für Neuankömmlinge auf der Insel"
+    ],
+    "es": [
+     "Autos usados a un precio justo",
+     "Los vendedores responden con honestidad",
+     "Útil para quienes llegan nuevos a la isla"
+    ],
+    "pt": [
+     "Carros usados a preço justo",
+     "A equipe de vendas responde com honestidade",
+     "Útil para quem acabou de chegar à ilha"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps/place/?q=place_id:ChIJZclU6q5ig44R9Kq2Yk-_vQY"
@@ -1206,7 +1758,10 @@
    "url": null,
    "soort": {
     "nl": "occasions en werkplaats",
-    "en": "used cars and repairs"
+    "en": "used cars and repairs",
+    "de": "Gebrauchtwagen und Reparaturen",
+    "es": "autos usados y reparaciones",
+    "pt": "carros usados e reparos"
    },
    "plaats": "Kaminda Elektrishen 28",
    "tags": [
@@ -1218,7 +1773,10 @@
    "feiten": [
     {
      "nl": "Koopt ook jouw auto in",
-     "en": "Also buys your car"
+     "en": "Also buys your car",
+     "de": "Kauft auch dein Auto an",
+     "es": "También compra tu auto",
+     "pt": "Também compra o seu carro"
     }
    ],
    "scores": [
@@ -1241,6 +1799,21 @@
      "Servicing cheaper than other quotes",
      "Quick, easy car sale when you leave the island",
      "Original parts, warns about upcoming repairs"
+    ],
+    "de": [
+     "Wartung günstiger als bei anderen Angeboten",
+     "Schneller, unkomplizierter Autoverkauf, wenn du die Insel verlässt",
+     "Originalteile, warnt vor anstehenden Reparaturen"
+    ],
+    "es": [
+     "Mantenimiento más barato que en otras cotizaciones",
+     "Venta rápida y fácil del auto cuando te vas de la isla",
+     "Repuestos originales, avisa de reparaciones próximas"
+    ],
+    "pt": [
+     "Manutenção mais barata do que em outros orçamentos",
+     "Venda rápida e fácil do carro quando você deixa a ilha",
+     "Peças originais, avisa sobre reparos futuros"
     ]
    },
    "tegen": {
@@ -1251,6 +1824,18 @@
     "en": [
      "Weeks of waiting for a service slot",
      "One complaint about an unclear used-car sale"
+    ],
+    "de": [
+     "Wochenlange Wartezeit auf einen Werkstatttermin",
+     "Eine Beschwerde über einen unklaren Gebrauchtwagenverkauf"
+    ],
+    "es": [
+     "Semanas de espera para conseguir cita en el taller",
+     "Una queja por una venta poco clara de un auto usado"
+    ],
+    "pt": [
+     "Semanas de espera por um horário na oficina",
+     "Uma reclamação sobre uma venda pouco clara de carro usado"
     ]
    },
    "bronnen": [
@@ -1263,7 +1848,10 @@
    "url": null,
    "soort": {
     "nl": "autolease",
-    "en": "car leasing"
+    "en": "car leasing",
+    "de": "Autoleasing",
+    "es": "leasing de autos",
+    "pt": "leasing de carros"
    },
    "plaats": "Kaya Tula / Habaaiweg 82",
    "tags": [
@@ -1274,7 +1862,10 @@
    "feiten": [
     {
      "nl": "Leasemaatschappij",
-     "en": "Leasing company"
+     "en": "Leasing company",
+     "de": "Leasinggesellschaft",
+     "es": "Empresa de leasing",
+     "pt": "Empresa de leasing"
     }
    ],
    "scores": [
@@ -1293,6 +1884,15 @@
     ],
     "en": [
      "Personal contact via account management"
+    ],
+    "de": [
+     "Persönlicher Kontakt über die Kundenbetreuung"
+    ],
+    "es": [
+     "Contacto personal a través de la gestión de cuentas"
+    ],
+    "pt": [
+     "Contato pessoal por meio do gerente de conta"
     ]
    },
    "tegen": {
@@ -1301,6 +1901,15 @@
     ],
     "en": [
      "Complaint about slow replies and service mistakes"
+    ],
+    "de": [
+     "Beschwerde über langsame Antworten und Servicefehler"
+    ],
+    "es": [
+     "Queja por respuestas lentas y errores de servicio"
+    ],
+    "pt": [
+     "Reclamação sobre respostas lentas e erros no atendimento"
     ]
    },
    "bronnen": [
@@ -1313,7 +1922,10 @@
    "url": null,
    "soort": {
     "nl": "autolease",
-    "en": "car leasing"
+    "en": "car leasing",
+    "de": "Autoleasing",
+    "es": "leasing de autos",
+    "pt": "leasing de carros"
    },
    "plaats": "F.D. Rooseveltweg 517",
    "tags": [
@@ -1323,7 +1935,10 @@
    "feiten": [
     {
      "nl": "Leasemaatschappij",
-     "en": "Leasing company"
+     "en": "Leasing company",
+     "de": "Leasinggesellschaft",
+     "es": "Empresa de leasing",
+     "pt": "Empresa de leasing"
     }
    ],
    "scores": [
@@ -1342,11 +1957,23 @@
     ],
     "en": [
      "Friendly, good terms"
+    ],
+    "de": [
+     "Freundlich, gute Konditionen"
+    ],
+    "es": [
+     "Amables, buenas condiciones"
+    ],
+    "pt": [
+     "Simpáticos, boas condições"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps/place/?q=place_id:ChIJ94bzTh2dhI4RMWjcaROcIx8"
@@ -1358,7 +1985,10 @@
    "url": null,
    "soort": {
     "nl": "autodealer",
-    "en": "car dealer"
+    "en": "car dealer",
+    "de": "Autohändler",
+    "es": "concesionario de autos",
+    "pt": "revendedora de carros"
    },
    "plaats": "F.D. Rooseveltweg 68A",
    "tags": [
@@ -1368,7 +1998,10 @@
    "feiten": [
     {
      "nl": "Ook zaterdag open",
-     "en": "Also open Saturdays"
+     "en": "Also open Saturdays",
+     "de": "Auch samstags geöffnet",
+     "es": "También abre los sábados",
+     "pt": "Também abre aos sábados"
     }
    ],
    "scores": [
@@ -1387,11 +2020,23 @@
     ],
     "en": [
      "Few reviews, but positive"
+    ],
+    "de": [
+     "Wenige Bewertungen, aber positiv"
+    ],
+    "es": [
+     "Pocas reseñas, pero positivas"
+    ],
+    "pt": [
+     "Poucas avaliações, mas positivas"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.google.com/maps/place/?q=place_id:ChIJOcIGXSGDhI4RABJmo8eO9sw"
@@ -1404,7 +2049,10 @@
    "url": "https://sclrotterdam.com/en/countries/cura%C3%A7ao-bonaire/",
    "uitleg": {
     "nl": "Verscheept auto's per container of RoRo van Nederland naar Curaçao; vraag een offerte op maat.",
-    "en": "Ships cars by container or RoRo from the Netherlands to Curaçao; ask for a custom quote."
+    "en": "Ships cars by container or RoRo from the Netherlands to Curaçao; ask for a custom quote.",
+    "de": "Verschifft Autos per Container oder RoRo von den Niederlanden nach Curaçao; frag nach einem individuellen Angebot.",
+    "es": "Envía autos en contenedor o RoRo desde los Países Bajos a Curazao; pide una cotización a medida.",
+    "pt": "Envia carros em contêiner ou RoRo da Holanda para Curaçao; peça um orçamento personalizado."
    }
   },
   {
@@ -1412,7 +2060,10 @@
    "url": "https://www.facebook.com/marketplace/",
    "uitleg": {
     "nl": "Hier verkopen particulieren op Curaçao veel tweedehands auto's; laat zelf een monteur kijken en check de keuring.",
-    "en": "Many private sellers in Curaçao list used cars here; have a mechanic look at it and check the inspection."
+    "en": "Many private sellers in Curaçao list used cars here; have a mechanic look at it and check the inspection.",
+    "de": "Viele Privatverkäufer auf Curaçao inserieren hier Gebrauchtwagen; lass einen Mechaniker draufschauen und prüfe die Hauptuntersuchung.",
+    "es": "Muchos vendedores particulares de Curazao publican aquí autos usados; que un mecánico lo revise y verifica la inspección.",
+    "pt": "Muitos vendedores particulares de Curaçao anunciam carros usados aqui; peça para um mecânico olhar e confira a inspeção."
    }
   },
   {
@@ -1420,7 +2071,10 @@
    "url": "https://www.marktplaats.nl/",
    "uitleg": {
     "nl": "Nederlandse occasionsite; alleen interessant als je een auto wilt laten verschepen.",
-    "en": "Dutch used-car site; only useful if you plan to ship a car over."
+    "en": "Dutch used-car site; only useful if you plan to ship a car over.",
+    "de": "Niederländische Gebrauchtwagenseite; nur nützlich, wenn du ein Auto verschiffen willst.",
+    "es": "Sitio neerlandés de autos usados; solo sirve si piensas enviar un auto.",
+    "pt": "Site holandês de carros usados; só serve se você pretende enviar um carro."
    }
   },
   {
@@ -1428,109 +2082,175 @@
    "url": "https://www.autoscout24.nl/",
    "uitleg": {
     "nl": "Europese occasionsite voor wie een auto uit Nederland wil importeren.",
-    "en": "European used-car site for importing a car from the Netherlands."
+    "en": "European used-car site for importing a car from the Netherlands.",
+    "de": "Europäische Gebrauchtwagenseite für den Import eines Autos aus den Niederlanden.",
+    "es": "Sitio europeo de autos usados para importar un auto desde los Países Bajos.",
+    "pt": "Site europeu de carros usados para importar um carro da Holanda."
    }
   }
  ],
  "tips": [
   {
    "nl": "Verhuis je naar Curaçao? Eén personenauto per huishouden kan vrij van invoerrecht mee, als je hem minstens een jaar in bezit en gebruik had voor verzending.",
-   "en": "Moving to Curaçao? One passenger car per household can come in duty-free if you owned and used it for at least a year before shipping."
+   "en": "Moving to Curaçao? One passenger car per household can come in duty-free if you owned and used it for at least a year before shipping.",
+   "de": "Ziehst du nach Curaçao um? Ein Pkw pro Haushalt darf zollfrei einreisen, wenn du ihn vor dem Verschiffen mindestens ein Jahr besessen und genutzt hast.",
+   "es": "¿Te mudas a Curazao? Un auto de pasajeros por hogar puede entrar libre de aranceles si fue tuyo y lo usaste al menos un año antes de enviarlo.",
+   "pt": "Está se mudando para Curaçao? Um carro de passeio por domicílio pode entrar sem imposto se você o teve e usou por pelo menos um ano antes de enviá-lo."
   },
   {
    "nl": "Doe de aangifte van je verhuisgoed binnen zes maanden na vestiging, en verkoop of verhuur de auto het eerste jaar niet zonder toestemming van de douane.",
-   "en": "File your household goods declaration within six months of settling, and do not sell or rent out the car in the first year without customs approval."
+   "en": "File your household goods declaration within six months of settling, and do not sell or rent out the car in the first year without customs approval.",
+   "de": "Reiche die Umzugsgutanmeldung innerhalb von sechs Monaten nach dem Einzug ein und verkaufe oder vermiete das Auto im ersten Jahr nicht ohne Genehmigung des Zolls.",
+   "es": "Presenta la declaración de menaje de casa dentro de los seis meses de instalarte y no vendas ni alquiles el auto durante el primer año sin autorización de la aduana.",
+   "pt": "Entregue a declaração de bens domésticos em até seis meses depois de se estabelecer e não venda nem alugue o carro no primeiro ano sem autorização da alfândega."
   },
   {
    "nl": "Zonder vrijstelling rekent verscheper SCL met 27% invoerrecht over de CIF-waarde (auto plus verzekering en vracht) plus 9% omzetbelasting.",
-   "en": "Without an exemption, shipper SCL quotes 27% import duty on the CIF value (car plus insurance and freight) plus 9% sales tax."
+   "en": "Without an exemption, shipper SCL quotes 27% import duty on the CIF value (car plus insurance and freight) plus 9% sales tax.",
+   "de": "Ohne Befreiung nennt der Spediteur SCL 27% Einfuhrzoll auf den CIF-Wert (Auto plus Versicherung und Fracht) plus 9% Umsatzsteuer.",
+   "es": "Sin exención, el transportista SCL cotiza 27% de arancel de importación sobre el valor CIF (auto más seguro y flete) más 9% de impuesto a las ventas.",
+   "pt": "Sem isenção, a transportadora SCL cobra 27% de imposto de importação sobre o valor CIF (carro mais seguro e frete) mais 9% de imposto sobre vendas."
   },
   {
    "nl": "Hybrides: in maart 2026 won een importeur een rechtszaak omdat de inspecteur 27% rekende waar 10% gold. Vraag na welk tarief voor jouw auto geldt.",
-   "en": "Hybrids: in March 2026 an importer won a court case because the inspector charged 27% where 10% applied. Ask which rate applies to your car."
+   "en": "Hybrids: in March 2026 an importer won a court case because the inspector charged 27% where 10% applied. Ask which rate applies to your car.",
+   "de": "Hybride: Im März 2026 gewann ein Importeur vor Gericht, weil der Prüfer 27% verlangt hatte, wo 10% galten. Frag, welcher Satz für dein Auto gilt.",
+   "es": "Híbridos: en marzo de 2026 un importador ganó un juicio porque el inspector cobró 27% donde correspondía 10%. Pregunta qué tasa se aplica a tu auto.",
+   "pt": "Híbridos: em março de 2026 um importador ganhou uma ação judicial porque o fiscal cobrou 27% onde valia 10%. Pergunte qual alíquota vale para o seu carro."
   },
   {
    "nl": "Vraag bij de dealer hoe lang onderdelen onderweg zijn: reviews noemen 6 weken voor Nissan en tot 3 maanden voor VW.",
-   "en": "Ask the dealer how long parts take to arrive: reviews mention 6 weeks for Nissan and up to 3 months for VW."
+   "en": "Ask the dealer how long parts take to arrive: reviews mention 6 weeks for Nissan and up to 3 months for VW.",
+   "de": "Frag den Händler, wie lange Ersatzteile brauchen: Bewertungen nennen 6 Wochen bei Nissan und bis zu 3 Monate bei VW.",
+   "es": "Pregunta al concesionario cuánto tardan los repuestos: las reseñas mencionan 6 semanas en Nissan y hasta 3 meses en VW.",
+   "pt": "Pergunte à concessionária quanto tempo as peças demoram: as avaliações citam 6 semanas na Nissan e até 3 meses na VW."
   },
   {
    "nl": "Elke auto moet periodiek naar de keuring van het UOVV; een te late keuring kostte eerder een boete van 30 gulden.",
-   "en": "Every car has to go through periodic inspection at the UOVV; a late inspection used to carry a 30-guilder fine."
+   "en": "Every car has to go through periodic inspection at the UOVV; a late inspection used to carry a 30-guilder fine.",
+   "de": "Jedes Auto muss zur regelmäßigen Hauptuntersuchung beim UOVV; für eine verspätete Untersuchung gab es früher 30 Gulden Strafe.",
+   "es": "Todo auto debe pasar la inspección periódica en el UOVV; antes, una inspección tardía tenía una multa de 30 florines.",
+   "pt": "Todo carro precisa passar pela inspeção periódica no UOVV; antes, uma inspeção atrasada tinha multa de 30 florins."
   },
   {
    "nl": "Betaal de jaarlijkse motorrijtuigenbelasting op tijd en haal je nieuwe kentekenplaat op: de politie controleert daar sinds 2026 op.",
-   "en": "Pay the annual vehicle tax on time and pick up your new license plate: police have been checking for both since 2026."
+   "en": "Pay the annual vehicle tax on time and pick up your new license plate: police have been checking for both since 2026.",
+   "de": "Zahle die jährliche Kfz-Steuer pünktlich und hole dein neues Kennzeichen ab: Die Polizei kontrolliert seit 2026 beides.",
+   "es": "Paga el impuesto vehicular anual a tiempo y retira tu nueva placa: la policía revisa ambas cosas desde 2026.",
+   "pt": "Pague o imposto anual do veículo em dia e retire sua nova placa: a polícia fiscaliza as duas coisas desde 2026."
   }
  ],
  "faq": [
   {
    "q": {
     "nl": "Waar koop je een nieuwe auto op Curaçao?",
-    "en": "Where can you buy a new car in Curaçao?"
+    "en": "Where can you buy a new car in Curaçao?",
+    "de": "Wo kann man auf Curaçao ein Neuwagen kaufen?",
+    "es": "¿Dónde se puede comprar un auto nuevo en Curazao?",
+    "pt": "Onde dá para comprar um carro novo em Curaçao?"
    },
    "a": {
     "nl": "De grote merken hebben een eigen dealer: Toyota bij Garage Cordia, Kia en Nissan bij Universal Motors, VW, Audi, Seat en Porsche bij Prowin aan de Seru Loraweg, BMW bij Ultimate Automobiles, Mazda bij Quality Motors en Jeep bij i Cars.",
-    "en": "The major brands have their own dealer: Toyota at Garage Cordia, Kia and Nissan at Universal Motors, VW, Audi, Seat and Porsche at Prowin on Seru Loraweg, BMW at Ultimate Automobiles, Mazda at Quality Motors and Jeep at i Cars."
+    "en": "The major brands have their own dealer: Toyota at Garage Cordia, Kia and Nissan at Universal Motors, VW, Audi, Seat and Porsche at Prowin on Seru Loraweg, BMW at Ultimate Automobiles, Mazda at Quality Motors and Jeep at i Cars.",
+    "de": "Die großen Marken haben jeweils einen eigenen Händler: Toyota bei Garage Cordia, Kia und Nissan bei Universal Motors, VW, Audi, Seat und Porsche bei Prowin am Seru Loraweg, BMW bei Ultimate Automobiles, Mazda bei Quality Motors und Jeep bei i Cars.",
+    "es": "Las grandes marcas tienen su propio concesionario: Toyota en Garage Cordia, Kia y Nissan en Universal Motors, VW, Audi, Seat y Porsche en Prowin en Seru Loraweg, BMW en Ultimate Automobiles, Mazda en Quality Motors y Jeep en i Cars.",
+    "pt": "As grandes marcas têm concessionária própria: Toyota na Garage Cordia, Kia e Nissan na Universal Motors, VW, Audi, Seat e Porsche na Prowin, em Seru Loraweg, BMW na Ultimate Automobiles, Mazda na Quality Motors e Jeep na i Cars."
    }
   },
   {
    "q": {
     "nl": "Hoeveel invoerrecht betaal je voor een auto op Curaçao?",
-    "en": "How much import duty do you pay on a car in Curaçao?"
+    "en": "How much import duty do you pay on a car in Curaçao?",
+    "de": "Wie viel Einfuhrzoll zahlt man auf ein Auto auf Curaçao?",
+    "es": "¿Cuánto arancel de importación se paga por un auto en Curazao?",
+    "pt": "Quanto imposto de importação se paga por um carro em Curaçao?"
    },
    "a": {
     "nl": "Volgens verscheper SCL is dat 27% van de CIF-waarde plus 9% omzetbelasting als de auto korter dan een jaar op je naam staat. Voor sommige voertuigen, zoals bepaalde hybrides, geldt 10%, bleek uit een rechtszaak in maart 2026.",
-    "en": "According to shipper SCL, it is 27% of the CIF value plus 9% sales tax if the car has been in your name for less than a year. Some vehicles, such as certain hybrids, fall under 10%, a March 2026 court case found."
+    "en": "According to shipper SCL, it is 27% of the CIF value plus 9% sales tax if the car has been in your name for less than a year. Some vehicles, such as certain hybrids, fall under 10%, a March 2026 court case found.",
+    "de": "Laut dem Spediteur SCL sind es 27% des CIF-Werts plus 9% Umsatzsteuer, wenn das Auto weniger als ein Jahr auf deinen Namen läuft. Manche Fahrzeuge, etwa bestimmte Hybride, fallen laut einem Gerichtsurteil vom März 2026 unter 10%.",
+    "es": "Según el transportista SCL, es 27% del valor CIF más 9% de impuesto a las ventas si el auto ha estado a tu nombre menos de un año. Algunos vehículos, como ciertos híbridos, caen bajo 10%, según un fallo judicial de marzo de 2026.",
+    "pt": "Segundo a transportadora SCL, são 27% do valor CIF mais 9% de imposto sobre vendas se o carro estiver no seu nome há menos de um ano. Alguns veículos, como certos híbridos, entram na alíquota de 10%, segundo uma decisão judicial de março de 2026."
    }
   },
   {
    "q": {
     "nl": "Kan ik mijn auto uit Nederland meenemen naar Curaçao?",
-    "en": "Can I bring my car from the Netherlands to Curaçao?"
+    "en": "Can I bring my car from the Netherlands to Curaçao?",
+    "de": "Kann ich mein Auto aus den Niederlanden nach Curaçao mitnehmen?",
+    "es": "¿Puedo llevar mi auto de los Países Bajos a Curazao?",
+    "pt": "Posso levar meu carro da Holanda para Curaçao?"
    },
    "a": {
     "nl": "Ja. Als je verhuist, kan één personenauto per huishouden vrij van invoerrecht mee als je hem minstens een jaar in bezit en gebruik had. Je verscheept per container of RoRo, bijvoorbeeld via SCL Rotterdam.",
-    "en": "Yes. If you are moving, one passenger car per household can come duty-free if you owned and used it for at least a year. You ship it by container or RoRo, for example through SCL Rotterdam."
+    "en": "Yes. If you are moving, one passenger car per household can come duty-free if you owned and used it for at least a year. You ship it by container or RoRo, for example through SCL Rotterdam.",
+    "de": "Ja. Bei einem Umzug darf ein Pkw pro Haushalt zollfrei einreisen, wenn du ihn mindestens ein Jahr besessen und genutzt hast. Du verschiffst ihn per Container oder RoRo, zum Beispiel über SCL Rotterdam.",
+    "es": "Sí. Si te mudas, un auto de pasajeros por hogar puede entrar libre de aranceles si fue tuyo y lo usaste al menos un año. Lo envías en contenedor o RoRo, por ejemplo a través de SCL Rotterdam.",
+    "pt": "Sim. Se você estiver se mudando, um carro de passeio por domicílio pode entrar sem imposto se você o teve e usou por pelo menos um ano. O envio é em contêiner ou RoRo, por exemplo pela SCL Rotterdam."
    }
   },
   {
    "q": {
     "nl": "Waar koop je een goede occasion op Curaçao?",
-    "en": "Where do you buy a good used car in Curaçao?"
+    "en": "Where do you buy a good used car in Curaçao?",
+    "de": "Wo kauft man auf Curaçao einen guten Gebrauchtwagen?",
+    "es": "¿Dónde se compra un buen auto usado en Curazao?",
+    "pt": "Onde se compra um bom carro usado em Curaçao?"
    },
    "a": {
     "nl": "Bij occasionhandels zoals Autobedrijf Willemstad (4,6 op Google uit 253 reviews), Occasions@SeriDomi en Economic Auto Center, of particulier via Facebook Marketplace. Bij een particulier laat je de auto beter eerst door een monteur nakijken.",
-    "en": "At used-car dealers such as Autobedrijf Willemstad (4.6 on Google from 253 reviews), Occasions@SeriDomi and Economic Auto Center, or from private sellers on Facebook Marketplace. With a private seller, have a mechanic check the car first."
+    "en": "At used-car dealers such as Autobedrijf Willemstad (4.6 on Google from 253 reviews), Occasions@SeriDomi and Economic Auto Center, or from private sellers on Facebook Marketplace. With a private seller, have a mechanic check the car first.",
+    "de": "Bei Gebrauchtwagenhändlern wie Autobedrijf Willemstad (4.6 bei Google aus 253 Bewertungen), Occasions@SeriDomi und Economic Auto Center oder bei Privatverkäufern auf Facebook Marketplace. Bei einem Privatverkäufer lass das Auto vorher von einem Mechaniker prüfen.",
+    "es": "En lotes de autos usados como Autobedrijf Willemstad (4.6 en Google con 253 reseñas), Occasions@SeriDomi y Economic Auto Center, o con vendedores particulares en Facebook Marketplace. Con un vendedor particular, haz que un mecánico revise el auto antes.",
+    "pt": "Em lojas de seminovos como a Autobedrijf Willemstad (4.6 no Google com 253 avaliações), a Occasions@SeriDomi e a Economic Auto Center, ou com vendedores particulares no Facebook Marketplace. Com um vendedor particular, peça antes para um mecânico examinar o carro."
    }
   },
   {
    "q": {
     "nl": "Kun je een elektrische auto kopen op Curaçao?",
-    "en": "Can you buy an electric car in Curaçao?"
+    "en": "Can you buy an electric car in Curaçao?",
+    "de": "Kann man auf Curaçao ein Elektroauto kaufen?",
+    "es": "¿Se puede comprar un auto eléctrico en Curazao?",
+    "pt": "Dá para comprar um carro elétrico em Curaçao?"
    },
    "a": {
     "nl": "Ja. All to Car (Veeris) verkoopt elektrische, hybride en plug-in modellen van Chinese merken als Changan, BAW en Dongfeng. Ook Total Motors en Amp Motors richten zich op elektrische auto's.",
-    "en": "Yes. All to Car (Veeris) sells electric, hybrid and plug-in models from Chinese brands such as Changan, BAW and Dongfeng. Total Motors and Amp Motors also focus on electric cars."
+    "en": "Yes. All to Car (Veeris) sells electric, hybrid and plug-in models from Chinese brands such as Changan, BAW and Dongfeng. Total Motors and Amp Motors also focus on electric cars.",
+    "de": "Ja. All to Car (Veeris) verkauft Elektro-, Hybrid- und Plug-in-Modelle chinesischer Marken wie Changan, BAW und Dongfeng. Auch Total Motors und Amp Motors konzentrieren sich auf Elektroautos.",
+    "es": "Sí. All to Car (Veeris) vende modelos eléctricos, híbridos e híbridos enchufables de marcas chinas como Changan, BAW y Dongfeng. Total Motors y Amp Motors también se enfocan en autos eléctricos.",
+    "pt": "Sim. A All to Car (Veeris) vende modelos elétricos, híbridos e híbridos plug-in de marcas chinesas como Changan, BAW e Dongfeng. A Total Motors e a Amp Motors também se concentram em carros elétricos."
    }
   },
   {
    "q": {
     "nl": "Kun je een auto leasen op Curaçao?",
-    "en": "Can you lease a car in Curaçao?"
+    "en": "Can you lease a car in Curaçao?",
+    "de": "Kann man auf Curaçao ein Auto leasen?",
+    "es": "¿Se puede hacer leasing de un auto en Curazao?",
+    "pt": "Dá para fazer leasing de um carro em Curaçao?"
    },
    "a": {
     "nl": "Ja, onder meer bij Uralco (Seru Domi) en Autolease Curaçao (F.D. Rooseveltweg). Vraag wat er in de leaseprijs zit, zoals onderhoud en verzekering.",
-    "en": "Yes, for example at Uralco (Seru Domi) and Autolease Curaçao (F.D. Rooseveltweg). Ask what the lease price covers, such as maintenance and insurance."
+    "en": "Yes, for example at Uralco (Seru Domi) and Autolease Curaçao (F.D. Rooseveltweg). Ask what the lease price covers, such as maintenance and insurance.",
+    "de": "Ja, zum Beispiel bei Uralco (Seru Domi) und Autolease Curaçao (F.D. Rooseveltweg). Frag, was der Leasingpreis abdeckt, etwa Wartung und Versicherung.",
+    "es": "Sí, por ejemplo en Uralco (Seru Domi) y Autolease Curaçao (F.D. Rooseveltweg). Pregunta qué cubre el precio del leasing, por ejemplo mantenimiento y seguro.",
+    "pt": "Sim, por exemplo na Uralco (Seru Domi) e na Autolease Curaçao (F.D. Rooseveltweg). Pergunte o que o valor do leasing cobre, como manutenção e seguro."
    }
   },
   {
    "q": {
     "nl": "Waar moet een auto op Curaçao gekeurd worden?",
-    "en": "Where are cars inspected in Curaçao?"
+    "en": "Where are cars inspected in Curaçao?",
+    "de": "Wo werden Autos auf Curaçao geprüft?",
+    "es": "¿Dónde se inspeccionan los autos en Curazao?",
+    "pt": "Onde os carros são inspecionados em Curaçao?"
    },
    "a": {
     "nl": "Bij de keuring van het UOVV (Verkeer en Vervoer) in Willemstad. In januari tot en met april 2026 werden 24.010 voertuigen goedgekeurd, 231 afgekeurd en 11.183 overgeschreven.",
-    "en": "At the UOVV (traffic and transport authority) inspection station in Willemstad. From January through April 2026, 24,010 vehicles passed, 231 failed and 11,183 changed owners."
+    "en": "At the UOVV (traffic and transport authority) inspection station in Willemstad. From January through April 2026, 24,010 vehicles passed, 231 failed and 11,183 changed owners.",
+    "de": "An der Prüfstelle des UOVV (Verkehrs- und Transportbehörde) in Willemstad. Von Januar bis April 2026 bestanden 24,010 Fahrzeuge, 231 fielen durch und 11,183 wechselten den Besitzer.",
+    "es": "En la estación de inspección del UOVV (autoridad de tránsito y transporte) en Willemstad. De enero a abril de 2026 aprobaron 24,010 vehículos, 231 reprobaron y 11,183 cambiaron de dueño.",
+    "pt": "No posto de inspeção do UOVV (autoridade de trânsito e transporte) em Willemstad. De janeiro a abril de 2026, 24,010 veículos foram aprovados, 231 reprovaram e 11,183 mudaram de dono."
    }
   }
  ],
@@ -1578,6 +2298,21 @@
    "Should I ship my car to Curacao or buy one there?",
    "Where can I buy a reliable used car in Curacao?",
    "Which car brands have dealers in Curacao?"
+  ],
+  "de": [
+   "Sollte ich mein Auto nach Curaçao verschiffen oder dort eines kaufen?",
+   "Wo kann ich auf Curaçao einen zuverlässigen Gebrauchtwagen kaufen?",
+   "Welche Automarken haben Händler auf Curaçao?"
+  ],
+  "es": [
+   "¿Debo enviar mi auto a Curazao o comprar uno allá?",
+   "¿Dónde puedo comprar un auto usado confiable en Curazao?",
+   "¿Qué marcas de autos tienen concesionarios en Curazao?"
+  ],
+  "pt": [
+   "Devo enviar meu carro para Curaçao ou comprar um lá?",
+   "Onde posso comprar um carro usado confiável em Curaçao?",
+   "Quais marcas de carros têm concessionárias em Curaçao?"
   ]
  }
 }

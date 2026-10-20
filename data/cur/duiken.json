@@ -3,35 +3,56 @@
  "peildatum": "2026-10-20",
  "onderwerp": {
   "nl": "duikschool",
-  "en": "dive shop"
+  "en": "dive shop",
+  "de": "Tauchbasis",
+  "es": "tienda de buceo",
+  "pt": "escola de mergulho"
  },
  "h1": {
   "nl": "Duiken op Curaçao: welke duikschool past bij jou?",
-  "en": "Diving in Curaçao: which dive shop is right for you?"
+  "en": "Diving in Curaçao: which dive shop is right for you?",
+  "de": "Tauchen auf Curaçao: Welche Tauchbasis ist die richtige für dich?",
+  "es": "Buceo en Curazao: ¿qué tienda de buceo te conviene?",
+  "pt": "Mergulho em Curaçao: qual escola de mergulho é a certa para você?"
  },
  "titel": {
   "nl": "Duikschool Curaçao kiezen: {n} duikscholen vergeleken",
-  "en": "Best Dive Shop in Curaçao: {n} Dive Shops Compared"
+  "en": "Best Dive Shop in Curaçao: {n} Dive Shops Compared",
+  "de": "Die beste Tauchbasis auf Curaçao: {n} Tauchbasen im Vergleich",
+  "es": "La mejor tienda de buceo de Curazao: {n} tiendas comparadas",
+  "pt": "A melhor escola de mergulho de Curaçao: {n} escolas comparadas"
  },
  "metaDesc": {
   "nl": "{n} duikscholen op Curaçao naast elkaar: reviewscores, prijzen voor Discover Scuba, Open Water en kantduiken, taal en regio.",
-  "en": "{n} Curaçao dive shops side by side: review scores, prices for Discover Scuba, Open Water and shore diving, language and area."
+  "en": "{n} Curaçao dive shops side by side: review scores, prices for Discover Scuba, Open Water and shore diving, language and area.",
+  "de": "{n} Tauchbasen auf Curaçao im direkten Vergleich: Bewertungen, Preise für Schnuppertauchen, Open Water und Tauchen vom Ufer, Sprache und Gegend.",
+  "es": "{n} tiendas de buceo de Curazao lado a lado: calificaciones, precios de bautismo, Open Water y buceo desde la orilla, idioma y zona.",
+  "pt": "{n} escolas de mergulho de Curaçao lado a lado: notas, preços de batismo, Open Water e mergulho de costa, idioma e região."
  },
  "kort": {
   "nl": "We vonden 37 duikscholen en duikbases op Curaçao. Een eerste proefduik (Discover Scuba) kost $125 tot $140, de PADI Open Water rond $450 tot $525, een begeleide kantduik vanaf $39 en vijf dagen onbeperkt kantduiken vanaf $210. Nooit gedoken: kijk naar The Dive Bus of Jan Thiel Diving; ervaren en tec: Goby Divers; Westpunt: GO WEST Diving; Nederlandstalig: Dive Center Van de Ven of Unique Diving.",
-  "en": "We found 37 dive shops and dive bases on Curaçao. A first try dive (Discover Scuba) costs $125 to $140, PADI Open Water about $450 to $525, a guided shore dive from $39, and five days of unlimited shore diving from $210. Never dived: look at The Dive Bus or Jan Thiel Diving; experienced and tech: Goby Divers; Westpunt: GO WEST Diving; Dutch-speaking: Dive Center Van de Ven or Unique Diving."
+  "en": "We found 37 dive shops and dive bases on Curaçao. A first try dive (Discover Scuba) costs $125 to $140, PADI Open Water about $450 to $525, a guided shore dive from $39, and five days of unlimited shore diving from $210. Never dived: look at The Dive Bus or Jan Thiel Diving; experienced and tech: Goby Divers; Westpunt: GO WEST Diving; Dutch-speaking: Dive Center Van de Ven or Unique Diving.",
+  "de": "Wir haben auf Curaçao 37 Tauchbasen und Tauchstationen gefunden. Ein erster Schnuppertauchgang (Discover Scuba) kostet $125 bis $140, PADI Open Water etwa $450 bis $525, ein geführter Landtauchgang ab $39 und fünf Tage unbegrenztes Tauchen vom Ufer ab $210. Noch nie getaucht: Schau dir The Dive Bus oder Jan Thiel Diving an; erfahren und Technical: Goby Divers; Westpunt: GO WEST Diving; niederländischsprachig: Dive Center Van de Ven oder Unique Diving.",
+  "es": "Encontramos 37 tiendas y bases de buceo en Curazao. Un primer bautismo de buceo (Discover Scuba) cuesta $125 a $140, el PADI Open Water unos $450 a $525, una inmersión guiada desde la orilla desde $39 y cinco días de buceo ilimitado desde la orilla desde $210. Si nunca has buceado: mira The Dive Bus o Jan Thiel Diving; para experimentados y técnico: Goby Divers; Westpunt: GO WEST Diving; en neerlandés: Dive Center Van de Ven o Unique Diving.",
+  "pt": "Encontramos 37 escolas e bases de mergulho em Curaçao. Um primeiro batismo de mergulho (Discover Scuba) custa $125 a $140, o PADI Open Water cerca de $450 a $525, um mergulho de costa guiado a partir de $39 e cinco dias de mergulho de costa ilimitado a partir de $210. Nunca mergulhou: veja a The Dive Bus ou a Jan Thiel Diving; experientes e técnico: Goby Divers; Westpunt: GO WEST Diving; em holandês: Dive Center Van de Ven ou Unique Diving."
  },
  "vragen": [
   {
    "q": {
     "nl": "Hoeveel duikervaring heb je?",
-    "en": "How much diving experience do you have?"
+    "en": "How much diving experience do you have?",
+    "de": "Wie viel Taucherfahrung hast du?",
+    "es": "¿Cuánta experiencia de buceo tienes?",
+    "pt": "Quanta experiência de mergulho você tem?"
    },
    "opties": [
     {
      "label": {
       "nl": "Nog nooit gedoken",
-      "en": "Never dived"
+      "en": "Never dived",
+      "de": "Noch nie getaucht",
+      "es": "Nunca he buceado",
+      "pt": "Nunca mergulhei"
      },
      "plus": [
       "cursus-beginner",
@@ -45,7 +66,10 @@
     {
      "label": {
       "nl": "Net gebrevetteerd",
-      "en": "Recently certified"
+      "en": "Recently certified",
+      "de": "Frisch zertifiziert",
+      "es": "Recién certificado",
+      "pt": "Recém-certificado"
      },
      "plus": [
       "shore-diving",
@@ -57,7 +81,10 @@
     {
      "label": {
       "nl": "Ervaren duiker",
-      "en": "Experienced diver"
+      "en": "Experienced diver",
+      "de": "Erfahrener Taucher",
+      "es": "Buceador experimentado",
+      "pt": "Mergulhador experiente"
      },
      "plus": [
       "gevorderd",
@@ -73,13 +100,19 @@
   {
    "q": {
     "nl": "Wil je een cursus of vooral duiken?",
-    "en": "Do you want a course or mostly fun dives?"
+    "en": "Do you want a course or mostly fun dives?",
+    "de": "Möchtest du einen Kurs machen oder vor allem Spaßtauchgänge?",
+    "es": "¿Quieres un curso o sobre todo inmersiones recreativas?",
+    "pt": "Você quer fazer um curso ou principalmente mergulhos de lazer?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "Either"
+      "en": "Either",
+      "de": "Beides ist okay",
+      "es": "Cualquiera de los dos",
+      "pt": "Tanto faz"
      },
      "plus": [],
      "min": [],
@@ -88,7 +121,10 @@
     {
      "label": {
       "nl": "Een brevet halen",
-      "en": "Get certified"
+      "en": "Get certified",
+      "de": "Zertifizierung machen",
+      "es": "Sacar la certificación",
+      "pt": "Tirar a certificação"
      },
      "plus": [
       "cursus-beginner",
@@ -101,7 +137,10 @@
     {
      "label": {
       "nl": "Zelf kantduiken met flessen",
-      "en": "Shore dive on my own with rented tanks"
+      "en": "Shore dive on my own with rented tanks",
+      "de": "Allein vom Ufer tauchen mit gemieteten Flaschen",
+      "es": "Bucear solo desde la orilla con tanques alquilados",
+      "pt": "Mergulhar de costa por conta própria com cilindros alugados"
      },
      "plus": [
       "tank-huren",
@@ -113,7 +152,10 @@
     {
      "label": {
       "nl": "Bootduiken",
-      "en": "Boat dives"
+      "en": "Boat dives",
+      "de": "Bootstauchgänge",
+      "es": "Inmersiones en barco",
+      "pt": "Mergulhos de barco"
      },
      "plus": [
       "boot"
@@ -126,13 +168,19 @@
   {
    "q": {
     "nl": "Waar verblijf je?",
-    "en": "Where are you staying?"
+    "en": "Where are you staying?",
+    "de": "Wo wohnst du?",
+    "es": "¿Dónde te alojas?",
+    "pt": "Onde você está hospedado?"
    },
    "opties": [
     {
      "label": {
       "nl": "Weet ik nog niet",
-      "en": "Not sure yet"
+      "en": "Not sure yet",
+      "de": "Noch unsicher",
+      "es": "Todavía no lo sé",
+      "pt": "Ainda não sei"
      },
      "plus": [],
      "min": [],
@@ -141,7 +189,10 @@
     {
      "label": {
       "nl": "Westpunt en Bandabou",
-      "en": "Westpunt and Bandabou"
+      "en": "Westpunt and Bandabou",
+      "de": "Westpunt und Bandabou",
+      "es": "Westpunt y Bandabou",
+      "pt": "Westpunt e Bandabou"
      },
      "plus": [
       "westpunt"
@@ -152,7 +203,10 @@
     {
      "label": {
       "nl": "Willemstad, Piscadera of Blue Bay",
-      "en": "Willemstad, Piscadera or Blue Bay"
+      "en": "Willemstad, Piscadera or Blue Bay",
+      "de": "Willemstad, Piscadera oder Blue Bay",
+      "es": "Willemstad, Piscadera o Blue Bay",
+      "pt": "Willemstad, Piscadera ou Blue Bay"
      },
      "plus": [
       "midden"
@@ -163,7 +217,10 @@
     {
      "label": {
       "nl": "Jan Thiel en Caracasbaai",
-      "en": "Jan Thiel and Caracasbaai"
+      "en": "Jan Thiel and Caracasbaai",
+      "de": "Jan Thiel und Caracasbaai",
+      "es": "Jan Thiel y Caracasbaai",
+      "pt": "Jan Thiel e Caracasbaai"
      },
      "plus": [
       "oost"
@@ -176,13 +233,19 @@
   {
    "q": {
     "nl": "Wat vind je het belangrijkst?",
-    "en": "What matters most to you?"
+    "en": "What matters most to you?",
+    "de": "Was ist dir am wichtigsten?",
+    "es": "¿Qué es lo más importante para ti?",
+    "pt": "O que é mais importante para você?"
    },
    "opties": [
     {
      "label": {
       "nl": "Niets bijzonders",
-      "en": "Nothing in particular"
+      "en": "Nothing in particular",
+      "de": "Nichts Besonderes",
+      "es": "Nada en particular",
+      "pt": "Nada em especial"
      },
      "plus": [],
      "min": [],
@@ -191,7 +254,10 @@
     {
      "label": {
       "nl": "Lage prijs",
-      "en": "Low price"
+      "en": "Low price",
+      "de": "Niedriger Preis",
+      "es": "Precio bajo",
+      "pt": "Preço baixo"
      },
      "plus": [
       "budget",
@@ -203,7 +269,10 @@
     {
      "label": {
       "nl": "Les in het Nederlands",
-      "en": "Lessons in Dutch"
+      "en": "Lessons in Dutch",
+      "de": "Unterricht auf Niederländisch",
+      "es": "Clases en neerlandés",
+      "pt": "Aulas em holandês"
      },
      "plus": [
       "nl-sprekend"
@@ -214,7 +283,10 @@
     {
      "label": {
       "nl": "Les in het Duits",
-      "en": "Lessons in German"
+      "en": "Lessons in German",
+      "de": "Unterricht auf Deutsch",
+      "es": "Clases en alemán",
+      "pt": "Aulas em alemão"
      },
      "plus": [
       "de-sprekend"
@@ -225,7 +297,10 @@
     {
      "label": {
       "nl": "Duiken met kinderen",
-      "en": "Diving with kids"
+      "en": "Diving with kids",
+      "de": "Tauchen mit Kindern",
+      "es": "Bucear con niños",
+      "pt": "Mergulho com crianças"
      },
      "plus": [
       "kinderen-bubblemaker"
@@ -243,7 +318,10 @@
    "url": "https://www.oceanencounters.com",
    "soort": {
     "nl": "PADI 5-ster IDC, grootste",
-    "en": "PADI 5 Star IDC, largest"
+    "en": "PADI 5 Star IDC, largest",
+    "de": "PADI 5 Star IDC, die größte",
+    "es": "PADI 5 Star IDC, la más grande",
+    "pt": "PADI 5 Star IDC, a maior"
    },
    "plaats": "Lions Dive Beach Resort, Bapor Kibra",
    "tags": [
@@ -262,7 +340,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "vanaf, 5 dagen onbeperkt kantduiken",
-     "en": "from, 5 days unlimited shore diving"
+     "en": "from, 5 days unlimited shore diving",
+     "de": "ab, 5 Tage unbegrenzt vom Ufer tauchen",
+     "es": "desde, 5 días de buceo ilimitado desde la orilla",
+     "pt": "a partir de, 5 dias de mergulho de costa ilimitado"
     },
     "bron": "https://www.oceanencounters.com/product/unlimited-air-package-5-days/",
     "datum": "2026-10"
@@ -270,19 +351,31 @@
    "feiten": [
     {
      "nl": "Ook bij Sunscape en TUI BLUE",
-     "en": "Also at Sunscape and TUI BLUE"
+     "en": "Also at Sunscape and TUI BLUE",
+     "de": "Auch bei Sunscape und TUI BLUE",
+     "es": "También en Sunscape y TUI BLUE",
+     "pt": "Também no Sunscape e no TUI BLUE"
     },
     {
      "nl": "7 boten, 6 locaties",
-     "en": "7 boats, 6 locations"
+     "en": "7 boats, 6 locations",
+     "de": "7 Boote, 6 Standorte",
+     "es": "7 barcos, 6 sedes",
+     "pt": "7 barcos, 6 unidades"
     },
     {
      "nl": "Discover Scuba ca. $140",
-     "en": "Discover Scuba about $140"
+     "en": "Discover Scuba about $140",
+     "de": "Discover Scuba etwa $140",
+     "es": "Discover Scuba unos $140",
+     "pt": "Discover Scuba cerca de $140"
     },
     {
      "nl": "Opfriscursus vanaf $110",
-     "en": "Refresher course from $110"
+     "en": "Refresher course from $110",
+     "de": "Auffrischungskurs ab $110",
+     "es": "Curso de repaso desde $110",
+     "pt": "Curso de reciclagem a partir de $110"
     }
    ],
    "scores": [
@@ -305,6 +398,21 @@
      "Friendly, knowledgeable divemasters and boat captains",
      "Roomy, well-kept boats",
      "Guides adjust pace and depth to each diver's level"
+    ],
+    "de": [
+     "Freundliche, kompetente Divemaster und Bootskapitäne",
+     "Geräumige, gepflegte Boote",
+     "Die Guides passen Tempo und Tiefe dem Level jedes Tauchers an"
+    ],
+    "es": [
+     "Divemasters y capitanes de barco amables y con mucho conocimiento",
+     "Barcos amplios y bien cuidados",
+     "Los guías ajustan el ritmo y la profundidad al nivel de cada buceador"
+    ],
+    "pt": [
+     "Divemasters e capitães de barco simpáticos e experientes",
+     "Barcos espaçosos e bem cuidados",
+     "Os guias ajustam o ritmo e a profundidade ao nível de cada mergulhador"
     ]
    },
    "tegen": {
@@ -315,6 +423,18 @@
     "en": [
      "Isolated complaint about dirty or faulty rental gear",
      "One complaint about rude staff"
+    ],
+    "de": [
+     "Einzelne Beschwerde über schmutzige oder defekte Leihausrüstung",
+     "Eine Beschwerde über unhöfliches Personal"
+    ],
+    "es": [
+     "Una queja aislada por equipo de alquiler sucio o defectuoso",
+     "Una queja por personal descortés"
+    ],
+    "pt": [
+     "Uma reclamação isolada sobre equipamento alugado sujo ou com defeito",
+     "Uma reclamação sobre equipe mal-educada"
     ]
    },
    "bronnen": [
@@ -331,7 +451,10 @@
    "url": null,
    "soort": {
     "nl": "PADI 5-ster",
-    "en": "PADI 5 Star"
+    "en": "PADI 5 Star",
+    "de": "PADI 5 Star",
+    "es": "PADI 5 Star",
+    "pt": "PADI 5 Star"
    },
    "plaats": "Playa Kalki, Westpunt",
    "tags": [
@@ -348,7 +471,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "per dag volledige huuruitrusting",
-     "en": "per day full rental gear"
+     "en": "per day full rental gear",
+     "de": "pro Tag, komplette Leihausrüstung",
+     "es": "por día, equipo de alquiler completo",
+     "pt": "por dia, equipamento de aluguel completo"
     },
     "bron": "https://www.tripadvisor.com/Attraction_Review-g1724323-d2099541-Reviews-GO_WEST_Diving-Sabana_Westpunt_Curacao.html",
     "datum": "2026-10"
@@ -356,15 +482,24 @@
    "feiten": [
     {
      "nl": "Travelers' Choice 2026",
-     "en": "Travelers' Choice 2026"
+     "en": "Travelers' Choice 2026",
+     "de": "Travelers' Choice 2026",
+     "es": "Travelers' Choice 2026",
+     "pt": "Travelers' Choice 2026"
     },
     {
      "nl": "Boot naar Watamula en Blue Room",
-     "en": "Boat trips to Watamula, Blue Room"
+     "en": "Boat trips to Watamula, Blue Room",
+     "de": "Bootsausflüge nach Watamula, Blue Room",
+     "es": "Salidas en barco a Watamula, Blue Room",
+     "pt": "Passeios de barco a Watamula, Blue Room"
     },
     {
      "nl": "Huur $48 per dag na 3 dagen",
-     "en": "Rental $48/day after 3 days"
+     "en": "Rental $48/day after 3 days",
+     "de": "Miete $48/Tag nach 3 Tagen",
+     "es": "Alquiler $48/día después de 3 días",
+     "pt": "Aluguel de $48/dia depois de 3 dias"
     }
    ],
    "scores": [
@@ -389,6 +524,24 @@
      "Clean, well-maintained rental gear",
      "Strong dive sites on the northwest coast",
      "Good with first-timers and families"
+    ],
+    "de": [
+     "Geduldige, freundliche Lehrer",
+     "Saubere, gut gewartete Leihausrüstung",
+     "Starke Tauchplätze an der Nordwestküste",
+     "Gut für Anfänger und Familien"
+    ],
+    "es": [
+     "Instructores pacientes y amables",
+     "Equipo de alquiler limpio y bien mantenido",
+     "Muy buenos sitios de buceo en la costa noroeste",
+     "Bueno para principiantes y familias"
+    ],
+    "pt": [
+     "Instrutores pacientes e simpáticos",
+     "Equipamento de aluguel limpo e bem conservado",
+     "Ótimos pontos de mergulho na costa noroeste",
+     "Bom para iniciantes e famílias"
     ]
    },
    "tegen": {
@@ -401,6 +554,21 @@
      "Not full service: you haul and rinse your own gear",
      "Add-on fees add up",
      "Few loungers and limited showers"
+    ],
+    "de": [
+     "Kein Rundum-Service: Du schleppst und spülst deine Ausrüstung selbst",
+     "Zusatzgebühren summieren sich",
+     "Wenige Liegen und begrenzte Duschen"
+    ],
+    "es": [
+     "No es servicio completo: tú cargas y enjuagas tu propio equipo",
+     "Los cargos adicionales se van sumando",
+     "Pocas tumbonas y pocas duchas"
+    ],
+    "pt": [
+     "Não é serviço completo: você carrega e enxágua o seu próprio equipamento",
+     "As taxas extras vão se somando",
+     "Poucas espreguiçadeiras e chuveiros limitados"
     ]
    },
    "bronnen": [
@@ -415,7 +583,10 @@
    "url": null,
    "soort": {
     "nl": "PADI 5-ster IDC, kantduiken",
-    "en": "PADI 5 Star IDC, shore diving"
+    "en": "PADI 5 Star IDC, shore diving",
+    "de": "PADI 5 Star IDC, Tauchen vom Ufer",
+    "es": "PADI 5 Star IDC, buceo desde la orilla",
+    "pt": "PADI 5 Star IDC, mergulho de costa"
    },
    "plaats": "Marie Pampoen, Willemstad",
    "tags": [
@@ -433,7 +604,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "vanaf, PADI Discover Scuba",
-     "en": "from, PADI Discover Scuba"
+     "en": "from, PADI Discover Scuba",
+     "de": "ab, PADI Discover Scuba",
+     "es": "desde, PADI Discover Scuba",
+     "pt": "a partir de, PADI Discover Scuba"
     },
     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d1062985-Reviews-The_Dive_Bus-Willemstad_Curacao.html",
     "datum": "2026-10"
@@ -441,19 +615,31 @@
    "feiten": [
     {
      "nl": "Kantduiken sinds 2005",
-     "en": "Shore diving since 2005"
+     "en": "Shore diving since 2005",
+     "de": "Tauchen vom Ufer seit 2005",
+     "es": "Buceo desde la orilla desde 2005",
+     "pt": "Mergulho de costa desde 2005"
     },
     {
      "nl": "2 begeleide duiken vanaf $109",
-     "en": "2-tank guided dive from $109"
+     "en": "2-tank guided dive from $109",
+     "de": "Geführter 2-Flaschen-Tauchgang ab $109",
+     "es": "Inmersión guiada de 2 tanques desde $109",
+     "pt": "Mergulho guiado de 2 cilindros a partir de $109"
     },
     {
      "nl": "Max. 6 tot 8 duikers per gids",
-     "en": "Max 6 to 8 divers per guide"
+     "en": "Max 6 to 8 divers per guide",
+     "de": "Maximal 6 bis 8 Taucher pro Guide",
+     "es": "Máximo de 6 a 8 buceadores por guía",
+     "pt": "No máximo 6 a 8 mergulhadores por guia"
     },
     {
      "nl": "Ophalen in Punda en Jan Thiel",
-     "en": "Pickup in Punda and Jan Thiel"
+     "en": "Pickup in Punda and Jan Thiel",
+     "de": "Abholung in Punda und Jan Thiel",
+     "es": "Recogida en Punda y Jan Thiel",
+     "pt": "Busca em Punda e Jan Thiel"
     }
    ],
    "scores": [
@@ -478,6 +664,24 @@
      "Friendly, professional team",
      "Clean gear and a well-stocked shop",
      "Lots of marine life at Car Pile and Tugboat"
+    ],
+    "de": [
+     "Geduldiger Unterricht für Anfänger",
+     "Freundliches, professionelles Team",
+     "Saubere Ausrüstung und gut sortierter Laden",
+     "Viel Meeresleben bei Car Pile und Tugboat"
+    ],
+    "es": [
+     "Enseñanza paciente para principiantes",
+     "Equipo amable y profesional",
+     "Equipo limpio y tienda bien surtida",
+     "Mucha vida marina en Car Pile y Tugboat"
+    ],
+    "pt": [
+     "Ensino paciente para iniciantes",
+     "Equipe simpática e profissional",
+     "Equipamento limpo e loja bem abastecida",
+     "Muita vida marinha em Car Pile e Tugboat"
     ]
    },
    "tegen": {
@@ -488,6 +692,18 @@
     "en": [
      "House reef guide sometimes too fast for macro",
      "Shore dives mean carrying gear to the water"
+    ],
+    "de": [
+     "Der Guide am Hausriff ist manchmal zu schnell für Makrofotografie",
+     "Beim Tauchen vom Ufer musst du die Ausrüstung zum Wasser tragen"
+    ],
+    "es": [
+     "El guía del arrecife propio a veces va demasiado rápido para macro",
+     "En el buceo desde la orilla hay que cargar el equipo hasta el agua"
+    ],
+    "pt": [
+     "O guia do recife próprio às vezes é rápido demais para macro",
+     "No mergulho de costa você precisa carregar o equipamento até a água"
     ]
    },
    "bronnen": [
@@ -503,7 +719,10 @@
    "url": null,
    "soort": {
     "nl": "PADI 5-ster IDC",
-    "en": "PADI 5 Star IDC"
+    "en": "PADI 5 Star IDC",
+    "de": "PADI 5 Star IDC",
+    "es": "PADI 5 Star IDC",
+    "pt": "PADI 5 Star IDC"
    },
    "plaats": "Pietermaai, Willemstad",
    "tags": [
@@ -517,11 +736,17 @@
    "feiten": [
     {
      "nl": "Travelers' Choice 2026",
-     "en": "Travelers' Choice 2026"
+     "en": "Travelers' Choice 2026",
+     "de": "Travelers' Choice 2026",
+     "es": "Travelers' Choice 2026",
+     "pt": "Travelers' Choice 2026"
     },
     {
      "nl": "Bij Scuba Lodge City Beach",
-     "en": "At Scuba Lodge City Beach"
+     "en": "At Scuba Lodge City Beach",
+     "de": "Im Scuba Lodge City Beach",
+     "es": "En Scuba Lodge City Beach",
+     "pt": "No Scuba Lodge City Beach"
     }
    ],
    "scores": [
@@ -544,11 +769,29 @@
      "Warm, professional team",
      "Small groups with personal attention",
      "Quick replies, including on WhatsApp"
+    ],
+    "de": [
+     "Herzliches, professionelles Team",
+     "Kleine Gruppen mit persönlicher Betreuung",
+     "Schnelle Antworten, auch per WhatsApp"
+    ],
+    "es": [
+     "Equipo cálido y profesional",
+     "Grupos pequeños con atención personal",
+     "Respuestas rápidas, también por WhatsApp"
+    ],
+    "pt": [
+     "Equipe acolhedora e profissional",
+     "Grupos pequenos com atenção pessoal",
+     "Respostas rápidas, inclusive no WhatsApp"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147278-d5011203-Reviews-Scuba_Lodge_Dive_Center_Pietermaai-Willemstad_Curacao.html",
@@ -562,7 +805,10 @@
    "url": null,
    "soort": {
     "nl": "PADI 5-ster IDC",
-    "en": "PADI 5 Star IDC"
+    "en": "PADI 5 Star IDC",
+    "de": "PADI 5 Star IDC",
+    "es": "PADI 5 Star IDC",
+    "pt": "PADI 5 Star IDC"
    },
    "plaats": "Playa Lagun, Lagun",
    "tags": [
@@ -575,17 +821,26 @@
    "feiten": [
     {
      "nl": "Op het terrein van appartementen",
-     "en": "On site at beach apartments"
+     "en": "On site at beach apartments",
+     "de": "Vor Ort bei den Strandapartments",
+     "es": "En el lugar, en los apartamentos de playa",
+     "pt": "No local, nos apartamentos de praia"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
@@ -598,7 +853,10 @@
    "url": null,
    "soort": {
     "nl": "PADI 5-ster",
-    "en": "PADI 5 Star"
+    "en": "PADI 5 Star",
+    "de": "PADI 5 Star",
+    "es": "PADI 5 Star",
+    "pt": "PADI 5 Star"
    },
    "plaats": "Cas Abao Beach",
    "tags": [
@@ -612,7 +870,10 @@
    "feiten": [
     {
      "nl": "Ook freedivinglessen",
-     "en": "Also freediving lessons"
+     "en": "Also freediving lessons",
+     "de": "Auch Freitauchkurse",
+     "es": "También clases de buceo libre",
+     "pt": "Também aulas de mergulho livre"
     }
    ],
    "scores": [
@@ -635,6 +896,21 @@
      "Friendly, professional staff",
      "Patient with beginners and students",
      "Safety-minded, with a house reef off the beach"
+    ],
+    "de": [
+     "Freundliches, professionelles Personal",
+     "Geduldig mit Anfängern und Schülern",
+     "Sicherheitsbewusst, mit Hausriff direkt am Strand"
+    ],
+    "es": [
+     "Personal amable y profesional",
+     "Paciente con principiantes y alumnos",
+     "Atento a la seguridad, con arrecife propio frente a la playa"
+    ],
+    "pt": [
+     "Equipe simpática e profissional",
+     "Paciente com iniciantes e alunos",
+     "Preocupada com a segurança, com recife próprio em frente à praia"
     ]
    },
    "tegen": {
@@ -645,6 +921,18 @@
     "en": [
      "No night dives: the beach gate closes before sunset",
      "One dispute over filling small tanks"
+    ],
+    "de": [
+     "Keine Nachttauchgänge: Das Strandtor schließt vor Sonnenuntergang",
+     "Ein Streit über das Füllen kleiner Flaschen"
+    ],
+    "es": [
+     "Sin inmersiones nocturnas: la puerta de la playa cierra antes del atardecer",
+     "Una disputa por el llenado de tanques pequeños"
+    ],
+    "pt": [
+     "Sem mergulhos noturnos: o portão da praia fecha antes do pôr do sol",
+     "Uma discussão sobre o enchimento de cilindros pequenos"
     ]
    },
    "bronnen": [
@@ -659,7 +947,10 @@
    "url": "https://www.diveshopcuracao.com/en",
    "soort": {
     "nl": "PADI 5-ster IDC",
-    "en": "PADI 5 Star IDC"
+    "en": "PADI 5 Star IDC",
+    "de": "PADI 5 Star IDC",
+    "es": "PADI 5 Star IDC",
+    "pt": "PADI 5 Star IDC"
    },
    "plaats": "Blue Bay Resort, Sint Michiel",
    "tags": [
@@ -675,7 +966,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "vanaf, PADI Open Water (2 dagen)",
-     "en": "from, PADI Open Water (2 days)"
+     "en": "from, PADI Open Water (2 days)",
+     "de": "ab, PADI Open Water (2 Tage)",
+     "es": "desde, PADI Open Water (2 días)",
+     "pt": "a partir de, PADI Open Water (2 dias)"
     },
     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d4545228-Reviews-Blue_Bay_Dive_Watersports-Willemstad_Curacao.html",
     "datum": "2026-10"
@@ -683,15 +977,24 @@
    "feiten": [
     {
      "nl": "Discover Scuba vanaf $125",
-     "en": "Discover Scuba from $125"
+     "en": "Discover Scuba from $125",
+     "de": "Discover Scuba ab $125",
+     "es": "Discover Scuba desde $125",
+     "pt": "Discover Scuba a partir de $125"
     },
     {
      "nl": "Begeleide kantduik vanaf $40",
-     "en": "Guided shore dive from $40"
+     "en": "Guided shore dive from $40",
+     "de": "Geführter Landtauchgang ab $40",
+     "es": "Inmersión guiada desde la orilla desde $40",
+     "pt": "Mergulho de costa guiado a partir de $40"
     },
     {
      "nl": "Huisrif The Wall",
-     "en": "House reef: The Wall"
+     "en": "House reef: The Wall",
+     "de": "Hausriff: The Wall",
+     "es": "Arrecife propio: The Wall",
+     "pt": "Recife próprio: The Wall"
     }
    ],
    "scores": [
@@ -714,6 +1017,21 @@
      "Patient instructors who make you feel safe",
      "Rental gear in good shape",
      "Walk straight from the beach onto the reef"
+    ],
+    "de": [
+     "Geduldige Lehrer, bei denen du dich sicher fühlst",
+     "Leihausrüstung in gutem Zustand",
+     "Vom Strand direkt aufs Riff laufen"
+    ],
+    "es": [
+     "Instructores pacientes que te hacen sentir seguro",
+     "Equipo de alquiler en buen estado",
+     "Se camina directo de la playa al arrecife"
+    ],
+    "pt": [
+     "Instrutores pacientes que passam segurança",
+     "Equipamento de aluguel em bom estado",
+     "Dá para ir andando direto da praia para o recife"
     ]
    },
    "tegen": {
@@ -724,6 +1042,18 @@
     "en": [
      "Some call it one of the pricier shops",
      "Dive computer costs extra"
+    ],
+    "de": [
+     "Manche nennen sie eine der teureren Tauchbasen",
+     "Tauchcomputer kostet extra"
+    ],
+    "es": [
+     "Algunos dicen que es una de las tiendas más caras",
+     "El computador de buceo cuesta aparte"
+    ],
+    "pt": [
+     "Alguns dizem que é uma das escolas mais caras",
+     "O computador de mergulho custa à parte"
     ]
    },
    "bronnen": [
@@ -738,7 +1068,10 @@
    "url": "https://www.divecentercuracao.com/en",
    "soort": {
     "nl": "PADI 5-ster, ook freediving",
-    "en": "PADI 5 Star, also freediving"
+    "en": "PADI 5 Star, also freediving",
+    "de": "PADI 5 Star, auch Freitauchen",
+    "es": "PADI 5 Star, también buceo libre",
+    "pt": "PADI 5 Star, também mergulho livre"
    },
    "plaats": "Coral Estate, Rif Sint Marie",
    "tags": [
@@ -754,7 +1087,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "vanaf, PADI Discover Scuba",
-     "en": "from, PADI Discover Scuba"
+     "en": "from, PADI Discover Scuba",
+     "de": "ab, PADI Discover Scuba",
+     "es": "desde, PADI Discover Scuba",
+     "pt": "a partir de, PADI Discover Scuba"
     },
     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d12930256-Reviews-Coral_Divers-Willemstad_Curacao.html",
     "datum": "2026-10"
@@ -762,11 +1098,17 @@
    "feiten": [
     {
      "nl": "Begeleide kantduik vanaf $40",
-     "en": "Guided shore dive from $40"
+     "en": "Guided shore dive from $40",
+     "de": "Geführter Landtauchgang ab $40",
+     "es": "Inmersión guiada desde la orilla desde $40",
+     "pt": "Mergulho de costa guiado a partir de $40"
     },
     {
      "nl": "Meertalige instructeurs",
-     "en": "Multilingual instructors"
+     "en": "Multilingual instructors",
+     "de": "Mehrsprachige Lehrer",
+     "es": "Instructores multilingües",
+     "pt": "Instrutores que falam vários idiomas"
     }
    ],
    "scores": [
@@ -789,6 +1131,21 @@
      "Very patient instructors",
      "Well-maintained rental gear",
      "House reef with octopus and moray eels"
+    ],
+    "de": [
+     "Sehr geduldige Lehrer",
+     "Gut gewartete Leihausrüstung",
+     "Hausriff mit Kraken und Muränen"
+    ],
+    "es": [
+     "Instructores muy pacientes",
+     "Equipo de alquiler bien mantenido",
+     "Arrecife propio con pulpos y morenas"
+    ],
+    "pt": [
+     "Instrutores muito pacientes",
+     "Equipamento de aluguel bem conservado",
+     "Recife próprio com polvos e moreias"
     ]
    },
    "tegen": {
@@ -799,6 +1156,18 @@
     "en": [
      "Sometimes one guide for seven divers",
      "Slow email and no hotel transport"
+    ],
+    "de": [
+     "Manchmal ein Guide für sieben Taucher",
+     "Langsame E-Mail-Antworten und kein Hoteltransfer"
+    ],
+    "es": [
+     "A veces un guía para siete buceadores",
+     "Respuestas lentas por correo y sin traslado desde el hotel"
+    ],
+    "pt": [
+     "Às vezes um guia para sete mergulhadores",
+     "Respostas lentas por e-mail e sem transporte do hotel"
     ]
    },
    "bronnen": [
@@ -813,7 +1182,10 @@
    "url": "https://www.curious2dive.com/",
    "soort": {
     "nl": "PADI, SSI en IAHD",
-    "en": "PADI, SSI and IAHD"
+    "en": "PADI, SSI and IAHD",
+    "de": "PADI, SSI und IAHD",
+    "es": "PADI, SSI e IAHD",
+    "pt": "PADI, SSI e IAHD"
    },
    "plaats": null,
    "tags": [
@@ -824,17 +1196,26 @@
    "feiten": [
     {
      "nl": "Ook IAHD-opleidingen",
-     "en": "Also IAHD training"
+     "en": "Also IAHD training",
+     "de": "Auch IAHD-Ausbildung",
+     "es": "También formación IAHD",
+     "pt": "Também formação IAHD"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
@@ -848,7 +1229,10 @@
    "url": "https://www.divecenterscubado.com/",
    "soort": {
     "nl": "PADI 5-ster",
-    "en": "PADI 5 Star"
+    "en": "PADI 5 Star",
+    "de": "PADI 5 Star",
+    "es": "PADI 5 Star",
+    "pt": "PADI 5 Star"
    },
    "plaats": "Jan Thiel Beach",
    "tags": [
@@ -861,11 +1245,17 @@
    "feiten": [
     {
      "nl": "Groepen van max. 6",
-     "en": "Groups of 6 max"
+     "en": "Groups of 6 max",
+     "de": "Gruppen mit höchstens 6",
+     "es": "Grupos de 6 como máximo",
+     "pt": "Grupos de no máximo 6"
     },
     {
      "nl": "Kinderprogramma's",
-     "en": "Kids programs"
+     "en": "Kids programs",
+     "de": "Kinderprogramme",
+     "es": "Programas para niños",
+     "pt": "Programas para crianças"
     }
    ],
    "scores": [
@@ -888,11 +1278,29 @@
      "Patient, friendly instructors",
      "Small groups",
      "Good for beginners and Open Water students"
+    ],
+    "de": [
+     "Geduldige, freundliche Lehrer",
+     "Kleine Gruppen",
+     "Gut für Anfänger und Open-Water-Schüler"
+    ],
+    "es": [
+     "Instructores pacientes y amables",
+     "Grupos pequeños",
+     "Bueno para principiantes y alumnos de Open Water"
+    ],
+    "pt": [
+     "Instrutores pacientes e simpáticos",
+     "Grupos pequenos",
+     "Bom para iniciantes e alunos de Open Water"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147278-d6840982-Reviews-Dive_Center_Scuba_Do-Willemstad_Curacao.html",
@@ -906,7 +1314,10 @@
    "url": null,
    "soort": {
     "nl": "PADI en SSI, tec-centrum",
-    "en": "PADI and SSI, tech center"
+    "en": "PADI and SSI, tech center",
+    "de": "PADI und SSI, Technical-Zentrum",
+    "es": "PADI y SSI, centro de buceo técnico",
+    "pt": "PADI e SSI, centro de mergulho técnico"
    },
    "plaats": "Dreams en Zoetry Curaçao, Piscadera",
    "tags": [
@@ -922,11 +1333,17 @@
    "feiten": [
     {
      "nl": "Trimix en CCR-ondersteuning",
-     "en": "Trimix and CCR support"
+     "en": "Trimix and CCR support",
+     "de": "Unterstützung für Trimix und CCR",
+     "es": "Apoyo para trimix y CCR",
+     "pt": "Suporte para trimix e CCR"
     },
     {
      "nl": "Wrak Superior Producer",
-     "en": "Superior Producer wreck dives"
+     "en": "Superior Producer wreck dives",
+     "de": "Wracktauchgänge zur Superior Producer",
+     "es": "Inmersiones en el naufragio Superior Producer",
+     "pt": "Mergulhos no naufrágio Superior Producer"
     }
    ],
    "scores": [
@@ -949,6 +1366,21 @@
      "Safety comes first",
      "Current, well-kept rental gear",
      "Strong in technical diving"
+    ],
+    "de": [
+     "Sicherheit geht vor",
+     "Aktuelle, gepflegte Leihausrüstung",
+     "Stark im technischen Tauchen"
+    ],
+    "es": [
+     "La seguridad es lo primero",
+     "Equipo de alquiler actual y bien cuidado",
+     "Muy buenos en buceo técnico"
+    ],
+    "pt": [
+     "A segurança vem primeiro",
+     "Equipamento de aluguel atual e bem cuidado",
+     "Muito fortes em mergulho técnico"
     ]
    },
    "tegen": {
@@ -959,6 +1391,18 @@
     "en": [
      "Boats sometimes full, up to 9 divers per guide",
      "A leaking regulator was handled slowly"
+    ],
+    "de": [
+     "Boote manchmal voll, bis zu 9 Taucher pro Guide",
+     "Ein undichter Atemregler wurde nur langsam behandelt"
+    ],
+    "es": [
+     "Barcos a veces llenos, hasta 9 buceadores por guía",
+     "Un regulador con fuga se atendió con lentitud"
+    ],
+    "pt": [
+     "Barcos às vezes lotados, até 9 mergulhadores por guia",
+     "Um regulador com vazamento foi tratado devagar"
     ]
    },
    "bronnen": [
@@ -973,7 +1417,10 @@
    "url": "https://www.janthieldiving.com/en",
    "soort": {
     "nl": "PADI, in resort",
-    "en": "PADI, in a resort"
+    "en": "PADI, in a resort",
+    "de": "PADI, in einem Resort",
+    "es": "PADI, dentro de un resort",
+    "pt": "PADI, dentro de um resort"
    },
    "plaats": "Livingstone Jan Thiel Resort",
    "tags": [
@@ -990,7 +1437,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "vanaf, 2 begeleide kantduiken",
-     "en": "from, 2-tank guided shore dive"
+     "en": "from, 2-tank guided shore dive",
+     "de": "ab, geführter 2-Flaschen-Tauchgang vom Ufer",
+     "es": "desde, inmersión guiada de 2 tanques desde la orilla",
+     "pt": "a partir de, mergulho de costa guiado com 2 cilindros"
     },
     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d15209116-Reviews-Jan_Thiel_Diving-Willemstad_Curacao.html",
     "datum": "2026-10"
@@ -998,15 +1448,24 @@
    "feiten": [
     {
      "nl": "Open Water vanaf $525",
-     "en": "Open Water from $525"
+     "en": "Open Water from $525",
+     "de": "Open Water ab $525",
+     "es": "Open Water desde $525",
+     "pt": "Open Water a partir de $525"
     },
     {
      "nl": "Discover Scuba vanaf $125",
-     "en": "Discover Scuba from $125"
+     "en": "Discover Scuba from $125",
+     "de": "Discover Scuba ab $125",
+     "es": "Discover Scuba desde $125",
+     "pt": "Discover Scuba a partir de $125"
     },
     {
      "nl": "Nr. 1 van 427 in Willemstad",
-     "en": "#1 of 427 in Willemstad"
+     "en": "#1 of 427 in Willemstad",
+     "de": "Nr. 1 von 427 in Willemstad",
+     "es": "N.º 1 de 427 en Willemstad",
+     "pt": "N.º 1 de 427 em Willemstad"
     }
    ],
    "scores": [
@@ -1031,11 +1490,32 @@
      "Calm vibe that suits nervous divers",
      "Flexible when flights are delayed",
      "Good rental gear"
+    ],
+    "de": [
+     "Geduldige, kompetente Lehrer",
+     "Ruhige Stimmung, die zu nervösen Tauchern passt",
+     "Flexibel bei verspäteten Flügen",
+     "Gute Leihausrüstung"
+    ],
+    "es": [
+     "Instructores pacientes y con mucho conocimiento",
+     "Ambiente tranquilo que le sienta bien a buceadores nerviosos",
+     "Flexibles cuando los vuelos se retrasan",
+     "Buen equipo de alquiler"
+    ],
+    "pt": [
+     "Instrutores pacientes e experientes",
+     "Clima tranquilo que combina com mergulhadores nervosos",
+     "Flexível quando os voos atrasam",
+     "Bom equipamento de aluguel"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147278-d15209116-Reviews-Jan_Thiel_Diving-Willemstad_Curacao.html",
@@ -1049,7 +1529,10 @@
    "url": null,
    "soort": {
     "nl": "PADI 5-ster",
-    "en": "PADI 5 Star"
+    "en": "PADI 5 Star",
+    "de": "PADI 5 Star",
+    "es": "PADI 5 Star",
+    "pt": "PADI 5 Star"
    },
    "plaats": "Playa Porto Mari, Sint Willibrordus",
    "tags": [
@@ -1065,7 +1548,10 @@
    "feiten": [
     {
      "nl": "Bubblemaker voor kinderen",
-     "en": "Bubblemaker for kids"
+     "en": "Bubblemaker for kids",
+     "de": "Bubblemaker für Kinder",
+     "es": "Bubblemaker para niños",
+     "pt": "Bubblemaker para crianças"
     }
    ],
    "scores": [
@@ -1088,6 +1574,21 @@
      "Patient and safety-first",
      "Clear water and a good house reef",
      "Works for beginners, kids and experienced divers"
+    ],
+    "de": [
+     "Geduldig und sicherheitsbewusst",
+     "Klares Wasser und ein gutes Hausriff",
+     "Passt für Anfänger, Kinder und erfahrene Taucher"
+    ],
+    "es": [
+     "Paciente y atento a la seguridad",
+     "Agua clara y un buen arrecife propio",
+     "Sirve para principiantes, niños y buceadores experimentados"
+    ],
+    "pt": [
+     "Paciente e atento à segurança",
+     "Água clara e um bom recife próprio",
+     "Serve para iniciantes, crianças e mergulhadores experientes"
     ]
    },
    "tegen": {
@@ -1096,6 +1597,15 @@
     ],
     "en": [
      "Course explanations sometimes too long"
+    ],
+    "de": [
+     "Die Erklärungen im Kurs sind manchmal zu lang"
+    ],
+    "es": [
+     "Las explicaciones del curso a veces son demasiado largas"
+    ],
+    "pt": [
+     "As explicações do curso às vezes são longas demais"
     ]
    },
    "bronnen": [
@@ -1109,7 +1619,10 @@
    "url": "https://scubacao.com/",
    "soort": {
     "nl": "PADI 5-ster",
-    "en": "PADI 5 Star"
+    "en": "PADI 5 Star",
+    "de": "PADI 5 Star",
+    "es": "PADI 5 Star",
+    "pt": "PADI 5 Star"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -1123,7 +1636,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "vanaf, introductie-kantduik (1 duik)",
-     "en": "from, intro shore dive (1 dive)"
+     "en": "from, intro shore dive (1 dive)",
+     "de": "ab, Schnupper-Landtauchgang (1 Tauchgang)",
+     "es": "desde, inmersión introductoria desde la orilla (1 inmersión)",
+     "pt": "a partir de, mergulho de costa introdutório (1 mergulho)"
     },
     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d7093418-Reviews-Scubacao_Diving_Adventures-Willemstad_Curacao.html",
     "datum": "2026-10"
@@ -1131,11 +1647,17 @@
    "feiten": [
     {
      "nl": "2 begeleide kantduiken $165",
-     "en": "2-tank guided shore dive $165"
+     "en": "2-tank guided shore dive $165",
+     "de": "Geführter 2-Flaschen-Tauchgang vom Ufer $165",
+     "es": "Inmersión guiada de 2 tanques desde la orilla $165",
+     "pt": "Mergulho de costa guiado com 2 cilindros $165"
     },
     {
      "nl": "Ophalen bij je hotel",
-     "en": "Hotel pickup"
+     "en": "Hotel pickup",
+     "de": "Abholung am Hotel",
+     "es": "Recogida en el hotel",
+     "pt": "Busca no hotel"
     }
    ],
    "scores": [
@@ -1158,6 +1680,21 @@
      "Calm and patient with new divers",
      "Well organized and safety-minded",
      "Hotel pickup and healthy reefs"
+    ],
+    "de": [
+     "Ruhig und geduldig mit neuen Tauchern",
+     "Gut organisiert und sicherheitsbewusst",
+     "Hotelabholung und gesunde Riffe"
+    ],
+    "es": [
+     "Tranquilos y pacientes con buceadores nuevos",
+     "Bien organizados y atentos a la seguridad",
+     "Recogida en el hotel y arrecifes sanos"
+    ],
+    "pt": [
+     "Calmos e pacientes com mergulhadores novos",
+     "Bem organizados e atentos à segurança",
+     "Busca no hotel e recifes saudáveis"
     ]
    },
    "tegen": {
@@ -1168,6 +1705,18 @@
     "en": [
      "Shore entries and exits take some effort",
      "Dead coral at one snorkel site"
+    ],
+    "de": [
+     "Ein- und Ausstieg am Ufer kosten etwas Kraft",
+     "Totes Korallenriff an einem Schnorchelplatz"
+    ],
+    "es": [
+     "Entrar y salir por la orilla requiere algo de esfuerzo",
+     "Coral muerto en un sitio de snorkel"
+    ],
+    "pt": [
+     "Entrar e sair pela costa dá um pouco de trabalho",
+     "Coral morto em um ponto de snorkel"
     ]
    },
    "bronnen": [
@@ -1182,7 +1731,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal, strandbasis",
-    "en": "local, beach base"
+    "en": "local, beach base",
+    "de": "lokal, Strandbasis",
+    "es": "local, base en la playa",
+    "pt": "local, base na praia"
    },
    "plaats": "Kokomo Beach",
    "tags": [
@@ -1194,11 +1746,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
@@ -1211,7 +1769,10 @@
    "url": "https://thediveshop-curacao.com/",
    "soort": {
     "nl": "SSI, kantduiken",
-    "en": "SSI, shore diving"
+    "en": "SSI, shore diving",
+    "de": "SSI, Tauchen vom Ufer",
+    "es": "SSI, buceo desde la orilla",
+    "pt": "SSI, mergulho de costa"
    },
    "plaats": "Piscadera Bay, bij CARMABI",
    "tags": [
@@ -1224,11 +1785,17 @@
    "feiten": [
     {
      "nl": "416 reviews, 404 keer uitstekend",
-     "en": "416 reviews, 404 rated excellent"
+     "en": "416 reviews, 404 rated excellent",
+     "de": "416 Bewertungen, 404 davon mit Bestnote",
+     "es": "416 reseñas, 404 con la máxima calificación",
+     "pt": "416 avaliações, 404 com nota máxima"
     },
     {
      "nl": "Geen bootduiken",
-     "en": "No boat dives"
+     "en": "No boat dives",
+     "de": "Keine Bootstauchgänge",
+     "es": "Sin inmersiones en barco",
+     "pt": "Sem mergulhos de barco"
     }
    ],
    "scores": [],
@@ -1242,6 +1809,21 @@
      "Professional and safety-minded",
      "Flexible scheduling",
      "Gear included in the price"
+    ],
+    "de": [
+     "Professionell und sicherheitsbewusst",
+     "Flexible Terminplanung",
+     "Ausrüstung im Preis inbegriffen"
+    ],
+    "es": [
+     "Profesionales y atentos a la seguridad",
+     "Horarios flexibles",
+     "Equipo incluido en el precio"
+    ],
+    "pt": [
+     "Profissionais e atentos à segurança",
+     "Horários flexíveis",
+     "Equipamento incluído no preço"
     ]
    },
    "tegen": {
@@ -1252,6 +1834,18 @@
     "en": [
      "Some rental wetsuits are worn",
      "No boat dives"
+    ],
+    "de": [
+     "Einige Leihanzüge sind abgenutzt",
+     "Keine Bootstauchgänge"
+    ],
+    "es": [
+     "Algunos trajes de neopreno de alquiler están gastados",
+     "Sin inmersiones en barco"
+    ],
+    "pt": [
+     "Algumas roupas de neoprene de aluguel estão gastas",
+     "Sem mergulhos de barco"
     ]
    },
    "bronnen": [
@@ -1266,7 +1860,10 @@
    "url": "https://central-dive-curacao.com/",
    "soort": {
     "nl": "lokaal, klein",
-    "en": "local, small"
+    "en": "local, small",
+    "de": "lokal, klein",
+    "es": "local, pequeña",
+    "pt": "local, pequena"
    },
    "plaats": "Willemstad, midden van het eiland",
    "tags": [
@@ -1278,15 +1875,24 @@
    "feiten": [
     {
      "nl": "Alle stekken binnen 50 minuten",
-     "en": "All sites within 50 minutes"
+     "en": "All sites within 50 minutes",
+     "de": "Alle Tauchplätze innerhalb von 50 Minuten",
+     "es": "Todos los sitios a menos de 50 minutos",
+     "pt": "Todos os pontos a menos de 50 minutos"
     },
     {
      "nl": "Ophalen van vliegveld",
-     "en": "Airport pickup"
+     "en": "Airport pickup",
+     "de": "Flughafenabholung",
+     "es": "Recogida en el aeropuerto",
+     "pt": "Busca no aeroporto"
     },
     {
      "nl": "Autoverhuur ter plekke",
-     "en": "Car rental on site"
+     "en": "Car rental on site",
+     "de": "Mietwagen vor Ort",
+     "es": "Alquiler de autos en el lugar",
+     "pt": "Aluguel de carros no local"
     }
    ],
    "scores": [
@@ -1311,11 +1917,32 @@
      "Personal, you are not a number",
      "Lionfish hunting dives",
      "Airport pickup and car rental handled"
+    ],
+    "de": [
+     "Geduldige, kompetente Lehrer",
+     "Persönlich, du bist keine Nummer",
+     "Tauchgänge zur Jagd auf Rotfeuerfische",
+     "Flughafenabholung und Mietwagen werden geregelt"
+    ],
+    "es": [
+     "Instructores pacientes y con mucho conocimiento",
+     "Trato personal, no eres un número",
+     "Inmersiones de caza de pez león",
+     "Se encargan de la recogida en el aeropuerto y del alquiler de auto"
+    ],
+    "pt": [
+     "Instrutores pacientes e experientes",
+     "Atendimento pessoal, você não é só um número",
+     "Mergulhos de caça ao peixe-leão",
+     "Cuidam da busca no aeroporto e do aluguel de carro"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147278-d12929341-Reviews-Central_Dive_Curacao-Willemstad_Curacao.html",
@@ -1328,7 +1955,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal, nieuw",
-    "en": "local, new"
+    "en": "local, new",
+    "de": "lokal, neu",
+    "es": "local, nueva",
+    "pt": "local, nova"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -1340,7 +1970,10 @@
    "feiten": [
     {
      "nl": "Nederlands, Spaans en Engels",
-     "en": "Dutch, Spanish and English"
+     "en": "Dutch, Spanish and English",
+     "de": "Niederländisch, Spanisch und Englisch",
+     "es": "Neerlandés, español e inglés",
+     "pt": "Holandês, espanhol e inglês"
     }
    ],
    "scores": [
@@ -1363,11 +1996,29 @@
      "Calm, clear instruction",
      "Puts nervous divers at ease",
      "Brand-new gear"
+    ],
+    "de": [
+     "Ruhige, klare Anleitung",
+     "Nimmt nervösen Tauchern die Anspannung",
+     "Brandneue Ausrüstung"
+    ],
+    "es": [
+     "Instrucciones tranquilas y claras",
+     "Tranquiliza a los buceadores nerviosos",
+     "Equipo recién estrenado"
+    ],
+    "pt": [
+     "Instruções calmas e claras",
+     "Acalma mergulhadores nervosos",
+     "Equipamento novinho"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147278-d32761349-Reviews-Elite_Diving_Curacao-Willemstad_Curacao.html"
@@ -1379,7 +2030,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal",
-    "en": "local"
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
    },
    "plaats": null,
    "tags": [
@@ -1389,7 +2043,10 @@
    "feiten": [
     {
      "nl": "Haalt duikers op",
-     "en": "Picks divers up"
+     "en": "Picks divers up",
+     "de": "Holt Taucher ab",
+     "es": "Recoge a los buceadores",
+     "pt": "Busca os mergulhadores"
     }
    ],
    "scores": [
@@ -1412,11 +2069,29 @@
      "Takes time to explain things",
      "Relaxed and professional",
      "Flexible scheduling"
+    ],
+    "de": [
+     "Nimmt sich Zeit zum Erklären",
+     "Entspannt und professionell",
+     "Flexible Terminplanung"
+    ],
+    "es": [
+     "Se toman el tiempo de explicar",
+     "Relajados y profesionales",
+     "Horarios flexibles"
+    ],
+    "pt": [
+     "Dedicam tempo para explicar",
+     "Descontraídos e profissionais",
+     "Horários flexíveis"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147277-d7349805-Reviews-Dive_Nas_Dive_Center-Curacao.html"
@@ -1428,7 +2103,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal, klein",
-    "en": "local, small"
+    "en": "local, small",
+    "de": "lokal, klein",
+    "es": "local, pequeña",
+    "pt": "local, pequena"
    },
    "plaats": "Bij Mambo Beach, Willemstad",
    "tags": [
@@ -1440,11 +2118,17 @@
    "feiten": [
     {
      "nl": "Ook Rescue en Divemaster",
-     "en": "Also Rescue and Divemaster"
+     "en": "Also Rescue and Divemaster",
+     "de": "Auch Rescue und Divemaster",
+     "es": "También Rescue y Divemaster",
+     "pt": "Também Rescue e Divemaster"
     },
     {
      "nl": "Gratis parkeren",
-     "en": "Free parking"
+     "en": "Free parking",
+     "de": "Kostenlose Parkplätze",
+     "es": "Estacionamiento gratis",
+     "pt": "Estacionamento grátis"
     }
    ],
    "scores": [
@@ -1467,6 +2151,21 @@
      "Calm, patient instruction",
      "Safety first",
      "Personal, often one-on-one"
+    ],
+    "de": [
+     "Ruhige, geduldige Anleitung",
+     "Sicherheit zuerst",
+     "Persönlich, oft eins zu eins"
+    ],
+    "es": [
+     "Instrucciones tranquilas y pacientes",
+     "Seguridad primero",
+     "Trato personal, a menudo uno a uno"
+    ],
+    "pt": [
+     "Instruções calmas e pacientes",
+     "Segurança em primeiro lugar",
+     "Atendimento pessoal, muitas vezes individual"
     ]
    },
    "tegen": {
@@ -1475,6 +2174,15 @@
     ],
     "en": [
      "Sign is hard to spot from the road"
+    ],
+    "de": [
+     "Das Schild ist von der Straße schwer zu erkennen"
+    ],
+    "es": [
+     "El letrero es difícil de ver desde la carretera"
+    ],
+    "pt": [
+     "A placa é difícil de ver da estrada"
     ]
    },
    "bronnen": [
@@ -1487,7 +2195,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal, kleine groepen",
-    "en": "local, small groups"
+    "en": "local, small groups",
+    "de": "lokal, kleine Gruppen",
+    "es": "local, grupos pequeños",
+    "pt": "local, grupos pequenos"
    },
    "plaats": "Daaibooi, Sint Willibrordus",
    "tags": [
@@ -1499,7 +2210,10 @@
    "feiten": [
     {
      "nl": "Cursus max. 4 leerlingen",
-     "en": "Courses capped at 4 students"
+     "en": "Courses capped at 4 students",
+     "de": "Kurse auf 4 Teilnehmer begrenzt",
+     "es": "Cursos limitados a 4 alumnos",
+     "pt": "Cursos limitados a 4 alunos"
     }
    ],
    "scores": [
@@ -1524,6 +2238,24 @@
      "Personal, relaxed teaching",
      "Thorough briefings",
      "Guide takes photos"
+    ],
+    "de": [
+     "Kleine Gruppen, oft eins zu eins",
+     "Persönlicher, entspannter Unterricht",
+     "Gründliche Briefings",
+     "Der Guide macht Fotos"
+    ],
+    "es": [
+     "Grupos pequeños, a menudo uno a uno",
+     "Enseñanza personal y relajada",
+     "Briefings minuciosos",
+     "El guía toma fotos"
+    ],
+    "pt": [
+     "Grupos pequenos, muitas vezes individual",
+     "Ensino pessoal e descontraído",
+     "Briefings completos",
+     "O guia tira fotos"
     ]
    },
    "tegen": {
@@ -1532,6 +2264,15 @@
     ],
     "en": [
      "One complaint about a skipped briefing"
+    ],
+    "de": [
+     "Eine Beschwerde über ein ausgefallenes Briefing"
+    ],
+    "es": [
+     "Una queja por un briefing que se omitió"
+    ],
+    "pt": [
+     "Uma reclamação sobre um briefing que foi pulado"
     ]
    },
    "bronnen": [
@@ -1544,7 +2285,10 @@
    "url": null,
    "soort": {
     "nl": "Duitstalige basis",
-    "en": "German-run base"
+    "en": "German-run base",
+    "de": "Tauchbasis in deutscher Hand",
+    "es": "Base dirigida por alemanes",
+    "pt": "Base administrada por alemães"
    },
    "plaats": "Sun Reef Village, Sint Michiel",
    "tags": [
@@ -1557,11 +2301,17 @@
    "feiten": [
     {
      "nl": "Duitstalig team",
-     "en": "German-speaking team"
+     "en": "German-speaking team",
+     "de": "Deutschsprachiges Team",
+     "es": "Equipo que habla alemán",
+     "pt": "Equipe que fala alemão"
     },
     {
      "nl": "Huisrif bij Sun Reef Village",
-     "en": "House reef at Sun Reef Village"
+     "en": "House reef at Sun Reef Village",
+     "de": "Hausriff am Sun Reef Village",
+     "es": "Arrecife propio en Sun Reef Village",
+     "pt": "Recife próprio no Sun Reef Village"
     }
    ],
    "scores": [
@@ -1586,11 +2336,32 @@
      "German-speaking",
      "Good, complete gear",
      "Good value"
+    ],
+    "de": [
+     "Ruhige, geduldige Lehrer",
+     "Deutschsprachig",
+     "Gute, vollständige Ausrüstung",
+     "Gutes Preis-Leistungs-Verhältnis"
+    ],
+    "es": [
+     "Instructores tranquilos y pacientes",
+     "Habla alemán",
+     "Equipo bueno y completo",
+     "Buena relación calidad-precio"
+    ],
+    "pt": [
+     "Instrutores calmos e pacientes",
+     "Fala alemão",
+     "Equipamento bom e completo",
+     "Bom custo-benefício"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html",
@@ -1603,7 +2374,10 @@
    "url": "https://www.rebeldivingcuracao.com",
    "soort": {
     "nl": "SSI",
-    "en": "SSI"
+    "en": "SSI",
+    "de": "SSI",
+    "es": "SSI",
+    "pt": "SSI"
    },
    "plaats": "Granaatappelweg, Willemstad",
    "tags": [
@@ -1615,11 +2389,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://diveplannerpro.com/dive-centers/cw/cw-rebel-diving-curacao",
@@ -1632,7 +2412,10 @@
    "url": "https://sublimediving.com",
    "soort": {
     "nl": "SSI",
-    "en": "SSI"
+    "en": "SSI",
+    "de": "SSI",
+    "es": "SSI",
+    "pt": "SSI"
    },
    "plaats": "Rancho el Sobrino, Weg naar Knip",
    "tags": [
@@ -1643,17 +2426,26 @@
    "feiten": [
     {
      "nl": "Reviews op Undercurrent in 2026",
-     "en": "Reviewed on Undercurrent in 2026"
+     "en": "Reviewed on Undercurrent in 2026",
+     "de": "2026 bei Undercurrent bewertet",
+     "es": "Reseñada en Undercurrent en 2026",
+     "pt": "Avaliada na Undercurrent em 2026"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://diveplannerpro.com/dive-centers/cw/cw-sublime-diving",
@@ -1667,7 +2459,10 @@
    "url": "https://relaxed-guided-dives.com",
    "soort": {
     "nl": "SSI, begeleide duiken",
-    "en": "SSI, guided dives"
+    "en": "SSI, guided dives",
+    "de": "SSI, geführte Tauchgänge",
+    "es": "SSI, inmersiones guiadas",
+    "pt": "SSI, mergulhos guiados"
    },
    "plaats": "Martha Koosje",
    "tags": [
@@ -1679,11 +2474,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://diveplannerpro.com/dive-centers/cw/cw-relaxed-guided-dives",
@@ -1697,7 +2498,10 @@
    "url": "https://duikcentrumvandeven.com",
    "soort": {
     "nl": "SSI, Nederlandstalig",
-    "en": "SSI, Dutch-run"
+    "en": "SSI, Dutch-run",
+    "de": "SSI, in niederländischer Hand",
+    "es": "SSI, dirigida por neerlandeses",
+    "pt": "SSI, administrada por holandeses"
    },
    "plaats": "Caracasbaaiweg, Jan Thiel",
    "tags": [
@@ -1713,25 +2517,40 @@
    "feiten": [
     {
      "nl": "Nederlands, Engels en Duits",
-     "en": "Dutch, English and German"
+     "en": "Dutch, English and German",
+     "de": "Niederländisch, Englisch und Deutsch",
+     "es": "Neerlandés, inglés y alemán",
+     "pt": "Holandês, inglês e alemão"
     },
     {
      "nl": "Lucht en nitrox vullen",
-     "en": "Air and nitrox fills"
+     "en": "Air and nitrox fills",
+     "de": "Luft- und Nitrox-Füllungen",
+     "es": "Llenado con aire y nitrox",
+     "pt": "Enchimento com ar e nitrox"
     },
     {
      "nl": "Onderhoud ademautomaten",
-     "en": "Regulator servicing"
+     "en": "Regulator servicing",
+     "de": "Wartung von Atemreglern",
+     "es": "Mantenimiento de reguladores",
+     "pt": "Revisão de reguladores"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.divessi.com/nl/divecenter/dive-center-van-de-ven-willemstad-curacao-curaao-759015"
@@ -1743,7 +2562,10 @@
    "url": "https://www.uniquediving.nl",
    "soort": {
     "nl": "SSI, ook freediving",
-    "en": "SSI, also freediving"
+    "en": "SSI, also freediving",
+    "de": "SSI, auch Freitauchen",
+    "es": "SSI, también buceo libre",
+    "pt": "SSI, também mergulho livre"
    },
    "plaats": "Kaya Andeifi, Willemstad",
    "tags": [
@@ -1759,25 +2581,40 @@
    "feiten": [
     {
      "nl": "Zes talen, ook Nederlands",
-     "en": "Six languages, including Dutch"
+     "en": "Six languages, including Dutch",
+     "de": "Sechs Sprachen, darunter Niederländisch",
+     "es": "Seis idiomas, incluido el neerlandés",
+     "pt": "Seis idiomas, inclusive holandês"
     },
     {
      "nl": "Aangepast duiken mogelijk",
-     "en": "Adaptive diving offered"
+     "en": "Adaptive diving offered",
+     "de": "Adaptives Tauchen im Angebot",
+     "es": "Ofrecen buceo adaptado",
+     "pt": "Oferece mergulho adaptado"
     },
     {
      "nl": "Extended range-duiken",
-     "en": "Extended range diving"
+     "en": "Extended range diving",
+     "de": "Tauchen mit erweiterter Reichweite",
+     "es": "Buceo de rango extendido",
+     "pt": "Mergulho de alcance estendido"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.divessi.com/ko/divecenter/unique-diving-udi-willemstad-curacao-curaao-714170"
@@ -1789,7 +2626,10 @@
    "url": "https://fundivingcuracao.com",
    "soort": {
     "nl": "PADI 5-ster",
-    "en": "PADI 5 Star"
+    "en": "PADI 5 Star",
+    "de": "PADI 5 Star",
+    "es": "PADI 5 Star",
+    "pt": "PADI 5 Star"
    },
    "plaats": "Papagayo Beach Hotel, Jan Thiel",
    "tags": [
@@ -1802,17 +2642,26 @@
    "feiten": [
     {
      "nl": "Zes talen, ook Nederlands",
-     "en": "Six languages, including Dutch"
+     "en": "Six languages, including Dutch",
+     "de": "Sechs Sprachen, darunter Niederländisch",
+     "es": "Seis idiomas, incluido el neerlandés",
+     "pt": "Seis idiomas, inclusive holandês"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://travel.padi.com/nl/dive-center/curacao/fundiving-curacao/"
@@ -1824,7 +2673,10 @@
    "url": null,
    "soort": {
     "nl": "PADI en SSI",
-    "en": "PADI and SSI"
+    "en": "PADI and SSI",
+    "de": "PADI und SSI",
+    "es": "PADI y SSI",
+    "pt": "PADI e SSI"
    },
    "plaats": "Kaya Progreso, Willemstad",
    "tags": [
@@ -1836,11 +2688,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://cursosdebuceo.com/en/dive-centers/willemstad/duikschool-fred/10095"
@@ -1852,7 +2710,10 @@
    "url": null,
    "soort": {
     "nl": "PADI, 25+ jaar",
-    "en": "PADI, 25+ years"
+    "en": "PADI, 25+ years",
+    "de": "PADI, über 25 Jahre",
+    "es": "PADI, más de 25 años",
+    "pt": "PADI, mais de 25 anos"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -1866,21 +2727,33 @@
    "feiten": [
     {
      "nl": "Huisrif voor de deur",
-     "en": "House reef out front"
+     "en": "House reef out front",
+     "de": "Hausriff direkt davor",
+     "es": "Arrecife propio justo enfrente",
+     "pt": "Recife próprio bem em frente"
     },
     {
      "nl": "Pakket met appartement",
-     "en": "Packages with an apartment"
+     "en": "Packages with an apartment",
+     "de": "Pakete mit Apartment",
+     "es": "Paquetes con apartamento",
+     "pt": "Pacotes com apartamento"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.klm.nl/travel-guide/inspiration/learn-to-dive-on-curacao"
@@ -1892,7 +2765,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal",
-    "en": "local"
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
    },
    "plaats": null,
    "tags": [
@@ -1902,17 +2778,26 @@
    "feiten": [
     {
      "nl": "Introductieduik aangeboden",
-     "en": "Offers intro dives"
+     "en": "Offers intro dives",
+     "de": "Bietet Schnuppertauchgänge an",
+     "es": "Ofrece inmersiones introductorias",
+     "pt": "Oferece mergulhos introdutórios"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/category/dive-operators",
@@ -1925,7 +2810,10 @@
    "url": null,
    "soort": {
     "nl": "bij appartementen",
-    "en": "at apartments"
+    "en": "at apartments",
+    "de": "bei Apartments",
+    "es": "en apartamentos",
+    "pt": "em apartamentos"
    },
    "plaats": null,
    "tags": [],
@@ -1934,11 +2822,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/category/dive-operators"
@@ -1950,7 +2844,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal",
-    "en": "local"
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
    },
    "plaats": null,
    "tags": [],
@@ -1959,11 +2856,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/category/dive-operators",
@@ -1976,7 +2879,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal",
-    "en": "local"
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
    },
    "plaats": null,
    "tags": [],
@@ -1985,11 +2891,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/category/dive-operators"
@@ -2001,7 +2913,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal",
-    "en": "local"
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
    },
    "plaats": null,
    "tags": [],
@@ -2010,11 +2925,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/category/dive-operators"
@@ -2026,7 +2947,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal",
-    "en": "local"
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
    },
    "plaats": null,
    "tags": [],
@@ -2035,11 +2959,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html"
@@ -2051,7 +2981,10 @@
    "url": null,
    "soort": {
     "nl": "lokaal",
-    "en": "local"
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
    },
    "plaats": null,
    "tags": [],
@@ -2060,11 +2993,17 @@
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html"
@@ -2077,7 +3016,10 @@
    "url": "https://www.tripadvisor.com/Attractions-g147278-Activities-c61-t194-Willemstad_Curacao.html",
    "uitleg": {
     "nl": "Boekt proefduiken en begeleide duiken van o.a. The Dive Bus, Jan Thiel Diving en Blue Bay Dive, meestal gratis annuleren tot 24 uur vooraf.",
-    "en": "Books try dives and guided dives from The Dive Bus, Jan Thiel Diving, Blue Bay Dive and others, usually with free cancellation up to 24 hours ahead."
+    "en": "Books try dives and guided dives from The Dive Bus, Jan Thiel Diving, Blue Bay Dive and others, usually with free cancellation up to 24 hours ahead.",
+    "de": "Bucht Schnuppertauchgänge und geführte Tauchgänge von The Dive Bus, Jan Thiel Diving, Blue Bay Dive und anderen, meist mit kostenloser Stornierung bis 24 Stunden vorher.",
+    "es": "Reserva bautismos e inmersiones guiadas de The Dive Bus, Jan Thiel Diving, Blue Bay Dive y otras, normalmente con cancelación gratuita hasta 24 horas antes.",
+    "pt": "Reserva batismos e mergulhos guiados da The Dive Bus, Jan Thiel Diving, Blue Bay Dive e outras, normalmente com cancelamento grátis até 24 horas antes."
    }
   },
   {
@@ -2085,7 +3027,10 @@
    "url": "https://travel.padi.com/dive-center/curacao/the-dive-bus",
    "uitleg": {
     "nl": "Boekingssite van PADI voor duiktrips en cursussen bij PADI-centra, met huurprijzen per onderdeel.",
-    "en": "PADI's booking site for dive trips and courses at PADI centers, with rental prices per item."
+    "en": "PADI's booking site for dive trips and courses at PADI centers, with rental prices per item.",
+    "de": "Buchungsseite von PADI für Tauchreisen und Kurse in PADI-Zentren, mit Mietpreisen pro Ausrüstungsteil.",
+    "es": "Sitio de reservas de PADI para viajes de buceo y cursos en centros PADI, con precios de alquiler por artículo.",
+    "pt": "Site de reservas da PADI para viagens de mergulho e cursos em centros PADI, com preços de aluguel por item."
    }
   },
   {
@@ -2093,7 +3038,10 @@
    "url": "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/",
    "uitleg": {
     "nl": "Verkoopt weekpakketten met verblijf, duiken en soms huurauto; raadt eigen partners aan.",
-    "en": "Sells week packages with lodging, diving and sometimes a rental car; recommends its own partners."
+    "en": "Sells week packages with lodging, diving and sometimes a rental car; recommends its own partners.",
+    "de": "Verkauft Wochenpakete mit Unterkunft, Tauchen und manchmal Mietwagen; empfiehlt die eigenen Partner.",
+    "es": "Vende paquetes de una semana con alojamiento, buceo y a veces auto de alquiler; recomienda a sus propios socios.",
+    "pt": "Vende pacotes de uma semana com hospedagem, mergulho e às vezes carro alugado; recomenda os próprios parceiros."
    }
   },
   {
@@ -2101,125 +3049,200 @@
    "url": "https://www.bluewaterdivetravel.com/node/5102",
    "uitleg": {
     "nl": "Amerikaans duikreisbureau met pakketten bij Ocean Encounters en partnerhotels.",
-    "en": "US dive travel agency with packages at Ocean Encounters and partner hotels."
+    "en": "US dive travel agency with packages at Ocean Encounters and partner hotels.",
+    "de": "US-Tauchreisebüro mit Paketen bei Ocean Encounters und Partnerhotels.",
+    "es": "Agencia estadounidense de viajes de buceo con paquetes en Ocean Encounters y hoteles asociados.",
+    "pt": "Agência americana de viagens de mergulho com pacotes na Ocean Encounters e em hotéis parceiros."
    }
   }
  ],
  "tips": [
   {
    "nl": "Een losse fles kost rond $12 en een complete set met fles $49 tot $50 per dag. Voor een week kantduiken is een pakket met onbeperkt lucht goedkoper, bij Ocean Encounters vanaf $210 voor vijf dagen.",
-   "en": "A single tank runs about $12 and a full gear set with tank $49 to $50 a day. For a week of shore diving, an unlimited-air package is cheaper, from $210 for five days at Ocean Encounters."
+   "en": "A single tank runs about $12 and a full gear set with tank $49 to $50 a day. For a week of shore diving, an unlimited-air package is cheaper, from $210 for five days at Ocean Encounters.",
+   "de": "Eine einzelne Flasche kostet etwa $12, ein komplettes Ausrüstungsset mit Flasche $49 bis $50 pro Tag. Für eine Woche Tauchen vom Ufer ist ein Paket mit unbegrenzter Luft günstiger, ab $210 für fünf Tage bei Ocean Encounters.",
+   "es": "Un tanque suelto cuesta unos $12 y un equipo completo con tanque $49 a $50 al día. Para una semana de buceo desde la orilla conviene más un paquete de aire ilimitado, desde $210 por cinco días en Ocean Encounters.",
+   "pt": "Um cilindro avulso custa cerca de $12 e um kit completo com cilindro $49 a $50 por dia. Para uma semana de mergulho de costa, um pacote de ar ilimitado sai mais barato, a partir de $210 por cinco dias na Ocean Encounters."
   },
   {
    "nl": "Wil je zelf kantduiken, huur dan een auto. Stekken liggen van Playa Kalki in Westpunt tot Directors Bay bij Jan Thiel.",
-   "en": "If you plan to shore dive on your own, rent a car. Sites run from Playa Kalki in Westpunt to Directors Bay near Jan Thiel."
+   "en": "If you plan to shore dive on your own, rent a car. Sites run from Playa Kalki in Westpunt to Directors Bay near Jan Thiel.",
+   "de": "Wenn du allein vom Ufer tauchen willst, miete ein Auto. Die Plätze reichen von Playa Kalki in Westpunt bis Directors Bay bei Jan Thiel.",
+   "es": "Si piensas bucear solo desde la orilla, alquila un auto. Los sitios van desde Playa Kalki en Westpunt hasta Directors Bay cerca de Jan Thiel.",
+   "pt": "Se pretende mergulhar de costa por conta própria, alugue um carro. Os pontos vão de Playa Kalki, em Westpunt, a Directors Bay, perto de Jan Thiel."
   },
   {
    "nl": "Voor begeleide duiken moet je vaak in de laatste 12 tot 18 maanden gedoken hebben. Anders vraagt de school een opfrisduik, bij Ocean Encounters vanaf $110.",
-   "en": "Guided dives often require a dive in the last 12 to 18 months. If not, the shop asks for a refresher, from $110 at Ocean Encounters."
+   "en": "Guided dives often require a dive in the last 12 to 18 months. If not, the shop asks for a refresher, from $110 at Ocean Encounters.",
+   "de": "Für geführte Tauchgänge wird oft ein Tauchgang in den letzten 12 bis 18 Monaten verlangt. Sonst verlangt die Basis einen Auffrischungskurs, ab $110 bei Ocean Encounters.",
+   "es": "Para las inmersiones guiadas suelen pedir una inmersión en los últimos 12 a 18 meses. Si no, la tienda pide un curso de repaso, desde $110 en Ocean Encounters.",
+   "pt": "Para mergulhos guiados costuma ser exigido um mergulho nos últimos 12 a 18 meses. Se não, a escola pede um curso de reciclagem, a partir de $110 na Ocean Encounters."
   },
   {
    "nl": "Vraag bij boeken naar het aantal duikers per gids. In reviews komen 1 op 7 en 1 op 9 voor als klacht; kleine scholen als Divers Republic houden cursussen op max. 4.",
-   "en": "Ask how many divers each guide takes. Reviews complain about 1 to 7 and 1 to 9; small shops like Divers Republic cap courses at 4."
+   "en": "Ask how many divers each guide takes. Reviews complain about 1 to 7 and 1 to 9; small shops like Divers Republic cap courses at 4.",
+   "de": "Frag, wie viele Taucher ein Guide mitnimmt. In Bewertungen wird über 1 zu 7 und 1 zu 9 geklagt; kleine Basen wie Divers Republic begrenzen Kurse auf 4.",
+   "es": "Pregunta cuántos buceadores lleva cada guía. Las reseñas se quejan de 1 a 7 y de 1 a 9; tiendas pequeñas como Divers Republic limitan los cursos a 4.",
+   "pt": "Pergunte quantos mergulhadores cada guia leva. As avaliações reclamam de 1 para 7 e 1 para 9; escolas pequenas como a Divers Republic limitam os cursos a 4."
   },
   {
    "nl": "Check wat in de prijs zit: bij sommige scholen kost een duikcomputer extra (bij GO WEST staat $53 voor een complete huurset).",
-   "en": "Check what the price covers: some shops charge extra for a dive computer (GO WEST lists $53 for a full rental set)."
+   "en": "Check what the price covers: some shops charge extra for a dive computer (GO WEST lists $53 for a full rental set).",
+   "de": "Prüfe, was im Preis enthalten ist: Manche Basen berechnen den Tauchcomputer extra (GO WEST nennt $53 für ein komplettes Leihset).",
+   "es": "Revisa qué incluye el precio: algunas tiendas cobran aparte el computador de buceo (GO WEST indica $53 por un equipo de alquiler completo).",
+   "pt": "Veja o que está incluído no preço: algumas escolas cobram à parte o computador de mergulho (a GO WEST lista $53 por um kit de aluguel completo)."
   },
   {
    "nl": "Neem een duikverzekering. DAN biedt losse dekking voor 7, 14 of 30 dagen.",
-   "en": "Get dive insurance. DAN offers stand-alone cover for 7, 14 or 30 days."
+   "en": "Get dive insurance. DAN offers stand-alone cover for 7, 14 or 30 days.",
+   "de": "Schließ eine Tauchversicherung ab. DAN bietet eigenständigen Schutz für 7, 14 oder 30 Tage.",
+   "es": "Contrata un seguro de buceo. DAN ofrece cobertura independiente por 7, 14 o 30 días.",
+   "pt": "Contrate um seguro de mergulho. A DAN oferece cobertura avulsa por 7, 14 ou 30 dias."
   }
  ],
  "faq": [
   {
    "q": {
     "nl": "Wat kost een duikbrevet (Open Water) op Curaçao?",
-    "en": "How much is an Open Water certification in Curaçao?"
+    "en": "How much is an Open Water certification in Curaçao?",
+    "de": "Was kostet eine Open-Water-Zertifizierung auf Curaçao?",
+    "es": "¿Cuánto cuesta la certificación Open Water en Curazao?",
+    "pt": "Quanto custa a certificação Open Water em Curaçao?"
    },
    "a": {
     "nl": "Reken op $449 tot $525. Jan Thiel Diving en Blue Bay Dive vragen vanaf $525 voor een cursus van 2 tot 3 dagen.",
-    "en": "Expect $449 to $525. Jan Thiel Diving and Blue Bay Dive charge from $525 for a 2 to 3 day course."
+    "en": "Expect $449 to $525. Jan Thiel Diving and Blue Bay Dive charge from $525 for a 2 to 3 day course.",
+    "de": "Rechne mit $449 bis $525. Jan Thiel Diving und Blue Bay Dive verlangen ab $525 für einen Kurs über 2 bis 3 Tage.",
+    "es": "Calcula entre $449 y $525. Jan Thiel Diving y Blue Bay Dive cobran desde $525 por un curso de 2 a 3 días.",
+    "pt": "Conte com $449 a $525. A Jan Thiel Diving e a Blue Bay Dive cobram a partir de $525 por um curso de 2 a 3 dias."
    }
   },
   {
    "q": {
     "nl": "Wat kost een proefduik (Discover Scuba)?",
-    "en": "How much is a Discover Scuba dive?"
+    "en": "How much is a Discover Scuba dive?",
+    "de": "Was kostet ein Discover-Scuba-Tauchgang?",
+    "es": "¿Cuánto cuesta un bautismo de buceo Discover Scuba?",
+    "pt": "Quanto custa um mergulho Discover Scuba?"
    },
    "a": {
     "nl": "Meestal $125 tot $140: Blue Bay Dive, Coral Divers en Jan Thiel Diving vanaf $125, The Dive Bus vanaf $129, Ocean Encounters rond $140.",
-    "en": "Usually $125 to $140: Blue Bay Dive, Coral Divers and Jan Thiel Diving from $125, The Dive Bus from $129, Ocean Encounters about $140."
+    "en": "Usually $125 to $140: Blue Bay Dive, Coral Divers and Jan Thiel Diving from $125, The Dive Bus from $129, Ocean Encounters about $140.",
+    "de": "Meist $125 bis $140: Blue Bay Dive, Coral Divers und Jan Thiel Diving ab $125, The Dive Bus ab $129, Ocean Encounters etwa $140.",
+    "es": "Normalmente $125 a $140: Blue Bay Dive, Coral Divers y Jan Thiel Diving desde $125, The Dive Bus desde $129, Ocean Encounters unos $140.",
+    "pt": "Geralmente $125 a $140: Blue Bay Dive, Coral Divers e Jan Thiel Diving a partir de $125, The Dive Bus a partir de $129, Ocean Encounters cerca de $140."
    }
   },
   {
    "q": {
     "nl": "Kun je op Curaçao zelf vanaf de kant duiken?",
-    "en": "Can you shore dive on your own in Curaçao?"
+    "en": "Can you shore dive on your own in Curaçao?",
+    "de": "Kann man auf Curaçao allein vom Ufer tauchen?",
+    "es": "¿Se puede bucear solo desde la orilla en Curazao?",
+    "pt": "Dá para mergulhar de costa por conta própria em Curaçao?"
    },
    "a": {
     "nl": "Ja. Er zijn meer dan 38 kantstekken. Je huurt flessen bij een duikschool en rijdt zelf met een huurauto. Met een brevet mag je zelfstandig duiken.",
-    "en": "Yes. There are more than 38 shore sites. You rent tanks from a dive shop and drive yourself in a rental car. A certification lets you dive independently."
+    "en": "Yes. There are more than 38 shore sites. You rent tanks from a dive shop and drive yourself in a rental car. A certification lets you dive independently.",
+    "de": "Ja. Es gibt mehr als 38 Tauchplätze am Ufer. Du mietest Flaschen bei einer Tauchbasis und fährst selbst mit dem Mietwagen hin. Mit einer Zertifizierung darfst du selbstständig tauchen.",
+    "es": "Sí. Hay más de 38 sitios de buceo desde la orilla. Alquilas los tanques en una tienda de buceo y vas tú mismo en un auto de alquiler. Con una certificación puedes bucear de forma independiente.",
+    "pt": "Sim. Há mais de 38 pontos de mergulho de costa. Você aluga os cilindros em uma escola de mergulho e vai por conta própria em um carro alugado. Com uma certificação, você pode mergulhar de forma independente."
    }
   },
   {
    "q": {
     "nl": "Wat zijn de beste duikstekken op Curaçao?",
-    "en": "What are the best dive sites in Curaçao?"
+    "en": "What are the best dive sites in Curaçao?",
+    "de": "Was sind die besten Tauchplätze auf Curaçao?",
+    "es": "¿Cuáles son los mejores sitios de buceo de Curazao?",
+    "pt": "Quais são os melhores pontos de mergulho de Curaçao?"
    },
    "a": {
     "nl": "Bekende stekken zijn de Tugboat bij Caracasbaai (wrak op 5 m), Mushroom Forest en de Blue Room (per boot), Playa Kalki ofwel Alice in Wonderland in Westpunt, het wrak Superior Producer op ruim 30 m en Klein Curaçao per boot.",
-    "en": "Well-known sites include the Tugboat at Caracasbaai (wreck at 16 ft), Mushroom Forest and the Blue Room (by boat), Playa Kalki or Alice in Wonderland in Westpunt, the Superior Producer wreck at about 100 ft, and Klein Curaçao by boat."
+    "en": "Well-known sites include the Tugboat at Caracasbaai (wreck at 16 ft), Mushroom Forest and the Blue Room (by boat), Playa Kalki or Alice in Wonderland in Westpunt, the Superior Producer wreck at about 100 ft, and Klein Curaçao by boat.",
+    "de": "Bekannte Plätze sind der Tugboat bei Caracasbaai (Wrack in 16 ft), Mushroom Forest und der Blue Room (per Boot), Playa Kalki oder Alice in Wonderland in Westpunt, das Wrack der Superior Producer in etwa 100 ft und Klein Curaçao per Boot.",
+    "es": "Entre los sitios conocidos están el Tugboat en Caracasbaai (naufragio a 16 ft), Mushroom Forest y el Blue Room (en barco), Playa Kalki o Alice in Wonderland en Westpunt, el naufragio Superior Producer a unos 100 ft y Klein Curazao en barco.",
+    "pt": "Entre os pontos conhecidos estão o Tugboat em Caracasbaai (naufrágio a 16 ft), Mushroom Forest e o Blue Room (de barco), Playa Kalki ou Alice in Wonderland em Westpunt, o naufrágio Superior Producer a cerca de 100 ft e Klein Curaçao de barco."
    }
   },
   {
    "q": {
     "nl": "Is de Tugboat geschikt voor beginners?",
-    "en": "Is the Tugboat dive good for beginners?"
+    "en": "Is the Tugboat dive good for beginners?",
+    "de": "Ist der Tugboat-Tauchgang etwas für Anfänger?",
+    "es": "¿Es buena la inmersión en el Tugboat para principiantes?",
+    "pt": "O mergulho no Tugboat é bom para iniciantes?"
    },
    "a": {
     "nl": "Ja. De sleepboot ligt op ongeveer 5 meter bij Caracasbaai en is ook goed te snorkelen.",
-    "en": "Yes. The tugboat sits in about 16 feet of water at Caracasbaai and is easy to snorkel too."
+    "en": "Yes. The tugboat sits in about 16 feet of water at Caracasbaai and is easy to snorkel too.",
+    "de": "Ja. Der Tugboat liegt bei Caracasbaai in etwa 16 Fuß Wassertiefe und lässt sich auch gut schnorcheln.",
+    "es": "Sí. El Tugboat está a unos 16 pies de profundidad en Caracasbaai y también es fácil de ver haciendo snorkel.",
+    "pt": "Sim. O Tugboat fica a cerca de 16 pés de profundidade em Caracasbaai e também é fácil de ver com snorkel."
    }
   },
   {
    "q": {
     "nl": "Wat is de beste maand om te duiken op Curaçao?",
-    "en": "What is the best month to dive in Curaçao?"
+    "en": "What is the best month to dive in Curaçao?",
+    "de": "Welcher Monat ist der beste zum Tauchen auf Curaçao?",
+    "es": "¿Cuál es el mejor mes para bucear en Curazao?",
+    "pt": "Qual é o melhor mês para mergulhar em Curaçao?"
    },
    "a": {
     "nl": "Het hele jaar. Curaçao ligt buiten de orkaangordel en het water is 26 tot 28 °C. Januari tot en met augustus geeft de rustigste kantinstappen; september tot november kan iets winderiger zijn.",
-    "en": "Any month. Curaçao is outside the hurricane belt and the water is 79 to 82°F. January through August has the calmest shore entries; September to November can be a bit windier."
+    "en": "Any month. Curaçao is outside the hurricane belt and the water is 79 to 82°F. January through August has the calmest shore entries; September to November can be a bit windier.",
+    "de": "Jeder. Curaçao liegt außerhalb des Hurrikangürtels und das Wasser hat 79 bis 82°F. Von Januar bis August sind Ein- und Ausstieg am Ufer am ruhigsten; von September bis November kann es etwas windiger sein.",
+    "es": "Cualquiera. Curazao está fuera del cinturón de huracanes y el agua está a 79 a 82°F. De enero a agosto las entradas desde la orilla son más tranquilas; de septiembre a noviembre puede haber algo más de viento.",
+    "pt": "Qualquer um. Curaçao fica fora do cinturão de furacões e a água fica entre 79 e 82°F. De janeiro a agosto as entradas pela costa são mais calmas; de setembro a novembro pode ventar um pouco mais."
    }
   },
   {
    "q": {
     "nl": "Hoe kom je bij Mushroom Forest?",
-    "en": "How do you get to Mushroom Forest?"
+    "en": "How do you get to Mushroom Forest?",
+    "de": "Wie kommt man zum Mushroom Forest?",
+    "es": "¿Cómo se llega a Mushroom Forest?",
+    "pt": "Como se chega ao Mushroom Forest?"
    },
    "a": {
     "nl": "Mushroom Forest is een bootduik in het westen en wordt vaak gecombineerd met de Blue Room. Scholen in Westpunt zoals GO WEST Diving varen erheen.",
-    "en": "Mushroom Forest is a boat dive on the west side, often paired with the Blue Room. Westpunt shops such as GO WEST Diving run trips there."
+    "en": "Mushroom Forest is a boat dive on the west side, often paired with the Blue Room. Westpunt shops such as GO WEST Diving run trips there.",
+    "de": "Mushroom Forest ist ein Bootstauchgang an der Westseite, oft zusammen mit dem Blue Room. Basen in Westpunt wie GO WEST Diving fahren dorthin.",
+    "es": "Mushroom Forest es una inmersión en barco en el lado oeste, a menudo combinada con el Blue Room. Tiendas de Westpunt como GO WEST Diving hacen salidas hasta allí.",
+    "pt": "Mushroom Forest é um mergulho de barco no lado oeste, muitas vezes combinado com o Blue Room. Escolas de Westpunt, como a GO WEST Diving, fazem passeios até lá."
    }
   },
   {
    "q": {
     "nl": "Kunnen kinderen duiken op Curaçao?",
-    "en": "Can kids scuba dive in Curaçao?"
+    "en": "Can kids scuba dive in Curaçao?",
+    "de": "Können Kinder auf Curaçao tauchen?",
+    "es": "¿Pueden bucear los niños en Curazao?",
+    "pt": "Crianças podem mergulhar em Curaçao?"
    },
    "a": {
     "nl": "Ja. Porto Mari Dive Center biedt Bubblemaker voor kinderen en Scuba Do heeft kinderprogramma's. Voor begeleide duiken bij The Dive Bus is de minimumleeftijd 10 jaar.",
-    "en": "Yes. Porto Mari Dive Center offers Bubblemaker for kids and Scuba Do runs kids programs. The Dive Bus sets a minimum age of 10 for guided dives."
+    "en": "Yes. Porto Mari Dive Center offers Bubblemaker for kids and Scuba Do runs kids programs. The Dive Bus sets a minimum age of 10 for guided dives.",
+    "de": "Ja. Porto Mari Dive Center bietet Bubblemaker für Kinder an und Scuba Do hat Kinderprogramme. The Dive Bus setzt für geführte Tauchgänge ein Mindestalter von 10 Jahren.",
+    "es": "Sí. Porto Mari Dive Center ofrece Bubblemaker para niños y Scuba Do tiene programas infantiles. The Dive Bus fija una edad mínima de 10 años para las inmersiones guiadas.",
+    "pt": "Sim. O Porto Mari Dive Center oferece Bubblemaker para crianças e a Scuba Do tem programas infantis. A The Dive Bus exige idade mínima de 10 anos para mergulhos guiados."
    }
   },
   {
    "q": {
     "nl": "Waar kun je op Curaçao technisch duiken?",
-    "en": "Where can you do technical diving in Curaçao?"
+    "en": "Where can you do technical diving in Curaçao?",
+    "de": "Wo kann man auf Curaçao technisch tauchen?",
+    "es": "¿Dónde se puede hacer buceo técnico en Curazao?",
+    "pt": "Onde dá para fazer mergulho técnico em Curaçao?"
    },
    "a": {
     "nl": "Goby Divers is het bekendste tec-centrum met trimix, nitrox en CCR-ondersteuning. Unique Diving biedt extended range-duiken.",
-    "en": "Goby Divers is the best-known tech center, with trimix, nitrox and CCR support. Unique Diving offers extended range dives."
+    "en": "Goby Divers is the best-known tech center, with trimix, nitrox and CCR support. Unique Diving offers extended range dives.",
+    "de": "Goby Divers ist das bekannteste Technical-Zentrum, mit Unterstützung für Trimix, Nitrox und CCR. Unique Diving bietet Tauchgänge mit erweiterter Reichweite an.",
+    "es": "Goby Divers es el centro técnico más conocido, con apoyo para trimix, nitrox y CCR. Unique Diving ofrece inmersiones de rango extendido.",
+    "pt": "A Goby Divers é o centro técnico mais conhecido, com suporte para trimix, nitrox e CCR. A Unique Diving oferece mergulhos de alcance estendido."
    }
   }
  ],
@@ -2270,6 +3293,21 @@
    "What is the best dive shop in Curaçao for a first-time diver?",
    "Which Curaçao dive shop is best for shore diving on your own?",
    "How much does PADI Open Water certification cost in Curaçao?"
+  ],
+  "de": [
+   "Welche ist die beste Tauchbasis auf Curaçao für Taucher ohne Erfahrung?",
+   "Welche Tauchbasis auf Curaçao eignet sich am besten, um allein vom Ufer zu tauchen?",
+   "Was kostet die PADI-Open-Water-Zertifizierung auf Curaçao?"
+  ],
+  "es": [
+   "¿Cuál es la mejor tienda de buceo de Curazao para quien bucea por primera vez?",
+   "¿Qué tienda de buceo de Curazao es la mejor para bucear solo desde la orilla?",
+   "¿Cuánto cuesta la certificación PADI Open Water en Curazao?"
+  ],
+  "pt": [
+   "Qual é a melhor escola de mergulho de Curaçao para quem mergulha pela primeira vez?",
+   "Qual escola de mergulho de Curaçao é a melhor para mergulhar de costa por conta própria?",
+   "Quanto custa a certificação PADI Open Water em Curaçao?"
   ]
  }
 }
