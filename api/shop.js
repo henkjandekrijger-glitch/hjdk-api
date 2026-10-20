@@ -34,7 +34,7 @@ import { K_KOST, ontvang as margeOntvang, margeStand, zetMarge } from '../lib/sh
 import { prijsStand, prijsCsv } from '../lib/shopprijs.js';
 import { uurTel, uurStand, lekkenPagina, uurAanvullen } from '../lib/shopuur.js';
 import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdracht.js';
-import { kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
+import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 import { demandRadar } from '../lib/demandradar.js';
 const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
@@ -744,6 +744,12 @@ export default async function handler(req, res) {
     if (op === 'img') return await plaatje(req, res, url);
     res.setHeader('cache-control', 'no-store');
     if (op === 'voorpa') return res.status(200).json(Object.assign({ ok: true }, await voorNet(['ra', 'ca'].includes(url.searchParams.get('net')) ? url.searchParams.get('net') : 'pa')));
+    if (op === 'lokker') { // lokkerproduct onder de kostprijs (lib/shopkies.js lokkers); inkoop staat erin, dus alleen via de beschermde vercel.app-host
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const items = (await catalog(true)).items, kaart = (await kv.get(K_KOST).catch(() => null)) || {};
+      let markt = {}; try { const r = await fetch('https://demandradar-ivory.vercel.app/api/feed?shop=yoors&cc=NL&prices=1', { signal: AbortSignal.timeout(8000) }); if (r.ok) markt = ((await r.json()) || {}).items || {}; } catch (e) {}
+      const termen = await demandRadar('NL').catch(() => []);
+      return res.status(200).json({ ok: true, at: new Date().toISOString(), marktprijzen: Object.keys(markt).length, lokkers: lokkers({ items, kaart, markt, termen, n: Math.min(30, Number(url.searchParams.get('n')) || 10) }) }); }
     if (op === 'kies' || op === 'getest') { // shoptest (Henkjan 19 okt): elke dag 20 producten lerend testen; lib/shopkies.js. Marges staan erin: alleen met de gedeelde sleutel of via de beschermde vercel.app-host
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; const s = await geheim(); const k = String(req.headers['x-shop-sleutel'] || '');
       if (!/\.vercel\.app$/i.test(host) && !(s && k === s)) return res.status(404).send('Niet gevonden');
@@ -753,7 +759,7 @@ export default async function handler(req, res) {
         if (nieuw) await kv.set(K_GETEST, g); return res.status(200).json({ ok: true, nieuw, totaal: Object.keys(g).length }); }
       if (STRATEGIEEN.includes(url.searchParams.get('strategie')) && /\.vercel\.app$/i.test(host)) await kv.set(K_STRATEGIE, url.searchParams.get('strategie')).catch(() => {}); // strategie vastzetten (alleen via de beschermde host); geldt vanaf de volgende keuze
       const dag = DAY(), ck = 'hjdk:shop:kies:' + dag, n = Math.max(1, Math.min(40, Number(url.searchParams.get('n')) || KIES_REGELS.n));
-      if (!url.searchParams.get('vers')) { const c = await kv.get(ck).catch(() => null); if (c && c.n >= n) return res.status(200).json(Object.assign({ ok: true, uitCache: true }, c)); }
+      let cache = null; if (!url.searchParams.get('vers')) { const c = await kv.get(ck).catch(() => null); if (c && c.n >= n) cache = c; }
       const items = (await catalog(true)).items, kaart = (await kv.get(K_KOST).catch(() => null)) || {}, getest = (await kv.get(K_GETEST).catch(() => null)) || {};
       let markt = {}; try { const r = await fetch('https://demandradar-ivory.vercel.app/api/feed?shop=yoors&cc=NL&prices=1', { signal: AbortSignal.timeout(8000) }); if (r.ok) markt = ((await r.json()) || {}).items || {}; } catch (e) {}
       const termen = await demandRadar('NL').catch(() => []);
@@ -763,6 +769,9 @@ export default async function handler(req, res) {
       const strategie = STRATEGIEEN.includes(url.searchParams.get('strategie')) ? url.searchParams.get('strategie') : ((await kv.get(K_STRATEGIE).catch(() => null)) || 'auto');
       const uit = kies({ strategie, items, kaart, markt, termen, tellers, getest, seizoen, thema: themaVan, vandaag: dag, n, plaatje: pid => ({ icon: beeld(pid, 'icon'), image: beeld(pid, 'pa'), link: 'https://yoo.rs/product/' + pid + '?lang=nl' }) });
       uit.bronnen = { catalogus: items.length, metInkoop: Object.keys(kaart).length, marktprijzen: Object.keys(markt).length, vraagtermen: termen.length, metVerkeer: Object.keys(tellers).length, alGetest: Object.keys(getest).length };
+      if (cache) { // dagkeuze blijft die van vanochtend; oordelen en de vaste plekken voor presterend en veelbelovend zijn altijd vers
+        const vast = (cache.gekozen || []).filter(x => x.hoe !== 'presterend' && x.hoe !== 'veelbelovend'); const extra = (uit.gekozen || []).filter(x => (x.hoe === 'presterend' || x.hoe === 'veelbelovend') && !vast.some(v => v.pid === x.pid));
+        return res.status(200).json(Object.assign({ ok: true, uitCache: true }, cache, { gekozen: vast.concat(extra), presterend: uit.presterend, veelbelovend: uit.veelbelovend, af: uit.af, onbeslist: uit.onbeslist, gemiddeldeTikratio: uit.gemiddeldeTikratio })); }
       await kv.set(ck, uit, { ex: 3 * 86400 }).catch(() => {});
       return res.status(200).json(Object.assign({ ok: true }, uit)); }
     if (op === 'koopcheck') { // openbaar, alleen lezen: hoe een NL-telefoon de productpagina en de afrekenpagina van yoo.rs nu krijgt (geen sleutels, geen bezoekersdata)
