@@ -1,1 +1,2675 @@
-{"id":"natuur","peildatum":"2026-10-20","items":[]}
+{
+ "id": "natuur",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "natuurgebied",
+  "en": "nature spot"
+ },
+ "h1": {
+  "nl": "Natuur op Curaçao: welk park, welke wandeling of welke natuurplek past bij jou?",
+  "en": "Nature on Curaçao: which park, hike or outdoor spot suits you?"
+ },
+ "titel": {
+  "nl": "Natuur op Curaçao: {n} parken, wandelingen en plekken",
+  "en": "Curaçao Nature: {n} Parks, Hikes and Wildlife Spots"
+ },
+ "metaDesc": {
+  "nl": "{n} natuurplekken op Curaçao vergeleken: Christoffelpark, Shete Boka, flamingo's, schildpadden, grotten. Met entreeprijzen, openingstijden en reviewscores.",
+  "en": "{n} Curaçao nature spots compared: Christoffel Park, Shete Boka, flamingos, turtles, caves. With entry fees, hours and review scores."
+ },
+ "kort": {
+  "nl": "We vergeleken 33 natuurplekken en buitenactiviteiten op Curaçao. De nationale parken Christoffelpark en Shete Boka kosten $15 per volwassene; flamingo's bij Jan Kok, schildpadden bij Playa Grandi en Watamula zijn gratis. Wandelaars kiezen de Christoffelberg (start vóór 10:00), wie met kinderen of een rolstoel gaat kiest Rif Mangrove Park of Shete Boka.",
+  "en": "We compared 33 nature spots and outdoor activities on Curaçao. The national parks, Christoffel and Shete Boka, cost $15 per adult; flamingos at Jan Kok, turtles at Playa Grandi and Watamula Hole are free. Hikers should pick Mount Christoffel (start before 10 a.m.); families or wheelchair users do best at Rif Mangrove Park or Shete Boka."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat wil je vooral doen?",
+    "en": "What do you mainly want to do?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit, gewoon de natuur in",
+      "en": "Doesn't matter, just get outdoors"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Wandelen of klimmen",
+      "en": "Hike or climb"
+     },
+     "plus": [
+      "wandelen",
+      "klimmen"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Dieren zien (flamingo's, schildpadden, vogels)",
+      "en": "See animals (flamingos, turtles, birds)"
+     },
+     "plus": [
+      "flamingo",
+      "schildpadden",
+      "vogels"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Grotten en ruige kust",
+      "en": "Caves and wild coast"
+     },
+     "plus": [
+      "grotten",
+      "ruige-kust"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Iets makkelijks met kinderen",
+      "en": "Something easy with kids"
+     },
+     "plus": [
+      "kinderen",
+      "makkelijk"
+     ],
+     "min": [
+      "zwaar"
+     ],
+     "vereist": "kinderen"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Hoe fit ben je?",
+    "en": "How fit are you?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Gemiddeld",
+      "en": "Average"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Liever rustig aan",
+      "en": "I prefer to take it easy"
+     },
+     "plus": [
+      "makkelijk"
+     ],
+     "min": [
+      "zwaar"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Sportief, ik wil zweten",
+      "en": "Fit, I want a workout"
+     },
+     "plus": [
+      "zwaar",
+      "klimmen"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Rolstoel of slecht ter been",
+      "en": "Wheelchair or limited mobility"
+     },
+     "plus": [
+      "rolstoel",
+      "makkelijk"
+     ],
+     "min": [
+      "zwaar",
+      "klimmen"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Welke kant van het eiland?",
+    "en": "Which part of the island?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit, we rijden",
+      "en": "Doesn't matter, we'll drive"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "West (Westpunt, Banda Abou)",
+      "en": "West (Westpunt, Banda Abou)"
+     },
+     "plus": [
+      "westpunt"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Midden (Willemstad, Sint Willibrordus)",
+      "en": "Central (Willemstad, Sint Willibrordus)"
+     },
+     "plus": [
+      "midden"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Oost (Jan Thiel, Spaanse Water)",
+      "en": "East (Jan Thiel, Spanish Water)"
+     },
+     "plus": [
+      "oost"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wil je entree betalen?",
+    "en": "Okay with paying entry?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Liefst gratis",
+      "en": "Free if possible"
+     },
+     "plus": [
+      "gratis"
+     ],
+     "min": [
+      "entree"
+     ],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "christoffelpark",
+   "naam": "Christoffelpark (Christoffel National Park)",
+   "url": "https://www.christoffelpark.org/",
+   "soort": {
+    "nl": "nationaal park",
+    "en": "national park"
+   },
+   "plaats": "Savonet, Westpunt",
+   "tags": [
+    "wandelen",
+    "vogels",
+    "entree",
+    "westpunt",
+    "ochtend-vroeg",
+    "kinderen"
+   ],
+   "prijs": {
+    "bedrag": 15,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene, kind 6-12 $2",
+     "en": "per adult, kids 6-12 $2"
+    },
+    "bron": "https://www.christoffelpark.org/opening-hours-fees",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Open 6:00 tot 15:00",
+     "en": "Open 6 a.m. to 3 p.m."
+    },
+    {
+     "nl": "Acht wandelroutes, zonder gids",
+     "en": "Eight trails, no guide needed"
+    },
+    {
+     "nl": "Onder 6 jaar gratis",
+     "en": "Free under age 6"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 1963,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=8871637160274979309"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 45,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Veel routes, van korte schaduwrijke wandeling tot bergtocht",
+     "Kans op witstaartherten en veel vogels"
+    ],
+    "en": [
+     "Many trails, from short shady walks to a summit hike",
+     "Chance of white-tailed deer and lots of birds"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Vanaf 10:00 erg heet, kom vroeg",
+     "Herten laten zich niet altijd zien"
+    ],
+    "en": [
+     "Very hot after 10 a.m., come early",
+     "Deer don't always show up"
+    ]
+   },
+   "bronnen": [
+    "https://www.christoffelpark.org/opening-hours-fees",
+    "https://www.christoffelpark.org/hiking-trails",
+    "https://nomadicniko.com/curacao/christoffel-national-park",
+    "https://www.mycuracaoguide.com/blogs/the-national-parks-of-curacao"
+   ]
+  },
+  {
+   "id": "christoffelberg",
+   "naam": "Christoffelberg beklimmen (Mount Christoffel)",
+   "url": "https://www.christoffelpark.org/hiking-trails",
+   "soort": {
+    "nl": "bergtocht, hoogste punt",
+    "en": "summit hike, highest point"
+   },
+   "plaats": "Christoffelpark, Westpunt",
+   "tags": [
+    "klimmen",
+    "wandelen",
+    "zwaar",
+    "entree",
+    "westpunt",
+    "ochtend-vroeg"
+   ],
+   "prijs": {
+    "bedrag": 15,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene, kind 6-12 $2",
+     "en": "per adult, kids 6-12 $2"
+    },
+    "bron": "https://www.christoffelpark.org/opening-hours-fees",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Starten uiterlijk 10:00",
+     "en": "Must start by 10 a.m."
+    },
+    {
+     "nl": "2 tot 3 uur heen en terug",
+     "en": "2 to 3 hours round trip"
+    },
+    {
+     "nl": "Neem 2 liter water mee",
+     "en": "Bring 2 liters of water"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 694,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Uitzicht rondom over het hele eiland",
+     "Afwisselend schaduw en open stukken"
+    ],
+    "en": [
+     "360-degree view over the whole island",
+     "Trail alternates shade and open stretches"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Laatste kwartier steil en klauteren over rotsen",
+     "Laat aankomen betekent hitte en lastig parkeren",
+     "Stekelige cactussen langs het pad"
+    ],
+    "en": [
+     "Last 15 minutes are steep rock scrambling",
+     "Arriving late means heat and hard parking",
+     "Spiny cacti along the trail"
+    ]
+   },
+   "bronnen": [
+    "https://www.christoffelpark.org/hiking-trails",
+    "https://www.christoffelpark.org/opening-hours-fees",
+    "https://deviatingthenorm.com/blogarchive/2019/9/10/hiking-mt-christoffel-in-curacao",
+    "https://nomadicniko.com/curacao/christoffel-national-park",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+   ]
+  },
+  {
+   "id": "christoffel-boka-grandi-hertentrail",
+   "naam": "Boka Grandi- en hertentrails (Christoffelpark)",
+   "url": "https://www.christoffelpark.org/hiking-trails",
+   "soort": {
+    "nl": "makkelijke parkroutes",
+    "en": "easy park trails"
+   },
+   "plaats": "Christoffelpark, noordkust",
+   "tags": [
+    "wandelen",
+    "vogels",
+    "makkelijk",
+    "kinderen",
+    "entree",
+    "westpunt",
+    "ochtend-vroeg"
+   ],
+   "prijs": {
+    "bedrag": 15,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene, kind 6-12 $2",
+     "en": "per adult, kids 6-12 $2"
+    },
+    "bron": "https://www.christoffelpark.org/opening-hours-fees",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Boka Grandi-trail 1,5 uur",
+     "en": "Boka Grandi trail 1.5 hours"
+    },
+    {
+     "nl": "Gele trail 20 min, schaduw",
+     "en": "Yellow trail 20 min, shaded"
+    },
+    {
+     "nl": "Groene trail 40 min, makkelijk",
+     "en": "Green trail 40 min, easy"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 1,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-oa30-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustige route langs plantage, bos en zoutpan",
+     "Goede plek voor vogels als parkieten en troepialen"
+    ],
+    "en": [
+     "Quiet route past plantation, forest and salt pan",
+     "Good for birds like parakeets and troupials"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.christoffelpark.org/hiking-trails",
+    "https://caribbeanbirdingtrail.org/?p=6438",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-oa30-Curacao.html"
+   ]
+  },
+  {
+   "id": "zevenbergen-trail",
+   "naam": "Zevenbergen-trail (Christoffelpark)",
+   "url": "https://www.christoffelpark.org/hiking-trails",
+   "soort": {
+    "nl": "route met gids",
+    "en": "guided-only trail"
+   },
+   "plaats": "Christoffelpark, Westpunt",
+   "tags": [
+    "wandelen",
+    "zwaar",
+    "entree",
+    "westpunt",
+    "ochtend-vroeg"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Alleen met gids",
+     "en": "Guide required"
+    },
+    {
+     "nl": "Boeken via Carmabi",
+     "en": "Book through Carmabi"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Minder druk dan de Christoffelberg"
+    ],
+    "en": [
+     "Less crowded than Mount Christoffel"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.christoffelpark.org/hiking-trails",
+    "https://www.christoffelpark.org/"
+   ]
+  },
+  {
+   "id": "savonet-museum",
+   "naam": "Landhuis Savonet (Savonet Museum)",
+   "url": "https://www.christoffelpark.org/",
+   "soort": {
+    "nl": "natuur- en plantagemuseum",
+    "en": "nature and plantation museum"
+   },
+   "plaats": "Ingang Christoffelpark",
+   "tags": [
+    "kinderen",
+    "makkelijk",
+    "entree",
+    "westpunt"
+   ],
+   "prijs": {
+    "bedrag": 3,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon, los ticket; gratis bij parkentree",
+     "en": "per person, museum only; included with park entry"
+    },
+    "bron": "https://www.christoffelpark.org/opening-hours-fees",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Open 6:00 tot 14:00",
+     "en": "Open 6 a.m. to 2 p.m."
+    },
+    {
+     "nl": "Expositie Nos Naturalesa",
+     "en": "Nos Naturalesa exhibit"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Goede start voor wie de natuur van het park wil begrijpen"
+    ],
+    "en": [
+     "Good intro before exploring the park's nature"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.christoffelpark.org/opening-hours-fees",
+    "https://www.christoffelpark.org/",
+    "https://www.mycuracaoguide.com/blogs/the-national-parks-of-curacao"
+   ]
+  },
+  {
+   "id": "jeepsafari-christoffelpark",
+   "naam": "Yellow Adventures: National Park Jeep Safari",
+   "url": null,
+   "soort": {
+    "nl": "jeepsafari",
+    "en": "jeep safari"
+   },
+   "plaats": "Christoffelpark",
+   "tags": [
+    "makkelijk",
+    "entree",
+    "westpunt",
+    "ruige-kust"
+   ],
+   "prijs": {
+    "bedrag": 109,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene, parkentree inbegrepen",
+     "en": "per adult, park entry included"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11448545-National_Park_Jeep_Safari-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "6 uur",
+     "en": "6 hours"
+    },
+    {
+     "nl": "Maximaal 16 personen",
+     "en": "Maximum 16 people"
+    },
+    {
+     "nl": "Vanaf 6 jaar",
+     "en": "Ages 6 and up"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 46,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11448545-National_Park_Jeep_Safari-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gidsen vertellen veel over natuur en cultuur",
+     "Mooie stops aan de noordkust"
+    ],
+    "en": [
+     "Guides explain nature and culture well",
+     "Scenic north coast stops"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Hobbelige wegen, lastig bij rugklachten"
+    ],
+    "en": [
+     "Bumpy roads, hard on bad backs"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d11448545-National_Park_Jeep_Safari-Curacao.html"
+   ]
+  },
+  {
+   "id": "shete-boka",
+   "naam": "Shete Boka National Park",
+   "url": "http://www.shetebokapark.org/",
+   "soort": {
+    "nl": "nationaal park, noordkust",
+    "en": "national park, north coast"
+   },
+   "plaats": "Noordkust bij Westpunt",
+   "tags": [
+    "ruige-kust",
+    "schildpadden",
+    "entree",
+    "westpunt",
+    "makkelijk",
+    "kinderen"
+   ],
+   "prijs": {
+    "bedrag": 15,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene, alleen contant",
+     "en": "per adult, cash only"
+    },
+    "bron": "https://wanderlog.com/place/details/561995",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Open 8:00 tot 16:00",
+     "en": "Open 8 a.m. to 4 p.m."
+    },
+    {
+     "nl": "Kassa sluit om 15:00",
+     "en": "Ticket office closes 3 p.m."
+    },
+    {
+     "nl": "Bijna 10 km kustlijn",
+     "en": "Almost 10 km of coastline"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 1823,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=17065170604027023304"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 2498,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Golven slaan met donderend geweld de baaien in",
+     "Korte wandelingen vanaf elke parkeerplaats",
+     "Vriendelijk personeel bij de ingang"
+    ],
+    "en": [
+     "Waves crash into the inlets with real force",
+     "Short walks from each parking area",
+     "Friendly staff at the entrance"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Nergens schaduw, neem water mee",
+     "Zwemmen kan bijna nergens door stroming",
+     "Smalle, bochtige weg tussen de baaien"
+    ],
+    "en": [
+     "No shade anywhere, bring water",
+     "Swimming mostly unsafe due to currents",
+     "Narrow, winding road between the inlets"
+    ]
+   },
+   "bronnen": [
+    "http://www.shetebokapark.org/",
+    "https://www.carmabi.org/blog/carmabi-news-1/shete-boka-national-park-to-open-one-hour-earlier-starting-july-1-2026-82",
+    "https://wanderlog.com/place/details/561995",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html",
+    "https://deviatingthenorm.com/blogarchive/2019/11/3/curacaos-watamula-hole-and-shete-boka-national-park"
+   ]
+  },
+  {
+   "id": "boka-tabla",
+   "naam": "Boka Tabla",
+   "url": "http://www.shetebokapark.org/",
+   "soort": {
+    "nl": "zeegrot in Shete Boka",
+    "en": "sea cave in Shete Boka"
+   },
+   "plaats": "Shete Boka, noordkust",
+   "tags": [
+    "grotten",
+    "ruige-kust",
+    "entree",
+    "westpunt",
+    "makkelijk",
+    "kinderen"
+   ],
+   "prijs": {
+    "bedrag": 15,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene, alleen contant",
+     "en": "per adult, cash only"
+    },
+    "bron": "https://wanderlog.com/place/details/561995",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Trap naar de grotmond",
+     "en": "Steps down to the cave"
+    },
+    {
+     "nl": "Binnen Shete Boka-entree",
+     "en": "Included in Shete Boka entry"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 375,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=10960557553175520082"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 223,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vanuit de grot zie je de golven naar binnen rollen",
+     "Kort lopen vanaf de parkeerplaats"
+    ],
+    "en": [
+     "From inside the cave you watch waves roll in",
+     "Short walk from the parking area"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Gevaarlijk bij ruwe zee en slecht weer"
+    ],
+    "en": [
+     "Risky in rough surf and bad weather"
+    ]
+   },
+   "bronnen": [
+    "http://www.shetebokapark.org/",
+    "https://deviatingthenorm.com/blogarchive/2019/11/3/curacaos-watamula-hole-and-shete-boka-national-park",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+   ]
+  },
+  {
+   "id": "boka-wandomi",
+   "naam": "Boka Wandomi (natuurlijke brug)",
+   "url": "http://www.shetebokapark.org/",
+   "soort": {
+    "nl": "natuurlijke rotsbrug",
+    "en": "natural rock bridge"
+   },
+   "plaats": "Shete Boka, noordkust",
+   "tags": [
+    "ruige-kust",
+    "wandelen",
+    "makkelijk",
+    "entree",
+    "westpunt"
+   ],
+   "prijs": {
+    "bedrag": 15,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene, alleen contant",
+     "en": "per adult, cash only"
+    },
+    "bron": "https://wanderlog.com/place/details/561995",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Natuurlijke brug van kalksteen",
+     "en": "Natural limestone bridge"
+    },
+    {
+     "nl": "Makkelijk gemarkeerd pad",
+     "en": "Easy marked trail"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 352,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=4618755313854518844"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustiger dan Boka Tabla en goed te lopen"
+    ],
+    "en": [
+     "Quieter than Boka Tabla and easy to walk"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "http://www.shetebokapark.org/",
+    "https://www.touristsecrets.com/destinations/caribbean/curacao/the-complete-guide-to-shete-boka-national-park-curacao/",
+    "https://www.mycuracaoguide.com/blogs/the-national-parks-of-curacao"
+   ]
+  },
+  {
+   "id": "boka-pistol",
+   "naam": "Boka Pistol",
+   "url": "http://www.shetebokapark.org/",
+   "soort": {
+    "nl": "blaasgat in Shete Boka",
+    "en": "blowhole in Shete Boka"
+   },
+   "plaats": "Shete Boka, noordkust",
+   "tags": [
+    "ruige-kust",
+    "entree",
+    "westpunt",
+    "makkelijk"
+   ],
+   "prijs": {
+    "bedrag": 15,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene, alleen contant",
+     "en": "per adult, cash only"
+    },
+    "bron": "https://wanderlog.com/place/details/561995",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Knal als van een pistool",
+     "en": "Gunshot-like boom of waves"
+    },
+    {
+     "nl": "Binnen Shete Boka-entree",
+     "en": "Included in Shete Boka entry"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Indrukwekkend bij hoge golven"
+    ],
+    "en": [
+     "Impressive when the swell is high"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Op rustige dagen weinig te zien"
+    ],
+    "en": [
+     "Little action on calm days"
+    ]
+   },
+   "bronnen": [
+    "http://www.shetebokapark.org/",
+    "https://www.mycuracaoguide.com/blogs/the-national-parks-of-curacao",
+    "https://www.touristsecrets.com/destinations/caribbean/curacao/the-complete-guide-to-shete-boka-national-park-curacao/"
+   ]
+  },
+  {
+   "id": "boka-kalki",
+   "naam": "Boka Kalki",
+   "url": "http://www.shetebokapark.org/",
+   "soort": {
+    "nl": "schildpaddenstrandje",
+    "en": "turtle nesting cove"
+   },
+   "plaats": "Shete Boka, noordkust",
+   "tags": [
+    "schildpadden",
+    "ruige-kust",
+    "entree",
+    "westpunt"
+   ],
+   "prijs": {
+    "bedrag": 15,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene, alleen contant",
+     "en": "per adult, cash only"
+    },
+    "bron": "https://wanderlog.com/place/details/561995",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Zeeschildpadden leggen hier eieren",
+     "en": "Sea turtles nest here"
+    },
+    {
+     "nl": "Nestseizoen mei tot december",
+     "en": "Nesting season May to December"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Klein strandje tussen de kliffen"
+    ],
+    "en": [
+     "Small beach between the cliffs"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "http://www.shetebokapark.org/",
+    "https://www.mycuracaoguide.com/blogs/the-national-parks-of-curacao",
+    "https://deviatingthenorm.com/blogarchive/2019/11/3/curacaos-watamula-hole-and-shete-boka-national-park"
+   ]
+  },
+  {
+   "id": "watamula",
+   "naam": "Watamula Hole",
+   "url": null,
+   "soort": {
+    "nl": "blaasgat, gratis",
+    "en": "blowhole, free"
+   },
+   "plaats": "Noordwestpunt, voorbij Westpunt",
+   "tags": [
+    "ruige-kust",
+    "gratis",
+    "westpunt"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis",
+     "en": "free"
+    },
+    "bron": "https://www.takeyourbackpack.com/backpacking-in-curacao/visit-watamula-hole/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Geen kassa of hek",
+     "en": "No gate or ticket booth"
+    },
+    {
+     "nl": "Reken op 30 tot 60 minuten",
+     "en": "Plan 30 to 60 minutes"
+    },
+    {
+     "nl": "Laatste stuk onverhard",
+     "en": "Last stretch is unpaved"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 931,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=7877791854799935714"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 183,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Spectaculair bij wind en opkomend tij",
+     "Mooi bij zonsondergang"
+    ],
+    "en": [
+     "Spectacular with wind and a rising tide",
+     "Beautiful at sunset"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Op windstille dagen gebeurt er weinig",
+     "Scherp koraalgesteente, slippers gaan stuk",
+     "Geen schaduw en zwemmen kan niet"
+    ],
+    "en": [
+     "Calm days mean little action",
+     "Sharp coral rock wrecks flip-flops",
+     "No shade and no swimming"
+    ]
+   },
+   "bronnen": [
+    "https://www.takeyourbackpack.com/backpacking-in-curacao/visit-watamula-hole/",
+    "https://deviatingthenorm.com/blogarchive/2019/11/3/curacaos-watamula-hole-and-shete-boka-national-park",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+   ]
+  },
+  {
+   "id": "hato-caves",
+   "naam": "Hato Caves (Hato-grotten)",
+   "url": "http://curacaohatocaves.com/",
+   "soort": {
+    "nl": "grot met rondleiding",
+    "en": "guided cave tour"
+   },
+   "plaats": "Hato, bij het vliegveld",
+   "tags": [
+    "grotten",
+    "kinderen",
+    "entree",
+    "midden",
+    "makkelijk"
+   ],
+   "prijs": {
+    "bedrag": 10,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene, kind 4-12 $8",
+     "en": "per adult, kids 4-12 $8"
+    },
+    "bron": "https://curacaohatocaves.com/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Elk heel uur, 9:00 tot 15:00",
+     "en": "Tours on the hour, 9 a.m.-3 p.m."
+    },
+    {
+     "nl": "Rondleiding duurt 45 minuten",
+     "en": "Tour lasts 45 minutes"
+    },
+    {
+     "nl": "49 treden naar de ingang",
+     "en": "49 steps to the entrance"
+    },
+    {
+     "nl": "Kolonie zeldzame vleermuizen",
+     "en": "Colony of rare bats"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 2776,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=9651987624002885948"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 1872,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gids vertelt over druipsteen, legendes en geschiedenis",
+     "Makkelijk te combineren met een stadsbezoek"
+    ],
+    "en": [
+     "Guide covers formations, legends and history",
+     "Easy to combine with a city visit"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Je mag alleen met een rondleiding naar binnen"
+    ],
+    "en": [
+     "Entry only on a guided tour"
+    ]
+   },
+   "bronnen": [
+    "https://curacaohatocaves.com/",
+    "https://www.mycuracaoguide.com/blogs/the-national-parks-of-curacao",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+   ]
+  },
+  {
+   "id": "blue-room",
+   "naam": "Blue Room (zeegrot)",
+   "url": null,
+   "soort": {
+    "nl": "zeegrot, zwemmen",
+    "en": "sea cave, swim-in"
+   },
+   "plaats": "Bij Santa Cruz, westkust",
+   "tags": [
+    "grotten",
+    "zwemmen",
+    "gratis",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Alleen zwemmend of per boot",
+     "en": "Reachable only by swimming or boat"
+    },
+    {
+     "nl": "Veel boottochten stoppen hier",
+     "en": "Many boat trips stop here"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 83,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=5204502537873244874"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 171,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Blauw oplichtend water in de grot"
+    ],
+    "en": [
+     "Glowing blue water inside the cave"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html",
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d24135142-West_Coast_Full_Day_Tour_with_Beaches_BBQ_and_Blue_Room-Curacao.html"
+   ]
+  },
+  {
+   "id": "playa-grandi",
+   "naam": "Playa Grandi (Playa Piskado), schildpadden",
+   "url": null,
+   "soort": {
+    "nl": "vissersstrand met schildpadden",
+    "en": "fishing beach with turtles"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "schildpadden",
+    "zwemmen",
+    "gratis",
+    "westpunt",
+    "kinderen",
+    "makkelijk"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Schildpadden bij de steiger",
+     "en": "Turtles near the pier"
+    },
+    {
+     "nl": "Snackbar en souvenirwinkel",
+     "en": "Snack bar and souvenir shop"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 901,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Bijna altijd groene zeeschildpadden"
+    ],
+    "en": [
+     "Green sea turtles almost every day"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Erg druk zodra tourbussen arriveren",
+     "Rotsige instap, geen ligstrand"
+    ],
+    "en": [
+     "Very crowded when tour buses arrive",
+     "Rocky entry, not a lounging beach"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html",
+    "https://nomadicniko.com/curacao/beaches/"
+   ]
+  },
+  {
+   "id": "klein-curacao",
+   "naam": "Klein Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "onbewoond eiland",
+    "en": "uninhabited island"
+   },
+   "plaats": "25 km zuidoost, alleen per boot",
+   "tags": [
+    "schildpadden",
+    "zwemmen",
+    "kinderen",
+    "oost",
+    "entree"
+   ],
+   "prijs": {
+    "bedrag": 135,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon (boottocht, $135 tot $170)",
+     "en": "per person (boat trip, $135 to $170)"
+    },
+    "bron": "https://www.mycuracaoguide.com/klein-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Alleen per boot",
+     "en": "Boat access only"
+    },
+    {
+     "nl": "Vuurtoren en scheepswrak",
+     "en": "Lighthouse and shipwreck"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 1453,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Helder water en schildpadden",
+     "Lang wit strand zonder bebouwing"
+    ],
+    "en": [
+     "Clear water and sea turtles",
+     "Long white beach with no buildings"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Overtocht vaak ruw",
+     "Weinig schaduw"
+    ],
+    "en": [
+     "Crossing is often rough",
+     "Little shade"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html",
+    "https://www.mycuracaoguide.com/klein-curacao"
+   ]
+  },
+  {
+   "id": "flamingos-jan-kok",
+   "naam": "Flamingo's bij Salina Jan Kok (Sint Willibrordus)",
+   "url": null,
+   "soort": {
+    "nl": "zoutpan met uitkijkpunt",
+    "en": "salt pan with lookout"
+   },
+   "plaats": "Sint Willibrordus",
+   "tags": [
+    "flamingo",
+    "vogels",
+    "gratis",
+    "midden",
+    "makkelijk",
+    "ochtend-vroeg",
+    "kinderen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis, kijken vanaf de weg",
+     "en": "free, viewing from the road"
+    },
+    "bron": "https://www.cliffvilla.com/westpunt-blog/curaaos-pink-flamingo-guide",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Parkeren langs de hoofdweg",
+     "en": "Park along the main road"
+    },
+    {
+     "nl": "Kort pad naar uitkijkplatform",
+     "en": "Short path to viewing platform"
+    },
+    {
+     "nl": "Ook steltlopers en reigers",
+     "en": "Also waders and herons"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 418,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Makkelijkst bereikbare flamingoplek van het eiland",
+     "Hele jaar vogels te zien"
+    ],
+    "en": [
+     "Easiest flamingo spot to reach on the island",
+     "Birds to see year-round"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Flamingo's staan vaak ver weg, neem een verrekijker mee",
+     "Geen schaduw"
+    ],
+    "en": [
+     "Flamingos are often far off, bring binoculars",
+     "No shade"
+    ]
+   },
+   "bronnen": [
+    "https://www.cliffvilla.com/westpunt-blog/curaaos-pink-flamingo-guide",
+    "https://www.birdingplaces.eu/birdingplaces/netherlands-antilles/salina-jan-kok",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+   ]
+  },
+  {
+   "id": "rif-sint-marie",
+   "naam": "Rif Sint Marie (wandelgebied en flamingoreservaat)",
+   "url": null,
+   "soort": {
+    "nl": "wandelgebied, ongemarkeerd",
+    "en": "hiking area, unmarked"
+   },
+   "plaats": "Bij Porto Mari, Sint Willibrordus",
+   "tags": [
+    "wandelen",
+    "vogels",
+    "flamingo",
+    "zwaar",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ruïne van een oud landhuis",
+     "en": "Ruins of an old plantation house"
+    },
+    {
+     "nl": "Vogeltoren aan de route",
+     "en": "Bird-watching tower on route"
+    },
+    {
+     "nl": "Reservaat zelf niet te voet",
+     "en": "Sanctuary itself closed on foot"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 3,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=9224912398348578236"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Kans op parkieten, caracara's en wilde varkens"
+    ],
+    "en": [
+     "Chance of parakeets, caracaras and wild pigs"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Paden ongemarkeerd en je raakt snel van de route",
+     "Doornstruiken en omgevallen cactussen"
+    ],
+    "en": [
+     "Trails unmarked, easy to lose your way",
+     "Thorny brush and fallen cacti"
+    ]
+   },
+   "bronnen": [
+    "https://curacao.for91days.com/a-prickly-hike-around-rif-sint-marie",
+    "https://www.cliffvilla.com/westpunt-blog/curaaos-pink-flamingo-guide"
+   ]
+  },
+  {
+   "id": "seru-largu-park",
+   "naam": "Seru Largu National Park",
+   "url": null,
+   "soort": {
+    "nl": "nieuw nationaal park",
+    "en": "new national park"
+   },
+   "plaats": "Sint Willibrordus",
+   "tags": [
+    "wandelen",
+    "flamingo",
+    "vogels",
+    "mangrove",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Beheerd door Carmabi",
+     "en": "Managed by Carmabi"
+    },
+    {
+     "nl": "Nog in ontwikkeling",
+     "en": "Still under development"
+    },
+    {
+     "nl": "Wandelen, mountainbiken en kajakken",
+     "en": "Hiking, mountain biking, kayaking"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 3,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=13324802083660019911"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Nog rustig, weinig bezoekers"
+    ],
+    "en": [
+     "Still quiet, few visitors"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.carmabi.org/presskit-serulargupark",
+    "https://www.carmabi.org/"
+   ]
+  },
+  {
+   "id": "salina-jan-thiel",
+   "naam": "Zoutpannen van Jan Thiel",
+   "url": null,
+   "soort": {
+    "nl": "vogelplek bij de zoutpan",
+    "en": "salt pan bird spot"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "vogels",
+    "flamingo",
+    "oost",
+    "makkelijk"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Op de Caribbean Birding Trail",
+     "en": "On the Caribbean Birding Trail"
+    },
+    {
+     "nl": "Flamingo's niet altijd aanwezig",
+     "en": "Flamingos not always present"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Dicht bij de hotels aan de oostkant"
+    ],
+    "en": [
+     "Close to the east-side hotels"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanbirdingtrail.org/?p=6438",
+    "https://www.cliffvilla.com/westpunt-blog/curaaos-pink-flamingo-guide"
+   ]
+  },
+  {
+   "id": "rif-mangrove-park",
+   "naam": "Curaçao Rif Mangrove Park",
+   "url": "http://www.mangrovepark.org/",
+   "soort": {
+    "nl": "mangrovepark in de stad",
+    "en": "city mangrove park"
+   },
+   "plaats": "Otrobanda, Willemstad",
+   "tags": [
+    "mangrove",
+    "wandelen",
+    "kinderen",
+    "entree",
+    "midden",
+    "makkelijk",
+    "rolstoel",
+    "vogels"
+   ],
+   "prijs": {
+    "bedrag": 15,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene, kind 6-12 $2",
+     "en": "per adult, kids 6-12 $2"
+    },
+    "bron": "https://www.mangrovepark.org/opening-hours-fees",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "1,08 km plankenpad, rolstoelvriendelijk",
+     "en": "1.08 km boardwalk, wheelchair friendly"
+    },
+    {
+     "nl": "Kajaktour $25, vanaf 6 jaar",
+     "en": "Kayak tour $25, age 6+"
+    },
+    {
+     "nl": "Open 8:00 tot 17:00",
+     "en": "Open 8 a.m. to 5 p.m."
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 327,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=15161416673848254376"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 77,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustige groene plek vlak bij de cruisepier",
+     "Kajak door de mangrovekanalen"
+    ],
+    "en": [
+     "Quiet green spot right by the cruise pier",
+     "Kayak through the mangrove channels"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "http://www.mangrovepark.org/",
+    "https://www.mangrovepark.org/opening-hours-fees",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html",
+    "https://www.mycuracaoguide.com/blogs/the-national-parks-of-curacao"
+   ]
+  },
+  {
+   "id": "spaanse-water",
+   "naam": "Spaanse Water (suppen en windsurfen)",
+   "url": null,
+   "soort": {
+    "nl": "grote kalme baai",
+    "en": "large calm bay"
+   },
+   "plaats": "Spaanse Water, oost",
+   "tags": [
+    "zwemmen",
+    "kinderen",
+    "oost",
+    "entree",
+    "makkelijk"
+   ],
+   "prijs": {
+    "bedrag": 65,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon, SUP-tour 2 uur",
+     "en": "per person, 2-hour SUP tour"
+    },
+    "bron": "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Kind onder 12 gratis mee op board",
+     "en": "Kids under 12 ride free on board"
+    },
+    {
+     "nl": "Ook windsurfles",
+     "en": "Windsurf lessons too"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Vlak water, geschikt voor beginners"
+    ],
+    "en": [
+     "Flat water, good for beginners"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao"
+   ]
+  },
+  {
+   "id": "sea-aquarium",
+   "naam": "Curaçao Sea Aquarium",
+   "url": "http://curacao-sea-aquarium.com/",
+   "soort": {
+    "nl": "aquarium",
+    "en": "aquarium"
+   },
+   "plaats": "Bapor Kibra",
+   "tags": [
+    "kinderen",
+    "entree",
+    "midden",
+    "makkelijk"
+   ],
+   "prijs": {
+    "bedrag": 59,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.mycuracaoguide.com/curacao-sea-aquarium",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Vlak bij Mambo Beach",
+     "en": "Next to Mambo Beach"
+    },
+    {
+     "nl": "Dolfijnenprogramma's apart te boeken",
+     "en": "Dolphin programs booked separately"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 5397,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=14393795980215854464"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 2195,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Makkelijk te combineren met Mambo Beach"
+    ],
+    "en": [
+     "Easy to combine with Mambo Beach"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/curacao-sea-aquarium",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+   ]
+  },
+  {
+   "id": "ostrich-farm",
+   "naam": "Curaçao Ostrich Farm",
+   "url": "https://curacaoostrichfarm.com/",
+   "soort": {
+    "nl": "struisvogelboerderij",
+    "en": "ostrich farm"
+   },
+   "plaats": "Groot Sint Joris",
+   "tags": [
+    "kinderen",
+    "entree",
+    "oost",
+    "makkelijk"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Jeeptour elk uur",
+     "en": "Jeep tour every hour"
+    },
+    {
+     "nl": "Open 9:00 tot 17:00",
+     "en": "Open 9 a.m. to 5 p.m."
+    },
+    {
+     "nl": "Restaurant met struisvogelvlees",
+     "en": "Restaurant serves ostrich"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 2015,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=12246015433179659816"
+    },
+    {
+     "platform": "Expedia",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 43,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.expedia.com/Curacao-Ostrich-Farm-Willemstad.d6079601.Vacation-Attraction"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Leuk en leerzaam, vooral voor kinderen",
+     "Struisvogels zelf voeren"
+    ],
+    "en": [
+     "Fun and educational, especially for kids",
+     "Hand-feeding the ostriches"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Wat aan de prijzige kant"
+    ],
+    "en": [
+     "A bit pricey"
+    ]
+   },
+   "bronnen": [
+    "https://www.inyourpocket.com/dutch-caribbean/Curacao/venues/Curacao-Ostrich-Farm",
+    "https://www.expedia.com/Curacao-Ostrich-Farm-Willemstad.d6079601.Vacation-Attraction",
+    "https://curacao.for91days.com/category/animals"
+   ]
+  },
+  {
+   "id": "aloe-vera-farm",
+   "naam": "Aloe Vera Farm Curaçao (CurAloe)",
+   "url": "https://www.curaloefarm.com/",
+   "soort": {
+    "nl": "aloëplantage met rondleiding",
+    "en": "aloe farm tour"
+   },
+   "plaats": "Kaminda Mitologia, oost",
+   "tags": [
+    "kinderen",
+    "entree",
+    "oost",
+    "makkelijk"
+   ],
+   "prijs": {
+    "bedrag": 10,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon, kind $5, alleen doordeweeks",
+     "en": "per person, kids $5, weekdays only"
+    },
+    "bron": "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Rondleiding van 1 uur",
+     "en": "One-hour tour"
+    },
+    {
+     "nl": "Weekendworkshop $24",
+     "en": "Weekend workshop $24"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 915,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=5386470935848844076"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Kort en goedkoop uitje, goed te combineren met de struisvogelboerderij"
+    ],
+    "en": [
+     "Short, cheap outing, pairs well with the ostrich farm"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao"
+   ]
+  },
+  {
+   "id": "den-paradera",
+   "naam": "Den Paradera (kruidentuin Dinah Veeris)",
+   "url": "https://www.dinahveeris.com/",
+   "soort": {
+    "nl": "kruidentuin",
+    "en": "herb garden"
+   },
+   "plaats": "Seru Grandi",
+   "tags": [
+    "makkelijk",
+    "kinderen",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Open 9:00 tot 18:00",
+     "en": "Open 9 a.m. to 6 p.m."
+    },
+    {
+     "nl": "Zondag gesloten",
+     "en": "Closed Sundays"
+    },
+    {
+     "nl": "Twee rondleidingen per dag",
+     "en": "Two guided tours daily"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 281,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=11395650661159219146"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 3.3,
+     "max": 5,
+     "aantal": 49,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-oa30-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Veel uitleg over inheemse geneeskrachtige planten"
+    ],
+    "en": [
+     "Lots of info on native medicinal plants"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Tuin oogt soms slecht onderhouden"
+    ],
+    "en": [
+     "Garden can look poorly maintained"
+    ]
+   },
+   "bronnen": [
+    "https://www.inyourpocket.com/dutch-caribbean/curacao/venues/den-paradera",
+    "https://www.uncommoncaribbean.com/curacao/on-site-curacao-discovering-dinah-veeris-garden-oasis-in-the-heart-of-the-desert-island/",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-oa30-Curacao.html"
+   ]
+  },
+  {
+   "id": "hofi-pastor",
+   "naam": "Hofi Pastor (oudste kapokboom)",
+   "url": "https://hofipastor.org/",
+   "soort": {
+    "nl": "klein natuurgebied",
+    "en": "small nature preserve"
+   },
+   "plaats": "Barber",
+   "tags": [
+    "wandelen",
+    "makkelijk",
+    "kinderen",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Eeuwenoude kapokboom",
+     "en": "Centuries-old kapok tree"
+    },
+    {
+     "nl": "Twee routes, samen 45 minuten",
+     "en": "Two trails, 45 minutes total"
+    },
+    {
+     "nl": "Vrijdag gesloten",
+     "en": "Closed Fridays"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 153,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=8111230473241206117"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 17,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-oa30-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "De enorme kapokboom met hoge plankwortels",
+     "Uitzicht vanaf de gele route"
+    ],
+    "en": [
+     "The huge kapok with tall buttress roots",
+     "View from the yellow trail"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Hek soms dicht binnen openingstijden",
+     "Routes zelf weinig bijzonder"
+    ],
+    "en": [
+     "Gate sometimes shut during opening hours",
+     "Trails themselves are unremarkable"
+    ]
+   },
+   "bronnen": [
+    "https://www.inyourpocket.com/dutch-caribbean/Curacao/venues/Hofi-Pastor",
+    "https://curacao.for91days.com/?p=384",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-oa30-Curacao.html"
+   ]
+  },
+  {
+   "id": "hofi-mango",
+   "naam": "Hofi Mango (plantage en mangobos)",
+   "url": null,
+   "soort": {
+    "nl": "plantage met rondleiding",
+    "en": "plantation tour"
+   },
+   "plaats": "Santa Cruz, Banda Abou",
+   "tags": [
+    "wandelen",
+    "kinderen",
+    "entree",
+    "westpunt",
+    "makkelijk",
+    "ochtend-vroeg"
+   ],
+   "prijs": {
+    "bedrag": 20,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon, kind 4-12 $8",
+     "en": "per person, kids 4-12 $8"
+    },
+    "bron": "https://www.mycuracaoguide.com/nl/book-tours/hofi-mango-guided-tour",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Mangobos met 800+ bomen",
+     "en": "Mango forest, 800+ trees"
+    },
+    {
+     "nl": "Rondleiding 1 tot 1,5 uur",
+     "en": "Tour 1 to 1.5 hours"
+    },
+    {
+     "nl": "Start tussen 7:30 en 10:30",
+     "en": "Starts 7:30 to 10:30 a.m."
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 89,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gidsen krijgen veel lof"
+    ],
+    "en": [
+     "Guides get a lot of praise"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Weinig keus in warme lunch"
+    ],
+    "en": [
+     "Limited hot lunch options"
+    ]
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/nl/book-tours/hofi-mango-guided-tour",
+    "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html"
+   ]
+  },
+  {
+   "id": "zipline-hofi-mango",
+   "naam": "Zipline Adventures Curaçao (Hofi Mango)",
+   "url": "https://curacaoactivities.com/tour/zipline-adventures-hofi-mango/",
+   "soort": {
+    "nl": "zipline, eerste van het eiland",
+    "en": "zipline, island's first"
+   },
+   "plaats": "Hofi Mango, Banda Abou",
+   "tags": [
+    "klimmen",
+    "kinderen",
+    "entree",
+    "westpunt"
+   ],
+   "prijs": {
+    "bedrag": 99,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon, kind $69",
+     "en": "per person, kids $69"
+    },
+    "bron": "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Vijf lijnen over de plantage",
+     "en": "Five lines over the plantation"
+    },
+    {
+     "nl": "Ongeveer 75 minuten",
+     "en": "About 75 minutes"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Combineren met de mangowandeling"
+    ],
+    "en": [
+     "Pairs with the mango forest walk"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Gewichtslimiet, check vooraf"
+    ],
+    "en": [
+     "Weight limit, check before booking"
+    ]
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao",
+    "https://www.curacaochronicle.com/post/local/zipline-adventures-curacao-opens-as-the-islands-first-zipline-attraction-at-hofi-mango",
+    "https://www.mycuracaoguide.com/nl/book-tours/hofi-mango-guided-tour"
+   ]
+  },
+  {
+   "id": "rock-climbing-curacao",
+   "naam": "Rock Climbing Curaçao (Tafelberg Santa Barbara)",
+   "url": null,
+   "soort": {
+    "nl": "klimmen, via ferrata, abseilen",
+    "en": "climbing, via ferrata, rappelling"
+   },
+   "plaats": "Tafelberg, Santa Barbara",
+   "tags": [
+    "klimmen",
+    "zwaar",
+    "entree",
+    "oost",
+    "ochtend-vroeg"
+   ],
+   "prijs": {
+    "bedrag": 120,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon, volledige tour 4,5 uur",
+     "en": "per person, full 4.5-hour tour"
+    },
+    "bron": "https://www.mycuracaoguide.com/book-tours/full-tour-rock-climbing",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Vanaf 6 jaar",
+     "en": "Ages 6 and up"
+    },
+    {
+     "nl": "Kortere tours vanaf $80",
+     "en": "Shorter tours from $80"
+    },
+    {
+     "nl": "Zonsondergangwandeling $20",
+     "en": "Sunset hike $20"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "My Curaçao Guide",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 168,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.mycuracaoguide.com/book-tours/full-tour-rock-climbing"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Geduldige gidsen die de route aanpassen aan je niveau",
+     "Geschikt voor beginners én ervaren klimmers",
+     "Veiligheid goed geregeld"
+    ],
+    "en": [
+     "Patient guides who adapt routes to your level",
+     "Works for beginners and experienced climbers",
+     "Safety is well handled"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Weinig schaduw, kies een ochtendtour"
+    ],
+    "en": [
+     "Little shade, pick a morning tour"
+    ]
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/book-tours/full-tour-rock-climbing",
+    "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao"
+   ]
+  },
+  {
+   "id": "tafelberg-wandeling",
+   "naam": "Wandeling Tafelberg Santa Barbara",
+   "url": null,
+   "soort": {
+    "nl": "tafelberg met uitzicht",
+    "en": "table mountain hike"
+   },
+   "plaats": "Santa Barbara Plantation",
+   "tags": [
+    "wandelen",
+    "zwaar",
+    "entree",
+    "oost",
+    "ochtend-vroeg"
+   ],
+   "prijs": {
+    "bedrag": 25,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon, met gids",
+     "en": "per person, guided"
+    },
+    "bron": "https://theabroadguide.com/tafelberg-hiking-experience/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "4 tot 5 uur",
+     "en": "4 to 5 hours"
+    },
+    {
+     "nl": "Woensdag tot zondag",
+     "en": "Wednesday to Sunday"
+    },
+    {
+     "nl": "Ophalen tegen meerprijs",
+     "en": "Pickup costs extra"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Weids uitzicht over kust en Spaanse Water",
+     "Gidsen krijgen veel lof"
+    ],
+    "en": [
+     "Wide views over the coast and bays",
+     "Guides get a lot of praise"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Steil en ongelijk, goede conditie nodig"
+    ],
+    "en": [
+     "Steep and uneven, fitness needed"
+    ]
+   },
+   "bronnen": [
+    "https://theabroadguide.com/tafelberg-hiking-experience/"
+   ]
+  },
+  {
+   "id": "boka-ascension",
+   "naam": "Boka Ascension (wandeling naar schildpaddenklif)",
+   "url": null,
+   "soort": {
+    "nl": "kustwandeling",
+    "en": "coastal hike"
+   },
+   "plaats": "Landhuis Ascension, noordkust",
+   "tags": [
+    "wandelen",
+    "schildpadden",
+    "ruige-kust",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Start bij Landhuis Ascension",
+     "en": "Starts at Landhuis Ascension"
+    },
+    {
+     "nl": "Door bos en cactusvelden",
+     "en": "Through forest and cactus fields"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Vanaf de klif zie je schildpadden zwemmen"
+    ],
+    "en": [
+     "Watch turtles swim below the cliff"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Rotsig pad door cactussen"
+    ],
+    "en": [
+     "Rocky path through cacti"
+    ]
+   },
+   "bronnen": [
+    "https://curacao.for91days.com/category/animals"
+   ]
+  },
+  {
+   "id": "amazonia-jungle-tour",
+   "naam": "Amazonia Jungle Tour",
+   "url": null,
+   "soort": {
+    "nl": "tropische tuin, zelf lopen",
+    "en": "tropical garden, self-guided"
+   },
+   "plaats": null,
+   "tags": [
+    "kinderen",
+    "makkelijk",
+    "entree"
+   ],
+   "prijs": {
+    "bedrag": 10,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf, tot $35 naar leeftijd en dag",
+     "en": "from, up to $35 by age and day"
+    },
+    "bron": "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Open 10:00 tot 17:00",
+     "en": "Open 10 a.m. to 5 p.m."
+    },
+    {
+     "nl": "Zwembad inbegrepen",
+     "en": "Pool access included"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Groen en schaduwrijk, een contrast met het droge eiland"
+    ],
+    "en": [
+     "Green and shady, a contrast to the dry island"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Dieren laten zich niet altijd zien"
+    ],
+    "en": [
+     "Animal sightings not guaranteed"
+    ]
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/best-outdoor-nature-activities-curacao"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Carmabi",
+   "url": "https://www.carmabi.org/",
+   "uitleg": {
+    "nl": "Beheerder van Christoffelpark, Shete Boka, Rif Mangrove Park en Seru Largu. Boekt rondleidingen, de safari en begeleide beklimmingen.",
+    "en": "Manages Christoffel, Shete Boka, Rif Mangrove Park and Seru Largu. Books guided hikes, the safari and guided climbs."
+   }
+  },
+  {
+   "naam": "My Curaçao Guide",
+   "url": "https://www.mycuracaoguide.com/",
+   "uitleg": {
+    "nl": "Lokale boekingssite voor o.a. klimtours, Hofi Mango, suppen en de Aloe Farm.",
+    "en": "Local booking site for climbing tours, Hofi Mango, SUP and the Aloe Farm."
+   }
+  },
+  {
+   "naam": "Tripadvisor / Viator",
+   "url": "https://www.tripadvisor.com/Attractions-g147277-Activities-c57-Curacao.html",
+   "uitleg": {
+    "nl": "Reviews van natuurplekken en boeken van tours zoals jeepsafari's.",
+    "en": "Reviews of nature spots and booking for tours like jeep safaris."
+   }
+  },
+  {
+   "naam": "GetYourGuide",
+   "url": "https://www.getyourguide.com/",
+   "uitleg": {
+    "nl": "Boekt eilandtours die Shete Boka, Hato Caves en flamingo's combineren.",
+    "en": "Books island tours that combine Shete Boka, Hato Caves and flamingos."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Begin de Christoffelberg zo vroeg mogelijk: het park opent om 6:00 en na 10:00 mag je niet meer aan de klim beginnen.",
+   "en": "Start Mount Christoffel as early as you can: the park opens at 6 a.m. and you can't start the climb after 10 a.m."
+  },
+  {
+   "nl": "Neem contant geld mee naar Shete Boka: entree is $15 per volwassene en briefjes van $100 worden niet aangenomen.",
+   "en": "Bring cash to Shete Boka: entry is $15 per adult and $100 bills aren't accepted."
+  },
+  {
+   "nl": "Shete Boka is sinds 1 juli 2026 open van 8:00 tot 16:00, de kassa sluit om 15:00.",
+   "en": "Since July 1, 2026, Shete Boka is open 8 a.m. to 4 p.m.; the ticket office closes at 3 p.m."
+  },
+  {
+   "nl": "Flamingo's zie je het best vroeg in de ochtend of laat in de middag; een verrekijker helpt.",
+   "en": "Flamingos are most active early morning and late afternoon; binoculars help."
+  },
+  {
+   "nl": "Watamula en de baaien van Shete Boka zijn het mooist bij wind en opkomend tij; op een windstille dag gebeurt er weinig.",
+   "en": "Watamula and the Shete Boka inlets are best with wind and a rising tide; calm days are a letdown."
+  },
+  {
+   "nl": "Draag dichte schoenen op de noordkust: het koraalgesteente is scherp genoeg om door slippers te gaan.",
+   "en": "Wear closed shoes on the north coast: the coral rock is sharp enough to cut through flip-flops."
+  },
+  {
+   "nl": "Bewoners met sèdula betalen in de parken van Carmabi CG 2 in plaats van $15.",
+   "en": "Residents with a sèdula pay CG 2 instead of $15 at the Carmabi parks."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wat kost Christoffelpark?",
+    "en": "How much is Christoffel Park?"
+   },
+   "a": {
+    "nl": "$15 per volwassene, $2 voor kinderen van 6 tot 12 en gratis onder 6 jaar. Het Savonet Museum zit erbij. Open dagelijks 6:00 tot 15:00, kassa sluit om 13:30.",
+    "en": "$15 per adult, $2 for kids 6 to 12, free under 6. The Savonet Museum is included. Open daily 6 a.m. to 3 p.m.; the ticket office closes at 1:30 p.m."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe lang duurt de beklimming van de Christoffelberg?",
+    "en": "How long does the Mount Christoffel hike take?"
+   },
+   "a": {
+    "nl": "Twee tot drie uur heen en terug: ongeveer drie uur vanaf het bezoekerscentrum, twee uur vanaf de voet van de berg. Het laatste stuk is klauteren. Start tussen 6:00 en 10:00 en neem 2 liter water mee.",
+    "en": "Two to three hours round trip: about three from the visitor center, two from the base. The last stretch is a scramble. Start between 6 and 10 a.m. and bring 2 liters of water."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar zie je flamingo's op Curaçao?",
+    "en": "Where can you see flamingos on Curaçao?"
+   },
+   "a": {
+    "nl": "Het makkelijkst bij de zoutpan van Jan Kok bij Sint Willibrordus, gratis vanaf de weg en een uitkijkplatform. Soms ook bij Rif Sint Marie en de zoutpannen van Jan Thiel.",
+    "en": "Most easily at the Jan Kok salt pan near Sint Willibrordus, free from the road and a viewing platform. Sometimes also at Rif Sint Marie and the Jan Thiel salt pans."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar zwem je met schildpadden op Curaçao?",
+    "en": "Where can you swim with turtles on Curaçao?"
+   },
+   "a": {
+    "nl": "Bij Playa Grandi (Playa Piskado) in Westpunt zwemmen bijna dagelijks groene zeeschildpadden bij de vissersboten, gratis. Ook op Klein Curaçao zie je ze vaak.",
+    "en": "At Playa Grandi (Playa Piskado) in Westpunt, green sea turtles swim near the fishing boats almost daily, free. They're also common at Klein Curaçao."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost Shete Boka en wanneer is het open?",
+    "en": "How much is Shete Boka and when is it open?"
+   },
+   "a": {
+    "nl": "$15 per volwassene, contant. Sinds 1 juli 2026 open van 8:00 tot 16:00; de kassa sluit om 15:00.",
+    "en": "$15 per adult, cash. Since July 1, 2026, open 8 a.m. to 4 p.m.; the ticket office closes at 3 p.m."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kun je zwemmen in Shete Boka?",
+    "en": "Can you swim at Shete Boka?"
+   },
+   "a": {
+    "nl": "Bijna nergens: de stroming langs de noordkust is te sterk. Vraag bij de ingang naar de plekken waar het wel kan.",
+    "en": "Hardly anywhere: currents on the north coast are too strong. Ask at the entrance about the few safe spots."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kosten de Hato Caves?",
+    "en": "How much are the Hato Caves?"
+   },
+   "a": {
+    "nl": "$10 voor volwassenen en $8 voor kinderen van 4 tot 12. Rondleidingen van 45 minuten elk heel uur van 9:00 tot 15:00. Er zijn 49 treden naar de ingang.",
+    "en": "$10 for adults and $8 for kids 4 to 12. 45-minute tours on the hour from 9 a.m. to 3 p.m. There are 49 steps up to the entrance."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke natuurplek is rolstoeltoegankelijk?",
+    "en": "Which nature spot is wheelchair accessible?"
+   },
+   "a": {
+    "nl": "Rif Mangrove Park in Otrobanda heeft een plankenpad van 1,08 km dat geschikt is voor rolstoelen. Entree $15, open 8:00 tot 17:00.",
+    "en": "Rif Mangrove Park in Otrobanda has a 1.08 km wheelchair-friendly boardwalk. Entry $15, open 8 a.m. to 5 p.m."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is Watamula gratis?",
+    "en": "Is Watamula Hole free?"
+   },
+   "a": {
+    "nl": "Ja, er is geen kassa of hek. Ga bij wind en opkomend tij, draag stevige schoenen en reken op 30 tot 60 minuten.",
+    "en": "Yes, there's no gate or ticket booth. Go with wind and a rising tide, wear sturdy shoes and plan 30 to 60 minutes."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "natuur curaçao",
+   "christoffelpark",
+   "christoffelberg beklimmen",
+   "shete boka",
+   "flamingo's curaçao",
+   "schildpadden curaçao",
+   "wandelen curaçao",
+   "hato grotten"
+  ],
+  "en": [
+   "curacao nature",
+   "christoffel national park",
+   "mount christoffel hike",
+   "shete boka national park",
+   "curacao flamingos",
+   "swim with turtles curacao",
+   "hiking curacao",
+   "hato caves"
+  ],
+  "es": [
+   "naturaleza curazao",
+   "parque christoffel",
+   "shete boka",
+   "flamencos curazao",
+   "cuevas de hato",
+   "senderismo curazao"
+  ],
+  "pt": [
+   "natureza curaçao",
+   "parque christoffel",
+   "shete boka",
+   "flamingos curaçao",
+   "cavernas de hato",
+   "trilhas curaçao"
+  ],
+  "de": [
+   "natur curaçao",
+   "christoffelpark",
+   "christoffelberg wandern",
+   "shete boka",
+   "flamingos curaçao",
+   "schildkröten curaçao",
+   "hato höhlen"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Wat zijn de mooiste natuurplekken op Curaçao?",
+   "Hoe zwaar is de beklimming van de Christoffelberg en hoe laat moet ik starten?",
+   "Waar zie ik flamingo's en schildpadden op Curaçao zonder tour?"
+  ],
+  "en": [
+   "What are the best nature spots on Curaçao?",
+   "How hard is the Mount Christoffel hike and what time should I start?",
+   "Where can I see flamingos and sea turtles on Curaçao without a tour?"
+  ]
+ },
+ "talen": [
+  "nl",
+  "en"
+ ]
+}
