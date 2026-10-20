@@ -520,6 +520,7 @@ if(!c){try{c=sessionStorage.getItem('mmc')||'';if(!c){var l=(localStorage.getIte
 var gehad={};W.mmUitkomst=function(soort,waarde){try{if(!c||gehad[soort])return;gehad[soort]=1;var x=JSON.stringify({cid:c,soort:soort,waarde:waarde||0,bron:location.host});
 if(!(navigator.sendBeacon&&navigator.sendBeacon('https://whichtobuy.best/api/mm/uitkomst',x))&&W.fetch)fetch('https://whichtobuy.best/api/mm/uitkomst',{method:'POST',body:x,keepalive:true,mode:'no-cors'})}catch(e){}};
 W.mmKlikId=c;
+if(c&&/(^|\.)yoo\.rs$/.test(location.hostname)){W.mmUitkomst('geladen');var zt=0,z1=function(){if(zt||D.visibilityState!=='visible')return;zt=setTimeout(function(){if(D.visibilityState==='visible')W.mmUitkomst('zicht1');else zt=0},1000)};z1();D.addEventListener('visibilitychange',z1)}
 if(c&&!W.mmGeenAuto){var t0=Date.now(),ia=0,echt=function(){if(ia&&D.visibilityState==='visible'&&Date.now()-t0>=3000)W.mmUitkomst('echt')};
 ['pointerdown','touchstart','scroll','keydown'].forEach(function(e){D.addEventListener(e,function(){ia=1;echt()},{passive:true,capture:true})});setTimeout(echt,3100);
 D.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href],button,[role=button],input[type=submit]');if(a)W.mmUitkomst('actie')},true);
