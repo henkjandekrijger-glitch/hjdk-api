@@ -151,6 +151,14 @@
     {
       "path": "/api/keuze-tools?tool=cur&op=ping",
       "schedule": "50 4 * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=cur&op=google",
+      "schedule": "15 5 * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=cur&op=google",
+      "schedule": "45 5 * * *"
     }
   ],
   "rewrites": [
