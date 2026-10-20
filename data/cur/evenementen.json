@@ -4,35 +4,56 @@
  "reviewGewicht": 0,
  "onderwerp": {
   "nl": "evenement",
-  "en": "event"
+  "en": "event",
+  "de": "Veranstaltung",
+  "es": "evento",
+  "pt": "evento"
  },
  "h1": {
   "nl": "Evenementen op Curaçao: welk feest of festival past bij jou en wanneer?",
-  "en": "Events in Curaçao: which festival or party fits you, and when?"
+  "en": "Events in Curaçao: which festival or party fits you, and when?",
+  "de": "Events auf Curaçao: Welches Festival oder welche Party passt zu dir, und wann?",
+  "es": "Eventos en Curazao: ¿qué festival o fiesta es para ti, y cuándo?",
+  "pt": "Eventos em Curaçao: qual festival ou festa combina com você, e quando?"
  },
  "titel": {
   "nl": "Evenementen Curaçao 2026-2027: {n} feesten op datum",
-  "en": "Curaçao Events 2026-2027: {n} Festivals and Parties by Date"
+  "en": "Curaçao Events 2026-2027: {n} Festivals and Parties by Date",
+  "de": "Curaçao Events 2026-2027: {n} Festivals und Partys nach Datum",
+  "es": "Eventos en Curazao 2026-2027: {n} festivales y fiestas por fecha",
+  "pt": "Eventos em Curaçao 2026-2027: {n} festivais e festas por data"
  },
  "metaDesc": {
   "nl": "Carnaval, Seú, North Sea Jazz, Fuikdag en wekelijkse feesten: {n} evenementen op Curaçao met data voor 2026 en 2027, plaats en prijs.",
-  "en": "Carnival, Seú, North Sea Jazz, Fuik Day and weekly parties: {n} Curaçao events with 2026 and 2027 dates, location and price."
+  "en": "Carnival, Seú, North Sea Jazz, Fuik Day and weekly parties: {n} Curaçao events with 2026 and 2027 dates, location and price.",
+  "de": "Karneval, Seú, North Sea Jazz, Fuik Day und wöchentliche Partys: {n} Events auf Curaçao mit Terminen für 2026 und 2027, Ort und Preis.",
+  "es": "Carnaval, Seú, North Sea Jazz, Fuik Day y fiestas semanales: {n} eventos en Curazao con fechas de 2026 y 2027, lugar y precio.",
+  "pt": "Carnaval, Seú, North Sea Jazz, Fuik Day e festas semanais: {n} eventos em Curaçao com datas de 2026 e 2027, local e preço."
  },
  "kort": {
   "nl": "Het drukste feestseizoen is januari en februari: carnaval 2027 loopt van de paardenparade op 24 januari tot de Gran Marcha op 7 februari en de slotparade op 9 februari, kijken langs de route is gratis. Daarna volgen Seú op tweede paasdag (29 maart 2027), Koningsdag op 27 april en North Sea Jazz begin september (3-daagse kaart 2026: €370). Elke week is er Punda Vibes op donderdagavond en strandfeesten op Mambo Beach, Jan Thiel en Kokomo in het weekend.",
-  "en": "The busiest party season is January and February: Carnival 2027 runs from the horse parade on January 24 to the Gran Marcha on February 7 and the final parade on February 9, and watching from the route is free. Then comes Seú on Easter Monday (March 29, 2027), King's Day on April 27 and North Sea Jazz in early September (2026 three-day pass: €370). Every week there is Punda Vibes on Thursday night and beach parties at Mambo Beach, Jan Thiel and Kokomo on weekends."
+  "en": "The busiest party season is January and February: Carnival 2027 runs from the horse parade on January 24 to the Gran Marcha on February 7 and the final parade on February 9, and watching from the route is free. Then comes Seú on Easter Monday (March 29, 2027), King's Day on April 27 and North Sea Jazz in early September (2026 three-day pass: €370). Every week there is Punda Vibes on Thursday night and beach parties at Mambo Beach, Jan Thiel and Kokomo on weekends.",
+  "de": "Die meiste Partystimmung gibt es im Januar und Februar: Der Karneval 2027 läuft von der Pferdeparade am 24. Januar über den Gran Marcha am 7. Februar bis zur Abschlussparade am 9. Februar, und entlang der Strecke zuzuschauen ist kostenlos. Danach kommt Seú am Ostermontag (29. März 2027), der Königstag am 27. April und North Sea Jazz Anfang September (Dreitagespass 2026: 370 €). Jede Woche gibt es donnerstagabends Punda Vibes und am Wochenende Strandpartys am Mambo Beach, in Jan Thiel und im Kokomo.",
+  "es": "La temporada de fiestas más movida es enero y febrero: el Carnaval 2027 va del desfile de caballos el 24 de enero al Gran Marcha el 7 de febrero y al desfile final el 9 de febrero, y mirar desde el recorrido es gratis. Luego viene Seú el Lunes de Pascua (29 de marzo de 2027), el Día del Rey el 27 de abril y North Sea Jazz a principios de septiembre (pase de tres días 2026: €370). Cada semana hay Punda Vibes el jueves por la noche y fiestas de playa en Mambo Beach, Jan Thiel y Kokomo los fines de semana.",
+  "pt": "A época de festas mais movimentada é janeiro e fevereiro: o Carnaval 2027 vai do desfile de cavalos em 24 de janeiro ao Gran Marcha em 7 de fevereiro e ao desfile final em 9 de fevereiro, e assistir do percurso é grátis. Depois vêm o Seú na Segunda-feira de Páscoa (29 de março de 2027), o Dia do Rei em 27 de abril e o North Sea Jazz no início de setembro (passe de três dias 2026: € 370). Toda semana tem Punda Vibes na quinta à noite e festas de praia no Mambo Beach, Jan Thiel e Kokomo nos fins de semana."
  },
  "vragen": [
   {
    "q": {
     "nl": "Waar heb je zin in?",
-    "en": "What are you into?"
+    "en": "What are you into?",
+    "de": "Worauf stehst du?",
+    "es": "¿Qué te gusta?",
+    "pt": "Do que você gosta?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "Anything"
+      "en": "Anything",
+      "de": "Egal",
+      "es": "Lo que sea",
+      "pt": "Qualquer coisa"
      },
      "plus": [],
      "min": [],
@@ -41,7 +62,10 @@
     {
      "label": {
       "nl": "Muziek en feest",
-      "en": "Music and parties"
+      "en": "Music and parties",
+      "de": "Musik und Partys",
+      "es": "Música y fiestas",
+      "pt": "Música e festas"
      },
      "plus": [
       "muziek",
@@ -53,7 +77,10 @@
     {
      "label": {
       "nl": "Cultuur en traditie",
-      "en": "Culture and tradition"
+      "en": "Culture and tradition",
+      "de": "Kultur und Tradition",
+      "es": "Cultura y tradición",
+      "pt": "Cultura e tradição"
      },
      "plus": [
       "cultuur",
@@ -65,7 +92,10 @@
     {
      "label": {
       "nl": "Sport",
-      "en": "Sports"
+      "en": "Sports",
+      "de": "Sport",
+      "es": "Deportes",
+      "pt": "Esportes"
      },
      "plus": [
       "sport"
@@ -76,7 +106,10 @@
     {
      "label": {
       "nl": "Eten",
-      "en": "Food"
+      "en": "Food",
+      "de": "Essen",
+      "es": "Comida",
+      "pt": "Comida"
      },
      "plus": [
       "eten"
@@ -89,13 +122,19 @@
   {
    "q": {
     "nl": "Wanneer ben je op Curaçao?",
-    "en": "When are you in Curaçao?"
+    "en": "When are you in Curaçao?",
+    "de": "Wann bist du auf Curaçao?",
+    "es": "¿Cuándo estás en Curazao?",
+    "pt": "Quando você está em Curaçao?"
    },
    "opties": [
     {
      "label": {
       "nl": "Weet ik nog niet",
-      "en": "Not sure yet"
+      "en": "Not sure yet",
+      "de": "Noch unklar",
+      "es": "Aún no lo sé",
+      "pt": "Ainda não sei"
      },
      "plus": [
       "jaarlijks"
@@ -106,7 +145,10 @@
     {
      "label": {
       "nl": "Januari of februari",
-      "en": "January or February"
+      "en": "January or February",
+      "de": "Januar oder Februar",
+      "es": "Enero o febrero",
+      "pt": "Janeiro ou fevereiro"
      },
      "plus": [
       "jan-feb",
@@ -118,7 +160,10 @@
     {
      "label": {
       "nl": "Maart of april",
-      "en": "March or April"
+      "en": "March or April",
+      "de": "März oder April",
+      "es": "Marzo o abril",
+      "pt": "Março ou abril"
      },
      "plus": [
       "mrt-apr"
@@ -129,7 +174,10 @@
     {
      "label": {
       "nl": "Mei of juni",
-      "en": "May or June"
+      "en": "May or June",
+      "de": "Mai oder Juni",
+      "es": "Mayo o junio",
+      "pt": "Maio ou junho"
      },
      "plus": [
       "mei-jun"
@@ -140,7 +188,10 @@
     {
      "label": {
       "nl": "Juli of augustus",
-      "en": "July or August"
+      "en": "July or August",
+      "de": "Juli oder August",
+      "es": "Julio o agosto",
+      "pt": "Julho ou agosto"
      },
      "plus": [
       "jul-aug"
@@ -151,7 +202,10 @@
     {
      "label": {
       "nl": "September of oktober",
-      "en": "September or October"
+      "en": "September or October",
+      "de": "September oder Oktober",
+      "es": "Septiembre u octubre",
+      "pt": "Setembro ou outubro"
      },
      "plus": [
       "sep-okt"
@@ -162,7 +216,10 @@
     {
      "label": {
       "nl": "November of december",
-      "en": "November or December"
+      "en": "November or December",
+      "de": "November oder Dezember",
+      "es": "Noviembre o diciembre",
+      "pt": "Novembro ou dezembro"
      },
      "plus": [
       "nov-dec"
@@ -175,13 +232,19 @@
   {
    "q": {
     "nl": "Ga je met kinderen?",
-    "en": "Are you bringing kids?"
+    "en": "Are you bringing kids?",
+    "de": "Kommst du mit Kindern?",
+    "es": "¿Vienes con niños?",
+    "pt": "Você vai com crianças?"
    },
    "opties": [
     {
      "label": {
       "nl": "Nee",
-      "en": "No"
+      "en": "No",
+      "de": "Nein",
+      "es": "No",
+      "pt": "Não"
      },
      "plus": [],
      "min": [],
@@ -190,7 +253,10 @@
     {
      "label": {
       "nl": "Ja",
-      "en": "Yes"
+      "en": "Yes",
+      "de": "Ja",
+      "es": "Sí",
+      "pt": "Sim"
      },
      "plus": [
       "kinderen"
@@ -203,13 +269,19 @@
   {
    "q": {
     "nl": "Wat mag het kosten?",
-    "en": "What's your budget?"
+    "en": "What's your budget?",
+    "de": "Wie hoch ist dein Budget?",
+    "es": "¿Cuál es tu presupuesto?",
+    "pt": "Qual é o seu orçamento?"
    },
    "opties": [
     {
      "label": {
       "nl": "Maakt niet uit",
-      "en": "Doesn't matter"
+      "en": "Doesn't matter",
+      "de": "Egal",
+      "es": "No importa",
+      "pt": "Tanto faz"
      },
      "plus": [],
      "min": [],
@@ -218,7 +290,10 @@
     {
      "label": {
       "nl": "Liefst gratis",
-      "en": "Free if possible"
+      "en": "Free if possible",
+      "de": "Wenn möglich kostenlos",
+      "es": "Gratis si es posible",
+      "pt": "Grátis, se possível"
      },
      "plus": [
       "gratis"
@@ -229,7 +304,10 @@
     {
      "label": {
       "nl": "Op het strand",
-      "en": "On the beach"
+      "en": "On the beach",
+      "de": "Am Strand",
+      "es": "En la playa",
+      "pt": "Na praia"
      },
      "plus": [
       "strand"
@@ -247,7 +325,10 @@
    "url": null,
    "soort": {
     "nl": "carnavalsmuziek, wedstrijd",
-    "en": "carnival music contest"
+    "en": "carnival music contest",
+    "de": "Karnevals-Musikwettbewerb",
+    "es": "concurso de música de carnaval",
+    "pt": "concurso de música de carnaval"
    },
    "plaats": "Festival Center, Brievengat",
    "tags": [
@@ -263,15 +344,24 @@
    "feiten": [
     {
      "nl": "2026: 26 t/m 30 januari",
-     "en": "2026: Jan 26 to 30"
+     "en": "2026: Jan 26 to 30",
+     "de": "2026: 26. bis 30. Januar",
+     "es": "2026: del 26 al 30 de enero",
+     "pt": "2026: de 26 a 30 de janeiro"
     },
     {
      "nl": "Vijf avonden, finale op vrijdag",
-     "en": "Five nights, final on Friday"
+     "en": "Five nights, final on Friday",
+     "de": "Fünf Abende, Finale am Freitag",
+     "es": "Cinco noches, final el viernes",
+     "pt": "Cinco noites, final na sexta-feira"
     },
     {
      "nl": "Winnaar wordt carnavalslied",
-     "en": "Winner becomes the carnival road march"
+     "en": "Winner becomes the carnival road march",
+     "de": "Der Sieger wird zum Road March des Karnevals",
+     "es": "El ganador se convierte en el road march del carnaval",
+     "pt": "O vencedor vira o road march do carnaval"
     }
    ],
    "scores": [],
@@ -283,6 +373,18 @@
     "en": [
      "You hear the songs that play all carnival season",
      "Mix of established artists and new talent"
+    ],
+    "de": [
+     "Du hörst die Songs, die die ganze Karnevalssaison laufen",
+     "Mix aus etablierten Künstlern und neuen Talenten"
+    ],
+    "es": [
+     "Escuchas las canciones que suenan toda la temporada de carnaval",
+     "Mezcla de artistas consagrados y nuevos talentos"
+    ],
+    "pt": [
+     "Você ouve as músicas que tocam durante toda a temporada de carnaval",
+     "Mistura de artistas consagrados e novos talentos"
     ]
    },
    "tegen": {
@@ -291,6 +393,15 @@
     ],
     "en": [
      "The 2026 opening night started late and felt quiet"
+    ],
+    "de": [
+     "Die Eröffnungsnacht 2026 begann spät und wirkte ruhig"
+    ],
+    "es": [
+     "La noche de apertura de 2026 empezó tarde y se sintió tranquila"
+    ],
+    "pt": [
+     "A noite de abertura de 2026 começou tarde e pareceu calma"
     ]
    },
    "bronnen": [
@@ -305,7 +416,10 @@
    "url": null,
    "soort": {
     "nl": "carnavalsparade te paard",
-    "en": "carnival horse parade"
+    "en": "carnival horse parade",
+    "de": "Karnevals-Pferdeparade",
+    "es": "desfile de caballos del carnaval",
+    "pt": "desfile de cavalos do carnaval"
    },
    "plaats": "Otrobanda tot Jan Noorduynweg",
    "tags": [
@@ -322,7 +436,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "kijken langs de route",
-     "en": "watching along the route"
+     "en": "watching along the route",
+     "de": "Zuschauen an der Strecke",
+     "es": "mirar desde el recorrido",
+     "pt": "assistir ao longo do percurso"
     },
     "bron": "https://www.naarcuracao.com/en/?p=56011",
     "datum": "2026-10"
@@ -330,15 +447,24 @@
    "feiten": [
     {
      "nl": "2027: zondag 24 januari",
-     "en": "2027: Sunday, January 24"
+     "en": "2027: Sunday, January 24",
+     "de": "2027: Sonntag, 24. Januar",
+     "es": "2027: domingo 24 de enero",
+     "pt": "2027: domingo, 24 de janeiro"
     },
     {
      "nl": "16.00 tot 21.00 uur",
-     "en": "4 to 9 p.m."
+     "en": "4 to 9 p.m.",
+     "de": "16 bis 21 Uhr",
+     "es": "de 16:00 a 21:00",
+     "pt": "das 16h às 21h"
     },
     {
      "nl": "Start Pater Euwensweg",
-     "en": "Starts at Pater Euwensweg"
+     "en": "Starts at Pater Euwensweg",
+     "de": "Start am Pater Euwensweg",
+     "es": "Sale de Pater Euwensweg",
+     "pt": "Começa na Pater Euwensweg"
     }
    ],
    "scores": [],
@@ -348,6 +474,15 @@
     ],
     "en": [
      "Calmer than the big parades, good with kids"
+    ],
+    "de": [
+     "Ruhiger als die großen Paraden, gut mit Kindern"
+    ],
+    "es": [
+     "Más tranquilo que los grandes desfiles, bueno para ir con niños"
+    ],
+    "pt": [
+     "Mais tranquilo que os grandes desfiles, bom para ir com crianças"
     ]
    },
    "tegen": {
@@ -356,6 +491,15 @@
     ],
     "en": [
      "Start often runs 1 to 2 hours late"
+    ],
+    "de": [
+     "Der Start verzögert sich oft um 1 bis 2 Stunden"
+    ],
+    "es": [
+     "El inicio suele retrasarse de 1 a 2 horas"
+    ],
+    "pt": [
+     "O início costuma atrasar de 1 a 2 horas"
     ]
    },
    "bronnen": [
@@ -368,7 +512,10 @@
    "url": null,
    "soort": {
     "nl": "carnavalsparade voor kinderen",
-    "en": "children's carnival parade"
+    "en": "children's carnival parade",
+    "de": "Kinder-Karnevalsparade",
+    "es": "desfile de carnaval infantil",
+    "pt": "desfile de carnaval infantil"
    },
    "plaats": "Palù Blanku tot Brionplein",
    "tags": [
@@ -385,7 +532,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "kijken langs de route",
-     "en": "watching along the route"
+     "en": "watching along the route",
+     "de": "Zuschauen an der Strecke",
+     "es": "mirar desde el recorrido",
+     "pt": "assistir ao longo do percurso"
     },
     "bron": "https://www.naarcuracao.com/en/?p=56011",
     "datum": "2026-10"
@@ -393,15 +543,24 @@
    "feiten": [
     {
      "nl": "2026: zondag 8 februari",
-     "en": "2026: Sunday, February 8"
+     "en": "2026: Sunday, February 8",
+     "de": "2026: Sonntag, 8. Februar",
+     "es": "2026: domingo 8 de febrero",
+     "pt": "2026: domingo, 8 de fevereiro"
     },
     {
      "nl": "2027: zondag 31 januari",
-     "en": "2027: Sunday, January 31"
+     "en": "2027: Sunday, January 31",
+     "de": "2027: Sonntag, 31. Januar",
+     "es": "2027: domingo 31 de enero",
+     "pt": "2027: domingo, 31 de janeiro"
     },
     {
      "nl": "14.00 tot 19.00 uur",
-     "en": "2 to 7 p.m."
+     "en": "2 to 7 p.m.",
+     "de": "14 bis 19 Uhr",
+     "es": "de 14:00 a 19:00",
+     "pt": "das 14h às 19h"
     }
    ],
    "scores": [],
@@ -411,6 +570,15 @@
     ],
     "en": [
      "Kids in their own costumes, cheerful family mood"
+    ],
+    "de": [
+     "Kinder in eigenen Kostümen, fröhliche Familienstimmung"
+    ],
+    "es": [
+     "Niños con sus propios disfraces, ambiente familiar alegre"
+    ],
+    "pt": [
+     "Crianças com suas próprias fantasias, clima familiar animado"
     ]
    },
    "tegen": {
@@ -419,6 +587,15 @@
     ],
     "en": [
      "Start often runs 1 to 2 hours late"
+    ],
+    "de": [
+     "Der Start verzögert sich oft um 1 bis 2 Stunden"
+    ],
+    "es": [
+     "El inicio suele retrasarse de 1 a 2 horas"
+    ],
+    "pt": [
+     "O início costuma atrasar de 1 a 2 horas"
     ]
    },
    "bronnen": [
@@ -432,7 +609,10 @@
    "url": null,
    "soort": {
     "nl": "avondparade voor tieners",
-    "en": "teen evening parade"
+    "en": "teen evening parade",
+    "de": "abendliche Teenager-Parade",
+    "es": "desfile nocturno de adolescentes",
+    "pt": "desfile noturno de adolescentes"
    },
    "plaats": "Rooseveltweg tot Brionplein",
    "tags": [
@@ -448,7 +628,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "kijken langs de route",
-     "en": "watching along the route"
+     "en": "watching along the route",
+     "de": "Zuschauen an der Strecke",
+     "es": "mirar desde el recorrido",
+     "pt": "assistir ao longo do percurso"
     },
     "bron": "https://www.naarcuracao.com/en/?p=56011",
     "datum": "2026-10"
@@ -456,21 +639,33 @@
    "feiten": [
     {
      "nl": "2026: vrijdag 13 februari",
-     "en": "2026: Friday, February 13"
+     "en": "2026: Friday, February 13",
+     "de": "2026: Freitag, 13. Februar",
+     "es": "2026: viernes 13 de febrero",
+     "pt": "2026: sexta-feira, 13 de fevereiro"
     },
     {
      "nl": "2027: vrijdag 5 februari",
-     "en": "2027: Friday, February 5"
+     "en": "2027: Friday, February 5",
+     "de": "2027: Freitag, 5. Februar",
+     "es": "2027: viernes 5 de febrero",
+     "pt": "2027: sexta-feira, 5 de fevereiro"
     },
     {
      "nl": "18.00 tot 23.00 uur",
-     "en": "6 to 11 p.m."
+     "en": "6 to 11 p.m.",
+     "de": "18 bis 23 Uhr",
+     "es": "de 18:00 a 23:00",
+     "pt": "das 18h às 23h"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [
@@ -478,6 +673,15 @@
     ],
     "en": [
      "Start often runs 1 to 2 hours late"
+    ],
+    "de": [
+     "Der Start verzögert sich oft um 1 bis 2 Stunden"
+    ],
+    "es": [
+     "El inicio suele retrasarse de 1 a 2 horas"
+    ],
+    "pt": [
+     "O início costuma atrasar de 1 a 2 horas"
     ]
    },
    "bronnen": [
@@ -491,7 +695,10 @@
    "url": null,
    "soort": {
     "nl": "carnavalsparade op het platteland",
-    "en": "countryside carnival parade"
+    "en": "countryside carnival parade",
+    "de": "Karnevalsparade auf dem Land",
+    "es": "desfile de carnaval del campo",
+    "pt": "desfile de carnaval do interior"
    },
    "plaats": "Barber, Bandabou",
    "tags": [
@@ -507,7 +714,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "kijken langs de route",
-     "en": "watching along the route"
+     "en": "watching along the route",
+     "de": "Zuschauen an der Strecke",
+     "es": "mirar desde el recorrido",
+     "pt": "assistir ao longo do percurso"
     },
     "bron": "https://www.naarcuracao.com/en/?p=56011",
     "datum": "2026-10"
@@ -515,15 +725,24 @@
    "feiten": [
     {
      "nl": "2026: zaterdag 14 februari",
-     "en": "2026: Saturday, February 14"
+     "en": "2026: Saturday, February 14",
+     "de": "2026: Samstag, 14. Februar",
+     "es": "2026: sábado 14 de febrero",
+     "pt": "2026: sábado, 14 de fevereiro"
     },
     {
      "nl": "2027: zaterdag 6 februari",
-     "en": "2027: Saturday, February 6"
+     "en": "2027: Saturday, February 6",
+     "de": "2027: Samstag, 6. Februar",
+     "es": "2027: sábado 6 de febrero",
+     "pt": "2027: sábado, 6 de fevereiro"
     },
     {
      "nl": "Eindigt bij Centro Deportivo Barber",
-     "en": "Ends at Centro Deportivo Barber"
+     "en": "Ends at Centro Deportivo Barber",
+     "de": "Endet am Centro Deportivo Barber",
+     "es": "Termina en el Centro Deportivo Barber",
+     "pt": "Termina no Centro Deportivo Barber"
     }
    ],
    "scores": [],
@@ -533,6 +752,15 @@
     ],
     "en": [
      "Village feel and pride of the island's west side"
+    ],
+    "de": [
+     "Dorfatmosphäre und Stolz der Westseite der Insel"
+    ],
+    "es": [
+     "Ambiente de pueblo y orgullo del lado oeste de la isla"
+    ],
+    "pt": [
+     "Clima de vila e orgulho do lado oeste da ilha"
     ]
    },
    "tegen": {
@@ -541,6 +769,15 @@
     ],
     "en": [
      "Start often runs 1 to 2 hours late"
+    ],
+    "de": [
+     "Der Start verzögert sich oft um 1 bis 2 Stunden"
+    ],
+    "es": [
+     "El inicio suele retrasarse de 1 a 2 horas"
+    ],
+    "pt": [
+     "O início costuma atrasar de 1 a 2 horas"
     ]
    },
    "bronnen": [
@@ -554,7 +791,10 @@
    "url": null,
    "soort": {
     "nl": "hoofdparade carnaval",
-    "en": "main carnival parade"
+    "en": "main carnival parade",
+    "de": "Hauptparade des Karnevals",
+    "es": "desfile principal del carnaval",
+    "pt": "desfile principal do carnaval"
    },
    "plaats": "Rooseveltweg tot Brionplein, Otrobanda",
    "tags": [
@@ -571,7 +811,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "meelopen met een groep, vanaf",
-     "en": "to join a group, from"
+     "en": "to join a group, from",
+     "de": "um in einer Gruppe mitzulaufen, ab",
+     "es": "para unirte a una comparsa, desde",
+     "pt": "para participar de um grupo, a partir de"
     },
     "bron": "https://www.naarcuracao.com/en/?p=56011",
     "datum": "2026-10"
@@ -579,19 +822,31 @@
    "feiten": [
     {
      "nl": "2026: zondag 15 februari",
-     "en": "2026: Sunday, February 15"
+     "en": "2026: Sunday, February 15",
+     "de": "2026: Sonntag, 15. Februar",
+     "es": "2026: domingo 15 de febrero",
+     "pt": "2026: domingo, 15 de fevereiro"
     },
     {
      "nl": "2027: zondag 7 februari",
-     "en": "2027: Sunday, February 7"
+     "en": "2027: Sunday, February 7",
+     "de": "2027: Sonntag, 7. Februar",
+     "es": "2027: domingo 7 de febrero",
+     "pt": "2027: domingo, 7 de fevereiro"
     },
     {
      "nl": "11.00 tot 19.00 uur",
-     "en": "11 a.m. to 7 p.m."
+     "en": "11 a.m. to 7 p.m.",
+     "de": "11 bis 19 Uhr",
+     "es": "de 11:00 a 19:00",
+     "pt": "das 11h às 19h"
     },
     {
      "nl": "Kijken langs de route gratis",
-     "en": "Watching along the route is free"
+     "en": "Watching along the route is free",
+     "de": "Zuschauen an der Strecke ist kostenlos",
+     "es": "Mirar desde el recorrido es gratis",
+     "pt": "Assistir ao longo do percurso é grátis"
     }
    ],
    "scores": [],
@@ -603,6 +858,18 @@
     "en": [
      "Biggest day of carnival, music in the streets all day",
      "You can join a group in costume"
+    ],
+    "de": [
+     "Größter Tag des Karnevals, den ganzen Tag Musik auf den Straßen",
+     "Du kannst dich im Kostüm einer Gruppe anschließen"
+    ],
+    "es": [
+     "El día más grande del carnaval, música en las calles todo el día",
+     "Puedes unirte a una comparsa con disfraz"
+    ],
+    "pt": [
+     "Maior dia do carnaval, música nas ruas o dia todo",
+     "Você pode participar de um grupo com fantasia"
     ]
    },
    "tegen": {
@@ -613,6 +880,18 @@
     "en": [
      "Start often runs 1 to 2 hours late",
      "Find a shaded spot along the route early"
+    ],
+    "de": [
+     "Der Start verzögert sich oft um 1 bis 2 Stunden",
+     "Such dir früh einen schattigen Platz an der Strecke"
+    ],
+    "es": [
+     "El inicio suele retrasarse de 1 a 2 horas",
+     "Busca temprano un lugar con sombra en el recorrido"
+    ],
+    "pt": [
+     "O início costuma atrasar de 1 a 2 horas",
+     "Procure cedo um lugar com sombra ao longo do percurso"
     ]
    },
    "bronnen": [
@@ -627,7 +906,10 @@
    "url": null,
    "soort": {
     "nl": "parade op carnavalsmaandag",
-    "en": "Carnival Monday parade"
+    "en": "Carnival Monday parade",
+    "de": "Parade am Karnevalsmontag",
+    "es": "desfile del Lunes de Carnaval",
+    "pt": "desfile da Segunda-feira de Carnaval"
    },
    "plaats": "Route van de Gran Marcha",
    "tags": [
@@ -643,7 +925,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "kijken langs de route",
-     "en": "watching along the route"
+     "en": "watching along the route",
+     "de": "Zuschauen an der Strecke",
+     "es": "mirar desde el recorrido",
+     "pt": "assistir ao longo do percurso"
     },
     "bron": "https://www.naarcuracao.com/en/?p=56011",
     "datum": "2026-10"
@@ -651,21 +936,33 @@
    "feiten": [
     {
      "nl": "2026: maandag 16 februari",
-     "en": "2026: Monday, February 16"
+     "en": "2026: Monday, February 16",
+     "de": "2026: Montag, 16. Februar",
+     "es": "2026: lunes 16 de febrero",
+     "pt": "2026: segunda-feira, 16 de fevereiro"
     },
     {
      "nl": "2027: maandag 8 februari",
-     "en": "2027: Monday, February 8"
+     "en": "2027: Monday, February 8",
+     "de": "2027: Montag, 8. Februar",
+     "es": "2027: lunes 8 de febrero",
+     "pt": "2027: segunda-feira, 8 de fevereiro"
     },
     {
      "nl": "Carnavalsmaandag is vrije dag",
-     "en": "Carnival Monday is a public holiday"
+     "en": "Carnival Monday is a public holiday",
+     "de": "Der Karnevalsmontag ist ein Feiertag",
+     "es": "El Lunes de Carnaval es feriado",
+     "pt": "A Segunda-feira de Carnaval é feriado"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [
@@ -673,6 +970,15 @@
     ],
     "en": [
      "Start often runs 1 to 2 hours late"
+    ],
+    "de": [
+     "Der Start verzögert sich oft um 1 bis 2 Stunden"
+    ],
+    "es": [
+     "El inicio suele retrasarse de 1 a 2 horas"
+    ],
+    "pt": [
+     "O início costuma atrasar de 1 a 2 horas"
     ]
    },
    "bronnen": [
@@ -687,7 +993,10 @@
    "url": null,
    "soort": {
     "nl": "lichtjesparade, slot carnaval",
-    "en": "parade of lights, carnival finale"
+    "en": "parade of lights, carnival finale",
+    "de": "Lichterparade, Karnevalsfinale",
+    "es": "desfile de luces, final del carnaval",
+    "pt": "desfile de luzes, final do carnaval"
    },
    "plaats": "Route van de Gran Marcha, eindigt Brionplein",
    "tags": [
@@ -704,7 +1013,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "kijken langs de route",
-     "en": "watching along the route"
+     "en": "watching along the route",
+     "de": "Zuschauen an der Strecke",
+     "es": "mirar desde el recorrido",
+     "pt": "assistir ao longo do percurso"
     },
     "bron": "https://www.naarcuracao.com/en/?p=56011",
     "datum": "2026-10"
@@ -712,15 +1024,24 @@
    "feiten": [
     {
      "nl": "2026: dinsdag 17 februari",
-     "en": "2026: Tuesday, February 17"
+     "en": "2026: Tuesday, February 17",
+     "de": "2026: Dienstag, 17. Februar",
+     "es": "2026: martes 17 de febrero",
+     "pt": "2026: terça-feira, 17 de fevereiro"
     },
     {
      "nl": "2027: dinsdag 9 februari",
-     "en": "2027: Tuesday, February 9"
+     "en": "2027: Tuesday, February 9",
+     "de": "2027: Dienstag, 9. Februar",
+     "es": "2027: martes 9 de febrero",
+     "pt": "2027: terça-feira, 9 de fevereiro"
     },
     {
      "nl": "Rond middernacht gaat Momo in vlammen",
-     "en": "King Momo burns around midnight"
+     "en": "King Momo burns around midnight",
+     "de": "König Momo wird gegen Mitternacht verbrannt",
+     "es": "El Rey Momo se quema alrededor de medianoche",
+     "pt": "O Rei Momo é queimado por volta da meia-noite"
     }
    ],
    "scores": [],
@@ -732,6 +1053,18 @@
     "en": [
      "Night parade with lit-up costumes",
      "Thousands of people along the route"
+    ],
+    "de": [
+     "Nachtparade mit beleuchteten Kostümen",
+     "Tausende Menschen an der Strecke"
+    ],
+    "es": [
+     "Desfile nocturno con disfraces iluminados",
+     "Miles de personas a lo largo del recorrido"
+    ],
+    "pt": [
+     "Desfile noturno com fantasias iluminadas",
+     "Milhares de pessoas ao longo do percurso"
     ]
    },
    "tegen": {
@@ -742,6 +1075,18 @@
     "en": [
      "The burning has run very late in past years",
      "In 2026 fireworks and lasers replaced the burning"
+    ],
+    "de": [
+     "Die Verbrennung hat sich in den letzten Jahren stark verzögert",
+     "2026 ersetzten Feuerwerk und Laser die Verbrennung"
+    ],
+    "es": [
+     "La quema se ha hecho muy tarde en años anteriores",
+     "En 2026 los fuegos artificiales y los láseres reemplazaron la quema"
+    ],
+    "pt": [
+     "A queima atrasou muito nos anos anteriores",
+     "Em 2026 fogos de artifício e lasers substituíram a queima"
     ]
    },
    "bronnen": [
@@ -757,7 +1102,10 @@
    "url": null,
    "soort": {
     "nl": "oogstparade, traditie",
-    "en": "harvest parade, tradition"
+    "en": "harvest parade, tradition",
+    "de": "Erntefest-Parade, Tradition",
+    "es": "desfile de la cosecha, tradición",
+    "pt": "desfile da colheita, tradição"
    },
    "plaats": "Rooseveltweg en route door Willemstad",
    "tags": [
@@ -773,15 +1121,24 @@
    "feiten": [
     {
      "nl": "Op tweede paasdag",
-     "en": "On Easter Monday"
+     "en": "On Easter Monday",
+     "de": "Am Ostermontag",
+     "es": "El Lunes de Pascua",
+     "pt": "Na Segunda-feira de Páscoa"
     },
     {
      "nl": "2026: 6 april, 40 groepen",
-     "en": "2026: April 6, 40 groups"
+     "en": "2026: April 6, 40 groups",
+     "de": "2026: 6. April, 40 Gruppen",
+     "es": "2026: 6 de abril, 40 grupos",
+     "pt": "2026: 6 de abril, 40 grupos"
     },
     {
      "nl": "2027: maandag 29 maart",
-     "en": "2027: Monday, March 29"
+     "en": "2027: Monday, March 29",
+     "de": "2027: Montag, 29. März",
+     "es": "2027: lunes 29 de marzo",
+     "pt": "2027: segunda-feira, 29 de março"
     }
    ],
    "scores": [],
@@ -791,6 +1148,15 @@
     ],
     "en": [
      "Traditional dance and song, more local than carnival"
+    ],
+    "de": [
+     "Traditioneller Tanz und Gesang, lokaler als der Karneval"
+    ],
+    "es": [
+     "Baile y canto tradicionales, más local que el carnaval"
+    ],
+    "pt": [
+     "Dança e canto tradicionais, mais local que o carnaval"
     ]
    },
    "tegen": {
@@ -799,6 +1165,15 @@
     ],
     "en": [
      "Debate that the harvest roots fade behind costumes"
+    ],
+    "de": [
+     "Es wird diskutiert, dass die Erntewurzeln hinter den Kostümen verblassen"
+    ],
+    "es": [
+     "Hay debate sobre si las raíces de la cosecha se pierden detrás de los disfraces"
+    ],
+    "pt": [
+     "Há debate sobre as raízes da colheita se perderem atrás das fantasias"
     ]
    },
    "bronnen": [
@@ -812,7 +1187,10 @@
    "url": null,
    "soort": {
     "nl": "oogstparade op het platteland",
-    "en": "countryside harvest parade"
+    "en": "countryside harvest parade",
+    "de": "Erntefest-Parade auf dem Land",
+    "es": "desfile de la cosecha en el campo",
+    "pt": "desfile da colheita no interior"
    },
    "plaats": "Hofi Abou tot Veld di Barber",
    "tags": [
@@ -827,25 +1205,40 @@
    "feiten": [
     {
      "nl": "2026: zondag 12 april",
-     "en": "2026: Sunday, April 12"
+     "en": "2026: Sunday, April 12",
+     "de": "2026: Sonntag, 12. April",
+     "es": "2026: domingo 12 de abril",
+     "pt": "2026: domingo, 12 de abril"
     },
     {
      "nl": "Start 13.00 uur",
-     "en": "Starts at 1 p.m."
+     "en": "Starts at 1 p.m.",
+     "de": "Beginn um 13 Uhr",
+     "es": "Empieza a las 13:00",
+     "pt": "Começa às 13h"
     },
     {
      "nl": "Na afloop muziek en eten",
-     "en": "Music and food afterward"
+     "en": "Music and food afterward",
+     "de": "Danach Musik und Essen",
+     "es": "Música y comida después",
+     "pt": "Música e comida depois"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/de/event/seu-harvest-parade-of-the-bandabou-region-2026"
@@ -857,7 +1250,10 @@
    "url": null,
    "soort": {
     "nl": "blues en roots festival",
-    "en": "blues and roots festival"
+    "en": "blues and roots festival",
+    "de": "Blues- und Roots-Festival",
+    "es": "festival de blues y raíces",
+    "pt": "festival de blues e raízes"
    },
    "plaats": "Kura Hulanda en Pietermaai",
    "tags": [
@@ -871,15 +1267,24 @@
    "feiten": [
     {
      "nl": "2026: 2 t/m 4 april",
-     "en": "2026: April 2 to 4"
+     "en": "2026: April 2 to 4",
+     "de": "2026: 2. bis 4. April",
+     "es": "2026: del 2 al 4 de abril",
+     "pt": "2026: de 2 a 4 de abril"
     },
     {
      "nl": "Openingsconcert Kura Hulanda Village",
-     "en": "Opening concert at Kura Hulanda Village"
+     "en": "Opening concert at Kura Hulanda Village",
+     "de": "Eröffnungskonzert im Kura Hulanda Village",
+     "es": "Concierto de apertura en Kura Hulanda Village",
+     "pt": "Show de abertura no Kura Hulanda Village"
     },
     {
      "nl": "Meerdere podia in Pietermaai",
-     "en": "Several stages in Pietermaai"
+     "en": "Several stages in Pietermaai",
+     "de": "Mehrere Bühnen in Pietermaai",
+     "es": "Varios escenarios en Pietermaai",
+     "pt": "Vários palcos em Pietermaai"
     }
    ],
    "scores": [],
@@ -889,11 +1294,23 @@
     ],
     "en": [
      "Small-scale festival in the streets of Pietermaai"
+    ],
+    "de": [
+     "Kleines Festival in den Straßen von Pietermaai"
+    ],
+    "es": [
+     "Festival pequeño en las calles de Pietermaai"
+    ],
+    "pt": [
+     "Festival de pequeno porte nas ruas de Pietermaai"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/unknown/international-blues-artists-headline-curacao-blueseas-festival-2026",
@@ -906,7 +1323,10 @@
    "url": null,
    "soort": {
     "nl": "filmfestival",
-    "en": "film festival"
+    "en": "film festival",
+    "de": "Filmfestival",
+    "es": "festival de cine",
+    "pt": "festival de cinema"
    },
    "plaats": "The Movies, Otrobanda",
    "tags": [
@@ -919,15 +1339,24 @@
    "feiten": [
     {
      "nl": "2027: 13 t/m 18 april",
-     "en": "2027: April 13 to 18"
+     "en": "2027: April 13 to 18",
+     "de": "2027: 13. bis 18. April",
+     "es": "2027: del 13 al 18 de abril",
+     "pt": "2027: de 13 a 18 de abril"
     },
     {
      "nl": "Bijna 70 films in 2025",
-     "en": "Nearly 70 films in 2025"
+     "en": "Nearly 70 films in 2025",
+     "de": "Fast 70 Filme im Jahr 2025",
+     "es": "Casi 70 películas en 2025",
+     "pt": "Quase 70 filmes em 2025"
     },
     {
      "nl": "Caribische films in competitie",
-     "en": "Caribbean films in competition"
+     "en": "Caribbean films in competition",
+     "de": "Karibische Filme im Wettbewerb",
+     "es": "Películas caribeñas en competencia",
+     "pt": "Filmes caribenhos em competição"
     }
    ],
    "scores": [],
@@ -937,6 +1366,15 @@
     ],
     "en": [
      "Record attendance and sold-out screenings in 2025"
+    ],
+    "de": [
+     "Rekordbesuch und ausverkaufte Vorführungen 2025"
+    ],
+    "es": [
+     "Asistencia récord y funciones agotadas en 2025"
+    ],
+    "pt": [
+     "Público recorde e sessões esgotadas em 2025"
     ]
    },
    "tegen": {
@@ -945,6 +1383,15 @@
     ],
     "en": [
      "Popular screenings sell out fast"
+    ],
+    "de": [
+     "Beliebte Vorführungen sind schnell ausverkauft"
+    ],
+    "es": [
+     "Las funciones populares se agotan rápido"
+    ],
+    "pt": [
+     "As sessões mais procuradas esgotam rápido"
     ]
    },
    "bronnen": [
@@ -958,7 +1405,10 @@
    "url": null,
    "soort": {
     "nl": "buurtmarkt",
-    "en": "neighborhood market"
+    "en": "neighborhood market",
+    "de": "Stadtteilmarkt",
+    "es": "mercado de barrio",
+    "pt": "feira de bairro"
    },
    "plaats": "Otrobanda",
    "tags": [
@@ -973,25 +1423,40 @@
    "feiten": [
     {
      "nl": "Meerdere edities per jaar",
-     "en": "Several editions a year"
+     "en": "Several editions a year",
+     "de": "Mehrere Ausgaben pro Jahr",
+     "es": "Varias ediciones al año",
+     "pt": "Várias edições por ano"
     },
     {
      "nl": "2025: rond Seú en Koningsdag",
-     "en": "2025: around Seú and King's Day"
+     "en": "2025: around Seú and King's Day",
+     "de": "2025: rund um Seú und den Königstag",
+     "es": "2025: alrededor de Seú y el Día del Rey",
+     "pt": "2025: perto do Seú e do Dia do Rei"
     },
     {
      "nl": "Georganiseerd door Kaya Kaya",
-     "en": "Run by the Kaya Kaya team"
+     "en": "Run by the Kaya Kaya team",
+     "de": "Organisiert vom Kaya-Kaya-Team",
+     "es": "Organizado por el equipo de Kaya Kaya",
+     "pt": "Organizado pela equipe do Kaya Kaya"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/kaya-kaya-festival-transforms-into-a-year-round-cultural-movement"
@@ -1003,7 +1468,10 @@
    "url": null,
    "soort": {
     "nl": "straatfeest, vrijmarkt",
-    "en": "street party, flea market"
+    "en": "street party, flea market",
+    "de": "Straßenfest, Flohmarkt",
+    "es": "fiesta callejera, mercado de pulgas",
+    "pt": "festa de rua, feira de pulgas"
    },
    "plaats": "Brionplein, Breedestraat, Rif Fort",
    "tags": [
@@ -1021,7 +1489,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "toegang, behalve Kingsfest",
-     "en": "entry, except Kingsfest"
+     "en": "entry, except Kingsfest",
+     "de": "Eintritt, außer Kingsfest",
+     "es": "entrada, excepto Kingsfest",
+     "pt": "entrada, exceto Kingsfest"
     },
     "bron": "https://www.curacaochronicle.com/post/local/kings-day-otrobanda-2026-a-district-wide-celebration-connecting-culture-community-and-experience",
     "datum": "2026-04"
@@ -1029,19 +1500,31 @@
    "feiten": [
     {
      "nl": "Elk jaar 27 april",
-     "en": "Every year on April 27"
+     "en": "Every year on April 27",
+     "de": "Jedes Jahr am 27. April",
+     "es": "Todos los años el 27 de abril",
+     "pt": "Todo ano em 27 de abril"
     },
     {
      "nl": "2026: 08.00 tot middernacht",
-     "en": "2026: 8 a.m. to midnight"
+     "en": "2026: 8 a.m. to midnight",
+     "de": "2026: 8 Uhr bis Mitternacht",
+     "es": "2026: de 8:00 a medianoche",
+     "pt": "2026: das 8h à meia-noite"
     },
     {
      "nl": "Ruim 100 kraampjes",
-     "en": "More than 100 stalls"
+     "en": "More than 100 stalls",
+     "de": "Mehr als 100 Stände",
+     "es": "Más de 100 puestos",
+     "pt": "Mais de 100 barracas"
     },
     {
      "nl": "Kinderhoek op Brionplein",
-     "en": "Kids' area on Brionplein"
+     "en": "Kids' area on Brionplein",
+     "de": "Kinderbereich auf dem Brionplein",
+     "es": "Zona infantil en Brionplein",
+     "pt": "Área infantil na Brionplein"
     }
    ],
    "scores": [],
@@ -1051,6 +1534,15 @@
     ],
     "en": [
      "Whole district joins in with DJs, food and market"
+    ],
+    "de": [
+     "Das ganze Viertel macht mit: DJs, Essen und Markt"
+    ],
+    "es": [
+     "Todo el barrio participa con DJs, comida y mercado"
+    ],
+    "pt": [
+     "O bairro inteiro participa com DJs, comida e feira"
     ]
    },
    "tegen": {
@@ -1059,6 +1551,15 @@
     ],
     "en": [
      "Kingsfest at Matthey Wharf needs a separate ticket"
+    ],
+    "de": [
+     "Für das Kingsfest am Matthey Wharf brauchst du ein eigenes Ticket"
+    ],
+    "es": [
+     "Para el Kingsfest en Matthey Wharf necesitas una entrada aparte"
+    ],
+    "pt": [
+     "O Kingsfest no Matthey Wharf exige um ingresso separado"
     ]
    },
    "bronnen": [
@@ -1073,7 +1574,10 @@
    "url": "https://bluebay-curacao.com/mcb-caribbean-legends-pro-am-2026/",
    "soort": {
     "nl": "golftoernooi",
-    "en": "golf tournament"
+    "en": "golf tournament",
+    "de": "Golfturnier",
+    "es": "torneo de golf",
+    "pt": "torneio de golfe"
    },
    "plaats": "Blue Bay Golf, Sint Michiel",
    "tags": [
@@ -1085,25 +1589,40 @@
    "feiten": [
     {
      "nl": "2026: 1 t/m 3 mei",
-     "en": "2026: May 1 to 3"
+     "en": "2026: May 1 to 3",
+     "de": "2026: 1. bis 3. Mai",
+     "es": "2026: del 1 al 3 de mayo",
+     "pt": "2026: de 1 a 3 de maio"
     },
     {
      "nl": "Legends Tour, profs 50+",
-     "en": "Legends Tour, pros over 50"
+     "en": "Legends Tour, pros over 50",
+     "de": "Legends Tour, Profis über 50",
+     "es": "Legends Tour, profesionales mayores de 50",
+     "pt": "Legends Tour, profissionais com mais de 50 anos"
     },
     {
      "nl": "Grotere editie gepland in 2027",
-     "en": "Bigger edition planned for 2027"
+     "en": "Bigger edition planned for 2027",
+     "de": "Für 2027 ist eine größere Ausgabe geplant",
+     "es": "Para 2027 se planea una edición más grande",
+     "pt": "Uma edição maior está planejada para 2027"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/international-golf-legends-head-to-curacao-for-mcb-caribbean-legends-pro-am-2026"
@@ -1115,7 +1634,10 @@
    "url": null,
    "soort": {
     "nl": "grote zeilschepen in de haven",
-    "en": "tall ships in the harbor"
+    "en": "tall ships in the harbor",
+    "de": "Großsegler im Hafen",
+    "es": "veleros de gran porte en el puerto",
+    "pt": "veleiros de grande porte no porto"
    },
    "plaats": "Sint Annabaai, Willemstad",
    "tags": [
@@ -1128,25 +1650,40 @@
    "feiten": [
     {
      "nl": "2026: 2 t/m 8 mei",
-     "en": "2026: May 2 to 8"
+     "en": "2026: May 2 to 8",
+     "de": "2026: 2. bis 8. Mai",
+     "es": "2026: del 2 al 8 de mayo",
+     "pt": "2026: de 2 a 8 de maio"
     },
     {
      "nl": "Zeilschepen uit diverse landen",
-     "en": "Sailing ships from several countries"
+     "en": "Sailing ships from several countries",
+     "de": "Segelschiffe aus mehreren Ländern",
+     "es": "Veleros de varios países",
+     "pt": "Veleiros de vários países"
     },
     {
      "nl": "Eenmalige editie, geen vaste datum",
-     "en": "One-off edition, no fixed date"
+     "en": "One-off edition, no fixed date",
+     "de": "Einmalige Ausgabe, kein fester Termin",
+     "es": "Edición única, sin fecha fija",
+     "pt": "Edição única, sem data fixa"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/military-exercises-and-demonstrations-planned-around-annabaai-ahead-of-velas-curacao-2026"
@@ -1158,7 +1695,10 @@
    "url": null,
    "soort": {
     "nl": "vreugdevuur, traditie",
-    "en": "bonfire, tradition"
+    "en": "bonfire, tradition",
+    "de": "Lagerfeuer, Tradition",
+    "es": "hoguera, tradición",
+    "pt": "fogueira, tradição"
    },
    "plaats": "Club Union Boneriano, Suffisant",
    "tags": [
@@ -1171,15 +1711,24 @@
    "feiten": [
     {
      "nl": "Avond van 23 juni",
-     "en": "Evening of June 23"
+     "en": "Evening of June 23",
+     "de": "Abend des 23. Juni",
+     "es": "Noche del 23 de junio",
+     "pt": "Noite de 23 de junho"
     },
     {
      "nl": "Vuur rond 23.30 uur",
-     "en": "Bonfire around 11:30 p.m."
+     "en": "Bonfire around 11:30 p.m.",
+     "de": "Feuer gegen 23:30 Uhr",
+     "es": "Hoguera alrededor de las 23:30",
+     "pt": "Fogueira por volta das 23h30"
     },
     {
      "nl": "Over het vuur springen",
-     "en": "People jump over the fire"
+     "en": "People jump over the fire",
+     "de": "Die Leute springen über das Feuer",
+     "es": "La gente salta sobre el fuego",
+     "pt": "As pessoas pulam a fogueira"
     }
    ],
    "scores": [],
@@ -1189,11 +1738,23 @@
     ],
     "en": [
      "Old tradition meant to bring rain and luck"
+    ],
+    "de": [
+     "Alte Tradition, die Regen und Glück bringen soll"
+    ],
+    "es": [
+     "Antigua tradición que debe traer lluvia y suerte"
+    ],
+    "pt": [
+     "Antiga tradição que deve trazer chuva e sorte"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://1000awesomethingsaboutcuracao.com/2012/11/01/866-fiesta-di-san-juan/"
@@ -1205,7 +1766,10 @@
    "url": null,
    "soort": {
     "nl": "restaurantweek",
-    "en": "restaurant week"
+    "en": "restaurant week",
+    "de": "Restaurantwoche",
+    "es": "semana de restaurantes",
+    "pt": "semana de restaurantes"
    },
    "plaats": "Restaurants door het hele eiland",
    "tags": [
@@ -1218,25 +1782,40 @@
    "feiten": [
     {
      "nl": "2025: 25 juni t/m 5 juli",
-     "en": "2025: June 25 to July 5"
+     "en": "2025: June 25 to July 5",
+     "de": "2025: 25. Juni bis 5. Juli",
+     "es": "2025: del 25 de junio al 5 de julio",
+     "pt": "2025: de 25 de junho a 5 de julho"
     },
     {
      "nl": "Ruim 35 restaurants",
-     "en": "More than 35 restaurants"
+     "en": "More than 35 restaurants",
+     "de": "Mehr als 35 Restaurants",
+     "es": "Más de 35 restaurantes",
+     "pt": "Mais de 35 restaurantes"
     },
     {
      "nl": "Vaste prijs lunch en diner",
-     "en": "Fixed-price lunch and dinner"
+     "en": "Fixed-price lunch and dinner",
+     "de": "Mittag- und Abendessen zum Festpreis",
+     "es": "Almuerzo y cena a precio fijo",
+     "pt": "Almoço e jantar a preço fixo"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/curacao-launches-first-ever-dine-out-week-with-over-35-restaurants-participating"
@@ -1248,7 +1827,10 @@
    "url": null,
    "soort": {
     "nl": "herdenking",
-    "en": "commemoration"
+    "en": "commemoration",
+    "de": "Gedenkfeier",
+    "es": "conmemoración",
+    "pt": "comemoração"
    },
    "plaats": "Fort Amsterdam, Punda",
    "tags": [
@@ -1261,21 +1843,33 @@
    "feiten": [
     {
      "nl": "Elk jaar 1 juli",
-     "en": "Every year on July 1"
+     "en": "Every year on July 1",
+     "de": "Jedes Jahr am 1. Juli",
+     "es": "Todos los años el 1 de julio",
+     "pt": "Todo ano em 1º de julho"
     },
     {
      "nl": "Ceremonie met tumba-ritme",
-     "en": "Ceremony with tumba rhythm"
+     "en": "Ceremony with tumba rhythm",
+     "de": "Zeremonie mit Tumba-Rhythmus",
+     "es": "Ceremonia con ritmo de tumba",
+     "pt": "Cerimônia com ritmo de tumba"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/emancipation-day-celebrated-on-curacao-with-historic-energy-and-unity"
@@ -1287,7 +1881,10 @@
    "url": null,
    "soort": {
     "nl": "nationale feestdag",
-    "en": "national holiday"
+    "en": "national holiday",
+    "de": "Nationalfeiertag",
+    "es": "fiesta nacional",
+    "pt": "feriado nacional"
    },
    "plaats": "Hele eiland",
    "tags": [
@@ -1300,25 +1897,40 @@
    "feiten": [
     {
      "nl": "Elk jaar 2 juli",
-     "en": "Every year on July 2"
+     "en": "Every year on July 2",
+     "de": "Jedes Jahr am 2. Juli",
+     "es": "Todos los años el 2 de julio",
+     "pt": "Todo ano em 2 de julho"
     },
     {
      "nl": "Officiële vrije dag",
-     "en": "Official public holiday"
+     "en": "Official public holiday",
+     "de": "Offizieller Feiertag",
+     "es": "Feriado oficial",
+     "pt": "Feriado oficial"
     },
     {
      "nl": "Motortocht Easy Riders Curaçao",
-     "en": "Easy Riders motorcycle ride"
+     "en": "Easy Riders motorcycle ride",
+     "de": "Motorradausfahrt der Easy Riders",
+     "es": "Paseo en moto de los Easy Riders",
+     "pt": "Passeio de moto dos Easy Riders"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacao.com/en/article/curacaos-best-festivals-and-cultural-events-a-travelers-guide",
@@ -1332,7 +1944,10 @@
    "url": null,
    "soort": {
     "nl": "herdenking slavenopstand 1795",
-    "en": "1795 slave revolt remembrance"
+    "en": "1795 slave revolt remembrance",
+    "de": "Gedenken an den Sklavenaufstand von 1795",
+    "es": "Conmemoración de la rebelión de esclavos de 1795",
+    "pt": "Lembrança da revolta de escravizados de 1795"
    },
    "plaats": "Parke Lucha pa Libertat",
    "tags": [
@@ -1344,25 +1959,40 @@
    "feiten": [
     {
      "nl": "Elk jaar 17 augustus",
-     "en": "Every year on August 17"
+     "en": "Every year on August 17",
+     "de": "Jedes Jahr am 17. August",
+     "es": "Todos los años el 17 de agosto",
+     "pt": "Todo ano em 17 de agosto"
     },
     {
      "nl": "2026: start 17.00 uur",
-     "en": "2026: starts at 5 p.m."
+     "en": "2026: starts at 5 p.m.",
+     "de": "2026: Beginn um 17 Uhr",
+     "es": "2026: empieza a las 17:00",
+     "pt": "2026: começa às 17h"
     },
     {
      "nl": "Eert Tula en zijn strijders",
-     "en": "Honors Tula and his fighters"
+     "en": "Honors Tula and his fighters",
+     "de": "Ehrt Tula und seine Mitstreiter",
+     "es": "Honra a Tula y a sus luchadores",
+     "pt": "Homenageia Tula e seus combatentes"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/curacao-announces-2026-cultural-and-commemorative-events-calendar"
@@ -1374,7 +2004,10 @@
    "url": null,
    "soort": {
     "nl": "straatkunst en muziekfestival",
-    "en": "street art and music festival"
+    "en": "street art and music festival",
+    "de": "Streetart- und Musikfestival",
+    "es": "festival de arte urbano y música",
+    "pt": "festival de arte de rua e música"
    },
    "plaats": "Ser'i Otrobanda",
    "tags": [
@@ -1390,15 +2023,24 @@
    "feiten": [
     {
      "nl": "Meestal in augustus",
-     "en": "Usually in August"
+     "en": "Usually in August",
+     "de": "Meist im August",
+     "es": "Normalmente en agosto",
+     "pt": "Geralmente em agosto"
     },
     {
      "nl": "Groot festival om de twee jaar",
-     "en": "Full festival every two years"
+     "en": "Full festival every two years",
+     "de": "Volles Festival alle zwei Jahre",
+     "es": "Festival completo cada dos años",
+     "pt": "Festival completo a cada dois anos"
     },
     {
      "nl": "2025: street party, 10.000 bezoekers",
-     "en": "2025: street party, 10,000 visitors"
+     "en": "2025: street party, 10,000 visitors",
+     "de": "2025: Straßenfest, 10.000 Besucher",
+     "es": "2025: fiesta callejera, 10.000 visitantes",
+     "pt": "2025: festa de rua, 10.000 visitantes"
     }
    ],
    "scores": [],
@@ -1410,6 +2052,18 @@
     "en": [
      "Murals stay up all year",
      "Several stages with soca, reggae, jazz and tumba"
+    ],
+    "de": [
+     "Die Wandbilder bleiben das ganze Jahr zu sehen",
+     "Mehrere Bühnen mit Soca, Reggae, Jazz und Tumba"
+    ],
+    "es": [
+     "Los murales quedan todo el año",
+     "Varios escenarios con soca, reggae, jazz y tumba"
+    ],
+    "pt": [
+     "Os murais ficam o ano todo",
+     "Vários palcos com soca, reggae, jazz e tumba"
     ]
    },
    "tegen": {
@@ -1418,6 +2072,15 @@
     ],
     "en": [
      "Visitor numbers are capped, go early"
+    ],
+    "de": [
+     "Die Besucherzahl ist begrenzt, komm früh"
+    ],
+    "es": [
+     "El número de visitantes es limitado, ve temprano"
+    ],
+    "pt": [
+     "O número de visitantes é limitado, vá cedo"
     ]
    },
    "bronnen": [
@@ -1432,7 +2095,10 @@
    "url": null,
    "soort": {
     "nl": "groot muziekfestival",
-    "en": "major music festival"
+    "en": "major music festival",
+    "de": "Großes Musikfestival",
+    "es": "gran festival de música",
+    "pt": "grande festival de música"
    },
    "plaats": "World Trade Center, Piscadera",
    "tags": [
@@ -1446,7 +2112,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "dagkaart (2025)",
-     "en": "day ticket (2025)"
+     "en": "day ticket (2025)",
+     "de": "Tagesticket (2025)",
+     "es": "entrada de un día (2025)",
+     "pt": "ingresso de um dia (2025)"
     },
     "bron": "https://islaguru.com/articles/curacao-north-sea-jazz-festival-2025",
     "datum": "2025-08"
@@ -1454,19 +2123,31 @@
    "feiten": [
     {
      "nl": "2026: 3 t/m 5 september",
-     "en": "2026: September 3 to 5"
+     "en": "2026: September 3 to 5",
+     "de": "2026: 3. bis 5. September",
+     "es": "2026: del 3 al 5 de septiembre",
+     "pt": "2026: de 3 a 5 de setembro"
     },
     {
      "nl": "Twaalfde editie in 2026",
-     "en": "Twelfth edition in 2026"
+     "en": "Twelfth edition in 2026",
+     "de": "Zwölfte Ausgabe im Jahr 2026",
+     "es": "Duodécima edición en 2026",
+     "pt": "Décima segunda edição em 2026"
     },
     {
      "nl": "3-daagse kaart 2026: €370",
-     "en": "2026 three-day pass: €370"
+     "en": "2026 three-day pass: €370",
+     "de": "2026 Dreitagespass: 370 €",
+     "es": "Pase de tres días 2026: €370",
+     "pt": "Passe de três dias 2026: € 370"
     },
     {
      "nl": "Gratis openingsconcert in de stad",
-     "en": "Free opening concert downtown"
+     "en": "Free opening concert downtown",
+     "de": "Kostenloses Eröffnungskonzert in der Innenstadt",
+     "es": "Concierto de apertura gratis en el centro",
+     "pt": "Show de abertura gratuito no centro"
     }
    ],
    "scores": [],
@@ -1478,6 +2159,18 @@
     "en": [
      "Big names like J Balvin, Toto and The Jacksons in 2026",
      "Most shows are outdoors"
+    ],
+    "de": [
+     "Große Namen wie J Balvin, Toto und The Jacksons im Jahr 2026",
+     "Die meisten Shows finden im Freien statt"
+    ],
+    "es": [
+     "Grandes nombres como J Balvin, Toto y The Jacksons en 2026",
+     "La mayoría de los shows son al aire libre"
+    ],
+    "pt": [
+     "Grandes nomes como J Balvin, Toto e The Jacksons em 2026",
+     "A maioria dos shows é ao ar livre"
     ]
    },
    "tegen": {
@@ -1486,6 +2179,15 @@
     ],
     "en": [
      "All-inclusive festival packages sell out fast"
+    ],
+    "de": [
+     "All-inclusive-Festivalpakete sind schnell ausverkauft"
+    ],
+    "es": [
+     "Los paquetes de festival todo incluido se agotan rápido"
+    ],
+    "pt": [
+     "Os pacotes de festival all-inclusive esgotam rápido"
     ]
    },
    "bronnen": [
@@ -1501,7 +2203,10 @@
    "url": null,
    "soort": {
     "nl": "zwemmen en lopen voor jeugd",
-    "en": "swim and run for kids"
+    "en": "swim and run for kids",
+    "de": "Schwimmen und Laufen für Kinder",
+    "es": "natación y carrera para niños",
+    "pt": "natação e corrida para crianças"
    },
    "plaats": "Kokomo Beach",
    "tags": [
@@ -1515,25 +2220,40 @@
    "feiten": [
     {
      "nl": "2026: start 19 september",
-     "en": "2026: starts September 19"
+     "en": "2026: starts September 19",
+     "de": "2026: Start am 19. September",
+     "es": "2026: empieza el 19 de septiembre",
+     "pt": "2026: começa em 19 de setembro"
     },
     {
      "nl": "Leeftijd 9 tot 17",
-     "en": "Ages 9 to 17"
+     "en": "Ages 9 to 17",
+     "de": "Alter 9 bis 17",
+     "es": "De 9 a 17 años",
+     "pt": "De 9 a 17 anos"
     },
     {
      "nl": "Serie eindigt met kampioenschap",
-     "en": "Series ends with a championship"
+     "en": "Series ends with a championship",
+     "de": "Die Serie endet mit einer Meisterschaft",
+     "es": "La serie termina con un campeonato",
+     "pt": "A série termina com um campeonato"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/tri-curacao-to-launch-2026-youth-aquathlon-series-at-kokomo-beach"
@@ -1545,7 +2265,10 @@
    "url": null,
    "soort": {
     "nl": "week vol cultuur",
-    "en": "culture week"
+    "en": "culture week",
+    "de": "Kulturwoche",
+    "es": "semana de la cultura",
+    "pt": "semana da cultura"
    },
    "plaats": "Hele eiland",
    "tags": [
@@ -1557,21 +2280,33 @@
    "feiten": [
     {
      "nl": "2026: 27 sept t/m 4 okt",
-     "en": "2026: Sep 27 to Oct 4"
+     "en": "2026: Sep 27 to Oct 4",
+     "de": "2026: 27. September bis 4. Oktober",
+     "es": "2026: del 27 de septiembre al 4 de octubre",
+     "pt": "2026: de 27 de setembro a 4 de outubro"
     },
     {
      "nl": "Thema: van Curaçao naar de wereld",
-     "en": "Theme: from Curaçao to the world"
+     "en": "Theme: from Curaçao to the world",
+     "de": "Motto: von Curaçao in die Welt",
+     "es": "Tema: de Curazao al mundo",
+     "pt": "Tema: de Curaçao para o mundo"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/curacao-announces-2026-cultural-and-commemorative-events-calendar"
@@ -1583,7 +2318,10 @@
    "url": "https://www.curacaopride.org",
    "soort": {
     "nl": "lhbti-festivalweek",
-    "en": "LGBTQ festival week"
+    "en": "LGBTQ festival week",
+    "de": "LGBTQ-Festivalwoche",
+    "es": "semana de festival LGBTQ",
+    "pt": "semana de festival LGBTQ"
    },
    "plaats": "Otrobanda, Punda en stranden",
    "tags": [
@@ -1598,15 +2336,24 @@
    "feiten": [
     {
      "nl": "Eind september, begin oktober",
-     "en": "Late September, early October"
+     "en": "Late September, early October",
+     "de": "Ende September, Anfang Oktober",
+     "es": "Finales de septiembre, principios de octubre",
+     "pt": "Final de setembro, início de outubro"
     },
     {
      "nl": "2025: 30 sept t/m 5 okt",
-     "en": "2025: Sep 30 to Oct 5"
+     "en": "2025: Sep 30 to Oct 5",
+     "de": "2025: 30. September bis 5. Oktober",
+     "es": "2025: del 30 de septiembre al 5 de octubre",
+     "pt": "2025: de 30 de setembro a 5 de outubro"
     },
     {
      "nl": "Parade vanaf Rif Fort",
-     "en": "Parade starts at Rif Fort"
+     "en": "Parade starts at Rif Fort",
+     "de": "Die Parade startet am Rif Fort",
+     "es": "El desfile sale del Rif Fort",
+     "pt": "O desfile começa no Rif Fort"
     }
    ],
    "scores": [],
@@ -1616,11 +2363,23 @@
     ],
     "en": [
      "Parade, beach parties and club nights in one week"
+    ],
+    "de": [
+     "Parade, Strandpartys und Clubnächte in einer Woche"
+    ],
+    "es": [
+     "Desfile, fiestas de playa y noches de club en una semana"
+    ],
+    "pt": [
+     "Desfile, festas de praia e noites de balada em uma semana"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaopride.org/?p=11074",
@@ -1633,7 +2392,10 @@
    "url": null,
    "soort": {
     "nl": "herdenking",
-    "en": "commemoration"
+    "en": "commemoration",
+    "de": "Gedenkfeier",
+    "es": "conmemoración",
+    "pt": "comemoração"
    },
    "plaats": null,
    "tags": [
@@ -1645,21 +2407,33 @@
    "feiten": [
     {
      "nl": "Elk jaar 3 oktober",
-     "en": "Every year on October 3"
+     "en": "Every year on October 3",
+     "de": "Jedes Jahr am 3. Oktober",
+     "es": "Todos los años el 3 de octubre",
+     "pt": "Todo ano em 3 de outubro"
     },
     {
      "nl": "Eert Tula en de helden van 1795",
-     "en": "Honors Tula and the 1795 heroes"
+     "en": "Honors Tula and the 1795 heroes",
+     "de": "Ehrt Tula und die Helden von 1795",
+     "es": "Honra a Tula y a los héroes de 1795",
+     "pt": "Homenageia Tula e os heróis de 1795"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/curacao-announces-2026-cultural-and-commemorative-events-calendar"
@@ -1671,7 +2445,10 @@
    "url": null,
    "soort": {
     "nl": "nationale feestdag, straatfeest",
-    "en": "national holiday, street party"
+    "en": "national holiday, street party",
+    "de": "Nationalfeiertag, Straßenfest",
+    "es": "fiesta nacional, fiesta callejera",
+    "pt": "feriado nacional, festa de rua"
    },
    "plaats": "Punda, Willemstad",
    "tags": [
@@ -1690,7 +2467,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "toegang",
-     "en": "entry"
+     "en": "entry",
+     "de": "Eintritt",
+     "es": "entrada",
+     "pt": "entrada"
     },
     "bron": "https://www.curacaochronicle.com/post/local/celebrate-the-diversity-of-curacao-during-the-1010-celebration-in-punda",
     "datum": "2024-10"
@@ -1698,19 +2478,31 @@
    "feiten": [
     {
      "nl": "Elk jaar 10 oktober",
-     "en": "Every year on October 10"
+     "en": "Every year on October 10",
+     "de": "Jedes Jahr am 10. Oktober",
+     "es": "Todos los años el 10 de octubre",
+     "pt": "Todo ano em 10 de outubro"
     },
     {
      "nl": "Officiële vrije dag",
-     "en": "Official public holiday"
+     "en": "Official public holiday",
+     "de": "Offizieller Feiertag",
+     "es": "Feriado oficial",
+     "pt": "Feriado oficial"
     },
     {
      "nl": "Straatfeest Punda vanaf 10.00 uur",
-     "en": "Punda street party from 10 a.m."
+     "en": "Punda street party from 10 a.m.",
+     "de": "Straßenfest in Punda ab 10 Uhr",
+     "es": "Fiesta callejera en Punda desde las 10:00",
+     "pt": "Festa de rua em Punda a partir das 10h"
     },
     {
      "nl": "Avondconcert lokale artiesten",
-     "en": "Evening concert with local artists"
+     "en": "Evening concert with local artists",
+     "de": "Abendkonzert mit lokalen Künstlern",
+     "es": "Concierto nocturno con artistas locales",
+     "pt": "Show à noite com artistas locais"
     }
    ],
    "scores": [],
@@ -1720,11 +2512,23 @@
     ],
     "en": [
      "Food and music from many countries on Hanchi Snoa"
+    ],
+    "de": [
+     "Essen und Musik aus vielen Ländern auf der Hanchi Snoa"
+    ],
+    "es": [
+     "Comida y música de muchos países en Hanchi Snoa"
+    ],
+    "pt": [
+     "Comida e música de muitos países na Hanchi Snoa"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/celebrate-the-diversity-of-curacao-during-the-1010-celebration-in-punda",
@@ -1738,7 +2542,10 @@
    "url": null,
    "soort": {
     "nl": "week van het draaiorgel",
-    "en": "barrel organ week"
+    "en": "barrel organ week",
+    "de": "Drehorgelwoche",
+    "es": "semana del organillo",
+    "pt": "semana do realejo"
    },
    "plaats": null,
    "tags": [
@@ -1751,21 +2558,33 @@
    "feiten": [
     {
      "nl": "2026: 15 t/m 22 november",
-     "en": "2026: November 15 to 22"
+     "en": "2026: November 15 to 22",
+     "de": "2026: 15. bis 22. November",
+     "es": "2026: del 15 al 22 de noviembre",
+     "pt": "2026: de 15 a 22 de novembro"
     },
     {
      "nl": "Lokale cilinderpiano-traditie",
-     "en": "Local cylinder piano tradition"
+     "en": "Local cylinder piano tradition",
+     "de": "Lokale Tradition des Walzenklaviers",
+     "es": "Tradición local del piano de cilindro",
+     "pt": "Tradição local do piano de cilindro"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/curacao-announces-2026-cultural-and-commemorative-events-calendar"
@@ -1777,7 +2596,10 @@
    "url": "https://klmcuracaomarathon.com/en",
    "soort": {
     "nl": "hardloopevenement",
-    "en": "running event"
+    "en": "running event",
+    "de": "Laufveranstaltung",
+    "es": "evento de carrera",
+    "pt": "evento de corrida"
    },
    "plaats": "Willemstad",
    "tags": [
@@ -1790,25 +2612,40 @@
    "feiten": [
     {
      "nl": "5 km: zaterdag 28 nov 2026",
-     "en": "5K: Saturday, Nov 28, 2026"
+     "en": "5K: Saturday, Nov 28, 2026",
+     "de": "5 km: Samstag, 28. November 2026",
+     "es": "5K: sábado 28 de noviembre de 2026",
+     "pt": "5K: sábado, 28 de novembro de 2026"
     },
     {
      "nl": "Overige: zondag 29 nov 2026",
-     "en": "Others: Sunday, Nov 29, 2026"
+     "en": "Others: Sunday, Nov 29, 2026",
+     "de": "Übrige: Sonntag, 29. November 2026",
+     "es": "Las demás: domingo 29 de noviembre de 2026",
+     "pt": "Demais: domingo, 29 de novembro de 2026"
     },
     {
      "nl": "Marathon, halve, 10 en 5 km",
-     "en": "Full, half, 10K and 5K"
+     "en": "Full, half, 10K and 5K",
+     "de": "Marathon, Halbmarathon, 10 km und 5 km",
+     "es": "Maratón, media maratón, 10K y 5K",
+     "pt": "Maratona, meia maratona, 10K e 5K"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://aims-worldrunning.org/articles/2777-race-date-for-klm-curacao-marathon-21-1k-10k-5k-cur-changed.html",
@@ -1821,7 +2658,10 @@
    "url": null,
    "soort": {
     "nl": "start kerstseizoen",
-    "en": "start of the holiday season"
+    "en": "start of the holiday season",
+    "de": "Start der Weihnachtszeit",
+    "es": "inicio de la temporada navideña",
+    "pt": "início da temporada de festas de fim de ano"
    },
    "plaats": "Bij de Koningin Emmabrug, Punda",
    "tags": [
@@ -1835,25 +2675,40 @@
    "feiten": [
     {
      "nl": "Eind november, op donderdag",
-     "en": "Late November, on a Thursday"
+     "en": "Late November, on a Thursday",
+     "de": "Ende November, an einem Donnerstag",
+     "es": "Finales de noviembre, un jueves",
+     "pt": "Final de novembro, numa quinta-feira"
     },
     {
      "nl": "2025: 27 nov om 18.45 uur",
-     "en": "2025: Nov 27 at 6:45 p.m."
+     "en": "2025: Nov 27 at 6:45 p.m.",
+     "de": "2025: 27. November um 18:45 Uhr",
+     "es": "2025: 27 de noviembre a las 18:45",
+     "pt": "2025: 27 de novembro às 18h45"
     },
     {
      "nl": "Kerstman, kraampjes en live muziek",
-     "en": "Santa, stalls and live music"
+     "en": "Santa, stalls and live music",
+     "de": "Weihnachtsmann, Stände und Livemusik",
+     "es": "Papá Noel, puestos y música en vivo",
+     "pt": "Papai Noel, barracas e música ao vivo"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/punda-lights-up-christmas-season-on-thursday-with-tree-lighting-music-and-festivities"
@@ -1865,7 +2720,10 @@
    "url": null,
    "soort": {
     "nl": "herdenking",
-    "en": "commemoration"
+    "en": "commemoration",
+    "de": "Gedenkfeier",
+    "es": "conmemoración",
+    "pt": "comemoração"
    },
    "plaats": null,
    "tags": [
@@ -1877,17 +2735,26 @@
    "feiten": [
     {
      "nl": "Elk jaar 15 december",
-     "en": "Every year on December 15"
+     "en": "Every year on December 15",
+     "de": "Jedes Jahr am 15. Dezember",
+     "es": "Todos los años el 15 de diciembre",
+     "pt": "Todo ano em 15 de dezembro"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/curacao-announces-2026-cultural-and-commemorative-events-calendar"
@@ -1899,7 +2766,10 @@
    "url": null,
    "soort": {
     "nl": "grote vuurwerkshow",
-    "en": "big fireworks show"
+    "en": "big fireworks show",
+    "de": "großes Feuerwerk",
+    "es": "gran show de fuegos artificiales",
+    "pt": "grande show de fogos de artifício"
    },
    "plaats": "Kooyman, Zeelandia",
    "tags": [
@@ -1913,7 +2783,10 @@
    "feiten": [
     {
      "nl": "30 december om 21.00 uur",
-     "en": "December 30 at 9 p.m."
+     "en": "December 30 at 9 p.m.",
+     "de": "30. Dezember um 21 Uhr",
+     "es": "30 de diciembre a las 21:00",
+     "pt": "30 de dezembro às 21h"
     }
    ],
    "scores": [],
@@ -1923,11 +2796,23 @@
     ],
     "en": [
      "Local press calls it a New Year's highlight"
+    ],
+    "de": [
+     "Die lokale Presse nennt es ein Silvester-Highlight"
+    ],
+    "es": [
+     "La prensa local lo llama un punto alto de Año Nuevo"
+    ],
+    "pt": [
+     "A imprensa local o chama de destaque da virada do ano"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/pagara-firecrackers-light-up-willemstad-during-curacaos-new-year-celebrations"
@@ -1939,7 +2824,10 @@
    "url": null,
    "soort": {
     "nl": "oudjaarsfeest met pagara's",
-    "en": "New Year's Eve firecracker party"
+    "en": "New Year's Eve firecracker party",
+    "de": "Silvester-Böllerfest",
+    "es": "fiesta de petardos de Nochevieja",
+    "pt": "festa de bombinhas do Réveillon"
    },
    "plaats": "Nieuwestraat, Pietermaai",
    "tags": [
@@ -1954,15 +2842,24 @@
    "feiten": [
     {
      "nl": "31 december, pagara om 14.00 uur",
-     "en": "December 31, pagara at 2 p.m."
+     "en": "December 31, pagara at 2 p.m.",
+     "de": "31. Dezember, Pagara um 14 Uhr",
+     "es": "31 de diciembre, pagara a las 14:00",
+     "pt": "31 de dezembro, pagara às 14h"
     },
     {
      "nl": "Daarna live muziek en straateten",
-     "en": "Then live music and street food"
+     "en": "Then live music and street food",
+     "de": "Danach Livemusik und Streetfood",
+     "es": "Luego música en vivo y comida callejera",
+     "pt": "Depois música ao vivo e comida de rua"
     },
     {
      "nl": "Ook pagara's bij Oasis en Mahaai",
-     "en": "Also pagaras at Oasis and Mahaai"
+     "en": "Also pagaras at Oasis and Mahaai",
+     "de": "Auch Pagaras im Oasis und in Mahaai",
+     "es": "También hay pagaras en Oasis y Mahaai",
+     "pt": "Também há pagaras no Oasis e em Mahaai"
     }
    ],
    "scores": [],
@@ -1972,11 +2869,23 @@
     ],
     "en": [
      "Long strings of firecrackers in daylight, a unique tradition"
+    ],
+    "de": [
+     "Lange Böllerketten bei Tageslicht, eine einzigartige Tradition"
+    ],
+    "es": [
+     "Largas tiras de petardos a plena luz del día, una tradición única"
+    ],
+    "pt": [
+     "Longas fieiras de bombinhas à luz do dia, uma tradição única"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/pagara-firecrackers-light-up-willemstad-during-curacaos-new-year-celebrations"
@@ -1988,7 +2897,10 @@
    "url": null,
    "soort": {
     "nl": "oudjaarsbijeenkomst",
-    "en": "New Year's Eve gathering"
+    "en": "New Year's Eve gathering",
+    "de": "Silvestertreffen",
+    "es": "encuentro de Nochevieja",
+    "pt": "encontro de Réveillon"
    },
    "plaats": "Brionplein, Otrobanda",
    "tags": [
@@ -2002,21 +2914,33 @@
    "feiten": [
     {
      "nl": "31 december",
-     "en": "December 31"
+     "en": "December 31",
+     "de": "31. Dezember",
+     "es": "31 de diciembre",
+     "pt": "31 de dezembro"
     },
     {
      "nl": "Culturele afsluiting van het jaar",
-     "en": "Cultural close of the year"
+     "en": "Cultural close of the year",
+     "de": "Kultureller Jahresabschluss",
+     "es": "Cierre cultural del año",
+     "pt": "Encerramento cultural do ano"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.curacaochronicle.com/post/local/curacao-announces-2026-cultural-and-commemorative-events-calendar"
@@ -2028,7 +2952,10 @@
    "url": null,
    "soort": {
     "nl": "bootfeest op zee",
-    "en": "boat party at sea"
+    "en": "boat party at sea",
+    "de": "Bootsparty auf dem Meer",
+    "es": "fiesta en barco en el mar",
+    "pt": "festa de barco no mar"
    },
    "plaats": "Fuikbaai, oostkant",
    "tags": [
@@ -2042,7 +2969,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "plek op een catamaran met open bar",
-     "en": "spot on a catamaran with open bar"
+     "en": "spot on a catamaran with open bar",
+     "de": "Platz auf einem Katamaran mit Open Bar",
+     "es": "lugar en un catamarán con barra libre",
+     "pt": "lugar em um catamarã com open bar"
     },
     "bron": "https://www.naarcuracao.com/en/tour-item/fuik-day/",
     "datum": "2026-10"
@@ -2050,15 +2980,24 @@
    "feiten": [
     {
      "nl": "Eerste zondag van januari",
-     "en": "First Sunday of January"
+     "en": "First Sunday of January",
+     "de": "Erster Sonntag im Januar",
+     "es": "Primer domingo de enero",
+     "pt": "Primeiro domingo de janeiro"
     },
     {
      "nl": "2027: zondag 3 januari",
-     "en": "2027: Sunday, January 3"
+     "en": "2027: Sunday, January 3",
+     "de": "2027: Sonntag, 3. Januar",
+     "es": "2027: domingo 3 de enero",
+     "pt": "2027: domingo, 3 de janeiro"
     },
     {
      "nl": "Alleen per boot bereikbaar",
-     "en": "Only reachable by boat"
+     "en": "Only reachable by boat",
+     "de": "Nur per Boot erreichbar",
+     "es": "Solo se llega en barco",
+     "pt": "Só se chega de barco"
     }
    ],
    "scores": [],
@@ -2068,6 +3007,15 @@
     ],
     "en": [
      "Hundreds of boats side by side with DJs"
+    ],
+    "de": [
+     "Hunderte Boote Seite an Seite mit DJs"
+    ],
+    "es": [
+     "Cientos de barcos uno al lado del otro con DJs"
+    ],
+    "pt": [
+     "Centenas de barcos lado a lado com DJs"
     ]
    },
    "tegen": {
@@ -2076,6 +3024,15 @@
     ],
     "en": [
      "Strict checks at sea, no water taxis or drink sales"
+    ],
+    "de": [
+     "Strenge Kontrollen auf See, keine Wassertaxis oder Getränkeverkauf"
+    ],
+    "es": [
+     "Controles estrictos en el mar, sin taxis acuáticos ni venta de bebidas"
+    ],
+    "pt": [
+     "Fiscalização rigorosa no mar, sem táxi aquático nem venda de bebidas"
     ]
    },
    "bronnen": [
@@ -2091,7 +3048,10 @@
    "url": null,
    "soort": {
     "nl": "wekelijks straatfeest",
-    "en": "weekly street party"
+    "en": "weekly street party",
+    "de": "wöchentliches Straßenfest",
+    "es": "fiesta callejera semanal",
+    "pt": "festa de rua semanal"
    },
    "plaats": "Punda, Willemstad",
    "tags": [
@@ -2112,15 +3072,24 @@
    "feiten": [
     {
      "nl": "Elke donderdag vanaf 17.00 uur",
-     "en": "Every Thursday from 5 p.m."
+     "en": "Every Thursday from 5 p.m.",
+     "de": "Jeden Donnerstag ab 17 Uhr",
+     "es": "Todos los jueves desde las 17:00",
+     "pt": "Toda quinta-feira a partir das 17h"
     },
     {
      "nl": "Vuurwerk om 20.15 uur",
-     "en": "Fireworks at 8:15 p.m."
+     "en": "Fireworks at 8:15 p.m.",
+     "de": "Feuerwerk um 20:15 Uhr",
+     "es": "Fuegos artificiales a las 20:15",
+     "pt": "Fogos de artifício às 20h15"
     },
     {
      "nl": "Drijvende markt tot 19.00 uur",
-     "en": "Floating market until 7 p.m."
+     "en": "Floating market until 7 p.m.",
+     "de": "Schwimmender Markt bis 19 Uhr",
+     "es": "Mercado flotante hasta las 19:00",
+     "pt": "Mercado flutuante até as 19h"
     }
    ],
    "scores": [],
@@ -2132,11 +3101,26 @@
     "en": [
      "Live bands and stalls with local snacks",
      "Easy to combine with dinner in Punda"
+    ],
+    "de": [
+     "Livebands und Stände mit lokalen Snacks",
+     "Lässt sich gut mit einem Abendessen in Punda verbinden"
+    ],
+    "es": [
+     "Bandas en vivo y puestos con bocadillos locales",
+     "Fácil de combinar con una cena en Punda"
+    ],
+    "pt": [
+     "Bandas ao vivo e barracas com petiscos locais",
+     "Fácil de combinar com um jantar em Punda"
     ]
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.lionsdive.com/curacao/4-tips-for-enjoying-punda-vibes-every-thursday/",
@@ -2149,7 +3133,10 @@
    "url": null,
    "soort": {
     "nl": "salsa-avond",
-    "en": "salsa night"
+    "en": "salsa night",
+    "de": "Salsa-Abend",
+    "es": "noche de salsa",
+    "pt": "noite de salsa"
    },
    "plaats": "Nieuwestraat, Pietermaai",
    "tags": [
@@ -2168,21 +3155,33 @@
    "feiten": [
     {
      "nl": "Elke donderdag",
-     "en": "Every Thursday"
+     "en": "Every Thursday",
+     "de": "Jeden Donnerstag",
+     "es": "Todos los jueves",
+     "pt": "Toda quinta-feira"
     },
     {
      "nl": "Cubaans café in Pietermaai",
-     "en": "Cuban-style cafe in Pietermaai"
+     "en": "Cuban-style cafe in Pietermaai",
+     "de": "Café im kubanischen Stil in Pietermaai",
+     "es": "Café de estilo cubano en Pietermaai",
+     "pt": "Café de estilo cubano em Pietermaai"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao",
@@ -2195,7 +3194,10 @@
    "url": null,
    "soort": {
     "nl": "middagfeest op het strand",
-    "en": "afternoon beach party"
+    "en": "afternoon beach party",
+    "de": "Strandparty am Nachmittag",
+    "es": "fiesta de playa por la tarde",
+    "pt": "festa de praia à tarde"
    },
    "plaats": "Jan Thiel Beach",
    "tags": [
@@ -2214,21 +3216,33 @@
    "feiten": [
     {
      "nl": "Elke donderdag 15.00 tot 19.00",
-     "en": "Every Thursday 3 to 7 p.m."
+     "en": "Every Thursday 3 to 7 p.m.",
+     "de": "Jeden Donnerstag 15 bis 19 Uhr",
+     "es": "Todos los jueves de 15:00 a 19:00",
+     "pt": "Toda quinta-feira das 15h às 19h"
     },
     {
      "nl": "Vrijdag spritz happy hour 18-19",
-     "en": "Friday spritz happy hour 6-7 p.m."
+     "en": "Friday spritz happy hour 6-7 p.m.",
+     "de": "Freitags Spritz-Happy-Hour 18 bis 19 Uhr",
+     "es": "Happy hour de spritz los viernes de 18:00 a 19:00",
+     "pt": "Happy hour de spritz na sexta, das 18h às 19h"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
@@ -2240,7 +3254,10 @@
    "url": null,
    "soort": {
     "nl": "strandbar avond",
-    "en": "beach bar night"
+    "en": "beach bar night",
+    "de": "Abend in der Strandbar",
+    "es": "noche en el bar de playa",
+    "pt": "noite no bar de praia"
    },
    "plaats": "Mambo Beach Boulevard",
    "tags": [
@@ -2258,21 +3275,33 @@
    "feiten": [
     {
      "nl": "Elke woensdag",
-     "en": "Every Wednesday"
+     "en": "Every Wednesday",
+     "de": "Jeden Mittwoch",
+     "es": "Todos los miércoles",
+     "pt": "Toda quarta-feira"
     },
     {
      "nl": "Happy hour 20.00 tot 21.00",
-     "en": "Happy hour 8 to 9 p.m."
+     "en": "Happy hour 8 to 9 p.m.",
+     "de": "Happy Hour 20 bis 21 Uhr",
+     "es": "Happy hour de 20:00 a 21:00",
+     "pt": "Happy hour das 20h às 21h"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
@@ -2284,7 +3313,10 @@
    "url": null,
    "soort": {
     "nl": "strandclub met dj",
-    "en": "beach club with DJ"
+    "en": "beach club with DJ",
+    "de": "Beachclub mit DJ",
+    "es": "beach club con DJ",
+    "pt": "beach club com DJ"
    },
    "plaats": "Mambo Beach",
    "tags": [
@@ -2303,25 +3335,40 @@
    "feiten": [
     {
      "nl": "Elke vrijdag, dj",
-     "en": "Every Friday, DJ"
+     "en": "Every Friday, DJ",
+     "de": "Jeden Freitag, DJ",
+     "es": "Todos los viernes, DJ",
+     "pt": "Toda sexta-feira, DJ"
     },
     {
      "nl": "Happy hour 20.00 tot 21.00",
-     "en": "Happy hour 8 to 9 p.m."
+     "en": "Happy hour 8 to 9 p.m.",
+     "de": "Happy Hour 20 bis 21 Uhr",
+     "es": "Happy hour de 20:00 a 21:00",
+     "pt": "Happy hour das 20h às 21h"
     },
     {
      "nl": "Daarna Club Live 973",
-     "en": "Then on to Club Live 973"
+     "en": "Then on to Club Live 973",
+     "de": "Danach weiter ins Club Live 973",
+     "es": "Luego, al Club Live 973",
+     "pt": "Depois, segue para o Club Live 973"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
@@ -2333,7 +3380,10 @@
    "url": null,
    "soort": {
     "nl": "strandbar met live muziek",
-    "en": "beach bar with live music"
+    "en": "beach bar with live music",
+    "de": "Strandbar mit Livemusik",
+    "es": "bar de playa con música en vivo",
+    "pt": "bar de praia com música ao vivo"
    },
    "plaats": "Mambo Beach",
    "tags": [
@@ -2352,25 +3402,40 @@
    "feiten": [
     {
      "nl": "Vrijdag live muziek",
-     "en": "Friday live music"
+     "en": "Friday live music",
+     "de": "Freitags Livemusik",
+     "es": "Música en vivo los viernes",
+     "pt": "Música ao vivo na sexta"
     },
     {
      "nl": "Zaterdag sunset sessions met dj's",
-     "en": "Saturday sunset sessions with DJs"
+     "en": "Saturday sunset sessions with DJs",
+     "de": "Samstags Sunset Sessions mit DJs",
+     "es": "Sunset sessions con DJs los sábados",
+     "pt": "Sunset sessions com DJs no sábado"
     },
     {
      "nl": "Zondag Sunday Vibes",
-     "en": "Sunday Vibes on Sundays"
+     "en": "Sunday Vibes on Sundays",
+     "de": "Sonntags Sunday Vibes",
+     "es": "Sunday Vibes los domingos",
+     "pt": "Sunday Vibes aos domingos"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
@@ -2382,7 +3447,10 @@
    "url": null,
    "soort": {
     "nl": "strandbar met dj's",
-    "en": "beach bar with DJs"
+    "en": "beach bar with DJs",
+    "de": "Strandbar mit DJs",
+    "es": "bar de playa con DJs",
+    "pt": "bar de praia com DJs"
    },
    "plaats": "Jan Thiel Beach",
    "tags": [
@@ -2401,21 +3469,33 @@
    "feiten": [
     {
      "nl": "Elke zaterdag",
-     "en": "Every Saturday"
+     "en": "Every Saturday",
+     "de": "Jeden Samstag",
+     "es": "Todos los sábados",
+     "pt": "Todo sábado"
     },
     {
      "nl": "Happy hour en live dj's",
-     "en": "Happy hour and live DJs"
+     "en": "Happy hour and live DJs",
+     "de": "Happy Hour und Live-DJs",
+     "es": "Happy hour y DJs en vivo",
+     "pt": "Happy hour e DJs ao vivo"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
@@ -2427,7 +3507,10 @@
    "url": null,
    "soort": {
     "nl": "zondagsfeest op het strand",
-    "en": "Sunday beach party"
+    "en": "Sunday beach party",
+    "de": "Strandparty am Sonntag",
+    "es": "fiesta de playa del domingo",
+    "pt": "festa de praia de domingo"
    },
    "plaats": "Mambo Beach",
    "tags": [
@@ -2446,25 +3529,40 @@
    "feiten": [
     {
      "nl": "Elke zondag",
-     "en": "Every Sunday"
+     "en": "Every Sunday",
+     "de": "Jeden Sonntag",
+     "es": "Todos los domingos",
+     "pt": "Todo domingo"
     },
     {
      "nl": "Caribische band 17.00 tot 19.00",
-     "en": "Caribbean band 5 to 7 p.m."
+     "en": "Caribbean band 5 to 7 p.m.",
+     "de": "Karibische Band 17 bis 19 Uhr",
+     "es": "Banda caribeña de 17:00 a 19:00",
+     "pt": "Banda caribenha das 17h às 19h"
     },
     {
      "nl": "Mojitobar en dj",
-     "en": "Mojito bar and DJ"
+     "en": "Mojito bar and DJ",
+     "de": "Mojito-Bar und DJ",
+     "es": "Bar de mojitos y DJ",
+     "pt": "Bar de mojitos e DJ"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
@@ -2476,7 +3574,10 @@
    "url": null,
    "soort": {
     "nl": "zondagmiddag strandfeest",
-    "en": "Sunday afternoon beach party"
+    "en": "Sunday afternoon beach party",
+    "de": "Strandparty am Sonntagnachmittag",
+    "es": "fiesta de playa del domingo por la tarde",
+    "pt": "festa de praia no domingo à tarde"
    },
    "plaats": "Kokomo Beach, Vaersenbaai",
    "tags": [
@@ -2497,7 +3598,10 @@
     "valuta": "USD",
     "eenheid": {
      "nl": "toegang strand, bedjes betaald",
-     "en": "beach entry, loungers extra"
+     "en": "beach entry, loungers extra",
+     "de": "Strandeintritt, Liegen extra",
+     "es": "entrada a la playa, tumbonas aparte",
+     "pt": "entrada na praia, espreguiçadeiras à parte"
     },
     "bron": "https://www.naarcuracao.com/en/?p=53730",
     "datum": "2026-10"
@@ -2505,29 +3609,47 @@
    "feiten": [
     {
      "nl": "Elke zondagmiddag",
-     "en": "Every Sunday afternoon"
+     "en": "Every Sunday afternoon",
+     "de": "Jeden Sonntagnachmittag",
+     "es": "Todos los domingos por la tarde",
+     "pt": "Todo domingo à tarde"
     },
     {
      "nl": "Happy hour 17.00 tot 18.00",
-     "en": "Happy hour 5 to 6 p.m."
+     "en": "Happy hour 5 to 6 p.m.",
+     "de": "Happy Hour 17 bis 18 Uhr",
+     "es": "Happy hour de 17:00 a 18:00",
+     "pt": "Happy hour das 17h às 18h"
     },
     {
      "nl": "Dj en live act",
-     "en": "DJ and a live act"
+     "en": "DJ and a live act",
+     "de": "DJ und ein Live-Act",
+     "es": "DJ y un show en vivo",
+     "pt": "DJ e uma atração ao vivo"
     },
     {
      "nl": "15 minuten van Willemstad",
-     "en": "15 minutes from Willemstad"
+     "en": "15 minutes from Willemstad",
+     "de": "15 Minuten von Willemstad entfernt",
+     "es": "A 15 minutos de Willemstad",
+     "pt": "A 15 minutos de Willemstad"
     }
    ],
    "scores": [],
    "voor": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "tegen": {
     "nl": [],
-    "en": []
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
    },
    "bronnen": [
     "https://www.naarcuracao.com/en/?p=53730"
@@ -2540,7 +3662,10 @@
    "url": "https://www.curacao.com/en/article/curacaos-best-festivals-and-cultural-events-a-travelers-guide",
    "uitleg": {
     "nl": "Officiële toerismesite met evenementenpagina's per jaar; geen kaartverkoop.",
-    "en": "Official tourism site with event pages per year; does not sell tickets."
+    "en": "Official tourism site with event pages per year; does not sell tickets.",
+    "de": "Offizielle Tourismusseite mit Eventseiten pro Jahr; verkauft keine Tickets.",
+    "es": "Sitio oficial de turismo con páginas de eventos por año; no vende entradas.",
+    "pt": "Site oficial de turismo com páginas de eventos por ano; não vende ingressos."
    }
   },
   {
@@ -2548,7 +3673,10 @@
    "url": "https://www.curacaochronicle.com",
    "uitleg": {
     "nl": "Engelstalig nieuws met de actuele data en programma's van carnaval, Seú en festivals.",
-    "en": "English-language news with current dates and schedules for carnival, Seú and festivals."
+    "en": "English-language news with current dates and schedules for carnival, Seú and festivals.",
+    "de": "Englischsprachige Nachrichten mit aktuellen Terminen und Programmen für Karneval, Seú und Festivals.",
+    "es": "Noticias en inglés con fechas y programas actuales del carnaval, Seú y festivales.",
+    "pt": "Notícias em inglês com datas e programações atuais de carnaval, Seú e festivais."
    }
   },
   {
@@ -2556,7 +3684,10 @@
    "url": "https://www.naarcuracao.com/en/tour-item/fuik-day/",
    "uitleg": {
     "nl": "Verkoopt Fuikdag-plekken op boten en zet het carnavalsschema met routes online.",
-    "en": "Sells Fuik Day boat spots and posts the carnival schedule with routes."
+    "en": "Sells Fuik Day boat spots and posts the carnival schedule with routes.",
+    "de": "Verkauft Plätze auf Booten für den Fuik Day und veröffentlicht den Karnevalsplan mit Routen.",
+    "es": "Vende lugares en barcos para el Fuik Day y publica el programa del carnaval con los recorridos.",
+    "pt": "Vende lugares em barcos para o Fuik Day e publica a programação do carnaval com os percursos."
    }
   },
   {
@@ -2564,7 +3695,10 @@
    "url": "https://corendon.nl/jazz",
    "uitleg": {
     "nl": "Pakketreizen met vlucht, hotel en 3-daagse North Sea Jazz-kaart.",
-    "en": "Package trips with flight, hotel and a three-day North Sea Jazz pass."
+    "en": "Package trips with flight, hotel and a three-day North Sea Jazz pass.",
+    "de": "Pauschalreisen mit Flug, Hotel und Dreitagespass für North Sea Jazz.",
+    "es": "Paquetes de viaje con vuelo, hotel y un pase de tres días para North Sea Jazz.",
+    "pt": "Pacotes de viagem com voo, hotel e passe de três dias para o North Sea Jazz."
    }
   },
   {
@@ -2572,129 +3706,207 @@
    "url": "https://www.mycuracaoguide.com/punda-vibes-tours",
    "uitleg": {
     "nl": "Overzicht van uitgaansavonden per dag en tours naar Punda Vibes.",
-    "en": "Overview of nightlife by day of the week and tours to Punda Vibes."
+    "en": "Overview of nightlife by day of the week and tours to Punda Vibes.",
+    "de": "Überblick über das Nachtleben nach Wochentag und Touren zu Punda Vibes.",
+    "es": "Resumen de la vida nocturna por día de la semana y tours a Punda Vibes.",
+    "pt": "Resumo da vida noturna por dia da semana e passeios para o Punda Vibes."
    }
   }
  ],
  "tips": [
   {
    "nl": "Carnavalsparades beginnen vaak 1 tot 2 uur later dan gepland; neem water, een stoeltje en zoek schaduw langs de route.",
-   "en": "Carnival parades often start 1 to 2 hours late; bring water and a folding chair and find shade along the route."
+   "en": "Carnival parades often start 1 to 2 hours late; bring water and a folding chair and find shade along the route.",
+   "de": "Karnevalsparaden beginnen oft 1 bis 2 Stunden später; nimm Wasser und einen Klappstuhl mit und such dir Schatten an der Strecke.",
+   "es": "Los desfiles de carnaval suelen empezar de 1 a 2 horas tarde; lleva agua y una silla plegable y busca sombra en el recorrido.",
+   "pt": "Os desfiles de carnaval costumam começar de 1 a 2 horas atrasados; leve água e uma cadeira dobrável e procure sombra ao longo do percurso."
   },
   {
    "nl": "Carnavalsmaandag (8 februari 2027) en tweede paasdag (29 maart 2027) zijn vrije dagen; veel winkels en kantoren zijn dan dicht.",
-   "en": "Carnival Monday (February 8, 2027) and Easter Monday (March 29, 2027) are public holidays; many shops and offices close."
+   "en": "Carnival Monday (February 8, 2027) and Easter Monday (March 29, 2027) are public holidays; many shops and offices close.",
+   "de": "Karnevalsmontag (8. Februar 2027) und Ostermontag (29. März 2027) sind Feiertage; viele Geschäfte und Büros sind geschlossen.",
+   "es": "El Lunes de Carnaval (8 de febrero de 2027) y el Lunes de Pascua (29 de marzo de 2027) son feriados; muchos comercios y oficinas cierran.",
+   "pt": "A Segunda-feira de Carnaval (8 de fevereiro de 2027) e a Segunda-feira de Páscoa (29 de março de 2027) são feriados; muitas lojas e escritórios fecham."
   },
   {
    "nl": "Meelopen in de Gran Marcha kan via een carnavalsgroep, vanaf ongeveer $850 inclusief kostuum.",
-   "en": "You can walk in the Gran Marcha with a carnival group, from about $850 including costume."
+   "en": "You can walk in the Gran Marcha with a carnival group, from about $850 including costume.",
+   "de": "Du kannst im Gran Marcha mit einer Karnevalsgruppe mitlaufen, ab etwa 850 $ inklusive Kostüm.",
+   "es": "Puedes desfilar en el Gran Marcha con una comparsa de carnaval, desde unos US$850 con disfraz incluido.",
+   "pt": "Você pode desfilar no Gran Marcha com um grupo de carnaval, a partir de cerca de US$ 850 com fantasia incluída."
   },
   {
    "nl": "Voor Fuikdag heb je een plek op een boot nodig; de baai is niet over land bereikbaar en er is op het water geen drankverkoop.",
-   "en": "For Fuik Day you need a spot on a boat; the bay can't be reached by land and drinks aren't sold on the water."
+   "en": "For Fuik Day you need a spot on a boat; the bay can't be reached by land and drinks aren't sold on the water.",
+   "de": "Für den Fuik Day brauchst du einen Platz auf einem Boot; die Bucht ist über Land nicht erreichbar, und auf dem Wasser werden keine Getränke verkauft.",
+   "es": "Para el Fuik Day necesitas un lugar en un barco; a la bahía no se llega por tierra y no se venden bebidas en el agua.",
+   "pt": "Para o Fuik Day você precisa de um lugar em um barco; a baía não é acessível por terra e não se vendem bebidas na água."
   },
   {
    "nl": "Boek vlucht en hotel voor North Sea Jazz ruim op tijd; all-inclusive pakketten bij The Rif en Mangrove Beach waren voor 2026 uitverkocht.",
-   "en": "Book flights and hotels for North Sea Jazz early; all-inclusive packages at The Rif and Mangrove Beach sold out for 2026."
+   "en": "Book flights and hotels for North Sea Jazz early; all-inclusive packages at The Rif and Mangrove Beach sold out for 2026.",
+   "de": "Buche Flüge und Hotels für North Sea Jazz früh; die All-inclusive-Pakete im The Rif und im Mangrove Beach waren für 2026 ausverkauft.",
+   "es": "Reserva vuelos y hoteles para North Sea Jazz con tiempo; los paquetes todo incluido en The Rif y Mangrove Beach se agotaron para 2026.",
+   "pt": "Reserve voos e hotéis para o North Sea Jazz com antecedência; os pacotes all-inclusive no The Rif e no Mangrove Beach esgotaram para 2026."
   },
   {
    "nl": "Op 31 december branden overdag lange pagara's in Pietermaai (14.00 uur) en bij Oasis (15.00 uur); de grote vuurwerkshow van Kooyman is op 30 december.",
-   "en": "On December 31, long pagara firecracker strings go off by day in Pietermaai (2 p.m.) and at Oasis (3 p.m.); the big Kooyman fireworks show is on December 30."
+   "en": "On December 31, long pagara firecracker strings go off by day in Pietermaai (2 p.m.) and at Oasis (3 p.m.); the big Kooyman fireworks show is on December 30.",
+   "de": "Am 31. Dezember werden tagsüber lange Pagara-Böllerketten gezündet, in Pietermaai (14 Uhr) und im Oasis (15 Uhr); das große Kooyman-Feuerwerk ist am 30. Dezember.",
+   "es": "El 31 de diciembre se encienden de día largas tiras de petardos pagara en Pietermaai (14:00) y en Oasis (15:00); el gran espectáculo de fuegos artificiales de Kooyman es el 30 de diciembre.",
+   "pt": "Em 31 de dezembro, longas fieiras de bombinhas pagara estouram durante o dia em Pietermaai (14h) e no Oasis (15h); o grande show de fogos da Kooyman é em 30 de dezembro."
   },
   {
    "nl": "Op donderdag kun je Punda Vibes vanaf 17.00 uur combineren met salsa bij Mundo Bizarro in Pietermaai.",
-   "en": "On Thursdays you can pair Punda Vibes from 5 p.m. with salsa at Mundo Bizarro in Pietermaai."
+   "en": "On Thursdays you can pair Punda Vibes from 5 p.m. with salsa at Mundo Bizarro in Pietermaai.",
+   "de": "Donnerstags kannst du Punda Vibes ab 17 Uhr mit Salsa im Mundo Bizarro in Pietermaai verbinden.",
+   "es": "Los jueves puedes combinar Punda Vibes desde las 17:00 con salsa en Mundo Bizarro en Pietermaai.",
+   "pt": "Às quintas você pode combinar o Punda Vibes a partir das 17h com salsa no Mundo Bizarro, em Pietermaai."
   }
  ],
  "faq": [
   {
    "q": {
     "nl": "Wanneer is carnaval op Curaçao in 2027?",
-    "en": "When is Carnival in Curaçao in 2027?"
+    "en": "When is Carnival in Curaçao in 2027?",
+    "de": "Wann ist der Karneval auf Curaçao 2027?",
+    "es": "¿Cuándo es el Carnaval de Curazao en 2027?",
+    "pt": "Quando é o Carnaval de Curaçao em 2027?"
    },
    "a": {
     "nl": "De paardenparade is op zondag 24 januari, de kinderparade op 31 januari, de Gran Marcha op zondag 7 februari en de slotparade met het afscheid van Rei Momo op dinsdag 9 februari 2027. Het Festival di Tumba is eind januari.",
-    "en": "The horse parade is on Sunday, January 24, the children's parade on January 31, the Gran Marcha on Sunday, February 7 and the closing parade with King Momo's farewell on Tuesday, February 9, 2027. The Tumba Festival is in late January."
+    "en": "The horse parade is on Sunday, January 24, the children's parade on January 31, the Gran Marcha on Sunday, February 7 and the closing parade with King Momo's farewell on Tuesday, February 9, 2027. The Tumba Festival is in late January.",
+    "de": "Die Pferdeparade ist am Sonntag, 24. Januar, die Kinderparade am 31. Januar, der Gran Marcha am Sonntag, 7. Februar und die Abschlussparade mit dem Abschied von König Momo am Dienstag, 9. Februar 2027. Das Tumba Festival findet Ende Januar statt.",
+    "es": "El desfile de caballos es el domingo 24 de enero, el desfile infantil el 31 de enero, el Gran Marcha el domingo 7 de febrero y el desfile de cierre con la despedida del Rey Momo el martes 9 de febrero de 2027. El Tumba Festival es a finales de enero.",
+    "pt": "O desfile de cavalos é no domingo, 24 de janeiro, o desfile infantil em 31 de janeiro, o Gran Marcha no domingo, 7 de fevereiro, e o desfile de encerramento com a despedida do Rei Momo na terça-feira, 9 de fevereiro de 2027. O Tumba Festival acontece no fim de janeiro."
    }
   },
   {
    "q": {
     "nl": "Wat is Seú?",
-    "en": "What is Seú?"
+    "en": "What is Seú?",
+    "de": "Was ist Seú?",
+    "es": "¿Qué es Seú?",
+    "pt": "O que é o Seú?"
    },
    "a": {
     "nl": "Seú is het oogstfeest van Curaçao met traditionele dans, zang en kostuums. De grote Marcha di Seú trekt op tweede paasdag door Willemstad (2026: 40 groepen); een week later volgt een parade in Bandabou.",
-    "en": "Seú is Curaçao's harvest festival with traditional dance, song and costumes. The big Marcha di Seú moves through Willemstad on Easter Monday (40 groups in 2026), and a parade in Bandabou follows about a week later."
+    "en": "Seú is Curaçao's harvest festival with traditional dance, song and costumes. The big Marcha di Seú moves through Willemstad on Easter Monday (40 groups in 2026), and a parade in Bandabou follows about a week later.",
+    "de": "Seú ist das Erntefest von Curaçao mit traditionellem Tanz, Gesang und Kostümen. Die große Marcha di Seú zieht am Ostermontag durch Willemstad (2026 mit 40 Gruppen), und etwa eine Woche später folgt eine Parade in Bandabou.",
+    "es": "Seú es la fiesta de la cosecha de Curazao, con baile, canto y disfraces tradicionales. La gran Marcha di Seú recorre Willemstad el Lunes de Pascua (40 grupos en 2026), y más o menos una semana después sigue un desfile en Bandabou.",
+    "pt": "O Seú é a festa da colheita de Curaçao, com dança, canto e fantasias tradicionais. A grande Marcha di Seú percorre Willemstad na Segunda-feira de Páscoa (40 grupos em 2026), e cerca de uma semana depois há um desfile em Bandabou."
    }
   },
   {
    "q": {
     "nl": "Wanneer is North Sea Jazz op Curaçao?",
-    "en": "When is Curaçao North Sea Jazz?"
+    "en": "When is Curaçao North Sea Jazz?",
+    "de": "Wann ist Curaçao North Sea Jazz?",
+    "es": "¿Cuándo es el North Sea Jazz de Curazao?",
+    "pt": "Quando é o Curaçao North Sea Jazz?"
    },
    "a": {
     "nl": "De editie van 2026 was van 3 tot en met 5 september bij het World Trade Center in Piscadera. Een dagkaart kostte in 2025 $195, een 3-daagse kaart in 2026 €370. De data voor 2027 zijn nog niet bekend.",
-    "en": "The 2026 edition ran September 3 to 5 at the World Trade Center in Piscadera. A day ticket cost $195 in 2025 and a three-day pass €370 in 2026. 2027 dates haven't been announced yet."
+    "en": "The 2026 edition ran September 3 to 5 at the World Trade Center in Piscadera. A day ticket cost $195 in 2025 and a three-day pass €370 in 2026. 2027 dates haven't been announced yet.",
+    "de": "Die Ausgabe 2026 fand vom 3. bis 5. September im World Trade Center in Piscadera statt. Ein Tagesticket kostete 2025 195 $, ein Dreitagespass 2026 370 €. Die Termine für 2027 stehen noch nicht fest.",
+    "es": "La edición 2026 se celebró del 3 al 5 de septiembre en el World Trade Center de Piscadera. Una entrada de un día costó US$195 en 2025 y un pase de tres días €370 en 2026. Aún no se han anunciado las fechas de 2027.",
+    "pt": "A edição de 2026 aconteceu de 3 a 5 de setembro no World Trade Center, em Piscadera. Um ingresso de um dia custou US$ 195 em 2025 e um passe de três dias € 370 em 2026. As datas de 2027 ainda não foram anunciadas."
    }
   },
   {
    "q": {
     "nl": "Welke grote evenementen zijn er per maand?",
-    "en": "What are the biggest events by month?"
+    "en": "What are the biggest events by month?",
+    "de": "Was sind die größten Events pro Monat?",
+    "es": "¿Cuáles son los eventos más importantes por mes?",
+    "pt": "Quais são os maiores eventos por mês?"
    },
    "a": {
     "nl": "Januari: Fuikdag en Tumba Festival. Februari: carnaval. Maart/april: Seú, BlueSeas, filmfestival en Koningsdag. Mei: golf Pro-Am. Juli: Emancipatiedag en Vlagdag. Augustus: Tula-dag en Kaya Kaya. September: North Sea Jazz. Oktober: Pride en Curaçao-dag. November: KLM Marathon. December: pagara's en oud en nieuw.",
-    "en": "January: Fuik Day and the Tumba Festival. February: Carnival. March/April: Seú, BlueSeas, the film festival and King's Day. May: golf Pro-Am. July: Emancipation Day and Flag Day. August: Tula Day and Kaya Kaya. September: North Sea Jazz. October: Pride and Curaçao Day. November: KLM Marathon. December: pagaras and New Year's Eve."
+    "en": "January: Fuik Day and the Tumba Festival. February: Carnival. March/April: Seú, BlueSeas, the film festival and King's Day. May: golf Pro-Am. July: Emancipation Day and Flag Day. August: Tula Day and Kaya Kaya. September: North Sea Jazz. October: Pride and Curaçao Day. November: KLM Marathon. December: pagaras and New Year's Eve.",
+    "de": "Januar: Fuik Day und Tumba Festival. Februar: Karneval. März/April: Seú, BlueSeas, Filmfestival und Königstag. Mai: Golf-Pro-Am. Juli: Emanzipationstag und Flaggentag. August: Tula-Tag und Kaya Kaya. September: North Sea Jazz. Oktober: Pride und Curaçao-Tag. November: KLM-Marathon. Dezember: Pagaras und Silvester.",
+    "es": "Enero: Fuik Day y Tumba Festival. Febrero: Carnaval. Marzo/abril: Seú, BlueSeas, el festival de cine y el Día del Rey. Mayo: Pro-Am de golf. Julio: Día de la Emancipación y Día de la Bandera. Agosto: Día de Tula y Kaya Kaya. Septiembre: North Sea Jazz. Octubre: Pride y Día de Curazao. Noviembre: Maratón KLM. Diciembre: pagaras y Nochevieja.",
+    "pt": "Janeiro: Fuik Day e Tumba Festival. Fevereiro: Carnaval. Março/abril: Seú, BlueSeas, o festival de cinema e o Dia do Rei. Maio: Pro-Am de golfe. Julho: Dia da Emancipação e Dia da Bandeira. Agosto: Dia de Tula e Kaya Kaya. Setembro: North Sea Jazz. Outubro: Pride e Dia de Curaçao. Novembro: Maratona KLM. Dezembro: pagaras e Réveillon."
    }
   },
   {
    "q": {
     "nl": "Wat is er elke week te doen op Curaçao?",
-    "en": "What's on every week in Curaçao?"
+    "en": "What's on every week in Curaçao?",
+    "de": "Was ist jede Woche auf Curaçao los?",
+    "es": "¿Qué hay cada semana en Curazao?",
+    "pt": "O que acontece toda semana em Curaçao?"
    },
    "a": {
     "nl": "Donderdag: Punda Vibes vanaf 17.00 uur met vuurwerk om 20.15 uur, en salsa bij Mundo Bizarro. Vrijdag en zondag: Wet & Wild op Mambo Beach. Zaterdag: Zanzibar op Jan Thiel. Zondagmiddag: Sunday Funday bij Kokomo Beach.",
-    "en": "Thursday: Punda Vibes from 5 p.m. with fireworks at 8:15 p.m., plus salsa at Mundo Bizarro. Friday and Sunday: Wet & Wild at Mambo Beach. Saturday: Zanzibar at Jan Thiel. Sunday afternoon: Sunday Funday at Kokomo Beach."
+    "en": "Thursday: Punda Vibes from 5 p.m. with fireworks at 8:15 p.m., plus salsa at Mundo Bizarro. Friday and Sunday: Wet & Wild at Mambo Beach. Saturday: Zanzibar at Jan Thiel. Sunday afternoon: Sunday Funday at Kokomo Beach.",
+    "de": "Donnerstag: Punda Vibes ab 17 Uhr mit Feuerwerk um 20:15 Uhr, dazu Salsa im Mundo Bizarro. Freitag und Sonntag: Wet & Wild am Mambo Beach. Samstag: Zanzibar in Jan Thiel. Sonntagnachmittag: Sunday Funday am Kokomo Beach.",
+    "es": "Jueves: Punda Vibes desde las 17:00 con fuegos artificiales a las 20:15, y salsa en Mundo Bizarro. Viernes y domingo: Wet & Wild en Mambo Beach. Sábado: Zanzibar en Jan Thiel. Domingo por la tarde: Sunday Funday en Kokomo Beach.",
+    "pt": "Quinta: Punda Vibes a partir das 17h com fogos de artifício às 20h15, e salsa no Mundo Bizarro. Sexta e domingo: Wet & Wild no Mambo Beach. Sábado: Zanzibar em Jan Thiel. Domingo à tarde: Sunday Funday no Kokomo Beach."
    }
   },
   {
    "q": {
     "nl": "Wat is Fuikdag?",
-    "en": "What is Fuik Day?"
+    "en": "What is Fuik Day?",
+    "de": "Was ist der Fuik Day?",
+    "es": "¿Qué es el Fuik Day?",
+    "pt": "O que é o Fuik Day?"
    },
    "a": {
     "nl": "Een groot bootfeest in de Fuikbaai op de eerste zondag van januari, in 2027 op 3 januari. Je hebt een plek op een boot nodig; een plek op een catamaran met open bar kost rond $350.",
-    "en": "A big boat party in Fuik Bay on the first Sunday of January, January 3 in 2027. You need a spot on a boat; a catamaran spot with an open bar costs around $350."
+    "en": "A big boat party in Fuik Bay on the first Sunday of January, January 3 in 2027. You need a spot on a boat; a catamaran spot with an open bar costs around $350.",
+    "de": "Eine große Bootsparty in der Fuik Bay am ersten Sonntag im Januar, 2027 am 3. Januar. Du brauchst einen Platz auf einem Boot; ein Platz auf einem Katamaran mit Open Bar kostet etwa 350 $.",
+    "es": "Una gran fiesta en barco en Fuik Bay el primer domingo de enero, el 3 de enero en 2027. Necesitas un lugar en un barco; un lugar en un catamarán con barra libre cuesta unos US$350.",
+    "pt": "Uma grande festa de barco na Fuik Bay no primeiro domingo de janeiro, em 3 de janeiro em 2027. Você precisa de um lugar em um barco; um lugar em um catamarã com open bar custa cerca de US$ 350."
    }
   },
   {
    "q": {
     "nl": "Is carnaval op Curaçao gratis?",
-    "en": "Is Curaçao Carnival free?"
+    "en": "Is Curaçao Carnival free?",
+    "de": "Ist der Karneval auf Curaçao kostenlos?",
+    "es": "¿Es gratis el Carnaval de Curazao?",
+    "pt": "O Carnaval de Curaçao é grátis?"
    },
    "a": {
     "nl": "Ja, kijken langs de route van de parades is gratis. Wie zelf wil meelopen, betaalt een carnavalsgroep vanaf ongeveer $850 inclusief kostuum.",
-    "en": "Yes, watching the parades from the route is free. If you want to walk in one, a carnival group charges from about $850 including costume."
+    "en": "Yes, watching the parades from the route is free. If you want to walk in one, a carnival group charges from about $850 including costume.",
+    "de": "Ja, den Paraden von der Strecke aus zuzuschauen ist kostenlos. Wenn du selbst mitlaufen willst, verlangt eine Karnevalsgruppe ab etwa 850 $ inklusive Kostüm.",
+    "es": "Sí, mirar los desfiles desde el recorrido es gratis. Si quieres desfilar, una comparsa de carnaval cobra desde unos US$850 con disfraz incluido.",
+    "pt": "Sim, assistir aos desfiles do percurso é grátis. Se quiser desfilar, um grupo de carnaval cobra a partir de cerca de US$ 850 com fantasia incluída."
    }
   },
   {
    "q": {
     "nl": "Welke evenementen zijn leuk met kinderen?",
-    "en": "Which events are good with kids?"
+    "en": "Which events are good with kids?",
+    "de": "Welche Events eignen sich für Kinder?",
+    "es": "¿Qué eventos son buenos para ir con niños?",
+    "pt": "Quais eventos são bons para crianças?"
    },
    "a": {
     "nl": "De kinderparade en paardenparade tijdens carnaval, Seú op tweede paasdag, Koningsdag in Otrobanda met een kinderhoek op Brionplein, het 10/10-feest in Punda en Punda Vibes op donderdag.",
-    "en": "The children's parade and horse parade at carnival, Seú on Easter Monday, King's Day in Otrobanda with a kids' area on Brionplein, the 10/10 party in Punda and Punda Vibes on Thursdays."
+    "en": "The children's parade and horse parade at carnival, Seú on Easter Monday, King's Day in Otrobanda with a kids' area on Brionplein, the 10/10 party in Punda and Punda Vibes on Thursdays.",
+    "de": "Die Kinderparade und die Pferdeparade beim Karneval, Seú am Ostermontag, der Königstag in Otrobanda mit Kinderbereich auf dem Brionplein, die 10/10-Party in Punda und Punda Vibes donnerstags.",
+    "es": "El desfile infantil y el desfile de caballos del carnaval, Seú el Lunes de Pascua, el Día del Rey en Otrobanda con zona infantil en Brionplein, la fiesta del 10/10 en Punda y Punda Vibes los jueves.",
+    "pt": "O desfile infantil e o desfile de cavalos do carnaval, o Seú na Segunda-feira de Páscoa, o Dia do Rei em Otrobanda com área infantil na Brionplein, a festa do 10/10 em Punda e o Punda Vibes às quintas."
    }
   },
   {
    "q": {
     "nl": "Hoe vier je oud en nieuw op Curaçao?",
-    "en": "How do people celebrate New Year's Eve in Curaçao?"
+    "en": "How do people celebrate New Year's Eve in Curaçao?",
+    "de": "Wie feiert man Silvester auf Curaçao?",
+    "es": "¿Cómo se celebra la Nochevieja en Curazao?",
+    "pt": "Como se comemora o Réveillon em Curaçao?"
    },
    "a": {
     "nl": "Met pagara's: lange slingers vuurwerk die overdag worden afgestoken, onder meer in Pietermaai om 14.00 uur met een straatfeest erna. Op 30 december is er een grote vuurwerkshow bij Kooyman in Zeelandia, en op 3 januari 2027 volgt Fuikdag.",
-    "en": "With pagaras: long strings of firecrackers set off by day, including in Pietermaai at 2 p.m. followed by a street party. There is a big fireworks show at Kooyman in Zeelandia on December 30, and Fuik Day follows on January 3, 2027."
+    "en": "With pagaras: long strings of firecrackers set off by day, including in Pietermaai at 2 p.m. followed by a street party. There is a big fireworks show at Kooyman in Zeelandia on December 30, and Fuik Day follows on January 3, 2027.",
+    "de": "Mit Pagaras: langen Böllerketten, die tagsüber gezündet werden, unter anderem um 14 Uhr in Pietermaai, gefolgt von einem Straßenfest. Am 30. Dezember gibt es ein großes Feuerwerk bei Kooyman in Zeelandia, und am 3. Januar 2027 folgt der Fuik Day.",
+    "es": "Con pagaras: largas tiras de petardos que se encienden de día, entre otros en Pietermaai a las 14:00, seguidas de una fiesta callejera. Hay un gran espectáculo de fuegos artificiales en Kooyman, en Zeelandia, el 30 de diciembre, y el Fuik Day sigue el 3 de enero de 2027.",
+    "pt": "Com pagaras: longas fieiras de bombinhas que estouram durante o dia, inclusive em Pietermaai às 14h, seguidas de uma festa de rua. Há um grande show de fogos na Kooyman, em Zeelandia, em 30 de dezembro, e o Fuik Day vem em 3 de janeiro de 2027."
    }
   }
  ],
@@ -2746,10 +3958,21 @@
    "When is Curaçao Carnival 2027 and which parades should I see?",
    "What festivals happen in Curaçao in September?",
    "What weekly parties and events are there in Curaçao?"
+  ],
+  "de": [
+   "Wann ist der Karneval auf Curaçao 2027 und welche Paraden sollte ich sehen?",
+   "Welche Festivals gibt es im September auf Curaçao?",
+   "Welche wöchentlichen Partys und Events gibt es auf Curaçao?"
+  ],
+  "es": [
+   "¿Cuándo es el Carnaval de Curazao 2027 y qué desfiles debería ver?",
+   "¿Qué festivales hay en septiembre en Curazao?",
+   "¿Qué fiestas y eventos semanales hay en Curazao?"
+  ],
+  "pt": [
+   "Quando é o Carnaval de Curaçao 2027 e quais desfiles devo ver?",
+   "Quais festivais acontecem em Curaçao em setembro?",
+   "Quais festas e eventos semanais existem em Curaçao?"
   ]
- },
- "talen": [
-  "nl",
-  "en"
- ]
+ }
 }
