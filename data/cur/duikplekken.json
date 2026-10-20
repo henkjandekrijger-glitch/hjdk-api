@@ -1,1 +1,3710 @@
-{"id":"duikplekken","peildatum":"2026-10-20","items":[]}
+{
+ "id": "duikplekken",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "duikplek",
+  "en": "dive site"
+ },
+ "h1": {
+  "nl": "Duiken en snorkelen op Curaçao: welke duikplek past bij jou?",
+  "en": "Diving and snorkeling in Curaçao: which dive site suits you?"
+ },
+ "titel": {
+  "nl": "Duikplekken Curaçao: {n} duik- en snorkelplekken vergeleken",
+  "en": "Curaçao dive sites: {n} dive and snorkel spots compared"
+ },
+ "metaDesc": {
+  "nl": "{n} duik- en snorkelplekken op Curaçao met diepte, niveau, kant of boot, entree en scores. Beantwoord 4 vragen en zie je top 3.",
+  "en": "{n} Curaçao dive and snorkel sites with depth, level, shore or boat, entry fees and ratings. Answer 4 questions and get your top 3."
+ },
+ "kort": {
+  "nl": "We vergeleken 61 duik- en snorkelplekken op Curaçao. De meeste zijn gratis vanaf de kant te doen; alleen strandclubs als Cas Abao ($6 per auto) en Porto Mari ($3 per persoon) vragen entree. Beginners en snorkelaars zitten goed bij Tugboat, Playa Piskado (schildpadden) en Playa Kalki; ervaren duikers kiezen Superior Producer (wrak op 30 m), Watamula of Car Pile.",
+  "en": "We compared 61 dive and snorkel sites in Curaçao. Most are free shore dives; only beach clubs like Cas Abao ($6 per car) and Porto Mari ($3 per person) charge entry. Beginners and snorkelers do well at Tugboat, Playa Piskado (turtles) and Playa Kalki; experienced divers pick the Superior Producer (wreck at 100 ft), Watamula or Car Pile."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Ga je duiken of snorkelen?",
+    "en": "Are you diving or snorkeling?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Duiken",
+      "en": "Scuba diving"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Snorkelen",
+      "en": "Snorkeling"
+     },
+     "plus": [
+      "snorkelen",
+      "beginner",
+      "shore"
+     ],
+     "min": [
+      "diep",
+      "stroming",
+      "gevorderd"
+     ],
+     "vereist": "snorkelen"
+    },
+    {
+     "label": {
+      "nl": "Allebei, met de groep",
+      "en": "Both, as a group"
+     },
+     "plus": [
+      "snorkelen",
+      "voorzieningen"
+     ],
+     "min": [
+      "diep"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat is je niveau?",
+    "en": "What's your level?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Beginner of net gebrevetteerd",
+      "en": "Beginner or newly certified"
+     },
+     "plus": [
+      "beginner"
+     ],
+     "min": [
+      "diep",
+      "stroming",
+      "gevorderd"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ervaren (Advanced, 30 m)",
+      "en": "Experienced (Advanced, 100 ft)"
+     },
+     "plus": [
+      "gevorderd",
+      "diep",
+      "stroming"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Vanaf de kant of met de boot?",
+    "en": "From shore or by boat?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Either is fine"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Vanaf de kant, zelf met huurauto",
+      "en": "From shore, on my own by rental car"
+     },
+     "plus": [
+      "shore",
+      "gratis",
+      "voorzieningen"
+     ],
+     "min": [],
+     "vereist": "shore"
+    },
+    {
+     "label": {
+      "nl": "Met de boot",
+      "en": "By boat"
+     },
+     "plus": [
+      "boot"
+     ],
+     "min": [],
+     "vereist": "boot"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat wil je vooral zien?",
+    "en": "What do you most want to see?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Schildpadden",
+      "en": "Turtles"
+     },
+     "plus": [
+      "schildpadden"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Een wrak",
+      "en": "A wreck"
+     },
+     "plus": [
+      "wrak"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Koraal en rifvis",
+      "en": "Coral and reef fish"
+     },
+     "plus": [
+      "koraal"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Grote vis (barracuda, haaien, roggen)",
+      "en": "Big fish (barracuda, sharks, rays)"
+     },
+     "plus": [
+      "grotevis"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "watamula",
+   "naam": "Watamula",
+   "url": null,
+   "soort": {
+    "nl": "bootduik, drift",
+    "en": "boat dive, drift"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "boot",
+    "gevorderd",
+    "stroming",
+    "koraal",
+    "schildpadden",
+    "grotevis",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Alleen per boot",
+     "en": "Boat access only"
+    },
+    {
+     "nl": "Wisselende stroming, driftduik",
+     "en": "Shifting current, drift dive"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 145,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.curacao.com/en/activity/watamula"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Dicht, gezond koraal met grote scholen vis",
+     "Schildpadden en roggen gezien"
+    ],
+    "en": [
+     "Dense, healthy coral and big schools of fish",
+     "Turtles and rays spotted"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Stroming kan sterk zijn en draaien",
+     "Wat deining bij de punt"
+    ],
+    "en": [
+     "Current can be strong and change direction",
+     "Some surge near the point"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/watamula",
+    "https://www.divein.com/diving/destination/diving-curacao/",
+    "https://www.diveoclock.com/destinations/Caribbean/Curacao/",
+    "https://www.curacao.com/en/article/best-boat-diving-spots-curacao"
+   ]
+  },
+  {
+   "id": "playa-kalki",
+   "naam": "Playa Kalki (Alice in Wonderland)",
+   "url": null,
+   "soort": {
+    "nl": "kantduik",
+    "en": "shore dive"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "shore",
+    "beginner",
+    "koraal",
+    "schildpadden",
+    "snorkelen",
+    "westpunt",
+    "gratis",
+    "voorzieningen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://flipflopwanderers.com/?p=32523",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Instap vanaf steiger of strand",
+     "en": "Entry from jetty or beach"
+    },
+    {
+     "nl": "Duikshop op het strand",
+     "en": "Dive shop on the beach"
+    },
+    {
+     "nl": "Rif op 3 minuten zwemmen",
+     "en": "Reef 3 minutes' swim out"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 511,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.curacao.com/en/activity/playa-kalkialice-in-wonderland"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Veel sponzen en koraal, rif vanaf de kant te zien",
+     "Goed geregelde duikshop met lucht en nitrox",
+     "Schildpadden en roggen"
+    ],
+    "en": [
+     "Lots of sponges and coral, reef visible from shore",
+     "Well-run dive shop with air and nitrox",
+     "Turtles and rays"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Trap vanaf de parkeerplaats, gear sjouwen"
+    ],
+    "en": [
+     "Stairs from the parking lot, gear has to be carried"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/playa-kalkialice-in-wonderland",
+    "https://flipflopwanderers.com/?p=32523",
+    "https://www.undercurrent.org/UCnow/dive_reviews/Curacao/Various_report_11869.html",
+    "https://www.diveoclock.com/destinations/Caribbean/Curacao/",
+    "https://www.klm.nl/travel-guide/inspiration/the-most-beautiful-snorkelling-and-dive-sites-on-curacao"
+   ]
+  },
+  {
+   "id": "playa-piskado",
+   "naam": "Playa Piskado (Playa Grandi)",
+   "url": null,
+   "soort": {
+    "nl": "kantduik, snorkelbaai",
+    "en": "shore dive, snorkel cove"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "shore",
+    "beginner",
+    "schildpadden",
+    "snorkelen",
+    "koraal",
+    "westpunt",
+    "gratis",
+    "voorzieningen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://flipflopwanderers.com/?p=32523",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Tot ongeveer 18 m",
+     "en": "Down to about 18 m (59 ft)"
+    },
+    {
+     "nl": "Klein restaurant, alleen contant",
+     "en": "Small cash-only restaurant"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 905,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Bijna altijd zeeschildpadden bij de vissers",
+     "Makkelijke instap over zandhelling"
+    ],
+    "en": [
+     "Sea turtles almost always near the fishermen",
+     "Easy entry down a sandy slope"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Erg druk zodra tourbussen arriveren",
+     "Soms sterke, onvoorspelbare stroming"
+    ],
+    "en": [
+     "Very busy once tour buses arrive",
+     "Occasional strong, unpredictable current"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/playa-grandi-playa-piskado",
+    "https://travel.padi.com/dive-sites/northern-curacao",
+    "https://flipflopwanderers.com/?p=32523",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://www.curacao.com/en/activity/playa-piscado-sweet-alice-playa-forti"
+   ]
+  },
+  {
+   "id": "playa-forti",
+   "naam": "Playa Forti (Sweet Alice)",
+   "url": null,
+   "soort": {
+    "nl": "kantduik",
+    "en": "shore dive"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "shore",
+    "koraal",
+    "stroming",
+    "westpunt",
+    "gratis",
+    "voorzieningen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Restaurant op de klif",
+     "en": "Cliff-top restaurant"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 240,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.curacao.com/en/activity/playa-piscado-sweet-alice-playa-forti"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Makkelijk bereikbaar in het dorp Westpunt"
+    ],
+    "en": [
+     "Easy to reach in Westpunt village"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Wordt snel diep",
+     "Soms sterke stroming"
+    ],
+    "en": [
+     "Gets deep quickly",
+     "Occasional strong current"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/playa-piscado-sweet-alice-playa-forti",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "grote-knip",
+   "naam": "Grote Knip (Kenepa Grandi)",
+   "url": null,
+   "soort": {
+    "nl": "snorkelbaai",
+    "en": "snorkel cove"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "shore",
+    "snorkelen",
+    "beginner",
+    "koraal",
+    "westpunt",
+    "gratis",
+    "voorzieningen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Snackbar en stoelverhuur",
+     "en": "Snack bar and chair rental"
+    },
+    {
+     "nl": "Snorkelen langs de rotsen",
+     "en": "Snorkel along the rocks"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 5098,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Helder water, goed snorkelen langs de rotsen",
+     "Doordeweeks rustig"
+    ],
+    "en": [
+     "Clear water, good snorkeling along the rocks",
+     "Quiet on weekdays"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Druk in het weekend en met tourbussen",
+     "Kiezels bij de instap"
+    ],
+    "en": [
+     "Busy on weekends and with tour buses",
+     "Pebbly entry"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://www.curacao.com/en/activity/playa-kenepa-playa-grandi"
+   ]
+  },
+  {
+   "id": "klein-knip",
+   "naam": "Klein Knip (Kenepa Chiki)",
+   "url": null,
+   "soort": {
+    "nl": "snorkelbaai",
+    "en": "snorkel cove"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "shore",
+    "snorkelen",
+    "beginner",
+    "westpunt",
+    "gratis"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Kleine baai bij Grote Knip",
+     "en": "Small cove next to Grote Knip"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 28,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Kalm water en goed snorkelen langs de kliffen",
+     "Minder druk dan Grote Knip"
+    ],
+    "en": [
+     "Calm water, good snorkeling along the cliffs",
+     "Less crowded than Grote Knip"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Let op manchinelbomen"
+    ],
+    "en": [
+     "Watch out for manchineel trees"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://nomadicniko.com/curacao/beaches/"
+   ]
+  },
+  {
+   "id": "paradise",
+   "naam": "Paradise",
+   "url": null,
+   "soort": {
+    "nl": "bootduik",
+    "en": "boat dive"
+   },
+   "plaats": "tussen Klein Knip en Playa Jeremi",
+   "tags": [
+    "boot",
+    "schildpadden",
+    "koraal",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Neem een lamp mee",
+     "en": "Bring a torch"
+    },
+    {
+     "nl": "Pauze op nabij strand",
+     "en": "Surface interval on a beach"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Schildpadden en gezond rif",
+     "Weinig boten en duikers"
+    ],
+    "en": [
+     "Turtles and a healthy reef",
+     "Few boats and divers"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divein.com/diving/destination/diving-curacao/",
+    "https://www.deeperblue.com/curacao-dive-task-force-announces-interactive-dive-site-map/"
+   ]
+  },
+  {
+   "id": "playa-jeremi",
+   "naam": "Playa Jeremi",
+   "url": null,
+   "soort": {
+    "nl": "kantduik, snorkelbaai",
+    "en": "shore dive, snorkel cove"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "shore",
+    "snorkelen",
+    "westpunt",
+    "gratis"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Vooral lokale bezoekers",
+     "en": "Mostly local visitors"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 403,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustig, vooral lokale bezoekers"
+    ],
+    "en": [
+     "Quiet, mostly local visitors"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen schaduw"
+    ],
+    "en": [
+     "No shade"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://www.deeperblue.com/curacao-dive-task-force-announces-interactive-dive-site-map/"
+   ]
+  },
+  {
+   "id": "playa-lagun",
+   "naam": "Playa Lagun",
+   "url": null,
+   "soort": {
+    "nl": "kantduik, snorkelbaai",
+    "en": "shore dive, snorkel cove"
+   },
+   "plaats": "Lagun",
+   "tags": [
+    "shore",
+    "beginner",
+    "schildpadden",
+    "koraal",
+    "snorkelen",
+    "westpunt",
+    "gratis",
+    "voorzieningen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Smalle baai tussen kliffen",
+     "en": "Narrow channel between cliffs"
+    },
+    {
+     "nl": "Duikcentrum aan de baai",
+     "en": "Dive center at the cove"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 1020,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.curacao.com/en/activity/playa-lagun"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Kalm water, ook voor beginners",
+     "Schildpadden en rijk rif aan beide kanten"
+    ],
+    "en": [
+     "Calm water, fine for beginners",
+     "Turtles and a rich reef on both sides"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Vissersboten in de baai"
+    ],
+    "en": [
+     "Fishing boats in the cove"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/playa-lagun",
+    "https://www.curacao.com/en/article/best-shore-diving-spots-curacao",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "elvins-plane-wreck",
+   "naam": "Elvin's Plane Wreck",
+   "url": null,
+   "soort": {
+    "nl": "vliegtuigwrak",
+    "en": "plane wreck"
+   },
+   "plaats": "westkust",
+   "tags": [
+    "wrak",
+    "schildpadden",
+    "koraal",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Fokker in 2006 afgezonken",
+     "en": "Fokker sunk on purpose in 2006"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Wrak op zand met schildpadden en murenen"
+    ],
+    "en": [
+     "Wreck on sand with turtles and morays"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/elvins-plane-wreck",
+    "https://curacao.com/en/category/scuba-diving-and-snorkeling"
+   ]
+  },
+  {
+   "id": "hells-corner",
+   "naam": "Hell's Corner",
+   "url": null,
+   "soort": {
+    "nl": "wandduik",
+    "en": "wall dive"
+   },
+   "plaats": "westkust",
+   "tags": [
+    "stroming",
+    "koraal",
+    "schildpadden",
+    "grotevis",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Boei verplaatst naar rustiger plek",
+     "en": "Buoy moved to a calmer spot"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Steile wand met grote gorgonen en scholen horsmakrelen"
+    ],
+    "en": [
+     "Steep wall with big gorgonians and schooling jacks"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Genoemd naar de sterke stroming"
+    ],
+    "en": [
+     "Named for its strong current"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/hells-corner",
+    "https://curacao.com/en/category/scuba-diving-and-snorkeling"
+   ]
+  },
+  {
+   "id": "boca-santu-pretu",
+   "naam": "Boca Santu Pretu (wrak Catharine)",
+   "url": null,
+   "soort": {
+    "nl": "kantduik, wrak",
+    "en": "shore dive, wreck"
+   },
+   "plaats": "Santa Cruz",
+   "tags": [
+    "shore",
+    "wrak",
+    "koraal",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Wrak op ongeveer 6 m",
+     "en": "Wreck at about 6 m (20 ft)"
+    },
+    {
+     "nl": "Zwart zandstrand",
+     "en": "Black sand beach"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 4,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.curacao.com/en/activity/santu-pretu"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Ondersteboven wrak, tuinalen en hersenkoraal",
+     "Afgelegen en stil"
+    ],
+    "en": [
+     "Upside-down wreck, garden eels and brain coral",
+     "Remote and quiet"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/santu-pretu",
+    "https://curacao.com/en/category/scuba-diving-and-snorkeling",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "mushroom-forest",
+   "naam": "Mushroom Forest",
+   "url": null,
+   "soort": {
+    "nl": "bootduik",
+    "en": "boat dive"
+   },
+   "plaats": "bij Santa Cruz",
+   "tags": [
+    "boot",
+    "beginner",
+    "koraal",
+    "schildpadden",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Paddenstoelvormig sterkoraal",
+     "en": "Mushroom-shaped star coral"
+    },
+    {
+     "nl": "Vaak gecombineerd met Blue Room",
+     "en": "Often paired with the Blue Room"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Unieke koraalvormen, veel foto's waard",
+     "Schildpadden, murenen en verpleegsterhaaien"
+    ],
+    "en": [
+     "Unique coral shapes, great for photos",
+     "Turtles, morays and nurse sharks"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Achteruitgegaan door drukte",
+     "Dicht koraal, let op je vinnen"
+    ],
+    "en": [
+     "Has declined from heavy traffic",
+     "Dense coral, watch your fins"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/mushroom-forest",
+    "https://www.divein.com/diving/destination/diving-curacao/",
+    "https://www.diveoclock.com/destinations/Caribbean/Curacao/",
+    "https://dive.site/destination/curacao-zpY",
+    "https://flipflopwanderers.com/?p=32523",
+    "https://www.curacao.com/en/article/best-boat-diving-spots-curacao",
+    "https://ai.acoyacuracao.com/blog/shore-diving-curacao-minutes-from-acoya/"
+   ]
+  },
+  {
+   "id": "blue-room",
+   "naam": "Blue Room (grot)",
+   "url": null,
+   "soort": {
+    "nl": "grot, snorkel en duik",
+    "en": "cave, snorkel and dive"
+   },
+   "plaats": "bij Santa Cruz",
+   "tags": [
+    "boot",
+    "snorkelen",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ingang op ongeveer 5 m",
+     "en": "Entrance at about 5 m (16 ft)"
+    },
+    {
+     "nl": "Best rond het middaguur",
+     "en": "Best around midday"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Blauw licht in de grot met zilvervisjes"
+    ],
+    "en": [
+     "Blue light inside the cave with silversides"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Gids aangeraden voor in- en uitgang"
+    ],
+    "en": [
+     "Guide advised for getting in and out"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/the-cave",
+    "https://flipflopwanderers.com/?p=32523",
+    "https://www.curacao.com/en/article/best-boat-diving-spots-curacao",
+    "https://ai.acoyacuracao.com/blog/shore-diving-curacao-minutes-from-acoya/"
+   ]
+  },
+  {
+   "id": "makos-mountain",
+   "naam": "Mako's Mountain",
+   "url": null,
+   "soort": {
+    "nl": "bootduik, open zee",
+    "en": "boat dive, open water"
+   },
+   "plaats": "ingang Santa Marthabaai",
+   "tags": [
+    "gevorderd",
+    "diep",
+    "grotevis",
+    "koraal",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Onbeschut, instap soms ruw",
+     "en": "Exposed, entry sometimes rough"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 1,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.curacao.com/en/activity/makos-mountain"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Kans op adelaarsroggen, barracuda en haaien"
+    ],
+    "en": [
+     "Chance of eagle rays, barracuda and sharks"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Ruwe omstandigheden, voor ervaren duikers"
+    ],
+    "en": [
+     "Rough conditions, for experienced divers"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/makos-mountain",
+    "https://www.curacao.com/en/article/best-boat-diving-spots-curacao"
+   ]
+  },
+  {
+   "id": "black-coral-garden",
+   "naam": "Black Coral Garden",
+   "url": null,
+   "soort": {
+    "nl": "kantduik",
+    "en": "shore dive"
+   },
+   "plaats": "Santa Marthabaai",
+   "tags": [
+    "shore",
+    "koraal",
+    "schildpadden",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "5 minuten zwemmen naar de boei",
+     "en": "5-minute swim to the buoy"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Veel zwart koraal en scholen snappers"
+    ],
+    "en": [
+     "Lots of black coral and schools of snapper"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/sponge-forest-playa-hulu-rediho-black-coral-garden",
+    "https://www.curacao.com/en/article/best-boat-diving-spots-curacao"
+   ]
+  },
+  {
+   "id": "airplane-wreck-santa-martha",
+   "naam": "Airplane Wreck (Santa Martha)",
+   "url": null,
+   "soort": {
+    "nl": "vliegtuigwrak",
+    "en": "plane wreck"
+   },
+   "plaats": "Santa Marthabaai",
+   "tags": [
+    "shore",
+    "boot",
+    "wrak",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Gemarkeerd met een boei",
+     "en": "Marked by a buoy"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Begroeid klein vliegtuig, mooi voor macro"
+    ],
+    "en": [
+     "Overgrown small plane, good for macro"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/airplane-wreck",
+    "https://curacao.com/en/category/scuba-diving-and-snorkeling"
+   ]
+  },
+  {
+   "id": "sponge-forest",
+   "naam": "Sponge Forest",
+   "url": null,
+   "soort": {
+    "nl": "hellend rif",
+    "en": "sloping reef"
+   },
+   "plaats": "bij Playa Hulu",
+   "tags": [
+    "koraal",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Sponzen op een hellende wand",
+     "en": "Sponges on a sloping wall"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Een van de kleurrijkste sponsplekken van het eiland"
+    ],
+    "en": [
+     "One of the island's most colorful sponge sites"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/sponge-forest-playa-hulu-rediho-black-coral-garden",
+    "https://curacao.com/en/category/scuba-diving-and-snorkeling"
+   ]
+  },
+  {
+   "id": "playa-hulu",
+   "naam": "Playa Hulu",
+   "url": null,
+   "soort": {
+    "nl": "kantduik",
+    "en": "shore dive"
+   },
+   "plaats": "Santa Martha",
+   "tags": [
+    "shore",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Klein afgelegen strandje",
+     "en": "Small secluded beach"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Doordeweeks bijna leeg"
+    ],
+    "en": [
+     "Almost empty on weekdays"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/sponge-forest-playa-hulu-rediho-black-coral-garden"
+   ]
+  },
+  {
+   "id": "rediho",
+   "naam": "Rediho",
+   "url": null,
+   "soort": {
+    "nl": "rifhelling",
+    "en": "reef slope"
+   },
+   "plaats": "bij Playa Hulu",
+   "tags": [
+    "koraal",
+    "stroming",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ligt aan open zee",
+     "en": "Exposed to open sea"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Ongerept rif dat naar diep water helt"
+    ],
+    "en": [
+     "Untouched reef sloping into deep water"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Golfslag en wat stroming"
+    ],
+    "en": [
+     "Choppy waves and some current"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/sponge-forest-playa-hulu-rediho-black-coral-garden",
+    "https://www.curacao.com/en/article/best-boat-diving-spots-curacao"
+   ]
+  },
+  {
+   "id": "playa-hunku",
+   "naam": "Playa Hunku",
+   "url": null,
+   "soort": {
+    "nl": "begeleide kantduik",
+    "en": "guided shore dive"
+   },
+   "plaats": "bij Porto Mari",
+   "tags": [
+    "shore",
+    "koraal",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Privéstrand, alleen begeleid",
+     "en": "Private beach, guided only"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Levendig koraal, weinig duikers"
+    ],
+    "en": [
+     "Lively coral, few divers"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://flipflopwanderers.com/?p=32523"
+   ]
+  },
+  {
+   "id": "porto-mari",
+   "naam": "Playa Porto Mari (The Valley, dubbel rif)",
+   "url": null,
+   "soort": {
+    "nl": "kantduik, dubbel rif",
+    "en": "shore dive, double reef"
+   },
+   "plaats": "Sint Willibrordus",
+   "tags": [
+    "shore",
+    "beginner",
+    "koraal",
+    "snorkelen",
+    "westpunt",
+    "voorzieningen",
+    "schildpadden"
+   ],
+   "prijs": {
+    "bedrag": 3,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person"
+    },
+    "bron": "https://www.undercurrent.org/UCnow/dive_reviews/Curacao/Various_report_11869.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Tot ongeveer 30 m",
+     "en": "Down to about 30 m (98 ft)"
+    },
+    {
+     "nl": "Twee riffen met vallei",
+     "en": "Two reefs with a valley"
+    },
+    {
+     "nl": "Duikshop en restaurant",
+     "en": "Dive shop and restaurant"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 1833,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Dubbel rif: genoeg voor meerdere duiken",
+     "Makkelijk navigeren, geleidelijke instap",
+     "Vriendelijke duikshop"
+    ],
+    "en": [
+     "Double reef: enough for several dives",
+     "Easy navigation, gradual entry",
+     "Friendly dive shop"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Langste zwemstuk naar het rif (5 tot 8 minuten)",
+     "Druk, vooral vrijdagmiddag"
+    ],
+    "en": [
+     "Longest swim to the reef (5 to 8 minutes)",
+     "Crowded, especially Friday afternoons"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/the-valleyport-marie",
+    "https://flipflopwanderers.com/?p=32523",
+    "https://www.undercurrent.org/UCnow/dive_reviews/Curacao/Various_report_11869.html",
+    "https://travel.padi.com/dive-sites/northern-curacao",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "daaibooi",
+   "naam": "Playa Daaibooi",
+   "url": null,
+   "soort": {
+    "nl": "snorkelbaai",
+    "en": "snorkel cove"
+   },
+   "plaats": "Sint Willibrordus",
+   "tags": [
+    "shore",
+    "snorkelen",
+    "beginner",
+    "schildpadden",
+    "westpunt",
+    "gratis"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Schaduw van bomen en palapa's",
+     "en": "Shade from trees and palapas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 469,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Kalm, helder water",
+     "Schildpadden als je verder uitzwemt"
+    ],
+    "en": [
+     "Calm, clear water",
+     "Turtles if you swim farther out"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Op zondag vol met lokale gezinnen"
+    ],
+    "en": [
+     "Packed with local families on Sundays"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/"
+   ]
+  },
+  {
+   "id": "cas-abao",
+   "naam": "Cas Abao (Lower House)",
+   "url": "http://www.casabaobeach.com/",
+   "soort": {
+    "nl": "kantduik, strandclub",
+    "en": "shore dive, beach club"
+   },
+   "plaats": "bij Sint Willibrordus",
+   "tags": [
+    "shore",
+    "beginner",
+    "koraal",
+    "snorkelen",
+    "westpunt",
+    "voorzieningen"
+   ],
+   "prijs": {
+    "bedrag": 6,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per auto (max 4 personen), zondag $7",
+     "en": "per car (up to 4 people), $7 on Sundays"
+    },
+    "bron": "https://flipflopwanderers.com/?p=32523",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Duikshop met nitrox",
+     "en": "Dive shop with nitrox"
+    },
+    {
+     "nl": "Touw markeert de terugweg",
+     "en": "Rope marks the way back"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 6834,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=4868252435408131181"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 2842,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Makkelijke wand, ook voor solo duikers",
+     "Zandige instap om aan je gear te wennen",
+     "Alle voorzieningen op één plek"
+    ],
+    "en": [
+     "Easy wall to navigate, even solo",
+     "Sandy entry to settle into your gear",
+     "All facilities in one place"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Entree per auto",
+     "Druk als cruisebussen komen"
+    ],
+    "en": [
+     "Entry fee per car",
+     "Busy when cruise buses arrive"
+    ]
+   },
+   "bronnen": [
+    "https://flipflopwanderers.com/?p=32523",
+    "https://www.undercurrent.org/UCnow/dive_reviews/Curacao/Various_report_11869.html",
+    "https://www.klm.nl/travel-guide/inspiration/the-most-beautiful-snorkelling-and-dive-sites-on-curacao",
+    "https://www.curacao.com/en/activity/lower-housekas-abou",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://www.google.com/maps?cid=4868252435408131181"
+   ]
+  },
+  {
+   "id": "rif-sint-marie",
+   "naam": "Rif Sint Marie (Coral Estate)",
+   "url": null,
+   "soort": {
+    "nl": "huisrif via steiger",
+    "en": "house reef from pier"
+   },
+   "plaats": "Coral Estate",
+   "tags": [
+    "shore",
+    "beginner",
+    "koraal",
+    "schildpadden",
+    "westpunt",
+    "gratis",
+    "voorzieningen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://www.undercurrent.org/UCnow/dive_reviews/Curacao/Various_report_11869.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Eerst melden bij de duikshop",
+     "en": "Check in at the dive shop first"
+    },
+    {
+     "nl": "Lockers, douches, kleedruimte",
+     "en": "Lockers, showers, changing rooms"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Reefballs op 5 tot 6 m voor de veiligheidsstop",
+     "Schildpadden, barracuda en papegaaivissen"
+    ],
+    "en": [
+     "Reef balls at 15 to 20 ft for the safety stop",
+     "Turtles, barracuda and parrotfish"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Kleine plek om je klaar te maken, weinig schaduw",
+     "ID-controle bij de ingang"
+    ],
+    "en": [
+     "Small gear-up area, little shade",
+     "ID check at the gate"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/rif-sint-marie",
+    "https://www.undercurrent.org/UCnow/dive_reviews/Curacao/Various_report_11869.html"
+   ]
+  },
+  {
+   "id": "seldom-reef",
+   "naam": "Seldom Reef (Bullenbaai)",
+   "url": null,
+   "soort": {
+    "nl": "diepe wandduik",
+    "en": "deep wall dive"
+   },
+   "plaats": "Bullenbaai",
+   "tags": [
+    "gevorderd",
+    "diep",
+    "koraal",
+    "grotevis",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Steile wand",
+     "en": "Sheer vertical wall"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Grote waaiers, horsmakrelen en weinig drukte"
+    ],
+    "en": [
+     "Large sea fans, jacks and few crowds"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Erg diep, let op je limieten"
+    ],
+    "en": [
+     "Very deep, watch your limits"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/seldom-reef-bullenbaai",
+    "https://www.curacao.com/en/article/best-boat-diving-spots-curacao"
+   ]
+  },
+  {
+   "id": "snake-bay",
+   "naam": "Snake Bay (Slangenbaai)",
+   "url": null,
+   "soort": {
+    "nl": "baai, rif",
+    "en": "bay, reef"
+   },
+   "plaats": "Slangenbaai",
+   "tags": [
+    "schildpadden",
+    "grotevis",
+    "koraal",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Nachtduik met lamp aanbevolen",
+     "en": "Night dive with torch recommended"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Grote scholen vis, roggen en groene schildpadden"
+    ],
+    "en": [
+     "Big schools of fish, rays and green turtles"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divein.com/diving/destination/diving-curacao/",
+    "https://www.curacao.com/en/activity/boka-sami-snake-bay-kaap-mal-meeuw",
+    "https://www.google.com/maps/d/u/0/viewer?mid=14lgGswE_CFNmXo4AvYBq8JjC3SN_iWZt"
+   ]
+  },
+  {
+   "id": "boka-sami",
+   "naam": "Boka Sami (Sint Michiel)",
+   "url": null,
+   "soort": {
+    "nl": "kantduik",
+    "en": "shore dive"
+   },
+   "plaats": "Sint Michiel",
+   "tags": [
+    "shore",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vissersdorp aan een baai",
+     "en": "Fishing village on a bay"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 6,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Lokaal en rustig"
+    ],
+    "en": [
+     "Local and quiet"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.colemanconcierge.com/?p=19551",
+    "https://www.curacao.com/en/activity/boka-sami-snake-bay-kaap-mal-meeuw",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "vaersenbaai",
+   "naam": "Vaersenbaai (Kokomo Beach)",
+   "url": "http://www.kokomo-beach.com/",
+   "soort": {
+    "nl": "kantduik, strandclub",
+    "en": "shore dive, beach club"
+   },
+   "plaats": "Vaersenbaai",
+   "tags": [
+    "shore",
+    "koraal",
+    "snorkelen",
+    "midden",
+    "gratis",
+    "voorzieningen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Tot ongeveer 30 m",
+     "en": "Down to about 30 m (98 ft)"
+    },
+    {
+     "nl": "Rif begint vlak bij de kant",
+     "en": "Reef starts close to shore"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 5753,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=9388400039833017325"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 600,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rif vlak bij de kant met sponzen en hersenkoraal",
+     "Goed snorkelen rechts in de baai"
+    ],
+    "en": [
+     "Reef close to shore with sponges and brain coral",
+     "Good snorkeling on the right side of the bay"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Druk in het weekend met DJ's"
+    ],
+    "en": [
+     "Busy on weekends with DJs"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/lovers-beach-vaersenbaai-the-car-wrecks",
+    "https://www.curacao.com/en/article/best-shore-diving-spots-curacao",
+    "https://travel.padi.com/dive-sites/northern-curacao",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://www.google.com/maps?cid=9388400039833017325"
+   ]
+  },
+  {
+   "id": "car-wrecks-vaersenbaai",
+   "naam": "Car Wrecks (Vaersenbaai)",
+   "url": null,
+   "soort": {
+    "nl": "autowrakken, diep",
+    "en": "car wrecks, deep"
+   },
+   "plaats": "Vaersenbaai",
+   "tags": [
+    "shore",
+    "boot",
+    "wrak",
+    "diep",
+    "gevorderd",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Tientallen autowrakken",
+     "en": "Dozens of car wrecks"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Bijzondere plek voor foto's"
+    ],
+    "en": [
+     "Unusual spot for photos"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Diep, vanaf de kant alleen met uitleg"
+    ],
+    "en": [
+     "Deep, needs directions from shore"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/lovers-beach-vaersenbaai-the-car-wrecks"
+   ]
+  },
+  {
+   "id": "piscadera",
+   "naam": "Piscaderabaai",
+   "url": null,
+   "soort": {
+    "nl": "kantduik",
+    "en": "shore dive"
+   },
+   "plaats": "Piscadera",
+   "tags": [
+    "shore",
+    "midden",
+    "voorzieningen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "5 minuten van de cruiseterminal",
+     "en": "5 minutes from the cruise terminal"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Handig voor een halve dag tussen cruisestops"
+    ],
+    "en": [
+     "Handy for a half day from a cruise stop"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.colemanconcierge.com/?p=19551",
+    "https://www.curacao.com/en/activity/the-wall-blue-bay-piscadera-playa-largu"
+   ]
+  },
+  {
+   "id": "blue-bay",
+   "naam": "Blue Bay (The Wall en The Garden)",
+   "url": null,
+   "soort": {
+    "nl": "kantduik, resortbaai",
+    "en": "shore dive, resort bay"
+   },
+   "plaats": "Blue Bay",
+   "tags": [
+    "shore",
+    "koraal",
+    "midden",
+    "voorzieningen",
+    "diep"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Wand en koraaltuin",
+     "en": "Wall and coral garden"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 830,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Wand en koraaltuin op zwemafstand",
+     "Barracuda, horsmakrelen en zachte koralen"
+    ],
+    "en": [
+     "Wall and coral garden within swimming distance",
+     "Barracuda, jacks and soft corals"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/article/best-shore-diving-spots-curacao",
+    "https://www.colemanconcierge.com/?p=19551",
+    "https://www.diveplannerpro.com/dive-centers/cw/cw-unique-diving/sites",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "double-reef",
+   "naam": "Double Reef",
+   "url": null,
+   "soort": {
+    "nl": "boot- of kantduik",
+    "en": "boat or shore dive"
+   },
+   "plaats": "Otrobanda",
+   "tags": [
+    "boot",
+    "shore",
+    "schildpadden",
+    "koraal",
+    "stroming",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Kant bij de waterfabriek",
+     "en": "Shore entry near the water plant"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Zeldzaam dubbel rif, schildpadden"
+    ],
+    "en": [
+     "Rare double reef, turtles"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Soms drift door stroming"
+    ],
+    "en": [
+     "Sometimes a drift due to current"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/double-reef",
+    "https://www.colemanconcierge.com/?p=19551",
+    "https://www.google.com/maps/d/u/0/viewer?mid=14lgGswE_CFNmXo4AvYBq8JjC3SN_iWZt"
+   ]
+  },
+  {
+   "id": "superior-producer",
+   "naam": "Superior Producer (wrak)",
+   "url": null,
+   "soort": {
+    "nl": "wrak, diep",
+    "en": "wreck, deep"
+   },
+   "plaats": "bij de Mega Pier, Otrobanda",
+   "tags": [
+    "boot",
+    "wrak",
+    "diep",
+    "gevorderd",
+    "grotevis",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Op ongeveer 30 m",
+     "en": "At about 30 m (100 ft)"
+    },
+    {
+     "nl": "Vrachtschip, gezonken 1977",
+     "en": "Freighter, sank in 1977"
+    },
+    {
+     "nl": "Niet als er cruiseschepen liggen",
+     "en": "Closed when cruise ships are docked"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 145,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=3944449911203234318"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 19,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.curacao.com/en/activity/superior-producer"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rechtop liggend wrak, ruimen en brug te bekijken",
+     "Barracuda en scholen tarpon"
+    ],
+    "en": [
+     "Upright wreck with holds and bridge to explore",
+     "Barracuda and schools of tarpon"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Alleen als er geen cruiseschip ligt"
+    ],
+    "en": [
+     "Only when no cruise ship is in port"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/superior-producer",
+    "https://www.divein.com/diving/destination/diving-curacao/",
+    "https://dive.site/destination/curacao-zpY",
+    "https://flipflopwanderers.com/?p=32523",
+    "https://ai.acoyacuracao.com/blog/shore-diving-curacao-minutes-from-acoya/",
+    "https://www.google.com/maps?cid=3944449911203234318"
+   ]
+  },
+  {
+   "id": "the-crash",
+   "naam": "The Crash",
+   "url": null,
+   "soort": {
+    "nl": "vliegtuigresten",
+    "en": "plane debris"
+   },
+   "plaats": "bij Marriott, Piscadera",
+   "tags": [
+    "wrak",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Resten van een vliegtuigcrash",
+     "en": "Remains of a plane crash"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Vleugel en onderdelen tussen zandvlaktes"
+    ],
+    "en": [
+     "Wing and parts between sandy patches"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Lastig te vinden zonder gids"
+    ],
+    "en": [
+     "Hard to find without a guide"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/the-crash"
+   ]
+  },
+  {
+   "id": "marie-pampoen",
+   "naam": "Marie Pampoen",
+   "url": null,
+   "soort": {
+    "nl": "kantduik",
+    "en": "shore dive"
+   },
+   "plaats": "Marie Pampoen",
+   "tags": [
+    "shore",
+    "gevorderd",
+    "diep",
+    "wrak",
+    "midden",
+    "gratis"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://www.duikersgids.nl/duikstekken/marie-pampoen",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Instap vanuit klein haventje",
+     "en": "Entry from a small harbor"
+    },
+    {
+     "nl": "Snel dieper dan 30 m",
+     "en": "Quickly deeper than 30 m"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Makkelijke instap zonder branding",
+     "Tarpon en grote murenen"
+    ],
+    "en": [
+     "Easy entry without surf",
+     "Tarpon and big morays"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Wordt snel diep",
+     "Bootverkeer en scherp schroot"
+    ],
+    "en": [
+     "Gets deep fast",
+     "Boat traffic and sharp scrap metal"
+    ]
+   },
+   "bronnen": [
+    "https://www.duikersgids.nl/duikstekken/marie-pampoen",
+    "https://www.curacao.com/en/article/best-shore-diving-spots-curacao"
+   ]
+  },
+  {
+   "id": "car-pile",
+   "naam": "Car Pile",
+   "url": null,
+   "soort": {
+    "nl": "autowrakken op de wand",
+    "en": "car wrecks on the wall"
+   },
+   "plaats": "Marie Pampoen",
+   "tags": [
+    "shore",
+    "boot",
+    "gevorderd",
+    "diep",
+    "wrak",
+    "stroming",
+    "grotevis",
+    "midden",
+    "voorzieningen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Wrakken van 28 tot 50 m",
+     "en": "Wrecks from 28 to 50 m"
+    },
+    {
+     "nl": "Oude auto's en vrachtwagens",
+     "en": "Old cars and trucks"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 6,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=10390369592997168030"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Veel vis, tarpon en barracuda"
+    ],
+    "en": [
+     "Lots of fish, tarpon and barracuda"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Wrakken vergaan, één keer genoeg",
+     "Diep en soms sterke stroming"
+    ],
+    "en": [
+     "Wrecks are decaying, once is enough",
+     "Deep with sometimes strong current"
+    ]
+   },
+   "bronnen": [
+    "https://www.duikersgids.nl/duikstekken/car-pile",
+    "https://www.curacao.com/en/activity/oswaldos-drop-off-car-pile",
+    "https://travel.padi.com/dive-sites/northern-curacao",
+    "https://www.google.com/maps?cid=10390369592997168030"
+   ]
+  },
+  {
+   "id": "pierbaai-reef",
+   "naam": "Pierbaai Reef",
+   "url": null,
+   "soort": {
+    "nl": "kantduik",
+    "en": "shore dive"
+   },
+   "plaats": "Marie Pampoen",
+   "tags": [
+    "shore",
+    "beginner",
+    "koraal",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Tot ongeveer 18 m",
+     "en": "Down to about 18 m (59 ft)"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Makkelijke instap en kalm water",
+     "Minder bedoken dan Oswaldo's"
+    ],
+    "en": [
+     "Easy shore entry and calm water",
+     "Less dived than Oswaldo's"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/article/best-shore-diving-spots-curacao",
+    "https://www.curacao.com/en/activity/oswaldos-drop-off-car-pile",
+    "https://travel.padi.com/dive-sites/northern-curacao",
+    "https://www.diveplannerpro.com/dive-centers/cw/cw-unique-diving/sites"
+   ]
+  },
+  {
+   "id": "oswaldos-drop-off",
+   "naam": "Oswaldo's Drop-off",
+   "url": null,
+   "soort": {
+    "nl": "huisrif resort",
+    "en": "resort house reef"
+   },
+   "plaats": "Sunscape, Willemstad",
+   "tags": [
+    "shore",
+    "beginner",
+    "koraal",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Alleen voor Sunscape-gasten",
+     "en": "Sunscape guests only"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Makkelijke, mooie rifduik"
+    ],
+    "en": [
+     "Easy, pretty reef dive"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Niet open voor niet-gasten"
+    ],
+    "en": [
+     "Not open to non-guests"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/oswaldos-drop-off-car-pile",
+    "https://www.google.com/maps/d/u/0/viewer?mid=14lgGswE_CFNmXo4AvYBq8JjC3SN_iWZt"
+   ]
+  },
+  {
+   "id": "stella-maris",
+   "naam": "Stella Maris en koraalkwekerij",
+   "url": null,
+   "soort": {
+    "nl": "rif en tec-wrak",
+    "en": "reef and tech wreck"
+   },
+   "plaats": "LionsDive, Seaquarium",
+   "tags": [
+    "boot",
+    "beginner",
+    "koraal",
+    "schildpadden",
+    "wrak",
+    "diep",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Koraalkwekerij in ondiep water",
+     "en": "Coral nursery in shallow water"
+    },
+    {
+     "nl": "Wrak op 120 tot 145 m",
+     "en": "Wreck at 120 to 145 m"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Koraalkwekerij van Reef Renewal te zien",
+     "Schildpadden en roggen"
+    ],
+    "en": [
+     "See the Reef Renewal coral nursery",
+     "Turtles and rays"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Wrak alleen voor technische duikers"
+    ],
+    "en": [
+     "Wreck is for technical divers only"
+    ]
+   },
+   "bronnen": [
+    "https://www.duikersgids.nl/duikstekken/stella-maris",
+    "https://www.curacao.com/en/article/best-shore-diving-spots-curacao",
+    "https://www.google.com/maps/d/u/0/viewer?mid=14lgGswE_CFNmXo4AvYBq8JjC3SN_iWZt",
+    "https://www.diveplannerpro.com/dive-centers/cw/cw-unique-diving/sites"
+   ]
+  },
+  {
+   "id": "shipwreck-point",
+   "naam": "Shipwreck Point (SS Oranje Nassau)",
+   "url": null,
+   "soort": {
+    "nl": "wrakken, diep",
+    "en": "wrecks, deep"
+   },
+   "plaats": "Seaquarium/Mambo",
+   "tags": [
+    "shore",
+    "boot",
+    "gevorderd",
+    "diep",
+    "stroming",
+    "wrak",
+    "voorzieningen",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Twee sleepbootwrakken rond 45 m",
+     "en": "Two tugboat wrecks around 150 ft"
+    },
+    {
+     "nl": "Ketel van wrak uit 1884",
+     "en": "Boiler of an 1884 wreck"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Ankers en schroef op 20 tot 35 m",
+     "Duikcentrum en restaurant aan het strand"
+    ],
+    "en": [
+     "Anchors and a propeller at 20 to 35 m",
+     "Dive center and restaurant on the beach"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Sterke, wisselende stroming",
+     "Zicht soms slecht, bootverkeer"
+    ],
+    "en": [
+     "Strong, shifting current",
+     "Visibility sometimes poor, boat traffic"
+    ]
+   },
+   "bronnen": [
+    "https://www.duikersgids.nl/duikstekken/shipwreck-point",
+    "https://www.curacao.com/en/article/best-boat-diving-spots-curacao",
+    "https://www.curacao.com/en/activity/ss-oranje-nassau"
+   ]
+  },
+  {
+   "id": "cornelius-bay",
+   "naam": "Cornelius Bay",
+   "url": null,
+   "soort": {
+    "nl": "bootduik",
+    "en": "boat dive"
+   },
+   "plaats": "bij LionsDive",
+   "tags": [
+    "boot",
+    "beginner",
+    "koraal",
+    "schildpadden",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ondiep en diep deel",
+     "en": "Shallow and deep sections"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Diepe wanden en gezond rif, roggen en schildpadden"
+    ],
+    "en": [
+     "Deep walls, healthy reef, rays and turtles"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/article/best-boat-diving-spots-curacao",
+    "https://www.duikersgids.nl/duikstekken/corneliusbaai",
+    "https://www.colemanconcierge.com/?p=19551"
+   ]
+  },
+  {
+   "id": "saba-wreck",
+   "naam": "Saba (sleepbootwrak)",
+   "url": null,
+   "soort": {
+    "nl": "bootduik, ondiep wrak",
+    "en": "boat dive, shallow wreck"
+   },
+   "plaats": "bij Mambo",
+   "tags": [
+    "boot",
+    "beginner",
+    "wrak",
+    "snorkelen",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Wrak op ongeveer 12 m",
+     "en": "Wreck at about 12 m (40 ft)"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Ondiep, voor alle niveaus",
+     "Volledig begroeid met sponzen"
+    ],
+    "en": [
+     "Shallow, for all levels",
+     "Fully covered in sponges"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Alleen per boot, soms stroming"
+    ],
+    "en": [
+     "Boat only, sometimes current"
+    ]
+   },
+   "bronnen": [
+    "https://www.duikersgids.nl/duikstekken/saba-wreck",
+    "https://www.curacao.com/en/activity/saba",
+    "https://www.colemanconcierge.com/?p=19551"
+   ]
+  },
+  {
+   "id": "sandys-plateau",
+   "naam": "Sandy's Plateau",
+   "url": null,
+   "soort": {
+    "nl": "bootduik",
+    "en": "boat dive"
+   },
+   "plaats": "voor Jan Thiel",
+   "tags": [
+    "boot",
+    "koraal",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Lagune met koraalkoppen",
+     "en": "Lagoon with coral heads"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Een van de mooiste koraalduiken"
+    ],
+    "en": [
+     "One of the best coral dives"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://flipflopwanderers.com/?p=32523",
+    "https://www.curacao.com/en/activity/sandys-plateau-boka-di-sorsaka",
+    "https://www.google.com/maps/d/u/0/viewer?mid=14lgGswE_CFNmXo4AvYBq8JjC3SN_iWZt"
+   ]
+  },
+  {
+   "id": "sweet-bottom",
+   "naam": "Sweet Bottom",
+   "url": null,
+   "soort": {
+    "nl": "drift langs wand",
+    "en": "wall drift"
+   },
+   "plaats": "bij Jan Thiel",
+   "tags": [
+    "gevorderd",
+    "stroming",
+    "koraal",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Rif en wand, drift",
+     "en": "Reef and wall, drift"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Wand met drift"
+    ],
+    "en": [
+     "Wall with drift"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://travel.padi.com/dive-sites/northern-curacao",
+    "https://www.diveplannerpro.com/dive-centers/cw/cw-unique-diving/sites",
+    "https://www.google.com/maps/d/u/0/viewer?mid=14lgGswE_CFNmXo4AvYBq8JjC3SN_iWZt"
+   ]
+  },
+  {
+   "id": "jan-thiel",
+   "naam": "Jan Thiel Baai",
+   "url": null,
+   "soort": {
+    "nl": "kantduik, strand",
+    "en": "shore dive, beach"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "shore",
+    "beginner",
+    "snorkelen",
+    "wrak",
+    "voorzieningen",
+    "oost"
+   ],
+   "prijs": {
+    "bedrag": 3,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon strandentree, na 16:30 gratis",
+     "en": "per person beach entry, free after 4:30 p.m."
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Zeilbootwrak op 5 m",
+     "en": "Sailboat wreck at 5 m"
+    },
+    {
+     "nl": "Rif begint op 9 m",
+     "en": "Reef starts at 9 m"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 1238,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Makkelijke instap, duikcentrum en douches",
+     "Geschikt voor beginners en cursussen"
+    ],
+    "en": [
+     "Easy entry, dive center and showers",
+     "Good for beginners and courses"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Baai zelf ondiep met weinig te zien",
+     "Druk en toeristisch"
+    ],
+    "en": [
+     "The bay itself is shallow with little to see",
+     "Busy and touristy"
+    ]
+   },
+   "bronnen": [
+    "https://www.duikersgids.nl/duikstekken/jan-thiel-baai",
+    "https://www.colemanconcierge.com/?p=19551",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "divers-leap",
+   "naam": "Diver's Leap",
+   "url": null,
+   "soort": {
+    "nl": "bootduik, wand",
+    "en": "boat dive, wall"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "boot",
+    "diep",
+    "koraal",
+    "grotevis",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Wand tot 40 m",
+     "en": "Wall down to 40 m"
+    },
+    {
+     "nl": "Niet meer vanaf de kant",
+     "en": "No longer reachable from shore"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Barracuda, makreel en tarpon",
+     "Zeepaardjes op het plateau"
+    ],
+    "en": [
+     "Barracuda, mackerel and tarpon",
+     "Seahorses on the plateau"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Stroming kan draaien"
+    ],
+    "en": [
+     "Current can change direction"
+    ]
+   },
+   "bronnen": [
+    "https://www.duikersgids.nl/duikstekken/divers-leap",
+    "https://www.curacao.com/en/activity/divers-leap-piedra-sombre"
+   ]
+  },
+  {
+   "id": "beacon-point",
+   "naam": "Beacon Point",
+   "url": null,
+   "soort": {
+    "nl": "bootduik, drift",
+    "en": "boat dive, drift"
+   },
+   "plaats": "bij Jan Thiel",
+   "tags": [
+    "boot",
+    "gevorderd",
+    "stroming",
+    "koraal",
+    "grotevis",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Tot 36 m",
+     "en": "Down to 36 m"
+    },
+    {
+     "nl": "Grote zuilkoralen",
+     "en": "Large pillar corals"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Indrukwekkende zuilkoralen en drop-offs",
+     "Horsmakrelen, tarpon en barracuda"
+    ],
+    "en": [
+     "Impressive pillar corals and drop-offs",
+     "Jacks, tarpon and barracuda"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Sterke stroming, ervaring nodig"
+    ],
+    "en": [
+     "Strong current, experience needed"
+    ]
+   },
+   "bronnen": [
+    "https://www.duikersgids.nl/duikstekken/beacon-point",
+    "https://www.divein.com/diving/destination/diving-curacao/"
+   ]
+  },
+  {
+   "id": "lost-anchor",
+   "naam": "Lost Anchor (Playa Hundu)",
+   "url": null,
+   "soort": {
+    "nl": "baai, rif",
+    "en": "cove, reef"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "gevorderd",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Doordeweeks bijna leeg",
+     "en": "Nearly empty on weekdays"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Rustige baai"
+    ],
+    "en": [
+     "Quiet cove"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/playa-hundu-lost-anchor",
+    "https://www.diveplannerpro.com/dive-centers/cw/cw-unique-diving/sites",
+    "https://www.google.com/maps/d/u/0/viewer?mid=14lgGswE_CFNmXo4AvYBq8JjC3SN_iWZt"
+   ]
+  },
+  {
+   "id": "small-wall",
+   "naam": "Small Wall (Kabayé)",
+   "url": null,
+   "soort": {
+    "nl": "bootduik, wand",
+    "en": "boat dive, wall"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "boot",
+    "diep",
+    "koraal",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Tot 36 m",
+     "en": "Down to 36 m"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Mooi koraal en veel vis",
+     "Goed zicht, rond 25 m"
+    ],
+    "en": [
+     "Beautiful coral and lots of fish",
+     "Good visibility, around 25 m"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Pleziervaart in de buurt"
+    ],
+    "en": [
+     "Pleasure boats nearby"
+    ]
+   },
+   "bronnen": [
+    "https://www.duikersgids.nl/duikstekken/small-wall-1678",
+    "https://www.curacao.com/en/activity/kabay-small-wall",
+    "https://www.divein.com/diving/destination/diving-curacao/"
+   ]
+  },
+  {
+   "id": "tugboat",
+   "naam": "Tugboat (Caracasbaai)",
+   "url": null,
+   "soort": {
+    "nl": "ondiep wrak, kant",
+    "en": "shallow wreck, shore"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "shore",
+    "beginner",
+    "wrak",
+    "snorkelen",
+    "koraal",
+    "oost",
+    "gratis",
+    "voorzieningen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://flipflopwanderers.com/?p=32523",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Wrak op ongeveer 5 m",
+     "en": "Wreck at about 5 m (16 ft)"
+    },
+    {
+     "nl": "Wand verder uit tot 30 m+",
+     "en": "Wall farther out to 30 m+"
+    },
+    {
+     "nl": "Kleine strandbar",
+     "en": "Small beach bar"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 136,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.curacao.com/en/activity/tug-boat"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Begroeid wrak, ook voor snorkelaars",
+     "Zeepaardjes, octopus en murenen"
+    ],
+    "en": [
+     "Overgrown wreck, fine for snorkelers",
+     "Seahorses, octopus and morays"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Druk als er cruiseschepen zijn",
+     "Rif deels beschadigd volgens sommigen",
+     "Instap over puin"
+    ],
+    "en": [
+     "Busy when cruise ships are in",
+     "Some say the reef is damaged",
+     "Entry over rubble"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/tug-boat",
+    "https://www.duikersgids.nl/en/tugboat-curacao",
+    "https://flipflopwanderers.com/?p=32523",
+    "https://www.klm.nl/travel-guide/inspiration/the-most-beautiful-snorkelling-and-dive-sites-on-curacao",
+    "https://www.divein.com/diving/destination/diving-curacao/",
+    "https://ai.acoyacuracao.com/blog/shore-diving-curacao-minutes-from-acoya/"
+   ]
+  },
+  {
+   "id": "directors-bay",
+   "naam": "Directors Bay",
+   "url": null,
+   "soort": {
+    "nl": "kantduik, wand",
+    "en": "shore dive, wall"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "shore",
+    "beginner",
+    "koraal",
+    "schildpadden",
+    "snorkelen",
+    "diep",
+    "stroming",
+    "oost",
+    "gratis"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://flipflopwanderers.com/?p=32523",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Wand tot ongeveer 50 m",
+     "en": "Wall to about 50 m"
+    },
+    {
+     "nl": "Geen voorzieningen",
+     "en": "No facilities"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 188,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=18225165841141036566"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Veel vis, gezond koraal, schildpadden",
+     "Oude haaienkooi begroeid met koraal"
+    ],
+    "en": [
+     "Lots of fish, healthy coral, turtles",
+     "Old shark fence covered in coral"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Sterke stroming om de hoek",
+     "Inbraken in auto's op de parkeerplaats"
+    ],
+    "en": [
+     "Strong current around the corner",
+     "Car break-ins in the parking lot"
+    ]
+   },
+   "bronnen": [
+    "https://www.duikersgids.nl/duikstekken/directors-bay",
+    "https://www.divein.com/diving/destination/diving-curacao/",
+    "https://flipflopwanderers.com/?p=32523",
+    "https://www.curacao.com/en/article/best-shore-diving-spots-curacao",
+    "https://www.google.com/maps?cid=18225165841141036566"
+   ]
+  },
+  {
+   "id": "barracuda-point",
+   "naam": "Barracuda Point (Punt'i Piku)",
+   "url": null,
+   "soort": {
+    "nl": "rif",
+    "en": "reef"
+   },
+   "plaats": "tegenover Santa Barbara",
+   "tags": [
+    "gevorderd",
+    "grotevis",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Over de geul bij Santa Barbara",
+     "en": "Across the channel from Barbara Beach"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Barracuda bij de punt"
+    ],
+    "en": [
+     "Barracuda at the point"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/barracuda-pointpunti-piku",
+    "https://www.diveplannerpro.com/dive-centers/cw/cw-unique-diving/sites",
+    "https://www.google.com/maps/d/u/0/viewer?mid=14lgGswE_CFNmXo4AvYBq8JjC3SN_iWZt"
+   ]
+  },
+  {
+   "id": "eel-valley",
+   "naam": "Eel Valley",
+   "url": null,
+   "soort": {
+    "nl": "ondiepe macroduik",
+    "en": "shallow macro dive"
+   },
+   "plaats": "bij Santa Barbara",
+   "tags": [
+    "beginner",
+    "koraal",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ondiep plateau naast drop-off",
+     "en": "Shallow plateau next to a drop-off"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Makkelijke macroduik met murenen en schorpioenvissen"
+    ],
+    "en": [
+     "Easy macro dive with morays and scorpionfish"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Minder alen dan vroeger"
+    ],
+    "en": [
+     "Fewer eels than before"
+    ]
+   },
+   "bronnen": [
+    "https://www.divein.com/diving/destination/diving-curacao/",
+    "https://www.curacao.com/en/activity/eel-valley-newport-kathys-paradise",
+    "https://www.google.com/maps/d/u/0/viewer?mid=14lgGswE_CFNmXo4AvYBq8JjC3SN_iWZt"
+   ]
+  },
+  {
+   "id": "booby-trap",
+   "naam": "Booby Trap",
+   "url": null,
+   "soort": {
+    "nl": "zandplateau, rif",
+    "en": "sand plateau, reef"
+   },
+   "plaats": "Fuikbaai",
+   "tags": [
+    "beginner",
+    "koraal",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Mild, goed zicht",
+     "en": "Mild current, good visibility"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Veel sponzen en jonge vis, goed voor foto's"
+    ],
+    "en": [
+     "Lots of sponges and juvenile fish, good for photos"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divein.com/diving/destination/diving-curacao/",
+    "https://www.colemanconcierge.com/?p=19551",
+    "https://www.google.com/maps/d/u/0/viewer?mid=14lgGswE_CFNmXo4AvYBq8JjC3SN_iWZt"
+   ]
+  },
+  {
+   "id": "kathys-paradise",
+   "naam": "Kathy's Paradise",
+   "url": null,
+   "soort": {
+    "nl": "bootduik",
+    "en": "boat dive"
+   },
+   "plaats": "bij Fuikbaai",
+   "tags": [
+    "boot",
+    "stroming",
+    "koraal",
+    "schildpadden",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vaak drift richting Smokey's",
+     "en": "Often a drift toward Smokey's"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Mooie koraalvormen, schildpadden en adelaarsroggen",
+     "Weinig bezocht"
+    ],
+    "en": [
+     "Fine coral, turtles and eagle rays",
+     "Rarely visited"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/kathys-paradise-smokey",
+    "https://www.curacao.com/en/article/best-boat-diving-spots-curacao",
+    "https://www.colemanconcierge.com/?p=19551"
+   ]
+  },
+  {
+   "id": "smokeys",
+   "naam": "Smokey's (Punti Sanchi)",
+   "url": null,
+   "soort": {
+    "nl": "bootduik, drift",
+    "en": "boat dive, drift"
+   },
+   "plaats": "bij Fuikbaai",
+   "tags": [
+    "boot",
+    "stroming",
+    "grotevis",
+    "koraal",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "30 minuten varen",
+     "en": "30-minute boat ride"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Bijna ongerept rif",
+     "Haaien en pijlstaartroggen bij de drop-off"
+    ],
+    "en": [
+     "Nearly untouched reef",
+     "Sharks and stingrays at the drop-off"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divein.com/diving/destination/diving-curacao/",
+    "https://www.curacao.com/en/activity/smokeypunti-sanchi",
+    "https://www.curacao.com/en/article/best-boat-diving-spots-curacao"
+   ]
+  },
+  {
+   "id": "black-rock",
+   "naam": "Black Rock (Piedra Pretu)",
+   "url": null,
+   "soort": {
+    "nl": "bootduik, diepe wand",
+    "en": "boat dive, deep wall"
+   },
+   "plaats": "Oostpunt",
+   "tags": [
+    "boot",
+    "gevorderd",
+    "diep",
+    "grotevis",
+    "stroming",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Wand tot ongeveer 37 m",
+     "en": "Wall to about 37 m (120 ft)"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Spectaculaire wand, kans op haaien en manta's"
+    ],
+    "en": [
+     "Spectacular wall, chance of sharks and mantas"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Lange, soms ruwe boottocht"
+    ],
+    "en": [
+     "Long, sometimes rough boat trip"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/black-rockpiedra-pretu",
+    "https://www.curacao.com/en/article/best-boat-diving-spots-curacao"
+   ]
+  },
+  {
+   "id": "basora",
+   "naam": "Basora",
+   "url": null,
+   "soort": {
+    "nl": "wand op de punt",
+    "en": "wall on the point"
+   },
+   "plaats": "Oostpunt",
+   "tags": [
+    "stroming",
+    "koraal",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Meest oostelijke duikplek",
+     "en": "Easternmost dive site"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Pagodevormige koraalformaties en veel soorten"
+    ],
+    "en": [
+     "Pagoda-shaped formations and many species"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Stroming en golven wisselen snel"
+    ],
+    "en": [
+     "Current and waves change quickly"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/basora"
+   ]
+  },
+  {
+   "id": "east-point",
+   "naam": "Oostpunt (East Point)",
+   "url": null,
+   "soort": {
+    "nl": "bootduik, drift",
+    "en": "boat dive, drift"
+   },
+   "plaats": "Oostpunt",
+   "tags": [
+    "boot",
+    "stroming",
+    "grotevis",
+    "koraal",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Alleen per boot",
+     "en": "Boat access only"
+    },
+    {
+     "nl": "Vaak samen met Klein Curaçao",
+     "en": "Often combined with Klein Curaçao"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Ongerept koraal en grote waaiers",
+     "Rifhaaien, adelaarsroggen en tarpon"
+    ],
+    "en": [
+     "Untouched coral and big sea fans",
+     "Reef sharks, eagle rays and tarpon"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divein.com/diving/destination/diving-curacao/",
+    "https://flipflopwanderers.com/?p=32523",
+    "https://www.google.com/maps/d/u/0/viewer?mid=14lgGswE_CFNmXo4AvYBq8JjC3SN_iWZt"
+   ]
+  },
+  {
+   "id": "klein-curacao",
+   "naam": "Klein Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "eiland, boottocht",
+    "en": "island, boat trip"
+   },
+   "plaats": "Klein Curaçao",
+   "tags": [
+    "boot",
+    "schildpadden",
+    "snorkelen",
+    "grotevis",
+    "oost"
+   ],
+   "prijs": {
+    "bedrag": 135,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon (boottocht, $135 tot $170)",
+     "en": "per person (boat trip, $135 to $170)"
+    },
+    "bron": "https://www.mycuracaoguide.com/klein-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "1,5 uur varen",
+     "en": "1.5-hour boat ride"
+    },
+    {
+     "nl": "Onbewoond eiland",
+     "en": "Uninhabited island"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 1453,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.curacao.com/en/activity/klein-curacao-dive-spot"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Helder water en schildpadden",
+     "Kans op haaien en grote vis"
+    ],
+    "en": [
+     "Clear water and turtles",
+     "Chance of sharks and big fish"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Overtocht vaak ruw",
+     "Weinig schaduw"
+    ],
+    "en": [
+     "Crossing is often rough",
+     "Little shade"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/klein-curacao-dive-spot",
+    "https://www.divein.com/diving/destination/diving-curacao/",
+    "https://flipflopwanderers.com/?p=32523",
+    "https://www.mycuracaoguide.com/klein-curacao"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Tripadvisor",
+   "url": "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html",
+   "uitleg": {
+    "nl": "Reviews en scores per duikplek en strand; boekt ook begeleide duiken en snorkeltochten.",
+    "en": "Reviews and ratings per dive site and beach; also books guided dives and snorkel trips."
+   }
+  },
+  {
+   "naam": "PADI Travel",
+   "url": "https://travel.padi.com/dive-sites/northern-curacao",
+   "uitleg": {
+    "nl": "Duikplekkenlijst met maximale diepte en boekingen bij PADI-centra.",
+    "en": "Dive site list with max depth and bookings at PADI centers."
+   }
+  },
+  {
+   "naam": "Curaçao Tourist Board (curacao.com)",
+   "url": "https://curacao.com/en/category/scuba-diving-and-snorkeling",
+   "uitleg": {
+    "nl": "Officiële lijst van 46 duik- en snorkelplekken met korte beschrijving.",
+    "en": "Official list of 46 dive and snorkel sites with short descriptions."
+   }
+  },
+  {
+   "naam": "Duikersgids.nl",
+   "url": "https://www.duikersgids.nl/en/tugboat-curacao",
+   "uitleg": {
+    "nl": "Nederlandse duikplekgids met diepte, stroming en logboekreviews van duikers.",
+    "en": "Dutch dive site guide with depth, current and divers' logbook reviews."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Een oppervlakteboei (SMB) is op Curaçao verplicht bij duiken; zorg dat je er een bij je hebt.",
+   "en": "A surface marker buoy is required for diving in Curaçao; bring one."
+  },
+  {
+   "nl": "Laat niets achter in je huurauto: bij Directors Bay en andere afgelegen plekken wordt ingebroken.",
+   "en": "Leave nothing in your rental car: break-ins happen at Directors Bay and other remote spots."
+  },
+  {
+   "nl": "De Superior Producer kan alleen als er geen cruiseschip aan de Mega Pier ligt; vraag je duikshop naar het schema.",
+   "en": "The Superior Producer can only be dived when no cruise ship is at the Mega Pier; ask your dive shop for the schedule."
+  },
+  {
+   "nl": "Bij Cas Abao, Porto Mari, Playa Kalki en Jan Thiel zit een duikshop op het strand waar je flessen en lood huurt en kunt spoelen.",
+   "en": "Cas Abao, Porto Mari, Playa Kalki and Jan Thiel have a dive shop on the beach for tanks, weights and rinsing."
+  },
+  {
+   "nl": "Bij Playa Piskado zie je bijna altijd schildpadden; ga vroeg, voor de tourbussen komen.",
+   "en": "You'll almost always see turtles at Playa Piskado; go early, before the tour buses arrive."
+  },
+  {
+   "nl": "Watamula, Mushroom Forest, Beacon Point en Oostpunt kan je alleen met de boot; die plekken hebben vaak stroming.",
+   "en": "Watamula, Mushroom Forest, Beacon Point and East Point are boat-only and often have current."
+  },
+  {
+   "nl": "Klein Curaçao ligt 1,5 uur varen; de overtocht is vaak ruw, neem iets tegen zeeziekte.",
+   "en": "Klein Curaçao is a 1.5-hour boat ride; the crossing is often rough, so bring seasickness medicine."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wat is de beste duikplek op Curaçao?",
+    "en": "What is the best dive site in Curaçao?"
+   },
+   "a": {
+    "nl": "Voor beginners: Tugboat (wrak op 5 m) en Playa Kalki. Voor ervaren duikers: de Superior Producer (wrak op 30 m), Watamula en Beacon Point. Klein Curaçao en Oostpunt hebben het meest ongerepte koraal.",
+    "en": "For beginners: Tugboat (wreck at 16 ft) and Playa Kalki. For experienced divers: the Superior Producer (wreck at 100 ft), Watamula and Beacon Point. Klein Curaçao and East Point have the most untouched coral."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar zie je schildpadden op Curaçao?",
+    "en": "Where can you see turtles in Curaçao?"
+   },
+   "a": {
+    "nl": "Playa Piskado (Playa Grandi) in Westpunt is de bekendste plek: schildpadden komen af op de vissers. Ook bij Playa Lagun, Directors Bay, Daaibooi en Klein Curaçao zie je ze vaak.",
+    "en": "Playa Piskado (Playa Grandi) in Westpunt is the best-known spot: turtles gather near the fishermen. You'll also often see them at Playa Lagun, Directors Bay, Daaibooi and Klein Curaçao."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kun je op Curaçao zelf vanaf de kant duiken?",
+    "en": "Can you shore dive on your own in Curaçao?"
+   },
+   "a": {
+    "nl": "Ja. De meeste plekken zijn kantduiken met een huurauto en huurflessen. Je hebt een buddy en een verplichte oppervlakteboei nodig. Bekende kantduiken zijn Tugboat, Cas Abao, Porto Mari, Playa Kalki en Directors Bay.",
+    "en": "Yes. Most sites are shore dives you can do with a rental car and rented tanks. You need a buddy and a required surface marker buoy. Popular shore dives are Tugboat, Cas Abao, Porto Mari, Playa Kalki and Directors Bay."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost toegang tot de duikstranden?",
+    "en": "How much is entry to the dive beaches?"
+   },
+   "a": {
+    "nl": "De meeste plekken zijn gratis. Cas Abao vraagt $6 per auto (zondag $7), Porto Mari $3 per persoon en Jan Thiel $3 per persoon overdag.",
+    "en": "Most sites are free. Cas Abao charges $6 per car ($7 on Sundays), Porto Mari $3 per person and Jan Thiel $3 per person during the day."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe diep ligt de Superior Producer?",
+    "en": "How deep is the Superior Producer?"
+   },
+   "a": {
+    "nl": "Het vrachtschip ligt rechtop op ongeveer 30 m, met de stuurhut rond 24 m. Het is een duik voor ervaren duikers en kan alleen als er geen cruiseschip ligt.",
+    "en": "The freighter sits upright at about 100 ft, with the wheelhouse around 80 ft. It is a dive for experienced divers and only possible when no cruise ship is docked."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar kun je het beste snorkelen op Curaçao?",
+    "en": "Where is the best snorkeling in Curaçao?"
+   },
+   "a": {
+    "nl": "Tugboat in Caracasbaai (wrak op 5 m), Playa Piskado (schildpadden), Playa Lagun, Grote Knip en Cas Abao. De Blue Room is een grot waar je met een boottocht in snorkelt.",
+    "en": "Tugboat in Caracas Bay (wreck at 16 ft), Playa Piskado (turtles), Playa Lagun, Grote Knip and Cas Abao. The Blue Room is a sea cave you snorkel into on a boat trip."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar is de Mushroom Forest?",
+    "en": "Where is Mushroom Forest?"
+   },
+   "a": {
+    "nl": "Bij Playa Santa Cruz aan de westkust. Je bereikt hem per boot, vaak gecombineerd met de Blue Room. De koraalformaties lijken op grote paddenstoelen.",
+    "en": "Near Playa Santa Cruz on the west coast. You reach it by boat, often combined with the Blue Room. The coral formations look like giant mushrooms."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoeveel duikplekken heeft Curaçao?",
+    "en": "How many dive sites does Curaçao have?"
+   },
+   "a": {
+    "nl": "Het toeristenbureau noemt meer dan 70 duikplekken; op deze pagina staan er 61 met diepte, toegang en scores.",
+    "en": "The tourist board cites more than 70 dive sites; this page lists 61 with depth, access and ratings."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "duikplekken curaçao",
+   "snorkelen curaçao",
+   "beste duikplek curaçao",
+   "schildpadden curaçao",
+   "tugboat curaçao",
+   "kantduiken curaçao"
+  ],
+  "en": [
+   "curacao dive sites",
+   "best snorkeling curacao",
+   "curacao shore diving",
+   "tugboat curacao",
+   "superior producer wreck",
+   "mushroom forest curacao"
+  ],
+  "es": [
+   "buceo curazao",
+   "snorkel curazao",
+   "mejores sitios de buceo curazao"
+  ],
+  "pt": [
+   "mergulho curaçao",
+   "snorkel curaçao",
+   "melhores pontos de mergulho curaçao"
+  ],
+  "de": [
+   "tauchen curaçao",
+   "schnorcheln curaçao",
+   "tauchplätze curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Wat zijn de beste duikplekken op Curaçao voor beginners?",
+   "Waar kan ik op Curaçao met schildpadden snorkelen?",
+   "Welke duikplekken op Curaçao kan ik zelf vanaf de kant doen?"
+  ],
+  "en": [
+   "What are the best dive sites in Curaçao for beginners?",
+   "Where can I snorkel with turtles in Curaçao?",
+   "Which Curaçao dive sites can I shore dive on my own?"
+  ]
+ },
+ "talen": [
+  "nl",
+  "en"
+ ]
+}
