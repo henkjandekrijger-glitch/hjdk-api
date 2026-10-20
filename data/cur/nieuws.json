@@ -1,1 +1,2101 @@
-{"id":"nieuws","peildatum":"2026-10-20","items":[]}
+{
+ "id": "nieuws",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "nieuwsbron",
+  "en": "news source"
+ },
+ "h1": {
+  "nl": "Nieuws op Curaçao: welke krant, site, zender of radio past bij jou?",
+  "en": "News in Curaçao: which paper, site, TV or radio station fits you?"
+ },
+ "titel": {
+  "nl": "Nieuws op Curaçao: {n} kranten, sites, tv en radio vergeleken",
+  "en": "Curaçao news: {n} papers, sites, TV and radio compared"
+ },
+ "metaDesc": {
+  "nl": "{n} nieuwsbronnen op Curaçao naast elkaar: taal, medium, FM-frequentie en abonnementsprijs. Antilliaans Dagblad, Amigoe, Èxtra, TeleCuraçao, Dolfijn FM en meer.",
+  "en": "{n} Curaçao news sources compared: language, medium, FM frequency and subscription price. Antilliaans Dagblad, Amigoe, Extra, TeleCuraçao, Dolfijn FM."
+ },
+ "kort": {
+  "nl": "Curaçao heeft twee Nederlandstalige dagbladen (Antilliaans Dagblad en Amigoe), Papiamentstalig nieuws van onder meer Èxtra en Vigilante, Engelstalig nieuws van Curaçao Chronicle, drie grote tv-zenders en ruim twintig FM-zenders. Betalen voor online nieuws kost USD 19,70 (Vigilante) tot USD 25 (AD Online) per maand; Curaçao.nu, Curaçao Chronicle en Caribisch Netwerk zijn gratis. Voor Nederlandstalige radio zijn Dolfijn FM 97.3, Paradise FM 103.1 en Radio Hoyer 2 105.1 de vaste keuzes.",
+  "en": "Curaçao has two Dutch-language dailies (Antilliaans Dagblad and Amigoe), Papiamentu news from Extra and Vigilante among others, English news from Curaçao Chronicle, three major TV stations and more than twenty FM stations. Paid online news runs USD 19.70 (Vigilante) to USD 25 (AD Online) a month; Curaçao.nu, Curaçao Chronicle and Caribisch Netwerk are free. For Dutch-language radio, Dolfijn FM 97.3, Paradise FM 103.1 and Radio Hoyer 2 105.1 are the usual picks."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "In welke taal wil je het nieuws?",
+    "en": "What language do you want your news in?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Nederlands",
+      "en": "Dutch"
+     },
+     "plus": [
+      "nl"
+     ],
+     "min": [],
+     "vereist": "nl"
+    },
+    {
+     "label": {
+      "nl": "Papiaments",
+      "en": "Papiamentu"
+     },
+     "plus": [
+      "papiamentu"
+     ],
+     "min": [],
+     "vereist": "papiamentu"
+    },
+    {
+     "label": {
+      "nl": "Engels",
+      "en": "English"
+     },
+     "plus": [
+      "en"
+     ],
+     "min": [],
+     "vereist": "en"
+    },
+    {
+     "label": {
+      "nl": "Spaans",
+      "en": "Spanish"
+     },
+     "plus": [
+      "es"
+     ],
+     "min": [],
+     "vereist": "es"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Hoe wil je het nieuws volgen?",
+    "en": "How do you want to follow the news?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Lezen: krant of nieuwssite",
+      "en": "Reading: paper or news site"
+     },
+     "plus": [
+      "website",
+      "krant"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Tv kijken",
+      "en": "Watching TV"
+     },
+     "plus": [
+      "tv"
+     ],
+     "min": [],
+     "vereist": "tv"
+    },
+    {
+     "label": {
+      "nl": "Radio luisteren",
+      "en": "Listening to radio"
+     },
+     "plus": [
+      "radio"
+     ],
+     "min": [],
+     "vereist": "radio"
+    },
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Waar gebruik je het vooral voor?",
+    "en": "What do you mainly use it for?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Dagelijks lokaal nieuws",
+      "en": "Daily local news"
+     },
+     "plus": [
+      "dagelijks"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Politiek en achtergrond",
+      "en": "Politics and background"
+     },
+     "plus": [
+      "krant",
+      "talk"
+     ],
+     "min": [
+      "muziek"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "De Nederlandse kijk op het eiland",
+      "en": "The Dutch view on the island"
+     },
+     "plus": [
+      "nl",
+      "krant"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Muziek en vermaak",
+      "en": "Music and entertainment"
+     },
+     "plus": [
+      "muziek"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Live meekijken of -luisteren vanuit het buitenland",
+      "en": "Watching or listening live from abroad"
+     },
+     "plus": [
+      "live-stream",
+      "app"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wil je ervoor betalen?",
+    "en": "Are you willing to pay?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Nee, alleen gratis",
+      "en": "No, free only"
+     },
+     "plus": [
+      "gratis"
+     ],
+     "min": [
+      "abonnement"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ja, voor meer diepgang",
+      "en": "Yes, for more depth"
+     },
+     "plus": [
+      "abonnement"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "antilliaans-dagblad",
+   "naam": "Antilliaans Dagblad",
+   "url": "https://antilliaansdagblad.com",
+   "soort": {
+    "nl": "Nederlandstalig dagblad",
+    "en": "Dutch-language daily"
+   },
+   "plaats": "Scharloo, Willemstad",
+   "tags": [
+    "nl",
+    "krant",
+    "website",
+    "abonnement",
+    "dagelijks"
+   ],
+   "prijs": {
+    "bedrag": 25,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per maand (AD Online)",
+     "en": "per month (AD Online)"
+    },
+    "bron": "https://antilliaansdagblad.com/contact-adres-2",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Ochtendkrant, Nederlandstalig",
+     "en": "Morning paper in Dutch"
+    },
+    {
+     "nl": "Papieren krant XCG 35 per maand",
+     "en": "Print edition XCG 35 a month"
+    },
+    {
+     "nl": "Weekpas online USD 10",
+     "en": "Online week pass USD 10"
+    },
+    {
+     "nl": "Kantoor aan de Scharlooweg",
+     "en": "Office on Scharlooweg"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://antilliaansdagblad.com",
+    "https://antilliaansdagblad.com/contact-adres-2",
+    "https://en.wikipedia.org/wiki/Antilliaans_Dagblad"
+   ]
+  },
+  {
+   "id": "amigoe",
+   "naam": "Amigoe",
+   "url": "https://www.amigoe.com",
+   "soort": {
+    "nl": "Nederlandstalig dagblad sinds 1883",
+    "en": "Dutch-language daily since 1883"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "nl",
+    "krant",
+    "website",
+    "abonnement",
+    "dagelijks"
+   ],
+   "prijs": {
+    "bedrag": 30.5,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per maand (Amigoe Online)",
+     "en": "per month (Amigoe Online)"
+    },
+    "bron": "https://www.amigoe.com",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Verschijnt zes dagen per week",
+     "en": "Published six days a week"
+    },
+    {
+     "nl": "Papieren krant XCG 35 per maand",
+     "en": "Print edition XCG 35 a month"
+    },
+    {
+     "nl": "Online gratis bij papieren abonnement",
+     "en": "Online free with print subscription"
+    },
+    {
+     "nl": "Ook een editie voor Bonaire",
+     "en": "Also has a Bonaire edition"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.amigoe.com",
+    "https://en.wikipedia.org/wiki/Amigoe"
+   ]
+  },
+  {
+   "id": "extra",
+   "naam": "Èxtra",
+   "url": "https://extra.cw",
+   "soort": {
+    "nl": "Papiamentstalige krant",
+    "en": "Papiamentu newspaper"
+   },
+   "plaats": null,
+   "tags": [
+    "papiamentu",
+    "en",
+    "es",
+    "krant",
+    "website",
+    "gratis",
+    "dagelijks"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Opgericht op 1 maart 1976",
+     "en": "Founded March 1, 1976"
+    },
+    {
+     "nl": "Ook Engelse en Spaanse rubriek",
+     "en": "Also English and Spanish sections"
+    },
+    {
+     "nl": "Gratis dagelijkse nieuwsbrief",
+     "en": "Free daily newsletter"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://extra.cw",
+    "https://en.wikipedia.org/wiki/List_of_newspapers_in_Cura%C3%A7ao",
+    "https://curalink.com/island-guide-curacao/news-sources/"
+   ]
+  },
+  {
+   "id": "vigilante",
+   "naam": "Vigilante",
+   "url": "https://vigilantekorsou.news",
+   "soort": {
+    "nl": "Papiamentstalige nieuwssite",
+    "en": "Papiamentu news site"
+   },
+   "plaats": "Kaya Wilson Papa Godett, Willemstad",
+   "tags": [
+    "papiamentu",
+    "website",
+    "abonnement",
+    "dagelijks"
+   ],
+   "prijs": {
+    "bedrag": 19.7,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per maand (digitaal)",
+     "en": "per month (digital)"
+    },
+    "bron": "https://vigilantekorsou.news/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Ruim 60 berichten per dag",
+     "en": "Over 60 stories a day"
+    },
+    {
+     "nl": "Dagpas USD 0,85",
+     "en": "Day pass USD 0.85"
+    },
+    {
+     "nl": "Weekpas USD 4,93",
+     "en": "Week pass USD 4.93"
+    },
+    {
+     "nl": "Archief van drie jaar",
+     "en": "Three-year archive"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 5,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=8541359693707707970"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://vigilantekorsou.news/",
+    "https://www.google.com/maps?cid=8541359693707707970"
+   ]
+  },
+  {
+   "id": "curacao-nu",
+   "naam": "Curaçao.nu",
+   "url": "https://curacao.nu",
+   "soort": {
+    "nl": "Nederlandstalige nieuwssite",
+    "en": "Dutch-language news site"
+   },
+   "plaats": "Castorweg, Willemstad",
+   "tags": [
+    "nl",
+    "website",
+    "gratis",
+    "dagelijks",
+    "app"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Gratis te lezen",
+     "en": "Free to read"
+    },
+    {
+     "nl": "Ook vacatures en agenda",
+     "en": "Also job listings and events"
+    },
+    {
+     "nl": "Eigen app en radiozender",
+     "en": "Own app and radio station"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.nu",
+    "https://www.google.com/maps?cid=10609970690457460431"
+   ]
+  },
+  {
+   "id": "curacao-chronicle",
+   "naam": "Curaçao Chronicle",
+   "url": "https://www.curacaochronicle.com",
+   "soort": {
+    "nl": "Engelstalige nieuwssite",
+    "en": "English-language news site"
+   },
+   "plaats": null,
+   "tags": [
+    "en",
+    "website",
+    "gratis",
+    "dagelijks"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Nieuws van Curaçao in het Engels",
+     "en": "Curaçao news in English"
+    },
+    {
+     "nl": "Geen betaalmuur gezien",
+     "en": "No paywall seen"
+    },
+    {
+     "nl": "Meerdere updates per dag",
+     "en": "Several updates a day"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com"
+   ]
+  },
+  {
+   "id": "caribisch-netwerk",
+   "naam": "Caribisch Netwerk (NTR)",
+   "url": "https://caribischnetwerk.ntr.nl",
+   "soort": {
+    "nl": "Nederlandse publieke omroep",
+    "en": "Dutch public broadcaster"
+   },
+   "plaats": null,
+   "tags": [
+    "nl",
+    "en",
+    "papiamentu",
+    "website",
+    "gratis"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Correspondenten op alle zes eilanden",
+     "en": "Correspondents on all six islands"
+    },
+    {
+     "nl": "Ook site in Engels en Papiaments",
+     "en": "Also English and Papiamentu sites"
+    },
+    {
+     "nl": "Wekelijks nieuwsoverzicht",
+     "en": "Weekly news roundup"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribischnetwerk.ntr.nl/wie-zijn-we/",
+    "https://caribischnetwerk.ntr.nl/2026/10/13/weekoverzicht-onderzoek-naar-chinese-invloed-st-maarten-wil-hulp-van-defensie-en-op-curacao-overlijdt-16-jarige-chauffeur/",
+    "https://caribbeannetwork.ntr.nl/tag/music/"
+   ]
+  },
+  {
+   "id": "kiko-ta-pasando",
+   "naam": "Kiko Ta Pasando",
+   "url": "https://kikotapasando.com",
+   "soort": {
+    "nl": "Papiamentstalige nieuwssite",
+    "en": "Papiamentu news site"
+   },
+   "plaats": null,
+   "tags": [
+    "papiamentu",
+    "website",
+    "gratis",
+    "dagelijks"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Volledig gratis te lezen",
+     "en": "Completely free to read"
+    },
+    {
+     "nl": "Veel politie- en overheidsnieuws",
+     "en": "Lots of police and government news"
+    },
+    {
+     "nl": "Ook berichten over Aruba",
+     "en": "Also covers Aruba"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://kikotapasando.com/",
+    "https://www.facebook.com/p/Kiko-Ta-Pasando-Notisia-pagina-100044658333732/"
+   ]
+  },
+  {
+   "id": "knipselkrant-curacao",
+   "naam": "Knipselkrant Curaçao",
+   "url": "https://www.knipselkrant-curacao.com",
+   "soort": {
+    "nl": "Nederlandstalig nieuwsoverzicht",
+    "en": "Dutch-language news digest"
+   },
+   "plaats": null,
+   "tags": [
+    "nl",
+    "website"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curalink.com/island-guide-curacao/news-sources/",
+    "https://www.newsmedialists.com/curacao/newspapers"
+   ]
+  },
+  {
+   "id": "deporte-awe",
+   "naam": "Deporte Awe",
+   "url": "https://deporteawe.com",
+   "soort": {
+    "nl": "sportnieuws",
+    "en": "sports news"
+   },
+   "plaats": null,
+   "tags": [
+    "papiamentu",
+    "en",
+    "es",
+    "website"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Sportnieuws in drie talen",
+     "en": "Sports news in three languages"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/List_of_newspapers_in_Cura%C3%A7ao"
+   ]
+  },
+  {
+   "id": "the-daily-herald",
+   "naam": "The Daily Herald",
+   "url": "https://www.thedailyherald.sx",
+   "soort": {
+    "nl": "Engelstalige krant van Sint Maarten",
+    "en": "English-language St. Maarten paper"
+   },
+   "plaats": null,
+   "tags": [
+    "en",
+    "krant",
+    "website"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Gevestigd op Sint Maarten",
+     "en": "Based in St. Maarten"
+    },
+    {
+     "nl": "Veel nieuws over Curaçao",
+     "en": "Lots of Curaçao coverage"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/List_of_newspapers_in_Cura%C3%A7ao"
+   ]
+  },
+  {
+   "id": "gobiernu-cw",
+   "naam": "Gobiernu di Kòrsou (overheidsnieuws)",
+   "url": "https://gobiernu.cw",
+   "soort": {
+    "nl": "officieel overheidsnieuws",
+    "en": "official government news"
+   },
+   "plaats": null,
+   "tags": [
+    "nl",
+    "papiamentu",
+    "website",
+    "gratis"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Persberichten van de overheid",
+     "en": "Government press releases"
+    },
+    {
+     "nl": "In Nederlands en Papiaments",
+     "en": "In Dutch and Papiamentu"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/List_of_newspapers_in_Cura%C3%A7ao"
+   ]
+  },
+  {
+   "id": "telecuracao",
+   "naam": "TeleCuraçao",
+   "url": "https://www.telecuracao.com",
+   "soort": {
+    "nl": "oudste tv-zender",
+    "en": "oldest TV station"
+   },
+   "plaats": null,
+   "tags": [
+    "tv",
+    "gratis",
+    "papiamentu"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Op de buis sinds 31 juli 1960",
+     "en": "On air since July 31, 1960"
+    },
+    {
+     "nl": "Kanaal 8, digitaal UHF 26",
+     "en": "Channel 8, digital UHF 26"
+    },
+    {
+     "nl": "Ook TeleCuraçao 2 en How TV",
+     "en": "Also TeleCuraçao 2 and How TV"
+    },
+    {
+     "nl": "Website in onderhoud (okt 2026)",
+     "en": "Website under maintenance (Oct 2026)"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/Telecura%C3%A7ao",
+    "https://xn--telecuraao-v6a.com/"
+   ]
+  },
+  {
+   "id": "nos-pais",
+   "naam": "Nos Pais Television",
+   "url": "https://www.nospais.com",
+   "soort": {
+    "nl": "commerciële tv-zender",
+    "en": "commercial TV station"
+   },
+   "plaats": "Saliña, Willemstad",
+   "tags": [
+    "tv",
+    "papiamentu",
+    "nl",
+    "en",
+    "live-stream",
+    "app",
+    "talk"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Flow kanaal 104, Digicel 88",
+     "en": "Flow channel 104, Digicel 88"
+    },
+    {
+     "nl": "Uitzendingen sinds mei 2014",
+     "en": "On air since May 2014"
+    },
+    {
+     "nl": "Livestream en eigen app",
+     "en": "Live stream and own app"
+    },
+    {
+     "nl": "Rechten WK voetbal 2026",
+     "en": "2026 World Cup broadcast rights"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.nospais.com/about-us/",
+    "https://en.wikipedia.org/wiki/Nos_Pais_Television",
+    "https://play.google.com/store/apps/details?id=com.cr38te.nospais&hl=en"
+   ]
+  },
+  {
+   "id": "tv-direct-13",
+   "naam": "TV Direct 13",
+   "url": "https://www.facebook.com/directmediacuracao/",
+   "soort": {
+    "nl": "lokale tv-zender",
+    "en": "local TV station"
+   },
+   "plaats": "Franklin D. Rooseveltweg, Willemstad",
+   "tags": [
+    "tv",
+    "gratis",
+    "live-stream",
+    "papiamentu"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Livestream via CurWatch",
+     "en": "Live stream on CurWatch"
+    },
+    {
+     "nl": "Zelfde huis als Radio Direct",
+     "en": "Same company as Radio Direct"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 116,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=11247524228601721156"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps?cid=11247524228601721156",
+    "https://cur.watch/media/network/CBA/20"
+   ]
+  },
+  {
+   "id": "cba-tv",
+   "naam": "CBA Television",
+   "url": "https://www.youtube.com/@CBA_TV",
+   "soort": {
+    "nl": "lokale tv-zender",
+    "en": "local TV station"
+   },
+   "plaats": null,
+   "tags": [
+    "tv",
+    "papiamentu",
+    "en"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Nieuwsprogramma E Notisia",
+     "en": "News show E Notisia"
+    },
+    {
+     "nl": "Ook Engelstalige CBA-pagina",
+     "en": "Also an English CBA page"
+    },
+    {
+     "nl": "Uitzendingen terug op YouTube",
+     "en": "Shows replayed on YouTube"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://cur.watch/media/network/CBA/20",
+    "https://www.youtube.com/@CBA_TV",
+    "https://www.facebook.com/cbatv.english/"
+   ]
+  },
+  {
+   "id": "radio-hoyer-1",
+   "naam": "Radio Hoyer 1",
+   "url": "https://radiohoyer.com",
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": "Plasa Horacio Hoyer, Punda",
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream",
+    "papiamentu",
+    "talk",
+    "muziek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 101.9",
+     "en": "FM 101.9"
+    },
+    {
+     "nl": "In de lucht sinds 1954",
+     "en": "On air since 1954"
+    },
+    {
+     "nl": "Nieuws, praatprogramma's, muziek",
+     "en": "News, talk shows, music"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 15,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=16416782393209095592"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://radiohoyer.com",
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://www.google.com/maps?cid=16416782393209095592",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "radio-hoyer-2",
+   "naam": "Radio Hoyer 2",
+   "url": "https://radiohoyer.com",
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": "Plasa Horacio Hoyer, Punda",
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream",
+    "nl",
+    "talk",
+    "muziek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 105.1",
+     "en": "FM 105.1"
+    },
+    {
+     "nl": "In de lucht sinds 1959",
+     "en": "On air since 1959"
+    },
+    {
+     "nl": "Nederlandstalige zender van Hoyer",
+     "en": "Hoyer's Dutch-language station"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 15,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps?cid=16416782393209095592"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://radiohoyer.com",
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://www.google.com/maps?cid=16416782393209095592",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "paradise-fm",
+   "naam": "Paradise FM",
+   "url": "https://paradisefm.cw",
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream",
+    "nl",
+    "muziek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 103.1",
+     "en": "FM 103.1"
+    },
+    {
+     "nl": "Hits en lokaal nieuws",
+     "en": "Hits and local news"
+    },
+    {
+     "nl": "Programma's terugluisteren",
+     "en": "Shows available on demand"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://paradisefm.cw",
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "dolfijn-fm",
+   "naam": "Dolfijn FM",
+   "url": "https://dolfijngo.com/radio/",
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream",
+    "nl",
+    "muziek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 97.3",
+     "en": "FM 97.3"
+    },
+    {
+     "nl": "Noemt zich grootste Nederlandstalige zender",
+     "en": "Calls itself largest Dutch-language station"
+    },
+    {
+     "nl": "Top 40 plus eilandnieuws",
+     "en": "Top 40 plus island news"
+    },
+    {
+     "nl": "Extra webstreams per genre",
+     "en": "Extra web streams by genre"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://mytuner-radio.com/da/radio/dolfijn-973-fm-398230",
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "curacao-nu-radio",
+   "naam": "Curaçao.nu Radio",
+   "url": "https://curacao.nu/radio",
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream",
+    "nl",
+    "muziek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 101.1",
+     "en": "FM 101.1"
+    },
+    {
+     "nl": "Gestart november 2025",
+     "en": "Launched November 2025"
+    },
+    {
+     "nl": "Caribische en Nederlandse hits",
+     "en": "Caribbean and Dutch hits"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacao.nu/radio",
+    "https://www.curacaochronicle.com/post/local/curacaonu-breathes-new-life-into-iconic-1011-fm",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "easy-fm",
+   "naam": "Easy FM",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream",
+    "muziek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 97.9",
+     "en": "FM 97.9"
+    },
+    {
+     "nl": "Adult hits",
+     "en": "Adult hits"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://tunein.com/radio/Easy-FM-979-s7788/",
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "radio-korsou",
+   "naam": "Radio Kòrsou FM",
+   "url": "https://www.korsou.com",
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": "Bataljonweg, Willemstad",
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 93.9",
+     "en": "FM 93.9"
+    },
+    {
+     "nl": "Studio aan de Bataljonweg",
+     "en": "Studio on Bataljonweg"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://mytuner-radio.com/tr/radyo/radio-korsou-939-fm-396225/",
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "radio-direct",
+   "naam": "Radio Direct",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream",
+    "papiamentu",
+    "muziek",
+    "talk"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 107.1",
+     "en": "FM 107.1"
+    },
+    {
+     "nl": "Caribische muziek, 24 uur",
+     "en": "Caribbean music, 24 hours"
+    },
+    {
+     "nl": "Nieuwsbulletin Notisia Direct",
+     "en": "News bulletin Notisia Direct"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://tunein.com/radio/Radio-Direct-1071-s9153/",
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "direct-life",
+   "naam": "Direct Life",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 92.1",
+     "en": "FM 92.1"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "radio-mas",
+   "naam": "Radio Mas",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 99.7",
+     "en": "FM 99.7"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "hit-radio",
+   "naam": "Hit Radio",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 91.5",
+     "en": "FM 91.5"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "radio-94",
+   "naam": "Radio 94",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 94.5",
+     "en": "FM 94.5"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "clazz-fm",
+   "naam": "Clazz FM",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 95.1",
+     "en": "FM 95.1"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "radio-new-song",
+   "naam": "Radio New Song (RTNS)",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 96.5",
+     "en": "FM 96.5"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "radio-semiya",
+   "naam": "Radio Semiya",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 98.5",
+     "en": "FM 98.5"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "radio-active",
+   "naam": "Radio Active",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 104.5",
+     "en": "FM 104.5"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "radio-one",
+   "naam": "Radio One",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 103.9",
+     "en": "FM 103.9"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "fiesta-fm",
+   "naam": "Fiesta FM",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 106.3",
+     "en": "FM 106.3"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "rumbera-network",
+   "naam": "Rumbera Network",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 107.9",
+     "en": "FM 107.9"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "radio-margaritha",
+   "naam": "Radio Margaritha",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 90.3",
+     "en": "FM 90.3"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "radio-krioyo",
+   "naam": "Radio Krioyo",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 89.7",
+     "en": "FM 89.7"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://radio.dubbeh.net/stations/radio-krioyo-897-fm-47149",
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "pearl-fm",
+   "naam": "Pearl FM",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "FM 98.1",
+     "en": "FM 98.1"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations"
+   ]
+  },
+  {
+   "id": "88rockorsou",
+   "naam": "88Rockòrsou",
+   "url": null,
+   "soort": {
+    "nl": "radiozender",
+    "en": "radio station"
+   },
+   "plaats": null,
+   "tags": [
+    "radio",
+    "gratis",
+    "live-stream",
+    "muziek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Zelfstandig sinds einde Curom",
+     "en": "Independent since Curom ended"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://mytuner-radio.com/nl/radio/land/curacao-stations",
+    "https://www.curacaochronicle.com/post/local/curom-bankrupt-end-of-z86-and-mi95",
+    "https://en.wikipedia.org/wiki/Telecommunications_in_Cura%C3%A7ao"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "myTuner Radio",
+   "url": "https://mytuner-radio.com/nl/radio/land/curacao-stations",
+   "uitleg": {
+    "nl": "Gratis app en site met livestreams van ruim vijftig Curaçaose radiozenders.",
+    "en": "Free app and site with live streams of more than fifty Curaçao radio stations."
+   }
+  },
+  {
+   "naam": "TuneIn",
+   "url": "https://tunein.com/radio/Radio-Direct-1071-s9153/",
+   "uitleg": {
+    "nl": "Luister-app waarop onder meer Radio Direct en Easy FM te vinden zijn.",
+    "en": "Listening app that carries Radio Direct and Easy FM, among others."
+   }
+  },
+  {
+   "naam": "CurWatch",
+   "url": "https://cur.watch/media/network/CBA/20",
+   "uitleg": {
+    "nl": "Gratis portaal voor lokale tv online: livestreams van onder meer Nos Pais en TV Direct 13, plus uitzendingen van CBA terugkijken. Ook voor Roku en Kodi.",
+    "en": "Free portal for local TV online: live streams of Nos Pais and TV Direct 13 among others, plus CBA replays. Also on Roku and Kodi."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Z86 en Mi95 zijn sinds 27 december 2023 uit de lucht: eigenaar Curom ging failliet. 88Rockòrsou ging zelfstandig verder.",
+   "en": "Z86 and Mi95 have been off the air since December 27, 2023, when owner Curom went bankrupt. 88Rockòrsou carried on independently."
+  },
+  {
+   "nl": "Op 101.1 FM zit sinds november 2025 de radiozender van Curaçao.nu.",
+   "en": "Since November 2025, 101.1 FM has been the radio station of Curaçao.nu."
+  },
+  {
+   "nl": "La Prensa drukte op 1 december 2017 haar laatste editie.",
+   "en": "La Prensa printed its last edition on December 1, 2017."
+  },
+  {
+   "nl": "Kort op het eiland? Het Antilliaans Dagblad verkoopt een online weekpas van USD 10, Vigilante een dagpas van USD 0,85.",
+   "en": "Only on the island for a short while? Antilliaans Dagblad sells an online week pass for USD 10, Vigilante a day pass for USD 0.85."
+  },
+  {
+   "nl": "Heb je een papieren abonnement op de Amigoe, dan lees je Amigoe Online gratis.",
+   "en": "If you have a print subscription to Amigoe, Amigoe Online is free."
+  },
+  {
+   "nl": "TeleCuraçao vind je op kanaal 8 en digitaal op UHF 26 (8.1 tot 8.3); Nos Pais zit bij Flow op kanaal 104 en bij Digicel op 88.",
+   "en": "TeleCuraçao is on channel 8 and digital UHF 26 (8.1 to 8.3); Nos Pais is on Flow channel 104 and Digicel channel 88."
+  },
+  {
+   "nl": "Het Antilliaans Dagblad heeft ook zakelijke online abonnementen, vanaf USD 350 per jaar voor drie lezers.",
+   "en": "Antilliaans Dagblad also sells business online plans, starting at USD 350 a year for three readers."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wat is de grootste krant van Curaçao?",
+    "en": "What is the biggest newspaper in Curaçao?"
+   },
+   "a": {
+    "nl": "Er zijn geen recente openbare oplagecijfers. Antilliaans Dagblad en Amigoe zijn de enige twee Nederlandstalige dagbladen; Amigoe bestaat sinds 1883. Èxtra (sinds 1976) is de bekende Papiamentstalige krant.",
+    "en": "There are no recent public circulation figures. Antilliaans Dagblad and Amigoe are the only two Dutch-language dailies; Amigoe dates back to 1883. Extra (since 1976) is the well-known Papiamentu paper."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe kijk ik TeleCuraçao in het buitenland?",
+    "en": "How can I watch TeleCuraçao abroad?"
+   },
+   "a": {
+    "nl": "TeleCuraçao zendt uit op kanaal 8 en UHF 26. De website stond op 20 oktober 2026 in onderhoud, dus een officiële livestream konden we niet bevestigen. Nos Pais heeft wel een livestream en app, en CurWatch zendt Nos Pais en TV Direct 13 gratis online uit.",
+    "en": "TeleCuraçao broadcasts on channel 8 and UHF 26. Its website was under maintenance on October 20, 2026, so we couldn't confirm an official live stream. Nos Pais does have a live stream and app, and CurWatch streams Nos Pais and TV Direct 13 online for free."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar lees ik Nederlandstalig nieuws over Curaçao?",
+    "en": "Where can I read Dutch-language news about Curaçao?"
+   },
+   "a": {
+    "nl": "Betaald: Antilliaans Dagblad (USD 25 per maand online) en Amigoe (XCG 30,50 per maand online). Gratis: Curaçao.nu en Caribisch Netwerk van de NTR.",
+    "en": "Paid: Antilliaans Dagblad (USD 25 a month online) and Amigoe (XCG 30.50 a month online). Free: Curaçao.nu and the NTR's Caribisch Netwerk."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is er Engelstalig nieuws over Curaçao?",
+    "en": "Is there English-language news about Curaçao?"
+   },
+   "a": {
+    "nl": "Ja. Curaçao Chronicle brengt gratis dagelijks nieuws in het Engels. Caribisch Netwerk heeft een Engelse site (Caribbean Network) en The Daily Herald van Sint Maarten schrijft veel over Curaçao.",
+    "en": "Yes. Curaçao Chronicle publishes free daily news in English. Caribisch Netwerk has an English site (Caribbean Network), and St. Maarten's The Daily Herald covers Curaçao a lot."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost een abonnement op het Antilliaans Dagblad?",
+    "en": "How much is a subscription to Antilliaans Dagblad?"
+   },
+   "a": {
+    "nl": "AD Online kost USD 10 per week, USD 25 per maand of USD 175 per jaar. De papieren krant kost XCG 35 per maand of XCG 420 per jaar.",
+    "en": "AD Online costs USD 10 a week, USD 25 a month or USD 175 a year. The print paper costs XCG 35 a month or XCG 420 a year."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke radiozenders op Curaçao zijn Nederlandstalig?",
+    "en": "Which radio stations in Curaçao are in Dutch?"
+   },
+   "a": {
+    "nl": "Dolfijn FM 97.3 noemt zich de grootste Nederlandstalige zender. Verder Paradise FM 103.1, Radio Hoyer 2 105.1 en Curaçao.nu Radio 101.1.",
+    "en": "Dolfijn FM 97.3 calls itself the largest Dutch-language station. Others are Paradise FM 103.1, Radio Hoyer 2 105.1 and Curaçao.nu Radio 101.1."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe luister ik Curaçaose radio online?",
+    "en": "How can I listen to Curaçao radio online?"
+   },
+   "a": {
+    "nl": "Via de eigen sites (bijvoorbeeld Paradise FM, Radio Hoyer, Curaçao.nu) of via myTuner, dat ruim vijftig Curaçaose zenders gratis doorgeeft. Radio Direct en Easy FM staan ook op TuneIn.",
+    "en": "Through the stations' own sites (for example Paradise FM, Radio Hoyer, Curaçao.nu) or through myTuner, which carries more than fifty Curaçao stations for free. Radio Direct and Easy FM are also on TuneIn."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is er met Z86 en Mi95 gebeurd?",
+    "en": "What happened to Z86 and Mi95?"
+   },
+   "a": {
+    "nl": "Beide zenders stopten op 27 december 2023 toen hun eigenaar Curom Broadcasting failliet werd verklaard.",
+    "en": "Both stations stopped on December 27, 2023, when their owner Curom Broadcasting was declared bankrupt."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is de oudste radiozender van Curaçao?",
+    "en": "What is the oldest radio station in Curaçao?"
+   },
+   "a": {
+    "nl": "Radio Hoyer ging officieel van start op 10 maart 1954; Radio Hoyer 2 volgde op 10 maart 1959.",
+    "en": "Radio Hoyer officially started on March 10, 1954; Radio Hoyer 2 followed on March 10, 1959."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "nieuws curaçao",
+   "curaçao kranten",
+   "antilliaans dagblad",
+   "amigoe",
+   "curaçao radio",
+   "telecuraçao live",
+   "nederlandstalig nieuws curaçao"
+  ],
+  "en": [
+   "curacao news",
+   "curacao newspapers",
+   "curacao chronicle",
+   "curacao radio stations",
+   "telecuracao live stream",
+   "curacao tv channels"
+  ],
+  "es": [
+   "noticias curazao",
+   "periódicos curazao",
+   "radio curazao",
+   "televisión curazao"
+  ],
+  "pt": [
+   "notícias curaçao",
+   "jornais curaçao",
+   "rádio curaçao"
+  ],
+  "de": [
+   "curaçao nachrichten",
+   "curaçao zeitung",
+   "curaçao radio"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Wat is de beste Nederlandstalige nieuwsbron op Curaçao?",
+   "Hoe kan ik TeleCuraçao kijken vanuit Nederland?",
+   "Welke radiozenders op Curaçao zijn Nederlandstalig?"
+  ],
+  "en": [
+   "What are the main news sources in Curaçao?",
+   "Is there English-language news in Curaçao?",
+   "How can I stream Curaçao radio from the US?"
+  ]
+ },
+ "reviewGewicht": 0.3,
+ "talen": [
+  "nl",
+  "en"
+ ],
+ "googleNee": true
+}
