@@ -10,6 +10,7 @@ import { kv } from '../lib/db.js';
 import { organicStatus } from '../lib/organic.js';
 import { keepa } from '../lib/cc.js';
 import { MARKETS, K, DAY, log, items, amzSearch, amzReady, claude, json, indexnow } from '../lib/wtb.js';
+import { compact } from '../lib/ai.js';
 
 let OIDC = '';
 async function trendsRss(geo) {
@@ -31,7 +32,7 @@ async function leer(m, all) { // wat werkt: bezoeken, starts en Amazon-kliks per
 // ---- blinde-vlektest: wat zegt een taalmodel zonder internet, en klopt dat nog met wat Amazon nu verkoopt? ----
 async function blindTest(m, t) {
   const vraag = m.id === 'us' ? `I want to buy: ${t.title || t.term}. Which 3 specific models (brand + model name) would you recommend right now, and why in one line each?` : `Ich möchte kaufen: ${t.title || t.term}. Welche 3 konkreten Modelle (Marke + Modellname) würdest du jetzt empfehlen, je ein Satz warum?`;
-  const r = await claude('You are a typical AI shopping assistant WITHOUT internet access. Answer from memory only. Then rate yourself honestly. Reply ONLY JSON: {"models":["brand model",...],"confidence":0-1 (how sure you are this advice is current for buyers today),"knowledgeYear":YYYY (newest year your knowledge of this product category reflects),"gaps":"one sentence: what you are unsure about or may be outdated"}', vraag, { fast: true, max: 600, oidc: OIDC });
+  const r = await claude('You are a typical AI shopping assistant WITHOUT internet access. Answer from memory only. Then rate yourself honestly. Reply ONLY JSON: {"models":["brand model",...],"confidence":0-1 (how sure you are this advice is current for buyers today),"knowledgeYear":YYYY (newest year your knowledge of this product category reflects),"gaps":"one sentence: what you are unsure about or may be outdated"}', vraag, { fast: true, max: 400, oidc: OIDC, fn: 'wtb-blindtest', cacheTtl: 7 * 86400, check: json });
   const j = json(r.txt); const models = (j.models || []).map(String).slice(0, 3);
   let avail = null; const gevonden = [];
   if (amzReady() && models.length) { let ok = 0, n = 0; for (const mod of models) { try { const s = await amzSearch(m, mod); n++; const toks = mod.toLowerCase().split(/\s+/).filter(w => w.length > 2); const hit = s && s.products.some(p => toks.filter(w => p.title.toLowerCase().includes(w)).length >= Math.max(2, Math.ceil(toks.length * 0.7))); if (hit) ok++; gevonden.push({ model: mod, nogTeKoop: !!hit }); } catch (e) { break; } } if (n) avail = ok / n; }
@@ -45,9 +46,15 @@ async function maakPlan(m) {
   const [trends, les, gsc, dr] = await Promise.all([trendsRss(m.geo), leer(m, all), kv.get('hjdk:gsc:' + m.id).catch(() => null), demandRadar(m.geo).catch(() => [])]);
   const gscOpen = ((gsc && gsc.open) || []).slice(0, 25).map(x => x.q + ' (' + x.imp + ' impressions, pos ' + x.pos + ')');
   const score = (await kv.get('hjdk:score:' + m.id).catch(() => null)) || {}; const best = ((score.beslissingen || {}).meerInCategorie || []);
-  const n = m.perDay(); if (!n) return { dag: DAY(), topics: [] };
+  // Plan alleen zoveel als er vandaag gepubliceerd mag worden (organisch budget, bv. 1 per dag bij indexachterstand) plus wat reserve:
+  // een plan van 12 onderwerpen + 12 blinde-vlektests voor 1 gids was weggegooid geld.
+  const organic = await organicStatus(m.id, m.perDay()); const n = organic.budget.begrensd ? Math.min(m.perDay(), organic.budget.perDag) : m.perDay(); if (!n) return { dag: DAY(), topics: [] };
   // Bound output size: the old 18–30-topic response repeatedly broke JSON in DE.
-  const cand = Math.min(12, Math.max(n, Math.round(n * 1.2)));
+  const cand = Math.min(12, Math.max(n + 2, Math.round(n * 1.2)));
+  // Een mislukt plan werd niet bewaard, dus elke cron (elke 10 min, 03–23 UTC) vroeg opnieuw een volledig Sonnet-plan (16–18 okt: ~120 extra aanroepen per dag).
+  // Nu hoogstens 3 pogingen per markt per dag, minstens een uur ertussen.
+  const pf = (await kv.get(K.planFout(m.id, DAY())).catch(() => null)) || { n: 0, at: 0 };
+  if (pf.n >= 3 || Date.now() - pf.at < 3600000) throw new Error('plan mislukte eerder vandaag (' + pf.n + 'x); volgende poging ' + (pf.n >= 3 ? 'morgen' : 'na een uur'));
   const keepaSignals = [];
   for (const signal of dr.slice(0, 3)) {
     try { const k = await keepa(signal.term, m.geo); if (k && !k.fout) keepaSignals.push(k); } catch {}
@@ -56,7 +63,7 @@ async function maakPlan(m) {
   const sharedLessons = await kv.get('hjdk:leerlus:lessen').catch(() => null);
   const user = `Shared learning principles (not product facts; untested principles are hypotheses; honesty and own confirmed sales take precedence): ${JSON.stringify(sharedLessons?.lessen || [])}.\nToday: ${DAY()}. Existing guides (do not repeat): ${all.map(i => i.slug).join(', ') || 'none yet'}.
 Google Trends today (${m.geo}): ${trends.join(' | ') || 'n/a'}.
-Demand Radar (our own demand meter for ${m.geo}: measured Google searches per month, yearly growth, whether it is still rising today, and the chance it rises 40%+ in the next 3 months). Product types here with high volume that are rising now or predicted to rise (chance 50%+) get priority right after the Search Console list; use the radar term as the search keyword, mark them "radar":true, skip brands, single models, news and anything not sold on Amazon: ${JSON.stringify(dr.slice(0, 70))}.
+Demand Radar (our own demand meter for ${m.geo}: measured Google searches per month, yearly growth, whether it is still rising today, and the chance it rises 40%+ in the next 3 months). Product types here with high volume that are rising now or predicted to rise (chance 50%+) get priority right after the Search Console list; use the radar term as the search keyword, mark them "radar":true, skip brands, single models, news and anything not sold on Amazon: ${JSON.stringify(compact(dr.slice(0, 40), 4))}.
 Keepa category demand estimates via DemandRadar (not our affiliate orders, not verified current prices; missing data is unknown): ${JSON.stringify(keepaSignals)}. Use as supporting evidence only. Never invent sales or prices.
 Real-visitor scoreboard (last 7 days): categories that produced Amazon clicks, give these extra topics: ${best.join(', ') || 'none yet'}. Prefer specific buyer questions with a situation or audience and 'best X 2026' questions over broad head terms (big review sites win those).
 Google Search Console: searches where Google ALREADY shows our site but no guide answers them yet. Turn each one that is a product buying question into a topic FIRST and mark it "gsc":true: ${gscOpen.join(' | ') || 'none yet'}.
@@ -65,16 +72,18 @@ Keep each why field under 120 characters. Group equivalent search phrases into o
 Give ${cand} candidate topics: {"topics":[{"slug":"lowercase-ascii-hyphen in ${m.lang}","term":"Amazon search keywords in ${m.lang}","title":"the buyer question in ${m.lang}, e.g. ${m.id === 'us' ? 'Which robot vacuum for pet hair?' : 'Welcher Saugroboter für Tierhaare?'}","cat":"category in ${m.lang}","demand":1-5,"why":"short: why buyers search this now and why AI answers are likely outdated or vague"}]}`;
   let j;
   try {
-    const r = await claude(sys, user, { max: 9000, oidc: OIDC });
+    const r = await claude(sys, user, { max: Math.min(9000, 900 + cand * 450), oidc: OIDC, fn: 'wtb-plan' });
     if (r.stopReason === 'max_tokens') throw new Error('plan afgebroken door tokenlimiet');
     j = json(r.txt);
     if (!Array.isArray(j.topics) || !j.topics.length) throw new Error('leeg plan');
   } catch (e) {
     // One bounded smaller retry; never publish repaired fragments of incomplete JSON.
-    const r = await claude(sys, user + '\nPrevious attempt was invalid. Return ONLY 4 complete candidate topics in the same JSON shape. No commentary.', { max: 5000, oidc: OIDC });
-    if (r.stopReason === 'max_tokens') throw new Error('klein plan afgebroken door tokenlimiet');
-    j = json(r.txt);
-    if (!Array.isArray(j.topics) || !j.topics.length) throw new Error('leeg herstelplan');
+    try {
+      const r = await claude(sys, user + '\nPrevious attempt was invalid. Return ONLY ' + Math.min(4, cand) + ' complete candidate topics in the same JSON shape. No commentary.', { max: 3000, oidc: OIDC, fn: 'wtb-plan-herstel' });
+      if (r.stopReason === 'max_tokens') throw new Error('klein plan afgebroken door tokenlimiet');
+      j = json(r.txt);
+      if (!Array.isArray(j.topics) || !j.topics.length) throw new Error('leeg herstelplan');
+    } catch (e2) { await kv.set(K.planFout(m.id, DAY()), { n: pf.n + 1, at: Date.now(), fout: String(e2.message).slice(0, 120) }, { ex: 2 * 86400 }).catch(() => {}); throw e2; }
   }
   const have = new Set(all.map(i => i.slug)); const seen = new Set();
   let topics = (j.topics || []).map(t => Object.assign({}, t, { slug: String(t.slug || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) })).filter(t => t.slug && t.term && !have.has(t.slug) && !seen.has(t.slug) && seen.add(t.slug));
@@ -94,7 +103,7 @@ async function schrijf(m, t) {
   const user = `Topic: ${t.title} (term: ${t.term}, category: ${t.cat}). Why now: ${t.why || ''}.
 Blind-spot test: a typical AI assistant without internet recommended ${JSON.stringify(b.models || [])}, confidence ${b.conf}, knowledge reflects ${b.jaar}; its own doubt: "${b.gaps || ''}". ${b.gevonden && b.gevonden.length ? 'Amazon check today: ' + b.gevonden.map(g => g.model + (g.nogTeKoop ? ' = still listed' : ' = not found as a new listing')).join('; ') + '.' : ''}
 Write {"slug":"${t.slug}","term":"${t.term}","cat":"${t.cat}","title":"short buyer question","h1":"","seoTitle":"<=60 chars, include 2026","metaDesc":"<=155 chars","intro":"2 sentences","kort":"the direct answer in 2-3 sentences: which type/spec to pick for most people and when to choose differently","questions":[{"q":"","options":[{"label":"","kw":"","min":null,"max":null}]}] (exactly 3 questions x 3 options, last question = budget with min/max),"guide":"4-6 short paragraphs separated by \\n","mistakes":["3-5 items"],"aiMiss":["2-4 concrete points where generic AI answers go wrong for this topic today (outdated models/standards, missing new options, wrong assumptions). Do not name a specific product as discontinued unless the Amazon check says not found; then say 'hard to find new today'."],"faq":[{"q":"","a":""}] (5 items, real search questions)}`;
-  const r = await claude(sys, user, { max: 6000, oidc: OIDC }); const it = json(r.txt);
+  const r = await claude(sys, user, { max: 6000, oidc: OIDC, fn: 'wtb-gids', cacheTtl: 2 * 86400, check: json }); if (r.stopReason === 'max_tokens') throw new Error('gids afgebroken door tokenlimiet'); const it = json(r.txt);
   it.slug = t.slug; it.term = it.term || t.term; it.cat = it.cat || t.cat; it.blind = b; it.why = t.why;
   if (!Array.isArray(it.questions) || it.questions.length < 2 || !it.kort || !it.guide) throw new Error('onvolledige gids');
   it.questions = it.questions.slice(0, 3).map(q => ({ q: String(q.q || ''), options: (q.options || []).slice(0, 4).map(o => ({ label: String(o.label || ''), kw: String(o.kw || ''), min: o.min != null && o.min !== '' ? Number(o.min) : null, max: o.max != null && o.max !== '' ? Number(o.max) : null })).filter(o => o.label) })).filter(q => q.q && q.options.length >= 2);

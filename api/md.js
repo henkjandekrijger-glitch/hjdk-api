@@ -11,6 +11,7 @@
 //      en elke dag nieuwe proberen; slechtste dichtzetten. Bod omhoog als een goede campagne te weinig verkeer krijgt.
 //   4. Bewaking: saldo, dagbudget, alles gelogd.
 import { kv } from '../lib/db.js';
+import { berichten, HAIKU } from '../lib/ai.js';
 import { md, mdStart, mdCallback, mdState, mdAutoLogin, mdHeeftSleutel } from '../lib/mdmcp.js';
 
 const SITE = 'https://keuzehulp.best';
@@ -34,10 +35,9 @@ let ITEMS = null;
 async function items() { if (ITEMS) return ITEMS; try { const r = await fetch(SITE + '/api/kz?op=list'); const j = await r.json(); ITEMS = j.items || []; return ITEMS; } catch (e) { return []; } }
 
 // ---- Claude voor advertentieteksten (via Vercel AI Gateway met het OIDC-token van dit project; anders eigen sleutel; anders sjablonen) ----
-async function claudeTekst(prompt) {
-  const oidc = process.env.VERCEL_OIDC_TOKEN || OIDC; const key = process.env.ANTHROPIC_API_KEY;
-  const tries = oidc ? ['anthropic/claude-sonnet-5.5', 'anthropic/claude-sonnet-5', 'anthropic/claude-sonnet-4.5'].map(m => ({ url: 'https://ai-gateway.vercel.sh/v1/messages', h: { authorization: 'Bearer ' + oidc }, m })) : key ? [{ url: 'https://api.anthropic.com/v1/messages', h: { 'x-api-key': key }, m: 'claude-sonnet-4-5' }] : [];
-  for (const t of tries) { try { const r = await fetch(t.url, { method: 'POST', headers: Object.assign({ 'anthropic-version': '2023-06-01', 'content-type': 'application/json' }, t.h), body: JSON.stringify({ model: t.m, max_tokens: 1200, thinking: { type: 'disabled' }, messages: [{ role: 'user', content: prompt }] }) }); const j = await r.json().catch(() => ({})); if (r.ok) { const s = (j.content || []).filter(c => c.type === 'text').map(c => c.text).join(''); const a = s.indexOf('{'), b = s.lastIndexOf('}'); if (a >= 0) return JSON.parse(s.slice(a, b + 1)); } } catch (e) {} }
+async function claudeTekst(prompt) { // korte advertentieteksten: Haiku (env MD_TEKST_MODEL), zelfde invoer binnen 3 dagen uit Redis
+  const uit = t => { const a = t.indexOf('{'), b = t.lastIndexOf('}'); return a >= 0 ? JSON.parse(t.slice(a, b + 1)) : null; };
+  try { const r = await berichten({ fn: 'md-advertentietekst', model: process.env.MD_TEKST_MODEL || HAIKU, user: prompt, max: 600, cacheTtl: 3 * 86400, check: uit, oidc: OIDC, directKey: process.env.ANTHROPIC_API_KEY }); return uit(r.txt); } catch (e) {}
   return null;
 }
 function sjablonen(it) { const n = String(it.title || it.slug).replace(/^Welke?\s+/i, '').replace(/\s+past bij (jou|jouw \w+)\??$/i, '').trim(); const N = n.charAt(0).toUpperCase() + n.slice(1);

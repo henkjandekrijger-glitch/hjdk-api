@@ -24,7 +24,7 @@ async function log(e) { try { const l = (await kv.get('hjdk:gsc:log')) || []; l.
 async function herschrijf(lang, it, p, oidc) {
   const sys = `You write search result snippets (title tag + meta description) that get clicked. Language: ${lang === 'nl' ? 'Dutch (je-vorm)' : lang === 'de' ? 'German (du-Form)' : 'US English'}. The page is a buying guide that asks 3 questions and gives one product pick with today's price. Rules: title max 60 characters, starts with the words searchers actually use${lang === 'nl' ? ' (Dutch: begin with "Keuzehulp <producttype>:" unless the queries clearly use other first words, e.g. "beste ...")' : ''}, includes the year 2026 only if it helps, no clickbait, no ALL CAPS, no brand names unless in the queries. Description 120-155 characters: say what the reader gets (a clear pick in 3 questions, current prices, what to watch out for). Reply ONLY JSON {"seoTitle":"","metaDesc":""}.`;
   const user = JSON.stringify({ huidigeTitel: it.seoTitle || it.h1 || it.title, huidigeOmschrijving: it.metaDesc || it.kort || it.intro, zoekvragenWaarvoorGetoond: p.topQ, vertoningen: p.imp, kliks: p.clicks, gemiddeldePositie: p.pos });
-  const r = await claude(sys, user, { fast: true, max: 400, oidc }); const j = json(r.txt);
+  const r = await claude(sys, user, { fast: true, max: 300, oidc, fn: 'gsc-titel', cacheTtl: 14 * 86400, check: json }); const j = json(r.txt);
   const t = String(j.seoTitle || '').trim().slice(0, 70), d = String(j.metaDesc || '').trim().slice(0, 170);
   if (t.length < 15 || d.length < 60) throw new Error('herschrijving te kort'); return { seoTitle: t, metaDesc: d };
 }
@@ -43,7 +43,7 @@ async function fixWtb(m, it, nieuw, p) {
 async function faqErbij(lang, it, vragen, oidc) {
   const sys = `You add FAQ entries to an existing buying-guide page. Language: ${lang === 'nl' ? 'Dutch (je-vorm)' : lang === 'de' ? 'German (du-Form)' : 'US English'}. People found this page on Google with the search queries given, but the page does not answer them yet. For each query that a buyer of this product type genuinely asks, write ONE FAQ entry: "q" = the question as a buyer would phrase it (natural, not keyword-stuffed), "a" = a direct, honest answer of 2-4 sentences that starts with the answer itself, gives typical ranges or rules of thumb where useful, and ends by tying back to choosing the right product. Never invent specific product specs, prices, test results or model numbers; if a query is about one specific model or needs data you do not have, answer generally (what to check) or skip it. Skip queries that are off-topic, not about buying/using this product, or would duplicate an existing FAQ. Reply ONLY JSON {"faq":[{"q":"","a":"","query":"the original search query"}]} with at most 2 entries.`;
   const user = JSON.stringify({ pagina: it.title || it.h1, kort: it.kort || it.intro, bestaandeFaq: (it.faq || []).map(f => f.q), zoekvragen: vragen.map(v => v.q) });
-  const r = await claude(sys, user, { fast: true, max: 900, oidc }); const j = json(r.txt);
+  const r = await claude(sys, user, { fast: true, max: 900, oidc, fn: 'gsc-faq', cacheTtl: 14 * 86400, check: json }); const j = json(r.txt);
   return (j.faq || []).filter(f => f && String(f.q || '').length > 8 && String(f.a || '').length > 60).slice(0, 2).map(f => ({ q: String(f.q).trim().slice(0, 160), a: String(f.a).trim().slice(0, 700), bron: 'search-console', query: String(f.query || '').slice(0, 120), dag: DAY() }));
 }
 async function saveFaq(m, it, nieuw) {

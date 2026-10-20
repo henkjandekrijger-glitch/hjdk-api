@@ -21,6 +21,7 @@
 import sharp from 'sharp';
 import { randomBytes, createHash } from 'node:crypto';
 import { kv } from '../lib/db.js';
+import { berichten, HAIKU, SONNET } from '../lib/ai.js';
 import { md } from '../lib/mdmcp.js';
 import { look } from '../lib/look.js';
 import seed from '../data/shop-seed.json' with { type: 'json' };
@@ -148,17 +149,21 @@ async function rangorde(cat, vast) {
 }
 
 // ---------------- Claude voor advertentieteksten (Vercel AI Gateway met het OIDC-token van dit project; anders eigen sleutel; anders sjabloon) ----------------
-async function claudeJson(prompt) {
-  const oidc = process.env.VERCEL_OIDC_TOKEN || OIDC; const key = process.env.ANTHROPIC_API_KEY;
-  const tries = oidc ? ['anthropic/claude-sonnet-5.5', 'anthropic/claude-sonnet-5', 'anthropic/claude-sonnet-4.5'].map(m => ({ url: 'https://ai-gateway.vercel.sh/v1/messages', h: { authorization: 'Bearer ' + oidc }, m })) : key ? [{ url: 'https://api.anthropic.com/v1/messages', h: { 'x-api-key': key }, m: 'claude-sonnet-4-5' }] : [];
-  for (const t of tries) { try { const r = await fetch(t.url, { method: 'POST', headers: Object.assign({ 'anthropic-version': '2023-06-01', 'content-type': 'application/json' }, t.h), body: JSON.stringify({ model: t.m, max_tokens: 900, thinking: { type: 'disabled' }, messages: [{ role: 'user', content: prompt }] }) }); const j = await r.json().catch(() => ({})); if (!r.ok) { try { await kv.set('hjdk:shop:claudefout', { at: new Date().toISOString(), model: t.m, status: r.status, fout: JSON.stringify(j).slice(0, 300) }, { ex: 7 * 86400 }); } catch (x) {} } if (r.ok) { const s = (j.content || []).filter(c => c.type === 'text').map(c => c.text).join(''); const a = s.indexOf('{'); if (a >= 0) { let d = 0, q = false, e = false, eind = -1; for (let i = a; i < s.length; i++) { const ch = s[i]; if (q) { if (e) e = false; else if (ch === '\\') e = true; else if (ch === '"') q = false; continue; } if (ch === '"') q = true; else if (ch === '{') d++; else if (ch === '}') { d--; if (d === 0) { eind = i; break; } } } return JSON.parse(s.slice(a, (eind > 0 ? eind : s.lastIndexOf('}')) + 1)); } } } catch (e) { try { await kv.set('hjdk:shop:claudefout', { at: new Date().toISOString(), model: t.m, fout: String(e.message || e).slice(0, 300) }, { ex: 7 * 86400 }); } catch (x) {} } }
+// Haiku voor korte advertentieteksten (env SHOP_TEKST_MODEL); Sonnet alleen voor de lessen uit de cijfers (redeneren over data; env SHOP_LES_MODEL).
+// Zelfde vraag met dezelfde invoer binnen de bewaartijd: antwoord uit Redis, geen nieuwe aanroep.
+function jsonUitTekst(s) { const a = s.indexOf('{'); if (a < 0) return null; let d = 0, q = false, e = false, eind = -1; for (let i = a; i < s.length; i++) { const ch = s[i]; if (q) { if (e) e = false; else if (ch === '\\') e = true; else if (ch === '"') q = false; continue; } if (ch === '"') q = true; else if (ch === '{') d++; else if (ch === '}') { d--; if (d === 0) { eind = i; break; } } } return JSON.parse(s.slice(a, (eind > 0 ? eind : s.lastIndexOf('}')) + 1)); }
+async function claudeJson(prompt, o) {
+  o = o || {}; const model = o.model || process.env.SHOP_TEKST_MODEL || HAIKU;
+  try { const r = await berichten({ fn: o.fn || 'shop', model, user: prompt, max: o.max || 900, cacheTtl: o.cacheTtl, check: t => jsonUitTekst(t), oidc: OIDC, directKey: process.env.ANTHROPIC_API_KEY });
+    return jsonUitTekst(r.txt); }
+  catch (e) { try { await kv.set('hjdk:shop:claudefout', { at: new Date().toISOString(), model, status: e.status || 0, fout: String(e.message || e).slice(0, 300) }, { ex: 7 * 86400 }); } catch (x) {} }
   return null;
 }
 const kortTitel = it => { let t = it.t.replace(/\s+(van|by|door)\s+[A-Z][\w .&-]+$/, '').replace(/\s+(Art Bizniz|Mica Decorations|Soeji|Housevitamin|Label2X)\b.*$/i, '').replace(/\s+\d+([.,]\d+)?\s?x\s?\d+.*$/i, '').trim(); if (t.length > 30) t = t.slice(0, 31).replace(/\s+\S*$/, ''); return t; };
 async function nieuweTekst(it, beste, bestaand) {
   const j = await claudeJson(`Schrijf 3 Nederlandse push-advertenties voor dit product uit de Yoors Shop (webshop, verzonden vanuit Europa, 14 dagen retour): "${it.t}" van ${it.b || 'onbekend merk'}, ${eur(it.p)}${it.pf ? ' (vanaf-prijs)' : ''}, categorie ${it.c}/${it.s}. Vandaag is het ${DAY()}.
 Wat tot nu toe het meest doorklikte naar de shop: ${beste.length ? beste.map(b => '"' + b.title + '" / "' + b.desc + '"').join('; ') : 'nog niets bekend'}.
-Regels: titel hooguit 30 tekens, tekst hooguit 40 tekens. Eerlijk: verzin geen eigenschappen die niet in de productnaam staan, geen nep-urgentie, geen 'gratis', geen korting noemen. Noem de prijs alleen exact zoals hierboven. Concreet en nieuwsgierig makend, elke variant een andere invalshoek (cadeau, seizoen of moment, zelf doen, sfeer in huis). Gewone spreektaal, geen uitroeptekens. Antwoord alleen JSON: {"varianten":[{"title":"","desc":""}]}`);
+Regels: titel hooguit 30 tekens, tekst hooguit 40 tekens. Eerlijk: verzin geen eigenschappen die niet in de productnaam staan, geen nep-urgentie, geen 'gratis', geen korting noemen. Noem de prijs alleen exact zoals hierboven. Concreet en nieuwsgierig makend, elke variant een andere invalshoek (cadeau, seizoen of moment, zelf doen, sfeer in huis). Gewone spreektaal, geen uitroeptekens. Antwoord alleen JSON: {"varianten":[{"title":"","desc":""}]}`, { fn: 'shop-advertentietekst', max: 400, cacheTtl: 3 * 86400 });
   const al = new Set(bestaand.map(a => a.title.toLowerCase()));
   const v = (j && Array.isArray(j.varianten) ? j.varianten : []).map(x => ({ title: String(x.title || '').trim(), desc: String(x.desc || x.description || '').trim() })).filter(x => x.title && x.desc && x.title.length <= 30 && x.desc.length <= 40 && !al.has(x.title.toLowerCase()));
   if (v.length) return Object.assign({ bron: 'claude' }, v[0]);
@@ -331,7 +336,7 @@ async function lessen(inz, dag, droog) {
   const plekTop = Object.entries(inz.plekken || {}).flatMap(([n, l]) => l.slice(0, 4).map(z => ({ netwerk: NETTEN[n], plek: z.plek, bezoekers: z.bezoekers, echteMensen: z.mensen, doorkliks: z.doorkliks })));
   const j = await claudeJson(`Je bent mediabuyer voor de Yoors Shop (Nederlandse webshop). Hieronder de cijfers van betaald push-verkeer via een landingspagina: per thema, per advertentie, per uur en per netwerk. "doorklik" = de bezoeker klikte door naar de productpagina in de shop. Schrijf hooguit 6 lessen in gewoon Nederlands, elk een zin van hooguit 25 woorden, concreet en met het getal erbij. Alleen wat de cijfers echt laten zien; bij minder dan 30 bezoekers op een regel trek je geen conclusie. Geen jargon, geen opsommingstekens, geen gedachtestreepjes. Komt het grootste deel van de doorkliks van een enkele advertentieplek, zeg dat dan eerlijk in een van de lessen: de cijfers per advertentie zijn dan minder betrouwbaar. ${meetKoop ? '' : 'Let op: de shop geeft winkelwagen en bestellingen nog niet door, dus die staan op 0 omdat ze niet gemeten worden. Trek daar geen conclusie uit en schrijf niet dat het na de doorklik misgaat; noem hooguit dat aankopen nog niet meetbaar zijn. '}Sluit af met een les over wat we hierna het best kunnen testen.
 Cijfers: ${JSON.stringify({ vandaag: dag, totaalDoorkliks: doorkliks, plekken: plekTop, themas: inz.themas, advertenties: inz.advertenties.slice(0, 20).map(a => ({ titel: a.titel, tekst: a.tekst, bezoekers: a.bezoekers, echtPct: a.echtPct, doorkliks: a.doorkliks, bestellingen: a.bestellingen })), uren: inz.uren }).slice(0, 9000)}
-Antwoord alleen JSON: {"lessen":["..."]}`);
+Antwoord alleen JSON: {"lessen":["..."]}`, { fn: 'shop-lessen', model: process.env.SHOP_LES_MODEL || SONNET, max: 700 });
   const l = (j && Array.isArray(j.lessen) ? j.lessen : []).map(x => String(x).trim()).filter(x => x && !rommel(x)).slice(0, 6);
   if (!l.length) return oud; const nieuw = { dag: DAY(), at: new Date().toISOString(), bezoekers, doorkliks, lessen: l, eerder: [...(oud && oud.dag !== DAY() ? [{ dag: oud.dag, lessen: oud.lessen }] : []), ...((oud && oud.eerder) || [])].slice(0, 14) };
   try { await kv.set(K.lessen, nieuw); } catch (e) {} return nieuw;

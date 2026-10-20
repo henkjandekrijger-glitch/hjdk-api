@@ -44,7 +44,7 @@ export default async function handler(req, res) {
     }
     if (op === 'llmtest') { // proef van de AI-meting: ruwe vorm van het antwoord (sleutels en bronnen), hooguit 20 per dag
       const { kv } = await import('../lib/db.js'); const k = 'zicht:llmtest:' + DAY(); const n = Number(await kv.raw(['INCR', k]).catch(() => 0)); if (n > 20) return res.status(429).json({ fout: 'daglimiet' });
-      const j = await vraagAI(q.model || process.env.ZICHT_LLM_MODEL || 'perplexity/sonar', q.q || 'welke airfryer kopen', q.taal || 'nl', oidc); const raw = JSON.stringify(j);
+      const j = await vraagAI(q.model || process.env.ZICHT_LLM_MODEL || 'perplexity/sonar', q.q || 'welke airfryer kopen', q.taal || 'nl', oidc, { fn: 'zicht-llmtest', vers: true }); const raw = JSON.stringify(j);
       return res.status(200).json({ ok: true, sleutels: Object.keys(j), bericht: Object.keys(((j.choices || [])[0] || {}).message || {}), urls: (raw.match(/https?:\/\/[^\s"'<>)\]]+/g) || []).slice(0, 20), tekst: String((((j.choices || [])[0] || {}).message || {}).content || '').slice(0, 600), ruw: raw.slice(0, 2500) });
     }
     if (op === 'gapscan') { // gatscan: stel tot 40 keuzevragen aan een AI-assistent en laat zien waar de antwoorden zwak zijn (zonder token hooguit 6 scans per dag)
