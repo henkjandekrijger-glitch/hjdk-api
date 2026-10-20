@@ -3,6 +3,7 @@
 //    (kzmaak en wtbmaak zetten die vooraan in hun onderwerpenlijst); 3) pagina's met te lage CTR -> nieuwe titel + omschrijving (max 3 per site per dag, 21 dagen rust per pagina).
 // Routes: /api/gsc?op=status (openbaar overzicht), op=whoami (welk Vercel-token, zonder het token zelf), op=dag (cron of token=HJDK_TOKEN), op=sites (token).
 import { kv } from '../lib/db.js';
+import { queryMatchesGuide } from '../lib/organic-policy.js';
 import { nieuweProef } from '../lib/zicht.js';
 import { SITES, SITEMAPS, claims, sites, propFor, rows, totals, analyse, submitSitemap, sitemapInfo, ruis, inspect } from '../lib/gsc.js';
 import { MARKETS, items as wtbItems, K as WK, claude, json, indexnow as wtbIndexnow } from '../lib/wtb.js';
@@ -63,7 +64,7 @@ async function smap(id, prop, oidc, force) {
 function speerKies(rs, its) {
   const slugOf = u => { try { return new URL(u).pathname.replace(/^\/(keuzehulp\/)?/, '').replace(/\/$/, ''); } catch (e) { return ''; } };
   const ok = new Set(its.map(i => i.slug)); const P = {};
-  rs.forEach(r => { const s = slugOf(r.page); if (!ok.has(s) || ruis(r.q)) return; const x = P[s] || (P[s] = { s, imp: 0, clicks: 0, posW: 0, kw: 0, near: 0, qs: [] }); x.imp += r.imp; x.clicks += r.clicks; x.posW += r.pos * r.imp; x.qs.push([r.q, r.imp]);
+  rs.forEach(r => { const s = slugOf(r.page); if (!ok.has(s) || ruis(r.q) || !queryMatchesGuide(r.q, s)) return; const x = P[s] || (P[s] = { s, imp: 0, clicks: 0, posW: 0, kw: 0, near: 0, qs: [] }); x.imp += r.imp; x.clicks += r.clicks; x.posW += r.pos * r.imp; x.qs.push([r.q, r.imp]);
     if (/keuzehulp/i.test(r.q) && r.pos <= 40) x.kw += r.imp * (r.pos <= 25 ? 2 : 1); if (r.pos >= 4 && r.pos <= 20) x.near += r.imp; });
   const L = Object.values(P).map(x => Object.assign(x, { pos: x.posW / Math.max(1, x.imp) }));
   const hubs = L.filter(x => x.clicks > 0 || (x.imp >= 5 && x.pos <= 5)).sort((a, b) => b.clicks - a.clicks || a.pos - b.pos).map(x => x.s).slice(0, 6);
@@ -96,7 +97,7 @@ async function ronde(oidc) {
       // en meer interne links naar die pagina's (de sites zetten ze vooraan bij 'ook handig' binnen dezelfde categorie)
       try { await kv.set('hjdk:gsc:' + id + ':boost', [...new Set(a.kansen.map(k => k.slug))].slice(0, 12)); } catch (e) {}
       for (const p of a.laagCtr) {
-        if (fixes.length >= 3) break; if (protectedSlug(p.slug)) continue; const it = bySlug[p.slug]; if (!it) continue;
+        if (fixes.length >= 3) break; if (protectedSlug(p.slug)) continue; p.topQ = p.topQ.filter(q => queryMatchesGuide(q, p.slug)); if (!p.topQ.length) continue; const it = bySlug[p.slug]; if (!it) continue;
         if (it.titleFixAt && (Date.now() - Date.parse(it.titleFixAt)) < 21 * 864e5) continue;
         try { const nieuw = await herschrijf(m ? m.lang : 'nl', it, p, oidc); if (m) await fixWtb(m, it, nieuw, p); else await fixKz(it, nieuw, p); fixes.push({ slug: it.slug, oud: it.seoTitle || it.h1, nieuw: nieuw.seoTitle, imp: p.imp, ctr: Math.round(p.ctr * 1000) / 10 }); }
         catch (e) { fixes.push({ slug: it.slug, fout: String(e.message).slice(0, 100) }); }
@@ -138,10 +139,11 @@ export default async function handler(req, res) {
     if (op === 'whoami') { const c = claims(oidc); let google = null; try { const l = await sites(oidc); google = { ok: true, eigendommen: l.length, sites: Object.fromEntries(Object.entries(SITES).map(([k, h]) => [h, !!propFor(l, h)])) }; } catch (e) { google = { ok: false, fout: String(e.message).slice(0, 200) }; } return res.status(200).json({ ok: !!c, iss: c && c.iss, aud: c && c.aud, sub: c && c.sub, google }); }
     if (op === 'totalen') {
       const lijst = await sites(oidc); const out = {};
+      const syncTotal = async (id, total) => { const key = 'hjdk:gsc:' + id; const current = await kv.get(key).catch(() => null); if (current && (!current.periode || current.periode.endDate <= total.periode.endDate)) await kv.set(key, { ...current, zoekvraagTotaal: current.zoekvraagTotaal || (!current.periode ? current.totaal : null), periode: total.periode, totaal: { imp: total.imp, clicks: total.clicks, ctr: total.ctr, pos: total.pos }, totaalBasis: 'Google-site-totaal zonder zoekvraagfilter (inclusief anonieme zoekvragen)', totaalGecontroleerdOp: total.at }); };
       for (const [id, host] of Object.entries(SITES)) { const key = 'hjdk:gsc:totalen:' + id; const cache = await kv.get(key).catch(() => null);
-        if (cache && Date.now() - cache.at < 6 * 3600e3) { out[id] = cache; continue; }
+        if (cache && Date.now() - cache.at < 6 * 3600e3) { await syncTotal(id, cache); out[id] = cache; continue; }
         const prop = propFor(lijst, host); if (!prop) { out[id] = { fout: 'geen toegang' }; continue; }
-        try { const total = { at: Date.now(), dag: DAY(), host, ...await totals(prop, 28, oidc) }; await kv.set(key, total); out[id] = total; } catch (e) { out[id] = { fout: String(e.message).slice(0, 160) }; }
+        try { const total = { at: Date.now(), dag: DAY(), host, ...await totals(prop, 28, oidc) }; await kv.set(key, total); await syncTotal(id, total); out[id] = total; } catch (e) { out[id] = { fout: String(e.message).slice(0, 160) }; }
       }
       return res.status(200).json({ ok: true, sites: out, basis: 'Google Search Console site-totaal zonder zoekvraagfilter; definitieve gegevens, laatste twee dagen ontbreken.' });
     }

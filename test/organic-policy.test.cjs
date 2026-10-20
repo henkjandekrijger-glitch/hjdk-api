@@ -41,7 +41,7 @@ test('onbekende versdatum wordt weggelaten, werkelijke recentste datum behouden'
 });
 test('focus groepeert echte zoekvragen per bestaande URL en sluit positie 23 uit', async () => {
   const { organicOpportunities } = await policy;
-  const p = organicOpportunities({ kansen: [{ slug: 'printer', q: 'printer keuzehulp', pos: 23, imp: 27 }, { slug: 'kinderfiets', q: 'maat bepalen', pos: 6, imp: 5 }, { slug: 'kinderfiets', q: 'hoogte bepalen', pos: 17.5, imp: 8 }, { slug: 'strijkplank', q: 'afmetingen', pos: 14.3, imp: 7 }] });
+  const p = organicOpportunities({ kansen: [{ slug: 'printer', q: 'printer keuzehulp', pos: 23, imp: 27 }, { slug: 'kinderfiets', q: 'kinderfiets maat bepalen', pos: 6, imp: 5 }, { slug: 'kinderfiets', q: 'hoogte kinderfiets bepalen', pos: 17.5, imp: 8 }, { slug: 'strijkplank', q: 'afmetingen strijkplank', pos: 14.3, imp: 7 }, {slug: 'boxspring', q:'ayla matrassen', pos:10, imp:10}] });
   assert.equal(p[0].slug, 'kinderfiets'); assert.equal(p[0].vragen.length, 2); assert.equal(p.length, 2);
 });
 const urls = (kind, n) => Array.from({ length: n }, (_, i) => `https://keuzehulp.best/${kind}-${i}`);
@@ -93,4 +93,25 @@ test('Google-totalen gebruiken geen zoekvraagdimensie en vallen bij API-fouten n
     global.fetch = async () => ({ ok: false, status: 403, json: async () => ({ error: {} }) });
     await assert.rejects(() => api.totals('https://keuzehulp.best/', 28), /niet beschikbaar/);
   } finally { global.fetch = realFetch; }
+});
+test('verwante woorden mogen een pagina voor een ander product niet overschrijven', async () => {
+  const { queryMatchesGuide } = await policy;
+  assert.equal(queryMatchesGuide('wasdroger keuzehulp', 'wasmachine'), false);
+  assert.equal(queryMatchesGuide('ayla matrassen', 'boxspring'), false);
+  assert.equal(queryMatchesGuide('strijkplank afmetingen', 'strijkplank'), true);
+  assert.equal(queryMatchesGuide('sapcentrifuge of slow juicer', 'slowjuicer'), true);
+  assert.equal(queryMatchesGuide('welke tv past bij mij', 'tv'), true);
+});
+test('AI-lus leert alleen uit gepaarde vragen over meerdere vergelijkbare meetdagen', async () => {
+  const { llmEvidence } = await policy;
+  const history = [];
+  const add = (dag, yes, panel = 'same') => history.push({ dag, llmCitatie: { panel, model: 'same-model', perVraag: Array.from({ length: 8 }, (_, i) => ({ id: 'q' + i, geciteerd: yes })) } });
+  for (let d = 1; d <= 5; d++) add('2026-10-0' + d, false);
+  for (let d = 14; d <= 18; d++) add('2026-10-' + d, true);
+  const p = { start: '2026-10-07' };
+  const result = llmEvidence(p, history, now);
+  assert.equal(result.uitkomst, 'beter'); assert.equal(result.vragen, 8);
+  assert.equal(llmEvidence(p, history.slice(-2), now).uitkomst, 'te-weinig');
+  assert.equal(llmEvidence(p, history.map(x => x.dag > p.start ? { ...x, llmCitatie: { ...x.llmCitatie, panel: 'changed' } } : x), now).uitkomst, 'te-weinig');
+  assert.equal(llmEvidence(p, [...history.slice(0, 5), ...Array(5).fill(history[5])], now).uitkomst, 'te-weinig');
 });
