@@ -139,9 +139,43 @@
     {
       "path": "/api/mm/ccdag",
       "schedule": "40 6 * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=autohuur&market=nl&op=reviews",
+      "schedule": "20 7,15 * * *"
     }
   ],
   "rewrites": [
+    {
+      "source": "/auto-huren-curacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=autohuur&market=nl"
+    },
+    {
+      "source": "/curacao-car-rental",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=autohuur&market=us"
+    },
+    {
+      "source": "/mietwagen-curacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=autohuur&market=de"
+    },
     {
       "source": "/energieleverancier-vergelijken",
       "has": [
@@ -659,7 +693,7 @@
       "includeFiles": ".claude/skills/**"
     },
     "api/keuze-tools.js": {
-      "maxDuration": 30
+      "maxDuration": 120
     },
     "api/vindbaarheid.js": {
       "maxDuration": 300
