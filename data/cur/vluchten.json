@@ -1,1 +1,2459 @@
-{"id":"vluchten","peildatum":"2026-10-20","items":[]}
+{
+ "id": "vluchten",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "vlucht naar Curaçao",
+  "en": "flight to Curaçao",
+  "de": "Flug nach Curaçao",
+  "es": "Vuelo a Curazao",
+  "pt": "Voo para Curaçao"
+ },
+ "h1": {
+  "nl": "Vliegen naar Curaçao: welke vlucht past bij jou?",
+  "en": "Flying to Curaçao: which flight fits you?",
+  "de": "Flug nach Curaçao: Welcher Flug passt zu dir?",
+  "es": "Volar a Curazao: ¿qué vuelo te conviene?",
+  "pt": "Voar para Curaçao: qual voo combina com você?"
+ },
+ "titel": {
+  "nl": "Vliegen naar Curaçao: {n} airlines en routes vergeleken",
+  "en": "Flights to Curaçao: {n} airlines and routes compared",
+  "de": "Flüge nach Curaçao: {n} Airlines und Strecken im Vergleich",
+  "es": "Vuelos a Curazao: {n} aerolíneas y rutas comparadas",
+  "pt": "Voos para Curaçao: {n} companhias aéreas e rotas comparadas"
+ },
+ "metaDesc": {
+  "nl": "Alle {n} airlines en reisorganisaties met vluchten naar Curaçao (CUR): routes, vanafprijzen, vluchtduur en reviews. Vanuit NL, VS, Canada, Duitsland en Zuid-Amerika.",
+  "en": "All {n} airlines and tour operators flying to Curaçao (CUR): routes, starting fares, flight times and reviews from the US, Canada, Europe and South America.",
+  "de": "Alle {n} Airlines und Reiseveranstalter, die Curaçao (CUR) anfliegen: Strecken, Startpreise, Flugzeiten und Bewertungen ab den USA, Kanada, Europa und Südamerika.",
+  "es": "Las {n} aerolíneas y operadores turísticos que vuelan a Curazao (CUR): rutas, tarifas desde, duración de los vuelos y opiniones desde EE. UU., Canadá, Europa y Sudamérica.",
+  "pt": "Todas as {n} companhias aéreas e operadoras de turismo que voam para Curaçao (CUR): rotas, tarifas a partir de, tempo de voo e avaliações dos EUA, Canadá, Europa e América do Sul."
+ },
+ "kort": {
+  "nl": "Vanuit Nederland vliegen KLM, TUI en Corendon rechtstreeks van Schiphol naar Curaçao, samen zo'n 18 tot 22 vluchten per week; KLM retour vanaf ongeveer €625. Vanuit de VS vlieg je direct vanaf Miami, Charlotte, Atlanta, New York, Newark en Chicago, met retourtarieven vanaf zo'n $475 tot $780. Nieuw: Corendon vliegt vanaf 14 december 2026 drie keer per week vanaf Düsseldorf, en Aerolíneas Argentinas vanaf januari 2027 vanuit Buenos Aires.",
+  "en": "From the US you can fly nonstop to Curaçao from Miami, Charlotte, Atlanta, New York JFK, Newark and Chicago, with round trips starting around $475 to $780. Canadians fly nonstop from Toronto and Montreal on Air Canada and WestJet. From Europe, KLM, TUI and Corendon fly nonstop from Amsterdam, and Corendon adds three weekly Düsseldorf flights from December 14, 2026.",
+  "de": "Aus den USA fliegst du ohne Zwischenstopp von Miami, Charlotte, Atlanta, New York JFK, Newark und Chicago nach Curaçao, Hin- und Rückflüge kosten etwa $475 bis $780. Aus Kanada geht es nonstop ab Toronto und Montreal mit Air Canada und WestJet. Aus Europa fliegen KLM, TUI und Corendon nonstop ab Amsterdam, und Corendon bietet ab dem 14. Dezember 2026 zusätzlich drei Flüge pro Woche ab Düsseldorf an.",
+  "es": "Desde EE. UU. puedes volar sin escalas a Curazao desde Miami, Charlotte, Atlanta, Nueva York JFK, Newark y Chicago, con viajes de ida y vuelta desde unos $475 hasta $780. Desde Canadá hay vuelos directos desde Toronto y Montreal con Air Canada y WestJet. Desde Europa, KLM, TUI y Corendon vuelan directo desde Ámsterdam, y Corendon suma tres vuelos semanales desde Düsseldorf a partir del 14 de diciembre de 2026.",
+  "pt": "Dos EUA você voa direto para Curaçao saindo de Miami, Charlotte, Atlanta, Nova York JFK, Newark e Chicago, com passagens de ida e volta a partir de cerca de $475 até $780. Do Canadá há voos diretos de Toronto e Montreal com Air Canada e WestJet. Da Europa, KLM, TUI e Corendon voam direto de Amsterdã, e a Corendon acrescenta três voos semanais de Düsseldorf a partir de 14 de dezembro de 2026."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Waar vlieg je vandaan?",
+    "en": "Where are you flying from?",
+    "de": "Von wo fliegst du?",
+    "es": "¿Desde dónde vuelas?",
+    "pt": "De onde você vai voar?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Nederland of België",
+      "en": "Netherlands or Belgium",
+      "de": "Niederlande oder Belgien",
+      "es": "Países Bajos o Bélgica",
+      "pt": "Países Baixos ou Bélgica"
+     },
+     "plus": [
+      "direct"
+     ],
+     "min": [],
+     "vereist": "route-nl"
+    },
+    {
+     "label": {
+      "nl": "Verenigde Staten",
+      "en": "United States",
+      "de": "USA",
+      "es": "Estados Unidos",
+      "pt": "Estados Unidos"
+     },
+     "plus": [
+      "direct"
+     ],
+     "min": [],
+     "vereist": "route-us"
+    },
+    {
+     "label": {
+      "nl": "Canada",
+      "en": "Canada",
+      "de": "Kanada",
+      "es": "Canadá",
+      "pt": "Canadá"
+     },
+     "plus": [
+      "direct"
+     ],
+     "min": [],
+     "vereist": "route-ca"
+    },
+    {
+     "label": {
+      "nl": "Duitsland",
+      "en": "Germany",
+      "de": "Deutschland",
+      "es": "Alemania",
+      "pt": "Alemanha"
+     },
+     "plus": [
+      "direct"
+     ],
+     "min": [],
+     "vereist": "route-de"
+    },
+    {
+     "label": {
+      "nl": "Colombia of elders in Zuid-Amerika",
+      "en": "Colombia or elsewhere in South America",
+      "de": "Kolumbien oder anderswo in Südamerika",
+      "es": "Colombia u otro lugar de Sudamérica",
+      "pt": "Colômbia ou outro lugar da América do Sul"
+     },
+     "plus": [
+      "direct"
+     ],
+     "min": [],
+     "vereist": "route-co"
+    },
+    {
+     "label": {
+      "nl": "Brazilië",
+      "en": "Brazil",
+      "de": "Brasilien",
+      "es": "Brasil",
+      "pt": "Brasil"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": "route-br"
+    },
+    {
+     "label": {
+      "nl": "Aruba, Bonaire of elders in de Cariben",
+      "en": "Aruba, Bonaire or elsewhere in the Caribbean",
+      "de": "Aruba, Bonaire oder anderswo in der Karibik",
+      "es": "Aruba, Bonaire u otro lugar del Caribe",
+      "pt": "Aruba, Bonaire ou outro lugar do Caribe"
+     },
+     "plus": [
+      "eilandhop"
+     ],
+     "min": [],
+     "vereist": "route-carib"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Alleen een vlucht of vlucht met hotel?",
+    "en": "Flight only or flight plus hotel?",
+    "de": "Nur Flug oder Flug plus Hotel?",
+    "es": "¿Solo vuelo o vuelo más hotel?",
+    "pt": "Só voo ou voo mais hotel?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Alleen een vlucht",
+      "en": "Flight only",
+      "de": "Nur Flug",
+      "es": "Solo vuelo",
+      "pt": "Só voo"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Vlucht met hotel (pakketreis)",
+      "en": "Flight plus hotel (package)",
+      "de": "Flug plus Hotel (Pauschalreise)",
+      "es": "Vuelo más hotel (paquete)",
+      "pt": "Voo mais hotel (pacote)"
+     },
+     "plus": [
+      "pakket"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat vind je het belangrijkst?",
+    "en": "What matters most to you?",
+    "de": "Was ist dir am wichtigsten?",
+    "es": "¿Qué es lo más importante para ti?",
+    "pt": "O que é mais importante para você?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "No preference",
+      "de": "Keine Präferenz",
+      "es": "Sin preferencia",
+      "pt": "Sem preferência"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Zo goedkoop mogelijk",
+      "en": "Lowest price",
+      "de": "Niedrigster Preis",
+      "es": "El precio más bajo",
+      "pt": "Menor preço"
+     },
+     "plus": [
+      "budget"
+     ],
+     "min": [
+      "fullservice"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Rechtstreeks en snel",
+      "en": "Nonstop and fast",
+      "de": "Nonstop und schnell",
+      "es": "Directo y rápido",
+      "pt": "Direto e rápido"
+     },
+     "plus": [
+      "direct"
+     ],
+     "min": [],
+     "vereist": "direct"
+    },
+    {
+     "label": {
+      "nl": "Service en bagage inbegrepen",
+      "en": "Service and bags included",
+      "de": "Service und Gepäck inklusive",
+      "es": "Servicio y equipaje incluidos",
+      "pt": "Serviço e bagagem incluídos"
+     },
+     "plus": [
+      "fullservice"
+     ],
+     "min": [
+      "budget"
+     ],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "klm",
+   "naam": "KLM",
+   "url": "https://www.klm.nl/nl-nl/vluchten-amsterdam-naar-curacao-eiland",
+   "soort": {
+    "nl": "lijnvlucht",
+    "en": "full-service airline",
+    "de": "Full-Service-Airline",
+    "es": "aerolínea de servicio completo",
+    "pt": "companhia aérea de serviço completo"
+   },
+   "plaats": null,
+   "tags": [
+    "route-nl",
+    "direct",
+    "fullservice"
+   ],
+   "prijs": {
+    "bedrag": 625,
+    "valuta": "EUR",
+    "eenheid": {
+     "nl": "retour vanaf Amsterdam (deal 1-15 dec 2026)",
+     "en": "round trip from Amsterdam (deal Dec 1-15, 2026)",
+     "de": "Hin- und Rückflug ab Amsterdam (Angebot 1.-15. Dez. 2026)",
+     "es": "ida y vuelta desde Ámsterdam (oferta 1-15 dic. 2026)",
+     "pt": "ida e volta de Amsterdã (oferta 1 a 15 dez. 2026)"
+    },
+    "bron": "https://www.klm.nl/nl-nl/vluchten-amsterdam-naar-curacao-eiland",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Dagelijks vanaf Schiphol",
+     "en": "Daily from Amsterdam Schiphol",
+     "de": "Täglich ab Amsterdam Schiphol",
+     "es": "Diario desde Ámsterdam Schiphol",
+     "pt": "Diário de Amsterdã Schiphol"
+    },
+    {
+     "nl": "Extra vlucht 2x per week",
+     "en": "Extra flight twice a week",
+     "de": "Zusatzflug zweimal pro Woche",
+     "es": "Vuelo adicional dos veces por semana",
+     "pt": "Voo extra duas vezes por semana"
+    },
+    {
+     "nl": "Overstap op Schiphol vanuit Europa",
+     "en": "Connects via Amsterdam from Europe",
+     "de": "Anschluss über Amsterdam aus Europa",
+     "es": "Conexión por Ámsterdam desde Europa",
+     "pt": "Conexão por Amsterdã a partir da Europa"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Trustpilot",
+     "score": 1.3,
+     "max": 5,
+     "aantal": 9184,
+     "peildatum": "2026-10-20",
+     "bron": "https://ca.trustpilot.com/review/www.klm.com?page=5"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Cabinepersoneel wordt vaak vriendelijk en professioneel genoemd",
+     "Schone toestellen en goede stoelen in Premium Comfort"
+    ],
+    "en": [
+     "Cabin crew often described as friendly and professional",
+     "Clean planes and comfortable Premium Comfort seats"
+    ],
+    "de": [
+     "Die Crew wird oft als freundlich und professionell beschrieben",
+     "Saubere Flugzeuge und bequeme Premium-Comfort-Sitze"
+    ],
+    "es": [
+     "La tripulación suele describirse como amable y profesional",
+     "Aviones limpios y asientos Premium Comfort cómodos"
+    ],
+    "pt": [
+     "A tripulação costuma ser descrita como simpática e profissional",
+     "Aviões limpos e assentos Premium Comfort confortáveis"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Klantenservice is lastig bereikbaar",
+     "Klachten over zoekgeraakte of vertraagde bagage",
+     "Problemen met omboeken na annuleringen"
+    ],
+    "en": [
+     "Customer service is hard to reach",
+     "Complaints about lost or delayed bags",
+     "Trouble rebooking after cancellations"
+    ],
+    "de": [
+     "Der Kundenservice ist schwer zu erreichen",
+     "Beschwerden über verlorenes oder verspätetes Gepäck",
+     "Probleme beim Umbuchen nach Annullierungen"
+    ],
+    "es": [
+     "Es difícil comunicarse con el servicio al cliente",
+     "Quejas por equipaje perdido o retrasado",
+     "Problemas para reprogramar tras cancelaciones"
+    ],
+    "pt": [
+     "O atendimento ao cliente é difícil de alcançar",
+     "Reclamações sobre bagagem perdida ou atrasada",
+     "Dificuldade para remarcar após cancelamentos"
+    ]
+   },
+   "bronnen": [
+    "https://www.klm.nl/nl-nl/vluchten-amsterdam-naar-curacao-eiland",
+    "https://www.flightsfrom.com/AMS-CUR",
+    "https://flights.idealo.com/route/Netherlands-NL/Curacao-CUR/"
+   ]
+  },
+  {
+   "id": "tui-nl",
+   "naam": "TUI (TUI fly Nederland)",
+   "url": "https://www.tui.nl",
+   "soort": {
+    "nl": "charter en pakketreis",
+    "en": "charter and package",
+    "de": "Charter und Pauschalreisen",
+    "es": "chárter y paquetes",
+    "pt": "fretamento e pacotes"
+   },
+   "plaats": null,
+   "tags": [
+    "route-nl",
+    "direct",
+    "pakket",
+    "eilandhop"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "1-2 vluchten per dag vanaf Schiphol",
+     "en": "1-2 flights a day from Amsterdam",
+     "de": "1-2 Flüge pro Tag ab Amsterdam",
+     "es": "1-2 vuelos al día desde Ámsterdam",
+     "pt": "1-2 voos por dia de Amsterdã"
+    },
+    {
+     "nl": "Boeing 787, 305 stoelen",
+     "en": "Boeing 787, 305 seats",
+     "de": "Boeing 787, 305 Sitze",
+     "es": "Boeing 787, 305 asientos",
+     "pt": "Boeing 787, 305 assentos"
+    },
+    {
+     "nl": "Ook Curaçao-Bonaire 2x per week",
+     "en": "Also Curaçao-Bonaire twice a week",
+     "de": "Außerdem Curaçao-Bonaire zweimal pro Woche",
+     "es": "También Curazao-Bonaire dos veces por semana",
+     "pt": "Também Curaçao-Bonaire duas vezes por semana"
+    },
+    {
+     "nl": "Winter 2026-27 twee extra vluchten",
+     "en": "Two extra weekly flights winter 2026-27",
+     "de": "Zwei zusätzliche Flüge pro Woche im Winter 2026-27",
+     "es": "Dos vuelos semanales adicionales en invierno 2026-27",
+     "pt": "Dois voos semanais extras no inverno 2026-27"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Trustpilot",
+     "score": 3.4,
+     "max": 5,
+     "aantal": 4057,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.trustpilot.com/review/tui.nl"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijk personeel en duidelijke instructies",
+     "Transfers en vluchten verlopen vaak soepel",
+     "Hotels kloppen meestal met de beschrijving"
+    ],
+    "en": [
+     "Friendly staff and clear instructions",
+     "Transfers and flights often run smoothly",
+     "Hotels usually match the description"
+    ],
+    "de": [
+     "Freundliches Personal und klare Anweisungen",
+     "Transfers und Flüge laufen oft reibungslos",
+     "Die Hotels entsprechen meist der Beschreibung"
+    ],
+    "es": [
+     "Personal amable e instrucciones claras",
+     "Los traslados y los vuelos suelen salir bien",
+     "Los hoteles suelen coincidir con la descripción"
+    ],
+    "pt": [
+     "Equipe simpática e instruções claras",
+     "Traslados e voos costumam correr bem",
+     "Os hotéis costumam corresponder à descrição"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Slechte afhandeling van zoekgeraakte bagage",
+     "Terugbetalen en annuleren gaat moeizaam",
+     "Krappe stoelen en weinig eten op sommige vluchten"
+    ],
+    "en": [
+     "Poor handling of lost luggage",
+     "Refunds and cancellations are a struggle",
+     "Tight seats and little food on some flights"
+    ],
+    "de": [
+     "Schlechter Umgang mit verlorenem Gepäck",
+     "Erstattungen und Stornierungen sind mühsam",
+     "Enge Sitze und wenig Essen auf manchen Flügen"
+    ],
+    "es": [
+     "Mala gestión del equipaje perdido",
+     "Los reembolsos y las cancelaciones son complicados",
+     "Asientos estrechos y poca comida en algunos vuelos"
+    ],
+    "pt": [
+     "Mau tratamento de bagagem perdida",
+     "Reembolsos e cancelamentos dão trabalho",
+     "Assentos apertados e pouca comida em alguns voos"
+    ]
+   },
+   "bronnen": [
+    "https://www.flightsfrom.com/AMS-CUR",
+    "https://www.flightsfrom.com/CUR-BON",
+    "https://www.bes-reporter.com/news/aviation-travel/91479/tui-adds-even-more-flights-to-the-dutch-caribbean-in-upcoming-winter-schedule"
+   ]
+  },
+  {
+   "id": "tui-de",
+   "naam": "TUI Deutschland (Düsseldorf)",
+   "url": "https://www.tui.com",
+   "soort": {
+    "nl": "pakketreis Duitsland",
+    "en": "German package seller",
+    "de": "Deutscher Pauschalreiseanbieter",
+    "es": "Vendedor alemán de paquetes turísticos",
+    "pt": "Vendedor alemão de pacotes de viagem"
+   },
+   "plaats": null,
+   "tags": [
+    "route-de",
+    "direct",
+    "pakket"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Düsseldorf-Curaçao vanaf zomer 2027",
+     "en": "Düsseldorf-Curaçao from summer 2027",
+     "de": "Düsseldorf-Curaçao ab Sommer 2027",
+     "es": "Düsseldorf-Curazao desde el verano de 2027",
+     "pt": "Düsseldorf-Curaçao a partir do verão de 2027"
+    },
+    {
+     "nl": "2x per week, Boeing 787",
+     "en": "Twice a week, Boeing 787",
+     "de": "Zweimal pro Woche, Boeing 787",
+     "es": "Dos veces por semana, Boeing 787",
+     "pt": "Duas vezes por semana, Boeing 787"
+    },
+    {
+     "nl": "Uitgevoerd door TUI fly Nederland",
+     "en": "Operated by TUI fly Netherlands",
+     "de": "Durchgeführt von TUI fly Netherlands",
+     "es": "Operado por TUI fly Netherlands",
+     "pt": "Operado pela TUI fly Netherlands"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 19279,
+     "peildatum": "2026-10-20",
+     "bron": "https://nz.trustpilot.com/review/www.tui.com?page=2"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Hotels worden vaak schoon en verzorgd genoemd",
+     "Website makkelijk in gebruik met scherpe aanbiedingen"
+    ],
+    "en": [
+     "Hotels often called clean and well kept",
+     "Easy website with good deals"
+    ],
+    "de": [
+     "Die Hotels werden oft als sauber und gepflegt beschrieben",
+     "Einfach zu bedienende Website mit guten Angeboten"
+    ],
+    "es": [
+     "Los hoteles suelen describirse como limpios y bien cuidados",
+     "Sitio web fácil de usar con buenas ofertas"
+    ],
+    "pt": [
+     "Os hotéis costumam ser descritos como limpos e bem cuidados",
+     "Site fácil de usar com boas ofertas"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Klanten worden heen en weer gestuurd tussen TUI, airline en hotel",
+     "Problemen met online inchecken en omboekingen"
+    ],
+    "en": [
+     "Customers get bounced between TUI, airline and hotel",
+     "Problems with online check-in and rebookings"
+    ],
+    "de": [
+     "Kunden werden zwischen TUI, Airline und Hotel hin und her geschickt",
+     "Probleme beim Online-Check-in und bei Umbuchungen"
+    ],
+    "es": [
+     "A los clientes los pasan de TUI a la aerolínea y al hotel",
+     "Problemas con el check-in en línea y con los cambios de reserva"
+    ],
+    "pt": [
+     "Os clientes são empurrados entre a TUI, a companhia aérea e o hotel",
+     "Problemas com o check-in on-line e com remarcações"
+    ]
+   },
+   "bronnen": [
+    "https://www.touristik-aktuell.de/verkehr/tui-fly-bietet-erstmals-langstrecke-nach-curacao-an/",
+    "https://www.flightsfrom.com/CUR"
+   ]
+  },
+  {
+   "id": "corendon-nl",
+   "naam": "Corendon (Amsterdam)",
+   "url": "https://www.corendon.nl",
+   "soort": {
+    "nl": "charter en pakketreis",
+    "en": "charter and package",
+    "de": "Charter und Pauschalreisen",
+    "es": "chárter y paquetes",
+    "pt": "fretamento e pacotes"
+   },
+   "plaats": null,
+   "tags": [
+    "route-nl",
+    "direct",
+    "pakket",
+    "budget"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "3-4 vluchten per week vanaf Schiphol",
+     "en": "3-4 flights a week from Amsterdam",
+     "de": "3-4 Flüge pro Woche ab Amsterdam",
+     "es": "3-4 vuelos por semana desde Ámsterdam",
+     "pt": "3-4 voos por semana de Amsterdã"
+    },
+    {
+     "nl": "Corendon Dutch Airlines",
+     "en": "Corendon Dutch Airlines",
+     "de": "Corendon Dutch Airlines",
+     "es": "Corendon Dutch Airlines",
+     "pt": "Corendon Dutch Airlines"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Trustpilot",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 57803,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.trustpilot.com/review/www.corendon.nl?page=2"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Boeken en extra's toevoegen gaat makkelijk",
+     "Reis verloopt volgens veel reizigers soepel",
+     "Vriendelijk hotelpersoneel en goede reisleiding"
+    ],
+    "en": [
+     "Booking and adding extras is easy",
+     "Many travelers say the trip ran smoothly",
+     "Friendly hotel staff and good guides"
+    ],
+    "de": [
+     "Buchen und Extras dazubuchen ist einfach",
+     "Viele Reisende sagen, die Reise sei reibungslos verlaufen",
+     "Freundliches Hotelpersonal und gute Reiseleiter"
+    ],
+    "es": [
+     "Reservar y agregar extras es fácil",
+     "Muchos viajeros dicen que el viaje salió sin problemas",
+     "Personal de hotel amable y buenos guías"
+    ],
+    "pt": [
+     "Reservar e adicionar extras é fácil",
+     "Muitos viajantes dizem que a viagem correu bem",
+     "Equipe de hotel simpática e bons guias"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Vluchttijden worden na boeking nog verschoven",
+     "Klantenservice lastig bereikbaar",
+     "Bagageregels niet altijd duidelijk"
+    ],
+    "en": [
+     "Flight times get changed after booking",
+     "Customer service is hard to reach",
+     "Baggage rules are not always clear"
+    ],
+    "de": [
+     "Flugzeiten werden nach der Buchung geändert",
+     "Der Kundenservice ist schwer zu erreichen",
+     "Die Gepäckregeln sind nicht immer klar"
+    ],
+    "es": [
+     "Los horarios de vuelo cambian después de reservar",
+     "Es difícil comunicarse con el servicio al cliente",
+     "Las reglas de equipaje no siempre son claras"
+    ],
+    "pt": [
+     "Os horários dos voos mudam depois da reserva",
+     "O atendimento ao cliente é difícil de alcançar",
+     "As regras de bagagem nem sempre são claras"
+    ]
+   },
+   "bronnen": [
+    "https://www.flightsfrom.com/AMS-CUR",
+    "https://flights.idealo.com/route/Netherlands-NL/Curacao-CUR/",
+    "https://www.trustpilot.com/review/www.corendon.nl?page=2"
+   ]
+  },
+  {
+   "id": "corendon-dus",
+   "naam": "Corendon (Düsseldorf)",
+   "url": "https://www.corendon.de",
+   "soort": {
+    "nl": "charter, alleen winter",
+    "en": "winter-only charter",
+    "de": "Charter nur im Winter",
+    "es": "chárter solo de invierno",
+    "pt": "fretamento só no inverno"
+   },
+   "plaats": null,
+   "tags": [
+    "route-de",
+    "direct",
+    "pakket",
+    "budget"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "14 dec 2026 t/m 4 apr 2027",
+     "en": "Dec 14, 2026 to Apr 4, 2027",
+     "de": "14. Dez. 2026 bis 4. Apr. 2027",
+     "es": "14 dic. 2026 a 4 abr. 2027",
+     "pt": "14 dez. 2026 a 4 abr. 2027"
+    },
+    {
+     "nl": "Ma, do en za",
+     "en": "Mondays, Thursdays and Saturdays",
+     "de": "Montags, donnerstags und samstags",
+     "es": "Lunes, jueves y sábados",
+     "pt": "Segundas, quintas e sábados"
+    },
+    {
+     "nl": "Airbus A330 met 30 businessstoelen",
+     "en": "Airbus A330 with 30 business seats",
+     "de": "Airbus A330 mit 30 Business-Sitzen",
+     "es": "Airbus A330 con 30 asientos de business",
+     "pt": "Airbus A330 com 30 assentos de executiva"
+    },
+    {
+     "nl": "Vervolg na april nog onzeker",
+     "en": "No decision yet beyond April",
+     "de": "Für die Zeit nach April ist noch nichts entschieden",
+     "es": "Aún no hay decisión para después de abril",
+     "pt": "Ainda não há decisão para depois de abril"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.caribjournal.com/2026/05/31/corendon-curacao-flights/",
+    "https://www.airliners.de/corendon-curacao-duesseldorf-keine-verlaengerung/90445"
+   ]
+  },
+  {
+   "id": "american",
+   "naam": "American Airlines",
+   "url": "https://www.aa.com",
+   "soort": {
+    "nl": "lijnvlucht VS",
+    "en": "US full-service airline",
+    "de": "US-Full-Service-Airline",
+    "es": "aerolínea estadounidense de servicio completo",
+    "pt": "companhia aérea americana de serviço completo"
+   },
+   "plaats": null,
+   "tags": [
+    "route-us",
+    "direct",
+    "fullservice"
+   ],
+   "prijs": {
+    "bedrag": 647,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "retour vanaf Miami",
+     "en": "round trip from Miami",
+     "de": "Hin- und Rückflug ab Miami",
+     "es": "ida y vuelta desde Miami",
+     "pt": "ida e volta de Miami"
+    },
+    "bron": "https://flights.idealo.com/route/United-States-US/Curacao-CUR/non-stop-flight",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Miami 2-5 keer per dag",
+     "en": "Miami 2-5 times a day",
+     "de": "Miami 2-5 Mal pro Tag",
+     "es": "Miami 2-5 veces al día",
+     "pt": "Miami 2-5 vezes por dia"
+    },
+    {
+     "nl": "Charlotte 1-2 keer per dag",
+     "en": "Charlotte 1-2 times a day",
+     "de": "Charlotte 1-2 Mal pro Tag",
+     "es": "Charlotte 1-2 veces al día",
+     "pt": "Charlotte 1-2 vezes por dia"
+    },
+    {
+     "nl": "Chicago O'Hare op zaterdag, winter",
+     "en": "Chicago O'Hare Saturdays in winter",
+     "de": "Chicago O'Hare samstags im Winter",
+     "es": "Chicago O'Hare los sábados en invierno",
+     "pt": "Chicago O'Hare aos sábados no inverno"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://flights.idealo.com/route/United-States-US/Curacao-CUR/non-stop-flight",
+    "https://www.kayak.com/flight-routes/Miami-MIA/Curacao-CUR",
+    "https://www.curacaochronicle.com/post/local/american-airlines-launches-new-nonstop-flight-from-chicago-to-curacao"
+   ]
+  },
+  {
+   "id": "jetblue",
+   "naam": "JetBlue",
+   "url": "https://www.jetblue.com",
+   "soort": {
+    "nl": "lijnvlucht VS",
+    "en": "US airline",
+    "de": "US-Airline",
+    "es": "aerolínea estadounidense",
+    "pt": "companhia aérea americana"
+   },
+   "plaats": null,
+   "tags": [
+    "route-us",
+    "direct"
+   ],
+   "prijs": {
+    "bedrag": 632,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "retour vanaf New York JFK",
+     "en": "round trip from New York JFK",
+     "de": "Hin- und Rückflug ab New York JFK",
+     "es": "ida y vuelta desde Nueva York JFK",
+     "pt": "ida e volta de Nova York JFK"
+    },
+    "bron": "https://flights.idealo.com/route/United-States-US/Curacao-CUR/non-stop-flight",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Dagelijks vanaf New York JFK",
+     "en": "Daily from New York JFK",
+     "de": "Täglich ab New York JFK",
+     "es": "Diario desde Nueva York JFK",
+     "pt": "Diário de Nova York JFK"
+    },
+    {
+     "nl": "Vlucht ca. 3 uur 45",
+     "en": "Flight about 3h 45m",
+     "de": "Flugzeit etwa 3 Std. 45 Min.",
+     "es": "Vuelo de unas 3 h 45 min",
+     "pt": "Voo de cerca de 3h 45min"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://flights.idealo.com/route/United-States-US/Curacao-CUR/non-stop-flight"
+   ]
+  },
+  {
+   "id": "united",
+   "naam": "United Airlines",
+   "url": "https://www.united.com",
+   "soort": {
+    "nl": "lijnvlucht VS",
+    "en": "US full-service airline",
+    "de": "US-Full-Service-Airline",
+    "es": "aerolínea estadounidense de servicio completo",
+    "pt": "companhia aérea americana de serviço completo"
+   },
+   "plaats": null,
+   "tags": [
+    "route-us",
+    "direct",
+    "fullservice"
+   ],
+   "prijs": {
+    "bedrag": 499,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "retour vanaf Newark",
+     "en": "round trip from Newark",
+     "de": "Hin- und Rückflug ab Newark",
+     "es": "ida y vuelta desde Newark",
+     "pt": "ida e volta de Newark"
+    },
+    "bron": "https://flights.idealo.com/route/United-States-US/Curacao-CUR/non-stop-flight",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Newark 1x per week",
+     "en": "Newark once a week",
+     "de": "Newark einmal pro Woche",
+     "es": "Newark una vez por semana",
+     "pt": "Newark uma vez por semana"
+    },
+    {
+     "nl": "Vlucht ca. 3 uur 45",
+     "en": "Flight about 3h 45m",
+     "de": "Flugzeit etwa 3 Std. 45 Min.",
+     "es": "Vuelo de unas 3 h 45 min",
+     "pt": "Voo de cerca de 3h 45min"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://flights.idealo.com/route/United-States-US/Curacao-CUR/non-stop-flight",
+    "https://www.travelpulse.com/news/destinations/united-airlines-begins-service-to-curacao.html"
+   ]
+  },
+  {
+   "id": "delta",
+   "naam": "Delta Air Lines",
+   "url": "https://www.delta.com",
+   "soort": {
+    "nl": "lijnvlucht VS",
+    "en": "US full-service airline",
+    "de": "US-Full-Service-Airline",
+    "es": "aerolínea estadounidense de servicio completo",
+    "pt": "companhia aérea americana de serviço completo"
+   },
+   "plaats": null,
+   "tags": [
+    "route-us",
+    "direct",
+    "fullservice"
+   ],
+   "prijs": {
+    "bedrag": 475,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "retour vanaf Atlanta",
+     "en": "round trip from Atlanta",
+     "de": "Hin- und Rückflug ab Atlanta",
+     "es": "ida y vuelta desde Atlanta",
+     "pt": "ida e volta de Atlanta"
+    },
+    "bron": "https://flights.idealo.com/route/United-States-US/Curacao-CUR/non-stop-flight",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Dagelijks vanaf Atlanta",
+     "en": "Daily from Atlanta",
+     "de": "Täglich ab Atlanta",
+     "es": "Diario desde Atlanta",
+     "pt": "Diário de Atlanta"
+    },
+    {
+     "nl": "Vlucht ca. 3 uur",
+     "en": "Flight about 3 hours",
+     "de": "Flugzeit etwa 3 Stunden",
+     "es": "Vuelo de unas 3 horas",
+     "pt": "Voo de cerca de 3 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://flights.idealo.com/route/United-States-US/Curacao-CUR/non-stop-flight"
+   ]
+  },
+  {
+   "id": "air-canada",
+   "naam": "Air Canada",
+   "url": "https://www.aircanada.com",
+   "soort": {
+    "nl": "lijnvlucht Canada",
+    "en": "Canadian full-service airline",
+    "de": "Kanadische Full-Service-Airline",
+    "es": "aerolínea canadiense de servicio completo",
+    "pt": "companhia aérea canadense de serviço completo"
+   },
+   "plaats": null,
+   "tags": [
+    "route-ca",
+    "direct",
+    "fullservice"
+   ],
+   "prijs": {
+    "bedrag": 548,
+    "valuta": "EUR",
+    "eenheid": {
+     "nl": "retour vanaf Brussel, overstap Montréal",
+     "en": "round trip from Brussels via Montreal",
+     "de": "Hin- und Rückflug ab Brüssel über Montreal",
+     "es": "ida y vuelta desde Bruselas vía Montreal",
+     "pt": "ida e volta de Bruxelas via Montreal"
+    },
+    "bron": "https://www.be.kayak.com/vluchten/Belgie-BE0/Curacao-CW0",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Toronto meerdere keren per week",
+     "en": "Toronto several times a week",
+     "de": "Toronto mehrmals pro Woche",
+     "es": "Toronto varias veces por semana",
+     "pt": "Toronto várias vezes por semana"
+    },
+    {
+     "nl": "Ook vanaf Montréal",
+     "en": "Also from Montreal",
+     "de": "Auch ab Montreal",
+     "es": "También desde Montreal",
+     "pt": "Também de Montreal"
+    },
+    {
+     "nl": "Toronto-Curaçao ca. 5 uur 25",
+     "en": "Toronto-Curaçao about 5h 25m",
+     "de": "Toronto-Curaçao etwa 5 Std. 25 Min.",
+     "es": "Toronto-Curazao unas 5 h 25 min",
+     "pt": "Toronto-Curaçao cerca de 5h 25min"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.flightsfrom.com/YYZ-CUR",
+    "https://roame.travel/flightmap/flights-to-cur",
+    "https://www.be.kayak.com/vluchten/Belgie-BE0/Curacao-CW0"
+   ]
+  },
+  {
+   "id": "westjet",
+   "naam": "WestJet",
+   "url": "https://www.westjet.com",
+   "soort": {
+    "nl": "lijnvlucht Canada",
+    "en": "Canadian airline",
+    "de": "Kanadische Airline",
+    "es": "aerolínea canadiense",
+    "pt": "companhia aérea canadense"
+   },
+   "plaats": null,
+   "tags": [
+    "route-ca",
+    "direct"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Toronto 2x per week",
+     "en": "Toronto twice a week",
+     "de": "Toronto zweimal pro Woche",
+     "es": "Toronto dos veces por semana",
+     "pt": "Toronto duas vezes por semana"
+    },
+    {
+     "nl": "Vrijdag en zondag in voorbeeldweek",
+     "en": "Fridays and Sundays in sample week",
+     "de": "Freitags und sonntags in der Beispielwoche",
+     "es": "Viernes y domingos en la semana de ejemplo",
+     "pt": "Sextas e domingos na semana de exemplo"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.flightsfrom.com/YYZ-CUR"
+   ]
+  },
+  {
+   "id": "avianca",
+   "naam": "Avianca",
+   "url": "https://www.avianca.com",
+   "soort": {
+    "nl": "lijnvlucht Colombia",
+    "en": "Colombian airline",
+    "de": "Kolumbianische Airline",
+    "es": "aerolínea colombiana",
+    "pt": "companhia aérea colombiana"
+   },
+   "plaats": null,
+   "tags": [
+    "route-co",
+    "direct",
+    "fullservice"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Rechtstreeks vanaf Bogotá",
+     "en": "Nonstop from Bogotá",
+     "de": "Nonstop ab Bogotá",
+     "es": "Directo desde Bogotá",
+     "pt": "Direto de Bogotá"
+    },
+    {
+     "nl": "Overstap naar rest Zuid-Amerika",
+     "en": "Connections across South America",
+     "de": "Verbindungen in ganz Südamerika",
+     "es": "Conexiones por toda Sudamérica",
+     "pt": "Conexões por toda a América do Sul"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://roame.travel/flightmap/flights-to-cur",
+    "https://www.flightsfrom.com/CUR"
+   ]
+  },
+  {
+   "id": "copa",
+   "naam": "Copa Airlines",
+   "url": "https://www.copaair.com",
+   "soort": {
+    "nl": "lijnvlucht Panama",
+    "en": "Panamanian airline",
+    "de": "Panamaische Airline",
+    "es": "aerolínea panameña",
+    "pt": "companhia aérea panamenha"
+   },
+   "plaats": null,
+   "tags": [
+    "route-co",
+    "route-br",
+    "direct",
+    "fullservice"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Dagelijks vanaf Panama-Stad",
+     "en": "Daily from Panama City",
+     "de": "Täglich ab Panama-Stadt",
+     "es": "Diario desde Ciudad de Panamá",
+     "pt": "Diário da Cidade do Panamá"
+    },
+    {
+     "nl": "Overstap op hub Tocumen",
+     "en": "Connects at Tocumen hub",
+     "de": "Anschluss am Drehkreuz Tocumen",
+     "es": "Conexión en el hub de Tocumen",
+     "pt": "Conexão no hub de Tocumen"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.curacaotouristboard.com/2018/01/17/daily-copa-airlines-flights-between-panama-and-curacao/",
+    "https://www.flightsfrom.com/CUR"
+   ]
+  },
+  {
+   "id": "wingo",
+   "naam": "Wingo",
+   "url": "https://www.wingo.com",
+   "soort": {
+    "nl": "prijsvechter Colombia",
+    "en": "Colombian low-cost airline",
+    "de": "Kolumbianische Billigairline",
+    "es": "aerolínea colombiana de bajo costo",
+    "pt": "companhia aérea colombiana de baixo custo"
+   },
+   "plaats": null,
+   "tags": [
+    "route-co",
+    "direct",
+    "budget"
+   ],
+   "prijs": {
+    "bedrag": 109,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "enkele reis Medellín, introductieprijs dec 2024",
+     "en": "one way from Medellín, launch fare Dec 2024",
+     "de": "einfacher Flug ab Medellín, Einführungspreis Dez. 2024",
+     "es": "solo ida desde Medellín, tarifa de lanzamiento dic. 2024",
+     "pt": "somente ida de Medellín, tarifa de lançamento dez. 2024"
+    },
+    "bron": "https://aviacionline.com/wingo-volara-desde-medellin-hacia-curazao-y-san-jose-costa-rica",
+    "datum": "2024-12"
+   },
+   "feiten": [
+    {
+     "nl": "Medellín 2x per week, seizoen",
+     "en": "Medellín twice weekly, seasonal",
+     "de": "Medellín zweimal pro Woche, saisonal",
+     "es": "Medellín dos veces por semana, de temporada",
+     "pt": "Medellín duas vezes por semana, sazonal"
+    },
+    {
+     "nl": "Bogotá ca. 2 uur",
+     "en": "Bogotá about 2 hours",
+     "de": "Bogotá etwa 2 Stunden",
+     "es": "Bogotá unas 2 horas",
+     "pt": "Bogotá cerca de 2 horas"
+    },
+    {
+     "nl": "Vooral dec, jan, jun-aug",
+     "en": "Mainly Dec, Jan, Jun-Aug",
+     "de": "Hauptsächlich Dez., Jan., Jun.-Aug.",
+     "es": "Sobre todo dic., ene., jun.-ago.",
+     "pt": "Principalmente dez., jan., jun.-ago."
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://aviacionline.com/wingo-volara-desde-medellin-hacia-curazao-y-san-jose-costa-rica",
+    "https://www.flightsfrom.com/CUR"
+   ]
+  },
+  {
+   "id": "azul",
+   "naam": "Azul",
+   "url": "https://www.voeazul.com.br",
+   "soort": {
+    "nl": "lijnvlucht Brazilië",
+    "en": "Brazilian airline",
+    "de": "Brasilianische Airline",
+    "es": "aerolínea brasileña",
+    "pt": "companhia aérea brasileira"
+   },
+   "plaats": null,
+   "tags": [
+    "route-br",
+    "direct"
+   ],
+   "prijs": {
+    "bedrag": 1138.15,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf Belo Horizonte, volgens Azul-site",
+     "en": "from Belo Horizonte, per Azul site",
+     "de": "ab Belo Horizonte, laut Azul-Website",
+     "es": "desde Belo Horizonte, según el sitio de Azul",
+     "pt": "de Belo Horizonte, segundo o site da Azul"
+    },
+    "bron": "https://passagens.voeazul.com.br/en/flights-from-belo-horizonte-to-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Belo Horizonte, seizoen (juli)",
+     "en": "Belo Horizonte, seasonal (July)",
+     "de": "Belo Horizonte, saisonal (Juli)",
+     "es": "Belo Horizonte, de temporada (julio)",
+     "pt": "Belo Horizonte, sazonal (julho)"
+    },
+    {
+     "nl": "2-4x per week, Airbus A320",
+     "en": "2-4 times a week, Airbus A320",
+     "de": "2-4 Mal pro Woche, Airbus A320",
+     "es": "2-4 veces por semana, Airbus A320",
+     "pt": "2-4 vezes por semana, Airbus A320"
+    },
+    {
+     "nl": "Vlucht ca. 6 uur 10",
+     "en": "Flight about 6h 10m",
+     "de": "Flugzeit etwa 6 Std. 10 Min.",
+     "es": "Vuelo de unas 6 h 10 min",
+     "pt": "Voo de cerca de 6h 10min"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://aviacionaldia.com/en/2026/06/azul-to-resume-seasonal-belo-horizonte-curacao-flights-for-july-peak-season.html",
+    "https://www.flightsfrom.com/CUR"
+   ]
+  },
+  {
+   "id": "aerolineas-argentinas",
+   "naam": "Aerolíneas Argentinas",
+   "url": "https://www.aerolineas.com.ar",
+   "soort": {
+    "nl": "lijnvlucht Argentinië",
+    "en": "Argentine airline",
+    "de": "Argentinische Airline",
+    "es": "aerolínea argentina",
+    "pt": "companhia aérea argentina"
+   },
+   "plaats": null,
+   "tags": [
+    "route-co",
+    "direct"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Buenos Aires vanaf 2 jan 2027",
+     "en": "Buenos Aires from Jan 2, 2027",
+     "de": "Buenos Aires ab 2. Jan. 2027",
+     "es": "Buenos Aires desde el 2 de ene. de 2027",
+     "pt": "Buenos Aires a partir de 2 de jan. de 2027"
+    },
+    {
+     "nl": "4x per week t/m 29 maart",
+     "en": "4 times a week through Mar 29",
+     "de": "4 Mal pro Woche bis 29. März",
+     "es": "4 veces por semana hasta el 29 de marzo",
+     "pt": "4 vezes por semana até 29 de março"
+    },
+    {
+     "nl": "Wo en za rechtstreeks",
+     "en": "Wednesdays and Saturdays nonstop",
+     "de": "Mittwochs und samstags nonstop",
+     "es": "Miércoles y sábados directo",
+     "pt": "Quartas e sábados direto"
+    },
+    {
+     "nl": "Ma en do via Aruba",
+     "en": "Mondays and Thursdays via Aruba",
+     "de": "Montags und donnerstags über Aruba",
+     "es": "Lunes y jueves vía Aruba",
+     "pt": "Segundas e quintas via Aruba"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.caribjournal.com/2026/08/30/new-flights-from-argentina-to-curacao/",
+    "https://www.bes-reporter.com/news/aviation-travel/94316/aerolineas-argentinas-launches-flights-to-curacao"
+   ]
+  },
+  {
+   "id": "arajet",
+   "naam": "Arajet",
+   "url": "https://www.arajet.com",
+   "soort": {
+    "nl": "prijsvechter Dominicaanse Rep.",
+    "en": "Dominican low-cost airline",
+    "de": "Dominikanische Billigairline",
+    "es": "aerolínea dominicana de bajo costo",
+    "pt": "companhia aérea dominicana de baixo custo"
+   },
+   "plaats": null,
+   "tags": [
+    "route-carib",
+    "route-us",
+    "budget"
+   ],
+   "prijs": {
+    "bedrag": 393,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "retour vanaf Miami met 2 overstappen",
+     "en": "round trip from Miami with 2 stops",
+     "de": "Hin- und Rückflug ab Miami mit 2 Zwischenstopps",
+     "es": "ida y vuelta desde Miami con 2 escalas",
+     "pt": "ida e volta de Miami com 2 escalas"
+    },
+    "bron": "https://www.kayak.com/flight-routes/Miami-MIA/Curacao-CUR",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Rechtstreeks vanaf Santo Domingo",
+     "en": "Nonstop from Santo Domingo",
+     "de": "Nonstop ab Santo Domingo",
+     "es": "Directo desde Santo Domingo",
+     "pt": "Direto de Santo Domingo"
+    },
+    {
+     "nl": "Goedkoopste Miami-tarief op Kayak",
+     "en": "Cheapest Miami fare on Kayak",
+     "de": "Günstigster Miami-Tarif auf Kayak",
+     "es": "La tarifa más barata desde Miami en Kayak",
+     "pt": "A tarifa mais barata de Miami no Kayak"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.kayak.com/flight-routes/Miami-MIA/Curacao-CUR",
+    "https://www.flightsfrom.com/CUR",
+    "https://elnuevodiario.com.do/arajet-aterriza-por-primera-vez-en-curazao-e-inicia-conexion-de-rd-con-el-corazon-del-caribe/"
+   ]
+  },
+  {
+   "id": "surinam-airways",
+   "naam": "Surinam Airways",
+   "url": "https://www.flyslm.com",
+   "soort": {
+    "nl": "lijnvlucht Suriname",
+    "en": "Surinamese airline",
+    "de": "Surinamische Airline",
+    "es": "aerolínea surinamesa",
+    "pt": "companhia aérea surinamesa"
+   },
+   "plaats": null,
+   "tags": [
+    "route-carib",
+    "route-us",
+    "direct"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Paramaribo-Curaçao rechtstreeks",
+     "en": "Paramaribo-Curaçao nonstop",
+     "de": "Paramaribo-Curaçao nonstop",
+     "es": "Paramaribo-Curazao directo",
+     "pt": "Paramaribo-Curaçao direto"
+    },
+    {
+     "nl": "Ook op de Miami-route",
+     "en": "Also flies the Miami route",
+     "de": "Fliegt auch die Strecke nach Miami",
+     "es": "También vuela la ruta a Miami",
+     "pt": "Também voa a rota para Miami"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://flights.idealo.com/route/United-States-US/Curacao-CUR/non-stop-flight",
+    "https://roame.travel/flightmap/flights-to-cur"
+   ]
+  },
+  {
+   "id": "caribbean-airlines",
+   "naam": "Caribbean Airlines",
+   "url": "https://www.caribbean-airlines.com",
+   "soort": {
+    "nl": "lijnvlucht Trinidad",
+    "en": "Trinidad-based airline",
+    "de": "Airline mit Sitz in Trinidad",
+    "es": "aerolínea con base en Trinidad",
+    "pt": "companhia aérea sediada em Trinidad"
+   },
+   "plaats": null,
+   "tags": [
+    "route-carib",
+    "direct"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vanaf Port of Spain",
+     "en": "From Port of Spain",
+     "de": "Ab Port of Spain",
+     "es": "Desde Puerto España",
+     "pt": "De Port of Spain"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.flightsfrom.com/CUR",
+    "https://roame.travel/flightmap/flights-to-cur"
+   ]
+  },
+  {
+   "id": "avior",
+   "naam": "Avior Airlines",
+   "url": null,
+   "soort": {
+    "nl": "lijnvlucht Venezuela",
+    "en": "Venezuelan airline",
+    "de": "Venezolanische Airline",
+    "es": "aerolínea venezolana",
+    "pt": "companhia aérea venezuelana"
+   },
+   "plaats": null,
+   "tags": [
+    "route-co",
+    "direct"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vanaf Caracas en Maracaibo",
+     "en": "From Caracas and Maracaibo",
+     "de": "Ab Caracas und Maracaibo",
+     "es": "Desde Caracas y Maracaibo",
+     "pt": "De Caracas e Maracaibo"
+    },
+    {
+     "nl": "Maracaibo ca. 1 uur",
+     "en": "Maracaibo about 1 hour",
+     "de": "Maracaibo etwa 1 Stunde",
+     "es": "Maracaibo unas 1 hora",
+     "pt": "Maracaibo cerca de 1 hora"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://roame.travel/flightmap/flights-to-cur",
+    "https://www.flightsfrom.com/CUR"
+   ]
+  },
+  {
+   "id": "laser",
+   "naam": "LASER Airlines",
+   "url": null,
+   "soort": {
+    "nl": "lijnvlucht Venezuela",
+    "en": "Venezuelan airline",
+    "de": "Venezolanische Airline",
+    "es": "aerolínea venezolana",
+    "pt": "companhia aérea venezuelana"
+   },
+   "plaats": null,
+   "tags": [
+    "route-co",
+    "direct"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vanaf Caracas",
+     "en": "From Caracas",
+     "de": "Ab Caracas",
+     "es": "Desde Caracas",
+     "pt": "De Caracas"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.flightsfrom.com/CUR",
+    "https://roame.travel/flightmap/flights-to-cur"
+   ]
+  },
+  {
+   "id": "air-century",
+   "naam": "Air Century",
+   "url": null,
+   "soort": {
+    "nl": "regionale airline Dominicaanse Rep.",
+    "en": "Dominican regional airline",
+    "de": "Dominikanische Regionalairline",
+    "es": "aerolínea regional dominicana",
+    "pt": "companhia aérea regional dominicana"
+   },
+   "plaats": null,
+   "tags": [
+    "route-carib",
+    "direct"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vanaf La Isabela (Santo Domingo)",
+     "en": "From La Isabela (Santo Domingo)",
+     "de": "Ab La Isabela (Santo Domingo)",
+     "es": "Desde La Isabela (Santo Domingo)",
+     "pt": "De La Isabela (Santo Domingo)"
+    },
+    {
+     "nl": "Vlucht ca. 1 uur",
+     "en": "Flight about 1 hour",
+     "de": "Flugzeit etwa 1 Stunde",
+     "es": "Vuelo de unas 1 hora",
+     "pt": "Voo de cerca de 1 hora"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.flightsfrom.com/CUR"
+   ]
+  },
+  {
+   "id": "sunrise-airways",
+   "naam": "Sunrise Airways",
+   "url": null,
+   "soort": {
+    "nl": "regionale airline Haïti",
+    "en": "Haitian regional airline",
+    "de": "Haitianische Regionalairline",
+    "es": "aerolínea regional haitiana",
+    "pt": "companhia aérea regional haitiana"
+   },
+   "plaats": null,
+   "tags": [
+    "route-carib",
+    "direct"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vanaf Port-au-Prince",
+     "en": "From Port-au-Prince",
+     "de": "Ab Port-au-Prince",
+     "es": "Desde Puerto Príncipe",
+     "pt": "De Porto Príncipe"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.caribjournal.com/?p=72589",
+    "https://www.flightsfrom.com/PAP-CUR"
+   ]
+  },
+  {
+   "id": "globalx",
+   "naam": "GlobalX",
+   "url": null,
+   "soort": {
+    "nl": "charter VS",
+    "en": "US charter airline",
+    "de": "US-Charterairline",
+    "es": "aerolínea chárter estadounidense",
+    "pt": "companhia aérea de fretamento americana"
+   },
+   "plaats": null,
+   "tags": [
+    "route-us",
+    "direct"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Charters vanaf Miami",
+     "en": "Charters from Miami",
+     "de": "Charterflüge ab Miami",
+     "es": "Vuelos chárter desde Miami",
+     "pt": "Voos fretados de Miami"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.kayak.com/flight-routes/Miami-MIA/Curacao-CUR",
+    "https://www.flightsfrom.com/CUR"
+   ]
+  },
+  {
+   "id": "divi-divi-air",
+   "naam": "Divi Divi Air",
+   "url": "https://www.flydivi.com",
+   "soort": {
+    "nl": "eilandhopper",
+    "en": "inter-island airline",
+    "de": "Inselhopper-Airline",
+    "es": "aerolínea entre islas",
+    "pt": "companhia aérea entre ilhas"
+   },
+   "plaats": null,
+   "tags": [
+    "route-carib",
+    "eilandhop",
+    "direct"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Bonaire 5-8 keer per dag",
+     "en": "Bonaire 5-8 times a day",
+     "de": "Bonaire 5-8 Mal pro Tag",
+     "es": "Bonaire 5-8 veces al día",
+     "pt": "Bonaire 5-8 vezes por dia"
+    },
+    {
+     "nl": "Ook Aruba",
+     "en": "Also Aruba",
+     "de": "Auch Aruba",
+     "es": "También Aruba",
+     "pt": "Também Aruba"
+    },
+    {
+     "nl": "Bonaire 25-70 minuten",
+     "en": "Bonaire 25-70 minutes",
+     "de": "Bonaire 25-70 Minuten",
+     "es": "Bonaire 25-70 minutos",
+     "pt": "Bonaire 25-70 minutos"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Trustpilot",
+     "score": 3.1,
+     "max": 5,
+     "aantal": 2,
+     "peildatum": "2026-10-20",
+     "bron": "https://ca.trustpilot.com/review/flydivi.com"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [
+     "Bij een geannuleerde avondvlucht weinig opvang",
+     "Onvriendelijke balie-ervaring bij een ED-formulier"
+    ],
+    "en": [
+     "Little help when an evening flight was canceled",
+     "Unfriendly counter experience over an ED form"
+    ],
+    "de": [
+     "Kaum Hilfe, als ein Abendflug gestrichen wurde",
+     "Unfreundlicher Schalter wegen eines ED-Formulars"
+    ],
+    "es": [
+     "Poca ayuda cuando cancelaron un vuelo de la noche",
+     "Mala experiencia en el mostrador por un formulario ED"
+    ],
+    "pt": [
+     "Pouca ajuda quando um voo da noite foi cancelado",
+     "Experiência ruim no balcão por causa de um formulário ED"
+    ]
+   },
+   "bronnen": [
+    "https://www.flightsfrom.com/CUR-BON",
+    "https://roame.travel/flightmap/flights-to-cur"
+   ]
+  },
+  {
+   "id": "z-air",
+   "naam": "Z Air",
+   "url": null,
+   "soort": {
+    "nl": "eilandhopper",
+    "en": "inter-island airline",
+    "de": "Inselhopper-Airline",
+    "es": "aerolínea entre islas",
+    "pt": "companhia aérea entre ilhas"
+   },
+   "plaats": null,
+   "tags": [
+    "route-carib",
+    "eilandhop",
+    "direct",
+    "budget"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Bonaire 1-7 keer per dag",
+     "en": "Bonaire 1-7 times a day",
+     "de": "Bonaire 1-7 Mal pro Tag",
+     "es": "Bonaire 1-7 veces al día",
+     "pt": "Bonaire 1-7 vezes por dia"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.flightsfrom.com/CUR-BON",
+    "https://www.flightsfrom.com/CUR"
+   ]
+  },
+  {
+   "id": "winair",
+   "naam": "Winair",
+   "url": "https://www.fly-winair.sx",
+   "soort": {
+    "nl": "regionale airline Sint Maarten",
+    "en": "Sint Maarten regional airline",
+    "de": "Regionalairline aus Sint Maarten",
+    "es": "aerolínea regional de Sint Maarten",
+    "pt": "companhia aérea regional de Sint Maarten"
+   },
+   "plaats": null,
+   "tags": [
+    "route-carib",
+    "eilandhop",
+    "direct"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Sint Maarten 1-3 keer per dag",
+     "en": "Sint Maarten 1-3 times a day",
+     "de": "Sint Maarten 1-3 Mal pro Tag",
+     "es": "Sint Maarten 1-3 veces al día",
+     "pt": "Sint Maarten 1-3 vezes por dia"
+    },
+    {
+     "nl": "Bonaire 2x per week",
+     "en": "Bonaire twice a week",
+     "de": "Bonaire zweimal pro Woche",
+     "es": "Bonaire dos veces por semana",
+     "pt": "Bonaire duas vezes por semana"
+    },
+    {
+     "nl": "Sint Maarten ca. 1 uur 45",
+     "en": "Sint Maarten about 1h 45m",
+     "de": "Sint Maarten etwa 1 Std. 45 Min.",
+     "es": "Sint Maarten unas 1 h 45 min",
+     "pt": "Sint Maarten cerca de 1h 45min"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://flights.idealo.com/route/Netherlands-NL/Curacao-CUR/",
+    "https://www.flightsfrom.com/CUR-BON"
+   ]
+  },
+  {
+   "id": "ezair",
+   "naam": "EZAir",
+   "url": null,
+   "soort": {
+    "nl": "eilandhopper",
+    "en": "inter-island airline",
+    "de": "Inselhopper-Airline",
+    "es": "aerolínea entre islas",
+    "pt": "companhia aérea entre ilhas"
+   },
+   "plaats": null,
+   "tags": [
+    "route-carib",
+    "eilandhop",
+    "direct"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Sint Maarten enkele keren per week",
+     "en": "Sint Maarten a few times a week",
+     "de": "Sint Maarten einige Male pro Woche",
+     "es": "Sint Maarten algunas veces por semana",
+     "pt": "Sint Maarten algumas vezes por semana"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://flights.idealo.com/route/Netherlands-NL/Curacao-CUR/"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Skyscanner",
+   "url": "https://www.skyscanner.net",
+   "uitleg": {
+    "nl": "Vergelijkt prijzen van alle airlines en reisbureaus; je boekt bij de aanbieder zelf.",
+    "en": "Compares fares across airlines and agencies; you book with the seller.",
+    "de": "Vergleicht Preise über Airlines und Agenturen hinweg; gebucht wird beim Anbieter.",
+    "es": "Compara tarifas de aerolíneas y agencias; reservas directamente con el vendedor.",
+    "pt": "Compara tarifas de companhias aéreas e agências; você reserva direto com o vendedor."
+   }
+  },
+  {
+   "naam": "Google Flights",
+   "url": "https://www.google.com/travel/flights",
+   "uitleg": {
+    "nl": "Handig om per maand de goedkoopste data te zien en prijsalerts te zetten.",
+    "en": "Good for spotting the cheapest dates by month and setting price alerts.",
+    "de": "Praktisch, um die günstigsten Reisedaten nach Monat zu finden und Preisalarme einzurichten.",
+    "es": "Útil para encontrar las fechas más baratas por mes y crear alertas de precio.",
+    "pt": "Bom para achar as datas mais baratas por mês e criar alertas de preço."
+   }
+  },
+  {
+   "naam": "Kayak",
+   "url": "https://www.kayak.com",
+   "uitleg": {
+    "nl": "Toont naast prijzen ook de goedkoopste maand en gemiddelde tarieven per route.",
+    "en": "Shows fares plus the cheapest month and typical prices per route.",
+    "de": "Zeigt Preise sowie den günstigsten Monat und typische Preise pro Strecke.",
+    "es": "Muestra tarifas, el mes más barato y los precios habituales por ruta.",
+    "pt": "Mostra tarifas, o mês mais barato e os preços típicos por rota."
+   }
+  },
+  {
+   "naam": "idealo",
+   "url": "https://flights.idealo.com",
+   "uitleg": {
+    "nl": "Overzicht van rechtstreekse routes met frequentie en vanafprijs.",
+    "en": "Lists nonstop routes with frequency and starting fares.",
+    "de": "Listet Nonstop-Strecken mit Häufigkeit und Startpreisen auf.",
+    "es": "Lista las rutas directas con frecuencia y tarifas desde.",
+    "pt": "Lista as rotas diretas com frequência e tarifas a partir de."
+   }
+  },
+  {
+   "naam": "Expedia",
+   "url": "https://www.expedia.com",
+   "uitleg": {
+    "nl": "Verkoopt vlucht plus hotel, vooral vanuit de VS en Canada.",
+    "en": "Sells flight plus hotel bundles, mostly from the US and Canada.",
+    "de": "Verkauft Flug-plus-Hotel-Pakete, vor allem aus den USA und Kanada.",
+    "es": "Vende paquetes de vuelo más hotel, sobre todo desde EE. UU. y Canadá.",
+    "pt": "Vende pacotes de voo mais hotel, principalmente dos EUA e do Canadá."
+   }
+  },
+  {
+   "naam": "TUI",
+   "url": "https://www.tui.nl",
+   "uitleg": {
+    "nl": "Vliegt zelf en verkoopt pakketreizen met hotel en transfer.",
+    "en": "Runs its own flights and sells packages with hotel and transfer.",
+    "de": "Betreibt eigene Flüge und verkauft Pakete mit Hotel und Transfer.",
+    "es": "Opera sus propios vuelos y vende paquetes con hotel y traslado.",
+    "pt": "Opera seus próprios voos e vende pacotes com hotel e traslado."
+   }
+  },
+  {
+   "naam": "Corendon",
+   "url": "https://www.corendon.nl",
+   "uitleg": {
+    "nl": "Vliegt zelf vanaf Schiphol en Düsseldorf en verkoopt pakketreizen.",
+    "en": "Runs its own flights from Amsterdam and Düsseldorf and sells packages.",
+    "de": "Betreibt eigene Flüge ab Amsterdam und Düsseldorf und verkauft Pakete.",
+    "es": "Opera sus propios vuelos desde Ámsterdam y Düsseldorf y vende paquetes.",
+    "pt": "Opera seus próprios voos de Amsterdã e Düsseldorf e vende pacotes."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Vul vóór vertrek de gratis Digital Immigration Card in op dicardcuracao.com; sites die geld vragen zijn niet officieel.",
+   "en": "Fill in the free Digital Immigration Card at dicardcuracao.com before you fly; sites that charge a fee are not official.",
+   "de": "Fülle vor dem Flug die kostenlose Digital Immigration Card auf dicardcuracao.com aus; Seiten, die dafür Geld verlangen, sind nicht offiziell.",
+   "es": "Completa la Digital Immigration Card gratuita en dicardcuracao.com antes de volar; los sitios que cobran una tarifa no son oficiales.",
+   "pt": "Preencha o Digital Immigration Card gratuito em dicardcuracao.com antes de voar; sites que cobram taxa não são oficiais."
+  },
+  {
+   "nl": "Vanuit België is er sinds winter 2025 geen rechtstreekse TUI-vlucht meer; reken op een overstap, bijvoorbeeld via Amsterdam of Montréal.",
+   "en": "TUI dropped its nonstop Brussels flights in winter 2025, so from Belgium plan on a connection via Amsterdam or Montreal.",
+   "de": "TUI hat die Nonstop-Flüge ab Brüssel im Winter 2025 gestrichen, plane ab Belgien also eine Verbindung über Amsterdam oder Montreal ein.",
+   "es": "TUI eliminó sus vuelos directos desde Bruselas en el invierno de 2025, así que desde Bélgica cuenta con una conexión por Ámsterdam o Montreal.",
+   "pt": "A TUI cortou os voos diretos de Bruxelas no inverno de 2025, então, saindo da Bélgica, conte com uma conexão por Amsterdã ou Montreal."
+  },
+  {
+   "nl": "De Düsseldorf-vluchten van Corendon lopen alleen van 14 december 2026 tot 4 april 2027; daarna is nog niets besloten.",
+   "en": "Corendon's Düsseldorf flights only run from December 14, 2026 to April 4, 2027, with nothing decided after that.",
+   "de": "Die Düsseldorf-Flüge von Corendon gibt es nur vom 14. Dezember 2026 bis 4. April 2027, danach ist noch nichts entschieden.",
+   "es": "Los vuelos de Corendon desde Düsseldorf solo operan del 14 de diciembre de 2026 al 4 de abril de 2027, y después aún no hay nada decidido.",
+   "pt": "Os voos da Corendon de Düsseldorf só operam de 14 de dezembro de 2026 a 4 de abril de 2027, e depois disso nada foi decidido."
+  },
+  {
+   "nl": "Vanuit Miami is februari volgens Kayak de goedkoopste maand, met een mediaan rond $460 retour.",
+   "en": "From Miami, Kayak lists February as the cheapest month, with a median round trip around $460.",
+   "de": "Ab Miami nennt Kayak den Februar als günstigsten Monat, mit einem mittleren Hin- und Rückflugpreis von etwa $460.",
+   "es": "Desde Miami, Kayak indica febrero como el mes más barato, con una mediana de ida y vuelta de unos $460.",
+   "pt": "De Miami, o Kayak aponta fevereiro como o mês mais barato, com uma mediana de ida e volta em torno de $460."
+  },
+  {
+   "nl": "Wil je ook naar Bonaire: Divi Divi Air vliegt 5 tot 8 keer per dag, Z Air tot 7 keer; de vlucht duurt minder dan een uur.",
+   "en": "Adding Bonaire? Divi Divi Air flies 5 to 8 times a day and Z Air up to 7, and the hop takes under an hour.",
+   "de": "Willst du Bonaire dazunehmen? Divi Divi Air fliegt 5 bis 8 Mal pro Tag und Z Air bis zu 7 Mal, der Hüpfer dauert unter einer Stunde.",
+   "es": "¿Quieres sumar Bonaire? Divi Divi Air vuela de 5 a 8 veces al día y Z Air hasta 7, y el salto dura menos de una hora.",
+   "pt": "Quer incluir Bonaire? A Divi Divi Air voa de 5 a 8 vezes por dia e a Z Air até 7, e o trecho dura menos de uma hora."
+  },
+  {
+   "nl": "Seizoensroutes vanuit Zuid-Amerika (Wingo uit Medellín, Azul uit Belo Horizonte) vliegen vooral in de vakantiemaanden; check of je data erin vallen.",
+   "en": "Seasonal routes from South America (Wingo from Medellín, Azul from Belo Horizonte) mostly run in holiday months, so check your dates.",
+   "de": "Saisonale Strecken aus Südamerika (Wingo ab Medellín, Azul ab Belo Horizonte) laufen meist nur in den Ferienmonaten, prüfe also deine Reisedaten.",
+   "es": "Las rutas de temporada desde Sudamérica (Wingo desde Medellín, Azul desde Belo Horizonte) operan sobre todo en meses de vacaciones, así que revisa tus fechas.",
+   "pt": "As rotas sazonais da América do Sul (Wingo de Medellín, Azul de Belo Horizonte) funcionam principalmente em meses de férias, então confira suas datas."
+  },
+  {
+   "nl": "Vanafprijzen op vergelijkingssites zeggen niets over ruimbagage; tel bagagekosten mee bij prijsvechters.",
+   "en": "Starting fares on comparison sites usually exclude checked bags, so add bag fees when comparing low-cost carriers.",
+   "de": "Startpreise auf Vergleichsseiten enthalten meist kein aufgegebenes Gepäck, rechne also beim Vergleich von Billigairlines die Gepäckgebühren dazu.",
+   "es": "Las tarifas desde que muestran los comparadores suelen excluir el equipaje facturado, así que suma el costo de las maletas al comparar aerolíneas de bajo costo.",
+   "pt": "As tarifas a partir de nos comparadores normalmente não incluem bagagem despachada, então some as taxas de bagagem ao comparar companhias de baixo custo."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Hoe lang vlieg je van Amsterdam naar Curaçao?",
+    "en": "How long is the flight from Amsterdam to Curaçao?",
+    "de": "Wie lange dauert der Flug von Amsterdam nach Curaçao?",
+    "es": "¿Cuánto dura el vuelo de Ámsterdam a Curazao?",
+    "pt": "Quanto tempo dura o voo de Amsterdã para Curaçao?"
+   },
+   "a": {
+    "nl": "Een rechtstreekse vlucht van Schiphol duurt ongeveer 9 uur 40 tot 10 uur 55, afhankelijk van wind en toestel.",
+    "en": "A nonstop flight from Amsterdam takes about 9 hours 40 minutes to 10 hours 55 minutes, depending on wind and aircraft.",
+    "de": "Ein Nonstop-Flug ab Amsterdam dauert je nach Wind und Flugzeug etwa 9 Stunden 40 Minuten bis 10 Stunden 55 Minuten.",
+    "es": "Un vuelo directo desde Ámsterdam dura entre 9 horas 40 minutos y 10 horas 55 minutos, según el viento y el avión.",
+    "pt": "Um voo direto de Amsterdã leva de cerca de 9 horas e 40 minutos a 10 horas e 55 minutos, dependendo do vento e da aeronave."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe lang duurt de vlucht van Miami naar Curaçao?",
+    "en": "How long is the flight from Miami to Curaçao?",
+    "de": "Wie lange dauert der Flug von Miami nach Curaçao?",
+    "es": "¿Cuánto dura el vuelo de Miami a Curazao?",
+    "pt": "Quanto tempo dura o voo de Miami para Curaçao?"
+   },
+   "a": {
+    "nl": "Rechtstreeks ongeveer 2 tot 3 uur. Vanaf Atlanta is het zo'n 3 uur, vanaf New York ongeveer 3 uur 45 en vanaf Chicago bijna 6 uur.",
+    "en": "Nonstop takes about 2 to 3 hours. Atlanta is about 3 hours, New York about 3 hours 45 minutes, and Chicago close to 6 hours.",
+    "de": "Nonstop dauert es etwa 2 bis 3 Stunden. Ab Atlanta sind es rund 3 Stunden, ab New York rund 3 Stunden 45 Minuten und ab Chicago knapp 6 Stunden.",
+    "es": "Directo toma entre 2 y 3 horas. Desde Atlanta son unas 3 horas, desde Nueva York unas 3 horas 45 minutos y desde Chicago casi 6 horas.",
+    "pt": "Direto leva de 2 a 3 horas. De Atlanta são cerca de 3 horas, de Nova York cerca de 3 horas e 45 minutos e de Chicago quase 6 horas."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke airlines vliegen rechtstreeks naar Curaçao?",
+    "en": "Which airlines fly nonstop to Curaçao?",
+    "de": "Welche Airlines fliegen nonstop nach Curaçao?",
+    "es": "¿Qué aerolíneas vuelan directo a Curazao?",
+    "pt": "Quais companhias aéreas voam direto para Curaçao?"
+   },
+   "a": {
+    "nl": "Uit Europa KLM, TUI en Corendon (Amsterdam, en Corendon ook Düsseldorf). Uit Noord-Amerika American, Delta, United, JetBlue, Air Canada en WestJet. Uit Latijns-Amerika onder meer Avianca, Copa, Wingo, Azul en Aerolíneas Argentinas.",
+    "en": "From Europe: KLM, TUI and Corendon (Amsterdam, plus Corendon from Düsseldorf). From North America: American, Delta, United, JetBlue, Air Canada and WestJet. From Latin America: Avianca, Copa, Wingo, Azul and Aerolíneas Argentinas, among others.",
+    "de": "Aus Europa: KLM, TUI und Corendon (Amsterdam, dazu Corendon ab Düsseldorf). Aus Nordamerika: American, Delta, United, JetBlue, Air Canada und WestJet. Aus Lateinamerika: unter anderem Avianca, Copa, Wingo, Azul und Aerolíneas Argentinas.",
+    "es": "Desde Europa: KLM, TUI y Corendon (Ámsterdam, y además Corendon desde Düsseldorf). Desde Norteamérica: American, Delta, United, JetBlue, Air Canada y WestJet. Desde Latinoamérica: Avianca, Copa, Wingo, Azul y Aerolíneas Argentinas, entre otras.",
+    "pt": "Da Europa: KLM, TUI e Corendon (Amsterdã, e a Corendon também de Düsseldorf). Da América do Norte: American, Delta, United, JetBlue, Air Canada e WestJet. Da América Latina: Avianca, Copa, Wingo, Azul e Aerolíneas Argentinas, entre outras."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost een vlucht naar Curaçao?",
+    "en": "How much is a flight to Curaçao?",
+    "de": "Wie viel kostet ein Flug nach Curaçao?",
+    "es": "¿Cuánto cuesta un vuelo a Curazao?",
+    "pt": "Quanto custa um voo para Curaçao?"
+   },
+   "a": {
+    "nl": "KLM toont retour vanaf €625 vanaf Amsterdam (december 2026). Vanuit de VS beginnen rechtstreekse retourtarieven rond $475 (Atlanta) tot $780 (Charlotte); met overstappen kan het vanaf Miami rond $393.",
+    "en": "From the US, nonstop round trips start around $475 from Atlanta and run up to about $780 from Charlotte; with connections, Miami fares can dip to about $393. From Amsterdam, KLM shows round trips from €625 for December 2026.",
+    "de": "Aus den USA beginnen Nonstop-Hin- und Rückflüge bei etwa $475 ab Atlanta und gehen bis etwa $780 ab Charlotte; mit Umstieg können Miami-Tarife auf etwa $393 sinken. Ab Amsterdam zeigt KLM Hin- und Rückflüge ab €625 für Dezember 2026.",
+    "es": "Desde EE. UU., los viajes directos de ida y vuelta parten de unos $475 desde Atlanta y llegan a unos $780 desde Charlotte; con escalas, las tarifas desde Miami pueden bajar a unos $393. Desde Ámsterdam, KLM muestra viajes de ida y vuelta desde €625 para diciembre de 2026.",
+    "pt": "Dos EUA, as passagens diretas de ida e volta começam em cerca de $475 saindo de Atlanta e chegam a cerca de $780 saindo de Charlotte; com conexões, as tarifas de Miami podem cair para cerca de $393. De Amsterdã, a KLM mostra passagens de ida e volta a partir de €625 para dezembro de 2026."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is de goedkoopste maand om naar Curaçao te vliegen?",
+    "en": "What is the cheapest month to fly to Curaçao?",
+    "de": "Welcher Monat ist am günstigsten für einen Flug nach Curaçao?",
+    "es": "¿Cuál es el mes más barato para volar a Curazao?",
+    "pt": "Qual é o mês mais barato para voar para Curaçao?"
+   },
+   "a": {
+    "nl": "Vanuit Miami is februari volgens Kayak het goedkoopst. Vanuit België noemt Kayak juni als laagseizoen en juli als duurste maand.",
+    "en": "From Miami, Kayak lists February as cheapest. From Belgium, Kayak names June as low season and July as the priciest month.",
+    "de": "Ab Miami nennt Kayak den Februar als günstigsten Monat. Ab Belgien gilt laut Kayak der Juni als Nebensaison und der Juli als teuerster Monat.",
+    "es": "Desde Miami, Kayak indica febrero como el más barato. Desde Bélgica, Kayak señala junio como temporada baja y julio como el mes más caro.",
+    "pt": "De Miami, o Kayak aponta fevereiro como o mais barato. Da Bélgica, o Kayak indica junho como baixa temporada e julho como o mês mais caro."
+   }
+  },
+  {
+   "q": {
+    "nl": "Heb ik een immigratiekaart nodig voor Curaçao?",
+    "en": "Do I need an immigration card for Curaçao?",
+    "de": "Brauche ich eine Immigration Card für Curaçao?",
+    "es": "¿Necesito una tarjeta de inmigración para Curazao?",
+    "pt": "Preciso de um cartão de imigração para Curaçao?"
+   },
+   "a": {
+    "nl": "Ja. Alle bezoekers die niet op Curaçao wonen vullen vooraf de Digital Immigration Card in op dicardcuracao.com. Dat is gratis.",
+    "en": "Yes. Every non-resident visitor fills in the Digital Immigration Card at dicardcuracao.com before travel. It is free.",
+    "de": "Ja. Jeder Besucher ohne Wohnsitz dort füllt vor der Reise die Digital Immigration Card auf dicardcuracao.com aus. Sie ist kostenlos.",
+    "es": "Sí. Todo visitante no residente completa la Digital Immigration Card en dicardcuracao.com antes del viaje. Es gratis.",
+    "pt": "Sim. Todo visitante não residente preenche o Digital Immigration Card em dicardcuracao.com antes da viagem. É grátis."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kan ik rechtstreeks vanuit Duitsland naar Curaçao vliegen?",
+    "en": "Can I fly nonstop from Germany to Curaçao?",
+    "de": "Kann ich von Deutschland nonstop nach Curaçao fliegen?",
+    "es": "¿Puedo volar directo de Alemania a Curazao?",
+    "pt": "Posso voar direto da Alemanha para Curaçao?"
+   },
+   "a": {
+    "nl": "Ja, Corendon vliegt vanaf 14 december 2026 tot 4 april 2027 op maandag, donderdag en zaterdag vanaf Düsseldorf. TUI start vanaf zomer 2027 twee vluchten per week vanaf Düsseldorf.",
+    "en": "Yes. Corendon flies from Düsseldorf on Mondays, Thursdays and Saturdays from December 14, 2026 to April 4, 2027, and TUI plans two weekly Düsseldorf flights from summer 2027.",
+    "de": "Ja. Corendon fliegt vom 14. Dezember 2026 bis 4. April 2027 montags, donnerstags und samstags ab Düsseldorf, und TUI plant ab Sommer 2027 zwei Flüge pro Woche ab Düsseldorf.",
+    "es": "Sí. Corendon vuela desde Düsseldorf los lunes, jueves y sábados del 14 de diciembre de 2026 al 4 de abril de 2027, y TUI planea dos vuelos semanales desde Düsseldorf a partir del verano de 2027.",
+    "pt": "Sim. A Corendon voa de Düsseldorf às segundas, quintas e sábados de 14 de dezembro de 2026 a 4 de abril de 2027, e a TUI planeja dois voos semanais de Düsseldorf a partir do verão de 2027."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe kom ik van Curaçao naar Bonaire of Aruba?",
+    "en": "How do I get from Curaçao to Bonaire or Aruba?",
+    "de": "Wie komme ich von Curaçao nach Bonaire oder Aruba?",
+    "es": "¿Cómo llego de Curazao a Bonaire o Aruba?",
+    "pt": "Como vou de Curaçao para Bonaire ou Aruba?"
+   },
+   "a": {
+    "nl": "Met een eilandhopper: Divi Divi Air en Z Air vliegen meerdere keren per dag naar Bonaire, Divi Divi ook naar Aruba. Winair en EZAir vliegen naar Sint Maarten.",
+    "en": "Take an inter-island flight: Divi Divi Air and Z Air fly to Bonaire several times a day, and Divi Divi also flies to Aruba. Winair and EZAir fly to Sint Maarten.",
+    "de": "Nimm einen Inselflug: Divi Divi Air und Z Air fliegen mehrmals täglich nach Bonaire, und Divi Divi fliegt auch nach Aruba. Winair und EZAir fliegen nach Sint Maarten.",
+    "es": "Toma un vuelo entre islas: Divi Divi Air y Z Air vuelan a Bonaire varias veces al día, y Divi Divi también vuela a Aruba. Winair y EZAir vuelan a Sint Maarten.",
+    "pt": "Pegue um voo entre ilhas: a Divi Divi Air e a Z Air voam para Bonaire várias vezes por dia, e a Divi Divi também voa para Aruba. A Winair e a EZAir voam para Sint Maarten."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "vliegen naar curaçao",
+   "vliegtickets curaçao",
+   "goedkope vlucht curaçao",
+   "vlucht amsterdam curaçao",
+   "vliegtijd curaçao",
+   "rechtstreeks naar curaçao"
+  ],
+  "en": [
+   "flights to curacao",
+   "cheap flights to curacao",
+   "nonstop flights to curacao",
+   "how long is the flight to curacao",
+   "airlines that fly to curacao"
+  ],
+  "es": [
+   "vuelos a curazao",
+   "vuelos baratos a curazao",
+   "vuelos directos a curazao",
+   "cuánto dura el vuelo a curazao",
+   "aerolíneas que vuelan a curazao"
+  ],
+  "pt": [
+   "voos para curaçao",
+   "voos baratos para curaçao",
+   "voos diretos para curaçao",
+   "quanto tempo dura o voo para curaçao",
+   "companhias aéreas que voam para curaçao"
+  ],
+  "de": [
+   "Flüge nach Curaçao",
+   "Günstige Flüge nach Curaçao",
+   "Nonstop-Flüge nach Curaçao",
+   "Wie lange dauert der Flug nach Curaçao",
+   "Airlines, die nach Curaçao fliegen"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Welke airlines vliegen rechtstreeks van Amsterdam naar Curaçao?",
+   "Wat is de goedkoopste manier om naar Curaçao te vliegen?",
+   "Is TUI of Corendon beter voor een reis naar Curaçao?"
+  ],
+  "en": [
+   "Which US cities have nonstop flights to Curaçao?",
+   "What is the cheapest way to fly to Curaçao?",
+   "How long is the flight from Miami to Curaçao?"
+  ],
+  "de": [
+   "Welche US-Städte haben Nonstop-Flüge nach Curaçao?",
+   "Wie fliegt man am günstigsten nach Curaçao?",
+   "Wie lange dauert der Flug von Miami nach Curaçao?"
+  ],
+  "es": [
+   "¿Qué ciudades de EE. UU. tienen vuelos directos a Curazao?",
+   "¿Cuál es la forma más barata de volar a Curazao?",
+   "¿Cuánto dura el vuelo de Miami a Curazao?"
+  ],
+  "pt": [
+   "Quais cidades dos EUA têm voos diretos para Curaçao?",
+   "Qual é a forma mais barata de voar para Curaçao?",
+   "Quanto tempo dura o voo de Miami para Curaçao?"
+  ]
+ },
+ "reviewGewicht": 0
+}

@@ -1,1 +1,1754 @@
-{"id":"esim","peildatum":"2026-10-20","items":[]}
+{
+ "id": "esim",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "eSIM of simkaart",
+  "en": "eSIM or SIM card",
+  "de": "eSIM oder SIM-Karte",
+  "es": "eSIM o tarjeta SIM",
+  "pt": "eSIM ou chip"
+ },
+ "h1": {
+  "nl": "Mobiel internet op Curaçao: welke eSIM of simkaart past bij jou?",
+  "en": "Mobile data in Curaçao: which eSIM or SIM card fits you?",
+  "de": "Mobiles Internet auf Curaçao: Welche eSIM oder SIM-Karte passt zu dir?",
+  "es": "Datos móviles en Curazao: ¿qué eSIM o tarjeta SIM te conviene?",
+  "pt": "Internet móvel em Curaçao: qual eSIM ou chip combina com você?"
+ },
+ "titel": {
+  "nl": "eSIM en simkaart Curaçao: {n} opties met prijzen",
+  "en": "Curaçao eSIM and SIM card: {n} options with prices",
+  "de": "eSIM und SIM-Karte für Curaçao: {n} Optionen mit Preisen",
+  "es": "eSIM y tarjeta SIM para Curazao: {n} opciones con precios",
+  "pt": "eSIM e chip para Curaçao: {n} opções com preços"
+ },
+ "metaDesc": {
+  "nl": "{n} manieren om mobiel internet te hebben op Curaçao: eSIMs, Digicel en Flow toeristensim en roaming van KPN, Odido en Vodafone, met prijzen per GB.",
+  "en": "{n} ways to get mobile data in Curaçao: travel eSIMs, Digicel and Flow tourist SIMs, and home-carrier roaming, with prices per plan.",
+  "de": "{n} Möglichkeiten für mobiles Internet auf Curaçao: Reise-eSIMs, Touristen-SIMs von Digicel und Flow und Roaming über den Heimanbieter, mit Preisen pro Tarif.",
+  "es": "{n} formas de tener datos móviles en Curazao: eSIM de viaje, SIM turísticas de Digicel y Flow y roaming de tu operador, con precios por plan.",
+  "pt": "{n} formas de ter internet móvel em Curaçao: eSIMs de viagem, chips turísticos da Digicel e da Flow e roaming da sua operadora, com preços por plano."
+ },
+ "kort": {
+  "nl": "EU-roaming geldt niet op Curaçao, dus zonder bundel betaal je bij KPN en Vodafone €2,50 per MB. Een eSIM met 5 GB voor 30 dagen kost $19 tot $31 (Nomad, Saily), en Digicel verkoopt een toeristensim met 7 GB plus belminuten voor $30 per week. Onbeperkt kan vanaf $19,99 per week bij Maya Mobile of $84,90 bij Holafly.",
+  "en": "A travel eSIM with 5 GB for 30 days runs about $19 to $31 (Nomad, Saily), while Digicel's local tourist SIM gives 7 GB plus call minutes for $30 a week and works on Aruba and Bonaire too. Unlimited plans start at $19.99 a week with Maya Mobile, or $84.90 with Holafly on the Digicel network.",
+  "de": "Eine Reise-eSIM mit 5 GB für 30 Tage kostet etwa $19 bis $31 (Nomad, Saily), die lokale Touristen-SIM von Digicel bietet 7 GB plus Gesprächsminuten für $30 pro Woche und funktioniert auch auf Aruba und Bonaire. Unlimited-Tarife gibt es ab $19.99 pro Woche bei Maya Mobile oder für $84.90 bei Holafly im Digicel-Netz.",
+  "es": "Una eSIM de viaje con 5 GB por 30 días cuesta entre $19 y $31 (Nomad, Saily), mientras que la SIM turística local de Digicel da 7 GB más minutos de llamadas por $30 a la semana y también funciona en Aruba y Bonaire. Los planes ilimitados parten de $19.99 por semana con Maya Mobile, o $84.90 con Holafly en la red de Digicel.",
+  "pt": "Uma eSIM de viagem com 5 GB por 30 dias custa cerca de $19 a $31 (Nomad, Saily), enquanto o chip turístico local da Digicel dá 7 GB mais minutos de ligação por $30 por semana e também funciona em Aruba e Bonaire. Os planos ilimitados começam em $19.99 por semana com a Maya Mobile, ou $84.90 com a Holafly na rede da Digicel."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Hoe lang blijf je op Curaçao?",
+    "en": "How long are you staying?",
+    "de": "Wie lange bleibst du?",
+    "es": "¿Cuánto tiempo te quedas?",
+    "pt": "Quanto tempo você vai ficar?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Ongeveer een week",
+      "en": "About a week",
+      "de": "Etwa eine Woche",
+      "es": "Alrededor de una semana",
+      "pt": "Cerca de uma semana"
+     },
+     "plus": [
+      "kort"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Een paar dagen",
+      "en": "A few days",
+      "de": "Ein paar Tage",
+      "es": "Unos días",
+      "pt": "Alguns dias"
+     },
+     "plus": [
+      "kort"
+     ],
+     "min": [
+      "lang"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Twee weken tot een maand",
+      "en": "Two weeks to a month",
+      "de": "Zwei Wochen bis einen Monat",
+      "es": "De dos semanas a un mes",
+      "pt": "De duas semanas a um mês"
+     },
+     "plus": [
+      "lang"
+     ],
+     "min": [
+      "kort"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Hoeveel data gebruik je?",
+    "en": "How much data do you use?",
+    "de": "Wie viel Datenvolumen brauchst du?",
+    "es": "¿Cuántos datos usas?",
+    "pt": "Quantos dados você usa?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Gemiddeld: kaarten, WhatsApp, wat social",
+      "en": "Average: maps, WhatsApp, some social",
+      "de": "Durchschnitt: Karten, WhatsApp, etwas Social Media",
+      "es": "Normal: mapas, WhatsApp, algo de redes sociales",
+      "pt": "Médio: mapas, WhatsApp, um pouco de redes sociais"
+     },
+     "plus": [
+      "goedkoop"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Weinig, vooral wifi in het hotel",
+      "en": "Light, mostly hotel wifi",
+      "de": "Wenig, meist WLAN im Hotel",
+      "es": "Poco, sobre todo wifi del hotel",
+      "pt": "Pouco, principalmente wi-fi do hotel"
+     },
+     "plus": [
+      "goedkoop"
+     ],
+     "min": [
+      "onbeperkt"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Veel: streamen, videobellen of hotspot voor laptop",
+      "en": "Heavy: streaming, video calls or laptop hotspot",
+      "de": "Viel: Streaming, Videoanrufe oder Hotspot für den Laptop",
+      "es": "Mucho: streaming, videollamadas o hotspot para el portátil",
+      "pt": "Muito: streaming, chamadas de vídeo ou roteador para o notebook"
+     },
+     "plus": [
+      "onbeperkt",
+      "hotspot"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Heb je een lokaal nummer of belminuten nodig?",
+    "en": "Do you need a local number or call minutes?",
+    "de": "Brauchst du eine lokale Nummer oder Gesprächsminuten?",
+    "es": "¿Necesitas un número local o minutos de llamadas?",
+    "pt": "Você precisa de um número local ou minutos de ligação?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Nee, WhatsApp is genoeg",
+      "en": "No, WhatsApp is enough",
+      "de": "Nein, WhatsApp reicht",
+      "es": "No, con WhatsApp me alcanza",
+      "pt": "Não, o WhatsApp basta"
+     },
+     "plus": [
+      "esim"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ja, ik wil kunnen bellen",
+      "en": "Yes, I want to make calls",
+      "de": "Ja, ich will telefonieren",
+      "es": "Sí, quiero hacer llamadas",
+      "pt": "Sim, quero fazer ligações"
+     },
+     "plus": [
+      "lokaal"
+     ],
+     "min": [],
+     "vereist": "bellen"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Ondersteunt je telefoon eSIM?",
+    "en": "Does your phone support eSIM?",
+    "de": "Unterstützt dein Handy eSIM?",
+    "es": "¿Tu teléfono es compatible con eSIM?",
+    "pt": "Seu celular é compatível com eSIM?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Ja",
+      "en": "Yes",
+      "de": "Ja",
+      "es": "Sí",
+      "pt": "Sim"
+     },
+     "plus": [
+      "esim"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Nee of weet ik niet",
+      "en": "No or not sure",
+      "de": "Nein oder nicht sicher",
+      "es": "No o no estoy seguro",
+      "pt": "Não ou não tenho certeza"
+     },
+     "plus": [
+      "lokaal"
+     ],
+     "min": [],
+     "vereist": "simkaart"
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "airalo",
+   "naam": "Airalo",
+   "url": "https://www.airalo.com",
+   "soort": {
+    "nl": "eSIM-winkel",
+    "en": "eSIM store",
+    "de": "eSIM-Shop",
+    "es": "tienda de eSIM",
+    "pt": "loja de eSIM"
+   },
+   "plaats": null,
+   "tags": [
+    "esim",
+    "lang"
+   ],
+   "prijs": {
+    "bedrag": 35,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "5 GB, 60 dagen (Discover)",
+     "en": "5 GB, 60 days (Discover)",
+     "de": "5 GB, 60 Tage (Discover)",
+     "es": "5 GB, 60 días (Discover)",
+     "pt": "5 GB, 60 dias (Discover)"
+    },
+    "bron": "https://esimdb.com/fr/curacao/airalo",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "1 GB 3 dagen vanaf $8",
+     "en": "1 GB for 3 days from $8",
+     "de": "1 GB für 3 Tage ab $8",
+     "es": "1 GB por 3 días desde $8",
+     "pt": "1 GB por 3 dias a partir de $8"
+    },
+    {
+     "nl": "Onbeperkt: 3 GB per dag snel",
+     "en": "Unlimited: 3 GB a day at full speed",
+     "de": "Unlimited: 3 GB pro Tag mit voller Geschwindigkeit",
+     "es": "Ilimitado: 3 GB al día a toda velocidad",
+     "pt": "Ilimitado: 3 GB por dia em velocidade total"
+    },
+    {
+     "nl": "Alleen data, geen nummer",
+     "en": "Data only, no number",
+     "de": "Nur Daten, keine Nummer",
+     "es": "Solo datos, sin número",
+     "pt": "Só dados, sem número"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 40584,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.trustpilot.com/review/airalo.com?page=7"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "App makkelijk te installeren en bij te vullen",
+     "Prijzen gunstig vergeleken met roaming",
+     "Snelle hulp via chat"
+    ],
+    "en": [
+     "App is easy to install and top up",
+     "Prices beat carrier roaming",
+     "Quick help through chat"
+    ],
+    "de": [
+     "Die App ist leicht zu installieren und aufzuladen",
+     "Die Preise sind besser als beim Roaming des Anbieters",
+     "Schnelle Hilfe per Chat"
+    ],
+    "es": [
+     "La app es fácil de instalar y recargar",
+     "Los precios son mejores que el roaming del operador",
+     "Ayuda rápida por chat"
+    ],
+    "pt": [
+     "O app é fácil de instalar e recarregar",
+     "Os preços são melhores que o roaming da operadora",
+     "Ajuda rápida pelo chat"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Soms geen verbinding bij aankomst",
+     "Prijzen zijn volgens sommigen gestegen"
+    ],
+    "en": [
+     "Sometimes no connection on arrival",
+     "Some say prices have gone up"
+    ],
+    "de": [
+     "Manchmal keine Verbindung bei der Ankunft",
+     "Manche sagen, die Preise seien gestiegen"
+    ],
+    "es": [
+     "A veces no hay conexión al llegar",
+     "Algunos dicen que los precios subieron"
+    ],
+    "pt": [
+     "Às vezes não há conexão na chegada",
+     "Alguns dizem que os preços subiram"
+    ]
+   },
+   "bronnen": [
+    "https://esimdb.com/fr/curacao/airalo",
+    "https://esims.io/countries/curacao/best-providers",
+    "https://passporterapp.com/en/blog/curacao/esim-curacao-internet/"
+   ]
+  },
+  {
+   "id": "holafly",
+   "naam": "Holafly",
+   "url": "https://esim.holafly.com/internet/mobile-internet-curacao",
+   "soort": {
+    "nl": "eSIM, onbeperkt",
+    "en": "eSIM, unlimited",
+    "de": "eSIM, unlimited",
+    "es": "eSIM, ilimitada",
+    "pt": "eSIM, ilimitada"
+   },
+   "plaats": null,
+   "tags": [
+    "esim",
+    "onbeperkt",
+    "kort"
+   ],
+   "prijs": {
+    "bedrag": 84.9,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "onbeperkt, 7 dagen",
+     "en": "unlimited, 7 days",
+     "de": "Unlimited, 7 Tage",
+     "es": "ilimitado, 7 días",
+     "pt": "ilimitado, 7 dias"
+    },
+    "bron": "https://esim.holafly.com/internet/mobile-internet-curacao",
+    "datum": "2026-06"
+   },
+   "feiten": [
+    {
+     "nl": "Netwerk van Digicel",
+     "en": "Runs on Digicel",
+     "de": "Läuft im Digicel-Netz",
+     "es": "Funciona con Digicel",
+     "pt": "Funciona na rede da Digicel"
+    },
+    {
+     "nl": "1 dag $21,90, 20 dagen $139,90",
+     "en": "1 day $21.90, 20 days $139.90",
+     "de": "1 Tag $21.90, 20 Tage $139.90",
+     "es": "1 día $21.90, 20 días $139.90",
+     "pt": "1 dia $21.90, 20 dias $139.90"
+    },
+    {
+     "nl": "Bellen alleen via apps",
+     "en": "Calls only through apps",
+     "de": "Telefonieren nur über Apps",
+     "es": "Llamadas solo por apps",
+     "pt": "Ligações só por aplicativos"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 95304,
+     "peildatum": "2026-10-20",
+     "bron": "https://ca.trustpilot.com/review/holafly.com?page=2"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Installeren en activeren is eenvoudig",
+     "Behulpzame chatsupport bij installatie",
+     "Verbinding meestal snel in steden"
+    ],
+    "en": [
+     "Setup and activation are simple",
+     "Helpful chat support during setup",
+     "Usually fast in cities"
+    ],
+    "de": [
+     "Einrichtung und Aktivierung sind einfach",
+     "Hilfreicher Chat-Support bei der Einrichtung",
+     "In Städten meist schnell"
+    ],
+    "es": [
+     "La configuración y la activación son sencillas",
+     "Soporte por chat útil durante la configuración",
+     "Suele ser rápida en las ciudades"
+    ],
+    "pt": [
+     "A configuração e a ativação são simples",
+     "Suporte por chat útil durante a configuração",
+     "Costuma ser rápida nas cidades"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Trager buiten de stad of na een paar dagen",
+     "Onduidelijk wat de hotspotlimiet is"
+    ],
+    "en": [
+     "Slower outside cities or after a few days",
+     "Hotspot limits are unclear"
+    ],
+    "de": [
+     "Außerhalb der Städte oder nach ein paar Tagen langsamer",
+     "Die Hotspot-Grenzen sind unklar"
+    ],
+    "es": [
+     "Más lenta fuera de las ciudades o después de unos días",
+     "Los límites del hotspot no están claros"
+    ],
+    "pt": [
+     "Mais lenta fora das cidades ou depois de alguns dias",
+     "Os limites do roteador não são claros"
+    ]
+   },
+   "bronnen": [
+    "https://esim.holafly.com/internet/mobile-internet-curacao",
+    "https://ca.trustpilot.com/review/holafly.com?page=2"
+   ]
+  },
+  {
+   "id": "saily",
+   "naam": "Saily",
+   "url": "https://saily.com/nl/esim-curacao/",
+   "soort": {
+    "nl": "eSIM-winkel",
+    "en": "eSIM store",
+    "de": "eSIM-Shop",
+    "es": "tienda de eSIM",
+    "pt": "loja de eSIM"
+   },
+   "plaats": null,
+   "tags": [
+    "esim",
+    "hotspot",
+    "bellen",
+    "lang"
+   ],
+   "prijs": {
+    "bedrag": 30.99,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "5 GB, 30 dagen",
+     "en": "5 GB, 30 days",
+     "de": "5 GB, 30 Tage",
+     "es": "5 GB, 30 días",
+     "pt": "5 GB, 30 dias"
+    },
+    "bron": "https://saily.com/nl/esim-curacao/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "1 GB 7 dagen $7,99",
+     "en": "1 GB for 7 days $7.99",
+     "de": "1 GB für 7 Tage $7.99",
+     "es": "1 GB por 7 días $7.99",
+     "pt": "1 GB por 7 dias $7.99"
+    },
+    {
+     "nl": "Hotspot zonder beperking",
+     "en": "Hotspot with no restrictions",
+     "de": "Hotspot ohne Einschränkungen",
+     "es": "Hotspot sin restricciones",
+     "pt": "Roteador sem restrições"
+    },
+    {
+     "nl": "Los nummer en belbundel mogelijk",
+     "en": "Optional number and call bundle",
+     "de": "Optional mit Nummer und Gesprächspaket",
+     "es": "Número y paquete de llamadas opcionales",
+     "pt": "Número e pacote de ligações opcionais"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://saily.com/nl/esim-curacao/"
+   ]
+  },
+  {
+   "id": "nomad",
+   "naam": "Nomad",
+   "url": "https://www.getnomad.app",
+   "soort": {
+    "nl": "eSIM-winkel",
+    "en": "eSIM store",
+    "de": "eSIM-Shop",
+    "es": "tienda de eSIM",
+    "pt": "loja de eSIM"
+   },
+   "plaats": null,
+   "tags": [
+    "esim",
+    "goedkoop",
+    "hotspot",
+    "lang"
+   ],
+   "prijs": {
+    "bedrag": 19,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "5 GB, 30 dagen",
+     "en": "5 GB, 30 days",
+     "de": "5 GB, 30 Tage",
+     "es": "5 GB, 30 días",
+     "pt": "5 GB, 30 dias"
+    },
+    "bron": "https://esimdb.com/curacao/nomad",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "10 GB 30 dagen $34",
+     "en": "10 GB for 30 days $34",
+     "de": "10 GB für 30 Tage $34",
+     "es": "10 GB por 30 días $34",
+     "pt": "10 GB por 30 dias $34"
+    },
+    {
+     "nl": "Hotspot toegestaan",
+     "en": "Hotspot allowed",
+     "de": "Hotspot erlaubt",
+     "es": "Hotspot permitido",
+     "pt": "Roteador permitido"
+    },
+    {
+     "nl": "Geen nummer of sms",
+     "en": "No number or texts",
+     "de": "Keine Nummer und keine SMS",
+     "es": "Sin número ni mensajes de texto",
+     "pt": "Sem número nem SMS"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://esimdb.com/curacao/nomad"
+   ]
+  },
+  {
+   "id": "ubigi",
+   "naam": "Ubigi",
+   "url": "https://cellulardata.ubigi.com",
+   "soort": {
+    "nl": "eSIM-winkel",
+    "en": "eSIM store",
+    "de": "eSIM-Shop",
+    "es": "tienda de eSIM",
+    "pt": "loja de eSIM"
+   },
+   "plaats": null,
+   "tags": [
+    "esim",
+    "goedkoop",
+    "lang"
+   ],
+   "prijs": {
+    "bedrag": 34,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "10 GB, 30 dagen",
+     "en": "10 GB, 30 days",
+     "de": "10 GB, 30 Tage",
+     "es": "10 GB, 30 días",
+     "pt": "10 GB, 30 dias"
+    },
+    "bron": "https://esimdb.com/curacao/ubigi",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "1 GB 7 dagen $7",
+     "en": "1 GB for 7 days $7",
+     "de": "1 GB für 7 Tage $7",
+     "es": "1 GB por 7 días $7",
+     "pt": "1 GB por 7 dias $7"
+    },
+    {
+     "nl": "3 GB 15 dagen $14",
+     "en": "3 GB for 15 days $14",
+     "de": "3 GB für 15 Tage $14",
+     "es": "3 GB por 15 días $14",
+     "pt": "3 GB por 15 dias $14"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://esimdb.com/curacao/ubigi",
+    "https://cellulardata.ubigi.com/rates-and-coverage/curacao-data-plans/curacao-10gb-7-days/"
+   ]
+  },
+  {
+   "id": "yesim",
+   "naam": "Yesim",
+   "url": "https://yesim.tech/country/curacao",
+   "soort": {
+    "nl": "eSIM-winkel",
+    "en": "eSIM store",
+    "de": "eSIM-Shop",
+    "es": "tienda de eSIM",
+    "pt": "loja de eSIM"
+   },
+   "plaats": null,
+   "tags": [
+    "esim",
+    "onbeperkt"
+   ],
+   "prijs": {
+    "bedrag": 29,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "5 GB, 15 dagen (Antillen-bundel)",
+     "en": "5 GB, 15 days (Antilles plan)",
+     "de": "5 GB, 15 Tage (Antillen-Tarif)",
+     "es": "5 GB, 15 días (plan Antillas)",
+     "pt": "5 GB, 15 dias (plano Antilhas)"
+    },
+    "bron": "https://esimdb.com/curacao/yesim",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Onbeperkt 7 dagen $48,72",
+     "en": "Unlimited 7 days $48.72",
+     "de": "Unlimited 7 Tage $48.72",
+     "es": "Ilimitado 7 días $48.72",
+     "pt": "Ilimitado 7 dias $48.72"
+    },
+    {
+     "nl": "Onbeperkt kan vertraagd worden",
+     "en": "Unlimited may be throttled",
+     "de": "Unlimited kann gedrosselt werden",
+     "es": "El plan ilimitado puede reducirse de velocidad",
+     "pt": "O ilimitado pode ter a velocidade reduzida"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://esimdb.com/curacao/yesim"
+   ]
+  },
+  {
+   "id": "maya-mobile",
+   "naam": "Maya Mobile",
+   "url": "https://www.maya.net",
+   "soort": {
+    "nl": "eSIM, dagbundel",
+    "en": "eSIM, daily cap",
+    "de": "eSIM, Tageslimit",
+    "es": "eSIM, límite diario",
+    "pt": "eSIM, limite diário"
+   },
+   "plaats": null,
+   "tags": [
+    "esim",
+    "onbeperkt",
+    "goedkoop",
+    "kort"
+   ],
+   "prijs": {
+    "bedrag": 19.99,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "onbeperkt 7 dagen (5 GB per dag snel)",
+     "en": "unlimited 7 days (5 GB a day full speed)",
+     "de": "Unlimited 7 Tage (5 GB pro Tag mit voller Geschwindigkeit)",
+     "es": "ilimitado 7 días (5 GB al día a toda velocidad)",
+     "pt": "ilimitado 7 dias (5 GB por dia em velocidade total)"
+    },
+    "bron": "https://esimdb.com/curacao/maya-mobile",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "14 dagen $27,99",
+     "en": "14 days $27.99",
+     "de": "14 Tage $27.99",
+     "es": "14 días $27.99",
+     "pt": "14 dias $27.99"
+    },
+    {
+     "nl": "Na 5 GB per dag 3 Mbps",
+     "en": "3 Mbps after 5 GB a day",
+     "de": "3 Mbit/s nach 5 GB pro Tag",
+     "es": "3 Mbps después de 5 GB al día",
+     "pt": "3 Mbps após 5 GB por dia"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://esimdb.com/curacao/maya-mobile",
+    "https://esims.io/countries/curacao/best-providers"
+   ]
+  },
+  {
+   "id": "gigsky",
+   "naam": "GigSky",
+   "url": "https://www.gigsky.com",
+   "soort": {
+    "nl": "eSIM-winkel",
+    "en": "eSIM store",
+    "de": "eSIM-Shop",
+    "es": "tienda de eSIM",
+    "pt": "loja de eSIM"
+   },
+   "plaats": null,
+   "tags": [
+    "esim"
+   ],
+   "prijs": {
+    "bedrag": 27.99,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "5 GB, 15 dagen",
+     "en": "5 GB, 15 days",
+     "de": "5 GB, 15 Tage",
+     "es": "5 GB, 15 días",
+     "pt": "5 GB, 15 dias"
+    },
+    "bron": "https://esimdb.com/curacao/gigsky",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Gratis 100 MB proefbundel",
+     "en": "Free 100 MB trial plan",
+     "de": "Kostenloser Testtarif mit 100 MB",
+     "es": "Plan de prueba gratis de 100 MB",
+     "pt": "Plano de teste grátis de 100 MB"
+    },
+    {
+     "nl": "10 GB 30 dagen $44,99",
+     "en": "10 GB for 30 days $44.99",
+     "de": "10 GB für 30 Tage $44.99",
+     "es": "10 GB por 30 días $44.99",
+     "pt": "10 GB por 30 dias $44.99"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://esimdb.com/curacao/gigsky"
+   ]
+  },
+  {
+   "id": "globalesim",
+   "naam": "GlobaleSIM",
+   "url": null,
+   "soort": {
+    "nl": "eSIM-winkel",
+    "en": "eSIM store",
+    "de": "eSIM-Shop",
+    "es": "tienda de eSIM",
+    "pt": "loja de eSIM"
+   },
+   "plaats": null,
+   "tags": [
+    "esim",
+    "goedkoop",
+    "lang"
+   ],
+   "prijs": {
+    "bedrag": 12.96,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "10 GB, 30 dagen (met korting)",
+     "en": "10 GB, 30 days (discounted)",
+     "de": "10 GB, 30 Tage (reduziert)",
+     "es": "10 GB, 30 días (con descuento)",
+     "pt": "10 GB, 30 dias (com desconto)"
+    },
+    "bron": "https://esims.io/countries/curacao/best-providers",
+    "datum": "2026-10"
+   },
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://esims.io/countries/curacao/best-providers"
+   ]
+  },
+  {
+   "id": "firsty",
+   "naam": "Firsty",
+   "url": null,
+   "soort": {
+    "nl": "eSIM, korte bundels",
+    "en": "eSIM, short plans",
+    "de": "eSIM, kurze Tarife",
+    "es": "eSIM, planes cortos",
+    "pt": "eSIM, planos curtos"
+   },
+   "plaats": null,
+   "tags": [
+    "esim",
+    "goedkoop",
+    "kort"
+   ],
+   "prijs": {
+    "bedrag": 7.87,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "8 GB, 2 dagen",
+     "en": "8 GB, 2 days",
+     "de": "8 GB, 2 Tage",
+     "es": "8 GB, 2 días",
+     "pt": "8 GB, 2 dias"
+    },
+    "bron": "https://esims.io/countries/curacao/best-providers",
+    "datum": "2026-10"
+   },
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://esims.io/countries/curacao/best-providers"
+   ]
+  },
+  {
+   "id": "jambosim",
+   "naam": "JamboSim",
+   "url": null,
+   "soort": {
+    "nl": "wereld-eSIM",
+    "en": "global eSIM",
+    "de": "Global-eSIM",
+    "es": "eSIM global",
+    "pt": "eSIM global"
+   },
+   "plaats": null,
+   "tags": [
+    "esim",
+    "lang"
+   ],
+   "prijs": {
+    "bedrag": 40.99,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "20 GB, 30 dagen (wereldbundel)",
+     "en": "20 GB, 30 days (global plan)",
+     "de": "20 GB, 30 Tage (Global-Tarif)",
+     "es": "20 GB, 30 días (plan global)",
+     "pt": "20 GB, 30 dias (plano global)"
+    },
+    "bron": "https://esims.io/countries/curacao/best-providers",
+    "datum": "2026-10"
+   },
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://esims.io/countries/curacao/best-providers"
+   ]
+  },
+  {
+   "id": "airhub",
+   "naam": "Airhub",
+   "url": null,
+   "soort": {
+    "nl": "eSIM-winkel",
+    "en": "eSIM store",
+    "de": "eSIM-Shop",
+    "es": "tienda de eSIM",
+    "pt": "loja de eSIM"
+   },
+   "plaats": null,
+   "tags": [
+    "esim",
+    "lang"
+   ],
+   "prijs": {
+    "bedrag": 49.99,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "12 GB, 30 dagen",
+     "en": "12 GB, 30 days",
+     "de": "12 GB, 30 Tage",
+     "es": "12 GB, 30 días",
+     "pt": "12 GB, 30 dias"
+    },
+    "bron": "https://esims.io/countries/curacao/best-providers",
+    "datum": "2026-10"
+   },
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://esims.io/countries/curacao/best-providers"
+   ]
+  },
+  {
+   "id": "cellesim",
+   "naam": "Cellesim",
+   "url": "https://cellesim.com",
+   "soort": {
+    "nl": "eSIM-winkel",
+    "en": "eSIM store",
+    "de": "eSIM-Shop",
+    "es": "tienda de eSIM",
+    "pt": "loja de eSIM"
+   },
+   "plaats": null,
+   "tags": [
+    "esim",
+    "lang"
+   ],
+   "prijs": {
+    "bedrag": 39.97,
+    "valuta": "EUR",
+    "eenheid": {
+     "nl": "5 GB, 30 dagen",
+     "en": "5 GB, 30 days",
+     "de": "5 GB, 30 Tage",
+     "es": "5 GB, 30 días",
+     "pt": "5 GB, 30 dias"
+    },
+    "bron": "https://cellesim.com/nl/blog/esim-curacao-2026-zorgeloos-internet-lokale-simkaarten",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "1 GB 7 dagen €9,53",
+     "en": "1 GB for 7 days €9.53",
+     "de": "1 GB für 7 Tage €9.53",
+     "es": "1 GB por 7 días €9.53",
+     "pt": "1 GB por 7 dias €9.53"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://cellesim.com/nl/blog/esim-curacao-2026-zorgeloos-internet-lokale-simkaarten"
+   ]
+  },
+  {
+   "id": "digicel",
+   "naam": "Digicel Tourist SIM",
+   "url": "https://www.digicelgroup.com/cw/en/mobile/tourist_sim",
+   "soort": {
+    "nl": "lokale provider",
+    "en": "local carrier",
+    "de": "Lokaler Anbieter",
+    "es": "operador local",
+    "pt": "operadora local"
+   },
+   "plaats": "Hato Airport en Digicel-winkels",
+   "tags": [
+    "lokaal",
+    "bellen",
+    "esim",
+    "simkaart",
+    "kort",
+    "hotspot"
+   ],
+   "prijs": {
+    "bedrag": 30,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "7 GB + 30 min, 7 dagen",
+     "en": "7 GB + 30 min, 7 days",
+     "de": "7 GB + 30 Min., 7 Tage",
+     "es": "7 GB + 30 min, 7 días",
+     "pt": "7 GB + 30 min, 7 dias"
+    },
+    "bron": "https://www.digicelgroup.com/cw/en/mobile/tourist_sim",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "3 dagen 5 GB $20",
+     "en": "3 days 5 GB $20",
+     "de": "3 Tage 5 GB $20",
+     "es": "3 días 5 GB $20",
+     "pt": "3 dias 5 GB $20"
+    },
+    {
+     "nl": "14 dagen 20 GB $50",
+     "en": "14 days 20 GB $50",
+     "de": "14 Tage 20 GB $50",
+     "es": "14 días 20 GB $50",
+     "pt": "14 dias 20 GB $50"
+    },
+    {
+     "nl": "Werkt ook op Aruba en Bonaire",
+     "en": "Also works on Aruba and Bonaire",
+     "de": "Funktioniert auch auf Aruba und Bonaire",
+     "es": "También funciona en Aruba y Bonaire",
+     "pt": "Também funciona em Aruba e Bonaire"
+    },
+    {
+     "nl": "Lokaal nummer, ook als eSIM",
+     "en": "Local number, also as eSIM",
+     "de": "Lokale Nummer, auch als eSIM",
+     "es": "Número local, también como eSIM",
+     "pt": "Número local, também como eSIM"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.digicelgroup.com/cw/en/mobile/tourist_sim",
+    "https://saily.com/nl/blog/simkaart-curacao/",
+    "https://passporterapp.com/en/blog/curacao/esim-curacao-internet/"
+   ]
+  },
+  {
+   "id": "flow",
+   "naam": "Flow Tourist SIM (Chippie)",
+   "url": null,
+   "soort": {
+    "nl": "lokale provider",
+    "en": "local carrier",
+    "de": "Lokaler Anbieter",
+    "es": "operador local",
+    "pt": "operadora local"
+   },
+   "plaats": "Flow-winkels, Hato Airport, supermarkten",
+   "tags": [
+    "lokaal",
+    "bellen",
+    "simkaart",
+    "lang"
+   ],
+   "prijs": {
+    "bedrag": 26,
+    "valuta": "EUR",
+    "eenheid": {
+     "nl": "3 GB + 300 lokale min, 30 dagen (circa)",
+     "en": "3 GB + 300 local min, 30 days (approx.)",
+     "de": "3 GB + 300 lokale Min., 30 Tage (ca.)",
+     "es": "3 GB + 300 min locales, 30 días (aprox.)",
+     "pt": "3 GB + 300 min locais, 30 dias (aprox.)"
+    },
+    "bron": "https://saily.com/nl/blog/simkaart-curacao/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "1 GB 30 dagen circa €17",
+     "en": "1 GB for 30 days about €17",
+     "de": "1 GB für 30 Tage etwa €17",
+     "es": "1 GB por 30 días unos €17",
+     "pt": "1 GB por 30 dias cerca de €17"
+    },
+    {
+     "nl": "Paspoort nodig bij aankoop",
+     "en": "Passport needed to buy",
+     "de": "Zum Kauf wird der Reisepass benötigt",
+     "es": "Se necesita pasaporte para comprar",
+     "pt": "É preciso passaporte para comprar"
+    },
+    {
+     "nl": "Dekking gelijkmatig over eiland",
+     "en": "Even coverage across the island",
+     "de": "Gleichmäßige Abdeckung auf der ganzen Insel",
+     "es": "Cobertura pareja en toda la isla",
+     "pt": "Cobertura uniforme em toda a ilha"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://saily.com/nl/blog/simkaart-curacao/",
+    "https://passporterapp.com/en/blog/curacao/esim-curacao-internet/"
+   ]
+  },
+  {
+   "id": "kpn-roaming",
+   "naam": "KPN roaming",
+   "url": null,
+   "soort": {
+    "nl": "roaming NL-provider",
+    "en": "Dutch carrier roaming",
+    "de": "Roaming über niederländische Anbieter",
+    "es": "Roaming con operadores neerlandeses",
+    "pt": "Roaming com operadoras holandesas"
+   },
+   "plaats": null,
+   "tags": [
+    "roaming",
+    "bellen",
+    "simkaart",
+    "lang"
+   ],
+   "prijs": {
+    "bedrag": 24.99,
+    "valuta": "EUR",
+    "eenheid": {
+     "nl": "4 GB, 31 dagen",
+     "en": "4 GB, 31 days",
+     "de": "4 GB, 31 Tage",
+     "es": "4 GB, 31 días",
+     "pt": "4 GB, 31 dias"
+    },
+    "bron": "https://esim.holafly.com/nl/blog/kpn-curacao/",
+    "datum": "2026-05"
+   },
+   "feiten": [
+    {
+     "nl": "Buiten EU-roaming",
+     "en": "Not covered by EU roaming",
+     "de": "Nicht vom EU-Roaming abgedeckt",
+     "es": "No está cubierto por el roaming de la UE",
+     "pt": "Não é coberto pelo roaming da UE"
+    },
+    {
+     "nl": "Zonder bundel €2,50 per MB",
+     "en": "€2.50 per MB without bundle",
+     "de": "€2.50 pro MB ohne Paket",
+     "es": "€2.50 por MB sin paquete",
+     "pt": "€2.50 por MB sem pacote"
+    },
+    {
+     "nl": "Bellen naar NL €1 per minuut",
+     "en": "Calls to NL €1 a minute",
+     "de": "Anrufe in die Niederlande €1 pro Minute",
+     "es": "Llamadas a Países Bajos €1 el minuto",
+     "pt": "Ligações para os Países Baixos €1 por minuto"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://esim.holafly.com/nl/blog/kpn-curacao/"
+   ]
+  },
+  {
+   "id": "odido-roaming",
+   "naam": "Odido roaming",
+   "url": null,
+   "soort": {
+    "nl": "roaming NL-provider",
+    "en": "Dutch carrier roaming",
+    "de": "Roaming über niederländische Anbieter",
+    "es": "Roaming con operadores neerlandeses",
+    "pt": "Roaming com operadoras holandesas"
+   },
+   "plaats": null,
+   "tags": [
+    "roaming",
+    "bellen",
+    "simkaart",
+    "lang"
+   ],
+   "prijs": {
+    "bedrag": 30,
+    "valuta": "EUR",
+    "eenheid": {
+     "nl": "3 GB, 31 dagen (Internet Op Reis XL)",
+     "en": "3 GB, 31 days (Internet Op Reis XL)",
+     "de": "3 GB, 31 Tage (Internet Op Reis XL)",
+     "es": "3 GB, 31 días (Internet Op Reis XL)",
+     "pt": "3 GB, 31 dias (Internet Op Reis XL)"
+    },
+    "bron": "https://esim.holafly.com/nl/blog/odido-curacao/",
+    "datum": "2026-05"
+   },
+   "feiten": [
+    {
+     "nl": "1 GB 14 dagen €15",
+     "en": "1 GB for 14 days €15",
+     "de": "1 GB für 14 Tage €15",
+     "es": "1 GB por 14 días €15",
+     "pt": "1 GB por 14 dias €15"
+    },
+    {
+     "nl": "Curaçao valt in zone 2",
+     "en": "Curaçao is in zone 2",
+     "de": "Curaçao liegt in Zone 2",
+     "es": "Curazao está en la zona 2",
+     "pt": "Curaçao fica na zona 2"
+    },
+    {
+     "nl": "Gebeld worden €0,75 per minuut",
+     "en": "Incoming calls €0.75 a minute",
+     "de": "Eingehende Anrufe €0.75 pro Minute",
+     "es": "Llamadas entrantes €0.75 el minuto",
+     "pt": "Chamadas recebidas €0.75 por minuto"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://esim.holafly.com/nl/blog/odido-curacao/"
+   ]
+  },
+  {
+   "id": "vodafone-roaming",
+   "naam": "Vodafone roaming",
+   "url": null,
+   "soort": {
+    "nl": "roaming NL-provider",
+    "en": "Dutch carrier roaming",
+    "de": "Roaming über niederländische Anbieter",
+    "es": "Roaming con operadores neerlandeses",
+    "pt": "Roaming com operadoras holandesas"
+   },
+   "plaats": null,
+   "tags": [
+    "roaming",
+    "bellen",
+    "simkaart",
+    "kort"
+   ],
+   "prijs": {
+    "bedrag": 5,
+    "valuta": "EUR",
+    "eenheid": {
+     "nl": "per dag: 50 MB, 50 min, 50 sms",
+     "en": "per day: 50 MB, 50 min, 50 texts",
+     "de": "pro Tag: 50 MB, 50 Min., 50 SMS",
+     "es": "por día: 50 MB, 50 min, 50 mensajes",
+     "pt": "por dia: 50 MB, 50 min, 50 SMS"
+    },
+    "bron": "https://esim.holafly.com/nl/blog/vodafone-curacao/",
+    "datum": "2026-05"
+   },
+   "feiten": [
+    {
+     "nl": "Zonder bundel €2,50 per MB",
+     "en": "€2.50 per MB without bundle",
+     "de": "€2.50 pro MB ohne Paket",
+     "es": "€2.50 por MB sin paquete",
+     "pt": "€2.50 por MB sem pacote"
+    },
+    {
+     "nl": "Dagbundel start automatisch",
+     "en": "Daily bundle starts automatically",
+     "de": "Das Tagespaket startet automatisch",
+     "es": "El paquete diario empieza automáticamente",
+     "pt": "O pacote diário começa automaticamente"
+    },
+    {
+     "nl": "Datalimiet standaard €60,50",
+     "en": "Default data cap €60.50",
+     "de": "Standard-Datenlimit €60.50",
+     "es": "Límite de datos predeterminado €60.50",
+     "pt": "Limite de dados padrão €60.50"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://esim.holafly.com/nl/blog/vodafone-curacao/"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "eSIMDB",
+   "url": "https://esimdb.com",
+   "uitleg": {
+    "nl": "Vergelijkt eSIM-bundels voor Curaçao op prijs per GB.",
+    "en": "Compares Curaçao eSIM plans by price per GB.",
+    "de": "Vergleicht eSIM-Tarife für Curaçao nach Preis pro GB.",
+    "es": "Compara los planes de eSIM para Curazao por precio por GB.",
+    "pt": "Compara os planos de eSIM para Curaçao pelo preço por GB."
+   }
+  },
+  {
+   "naam": "esims.io",
+   "url": "https://esims.io/countries/curacao",
+   "uitleg": {
+    "nl": "Lijst van zo'n 29 eSIM-aanbieders die Curaçao dekken.",
+    "en": "Lists about 29 eSIM providers that cover Curaçao.",
+    "de": "Listet etwa 29 eSIM-Anbieter auf, die Curaçao abdecken.",
+    "es": "Lista unos 29 proveedores de eSIM que cubren Curazao.",
+    "pt": "Lista cerca de 29 provedores de eSIM que cobrem Curaçao."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Installeer de eSIM thuis via wifi en zet hem pas aan bij aankomst; bij Saily start de bundel vanzelf op je eerste bestemming.",
+   "en": "Install the eSIM at home over wifi and switch it on when you land; Saily plans start automatically at your first destination.",
+   "de": "Installiere die eSIM zu Hause über WLAN und schalte sie bei der Landung ein; Saily-Tarife starten automatisch am ersten Reiseziel.",
+   "es": "Instala la eSIM en casa con wifi y actívala al aterrizar; los planes de Saily empiezan automáticamente en tu primer destino.",
+   "pt": "Instale a eSIM em casa pelo wi-fi e ative ao pousar; os planos da Saily começam automaticamente no seu primeiro destino."
+  },
+  {
+   "nl": "Zet dataroaming op je eigen simkaart uit of stel een limiet in: zonder bundel rekenen KPN en Vodafone €2,50 per MB.",
+   "en": "Turn off data roaming on your home SIM or set a cap, since some carriers charge per MB without a bundle (KPN and Vodafone: €2.50/MB).",
+   "de": "Schalte Datenroaming auf deiner Heimat-SIM aus oder setze ein Limit, denn manche Anbieter berechnen ohne Paket pro MB (KPN und Vodafone: €2.50/MB).",
+   "es": "Desactiva el roaming de datos en tu SIM de origen o ponle un límite, porque algunos operadores cobran por MB si no tienes un paquete (KPN y Vodafone: €2.50/MB).",
+   "pt": "Desligue o roaming de dados no seu chip de origem ou defina um limite, pois algumas operadoras cobram por MB sem um pacote (KPN e Vodafone: €2.50/MB)."
+  },
+  {
+   "nl": "Een Digicel-toeristensim koop je op Hato Airport of in een Digicel-winkel; neem je paspoort mee.",
+   "en": "Buy a Digicel tourist SIM at Hato Airport or a Digicel store, and bring your passport.",
+   "de": "Kauf eine Touristen-SIM von Digicel am Flughafen Hato oder in einem Digicel-Shop und nimm deinen Reisepass mit.",
+   "es": "Compra una SIM turística de Digicel en el aeropuerto de Hato o en una tienda Digicel, y lleva tu pasaporte.",
+   "pt": "Compre um chip turístico da Digicel no Aeroporto de Hato ou em uma loja da Digicel e leve seu passaporte."
+  },
+  {
+   "nl": "Pakketten op het vliegveld zijn vaak duurder dan in de stad, bijvoorbeeld bij supermarkten als Van den Tweel en Centrum.",
+   "en": "Airport packages are often pricier than in town, for example at supermarkets like Van den Tweel and Centrum.",
+   "de": "Pakete am Flughafen sind oft teurer als in der Stadt, zum Beispiel in Supermärkten wie Van den Tweel und Centrum.",
+   "es": "Los paquetes del aeropuerto suelen ser más caros que en la ciudad, por ejemplo en supermercados como Van den Tweel y Centrum.",
+   "pt": "Os pacotes do aeroporto costumam ser mais caros que na cidade, por exemplo em supermercados como Van den Tweel e Centrum."
+  },
+  {
+   "nl": "Onbeperkt is meestal niet echt onbeperkt: Airalo vertraagt na 3 GB per dag, Maya Mobile na 5 GB per dag.",
+   "en": "Unlimited usually has a cap: Airalo slows after 3 GB a day, Maya Mobile after 5 GB a day.",
+   "de": "Unlimited hat meist eine Grenze: Airalo drosselt nach 3 GB pro Tag, Maya Mobile nach 5 GB pro Tag.",
+   "es": "Los planes ilimitados suelen tener un tope: Airalo reduce la velocidad después de 3 GB al día, Maya Mobile después de 5 GB al día.",
+   "pt": "Planos ilimitados costumam ter um teto: a Airalo reduz a velocidade após 3 GB por dia, a Maya Mobile após 5 GB por dia."
+  },
+  {
+   "nl": "Ga je ook naar Aruba of Bonaire: de Digicel-toeristenbundels werken op alle drie de eilanden.",
+   "en": "Visiting Aruba or Bonaire too? Digicel tourist plans work on all three islands.",
+   "de": "Besuchst du auch Aruba oder Bonaire? Die Touristentarife von Digicel funktionieren auf allen drei Inseln.",
+   "es": "¿Visitarás también Aruba o Bonaire? Los planes turísticos de Digicel funcionan en las tres islas.",
+   "pt": "Vai visitar também Aruba ou Bonaire? Os planos turísticos da Digicel funcionam nas três ilhas."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Werkt mijn EU-bundel op Curaçao?",
+    "en": "Does EU roaming work in Curaçao?",
+    "de": "Funktioniert EU-Roaming auf Curaçao?",
+    "es": "¿Funciona el roaming de la UE en Curazao?",
+    "pt": "O roaming da UE funciona em Curaçao?"
+   },
+   "a": {
+    "nl": "Nee. Curaçao hoort bij het Koninkrijk maar valt buiten de EU-roamingregeling. Je hebt een aparte bundel, eSIM of lokale simkaart nodig.",
+    "en": "No. Curaçao is part of the Kingdom of the Netherlands but is outside the EU roaming zone, so you need a separate plan, eSIM or local SIM.",
+    "de": "Nein. Curaçao gehört zum Königreich der Niederlande, liegt aber außerhalb der EU-Roaming-Zone, du brauchst also einen eigenen Tarif, eine eSIM oder eine lokale SIM.",
+    "es": "No. Curazao forma parte del Reino de los Países Bajos, pero está fuera de la zona de roaming de la UE, así que necesitas un plan aparte, una eSIM o una SIM local.",
+    "pt": "Não. Curaçao faz parte do Reino dos Países Baixos, mas fica fora da zona de roaming da UE, então você precisa de um plano à parte, uma eSIM ou um chip local."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is de goedkoopste eSIM voor Curaçao?",
+    "en": "What is the cheapest eSIM for Curaçao?",
+    "de": "Welche eSIM ist die günstigste für Curaçao?",
+    "es": "¿Cuál es la eSIM más barata para Curazao?",
+    "pt": "Qual é a eSIM mais barata para Curaçao?"
+   },
+   "a": {
+    "nl": "Voor 5 GB in 30 dagen is Nomad met $19 een van de goedkoopste. GlobaleSIM bood 10 GB voor 30 dagen voor $12,96 met korting.",
+    "en": "For 5 GB over 30 days, Nomad at $19 is among the cheapest. GlobaleSIM listed 10 GB for 30 days at $12.96 with a discount.",
+    "de": "Für 5 GB über 30 Tage gehört Nomad mit $19 zu den günstigsten. GlobaleSIM führte 10 GB für 30 Tage mit Rabatt für $12.96.",
+    "es": "Para 5 GB durante 30 días, Nomad a $19 es de las más baratas. GlobaleSIM ofrecía 10 GB por 30 días a $12.96 con descuento.",
+    "pt": "Para 5 GB por 30 dias, a Nomad a $19 está entre as mais baratas. A GlobaleSIM listava 10 GB por 30 dias a $12.96 com desconto."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke mobiele netwerken zijn er op Curaçao?",
+    "en": "Which mobile networks operate in Curaçao?",
+    "de": "Welche Mobilfunknetze gibt es auf Curaçao?",
+    "es": "¿Qué redes móviles operan en Curazao?",
+    "pt": "Quais redes móveis operam em Curaçao?"
+   },
+   "a": {
+    "nl": "De twee grote netwerken zijn Digicel en Flow (prepaid onder de naam Chippie). Beide werken op 4G/LTE.",
+    "en": "The two main networks are Digicel and Flow (prepaid under the Chippie brand). Both run 4G/LTE.",
+    "de": "Die beiden großen Netze sind Digicel und Flow (Prepaid unter der Marke Chippie). Beide bieten 4G/LTE.",
+    "es": "Las dos redes principales son Digicel y Flow (prepago bajo la marca Chippie). Ambas ofrecen 4G/LTE.",
+    "pt": "As duas redes principais são Digicel e Flow (pré-pago sob a marca Chippie). Ambas oferecem 4G/LTE."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar koop ik een simkaart op Curaçao?",
+    "en": "Where can I buy a SIM card in Curaçao?",
+    "de": "Wo kann ich auf Curaçao eine SIM-Karte kaufen?",
+    "es": "¿Dónde puedo comprar una tarjeta SIM en Curazao?",
+    "pt": "Onde posso comprar um chip em Curaçao?"
+   },
+   "a": {
+    "nl": "Op Hato Airport, in winkels van Digicel en Flow en bij servicebalies van supermarkten. Neem je paspoort mee voor registratie.",
+    "en": "At Hato Airport, Digicel and Flow stores, and supermarket service desks. Bring your passport for registration.",
+    "de": "Am Flughafen Hato, in Digicel- und Flow-Shops und an den Servicepoints von Supermärkten. Bring zur Registrierung deinen Reisepass mit.",
+    "es": "En el aeropuerto de Hato, en las tiendas Digicel y Flow y en los mostradores de atención de los supermercados. Lleva tu pasaporte para el registro.",
+    "pt": "No Aeroporto de Hato, nas lojas Digicel e Flow e nos balcões de atendimento dos supermercados. Leve seu passaporte para o registro."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost een Digicel-toeristensim?",
+    "en": "How much is a Digicel tourist SIM?",
+    "de": "Was kostet eine Touristen-SIM von Digicel?",
+    "es": "¿Cuánto cuesta una SIM turística de Digicel?",
+    "pt": "Quanto custa um chip turístico da Digicel?"
+   },
+   "a": {
+    "nl": "$20 voor 3 dagen met 5 GB, $30 voor 7 dagen met 7 GB en 30 minuten, $50 voor 14 dagen met 20 GB en 60 minuten.",
+    "en": "$20 for 3 days with 5 GB, $30 for 7 days with 7 GB and 30 minutes, and $50 for 14 days with 20 GB and 60 minutes.",
+    "de": "$20 für 3 Tage mit 5 GB, $30 für 7 Tage mit 7 GB und 30 Minuten und $50 für 14 Tage mit 20 GB und 60 Minuten.",
+    "es": "$20 por 3 días con 5 GB, $30 por 7 días con 7 GB y 30 minutos, y $50 por 14 días con 20 GB y 60 minutos.",
+    "pt": "$20 por 3 dias com 5 GB, $30 por 7 dias com 7 GB e 30 minutos, e $50 por 14 dias com 20 GB e 60 minutos."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kan ik met een eSIM bellen op Curaçao?",
+    "en": "Can I make calls with a travel eSIM?",
+    "de": "Kann ich mit einer Reise-eSIM telefonieren?",
+    "es": "¿Puedo hacer llamadas con una eSIM de viaje?",
+    "pt": "Posso fazer ligações com uma eSIM de viagem?"
+   },
+   "a": {
+    "nl": "De meeste reis-eSIMs zijn alleen data; bellen gaat via WhatsApp of andere apps. Wil je een lokaal nummer, neem dan een Digicel- of Flow-toeristensim.",
+    "en": "Most travel eSIMs are data only, so calls go through WhatsApp or similar apps. For a local number, get a Digicel or Flow tourist SIM.",
+    "de": "Die meisten Reise-eSIMs bieten nur Daten, telefoniert wird also über WhatsApp oder ähnliche Apps. Für eine lokale Nummer holst du dir eine Touristen-SIM von Digicel oder Flow.",
+    "es": "La mayoría de las eSIM de viaje son solo de datos, así que las llamadas se hacen por WhatsApp o apps similares. Para un número local, consigue una SIM turística de Digicel o Flow.",
+    "pt": "A maioria das eSIMs de viagem é só de dados, então as ligações são feitas pelo WhatsApp ou aplicativos parecidos. Para um número local, pegue um chip turístico da Digicel ou da Flow."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost roaming van KPN, Odido of Vodafone op Curaçao?",
+    "en": "What does roaming with a Dutch carrier cost in Curaçao?",
+    "de": "Was kostet Roaming mit einem niederländischen Anbieter auf Curaçao?",
+    "es": "¿Cuánto cuesta el roaming con un operador neerlandés en Curazao?",
+    "pt": "Quanto custa o roaming com uma operadora holandesa em Curaçao?"
+   },
+   "a": {
+    "nl": "KPN: 4 GB voor €24,99 (31 dagen). Odido: 1 GB voor €15 (14 dagen) of 3 GB voor €30. Vodafone: dagbundel vanaf €5 voor 50 MB. Prijzen per mei 2026.",
+    "en": "KPN: 4 GB for €24.99 (31 days). Odido: 1 GB for €15 (14 days) or 3 GB for €30. Vodafone: daily bundle from €5 for 50 MB. Prices as of May 2026.",
+    "de": "KPN: 4 GB für €24.99 (31 Tage). Odido: 1 GB für €15 (14 Tage) oder 3 GB für €30. Vodafone: Tagespaket ab €5 für 50 MB. Preise Stand Mai 2026.",
+    "es": "KPN: 4 GB por €24.99 (31 días). Odido: 1 GB por €15 (14 días) o 3 GB por €30. Vodafone: paquete diario desde €5 por 50 MB. Precios a mayo de 2026.",
+    "pt": "KPN: 4 GB por €24.99 (31 dias). Odido: 1 GB por €15 (14 dias) ou 3 GB por €30. Vodafone: pacote diário a partir de €5 por 50 MB. Preços de maio de 2026."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "esim curaçao",
+   "simkaart curaçao",
+   "internet op curaçao",
+   "roaming curaçao",
+   "kpn curaçao bundel",
+   "odido curaçao"
+  ],
+  "en": [
+   "curacao esim",
+   "best esim for curacao",
+   "curacao sim card",
+   "digicel tourist sim curacao",
+   "mobile data curacao"
+  ],
+  "es": [
+   "esim curazao",
+   "mejor esim para curazao",
+   "tarjeta sim curazao",
+   "sim turística digicel curazao",
+   "datos móviles curazao"
+  ],
+  "pt": [
+   "esim curaçao",
+   "melhor esim para curaçao",
+   "chip curaçao",
+   "chip turístico digicel curaçao",
+   "internet móvel curaçao"
+  ],
+  "de": [
+   "Curaçao eSIM",
+   "Beste eSIM für Curaçao",
+   "Curaçao SIM-Karte",
+   "Digicel Touristen-SIM Curaçao",
+   "Mobile Daten Curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Wat is de beste eSIM voor een vakantie op Curaçao?",
+   "Werkt mijn KPN- of Odido-bundel op Curaçao?",
+   "Waar koop ik een simkaart op Curaçao?"
+  ],
+  "en": [
+   "What is the best eSIM for Curaçao?",
+   "Should I get a Digicel tourist SIM or an eSIM in Curaçao?",
+   "Does my phone plan work in Curaçao?"
+  ],
+  "de": [
+   "Welche ist die beste eSIM für Curaçao?",
+   "Soll ich auf Curaçao eine Touristen-SIM von Digicel oder eine eSIM nehmen?",
+   "Funktioniert mein Handytarif auf Curaçao?"
+  ],
+  "es": [
+   "¿Cuál es la mejor eSIM para Curazao?",
+   "¿Debo conseguir una SIM turística de Digicel o una eSIM en Curazao?",
+   "¿Funciona mi plan de celular en Curazao?"
+  ],
+  "pt": [
+   "Qual é a melhor eSIM para Curaçao?",
+   "Devo pegar um chip turístico da Digicel ou uma eSIM em Curaçao?",
+   "Meu plano de celular funciona em Curaçao?"
+  ]
+ },
+ "reviewGewicht": 0.5
+}

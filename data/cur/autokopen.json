@@ -1,1 +1,1583 @@
-{"id":"autokopen","peildatum":"2026-10-20","items":[]}
+{
+ "id": "autokopen",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "autodealer",
+  "en": "car dealer"
+ },
+ "h1": {
+  "nl": "Auto kopen op Curaçao: welke dealer of occasion past bij jou?",
+  "en": "Buying a car in Curaçao: which dealer or used car fits you?"
+ },
+ "titel": {
+  "nl": "Auto kopen op Curaçao: {n} dealers en occasions vergeleken",
+  "en": "Buying a car in Curaçao: {n} dealers compared"
+ },
+ "metaDesc": {
+  "nl": "Alle autodealers en occasionhandels op Curaçao met Google-reviews, merken en wat je betaalt aan invoerrecht als je zelf een auto meeneemt.",
+  "en": "Every car dealer and used-car lot in Curaçao with Google reviews, brands, and the import duty you pay if you ship your own car."
+ },
+ "kort": {
+  "nl": "Op Curaçao vind je 23 dealers en occasionhandels, van Toyota (Garage Cordia) en Kia/Nissan (Universal Motors) tot elektrische merken bij All to Car en Total Motors. Voor een occasion scoren Autobedrijf Willemstad (4,6 uit 253 reviews) en Occasions@SeriDomi goed. Neem je zelf een auto mee, dan rekent een verscheper met 27% invoerrecht over de CIF-waarde plus 9% omzetbelasting, tenzij je verhuist en de auto al een jaar op je naam staat.",
+  "en": "Curaçao has 23 dealers and used-car lots, from Toyota (Garage Cordia) and Kia/Nissan (Universal Motors) to electric brands at All to Car and Total Motors. For a used car, Autobedrijf Willemstad (4.6 from 253 reviews) and Occasions@SeriDomi score well. If you ship your own car, a shipper quotes 27% import duty on the CIF value plus 9% sales tax, unless you are moving and the car has been yours for at least a year."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Nieuw of tweedehands?",
+    "en": "New or used?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "No preference"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Nieuw",
+      "en": "New"
+     },
+     "plus": [
+      "nieuw"
+     ],
+     "min": [],
+     "vereist": "nieuw"
+    },
+    {
+     "label": {
+      "nl": "Occasion",
+      "en": "Used"
+     },
+     "plus": [
+      "occasion",
+      "budget"
+     ],
+     "min": [],
+     "vereist": "occasion"
+    },
+    {
+     "label": {
+      "nl": "Leasen",
+      "en": "Lease"
+     },
+     "plus": [
+      "lease"
+     ],
+     "min": [],
+     "vereist": "lease"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat is je budget?",
+    "en": "What is your budget?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Middenklasse",
+      "en": "Mid-range"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Zo voordelig mogelijk",
+      "en": "As cheap as possible"
+     },
+     "plus": [
+      "budget",
+      "occasion"
+     ],
+     "min": [
+      "luxe"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Luxe of premium",
+      "en": "Luxury or premium"
+     },
+     "plus": [
+      "luxe"
+     ],
+     "min": [
+      "budget"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat voor auto zoek je?",
+    "en": "What kind of car are you after?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "No preference"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "SUV of pick-up",
+      "en": "SUV or pickup"
+     },
+     "plus": [
+      "suv"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Elektrisch",
+      "en": "Electric"
+     },
+     "plus": [
+      "elektrisch"
+     ],
+     "min": [],
+     "vereist": "elektrisch"
+    },
+    {
+     "label": {
+      "nl": "Klein en zuinig",
+      "en": "Small and economical"
+     },
+     "plus": [
+      "budget"
+     ],
+     "min": [
+      "luxe"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Heb je financiering nodig?",
+    "en": "Do you need financing?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Nee, ik betaal zelf of via mijn bank",
+      "en": "No, I pay myself or through my bank"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ja, lease of financiering",
+      "en": "Yes, leasing or financing"
+     },
+     "plus": [
+      "lease",
+      "financiering"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ik wil vooral goed onderhoud erbij",
+      "en": "Mainly good servicing afterwards"
+     },
+     "plus": [
+      "onderhoud"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "garage-cordia",
+   "naam": "Garage Cordia",
+   "url": null,
+   "soort": {
+    "nl": "Toyota-dealer",
+    "en": "Toyota dealer"
+   },
+   "plaats": "Kaya Jacob Posner 39",
+   "tags": [
+    "nieuw",
+    "merk-toyota",
+    "onderhoud",
+    "suv"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Dealer van Toyota",
+     "en": "Toyota dealer"
+    },
+    {
+     "nl": "Personenauto's en pick-ups",
+     "en": "Cars and pickup trucks"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 152,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJTZmR0YKChI4RAEIclGjIGxk"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Onderdelen meestal op voorraad",
+     "Nieuwe auto's en pick-ups redelijk geprijsd",
+     "Vriendelijke, vakkundige werkplaats"
+    ],
+    "en": [
+     "Parts usually in stock",
+     "New cars and trucks fairly priced",
+     "Friendly, skilled service department"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Onderdelen zijn duur",
+     "Klacht over afgeleverde uitvoering die afweek van de showroomauto"
+    ],
+    "en": [
+     "Parts are expensive",
+     "Complaint about a delivered trim that differed from the showroom car"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJTZmR0YKChI4RAEIclGjIGxk"
+   ]
+  },
+  {
+   "id": "universal-motors",
+   "naam": "Universal Motors",
+   "url": null,
+   "soort": {
+    "nl": "Kia- en Nissan-dealer",
+    "en": "Kia and Nissan dealer"
+   },
+   "plaats": "Junostraat 6, Saliña",
+   "tags": [
+    "nieuw",
+    "merk-kia",
+    "merk-nissan",
+    "suv",
+    "onderhoud"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Enige Kia-dealer op het eiland",
+     "en": "Only Kia dealer on the island"
+    },
+    {
+     "nl": "Ook importeur van Nissan",
+     "en": "Also imports Nissan"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 107,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJo9e0uH19g44RBMZeTmsezPE"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijke verkoopadviseurs",
+     "Goede ontvangst bij eerste onderhoudsbeurt"
+    ],
+    "en": [
+     "Friendly sales advisors",
+     "Good welcome at the first service visit"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Nissan-onderdelen: tot 6 weken wachten",
+     "Klantenservice soms traag"
+    ],
+    "en": [
+     "Nissan parts: up to 6 weeks wait",
+     "Customer service can be slow"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJo9e0uH19g44RBMZeTmsezPE"
+   ]
+  },
+  {
+   "id": "autocity",
+   "naam": "Autocity",
+   "url": null,
+   "soort": {
+    "nl": "dealer en werkplaats",
+    "en": "dealer and service"
+   },
+   "plaats": "Elias R.A. Moreno Boulevard 1",
+   "tags": [
+    "nieuw",
+    "onderhoud"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ook zaterdagochtend open",
+     "en": "Also open Saturday mornings"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 171,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJ976dAH59g44RSOM-9eEearw"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Verkopers kennen de auto's goed en nemen de tijd",
+     "Auto makkelijk afgeven voor onderhoud"
+    ],
+    "en": [
+     "Sales staff know the cars and take their time",
+     "Easy car drop-off for maintenance"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Afhandeling duurt soms lang"
+    ],
+    "en": [
+     "Things sometimes take a long time"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJ976dAH59g44RSOM-9eEearw"
+   ]
+  },
+  {
+   "id": "star-motors",
+   "naam": "Star Motors",
+   "url": null,
+   "soort": {
+    "nl": "dealer Great Wall/Haval",
+    "en": "Great Wall/Haval dealer"
+   },
+   "plaats": "Weg naar Welgelegen 38",
+   "tags": [
+    "nieuw",
+    "merk-greatwall",
+    "suv",
+    "onderhoud"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Verkoopt o.a. Haval-SUV's",
+     "en": "Sells Haval SUVs, among others"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 67,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJSy1vueOChI4RS6Id_UX7TIk"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijk en behulpzaam personeel",
+     "Werkplaats goed en efficiënt",
+     "Schone, koele showroom"
+    ],
+    "en": [
+     "Friendly, helpful staff",
+     "Service department is good and efficient",
+     "Clean, air-conditioned showroom"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Je moet soms zelf een verkoper aanspreken"
+    ],
+    "en": [
+     "You sometimes have to find a salesperson yourself"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJSy1vueOChI4RS6Id_UX7TIk"
+   ]
+  },
+  {
+   "id": "crown-automotives",
+   "naam": "Crown Automotives",
+   "url": null,
+   "soort": {
+    "nl": "dealer",
+    "en": "dealer"
+   },
+   "plaats": "Kaya Tula 44, Seru Domi",
+   "tags": [
+    "nieuw",
+    "onderhoud"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Pendelbus bij onderhoudsbeurt",
+     "en": "Shuttle ride during servicing"
+    },
+    {
+     "nl": "Zelfde terrein als BMW-dealer",
+     "en": "Same site as the BMW dealer"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 151,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJnRX3n_qChI4RtHBr1XMMz90"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Pendeldienst naar werk of huis tijdens onderhoud",
+     "Overzichtelijke showroom met info bij elke auto"
+    ],
+    "en": [
+     "Shuttle to work or home while your car is serviced",
+     "Clear showroom with info at every car"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Afspraken lopen soms mis, slecht telefonisch bereikbaar"
+    ],
+    "en": [
+     "Appointments sometimes go wrong, hard to reach by phone"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJnRX3n_qChI4RtHBr1XMMz90"
+   ]
+  },
+  {
+   "id": "bmw-ultimate-automobiles",
+   "naam": "BMW Ultimate Automobiles",
+   "url": null,
+   "soort": {
+    "nl": "BMW-dealer",
+    "en": "BMW dealer"
+   },
+   "plaats": "Kaya Tula 44, Seru Domi",
+   "tags": [
+    "nieuw",
+    "merk-bmw",
+    "luxe"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Dealer van BMW",
+     "en": "BMW dealer"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 24,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJ3Q8Tl_qChI4RlD43vjTR-MM"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vernieuwde, klantvriendelijke ontvangst"
+    ],
+    "en": [
+     "Renovated, customer-friendly reception"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Wisselende ervaringen met de service"
+    ],
+    "en": [
+     "Mixed experiences with service"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJ3Q8Tl_qChI4RlD43vjTR-MM"
+   ]
+  },
+  {
+   "id": "occasions-seri-domi",
+   "naam": "Occasions@SeriDomi",
+   "url": null,
+   "soort": {
+    "nl": "occasions",
+    "en": "used cars"
+   },
+   "plaats": "Kaya Tula, Seru Domi",
+   "tags": [
+    "occasion",
+    "budget"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Hoort bij Crown Automotives",
+     "en": "Part of Crown Automotives"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 11,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJH38wcvCChI4Rw7JdwbbqV30"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Auto's worden voor verkoop gecontroleerd",
+     "Snelle afhandeling, auto schoon afgeleverd",
+     "Onderhoudshistorie bij de auto"
+    ],
+    "en": [
+     "Cars are checked before sale",
+     "Fast paperwork, car delivered clean",
+     "Service history comes with the car"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJH38wcvCChI4Rw7JdwbbqV30"
+   ]
+  },
+  {
+   "id": "select-automotive",
+   "naam": "Select Automotive (Prowin)",
+   "url": null,
+   "soort": {
+    "nl": "Seat-dealer",
+    "en": "Seat dealer"
+   },
+   "plaats": "Seru Loraweg",
+   "tags": [
+    "nieuw",
+    "merk-seat",
+    "onderhoud"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Zelfde groep als VW en Audi",
+     "en": "Same group as VW and Audi"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 37,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJA0iC1RJ9g44R-euAsiqUCzw"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Klanten blijven er jaren terugkomen",
+     "Schone showroom, goede klantenservice"
+    ],
+    "en": [
+     "Customers keep coming back for years",
+     "Clean showroom, good customer service"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Onderhoud is aan de dure kant"
+    ],
+    "en": [
+     "Servicing is on the pricey side"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJA0iC1RJ9g44R-euAsiqUCzw"
+   ]
+  },
+  {
+   "id": "volkswagen-curacao",
+   "naam": "Volkswagen Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "VW-dealer",
+    "en": "VW dealer"
+   },
+   "plaats": "Seru Loraweg",
+   "tags": [
+    "nieuw",
+    "merk-vw"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Onderdeel van Prowin",
+     "en": "Part of Prowin"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 93,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJF9VuSv19g44RnT6HlFAuJ98"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Duidelijk en eerlijk verkoopproces",
+     "Goede service na aankoop"
+    ],
+    "en": [
+     "Clear, transparent sales process",
+     "Good after-sales service"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Onderdelen niet altijd op voorraad, soms maanden wachten"
+    ],
+    "en": [
+     "Parts not always in stock, sometimes months of waiting"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJF9VuSv19g44RnT6HlFAuJ98"
+   ]
+  },
+  {
+   "id": "audi-curacao",
+   "naam": "Audi Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "Audi-dealer",
+    "en": "Audi dealer"
+   },
+   "plaats": "Seru Loraweg",
+   "tags": [
+    "nieuw",
+    "merk-audi",
+    "luxe"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Onderdeel van Prowin",
+     "en": "Part of Prowin"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 8,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJsXGyuWh9g44RaKHh3p2OaWw"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Geduldige, behulpzame verkopers"
+    ],
+    "en": [
+     "Patient, helpful sales staff"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJsXGyuWh9g44RaKHh3p2OaWw"
+   ]
+  },
+  {
+   "id": "porsche-center-curacao",
+   "naam": "Porsche Center Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "Porsche-dealer",
+    "en": "Porsche dealer"
+   },
+   "plaats": "Seru Loraweg",
+   "tags": [
+    "nieuw",
+    "merk-porsche",
+    "luxe"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Onderdeel van Prowin",
+     "en": "Part of Prowin"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 1,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJ63z2qHp9g44RW1VtPFrxM7Q"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Weinig reviews, maar positief"
+    ],
+    "en": [
+     "Few reviews, but positive"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJ63z2qHp9g44RW1VtPFrxM7Q"
+   ]
+  },
+  {
+   "id": "mercedes-benz-curacao",
+   "naam": "Mercedes-Benz Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "Mercedes-dealer",
+    "en": "Mercedes dealer"
+   },
+   "plaats": "Jan Noorduynweg",
+   "tags": [
+    "nieuw",
+    "merk-mercedes",
+    "luxe"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Dealer van Mercedes-Benz",
+     "en": "Mercedes-Benz dealer"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 4,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJ8T2AAdichI4R0v-zlcMeZjg"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goede opvolging na het eerste bezoek"
+    ],
+    "en": [
+     "Good follow-up after the first visit"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJ8T2AAdichI4R0v-zlcMeZjg"
+   ]
+  },
+  {
+   "id": "quality-motors",
+   "naam": "Quality Motors",
+   "url": null,
+   "soort": {
+    "nl": "Mazda-dealer",
+    "en": "Mazda dealer"
+   },
+   "plaats": "Kaya Buena Vista",
+   "tags": [
+    "nieuw",
+    "merk-mazda",
+    "onderhoud"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Dealer van Mazda",
+     "en": "Mazda dealer"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 25,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJmwh_N8mChI4R1mA2zZyeZYw"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Deskundig personeel",
+     "Goede service na aankoop"
+    ],
+    "en": [
+     "Knowledgeable staff",
+     "Good after-sales service"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Lastig te vinden, achter op een bedrijventerrein"
+    ],
+    "en": [
+     "Hard to find, at the back of a business park"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJmwh_N8mChI4R1mA2zZyeZYw"
+   ]
+  },
+  {
+   "id": "i-cars-curacao",
+   "naam": "i Cars Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "Jeep, Chrysler, Dodge",
+    "en": "Jeep, Chrysler, Dodge"
+   },
+   "plaats": "Weg naar Welgelegen",
+   "tags": [
+    "nieuw",
+    "merk-jeep",
+    "suv",
+    "onderhoud"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Jeep, Chrysler en Dodge",
+     "en": "Jeep, Chrysler and Dodge"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 28,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJC4a7DuOChI4RWGvfxOnjjGQ"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vakkundig en eerlijk",
+     "Nette, verzorgde vestiging"
+    ],
+    "en": [
+     "Skilled and honest",
+     "Clean, well-kept premises"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Niet de goedkoopste"
+    ],
+    "en": [
+     "Not the cheapest"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJC4a7DuOChI4RWGvfxOnjjGQ"
+   ]
+  },
+  {
+   "id": "az-curacao",
+   "naam": "AZ Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "Renault-dealer en werkplaats",
+    "en": "Renault dealer and service"
+   },
+   "plaats": "Scherpenheuvel West 7",
+   "tags": [
+    "nieuw",
+    "merk-renault",
+    "onderhoud"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Verkoopt en onderhoudt Renault",
+     "en": "Sells and services Renault"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 43,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJV4UBC6GChI4RBalQMmzt_qQ"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijke mensen, goede communicatie",
+     "Onderdelen worden besteld als ze er niet zijn"
+    ],
+    "en": [
+     "Friendly people, good communication",
+     "Parts get ordered if not in stock"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Service na verkoop wisselend",
+     "Diagnose is duur"
+    ],
+    "en": [
+     "After-sales service is uneven",
+     "Diagnostics are expensive"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJV4UBC6GChI4RBalQMmzt_qQ"
+   ]
+  },
+  {
+   "id": "all-to-car-curacao",
+   "naam": "All to Car Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "Chinese merken, ook EV",
+    "en": "Chinese brands, incl. EV"
+   },
+   "plaats": "Veeris 53",
+   "tags": [
+    "nieuw",
+    "elektrisch",
+    "budget",
+    "suv"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Changan, BAW, Wuling, Dongfeng",
+     "en": "Changan, BAW, Wuling, Dongfeng"
+    },
+    {
+     "nl": "Elektrisch, hybride en plug-in",
+     "en": "Electric, hybrid and plug-in"
+    },
+    {
+     "nl": "Ook vestiging op Aruba",
+     "en": "Also has an Aruba showroom"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Breed aanbod elektrische en hybride auto's"
+    ],
+    "en": [
+     "Wide range of electric and hybrid cars"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJLULtgymDhI4RDf5OtJnepk0",
+    "https://xclusivomagazine.shorthandstories.com/all-to-car-expands-with-new-showroom-and-three-new-car-brands/index.html"
+   ]
+  },
+  {
+   "id": "total-motors",
+   "naam": "Total Motors",
+   "url": null,
+   "soort": {
+    "nl": "elektrische voertuigen",
+    "en": "electric vehicles"
+   },
+   "plaats": "Kaya Jacob Posner 22",
+   "tags": [
+    "nieuw",
+    "elektrisch",
+    "budget"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ook e-scooters en e-bikes",
+     "en": "Also e-scooters and e-bikes"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 7,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJFzHnwBqDhI4RQ_oo5oTaLyQ"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Elektrische auto's tegen relatief lage prijzen",
+     "Hulp bij reparatie, ook buiten garantie"
+    ],
+    "en": [
+     "Electric cars at relatively low prices",
+     "Help with repairs, even outside warranty"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJFzHnwBqDhI4RQ_oo5oTaLyQ"
+   ]
+  },
+  {
+   "id": "amp-motors",
+   "naam": "Amp Motors",
+   "url": null,
+   "soort": {
+    "nl": "elektrische auto's",
+    "en": "electric cars"
+   },
+   "plaats": "Caracasbaaiweg 53",
+   "tags": [
+    "nieuw",
+    "elektrisch"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Gespecialiseerd in elektrisch",
+     "en": "Focused on electric cars"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 4,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJGQaHmFF9g44R5ooCamy8p_Q"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goede service en oog voor detail"
+    ],
+    "en": [
+     "Good service and attention to detail"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJGQaHmFF9g44R5ooCamy8p_Q"
+   ]
+  },
+  {
+   "id": "economic-auto-center",
+   "naam": "Economic Auto Center",
+   "url": null,
+   "soort": {
+    "nl": "occasions en verhuur",
+    "en": "used cars and rental"
+   },
+   "plaats": "Gosieweg",
+   "tags": [
+    "occasion",
+    "budget"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ook zaterdag tot 19.00 open",
+     "en": "Open Saturdays until 7 p.m."
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 110,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJZclU6q5ig44R9Kq2Yk-_vQY"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Tweedehands auto's voor een redelijke prijs",
+     "Verkopers beantwoorden vragen eerlijk",
+     "Goede hulp voor nieuwkomers op het eiland"
+    ],
+    "en": [
+     "Used cars at a fair price",
+     "Sales staff answer questions honestly",
+     "Helpful for people new to the island"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJZclU6q5ig44R9Kq2Yk-_vQY"
+   ]
+  },
+  {
+   "id": "autobedrijf-willemstad",
+   "naam": "Autobedrijf Willemstad (Carteam)",
+   "url": null,
+   "soort": {
+    "nl": "occasions en werkplaats",
+    "en": "used cars and repairs"
+   },
+   "plaats": "Kaminda Elektrishen 28",
+   "tags": [
+    "occasion",
+    "onderhoud",
+    "budget"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Koopt ook jouw auto in",
+     "en": "Also buys your car"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 253,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJx1SVwH59g44R2gm4DU6yx0Y"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Onderhoud goedkoper dan andere offertes",
+     "Snel en eenvoudig je auto verkopen bij vertrek",
+     "Originele onderdelen, waarschuwt voor komende reparaties"
+    ],
+    "en": [
+     "Servicing cheaper than other quotes",
+     "Quick, easy car sale when you leave the island",
+     "Original parts, warns about upcoming repairs"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Weken wachten op een onderhoudsafspraak",
+     "Eén klacht over een onduidelijke occasionverkoop"
+    ],
+    "en": [
+     "Weeks of waiting for a service slot",
+     "One complaint about an unclear used-car sale"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJx1SVwH59g44R2gm4DU6yx0Y"
+   ]
+  },
+  {
+   "id": "uralco",
+   "naam": "Uralco",
+   "url": null,
+   "soort": {
+    "nl": "autolease",
+    "en": "car leasing"
+   },
+   "plaats": "Kaya Tula / Habaaiweg 82",
+   "tags": [
+    "lease",
+    "financiering"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Leasemaatschappij",
+     "en": "Leasing company"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 9,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJL3b1CvCChI4RvFHp_izyYDA"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Persoonlijk contact via relatiebeheer"
+    ],
+    "en": [
+     "Personal contact via account management"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Klacht over trage reacties en fouten bij onderhoud"
+    ],
+    "en": [
+     "Complaint about slow replies and service mistakes"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJL3b1CvCChI4RvFHp_izyYDA"
+   ]
+  },
+  {
+   "id": "autolease-curacao",
+   "naam": "Autolease Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "autolease",
+    "en": "car leasing"
+   },
+   "plaats": "F.D. Rooseveltweg 517",
+   "tags": [
+    "lease"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Leasemaatschappij",
+     "en": "Leasing company"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 1,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJ94bzTh2dhI4RMWjcaROcIx8"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijk, goede voorwaarden"
+    ],
+    "en": [
+     "Friendly, good terms"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJ94bzTh2dhI4RMWjcaROcIx8"
+   ]
+  },
+  {
+   "id": "premier-automotive-curacao",
+   "naam": "Premier Automotive Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "autodealer",
+    "en": "car dealer"
+   },
+   "plaats": "F.D. Rooseveltweg 68A",
+   "tags": [
+    "nieuw"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ook zaterdag open",
+     "en": "Also open Saturdays"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 1,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJOcIGXSGDhI4RABJmo8eO9sw"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Weinig reviews, maar positief"
+    ],
+    "en": [
+     "Few reviews, but positive"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJOcIGXSGDhI4RABJmo8eO9sw"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "SCL Rotterdam",
+   "url": "https://sclrotterdam.com/en/countries/cura%C3%A7ao-bonaire/",
+   "uitleg": {
+    "nl": "Verscheept auto's per container of RoRo van Nederland naar Curaçao; vraag een offerte op maat.",
+    "en": "Ships cars by container or RoRo from the Netherlands to Curaçao; ask for a custom quote."
+   }
+  },
+  {
+   "naam": "Facebook Marketplace",
+   "url": "https://www.facebook.com/marketplace/",
+   "uitleg": {
+    "nl": "Hier verkopen particulieren op Curaçao veel tweedehands auto's; laat zelf een monteur kijken en check de keuring.",
+    "en": "Many private sellers in Curaçao list used cars here; have a mechanic look at it and check the inspection."
+   }
+  },
+  {
+   "naam": "Marktplaats",
+   "url": "https://www.marktplaats.nl/",
+   "uitleg": {
+    "nl": "Nederlandse occasionsite; alleen interessant als je een auto wilt laten verschepen.",
+    "en": "Dutch used-car site; only useful if you plan to ship a car over."
+   }
+  },
+  {
+   "naam": "AutoScout24",
+   "url": "https://www.autoscout24.nl/",
+   "uitleg": {
+    "nl": "Europese occasionsite voor wie een auto uit Nederland wil importeren.",
+    "en": "European used-car site for importing a car from the Netherlands."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Verhuis je naar Curaçao? Eén personenauto per huishouden kan vrij van invoerrecht mee, als je hem minstens een jaar in bezit en gebruik had voor verzending.",
+   "en": "Moving to Curaçao? One passenger car per household can come in duty-free if you owned and used it for at least a year before shipping."
+  },
+  {
+   "nl": "Doe de aangifte van je verhuisgoed binnen zes maanden na vestiging, en verkoop of verhuur de auto het eerste jaar niet zonder toestemming van de douane.",
+   "en": "File your household goods declaration within six months of settling, and do not sell or rent out the car in the first year without customs approval."
+  },
+  {
+   "nl": "Zonder vrijstelling rekent verscheper SCL met 27% invoerrecht over de CIF-waarde (auto plus verzekering en vracht) plus 9% omzetbelasting.",
+   "en": "Without an exemption, shipper SCL quotes 27% import duty on the CIF value (car plus insurance and freight) plus 9% sales tax."
+  },
+  {
+   "nl": "Hybrides: in maart 2026 won een importeur een rechtszaak omdat de inspecteur 27% rekende waar 10% gold. Vraag na welk tarief voor jouw auto geldt.",
+   "en": "Hybrids: in March 2026 an importer won a court case because the inspector charged 27% where 10% applied. Ask which rate applies to your car."
+  },
+  {
+   "nl": "Vraag bij de dealer hoe lang onderdelen onderweg zijn: reviews noemen 6 weken voor Nissan en tot 3 maanden voor VW.",
+   "en": "Ask the dealer how long parts take to arrive: reviews mention 6 weeks for Nissan and up to 3 months for VW."
+  },
+  {
+   "nl": "Elke auto moet periodiek naar de keuring van het UOVV; een te late keuring kostte eerder een boete van 30 gulden.",
+   "en": "Every car has to go through periodic inspection at the UOVV; a late inspection used to carry a 30-guilder fine."
+  },
+  {
+   "nl": "Betaal de jaarlijkse motorrijtuigenbelasting op tijd en haal je nieuwe kentekenplaat op: de politie controleert daar sinds 2026 op.",
+   "en": "Pay the annual vehicle tax on time and pick up your new license plate: police have been checking for both since 2026."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Waar koop je een nieuwe auto op Curaçao?",
+    "en": "Where can you buy a new car in Curaçao?"
+   },
+   "a": {
+    "nl": "De grote merken hebben een eigen dealer: Toyota bij Garage Cordia, Kia en Nissan bij Universal Motors, VW, Audi, Seat en Porsche bij Prowin aan de Seru Loraweg, BMW bij Ultimate Automobiles, Mazda bij Quality Motors en Jeep bij i Cars.",
+    "en": "The major brands have their own dealer: Toyota at Garage Cordia, Kia and Nissan at Universal Motors, VW, Audi, Seat and Porsche at Prowin on Seru Loraweg, BMW at Ultimate Automobiles, Mazda at Quality Motors and Jeep at i Cars."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoeveel invoerrecht betaal je voor een auto op Curaçao?",
+    "en": "How much import duty do you pay on a car in Curaçao?"
+   },
+   "a": {
+    "nl": "Volgens verscheper SCL is dat 27% van de CIF-waarde plus 9% omzetbelasting als de auto korter dan een jaar op je naam staat. Voor sommige voertuigen, zoals bepaalde hybrides, geldt 10%, bleek uit een rechtszaak in maart 2026.",
+    "en": "According to shipper SCL, it is 27% of the CIF value plus 9% sales tax if the car has been in your name for less than a year. Some vehicles, such as certain hybrids, fall under 10%, a March 2026 court case found."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kan ik mijn auto uit Nederland meenemen naar Curaçao?",
+    "en": "Can I bring my car from the Netherlands to Curaçao?"
+   },
+   "a": {
+    "nl": "Ja. Als je verhuist, kan één personenauto per huishouden vrij van invoerrecht mee als je hem minstens een jaar in bezit en gebruik had. Je verscheept per container of RoRo, bijvoorbeeld via SCL Rotterdam.",
+    "en": "Yes. If you are moving, one passenger car per household can come duty-free if you owned and used it for at least a year. You ship it by container or RoRo, for example through SCL Rotterdam."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar koop je een goede occasion op Curaçao?",
+    "en": "Where do you buy a good used car in Curaçao?"
+   },
+   "a": {
+    "nl": "Bij occasionhandels zoals Autobedrijf Willemstad (4,6 op Google uit 253 reviews), Occasions@SeriDomi en Economic Auto Center, of particulier via Facebook Marketplace. Bij een particulier laat je de auto beter eerst door een monteur nakijken.",
+    "en": "At used-car dealers such as Autobedrijf Willemstad (4.6 on Google from 253 reviews), Occasions@SeriDomi and Economic Auto Center, or from private sellers on Facebook Marketplace. With a private seller, have a mechanic check the car first."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kun je een elektrische auto kopen op Curaçao?",
+    "en": "Can you buy an electric car in Curaçao?"
+   },
+   "a": {
+    "nl": "Ja. All to Car (Veeris) verkoopt elektrische, hybride en plug-in modellen van Chinese merken als Changan, BAW en Dongfeng. Ook Total Motors en Amp Motors richten zich op elektrische auto's.",
+    "en": "Yes. All to Car (Veeris) sells electric, hybrid and plug-in models from Chinese brands such as Changan, BAW and Dongfeng. Total Motors and Amp Motors also focus on electric cars."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kun je een auto leasen op Curaçao?",
+    "en": "Can you lease a car in Curaçao?"
+   },
+   "a": {
+    "nl": "Ja, onder meer bij Uralco (Seru Domi) en Autolease Curaçao (F.D. Rooseveltweg). Vraag wat er in de leaseprijs zit, zoals onderhoud en verzekering.",
+    "en": "Yes, for example at Uralco (Seru Domi) and Autolease Curaçao (F.D. Rooseveltweg). Ask what the lease price covers, such as maintenance and insurance."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar moet een auto op Curaçao gekeurd worden?",
+    "en": "Where are cars inspected in Curaçao?"
+   },
+   "a": {
+    "nl": "Bij de keuring van het UOVV (Verkeer en Vervoer) in Willemstad. In januari tot en met april 2026 werden 24.010 voertuigen goedgekeurd, 231 afgekeurd en 11.183 overgeschreven.",
+    "en": "At the UOVV (traffic and transport authority) inspection station in Willemstad. From January through April 2026, 24,010 vehicles passed, 231 failed and 11,183 changed owners."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "auto kopen curaçao",
+   "autodealer curaçao",
+   "occasion curaçao",
+   "auto meenemen naar curaçao",
+   "invoerrechten auto curaçao",
+   "auto leasen curaçao",
+   "tweedehands auto curaçao"
+  ],
+  "en": [
+   "buy a car in curacao",
+   "car dealers curacao",
+   "used cars curacao",
+   "ship car to curacao",
+   "curacao car import duty",
+   "toyota curacao"
+  ],
+  "es": [
+   "comprar carro en curazao",
+   "concesionarios curazao",
+   "autos usados curazao",
+   "importar auto curazao"
+  ],
+  "pt": [
+   "comprar carro em curaçao",
+   "carros usados curaçao"
+  ],
+  "de": [
+   "auto kaufen curaçao",
+   "auto nach curaçao verschiffen",
+   "gebrauchtwagen curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Is het slimmer om mijn auto mee te nemen naar Curaçao of daar een auto te kopen?",
+   "Welke autodealer op Curaçao heeft de beste service?",
+   "Hoeveel invoerrecht betaal ik als ik een auto naar Curaçao verscheep?"
+  ],
+  "en": [
+   "Should I ship my car to Curacao or buy one there?",
+   "Where can I buy a reliable used car in Curacao?",
+   "Which car brands have dealers in Curacao?"
+  ]
+ }
+}

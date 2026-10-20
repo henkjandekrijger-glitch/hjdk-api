@@ -1,1 +1,881 @@
-{"id":"internet","peildatum":"2026-10-20","items":[]}
+{
+ "id": "internet",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "internetaanbieder",
+  "en": "internet provider"
+ },
+ "h1": {
+  "nl": "Internet op Curaçao: welke aanbieder past bij jou?",
+  "en": "Internet in Curaçao: which provider is right for you?"
+ },
+ "titel": {
+  "nl": "Internet op Curaçao vergelijken: {n} aanbieders en prijzen",
+  "en": "Curaçao internet and mobile plans: {n} options compared"
+ },
+ "metaDesc": {
+  "nl": "Thuisinternet en mobiel op Curaçao: Flow, Digicel, Qonèkt en Starlink naast elkaar, met prijzen in XCG, snelheden en Google-reviews.",
+  "en": "Home internet and mobile plans in Curaçao: Flow, Digicel, Qonèkt and Starlink side by side, with XCG prices, speeds and Google reviews."
+ },
+ "kort": {
+  "nl": "Op Curaçao kies je thuis vooral tussen Flow en Digicel+ glasvezel (vanaf XCG 209 per maand voor 250 Mbit/s met tv), met Qonèkt als nieuwe glasvezelaanbieder en Starlink sinds 14 oktober 2026. Digicel+ had het snelste vaste internet in de Ookla-meting van 2025, Flow het snelste mobiele netwerk. Prepaid data begint bij Digicel op XCG 65 voor 8 GB per 30 dagen.",
+  "en": "In Curaçao, home internet mostly comes down to Flow or Digicel+ fiber (from XCG 209 a month for 250 Mbps with TV), with Qonèkt as a new fiber provider and Starlink live since October 14, 2026. Digicel+ had the fastest fixed internet in Ookla's 2025 report, Flow the fastest mobile network. Prepaid data at Digicel starts at XCG 65 for 8 GB per 30 days."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat zoek je?",
+    "en": "What do you need?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Thuisinternet",
+      "en": "Home internet"
+     },
+     "plus": [
+      "thuis-internet"
+     ],
+     "min": [],
+     "vereist": "thuis-internet"
+    },
+    {
+     "label": {
+      "nl": "Mobiel abonnement of prepaid",
+      "en": "Mobile plan or prepaid"
+     },
+     "plus": [
+      "mobiel"
+     ],
+     "min": [],
+     "vereist": "mobiel"
+    },
+    {
+     "label": {
+      "nl": "Allebei, liefst in één bundel",
+      "en": "Both, ideally bundled"
+     },
+     "plus": [
+      "bundel",
+      "thuis-internet",
+      "mobiel"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Hoe gebruik je internet?",
+    "en": "How do you use the internet?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Gemiddeld: surfen, video, social",
+      "en": "Average: browsing, video, social"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Licht: mail en WhatsApp",
+      "en": "Light: email and WhatsApp"
+     },
+     "plus": [
+      "budget"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Veel streamen of thuiswerken",
+      "en": "Lots of streaming or working from home"
+     },
+     "plus": [
+      "snel",
+      "glasvezel"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Gamen",
+      "en": "Gaming"
+     },
+     "plus": [
+      "glasvezel",
+      "snel"
+     ],
+     "min": [
+      "starlink"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Prepaid of abonnement?",
+    "en": "Prepaid or a monthly plan?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "No preference"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Prepaid, zelf opwaarderen",
+      "en": "Prepaid, top up myself"
+     },
+     "plus": [
+      "prepaid"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Vast abonnement",
+      "en": "Monthly plan"
+     },
+     "plus": [
+      "postpaid",
+      "bundel"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat vind je het belangrijkst?",
+    "en": "What matters most to you?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Betrouwbaarheid en service",
+      "en": "Reliability and support"
+     },
+     "plus": [
+      "glasvezel",
+      "starlink"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Laagste prijs",
+      "en": "Lowest price"
+     },
+     "plus": [
+      "budget"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Hoogste snelheid",
+      "en": "Top speed"
+     },
+     "plus": [
+      "snel"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "flow-thuis",
+   "naam": "Flow thuisinternet",
+   "url": null,
+   "soort": {
+    "nl": "grootste aanbieder",
+    "en": "largest provider"
+   },
+   "plaats": "Schottegatweg Zuid (winkel)",
+   "tags": [
+    "thuis-internet",
+    "bundel"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Grootste internetaanbieder van Curaçao",
+     "en": "Largest internet provider on Curaçao"
+    },
+    {
+     "nl": "Onderdeel van Liberty Latin America",
+     "en": "Part of Liberty Latin America"
+    },
+    {
+     "nl": "Oude pakketten omgezet okt 2025",
+     "en": "Old plans migrated Oct 2025"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 2.5,
+     "max": 5,
+     "aantal": 406,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJFZ7ZpxR9g44RUVxhVJ6e3Xc"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Breed netwerk: bijna overal op het eiland leverbaar"
+    ],
+    "en": [
+     "Wide network: available almost everywhere on the island"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Storingen die soms dagen duren, ook in 2026",
+     "Lange wachttijd via telefoon en WhatsApp",
+     "Gemeten snelheid blijft vaak onder wat je betaalt"
+    ],
+    "en": [
+     "Outages that sometimes last days, also in 2026",
+     "Long wait times by phone and WhatsApp",
+     "Measured speed often stays below what you pay for"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJFZ7ZpxR9g44RUVxhVJ6e3Xc",
+    "https://www.curacaochronicle.com/post/main/more-internet-providers-coming-to-curacao-as-flow-faces-growing-competition/",
+    "https://www.curacaochronicle.com/post/local/curacaos-telecom-regulator-demands-answers-from-flow-after-major-internet-outage",
+    "https://www.curacaochronicle.com/post/local/flow-responds-to-widespread-service-disruptions-promises-stability-ahead",
+    "https://www.curacaochronicle.com/post/local/flow-clarifies-internet-plan-changes-amid-customer-complaints",
+    "https://portal.powertec.com.au/industry-resources/countries-territories/americas/curacao"
+   ]
+  },
+  {
+   "id": "flow-mobiel",
+   "naam": "Flow mobiel (Chippie)",
+   "url": null,
+   "soort": {
+    "nl": "mobiel netwerk",
+    "en": "mobile network"
+   },
+   "plaats": "Schottegatweg Zuid (winkel)",
+   "tags": [
+    "mobiel",
+    "prepaid",
+    "snel"
+   ],
+   "prijs": {
+    "bedrag": 10,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per extra 1 GB (prepaid)",
+     "en": "per extra 1 GB (prepaid)"
+    },
+    "bron": "https://saily.com/nl/blog/simkaart-curacao/",
+    "datum": "2026-08"
+   },
+   "feiten": [
+    {
+     "nl": "Chippie is het prepaidmerk van Flow",
+     "en": "Chippie is Flow's prepaid brand"
+    },
+    {
+     "nl": "Toeristen-SIM 3 GB: ca. €26",
+     "en": "Tourist SIM 3 GB: about €26"
+    },
+    {
+     "nl": "Drie Ookla-prijzen in juni 2026",
+     "en": "Three Ookla awards in June 2026"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 2.5,
+     "max": 5,
+     "aantal": 406,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJFZ7ZpxR9g44RUVxhVJ6e3Xc"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Snelste mobiele internet in metingen van Ookla",
+     "SIM ook te koop bij supermarktbalies zoals Van den Tweel"
+    ],
+    "en": [
+     "Fastest mobile internet in Ookla's measurements",
+     "SIM also sold at supermarket desks such as Van den Tweel"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Onvriendelijke balie en lange rijen in de winkel",
+     "Klantenservice reageert traag op WhatsApp"
+    ],
+    "en": [
+     "Unfriendly counter staff and long lines in the store",
+     "Customer service is slow to answer on WhatsApp"
+    ]
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJFZ7ZpxR9g44RUVxhVJ6e3Xc",
+    "https://saily.com/nl/blog/simkaart-curacao/",
+    "https://www.curacaochronicle.com/post/local/chippie-delivers-fastest-mobile-internet-digicel-leads-fixed-broadband-in-curacao-new-ookla-report-shows",
+    "https://www.curacaochronicle.com/post/local/flow-wins-three-ookla-awards-for-mobile-network-performance-in-curacao",
+    "https://portal.powertec.com.au/industry-resources/countries-territories/americas/curacao"
+   ]
+  },
+  {
+   "id": "digicel-glasvezel",
+   "naam": "Digicel+ glasvezel",
+   "url": "https://digicelgroup.com/cw/en/home-and-entertainment/home-internet",
+   "soort": {
+    "nl": "glasvezel + tv",
+    "en": "fiber + TV"
+   },
+   "plaats": "Biesheuvel (hoofdkantoor)",
+   "tags": [
+    "thuis-internet",
+    "glasvezel",
+    "bundel",
+    "snel"
+   ],
+   "prijs": {
+    "bedrag": 209,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per maand, 250 Mbit/s + tv",
+     "en": "per month, 250 Mbps + TV"
+    },
+    "bron": "https://digicelgroup.com/cw/en/home-and-entertainment/home-internet",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "250 tot 600 Mbit/s download",
+     "en": "250 to 600 Mbps download"
+    },
+    {
+     "nl": "600 Mbit/s: XCG 399 per maand",
+     "en": "600 Mbps: XCG 399 per month"
+    },
+    {
+     "nl": "Modem en installatie gratis",
+     "en": "Free modem and installation"
+    },
+    {
+     "nl": "Voorheen TRES Networks, sinds 2022",
+     "en": "Formerly TRES Networks, since 2022"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 345,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJB8TxEFh9g44Rlzb07RW8-lM"
+    },
+    {
+     "platform": "Google",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 46,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJY0I2g4aChI4RfDh22upjfpw"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Snelste vaste internet volgens Ookla (gemiddeld 86 Mbit/s)",
+     "Stabiele glasvezel, goede prijs voor wat je krijgt",
+     "Storing soms binnen een dag opgelost na melding"
+    ],
+    "en": [
+     "Fastest fixed internet per Ookla (86 Mbps average)",
+     "Stable fiber, good value for the money",
+     "Some faults fixed within a day after reporting"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Technische storing kan meer dan een week duren",
+     "Lange wachtrij in het hoofdkantoor",
+     "Niet in elke wijk glasvezel"
+    ],
+    "en": [
+     "A technical fault can take more than a week to fix",
+     "Long lines at the main office",
+     "Fiber is not available in every neighborhood"
+    ]
+   },
+   "bronnen": [
+    "https://digicelgroup.com/cw/en/home-and-entertainment/home-internet",
+    "https://www.google.com/maps/place/?q=place_id:ChIJB8TxEFh9g44Rlzb07RW8-lM",
+    "https://www.google.com/maps/place/?q=place_id:ChIJY0I2g4aChI4RfDh22upjfpw",
+    "https://www.curacaochronicle.com/post/local/chippie-delivers-fastest-mobile-internet-digicel-leads-fixed-broadband-in-curacao-new-ookla-report-shows",
+    "https://www.curacaochronicle.com/post/local/tres-networks-becomes-digicel"
+   ]
+  },
+  {
+   "id": "digicel-mobiel",
+   "naam": "Digicel mobiel",
+   "url": "https://www.digicelgroup.com/cw/en/postpaid",
+   "soort": {
+    "nl": "mobiel netwerk",
+    "en": "mobile network"
+   },
+   "plaats": "Biesheuvel, Otrobanda, Sambil",
+   "tags": [
+    "mobiel",
+    "prepaid",
+    "postpaid",
+    "bundel",
+    "budget"
+   ],
+   "prijs": {
+    "bedrag": 65,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per 30 dagen, 8 GB prepaid",
+     "en": "per 30 days, 8 GB prepaid"
+    },
+    "bron": "https://digicelgroup.com/cw/en/mega-data-plans",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "30 dagen 35 GB: XCG 100",
+     "en": "30 days 35 GB: XCG 100"
+    },
+    {
+     "nl": "Abonnement vanaf XCG 95 (10 GB)",
+     "en": "Plans from XCG 95 (10 GB)"
+    },
+    {
+     "nl": "Dagbundel 2 GB: XCG 6,50",
+     "en": "Day pass 2 GB: XCG 6.50"
+    },
+    {
+     "nl": "eSIM voor toeristen",
+     "en": "eSIM for tourists"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 345,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJB8TxEFh9g44Rlzb07RW8-lM"
+    },
+    {
+     "platform": "Google",
+     "score": 3.5,
+     "max": 5,
+     "aantal": 33,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJAQ88dPaChI4R2fx4hgnn9cI"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Toeristenbundels zijn goedkoop vergeleken met roaming",
+     "Persoonlijke hulp in de winkel bij vragen over pakketten"
+    ],
+    "en": [
+     "Tourist bundles are cheap compared to roaming",
+     "Personal help in the store with plan questions"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Lange rijen voor een simpele SIM-kaart",
+     "Opwaarderen via de app werkt niet altijd",
+     "Fout in gekochte databundel, traag rechtgezet"
+    ],
+    "en": [
+     "Long lines just to get a SIM card",
+     "Topping up in the app does not always work",
+     "Wrong data bundle on account, slow to fix"
+    ]
+   },
+   "bronnen": [
+    "https://digicelgroup.com/cw/en/mega-data-plans",
+    "https://www.digicelgroup.com/cw/en/postpaid",
+    "https://www.google.com/maps/place/?q=place_id:ChIJB8TxEFh9g44Rlzb07RW8-lM",
+    "https://www.google.com/maps/place/?q=place_id:ChIJAQ88dPaChI4R2fx4hgnn9cI",
+    "https://saily.com/nl/blog/simkaart-curacao/"
+   ]
+  },
+  {
+   "id": "qonekt",
+   "naam": "Qonèkt (Aquatel)",
+   "url": null,
+   "soort": {
+    "nl": "nieuwe glasvezel",
+    "en": "new fiber"
+   },
+   "plaats": "Vidanova, St. Joris (eerste wijken)",
+   "tags": [
+    "thuis-internet",
+    "glasvezel"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Concessie sinds juni 2025",
+     "en": "Licensed since June 2025"
+    },
+    {
+     "nl": "Dochter van Aqualectra-moeder IUH",
+     "en": "Owned by Aqualectra parent IUH"
+    },
+    {
+     "nl": "Ondergrondse glasvezel",
+     "en": "Underground fiber network"
+    },
+    {
+     "nl": "Eerst Vidanova, St. Joris, Brievengat",
+     "en": "First Vidanova, St. Joris, Brievengat"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Nieuwe concurrent die lage prijzen belooft"
+    ],
+    "en": [
+     "New competitor promising low prices"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/main/qonekt-launches-with-official-license-promises-to-revolutionize-telecommunications-in-curacao",
+    "https://www.curacaochronicle.com/post/main/more-internet-providers-coming-to-curacao-as-flow-faces-growing-competition/"
+   ]
+  },
+  {
+   "id": "starlink",
+   "naam": "Starlink",
+   "url": null,
+   "soort": {
+    "nl": "satelliet",
+    "en": "satellite"
+   },
+   "plaats": null,
+   "tags": [
+    "thuis-internet",
+    "starlink"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Officieel live sinds 14 oktober 2026",
+     "en": "Officially live since October 14, 2026"
+    },
+    {
+     "nl": "Eerst beschikbaarheid per adres checken",
+     "en": "Check availability per address first"
+    },
+    {
+     "nl": "Werkt los van Flow-kabels",
+     "en": "Works independently of Flow's cables"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Ruim 200 Mbit/s en stabiel volgens gebruikers op Curaçao"
+    ],
+    "en": [
+     "Over 200 Mbps and stable, users on Curaçao say"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://teslanorth.com/2026/10/14/starlink-curacao-launch",
+    "https://www.curacaochronicle.com/post/main-news/starlink-could-receive-curacao-license-as-early-as-june-2026",
+    "https://www.google.com/maps/place/?q=place_id:ChIJn6bXNYh9g44Rr19AxbI8Ynw"
+   ]
+  },
+  {
+   "id": "starlink-curacao",
+   "naam": "Starlink Curaçao (installateur)",
+   "url": null,
+   "soort": {
+    "nl": "lokale verkoper",
+    "en": "local reseller"
+   },
+   "plaats": "Spanish Water",
+   "tags": [
+    "thuis-internet",
+    "starlink"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Verkoopt en installeert Starlink-kits",
+     "en": "Sells and installs Starlink kits"
+    },
+    {
+     "nl": "Ook de Starlink Mini",
+     "en": "Also the Starlink Mini"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 25,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJn6bXNYh9g44Rr19AxbI8Ynw"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Legt de installatie en de app stap voor stap uit",
+     "Bereikbaar voor vragen na aankoop"
+    ],
+    "en": [
+     "Explains setup and the app step by step",
+     "Available for questions after the purchase"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.google.com/maps/place/?q=place_id:ChIJn6bXNYh9g44Rr19AxbI8Ynw",
+    "https://www.curacaochronicle.com/post/main-news/starlink-could-receive-curacao-license-as-early-as-june-2026"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Saily",
+   "url": "https://saily.com/esim-curacao/",
+   "uitleg": {
+    "nl": "Reis-eSIM met data op het Curaçaose netwerk; handig voor de eerste weken voor je een lokale SIM hebt.",
+    "en": "Travel eSIM with data on Curaçao's networks; handy for your first weeks before you get a local SIM."
+   }
+  },
+  {
+   "naam": "Holafly",
+   "url": "https://esim.holafly.com/nl/blog/internet-curacao/",
+   "uitleg": {
+    "nl": "Reis-eSIM met onbeperkte data; duurder per GB dan een lokale bundel.",
+    "en": "Travel eSIM with unlimited data; pricier per GB than a local bundle."
+   }
+  },
+  {
+   "naam": "Keepgo",
+   "url": "https://www.keepgo.com/collections/prepaid-mobile-data-bundle-curacao",
+   "uitleg": {
+    "nl": "Verkoopt prepaid databundels op het Digicel- en Flow-netwerk.",
+    "en": "Sells prepaid data bundles that run on the Digicel and Flow networks."
+   }
+  },
+  {
+   "naam": "eSIMDB",
+   "url": "https://esimdb.com/curacao/nomad",
+   "uitleg": {
+    "nl": "Vergelijker van reis-eSIM's voor Curaçao.",
+    "en": "Comparison site for Curaçao travel eSIMs."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "De gulden heet sinds 31 maart 2025 Caribische gulden (XCG) en is 1 op 1 gelijk aan de oude NAf/ANG; Digicel noemt sommige prijzen nog in ANG.",
+   "en": "The guilder became the Caribbean guilder (XCG) on March 31, 2025, at 1 to 1 with the old NAf/ANG; Digicel still lists some prices in ANG."
+  },
+  {
+   "nl": "Bij Digicel+ betaal je een borg bij aansluiten; vraag vooraf hoe hoog die is.",
+   "en": "Digicel+ asks for a deposit when you sign up; ask how much before you commit."
+  },
+  {
+   "nl": "Werk je thuis? Neem een mobiele databundel of Starlink als reserve: Flow had in juni 2025 bijna een dag lang een eilandbrede storing.",
+   "en": "Working from home? Keep a mobile data plan or Starlink as backup: Flow had an island-wide outage of almost a full day in June 2025."
+  },
+  {
+   "nl": "Een lokale SIM registreren kan alleen met paspoort of ander geldig ID.",
+   "en": "You need a passport or other valid ID to register a local SIM."
+  },
+  {
+   "nl": "SIM-kaarten op de luchthaven zijn vaak duurder dan in de stad of bij supermarktbalies.",
+   "en": "SIM cards at the airport are often pricier than in town or at supermarket service desks."
+  },
+  {
+   "nl": "Vraag bij Qonèkt eerst of jouw wijk al is aangesloten; de uitrol begon in Vidanova en St. Joris.",
+   "en": "Ask Qonèkt whether your neighborhood is connected yet; the rollout started in Vidanova and St. Joris."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Welke internetaanbieders zijn er op Curaçao?",
+    "en": "Which internet providers are there in Curaçao?"
+   },
+   "a": {
+    "nl": "Flow en Digicel+ zijn de twee grote aanbieders voor thuisinternet. Qonèkt (Aquatel) kreeg in juni 2025 een concessie voor glasvezel, en Starlink is sinds 14 oktober 2026 officieel beschikbaar. Teramobil heeft een mobiele concessie, maar moest uiterlijk eind 2025 actief zijn.",
+    "en": "Flow and Digicel+ are the two main home internet providers. Qonèkt (Aquatel) received a fiber license in June 2025, and Starlink has been officially available since October 14, 2026. Teramobil holds a mobile license but had to be up and running by the end of 2025."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost glasvezel op Curaçao?",
+    "en": "How much does fiber internet cost in Curaçao?"
+   },
+   "a": {
+    "nl": "Digicel+ glasvezel kost XCG 209 per maand voor 250/100 Mbit/s met 84 tv-zenders, oplopend tot XCG 399 voor 600/250 Mbit/s (prijzen inclusief belasting, oktober 2026).",
+    "en": "Digicel+ fiber costs XCG 209 a month for 250/100 Mbps with 84 TV channels, up to XCG 399 for 600/250 Mbps (tax included, October 2026)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is Starlink beschikbaar op Curaçao?",
+    "en": "Is Starlink available in Curaçao?"
+   },
+   "a": {
+    "nl": "Ja. Starlink ging op 14 oktober 2026 officieel live op Curaçao. Daarvoor gebruikten mensen kits uit Nederland of de VS met een reisabonnement. Check eerst op de site van Starlink of jouw adres al kan worden aangesloten.",
+    "en": "Yes. Starlink officially launched in Curaçao on October 14, 2026. Before that, people used kits bought in the Netherlands or the US on a travel plan. Check Starlink's site first to see if your address can be served."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke aanbieder heeft het snelste internet op Curaçao?",
+    "en": "Which provider has the fastest internet in Curaçao?"
+   },
+   "a": {
+    "nl": "Volgens Ookla (eerste helft 2025) had Digicel+ het snelste vaste internet, gemiddeld 86 Mbit/s download en 47 upload. Op mobiel was Flow (Chippie) het snelst met ongeveer 39 Mbit/s.",
+    "en": "According to Ookla (first half of 2025), Digicel+ had the fastest fixed internet, averaging 86 Mbps down and 47 up. On mobile, Flow (Chippie) was fastest at about 39 Mbps."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is Chippie hetzelfde als Flow?",
+    "en": "Is Chippie the same as Flow?"
+   },
+   "a": {
+    "nl": "Ja. Chippie was het mobiele merk van UTS. Liberty Latin America kocht UTS in 2019 en bracht het onder de naam Flow. Chippie is nu het prepaidmerk van Flow.",
+    "en": "Yes. Chippie was UTS's mobile brand. Liberty Latin America bought UTS in 2019 and rebranded it as Flow. Chippie is now Flow's prepaid brand."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost een prepaid databundel op Curaçao?",
+    "en": "How much is a prepaid data plan in Curaçao?"
+   },
+   "a": {
+    "nl": "Bij Digicel kost 2 GB voor 1 dag XCG 6,50, 8 GB voor 30 dagen XCG 65 en 35 GB voor 30 dagen XCG 100. Bij Flow/Chippie kost 1 GB extra XCG 10.",
+    "en": "At Digicel, 2 GB for 1 day is XCG 6.50, 8 GB for 30 days is XCG 65 and 35 GB for 30 days is XCG 100. At Flow/Chippie, an extra 1 GB is XCG 10."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waarom zijn er zoveel klachten over Flow?",
+    "en": "Why do so many people complain about Flow?"
+   },
+   "a": {
+    "nl": "Flow had een eilandbrede storing op 14 juni 2025 en weken van onderbrekingen begin 2026, onder meer door een platformmigratie waarbij zo'n 7.000 klanten op het oude systeem bleven. De toezichthouder RAC vroeg Flow in 2025 om uitleg.",
+    "en": "Flow had an island-wide outage on June 14, 2025, and weeks of interruptions in early 2026, partly from a platform migration that left about 7,000 customers on the old system. Regulator RAC demanded an explanation from Flow in 2025."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost een mobiel abonnement bij Digicel?",
+    "en": "How much is a Digicel monthly mobile plan?"
+   },
+   "a": {
+    "nl": "Digicel-abonnementen lopen van XCG 95 per maand (10 GB) tot XCG 235 per maand (80 GB, onbeperkt bellen ook internationaal).",
+    "en": "Digicel plans run from XCG 95 a month (10 GB) to XCG 235 a month (80 GB, unlimited calls including international)."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "internet curaçao",
+   "internetaanbieder curaçao",
+   "glasvezel curaçao",
+   "flow curaçao",
+   "digicel curaçao",
+   "starlink curaçao",
+   "simkaart curaçao",
+   "prepaid curaçao"
+  ],
+  "en": [
+   "internet curacao",
+   "internet providers curacao",
+   "curacao fiber internet",
+   "flow curacao",
+   "digicel curacao plans",
+   "starlink curacao",
+   "curacao sim card"
+  ],
+  "es": [
+   "internet curazao",
+   "proveedores de internet curazao",
+   "digicel curazao",
+   "flow curazao",
+   "starlink curazao",
+   "chip curazao"
+  ],
+  "pt": [
+   "internet curaçao",
+   "chip curaçao",
+   "digicel curaçao",
+   "starlink curaçao"
+  ],
+  "de": [
+   "internet curaçao",
+   "sim karte curaçao",
+   "starlink curaçao",
+   "digicel curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Wat is de beste internetaanbieder op Curaçao voor thuiswerken?",
+   "Is Digicel of Flow beter op Curaçao?",
+   "Wat kost glasvezel op Curaçao per maand?"
+  ],
+  "en": [
+   "What is the best internet provider in Curacao for remote work?",
+   "Is Starlink available in Curacao and how does it compare to Flow?",
+   "Which mobile plan should I get as a resident of Curacao?"
+  ]
+ },
+ "reviewGewicht": 0.3
+}

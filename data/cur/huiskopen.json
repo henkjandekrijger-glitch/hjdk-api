@@ -1,1 +1,2526 @@
-{"id":"huiskopen","peildatum":"2026-10-20","items":[]}
+{
+ "id": "huiskopen",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "makelaar",
+  "en": "real estate agent"
+ },
+ "h1": {
+  "nl": "Huis kopen op Curaçao: welke makelaar past bij jou?",
+  "en": "Buying a home in Curaçao: which real estate agent fits you?"
+ },
+ "titel": {
+  "nl": "Makelaar Curaçao: {n} makelaars vergeleken (2026)",
+  "en": "Curaçao real estate agents: {n} agencies compared (2026)"
+ },
+ "metaDesc": {
+  "nl": "Huis, appartement of kavel kopen op Curaçao? {n} makelaars met Google-scores, kosten koper (4% overdrachtsbelasting) en hypotheek voor niet-ingezetenen.",
+  "en": "Buying a house, condo or lot in Curaçao? {n} agencies with Google ratings, buyer costs (4% transfer tax) and mortgages for non-residents."
+ },
+ "kort": {
+  "nl": "Op Curaçao zijn ruim 60 makelaars en vastgoedkantoren actief; de mediane vraagprijs ligt rond €559.000. Reken bovenop de koopsom op 4% overdrachtsbelasting plus notaris en Kadaster; de makelaarscourtage (meestal 4%) betaalt de verkoper. Voor luxe zijn Sotheby's, Christie's (Bold Properties) en Curaçao Exclusive de specialisten, Nederlandstalige kopers zitten goed bij onder meer RE/MAX BonBini, At Home en Palmstone.",
+  "en": "More than 60 agencies sell property in Curaçao, and the median asking price is around €559,000. On top of the price, budget 4% transfer tax plus notary and land registry fees; the agent's commission (usually 4%) is paid by the seller. For high-end homes, Sotheby's, Christie's (Bold Properties) and Curaçao Exclusive specialize in luxury; Dutch-speaking buyers are well served by RE/MAX BonBini, At Home and Palmstone, among others."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat wil je kopen?",
+    "en": "What do you want to buy?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Bestaande woning of appartement",
+      "en": "Existing house or condo"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Kavel om zelf te bouwen",
+      "en": "A lot to build on"
+     },
+     "plus": [
+      "kavels"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Nieuwbouw in een project of resort",
+      "en": "New build in a project or resort"
+     },
+     "plus": [
+      "nieuwbouw"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat is je budget?",
+    "en": "What is your budget?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit / weet ik nog niet",
+      "en": "Not sure yet"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Tot ongeveer $400.000",
+      "en": "Up to about $400,000"
+     },
+     "plus": [],
+     "min": [
+      "luxe"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Boven $1 miljoen",
+      "en": "Over $1 million"
+     },
+     "plus": [
+      "luxe"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wil je de woning verhuren als je er zelf niet bent?",
+    "en": "Do you want to rent it out when you're not there?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Nee, of weet ik nog niet",
+      "en": "No, or not sure"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ja, met verhuur en beheer",
+      "en": "Yes, with rental management"
+     },
+     "plus": [
+      "verhuur-beheer"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "In welke taal wil je geholpen worden?",
+    "en": "Which language do you want to work in?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Nederlands",
+      "en": "Dutch"
+     },
+     "plus": [
+      "nl-sprekend"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Engels",
+      "en": "English"
+     },
+     "plus": [
+      "en-sprekend"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "remax-bonbini",
+   "naam": "RE/MAX BonBini Curaçao",
+   "url": "https://www.realestate-curacao.com/",
+   "soort": {
+    "nl": "internationale keten",
+    "en": "international franchise"
+   },
+   "plaats": "Jan Thiel (Eden Shopping Mall, Caracas Baaiweg 280)",
+   "tags": [
+    "nl-sprekend",
+    "en-sprekend",
+    "jan-thiel",
+    "verhuur-beheer",
+    "kavels",
+    "luxe"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "RE/MAX-franchise sinds 2006",
+     "en": "RE/MAX franchise since 2006"
+    },
+    {
+     "nl": "site in NL, EN, ES, DE",
+     "en": "site in Dutch, English, Spanish, German"
+    },
+    {
+     "nl": "ca. 155 woningen, 19 kavels",
+     "en": "about 155 homes, 19 lots"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 49,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.realestate-curacao.com/en/about-us/the-history-of-remax-curacao.html",
+    "https://realestate-curacao.com/en/information/how-to-buy-a-house-in-curacao-a-guide-for-foreign-investors.html",
+    "https://www.jamesedition.com/offices/real_estate/re-max-bonbini-curacao-194274",
+    "https://caribbeanhousehunt.com/curacao/realtors/"
+   ]
+  },
+  {
+   "id": "century-21-number-one",
+   "naam": "CENTURY 21 #1 Real Estate",
+   "url": "https://century21numberone.com/",
+   "soort": {
+    "nl": "internationale keten",
+    "en": "international franchise"
+   },
+   "plaats": "Willemstad (Santa Rosaweg 18)",
+   "tags": [
+    "en-sprekend",
+    "nl-sprekend",
+    "verhuur-beheer"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "meeste Google-reviews van het eiland",
+     "en": "most Google reviews on the island"
+    },
+    {
+     "nl": "ook huurwoningen",
+     "en": "rentals too"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 120,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/the-property-buying-process-in-curacao-explained-step-by-step/",
+    "https://century21numberone.com/en/s/for-rent",
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "keller-williams-curacao",
+   "naam": "Keller Williams Curaçao",
+   "url": "https://kw-curacao.com/",
+   "soort": {
+    "nl": "internationale keten",
+    "en": "international franchise"
+   },
+   "plaats": "Willemstad (Dr. W.P. Maalweg 24)",
+   "tags": [
+    "en-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Amerikaanse franchise",
+     "en": "US franchise"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 17,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://kw-curacao.com/blog/mortgage-curacao-complete-guide-financing-your-property-purchase",
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://ikzoekdebestemakelaar.nl/en/kennisbank/huis-kopen-op-curacao-hoe-vind-je-een-goede-makelaar-op-curacao"
+   ]
+  },
+  {
+   "id": "curacao-sothebys",
+   "naam": "Curaçao Sotheby's International Realty",
+   "url": "https://www.sothebysrealty.com/eng/sales/cr-cuw",
+   "soort": {
+    "nl": "internationale keten",
+    "en": "international franchise"
+   },
+   "plaats": null,
+   "tags": [
+    "luxe",
+    "en-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "partner van ThirdHome",
+     "en": "ThirdHome partner"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.thirdhome.com/blog/curacao-sothebys-international-realty/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "bold-properties-christies",
+   "naam": "Bold Properties (Christie's International Real Estate)",
+   "url": null,
+   "soort": {
+    "nl": "internationale keten",
+    "en": "international franchise"
+   },
+   "plaats": null,
+   "tags": [
+    "luxe",
+    "en-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Christie's-partner sinds 2024",
+     "en": "Christie's affiliate since 2024"
+    },
+    {
+     "nl": "ook actief op Aruba",
+     "en": "also active on Aruba"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://christiesrealestate.com/news/press-releases/christies-international-real-estate-expands-to-curaao-with-bold-properties",
+    "https://inman.com/2024/01/17/christies-international-real-estate-expands-into-curacao-with-affiliate"
+   ]
+  },
+  {
+   "id": "coldwell-banker-curacao",
+   "naam": "Coldwell Banker Curaçao Realty",
+   "url": "https://coldwellbankercuracao.com/",
+   "soort": {
+    "nl": "internationale keten",
+    "en": "international franchise"
+   },
+   "plaats": null,
+   "tags": [
+    "en-sprekend",
+    "kavels"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "adviseert over kavels Veeris Estate",
+     "en": "advises on Veeris Estate lots"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/",
+    "https://caribbeanislandliving.com/en/realtors"
+   ]
+  },
+  {
+   "id": "new-winds-realty",
+   "naam": "New Winds Realty",
+   "url": "http://www.newwindsrealty.com/",
+   "soort": {
+    "nl": "makelaar en ontwikkelaar",
+    "en": "broker and developer"
+   },
+   "plaats": "Willemstad (Pietermaaiplein 8)",
+   "tags": [
+    "nieuwbouw",
+    "verhuur-beheer",
+    "en-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "op Curaçao sinds 1992",
+     "en": "on Curaçao since 1992"
+    },
+    {
+     "nl": "staat op Second Home-beurzen NL",
+     "en": "exhibits at Dutch Second Home fairs"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 17,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.secondhome.nl/en/exposant/new-winds-realty/",
+    "https://a-leads.co/company/4842209_fcc125cf",
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "landmark-real-estate",
+   "naam": "Landmark Real Estate",
+   "url": "https://landmark.cw/en/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "opgericht in 1992",
+     "en": "founded in 1992"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.5,
+     "max": 5,
+     "aantal": 10,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/",
+    "https://ikzoekdebestemakelaar.nl/en/kennisbank/huis-kopen-op-curacao-hoe-vind-je-een-goede-makelaar-op-curacao",
+    "https://antilliaansdagblad.com/makelaars?lang=en"
+   ]
+  },
+  {
+   "id": "international-fine-living",
+   "naam": "International Fine Living",
+   "url": "https://www.internationalfineliving.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "sinds 2006",
+     "en": "since 2006"
+    },
+    {
+     "nl": "ook taxaties en hypotheekadvies",
+     "en": "also valuations and mortgage advice"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 44,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.internationalfineliving.com/nl/insights/hypotheek-aanvragen-op-curacao-alles-wat-je-moet-weten-over-financiering-bij-het-kopen-van-een-woning/68061d85ff4f171c53afe1d8",
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://ikzoekdebestemakelaar.nl/en/kennisbank/huis-kopen-op-curacao-hoe-vind-je-een-goede-makelaar-op-curacao",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "palmstone-real-estate",
+   "naam": "Palmstone Real Estate",
+   "url": "https://palmstone.realestate/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "nl-sprekend",
+    "verhuur-beheer"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "kantoren in NL en op Curaçao",
+     "en": "offices in the Netherlands and Curaçao"
+    },
+    {
+     "nl": "verhuur vanaf 12 maanden",
+     "en": "rentals from 12 months"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 32,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://palmstone-real-estate.preview.ogonline.nl/renting-a-house-curacao",
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://ikzoekdebestemakelaar.nl/en/kennisbank/huis-kopen-op-curacao-hoe-vind-je-een-goede-makelaar-op-curacao",
+    "https://antilliaansdagblad.com/makelaars?lang=en"
+   ]
+  },
+  {
+   "id": "moret-real-estate",
+   "naam": "Moret Real Estate",
+   "url": "https://moretrealestate.com/en",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "en-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "villa's, gezinswoningen, beleggingen",
+     "en": "villas, family homes, investments"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 31,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaopride.org/?p=11060",
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "sunlife-real-estate",
+   "naam": "Sunlife Real Estate",
+   "url": "https://sunlife.realty/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 15,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "firstbrick-curacao",
+   "naam": "FirstBrick Curaçao",
+   "url": "https://firstbrickcuracao.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 2,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://caribbeanislandliving.com/en/realtors"
+   ]
+  },
+  {
+   "id": "real-estate-agency-cb",
+   "naam": "Real Estate Agency CB",
+   "url": "https://curacao-homes.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 38,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "real-estate-caribe",
+   "naam": "Real Estate Caribe",
+   "url": "https://www.realestatecaribe.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": "Willemstad (Santa Rosaweg 172)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "actief sinds 1999",
+     "en": "active since 1999"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 38,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://demakelaar.cw/agencies/",
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "livinggoed",
+   "naam": "Livinggoed Real Estate",
+   "url": "https://livinggoed.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "kavels"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "adviseert over kavels Veeris Estate",
+     "en": "advises on Veeris Estate lots"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 36,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "ruseler-makelaars",
+   "naam": "Ruseler Makelaars",
+   "url": "https://ruselermakelaars.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 23,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/",
+    "https://antilliaansdagblad.com/makelaars?lang=en"
+   ]
+  },
+  {
+   "id": "nh-real-estate",
+   "naam": "NH Real Estate & Associates",
+   "url": "https://curacao-houses.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 26,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "simmer-real-estate",
+   "naam": "Simmer Real Estate",
+   "url": "https://simmerrealestate.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 8,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "blue-bay-real-estate",
+   "naam": "Blue Bay Real Estate",
+   "url": "https://bluebay-realestate.com/",
+   "soort": {
+    "nl": "projectverkoop",
+    "en": "project sales"
+   },
+   "plaats": "Blue Bay",
+   "tags": [
+    "nieuwbouw"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "verkoop binnen Blue Bay-resort",
+     "en": "sales inside Blue Bay resort"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 6,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://makelaarcuracao.nl/",
+    "https://antilliaansdagblad.com/makelaars?lang=en"
+   ]
+  },
+  {
+   "id": "caresto",
+   "naam": "Caresto Real Estate",
+   "url": "https://caresto.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "kavels"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "adviseert over kavels Veeris Estate",
+     "en": "advises on Veeris Estate lots"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 26,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/",
+    "https://makelaarcuracao.nl/"
+   ]
+  },
+  {
+   "id": "top-makelaar-curacao",
+   "naam": "TOP Makelaar Curaçao",
+   "url": "https://topmakelaarcuracao.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 11,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://www.naarcuracao.com/wonen-curacao/huis-kopen-curacao/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/",
+    "https://caribbeanislandliving.com/en/realtors"
+   ]
+  },
+  {
+   "id": "kostabon",
+   "naam": "Kostabon Vastgoed Adviseurs",
+   "url": "https://kostabon.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": "Willemstad (Pietermaai 133-135)",
+   "tags": [
+    "nl-sprekend",
+    "nieuwbouw",
+    "verhuur-beheer"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "ook hypotheek- en pensioenadvies",
+     "en": "also mortgage and pension advice"
+    },
+    {
+     "nl": "ruim 19 jaar actief",
+     "en": "over 19 years in business"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 5,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://kostabon.com/hypotheekrente-op-curacao-in-2026-alles-wat-u-moet-weten-over-financiering/",
+    "https://caribbeanhousehunt.com/curacao/realtors/"
+   ]
+  },
+  {
+   "id": "ambiente-real-estate",
+   "naam": "Ambiente Real Estate",
+   "url": "https://ambienterealestate.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 12,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://makelaarcuracao.nl/"
+   ]
+  },
+  {
+   "id": "at-home-curacao",
+   "naam": "At Home Curaçao Makelaars",
+   "url": "https://athomecuracao.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": "Jan Thiel (LXRY Mall, Brakkeput Mei Mei)",
+   "tags": [
+    "nl-sprekend",
+    "en-sprekend",
+    "jan-thiel",
+    "verhuur-beheer",
+    "kavels"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "koop, verkoop, huur en verhuur",
+     "en": "buying, selling, renting, letting"
+    },
+    {
+     "nl": "ook aankoopmakelaar",
+     "en": "also buyer's agent"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 14,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://athomecuracao.com/en/makelaars_curacao/",
+    "https://athomecuracao.com/en/for-rent/",
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "curacao-estates",
+   "naam": "Curaçao Estates",
+   "url": "https://cur-estates.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 3,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "curacao-exclusive-real-estate",
+   "naam": "Curaçao Exclusive Real Estate",
+   "url": "https://curacao-exclusive-realestate.com/",
+   "soort": {
+    "nl": "luxe segment",
+    "en": "luxury segment"
+   },
+   "plaats": null,
+   "tags": [
+    "luxe"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "hoogste mediane vraagprijs",
+     "en": "highest median asking price"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 3,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://ikzoekdebestemakelaar.nl/en/kennisbank/huis-kopen-op-curacao-hoe-vind-je-een-goede-makelaar-op-curacao",
+    "https://veerisestate.com/real-estate-agents-on-curacao/",
+    "https://antilliaansdagblad.com/makelaars?lang=en"
+   ]
+  },
+  {
+   "id": "joubert-realty",
+   "naam": "Joubert Realty",
+   "url": "https://joubertrealty.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.2,
+     "max": 5,
+     "aantal": 9,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "bru-de-roque",
+   "naam": "Bru de Roque",
+   "url": "https://bruderoque.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/"
+   ]
+  },
+  {
+   "id": "burbach-roycroft",
+   "naam": "Burbach Roycroft",
+   "url": "https://burbachroycroft.com/",
+   "soort": {
+    "nl": "luxe segment",
+    "en": "luxury segment"
+   },
+   "plaats": null,
+   "tags": [
+    "luxe",
+    "jan-thiel"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "aanbod o.a. Jan Thiel, Salina",
+     "en": "listings in Jan Thiel, Salina"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://ikzoekdebestemakelaar.nl/en/kennisbank/huis-kopen-op-curacao-hoe-vind-je-een-goede-makelaar-op-curacao",
+    "https://antilliaansdagblad.com/makelaars?lang=en",
+    "https://makelaarcuracao.nl/"
+   ]
+  },
+  {
+   "id": "curahousecare",
+   "naam": "CuraHouseCare",
+   "url": "https://curahousecare.com/",
+   "soort": {
+    "nl": "verhuur en beheer",
+    "en": "rentals and management"
+   },
+   "plaats": null,
+   "tags": [
+    "verhuur-beheer"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "grootste huuraanbod (96)",
+     "en": "largest rental stock (96)"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://ikzoekdebestemakelaar.nl/en/kennisbank/huis-kopen-op-curacao-hoe-vind-je-een-goede-makelaar-op-curacao",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "sunset-realtors",
+   "naam": "Sunset Realtors",
+   "url": "https://sunset-realtors.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/"
+   ]
+  },
+  {
+   "id": "team-coral-estate-sales",
+   "naam": "TEAM Coral Estate Sales",
+   "url": "https://coralestatesales.com/",
+   "soort": {
+    "nl": "projectverkoop",
+    "en": "project sales"
+   },
+   "plaats": "Coral Estate (westkust)",
+   "tags": [
+    "luxe",
+    "nieuwbouw",
+    "westkant"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "verkoop binnen Coral Estate",
+     "en": "sales inside Coral Estate"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://ikzoekdebestemakelaar.nl/en/kennisbank/huis-kopen-op-curacao-hoe-vind-je-een-goede-makelaar-op-curacao",
+    "https://antilliaansdagblad.com/makelaars?lang=en"
+   ]
+  },
+  {
+   "id": "abc-real-estate",
+   "naam": "ABC Real Estate Curaçao",
+   "url": "https://abcrealestate-curacao.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://makelaarcuracao.nl/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "curacao-homes",
+   "naam": "Curaçao Homes",
+   "url": "https://www.curacaohomes.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": "Willemstad (Gladiolenweg 17)",
+   "tags": [
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://demakelaar.cw/agencies/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "domicilie-real-estate",
+   "naam": "Domicilie Real Estate",
+   "url": "https://www.domicilie.net/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": "Willemstad (Gosieweg 53)",
+   "tags": [
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://demakelaar.cw/agencies/",
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "pricematch-real-estate",
+   "naam": "PriceMatch Real Estate",
+   "url": "https://pricematchrealestate.com/home",
+   "soort": {
+    "nl": "makelaar en bouwer",
+    "en": "broker and builder"
+   },
+   "plaats": "Willemstad (Santa Rosa 83)",
+   "tags": [
+    "nieuwbouw"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "sinds 2014",
+     "en": "since 2014"
+    },
+    {
+     "nl": "eigen architecten en bouw",
+     "en": "in-house architects and building"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://demakelaar.cw/agencies/"
+   ]
+  },
+  {
+   "id": "blue-view-real-estate",
+   "naam": "Blue View Real Estate",
+   "url": "https://curacao.realty/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "cpm-real-estate",
+   "naam": "CPM Real Estate",
+   "url": "https://www.cpmrealestate.nl/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/",
+    "https://dagbladperspectief.nl/technologie/huis-te-koop-curacao/"
+   ]
+  },
+  {
+   "id": "cristal-real-estate",
+   "naam": "Cristal Real Estate",
+   "url": "https://cristalrealestate.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "curacao-houses",
+   "naam": "Curaçao Houses",
+   "url": "https://curacaohouses.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "curacao-real-estate-solution",
+   "naam": "Curaçao Real Estate Solution",
+   "url": "https://curacaorealestatesolution.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "kavels"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "adviseert over kavels Veeris Estate",
+     "en": "advises on Veeris Estate lots"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "djm-makelaar",
+   "naam": "DJM Makelaar",
+   "url": "https://dmjmakelaar.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "dushi-homes",
+   "naam": "Dushi Homes",
+   "url": "https://dushi-homes.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "kavels"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "adviseert over kavels Veeris Estate",
+     "en": "advises on Veeris Estate lots"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "els-van-barneveld",
+   "naam": "Els van Barneveld Real Estate",
+   "url": "https://elsvanbarneveld.com/",
+   "soort": {
+    "nl": "zelfstandig makelaar",
+    "en": "independent agent"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "empire-real-estate",
+   "naam": "Empire Real Estate Curaçao",
+   "url": "https://empirecuracao.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "gs-real-estate",
+   "naam": "GS Real Estate",
+   "url": "https://gs-realestate.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "martis-partners",
+   "naam": "Martis Partners",
+   "url": "https://martis-partners.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "novo-casa-realty",
+   "naam": "Novo Casa Realty",
+   "url": "https://novocasarealty.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "real-houses-curacao",
+   "naam": "Real Houses Curaçao",
+   "url": "https://realhousescuracao.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "realty-curacao",
+   "naam": "Realty Curaçao",
+   "url": "https://realtycuracao.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "salas-real-estate",
+   "naam": "Salas Real Estate",
+   "url": "https://salasrealestate.net/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "smart-homes-realty",
+   "naam": "Smart Homes Realty",
+   "url": "https://smarthomesrealty.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "kavels"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "adviseert over kavels Veeris Estate",
+     "en": "advises on Veeris Estate lots"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "curacao-dream-property",
+   "naam": "Curaçao Dream Property",
+   "url": "https://www.facebook.com/CuracaoDreamProperty/",
+   "soort": {
+    "nl": "via Facebook",
+    "en": "Facebook-based"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "hopi-bon-real-estate",
+   "naam": "Hopi Bon Real Estate",
+   "url": "https://www.facebook.com/HopiBonRealEstate/",
+   "soort": {
+    "nl": "via Facebook",
+    "en": "Facebook-based"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://veerisestate.com/real-estate-agents-on-curacao/"
+   ]
+  },
+  {
+   "id": "lets-go-curacao",
+   "naam": "Let's Go Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://antilliaansdagblad.com/makelaars?lang=en",
+    "https://caribbeanislandliving.com/en/realtors"
+   ]
+  },
+  {
+   "id": "wigbold-real-estate",
+   "naam": "Wigbold Real Estate",
+   "url": null,
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://antilliaansdagblad.com/makelaars?lang=en"
+   ]
+  },
+  {
+   "id": "cura-estate",
+   "naam": "Cura Estate",
+   "url": null,
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://antilliaansdagblad.com/makelaars?lang=en"
+   ]
+  },
+  {
+   "id": "droomhuis-curacao",
+   "naam": "Droomhuis Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanislandliving.com/en/realtors"
+   ]
+  },
+  {
+   "id": "mmb-real-estate",
+   "naam": "MMB Real Estate Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanislandliving.com/en/realtors"
+   ]
+  },
+  {
+   "id": "curacao-online",
+   "naam": "Curaçao Online",
+   "url": null,
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://caribbeanislandliving.com/en/realtors"
+   ]
+  },
+  {
+   "id": "homesbyyou",
+   "naam": "HomesByYou",
+   "url": null,
+   "soort": {
+    "nl": "vaste prijs, geen courtage",
+    "en": "flat fee, no commission"
+   },
+   "plaats": null,
+   "tags": [
+    "nl-sprekend"
+   ],
+   "prijs": {
+    "bedrag": 5995,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "vaste fee verkoper",
+     "en": "flat seller fee"
+    },
+    "bron": "https://ikzoekdebestemakelaar.nl/en/kennisbank/huis-kopen-op-curacao-hoe-vind-je-een-goede-makelaar-op-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "verkoper doet zelf bezichtigingen",
+     "en": "seller handles viewings"
+    },
+    {
+     "nl": "vaste fee voor kopers",
+     "en": "flat fee for buyers too"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://ikzoekdebestemakelaar.nl/en/kennisbank/huis-kopen-op-curacao-hoe-vind-je-een-goede-makelaar-op-curacao"
+   ]
+  },
+  {
+   "id": "7th-heaven-properties",
+   "naam": "7th Heaven Properties",
+   "url": "https://www.7thheavenproperties.com/",
+   "soort": {
+    "nl": "Britse Caribische makelaar",
+    "en": "UK-based Caribbean broker"
+   },
+   "plaats": null,
+   "tags": [
+    "en-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Brits telefoonnummer",
+     "en": "UK phone number"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://makelaarcuracao.nl/"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Caribbean House Hunt",
+   "url": "https://caribbeanhousehunt.com/",
+   "uitleg": {
+    "nl": "Portal met aanbod van 40+ makelaars op één kaart, plus makelaarslijst met Google-scores.",
+    "en": "Portal that maps listings from 40+ agencies, plus an agent directory with Google ratings."
+   }
+  },
+  {
+   "naam": "CasaSearch",
+   "url": "https://casasearch.com/",
+   "uitleg": {
+    "nl": "Portal waar makelaars en resorts koop- en huuraanbod plaatsen.",
+    "en": "Portal where agencies and resorts post homes for sale and rent."
+   }
+  },
+  {
+   "naam": "Caribbean Island Living",
+   "url": "https://caribbeanislandliving.com/",
+   "uitleg": {
+    "nl": "Portal en makelaarsgids voor Aruba, Bonaire en Curaçao.",
+    "en": "Listings portal and agent directory for Aruba, Bonaire and Curaçao."
+   }
+  },
+  {
+   "naam": "Second Home",
+   "url": "https://www.secondhome.nl/kopen/curacao/",
+   "uitleg": {
+    "nl": "Nederlandse portal en beurs voor tweede woningen; Curaçaose makelaars staan er op de beurzen.",
+    "en": "Dutch second-home portal and trade fair where Curaçao agencies exhibit."
+   }
+  },
+  {
+   "naam": "JamesEdition",
+   "url": "https://www.jamesedition.com/",
+   "uitleg": {
+    "nl": "Internationale portal voor luxe woningen, met Curaçao-aanbod van o.a. RE/MAX BonBini.",
+    "en": "International luxury listings portal, including Curaçao homes from RE/MAX BonBini and others."
+   }
+  },
+  {
+   "naam": "Invest in Willemstad",
+   "url": "https://investinwillemstad.com/real-estate/",
+   "uitleg": {
+    "nl": "Platform van Monumentenzorg en Stadsherstel voor panden in de historische binnenstad.",
+    "en": "Platform backed by Monumentenzorg and Stadsherstel for buildings in the historic center."
+   }
+  },
+  {
+   "naam": "Makelaarsgids Curaçao",
+   "url": "https://makelaarcuracao.nl/",
+   "uitleg": {
+    "nl": "Nederlandstalige gids met contactgegevens van makelaars op Curaçao.",
+    "en": "Dutch-language directory with contact details for Curaçao agencies."
+   }
+  },
+  {
+   "naam": "Funda en Marktplaats",
+   "url": "https://www.funda.nl/",
+   "uitleg": {
+    "nl": "Hebben maar weinig Curaçao-aanbod; lokale portals zijn completer.",
+    "en": "Carry only a few Curaçao listings; local portals are more complete."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Reken op 4% overdrachtsbelasting over de koopsom (of de hogere geregistreerde waarde), plus notaris en Kadaster.",
+   "en": "Budget 4% transfer tax on the price (or the higher registered value), plus notary and land registry fees."
+  },
+  {
+   "nl": "De notariskosten liggen wettelijk vast en hangen af van de koopsom; vergelijken tussen notarissen levert weinig op.",
+   "en": "Notary fees are fixed by regulation and depend on the price, so shopping around saves little."
+  },
+  {
+   "nl": "Vraag altijd of de grond eigendom of erfpacht is. Ongeveer een derde van de woningen staat op erfpacht en is daardoor vaak 20 tot 30% goedkoper.",
+   "en": "Always ask whether the land is freehold or leasehold. About a third of homes sit on government leasehold and often cost 20 to 30% less."
+  },
+  {
+   "nl": "Er is een tekort aan notarissen; een overdracht kan maanden duren. Begin vroeg met de stukken.",
+   "en": "There is a shortage of notaries, so a transfer can take months. Start the paperwork early."
+  },
+  {
+   "nl": "Laat voor je bod een bouwkundige keuring en taxatie doen; de bank vraagt vaak ook een taxatie.",
+   "en": "Get a building inspection and appraisal before you make an offer; the bank usually wants an appraisal too."
+  },
+  {
+   "nl": "Veel woningen onder NAf 300.000 worden informeel verkocht via WhatsApp en Facebook. Een goed verbonden lokale makelaar helpt.",
+   "en": "Many homes under NAf 300,000 sell informally through WhatsApp and Facebook. A well-connected local agent helps."
+  },
+  {
+   "nl": "Kies 2 of 3 makelaars in je prijsklasse en vraag naar recente klanten als referentie.",
+   "en": "Shortlist 2 or 3 agents in your price range and ask for recent client references."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Mogen buitenlanders een huis kopen op Curaçao?",
+    "en": "Can foreigners buy property in Curaçao?"
+   },
+   "a": {
+    "nl": "Ja. Buitenlanders en Nederlanders hebben dezelfde eigendomsrechten als inwoners; er zijn geen beperkingen.",
+    "en": "Yes. Foreign buyers, including Americans and Dutch citizens, have the same ownership rights as residents, with no restrictions."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat zijn de kosten koper op Curaçao?",
+    "en": "What closing costs does the buyer pay in Curaçao?"
+   },
+   "a": {
+    "nl": "4% overdrachtsbelasting, de wettelijk vastgestelde notariskosten en Kadaster- en registratiekosten van enkele honderden dollars. Met hypotheek komt daar vaak 1% afsluitprovisie bij. Reken in totaal op 5 tot 7% bovenop de koopsom.",
+    "en": "4% transfer tax, the regulated notary fee, and land registry and recording fees of a few hundred dollars. With a mortgage, banks often add a 1% origination fee. Plan on 5 to 7% on top of the price in total."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wie betaalt de makelaar?",
+    "en": "Who pays the real estate agent?"
+   },
+   "a": {
+    "nl": "Meestal de verkoper; de gangbare courtage is 4%. Een aankoopmakelaar krijgt vaak een deel daarvan, vraag dus voor wie hij werkt.",
+    "en": "Usually the seller; the standard commission is 4%. A buyer's agent often gets part of that, so ask whose side they are on."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kan ik als niet-ingezetene een hypotheek krijgen op Curaçao?",
+    "en": "Can I get a mortgage in Curaçao as a non-resident?"
+   },
+   "a": {
+    "nl": "Ja, maar reken op 30 tot 50% eigen geld. Banken financieren meestal hooguit 70% van de marktwaarde, met een plafond rond XCG 1,5 miljoen. Rente ligt rond 4,5 tot 6%, looptijd tot 35 jaar en meestal afgelost op je 65e (CHB: 70).",
+    "en": "Yes, but expect to put down 30 to 50%. Banks usually lend at most 70% of market value, capped around XCG 1.5 million. Rates run about 4.5 to 6%, with terms up to 35 years, usually paid off by age 65 (70 at CHB)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke banken geven hypotheken op Curaçao?",
+    "en": "Which banks offer mortgages in Curaçao?"
+   },
+   "a": {
+    "nl": "Onder meer MCB (Maduro & Curiel's Bank), Orco Bank, RBC Royal Bank, Banco di Caribe, Vidanova Bank, Centrale Hypotheekbank (CHB) en Guardian Group. Elke bank heeft eigen voorwaarden.",
+    "en": "Among others MCB (Maduro & Curiel's Bank), Orco Bank, RBC Royal Bank, Banco di Caribe, Vidanova Bank, Centrale Hypotheekbank (CHB) and Guardian Group. Each sets its own terms."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is het verschil tussen erfpacht en eigen grond op Curaçao?",
+    "en": "What's the difference between leasehold and freehold in Curaçao?"
+   },
+   "a": {
+    "nl": "Bij erfpacht bezit je het huis, maar huur je de grond van de overheid, vaak voor 60 jaar. Ongeveer een derde van de woningen is erfpacht; die zijn vaak 20 tot 30% goedkoper dan vergelijkbare woningen op eigen grond.",
+    "en": "With leasehold you own the house but lease the land from the government, often for 60 years. About a third of homes are leasehold, and they often sell for 20 to 30% less than comparable freehold homes."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe lang duurt het kopen van een huis op Curaçao?",
+    "en": "How long does buying a home in Curaçao take?"
+   },
+   "a": {
+    "nl": "Een hypotheekaanvraag duurt ongeveer 4 tot 6 weken. Door het notarissentekort kan de overdracht daarna nog maanden duren.",
+    "en": "Mortgage approval takes about 4 to 6 weeks. Because notaries are in short supply, the transfer itself can take several more months."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost een huis op Curaçao?",
+    "en": "How much does a house cost in Curaçao?"
+   },
+   "a": {
+    "nl": "Bij makelaars stonden ruim 800 woningen te koop met een mediane vraagprijs van ongeveer €559.000 en gemiddeld €2.520 per m². Het meeste aanbod zit in Coral Estate, Jan Thiel en Blue Bay.",
+    "en": "Agencies listed just over 800 homes with a median asking price of about €559,000, or €2,520 per square meter on average. Most listings are in Coral Estate, Jan Thiel and Blue Bay."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "makelaar curaçao",
+   "huis kopen curaçao",
+   "huis te koop curaçao",
+   "appartement kopen curaçao",
+   "kavel kopen curaçao",
+   "kosten koper curaçao",
+   "hypotheek curaçao"
+  ],
+  "en": [
+   "curacao real estate",
+   "curacao real estate agents",
+   "buy house curacao",
+   "curacao homes for sale",
+   "curacao property for sale",
+   "curacao condos for sale"
+  ],
+  "es": [
+   "casas en venta curazao",
+   "inmobiliaria curazao",
+   "comprar casa en curazao"
+  ],
+  "pt": [
+   "imóveis curaçao",
+   "comprar casa em curaçao"
+  ],
+  "de": [
+   "immobilien curaçao",
+   "haus kaufen curaçao",
+   "makler curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Welke makelaar op Curaçao is goed voor Nederlandse kopers?",
+   "Wat zijn de kosten koper bij een huis op Curaçao?",
+   "Kan ik als Nederlander een hypotheek krijgen op Curaçao?"
+  ],
+  "en": [
+   "What is the best real estate agent in Curaçao?",
+   "Can Americans buy property in Curaçao and what are the closing costs?",
+   "How do mortgages work in Curaçao for non-residents?"
+  ]
+ }
+}

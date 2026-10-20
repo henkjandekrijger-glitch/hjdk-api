@@ -1,1 +1,1485 @@
-{"id":"emigreren","peildatum":"2026-10-20","items":[]}
+{
+ "id": "emigreren",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "emigratie naar Curaçao",
+  "en": "moving to Curaçao"
+ },
+ "h1": {
+  "nl": "Emigreren naar Curaçao: welke verzekeraar, bank en verhuizer kies je?",
+  "en": "Moving to Curaçao: which insurer, bank and mover should you pick?"
+ },
+ "titel": {
+  "nl": "Emigreren naar Curaçao: {n} aanbieders vergeleken (2026)",
+  "en": "Moving to Curaçao: {n} providers compared (2026)"
+ },
+ "metaDesc": {
+  "nl": "Zorgverzekering, bank, verhuizer, vergunning en werkplek voor wonen op Curaçao. {n} aanbieders met prijzen, regels en reviews op een rij.",
+  "en": "Health insurance, banks, movers, permits and coworking for living on Curaçao. {n} providers with prices, rules and reviews."
+ },
+ "kort": {
+  "nl": "We zetten 25 aanbieders op een rij voor wie op Curaçao gaat wonen of werken: zorgverzekeraars, banken, verhuizers, vergunningsloketten en coworkingplekken. Remote werkers kunnen via @HOME in Curaçao voor USD 294 tot een jaar blijven zonder Curaçaose inkomstenbelasting; Nederlanders die er gaan wonen hebben een verklaring van rechtswege nodig. Een 20ft-container Rotterdam naar Willemstad kostte ongeveer USD 1.936 aan vracht, een coworkingplek vanaf USD 20 per dag.",
+  "en": "We list 25 providers for anyone moving to or working on Curaçao: health insurers, banks, movers, permit offices and coworking spaces. Remote workers can stay up to a year through @HOME in Curaçao for USD 294 with no Curaçao income tax; Dutch citizens who move there need an admission-by-right declaration. Shipping a 20ft container from Rotterdam to Willemstad cost about USD 1,936 in freight, and coworking starts around USD 20 a day."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat is jouw situatie?",
+    "en": "What's your situation?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Nederlander die er gaat werken of ondernemen",
+      "en": "Dutch citizen moving to work or run a business"
+     },
+     "plus": [
+      "voor-nederlanders",
+      "ondernemer",
+      "nl-sprekend"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Gepensioneerd (50+)",
+      "en": "Retired (50+)"
+     },
+     "plus": [
+      "pensionado"
+     ],
+     "min": [
+      "ondernemer"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Remote werker met buitenlandse werkgever of klanten",
+      "en": "Remote worker with a foreign employer or clients"
+     },
+     "plus": [
+      "remote-werker"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Amerikaan of Canadees",
+      "en": "American or Canadian"
+     },
+     "plus": [
+      "voor-amerikanen"
+     ],
+     "min": [
+      "nl-sprekend"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat wil je als eerste regelen?",
+    "en": "What do you need to sort out first?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Alles nog, laat alles zien",
+      "en": "Everything, show me all"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Zorgverzekering",
+      "en": "Health insurance"
+     },
+     "plus": [
+      "cat-zorg"
+     ],
+     "min": [],
+     "vereist": "cat-zorg"
+    },
+    {
+     "label": {
+      "nl": "Bankrekening",
+      "en": "Bank account"
+     },
+     "plus": [
+      "cat-bank"
+     ],
+     "min": [],
+     "vereist": "cat-bank"
+    },
+    {
+     "label": {
+      "nl": "Spullen verhuizen",
+      "en": "Shipping my belongings"
+     },
+     "plus": [
+      "cat-verhuizen"
+     ],
+     "min": [],
+     "vereist": "cat-verhuizen"
+    },
+    {
+     "label": {
+      "nl": "Vergunning en belastingadvies",
+      "en": "Permit and tax advice"
+     },
+     "plus": [
+      "cat-advies"
+     ],
+     "min": [],
+     "vereist": "cat-advies"
+    },
+    {
+     "label": {
+      "nl": "Werkplek",
+      "en": "A place to work"
+     },
+     "plus": [
+      "cat-coworking"
+     ],
+     "min": [],
+     "vereist": "cat-coworking"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Kom je alleen of met gezin?",
+    "en": "Moving alone or with family?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Alleen of met partner",
+      "en": "Alone or with a partner"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Met kinderen",
+      "en": "With kids"
+     },
+     "plus": [
+      "gezin"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "svb-bvz",
+   "naam": "SVB Basisverzekering Ziektekosten (BVZ)",
+   "url": null,
+   "soort": {
+    "nl": "publieke basisverzekering",
+    "en": "public basic plan"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "cat-zorg",
+    "voor-nederlanders",
+    "nl-sprekend",
+    "gezin",
+    "ondernemer"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Voor inwoners met verblijfsvergunning",
+     "en": "For residents with a permit"
+    },
+    {
+     "nl": "Premie gaat via het loon",
+     "en": "Premium deducted from wages"
+    },
+    {
+     "nl": "Uitgevoerd door de SVB",
+     "en": "Run by the SVB"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Dekt huisarts, specialist, ziekenhuis, medicijnen en tandarts"
+    ],
+    "en": [
+     "Covers GP, specialist, hospital, drugs and dental care"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Bekend om lange wachttijden in de publieke zorg"
+    ],
+    "en": [
+     "Public care is known for long waiting times"
+    ]
+   },
+   "bronnen": [
+    "https://www.pacificprime.com/country/americas/curaçao-health-insurance-expats/",
+    "https://www.curacaochronicle.com/post/local/svb-income-not-enough-to-cover-bvz"
+   ]
+  },
+  {
+   "id": "fatum-health",
+   "naam": "Guardian Group Fatum (Fatum Health N.V.)",
+   "url": null,
+   "soort": {
+    "nl": "lokale zorgverzekeraar",
+    "en": "local health insurer"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "cat-zorg",
+    "voor-nederlanders",
+    "nl-sprekend",
+    "gezin",
+    "pensionado",
+    "ondernemer"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Aparte entiteit Fatum Health N.V.",
+     "en": "Separate entity Fatum Health N.V."
+    },
+    {
+     "nl": "Onder toezicht van de CBCS",
+     "en": "Supervised by the central bank"
+    },
+    {
+     "nl": "Ook leven en schade",
+     "en": "Also life and general insurance"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/main/clarification-on-guardian-group-fatum"
+   ]
+  },
+  {
+   "id": "ennia-caribe-zorg",
+   "naam": "ENNIA Caribe Zorg N.V.",
+   "url": null,
+   "soort": {
+    "nl": "lokale zorgverzekeraar",
+    "en": "local health insurer"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "cat-zorg",
+    "voor-nederlanders",
+    "nl-sprekend",
+    "gezin",
+    "pensionado",
+    "ondernemer"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Herstart per 1 januari 2025",
+     "en": "Relaunched January 1, 2025"
+    },
+    {
+     "nl": "Onderdeel van ENNIA Holding N.V.",
+     "en": "Part of ENNIA Holding N.V."
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/ennia-introduces-new-insurance-group-as-of-january-1-2025",
+    "https://www.curacaochronicle.com/post/main-news/central-bank-sound-relaunch-of-ennia-as-of-january-1-2025"
+   ]
+  },
+  {
+   "id": "cigna-global",
+   "naam": "Cigna Global",
+   "url": "https://www.cignaglobal.com",
+   "soort": {
+    "nl": "internationale expatpolis",
+    "en": "international expat plan"
+   },
+   "plaats": null,
+   "tags": [
+    "cat-zorg",
+    "voor-amerikanen",
+    "remote-werker",
+    "pensionado"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Plannen Silver, Gold, Platinum",
+     "en": "Silver, Gold and Platinum plans"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.pacificprime.com/country/americas/curaçao-health-insurance-expats/"
+   ]
+  },
+  {
+   "id": "allianz-care",
+   "naam": "Allianz Care",
+   "url": "https://www.allianzcare.com",
+   "soort": {
+    "nl": "internationale expatpolis",
+    "en": "international expat plan"
+   },
+   "plaats": null,
+   "tags": [
+    "cat-zorg",
+    "voor-amerikanen",
+    "remote-werker",
+    "pensionado",
+    "gezin"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Plannen Care, Care Plus, Care Pro",
+     "en": "Care, Care Plus, Care Pro plans"
+    },
+    {
+     "nl": "Maximaal USD 4 miljoen dekking",
+     "en": "Up to USD 4 million cover"
+    },
+    {
+     "nl": "Gevestigd in Ierland",
+     "en": "Based in Ireland"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.pacificprime.com/country/americas/curaçao-health-insurance-expats/",
+    "https://expatverzekeringbe.joho.hosting.grip.nl/internationale-verzekeringen/verzekeraars/allianz-care"
+   ]
+  },
+  {
+   "id": "bupa-global",
+   "naam": "Bupa Global",
+   "url": "https://www.bupaglobal.com",
+   "soort": {
+    "nl": "internationale expatpolis",
+    "en": "international expat plan"
+   },
+   "plaats": null,
+   "tags": [
+    "cat-zorg",
+    "voor-amerikanen",
+    "pensionado",
+    "remote-werker"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Plannen Select, Premier, Elite",
+     "en": "Select, Premier and Elite plans"
+    },
+    {
+     "nl": "Elite: ca. USD 4,76 mln limiet",
+     "en": "Elite: about USD 4.76M limit"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.pacificprime.com/country/americas/curaçao-health-insurance-expats/"
+   ]
+  },
+  {
+   "id": "axa-global-healthcare",
+   "naam": "AXA Global Healthcare",
+   "url": "https://www.axaglobalhealthcare.com",
+   "soort": {
+    "nl": "internationale expatpolis",
+    "en": "international expat plan"
+   },
+   "plaats": null,
+   "tags": [
+    "cat-zorg",
+    "voor-amerikanen",
+    "remote-werker",
+    "pensionado"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vijf niveaus, Foundation tot Prestige Plus",
+     "en": "Five tiers, Foundation to Prestige Plus"
+    },
+    {
+     "nl": "Opname: USD 160.000 tot 8 mln",
+     "en": "Inpatient: USD 160,000 to 8M"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.pacificprime.com/country/americas/curaçao-health-insurance-expats/"
+   ]
+  },
+  {
+   "id": "april-international",
+   "naam": "April International",
+   "url": "https://www.april-international.com",
+   "soort": {
+    "nl": "internationale expatpolis",
+    "en": "international expat plan"
+   },
+   "plaats": null,
+   "tags": [
+    "cat-zorg",
+    "voor-amerikanen",
+    "remote-werker",
+    "pensionado"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Van Emergency tot Premium Plan",
+     "en": "From Emergency to Premium plan"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.pacificprime.com/country/americas/curaçao-health-insurance-expats/"
+   ]
+  },
+  {
+   "id": "mcb",
+   "naam": "Maduro & Curiel's Bank (MCB)",
+   "url": "https://www.mcb-bank.com",
+   "soort": {
+    "nl": "grootste lokale bank",
+    "en": "largest local bank"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "cat-bank",
+    "voor-nederlanders",
+    "nl-sprekend",
+    "gezin",
+    "pensionado",
+    "ondernemer",
+    "remote-werker"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Grootste bank, USD 5,3 mrd balans",
+     "en": "Largest bank, USD 5.3B in assets"
+    },
+    {
+     "nl": "Ook rekening voor niet-ingezetenen",
+     "en": "Also offers non-resident accounts"
+    },
+    {
+     "nl": "Online starten, afronden op kantoor",
+     "en": "Start online, finish at a branch"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mcb-bank.com/personal/products/current-account",
+    "https://mcb-bank.com/personal/products/non-resident-account",
+    "https://globalbanks.com/curacao-bank-best/"
+   ]
+  },
+  {
+   "id": "banco-di-caribe",
+   "naam": "Banco di Caribe",
+   "url": null,
+   "soort": {
+    "nl": "lokale bank",
+    "en": "local bank"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "cat-bank",
+    "voor-nederlanders",
+    "nl-sprekend",
+    "gezin",
+    "ondernemer"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Bezoek op kantoor waarschijnlijk nodig",
+     "en": "Branch visit likely required"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://globalbanks.com/curacao-banks-list/",
+    "https://wheretoemigrate.io/blog/banking-in-curaao-expat-guide-2026"
+   ]
+  },
+  {
+   "id": "orco-bank",
+   "naam": "Orco Bank",
+   "url": null,
+   "soort": {
+    "nl": "lokale bank",
+    "en": "local bank"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "cat-bank",
+    "voor-nederlanders",
+    "nl-sprekend",
+    "ondernemer",
+    "remote-werker"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Actief op Curaçao, Bonaire, Sint Maarten",
+     "en": "Active on Curaçao, Bonaire, St. Maarten"
+    },
+    {
+     "nl": "Nam CIBC FirstCaribbean-portefeuille over",
+     "en": "Took over CIBC FirstCaribbean portfolio"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/orco-bank-to-acquire-cibc-firstcaribbeans-curacao-and-sint-maarten-portfolio-in-major-expansion-move/",
+    "https://wheretoemigrate.io/blog/banking-in-curaao-expat-guide-2026",
+    "https://globalbanks.com/curacao-banks-list/"
+   ]
+  },
+  {
+   "id": "rbc-royal-bank",
+   "naam": "RBC Royal Bank N.V.",
+   "url": null,
+   "soort": {
+    "nl": "Caribische bankketen",
+    "en": "Caribbean bank chain"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "cat-bank",
+    "voor-amerikanen",
+    "ondernemer",
+    "gezin"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Aanvraag via filiaal of Advice Centre",
+     "en": "Apply at a branch or Advice Centre"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://globalbanks.com/curacao-banks-list/",
+    "https://wheretoemigrate.io/blog/banking-in-curaao-expat-guide-2026",
+    "https://globalbanks.com/curacao-bank-best/"
+   ]
+  },
+  {
+   "id": "republic-bank",
+   "naam": "Republic Bank N.V.",
+   "url": null,
+   "soort": {
+    "nl": "Caribische bankketen",
+    "en": "Caribbean bank chain"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "cat-bank",
+    "voor-amerikanen",
+    "ondernemer"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Actief in 13 landen",
+     "en": "Operates in 13 jurisdictions"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://globalbanks.com/curacao-banks-list/"
+   ]
+  },
+  {
+   "id": "vidanova-bank",
+   "naam": "Vidanova Bank N.V.",
+   "url": null,
+   "soort": {
+    "nl": "lokale bank",
+    "en": "local bank"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "cat-bank",
+    "voor-nederlanders",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Voorheen S.F.T. Bank",
+     "en": "Formerly S.F.T. Bank"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://openbankingtracker.com/country/curacao"
+   ]
+  },
+  {
+   "id": "gosselin",
+   "naam": "Gosselin Mobility",
+   "url": "https://gosselingroup.eu",
+   "soort": {
+    "nl": "internationale verhuizer",
+    "en": "international mover"
+   },
+   "plaats": null,
+   "tags": [
+    "cat-verhuizen",
+    "voor-nederlanders",
+    "nl-sprekend",
+    "gezin"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Kantoor in Rotterdam",
+     "en": "Office in Rotterdam"
+    },
+    {
+     "nl": "Wereldwijde verhuizingen",
+     "en": "Moves worldwide"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Sirelo",
+     "score": 10.0,
+     "max": 10,
+     "aantal": 16,
+     "peildatum": "2026-10-20",
+     "bron": "https://sirelo.nl/verhuisbedrijf/rotterdam/gosselin-mobility-the-netherlands/"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Zorgvuldig ingepakt, spullen kwamen heel aan",
+     "Goede communicatie en updates tijdens containerverhuizing",
+     "Eerlijke prijs en soepel proces"
+    ],
+    "en": [
+     "Careful packing, belongings arrived undamaged",
+     "Good communication and updates during a container move",
+     "Fair price and a smooth process"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Een enkele klacht over de montage"
+    ],
+    "en": [
+     "One complaint about furniture assembly"
+    ]
+   },
+   "bronnen": [
+    "https://sirelo.nl/verhuisbedrijf/rotterdam/gosselin-mobility-the-netherlands/",
+    "https://www.portofantwerpbruges.com/en/thuishaven-magazine/verhuizen-via-de-haven"
+   ]
+  },
+  {
+   "id": "de-haan",
+   "naam": "De Haan Verhuizingen",
+   "url": "https://www.dehaan.nl",
+   "soort": {
+    "nl": "internationale verhuizer",
+    "en": "international mover"
+   },
+   "plaats": null,
+   "tags": [
+    "cat-verhuizen",
+    "voor-nederlanders",
+    "nl-sprekend",
+    "gezin"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Opgericht in 1777",
+     "en": "Founded in 1777"
+    },
+    {
+     "nl": "Verhuist naar vijf continenten",
+     "en": "Moves to five continents"
+    },
+    {
+     "nl": "Ook tijdelijke opslag",
+     "en": "Also temporary storage"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://dehaan.nl/en/blog/info/international-moving-company"
+   ]
+  },
+  {
+   "id": "mondial-movers",
+   "naam": "Mondial Movers",
+   "url": null,
+   "soort": {
+    "nl": "internationale verhuizer",
+    "en": "international mover"
+   },
+   "plaats": "Castricum (NL)",
+   "tags": [
+    "cat-verhuizen",
+    "voor-nederlanders",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Gevestigd in Castricum",
+     "en": "Based in Castricum, NL"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Trustoo",
+     "score": 8.7,
+     "max": 10,
+     "aantal": 1,
+     "peildatum": "2026-10-20",
+     "bron": "https://trustoo.nl/noord-holland/castricum/verhuisbedrijf/castricum-mondial-movers/"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Beleefde verhuizers die spullen vooraf op schade controleerden"
+    ],
+    "en": [
+     "Polite crew that checked items for damage before the move"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://trustoo.nl/noord-holland/castricum/verhuisbedrijf/castricum-mondial-movers/"
+   ]
+  },
+  {
+   "id": "toelatingsorganisatie",
+   "naam": "Toelatingsorganisatie Curaçao (Immigratiedienst)",
+   "url": "https://immigrationcur.org",
+   "soort": {
+    "nl": "overheid, vergunningen",
+    "en": "government, permits"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "cat-advies",
+    "voor-nederlanders",
+    "nl-sprekend",
+    "gezin",
+    "pensionado",
+    "ondernemer"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Beslist binnen vier maanden",
+     "en": "Decides within four months"
+    },
+    {
+     "nl": "Site in vier talen",
+     "en": "Website in four languages"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://immigrationcur.org/en//toelating",
+    "https://www.doingbusinessdutchcaribbean.com/curacao/immigration-requirements-cur/dutch-citizens-cur/"
+   ]
+  },
+  {
+   "id": "at-home-in-curacao",
+   "naam": "@HOME in Curaçao",
+   "url": "https://www.athomeincuracao.com",
+   "soort": {
+    "nl": "remote-work programma",
+    "en": "remote work program"
+   },
+   "plaats": null,
+   "tags": [
+    "cat-advies",
+    "remote-werker",
+    "voor-amerikanen",
+    "gezin",
+    "nl-sprekend"
+   ],
+   "prijs": {
+    "bedrag": 294,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per aanvraag (ANG 535)",
+     "en": "per application (ANG 535)"
+    },
+    "bron": "https://www.athomeincuracao.com/faq",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "6 maanden, verlengbaar tot 1 jaar",
+     "en": "6 months, extendable to 1 year"
+    },
+    {
+     "nl": "Geen Curaçaose inkomstenbelasting",
+     "en": "No Curaçao income tax"
+    },
+    {
+     "nl": "Besluit in circa 2 weken",
+     "en": "Decision in about 2 weeks"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.athomeincuracao.com/faq",
+    "https://www.lonelyplanet.com/articles/curacao-long-term-stays"
+   ]
+  },
+  {
+   "id": "sebastian-sauerborn",
+   "naam": "Sebastian Sauerborn",
+   "url": "https://www.sebsauerborn.com",
+   "soort": {
+    "nl": "belasting- en vestigingsadvies",
+    "en": "tax and relocation adviser"
+   },
+   "plaats": null,
+   "tags": [
+    "cat-advies",
+    "pensionado",
+    "ondernemer"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adviseert over pensionado-regeling",
+     "en": "Advises on the penshonado regime"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.sebsauerborn.com/countries/curacao"
+   ]
+  },
+  {
+   "id": "global-citizen-solutions",
+   "naam": "Global Citizen Solutions",
+   "url": "https://www.globalcitizensolutions.com",
+   "soort": {
+    "nl": "verblijfs- en investeringsadvies",
+    "en": "residency and investment adviser"
+   },
+   "plaats": null,
+   "tags": [
+    "cat-advies",
+    "pensionado",
+    "voor-amerikanen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Gids voor wonen op Curaçao",
+     "en": "Publishes a Curaçao living guide"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.globalcitizensolutions.com/living-in-curacao/"
+   ]
+  },
+  {
+   "id": "workspot-curacao",
+   "naam": "Workspot Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "coworking, historisch pand",
+    "en": "coworking in a historic building"
+   },
+   "plaats": "Scharloo, Willemstad",
+   "tags": [
+    "cat-coworking",
+    "remote-werker",
+    "ondernemer"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Bitterstraat 17",
+     "en": "Bitterstraat 17"
+    },
+    {
+     "nl": "Eerste coworking van Curaçao",
+     "en": "Curaçao's first coworking space"
+    },
+    {
+     "nl": "24 uur toegang, printen",
+     "en": "24-hour access, printing"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Coworker",
+     "score": 4.33,
+     "max": 5,
+     "aantal": 2,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.coworker.com/netherlands-antilles/willemstad/workspot-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Werken in een monumentaal pand op de Werelderfgoedlijst",
+     "Ontspannen sfeer zonder strenge stilteregels",
+     "Vriendelijke mix van lokale ondernemers en nomads"
+    ],
+    "en": [
+     "You work in a historic UNESCO-listed building",
+     "Relaxed vibe without strict quiet rules",
+     "Friendly mix of local founders and digital nomads"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.coworker.com/netherlands-antilles/willemstad/workspot-curacao"
+   ]
+  },
+  {
+   "id": "curacao-coworking",
+   "naam": "Curaçao Coworking",
+   "url": null,
+   "soort": {
+    "nl": "coworking",
+    "en": "coworking"
+   },
+   "plaats": "Pietermaai, Willemstad",
+   "tags": [
+    "cat-coworking",
+    "remote-werker",
+    "ondernemer"
+   ],
+   "prijs": {
+    "bedrag": 20,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per dag (vanaf)",
+     "en": "per day (from)"
+    },
+    "bron": "https://www.coworker.com/netherlands-antilles/willemstad/workspot-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Abraham de Veerstraat 9",
+     "en": "Abraham de Veerstraat 9"
+    },
+    {
+     "nl": "24/7 toegang voor maandleden",
+     "en": "24/7 access for monthly members"
+    },
+    {
+     "nl": "Wifi ca. 103 Mbit/s download",
+     "en": "Wi-Fi about 103 Mbps down"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.coworker.com/netherlands-antilles/willemstad/curacao-coworking",
+    "https://workfrom.co/curacao-coworking-willemstad-267541",
+    "https://www.coworker.com/netherlands-antilles/willemstad/workspot-curacao"
+   ]
+  },
+  {
+   "id": "coworld-curacao",
+   "naam": "coWorld coworking community Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "coworking",
+    "en": "coworking"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "cat-coworking",
+    "remote-werker",
+    "ondernemer"
+   ],
+   "prijs": {
+    "bedrag": 30,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per dag (vanaf)",
+     "en": "per day (from)"
+    },
+    "bron": "https://www.coworker.com/netherlands-antilles/willemstad/workspot-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Hoogstraat 18",
+     "en": "Hoogstraat 18"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.coworker.com/netherlands-antilles/willemstad/coworld-coworking-community-curacao/review",
+    "https://www.coworker.com/netherlands-antilles/willemstad/workspot-curacao"
+   ]
+  },
+  {
+   "id": "sadekya-house",
+   "naam": "Sadekya House Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "coworking",
+    "en": "coworking"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "cat-coworking",
+    "remote-werker"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.coworker.com/netherlands-antilles/willemstad/sadekya-house-curacao"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Wise",
+   "url": "https://wise.com",
+   "uitleg": {
+    "nl": "Handig om geld over te maken naar je Curaçaose rekening. De pas werkt wisselend: opnemen in guldens met chip en pincode bij een bank-pinautomaat lukt vaker dan betalen in winkels.",
+    "en": "Useful for moving money to your Curaçao account. The card is hit or miss: withdrawing guilders with chip and PIN at a bank ATM works more often than paying in shops."
+   }
+  },
+  {
+   "naam": "Revolut",
+   "url": "https://www.revolut.com",
+   "uitleg": {
+    "nl": "Reizigers melden dat de Revolut-pas soms werkte waar Wise geweigerd werd. Neem altijd contant geld of een tweede pas mee.",
+    "en": "Travelers report the Revolut card sometimes worked where Wise was declined. Always carry cash or a backup card."
+   }
+  },
+  {
+   "naam": "JoHo Insurances",
+   "url": "https://expatverzekeringbe.joho.hosting.grip.nl/internationale-verzekeringen/verzekeraars/allianz-care",
+   "uitleg": {
+    "nl": "Nederlandse bemiddelaar voor expat- en emigratieverzekeringen, onder meer Allianz Care, met 10% korting op de online premie.",
+    "en": "Dutch broker for expat and emigration insurance, including Allianz Care, with 10% off the online premium."
+   }
+  },
+  {
+   "naam": "Pacific Prime",
+   "url": "https://www.pacificprime.com/country/americas/curaçao-health-insurance-expats/",
+   "uitleg": {
+    "nl": "Broker die offertes van Allianz, April, AXA, Cigna en Bupa voor Curaçao naast elkaar zet.",
+    "en": "Broker that compares quotes from Allianz, April, AXA, Cigna and Bupa for Curaçao."
+   }
+  },
+  {
+   "naam": "MoverDB",
+   "url": "https://moverdb.com/container-shipping/curacao",
+   "uitleg": {
+    "nl": "Vergelijkt containertarieven en stuurt offerteaanvragen door naar verhuizers.",
+    "en": "Compares container rates and passes quote requests to movers."
+   }
+  },
+  {
+   "naam": "Coworker",
+   "url": "https://www.coworker.com/office-space/netherlands-antilles/willemstad",
+   "uitleg": {
+    "nl": "Overzicht van coworkingplekken in Willemstad met reviews en prijzen vanaf.",
+    "en": "Directory of Willemstad coworking spaces with reviews and starting prices."
+   }
+  },
+  {
+   "naam": "Sirelo",
+   "url": "https://sirelo.nl/verhuisbedrijf/rotterdam/gosselin-mobility-the-netherlands/",
+   "uitleg": {
+    "nl": "Reviewsite voor verhuisbedrijven; handig om internationale verhuizers te vergelijken.",
+    "en": "Review site for moving companies, handy for comparing international movers."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "De Caribische gulden (XCG) staat vast op 1,79 per Amerikaanse dollar.",
+   "en": "The Caribbean guilder (XCG) is pegged at 1.79 to the US dollar."
+  },
+  {
+   "nl": "Je toelating van rechtswege vervalt als je langer dan een jaar in het buitenland woont. Daarna moet je opnieuw aanvragen.",
+   "en": "Your admission by right lapses if you live abroad for more than a year, and you have to apply again."
+  },
+  {
+   "nl": "Toelating geeft je geen recht om een bedrijf te drijven. Voor sommige bedrijven of als directeur heb je extra een vestigings- of directeursvergunning nodig.",
+   "en": "Admission doesn't give you the right to run a business. Some businesses and director roles need a separate business or director's license."
+  },
+  {
+   "nl": "Pensionado? Vraag de status binnen twee maanden na inschrijving aan bij de Inspecteur der Belastingen. Een gemiste termijn is niet te herstellen.",
+   "en": "Planning to retire there? Apply to the tax inspector within two months of registering. A missed deadline can't be fixed."
+  },
+  {
+   "nl": "Met @HOME mag je niet voor een Curaçaose werkgever werken. Je werkgever of klanten moeten in het buitenland gevestigd zijn.",
+   "en": "On @HOME you can't work for a Curaçao employer. Your employer or clients must be based abroad."
+  },
+  {
+   "nl": "Een BV richt je op bij de notaris, meestal binnen ongeveer twee weken. De winstbelasting is 15% tot XCG 500.000 winst en 22% daarboven.",
+   "en": "You set up a BV (local LLC) through a notary, usually in about two weeks. Profit tax is 15% up to XCG 500,000 and 22% above that."
+  },
+  {
+   "nl": "Neem contant geld of een tweede pas mee: pinpassen van digitale banken worden op Curaçao geregeld geweigerd.",
+   "en": "Bring cash or a backup card: cards from digital banks are regularly declined on Curaçao."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Mag ik als Nederlander zomaar op Curaçao gaan wonen?",
+    "en": "Can Dutch citizens just move to Curaçao?"
+   },
+   "a": {
+    "nl": "Nee. Ben je niet op de eilanden geboren, dan heb je een verklaring toelating van rechtswege van de Toelatingsorganisatie nodig en moet je in je eigen onderhoud kunnen voorzien. Als toerist mag je zes maanden blijven; wil je werken of langer blijven, dan vraag je de verklaring aan. Je mag tijdens de aanvraag op het eiland blijven. De organisatie beslist binnen vier maanden.",
+    "en": "No. If you weren't born on the islands, you need an admission-by-right declaration from the Admission Office and you must be able to support yourself. As a tourist you can stay six months; to work or stay longer, you apply for the declaration. You can stay on the island while it's pending, and the office decides within four months."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke wet regelt toelating op Curaçao?",
+    "en": "Which law governs admission to Curaçao?"
+   },
+   "a": {
+    "nl": "De Landsverordening toelating en uitzetting (LTU). Die bepaalt wie op Curaçao mag verblijven en onder welke voorwaarden, ook voor Nederlanders die niet op de eilanden zijn geboren.",
+    "en": "The Landsverordening toelating en uitzetting (LTU), Curaçao's admission and deportation ordinance. It sets who may stay on Curaçao and on what terms, including for Dutch citizens not born on the islands."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is het @HOME in Curaçao-programma?",
+    "en": "What is the @HOME in Curaçao program?"
+   },
+   "a": {
+    "nl": "Een vergunning voor remote werkers van elke nationaliteit, voor zes maanden en eenmaal te verlengen tot maximaal een jaar. Het kost ANG 535 (ongeveer USD 294), de beslissing duurt circa twee weken, en je betaalt geen Curaçaose inkomstenbelasting. Gezinnen vragen samen aan. Je wordt er geen inwoner door.",
+    "en": "A permit for remote workers of any nationality, for six months and extendable once to a year. It costs ANG 535 (about USD 294), takes about two weeks, and you don't pay Curaçao income tax. Families apply together. It doesn't make you a resident."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe werkt de pensionado-regeling op Curaçao?",
+    "en": "How does Curaçao's retiree (penshonado) tax regime work?"
+   },
+   "a": {
+    "nl": "Ben je 50 of ouder en woonde je de vijf jaar ervoor niet op Curaçao, dan betaal je 10% belasting over buitenlands inkomen zoals pensioen. Voorwaarden: aanvragen binnen twee maanden na inschrijving, binnen 18 maanden een eigen woning van minstens XCG 450.000 die je niet verhuurt, en geen werk of bedrijf op Curaçao.",
+    "en": "If you're 50 or older and didn't live on Curaçao in the previous five years, foreign income such as pensions is taxed at a flat 10%. Conditions: apply within two months of registering, own a home worth at least XCG 450,000 within 18 months that you don't rent out, and don't work or run a business on Curaçao."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke zorgverzekering heb ik nodig op Curaçao?",
+    "en": "What health insurance do I need on Curaçao?"
+   },
+   "a": {
+    "nl": "Inwoners met een verblijfsvergunning kunnen onder de basisverzekering ziektekosten (BVZ) van de SVB vallen; werkenden betalen de premie via het loon. Lokaal verzekeren onder meer Fatum Health (Guardian Group) en ENNIA Caribe Zorg. Wie korter dan 180 dagen blijft, is aangewezen op een particuliere polis, zoals van Cigna Global, Allianz Care, Bupa Global, AXA of April. Voor @HOME is een geldige zorg- of reisverzekering verplicht.",
+    "en": "Residents with a permit can be covered by the SVB's basic health insurance (BVZ); workers pay through payroll. Local insurers include Fatum Health (Guardian Group) and ENNIA Caribe Zorg. If you stay under 180 days, you'll need a private plan from insurers like Cigna Global, Allianz Care, Bupa Global, AXA or April. @HOME requires valid medical or travel insurance."
+   }
+  },
+  {
+   "q": {
+    "nl": "Blijft mijn Nederlandse zorgverzekering geldig als ik emigreer?",
+    "en": "Does my Dutch health insurance still apply after I move?"
+   },
+   "a": {
+    "nl": "Meestal niet. Wie zich uitschrijft en buiten de EU gaat wonen, zegt de Nederlandse zorgverzekering op. Heb je een Nederlands pensioen of AOW en woon je in een land zonder verdrag, dan heb je geen recht meer op zorg betaald door Nederland en sluit je een internationale of lokale polis af.",
+    "en": "Usually not. If you deregister and live outside the EU, you cancel your Dutch policy. With a Dutch pension or state pension in a non-treaty country, you lose Dutch-funded care and need an international or local plan."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kan ik een bankrekening openen voordat ik op Curaçao woon?",
+    "en": "Can I open a bank account before I live on Curaçao?"
+   },
+   "a": {
+    "nl": "Soms. MCB heeft een rekening voor niet-ingezetenen, maar vraagt een band met Curaçao, een referentiebrief, ID, adresbewijs van maximaal drie maanden oud en inkomensbewijs. Je kunt online beginnen, maar afronden gebeurt meestal op een kantoor. Reken op één tot drie weken.",
+    "en": "Sometimes. MCB has a non-resident account, but asks for a tie to Curaçao, a reference letter, ID, proof of address under three months old and proof of income. You can start online, but you usually finish at a branch. Expect one to three weeks."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost verhuizen met een container naar Curaçao?",
+    "en": "How much does it cost to ship a container to Curaçao?"
+   },
+   "a": {
+    "nl": "Alleen de zeevracht van een 20ft-container van Rotterdam naar Willemstad was volgens MoverDB ongeveer USD 1.936, een 40ft USD 3.276 (tarieven medio 2023). Vanuit New York was 20ft ongeveer USD 2.228. Een volledige verhuizing met inpakken en afhandeling komt volgens één bron uit op € 6.000 tot € 7.500 voor een 20ft-container. Een gedeelde container is goedkoper.",
+    "en": "Ocean freight alone for a 20ft container from Rotterdam to Willemstad was about USD 1,936 per MoverDB, or USD 3,276 for a 40ft (mid-2023 rates). From New York, a 20ft ran about USD 2,228. A full-service move in a 20ft container runs €6,000 to €7,500 according to one source. Sharing a container is cheaper."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost wonen op Curaçao en hoeveel belasting betaal ik?",
+    "en": "What does living on Curaçao cost, and what's the tax?"
+   },
+   "a": {
+    "nl": "Een appartement met één slaapkamer in het centrum kost volgens Numbeo-cijfers ongeveer USD 807 per maand, buiten het centrum USD 669 en drie slaapkamers in het centrum USD 1.718. Inkomstenbelasting loopt van 9,75% tot 46,5%. Inwoners betalen over hun wereldinkomen; adviseurs noemen 183 dagen als richtpunt voor belastingplicht, naast een vaste woning. Amerikanen blijven daarnaast aangifte doen in de VS; er is geen volledig belastingverdrag tussen de VS en Curaçao.",
+    "en": "Per Numbeo figures, a one-bedroom in the center runs about USD 807 a month, USD 669 outside the center, and a three-bedroom in the center USD 1,718. Income tax ranges from 9.75% to 46.5%. Residents are taxed on worldwide income; advisers cite 183 days as a marker for tax residency, along with having a home there. Americans still file US returns, and there's no comprehensive US-Curaçao tax treaty."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "emigreren naar Curaçao",
+   "wonen op Curaçao",
+   "verhuizen naar Curaçao",
+   "zorgverzekering Curaçao",
+   "bankrekening openen Curaçao",
+   "verklaring van rechtswege Curaçao",
+   "pensionado Curaçao",
+   "container naar Curaçao"
+  ],
+  "en": [
+   "moving to Curacao",
+   "living in Curacao",
+   "Curacao digital nomad visa",
+   "@HOME in Curacao",
+   "Curacao health insurance expats",
+   "open bank account Curacao",
+   "retire in Curacao",
+   "Curacao penshonado tax"
+  ],
+  "es": [
+   "mudarse a Curazao",
+   "vivir en Curazao",
+   "visa nómada digital Curazao",
+   "seguro médico Curazao",
+   "cuenta bancaria Curazao"
+  ],
+  "pt": [
+   "morar em Curaçao",
+   "mudar para Curaçao",
+   "visto nômade digital Curaçao",
+   "seguro saúde Curaçao"
+  ],
+  "de": [
+   "auswandern Curaçao",
+   "leben auf Curaçao",
+   "Krankenversicherung Curaçao",
+   "digitaler Nomade Curaçao",
+   "Rentner Curaçao Steuern"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Wat moet ik regelen als ik als Nederlander naar Curaçao emigreer?",
+   "Welke zorgverzekering is het best als je op Curaçao gaat wonen?",
+   "Hoe werkt de pensionado-regeling op Curaçao en wat zijn de voorwaarden?"
+  ],
+  "en": [
+   "What do I need to move to Curaçao as an American?",
+   "How does the @HOME in Curaçao remote worker program work?",
+   "Which bank should I use if I move to Curaçao?"
+  ]
+ },
+ "reviewGewicht": 0.5
+}

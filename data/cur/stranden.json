@@ -1,1 +1,2161 @@
-{"id":"stranden","peildatum":"2026-10-20","items":[]}
+{
+ "id": "stranden",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "strand",
+  "en": "beach"
+ },
+ "h1": {
+  "nl": "Stranden op Curaçao: welk strand past bij jou?",
+  "en": "Curaçao beaches: which beach is right for you?"
+ },
+ "titel": {
+  "nl": "Stranden Curaçao vergelijken: {n} stranden, entree en scores",
+  "en": "Curaçao Beaches Compared: {n} Beaches, Fees and Ratings"
+ },
+ "metaDesc": {
+  "nl": "{n} stranden op Curaçao met entreeprijs, voorzieningen, snorkelen en schildpadden. Welk strand past bij jou?",
+  "en": "{n} Curaçao beaches with entry fees, facilities, snorkeling and turtles. Find the beach that fits you."
+ },
+ "kort": {
+  "nl": "We vergeleken {n} stranden op Curaçao. De meeste stranden aan de westkant zijn gratis; betaalde stranden kosten $3 tot $4,50 per persoon of $6 per auto (Cas Abao). Grote Knip scoort het best (4,5 uit 5.098 reviews), voor kinderen zijn Porto Mari en Cas Abao het fijnst en voor schildpadden ga je naar Playa Piskado of Playa Lagun.",
+  "en": "We compared {n} Curaçao beaches. Most west-side beaches are free; paid beaches charge $3 to $4.50 per person or $6 per car (Cas Abao). Grote Knip rates highest (4.5 from 5,098 reviews), Porto Mari and Cas Abao work best with kids, and for turtles head to Playa Piskado or Playa Lagun."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat wil je vooral doen?",
+    "en": "What do you mainly want to do?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Gewoon een mooi strand",
+      "en": "Just a nice beach"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Snorkelen",
+      "en": "Snorkeling"
+     },
+     "plus": [
+      "snorkelen",
+      "schildpadden"
+     ],
+     "min": [],
+     "vereist": "snorkelen"
+    },
+    {
+     "label": {
+      "nl": "Relaxen met voorzieningen",
+      "en": "Relax with facilities"
+     },
+     "plus": [
+      "voorzieningen",
+      "schaduw"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Feest en beachclubs",
+      "en": "Party and beach clubs"
+     },
+     "plus": [
+      "feest",
+      "voorzieningen"
+     ],
+     "min": [
+      "rustig"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Rust en natuur",
+      "en": "Peace and nature"
+     },
+     "plus": [
+      "rustig",
+      "natuur"
+     ],
+     "min": [
+      "feest"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Ga je met kinderen?",
+    "en": "Are you bringing kids?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Nee",
+      "en": "No"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ja, kleine kinderen",
+      "en": "Yes, small kids"
+     },
+     "plus": [
+      "kinderen",
+      "voorzieningen"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ja, oudere kinderen",
+      "en": "Yes, older kids"
+     },
+     "plus": [
+      "kinderen",
+      "snorkelen"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Waar verblijf je?",
+    "en": "Where are you staying?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit, we rijden",
+      "en": "Doesn't matter, we'll drive"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "West (Banda Abou, Westpunt)",
+      "en": "West (Banda Abou, Westpunt)"
+     },
+     "plus": [
+      "westpunt"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Midden (Willemstad, Piscadera, Blue Bay)",
+      "en": "Central (Willemstad, Piscadera, Blue Bay)"
+     },
+     "plus": [
+      "midden"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Oost (Mambo, Jan Thiel, Spaanse Water)",
+      "en": "East (Mambo, Jan Thiel, Spanish Water)"
+     },
+     "plus": [
+      "oost"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wil je entree betalen?",
+    "en": "Do you mind paying an entry fee?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Liefst gratis",
+      "en": "Free only, please"
+     },
+     "plus": [
+      "gratis"
+     ],
+     "min": [
+      "entree"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Betalen voor voorzieningen is prima",
+      "en": "Happy to pay for facilities"
+     },
+     "plus": [
+      "entree",
+      "voorzieningen"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "grote-knip",
+   "naam": "Grote Knip (Kenepa Grandi)",
+   "url": null,
+   "soort": {
+    "nl": "baai, wit zand",
+    "en": "cove, white sand"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "westpunt",
+    "gratis",
+    "snorkelen",
+    "natuur"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Zeer populaire fotoplek",
+     "en": "Most photographed beach"
+    },
+    {
+     "nl": "Snackbar, stoelverhuur",
+     "en": "Snack bar, chair rental"
+    },
+    {
+     "nl": "Weinig schaduw",
+     "en": "Little shade"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 5098,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Helder turquoise water en snorkelen langs de rotsen",
+     "Doordeweeks rustig"
+    ],
+    "en": [
+     "Clear turquoise water and snorkeling along the rocks",
+     "Quiet on weekdays"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Druk in het weekend en als tourbussen komen",
+     "Water snel diep, kiezels bij de instap"
+    ],
+    "en": [
+     "Busy on weekends and when tour buses arrive",
+     "Water gets deep fast, pebbly entry"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+   ]
+  },
+  {
+   "id": "kleine-knip",
+   "naam": "Kleine Knip (Kenepa Chiki)",
+   "url": null,
+   "soort": {
+    "nl": "kleine baai",
+    "en": "small cove"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "westpunt",
+    "gratis",
+    "snorkelen",
+    "kinderen",
+    "rustig",
+    "schaduw",
+    "natuur"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Bewaker bij parkeerplaats",
+     "en": "Guard at the parking lot"
+    },
+    {
+     "nl": "Snackbar",
+     "en": "Snack bar"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 28,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Kalm water en zacht zand",
+     "Minder druk dan Grote Knip",
+     "Goed snorkelen langs de kliffen"
+    ],
+    "en": [
+     "Calm water and soft sand",
+     "Less crowded than Grote Knip",
+     "Good snorkeling along the cliffs"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Pas op voor manchinelbomen"
+    ],
+    "en": [
+     "Watch out for manchineel trees"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://majesticpalace.city/guides/best-beaches-in-curacao"
+   ]
+  },
+  {
+   "id": "playa-lagun",
+   "naam": "Playa Lagun",
+   "url": null,
+   "soort": {
+    "nl": "smalle vissersbaai",
+    "en": "narrow fishing cove"
+   },
+   "plaats": "Lagun",
+   "tags": [
+    "westpunt",
+    "gratis",
+    "snorkelen",
+    "schildpadden",
+    "rustig",
+    "kinderen",
+    "duiken-vanaf-strand"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Restaurants net boven het strand",
+     "en": "Restaurants just above the beach"
+    },
+    {
+     "nl": "Waterschoenen handig",
+     "en": "Water shoes help"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 1021,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rijk rif met veel vis aan beide kanten",
+     "Kalm water bij bijna elk weer"
+    ],
+    "en": [
+     "Rich reef with lots of fish on both sides",
+     "Calm water in almost any weather"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Vissersboten op het strand"
+    ],
+    "en": [
+     "Fishing boats share the sand"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://majesticpalace.city/guides/best-beaches-in-curacao"
+   ]
+  },
+  {
+   "id": "playa-piskado",
+   "naam": "Playa Piskado (Playa Grandi)",
+   "url": null,
+   "soort": {
+    "nl": "vissersstrand",
+    "en": "fishing beach"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "westpunt",
+    "gratis",
+    "schildpadden",
+    "snorkelen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Schildpadden bij de steiger",
+     "en": "Turtles at the pier"
+    },
+    {
+     "nl": "Snackbar en souvenirwinkel",
+     "en": "Snack bar and souvenir shop"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 905,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Bijna altijd groene zeeschildpadden"
+    ],
+    "en": [
+     "Green sea turtles almost every day"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Erg druk zodra tourbussen arriveren",
+     "Rotsige instap, geen ligstrand"
+    ],
+    "en": [
+     "Very crowded when tour buses arrive",
+     "Rocky entry, not a lounging beach"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+   ]
+  },
+  {
+   "id": "playa-forti",
+   "naam": "Playa Forti",
+   "url": null,
+   "soort": {
+    "nl": "klifstrand",
+    "en": "cliff beach"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "westpunt",
+    "gratis",
+    "natuur",
+    "rustig"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Klifspringen vanaf 14 meter",
+     "en": "Cliff jumping from 45 feet"
+    },
+    {
+     "nl": "Restaurant op de klif",
+     "en": "Clifftop restaurant"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 240,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Uitzicht vanaf het klifrestaurant"
+    ],
+    "en": [
+     "View from the clifftop restaurant"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Wordt snel diep, niet voor kleine kinderen"
+    ],
+    "en": [
+     "Drops off fast, not for small kids"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "https://nomadicniko.com/curacao/beaches/"
+   ]
+  },
+  {
+   "id": "playa-jeremi",
+   "naam": "Playa Jeremi",
+   "url": null,
+   "soort": {
+    "nl": "baai",
+    "en": "bay"
+   },
+   "plaats": "Lagun",
+   "tags": [
+    "westpunt",
+    "gratis",
+    "snorkelen",
+    "rustig",
+    "natuur"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Geen voorzieningen",
+     "en": "No facilities"
+    },
+    {
+     "nl": "Neem eten en drinken mee",
+     "en": "Bring food and drinks"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 403,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustig, vooral lokale bezoekers",
+     "Kinderen kunnen spelen en klimmen op rotsen"
+    ],
+    "en": [
+     "Quiet, mostly locals",
+     "Kids can play and climb the rocks"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen schaduw"
+    ],
+    "en": [
+     "No shade"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+   ]
+  },
+  {
+   "id": "playa-kalki",
+   "naam": "Playa Kalki",
+   "url": null,
+   "soort": {
+    "nl": "kleine baai",
+    "en": "small cove"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "westpunt",
+    "snorkelen",
+    "duiken-vanaf-strand",
+    "rustig"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Onderdeel van schildpaddentours",
+     "en": "Stop on turtle tours"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 512,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustige baai om te snorkelen"
+    ],
+    "en": [
+     "Quiet cove for snorkeling"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao"
+   ]
+  },
+  {
+   "id": "santa-martha-baai",
+   "naam": "Santa Martha Baai",
+   "url": null,
+   "soort": {
+    "nl": "baai",
+    "en": "bay"
+   },
+   "plaats": "Santa Marta",
+   "tags": [
+    "westpunt",
+    "rustig",
+    "natuur"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 13,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Weinig bezoekers"
+    ],
+    "en": [
+     "Few visitors"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "playa-santa-cruz",
+   "naam": "Playa Santa Cruz",
+   "url": null,
+   "soort": {
+    "nl": "lokaal strand",
+    "en": "local beach"
+   },
+   "plaats": "Santa Cruz",
+   "tags": [
+    "westpunt",
+    "gratis",
+    "rustig",
+    "schaduw"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Vertrekpunt boot naar Blue Room",
+     "en": "Boats leave for Blue Room"
+    },
+    {
+     "nl": "Palmen en schuilhutten",
+     "en": "Palms and shelters"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 245,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustig en weinig toeristen"
+    ],
+    "en": [
+     "Quiet with few tourists"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Zwerfafval op het strand"
+    ],
+    "en": [
+     "Litter on the beach"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://nomadicniko.com/curacao/beaches/"
+   ]
+  },
+  {
+   "id": "santu-pretu",
+   "naam": "Playa Santu Pretu",
+   "url": null,
+   "soort": {
+    "nl": "zwart zand",
+    "en": "black sand"
+   },
+   "plaats": "Banda Abou",
+   "tags": [
+    "westpunt",
+    "rustig",
+    "natuur"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Donker zand, zeldzaam op Curaçao",
+     "en": "Dark sand, rare on Curaçao"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 4,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Afgelegen en stil"
+    ],
+    "en": [
+     "Remote and quiet"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "cas-abao",
+   "naam": "Cas Abao",
+   "url": null,
+   "soort": {
+    "nl": "beheerd strand",
+    "en": "managed beach"
+   },
+   "plaats": "Banda Abou",
+   "tags": [
+    "westpunt",
+    "entree",
+    "voorzieningen",
+    "snorkelen",
+    "kinderen",
+    "schaduw",
+    "duiken-vanaf-strand"
+   ],
+   "prijs": {
+    "bedrag": 6,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per auto (max 4 personen), zondag $7",
+     "en": "per car (up to 4 people), $7 on Sundays"
+    },
+    "bron": "https://curatogo.com/beach.html?id=cas",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Open 8:00 tot 18:00",
+     "en": "Open 8 a.m. to 6 p.m."
+    },
+    {
+     "nl": "Ligstoel $3 extra",
+     "en": "Lounge chair $3 extra"
+    },
+    {
+     "nl": "Duikcentrum en douches",
+     "en": "Dive center and showers"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 2842,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Zacht zand en geleidelijke instap, goed met kinderen",
+     "Goed snorkelen langs de rotsen",
+     "Alle voorzieningen op één plek"
+    ],
+    "en": [
+     "Soft sand and gentle entry, good with kids",
+     "Good snorkeling along the rocks",
+     "Every facility in one place"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Druk als cruisebussen komen",
+     "Geen mobiel bereik"
+    ],
+    "en": [
+     "Busy when cruise buses arrive",
+     "No cell service"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://curatogo.com/beach.html?id=cas",
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+   ]
+  },
+  {
+   "id": "porto-mari",
+   "naam": "Playa Porto Marie",
+   "url": null,
+   "soort": {
+    "nl": "beheerd strand",
+    "en": "managed beach"
+   },
+   "plaats": "Landgoed Porto Mari",
+   "tags": [
+    "westpunt",
+    "entree",
+    "voorzieningen",
+    "snorkelen",
+    "kinderen",
+    "duiken-vanaf-strand",
+    "natuur"
+   ],
+   "prijs": {
+    "bedrag": 3,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon, onder 5 jaar gratis",
+     "en": "per person, under 5 free"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Dubbel rif vanaf het strand",
+     "en": "Double reef from shore"
+    },
+    {
+     "nl": "Ligstoel $3,50",
+     "en": "Lounge chair $3.50"
+    },
+    {
+     "nl": "Wilde varkens op het strand",
+     "en": "Wild pigs roam the beach"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 1833,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Zeer geleidelijke instap, favoriet bij gezinnen",
+     "Snorkelen tussen twee riffen",
+     "Schone, verzorgde voorzieningen"
+    ],
+    "en": [
+     "Very gentle entry, a family favorite",
+     "Snorkeling between two reefs",
+     "Clean, tidy facilities"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Druk, vooral op vrijdagmiddag",
+     "Varkens zoeken eten in tassen"
+    ],
+    "en": [
+     "Crowded, especially Friday afternoons",
+     "Pigs go after food in bags"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+   ]
+  },
+  {
+   "id": "daaibooi",
+   "naam": "Playa Daaibooi",
+   "url": null,
+   "soort": {
+    "nl": "lokaal strand",
+    "en": "local beach"
+   },
+   "plaats": "Sint Willibrordus",
+   "tags": [
+    "westpunt",
+    "gratis",
+    "schildpadden",
+    "kinderen",
+    "schaduw",
+    "rustig",
+    "snorkelen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Gratis parkeren",
+     "en": "Free parking"
+    },
+    {
+     "nl": "Kleine strandbar",
+     "en": "Small beach bar"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 469,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Kalm, helder water",
+     "Schildpadden als je verder uitzwemt",
+     "Schaduw van bomen en palapa's"
+    ],
+    "en": [
+     "Calm, clear water",
+     "Turtles if you swim farther out",
+     "Shade from trees and palapas"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Op zondag vol met lokale gezinnen"
+    ],
+    "en": [
+     "Packed with local families on Sundays"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
+    "https://majesticpalace.city/guides/best-beaches-in-curacao"
+   ]
+  },
+  {
+   "id": "karakter-beach-club",
+   "naam": "Karakter Beach Club (Coral Estate)",
+   "url": null,
+   "soort": {
+    "nl": "beachclub",
+    "en": "beach club"
+   },
+   "plaats": "Rif Sint Marie",
+   "tags": [
+    "westpunt",
+    "gratis",
+    "voorzieningen",
+    "snorkelen",
+    "rustig"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Bedjes gratis bij bestelling",
+     "en": "Loungers free if you order"
+    },
+    {
+     "nl": "Trap het water in",
+     "en": "Stone steps into the sea"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Rustige sfeer met restaurant"
+    ],
+    "en": [
+     "Calm setting with a restaurant"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen zandinstap, via trap"
+    ],
+    "en": [
+     "No sandy entry, steps only"
+    ]
+   },
+   "bronnen": [
+    "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
+    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao"
+   ]
+  },
+  {
+   "id": "kokomo",
+   "naam": "Kokomo Beach (Vaersenbaai)",
+   "url": null,
+   "soort": {
+    "nl": "beachclub",
+    "en": "beach club"
+   },
+   "plaats": "Vaersenbaai",
+   "tags": [
+    "midden",
+    "gratis",
+    "voorzieningen",
+    "feest",
+    "snorkelen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Ligbedden tegen betaling",
+     "en": "Loungers cost extra"
+    },
+    {
+     "nl": "Bekend om de zeeschommel",
+     "en": "Known for its sea swing"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 600,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gezellige beachbar bij zonsondergang",
+     "Goed snorkelen rechts in de baai"
+    ],
+    "en": [
+     "Lively beach bar at sunset",
+     "Good snorkeling on the right side"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Druk in het weekend met DJ's"
+    ],
+    "en": [
+     "Busy weekends with DJs"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
+    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao"
+   ]
+  },
+  {
+   "id": "blue-bay",
+   "naam": "Blue Bay Beach",
+   "url": null,
+   "soort": {
+    "nl": "resortstrand",
+    "en": "resort beach"
+   },
+   "plaats": "Blue Bay, Sint Michiel",
+   "tags": [
+    "midden",
+    "entree",
+    "voorzieningen",
+    "snorkelen",
+    "kinderen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ligstoelen en restaurants",
+     "en": "Loungers and restaurants"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 830,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Makkelijk zwemmen met resortgemak",
+     "Rif links van de baai"
+    ],
+    "en": [
+     "Easy swimming with resort comfort",
+     "Reef off the left point"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao"
+   ]
+  },
+  {
+   "id": "boka-sint-michiel",
+   "naam": "Boka Sint Michiel (Boka Sami)",
+   "url": null,
+   "soort": {
+    "nl": "vissersdorp",
+    "en": "fishing village"
+   },
+   "plaats": "Sint Michiel",
+   "tags": [
+    "midden",
+    "rustig",
+    "duiken-vanaf-strand"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Startplek Aquafari",
+     "en": "Aquafari meeting point"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 6,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Lokaal en rustig"
+    ],
+    "en": [
+     "Local and quiet"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "marie-pampoen",
+   "naam": "Marie Pampoen Beach",
+   "url": null,
+   "soort": {
+    "nl": "stadsstrand",
+    "en": "city beach"
+   },
+   "plaats": "Marie Pampoen, Willemstad",
+   "tags": [
+    "midden",
+    "rustig"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 2.7,
+     "max": 5,
+     "aantal": 3,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Dichtbij Willemstad"
+    ],
+    "en": [
+     "Close to Willemstad"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Lage score bij weinig reviews"
+    ],
+    "en": [
+     "Low score on few reviews"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "mambo-beach",
+   "naam": "Mambo Beach",
+   "url": null,
+   "soort": {
+    "nl": "strandboulevard",
+    "en": "beach strip"
+   },
+   "plaats": "Bapor Kibra",
+   "tags": [
+    "oost",
+    "entree",
+    "voorzieningen",
+    "feest",
+    "kinderen"
+   ],
+   "prijs": {
+    "bedrag": 4.5,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person"
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Ongeveer 40 winkels en restaurants",
+     "en": "About 40 shops and restaurants"
+    },
+    {
+     "nl": "Golfbreker, vlak water",
+     "en": "Breakwater, flat water"
+    },
+    {
+     "nl": "Speeltuin en waterpark",
+     "en": "Playground and inflatable water park"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 1550,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Ondiep, kalm water voor kleine kinderen",
+     "Alles binnen loopafstand"
+    ],
+    "en": [
+     "Shallow, calm water for small kids",
+     "Everything within walking distance"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Druk en toeristisch"
+    ],
+    "en": [
+     "Crowded and touristy"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+   ]
+  },
+  {
+   "id": "cabana-beach",
+   "naam": "Cabana Beach",
+   "url": null,
+   "soort": {
+    "nl": "beachclub",
+    "en": "beach club"
+   },
+   "plaats": "Bapor Kibra",
+   "tags": [
+    "oost",
+    "entree",
+    "voorzieningen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Naast Mambo Beach",
+     "en": "Next to Mambo Beach"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.8,
+     "max": 5,
+     "aantal": 37,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Voorzieningen dicht bij de stad"
+    ],
+    "en": [
+     "Facilities close to town"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao"
+   ]
+  },
+  {
+   "id": "jan-thiel",
+   "naam": "Jan Thiel Beach",
+   "url": null,
+   "soort": {
+    "nl": "beachclubs",
+    "en": "beach clubs"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "oost",
+    "entree",
+    "voorzieningen",
+    "feest",
+    "kinderen"
+   ],
+   "prijs": {
+    "bedrag": 3,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon, na 16:30 gratis",
+     "en": "per person, free after 4:30 p.m."
+    },
+    "bron": "https://nomadicniko.com/curacao/beaches/",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Beschutte lagune",
+     "en": "Sheltered lagoon"
+    },
+    {
+     "nl": "Speeltuin en ijswinkel",
+     "en": "Playground and ice cream shop"
+    },
+    {
+     "nl": "Ligbedden extra",
+     "en": "Loungers extra"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 1238,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Heel kalm water, fijn voor gezinnen",
+     "Veel beachclubs en restaurants"
+    ],
+    "en": [
+     "Very calm water, easy for families",
+     "Plenty of beach clubs and restaurants"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Erg druk en toeristisch"
+    ],
+    "en": [
+     "Very crowded and touristy"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+   ]
+  },
+  {
+   "id": "baya-beach",
+   "naam": "Baya Beach",
+   "url": null,
+   "soort": {
+    "nl": "beachclub",
+    "en": "beach club"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "oost",
+    "entree",
+    "voorzieningen",
+    "feest"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Bar en ligbedden",
+     "en": "Bar and loungers"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Weekendsfeer met muziek"
+    ],
+    "en": [
+     "Weekend vibe with music"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Vol met stadsbewoners in het weekend"
+    ],
+    "en": [
+     "Fills with locals from town on weekends"
+    ]
+   },
+   "bronnen": [
+    "https://majesticpalace.city/guides/best-beaches-in-curacao"
+   ]
+  },
+  {
+   "id": "caracasbaai",
+   "naam": "Playa Caracasbaai",
+   "url": null,
+   "soort": {
+    "nl": "baai",
+    "en": "bay"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "oost",
+    "snorkelen",
+    "duiken-vanaf-strand"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Restaurant aan het eind",
+     "en": "Restaurant at the far end"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Populair bij snorkelaars en duikers"
+    ],
+    "en": [
+     "Popular with snorkelers and divers"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://nomadicniko.com/curacao/beaches/"
+   ]
+  },
+  {
+   "id": "tugboat-beach",
+   "naam": "Tugboat Beach",
+   "url": null,
+   "soort": {
+    "nl": "snorkelstrand",
+    "en": "snorkel beach"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "oost",
+    "gratis",
+    "snorkelen",
+    "duiken-vanaf-strand",
+    "rustig"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Ondiep wrak vlakbij",
+     "en": "Shallow wreck nearby"
+    },
+    {
+     "nl": "Beachbar en duikcentrum",
+     "en": "Beach bar and dive center"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Een van de beste gratis snorkelplekken"
+    ],
+    "en": [
+     "One of the best free snorkel spots"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Instap over puin"
+    ],
+    "en": [
+     "Rubble entry"
+    ]
+   },
+   "bronnen": [
+    "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao"
+   ]
+  },
+  {
+   "id": "directors-bay",
+   "naam": "Directors Bay",
+   "url": null,
+   "soort": {
+    "nl": "baai",
+    "en": "bay"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "oost",
+    "gratis",
+    "rustig",
+    "natuur",
+    "snorkelen"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry"
+    },
+    "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "datum": "2026-01"
+   },
+   "feiten": [
+    {
+     "nl": "Geen voorzieningen",
+     "en": "No facilities"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Rustig en mooi gelegen"
+    ],
+    "en": [
+     "Quiet and scenic"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Stroming bij de punt"
+    ],
+    "en": [
+     "Current near the point"
+    ]
+   },
+   "bronnen": [
+    "https://majesticpalace.city/guides/best-beaches-in-curacao"
+   ]
+  },
+  {
+   "id": "santa-barbara-beach",
+   "naam": "Santa Barbara Beach",
+   "url": null,
+   "soort": {
+    "nl": "resortstrand",
+    "en": "resort beach"
+   },
+   "plaats": "Spaanse Water",
+   "tags": [
+    "oost",
+    "voorzieningen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Vertrek Miss Ann-boot",
+     "en": "Miss Ann boat departs here"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 1.0,
+     "max": 5,
+     "aantal": 3,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gratis parkeren voor de boot"
+    ],
+    "en": [
+     "Free parking for the boat"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Zeer lage score bij weinig reviews"
+    ],
+    "en": [
+     "Very low score on few reviews"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "playa-kanoa",
+   "naam": "Playa Kanoa",
+   "url": null,
+   "soort": {
+    "nl": "noordkust",
+    "en": "north coast"
+   },
+   "plaats": "noordoostkust",
+   "tags": [
+    "oost",
+    "rustig",
+    "natuur"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ruwe noordkust",
+     "en": "Rough north coast"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 2.9,
+     "max": 5,
+     "aantal": 29,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Afgelegen en ruig"
+    ],
+    "en": [
+     "Remote and wild"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Lage score op Tripadvisor"
+    ],
+    "en": [
+     "Low Tripadvisor score"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "playa-gipy",
+   "naam": "Playa Gipy",
+   "url": null,
+   "soort": {
+    "nl": "kleine baai",
+    "en": "small cove"
+   },
+   "plaats": null,
+   "tags": [
+    "rustig",
+    "natuur"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.3,
+     "max": 5,
+     "aantal": 4,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Weinig bezoekers"
+    ],
+    "en": [
+     "Few visitors"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+   ]
+  },
+  {
+   "id": "klein-curacao",
+   "naam": "Klein Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "onbewoond eiland",
+    "en": "uninhabited island"
+   },
+   "plaats": "25 km zuidoost, alleen per boot",
+   "tags": [
+    "snorkelen",
+    "schildpadden",
+    "rustig",
+    "natuur"
+   ],
+   "prijs": {
+    "bedrag": 135,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon (boottocht, $135 tot $170)",
+     "en": "per person (boat trip, $135 to $170)"
+    },
+    "bron": "https://www.mycuracaoguide.com/klein-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Alleen per boot",
+     "en": "Boat access only"
+    },
+    {
+     "nl": "Vuurtoren en scheepswrak",
+     "en": "Lighthouse and shipwreck"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 1453,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Helder water en schildpadden",
+     "Lang wit strand zonder bebouwing"
+    ],
+    "en": [
+     "Clear water and sea turtles",
+     "Long white beach with no buildings"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Overtocht vaak ruw",
+     "Weinig schaduw"
+    ],
+    "en": [
+     "Crossing is often rough",
+     "Little shade"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html",
+    "https://www.mycuracaoguide.com/klein-curacao",
+    "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Tripadvisor",
+   "url": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+   "uitleg": {
+    "nl": "Reviews en scores per strand; geen boekingen nodig voor stranden.",
+    "en": "Reviews and ratings per beach; beaches need no booking."
+   }
+  },
+  {
+   "naam": "Curatogo",
+   "url": "https://curatogo.com/beach.html?id=cas",
+   "uitleg": {
+    "nl": "Lokale strandgids met openingstijden en entreeprijzen.",
+    "en": "Local beach guide with opening hours and entry fees."
+   }
+  },
+  {
+   "naam": "Tours met strandstops (Viator, GetYourGuide)",
+   "url": "https://www.viator.com/Curacao-tours/4WD-ATV-and-Off-Road-Tours/d725-g9-c32",
+   "uitleg": {
+    "nl": "Zonder auto bereik je de westkant via een tour die entree vaak al inbegrijpt.",
+    "en": "Without a car you can reach the west side on a tour that often includes entry."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Neem contant geld mee: bij Cas Abao, Porto Mari, Mambo en Jan Thiel betaal je bij de ingang.",
+   "en": "Bring cash: you pay at the gate at Cas Abao, Porto Mari, Mambo and Jan Thiel."
+  },
+  {
+   "nl": "Kom voor 10:00 naar Grote Knip en Playa Piskado; daarna komen de tourbussen.",
+   "en": "Get to Grote Knip and Playa Piskado before 10 a.m.; the tour buses come after that."
+  },
+  {
+   "nl": "Waterschoenen zijn handig bij Grote Knip, Playa Lagun, Playa Piskado en Tugboat; de instap is rotsig of kiezelig.",
+   "en": "Water shoes help at Grote Knip, Playa Lagun, Playa Piskado and Tugboat, where the entry is rocky or pebbly."
+  },
+  {
+   "nl": "Jan Thiel is na 16:30 gratis.",
+   "en": "Jan Thiel is free after 4:30 p.m."
+  },
+  {
+   "nl": "Ga niet onder manchinelbomen zitten (onder meer bij Kleine Knip); sap en vruchten zijn giftig.",
+   "en": "Don't sit under manchineel trees (Kleine Knip has them); the sap and fruit are toxic."
+  },
+  {
+   "nl": "Laat niets zichtbaar in de auto bij gratis stranden aan de westkant.",
+   "en": "Leave nothing visible in your car at free west-side beaches."
+  },
+  {
+   "nl": "Op zondag zitten Daaibooi en Grote Knip vol met lokale gezinnen.",
+   "en": "On Sundays, Daaibooi and Grote Knip fill up with local families."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wat is het mooiste strand van Curaçao?",
+    "en": "What's the most beautiful beach in Curaçao?"
+   },
+   "a": {
+    "nl": "Grote Knip (Kenepa Grandi) scoort het best op Tripadvisor: 4,5 uit 5.098 reviews. Porto Mari volgt met 4,5 uit 1.833.",
+    "en": "Grote Knip (Kenepa Grandi) rates highest on Tripadvisor at 4.5 from 5,098 reviews. Porto Mari follows with 4.5 from 1,833."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke stranden op Curaçao zijn gratis?",
+    "en": "Which Curaçao beaches are free?"
+   },
+   "a": {
+    "nl": "Onder meer Grote Knip, Kleine Knip, Playa Lagun, Playa Piskado, Playa Jeremi, Daaibooi, Kokomo en Tugboat Beach. Bij Kokomo betaal je alleen voor ligbedden.",
+    "en": "Among others Grote Knip, Kleine Knip, Playa Lagun, Playa Piskado, Playa Jeremi, Daaibooi, Kokomo and Tugboat Beach. At Kokomo you only pay for loungers."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost de entree van Cas Abao?",
+    "en": "How much is entry at Cas Abao?"
+   },
+   "a": {
+    "nl": "$6 per auto met maximaal 4 personen van maandag tot zaterdag, $7 op zondag en feestdagen. Een ligstoel kost $3 extra.",
+    "en": "$6 per car with up to 4 people Monday to Saturday, $7 on Sundays and holidays. A lounge chair is $3 extra."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar kun je op Curaçao met schildpadden zwemmen?",
+    "en": "Where can you swim with turtles in Curaçao?"
+   },
+   "a": {
+    "nl": "Bij Playa Piskado (Playa Grandi) in Westpunt, bij Playa Lagun, verder uit bij Daaibooi en op Klein Curaçao.",
+    "en": "At Playa Piskado (Playa Grandi) in Westpunt, at Playa Lagun, farther out at Daaibooi, and on Klein Curaçao."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welk strand is het best met kleine kinderen?",
+    "en": "Which beach is best with small kids?"
+   },
+   "a": {
+    "nl": "Porto Mari en Cas Abao hebben een geleidelijke instap en alle voorzieningen. Mambo Beach en Jan Thiel hebben vlak water achter een golfbreker en een speeltuin.",
+    "en": "Porto Mari and Cas Abao have a gentle entry and full facilities. Mambo Beach and Jan Thiel have flat water behind a breakwater and a playground."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar is het beste snorkelen vanaf het strand?",
+    "en": "Where's the best snorkeling from shore?"
+   },
+   "a": {
+    "nl": "Playa Lagun, Tugboat Beach (wrak), Porto Mari (dubbel rif), Kleine Knip en Cas Abao.",
+    "en": "Playa Lagun, Tugboat Beach (wreck), Porto Mari (double reef), Kleine Knip and Cas Abao."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost Mambo Beach?",
+    "en": "How much is Mambo Beach?"
+   },
+   "a": {
+    "nl": "Ongeveer $4,50 per persoon. Ligbedden huur je apart bij de beachclubs; de boulevard met winkels is gratis.",
+    "en": "About $4.50 per person. Loungers are rented separately from the beach clubs; the shopping boulevard is free."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welk strand is het rustigst?",
+    "en": "Which beach is the quietest?"
+   },
+   "a": {
+    "nl": "Playa Jeremi, Kleine Knip doordeweeks, Santa Martha Baai, Directors Bay en Santu Pretu. Daar zijn weinig of geen voorzieningen.",
+    "en": "Playa Jeremi, Kleine Knip on weekdays, Santa Martha Bay, Directors Bay and Santu Pretu. Facilities there are few or none."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "stranden curaçao",
+   "mooiste strand curaçao",
+   "gratis stranden curaçao",
+   "kindvriendelijke stranden curaçao",
+   "snorkelen curaçao strand",
+   "entree cas abao"
+  ],
+  "en": [
+   "curacao beaches",
+   "best beaches in curacao",
+   "free beaches curacao",
+   "curacao beaches for families",
+   "best snorkeling beach curacao",
+   "cas abao entrance fee"
+  ],
+  "es": [
+   "playas de curazao",
+   "mejores playas curazao",
+   "playas gratis curazao"
+  ],
+  "pt": [
+   "praias de curaçao",
+   "melhores praias curaçao"
+  ],
+  "de": [
+   "strände curaçao",
+   "schönste strände curaçao",
+   "curaçao strand eintritt"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Wat is het mooiste strand op Curaçao?",
+   "Welke stranden op Curaçao zijn gratis en welke kosten entree?",
+   "Welk strand op Curaçao is het best met kleine kinderen?"
+  ],
+  "en": [
+   "What are the best beaches in Curaçao?",
+   "Which Curaçao beach is best for snorkeling with turtles?",
+   "Do Curaçao beaches charge an entrance fee?"
+  ]
+ }
+}

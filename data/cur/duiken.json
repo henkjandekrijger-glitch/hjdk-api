@@ -1,1 +1,2275 @@
-{"id":"duiken","peildatum":"2026-10-20","items":[]}
+{
+ "id": "duiken",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "duikschool",
+  "en": "dive shop"
+ },
+ "h1": {
+  "nl": "Duiken op Curaçao: welke duikschool past bij jou?",
+  "en": "Diving in Curaçao: which dive shop is right for you?"
+ },
+ "titel": {
+  "nl": "Duikschool Curaçao kiezen: {n} duikscholen vergeleken",
+  "en": "Best Dive Shop in Curaçao: {n} Dive Shops Compared"
+ },
+ "metaDesc": {
+  "nl": "{n} duikscholen op Curaçao naast elkaar: reviewscores, prijzen voor Discover Scuba, Open Water en kantduiken, taal en regio.",
+  "en": "{n} Curaçao dive shops side by side: review scores, prices for Discover Scuba, Open Water and shore diving, language and area."
+ },
+ "kort": {
+  "nl": "We vonden 37 duikscholen en duikbases op Curaçao. Een eerste proefduik (Discover Scuba) kost $125 tot $140, de PADI Open Water rond $450 tot $525, een begeleide kantduik vanaf $39 en vijf dagen onbeperkt kantduiken vanaf $210. Nooit gedoken: kijk naar The Dive Bus of Jan Thiel Diving; ervaren en tec: Goby Divers; Westpunt: GO WEST Diving; Nederlandstalig: Dive Center Van de Ven of Unique Diving.",
+  "en": "We found 37 dive shops and dive bases on Curaçao. A first try dive (Discover Scuba) costs $125 to $140, PADI Open Water about $450 to $525, a guided shore dive from $39, and five days of unlimited shore diving from $210. Never dived: look at The Dive Bus or Jan Thiel Diving; experienced and tech: Goby Divers; Westpunt: GO WEST Diving; Dutch-speaking: Dive Center Van de Ven or Unique Diving."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Hoeveel duikervaring heb je?",
+    "en": "How much diving experience do you have?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Nog nooit gedoken",
+      "en": "Never dived"
+     },
+     "plus": [
+      "cursus-beginner",
+      "kinderen-bubblemaker"
+     ],
+     "min": [
+      "tec"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Net gebrevetteerd",
+      "en": "Recently certified"
+     },
+     "plus": [
+      "shore-diving",
+      "cursus-beginner"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ervaren duiker",
+      "en": "Experienced diver"
+     },
+     "plus": [
+      "gevorderd",
+      "boot",
+      "nitrox",
+      "tec"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wil je een cursus of vooral duiken?",
+    "en": "Do you want a course or mostly fun dives?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Either"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Een brevet halen",
+      "en": "Get certified"
+     },
+     "plus": [
+      "cursus-beginner",
+      "padi",
+      "ssi"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Zelf kantduiken met flessen",
+      "en": "Shore dive on my own with rented tanks"
+     },
+     "plus": [
+      "tank-huren",
+      "shore-diving"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Bootduiken",
+      "en": "Boat dives"
+     },
+     "plus": [
+      "boot"
+     ],
+     "min": [],
+     "vereist": "boot"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Waar verblijf je?",
+    "en": "Where are you staying?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Weet ik nog niet",
+      "en": "Not sure yet"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Westpunt en Bandabou",
+      "en": "Westpunt and Bandabou"
+     },
+     "plus": [
+      "westpunt"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Willemstad, Piscadera of Blue Bay",
+      "en": "Willemstad, Piscadera or Blue Bay"
+     },
+     "plus": [
+      "midden"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Jan Thiel en Caracasbaai",
+      "en": "Jan Thiel and Caracasbaai"
+     },
+     "plus": [
+      "oost"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat vind je het belangrijkst?",
+    "en": "What matters most to you?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Niets bijzonders",
+      "en": "Nothing in particular"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Lage prijs",
+      "en": "Low price"
+     },
+     "plus": [
+      "budget",
+      "tank-huren"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Les in het Nederlands",
+      "en": "Lessons in Dutch"
+     },
+     "plus": [
+      "nl-sprekend"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Les in het Duits",
+      "en": "Lessons in German"
+     },
+     "plus": [
+      "de-sprekend"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Duiken met kinderen",
+      "en": "Diving with kids"
+     },
+     "plus": [
+      "kinderen-bubblemaker"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "ocean-encounters",
+   "naam": "Ocean Encounters",
+   "url": "https://www.oceanencounters.com",
+   "soort": {
+    "nl": "PADI 5-ster IDC, grootste",
+    "en": "PADI 5 Star IDC, largest"
+   },
+   "plaats": "Lions Dive Beach Resort, Bapor Kibra",
+   "tags": [
+    "padi",
+    "ssi",
+    "cursus-beginner",
+    "gevorderd",
+    "boot",
+    "shore-diving",
+    "tank-huren",
+    "midden",
+    "westpunt"
+   ],
+   "prijs": {
+    "bedrag": 210,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf, 5 dagen onbeperkt kantduiken",
+     "en": "from, 5 days unlimited shore diving"
+    },
+    "bron": "https://www.oceanencounters.com/product/unlimited-air-package-5-days/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Ook bij Sunscape en TUI BLUE",
+     "en": "Also at Sunscape and TUI BLUE"
+    },
+    {
+     "nl": "7 boten, 6 locaties",
+     "en": "7 boats, 6 locations"
+    },
+    {
+     "nl": "Discover Scuba ca. $140",
+     "en": "Discover Scuba about $140"
+    },
+    {
+     "nl": "Opfriscursus vanaf $110",
+     "en": "Refresher course from $110"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 1209,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d623000-Reviews-or10-Ocean_Encounters_Diving-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijke, deskundige divemasters en kapiteins",
+     "Ruime, goed onderhouden boten",
+     "Gidsen passen tempo en diepte aan per niveau"
+    ],
+    "en": [
+     "Friendly, knowledgeable divemasters and boat captains",
+     "Roomy, well-kept boats",
+     "Guides adjust pace and depth to each diver's level"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Losse klacht over vuile of kapotte huuruitrusting",
+     "Een klacht over onvriendelijk personeel"
+    ],
+    "en": [
+     "Isolated complaint about dirty or faulty rental gear",
+     "One complaint about rude staff"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d623000-Reviews-or10-Ocean_Encounters_Diving-Willemstad_Curacao.html",
+    "https://www.oceanencounters.com/product/unlimited-air-package-5-days/",
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://www.klm.nl/travel-guide/inspiration/learn-to-dive-on-curacao",
+    "https://esim.holafly.com/nl/blog/duiken-curacao/"
+   ]
+  },
+  {
+   "id": "go-west-diving",
+   "naam": "GO WEST Diving",
+   "url": null,
+   "soort": {
+    "nl": "PADI 5-ster",
+    "en": "PADI 5 Star"
+   },
+   "plaats": "Playa Kalki, Westpunt",
+   "tags": [
+    "padi",
+    "cursus-beginner",
+    "gevorderd",
+    "boot",
+    "shore-diving",
+    "nitrox",
+    "westpunt"
+   ],
+   "prijs": {
+    "bedrag": 53,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per dag volledige huuruitrusting",
+     "en": "per day full rental gear"
+    },
+    "bron": "https://www.tripadvisor.com/Attraction_Review-g1724323-d2099541-Reviews-GO_WEST_Diving-Sabana_Westpunt_Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Travelers' Choice 2026",
+     "en": "Travelers' Choice 2026"
+    },
+    {
+     "nl": "Boot naar Watamula en Blue Room",
+     "en": "Boat trips to Watamula, Blue Room"
+    },
+    {
+     "nl": "Huur $48 per dag na 3 dagen",
+     "en": "Rental $48/day after 3 days"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 588,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g1724323-d2099541-Reviews-GO_WEST_Diving-Sabana_Westpunt_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Geduldige, vriendelijke instructeurs",
+     "Schone, goed onderhouden huuruitrusting",
+     "Sterke duikstekken in het noordwesten",
+     "Gaat goed om met beginners en gezinnen"
+    ],
+    "en": [
+     "Patient, friendly instructors",
+     "Clean, well-maintained rental gear",
+     "Strong dive sites on the northwest coast",
+     "Good with first-timers and families"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen full service: zelf uitrusting sjouwen en spoelen",
+     "Bijkomende kosten lopen op",
+     "Weinig ligbedden en beperkte douches"
+    ],
+    "en": [
+     "Not full service: you haul and rinse your own gear",
+     "Add-on fees add up",
+     "Few loungers and limited showers"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g1724323-d2099541-Reviews-GO_WEST_Diving-Sabana_Westpunt_Curacao.html",
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "the-dive-bus",
+   "naam": "The Dive Bus",
+   "url": null,
+   "soort": {
+    "nl": "PADI 5-ster IDC, kantduiken",
+    "en": "PADI 5 Star IDC, shore diving"
+   },
+   "plaats": "Marie Pampoen, Willemstad",
+   "tags": [
+    "padi",
+    "cursus-beginner",
+    "gevorderd",
+    "shore-diving",
+    "tank-huren",
+    "nitrox",
+    "nl-sprekend",
+    "midden"
+   ],
+   "prijs": {
+    "bedrag": 129,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf, PADI Discover Scuba",
+     "en": "from, PADI Discover Scuba"
+    },
+    "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d1062985-Reviews-The_Dive_Bus-Willemstad_Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Kantduiken sinds 2005",
+     "en": "Shore diving since 2005"
+    },
+    {
+     "nl": "2 begeleide duiken vanaf $109",
+     "en": "2-tank guided dive from $109"
+    },
+    {
+     "nl": "Max. 6 tot 8 duikers per gids",
+     "en": "Max 6 to 8 divers per guide"
+    },
+    {
+     "nl": "Ophalen in Punda en Jan Thiel",
+     "en": "Pickup in Punda and Jan Thiel"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 2075,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d1062985-Reviews-The_Dive_Bus-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Geduldige uitleg voor beginners",
+     "Vriendelijk, professioneel team",
+     "Schone uitrusting en goed gevulde winkel",
+     "Veel leven bij Car Pile en Tugboat"
+    ],
+    "en": [
+     "Patient teaching for beginners",
+     "Friendly, professional team",
+     "Clean gear and a well-stocked shop",
+     "Lots of marine life at Car Pile and Tugboat"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Gids op het huisrif soms te snel voor macro",
+     "Bij kantduiken zelf uitrusting naar het water dragen"
+    ],
+    "en": [
+     "House reef guide sometimes too fast for macro",
+     "Shore dives mean carrying gear to the water"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d1062985-Reviews-The_Dive_Bus-Willemstad_Curacao.html",
+    "https://travel.padi.com/dive-trip/willemstad/2-tank-guided-dive-the-dive-bus-house-reef-12430",
+    "https://travel.padi.com/dive-center/curacao/the-dive-bus",
+    "https://www.divecuracao.info/dive-travel/choosing-a-curacao-dive-shop/"
+   ]
+  },
+  {
+   "id": "dive-center-pietermaai",
+   "naam": "Dive Center Pietermaai (Scuba Lodge)",
+   "url": null,
+   "soort": {
+    "nl": "PADI 5-ster IDC",
+    "en": "PADI 5 Star IDC"
+   },
+   "plaats": "Pietermaai, Willemstad",
+   "tags": [
+    "padi",
+    "cursus-beginner",
+    "gevorderd",
+    "shore-diving",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Travelers' Choice 2026",
+     "en": "Travelers' Choice 2026"
+    },
+    {
+     "nl": "Bij Scuba Lodge City Beach",
+     "en": "At Scuba Lodge City Beach"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 1280,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d5011203-Reviews-Scuba_Lodge_Dive_Center_Pietermaai-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Hartelijk, professioneel team",
+     "Kleine groepen met persoonlijke aandacht",
+     "Snel antwoord, ook via WhatsApp"
+    ],
+    "en": [
+     "Warm, professional team",
+     "Small groups with personal attention",
+     "Quick replies, including on WhatsApp"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d5011203-Reviews-Scuba_Lodge_Dive_Center_Pietermaai-Willemstad_Curacao.html",
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "dive-center-lagun",
+   "naam": "Dive Center Lagun (Scuba Lodge Lagun Beach)",
+   "url": null,
+   "soort": {
+    "nl": "PADI 5-ster IDC",
+    "en": "PADI 5 Star IDC"
+   },
+   "plaats": "Playa Lagun, Lagun",
+   "tags": [
+    "padi",
+    "cursus-beginner",
+    "shore-diving",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Op het terrein van appartementen",
+     "en": "On site at beach apartments"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/"
+   ]
+  },
+  {
+   "id": "b-diving-watersports",
+   "naam": "B Diving & Watersports",
+   "url": null,
+   "soort": {
+    "nl": "PADI 5-ster",
+    "en": "PADI 5 Star"
+   },
+   "plaats": "Cas Abao Beach",
+   "tags": [
+    "padi",
+    "cursus-beginner",
+    "shore-diving",
+    "boot",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ook freedivinglessen",
+     "en": "Also freediving lessons"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 586,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d7395474-Reviews-B_Diving_Watersports-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijk, professioneel personeel",
+     "Geduldig met beginners en cursisten",
+     "Veilig, met huisrif aan het strand"
+    ],
+    "en": [
+     "Friendly, professional staff",
+     "Patient with beginners and students",
+     "Safety-minded, with a house reef off the beach"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen nachtduiken: strandpoort sluit voor zonsondergang",
+     "Een conflict over het vullen van kleine flessen"
+    ],
+    "en": [
+     "No night dives: the beach gate closes before sunset",
+     "One dispute over filling small tanks"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d7395474-Reviews-B_Diving_Watersports-Willemstad_Curacao.html",
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://esim.holafly.com/nl/blog/duiken-curacao/"
+   ]
+  },
+  {
+   "id": "blue-bay-dive",
+   "naam": "Blue Bay Dive & Watersports",
+   "url": "https://www.diveshopcuracao.com/en",
+   "soort": {
+    "nl": "PADI 5-ster IDC",
+    "en": "PADI 5 Star IDC"
+   },
+   "plaats": "Blue Bay Resort, Sint Michiel",
+   "tags": [
+    "padi",
+    "cursus-beginner",
+    "gevorderd",
+    "shore-diving",
+    "budget",
+    "midden"
+   ],
+   "prijs": {
+    "bedrag": 525,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf, PADI Open Water (2 dagen)",
+     "en": "from, PADI Open Water (2 days)"
+    },
+    "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d4545228-Reviews-Blue_Bay_Dive_Watersports-Willemstad_Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Discover Scuba vanaf $125",
+     "en": "Discover Scuba from $125"
+    },
+    {
+     "nl": "Begeleide kantduik vanaf $40",
+     "en": "Guided shore dive from $40"
+    },
+    {
+     "nl": "Huisrif The Wall",
+     "en": "House reef: The Wall"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 489,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d4545228-Reviews-Blue_Bay_Dive_Watersports-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Geduldige instructeurs, je voelt je veilig",
+     "Huuruitrusting in goede staat",
+     "Direct vanaf het strand het rif op"
+    ],
+    "en": [
+     "Patient instructors who make you feel safe",
+     "Rental gear in good shape",
+     "Walk straight from the beach onto the reef"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Volgens sommigen een van de duurdere winkels",
+     "Duikcomputer kost extra"
+    ],
+    "en": [
+     "Some call it one of the pricier shops",
+     "Dive computer costs extra"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d4545228-Reviews-Blue_Bay_Dive_Watersports-Willemstad_Curacao.html",
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "coral-divers",
+   "naam": "Coral Divers",
+   "url": "https://www.divecentercuracao.com/en",
+   "soort": {
+    "nl": "PADI 5-ster, ook freediving",
+    "en": "PADI 5 Star, also freediving"
+   },
+   "plaats": "Coral Estate, Rif Sint Marie",
+   "tags": [
+    "padi",
+    "cursus-beginner",
+    "shore-diving",
+    "boot",
+    "budget",
+    "westpunt"
+   ],
+   "prijs": {
+    "bedrag": 125,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf, PADI Discover Scuba",
+     "en": "from, PADI Discover Scuba"
+    },
+    "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d12930256-Reviews-Coral_Divers-Willemstad_Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Begeleide kantduik vanaf $40",
+     "en": "Guided shore dive from $40"
+    },
+    {
+     "nl": "Meertalige instructeurs",
+     "en": "Multilingual instructors"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 392,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d12930256-Reviews-Coral_Divers-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Zeer geduldige instructeurs",
+     "Goed onderhouden huuruitrusting",
+     "Huisrif met octopus en murenen"
+    ],
+    "en": [
+     "Very patient instructors",
+     "Well-maintained rental gear",
+     "House reef with octopus and moray eels"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Soms een gids op zeven duikers",
+     "Trage mail en geen vervoer naar je hotel"
+    ],
+    "en": [
+     "Sometimes one guide for seven divers",
+     "Slow email and no hotel transport"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d12930256-Reviews-Coral_Divers-Willemstad_Curacao.html",
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "curious2dive",
+   "naam": "CURious2DIVE",
+   "url": "https://www.curious2dive.com/",
+   "soort": {
+    "nl": "PADI, SSI en IAHD",
+    "en": "PADI, SSI and IAHD"
+   },
+   "plaats": null,
+   "tags": [
+    "padi",
+    "ssi"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ook IAHD-opleidingen",
+     "en": "Also IAHD training"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://www.scubadiving.com/guide-diving-curacao"
+   ]
+  },
+  {
+   "id": "dive-center-scuba-do",
+   "naam": "Dive Center Scuba Do",
+   "url": "https://www.divecenterscubado.com/",
+   "soort": {
+    "nl": "PADI 5-ster",
+    "en": "PADI 5 Star"
+   },
+   "plaats": "Jan Thiel Beach",
+   "tags": [
+    "padi",
+    "cursus-beginner",
+    "kinderen-bubblemaker",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Groepen van max. 6",
+     "en": "Groups of 6 max"
+    },
+    {
+     "nl": "Kinderprogramma's",
+     "en": "Kids programs"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 549,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d6840982-Reviews-Dive_Center_Scuba_Do-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Geduldige, vriendelijke instructeurs",
+     "Kleine groepen",
+     "Geschikt voor beginners en Open Water"
+    ],
+    "en": [
+     "Patient, friendly instructors",
+     "Small groups",
+     "Good for beginners and Open Water students"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d6840982-Reviews-Dive_Center_Scuba_Do-Willemstad_Curacao.html",
+    "https://www.tripadvisor.com/AttractionProductReview-g147278-d24962117-Discover_Scuba_Diving_Experience-Willemstad_Curacao.html",
+    "https://esim.holafly.com/nl/blog/duiken-curacao/"
+   ]
+  },
+  {
+   "id": "goby-divers",
+   "naam": "Goby Divers",
+   "url": null,
+   "soort": {
+    "nl": "PADI en SSI, tec-centrum",
+    "en": "PADI and SSI, tech center"
+   },
+   "plaats": "Dreams en Zoetry Curaçao, Piscadera",
+   "tags": [
+    "padi",
+    "ssi",
+    "gevorderd",
+    "tec",
+    "nitrox",
+    "boot",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Trimix en CCR-ondersteuning",
+     "en": "Trimix and CCR support"
+    },
+    {
+     "nl": "Wrak Superior Producer",
+     "en": "Superior Producer wreck dives"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 252,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147277-d3421179-Reviews-Goby_Divers-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Veiligheid staat voorop",
+     "Moderne, goed onderhouden huuruitrusting",
+     "Sterk in technisch duiken"
+    ],
+    "en": [
+     "Safety comes first",
+     "Current, well-kept rental gear",
+     "Strong in technical diving"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Soms volle boot, tot 9 duikers per gids",
+     "Een lekkende ademautomaat werd traag opgelost"
+    ],
+    "en": [
+     "Boats sometimes full, up to 9 divers per guide",
+     "A leaking regulator was handled slowly"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147277-d3421179-Reviews-Goby_Divers-Curacao.html",
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://www.undercurrent.org/UCnow/dive_reviews/Curacao"
+   ]
+  },
+  {
+   "id": "jan-thiel-diving",
+   "naam": "Jan Thiel Diving",
+   "url": "https://www.janthieldiving.com/en",
+   "soort": {
+    "nl": "PADI, in resort",
+    "en": "PADI, in a resort"
+   },
+   "plaats": "Livingstone Jan Thiel Resort",
+   "tags": [
+    "padi",
+    "cursus-beginner",
+    "gevorderd",
+    "shore-diving",
+    "budget",
+    "nl-sprekend",
+    "oost"
+   ],
+   "prijs": {
+    "bedrag": 39,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf, 2 begeleide kantduiken",
+     "en": "from, 2-tank guided shore dive"
+    },
+    "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d15209116-Reviews-Jan_Thiel_Diving-Willemstad_Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Open Water vanaf $525",
+     "en": "Open Water from $525"
+    },
+    {
+     "nl": "Discover Scuba vanaf $125",
+     "en": "Discover Scuba from $125"
+    },
+    {
+     "nl": "Nr. 1 van 427 in Willemstad",
+     "en": "#1 of 427 in Willemstad"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 832,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d15209116-Reviews-Jan_Thiel_Diving-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Geduldige, deskundige instructeurs",
+     "Rustige sfeer, fijn voor zenuwachtige duikers",
+     "Flexibel bij vertraagde vluchten",
+     "Goede huuruitrusting"
+    ],
+    "en": [
+     "Patient, knowledgeable instructors",
+     "Calm vibe that suits nervous divers",
+     "Flexible when flights are delayed",
+     "Good rental gear"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d15209116-Reviews-Jan_Thiel_Diving-Willemstad_Curacao.html",
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "porto-mari-dive-center",
+   "naam": "Porto Mari Dive Center",
+   "url": null,
+   "soort": {
+    "nl": "PADI 5-ster",
+    "en": "PADI 5 Star"
+   },
+   "plaats": "Playa Porto Mari, Sint Willibrordus",
+   "tags": [
+    "padi",
+    "cursus-beginner",
+    "gevorderd",
+    "kinderen-bubblemaker",
+    "shore-diving",
+    "boot",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Bubblemaker voor kinderen",
+     "en": "Bubblemaker for kids"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 416,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g3754516-d3975971-Reviews-Porto_Mari_Dive_Center-Sint_Willibrordus_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Geduldig en veiligheid voorop",
+     "Helder water en mooi huisrif",
+     "Voor beginners, kinderen en ervaren duikers"
+    ],
+    "en": [
+     "Patient and safety-first",
+     "Clear water and a good house reef",
+     "Works for beginners, kids and experienced divers"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Uitleg tijdens de cursus soms te uitgebreid"
+    ],
+    "en": [
+     "Course explanations sometimes too long"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g3754516-d3975971-Reviews-Porto_Mari_Dive_Center-Sint_Willibrordus_Curacao.html",
+    "https://www.divecuracao.info/dive/dive-shops-curacao/"
+   ]
+  },
+  {
+   "id": "scubacao",
+   "naam": "Scubaçao Diving Adventures",
+   "url": "https://scubacao.com/",
+   "soort": {
+    "nl": "PADI 5-ster",
+    "en": "PADI 5 Star"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "padi",
+    "cursus-beginner",
+    "shore-diving",
+    "midden"
+   ],
+   "prijs": {
+    "bedrag": 140,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf, introductie-kantduik (1 duik)",
+     "en": "from, intro shore dive (1 dive)"
+    },
+    "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d7093418-Reviews-Scubacao_Diving_Adventures-Willemstad_Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2 begeleide kantduiken $165",
+     "en": "2-tank guided shore dive $165"
+    },
+    {
+     "nl": "Ophalen bij je hotel",
+     "en": "Hotel pickup"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 1262,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d7093418-Reviews-Scubacao_Diving_Adventures-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustig en geduldig met nieuwe duikers",
+     "Goed georganiseerd en veilig",
+     "Ophalen bij hotel, gezonde riffen"
+    ],
+    "en": [
+     "Calm and patient with new divers",
+     "Well organized and safety-minded",
+     "Hotel pickup and healthy reefs"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "In- en uitstappen vanaf de kant vraagt moeite",
+     "Bij een snorkelstek dood koraal"
+    ],
+    "en": [
+     "Shore entries and exits take some effort",
+     "Dead coral at one snorkel site"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d7093418-Reviews-Scubacao_Diving_Adventures-Willemstad_Curacao.html",
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "trunk-divers",
+   "naam": "Trunk Divers",
+   "url": null,
+   "soort": {
+    "nl": "lokaal, strandbasis",
+    "en": "local, beach base"
+   },
+   "plaats": "Kokomo Beach",
+   "tags": [
+    "shore-diving",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://www.divecuracao.info/scuba-diving-in-curacao/curacao-diving-guide/kokomo-beach/"
+   ]
+  },
+  {
+   "id": "the-diveshop-curacao",
+   "naam": "The Diveshop Curaçao",
+   "url": "https://thediveshop-curacao.com/",
+   "soort": {
+    "nl": "SSI, kantduiken",
+    "en": "SSI, shore diving"
+   },
+   "plaats": "Piscadera Bay, bij CARMABI",
+   "tags": [
+    "ssi",
+    "cursus-beginner",
+    "shore-diving",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "416 reviews, 404 keer uitstekend",
+     "en": "416 reviews, 404 rated excellent"
+    },
+    {
+     "nl": "Geen bootduiken",
+     "en": "No boat dives"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Professioneel en veilig",
+     "Flexibel in planning",
+     "Uitrusting zit in de prijs"
+    ],
+    "en": [
+     "Professional and safety-minded",
+     "Flexible scheduling",
+     "Gear included in the price"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Sommige huurpakken versleten",
+     "Geen bootduiken"
+    ],
+    "en": [
+     "Some rental wetsuits are worn",
+     "No boat dives"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/ShowUserReviews-g147278-d7738636-r365815786-The_Diveshop_Curacao-Willemstad_Curacao.html",
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "central-dive-curacao",
+   "naam": "Central Dive Curaçao",
+   "url": "https://central-dive-curacao.com/",
+   "soort": {
+    "nl": "lokaal, klein",
+    "en": "local, small"
+   },
+   "plaats": "Willemstad, midden van het eiland",
+   "tags": [
+    "cursus-beginner",
+    "gevorderd",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Alle stekken binnen 50 minuten",
+     "en": "All sites within 50 minutes"
+    },
+    {
+     "nl": "Ophalen van vliegveld",
+     "en": "Airport pickup"
+    },
+    {
+     "nl": "Autoverhuur ter plekke",
+     "en": "Car rental on site"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 169,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d12929341-Reviews-Central_Dive_Curacao-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Geduldige, deskundige instructeurs",
+     "Persoonlijk, je bent geen nummer",
+     "Jagen op koraalduivels",
+     "Ophalen en auto huren geregeld"
+    ],
+    "en": [
+     "Patient, knowledgeable instructors",
+     "Personal, you are not a number",
+     "Lionfish hunting dives",
+     "Airport pickup and car rental handled"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d12929341-Reviews-Central_Dive_Curacao-Willemstad_Curacao.html",
+    "https://www.divecuracao.info/dive/dive-shops-curacao/"
+   ]
+  },
+  {
+   "id": "elite-diving-curacao",
+   "naam": "Elite Diving Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "lokaal, nieuw",
+    "en": "local, new"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "cursus-beginner",
+    "nl-sprekend",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Nederlands, Spaans en Engels",
+     "en": "Dutch, Spanish and English"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 32,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d32761349-Reviews-Elite_Diving_Curacao-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustige, duidelijke uitleg",
+     "Zet zenuwachtige duikers op hun gemak",
+     "Nieuwe uitrusting"
+    ],
+    "en": [
+     "Calm, clear instruction",
+     "Puts nervous divers at ease",
+     "Brand-new gear"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d32761349-Reviews-Elite_Diving_Curacao-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "dive-nas",
+   "naam": "Dive Nas Dive Center",
+   "url": null,
+   "soort": {
+    "nl": "lokaal",
+    "en": "local"
+   },
+   "plaats": null,
+   "tags": [
+    "cursus-beginner"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Haalt duikers op",
+     "en": "Picks divers up"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 60,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147277-d7349805-Reviews-Dive_Nas_Dive_Center-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Neemt de tijd voor uitleg",
+     "Ontspannen en professioneel",
+     "Flexibele planning"
+    ],
+    "en": [
+     "Takes time to explain things",
+     "Relaxed and professional",
+     "Flexible scheduling"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147277-d7349805-Reviews-Dive_Nas_Dive_Center-Curacao.html"
+   ]
+  },
+  {
+   "id": "carrero-diving",
+   "naam": "Carrero Diving Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "lokaal, klein",
+    "en": "local, small"
+   },
+   "plaats": "Bij Mambo Beach, Willemstad",
+   "tags": [
+    "cursus-beginner",
+    "gevorderd",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ook Rescue en Divemaster",
+     "en": "Also Rescue and Divemaster"
+    },
+    {
+     "nl": "Gratis parkeren",
+     "en": "Free parking"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 30,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d23713154-Reviews-Carrero_Diving_Curacao-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustige, geduldige uitleg",
+     "Veiligheid voorop",
+     "Persoonlijk, vaak een op een"
+    ],
+    "en": [
+     "Calm, patient instruction",
+     "Safety first",
+     "Personal, often one-on-one"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Bord moeilijk te zien vanaf de weg"
+    ],
+    "en": [
+     "Sign is hard to spot from the road"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d23713154-Reviews-Carrero_Diving_Curacao-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "divers-republic",
+   "naam": "Divers Republic",
+   "url": null,
+   "soort": {
+    "nl": "lokaal, kleine groepen",
+    "en": "local, small groups"
+   },
+   "plaats": "Daaibooi, Sint Willibrordus",
+   "tags": [
+    "cursus-beginner",
+    "shore-diving",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Cursus max. 4 leerlingen",
+     "en": "Courses capped at 4 students"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 145,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g3754516-d4553093-Reviews-Divers_Republic-Sint_Willibrordus_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Kleine groepen, vaak een op een",
+     "Persoonlijke, ontspannen les",
+     "Grondige briefings",
+     "Gids maakt foto's"
+    ],
+    "en": [
+     "Small groups, often one-on-one",
+     "Personal, relaxed teaching",
+     "Thorough briefings",
+     "Guide takes photos"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Een klacht over een overgeslagen briefing"
+    ],
+    "en": [
+     "One complaint about a skipped briefing"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g3754516-d4553093-Reviews-Divers_Republic-Sint_Willibrordus_Curacao.html"
+   ]
+  },
+  {
+   "id": "curacao-divers",
+   "naam": "Curaçao Divers",
+   "url": null,
+   "soort": {
+    "nl": "Duitstalige basis",
+    "en": "German-run base"
+   },
+   "plaats": "Sun Reef Village, Sint Michiel",
+   "tags": [
+    "cursus-beginner",
+    "shore-diving",
+    "de-sprekend",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Duitstalig team",
+     "en": "German-speaking team"
+    },
+    {
+     "nl": "Huisrif bij Sun Reef Village",
+     "en": "House reef at Sun Reef Village"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 279,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustige, geduldige instructeurs",
+     "Duitstalig",
+     "Goede, complete uitrusting",
+     "Goede prijs-kwaliteit"
+    ],
+    "en": [
+     "Calm, patient instructors",
+     "German-speaking",
+     "Good, complete gear",
+     "Good value"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html",
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "rebel-diving",
+   "naam": "Rebel Diving Curaçao",
+   "url": "https://www.rebeldivingcuracao.com",
+   "soort": {
+    "nl": "SSI",
+    "en": "SSI"
+   },
+   "plaats": "Granaatappelweg, Willemstad",
+   "tags": [
+    "ssi",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://diveplannerpro.com/dive-centers/cw/cw-rebel-diving-curacao",
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "sublime-diving",
+   "naam": "Sublime Diving",
+   "url": "https://sublimediving.com",
+   "soort": {
+    "nl": "SSI",
+    "en": "SSI"
+   },
+   "plaats": "Rancho el Sobrino, Weg naar Knip",
+   "tags": [
+    "ssi",
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Reviews op Undercurrent in 2026",
+     "en": "Reviewed on Undercurrent in 2026"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://diveplannerpro.com/dive-centers/cw/cw-sublime-diving",
+    "https://www.undercurrent.org/UCnow/dive_reviews/Curacao",
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "relaxed-guided-dives",
+   "naam": "Relaxed Guided Dives",
+   "url": "https://relaxed-guided-dives.com",
+   "soort": {
+    "nl": "SSI, begeleide duiken",
+    "en": "SSI, guided dives"
+   },
+   "plaats": "Martha Koosje",
+   "tags": [
+    "ssi",
+    "shore-diving"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://diveplannerpro.com/dive-centers/cw/cw-relaxed-guided-dives",
+    "https://www.divessi.com/nl/divecenter/relaxed-guided-dives-willemstad-curacao-curaao-714185",
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "dive-center-van-de-ven",
+   "naam": "Dive Center Van de Ven",
+   "url": "https://duikcentrumvandeven.com",
+   "soort": {
+    "nl": "SSI, Nederlandstalig",
+    "en": "SSI, Dutch-run"
+   },
+   "plaats": "Caracasbaaiweg, Jan Thiel",
+   "tags": [
+    "ssi",
+    "shore-diving",
+    "nitrox",
+    "tank-huren",
+    "nl-sprekend",
+    "de-sprekend",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Nederlands, Engels en Duits",
+     "en": "Dutch, English and German"
+    },
+    {
+     "nl": "Lucht en nitrox vullen",
+     "en": "Air and nitrox fills"
+    },
+    {
+     "nl": "Onderhoud ademautomaten",
+     "en": "Regulator servicing"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divessi.com/nl/divecenter/dive-center-van-de-ven-willemstad-curacao-curaao-759015"
+   ]
+  },
+  {
+   "id": "unique-diving",
+   "naam": "Unique Diving (UDI)",
+   "url": "https://www.uniquediving.nl",
+   "soort": {
+    "nl": "SSI, ook freediving",
+    "en": "SSI, also freediving"
+   },
+   "plaats": "Kaya Andeifi, Willemstad",
+   "tags": [
+    "ssi",
+    "boot",
+    "shore-diving",
+    "tec",
+    "nitrox",
+    "nl-sprekend",
+    "de-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Zes talen, ook Nederlands",
+     "en": "Six languages, including Dutch"
+    },
+    {
+     "nl": "Aangepast duiken mogelijk",
+     "en": "Adaptive diving offered"
+    },
+    {
+     "nl": "Extended range-duiken",
+     "en": "Extended range diving"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divessi.com/ko/divecenter/unique-diving-udi-willemstad-curacao-curaao-714170"
+   ]
+  },
+  {
+   "id": "fundiving-curacao",
+   "naam": "Fundiving Curaçao",
+   "url": "https://fundivingcuracao.com",
+   "soort": {
+    "nl": "PADI 5-ster",
+    "en": "PADI 5 Star"
+   },
+   "plaats": "Papagayo Beach Hotel, Jan Thiel",
+   "tags": [
+    "padi",
+    "cursus-beginner",
+    "nl-sprekend",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Zes talen, ook Nederlands",
+     "en": "Six languages, including Dutch"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://travel.padi.com/nl/dive-center/curacao/fundiving-curacao/"
+   ]
+  },
+  {
+   "id": "duikschool-fred",
+   "naam": "Duikschool Fred",
+   "url": null,
+   "soort": {
+    "nl": "PADI en SSI",
+    "en": "PADI and SSI"
+   },
+   "plaats": "Kaya Progreso, Willemstad",
+   "tags": [
+    "padi",
+    "ssi"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://cursosdebuceo.com/en/dive-centers/willemstad/duikschool-fred/10095"
+   ]
+  },
+  {
+   "id": "atlantis-diving",
+   "naam": "Atlantis Diving",
+   "url": null,
+   "soort": {
+    "nl": "PADI, 25+ jaar",
+    "en": "PADI, 25+ years"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "padi",
+    "cursus-beginner",
+    "shore-diving",
+    "tank-huren",
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Huisrif voor de deur",
+     "en": "House reef out front"
+    },
+    {
+     "nl": "Pakket met appartement",
+     "en": "Packages with an apartment"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.klm.nl/travel-guide/inspiration/learn-to-dive-on-curacao"
+   ]
+  },
+  {
+   "id": "all-about-scuba",
+   "naam": "All About Scuba Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "lokaal",
+    "en": "local"
+   },
+   "plaats": null,
+   "tags": [
+    "cursus-beginner"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Introductieduik aangeboden",
+     "en": "Offers intro dives"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://cursosdebuceo.com/fr/cours/willemstad/all-about-scuba-curacao/introductie-duik-discover-scuba-dive/177209"
+   ]
+  },
+  {
+   "id": "bahia-diving",
+   "naam": "Bahia Diving",
+   "url": null,
+   "soort": {
+    "nl": "bij appartementen",
+    "en": "at apartments"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "dushi-diving",
+   "naam": "Dushi Diving",
+   "url": null,
+   "soort": {
+    "nl": "lokaal",
+    "en": "local"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html"
+   ]
+  },
+  {
+   "id": "epsilon-dive-center",
+   "naam": "Epsilon Dive Center Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "lokaal",
+    "en": "local"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "blvd-divers",
+   "naam": "BLVD Divers",
+   "url": null,
+   "soort": {
+    "nl": "lokaal",
+    "en": "local"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "dive-wederfoort",
+   "naam": "Dive Wederfoort",
+   "url": null,
+   "soort": {
+    "nl": "lokaal",
+    "en": "local"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html"
+   ]
+  },
+  {
+   "id": "red-snapper-diving",
+   "naam": "Red Snapper Diving",
+   "url": null,
+   "soort": {
+    "nl": "lokaal",
+    "en": "local"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Tripadvisor",
+   "url": "https://www.tripadvisor.com/Attractions-g147278-Activities-c61-t194-Willemstad_Curacao.html",
+   "uitleg": {
+    "nl": "Boekt proefduiken en begeleide duiken van o.a. The Dive Bus, Jan Thiel Diving en Blue Bay Dive, meestal gratis annuleren tot 24 uur vooraf.",
+    "en": "Books try dives and guided dives from The Dive Bus, Jan Thiel Diving, Blue Bay Dive and others, usually with free cancellation up to 24 hours ahead."
+   }
+  },
+  {
+   "naam": "PADI Travel",
+   "url": "https://travel.padi.com/dive-center/curacao/the-dive-bus",
+   "uitleg": {
+    "nl": "Boekingssite van PADI voor duiktrips en cursussen bij PADI-centra, met huurprijzen per onderdeel.",
+    "en": "PADI's booking site for dive trips and courses at PADI centers, with rental prices per item."
+   }
+  },
+  {
+   "naam": "Dive Travel Curaçao (divecuracao.info)",
+   "url": "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/",
+   "uitleg": {
+    "nl": "Verkoopt weekpakketten met verblijf, duiken en soms huurauto; raadt eigen partners aan.",
+    "en": "Sells week packages with lodging, diving and sometimes a rental car; recommends its own partners."
+   }
+  },
+  {
+   "naam": "Bluewater Dive Travel",
+   "url": "https://www.bluewaterdivetravel.com/node/5102",
+   "uitleg": {
+    "nl": "Amerikaans duikreisbureau met pakketten bij Ocean Encounters en partnerhotels.",
+    "en": "US dive travel agency with packages at Ocean Encounters and partner hotels."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Een losse fles kost rond $12 en een complete set met fles $49 tot $50 per dag. Voor een week kantduiken is een pakket met onbeperkt lucht goedkoper, bij Ocean Encounters vanaf $210 voor vijf dagen.",
+   "en": "A single tank runs about $12 and a full gear set with tank $49 to $50 a day. For a week of shore diving, an unlimited-air package is cheaper, from $210 for five days at Ocean Encounters."
+  },
+  {
+   "nl": "Wil je zelf kantduiken, huur dan een auto. Stekken liggen van Playa Kalki in Westpunt tot Directors Bay bij Jan Thiel.",
+   "en": "If you plan to shore dive on your own, rent a car. Sites run from Playa Kalki in Westpunt to Directors Bay near Jan Thiel."
+  },
+  {
+   "nl": "Voor begeleide duiken moet je vaak in de laatste 12 tot 18 maanden gedoken hebben. Anders vraagt de school een opfrisduik, bij Ocean Encounters vanaf $110.",
+   "en": "Guided dives often require a dive in the last 12 to 18 months. If not, the shop asks for a refresher, from $110 at Ocean Encounters."
+  },
+  {
+   "nl": "Vraag bij boeken naar het aantal duikers per gids. In reviews komen 1 op 7 en 1 op 9 voor als klacht; kleine scholen als Divers Republic houden cursussen op max. 4.",
+   "en": "Ask how many divers each guide takes. Reviews complain about 1 to 7 and 1 to 9; small shops like Divers Republic cap courses at 4."
+  },
+  {
+   "nl": "Check wat in de prijs zit: bij sommige scholen kost een duikcomputer extra (bij GO WEST staat $53 voor een complete huurset).",
+   "en": "Check what the price covers: some shops charge extra for a dive computer (GO WEST lists $53 for a full rental set)."
+  },
+  {
+   "nl": "Neem een duikverzekering. DAN biedt losse dekking voor 7, 14 of 30 dagen.",
+   "en": "Get dive insurance. DAN offers stand-alone cover for 7, 14 or 30 days."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wat kost een duikbrevet (Open Water) op Curaçao?",
+    "en": "How much is an Open Water certification in Curaçao?"
+   },
+   "a": {
+    "nl": "Reken op $449 tot $525. Jan Thiel Diving en Blue Bay Dive vragen vanaf $525 voor een cursus van 2 tot 3 dagen.",
+    "en": "Expect $449 to $525. Jan Thiel Diving and Blue Bay Dive charge from $525 for a 2 to 3 day course."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost een proefduik (Discover Scuba)?",
+    "en": "How much is a Discover Scuba dive?"
+   },
+   "a": {
+    "nl": "Meestal $125 tot $140: Blue Bay Dive, Coral Divers en Jan Thiel Diving vanaf $125, The Dive Bus vanaf $129, Ocean Encounters rond $140.",
+    "en": "Usually $125 to $140: Blue Bay Dive, Coral Divers and Jan Thiel Diving from $125, The Dive Bus from $129, Ocean Encounters about $140."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kun je op Curaçao zelf vanaf de kant duiken?",
+    "en": "Can you shore dive on your own in Curaçao?"
+   },
+   "a": {
+    "nl": "Ja. Er zijn meer dan 38 kantstekken. Je huurt flessen bij een duikschool en rijdt zelf met een huurauto. Met een brevet mag je zelfstandig duiken.",
+    "en": "Yes. There are more than 38 shore sites. You rent tanks from a dive shop and drive yourself in a rental car. A certification lets you dive independently."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat zijn de beste duikstekken op Curaçao?",
+    "en": "What are the best dive sites in Curaçao?"
+   },
+   "a": {
+    "nl": "Bekende stekken zijn de Tugboat bij Caracasbaai (wrak op 5 m), Mushroom Forest en de Blue Room (per boot), Playa Kalki ofwel Alice in Wonderland in Westpunt, het wrak Superior Producer op ruim 30 m en Klein Curaçao per boot.",
+    "en": "Well-known sites include the Tugboat at Caracasbaai (wreck at 16 ft), Mushroom Forest and the Blue Room (by boat), Playa Kalki or Alice in Wonderland in Westpunt, the Superior Producer wreck at about 100 ft, and Klein Curaçao by boat."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is de Tugboat geschikt voor beginners?",
+    "en": "Is the Tugboat dive good for beginners?"
+   },
+   "a": {
+    "nl": "Ja. De sleepboot ligt op ongeveer 5 meter bij Caracasbaai en is ook goed te snorkelen.",
+    "en": "Yes. The tugboat sits in about 16 feet of water at Caracasbaai and is easy to snorkel too."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is de beste maand om te duiken op Curaçao?",
+    "en": "What is the best month to dive in Curaçao?"
+   },
+   "a": {
+    "nl": "Het hele jaar. Curaçao ligt buiten de orkaangordel en het water is 26 tot 28 °C. Januari tot en met augustus geeft de rustigste kantinstappen; september tot november kan iets winderiger zijn.",
+    "en": "Any month. Curaçao is outside the hurricane belt and the water is 79 to 82°F. January through August has the calmest shore entries; September to November can be a bit windier."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe kom je bij Mushroom Forest?",
+    "en": "How do you get to Mushroom Forest?"
+   },
+   "a": {
+    "nl": "Mushroom Forest is een bootduik in het westen en wordt vaak gecombineerd met de Blue Room. Scholen in Westpunt zoals GO WEST Diving varen erheen.",
+    "en": "Mushroom Forest is a boat dive on the west side, often paired with the Blue Room. Westpunt shops such as GO WEST Diving run trips there."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kunnen kinderen duiken op Curaçao?",
+    "en": "Can kids scuba dive in Curaçao?"
+   },
+   "a": {
+    "nl": "Ja. Porto Mari Dive Center biedt Bubblemaker voor kinderen en Scuba Do heeft kinderprogramma's. Voor begeleide duiken bij The Dive Bus is de minimumleeftijd 10 jaar.",
+    "en": "Yes. Porto Mari Dive Center offers Bubblemaker for kids and Scuba Do runs kids programs. The Dive Bus sets a minimum age of 10 for guided dives."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar kun je op Curaçao technisch duiken?",
+    "en": "Where can you do technical diving in Curaçao?"
+   },
+   "a": {
+    "nl": "Goby Divers is het bekendste tec-centrum met trimix, nitrox en CCR-ondersteuning. Unique Diving biedt extended range-duiken.",
+    "en": "Goby Divers is the best-known tech center, with trimix, nitrox and CCR support. Unique Diving offers extended range dives."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "duiken curaçao",
+   "duikschool curaçao",
+   "duikcursus curaçao",
+   "padi open water curaçao",
+   "kantduiken curaçao",
+   "duikcentrum westpunt"
+  ],
+  "en": [
+   "curacao dive shop",
+   "best dive shop curacao",
+   "scuba diving curacao",
+   "curacao shore diving",
+   "padi open water curacao",
+   "discover scuba curacao"
+  ],
+  "es": [
+   "buceo curazao",
+   "escuela de buceo curazao",
+   "curso de buceo curazao",
+   "bautismo de buceo curazao"
+  ],
+  "pt": [
+   "mergulho curaçao",
+   "escola de mergulho curaçao",
+   "curso de mergulho curaçao",
+   "batismo de mergulho curaçao"
+  ],
+  "de": [
+   "tauchen curaçao",
+   "tauchschule curaçao",
+   "tauchbasis curaçao",
+   "tauchkurs curaçao",
+   "landtauchgänge curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Welke duikschool op Curaçao is het best voor iemand die nog nooit gedoken heeft?",
+   "Waar kan ik op Curaçao een duikcursus in het Nederlands doen?",
+   "Wat kost een week kantduiken op Curaçao met een huurauto?"
+  ],
+  "en": [
+   "What is the best dive shop in Curaçao for a first-time diver?",
+   "Which Curaçao dive shop is best for shore diving on your own?",
+   "How much does PADI Open Water certification cost in Curaçao?"
+  ]
+ }
+}

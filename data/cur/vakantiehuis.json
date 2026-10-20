@@ -1,1 +1,835 @@
-{"id":"vakantiehuis","peildatum":"2026-10-20","items":[]}
+{
+ "id": "vakantiehuis",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "vakantiehuis",
+  "en": "vacation rental"
+ },
+ "h1": {
+  "nl": "Vakantiehuis op Curaçao: welk appartement of welke villa past bij jou?",
+  "en": "Vacation rentals in Curaçao: which apartment or villa fits you?"
+ },
+ "titel": {
+  "nl": "Vakantiehuis Curaçao: {n} complexen en villaparken vergeleken",
+  "en": "Curaçao Vacation Rentals: {n} Villa and Condo Resorts Compared"
+ },
+ "metaDesc": {
+  "nl": "{n} villaparken en appartementencomplexen op Curaçao vergeleken op ligging, zwembad, groepsgrootte, prijs en reviews.",
+  "en": "{n} Curaçao villa resorts and condo complexes compared on location, pool, group size, price and reviews."
+ },
+ "kort": {
+  "nl": "We zetten 9 villaparken en appartementencomplexen op Curaçao naast elkaar. Prijzen beginnen rond $185 per nacht (Coral Estate) en weekpakketten met duiken en auto vanaf $974 voor twee (All West in Westpunt). Met een groep: Blue Bay (villa's tot 3 slaapkamers); budget: Westpunt; zwembad en rust: Coral Estate.",
+  "en": "We compared 9 villa resorts and condo complexes on Curaçao. Prices start around $185 a night (Coral Estate), and week packages with diving and a car start at $974 for two (All West in Westpunt). Groups: Blue Bay (villas up to 3 bedrooms); budget: Westpunt; pool and quiet: Coral Estate."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Met hoeveel personen ga je?",
+    "en": "How many people are going?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Met z'n tweeën",
+      "en": "Two of us"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "3 tot 6 personen",
+      "en": "3 to 6 people"
+     },
+     "plus": [
+      "groep"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Grote groep of meerdere gezinnen",
+      "en": "Large group or several families"
+     },
+     "plus": [
+      "groep"
+     ],
+     "min": [],
+     "vereist": "groep"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Waar wil je verblijven?",
+    "en": "Where do you want to stay?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Jan Thiel",
+      "en": "Jan Thiel"
+     },
+     "plus": [
+      "jan-thiel"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Westpunt en Bandabou",
+      "en": "Westpunt and Bandabou"
+     },
+     "plus": [
+      "westpunt"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Blue Bay",
+      "en": "Blue Bay"
+     },
+     "plus": [
+      "blue-bay"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Aan zee, waar dan ook",
+      "en": "On the water, anywhere"
+     },
+     "plus": [
+      "aan-zee"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Moet er een zwembad zijn?",
+    "en": "Do you need a pool?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Fijn, maar niet nodig",
+      "en": "Nice but not needed"
+     },
+     "plus": [
+      "zwembad"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ja, verplicht",
+      "en": "Yes, must have"
+     },
+     "plus": [
+      "zwembad"
+     ],
+     "min": [],
+     "vereist": "zwembad"
+    },
+    {
+     "label": {
+      "nl": "Nee",
+      "en": "No"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat is je budget?",
+    "en": "What is your budget?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Gemiddeld",
+      "en": "Mid-range"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Zo goedkoop mogelijk",
+      "en": "As cheap as possible"
+     },
+     "plus": [
+      "budget"
+     ],
+     "min": [
+      "luxe"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Luxe mag",
+      "en": "Luxury is fine"
+     },
+     "plus": [
+      "luxe",
+      "zwembad"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Alles in een pakket met auto",
+      "en": "All in one package with a car"
+     },
+     "plus": [
+      "auto-inbegrepen"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "blue-bay-resort",
+   "naam": "Blue Bay Curaçao Golf & Beach Resort",
+   "url": null,
+   "soort": {
+    "nl": "resort met villa's en appartementen",
+    "en": "resort with villas and condos"
+   },
+   "plaats": "Blue Bay, Sint Michiel",
+   "tags": [
+    "aan-zee",
+    "blue-bay",
+    "groep"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Villa's tot 3 slaapkamers",
+     "en": "Villas up to 3 bedrooms"
+    },
+    {
+     "nl": "Eigen strand en golfbaan",
+     "en": "Private beach and golf course"
+    },
+    {
+     "nl": "Volledige keukens",
+     "en": "Full kitchens"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 725,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Hotel_Feature-g2548635-d1007289-zft18944-Blue_Bay_Curacao_Golf_Beach_Resort.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustig eigen strand met goed snorkelen",
+     "Ruime, schone units met keuken en groot terras",
+     "Strandbar met bediening en speeltuin"
+    ],
+    "en": [
+     "Quiet private beach with good snorkeling",
+     "Roomy, clean units with kitchen and big patio",
+     "Beach bar service and a playground"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Onderhoudsproblemen zoals lekkages en sloten",
+     "Airco alleen in slaapkamers",
+     "Afgelegen, huurauto nodig"
+    ],
+    "en": [
+     "Upkeep issues like leaks and broken locks",
+     "AC only in bedrooms",
+     "Remote, you need a rental car"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Hotel_Feature-g2548635-d1007289-zft18944-Blue_Bay_Curacao_Golf_Beach_Resort.html",
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d4545228-Reviews-Blue_Bay_Dive_Watersports-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "coral-estate",
+   "naam": "Coral Estate Luxury Resort",
+   "url": null,
+   "soort": {
+    "nl": "resort met appartementen",
+    "en": "resort with apartments"
+   },
+   "plaats": "Rif Sint Marie, Sint Willibrordus",
+   "tags": [
+    "zwembad",
+    "aan-zee",
+    "luxe"
+   ],
+   "prijs": {
+    "bedrag": 185,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf per nacht, 2 pers., excl. belasting",
+     "en": "from per night, 2 guests, before taxes"
+    },
+    "bron": "https://www.tripadvisor.com/ShowUserReviews-g3754516-d7626396-r925895645-Coral_Estate_Luxury_Resort-Sint_Willibrordus_Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Huisrif met duikschool",
+     "en": "House reef with dive shop"
+    },
+    {
+     "nl": "Ca. 30 min rijden naar stad",
+     "en": "About 30 min drive to town"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 319,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/ShowUserReviews-g3754516-d7626396-r925895645-Coral_Estate_Luxury_Resort-Sint_Willibrordus_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goed duiken op het huisrif",
+     "Verzorgd terrein en zwembad",
+     "Ruime kamers, sommige met keuken"
+    ],
+    "en": [
+     "Great diving on the house reef",
+     "Well-kept grounds and pool",
+     "Roomy units, some with a kitchen"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Douche zet badkamer onder water",
+     "Trage service en kamers niet op tijd klaar",
+     "Ligbedden alleen bij consumptie"
+    ],
+    "en": [
+     "Shower floods the bathroom",
+     "Slow service, rooms not ready on time",
+     "Loungers only if you buy food or drinks"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/ShowUserReviews-g3754516-d7626396-r925895645-Coral_Estate_Luxury_Resort-Sint_Willibrordus_Curacao.html",
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d12930256-Reviews-Coral_Divers-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "livingstone-jan-thiel",
+   "naam": "Livingstone Jan Thiel Resort",
+   "url": null,
+   "soort": {
+    "nl": "resort met appartementen",
+    "en": "apartment resort"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "jan-thiel"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Duikschool in het resort",
+     "en": "Dive shop on site"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "scuba-lodge-lagun-beach",
+   "naam": "Scuba Lodge Lagun Beach",
+   "url": null,
+   "soort": {
+    "nl": "boetiekappartementen",
+    "en": "boutique apartments"
+   },
+   "plaats": "Playa Lagun",
+   "tags": [
+    "aan-zee",
+    "westpunt",
+    "auto-inbegrepen"
+   ],
+   "prijs": {
+    "bedrag": 1054,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf, 7 nachten voor 2 incl. duiken en auto",
+     "en": "from, 7 nights for 2 incl. diving and car"
+    },
+    "bron": "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Studio's aan Playa Lagun",
+     "en": "Studios at Playa Lagun"
+    },
+    {
+     "nl": "Duikcentrum op het terrein",
+     "en": "Dive center on site"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/",
+    "https://www.divecuracao.info/dive-travel/choosing-a-curacao-dive-shop/"
+   ]
+  },
+  {
+   "id": "all-west-apartments",
+   "naam": "All West Apartments",
+   "url": null,
+   "soort": {
+    "nl": "appartementen, zelf koken",
+    "en": "self-catering apartments"
+   },
+   "plaats": "Playa Kalki, Westpunt",
+   "tags": [
+    "westpunt",
+    "budget",
+    "auto-inbegrepen"
+   ],
+   "prijs": {
+    "bedrag": 974,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf, 7 nachten voor 2 incl. duiken en auto (2-3 pers.)",
+     "en": "from, 7 nights for 2 incl. diving and car (2-3 guests)"
+    },
+    "bron": "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Partner van GO WEST Diving",
+     "en": "Partner of GO WEST Diving"
+    },
+    {
+     "nl": "Junior-appartement voor 2-3",
+     "en": "Junior apartment for 2-3"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/",
+    "https://www.divecuracao.info/dive-travel/choosing-a-curacao-dive-shop/"
+   ]
+  },
+  {
+   "id": "nos-krusero",
+   "naam": "Nos Krusero Apartments",
+   "url": null,
+   "soort": {
+    "nl": "eenvoudige appartementen",
+    "en": "basic apartments"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "westpunt",
+    "budget",
+    "auto-inbegrepen"
+   ],
+   "prijs": {
+    "bedrag": 1172,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf, 7 nachten voor 2 incl. duiken en auto (1-3 pers.)",
+     "en": "from, 7 nights for 2 incl. diving and car (1-3 guests)"
+    },
+    "bron": "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "1-slaapkamerappartementen",
+     "en": "1-bedroom apartments"
+    },
+    {
+     "nl": "Partner van GO WEST Diving",
+     "en": "Partner of GO WEST Diving"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/",
+    "https://www.divecuracao.info/dive-travel/choosing-a-curacao-dive-shop/"
+   ]
+  },
+  {
+   "id": "merakii-seaview",
+   "naam": "Merakii Seaview Escape",
+   "url": null,
+   "soort": {
+    "nl": "boetiekresort met suites",
+    "en": "boutique suite resort"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "zwembad",
+    "groep",
+    "auto-inbegrepen"
+   ],
+   "prijs": {
+    "bedrag": 1312,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf, 7 nachten voor 2 incl. duiken en auto",
+     "en": "from, 7 nights for 2 incl. diving and car"
+    },
+    "bron": "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Suites met kitchenette",
+     "en": "Suites with kitchenettes"
+    },
+    {
+     "nl": "Tot 2 slaapkamers",
+     "en": "Up to 2 bedrooms"
+    },
+    {
+     "nl": "Duiklocker van The Dive Bus",
+     "en": "The Dive Bus gear locker"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/",
+    "https://www.divenewswire.com/the-dive-bus-curacao-and-merakii-seaview-resort-announce-exciting-new-partnership-and-exclusive-dema-show-special/amp/"
+   ]
+  },
+  {
+   "id": "sun-reef-village",
+   "naam": "Sun Reef Village",
+   "url": null,
+   "soort": {
+    "nl": "vakantiepark",
+    "en": "vacation village"
+   },
+   "plaats": "Sint Michiel",
+   "tags": [
+    "aan-zee"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Huisrif direct voor de deur",
+     "en": "House reef right out front"
+    },
+    {
+     "nl": "Duitstalige duikbasis",
+     "en": "German-run dive base"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html"
+   ]
+  },
+  {
+   "id": "bahia-apartments",
+   "naam": "Bahia Apartments & Diving",
+   "url": null,
+   "soort": {
+    "nl": "appartementen met duikbasis",
+    "en": "apartments with dive base"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Eigen duikbasis",
+     "en": "Own dive base"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/category/dive-operators"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Booking.com",
+   "url": "https://www.booking.com",
+   "uitleg": {
+    "nl": "Grootste aanbod van appartementen en villa's op Curaçao, met gastbeoordelingen per accommodatie.",
+    "en": "Largest selection of apartments and villas on Curaçao, with guest ratings per property."
+   }
+  },
+  {
+   "naam": "Airbnb",
+   "url": "https://www.airbnb.com",
+   "uitleg": {
+    "nl": "Particuliere huizen en villa's, vaak met zwembad; let op schoonmaak- en servicekosten bovenop de nachtprijs.",
+    "en": "Private homes and villas, often with a pool; watch for cleaning and service fees on top of the nightly rate."
+   }
+  },
+  {
+   "naam": "Vrbo",
+   "url": "https://www.vrbo.com",
+   "uitleg": {
+    "nl": "Vooral hele huizen en villa's voor gezinnen en groepen.",
+    "en": "Mostly whole homes and villas for families and groups."
+   }
+  },
+  {
+   "naam": "Expedia / Hotels.com",
+   "url": "https://www.expedia.com",
+   "uitleg": {
+    "nl": "Toont ook resortappartementen; bij Coral Estate $238 per nacht tegen $185 bij Agoda voor dezelfde nacht.",
+    "en": "Also lists resort apartments; Coral Estate showed $238 a night here versus $185 at Agoda for the same night."
+   }
+  },
+  {
+   "naam": "Agoda",
+   "url": "https://www.agoda.com",
+   "uitleg": {
+    "nl": "Was in onze steekproef de goedkoopste voor Coral Estate ($185 per nacht, 1-2 november).",
+    "en": "Was cheapest in our check for Coral Estate ($185 a night, November 1-2)."
+   }
+  },
+  {
+   "naam": "Dive Travel Curaçao (divecuracao.info)",
+   "url": "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/",
+   "uitleg": {
+    "nl": "Weekpakketten met appartement, duiken en huurauto, vooral in Westpunt en Willemstad.",
+    "en": "Week packages with an apartment, diving and a rental car, mainly in Westpunt and Willemstad."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Vergelijk dezelfde nacht op meerdere sites: voor Coral Estate scheelde het $53 per nacht tussen Agoda ($185) en Expedia ($238).",
+   "en": "Compare the same night across sites: Coral Estate differed by $53 a night between Agoda ($185) and Expedia ($238)."
+  },
+  {
+   "nl": "Buiten Willemstad heb je een huurauto nodig voor boodschappen en stranden; Coral Estate ligt ongeveer 30 minuten van de stad.",
+   "en": "Outside Willemstad you need a rental car for groceries and beaches; Coral Estate is about 30 minutes from town."
+  },
+  {
+   "nl": "Duik je? Een weekpakket met appartement, onbeperkt lucht en auto begint rond $974 voor twee in Westpunt.",
+   "en": "Diving? A week package with an apartment, unlimited air and a car starts around $974 for two in Westpunt."
+  },
+  {
+   "nl": "Vraag of er airco in alle kamers zit: bij Blue Bay melden gasten airco alleen in de slaapkamers.",
+   "en": "Ask whether every room has AC: guests at Blue Bay report AC only in the bedrooms."
+  },
+  {
+   "nl": "Kijk of strandbedden gratis zijn: bij Coral Estate moet je iets bestellen voor een ligbed.",
+   "en": "Check whether beach loungers are free: at Coral Estate you have to order food or drinks to use one."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wat kost een vakantiehuis op Curaçao per nacht?",
+    "en": "How much is a vacation rental in Curaçao per night?"
+   },
+   "a": {
+    "nl": "Resortappartementen beginnen rond $185 per nacht voor twee (Coral Estate, november 2026, excl. belasting). Weekpakketten met duiken en auto lopen van $974 tot $1.312 voor twee.",
+    "en": "Resort apartments start around $185 a night for two (Coral Estate, November 2026, before taxes). Week packages with diving and a car run $974 to $1,312 for two."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar kun je het best verblijven op Curaçao?",
+    "en": "What is the best area to stay in Curaçao?"
+   },
+   "a": {
+    "nl": "Jan Thiel en Willemstad voor restaurants en stranden dichtbij, Blue Bay voor een rustig park met eigen strand, Westpunt voor natuur en kantduiken.",
+    "en": "Jan Thiel and Willemstad for restaurants and nearby beaches, Blue Bay for a quiet gated resort with a private beach, Westpunt for nature and shore diving."
+   }
+  },
+  {
+   "q": {
+    "nl": "Heb je een auto nodig op Curaçao?",
+    "en": "Do you need a car in Curaçao?"
+   },
+   "a": {
+    "nl": "Buiten Willemstad wel. Reviews van Blue Bay en Coral Estate noemen een huurauto nodig voor boodschappen en uitjes.",
+    "en": "Outside Willemstad, yes. Reviews of Blue Bay and Coral Estate say you need a rental car for groceries and outings."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welk vakantiehuis op Curaçao is geschikt voor een groep?",
+    "en": "Which Curaçao vacation rental works for a group?"
+   },
+   "a": {
+    "nl": "Blue Bay heeft villa's tot 3 slaapkamers en Merakii suites tot 2 slaapkamers. Voor grotere groepen zoek je hele villa's op Vrbo of Airbnb.",
+    "en": "Blue Bay has villas up to 3 bedrooms and Merakii has suites up to 2 bedrooms. For bigger groups, look at whole villas on Vrbo or Airbnb."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is Westpunt goedkoper dan Jan Thiel?",
+    "en": "Is Westpunt cheaper than Jan Thiel?"
+   },
+   "a": {
+    "nl": "Meestal wel. De goedkoopste weekpakketten in onze lijst liggen in Westpunt: All West vanaf $974 en Nos Krusero vanaf $1.172 voor 7 nachten.",
+    "en": "Usually. The cheapest week packages in our list are in Westpunt: All West from $974 and Nos Krusero from $1,172 for 7 nights."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kun je vanuit je appartement duiken?",
+    "en": "Can you dive right from your apartment?"
+   },
+   "a": {
+    "nl": "Ja, bij Coral Estate, Blue Bay, Scuba Lodge Lagun Beach en Sun Reef Village ligt een huisrif met duikschool vlak bij.",
+    "en": "Yes. Coral Estate, Blue Bay, Scuba Lodge Lagun Beach and Sun Reef Village have a house reef with a dive shop close by."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "vakantiehuis curaçao",
+   "villa curaçao huren",
+   "appartement curaçao",
+   "vakantiewoning curaçao met zwembad",
+   "villa jan thiel",
+   "appartement westpunt"
+  ],
+  "en": [
+   "curacao vacation rentals",
+   "curacao villa rental",
+   "curacao condo rental",
+   "curacao villa with pool",
+   "jan thiel apartment",
+   "blue bay curacao villa"
+  ],
+  "es": [
+   "alquiler vacacional curazao",
+   "villa curazao",
+   "apartamento curazao"
+  ],
+  "pt": [
+   "casa de temporada curaçao",
+   "aluguel de villa curaçao",
+   "apartamento curaçao"
+  ],
+  "de": [
+   "ferienhaus curaçao",
+   "ferienwohnung curaçao",
+   "villa curaçao mieten"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Waar huur ik het best een vakantiehuis op Curaçao met zwembad?",
+   "Wat kost een villa op Curaçao voor een groep van zes?",
+   "Is Jan Thiel of Westpunt beter voor een appartement op Curaçao?"
+  ],
+  "en": [
+   "What is the best area to rent a vacation home in Curaçao?",
+   "How much does a villa with a pool in Curaçao cost per night?",
+   "Which Curaçao resorts rent apartments or villas for families?"
+  ]
+ }
+}

@@ -1,1 +1,3978 @@
-{"id":"excursies","peildatum":"2026-10-20","items":[]}
+{
+ "id": "excursies",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "excursie",
+  "en": "excursion"
+ },
+ "h1": {
+  "nl": "Excursies op Curaçao: welke tour past bij jou?",
+  "en": "Curaçao excursions: which tour is right for you?"
+ },
+ "titel": {
+  "nl": "Excursies Curaçao vergelijken: {n} tours met prijzen en scores",
+  "en": "Curaçao Excursions Compared: {n} Tours, Prices and Ratings"
+ },
+ "metaDesc": {
+  "nl": "{n} excursies op Curaçao naast elkaar: Klein Curaçao, schildpadden, catamaran, jeep en quad. Prijzen per persoon en reviewscores.",
+  "en": "{n} Curaçao tours side by side: Klein Curaçao, sea turtles, catamarans, jeep and ATV. Prices per person and review scores."
+ },
+ "kort": {
+  "nl": "We vergeleken {n} excursies op Curaçao. Een dagtocht naar Klein Curaçao kost $135 tot $170 per persoon; Powerboat Caribbean is het snelst (40 tot 45 minuten varen, 4,9 op Tripadvisor) en Irie Tours en BlueFinn ($140) varen vrijwel dagelijks met open bar. Snorkelen met schildpadden kan vanaf $75, een zonsondergangtocht vanaf $75 en een stadswandeling vanaf $33.",
+  "en": "We compared {n} Curaçao excursions. A Klein Curaçao day trip runs $135 to $170 per person; Powerboat Caribbean is the fastest (40 to 45 minutes each way, 4.9 on Tripadvisor), while Irie Tours and BlueFinn ($140) sail almost daily with an open bar. Turtle snorkel tours start at $75, sunset sails at $75 and a Willemstad walking tour at $33."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat voor uitje zoek je?",
+    "en": "What kind of outing are you looking for?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "No preference"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Dagtocht naar Klein Curaçao",
+      "en": "Day trip to Klein Curaçao"
+     },
+     "plus": [
+      "klein-curacao"
+     ],
+     "min": [],
+     "vereist": "klein-curacao"
+    },
+    {
+     "label": {
+      "nl": "Snorkelen met schildpadden",
+      "en": "Snorkeling with sea turtles"
+     },
+     "plus": [
+      "schildpadden",
+      "snorkel"
+     ],
+     "min": [],
+     "vereist": "snorkel"
+    },
+    {
+     "label": {
+      "nl": "Zonsondergang of feest op het water",
+      "en": "Sunset or party on the water"
+     },
+     "plus": [
+      "zonsondergang",
+      "feest"
+     ],
+     "min": [],
+     "vereist": "boot"
+    },
+    {
+     "label": {
+      "nl": "Jeep, quad of buggy",
+      "en": "Jeep, ATV or buggy"
+     },
+     "plus": [
+      "offroad",
+      "quad"
+     ],
+     "min": [],
+     "vereist": "offroad"
+    },
+    {
+     "label": {
+      "nl": "Stad, cultuur en dieren",
+      "en": "City, culture and animals"
+     },
+     "plus": [
+      "stadstour",
+      "kinderen"
+     ],
+     "min": [
+      "offroad"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Met wie ga je?",
+    "en": "Who's coming along?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Met z'n tweeën of vrienden",
+      "en": "Couple or friends"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Gezin met kinderen",
+      "en": "Family with kids"
+     },
+     "plus": [
+      "kinderen"
+     ],
+     "min": [
+      "feest",
+      "quad"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Cruisepassagier, beperkte tijd",
+      "en": "Cruise passenger with limited time"
+     },
+     "plus": [
+      "cruise-gast",
+      "halve-dag"
+     ],
+     "min": [
+      "hele-dag",
+      "klein-curacao"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Groep die feest wil",
+      "en": "Group looking to party"
+     },
+     "plus": [
+      "feest",
+      "eten-inbegrepen"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat weegt het zwaarst?",
+    "en": "What matters most?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Beste reviews",
+      "en": "Best reviews"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Laagste prijs",
+      "en": "Lowest price"
+     },
+     "plus": [
+      "budget"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Kleine groep",
+      "en": "Small group"
+     },
+     "plus": [
+      "kleine-groep"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Eten en drinken inbegrepen",
+      "en": "Food and drinks included"
+     },
+     "plus": [
+      "eten-inbegrepen"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Hoe lang mag het duren, en word je snel zeeziek?",
+    "en": "How long, and do you get seasick?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "No preference"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Halve dag",
+      "en": "Half day"
+     },
+     "plus": [
+      "halve-dag"
+     ],
+     "min": [
+      "hele-dag"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Hele dag",
+      "en": "Full day"
+     },
+     "plus": [
+      "hele-dag"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ik word snel zeeziek",
+      "en": "I get seasick easily"
+     },
+     "plus": [
+      "korte-overtocht",
+      "stadstour",
+      "offroad"
+     ],
+     "min": [
+      "catamaran"
+     ],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "bluefinn-klein-curacao",
+   "naam": "BlueFinn Charters: Klein Curaçao per catamaran",
+   "url": null,
+   "soort": {
+    "nl": "catamaran",
+    "en": "catamaran"
+   },
+   "plaats": "Jan Thiel (Zanzibar) / Mood Beach",
+   "tags": [
+    "klein-curacao",
+    "boot",
+    "catamaran",
+    "eten-inbegrepen",
+    "snorkel",
+    "schildpadden",
+    "hele-dag",
+    "kinderen"
+   ],
+   "prijs": {
+    "bedrag": 140,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Ongeveer 8 uur",
+     "en": "About 8 hours"
+    },
+    {
+     "nl": "Open bar vanaf 12:30",
+     "en": "Open bar from 12:30"
+    },
+    {
+     "nl": "Geen strandhuis, wel palapa's",
+     "en": "No beach house, palapas available"
+    },
+    {
+     "nl": "Transfer $19 extra",
+     "en": "Transfer $19 extra"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 1017,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d16642980-Klein_Curacao_Day_Trip_with_Premium_Open_Bar_and_BBQ_Lunch-Curacao.html"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 2075,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d12282711-Reviews-BlueFinn_Charters-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijke crew en goede BBQ-lunch",
+     "Gezellige sfeer en muziek aan boord",
+     "Geschikt voor gezinnen met kinderen"
+    ],
+    "en": [
+     "Friendly crew and a good BBQ lunch",
+     "Relaxed vibe and good music on board",
+     "Works well for families with kids"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Overtocht van bijna twee uur, kans op zeeziekte",
+     "Vertrekpunt en instructies vooraf soms onduidelijk"
+    ],
+    "en": [
+     "Crossing takes close to two hours, seasickness is common",
+     "Meeting point instructions can be confusing"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d16642980-Klein_Curacao_Day_Trip_with_Premium_Open_Bar_and_BBQ_Lunch-Curacao.html",
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d12282711-Reviews-BlueFinn_Charters-Willemstad_Curacao.html",
+    "https://www.mycuracaoguide.com/klein-curacao",
+    "https://naarcuracao.com/en/klein-curacao-best-trips-comparison"
+   ]
+  },
+  {
+   "id": "bluefinn-klein-curacao-sunset",
+   "naam": "BlueFinn: Klein Curaçao met zonsondergang terug",
+   "url": null,
+   "soort": {
+    "nl": "catamaran",
+    "en": "catamaran"
+   },
+   "plaats": "Mood Beach (Bapor Kibra)",
+   "tags": [
+    "klein-curacao",
+    "boot",
+    "catamaran",
+    "zonsondergang",
+    "eten-inbegrepen",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 165,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Alleen op maandag",
+     "en": "Mondays only"
+    },
+    {
+     "nl": "Vertrek 11:00",
+     "en": "Departs 11:00 a.m."
+    },
+    {
+     "nl": "Open bar en BBQ",
+     "en": "Open bar and BBQ"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 54,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d27471495-Klein_Curacao_Sunset_Cruise_with_Open_Bar_and_BBQ-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Klein Curaçao en zonsondergang in één dag",
+     "Later vertrek, geen vroege ochtend"
+    ],
+    "en": [
+     "Klein Curaçao and a sunset sail in one day",
+     "Later start, no early morning"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Raakt snel vol, alleen op maandag"
+    ],
+    "en": [
+     "Fills up fast and only runs Mondays"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d27471495-Klein_Curacao_Sunset_Cruise_with_Open_Bar_and_BBQ-Curacao.html",
+    "https://naarcuracao.com/en/klein-curacao-best-trips-comparison",
+    "https://www.mycuracaoguide.com/klein-curacao"
+   ]
+  },
+  {
+   "id": "irie-klein-curacao",
+   "naam": "Irie Tours: Klein Curaçao Adventure Day Trip",
+   "url": null,
+   "soort": {
+    "nl": "catamaran",
+    "en": "catamaran"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "klein-curacao",
+    "boot",
+    "catamaran",
+    "eten-inbegrepen",
+    "snorkel",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 140,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d19406505-Klein_Curacao_Adventure_Day_Trip-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Vaart dagelijks",
+     "en": "Sails daily"
+    },
+    {
+     "nl": "Ontbijt, BBQ en open bar",
+     "en": "Breakfast, BBQ and open bar"
+    },
+    {
+     "nl": "Ongeveer 9 uur",
+     "en": "About 9 hours"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 914,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d19406505-Klein_Curacao_Adventure_Day_Trip-Curacao.html"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 3402,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d2301522-Reviews-Irie_Tours-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijke, enthousiaste crew",
+     "Ruim eten en drinken, ook alcohol",
+     "Elke dag vertrek, makkelijk in te plannen"
+    ],
+    "en": [
+     "Friendly, upbeat crew",
+     "Plenty of food and drinks, alcohol included",
+     "Departs every day, easy to fit in"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Harde muziek aan boord",
+     "Soms onrustige medepassagiers",
+     "Lange dag en geen strandhuis"
+    ],
+    "en": [
+     "Loud music on board",
+     "Rowdy fellow passengers on some trips",
+     "Long day and no beach house"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d19406505-Klein_Curacao_Adventure_Day_Trip-Curacao.html",
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d2301522-Reviews-Irie_Tours-Willemstad_Curacao.html",
+    "https://www.mycuracaoguide.com/klein-curacao",
+    "https://naarcuracao.com/en/klein-curacao-best-trips-comparison"
+   ]
+  },
+  {
+   "id": "miss-ann",
+   "naam": "Miss Ann Boat Trips (jacht Serendipity)",
+   "url": null,
+   "soort": {
+    "nl": "motorjacht met strandhuis",
+    "en": "motor yacht with beach house"
+   },
+   "plaats": "Santa Barbara Beach",
+   "tags": [
+    "klein-curacao",
+    "boot",
+    "eten-inbegrepen",
+    "snorkel",
+    "schildpadden",
+    "kinderen",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 150,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.mycuracaoguide.com/klein-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Strandhuis met ligbedden en douche",
+     "en": "Beach house, loungers and shower"
+    },
+    {
+     "nl": "Alcohol doordeweeks extra",
+     "en": "Alcohol extra on weekdays"
+    },
+    {
+     "nl": "Weekend Supreme: $170 inclusief alcohol",
+     "en": "Weekend Supreme: $170 with alcohol"
+    },
+    {
+     "nl": "Overtocht ongeveer 1 uur",
+     "en": "Crossing about 1 hour"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 129,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d33207438-Klein_Curacao_Superyacht_and_Beach_house-Curacao.html"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 650,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d3948100-Reviews-Miss_Ann_Boat_Trips-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Behulpzame crew, ook bij zeeziekte",
+     "Goede faciliteiten op het strand: schaduw, bedden, toiletten",
+     "Smakelijk ontbijt en lunch"
+    ],
+    "en": [
+     "Helpful crew, also when people get seasick",
+     "Good beach setup with shade, loungers and restrooms",
+     "Tasty breakfast and lunch"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Verwarring over welke drankjes extra kosten",
+     "Druk: tot 70 gasten per tocht",
+     "Tijdens onderhoud vervangende, kleinere boot"
+    ],
+    "en": [
+     "Confusion over which drinks cost extra",
+     "Crowded, with up to 70 guests",
+     "Smaller replacement boat used during maintenance"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d33207438-Klein_Curacao_Superyacht_and_Beach_house-Curacao.html",
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d3948100-Reviews-Miss_Ann_Boat_Trips-Willemstad_Curacao.html",
+    "https://www.mycuracaoguide.com/klein-curacao",
+    "https://naarcuracao.com/en/klein-curacao-best-trips-comparison",
+    "https://klein-curacao.nl/en/klein-curacao-prices/"
+   ]
+  },
+  {
+   "id": "mermaid-boat-trips",
+   "naam": "Mermaid Boat Trips",
+   "url": null,
+   "soort": {
+    "nl": "motorschip met strandhuis",
+    "en": "motor vessel with beach house"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "klein-curacao",
+    "boot",
+    "eten-inbegrepen",
+    "snorkel",
+    "schildpadden",
+    "kinderen",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 150,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d26130560-Klein_Curacao_Full_Day_Boat_Trip-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Vertrek 7:00, boarden 6:30",
+     "en": "Departs 7:00, boarding 6:30"
+    },
+    {
+     "nl": "Strandhuis met ligstoelen",
+     "en": "Beach house with lounge chairs"
+    },
+    {
+     "nl": "Cocktails $10 extra",
+     "en": "Cocktails $10 extra"
+    },
+    {
+     "nl": "Tot 75 gasten",
+     "en": "Up to 75 guests"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 180,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d26130560-Klein_Curacao_Full_Day_Boat_Trip-Curacao.html"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 815,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147277-d1059998-Reviews-Mermaid_Boat_Trips_Curacao-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goed georganiseerde, vriendelijke crew",
+     "Ruim ontbijt, BBQ-lunch en frisdrank",
+     "Schaduw en ligstoelen op het eiland"
+    ],
+    "en": [
+     "Well-organized, friendly crew",
+     "Plenty of breakfast, BBQ lunch and soft drinks",
+     "Shade and lounge chairs on the island"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Overtocht 1,5 tot 2 uur en vaak ruw",
+     "Zeer vroeg vertrek",
+     "Recente klachten over hygiëne bij het eten"
+    ],
+    "en": [
+     "Crossing of 1.5 to 2 hours, often rough",
+     "Very early departure",
+     "Recent complaints about cleanliness around the food"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d26130560-Klein_Curacao_Full_Day_Boat_Trip-Curacao.html",
+    "https://www.tripadvisor.com/Attraction_Review-g147277-d1059998-Reviews-Mermaid_Boat_Trips_Curacao-Curacao.html",
+    "https://www.mycuracaoguide.com/klein-curacao",
+    "https://naarcuracao.com/en/klein-curacao-best-trips-comparison",
+    "https://klein-curacao.nl/en/klein-curacao-prices/"
+   ]
+  },
+  {
+   "id": "powerboat-caribbean",
+   "naam": "Powerboat Caribbean: Klein Curaçao Powerboat Adventure",
+   "url": null,
+   "soort": {
+    "nl": "speedboot",
+    "en": "powerboat"
+   },
+   "plaats": "Surfspot, Jan Thiel",
+   "tags": [
+    "klein-curacao",
+    "boot",
+    "korte-overtocht",
+    "kleine-groep",
+    "eten-inbegrepen",
+    "snorkel",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 169,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d16808309-Klein_Curacao_Powerboat_Adventure-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Overtocht 40 tot 45 minuten",
+     "en": "Crossing 40 to 45 minutes"
+    },
+    {
+     "nl": "Maximaal 18 gasten",
+     "en": "Maximum 18 guests"
+    },
+    {
+     "nl": "Vanaf 6 jaar",
+     "en": "Ages 6 and up"
+    },
+    {
+     "nl": "Bier en wijn inbegrepen",
+     "en": "Beer and wine included"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 335,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d16808309-Klein_Curacao_Powerboat_Adventure-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Snel op het eiland, meer tijd op het strand",
+     "Minder last van zeeziekte dan op grote boten",
+     "Goede lunch en attente gidsen"
+    ],
+    "en": [
+     "Quick crossing leaves more time on the beach",
+     "Less seasickness than on the big boats",
+     "Good lunch and attentive guides"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Rit is hobbelig en nat",
+     "Weinig schaduw op het eiland",
+     "Zwemvest voor volwassenen niet verplicht"
+    ],
+    "en": [
+     "The ride is bumpy and wet",
+     "Little shade on the island",
+     "Life jackets not required for adults"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d16808309-Klein_Curacao_Powerboat_Adventure-Curacao.html",
+    "https://www.mycuracaoguide.com/klein-curacao",
+    "https://naarcuracao.com/en/klein-curacao-best-trips-comparison"
+   ]
+  },
+  {
+   "id": "all-boat-charters-gold-seahorse",
+   "naam": "All Boat Charters: Gold Seahorse naar Klein Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "catamaranjacht",
+    "en": "catamaran yacht"
+   },
+   "plaats": "Kima Kalki Marina, Spaanse Water",
+   "tags": [
+    "klein-curacao",
+    "boot",
+    "catamaran",
+    "eten-inbegrepen",
+    "snorkel",
+    "budget",
+    "hele-dag",
+    "kinderen"
+   ],
+   "prijs": {
+    "bedrag": 135,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person"
+    },
+    "bron": "https://naarcuracao.com/en/klein-curacao-best-trips-comparison",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Overdekt deel met airco",
+     "en": "Shaded, air-conditioned cabin"
+    },
+    {
+     "nl": "Cocktails tegen betaling",
+     "en": "Cocktails cost extra"
+    },
+    {
+     "nl": "Geen ophaalservice",
+     "en": "No hotel pickup"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 79,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d27097351-Klein_Curacao_Tour_on_a_Catamaran_Yacht-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Attente, hartelijke crew",
+     "Goed ontbijt en BBQ-lunch",
+     "Koele, schaduwrijke kajuit"
+    ],
+    "en": [
+     "Attentive, warm crew",
+     "Good breakfast and BBQ lunch",
+     "Cool, shaded cabin"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Ruwe heenreis, zeeziekte komt voor",
+     "Te weinig stoelen en schaduw op het strand",
+     "Cocktails kosten extra"
+    ],
+    "en": [
+     "Rough outbound crossing, some seasickness",
+     "Not enough chairs and shade on the beach",
+     "Cocktails cost extra"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d27097351-Klein_Curacao_Tour_on_a_Catamaran_Yacht-Curacao.html",
+    "https://naarcuracao.com/en/klein-curacao-best-trips-comparison",
+    "https://klein-curacao.nl/en/klein-curacao-boats/"
+   ]
+  },
+  {
+   "id": "breeze-boat-trips",
+   "naam": "Breeze Boat Trips",
+   "url": null,
+   "soort": {
+    "nl": "motorjacht",
+    "en": "motor yacht"
+   },
+   "plaats": null,
+   "tags": [
+    "klein-curacao",
+    "boot",
+    "eten-inbegrepen",
+    "kleine-groep",
+    "budget",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 115,
+    "valuta": "EUR",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person"
+    },
+    "bron": "https://klein-curacao.nl/en/klein-curacao-prices/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Maximaal 30 personen",
+     "en": "Maximum 30 people"
+    },
+    {
+     "nl": "Kinderen 50% korting",
+     "en": "Kids 50% off"
+    },
+    {
+     "nl": "Ontbijt, BBQ en drankjes",
+     "en": "Breakfast, BBQ and drinks"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Kleinere groep dan de grote Klein Curaçao-boten"
+    ],
+    "en": [
+     "Smaller group than the large Klein Curaçao boats"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://klein-curacao.nl/en/klein-curacao-prices/",
+    "https://klein-curacao.nl/en/klein-curacao-boats/"
+   ]
+  },
+  {
+   "id": "curacao-safari-tours-schildpadden",
+   "naam": "Curacao Safari Tours: Sea Turtle Swim & Grote Knip",
+   "url": null,
+   "soort": {
+    "nl": "busje met gids",
+    "en": "guided minibus"
+   },
+   "plaats": "Westpunt (ophalen bij hotel of cruiseterminal)",
+   "tags": [
+    "snorkel",
+    "schildpadden",
+    "kleine-groep",
+    "cruise-gast",
+    "kinderen",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 107,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "4,5 uur",
+     "en": "4.5 hours"
+    },
+    {
+     "nl": "Maximaal 13 personen",
+     "en": "Maximum 13 people"
+    },
+    {
+     "nl": "Gratis onderwaterfoto's",
+     "en": "Free underwater photos"
+    },
+    {
+     "nl": "Lunch niet inbegrepen",
+     "en": "Lunch not included"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 540,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147278-d15343090-Unforgettable_Sea_Turtle_Swim_Grote_Knip_Beach_Escape-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gids met veel kennis over schildpadden",
+     "Schildpadden van dichtbij, foto's inbegrepen",
+     "Kleine groep en rustig tempo"
+    ],
+    "en": [
+     "Guide knows a lot about the turtles",
+     "Close turtle encounters, photos included",
+     "Small group and a relaxed pace"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Rotsige instap, waterschoenen nodig",
+     "Diep water, lastig voor zwakke zwemmers"
+    ],
+    "en": [
+     "Rocky entry, water shoes needed",
+     "Deep water, hard for weak swimmers"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147278-d15343090-Unforgettable_Sea_Turtle_Swim_Grote_Knip_Beach_Escape-Willemstad_Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html"
+   ]
+  },
+  {
+   "id": "samurai-schildpadden-kenepa",
+   "naam": "Samurai Curaçao: Snorkel with Turtles & Kenepa Grandi",
+   "url": null,
+   "soort": {
+    "nl": "bustour",
+    "en": "bus tour"
+   },
+   "plaats": "ophalen bij hotel of cruiseterminal",
+   "tags": [
+    "snorkel",
+    "schildpadden",
+    "budget",
+    "cruise-gast",
+    "kinderen",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 75,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "4 tot 5 uur",
+     "en": "4 to 5 hours"
+    },
+    {
+     "nl": "Vanaf 4 jaar",
+     "en": "Ages 4 and up"
+    },
+    {
+     "nl": "Snorkel en vest inbegrepen",
+     "en": "Mask and vest included"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 113,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147278-d19355508-Snorkel_with_Turtles_Kenepa_Grandi_Beach_Nr_1_Island_Day_Trip-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Leuke gids met veel uitleg",
+     "Vrijwel altijd schildpadden gezien"
+    ],
+    "en": [
+     "Entertaining, informative guide",
+     "Most guests see turtles"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Korte tijd bij schildpadden en strand",
+     "Busproblemen en late ophaaltijden"
+    ],
+    "en": [
+     "Short time with the turtles and on the beach",
+     "Bus problems and late pickups"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147278-d19355508-Snorkel_with_Turtles_Kenepa_Grandi_Beach_Nr_1_Island_Day_Trip-Willemstad_Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html"
+   ]
+  },
+  {
+   "id": "samurai-island-treasures",
+   "naam": "Samurai Curaçao: Island Treasures (Hato-grotten, schildpadden, Playa Kalki)",
+   "url": null,
+   "soort": {
+    "nl": "bustour",
+    "en": "bus tour"
+   },
+   "plaats": "ophalen bij hotel of cruiseterminal",
+   "tags": [
+    "snorkel",
+    "schildpadden",
+    "budget",
+    "cruise-gast",
+    "kinderen",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 85,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "5 tot 6 uur",
+     "en": "5 to 6 hours"
+    },
+    {
+     "nl": "Entree Hato-grotten inbegrepen",
+     "en": "Hato Caves entry included"
+    },
+    {
+     "nl": "Maximaal 42 personen",
+     "en": "Maximum 42 people"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 140,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d17335434-Island_Treasures_Caves_Turtles_and_Turquoise_Beach_Break-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gidsen vertellen veel over de geschiedenis",
+     "Snorkelen met schildpadden is het hoogtepunt"
+    ],
+    "en": [
+     "Guides share a lot of island history",
+     "Snorkeling with turtles is the highlight"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Laatste strand vaak druk",
+     "Veel tijd in de bus"
+    ],
+    "en": [
+     "Last beach stop is often crowded",
+     "A lot of time on the bus"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d17335434-Island_Treasures_Caves_Turtles_and_Turquoise_Beach_Break-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html"
+   ]
+  },
+  {
+   "id": "irie-snorkel-cruise",
+   "naam": "Irie Tours: Snorkel Cruise met BBQ-lunch en open bar",
+   "url": null,
+   "soort": {
+    "nl": "snorkelboot",
+    "en": "snorkel boat"
+   },
+   "plaats": null,
+   "tags": [
+    "snorkel",
+    "boot",
+    "eten-inbegrepen",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 100,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d19406504-Snorkel_Cruise_with_BBQ_Lunch_and_Open_Bar-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "4 tot 5 uur",
+     "en": "4 to 5 hours"
+    },
+    {
+     "nl": "BBQ-lunch en open bar",
+     "en": "BBQ lunch and open bar"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 140,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d19406504-Snorkel_Cruise_with_BBQ_Lunch_and_Open_Bar-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goede BBQ en vers fruit",
+     "Snorkelspullen inbegrepen"
+    ],
+    "en": [
+     "Good BBQ and fresh fruit",
+     "Snorkel gear included"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Harde muziek aan boord"
+    ],
+    "en": [
+     "Loud music on board"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d19406504-Snorkel_Cruise_with_BBQ_Lunch_and_Open_Bar-Curacao.html",
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d2301522-Reviews-Irie_Tours-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "irie-west-coast-blue-room",
+   "naam": "Irie Tours: West Coast Full-Day Tour met Blue Room",
+   "url": null,
+   "soort": {
+    "nl": "dagtour",
+    "en": "day tour"
+   },
+   "plaats": "westkust",
+   "tags": [
+    "snorkel",
+    "eten-inbegrepen",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 150,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d24135142-West_Coast_Full_Day_Tour_with_Beaches_BBQ_and_Blue_Room-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Meer dan 6 uur",
+     "en": "Over 6 hours"
+    },
+    {
+     "nl": "Stranden, BBQ en Blue Room",
+     "en": "Beaches, BBQ and Blue Room"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 215,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d24135142-West_Coast_Full_Day_Tour_with_Beaches_BBQ_and_Blue_Room-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Punctueel ophalen en terugbrengen",
+     "Mooie stranden en snorkelen"
+    ],
+    "en": [
+     "Punctual pickup and drop-off",
+     "Beautiful beaches and snorkeling"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Weinig uitleg van de gids op sommige tochten"
+    ],
+    "en": [
+     "Little commentary from the guide on some trips"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d24135142-West_Coast_Full_Day_Tour_with_Beaches_BBQ_and_Blue_Room-Curacao.html",
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d2301522-Reviews-Irie_Tours-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "irie-all-west-beach-hopping",
+   "naam": "Irie Tours: All West Beach Hopping Tour",
+   "url": null,
+   "soort": {
+    "nl": "bustour",
+    "en": "bus tour"
+   },
+   "plaats": "westkust",
+   "tags": [
+    "snorkel",
+    "budget",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 85,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g15293005-d16808294-All_West_Beach_Hopping_Tour-Jan_Thiel_Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Meer dan 6 uur",
+     "en": "Over 6 hours"
+    },
+    {
+     "nl": "Meerdere stranden aan de westkant",
+     "en": "Several west-side beaches"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 463,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g15293005-d16808294-All_West_Beach_Hopping_Tour-Jan_Thiel_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Enthousiaste gidsen",
+     "Veel strandtijd voor weinig geld"
+    ],
+    "en": [
+     "Enthusiastic guides",
+     "Lots of beach time for the money"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Voelt soms meer als vervoer dan rondleiding"
+    ],
+    "en": [
+     "Can feel more like transport than a tour"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g15293005-d16808294-All_West_Beach_Hopping_Tour-Jan_Thiel_Curacao.html",
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d2301522-Reviews-Irie_Tours-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "hato-caves-turtles-beach",
+   "naam": "Hato Caves, Turtles & Beach (dagtour)",
+   "url": null,
+   "soort": {
+    "nl": "dagtour",
+    "en": "day tour"
+   },
+   "plaats": "vertrek Jan Thiel",
+   "tags": [
+    "snorkel",
+    "schildpadden",
+    "kinderen",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 90,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Meer dan 6 uur",
+     "en": "Over 6 hours"
+    },
+    {
+     "nl": "Grotten, schildpadden en strand",
+     "en": "Caves, turtles and beach"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 298,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g15293005-d18275441-Hato_Caves_Turtles_Beach-Jan_Thiel_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Combinatie van grotten en snorkelen in één dag"
+    ],
+    "en": [
+     "Caves and snorkeling combined in one day"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g15293005-d18275441-Hato_Caves_Turtles_Beach-Jan_Thiel_Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html"
+   ]
+  },
+  {
+   "id": "adventure-tours-blue-room",
+   "naam": "Adventure Tours Curaçao: Blue Room & Beach per speedboot",
+   "url": "https://adventuretourscuracao.com/",
+   "soort": {
+    "nl": "speedboot",
+    "en": "speedboat"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "snorkel",
+    "boot",
+    "eten-inbegrepen",
+    "kleine-groep",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 110,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11483790-Blue_Room_and_Beach_Tour_Curacao_by_Speedboat-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "5 uur",
+     "en": "5 hours"
+    },
+    {
+     "nl": "Maximaal 22 personen",
+     "en": "Maximum 22 people"
+    },
+    {
+     "nl": "Lunch en snorkelset inbegrepen",
+     "en": "Lunch and snorkel gear included"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 17,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11483790-Blue_Room_and_Beach_Tour_Curacao_by_Speedboat-Curacao.html"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 225,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11483790-Blue_Room_and_Beach_Tour_Curacao_by_Speedboat-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gidsen met veel kennis en humor",
+     "Blue Room-grot is het hoogtepunt"
+    ],
+    "en": [
+     "Knowledgeable, friendly guides",
+     "The Blue Room cave is the highlight"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Gaat bij ruwe zee vaak niet door",
+     "Last-minute wijzigingen in vertrekpunt"
+    ],
+    "en": [
+     "Often canceled in choppy water",
+     "Last-minute changes to the start point"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d11483790-Blue_Room_and_Beach_Tour_Curacao_by_Speedboat-Curacao.html",
+    "https://adventuretourscuracao.com/tour/curacao-blue-room-tour/"
+   ]
+  },
+  {
+   "id": "caribbean-experience-tugboat-blue-room",
+   "naam": "Tugboat & Blue Room Snorkel Tour (Caribbean Experience)",
+   "url": null,
+   "soort": {
+    "nl": "snorkelboot",
+    "en": "snorkel boat"
+   },
+   "plaats": "zuidkust",
+   "tags": [
+    "snorkel",
+    "boot",
+    "eten-inbegrepen"
+   ],
+   "prijs": {
+    "bedrag": 120,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person"
+    },
+    "bron": "https://curacaoactivities.com/tour/tugboat-blue-room-curacao-snorkeling-tour/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Tugboat-wrak en Blue Room",
+     "en": "Tugboat wreck and Blue Room"
+    },
+    {
+     "nl": "BBQ-lunch inbegrepen",
+     "en": "BBQ lunch included"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Twee bekende snorkelplekken in één tocht"
+    ],
+    "en": [
+     "Two well-known snorkel spots in one trip"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://curacaoactivities.com/tour/tugboat-blue-room-curacao-snorkeling-tour/",
+    "https://www.musement.com/us/curacao/tugboat-and-blue-room-snorkel-tour-caribbean-experience-249103/"
+   ]
+  },
+  {
+   "id": "andymax-seabob-tugboat",
+   "naam": "Andymaxadventures: Seabob Tugboat Adventure",
+   "url": null,
+   "soort": {
+    "nl": "seabob-tour",
+    "en": "Seabob tour"
+   },
+   "plaats": "Caracasbaai (Tugboat)",
+   "tags": [
+    "snorkel",
+    "kleine-groep",
+    "halve-dag"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Onderwaterscooter bij het Tugboat-wrak",
+     "en": "Underwater scooter at the Tugboat wreck"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 51,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Hoog gewaardeerd door kleine groep reviewers"
+    ],
+    "en": [
+     "Highly rated by its reviewers"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
+   ]
+  },
+  {
+   "id": "aquafari",
+   "naam": "Aquafari (onderwaterscooter)",
+   "url": null,
+   "soort": {
+    "nl": "onderwaterscooter",
+    "en": "underwater scooter"
+   },
+   "plaats": "Boka Sami, Sint Michiel",
+   "tags": [
+    "snorkel",
+    "kleine-groep",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 159,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Ongeveer 1 uur 15",
+     "en": "About 1 hour 15 min"
+    },
+    {
+     "nl": "Maximaal 5 personen",
+     "en": "Maximum 5 people"
+    },
+    {
+     "nl": "Vanaf 10 jaar",
+     "en": "Ages 10 and up"
+    },
+    {
+     "nl": "Geen duikervaring nodig",
+     "en": "No diving experience needed"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 1186,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d17349718-Aquafari_Tour_in_Curacao-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Geduldige instructeurs, je voelt je veilig",
+     "Ook te doen voor niet-zwemmers",
+     "Vissen, koraal en soms schildpadden"
+    ],
+    "en": [
+     "Patient instructors, guests feel safe",
+     "Doable for non-swimmers",
+     "Fish, coral and sometimes turtles"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Fotopakket kost extra (ongeveer $45)",
+     "Zeeziekte of oordruk bij golven"
+    ],
+    "en": [
+     "Photo package costs extra, about $45",
+     "Seasickness or ear pressure in waves"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d17349718-Aquafari_Tour_in_Curacao-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html"
+   ]
+  },
+  {
+   "id": "sea-trek-helmduiken",
+   "naam": "Sea Trek Curaçao: helmduiken",
+   "url": null,
+   "soort": {
+    "nl": "helmduiken",
+    "en": "helmet diving"
+   },
+   "plaats": "Surf & Turf, Willemstad",
+   "tags": [
+    "kinderen",
+    "kleine-groep",
+    "halve-dag",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 150,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d24096954-Curacao_Helmet_Diving_Walk_the_Ocean_Floor_No_Swimming_Required-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Zwemmen niet nodig",
+     "en": "No swimming required"
+    },
+    {
+     "nl": "Vanaf 8 jaar",
+     "en": "Ages 8 and up"
+    },
+    {
+     "nl": "Maximaal 12 personen",
+     "en": "Maximum 12 people"
+    },
+    {
+     "nl": "20 tot 30 minuten onderwater",
+     "en": "20 to 30 minutes underwater"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 423,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d24096954-Curacao_Helmet_Diving_Walk_the_Ocean_Floor_No_Swimming_Required-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Geduldige staf, voelt veilig",
+     "Vissen voeren van dichtbij"
+    ],
+    "en": [
+     "Patient staff, feels safe",
+     "Feeding fish up close"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Foto's en video kosten $50 extra",
+     "Soms te laat opgehaald"
+    ],
+    "en": [
+     "Photos and video cost $50 extra",
+     "Pickups sometimes late"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d24096954-Curacao_Helmet_Diving_Walk_the_Ocean_Floor_No_Swimming_Required-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html"
+   ]
+  },
+  {
+   "id": "dolphin-academy",
+   "naam": "Dolphin Academy Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "dolfijnenprogramma",
+    "en": "dolphin program"
+   },
+   "plaats": "Bapor Kibra (Sea Aquarium)",
+   "tags": [
+    "kinderen",
+    "halve-dag",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 114,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.mycuracaoguide.com/dolphins-curacao",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Encounter $114, Swim $194",
+     "en": "Encounter $114, Swim $194"
+    },
+    {
+     "nl": "Dolphin Snorkel $210",
+     "en": "Dolphin Snorkel $210"
+    },
+    {
+     "nl": "Sea Aquarium-entree inbegrepen",
+     "en": "Sea Aquarium entry included"
+    },
+    {
+     "nl": "Programma's duren 1,5 uur",
+     "en": "Programs last 1.5 hours"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 3004,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Populair bij gezinnen met kinderen"
+    ],
+    "en": [
+     "Popular with families with kids"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/dolphins-curacao",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
+   ]
+  },
+  {
+   "id": "curacao-sea-aquarium",
+   "naam": "Curaçao Sea Aquarium (Ocean Lens, Animal Encounters)",
+   "url": null,
+   "soort": {
+    "nl": "aquarium",
+    "en": "aquarium"
+   },
+   "plaats": "Bapor Kibra",
+   "tags": [
+    "kinderen",
+    "budget",
+    "halve-dag",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 59,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.mycuracaoguide.com/curacao-sea-aquarium",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Ocean Lens kind $29",
+     "en": "Ocean Lens child $29"
+    },
+    {
+     "nl": "Animal Encounter snorkel $75",
+     "en": "Animal Encounter snorkel $75"
+    },
+    {
+     "nl": "Vanaf 8 jaar voor programma's",
+     "en": "Programs from age 8"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 2210,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Makkelijk te combineren met Mambo Beach"
+    ],
+    "en": [
+     "Easy to combine with Mambo Beach"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/curacao-sea-aquarium",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
+   ]
+  },
+  {
+   "id": "substation-curacao",
+   "naam": "Substation Curaçao (onderzeeër)",
+   "url": null,
+   "soort": {
+    "nl": "onderzeeër",
+    "en": "submarine"
+   },
+   "plaats": "Sea Aquarium, Bapor Kibra",
+   "tags": [
+    "kleine-groep",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 450,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person"
+    },
+    "bron": "https://www.mycuracaoguide.com/curacao-sea-aquarium",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Wreck Dive $450, 1 uur",
+     "en": "Wreck Dive $450, 1 hour"
+    },
+    {
+     "nl": "Explorer Dive $650",
+     "en": "Explorer Dive $650"
+    },
+    {
+     "nl": "Aquarium-entree niet inbegrepen",
+     "en": "Aquarium entry not included"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Bijzondere ervaring tot grote diepte"
+    ],
+    "en": [
+     "Rare chance to go very deep"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/curacao-sea-aquarium",
+    "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/"
+   ]
+  },
+  {
+   "id": "semi-submarine",
+   "naam": "Semi SubMarine Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "halfonderzeeër",
+    "en": "semi-submarine"
+   },
+   "plaats": null,
+   "tags": [
+    "kinderen",
+    "budget",
+    "halve-dag",
+    "cruise-gast",
+    "boot"
+   ],
+   "prijs": {
+    "bedrag": 39,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person"
+    },
+    "bron": "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Ongeveer 1 uur",
+     "en": "About 1 hour"
+    },
+    {
+     "nl": "Niet nat worden",
+     "en": "You stay dry"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Onderwaterwereld zien zonder te zwemmen"
+    ],
+    "en": [
+     "See the reef without swimming"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/"
+   ]
+  },
+  {
+   "id": "hato-caves",
+   "naam": "Hato Caves (Hato-grotten)",
+   "url": null,
+   "soort": {
+    "nl": "grot met gids",
+    "en": "guided cave"
+   },
+   "plaats": "Hato, bij het vliegveld",
+   "tags": [
+    "kinderen",
+    "halve-dag",
+    "cruise-gast",
+    "budget"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Rondleiding met gids",
+     "en": "Guided walk inside"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 1874,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Makkelijk te combineren met een stadsbezoek"
+    ],
+    "en": [
+     "Easy to combine with a city visit"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
+   ]
+  },
+  {
+   "id": "shete-boka",
+   "naam": "Shete Boka National Park",
+   "url": null,
+   "soort": {
+    "nl": "nationaal park",
+    "en": "national park"
+   },
+   "plaats": "noordkust, Banda Abou",
+   "tags": [
+    "kinderen",
+    "budget",
+    "halve-dag"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Woeste noordkust met blaasgaten",
+     "en": "Wild north coast with blowholes"
+    },
+    {
+     "nl": "Ook in eilandtours inbegrepen",
+     "en": "Included in many island tours"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 2499,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Indrukwekkende golven bij Boca Tabla"
+    ],
+    "en": [
+     "Impressive waves at Boca Tabla"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
+   ]
+  },
+  {
+   "id": "yellow-complete-island-tour",
+   "naam": "Yellow Adventures: Curacao Complete Island Tour",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour"
+   },
+   "plaats": "ophalen bij hotel of cruiseterminal",
+   "tags": [
+    "cruise-gast",
+    "budget",
+    "kinderen",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 80,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "6 uur",
+     "en": "6 hours"
+    },
+    {
+     "nl": "Shete Boka en flamingo's",
+     "en": "Shete Boka and flamingos"
+    },
+    {
+     "nl": "Blue Curaçao-proeverij",
+     "en": "Blue Curaçao tasting"
+    },
+    {
+     "nl": "Lunch niet inbegrepen",
+     "en": "Lunch not included"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 219,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11933444-Curacao_Complete_Island_Tour-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gids met veel kennis van de geschiedenis",
+     "Op tijd opgehaald, wagen met airco"
+    ],
+    "en": [
+     "Guide knows the island's history well",
+     "On-time pickup, air-conditioned vehicle"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Hobbelige, krappe rit",
+     "Korte stops, weinig strandtijd"
+    ],
+    "en": [
+     "Bumpy, cramped ride",
+     "Short stops, little beach time"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d11933444-Curacao_Complete_Island_Tour-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html"
+   ]
+  },
+  {
+   "id": "yellow-national-park-jeep-safari",
+   "naam": "Yellow Adventures: National Park Jeep Safari",
+   "url": null,
+   "soort": {
+    "nl": "jeepsafari",
+    "en": "jeep safari"
+   },
+   "plaats": "Christoffelpark",
+   "tags": [
+    "offroad",
+    "kleine-groep",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 109,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11448545-National_Park_Jeep_Safari-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "6 uur",
+     "en": "6 hours"
+    },
+    {
+     "nl": "Maximaal 16 personen",
+     "en": "Maximum 16 people"
+    },
+    {
+     "nl": "Vanaf 6 jaar",
+     "en": "Ages 6 and up"
+    },
+    {
+     "nl": "Entree Christoffel inbegrepen",
+     "en": "Christoffel entry included"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 46,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11448545-National_Park_Jeep_Safari-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gidsen vertellen veel over natuur en cultuur",
+     "Mooie stops aan de noordkust"
+    ],
+    "en": [
+     "Guides explain nature and culture well",
+     "Scenic north coast stops"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Hobbelige wegen, lastig bij rugklachten"
+    ],
+    "en": [
+     "Bumpy roads, hard on bad backs"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d11448545-National_Park_Jeep_Safari-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html"
+   ]
+  },
+  {
+   "id": "yellow-snorkel-beach-adventure",
+   "naam": "Yellow Adventures: Snorkel and Beach Adventure (jeep)",
+   "url": null,
+   "soort": {
+    "nl": "jeepsafari",
+    "en": "jeep safari"
+   },
+   "plaats": "Shete Boka, Cas Abao",
+   "tags": [
+    "offroad",
+    "snorkel",
+    "schildpadden",
+    "kleine-groep",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 109,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "6 uur",
+     "en": "6 hours"
+    },
+    {
+     "nl": "Maximaal 16 personen",
+     "en": "Maximum 16 people"
+    },
+    {
+     "nl": "Entree Cas Abao inbegrepen",
+     "en": "Cas Abao entry included"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 89,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11933445-Snorkel_and_Beach_Adventure_Tour-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Snorkelen met schildpadden en mooie stranden",
+     "Gids met veel kennis"
+    ],
+    "en": [
+     "Snorkeling with turtles and nice beaches",
+     "Knowledgeable guide"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Open wagen is hobbelig en krap",
+     "Lunch extra, lange rijen en alleen cash"
+    ],
+    "en": [
+     "Open vehicle is bumpy and cramped",
+     "Lunch extra, long lines, cash only"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d11933445-Snorkel_and_Beach_Adventure_Tour-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
+   ]
+  },
+  {
+   "id": "offroad-snorkel-safari",
+   "naam": "Half Day Off-Road & Snorkel Safari",
+   "url": null,
+   "soort": {
+    "nl": "jeepsafari",
+    "en": "jeep safari"
+   },
+   "plaats": null,
+   "tags": [
+    "offroad",
+    "snorkel",
+    "budget",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 85,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Ongeveer 4 uur",
+     "en": "About 4 hours"
+    },
+    {
+     "nl": "Ophalen bij hotel",
+     "en": "Hotel pickup"
+    },
+    {
+     "nl": "Snorkelset inbegrepen",
+     "en": "Snorkel gear included"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 98,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goedkoopste combinatie van jeep en snorkelen"
+    ],
+    "en": [
+     "Cheapest jeep and snorkel combo"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
+    "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/"
+   ]
+  },
+  {
+   "id": "west-island-beach-safari",
+   "naam": "West Island & Beach Safari",
+   "url": null,
+   "soort": {
+    "nl": "jeepsafari",
+    "en": "jeep safari"
+   },
+   "plaats": "westkust",
+   "tags": [
+    "offroad",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 122,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Stranden aan de westkant",
+     "en": "West side beaches"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 200,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Hoge score bij veel reviews"
+    ],
+    "en": [
+     "High score across many reviews"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
+   ]
+  },
+  {
+   "id": "cave-kunuku-porto-mari-jeep",
+   "naam": "Cave, Kunuku & Porto Mari Jeep Safari",
+   "url": null,
+   "soort": {
+    "nl": "jeepsafari",
+    "en": "jeep safari"
+   },
+   "plaats": "Porto Mari",
+   "tags": [
+    "offroad",
+    "snorkel"
+   ],
+   "prijs": {
+    "bedrag": 99,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Grot, kunuku en Porto Mari",
+     "en": "Cave, countryside and Porto Mari"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 49,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Combinatie van binnenland en strand"
+    ],
+    "en": [
+     "Mix of countryside and beach"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
+   ]
+  },
+  {
+   "id": "erics-atv-adventures",
+   "naam": "Eric's ATV Adventures: ATV West Adventure",
+   "url": null,
+   "soort": {
+    "nl": "quadtour",
+    "en": "ATV tour"
+   },
+   "plaats": "Koraalspechtweg, Willemstad",
+   "tags": [
+    "quad",
+    "offroad",
+    "kleine-groep",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 173,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per ATV (max 2 personen)",
+     "en": "per ATV (up to 2 people)"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "4 tot 6 uur",
+     "en": "4 to 6 hours"
+    },
+    {
+     "nl": "Helm en water inbegrepen",
+     "en": "Helmet and water included"
+    },
+    {
+     "nl": "Ophalen tegen meerprijs",
+     "en": "Pickup costs extra"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 92,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d12934947-Curacao_Half_Day_or_Full_Day_ATV_West_Adventure_Tour-Curacao.html"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 1471,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d12934947-Curacao_Half_Day_or_Full_Day_ATV_West_Adventure_Tour-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijke gidsen die foto's maken",
+     "Afwisselend: windmolens, grot, Kokomo, flamingo's"
+    ],
+    "en": [
+     "Friendly guides who take photos",
+     "Varied route: windmills, cave, Kokomo, flamingos"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Foto's soms laat geleverd",
+     "Af en toe problemen met de quads"
+    ],
+    "en": [
+     "Photos sometimes delivered late",
+     "Occasional equipment problems"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d12934947-Curacao_Half_Day_or_Full_Day_ATV_West_Adventure_Tour-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
+   ]
+  },
+  {
+   "id": "living-life-atv-westpoint",
+   "naam": "Living Life Curacao: ATV Westpoint beach hopping",
+   "url": null,
+   "soort": {
+    "nl": "quadtour",
+    "en": "ATV tour"
+   },
+   "plaats": "Seru Fortunaweg, Willemstad",
+   "tags": [
+    "quad",
+    "offroad",
+    "budget",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 100,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d33455494-Curacao_ATV_Westpoint_beach_hopping_off_road_adventure-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "3 uur",
+     "en": "3 hours"
+    },
+    {
+     "nl": "Vanaf 18 jaar",
+     "en": "Ages 18 and up"
+    },
+    {
+     "nl": "Geen ophaalservice",
+     "en": "No pickup"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 156,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d33455494-Curacao_ATV_Westpoint_beach_hopping_off_road_adventure-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijke gidsen met kennis",
+     "Mix van grotten, stranden en zwemmen"
+    ],
+    "en": [
+     "Friendly, knowledgeable guides",
+     "Mix of caves, beaches and swims"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Gids soms opdringerig met verkoop",
+     "Ophalen bij hotel kost flink extra"
+    ],
+    "en": [
+     "Guide can be pushy about sales",
+     "Hotel pickup costs a lot extra"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d33455494-Curacao_ATV_Westpoint_beach_hopping_off_road_adventure-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
+   ]
+  },
+  {
+   "id": "utv-buggy-expedition-west",
+   "naam": "UTV Buggy Expedition West Coast",
+   "url": null,
+   "soort": {
+    "nl": "buggytour",
+    "en": "buggy tour"
+   },
+   "plaats": "westkust",
+   "tags": [
+    "offroad",
+    "quad",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 229,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Buggy voor twee",
+     "en": "Two-seat buggy"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 365,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Hoogste score van de buggytours"
+    ],
+    "en": [
+     "Top score among buggy tours"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
+   ]
+  },
+  {
+   "id": "atv-east-half-day",
+   "naam": "Curacao Half Day ATV East Adventure Tour",
+   "url": null,
+   "soort": {
+    "nl": "quadtour",
+    "en": "ATV tour"
+   },
+   "plaats": "oostkust",
+   "tags": [
+    "quad",
+    "offroad",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 118,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per groep",
+     "en": "per group"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Halve dag oostkant",
+     "en": "Half day, east side"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 302,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Veel gereden, veel reviews"
+    ],
+    "en": [
+     "Popular, with many reviews"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
+   ]
+  },
+  {
+   "id": "atv-buggy-tours",
+   "naam": "ATV & Buggy Tours Curaçao",
+   "url": "https://www.atvbuggytours.com/",
+   "soort": {
+    "nl": "quad en buggy",
+    "en": "ATV and buggy"
+   },
+   "plaats": null,
+   "tags": [
+    "quad",
+    "offroad"
+   ],
+   "prijs": {
+    "bedrag": 180,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per buggy (max 2 personen)",
+     "en": "per buggy (up to 2 people)"
+    },
+    "bron": "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Oostkust-tour 2,5 uur",
+     "en": "East coast tour 2.5 hours"
+    },
+    {
+     "nl": "Helm, bril en water",
+     "en": "Helmet, goggles and water"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Kortere rit, goed voor een middag"
+    ],
+    "en": [
+     "Shorter ride, fits in an afternoon"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.atvbuggytours.com/",
+    "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/"
+   ]
+  },
+  {
+   "id": "dundu-tours-wandeltour",
+   "naam": "Dundu Tours: wandeltour Willemstad",
+   "url": null,
+   "soort": {
+    "nl": "wandeltour",
+    "en": "walking tour"
+   },
+   "plaats": "Otrobanda, Willemstad",
+   "tags": [
+    "stadstour",
+    "budget",
+    "cruise-gast",
+    "kleine-groep",
+    "halve-dag",
+    "kinderen"
+   ],
+   "prijs": {
+    "bedrag": 33,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "1,5 tot 2 uur",
+     "en": "1.5 to 2 hours"
+    },
+    {
+     "nl": "Maximaal 16 personen",
+     "en": "Maximum 16 people"
+    },
+    {
+     "nl": "Start bij Rif Fort",
+     "en": "Starts at Rif Fort"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 449,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d23574256-The_best_walking_tour_Willemstad-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Gidsen die geschiedenis en cultuur levendig vertellen",
+     "Muurschilderingen en kleurrijke straten van Otrobanda"
+    ],
+    "en": [
+     "Guides bring history and culture to life",
+     "Murals and colorful streets of Otrobanda"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Water pas halverwege, neem zelf mee",
+     "Vlot tempo met wat klimmen"
+    ],
+    "en": [
+     "Water handed out late, bring your own",
+     "Brisk pace with some uphill walking"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d23574256-The_best_walking_tour_Willemstad-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html"
+   ]
+  },
+  {
+   "id": "irie-city-highlights",
+   "naam": "Irie Tours: City Highlights 4-Hour Tour",
+   "url": null,
+   "soort": {
+    "nl": "stadstour",
+    "en": "city tour"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "stadstour",
+    "cruise-gast",
+    "budget",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 65,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "4 uur",
+     "en": "4 hours"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 156,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goed als je maar een paar uur hebt"
+    ],
+    "en": [
+     "Good if you only have a few hours"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Zwemkleding vergeten bij strandstop komt voor"
+    ],
+    "en": [
+     "Easy to forget swimwear for the beach stop"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d25229174-Curacao_City_Highlights_4_Hour_Tour-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html"
+   ]
+  },
+  {
+   "id": "splashy-iguana-amfibiebus",
+   "naam": "Splashy Iguana Tours: amfibiebus",
+   "url": null,
+   "soort": {
+    "nl": "amfibiebus",
+    "en": "amphibious bus"
+   },
+   "plaats": "Waaigat, Willemstad",
+   "tags": [
+    "stadstour",
+    "kinderen",
+    "cruise-gast",
+    "budget",
+    "halve-dag",
+    "boot"
+   ],
+   "prijs": {
+    "bedrag": 79,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d26444730-Bus_That_Drives_Into_the_Ocean_Unique_Curacao_Amphibious_Tour-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2 uur",
+     "en": "2 hours"
+    },
+    {
+     "nl": "Rijdt Spaanse Water in",
+     "en": "Drives into Spanish Water"
+    },
+    {
+     "nl": "Gratis parkeren",
+     "en": "Free parking"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 140,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d26444730-Bus_That_Drives_Into_the_Ocean_Unique_Curacao_Amphibious_Tour-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Grappige gidsen met lokale weetjes",
+     "De plons in het water vinden kinderen geweldig"
+    ],
+    "en": [
+     "Funny guides with local facts",
+     "Kids love the splash into the water"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Maar één toiletstop"
+    ],
+    "en": [
+     "Only one bathroom stop"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d26444730-Bus_That_Drives_Into_the_Ocean_Unique_Curacao_Amphibious_Tour-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html"
+   ]
+  },
+  {
+   "id": "highlights-hato-flamingos",
+   "naam": "Curaçao Highlights tour: Hato Caves, Flamingos & Beach",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour"
+   },
+   "plaats": null,
+   "tags": [
+    "cruise-gast",
+    "kinderen",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 80,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Grotten, flamingo's en strand",
+     "en": "Caves, flamingos and beach"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 239,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Veel hoogtepunten in één tour"
+    ],
+    "en": [
+     "Many highlights in one tour"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147278-d11479015-Curacao_Highlights_tour_Hato_Caves_Flamingos_Beach_Time-Willemstad_Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html"
+   ]
+  },
+  {
+   "id": "chobolobo-likeurstokerij",
+   "naam": "Curaçao Liqueur Distillery (Landhuis Chobolobo)",
+   "url": null,
+   "soort": {
+    "nl": "rondleiding",
+    "en": "guided tour"
+   },
+   "plaats": "Salinja, Willemstad",
+   "tags": [
+    "stadstour",
+    "budget",
+    "cruise-gast",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 20,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Rondleiding met proeverij",
+     "en": "Guided tour with tasting"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 526,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d13000407-Guided_Tour_at_the_Curacao_Liqueur_Distillery-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goedkoop en dicht bij de stad"
+    ],
+    "en": [
+     "Cheap and close to town"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d13000407-Guided_Tour_at_the_Curacao_Liqueur_Distillery-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html"
+   ]
+  },
+  {
+   "id": "irie-happy-hour-sunset",
+   "naam": "Irie Tours: Happy Hour Sunset Cruise",
+   "url": null,
+   "soort": {
+    "nl": "zonsondergangcruise",
+    "en": "sunset cruise"
+   },
+   "plaats": "Spaanse Water",
+   "tags": [
+    "zonsondergang",
+    "catamaran",
+    "boot",
+    "budget",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 75,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2 tot 3 uur",
+     "en": "2 to 3 hours"
+    },
+    {
+     "nl": "Open bar en hapjes",
+     "en": "Open bar and finger food"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 237,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d19422129-Happy_Hour_Sunset_Cruise-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Goedkoopste zonsondergangtocht met open bar"
+    ],
+    "en": [
+     "Cheapest sunset sail with an open bar"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Harde muziek"
+    ],
+    "en": [
+     "Loud music"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d19422129-Happy_Hour_Sunset_Cruise-Curacao.html",
+    "https://www.mycuracaoguide.com/blogs/the-best-boat-tours-curacao"
+   ]
+  },
+  {
+   "id": "bluefinn-sunset-cruise",
+   "naam": "BlueFinn: Catamaran Sunset Cruise",
+   "url": null,
+   "soort": {
+    "nl": "zonsondergangcruise",
+    "en": "sunset cruise"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "zonsondergang",
+    "catamaran",
+    "boot",
+    "budget",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 79,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2,5 uur",
+     "en": "2.5 hours"
+    },
+    {
+     "nl": "Open bar en hapjes",
+     "en": "Open bar and bites"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 112,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d16672414-Catamaran_Sunset_Cruise_with_open_bar_and_bites-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Ontspannen sfeer en goede crew"
+    ],
+    "en": [
+     "Relaxed vibe and good crew"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d16672414-Catamaran_Sunset_Cruise_with_open_bar_and_bites-Curacao.html",
+    "https://www.mycuracaoguide.com/blogs/the-best-boat-tours-curacao"
+   ]
+  },
+  {
+   "id": "all-boat-sunset-party",
+   "naam": "All Boat Charters: Sunset Cruise Party",
+   "url": null,
+   "soort": {
+    "nl": "feestcruise",
+    "en": "party cruise"
+   },
+   "plaats": "Kima Kalki Marina",
+   "tags": [
+    "zonsondergang",
+    "boot",
+    "feest",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 145,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "3 uur",
+     "en": "3 hours"
+    },
+    {
+     "nl": "16 tot 60 jaar",
+     "en": "Ages 16 to 60"
+    },
+    {
+     "nl": "DJ en live optreden",
+     "en": "DJ and live performer"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 76,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d27000993-Sunset_Cruise_Party_All_Inclusive_Experience-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Vriendelijke crew",
+     "Muziek, DJ en violist bij zonsondergang"
+    ],
+    "en": [
+     "Friendly crew",
+     "Music, DJ and violinist at sunset"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Cocktails kosten extra",
+     "Kleine porties"
+    ],
+    "en": [
+     "Cocktails cost extra",
+     "Small portions"
+    ]
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d27000993-Sunset_Cruise_Party_All_Inclusive_Experience-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html"
+   ]
+  },
+  {
+   "id": "fuik-boat-party",
+   "naam": "Fuik Boat Party",
+   "url": null,
+   "soort": {
+    "nl": "feestboot",
+    "en": "party boat"
+   },
+   "plaats": "Fuikbaai",
+   "tags": [
+    "boot",
+    "feest",
+    "eten-inbegrepen",
+    "budget",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 95,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person"
+    },
+    "bron": "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "5,5 uur",
+     "en": "5.5 hours"
+    },
+    {
+     "nl": "BBQ-lunch en drankjes",
+     "en": "BBQ lunch and drinks"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Feest op het water voor een redelijke prijs"
+    ],
+    "en": [
+     "Party on the water at a fair price"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/"
+   ]
+  },
+  {
+   "id": "private-boat-trip",
+   "naam": "3H of 4H Private Boat Trip (zwemmen, SUP, snorkelen)",
+   "url": null,
+   "soort": {
+    "nl": "privéboot",
+    "en": "private boat"
+   },
+   "plaats": null,
+   "tags": [
+    "boot",
+    "kleine-groep",
+    "snorkel",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 475,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per groep",
+     "en": "per group"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "3 of 4 uur",
+     "en": "3 or 4 hours"
+    },
+    {
+     "nl": "Alleen jouw groep",
+     "en": "Your group only"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 120,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Eigen tempo en eigen stops"
+    ],
+    "en": [
+     "Your own pace and stops"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html"
+   ]
+  },
+  {
+   "id": "tiki-boat-spaanse-water",
+   "naam": "Tiki-boot huren, Spaanse Water",
+   "url": null,
+   "soort": {
+    "nl": "bootverhuur",
+    "en": "boat rental"
+   },
+   "plaats": "Spaanse Water",
+   "tags": [
+    "boot",
+    "budget",
+    "kleine-groep",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 269,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per boot (6 tot 8 personen)",
+     "en": "per boat (6 to 8 people)"
+    },
+    "bron": "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "4 uur varen",
+     "en": "4 hours on the water"
+    },
+    {
+     "nl": "BBQ en koelbox aan boord",
+     "en": "BBQ and cooler on board"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Per persoon goedkoop met een volle boot"
+    ],
+    "en": [
+     "Cheap per person with a full boat"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/"
+   ]
+  },
+  {
+   "id": "jetski-piscadera",
+   "naam": "Jetski Adventure Piscadera",
+   "url": null,
+   "soort": {
+    "nl": "jetski",
+    "en": "jet ski"
+   },
+   "plaats": "Piscaderabaai",
+   "tags": [
+    "boot",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 135,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per jetski (max 2 personen)",
+     "en": "per jet ski (up to 2 people)"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "1 uur",
+     "en": "1 hour"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 35,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d33140347-Jetski_Adventure_Piscadera-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Hoge score, korte activiteit"
+    ],
+    "en": [
+     "High score, short activity"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d33140347-Jetski_Adventure_Piscadera-Curacao.html",
+    "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/"
+   ]
+  },
+  {
+   "id": "clear-kayak-photoshoot",
+   "naam": "Clear Kayak Photoshoot",
+   "url": null,
+   "soort": {
+    "nl": "doorzichtige kajak",
+    "en": "clear kayak"
+   },
+   "plaats": null,
+   "tags": [
+    "kajak-sup",
+    "kleine-groep",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 125,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult"
+    },
+    "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Foto's en video inbegrepen",
+     "en": "Photos and video included"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 272,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d26021502-Curacao_Clear_Kayak_Photoshoot_FREE_Videoshoot_Cocktails_Shots-Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Foto's als aandenken inbegrepen"
+    ],
+    "en": [
+     "Photos to take home included"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d26021502-Curacao_Clear_Kayak_Photoshoot_FREE_Videoshoot_Cocktails_Shots-Curacao.html",
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html"
+   ]
+  },
+  {
+   "id": "sup-mangrove-eco-tour",
+   "naam": "Guided SUP mangrove eco tour (beginners)",
+   "url": null,
+   "soort": {
+    "nl": "SUP-tour",
+    "en": "SUP tour"
+   },
+   "plaats": null,
+   "tags": [
+    "kajak-sup",
+    "halve-dag",
+    "kinderen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Geschikt voor beginners",
+     "en": "Beginner friendly"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 133,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.co.uk/Attractions-g147278-Activities-c55-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Rustig peddelen door de mangroven"
+    ],
+    "en": [
+     "Calm paddling through the mangroves"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.tripadvisor.co.uk/Attractions-g147278-Activities-c55-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "fish-charter-curacao",
+   "naam": "Fish Charter Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "vissen op zee",
+    "en": "sport fishing"
+   },
+   "plaats": "Kima Kalki Marina",
+   "tags": [
+    "vissen",
+    "boot",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 160,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person"
+    },
+    "bron": "https://www.mycuracaoguide.com/fishing-charters",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "Open groepstrip, di en vr",
+     "en": "Shared trip, Tue and Fri"
+    },
+    {
+     "nl": "Halve dag privé $850",
+     "en": "Private half day $850"
+    },
+    {
+     "nl": "Hele dag privé $1.350",
+     "en": "Private full day $1,350"
+    },
+    {
+     "nl": "Hengels en drinken inbegrepen",
+     "en": "Gear and drinks included"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Groepstrip maakt vissen per persoon betaalbaar"
+    ],
+    "en": [
+     "Shared trip keeps fishing affordable per person"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/fishing-charters"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Tripadvisor / Viator",
+   "url": "https://www.viator.com/Curacao-tours/4WD-ATV-and-Off-Road-Tours/d725-g9-c32",
+   "uitleg": {
+    "nl": "Boekt tours van lokale aanbieders, met reviews per tour. Prijs is meestal gelijk aan direct boeken.",
+    "en": "Books tours from local operators with reviews per tour. Prices are usually the same as booking direct."
+   }
+  },
+  {
+   "naam": "GetYourGuide",
+   "url": "https://www.getyourguide.com/spaanse-water-l192288/swim-with-turtles-at-turtle-bay-boat-trip-blue-room-cave-t613602/",
+   "uitleg": {
+    "nl": "Boekingsplatform met gratis annuleren tot 24 uur vooraf bij veel tours.",
+    "en": "Booking platform with free cancellation up to 24 hours ahead on many tours."
+   }
+  },
+  {
+   "naam": "My Curaçao Guide",
+   "url": "https://www.mycuracaoguide.com/klein-curacao",
+   "uitleg": {
+    "nl": "Lokale boekingssite die Klein Curaçao-boten naast elkaar zet.",
+    "en": "Local booking site that compares Klein Curaçao boats side by side."
+   }
+  },
+  {
+   "naam": "Caribbean Tours",
+   "url": "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/",
+   "uitleg": {
+    "nl": "Nederlandstalige boekingssite met 49 Curaçao-excursies en prijzen.",
+    "en": "Dutch booking site listing 49 Curaçao excursions with prices."
+   }
+  },
+  {
+   "naam": "klein-curacao.nl",
+   "url": "https://klein-curacao.nl/en/klein-curacao-prices/",
+   "uitleg": {
+    "nl": "Vergelijkt de Klein Curaçao-boten met prijzen in euro.",
+    "en": "Compares Klein Curaçao boats with prices in euros."
+   }
+  },
+  {
+   "naam": "Curaçao Activities",
+   "url": "https://curacaoactivities.com/",
+   "uitleg": {
+    "nl": "Boekingssite voor snorkeltours en jeepsafari's.",
+    "en": "Booking site for snorkel tours and jeep safaris."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Klein Curaçao-boten vertrekken tussen 7:00 en 8:30. De heenweg gaat tegen de stroming in en is vaak ruw; neem een middel tegen zeeziekte in voor vertrek.",
+   "en": "Klein Curaçao boats leave between 7:00 and 8:30 a.m. The outbound leg runs against the current and is often rough, so take seasickness medication before you board."
+  },
+  {
+   "nl": "Kinderen betalen op de meeste Klein Curaçao-boten ongeveer de helft.",
+   "en": "Kids pay about half price on most Klein Curaçao boats."
+  },
+  {
+   "nl": "Let op wat 'open bar' betekent: bij Miss Ann en Mermaid zit alcohol doordeweeks niet in de prijs, bij BlueFinn en Irie Tours wel.",
+   "en": "Check what open bar means: Miss Ann and Mermaid charge for alcohol on weekdays, while BlueFinn and Irie Tours include it."
+  },
+  {
+   "nl": "Hotelvervoer kost vaak $15 tot $19 per persoon extra. Met een huurauto rij je zelf naar Jan Thiel, Caracasbaai of Santa Barbara.",
+   "en": "Hotel transfers often add $15 to $19 per person. With a rental car you can drive yourself to Jan Thiel, Caracas Bay or Santa Barbara."
+  },
+  {
+   "nl": "Cruisepassagiers: kies een tour die bij de cruiseterminal ophaalt en maximaal 5 uur duurt, zoals een schildpaddentour of de amfibiebus.",
+   "en": "Cruise passengers: pick a tour with cruise terminal pickup that lasts 5 hours or less, such as a turtle tour or the amphibious bus."
+  },
+  {
+   "nl": "Neem waterschoenen mee voor snorkelstranden aan de westkant; de instap is vaak rotsig.",
+   "en": "Bring water shoes for west-side snorkel beaches; the entry is often rocky."
+  },
+  {
+   "nl": "Bij een quadtour is de prijs vaak per voertuig voor twee personen. Reken dat om naar een prijs per persoon voor je vergelijkt.",
+   "en": "ATV tour prices are often per vehicle for two people. Work out the price per person before you compare."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wat kost een dagtocht naar Klein Curaçao?",
+    "en": "How much is a Klein Curaçao day trip?"
+   },
+   "a": {
+    "nl": "Tussen $135 en $170 per volwassene, inclusief lunch en meestal ontbijt. Kinderen betalen vaak de helft. Hotelvervoer kost $17 tot $19 extra.",
+    "en": "Between $135 and $170 per adult, including lunch and usually breakfast. Kids often pay half. Hotel transfers cost $17 to $19 extra."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke boot naar Klein Curaçao is het best?",
+    "en": "Which Klein Curaçao boat is best?"
+   },
+   "a": {
+    "nl": "Wie snel zeeziek wordt kiest Powerboat Caribbean (40 tot 45 minuten, 4,9). Voor comfort met strandhuis: Miss Ann of Mermaid. Voor alcohol inbegrepen en dagelijks vertrek: BlueFinn of Irie Tours.",
+    "en": "If you get seasick, go with Powerboat Caribbean (40 to 45 minutes, 4.9). For comfort and a beach house, Miss Ann or Mermaid. For drinks included and daily departures, BlueFinn or Irie Tours."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe lang duurt de overtocht naar Klein Curaçao?",
+    "en": "How long is the boat ride to Klein Curaçao?"
+   },
+   "a": {
+    "nl": "Met de speedboot 40 tot 50 minuten, met Miss Ann ongeveer een uur en met de grote catamarans tot 1 uur en 45 minuten.",
+    "en": "About 40 to 50 minutes by powerboat, around an hour with Miss Ann, and up to 1 hour 45 minutes on the big catamarans."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar zwem je met schildpadden op Curaçao?",
+    "en": "Where can you swim with sea turtles in Curaçao?"
+   },
+   "a": {
+    "nl": "Vooral bij Playa Piskado (Playa Grandi) in Westpunt, Playa Lagun en op Klein Curaçao. Georganiseerde schildpaddentours kosten $75 tot $107.",
+    "en": "Mainly at Playa Piskado (Playa Grandi) in Westpunt, Playa Lagun and Klein Curaçao. Guided turtle tours cost $75 to $107."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke excursie is geschikt voor cruisepassagiers?",
+    "en": "Which excursions work for cruise passengers?"
+   },
+   "a": {
+    "nl": "Tours die bij de cruiseterminal ophalen en 2 tot 5 uur duren, zoals de schildpaddentours van Curacao Safari Tours en Samurai, de amfibiebus of een wandeltour door Willemstad.",
+    "en": "Tours with cruise terminal pickup that last 2 to 5 hours, like the turtle tours by Curacao Safari Tours and Samurai, the amphibious bus or a Willemstad walking tour."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost een quadtour op Curaçao?",
+    "en": "How much is an ATV tour in Curaçao?"
+   },
+   "a": {
+    "nl": "Ongeveer $100 per persoon voor 3 uur, of $173 tot $229 per voertuig voor twee personen. Ophalen kost vaak extra.",
+    "en": "Roughly $100 per person for 3 hours, or $173 to $229 per vehicle for two people. Pickup often costs extra."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost een zonsondergangcruise?",
+    "en": "How much is a sunset cruise?"
+   },
+   "a": {
+    "nl": "Een catamaran met open bar van 2 tot 3 uur kost $75 tot $79 per persoon. Een feestcruise met DJ kost rond $145.",
+    "en": "A 2 to 3 hour catamaran sail with open bar costs $75 to $79 per person. A party cruise with a DJ runs around $145."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost zwemmen met dolfijnen op Curaçao?",
+    "en": "How much does it cost to swim with dolphins in Curaçao?"
+   },
+   "a": {
+    "nl": "Bij Dolphin Academy kost een Encounter $114, een Swim $194 en een Dolphin Snorkel $210, inclusief entree van het Sea Aquarium.",
+    "en": "At Dolphin Academy an Encounter is $114, a Swim $194 and a Dolphin Snorkel $210, including Sea Aquarium entry."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "excursies curaçao",
+   "klein curaçao boottocht",
+   "boottocht klein curaçao prijs",
+   "snorkelen schildpadden curaçao",
+   "jeep safari curaçao",
+   "quad tour curaçao",
+   "catamaran curaçao"
+  ],
+  "en": [
+   "curacao excursions",
+   "klein curacao boat trip",
+   "best klein curacao tour",
+   "curacao snorkel tour turtles",
+   "curacao atv tour",
+   "curacao sunset cruise",
+   "curacao cruise excursions"
+  ],
+  "es": [
+   "excursiones curazao",
+   "klein curazao tour",
+   "snorkel tortugas curazao",
+   "tour en cuatrimoto curazao"
+  ],
+  "pt": [
+   "passeios curaçao",
+   "klein curaçao passeio de barco",
+   "snorkel com tartarugas curaçao"
+  ],
+  "de": [
+   "curaçao ausflüge",
+   "klein curaçao bootstour",
+   "schnorcheln schildkröten curaçao",
+   "quad tour curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Welke boot naar Klein Curaçao is het beste als je snel zeeziek wordt?",
+   "Wat is een leuke excursie op Curaçao met kinderen?",
+   "Waar kun je op Curaçao met schildpadden snorkelen en wat kost een tour?"
+  ],
+  "en": [
+   "What's the best Klein Curaçao boat trip?",
+   "What should I do in Curaçao on a cruise stop of six hours?",
+   "Which Curaçao snorkel tour lets you swim with sea turtles?"
+  ]
+ }
+}

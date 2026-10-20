@@ -1,1 +1,1237 @@
-{"id":"huishuren","peildatum":"2026-10-20","items":[]}
+{
+ "id": "huishuren",
+ "peildatum": "2026-10-20",
+ "onderwerp": {
+  "nl": "huurwoning",
+  "en": "long-term rental"
+ },
+ "h1": {
+  "nl": "Huis huren op Curaçao: via wie vind je een huurwoning?",
+  "en": "Renting in Curaçao: where do you find a long-term rental?"
+ },
+ "titel": {
+  "nl": "Huis huren op Curaçao: {n} verhuurders en complexen (2026)",
+  "en": "Long-term rentals in Curaçao: {n} agencies and complexes (2026)"
+ },
+ "metaDesc": {
+  "nl": "Huurwoning op Curaçao voor emigranten, stagiairs en remote workers: {n} opties met huurprijzen per maand, van studentenkamer tot villa.",
+  "en": "Long-term rentals in Curaçao for expats, interns and remote workers: {n} options with monthly rents, from student rooms to villas."
+ },
+ "kort": {
+  "nl": "Bij makelaars staan ruim 400 huurwoningen; CuraHouseCare, At Home en RE/MAX BonBini hebben het meeste aanbod. Een kamer of studentenhuis kost ongeveer €590 tot XCG 950 per maand, een appartement met 2 slaapkamers vaak XCG 2.900 tot 4.000 en een villa XCG 6.000 of meer. Voor 3 tot 6 maanden gemeubileerd zijn Remote Work Curaçao en Coral Estate Rentals gericht op remote workers.",
+  "en": "Agencies list more than 400 rentals; CuraHouseCare, At Home and RE/MAX BonBini have the most. A room or student house runs about €590 to XCG 950 a month, a 2-bedroom apartment often XCG 2,900 to 4,000, and a villa XCG 6,000 or more. For 3 to 6 months furnished, Remote Work Curaçao and Coral Estate Rentals cater to remote workers."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Voor wie is de woning?",
+    "en": "Who is the rental for?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Alleen of met z'n tweeën",
+      "en": "Single or couple"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Stagiair of student",
+      "en": "Intern or student"
+     },
+     "plus": [
+      "stagiair",
+      "budget"
+     ],
+     "min": [
+      "luxe"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Gezin met kinderen",
+      "en": "Family with kids"
+     },
+     "plus": [
+      "gezin"
+     ],
+     "min": [
+      "stagiair"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Gemeubileerd of niet?",
+    "en": "Furnished or unfurnished?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Either is fine"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Gemeubileerd",
+      "en": "Furnished"
+     },
+     "plus": [
+      "gemeubileerd"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ongemeubileerd, ik neem spullen mee",
+      "en": "Unfurnished, I'm bringing my own"
+     },
+     "plus": [
+      "ongemeubileerd"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat is je budget per maand?",
+    "en": "What's your monthly budget?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "XCG 1.500 tot 4.000",
+      "en": "XCG 1,500 to 4,000"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Onder XCG 1.500",
+      "en": "Under XCG 1,500"
+     },
+     "plus": [
+      "budget"
+     ],
+     "min": [
+      "luxe"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Boven XCG 4.000",
+      "en": "Over XCG 4,000"
+     },
+     "plus": [
+      "luxe"
+     ],
+     "min": [
+      "budget"
+     ],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Hoe lang blijf je?",
+    "en": "How long are you staying?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Een jaar of langer",
+      "en": "A year or longer"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "3 tot 6 maanden",
+      "en": "3 to 6 months"
+     },
+     "plus": [
+      "kort-verblijf-maanden",
+      "gemeubileerd"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "curahousecare-huur",
+   "naam": "CuraHouseCare",
+   "url": "https://curahousecare.com/",
+   "soort": {
+    "nl": "verhuurkantoor",
+    "en": "rental agency"
+   },
+   "plaats": null,
+   "tags": [
+    "gezin"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "grootste huuraanbod (96)",
+     "en": "largest rental stock (96)"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://ikzoekdebestemakelaar.nl/en/kennisbank/huis-kopen-op-curacao-hoe-vind-je-een-goede-makelaar-op-curacao",
+    "https://caribbeanhousehunt.com/curacao/realtors/"
+   ]
+  },
+  {
+   "id": "remax-bonbini-huur",
+   "naam": "RE/MAX BonBini (verhuur)",
+   "url": "https://www.realestate-curacao.com/en/homes/homes-for-rent/",
+   "soort": {
+    "nl": "internationale keten",
+    "en": "international franchise"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "gemeubileerd",
+    "ongemeubileerd",
+    "gezin",
+    "luxe",
+    "budget",
+    "nl-sprekend"
+   ],
+   "prijs": {
+    "bedrag": 751,
+    "valuta": "EUR",
+    "eenheid": {
+     "nl": "per maand, vanaf",
+     "en": "per month, from"
+    },
+    "bron": "https://www.realestate-curacao.com/en/homes/homes-for-rent/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "ca. 45 huurwoningen",
+     "en": "about 45 rentals"
+    },
+    {
+     "nl": "van €751 tot €5.791 p/m",
+     "en": "€751 to €5,791 a month"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 49,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.realestate-curacao.com/en/homes/homes-for-rent/",
+    "https://caribbeanhousehunt.com/curacao/realtors/"
+   ]
+  },
+  {
+   "id": "at-home-curacao-huur",
+   "naam": "At Home Curaçao (verhuur)",
+   "url": "https://athomecuracao.com/en/for-rent/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "gemeubileerd",
+    "ongemeubileerd",
+    "stagiair",
+    "budget",
+    "luxe",
+    "gezin",
+    "nl-sprekend"
+   ],
+   "prijs": {
+    "bedrag": 800,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per maand, vanaf",
+     "en": "per month, from"
+    },
+    "bron": "https://athomecuracao.com/en/for-rent/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "ca. 52 huurwoningen",
+     "en": "about 52 rentals"
+    },
+    {
+     "nl": "ook studentenhuizen",
+     "en": "student housing too"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 14,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://athomecuracao.com/en/for-rent/",
+    "https://athomecuracao.com/en/makelaars_curacao/",
+    "https://caribbeanhousehunt.com/curacao/realtors/"
+   ]
+  },
+  {
+   "id": "century-21-huur",
+   "naam": "CENTURY 21 #1 (verhuur)",
+   "url": "https://century21numberone.com/en/s/for-rent",
+   "soort": {
+    "nl": "internationale keten",
+    "en": "international franchise"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 120,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://century21numberone.com/en/s/for-rent",
+    "https://caribbeanhousehunt.com/curacao/realtors/"
+   ]
+  },
+  {
+   "id": "palmstone-huur",
+   "naam": "Palmstone Real Estate (verhuur)",
+   "url": "https://palmstone.realestate/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": null,
+   "tags": [
+    "gemeubileerd",
+    "luxe",
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "minimaal 12 maanden",
+     "en": "12-month minimum"
+    },
+    {
+     "nl": "soms met zwembad",
+     "en": "some with pool"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 32,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://palmstone-real-estate.preview.ogonline.nl/renting-a-house-curacao",
+    "https://caribbeanhousehunt.com/curacao/realtors/"
+   ]
+  },
+  {
+   "id": "coral-estate-rentals",
+   "naam": "Coral Estate Rentals",
+   "url": "https://www.coralestaterentals.com/",
+   "soort": {
+    "nl": "resort, lang verblijf",
+    "en": "resort, long stay"
+   },
+   "plaats": "Coral Estate (Cape Marie)",
+   "tags": [
+    "gemeubileerd",
+    "kort-verblijf-maanden"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "gated, 24/7 beveiliging",
+     "en": "gated, 24/7 security"
+    },
+    {
+     "nl": "prijs alleen op aanvraag",
+     "en": "rates on request only"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.coralestaterentals.com/en/long-term-rentals",
+    "https://www.coralestaterentals.com/en/where-work-meets-paradise"
+   ]
+  },
+  {
+   "id": "remote-work-curacao",
+   "naam": "Remote Work Curaçao",
+   "url": "https://remoteworkcuracao.com/",
+   "soort": {
+    "nl": "gemeubileerde appartementen",
+    "en": "furnished apartments"
+   },
+   "plaats": "Curaçao Ocean Resort (bij Mambo Beach)",
+   "tags": [
+    "gemeubileerd",
+    "kort-verblijf-maanden",
+    "luxe"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "remote workers: 3 tot 6 maanden",
+     "en": "remote workers: 3 to 6 months"
+    },
+    {
+     "nl": "bedrijven: vanaf 1 jaar",
+     "en": "corporate: 1 year or longer"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://remoteworkcuracao.com/"
+   ]
+  },
+  {
+   "id": "new-winds-realty-huur",
+   "naam": "New Winds Realty (verhuur)",
+   "url": "http://www.newwindsrealty.com/",
+   "soort": {
+    "nl": "makelaar en ontwikkelaar",
+    "en": "broker and developer"
+   },
+   "plaats": "Willemstad (Pietermaaiplein 8)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "sinds 1992 op Curaçao",
+     "en": "on Curaçao since 1992"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 17,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.secondhome.nl/en/exposant/new-winds-realty/",
+    "https://a-leads.co/company/4842209_fcc125cf"
+   ]
+  },
+  {
+   "id": "kostabon-huur",
+   "naam": "Kostabon (verhuur)",
+   "url": "https://kostabon.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency"
+   },
+   "plaats": "Willemstad (Pietermaai 133-135)",
+   "tags": [
+    "nl-sprekend"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 5,
+     "peildatum": "2026-10-20",
+     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://kostabon.com/hypotheekrente-op-curacao-in-2026-alles-wat-u-moet-weten-over-financiering/",
+    "https://caribbeanhousehunt.com/curacao/realtors/"
+   ]
+  },
+  {
+   "id": "studentencomplex-santa-rosa",
+   "naam": "Studentencomplex Santa Rosa",
+   "url": null,
+   "soort": {
+    "nl": "studentenhuisvesting",
+    "en": "student housing"
+   },
+   "plaats": "Santa Rosa",
+   "tags": [
+    "stagiair",
+    "budget"
+   ],
+   "prijs": {
+    "bedrag": 800,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per maand",
+     "en": "per month"
+    },
+    "bron": "https://athomecuracao.com/en/for-rent/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "via At Home Curaçao",
+     "en": "listed by At Home Curaçao"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://athomecuracao.com/en/for-rent/"
+   ]
+  },
+  {
+   "id": "studentenhuis-seri-pietermaai",
+   "naam": "Studentenhuis Seri Pietermaai",
+   "url": null,
+   "soort": {
+    "nl": "studentenhuis (nieuwbouw)",
+    "en": "student house (new build)"
+   },
+   "plaats": "Pietermaai",
+   "tags": [
+    "stagiair",
+    "budget"
+   ],
+   "prijs": {
+    "bedrag": 950,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per maand",
+     "en": "per month"
+    },
+    "bron": "https://athomecuracao.com/en/for-rent/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "5 slaapkamers, 2 badkamers",
+     "en": "5 bedrooms, 2 bathrooms"
+    },
+    {
+     "nl": "via At Home Curaçao",
+     "en": "listed by At Home Curaçao"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://athomecuracao.com/en/for-rent/"
+   ]
+  },
+  {
+   "id": "palapa-beach-resort",
+   "naam": "Palapa Beach Resort",
+   "url": null,
+   "soort": {
+    "nl": "complex, huur via makelaar",
+    "en": "complex, rent through an agent"
+   },
+   "plaats": null,
+   "tags": [
+    "gemeubileerd"
+   ],
+   "prijs": {
+    "bedrag": 3950,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per maand",
+     "en": "per month"
+    },
+    "bron": "https://athomecuracao.com/en/for-rent/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2 slpk, gemeubileerd",
+     "en": "2 bed, furnished"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://athomecuracao.com/en/for-rent/"
+   ]
+  },
+  {
+   "id": "la-privada-resort",
+   "naam": "La Privada Resort",
+   "url": null,
+   "soort": {
+    "nl": "complex, huur via makelaar",
+    "en": "complex, rent through an agent"
+   },
+   "plaats": null,
+   "tags": [
+    "ongemeubileerd",
+    "gezin",
+    "luxe"
+   ],
+   "prijs": {
+    "bedrag": 6000,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per maand",
+     "en": "per month"
+    },
+    "bron": "https://athomecuracao.com/en/for-rent/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "3 slpk, 3 badkamers",
+     "en": "3 bed, 3 bath"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://athomecuracao.com/en/for-rent/"
+   ]
+  },
+  {
+   "id": "skerpene-living-resort",
+   "naam": "Skerpene Living Resort",
+   "url": null,
+   "soort": {
+    "nl": "complex, huur via makelaar",
+    "en": "complex, rent through an agent"
+   },
+   "plaats": "Scherpenheuvel",
+   "tags": [
+    "ongemeubileerd"
+   ],
+   "prijs": {
+    "bedrag": 3000,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per maand",
+     "en": "per month"
+    },
+    "bron": "https://athomecuracao.com/en/for-rent/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2 slpk, ongemeubileerd",
+     "en": "2 bed, unfurnished"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://athomecuracao.com/en/for-rent/"
+   ]
+  },
+  {
+   "id": "elisabeth-resort",
+   "naam": "Elisabeth Resort",
+   "url": null,
+   "soort": {
+    "nl": "complex, huur via makelaar",
+    "en": "complex, rent through an agent"
+   },
+   "plaats": null,
+   "tags": [
+    "ongemeubileerd"
+   ],
+   "prijs": {
+    "bedrag": 3100,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per maand",
+     "en": "per month"
+    },
+    "bron": "https://athomecuracao.com/en/for-rent/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2 slpk, ongemeubileerd",
+     "en": "2 bed, unfurnished"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://athomecuracao.com/en/for-rent/"
+   ]
+  },
+  {
+   "id": "vredenberg-village",
+   "naam": "Vredenberg Village",
+   "url": null,
+   "soort": {
+    "nl": "complex, huur via makelaar",
+    "en": "complex, rent through an agent"
+   },
+   "plaats": "Vredenberg",
+   "tags": [],
+   "prijs": {
+    "bedrag": 3350,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per maand",
+     "en": "per month"
+    },
+    "bron": "https://athomecuracao.com/en/for-rent/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2 slpk, met zwembad",
+     "en": "2 bed, with pool"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://athomecuracao.com/en/for-rent/"
+   ]
+  },
+  {
+   "id": "marina-view",
+   "naam": "Marina View",
+   "url": null,
+   "soort": {
+    "nl": "complex, huur via makelaar",
+    "en": "complex, rent through an agent"
+   },
+   "plaats": null,
+   "tags": [
+    "gezin"
+   ],
+   "prijs": {
+    "bedrag": 4500,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per maand",
+     "en": "per month"
+    },
+    "bron": "https://athomecuracao.com/en/for-rent/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "3 slpk, 3 badkamers",
+     "en": "3 bed, 3 bath"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://athomecuracao.com/en/for-rent/"
+   ]
+  },
+  {
+   "id": "piscadera-bay-resort",
+   "naam": "Piscadera Bay Resort",
+   "url": null,
+   "soort": {
+    "nl": "complex, huur via makelaar",
+    "en": "complex, rent through an agent"
+   },
+   "plaats": "Piscadera",
+   "tags": [
+    "gezin",
+    "luxe"
+   ],
+   "prijs": {
+    "bedrag": 6000,
+    "valuta": "XCG",
+    "eenheid": {
+     "nl": "per maand",
+     "en": "per month"
+    },
+    "bron": "https://athomecuracao.com/en/for-rent/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "villa, 3 slpk",
+     "en": "villa, 3 bed"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://athomecuracao.com/en/for-rent/",
+    "https://antilliaansdagblad.com/makelaars?lang=en"
+   ]
+  },
+  {
+   "id": "blue-bay-huur",
+   "naam": "Blue Bay Golf & Beach Resort",
+   "url": null,
+   "soort": {
+    "nl": "complex, huur via makelaar",
+    "en": "complex, rent through an agent"
+   },
+   "plaats": "Blue Bay",
+   "tags": [
+    "ongemeubileerd",
+    "luxe"
+   ],
+   "prijs": {
+    "bedrag": 2252,
+    "valuta": "EUR",
+    "eenheid": {
+     "nl": "per maand",
+     "en": "per month"
+    },
+    "bron": "https://www.realestate-curacao.com/en/homes/homes-for-rent/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "2 slpk, 121 m²",
+     "en": "2 bed, 121 m²"
+    },
+    {
+     "nl": "via RE/MAX BonBini",
+     "en": "listed by RE/MAX BonBini"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.realestate-curacao.com/en/homes/homes-for-rent/",
+    "https://antilliaansdagblad.com/makelaars?lang=en"
+   ]
+  },
+  {
+   "id": "kamer-willemstad-particulier",
+   "naam": "Particuliere kamers in Willemstad",
+   "url": null,
+   "soort": {
+    "nl": "particulier",
+    "en": "private landlord"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "gemeubileerd",
+    "budget",
+    "stagiair"
+   ],
+   "prijs": {
+    "bedrag": 590,
+    "valuta": "EUR",
+    "eenheid": {
+     "nl": "per maand, vanaf",
+     "en": "per month, from"
+    },
+    "bron": "https://www.longtermlettings.com/rent/monthly/curacao/",
+    "datum": "2026-10"
+   },
+   "feiten": [
+    {
+     "nl": "kamer of studio bij bewoner",
+     "en": "room or studio at owner's home"
+    },
+    {
+     "nl": "€590 tot €648 p/m",
+     "en": "€590 to €648 a month"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": []
+   },
+   "bronnen": [
+    "https://www.longtermlettings.com/rent/monthly/curacao/"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Caribbean House Hunt",
+   "url": "https://caribbeanhousehunt.com/",
+   "uitleg": {
+    "nl": "Bundelt het huuraanbod van tientallen makelaars; er staan ruim 400 huurwoningen.",
+    "en": "Pulls together rentals from dozens of agencies; more than 400 rentals listed."
+   }
+  },
+  {
+   "naam": "CasaSearch",
+   "url": "https://casasearch.com/en/houses-in-curacao/rental-properties-in-curacao/",
+   "uitleg": {
+    "nl": "Portal met huurwoningen van makelaars en resorts.",
+    "en": "Portal with rentals from agencies and resorts."
+   }
+  },
+  {
+   "naam": "Airbnb (maandverblijven)",
+   "url": "https://www.airbnb.com/curacao/stays/monthly",
+   "uitleg": {
+    "nl": "Handig voor de eerste maanden terwijl je ter plekke zoekt; duurder dan een jaarcontract.",
+    "en": "Useful for the first months while you look on the island; pricier than a 12-month lease."
+   }
+  },
+  {
+   "naam": "LongTermLettings",
+   "url": "https://www.longtermlettings.com/rent/monthly/curacao/",
+   "uitleg": {
+    "nl": "Internationale site voor lange huur; op Curaçao vooral kamers bij particulieren.",
+    "en": "International long-let site; in Curaçao mostly rooms with private landlords."
+   }
+  },
+  {
+   "naam": "Facebook-groepen voor huurwoningen",
+   "url": "https://www.facebook.com/",
+   "uitleg": {
+    "nl": "Veel particuliere verhuur gaat via Facebook-groepen; zoek op 'huurwoning Curaçao' of 'te huur Curaçao'. Betaal nooit vooraf zonder bezichtiging.",
+    "en": "Much private renting happens in Facebook groups; search 'huurwoning Curaçao' or 'for rent Curaçao'. Never pay before you've seen the place."
+   }
+  },
+  {
+   "naam": "Invest in Willemstad",
+   "url": "https://investinwillemstad.com/real-estate/",
+   "uitleg": {
+    "nl": "Eigenaren en verhuurders plaatsen hier panden in de historische binnenstad.",
+    "en": "Owners and landlords post buildings in the historic center here."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Huurprijzen staan vaak in XCG (Caribische gulden). Vraag altijd of water en stroom (Aqualectra) inbegrepen zijn; stroom is duur op Curaçao.",
+   "en": "Rents are often quoted in XCG (Caribbean guilders). Always ask whether water and power (Aqualectra) are included; electricity is expensive in Curaçao."
+  },
+  {
+   "nl": "Langetermijnhuur via makelaars is meestal minimaal 12 maanden; voor 3 tot 6 maanden zoek je beter een gemeubileerd resortappartement.",
+   "en": "Long-term leases through agencies usually run 12 months or more; for 3 to 6 months, look at furnished resort apartments."
+  },
+  {
+   "nl": "Elk jaar komen er ongeveer 1.200 stagiairs naar Curaçao, met pieken rond februari en september. Begin dan ruim op tijd met zoeken.",
+   "en": "About 1,200 interns come to Curaçao each year, peaking around February and September, so start looking early."
+  },
+  {
+   "nl": "Boek de eerste weken een tijdelijke plek en bezichtig ter plekke; je ziet dan meteen buurt, geluid en airco.",
+   "en": "Book a temporary place for your first weeks and view rentals in person, so you can check the area, noise and air conditioning."
+  },
+  {
+   "nl": "Stagiairs hebben een verblijfsvergunning met doel stage nodig, ongeacht de duur.",
+   "en": "Interns need a residence permit for the purpose of an internship, regardless of how long they stay."
+  },
+  {
+   "nl": "Nederlanders die langer dan zes maanden blijven, hebben een verklaring van toelating van rechtswege nodig.",
+   "en": "Dutch citizens staying longer than six months need a 'verklaring van toelating van rechtswege' (declaration of admission by law)."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wat kost een huurwoning op Curaçao per maand?",
+    "en": "How much does it cost to rent in Curaçao?"
+   },
+   "a": {
+    "nl": "Bij makelaars zie je appartementen vanaf ongeveer €750 per maand, 2-slaapkamerappartementen in resorts rond XCG 2.900 tot 4.000 en villa's van XCG 6.000 tot boven €5.700. Een kamer bij een particulier kost ongeveer €590 tot €650.",
+    "en": "Agencies list apartments from about €750 a month, 2-bedroom resort apartments around XCG 2,900 to 4,000, and villas from XCG 6,000 to over €5,700. A room with a private landlord runs about €590 to €650."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar vind ik een huurwoning op Curaçao?",
+    "en": "Where can I find a rental in Curaçao?"
+   },
+   "a": {
+    "nl": "Bij makelaars met een verhuurafdeling (CuraHouseCare, At Home, RE/MAX BonBini, Century 21), op portals als Caribbean House Hunt en CasaSearch, en in Facebook-groepen voor particuliere verhuur.",
+    "en": "Through agencies with a rental desk (CuraHouseCare, At Home, RE/MAX BonBini, Century 21), on portals like Caribbean House Hunt and CasaSearch, and in Facebook groups for private rentals."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe vind ik een stagekamer op Curaçao?",
+    "en": "How do I find intern housing in Curaçao?"
+   },
+   "a": {
+    "nl": "Makelaars als At Home verhuren studentenhuizen, bijvoorbeeld in Santa Rosa (XCG 800) en Pietermaai (XCG 950). Begin vroeg: rond februari en september komen de meeste stagiairs.",
+    "en": "Agencies like At Home rent student houses, for example in Santa Rosa (XCG 800) and Pietermaai (XCG 950). Start early, since most interns arrive around February and September."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kan ik op Curaçao voor 3 tot 6 maanden huren?",
+    "en": "Can I rent in Curaçao for 3 to 6 months?"
+   },
+   "a": {
+    "nl": "Ja. Remote Work Curaçao verhuurt gemeubileerde appartementen in Curaçao Ocean Resort voor 3 tot 6 maanden, en Coral Estate Rentals heeft gemeubileerde long-stay appartementen op de westkust.",
+    "en": "Yes. Remote Work Curaçao rents furnished apartments in Curaçao Ocean Resort for 3 to 6 months, and Coral Estate Rentals offers furnished long-stay apartments on the west coast."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is huren op Curaçao goedkoper dan in Nederland?",
+    "en": "Is renting in Curaçao cheaper than in the Netherlands?"
+   },
+   "a": {
+    "nl": "Vaak wel, behalve in luxe buurten als Jan Thiel en Blue Bay. Let op de hoge stroomkosten en dure geïmporteerde boodschappen.",
+    "en": "Often yes, except in upscale areas like Jan Thiel and Blue Bay. Factor in high electricity costs and pricey imported groceries."
+   }
+  },
+  {
+   "q": {
+    "nl": "Zijn huurwoningen op Curaçao gemeubileerd?",
+    "en": "Are rentals in Curaçao furnished?"
+   },
+   "a": {
+    "nl": "Beide komen veel voor. Resortappartementen voor korter verblijf zijn meestal gemeubileerd; grotere appartementen en gezinswoningen worden vaak ongemeubileerd verhuurd.",
+    "en": "Both are common. Resort apartments for shorter stays are usually furnished; larger apartments and family homes are often rented unfurnished."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke papieren heb ik nodig om lang op Curaçao te wonen?",
+    "en": "What paperwork do I need to live in Curaçao long term?"
+   },
+   "a": {
+    "nl": "Nederlanders die langer dan zes maanden blijven, vragen een verklaring van toelating van rechtswege aan. Stagiairs hebben een verblijfsvergunning met doel stage nodig. Kijk voor de actuele regels bij de Toelatingsorganisatie Curaçao.",
+    "en": "Dutch citizens staying over six months apply for a declaration of admission by law. Interns need a residence permit for internship purposes. Check the current rules with Curaçao's immigration office."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "huis huren curaçao",
+   "huurwoning curaçao",
+   "appartement huren curaçao",
+   "stagekamer curaçao",
+   "woning huren curaçao lange termijn",
+   "kamer huren curaçao"
+  ],
+  "en": [
+   "curacao long term rentals",
+   "apartments for rent curacao",
+   "houses for rent curacao",
+   "curacao monthly rentals",
+   "curacao rentals for remote workers"
+  ],
+  "es": [
+   "alquiler curazao",
+   "apartamentos en alquiler curazao",
+   "alquiler largo plazo curazao"
+  ],
+  "pt": [
+   "aluguel curaçao",
+   "apartamento para alugar curaçao"
+  ],
+  "de": [
+   "wohnung mieten curaçao",
+   "langzeitmiete curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Hoe vind ik een huurwoning op Curaçao als ik ga emigreren?",
+   "Wat kost een stagekamer op Curaçao?",
+   "Welke makelaars op Curaçao verhuren appartementen voor lange termijn?"
+  ],
+  "en": [
+   "How do I find a long-term rental in Curaçao?",
+   "How much is rent for an apartment in Curaçao?",
+   "Where can remote workers rent a furnished apartment in Curaçao for a few months?"
+  ]
+ }
+}
