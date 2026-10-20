@@ -115,3 +115,12 @@ test('AI-lus leert alleen uit gepaarde vragen over meerdere vergelijkbare meetda
   assert.equal(llmEvidence(p, history.map(x => x.dag > p.start ? { ...x, llmCitatie: { ...x.llmCitatie, panel: 'changed' } } : x), now).uitkomst, 'te-weinig');
   assert.equal(llmEvidence(p, [...history.slice(0, 5), ...Array(5).fill(history[5])], now).uitkomst, 'te-weinig');
 });
+test('nieuw Google-totaal blijft gekoppeld aan zijn eigen periode als een ouder cache bestaat', async () => {
+  const organic = await fs.readFile(path.join(__dirname, '../lib/organic.js'), 'utf8');
+  const pure = await fs.readFile(path.join(__dirname, '../lib/organic-policy.js'), 'utf8');
+  const data = { 'hjdk:gsc:kz': { dag: '2026-10-21', periode: { startDate: '2026-09-22', endDate: '2026-10-19' }, totaal: { imp: 1500, clicks: 2 }, totaalBasis: 'full-google' }, 'hjdk:gsc:totalen:kz': { dag: '2026-10-20', periode: { startDate: '2026-09-21', endDate: '2026-10-18' }, imp: 1435, clicks: 1 } };
+  const source = organic.replace("import { kv } from './db.js';", 'const kv = {get: async key => (' + JSON.stringify(data) + ')[key] || null};').replace("'./organic-policy.js'", JSON.stringify('data:text/javascript;base64,' + Buffer.from(pure).toString('base64')));
+  const api = await import('data:text/javascript;base64,' + Buffer.from(source).toString('base64'));
+  const result = await api.organicStatus('kz', 12);
+  assert.equal(result.google.totaal.clicks, 2); assert.equal(result.google.periode.endDate, '2026-10-19'); assert.equal(result.google.dag, '2026-10-21');
+});

@@ -31,12 +31,12 @@ async function herschrijf(lang, it, p, oidc) {
 async function fixKz(it, nieuw, p) {
   const key = 'hjdk:kz:' + it.slug; const cur = await kv.get(key).catch(() => null);
   const hist = { dag: DAY(), oud: it.seoTitle || it.h1, imp: p.imp, clicks: p.clicks, pos: p.pos };
-  if (cur && cur.slug && !cur.override) await kv.set(key, Object.assign(cur, nieuw, { titleFixAt: DAY(), titleHist: [hist, ...(cur.titleHist || [])].slice(0, 5) }));
-  else { await kv.set(key, Object.assign({}, cur || {}, { slug: it.slug, override: true }, nieuw, { titleFixAt: DAY(), titleHist: [hist, ...((cur && cur.titleHist) || [])].slice(0, 5) })); const idx = (await kv.get('hjdk:kz:index')) || []; if (!idx.includes(it.slug)) { idx.push(it.slug); await kv.set('hjdk:kz:index', idx); } }
+  if (cur && cur.slug && !cur.override) await kv.set(key, Object.assign(cur, nieuw, { updatedAt: DAY(), titleFixAt: DAY(), titleHist: [hist, ...(cur.titleHist || [])].slice(0, 5) }));
+  else { await kv.set(key, Object.assign({}, cur || {}, { slug: it.slug, override: true }, nieuw, { updatedAt: DAY(), titleFixAt: DAY(), titleHist: [hist, ...((cur && cur.titleHist) || [])].slice(0, 5) })); const idx = (await kv.get('hjdk:kz:index')) || []; if (!idx.includes(it.slug)) { idx.push(it.slug); await kv.set('hjdk:kz:index', idx); } }
 }
 async function fixWtb(m, it, nieuw, p) {
   const key = WK.item(m.id, it.slug); const cur = (await kv.get(key)) || it;
-  await kv.set(key, Object.assign(cur, nieuw, { titleFixAt: DAY(), titleHist: [{ dag: DAY(), oud: cur.seoTitle || cur.h1, imp: p.imp, clicks: p.clicks, pos: p.pos }, ...(cur.titleHist || [])].slice(0, 5) }));
+  await kv.set(key, Object.assign(cur, nieuw, { updatedAt: DAY(), titleFixAt: DAY(), titleHist: [{ dag: DAY(), oud: cur.seoTitle || cur.h1, imp: p.imp, clicks: p.clicks, pos: p.pos }, ...(cur.titleHist || [])].slice(0, 5) }));
 }
 
 // vervolgvragen beantwoorden op de pagina die al getoond wordt: nieuwe FAQ-items (eerlijk, algemeen, geen verzonnen productdata)
