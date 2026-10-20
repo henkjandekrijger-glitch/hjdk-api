@@ -764,6 +764,13 @@ export default async function handler(req, res) {
     if (op === 'img') return await plaatje(req, res, url);
     res.setHeader('cache-control', 'no-store');
     if (op === 'voorpa') return res.status(200).json(Object.assign({ ok: true }, await voorNet(['ra', 'ca'].includes(url.searchParams.get('net')) ? url.searchParams.get('net') : 'pa')));
+    if (op === 'prompt') { // kant-en-klare opdracht voor Babita's Claude Code (lib/shopprompt.js), live cijfers; met haar eigen link of via de beschermde host
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; const bk = await kv.get(K.babitakey).catch(() => null); const k = url.searchParams.get('k');
+      if (!/\.vercel\.app$/i.test(host) && !(bk && k === bk)) return res.status(404).send('Niet gevonden');
+      const { shopPrompt } = await import('../lib/shopprompt.js'); let tot = {}; try { tot = (await uurStand(kv, 24)).totaal || {}; } catch (e) {}
+      res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'no-store');
+      return res.status(200).send(shopPrompt({ tot, lekLink: bk ? 'https://keuzehulp.best/api/shop/lekken?k=' + bk : '', datum: new Date().toLocaleString('nl-NL', { timeZone: 'Europe/Amsterdam', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' }) }));
+    }
     if (op === 'lokker') { // lokkerproduct onder de kostprijs (lib/shopkies.js lokkers); inkoop staat erin, dus alleen via de beschermde vercel.app-host
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; const bkL = await kv.get(K.babitakey).catch(() => null); const metLink = !!(bkL && url.searchParams.get('k') === bkL); // ook met Babita's eigen link (zij levert de inkoop zelf aan)
       if (!/\.vercel\.app$/i.test(host) && !metLink) return res.status(404).send('Niet gevonden');
