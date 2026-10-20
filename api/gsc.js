@@ -136,6 +136,12 @@ export default async function handler(req, res) {
   const oidc = String(req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN || '');
   const isCron = /vercel-cron/i.test(String(req.headers['user-agent'] || '')); const isToken = !!process.env.HJDK_TOKEN && url.searchParams.get('token') === process.env.HJDK_TOKEN;
   try {
+    if (op === 'merchantzet') { // schrijven in Merchant Center Yoors, alleen via de beschermde host: wat=autofeed_uit | autofeed_aan | levertijd (&vmin&vmax&omin&omax)
+      if (!/vercel\.app$/.test(String(req.headers.host || ''))) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const M = await import('../lib/merchant.js'); const { token } = await import('../lib/gsc.js'); const tk = await token(oidc, 'https://www.googleapis.com/auth/content'); const acc = '5875752564'; const wat = url.searchParams.get('wat'); const n = (k, d) => Number(url.searchParams.get(k)) || d;
+      const uit = wat === 'autofeed_uit' ? await M.autofeed(tk, acc, false) : wat === 'autofeed_aan' ? await M.autofeed(tk, acc, true) : wat === 'levertijd' ? await M.levertijd(tk, acc, { minVerwerking: n('vmin', 1), maxVerwerking: n('vmax', 2), minOnderweg: n('omin', 3), maxOnderweg: n('omax', 4) }) : { fout: 'wat=autofeed_uit|autofeed_aan|levertijd' };
+      return res.status(200).json({ wat, uit });
+    }
     if (op === 'yoors') { // Yoors Shop in Search Console (Henkjan 20 okt "Nu ook bing voor console"): eigendom zoeken en sitemaps indienen
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const l = await sites(oidc); const prop = propFor(l, 'yoo.rs');
