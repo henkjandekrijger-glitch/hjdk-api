@@ -2,6 +2,7 @@ import { authorizedUpdate } from '../lib/keuze-update-auth.js';
 import {createHash} from 'node:crypto';
 import {kv} from '../lib/db.js';
 import {UPDATE_CLIENT} from '../lib/keuze-updates-client.js';
+import {DEEL_CLIENT} from '../lib/deel-client.js';
 import {UPDATE_SITES,base,catalog,journey,event,subscribe,confirm,unsubscribe,pushSubscribe,stopPush,click,textFor,page,esc,sendDaily,updateReport,mailKey} from '../lib/keuze-updates.js';
 import {vapid,subHash} from '../lib/push.js';
 import {variant,ronde,leerPagina} from '../lib/keuze-updates-leer.js';
@@ -13,6 +14,7 @@ export default async function handler(req,res){
  if(!site)return res.status(400).json({ok:false});
  const c=textFor(site);let b={};try{b=['confirm','unsub'].includes(op)?{}:(typeof req.body==='string'?(req.body.trim()?JSON.parse(req.body):{}):(req.body||{}));}catch{return res.status(400).json({ok:false});}
  try{
+ if(op==='deel'){res.setHeader('content-type','application/javascript; charset=utf-8');res.setHeader('cache-control','public,max-age=300');return res.status(200).send(DEEL_CLIENT);}
  if(op==='client'){res.setHeader('content-type','application/javascript; charset=utf-8');res.setHeader('cache-control','public,max-age=300');return res.status(200).send(UPDATE_CLIENT);}
  if(op==='sw'){res.setHeader('content-type','application/javascript; charset=utf-8');res.setHeader('service-worker-allowed','/');return res.status(200).send(`self.addEventListener('install',e=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));self.addEventListener('push',e=>e.waitUntil((async()=>{const s=await self.registration.pushManager.getSubscription();let m=await (await fetch('/api/keuze-updates?op=pushmsg',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({endpoint:s?.endpoint})})).json();if(!m.title){try{m=await(await fetch('/api/kz/pushmsg',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({e:s?.endpoint})})).json()}catch{}}if(m.title)await self.registration.showNotification(m.title,{body:m.body,tag:m.tag||'choice-updates',data:{url:m.url}})})()));self.addEventListener('notificationclick',e=>{e.notification.close();try{const u=new URL(e.notification.data.url,self.location.origin);if(u.origin===self.location.origin)e.waitUntil(self.clients.openWindow(u.href))}catch{}});`);}
  if(op==='status')return res.status(200).json({ok:true,site,mailConfigured:!!(await mailKey()),cronConfigured:!!process.env.CRON_SECRET,scheduledVia:'centrale leerlus (ondertekend, kwartierplanning)',report:await updateReport(site)});
