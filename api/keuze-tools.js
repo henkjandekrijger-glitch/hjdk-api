@@ -37,7 +37,7 @@ function document(g, body, schema, tool) {
 }
 function laadSchema() {
   const url = 'https://keuzehulp.best/laadpaal';
-  return { '@context': 'https://schema.org', '@graph': [{ '@type': 'Article', headline: LAADPAAL_ITEM.h1, description: LAADPAAL_ITEM.intro, inLanguage: 'nl-NL', datePublished: UPDATED_TOOLS, dateModified: UPDATED_TOOLS, mainEntityOfPage: url, author: { '@type': 'Organization', name: g.site }, publisher: { '@type': 'Organization', name: 'Keuzehulp', url: 'https://keuzehulp.best' } }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Keuzehulp', item: 'https://keuzehulp.best/' }, { '@type': 'ListItem', position: 2, name: 'Laadpaal kiezen', item: url }] }] };
+  return { '@context': 'https://schema.org', '@graph': [{ '@type': 'Article', headline: LAADPAAL_ITEM.h1, description: LAADPAAL_ITEM.intro, inLanguage: 'nl-NL', datePublished: UPDATED_TOOLS, dateModified: UPDATED_TOOLS, mainEntityOfPage: url, author: { '@type': 'Organization', name: 'Keuzehulp', url: 'https://keuzehulp.best' }, publisher: { '@type': 'Organization', name: 'Keuzehulp', url: 'https://keuzehulp.best' } }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Keuzehulp', item: 'https://keuzehulp.best/' }, { '@type': 'ListItem', position: 2, name: 'Laadpaal kiezen', item: url }] }] };
 }
 export default async function handler(req, res) {
   const url = new URL(req.url, 'https://keuzehulp.best'), q = url.searchParams, op = q.get('op') || '';
