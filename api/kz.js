@@ -60,6 +60,7 @@ import { kinderfietsBlok, helmBlok, fietsmaatPagina } from '../lib/rekenhulp.js'
 import { overdrachtKz } from '../lib/overdracht-kz.js';
 import { vapid, sendPush, subHash } from '../lib/push.js';
 import seed from '../data/kz.json' with { type: 'json' };
+import { kwaliteit } from '../lib/kwaliteit.js';
 const seed2 = { items: [] }; // alles staat nu in één bestand (data/kz.json)
 const UPDATED = '2026-10-03';
 
@@ -390,12 +391,15 @@ function jsonld(obj) { return '<script type="application/ld+json">' + JSON.strin
 // ---- interne links: elke keuzehulp linkt vast (niet willekeurig) naar verwante keuzehulpen, en woorden in de tekst linken naar hun eigen keuzehulp ----
 const RSTOP = new Set(['de', 'het', 'een', 'en', 'of', 'voor', 'met', 'van', 'in', 'op', 'je', 'jij', 'bij', 'past', 'welke', 'welk', 'kiezen', 'kopen', 'wat', 'hoe', 'die', 'dat', 'is', 'jou', 'beste']);
 const rtoks = i => new Set(String((i.term || '') + ' ' + i.slug.replace(/-/g, ' ') + ' ' + (i.title || '')).toLowerCase().replace(/[^a-z0-9à-ÿ ]/g, ' ').split(/\s+/).filter(w => w.length >= 3 && !RSTOP.has(w)));
-function relatedFor(item, all, n) {
-  n = n || 8; const live = all.filter(i => i.slug !== item.slug); const bySlug = new Map(live.map(i => [i.slug, i])); const out = [];
+// "Veel gezocht": vaste links vanaf elke keuzehulp naar de pagina's die in Google het best lopen (kwaliteitsronde, hjdk:kw:kz.sterk)
+function veelGezocht(item, all, kw) { const by = new Map(all.map(i => [i.slug, i])); const l = ((kw && kw.sterk) || []).filter(s => s !== item.slug && by.has(s)).slice(0, 6).map(s => by.get(s)); return l.length ? '<p style="margin:8px 0 0;font-size:14px">Veel gezocht: ' + l.map(i => '<a href="/' + esc(i.slug) + '">' + esc(i.title) + '</a>').join(' · ') + '</p>' : ''; }
+function relatedFor(item, all, n, kw) {
+  n = n || 8; kw = kw || { dun: {}, wacht: [] }; const live = all.filter(i => i.slug !== item.slug && !(kw.dun || {})[i.slug]); const bySlug = new Map(live.map(i => [i.slug, i])); const out = [];
   const add = i => { if (i && out.length < n && !out.some(o => o.slug === i.slug)) out.push(i); };
   const cur = (item.verwant || []).map(s => bySlug.get(s)).filter(Boolean);
   cur.slice(0, 5).forEach(add);
-  live.filter(i => BOOST.set.has(i.slug) && i.cat === item.cat).slice(0, 2).forEach(add);           // 1b. pagina's die in Google op positie 4-20 staan: extra interne links (Search Console-leerlus)                                                             // 1. door de redactie gekozen verwante keuzehulpen
+  live.filter(i => BOOST.set.has(i.slug) && i.cat === item.cat).slice(0, 2).forEach(add);
+  { const w = new Set(kw.wacht || []); live.filter(i => w.has(i.slug) && i.cat === item.cat).slice(0, 2).forEach(add); } // 1c. pagina's die Google nog niet heeft gelezen: extra links vanuit verwante keuzehulpen (kwaliteitsronde)           // 1b. pagina's die in Google op positie 4-20 staan: extra interne links (Search Console-leerlus)                                                             // 1. door de redactie gekozen verwante keuzehulpen
   live.filter(i => (i.verwant || []).indexOf(item.slug) >= 0).sort((a, b) => String(b.publishAt || '').localeCompare(String(a.publishAt || '')) || a.slug.localeCompare(b.slug)).slice(0, 2).forEach(add); // 2. nieuwste keuzehulpen die hiernaar verwijzen (zo krijgt een nieuwe pagina meteen links terug)
   cur.slice(5).forEach(add);
   const t = rtoks(item); live.map(i => { let sc = 0; rtoks(i).forEach(w => { if (t.has(w)) sc += 2; }); if (i.cat === item.cat) sc += 1; return { i, sc }; }).filter(x => x.sc >= 3).sort((a, b) => b.sc - a.sc || a.i.slug.localeCompare(b.i.slug)).slice(0, 4).forEach(x => add(x.i)); // 3. inhoudelijk verwant
@@ -434,7 +438,8 @@ async function page(item, res, req) {
   else if (!zone && !clickid && src !== 'mail' && src !== 'push') { const hk = herkomst(req, q); if (hk !== 'intern') hits.push(['c:hjdk6-kz-org-' + item.slug, 1], ['c:hjdk6-kz-org-src-' + hk, 1], ['c:hjdk6-kz-orgd-' + DAYK(), 1], ['c:hjdk6-kz-orgd-' + DAYK() + '-' + hk, 1]); }
   if (hits.length) { try { await kv.incrMany(hits); } catch (e) {} }
   const postback = clickid ? pbFor(src).replace('{clickid}', encodeURIComponent(clickid)) : '';
-  const rel = relatedFor(item, all, (SPEER.hubs || []).includes(item.slug) || (SPEER.speer || []).includes(item.slug) ? 12 : 8); const lk = linker(item, all); /* altijd 8 vaste interne links per pagina + links in de tekst */
+  const KW = await kwaliteit('kz'); const DUN = (KW.dun || {})[item.slug];
+  const rel = relatedFor(item, all, (SPEER.hubs || []).includes(item.slug) || (SPEER.speer || []).includes(item.slug) ? 12 : 8, KW); const lk = linker(item, all); /* altijd 8 vaste interne links per pagina + links in de tekst */
   const route0 = item.questions.map(() => 0);
   const [adv, aboV, clientId, pushV, pushM] = await Promise.all([advise(item, route0, tag), pickVariant('hjdk6-kz-abo', ABO.length, 'sub', 'imp'), googleClientId(), pickVariant('hjdk6-kz-push', PUSH.length, 'ok', 'imp'), pickVariant('hjdk6-kz-pushm', 3, 'ok', 'imp')]); // pushM: 0 = alleen knop, 1 = vragen bij eerste antwoord, 2 = vragen bij klik naar bol (lerend)
   // funnel-lab voor betaald verkeer (lerend, Thompson op c:hjdk6-kz-fun-v<i>-ok / -imp; ok = klik naar bol of aanmelding):
@@ -451,7 +456,7 @@ async function page(item, res, req) {
   const REKEN = { 'kinderfiets-maat-bepalen': () => kinderfietsBlok(bolLink), 'kinderfiets': () => kinderfietsBlok(bolLink), 'fietshelm-kind': () => helmBlok(bolLink, true), 'fietshelm-volwassenen': () => helmBlok(bolLink, false) };
   const rekenHtml = REKEN[item.slug] ? await Promise.race([REKEN[item.slug](), new Promise(r => setTimeout(() => r(''), 6000))]).catch(() => '') : '';
   const kort = item.kort ? `<div class="answer"><p class="kicker" style="margin:0 0 6px">In het kort</p><p>${firstBold(item.kort)}</p></div>` : '';
-  const related = `<div class="txt"><h2>Ook handig om te kiezen</h2><div class="grid" style="margin:8px 0 0">${rel.map(i => `<a class="card" href="/${esc(i.slug)}"><div class="cat">${esc(i.cat)}</div><h3>${esc(i.title)}</h3></a>`).join('')}</div><p style="margin:10px 0 0;font-size:14px">Meer in <a href="/keuzehulp/categorie/${esc(catSlug(item.cat))}">${esc(item.cat)}</a> · <a href="/keuzehulp">alle keuzehulpen</a></p></div>`;
+  const related = `<div class="txt"><h2>Ook handig om te kiezen</h2><div class="grid" style="margin:8px 0 0">${rel.map(i => `<a class="card" href="/${esc(i.slug)}"><div class="cat">${esc(i.cat)}</div><h3>${esc(i.title)}</h3></a>`).join('')}</div><p style="margin:10px 0 0;font-size:14px">Meer in <a href="/keuzehulp/categorie/${esc(catSlug(item.cat))}">${esc(item.cat)}</a> · <a href="/keuzehulp">alle keuzehulpen</a></p>${veelGezocht(item, all, KW)}</div>`;
   const ld = jsonld({ '@context': 'https://schema.org', '@graph': [
     { '@type': 'Article', headline: item.h1, description: item.intro, inLanguage: 'nl', datePublished: item.publishAt || UPDATED, dateModified: item.updatedAt || (item.publishAt && item.publishAt > UPDATED ? item.publishAt : UPDATED), author: { '@type': 'Organization', name: SITE.name, url: base }, publisher: { '@type': 'Organization', name: SITE.name, url: base }, mainEntityOfPage: url, about: { '@type': 'Thing', name: item.term || item.title }, isPartOf: { '@type': 'WebSite', name: SITE.name, url: base } },
     { '@type': 'WebPage', '@id': url, url, name: item.seoTitle || item.h1, inLanguage: 'nl', isPartOf: { '@type': 'WebSite', name: SITE.name, url: base }, relatedLink: rel.map(i => base + pathOf(req, '/keuzehulp/' + i.slug)) },
@@ -482,7 +487,8 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 try{var m=(location.hash||'').match(/a=([\\d-]+)/);if(m){var p=m[1].split('-');var ch=false;p.forEach(function(v,i){if(i<n){var b=document.querySelector('.q[data-q="'+i+'"] .opt[data-o="'+v+'"]');if(b){cur[i]=+v;ch=true;b.parentNode.querySelectorAll('.opt').forEach(function(x){x.classList.remove('on')});b.classList.add('on')}}});if(ch)load()}}catch(e){}
 hit('hjdk6-kz-'+S+'-page');})();</script>`;
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', clickid || src ? 'no-store' : 'public, max-age=600');
-  return res.status(200).send(shell(kzTitle(item), item.metaDesc || item.kort || item.intro, body + (await gateHtml(req, { slug: item.slug, term: item.term, clientId })), url, ld + (adv.products && adv.products[0] && adv.products[0].image ? '<meta property="og:image" content="' + esc(adv.products[0].image) + '">' : '') + '<meta property="og:url" content="' + esc(url) + '">'));
+  const html = shell(kzTitle(item), item.metaDesc || item.kort || item.intro, body + (await gateHtml(req, { slug: item.slug, term: item.term, clientId })), DUN && DUN.naar ? base + pathOf(req, '/keuzehulp/' + DUN.naar) : url, ld + (adv.products && adv.products[0] && adv.products[0].image ? '<meta property="og:image" content="' + esc(adv.products[0].image) + '">' : '') + '<meta property="og:url" content="' + esc(url) + '">');
+  return res.status(200).send(DUN && !DUN.naar ? html.replace('content="index,follow,max-snippet:-1,max-image-preview:large"', 'content="noindex,follow"') : html);
 }
 
 
@@ -939,7 +945,7 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
       if(html){const {handoverHtml}=await import('../lib/overdracht-page.js');return res.status(200).send(handoverHtml(text));}
       return res.status(200).send(text);
     }
-    if (op === 'sitemap') { const items = await allItems(); const base = baseOf(req); res.setHeader('content-type', 'application/xml'); res.setHeader('cache-control', 'public, max-age=3600'); const cats = [...new Set(items.map(i => i.cat))];
+    if (op === 'sitemap') { const KWs = await kwaliteit('kz'); const items = (await allItems()).filter(i => !(KWs.dun || {})[i.slug]); const base = baseOf(req); res.setHeader('content-type', 'application/xml'); res.setHeader('cache-control', 'public, max-age=3600'); const cats = [...new Set(items.map(i => i.cat))];
       const rows = [['/keuzehulp', null], ['/keuzehulp/deals', null], ['/keuzehulp/over', UPDATED], ['/keuzehulp/' + KERST.slug, null], ['/keuzehulp/fietsmaat', '2026-10-17']].concat(cats.map(c => ['/keuzehulp/categorie/' + catSlug(c), items.filter(i => i.cat === c).map(i => i.updatedAt || (i.publishAt && i.publishAt > UPDATED ? i.publishAt : UPDATED)).sort().pop() || UPDATED])).concat(items.map(i => ['/keuzehulp/' + i.slug, i.updatedAt || (i.publishAt && i.publishAt > UPDATED ? i.publishAt : UPDATED)]));
       const cadeau = /keuzehulp\.best/.test(base) ? ['kleine-sinterklaascadeaus', 'kerstcadeau-voor-haar', 'book-nook-kiezen'].map(g => '<url><loc>https://keuzehulp.best/cadeau/' + g + '</loc><lastmod>' + UPDATED + '</lastmod></url>').join('') : '';
       return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + rows.map(([p, d]) => '<url><loc>' + esc(base + pathOf(req, p)) + '</loc>' + (d ? '<lastmod>' + esc(d) + '</lastmod>' : '') + '</url>').join('') + cadeau + '</urlset>'); }

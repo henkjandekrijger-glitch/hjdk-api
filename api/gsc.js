@@ -5,7 +5,8 @@
 import { kv } from '../lib/db.js';
 import { queryMatchesGuide } from '../lib/organic-policy.js';
 import { nieuweProef } from '../lib/zicht.js';
-import { SITES, SITEMAPS, claims, sites, propFor, rows, totals, analyse, submitSitemap, sitemapInfo, ruis, inspect } from '../lib/gsc.js';
+import { SITES, SITEMAPS, claims, sites, propFor, rows, totals, pageRows, analyse, submitSitemap, sitemapInfo, ruis, inspect } from '../lib/gsc.js';
+import { kwaliteitRonde } from '../lib/kwaliteit.js';
 import { MARKETS, items as wtbItems, K as WK, claude, json, indexnow as wtbIndexnow } from '../lib/wtb.js';
 import seed from '../data/kz.json' with { type: 'json' };
 import { faqZonderDubbel } from '../lib/faq-dubbel.js';
@@ -127,7 +128,8 @@ async function ronde(oidc) {
       const urls = [...new Set([...fixes.filter(f => f.nieuw), ...faqs.filter(f => f.vragen)].map(f => 'https://' + host + '/' + f.slug))];
       if (urls.length) { if (m) await wtbIndexnow(m, urls); else await fetch('https://api.indexnow.org/indexnow', { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify({ host, key: KZ_INDEXNOW, keyLocation: 'https://' + host + '/' + KZ_INDEXNOW + '.txt', urlList: urls }) }).catch(() => {}); }
       const res = { host, prop, dag: DAY(), periode: google && google.periode, totaalBasis: google ? 'Google-site-totaal zonder zoekvraagfilter (inclusief anonieme zoekvragen)' : 'Google-totaal niet beschikbaar; zoekvraagregels apart, niet als volledig totaal gebruiken', totaal: google ? { imp: google.imp, clicks: google.clicks, ctr: google.ctr, pos: google.pos } : null, zoekvraagTotaal: a.totaal, open: a.open, laagCtr: a.laagCtr.map(p => ({ slug: p.slug, imp: p.imp, clicks: p.clicks, pos: p.pos, topQ: p.topQ })), titelsVernieuwd: fixes, faqErbij: faqs, subvragen: a.subvragen.slice(0, 30), kansen: a.kansen.slice(0, 20) };
-      await kv.set('hjdk:gsc:' + id, res); out.sites[id] = { host, totaal: res.totaal, open: a.open.length, laagCtr: a.laagCtr.length, titelsVernieuwd: fixes.length, faqErbij: faqs.reduce((t, f) => t + ((f.vragen || []).length), 0) };
+      try { res.kwaliteit = await kwaliteitRonde(id, host, its, await pageRows(prop, 90, oidc), protectedUrls); } catch (e) { res.kwaliteit = { fout: String(e.message).slice(0, 120) }; }
+      await kv.set('hjdk:gsc:' + id, res); out.sites[id] = { host, totaal: res.totaal, open: a.open.length, laagCtr: a.laagCtr.length, titelsVernieuwd: fixes.length, kwaliteit: res.kwaliteit, faqErbij: faqs.reduce((t, f) => t + ((f.vragen || []).length), 0) };
     } catch (e) { out.sites[id] = { host, fout: String(e.message).slice(0, 200) }; }
   }
   await log({ wat: 'ronde', sites: out.sites, sitemaps: out.sitemaps, speerpunt: out.speerpunt }); return out;
@@ -158,6 +160,14 @@ export default async function handler(req, res) {
       const { merchantStand } = await import('../lib/merchant.js'); const { token } = await import('../lib/gsc.js'); return res.status(200).json(await merchantStand(await token(oidc, 'https://www.googleapis.com/auth/content'), url.searchParams.get('account') || '5875752564', { dev: url.searchParams.get('dev') || '' }));
     }
     if (op === 'whoami') { const c = claims(oidc); let google = null; try { const l = await sites(oidc); google = { ok: true, eigendommen: l.length, sites: Object.fromEntries(Object.entries(SITES).map(([k, h]) => [h, !!propFor(l, h)])) }; } catch (e) { google = { ok: false, fout: String(e.message).slice(0, 200) }; } return res.status(200).json({ ok: !!c, iss: c && c.iss, aud: c && c.aud, sub: c && c.sub, google }); }
+    if (op === 'kwaliteit') { // kwaliteitsronde los draaien (gratis: Search Console-paginatotalen + bewaarde indexstatus), alleen via de beschermde host of token; lezen: op=kwaliteit&lees=1
+      if (url.searchParams.get('lees') === '1') { const v = await kv.mget('hjdk:kw:kz', 'hjdk:kw:us', 'hjdk:kw:de'); return res.status(200).json({ ok: true, kz: v[0], us: v[1], de: v[2] }); }
+      if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken && !isCron) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const l = await sites(oidc); const out = {};
+      for (const [id, host] of Object.entries(SITES)) { const prop = propFor(l, host); if (!prop) { out[id] = { fout: 'geen toegang' }; continue; }
+        try { const m = id === 'kz' ? null : MARKETS[id]; const its = m ? await wtbItems(m) : await kzItems(); const running = ((await kv.get('zicht:exp:' + id).catch(() => null)) || []).filter(p => p.status === 'loopt'); const prot = new Set(running.flatMap(p => [...(p.urls || []), ...(p.controle || [])]));
+          out[id] = await kwaliteitRonde(id, host, its, await pageRows(prop, 90, oidc), prot); } catch (e) { out[id] = { fout: String(e.message).slice(0, 160) }; } }
+      return res.status(200).json({ ok: true, sites: out }); }
     if (op === 'totalen') {
       const lijst = await sites(oidc); const out = {};
       const syncTotal = async (id, total) => { const key = 'hjdk:gsc:' + id; const current = await kv.get(key).catch(() => null); if (current && (!current.periode || current.periode.endDate <= total.periode.endDate)) await kv.set(key, { ...current, zoekvraagTotaal: current.zoekvraagTotaal || (!current.periode ? current.totaal : null), periode: total.periode, totaal: { imp: total.imp, clicks: total.clicks, ctr: total.ctr, pos: total.pos }, totaalBasis: 'Google-site-totaal zonder zoekvraagfilter (inclusief anonieme zoekvragen)', totaalGecontroleerdOp: total.at }); };

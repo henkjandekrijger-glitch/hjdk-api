@@ -10,6 +10,7 @@ import { organicStatus } from '../lib/organic.js';
 import { contentDate } from '../lib/organic-policy.js';
 import { lookNieuw } from '../lib/look.js';
 import { colourTag, colourReport, measureTag } from '../lib/kleur.js';
+import { kwaliteit } from '../lib/kwaliteit.js';
 import { MARKETS, marketFor, K, DAY, esc, items, amzSearch, amzReady, searchLink, INDEXNOW_KEY } from '../lib/wtb.js';
 
 const BOTS = [['googlebot', /Googlebot|Google-InspectionTool|GoogleOther/i], ['bingbot', /bingbot/i], ['oai-searchbot', /OAI-SearchBot/i], ['chatgpt-user', /ChatGPT-User/i], ['gptbot', /GPTBot/i], ['claude', /Claude-User|Claude-SearchBot|ClaudeBot|anthropic-ai/i], ['perplexity', /Perplexity/i], ['applebot', /Applebot/i], ['meta', /meta-external|facebookexternalhit/i], ['amazonbot', /Amazonbot/i], ['duckduck', /DuckDuck/i]];
@@ -63,7 +64,12 @@ async function page(m, it, all, req) {
   const s = m.s; const base = 'https://' + m.host; const a0 = guideAnswers(it, new URL(req.url,'http://x').searchParams.get('answers'));
   const adv = await advice(m, it, a0);
   const boost = new Set((await kv.get('hjdk:gsc:' + m.id + ':boost').catch(() => null)) || []); const sc = x => (x.cat === it.cat ? 2 : 0) + (boost.has(x.slug) ? 1 : 0) + ((it.verwant || []).includes(x.slug) || (x.verwant || []).includes(it.slug) ? 20 : 0);
-  const rel = all.filter(x => x.slug !== it.slug).sort((x, y) => sc(y) - sc(x)).slice(0, 8);
+  const KW = await kwaliteit(m.id); const DUN = (KW.dun || {})[it.slug]; const wacht = new Set(KW.wacht || []);
+  // kwaliteitsronde: geen links naar uitgesloten pagina's, extra links naar pagina's die Google nog niet las, "veel gezocht" naar de sterkste
+  const sc2 = x => sc(x) + (wacht.has(x.slug) && x.cat === it.cat ? 1.5 : 0);
+  const rel = all.filter(x => x.slug !== it.slug && !(KW.dun || {})[x.slug]).sort((x, y) => sc2(y) - sc2(x)).slice(0, 8);
+  const bySl = new Map(all.map(x => [x.slug, x])); const sterk = (KW.sterk || []).filter(x => x !== it.slug && bySl.has(x) && !rel.some(r => r.slug === x)).slice(0, 6).map(x => bySl.get(x));
+  const veel = sterk.length ? '<p style="margin:14px 0 0;font-size:15px">' + (m.id === 'us' ? 'Popular' : 'Oft gesucht') + ': ' + sterk.map(x => '<a href="/' + esc(x.slug) + '">' + esc(x.title) + '</a>').join(' · ') + '</p>' : '';
   const qs = (it.questions || []).map((q, qi) => `<div class="q" data-q="${qi}" role="group" aria-labelledby="question-${qi}"><h2 id="question-${qi}">${qi + 1}. ${esc(q.q)}</h2><div class="opts">${(q.options || []).map((o, oi) => `<button class="opt${a0[qi] === oi ? ' on' : ''}" type="button" data-o="${oi}" aria-pressed="${a0[qi] === oi}">${esc(o.label)}</button>`).join('')}</div></div>`).join('');
   const upd = contentDate(it);
   const ld = { '@context': 'https://schema.org', '@graph': [
@@ -80,7 +86,7 @@ ${(it.aiMiss || []).length ? `<div class="box ai"><h2>${esc(s.aimiss)}</h2><ul>$
 <div class="box"><h2>${esc(s.guide)}</h2>${String(it.guide || '').split(/\n+/).filter(Boolean).map(p => '<p>' + esc(p) + '</p>').join('')}</div>
 ${(it.mistakes || []).length ? `<div class="box"><h2>${esc(s.mistakes)}</h2><ul>${it.mistakes.map(x => '<li>' + esc(x) + '</li>').join('')}</ul></div>` : ''}
 ${(it.faq || []).length ? `<h2>${esc(s.faq)}</h2>${it.faq.map(f => `<details class="faq"><summary>${esc(f.q)}</summary><div class="a"><p>${esc(f.a)}</p></div></details>`).join('')}` : ''}
-${rel.length ? `<h2>${esc(s.related)}</h2><ul class="cards">${rel.map(r => `<li><a href="/${esc(r.slug)}">${esc(r.title)}</a><p>${esc(String(r.kort || '').slice(0, 140))}</p></li>`).join('')}</ul>` : ''}
+${rel.length ? `<h2>${esc(s.related)}</h2><ul class="cards">${rel.map(r => `<li><a href="/${esc(r.slug)}">${esc(r.title)}</a><p>${esc(String(r.kort || '').slice(0, 140))}</p></li>`).join('')}</ul>` : ''}${veel}
 <p class="disc">${esc(s.disc)}</p>
 <script>(function(){var U=${JSON.stringify(m.id === 'de' ? { upd: 'Empfehlung wird aktualisiert…', ok: 'Empfehlung aktualisiert.', err: 'Aktualisieren hat nicht geklappt. Lade die Seite neu, um deine Antworten zu nutzen.', old: '<p>Dein vorheriges Ergebnis ist veraltet. Bitte lade die Seite neu.</p>', copied: 'Link mit deinen Antworten kopiert.', copy: 'Kopiere die Adresse aus deinem Browser, um das Ergebnis zu teilen.' } : { upd: 'Updating your recommendation…', ok: 'Recommendation updated.', err: 'Could not update. Reload this page to use your selected answers.', old: '<p>Your previous result is out of date. Please reload to get a recommendation for your current answers.</p>', copied: 'Link copied with your answers.', copy: 'Copy the address from your browser to share this result.' })},S=${JSON.stringify(it.slug)},M=${JSON.stringify(m.id)},cur=${JSON.stringify(a0)},t=null,st=0,seq=0;
 var h=function(k){if(window.__h)window.__h(k)},status=document.getElementById('advice-status');
@@ -88,7 +94,8 @@ function load(){var id=++seq;status.textContent=U.upd;document.getElementById('a
 document.querySelectorAll('.q').forEach(function(q){var qi=+q.getAttribute('data-q');q.querySelectorAll('.opt').forEach(function(b){b.addEventListener('click',function(){seq++;q.querySelectorAll('.opt').forEach(function(x){x.classList.remove('on');x.setAttribute('aria-pressed','false')});b.classList.add('on');b.setAttribute('aria-pressed','true');cur[qi]=+b.getAttribute('data-o');var u=new URL(location.href);u.searchParams.set('answers',cur.join('-'));history.replaceState(null,'',u);if(!st){st=1;h('wtb-'+M+'-'+S+'-start');h('wtb-'+M+'-start')}clearTimeout(t);status.textContent=U.upd;document.getElementById('adv').setAttribute('aria-busy','true');t=setTimeout(load,200)})})});
 document.getElementById('share-guide').addEventListener('click',function(){var u=new URL('https://${m.host}/'+S);u.searchParams.set('answers',cur.join('-'));var out=document.getElementById('share-status');if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(u.href).then(function(){out.textContent=U.copied},function(){out.textContent=U.copy});else out.textContent=U.copy;h('wtb-'+M+'-'+S+'-share')});
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-amz]');if(a){h('wtb-'+M+'-'+S+'-clk');h('wtb-'+M+'-clk');h('wtb-'+M+'-clkd-'+new Date().toISOString().slice(0,10))}},true);})();</script>`;
-  return shell(m, { title: it.seoTitle || it.h1, desc: it.metaDesc || it.intro, path: '/' + it.slug, og: 'article', image: adv.products[0] && adv.products[0].image, ld, body });
+  const html = shell(m, { title: it.seoTitle || it.h1, desc: it.metaDesc || it.intro, path: '/' + (DUN && DUN.naar ? DUN.naar : it.slug), og: 'article', image: adv.products[0] && adv.products[0].image, ld, body });
+  return DUN && !DUN.naar ? html.replace('content="index,follow,max-snippet:-1,max-image-preview:large"', 'content="noindex,follow"') : html;
 }
 async function home(m, all) {
   const s = m.s; const us = m.id === 'us'; const cats = {}; all.forEach(i => { (cats[i.cat] = cats[i.cat] || []).push(i); });
@@ -133,8 +140,8 @@ export default async function handler(req, res) {
   if (GSC_FILES.includes(path.slice(1))) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send('google-site-verification: ' + path.slice(1)); } // eigendomsbewijs Search Console
   if (op === 'robots') { res.setHeader('content-type', 'text/plain'); return res.status(200).send(`# Buying guides may be read and cited by search engines and AI assistants. Summary: https://${m.host}/llms.txt\nUser-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: https://${m.host}/sitemap.xml\n${(m.host.startsWith('kaufberater') ? ['de'] : ['en', 'es', 'pt']).map(l => `Sitemap: https://${m.host}/api/keuze-tools?tool=cur&op=gidssitemap&m=${l}\n`).join('')}`); }
   if (op === 'ixkey') { res.setHeader('content-type', 'text/plain'); return res.status(200).send(INDEXNOW_KEY); }
-  const all = await items(m);
-  if (op === 'sitemap') { res.setHeader('content-type', 'application/xml; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://${m.host}/</loc></url><url><loc>https://${m.host}/about</loc></url>${all.map(i => `<url><loc>https://${m.host}/${i.slug}</loc>${contentDate(i) ? `<lastmod>${esc(contentDate(i))}</lastmod>` : ""}</url>`).join('')}</urlset>`); }
+  let all = await items(m);
+  if (op === 'sitemap') { const KWs = await kwaliteit(m.id); all = all.filter(i => !(KWs.dun || {})[i.slug]); res.setHeader('content-type', 'application/xml; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://${m.host}/</loc></url><url><loc>https://${m.host}/about</loc></url>${all.map(i => `<url><loc>https://${m.host}/${i.slug}</loc>${contentDate(i) ? `<lastmod>${esc(contentDate(i))}</lastmod>` : ""}</url>`).join('')}</urlset>`); }
   if (op === 'llms' || op === 'llmsfull') {
     res.setHeader('content-type', 'text/plain; charset=utf-8'); const full = op === 'llmsfull';
     const head = m.id === 'us' ? `# ${m.name}\n\n> Buying guides for the US market, written for products on sale now (2026) and linked to live Amazon results. Each guide asks 3 questions and gives one pick. Guides list what AI answers often get wrong (outdated models, old standards).\n\n` : `# ${m.name}\n\n> Kaufberater für Deutschland, geschrieben für Produkte, die heute verkauft werden (2026), verlinkt mit aktuellen Amazon-Ergebnissen. Jeder Ratgeber stellt 3 Fragen und gibt eine Empfehlung. Ratgeber nennen, was KI-Antworten oft falsch machen (veraltete Modelle, alte Standards).\n\n`;
