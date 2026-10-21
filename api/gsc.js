@@ -8,6 +8,7 @@ import { nieuweProef } from '../lib/zicht.js';
 import { SITES, SITEMAPS, claims, sites, propFor, rows, totals, analyse, submitSitemap, sitemapInfo, ruis, inspect } from '../lib/gsc.js';
 import { MARKETS, items as wtbItems, K as WK, claude, json, indexnow as wtbIndexnow } from '../lib/wtb.js';
 import seed from '../data/kz.json' with { type: 'json' };
+import { faqZonderDubbel } from '../lib/faq-dubbel.js';
 
 const KZ_INDEXNOW = '466971cbc1bbe43e6bb64a94465e4470';
 const DAY = () => new Date().toISOString().slice(0, 10);
@@ -44,7 +45,9 @@ async function faqErbij(lang, it, vragen, oidc) {
   const sys = `You add FAQ entries to an existing buying-guide page. Language: ${lang === 'nl' ? 'Dutch (je-vorm)' : lang === 'de' ? 'German (du-Form)' : 'US English'}. People found this page on Google with the search queries given, but the page does not answer them yet. For each query that a buyer of this product type genuinely asks, write ONE FAQ entry: "q" = the question as a buyer would phrase it (natural, not keyword-stuffed), "a" = a direct, honest answer of 2-4 sentences that starts with the answer itself, gives typical ranges or rules of thumb where useful, and ends by tying back to choosing the right product. Never invent specific product specs, prices, test results or model numbers; if a query is about one specific model or needs data you do not have, answer generally (what to check) or skip it. Skip queries that are off-topic, not about buying/using this product, or would duplicate an existing FAQ. Reply ONLY JSON {"faq":[{"q":"","a":"","query":"the original search query"}]} with at most 2 entries.`;
   const user = JSON.stringify({ pagina: it.title || it.h1, kort: it.kort || it.intro, bestaandeFaq: (it.faq || []).map(f => f.q), zoekvragen: vragen.map(v => v.q) });
   const r = await claude(sys, user, { fast: true, max: 900, oidc, fn: 'gsc-faq', cacheTtl: 14 * 86400, check: json }); const j = json(r.txt);
-  return (j.faq || []).filter(f => f && String(f.q || '').length > 8 && String(f.a || '').length > 60).slice(0, 2).map(f => ({ q: String(f.q).trim().slice(0, 160), a: String(f.a).trim().slice(0, 700), bron: 'search-console', query: String(f.query || '').slice(0, 120), dag: DAY() }));
+  const nieuw = (j.faq || []).filter(f => f && String(f.q || '').length > 8 && String(f.a || '').length > 60).map(f => ({ q: String(f.q).trim().slice(0, 160), a: String(f.a).trim().slice(0, 700), bron: 'search-console', query: String(f.query || '').slice(0, 120), dag: DAY() }));
+  const bestaand = (it.faq || []).map(f => Array.isArray(f) ? { q: f[0] } : { q: f.q }); // geen vraag erbij die al (bijna) op de pagina staat
+  return faqZonderDubbel([...bestaand, ...nieuw]).slice(bestaand.length).slice(0, 2);
 }
 async function saveFaq(m, it, nieuw) {
   if (m) { const key = WK.item(m.id, it.slug); const cur = (await kv.get(key)) || it; await kv.set(key, Object.assign(cur, { faq: [...(cur.faq || []), ...nieuw], updatedAt: DAY() })); return; }

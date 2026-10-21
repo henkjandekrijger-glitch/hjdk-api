@@ -594,5 +594,26 @@
   "sterkte": 3,
   "moeite": 1,
   "risico": "Geen; vaste volgorde, geen willekeurige links per bezoek."
+ },
+ {
+  "id": "faq-zonder-herhaling",
+  "les": "Automatisch toegevoegde FAQ mag geen vraag herhalen die al op de pagina staat. Bijna gelijke vragen met elkaar tegensprekende getallen ogen als AI-opvulling en verdunnen de pagina; een andere leeftijd, maat of budget is wel een eigen vraag.",
+  "kanaal": "google",
+  "bewijs": "21 okt 2026: /kinderfiets (positie 6 tot 17 op maatvragen, speerpunt) had 11 FAQ, waarvan 4 bijna gelijk over maat bepalen en 2 over 8 jaar met 52-63 cm tegen 55-65 cm binnenbeen; een antwoord bevatte het Engelse woord inseam. Alle kwamen uit de dagelijkse Search Console-FAQ-ronde.",
+  "bron": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+  "sterkte": 2,
+  "moeite": 1,
+  "risico": "Geen; handgeschreven vragen blijven altijd staan.",
+  "meten": "gsc: vertoningen en positie van de pagina's waar dubbele FAQ wegviel"
+ },
+ {
+  "id": "meetpanel-echte-vragen",
+  "les": "De AI-meting is alleen iets waard met vragen die mensen echt stellen. Sjabloonvragen uit slugs ('welche acai bowl zubereiten soll ich kaufen') meten niets; neem de paginatitels die al als koopvraag geschreven zijn, of Search Console-zoekvragen.",
+  "kanaal": "llm",
+  "bewijs": "21 okt 2026: 5 van 8 DE-vragen en 2 van 8 US-vragen in het vaste panel waren onzin (welche domain finden soll ich kaufen, which apps to sell clothes online should I buy). Het panel stond 28 dagen vast, dus elke 0% op DE en US zei niets.",
+  "bron": "eigen meting /api/zicht?op=stand&site=de",
+  "sterkte": 3,
+  "moeite": 1,
+  "risico": "Nieuw panel betekent nieuwe nulmeting; oude cijfers niet vergelijken."
  }
 ]
