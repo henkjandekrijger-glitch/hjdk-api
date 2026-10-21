@@ -162,6 +162,7 @@
     }
   ],
   "rewrites": [
+    { "source": "/d/:c", "destination": "/api/keuze-updates?op=d&c=:c" },
     {
       "source": "/curacao",
       "has": [
