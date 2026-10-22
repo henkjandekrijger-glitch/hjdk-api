@@ -11,6 +11,7 @@ import { contentDate } from '../lib/organic-policy.js';
 import { lookNieuw } from '../lib/look.js';
 import { colourTag, colourReport, measureTag } from '../lib/kleur.js';
 import { kwaliteit } from '../lib/kwaliteit.js';
+import { faqZonderDubbel } from '../lib/faq-dubbel.js';
 import { MARKETS, marketFor, K, DAY, esc, items, amzSearch, amzReady, searchLink, INDEXNOW_KEY } from '../lib/wtb.js';
 
 const BOTS = [['googlebot', /Googlebot|Google-InspectionTool|GoogleOther/i], ['bingbot', /bingbot/i], ['oai-searchbot', /OAI-SearchBot/i], ['chatgpt-user', /ChatGPT-User/i], ['gptbot', /GPTBot/i], ['claude', /Claude-User|Claude-SearchBot|ClaudeBot|anthropic-ai/i], ['perplexity', /Perplexity/i], ['applebot', /Applebot/i], ['meta', /meta-external|facebookexternalhit/i], ['amazonbot', /Amazonbot/i], ['duckduck', /DuckDuck/i]];
@@ -75,7 +76,7 @@ async function page(m, it, all, req) {
   const ld = { '@context': 'https://schema.org', '@graph': [
     { '@type': 'Article', headline: it.h1, description: it.metaDesc, inLanguage: m.locale, ...(it.publishAt ? { datePublished: it.publishAt } : {}), ...(upd ? { dateModified: upd } : {}), author: { '@type': 'Organization', name: m.name, url: base }, publisher: { '@type': 'Organization', name: m.name, url: base }, mainEntityOfPage: base + '/' + it.slug, about: { '@type': 'Thing', name: it.term } },
     { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: m.name, item: base + '/' }, { '@type': 'ListItem', position: 2, name: it.title, item: base + '/' + it.slug }] },
-    ...((it.faq || []).length ? [{ '@type': 'FAQPage', mainEntity: it.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
+    ...((it.faq || []).length ? [{ '@type': 'FAQPage', mainEntity: faqZonderDubbel(it.faq).map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
     ...(adv.products.length ? [{ '@type': 'ItemList', name: it.title, itemListElement: adv.products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title.slice(0, 110), url: p.url })) }] : []) ] };
   const body = `<p class="crumbs"><a href="/">${esc(m.name)}</a> › ${esc(it.cat)}</p><p class="kicker">${esc(it.cat)}</p><h1>${esc(it.h1)}</h1><p class="standfirst">${esc(it.intro)}</p>
 <div class="answer"><p>${firstBold(it.kort)}</p></div><p class="meta">${upd ? `${esc(s.updated)}&nbsp;<time datetime="${esc(upd)}">${esc(upd)}</time> · ` : ""}${esc(s.by)} ${m.id === 'us' ? 'the editors' : 'der Redaktion'}</p>
@@ -85,7 +86,7 @@ ${guideSections(it,esc)}
 ${(it.aiMiss || []).length ? `<div class="box ai"><h2>${esc(s.aimiss)}</h2><ul>${it.aiMiss.map(x => '<li>' + esc(x) + '</li>').join('')}</ul></div>` : ''}
 <div class="box"><h2>${esc(s.guide)}</h2>${String(it.guide || '').split(/\n+/).filter(Boolean).map(p => '<p>' + esc(p) + '</p>').join('')}</div>
 ${(it.mistakes || []).length ? `<div class="box"><h2>${esc(s.mistakes)}</h2><ul>${it.mistakes.map(x => '<li>' + esc(x) + '</li>').join('')}</ul></div>` : ''}
-${(it.faq || []).length ? `<h2>${esc(s.faq)}</h2>${it.faq.map(f => `<details class="faq"><summary>${esc(f.q)}</summary><div class="a"><p>${esc(f.a)}</p></div></details>`).join('')}` : ''}
+${(it.faq || []).length ? `<h2>${esc(s.faq)}</h2>${faqZonderDubbel(it.faq).map(f => `<details class="faq"><summary>${esc(f.q)}</summary><div class="a"><p>${esc(f.a)}</p></div></details>`).join('')}` : ''}
 ${rel.length ? `<h2>${esc(s.related)}</h2><ul class="cards">${rel.map(r => `<li><a href="/${esc(r.slug)}">${esc(r.title)}</a><p>${esc(String(r.kort || '').slice(0, 140))}</p></li>`).join('')}</ul>` : ''}${veel}
 <p class="disc">${esc(s.disc)}</p>
 <script>(function(){var U=${JSON.stringify(m.id === 'de' ? { upd: 'Empfehlung wird aktualisiert…', ok: 'Empfehlung aktualisiert.', err: 'Aktualisieren hat nicht geklappt. Lade die Seite neu, um deine Antworten zu nutzen.', old: '<p>Dein vorheriges Ergebnis ist veraltet. Bitte lade die Seite neu.</p>', copied: 'Link mit deinen Antworten kopiert.', copy: 'Kopiere die Adresse aus deinem Browser, um das Ergebnis zu teilen.' } : { upd: 'Updating your recommendation…', ok: 'Recommendation updated.', err: 'Could not update. Reload this page to use your selected answers.', old: '<p>Your previous result is out of date. Please reload to get a recommendation for your current answers.</p>', copied: 'Link copied with your answers.', copy: 'Copy the address from your browser to share this result.' })},S=${JSON.stringify(it.slug)},M=${JSON.stringify(m.id)},cur=${JSON.stringify(a0)},t=null,st=0,seq=0;
