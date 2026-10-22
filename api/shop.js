@@ -38,6 +38,7 @@ import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdr
 import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 import { demandRadar } from '../lib/demandradar.js';
+import { shopRss } from '../lib/shoprss.js';
 const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
@@ -768,6 +769,10 @@ export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x'); const op = (url.searchParams.get('op') || 'status').toLowerCase();
   OIDC = String(req.headers['x-vercel-oidc-token'] || '');
   try {
+    if (op === 'rss') return await shopRss(req, res, LAND() + '/api/shop/rss', async () => {
+      const cat = await catalog(true);
+      return (cat.items || []).map(i => ({ id: i.id, title: i.t, launched_at: i.l, in_stock: i.vr, photos: [{ src: i.img }], seller_name: 'Yoors Shop' }));
+    });
     if (op === 'land') return await land(req, res, url);
     if (op === 'uit') return await uitgang(req, res, url);
     if (op === 'b') return await baken(req, res);
