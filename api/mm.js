@@ -168,7 +168,7 @@ export default async function handler(req, res) {
       const lok = q('lok') === '' || q('lok') == null ? null : Number(q('lok')), sec = Number(q('s')) || 0, act = Number(q('a')) || 0;
       const mens = sec >= c.minSeconden && act >= c.minActies && (lok == null || !Number.isFinite(lok) || lok >= c.minLokaal);
       const qid = /^[0-9a-f]{16}$/.test(String(q('q') || '')) ? String(q('q')) : '';
-      const r = await rtBeslis(kv, { bron: 'pagina', site: String(q('site') || '').slice(0, 40), land: srv.land, dc: d.dc === true, bot: !!(sc.vlag && sc.vlag.hl), gpc: req.headers['sec-gpc'] === '1', uit: leesCookie(req, 'mmrt') === 'uit', mens, id: qid, seg: String(q('seg') || '').slice(0, 10) }).catch(() => ({ px: [] }));
+      const r = await rtBeslis(kv, { bron: 'pagina', site: String(q('site') || '').slice(0, 40), land: srv.land, dc: d.dc === true, bot: !!(sc.vlag && sc.vlag.hl), gpc: req.headers['sec-gpc'] === '1', uit: leesCookie(req, 'mmrt') === 'uit', mens, id: qid, seg: String(q('seg') || '').slice(0, 10), toestemming: q('tm') === '1' }).catch(() => ({ px: [] }));
       return res.status(200).json({ px: r.px || [] });
     }
     // afmelden voor het Clickmind-publiek (privacypagina): cookie mmrt=uit op dit domein, de pagina zet ook localStorage cmRtUit
@@ -525,14 +525,15 @@ if(c&&/(^|\.)yoo\.rs$/.test(location.hostname)){W.mmUitkomst('geladen');var zt=0
 var ss=function(k,v){try{if(v===undefined)return sessionStorage.getItem(k)||'';sessionStorage.setItem(k,v)}catch(e){return ''}};
 if(!u&&!ss('mmc_s')){W.mmUitkomst('terug')}ss('mmc_s','1');
 var np=Number(ss('mmnp'))+1;ss('mmnp',String(np));if(np>=2)W.mmUitkomst('p2');if(np>=4)W.mmUitkomst('p4');
-var pa=location.pathname.toLowerCase();if(/cart|winkelwagen|winkelmand|basket/.test(pa))W.mmUitkomst('wpag');if(/checkout|afreken|kassa|betal/.test(pa))W.mmUitkomst('kpag');
+var zs=function(v){try{var o=sessionStorage.getItem('cmSeg');if(o!=='heet')sessionStorage.setItem('cmSeg',v)}catch(e){}};
+var pa=location.pathname.toLowerCase();if(/cart|winkelwagen|winkelmand|basket/.test(pa)){W.mmUitkomst('wpag');zs('warm')}if(/checkout|afreken|kassa|betal/.test(pa)){W.mmUitkomst('kpag');zs('heet')}
 var acc=Number(ss('mmtz'))||0,vt=D.visibilityState==='visible'?Date.now():0,TT=[[5,'t5'],[15,'t15'],[30,'t30'],[60,'t60'],[180,'t180']],nu=function(){return acc+(vt?Date.now()-vt:0)};
 var tk=function(){var n=nu();TT.forEach(function(x){if(n>=x[0]*1e3)W.mmUitkomst(x[1])});ss('mmtz',String(n));if(n>181e3)clearInterval(ti)},ti=setInterval(tk,1000);
 D.addEventListener('visibilitychange',function(){if(D.visibilityState==='visible'){if(!vt)vt=Date.now()}else{if(vt){acc+=Date.now()-vt;vt=0}ss('mmtz',String(acc))}});
 W.addEventListener('pagehide',function(){ss('mmtz',String(nu()))});
 var sc=function(){var h=D.documentElement,m=h.scrollHeight-innerHeight;if(m<50)return;var p=(W.scrollY||h.scrollTop)/m;if(p>=.25)W.mmUitkomst('s25');if(p>=.5)W.mmUitkomst('s50');if(p>=.9)W.mmUitkomst('s90')};W.addEventListener('scroll',sc,{passive:true});
 D.addEventListener('click',function(e){var g=e.target&&e.target.closest&&e.target.closest('img,picture,[class*=gal-],[class*=gallery],[class*=galerij],[class*=swiper],[class*=slide],[class*=lb-]');if(g&&!(g.closest&&g.closest('#bundle-card,[class*=ybun]')))W.mmUitkomst('fklik');var a=e.target&&e.target.closest&&e.target.closest('a,button,[role=button],input[type=submit],input[type=button]');if(!a)return;var t=((a.innerText||a.value||'')+' '+(a.getAttribute('aria-label')||'')+' '+String(a.className||'')+' '+(a.id||'')+' '+(a.getAttribute('name')||'')+' '+(a.getAttribute('href')||'')).toLowerCase();
-if(/btn-buy|buy-btn|sticky-buy|bundle-go|winkelwagen|winkelmand|in (de )?mand|add.?to.?cart|addtocart|bestel|kopen|koop nu/.test(t))W.mmUitkomst('wklik');if(/afreken|checkout|kassa|betalen/.test(t))W.mmUitkomst('kklik');if(/bundel|bundle|ybun/.test(t))W.mmUitkomst('bklik');
+if(/btn-buy|buy-btn|sticky-buy|bundle-go|winkelwagen|winkelmand|in (de )?mand|add.?to.?cart|addtocart|bestel|kopen|koop nu/.test(t)){W.mmUitkomst('wklik');zs('warm')}if(/afreken|checkout|kassa|betalen/.test(t))W.mmUitkomst('kklik');if(/bundel|bundle|ybun/.test(t))W.mmUitkomst('bklik');
 if(/bewaren|gal-save|save-btn|wishlist|favoriet/.test(t))W.mmUitkomst('bewaar');if(/vergelijk|compare|ycmp/.test(t))W.mmUitkomst('vergelijk');if(/share|delen/.test(t))W.mmUitkomst('deel');if(/ycp|chat|medewerker|vraag/.test(t))W.mmUitkomst('chat');if(/bb-var|variant|data-qty|bb-qty/.test(t+' '+(a.getAttribute('data-qty')!=null?'data-qty':'')))W.mmUitkomst('keuze')},true);
 if(W.IntersectionObserver){var bo=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){W.mmUitkomst('bundel');bo.disconnect()}})},{threshold:.3}),zb=function(){var el=D.getElementById('bundle-card')||D.querySelector('[data-cm=bundel],[data-bundel],#bundel,#bundle,div[class*=bundel],div[class*=bundle]');if(el)bo.observe(el);return el},nb=0;if(!zb()){var ib=setInterval(function(){if(zb()||++nb>15)clearInterval(ib)},1000)}}}
 if(c&&!W.mmGeenAuto){var t0=Date.now(),ia=0,echt=function(){if(ia&&D.visibilityState==='visible'&&Date.now()-t0>=3000)W.mmUitkomst('echt')};
