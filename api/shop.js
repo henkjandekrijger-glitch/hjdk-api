@@ -18,6 +18,7 @@
 //   2. Advertentieplekken: nep, geen echte mensen of nooit een doorklik -> uitgesloten in alle shop-campagnes van dat netwerk.
 //   3. Advertenties: zwakke teksten uit, elke dag nieuwe teksten voor de best lopende producten (Claude), prijs in de tekst klopt niet meer -> uit.
 //   4. Bod en budget: te weinig verkeer bij goede kwaliteit -> bod omhoog; geld weg zonder doorkliks -> campagne stil.
+import { shopRss } from '../lib/shoprss.js';
 import sharp from 'sharp';
 import { randomBytes, createHash } from 'node:crypto';
 import { kv } from '../lib/db.js';
@@ -768,6 +769,7 @@ export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x'); const op = (url.searchParams.get('op') || 'status').toLowerCase();
   OIDC = String(req.headers['x-vercel-oidc-token'] || '');
   try {
+    if (op === 'rss') return await shopRss(req, res, LAND() + '/api/shop/rss');
     if (op === 'land') return await land(req, res, url);
     if (op === 'uit') return await uitgang(req, res, url);
     if (op === 'b') return await baken(req, res);
