@@ -907,6 +907,10 @@ export default async function handler(req, res) {
     if (op === 'babitalink') { if (await kv.get(K.babitakey)) return res.status(409).json({ ok: false, fout: 'bestaat al' }); const bk = randomBytes(18).toString('hex'); await kv.set(K.babitakey, bk); return res.status(200).json({ ok: true, link: LAND() + '/api/shop/advies?k=' + bk }); }
     { const kk = url.searchParams.get('k'); if (kk && sk && kk !== sk) { const bk = await kv.get(K.babitakey); if (bk && kk === bk && !url.searchParams.get('json')) sk = bk; } }
     if (!sk || url.searchParams.get('k') !== sk) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(403).send('<p style="font:16px system-ui;padding:24px">Deze pagina is privé.</p>'); }
+    if (op === 'ideeen') { // leesbare pagina met de zes bezoekersblokken (Babita-taken 10 tot 15) en hun live meting, voor Henkjan en Babita
+      const { ideeenPagina } = await import('../lib/shopideeen.js'); let tot = {}; try { tot = (await uurStand(kv, 24)).totaal || {}; } catch (e) {}
+      res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store');
+      return res.status(200).send(ideeenPagina(tot, { esc, k: url.searchParams.get('k') || '', datum: new Date().toLocaleString('nl-NL', { timeZone: 'Europe/Amsterdam', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' }) })); }
     if (op === 'lekken') { // per uur de trechter van de shop, rood waar het lekt (alleen totalen, voor Babita en Henkjan)
       try { await uurAanvullen(kv); } catch (e) {}
       const st = await uurStand(kv, Math.max(6, Math.min(72, num(url.searchParams.get('uren')) || 36)));
