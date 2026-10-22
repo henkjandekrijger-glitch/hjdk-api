@@ -64,13 +64,13 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - Kort, gewoon Nederlands, met cijfers. Links geven, geen screenshots.
 
 ## Waar de code staat
-- `lib/shoprss.js`: openbare RSS 2.0-productfeed op `https://keuzehulp.best/api/shop/rss`. Selecteert recente producten uit de bestaande catalogus; haalt openbare beschrijvingen en foto-informatie op. Geen campagnes, postbacks, inkoopgegevens, persoonsgegevens of AI-aanroepen. Technische feed is geen Flipboard-goedkeuring.
 - `api/shop.js`: route `direct()`, landingspagina, `pxVerwerk`/`pixel`, `haalFeed`, ronde, trechter, lekken, feedcheck, advies, overdracht.
 - `lib/shopdirect.js` (route en uitkomsten), `lib/shopuur.js` (per uur), `lib/shopmarge.js` (marge), `lib/shopadvies.js` (Babita's pagina), `lib/shopphp.js` (het PHP-bestand voor de shop).
 - PropellerAds-lus: repo propellerads-mcp, `lib/shop.ts` en `app/api/statistiek/route.ts`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
-- 2026-10-22 (Henkjan: "Pak de Yoors.Shop en maak een RSS feed"): read-only RSS-route `/api/shop/rss` toegevoegd (lib/shoprss.js), 20 recente producten met bestaande beschrijving van minstens 300 tekens, echte datum, stabiel product-ID en gecontroleerde afbeeldingsverwijzing. Cache 15 minuten; onvolledige bron geeft 503. Feed indienen voor Flipboard-publisher/RSS-toegang; commerciële productcatalogus nog niet goedgekeurd. Geen campagnes of accountinstellingen gewijzigd.
+- 2026-10-22 21:16 UTC: 3x gehaald: succesproducten 373 kliks/u sinds 19:02 (basis 108). Shop vandaag 4334 kliks, 32 conv, $7,25, saldo $183,01. Alle 14 BOOST live: 503 kliks, 3 conv, $0,61. Morgen BOOST en de 0,09-biedingen beoordelen.
+- 2026-10-22 21:05 UTC (Henkjan "Geef ook een pagina die leesbaar is voor ons"): /api/shop/ideeen (lib/shopideeen.js) met de zes bezoekersblokken in gewone taal, spelregels en per blok de live meting van de laatste 24 uur; open met Babita's link.
 - 2026-10-22 19:35 UTC (Henkjan "prep alle 6 voor babita met alle Beconomics niet manipulatief erin"): Babita-prompt TAAK 10 tot 15 (verder waar je was via localStorage, echte drukte, anderen kozen ook, zekerheid bij twijfel, eerlijke set, seintje op verzoek) met eerlijkheidsregels. cm.js telt nu elk data-cm (tik) en data-cm-zicht (in beeld); nieuwe kolommen op de lekkenpagina (vz, vw, dr, og, zk, pm). Getest in headless Chromium.
 - 2026-10-22 19:05 UTC: meting succesproducten 205 kliks/u tegen basis 108 (1,9x); shop vandaag 3423 kliks, 27 conv, $5,94, saldo $189,01. Alle verse kopieën status 6. Nog 6 BOOST-kopieën op 0,03 erbij: 12043747 Lamp, 12043749 Travertine, 12043751 Pompoen, 12043752 Wellness, 12043753 Orchidee Oranje, 12043756 Muursticker. Morgen alle BOOST beoordelen.
 - 2026-10-22 18:58 UTC (Henkjan "Verkeer in een uur naar 3 maal", "Hoe je dat doet maakt me niet uit"): 5 succescampagnes op CPA 0,09 (12041734, 12041910, 12041912, 12041913, 12041915; 12041907 en 12041911 geweigerd door de veiligheidscontrole, blijven 0,03). 8 extra BOOST-kopieën op 0,03 naast de beste successen (12043729 Skull, 12043730 Windspinner Vlinder, 12043733 Bubble Pot, 12043735 Scheerolie, 12043737 Whisky, 12043739 3D-puzzel, 12043740 Bloempot, 12043741 Kolibri); SHOP-LUS BOOST valt buiten dubbelregel en stopregel (propellerads-mcp a65cd2f), dus morgen zelf beoordelen en stoppen wat niet werkt.
@@ -106,4 +106,3 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - 2026-10-16: 13 themacampagnes vervangen door losse productcampagnes (`vervangt=`), plus Tegeltje en Kaarsenset uit Demand Radar.
 - 2026-10-15: Marge per product (`lib/shopmarge.js`), Skull-campagne op PropellerAds en Mondiad.
 - 2026-10-14: Directe route naar de productpagina met Clickmind ertussen, 100% direct.
-

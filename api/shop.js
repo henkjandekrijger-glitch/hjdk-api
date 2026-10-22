@@ -18,6 +18,7 @@
 //   2. Advertentieplekken: nep, geen echte mensen of nooit een doorklik -> uitgesloten in alle shop-campagnes van dat netwerk.
 //   3. Advertenties: zwakke teksten uit, elke dag nieuwe teksten voor de best lopende producten (Claude), prijs in de tekst klopt niet meer -> uit.
 //   4. Bod en budget: te weinig verkeer bij goede kwaliteit -> bod omhoog; geld weg zonder doorkliks -> campagne stil.
+import { shopRss } from '../lib/shoprss.js';
 import sharp from 'sharp';
 import { randomBytes, createHash } from 'node:crypto';
 import { kv } from '../lib/db.js';
@@ -38,7 +39,6 @@ import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdr
 import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 import { demandRadar } from '../lib/demandradar.js';
-import { shopRss } from '../lib/shoprss.js';
 const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
@@ -769,10 +769,7 @@ export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x'); const op = (url.searchParams.get('op') || 'status').toLowerCase();
   OIDC = String(req.headers['x-vercel-oidc-token'] || '');
   try {
-    if (op === 'rss') return await shopRss(req, res, LAND() + '/api/shop/rss', async () => {
-      const cat = await catalog(true);
-      return (cat.items || []).map(i => ({ id: i.id, title: i.t, launched_at: i.l, in_stock: i.vr, photos: [{ src: i.img }], seller_name: 'Yoors Shop' }));
-    });
+    if (op === 'rss') return await shopRss(req, res, LAND() + '/api/shop/rss');
     if (op === 'land') return await land(req, res, url);
     if (op === 'uit') return await uitgang(req, res, url);
     if (op === 'b') return await baken(req, res);
@@ -912,6 +909,10 @@ export default async function handler(req, res) {
     if (op === 'babitalink') { if (await kv.get(K.babitakey)) return res.status(409).json({ ok: false, fout: 'bestaat al' }); const bk = randomBytes(18).toString('hex'); await kv.set(K.babitakey, bk); return res.status(200).json({ ok: true, link: LAND() + '/api/shop/advies?k=' + bk }); }
     { const kk = url.searchParams.get('k'); if (kk && sk && kk !== sk) { const bk = await kv.get(K.babitakey); if (bk && kk === bk && !url.searchParams.get('json')) sk = bk; } }
     if (!sk || url.searchParams.get('k') !== sk) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(403).send('<p style="font:16px system-ui;padding:24px">Deze pagina is privé.</p>'); }
+    if (op === 'ideeen') { // leesbare pagina met de zes bezoekersblokken (Babita-taken 10 tot 15) en hun live meting, voor Henkjan en Babita
+      const { ideeenPagina } = await import('../lib/shopideeen.js'); let tot = {}; try { tot = (await uurStand(kv, 24)).totaal || {}; } catch (e) {}
+      res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store');
+      return res.status(200).send(ideeenPagina(tot, { esc, k: url.searchParams.get('k') || '', datum: new Date().toLocaleString('nl-NL', { timeZone: 'Europe/Amsterdam', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' }) })); }
     if (op === 'lekken') { // per uur de trechter van de shop, rood waar het lekt (alleen totalen, voor Babita en Henkjan)
       try { await uurAanvullen(kv); } catch (e) {}
       const st = await uurStand(kv, Math.max(6, Math.min(72, num(url.searchParams.get('uren')) || 36)));
