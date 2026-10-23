@@ -11205,7 +11205,7 @@
    "term": "kinderfiets",
    "title": "Welke kinderfiets past bij jouw kind?",
    "h1": "Kinderfiets kiezen: wielmaat, gewicht en remmen",
-   "kort": "Kies op binnenbeenlengte, niet op leeftijd: 14 inch bij 40–47 cm, 16 inch bij 45–53 cm, 20 inch bij 52–63 cm, 24 inch bij 60–72 cm. Licht (onder 10 kg) en met handremmen leert een kind het snelst.",
+   "kort": "Kies op binnenbeenlengte, niet op leeftijd: 14 inch bij 40 tot 47 cm, 16 inch bij 45 tot 52 cm, 20 inch bij 53 tot 60 cm, 24 inch bij 60 tot 68 cm. De juiste hoogte: op de laagste zadelstand raakt je kind met beide voeten plat de grond. Licht (onder 10 kg) en met handremmen leert een kind het snelst.",
    "intro": "Een te grote fiets maakt bang, een te zware fiets maakt moe. Drie vragen bepalen de juiste maat en uitvoering.",
    "questions": [
     {
@@ -11218,7 +11218,8 @@
         "16 inch",
         "14\"",
         "16\""
-       ]
+       ],
+       "hard": true
       },
       {
        "label": "50–62 cm (5–8 jaar)",
@@ -11227,7 +11228,8 @@
         "20 inch",
         "18\"",
         "20\""
-       ]
+       ],
+       "hard": true
       },
       {
        "label": "60–75 cm (8–12 jaar)",
@@ -11236,7 +11238,8 @@
         "26 inch",
         "24\"",
         "26\""
-       ]
+       ],
+       "hard": true
       }
      ]
     },
@@ -11311,7 +11314,11 @@
    "faq": [
     {
      "q": "Welke maat kinderfiets bij 5 jaar?",
-     "a": "Meestal 16 of 18 inch, maar meet de binnenbeenlengte: 45–53 cm is 16 inch, 50–58 cm is 18 inch."
+     "a": "Meestal 16 of 18 inch, maar meet de binnenbeenlengte: 45 tot 52 cm is 16 inch, 50 tot 56 cm is 18 inch."
+    },
+    {
+     "q": "Welke maat kinderfiets bij 6 jaar?",
+     "a": "Meestal 16, 18 of 20 inch. Een kind van 6 is vaak 110 tot 125 cm lang: bij een binnenbeen van 45 tot 52 cm past 16 inch, bij 50 tot 56 cm 18 inch en vanaf 53 cm 20 inch."
     },
     {
      "q": "Hoe zwaar mag een kinderfiets zijn?",

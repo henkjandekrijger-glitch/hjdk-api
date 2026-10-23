@@ -158,6 +158,9 @@ async function advise(item, route, tag) {
   let products = [], checkedAt = null;
   try { const r = await searchCached(term.trim(), { country: 'NL', size: 48, sort: 'RELEVANCE' }); checkedAt = r.at || null; products = (r.products || []).filter(p => p.price != null && p.image); } catch (e) {}
   if(item.slug==='thuisbatterij')products=products.filter(p=>!/laten aansluiten|aansluitservice|installatieservice|zoofy|uitbreidingsaccu|expansion battery|accukabel|verlengkabel/i.test(String(p.title||'')));
+  /* harde antwoorden (optie.hard, bijv. de wielmaat bij kinderfiets): een product moet minstens één term van die optie in de titel hebben, anders wint een 26 inch stadsfiets met veel losse treffers bij een kind van 4 */
+  const hard = picks.filter(o => o.hard && o.must && o.must.length).map(o => o.must.map(x => x.toLowerCase()));
+  if (hard.length) { const ok = p => { const t = String(p.title).toLowerCase(); return hard.every(h => h.some(m => t.indexOf(m) >= 0)); }; const f = products.filter(ok); if (f.length) products = f; }
   const key = 'kz_' + item.slug + '-' + route.join('') + (tag || '');
   const hitsOf = p => { const t = String(p.title).toLowerCase(); return must.filter(m => t.indexOf(m) >= 0).length; };
   const score = p => { const hits = hitsOf(p); let s = hits * 2 + (p.rating || 3.5); if (min && p.price < min) s -= 3; if (max && p.price > max) s -= 3; if (p.strike && p.strike > p.price) s += 0.5; return s; };
