@@ -408,6 +408,7 @@ async function verversItem(slug, d, plan) {
   if (Array.isArray(j.fouten) && j.fouten.length >= 3) upd.fouten = j.fouten.map(s1).filter(Boolean).slice(0, 5);
   if (Array.isArray(j.faq) && j.faq.length >= 3) upd.faq = j.faq.filter(x => x && x.q && x.a).map(x => ({ q: s1(x.q), a: s1(x.a) })).slice(0, plan && plan.speer ? 8 : 7);
   if (Object.keys(upd).length < 4) return { ok: false, waarom: 'te weinig bruikbare velden terug' };
+  ((seed.items.find(i => i.slug === slug) || {}).vast || []).forEach(k => { delete upd[k]; }); /* vaste velden niet laten herschrijven */
   const isSeed = seed.items.some(i => i.slug === slug); const cur = (await kv.get('hjdk:kz:' + slug)) || {};
   const next = isSeed ? Object.assign({}, cur && cur.override ? cur : {}, upd, { slug, override: true, updatedAt: d, ververst: d }) : Object.assign({}, it, upd, { updatedAt: d, ververst: d });
   await kv.set('hjdk:kz:' + slug, next); const idx = (await kv.get('hjdk:kz:index')) || []; if (idx.indexOf(slug) < 0) { idx.push(slug); await kv.set('hjdk:kz:index', idx); }

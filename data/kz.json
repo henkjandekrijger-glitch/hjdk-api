@@ -11313,16 +11313,32 @@
    ],
    "faq": [
     {
+     "q": "Hoe bepaal je de juiste maat kinderfiets?",
+     "a": "Meet de binnenbeenlengte: laat je kind op blote voeten tegen de muur staan, klem een boek tussen de benen en meet van de bovenkant van het boek tot de grond. Kies de wielmaat waar die maat in valt: 14 inch bij 40 tot 47 cm, 16 inch bij 45 tot 52 cm, 18 inch bij 50 tot 56 cm, 20 inch bij 53 tot 60 cm, 24 inch bij 60 tot 68 cm. Zit je kind op de grens en fietst het nog niet zelfstandig, neem dan de kleinere maat."
+    },
+    {
+     "q": "Hoe hoog moet een kinderfiets zijn?",
+     "a": "Op de laagste zadelstand moet je kind met beide voeten plat op de grond kunnen staan. Fietst het al zeker, dan mag het zadel zo hoog dat alleen de voorvoeten de grond raken. Kan het zadel niet laag genoeg, dan is de fiets te groot."
+    },
+    {
+     "q": "Welke maat kinderfiets bij 4 jaar?",
+     "a": "Meestal 14 inch: dat past bij een lengte van 95 tot 110 cm en een binnenbeen van 40 tot 47 cm. Een lang kind van 4 kan al op 16 inch."
+    },
+    {
      "q": "Welke maat kinderfiets bij 5 jaar?",
-     "a": "Meestal 16 of 18 inch, maar meet de binnenbeenlengte: 45 tot 52 cm is 16 inch, 50 tot 56 cm is 18 inch."
+     "a": "Meestal 16 inch, soms 18 inch. Meet de binnenbeenlengte: 45 tot 52 cm is 16 inch, 50 tot 56 cm is 18 inch."
     },
     {
      "q": "Welke maat kinderfiets bij 6 jaar?",
      "a": "Meestal 16, 18 of 20 inch. Een kind van 6 is vaak 110 tot 125 cm lang: bij een binnenbeen van 45 tot 52 cm past 16 inch, bij 50 tot 56 cm 18 inch en vanaf 53 cm 20 inch."
     },
     {
+     "q": "Welke maat kinderfiets bij 8 jaar?",
+     "a": "Meestal 20 inch: dat past bij 120 tot 135 cm lengte en 53 tot 60 cm binnenbeen. Is je kind langer of is het binnenbeen 60 cm of meer, kies dan 24 inch."
+    },
+    {
      "q": "Hoe zwaar mag een kinderfiets zijn?",
-     "a": "Liefst onder 40% van het lichaamsgewicht: voor een kind van 20 kg maximaal 8–9 kg."
+     "a": "Liefst onder 40% van het lichaamsgewicht: voor een kind van 20 kg maximaal 8 tot 9 kg. Aluminium fietsen zijn vaak 2 tot 4 kg lichter dan stalen stadsfietsjes met kettingkast."
     },
     {
      "q": "Terugtraprem of handrem?",
@@ -11339,6 +11355,10 @@
     "hoverboard",
     "fietsendrager",
     "e-bike"
+   ],
+   "vast": [
+    "kort",
+    "faq"
    ]
   },
   {

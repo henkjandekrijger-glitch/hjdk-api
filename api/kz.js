@@ -97,11 +97,13 @@ async function emailFromCredential(cred) { // Google One Tap: bewijs bij Google 
 }
 
 const isLive = it => !it.publishAt || String(it.publishAt) <= TODAY();
+/* vaste velden (item.vast, bijv. ['kort','faq'] bij kinderfiets): de seed wint van de automatische verversing, zodat feiten gelijk blijven aan de maattabel */
+function vastTerug(seedIt, it) { (seedIt.vast || []).forEach(k => { if (seedIt[k] !== undefined) it[k] = seedIt[k]; }); return it; }
 async function allItems(withFuture) {
   const extra = []; try { const idx = (await kv.get('hjdk:kz:index')) || []; const vals = idx.length ? await kv.mget(...idx.map(s => 'hjdk:kz:' + s)) : []; vals.forEach(v => { if (v && v.slug) extra.push(v); }); } catch (e) {}
   const seen = {}; const out = [];
   const ov = {}; extra.forEach(v => { if (v.override) ov[v.slug] = v; });
-  extraItems('nl').concat(seed.items, seed2.items, extra.filter(v => !v.override)).forEach(it0 => { const it1 = !it0.tool && ov[it0.slug] ? Object.assign({}, it0, ov[it0.slug]) : it0; const it = Array.isArray(it1.faq) && it1.faq.length > 1 ? Object.assign({}, it1, { faq: faqZonderDubbel(it1.faq) }) : it1; if (!seen[it.slug] && (withFuture || isLive(it))) { seen[it.slug] = 1; out.push(it); } });
+  extraItems('nl').concat(seed.items, seed2.items, extra.filter(v => !v.override)).forEach(it0 => { const it1 = !it0.tool && ov[it0.slug] ? vastTerug(it0, Object.assign({}, it0, ov[it0.slug])) : it0; const it = Array.isArray(it1.faq) && it1.faq.length > 1 ? Object.assign({}, it1, { faq: faqZonderDubbel(it1.faq) }) : it1; if (!seen[it.slug] && (withFuture || isLive(it))) { seen[it.slug] = 1; out.push(it); } });
   return out;
 }
 async function getItem(slug, withFuture) { const all = await allItems(withFuture); return all.find(i => i.slug === slug) || null; }
