@@ -14652,8 +14652,8 @@
    "pct": 4,
    "term": "strijkplank",
    "title": "Welke strijkplank past bij jou?",
-   "h1": "Strijkplank kiezen: formaat, stabiliteit en bekleding",
-   "kort": "Weinig plek: een compacte tafelstrijkplank. Elke week strijken: een stevige plank met stoomrooster en regelbare hoogte. Stoomstation: let op een hittebestendig rek voor de strijkbout.",
+   "h1": "Strijkplank kiezen: afmetingen, stabiliteit en bekleding",
+   "kort": "Afmetingen: compact 110 x 30 cm, standaard 120 tot 124 x 38 cm, breed 124 tot 135 x 45 cm, tafelmodel rond 75 x 30 cm. Weinig ruimte: een compacte plank of tafelmodel dat plat wegklapt. Elke week strijken: een stevige plank van minstens 120 cm met stoomrooster en regelbare hoogte tot zo'n 95 cm. Stoomstation: let op een hittebestendig rek voor de strijkbout.",
    "intro": "Een wiebelende strijkplank maakt strijken zwaarder dan nodig. Beantwoord drie vragen en zie welk model bij jouw ruimte en strijkgedrag past.",
    "questions": [
     {
@@ -14745,16 +14745,36 @@
    ],
    "faq": [
     {
-     "q": "Wat is een goed formaat?",
-     "a": "Rond 120 bij 38 cm is standaard. Strijk je vaak lakens, kies dan een bredere plank."
+     "q": "Wat zijn de afmetingen van een strijkplank?",
+     "a": "De meeste strijkplanken zijn 110 tot 135 cm lang en 30 tot 45 cm breed. Compact is rond 110 x 30 cm, standaard 120 tot 124 x 38 cm en breed 124 tot 135 x 45 cm. Een tafelstrijkplank is ongeveer 75 x 30 cm. Ingeklapt is een plank meestal 5 tot 10 cm dik."
     },
     {
-     "q": "Heb ik een rooster nodig?",
-     "a": "Bij stoomstrijken is een gaasoppervlak prettig: de stoom trekt door het kledingstuk en het droogt sneller."
+     "q": "Welke lengte strijkplank heb ik nodig?",
+     "a": "Voor overhemden en broeken is 110 tot 124 cm genoeg. Strijk je vaak lakens, dekbedovertrekken of tafelkleden, kies dan 124 tot 135 cm lang en 45 cm breed, zodat je minder vaak hoeft te verschuiven."
+    },
+    {
+     "q": "Hoe hoog moet een strijkplank staan?",
+     "a": "Zet de plank zo hoog dat je met licht gebogen ellebogen rechtop strijkt: voor de meeste mensen tussen 85 en 95 cm. Ben je lang, kies dan een plank die tot minstens 95 cm omhoog kan."
+    },
+    {
+     "q": "Welke strijkplank voor een kleine ruimte?",
+     "a": "Kies een compacte plank van rond 110 x 30 cm die plat inklapt, of een tafelmodel van zo'n 75 x 30 cm. Een plank met ophanghaak kan aan een deur of muur. Meet vooraf de plek waar hij moet staan: de ingeklapte lengte is gelijk aan de bladlengte plus de poten."
+    },
+    {
+     "q": "Wat is een alternatief voor een strijkplank?",
+     "a": "Een strijkdeken of strijkmat op een stevige tafel werkt voor af en toe een overhemd. Een kledingstomer haalt kreukels uit hangende kleding zonder plank. Voor een stapel strijkwerk per week blijft een echte plank prettiger."
+    },
+    {
+     "q": "Welke strijkplank kopen?",
+     "a": "Strijk je af en toe, dan volstaat een compacte plank. Elke week een stapel: kies een stabiele plank van minstens 120 x 38 cm met gaasrooster en regelbare hoogte. Met een stoomstation heb je een plank met een stevig rek voor het apparaat nodig."
+    },
+    {
+     "q": "Wat is een actieve strijkplank?",
+     "a": "Een actieve strijkplank heeft een ventilator die lucht kan zuigen of blazen, en vaak ook een verwarmd blad. Zuigen houdt de stof vast en droogt hem, blazen laat de stof op een luchtkussen liggen zodat er geen glimplekken ontstaan. Hij hoort meestal bij een stoomstation en is duurder dan een gewone plank."
     },
     {
      "q": "Kan ik een nieuwe hoes kopen?",
-     "a": "Ja, mits je de afmetingen van je plank kent. Meet lengte en breedte op voordat je bestelt."
+     "a": "Ja, mits je de afmetingen van je plank kent. Meet lengte en breedte van het blad en kies een hoes in die maat; hoezen worden per maat verkocht, van 110 x 30 cm tot 135 x 45 cm."
     }
    ],
    "publishAt": "2026-10-05",
@@ -14764,6 +14784,10 @@
     "droogrek",
     "wasdroger",
     "wasmachine"
+   ],
+   "vast": [
+    "kort",
+    "faq"
    ]
   },
   {

@@ -625,5 +625,15 @@
   "sterkte": 2,
   "moeite": 1,
   "risico": "Als bol geen product met de maat in de titel heeft, valt het filter terug op de oude volgorde."
+ },
+ {
+  "id": "crawlgolf-7-dagen",
+  "les": "De AI-crawlerteller is een som over 7 dagen. Eén crawlgolf (vooral ClaudeBot) blaast die een week op en laat hem daarna in één dag inzakken. Een daling is pas een signaal als ook de dagwaarden na de golf zakken.",
+  "kanaal": "llm",
+  "bewijs": "24 okt 2026: keuzehulp.best AI-crawlers 7 dagen van 256 naar 59 op één dag. De sprong zat op 16 en 17 okt (124 naar 200); toen 17 okt uit het venster viel, verdween bijna alles. 18 tot 23 okt kwamen er samen maar ongeveer 56 bij.",
+  "bron": "eigen meting /api/zicht?op=stand&site=kz (historie aiBots)",
+  "sterkte": 2,
+  "moeite": 1,
+  "risico": "Geen; alleen leesregel voor de dagcontrole."
  }
 ]
