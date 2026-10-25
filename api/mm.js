@@ -329,7 +329,7 @@ export default async function handler(req, res) {
       if (op === 'overlap') { const { termOverlap } = await import('../lib/mensgeld.js'); return res.status(200).json(await termOverlap(kv, { dagen: q('dagen') || 3, min: Number(q('min')) || 5 })); }
       if (op === 'voorspel') { const { voorspel } = await import('../lib/voorspel.js'); return res.status(200).json(await voorspel(kv, { dagen: q('dagen') || 7, min: Number(q('min')) || 30 })); }
       if (op === 'voorspelruw') { const { voorspelRuw } = await import('../lib/voorspel.js'); const r = await voorspelRuw(kv, q('dag'), { opnieuw: q('opnieuw') === '1' }); return res.status(r.ok ? 200 : 400).json(r); }
-      if (op === 'geheugen') { const { geheugenPerGroep, geheugenPatroon } = await import('../lib/geheugen.js'); const m = String(q('match') || ''); return res.status(200).json(m ? await geheugenPatroon(kv, { match: m.slice(0, 60) }) : await geheugenPerGroep(kv)); }
+      if (op === 'geheugen') { const { geheugenPerGroep, geheugenPatroon } = await import('../lib/geheugen.js'); const m = String(q('match') || ''); return res.status(200).json(m ? await geheugenPatroon(kv, { match: m.slice(0, 60) }) : await geheugenPerGroep(kv, { alle: q('alle') === '1' })); }
       if (op === 'venster') { const { vensterPerZone } = await import('../lib/venster.js'); const r = await vensterPerZone(kv, { dag: q('dag') || new Date().toISOString().slice(0, 10), min: Number(q('min')) || 10 }); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'amazonmeter') { const { amazonMeter } = await import('../lib/amzmeter.js'); const r = await amazonMeter(kv, { dag: q('dag'), tz: q('tz') || undefined }); return res.status(r.ok ? 200 : 400).json(r); }
       if (op === 'amazon') {

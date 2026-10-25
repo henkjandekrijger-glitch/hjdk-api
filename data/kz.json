@@ -12419,7 +12419,7 @@
    "term": "accu heggenschaar",
    "title": "Welke heggenschaar past bij jouw heg?",
    "h1": "Heggenschaar kiezen: accu, mesbladlengte en hoogte",
-   "kort": "Een accu-heggenschaar met 50–60 cm mesblad en 18–20 mm tandafstand doet 90% van de heggen; voor hoge heggen een telescoop- of steelheggenschaar; kies een accu uit het platform dat je al hebt.",
+   "kort": "Welke heggenschaar: voor de meeste heggen een accuheggenschaar met een mesblad van 50 tot 60 cm, 18 tot 20 mm tandafstand en minder dan 3 kg met accu. Dikke takken (beuk, laurier): kies 25 tot 28 mm tandafstand. Heg hoger dan 2 meter: een steel- of telescoopheggenschaar in plaats van een ladder. Heb je al accugereedschap, kies dan hetzelfde accuplatform.",
    "intro": "Heggen knippen is zwaar werk met het verkeerde gereedschap. Drie vragen bepalen lengte, kracht en type.",
    "questions": [
     {
@@ -12518,16 +12518,36 @@
    ],
    "faq": [
     {
+     "q": "Welke heggenschaar moet ik kiezen?",
+     "a": "Kijk naar drie dingen: de lengte van je heg (mesblad 45 cm voor lage randjes, 50 tot 60 cm voor een gewone heg, 70 cm voor lange heggen), de dikte van de takken (18 tot 20 mm tandafstand voor coniferen en liguster, 25 tot 28 mm voor beuk en laurier) en de hoogte (boven 2 meter een steelheggenschaar). Voor de meeste tuinen is een accuheggenschaar van 50 tot 60 cm de beste keuze."
+    },
+    {
+     "q": "Wat is een goede heggenschaar?",
+     "a": "Een goede heggenschaar knipt zonder te rukken, weegt met accu minder dan 3 kg, heeft dubbelzijdig geslepen messen en een draaibare achterhandgreep voor verticaal knippen. Bij een accumodel hoort een accu van minstens 2 Ah, zodat je een gewone heg in één keer klaar hebt."
+    },
+    {
+     "q": "Wat is de beste professionele accuheggenschaar?",
+     "a": "Voor dagelijks gebruik kies je een borstelloze motor, een mesblad van 60 tot 75 cm, een tandafstand van 28 tot 34 mm en een accuplatform waarvan je twee accu's afwisselt. Let op het trillingsniveau (lager dan 2,5 m/s2 is prettig voor lange dagen) en of het mesblad los te vervangen is."
+    },
+    {
      "q": "Hoe lang moet het mesblad zijn?",
-     "a": "50–60 cm voor de meeste heggen; korter voor vormsnoei, langer (70 cm) alleen bij hele lange heggen."
+     "a": "50 tot 60 cm voor de meeste heggen. Korter (40 tot 45 cm) voor vormsnoei en buxus, langer (70 cm) alleen voor heel lange of brede heggen, want een lang blad is zwaarder."
+    },
+    {
+     "q": "Welke tandafstand heb ik nodig?",
+     "a": "De tandafstand bepaalt hoe dik een tak mag zijn. 16 tot 20 mm is genoeg voor coniferen en liguster. Voor beuk, laurier en takken van een jaar oud of ouder kies je 25 tot 28 mm."
     },
     {
      "q": "Accu of elektrisch met snoer?",
-     "a": "Accu voor vrijheid en veiligheid; snoer is goedkoper als de heg vlak bij het huis staat."
+     "a": "Accu voor vrijheid en veiligheid, omdat je niet door een snoer kunt knippen. Een snoermodel is goedkoper en lichter als de heg vlak bij het stopcontact staat."
     },
     {
-     "q": "Hoe vaak slijpen?",
-     "a": "Eens per seizoen, of laat het doen; hars na elk gebruik verwijderen houdt de messen scherp."
+     "q": "Heggenschaar of steelheggenschaar?",
+     "a": "Een gewone heggenschaar tot ongeveer 2 meter hoogte. Daarboven, en voor de bovenkant van brede heggen, is een steel- of telescoopheggenschaar veiliger dan op een ladder staan."
+    },
+    {
+     "q": "Hoe vaak moet ik een heggenschaar slijpen?",
+     "a": "Eens per seizoen, of laat het doen. Haal na elk gebruik hars en sap van de messen en spuit ze in met onderhoudsolie, dan blijven ze langer scherp."
     }
    ],
    "verwant": [
@@ -12536,6 +12556,10 @@
     "accu-grasmaaier",
     "loungeset",
     "barbecue"
+   ],
+   "vast": [
+    "kort",
+    "faq"
    ]
   },
   {
