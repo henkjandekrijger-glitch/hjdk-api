@@ -7052,7 +7052,7 @@
    "term": "robotmaaier",
    "title": "Welke robotmaaier past bij jouw tuin?",
    "h1": "Robotmaaier kiezen: oppervlakte, hellingen en draad of gps",
-   "kort": "Neem een maaier die voor 1,5× jouw gazonoppervlak is bedoeld. Begrenzingsdraad is betrouwbaar en goedkoper; draadloze (gps/camera) modellen zijn handiger maar duurder en gevoelig voor bomen en schaduw.",
+   "kort": "Robotmaaier kiezen: neem een model dat bedoeld is voor 1,5 keer jouw gazon (300 m² gazon, dan een maaier voor 450 tot 500 m²). Hellingen boven 25% of meerdere losse grasvelden: kies een model met grote wielen en zones in de app. Begrenzingsdraad is goedkoper en betrouwbaar; zonder draad (RTK-gps of camera) is handiger maar duurder, en gps werkt slecht onder dichte bomen.",
    "intro": "Een robotmaaier maait elke dag een beetje: dichter gazon, geen gras afvoeren. Drie vragen bepalen capaciteit, hellingvermogen en begrenzing.",
    "questions": [
     {
@@ -7152,16 +7152,32 @@
    ],
    "faq": [
     {
+     "q": "Hoe kies ik een robotmaaier?",
+     "a": "Kijk naar drie dingen. Oppervlakte: neem een maaier voor ongeveer 1,5 keer jouw gazon, want de opgegeven oppervlakte geldt bij ideaal weer en dagelijks maaien. Tuin: hellingen tot 25% kan bijna elke maaier, steiler of meerdere losse zones vraagt grote wielen en zonebeheer. Begrenzing: draad is goedkoper en betrouwbaar, draadloos bespaart het leggen van de draad."
+    },
+    {
+     "q": "Welke maaihoogte stel je in bij een robotmaaier?",
+     "a": "Voor een gewoon gazon 4 tot 5 cm. Begin het seizoen hoger (5 tot 6 cm) en zet hem stap voor stap lager; in droge zomers weer hoger, dan verbrandt het gras minder snel. De meeste robotmaaiers maaien tussen ongeveer 2 en 6 cm. Wil je korter dan 3 cm, controleer dan het bereik van het model."
+    },
+    {
+     "q": "Robotmaaier met of zonder draad?",
+     "a": "Met draad is goedkoper en werkt overal, ook onder bomen, maar het leggen kost een middag. Zonder draad werkt met RTK-gps (open tuin, weinig bomen) of met een camera (beter bij bomen en schaduw) en stel je de grenzen in de app in."
+    },
+    {
+     "q": "Hoeveel m² moet een robotmaaier aankunnen?",
+     "a": "Ongeveer anderhalf keer je gazon. Voor 200 m² dus een model voor 300 m², voor 500 m² een model voor 750 tot 800 m². Een te kleine maaier rijdt de hele dag en maait in natte weken het gras niet bij."
+    },
+    {
      "q": "Hoe lang duurt installeren?",
-     "a": "Met draad 2–4 uur voor 300 m²; draadloos 30 minuten voor het instellen van de kaart."
+     "a": "Met draad 2 tot 4 uur voor 300 m². Draadloos ongeveer 30 minuten om de kaart in te stellen, plus het plaatsen van een gps-antenne bij RTK-modellen."
     },
     {
      "q": "Zijn robotmaaiers veilig voor egels en kinderen?",
-     "a": "Maai overdag en niet in de schemering (egels). Hefsensoren stoppen de messen direct bij optillen."
+     "a": "Maai alleen overdag en niet in de schemering of 's nachts, dan loop je egels niet tegen het lijf. Hef- en kantelsensoren stoppen de messen direct als de maaier wordt opgetild."
     },
     {
      "q": "Wat kost onderhoud?",
-     "a": "Mesjes elke 1–2 maanden (10–20 euro per set), accu na 4–6 jaar."
+     "a": "Mesjes elke 1 tot 2 maanden vervangen (10 tot 20 euro per set), de accu na 4 tot 6 jaar. Maak de onderkant af en toe schoon en zet hem in de winter droog en vorstvrij weg."
     }
    ],
    "verwant": [
@@ -7170,6 +7186,10 @@
     "hogedrukreiniger",
     "loungeset",
     "barbecue"
+   ],
+   "vast": [
+    "kort",
+    "faq"
    ]
   },
   {
