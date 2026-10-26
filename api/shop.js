@@ -39,6 +39,7 @@ import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdr
 import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 import { demandRadar } from '../lib/demandradar.js';
+const SHOP_UIT = true; // Yoors offline (Henkjan 26 okt 2026): geen shoprondes, geen Mondiad-shopcampagnes; weer aan alleen op zijn woord (ook propellerads-mcp lib/budget.ts SHOP_UIT)
 const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
@@ -882,6 +883,7 @@ export default async function handler(req, res) {
       const kort = m => Object.fromEntries(Object.entries(m).map(([k, x]) => { x.sec.sort((a, b) => a - b); const med = x.sec.length ? Math.round(x.sec[Math.floor(x.sec.length / 2)] * 10) / 10 : null; delete x.sec; x.medSecTotKlik = med; return [k, x]; }));
       const zones = Object.entries(kort(per.zone)).sort((a, b) => b[1].door - a[1].door).slice(0, 25);
       return res.status(200).json({ ok: true, at: new Date().toISOString(), records: gezien, direct: await directInst(kv), meetOpYoors: await shopMeet(kv), perRoute: Object.values(perArm).sort((a, b) => b.aangekomen - a.aangekomen), totaal: await netTotaal(), perDag, perNet: kort(per.net), perProduct: kort(per.product), topZones: Object.fromEntries(zones), px: { koop: !!(await kv.get('hjdk:shop:pxlaatst:koop')), cart: !!(await kv.get('hjdk:shop:pxlaatst:cart')) } }); }
+    if (SHOP_UIT && ['ronde', 'mdtest', 'maakmd', 'mdbod'].includes(op)) return res.status(200).json({ ok: true, uit: true, waarom: 'Yoors offline (Henkjan 26 okt: "Zet alle campagnes yoors uit yoors gaat offline vandag"): geen shoprondes en geen Mondiad-shopcampagnes meer' });
     if (op === 'ronde') {
       const droog = !!url.searchParams.get('droog');
       if (!droog) { const lk = await kv.get(K.lock); if (lk && Date.now() - lk < 240000) return res.status(200).json({ ok: true, overgeslagen: 'ronde loopt al' }); await kv.set(K.lock, Date.now(), { ex: 300 }); }
