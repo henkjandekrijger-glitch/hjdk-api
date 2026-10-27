@@ -39,7 +39,7 @@ import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdr
 import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 import { demandRadar } from '../lib/demandradar.js';
-const SHOP_UIT = false; // 26 okt: Yoors offline, shop verhuisd naar yoors.shop; Henkjan dezelfde dag: "Zet campagnes aan maar de url wordt nu over al Yoors.Shop" (ook propellerads-mcp lib/budget.ts SHOP_UIT)
+const SHOP_UIT = true; // 27 okt: Henkjan "Stop alle campagnes want url verandert" (ook propellerads-mcp lib/budget.ts SHOP_UIT). Weer aan alleen op zijn woord.
 const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
