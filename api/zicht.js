@@ -15,7 +15,7 @@
 //   GET  /api/zicht?op=manifest                    uitleg van https://<host>/zicht.json: zo meldt een project zonder token
 // Schrijven: token in Authorization: Bearer, header x-hjdk-token of ?token= (gedeelde team-variabele ZICHT_TOKEN, GADS_TOKEN of HJDK_TOKEN).
 import { vraagAI, gapScan } from '../lib/zicht.js';
-import { lessen, draaiboek, stand, voegLesToe, nieuweProef, verwerkUitkomst, zetSite, ronde, meet, sites, DAY } from '../lib/zicht.js';
+import { lessen, draaiboek, stand, voegLesToe, nieuweProef, verwerkUitkomst, zetSite, ronde, meet, sites, DAY, zoekvragen, bewaarZoekvragen } from '../lib/zicht.js';
 import { organicStatus } from '../lib/organic.js';
 import { OVERDRACHT_ZICHT } from '../lib/overdracht-zicht.js';
 import { leesSkill } from '../lib/skills.js';
@@ -58,6 +58,11 @@ export default async function handler(req, res) {
       const result = await Promise.all(ids.map(id => organicStatus(id, id === 'kz' ? Number(process.env.KZ_PER_DAG || 12) : MARKETS[id].perDay())));
       if (q.t) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send('ORGANISCHE GROEI — ' + DAY() + '\n\n' + result.map(x => x.site.toUpperCase() + ': ' + x.budget.inGoogle + '/' + x.budget.gecontroleerd + ' gecontroleerde URL’s in Google (indexcontrole ' + x.budget.indexDag + ').\nAutomatische nieuwbouw maximaal ' + x.budget.perDag + '/dag. ' + x.budget.reden + '\nGoogle' + (x.google.periode ? ' (' + x.google.periode.startDate + ' t/m ' + x.google.periode.endDate + ')' : '') + ': ' + (x.google.totaal ? x.google.totaal.imp + ' vertoningen, ' + x.google.totaal.clicks + (x.google.totaal.clicks === 1 ? ' klik' : ' kliks') : 'volledige totalen nog niet gemeten') + '. ' + x.google.basis + '\n' + x.prioriteit + '\n' + x.kansen.map(p => '- /' + p.slug + ': ' + p.vragen.map(v => v.vraag + ' (positie ' + v.positie + ')').join('; ')).join('\n') + '\n' + x.interpretatie).join('\n\n')); }
       return res.status(200).json({ ok: true, sites: result });
+    }
+    if (op === 'zoekvragen') { // alle bewaarde Search Console-zoekvragen per site; &ververs=1 haalt de laatste 10 dagen nu op (hooguit eens per uur per site)
+      const id = String(q.site || ''); if (!(await sites())[id]) return res.status(400).json({ fout: 'onbekende site' });
+      let ververst = null; if (q.ververs) { const { kv } = await import('../lib/db.js'); const k = 'zicht:zv:ververs:' + id; if (mag(req) || !(await kv.get(k).catch(() => null))) { await kv.set(k, 1, { ex: 3600 }).catch(() => {}); ververst = await bewaarZoekvragen(id, oidc).catch(e => ({ fout: String(e.message).slice(0, 120) })); } else ververst = { overgeslagen: 'binnen het uur al ververst' }; }
+      return res.status(200).json(Object.assign({ ok: true, ververst }, await zoekvragen(id, q.dagen, q.dag)));
     }
     if (op === 'stand') return res.status(200).json({ ok: true, dag: DAY(), sites: await stand(q.site) });
     if (op === 'manifest') { const PJ = await import('../lib/zicht-projecten.js'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(PJ.MANIFEST_UITLEG); }

@@ -645,5 +645,27 @@
   "sterkte": 2,
   "moeite": 1,
   "risico": "Vertoningen op lokale namen leveren weinig koopkliks op; vooral een teken dat Google de domeinen begint te vertrouwen. Niet uitbreiden met dunne bedrijfspagina's."
+ },
+ {
+  "id": "mediapiek-bovenaan-antwoord",
+  "les": "Na een tv-, radio- of krantenmoment zoeken mensen de naam op en landen ze op de homepage; ze kijken alleen naar het bovenste scherm. Zet daar wat ze dan willen (live zien: volgende optredens, uitzending, nieuwste aflevering) en een snelle aanmelding, niet onderaan.",
+  "kanaal": "google",
+  "bewijs": "27 okt 2026 taniakross.media tijdens een tv-uitzending: 65 bezoekers in 2 uur (normaal ongeveer 6 per dag), 47 via zoekmachines (Google 40), allemaal op de homepage. 46 van 48 zoekbezoekers zagen alleen het bovenste deel, mediaan scroll 14%, mediaan 32 seconden, 1 van 48 bekeek een tweede pagina. Kliks: Concerten 18, Menu 13, Open de agenda 9. Aanmeldkaart na 25 seconden of halverwege leverde 0 e-mailaanmeldingen op.",
+  "bron": "eigen meting taniakross.media /api/seo?a=bezoek&dagen=1 (27 okt 2026)",
+  "sterkte": 2,
+  "moeite": 2,
+  "meten": "aandeel zoekbezoekers dat een tweede pagina of het blok bovenaan aanklikt, en aanmeldingen per 100 zoekbezoekers, bij de volgende mediapiek",
+  "risico": "Eén meting; geldt voor persoonsmerken en evenementen, niet voor keuzehulpen."
+ },
+ {
+  "id": "wikipedia-ingang-mediapiek",
+  "les": "Bij een mediapiek is Wikipedia de tweede ingang na Google: houd de Wikipedia-pagina actueel met de eigen site als bron, met echte nieuwe feiten (zoals een nieuwe podcast) en via een onafhankelijke bewerker of overlegpagina.",
+  "kanaal": "beide",
+  "bewijs": "27 okt 2026 taniakross.media: 9 van 72 bezoekers kwamen via nl.wikipedia.org (13%), tegen 0 op gewone dagen. Perplexity noemde Tania op 4 van 4 vragen maar citeerde johannesvermeerprijs.nl, klassiekemuziek.nl, televizier.nl en rtl.nl, niet de eigen site.",
+  "bron": "eigen meting taniakross.media en ZICHT op=stand&site=taniakross",
+  "sterkte": 2,
+  "moeite": 2,
+  "meten": "verwijzingen van wikipedia per maand en of AI-assistenten de eigen site gaan citeren",
+  "risico": "Geen eigen promotie op Wikipedia (belangenverstrengeling); alleen controleerbare feiten met bron."
  }
 ]

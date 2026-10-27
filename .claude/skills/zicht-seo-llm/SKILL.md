@@ -35,6 +35,20 @@ Iedere chat en elk project gebruikt hetzelfde draaiboek en voedt het. Zo leert a
    - lopende proeven
 3. Begin bij de hoogste les die op deze site nog niet is toegepast. Bij een nieuwe site eerst de site aanmelden (zie hieronder).
 
+## Zoekvragen: alles bewaren en ervan leren
+
+- Elke meting van de lus bewaart alle Search Console-zoekvragen van de site per dag (zoekvraag, pagina, vertoningen, kliks, positie; ook de verse dagen). Google zelf geeft per keer maar een venster en bewaart 16 maanden; wij houden 400 dagen per dag.
+- Lezen: /api/zicht?op=zoekvragen&site=<id>&dagen=28 (lijst per zoekvraag met eerste en laatste dag, positie en pagina's, plus totaal per dag). Eén dag ruw: &dag=JJJJ-MM-DD. Nu verversen: &ververs=1 (eens per uur).
+- Gebruik het voor: FAQ en antwoorden uit echte vragen, nieuwe onderwerpen, titels, het AI-meetpanel (les meetpanel-echte-vragen) en om pieken te verklaren (nieuwe zoekvragen op één dag = een media- of nieuwsmoment).
+- Search Console loopt 2 tot 3 dagen achter. Voor een piek van vandaag kijk je naar de eigen bezoekteller van de site (bijv. taniakross.media /api/seo?a=bezoek&dagen=1: per uur, bron, scrolldiepte, bekeken onderdelen, kliks).
+
+## Persoonsmerken en mediapieken (taniakross.media en dergelijke)
+
+- Na tv, radio of krant zoeken mensen de naam op en landen op de homepage. Ze kijken alleen naar het bovenste scherm (27 okt 2026: 46 van 48 zoekbezoekers, mediaan 32 seconden). Zet daar wat ze dan zoeken: wat er nu en binnenkort te zien en te horen is, en een snelle aanmelding (les mediapiek-bovenaan-antwoord).
+- Wikipedia is bij een piek de tweede ingang (13% van het bezoek). Alleen echte, controleerbare nieuwe feiten toevoegen, met de eigen site als bron, nooit eigen promotie (les wikipedia-ingang-mediapiek).
+- Zet een tv- of radio-optreden vooraf in de eigen agenda van de site, zodat de site er die avond klaar voor is.
+- Een feitenpagina met echte vragen (taniakross.media/vragen) en de eigen site als bron in de Person-gegevens helpen AI om de site te citeren in plaats van alleen andere bronnen.
+
 ## Gaten zoeken
 
 - Gatscan: /api/zicht?op=gapscan&naam=<naam>&v=vraag1|vraag2|... stelt tot 40 echte koop- of keuzevragen aan Perplexity en laat per vraag zien welke soort bronnen geciteerd worden (betaalmuur, forum, winkel, media, buitenlands), of er een prijs of maat in het antwoord staat, en welke antwoorden het zwakst zijn. Zonder token 6 scans per dag.
