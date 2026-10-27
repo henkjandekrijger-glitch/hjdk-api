@@ -466,19 +466,35 @@
     "Een glazen kan willen zonder te kijken naar het gewicht (2–3 kg).",
     "Geen pulse-stand: dan wordt alles puree in plaats van gehakt."
    ],
-   "kort": "Bevroren fruit en groene smoothies vragen 1.000 W+; soep in de pan vraagt een staafmixer; één persoon onderweg een blender-to-go. Een pulse-stand en een stevige kan zijn belangrijker dan programma's.",
+   "kort": "Blender kopen, let op vier dingen: vermogen (1.000 W of meer voor ijs, bevroren fruit en noten), de kan (glas of hittebestendig Tritan van 1,5 tot 2 liter als je soep wilt maken), een pulsestand en of kan en messen in de vaatwasser kunnen. Soep in de pan pureren gaat het makkelijkst met een staafmixer; wil je soep vanaf rauwe groente, kies dan een kookblender met verwarming. Voor één persoon onderweg volstaat een blender-to-go.",
    "faq": [
     {
+     "q": "Waar moet je op letten bij het kopen van een blender?",
+     "a": "Kijk eerst wat je ermee maakt. Voor ijs, bevroren fruit, noten en groene smoothies heb je minimaal 1.000 W nodig. Let daarna op de kan (glas krast niet en kan tegen hitte, Tritan is lichter en onbreekbaar), de inhoud (1,5 tot 2 liter voor een gezin), een pulsestand, stevige rvs-messen en of de onderdelen in de vaatwasser mogen. Programma's zijn minder belangrijk dan vermogen en een goede kan."
+    },
+    {
+     "q": "Welke blender is goed voor soep?",
+     "a": "Kies een blender met een glazen of hittebestendige kan, minimaal 1,5 liter en een dop met een opening zodat stoom weg kan. Wil je soep maken vanaf rauwe groente, dan is een kookblender (blender met verwarming) handig: die kookt en pureert in één kan. Soep die al in de pan staat pureer je makkelijker met een staafmixer."
+    },
+    {
+     "q": "Kun je hete soep in een blender doen?",
+     "a": "Ja, als de kan tegen hitte kan. Vul hem hooguit half, haal het dopje uit het deksel en leg er een doek over, en begin op de laagste stand. Hete vloeistof zet uit en kan anders het deksel eraf drukken."
+    },
+    {
      "q": "Welke blender voor smoothies met ijs?",
-     "a": "Minimaal 1.000 W en messen van rvs; goedkope 300 W-modellen stokken."
+     "a": "Minimaal 1.000 W met stevige rvs-messen en een ijsfunctie of pulsestand. Goedkope modellen van 300 tot 500 W en accublenders stokken op ijs en bevroren fruit."
+    },
+    {
+     "q": "Hoeveel watt moet een goede blender hebben?",
+     "a": "Voor zacht fruit en sappen is 500 tot 700 W genoeg. Voor ijs, bevroren fruit, noten en groene smoothies kies je 1.000 W of meer; krachtige modellen hebben 1.200 tot 1.500 W."
     },
     {
      "q": "Glazen of plastic kan?",
-     "a": "Glas smaakt neutraal en krast niet; Tritan-plastic is lichter en onbreekbaar."
+     "a": "Glas smaakt neutraal, krast niet en kan tegen hete soep, maar weegt 2 tot 3 kg met voet. Tritan-plastic is lichter en onbreekbaar; controleer dan of de kan hittebestendig is als je soep wilt maken."
     },
     {
      "q": "Staafmixer of blender?",
-     "a": "Staafmixer voor soep en kleine porties in de pan; blender voor smoothies en grote hoeveelheden."
+     "a": "Een staafmixer voor soep en kleine porties direct in de pan. Een blender voor smoothies, ijs en grotere hoeveelheden die heel glad moeten worden."
     }
    ],
    "verwant": [
@@ -493,6 +509,10 @@
     "multicooker",
     "combimagnetron",
     "airfryer"
+   ],
+   "vast": [
+    "kort",
+    "faq"
    ]
   },
   {
