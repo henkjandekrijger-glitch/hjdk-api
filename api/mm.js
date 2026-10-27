@@ -524,7 +524,7 @@ if(!c){try{c=sessionStorage.getItem('mmc')||'';if(!c){var l=(localStorage.getIte
 var gehad={};W.mmUitkomst=function(soort,waarde){try{if(!c||gehad[soort])return;gehad[soort]=1;var x=JSON.stringify({cid:c,soort:soort,waarde:waarde||0,bron:location.host});
 if(!(navigator.sendBeacon&&navigator.sendBeacon('https://whichtobuy.best/api/mm/uitkomst',x))&&W.fetch)fetch('https://whichtobuy.best/api/mm/uitkomst',{method:'POST',body:x,keepalive:true,mode:'no-cors'})}catch(e){}};
 W.mmKlikId=c;
-if(c&&/(^|\.)yoo\.rs$/.test(location.hostname)){W.mmUitkomst('geladen');var zt=0,z1=function(){if(zt||D.visibilityState!=='visible')return;zt=setTimeout(function(){if(D.visibilityState==='visible')W.mmUitkomst('zicht1');else zt=0},1000)};z1();D.addEventListener('visibilitychange',z1);
+if(c&&/(^|\.)(yoo\.rs|yoors\.shop|kadoly\.com)$/.test(location.hostname)){W.mmUitkomst('geladen');var zt=0,z1=function(){if(zt||D.visibilityState!=='visible')return;zt=setTimeout(function(){if(D.visibilityState==='visible')W.mmUitkomst('zicht1');else zt=0},1000)};z1();D.addEventListener('visibilitychange',z1);
 /* gedrag op de shop (Henkjan 21 okt: "Zorg dat clikmind alles meet"): tijd in beeld, scrollen, pagina's, winkelwagen, afrekenen, bundel, terugkomen */
 var ss=function(k,v){try{if(v===undefined)return sessionStorage.getItem(k)||'';sessionStorage.setItem(k,v)}catch(e){return ''}};
 if(!u&&!ss('mmc_s')){W.mmUitkomst('terug')}ss('mmc_s','1');

@@ -39,11 +39,11 @@ import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdr
 import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 import { demandRadar } from '../lib/demandradar.js';
-const SHOP_UIT = true; // 27 okt: Henkjan "Stop alle campagnes want url verandert" (ook propellerads-mcp lib/budget.ts SHOP_UIT). Weer aan alleen op zijn woord.
+const SHOP_UIT = false; // 27 okt: shop op kadoly.com; Henkjan: "Zet er 20 aan maar verander domeinnaam in kadoly.com" (ook propellerads-mcp lib/budget.ts SHOP_UIT)
 const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
-const SHOP = 'https://yoors.shop/shop';
+const SHOP = 'https://kadoly.com/shop';
 // Terugmeldlinks per netwerk (PB) staan in lib/shopdirect.js. Clickadu: zet de link in SHOP_PB_CLICKADU met {clickid} op de plek van de klik-id.
 const NETTEN = { md: 'Mondiad', pa: 'PropellerAds', ra: 'RichAds', ca: 'Clickadu', x: 'Overig' };
 const netVan = src => /mondiad/.test(src) ? 'md' : /propeller/.test(src) ? 'pa' : /richads/.test(src) ? 'ra' : /clickadu/.test(src) ? 'ca' : 'x';
@@ -188,7 +188,7 @@ async function metUniek(net, zones) { for (const [z, o] of Object.entries(zones)
 async function shopStand(pid) {
   const key = 'hjdk:shop:stand2:' + pid; try { const c = await kv.get(key); if (c && Date.now() - c.at < 36e5) return c; } catch (e) {}
   const kop = { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': 'nl-NL,nl;q=0.9' };
-  const haal = async pad => { const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 6000); try { const r = await fetch('https://yoors.shop' + pad, { headers: kop, signal: ac.signal }); return r.ok ? await r.text() : ''; } catch (e) { return ''; } finally { clearTimeout(t); } };
+  const haal = async pad => { const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 6000); try { const r = await fetch('https://kadoly.com' + pad, { headers: kop, signal: ac.signal }); return r.ok ? await r.text() : ''; } catch (e) { return ''; } finally { clearTimeout(t); } };
   const [p, c] = await Promise.all([haal('/product/' + pid + '?lang=nl'), haal('/shop/checkout/' + pid + '?lang=nl')]);
   if (!p || !c) return null;
   const has = (h, x) => h.includes(x); const fotos = (p.match(/"photos":\[(.*?)\],"/) || [])[1]; const ship = (p.match(/"ship_days":"([^"]*)"/) || [])[1] || null;
@@ -397,7 +397,7 @@ async function direct(req, res, x) {
   let mmp = leesCookie(req, 'mmp'); const nieuwP = !/^[0-9a-f]{16}$/.test(mmp); if (nieuwP) mmp = nieuwId(8);
   let rec = null; try { rec = await kv.get(K.rec(code)); } catch (e) {}
   const cid = (rec && rec.mmc) || nieuwId(6);
-  const doel = 'https://yoors.shop/product/' + encodeURIComponent(pid) + '?utm_source=' + NETTEN[net].toLowerCase() + '&utm_medium=push&utm_campaign=shoplus&utm_content=' + encodeURIComponent(pk(pid)) + '&hj=' + code + '&mmc=' + cid + '&lang=nl';
+  const doel = 'https://kadoly.com/product/' + encodeURIComponent(pid) + '?utm_source=' + NETTEN[net].toLowerCase() + '&utm_medium=push&utm_campaign=shoplus&utm_content=' + encodeURIComponent(pk(pid)) + '&hj=' + code + '&mmc=' + cid + '&lang=nl';
   if (!bot && !prefetch && (!rec || !rec.mmc)) {
     const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; rec.mmc = cid; if (test) rec.t = 1;
     try { await Promise.all([kv.set(K.rec(code), rec, { ex: 7 * 86400 }), cidKoppel(kv, { cid, pid: mmp, arm: rec.arm === 'd' ? 'direct' : 'pagina', tag: 'yoors-shop', net: test ? 'test' : CM_NET[net], zone: zone || '-', camp: camp || '-', shop: code })]); } catch (e) {}
@@ -467,7 +467,7 @@ ${held.b ? `<p class="brand">${esc(held.b)}</p>` : '<p class="brand">Yoors Shop<
 ${meer.length ? `<h2>Ook populair vandaag</h2><div class="pg">${meer.map(kaart).join('')}</div>` : ''}
 <a class="alles" href="${esc('/api/shop/uit?p=alles' + (code ? '&c=' + code : '') + '&pos=alles')}">Bekijk alle ${cat.items.length >= 100 ? cat.items.length + ' ' : ''}producten</a>
 </main>
-<footer><div class="wrap"><p>Dit is een selectie uit de Yoors Shop. Je bestelt en betaalt op yoors.shop.</p><div class="fl"><a href="https://yoors.shop/shop/privacy">Privacy</a><a href="https://yoors.shop/shop/terms">Voorwaarden</a><a href="https://yoors.shop/shop/returns">Retourneren</a></div><p>Yoors Shop by AdsFair B.V. · KVK 60126035 · Gouda</p></div></footer>
+<footer><div class="wrap"><p>Dit is een selectie uit de Yoors Shop. Je bestelt en betaalt op kadoly.com.</p><div class="fl"><a href="https://kadoly.com/shop/privacy">Privacy</a><a href="https://kadoly.com/shop/terms">Voorwaarden</a><a href="https://kadoly.com/shop/returns">Retourneren</a></div><p>Yoors Shop by AdsFair B.V. · KVK 60126035 · Gouda</p></div></footer>
 <script>(function(){var C=${JSON.stringify(code)},t0=Date.now(),mens=false,eng=false,s=0;function b(e){try{navigator.sendBeacon('/api/shop/b',new Blob([JSON.stringify({c:C,e:e})],{type:'text/plain'}))}catch(x){}}
 ['scroll','touchstart','pointerdown','keydown','pointermove'].forEach(function(ev){addEventListener(ev,function(){if(!mens){mens=true;b('mens')}},{passive:true})});
 var iv=setInterval(function(){if(document.visibilityState==='visible')s++;if(s>=15&&mens&&!eng){eng=true;clearInterval(iv);b('eng')}},1000);
@@ -535,7 +535,7 @@ async function uitgang(req, res, url) {
     await inc(keys); if (rec) { try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} } }
   else if (mmcNieuw) { try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} }
   const utm = 'utm_source=' + (net === 'x' ? 'shoplus' : NETTEN[net].toLowerCase()) + '&utm_medium=push&utm_campaign=shoplus' + (it ? '&utm_content=' + encodeURIComponent(pk(it.id)) : '') + (code ? '&hj=' + code : '') + (rec && rec.mmc ? '&mmc=' + rec.mmc : '') + '&lang=nl'; // de shop kiest anders de taal van de telefoon; de afrekenpagina is nog Engels
-  res.statusCode = 302; res.setHeader('location', (it ? 'https://yoors.shop/product/' + encodeURIComponent(it.id) : SHOP) + '?' + utm); res.setHeader('cache-control', 'no-store'); return res.end();
+  res.statusCode = 302; res.setHeader('location', (it ? 'https://kadoly.com/product/' + encodeURIComponent(it.id) : SHOP) + '?' + utm); res.setHeader('cache-control', 'no-store'); return res.end();
 }
 
 async function baken(req, res) {
@@ -599,11 +599,11 @@ async function plaatje(req, res, url) {
   if (!it || !it.img) { res.statusCode = 404; return res.end('onbekend product'); }
   try {
     // cdn.yoo.rs weigert sinds 22 okt kale server-verzoeken (403): vraag de foto op zoals een browser die op yoo.rs zit, en probeer anders zonder verwijzer
-    const H = [{ 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1', accept: 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8', referer: 'https://yoors.shop/' }, { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', accept: 'image/*,*/*;q=0.8' }, {}];
+    const H = [{ 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1', accept: 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8', referer: 'https://kadoly.com/' }, { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', accept: 'image/*,*/*;q=0.8' }, {}];
     let r = null; for (const h of H) { r = await fetch(it.img, { headers: h, signal: AbortSignal.timeout(8000) }).catch(() => null); if (r && r.ok) break; }
     if (!r || !r.ok) { // foto staat niet meer op die plek (catalogus achter): haal de huidige eerste foto van de productpagina
       const eerst = r ? r.status : 'geen antwoord'; let nu = null;
-      try { const h = await (await fetch('https://yoors.shop/product/' + encodeURIComponent(it.id) + '?lang=nl', { headers: H[1], signal: AbortSignal.timeout(10000) })).text(); const m = h.match(/"(?:serverUrl|src)":"(https:[^"]+?\.(?:webp|jpe?g|png)[^"]*)"/i); if (m) nu = m[1].replace(/\\\//g, '/'); } catch (e) {}
+      try { const h = await (await fetch('https://kadoly.com/product/' + encodeURIComponent(it.id) + '?lang=nl', { headers: H[1], signal: AbortSignal.timeout(10000) })).text(); const m = h.match(/"(?:serverUrl|src)":"(https:[^"]+?\.(?:webp|jpe?g|png)[^"]*)"/i); if (m) nu = m[1].replace(/\\\//g, '/'); } catch (e) {}
       if (nu && nu !== it.img) for (const hh of H) { r = await fetch(nu, { headers: hh, signal: AbortSignal.timeout(8000) }).catch(() => null); if (r && r.ok) break; }
       if (!r || !r.ok) throw new Error('foto ' + eerst + ' (' + String(it.img).replace(/^https?:\/\//, '').slice(0, 70) + ')' + (nu ? ', pagina-foto ' + (r ? r.status : '-') : ', geen foto op de pagina'));
     }
@@ -782,7 +782,7 @@ export default async function handler(req, res) {
     if (op === 'voorpa') return res.status(200).json(Object.assign({ ok: true }, await voorNet(['ra', 'ca'].includes(url.searchParams.get('net')) ? url.searchParams.get('net') : 'pa')));
     if (op === 'sitemap') { // openbare sitemap van alle shopproducten op yoo.rs (20 okt: yoo.rs/sitemap.xml werkt niet); ingediend bij Google en Bing voor yoo.rs
       const items = (await catalog(true)).items || []; const nu = new Date().toISOString().slice(0, 10);
-      const xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n<url><loc>https://yoors.shop/shop</loc><lastmod>' + nu + '</lastmod></url>\n' + items.map(i => '<url><loc>https://yoors.shop/product/' + encodeURIComponent(i.id) + '?lang=nl</loc><lastmod>' + nu + '</lastmod></url>').join('\n') + '\n</urlset>';
+      const xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n<url><loc>https://kadoly.com/shop</loc><lastmod>' + nu + '</lastmod></url>\n' + items.map(i => '<url><loc>https://kadoly.com/product/' + encodeURIComponent(i.id) + '?lang=nl</loc><lastmod>' + nu + '</lastmod></url>').join('\n') + '\n</urlset>';
       res.setHeader('content-type', 'application/xml; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(200).send(xml);
     }
     if (op === 'prompt') { // kant-en-klare opdracht voor Babita's Claude Code (lib/shopprompt.js), live cijfers; met haar eigen link of via de beschermde host
@@ -816,7 +816,7 @@ export default async function handler(req, res) {
       const q = String(url.searchParams.get('q') || '').toLowerCase().split(/[,|]/).map(x => x.trim()).filter(Boolean).slice(0, 30); if (!q.length) return res.status(400).json({ ok: false, fout: 'q ontbreekt (meerdere termen met komma)' });
       const cat = await catalog(true), kaart = (await kv.get(K_KOST).catch(() => null)) || {};
       const hit = cat.items.filter(i => { const t = (i.id + ' ' + i.t + ' ' + (i.b || '') + ' ' + (i.c || '') + ' ' + (i.s || '')).toLowerCase(); return q.some(w => t.includes(w)); });
-      return res.status(200).json({ ok: true, catalogusVan: cat.at ? new Date(cat.at).toISOString() : null, producten: cat.items.length, gevonden: hit.length, items: hit.slice(0, 200).map(i => { const k = kaart[i.id] || {}; const vk = i.fs ? 0 : num(i.vk); return { id: i.id, titel: i.t, merk: i.b || null, cat: i.c || null, sub: i.s || null, prijs: i.p, verzending: vk, thuis: Math.round((num(i.p) + vk) * 100) / 100, inkoop: k.c ?? null, onzeVerzending: k.z ?? null, marge: i.mg ?? null, voorraad: i.vr ?? null, levertijd: i.lt ?? null, img: !!i.img, link: 'https://yoors.shop/product/' + i.id + '?lang=nl' }; }) }); }
+      return res.status(200).json({ ok: true, catalogusVan: cat.at ? new Date(cat.at).toISOString() : null, producten: cat.items.length, gevonden: hit.length, items: hit.slice(0, 200).map(i => { const k = kaart[i.id] || {}; const vk = i.fs ? 0 : num(i.vk); return { id: i.id, titel: i.t, merk: i.b || null, cat: i.c || null, sub: i.s || null, prijs: i.p, verzending: vk, thuis: Math.round((num(i.p) + vk) * 100) / 100, inkoop: k.c ?? null, onzeVerzending: k.z ?? null, marge: i.mg ?? null, voorraad: i.vr ?? null, levertijd: i.lt ?? null, img: !!i.img, link: 'https://kadoly.com/product/' + i.id + '?lang=nl' }; }) }); }
     if (op === 'kies' || op === 'getest') { // shoptest (Henkjan 19 okt): elke dag 20 producten lerend testen; lib/shopkies.js. Marges staan erin: alleen met de gedeelde sleutel of via de beschermde vercel.app-host
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; const s = await geheim(); const k = String(req.headers['x-shop-sleutel'] || '');
       if (!/\.vercel\.app$/i.test(host) && !(s && k === s)) return res.status(404).send('Niet gevonden');
@@ -834,7 +834,7 @@ export default async function handler(req, res) {
       const vals = []; for (let i = 0; i < keys.length; i += 480) vals.push(...await kv.mget(...keys.slice(i, i + 480)));
       const tellers = {}; items.forEach((it, i) => { const o = {}; let iets = 0; SRT.forEach((x, j) => { o[x] = num(vals[i * SRT.length + j]); iets += o[x]; }); if (iets) tellers[it.id] = o; });
       const strategie = STRATEGIEEN.includes(url.searchParams.get('strategie')) ? url.searchParams.get('strategie') : ((await kv.get(K_STRATEGIE).catch(() => null)) || 'auto');
-      const uit = kies({ strategie, items, kaart, markt, termen, tellers, getest, seizoen, thema: themaVan, vandaag: dag, n, plaatje: pid => ({ icon: beeld(pid, 'icon'), image: beeld(pid, 'pa'), link: 'https://yoors.shop/product/' + pid + '?lang=nl' }) });
+      const uit = kies({ strategie, items, kaart, markt, termen, tellers, getest, seizoen, thema: themaVan, vandaag: dag, n, plaatje: pid => ({ icon: beeld(pid, 'icon'), image: beeld(pid, 'pa'), link: 'https://kadoly.com/product/' + pid + '?lang=nl' }) });
       uit.bronnen = { catalogus: items.length, metInkoop: Object.keys(kaart).length, marktprijzen: Object.keys(markt).length, vraagtermen: termen.length, metVerkeer: Object.keys(tellers).length, alGetest: Object.keys(getest).length };
       if (cache) { // dagkeuze blijft die van vanochtend; oordelen en de vaste plekken voor presterend en veelbelovend zijn altijd vers
         const vast = (cache.gekozen || []).filter(x => x.hoe !== 'presterend' && x.hoe !== 'veelbelovend'); const extra = (uit.gekozen || []).filter(x => (x.hoe === 'presterend' || x.hoe === 'veelbelovend') && !vast.some(v => v.pid === x.pid));
@@ -845,7 +845,7 @@ export default async function handler(req, res) {
       const pid = pidOk(url.searchParams.get('p')) || 'oc_4174004347453441';
       const ck = 'hjdk:shop:koopcheck:' + pid; try { const c = await kv.get(ck); if (c && Date.now() - c.at < 6e5 && !url.searchParams.get('vers')) return res.status(200).json(c); } catch (e) {}
       const kop = { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': 'nl-NL,nl;q=0.9' };
-      const haal = async pad => { const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 25000); const t0 = Date.now(); try { const r = await fetch('https://yoors.shop' + pad, { headers: kop, signal: ac.signal, redirect: 'manual' }); const h = await r.text(); const tekst = h.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim(); const zk = url.searchParams.getAll('zoek').slice(0, 6).map(z => String(z).slice(0, 40)).filter(Boolean); const stukken = {}; for (const z of zk) { const l = []; let i = -1; while (l.length < 3 && (i = h.toLowerCase().indexOf(z.toLowerCase(), i + 1)) >= 0) l.push(h.slice(Math.max(0, i - 300), i + 400)); stukken[z] = { aantal: h.toLowerCase().split(z.toLowerCase()).length - 1, stukken: l }; } return { pad, stukken, status: r.status, ms: Date.now() - t0, location: r.headers.get('location'), bytes: h.length, titel: (h.match(/<title>([^<]*)<\/title>/) || [])[1] || null, tekst: tekst.slice(0, 2500), ideal: /iDEAL/i.test(h), engels: /Add to cart|Buy now|Checkout|Total to pay/.test(tekst), registreer: /Registreren|Sign up|Log in/i.test(tekst) }; } catch (e) { return { pad, fout: String(e.message || e).slice(0, 120), ms: Date.now() - t0 }; } finally { clearTimeout(t); } };
+      const haal = async pad => { const ac = new AbortController(); const t = setTimeout(() => ac.abort(), 25000); const t0 = Date.now(); try { const r = await fetch('https://kadoly.com' + pad, { headers: kop, signal: ac.signal, redirect: 'manual' }); const h = await r.text(); const tekst = h.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim(); const zk = url.searchParams.getAll('zoek').slice(0, 6).map(z => String(z).slice(0, 40)).filter(Boolean); const stukken = {}; for (const z of zk) { const l = []; let i = -1; while (l.length < 3 && (i = h.toLowerCase().indexOf(z.toLowerCase(), i + 1)) >= 0) l.push(h.slice(Math.max(0, i - 300), i + 400)); stukken[z] = { aantal: h.toLowerCase().split(z.toLowerCase()).length - 1, stukken: l }; } return { pad, stukken, status: r.status, ms: Date.now() - t0, location: r.headers.get('location'), bytes: h.length, titel: (h.match(/<title>([^<]*)<\/title>/) || [])[1] || null, tekst: tekst.slice(0, 2500), ideal: /iDEAL/i.test(h), engels: /Add to cart|Buy now|Checkout|Total to pay/.test(tekst), registreer: /Registreren|Sign up|Log in/i.test(tekst) }; } catch (e) { return { pad, fout: String(e.message || e).slice(0, 120), ms: Date.now() - t0 }; } finally { clearTimeout(t); } };
       const [p, c, s] = await Promise.all([haal('/product/' + pid + '?lang=nl'), haal('/shop/checkout/' + pid + '?lang=nl'), haal('/')]);
       const o = { ok: true, at: Date.now(), pid, product: p, checkout: c, home: Object.assign({}, s, { tekst: (s.tekst || '').slice(0, 800) }) };
       try { await kv.set(ck, o, { ex: 3600 }); } catch (e) {} return res.status(200).json(o); }
@@ -959,7 +959,7 @@ export default async function handler(req, res) {
         const mc = await M.merchantKort(kv, () => token(oidc, 'https://www.googleapis.com/auth/content')).catch(() => null);
         const uil = ((await catalog()).items || []).find(i => i.id === 'oc_4174004451622913');
         let sm = await kv.get('hjdk:shop:smcheck').catch(() => null);
-        if (!sm || Date.now() - sm.at > 3600e3) { sm = { at: Date.now(), robots: false, xml: false }; try { const r = await fetch('https://yoors.shop/robots.txt', { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(4000) }); if (r.ok) sm.robots = /^\s*sitemap:/im.test(await r.text()); } catch (e) {} try { const r = await fetch('https://yoors.shop/sitemap.xml', { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(4000) }); if (r.ok) sm.xml = /<(urlset|sitemapindex)/i.test((await r.text()).slice(0, 3000)); } catch (e) {} await kv.set('hjdk:shop:smcheck', sm, { ex: 7200 }).catch(() => {}); }
+        if (!sm || Date.now() - sm.at > 3600e3) { sm = { at: Date.now(), robots: false, xml: false }; try { const r = await fetch('https://kadoly.com/robots.txt', { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(4000) }); if (r.ok) sm.robots = /^\s*sitemap:/im.test(await r.text()); } catch (e) {} try { const r = await fetch('https://kadoly.com/sitemap.xml', { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(4000) }); if (r.ok) sm.xml = /<(urlset|sitemapindex)/i.test((await r.text()).slice(0, 3000)); } catch (e) {} await kv.set('hjdk:shop:smcheck', sm, { ex: 7200 }).catch(() => {}); }
         prio = { mc, uilPrijs: uil ? num(uil.p) : null, sm, prompt: '/api/shop/prompt?k=' + encodeURIComponent(url.searchParams.get('k') || '') };
       } catch (e) {}
       let lek = null; try { const st = await uurStand(kv, 24); const laatst = {}; for (const w of ['cart', 'afreken', 'betaal', 'fout', 'koop', 'koop:ideal', 'koop:paypal']) { try { laatst[w] = await kv.get('hjdk:shop:pxlaatst:' + w); } catch (e) {} }
@@ -974,7 +974,7 @@ export default async function handler(req, res) {
       return res.status(200).send(prijsCsv(await prijsStand(kv, (await catalog()).items))); }
     if (op === 'bron') { // controle: haalt een pagina van yoo.rs op zoals een Nederlandse telefoon die ziet (alleen yoo.rs, alleen lezen)
       const pad = String(url.searchParams.get('u') || '/shop/'); if (!/^\/[\w\/\-?=&.%]*$/.test(pad)) return res.status(400).json({ ok: false });
-      const r = await fetch('https://yoors.shop' + pad, { redirect: 'manual', headers: { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': url.searchParams.get('taal') || 'nl-NL,nl;q=0.9' } });
+      const r = await fetch('https://kadoly.com' + pad, { redirect: 'manual', headers: { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': url.searchParams.get('taal') || 'nl-NL,nl;q=0.9' } });
       const html = await r.text(); const tekst = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
       const zoek = url.searchParams.getAll('zoek'); if (zoek.length) { const uit = {}; for (const z of zoek) { const l = []; let i = -1; while (l.length < 4 && (i = html.indexOf(z, i + 1)) >= 0) l.push({ op: i, html: html.slice(Math.max(0, i - 350), i + 450) }); uit[z] = { aantal: html.split(z).length - 1, stukken: l }; } return res.status(200).json({ ok: true, status: r.status, lengte: html.length, uit }); }
       const van = Number(url.searchParams.get('van') || 0);
