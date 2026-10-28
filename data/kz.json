@@ -13667,9 +13667,9 @@
    "cat": "Elektronica",
    "pct": 2.5,
    "term": "printer",
-   "title": "Welke printer past bij jou?",
+   "title": "Printer keuzehulp: welke printer past bij jou?",
    "h1": "Printer kiezen: inkt, laser of inkttank",
-   "kort": "Weinig printen (tot 20 pagina's per maand): kleurenlaser of een goedkope inkjet accepteren met dure cartridges. Regelmatig printen: inkttankprinter (EcoTank, MegaTank) met kosten van 1 cent per pagina. Alleen zwart-wit en snel: monolaser.",
+   "kort": "Welke printer past bij jou hangt af van hoeveel je print. Print je weinig (een paar pagina's per maand), kies dan een laserprinter: toner droogt niet in en een pagina kost 3 tot 5 cent. Print je regelmatig en in kleur, voor school of thuiswerk, dan is een inkttankprinter (EcoTank, MegaTank, Smart Tank) het voordeligst: 0,5 tot 1 cent per pagina. Veel zwart-wit en snel: een zwart-wit laser. Neem een goedkope inkjet met cartridges alleen als je zelden print en weinig wilt uitgeven, want cartridges kosten 20 tot 30 cent per pagina. Let verder op wifi, automatisch dubbelzijdig printen en of je wilt scannen (all-in-one).",
    "intro": "De printer is goedkoop, de inkt is het verdienmodel. Drie vragen bepalen welk type je over drie jaar het minst kost.",
    "questions": [
     {
@@ -13769,16 +13769,32 @@
    ],
    "faq": [
     {
-     "q": "Wat is het goedkoopst per pagina?",
-     "a": "Inkttank (0,5–1 cent), monolaser (3 cent), kleurenlaser (8–12 cent), inkjetcartridges (20–30 cent)."
+     "q": "Welke printer past bij mij?",
+     "a": "Kijk naar hoeveel en wat je print. Weinig en vooral tekst: een laserprinter. Regelmatig en in kleur: een inkttankprinter. Veel zwart-wit: een zwart-wit laser. Foto's: een inkjet met zes kleuren of een inkttank fotoprinter. Moet je ook scannen en kopiëren, neem dan een all-in-one."
     },
     {
-     "q": "Droogt een inkttankprinter uit?",
-     "a": "Minder snel dan cartridges; print minimaal eens per 2 weken iets in kleur."
+     "q": "Waar moet je op letten bij het kopen van een printer?",
+     "a": "Op de kosten per pagina, niet alleen op de aanschafprijs. Daarna op wifi en printen vanaf je telefoon (AirPrint of Mopria), automatisch dubbelzijdig printen, of er een scanner en documentinvoer op zit en hoeveel papier de lade houdt."
+    },
+    {
+     "q": "Wat is het goedkoopst per pagina?",
+     "a": "Inkttank (0,5 tot 1 cent), zwart-wit laser (3 cent), kleurenlaser (8 tot 12 cent), inkjetcartridges (20 tot 30 cent)."
     },
     {
      "q": "Laser of inkjet voor thuis?",
-     "a": "Zelden printen: laser. Vaak en in kleur: inkttank. Foto's: inkjet met 6 kleuren."
+     "a": "Print je zelden, dan een laser: die droogt niet uit. Print je vaak en in kleur, dan een inkttank. Voor foto's een inkjet met zes kleuren."
+    },
+    {
+     "q": "Welke printer is zuinig met inkt?",
+     "a": "Een inkttankprinter. Je vult hem uit flessen die duizenden pagina's meegaan, waardoor een pagina 0,5 tot 1 cent kost. De aanschaf is hoger (200 tot 300 euro), maar bij meer dan 50 pagina's per maand verdien je dat binnen een tot twee jaar terug."
+    },
+    {
+     "q": "Droogt een inkttankprinter uit?",
+     "a": "Minder snel dan cartridges, maar print toch minstens eens per twee weken een pagina in kleur. Print je maanden niets, kies dan een laser."
+    },
+    {
+     "q": "Welke soorten printers zijn er?",
+     "a": "Inkjet met cartridges, inkttankprinter met navulbare tanks, laserprinter (zwart-wit of kleur) en fotoprinter. Elk type is er als losse printer of als all-in-one met scanner en kopieerfunctie."
     }
    ],
    "verwant": [
@@ -13791,6 +13807,11 @@
     "monitor",
     "bureaustoel",
     "zit-sta-bureau"
+   ],
+   "vast": [
+    "title",
+    "kort",
+    "faq"
    ]
   },
   {
