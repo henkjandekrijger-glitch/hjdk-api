@@ -40,6 +40,7 @@ import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 import { demandRadar } from '../lib/demandradar.js';
 const SHOP_UIT = false; // 27 okt: shop op kadoly.com; Henkjan: "Zet er 20 aan maar verander domeinnaam in kadoly.com" (ook propellerads-mcp lib/budget.ts SHOP_UIT)
+const POORT = true; // 28 okt: altijd via onze pagina met Clickmind, geen bots door naar kadoly.com (zie land())
 const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
@@ -163,13 +164,13 @@ async function claudeJson(prompt, o) {
 }
 const kortTitel = it => { let t = it.t.replace(/\s+(van|by|door)\s+[A-Z][\w .&-]+$/, '').replace(/\s+(Art Bizniz|Mica Decorations|Soeji|Housevitamin|Label2X)\b.*$/i, '').replace(/\s+\d+([.,]\d+)?\s?x\s?\d+.*$/i, '').trim(); if (t.length > 30) t = t.slice(0, 31).replace(/\s+\S*$/, ''); return t; };
 async function nieuweTekst(it, beste, bestaand) {
-  const j = await claudeJson(`Schrijf 3 Nederlandse push-advertenties voor dit product uit de Yoors Shop (webshop, verzonden vanuit Europa, 14 dagen retour): "${it.t}" van ${it.b || 'onbekend merk'}, ${eur(it.p)}${it.pf ? ' (vanaf-prijs)' : ''}, categorie ${it.c}/${it.s}. Vandaag is het ${DAY()}.
+  const j = await claudeJson(`Schrijf 3 Nederlandse push-advertenties voor dit product van Kadoly (webshop, verzonden vanuit Europa, 14 dagen retour): "${it.t}" van ${it.b || 'onbekend merk'}, ${eur(it.p)}${it.pf ? ' (vanaf-prijs)' : ''}, categorie ${it.c}/${it.s}. Vandaag is het ${DAY()}.
 Wat tot nu toe het meest doorklikte naar de shop: ${beste.length ? beste.map(b => '"' + b.title + '" / "' + b.desc + '"').join('; ') : 'nog niets bekend'}.
 Regels: titel hooguit 30 tekens, tekst hooguit 40 tekens. Eerlijk: verzin geen eigenschappen die niet in de productnaam staan, geen nep-urgentie, geen 'gratis', geen korting noemen. Noem de prijs alleen exact zoals hierboven. Concreet en nieuwsgierig makend, elke variant een andere invalshoek (cadeau, seizoen of moment, zelf doen, sfeer in huis). Gewone spreektaal, geen uitroeptekens. Antwoord alleen JSON: {"varianten":[{"title":"","desc":""}]}`, { fn: 'shop-advertentietekst', max: 400, cacheTtl: 3 * 86400 });
   const al = new Set(bestaand.map(a => a.title.toLowerCase()));
   const v = (j && Array.isArray(j.varianten) ? j.varianten : []).map(x => ({ title: String(x.title || '').trim(), desc: String(x.desc || x.description || '').trim() })).filter(x => x.title && x.desc && x.title.length <= 30 && x.desc.length <= 40 && !al.has(x.title.toLowerCase()));
   if (v.length) return Object.assign({ bron: 'claude' }, v[0]);
-  const t = kortTitel(it); return al.has(t.toLowerCase()) ? null : { title: t, desc: ('Nu in de Yoors Shop voor ' + eur(it.p)).slice(0, 40), bron: 'sjabloon' };
+  const t = kortTitel(it); return al.has(t.toLowerCase()) ? null : { title: t, desc: ('Nu bij Kadoly voor ' + eur(it.p)).slice(0, 40), bron: 'sjabloon' };
 }
 async function advertenties() { let a = null; try { a = await kv.get(K.ads); } catch (e) {} if (!Array.isArray(a) || !a.length) { a = seed.ads.map(x => Object.assign({ at: Date.now(), bron: 'start' }, x)); try { await kv.set(K.ads, a); } catch (e) {} }
   let ver = false; for (const s of seed.ads) { const x = a.find(q => q.pid === s.pid && q.title === s.title); if (!x) { a.push(Object.assign({ at: Date.now(), bron: 'start' }, s)); ver = true; } else if (x.bron === 'start' && x.desc !== s.desc) { x.desc = s.desc; ver = true; } } // startteksten volgen het bestand (PropellerAds: tekst hooguit 40 tekens)
@@ -246,7 +247,7 @@ async function ronde(droog) {
     // eerst: een tweede tekst voor het product dat het best doorklikt; dan: het beste product dat nog geen advertentie heeft
     const kand = []; const besteMetData = vastRang.find(r => r.k >= 3 && metAd.has(r.id) && ads.filter(a => a.pid === r.id && !a.uit).length < 3); if (besteMetData) kand.push(besteMetData.id);
     rang.filter(r => !metAd.has(r.id) && r.reden).slice(0, 4).forEach(r => kand.push(r.id)); // alleen producten met een reden: in het seizoen, bewaard in de shop of al doorkliks
-    for (const pid of kand) { if (ruimte <= 0) break; const it = perId[pid]; const t = droog ? { title: kortTitel(it), desc: 'Nu in de Yoors Shop voor ' + eur(it.p), bron: 'droog' } : await nieuweTekst(it, besteAds, ads); if (!t) continue;
+    for (const pid of kand) { if (ruimte <= 0) break; const it = perId[pid]; const t = droog ? { title: kortTitel(it), desc: 'Nu bij Kadoly voor ' + eur(it.p), bron: 'droog' } : await nieuweTekst(it, besteAds, ads); if (!t) continue;
       ads.push({ pid, title: t.title, desc: t.desc, at: Date.now(), bron: t.bron }); metAd.add(pid); adsVer = true; ruimte--; vandaag.nieuweAds = num(vandaag.nieuweAds) + 1; B('nieuwe advertentie', it.t.slice(0, 60), `"${t.title}" / "${t.desc}"`); } }
   if (adsVer && !droog) await kv.set(K.ads, ads.slice(-200));
   if (!droog) await kv.set(K.top, { at: Date.now(), ids: top, thema: Object.fromEntries(rang.slice(0, 120).map(r => [r.id, r.thema])) });
@@ -336,7 +337,7 @@ async function lessen(inz, dag, droog) {
   if (droog || bezoekers < 40 || (oud && oud.dag === DAY() && !slot && !slecht && bezoekers < 1.5 * num(oud.bezoekers) && doorkliks < 1.5 * num(oud.doorkliks) + 5)) return oud;
   let meetKoop = false; try { meetKoop = !!(await kv.get('hjdk:shop:pxlaatst:koop')) || !!(await kv.get('hjdk:shop:pxlaatst:cart')); } catch (e) {}
   const plekTop = Object.entries(inz.plekken || {}).flatMap(([n, l]) => l.slice(0, 4).map(z => ({ netwerk: NETTEN[n], plek: z.plek, bezoekers: z.bezoekers, echteMensen: z.mensen, doorkliks: z.doorkliks })));
-  const j = await claudeJson(`Je bent mediabuyer voor de Yoors Shop (Nederlandse webshop). Hieronder de cijfers van betaald push-verkeer via een landingspagina: per thema, per advertentie, per uur en per netwerk. "doorklik" = de bezoeker klikte door naar de productpagina in de shop. Schrijf hooguit 6 lessen in gewoon Nederlands, elk een zin van hooguit 25 woorden, concreet en met het getal erbij. Alleen wat de cijfers echt laten zien; bij minder dan 30 bezoekers op een regel trek je geen conclusie. Geen jargon, geen opsommingstekens, geen gedachtestreepjes. Komt het grootste deel van de doorkliks van een enkele advertentieplek, zeg dat dan eerlijk in een van de lessen: de cijfers per advertentie zijn dan minder betrouwbaar. ${meetKoop ? '' : 'Let op: de shop geeft winkelwagen en bestellingen nog niet door, dus die staan op 0 omdat ze niet gemeten worden. Trek daar geen conclusie uit en schrijf niet dat het na de doorklik misgaat; noem hooguit dat aankopen nog niet meetbaar zijn. '}Sluit af met een les over wat we hierna het best kunnen testen.
+  const j = await claudeJson(`Je bent mediabuyer voor Kadoly (Nederlandse webshop). Hieronder de cijfers van betaald push-verkeer via een landingspagina: per thema, per advertentie, per uur en per netwerk. "doorklik" = de bezoeker klikte door naar de productpagina in de shop. Schrijf hooguit 6 lessen in gewoon Nederlands, elk een zin van hooguit 25 woorden, concreet en met het getal erbij. Alleen wat de cijfers echt laten zien; bij minder dan 30 bezoekers op een regel trek je geen conclusie. Geen jargon, geen opsommingstekens, geen gedachtestreepjes. Komt het grootste deel van de doorkliks van een enkele advertentieplek, zeg dat dan eerlijk in een van de lessen: de cijfers per advertentie zijn dan minder betrouwbaar. ${meetKoop ? '' : 'Let op: de shop geeft winkelwagen en bestellingen nog niet door, dus die staan op 0 omdat ze niet gemeten worden. Trek daar geen conclusie uit en schrijf niet dat het na de doorklik misgaat; noem hooguit dat aankopen nog niet meetbaar zijn. '}Sluit af met een les over wat we hierna het best kunnen testen.
 Cijfers: ${JSON.stringify({ vandaag: dag, totaalDoorkliks: doorkliks, plekken: plekTop, themas: inz.themas, advertenties: inz.advertenties.slice(0, 20).map(a => ({ titel: a.titel, tekst: a.tekst, bezoekers: a.bezoekers, echtPct: a.echtPct, doorkliks: a.doorkliks, bestellingen: a.bestellingen })), uren: inz.uren }).slice(0, 9000)}
 Antwoord alleen JSON: {"lessen":["..."]}`, { fn: 'shop-lessen', model: process.env.SHOP_LES_MODEL || SONNET, max: 700 });
   const l = (j && Array.isArray(j.lessen) ? j.lessen : []).map(x => String(x).trim()).filter(x => x && !rommel(x)).slice(0, 6);
@@ -432,7 +433,10 @@ async function land(req, res, url) {
   const code = clickid && net !== 'x' ? shortId(net + ':' + clickid) : '';
   // directe route (lib/shopdirect.js): per persoon vast naar deze landingspagina (l) of in één keer naar de productpagina op yoo.rs (d).
   // Alleen betaald verkeer met een klik-id. Iedereen krijgt dezelfde behandeling, ook wat op een bot lijkt (geen cloaking).
-  if (code) { const f = q.get('arm'); const arm = f === 'd' || f === 'l' ? f : shopArm(apparaat(req), (await directInst(kv)).pct); if (arm === 'd') return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot }); }
+  // Poort (Henkjan 28 okt: "Zorg voor clickmind er tussen mogen geen bots naar kadoly"): niemand gaat meer in één keer door naar de shop,
+  // ook niet met arm=d in de campagnelink. Iedereen (mens of bot, geen cloaking) krijgt deze pagina met Clickmind; alleen wie echt tikt gaat
+  // via /api/shop/uit door naar kadoly.com, en pas die tik meldt de conversie aan het netwerk.
+  if (code && !POORT) { const f = q.get('arm'); const arm = f === 'd' || f === 'l' ? f : shopArm(apparaat(req), (await directInst(kv)).pct); if (arm === 'd') return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot }); }
   if (!bot) {
     let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, { ex: 7 * 86400 }); } catch (e) {} }
     if (nieuw) { const keys = ['sh-' + net + '-view', 'sh-d' + D8() + '-' + net + '-view', 'sh-u' + nlUur() + '-view', 'sh-p-' + pk(pid) + '-himp'].concat(meer.map(m => 'sh-p-' + pk(m.id) + '-imp'));
@@ -442,7 +446,7 @@ async function land(req, res, url) {
   }
   const uit = (id, pos) => '/api/shop/uit?p=' + encodeURIComponent(id) + (code ? '&c=' + code : '') + '&pos=' + pos;
   const kaart = (it, i) => `<a class="pc" href="${esc(uit(it.id, 'g' + (i + 1)))}"><img src="${esc(it.img)}" alt="" loading="lazy" width="460" height="460"><span class="pt">${esc(it.t)}</span><span class="pp">${it.pf ? 'vanaf ' : ''}${esc(eur(it.p))}</span></a>`;
-  const titel = held.t + ' | Yoors Shop';
+  const titel = held.t + ' | Kadoly';
   const html = `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>${esc(titel)}</title><link rel="preconnect" href="https://cdn.orderchamp.com">
 <style>${look(ACC, { dark: false })}
 .wrap{max-width:34rem}.topbar .wrap{height:54px}.tb{margin-left:auto;font-size:.875rem;color:var(--ink-3)}main{padding:14px 0 4px}
@@ -456,10 +460,10 @@ h2{font-size:1.25rem;margin:34px 0 12px}.pg{display:grid;grid-template-columns:1
 .pt{display:block;padding:10px 12px 0;font-size:1rem;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.pp{display:block;padding:4px 12px 12px;font-weight:750;font-size:1.0625rem}
 .alles{display:block;text-align:center;margin:18px 0 0;padding:14px;border:1.5px solid var(--ink);border-radius:12px;color:var(--ink);font-weight:700;text-decoration:none}
 footer{margin-top:34px}</style><script src="/cm.js" data-site="shop" async></script></head><body>
-<header class="topbar"><div class="wrap"><a class="mark" href="${esc(uit(pid, 'logo'))}">Yoors <em>Shop</em></a><span class="tb">Verzonden vanuit Europa</span></div></header>
+<header class="topbar"><div class="wrap"><a class="mark" href="${esc(uit(pid, 'logo'))}">Kadoly</a><span class="tb">Verzonden vanuit Europa</span></div></header>
 <main class="wrap">
 <a href="${esc(uit(pid, 'h'))}"><img class="hero-img" src="${esc(held.img)}" alt="${esc(held.t)}" width="460" height="460"></a>
-${held.b ? `<p class="brand">${esc(held.b)}</p>` : '<p class="brand">Yoors Shop</p>'}
+${held.b ? `<p class="brand">${esc(held.b)}</p>` : '<p class="brand">Kadoly</p>'}
 <h1>${esc(held.t)}</h1>
 <p class="prijs">${held.pf ? '<small>vanaf </small>' : ''}${esc(eur(held.p))}</p>
 <a class="koop" href="${esc(uit(pid, 'h'))}">Bekijk in de shop</a>
@@ -467,7 +471,7 @@ ${held.b ? `<p class="brand">${esc(held.b)}</p>` : '<p class="brand">Yoors Shop<
 ${meer.length ? `<h2>Ook populair vandaag</h2><div class="pg">${meer.map(kaart).join('')}</div>` : ''}
 <a class="alles" href="${esc('/api/shop/uit?p=alles' + (code ? '&c=' + code : '') + '&pos=alles')}">Bekijk alle ${cat.items.length >= 100 ? cat.items.length + ' ' : ''}producten</a>
 </main>
-<footer><div class="wrap"><p>Dit is een selectie uit de Yoors Shop. Je bestelt en betaalt op kadoly.com.</p><div class="fl"><a href="https://kadoly.com/shop/privacy">Privacy</a><a href="https://kadoly.com/shop/terms">Voorwaarden</a><a href="https://kadoly.com/shop/returns">Retourneren</a></div><p>Yoors Shop by AdsFair B.V. · KVK 60126035 · Gouda</p></div></footer>
+<footer><div class="wrap"><p>Dit is een selectie uit Kadoly. Je bestelt en betaalt op kadoly.com.</p><div class="fl"><a href="https://kadoly.com/shop/privacy">Privacy</a><a href="https://kadoly.com/shop/terms">Voorwaarden</a><a href="https://kadoly.com/shop/returns">Retourneren</a></div><p>Kadoly by AdsFair B.V. · KVK 60126035 · Gouda</p></div></footer>
 <script>(function(){var C=${JSON.stringify(code)},t0=Date.now(),mens=false,eng=false,s=0;function b(e){try{navigator.sendBeacon('/api/shop/b',new Blob([JSON.stringify({c:C,e:e})],{type:'text/plain'}))}catch(x){}}
 ['scroll','touchstart','pointerdown','keydown','pointermove'].forEach(function(ev){addEventListener(ev,function(){if(!mens){mens=true;b('mens')}},{passive:true})});
 var iv=setInterval(function(){if(document.visibilityState==='visible')s++;if(s>=15&&mens&&!eng){eng=true;clearInterval(iv);b('eng')}},1000);
@@ -535,6 +539,7 @@ async function uitgang(req, res, url) {
     await inc(keys); if (rec) { try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} } }
   else if (mmcNieuw) { try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} }
   const utm = 'utm_source=' + (net === 'x' ? 'shoplus' : NETTEN[net].toLowerCase()) + '&utm_medium=push&utm_campaign=shoplus' + (it ? '&utm_content=' + encodeURIComponent(pk(it.id)) : '') + (code ? '&hj=' + code : '') + (rec && rec.mmc ? '&mmc=' + rec.mmc : '') + '&lang=nl'; // de shop kiest anders de taal van de telefoon; de afrekenpagina is nog Engels
+  if (bot) { res.statusCode = 403; res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('cache-control', 'no-store'); return res.end('Niet beschikbaar'); } // 28 okt: geen bots naar kadoly.com
   res.statusCode = 302; res.setHeader('location', (it ? 'https://kadoly.com/product/' + encodeURIComponent(it.id) : SHOP) + '?' + utm); res.setHeader('cache-control', 'no-store'); return res.end();
 }
 
@@ -830,9 +835,9 @@ export default async function handler(req, res) {
       const items = (await catalog(true)).items, kaart = (await kv.get(K_KOST).catch(() => null)) || {}, getest = (await kv.get(K_GETEST).catch(() => null)) || {};
       let markt = {}; try { const r = await fetch('https://demandradar-ivory.vercel.app/api/feed?shop=yoors&cc=NL&prices=1', { signal: AbortSignal.timeout(8000) }); if (r.ok) markt = ((await r.json()) || {}).items || {}; } catch (e) {}
       const termen = await demandRadar('NL').catch(() => []);
-      const SRT = ['dv', 'dm', 'da', 'cart', 'koop'], keys = []; items.forEach(i => SRT.forEach(x => keys.push('c:sh-p-' + pk(i.id) + '-' + x)));
+      const SRT = ['dv', 'dm', 'da', 'cart', 'koop', 'himp', 'lm', 'la'], keys = []; items.forEach(i => SRT.forEach(x => keys.push('c:sh-p-' + pk(i.id) + '-' + x)));
       const vals = []; for (let i = 0; i < keys.length; i += 480) vals.push(...await kv.mget(...keys.slice(i, i + 480)));
-      const tellers = {}; items.forEach((it, i) => { const o = {}; let iets = 0; SRT.forEach((x, j) => { o[x] = num(vals[i * SRT.length + j]); iets += o[x]; }); if (iets) tellers[it.id] = o; });
+      const tellers = {}; items.forEach((it, i) => { const o = {}; let iets = 0; SRT.forEach((x, j) => { o[x] = num(vals[i * SRT.length + j]); iets += o[x]; }); o.dv += o.himp; o.dm += o.lm; o.da += o.la; if (iets) tellers[it.id] = o; }); // 28 okt: route via onze pagina (himp/lm/la) telt mee
       const strategie = STRATEGIEEN.includes(url.searchParams.get('strategie')) ? url.searchParams.get('strategie') : ((await kv.get(K_STRATEGIE).catch(() => null)) || 'auto');
       const uit = kies({ strategie, items, kaart, markt, termen, tellers, getest, seizoen, thema: themaVan, vandaag: dag, n, plaatje: pid => ({ icon: beeld(pid, 'icon'), image: beeld(pid, 'pa'), link: 'https://kadoly.com/product/' + pid + '?lang=nl' }) });
       uit.bronnen = { catalogus: items.length, metInkoop: Object.keys(kaart).length, marktprijzen: Object.keys(markt).length, vraagtermen: termen.length, metVerkeer: Object.keys(tellers).length, alGetest: Object.keys(getest).length };
