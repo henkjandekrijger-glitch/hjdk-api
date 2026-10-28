@@ -35,7 +35,7 @@ import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
 import { K_KOST, ontvang as margeOntvang, margeStand, zetMarge } from '../lib/shopmarge.js';
 import { prijsStand, prijsCsv } from '../lib/shopprijs.js';
-import { uurTel, uurStand, lekkenPagina, uurAanvullen } from '../lib/shopuur.js';
+import { uurTel, uurStand, lekkenPagina, uurAanvullen, uurRitme } from '../lib/shopuur.js';
 import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdracht.js';
 import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
@@ -890,6 +890,7 @@ export default async function handler(req, res) {
       const lk = await kv.get('hjdk:shop:feedlock'); if (lk) { const f = await kv.get('hjdk:shop:lusfeed'); return res.status(200).json({ ok: true, wacht: true, stand: f ? { at: f.at, status: f.status, fout: f.fout || null, producten: f.producten, metInkoop: f.metInkoop, bestellingen: (f.orders || []).length, betaald: f.betaald, metHj: f.metHj, nagemeld: f.nagemeld } : null }); }
       await kv.set('hjdk:shop:feedlock', 1, { ex: 60 }); const f = await haalFeed();
       return res.status(200).json({ ok: true, stand: f ? { at: f.at, status: f.status, metSleutel: f.metSleutel, sleutelLengte: f.sleutelLengte, vingerafdruk: f.vingerafdruk, antwoord: f.antwoord || null, fout: f.fout || null, producten: f.producten, metInkoop: f.metInkoop, bestellingen: (f.orders || []).length, betaald: f.betaald, metHj: f.metHj, nagemeld: f.nagemeld, sleutels: f.sleutels, prodVelden: f.prodVelden, orderVelden: f.orderVelden, statussen: [...new Set((f.orders || []).map(o => o.s))].slice(0, 10) } : null }); }
+    if (op === 'uurritme') return res.status(200).json(Object.assign({ ok: true }, await uurRitme(kv, ['ra', 'ca', 'md'].includes(url.searchParams.get('net')) ? url.searchParams.get('net') : 'pa'))); // openbaar, alleen tellers per uur: welk uur koopt minder in (Henkjan 28 okt: minder inkopen als mensen eten)
     if (op === 'botzones') { const b = await botZonesVers(kv); return res.status(200).json({ ok: true, at: new Date(b.at || 0).toISOString(), uitleg: 'botplek (7 dagen) = 0 echte mensen terwijl er bij een gewone plek minstens 3 te verwachten waren, of minder dan een kwart van het gemiddelde aandeel echte mensen terwijl er minstens 6 te verwachten waren; blijft 30 dagen; Clickmind stuurt niet door en PropellerAds zet hem op de zwarte lijst', gem: b.gem || {}, aantal: Object.fromEntries(Object.entries(b.zones || {}).map(([n, z]) => [n, z.length])), redenen: b.redenen || {} }); }
     if (op === 'trechter') { // openbaar, alleen totalen: van bezoek naar doorklik per netwerk, per dag en per product; geen apparaten, geen kliknummers
       const dagen = [0, 1, 2, 3, 4].map(i => DAY(-i)); const perDag = {}; for (const d of dagen) perDag[d] = await dagTotaal(d);
