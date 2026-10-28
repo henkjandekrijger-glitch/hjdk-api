@@ -678,5 +678,16 @@
   "moeite": 2,
   "meten": "Google Afbeeldingen-vertoningen in GSC (searchType image) en LCP op mobiel",
   "risico": "Een functie per foto kost rekentijd bij de eerste aanvraag; met versie in de URL en een jaar cache daarna niet meer."
+ },
+ {
+  "id": "beelden-vindbaar",
+  "les": "Foto's vindbaar in Google en Bing Afbeeldingen: zet ze in de sitemap (image:image per pagina, vaste adres van het origineel), geef elke foto een ImageObject met alt, onderschrift, het kopje van het onderdeel en de fotograaf als de pagina die noemt (creator en creditText), gebruik beschrijvende bestandsnamen, laat elke kleinere maat met een canonical-kop naar het origineel wijzen en meld foto-adressen via IndexNow. Alleen gegevens die op de pagina staan.",
+  "kanaal": "beide",
+  "bewijs": "28 okt 2026 taniakross.media: 22 foto's op de homepage in de sitemap en als ImageObject, 5 met fotograaf uit de pagina zelf (Casper Rila, Anne van Zantwijk). Effect nog te meten.",
+  "bron": "eigen bouw taniakross.media (api/_foto.js fotoGegevens/fotoLd, api/seo.js beeldensitemap)",
+  "sterkte": 1,
+  "moeite": 2,
+  "meten": "GSC searchType image: vertoningen en kliks per foto na 2 en 4 weken; Bing Webmaster Afbeeldingen",
+  "risico": "Geen license of copyrightNotice invullen zonder dat de pagina het zegt."
  }
 ]
