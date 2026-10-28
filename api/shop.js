@@ -30,7 +30,8 @@ import { SHOP_PHP } from '../lib/shopphp.js';
 import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
 import { PB, CM_NET, SOORTEN_DIRECT, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks } from '../lib/shopdirect.js';
-import { verwerkKlik, serverSignalen, laterAf, nieuwId } from '../lib/mensmeter.js';
+import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
+import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
 import { K_KOST, ontvang as margeOntvang, margeStand, zetMarge } from '../lib/shopmarge.js';
 import { prijsStand, prijsCsv } from '../lib/shopprijs.js';
@@ -393,12 +394,22 @@ const leesCookie = (req, naam) => { const m = new RegExp('(?:^|;\\s*)' + naam + 
 // naar de productpagina, met hj (winkelwagen en betaling via de shop) en mmc (Clickmind; cm.js op yoo.rs meldt echt en actie).
 async function direct(req, res, x) {
   const { net, clickid, zone, cr, camp, pid, code, bot } = x; const test = /^test/i.test(clickid);
+  // Clickmind weert bots voor de doorstuur (Henkjan 28 okt: "Zorg dat clikmind echt bots blijft killen en filteren en volgende keer
+  // niet doorlate"): wie zich als bot meldt, verkeer uit een datacenter en kliks van een botplek (lib/shopbot.js: plek met veel
+  // aankomsten en geen echte mensen op kadoly.com) krijgen 403 en komen nooit op de shop. Echte mensen gaan altijd in een keer door
+  // (nooit een tussenpagina). Een controle van het netwerk zonder klik-id (moderatie, voorbeeld) wordt niet als datacenter geweerd.
+  let weiger = bot ? 'bot' : '';
+  if (!weiger && !test && echteKlikId(clickid)) {
+    try { await Promise.race([laadDc(kv), new Promise(r => setTimeout(r, 250))]); } catch (e) {}
+    try { if (dcVan(serverSignalen(req)).dc === true) weiger = 'datacenter'; } catch (e) {}
+    if (!weiger) { try { if (await isBotZone(kv, net, zone)) weiger = 'botplek'; } catch (e) {} }
+  }
   const prefetch = /prefetch|prerender/i.test(String(req.headers['sec-purpose'] || req.headers.purpose || ''));
   let mmp = leesCookie(req, 'mmp'); const nieuwP = !/^[0-9a-f]{16}$/.test(mmp); if (nieuwP) mmp = nieuwId(8);
   let rec = null; try { rec = await kv.get(K.rec(code)); } catch (e) {}
   const cid = (rec && rec.mmc) || nieuwId(6);
   const doel = 'https://kadoly.com/product/' + encodeURIComponent(pid) + '?utm_source=' + NETTEN[net].toLowerCase() + '&utm_medium=push&utm_campaign=shoplus&utm_content=' + encodeURIComponent(pk(pid)) + '&hj=' + code + '&mmc=' + cid + '&lang=nl';
-  if (!bot && !prefetch && (!rec || !rec.mmc)) {
+  if (!weiger && !prefetch && (!rec || !rec.mmc)) {
     const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; rec.mmc = cid; if (test) rec.t = 1;
     try { await Promise.all([kv.set(K.rec(code), rec, { ex: 7 * 86400 }), cidKoppel(kv, { cid, pid: mmp, arm: rec.arm === 'd' ? 'direct' : 'pagina', tag: 'yoors-shop', net: test ? 'test' : CM_NET[net], zone: zone || '-', camp: camp || '-', shop: code })]); } catch (e) {}
     if (eerst && !test) {
@@ -412,7 +423,7 @@ async function direct(req, res, x) {
       await Promise.race([werk, new Promise(r => setTimeout(r, 350))]);
     }
   }
-  if (bot) { res.statusCode = 403; res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('cache-control', 'no-store'); return res.end('Niet beschikbaar'); } // 28 okt: geen bots naar kadoly.com (Henkjan), alleen wie zich als bot of crawler meldt; plekken met veel nep weert Clickmind via de zonelijst
+  if (weiger) { if (!test) laterAf(inc(['sh-' + net + '-bk', 'sh-d' + D8() + '-' + net + '-bk', 'sh-d' + D8() + '-' + net + '-bk-' + weiger].concat(zone ? ['sh-' + net + '-z' + zone + '-bk'] : []))); res.statusCode = 403; res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('cache-control', 'no-store'); return res.end('Niet beschikbaar'); } // 28 okt: geen bots naar kadoly.com (Henkjan), alleen wie zich als bot of crawler meldt; plekken met veel nep weert Clickmind via de zonelijst
   res.statusCode = 302; res.setHeader('location', doel); res.setHeader('cache-control', 'no-store, private'); res.setHeader('referrer-policy', 'origin'); res.setHeader('x-robots-tag', 'noindex, nofollow');
   if (nieuwP) res.setHeader('set-cookie', 'mmp=' + mmp + '; Max-Age=15552000; Path=/; Secure; HttpOnly; SameSite=Lax');
   return res.end();
@@ -628,7 +639,7 @@ async function voorNet(net) {
   const zones = await metUniek(net, await tellers(net, 'z', await smembers(K.set('z', net)))), cr = await tellers(net, 'a', await smembers(K.set('a', net))), camp = await tellers(net, 'k', await smembers(K.set('k', net)));
   return { at: new Date().toISOString(), net, naam: NAAM, land: LAND() + '/shop', vandaag: (await dagTotaal(DAY()))[net], direct: Object.assign(await directInst(kv), { meet: (await shopMeet(kv)).aan }), // dmeet: cm.js meet op yoo.rs; zie lib/shopdirect.js voor landDeel en doorkliks
     ads: ads.filter(a => perId[a.pid] && !!perId[a.pid].img).map(a => ({ pid: a.pid, title: a.title, desc: a.desc, uit: a.uit || null, rang: volg.indexOf(a.pid), thema: themaVan(perId[a.pid]), icon: beeld(a.pid, 'icon'), image: beeld(a.pid, net === 'ra' ? 'md' : net === 'ca' ? 'ca' : 'pa') })),
-    zones, creatives: cr, campagnes: camp, staat: (await kv.get('hjdk:shop:' + net + 'staat:' + DAY())) || {}, staatGisteren: (await kv.get('hjdk:shop:' + net + 'staat:' + DAY(-1))) || {} };
+    zones, botZones: await (async () => { try { const b = await botZonesVers(kv); return { zones: (b.zones || {})[net] || [], redenen: Object.fromEntries(Object.entries(b.redenen || {}).filter(([k]) => k.startsWith(net + ':')).map(([k, w]) => [k.slice(net.length + 1), w])), gem: (b.gem || {})[net] || 0, at: b.at || 0 }; } catch (e) { return { zones: [], redenen: {}, fout: String(e && e.message || e).slice(0, 120) }; } })(), creatives: cr, campagnes: camp, staat: (await kv.get('hjdk:shop:' + net + 'staat:' + DAY())) || {}, staatGisteren: (await kv.get('hjdk:shop:' + net + 'staat:' + DAY(-1))) || {} };
 }
 
 // ---------------- statuspagina ----------------
@@ -879,9 +890,10 @@ export default async function handler(req, res) {
       const lk = await kv.get('hjdk:shop:feedlock'); if (lk) { const f = await kv.get('hjdk:shop:lusfeed'); return res.status(200).json({ ok: true, wacht: true, stand: f ? { at: f.at, status: f.status, fout: f.fout || null, producten: f.producten, metInkoop: f.metInkoop, bestellingen: (f.orders || []).length, betaald: f.betaald, metHj: f.metHj, nagemeld: f.nagemeld } : null }); }
       await kv.set('hjdk:shop:feedlock', 1, { ex: 60 }); const f = await haalFeed();
       return res.status(200).json({ ok: true, stand: f ? { at: f.at, status: f.status, metSleutel: f.metSleutel, sleutelLengte: f.sleutelLengte, vingerafdruk: f.vingerafdruk, antwoord: f.antwoord || null, fout: f.fout || null, producten: f.producten, metInkoop: f.metInkoop, bestellingen: (f.orders || []).length, betaald: f.betaald, metHj: f.metHj, nagemeld: f.nagemeld, sleutels: f.sleutels, prodVelden: f.prodVelden, orderVelden: f.orderVelden, statussen: [...new Set((f.orders || []).map(o => o.s))].slice(0, 10) } : null }); }
+    if (op === 'botzones') { const b = await botZonesVers(kv); return res.status(200).json({ ok: true, at: new Date(b.at || 0).toISOString(), uitleg: 'botplek = 40+ aankomsten in 7 dagen en 0 echte mensen, of 80+ en minder dan een kwart van het gemiddelde aandeel echte mensen; blijft 30 dagen; Clickmind stuurt niet door en PropellerAds zet hem op de zwarte lijst', gem: b.gem || {}, aantal: Object.fromEntries(Object.entries(b.zones || {}).map(([n, z]) => [n, z.length])), redenen: b.redenen || {} }); }
     if (op === 'trechter') { // openbaar, alleen totalen: van bezoek naar doorklik per netwerk, per dag en per product; geen apparaten, geen kliknummers
       const dagen = [0, 1, 2, 3, 4].map(i => DAY(-i)); const perDag = {}; for (const d of dagen) perDag[d] = await dagTotaal(d);
-      if (url.searchParams.get('kort') === '1') { const t = perDag[dagen[0]] || {}; const pick = x => x ? { dv: x.dv, dm: x.dm, da: x.da, conv: x.conv, cart: x.cart, koop: x.koop, omzet: x.omzet } : null; return res.status(200).json({ ok: true, at: new Date().toISOString(), dag: dagen[0], pa: pick(t.pa), md: pick(t.md), ra: pick(t.ra), gisteren: pick((perDag[dagen[1]] || {}).pa) }); } // klein: alleen de dag van vandaag (en gisteren) per netwerk
+      if (url.searchParams.get('kort') === '1') { const t = perDag[dagen[0]] || {}; const pick = x => x ? { dv: x.dv, dm: x.dm, da: x.da, conv: x.conv, cart: x.cart, koop: x.koop, omzet: x.omzet } : null; const d8 = dagen[0].replace(/-/g, ''); const bkv = await kv.mget(...['', '-bot', '-datacenter', '-botplek'].map(w => 'c:sh-d' + d8 + '-pa-bk' + w)); return res.status(200).json({ ok: true, at: new Date().toISOString(), dag: dagen[0], pa: pick(t.pa), geweigerdPa: { totaal: num(bkv[0]), bot: num(bkv[1]), datacenter: num(bkv[2]), botplek: num(bkv[3]) }, md: pick(t.md), ra: pick(t.ra), gisteren: pick((perDag[dagen[1]] || {}).pa) }); } // klein: alleen de dag van vandaag (en gisteren) per netwerk
       const per = { net: {}, product: {}, zone: {} }; const perArm = {}; let cur = '0', gezien = 0;
       do { const [cc, keys] = await kv.scan(cur, { match: 'hjdk:shc:*', count: 1000 }); cur = cc;
         for (let i = 0; i < keys.length; i += 200) { const vals = await kv.mget(...keys.slice(i, i + 200)); gezien += vals.length;
