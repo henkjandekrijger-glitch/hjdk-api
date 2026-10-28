@@ -40,7 +40,6 @@ import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 import { demandRadar } from '../lib/demandradar.js';
 const SHOP_UIT = false; // 27 okt: shop op kadoly.com; Henkjan: "Zet er 20 aan maar verander domeinnaam in kadoly.com" (ook propellerads-mcp lib/budget.ts SHOP_UIT)
-const POORT = false; // 28 okt 14:05 UTC Henkjan: "Er moet geen tussen pagina zijn !!! Onmiddelijk weghalen . Clickmind stuurt auto door toch ?": weer direct via Clickmind (302) naar kadoly.com; bots worden in direct() geweerd
 const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
@@ -434,10 +433,10 @@ async function land(req, res, url) {
   const code = clickid && net !== 'x' ? shortId(net + ':' + clickid) : '';
   // directe route (lib/shopdirect.js): per persoon vast naar deze landingspagina (l) of in één keer naar de productpagina op yoo.rs (d).
   // Alleen betaald verkeer met een klik-id. Iedereen krijgt dezelfde behandeling, ook wat op een bot lijkt (geen cloaking).
-  // Poort (Henkjan 28 okt: "Zorg voor clickmind er tussen mogen geen bots naar kadoly"): niemand gaat meer in één keer door naar de shop,
-  // ook niet met arm=d in de campagnelink. Iedereen (mens of bot, geen cloaking) krijgt deze pagina met Clickmind; alleen wie echt tikt gaat
-  // via /api/shop/uit door naar kadoly.com, en pas die tik meldt de conversie aan het netwerk.
-  if (code && !POORT) { const f = q.get('arm'); const arm = f === 'd' || f === 'l' ? f : shopArm(apparaat(req), (await directInst(kv)).pct); if (arm === 'd') return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot }); }
+  // NOOIT een tussenpagina (Henkjan 28 okt: "Haal tussenpagina voor altijd weg !!!!!! Bot meet je op clickmind niet een tusspagina met een klik").
+  // Betaald verkeer met een klik-id gaat altijd in één keer via Clickmind (302) naar de productpagina op kadoly.com, ook met arm=l in de link.
+  // Bots meet Clickmind (cm.js op de shop: echt mens of niet, per plek) en de zonelijst weert slechte plekken; wie zich als bot meldt gaat niet door (direct()).
+  if (code) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot });
   if (!bot) {
     let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, { ex: 7 * 86400 }); } catch (e) {} }
     if (nieuw) { const keys = ['sh-' + net + '-view', 'sh-d' + D8() + '-' + net + '-view', 'sh-u' + nlUur() + '-view', 'sh-p-' + pk(pid) + '-himp'].concat(meer.map(m => 'sh-p-' + pk(m.id) + '-imp'));
