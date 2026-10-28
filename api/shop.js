@@ -539,7 +539,7 @@ async function uitgang(req, res, url) {
     await inc(keys); if (rec) { try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} } }
   else if (mmcNieuw) { try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} }
   const utm = 'utm_source=' + (net === 'x' ? 'shoplus' : NETTEN[net].toLowerCase()) + '&utm_medium=push&utm_campaign=shoplus' + (it ? '&utm_content=' + encodeURIComponent(pk(it.id)) : '') + (code ? '&hj=' + code : '') + (rec && rec.mmc ? '&mmc=' + rec.mmc : '') + '&lang=nl'; // de shop kiest anders de taal van de telefoon; de afrekenpagina is nog Engels
-  if (bot) { res.statusCode = 403; res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('cache-control', 'no-store'); return res.end('Niet beschikbaar'); } // 28 okt: geen bots naar kadoly.com
+  if (bot || (rec && !mens)) { res.statusCode = 403; res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('cache-control', 'no-store'); return res.end('Niet beschikbaar'); } // 28 okt: geen bots naar kadoly.com; betaald verkeer alleen na een echte aanraking of tik
   res.statusCode = 302; res.setHeader('location', (it ? 'https://kadoly.com/product/' + encodeURIComponent(it.id) : SHOP) + '?' + utm); res.setHeader('cache-control', 'no-store'); return res.end();
 }
 
@@ -550,6 +550,10 @@ async function baken(req, res) {
   if (!code) { await inc(['sh-x-' + e, 'sh-d' + D8() + '-x-' + e]); return res.status(204).end(); }
   let rec = null; try { rec = await kv.get(K.rec(code)); } catch (x) {} const veld = e === 'mens' ? 'm' : 'e'; if (!rec || rec[veld]) return res.status(204).end();
   rec[veld] = 1; const net = rec.s; const keys = ['sh-' + net + '-' + e, 'sh-d' + D8() + '-' + net + '-' + e]; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-' + e); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-' + e); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-' + e);
+  // 28 okt (Henkjan: "Ja 50 vandaag ik zie nu nog geen verkeer"): sinds de Clickmind-poort ging de conversie pas bij de tik naar de shop,
+  // te weinig om het netwerk te laten inkopen. Nu meldt de eerste echte aanraking of scroll op onze pagina de conversie (zoals 23 okt
+  // "echt mens" op de shop). Bots raken de shop nog steeds niet: doorsturen vraagt een echte tik (zie uitgang).
+  if (e === 'mens' && rec.c && !rec.conv && !rec.t && PB[net]) { let st = 0; try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(PB[net].replace('{clickid}', encodeURIComponent(rec.c)) + (net === 'md' ? '&payout=0' : ''), { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (x) {} rec.conv = Date.now(); rec.pb = st; keys.push('sh-' + net + '-conv', 'sh-d' + D8() + '-' + net + '-conv'); if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-conv'); }
   await inc(keys); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (x) {}
   return res.status(204).end();
 }
