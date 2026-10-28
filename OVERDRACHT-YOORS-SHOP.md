@@ -54,6 +54,13 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - Datapagina nu ophalen: `/api/shop/feedcheck`.
 - Clickmind: `https://hjdk-api-henq.vercel.app/api/mm/overdracht?project=yoors` en `/api/mm/clickmind`.
 
+## Lessen uit Henkjans eerdere shops (P&L's in zijn Drive, geanalyseerd 28 okt 2026)
+- René København (DK, Facebook, dec 2023 tot apr 2024): omzet $53,9k, ads 49%, inkoop 34%, winst $5,7k; gekocht voor $160k op een claim van $1,48M omzet en $473k winst. ROAS van 2,74 in januari naar 0,44 in april.
+- Google-shops 2025 (Modishly, Jan Van Jaylin, Cavuna, Zyramoda, Jade en anderen): samen ruim $57k omzet en $6,6k verlies. Modishly verloor ondanks ROAS 2,0 door 13% kosten (waarvan 11% op Google-uitgaven) en 8% retouren.
+- Anne Marie Jewels (Pinterest, okt tot dec 2025): de enige echte winnaar, 27% winst, dankzij inkoop van 19% en $0,04 per bezoeker.
+- Stuurgetal: break-even ROAS = 1 / (1 - inkoop% - kosten% - retour%). Dat was 1,4 tot 2,2; gemiddeld haalden de shops 2,0. Winst kwam pas bij een ROAS van zo'n 0,5 boven break-even. Elke shop piekte in maand 1 of 2 en zakte daarna in: elke dag nieuwe producten en advertenties is nodig.
+- Voor Kadoly: een echt mens kost nu ~$0,03 (Google-shops: $0,61 per bezoeker). Verkeer is dus niet het probleem. Het stuurgetal is de kosten per verkoop (kosten per echt mens / aandeel dat koopt), en die moet onder de marge per order blijven.
+
 ## Vaste regels (Henkjan)
 - Bod, budget of dagplanning nooit wijzigen zonder Henkjans woord. Stoppen mag volgens de regels: de shoptest (oordeel per product), de relatieve stopregel en `vervangt=`; zie de campagneskill.
 - Plekken alleen blokkeren als ze slechter zijn dan het paginagemiddelde (verwacht 3+ echte mensen of tikken en 0). Tot 19 okt gold een vaste grens van 25% echte mensen terwijl yoo.rs gemiddeld 7,5% haalt: daardoor stonden er 287 plekken uit een campagne.
