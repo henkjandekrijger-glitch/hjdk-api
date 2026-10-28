@@ -13667,7 +13667,7 @@
    "cat": "Elektronica",
    "pct": 2.5,
    "term": "printer",
-   "title": "Printer keuzehulp: welke printer past bij jou?",
+   "title": "Welke printer past bij jou?",
    "h1": "Printer kiezen: inkt, laser of inkttank",
    "kort": "Welke printer past bij jou hangt af van hoeveel je print. Print je weinig (een paar pagina's per maand), kies dan een laserprinter: toner droogt niet in en een pagina kost 3 tot 5 cent. Print je regelmatig en in kleur, voor school of thuiswerk, dan is een inkttankprinter (EcoTank, MegaTank, Smart Tank) het voordeligst: 0,5 tot 1 cent per pagina. Veel zwart-wit en snel: een zwart-wit laser. Neem een goedkope inkjet met cartridges alleen als je zelden print en weinig wilt uitgeven, want cartridges kosten 20 tot 30 cent per pagina. Let verder op wifi, automatisch dubbelzijdig printen en of je wilt scannen (all-in-one).",
    "intro": "De printer is goedkoop, de inkt is het verdienmodel. Drie vragen bepalen welk type je over drie jaar het minst kost.",
@@ -13809,7 +13809,6 @@
     "zit-sta-bureau"
    ],
    "vast": [
-    "title",
     "kort",
     "faq"
    ]
