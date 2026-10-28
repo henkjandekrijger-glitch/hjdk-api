@@ -49,6 +49,7 @@
 //   /api/mm/patronen?dagen=1            botfarms: vingerafdrukken in veel zones of netwerken
 //   /api/mm/stand                       vandaag per netwerk, slechtste zones, datacenterlijst
 // Regels, opslag en uitleg: lib/mensmeter.js.
+import { ritme } from '../lib/uurritme.js';
 import { kv } from '../lib/db.js';
 import { echteTag, verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, serverSignalen, laterAf, schoon, tagOk, zones, patronen, stand, proef, exporteer, persoon, netNaam, ipInfo, dcVan, score } from '../lib/mensmeter.js';
 import { leesWissel, bewaarWissel, alleWissels, kiesArm, soortPersoon, bestemming, wisselKlik, cidKoppel, uitkomst, amazonUitkomst, wisselStand } from '../lib/wissel.js';
@@ -377,6 +378,7 @@ export default async function handler(req, res) {
         return res.status(200).json(d);
       }
     }
+    if (op === 'uurritme') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(Object.assign({ ok: true }, await ritme(kv, { net: netNaam(q('net') || 'propeller'), camps: String(q('camps') || '').split(',').map(x => x.trim()).filter(x => /^[A-Za-z0-9_.:-]{1,40}$/.test(x)).slice(0, 300), tz: String(q('tz') || 'Europe/Amsterdam').slice(0, 40) }))); } // openbaar, alleen tellers: welk uur koopt minder in (lib/uurritme.js)
     if (op === 'zones') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(await zones(kv, { net: q('net') || '', dagen: q('dagen') })); }
     if (op === 'patronen') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(await patronen(kv, { dagen: q('dagen') })); }
     if (op === 'stand') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(await stand(kv)); }
