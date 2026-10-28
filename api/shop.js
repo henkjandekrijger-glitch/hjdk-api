@@ -40,7 +40,7 @@ import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 import { demandRadar } from '../lib/demandradar.js';
 const SHOP_UIT = false; // 27 okt: shop op kadoly.com; Henkjan: "Zet er 20 aan maar verander domeinnaam in kadoly.com" (ook propellerads-mcp lib/budget.ts SHOP_UIT)
-const POORT = true; // 28 okt: altijd via onze pagina met Clickmind, geen bots door naar kadoly.com (zie land())
+const POORT = false; // 28 okt 14:05 UTC Henkjan: "Er moet geen tussen pagina zijn !!! Onmiddelijk weghalen . Clickmind stuurt auto door toch ?": weer direct via Clickmind (302) naar kadoly.com; bots worden in direct() geweerd
 const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
@@ -413,6 +413,7 @@ async function direct(req, res, x) {
       await Promise.race([werk, new Promise(r => setTimeout(r, 350))]);
     }
   }
+  if (bot) { res.statusCode = 403; res.setHeader('x-robots-tag', 'noindex, nofollow'); res.setHeader('cache-control', 'no-store'); return res.end('Niet beschikbaar'); } // 28 okt: geen bots naar kadoly.com (Henkjan), alleen wie zich als bot of crawler meldt; plekken met veel nep weert Clickmind via de zonelijst
   res.statusCode = 302; res.setHeader('location', doel); res.setHeader('cache-control', 'no-store, private'); res.setHeader('referrer-policy', 'origin'); res.setHeader('x-robots-tag', 'noindex, nofollow');
   if (nieuwP) res.setHeader('set-cookie', 'mmp=' + mmp + '; Max-Age=15552000; Path=/; Secure; HttpOnly; SameSite=Lax');
   return res.end();
