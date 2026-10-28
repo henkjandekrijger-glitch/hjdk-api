@@ -472,10 +472,10 @@ ${meer.length ? `<h2>Ook populair vandaag</h2><div class="pg">${meer.map(kaart).
 <a class="alles" href="${esc('/api/shop/uit?p=alles' + (code ? '&c=' + code : '') + '&pos=alles')}">Bekijk alle ${cat.items.length >= 100 ? cat.items.length + ' ' : ''}producten</a>
 </main>
 <footer><div class="wrap"><p>Dit is een selectie uit Kadoly. Je bestelt en betaalt op kadoly.com.</p><div class="fl"><a href="https://kadoly.com/shop/privacy">Privacy</a><a href="https://kadoly.com/shop/terms">Voorwaarden</a><a href="https://kadoly.com/shop/returns">Retourneren</a></div><p>Kadoly by AdsFair B.V. · KVK 60126035 · Gouda</p></div></footer>
-<script>(function(){var C=${JSON.stringify(code)},t0=Date.now(),mens=false,eng=false,s=0;function b(e){try{navigator.sendBeacon('/api/shop/b',new Blob([JSON.stringify({c:C,e:e})],{type:'text/plain'}))}catch(x){}}
-['scroll','touchstart','pointerdown','keydown','pointermove'].forEach(function(ev){addEventListener(ev,function(){if(!mens){mens=true;b('mens')}},{passive:true})});
+<script>(function(){var C=${JSON.stringify(code)},weg=false,t0=Date.now(),mens=false,eng=false,s=0;function b(e){try{navigator.sendBeacon('/api/shop/b',new Blob([JSON.stringify({c:C,e:e})],{type:'text/plain'}))}catch(x){}}
+['scroll','touchstart','pointerdown','keydown','pointermove'].forEach(function(ev){addEventListener(ev,function(){if(!mens){mens=true;b('mens')}if(!weg&&ev!=='pointermove'&&ev!=='keydown'&&C){weg=true;setTimeout(function(){var k=document.querySelector('a.koop');if(k&&!window.__kk)location.href=k.getAttribute('href').replace('pos=h','pos=auto')+'&h=1&ms='+(Date.now()-t0)},Math.max(250,800-(Date.now()-t0)))}},{passive:true})});
 var iv=setInterval(function(){if(document.visibilityState==='visible')s++;if(s>=15&&mens&&!eng){eng=true;clearInterval(iv);b('eng')}},1000);
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="/api/shop/uit"]');if(!a||a.dataset.k)return;a.dataset.k=1;a.href=a.getAttribute('href')+'&h='+(mens?1:0)+'&ms='+(Date.now()-t0)},true)})();</script>
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="/api/shop/uit"]');if(!a||a.dataset.k)return;a.dataset.k=1;window.__kk=1;a.href=a.getAttribute('href')+'&h='+(mens?1:0)+'&ms='+(Date.now()-t0)},true)})();</script>
 </body></html>`;
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
   return res.status(200).send(html);
