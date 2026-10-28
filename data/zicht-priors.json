@@ -670,9 +670,9 @@
  },
  {
   "id": "foto-eigen-adres",
-  "les": "Foto's die via een rewrite uit Vercel Blob komen, krijgen X-Robots-Tag: noindex en een cache van 60 seconden. Lever ze vanaf een eigen functie met <picture> (AVIF en WebP in meerdere breedtes), lazy onder het bovenste scherm en een versie in de URL voor een jaar cache. Geen foto's als data:image in de HTML.",
+  "les": "Foto's die rechtstreeks uit Vercel Blob komen, hebben een korte cache en geen maten of moderne formaten. Lever ze vanaf een eigen functie met <picture> (AVIF en WebP in meerdere breedtes), lazy onder het bovenste scherm en een versie in de URL voor een jaar cache. Geen foto's als data:image in de HTML.",
   "kanaal": "google",
-  "bewijs": "28 okt 2026 taniakross.media: /afbeeldingen/katibu-1-koor.jpg gaf x-robots-tag noindex en cache-control max-age=60 (Blob). Dezelfde foto 480 breed als AVIF: 27 KB tegen 50 KB jpg. Homepage HTML van 184 naar 141 KB door een data:image eruit te halen; bij openen laden 2 foto's in plaats van 3.",
+  "bewijs": "28 okt 2026 taniakross.media: /afbeeldingen/katibu-1-koor.jpg gaf cache-control max-age=60 (Blob). Let op: elk *.vercel.app-adres stuurt zelf X-Robots-Tag noindex mee, test headers dus op het eigen domein. Dezelfde foto 480 breed als AVIF: 27 KB tegen 50 KB jpg. Homepage HTML van 184 naar 141 KB door een data:image eruit te halen; bij openen laden 2 foto's in plaats van 3.",
   "bron": "eigen meting taniakross.media (api/foto.js, api/home.js fotos())",
   "sterkte": 2,
   "moeite": 2,
