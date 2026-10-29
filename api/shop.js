@@ -160,8 +160,8 @@ function jsonUitTekst(s) { const a = s.indexOf('{'); if (a < 0) return null; let
 // 10 advertenties van Claude volgens de tekstregels (lib/shoptekst.js), 3 dagen bewaard; hooguit 40 seconden per aanroep (150 bij een verse dagkeuze), de rest
 // houdt de sjablonen tot de volgende aanroep. Model: SHOP_VERKOOP_MODEL, anders Sonnet (verkopen is schrijfwerk, geen samenvatting).
 async function metVerkoop(lijst, budget = 40000) {
-  const t0 = Date.now(), todo = (lijst || []).filter(p => p && p.pid).slice(0, 90); let ai = 0;
-  for (let i = 0; i < todo.length && Date.now() - t0 < budget; i += 12) await Promise.all(todo.slice(i, i + 12).map(async p => { try { const a = await verkoopTeksten(kv, p, claudeJson, process.env.SHOP_VERKOOP_MODEL || SONNET); if (a) { p.advertenties = a; ai++; } } catch (e) {} }));
+  const t0 = Date.now(), todo = (lijst || []).filter(p => p && p.pid).slice(0, 90); let ai = 0; const lessen = await kv.get('hjdk:shop:tekstlessen').catch(() => null); // beste en slechtste teksten van de PropellerAds-lus (lib/tekstleer.ts)
+  for (let i = 0; i < todo.length && Date.now() - t0 < budget; i += 12) await Promise.all(todo.slice(i, i + 12).map(async p => { try { const a = await verkoopTeksten(kv, p, claudeJson, process.env.SHOP_VERKOOP_MODEL || SONNET, lessen); if (a) { p.advertenties = a; ai++; } } catch (e) {} }));
   return ai;
 }
 async function claudeJson(prompt, o) {
@@ -875,6 +875,12 @@ export default async function handler(req, res) {
       uit.verkoopteksten = await metVerkoop(uit.gekozen, 150000); // verse dagkeuze (ochtend, opgewarmd om 04:25 UTC): ruim de tijd
       await kv.set(ck, uit, { ex: 3 * 86400 }).catch(() => {});
       return res.status(200).json(Object.assign({ ok: true }, uit)); }
+    if (op === 'tekstlessen') { // POST van de PropellerAds-lus (propellerads-mcp lib/tekstleer.ts): beste en slechtste teksten op de hele keten tot kopen; GET leest ze
+      if (req.method === 'POST') { const s0 = await geheim(); if (!s0 || String(req.headers['x-shop-sleutel'] || '') !== s0) return res.status(403).json({ ok: false }); let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
+        const kort = x => ({ hoek: String(x.hoek || '').slice(0, 20), title: String(x.title || '').slice(0, 40), description: String(x.description || '').slice(0, 50), cta: String(x.cta || '').slice(0, 20), score: num(x.score), vert: num(x.vert) });
+        const v = { at: new Date().toISOString(), best: (Array.isArray(b.best) ? b.best : []).slice(0, 12).map(kort), slecht: (Array.isArray(b.slecht) ? b.slecht : []).slice(0, 8).map(kort) };
+        await kv.set('hjdk:shop:tekstlessen', v, { ex: 30 * 86400 }); return res.status(200).json({ ok: true, best: v.best.length, slecht: v.slecht.length }); }
+      return res.status(200).json({ ok: true, lessen: await kv.get('hjdk:shop:tekstlessen').catch(() => null) }); }
     if (op === 'teksten') { // verkoopteksten van de dagkeuze laten schrijven en een paar laten zien (alleen beschermde host); ?n=3
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const c = await kv.get('hjdk:shop:kies:' + DAY()).catch(() => null); if (!c || !Array.isArray(c.gekozen)) return res.status(200).json({ ok: false, fout: 'nog geen dagkeuze vandaag' });
