@@ -879,7 +879,8 @@ export default async function handler(req, res) {
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const c = await kv.get('hjdk:shop:kies:' + DAY()).catch(() => null); if (!c || !Array.isArray(c.gekozen)) return res.status(200).json({ ok: false, fout: 'nog geen dagkeuze vandaag' });
       const ai = await metVerkoop(c.gekozen, 120000); const n = Math.max(1, Math.min(10, Number(url.searchParams.get('n')) || 3));
-      return res.status(200).json({ ok: true, producten: c.gekozen.length, metVerkoopteksten: ai, voorbeeld: c.gekozen.slice(0, n).map(p => ({ titel: p.titel, thuis: p.thuis, advertenties: (p.advertenties || []).map(a => [a.hoek, a.title, a.description, a.cta].join(' | ')) })) }); }
+      const laatst = await kv.get('hjdk:shop:advai:laatst').catch(() => null), aifout = await kv.get('hjdk:shop:claudefout').catch(() => null);
+      return res.status(200).json({ ok: true, producten: c.gekozen.length, metVerkoopteksten: ai, laatsteAfkeur: laatst, aiFout: aifout, voorbeeld: c.gekozen.slice(0, n).map(p => ({ titel: p.titel, thuis: p.thuis, advertenties: (p.advertenties || []).map(a => [a.hoek, a.title, a.description, a.cta].join(' | ')) })) }); }
     if (op === 'koopcheck') { // openbaar, alleen lezen: hoe een NL-telefoon de productpagina en de afrekenpagina van yoo.rs nu krijgt (geen sleutels, geen bezoekersdata)
       const pid = pidOk(url.searchParams.get('p')) || 'oc_4174004347453441';
       const ck = 'hjdk:shop:koopcheck:' + pid; try { const c = await kv.get(ck); if (c && Date.now() - c.at < 6e5 && !url.searchParams.get('vers')) return res.status(200).json(c); } catch (e) {}
