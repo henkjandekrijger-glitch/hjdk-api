@@ -23,6 +23,7 @@ import sharp from 'sharp';
 import { randomBytes, createHash } from 'node:crypto';
 import { kv } from '../lib/db.js';
 import { berichten, HAIKU, SONNET } from '../lib/ai.js';
+import { verkoopTeksten } from '../lib/shoptekst.js';
 import { md } from '../lib/mdmcp.js';
 import { look } from '../lib/look.js';
 import seed from '../data/shop-seed.json' with { type: 'json' };
@@ -155,6 +156,14 @@ async function rangorde(cat, vast) {
 // Haiku voor korte advertentieteksten (env SHOP_TEKST_MODEL); Sonnet alleen voor de lessen uit de cijfers (redeneren over data; env SHOP_LES_MODEL).
 // Zelfde vraag met dezelfde invoer binnen de bewaartijd: antwoord uit Redis, geen nieuwe aanroep.
 function jsonUitTekst(s) { const a = s.indexOf('{'); if (a < 0) return null; let d = 0, q = false, e = false, eind = -1; for (let i = a; i < s.length; i++) { const ch = s[i]; if (q) { if (e) e = false; else if (ch === '\\') e = true; else if (ch === '"') q = false; continue; } if (ch === '"') q = true; else if (ch === '{') d++; else if (ch === '}') { d--; if (d === 0) { eind = i; break; } } } return JSON.parse(s.slice(a, (eind > 0 ? eind : s.lastIndexOf('}')) + 1)); }
+// Verkoopteksten voor de gekozen producten (Henkjan 29 okt: "Dit zijn toch geen teksten ??? Dan wil niemand het kopen ..."): per product
+// 10 advertenties van Claude volgens de tekstregels (lib/shoptekst.js), 3 dagen bewaard; hooguit 100 seconden per aanroep, de rest
+// houdt de sjablonen tot de volgende aanroep. Model: SHOP_VERKOOP_MODEL, anders Sonnet (verkopen is schrijfwerk, geen samenvatting).
+async function metVerkoop(lijst) {
+  const t0 = Date.now(), todo = (lijst || []).filter(p => p && p.pid).slice(0, 90); let ai = 0;
+  for (let i = 0; i < todo.length && Date.now() - t0 < 100000; i += 8) await Promise.all(todo.slice(i, i + 8).map(async p => { try { const a = await verkoopTeksten(kv, p, claudeJson, process.env.SHOP_VERKOOP_MODEL || SONNET); if (a) { p.advertenties = a; ai++; } } catch (e) {} }));
+  return ai;
+}
 async function claudeJson(prompt, o) {
   o = o || {}; const model = o.model || process.env.SHOP_TEKST_MODEL || HAIKU;
   try { const r = await berichten({ fn: o.fn || 'shop', model, user: prompt, max: o.max || 900, cacheTtl: o.cacheTtl, check: t => jsonUitTekst(t), oidc: OIDC, directKey: process.env.ANTHROPIC_API_KEY });
@@ -861,7 +870,9 @@ export default async function handler(req, res) {
       uit.bronnen = { catalogus: items.length, metInkoop: Object.keys(kaart).length, marktprijzen: Object.keys(markt).length, vraagtermen: termen.length, metVerkeer: Object.keys(tellers).length, alGetest: Object.keys(getest).length };
       if (cache) { // dagkeuze blijft die van vanochtend; oordelen en de vaste plekken voor presterend en veelbelovend zijn altijd vers
         const vast = (cache.gekozen || []).filter(x => x.hoe !== 'presterend' && x.hoe !== 'veelbelovend'); const extra = (uit.gekozen || []).filter(x => (x.hoe === 'presterend' || x.hoe === 'veelbelovend') && !vast.some(v => v.pid === x.pid));
-        return res.status(200).json(Object.assign({ ok: true, uitCache: true }, cache, { gekozen: vast.concat(extra), presterend: uit.presterend, veelbelovend: uit.veelbelovend, af: uit.af, onbeslist: uit.onbeslist, gemiddeldeTikratio: uit.gemiddeldeTikratio })); }
+        const gk = vast.concat(extra); const ai = await metVerkoop(gk);
+        return res.status(200).json(Object.assign({ ok: true, uitCache: true, verkoopteksten: ai }, cache, { gekozen: gk, presterend: uit.presterend, veelbelovend: uit.veelbelovend, af: uit.af, onbeslist: uit.onbeslist, gemiddeldeTikratio: uit.gemiddeldeTikratio })); }
+      uit.verkoopteksten = await metVerkoop(uit.gekozen);
       await kv.set(ck, uit, { ex: 3 * 86400 }).catch(() => {});
       return res.status(200).json(Object.assign({ ok: true }, uit)); }
     if (op === 'koopcheck') { // openbaar, alleen lezen: hoe een NL-telefoon de productpagina en de afrekenpagina van yoo.rs nu krijgt (geen sleutels, geen bezoekersdata)
