@@ -157,11 +157,11 @@ async function rangorde(cat, vast) {
 // Zelfde vraag met dezelfde invoer binnen de bewaartijd: antwoord uit Redis, geen nieuwe aanroep.
 function jsonUitTekst(s) { const a = s.indexOf('{'); if (a < 0) return null; let d = 0, q = false, e = false, eind = -1; for (let i = a; i < s.length; i++) { const ch = s[i]; if (q) { if (e) e = false; else if (ch === '\\') e = true; else if (ch === '"') q = false; continue; } if (ch === '"') q = true; else if (ch === '{') d++; else if (ch === '}') { d--; if (d === 0) { eind = i; break; } } } return JSON.parse(s.slice(a, (eind > 0 ? eind : s.lastIndexOf('}')) + 1)); }
 // Verkoopteksten voor de gekozen producten (Henkjan 29 okt: "Dit zijn toch geen teksten ??? Dan wil niemand het kopen ..."): per product
-// 10 advertenties van Claude volgens de tekstregels (lib/shoptekst.js), 3 dagen bewaard; hooguit 100 seconden per aanroep, de rest
+// 10 advertenties van Claude volgens de tekstregels (lib/shoptekst.js), 3 dagen bewaard; hooguit 40 seconden per aanroep (150 bij een verse dagkeuze), de rest
 // houdt de sjablonen tot de volgende aanroep. Model: SHOP_VERKOOP_MODEL, anders Sonnet (verkopen is schrijfwerk, geen samenvatting).
-async function metVerkoop(lijst) {
+async function metVerkoop(lijst, budget = 40000) {
   const t0 = Date.now(), todo = (lijst || []).filter(p => p && p.pid).slice(0, 90); let ai = 0;
-  for (let i = 0; i < todo.length && Date.now() - t0 < 100000; i += 8) await Promise.all(todo.slice(i, i + 8).map(async p => { try { const a = await verkoopTeksten(kv, p, claudeJson, process.env.SHOP_VERKOOP_MODEL || SONNET); if (a) { p.advertenties = a; ai++; } } catch (e) {} }));
+  for (let i = 0; i < todo.length && Date.now() - t0 < budget; i += 12) await Promise.all(todo.slice(i, i + 12).map(async p => { try { const a = await verkoopTeksten(kv, p, claudeJson, process.env.SHOP_VERKOOP_MODEL || SONNET); if (a) { p.advertenties = a; ai++; } } catch (e) {} }));
   return ai;
 }
 async function claudeJson(prompt, o) {
@@ -872,13 +872,13 @@ export default async function handler(req, res) {
         const vast = (cache.gekozen || []).filter(x => x.hoe !== 'presterend' && x.hoe !== 'veelbelovend'); const extra = (uit.gekozen || []).filter(x => (x.hoe === 'presterend' || x.hoe === 'veelbelovend') && !vast.some(v => v.pid === x.pid));
         const gk = vast.concat(extra); const ai = await metVerkoop(gk);
         return res.status(200).json(Object.assign({ ok: true, uitCache: true, verkoopteksten: ai }, cache, { gekozen: gk, presterend: uit.presterend, veelbelovend: uit.veelbelovend, af: uit.af, onbeslist: uit.onbeslist, gemiddeldeTikratio: uit.gemiddeldeTikratio })); }
-      uit.verkoopteksten = await metVerkoop(uit.gekozen);
+      uit.verkoopteksten = await metVerkoop(uit.gekozen, 150000); // verse dagkeuze (ochtend, opgewarmd om 04:25 UTC): ruim de tijd
       await kv.set(ck, uit, { ex: 3 * 86400 }).catch(() => {});
       return res.status(200).json(Object.assign({ ok: true }, uit)); }
     if (op === 'teksten') { // verkoopteksten van de dagkeuze laten schrijven en een paar laten zien (alleen beschermde host); ?n=3
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const c = await kv.get('hjdk:shop:kies:' + DAY()).catch(() => null); if (!c || !Array.isArray(c.gekozen)) return res.status(200).json({ ok: false, fout: 'nog geen dagkeuze vandaag' });
-      const ai = await metVerkoop(c.gekozen); const n = Math.max(1, Math.min(10, Number(url.searchParams.get('n')) || 3));
+      const ai = await metVerkoop(c.gekozen, 120000); const n = Math.max(1, Math.min(10, Number(url.searchParams.get('n')) || 3));
       return res.status(200).json({ ok: true, producten: c.gekozen.length, metVerkoopteksten: ai, voorbeeld: c.gekozen.slice(0, n).map(p => ({ titel: p.titel, thuis: p.thuis, advertenties: (p.advertenties || []).map(a => [a.hoek, a.title, a.description, a.cta].join(' | ')) })) }); }
     if (op === 'koopcheck') { // openbaar, alleen lezen: hoe een NL-telefoon de productpagina en de afrekenpagina van yoo.rs nu krijgt (geen sleutels, geen bezoekersdata)
       const pid = pidOk(url.searchParams.get('p')) || 'oc_4174004347453441';
