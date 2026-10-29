@@ -15126,7 +15126,7 @@
    "term": "soundbar",
    "title": "Welke soundbar past bij jou?",
    "h1": "Soundbar kiezen: 2.1, 3.1 of met Dolby Atmos?",
-   "kort": "Dialogen beter verstaan in een kleine woonkamer: een simpele 2.1 soundbar met subwoofer. Filmavonden met veel ruimte: 3.1 of 5.1 met Dolby Atmos. Gewoon beter dan je tv-geluid: een compacte soundbar volstaat.",
+   "kort": "Welke soundbar past bij jou hangt af van je kamer en waarvoor je hem gebruikt. Wil je vooral dialogen beter verstaan, kies dan een 3.1 soundbar: de aparte middenspeaker maakt stemmen duidelijker. In een kleine woonkamer (tot 20 m²) volstaat een compacte 2.0 of 2.1 soundbar van 150 tot 300 euro. Voor films in een grotere kamer: 5.1 of Dolby Atmos met een losse subwoofer, en Atmos alleen bij een plafond van normale hoogte. Controleer eerst of je tv HDMI ARC of eARC heeft: dan regel je het volume met je tv-afstandsbediening en werkt Atmos.",
    "intro": "Een tv klinkt vaak plat, een soundbar maakt dialogen duidelijker en films vuller. Drie vragen laten zien welk model past bij jouw ruimte en tv.",
    "questions": [
     {
@@ -15220,16 +15220,32 @@
    ],
    "faq": [
     {
+     "q": "Welke soundbar past bij mij?",
+     "a": "Kijk naar je kamer en je gebruik. Dialogen verstaan: een 3.1 met middenspeaker. Kleine kamer en gewoon beter geluid: een compacte 2.0 of 2.1. Films in een grote kamer: 5.1 of Dolby Atmos met subwoofer. Muziek erbij: kies er een met wifi en AirPlay of Spotify Connect."
+    },
+    {
+     "q": "Waar moet je op letten bij het kopen van een soundbar?",
+     "a": "Op de aansluiting van je tv (HDMI ARC of eARC), het aantal kanalen, of er een losse subwoofer bij zit, een spraak- of nachtstand en de hoogte: hij mag niet voor het beeld of de ontvanger van de afstandsbediening staan."
+    },
+    {
+     "q": "Welke soundbar is het best voor dialogen?",
+     "a": "Een soundbar met een aparte middenspeaker (3.1 of hoger) en een spraakstand. Die tilt stemmen boven muziek en effecten uit. Een 2.1 zonder middenkanaal helpt minder als je vooral slecht verstaat wat er gezegd wordt."
+    },
+    {
+     "q": "Is Dolby Atmos de moeite waard?",
+     "a": "Alleen met naar boven gerichte speakers en een plafond tot ongeveer 2,7 meter, en via HDMI eARC. In een kleine kamer of met een schuin of hoog plafond hoor je het verschil nauwelijks; dan is een goede 3.1 de betere koop."
+    },
+    {
      "q": "Heb ik een subwoofer nodig?",
-     "a": "Voor films ja, voor nieuws en series is een soundbar met ingebouwde bas vaak genoeg."
+     "a": "Voor films en muziek met veel bas wel. Voor nieuws en series is een soundbar met ingebouwde bas vaak genoeg. Woon je in een appartement, kies dan een compacte sub of een model zonder losse sub, want lage tonen gaan door muren en vloeren."
     },
     {
-     "q": "Wat is HDMI ARC?",
-     "a": "Een HDMI-ingang op je tv die geluid terugstuurt naar de soundbar met één kabel. Je tv-afstandsbediening regelt dan ook het volume."
+     "q": "Wat is HDMI ARC en eARC?",
+     "a": "Een HDMI-ingang op je tv die het geluid met één kabel terugstuurt naar de soundbar. Je tv-afstandsbediening regelt dan ook het volume. eARC is de nieuwere versie en nodig voor Dolby Atmos in volle kwaliteit. Heeft je tv alleen optisch, dan werkt geluid wel maar Atmos meestal niet."
     },
     {
-     "q": "Past hij onder mijn tv?",
-     "a": "Meet de hoogte tussen standaard en tv. Veel soundbars zijn 6 tot 10 cm hoog."
+     "q": "Hoe groot moet een soundbar zijn bij mijn tv?",
+     "a": "Ongeveer even breed als de tv of iets smaller oogt het rustigst: rond 80 cm bij een 43 tot 50 inch tv, 90 tot 110 cm bij 55 tot 65 inch. Meet ook de ruimte tussen standaard en scherm; veel soundbars zijn 6 tot 10 cm hoog."
     }
    ],
    "publishAt": "2026-10-05",
@@ -15241,6 +15257,10 @@
     "beamer",
     "spelcomputer",
     "gaming-headset"
+   ],
+   "vast": [
+    "kort",
+    "faq"
    ]
   },
   {
