@@ -158,10 +158,10 @@ async function rangorde(cat, vast) {
 function jsonUitTekst(s) { const a = s.indexOf('{'); if (a < 0) return null; let d = 0, q = false, e = false, eind = -1; for (let i = a; i < s.length; i++) { const ch = s[i]; if (q) { if (e) e = false; else if (ch === '\\') e = true; else if (ch === '"') q = false; continue; } if (ch === '"') q = true; else if (ch === '{') d++; else if (ch === '}') { d--; if (d === 0) { eind = i; break; } } } return JSON.parse(s.slice(a, (eind > 0 ? eind : s.lastIndexOf('}')) + 1)); }
 // Verkoopteksten voor de gekozen producten (Henkjan 29 okt: "Dit zijn toch geen teksten ??? Dan wil niemand het kopen ..."): per product
 // 10 advertenties van Claude volgens de tekstregels (lib/shoptekst.js), 3 dagen bewaard; hooguit 40 seconden per aanroep (150 bij een verse dagkeuze), de rest
-// houdt de sjablonen tot de volgende aanroep. Model: SHOP_VERKOOP_MODEL, anders Sonnet (verkopen is schrijfwerk, geen samenvatting).
+// houdt de sjablonen tot de volgende aanroep. Model: SHOP_VERKOOP_MODEL, anders Haiku (29 okt: tokens sparen; de keuring en de lessen uit de cijfers houden de kwaliteit).
 async function metVerkoop(lijst, budget = 40000) {
   const t0 = Date.now(), todo = (lijst || []).filter(p => p && p.pid).slice(0, 90); let ai = 0; const lessen = await kv.get('hjdk:shop:tekstlessen').catch(() => null); // beste en slechtste teksten van de PropellerAds-lus (lib/tekstleer.ts)
-  for (let i = 0; i < todo.length && Date.now() - t0 < budget; i += 12) await Promise.all(todo.slice(i, i + 12).map(async p => { try { const a = await verkoopTeksten(kv, p, claudeJson, process.env.SHOP_VERKOOP_MODEL || SONNET, lessen); if (a) { p.advertenties = a; ai++; } } catch (e) {} }));
+  for (let i = 0; i < todo.length && Date.now() - t0 < budget; i += 12) await Promise.all(todo.slice(i, i + 12).map(async p => { try { const a = await verkoopTeksten(kv, p, claudeJson, process.env.SHOP_VERKOOP_MODEL || HAIKU, lessen); // 29 okt: Haiku (Henkjan: "spaar tokens daar"); de keuring houdt de kwaliteit if (a) { p.advertenties = a; ai++; } } catch (e) {} }));
   return ai;
 }
 async function claudeJson(prompt, o) {
