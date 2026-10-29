@@ -161,7 +161,7 @@ function jsonUitTekst(s) { const a = s.indexOf('{'); if (a < 0) return null; let
 // houdt de sjablonen tot de volgende aanroep. Model: SHOP_VERKOOP_MODEL, anders Haiku (29 okt: tokens sparen; de keuring en de lessen uit de cijfers houden de kwaliteit).
 async function metVerkoop(lijst, budget = 40000) {
   const t0 = Date.now(), todo = (lijst || []).filter(p => p && p.pid).slice(0, 90); let ai = 0; const lessen = await kv.get('hjdk:shop:tekstlessen').catch(() => null); // beste en slechtste teksten van de PropellerAds-lus (lib/tekstleer.ts)
-  for (let i = 0; i < todo.length && Date.now() - t0 < budget; i += 12) await Promise.all(todo.slice(i, i + 12).map(async p => { try { const a = await verkoopTeksten(kv, p, claudeJson, process.env.SHOP_VERKOOP_MODEL || HAIKU, lessen); // 29 okt: Haiku (Henkjan: "spaar tokens daar"); de keuring houdt de kwaliteit if (a) { p.advertenties = a; ai++; } } catch (e) {} }));
+  for (let i = 0; i < todo.length && Date.now() - t0 < budget; i += 12) await Promise.all(todo.slice(i, i + 12).map(async p => { try { const a = await verkoopTeksten(kv, p, claudeJson, process.env.SHOP_VERKOOP_MODEL || HAIKU, lessen); if (a) { p.advertenties = a; ai++; } } catch (e) {} }));
   return ai;
 }
 async function claudeJson(prompt, o) {
