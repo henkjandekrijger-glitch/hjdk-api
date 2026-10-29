@@ -392,6 +392,9 @@ const apparaat = req => { try { return createHash('sha1').update(String(req.head
 const leesCookie = (req, naam) => { const m = new RegExp('(?:^|;\\s*)' + naam + '=([^;]+)').exec(String(req.headers.cookie || '')); return m ? decodeURIComponent(m[1]) : ''; };
 // Directe route: Clickmind logt de klik (server: netwerk, datacenter, TLS-vingerafdruk; bewijs voor terugbetaling) en stuurt in één keer door
 // naar de productpagina, met hj (winkelwagen en betaling via de shop) en mmc (Clickmind; cm.js op yoo.rs meldt echt en actie).
+// database vol (OOM): meteen de databasewacht, hooguit eens per 5 minuten per instantie (lib/dbwacht.js, 29 okt)
+let DB_NOOD = 0;
+function dbNood() { if (Date.now() - DB_NOOD < 300000) return; DB_NOOD = Date.now(); laterAf(import('../lib/dbwacht.js').then(m => m.dbWacht(kv, { tijd: 40000 })).catch(() => {})); }
 async function direct(req, res, x) {
   const { net, clickid, zone, cr, camp, pid, code, bot } = x; const test = /^test/i.test(clickid);
   // Clickmind weert bots voor de doorstuur (Henkjan 28 okt: "Zorg dat clikmind echt bots blijft killen en filteren en volgende keer
@@ -419,7 +422,7 @@ async function direct(req, res, x) {
         inc(keys), uurTel(kv, net, 'dv'), sadd(K.set('p'), pid), zone ? sadd(K.set('z', net), zone) : null, cr ? sadd(K.set('a', net), cr) : null, camp ? sadd(K.set('k', net), camp) : null,
         zone ? kv.raw(['PFADD', K.hll(net, zone), apparaat(req)]).then(() => kv.raw(['EXPIRE', K.hll(net, zone), String(30 * 86400)])).catch(() => {}) : null,
         verwerkKlik(kv, { cid, pid: mmp, nieuw: nieuwP, arm: '302', tag: 'yoors-shop', net: CM_NET[net], camp, zone, sub: clickid, cr, kw: pid, doel, p: 'shop' }, serverSignalen(req))
-      ]).catch(e => { console.log('shop direct fout', String(e && e.message || e)); }));
+      ]).catch(e => { const m = String(e && e.message || e); console.log('shop direct fout', m); if (/OOM/.test(m)) dbNood(); }));
       await Promise.race([werk, new Promise(r => setTimeout(r, 350))]);
     }
   }
@@ -928,7 +931,7 @@ export default async function handler(req, res) {
       if (op === 'mdbod') { const bid = Number(b.bid); if (!(bid >= 0.001 && bid <= MD_MAX_BOD())) return res.status(400).json({ ok: false, fout: 'bod tussen 0.001 en ' + MD_MAX_BOD() }); const cs = rows(await md('mondiad_list_campaigns', { name: NAAM, size: 100, excludeStatuses: ['ARCHIVED', 'ARCHIVED_COMPLETED'], responseFields: ['ID', 'NAME', 'BID'] })).filter(c => String(c.name || '').includes(NAAM)); let n = 0; for (const c of cs) { if (num(c.bid) !== bid) { try { await md('mondiad_update_campaign', { json: JSON.stringify({ id: c.id, bid }) }); n++; } catch (e) {} } } await log({ soort: 'bod gezet (Mondiad)', wat: n + ' campagnes', waarom: 'alle shop-campagnes naar $' + bid }); return res.status(200).json({ ok: true, aangepast: n, van: cs.length }); }
       if (op === 'adweg') { const ads = await advertenties(); let n = 0; for (const a of ads) if (!a.uit && a.title === String(b.title || '')) { a.uit = String(b.waarom || 'handmatig uitgezet'); n++; } if (n) await kv.set(K.ads, ads); return res.status(200).json({ ok: true, uitgezet: n }); }
       const net = ['ra', 'ca'].includes(b.net) ? b.net : 'pa'; const LK = net === 'ra' ? K.ralog : net === 'ca' ? K.calog : K.palog;
-      const l = (await kv.get(LK)) || []; const e = b.log || {}; l.unshift(Object.assign({ at: new Date().toISOString() }, e)); await kv.set(LK, l.slice(0, 120));
+      const l = (await kv.get(LK)) || []; const e = Object.assign({}, b.log || {}); for (const [k, v] of Object.entries(e)) if (Array.isArray(v) && v.length > 40) e[k] = v.slice(0, 40).concat([{ soort: 'ingekort', wat: (v.length - 40) + ' regels weggelaten' }]); l.unshift(Object.assign({ at: new Date().toISOString() }, e)); await kv.set(LK, l.slice(0, 48)); // 29 okt: 48 rondes met ingekorte lijsten (was 120 volledige, 5 MB)
       if (b.staat && typeof b.staat === 'object') await kv.set('hjdk:shop:' + net + 'staat:' + DAY(), b.staat, { ex: 3 * 86400 });
       if (b.map && typeof b.map === 'object') { const m = (await kv.get(K.crmap)) || {}; for (const [id, v] of Object.entries(b.map)) { if (/^\d+$/.test(id) && v && pidOk(v.pid)) { m[net + ':' + id] = v.pid; m['t:' + net + ':' + id] = String(v.title || '').slice(0, 60); } } await kv.set(K.crmap, m); }
       return res.status(200).json({ ok: true });

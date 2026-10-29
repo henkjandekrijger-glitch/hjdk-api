@@ -277,10 +277,20 @@ export default async function handler(req, res) {
       return res.status(200).json((await kv.get('mm:tagstop:' + net)) || { net, campagnes: [], aan: false, bijgewerkt: null });
     }
     // uurwacht (lib/wachtuur.js): aankomst per netwerk en campagne, geld naar tags zonder kopers, verzadiging. Elk uur op :47; alleen melden.
+    if (op === 'dbwacht') { // databasewacht (lib/dbwacht.js, Henkjan 29 okt: "Zorg dat dit niet meer volloopt"): openbaar lezen, opruimen alleen cron of beschermde host
+      res.setHeader('cache-control', 'no-store');
+      const { dbWacht, dbGebruik, K_DBWACHT } = await import('../lib/dbwacht.js');
+      const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+      if (!isCron && !beschermd(req)) return res.status(200).json({ ok: true, nu: await dbGebruik(kv), laatst: await kv.get(K_DBWACHT).catch(() => null) });
+      const { logBij } = await import('../lib/handover.js');
+      return res.status(200).json(await dbWacht(kv, { log: u => logBij(kv, { wie: 'dbwacht', tekst: (u.alarm ? 'ALARM database nog ' : 'database ') + u.voorPct + '% -> ' + u.naPct + '% (' + u.usedMB + ' van ' + u.maxMB + ' MB): ' + u.stappen.map(x => x.stap + ' ' + (x.weg || 0)).join(', ') }) }));
+    }
     if (op === 'wachtuur') {
       res.setHeader('cache-control', 'no-store');
       const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
       if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
+      // databasewacht eerst (29 okt): een volle database laat alle andere metingen mislukken
+      try { const { dbWacht } = await import('../lib/dbwacht.js'); const { logBij } = await import('../lib/handover.js'); await dbWacht(kv, { tijd: 25000, log: u => logBij(kv, { wie: 'dbwacht', tekst: (u.alarm ? 'ALARM database nog ' : 'database ') + u.voorPct + '% -> ' + u.naPct + '% (' + u.usedMB + ' van ' + u.maxMB + ' MB): ' + u.stappen.map(x => x.stap + ' ' + (x.weg || 0)).join(', ') }) }); } catch (e) { console.log('dbwacht fout', String(e && e.message || e)); }
       if (q('lees') === '1') return res.status(200).json({ laatst: await kv.get('mm:wachtuur:laatst'), alarmen: ((await kv.raw(['LRANGE', 'mm:alarm:log', 0, 49]).catch(() => [])) || []).map(x => { try { return JSON.parse(x); } catch (e) { return x; } }), pauzes: ((await kv.raw(['LRANGE', 'mm:mdpauze', 0, 9]).catch(() => [])) || []).map(x => { try { return JSON.parse(x); } catch (e) { return x; } }) });
       const { wachtUur, meldTest } = await import('../lib/wachtuur.js'); if (q('test') === '1') return res.status(200).json(await meldTest());
       return res.status(200).json(await wachtUur(kv, { dag: q('dag'), droog: q('droog') === '1' }));
