@@ -289,6 +289,8 @@ export default async function handler(req, res) {
       res.setHeader('cache-control', 'no-store');
       const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
       if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
+      // Kadoly-lekketen van gisteren eenmaal per dag naar Nexy rond 07:00 NL (29 okt; alleen als NEXY_WEBHOOK_URL bestaat)
+      if (new Date().getUTCHours() >= 6) { try { const { naarNexy } = await import('../lib/shopketen.js'); await naarNexy(kv, new Date(Date.now() - 86400e3).toISOString().slice(0, 10)); } catch (e) {} }
       // databasewacht eerst (29 okt): een volle database laat alle andere metingen mislukken
       try { const { dbWacht } = await import('../lib/dbwacht.js'); const { logBij } = await import('../lib/handover.js'); await dbWacht(kv, { tijd: 25000, log: u => logBij(kv, { wie: 'dbwacht', tekst: (u.alarm ? 'ALARM database nog ' : 'database ') + u.voorPct + '% -> ' + u.naPct + '% (' + u.usedMB + ' van ' + u.maxMB + ' MB): ' + u.stappen.map(x => x.stap + ' ' + (x.weg || 0)).join(', ') }) }); } catch (e) { console.log('dbwacht fout', String(e && e.message || e)); }
       if (q('lees') === '1') return res.status(200).json({ laatst: await kv.get('mm:wachtuur:laatst'), alarmen: ((await kv.raw(['LRANGE', 'mm:alarm:log', 0, 49]).catch(() => [])) || []).map(x => { try { return JSON.parse(x); } catch (e) { return x; } }), pauzes: ((await kv.raw(['LRANGE', 'mm:mdpauze', 0, 9]).catch(() => [])) || []).map(x => { try { return JSON.parse(x); } catch (e) { return x; } }) });
