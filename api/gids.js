@@ -174,6 +174,28 @@ export default async function handler(req, res) {
       const tekst = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
       const van = N(q.get('van'));
       return res.status(200).json({ ok: true, hops, status: r && r.status, bytes: html.length, formulieren, velden, scripts, tekst: tekst.slice(van, van + 6000) }); }
+    if (op === 'stijl') { // de look van kadoly.com uitlezen (alleen lezen, beschermde vercel.app-host): kleuren, letters, logo, kop en voet, om de gids er gelijk aan te maken
+      if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const KOPS = { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': 'nl-NL,nl;q=0.9' };
+      let u = 'https://kadoly.com' + (String(q.get('u') || '/').replace(/[^\w\/\-?=&.%]/g, '')), html = '';
+      for (let i = 0; i < 4; i++) { const r = await fetch(u, { redirect: 'manual', headers: KOPS, signal: AbortSignal.timeout(12000) }); if (r.status >= 300 && r.status < 400 && r.headers.get('location')) { u = new URL(r.headers.get('location'), u).href; continue; } html = await r.text(); break; }
+      const css = [...html.matchAll(/<link\b[^>]*rel=["']?[^"'>]*stylesheet[^>]*>/gi)].map(m => (m[0].match(/href=["']([^"']+)/i) || [])[1]).filter(Boolean).map(h => new URL(h, u).href);
+      let alle = [...html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/gi)].map(m => m[1]).join('\n');
+      for (const h of css.slice(0, 8)) { try { const r = await fetch(h, { headers: KOPS, signal: AbortSignal.timeout(10000) }); alle += '\n' + await r.text(); } catch (e) {} }
+      const tel2 = (re, f) => { const o = {}; for (const m of alle.matchAll(re)) { const k = f(m); o[k] = (o[k] || 0) + 1; } return Object.entries(o).sort((a, b) => b[1] - a[1]); };
+      const vars = [...alle.matchAll(/(--[\w-]+)\s*:\s*([^;}]+)/g)].map(m => m[1] + ': ' + m[2].trim()).filter((x, i, l) => l.indexOf(x) === i).slice(0, 120);
+      const fonts = tel2(/font-family\s*:\s*([^;}]+)/gi, m => m[1].trim()).slice(0, 12);
+      const fontface = [...alle.matchAll(/@font-face\s*{[^}]*}/gi)].map(m => m[0].replace(/\s+/g, ' ').slice(0, 300)).slice(0, 10);
+      const kleuren = tel2(/#[0-9a-f]{3,8}\b|rgba?\([^)]+\)/gi, m => m[0].toLowerCase()).slice(0, 40);
+      const radius = tel2(/border-radius\s*:\s*([^;}]+)/gi, m => m[1].trim()).slice(0, 8);
+      const knoppen = [...alle.matchAll(/([^{}]*\b(btn|button)[^{}]*){([^}]*)}/gi)].map(m => (m[1].trim().slice(-80) + ' {' + m[3].trim().slice(0, 260) + '}')).slice(0, 14);
+      const kopHtml = (html.match(/<header\b[\s\S]*?<\/header>/i) || [''])[0].replace(/\s+/g, ' ').slice(0, 5000);
+      const voetHtml = (html.match(/<footer\b[\s\S]*?<\/footer>/i) || [''])[0].replace(/<script[\s\S]*?<\/script>/gi, '').replace(/\s+/g, ' ').slice(0, 5000);
+      const logo = [...html.matchAll(/<img\b[^>]*>/gi)].map(m => m[0]).filter(t => /logo|kadoly/i.test(t)).slice(0, 4);
+      const iconen = [...html.matchAll(/<link\b[^>]*rel=["'][^"']*icon[^"']*["'][^>]*>/gi)].map(m => m[0]).slice(0, 6);
+      const theme = (html.match(/<meta\b[^>]*name=["']theme-color["'][^>]*>/i) || [''])[0];
+      const bodyKlas = (html.match(/<body\b[^>]*>/i) || [''])[0];
+      return res.status(200).json({ ok: true, url: u, css, bytesCss: alle.length, theme, bodyKlas, iconen, logo, fonts, fontface, vars, kleuren, radius, knoppen, kopHtml, voetHtml }); }
     if (op === 'stand') { const dagen = Math.min(28, Math.max(1, N(q.get('dagen')) || 7)); const uit = {}; for (let i = 0; i < dagen; i++) { const d = new Date(Date.now() - i * 864e5).toISOString().slice(0, 10); try { const a = await kv.raw(['HGETALL', 'gk:d:' + d]); const o = {}; if (Array.isArray(a)) for (let j = 0; j + 1 < a.length; j += 2) o[a[j]] = N(a[j + 1]); uit[d] = o; } catch (e) {} } const geleerdPer = {}; for (const id of GIDS_IDS) geleerdPer[id] = await geleerd(id); return res.status(200).json({ ok: true, gidsen: GIDS_IDS, perDag: uit, kliksPerProduct: geleerdPer }); }
     res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=0, s-maxage=300, stale-while-revalidate=600');
     const slug = String(q.get('slug') || '');
