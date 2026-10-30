@@ -162,6 +162,13 @@
     }
   ],
   "rewrites": [
+    { "source": "/", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids" },
+    { "source": "/robots.txt", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=robots" },
+    { "source": "/sitemap.xml", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=sitemap" },
+    { "source": "/llms.txt", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=llms" },
+    { "source": "/gidstel", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=tel" },
+    { "source": "/naar/:pid", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/shop?op=gidsuit&p=:pid" },
+    { "source": "/:slug([a-z0-9-]+)", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?slug=:slug" },
     { "source": "/d/:c", "destination": "/api/keuze-updates?op=d&c=:c" },
     { "source": "/curacao/:s/:b/:c", "has": [{ "type": "host", "value": "keuzehulp.best" }], "destination": "/api/keuze-tools?tool=cur&m=nl&s=:s&b=:b&c=:c" },
     { "source": "/curacao/:s/:b/:c", "has": [{ "type": "host", "value": "kaufberater.best" }], "destination": "/api/keuze-tools?tool=cur&m=de&s=:s&b=:b&c=:c" },
@@ -780,6 +787,7 @@
     }
   ],
   "functions": {
+    "api/gids.js": { "maxDuration": 60 },
     "api/kz.js": {
       "maxDuration": 60,
       "includeFiles": ".claude/skills/**"
