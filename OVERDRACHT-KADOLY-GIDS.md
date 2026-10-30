@@ -25,5 +25,6 @@ Werk je hieraan? Lees eerst dit bestand en de skill zicht-seo-llm. Werk in dezel
 - Catalogus wisselt; geen eigen productervaring, dus geen kwaliteitsoordeel.
 
 ## Logboek (nieuwste boven)
+- 2026-10-30 20:15 UTC: klikroute getest: /naar/<pid> geeft 302 naar kadoly.com met utm_source=kadoly-gids, utm_medium=gids, utm_campaign=<gids> en Clickmind-code (hj, mmc). Gidsbezoekers worden niet op datacenter of botplek geweerd (vrij), alleen zelfverklaarde bots. Volgende: DNS-regel, dan Search Console, Bing en ZICHT; gidsen 2 en 3 (oplaadbare tafellamp, lootjes cadeau 20 euro).
 - 2026-10-30: eerste gids live: /3d-houten-puzzel-volwassenen (7 bouwpakketten op makersfeiten: onderdelen, lijm, formaat, wat beweegt; check die afraadt voor kinderen onder 14; Sinterklaas- en kerstdeadline in de FAQ, elk jaar bijwerken). Bestelinfo op elke gids uit de shop zelf: ADSFAIR B.V., merk verstuurt met track en trace, eerste bestelling gratis verzending, 14 dagen retour met label, bundelkorting.
 - 2026-10-30: site gebouwd (api/gids.js, lib/gidsen-kadoly.js, op=gidsuit in api/shop.js), domein gids.kadoly.com aan het project gehangen. Plan en panel: zie boven.
