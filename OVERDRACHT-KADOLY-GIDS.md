@@ -25,4 +25,5 @@ Werk je hieraan? Lees eerst dit bestand en de skill zicht-seo-llm. Werk in dezel
 - Catalogus wisselt; geen eigen productervaring, dus geen kwaliteitsoordeel.
 
 ## Logboek (nieuwste boven)
+- 2026-10-30: eerste gids live: /3d-houten-puzzel-volwassenen (7 bouwpakketten op makersfeiten: onderdelen, lijm, formaat, wat beweegt; check die afraadt voor kinderen onder 14; Sinterklaas- en kerstdeadline in de FAQ, elk jaar bijwerken). Bestelinfo op elke gids uit de shop zelf: ADSFAIR B.V., merk verstuurt met track en trace, eerste bestelling gratis verzending, 14 dagen retour met label, bundelkorting.
 - 2026-10-30: site gebouwd (api/gids.js, lib/gidsen-kadoly.js, op=gidsuit in api/shop.js), domein gids.kadoly.com aan het project gehangen. Plan en panel: zie boven.
