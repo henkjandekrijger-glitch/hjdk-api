@@ -155,6 +155,22 @@ export default async function handler(req, res) {
       for (const m of maps) uit[m] = await submitSitemap(prop, m, oidc);
       return res.status(200).json({ ok: true, eigendom: prop, sitemaps: uit });
     }
+    if (op === 'verifieer') { // 30 okt (Henkjan: "optimaliseer extreem voor SEO en LLM en Google shopping"): kadoly.com als domein in Search Console via een DNS-TXT, daarna Merchant Center-website claimen. Stap 1 zonder &doe=1: geeft de TXT-regel. Stap 2 met &doe=1: verifieert en voegt sc-domain toe.
+      if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const site = String(url.searchParams.get('site') || '').toLowerCase(); if (!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(site)) return res.status(400).json({ ok: false, fout: 'site=domein' });
+      const { token } = await import('../lib/gsc.js'); const tv = await token(oidc, 'https://www.googleapis.com/auth/siteverification');
+      const SV = 'https://www.googleapis.com/siteVerification/v1/';
+      if (url.searchParams.get('doe') !== '1') { const r = await fetch(SV + 'token', { method: 'POST', headers: { authorization: 'Bearer ' + tv, 'content-type': 'application/json' }, body: JSON.stringify({ site: { type: 'INET_DOMAIN', identifier: site }, verificationMethod: 'DNS_TXT' }) }); const j = await r.json().catch(() => ({})); return res.status(r.ok ? 200 : 502).json({ ok: r.ok, dns: r.ok ? { naam: site, type: 'TXT', waarde: j.token } : null, fout: r.ok ? null : j }); }
+      const r = await fetch(SV + 'webResource?verificationMethod=DNS_TXT', { method: 'POST', headers: { authorization: 'Bearer ' + tv, 'content-type': 'application/json' }, body: JSON.stringify({ site: { type: 'INET_DOMAIN', identifier: site } }) }); const j = await r.json().catch(() => ({}));
+      let sc = null; if (r.ok) { try { const tw = await token(oidc, 'https://www.googleapis.com/auth/webmasters'); const a = await fetch('https://www.googleapis.com/webmasters/v3/sites/' + encodeURIComponent('sc-domain:' + site), { method: 'PUT', headers: { authorization: 'Bearer ' + tw } }); sc = { status: a.status }; } catch (e) { sc = { fout: String(e.message || e) }; } }
+      return res.status(r.ok ? 200 : 502).json({ ok: r.ok, geverifieerd: r.ok ? j : null, searchConsole: sc, fout: r.ok ? null : j }); }
+    if (op === 'merchanthome') { // Merchant Center-website van yoo.rs naar kadoly.com zetten en claimen (30 okt; Henkjan: "Google shopping inderdaad")
+      if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const { token } = await import('../lib/gsc.js'); const tc = await token(oidc, 'https://www.googleapis.com/auth/content'); const acc = url.searchParams.get('account') || '5875752564'; const uri = url.searchParams.get('uri') || 'https://kadoly.com';
+      const M = 'https://merchantapi.googleapis.com/accounts/v1/accounts/' + acc + '/homepage';
+      const zet = await fetch(M + '?updateMask=uri', { method: 'PATCH', headers: { authorization: 'Bearer ' + tc, 'content-type': 'application/json' }, body: JSON.stringify({ uri }) }); const zj = await zet.json().catch(() => ({}));
+      const claim = await fetch(M + ':claim', { method: 'POST', headers: { authorization: 'Bearer ' + tc, 'content-type': 'application/json' }, body: JSON.stringify({ overwrite: true }) }); const cj = await claim.json().catch(() => ({}));
+      return res.status(200).json({ ok: zet.ok && claim.ok, zet: { status: zet.status, j: zj }, claim: { status: claim.status, j: cj } }); }
     if (op === 'merchant') { // Merchant Center Yoors (Henkjan 20 okt: "Check merchant center of ik die kan verbeteren"): account- en productmeldingen via de Merchant API, zelfde serviceaccount als Search Console
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const { merchantStand } = await import('../lib/merchant.js'); const { token } = await import('../lib/gsc.js'); return res.status(200).json(await merchantStand(await token(oidc, 'https://www.googleapis.com/auth/content'), url.searchParams.get('account') || '5875752564', { dev: url.searchParams.get('dev') || '' }));
