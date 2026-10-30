@@ -158,7 +158,7 @@ const CHAT_SYS = `Je bent de hulp van Kadoly (kadoly.com), een Nederlandse websh
 Regels:
 - Antwoord in de taal van de bezoeker (meestal Nederlands), kort: hoogstens 70 woorden, gewone woorden, vriendelijk en zeker. Geen gedachtestreepjes, geen opsommingstekens.
 - Noem alleen producten uit KANDIDATEN en zet hun id in "producten" (hoogstens 3, beste eerst). Verzin geen eigenschappen die er niet staan (maat, materiaal, leeftijd): zeg dan dat het op de productpagina staat.
-- Eerlijk: past niets, zeg dat en raad af of stel één vraag terug om beter te kiezen (voor wie, budget, gelegenheid). Prijzen zijn inclusief verzending. Levertijd: gebruik "in huis rond" uit de lijst.
+- Eerlijk: past niets, zeg dat en raad af of stel één vraag terug om beter te kiezen (voor wie, budget, gelegenheid). Prijzen zijn inclusief verzending. Levertijd: neem "in huis rond" letterlijk over uit de lijst, verander de dag niet. Producten met uitleg uit onze gids zijn door ons gekozen: gebruik die uitleg als ze passen.
 - Bestelinfo die klopt: betalen met iDEAL, PayPal of creditcard, kopen zonder account; het merk verstuurt met track en trace; eerste bestelling gratis verzending; 14 dagen retour met retourlabel en het hele bedrag terug; bundelkorting 5% op 2 tot 20% op 6 producten. Mail: henkjan@yoo.rs.
 - Zet "dringend" op true als: een bestelling niet aankomt, kapot of verkeerd is; er een probleem is met betalen of geld terug; iemand een klacht heeft; iemand een mens wil spreken; het om een grote of zakelijke bestelling gaat; of een cadeau zeker voor een vaste datum binnen moet zijn en de levertijd krap is. Zeg dan dat Henkjan van Kadoly via WhatsApp meteen helpt.
 - Gaat de vraag niet over Kadoly, cadeaus of wonen: kort en vriendelijk terug naar waar je wel mee helpt.
@@ -171,11 +171,12 @@ async function chatAntwoord(req, oidc) {
   const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim(); const ik = 'gk:rl:' + qHash(ip + DAG());
   if (!b.test) try { const n = N(await kv.raw(['INCR', ik])); if (n === 1) await kv.raw(['EXPIRE', ik, '86400']); const tot = N(await kv.raw(['HINCRBY', 'gk:d:' + DAG(), 'chat|vraag', '1'])); await kv.raw(['EXPIRE', 'gk:d:' + DAG(), String(60 * 86400)]); if (n > 40 || tot > 2500) return { status: 200, j: { ok: true, antwoord: 'Ik krijg nu veel vragen. Henkjan van Kadoly helpt je graag via WhatsApp.', producten: [], dringend: true } }; } catch (e) {}
   const z1 = await zoek(laatste.t, 10); const z2 = v.length > 1 ? await zoek(v.filter(m => m.r === 'u').map(m => m.t).join(' '), 8) : { producten: [] };
-  const cat = await catalogus(); const kand = new Map(); for (const x of z1.producten.concat(z2.producten)) kand.set(x.pid, x);
-  if (g) for (const c of g.keuze) { const i = cat[c.pid]; if (i && i.vr !== false && !kand.has(c.pid)) kand.set(c.pid, { pid: c.pid, naam: c.naam || i.t, merk: i.b || '', prijs: thuis(i), prijsTekst: prijsTekst(thuis(i)), img: i.img || '', lt: N(i.lt), datum: N(i.lt) ? nlDatum(leverDatum(i.lt)) : '' }); }
-  const lijst = [...kand.values()].slice(0, 16);
-  const ctx = 'VANDAAG: ' + nlDatum(new Date()) + '\nPAGINA: ' + (g ? g.h1 : 'start van de gids') + '\nGIDSEN: ' + GIDS_IDS.map(id => GIDSEN[id].h1 + ' (' + HOST + '/' + id + ')').join('; ') +
-    '\nKANDIDATEN (id | naam | merk | prijs | in huis rond):\n' + (lijst.length ? lijst.map(x => [x.pid, x.naam, x.merk || '-', euro(x.prijs), x.datum || 'zie product'].join(' | ')).join('\n') : '(geen passende producten gevonden)') +
+  const cat = await catalogus(); const kand = new Map(); const soort = pid => { const i = cat[pid] || {}; return [i.c, i.s].filter(Boolean).join('/'); };
+  if (g) for (const c of g.keuze) { const i = cat[c.pid]; if (i && i.vr !== false) kand.set(c.pid, { pid: c.pid, naam: c.naam || i.t, merk: i.b || '', prijs: thuis(i), prijsTekst: prijsTekst(thuis(i)), img: i.img || '', lt: N(i.lt), datum: N(i.lt) ? nlDatum(leverDatum(i.lt)) : '', gids: c.label + ': ' + c.waarom + (c.beperking ? ' Let op: ' + c.beperking : '') }); } // de keuze van deze gids eerst, met onze uitleg
+  for (const x of z1.producten.concat(z2.producten)) if (!kand.has(x.pid)) kand.set(x.pid, x);
+  const lijst = [...kand.values()].slice(0, 18);
+  const ctx = 'VANDAAG: ' + nlDatum(new Date()) + '\nPAGINA: ' + (g ? g.h1 + '\nKORT ANTWOORD VAN DEZE GIDS: ' + g.kort : 'start van de gids') + '\nGIDSEN: ' + GIDS_IDS.map(id => GIDSEN[id].h1 + ' (' + HOST + '/' + id + ')').join('; ') +
+    '\nKANDIDATEN (id | naam | merk | soort | prijs incl. verzending | in huis rond | uitleg uit onze gids):\n' + (lijst.length ? lijst.map(x => [x.pid, x.naam, x.merk || '-', soort(x.pid) || '-', euro(x.prijs), x.datum || 'zie product', x.gids || '-'].join(' | ')).join('\n') : '(geen passende producten gevonden)') +
     '\n\nGESPREK:\n' + v.map(m => (m.r === 'u' ? 'Bezoeker: ' : 'Kadoly: ') + m.t).join('\n');
   let out = { antwoord: '', producten: [], dringend: false, onderwerp: '' };
   try { const r = await berichten({ fn: 'gids-chat', model: HAIKU, system: CHAT_SYS, user: ctx, max: 500, oidc, timeout: 20000 }); const m = String(r.txt || '').match(/\{[\s\S]*\}/); if (m) out = Object.assign(out, JSON.parse(m[0])); } catch (e) { out.antwoord = 'Dat lukte nu even niet. Henkjan van Kadoly helpt je via WhatsApp.'; out.dringend = true; }
