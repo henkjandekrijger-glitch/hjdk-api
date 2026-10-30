@@ -411,7 +411,7 @@ async function direct(req, res, x) {
   // aankomsten en geen echte mensen op kadoly.com) krijgen 403 en komen nooit op de shop. Echte mensen gaan altijd in een keer door
   // (nooit een tussenpagina). Een controle van het netwerk zonder klik-id (moderatie, voorbeeld) wordt niet als datacenter geweerd.
   let weiger = bot ? 'bot' : '';
-  if (!weiger && !test && echteKlikId(clickid)) {
+  if (!weiger && !test && !x.vrij && echteKlikId(clickid)) { // gidsbezoekers (x.vrij) komen uit Google en kunnen een VPN of kantoornetwerk hebben: alleen zelfverklaarde bots weren
     try { await Promise.race([laadDc(kv), new Promise(r => setTimeout(r, 250))]); } catch (e) {}
     try { if (dcVan(serverSignalen(req)).dc === true) weiger = 'datacenter'; } catch (e) {}
     if (!weiger) { try { if (await isBotZone(kv, net, zone)) weiger = 'botplek'; } catch (e) {} }
@@ -895,7 +895,7 @@ export default async function handler(req, res) {
       if (!pid) { res.statusCode = 302; res.setHeader('location', 'https://kadoly.com/'); return res.end(); }
       const bot = isBot(req.headers['user-agent'] || ''); const clickid = 'gids-' + (g || 'x') + '-' + randomBytes(6).toString('hex');
       if (!bot) { try { await kv.raw(['HINCRBY', 'gk:d:' + DAY(), (g || 'x') + '|uit-' + (b || 'x'), '1']); await kv.raw(['EXPIRE', 'gk:d:' + DAY(), String(60 * 86400)]); } catch (e) {} }
-      return await direct(req, res, { net: 'x', clickid, zone: '', cr: '', camp: '', pid, code: shortId('x:' + clickid), bot, bron: { medium: 'gids', campaign: g || 'gids' } }); }
+      return await direct(req, res, { net: 'x', clickid, zone: '', cr: '', camp: '', pid, code: shortId('x:' + clickid), bot, vrij: true, bron: { medium: 'gids', campaign: g || 'gids' } }); }
     if (op === 'snelheid') { // openbaar, alleen lezen: hoe zwaar de productpagina is voor een NL-telefoon (omleidingen, scripts, css, beelden); 6 uur bewaard
       const { snelheid } = await import('../lib/shopsnelheid.js'); const pid = pidOk(url.searchParams.get('p')) || 'oc_4174004347453441';
       res.setHeader('cache-control', 'no-store'); return res.status(200).json(await snelheid(kv, pid, !!url.searchParams.get('vers'))); }
