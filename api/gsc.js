@@ -170,6 +170,23 @@ export default async function handler(req, res) {
       const r = await fetch(SV + 'webResource?verificationMethod=DNS_TXT', { method: 'POST', headers: { authorization: 'Bearer ' + tv, 'content-type': 'application/json' }, body: JSON.stringify({ site: { type: 'INET_DOMAIN', identifier: site } }) }); const j = await r.json().catch(() => ({}));
       let sc = null; if (r.ok) { try { const tw = await token(oidc, 'https://www.googleapis.com/auth/webmasters'); const a = await fetch('https://www.googleapis.com/webmasters/v3/sites/' + encodeURIComponent('sc-domain:' + site), { method: 'PUT', headers: { authorization: 'Bearer ' + tw } }); sc = { status: a.status }; } catch (e) { sc = { fout: String(e.message || e) }; } }
       return res.status(r.ok ? 200 : 502).json({ ok: r.ok, geverifieerd: r.ok ? j : null, searchConsole: sc, fout: r.ok ? null : j }); }
+    if (op === 'merchantnieuw') { // 30 okt (Henkjan: "Nee is nieuwe GMC id maak" en "Kun je op deze manier ook niet GMC ... via dev console?"): nieuw Merchant Center-account voor Kadoly via de Merchant API.
+      // Zonder &doe=1 alleen lezen: het aanvraagschema uit de discovery, het oude account 5875752564 en zijn gebruikers. Met &doe=1&email=<admin>: accounts:createAndConfigure, beheerd door 5875752564 (accountManagement).
+      if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const { token } = await import('../lib/gsc.js'); const tc = await token(oidc, 'https://www.googleapis.com/auth/content'); const H = { authorization: 'Bearer ' + tc, 'content-type': 'application/json' }; const B = 'https://merchantapi.googleapis.com/accounts/v1/';
+      const haalJ = async (u, o) => { const r = await fetch(u, Object.assign({ headers: H }, o || {})); return { status: r.status, j: await r.json().catch(() => ({})) }; };
+      if (url.searchParams.get('doe') !== '1') {
+        const d = await fetch('https://merchantapi.googleapis.com/$discovery/rest?version=accounts_v1').then(r => r.json()).catch(() => ({})); const sc = (d && d.schemas) || {};
+        const toon = n => sc[n] ? { beschrijving: sc[n].description, velden: Object.fromEntries(Object.entries(sc[n].properties || {}).map(([k, v]) => [k, String(v.description || '').slice(0, 600)])) } : null;
+        const [acc, users, rel, svc] = await Promise.all([haalJ(B + 'accounts/5875752564'), haalJ(B + 'accounts/5875752564/users'), haalJ(B + 'accounts/5875752564/relationships'), haalJ(B + 'accounts/5875752564/services')]);
+        return res.status(200).json({ ok: true, schema: { CreateAndConfigureAccountRequest: toon('CreateAndConfigureAccountRequest'), AddUser: toon('AddUser'), AddAccountService: toon('AddAccountService'), Account: toon('Account') }, oudAccount: acc, gebruikers: users.status === 200 ? (users.j.users || []).map(u => ({ email: (u.name || '').split('/').pop(), rechten: u.accessRights, staat: u.state })) : users, relaties: rel, diensten: svc });
+      }
+      const email = String(url.searchParams.get('email') || '').trim().toLowerCase(); if (!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/.test(email)) return res.status(400).json({ ok: false, fout: 'email=<admin>' });
+      const body = { account: { accountName: 'Kadoly', adultContent: false, languageCode: 'nl', timeZone: { id: 'Europe/Amsterdam' } }, user: [{ userId: email, user: { accessRights: ['ADMIN'] } }], service: [{ accountManagement: {}, provider: 'providers/5875752564' }] };
+      const r = await haalJ(B + 'accounts:createAndConfigure', { method: 'POST', body: JSON.stringify(body) });
+      if (r.status === 200 && r.j && r.j.name) { try { const { kv } = await import('../lib/db.js'); await kv.set('hjdk:gmc:kadoly', { naam: r.j.name, at: Date.now(), admin: email }); } catch (e) {} }
+      return res.status(200).json({ ok: r.status === 200, verzonden: body, antwoord: r });
+    }
     if (op === 'merchanthome') { // Merchant Center-website van yoo.rs naar kadoly.com zetten en claimen (30 okt; Henkjan: "Google shopping inderdaad")
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const { token } = await import('../lib/gsc.js'); const tc = await token(oidc, 'https://www.googleapis.com/auth/content'); const acc = url.searchParams.get('account') || '5875752564'; const uri = url.searchParams.get('uri') || 'https://kadoly.com';
