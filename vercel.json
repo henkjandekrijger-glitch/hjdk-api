@@ -171,6 +171,8 @@
     { "source": "/sitemap.xml", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=sitemap" },
     { "source": "/llms.txt", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=llms" },
     { "source": "/gidstel", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=tel" },
+    { "source": "/zoek", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=zoek" },
+    { "source": "/vraag", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=vraag" },
     { "source": "/naar/:pid", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/shop?op=gidsuit&p=:pid" },
     { "source": "/:slug([a-z0-9-]+)", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?slug=:slug" },
     { "source": "/d/:c", "destination": "/api/keuze-updates?op=d&c=:c" },

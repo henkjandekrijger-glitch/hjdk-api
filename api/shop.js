@@ -420,7 +420,7 @@ async function direct(req, res, x) {
   let mmp = leesCookie(req, 'mmp'); const nieuwP = !/^[0-9a-f]{16}$/.test(mmp); if (nieuwP) mmp = nieuwId(8);
   let rec = null; try { rec = await kv.get(K.rec(code)); } catch (e) {}
   const cid = (rec && rec.mmc) || nieuwId(6);
-  const doel = 'https://kadoly.com/product/' + encodeURIComponent(pid) + '?utm_source=' + (x.bron ? 'kadoly-gids' : NETTEN[net].toLowerCase()) + '&utm_medium=' + (x.bron ? x.bron.medium : 'push') + '&utm_campaign=' + (x.bron ? encodeURIComponent(x.bron.campaign) : 'shoplus') + '&utm_content=' + encodeURIComponent(pk(pid)) + '&hj=' + code + '&mmc=' + cid + '&lang=nl';
+  const doel = 'https://kadoly.com/' + (x.kassa ? 'checkout/' : 'product/') + encodeURIComponent(pid) + '?utm_source=' + (x.bron ? 'kadoly-gids' : NETTEN[net].toLowerCase()) + '&utm_medium=' + (x.bron ? x.bron.medium : 'push') + '&utm_campaign=' + (x.bron ? encodeURIComponent(x.bron.campaign) : 'shoplus') + '&utm_content=' + encodeURIComponent(pk(pid)) + '&hj=' + code + '&mmc=' + cid + '&lang=nl';
   if (!weiger && !prefetch && (!rec || !rec.mmc)) {
     const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; rec.mmc = cid; if (test) rec.t = 1;
     try { await Promise.all([kv.set(K.rec(code), rec, { ex: 7 * 86400 }), cidKoppel(kv, { cid, pid: mmp, arm: rec.arm === 'd' ? 'direct' : 'pagina', tag: 'yoors-shop', net: test ? 'test' : CM_NET[net], zone: zone || '-', camp: camp || '-', shop: code })]); } catch (e) {}
@@ -601,6 +601,7 @@ async function pxVerwerk(code, wRuw, v, order, methode, bron, t) {
   }
   if (rec.px && rec.px[merk]) return { ok: true, dubbel: true };
   rec.px = rec.px || {}; rec.px[merk] = Date.now(); const net = rec.s;
+  if (!rec.t && /^gids-/.test(String(rec.c || ''))) { const gm = String(rec.c).match(/^gids-(.+?)(?:-([kp]))?-[0-9a-f]{12}$/); if (gm) { const dk = 'gk:d:' + DAY(); try { await kv.raw(['HINCRBY', dk, gm[1] + '|px-' + w + '-' + (gm[2] || 'p'), '1']); if (w === 'koop' && v > 0) await kv.raw(['HINCRBY', dk, gm[1] + '|omzet-' + (gm[2] || 'p'), String(Math.round(v * 100))]); await kv.raw(['EXPIRE', dk, String(60 * 86400)]); } catch (e) {} } } // gids.kadoly.com: keten tot betaald per gids en per arm (productpagina p, meteen afrekenen k)
   if (!rec.t) await uurTel(kv, net, [w].concat(m ? [w + ':' + m] : []), t);
   if (oud && !(oud === 'cart' && (rec.px.cartTeld || (w === 'afreken' && rec.px.cart)))) { if (oud === 'cart') rec.px.cartTeld = Date.now();
     const keys = ['sh-' + net + '-' + oud, 'sh-d' + D8() + '-' + net + '-' + oud]; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-' + oud); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-' + oud); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-' + oud); if (rec.p) keys.push('sh-p-' + pk(rec.p) + '-' + oud);
@@ -896,9 +897,9 @@ export default async function handler(req, res) {
     if (op === 'gidsuit') { // klik vanuit gids.kadoly.com naar een product: via Clickmind (direct), zodat de keten tot betaald per gids gemeten wordt (30 okt)
       const pid = pidOk(url.searchParams.get('p')); const g = String(url.searchParams.get('g') || '').replace(/[^a-z0-9-]/g, '').slice(0, 60); const b = String(url.searchParams.get('b') || '').replace(/[^a-z]/g, '').slice(0, 12);
       if (!pid) { res.statusCode = 302; res.setHeader('location', 'https://kadoly.com/'); return res.end(); }
-      const bot = isBot(req.headers['user-agent'] || ''); const clickid = 'gids-' + (g || 'x') + '-' + randomBytes(6).toString('hex');
-      if (!bot) { try { await kv.raw(['HINCRBY', 'gk:d:' + DAY(), (g || 'x') + '|uit-' + (b || 'x'), '1']); await kv.raw(['EXPIRE', 'gk:d:' + DAY(), String(60 * 86400)]); if (g) { await kv.raw(['HINCRBY', 'gk:p:' + g, pid, '1']); await kv.raw(['EXPIRE', 'gk:p:' + g, String(120 * 86400)]); } } catch (e) {} } // gk:p: kliks per product per gids: de gids leert er zijn volgorde van
-      return await direct(req, res, { net: 'x', clickid, zone: '', cr: '', camp: '', pid, code: shortId('x:' + clickid), bot, vrij: true, bron: { medium: 'gids', campaign: g || 'gids' } }); }
+      const bot = isBot(req.headers['user-agent'] || ''); const arm = url.searchParams.get('a') === 'k' ? 'k' : 'p'; const clickid = 'gids-' + (g || 'x') + '-' + arm + '-' + randomBytes(6).toString('hex'); const zh = String(url.searchParams.get('h') || '').replace(/[^0-9a-f]/g, '').slice(0, 12); // arm k: meteen naar afrekenen (30 okt, Henkjan: "Bekijk maar ook direct naar reken af"); h: zoekvraag waarop geklikt is (de zoekbalk leert ervan)
+      if (!bot) { try { await kv.raw(['HINCRBY', 'gk:d:' + DAY(), (g || 'x') + '|uit-' + (b || 'x'), '1']); await kv.raw(['HINCRBY', 'gk:d:' + DAY(), (g || 'x') + '|uitarm-' + arm, '1']); if (zh.length === 12) { await kv.raw(['HINCRBY', 'gk:zk:' + zh, pid, '1']); await kv.raw(['EXPIRE', 'gk:zk:' + zh, String(180 * 86400)]); } await kv.raw(['EXPIRE', 'gk:d:' + DAY(), String(60 * 86400)]); if (g) { await kv.raw(['HINCRBY', 'gk:p:' + g, pid, '1']); await kv.raw(['EXPIRE', 'gk:p:' + g, String(120 * 86400)]); } } catch (e) {} } // gk:p: kliks per product per gids: de gids leert er zijn volgorde van
+      return await direct(req, res, { net: 'x', clickid, zone: '', cr: '', camp: '', pid, code: shortId('x:' + clickid), bot, vrij: true, kassa: arm === 'k', bron: { medium: 'gids', campaign: g || 'gids' } }); }
     if (op === 'snelheid') { // openbaar, alleen lezen: hoe zwaar de productpagina is voor een NL-telefoon (omleidingen, scripts, css, beelden); 6 uur bewaard
       const { snelheid } = await import('../lib/shopsnelheid.js'); const pid = pidOk(url.searchParams.get('p')) || 'oc_4174004347453441';
       res.setHeader('cache-control', 'no-store'); return res.status(200).json(await snelheid(kv, pid, !!url.searchParams.get('vers'))); }
