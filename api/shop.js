@@ -897,7 +897,7 @@ export default async function handler(req, res) {
       const pid = pidOk(url.searchParams.get('p')); const g = String(url.searchParams.get('g') || '').replace(/[^a-z0-9-]/g, '').slice(0, 60); const b = String(url.searchParams.get('b') || '').replace(/[^a-z]/g, '').slice(0, 12);
       if (!pid) { res.statusCode = 302; res.setHeader('location', 'https://kadoly.com/'); return res.end(); }
       const bot = isBot(req.headers['user-agent'] || ''); const clickid = 'gids-' + (g || 'x') + '-' + randomBytes(6).toString('hex');
-      if (!bot) { try { await kv.raw(['HINCRBY', 'gk:d:' + DAY(), (g || 'x') + '|uit-' + (b || 'x'), '1']); await kv.raw(['EXPIRE', 'gk:d:' + DAY(), String(60 * 86400)]); } catch (e) {} }
+      if (!bot) { try { await kv.raw(['HINCRBY', 'gk:d:' + DAY(), (g || 'x') + '|uit-' + (b || 'x'), '1']); await kv.raw(['EXPIRE', 'gk:d:' + DAY(), String(60 * 86400)]); if (g) { await kv.raw(['HINCRBY', 'gk:p:' + g, pid, '1']); await kv.raw(['EXPIRE', 'gk:p:' + g, String(120 * 86400)]); } } catch (e) {} } // gk:p: kliks per product per gids: de gids leert er zijn volgorde van
       return await direct(req, res, { net: 'x', clickid, zone: '', cr: '', camp: '', pid, code: shortId('x:' + clickid), bot, vrij: true, bron: { medium: 'gids', campaign: g || 'gids' } }); }
     if (op === 'snelheid') { // openbaar, alleen lezen: hoe zwaar de productpagina is voor een NL-telefoon (omleidingen, scripts, css, beelden); 6 uur bewaard
       const { snelheid } = await import('../lib/shopsnelheid.js'); const pid = pidOk(url.searchParams.get('p')) || 'oc_4174004347453441';

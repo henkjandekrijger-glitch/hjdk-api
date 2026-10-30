@@ -1,5 +1,6 @@
 {
   "crons": [
+    { "path": "/api/gids?op=indexnow", "schedule": "55 6 * * *" },
     {
       "path": "/api/hjdk/iterate",
       "schedule": "17 */6 * * *"
@@ -164,6 +165,9 @@
   "rewrites": [
     { "source": "/", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids" },
     { "source": "/robots.txt", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=robots" },
+    { "source": "/llms-full.txt", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=llmsfull" },
+    { "source": "/zicht.json", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=zicht" },
+    { "source": "/9eed19b173ae0446f4f8e9d13ef50c6d.txt", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=ixkey" },
     { "source": "/sitemap.xml", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=sitemap" },
     { "source": "/llms.txt", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=llms" },
     { "source": "/gidstel", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=tel" },
