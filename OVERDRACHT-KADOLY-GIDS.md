@@ -12,6 +12,9 @@ Werk je hieraan? Lees eerst dit bestand en de skill zicht-seo-llm. Werk in dezel
 - Routes in vercel.json voor host gids.kadoly.com. Testen kan al op https://hjdk-api-henq.vercel.app/api/gids?slug=<gids>.
 - Tellers: hash gk:d:<dag> (60 dagen): <gids>|v (weergave), <gids>|uit-<blok> (klik naar de shop), <gids>|check-<uitkomst>. Lezen: /api/gids?op=stand&dagen=7.
 - Prijzen en levertijd live uit de shopcatalogus (hjdk:shop:cat); uitverkocht product verdwijnt vanzelf uit de gids.
+- Nieuwe gids kiezen (ook de dagelijkse taak): kijk naast de winkelwagens uit de advertenties ook naar wat lezers zoeken en vragen: /api/gids?op=stand&dagen=28 geeft zoeken.vragen, zoeken.zonderUitkomst (vraag zonder passend antwoord: kans op een gids) en zoeken.chatOnderwerpen; de laatste chatvragen staan in chatLaatste (alleen via de vercel.app-host).
+- Zoeken en chat: zoekbalk in de kop (/zoek, leert van kliks per zoekvraag in gk:zk:<hash>), chat (/vraag, Haiku via de AI Gateway, alleen producten uit de catalogus, WhatsApp-knop naar Henkjan bij dringende vragen). Proef via de beschermde host: /api/gids?op=vraag&q=<vraag>&p=<gids> (telt niet mee).
+- Armproef: per bezoeker gaat de knop naar de productpagina (p) of meteen naar afrekenen (k, /checkout/<pid>, knop "Bestellen bij Kadoly"); stand in op=stand armproef. Geen tussenpagina's: /naar/ is een directe 302 via Clickmind.
 - Pagina-opbouw: kort antwoord, Onze keuze (prijs inclusief verzending, verwachte bezorgdag, waarom, let op), tabel per situatie, snelle check die ook kan afraden, uitleg, zo kozen we, zekerheid, FAQ, delen via WhatsApp. Schema: Organization, Article, BreadcrumbList, ItemList met Product en Offer, FAQPage.
 
 ## Stand
