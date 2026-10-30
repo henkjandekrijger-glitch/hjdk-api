@@ -117,6 +117,17 @@ export default async function handler(req, res) {
     if (op === 'llms') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(await llms()); }
     if (op === 'tel') { const g = String(q.get('g') || ''); const s = String(q.get('s') || '').replace(/[^a-z0-9-]/g, '').slice(0, 30); if (GIDSEN[g] && s && !isBot(ua)) await tel(g, s); return res.status(204).end(); }
     if (op === 'feiten') { if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden'); const pids = String(q.get('p') || '').split(',').filter(x => /^oc_\d+$/.test(x)).slice(0, 8); const uit = []; for (const p of pids) { try { uit.push(await feiten(p)); } catch (e) { uit.push({ pid: p, fout: String(e.message || e) }); } } return res.status(200).json({ ok: true, feiten: uit }); }
+    if (op === 'pagina') { // een pagina van kadoly.com zoals een NL-telefoon hem krijgt (alleen lezen, beschermde vercel.app-host): voor het kassalek
+      if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const pad = String(q.get('u') || '/'); if (!/^\/[\w\/\-?=&.%]*$/.test(pad)) return res.status(400).json({ ok: false });
+      let u = 'https://kadoly.com' + pad, r, html = ''; const hops = [];
+      for (let i = 0; i < 4; i++) { r = await fetch(u, { redirect: 'manual', headers: { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': 'nl-NL,nl;q=0.9' }, signal: AbortSignal.timeout(12000) }); hops.push(r.status + ' ' + u.replace('https://kadoly.com', '')); if (r.status >= 300 && r.status < 400 && r.headers.get('location')) { u = new URL(r.headers.get('location'), u).href; continue; } html = await r.text(); break; }
+      const velden = [...html.matchAll(/<(input|select|textarea|button)\b[^>]*>/gi)].map(m => m[0].replace(/\s+/g, ' ').slice(0, 200)).slice(0, 60);
+      const scripts = [...html.matchAll(/<script[^>]*src=["']([^"']+)/gi)].map(m => m[1]).slice(0, 30);
+      const formulieren = [...html.matchAll(/<form\b[^>]*>/gi)].map(m => m[0].slice(0, 200));
+      const tekst = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+      const van = N(q.get('van'));
+      return res.status(200).json({ ok: true, hops, status: r && r.status, bytes: html.length, formulieren, velden, scripts, tekst: tekst.slice(van, van + 6000) }); }
     if (op === 'stand') { const dagen = Math.min(28, Math.max(1, N(q.get('dagen')) || 7)); const uit = {}; for (let i = 0; i < dagen; i++) { const d = new Date(Date.now() - i * 864e5).toISOString().slice(0, 10); try { const a = await kv.raw(['HGETALL', 'gk:d:' + d]); const o = {}; if (Array.isArray(a)) for (let j = 0; j + 1 < a.length; j += 2) o[a[j]] = N(a[j + 1]); uit[d] = o; } catch (e) {} } return res.status(200).json({ ok: true, gidsen: GIDS_IDS, perDag: uit }); }
     res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=0, s-maxage=300, stale-while-revalidate=600');
     const slug = String(q.get('slug') || '');
