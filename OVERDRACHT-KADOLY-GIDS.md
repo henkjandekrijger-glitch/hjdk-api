@@ -15,9 +15,10 @@ Werk je hieraan? Lees eerst dit bestand en de skill zicht-seo-llm. Werk in dezel
 - Pagina-opbouw: kort antwoord, Onze keuze (prijs inclusief verzending, verwachte bezorgdag, waarom, let op), tabel per situatie, snelle check die ook kan afraden, uitleg, zo kozen we, zekerheid, FAQ, delen via WhatsApp. Schema: Organization, Article, BreadcrumbList, ItemList met Product en Offer, FAQPage.
 
 ## Stand
-- 30 okt: gids.kadoly.com toegevoegd aan Vercel-project hjdk-api (geverifieerd). DNS ontbreekt nog: bij AWS Route 53 van kadoly.com een CNAME gids -> 1cb0d436b4cbaa55.vercel-dns-017.com (Henkjan of de beheerder van kadoly.com).
-- Eerste gidsen (keuze panel, zoekvolume nog niet getoetst): 3D houten puzzel volwassenen (148 producten van Art Bizniz), oplaadbare tafellamp, lootjes of secret santa cadeau 20 euro.
-- Nog te doen: Search Console en Bing voor gids.kadoly.com, aanmelden bij ZICHT (op=site), link vanaf kadoly.com ("Hulp bij kiezen"), kadoly.help kopen en doorsturen (prijsquote aan Henkjan voorleggen).
+- 30 okt: gids.kadoly.com live op Vercel-project hjdk-api (CNAME gids -> 1cb0d436b4cbaa55.vercel-dns-017.com staat, Vercel: goed ingesteld). Eén gids live: /3d-houten-puzzel-volwassenen. Dagelijkse taak schrijft elke dag één nieuwe (11:20 UTC).
+- Lerend en SEO/AI: zie logboek 30 okt 23:00. ZICHT-site kadolygids staat in lib/zicht.js.
+- Wacht op Henkjan: Site Verification API aanzetten in GCP-project 544726642898 (daarna zet /api/gsc?op=verifieer&site=gids.kadoly.com&methode=META de site zelf in Search Console met sitemap).
+- Nog te doen: Bing (via Search Console-import zodra die staat), link vanaf kadoly.com ("Hulp bij kiezen", shopdeveloper), kadoly.help kopen en doorsturen (prijsquote aan Henkjan voorleggen), nieuw Merchant Center-account Kadoly (Henkjan maakt het, stuurt ID).
 
 ## Onzekerheden
 - Lange termijn: eerste zoekverkeer na 1 a 2 maanden, omzet uit gidsen pas later; Sinterklaas 2026 halen de gidsen niet via Google.
@@ -25,6 +26,7 @@ Werk je hieraan? Lees eerst dit bestand en de skill zicht-seo-llm. Werk in dezel
 - Catalogus wisselt; geen eigen productervaring, dus geen kwaliteitsoordeel.
 
 ## Logboek (nieuwste boven)
+- 2026-10-30 23:20 UTC: verwachte bezorgdag rekent nu vanaf de Nederlandse kalenderdag (gaf eerder soms een zaterdag door de tijdzone). Stand hierboven bijgewerkt.
 - 2026-10-30 23:00 UTC (Henkjan: "DNS is gedaan check dat en maak wat je neerzet helemaal lerend en SEO en LLM optimised"): gids.kadoly.com live (CNAME goed, pagina met prijzen). Lerend: baken telt lezers per herkomst, 15 en 60 seconden, scroll 50 en 90 (gk:d:<dag>); kliks per product per gids (gk:p:<gids>) zetten na 60 weergaven de producten op klikkans, het meest gekozen product krijgt dat label bij 10 of meer kliks; pagina's nu aan de rand van Vercel bewaard (5 minuten), mensen geteld via het baken, AI-bots via de server. SEO en AI: kruimelpad, og:image, eerste foto fetchpriority, andere gidsen onderaan, sitemap met image:image, llms-full.txt, robots noemt llms, zicht.json met eigen meting, ZICHT-site kadolygids (lib/zicht.js), IndexNow elke dag 06:55 UTC (sleutelbestand op het domein). Search Console: /api/gsc?op=verifieer&site=gids.kadoly.com&methode=META zet een meta-tag en verifieert, zodra Henkjan de Site Verification API in GCP-project 544726642898 aanzet.
 - 2026-10-30 20:36 UTC: dagelijkse geplande taak "Kadoly gids dagronde (cloud)" om 11:20 UTC (trig_01SLb32bZLseDN5BgQWAUyxD): kiest elke dag één nieuw onderwerp uit de producten met de meeste winkelwagens in de advertenties (/api/shop/kies?kort=1), schrijft één gids op makersfeiten, zet hem live en meldt Henkjan ook de kassa en Google Shopping. Google Shopping: feed nu uit kadoly.com (demand_radar 3b5f110); Merchant-website nog naar kadoly.com zetten (/api/gsc?op=merchanthome, wacht op Henkjans ja). /api/gsc?op=verifieer&site=kadoly.com kan kadoly.com als domein in Search Console zetten zodra de Site Verification API in GCP-project 544726642898 aan staat.
 - 2026-10-30 20:15 UTC: klikroute getest: /naar/<pid> geeft 302 naar kadoly.com met utm_source=kadoly-gids, utm_medium=gids, utm_campaign=<gids> en Clickmind-code (hj, mmc). Gidsbezoekers worden niet op datacenter of botplek geweerd (vrij), alleen zelfverklaarde bots. Volgende: DNS-regel, dan Search Console, Bing en ZICHT; gidsen 2 en 3 (oplaadbare tafellamp, lootjes cadeau 20 euro).
