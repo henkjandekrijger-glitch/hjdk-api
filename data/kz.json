@@ -16430,7 +16430,7 @@
    "term": "adventskalender",
    "title": "Welke adventskalender past bij jou?",
    "h1": "Adventskalender kiezen: voor kinderen, tieners of volwassenen",
-   "kort": "Voor kinderen onder de 8: chocolade of een eenvoudige bouwset. Voor tieners en volwassenen: een kalender met verzorging, thee of een hobby. Bestel voor eind november, want de leukste zijn dan vaak uitverkocht.",
+   "kort": "Welke adventskalender je kiest hangt vooral af van de leeftijd. Kinderen tot 8 jaar: chocolade of een eenvoudige bouw- of speelgoedkalender. Tieners: kies naar hobby, zoals beauty en nagels, haaraccessoires, een bouw- of puzzelkalender, snoep of een kalender met kleine gadgets; bij twijfel werkt een snoep- of chocoladekalender met een merk dat ze kennen. Volwassenen: verzorging, thee, koffie of iets lekkers. Bestel voor half november, de populairste kalenders zijn eind november vaak uitverkocht.",
    "intro": "Een adventskalender telt af naar kerst met 24 verrassingen. Er zijn kalenders voor bijna elk budget en elke leeftijd. Wat je kiest hangt af van wie hem krijgt en wat die persoon leuk vindt. Drie vragen.",
    "questions": [
     {
@@ -16529,16 +16529,28 @@
    ],
    "faq": [
     {
+     "q": "Welke adventskalender is leuk voor een tiener?",
+     "a": "Kies naar wat de tiener zelf doet: beauty, nagels of haaraccessoires voor wie van verzorging houdt, een bouw- of puzzelkalender voor wie graag iets maakt, en snoep of chocolade van een bekend merk als je het niet zeker weet. Een kalender voor kleine kinderen voelt voor een tiener al snel te kinderachtig."
+    },
+    {
+     "q": "Welke adventskalender past bij een kind tot 8 jaar?",
+     "a": "Chocolade of een speelgoed- of bouwkalender met grote onderdelen. Kijk bij bouwsets naar de leeftijd op de doos, kleine onderdelen zijn niet geschikt voor kinderen onder de 3."
+    },
+    {
      "q": "Wanneer moet ik een adventskalender kopen?",
-     "a": "Het liefst in oktober of begin november. Populaire kalenders zijn vaak eind november uitverkocht."
+     "a": "Het liefst in oktober of in de eerste helft van november. Populaire kalenders zijn vaak eind november uitverkocht, en de kalender moet op 1 december klaarstaan."
     },
     {
      "q": "Hoeveel kost een goede adventskalender?",
      "a": "Tussen 15 en 25 euro voor chocolade of speelgoed, van 30 euro en meer voor beauty, thee of luxe producten."
     },
     {
+     "q": "Is een adventskalender ook leuk voor een volwassene?",
+     "a": "Ja. Er zijn kalenders met thee, koffie, verzorging, kaarsen of iets lekkers. Kies iets wat de ander zelf ook zou kopen, dan wordt elke dag iets gebruikt."
+    },
+    {
      "q": "Kun je zelf een adventskalender maken?",
-     "a": "Ja, met een lege kalender of 24 zakjes en eigen cadeautjes. Dat is vaak goedkoper en persoonlijker."
+     "a": "Ja, met een lege kalender of 24 zakjes en eigen cadeautjes. Dat is vaak goedkoper en persoonlijker, en je kiest precies wat erin zit."
     }
    ],
    "publishAt": "2026-10-05",
@@ -16555,6 +16567,10 @@
     "puzzel",
     "kerstservies",
     "bouwset"
+   ],
+   "vast": [
+    "kort",
+    "faq"
    ]
   },
   {
@@ -19460,7 +19476,7 @@
    "term": "slee kinderen",
    "title": "Welke slee past bij jouw kind?",
    "h1": "Slee voor kinderen kiezen: hout, kunststof of opblaasbaar?",
-   "kort": "Voor jonge kinderen: een stevige houten of kunststof slee met touw en rugsteun. Voor steile hellingen: een slee met rem of besturing. Voor weinig sneeuw of een korte helling: een lichte kunststof slee of opblaasbare sneeuwband.",
+   "kort": "Welke slee past hangt af van de leeftijd en de helling. Peuters en kleuters: een stevige slee met rugleuning en trektouw, zodat je ze ook kunt trekken. Basisschoolkinderen op een gewone helling: een kunststof slee of een houten slee. Steile helling: kies een slee met rem of stuur. Weinig sneeuw, of opbergen in een kleine ruimte: een opblaasbare slee of sneeuwband, die is zacht en licht, maar gaat harder en is lastiger te sturen.",
    "intro": "Een slee moet passen bij de leeftijd van je kind, de sneeuw en de helling waar je gebruik van maakt. Met drie vragen kom je uit bij een veilige keuze voor de eerste sneeuwdag.",
    "questions": [
     {
@@ -19573,6 +19589,14 @@
    ],
    "faq": [
     {
+     "q": "Is een opblaasbare slee een goede keuze?",
+     "a": "Voor een korte, zachte helling en weinig sneeuw wel: hij is licht, zacht en past opgevouwen in een la. Op een steile helling gaat hij hard en is hij moeilijk te sturen of af te remmen, dus dan is een slee met rem of stuur veiliger."
+    },
+    {
+     "q": "Vanaf welke leeftijd mag een kind op een opblaasbare slee?",
+     "a": "Kijk naar de leeftijd op de verpakking en laat jonge kinderen alleen op een lage helling met een volwassene erbij. Voor peuters is een slee met rugleuning en trektouw handiger."
+    },
+    {
      "q": "Vanaf welke leeftijd kan een kind sleeën?",
      "a": "Vanaf ongeveer 2 jaar op een lage helling met een volwassene erbij en een slee met rugleuning of gordel."
     },
@@ -19581,8 +19605,12 @@
      "a": "Hout is stevig en gaat lang mee, maar is zwaarder. Kunststof is lichter en goedkoper en werkt prima bij zachte sneeuw."
     },
     {
+     "q": "Welke slee is goed bij weinig sneeuw?",
+     "a": "Een lichte kunststof slee of een opblaasbare sneeuwband glijdt ook op een dun laagje sneeuw. Een houten slee met smalle ijzers heeft meer sneeuw nodig."
+    },
+    {
      "q": "Heb ik een helm nodig voor sleeën?",
-     "a": "Ja, aanbevolen vooral bij steile hellingen. Een skihelm of fietshelm is geschikt."
+     "a": "Ja, aanbevolen, vooral bij steile hellingen en snelle sleeën zoals een opblaasbare slee. Een skihelm of fietshelm is geschikt."
     }
    ],
    "publishAt": "2026-10-05",
@@ -19595,6 +19623,10 @@
     "snowboots-kind",
     "loopfiets",
     "winterjas-kind"
+   ],
+   "vast": [
+    "kort",
+    "faq"
    ]
   },
   {

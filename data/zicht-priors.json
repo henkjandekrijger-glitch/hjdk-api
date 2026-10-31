@@ -689,5 +689,16 @@
   "moeite": 2,
   "meten": "GSC searchType image: vertoningen en kliks per foto na 2 en 4 weken; Bing Webmaster Afbeeldingen",
   "risico": "Geen license of copyrightNotice invullen zonder dat de pagina het zegt."
+ },
+ {
+  "id": "seizoen-voor-de-piek",
+  "les": "Werk seizoensgidsen (adventskalender, slee, sinterklaas, kerst, zomer) 4 tot 6 weken voor het seizoen bij: antwoord bovenaan voor de groep die al vertoningen geeft en FAQ op die echte zoekvraag. Google heeft dan tijd om opnieuw te lezen voordat het zoekvolume komt; een wijziging midden in de piek telt pas als het seizoen al voorbij is.",
+  "kanaal": "google",
+  "bewijs": "31 okt 2026 keuzehulp.best: adventkalender tiener al op positie 10 en opblaasbare slee op 13,5 terwijl het seizoen nog moet beginnen; nieuwe pagina's en wijzigingen worden bij deze site pas na dagen tot weken opnieuw gelezen (383 van 508 adressen nog onbekend bij Google). Proeven advent-tiener-1031 en slee-opblaas-1031 meten het.",
+  "bron": "dagcontrole 31 okt 2026, /api/gsc?op=status kansen",
+  "sterkte": 2,
+  "effect": 2,
+  "moeite": 1,
+  "meten": "vertoningen en positie op de seizoenszoekvragen in november tot januari tegen dezelfde periode zonder wijziging"
  }
 ]
