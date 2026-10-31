@@ -86,6 +86,9 @@ dl.rows{margin:0 0 8px;border-top:1px solid var(--line)}dl.rows .r{display:grid;
 .q{margin:32px 0 0}.q fieldset{border:0;padding:0;margin:0 0 18px}.q legend{font-weight:600;margin:0 0 10px;padding:0}.q .opt{position:relative;display:inline-flex;align-items:center}.q .opt input{position:absolute;opacity:0;pointer-events:none}.q .opt:has(input:checked){background:var(--prim);border-color:var(--prim);color:var(--on-prim);font-weight:600}.q .opt:has(input:focus-visible){box-shadow:0 0 0 3px var(--acc-2)}.uitkomst{margin:16px 0 0}.uitkomst:empty{display:none}
 details.faq{padding:18px 0}details.faq summary{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}details.faq summary::after{content:"+";flex:none;font-size:28px;line-height:.9;font-weight:300;color:var(--ink);transition:transform .2s}details.faq[open] summary::after{transform:rotate(45deg)}details.faq .a p{margin:10px 0 0}
 .cards a.card{text-decoration:none!important}.card .cat{opacity:1}
+.rg{display:grid;gap:14px;grid-template-columns:repeat(3,minmax(0,1fr));margin:18px 0 0}.rk{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:16px;padding:14px;text-decoration:none!important;color:var(--ink)}.rk:hover{border-color:var(--acc)}.rk-img{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:0 0 6px}.rk-img img,.rk-img i{width:100%;height:auto;min-width:0;aspect-ratio:1;object-fit:cover;border-radius:10px;background:var(--bg-2);display:block}.rk h3{margin:0;font-size:20px}.rk p{margin:0;font-size:16px}
+.pg{display:grid;gap:14px;grid-template-columns:repeat(4,minmax(0,1fr));margin:14px 0 8px}.mk{display:flex;flex-direction:column;gap:3px;text-decoration:none!important;color:var(--ink);font-size:16px;line-height:1.35}.mk img,.mk-leeg{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;background:var(--bg-2);display:block;margin:0 0 6px;border:1px solid var(--line)}.mk:hover img{border-color:var(--acc)}.mk-n{font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.mk-p b{font-size:18px}.tel{font-weight:400;font-size:18px}
+@media(max-width:820px){.rg{grid-template-columns:repeat(2,minmax(0,1fr))}.pg{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.rg{grid-template-columns:1fr}}
 @media(max-width:640px){.pk{grid-template-columns:84px 1fr;gap:14px;padding:16px}.pk-img img{width:84px;height:84px}dl.rows .r{grid-template-columns:1fr;gap:4px}}`;
 
 function kop(titel, besch, pad, extra, zoekQ) {
@@ -249,16 +252,68 @@ ${andere.length ? `<h2>Andere gidsen van Kadoly</h2><div class="cards">${andere.
 ${baken(g.slug)}` + VOET(g, await armKans());
 }
 
-function home(kans) {
-  const lijst = GIDS_IDS.map(id => GIDSEN[id]).map(g => `<a class="card" href="/${esc(g.slug)}"><span class="cat">${esc(g.kicker)}</span><h3>${esc(g.h1)}</h3><p>${esc(g.beschrijving)}</p></a>`).join('');
-  return kop('Kadoly gids: eerlijk kiezen wat bij je past', 'Keuzehulpen van Kadoly: welk product past bij jou, met prijs en levertijd van vandaag en waarvoor het niet geschikt is.', '/', '') +
-    `<p class="kicker"><span class="live-dot"></span>Kadoly gids</p><h1>Eerlijk kiezen, ook als het antwoord niet kopen is</h1><p class="standfirst">Korte gidsen bij de producten van Kadoly: wat past bij welke situatie, wat het vandaag kost met verzending, wanneer het in huis is en waarvoor je het beter niet koopt.</p><p><a class="btn knop" href="#" data-kc>Stel een vraag</a></p><h2>Gidsen</h2><div class="cards">${lijst}</div>${baken('_home')}` + VOET(null, kans);
+// rubrieken (31 okt, Henkjan: "voorkant ... staat nog niets op ... Moeten rubrieken en alles in"): uit de shopcatalogus (c en s), met aantallen,
+// prijzen inclusief verzending en levertijd van vandaag. Volgorde per rubriek leert van kliks (gk:p:r-<rubriek>, na 60 weergaven), daarvoor de populariteit in de shop.
+const RUBRIEK = { wonen: 'Wonen', hobby: 'Hobby en creatief', kids: 'Kinderen', tech: 'Tech', beauty: 'Beauty', mode: 'Mode', keuken: 'Keuken', cadeaus: 'Cadeaus', dieren: 'Dieren', sport: 'Sport', tuin: 'Tuin', overig: 'Overig' };
+const SUB = { verlichting: 'Verlichting', kaarsen: 'Kaarsen', decoratie: 'Decoratie', diy: 'Bouwpakketten en doe-het-zelf', spellen: 'Spellen en speelgoed', opladen: 'Opladen', tassen: 'Tassen', servies: 'Servies', katten: 'Katten', honden: 'Honden', overig: 'Overig' };
+const hoofd = x => x ? x.charAt(0).toUpperCase() + x.slice(1).replace(/-/g, ' ') : '';
+const naamR = c => RUBRIEK[c] || hoofd(c); const naamS = x => SUB[x] || hoofd(x);
+const sleutel = x => norm(x || 'overig').replace(/ /g, '-') || 'overig';
+let RUB = null, RUB_AT = -1;
+async function rubrieken() { const cat = await catalogus(); if (RUB && RUB_AT === CAT_AT) return RUB; const m = {};
+  for (const i of Object.values(cat)) { if (!i || !i.id || !i.t || i.vr === false) continue; const c = sleutel(i.c), sb = sleutel(i.s); const r = m[c] || (m[c] = { c, naam: naamR(c), n: 0, min: Infinity, max: 0, merken: new Set(), subs: {}, items: [], lts: [] });
+    r.n++; const pr = thuis(i); if (pr > 0) { r.min = Math.min(r.min, pr); r.max = Math.max(r.max, pr); } if (i.b) r.merken.add(i.b); if (N(i.lt)) r.lts.push(N(i.lt)); (r.subs[sb] = r.subs[sb] || []).push(i); r.items.push(i); }
+  RUB = Object.values(m).filter(r => r.n >= 6).sort((a, b) => (a.c === 'overig') - (b.c === 'overig') || b.n - a.n); RUB_AT = CAT_AT; return RUB; }
+const mediaan = l => { if (!l.length) return 0; const x = l.slice().sort((a, b) => a - b); return x[Math.floor(x.length / 2)]; };
+const rang = (L, vw) => (a, b) => { const la = vw >= 60 ? N(L[a.id]) / (vw + 30) : 0, lb = vw >= 60 ? N(L[b.id]) / (vw + 30) : 0; return (lb - la) || (N(b.sc) - N(a.sc)) || (N(b.v) - N(a.v)) || (N(b.f) - N(a.f)); };
+const miniKaart = (i, g, b, eerste) => { const href = `/naar/${encodeURIComponent(i.id)}?g=${encodeURIComponent(g)}&b=${b}`; return `<a class="mk" href="${href}" rel="nofollow">${i.img ? `<img src="${esc(i.img)}" width="240" height="240" alt="${esc(i.t)}" ${eerste ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">` : '<span class="mk-leeg"></span>'}<span class="mk-n">${esc(i.t)}</span>${i.b ? `<span>${esc(i.b)}</span>` : ''}<span class="mk-p"><b>${euro(thuis(i))}</b> incl. verzending</span>${N(i.lt) ? `<span>in huis rond ${esc(nlDatum(leverDatum(i.lt)))}</span>` : ''}</a>`; };
+const prodLd = i => ({ '@type': 'Product', name: i.t, image: i.img || undefined, brand: i.b ? { '@type': 'Brand', name: i.b } : undefined, offers: { '@type': 'Offer', price: thuis(i).toFixed(2), priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: 'https://kadoly.com/product/' + i.id } });
+const ORG = { '@type': 'Organization', '@id': HOST + '/#org', name: 'Kadoly', legalName: 'ADSFAIR B.V.', url: 'https://kadoly.com', logo: 'https://cdn.kadoly.com/icon/shop/icon-192.png?v=1', email: 'henkjan@yoo.rs', telephone: '+31655395630', address: { '@type': 'PostalAddress', streetAddress: 'Albert Plesmanplein 20', postalCode: '2805 AB', addressLocality: 'Gouda', addressCountry: 'NL' } };
+async function rubriekPagina(c, kans) {
+  const R = (await rubrieken()).find(r => r.c === c); if (!R) return null;
+  const g = 'r-' + c; const L = await geleerd(g); const srt = rang(L, N(L._v)); const med = mediaan(R.lts);
+  const subs = Object.entries(R.subs).sort((a, b) => (a[0] === 'overig') - (b[0] === 'overig') || b[1].length - a[1].length).slice(0, 14);
+  const cat = await catalogus(); const gidsenHier = GIDS_IDS.map(id => GIDSEN[id]).filter(x => x.keuze.some(k => cat[k.pid] && sleutel(cat[k.pid].c) === c));
+  const top = R.items.slice().sort(srt).slice(0, 20);
+  const ld = JSON.stringify({ '@context': 'https://schema.org', '@graph': [ORG, { '@type': 'CollectionPage', name: R.naam + ' bij Kadoly', url: HOST + '/rubriek/' + c, publisher: { '@id': HOST + '/#org' }, dateModified: DAG() }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Kadoly gids', item: HOST + '/' }, { '@type': 'ListItem', position: 2, name: R.naam, item: HOST + '/rubriek/' + c }] }, { '@type': 'ItemList', name: R.naam + ' bij Kadoly', itemListElement: top.map((i, k) => ({ '@type': 'ListItem', position: k + 1, item: prodLd(i) })) }] }).replace(/</g, '\\u003c');
+  const kortTekst = `${R.naam} bij Kadoly: ${R.n} producten van ${R.merken.size} onafhankelijke makers, van ${euro(R.min)} tot ${euro(R.max)} inclusief verzending.${med ? ` De meeste zijn binnen ${med} werkdagen in huis.` : ''} Per soort staat het populairste eerst, met prijs en levertijd van vandaag.`;
+  return kop(`${R.naam} kopen bij Kadoly: ${R.n} producten van onafhankelijke makers`, `${R.naam} bij Kadoly: ${R.n} producten van ${R.merken.size} makers, van ${euro(R.min)} tot ${euro(R.max)} inclusief verzending. Met prijs en levertijd van vandaag.`, '/rubriek/' + c, (top[0] && top[0].img ? `<meta property="og:image" content="${esc(top[0].img)}">` : '') + `<script type="application/ld+json">${ld}</script>`) +
+    `<nav class="crumbs" aria-label="Kruimelpad"><a href="/">Kadoly gids</a> › <a href="/#rubrieken">Rubrieken</a> › ${esc(R.naam)}</nav><p class="kicker"><span class="live-dot"></span>Rubriek</p><h1>${esc(R.naam)}</h1>
+<p class="meta">Door de redactie van Kadoly · bijgewerkt <time datetime="${DAG()}">${esc(datumNl(DAG()))}</time> · prijs en levertijd van vandaag</p><div class="answer"><p><strong>In het kort.</strong> ${esc(kortTekst)}</p></div>
+<nav class="toc" aria-label="Op deze pagina">${subs.map(([sb, l]) => `<a href="#s-${esc(sb)}">${esc(naamS(sb))} <span class="tel">${l.length}</span></a>`).join('')}</nav>
+${gidsenHier.length ? `<h2>Keuzehulpen in ${esc(R.naam.toLowerCase())}</h2><div class="cards">${gidsenHier.map(x => `<a class="card" href="/${esc(x.slug)}"><span class="cat">${esc(x.kicker)}</span><h3>${esc(x.h1)}</h3><p>${esc(x.beschrijving)}</p></a>`).join('')}</div>` : ''}
+${subs.map(([sb, l], k) => `<h2 id="s-${esc(sb)}">${esc(naamS(sb))} <span class="tel">${l.length}</span></h2><div class="pg">${l.slice().sort(srt).slice(0, 12).map((i, j) => miniKaart(i, g, 'rubriek', k === 0 && j < 2)).join('')}</div>${l.length > 12 ? `<p><a href="/zoek?q=${encodeURIComponent(naamS(sb))}">Zoek verder in ${esc(naamS(sb).toLowerCase())}</a></p>` : ''}`).join('')}
+<h2 id="bestellen">Zo werkt een bestelling bij Kadoly</h2>${BESTELLEN}${baken(g)}` + VOET(null, kans);
+}
+
+async function home(kans) {
+  const R = await rubrieken(); const cat = await catalogus(); const alle = R.reduce((t, r) => t + r.n, 0); const makers = new Set(); R.forEach(r => r.merken.forEach(m => makers.add(m)));
+  const L = await geleerd('home'); const pop = Object.values(cat).filter(i => i && i.id && i.t && i.vr !== false && i.img).sort(rang(L, N(L._v))).slice(0, 8);
+  const med = mediaan(R.flatMap(r => r.lts));
+  const faq = [['Wat is Kadoly?', `Kadoly is een Nederlandse webshop van ADSFAIR B.V. uit Gouda met ${alle} producten van ${makers.size} onafhankelijke Europese makers: ${R.filter(r => r.c !== 'overig').map(r => r.naam.toLowerCase()).join(', ')}.`],
+    ['Wie verstuurt mijn bestelling?', 'Het merk of de maker stuurt het pakket rechtstreeks naar jou, met track en trace. Je koopt en betaalt bij Kadoly.'],
+    ['Hoe snel is het in huis?', `Dat verschilt per maker. ${med ? `De meeste producten zijn binnen ${med} werkdagen in huis. ` : ''}Bij elk product staat de verwachte bezorgdag als je vandaag bestelt.`],
+    ['Kan ik iets terugsturen?', 'Ja. Je hebt 14 dagen na ontvangst, je krijgt een retourlabel en het hele bedrag terug.'],
+    ['Hoe betaal ik?', 'Met iDEAL, PayPal of creditcard. Een account is niet nodig.'],
+    ['Krijg ik korting als ik meer koop?', 'Ja, bundelkorting: 5% bij 2 producten, oplopend tot 20% bij 6. Je eerste bestelling wordt gratis verzonden.']];
+  const ld = JSON.stringify({ '@context': 'https://schema.org', '@graph': [ORG, { '@type': 'WebSite', name: 'Kadoly gids', url: HOST + '/', publisher: { '@id': HOST + '/#org' }, inLanguage: 'nl-NL' }, { '@type': 'ItemList', name: 'Rubrieken van Kadoly', itemListElement: R.map((r, k) => ({ '@type': 'ListItem', position: k + 1, name: r.naam, url: HOST + '/rubriek/' + r.c })) }, { '@type': 'FAQPage', mainEntity: faq.map(([v, a]) => ({ '@type': 'Question', name: v, acceptedAnswer: { '@type': 'Answer', text: a } })) }] }).replace(/</g, '\\u003c');
+  const gidsen = GIDS_IDS.map(id => GIDSEN[id]).map(g => `<a class="card" href="/${esc(g.slug)}"><span class="cat">${esc(g.kicker)}</span><h3>${esc(g.h1)}</h3><p>${esc(g.beschrijving)}</p></a>`).join('');
+  const rk = R.map(r => { const t = r.items.slice().sort(rang({}, 0)).filter(i => i.img).slice(0, 3); const sb = Object.entries(r.subs).filter(([x]) => x !== 'overig').sort((a, b) => b[1].length - a[1].length).slice(0, 4).map(([x]) => naamS(x).toLowerCase());
+    return `<a class="rk" href="/rubriek/${esc(r.c)}"><span class="rk-img">${t.map(i => `<img src="${esc(i.img)}" alt="" width="120" height="120" loading="lazy" decoding="async">`).join('')}${'<i></i>'.repeat(Math.max(0, 3 - t.length))}</span><h3>${esc(r.naam)}</h3><p>${r.n} producten · vanaf ${euro(r.min)}</p>${sb.length ? `<p>${esc(sb.join(', '))}</p>` : ''}</a>`; }).join('');
+  return kop('Kadoly gids: alles van Kadoly, eerlijk uitgelegd', `Alle rubrieken van Kadoly: ${alle} producten van ${makers.size} onafhankelijke makers, met prijs en levertijd van vandaag, keuzehulpen en eerlijk advies.`, '/', `<script type="application/ld+json">${ld}</script>`) +
+    `<p class="kicker"><span class="live-dot"></span>Kadoly gids</p><h1>Eerlijk kiezen, ook als het antwoord niet kopen is</h1><p class="standfirst">${alle} producten van ${makers.size} onafhankelijke makers, per rubriek op een rij. Met wat het vandaag kost inclusief verzending, wanneer het in huis is en keuzehulpen die ook zeggen waarvoor iets niet geschikt is.</p><p><a class="btn knop" href="#" data-kc>Stel een vraag</a></p>
+<nav class="toc" aria-label="Op deze pagina"><a href="#rubrieken">Rubrieken</a><a href="#gidsen">Keuzehulpen</a><a href="#populair">Populair</a><a href="#vragen">Vragen over Kadoly</a></nav>
+<h2 id="rubrieken">Rubrieken</h2><div class="rg">${rk}</div>
+<h2 id="gidsen">Keuzehulpen</h2><div class="cards">${gidsen}</div>
+<h2 id="populair">Populair bij Kadoly</h2><div class="pg">${pop.map((i, j) => miniKaart(i, 'home', 'populair', false)).join('')}</div>
+<h2 id="vragen">Vragen over Kadoly</h2>${faq.map(([v, a]) => `<details class="faq"><summary>${esc(v)}</summary><div class="a"><p>${esc(a)}</p></div></details>`).join('')}${baken('_home')}` + VOET(null, kans);
 }
 
 
 async function sitemap() {
   const cat = await catalogus();
-  const u = [{ loc: HOST + '/', lm: GIDS_IDS.map(id => GIDSEN[id].bijgewerkt).sort().pop(), img: [] }].concat(GIDS_IDS.map(id => ({ loc: HOST + '/' + id, lm: GIDSEN[id].bijgewerkt, img: GIDSEN[id].keuze.map(k => cat[k.pid]).filter(i => i && i.img && i.vr !== false).map(i => i.img) })));
+  const R = await rubrieken();
+  const u = [{ loc: HOST + '/', lm: DAG(), img: [] }].concat(GIDS_IDS.map(id => ({ loc: HOST + '/' + id, lm: GIDSEN[id].bijgewerkt, img: GIDSEN[id].keuze.map(k => cat[k.pid]).filter(i => i && i.img && i.vr !== false).map(i => i.img) }))).concat(R.map(r => ({ loc: HOST + '/rubriek/' + r.c, lm: DAG(), img: r.items.slice().sort(rang({}, 0)).filter(i => i.img).slice(0, 5).map(i => i.img) })));
   return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">' + u.map(x => `<url><loc>${x.loc}</loc><lastmod>${x.lm}</lastmod>${x.img.map(i => `<image:image><image:loc>${esc(i)}</image:loc></image:image>`).join('')}</url>`).join('') + '</urlset>';
 }
 // alles wat AI moet kunnen citeren in platte tekst (llms-full.txt)
@@ -282,6 +337,7 @@ async function zichtJson() {
 async function llms() {
   const cat = await catalogus();
   let t = '# Kadoly gids\n\n> Keuzehulpen van Kadoly (kadoly.com), een Nederlandse webshop met producten van onafhankelijke makers. Per gids: korte keuze, prijs inclusief verzending en levertijd van vandaag, waarvoor een product niet geschikt is, en antwoorden op veelgestelde vragen.\n\n';
+  const R = await rubrieken(); t += '## Rubrieken\n\n' + R.map(r => '- ' + r.naam + ': ' + r.n + ' producten van ' + r.merken.size + ' makers, ' + euro(r.min) + ' tot ' + euro(r.max) + ' inclusief verzending, ' + HOST + '/rubriek/' + r.c).join('\n') + '\n\n';
   for (const id of GIDS_IDS) { const g = GIDSEN[id]; t += '## ' + g.h1 + '\n\n' + HOST + '/' + id + '\n\n' + g.kort + '\n\n'; for (const k of g.keuze) { const i = cat[k.pid]; if (!i || i.vr === false) continue; t += '- ' + k.label + ': ' + (k.naam || i.t) + ', ' + euro(thuis(i)) + ' inclusief verzending. ' + k.waarom + (k.beperking ? ' Let op: ' + k.beperking : '') + '\n'; } t += '\n'; }
   return t;
 }
@@ -306,7 +362,7 @@ export default async function handler(req, res) {
     if (op === 'llmsfull') { await telBot(ua, 'llmsfull'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(await llmsVol()); }
     if (op === 'zicht') { res.setHeader('content-type', 'application/json; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=0, s-maxage=3600'); return res.status(200).json(await zichtJson()); }
     if (op === 'indexnow') { // dagelijks (cron): nieuwe en gewijzigde gidsen melden bij Bing en de andere IndexNow-zoekmachines; Bing voedt ook ChatGPT-zoeken en Copilot
-      const urls = [HOST + '/'].concat(GIDS_IDS.map(id => HOST + '/' + id)); const stand = GIDS_IDS.map(id => id + '@' + GIDSEN[id].bijgewerkt).join(',');
+      const RR = await rubrieken(); const urls = [HOST + '/'].concat(GIDS_IDS.map(id => HOST + '/' + id)).concat(RR.map(r => HOST + '/rubriek/' + r.c)); const stand = GIDS_IDS.map(id => id + '@' + GIDSEN[id].bijgewerkt).join(',') + '|' + RR.map(r => r.c).join(',');
       let oud = null; try { oud = await kv.get('gk:indexnow'); } catch (e) {} if (oud && oud.stand === stand && q.get('alles') !== '1') return res.status(200).json({ ok: true, niets: true });
       let status = 0; try { const r = await fetch('https://api.indexnow.org/indexnow', { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify({ host: 'gids.kadoly.com', key: INDEXNOW_KEY, keyLocation: HOST + '/' + INDEXNOW_KEY + '.txt', urlList: urls }), signal: AbortSignal.timeout(15000) }); status = r.status; } catch (e) {}
       if (status >= 200 && status < 300) { try { await kv.set('gk:indexnow', { at: Date.now(), stand }); } catch (e) {} }
@@ -314,7 +370,7 @@ export default async function handler(req, res) {
     if (op === 'robots') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send('User-agent: *\nAllow: /\nDisallow: /naar/\n\n# Voor AI-assistenten: ' + HOST + '/llms.txt en ' + HOST + '/llms-full.txt\nSitemap: ' + HOST + '/sitemap.xml\n'); }
     if (op === 'sitemap') { await telBot(ua, 'sitemap'); res.setHeader('content-type', 'application/xml; charset=utf-8'); return res.status(200).send(await sitemap()); }
     if (op === 'llms') { await telBot(ua, 'llms'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(await llms()); }
-    if (op === 'tel') { const g = String(q.get('g') || ''); const s = String(q.get('s') || '').replace(/[^a-z0-9-]/g, '').slice(0, 30); if ((GIDSEN[g] || g === '_home' || g === '_zoek') && s && !isBot(ua)) { await tel(g, s); if (/^v-/.test(s) && GIDSEN[g]) { try { await kv.raw(['HINCRBY', 'gk:p:' + g, '_v', '1']); await kv.raw(['EXPIRE', 'gk:p:' + g, String(120 * 86400)]); } catch (e) {} } } return res.status(204).end(); }
+    if (op === 'tel') { const g = String(q.get('g') || ''); const s = String(q.get('s') || '').replace(/[^a-z0-9-]/g, '').slice(0, 30); if ((GIDSEN[g] || g === '_home' || g === '_zoek' || /^r-[a-z0-9-]{2,30}$/.test(g)) && s && !isBot(ua)) { await tel(g, s); if (/^v-/.test(s) && (GIDSEN[g] || /^r-/.test(g) || g === '_home')) { try { await kv.raw(['HINCRBY', 'gk:p:' + (g === '_home' ? 'home' : g), '_v', '1']); await kv.raw(['EXPIRE', 'gk:p:' + (g === '_home' ? 'home' : g), String(120 * 86400)]); } catch (e) {} } } return res.status(204).end(); }
     if (op === 'zoek') { const v = String(q.get('q') || '').replace(/\s+/g, ' ').trim().slice(0, 160);
       if (q.get('log') === '1') { res.setHeader('cache-control', 'no-store'); if (!isBot(ua) && v) { const r = await zoek(v, 8); await logZoek(r.k, !r.producten.length && !r.gidsen.length, String(q.get('g') || '')); } return res.status(204).end(); }
       if (q.get('f') === 'json') { res.setHeader('cache-control', 'public, max-age=60, s-maxage=300'); const r = await zoek(v, 8); return res.status(200).json({ ok: true, h: r.h, producten: r.producten, gidsen: r.gidsen }); }
@@ -362,7 +418,9 @@ export default async function handler(req, res) {
       return res.status(200).json({ ok: true, gidsen: GIDS_IDS, perDag: uit, kliksPerProduct: geleerdPer, armproef: { kansAfrekenen: await armKans(), stand28d: await armStand(28) }, zoeken: { vragen: rij(/^(?!0\||o\|)/), zonderUitkomst: rij(/^0\|/), chatOnderwerpen: rij(/^o\|/) }, chatLaatste: chat }); }
     res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=0, s-maxage=300, stale-while-revalidate=600');
     const slug = String(q.get('slug') || '');
-    if (!slug) return res.status(200).send(home(await armKans()));
+    const rub = String(q.get('rubriek') || '').replace(/[^a-z0-9-]/g, '').slice(0, 30);
+    if (rub) { const html = await rubriekPagina(rub, await armKans()); if (!html) { res.setHeader('cache-control', 'no-store'); return res.status(404).send(kop('Niet gevonden', 'Deze rubriek bestaat niet.', '/', '') + '<h1>Deze rubriek bestaat niet</h1><p><a href="/#rubrieken">Naar alle rubrieken</a></p>' + VOET(null, 0.5)); } await telBot(ua, 'r-' + rub); return res.status(200).send(html); }
+    if (!slug) return res.status(200).send(await home(await armKans()));
     const g = GIDSEN[slug]; if (!g) { res.setHeader('cache-control', 'no-store'); return res.status(404).send(kop('Niet gevonden', 'Deze gids bestaat niet.', '/', '') + '<h1>Deze gids bestaat (nog) niet</h1><p><a href="/">Naar alle gidsen</a></p>' + VOET(null, 0.5)); }
     await telBot(ua, slug);
     return res.status(200).send(await gidsPagina(g));
