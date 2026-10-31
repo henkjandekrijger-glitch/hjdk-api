@@ -390,6 +390,13 @@ export default async function handler(req, res) {
       const tekst = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
       const van = N(q.get('van'));
       return res.status(200).json({ ok: true, hops, status: r && r.status, bytes: html.length, formulieren, velden, scripts, tekst: tekst.slice(van, van + 6000) }); }
+    if (op === 'shopapi') { // hoeveel producten geeft de shop-API echt (alleen lezen, beschermde host)? 31 okt, Henkjan: "Er zijn er veel meer producten"
+      if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const KOPS = { 'user-agent': 'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Mobile Safari/537.36', accept: 'application/json', 'accept-language': 'nl-NL,nl;q=0.9' };
+      const pad = String(q.get('u') || '/shop/api/shop?lang=nl&offset=0').replace(/[^\w\/\-?=&.%]/g, '');
+      const r = await fetch('https://kadoly.com' + pad, { headers: KOPS, signal: AbortSignal.timeout(15000) }); const t = await r.text(); let j = null; try { j = JSON.parse(t); } catch (e) {}
+      const its = j && (j.items || j.products || j.data) || [];
+      return res.status(200).json({ status: r.status, bytes: t.length, sleutels: j ? Object.keys(j) : null, meta: j ? Object.fromEntries(Object.entries(j).filter(([k, v]) => typeof v !== 'object' || v === null)) : null, aantal: Array.isArray(its) ? its.length : null, eerste: Array.isArray(its) && its[0] ? Object.keys(its[0]) : null, begin: j ? null : t.slice(0, 400) }); }
     if (op === 'stijl') { // de look van kadoly.com uitlezen (alleen lezen, beschermde vercel.app-host): kleuren, letters, logo, kop en voet, om de gids er gelijk aan te maken
       if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const KOPS = { 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1', 'accept-language': 'nl-NL,nl;q=0.9' };
