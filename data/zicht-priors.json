@@ -700,5 +700,16 @@
   "effect": 2,
   "moeite": 1,
   "meten": "vertoningen en positie op de seizoenszoekvragen in november tot januari tegen dezelfde periode zonder wijziging"
+ },
+ {
+  "id": "entiteit-profielen-gasten",
+  "les": "Geef elke gast, samenwerkingspartner of andere persoon waar de site over gaat een eigen feitelijke profielpagina (wie is het, werk met jaartallen, vragen met antwoorden, links naar de persoon, bronnenlijst) met Person-schema en sameAs, en laat profielen naar elkaar linken waar ze echt raakvlak hebben. Mensen en AI zoeken op die namen; een persoonlijke site die alleen over zichzelf gaat vangt dat zoekverkeer niet. Alleen bevestigde feiten, geen leeftijd, gezin of gezondheid.",
+  "kanaal": "beide",
+  "bewijs": "31 okt 2026 taniakross.media: alle 25 zoekvragen in Search Console (28 dagen) gaan over Tania zelf, 0 over haar zeven podcastgasten, terwijl die gasten (o.a. Izaline Calister, Valika Smeulders, Samira Rafaela) eigen zoekvolume en Wikipedia-pagina's hebben. Zes profielen live gezet met 6 tot 9 bronnen per gast; nulmeting 0 vertoningen op gastnamen.",
+  "bron": "taniakross.media, sessie 31 okt 2026",
+  "sterkte": 2,
+  "effect": 2,
+  "moeite": 2,
+  "meten": "gsc: vertoningen en kliks op zoekvragen met een gastnaam, per gastpagina; llm: noemt Perplexity taniakross.media bij 'wie is <gast>'"
  }
 ]
