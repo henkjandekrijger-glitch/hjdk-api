@@ -70,6 +70,19 @@ Iedere chat en elk project gebruikt hetzelfde draaiboek en voedt het. Zo leert a
 - **Nog open:** pagina's aan de rand van Vercel bewaren (s-maxage) kan pas als de telling van AI-crawlers niet meer op de server hangt (telBot). Ook nog open: de zoekindex van de NL-voorpagina (88 KB) pas laden bij gebruik, en afgekapte slugs in api/wtbmaak.js.
 - **Een audit doe je met een aparte agent die alleen leest:** die controleert de live pagina's, sitemap, llms.txt en robots per host en levert een lijst met bestand en regel. Daarna voer je de top uit en zet je proeven in START_PROEVEN.
 
+## Lokale plaatsmerken: dagelijkse inhoud en gidsen op één domein (todayin Curaçao, 1 nov 2026)
+
+- **Eén merkdomein per plaats.** Gidsen over een plaats (hotels, stranden, restaurants, evenementen, bedrijven) horen op het domein van het lokale merk dat elke dag gedateerde inhoud over die plaats publiceert. Op generieke vergelijkingsdomeinen bleef het stil: 115 Curaçao-pagina's in 5 talen haalden in 14 dagen samen ongeveer 10 zoekbezoekers. Ze staan sinds 1 nov op todayin.email/curacao/<taal>/... (les merkdomein-met-dagelijkse-inhoud, proef todayin-curacao-gidsen-1101).
+- **Wat een plaatsmerk elke dag vult:** een dagpagina per editie (archief, NewsArticle met datum), een agenda van 14 dagen (Event in een ItemList, met plaats en bron), een cruise- of drukteschema (FAQPage met het antwoord van vandaag), een vragenpagina met korte antwoorden, en de gidsen. Elke pagina heeft de aanmelding bovenaan; tel aanmeldingen per paginasoort en per bron (zoek, ai).
+- **Verhuizen (migratie):** 301 per adres (niet alles naar de voorpagina), canonical, hreflang, logo-link en interne links naar het nieuwe domein, de pagina's uit de oude sitemaps, catalogi en llms.txt halen, de nieuwe sitemaps in de index en robots.txt van het nieuwe domein, IndexNow met de sleutel van het nieuwe domein, een proef in ZICHT. Houd een terugknop (instelling) en schrijf in de overdracht wat er dan ook terug moet.
+- **Rewrites altijd naar het eigen domein van het doelproject**, nooit naar *.vercel.app: daar stuurt Vercel x-robots-tag: noindex mee en die komt via de rewrite op de echte pagina (les rewrite-naar-eigen-domein-niet-vercel-app). Controleer na elke nieuwe rewrite de headers van de live pagina.
+- **Koppen testen alleen op advertentie- of kiesverkeer.** De canonieke taalpagina toont de beste variant en een vaste SEO-titel met de zoekterm voorop (les proefkop-niet-op-canonieke-pagina). Een adres dat zelf de taal kiest krijgt Vary: Accept-Language en is x-default (les vary-bij-taalkeuze).
+- **Archief zonder 'vandaag'.** Dag- en archiefpagina's beschrijven de dag met datum en feiten, niet met het mailonderwerp (les archief-zonder-vandaag).
+- **Eén entiteit per merk.** Twee merken op één domein krijgen elk een eigen Organization-@id met vaste naam en logo (les eigen-entiteit-per-merk).
+- **Geen inhoud die op runtime-AI leunt.** Toen de AI Gateway 402 gaf (31 okt en 1 nov), vielen vertalingen, metingen, nieuwe gidsen en antwoorden stil. Laat een geplande taak van Claude de inhoud schrijven en committen, met een reserve zonder AI (les inhoud-zonder-runtime-ai).
+- **Zelfherstel.** Loop aanbiederslinks dagelijks in porties na; twee keer dood = link weg en op een nakijklijst voor de gidsronde (les zelfherstel-dode-aanbiederslinks, lib/cur.js curGezond).
+- **Uitrollen naar een andere plaats:** volg het draaiboek in de repo todayin, spel/leerlus/werking.md sectie 0b.
+
 ## Na elke wijziging: terugmelden
 
 Zonder terugmelding leert niemand ervan.

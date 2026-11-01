@@ -1,6 +1,9 @@
 {
   "crons": [
-    { "path": "/api/gids?op=indexnow", "schedule": "55 6 * * *" },
+    {
+      "path": "/api/gids?op=indexnow",
+      "schedule": "55 6 * * *"
+    },
     {
       "path": "/api/hjdk/iterate",
       "schedule": "17 */6 * * *"
@@ -160,34 +163,257 @@
     {
       "path": "/api/keuze-tools?tool=cur&op=google",
       "schedule": "45 5 * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=cur&op=gezond",
+      "schedule": "35 6 * * *"
     }
   ],
   "rewrites": [
-    { "source": "/", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids" },
-    { "source": "/robots.txt", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=robots" },
-    { "source": "/llms-full.txt", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=llmsfull" },
-    { "source": "/zicht.json", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=zicht" },
-    { "source": "/9eed19b173ae0446f4f8e9d13ef50c6d.txt", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=ixkey" },
-    { "source": "/sitemap.xml", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=sitemap" },
-    { "source": "/llms.txt", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=llms" },
-    { "source": "/gidstel", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=tel" },
-    { "source": "/zoek", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=zoek" },
-    { "source": "/kies", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=kies" },
-    { "source": "/rubriek/:c([a-z0-9-]+)", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?rubriek=:c" },
-    { "source": "/vraag", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?op=vraag" },
-    { "source": "/naar/:pid", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/shop?op=gidsuit&p=:pid" },
-    { "source": "/:slug([a-z0-9-]+)", "has": [{ "type": "host", "value": "gids\\.kadoly\\.com" }], "destination": "/api/gids?slug=:slug" },
-    { "source": "/d/:c", "destination": "/api/keuze-updates?op=d&c=:c" },
-    { "source": "/curacao/:s/:b/:c", "has": [{ "type": "host", "value": "keuzehulp.best" }], "destination": "/api/keuze-tools?tool=cur&m=nl&s=:s&b=:b&c=:c" },
-    { "source": "/curacao/:s/:b/:c", "has": [{ "type": "host", "value": "kaufberater.best" }], "destination": "/api/keuze-tools?tool=cur&m=de&s=:s&b=:b&c=:c" },
-    { "source": "/curacao/:s/:b/:c", "has": [{ "type": "host", "value": "whichtobuy.best" }], "destination": "/api/keuze-tools?tool=cur&m=en&s=:s&b=:b&c=:c" },
-    { "source": "/es/curazao/:s/:b/:c", "has": [{ "type": "host", "value": "whichtobuy.best" }], "destination": "/api/keuze-tools?tool=cur&m=es&s=:s&b=:b&c=:c" },
-    { "source": "/pt/curacao/:s/:b/:c", "has": [{ "type": "host", "value": "whichtobuy.best" }], "destination": "/api/keuze-tools?tool=cur&m=pt&s=:s&b=:b&c=:c" },
-    { "source": "/curacao/:s/:b", "has": [{ "type": "host", "value": "keuzehulp.best" }], "destination": "/api/keuze-tools?tool=cur&m=nl&s=:s&b=:b" },
-    { "source": "/curacao/:s/:b", "has": [{ "type": "host", "value": "kaufberater.best" }], "destination": "/api/keuze-tools?tool=cur&m=de&s=:s&b=:b" },
-    { "source": "/curacao/:s/:b", "has": [{ "type": "host", "value": "whichtobuy.best" }], "destination": "/api/keuze-tools?tool=cur&m=en&s=:s&b=:b" },
-    { "source": "/es/curazao/:s/:b", "has": [{ "type": "host", "value": "whichtobuy.best" }], "destination": "/api/keuze-tools?tool=cur&m=es&s=:s&b=:b" },
-    { "source": "/pt/curacao/:s/:b", "has": [{ "type": "host", "value": "whichtobuy.best" }], "destination": "/api/keuze-tools?tool=cur&m=pt&s=:s&b=:b" },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids"
+    },
+    {
+      "source": "/robots.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=robots"
+    },
+    {
+      "source": "/llms-full.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=llmsfull"
+    },
+    {
+      "source": "/zicht.json",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=zicht"
+    },
+    {
+      "source": "/9eed19b173ae0446f4f8e9d13ef50c6d.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=ixkey"
+    },
+    {
+      "source": "/sitemap.xml",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=sitemap"
+    },
+    {
+      "source": "/llms.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=llms"
+    },
+    {
+      "source": "/gidstel",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=tel"
+    },
+    {
+      "source": "/zoek",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=zoek"
+    },
+    {
+      "source": "/kies",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=kies"
+    },
+    {
+      "source": "/rubriek/:c([a-z0-9-]+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?rubriek=:c"
+    },
+    {
+      "source": "/vraag",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=vraag"
+    },
+    {
+      "source": "/naar/:pid",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/shop?op=gidsuit&p=:pid"
+    },
+    {
+      "source": "/:slug([a-z0-9-]+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?slug=:slug"
+    },
+    {
+      "source": "/d/:c",
+      "destination": "/api/keuze-updates?op=d&c=:c"
+    },
+    {
+      "source": "/curacao/:s/:b/:c",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=nl&s=:s&b=:b&c=:c"
+    },
+    {
+      "source": "/curacao/:s/:b/:c",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=de&s=:s&b=:b&c=:c"
+    },
+    {
+      "source": "/curacao/:s/:b/:c",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=en&s=:s&b=:b&c=:c"
+    },
+    {
+      "source": "/es/curazao/:s/:b/:c",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=es&s=:s&b=:b&c=:c"
+    },
+    {
+      "source": "/pt/curacao/:s/:b/:c",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=pt&s=:s&b=:b&c=:c"
+    },
+    {
+      "source": "/curacao/:s/:b",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=nl&s=:s&b=:b"
+    },
+    {
+      "source": "/curacao/:s/:b",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=de&s=:s&b=:b"
+    },
+    {
+      "source": "/curacao/:s/:b",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=en&s=:s&b=:b"
+    },
+    {
+      "source": "/es/curazao/:s/:b",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=es&s=:s&b=:b"
+    },
+    {
+      "source": "/pt/curacao/:s/:b",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=cur&m=pt&s=:s&b=:b"
+    },
     {
       "source": "/curacao",
       "has": [
@@ -795,7 +1021,9 @@
     }
   ],
   "functions": {
-    "api/gids.js": { "maxDuration": 60 },
+    "api/gids.js": {
+      "maxDuration": 60
+    },
     "api/kz.js": {
       "maxDuration": 60,
       "includeFiles": ".claude/skills/**"
@@ -846,6 +1074,226 @@
     }
   },
   "redirects": [
+    {
+      "source": "/curacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/nl/gids",
+      "permanent": true
+    },
+    {
+      "source": "/curacao/:s",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/nl/:s",
+      "permanent": true
+    },
+    {
+      "source": "/curacao/:s/:b",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/nl/:s/:b",
+      "permanent": true
+    },
+    {
+      "source": "/curacao/:s/:b/:c",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/nl/:s/:b/:c",
+      "permanent": true
+    },
+    {
+      "source": "/curacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/de/gids",
+      "permanent": true
+    },
+    {
+      "source": "/curacao/:s",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/de/:s",
+      "permanent": true
+    },
+    {
+      "source": "/curacao/:s/:b",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/de/:s/:b",
+      "permanent": true
+    },
+    {
+      "source": "/curacao/:s/:b/:c",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/de/:s/:b/:c",
+      "permanent": true
+    },
+    {
+      "source": "/curacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/en/gids",
+      "permanent": true
+    },
+    {
+      "source": "/curacao/:s",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/en/:s",
+      "permanent": true
+    },
+    {
+      "source": "/curacao/:s/:b",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/en/:s/:b",
+      "permanent": true
+    },
+    {
+      "source": "/curacao/:s/:b/:c",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/en/:s/:b/:c",
+      "permanent": true
+    },
+    {
+      "source": "/es/curazao",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/es/gids",
+      "permanent": true
+    },
+    {
+      "source": "/es/curazao/:s",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/es/:s",
+      "permanent": true
+    },
+    {
+      "source": "/es/curazao/:s/:b",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/es/:s/:b",
+      "permanent": true
+    },
+    {
+      "source": "/es/curazao/:s/:b/:c",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/es/:s/:b/:c",
+      "permanent": true
+    },
+    {
+      "source": "/pt/curacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/pt/gids",
+      "permanent": true
+    },
+    {
+      "source": "/pt/curacao/:s",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/pt/:s",
+      "permanent": true
+    },
+    {
+      "source": "/pt/curacao/:s/:b",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/pt/:s/:b",
+      "permanent": true
+    },
+    {
+      "source": "/pt/curacao/:s/:b/:c",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/pt/:s/:b/:c",
+      "permanent": true
+    },
     {
       "source": "/keuzehulp/laadpaal",
       "destination": "/laadpaal",

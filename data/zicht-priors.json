@@ -711,5 +711,93 @@
   "effect": 2,
   "moeite": 2,
   "meten": "gsc: vertoningen en kliks op zoekvragen met een gastnaam, per gastpagina; llm: noemt Perplexity taniakross.media bij 'wie is <gast>'"
+ },
+ {
+  "id": "merkdomein-met-dagelijkse-inhoud",
+  "les": "Zet plaatsgidsen (hotels, stranden, restaurants, evenementen) op het domein van het lokale merk dat elke dag nieuwe, gedateerde inhoud over die plaats publiceert (dagpagina's, agenda, cruiseschema), niet op een generiek vergelijkingsdomein waar de plaats bijzaak is. Verhuis met een 301 per adres, verplaats canonical, hreflang en sitemaps mee en haal de oude adressen uit de oude sitemaps.",
+  "kanaal": "beide",
+  "bewijs": "Curaçao-gidsen (115 pagina's in 5 talen, 963 plekken met reviews) stonden van 20 okt tot 1 nov 2026 op keuzehulp.best, whichtobuy.best en kaufberater.best: 14 dagen samen ongeveer 10 zoekbezoekers en 1 AI-bezoek (cur op=stand). Op 1 nov 2026 verhuisd naar todayin.email/curacao/<taal>/..., naast de dagelijkse editie, agenda en het cruiseschema. Meten in Search Console van todayin.email.",
+  "bron": "todayin Curaçao, sessie 1 nov 2026",
+  "sterkte": 2,
+  "effect": "meer vertoningen en kliks per gidspagina dan op de generieke domeinen",
+  "moeite": 3,
+  "meten": "gsc: vertoningen van /curacao/<taal>/<onderwerp> na 28 dagen tegen de laatste 14 dagen op de oude domeinen"
+ },
+ {
+  "id": "rewrite-naar-eigen-domein-niet-vercel-app",
+  "les": "Herschrijf of proxy een pagina altijd naar het eigen domein van het doelproject, nooit naar het *.vercel.app-adres: Vercel stuurt daar x-robots-tag: noindex mee, en die header komt via een rewrite mee op de echte pagina. Controleer de headers van de live pagina na elke nieuwe rewrite.",
+  "kanaal": "google",
+  "bewijs": "1 nov 2026: bzz-henq.vercel.app/api/cw?pad=en/cruise antwoordde met x-robots-tag: noindex, bzz.today/api/cw niet. todayin.email herschrijft daarom naar bzz.today.",
+  "bron": "todayin Curaçao, sessie 1 nov 2026",
+  "sterkte": 4,
+  "effect": "voorkomt dat hele secties uit de index vallen",
+  "moeite": 1,
+  "meten": "index"
+ },
+ {
+  "id": "proefkop-niet-op-canonieke-pagina",
+  "les": "Test koppen en titels (A/B, bandit) alleen op advertentieverkeer of op een adres dat de taal zelf kiest. De canonieke taalpagina toont altijd de beste variant, zodat Google bij elke crawl dezelfde H1 en titel ziet. De SEO-titel staat los van de testkop en begint met de zoekterm.",
+  "kanaal": "google",
+  "bewijs": "1 nov 2026, controle todayin.email: de voorpagina gaf per bezoek een andere H1 (k1, k2, k3), zonder zoekterm; opgelost met een vaste beste kop op /curacao/<taal> en een vaste SEO-titel.",
+  "bron": "todayin Curaçao, sessie 1 nov 2026",
+  "sterkte": 3,
+  "effect": "stabiele titel en H1 per adres",
+  "moeite": 1,
+  "meten": "gsc"
+ },
+ {
+  "id": "archief-zonder-vandaag",
+  "les": "Dag- en archiefpagina's beschrijven de dag met datum en feiten (welke schepen, welke evenementen), nooit met het mailonderwerp of een zin met 'vandaag/today'. Dat wordt morgen onwaar en botst met datePublished in NewsArticle.",
+  "kanaal": "beide",
+  "bewijs": "1 nov 2026, controle: de dagpagina zei 'Heute ein Kreuzfahrtschiff' en de archieflijst 'One cruise ship in today'; omgezet naar de dagregel met schepen en evenementen.",
+  "bron": "todayin Curaçao, sessie 1 nov 2026",
+  "sterkte": 3,
+  "effect": "juiste snippets op archiefpagina's",
+  "moeite": 1,
+  "meten": "gsc"
+ },
+ {
+  "id": "eigen-entiteit-per-merk",
+  "les": "Staan er twee merken op één domein (bijvoorbeeld de oude todayin.email en todayin Curaçao), geef elk merk een eigen Organization-@id met een vaste naam en een vast logo. Dezelfde @id met een andere naam of een ander logo leest voor Google en AI als twee tegenstrijdige beweringen over één entiteit.",
+  "kanaal": "beide",
+  "bewijs": "1 nov 2026, controle: todayin.email/cw en de nieuwe Curaçao-pagina's gebruikten beide todayin.email/#org, de ene als 'todayin.email' met icon-512.png, de andere als 'todayin Curaçao' met todayin-curacao-2.png. Nu todayin.email/curacao#org.",
+  "bron": "todayin Curaçao, sessie 1 nov 2026",
+  "sterkte": 3,
+  "effect": "eenduidige entiteit in Knowledge Graph en AI",
+  "moeite": 1,
+  "meten": "llm"
+ },
+ {
+  "id": "inhoud-zonder-runtime-ai",
+  "les": "Laat dagelijkse inhoud (edities, vertalingen, antwoorden) niet afhangen van een betaalde AI-API op het moment dat de pagina of mail gemaakt wordt. Laat een geplande taak de inhoud schrijven en als bestand committen, met een reserve zonder AI (vaste teksten, echte cijfers). Zo blijft de site werken als het tegoed op is.",
+  "kanaal": "beide",
+  "bewijs": "31 okt en 1 nov 2026 gaf de Vercel AI Gateway 402 (geen tegoed): vertalingen, Perplexity-metingen, nieuwe keuzehulpen en 'vraag alles' op todayin vielen stil. todayin Curaçao draait sinds 1 nov zonder runtime-AI: Claude schrijft editie en agenda in een geplande taak, vraag alles antwoordt uit vooraf geschreven antwoorden.",
+  "bron": "todayin Curaçao en keuzehulp-dagcontrole, 1 nov 2026",
+  "sterkte": 4,
+  "effect": "geen uitval van inhoud en metingen",
+  "moeite": 2,
+  "meten": "index"
+ },
+ {
+  "id": "zelfherstel-dode-aanbiederslinks",
+  "les": "Loop de websites van aanbieders in gidsen elke dag in porties na. Twee keer achter elkaar onbereikbaar (geen antwoord, 404, 410, 5xx) is dood: de link verdwijnt van de pagina en de aanbieder komt op een nakijklijst voor de gidsronde (gesloten eruit, verhuisd nieuwe link). Dode links en gesloten zaken zijn een onbetrouwbaarheidssignaal voor lezers en AI.",
+  "kanaal": "beide",
+  "bewijs": "Ingevoerd 1 nov 2026 voor 264 aanbieders met een eigen website in de Curaçao-gidsen (hjdk-api lib/cur.js curGezond, dagelijks 40). Nog geen uitkomst.",
+  "bron": "todayin Curaçao, sessie 1 nov 2026",
+  "sterkte": 2,
+  "effect": "actuele gidsen, minder doodlopende kliks",
+  "moeite": 2,
+  "meten": "index"
+ },
+ {
+  "id": "vary-bij-taalkeuze",
+  "les": "Kiest een adres de taal zelf (Accept-Language), stuur dan Vary: Accept-Language mee en zet de taalversies op eigen adressen met hreflang; het kiesadres is x-default.",
+  "kanaal": "google",
+  "bewijs": "1 nov 2026, controle todayin.email/: canonical naar zichzelf zonder Vary, Engelse inhoud dubbel met /curacao/en. Opgelost met Vary en x-default.",
+  "bron": "todayin Curaçao, sessie 1 nov 2026",
+  "sterkte": 3,
+  "effect": "geen dubbele inhoud tussen kiesadres en taalversie",
+  "moeite": 1,
+  "meten": "index"
  }
 ]
