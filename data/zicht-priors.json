@@ -725,9 +725,9 @@
  },
  {
   "id": "rewrite-naar-eigen-domein-niet-vercel-app",
-  "les": "Herschrijf of proxy een pagina altijd naar het eigen domein van het doelproject, nooit naar het *.vercel.app-adres: Vercel stuurt daar x-robots-tag: noindex mee, en die header komt via een rewrite mee op de echte pagina. Controleer de headers van de live pagina na elke nieuwe rewrite.",
+  "les": "Herschrijf of proxy een pagina altijd naar het eigen domein van het doelproject en naar een pad zonder noindex-regel: nooit naar het *.vercel.app-adres (Vercel stuurt daar x-robots-tag: noindex mee) en niet naar een /api/-pad als het project daar een noindex-header op zet. Die header komt via de rewrite mee op de echte pagina. Controleer de headers van de live pagina na elke nieuwe rewrite.",
   "kanaal": "google",
-  "bewijs": "1 nov 2026: bzz-henq.vercel.app/api/cw?pad=en/cruise antwoordde met x-robots-tag: noindex, bzz.today/api/cw niet. todayin.email herschrijft daarom naar bzz.today.",
+  "bewijs": "1 nov 2026: bzz-henq.vercel.app/api/cw?pad=en/cruise antwoordde met x-robots-tag: noindex, bzz.today/api/cw niet. todayin.email herschrijft daarom naar bzz.today. Dezelfde dag: keuzehulp.best/api/keuze-tools gaf x-robots-tag: noindex (headers-regel /api/(.*) in hjdk-api vercel.json); de gidsen lopen daarom via het pad /curacao-gids.",
   "bron": "todayin Curaçao, sessie 1 nov 2026",
   "sterkte": 4,
   "effect": "voorkomt dat hele secties uit de index vallen",
