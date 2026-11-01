@@ -115,8 +115,16 @@
     "Alleen op het wattage letten; de maatvoering en de luchtstroom bepalen het resultaat.",
     "Een model zonder losse mand kiezen, waardoor je de hele bak moet afwassen."
    ],
-   "kort": "Kies op inhoud: 4 liter voor 1–2 personen, 6 liter voor een gezin, dual-zone als je twee gerechten tegelijk wilt. Vermogen zegt minder dan de maat van de mand en een vaatwasserbestendige mand.",
+   "kort": "Kies op inhoud. 3 tot 4 liter is genoeg voor 1 tot 2 personen, 5 liter voor 2 tot 3 personen (of 4 als het om een bijgerecht zoals friet gaat), 6 tot 7 liter voor een gezin van 4 en 8 liter of een dual-zone als je twee gerechten tegelijk wilt. Let daarna op een mand die in de vaatwasser kan; het vermogen zegt minder dan de maat van de mand.",
    "faq": [
+    {
+     "q": "Voor hoeveel personen is een airfryer van 5 liter?",
+     "a": "Een airfryer van 5 liter is goed voor 2 tot 3 personen als hoofdgerecht. Maak je alleen friet of een bijgerecht, dan red je het met 4 personen, maar dan bak je wel in twee keer als iedereen flink eet."
+    },
+    {
+     "q": "Hoeveel liter airfryer heb ik nodig voor 1 of 2 personen?",
+     "a": "3 tot 4 liter is genoeg. Een grotere mand kan ook, maar neemt meer ruimte op het aanrecht in en warmt langer op."
+    },
     {
      "q": "Hoeveel liter airfryer voor 4 personen?",
      "a": "5,5–6,5 liter; met opgroeiende kinderen 8 liter of een dual-zone."
@@ -129,6 +137,10 @@
      "q": "Kan ik een hele kip bereiden?",
      "a": "In een mand van 6 liter of meer past een kip van 1,2 kg."
     }
+   ],
+   "vast": [
+    "kort",
+    "faq"
    ],
    "verwant": [
     "combimagnetron",
