@@ -601,6 +601,7 @@ async function pxVerwerk(code, wRuw, v, order, methode, bron, t) {
   }
   if (rec.px && rec.px[merk]) return { ok: true, dubbel: true };
   rec.px = rec.px || {}; rec.px[merk] = Date.now(); const net = rec.s;
+  if (!rec.t && rec.mmc && (w === 'cart' || w === 'afreken' || w === 'koop')) { try { const vid = await kv.raw(['GET', 'mm:vfc:' + rec.mmc]); if (vid) { const { paginaUitkomst } = await import('../lib/mensmeter.js'); await paginaUitkomst(kv, { vid: String(vid), soort: w === 'koop' ? 'koop' : 'actie' }); } } catch (e) {} } // Clickmind-profiel van wie afrekent of koopt op kadoly.com (1 nov, Henkjan: "Regel dit ook voor kadoly verkeer")
   if (!rec.t && /^gids-/.test(String(rec.c || ''))) { const gm = String(rec.c).match(/^gids-(.+?)(?:-([kp]))?-[0-9a-f]{12}$/); if (gm) { const dk = 'gk:d:' + DAY(); try { await kv.raw(['HINCRBY', dk, gm[1] + '|px-' + w + '-' + (gm[2] || 'p'), '1']); if (w === 'koop' && v > 0) await kv.raw(['HINCRBY', dk, gm[1] + '|omzet-' + (gm[2] || 'p'), String(Math.round(v * 100))]); await kv.raw(['EXPIRE', dk, String(60 * 86400)]); } catch (e) {} } } // gids.kadoly.com: keten tot betaald per gids en per arm (productpagina p, meteen afrekenen k)
   if (!rec.t) await uurTel(kv, net, [w].concat(m ? [w + ':' + m] : []), t);
   if (oud && !(oud === 'cart' && (rec.px.cartTeld || (w === 'afreken' && rec.px.cart)))) { if (oud === 'cart') rec.px.cartTeld = Date.now();
