@@ -167,6 +167,14 @@
     {
       "path": "/api/keuze-tools?tool=cur&op=gezond",
       "schedule": "35 6 * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=cur&op=gidsgezond",
+      "schedule": "5 7 * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=cur&op=gidsbouw",
+      "schedule": "45 7 * * *"
     }
   ],
   "rewrites": [
@@ -1078,6 +1086,72 @@
     }
   },
   "redirects": [
+    {
+      "source": "/auto-huren-curacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/nl/auto-huren",
+      "permanent": true
+    },
+    {
+      "source": "/auto-huren-curacao/:rest*",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/nl/auto-huren",
+      "permanent": true
+    },
+    {
+      "source": "/curacao-car-rental",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/en/car-rental",
+      "permanent": true
+    },
+    {
+      "source": "/curacao-car-rental/:rest*",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/en/car-rental",
+      "permanent": true
+    },
+    {
+      "source": "/mietwagen-curacao",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/de/mietwagen",
+      "permanent": true
+    },
+    {
+      "source": "/mietwagen-curacao/:rest*",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "https://todayin.email/curacao/de/mietwagen",
+      "permanent": true
+    },
     {
       "source": "/curacao",
       "has": [

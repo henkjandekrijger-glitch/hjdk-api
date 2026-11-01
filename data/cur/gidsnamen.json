@@ -1,0 +1,4 @@
+{
+  "_uitleg": "Vertalingen van nieuwe bedrijfscategorieën voor de bedrijvengids op todayin.email/curacao/<taal>/gids. De gidsronde vult dit aan met de lijst onvertaald uit /api/keuze-tools?tool=cur&op=gidsstatus. Vorm: taal -> categorie-slug -> meervoudsnaam.",
+  "nl": {}, "en": {}, "de": {}, "es": {}, "pt": {}
+}
