@@ -36,6 +36,7 @@
 //   /api/mm/leer[?lees=1|droog=1]       leerronde (lib/leer.js; cron elk uur; lezen op de beschermde host)
 //   /api/mm/blok?net=propeller          blokvoorstel van de leerronde (openbaar, alleen zone-nummers)
 //   /api/mm/lookalike?project=todayin&land=us   lookalikes op uitkomst (lib/lookalike.js; openbaar, alleen zone-nummers)
+//   /api/mm/puit (POST {vid, soort})    uitkomst van een paginabezoek (aanmelding, actie) voor het converteerdersprofiel
 //   /api/mm/verken?sleutel=todayin-us   voorstel witte lijst verkenningscampagne; POST /api/mm/verkengedaan (SHOP_SLEUTEL) = uitgevoerd
 //   /api/mm/instelling[?j=<json>]       schakelaars, o.a. blokkeren aan/uit (beschermde host)
 //   /api/mm/overzicht                   alles op één pagina (beschermde host)
@@ -153,6 +154,14 @@ export default async function handler(req, res) {
     }
     if (op === 'w') return await wisselRoute(req, res, url, q);
     if (op === 'mmu') { res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600, s-maxage=3600'); cors(res); return res.status(200).send(MMU_JS); }
+    if (op === 'puit') { // uitkomst van een paginabezoek (mensmeter-vid) voor het profiel van wie converteert (lib/mensmeter.js paginaUitkomst)
+      cors(res); res.setHeader('cache-control', 'no-store');
+      if (req.method === 'OPTIONS') return res.status(204).end();
+      const { paginaUitkomst } = await import('../lib/mensmeter.js');
+      const j = req.method === 'POST' ? (leesJson(req.body) || {}) : { vid: q('vid'), soort: q('soort') };
+      const r = await paginaUitkomst(kv, j).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 200) }));
+      return req.method === 'POST' ? res.status(204).end() : res.status(r.ok ? 200 : 400).json(r);
+    }
     if (op === 'uitkomst') {
       cors(res); res.setHeader('cache-control', 'no-store');
       if (req.method === 'OPTIONS') return res.status(204).end();
