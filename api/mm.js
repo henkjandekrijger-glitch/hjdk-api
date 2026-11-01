@@ -260,7 +260,7 @@ export default async function handler(req, res) {
       const oud = await kv.get(ck).catch(() => null);
       if (oud && q('vers') !== '1' && Date.now() - Date.parse(oud.bijgewerkt || 0) < 3600e3) return res.status(200).json(oud);
       const { lookalike } = await import('../lib/lookalike.js');
-      try { const L = await lookalike(kv, { project, land }); await kv.set(ck, L, { ex: 2 * 86400 }); return res.status(200).json(L); } catch (e) { return res.status(oud ? 200 : 500).json(oud || { ok: false, fout: String(e && e.message || e).slice(0, 200) }); }
+      try { const L = await lookalike(kv, { project, land }); try { await kv.set(ck, L, { ex: 2 * 86400 }); } catch (e) {} return res.status(200).json(L); } catch (e) { return res.status(oud ? 200 : 500).json(oud || { ok: false, fout: String(e && e.message || e).slice(0, 200) }); }
     }
     // verkenner: voorstel voor de witte lijst van de vaste verkenningscampagne (uitvoerder: propellerads-mcp app/api/verken)
     if (op === 'verken') { res.setHeader('cache-control', 'no-store'); cors(res); const { verkenVoorstel } = await import('../lib/lookalike.js'); try { return res.status(200).json(await verkenVoorstel(kv, String(q('sleutel') || 'todayin-us'))); } catch (e) { return res.status(500).json({ ok: false, fout: String(e && e.message || e).slice(0, 200) }); } }
