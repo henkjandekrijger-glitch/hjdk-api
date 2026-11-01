@@ -171,6 +171,10 @@
   ],
   "rewrites": [
     {
+      "source": "/curacao-gids",
+      "destination": "/api/keuze-tools?tool=cur"
+    },
+    {
       "source": "/",
       "has": [
         {
