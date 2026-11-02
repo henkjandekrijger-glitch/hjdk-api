@@ -133,7 +133,7 @@ document.getElementById('kcx').onclick=function(){c.hidden=true};document.getEle
 document.getElementById('kcf').addEventListener('submit',function(x){x.preventDefault();var v=ci.value.trim();ci.value='';vraag(v)});
 document.querySelectorAll('[data-kc]').forEach(function(a){a.addEventListener('click',function(x){x.preventDefault();open('')})});})();</script>`;
 }
-const VOET = (g, kans) => `${NB.blok(g ? g.slug : '_home')}<hr style="border:0;border-top:1px solid var(--line);margin:44px 0 18px"><p class="meta">Een gids van <a href="https://kadoly.com">Kadoly</a>, de webshop met producten van onafhankelijke makers. Prijzen en levertijden komen elke paar minuten uit de winkel zelf${g ? ', laatst inhoudelijk bijgewerkt op ' + esc(g.bijgewerkt) : ''}. Wij verdienen aan een bestelling in onze eigen winkel; daarom staat bij elk product ook waarvoor het niet geschikt is.</p><p class="meta"><a href="/">Alle gidsen</a> · <a href="#" data-kc>Stel een vraag</a></p></main>${VOETBALK}${CHAT}${hulpScript(g ? g.slug : '_home', kans)}${NB.NB_SCRIPT}</body></html>`;
+const VOET = (g, kans) => `${NB.blok(g ? g.slug : '_home', { mail: MAILK })}<hr style="border:0;border-top:1px solid var(--line);margin:44px 0 18px"><p class="meta">Een gids van <a href="https://kadoly.com">Kadoly</a>, de webshop met producten van onafhankelijke makers. Prijzen en levertijden komen elke paar minuten uit de winkel zelf${g ? ', laatst inhoudelijk bijgewerkt op ' + esc(g.bijgewerkt) : ''}. Wij verdienen aan een bestelling in onze eigen winkel; daarom staat bij elk product ook waarvoor het niet geschikt is.</p><p class="meta"><a href="/">Alle gidsen</a> · <a href="#" data-kc>Stel een vraag</a></p></main>${VOETBALK}${CHAT}${hulpScript(g ? g.slug : '_home', kans)}${NB.NB_SCRIPT}</body></html>`;
 
 // zoeken in de shopcatalogus en de gidsen (30 okt, Henkjan: "Zet er ook een zoek boven die alles leert en ook een chat kan worden").
 // Leert: wat mensen aanklikken na een zoekvraag (gk:zk:<hash>) telt mee in de volgorde; elke vraag en vragen zonder uitkomst per dag in gk:zq:<dag>.
@@ -386,6 +386,7 @@ async function feiten(pid) {
 
 // aanmelding voor de Kadoly-mail en meldingen (lib/kadoly-nieuws.js): /nieuws, /nieuws/bevestig, /nieuws/af, /nieuws/push, /nieuws/bericht, /nieuws/klik, /kadoly-sw.js
 const beschermdHost = h => /\.vercel\.app$/i.test(h);
+let MAILK = false, MAILK_AT = 0; // staat het mailformulier aan (verzenddomein geverifieerd bij Resend)?
 const kaal = (titel, inhoud, script) => kop(titel + ' | Kadoly', titel, '/nieuws', '<meta name="robots" content="noindex">') + inhoud + '</main>' + VOETBALK + (script || '') + '</body></html>';
 const gidsLijst = () => '<h2>Alvast lezen</h2><ul class="toc">' + NB.gidsenNieuw().slice(0, 5).map(g => `<li><a href="/${esc(g.slug)}">${esc(g.h1)}</a></li>`).join('') + '</ul>';
 async function nieuwsOp(op, req, res, q, host, ua) {
@@ -393,7 +394,7 @@ async function nieuwsOp(op, req, res, q, host, ua) {
   const html = (code, titel, inhoud, script) => { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(code).send(kaal(titel, inhoud, script)); };
   const vanHier = () => { const o = req.headers.origin; if (!o) return true; try { const hh = new URL(o).hostname; return hh === 'gids.kadoly.com' || /\.vercel\.app$/i.test(hh); } catch (e) { return false; } };
   const waar = b => String((b && b.waar) || '').replace(/[^a-z0-9-]/g, '').slice(0, 40);
-  const ongeldig = () => html(400, 'Deze link werkt niet meer', `<p class="kicker">Kadoly-nieuws</p><h1>Deze link werkt niet meer</h1><p>Een bevestigingslink is twee dagen geldig. Meld je gerust opnieuw aan, dan sturen we meteen een nieuwe.</p>${NB.blok('_home')}`, NB.NB_SCRIPT);
+  const ongeldig = () => html(400, 'Deze link werkt niet meer', `<p class="kicker">Kadoly-nieuws</p><h1>Deze link werkt niet meer</h1><p>Een bevestigingslink is twee dagen geldig. Meld je gerust opnieuw aan, dan sturen we meteen een nieuwe.</p>${NB.blok('_home', { mail: MAILK })}`, NB.NB_SCRIPT);
   if (op === 'nbsw') { res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('service-worker-allowed', '/'); return res.status(200).send(NB.SW); }
   if (op === 'nbklik') { res.setHeader('location', await NB.klik(q)); return res.status(302).end(); }
   if (op === 'nbronde') { // elke dag (cron 17:47 UTC): meldingen; op vrijdag de mail. Handmatig alleen via de beschermde host (?droog=1, ?test=<adres>, ?mailnu=1)
@@ -402,11 +403,12 @@ async function nieuwsOp(op, req, res, q, host, ua) {
     return res.status(200).json(await NB.ronde({ droog: q.get('droog') === '1', test: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(test) ? test : '', mailNu: beschermdHost(host) && q.get('mailnu') === '1' })); }
   if (op === 'nbnieuws') { if (!beschermdHost(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await NB.nieuwsZet(q)); }
   if (op === 'nbstand') return res.status(200).json(await NB.stand(beschermdHost(host)));
+  if (op === 'nbdomein') { if (!beschermdHost(host)) return res.status(404).send('Niet gevonden'); const d = await NB.domein(q.get('maak') === '1'); MAILK_AT = 0; return res.status(200).json(d); }
   if (op === 'nbbericht') return res.status(200).json(await NB.bericht(await leesBody(req)));
   if (op === 'nbpush') { if (req.method !== 'POST') return res.status(200).json({ vapid: await NB.vapidPub() }); if (!vanHier() || isBot(ua)) return res.status(403).json({ ok: false }); const b = await leesBody(req); return res.status(200).json(await NB.pushAan({ ...b, waar: waar(b) })); }
   if (op === 'nieuws' && req.method !== 'POST') { // voorbeeldmail: precies wat een abonnee krijgt
     const mail = NB.mailWeek(NB.gidsenNieuw().slice(0, 3), (await NB.nieuwsItems()).slice(-2).reverse(), '#', k => HOST + '/' + (GIDSEN[k] ? k : '')).replace('<head>', '<head><base target="_top">');
-    return html(200, 'Voorbeeld van de Kadoly-mail', `<p class="kicker">Kadoly-nieuws</p><h1>Zo ziet de mail eruit</h1><p>Dit is precies wat je krijgt: op vrijdag de nieuwe keuzehulpen en het nieuws van Kadoly, hooguit één mail per week. Is er niets nieuws, dan sturen we niets.</p><iframe title="Voorbeeldmail van Kadoly" srcdoc="${esc(mail)}" style="width:100%;height:1150px;border:1px solid var(--line);border-radius:18px;background:#E8F4FD" loading="lazy"></iframe>${NB.blok('_home')}`, NB.NB_SCRIPT); }
+    return html(200, 'Voorbeeld van de Kadoly-mail', `<p class="kicker">Kadoly-nieuws</p><h1>Zo ziet de mail eruit</h1><p>Dit is precies wat je krijgt: op vrijdag de nieuwe keuzehulpen en het nieuws van Kadoly, hooguit één mail per week. Is er niets nieuws, dan sturen we niets.</p><iframe title="Voorbeeldmail van Kadoly" srcdoc="${esc(mail)}" style="width:100%;height:1150px;border:1px solid var(--line);border-radius:18px;background:#E8F4FD" loading="lazy"></iframe>${NB.blok('_home', { mail: MAILK })}`, NB.NB_SCRIPT); }
   if (op === 'nieuws') { if (!vanHier() || isBot(ua)) return res.status(403).json({ ok: false }); const b = await leesBody(req); const ip = String(req.headers['x-forwarded-for'] || req.headers['x-real-ip'] || '').split(',')[0].trim();
     try { const r = await NB.aanmelden({ ...b, waar: waar(b) }, ip); return res.status(r.ok ? 200 : r.fout === 'druk' ? 429 : 400).json(r); } catch (e) { console.error('nieuws aanmelden', String(e && e.message || e).slice(0, 160)); return res.status(503).json({ ok: false, fout: 'mail' }); } }
   if (op === 'nbbevestig') { const t = String(q.get('t') || '');
@@ -427,9 +429,10 @@ async function nieuwsOp(op, req, res, q, host, ua) {
 export default async function handler(req, res) {
   const url = new URL(req.url, 'https://gids.kadoly.com'); const q = url.searchParams; const op = q.get('op') || ''; const ua = req.headers['user-agent'] || '';
   const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0];
+  if (Date.now() - MAILK_AT > 300000) { MAILK_AT = Date.now(); MAILK = await NB.mailKlaar(); }
   if (Date.now() - META_AT > 300000) { META_AT = Date.now(); try { META = String((await kv.get('gk:gscmeta')) || ''); } catch (e) {} }
   try {
-    if (/^(nieuws|nbbevestig|nbaf|nbpush|nbbericht|nbklik|nbsw|nbronde|nbnieuws|nbstand)$/.test(op)) return await nieuwsOp(op, req, res, q, host, ua);
+    if (/^(nieuws|nbbevestig|nbaf|nbpush|nbbericht|nbklik|nbsw|nbronde|nbnieuws|nbstand|nbdomein)$/.test(op)) return await nieuwsOp(op, req, res, q, host, ua);
     if (op === 'ixkey') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(INDEXNOW_KEY); }
     if (op === 'llmsfull') { await telBot(ua, 'llmsfull'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(await llmsVol()); }
     if (op === 'zicht') { res.setHeader('content-type', 'application/json; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=0, s-maxage=3600'); return res.status(200).json(await zichtJson()); }
