@@ -20,6 +20,7 @@ import { organicStatus } from '../lib/organic.js';
 import { demandRadar } from '../lib/demandradar.js';
 import { searchCached, catalog, getToken } from '../lib/bol.js';
 import seed from '../data/kz.json' with { type: 'json' };
+import { HAND, UITGELICHT } from '../lib/kz-hand.js';
 
 const DAY = () => new Date().toISOString().slice(0, 10);
 const addDays = (d, n) => new Date(Date.parse(d + 'T12:00:00Z') + n * 864e5).toISOString().slice(0, 10);
@@ -467,6 +468,25 @@ async function stap(opts) {
   return { gedaan: 'gepubliceerd', onderwerp: cand.slug, url: p.url, toets: r.toets };
 }
 
+
+// ---------- met de hand geschreven keuzehulpen (lib/kz-hand.js): zelfde bol-toets, geen AI-aanroep (2 nov, AI-tegoed op) ----------
+async function handRonde(o) {
+  const d = DAY(); const best = await bestaande(); const slugs = new Set(best.map(b => b.slug).concat(HAND.map(h => h.slug))); const uit = [];
+  for (const h of HAND) {
+    if (o.slug && h.slug !== o.slug) continue;
+    const bestaat = best.find(b => b.slug === h.slug); if (bestaat && bestaat.handV === (h.v || 1) && !o.forceer) { uit.push({ slug: h.slug, gedaan: 'al live' }); continue; }
+    if (h.vanaf && h.vanaf > d && !o.forceer) { uit.push({ slug: h.slug, gedaan: 'wacht tot ' + h.vanaf }); continue; }
+    const it = Object.assign({}, h, { pct: pctFor(h.cat) || 5, verwant: (h.verwant || []).filter(v => v !== h.slug && slugs.has(v)).slice(0, 8), handV: h.v || 1 }); delete it.vanaf;
+    const fouten = schemaFouten(it); if (fouten.length) { uit.push({ slug: h.slug, gedaan: 'fout', fouten }); continue; }
+    const check = await toets(it);
+    if (o.dry || !check.geslaagd) { uit.push({ slug: h.slug, gedaan: o.dry ? 'proef' : 'bol-toets niet gehaald', toets: { ok: check.ok, routes: check.routes, eersteVraagGedekt: check.eersteVraagGedekt }, fout: check.fout.slice(0, 6).map(x => ({ route: x.route, term: x.term, must: x.must, min: x.min, max: x.max, best: x.best, voorbeeld: x.voorbeeld.slice(0, 5) })) }); continue; }
+    const pub = await publiceer(Object.assign(it, { publishAt: (bestaat && bestaat.publishAt) || d }), { bron: 'hand', waarom: 'met de hand geschreven' + (h.kadoly ? ' (Kadoly + bol)' : '') }, (bestaat && bestaat.publishAt) || d);
+    await log({ stap: 'hand', ok: true, slug: h.slug, url: pub.url, toets: check.pct + '%', indexnow: pub.indexnow }); uit.push({ slug: h.slug, gedaan: 'gepubliceerd', url: pub.url, toets: check.pct + '%' });
+  }
+  // uitgelicht op de voorpagina: als de AI-planner vandaag niets zette, de blokken uit lib/kz-hand.js die nu lopen
+  if (!o.dry) { try { const cur = await kv.get(K.uit); if (!cur || cur.dag < d || cur.bron === 'hand') { const live = new Set((await bestaande()).map(b => b.slug)); const blokken = UITGELICHT.filter(b => b.van <= d && b.tot >= d).map(b => ({ naam: b.naam, waarom: b.waarom, slugs: b.slugs.filter(x => live.has(x)) })).filter(b => b.slugs.length >= 2).slice(0, 5); if (blokken.length) { await kv.set(K.uit, { dag: d, bron: 'hand', blokken }); uit.push({ uitgelicht: blokken.map(b => b.naam) }); } } } catch (e) {} }
+  return uit;
+}
 export default async function handler(req, res) {
   res.setHeader('cache-control', 'no-store'); OIDC_HDR = String(req.headers['x-vercel-oidc-token'] || '');
   const url = new URL(req.url, 'http://x'); const op = url.searchParams.get('op') || 'status';
@@ -486,6 +506,10 @@ export default async function handler(req, res) {
         startlijstNogTeGaan: STARTLIJST.filter(x => !best.some(b => b.slug === x.slug)).map(x => x.slug + (x.vanaf ? ' (vanaf ' + x.vanaf + ')' : '')),
         verdiensten30Dagen: await kv.get(K.verd).then(v => v ? (v.ok ? { periode: v.periode, totaal: v.totaal, categorieen: (v.categorieen || []).slice(0, 10), besteKeuzehulpen: (v.besteKeuzehulpen || []).slice(0, 10), veelKliksGeenOrders: v.veelKliksGeenOrders, verkochteProducten: (v.verkochteProducten || []).slice(0, 15) } : { fout: v.fout }) : null).catch(() => null),
         laatsteRondes: (lg || []).slice(0, 40), lessen: ((await kv.get(K.lessen)) || []).slice(0, 15) });
+    }
+    if (op === 'hand') { // openbaar en gratis: publiceert alleen wat in de repo staat (lib/kz-hand.js); dry=1 toont de bol-toets per route
+      const n = await kv.incr('c:kzmaak-hand-' + DAY()).catch(() => 1); if (n > 40) return res.status(429).json({ ok: false, reden: 'vandaag al 40 keer' });
+      return res.status(200).json({ ok: true, stappen: await handRonde({ dry: url.searchParams.get('dry') === '1', slug: url.searchParams.get('slug') || '', forceer: url.searchParams.get('forceer') === '1' && (isToken || isCron) }) });
     }
     if (op === 'signalen') { if (!isCron && !isToken) return res.status(401).json({ error: 'alleen cron of token' }); const s = await signalen(); return res.status(200).json({ ok: true, dag: s.dag, metingen: s.metingen, weer: s.weer, nieuws: (s.nieuws || []).length, stijgers: s.stijgers.slice(0, 10), ms: s.ms }); }
     if (op === 'kort') { const d = DAY(); const plan = (await kv.get(K.plan(d))) || {}; const have = new Set((await bestaande()).map(b => b.slug));
@@ -514,6 +538,7 @@ export default async function handler(req, res) {
       const t0 = Date.now(); const stappen = [];
       try {
         if (!(await kv.get(K.sig).then(s => s && s.dag === DAY() && s.weer).catch(() => false))) { try { await signalen(); } catch (e) { await log({ stap: 'signalen', ok: false, waarom: String(e.message || e).slice(0, 160) }); } }
+        if (url.searchParams.get('dry') !== '1') { try { const hr = await handRonde({}); stappen.push({ gedaan: 'hand', stappen: hr.filter(x => x.gedaan !== 'al live') }); } catch (e) {} }
         const o = { extra: url.searchParams.get('extra') === '1', dry: url.searchParams.get('dry') === '1', onderwerp: String(url.searchParams.get('onderwerp') || '').replace(/[^a-z0-9-]/g, '') || null };
         // meerdere stappen per aanroep zolang er tijd is (elke stap ~30–90 s), zodat 10+ keuzehulpen per ochtend ruim lukt
         for (let n = 0; n < 6; n++) { const r = await stap(o); stappen.push(r); if (o.dry || o.onderwerp || r.gedaan === 'niets' || Date.now() - t0 > 150000) break; }
