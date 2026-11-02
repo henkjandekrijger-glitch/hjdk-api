@@ -582,9 +582,12 @@ z.addEventListener('input',function(){var q=z.value.toLowerCase().trim();var n=0
     let pop = []; try { pop = rankUsage(await Promise.all(usageDays().map(d => dailyUsage('kz', d))), items0); } catch (e) {}
     if (pop.length < 4) pop = pop.concat(items.filter(i => !pop.some(x => x.slug === i.slug)).slice(0, 6 - pop.length));
     const catsS = Object.keys(cats).sort((a, b) => cats[b].length - cats[a].length);
+    // Nu actueel (2 nov): de uitgelichte blokken van vandaag (AI-planner of lib/kz-hand.js) om en om, hooguit 6 tegels, label = het moment
+    const nuT = []; { const bl = (UG.length ? UG : seasonsNow()).map(b => ({ naam: b.naam, its: b.slugs.map(sl => items0.find(i => i.slug === sl)).filter(Boolean) })).filter(b => b.its.length); for (let r = 0; nuT.length < 6 && r < 6; r++) for (const b of bl) { const i = b.its[r]; if (i && nuT.length < 6 && !nuT.some(x => x.i.slug === i.slug)) nuT.push({ i, l: b.naam }); } }
+    const nuHtml = nuT.length >= 3 ? `<h2>Nu actueel</h2><div class="grid">${nuT.map(x => tegel(x.i, x.l)).join('')}</div>` : '';
     body2 = scripts + `<p class="eyebrow"><span class="live-dot"></span>${items.length} keuzehulpen · elke dag nieuwe</p><h1>Twijfel je wat je moet kopen? In 3 vragen naar wat bij jou past.</h1><p class="lead">Drie korte vragen, één eerlijk advies met de prijs van vandaag, een goedkoper en een luxer alternatief, en de fouten die anderen al maakten.</p>
 <div class="zoekvak"><input id="zoek2" type="search" placeholder="Zoek: airfryer, matras, kinderwagen…" aria-label="Zoek een keuzehulp"></div><div id="zres" class="grid" hidden></div><p id="zgeen" class="meta" hidden>Nog geen keuzehulp hiervoor. <a href="#vraag">Vraag hem aan</a>.</p>
-<h2>Populair deze week</h2><div class="grid">${pop.slice(0, 6).map(i => tegel(i, i.cat)).join('')}</div>
+${nuHtml}<h2>Populair deze week</h2><div class="grid">${pop.slice(0, 6).map(i => tegel(i, i.cat)).join('')}</div>
 ${NW.length ? `<h2>Nieuw toegevoegd</h2><div class="grid">${NW.slice(0, 6).map(i => tegel(i, i.cat)).join('')}</div>` : ''}
 <h2>Op reis of wonen op Curaçao</h2><div class="grid"><a class="card" href="/curacao"><div class="cat">Curaçao</div><h3>Alles vergeleken voor je reis of verhuizing</h3><p>24 keuzehulpen: autohuur, hotels, stranden, duiken, restaurants, huis kopen en meer.</p><span class="meer">Bekijk →</span></a></div>
 <h2>Alle categorieën</h2><div class="grid">${catsS.map(c => `<a class="card" href="/keuzehulp/categorie/${esc(catSlug(c))}"><h3>${esc(c)}</h3><p>${cats[c].slice(0, 3).map(i => esc(String(i.title).replace(/^Keuzehulp\s+/i, ''))).join(', ')}</p><span class="meer">${cats[c].length} keuzehulpen →</span></a>`).join('')}</div>
