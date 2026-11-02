@@ -1,6 +1,6 @@
 {
  "id": "restaurants",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-02",
  "onderwerp": {
   "nl": "restaurant",
   "en": "restaurant",
@@ -595,6 +595,14 @@
      "aantal": 1225,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Restaurant_Review-g1724323-d1046541-Reviews-Jaanchies_Restaurant-Sabana_Westpunt_Curacao.html"
+    },
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 1076,
+     "peildatum": "2026-11-02",
+     "bron": "https://wanderlog.com/list/geoCategory/205691/where-to-eat-best-restaurants-in-curacao"
     }
    ],
    "voor": {
@@ -655,7 +663,8 @@
     "https://www.tripadvisor.com/Restaurant_Review-g1724323-d1046541-Reviews-Jaanchies_Restaurant-Sabana_Westpunt_Curacao.html",
     "https://www.hoteles.com/go/curacao/best-local-restaurants-curacao",
     "https://islaguru.com/articles/local-food-guide-curacao",
-    "https://www.lonelyplanet.com/aruba-bonaire-and-curacao/curacao/restaurants"
+    "https://www.lonelyplanet.com/aruba-bonaire-and-curacao/curacao/restaurants",
+    "https://wanderlog.com/list/geoCategory/205691/where-to-eat-best-restaurants-in-curacao"
    ]
   },
   {
@@ -709,6 +718,13 @@
      "de": "Hauptgerichte mittags ab 13 $",
      "es": "Platos fuertes de almuerzo desde $13",
      "pt": "Pratos principais no almoço a partir de US$ 13"
+    },
+    {
+     "nl": "Dagelijks 9:00 tot 23:00",
+     "en": "Daily 9am to 11pm",
+     "de": "Täglich 9 bis 23 Uhr",
+     "es": "Todos los días de 9 a 23 h",
+     "pt": "Todos os dias das 9h às 23h"
     }
    ],
    "scores": [
@@ -788,7 +804,8 @@
     "https://www.tripadvisor.com/Restaurant_Review-g147278-d1157134-Reviews-Gouverneur_de_Rouville-Willemstad_Curacao.html",
     "https://islaguru.com/articles/local-food-guide-curacao",
     "https://www.lonelyplanet.com/aruba-bonaire-and-curacao/curacao/restaurants",
-    "https://www.fodors.com/world/caribbean/curacao/places/willemstad/restaurants"
+    "https://www.fodors.com/world/caribbean/curacao/places/willemstad/restaurants",
+    "https://wanderlog.com/place/details/1174542"
    ]
   },
   {
@@ -845,9 +862,9 @@
      "platform": "Tripadvisor",
      "score": 4.5,
      "max": 5,
-     "aantal": 2235,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.tripadvisor.com/Restaurant_Review-g147278-d3702605-Reviews-Kome-Willemstad_Curacao.html"
+     "aantal": 2240,
+     "peildatum": "2026-11-02",
+     "bron": "https://www.tripadvisor.fr/Restaurants-g147277-Curacao.html"
     }
    ],
    "voor": {
@@ -909,13 +926,14 @@
     "https://www.tripadvisor.com/Restaurant_Review-g147278-d3702605-Reviews-Kome-Willemstad_Curacao.html",
     "https://www.avilabeachhotel.com/curacao-tips/all-blog-posts/10-best-restaurants-on-curacao/",
     "https://islaguru.com/articles/local-food-guide-curacao",
-    "https://www.fodors.com/world/caribbean/curacao/places/willemstad/restaurants"
+    "https://www.fodors.com/world/caribbean/curacao/places/willemstad/restaurants",
+    "https://www.tripadvisor.fr/Restaurants-g147277-Curacao.html"
    ]
   },
   {
    "id": "fort-nassau",
    "naam": "Fort Nassau Restaurant",
-   "url": null,
+   "url": "https://fortnassau.com/",
    "soort": {
     "nl": "fine dining",
     "en": "fine dining",
@@ -952,6 +970,13 @@
      "de": "Preisniveau $$$$ (Tripadvisor)",
      "es": "Nivel de precio $$$$ (Tripadvisor)",
      "pt": "Faixa de preço $$$$ (Tripadvisor)"
+    },
+    {
+     "nl": "Ma t/m vr 12:00 tot 14:00 en 18:00 tot 23:00, za en zo vanaf 18:00",
+     "en": "Mon to Fri 12pm to 2pm and 6pm to 11pm, Sat and Sun from 6pm",
+     "de": "Mo bis Fr 12 bis 14 Uhr und 18 bis 23 Uhr, Sa und So ab 18 Uhr",
+     "es": "Lun a vie de 12 a 14 h y de 18 a 23 h, sáb y dom desde las 18 h",
+     "pt": "Seg a sex das 12h às 14h e das 18h às 23h, sáb e dom a partir das 18h"
     }
    ],
    "scores": [
@@ -962,6 +987,14 @@
      "aantal": 1014,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Restaurant_Review-g147278-d1046222-Reviews-Fort_Nassau-Willemstad_Curacao.html"
+    },
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 1451,
+     "peildatum": "2026-11-02",
+     "bron": "https://wanderlog.com/place/details/169802"
     }
    ],
    "voor": {
@@ -1021,13 +1054,14 @@
    "bronnen": [
     "https://www.tripadvisor.com/Restaurant_Review-g147278-d1046222-Reviews-Fort_Nassau-Willemstad_Curacao.html",
     "https://www.avilabeachhotel.com/curacao-tips/all-blog-posts/10-best-restaurants-on-curacao/",
-    "https://www.fodors.com/world/caribbean/curacao/places/willemstad/restaurants"
+    "https://www.fodors.com/world/caribbean/curacao/places/willemstad/restaurants",
+    "https://wanderlog.com/place/details/169802"
    ]
   },
   {
    "id": "brisa-do-mar-pops-place",
    "naam": "Brisa do Mar (Pop's Place)",
-   "url": null,
+   "url": "https://brisadomarpopsplace.everyorder.io",
    "soort": {
     "nl": "strandtent, lokaal en vis",
     "en": "beach shack, local and seafood",
@@ -1076,6 +1110,14 @@
      "aantal": 1190,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Restaurant_Review-g147278-d3617167-Reviews-Brisa_do_Mar_Pop_s_Place-Willemstad_Curacao.html"
+    },
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 3573,
+     "peildatum": "2026-11-02",
+     "bron": "https://wanderlog.com/list/geoCategory/205691/where-to-eat-best-restaurants-in-curacao"
     }
    ],
    "voor": {
@@ -1136,7 +1178,8 @@
     "https://www.tripadvisor.com/Restaurant_Review-g147278-d3617167-Reviews-Brisa_do_Mar_Pop_s_Place-Willemstad_Curacao.html",
     "https://www.hoteles.com/go/curacao/best-local-restaurants-curacao",
     "https://islaguru.com/articles/local-food-guide-curacao",
-    "https://www.lonelyplanet.com/aruba-bonaire-and-curacao/curacao/restaurants"
+    "https://www.lonelyplanet.com/aruba-bonaire-and-curacao/curacao/restaurants",
+    "https://wanderlog.com/list/geoCategory/205691/where-to-eat-best-restaurants-in-curacao"
    ]
   },
   {
@@ -1180,6 +1223,14 @@
      "aantal": 2673,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Restaurant_Review-g147278-d1046226-Reviews-Iguana_Cafe-Willemstad_Curacao.html"
+    },
+    {
+     "platform": "Google",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 1937,
+     "peildatum": "2026-11-02",
+     "bron": "https://wanderlog.com/place/details/1513829/iguana-caf%C3%A9"
     }
    ],
    "voor": {
@@ -1237,7 +1288,8 @@
     ]
    },
    "bronnen": [
-    "https://www.tripadvisor.com/Restaurant_Review-g147278-d1046226-Reviews-Iguana_Cafe-Willemstad_Curacao.html"
+    "https://www.tripadvisor.com/Restaurant_Review-g147278-d1046226-Reviews-Iguana_Cafe-Willemstad_Curacao.html",
+    "https://wanderlog.com/place/details/1513829/iguana-caf%C3%A9"
    ]
   },
   {
@@ -1365,7 +1417,7 @@
   {
    "id": "zanzibar-beach-restaurant",
    "naam": "Zanzibar Beach & Restaurant",
-   "url": null,
+   "url": "http://www.janthielbeach.com/zanzibar-beach-curacao",
    "soort": {
     "nl": "strandrestaurant",
     "en": "beach restaurant",
@@ -1397,6 +1449,14 @@
      "aantal": 1247,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Restaurant_Review-g147277-d1046250-Reviews-Zanzibar_Beach_Restaurant-Curacao.html"
+    },
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 4095,
+     "peildatum": "2026-11-02",
+     "bron": "https://wanderlog.com/place/details/1377259"
     }
    ],
    "voor": {
@@ -1449,7 +1509,8 @@
     ]
    },
    "bronnen": [
-    "https://www.tripadvisor.com/Restaurant_Review-g147277-d1046250-Reviews-Zanzibar_Beach_Restaurant-Curacao.html"
+    "https://www.tripadvisor.com/Restaurant_Review-g147277-d1046250-Reviews-Zanzibar_Beach_Restaurant-Curacao.html",
+    "https://wanderlog.com/place/details/1377259"
    ]
   },
   {
@@ -1591,6 +1652,14 @@
      "aantal": 213,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Restaurant_Review-g7346512-d6673896-Reviews-Restaurant_Komedor_Krioyo_Landhuis_Dokterstuin-Barber_Curacao.html"
+    },
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 904,
+     "peildatum": "2026-11-02",
+     "bron": "https://wanderlog.com/place/details/1372345/landhuis-dokterstuin-restaurant-komedor-krioyo"
     }
    ],
    "voor": {
@@ -1649,7 +1718,8 @@
    },
    "bronnen": [
     "https://www.tripadvisor.com/Restaurant_Review-g7346512-d6673896-Reviews-Restaurant_Komedor_Krioyo_Landhuis_Dokterstuin-Barber_Curacao.html",
-    "https://www.hoteles.com/go/curacao/best-local-restaurants-curacao"
+    "https://www.hoteles.com/go/curacao/best-local-restaurants-curacao",
+    "https://wanderlog.com/place/details/1372345/landhuis-dokterstuin-restaurant-komedor-krioyo"
    ]
   },
   {
@@ -1767,7 +1837,7 @@
   {
    "id": "restaurant-playa-forti",
    "naam": "Restaurant Playa Forti",
-   "url": null,
+   "url": "http://www.playafortirestaurant.com/",
    "soort": {
     "nl": "visrestaurant",
     "en": "seafood",
@@ -1796,6 +1866,13 @@
      "de": "Preisniveau $$–$$$ (Tripadvisor)",
      "es": "Nivel de precio $$–$$$ (Tripadvisor)",
      "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+    },
+    {
+     "nl": "Ma t/m vr 10:30 tot 19:00, za en zo tot 20:00",
+     "en": "Mon to Fri 10:30am to 7pm, Sat and Sun until 8pm",
+     "de": "Mo bis Fr 10:30 bis 19 Uhr, Sa und So bis 20 Uhr",
+     "es": "Lun a vie de 10:30 a 19 h, sáb y dom hasta las 20 h",
+     "pt": "Seg a sex das 10h30 às 19h, sáb e dom até as 20h"
     }
    ],
    "scores": [
@@ -1806,6 +1883,14 @@
      "aantal": 479,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Restaurant_Review-g1724323-d3445986-Reviews-Restaurant_Playa_Forti-Sabana_Westpunt_Curacao.html"
+    },
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 1401,
+     "peildatum": "2026-11-02",
+     "bron": "https://wanderlog.com/place/details/779954/restaurant-playa-forti"
     }
    ],
    "voor": {
@@ -1859,7 +1944,8 @@
    },
    "bronnen": [
     "https://www.tripadvisor.com/Restaurant_Review-g1724323-d3445986-Reviews-Restaurant_Playa_Forti-Sabana_Westpunt_Curacao.html",
-    "https://www.lonelyplanet.com/aruba-bonaire-and-curacao/curacao/restaurants"
+    "https://www.lonelyplanet.com/aruba-bonaire-and-curacao/curacao/restaurants",
+    "https://wanderlog.com/place/details/779954/restaurant-playa-forti"
    ]
   },
   {
@@ -2702,9 +2788,9 @@
      "platform": "Tripadvisor",
      "score": 4.6,
      "max": 5,
-     "aantal": 876,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.tripadvisor.com/Restaurant_Review-g147278-d10133922-Reviews-La_Boheme_Curacao-Willemstad_Curacao.html"
+     "aantal": 878,
+     "peildatum": "2026-11-02",
+     "bron": "https://www.tripadvisor.fr/Restaurants-g147277-Curacao.html"
     }
    ],
    "voor": {
@@ -2738,7 +2824,8 @@
    },
    "bronnen": [
     "https://www.google.com/maps?cid=10538147048850519859",
-    "https://www.tripadvisor.com/Restaurant_Review-g147278-d10133922-Reviews-La_Boheme_Curacao-Willemstad_Curacao.html"
+    "https://www.tripadvisor.com/Restaurant_Review-g147278-d10133922-Reviews-La_Boheme_Curacao-Willemstad_Curacao.html",
+    "https://www.tripadvisor.fr/Restaurants-g147277-Curacao.html"
    ]
   },
   {
@@ -3005,6 +3092,13 @@
      "de": "Preisniveau $$–$$$ (Tripadvisor)",
      "es": "Nivel de precio $$–$$$ (Tripadvisor)",
      "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+    },
+    {
+     "nl": "Ma t/m za 12:00 tot 23:00, zo 15:00 tot 23:00",
+     "en": "Mon to Sat 12pm to 11pm, Sun 3pm to 11pm",
+     "de": "Mo bis Sa 12 bis 23 Uhr, So 15 bis 23 Uhr",
+     "es": "Lun a sáb de 12 a 23 h, dom de 15 a 23 h",
+     "pt": "Seg a sáb das 12h às 23h, dom das 15h às 23h"
     }
    ],
    "scores": [
@@ -3051,7 +3145,8 @@
    },
    "bronnen": [
     "https://www.google.com/maps?cid=12571058447094437121",
-    "https://www.tripadvisor.com/Restaurant_Review-g147278-d2346360-Reviews-Dal_Toro_Restaurant-Willemstad_Curacao.html"
+    "https://www.tripadvisor.com/Restaurant_Review-g147278-d2346360-Reviews-Dal_Toro_Restaurant-Willemstad_Curacao.html",
+    "https://wanderlog.com/place/details/458790/dal-toro-restaurant"
    ]
   },
   {
@@ -3912,7 +4007,7 @@
   {
    "id": "rozendaels",
    "naam": "Rozendaels Original Cuisine",
-   "url": null,
+   "url": "https://www.rozendaels.com/",
    "soort": {
     "nl": "lokaal Krioyo",
     "en": "local Krioyo",
@@ -3959,6 +4054,14 @@
      "aantal": 1167,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Restaurant_Review-g147278-d1845671-Reviews-Rozendaels_Original_Cuisine-Willemstad_Curacao.html"
+    },
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 743,
+     "peildatum": "2026-11-02",
+     "bron": "https://wanderlog.com/place/details/1174537"
     }
    ],
    "voor": {
@@ -3993,7 +4096,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Restaurant_Review-g147278-d1845671-Reviews-Rozendaels_Original_Cuisine-Willemstad_Curacao.html",
     "https://www.hoteles.com/go/curacao/best-local-restaurants-curacao",
-    "https://www.lonelyplanet.com/aruba-bonaire-and-curacao/curacao/restaurants"
+    "https://www.lonelyplanet.com/aruba-bonaire-and-curacao/curacao/restaurants",
+    "https://wanderlog.com/place/details/1174537"
    ]
   },
   {
@@ -11389,59 +11493,6 @@
    ]
   },
   {
-   "id": "tabooshh",
-   "naam": "Tabooshh! Curaçao",
-   "url": null,
-   "soort": {
-    "nl": "vis en lokaal, familiezaak",
-    "en": "seafood and local, family-run",
-    "de": "Meeresfrüchte und lokal, familiengeführt",
-    "es": "mariscos y comida local, negocio familiar",
-    "pt": "frutos do mar e comida local, negócio familiar"
-   },
-   "plaats": "Caracasbaaiweg",
-   "tags": [
-    "vis",
-    "lokaal-krioyo",
-    "oost"
-   ],
-   "prijs": null,
-   "feiten": [
-    {
-     "nl": "Kreeft is de specialiteit",
-     "en": "Lobster is the signature",
-     "de": "Der Hummer ist die Spezialität",
-     "es": "La langosta es la especialidad de la casa",
-     "pt": "A lagosta é a especialidade da casa"
-    },
-    {
-     "nl": "Woensdag dicht",
-     "en": "Closed Wednesdays",
-     "de": "Mittwochs geschlossen",
-     "es": "Cerrado los miércoles",
-     "pt": "Fechado às quartas"
-    }
-   ],
-   "scores": [],
-   "voor": {
-    "nl": [],
-    "en": [],
-    "de": [],
-    "es": [],
-    "pt": []
-   },
-   "tegen": {
-    "nl": [],
-    "en": [],
-    "de": [],
-    "es": [],
-    "pt": []
-   },
-   "bronnen": [
-    "https://www.hoteles.com/go/curacao/best-local-restaurants-curacao"
-   ]
-  },
-  {
    "id": "purunchi-koredor",
    "naam": "Purunchi Koredor",
    "url": null,
@@ -11733,8 +11784,8 @@
   },
   {
    "id": "karakter-beach",
-   "naam": "Karakter Beach Lounge",
-   "url": null,
+   "naam": "Karakter Beach Club & Lounge Restaurant",
+   "url": "https://karaktercuracao.com",
    "soort": {
     "nl": "strandrestaurant",
     "en": "beach restaurant",
@@ -11742,7 +11793,7 @@
     "es": "restaurante de playa",
     "pt": "restaurante de praia"
    },
-   "plaats": null,
+   "plaats": "Coral Estate, Sint Willibrordus",
    "tags": [
     "aan-zee",
     "zonsondergang",
@@ -11758,7 +11809,24 @@
      "pt": "Café da manhã e almoço de dia, jantar à noite"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 2333,
+     "peildatum": "2026-11-02",
+     "bron": "https://wanderlog.com/list/geoCategory/205691/where-to-eat-best-restaurants-in-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 2863,
+     "peildatum": "2026-11-02",
+     "bron": "https://wanderlog.com/list/geoCategory/205691/where-to-eat-best-restaurants-in-curacao"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -11775,7 +11843,82 @@
    },
    "bronnen": [
     "https://www.avilabeachhotel.com/curacao-tips/all-blog-posts/10-best-restaurants-on-curacao/",
-    "https://www.lonelyplanet.com/aruba-bonaire-and-curacao/curacao/restaurants"
+    "https://www.lonelyplanet.com/aruba-bonaire-and-curacao/curacao/restaurants",
+    "https://wanderlog.com/list/geoCategory/205691/where-to-eat-best-restaurants-in-curacao"
+   ]
+  },
+  {
+   "id": "the-wine-cellar",
+   "naam": "The Wine Cellar",
+   "url": "https://winecellar.cw",
+   "soort": {
+    "nl": "Frans-Caribische keuken",
+    "en": "French Caribbean",
+    "de": "französisch-karibische Küche",
+    "es": "cocina franco caribeña",
+    "pt": "cozinha franco-caribenha"
+   },
+   "plaats": "Punda, Concordiastraat",
+   "tags": [
+    "punda",
+    "romantisch",
+    "fine-dining"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Diner met grote wijnkaart",
+     "en": "Dinner with a large wine list",
+     "de": "Abendessen mit großer Weinkarte",
+     "es": "Cena con una amplia carta de vinos",
+     "pt": "Jantar com ampla carta de vinhos"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 266,
+     "peildatum": "2026-11-02",
+     "bron": "https://wanderlog.com/list/geoCategory/205691/where-to-eat-best-restaurants-in-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 1874,
+     "peildatum": "2026-11-02",
+     "bron": "https://wanderlog.com/list/geoCategory/205691/where-to-eat-best-restaurants-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Hoog gewaardeerd diner in de binnenstad"
+    ],
+    "en": [
+     "Highly rated dinner spot in the old town"
+    ],
+    "de": [
+     "Hoch bewertetes Abendessen in der Altstadt"
+    ],
+    "es": [
+     "Cena muy bien valorada en el centro histórico"
+    ],
+    "pt": [
+     "Jantar muito bem avaliado no centro histórico"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://wanderlog.com/list/geoCategory/205691/where-to-eat-best-restaurants-in-curacao",
+    "https://winecellar.cw"
    ]
   }
  ],
