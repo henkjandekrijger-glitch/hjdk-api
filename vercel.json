@@ -377,6 +377,36 @@
       "destination": "/api/gids?op=nbklik"
     },
     {
+      "source": "/nieuws/winnaar",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=nbwin"
+    },
+    {
+      "source": "/nieuws/spelregels",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=nbregels"
+    },
+    {
+      "source": "/nieuws/winnaars",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=nbwinnaars"
+    },
+    {
       "source": "/kadoly-sw.js",
       "has": [
         {
