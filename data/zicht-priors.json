@@ -799,5 +799,16 @@
   "effect": "geen dubbele inhoud tussen kiesadres en taalversie",
   "moeite": 1,
   "meten": "index"
+ },
+ {
+  "id": "verhuis-telt-niet-als-indexverlies",
+  "les": "Verhuis je geindexeerde pagina's met een 301 naar een ander domein, dan daalt de indexteller van de oude site meteen omdat die adressen uit de sitemap gaan. Dat is geen verlies van Google-vertrouwen: vergelijk de oude site alleen op adressen die in beide metingen in de sitemap stonden, en volg de verhuisde adressen op het nieuwe domein. Link na een verhuis direct naar het nieuwe adres, niet via de 301.",
+  "kanaal": "google",
+  "bewijs": "Curaçao-gidsen op 1 nov 2026 naar todayin.email verhuisd: whichtobuy.best in Google van 29 naar 5 (sitemap 132 zonder Curaçao, 108 onbekend bij Google), kaufberater.best van 12 naar 8, op de meting van 2 nov. De resterende 5 en 8 zijn de echte stand van de koopgidsen.",
+  "bron": "ZICHT-dagcontrole 2 nov 2026",
+  "sterkte": 4,
+  "effect": "juiste lezing van indexcijfers na een verhuis",
+  "moeite": 1,
+  "meten": "index"
  }
 ]
