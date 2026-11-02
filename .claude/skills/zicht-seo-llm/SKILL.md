@@ -22,7 +22,7 @@ Iedere chat en elk project gebruikt hetzelfde draaiboek en voedt het. Zo leert a
 ## Altijd eerst
 
 1. Lees het draaiboek: https://hjdk-api-henq.vercel.app/api/zicht?op=draaiboek&t=1&site=<id>
-   - In een cloudsessie: gebruik web_fetch_vercel_url (curl naar deze domeinen wordt geblokkeerd).
+   - In een cloudsessie: gebruik web_fetch_vercel_url (curl naar deze domeinen en naar keuzehulp.best wordt geblokkeerd), of de brug van een project die wel bereikbaar is: curl -s "https://mylevel-henq.vercel.app/api/p?a=zicht&op=werk&site=<id>&t=1" (problemen, de genummerde lessen voor die site, wat alleen Henkjan kan doen en de lopende proeven; ook op=draaiboek, op=stand).
    - Alleen AI-vermeldingen: voeg &kanaal=llm toe.
    - De volgorde is de score: de kans dat een les werkt (voorkennis plus eigen proeven) maal het effect, gedeeld door de moeite.
 2. Lees de stand van de site: /api/zicht?op=stand&site=<id>. Die bevat:
@@ -78,6 +78,7 @@ Iedere chat en elk project gebruikt hetzelfde draaiboek en voedt het. Zo leert a
 - **Rewrites altijd naar het eigen domein van het doelproject en een pad zonder noindex-regel**, nooit naar *.vercel.app (daar stuurt Vercel x-robots-tag: noindex mee) en niet naar een /api/-pad met een noindex-header (hjdk-api zet die op /api/(.*); de Curaçao-gidsen lopen daarom via /curacao-gids). Die header komt via de rewrite op de echte pagina (les rewrite-naar-eigen-domein-niet-vercel-app). Controleer na elke nieuwe rewrite de headers van de live pagina.
 - **Koppen testen alleen op advertentie- of kiesverkeer.** De canonieke taalpagina toont de beste variant en een vaste SEO-titel met de zoekterm voorop (les proefkop-niet-op-canonieke-pagina). Een adres dat zelf de taal kiest krijgt Vary: Accept-Language en is x-default (les vary-bij-taalkeuze).
 - **Archief zonder 'vandaag'.** Dag- en archiefpagina's beschrijven de dag met datum en feiten, niet met het mailonderwerp (les archief-zonder-vandaag).
+- **Datum en geschiedenis (Henkjan 2 nov 2026: "Datum er heel duidelijk bij en history opslaan voor SEO en LLM").** Elk tijdgebonden blok (alles vandaag, agenda, schema) draagt in de kop de volledige datum met weekdag en jaar, als <time datetime="JJJJ-MM-DD">. Bewaar elke dag een momentopname van wat er die dag was (todayin Curaçao: cw/alles/<dag>.json) en toon de dagpagina daaruit, nooit teruggerekend uit de actuele agenda: evenementen verdwijnen of veranderen (les dagpagina-momentopname-niet-terugrekenen). Zet gedateerde items als Event in een ItemList (startDate, plaats, bron). Maak bestaande dagpagina's rijker in plaats van nieuwe URL-soorten (les niet-sneller-bouwen-dan-google-ontdekt).
 - **Eén entiteit per merk.** Twee merken op één domein krijgen elk een eigen Organization-@id met vaste naam en logo (les eigen-entiteit-per-merk).
 - **Geen inhoud die op runtime-AI leunt.** Toen de AI Gateway 402 gaf (31 okt en 1 nov), vielen vertalingen, metingen, nieuwe gidsen en antwoorden stil. Laat een geplande taak van Claude de inhoud schrijven en committen, met een reserve zonder AI (les inhoud-zonder-runtime-ai).
 - **Zelfherstel.** Loop aanbiederslinks dagelijks in porties na; twee keer dood = link weg en op een nakijklijst voor de gidsronde (les zelfherstel-dode-aanbiederslinks, lib/cur.js curGezond).
@@ -87,6 +88,8 @@ Iedere chat en elk project gebruikt hetzelfde draaiboek en voedt het. Zo leert a
 
 Zonder terugmelding leert niemand ervan.
 
+- **Projecten met een eigen repo (todayin, MyLevel, enz.):** meld in <host>/zicht.json (site/public/zicht.json): toegepast {les, dag, wat}, proeven {id, les, metric, na, urls, controle, wat}, lessen {id, les, kanaal, bewijs, bron, sterkte, moeite} en nvt. Alleen toevoegen; een id wordt één keer gemeld en nooit gewijzigd. ZICHT leest het elke ochtend om 05:50 UTC (lib/zicht-projecten.js; uitleg /api/zicht?op=manifest). Moet een wijziging op alle pagina's, neem dan als controle pagina's van voor de wijziging (voor/na op datum) en zeg dat in wat.
+- **Na de uitrol altijd nakijken op de live pagina:** headers (geen noindex), de nieuwe inhoud in de HTML zelf, geldige JSON-LD, en of de scripts zonder fout laden (in een cloudsessie met Playwright). Een kapotte pagina kost meer dan een gemiste les.
 - **Zonder token (altijd mogelijk):**
   - Nieuwe proef: zet hem in START_PROEVEN in lib/zicht.js (id, site, les, metric, na, urls, controle, wat, van) en push; de volgende ronde maakt hem één keer aan.
   - Nieuwe les of nieuw bewijs: voeg toe aan data/zicht-priors.json (id, les, kanaal, bewijs met cijfers, bron, sterkte 1-4, effect, moeite 1-5, meten).
