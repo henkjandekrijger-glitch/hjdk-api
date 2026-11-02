@@ -5,6 +5,10 @@
       "schedule": "55 6 * * *"
     },
     {
+      "path": "/api/gids?op=nbronde",
+      "schedule": "47 17 * * *"
+    },
+    {
       "path": "/api/hjdk/iterate",
       "schedule": "17 */6 * * *"
     },
@@ -311,6 +315,76 @@
         }
       ],
       "destination": "/api/shop?op=gidsuit&p=:pid"
+    },
+    {
+      "source": "/nieuws",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=nieuws"
+    },
+    {
+      "source": "/nieuws/bevestig",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=nbbevestig"
+    },
+    {
+      "source": "/nieuws/af",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=nbaf"
+    },
+    {
+      "source": "/nieuws/push",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=nbpush"
+    },
+    {
+      "source": "/nieuws/bericht",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=nbbericht"
+    },
+    {
+      "source": "/nieuws/klik",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=nbklik"
+    },
+    {
+      "source": "/kadoly-sw.js",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=nbsw"
     },
     {
       "source": "/:slug([a-z0-9-]+)",

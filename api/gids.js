@@ -10,6 +10,7 @@ import { lookNieuw } from '../lib/look.js';
 import { GIDSEN, GIDS_IDS } from '../lib/gidsen-kadoly.js';
 import { berichten, HAIKU } from '../lib/ai.js';
 import { createHash } from 'node:crypto';
+import * as NB from '../lib/kadoly-nieuws.js'; // aanmelding mail en meldingen (2 nov 2026)
 
 const HOST = 'https://gids.kadoly.com';
 const ACC = { acc: '#1D9BF0', acc2: '#E8F4FD', accD: '#60A5FA', acc2D: '#13202E' }; // Kadoly-blauw (30 okt, Henkjan: "Neem design van Kadoly over"; uitgelezen met op=stijl)
@@ -92,7 +93,7 @@ details.faq{padding:18px 0}details.faq summary{display:flex;justify-content:spac
 @media(max-width:640px){.pk{grid-template-columns:84px 1fr;gap:14px;padding:16px}.pk-img img{width:84px;height:84px}dl.rows .r{grid-template-columns:1fr;gap:4px}}`;
 
 function kop(titel, besch, pad, extra, zoekQ) {
-  return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(titel)}</title><meta name="description" content="${esc(besch)}"><link rel="canonical" href="${HOST}${pad}">${META ? `<meta name="google-site-verification" content="${esc(META)}">` : ''}<meta property="og:title" content="${esc(titel)}"><meta property="og:description" content="${esc(besch)}"><meta property="og:url" content="${HOST}${pad}"><meta property="og:type" content="article"><meta property="og:locale" content="nl_NL"><link rel="icon" type="image/svg+xml" href="https://cdn.kadoly.com/icon/shop/shop-mark.svg?v=1"><link rel="icon" type="image/png" sizes="32x32" href="https://cdn.kadoly.com/icon/shop/icon-32.png?v=1"><link rel="apple-touch-icon" sizes="180x180" href="https://cdn.kadoly.com/icon/shop/apple-180.png?v=1"><meta name="theme-color" content="#ffffff">${extra || ''}<style>${lookNieuw(ACC)}${CSS_KADOLY}${CSS_GIDS}</style></head><body>${KOPBALK(zoekQ)}<main class="wrap">`;
+  return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(titel)}</title><meta name="description" content="${esc(besch)}"><link rel="canonical" href="${HOST}${pad}">${META ? `<meta name="google-site-verification" content="${esc(META)}">` : ''}<meta property="og:title" content="${esc(titel)}"><meta property="og:description" content="${esc(besch)}"><meta property="og:url" content="${HOST}${pad}"><meta property="og:type" content="article"><meta property="og:locale" content="nl_NL"><link rel="icon" type="image/svg+xml" href="https://cdn.kadoly.com/icon/shop/shop-mark.svg?v=1"><link rel="icon" type="image/png" sizes="32x32" href="https://cdn.kadoly.com/icon/shop/icon-32.png?v=1"><link rel="apple-touch-icon" sizes="180x180" href="https://cdn.kadoly.com/icon/shop/apple-180.png?v=1"><meta name="theme-color" content="#ffffff">${extra || ''}<style>${lookNieuw(ACC)}${CSS_KADOLY}${CSS_GIDS}${NB.NB_CSS}</style></head><body>${KOPBALK(zoekQ)}<main class="wrap">`;
 }
 // merkteken van kadoly.com zelf (kop van kadoly.com, 30 okt uitgelezen)
 const MERK = s => `<svg width="${s}" height="${s}" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><rect width="34" height="34" rx="9" fill="#1D9BF0"/><path d="M17 21l-7-8M17 21l7-8M13 14l-3-1 .6 3.1M23.4 16.1L24 13l-3 1" stroke="#D6ECFC" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M17 28V8M18.6 10.8L17 8l-1.6 2.8" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
@@ -132,7 +133,7 @@ document.getElementById('kcx').onclick=function(){c.hidden=true};document.getEle
 document.getElementById('kcf').addEventListener('submit',function(x){x.preventDefault();var v=ci.value.trim();ci.value='';vraag(v)});
 document.querySelectorAll('[data-kc]').forEach(function(a){a.addEventListener('click',function(x){x.preventDefault();open('')})});})();</script>`;
 }
-const VOET = (g, kans) => `<hr style="border:0;border-top:1px solid var(--line);margin:44px 0 18px"><p class="meta">Een gids van <a href="https://kadoly.com">Kadoly</a>, de webshop met producten van onafhankelijke makers. Prijzen en levertijden komen elke paar minuten uit de winkel zelf${g ? ', laatst inhoudelijk bijgewerkt op ' + esc(g.bijgewerkt) : ''}. Wij verdienen aan een bestelling in onze eigen winkel; daarom staat bij elk product ook waarvoor het niet geschikt is.</p><p class="meta"><a href="/">Alle gidsen</a> · <a href="#" data-kc>Stel een vraag</a></p></main>${VOETBALK}${CHAT}${hulpScript(g ? g.slug : '_home', kans)}</body></html>`;
+const VOET = (g, kans) => `${NB.blok(g ? g.slug : '_home')}<hr style="border:0;border-top:1px solid var(--line);margin:44px 0 18px"><p class="meta">Een gids van <a href="https://kadoly.com">Kadoly</a>, de webshop met producten van onafhankelijke makers. Prijzen en levertijden komen elke paar minuten uit de winkel zelf${g ? ', laatst inhoudelijk bijgewerkt op ' + esc(g.bijgewerkt) : ''}. Wij verdienen aan een bestelling in onze eigen winkel; daarom staat bij elk product ook waarvoor het niet geschikt is.</p><p class="meta"><a href="/">Alle gidsen</a> · <a href="#" data-kc>Stel een vraag</a></p></main>${VOETBALK}${CHAT}${hulpScript(g ? g.slug : '_home', kans)}${NB.NB_SCRIPT}</body></html>`;
 
 // zoeken in de shopcatalogus en de gidsen (30 okt, Henkjan: "Zet er ook een zoek boven die alles leert en ook een chat kan worden").
 // Leert: wat mensen aanklikken na een zoekvraag (gk:zk:<hash>) telt mee in de volgorde; elke vraag en vragen zonder uitkomst per dag in gk:zq:<dag>.
@@ -383,11 +384,52 @@ async function feiten(pid) {
   return { pid, url: u, product: prod ? { naam: prod.name, omschrijving: String(prod.description || '').slice(0, 2500), afbeeldingen: [].concat(prod.image || []).slice(0, 4) } : null, tekst: (s >= 0 ? tekst.slice(s, s + 2500) : tekst.slice(0, 2500)) };
 }
 
+// aanmelding voor de Kadoly-mail en meldingen (lib/kadoly-nieuws.js): /nieuws, /nieuws/bevestig, /nieuws/af, /nieuws/push, /nieuws/bericht, /nieuws/klik, /kadoly-sw.js
+const beschermdHost = h => /\.vercel\.app$/i.test(h);
+const kaal = (titel, inhoud, script) => kop(titel + ' | Kadoly', titel, '/nieuws', '<meta name="robots" content="noindex">') + inhoud + '</main>' + VOETBALK + (script || '') + '</body></html>';
+const gidsLijst = () => '<h2>Alvast lezen</h2><ul class="toc">' + NB.gidsenNieuw().slice(0, 5).map(g => `<li><a href="/${esc(g.slug)}">${esc(g.h1)}</a></li>`).join('') + '</ul>';
+async function nieuwsOp(op, req, res, q, host, ua) {
+  res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
+  const html = (code, titel, inhoud, script) => { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(code).send(kaal(titel, inhoud, script)); };
+  const vanHier = () => { const o = req.headers.origin; if (!o) return true; try { const hh = new URL(o).hostname; return hh === 'gids.kadoly.com' || /\.vercel\.app$/i.test(hh); } catch (e) { return false; } };
+  const waar = b => String((b && b.waar) || '').replace(/[^a-z0-9-]/g, '').slice(0, 40);
+  const ongeldig = () => html(400, 'Deze link werkt niet meer', `<p class="kicker">Kadoly-nieuws</p><h1>Deze link werkt niet meer</h1><p>Een bevestigingslink is twee dagen geldig. Meld je gerust opnieuw aan, dan sturen we meteen een nieuwe.</p>${NB.blok('_home')}`, NB.NB_SCRIPT);
+  if (op === 'nbsw') { res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('service-worker-allowed', '/'); return res.status(200).send(NB.SW); }
+  if (op === 'nbklik') { res.setHeader('location', await NB.klik(q)); return res.status(302).end(); }
+  if (op === 'nbronde') { // elke dag (cron 17:47 UTC): meldingen; op vrijdag de mail. Handmatig alleen via de beschermde host (?droog=1, ?test=<adres>, ?mailnu=1)
+    const cron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(ua)); if (!cron && !beschermdHost(host)) return res.status(404).send('Niet gevonden');
+    const test = beschermdHost(host) ? String(q.get('test') || '').trim().toLowerCase() : '';
+    return res.status(200).json(await NB.ronde({ droog: q.get('droog') === '1', test: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(test) ? test : '', mailNu: beschermdHost(host) && q.get('mailnu') === '1' })); }
+  if (op === 'nbnieuws') { if (!beschermdHost(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await NB.nieuwsZet(q)); }
+  if (op === 'nbstand') return res.status(200).json(await NB.stand(beschermdHost(host)));
+  if (op === 'nbbericht') return res.status(200).json(await NB.bericht(await leesBody(req)));
+  if (op === 'nbpush') { if (req.method !== 'POST') return res.status(200).json({ vapid: await NB.vapidPub() }); if (!vanHier() || isBot(ua)) return res.status(403).json({ ok: false }); const b = await leesBody(req); return res.status(200).json(await NB.pushAan({ ...b, waar: waar(b) })); }
+  if (op === 'nieuws' && req.method !== 'POST') { // voorbeeldmail: precies wat een abonnee krijgt
+    const mail = NB.mailWeek(NB.gidsenNieuw().slice(0, 3), (await NB.nieuwsItems()).slice(-2).reverse(), '#', k => HOST + '/' + (GIDSEN[k] ? k : '')).replace('<head>', '<head><base target="_top">');
+    return html(200, 'Voorbeeld van de Kadoly-mail', `<p class="kicker">Kadoly-nieuws</p><h1>Zo ziet de mail eruit</h1><p>Dit is precies wat je krijgt: op vrijdag de nieuwe keuzehulpen en het nieuws van Kadoly, hooguit één mail per week. Is er niets nieuws, dan sturen we niets.</p><iframe title="Voorbeeldmail van Kadoly" srcdoc="${esc(mail)}" style="width:100%;height:1150px;border:1px solid var(--line);border-radius:18px;background:#E8F4FD" loading="lazy"></iframe>${NB.blok('_home')}`, NB.NB_SCRIPT); }
+  if (op === 'nieuws') { if (!vanHier() || isBot(ua)) return res.status(403).json({ ok: false }); const b = await leesBody(req); const ip = String(req.headers['x-forwarded-for'] || req.headers['x-real-ip'] || '').split(',')[0].trim();
+    try { const r = await NB.aanmelden({ ...b, waar: waar(b) }, ip); return res.status(r.ok ? 200 : r.fout === 'druk' ? 429 : 400).json(r); } catch (e) { console.error('nieuws aanmelden', String(e && e.message || e).slice(0, 160)); return res.status(503).json({ ok: false, fout: 'mail' }); } }
+  if (op === 'nbbevestig') { const t = String(q.get('t') || '');
+    if (req.method === 'POST') { const s = await NB.bevestig(t); if (!s) return ongeldig();
+      return html(200, 'Je bent aangemeld', `<p class="kicker">Kadoly-nieuws</p><h1>${s.al ? 'Je was al aangemeld' : 'Gelukt, je bent aangemeld'}</h1><p>Vanaf nu krijg je op vrijdag de nieuwe keuzehulpen en het nieuws van Kadoly op <b>${esc(s.email)}</b>. Hooguit één mail per week, en afmelden kan met één klik onderaan elke mail.</p>${NB.blok('_home', { alleenPush: true })}${gidsLijst()}`, NB.NB_SCRIPT); }
+    const p = await NB.bevestigOpen(t); if (!p) return ongeldig();
+    if (p.klaar) return html(200, 'Je bent al aangemeld', `<p class="kicker">Kadoly-nieuws</p><h1>Je bent al aangemeld</h1><p>Je krijgt op vrijdag de nieuwe keuzehulpen op <b>${esc(p.email)}</b>.</p>${gidsLijst()}`);
+    return html(200, 'Bevestig je aanmelding', `<p class="kicker">Kadoly-nieuws</p><h1>Nog één klik</h1><p>Bevestig dat je de nieuwe keuzehulpen en het nieuws van Kadoly wilt ontvangen op <b>${esc(p.email)}</b>.</p><form method="post" action="/nieuws/bevestig?t=${esc(t)}" id="nbb"><button class="btn knop" type="submit">Ja, meld me aan</button></form><p class="meta">Hooguit één mail per week · afmelden met één klik</p>`, '<script>setTimeout(function(){if(document.visibilityState==="visible"){var f=document.getElementById("nbb");f.querySelector("button").disabled=true;f.submit()}},400)</script>'); }
+  if (op === 'nbaf') { const t = String(q.get('t') || ''), weer = q.get('weer') === '1';
+    if (req.method === 'POST' && !weer) { await NB.afmelden(t); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send('Afgemeld'); } // één klik vanuit de mailapp (List-Unsubscribe-Post)
+    const terug = req.method === 'POST' && weer; const s = await NB.afmelden(t, terug);
+    if (!s) return html(400, 'Deze afmeldlink werkt niet', `<p class="kicker">Kadoly-nieuws</p><h1>Deze afmeldlink werkt niet</h1><p>Mail ons op <a href="mailto:henkjan@yoo.rs">henkjan@yoo.rs</a>, dan melden we je met de hand af. Dat doen we dezelfde dag.</p>`);
+    if (terug) return html(200, 'Je bent weer aangemeld', `<p class="kicker">Kadoly-nieuws</p><h1>Je bent weer aangemeld</h1><p>Fijn dat je blijft. Je krijgt weer hooguit één mail per week op <b>${esc(s.email)}</b>.</p><p><a href="/">Naar de keuzehulpen</a></p>`);
+    return html(200, 'Je bent afgemeld', `<p class="kicker">Kadoly-nieuws</p><h1>Je bent afgemeld</h1><p><b>${esc(s.email)}</b> krijgt geen mail meer van ons. Eén klik was genoeg, en zo blijft het.</p><form method="post" action="/nieuws/af?t=${esc(t)}&amp;weer=1"><button class="btn deel" type="submit">Per ongeluk? Meld me weer aan</button></form><p><a href="/">Naar de keuzehulpen</a></p>`); }
+  return res.status(404).send('Niet gevonden');
+}
+
 export default async function handler(req, res) {
   const url = new URL(req.url, 'https://gids.kadoly.com'); const q = url.searchParams; const op = q.get('op') || ''; const ua = req.headers['user-agent'] || '';
   const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0];
   if (Date.now() - META_AT > 300000) { META_AT = Date.now(); try { META = String((await kv.get('gk:gscmeta')) || ''); } catch (e) {} }
   try {
+    if (/^(nieuws|nbbevestig|nbaf|nbpush|nbbericht|nbklik|nbsw|nbronde|nbnieuws|nbstand)$/.test(op)) return await nieuwsOp(op, req, res, q, host, ua);
     if (op === 'ixkey') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(INDEXNOW_KEY); }
     if (op === 'llmsfull') { await telBot(ua, 'llmsfull'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(await llmsVol()); }
     if (op === 'zicht') { res.setHeader('content-type', 'application/json; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=0, s-maxage=3600'); return res.status(200).json(await zichtJson()); }
@@ -456,7 +498,7 @@ export default async function handler(req, res) {
     if (op === 'stand') { const dagen = Math.min(28, Math.max(1, N(q.get('dagen')) || 7)); const uit = {}; for (let i = 0; i < dagen; i++) { const d = new Date(Date.now() - i * 864e5).toISOString().slice(0, 10); try { const a = await kv.raw(['HGETALL', 'gk:d:' + d]); const o = {}; if (Array.isArray(a)) for (let j = 0; j + 1 < a.length; j += 2) o[a[j]] = N(a[j + 1]); uit[d] = o; } catch (e) {} } const geleerdPer = {}; for (const id of GIDS_IDS) geleerdPer[id] = await geleerd(id); const zq = {}; for (let i = 0; i < dagen; i++) { const d = new Date(Date.now() - i * 864e5).toISOString().slice(0, 10); try { const a = await kv.raw(['HGETALL', 'gk:zq:' + d]); if (Array.isArray(a)) for (let j = 0; j + 1 < a.length; j += 2) zq[a[j]] = N(zq[a[j]]) + N(a[j + 1]); } catch (e) {} }
       const rij = re => Object.entries(zq).filter(([k]) => re.test(k)).sort((a, b) => b[1] - a[1]).slice(0, 40).map(([k, n]) => [k.replace(/^(0|o)\|/, ''), n]);
       let chat = null; if (/\.vercel\.app$/i.test(host)) { try { chat = ((await kv.raw(['LRANGE', 'gk:chat', '0', '49'])) || []).map(x => { try { return JSON.parse(x); } catch (e) { return null; } }).filter(Boolean); } catch (e) {} }
-      return res.status(200).json({ ok: true, gidsen: GIDS_IDS, perDag: uit, kliksPerProduct: geleerdPer, armproef: { kansAfrekenen: await armKans(), stand28d: await armStand(28) }, zoeken: { vragen: rij(/^(?!0\||o\||k\|)/), keuzes: rij(/^k\|/), zonderUitkomst: rij(/^0\|/), chatOnderwerpen: rij(/^o\|/) }, chatLaatste: chat }); }
+      return res.status(200).json({ ok: true, gidsen: GIDS_IDS, perDag: uit, kliksPerProduct: geleerdPer, armproef: { kansAfrekenen: await armKans(), stand28d: await armStand(28) }, zoeken: { vragen: rij(/^(?!0\||o\||k\|)/), keuzes: rij(/^k\|/), zonderUitkomst: rij(/^0\|/), chatOnderwerpen: rij(/^o\|/) }, chatLaatste: chat, nieuws: await NB.stand(false).catch(() => null) }); }
     res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=0, s-maxage=300, stale-while-revalidate=600');
     const slug = String(q.get('slug') || '');
     const rub = String(q.get('rubriek') || '').replace(/[^a-z0-9-]/g, '').slice(0, 30);
