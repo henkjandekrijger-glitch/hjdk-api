@@ -474,7 +474,7 @@ async function handRonde(o) {
   const d = DAY(); const best = await bestaande(); const slugs = new Set(best.map(b => b.slug).concat(HAND.map(h => h.slug))); const uit = [];
   for (const h of HAND) {
     if (o.slug && h.slug !== o.slug) continue;
-    const bestaat = best.find(b => b.slug === h.slug); if (bestaat && bestaat.handV === (h.v || 1) && !o.forceer) { uit.push({ slug: h.slug, gedaan: 'al live' }); continue; }
+    const bestaat = await kv.get('hjdk:kz:' + h.slug).catch(() => null); if (bestaat && bestaat.handV === (h.v || 1) && !o.forceer) { uit.push({ slug: h.slug, gedaan: 'al live' }); continue; }
     if (h.vanaf && h.vanaf > d && !o.forceer) { uit.push({ slug: h.slug, gedaan: 'wacht tot ' + h.vanaf }); continue; }
     const it = Object.assign({}, h, { pct: pctFor(h.cat) || 5, verwant: (h.verwant || []).filter(v => v !== h.slug && slugs.has(v)).slice(0, 8), handV: h.v || 1 }); delete it.vanaf;
     const fouten = schemaFouten(it); if (fouten.length) { uit.push({ slug: h.slug, gedaan: 'fout', fouten }); continue; }
