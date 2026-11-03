@@ -851,6 +851,10 @@
       "destination": "/api/shop?op=hulp"
     },
     {
+      "source": "/api/shop/beeld/:p/:t",
+      "destination": "/api/shop?op=img&p=:p&t=:t"
+    },
+    {
       "source": "/api/shop/:op",
       "destination": "/api/shop?op=:op"
     },
