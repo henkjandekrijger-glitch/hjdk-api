@@ -439,7 +439,7 @@ async function direct(req, res, x) {
       const werk = laterAf(Promise.all([
         inc(keys), uurTel(kv, net, 'dv'), sadd(K.set('p'), pid), zone ? sadd(K.set('z', net), zone) : null, cr ? sadd(K.set('a', net), cr) : null, camp ? sadd(K.set('k', net), camp) : null,
         zone ? kv.raw(['PFADD', K.hll(net, zone), apparaat(req)]).then(() => kv.raw(['EXPIRE', K.hll(net, zone), String(30 * 86400)])).catch(() => {}) : null,
-        verwerkKlik(kv, { cid, pid: mmp, nieuw: nieuwP, arm: '302', tag: 'yoors-shop', net: CM_NET[net], camp, zone, sub: clickid, cr, kw: pid, doel, p: 'shop' }, serverSignalen(req))
+        verwerkKlik(kv, { cid, pid: mmp, nieuw: nieuwP, arm: '302', tag: 'yoors-shop', net: CM_NET[net], camp, zone, sub: clickid, cr, kw: pid, doel, p: 'shop', vorm: x.vorm, q: x.extra }, serverSignalen(req))
       ]).catch(e => { const m = String(e && e.message || e); console.log('shop direct fout', m); if (/OOM/.test(m)) dbNood(); }));
       await Promise.race([werk, new Promise(r => setTimeout(r, 350))]);
     }
@@ -454,6 +454,11 @@ async function land(req, res, url) {
   const src = String(q.get('utm_source') || '').toLowerCase(); const net = netVan(src);
   let clickid = String(q.get('clickid') || '').replace(/[^A-Za-z0-9_.-]/g, '').slice(0, 120); if (/^(subid|clickid|click_id|visitor_id)$/i.test(clickid)) clickid = '';
   const zone = plekId(q.get('zoneid')), cr = digits(q.get('creativeid')), camp = digits(q.get('campaignid'));
+  // Clickmind neemt alles mee wat het netwerk in de link zet (Henkjan 3 nov: "Zorg dat je alles meeneemt in clickmind ook van mondiads . OS VPN etc
+  // zodat we patronen kunnen vinden"): de vorm (utm_medium: ipp, push, native, pop) en elke andere parameter (os, browser, carrier, subid, ...),
+  // ook macro's die het netwerk niet invulde (dan staat er [os]: zo zien we welke macro's werken).
+  const vorm = String(q.get('utm_medium') || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 12);
+  const extra = {}; let nx = 0; for (const [k0, v0] of q.entries()) { const k1 = String(k0).toLowerCase().replace(/[^a-z0-9_]/g, '').slice(0, 20); if (!k1 || /^(utm_source|utm_medium|utm_campaign|clickid|zoneid|creativeid|campaignid|p|arm)$/.test(k1) || nx >= 16) continue; extra[k1] = String(v0).slice(0, 60); nx++; }
   const cat = await catalog(); const perId = {}; cat.items.forEach(i => { perId[i.id] = i; });
   let top = null; try { top = await kv.get(K.top); } catch (e) {} const topIds = (top && top.ids && top.ids.length ? top.ids : seed.ads.map(a => a.pid)).filter(id => perId[id] && perId[id].vr !== false);
   let pid = pidOk(q.get('p')); if (pid && (!perId[pid] || perId[pid].vr === false)) pid = '';
@@ -468,7 +473,7 @@ async function land(req, res, url) {
   // NOOIT een tussenpagina (Henkjan 28 okt: "Haal tussenpagina voor altijd weg !!!!!! Bot meet je op clickmind niet een tusspagina met een klik").
   // Betaald verkeer met een klik-id gaat altijd in één keer via Clickmind (302) naar de productpagina op kadoly.com, ook met arm=l in de link.
   // Bots meet Clickmind (cm.js op de shop: echt mens of niet, per plek) en de zonelijst weert slechte plekken; wie zich als bot meldt gaat niet door (direct()).
-  if (code) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot });
+  if (code) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra });
   if (!bot) {
     let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, { ex: 7 * 86400 }); } catch (e) {} }
     if (nieuw) { const keys = ['sh-' + net + '-view', 'sh-d' + D8() + '-' + net + '-view', 'sh-u' + nlUur() + '-view', 'sh-p-' + pk(pid) + '-himp'].concat(meer.map(m => 'sh-p-' + pk(m.id) + '-imp'));
