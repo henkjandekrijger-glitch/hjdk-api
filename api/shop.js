@@ -372,7 +372,7 @@ async function maakMondiadProduct(p, vorm = 'IN_PAGE_PUSH', dagBudget = 5) {
     const icon = vorm === 'NATIVE' ? null : findFile(await md('mondiad_upload_resource_from_url', { resourceType: 'ICON', sourceUrl: beeld(p.pid, 'icon'), fileName: 'sh-' + pk(p.pid).slice(-10) + '-i.jpg' }));
     const image = findFile(await md('mondiad_upload_resource_from_url', { resourceType: 'IMAGE', sourceUrl: beeld(p.pid, 'md'), fileName: 'sh-' + pk(p.pid).slice(-10) + '-b.jpg' }));
     if ((vorm !== 'NATIVE' && !icon) || !image) throw new Error('beelden uploaden mislukt voor ' + p.pid);
-    creatives = (p.advertenties || []).slice(0, 8).map((a, i) => ({ title: a.title, description: a.description, icon: icon || null, image, tag: 'sh-' + pk(p.pid).slice(-12) + '-' + MD_VORM[vorm].toLowerCase() + '-' + i, status: 'PENDING', bannerFormat: null, campaignId: null }));
+    creatives = (p.advertenties || []).slice(0, 8).map((a, i) => ({ title: a.title, description: a.description, icon: icon || null, image, tag: 'sh-' + pk(p.pid).slice(-12) + '-' + MD_VORM[vorm].toLowerCase() + '-' + i, status: 'PENDING', bannerFormat: 'FORMAT_300_250', campaignId: 0 })); // de MCP laat null weg en eist het veld; bannerFormat telt alleen voor banners
     if (creatives.length < 8) throw new Error('minder dan 8 advertenties voor ' + p.pid + ' (Henkjan: overal 8)');
   }
   const dp = {}; ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].forEach(d => { dp[d] = MD_UREN; });
