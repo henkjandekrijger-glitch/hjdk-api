@@ -918,6 +918,13 @@ export default async function handler(req, res) {
     if (op === 'snelheid') { // openbaar, alleen lezen: hoe zwaar de productpagina is voor een NL-telefoon (omleidingen, scripts, css, beelden); 6 uur bewaard
       const { snelheid } = await import('../lib/shopsnelheid.js'); const pid = pidOk(url.searchParams.get('p')) || 'oc_4174004347453441';
       res.setHeader('cache-control', 'no-store'); return res.status(200).json(await snelheid(kv, pid, !!url.searchParams.get('vers'))); }
+    if (op === 'kassa') { // openbaar, alleen totalen: wat bezoekers op de afrekenpagina doen (3 nov, Clickmind op de kassa), vandaag of ?dag=
+      const dg = /^\d{4}-\d{2}-\d{2}$/.test(url.searchParams.get('dag') || '') ? url.searchParams.get('dag') : DAY(); const t = await dagTotaal(dg);
+      const STAP = [['dkp', 'afrekenpagina geopend (Clickmind)'], ['dk2', '20 seconden op de afrekenpagina'], ['dk6', '1 minuut op de afrekenpagina'], ['dke', 'e-mailveld aangetikt'], ['dka', 'adresveld aangetikt'], ['dkm', 'betaalmethode gekozen'], ['dkz', 'betaalknop in beeld'], ['dkq', 'PayPal-venster aangetikt'], ['dkf', 'formulierfout'], ['dkb', 'op Betalen gedrukt'], ['dkw', 'weg zonder te betalen']];
+      const perNet = {}, tot = {}; for (const [n, x] of Object.entries(t)) { perNet[n] = {}; for (const [k] of STAP) { perNet[n][k] = num(x[k]); tot[k] = num(tot[k]) + num(x[k]); } }
+      const tekst = 'Kadoly afrekenpagina ' + dg + ' (Clickmind, alle netwerken)\n' + STAP.map(([k, l]) => l + ': ' + num(tot[k])).join('\n');
+      if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(tekst); }
+      return res.status(200).json({ ok: true, dag: dg, totaal: tot, perNet, stappen: Object.fromEntries(STAP) }); }
     if (op === 'koopcheck') { // openbaar, alleen lezen: hoe een NL-telefoon de productpagina en de afrekenpagina van yoo.rs nu krijgt (geen sleutels, geen bezoekersdata)
       const pid = pidOk(url.searchParams.get('p')) || 'oc_4174004347453441';
       const ck = 'hjdk:shop:koopcheck:' + pid; try { const c = await kv.get(ck); if (c && Date.now() - c.at < 6e5 && !url.searchParams.get('vers')) return res.status(200).json(c); } catch (e) {}
