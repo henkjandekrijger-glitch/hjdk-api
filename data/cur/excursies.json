@@ -1,6 +1,6 @@
 {
  "id": "excursies",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-03",
  "onderwerp": {
   "nl": "excursie",
   "en": "excursion",
@@ -410,6 +410,13 @@
      "de": "Transfer $19 extra",
      "es": "Traslado $19 extra",
      "pt": "Traslado $19 extra"
+    },
+    {
+     "nl": "Kind $75",
+     "en": "Child $75",
+     "de": "Kind $75",
+     "es": "Niño $75",
+     "pt": "Criança $75"
     }
    ],
    "scores": [
@@ -540,6 +547,13 @@
      "de": "Offene Bar und BBQ",
      "es": "Barra libre y BBQ",
      "pt": "Open bar e churrasco"
+    },
+    {
+     "nl": "Kind $85",
+     "en": "Child $85",
+     "de": "Kind $85",
+     "es": "Niño $85",
+     "pt": "Criança $85"
     }
    ],
    "scores": [
@@ -651,6 +665,13 @@
      "de": "Etwa 9 Stunden",
      "es": "Unas 9 horas",
      "pt": "Cerca de 9 horas"
+    },
+    {
+     "nl": "Kind $70",
+     "en": "Child $70",
+     "de": "Kind $70",
+     "es": "Niño $70",
+     "pt": "Criança $70"
     }
    ],
    "scores": [
@@ -794,6 +815,20 @@
      "de": "Überfahrt etwa 1 Stunde",
      "es": "Travesía de aproximadamente 1 hora",
      "pt": "Travessia de cerca de 1 hora"
+    },
+    {
+     "nl": "Vaart di tot en met vr en zo; op zaterdag de Supreme",
+     "en": "Sails Tue to Fri and Sun; the Supreme runs on Saturday",
+     "de": "Fährt Di bis Fr und So; samstags die Supreme",
+     "es": "Sale de mar a vie y dom; el sábado, la Supreme",
+     "pt": "Sai de ter a sex e dom; aos sábados, a Supreme"
+    },
+    {
+     "nl": "Kind $75",
+     "en": "Child $75",
+     "de": "Kind $75",
+     "es": "Niño $75",
+     "pt": "Criança $75"
     }
    ],
    "scores": [
@@ -873,7 +908,8 @@
     "https://www.tripadvisor.com/Attraction_Review-g147278-d3948100-Reviews-Miss_Ann_Boat_Trips-Willemstad_Curacao.html",
     "https://www.mycuracaoguide.com/klein-curacao",
     "https://naarcuracao.com/en/klein-curacao-best-trips-comparison",
-    "https://klein-curacao.nl/en/klein-curacao-prices/"
+    "https://klein-curacao.nl/en/klein-curacao-prices/",
+    "https://www.naarcuracao.com/en/klein-curacao-best-trips-comparison/compare/"
    ]
   },
   {
@@ -938,6 +974,27 @@
      "de": "Bis zu 75 Gäste",
      "es": "Hasta 75 pasajeros",
      "pt": "Até 75 pessoas"
+    },
+    {
+     "nl": "Vaart niet op zaterdag",
+     "en": "No sailings on Saturday",
+     "de": "Keine Fahrten am Samstag",
+     "es": "No sale los sábados",
+     "pt": "Não sai aos sábados"
+    },
+    {
+     "nl": "Hotelvervoer inbegrepen",
+     "en": "Hotel transfer included",
+     "de": "Hoteltransfer inklusive",
+     "es": "Traslado desde el hotel incluido",
+     "pt": "Traslado do hotel incluído"
+    },
+    {
+     "nl": "Kind $75",
+     "en": "Child $75",
+     "de": "Kind $75",
+     "es": "Niño $75",
+     "pt": "Criança $75"
     }
    ],
    "scores": [
@@ -1017,7 +1074,8 @@
     "https://www.tripadvisor.com/Attraction_Review-g147277-d1059998-Reviews-Mermaid_Boat_Trips_Curacao-Curacao.html",
     "https://www.mycuracaoguide.com/klein-curacao",
     "https://naarcuracao.com/en/klein-curacao-best-trips-comparison",
-    "https://klein-curacao.nl/en/klein-curacao-prices/"
+    "https://klein-curacao.nl/en/klein-curacao-prices/",
+    "https://www.naarcuracao.com/en/klein-curacao-best-trips-comparison/compare/"
    ]
   },
   {
@@ -1082,6 +1140,20 @@
      "de": "Bier und Wein inklusive",
      "es": "Cerveza y vino incluidos",
      "pt": "Cerveja e vinho incluídos"
+    },
+    {
+     "nl": "Vaart ma, di, wo en za om 10:00 vanaf Jan Thiel",
+     "en": "Sails Mon, Tue, Wed and Sat at 10:00 from Jan Thiel",
+     "de": "Fährt Mo, Di, Mi und Sa um 10:00 ab Jan Thiel",
+     "es": "Sale lun, mar, mié y sáb a las 10:00 desde Jan Thiel",
+     "pt": "Sai seg, ter, qua e sáb às 10h00 de Jan Thiel"
+    },
+    {
+     "nl": "Kind $135",
+     "en": "Child $135",
+     "de": "Kind $135",
+     "es": "Niño $135",
+     "pt": "Criança $135"
     }
    ],
    "scores": [
@@ -1151,7 +1223,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/AttractionProductReview-g147277-d16808309-Klein_Curacao_Powerboat_Adventure-Curacao.html",
     "https://www.mycuracaoguide.com/klein-curacao",
-    "https://naarcuracao.com/en/klein-curacao-best-trips-comparison"
+    "https://naarcuracao.com/en/klein-curacao-best-trips-comparison",
+    "https://www.naarcuracao.com/en/klein-curacao-best-trips-comparison/compare/"
    ]
   },
   {
@@ -1336,6 +1409,13 @@
      "de": "Frühstück, BBQ und Getränke",
      "es": "Desayuno, BBQ y bebidas",
      "pt": "Café da manhã, churrasco e bebidas"
+    },
+    {
+     "nl": "Vertrekt dagelijks 08:00 vanaf Caracasbaai",
+     "en": "Departs daily at 08:00 from Caracas Bay",
+     "de": "Täglich um 08:00 ab Caracasbaai",
+     "es": "Sale a diario a las 08:00 desde Caracasbaai",
+     "pt": "Sai diariamente às 08h00 de Caracasbaai"
     }
    ],
    "scores": [],
@@ -1365,7 +1445,8 @@
    },
    "bronnen": [
     "https://klein-curacao.nl/en/klein-curacao-prices/",
-    "https://klein-curacao.nl/en/klein-curacao-boats/"
+    "https://klein-curacao.nl/en/klein-curacao-boats/",
+    "https://www.naarcuracao.com/en/klein-curacao-best-trips-comparison/compare/"
    ]
   },
   {
@@ -2518,7 +2599,7 @@
     "cruise-gast"
    ],
    "prijs": {
-    "bedrag": 150,
+    "bedrag": 135,
     "valuta": "USD",
     "eenheid": {
      "nl": "per volwassene",
@@ -2527,8 +2608,8 @@
      "es": "por adulto",
      "pt": "por adulto"
     },
-    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d24096954-Curacao_Helmet_Diving_Walk_the_Ocean_Floor_No_Swimming_Required-Curacao.html",
-    "datum": "2026-10"
+    "bron": "https://www.mycuracaoguide.com/book-tours/helmet-diving",
+    "datum": "2026-11"
    },
    "feiten": [
     {
@@ -2553,11 +2634,18 @@
      "pt": "No máximo 12 pessoas"
     },
     {
-     "nl": "20 tot 30 minuten onderwater",
-     "en": "20 to 30 minutes underwater",
-     "de": "20 bis 30 Minuten unter Wasser",
-     "es": "20 a 30 minutos bajo el agua",
-     "pt": "20 a 30 minutos debaixo d'água"
+     "nl": "Ongeveer 35 minuten onderwater lopen",
+     "en": "About 35 minutes walking underwater",
+     "de": "Etwa 35 Minuten unter Wasser gehen",
+     "es": "Unos 35 minutos caminando bajo el agua",
+     "pt": "Cerca de 35 minutos caminhando debaixo d'água"
+    },
+    {
+     "nl": "Dinsdag tot en met zaterdag, elk uur van 9:00 tot 16:00",
+     "en": "Tuesday to Saturday, hourly from 9:00 to 16:00",
+     "de": "Dienstag bis Samstag, stündlich 9:00 bis 16:00",
+     "es": "De martes a sábado, cada hora de 9:00 a 16:00",
+     "pt": "De terça a sábado, de hora em hora das 9h00 às 16h00"
     }
    ],
    "scores": [
@@ -2616,7 +2704,8 @@
    },
    "bronnen": [
     "https://www.tripadvisor.com/AttractionProductReview-g147277-d24096954-Curacao_Helmet_Diving_Walk_the_Ocean_Floor_No_Swimming_Required-Curacao.html",
-    "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html"
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html",
+    "https://www.mycuracaoguide.com/book-tours/helmet-diving"
    ]
   },
   {
@@ -2677,6 +2766,20 @@
      "de": "Die Programme dauern 1.5 Stunden",
      "es": "Los programas duran 1.5 horas",
      "pt": "Os programas duram 1.5 horas"
+    },
+    {
+     "nl": "Dinsdag tot en met zaterdag",
+     "en": "Tuesday to Saturday",
+     "de": "Dienstag bis Samstag",
+     "es": "De martes a sábado",
+     "pt": "De terça a sábado"
+    },
+    {
+     "nl": "Encounter kind (1 tot 4 jaar) $65",
+     "en": "Encounter child (ages 1 to 4) $65",
+     "de": "Encounter Kind (1 bis 4 Jahre) $65",
+     "es": "Encounter niño (1 a 4 años) $65",
+     "pt": "Encounter criança (1 a 4 anos) $65"
     }
    ],
    "scores": [
@@ -2770,6 +2873,20 @@
      "de": "Programme ab 8 Jahren",
      "es": "Programas desde los 8 años",
      "pt": "Programas a partir de 8 anos"
+    },
+    {
+     "nl": "Ocean Lens Sneak Peek $15, kind $7",
+     "en": "Ocean Lens Sneak Peek $15, child $7",
+     "de": "Ocean Lens Sneak Peek $15, Kind $7",
+     "es": "Ocean Lens Sneak Peek $15, niño $7",
+     "pt": "Ocean Lens Sneak Peek $15, criança $7"
+    },
+    {
+     "nl": "Programma's dinsdag tot en met zaterdag",
+     "en": "Programs Tuesday to Saturday",
+     "de": "Programme Dienstag bis Samstag",
+     "es": "Programas de martes a sábado",
+     "pt": "Programas de terça a sábado"
     }
    ],
    "scores": [
@@ -2861,6 +2978,20 @@
      "de": "Eintritt ins Aquarium nicht inklusive",
      "es": "Entrada al acuario no incluida",
      "pt": "Entrada no aquário não incluída"
+    },
+    {
+     "nl": "Research Dive $1.000, 2 uur",
+     "en": "Research Dive $1,000, 2 hours",
+     "de": "Research Dive $1.000, 2 Stunden",
+     "es": "Research Dive $1.000, 2 horas",
+     "pt": "Research Dive $1.000, 2 horas"
+    },
+    {
+     "nl": "Maandag tot en met vrijdag, vanaf 8 jaar",
+     "en": "Monday to Friday, ages 8 and up",
+     "de": "Montag bis Freitag, ab 8 Jahren",
+     "es": "De lunes a viernes, desde 8 años",
+     "pt": "De segunda a sexta, a partir de 8 anos"
     }
    ],
    "scores": [],
@@ -3053,7 +3184,19 @@
     "budget",
     "halve-dag"
    ],
-   "prijs": null,
+   "prijs": {
+    "bedrag": 15,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per toerist",
+     "en": "per tourist",
+     "de": "pro Tourist",
+     "es": "por turista",
+     "pt": "por turista"
+    },
+    "bron": "https://www.curacaochronicle.com/post/local/carmabi-adjusts-entrance-fees-for-nature-parks-local-visitor-rates-reduced",
+    "datum": "2023-11"
+   },
    "feiten": [
     {
      "nl": "Woeste noordkust met blaasgaten",
@@ -3068,6 +3211,13 @@
      "de": "In vielen Inseltouren enthalten",
      "es": "Incluido en muchos tours por la isla",
      "pt": "Incluído em muitos passeios pela ilha"
+    },
+    {
+     "nl": "Open vanaf 8:00, kassa tot 15:00, park uit om 16:00",
+     "en": "Opens 8:00, ticket office until 15:00, out by 16:00",
+     "de": "Ab 8:00 geöffnet, Kasse bis 15:00, Park bis 16:00",
+     "es": "Abre a las 8:00, taquilla hasta las 15:00, salida a las 16:00",
+     "pt": "Abre às 8h00, bilheteria até 15h00, saída às 16h00"
     }
    ],
    "scores": [
@@ -3105,7 +3255,9 @@
     "pt": []
    },
    "bronnen": [
-    "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html"
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html",
+    "https://www.carmabi.org/blog/carmabi-news-1/shete-boka-national-park-to-open-one-hour-earlier-starting-july-1-2026-82",
+    "https://www.curacaochronicle.com/post/local/carmabi-adjusts-entrance-fees-for-nature-parks-local-visitor-rates-reduced"
    ]
   },
   {
@@ -3977,7 +4129,7 @@
    "scores": [
     {
      "platform": "Tripadvisor",
-     "score": 5.0,
+     "score": 5,
      "max": 5,
      "aantal": 365,
      "peildatum": "2026-10-20",
@@ -4594,6 +4746,20 @@
      "de": "Geführte Tour mit Verkostung",
      "es": "Tour guiado con degustación",
      "pt": "Passeio guiado com degustação"
+    },
+    {
+     "nl": "Rondleiding ongeveer 1 uur, maandag tot en met vrijdag",
+     "en": "Tour about 1 hour, Monday to Friday",
+     "de": "Führung etwa 1 Stunde, Montag bis Freitag",
+     "es": "Visita de 1 hora aprox., de lunes a viernes",
+     "pt": "Visita de cerca de 1 hora, de segunda a sexta"
+    },
+    {
+     "nl": "Kinderen tot 12 jaar gratis",
+     "en": "Kids under 12 free",
+     "de": "Kinder unter 12 frei",
+     "es": "Menores de 12 gratis",
+     "pt": "Menores de 12 grátis"
     }
    ],
    "scores": [
@@ -4632,7 +4798,8 @@
    },
    "bronnen": [
     "https://www.tripadvisor.com/AttractionProductReview-g147277-d13000407-Guided_Tour_at_the_Curacao_Liqueur_Distillery-Curacao.html",
-    "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html"
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c42-Curacao.html",
+    "https://www.mycuracaoguide.com/book-tours/blue-curacao-distillery-standard-tour"
    ]
   },
   {
@@ -5059,7 +5226,7 @@
    "scores": [
     {
      "platform": "Tripadvisor",
-     "score": 5.0,
+     "score": 5,
      "max": 5,
      "aantal": 120,
      "peildatum": "2026-10-20",
@@ -5289,7 +5456,7 @@
    "scores": [
     {
      "platform": "Tripadvisor",
-     "score": 5.0,
+     "score": 5,
      "max": 5,
      "aantal": 272,
      "peildatum": "2026-10-20",
