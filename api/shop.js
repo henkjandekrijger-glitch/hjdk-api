@@ -358,23 +358,29 @@ Antwoord alleen JSON: {"lessen":["..."]}`, { fn: 'shop-lessen', model: process.e
 const MD_UREN = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
 // Mondiad per product (Henkjan 20 okt: "we starten helemaal overnieuw"): zelfde opzet als de PropellerAds-shoptest, een campagne per
 // product uit de dagkeuze (presterend en veelbelovend eerst), direct naar de productpagina met Clickmind ertussen (p=, arm=d).
-async function maakMondiadProduct(p) {
-  const dag = DAY(); const naam = `${NAAM} TEST ${dag} p=${p.pid} | ${String(p.titel || '').slice(0, 40)} | thuis ${num(p.thuis).toFixed(2)} | NL mobiel | IPP CPA ${MD_MAX_BOD()} | ${p.hoe || ''}`.slice(0, 250);
-  const bestaand = rows(await md('mondiad_list_campaigns', { name: 'p=' + p.pid, size: 50, excludeStatuses: ['ARCHIVED', 'ARCHIVED_COMPLETED', 'PAUSED', 'REJECTED', 'FINISHED'], responseFields: ['ID', 'NAME', 'STATUS'] })).find(c => String(c.name).includes('p=' + p.pid));
+// 3 nov 2026 (Henkjan: "Ok test mondiad nu . Go en test ook meerdere vormen daar ."): per product en per vorm een campagne, 8 advertenties
+const MD_VORM = { IN_PAGE_PUSH: 'IPP', CLASSIC_PUSH: 'PUSH', NATIVE: 'NATIVE', POP: 'POP' };
+async function maakMondiadProduct(p, vorm = 'IN_PAGE_PUSH', dagBudget = 5) {
+  if (!MD_VORM[vorm]) throw new Error('onbekende vorm ' + vorm);
+  const dag = DAY(); const naam = `${NAAM} TEST ${dag} p=${p.pid} | ${String(p.titel || '').slice(0, 40)} | thuis ${num(p.thuis).toFixed(2)} | NL mobiel | ${MD_VORM[vorm]} CPA ${MD_MAX_BOD()} | ${p.hoe || ''}`.slice(0, 250);
+  const bestaand = rows(await md('mondiad_list_campaigns', { name: 'p=' + p.pid, size: 50, excludeStatuses: ['ARCHIVED', 'ARCHIVED_COMPLETED', 'PAUSED', 'REJECTED', 'FINISHED'], responseFields: ['ID', 'NAME', 'STATUS'] })).find(c => String(c.name).includes('p=' + p.pid) && String(c.name).includes('| ' + MD_VORM[vorm] + ' CPA'));
   if (bestaand) return { bestaatAl: bestaand.id, status: bestaand.status, pid: p.pid };
   const zwart = ((await kv.get(K.zwart('md'))) || []).map(Number).filter(Boolean);
-  const icon = findFile(await md('mondiad_upload_resource_from_url', { resourceType: 'ICON', sourceUrl: beeld(p.pid, 'icon'), fileName: 'sh-' + pk(p.pid).slice(-10) + '-i.jpg' }));
-  const image = findFile(await md('mondiad_upload_resource_from_url', { resourceType: 'IMAGE', sourceUrl: beeld(p.pid, 'md'), fileName: 'sh-' + pk(p.pid).slice(-10) + '-b.jpg' }));
-  if (!icon || !image) throw new Error('beelden uploaden mislukt voor ' + p.pid);
-  const creatives = (p.advertenties || []).slice(0, 3).map((a, i) => ({ title: a.title, description: a.description, icon, image, tag: 'sh-' + pk(p.pid).slice(-12) + '-' + i, status: 'PENDING', bannerFormat: null, campaignId: null }));
-  if (creatives.length < 2) throw new Error('te weinig advertenties voor ' + p.pid);
+  let creatives = [];
+  if (vorm !== 'POP') { // pop heeft geen advertentie: de bezoeker komt meteen op de productpagina
+    const icon = vorm === 'NATIVE' ? null : findFile(await md('mondiad_upload_resource_from_url', { resourceType: 'ICON', sourceUrl: beeld(p.pid, 'icon'), fileName: 'sh-' + pk(p.pid).slice(-10) + '-i.jpg' }));
+    const image = findFile(await md('mondiad_upload_resource_from_url', { resourceType: 'IMAGE', sourceUrl: beeld(p.pid, 'md'), fileName: 'sh-' + pk(p.pid).slice(-10) + '-b.jpg' }));
+    if ((vorm !== 'NATIVE' && !icon) || !image) throw new Error('beelden uploaden mislukt voor ' + p.pid);
+    creatives = (p.advertenties || []).slice(0, 8).map((a, i) => { const c = { title: a.title, description: a.description, image, tag: 'sh-' + pk(p.pid).slice(-12) + '-' + MD_VORM[vorm].toLowerCase() + '-' + i, status: 'PENDING', bannerFormat: null, campaignId: null }; if (icon) c.icon = icon; return c; });
+    if (creatives.length < 8) throw new Error('minder dan 8 advertenties voor ' + p.pid + ' (Henkjan: overal 8)');
+  }
   const dp = {}; ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].forEach(d => { dp[d] = MD_UREN; });
-  const r = await md('mondiad_create_campaign', { campaign: { name: naam, adType: ['IN_PAGE_PUSH'], bidType: 'CPA', bid: MD_MAX_BOD(), cpaGoal: MD_MAX_BOD(), budget: 20, dailyBudget: 5, zoneIdDailyBudget: 1, status: 'Pending', runAfterModeration: true,
-    url: LAND() + '/shop?utm_source=mondiad&utm_medium=ipp&utm_campaign=test-' + p.pid.replace(/^oc_/, '').slice(-8) + '&clickid=[clickid]&zoneid=[zoneid]&campaignid=[campaignid]&creativeid=[creativeid]&p=' + encodeURIComponent(p.pid) + '&arm=d',
+  const r = await md('mondiad_create_campaign', { campaign: { name: naam, adType: [vorm], bidType: 'CPA', bid: MD_MAX_BOD(), cpaGoal: MD_MAX_BOD(), budget: 20, dailyBudget: dagBudget, zoneIdDailyBudget: 1, status: 'Pending', runAfterModeration: true,
+    url: LAND() + '/shop?utm_source=mondiad&utm_medium=' + MD_VORM[vorm].toLowerCase() + '&utm_campaign=test-' + p.pid.replace(/^oc_/, '').slice(-8) + '&clickid=[clickid]&zoneid=[zoneid]&campaignid=[campaignid]&creativeid=[creativeid]&p=' + encodeURIComponent(p.pid) + '&arm=d',
     countryTargeting: ['NL'], countryTargetingMode: 'WHITE_LIST', deviceTargeting: [4], deviceTargetingMode: 'WHITE_LIST', languageTargeting: [137], languageTargetingMode: 'WHITE_LIST', browserTargeting: [33, 36, 39, 15], browserTargetingMode: 'BLACK_LIST', browserTargetingMap: {}, trafficType: ['MAINSTREAM'], landingPageType: 'MAINSTREAM', connectionType: 'ALL',
     frequencyCap: { frequency: 1, duration: 24, actionType: 'IMPRESSION', actionScope: 'CAMPAIGN' }, dayPartingTimezone: 'Europe/Amsterdam', dayParting: dp, zoneIdListMode: 'BLACK_LIST', zoneIdList: [...new Set([480, 896, 1953, 646, 583, 556, 270, 431, 751, 850, 1812, 277, 437, 533, 1977, 571, 733, ...zwart])], hideReferrer: false, creatives } });
-  const id = r && (r.id || (r.data && r.data.id)); await log({ soort: 'campagne gemaakt (Mondiad, per product)', wat: naam, waarom: creatives.length + ' advertenties, wacht op goedkeuring' });
-  return { id, pid: p.pid, naam, status: r && r.status };
+  const id = r && (r.id || (r.data && r.data.id)); await log({ soort: 'campagne gemaakt (Mondiad, per product, ' + MD_VORM[vorm] + ')', wat: naam, waarom: (vorm === 'POP' ? 'pop zonder advertentie' : creatives.length + ' advertenties') + ', wacht op goedkeuring' });
+  return { id, pid: p.pid, vorm: MD_VORM[vorm], naam, status: r && r.status };
 }
 async function maakMondiad(thema, formaat) {
   const push = formaat === 'push'; const cat = await catalog(true); const perId = {}; cat.items.forEach(i => { perId[i.id] = i; });
@@ -958,14 +964,16 @@ export default async function handler(req, res) {
       finally { if (!droog) { try { await kv.set(K.lock, 0, { ex: 5 }); } catch (e) {} } }
     }
     if (op === 'palog' || op === 'catalogus' || op === 'adweg' || op === 'maakmd' || op === 'mdtest' || op === 'mdbod') {
-      if (op === 'mdtest' && /\.vercel\.app$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0])) { req.headers['x-shop-sleutel'] = await geheim(); req.body = { max: url.searchParams.get('max'), droog: url.searchParams.get('droog') === '1' }; } // via de beschermde host mag het zonder sleutel in de aanvraag // schrijven: alleen met de gedeelde sleutel
+      if (op === 'mdtest' && /\.vercel\.app$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0])) { req.headers['x-shop-sleutel'] = await geheim(); req.body = { max: url.searchParams.get('max'), droog: url.searchParams.get('droog') === '1', vormen: url.searchParams.get('vormen'), producten: url.searchParams.get('producten'), dagbudget: url.searchParams.get('dagbudget'), vanaf: url.searchParams.get('vanaf') }; } // via de beschermde host mag het zonder sleutel in de aanvraag // schrijven: alleen met de gedeelde sleutel
       let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
       const s = await geheim(); const k = String(req.headers['x-shop-sleutel'] || b.k || ''); if (!s || k !== s) return res.status(401).json({ ok: false, fout: 'sleutel' });
       if (op === 'catalogus') { const items = (Array.isArray(b.items) ? b.items : []).map(compact).filter(i => pidOk(i.id) && i.t && i.p > 0); if (items.length < 10) return res.status(400).json({ ok: false, fout: 'te weinig producten' }); await bewaarCatalogus(items, 'aangeleverd'); return res.status(200).json({ ok: true, producten: items.length }); }
       if (op === 'mdtest') { // Mondiad per product uit de dagkeuze (presterend en veelbelovend eerst), hoogstens b.max per keer
         const kr = await fetch(LAND() + '/api/shop/kies?n=20', { headers: { 'x-shop-sleutel': s } }); const K0 = await kr.json(); if (!K0 || !K0.ok) return res.status(200).json({ ok: false, fout: 'geen dagkeuze' });
         const volg = { presterend: 0, veelbelovend: 1 }; const lijst = (K0.gekozen || []).slice().sort((a, b) => (volg[a.hoe] ?? 2) - (volg[b.hoe] ?? 2)); const max = Math.max(1, Math.min(10, Number(b.max) || 5)); const uit = [];
-        for (const p of lijst) { if (uit.filter(x => x.id).length >= max) break; if (b.droog) { uit.push({ pid: p.pid, hoe: p.hoe, zou: true }); continue; } try { uit.push(await maakMondiadProduct(p)); } catch (e) { uit.push({ pid: p.pid, fout: String(e.message).slice(0, 200) }); } }
+        const vormen = String(b.vormen || 'IN_PAGE_PUSH').split(',').map(x => x.trim().toUpperCase()).filter(x => MD_VORM[x]); const nP = Math.max(1, Math.min(20, Number(b.producten) || 20)); const vanaf = Math.max(0, Number(b.vanaf) || 0); const db = Math.max(1, Math.min(5, Number(b.dagbudget) || 5));
+        const t0 = Date.now();
+        for (const p of lijst.slice(vanaf, vanaf + nP)) for (const v of vormen) { if (uit.filter(x => x.id).length >= max || Date.now() - t0 > 45000) break; if (b.droog) { uit.push({ pid: p.pid, vorm: v, hoe: p.hoe, zou: true }); continue; } try { uit.push(await maakMondiadProduct(p, v, db)); } catch (e) { uit.push({ pid: p.pid, vorm: v, fout: String(e.message).slice(0, 200) }); } }
         return res.status(200).json({ ok: true, uit }); }
       if (op === 'maakmd') { const thema = String(b.thema || '').replace(/[^a-z]/g, ''); if (!thema) return res.status(400).json({ ok: false, fout: 'thema ontbreekt' }); try { return res.status(200).json(Object.assign({ ok: true }, await maakMondiad(thema, b.formaat === 'push' ? 'push' : 'ipp'))); } catch (e) { return res.status(200).json({ ok: false, fout: String(e.message).slice(0, 300) }); } }
       if (op === 'mdbod') { const bid = Number(b.bid); if (!(bid >= 0.001 && bid <= MD_MAX_BOD())) return res.status(400).json({ ok: false, fout: 'bod tussen 0.001 en ' + MD_MAX_BOD() }); const cs = rows(await md('mondiad_list_campaigns', { name: NAAM, size: 100, excludeStatuses: ['ARCHIVED', 'ARCHIVED_COMPLETED'], responseFields: ['ID', 'NAME', 'BID'] })).filter(c => String(c.name || '').includes(NAAM)); let n = 0; for (const c of cs) { if (num(c.bid) !== bid) { try { await md('mondiad_update_campaign', { json: JSON.stringify({ id: c.id, bid }) }); n++; } catch (e) {} } } await log({ soort: 'bod gezet (Mondiad)', wat: n + ' campagnes', waarom: 'alle shop-campagnes naar $' + bid }); return res.status(200).json({ ok: true, aangepast: n, van: cs.length }); }
