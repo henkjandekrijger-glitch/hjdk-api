@@ -360,10 +360,11 @@ const MD_UREN = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
 // product uit de dagkeuze (presterend en veelbelovend eerst), direct naar de productpagina met Clickmind ertussen (p=, arm=d).
 // 3 nov 2026 (Henkjan: "Ok test mondiad nu . Go en test ook meerdere vormen daar ."): per product en per vorm een campagne, 8 advertenties
 const MD_VORM = { IN_PAGE_PUSH: 'IPP', CLASSIC_PUSH: 'PUSH', NATIVE: 'NATIVE', POP: 'POP' };
+const MD_CPC = 0.02, MD_POP_CPM = 1; // NL: zoals de BZZ-push in NL (CPC 0,02); pop per 1000 vertoningen
 async function maakMondiadProduct(p, vorm = 'IN_PAGE_PUSH', dagBudget = 5) {
   if (!MD_VORM[vorm]) throw new Error('onbekende vorm ' + vorm);
-  const dag = DAY(); const naam = `${NAAM} TEST ${dag} p=${p.pid} | ${String(p.titel || '').slice(0, 40)} | thuis ${num(p.thuis).toFixed(2)} | NL mobiel | ${MD_VORM[vorm]} CPA ${MD_MAX_BOD()} | ${p.hoe || ''}`.slice(0, 250);
-  const bestaand = rows(await md('mondiad_list_campaigns', { name: 'p=' + p.pid, size: 50, excludeStatuses: ['ARCHIVED', 'ARCHIVED_COMPLETED', 'PAUSED', 'REJECTED', 'FINISHED'], responseFields: ['ID', 'NAME', 'STATUS'] })).find(c => String(c.name).includes('p=' + p.pid) && String(c.name).includes('| ' + MD_VORM[vorm] + ' CPA'));
+  const dag = DAY(); const naam = `${NAAM} TEST ${dag} p=${p.pid} | ${String(p.titel || '').slice(0, 40)} | thuis ${num(p.thuis).toFixed(2)} | NL mobiel | ${MD_VORM[vorm]} ${vorm === 'POP' ? 'CPM ' + MD_POP_CPM : 'CPC ' + MD_CPC} | ${p.hoe || ''}`.slice(0, 250);
+  const bestaand = rows(await md('mondiad_list_campaigns', { name: 'p=' + p.pid, size: 50, excludeStatuses: ['ARCHIVED', 'ARCHIVED_COMPLETED', 'PAUSED', 'REJECTED', 'FINISHED'], responseFields: ['ID', 'NAME', 'STATUS'] })).find(c => String(c.name).includes('p=' + p.pid) && String(c.name).includes('| ' + MD_VORM[vorm] + ' '));
   if (bestaand) return { bestaatAl: bestaand.id, status: bestaand.status, pid: p.pid };
   const zwart = ((await kv.get(K.zwart('md'))) || []).map(Number).filter(Boolean);
   let creatives = [];
@@ -375,7 +376,7 @@ async function maakMondiadProduct(p, vorm = 'IN_PAGE_PUSH', dagBudget = 5) {
     if (creatives.length < 8) throw new Error('minder dan 8 advertenties voor ' + p.pid + ' (Henkjan: overal 8)');
   }
   const dp = {}; ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].forEach(d => { dp[d] = MD_UREN; });
-  const r = await md('mondiad_create_campaign', { campaign: { name: naam, adType: [vorm], bidType: 'CPA', bid: MD_MAX_BOD(), cpaGoal: MD_MAX_BOD(), budget: 20, dailyBudget: dagBudget, zoneIdDailyBudget: 1, status: 'Pending', runAfterModeration: true,
+  const r = await md('mondiad_create_campaign', { campaign: { name: naam, adType: [vorm], bidType: vorm === 'POP' ? 'CPM' : 'CPC', bid: vorm === 'POP' ? MD_POP_CPM : MD_CPC, cpaGoal: MD_MAX_BOD(), // de Mondiad-API kent alleen nog CPC en CPM (3 nov); cpaGoal = doel per echt mens budget: 20, dailyBudget: dagBudget, zoneIdDailyBudget: 1, status: 'Pending', runAfterModeration: true,
     url: LAND() + '/shop?utm_source=mondiad&utm_medium=' + MD_VORM[vorm].toLowerCase() + '&utm_campaign=test-' + p.pid.replace(/^oc_/, '').slice(-8) + '&clickid=[clickid]&zoneid=[zoneid]&campaignid=[campaignid]&creativeid=[creativeid]&p=' + encodeURIComponent(p.pid) + '&arm=d',
     countryTargeting: ['NL'], countryTargetingMode: 'WHITE_LIST', deviceTargeting: [4], deviceTargetingMode: 'WHITE_LIST', languageTargeting: [137], languageTargetingMode: 'WHITE_LIST', browserTargeting: [33, 36, 39, 15], browserTargetingMode: 'BLACK_LIST', browserTargetingMap: {}, trafficType: ['MAINSTREAM'], landingPageType: 'MAINSTREAM', connectionType: 'ALL',
     frequencyCap: { frequency: 1, duration: 24, actionType: 'IMPRESSION', actionScope: 'CAMPAIGN' }, dayPartingTimezone: 'Europe/Amsterdam', dayParting: dp, zoneIdListMode: 'BLACK_LIST', zoneIdList: [...new Set([480, 896, 1953, 646, 583, 556, 270, 431, 751, 850, 1812, 277, 437, 533, 1977, 571, 733, ...zwart])], hideReferrer: false, creatives } });
