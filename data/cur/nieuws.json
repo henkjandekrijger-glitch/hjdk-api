@@ -1,6 +1,6 @@
 {
  "id": "nieuws",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-04",
  "onderwerp": {
   "nl": "nieuwsbron",
   "en": "news source",
@@ -618,7 +618,7 @@
    "scores": [
     {
      "platform": "Google",
-     "score": 4.0,
+     "score": 4,
      "max": 5,
      "aantal": 5,
      "peildatum": "2026-10-20",
@@ -829,7 +829,8 @@
    "bronnen": [
     "https://caribischnetwerk.ntr.nl/wie-zijn-we/",
     "https://caribischnetwerk.ntr.nl/2026/10/13/weekoverzicht-onderzoek-naar-chinese-invloed-st-maarten-wil-hulp-van-defensie-en-op-curacao-overlijdt-16-jarige-chauffeur/",
-    "https://caribbeannetwork.ntr.nl/tag/music/"
+    "https://caribbeannetwork.ntr.nl/tag/music/",
+    "https://caribbeannetwork.ntr.nl/category/curacao"
    ]
   },
   {
@@ -911,7 +912,22 @@
     "website"
    ],
    "prijs": null,
-   "feiten": [],
+   "feiten": [
+    {
+     "nl": "Verzamelt koppen van lokale media zoals Antilliaans Dagblad, Paradise FM en Dolfijn FM",
+     "en": "Collects headlines from local media such as Antilliaans Dagblad, Paradise FM and Dolfijn FM",
+     "de": "Sammelt Schlagzeilen lokaler Medien wie Antilliaans Dagblad, Paradise FM und Dolfijn FM",
+     "es": "Reúne titulares de medios locales como Antilliaans Dagblad, Paradise FM y Dolfijn FM",
+     "pt": "Reúne manchetes de mídias locais como Antilliaans Dagblad, Paradise FM e Dolfijn FM"
+    },
+    {
+     "nl": "Ook nieuws uit de rest van het Caribisch gebied",
+     "en": "Also news from the wider Caribbean",
+     "de": "Auch Nachrichten aus der übrigen Karibik",
+     "es": "También noticias del resto del Caribe",
+     "pt": "Também notícias do restante do Caribe"
+    }
+   ],
    "scores": [],
    "voor": {
     "nl": [],
@@ -929,7 +945,8 @@
    },
    "bronnen": [
     "https://curalink.com/island-guide-curacao/news-sources/",
-    "https://www.newsmedialists.com/curacao/newspapers"
+    "https://www.newsmedialists.com/curacao/newspapers",
+    "https://knipselkrant-curacao.com/page/105/?author=0"
    ]
   },
   {
