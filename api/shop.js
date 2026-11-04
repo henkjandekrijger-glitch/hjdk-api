@@ -30,7 +30,7 @@ import seed from '../data/shop-seed.json' with { type: 'json' };
 import { SHOP_PHP } from '../lib/shopphp.js';
 import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
-import { PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks } from '../lib/shopdirect.js';
+import { PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet } from '../lib/shopdirect.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
 import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
@@ -432,7 +432,7 @@ async function direct(req, res, x) {
   const cid = (rec && rec.mmc) || nieuwId(6);
   const doel = 'https://kadoly.com/' + (x.kassa ? 'checkout/' : 'product/') + encodeURIComponent(pid) + '?utm_source=' + (x.bron ? 'kadoly-gids' : NETTEN[net].toLowerCase()) + '&utm_medium=' + (x.bron ? x.bron.medium : (x.vorm || 'push')) + '&utm_campaign=' + (x.bron ? encodeURIComponent(x.bron.campaign) : 'shoplus') + '&utm_content=' + encodeURIComponent(pk(pid)) + '&hj=' + code + '&mmc=' + cid + '&lang=nl';
   if (!weiger && !prefetch && (!rec || !rec.mmc)) {
-    const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; rec.mmc = cid; if (test) rec.t = 1;
+    const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; rec.mmc = cid; rec.mp = mmp; if (x.rt) rec.rt = x.rt; if (test) rec.t = 1;
     try { await Promise.all([kv.set(K.rec(code), rec, { ex: 7 * 86400 }), cidKoppel(kv, { cid, pid: mmp, arm: rec.arm === 'd' ? 'direct' : 'pagina', tag: 'yoors-shop', net: test ? 'test' : CM_NET[net], zone: zone || '-', camp: camp || '-', shop: code })]); } catch (e) {}
     if (eerst && !test) {
       const keys = ['sh-' + net + '-dv', 'sh-d' + D8() + '-' + net + '-dv', 'sh-u' + nlUur() + '-dv', 'sh-p-' + pk(pid) + '-dv'];
@@ -465,6 +465,7 @@ async function land(req, res, url) {
   let pid = pidOk(q.get('p')); if (pid && (!perId[pid] || perId[pid].vr === false)) pid = '';
   if (!pid && cr && net !== 'x') { try { const m = (await kv.get(K.crmap)) || {}; if (perId[m[net + ':' + cr]] && perId[m[net + ':' + cr]].vr !== false) pid = m[net + ':' + cr]; } catch (e) {} }
   if (!pid) pid = topIds[0] || cat.items[0].id;
+  let rt = ''; if (q.get('rt') === '1') { rt = 'mis'; const mp = leesCookie(req, 'mmp'); if (/^[0-9a-f]{16}$/.test(mp)) { try { const w = await kv.get('hjdk:warm:' + mp); if (w && w.p && perId[w.p] && perId[w.p].vr !== false) { pid = w.p; rt = w.stap; } } catch (e) {} } laterAf(inc(['sh-rt-' + (rt === 'mis' ? 'mis' : 'raak'), 'sh-d' + D8() + '-rt-' + (rt === 'mis' ? 'mis' : 'raak')])); } // remarketing: naar het eigen mandjeproduct
   const held = perId[pid]; const thema = (top && top.thema && top.thema[pid]) || themaVan(held);
   const zelfde = topIds.filter(id => id !== pid && ((top && top.thema && top.thema[id]) || themaVan(perId[id])) === thema).slice(0, 3);
   const meer = [...zelfde, ...topIds.filter(id => id !== pid && !zelfde.includes(id))].slice(0, 8).map(id => perId[id]);
@@ -474,7 +475,7 @@ async function land(req, res, url) {
   // NOOIT een tussenpagina (Henkjan 28 okt: "Haal tussenpagina voor altijd weg !!!!!! Bot meet je op clickmind niet een tusspagina met een klik").
   // Betaald verkeer met een klik-id gaat altijd in één keer via Clickmind (302) naar de productpagina op kadoly.com, ook met arm=l in de link.
   // Bots meet Clickmind (cm.js op de shop: echt mens of niet, per plek) en de zonelijst weert slechte plekken; wie zich als bot meldt gaat niet door (direct()).
-  if (code) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra });
+  if (code) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt });
   if (!bot) {
     let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, { ex: 7 * 86400 }); } catch (e) {} }
     if (nieuw) { const keys = ['sh-' + net + '-view', 'sh-d' + D8() + '-' + net + '-view', 'sh-u' + nlUur() + '-view', 'sh-p-' + pk(pid) + '-himp'].concat(meer.map(m => 'sh-p-' + pk(m.id) + '-imp'));
@@ -601,12 +602,14 @@ async function baken(req, res) {
 // Gebeurtenis uit de shop (winkelwagen, afrekenen, betaling gestart, mislukt, betaald). Ook gebruikt voor de controle achteraf
 // met de bestellingen uit de datapagina van de shop (bron feed), zodat een betaling nooit wegvalt als de directe melding niet afging.
 const PX_SOORT = { koop: 'koop', cart: 'cart', afreken: 'afreken', betaal: 'betaal', fout: 'fout' };
+// warm publiek: warmZet staat in lib/shopdirect.js (4 nov)
 async function pxVerwerk(code, wRuw, v, order, methode, bron, t) {
   const w = PX_SOORT[wRuw] || 'cart'; const oud = w === 'koop' ? 'koop' : (w === 'cart' || w === 'afreken') ? 'cart' : null; // oud = de tellers van voor 17 okt
   const m = String(methode || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 16);
   if (bron !== 'feed') { const laatst = { at: Date.now(), test: /^test/i.test(code), bedrag: v, order: !!order, methode: m || null, bron: bron || 'shop' }; try { await kv.set('hjdk:shop:pxlaatst:' + w, laatst); if (m) await kv.set('hjdk:shop:pxlaatst:' + w + ':' + m, laatst, { ex: 60 * 86400 }); } catch (e) {} }
   if (!code) { await uurTel(kv, '?', [w].concat(m ? [w + ':' + m] : []), t); if (w === 'koop' && v > 0) await uurTel(kv, '?', 'omzet', t, Math.round(v * 100)); return { ok: true, zonderKenmerk: true }; }
   let rec = null; try { rec = await kv.get(K.rec(code)); } catch (e) {}
+  if (rec && rec.mp && !rec.t) await warmZet(kv, rec.mp, rec.p, w);
   const merk = w + (order ? ':' + order : '');
   if (!rec) { // kenmerk onbekend (bijv. de database was vol toen de klik binnenkwam): wel per uur tellen, zodat het lek zichtbaar blijft
     const k = 'hjdk:shop:pxonbekend:' + code + ':' + merk; let al = null; try { al = await kv.get(k); } catch (e) {}
@@ -925,6 +928,22 @@ export default async function handler(req, res) {
     if (op === 'snelheid') { // openbaar, alleen lezen: hoe zwaar de productpagina is voor een NL-telefoon (omleidingen, scripts, css, beelden); 6 uur bewaard
       const { snelheid } = await import('../lib/shopsnelheid.js'); const pid = pidOk(url.searchParams.get('p')) || 'oc_4174004347453441';
       res.setHeader('cache-control', 'no-store'); return res.status(200).json(await snelheid(kv, pid, !!url.searchParams.get('vers'))); }
+    if (op === 'warm') { // warm publiek (4 nov): hoeveel Clickmind-personen een mandjespoor hebben, en of de remarketing-link ze vond. ?vul=1 op de beschermde host: eenmalig aanvullen uit de klikrecords van de laatste 7 dagen
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; let gevuld = null;
+      if (url.searchParams.get('vul') === '1') { if (!/\.vercel\.app$/i.test(host)) return res.status(403).json({ ok: false });
+        gevuld = { gezien: 0, warm: 0, zonderPersoon: 0 }; let cur = '0';
+        do { const [cc, keys] = await kv.scan(cur, { match: 'hjdk:shc:*', count: 1000 }); cur = cc;
+          for (let i = 0; i < keys.length; i += 200) { const vals = await kv.mget(...keys.slice(i, i + 200));
+            for (const r of vals) { if (!r || r.t || !r.px || !r.p) continue; gevuld.gezien++; const px = r.px; if (Object.keys(px).some(k => k.startsWith('koop'))) continue;
+              const stap = px.betaal ? 'betaal' : px.afreken ? 'afreken' : px.cart ? 'cart' : ''; if (!stap) continue;
+              let mp = r.mp || ''; if (!mp && r.mmc) { try { mp = String((await kv.raw(['HGET', 'mm:cid:' + r.mmc, 'pid'])) || ''); } catch (e) {} }
+              if (!/^[0-9a-f]{16}$/.test(mp)) { gevuld.zonderPersoon++; continue; } await warmZet(kv, mp, r.p, stap); gevuld.warm++; } }
+        } while (cur !== '0'); }
+      const tel = { bekeken: 0, cart: 0, afreken: 0, betaal: 0 }; let cur = '0', n = 0;
+      do { const [cc, keys] = await kv.scan(cur, { match: 'hjdk:warm:*', count: 1000 }); cur = cc; n += keys.length;
+        for (let i = 0; i < keys.length; i += 200) { const vals = await kv.mget(...keys.slice(i, i + 200)); for (const w of vals) if (w && tel[w.stap] !== undefined) tel[w.stap]++; } } while (cur !== '0');
+      const rk = await kv.mget('c:sh-rt-raak', 'c:sh-rt-mis', 'c:sh-d' + D8() + '-rt-raak', 'c:sh-d' + D8() + '-rt-mis');
+      return res.status(200).json({ ok: true, personen: n, perStap: tel, remarketing: { gevonden: num(rk[0]), nietGevonden: num(rk[1]), vandaagGevonden: num(rk[2]), vandaagNiet: num(rk[3]) }, gevuld }); }
     if (op === 'netdetail') { // openbaar, alleen totalen (4 nov, Henkjan: "Wat doet MGID verkeer tot nu toe"): per netwerk (?net=mg) de keten per product, advertentie en plek, vandaag (of ?uren=)
       const net = String(url.searchParams.get('net') || 'mg').replace(/[^a-z]/g, '').slice(0, 3); const sinds = Date.now() - Math.max(1, Math.min(72, Number(url.searchParams.get('uren')) || ((Date.now() - new Date(DAY() + 'T00:00:00Z').getTime()) / 36e5))) * 36e5;
       const leeg = () => ({ kwam: 0, geladen: 0, mens: 0, tik: 0, s15: 0, s60: 0, scroll50: 0, pag2: 0, mandjeKlik: 0, nuKopen: 0, afrekenpagina: 0, winkelmand: 0, afrekenen: 0, betaald: 0 });
