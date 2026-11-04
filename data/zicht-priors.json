@@ -817,5 +817,17 @@
   "kanaal": "llm",
   "bewijs": "Panel kz/us/de 30 okt nog 8 van 8 geslaagd (0 citaties), van 31 okt t/m 3 nov 0 geslaagd door 402; in dezelfde dagen kwam op keuzehulp.best wel 4 bezoek uit ChatGPT binnen en stegen de AI-crawls van 58 naar 710 per dag.",
   "datum": "2026-11-03"
+ },
+ {
+  "id": "verhuis-28-dagen-ijlt-na",
+  "les": "Na een verhuis van pagina's naar een ander domein blijft het 28-dagentotaal van vertoningen op de oude site nog weken hoog, omdat oude dagen erin zitten. Kijk voor de echte stand naar het aantal zoekvragen en vertoningen per dag (op=zoekvragen), niet naar het 28-dagentotaal, en zet het meetpanel voor AI direct om naar vragen over wat er nog op de site staat.",
+  "kanaal": "beide",
+  "bewijs": "kaufberater.best: 26 tot 29 okt 22 tot 45 zoekvragen per dag (53 tot 127 vertoningen, bijna alles Curaçao-bedrijven), vanaf 30 okt 1 zoekvraag per dag; het 28-dagentotaal steeg toch nog van 1276 naar 1282 op 4 nov. whichtobuy.best: 1 tot 4 zoekvragen per dag, vooral nog oude Curaçao-adressen. Het US-panel had 2 en het DE-panel 1 van 8 vragen over Curaçao.",
+  "bron": "eigen meting ZICHT 4 nov 2026",
+  "sterkte": 3,
+  "effect": "meetfout voorkomen",
+  "moeite": 1,
+  "meten": "zoekvragen per dag",
+  "datum": "2026-11-04"
  }
 ]
