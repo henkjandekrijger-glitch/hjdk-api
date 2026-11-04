@@ -417,16 +417,6 @@
       "destination": "/api/gids?op=nbsw"
     },
     {
-      "source": "/shop",
-      "has": [
-        {
-          "type": "host",
-          "value": "gids\\.kadoly\\.com"
-        }
-      ],
-      "destination": "/api/shop?op=land"
-    },
-    {
       "source": "/:slug([a-z0-9-]+)",
       "has": [
         {
