@@ -364,7 +364,7 @@ ${F.faq.length ? `<h2 id="vragen">Vragen over nieuwe producten</h2>${F.faq.map((
 <h2 id="bestellen">Zo werkt een bestelling bij Kadoly</h2>${BESTELLEN}${baken('_nieuw')}` + VOET(null, kans);
 }
 // productregel voor llms.txt en llms-full.txt
-const llmRegel = (i, metNieuw) => '- ' + i.t + (i.b ? ' (' + i.b + ')' : '') + ': ' + euro(thuis(i)) + ' inclusief verzending' + (N(i.lt) ? ', ' + N(i.lt) + ' werkdagen' : '') + (metNieuw && N(i.l) ? ', nieuw sinds ' + dagVan(i.l) : '') + ', https://kadoly.com/product/' + i.id;
+const llmRegel = (i, metNieuw) => '- ' + i.t + (i.b ? ' (' + i.b + ')' : '') + ': ' + euro(thuis(i)) + ' inclusief verzending' + (N(i.lt) ? ', ' + N(i.lt) + ' werkdagen' : '') + (metNieuw && N(i.l) >= Date.now() - NIEUW_DAGEN * 864e5 ? ', nieuw sinds ' + dagVan(i.l) : '') + ', https://kadoly.com/product/' + i.id;
 
 async function home(kans) {
   const R = await rubrieken(); const alle = R.reduce((t, r) => t + r.n, 0); const med = mediaan(R.flatMap(r => r.lts)); const NF = await nieuwFeiten();
@@ -376,7 +376,7 @@ async function home(kans) {
     ['Krijg ik korting als ik meer koop?', 'Ja, bundelkorting: 5% bij 2 producten, oplopend tot 20% bij 6. Je eerste bestelling wordt gratis verzonden.']].concat(NF.n ? [NF.faq[0]] : []);
   const ld = JSON.stringify({ '@context': 'https://schema.org', '@graph': [ORG, { '@type': 'WebSite', name: 'Kadoly gids', url: HOST + '/', publisher: { '@id': HOST + '/#org' }, inLanguage: 'nl-NL' }, { '@type': 'ItemList', name: 'Keuzehulpen van Kadoly', itemListElement: R.map((r, k) => ({ '@type': 'ListItem', position: k + 1, name: r.naam, url: HOST + '/rubriek/' + r.c })).concat(NF.n ? [{ '@type': 'ListItem', position: R.length + 1, name: 'Nieuw bij Kadoly', url: HOST + NIEUW_PAD }] : []) }, { '@type': 'FAQPage', mainEntity: faq.map(([v, a]) => ({ '@type': 'Question', name: v, acceptedAnswer: { '@type': 'Answer', text: a } })) }] }).replace(/</g, '\\u003c');
   const rij = R.map(r => `<div class="r"><dt><a href="/rubriek/${esc(r.c)}">${esc(r.naam)}</a></dt><dd>${r.n} producten, ${euro(r.min)} tot ${euro(r.max)} inclusief verzending. ${esc(Object.entries(r.subs).filter(([x]) => x !== 'overig').sort((a, b) => b[1].length - a[1].length).slice(0, 5).map(([x]) => naamS(x)).join(', '))}</dd></div>`).join('');
-  return kop('Kadoly gids: keuzehulp voor alles van Kadoly', `Keuzehulp van Kadoly: kies stap voor stap wat bij je past uit ${alle} producten van onafhankelijke makers, met prijs inclusief verzending en bezorgdag van vandaag. Eerlijk, ook als niets past.`, '/', `<script type="application/ld+json">${ld}</script>${NW_CSS}`) +
+  return kop('Kadoly gids: keuzehulp voor alles van Kadoly', `Kies stap voor stap uit ${alle} producten van onafhankelijke makers, met prijs inclusief verzending en bezorgdag van vandaag. Eerlijk, ook als niets past.`, '/', `<script type="application/ld+json">${ld}</script>${NW_CSS}`) +
     `<p class="kicker"><span class="live-dot"></span>Kadoly keuzehulp</p><h1>Eerlijk kiezen, ook als het antwoord niet kopen is</h1><p class="standfirst">Beantwoord een paar vragen en je krijgt de 3 producten die het best bij je passen, met wat het vandaag kost inclusief verzending en wanneer het in huis is. Past niets, dan zeggen we dat.</p>
 ${keuzeHulp(R, '', '_home')}
 <h2 id="rubrieken">Per rubriek</h2><dl class="rows">${rij}</dl>
@@ -395,14 +395,14 @@ async function sitemap() {
 // alles wat AI moet kunnen citeren in platte tekst (llms-full.txt)
 async function llmsVol() {
   const cat = await catalogus(); let t = '# Kadoly gids: volledige tekst\n\nKeuzehulpen van Kadoly (kadoly.com, ADSFAIR B.V.), wat er nieuw is in de winkel en het hele aanbod per rubriek. Prijzen inclusief verzending en levertijden (in werkdagen) komen live uit de winkel. Bij elk product in een keuzehulp staat waarvoor het niet geschikt is.\n\n';
-  const NF = await nieuwFeiten(); if (NF.n) { t += '## Nieuw bij Kadoly (afgelopen ' + NIEUW_DAGEN + ' dagen)\n\n' + HOST + NIEUW_PAD + '\n\n' + NF.kort + '\n\n'; for (const [c, l] of NF.groepen) t += '### Nieuw in ' + naamR(c).toLowerCase() + '\n\n' + l.map(i => llmRegel(i, true)).join('\n') + '\n\n'; }
   for (const id of GIDS_IDS) { const g = GIDSEN[id]; t += '## ' + g.h1 + '\n\n' + HOST + '/' + id + '\n\n' + g.kort + '\n\n### Onze keuze\n\n';
     for (const k of g.keuze) { const i = cat[k.pid]; if (!i || i.vr === false) continue; t += '- ' + k.label + ': ' + (k.naam || i.t) + ', ' + euro(thuis(i)) + ' inclusief verzending, https://kadoly.com/product/' + k.pid + '. ' + k.waarom + (k.beperking ? ' Let op: ' + k.beperking : '') + '\n'; }
     if (g.tabel && g.tabel.length) { t += '\n### ' + (g.tabelKop || 'Welke past bij jouw situatie?') + '\n\n'; for (const r of g.tabel) t += '- ' + r.situatie + ': ' + r.advies + '\n'; }
     for (const b of (g.uitleg || [])) t += '\n### ' + b.kop + '\n\n' + b.alineas.join('\n\n') + '\n';
     t += '\n### Zo kozen we\n\n' + g.zoKozenWe + '\n\n### Veelgestelde vragen\n\n' + (g.faq || []).map(f => '**' + f.v + '**\n' + f.a).join('\n\n') + '\n\n'; }
+  const NF = await nieuwFeiten(); if (NF.n) t += '## Nieuw bij Kadoly (afgelopen ' + NIEUW_DAGEN + ' dagen)\n\n' + HOST + NIEUW_PAD + '\n\n' + NF.kort + '\n\n' + NF.groepen.map(([c, l]) => '- ' + naamR(c) + ': ' + l.length + ' nieuw, ' + HOST + NIEUW_PAD + '#n-' + c).join('\n') + '\n\nIn het aanbod hieronder staat bij elk nieuw product de dag waarop het in de winkel kwam.\n\n';
   const R = await rubrieken(); t += '## Het hele aanbod van Kadoly per rubriek\n\n'; // 4 nov: alles wat in de winkel staat, zodat AI-assistenten elk product kunnen noemen
-  for (const r of R) { t += '### ' + r.naam + '\n\n' + HOST + '/rubriek/' + r.c + '\n\n'; for (const [sb, l] of Object.entries(r.subs).sort((a, b) => (a[0] === 'overig') - (b[0] === 'overig') || b[1].length - a[1].length)) t += '#### ' + naamS(sb) + '\n\n' + l.slice().sort((a, b) => N(b.sc) - N(a.sc)).map(i => llmRegel(i, false)).join('\n') + '\n\n'; }
+  for (const r of R) { t += '### ' + r.naam + '\n\n' + HOST + '/rubriek/' + r.c + '\n\n'; for (const [sb, l] of Object.entries(r.subs).sort((a, b) => (a[0] === 'overig') - (b[0] === 'overig') || b[1].length - a[1].length)) t += '#### ' + naamS(sb) + '\n\n' + l.slice().sort((a, b) => N(b.sc) - N(a.sc)).map(i => llmRegel(i, true)).join('\n') + '\n\n'; }
   return t;
 }
 // zicht.json: het manifest voor de ZICHT-lus (lib/zicht-projecten.js), met eigen meting van lezers en AI-bots
