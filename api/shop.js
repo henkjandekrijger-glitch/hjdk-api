@@ -76,7 +76,8 @@ let OIDC = '';
 
 // ---------------- catalogus ----------------
 let CAT = null, CAT_AT = 0;
-const compactBasis = x => ({ id: String(x.id), t: String(x.title || '').trim(), p: num(x.price), pf: !!x.price_from, op: x.original_price ? num(x.original_price) : 0, b: String(x.brand || '').trim(), c: String(x.shop_category || ''), s: String(x.shop_sub || ''), img: String(((x.photos || [])[0] || {}).src || '').split('?')[0], v: num(x.views), f: num(x.favourites), sc: num(x.score), l: num(x.launched_at), r: num(x.rating), rc: num(x.rating_count), fs: !!x.free_shipping });
+const tijdMs = v => { if (v == null || v === '') return 0; if (typeof v === 'number' || /^\d+(\.\d+)?$/.test(String(v))) { const n = Number(v); return n > 1e12 ? n : n > 1e9 ? n * 1000 : 0; } const t = Date.parse(String(v)); return Number.isFinite(t) ? t : 0; }; // launched_at of created_at van de shop, als milliseconden (4 nov: voor Nieuw bij Kadoly op de gids)
+const compactBasis = x => ({ id: String(x.id), t: String(x.title || '').trim(), p: num(x.price), pf: !!x.price_from, op: x.original_price ? num(x.original_price) : 0, b: String(x.brand || '').trim(), c: String(x.shop_category || ''), s: String(x.shop_sub || ''), img: String(((x.photos || [])[0] || {}).src || '').split('?')[0], v: num(x.views), f: num(x.favourites), sc: num(x.score), l: tijdMs(x.launched_at) || tijdMs(x.created_at), r: num(x.rating), rc: num(x.rating_count), fs: !!x.free_shipping });
 // Velden die de shop er op verzoek bij levert (zie /api/shop/briefing). Ontbreekt een veld, dan blijft het weg en rekent de lus zonder.
 // Openbaar: in_stock, delivery_days, shipping_cost. Afgeschermd (alleen met header X-Lus-Key): sold_7d, sold_30d, cart_7d, margin of cost_price.
 const VELDEN = [['vr', 'in_stock'], ['lt', 'delivery_days'], ['vk', 'shipping_cost'], ['so7', 'sold_7d'], ['so30', 'sold_30d'], ['ca7', 'cart_7d'], ['mg', 'margin']];
@@ -113,7 +114,7 @@ async function haalFeed() {
 }
 async function sync() { // de shop zelf vertelt wat er te koop is, wat het kost en wat bekeken/bewaard wordt
   const items = []; let off = 0;
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i < 200; i++) {
     const r = await fetch(SHOP + '/api/shop?lang=nl&offset=' + off, { headers: shopKop() });
     if (!r.ok) throw new Error('shop gaf HTTP ' + r.status);
     const j = await r.json(); const l = j.items || []; l.forEach(x => items.push(compact(x)));
@@ -819,6 +820,10 @@ export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x'); const op = (url.searchParams.get('op') || 'status').toLowerCase();
   OIDC = String(req.headers['x-vercel-oidc-token'] || '');
   try {
+    if (op === 'catsync') { // catalogus nu verversen, zonder de rest van de ronde (alleen via de beschermde vercel.app-host, hooguit eens per 10 minuten); 4 nov, voor Nieuw bij Kadoly
+      const h = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(h)) return res.status(404).json({ ok: false });
+      const lk = await kv.get('hjdk:shop:catsynclock'); if (lk && Date.now() - lk < 600000) return res.status(200).json({ ok: true, overgeslagen: 'net gedaan' }); await kv.set('hjdk:shop:catsynclock', Date.now(), { ex: 600 });
+      const c = await sync(); return res.status(200).json({ ok: true, producten: c.items.length, metDatum: c.items.filter(i => i.l > 0).length }); }
     if (op === 'rss') return await shopRss(req, res, LAND() + '/api/shop/rss');
     if (op === 'land') return await land(req, res, url);
     if (op === 'uit') return await uitgang(req, res, url);
