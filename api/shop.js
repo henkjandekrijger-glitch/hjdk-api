@@ -919,6 +919,19 @@ export default async function handler(req, res) {
     if (op === 'snelheid') { // openbaar, alleen lezen: hoe zwaar de productpagina is voor een NL-telefoon (omleidingen, scripts, css, beelden); 6 uur bewaard
       const { snelheid } = await import('../lib/shopsnelheid.js'); const pid = pidOk(url.searchParams.get('p')) || 'oc_4174004347453441';
       res.setHeader('cache-control', 'no-store'); return res.status(200).json(await snelheid(kv, pid, !!url.searchParams.get('vers'))); }
+    if (op === 'netdetail') { // openbaar, alleen totalen (4 nov, Henkjan: "Wat doet MGID verkeer tot nu toe"): per netwerk (?net=mg) de keten per product, advertentie en plek, vandaag (of ?uren=)
+      const net = String(url.searchParams.get('net') || 'mg').replace(/[^a-z]/g, '').slice(0, 3); const sinds = Date.now() - Math.max(1, Math.min(72, Number(url.searchParams.get('uren')) || ((Date.now() - new Date(DAY() + 'T00:00:00Z').getTime()) / 36e5))) * 36e5;
+      const leeg = () => ({ kwam: 0, geladen: 0, mens: 0, tik: 0, s15: 0, s60: 0, scroll50: 0, pag2: 0, mandjeKlik: 0, nuKopen: 0, afrekenpagina: 0, winkelmand: 0, afrekenen: 0, betaald: 0 });
+      const tel = (x, r) => { x.kwam++; if (r.yg) x.geladen++; if (r.ym) x.mens++; if (r.ya) x.tik++; if (r.yt15) x.s15++; if (r.yt60) x.s60++; if (r.ys50) x.scroll50++; if (r.yp2) x.pag2++; if (r.ywk) x.mandjeKlik++; if (r.ykk) x.nuKopen++; if (r.ykp) x.afrekenpagina++; const px = r.px || {}; if (px.cart) x.winkelmand++; if (px.afreken) x.afrekenen++; if (Object.keys(px).some(k => k.startsWith('koop'))) x.betaald++; };
+      const tot = leeg(), per = { product: {}, advertentie: {}, plek: {}, campagne: {} }; let cur = '0', gezien = 0;
+      do { const [cc, keys] = await kv.scan(cur, { match: 'hjdk:shc:*', count: 1000 }); cur = cc;
+        for (let i = 0; i < keys.length; i += 200) { const vals = await kv.mget(...keys.slice(i, i + 200)); gezien += vals.length;
+          for (const r of vals) { if (!r || r.t || r.s !== net || num(r.at) < sinds) continue; tel(tot, r);
+            for (const [m, k] of [[per.product, r.p || '-'], [per.advertentie, r.a || '-'], [per.plek, r.z || '-'], [per.campagne, r.k || '-']]) tel(m[k] || (m[k] = leeg()), r); } }
+      } while (cur !== '0' && gezien < 60000);
+      const cat = await catalog(); const naam = {}; cat.items.forEach(i => { naam[i.id] = i.t; });
+      const top = (m, n, f) => Object.entries(m).sort((x, y) => y[1].mens - x[1].mens || y[1].kwam - x[1].kwam).slice(0, n).map(([k, v]) => ({ [f]: k, ...(f === 'product' ? { titel: String(naam[k] || '').slice(0, 60) } : {}), ...v, mensPct: v.kwam ? Math.round(100 * v.mens / v.kwam) : 0 }));
+      return res.status(200).json({ ok: true, at: new Date().toISOString(), netwerk: NETTEN[net] || net, sinds: new Date(sinds).toISOString(), totaal: { ...tot, mensPct: tot.kwam ? Math.round(100 * tot.mens / tot.kwam) : 0 }, perCampagne: top(per.campagne, 10, 'campagne'), perProduct: top(per.product, 25, 'product'), perAdvertentie: top(per.advertentie, 30, 'advertentie'), perPlek: top(per.plek, 25, 'plek') }); }
     if (op === 'kassasessies') { // openbaar, zonder persoonsgegevens: per bezoeker (kort kenmerk) wat er op de weg naar en op de afrekenpagina gebeurde (3 nov)
       const ruw = await kv.raw(['LRANGE', 'hjdk:shop:kassalog', '0', '2999']).catch(() => []); const per = {};
       for (const x of (Array.isArray(ruw) ? ruw : [])) { let o = null; try { o = typeof x === 'string' ? JSON.parse(x) : x; } catch (e) {} if (!o || !o.c) continue; const v = per[o.c] || (per[o.c] = { net: o.s, p: o.p, zone: o.z, aan: o.at, ev: {} }); v.ev[o.soort] = { t: o.t, w: o.w }; }
