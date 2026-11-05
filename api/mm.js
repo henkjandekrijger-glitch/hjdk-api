@@ -534,7 +534,7 @@ async function wisselRoute(req, res, url, q) {
   const arm = keuze.arm, doel = bestemming(arm, ctx);
   if (!doel) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(500).send('Bestemming van de wissel klopt niet.'); }
   res.setHeader('set-cookie', 'mmp=' + pid + '; Max-Age=15552000; Path=/; Secure; HttpOnly; SameSite=Lax');
-  const variant = arm.soort === 'amazon' && arm.variant === 'js' ? 'js' : '302';
+  const variant = (arm.soort === 'amazon' || arm.soort === 'url') && arm.variant === 'js' ? 'js' : '302'; // url-arm met variant js: KDP-boeken (5 nov 2026)
   const prefetch = /prefetch|prerender/i.test(String(req.headers['sec-purpose'] || req.headers.purpose || ''));
   if ((req.method === 'GET' || req.method === 'HEAD') && !prefetch) {
     const werk = laterAf(Promise.all([
@@ -545,7 +545,10 @@ async function wisselRoute(req, res, url, q) {
   }
   if (variant === '302' || req.method === 'HEAD') { res.statusCode = 302; res.setHeader('location', doel); return res.end(); }
   res.setHeader('content-type', 'text/html; charset=utf-8');
-  return res.status(200).send(meetPagina(doel, { cid, pid, net: ctx.net, zone: ctx.zone, camp: ctx.camp, arm: 'js', tag: arm.tag, cr: ctx.cr }));
+  const mctx = { cid, pid, net: ctx.net, zone: ctx.zone, camp: ctx.camp, arm: 'js', tag: arm.tag || arm.id, cr: ctx.cr };
+  // Clickmind-publiek op de meetpagina, zoals bij /go: alleen een bewezen mens, geen datacenter of bot; project uit de arm (rt), anders amazon
+  try { const rc = await leesRt(kv); if (rc.aan && rc.go && !prefetch) { const dd = dcVan(srv); const mens = soortPersoon(persoonNu).has('mens'); const sc = score({ c: null, s: Object.assign({}, srv, dd) }); const uit = leesCookie(req, 'mmrt') === 'uit' || !!(await kv.get('mm:rtuit:' + pid).catch(() => null)); const r = await rtBeslis(kv, { bron: 'go', project: arm.rt, land: srv.land, dc: dd.dc === true, bot: !!(sc.vlag && sc.vlag.hl), gpc: req.headers['sec-gpc'] === '1', uit, mens, id: pid }); if (r.px && r.px.length) mctx.rt = r.px; } } catch (e) {}
+  return res.status(200).send(meetPagina(doel, mctx));
 }
 
 // Script voor bestemmingen (spel, todayin, finds, MYLEVEL): onthoudt de klik-id (mmc) en meldt een uitkomst met mmUitkomst('aanmelding').
