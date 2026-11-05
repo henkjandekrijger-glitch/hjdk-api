@@ -56,7 +56,7 @@ import { echteTag, verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, ser
 import { leesWissel, bewaarWissel, alleWissels, kiesArm, soortPersoon, bestemming, wisselKlik, cidKoppel, uitkomst, amazonUitkomst, wisselStand } from '../lib/wissel.js';
 import { leerRonde, instelling } from '../lib/leer.js';
 import { dossier, naarCsv, dagDossiers } from '../lib/terug.js';
-import { modalBeslis, modalEv, modalMail, leesModal, bewaarModal, alleModals, modalStand, catalogus, bewaarCatalogus } from '../lib/modal.js';
+import { modalBeslis, modalEv, modalMail, modalGedrag, leesModal, bewaarModal, alleModals, modalStand, catalogus, bewaarCatalogus } from '../lib/modal.js';
 import { overdracht } from '../lib/overdracht.js';
 import { RT_JS, RT_GO_JS, rtBeslis, leesRt, zetRt, rtStand } from '../lib/retarget.js';
 
@@ -188,15 +188,16 @@ export default async function handler(req, res) {
       const c = leesCookie(req, 'mmp'); if (/^[0-9a-f]{16}$/.test(c)) { try { await kv.set('mm:rtuit:' + c, 1, { ex: 400 * 86400 }); } catch (e) {} }
       return res.status(200).json({ ok: true, afgemeld: true });
     }
-    if (op === 'modal' || op === 'modalev' || op === 'modalmail') {
+    if (op === 'modal' || op === 'modalev' || op === 'modalmail' || op === 'modalgedrag') {
       cors(res); res.setHeader('cache-control', 'no-store');
       if (req.method === 'OPTIONS') return res.status(204).end();
       if (op === 'modal') {
         const c = leesCookie(req, 'mmp');
-        const r = await modalBeslis(kv, { site: q('site'), pid: /^[0-9a-f]{16}$/.test(c) ? c : '', q: q('q'), mmc: q('c'), v: q('v'), mob: q('mob') === '1', abo: q('abo') === '1', test: q('test'), origin: String(req.headers.origin || ''), land: String(req.headers['x-vercel-ip-country'] || ''), net: q('net'), zone: q('zone'), ref: q('ref'), uur: q('uur'), hist: { g: q('g'), k: q('k') }, kw: q('kw'), geo: { stad: (() => { try { return decodeURIComponent(String(req.headers['x-vercel-ip-city'] || '')); } catch (x) { return ''; } })(), rg: String(req.headers['x-vercel-ip-country-region'] || ''), cc: String(req.headers['x-vercel-ip-country'] || ''), lat: String(req.headers['x-vercel-ip-latitude'] || ''), lon: String(req.headers['x-vercel-ip-longitude'] || '') } }).catch(e => { console.log('cm modal fout', String(e && e.message || e)); return { toon: false, reden: 'fout' }; });
+        const r = await modalBeslis(kv, { site: q('site'), pid: /^[0-9a-f]{16}$/.test(c) ? c : '', q: q('q'), mmc: q('c'), v: q('v'), mob: q('mob') === '1', abo: q('abo') === '1', test: q('test'), origin: String(req.headers.origin || ''), land: String(req.headers['x-vercel-ip-country'] || ''), net: q('net'), zone: q('zone'), ref: q('ref'), uur: q('uur'), hist: { g: q('g'), k: q('k') }, kw: q('kw'), pa: q('pa'), pt: q('pt'), warm: q('warm') === '1', pl: q('pl'), geo: { stad: (() => { try { return decodeURIComponent(String(req.headers['x-vercel-ip-city'] || '')); } catch (x) { return ''; } })(), rg: String(req.headers['x-vercel-ip-country-region'] || ''), cc: String(req.headers['x-vercel-ip-country'] || ''), lat: String(req.headers['x-vercel-ip-latitude'] || ''), lon: String(req.headers['x-vercel-ip-longitude'] || '') } }).catch(e => { console.log('cm modal fout', String(e && e.message || e)); return { toon: false, reden: 'fout' }; });
         return res.status(200).json(r);
       }
       if (op === 'modalev') { const r = await modalEv(kv, { mid: q('mid'), e: q('e') }).catch(e => ({ ok: false })); return req.method === 'GET' ? res.status(r.ok ? 200 : 400).json(r) : res.status(204).end(); }
+      if (op === 'modalgedrag') { if (req.method !== 'POST') return res.status(405).end(); const b = leesJson(req.body) || {}; await modalGedrag(kv, { ...b, tm: b.tm === 1 || b.tm === true }).catch(() => null); return res.status(204).end(); }
       if (req.method !== 'POST') return res.status(405).json({ ok: false, fout: 'POST' });
       const j = leesJson(req.body) || {}, srv = serverSignalen(req);
       const r = await modalMail(kv, { mid: j.mid, email: j.email, bewaar: j.bewaar !== false, ipNet: ipInfo(srv.ip).h || ipInfo(srv.ip).net, land: srv.land }).catch(e => ({ ok: false, fout: 'fout' }));
@@ -237,6 +238,7 @@ export default async function handler(req, res) {
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
       if (q('catalogus')) { if (q('j')) { const r = await bewaarCatalogus(kv, JSON.parse(q('j'))); return res.status(r.ok ? 200 : 400).json(r); } return res.status(200).json({ catalogus: await catalogus(kv) }); }
       if (q('j') || req.method === 'POST') { const j = req.method === 'POST' ? leesJson(req.body) : leesJson(q('j')); const r = await bewaarModal(kv, j); return res.status(r.ok ? 200 : 400).json(r); }
+      if (q('site') && (q('aan') === '1' || q('aan') === '0')) { const m = await kv.get('mm:modal:' + String(q('site')).toLowerCase()); if (!m) return res.status(404).json({ ok: false, fout: 'onbekende site' }); const { model, leer, momLeer, vormLeer, varLeer, rem, ...rest } = m; const r = await bewaarModal(kv, { ...rest, uit: q('aan') !== '1' }); return res.status(r.ok ? 200 : 400).json({ ok: r.ok, site: m.site, uit: r.modal && r.modal.uit, fout: r.fout }); } // 5 nov: aan of uit in één tik
       if (q('mail')) {
         const lijst = String(q('mail')).toLowerCase().replace(/[^a-z0-9-]/g, ''), h = await kv.raw(['HGETALL', 'mm:mail:' + lijst]);
         const rijen = []; if (Array.isArray(h)) { for (let i = 0; i + 1 < h.length; i += 2) rijen.push([String(h[i]), leesJson(h[i + 1]) || {}]); } else for (const [a, b] of Object.entries(h || {})) rijen.push([a, leesJson(b) || {}]);
@@ -245,7 +247,7 @@ export default async function handler(req, res) {
         res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('content-disposition', 'attachment; filename="lijst-' + lijst + '.csv"');
         return res.status(200).send(['email,datum,site,arm,netwerk,zone,campagne,land,toestemming,bevestigd'].concat(rijen.map(([e, x]) => [e, x.t, x.site, x.arm, x.net, x.zone, x.camp, x.land, x.toestemming, x.bevestigd ? 'ja' : 'nee'].map(qq).join(','))).join('\n'));
       }
-      if (q('site')) { const m = await leesModal(kv, q('site'), true); if (!m) return res.status(404).json({ ok: false, fout: 'onbekende site' }); const st = await modalStand(kv, m, Number(q('dagen')) || 14); return res.status(200).json({ modal: m, stand: [...st], momenten: st.momenten, varianten: st.varianten, script: '<script src="https://whichtobuy.best/cm.js" data-site="' + m.site + '" async></script>' }); }
+      if (q('site')) { const m = await leesModal(kv, q('site'), true); if (!m) return res.status(404).json({ ok: false, fout: 'onbekende site' }); const st = await modalStand(kv, m, Number(q('dagen')) || 14); return res.status(200).json({ modal: m, stand: [...st], momenten: st.momenten, vormen: st.vormen, sluiten: st.sluiten, varianten: st.varianten, script: '<script src="https://whichtobuy.best/cm.js" data-site="' + m.site + '" async></script>', scriptEigenDomein: '<script src="https://go.<eigen domein>/cm.js" data-site="<meetsite>" data-modal="' + m.site + '" async></script>' }); }
       return res.status(200).json({ modals: await alleModals(kv) });
     }
     if (op === 'blokgedaan') { // de uitvoerder in propellerads-mcp meldt wat hij uitsloot (gedeelde SHOP_SLEUTEL)
@@ -584,13 +586,16 @@ D.addEventListener('submit',function(e){var f=e.target;if(f&&f.querySelector&&f.
 }catch(e){}})();`;
 
 // De lerende modal in de browser (lib/modal.js): vraagt de server welke arm, meet de gewone klik naar buiten (ook bij de controlegroep),
-// toont op het gekozen moment een kaart (schaduw-DOM, botst niet met de pagina), sluiten met kruisje, 'nee', achtergrond of Escape.
+// toont op het gekozen moment de gekozen vorm (midden, onder, hoek, balk, blok op een plek data-cm-plek, vol; schaduw-DOM, botst niet met
+// de pagina), in de stijl van de site; sluiten met kruisje, 'nee', achtergrond of Escape. data-modal="<naam>" op de scriptregel kiest de
+// modal-instelling (anders data-site). Meet ook veld, typ, hoe gesloten en, met toestemming, een gedragsrij; koop via data-cm-betaald.
 const MMM_JS = String.raw`/* clickmind modal */(function(){var W=window,D=document,N=navigator;
 function q(f){try{return f()}catch(e){return null}}
 try{if(W.mmModal)return;W.mmModal=1;if(N.webdriver===true)return;
-var S=D.currentScript||q(function(){var a=D.querySelectorAll('script[src*="/cm.js"],script[src*="/mmm.js"]');return a[a.length-1]}),site=S&&S.getAttribute('data-site');if(!site)return;var kw=String((S&&S.getAttribute('data-interest'))||q(function(){var x=D.querySelector('meta[name="cm-interest"]');return x&&x.content})||'').slice(0,60);
+var S=D.currentScript||q(function(){var a=D.querySelectorAll('script[src*="/cm.js"],script[src*="/mmm.js"]');return a[a.length-1]}),site=S&&(S.getAttribute('data-modal')||S.getAttribute('data-site'));if(!site)return;var kw=String((S&&S.getAttribute('data-interest'))||q(function(){var x=D.querySelector('meta[name="cm-interest"]');return x&&x.content})||'').slice(0,60);
 var O=q(function(){return new URL(S.src).origin})||'https://whichtobuy.best',zelf=O===location.origin;
 function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,String(v))}catch(e){return null}}
+function ss(k,v){try{if(v===undefined)return sessionStorage.getItem(k);sessionStorage.setItem(k,String(v))}catch(e){return null}}
 function hex(n){var a=new Uint8Array(n),s='';q(function(){crypto.getRandomValues(a)});for(var i=0;i<n;i++)s+=(a[i]+256).toString(16).slice(1);return s}
 var id=ls('mmq');if(!/^[0-9a-f]{16}$/.test(id||'')){id=hex(8);ls('mmq',id)}
 var vk='mmqv:'+site,v=(+ls(vk)||0)+1;ls(vk,v);
@@ -599,50 +604,89 @@ var mmc=P('mmc');if(!/^[0-9a-f]{8,24}$/.test(mmc)){var l=(ls('mmc')||'').split('
 var test=P('mmm'),mob=(/Mobi|Android|iPhone|iPad/i.test(N.userAgent||'')||q(function(){return matchMedia('(pointer:coarse)').matches}))?1:0,abo=(ls('mmqa:'+site)==='1'||ls('mmqa')==='1')?1:0;
 var rh=q(function(){return D.referrer?new URL(D.referrer).hostname:''})||'',ref=!rh?'direct':rh===location.hostname?'intern':/(^|\.)(google|bing|duckduckgo|yahoo|ecosia|yandex|baidu|startpage|brave)\./.test(rh)?'zoek':/facebook|instagram|t\.co|x\.com|twitter|linkedin|reddit|tiktok|whatsapp|telegram|pinterest/.test(rh)?'social':'ander';
 var hist=q(function(){return JSON.parse(ls('cmh')||'{}')})||{};function hb(k){hist[k]=(+hist[k]||0)+1;ls('cmh',JSON.stringify(hist))}
-var B=null,wacht=[],getoond=0,uit=0,vis=0,vs=D.visibilityState==='visible'?Date.now():null,uitgeklikt=0,minMs=8000,typt=0;
+var pa=location.pathname||'/',pt=String(q(function(){return W.YSHOP_HERE&&W.YSHOP_HERE.p})||(/\/(product|p)\//.test(pa)?'product':pa==='/'?'home':/\/(shop|categorie|category|collectie|collection|zoek|search)(\/|$)/.test(pa)?'lijst':'ander')).toLowerCase().replace(/[^a-z]/g,'').slice(0,12);
+/* toestemming voor statistiek of advertenties: alleen dan gaat er een gedragsrij per beslissing naar de server (nooit wat er getypt is) */
+function tm(){return W.cmToestemming===true||/(?:^|; )yoors_consent=[^;]*(a1|m1)/.test(D.cookie||'')}
+var B=null,wacht=[],getoond=0,uit=0,vis=0,vs=D.visibilityState==='visible'?Date.now():null,uitgeklikt=0,minMs=8000,typt=0,G={hoe:'',t0:0,sc:0,tp:0,fout:0},gs=0,host=null;
 function visT(){return vis+(vs?Date.now()-vs:0)}
-function ev(e){if(!B){wacht.push(e);return}if(!B.mid)return;var x=O+'/api/mm/modalev?mid='+B.mid+'&e='+e;try{if(!(N.sendBeacon&&N.sendBeacon(x))&&W.fetch)fetch(x,{method:'POST',keepalive:true,mode:'no-cors',credentials:'omit'})}catch(z){}}
-D.addEventListener('click',function(e){try{var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=new URL(a.href,location.href);if(/^https?:$/.test(h.protocol)&&h.host&&h.host!==location.host){uitgeklikt=1;ev('hoofd')}}catch(x){}},true);
+function bk(x,body){try{if(!(N.sendBeacon&&N.sendBeacon(x,body)))if(W.fetch)fetch(x,{method:'POST',body:body,keepalive:true,mode:'no-cors',credentials:'omit'})}catch(z){}}
+function evMid(mid,e){if(/^[0-9a-f]{12}$/.test(mid||''))bk(O+'/api/mm/modalev?mid='+mid+'&e='+e)}
+function ev(e){if(!B){wacht.push(e);return}if(B.mid)evMid(B.mid,e)}
+function gedrag(hoe){if(gs||!B||!B.mid||!getoond)return;gs=1;G.hoe=hoe||G.hoe||'weg';bk(O+'/api/mm/modalgedrag',JSON.stringify({mid:B.mid,tm:tm()?1:0,hoe:G.hoe,zicht:G.t0?Date.now()-G.t0:0,sc:G.sc,tp:G.tp,fout:G.fout,vw:W.innerWidth||0}))}
+D.addEventListener('click',function(e){try{var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(a){var h=new URL(a.href,location.href);if(/^https?:$/.test(h.protocol)&&h.host&&h.host!==location.host){uitgeklikt=1;ev('hoofd')}}
+var b=e.target&&e.target.closest&&e.target.closest('a,button,[role=button],input[type=submit]');if(b&&!(b.closest&&b.closest('[data-mmm]'))){var t=((b.innerText||b.value||'')+' '+String(b.className||'')+' '+(b.id||'')).toLowerCase();if(/btn-buy|buy-btn|sticky-buy|winkelwagen|winkelmand|in (de )?mand|add.?to.?cart|nu kopen|koop nu|bestellen/.test(t))ss('cmWarm','1')}}catch(x){}},true);
 D.addEventListener('submit',function(e){var f=e.target;if(f&&f.querySelector&&!(f.closest&&f.closest('[data-mmm]'))&&f.querySelector('input[type=email],input[name*=mail]'))ev('hoofd')},true);
 D.addEventListener('focusin',function(e){var t=e.target;if(t&&/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName)&&!(t.closest&&t.closest('[data-mmm]')))typt=Date.now()},true);
 D.addEventListener('visibilitychange',function(){if(D.visibilityState==='visible'){vs=Date.now();if(uitgeklikt&&B&&B.arm&&B.arm.moment==='exit')setTimeout(toon,400)}else if(vs){vis+=Date.now()-vs;vs=null}},true);
 W.addEventListener('pageshow',function(e){if(e.persisted&&uitgeklikt&&B&&B.arm&&B.arm.moment==='exit'){vs=Date.now();setTimeout(toon,400)}},true);
-// slim: nooit over een ander venster heen, niet als iemand typt, niet op betaal-, inlog- of winkelwagenpagina's, niet bij een lage mensmeter-score
+W.addEventListener('pagehide',function(){if(getoond&&!uit)gedrag('weg')},true);
+/* slim: nooit over een ander venster heen, niet als iemand typt, niet op betaal-, inlog- of winkelwagenpagina's, niet bij een lage mensmeter-score; een blok in de pagina stoort niet, dus daar alleen pad en mensmeter */
 function stoor(){if(W.cmGeenModal||D.documentElement.hasAttribute('data-cm-geen'))return 1;
 if(/(checkout|betaal|pay(ment)?|kassa|cart|winkelwagen|login|signin|sign-in|inloggen|account|bestel)/i.test(location.pathname))return 1;
+var mm=W.mensmeter;if(mm&&mm.lokaal!=null&&mm.lokaal<35)return 1;if(B&&B.arm&&B.arm.vorm==='blok')return 0;
 if(D.visibilityState!=='visible')return 1;if(typt&&Date.now()-typt<15000)return 1;
 var a=D.activeElement;if(a&&(/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName)||a.isContentEditable)&&!(a.closest&&a.closest('[data-mmm]')))return 1;
 var dl=D.querySelectorAll('dialog[open],[aria-modal="true"],[role="dialog"],[role="alertdialog"]');for(var i=0;i<dl.length;i++){var r=dl[i].getBoundingClientRect();if(r.width>0&&r.height>0&&!dl[i].closest('[data-mmm]'))return 1}
-var mm=W.mensmeter;if(mm&&mm.lokaal!=null&&mm.lokaal<35)return 1;return 0}
+return 0}
 function klaarVoor(){return !getoond&&!uit&&B&&B.toon&&visT()>=minMs}
-function toon(){if(!klaarVoor())return;if(!test&&stoor())return;getoond=1;ev('toon');hb('g');q(bouw)}
-function plan(a){minMs=Math.max(0,(+B.min||0)*1000);var mo=String(a.moment||'exit');if(!test&&ref==='zoek'&&mob&&mo!=='exit')mo='scroll:80';var p=mo.split(':'),soort=p[0],n=+p[1]||0;
+function toon(){if(!klaarVoor())return;if(!test&&stoor())return;getoond=1;var h=D.documentElement,m=Math.max(1,h.scrollHeight-innerHeight);G.t0=Date.now();G.sc=Math.round(Math.min(1,(W.pageYOffset||h.scrollTop||0)/m)*100);G.tp=Math.round(visT()/1000);ev('toon');hb('g');q(bouw)}
+function plekEl(){var a=B&&B.arm;if(!a)return null;return a.plek&&D.querySelector('[data-cm-plek="'+a.plek+'"]')||D.querySelector('[data-cm-plek]')}
+function plan(a){minMs=Math.max(0,(+B.min||0)*1000);
+if(a.vorm==='blok'){minMs=0;var el=plekEl();if(!el)return;if(test){setTimeout(toon,300);return}if(W.IntersectionObserver){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){toon();if(getoond)io.disconnect()}})},{threshold:.4});io.observe(el)}else toon();return}
+var mo=String(a.moment||'exit');if(!test&&ref==='zoek'&&mob&&mo!=='exit')mo='scroll:80';var p=mo.split(':'),soort=p[0],n=+p[1]||0;
 if(soort==='tijd'){var w=Math.max(minMs,(n||20)*1000),iv=setInterval(function(){if(getoond||uit){clearInterval(iv);return}if(visT()>=w)toon()},1000)}
 else if(soort==='scroll'){var g=(n||60)/100;W.addEventListener('scroll',function(){var h=D.documentElement,y=(W.pageYOffset||h.scrollTop||0)+W.innerHeight,H=Math.max(h.scrollHeight,D.body?D.body.scrollHeight:0)||1;if(y/H>=g)toon()},{passive:true})}
 else{D.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<=0)toon()},true);
 var maxY=0,tMax=0;W.addEventListener('scroll',function(){var y=W.pageYOffset||0,t=Date.now();if(y>maxY){maxY=y;tMax=t}else if(maxY>W.innerHeight&&maxY-y>W.innerHeight*0.35&&t-tMax<900)toon()},{passive:true})}
 if(test)setTimeout(toon,300)}
-function bouw(){var a=B.arm,host=D.createElement('div');host.setAttribute('data-mmm','1');host.style.cssText='all:initial;position:fixed;left:0;top:0;width:0;height:0;z-index:2147483646';
-var r=host.attachShadow?host.attachShadow({mode:'open'}):host;
-r.innerHTML='<style>*{box-sizing:border-box}.bg{position:fixed;inset:0;background:rgba(15,20,30,.45)}.k{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(92vw,400px);background:#fff;color:#1d2433;border-radius:14px;padding:22px 20px 14px;box-shadow:0 12px 40px rgba(0,0,0,.25);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:left}@media (max-width:640px){.bg{background:transparent;pointer-events:none}.k{top:auto;bottom:0;left:0;transform:none;width:100%;border-radius:16px 16px 0 0;padding-bottom:max(16px,env(safe-area-inset-bottom));box-shadow:0 -6px 30px rgba(0,0,0,.22)}}.t{font-weight:700;font-size:19px;line-height:1.3;margin:0 30px 6px 0}.s{margin:0 0 14px;color:#4a5262}.b{display:block;width:100%;text-align:center;background:#1a56db;color:#fff;border:0;border-radius:10px;padding:13px 14px;font:600 16px system-ui,-apple-system,sans-serif;text-decoration:none;cursor:pointer}.b[disabled]{opacity:.6}input{width:100%;padding:12px;border:1px solid #c9cfdb;border-radius:10px;font:16px system-ui,-apple-system,sans-serif;margin:0 0 10px;color:#1d2433;background:#fff}.n{background:none;border:0;color:#6b7385;font:14px system-ui,-apple-system,sans-serif;margin:8px auto 0;display:block;cursor:pointer;padding:6px}.x{position:absolute;right:6px;top:4px;background:none;border:0;font-size:28px;line-height:1;color:#6b7385;cursor:pointer;padding:6px 10px}.kl{font-size:12px;color:#7a8294;margin:8px 0 0}.fo{color:#b42318;font-size:14px;margin:0 0 8px}</style><div class="bg"></div><div class="k" role="dialog" aria-modal="true" aria-labelledby="t"><button class="x" type="button" aria-label="Close">&times;</button><p class="t" id="t"></p><p class="s"></p><div class="f"></div><button class="n" type="button"></button></div>';
-var $=function(s){return r.querySelector(s)},sluit=function(lees){if(uit)return;uit=1;if(lees){ev('sluit');hb('s')}q(function(){host.remove()});D.removeEventListener('keydown',esc,true)},esc=function(e){if(e.key==='Escape')sluit(1)};
+function kl(x,d){return /^#[0-9a-fA-F]{3,8}$/.test(x||'')?x:d}
+function css(st){var f=/^[A-Za-z0-9 ,'-]{2,120}$/.test(st.font||'')?st.font+',':'',ro=st.ronding!=null?+st.ronding:14;
+return ':host{all:initial}*{box-sizing:border-box}.w{--k:'+kl(st.knop,'#1a56db')+';--kt:'+kl(st.knopTekst,'#ffffff')+';--c:'+kl(st.kaart,'#ffffff')+';--t:'+kl(st.tekst,'#1d2433')+';--z:'+kl(st.zacht,'#4a5262')+';--r:'+kl(st.rand,'#c9cfdb')+';--bk:'+kl(st.balk,kl(st.kaart,'#ffffff'))+';--ro:'+ro+'px;font:16px/1.45 '+f+'system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--t)}'+
+'.bg{position:fixed;inset:0;background:rgba(15,20,30,.45);animation:op .2s ease}.k{position:fixed;z-index:1;background:var(--c);color:var(--t);border-radius:var(--ro);padding:22px 20px 14px;box-shadow:0 12px 40px rgba(0,0,0,.25);text-align:left;animation:op .22s ease}'+
+'.t{font-weight:700;font-size:19px;line-height:1.3;margin:0 30px 6px 0}.s{margin:0 0 14px;color:var(--z)}.lg{display:block;height:28px;width:auto;margin:0 0 12px}.bd{display:block;width:100%;max-height:170px;object-fit:cover;border-radius:calc(var(--ro) - 4px);margin:0 0 14px}'+
+'.b{display:block;width:100%;text-align:center;background:var(--k);color:var(--kt);border:0;border-radius:calc(var(--ro) - 4px);padding:13px 14px;font:inherit;font-weight:600;text-decoration:none;cursor:pointer}.b[disabled]{opacity:.6}'+
+'input{display:block;width:100%;padding:12px;border:1px solid var(--r);border-radius:calc(var(--ro) - 4px);font:inherit;margin:0 0 10px;color:var(--t);background:#fff}input:focus{outline:2px solid var(--k);outline-offset:1px}'+
+'.n{display:block;margin:8px auto 0;background:none;border:0;color:var(--z);font:inherit;font-size:14px;cursor:pointer;padding:6px}.x{position:absolute;top:8px;right:8px;width:34px;height:34px;border:0;background:none;color:var(--z);font-size:24px;line-height:34px;cursor:pointer;border-radius:50%}.x:hover{background:rgba(0,0,0,.06)}'+
+'.kl{margin:8px 0 0;font-size:12px;color:var(--z)}.fo{margin:-4px 0 10px;font-size:14px;color:#b42318}'+
+'.v-midden .k{left:50%;top:50%;transform:translate(-50%,-50%);width:min(92vw,400px)}'+
+'@media (max-width:640px){.v-midden .bg{background:transparent;pointer-events:none}.v-midden .k{top:auto;bottom:0;left:0;transform:none;width:100%;border-radius:var(--ro) var(--ro) 0 0;padding-bottom:max(16px,env(safe-area-inset-bottom));box-shadow:0 -6px 30px rgba(0,0,0,.22)}}'+
+'.v-onder .bg,.v-hoek .bg,.v-balk .bg,.v-blok .bg{display:none}.v-onder .k{left:0;right:0;bottom:0;margin:0 auto;width:min(100vw,520px);border-radius:var(--ro) var(--ro) 0 0;padding-bottom:max(16px,env(safe-area-inset-bottom));box-shadow:0 -6px 30px rgba(0,0,0,.22)}'+
+'.v-hoek .k{bottom:16px;right:16px;width:min(calc(100vw - 32px),340px);padding:18px 16px 10px;box-shadow:0 10px 32px rgba(0,0,0,.22)}.v-hoek.links .k{right:auto;left:16px}.v-hoek .t{font-size:17px}.v-hoek .s{font-size:15px}'+
+'.v-balk .k{left:0;right:0;width:100%;border-radius:0;padding:10px 48px 10px 16px;display:flex;align-items:center;gap:8px 14px;flex-wrap:wrap;background:var(--bk);box-shadow:0 -2px 14px rgba(0,0,0,.15)}.v-balk.onder .k{bottom:0;padding-bottom:max(10px,env(safe-area-inset-bottom))}.v-balk.boven .k{top:0;box-shadow:0 2px 14px rgba(0,0,0,.15)}'+
+'.v-balk .t{font-size:16px;margin:0;flex:0 1 auto}.v-balk .s,.v-balk .n,.v-balk .kl,.v-balk .lg,.v-balk .bd{display:none}.v-balk .f{flex:1 1 300px}.v-balk form{display:flex;gap:8px;flex-wrap:wrap}.v-balk input{flex:1 1 180px;margin:0;padding:9px 11px}.v-balk .b{width:auto;padding:9px 16px;white-space:nowrap}.v-balk .fo{flex-basis:100%;margin:2px 0 0}.v-balk .x{top:50%;transform:translateY(-50%)}'+
+'.v-blok .k{position:relative;width:100%;margin:16px 0;box-shadow:none;border:1px solid var(--r);animation:none}'+
+'.v-vol .bg{background:var(--c);animation:op .2s ease}.v-vol .k{inset:0;width:100%;height:100%;border-radius:0;box-shadow:none;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px;overflow:auto}.v-vol .k>*:not(.x):not(.lg){width:min(100%,440px)}.v-vol .lg{align-self:center}.v-vol .t{font-size:26px;margin-right:0}.v-vol .x{top:14px;right:14px}'+
+'@keyframes op{from{opacity:0}}@media (prefers-reduced-motion:reduce){.bg,.k{animation:none}}'}
+function bouw(){var a=B.arm,vorm=a.vorm||'midden',st=a.stijl||{},el=vorm==='blok'?plekEl():null;if(vorm==='blok'&&!el)vorm='hoek';
+host=D.createElement('div');host.setAttribute('data-mmm','1');host.style.cssText=el?'all:initial;display:block':'all:initial;position:fixed;left:0;top:0;width:0;height:0;z-index:2147483646';
+var r=host.attachShadow?host.attachShadow({mode:'open'}):host,ov=vorm==='midden'||vorm==='vol';
+r.innerHTML='<style>'+css(st)+'</style><div class="w v-'+vorm+(vorm==='hoek'?' '+(st.kant==='links'?'links':'rechts'):'')+(vorm==='balk'?' '+(st.balkPlek==='boven'?'boven':'onder'):'')+'"><div class="bg"></div><div class="k" role="'+(ov?'dialog':'region')+'"'+(ov?' aria-modal="true"':'')+' aria-labelledby="mmt"><button class="x" type="button" aria-label="'+(a.taal==='nl'?'Sluiten':a.taal==='de'?'Schließen':'Close')+'">×</button><p class="t" id="mmt"></p><p class="s"></p><div class="f"></div><button class="n" type="button"></button></div></div>';
+var $=function(s){return r.querySelector(s)},sluit=function(lees,hoe){if(uit)return;uit=1;if(lees){ev('sluit');hb('s')}gedrag(hoe);q(function(){host.remove()});D.removeEventListener('keydown',esc,true)},esc=function(e){if(e.key==='Escape'&&ov)sluit(1,'esc')};
+var kaart=$('.k'),plaatje=function(c,src){var im=D.createElement('img');im.className=c;im.alt='';im.onerror=function(){q(function(){im.remove()})};im.src=src;kaart.insertBefore(im,$('.t'))};if(/^https:\/\//.test(st.logo||''))plaatje('lg',st.logo);if(/^https:\/\//.test(a.beeld||''))plaatje('bd',a.beeld);
 $('.t').textContent=a.titel||'';$('.s').textContent=a.tekst||'';if(!a.tekst)$('.s').style.display='none';$('.n').textContent=a.nee||'No thanks';
-$('.x').onclick=function(){sluit(1)};$('.n').onclick=function(){sluit(1)};$('.bg').onclick=function(){sluit(1)};D.addEventListener('keydown',esc,true);
-var f=$('.f');
-if(a.soort==='site'){var k=D.createElement('a');k.className='b';k.href=a.href;k.target='_blank';k.rel='noopener';k.textContent=a.knop;k.onclick=function(){ev('klik');hb('k');setTimeout(function(){sluit(0)},200)};f.appendChild(k);setTimeout(function(){q(function(){k.focus()})},50)}
-else if(a.soort==='email'){var fm=D.createElement('form'),inp=D.createElement('input'),fo=D.createElement('p'),bt=D.createElement('button'),kl=D.createElement('p');
-inp.type='email';inp.required=true;inp.autocomplete='email';inp.placeholder=a.veld||'Your email';inp.setAttribute('aria-label',a.veld||'Email');fo.className='fo';fo.style.display='none';bt.className='b';bt.type='submit';bt.textContent=a.knop;kl.className='kl';kl.textContent=a.klein||'';
-fm.appendChild(inp);fm.appendChild(fo);fm.appendChild(bt);fm.appendChild(kl);f.appendChild(fm);setTimeout(function(){q(function(){inp.focus()})},50);
-var dank=function(){ev('klik');hb('k');ls('mmqa:'+site,'1');ls('mmqa','1');fm.innerHTML='';$('.s').style.display='none';var p=D.createElement('p');p.className='s';p.textContent=a.dank||'Thanks!';fm.appendChild(p);$('.n').textContent='OK'},
-fout=function(t){bt.disabled=false;fo.textContent=t||'Something went wrong. Please try again.';fo.style.display='block'},
+$('.x').onclick=function(){sluit(1,'kruis')};$('.n').onclick=function(){sluit(1,getoond&&$('.n').getAttribute('data-klaar')?'klaar':'nee')};$('.bg').onclick=function(){sluit(1,'achter')};D.addEventListener('keydown',esc,true);
+var f=$('.f'),focus=ov&&!mob;
+if(a.soort==='site'){var k=D.createElement('a'),eigen=q(function(){return new URL(a.href).host===location.host});k.className='b';k.href=a.href;if(!eigen){k.target='_blank';k.rel='noopener'}k.textContent=a.knop;k.onclick=function(){ev('klik');hb('k');G.hoe='knop';setTimeout(function(){sluit(0,'knop')},200)};f.appendChild(k);if(focus)setTimeout(function(){q(function(){k.focus()})},50)}
+else if(a.soort==='email'){var fm=D.createElement('form'),inp=D.createElement('input'),fo=D.createElement('p'),bt=D.createElement('button'),kp=D.createElement('p'),gv=0,gt=0;fm.noValidate=true;
+inp.type='email';inp.autocomplete='email';inp.setAttribute('inputmode','email');inp.placeholder=a.veld||'Your email';inp.setAttribute('aria-label',a.veld||'Email');fo.className='fo';fo.style.display='none';fo.setAttribute('role','alert');bt.className='b';bt.type='submit';bt.textContent=a.knop;kp.className='kl';kp.textContent=a.klein||'';
+inp.addEventListener('focus',function(){if(!gv){gv=1;ev('veld')}});inp.addEventListener('input',function(){if(!gt&&inp.value){gt=1;ev('typ')}});
+fm.appendChild(inp);fm.appendChild(fo);fm.appendChild(bt);fm.appendChild(kp);f.appendChild(fm);if(focus)setTimeout(function(){q(function(){inp.focus()})},50);
+var dank=function(){ev('klik');hb('k');ls('mmqa:'+site,'1');ls('mmqa','1');G.hoe='klaar';fm.innerHTML='';$('.s').style.display='none';var p=D.createElement('p');p.className='s';p.style.display='block';p.textContent=a.dank||'Thanks!';fm.appendChild(p);$('.n').textContent='OK';$('.n').setAttribute('data-klaar','1');if(vorm==='balk')setTimeout(function(){sluit(0,'klaar')},6000)},
+fout=function(t){G.fout++;bt.disabled=false;fo.textContent=t||'Something went wrong. Please try again.';fo.style.display='block'},
 post=function(eigen){if(!B.mid){dank();return}fetch(O+'/api/mm/modalmail',{method:'POST',body:JSON.stringify({mid:B.mid,email:inp.value,bewaar:!eigen}),credentials:'omit'}).then(function(x){return x.json()}).then(function(j){if(j&&j.ok)dank();else fout(j&&j.fout)})['catch'](function(){fout()})};
-fm.onsubmit=function(e){e.preventDefault();var m=String(inp.value||'').trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)){fout(a.veld||'Email?');return}bt.disabled=true;fo.style.display='none';
-if(a.doel==='todayin'){post(0)}else if(a.doel==='moonlighter'&&B.mid){fetch('https://moonlighter.email/api/cm-signup',{method:'POST',body:JSON.stringify({email:m,site:site,mid:B.mid}),credentials:'omit'}).then(function(x){return x.json()}).then(function(j){if(j&&j.ok)post(1);else fout(j&&j.error)})['catch'](function(){fout()})}
+fm.onsubmit=function(e){e.preventDefault();var m=String(inp.value||'').trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)){fout(a.taal==='nl'?'Vul een geldig e-mailadres in.':a.taal==='de'?'Bitte eine gültige E-Mail-Adresse eingeben.':'Please enter a valid email address.');return}bt.disabled=true;fo.style.display='none';
+if(a.doel==='todayin'||a.doel==='kadoly'){post(0)}else if(a.doel==='moonlighter'&&B.mid){fetch('https://moonlighter.email/api/cm-signup',{method:'POST',body:JSON.stringify({email:m,site:site,mid:B.mid}),credentials:'omit'}).then(function(x){return x.json()}).then(function(j){if(j&&j.ok)post(1);else fout(j&&j.error)})['catch'](function(){fout()})}
 else if(typeof W.mmAanmelden==='function'){q(function(){Promise.resolve(W.mmAanmelden(m,{site:site,arm:a.id})).then(function(ok){if(ok)post(1);else fout()},function(){fout()})})}else post(0)}}
-(D.body||D.documentElement).appendChild(host)}
-var u=O+'/api/mm/modal?site='+encodeURIComponent(site)+'&q='+id+'&c='+mmc+'&v='+v+'&mob='+mob+'&abo='+abo+'&net='+encodeURIComponent(P('src','net','utm_source','n').slice(0,20))+'&zone='+encodeURIComponent(P('zone','z','zoneid','widget').slice(0,40))+'&ref='+ref+'&uur='+new Date().getHours()+(kw?'&kw='+encodeURIComponent(kw):'')+'&g='+(+hist.g||0)+'&k='+(+hist.k||0)+(test?'&test='+encodeURIComponent(test):'');
-fetch(u,{credentials:zelf?'include':'omit'}).then(function(x){return x.json()}).then(function(d){B=d||{};var w=wacht;wacht=[];for(var i=0;i<w.length;i++)ev(w[i]);if(B.toon&&B.arm&&B.arm.soort!=='geen')plan(B.arm)})['catch'](function(){});
-W.mmModalStand=function(){return{site:site,besluit:B,getoond:getoond,stoort:stoor()}};
+if(el)el.appendChild(host);else (D.body||D.documentElement).appendChild(host)}
+/* betaald: op de bedankpagina zet de shop data-cm-betaald (bedrag); dan telt 'koop' bij de laatste beslissing van de afgelopen 7 dagen, ook bij de controlegroep */
+var mk='mmqm:'+site;function koop(){if(!D.querySelector('[data-cm-betaald]'))return 0;var l=(ls(mk)||'').split('|');if(/^[0-9a-f]{12}$/.test(l[0]||'')&&Date.now()-Number(l[1]||0)<7*864e5&&l[2]!=='k'){evMid(l[0],'koop');ls(mk,l[0]+'|'+l[1]+'|k')}return 1}
+function vraag(){var nk=0;if(!koop()){var ik=setInterval(function(){if(koop()||++nk>10)clearInterval(ik)},1500)}
+var pl=[];q(function(){[].forEach.call(D.querySelectorAll('[data-cm-plek]'),function(x){var n=String(x.getAttribute('data-cm-plek')||'').toLowerCase();if(/^[a-z0-9-]{1,30}$/.test(n)&&pl.indexOf(n)<0)pl.push(n)})});
+var warm=ss('cmWarm')==='1'||/^(warm|heet|koper)$/.test(ss('cmSeg')||'')?1:0;
+var u=O+'/api/mm/modal?site='+encodeURIComponent(site)+'&q='+id+'&c='+mmc+'&v='+v+'&mob='+mob+'&abo='+abo+'&net='+encodeURIComponent(P('src','net','utm_source','n').slice(0,20))+'&zone='+encodeURIComponent(P('zone','z','zoneid','widget').slice(0,40))+'&ref='+ref+'&uur='+new Date().getHours()+(kw?'&kw='+encodeURIComponent(kw):'')+'&g='+(+hist.g||0)+'&k='+(+hist.k||0)+'&pa='+encodeURIComponent(pa.slice(0,120))+'&pt='+pt+'&warm='+warm+(pl.length?'&pl='+encodeURIComponent(pl.slice(0,8).join(',')):'')+(test?'&test='+encodeURIComponent(test):'');
+fetch(u,{credentials:zelf?'include':'omit'}).then(function(x){return x.json()}).then(function(d){B=d||{};if(B.mid&&!B.weer)ls(mk,B.mid+'|'+Date.now());var w=wacht;wacht=[];for(var i=0;i<w.length;i++)ev(w[i]);if(B.toon&&B.arm&&B.arm.soort!=='geen')plan(B.arm)})['catch'](function(){})}
+if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',vraag);else vraag();
+W.mmModalStand=function(){return{site:site,besluit:B,getoond:getoond,stoort:stoor(),toestemming:tm()}};
 }catch(e){}})();
 `;
 

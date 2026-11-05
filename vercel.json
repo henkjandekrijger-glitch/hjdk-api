@@ -1195,6 +1195,28 @@
   },
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "go.kadoly.com"
+        }
+      ],
+      "destination": "https://kadoly.com/",
+      "permanent": false
+    },
+    {
+      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/).+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "go.kadoly.com"
+        }
+      ],
+      "destination": "https://kadoly.com/$1",
+      "permanent": false
+    },
+    {
       "source": "/auto-huren-curacao",
       "has": [
         {
