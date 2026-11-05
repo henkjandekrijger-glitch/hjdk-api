@@ -1,6 +1,6 @@
 {
  "id": "evenementen",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-05",
  "reviewGewicht": 0,
  "onderwerp": {
   "nl": "evenement",
@@ -2630,6 +2630,13 @@
      "de": "Marathon, Halbmarathon, 10 km und 5 km",
      "es": "Maratón, media maratón, 10K y 5K",
      "pt": "Maratona, meia maratona, 10K e 5K"
+    },
+    {
+     "nl": "Datum verplaatst: niet vrijdag 20 november",
+     "en": "Date moved: not Friday, November 20",
+     "de": "Termin verlegt: nicht Freitag, 20. November",
+     "es": "Fecha cambiada: no el viernes 20 de noviembre",
+     "pt": "Data alterada: não na sexta, 20 de novembro"
     }
    ],
    "scores": [],
@@ -3090,6 +3097,13 @@
      "de": "Schwimmender Markt bis 19 Uhr",
      "es": "Mercado flotante hasta las 19:00",
      "pt": "Mercado flutuante até as 19h"
+    },
+    {
+     "nl": "Begeleide Punda Vibes-tour vanaf $65 per persoon",
+     "en": "Guided Punda Vibes tour from $65 per person",
+     "de": "Geführte Punda-Vibes-Tour ab 65 $ pro Person",
+     "es": "Tour guiado de Punda Vibes desde $65 por persona",
+     "pt": "Tour guiado do Punda Vibes a partir de US$ 65 por pessoa"
     }
    ],
    "scores": [],
@@ -3124,7 +3138,119 @@
    },
    "bronnen": [
     "https://www.lionsdive.com/curacao/4-tips-for-enjoying-punda-vibes-every-thursday/",
-    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao"
+    "https://www.mycuracaoguide.com/blogs/the-5-best-nightlife-spots-on-curacao",
+    "https://www.mycuracaoguide.com/punda-vibes-tours"
+   ]
+  },
+  {
+   "id": "bachata-surfspot",
+   "naam": "Bachatales bij Surfspot (donderdag)",
+   "url": null,
+   "soort": {
+    "nl": "dansles",
+    "en": "dance class",
+    "de": "Tanzkurs",
+    "es": "clase de baile",
+    "pt": "aula de dança"
+   },
+   "plaats": "Surfspot, Curaçao",
+   "tags": [
+    "muziek",
+    "dans",
+    "wekelijks",
+    "jan-feb",
+    "mrt-apr",
+    "mei-jun",
+    "jul-aug",
+    "sep-okt",
+    "nov-dec"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elke donderdag",
+     "en": "Every Thursday",
+     "de": "Jeden Donnerstag",
+     "es": "Todos los jueves",
+     "pt": "Toda quinta-feira"
+    },
+    {
+     "nl": "19.00 uur beginners, 20.00 uur open niveau",
+     "en": "7 pm beginners, 8 pm open level",
+     "de": "19 Uhr Anfänger, 20 Uhr offenes Niveau",
+     "es": "19:00 principiantes, 20:00 nivel abierto",
+     "pt": "19h iniciantes, 20h nível livre"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://mycuracaoguide.com/events"
+   ]
+  },
+  {
+   "id": "avila-schooner-vrijdag",
+   "naam": "Vrijdag happy hour met live muziek, Schooner Bar (Avila)",
+   "url": null,
+   "soort": {
+    "nl": "happy hour met live muziek",
+    "en": "happy hour with live music",
+    "de": "Happy Hour mit Livemusik",
+    "es": "happy hour con música en vivo",
+    "pt": "happy hour com música ao vivo"
+   },
+   "plaats": "Avila Beach Hotel, Penstraat 130, Willemstad",
+   "tags": [
+    "muziek",
+    "wekelijks",
+    "willemstad",
+    "jan-feb",
+    "mrt-apr",
+    "mei-jun",
+    "jul-aug",
+    "sep-okt",
+    "nov-dec"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Elke vrijdag vanaf 17.00 uur",
+     "en": "Every Friday from 5 pm",
+     "de": "Jeden Freitag ab 17 Uhr",
+     "es": "Todos los viernes desde las 17:00",
+     "pt": "Toda sexta-feira a partir das 17h"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://mycuracaoguide.com/events"
    ]
   },
   {
