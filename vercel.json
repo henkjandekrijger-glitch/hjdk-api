@@ -179,6 +179,14 @@
     {
       "path": "/api/keuze-tools?tool=cur&op=gidsbouw",
       "schedule": "45 7 * * *"
+    },
+    {
+      "path": "/api/cm-distributie?op=dag",
+      "schedule": "10 10 * * *"
+    },
+    {
+      "path": "/api/cm-distributie?op=post",
+      "schedule": "35 10-22/3 * * *"
     }
   ],
   "rewrites": [
@@ -1191,6 +1199,9 @@
     },
     "api/keuze-updates.js": {
       "maxDuration": 180
+    },
+    "api/cm-distributie.js": {
+      "maxDuration": 300
     }
   },
   "redirects": [
