@@ -829,5 +829,17 @@
   "moeite": 1,
   "meten": "zoekvragen per dag",
   "datum": "2026-11-04"
+ },
+ {
+  "id": "chatgpt-bezoek-haalt-google-in",
+  "les": "Bij een jonge site met weinig pagina's in Google kan bezoek uit ChatGPT binnen weken even groot worden als bezoek uit Google. Tel AI-bezoek daarom als volwaardig kanaal: zorg dat de pagina's die ChatGPT-bezoekers krijgen het antwoord direct in de HTML hebben en goed doorlinken, en kijk niet alleen naar Google-kliks.",
+  "kanaal": "llm",
+  "bewijs": "keuzehulp.best, bezoek 7 dagen: uit AI 0 (1 nov), 4 (2 tot 4 nov), 7 (5 nov), alles ChatGPT; uit zoek in dezelfde tijd 22 naar 8. OAI-SearchBot las 155 pagina's in 7 dagen. Perplexity-panel kon niet meten (AI Gateway 402).",
+  "bron": "eigen meting ZICHT 5 nov 2026",
+  "sterkte": 2,
+  "effect": "kanaalkeuze",
+  "moeite": 1,
+  "meten": "bezoekAI7d in op=stand",
+  "datum": "2026-11-05"
  }
 ]

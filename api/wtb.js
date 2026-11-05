@@ -61,6 +61,9 @@ function adviceHtml(m, adv) {
 
 // antwoordblok zoals nexy.help: alleen de eerste zin vet
 function firstBold(t) { t = String(t || ''); const x = t.match(/^([\s\S]+?[.!?])(\s+[\s\S]+)$/); return x ? '<strong>' + esc(x[1]) + '</strong>' + esc(x[2]) : '<strong>' + esc(t) + '</strong>'; }
+// proef ZICHT 'interne-links-niet-geindexeerd' (zoals api/kz.js): gidsen die Google nog niet kent krijgen 4 extra interne links per pagina; 1 op 5 (vaste hash) is controle
+const VIND = {}; const isCtl = slug => { let h = 0; for (const c of String(slug)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h % 5 === 0; };
+async function vindLijst(id) { const v = VIND[id]; if (v && Date.now() - v.at < 600000) return v.l; let l = []; try { const ix = await kv.get('hjdk:gsc:index:' + id); l = ((ix && ix.nietGeindexeerd) || []).filter(x => /onbekend|unknown|Gevonden|Discovered/i.test(String(x.staat || ''))).map(x => { try { return new URL(x.url).pathname.slice(1); } catch (e) { return ''; } }).filter(x => x && !x.includes('/') && !isCtl(x)); } catch (e) {} VIND[id] = { at: Date.now(), l }; return l; }
 async function page(m, it, all, req) {
   const s = m.s; const base = 'https://' + m.host; const a0 = guideAnswers(it, new URL(req.url,'http://x').searchParams.get('answers'));
   const adv = await advice(m, it, a0);
@@ -70,7 +73,10 @@ async function page(m, it, all, req) {
   const sc2 = x => sc(x) + (wacht.has(x.slug) && x.cat === it.cat ? 1.5 : 0);
   const rel = all.filter(x => x.slug !== it.slug && !(KW.dun || {})[x.slug]).sort((x, y) => sc2(y) - sc2(x)).slice(0, 8);
   const bySl = new Map(all.map(x => [x.slug, x])); const sterk = (KW.sterk || []).filter(x => x !== it.slug && bySl.has(x) && !rel.some(r => r.slug === x)).slice(0, 6).map(x => bySl.get(x));
-  const veel = sterk.length ? '<p style="margin:14px 0 0;font-size:15px">' + (m.id === 'us' ? 'Popular' : 'Oft gesucht') + ': ' + sterk.map(x => '<a href="/' + esc(x.slug) + '">' + esc(x.title) + '</a>').join(' · ') + '</p>' : '';
+  const vl = (await vindLijst(m.id)).filter(x => x !== it.slug && bySl.has(x) && !rel.some(r => r.slug === x) && !sterk.some(r => r.slug === x)); let hh = 0; for (const c of it.slug) hh = (hh * 31 + c.charCodeAt(0)) >>> 0;
+  const nv = vl.length ? Array.from({ length: Math.min(4, vl.length) }, (_, i) => vl[(hh + i * 7) % vl.length]).filter((x, i, a) => a.indexOf(x) === i).map(x => bySl.get(x)) : [];
+  const ookNieuw = nv.length ? '<p style="margin:10px 0 0;font-size:15px">' + (m.id === 'us' ? 'Also new' : 'Auch neu') + ': ' + nv.map(x => '<a href="/' + esc(x.slug) + '">' + esc(x.title) + '</a>').join(' · ') + '</p>' : '';
+  const veel = (sterk.length ? '<p style="margin:14px 0 0;font-size:15px">' + (m.id === 'us' ? 'Popular' : 'Oft gesucht') + ': ' + sterk.map(x => '<a href="/' + esc(x.slug) + '">' + esc(x.title) + '</a>').join(' · ') + '</p>' : '') + ookNieuw;
   const qs = (it.questions || []).map((q, qi) => `<div class="q" data-q="${qi}" role="group" aria-labelledby="question-${qi}"><h2 id="question-${qi}">${qi + 1}. ${esc(q.q)}</h2><div class="opts">${(q.options || []).map((o, oi) => `<button class="opt${a0[qi] === oi ? ' on' : ''}" type="button" data-o="${oi}" aria-pressed="${a0[qi] === oi}">${esc(o.label)}</button>`).join('')}</div></div>`).join('');
   const upd = contentDate(it);
   const ld = { '@context': 'https://schema.org', '@graph': [
