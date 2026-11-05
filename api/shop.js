@@ -948,12 +948,12 @@ export default async function handler(req, res) {
       const net = String(url.searchParams.get('net') || 'mg').replace(/[^a-z]/g, '').slice(0, 3); const sinds = Date.now() - Math.max(1, Math.min(72, Number(url.searchParams.get('uren')) || ((Date.now() - new Date(DAY() + 'T00:00:00Z').getTime()) / 36e5))) * 36e5;
       const leeg = () => ({ kwam: 0, geladen: 0, mens: 0, tik: 0, s15: 0, s60: 0, scroll50: 0, pag2: 0, mandjeKlik: 0, nuKopen: 0, afrekenpagina: 0, winkelmand: 0, afrekenen: 0, betaald: 0 });
       const tel = (x, r) => { x.kwam++; if (r.yg) x.geladen++; if (r.ym) x.mens++; if (r.ya) x.tik++; if (r.yt15) x.s15++; if (r.yt60) x.s60++; if (r.ys50) x.scroll50++; if (r.yp2) x.pag2++; if (r.ywk) x.mandjeKlik++; if (r.ykk) x.nuKopen++; if (r.ykp) x.afrekenpagina++; const px = r.px || {}; if (px.cart) x.winkelmand++; if (px.afreken) x.afrekenen++; if (Object.keys(px).some(k => k.startsWith('koop'))) x.betaald++; };
-      const tot = leeg(), per = { product: {}, advertentie: {}, plek: {}, campagne: {} }; let cur = '0', gezien = 0;
+      const tot = leeg(), per = { product: {}, advertentie: {}, plek: {}, campagne: {} }; let cur = '0', gezien = 0; const T0 = Date.now(); // 5 nov: geen telgrens meer (er staan >60.000 records; een telgrens sloeg willekeurig records over), alleen een tijdgrens
       do { const [cc, keys] = await kv.scan(cur, { match: 'hjdk:shc:*', count: 1000 }); cur = cc;
         for (let i = 0; i < keys.length; i += 200) { const vals = await kv.mget(...keys.slice(i, i + 200)); gezien += vals.length;
           for (const r of vals) { if (!r || r.t || r.s !== net || num(r.at) < sinds) continue; tel(tot, r);
             for (const [m, k] of [[per.product, r.p || '-'], [per.advertentie, r.a || '-'], [per.plek, r.z || '-'], [per.campagne, r.k || '-']]) tel(m[k] || (m[k] = leeg()), r); } }
-      } while (cur !== '0' && gezien < 60000);
+      } while (cur !== '0' && Date.now() - T0 < 40000);
       const cat = await catalog(); const naam = {}; cat.items.forEach(i => { naam[i.id] = i.t; });
       const top = (m, n, f) => Object.entries(m).sort((x, y) => y[1].mens - x[1].mens || y[1].kwam - x[1].kwam).slice(0, n).map(([k, v]) => ({ [f]: k, ...(f === 'product' ? { titel: String(naam[k] || '').slice(0, 60) } : {}), ...v, mensPct: v.kwam ? Math.round(100 * v.mens / v.kwam) : 0 }));
       return res.status(200).json({ ok: true, at: new Date().toISOString(), netwerk: NETTEN[net] || net, sinds: new Date(sinds).toISOString(), totaal: { ...tot, mensPct: tot.kwam ? Math.round(100 * tot.mens / tot.kwam) : 0 }, perCampagne: top(per.campagne, 10, 'campagne'), perProduct: top(per.product, 25, 'product'), perAdvertentie: top(per.advertentie, 30, 'advertentie'), perPlek: top(per.plek, 25, 'plek') }); }
@@ -1008,14 +1008,14 @@ export default async function handler(req, res) {
     if (op === 'trechter') { // openbaar, alleen totalen: van bezoek naar doorklik per netwerk, per dag en per product; geen apparaten, geen kliknummers
       const dagen = [0, 1, 2, 3, 4].map(i => DAY(-i)); const perDag = {}; for (const d of dagen) perDag[d] = await dagTotaal(d);
       if (url.searchParams.get('kort') === '1') { const t = perDag[dagen[0]] || {}; const pick = x => x ? { dv: x.dv, geladen: x.dg, inBeeld1s: x.dz, dm: x.dm, da: x.da, t15: x.dt15, t60: x.dt60, scroll50: x.ds50, p2: x.dp2, conv: x.conv, cart: x.cart, koop: x.koop, omzet: x.omzet } : null; const d8 = dagen[0].replace(/-/g, ''); const bkv = await kv.mget(...['', '-bot', '-datacenter', '-botplek'].map(w => 'c:sh-d' + d8 + '-pa-bk' + w)); return res.status(200).json({ ok: true, at: new Date().toISOString(), dag: dagen[0], pa: pick(t.pa), geweigerdPa: { totaal: num(bkv[0]), bot: num(bkv[1]), datacenter: num(bkv[2]), botplek: num(bkv[3]) }, md: pick(t.md), ra: pick(t.ra), mg: pick(t.mg), gisteren: pick((perDag[dagen[1]] || {}).pa) }); } // klein: alleen de dag van vandaag (en gisteren) per netwerk
-      const per = { net: {}, product: {}, zone: {} }; const perArm = {}; let cur = '0', gezien = 0;
+      const per = { net: {}, product: {}, zone: {} }; const perArm = {}; let cur = '0', gezien = 0; const T0 = Date.now(); // 5 nov: geen telgrens meer (er staan >60.000 records; een telgrens sloeg willekeurig records over), alleen een tijdgrens
       do { const [cc, keys] = await kv.scan(cur, { match: 'hjdk:shc:*', count: 1000 }); cur = cc;
         for (let i = 0; i < keys.length; i += 200) { const vals = await kv.mget(...keys.slice(i, i + 200)); gezien += vals.length;
           for (const r of vals) { if (!r) continue; const zk = r.s + ':' + (r.z || '-');
             if (r.arm && !r.t) { const ak = r.arm + ':' + r.s; const a = perArm[ak] || (perArm[ak] = { route: r.arm === 'd' ? 'direct naar de productpagina' : 'via de landingspagina', netwerk: NETTEN[r.s] || r.s, aangekomen: 0, doorNaarShop: 0, echtOpShop: 0, tikOpShop: 0, afrekenen: 0, betaald: 0 });
               a.aangekomen++; if (r.arm === 'd' || r.kl) a.doorNaarShop++; if (r.ym) a.echtOpShop++; if (r.ya) a.tikOpShop++; if (r.px && r.px.cart) a.afrekenen++; if (r.px && Object.keys(r.px).some(k => k.startsWith('koop'))) a.betaald++; }
             for (const [m, k] of [[per.net, r.s], [per.product, r.p || '-'], [per.zone, zk]]) { const x = m[k] || (m[k] = { bezoek: 0, mens: 0, door: 0, snel: 0, sec: [] }); x.bezoek++; if (r.m) x.mens++; if (r.kl) { x.door++; const sec = (r.kl - r.at) / 1000; x.sec.push(sec); if (sec < 3) x.snel++; } } } }
-      } while (cur !== '0' && gezien < 40000);
+      } while (cur !== '0' && Date.now() - T0 < 40000);
       const kort = m => Object.fromEntries(Object.entries(m).map(([k, x]) => { x.sec.sort((a, b) => a - b); const med = x.sec.length ? Math.round(x.sec[Math.floor(x.sec.length / 2)] * 10) / 10 : null; delete x.sec; x.medSecTotKlik = med; return [k, x]; }));
       const zones = Object.entries(kort(per.zone)).sort((a, b) => b[1].door - a[1].door).slice(0, 25);
       return res.status(200).json({ ok: true, at: new Date().toISOString(), records: gezien, direct: await directInst(kv), meetOpYoors: await shopMeet(kv), perRoute: Object.values(perArm).sort((a, b) => b.aangekomen - a.aangekomen), totaal: await netTotaal(), perDag, perNet: kort(per.net), perProduct: kort(per.product), topZones: Object.fromEntries(zones), px: { koop: !!(await kv.get('hjdk:shop:pxlaatst:koop')), cart: !!(await kv.get('hjdk:shop:pxlaatst:cart')) } }); }
@@ -1077,13 +1077,13 @@ export default async function handler(req, res) {
     if (op === 'hulpstand') return res.status(200).json({ ok: true, at: new Date().toISOString(), gidsen: await hulpStand() });
     if (op === 'plek') { // controle van een advertentieplek: hoe snel klikken bezoekers door, zijn het steeds dezelfde apparaten
       const n = String(url.searchParams.get('net') || 'pa').replace(/[^a-z]/g, ''); const z = plekId(url.searchParams.get('z'));
-      const o = { net: n, plek: z, bezoeken: 0, mens: 0, doorklik: 0, gemeld: 0, secTotKlik: [], producten: {}, uren: {}, apparaten: {} }; let cur = '0', gezien = 0;
+      const o = { net: n, plek: z, bezoeken: 0, mens: 0, doorklik: 0, gemeld: 0, secTotKlik: [], producten: {}, uren: {}, apparaten: {} }; let cur = '0', gezien = 0; const T0 = Date.now(); // 5 nov: geen telgrens meer (er staan >60.000 records; een telgrens sloeg willekeurig records over), alleen een tijdgrens
       do { const [c, keys] = await kv.scan(cur, { match: 'hjdk:shc:*', count: 1000 }); cur = c;
         for (let i = 0; i < keys.length; i += 200) { const vals = await kv.mget(...keys.slice(i, i + 200)); gezien += vals.length;
           for (const r of vals) { if (!r || r.s !== n || (z && String(r.z) !== z)) continue; o.bezoeken++; if (r.m) o.mens++; if (r.conv) o.gemeld++;
             if (r.kl) { o.doorklik++; o.secTotKlik.push(Math.round((r.kl - r.at) / 100) / 10); } o.producten[r.p] = (o.producten[r.p] || 0) + 1;
             const u = nlUur(r.at); o.uren[u] = (o.uren[u] || 0) + 1; if (r.h) o.apparaten[r.h] = (o.apparaten[r.h] || 0) + 1; } }
-      } while (cur !== '0' && gezien < 30000);
+      } while (cur !== '0' && Date.now() - T0 < 40000);
       o.secTotKlik.sort((a, b) => a - b); o.verschillendeApparaten = Object.keys(o.apparaten).length; o.vaakstTerug = Math.max(0, ...Object.values(o.apparaten)); delete o.apparaten;
       return res.status(200).json(Object.assign({ ok: true }, o)); }
     if (op === 'advies') { // briefing voor Babita: wat de campagnes leren (live) en wat de verkoop in de shop tegenhoudt
