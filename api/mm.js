@@ -312,7 +312,9 @@ export default async function handler(req, res) {
       const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
       if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
       const { archiveer, archiefStand } = await import('../lib/ruwarchief.js');
-      if (op === 'ruwstand') return res.status(200).json(await archiefStand(kv, { dagen: Number(q('dagen')) || 3 }));
+      if (op === 'ruwstand') { const { shcStand } = await import('../lib/shcarchief.js'); return res.status(200).json({ ...(await archiefStand(kv, { dagen: Number(q('dagen')) || 3 })), shopKliks: await shcStand().catch(e => ({ fout: String(e.message || e).slice(0, 200) })) }); }
+      // 5 nov (Henkjan: "We mogen geen data kruimel verliezen"): om 04 UTC (of met ?shc=1) de kliksporen van de shop naar Blob, de laatste 7 dagen (?dagen= tot 31)
+      if (q('shc') === '1' || (isCron && new Date().getUTCHours() === 4)) { const { shcArchief } = await import('../lib/shcarchief.js'); const r = await shcArchief(kv, { dagen: Number(q('dagen')) || 7 }); return res.status(r.ok ? 200 : 500).json(r); }
       const d = q('dag'); const r = await archiveer(kv, { dagen: d && /^\d{4}-\d{2}-\d{2}$/.test(d) ? [d] : null });
       return res.status(r.ok ? 200 : 500).json(r);
     }
