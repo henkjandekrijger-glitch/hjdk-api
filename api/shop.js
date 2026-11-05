@@ -430,10 +430,11 @@ async function direct(req, res, x) {
   let mmp = leesCookie(req, 'mmp'); const nieuwP = !/^[0-9a-f]{16}$/.test(mmp); if (nieuwP) mmp = nieuwId(8);
   let rec = null; try { rec = await kv.get(K.rec(code)); } catch (e) {}
   const cid = (rec && rec.mmc) || nieuwId(6);
-  const doel = 'https://kadoly.com/' + (x.kassa ? 'checkout/' : 'product/') + encodeURIComponent(pid) + '?utm_source=' + (x.bron ? 'kadoly-gids' : NETTEN[net].toLowerCase()) + '&utm_medium=' + (x.bron ? x.bron.medium : (x.vorm || 'push')) + '&utm_campaign=' + (x.bron ? encodeURIComponent(x.bron.campaign) : 'shoplus') + '&utm_content=' + encodeURIComponent(pk(pid)) + '&hj=' + code + '&mmc=' + cid + '&lang=nl';
+  const doel = 'https://kadoly.com/' + (x.kassa ? 'checkout/' : 'product/') + encodeURIComponent(pid) + '?utm_source=' + (x.bron ? (x.bron.source || 'kadoly-gids') : NETTEN[net].toLowerCase()) + '&utm_medium=' + (x.bron ? x.bron.medium : (x.vorm || 'push')) + '&utm_campaign=' + (x.bron ? encodeURIComponent(x.bron.campaign) : 'shoplus') + '&utm_content=' + encodeURIComponent(pk(pid)) + '&hj=' + code + '&mmc=' + cid + '&lang=nl';
   if (!weiger && !prefetch && (!rec || !rec.mmc)) {
-    const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; rec.mmc = cid; rec.mp = mmp; if (x.rt) rec.rt = x.rt; if (test) rec.t = 1;
+    const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; rec.mmc = cid; rec.mp = mmp; if (x.distributionId) { rec.dist = x.distributionId; rec.distSource = x.bron.source; rec.distTrend = x.trendId; } if (x.rt) rec.rt = x.rt; if (test) rec.t = 1;
     try { await Promise.all([kv.set(K.rec(code), rec, { ex: 7 * 86400 }), cidKoppel(kv, { cid, pid: mmp, arm: rec.arm === 'd' ? 'direct' : 'pagina', tag: 'yoors-shop', net: test ? 'test' : CM_NET[net], zone: zone || '-', camp: camp || '-', shop: code })]); } catch (e) {}
+    if (eerst && !test && x.distributionId) { try { await kv.raw(['SADD', 'cm:distribution:v1:codes:' + x.distributionId, code]); await kv.raw(['EXPIRE', 'cm:distribution:v1:codes:' + x.distributionId, '7776000']); } catch (e) {} }
     if (eerst && !test) {
       const keys = ['sh-' + net + '-dv', 'sh-d' + D8() + '-' + net + '-dv', 'sh-u' + nlUur() + '-dv', 'sh-p-' + pk(pid) + '-dv'];
       if (zone) keys.push('sh-' + net + '-z' + zone + '-dv', 'sh-' + net + '-z' + zone + '-hv'); if (cr) keys.push('sh-' + net + '-a' + cr + '-dv'); if (camp) keys.push('sh-' + net + '-k' + camp + '-dv');
@@ -919,6 +920,21 @@ export default async function handler(req, res) {
     if (op === 'keten') { // openbaar, alleen totalen: de lekketen van de shop richting de kassa per dag (?dag=JJJJ-MM-DD, ?vorm=tekst)
       const { lekketen, ketenTekst } = await import('../lib/shopketen.js'); const dg = /^\d{4}-\d{2}-\d{2}$/.test(url.searchParams.get('dag') || '') ? url.searchParams.get('dag') : DAY(); const kt = await lekketen(kv, dg);
       res.setHeader('cache-control', 'no-store'); if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(ketenTekst(kt)); } return res.status(200).json(kt); }
+    if (op === 'distuit') { // Clickmind organic distribution: target comes only from a stored publication.
+      const id = String(url.searchParams.get('id') || '');
+      if (!/^[a-f0-9]{24}$/.test(id)) return res.status(400).end();
+      const row = await kv.get('cm:distribution:v1:item:' + id);
+      if (!row || !['pinterest', 'flipboard'].includes(row.network) || row.item?.kind !== 'product') return res.status(404).end();
+      const pid = pidOk(row.item.id); if (!pid) return res.status(404).end();
+      // Social preview crawlers see the same product without creating a person/click record.
+      if (isBot(req.headers['user-agent'] || '') || /prefetch|prerender/i.test(String(req.headers['sec-purpose'] || req.headers.purpose || ''))) {
+        res.setHeader('cache-control', 'no-store'); res.setHeader('location', 'https://kadoly.com/product/' + encodeURIComponent(pid) + '?lang=nl&utm_source=' + row.network + '&utm_medium=organic&utm_campaign=cm-' + row.trend.id); return res.status(302).end();
+      }
+      const clickid = 'dist-' + id + '-' + randomBytes(6).toString('hex');
+      return await direct(req, res, { net: 'x', clickid, zone: '', cr: id, camp: row.trend.id, pid, code: shortId(clickid),
+        bot: isBot(req.headers['user-agent'] || ''), vrij: true, distributionId: id, trendId: row.trend.id,
+        bron: { source: row.network, medium: 'organic', campaign: 'cm-' + row.trend.id } });
+    }
     if (op === 'gidsuit') { // klik vanuit gids.kadoly.com naar een product: via Clickmind (direct), zodat de keten tot betaald per gids gemeten wordt (30 okt)
       const pid = pidOk(url.searchParams.get('p')); const g = String(url.searchParams.get('g') || '').replace(/[^a-z0-9-]/g, '').slice(0, 60); const b = String(url.searchParams.get('b') || '').replace(/[^a-z]/g, '').slice(0, 12);
       if (!pid) { res.statusCode = 302; res.setHeader('location', 'https://kadoly.com/'); return res.end(); }
