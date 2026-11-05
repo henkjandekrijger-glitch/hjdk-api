@@ -56,7 +56,7 @@ import { echteTag, verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, ser
 import { leesWissel, bewaarWissel, alleWissels, kiesArm, soortPersoon, bestemming, wisselKlik, cidKoppel, uitkomst, amazonUitkomst, wisselStand } from '../lib/wissel.js';
 import { leerRonde, instelling } from '../lib/leer.js';
 import { dossier, naarCsv, dagDossiers } from '../lib/terug.js';
-import { modalBeslis, modalEv, modalMail, modalGedrag, leesModal, bewaarModal, alleModals, modalStand, catalogus, bewaarCatalogus } from '../lib/modal.js';
+import { modalBeslis, modalEv, modalMail, modalGedrag, leesModal, bewaarModal, alleModals, modalStand, catalogus, bewaarCatalogus, zetModalAlias, VORMEN } from '../lib/modal.js';
 import { overdracht } from '../lib/overdracht.js';
 import { RT_JS, RT_GO_JS, rtBeslis, leesRt, zetRt, rtStand } from '../lib/retarget.js';
 
@@ -233,11 +233,13 @@ export default async function handler(req, res) {
       if (!beschermd(req)) return res.status(403).json({ ok: false });
       const r = await fetch((process.env.TODAYIN_URL || 'https://todayin.email') + '/api/ti', { method: 'POST', body: new URLSearchParams({ email: 'geen-adres', src: 'clickmind', ts: '5000', website: '' }), headers: { 'content-type': 'application/x-www-form-urlencoded', 'user-agent': 'Clickmind/1 (+https://whichtobuy.best)' }, redirect: 'manual' }).catch(e => ({ status: 0, text: async () => String(e && e.message || e) }));
       const h = await r.text().catch(() => ''); return res.status(200).json({ ok: true, status: r.status, bereikbaar: r.status === 400 && /does not look right/i.test(h), begin: h.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 200) }); }
+    if (op === 'modalknop') return modalKnop(req, res, q); // 5 nov: Henkjans eigen schakelaar (beschermde host)
     if (op === 'modalbeheer') {
       res.setHeader('cache-control', 'no-store');
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
       if (q('catalogus')) { if (q('j')) { const r = await bewaarCatalogus(kv, JSON.parse(q('j'))); return res.status(r.ok ? 200 : 400).json(r); } return res.status(200).json({ catalogus: await catalogus(kv) }); }
       if (q('j') || req.method === 'POST') { const j = req.method === 'POST' ? leesJson(req.body) : leesJson(q('j')); const r = await bewaarModal(kv, j); return res.status(r.ok ? 200 : 400).json(r); }
+      if (q('alias')) { const r = await zetModalAlias(kv, q('alias'), q('naar') || ''); return res.status(r.ok ? 200 : 400).json(r); } // ?alias=yoors&naar=kadoly (leeg naar = weg)
       if (q('site') && (q('aan') === '1' || q('aan') === '0')) { const m = await kv.get('mm:modal:' + String(q('site')).toLowerCase()); if (!m) return res.status(404).json({ ok: false, fout: 'onbekende site' }); const { model, leer, momLeer, vormLeer, varLeer, rem, ...rest } = m; const r = await bewaarModal(kv, { ...rest, uit: q('aan') !== '1' }); return res.status(r.ok ? 200 : 400).json({ ok: r.ok, site: m.site, uit: r.modal && r.modal.uit, fout: r.fout }); } // 5 nov: aan of uit in één tik
       if (q('mail')) {
         const lijst = String(q('mail')).toLowerCase().replace(/[^a-z0-9-]/g, ''), h = await kv.raw(['HGETALL', 'mm:mail:' + lijst]);
@@ -679,7 +681,7 @@ if(a.doel==='todayin'||a.doel==='kadoly'){post(0)}else if(a.doel==='moonlighter'
 else if(typeof W.mmAanmelden==='function'){q(function(){Promise.resolve(W.mmAanmelden(m,{site:site,arm:a.id})).then(function(ok){if(ok)post(1);else fout()},function(){fout()})})}else post(0)}}
 if(el)el.appendChild(host);else (D.body||D.documentElement).appendChild(host)}
 /* betaald: op de bedankpagina zet de shop data-cm-betaald (bedrag); dan telt 'koop' bij de laatste beslissing van de afgelopen 7 dagen, ook bij de controlegroep */
-var mk='mmqm:'+site;function koop(){if(!D.querySelector('[data-cm-betaald]'))return 0;var l=(ls(mk)||'').split('|');if(/^[0-9a-f]{12}$/.test(l[0]||'')&&Date.now()-Number(l[1]||0)<7*864e5&&l[2]!=='k'){evMid(l[0],'koop');ls(mk,l[0]+'|'+l[1]+'|k')}return 1}
+var mk='mmqm';function koop(){if(!D.querySelector('[data-cm-betaald]'))return 0;var l=(ls(mk)||'').split('|');if(/^[0-9a-f]{12}$/.test(l[0]||'')&&Date.now()-Number(l[1]||0)<7*864e5&&l[2]!=='k'){evMid(l[0],'koop');ls(mk,l[0]+'|'+l[1]+'|k')}return 1}
 function vraag(){var nk=0;if(!koop()){var ik=setInterval(function(){if(koop()||++nk>10)clearInterval(ik)},1500)}
 var pl=[];q(function(){[].forEach.call(D.querySelectorAll('[data-cm-plek]'),function(x){var n=String(x.getAttribute('data-cm-plek')||'').toLowerCase();if(/^[a-z0-9-]{1,30}$/.test(n)&&pl.indexOf(n)<0)pl.push(n)})});
 var warm=ss('cmWarm')==='1'||/^(warm|heet|koper)$/.test(ss('cmSeg')||'')?1:0;
@@ -768,4 +770,50 @@ async function overzicht() {
   h += '<h2>Leerlog</h2><div class="w">' + tabel(['ronde'], (log || []).map(x => [String(x)])) + '</div>';
   h += '<h2>Vandaag per netwerk (mensmeter)</h2><div class="w">' + tabel(['netwerk', 'bezoeken', 'via /go en /w', 'gemeten op pagina', 'mens', 'datacenter', 'headless'], Object.entries(st.netwerken || {}).map(([n, x]) => [n, x.bezoeken, x.viaGo, x.gemeten, p(x.mensPct), p(x.datacenterPct), p(x.headlessPct)])) + '</div>';
   return h + '</body></html>';
+}
+
+// ---- Henkjans schakelaar voor een modal (Henkjan 5 nov: "ik wil de modal ook op Kadoly.com zelf kunnen activeren") ----
+// /api/mm/modalknop?site=kadoly op de beschermde vercel.app-host (Vercel-login): aan/uit, vormen aan/uit, voorbeeld per vorm op de echte site,
+// en de cijfers van 14 dagen. Elke knop is een gewone link; na de wijziging terug naar dezelfde pagina.
+async function modalKnop(req, res, q) {
+  res.setHeader('cache-control', 'no-store');
+  if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
+  const site = String(q('site') || 'kadoly').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 30), terug = '/api/mm/modalknop?site=' + site;
+  let m0 = await kv.get('mm:modal:' + site);
+  if (!m0) return res.status(404).send('onbekende modal: ' + site);
+  const { model, leer, momLeer, vormLeer, varLeer, rem, ...rest } = m0; let melding = '';
+  if (q('aan') === '1' || q('aan') === '0') { const r = await bewaarModal(kv, { ...rest, uit: q('aan') !== '1' }); melding = r.ok ? (q('aan') === '1' ? 'Staat nu aan.' : 'Staat nu uit.') : 'Lukt niet: ' + r.fout; }
+  else if (q('vorm') && VORMEN.includes(q('vorm')) && (q('v') === '1' || q('v') === '0')) {
+    const nu = new Set(rest.vormen || ['midden']); if (q('v') === '1') nu.add(q('vorm')); else nu.delete(q('vorm'));
+    if (!nu.size) melding = 'Minstens één vorm moet aan blijven.'; else { const r = await bewaarModal(kv, { ...rest, vormen: VORMEN.filter(v => nu.has(v)) }); melding = r.ok ? 'Vormen bijgewerkt.' : 'Lukt niet: ' + r.fout; }
+  }
+  if (melding) { res.statusCode = 302; res.setHeader('location', terug + '&m=' + encodeURIComponent(melding)); return res.end(); }
+  const m = await leesModal(kv, site, true), st = await modalStand(kv, m, 14).catch(() => null), klaar = site !== 'kadoly' || !!(await kv.get('gk:nb:mailklaar').catch(() => 0));
+  const e = esc, dom = m.domeinen[0], arm1 = (m.armen.find(a => a.soort !== 'geen') || {}).id || '';
+  const voorbeeld = v => 'https://' + dom + (dom === 'kadoly.com' ? '/product/oc_4174004347453441' : '/') + '?mmc=1&mmm=' + encodeURIComponent(arm1 + '~v0~' + v);
+  const getal = x => Number(x || 0).toLocaleString('nl-NL');
+  const armRijen = (st || []).map(x => '<tr><td>' + e(x.soort === 'geen' ? 'niets tonen (controle)' : (m.armen.find(a => a.id === x.id) || {}).titel || x.id) + '</td><td>' + getal(x.n) + '</td><td>' + getal(x.toon) + '</td><td>' + getal(x.aanmelding) + '</td><td>' + getal(x.bevestigd) + '</td><td>' + getal(x.koop) + '</td></tr>').join('');
+  const vormNaam = { midden: 'Midden', onder: 'Onderaan', hoek: 'Hoek', balk: 'Balk', blok: 'Blok in de pagina', vol: 'Volledig scherm' };
+  const vormRijen = VORMEN.map(v => { const aan = (m.vormen || ['midden']).includes(v), x = st && st.vormen ? st.vormen.find(y => y.vorm === v) || {} : {};
+    return '<tr><td><b>' + vormNaam[v] + '</b>' + (v === 'blok' ? '<br><small>alleen waar een plek staat</small>' : '') + '</td><td>' + getal(x.toon) + '</td><td>' + getal(x.aanmelding) + '</td><td><a class="k ' + (aan ? 'a' : 'u') + '" href="' + terug + '&vorm=' + v + '&v=' + (aan ? 0 : 1) + '">' + (aan ? 'Aan' : 'Uit') + '</a></td><td><a href="' + e(voorbeeld(v)) + '" target="_blank" rel="noopener">Bekijk</a></td></tr>'; }).join('');
+  const status = m.uit ? 'UIT' : klaar ? 'AAN' : 'AAN, maar wacht';
+  const html = '<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Modal ' + e(site) + '</title><style>'
+    + 'body{margin:0;background:#fff;color:#0f172a;font:16px/1.5 Inter,system-ui,-apple-system,sans-serif}main{max-width:720px;margin:0 auto;padding:24px 16px 48px}h1{font-size:26px;margin:0 0 4px}h2{font-size:18px;margin:32px 0 10px}'
+    + '.st{display:inline-block;padding:4px 12px;border-radius:999px;font-weight:700;font-size:14px}.st.aan{background:#dcfce7;color:#166534}.st.uit{background:#fee2e2;color:#991b1b}.st.wacht{background:#fef3c7;color:#92400e}'
+    + '.groot{display:block;text-align:center;margin:18px 0 6px;padding:16px;border-radius:12px;font-weight:700;font-size:18px;text-decoration:none;color:#fff;background:#1D9BF0}.groot.uitzet{background:#0f172a}'
+    + '.m{background:#e0f2fe;border-radius:10px;padding:10px 14px;margin:14px 0}.w{background:#fef3c7;border-radius:10px;padding:10px 14px;margin:14px 0}'
+    + 'table{width:100%;border-collapse:collapse;font-size:15px}td,th{padding:9px 6px;border-bottom:1px solid #e2e8f0;text-align:left;vertical-align:top}th{font-size:13px;color:#334155}td:nth-child(n+2),th:nth-child(n+2){text-align:right}'
+    + 'a{color:#1D9BF0}.k{display:inline-block;min-width:44px;text-align:center;padding:4px 10px;border-radius:8px;font-weight:700;text-decoration:none}.k.a{background:#1D9BF0;color:#fff}.k.u{background:#fff;color:#0f172a;border:1px solid #cbd5e1}small{color:#475569}code{background:#f1f5f9;padding:2px 6px;border-radius:6px;font-size:13px;word-break:break-all}'
+    + '</style></head><body><main>'
+    + '<h1>Modal ' + e(site) + '</h1><span class="st ' + (m.uit ? 'uit' : klaar ? 'aan' : 'wacht') + '">' + status + '</span> <small>op ' + e(m.domeinen.join(', ')) + '</small>'
+    + (q('m') ? '<p class="m">' + e(q('m')) + '</p>' : '')
+    + (!klaar ? '<p class="w">Het verzendadres post.kadoly.com is nog niet bevestigd bij Resend. Tot dan toont de modal niets, ook als hij aan staat (anders kan de bevestigingsmail niet weg).</p>' : '')
+    + '<a class="groot ' + (m.uit ? '' : 'uitzet') + '" href="' + terug + '&aan=' + (m.uit ? 1 : 0) + '">' + (m.uit ? 'Zet de modal aan' : 'Zet de modal uit') + '</a><small>Werkt binnen een minuut op de hele site. Altijd 15% van de bezoekers ziet niets, zodat je ziet of de modal verkoop kost.</small>'
+    + '<h2>Vormen</h2><p><small>Tik op Aan of Uit. De modal leert zelf welke vorm het best werkt, per telefoon en computer. "Bekijk" toont die vorm meteen op ' + e(dom) + ', zonder dat het meetelt.</small></p>'
+    + '<table><tr><th>Vorm</th><th>Getoond</th><th>Aanmeldingen</th><th></th><th></th></tr>' + vormRijen + '</table>'
+    + '<h2>Laatste 14 dagen</h2><table><tr><th>Aanbod</th><th>Bezoekers</th><th>Getoond</th><th>Aangemeld</th><th>Bevestigd</th><th>Gekocht</th></tr>' + (armRijen || '<tr><td colspan="6">Nog geen bezoekers.</td></tr>') + '</table>'
+    + '<h2>Op de site</h2><p><small>Deze regel in de &lt;head&gt; van elke pagina (bij Kadoly mag hij ook in het blok global_head in de admin):</small><br><code>&lt;script src="https://go.' + e(dom) + '/cm.js" data-site="yoors" data-modal="' + e(site) + '" async&gt;&lt;/script&gt;</code></p>'
+    + '<p><small>Teksten, kleuren, momenten of pagina’s waar hij nooit komt wijzigen: zeg het Claude in de chat.</small></p>'
+    + '</main></body></html>';
+  res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(html);
 }
