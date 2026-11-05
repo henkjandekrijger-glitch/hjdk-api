@@ -30,7 +30,7 @@ import seed from '../data/shop-seed.json' with { type: 'json' };
 import { SHOP_PHP } from '../lib/shopphp.js';
 import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
-import { PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet } from '../lib/shopdirect.js';
+import { PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel } from '../lib/shopdirect.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
 import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
@@ -609,7 +609,7 @@ async function pxVerwerk(code, wRuw, v, order, methode, bron, t) {
   if (bron !== 'feed') { const laatst = { at: Date.now(), test: /^test/i.test(code), bedrag: v, order: !!order, methode: m || null, bron: bron || 'shop' }; try { await kv.set('hjdk:shop:pxlaatst:' + w, laatst); if (m) await kv.set('hjdk:shop:pxlaatst:' + w + ':' + m, laatst, { ex: 60 * 86400 }); } catch (e) {} }
   if (!code) { await uurTel(kv, '?', [w].concat(m ? [w + ':' + m] : []), t); if (w === 'koop' && v > 0) await uurTel(kv, '?', 'omzet', t, Math.round(v * 100)); return { ok: true, zonderKenmerk: true }; }
   let rec = null; try { rec = await kv.get(K.rec(code)); } catch (e) {}
-  if (rec && rec.mp && !rec.t) await warmZet(kv, rec.mp, rec.p, w);
+  if (rec && rec.mp && !rec.t) await warmZet(kv, rec.mp, rec.p, w === 'koop' || w === 'betaal' || isBewust(rec) ? w : 'bekeken'); // 5 nov: een snelle tik op de koopbalk is geen warm publiek
   const merk = w + (order ? ':' + order : '');
   if (!rec) { // kenmerk onbekend (bijv. de database was vol toen de klik binnenkwam): wel per uur tellen, zodat het lek zichtbaar blijft
     const k = 'hjdk:shop:pxonbekend:' + code + ':' + merk; let al = null; try { al = await kv.get(k); } catch (e) {}
@@ -622,15 +622,14 @@ async function pxVerwerk(code, wRuw, v, order, methode, bron, t) {
   if (!rec.t && rec.mmc && (w === 'cart' || w === 'afreken' || w === 'koop')) { try { const vid = await kv.raw(['GET', 'mm:vfc:' + rec.mmc]); if (vid) { const { paginaUitkomst } = await import('../lib/mensmeter.js'); await paginaUitkomst(kv, { vid: String(vid), soort: w === 'koop' ? 'koop' : 'actie' }); } } catch (e) {} } // Clickmind-profiel van wie afrekent of koopt op kadoly.com (1 nov, Henkjan: "Regel dit ook voor kadoly verkeer")
   if (!rec.t && /^gids-/.test(String(rec.c || ''))) { const gm = String(rec.c).match(/^gids-(.+?)(?:-([kp]))?-[0-9a-f]{12}$/); if (gm) { const dk = 'gk:d:' + DAY(); try { await kv.raw(['HINCRBY', dk, gm[1] + '|px-' + w + '-' + (gm[2] || 'p'), '1']); if (w === 'koop' && v > 0) await kv.raw(['HINCRBY', dk, gm[1] + '|omzet-' + (gm[2] || 'p'), String(Math.round(v * 100))]); await kv.raw(['EXPIRE', dk, String(60 * 86400)]); } catch (e) {} } } // gids.kadoly.com: keten tot betaald per gids en per arm (productpagina p, meteen afrekenen k)
   if (!rec.t) await uurTel(kv, net, [w].concat(m ? [w + ':' + m] : []), t);
+  if (w === 'betaal') { try { await kassaDoel(kv, rec); } catch (e) {} } // betaling gestart is altijd bewust (5 nov)
   if (oud && !(oud === 'cart' && (rec.px.cartTeld || (w === 'afreken' && rec.px.cart)))) { if (oud === 'cart') rec.px.cartTeld = Date.now();
     const keys = ['sh-' + net + '-' + oud, 'sh-d' + D8() + '-' + net + '-' + oud]; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-' + oud); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-' + oud); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-' + oud); if (rec.p) keys.push('sh-p-' + pk(rec.p) + '-' + oud);
     await inc(keys);
     // PropellerAds kent drie doelen: 1 = doorklik naar de shop (meldt de uitgang zelf), 2 = afrekenpagina geopend, 3 = betaald (met bedrag)
     // Directe route (arm d): zolang cm.js op yoo.rs de eerste tik niet meldt, is de afrekenpagina (of de betaling) het hoofddoel,
     // anders leren PropellerAds en Mondiad op CPA niets. Eenmaal per klik (rec.conv), nooit voor testkliks.
-    if (rec.arm === 'd' && (net === 'pa' || net === 'md') && !rec.conv && !rec.t && rec.c && PB[net]) { rec.conv = Date.now(); try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(PB[net].replace('{clickid}', encodeURIComponent(rec.c)) + (net === 'md' ? '&payout=0' : ''), { signal: ctl.signal }); clearTimeout(tm); rec.pb = r.status; await inc(['sh-' + net + '-conv', 'sh-d' + D8() + '-' + net + '-conv', 'sh-' + net + '-pbd' + r.status].concat(rec.z ? ['sh-' + net + '-z' + rec.z + '-conv'] : [])); } catch (e) {} }
-    if (oud === 'cart' && net === 'mg' && rec.c && !rec.t && !rec.px.mg2) { rec.px.mg2 = Date.now(); try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(mgUrl(rec.c, mgEvent(MG_STAP.kassa, rec.k)), { signal: ctl.signal }); clearTimeout(tm); await inc(['sh-mg-pb2-' + r.status, 'sh-d' + D8() + '-mg-pb2']); } catch (e) {} } // MGID stap decision: afrekenpagina geopend
-    if (oud === 'cart' && net === 'pa' && rec.c && !rec.px.pa2) { rec.px.pa2 = Date.now(); try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(PB.pa.replace('{clickid}', encodeURIComponent(rec.c)) + '&goal=2', { signal: ctl.signal }); clearTimeout(tm); await inc(['sh-pa-pb2-' + r.status]); } catch (e) {} }
+    if (w === 'cart' || w === 'afreken' || w === 'betaal') { try { await kassaDoel(kv, rec); } catch (e) {} } // 5 nov: kassadoelen (PropellerAds doel 2 en terugval-hoofdconversie, MGID decision) alleen bij bewust afrekenen (lib/shopdirect.js isBewust); anders later, zodra cm.js een bewuste stap meldt
     if (oud === 'koop') { let st = 0; if (v > 0) { try { await kv.incrMany([['c:sh-' + net + '-omzet', Math.round(v * 100)], ['c:sh-d' + D8() + '-' + net + '-omzet', Math.round(v * 100)]]); } catch (e) {} if (!rec.t) await uurTel(kv, net, 'omzet', t, Math.round(v * 100)); }
       if (rec.c && PB[net] && (net !== 'ra' || !rec.conv) && !rec.t) { try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(net === 'mg' ? mgUrl(rec.c, mgEvent(MG_STAP.koop, rec.k), v) : PB[net].replace('{clickid}', encodeURIComponent(rec.c)) + (net === 'ra' ? '' : '&payout=' + v.toFixed(2)) + (net === 'pa' ? '&goal=3' : ''), { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (e) {} rec.conv = rec.conv || Date.now(); }
       await log({ soort: 'bestelling', wat: (v ? eur(v) + ' ' : '') + 'via ' + (net === 'x' ? 'eigen verkeer' : NETTEN[net]) + (m ? ' (' + m + ')' : ''), waarom: 'plek ' + (rec.z || '?') + ', advertentie ' + (rec.a || '?') + (rec.c && PB[net] ? ', gemeld aan het netwerk (HTTP ' + st + ')' : '') + (bron === 'feed' ? ', gevonden in de datapagina van de shop' : '') }); } }
@@ -641,6 +640,8 @@ async function pixel(req, res, url) {
   const q = url.searchParams; const code = String(q.get('c') || '').replace(/[^a-z0-9]/gi, '').slice(0, 14);
   const v = Math.max(0, Math.min(100000, num(q.get('v')))); const order = String(q.get('o') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40);
   try { await pxVerwerk(code, String(q.get('w') || ''), v, order, q.get('m'), 'shop'); } catch (e) {}
+  // 5 nov (panel): de reden van een mislukte betaling niet meer weggooien (per methode), zodat het lek tussen betaling gestart en betaald zichtbaar is
+  if (String(q.get('w') || '') === 'fout' || q.get('r')) { try { await kv.raw(['LPUSH', 'hjdk:shop:betaalfout', JSON.stringify({ at: Date.now(), c: code, w: String(q.get('w') || '').slice(0, 12), m: String(q.get('m') || '').slice(0, 20), r: String(q.get('r') || '').slice(0, 200), v })]); await kv.raw(['LTRIM', 'hjdk:shop:betaalfout', '0', '499']); await kv.raw(['EXPIRE', 'hjdk:shop:betaalfout', String(90 * 86400)]); } catch (e) {} }
   res.setHeader('content-type', 'image/gif'); res.setHeader('cache-control', 'no-store'); return res.end(Buffer.from('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', 'base64'));
 }
 
