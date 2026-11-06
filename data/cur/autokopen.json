@@ -1,6 +1,6 @@
 {
  "id": "autokopen",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-06",
  "onderwerp": {
   "nl": "autodealer",
   "en": "car dealer",
@@ -283,29 +283,31 @@
   {
    "id": "garage-cordia",
    "naam": "Garage Cordia",
-   "url": null,
+   "url": "https://www.garagecordia.com/",
    "soort": {
-    "nl": "Toyota-dealer",
-    "en": "Toyota dealer",
-    "de": "Toyota-Händler",
-    "es": "concesionario Toyota",
-    "pt": "concessionária Toyota"
+    "nl": "Toyota- en Lexus-dealer",
+    "en": "Toyota and Lexus dealer",
+    "de": "Toyota- und Lexus-Händler",
+    "es": "concesionario Toyota y Lexus",
+    "pt": "concessionária Toyota e Lexus"
    },
    "plaats": "Kaya Jacob Posner 39",
    "tags": [
     "nieuw",
     "merk-toyota",
     "onderhoud",
-    "suv"
+    "suv",
+    "merk-lexus",
+    "luxe"
    ],
    "prijs": null,
    "feiten": [
     {
-     "nl": "Dealer van Toyota",
-     "en": "Toyota dealer",
-     "de": "Toyota-Händler",
-     "es": "concesionario Toyota",
-     "pt": "concessionária Toyota"
+     "nl": "Ook dealer van Lexus en Toyota-heftrucks",
+     "en": "Also Lexus and Toyota forklifts",
+     "de": "Auch Lexus und Toyota-Gabelstapler",
+     "es": "También Lexus y montacargas Toyota",
+     "pt": "Também Lexus e empilhadeiras Toyota"
     },
     {
      "nl": "Personenauto's en pick-ups",
@@ -375,7 +377,8 @@
     ]
    },
    "bronnen": [
-    "https://www.google.com/maps/place/?q=place_id:ChIJTZmR0YKChI4RAEIclGjIGxk"
+    "https://www.google.com/maps/place/?q=place_id:ChIJTZmR0YKChI4RAEIclGjIGxk",
+    "https://www.garagecordia.com/brands"
    ]
   },
   {
@@ -399,6 +402,13 @@
    ],
    "prijs": null,
    "feiten": [
+    {
+     "nl": "Open ma t/m vr 7:30 tot 12:00 en 13:30 tot 17:00",
+     "en": "Open Mon to Fri 7:30 to 12:00 and 13:30 to 17:00",
+     "de": "Geöffnet Mo bis Fr 7:30 bis 12:00 und 13:30 bis 17:00",
+     "es": "Abre de lunes a viernes de 7:30 a 12:00 y de 13:30 a 17:00",
+     "pt": "Aberto de segunda a sexta das 7:30 às 12:00 e das 13:30 às 17:00"
+    },
     {
      "nl": "Enige Kia-dealer op het eiland",
      "en": "Only Kia dealer on the island",
@@ -469,27 +479,36 @@
     ]
    },
    "bronnen": [
-    "https://www.google.com/maps/place/?q=place_id:ChIJo9e0uH19g44RBMZeTmsezPE"
+    "https://www.google.com/maps/place/?q=place_id:ChIJo9e0uH19g44RBMZeTmsezPE",
+    "https://destinito.com/curacao/directory/universal-motors-b-v"
    ]
   },
   {
    "id": "autocity",
    "naam": "Autocity",
-   "url": null,
+   "url": "https://autocitybv.com/",
    "soort": {
-    "nl": "dealer en werkplaats",
-    "en": "dealer and service",
-    "de": "Händler und Werkstatt",
-    "es": "concesionario y taller",
-    "pt": "concessionária e oficina"
+    "nl": "Mitsubishi-dealer en werkplaats",
+    "en": "Mitsubishi dealer and service",
+    "de": "Mitsubishi-Händler und Werkstatt",
+    "es": "concesionario Mitsubishi y taller",
+    "pt": "concessionária Mitsubishi e oficina"
    },
    "plaats": "Elias R.A. Moreno Boulevard 1",
    "tags": [
     "nieuw",
-    "onderhoud"
+    "onderhoud",
+    "merk-mitsubishi"
    ],
    "prijs": null,
    "feiten": [
+    {
+     "nl": "Officiële Mitsubishi-dealer voor Curaçao en Bonaire",
+     "en": "Official Mitsubishi dealer for Curaçao and Bonaire",
+     "de": "Offizieller Mitsubishi-Händler für Curaçao und Bonaire",
+     "es": "Concesionario oficial de Mitsubishi para Curazao y Bonaire",
+     "pt": "Concessionária oficial Mitsubishi para Curaçao e Bonaire"
+    },
     {
      "nl": "Ook zaterdagochtend open",
      "en": "Also open Saturday mornings",
@@ -548,35 +567,45 @@
     ]
    },
    "bronnen": [
-    "https://www.google.com/maps/place/?q=place_id:ChIJ976dAH59g44RSOM-9eEearw"
+    "https://www.google.com/maps/place/?q=place_id:ChIJ976dAH59g44RSOM-9eEearw",
+    "https://autocitybv.com/"
    ]
   },
   {
    "id": "star-motors",
    "naam": "Star Motors",
-   "url": null,
+   "url": "https://starcuracao.com/",
    "soort": {
-    "nl": "dealer Great Wall/Haval",
-    "en": "Great Wall/Haval dealer",
-    "de": "Great-Wall/Haval-Händler",
-    "es": "concesionario Great Wall/Haval",
-    "pt": "concessionária Great Wall/Haval"
+    "nl": "dealer Great Wall, Haval, MG, Maxus en Geely",
+    "en": "Great Wall, Haval, MG, Maxus and Geely dealer",
+    "de": "Händler für Great Wall, Haval, MG, Maxus und Geely",
+    "es": "concesionario Great Wall, Haval, MG, Maxus y Geely",
+    "pt": "concessionária Great Wall, Haval, MG, Maxus e Geely"
    },
    "plaats": "Weg naar Welgelegen 38",
    "tags": [
     "nieuw",
     "merk-greatwall",
     "suv",
-    "onderhoud"
+    "onderhoud",
+    "merk-mg",
+    "merk-geely"
    ],
    "prijs": null,
    "feiten": [
     {
-     "nl": "Verkoopt o.a. Haval-SUV's",
-     "en": "Sells Haval SUVs, among others",
-     "de": "Verkauft unter anderem Haval-SUVs",
-     "es": "Vende, entre otros, SUV Haval",
-     "pt": "Vende, entre outros, SUVs Haval"
+     "nl": "Tweede vestiging aan Saliña 196",
+     "en": "Second branch at Saliña 196",
+     "de": "Zweite Filiale in Saliña 196",
+     "es": "Segunda sucursal en Saliña 196",
+     "pt": "Segunda filial em Saliña 196"
+    },
+    {
+     "nl": "Open ma t/m vr 8:00 tot 12:00 en 13:30 tot 17:30, za 9:00 tot 13:00",
+     "en": "Open Mon to Fri 8:00 to 12:00 and 13:30 to 17:30, Sat 9:00 to 13:00",
+     "de": "Geöffnet Mo bis Fr 8:00 bis 12:00 und 13:30 bis 17:30, Sa 9:00 bis 13:00",
+     "es": "Abre de lunes a viernes de 8:00 a 12:00 y de 13:30 a 17:30, sábados de 9:00 a 13:00",
+     "pt": "Aberto de segunda a sexta das 8:00 às 12:00 e das 13:30 às 17:30, sábado das 9:00 às 13:00"
     }
    ],
    "scores": [
@@ -634,27 +663,37 @@
     ]
    },
    "bronnen": [
-    "https://www.google.com/maps/place/?q=place_id:ChIJSy1vueOChI4RS6Id_UX7TIk"
+    "https://www.google.com/maps/place/?q=place_id:ChIJSy1vueOChI4RS6Id_UX7TIk",
+    "https://starcuracao.com/"
    ]
   },
   {
    "id": "crown-automotives",
    "naam": "Crown Automotives",
-   "url": null,
+   "url": "https://crownautomotives.com/",
    "soort": {
-    "nl": "dealer",
-    "en": "dealer",
-    "de": "Händler",
-    "es": "concesionario",
-    "pt": "concessionária"
+    "nl": "Hyundai-dealer",
+    "en": "Hyundai dealer",
+    "de": "Hyundai-Händler",
+    "es": "concesionario Hyundai",
+    "pt": "concessionária Hyundai"
    },
    "plaats": "Kaya Tula 44, Seru Domi",
    "tags": [
     "nieuw",
-    "onderhoud"
+    "onderhoud",
+    "merk-hyundai",
+    "suv"
    ],
    "prijs": null,
    "feiten": [
+    {
+     "nl": "Officiële Hyundai-dealer, ook bedrijfswagens en bussen",
+     "en": "Official Hyundai dealer, also trucks and buses",
+     "de": "Offizieller Hyundai-Händler, auch Nutzfahrzeuge und Busse",
+     "es": "Concesionario oficial de Hyundai, también camiones y autobuses",
+     "pt": "Concessionária oficial Hyundai, também caminhões e ônibus"
+    },
     {
      "nl": "Pendelbus bij onderhoudsbeurt",
      "en": "Shuttle ride during servicing",
@@ -720,34 +759,36 @@
     ]
    },
    "bronnen": [
-    "https://www.google.com/maps/place/?q=place_id:ChIJnRX3n_qChI4RtHBr1XMMz90"
+    "https://www.google.com/maps/place/?q=place_id:ChIJnRX3n_qChI4RtHBr1XMMz90",
+    "https://crownautomotives.com/home/"
    ]
   },
   {
    "id": "bmw-ultimate-automobiles",
    "naam": "BMW Ultimate Automobiles",
-   "url": null,
+   "url": "https://www.bmw.cw/en/index.html",
    "soort": {
-    "nl": "BMW-dealer",
-    "en": "BMW dealer",
-    "de": "BMW-Händler",
-    "es": "concesionario BMW",
-    "pt": "concessionária BMW"
+    "nl": "BMW- en MINI-dealer",
+    "en": "BMW and MINI dealer",
+    "de": "BMW- und MINI-Händler",
+    "es": "concesionario BMW y MINI",
+    "pt": "concessionária BMW e MINI"
    },
    "plaats": "Kaya Tula 44, Seru Domi",
    "tags": [
     "nieuw",
     "merk-bmw",
-    "luxe"
+    "luxe",
+    "merk-mini"
    ],
    "prijs": null,
    "feiten": [
     {
-     "nl": "Dealer van BMW",
-     "en": "BMW dealer",
-     "de": "BMW-Händler",
-     "es": "concesionario BMW",
-     "pt": "concessionária BMW"
+     "nl": "Dealer van BMW en MINI",
+     "en": "BMW and MINI dealer",
+     "de": "Händler für BMW und MINI",
+     "es": "Concesionario de BMW y MINI",
+     "pt": "Concessionária de BMW e MINI"
     }
    ],
    "scores": [
@@ -795,7 +836,8 @@
     ]
    },
    "bronnen": [
-    "https://www.google.com/maps/place/?q=place_id:ChIJ3Q8Tl_qChI4RlD43vjTR-MM"
+    "https://www.google.com/maps/place/?q=place_id:ChIJ3Q8Tl_qChI4RlD43vjTR-MM",
+    "https://ccda-curacao.com/"
    ]
   },
   {
@@ -875,7 +917,7 @@
   {
    "id": "select-automotive",
    "naam": "Select Automotive (Prowin)",
-   "url": null,
+   "url": "https://selectautomotive.cw/",
    "soort": {
     "nl": "Seat-dealer",
     "en": "Seat dealer",
@@ -891,6 +933,13 @@
    ],
    "prijs": null,
    "feiten": [
+    {
+     "nl": "Lid van de Curaçao Car Dealers Association",
+     "en": "Member of the Curaçao Car Dealers Association",
+     "de": "Mitglied der Curaçao Car Dealers Association",
+     "es": "Miembro de la Curaçao Car Dealers Association",
+     "pt": "Membro da Curaçao Car Dealers Association"
+    },
     {
      "nl": "Zelfde groep als VW en Audi",
      "en": "Same group as VW and Audi",
@@ -949,7 +998,8 @@
     ]
    },
    "bronnen": [
-    "https://www.google.com/maps/place/?q=place_id:ChIJA0iC1RJ9g44R-euAsiqUCzw"
+    "https://www.google.com/maps/place/?q=place_id:ChIJA0iC1RJ9g44R-euAsiqUCzw",
+    "https://ccda-curacao.com/"
    ]
   },
   {
@@ -2067,6 +2117,17 @@
    }
   },
   {
+   "naam": "DushiMarkt",
+   "url": "https://dushimarkt.com/autos-kopen-curacao",
+   "uitleg": {
+    "nl": "Lokale online marktplaats van Curaçao met tweedehands auto's van particulieren; laat de auto eerst door een monteur nakijken.",
+    "en": "Local Curaçao online marketplace with used cars from private sellers; have a mechanic check the car first.",
+    "de": "Lokaler Online-Marktplatz von Curaçao mit Gebrauchtwagen von Privatverkäufern; lass das Auto zuerst von einem Mechaniker prüfen.",
+    "es": "Mercado en línea local de Curazao con autos usados de particulares; que un mecánico revise el auto primero.",
+    "pt": "Mercado online local de Curaçao com carros usados de particulares; peça para um mecânico checar o carro antes."
+   }
+  },
+  {
    "naam": "Marktplaats",
    "url": "https://www.marktplaats.nl/",
    "uitleg": {
@@ -2150,11 +2211,11 @@
     "pt": "Onde dá para comprar um carro novo em Curaçao?"
    },
    "a": {
-    "nl": "De grote merken hebben een eigen dealer: Toyota bij Garage Cordia, Kia en Nissan bij Universal Motors, VW, Audi, Seat en Porsche bij Prowin aan de Seru Loraweg, BMW bij Ultimate Automobiles, Mazda bij Quality Motors en Jeep bij i Cars.",
-    "en": "The major brands have their own dealer: Toyota at Garage Cordia, Kia and Nissan at Universal Motors, VW, Audi, Seat and Porsche at Prowin on Seru Loraweg, BMW at Ultimate Automobiles, Mazda at Quality Motors and Jeep at i Cars.",
-    "de": "Die großen Marken haben jeweils einen eigenen Händler: Toyota bei Garage Cordia, Kia und Nissan bei Universal Motors, VW, Audi, Seat und Porsche bei Prowin am Seru Loraweg, BMW bei Ultimate Automobiles, Mazda bei Quality Motors und Jeep bei i Cars.",
-    "es": "Las grandes marcas tienen su propio concesionario: Toyota en Garage Cordia, Kia y Nissan en Universal Motors, VW, Audi, Seat y Porsche en Prowin en Seru Loraweg, BMW en Ultimate Automobiles, Mazda en Quality Motors y Jeep en i Cars.",
-    "pt": "As grandes marcas têm concessionária própria: Toyota na Garage Cordia, Kia e Nissan na Universal Motors, VW, Audi, Seat e Porsche na Prowin, em Seru Loraweg, BMW na Ultimate Automobiles, Mazda na Quality Motors e Jeep na i Cars."
+    "nl": "De grote merken hebben een eigen dealer: Toyota en Lexus bij Garage Cordia, Kia en Nissan bij Universal Motors, Hyundai bij Crown Automotives, Mitsubishi bij Autocity, VW, Audi, Seat en Porsche bij Select Automotive (Prowin) aan de Seru Loraweg, BMW en MINI bij Ultimate Automobiles, MG, Geely en Haval bij Star Motors, Mazda bij Quality Motors en Jeep bij i Cars.",
+    "en": "The major brands have their own dealer: Toyota and Lexus at Garage Cordia, Kia and Nissan at Universal Motors, Hyundai at Crown Automotives, Mitsubishi at Autocity, VW, Audi, Seat and Porsche at Select Automotive (Prowin) on Seru Loraweg, BMW and MINI at Ultimate Automobiles, MG, Geely and Haval at Star Motors, Mazda at Quality Motors and Jeep at i Cars.",
+    "de": "Die großen Marken haben jeweils einen eigenen Händler: Toyota und Lexus bei Garage Cordia, Kia und Nissan bei Universal Motors, Hyundai bei Crown Automotives, Mitsubishi bei Autocity, VW, Audi, Seat und Porsche bei Select Automotive (Prowin) am Seru Loraweg, BMW und MINI bei Ultimate Automobiles, MG, Geely und Haval bei Star Motors, Mazda bei Quality Motors und Jeep bei i Cars.",
+    "es": "Las grandes marcas tienen su propio concesionario: Toyota y Lexus en Garage Cordia, Kia y Nissan en Universal Motors, Hyundai en Crown Automotives, Mitsubishi en Autocity, VW, Audi, Seat y Porsche en Select Automotive (Prowin) en Seru Loraweg, BMW y MINI en Ultimate Automobiles, MG, Geely y Haval en Star Motors, Mazda en Quality Motors y Jeep en i Cars.",
+    "pt": "As grandes marcas têm concessionária própria: Toyota e Lexus na Garage Cordia, Kia e Nissan na Universal Motors, Hyundai na Crown Automotives, Mitsubishi na Autocity, VW, Audi, Seat e Porsche na Select Automotive (Prowin) na Seru Loraweg, BMW e MINI na Ultimate Automobiles, MG, Geely e Haval na Star Motors, Mazda na Quality Motors e Jeep na i Cars."
    }
   },
   {
@@ -2214,11 +2275,11 @@
     "pt": "Dá para comprar um carro elétrico em Curaçao?"
    },
    "a": {
-    "nl": "Ja. All to Car (Veeris) verkoopt elektrische, hybride en plug-in modellen van Chinese merken als Changan, BAW en Dongfeng. Ook Total Motors en Amp Motors richten zich op elektrische auto's.",
-    "en": "Yes. All to Car (Veeris) sells electric, hybrid and plug-in models from Chinese brands such as Changan, BAW and Dongfeng. Total Motors and Amp Motors also focus on electric cars.",
-    "de": "Ja. All to Car (Veeris) verkauft Elektro-, Hybrid- und Plug-in-Modelle chinesischer Marken wie Changan, BAW und Dongfeng. Auch Total Motors und Amp Motors konzentrieren sich auf Elektroautos.",
-    "es": "Sí. All to Car (Veeris) vende modelos eléctricos, híbridos e híbridos enchufables de marcas chinas como Changan, BAW y Dongfeng. Total Motors y Amp Motors también se enfocan en autos eléctricos.",
-    "pt": "Sim. A All to Car (Veeris) vende modelos elétricos, híbridos e híbridos plug-in de marcas chinesas como Changan, BAW e Dongfeng. A Total Motors e a Amp Motors também se concentram em carros elétricos."
+    "nl": "Ja. All to Car (Veeris) verkoopt elektrische, hybride en plug-in modellen van Chinese merken als Changan, BAW en Dongfeng. Ook Total Motors en Amp Motors richten zich op elektrische auto's. De minister van Financiën kondigde in 2023 aan dat elektrische voertuigen vrij zijn van invoerrecht; importeurs meldden in april 2025 dat de douane dat niet overal gelijk toepast, vooral bij elektrische pick-ups.",
+    "en": "Yes. All to Car (Veeris) sells electric, hybrid and plug-in models from Chinese brands such as Changan, BAW and Dongfeng. Total Motors and Amp Motors also focus on electric cars. The finance minister announced in 2023 that electric vehicles are exempt from import duty; importers reported in April 2025 that Customs does not apply this consistently, especially for electric pickups.",
+    "de": "Ja. All to Car (Veeris) verkauft Elektro-, Hybrid- und Plug-in-Modelle chinesischer Marken wie Changan, BAW und Dongfeng. Auch Total Motors und Amp Motors konzentrieren sich auf Elektroautos. Der Finanzminister kündigte 2023 an, dass Elektrofahrzeuge vom Einfuhrzoll befreit sind; Importeure berichteten im April 2025, dass der Zoll das nicht einheitlich anwendet, vor allem bei elektrischen Pickups.",
+    "es": "Sí. All to Car (Veeris) vende modelos eléctricos, híbridos e híbridos enchufables de marcas chinas como Changan, BAW y Dongfeng. Total Motors y Amp Motors también se enfocan en autos eléctricos. El ministro de Finanzas anunció en 2023 que los vehículos eléctricos están exentos de derechos de importación; en abril de 2025 los importadores dijeron que la aduana no lo aplica de forma uniforme, sobre todo con las pickups eléctricas.",
+    "pt": "Sim. A All to Car (Veeris) vende modelos elétricos, híbridos e híbridos plug-in de marcas chinesas como Changan, BAW e Dongfeng. A Total Motors e a Amp Motors também se concentram em carros elétricos. O ministro das Finanças anunciou em 2023 que veículos elétricos são isentos de imposto de importação; em abril de 2025 importadores disseram que a alfândega não aplica isso de forma igual, principalmente para picapes elétricas."
    }
   },
   {
