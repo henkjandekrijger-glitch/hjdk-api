@@ -6,7 +6,7 @@ import * as crypto from 'node:crypto';
 import * as bewijs from '../lib/gids-onderzoek.js';
 import * as groei from '../lib/gids-groei.js';
 import * as gidsen from '../lib/gidsen-kadoly.js';
-const catalog=(fs.existsSync('catalog-audit.json') ? JSON.parse(fs.readFileSync('catalog-audit.json','utf8')) : ['Witte Phalaenopsis Orchidee', 'Bloempot wit', 'Tafellamp oplaadbaar', 'Bamboe sokken', 'Kaars rood', '3D houten puzzel', 'Vaas glas', 'Serviesset beige'].map((t,i)=>({id:'oc_'+i,t,vr:true}))).map(i=>({...i,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0}));
+const catalog=(fs.existsSync('catalog-audit.json') ? JSON.parse(fs.readFileSync('catalog-audit.json','utf8')) : ['Witte Phalaenopsis Orchidee', 'Bloempot wit', 'Tafellamp oplaadbaar', 'Bamboe sokken', 'Kaars rood', '3D houten puzzel', 'Vaas glas', 'Serviesset beige', ...Array.from({length:25},(_,i)=>'Glazen mok '+i)].map((t,i)=>({id:'oc_'+i,t,vr:true}))).map(i=>({...i,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0}));
 const context=vm.createContext({console,URL,Buffer,Date,Set,Map,process:{env:{}},AbortSignal,fetch:()=>{throw Error('Geen externe requests in rendertest');}});
 const synth=obj=>new vm.SyntheticModule(Object.keys(obj),function(){for(const [k,v]of Object.entries(obj))this.setExport(k,v);},{context});
 const code=fs.readFileSync('api/gids.js','utf8');
@@ -18,7 +18,7 @@ async function render(query,host='gids.kadoly.com'){let body='',status=200;const
 for(const p of bewijs.ONDERZOEK){const {body}=await render('slug=onderzoek-'+p.id);assert.ok(body.includes('Wat bewijst dit niet?'));assert.ok(body.includes('Bronnen en belangen'));assert.ok(body.includes('rel="canonical" href="https://gids.kadoly.com/onderzoek-'+p.id+'"'));}
 assert.ok((await render('slug=onderzoek-en-bronnen')).body.includes('geen onafhankelijke testorganisatie'));
 const home=(await render('')).body;assert.ok(home.includes('/onderzoek-en-bronnen'));
-await render('rubriek=wonen');await render('slug=nieuw-bij-kadoly');await render('slug=3d-houten-puzzel-volwassenen');
+const rub=(await render('rubriek=wonen')).body; const schema=[...rub.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1])['@graph']||[]).find(x=>x['@type']==='ItemList'&&x.name.startsWith('Nieuw in')); assert.equal(schema.itemListElement.length,24); assert.equal((rub.match(/class="nw-a"/g)||[]).length,24);await render('slug=nieuw-bij-kadoly');await render('slug=3d-houten-puzzel-volwassenen');
 const sitemap=(await render('op=sitemap')).body;assert.ok(sitemap.includes('/onderzoek-tafellamp-lumen'));assert.ok(!sitemap.includes('<loc>https://gids.kadoly.com/</loc><lastmod>'));
 assert.ok((await render('op=llmsfull')).body.includes('Ravensburger'));
 const report=(await render('op=groei','hjdk-api-henq.vercel.app')).body;assert.ok(report.includes('noindex,nofollow'));

@@ -37,3 +37,12 @@ test('dagronde is idempotent en overschrijft geen succesvolle snapshot',async()=
   const current={dag:new Date().toISOString().slice(0,10),google:{status:'gemeten'}};let writes=0;
   const kv={get:async()=>current,set:async()=>writes++};assert.equal(await groeiRonde(kv,[]),current);assert.equal(writes,0);
 });
+test('nieuwe keukenproducten matchen inhoudelijk; accessoires en speelgoed niet',()=>{
+ const heeft=t=>onderzoekVoor({t}).some(p=>p.id==='servies-gebruik');
+ for(const t of ['Glazen Mokken 350ml','Witte Porseleinen Serveerplaat 22cm','Paarse Houten Saladebestek 33cm','Wicker Charger Plates met schelpen'])assert.ok(heeft(t),t);
+ for(const t of ['Mokkenrek','Bestekhouder','Poppenservies speelgoed','Servieskast'])assert.equal(heeft(t),false,t);
+ assert.ok(onderzoekVoor({t:'Waxinelichthouders Set van 2'}).some(p=>p.id==='kaarsen-gebruik'));
+ const p=ONDERZOEK.find(p=>p.id==='servies-gebruik');
+ const html=onderzoekPagina(p,[{id:'oc_4174004874297346',t:'Paarse Houten Saladebestek 33cm'}],()=> '€40,94',()=> 'later');
+ assert.ok(html.includes('Materiaal is tegenstrijdig'));assert.ok(html.includes('2026-10-16'));assert.ok(html.includes('2026-11-06'));assert.ok(html.includes('glas-en-vorksymbool geen afkeuring'));
+});
