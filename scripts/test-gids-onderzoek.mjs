@@ -40,7 +40,7 @@ test('dagronde is idempotent en overschrijft geen succesvolle snapshot',async()=
 test('nieuwe keukenproducten matchen inhoudelijk; accessoires en speelgoed niet',()=>{
  const heeft=t=>onderzoekVoor({t}).some(p=>p.id==='servies-gebruik');
  for(const t of ['Glazen Mokken 350ml','Witte Porseleinen Serveerplaat 22cm','Paarse Houten Saladebestek 33cm','Wicker Charger Plates met schelpen'])assert.ok(heeft(t),t);
- for(const t of ['Mokkenrek','Bestekhouder','Poppenservies speelgoed','Servieskast'])assert.equal(heeft(t),false,t);
+ for(const t of ['Mokkenrek','Bestekhouder','Poppenservies speelgoed','Servieskast','Rustiek Stalen Decoratief Bestekset voor Keukenraam'])assert.equal(heeft(t),false,t);
  assert.ok(onderzoekVoor({t:'Waxinelichthouders Set van 2'}).some(p=>p.id==='kaarsen-gebruik'));
  const p=ONDERZOEK.find(p=>p.id==='servies-gebruik');
  const html=onderzoekPagina(p,[{id:'oc_4174004874297346',t:'Paarse Houten Saladebestek 33cm'}],()=> '€40,94',()=> 'later');
