@@ -589,7 +589,7 @@ if(W.IntersectionObserver){var ko=new IntersectionObserver(function(es){es.forEa
 if(c&&!W.mmGeenAuto){var t0=Date.now(),ia=0,echt=function(){if(ia&&D.visibilityState==='visible'&&Date.now()-t0>=3000)W.mmUitkomst('echt')};
 ['pointerdown','touchstart','scroll','keydown'].forEach(function(e){D.addEventListener(e,function(){ia=1;echt()},{passive:true,capture:true})});setTimeout(echt,3100);
 D.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href],button,[role=button],input[type=submit]');if(a)W.mmUitkomst('actie')},true);
-D.addEventListener('submit',function(e){var f=e.target;if(f&&f.querySelector&&f.querySelector('input[type=email],input[name*=mail]'))W.mmUitkomst('aanmelding')},true)}
+D.addEventListener('submit',function(e){var f=e.target,i=f&&f.querySelector&&f.querySelector('input[type=email],input[name*=mail]');if(i&&/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(String(i.value||'').trim()))W.mmUitkomst('aanmelding')},true)}
 }catch(e){}})();`;
 
 // De lerende modal in de browser (lib/modal.js): vraagt de server welke arm, meet de gewone klik naar buiten (ook bij de controlegroep),
