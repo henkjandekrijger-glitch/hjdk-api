@@ -553,7 +553,7 @@ async function wisselRoute(req, res, url, q) {
 }
 
 // Script voor bestemmingen (spel, todayin, finds, MYLEVEL): onthoudt de klik-id (mmc) en meldt een uitkomst met mmUitkomst('aanmelding').
-const MMU_JS = String.raw`/* clickmind uitkomst */(function(){var W=window,D=document;try{var c='',u=new URL(location.href).searchParams.get('mmc')||'';
+const MMU_JS = String.raw`/* clickmind uitkomst */(function(){var W=window,D=document;try{if(W.__cmU)return;W.__cmU=1;/* 5 nov: twee cm.js-regels op een pagina (oude whichtobuy-regel en go.kadoly.com) tellen maar één keer */var c='',u=new URL(location.href).searchParams.get('mmc')||'';
 if(/^[0-9a-f]{8,24}$/.test(u)){c=u;try{sessionStorage.setItem('mmc',u);localStorage.setItem('mmc',u+'|'+Date.now())}catch(e){}}
 if(!c){try{c=sessionStorage.getItem('mmc')||'';if(!c){var l=(localStorage.getItem('mmc')||'').split('|');if(l[0]&&Date.now()-Number(l[1]||0)<864e5)c=l[0]}}catch(e){}}
 var gehad={};W.mmUitkomst=function(soort,waarde){try{if(!c||gehad[soort])return;gehad[soort]=1;var x=JSON.stringify({cid:c,soort:soort,waarde:waarde||0,bron:location.host});
