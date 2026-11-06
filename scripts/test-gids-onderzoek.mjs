@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { ONDERZOEK, BRONNEN, onderzoekVoor, onderzoekPagina, adviesBlok, dekking } from '../lib/gids-onderzoek.js';
-import { bronVan, bronScript, eventsPerDag, vergelijkDagen, groeiRonde } from '../lib/gids-groei.js';
+import { bronVan, bronScript, eventsPerDag, vergelijkDagen, groeiRonde, googleRijen } from '../lib/gids-groei.js';
 test('categorieadvies maakt geen producttest van materiaalbewijs',()=>{
   assert.equal(onderzoekVoor({t:'Kunstmatige Phalaenopsis Orchidee'}).some(p=>p.id==='kamerplanten-luchtzuivering'),false);
   assert.equal(onderzoekVoor({t:'Sierpot voor orchidee'}).some(p=>p.id==='kamerplanten-luchtzuivering'),false);
@@ -45,4 +45,10 @@ test('nieuwe keukenproducten matchen inhoudelijk; accessoires en speelgoed niet'
  const p=ONDERZOEK.find(p=>p.id==='servies-gebruik');
  const html=onderzoekPagina(p,[{id:'oc_4174004874297346',t:'Paarse Houten Saladebestek 33cm'}],()=> '€40,94',()=> 'later');
  assert.ok(html.includes('Materiaal is tegenstrijdig'));assert.ok(html.includes('2026-10-16'));assert.ok(html.includes('2026-11-06'));assert.ok(html.includes('glas-en-vorksymbool geen afkeuring'));
+});
+
+test('lege GSC-respons is onbekend; geen fictieve 56 nul-dagen',()=>{
+ assert.deepEqual(googleRijen([], '2026-11-03'),[]);
+ const d=googleRijen([{keys:['2026-11-01'],impressions:4,clicks:1,ctr:.25,position:7}], '2026-11-03');
+ assert.equal(d.length,3);assert.equal(d[0].imp,4);assert.equal(vergelijkDagen(d).status,'te-weinig-data');
 });
