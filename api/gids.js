@@ -463,6 +463,7 @@ async function nieuwsOp(op, req, res, q, host, ua) {
     return res.status(200).json(await NB.ronde({ droog: q.get('droog') === '1', test: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(test) ? test : '', mailNu: beschermdHost(host) && q.get('mailnu') === '1' })); }
   if (op === 'nbnieuws') { if (!beschermdHost(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await NB.nieuwsZet(q)); }
   if (op === 'nbstand') return res.status(200).json(await NB.stand(beschermdHost(host)));
+  if (op === 'nbdomeinweg') { if (!beschermdHost(host) || q.get('zeker') !== '1') return res.status(404).send('Niet gevonden'); return res.status(200).json(await NB.domeinWeg(q.get('naam'))); } // 6 nov: plek maken bij Resend, alleen op Henkjans woord
   if (op === 'nbdomein') { if (!beschermdHost(host)) return res.status(404).send('Niet gevonden'); const d = await NB.domein(q.get('maak') === '1'); MAILK_AT = 0; return res.status(200).json(d); }
   if (op === 'nbbericht') return res.status(200).json(await NB.bericht(await leesBody(req)));
   if (op === 'nbpush') { if (req.method !== 'POST') return res.status(200).json({ vapid: await NB.vapidPub() }); if (!vanHier() || isBot(ua)) return res.status(403).json({ ok: false }); const b = await leesBody(req); return res.status(200).json(await NB.pushAan({ ...b, waar: waar(b) })); }
@@ -511,7 +512,7 @@ export default async function handler(req, res) {
   if (Date.now() - MAILK_AT > 300000) { MAILK_AT = Date.now(); MAILK = await NB.mailKlaar(); try { NBI = await NB.blokInfo(); } catch (e) {} }
   if (Date.now() - META_AT > 300000) { META_AT = Date.now(); try { META = String((await kv.get('gk:gscmeta')) || ''); } catch (e) {} }
   try {
-    if (/^(nieuws|nbbevestig|nbaf|nbpush|nbbericht|nbklik|nbsw|nbronde|nbnieuws|nbstand|nbdomein|nbwin|nbregels|nbwinnaars)$/.test(op)) return await nieuwsOp(op, req, res, q, host, ua);
+    if (/^(nieuws|nbbevestig|nbaf|nbpush|nbbericht|nbklik|nbsw|nbronde|nbnieuws|nbstand|nbdomein|nbdomeinweg|nbwin|nbregels|nbwinnaars)$/.test(op)) return await nieuwsOp(op, req, res, q, host, ua);
     if (op === 'paginacheck') { if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden'); // nakijken zonder de hele pagina op te halen: maat, titel, kop, schema, rijen (beschermde host)
       const kans = await armKans(), R = await rubrieken(); const pag = { home: await home(kans), nieuw: await nieuwPagina(kans), ['rubriek-' + R[0].c]: await rubriekPagina(R[0].c, kans) }; const uit = {};
       for (const [k, h] of Object.entries(pag)) { const lds = [...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m => { try { const j = JSON.parse(m[1]); return (j['@graph'] || [j]).map(x => x['@type'] + (x.itemListElement ? ':' + x.itemListElement.length : x.mainEntity ? ':' + x.mainEntity.length : '')).join(','); } catch (e) { return 'FOUT ' + String(e.message).slice(0, 60); } });
