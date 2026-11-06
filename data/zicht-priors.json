@@ -841,5 +841,17 @@
   "moeite": 1,
   "meten": "bezoekAI7d in op=stand",
   "datum": "2026-11-05"
+ },
+ {
+  "id": "crawlgolf-valt-uit-venster",
+  "les": "Een plotselinge daling van het aantal AI-crawls over 7 dagen is meestal geen storing maar een eenmalige crawlgolf die uit het venster valt. Kijk naar de stap in het 7-dagentotaal op de dag van de golf en op de dag dat hij eruit valt voordat je iets repareert; beoordeel AI-zichtbaarheid op echt bezoek uit AI (ChatGPT-verwijzingen), niet op crawls.",
+  "kanaal": "llm",
+  "bewijs": "keuzehulp.best: 7-dagentotaal 58 op 30 okt, 635 op 31 okt en 213 op 6 nov (golf van ongeveer 540 crawls op 30 okt, vooral OAI-SearchBot); whichtobuy 36 naar 144 naar 50, kaufberater 34 naar 61 naar 28 op dezelfde dagen. Echt bezoek uit ChatGPT op NL steeg in dezelfde week van 4 naar 8.",
+  "bron": "eigen meting ZICHT 6 nov 2026",
+  "sterkte": 3,
+  "effect": "meetfout voorkomen",
+  "moeite": 1,
+  "meten": "aiBots en bezoekAI7d in op=stand",
+  "datum": "2026-11-06"
  }
 ]
