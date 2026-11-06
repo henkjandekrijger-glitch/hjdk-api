@@ -548,7 +548,7 @@ async function wisselRoute(req, res, url, q) {
   res.setHeader('content-type', 'text/html; charset=utf-8');
   const mctx = { cid, pid, net: ctx.net, zone: ctx.zone, camp: ctx.camp, arm: 'js', tag: arm.tag || arm.id, cr: ctx.cr };
   // Clickmind-publiek op de meetpagina, zoals bij /go: alleen een bewezen mens, geen datacenter of bot; project uit de arm (rt), anders amazon
-  try { const rc = await leesRt(kv); if (rc.aan && rc.go && !prefetch) { const dd = dcVan(srv); const mens = soortPersoon(persoonNu).has('mens'); const sc = score({ c: null, s: Object.assign({}, srv, dd) }); const uit = leesCookie(req, 'mmrt') === 'uit' || !!(await kv.get('mm:rtuit:' + pid).catch(() => null)); const r = await rtBeslis(kv, { bron: 'go', project: arm.rt, land: srv.land, dc: dd.dc === true, bot: !!(sc.vlag && sc.vlag.hl), gpc: req.headers['sec-gpc'] === '1', uit, mens, id: pid }); if (r.px && r.px.length) mctx.rt = r.px; } } catch (e) {}
+  try { const rc = await leesRt(kv); if (rc.aan && rc.go && !prefetch) { const dd = dcVan(srv); const mens = soortPersoon(persoonNu).has('mens'); const sc = score({ c: null, s: Object.assign({}, srv, dd) }); const uit = leesCookie(req, 'mmrt') === 'uit' || !!(await kv.get('mm:rtuit:' + pid).catch(() => null)); const r = await rtBeslis(kv, { bron: 'go', project: arm.rt, land: srv.land, dc: dd.dc === true, bot: !!(sc.vlag && sc.vlag.hl), gpc: req.headers['sec-gpc'] === '1', uit, mens, id: pid, browsercheck: arm.soort === 'url' }); if (r.px && r.px.length) { mctx.rt = r.px; if (!mens) mctx.rtb = 1; } } } catch (e) {}
   return res.status(200).send(meetPagina(doel, mctx));
 }
 
