@@ -6,12 +6,13 @@
 // zelf bestellen). Alles wat AI moet kunnen citeren staat in de HTML. Geen gedachtestreepjes. Prijzen live uit de shopcatalogus.
 // Kliks naar de shop gaan via /naar/<pid> (api/shop.js op=gidsuit): Clickmind meet de keten tot betaald per gids.
 import { catalogusInhoud } from '../lib/gids-catalogus.js';
+import { gidsIndexPlan } from '../lib/gids-indexnow.js';
 import { kv } from '../lib/db.js';
 import { lookNieuw } from '../lib/look.js';
 import { GIDSEN, GIDS_IDS } from '../lib/gidsen-kadoly.js';
 import { berichten, HAIKU } from '../lib/ai.js';
 import { createHash } from 'node:crypto';
-import { ONDERZOEK, ONDERZOEK_DAG, onderwerpDag, adviesBlok, bronLink, dekking, onderzoekHub, onderzoekPagina, onderzoekTekst } from '../lib/gids-onderzoek.js';
+import { ONDERZOEK, BRONNEN, ONDERZOEK_DAG, onderwerpDag, adviesBlok, bronLink, dekking, onderzoekHub, onderzoekPagina, onderzoekTekst } from '../lib/gids-onderzoek.js';
 import { bronScript, groeiRonde, groeiStand, groeiHtml } from '../lib/gids-groei.js';
 import * as NB from '../lib/kadoly-nieuws.js'; // aanmelding mail en meldingen (2 nov 2026)
 
@@ -166,7 +167,7 @@ async function zoekPagina(vraag, kans) { // zonder JavaScript: gewone uitkomstpa
 }
 
 // chat: kort, eerlijk, alleen producten uit de winkel; dringend = WhatsApp naar Henkjan. Elke vraag gaat in gk:chat (alleen te lezen via de beschermde host).
-const CHAT_SYS = `Je bent de hulp van Kadoly (kadoly.com), een Nederlandse webshop van ADSFAIR B.V. met producten van onafhankelijke Europese makers (wonen, hobby, keuken, beauty, kinderen, mode, tech en meer). Je helpt bezoekers van gids.kadoly.com kiezen en beantwoordt hun vragen.
+const CHAT_SYS = `Je bent de hulp van Kadoly (kadoly.com), een Nederlandse webshop van ADSFAIR B.V. met producten van makers (wonen, hobby, keuken, beauty, kinderen, mode, tech en meer). Je helpt bezoekers van gids.kadoly.com kiezen en beantwoordt hun vragen.
 Regels:
 - Antwoord in de taal van de bezoeker (meestal Nederlands), kort: hoogstens 70 woorden, gewone woorden, vriendelijk en zeker. Geen gedachtestreepjes, geen opsommingstekens.
 - Noem alleen producten uit KANDIDATEN en zet hun id in "producten" (hoogstens 3, beste eerst). Verzin geen eigenschappen die er niet staan (maat, materiaal, leeftijd): zeg dan dat het op de productpagina staat.
@@ -385,7 +386,7 @@ const llmRegel = (i, metNieuw) => '- ' + i.t + (i.b ? ' (' + i.b + ')' : '') + '
 
 async function home(kans) {
   const R = await rubrieken(); const alle = R.reduce((t, r) => t + r.n, 0); const med = mediaan(R.flatMap(r => r.lts)); const NF = await nieuwFeiten();
-  const faq = [['Wat is Kadoly?', `Kadoly is een Nederlandse webshop van ADSFAIR B.V. uit Gouda met ${alle} producten van onafhankelijke Europese makers, in ${R.filter(r => r.c !== 'overig').map(r => r.naam.toLowerCase()).join(', ')}.`],
+  const faq = [['Wat is Kadoly?', `Kadoly is een Nederlandse webshop van ADSFAIR B.V. uit Gouda met ${alle} producten van makers, in ${R.filter(r => r.c !== 'overig').map(r => r.naam.toLowerCase()).join(', ')}.`],
     ['Wie verstuurt mijn bestelling?', 'Het merk of de maker stuurt het pakket rechtstreeks naar jou, met track en trace. Je koopt en betaalt bij Kadoly.'],
     ['Hoe snel is het in huis?', `Dat verschilt per maker. ${med ? `De meeste producten zijn binnen ${med} werkdagen in huis. ` : ''}Bij elk product staat de verwachte bezorgdag als je vandaag bestelt.`],
     ['Kan ik iets terugsturen?', 'Ja. Je hebt 14 dagen na ontvangst, je krijgt een retourlabel en het hele bedrag terug.'],
@@ -398,6 +399,7 @@ async function home(kans) {
 ${keuzeHulp(R, '', '_home')}
 <p><a href="/alle-producten">Bekijk alle ${alle} beschikbare producten, per rubriek</a></p>
 <p><a href="/onderzoek-en-bronnen">Wat onderzoek wel en niet zegt over ons aanbod</a></p>
+<section aria-labelledby="koopchecks"><h2 id="koopchecks">Eerst controleren, dan kiezen</h2><p>Deze koopchecks helpen je om claims en ontbrekende gegevens te beoordelen. We zijn de verkoper en gebruiken externe bronnen; we hebben de producten niet zelf getest.</p><ul><li><a href="/onderzoek-vaas-verse-bloemen">Vaas voor verse bloemen: water, opening en schoonmaken</a></li><li><a href="/onderzoek-tafellamp-lumen">Tafellamp: genoeg leeslicht, accuduur en buitengebruik</a></li><li><a href="/onderzoek-bamboe-textiel-claims">Bamboe textiel: vezels en onderbouwing van claims</a></li></ul><p><a href="/onderzoek-en-bronnen">Alle acht koopchecks en hun bronnen</a></p></section>
 <h2 id="rubrieken">Per rubriek</h2><dl class="rows">${rij}</dl>
 ${NF.n ? `<h2 id="nieuw">Nieuw bij Kadoly</h2><p>${NF.n} producten kwamen er de afgelopen ${NIEUW_DAGEN} dagen bij. Dit zijn de nieuwste; <a href="${NIEUW_PAD}">bekijk alles wat nieuw is, per rubriek</a>.</p><ul class="nwl">${NF.L.slice(0, 6).map(i => nieuwRij(i, '_home')).join('')}</ul>` : ''}
 ${GIDS_IDS.length ? `<h2 id="gidsen">Uitgebreide keuzehulpen</h2><ul>${GIDS_IDS.map(id => GIDSEN[id]).map(x => `<li><a href="/${esc(x.slug)}">${esc(x.h1)}</a></li>`).join('')}</ul>` : ''}
@@ -549,12 +551,16 @@ export default async function handler(req, res) {
     }
     if (op === 'onderzoekstand') { const m = await kv.get('gk:groei:laatste').catch(() => null); res.setHeader('cache-control', 'no-store'); return res.status(200).json({ ok: true, ...dekking(Object.values(await catalogus())), meetbaarheid: { dag: m?.dag || null, google: m?.google?.status || 'nog-niet-gemeten', googleDagen: m?.google?.dagen?.length || 0, googleBlokkade: m?.google?.reden || null, ai: m?.ai?.status || 'nog-niet-gemeten', aiGeslaagd: m?.ai?.geslaagd || 0, aiBlokkade: m?.ai?.fouten?.[0] || null } }); }
     if (op === 'indexnow') { // dagelijks: groeimeting zonder betaalde AI-aanroepen, daarna gewijzigde URLs aanmelden
-      await groeiRonde(kv, Object.values(await catalogus()), req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN).catch(e => console.error('gids-groeimeting', String(e.message).slice(0,120)));
-      const RR = await rubrieken(); const NF = await nieuwFeiten(); const urls = [HOST + '/alle-producten', HOST + '/onderzoek-en-bronnen', ...ONDERZOEK.map(p => HOST + '/onderzoek-' + p.id), HOST + '/'].concat(NF.n ? [HOST + NIEUW_PAD] : []).concat(GIDS_IDS.map(id => HOST + '/' + id)).concat(RR.map(r => HOST + '/rubriek/' + r.c)); const stand = 'catalogus@2026-11-07|onderzoek@' + ONDERZOEK_DAG + '|' + GIDS_IDS.map(id => id + '@' + GIDSEN[id].bijgewerkt).join(',') + '|' + RR.map(r => r.c).join(',') + '|n:' + NF.n + '@' + NF.nieuwste;
-      let oud = null; try { oud = await kv.get('gk:indexnow'); } catch (e) {} if (oud && oud.stand === stand && q.get('alles') !== '1') return res.status(200).json({ ok: true, niets: true });
+      const items = Object.values(await catalogus());
+      await groeiRonde(kv, items, req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN).catch(e => console.error('gids-groeimeting', String(e.message).slice(0,120)));
+      const RR = await rubrieken(); const NF = await nieuwFeiten();
+      let oud = null; try { oud = await kv.get('gk:indexnow'); } catch (e) {}
+      const plan = gidsIndexPlan({ host:HOST, items, gidsen:GIDS_IDS.map(id => GIDSEN[id]), onderzoek:ONDERZOEK, bronnen:BRONNEN, nieuw:NF.L, rubrieken:RR, vorig:oud, versies:{home:'koopchecks-1107',checks:'vaas,lumen,bamboe',catalogus:'1',rubrieken:'1',nieuw:'1',gidsen:'1',onderzoek:ONDERZOEK_DAG} });
+      const urls = q.get('alles') === '1' ? [...new Set([...Object.keys(plan.paginas), ...plan.urls])] : plan.urls;
+      if (!urls.length) return res.status(200).json({ ok:true, niets:true, gewijzigd:0 });
       let status = 0; try { const r = await fetch('https://api.indexnow.org/indexnow', { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify({ host: 'gids.kadoly.com', key: INDEXNOW_KEY, keyLocation: HOST + '/' + INDEXNOW_KEY + '.txt', urlList: urls }), signal: AbortSignal.timeout(15000) }); status = r.status; } catch (e) {}
-      if (status >= 200 && status < 300) { try { await kv.set('gk:indexnow', { at: Date.now(), stand }); } catch (e) {} }
-      return res.status(200).json({ ok: status >= 200 && status < 300, status, gemeld: urls.length }); }
+      if (status >= 200 && status < 300) { try { await kv.set('gk:indexnow', { ...oud, at:Date.now(), paginas:plan.paginas, versie:2 }); } catch (e) {} }
+      return res.status(200).json({ ok:status >= 200 && status < 300, status, gemeld:urls.length, gewijzigd:plan.gewijzigd, verwijderd:plan.verwijderd }); }
     if (op === 'robots') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send('User-agent: *\nAllow: /\nDisallow: /naar/\n\n# Voor AI-assistenten: ' + HOST + '/llms.txt en ' + HOST + '/llms-full.txt\nSitemap: ' + HOST + '/sitemap.xml\n'); }
     if (op === 'sitemap') { await telBot(ua, 'sitemap'); res.setHeader('content-type', 'application/xml; charset=utf-8'); return res.status(200).send(await sitemap()); }
     if (op === 'llms') { await telBot(ua, 'llms'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(await llms()); }
@@ -635,5 +641,6 @@ export default async function handler(req, res) {
     return res.status(200).send(await gidsPagina(g));
   } catch (e) { res.setHeader('cache-control', 'no-store'); return res.status(500).send('Er ging iets mis: ' + esc(String(e && e.message || e).slice(0, 120))); }
 }
+
 
 
