@@ -853,5 +853,17 @@
   "moeite": 1,
   "meten": "aiBots en bezoekAI7d in op=stand",
   "datum": "2026-11-06"
+ },
+ {
+  "id": "googlebot-crawl-instorting",
+  "les": "Volg het aantal Googlebot-bezoeken per site per dag. Zakt het 7-dagentotaal onder een kwart van de weken ervoor terwijl Bingbot (IndexNow) gewoon blijft lezen, dan is het knelpunt Google zelf: nieuwe pagina's worden niet meer ontdekt en het aantal pagina's in Google staat stil. Eerst oorzaak zoeken (serverfouten bij volle database, traagheid, veel gelijkende pagina's) voordat er pagina's bij komen.",
+  "kanaal": "seo",
+  "bewijs": "keuzehulp.best: Googlebot 92 keer in 7 dagen (17 okt), 41 (20 okt), 3 (6 nov), 2 (7 nov); Bingbot 126 keer in dezelfde 7 dagen tot 7 nov. Aantal pagina's in Google staat sinds 20 okt op 117 tot 120, 376 van 500 'onbekend bij Google'. Database liep vol op 25 en 28 okt (OOM, fouten op meerdere routes).",
+  "bron": "eigen meting ZICHT 7 nov 2026",
+  "sterkte": 2,
+  "effect": "oorzaak indexstilstand",
+  "moeite": 1,
+  "meten": "/api/zicht?op=crawl en googlebot7d in op=stand",
+  "datum": "2026-11-07"
  }
 ]

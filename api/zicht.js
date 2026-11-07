@@ -64,6 +64,7 @@ export default async function handler(req, res) {
       let ververst = null; if (q.ververs) { const { kv } = await import('../lib/db.js'); const k = 'zicht:zv:ververs:' + id; if (mag(req) || !(await kv.get(k).catch(() => null))) { await kv.set(k, 1, { ex: 3600 }).catch(() => {}); ververst = await bewaarZoekvragen(id, oidc).catch(e => ({ fout: String(e.message).slice(0, 120) })); } else ververst = { overgeslagen: 'binnen het uur al ververst' }; }
       return res.status(200).json(Object.assign({ ok: true, ververst }, await zoekvragen(id, q.dagen, q.dag)));
     }
+    if (op === 'crawl') { const Z = await import('../lib/zicht.js'); const ids = q.site ? [String(q.site)] : ['kz', 'us', 'de']; const out = {}; for (const id of ids) out[id] = await Z.crawlTrend(id); return res.status(200).json({ ok: true, dag: DAY(), crawl: out }); } // Googlebot/Bingbot per dag, 28 dagen
     if (op === 'stand') return res.status(200).json({ ok: true, dag: DAY(), sites: await stand(q.site) });
     if (op === 'manifest') { const PJ = await import('../lib/zicht-projecten.js'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(PJ.MANIFEST_UITLEG); }
     if (op === 'werk') { const PJ = await import('../lib/zicht-projecten.js'); const w = await PJ.werk(await sites(), q.site || null);
