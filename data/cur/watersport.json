@@ -1,6 +1,6 @@
 {
  "id": "watersport",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-07",
  "onderwerp": {
   "nl": "watersport en sport",
   "en": "water sports and activities",
@@ -1251,7 +1251,7 @@
      "pt": "por jet ski (até 2 pessoas)"
     },
     "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c55-Curacao.html",
-    "datum": "2026-10"
+    "datum": "2026-11"
    },
    "feiten": [
     {
@@ -1306,7 +1306,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/AttractionProductReview-g147277-d33140347-Jetski_Adventure_Piscadera-Curacao.html",
     "https://curacaoactivities.com/tours/water-sports-curacao/",
-    "https://www.mycuracaoguide.com/blogs/water-activities-in-curacao"
+    "https://www.mycuracaoguide.com/blogs/water-activities-in-curacao",
+    "https://www.aaa.com/tripcanvas/thing-to-do/jetski-adventure-piscadera-119383P16"
    ]
   },
   {
@@ -1579,27 +1580,52 @@
     "es": "alquiler de bote tiki",
     "pt": "aluguel de barco tiki"
    },
-   "plaats": "Spaanse Water",
+   "plaats": "Jan Thiel (Spaanse Water)",
    "tags": [
     "boot",
-    "verhuur",
-    "oost"
+    "jan-thiel",
+    "oost",
+    "verhuur"
    ],
    "prijs": {
     "bedrag": 269,
     "valuta": "USD",
     "eenheid": {
-     "nl": "per boot, 4 uur, 6 tot 8 personen",
-     "en": "per boat, 4 hours, 6 to 8 people",
-     "de": "pro Boot, 4 Stunden, 6 bis 8 Personen",
-     "es": "por barco, 4 horas, de 6 a 8 personas",
-     "pt": "por barco, 4 horas, 6 a 8 pessoas"
+     "nl": "per BBQ-boot, 4 uur, tot 6 personen",
+     "en": "per BBQ boat, 4 hours, up to 6 people",
+     "de": "pro BBQ-Boot, 4 Stunden, bis zu 6 Personen",
+     "es": "por bote con barbacoa, 4 horas, hasta 6 personas",
+     "pt": "por barco com churrasqueira, 4 horas, até 6 pessoas"
     },
-    "bron": "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/",
-    "datum": "2026-10"
+    "bron": "https://www.mycuracaoguide.com/book-tours/tiki-boat-tiki-bbq-boat",
+    "datum": "2026-11"
    },
-   "feiten": [],
-   "scores": [],
+   "feiten": [
+    {
+     "nl": "Extra uur $35",
+     "en": "Extra hour $35",
+     "de": "Zusätzliche Stunde 35 $",
+     "es": "Hora extra $35",
+     "pt": "Hora extra US$ 35"
+    },
+    {
+     "nl": "Vertrek vanaf de eigen haven aan de Caracasbaaiweg, geen ophaalservice",
+     "en": "Departs from its own marina on Caracasbaaiweg, no pick-up",
+     "de": "Abfahrt vom eigenen Hafen am Caracasbaaiweg, keine Abholung",
+     "es": "Sale de su propio muelle en Caracasbaaiweg, sin recogida",
+     "pt": "Sai da própria marina na Caracasbaaiweg, sem busca no hotel"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "MyCuracaoGuide",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 647,
+     "peildatum": "2026-11-07",
+     "bron": "https://www.mycuracaoguide.com/book-tours/tiki-boat-tiki-bbq-boat"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -1617,7 +1643,8 @@
    "bronnen": [
     "https://www.curacao.com/en/activity/tiki-boats-rental",
     "https://www.curacao.com/en/category/water-activities",
-    "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/"
+    "https://www.caribbean-tours.nl/en/curacao/what-do-excursions-in-curacao-cost/",
+    "https://www.mycuracaoguide.com/book-tours/tiki-boat-tiki-bbq-boat"
    ]
   },
   {
@@ -1911,8 +1938,8 @@
      "es": "por barco, desde",
      "pt": "por barco, a partir de"
     },
-    "bron": "https://fishingbooker.com/destinations/country/cw",
-    "datum": "2026-10"
+    "bron": "https://www.fishingbooker.com/destinations/country/cw",
+    "datum": "2026-11"
    },
    "feiten": [
     {
@@ -1928,9 +1955,9 @@
      "platform": "FishingBooker",
      "score": 4.9,
      "max": 5,
-     "aantal": 297,
-     "peildatum": "2026-10-20",
-     "bron": "https://fishingbooker.com/destinations/country/cw"
+     "aantal": 302,
+     "peildatum": "2026-11-07",
+     "bron": "https://www.fishingbooker.com/destinations/country/cw"
     }
    ],
    "voor": {
@@ -1948,7 +1975,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://fishingbooker.com/destinations/country/cw"
+    "https://fishingbooker.com/destinations/country/cw",
+    "https://www.fishingbooker.com/destinations/country/cw"
    ]
   },
   {
@@ -1977,8 +2005,8 @@
      "es": "por barco, desde",
      "pt": "por barco, a partir de"
     },
-    "bron": "https://fishingbooker.com/destinations/country/cw",
-    "datum": "2026-10"
+    "bron": "https://www.fishingbooker.com/destinations/country/cw",
+    "datum": "2026-11"
    },
    "feiten": [],
    "scores": [
@@ -1986,9 +2014,9 @@
      "platform": "FishingBooker",
      "score": 4.8,
      "max": 5,
-     "aantal": 186,
-     "peildatum": "2026-10-20",
-     "bron": "https://fishingbooker.com/destinations/country/cw"
+     "aantal": 188,
+     "peildatum": "2026-11-07",
+     "bron": "https://www.fishingbooker.com/destinations/country/cw"
     }
    ],
    "voor": {
@@ -2006,7 +2034,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://fishingbooker.com/destinations/country/cw"
+    "https://fishingbooker.com/destinations/country/cw",
+    "https://www.fishingbooker.com/destinations/country/cw"
    ]
   },
   {
@@ -2035,8 +2064,8 @@
      "es": "por barco, desde",
      "pt": "por barco, a partir de"
     },
-    "bron": "https://fishingbooker.com/destinations/country/cw",
-    "datum": "2026-10"
+    "bron": "https://www.fishingbooker.com/destinations/country/cw",
+    "datum": "2026-11"
    },
    "feiten": [],
    "scores": [
@@ -2044,9 +2073,9 @@
      "platform": "FishingBooker",
      "score": 4.8,
      "max": 5,
-     "aantal": 180,
-     "peildatum": "2026-10-20",
-     "bron": "https://fishingbooker.com/destinations/country/cw"
+     "aantal": 183,
+     "peildatum": "2026-11-07",
+     "bron": "https://www.fishingbooker.com/destinations/country/cw"
     }
    ],
    "voor": {
@@ -2064,7 +2093,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://fishingbooker.com/destinations/country/cw"
+    "https://fishingbooker.com/destinations/country/cw",
+    "https://www.fishingbooker.com/destinations/country/cw"
    ]
   },
   {
@@ -2093,8 +2123,8 @@
      "es": "por barco, desde",
      "pt": "por barco, a partir de"
     },
-    "bron": "https://fishingbooker.com/destinations/country/cw",
-    "datum": "2026-10"
+    "bron": "https://www.fishingbooker.com/destinations/country/cw",
+    "datum": "2026-11"
    },
    "feiten": [],
    "scores": [
@@ -2103,8 +2133,8 @@
      "score": 4.8,
      "max": 5,
      "aantal": 109,
-     "peildatum": "2026-10-20",
-     "bron": "https://fishingbooker.com/destinations/country/cw"
+     "peildatum": "2026-11-07",
+     "bron": "https://www.fishingbooker.com/destinations/country/cw"
     }
    ],
    "voor": {
@@ -2122,7 +2152,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://fishingbooker.com/destinations/country/cw"
+    "https://fishingbooker.com/destinations/country/cw",
+    "https://www.fishingbooker.com/destinations/country/cw"
    ]
   },
   {
@@ -2151,8 +2182,8 @@
      "es": "por barco, desde",
      "pt": "por barco, a partir de"
     },
-    "bron": "https://fishingbooker.com/destinations/country/cw",
-    "datum": "2026-10"
+    "bron": "https://www.fishingbooker.com/destinations/country/cw",
+    "datum": "2026-11"
    },
    "feiten": [],
    "scores": [
@@ -2160,9 +2191,9 @@
      "platform": "FishingBooker",
      "score": 4.9,
      "max": 5,
-     "aantal": 42,
-     "peildatum": "2026-10-20",
-     "bron": "https://fishingbooker.com/destinations/country/cw"
+     "aantal": 43,
+     "peildatum": "2026-11-07",
+     "bron": "https://www.fishingbooker.com/destinations/country/cw"
     }
    ],
    "voor": {
@@ -2180,7 +2211,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://fishingbooker.com/destinations/country/cw"
+    "https://fishingbooker.com/destinations/country/cw",
+    "https://www.fishingbooker.com/destinations/country/cw"
    ]
   },
   {
@@ -2209,8 +2241,8 @@
      "es": "por barco, desde",
      "pt": "por barco, a partir de"
     },
-    "bron": "https://fishingbooker.com/destinations/country/cw",
-    "datum": "2026-10"
+    "bron": "https://www.fishingbooker.com/destinations/country/cw",
+    "datum": "2026-11"
    },
    "feiten": [],
    "scores": [
@@ -2219,8 +2251,8 @@
      "score": 4.5,
      "max": 5,
      "aantal": 13,
-     "peildatum": "2026-10-20",
-     "bron": "https://fishingbooker.com/destinations/country/cw"
+     "peildatum": "2026-11-07",
+     "bron": "https://www.fishingbooker.com/destinations/country/cw"
     }
    ],
    "voor": {
@@ -2239,7 +2271,8 @@
    },
    "bronnen": [
     "https://fishingbooker.com/destinations/country/cw",
-    "https://fishingbooker.com/sr/profile/view/258248"
+    "https://fishingbooker.com/sr/profile/view/258248",
+    "https://www.fishingbooker.com/destinations/country/cw"
    ]
   },
   {
@@ -2268,8 +2301,8 @@
      "es": "por barco, desde",
      "pt": "por barco, a partir de"
     },
-    "bron": "https://fishingbooker.com/destinations/country/cw",
-    "datum": "2026-10"
+    "bron": "https://www.fishingbooker.com/destinations/country/cw",
+    "datum": "2026-11"
    },
    "feiten": [],
    "scores": [
@@ -2278,8 +2311,8 @@
      "score": 5.0,
      "max": 5,
      "aantal": 1,
-     "peildatum": "2026-10-20",
-     "bron": "https://fishingbooker.com/destinations/country/cw"
+     "peildatum": "2026-11-07",
+     "bron": "https://www.fishingbooker.com/destinations/country/cw"
     }
    ],
    "voor": {
@@ -2298,7 +2331,8 @@
    },
    "bronnen": [
     "https://fishingbooker.com/destinations/country/cw",
-    "https://fishingbooker.com/charters/view/50764"
+    "https://fishingbooker.com/charters/view/50764",
+    "https://www.fishingbooker.com/destinations/country/cw"
    ]
   },
   {
@@ -2327,8 +2361,8 @@
      "es": "por barco, desde",
      "pt": "por barco, a partir de"
     },
-    "bron": "https://fishingbooker.com/destinations/country/cw",
-    "datum": "2026-10"
+    "bron": "https://www.fishingbooker.com/destinations/country/cw",
+    "datum": "2026-11"
    },
    "feiten": [],
    "scores": [
@@ -2337,8 +2371,8 @@
      "score": 3.6,
      "max": 5,
      "aantal": 4,
-     "peildatum": "2026-10-20",
-     "bron": "https://fishingbooker.com/destinations/country/cw"
+     "peildatum": "2026-11-07",
+     "bron": "https://www.fishingbooker.com/destinations/country/cw"
     }
    ],
    "voor": {
@@ -2356,7 +2390,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://fishingbooker.com/destinations/country/cw"
+    "https://fishingbooker.com/destinations/country/cw",
+    "https://www.fishingbooker.com/destinations/country/cw"
    ]
   },
   {
@@ -2376,7 +2411,7 @@
     "boot"
    ],
    "prijs": {
-    "bedrag": 800,
+    "bedrag": 900,
     "valuta": "USD",
     "eenheid": {
      "nl": "per boot, vanaf",
@@ -2385,8 +2420,8 @@
      "es": "por barco, desde",
      "pt": "por barco, a partir de"
     },
-    "bron": "https://fishingbooker.com/destinations/country/cw",
-    "datum": "2026-10"
+    "bron": "https://www.fishingbooker.com/destinations/country/cw",
+    "datum": "2026-11"
    },
    "feiten": [
     {
@@ -2397,7 +2432,16 @@
      "pt": "Novo no FishingBooker"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "FishingBooker",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 4,
+     "peildatum": "2026-11-07",
+     "bron": "https://www.fishingbooker.com/destinations/country/cw"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2413,7 +2457,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://fishingbooker.com/destinations/country/cw"
+    "https://fishingbooker.com/destinations/country/cw",
+    "https://www.fishingbooker.com/destinations/country/cw"
    ]
   },
   {
@@ -3088,6 +3133,60 @@
    },
    "bronnen": [
     "https://www.lionsdive.com/sports-wellness/the-gym-at-lionsdive-fitness-center/"
+   ]
+  },
+  {
+   "id": "zapata-flyboarding",
+   "naam": "Zapata Flyboarding",
+   "url": null,
+   "soort": {
+    "nl": "flyboarden",
+    "en": "flyboarding",
+    "de": "Flyboarding",
+    "es": "flyboard",
+    "pt": "flyboard"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "jan-thiel",
+    "les",
+    "beginner"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Sessie van een uur met veiligheidsuitleg vooraf",
+     "en": "One-hour session with a safety briefing first",
+     "de": "Einstündige Session mit Sicherheitseinweisung vorab",
+     "es": "Sesión de una hora con charla de seguridad previa",
+     "pt": "Sessão de uma hora com instrução de segurança antes"
+    },
+    {
+     "nl": "Open 10:00 tot 17:00, zondag dicht",
+     "en": "Open 10:00 to 17:00, closed Sunday",
+     "de": "Geöffnet 10:00 bis 17:00, sonntags geschlossen",
+     "es": "Abierto de 10:00 a 17:00, cerrado el domingo",
+     "pt": "Aberto das 10:00 às 17:00, fechado no domingo"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.inyourpocket.com/dutch-caribbean/Curacao/venues/Zapata-Flyboarding",
+    "https://www.curacao.com/en/category/water-activities"
    ]
   }
  ],
