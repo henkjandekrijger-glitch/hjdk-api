@@ -877,5 +877,17 @@
   "moeite": 3,
   "meten": "llm",
   "datum": "2026-11-07"
+ },
+ {
+  "id": "winkel-betrouwbaar-ai-bronnen",
+  "les": "Bij 'is winkel X betrouwbaar' of 'is X legit' citeren AI-assistenten vooral Trustpilot, Reddit, scamcheck-sites en het handelsregister. Niemand levert data over of een winkel zijn beloftes nakomt (levering, retour, terugbetaling). Een winkelpagina wordt citeerbaar met: het antwoord in de eerste zin, de belofte letterlijk uit de eigen voorwaarden met datum, de meting ernaast met aantal bewijzen en datum, een link naar het handelsregister (KvK, Handelsregister, Companies House, SIRENE) en wekelijks bijgewerkte cijfers. Pagina's zonder eigen meting blijven uit de index: massa's pagina's zonder eigen waarde gelden sinds mei 2026 ook voor AI Overviews en AI Mode als spam. Alleen schema toevoegen levert geen citaties op; hoog in Bing staan is de ingang voor ChatGPT.",
+  "kanaal": "llm",
+  "bewijs": "Onderzoek WAM-chat 7 nov 2026 (externe bronnen): Seer/Trustpilot-studie maart 2026, 800k antwoorden: Trustpilot in 57,9% van de ChatGPT-, 51,9% Perplexity- en 48,9% Google AI Mode-antwoorden (andere vraagsets zien veel minder, dus vraag bepaalt alles); MaxAEO: bij 'is dit bedrijf legit' haalt AI in 82% een handelsregister aan als dat te vinden is, met 3+ onafhankelijke bronnen 78% duidelijk oordeel, persberichten 0 keer geciteerd; Parse: 87% van de ChatGPT-citaties uit de bovenste Bing-resultaten; Ahrefs: schema alleen geeft geen extra citaties; PPC Land: scaled content abuse geldt sinds mei 2026 ook voor AI Overviews en AI Mode; Reclame Aqui in 23,4% van de ChatGPT-antwoorden over Braziliaanse merken (Promptado).",
+  "bron": "onderzoek ZICHT voor We Are Many, 7 nov 2026",
+  "sterkte": 2,
+  "effect": "AI-gat voor betrouwbaarheid van winkels: beloftes versus meting",
+  "moeite": 3,
+  "meten": "llm",
+  "datum": "2026-11-07"
  }
 ]
