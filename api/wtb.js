@@ -1,6 +1,7 @@
 import { rankUsage, usageDays, dailyUsage } from '../lib/guide-usage.js';
 import { guideAnswers, guideDecision } from '../lib/us-demand-guides.js';
 import { decisionHtml, guideSections } from '../lib/us-demand-view.js';
+import { boekLd } from '../lib/kdp-guides.js';
 import { koopBlok, koopMeetScript } from '../lib/koopblok.js';
 // WTB-pagina's: whichtobuy.best (VS) en kaufberater.best (DE). Zelfde idee als keuzehulp.best: 3 vragen, 1 eerlijke keuze, prijs van vandaag (Amazon).
 // Routes (vercel.json, op host): / , /<slug>, /sitemap.xml, /robots.txt, /llms.txt, /llms-full.txt, /<indexnow-sleutel>.txt, /about, /privacy
@@ -25,8 +26,8 @@ async function count(m, req, q, slug) {
 }
 
 // producten voor een route: term + zoekwoorden van de gekozen antwoorden, binnen de prijsgrenzen
-async function advice(m, it, a) {
-  if(it.decisionKind){const decision=guideDecision(it,a);return {subject:it.term,slug:it.slug,kws:decision.query,link:searchLink(m,decision.query),products:[],at:null,api:false,decision};}
+async function advice(m, it, a, land) {
+  if(it.decisionKind){const decision=guideDecision(it,a,land);return {subject:it.term,slug:it.slug,kws:decision.query,link:searchLink(m,decision.query),products:[],at:null,api:false,decision};}
   const opts = (it.questions || []).map((q, i) => (q.options || [])[a[i] || 0] || {});
   const kws = [it.term, ...opts.map(o => o.kw).filter(Boolean)].join(' ').replace(/\s+/g, ' ').trim();
   let min = 0, max = 1e9; opts.forEach(o => { if (o.min != null) min = Math.max(min, Number(o.min)); if (o.max != null) max = Math.min(max, Number(o.max)); });
@@ -66,7 +67,7 @@ const VIND = {}; const isCtl = slug => { let h = 0; for (const c of String(slug)
 async function vindLijst(id) { const v = VIND[id]; if (v && Date.now() - v.at < 600000) return v.l; let l = []; try { const ix = await kv.get('hjdk:gsc:index:' + id); l = ((ix && ix.nietGeindexeerd) || []).filter(x => /onbekend|unknown|Gevonden|Discovered/i.test(String(x.staat || ''))).map(x => { try { return new URL(x.url).pathname.slice(1); } catch (e) { return ''; } }).filter(x => x && !x.includes('/') && !isCtl(x)); } catch (e) {} VIND[id] = { at: Date.now(), l }; return l; }
 async function page(m, it, all, req) {
   const s = m.s; const base = 'https://' + m.host; const a0 = guideAnswers(it, new URL(req.url,'http://x').searchParams.get('answers'));
-  const adv = await advice(m, it, a0);
+  const adv = await advice(m, it, a0, req.headers['x-vercel-ip-country']);
   const boost = new Set((await kv.get('hjdk:gsc:' + m.id + ':boost').catch(() => null)) || []); const sc = x => (x.cat === it.cat ? 2 : 0) + (boost.has(x.slug) ? 1 : 0) + ((it.verwant || []).includes(x.slug) || (x.verwant || []).includes(it.slug) ? 20 : 0);
   const KW = await kwaliteit(m.id); const DUN = (KW.dun || {})[it.slug]; const wacht = new Set(KW.wacht || []);
   // kwaliteitsronde: geen links naar uitgesloten pagina's, extra links naar pagina's die Google nog niet las, "veel gezocht" naar de sterkste
@@ -83,6 +84,7 @@ async function page(m, it, all, req) {
     { '@type': 'Article', headline: it.h1, description: it.metaDesc, inLanguage: m.locale, ...(it.publishAt ? { datePublished: it.publishAt } : {}), ...(upd ? { dateModified: upd } : {}), author: { '@type': 'Organization', name: m.name, url: base }, publisher: { '@type': 'Organization', name: m.name, url: base }, mainEntityOfPage: base + '/' + it.slug, about: { '@type': 'Thing', name: it.term } },
     { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: m.name, item: base + '/' }, { '@type': 'ListItem', position: 2, name: it.title, item: base + '/' + it.slug }] },
     ...((it.faq || []).length ? [{ '@type': 'FAQPage', mainEntity: faqZonderDubbel(it.faq).map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
+    ...(it.decisionKind === 'boek' ? boekLd(it) : []),
     ...(adv.products.length ? [{ '@type': 'ItemList', name: it.title, itemListElement: adv.products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title.slice(0, 110), url: p.url })) }] : []) ] };
   const body = `<p class="crumbs"><a href="/">${esc(m.name)}</a> › ${esc(it.cat)}</p><p class="kicker">${esc(it.cat)}</p><h1>${esc(it.h1)}</h1><p class="standfirst">${esc(it.intro)}</p>
 <div class="answer"><p>${firstBold(it.kort)}</p></div><p class="meta">${upd ? `${esc(s.updated)}&nbsp;<time datetime="${esc(upd)}">${esc(upd)}</time> · ` : ""}${esc(s.by)} ${m.id === 'us' ? 'the editors' : 'der Redaktion'}</p>
@@ -162,7 +164,7 @@ export default async function handler(req, res) {
   if (op === 'advice') {
     const it = all.find(i => i.slug === String(q.get('slug') || '')); if (!it) return res.status(404).json({ ok: false });
     const a = guideAnswers(it,q.get('a'));
-    const adv = await advice(m, it, a); res.setHeader('cache-control', 'public, max-age=600');
+    const adv = await advice(m, it, a, req.headers['x-vercel-ip-country']); res.setHeader('cache-control', it.decisionKind === 'boek' ? 'private, max-age=600' : 'public, max-age=600');
     try { await kv.incrMany([['c:wtb-' + m.id + '-' + it.slug + '-r' + a.join('') + '-imp', 1]]); } catch (e) {}
     return res.status(200).json(Object.assign({ ok: true }, q.get('html') ? { html: adviceHtml(m, adv) } : adv));
   }
