@@ -1,0 +1,1792 @@
+{
+ "id": "kunst",
+ "peildatum": "2026-11-07",
+ "onderwerp": {
+  "nl": "kunstplek",
+  "en": "art spot",
+  "de": "Kunstort",
+  "es": "lugar de arte",
+  "pt": "lugar de arte"
+ },
+ "h1": {
+  "nl": "Kunst op Curaçao: welke galerie, welk museum of welke street art past bij jou?",
+  "en": "Art in Curaçao: which gallery, museum or street art suits you?",
+  "de": "Kunst auf Curaçao: Welche Galerie, welches Museum oder welche Street Art passt zu dir?",
+  "es": "Arte en Curazao: ¿qué galería, museo o arte urbano te conviene?",
+  "pt": "Arte em Curaçao: qual galeria, museu ou arte de rua combina com você?"
+ },
+ "titel": {
+  "nl": "Kunst op Curaçao: {n} galerieën, musea en street art",
+  "en": "Curaçao Art: {n} Galleries, Museums and Street Art Spots",
+  "de": "Kunst auf Curaçao: {n} Galerien, Museen und Street Art",
+  "es": "Arte en Curazao: {n} galerías, museos y arte urbano",
+  "pt": "Arte em Curaçao: {n} galerias, museus e arte de rua"
+ },
+ "metaDesc": {
+  "nl": "{n} kunstplekken op Curaçao op een rij: street art in Scharloo, Otrobanda en Punda, Landhuis Bloemhof, Alma Blou, Kura Hulanda en Chichi schilderen. Met openingstijden en bronnen.",
+  "en": "{n} Curaçao art spots in one list: street art in Scharloo, Otrobanda and Punda, Landhuis Bloemhof, Alma Blou, Kura Hulanda and painting a Chichi. With hours and sources.",
+  "de": "{n} Kunstorte auf Curaçao: Street Art in Scharloo, Otrobanda und Punda, Landhuis Bloemhof, Alma Blou, Kura Hulanda und Chichi bemalen. Mit Öffnungszeiten und Quellen.",
+  "es": "{n} lugares de arte en Curazao: arte urbano en Scharloo, Otrobanda y Punda, Landhuis Bloemhof, Alma Blou, Kura Hulanda y pintar una Chichi. Con horarios y fuentes.",
+  "pt": "{n} lugares de arte em Curaçao: arte de rua em Scharloo, Otrobanda e Punda, Landhuis Bloemhof, Alma Blou, Kura Hulanda e pintar uma Chichi. Com horários e fontes."
+ },
+ "kort": {
+  "nl": "We zetten {n} kunstplekken op Curaçao op een rij. Street art in Scharloo, Otrobanda, Punda en Pietermaai is gratis en ligt op loopafstand. Galerieën: Alma Blou in Landhuis Habaai (ma tot za), Landhuis Bloemhof (di tot za, 's ochtends). Zelf maken: een Chichi schilderen bij Serena's Art Factory, elke dinsdag en zaterdag. Musea: Kura Hulanda (elke dag) en het Curaçaosch Museum (di tot za).",
+  "en": "We listed {n} art spots in Curaçao. Street art in Scharloo, Otrobanda, Punda and Pietermaai is free and walkable. Galleries: Alma Blou in Landhuis Habaai (Mon to Sat), Landhuis Bloemhof (Tue to Sat, mornings). Make your own: paint a Chichi at Serena's Art Factory, every Tuesday and Saturday. Museums: Kura Hulanda (daily) and The Curaçao Museum (Tue to Sat).",
+  "de": "Wir haben {n} Kunstorte auf Curaçao zusammengestellt. Street Art in Scharloo, Otrobanda, Punda und Pietermaai ist kostenlos und zu Fuß erreichbar. Galerien: Alma Blou im Landhuis Habaai (Mo bis Sa), Landhuis Bloemhof (Di bis Sa, vormittags). Selbst machen: eine Chichi bemalen bei Serena's Art Factory, jeden Dienstag und Samstag. Museen: Kura Hulanda (täglich) und das Curaçaosch Museum (Di bis Sa).",
+  "es": "Reunimos {n} lugares de arte en Curazao. El arte urbano de Scharloo, Otrobanda, Punda y Pietermaai es gratis y se recorre a pie. Galerías: Alma Blou en Landhuis Habaai (lun a sáb), Landhuis Bloemhof (mar a sáb, por la mañana). Hazlo tú: pinta una Chichi en Serena's Art Factory, cada martes y sábado. Museos: Kura Hulanda (todos los días) y el Museo de Curazao (mar a sáb).",
+  "pt": "Reunimos {n} lugares de arte em Curaçao. A arte de rua de Scharloo, Otrobanda, Punda e Pietermaai é grátis e dá para fazer a pé. Galerias: Alma Blou na Landhuis Habaai (seg a sáb), Landhuis Bloemhof (ter a sáb, de manhã). Faça você mesmo: pinte uma Chichi na Serena's Art Factory, toda terça e sábado. Museus: Kura Hulanda (todos os dias) e o Museu de Curaçao (ter a sáb)."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat wil je vooral zien?",
+    "en": "What do you mainly want to see?",
+    "de": "Was möchtest du vor allem sehen?",
+    "es": "¿Qué quieres ver sobre todo?",
+    "pt": "O que você quer ver principalmente?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit, alles",
+      "en": "Doesn't matter, everything",
+      "de": "Egal, alles",
+      "es": "Da igual, todo",
+      "pt": "Tanto faz, tudo"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Street art en muurschilderingen",
+      "en": "Street art and murals",
+      "de": "Street Art und Wandbilder",
+      "es": "Arte urbano y murales",
+      "pt": "Arte de rua e murais"
+     },
+     "plus": [
+      "streetart"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Galerie, misschien iets kopen",
+      "en": "A gallery, maybe buy something",
+      "de": "Galerie, vielleicht etwas kaufen",
+      "es": "Una galería, quizá comprar algo",
+      "pt": "Uma galeria, talvez comprar algo"
+     },
+     "plus": [
+      "galerie",
+      "kopen"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Museum en geschiedenis",
+      "en": "Museum and history",
+      "de": "Museum und Geschichte",
+      "es": "Museo e historia",
+      "pt": "Museu e história"
+     },
+     "plus": [
+      "museum",
+      "geschiedenis"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Zelf iets maken",
+      "en": "Make something myself",
+      "de": "Selbst etwas machen",
+      "es": "Hacer algo yo mismo",
+      "pt": "Fazer algo eu mesmo"
+     },
+     "plus": [
+      "workshop"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Hoeveel tijd heb je?",
+    "en": "How much time do you have?",
+    "de": "Wie viel Zeit hast du?",
+    "es": "¿Cuánto tiempo tienes?",
+    "pt": "Quanto tempo você tem?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter",
+      "de": "Egal",
+      "es": "Da igual",
+      "pt": "Tanto faz"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Een uurtje in de stad",
+      "en": "An hour in town",
+      "de": "Eine Stunde in der Stadt",
+      "es": "Una hora en la ciudad",
+      "pt": "Uma hora na cidade"
+     },
+     "plus": [
+      "kort",
+      "willemstad"
+     ],
+     "min": [
+      "halvedag"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Een halve dag",
+      "en": "Half a day",
+      "de": "Einen halben Tag",
+      "es": "Medio día",
+      "pt": "Meio dia"
+     },
+     "plus": [
+      "halvedag"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "'s Avonds",
+      "en": "In the evening",
+      "de": "Abends",
+      "es": "Por la noche",
+      "pt": "À noite"
+     },
+     "plus": [
+      "avond"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat mag het kosten?",
+    "en": "What is your budget?",
+    "de": "Was darf es kosten?",
+    "es": "¿Cuánto quieres gastar?",
+    "pt": "Quanto quer gastar?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter",
+      "de": "Egal",
+      "es": "Da igual",
+      "pt": "Tanto faz"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Liefst gratis",
+      "en": "Free if possible",
+      "de": "Am liebsten kostenlos",
+      "es": "Gratis si es posible",
+      "pt": "De preferência grátis"
+     },
+     "plus": [
+      "gratis"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Ga je met kinderen?",
+    "en": "Are you going with kids?",
+    "de": "Gehst du mit Kindern?",
+    "es": "¿Vas con niños?",
+    "pt": "Vai com crianças?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Nee",
+      "en": "No",
+      "de": "Nein",
+      "es": "No",
+      "pt": "Não"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ja",
+      "en": "Yes",
+      "de": "Ja",
+      "es": "Sí",
+      "pt": "Sim"
+     },
+     "plus": [
+      "kinderen"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "skalo",
+   "naam": "Street Art Skalo (Scharloo)",
+   "url": null,
+   "soort": {
+    "nl": "street art",
+    "en": "street art",
+    "de": "Street Art",
+    "es": "arte urbano",
+    "pt": "arte de rua"
+   },
+   "plaats": "Scharloo, Willemstad",
+   "tags": [
+    "streetart",
+    "gratis",
+    "willemstad",
+    "kort",
+    "buiten",
+    "kinderen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Openluchtgalerie sinds 2016",
+     "en": "Open-air gallery since 2016",
+     "de": "Freiluftgalerie seit 2016",
+     "es": "Galería al aire libre desde 2016",
+     "pt": "Galeria a céu aberto desde 2016"
+    },
+    {
+     "nl": "Gratis, altijd te bekijken",
+     "en": "Free, always open",
+     "de": "Kostenlos, jederzeit zugänglich",
+     "es": "Gratis, siempre abierto",
+     "pt": "Grátis, sempre aberto"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Grote muurschilderingen van Curaçaose kunstenaars op een paar straten",
+     "Kunstenaars wonen en werken er, soms zie je ze bezig"
+    ],
+    "en": [
+     "Big murals by Curaçao artists within a few streets",
+     "Artists live and work here, sometimes you see them at work"
+    ],
+    "de": [
+     "Große Wandbilder von Künstlern aus Curaçao auf wenigen Straßen",
+     "Hier leben und arbeiten Künstler, manchmal siehst du sie bei der Arbeit"
+    ],
+    "es": [
+     "Grandes murales de artistas de Curazao en pocas calles",
+     "Aquí viven y trabajan artistas; a veces los ves pintando"
+    ],
+    "pt": [
+     "Grandes murais de artistas de Curaçao em poucas ruas",
+     "Artistas moram e trabalham aqui; às vezes dá para vê-los pintando"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Midden op de dag heet en fel licht"
+    ],
+    "en": [
+     "Hot with harsh light at midday"
+    ],
+    "de": [
+     "Mittags heiß und grelles Licht"
+    ],
+    "es": [
+     "Al mediodía hace calor y la luz es dura"
+    ],
+    "pt": [
+     "Ao meio-dia faz calor e a luz é forte"
+    ]
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/willemstad-curacao-urban-artistry",
+    "https://puretravel.com/blog/2023/02/02/curacao-street-art-what-to-see-and-where-to-go/"
+   ]
+  },
+  {
+   "id": "otrobanda-kayakaya",
+   "naam": "Muurschilderingen Otrobanda (Kaya Kaya)",
+   "url": "https://kayakaya.org/",
+   "soort": {
+    "nl": "street art",
+    "en": "street art",
+    "de": "Street Art",
+    "es": "arte urbano",
+    "pt": "arte de rua"
+   },
+   "plaats": "Ser'i Otrobanda, Willemstad",
+   "tags": [
+    "streetart",
+    "gratis",
+    "willemstad",
+    "kort",
+    "avond",
+    "buiten",
+    "kinderen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Kaya Kaya maakt sinds 2018 muurschilderingen in Otrobanda",
+     "en": "Kaya Kaya has painted murals in Otrobanda since 2018",
+     "de": "Kaya Kaya gestaltet seit 2018 Wandbilder in Otrobanda",
+     "es": "Kaya Kaya pinta murales en Otrobanda desde 2018",
+     "pt": "O Kaya Kaya pinta murais em Otrobanda desde 2018"
+    },
+    {
+     "nl": "Kaya Kaya Artweek 17 tot 22 augustus 2026: ruim 30 kunstenaars, gratis",
+     "en": "Kaya Kaya Artweek 17 to 22 August 2026: 30+ artists, free",
+     "de": "Kaya Kaya Artweek 17. bis 22. August 2026: über 30 Künstler, kostenlos",
+     "es": "Kaya Kaya Artweek del 17 al 22 de agosto de 2026: más de 30 artistas, gratis",
+     "pt": "Kaya Kaya Artweek de 17 a 22 de agosto de 2026: mais de 30 artistas, grátis"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "De muren vertellen de geschiedenis van de wijk en het eiland",
+     "Op loopafstand van de pontonbrug"
+    ],
+    "en": [
+     "The walls tell the story of the neighbourhood and the island",
+     "A short walk from the floating bridge"
+    ],
+    "de": [
+     "Die Wände erzählen die Geschichte des Viertels und der Insel",
+     "Wenige Schritte von der Pontonbrücke"
+    ],
+    "es": [
+     "Los muros cuentan la historia del barrio y de la isla",
+     "A pocos pasos del puente flotante"
+    ],
+    "pt": [
+     "Os muros contam a história do bairro e da ilha",
+     "A poucos passos da ponte flutuante"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen vaste route, sommige muren liggen in stille straatjes"
+    ],
+    "en": [
+     "No fixed route; some walls are in quiet side streets"
+    ],
+    "de": [
+     "Keine feste Route, manche Wände liegen in ruhigen Gassen"
+    ],
+    "es": [
+     "No hay ruta fija; algunos muros están en callejones tranquilos"
+    ],
+    "pt": [
+     "Não há roteiro fixo; alguns muros ficam em vielas tranquilas"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/local/kaya-kaya-festival-transforms-into-a-year-round-cultural-movement",
+    "https://www.curacaochronicle.com/post/local/kaya-kaya-artweek-brings-more-than-30-artists-to-otrobanda",
+    "https://www.mycuracaoguide.com/blogs/willemstad-curacao-urban-artistry"
+   ]
+  },
+  {
+   "id": "punda-streetart",
+   "naam": "Street art in Punda",
+   "url": null,
+   "soort": {
+    "nl": "street art",
+    "en": "street art",
+    "de": "Street Art",
+    "es": "arte urbano",
+    "pt": "arte de rua"
+   },
+   "plaats": "Punda, Willemstad",
+   "tags": [
+    "streetart",
+    "gratis",
+    "willemstad",
+    "kort",
+    "buiten",
+    "kinderen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "3D-schilderingen van leguanen en zonnebloemen bij de Keukenstraat",
+     "en": "3D paintings of iguanas and sunflowers near Keukenstraat",
+     "de": "3D-Bilder von Leguanen und Sonnenblumen nahe der Keukenstraat",
+     "es": "Pinturas 3D de iguanas y girasoles cerca de la Keukenstraat",
+     "pt": "Pinturas 3D de iguanas e girassóis perto da Keukenstraat"
+    },
+    {
+     "nl": "Vogel van Garrick Marchena die door de muur lijkt te breken",
+     "en": "Garrick Marchena's bird that seems to burst through the wall",
+     "de": "Garrick Marchenas Vogel, der durch die Wand zu brechen scheint",
+     "es": "El pájaro de Garrick Marchena que parece atravesar el muro",
+     "pt": "O pássaro de Garrick Marchena que parece atravessar a parede"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Combineer met de Handelskade en de winkelstraten"
+    ],
+    "en": [
+     "Combine with the Handelskade and the shopping streets"
+    ],
+    "de": [
+     "Lässt sich mit der Handelskade und den Einkaufsstraßen verbinden"
+    ],
+    "es": [
+     "Combínalo con la Handelskade y las calles comerciales"
+    ],
+    "pt": [
+     "Combine com a Handelskade e as ruas de compras"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Druk als er cruiseschepen liggen"
+    ],
+    "en": [
+     "Busy when cruise ships are in"
+    ],
+    "de": [
+     "Voll, wenn Kreuzfahrtschiffe im Hafen liegen"
+    ],
+    "es": [
+     "Lleno cuando hay cruceros"
+    ],
+    "pt": [
+     "Cheio quando há cruzeiros no porto"
+    ]
+   },
+   "bronnen": [
+    "https://puretravel.com/blog/2023/02/02/curacao-street-art-what-to-see-and-where-to-go/",
+    "https://www.mycuracaoguide.com/blogs/willemstad-curacao-urban-artistry"
+   ]
+  },
+  {
+   "id": "pietermaai-streetart",
+   "naam": "Muurschilderingen in Pietermaai",
+   "url": null,
+   "soort": {
+    "nl": "street art",
+    "en": "street art",
+    "de": "Street Art",
+    "es": "arte urbano",
+    "pt": "arte de rua"
+   },
+   "plaats": "Pietermaai, Willemstad",
+   "tags": [
+    "streetart",
+    "gratis",
+    "willemstad",
+    "kort",
+    "avond",
+    "buiten"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Schilderingen op eeuwenoude, deels lege panden",
+     "en": "Murals on century-old, partly empty buildings",
+     "de": "Wandbilder an jahrhundertealten, teils leeren Häusern",
+     "es": "Murales en edificios centenarios, algunos vacíos",
+     "pt": "Murais em prédios centenários, alguns vazios"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Overdag foto's, 's avonds eten en uitgaan in dezelfde straat"
+    ],
+    "en": [
+     "Photos by day, dinner and drinks in the same street at night"
+    ],
+    "de": [
+     "Tagsüber Fotos, abends Essen und Ausgehen in derselben Straße"
+    ],
+    "es": [
+     "Fotos de día, cena y copas en la misma calle de noche"
+    ],
+    "pt": [
+     "Fotos de dia, jantar e bares na mesma rua à noite"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Kleiner dan Scharloo of Otrobanda"
+    ],
+    "en": [
+     "Smaller than Scharloo or Otrobanda"
+    ],
+    "de": [
+     "Kleiner als Scharloo oder Otrobanda"
+    ],
+    "es": [
+     "Más pequeño que Scharloo u Otrobanda"
+    ],
+    "pt": [
+     "Menor que Scharloo ou Otrobanda"
+    ]
+   },
+   "bronnen": [
+    "https://www.mycuracaoguide.com/blogs/willemstad-curacao-urban-artistry",
+    "https://puretravel.com/blog/2023/02/02/curacao-street-art-what-to-see-and-where-to-go/"
+   ]
+  },
+  {
+   "id": "francis-sling",
+   "naam": "Artcave Francis Sling",
+   "url": "https://www.facebook.com/francissling/",
+   "soort": {
+    "nl": "galerie",
+    "en": "gallery",
+    "de": "Galerie",
+    "es": "galería",
+    "pt": "galeria"
+   },
+   "plaats": "Skaló (Scharloo), Willemstad",
+   "tags": [
+    "galerie",
+    "streetart",
+    "willemstad",
+    "kort",
+    "workshop",
+    "kopen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Atelier van Francis Sling, een blok van zijn grote muurschildering",
+     "en": "Francis Sling's studio, one block from his big mural",
+     "de": "Atelier von Francis Sling, einen Block von seinem großen Wandbild",
+     "es": "Taller de Francis Sling, a una cuadra de su gran mural",
+     "pt": "Ateliê de Francis Sling, a uma quadra do seu grande mural"
+    },
+    {
+     "nl": "Zijn muur 'Three O'clock Romance' staat op de hoek van de Bitterstraat",
+     "en": "His mural 'Three O'clock Romance' is on the corner of Bitterstraat",
+     "de": "Sein Wandbild 'Three O'clock Romance' steht an der Ecke Bitterstraat",
+     "es": "Su mural 'Three O'clock Romance' está en la esquina de la Bitterstraat",
+     "pt": "Seu mural 'Three O'clock Romance' fica na esquina da Bitterstraat"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Een paar keer per jaar schilderworkshops"
+    ],
+    "en": [
+     "Painting workshops a few times a year"
+    ],
+    "de": [
+     "Ein paar Mal im Jahr Malworkshops"
+    ],
+    "es": [
+     "Talleres de pintura algunas veces al año"
+    ],
+    "pt": [
+     "Oficinas de pintura algumas vezes por ano"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen vaste openingstijden gevonden, check Facebook"
+    ],
+    "en": [
+     "No fixed opening hours found, check Facebook"
+    ],
+    "de": [
+     "Keine festen Öffnungszeiten gefunden, auf Facebook prüfen"
+    ],
+    "es": [
+     "No encontramos horario fijo; revisa Facebook"
+    ],
+    "pt": [
+     "Não achamos horário fixo; veja o Facebook"
+    ]
+   },
+   "bronnen": [
+    "https://curacaoactivities.com/best-art-galleries-curacao/",
+    "https://www.mycuracaoguide.com/blogs/willemstad-curacao-urban-artistry"
+   ]
+  },
+  {
+   "id": "alma-blou",
+   "naam": "Gallery Alma Blou",
+   "url": "http://galleryalmablou.com/",
+   "soort": {
+    "nl": "galerie",
+    "en": "gallery",
+    "de": "Galerie",
+    "es": "galería",
+    "pt": "galeria"
+   },
+   "plaats": "Landhuis Habaai, Frater Radulphusweg 4",
+   "tags": [
+    "galerie",
+    "kopen",
+    "willemstad",
+    "kort",
+    "souvenir"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ma tot vr 9:30 tot 17:30, za 10:00 tot 14:00",
+     "en": "Mon to Fri 9:30 a.m. to 5:30 p.m., Sat 10 a.m. to 2 p.m.",
+     "de": "Mo bis Fr 9:30 bis 17:30, Sa 10 bis 14 Uhr",
+     "es": "Lun a vie 9:30 a 17:30, sáb 10:00 a 14:00",
+     "pt": "Seg a sex 9h30 às 17h30, sáb 10h às 14h"
+    },
+    {
+     "nl": "In een landhuis van rond 1752",
+     "en": "In a plantation house from around 1752",
+     "de": "In einem Landhaus von etwa 1752",
+     "es": "En una casa de hacienda de hacia 1752",
+     "pt": "Numa casa de fazenda de cerca de 1752"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Schilderijen, beelden van Curaçaos marmer, keramiek en sieraden",
+     "Volgens curacao-art.com de oudste en grootste galerie van het eiland"
+    ],
+    "en": [
+     "Paintings, sculptures in Curaçao marble, ceramics and jewellery",
+     "According to curacao-art.com the oldest and largest gallery on the island"
+    ],
+    "de": [
+     "Gemälde, Skulpturen aus Curaçao-Marmor, Keramik und Schmuck",
+     "Laut curacao-art.com die älteste und größte Galerie der Insel"
+    ],
+    "es": [
+     "Pinturas, esculturas en mármol de Curazao, cerámica y joyas",
+     "Según curacao-art.com, la galería más antigua y grande de la isla"
+    ],
+    "pt": [
+     "Pinturas, esculturas em mármore de Curaçao, cerâmica e joias",
+     "Segundo o curacao-art.com, a galeria mais antiga e maior da ilha"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Zondag dicht"
+    ],
+    "en": [
+     "Closed on Sunday"
+    ],
+    "de": [
+     "Sonntags geschlossen"
+    ],
+    "es": [
+     "Cerrado los domingos"
+    ],
+    "pt": [
+     "Fechado aos domingos"
+    ]
+   },
+   "bronnen": [
+    "https://curacao-art.com/gallery-alma-blou/",
+    "https://curacaoactivities.com/best-art-galleries-curacao/"
+   ]
+  },
+  {
+   "id": "bloemhof",
+   "naam": "Landhuis Bloemhof",
+   "url": "https://bloemhof.cw/",
+   "soort": {
+    "nl": "galerie",
+    "en": "gallery",
+    "de": "Galerie",
+    "es": "galería",
+    "pt": "galeria"
+   },
+   "plaats": "Santa Rosaweg 6",
+   "tags": [
+    "galerie",
+    "beeldentuin",
+    "buiten",
+    "willemstad",
+    "halvedag",
+    "hedendaags"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Di tot za 9:00 tot 14:00, zo en ma dicht",
+     "en": "Tue to Sat 9 a.m. to 2 p.m., closed Sun and Mon",
+     "de": "Di bis Sa 9 bis 14 Uhr, So und Mo geschlossen",
+     "es": "Mar a sáb 9:00 a 14:00, dom y lun cerrado",
+     "pt": "Ter a sáb 9h às 14h, dom e seg fechado"
+    },
+    {
+     "nl": "Landhuis uit 1735 op 17 acres met tuin",
+     "en": "Plantation house from 1735 on a 17-acre estate",
+     "de": "Landhaus von 1735 auf einem 17 Acre großen Gelände",
+     "es": "Casa de hacienda de 1735 en una finca de 17 acres",
+     "pt": "Casa de fazenda de 1735 numa propriedade de 17 acres"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Wisselende tentoonstellingen van hedendaagse kunstenaars",
+     "Het beeldhouwatelier van May Henriquez en de Kathedraal van doornen van Herman van Bergen"
+    ],
+    "en": [
+     "Changing shows by contemporary artists",
+     "May Henriquez's sculpture studio and Herman van Bergen's Cathedral of Thorns"
+    ],
+    "de": [
+     "Wechselnde Ausstellungen zeitgenössischer Künstler",
+     "Das Bildhaueratelier von May Henriquez und Herman van Bergens Dornenkathedrale"
+    ],
+    "es": [
+     "Exposiciones cambiantes de artistas contemporáneos",
+     "El taller de escultura de May Henriquez y la Catedral de Espinas de Herman van Bergen"
+    ],
+    "pt": [
+     "Exposições rotativas de artistas contemporâneos",
+     "O ateliê de escultura de May Henriquez e a Catedral de Espinhos de Herman van Bergen"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Alleen 's ochtends open",
+     "Auto nodig, buiten het centrum"
+    ],
+    "en": [
+     "Open in the morning only",
+     "You need a car, outside the centre"
+    ],
+    "de": [
+     "Nur vormittags geöffnet",
+     "Auto nötig, außerhalb des Zentrums"
+    ],
+    "es": [
+     "Solo abre por la mañana",
+     "Necesitas auto, fuera del centro"
+    ],
+    "pt": [
+     "Só abre de manhã",
+     "Precisa de carro, fora do centro"
+    ]
+   },
+   "bronnen": [
+    "https://bloemhof.cw/",
+    "https://www.mycuracaoguide.com/blogs/willemstad-curacao-urban-artistry"
+   ]
+  },
+  {
+   "id": "curacaosch-museum",
+   "naam": "Het Curaçaosch Museum (The Curaçao Museum)",
+   "url": "https://hetcuracaosch.museum/",
+   "soort": {
+    "nl": "museum",
+    "en": "museum",
+    "de": "Museum",
+    "es": "museo",
+    "pt": "museu"
+   },
+   "plaats": "Van Leeuwenhoekstraat, Otrobanda",
+   "tags": [
+    "museum",
+    "geschiedenis",
+    "galerie",
+    "willemstad",
+    "kort",
+    "hedendaags"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Di tot vr 8:30 tot 16:30, za 10:00 tot 16:00",
+     "en": "Tue to Fri 8:30 a.m. to 4:30 p.m., Sat 10 a.m. to 4 p.m.",
+     "de": "Di bis Fr 8:30 bis 16:30, Sa 10 bis 16 Uhr",
+     "es": "Mar a vie 8:30 a 16:30, sáb 10:00 a 16:00",
+     "pt": "Ter a sex 8h30 às 16h30, sáb 10h às 16h"
+    },
+    {
+     "nl": "Oudste museum van het eiland, in een gebouw uit 1853",
+     "en": "Oldest museum on the island, in a building from 1853",
+     "de": "Ältestes Museum der Insel, in einem Gebäude von 1853",
+     "es": "El museo más antiguo de la isla, en un edificio de 1853",
+     "pt": "O museu mais antigo da ilha, num prédio de 1853"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Elke paar maanden een solotentoonstelling van een kunstenaar van het eiland",
+     "Meubels, glas en textiel van de 18e tot begin 20e eeuw"
+    ],
+    "en": [
+     "A solo show by an island artist every few months",
+     "Furniture, glass and textiles from the 18th to early 20th century"
+    ],
+    "de": [
+     "Alle paar Monate eine Einzelausstellung eines Inselkünstlers",
+     "Möbel, Glas und Textilien vom 18. bis frühen 20. Jahrhundert"
+    ],
+    "es": [
+     "Cada pocos meses, una muestra individual de un artista local",
+     "Muebles, vidrio y textiles del siglo XVIII a inicios del XX"
+    ],
+    "pt": [
+     "A cada poucos meses, uma exposição individual de um artista local",
+     "Móveis, vidro e tecidos do século XVIII ao início do XX"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Zondag en maandag dicht"
+    ],
+    "en": [
+     "Closed Sunday and Monday"
+    ],
+    "de": [
+     "Sonntag und Montag geschlossen"
+    ],
+    "es": [
+     "Cerrado domingo y lunes"
+    ],
+    "pt": [
+     "Fechado domingo e segunda"
+    ]
+   },
+   "bronnen": [
+    "https://hetcuracaosch.museum/tentoonstellingen-activiteiten/",
+    "https://curacao-art.com/galleries"
+   ]
+  },
+  {
+   "id": "kura-hulanda",
+   "naam": "Museum Kura Hulanda",
+   "url": "https://www.kurahulandavillage.com/",
+   "soort": {
+    "nl": "museum",
+    "en": "museum",
+    "de": "Museum",
+    "es": "museo",
+    "pt": "museu"
+   },
+   "plaats": "Klipstraat 9, Otrobanda",
+   "tags": [
+    "museum",
+    "geschiedenis",
+    "willemstad",
+    "halvedag"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Ma tot za 8:00 tot 16:00, zo 9:00 tot 14:00",
+     "en": "Mon to Sat 8 a.m. to 4 p.m., Sun 9 a.m. to 2 p.m.",
+     "de": "Mo bis Sa 8 bis 16 Uhr, So 9 bis 14 Uhr",
+     "es": "Lun a sáb 8:00 a 16:00, dom 9:00 a 14:00",
+     "pt": "Seg a sáb 8h às 16h, dom 9h às 14h"
+    },
+    {
+     "nl": "Ruim 5.000 voorwerpen in vijf vaste zalen",
+     "en": "More than 5,000 objects in five permanent halls",
+     "de": "Über 5.000 Objekte in fünf Dauerausstellungen",
+     "es": "Más de 5.000 objetos en cinco salas permanentes",
+     "pt": "Mais de 5.000 objetos em cinco salas permanentes"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "West-Afrikaanse koninkrijken en de trans-Atlantische slavenhandel, op de plek waar die gebeurde",
+     "Rondleidingen in Papiaments, Nederlands, Engels en Spaans"
+    ],
+    "en": [
+     "West African kingdoms and the transatlantic slave trade, on the site where it happened",
+     "Tours in Papiamentu, Dutch, English and Spanish"
+    ],
+    "de": [
+     "Westafrikanische Königreiche und der transatlantische Sklavenhandel, an dem Ort, wo er geschah",
+     "Führungen auf Papiamentu, Niederländisch, Englisch und Spanisch"
+    ],
+    "es": [
+     "Reinos de África Occidental y la trata transatlántica, en el lugar donde ocurrió",
+     "Visitas guiadas en papiamento, neerlandés, inglés y español"
+    ],
+    "pt": [
+     "Reinos da África Ocidental e o tráfico transatlântico, no lugar onde aconteceu",
+     "Visitas guiadas em papiamento, holandês, inglês e espanhol"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Zwaar onderwerp, bereid kinderen voor"
+    ],
+    "en": [
+     "Heavy subject, prepare children"
+    ],
+    "de": [
+     "Schweres Thema, Kinder vorbereiten"
+    ],
+    "es": [
+     "Tema duro; prepara a los niños"
+    ],
+    "pt": [
+     "Tema pesado; prepare as crianças"
+    ]
+   },
+   "bronnen": [
+    "https://www.kurahulandavillage.com/?p=3357",
+    "https://eventscuracao.com/art-galleries-museums/"
+   ]
+  },
+  {
+   "id": "ibb",
+   "naam": "Instituto Buena Bista (IBB)",
+   "url": "https://www.institutobuenabista.com/",
+   "soort": {
+    "nl": "galerie",
+    "en": "gallery",
+    "de": "Galerie",
+    "es": "galería",
+    "pt": "galeria"
+   },
+   "plaats": "Mohikanenweg 8",
+   "tags": [
+    "hedendaags",
+    "galerie",
+    "kort"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Centrum voor hedendaagse kunst",
+     "en": "Centre for contemporary art",
+     "de": "Zentrum für zeitgenössische Kunst",
+     "es": "Centro de arte contemporáneo",
+     "pt": "Centro de arte contemporânea"
+    },
+    {
+     "nl": "Werkdagen 13:00 tot 20:00 te bezoeken",
+     "en": "Open to visitors on weekdays 1 to 8 p.m.",
+     "de": "Werktags 13 bis 20 Uhr zu besuchen",
+     "es": "Abierto entre semana de 13:00 a 20:00",
+     "pt": "Aberto em dias úteis das 13h às 20h"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Opleiding voor jong talent en kunstenaars uit het buitenland in residentie"
+    ],
+    "en": [
+     "A course for young talent and visiting artists in residence"
+    ],
+    "de": [
+     "Ausbildung für junge Talente und Gastkünstler"
+    ],
+    "es": [
+     "Formación para jóvenes talentos y artistas en residencia"
+    ],
+    "pt": [
+     "Formação para jovens talentos e artistas em residência"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Geen vaste tentoonstelling, kijk vooraf wat er is"
+    ],
+    "en": [
+     "No permanent show, check what is on first"
+    ],
+    "de": [
+     "Keine Dauerausstellung, vorher nachsehen"
+    ],
+    "es": [
+     "No hay exposición fija; consulta antes"
+    ],
+    "pt": [
+     "Sem exposição fixa; confira antes"
+    ]
+   },
+   "bronnen": [
+    "https://curacao-art.com/instituto-buena-bista/"
+   ]
+  },
+  {
+   "id": "yubi-kirindongo",
+   "naam": "Museum en beeldentuin Yubi Kirindongo",
+   "url": null,
+   "soort": {
+    "nl": "museum",
+    "en": "museum",
+    "de": "Museum",
+    "es": "museo",
+    "pt": "museu"
+   },
+   "plaats": "Souax 390 (Kaya Reis), Ser'i Kandela",
+   "tags": [
+    "beeldentuin",
+    "galerie",
+    "buiten",
+    "kort",
+    "kinderen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Dagelijks 10:00 tot 12:00 en 14:00 tot 17:00",
+     "en": "Daily 10 a.m. to noon and 2 to 5 p.m.",
+     "de": "Täglich 10 bis 12 und 14 bis 17 Uhr",
+     "es": "Todos los días 10:00 a 12:00 y 14:00 a 17:00",
+     "pt": "Todos os dias 10h às 12h e 14h às 17h"
+    },
+    {
+     "nl": "Entree volwassenen 12,50 gulden, kinderen tot 12 jaar 7,50",
+     "en": "Entry adults 12.50 guilders, children up to 12 7.50",
+     "de": "Eintritt Erwachsene 12,50 Gulden, Kinder bis 12 Jahre 7,50",
+     "es": "Entrada adultos 12,50 florines, niños hasta 12 años 7,50",
+     "pt": "Entrada adultos 12,50 florins, crianças até 12 anos 7,50"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Beelden en het kleurrijke huis dat de kunstenaar zelf bouwde in de jaren 80"
+    ],
+    "en": [
+     "Sculptures and the colourful house the artist built himself in the 1980s"
+    ],
+    "de": [
+     "Skulpturen und das bunte Haus, das der Künstler in den 1980ern selbst baute"
+    ],
+    "es": [
+     "Esculturas y la casa colorida que el artista construyó en los años 80"
+    ],
+    "pt": [
+     "Esculturas e a casa colorida que o artista construiu nos anos 80"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Tussen de middag dicht"
+    ],
+    "en": [
+     "Closed over lunch"
+    ],
+    "de": [
+     "Mittags geschlossen"
+    ],
+    "es": [
+     "Cerrado al mediodía"
+    ],
+    "pt": [
+     "Fechado no almoço"
+    ]
+   },
+   "bronnen": [
+    "https://curacao-art.com/museum-gallery-and-sculpture-garden-yubi-kirindongo/"
+   ]
+  },
+  {
+   "id": "blue-bay-beelden",
+   "naam": "Beeldentuin en beeldenroute Blue Bay",
+   "url": "https://curacao-art.com/blue-bay-beeldentuin/",
+   "soort": {
+    "nl": "beeldentuin",
+    "en": "sculpture garden",
+    "de": "Skulpturengarten",
+    "es": "jardín de esculturas",
+    "pt": "jardim de esculturas"
+   },
+   "plaats": "Blue Bay, route naar Landhuis Blauw",
+   "tags": [
+    "beeldentuin",
+    "buiten",
+    "kort",
+    "kinderen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Alleen werk van kunstenaars van het eiland",
+     "en": "Only work by island artists",
+     "de": "Nur Werke von Inselkünstlern",
+     "es": "Solo obras de artistas de la isla",
+     "pt": "Só obras de artistas da ilha"
+    },
+    {
+     "nl": "Beeldentuin geopend op 2 mei 2018",
+     "en": "Sculpture garden opened on 2 May 2018",
+     "de": "Skulpturengarten eröffnet am 2. Mai 2018",
+     "es": "Jardín inaugurado el 2 de mayo de 2018",
+     "pt": "Jardim inaugurado em 2 de maio de 2018"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Werk van Ellen Spijkstra, Yubi Kirindongo, Hortence Brouwn en Norva Sling"
+    ],
+    "en": [
+     "Work by Ellen Spijkstra, Yubi Kirindongo, Hortence Brouwn and Norva Sling"
+    ],
+    "de": [
+     "Werke von Ellen Spijkstra, Yubi Kirindongo, Hortence Brouwn und Norva Sling"
+    ],
+    "es": [
+     "Obras de Ellen Spijkstra, Yubi Kirindongo, Hortence Brouwn y Norva Sling"
+    ],
+    "pt": [
+     "Obras de Ellen Spijkstra, Yubi Kirindongo, Hortence Brouwn e Norva Sling"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Op het terrein van een resort, openingstijden niet gevonden"
+    ],
+    "en": [
+     "On resort grounds, opening hours not found"
+    ],
+    "de": [
+     "Auf einem Resortgelände, Öffnungszeiten nicht gefunden"
+    ],
+    "es": [
+     "En un resort; no encontramos horario"
+    ],
+    "pt": [
+     "Num resort; horário não encontrado"
+    ]
+   },
+   "bronnen": [
+    "https://curacao-art.com/blue-bay-beeldentuin/"
+   ]
+  },
+  {
+   "id": "serena-chichi",
+   "naam": "Serena's Art Factory (Chichi®)",
+   "url": "https://www.chichi-curacao.com/",
+   "soort": {
+    "nl": "atelier en workshop",
+    "en": "studio and workshop",
+    "de": "Atelier und Workshop",
+    "es": "taller",
+    "pt": "ateliê e oficina"
+   },
+   "plaats": "Santa Catharina (atelier), winkel in Punda",
+   "tags": [
+    "workshop",
+    "kopen",
+    "souvenir",
+    "kinderen",
+    "halvedag"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Chichi betekent 'grote zus' in het Papiaments",
+     "en": "Chichi means 'big sister' in Papiamentu",
+     "de": "Chichi heißt 'große Schwester' auf Papiamentu",
+     "es": "Chichi significa 'hermana mayor' en papiamento",
+     "pt": "Chichi significa 'irmã mais velha' em papiamento"
+    },
+    {
+     "nl": "Schilderworkshop elke dinsdag en zaterdag",
+     "en": "Painting workshop every Tuesday and Saturday",
+     "de": "Malworkshop jeden Dienstag und Samstag",
+     "es": "Taller de pintura cada martes y sábado",
+     "pt": "Oficina de pintura toda terça e sábado"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Je schildert je eigen Chichi en neemt hem mee naar huis",
+     "Bedacht door Serena Janet Israel, met een team van schilders"
+    ],
+    "en": [
+     "You paint your own Chichi and take it home",
+     "Created by Serena Janet Israel, with a team of painters"
+    ],
+    "de": [
+     "Du bemalst deine eigene Chichi und nimmst sie mit",
+     "Erfunden von Serena Janet Israel, mit einem Team von Malern"
+    ],
+    "es": [
+     "Pintas tu propia Chichi y te la llevas",
+     "Creada por Serena Janet Israel, con un equipo de pintores"
+    ],
+    "pt": [
+     "Você pinta sua própria Chichi e leva para casa",
+     "Criada por Serena Janet Israel, com uma equipe de pintores"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Workshopprijs staat niet open op de site, vraag vooraf"
+    ],
+    "en": [
+     "Workshop price is not listed on the site, ask first"
+    ],
+    "de": [
+     "Workshoppreis steht nicht auf der Website, vorher fragen"
+    ],
+    "es": [
+     "El precio del taller no aparece en la web; pregunta antes"
+    ],
+    "pt": [
+     "O preço da oficina não aparece no site; pergunte antes"
+    ]
+   },
+   "bronnen": [
+    "https://www.chichi-curacao.com/",
+    "https://www.caribjournal.com/2016/11/05/curacaos-must-visit-art-factory/",
+    "https://www.mycuracaoguide.com/blogs/willemstad-curacao-urban-artistry"
+   ]
+  },
+  {
+   "id": "nena-sanchez",
+   "naam": "Nena Sanchez Gallery",
+   "url": "https://nenasanchez.com/",
+   "soort": {
+    "nl": "galerie",
+    "en": "gallery",
+    "de": "Galerie",
+    "es": "galería",
+    "pt": "galeria"
+   },
+   "plaats": "Landhuis Jan Kok en Windstraat 15, Punda",
+   "tags": [
+    "galerie",
+    "kopen",
+    "willemstad",
+    "west",
+    "kort",
+    "souvenir"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Kleurrijke eilandtaferelen van een zelflerende kunstenaar van Curaçao",
+     "en": "Colourful island scenes by a self-taught Curaçao artist",
+     "de": "Farbenfrohe Inselszenen einer autodidaktischen Künstlerin aus Curaçao",
+     "es": "Escenas coloridas de la isla de una artista autodidacta de Curazao",
+     "pt": "Cenas coloridas da ilha de uma artista autodidata de Curaçao"
+    },
+    {
+     "nl": "Twee galerieën: Landhuis Jan Kok en Punda",
+     "en": "Two galleries: Landhuis Jan Kok and Punda",
+     "de": "Zwei Galerien: Landhuis Jan Kok und Punda",
+     "es": "Dos galerías: Landhuis Jan Kok y Punda",
+     "pt": "Duas galerias: Landhuis Jan Kok e Punda"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Ook muurschilderingen van haar op het eiland",
+     "Landhuis Jan Kok ligt op de route naar de flamingo's"
+    ],
+    "en": [
+     "Her murals can also be found around the island",
+     "Landhuis Jan Kok is on the way to the flamingos"
+    ],
+    "de": [
+     "Auch ihre Wandbilder findest du auf der Insel",
+     "Landhuis Jan Kok liegt auf dem Weg zu den Flamingos"
+    ],
+    "es": [
+     "También hay murales suyos en la isla",
+     "Landhuis Jan Kok está camino a los flamencos"
+    ],
+    "pt": [
+     "Também há murais dela pela ilha",
+     "Landhuis Jan Kok fica no caminho dos flamingos"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Openingstijden niet gevonden, bel vooraf"
+    ],
+    "en": [
+     "Opening hours not found, call first"
+    ],
+    "de": [
+     "Öffnungszeiten nicht gefunden, vorher anrufen"
+    ],
+    "es": [
+     "No encontramos horario; llama antes"
+    ],
+    "pt": [
+     "Horário não encontrado; ligue antes"
+    ]
+   },
+   "bronnen": [
+    "https://www.curacao.com/en/activity/nena-sanchez-gallery",
+    "https://curacaoactivities.com/best-art-galleries-curacao/",
+    "https://eventscuracao.com/art-galleries-museums/"
+   ]
+  },
+  {
+   "id": "mon-art",
+   "naam": "Mon Art Gallery",
+   "url": "https://www.facebook.com/MonArtShop/",
+   "soort": {
+    "nl": "galerie",
+    "en": "gallery",
+    "de": "Galerie",
+    "es": "galería",
+    "pt": "galeria"
+   },
+   "plaats": "Rif Fort Village, Otrobanda",
+   "tags": [
+    "galerie",
+    "kopen",
+    "souvenir",
+    "willemstad",
+    "kort"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Schilderijen en ambachten in Caribische stijl",
+     "en": "Caribbean-style paintings and crafts",
+     "de": "Gemälde und Kunsthandwerk im karibischen Stil",
+     "es": "Pinturas y artesanía de estilo caribeño",
+     "pt": "Pinturas e artesanato em estilo caribenho"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Goed voor een cadeau of souvenir"
+    ],
+    "en": [
+     "Good for a gift or souvenir"
+    ],
+    "de": [
+     "Gut für ein Geschenk oder Souvenir"
+    ],
+    "es": [
+     "Bueno para un regalo o recuerdo"
+    ],
+    "pt": [
+     "Bom para um presente ou lembrança"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Meer winkel dan tentoonstelling"
+    ],
+    "en": [
+     "More shop than exhibition"
+    ],
+    "de": [
+     "Eher Laden als Ausstellung"
+    ],
+    "es": [
+     "Más tienda que exposición"
+    ],
+    "pt": [
+     "Mais loja que exposição"
+    ]
+   },
+   "bronnen": [
+    "https://curacaoactivities.com/best-art-galleries-curacao/"
+   ]
+  },
+  {
+   "id": "art-foundation",
+   "naam": "Art Foundation Curaçao (Plein Air Curaçao)",
+   "url": "https://www.pleinaircuracao.com/",
+   "soort": {
+    "nl": "galerie",
+    "en": "gallery",
+    "de": "Galerie",
+    "es": "galería",
+    "pt": "galeria"
+   },
+   "plaats": "Hanchi Snoa, Punda",
+   "tags": [
+    "galerie",
+    "willemstad",
+    "kort"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Schilderijen van het Plein Air-festival, dat om het jaar is",
+     "en": "Paintings from the Plein Air festival, held every other year",
+     "de": "Gemälde vom Plein-Air-Festival, das alle zwei Jahre stattfindet",
+     "es": "Pinturas del festival Plein Air, cada dos años",
+     "pt": "Pinturas do festival Plein Air, a cada dois anos"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Vaste collectie met winnaars van de wedstrijd, boven en onder water"
+    ],
+    "en": [
+     "Permanent collection with competition winners, above and under water"
+    ],
+    "de": [
+     "Dauersammlung mit Siegern des Wettbewerbs, über und unter Wasser"
+    ],
+    "es": [
+     "Colección permanente con ganadores del concurso, sobre y bajo el agua"
+    ],
+    "pt": [
+     "Coleção permanente com vencedores do concurso, acima e abaixo d'água"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Openingstijden niet gevonden"
+    ],
+    "en": [
+     "Opening hours not found"
+    ],
+    "de": [
+     "Öffnungszeiten nicht gefunden"
+    ],
+    "es": [
+     "No encontramos horario"
+    ],
+    "pt": [
+     "Horário não encontrado"
+    ]
+   },
+   "bronnen": [
+    "https://curacao-art.com/art-foundation-curacao/"
+   ]
+  },
+  {
+   "id": "punda-museum",
+   "naam": "Punda Museum",
+   "url": null,
+   "soort": {
+    "nl": "museum",
+    "en": "museum",
+    "de": "Museum",
+    "es": "museo",
+    "pt": "museu"
+   },
+   "plaats": "Punda, Willemstad",
+   "tags": [
+    "museum",
+    "geschiedenis",
+    "willemstad",
+    "kort",
+    "kinderen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "3D-maquette van 58 panden: Punda in de jaren 50 tot 70",
+     "en": "3D model of 58 buildings: Punda in the 1950s to 1970s",
+     "de": "3D-Modell von 58 Gebäuden: Punda in den 1950ern bis 1970ern",
+     "es": "Maqueta 3D de 58 edificios: Punda de los años 50 a 70",
+     "pt": "Maquete 3D de 58 prédios: Punda dos anos 50 a 70"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Laat zien hoe de kleurrijke binnenstad eruitzag"
+    ],
+    "en": [
+     "Shows how the colourful old town used to look"
+    ],
+    "de": [
+     "Zeigt, wie die bunte Altstadt früher aussah"
+    ],
+    "es": [
+     "Muestra cómo era el colorido centro antiguo"
+    ],
+    "pt": [
+     "Mostra como era o colorido centro antigo"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Klein, een half uur is genoeg"
+    ],
+    "en": [
+     "Small, half an hour is enough"
+    ],
+    "de": [
+     "Klein, eine halbe Stunde reicht"
+    ],
+    "es": [
+     "Pequeño, media hora basta"
+    ],
+    "pt": [
+     "Pequeno, meia hora basta"
+    ]
+   },
+   "bronnen": [
+    "https://eventscuracao.com/art-galleries-museums/"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Curaçao Art (curacao-art.com)",
+   "url": "https://curacao-art.com/galleries",
+   "uitleg": {
+    "nl": "Overzicht van galerieën, musea en kunstenaars op het eiland, met nieuws over tentoonstellingen.",
+    "en": "Overview of galleries, museums and artists on the island, with exhibition news.",
+    "de": "Überblick über Galerien, Museen und Künstler der Insel, mit Ausstellungsnews.",
+    "es": "Resumen de galerías, museos y artistas de la isla, con noticias de exposiciones.",
+    "pt": "Visão geral de galerias, museus e artistas da ilha, com notícias de exposições."
+   }
+  },
+  {
+   "naam": "Kaya Kaya",
+   "url": "https://kayakaya.org/",
+   "uitleg": {
+    "nl": "Organisatie in Otrobanda achter de muurschilderingen, de Artweek en het straatfestival (om de twee jaar).",
+    "en": "Otrobanda organisation behind the murals, the Artweek and the street festival (every two years).",
+    "de": "Organisation in Otrobanda hinter den Wandbildern, der Artweek und dem Straßenfest (alle zwei Jahre).",
+    "es": "Organización de Otrobanda detrás de los murales, la Artweek y el festival callejero (cada dos años).",
+    "pt": "Organização de Otrobanda por trás dos murais, da Artweek e do festival de rua (a cada dois anos)."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Loop de street art in één ochtend: begin in Scharloo (Street Art Skalo), steek over naar Punda en neem de pontonbrug naar Otrobanda. Alles is gratis.",
+   "en": "Walk the street art in one morning: start in Scharloo (Street Art Skalo), cross into Punda and take the floating bridge to Otrobanda. It's all free.",
+   "de": "Lauf die Street Art an einem Vormittag ab: Start in Scharloo (Street Art Skalo), weiter nach Punda und über die Pontonbrücke nach Otrobanda. Alles kostenlos.",
+   "es": "Recorre el arte urbano en una mañana: empieza en Scharloo (Street Art Skalo), cruza a Punda y toma el puente flotante a Otrobanda. Todo es gratis.",
+   "pt": "Faça a arte de rua numa manhã: comece em Scharloo (Street Art Skalo), passe por Punda e pegue a ponte flutuante até Otrobanda. Tudo grátis."
+  },
+  {
+   "nl": "Zondag en maandag zijn Landhuis Bloemhof en het Curaçaosch Museum dicht; Kura Hulanda en Yubi Kirindongo zijn elke dag open.",
+   "en": "Landhuis Bloemhof and The Curaçao Museum are closed on Sunday and Monday; Kura Hulanda and Yubi Kirindongo open daily.",
+   "de": "Sonntag und Montag sind Landhuis Bloemhof und das Curaçaosch Museum geschlossen; Kura Hulanda und Yubi Kirindongo haben täglich geöffnet.",
+   "es": "Landhuis Bloemhof y el Museo de Curazao cierran domingo y lunes; Kura Hulanda y Yubi Kirindongo abren todos los días.",
+   "pt": "Landhuis Bloemhof e o Museu de Curaçao fecham domingo e segunda; Kura Hulanda e Yubi Kirindongo abrem todos os dias."
+  },
+  {
+   "nl": "Een Chichi schilderen is het kunstsouvenir dat je zelf maakt: workshops op dinsdag en zaterdag bij Serena's Art Factory.",
+   "en": "Painting a Chichi is the art souvenir you make yourself: workshops on Tuesday and Saturday at Serena's Art Factory.",
+   "de": "Eine Chichi bemalen ist das Kunstsouvenir, das du selbst machst: Workshops dienstags und samstags bei Serena's Art Factory.",
+   "es": "Pintar una Chichi es el recuerdo artístico que haces tú: talleres martes y sábado en Serena's Art Factory.",
+   "pt": "Pintar uma Chichi é a lembrança artística que você mesmo faz: oficinas às terças e sábados na Serena's Art Factory."
+  },
+  {
+   "nl": "Kom vroeg of na 16:00 voor foto's van muurschilderingen: midden op de dag is het licht hard en is het heet.",
+   "en": "Come early or after 4 p.m. for mural photos: midday light is harsh and it's hot.",
+   "de": "Komm früh oder nach 16 Uhr für Fotos der Wandbilder: mittags ist das Licht hart und es ist heiß.",
+   "es": "Ven temprano o después de las 16:00 para fotos de murales: al mediodía la luz es dura y hace calor.",
+   "pt": "Venha cedo ou depois das 16h para fotos dos murais: ao meio-dia a luz é dura e faz calor."
+  },
+  {
+   "nl": "In augustus is de Kaya Kaya Artweek in Otrobanda: in 2026 van 17 tot 22 augustus, gratis, met ruim 30 kunstenaars.",
+   "en": "In August Otrobanda hosts the Kaya Kaya Artweek: in 2026 from 17 to 22 August, free, with 30+ artists.",
+   "de": "Im August findet in Otrobanda die Kaya Kaya Artweek statt: 2026 vom 17. bis 22. August, kostenlos, mit über 30 Künstlern.",
+   "es": "En agosto se celebra la Kaya Kaya Artweek en Otrobanda: en 2026 del 17 al 22 de agosto, gratis, con más de 30 artistas.",
+   "pt": "Em agosto acontece a Kaya Kaya Artweek em Otrobanda: em 2026 de 17 a 22 de agosto, grátis, com mais de 30 artistas."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Waar zie ik street art op Curaçao?",
+    "en": "Where can I see street art in Curaçao?",
+    "de": "Wo sehe ich Street Art auf Curaçao?",
+    "es": "¿Dónde veo arte urbano en Curazao?",
+    "pt": "Onde vejo arte de rua em Curaçao?"
+   },
+   "a": {
+    "nl": "In Willemstad: Scharloo (Street Art Skalo, sinds 2016), Otrobanda (muurschilderingen van Kaya Kaya), Punda (3D-leguanen bij de Keukenstraat) en Pietermaai. Het is gratis en op loopafstand van elkaar.",
+    "en": "In Willemstad: Scharloo (Street Art Skalo, since 2016), Otrobanda (Kaya Kaya murals), Punda (3D iguanas near Keukenstraat) and Pietermaai. It's free and within walking distance.",
+    "de": "In Willemstad: Scharloo (Street Art Skalo, seit 2016), Otrobanda (Wandbilder von Kaya Kaya), Punda (3D-Leguane nahe der Keukenstraat) und Pietermaai. Kostenlos und zu Fuß erreichbar.",
+    "es": "En Willemstad: Scharloo (Street Art Skalo, desde 2016), Otrobanda (murales de Kaya Kaya), Punda (iguanas 3D cerca de la Keukenstraat) y Pietermaai. Gratis y a poca distancia.",
+    "pt": "Em Willemstad: Scharloo (Street Art Skalo, desde 2016), Otrobanda (murais do Kaya Kaya), Punda (iguanas 3D perto da Keukenstraat) e Pietermaai. Grátis e perto um do outro."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kan ik zelf een Chichi schilderen?",
+    "en": "Can I paint my own Chichi?",
+    "de": "Kann ich selbst eine Chichi bemalen?",
+    "es": "¿Puedo pintar mi propia Chichi?",
+    "pt": "Posso pintar minha própria Chichi?"
+   },
+   "a": {
+    "nl": "Ja, bij Serena's Art Factory, elke dinsdag en zaterdag. Je neemt je eigen Chichi mee naar huis. Chichi betekent 'grote zus' in het Papiaments.",
+    "en": "Yes, at Serena's Art Factory, every Tuesday and Saturday. You take your own Chichi home. Chichi means 'big sister' in Papiamentu.",
+    "de": "Ja, bei Serena's Art Factory, jeden Dienstag und Samstag. Deine Chichi nimmst du mit. Chichi heißt 'große Schwester' auf Papiamentu.",
+    "es": "Sí, en Serena's Art Factory, cada martes y sábado. Te llevas tu Chichi. Chichi significa 'hermana mayor' en papiamento.",
+    "pt": "Sim, na Serena's Art Factory, toda terça e sábado. Você leva sua Chichi. Chichi significa 'irmã mais velha' em papiamento."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke galerie moet ik zien?",
+    "en": "Which gallery should I see?",
+    "de": "Welche Galerie sollte ich sehen?",
+    "es": "¿Qué galería debería ver?",
+    "pt": "Qual galeria devo ver?"
+   },
+   "a": {
+    "nl": "Gallery Alma Blou in Landhuis Habaai (ma tot vr 9:30 tot 17:30, za 10:00 tot 14:00) voor kunst kopen, Landhuis Bloemhof (di tot za 9:00 tot 14:00) voor hedendaagse tentoonstellingen en de beeldentuin.",
+    "en": "Gallery Alma Blou in Landhuis Habaai (Mon to Fri 9:30 a.m. to 5:30 p.m., Sat 10 a.m. to 2 p.m.) to buy art, Landhuis Bloemhof (Tue to Sat 9 a.m. to 2 p.m.) for contemporary shows and the sculpture grounds.",
+    "de": "Gallery Alma Blou im Landhuis Habaai (Mo bis Fr 9:30 bis 17:30, Sa 10 bis 14 Uhr) zum Kunstkaufen, Landhuis Bloemhof (Di bis Sa 9 bis 14 Uhr) für zeitgenössische Ausstellungen und den Skulpturengarten.",
+    "es": "Gallery Alma Blou en Landhuis Habaai (lun a vie 9:30 a 17:30, sáb 10:00 a 14:00) para comprar arte, Landhuis Bloemhof (mar a sáb 9:00 a 14:00) para exposiciones contemporáneas y esculturas.",
+    "pt": "Gallery Alma Blou na Landhuis Habaai (seg a sex 9h30 às 17h30, sáb 10h às 14h) para comprar arte, Landhuis Bloemhof (ter a sáb 9h às 14h) para exposições contemporâneas e esculturas."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke kunstplekken zijn op zondag open?",
+    "en": "Which art spots open on Sunday?",
+    "de": "Welche Kunstorte sind sonntags geöffnet?",
+    "es": "¿Qué lugares de arte abren el domingo?",
+    "pt": "Quais lugares de arte abrem no domingo?"
+   },
+   "a": {
+    "nl": "Museum Kura Hulanda (9:00 tot 14:00), Museum en beeldentuin Yubi Kirindongo (10:00 tot 12:00 en 14:00 tot 17:00) en alle street art buiten.",
+    "en": "Museum Kura Hulanda (9 a.m. to 2 p.m.), Yubi Kirindongo museum and sculpture garden (10 a.m. to noon and 2 to 5 p.m.) and all outdoor street art.",
+    "de": "Museum Kura Hulanda (9 bis 14 Uhr), Museum und Skulpturengarten Yubi Kirindongo (10 bis 12 und 14 bis 17 Uhr) und alle Street Art draußen.",
+    "es": "Museo Kura Hulanda (9:00 a 14:00), museo y jardín de Yubi Kirindongo (10:00 a 12:00 y 14:00 a 17:00) y todo el arte urbano.",
+    "pt": "Museu Kura Hulanda (9h às 14h), museu e jardim de Yubi Kirindongo (10h às 12h e 14h às 17h) e toda a arte de rua."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wanneer is Kaya Kaya?",
+    "en": "When is Kaya Kaya?",
+    "de": "Wann ist Kaya Kaya?",
+    "es": "¿Cuándo es Kaya Kaya?",
+    "pt": "Quando é o Kaya Kaya?"
+   },
+   "a": {
+    "nl": "De Kaya Kaya Artweek was in 2026 van 17 tot 22 augustus in Otrobanda, gratis. Het grote straatfestival is sinds 2025 om de twee jaar.",
+    "en": "The Kaya Kaya Artweek ran from 17 to 22 August 2026 in Otrobanda, free. The big street festival is held every two years since 2025.",
+    "de": "Die Kaya Kaya Artweek fand 2026 vom 17. bis 22. August in Otrobanda statt, kostenlos. Das große Straßenfest ist seit 2025 alle zwei Jahre.",
+    "es": "La Kaya Kaya Artweek fue del 17 al 22 de agosto de 2026 en Otrobanda, gratis. El gran festival callejero es cada dos años desde 2025.",
+    "pt": "A Kaya Kaya Artweek foi de 17 a 22 de agosto de 2026 em Otrobanda, grátis. O grande festival de rua é a cada dois anos desde 2025."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "kunst curaçao",
+   "street art curaçao",
+   "galerie curaçao",
+   "chichi schilderen",
+   "landhuis bloemhof",
+   "kura hulanda museum",
+   "muurschilderingen willemstad"
+  ],
+  "en": [
+   "curacao art",
+   "curacao street art",
+   "curacao art galleries",
+   "chichi painting workshop",
+   "landhuis bloemhof",
+   "kura hulanda museum",
+   "willemstad murals"
+  ],
+  "de": [
+   "kunst curaçao",
+   "street art curaçao",
+   "galerie curaçao",
+   "chichi bemalen",
+   "landhuis bloemhof",
+   "kura hulanda museum",
+   "wandbilder willemstad"
+  ],
+  "es": [
+   "arte curazao",
+   "arte urbano curazao",
+   "galerías curazao",
+   "pintar chichi",
+   "landhuis bloemhof",
+   "museo kura hulanda",
+   "murales willemstad"
+  ],
+  "pt": [
+   "arte curaçao",
+   "arte de rua curaçao",
+   "galerias curaçao",
+   "pintar chichi",
+   "landhuis bloemhof",
+   "museu kura hulanda",
+   "murais willemstad"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Waar zie ik de mooiste street art op Curaçao?",
+   "Welke kunstgalerie op Curaçao is de moeite waard?",
+   "Kan ik op Curaçao zelf een Chichi schilderen?"
+  ],
+  "en": [
+   "Where is the best street art in Curaçao?",
+   "Which art gallery in Curaçao is worth visiting?",
+   "Can I paint my own Chichi in Curaçao?"
+  ],
+  "de": [
+   "Wo gibt es die schönste Street Art auf Curaçao?",
+   "Welche Kunstgalerie auf Curaçao lohnt sich?",
+   "Kann ich auf Curaçao selbst eine Chichi bemalen?"
+  ],
+  "es": [
+   "¿Dónde está el mejor arte urbano de Curazao?",
+   "¿Qué galería de arte de Curazao vale la pena?",
+   "¿Puedo pintar mi propia Chichi en Curazao?"
+  ],
+  "pt": [
+   "Onde fica a melhor arte de rua de Curaçao?",
+   "Qual galeria de arte em Curaçao vale a visita?",
+   "Posso pintar minha própria Chichi em Curaçao?"
+  ]
+ }
+}
