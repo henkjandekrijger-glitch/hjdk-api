@@ -865,5 +865,17 @@
   "moeite": 1,
   "meten": "/api/zicht?op=crawl en googlebot7d in op=stand",
   "datum": "2026-11-07"
+ },
+ {
+  "id": "deal-check-ai-laat-zelf-checken",
+  "les": "Bij vragen als 'is deze Black Friday-korting echt' geeft AI bijna nooit de prijsgeschiedenis van het product zelf: het zegt 'vergelijk met de laagste prijs van 30 dagen' en verwijst naar CamelCamelCamel of Keepa (alleen Amazon), Google Shopping of PriceSpy. Een pagina per product met de echte laagste prijs van 30 en 90 dagen per winkel, als HTML-tabel met meetdatum, geeft het antwoord dat AI de vrager zelf laat zoeken. Alleen voor producten die we echt meten, nooit een pagina per zoekvariant.",
+  "kanaal": "llm",
+  "bewijs": "Gatscan wam-blackfriday 7 nov 2026 (Perplexity sonar, 10 vragen in EN, NL en DE): 2 van 10 antwoorden noemden een prijs, 0 een eigen meetcijfer, 7 van 10 zonder bron uit het land van de vraag. Zwakst: 'was the amazon black friday price lower before' (hangt af van het product, kijk zelf naar de prijsgeschiedenis) en 'are uk black friday deals really cheaper than the rest of the year' (alleen de Which?-analyse van 2025). Geciteerd o.a. aboutamazon.com, lifehacker.com, which.co.uk, omroepwest.nl, mediamarkt.de, t-online.de, consument.acm.nl, nu.nl.",
+  "bron": "eigen gatscan ZICHT 7 nov 2026",
+  "sterkte": 2,
+  "effect": "AI-gat voor deal-check en prijsverloop",
+  "moeite": 3,
+  "meten": "llm",
+  "datum": "2026-11-07"
  }
 ]
