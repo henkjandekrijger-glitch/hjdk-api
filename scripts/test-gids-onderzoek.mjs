@@ -51,6 +51,7 @@ test('nieuwe planten­kolom krijgt passende drainagecheck en controleerbare wink
  const heeft=t=>onderzoekVoor({t}).some(p=>p.id==='bloempot-afvoergat');
  assert.equal(heeft('Hoge Cortenstaal Plantenkolom met Grote Schaal van Rostikal'),true);
  assert.equal(heeft('Houten plantenstandaard voor binnen'),false);
+ assert.equal(heeft('Rustieke Metalen Plantenkolom voor Tuindecoratie'),false);
  const p=ONDERZOEK.find(p=>p.id==='bloempot-afvoergat');
  const html=onderzoekPagina(p,[{id:'oc_4174003686408193',t:'Hoge Cortenstaal Plantenkolom met Grote Schaal van Rostikal',b:'Rostikal',p:140.59,vr:true}],()=> '€140,59',()=> 'later');
  assert.ok(html.includes('Afvoermaterialen zijn volgens de winkel niet inbegrepen'));
