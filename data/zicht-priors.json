@@ -815,7 +815,7 @@
   "id": "tegoed-op-is-meetgat",
   "les": "Hangt de AI-meting aan betaald tegoed (Vercel AI Gateway voor Perplexity), dan valt bij een leeg tegoed de hele meting stil zonder dat de cijfers nul worden: llmRate staat op leeg, niet op 0. Lees een lege llmRate dus nooit als 'niet genoemd' en vergelijk alleen dagen waarop het panel echt draaide; houd een gratis meting (AI-bezoek via verwijzer, AI-crawlers) als vangnet.",
   "kanaal": "llm",
-  "bewijs": "Panel kz/us/de 30 okt nog 8 van 8 geslaagd (0 citaties), van 31 okt t/m 3 nov 0 geslaagd door 402; in dezelfde dagen kwam op keuzehulp.best wel 4 bezoek uit ChatGPT binnen en stegen de AI-crawls van 58 naar 710 per dag.",
+  "bewijs": "Panel kz/us/de 30 okt nog 8 van 8 geslaagd (0 citaties), van 31 okt t/m 3 nov 0 geslaagd door 402; in dezelfde dagen kwam op keuzehulp.best wel 4 bezoek uit ChatGPT binnen en stegen de AI-crawls van 58 naar 710 per dag. 7 nov 2026, achtste dag zonder tegoed: gatscan wam-blackfriday (10 Black Friday-dealvragen in EN, NL en DE) 0 van 10 gemeten, alle 402.",
   "datum": "2026-11-03"
  },
  {

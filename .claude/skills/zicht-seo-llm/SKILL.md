@@ -54,6 +54,7 @@ Iedere chat en elk project gebruikt hetzelfde draaiboek en voedt het. Zo leert a
 - Gatscan: /api/zicht?op=gapscan&naam=<naam>&v=vraag1|vraag2|... stelt tot 40 echte koop- of keuzevragen aan Perplexity en laat per vraag zien welke soort bronnen geciteerd worden (betaalmuur, forum, winkel, media, buitenlands), of er een prijs of maat in het antwoord staat, en welke antwoorden het zwakst zijn. Zonder token 6 scans per dag.
 - Les uit de scan van 17 okt 2026: AI beantwoordt maatvragen zelf goed (daar is geen AI-gat), maar bij 'beste X onder EUR Y' en situatievragen leunt het op één dunne bron zonder actuele prijs. Een tabel per situatie met product en prijs van vandaag, zonder klikken leesbaar, vult dat gat.
 - In Google zitten de kansen juist wel in maat- en rekenvragen met een zwakke top: één sterke rekenpagina per echte vraag, met tabel, meetuitleg, vragen als kopjes en een product per maat.
+- Nieuw project: draai de gatscan vóór de bouw, met de vragen die de doelgroep echt stelt, en bouw de eerste pagina's op het zwakste antwoord. Valt de scan uit (402, geen tegoed), zet de vragenlijst in het logboek en herhaal hem zodra hij weer werkt; oordeel niet op een lege scan (7 nov 2026, We Are Many: scan wam-blackfriday, 0 van 10 vragen gemeten).
 
 ## Controlelijst bij elke wijziging (uit de audit van 20 okt 2026)
 
