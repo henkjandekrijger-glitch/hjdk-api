@@ -1,6 +1,6 @@
 {
  "id": "stranden",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-08",
  "onderwerp": {
   "nl": "strand",
   "en": "beach",
@@ -1056,6 +1056,182 @@
    ]
   },
   {
+   "id": "playa-hundu",
+   "naam": "Playa Hundu",
+   "url": null,
+   "soort": {
+    "nl": "afgelegen baai",
+    "en": "remote cove",
+    "de": "abgelegene Bucht",
+    "es": "cala remota",
+    "pt": "enseada isolada"
+   },
+   "plaats": "Santa Martha, Westpunt",
+   "tags": [
+    "westpunt",
+    "gratis",
+    "snorkelen",
+    "duiken-vanaf-strand",
+    "rustig",
+    "natuur"
+   ],
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
+    },
+    "bron": "https://www.duikersgids.nl/en/playa-hundu",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "nl": "Geen voorzieningen",
+     "en": "No facilities",
+     "de": "Keine Einrichtungen",
+     "es": "Sin servicios",
+     "pt": "Sem estrutura"
+    },
+    {
+     "nl": "Weinig parkeerplek",
+     "en": "Limited parking",
+     "de": "Wenige Parkplätze",
+     "es": "Poco estacionamiento",
+     "pt": "Pouco estacionamento"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Rif met veel koraal vlak voor de kust",
+     "Rustig en afgelegen"
+    ],
+    "en": [
+     "Coral-rich reef just offshore",
+     "Quiet and remote"
+    ],
+    "de": [
+     "Korallenreiches Riff direkt vor der Küste",
+     "Ruhig und abgelegen"
+    ],
+    "es": [
+     "Arrecife con mucho coral junto a la costa",
+     "Tranquila y apartada"
+    ],
+    "pt": [
+     "Recife com muito coral perto da costa",
+     "Tranquila e isolada"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Lastig te vinden",
+     "Regelmatig auto-inbraken, laat niets achter"
+    ],
+    "en": [
+     "Hard to find",
+     "Regular car break-ins, leave nothing in the car"
+    ],
+    "de": [
+     "Schwer zu finden",
+     "Regelmäßig Autoaufbrüche, nichts im Auto lassen"
+    ],
+    "es": [
+     "Difícil de encontrar",
+     "Robos frecuentes en autos, no dejes nada"
+    ],
+    "pt": [
+     "Difícil de achar",
+     "Arrombamentos de carros frequentes, não deixe nada"
+    ]
+   },
+   "bronnen": [
+    "https://www.duikersgids.nl/en/playa-hundu",
+    "https://seafariadventurescuracao.com/en/inspiration/beaches"
+   ]
+  },
+  {
+   "id": "playa-manzalina",
+   "naam": "Playa Manzalina",
+   "url": null,
+   "soort": {
+    "nl": "kleine baai",
+    "en": "small cove",
+    "de": "kleine Bucht",
+    "es": "cala pequeña",
+    "pt": "pequena enseada"
+   },
+   "plaats": "Landhuis San Juan",
+   "tags": [
+    "westpunt",
+    "snorkelen",
+    "duiken-vanaf-strand",
+    "rustig",
+    "natuur"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Geen voorzieningen, neem water en eten mee",
+     "en": "No facilities, bring water and food",
+     "de": "Keine Einrichtungen, Wasser und Essen mitbringen",
+     "es": "Sin servicios, lleva agua y comida",
+     "pt": "Sem estrutura, leve água e comida"
+    },
+    {
+     "nl": "Onverharde weg, weinig parkeerplek",
+     "en": "Dirt road, limited parking",
+     "de": "Schotterstraße, wenige Parkplätze",
+     "es": "Camino de tierra, poco estacionamiento",
+     "pt": "Estrada de terra, pouco estacionamento"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [
+     "Koraaltuinen om te snorkelen"
+    ],
+    "en": [
+     "Coral gardens for snorkeling"
+    ],
+    "de": [
+     "Korallengärten zum Schnorcheln"
+    ],
+    "es": [
+     "Jardines de coral para hacer snorkel"
+    ],
+    "pt": [
+     "Jardins de coral para snorkel"
+    ]
+   },
+   "tegen": {
+    "nl": [
+     "Lastige toegang, minder geschikt met kleine kinderen"
+    ],
+    "en": [
+     "Tricky access, less suited to small children"
+    ],
+    "de": [
+     "Schwieriger Zugang, weniger geeignet für kleine Kinder"
+    ],
+    "es": [
+     "Acceso difícil, menos apta para niños pequeños"
+    ],
+    "pt": [
+     "Acesso difícil, menos indicada para crianças pequenas"
+    ]
+   },
+   "bronnen": [
+    "https://curacaotodo.com/beaches/playa-manzalina",
+    "https://www.duikersgids.nl/en/dive-spots/playa-manzalina-392",
+    "https://seafariadventurescuracao.com/en/inspiration/beaches"
+   ]
+  },
+  {
    "id": "playa-santa-cruz",
    "naam": "Playa Santa Cruz",
    "url": null,
@@ -1100,6 +1276,13 @@
      "de": "Palmen und Unterstände",
      "es": "Palmeras y refugios",
      "pt": "Palmeiras e abrigos"
+    },
+    {
+     "nl": "Restaurant Captain Goodlife, maandag dicht",
+     "en": "Captain Goodlife restaurant, closed Mondays",
+     "de": "Restaurant Captain Goodlife, montags geschlossen",
+     "es": "Restaurante Captain Goodlife, cerrado los lunes",
+     "pt": "Restaurante Captain Goodlife, fechado às segundas"
     }
    ],
    "scores": [
@@ -1371,10 +1554,17 @@
      "es": "por persona, menores de 5 gratis",
      "pt": "por pessoa, menores de 5 grátis"
     },
-    "bron": "https://nomadicniko.com/curacao/beaches/",
-    "datum": "2026-01"
+    "bron": "https://curatogo.com/beach.html?id=porto",
+    "datum": "2026-10"
    },
    "feiten": [
+    {
+     "nl": "Open 9:30 tot 18:30",
+     "en": "Open 9:30 a.m. to 6:30 p.m.",
+     "de": "Geöffnet von 9:30 bis 18:30 Uhr",
+     "es": "Abierta de 9:30 a. m. a 6:30 p. m.",
+     "pt": "Aberta das 9h30 às 18h30"
+    },
     {
      "nl": "Dubbel rif vanaf het strand",
      "en": "Double reef from shore",
@@ -1461,7 +1651,8 @@
     "https://nomadicniko.com/curacao/beaches/",
     "https://majesticpalace.city/guides/best-beaches-in-curacao",
     "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
-    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html",
+    "https://curatogo.com/beach.html?id=porto"
    ]
   },
   {
@@ -1512,6 +1703,13 @@
      "de": "Kleine Strandbar",
      "es": "Pequeño bar de playa",
      "pt": "Pequeno bar de praia"
+    },
+    {
+     "nl": "Pergola's geven schaduw",
+     "en": "Pergolas give shade",
+     "de": "Pergolen spenden Schatten",
+     "es": "Pérgolas que dan sombra",
+     "pt": "Pérgolas que dão sombra"
     }
    ],
    "scores": [
@@ -1571,7 +1769,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
-    "https://majesticpalace.city/guides/best-beaches-in-curacao"
+    "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "https://curatogo.com/beach.html?id=daaibooi"
    ]
   },
   {
@@ -1691,8 +1890,8 @@
      "es": "entrada gratis",
      "pt": "entrada gratuita"
     },
-    "bron": "https://majesticpalace.city/guides/best-beaches-in-curacao",
-    "datum": "2026-01"
+    "bron": "https://curatogo.com/beach.html?id=kokomo",
+    "datum": "2026-10"
    },
    "feiten": [
     {
@@ -1708,6 +1907,13 @@
      "de": "Bekannt für die Schaukel im Meer",
      "es": "Conocida por su columpio en el mar",
      "pt": "Conhecida pelo balanço no mar"
+    },
+    {
+     "nl": "Toiletten, douches en duikcentrum",
+     "en": "Toilets, showers and dive center",
+     "de": "Toiletten, Duschen und Tauchcenter",
+     "es": "Baños, duchas y centro de buceo",
+     "pt": "Banheiros, chuveiros e centro de mergulho"
     }
    ],
    "scores": [
@@ -1763,7 +1969,8 @@
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://majesticpalace.city/guides/best-beaches-in-curacao",
     "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
-    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao"
+    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao",
+    "https://curatogo.com/beach.html?id=kokomo"
    ]
   },
   {
@@ -1788,11 +1995,25 @@
    "prijs": null,
    "feiten": [
     {
+     "nl": "Open 8:00 tot 20:00",
+     "en": "Open 8 a.m. to 8 p.m.",
+     "de": "Geöffnet von 8 bis 20 Uhr",
+     "es": "Abierta de 8 a. m. a 8 p. m.",
+     "pt": "Aberta das 8h às 20h"
+    },
+    {
      "nl": "Ligstoelen en restaurants",
      "en": "Loungers and restaurants",
      "de": "Liegen und Restaurants",
      "es": "Tumbonas y restaurantes",
      "pt": "Espreguiçadeiras e restaurantes"
+    },
+    {
+     "nl": "Entree voor dagjesmensen",
+     "en": "Entry fee for day visitors",
+     "de": "Eintritt für Tagesgäste",
+     "es": "Entrada para visitantes de un día",
+     "pt": "Entrada para visitantes de um dia"
     }
    ],
    "scores": [
@@ -1837,7 +2058,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://majesticpalace.city/guides/best-beaches-in-curacao",
-    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao"
+    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao",
+    "https://curatogo.com/beach.html?id=blue-bay"
    ]
   },
   {
@@ -1855,9 +2077,22 @@
    "tags": [
     "midden",
     "rustig",
-    "duiken-vanaf-strand"
+    "duiken-vanaf-strand",
+    "gratis"
    ],
-   "prijs": null,
+   "prijs": {
+    "bedrag": 0,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "gratis toegang",
+     "en": "free entry",
+     "de": "freier Eintritt",
+     "es": "entrada gratis",
+     "pt": "entrada gratuita"
+    },
+    "bron": "https://curatogo.com/beach.html?id=boka-sami",
+    "datum": "2026-10"
+   },
    "feiten": [
     {
      "nl": "Startplek Aquafari",
@@ -1865,6 +2100,13 @@
      "de": "Treffpunkt für Aquafari",
      "es": "Punto de encuentro de Aquafari",
      "pt": "Ponto de encontro do Aquafari"
+    },
+    {
+     "nl": "Werkend vissersdorp, verse vis te koop",
+     "en": "Working fishing village, fresh fish for sale",
+     "de": "Aktives Fischerdorf, frischer Fisch zu kaufen",
+     "es": "Pueblo pesquero activo, venta de pescado fresco",
+     "pt": "Vila de pescadores ativa, peixe fresco à venda"
     }
    ],
    "scores": [
@@ -1902,7 +2144,9 @@
     "pt": []
    },
    "bronnen": [
-    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://curatogo.com/beach.html?id=boka-sami",
+    "https://seafariadventurescuracao.com/en/inspiration/beaches"
    ]
   },
   {
