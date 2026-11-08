@@ -1224,7 +1224,7 @@
           "value": "keuzehulp.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/nl/auto-huren",
+      "destination": "https://curacao.day/nl/auto-huren",
       "permanent": true
     },
     {
@@ -1235,7 +1235,7 @@
           "value": "keuzehulp.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/nl/auto-huren",
+      "destination": "https://curacao.day/nl/auto-huren",
       "permanent": true
     },
     {
@@ -1246,7 +1246,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/en/car-rental",
+      "destination": "https://curacao.day/en/car-rental",
       "permanent": true
     },
     {
@@ -1257,7 +1257,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/en/car-rental",
+      "destination": "https://curacao.day/en/car-rental",
       "permanent": true
     },
     {
@@ -1268,7 +1268,7 @@
           "value": "kaufberater.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/de/mietwagen",
+      "destination": "https://curacao.day/de/mietwagen",
       "permanent": true
     },
     {
@@ -1279,7 +1279,7 @@
           "value": "kaufberater.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/de/mietwagen",
+      "destination": "https://curacao.day/de/mietwagen",
       "permanent": true
     },
     {
@@ -1290,7 +1290,7 @@
           "value": "keuzehulp.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/nl/gids",
+      "destination": "https://curacao.day/nl/gids",
       "permanent": true
     },
     {
@@ -1301,7 +1301,7 @@
           "value": "keuzehulp.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/nl/:s",
+      "destination": "https://curacao.day/nl/:s",
       "permanent": true
     },
     {
@@ -1312,7 +1312,7 @@
           "value": "keuzehulp.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/nl/:s/:b",
+      "destination": "https://curacao.day/nl/:s/:b",
       "permanent": true
     },
     {
@@ -1323,7 +1323,7 @@
           "value": "keuzehulp.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/nl/:s/:b/:c",
+      "destination": "https://curacao.day/nl/:s/:b/:c",
       "permanent": true
     },
     {
@@ -1334,7 +1334,7 @@
           "value": "kaufberater.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/de/gids",
+      "destination": "https://curacao.day/de/gids",
       "permanent": true
     },
     {
@@ -1345,7 +1345,7 @@
           "value": "kaufberater.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/de/:s",
+      "destination": "https://curacao.day/de/:s",
       "permanent": true
     },
     {
@@ -1356,7 +1356,7 @@
           "value": "kaufberater.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/de/:s/:b",
+      "destination": "https://curacao.day/de/:s/:b",
       "permanent": true
     },
     {
@@ -1367,7 +1367,7 @@
           "value": "kaufberater.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/de/:s/:b/:c",
+      "destination": "https://curacao.day/de/:s/:b/:c",
       "permanent": true
     },
     {
@@ -1378,7 +1378,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/en/gids",
+      "destination": "https://curacao.day/en/gids",
       "permanent": true
     },
     {
@@ -1389,7 +1389,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/en/:s",
+      "destination": "https://curacao.day/en/:s",
       "permanent": true
     },
     {
@@ -1400,7 +1400,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/en/:s/:b",
+      "destination": "https://curacao.day/en/:s/:b",
       "permanent": true
     },
     {
@@ -1411,7 +1411,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/en/:s/:b/:c",
+      "destination": "https://curacao.day/en/:s/:b/:c",
       "permanent": true
     },
     {
@@ -1422,7 +1422,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/es/gids",
+      "destination": "https://curacao.day/es/gids",
       "permanent": true
     },
     {
@@ -1433,7 +1433,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/es/:s",
+      "destination": "https://curacao.day/es/:s",
       "permanent": true
     },
     {
@@ -1444,7 +1444,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/es/:s/:b",
+      "destination": "https://curacao.day/es/:s/:b",
       "permanent": true
     },
     {
@@ -1455,7 +1455,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/es/:s/:b/:c",
+      "destination": "https://curacao.day/es/:s/:b/:c",
       "permanent": true
     },
     {
@@ -1466,7 +1466,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/pt/gids",
+      "destination": "https://curacao.day/pt/gids",
       "permanent": true
     },
     {
@@ -1477,7 +1477,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/pt/:s",
+      "destination": "https://curacao.day/pt/:s",
       "permanent": true
     },
     {
@@ -1488,7 +1488,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/pt/:s/:b",
+      "destination": "https://curacao.day/pt/:s/:b",
       "permanent": true
     },
     {
@@ -1499,7 +1499,7 @@
           "value": "whichtobuy.best"
         }
       ],
-      "destination": "https://todayin.email/curacao/pt/:s/:b/:c",
+      "destination": "https://curacao.day/pt/:s/:b/:c",
       "permanent": true
     },
     {
