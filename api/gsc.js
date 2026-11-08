@@ -155,6 +155,17 @@ export default async function handler(req, res) {
       const top = pag.sort((a, b) => b.clicks - a.clicks).slice(0, 60).map(p => ({ ...p, ctr: Math.round(p.ctr * 1000) / 10, pos: Math.round(p.pos * 10) / 10, vragen: rij.filter(x => x.page === p.page).sort((a, b) => b.clicks - a.clicks).slice(0, 4).map(x => `${x.q} (${x.clicks})`) }));
       return res.status(200).json({ ok: true, eigendom: prop, dagen, paginas: pag.length, kliks: pag.reduce((a, x) => a + x.clicks, 0), top });
     }
+    if (op === 'curinhoud') { // 8 nov 2026 contentlus curacao.day (Henkjan: "maak een optimalisatie content lus voor de hele site dagelijks ... onderhoud van alle content . Wekelijks"): pagina's en zoekvragen uit Search Console, standaard 28 dagen; alleen via de beschermde host of token
+      if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const l = await sites(oidc); const prop = propFor(l, 'curacao.day'); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot curacao.day' });
+      const dagen = Math.min(90, Number(url.searchParams.get('dagen')) || 28), r1 = x => Math.round(x * 1000) / 10, r2 = x => Math.round(x * 10) / 10;
+      const [pag, rij] = await Promise.all([pageRows(prop, dagen, oidc).catch(() => []), rows(prop, dagen, oidc).catch(() => [])]);
+      const paginas = pag.sort((a, b) => b.imp - a.imp).slice(0, 120).map(p => ({ page: p.page, clicks: p.clicks, imp: p.imp, ctr: r1(p.ctr), pos: r2(p.pos) }));
+      const vragen = rij.sort((a, b) => b.imp - a.imp).slice(0, 300).map(x => ({ q: x.q, page: x.page, clicks: x.clicks, imp: x.imp, ctr: r1(x.ctr), pos: r2(x.pos) }));
+      // kansen: veel vertoningen en weinig kliks (titel en description beter), of zoekvragen waar we op pagina 2+ staan (eigen antwoordpagina)
+      const titel = paginas.filter(p => p.imp >= 30 && p.ctr < 2).slice(0, 20), dieper = vragen.filter(x => x.imp >= 5 && x.pos > 10).slice(0, 40);
+      return res.status(200).json({ ok: true, eigendom: prop, dagen, kliks: pag.reduce((a, x) => a + x.clicks, 0), vertoningen: pag.reduce((a, x) => a + x.imp, 0), paginas, vragen, kansen: { titel, dieper } });
+    }
     if (op === 'yoors') { // Yoors Shop in Search Console (Henkjan 20 okt "Nu ook bing voor console"): eigendom zoeken en sitemaps indienen
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const l = await sites(oidc); const prop = propFor(l, 'yoo.rs');
