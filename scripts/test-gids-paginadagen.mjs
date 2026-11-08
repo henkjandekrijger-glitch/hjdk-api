@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {googlePaginaDagen,groeiRonde,groeiHtml} from '../lib/gids-groei.js';
+const periode={start:'2026-10-09',end:'2026-11-05'},calls=[];
+const rows=[{keys:['2026-11-04','https://gids.kadoly.com/a'],impressions:10,clicks:2,ctr:.2,position:5},{keys:['2026-11-05','https://gids.kadoly.com/a'],impressions:30,clicks:3,ctr:.1,position:9},{keys:['2026-11-05','https://evil.example/?u=https://gids.kadoly.com/a'],impressions:100,clicks:100},{keys:['2026-11-06','https://gids.kadoly.com/a'],impressions:1,clicks:1}];
+const x=await googlePaginaDagen(async q=>{calls.push(q);return {rows};},periode);
+assert.deepEqual(calls[0].dimensions,['date','page']);assert.equal(calls[0].startRow,0);
+assert.equal(x.paginaDagen.length,2);assert.equal(x.paginas[0].imp,40);assert.equal(x.paginas[0].clicks,5);assert.equal(x.paginas[0].pos,8);assert.equal(x.paginas[0].ctr,.125);assert.equal(x.paginaAfgekapt,false);
+assert.deepEqual((await googlePaginaDagen(async()=>({rows:[]}),periode)).paginaDagen,[]);
+let n=0;const full=Array.from({length:25000},()=>rows[0]);await googlePaginaDagen(async q=>{assert.equal(q.startRow,n++*25000);return {rows:n===1?full:[]};},periode);assert.equal(n,2);
+const s={dag:new Date().toISOString().slice(0,10)};let writes=0;assert.equal(await groeiRonde({get:async()=>s,set:async()=>writes++},[]),s);assert.equal(writes,0);
+const html=groeiHtml({laatste:{google:{periode,paginaPeriode:periode,paginaDagen:x.paginaDagen}},actueleDekking:{metCategorieAdvies:0,totaal:0,exactModelGetest:0},kansen:[],definities:{}});assert.ok(html.includes('Google per pagina en kalenderdag'));assert.ok(html.includes('2026-11-04'));assert.ok(!html.includes('evil.example'));
+console.log('Paginadagen: host, kalenderdag, aggregatie, paginering, HTML en snapshotbehoud geslaagd.');
