@@ -147,6 +147,14 @@ export default async function handler(req, res) {
       const uit = wat === 'autofeed_uit' ? await M.autofeed(tk, acc, false) : wat === 'autofeed_aan' ? await M.autofeed(tk, acc, true) : wat === 'levertijd' ? await M.levertijd(tk, acc, { minVerwerking: n('vmin', 1), maxVerwerking: n('vmax', 2), minOnderweg: n('omin', 3), maxOnderweg: n('omax', 4) }) : { fout: 'wat=autofeed_uit|autofeed_aan|levertijd' };
       return res.status(200).json({ wat, uit });
     }
+    if (op === 'yoorsinhoud') { // 8 nov 2026 (Henkjan: "kijk welke content bij Yoors organisch goed werkte"): beste pagina's en zoekvragen van yoo.rs uit Search Console, 16 maanden
+      if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const l = await sites(oidc); const prop = propFor(l, 'yoo.rs'); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot yoo.rs' });
+      const dagen = Math.min(480, Number(url.searchParams.get('dagen')) || 480);
+      const [pag, rij] = await Promise.all([pageRows(prop, dagen, oidc), rows(prop, dagen, oidc).catch(() => [])]);
+      const top = pag.sort((a, b) => b.clicks - a.clicks).slice(0, 60).map(p => ({ ...p, ctr: Math.round(p.ctr * 1000) / 10, pos: Math.round(p.pos * 10) / 10, vragen: rij.filter(x => x.page === p.page).sort((a, b) => b.clicks - a.clicks).slice(0, 4).map(x => `${x.q} (${x.clicks})`) }));
+      return res.status(200).json({ ok: true, eigendom: prop, dagen, paginas: pag.length, kliks: pag.reduce((a, x) => a + x.clicks, 0), top });
+    }
     if (op === 'yoors') { // Yoors Shop in Search Console (Henkjan 20 okt "Nu ook bing voor console"): eigendom zoeken en sitemaps indienen
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const l = await sites(oidc); const prop = propFor(l, 'yoo.rs');
