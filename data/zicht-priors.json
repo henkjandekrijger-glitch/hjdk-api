@@ -889,5 +889,17 @@
   "moeite": 3,
   "meten": "llm",
   "datum": "2026-11-07"
+ },
+ {
+  "id": "crawlwaarschuwing-mediaan",
+  "les": "Vergelijk Googlebot-bezoek per week met de mediaan per dag van de weken ervoor, niet met het gemiddelde: één crawlpiek maakt het gemiddelde te hoog en geeft een valse waarschuwing. Echte crawlval herken je aan een mediaan die wegzakt.",
+  "kanaal": "seo",
+  "bewijs": "8 nov 2026: kaufberater.best had 8 Googlebot-bezoeken in 7 dagen tegen 'gemiddeld 62' ervoor, maar dat gemiddelde kwam van drie piekdagen (20 okt 102, 26 okt 28, 24 okt 18); de mediaan was 1 per dag (7 per week), dus geen echte val. keuzehulp.best daarentegen: mediaan 4 per dag (28 per week) voor 21 okt, daarna 0 tot 1 per dag (3 in 7 dagen) terwijl Bingbot steeg naar 118: dat is een echte val.",
+  "bron": "https://hjdk-api-henq.vercel.app/api/zicht?op=crawl",
+  "datum": "2026-11-08",
+  "sterkte": 2,
+  "effect": "geen valse crawlalarmen, echte crawlval blijft zichtbaar",
+  "moeite": 1,
+  "meten": "/api/zicht?op=crawl googlebot7dMediaan"
  }
 ]
