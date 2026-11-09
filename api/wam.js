@@ -213,6 +213,7 @@ export default async function handler(req, res) {
       if (req.headers['x-telegram-bot-api-secret-token'] !== geheim) return res.status(401).send('');
       await W.telegramUpdate(leesBody(req)); return res.status(200).json({ ok: true });
     }
+    if (op === 'matchronde') { if (!beschermd(host)) return res.status(404).json({ ok: false }); return res.status(200).json({ ok: true, ...(await W.matchRonde({ forceer: true })), stand: await W.zoekStand().then(z => ({ open: z.open, per: z.per, matches: z.matches })) }); }
     if (op === 'tgzet') {
       if (!beschermd(host)) return res.status(404).send('Niet gevonden');
       return res.status(200).json(await W.telegramZet());
