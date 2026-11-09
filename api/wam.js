@@ -188,7 +188,7 @@ export default async function handler(req, res) {
     if (op === 'hookzet') {
       if (!beschermd(host)) return res.status(404).send('Niet gevonden');
       let l = []; try { l = JSON.parse(q('j') || '[]'); } catch (e) { return res.status(400).json({ ok: false, fout: 'j is geen JSON' }); }
-      const uit = []; for (const x of (Array.isArray(l) ? l : []).slice(0, 80)) { if (!HOOKS[x.hook]) { uit.push({ b: x.b, fout: 'onbekende hook' }); continue; } const t = hookTekst(x.hook, x.taal || 'en'); uit.push({ b: x.b, ok: await W.zetHook(x.b, { hook: x.hook, familie: HOOKS[x.hook].familie, tekst: t && t.titel, taal: x.taal || 'en', camp: x.c || '' }) }); }
+      const uit = []; for (const x of (Array.isArray(l) ? l : []).slice(0, 80)) { if (!HOOKS[x.hook]) { uit.push({ b: x.b, fout: 'onbekende hook' }); continue; } const t = hookTekst(x.hook, x.taal || 'en'); uit.push({ b: x.b, ok: await W.zetHook(x.b, { hook: x.hook, familie: HOOKS[x.hook].familie, tekst: String(x.tekst || (t && t.titel) || '').slice(0, 80), taal: x.taal || 'en', camp: x.c || '' }) }); }
       return res.status(200).json({ ok: true, uit });
     }
     if (op === 'gesprekken') {
