@@ -101,6 +101,8 @@ export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x'); const q = k => url.searchParams.get(k) || '';
   const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').toLowerCase();
   const op = q('op') || 'pagina';
+  // AI Gateway via OIDC: Vercel geeft het token per verzoek in een kop (lib/ai.js leest VERCEL_OIDC_TOKEN)
+  const oidc = req.headers['x-vercel-oidc-token']; if (oidc) process.env.VERCEL_OIDC_TOKEN = String(oidc);
   try {
     if (op === 'pagina') {
       const ua = String(req.headers['user-agent'] || ''); const land = String(req.headers['x-vercel-ip-country'] || '').toUpperCase().slice(0, 2);
