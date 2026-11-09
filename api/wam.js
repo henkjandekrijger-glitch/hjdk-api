@@ -35,7 +35,10 @@ function cookie(req, naam) { const m = String(req.headers.cookie || '').match(ne
 // zichzelf sturen (lib/wam.js UX): opener (held = grote kop, chat = kaartje), keuzes (kaarten of pillen), invoer (vast onderin of
 // meteen onder de keuzes). De server kiest per bezoeker en zet ux-<onderdeel>-<variant> op body.
 function pagina({ start, taal, kanalen }) {
-  const u = ui(taal); const o = start ? start.opener : { tekst: taal === 'nl' ? 'Hoi! Ik ben WAM. Waar kan ik je mee helpen?' : 'Hi! I\'m WAM. What can I help you with?', knoppen: [] };
+  // contactkaart: zodra Telegram of WhatsApp echt antwoordt, belooft de kaart dat je daar verder kunt praten (relatie, niet alleen een mail)
+  const verder = (kanalen || []).filter(k => k === 'Telegram' || k === 'WhatsApp');
+  const u = Object.assign({}, ui(taal), verder.length ? { via: { nl: 'Praat verder via ' + verder.join(' of ') + ', of laat je mail achter. Ik weet nog waar we waren.', de: 'Schreib mir weiter auf ' + verder.join(' oder ') + ' oder hinterlass deine E-Mail. Ich weiß noch, wo wir waren.' }[taal] || 'Keep talking on ' + verder.join(' or ') + ', or leave your email. I\'ll remember where we were.' } : {});
+  const o = start ? start.opener : { tekst: taal === 'nl' ? 'Hoi! Ik ben WAM. Waar kan ik je mee helpen?' : 'Hi! I\'m WAM. What can I help you with?', knoppen: [] };
   const ux = (start && start.ux) || { opener: 'held', keuzes: 'kaarten', invoer: 'vast' };
   const kl = Object.entries(ux).map(([d, v]) => 'ux-' + d + '-' + v).join(' ');
   const data = { sid: start ? start.sid : '', tok: start ? start.tok : '', taal, ui: u, kanalen, opener: o, ux };
