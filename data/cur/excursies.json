@@ -394,7 +394,7 @@
  "items": [
   {
    "id": "bluefinn-klein-curacao",
-   "naam": "BlueFinn Charters: Klein Curaçao per catamaran",
+   "naam": "BlueFinn Charters: Klein Curaçao by catamaran",
    "url": null,
    "soort": {
     "nl": "catamaran",
@@ -543,7 +543,7 @@
   },
   {
    "id": "bluefinn-klein-curacao-sunset",
-   "naam": "BlueFinn: Klein Curaçao met zonsondergang terug",
+   "naam": "BlueFinn: Klein Curaçao with sunset return",
    "url": null,
    "soort": {
     "nl": "catamaran",
@@ -812,7 +812,7 @@
   },
   {
    "id": "miss-ann",
-   "naam": "Miss Ann Boat Trips (jacht Serendipity)",
+   "naam": "Miss Ann Boat Trips (yacht Serendipity)",
    "url": null,
    "soort": {
     "nl": "motorjacht met strandhuis",
@@ -1296,7 +1296,7 @@
   },
   {
    "id": "all-boat-charters-gold-seahorse",
-   "naam": "All Boat Charters: Gold Seahorse naar Klein Curaçao",
+   "naam": "All Boat Charters: Gold Seahorse to Klein Curaçao",
    "url": null,
    "soort": {
     "nl": "catamaranjacht",
@@ -1779,7 +1779,7 @@
   },
   {
    "id": "samurai-island-treasures",
-   "naam": "Samurai Curaçao: Island Treasures (Hato-grotten, schildpadden, Playa Kalki)",
+   "naam": "Samurai Curaçao: Island Treasures (Hato Caves, turtles, Playa Kalki)",
    "url": null,
    "soort": {
     "nl": "bustour",
@@ -1899,7 +1899,7 @@
   },
   {
    "id": "irie-snorkel-cruise",
-   "naam": "Irie Tours: Snorkel Cruise met BBQ-lunch en open bar",
+   "naam": "Irie Tours: Snorkel Cruise with BBQ lunch and open bar",
    "url": null,
    "soort": {
     "nl": "snorkelboot",
@@ -2005,7 +2005,7 @@
   },
   {
    "id": "irie-west-coast-blue-room",
-   "naam": "Irie Tours: West Coast Full-Day Tour met Blue Room",
+   "naam": "Irie Tours: West Coast Full-Day Tour with Blue Room",
    "url": null,
    "soort": {
     "nl": "dagtour",
@@ -2215,7 +2215,7 @@
   },
   {
    "id": "hato-caves-turtles-beach",
-   "naam": "Hato Caves, Turtles & Beach (dagtour)",
+   "naam": "Hato Caves, Turtles & Beach (day tour)",
    "url": null,
    "soort": {
     "nl": "dagtour",
@@ -2306,7 +2306,7 @@
   },
   {
    "id": "adventure-tours-blue-room",
-   "naam": "Adventure Tours Curaçao: Blue Room & Beach per speedboot",
+   "naam": "Adventure Tours Curaçao: Blue Room & Beach by speedboat",
    "url": "https://adventuretourscuracao.com/",
    "soort": {
     "nl": "speedboot",
@@ -2581,7 +2581,7 @@
   },
   {
    "id": "aquafari",
-   "naam": "Aquafari (onderwaterscooter)",
+   "naam": "Aquafari (underwater scooter)",
    "url": null,
    "soort": {
     "nl": "onderwaterscooter",
@@ -2709,7 +2709,7 @@
   },
   {
    "id": "sea-trek-helmduiken",
-   "naam": "Sea Trek Curaçao: helmduiken",
+   "naam": "Sea Trek Curaçao: helmet diving",
    "url": null,
    "soort": {
     "nl": "helmduiken",
@@ -3070,7 +3070,7 @@
   },
   {
    "id": "substation-curacao",
-   "naam": "Substation Curaçao (onderzeeër)",
+   "naam": "Substation Curaçao (submarine)",
    "url": null,
    "soort": {
     "nl": "onderzeeër",
@@ -3252,7 +3252,7 @@
   },
   {
    "id": "hato-caves",
-   "naam": "Hato Caves (Hato-grotten)",
+   "naam": "Hato Caves",
    "url": null,
    "soort": {
     "nl": "grot met gids",
@@ -4522,7 +4522,7 @@
   },
   {
    "id": "dundu-tours-wandeltour",
-   "naam": "Dundu Tours: wandeltour Willemstad",
+   "naam": "Dundu Tours: Willemstad walking tour",
    "url": null,
    "soort": {
     "nl": "wandeltour",
@@ -4736,7 +4736,7 @@
   },
   {
    "id": "splashy-iguana-amfibiebus",
-   "naam": "Splashy Iguana Tours: amfibiebus",
+   "naam": "Splashy Iguana Tours: amphibious bus",
    "url": null,
    "soort": {
     "nl": "amfibiebus",
@@ -5422,7 +5422,7 @@
   },
   {
    "id": "private-boat-trip",
-   "naam": "3H of 4H Private Boat Trip (zwemmen, SUP, snorkelen)",
+   "naam": "3H or 4H Private Boat Trip (swim, SUP, snorkel)",
    "url": null,
    "soort": {
     "nl": "privéboot",
@@ -5911,7 +5911,7 @@
   },
   {
    "id": "bluefinn-3-in-1-snorkel",
-   "naam": "BlueFinn: 3-in-1 Snorkeling Trip per catamaran",
+   "naam": "BlueFinn: 3-in-1 Snorkeling Trip by catamaran",
    "url": null,
    "soort": {
     "nl": "snorkelen en duiken",
@@ -6847,7 +6847,7 @@
   },
   {
    "id": "rcc-full-tour-climb-rappel-via-ferrata",
-   "naam": "Rock Climbing Curacao: Full Tour (klimmen, abseilen en via ferrata)",
+   "naam": "Rock Climbing Curacao: Full Tour (climbing, abseiling and via ferrata)",
    "url": null,
    "soort": {
     "nl": "natuur",
@@ -7050,7 +7050,7 @@
   },
   {
    "id": "powerboat-tugboat-spanish-water",
-   "naam": "Powerboat Caribbean: Snorkel & Sightseeing Tugboat en Spaanse Water",
+   "naam": "Powerboat Caribbean: Snorkel & Sightseeing Tugboat and Spanish Water",
    "url": null,
    "soort": {
     "nl": "snorkelen en duiken",
@@ -7118,7 +7118,7 @@
   },
   {
    "id": "bluefinn-punda-vibes",
-   "naam": "BlueFinn: Punda Vibes City Tour (donderdagavond)",
+   "naam": "BlueFinn: Punda Vibes City Tour (Thursday evening)",
    "url": null,
    "soort": {
     "nl": "wandeltour",
@@ -7186,7 +7186,7 @@
   },
   {
    "id": "fbtt-punda-vibes-bus",
-   "naam": "Curaçao Tours (FBTT): Punda Vibes avondtour per bus",
+   "naam": "Curaçao Tours (FBTT): Punda Vibes evening bus tour",
    "url": null,
    "soort": {
     "nl": "eilandtour",
@@ -7390,7 +7390,7 @@
   },
   {
    "id": "curacao-dreams-perfect-day",
-   "naam": "Curacao Dreams Travel: Perfect Day Tour (kleine groep)",
+   "naam": "Curacao Dreams Travel: Perfect Day Tour (small group)",
    "url": null,
    "soort": {
     "nl": "eilandtour",
@@ -7458,7 +7458,7 @@
   },
   {
    "id": "samurai-colors-flavors",
-   "naam": "Samurai Curaçao: Colors & Flavors (stad, cultuur en Blue Curaçao-proeverij)",
+   "naam": "Samurai Curaçao: Colors & Flavors (city, culture and Blue Curaçao tasting)",
    "url": null,
    "soort": {
     "nl": "eten en cultuur",
@@ -7664,7 +7664,7 @@
   },
   {
    "id": "dushi-views-city-food-tour",
-   "naam": "Dushi Views: City Food Tour (foto's, drankjes en eten)",
+   "naam": "Dushi Views: City Food Tour (photos, drinks and food)",
    "url": null,
    "soort": {
     "nl": "eten en cultuur",
@@ -8133,7 +8133,7 @@
   },
   {
    "id": "scubacao-intro-shore-dive",
-   "naam": "Scubaçao: Introduction Shore Dive (1 duik)",
+   "naam": "Scubaçao: Introduction Shore Dive (1 dive)",
    "url": null,
    "soort": {
     "nl": "snorkelen en duiken",
@@ -8253,7 +8253,7 @@
   },
   {
    "id": "adventure-tours-jet-ski",
-   "naam": "Adventure Tours Curacao: Jet Ski Adventure Tour (Caracasbaai en Spaanse Water)",
+   "naam": "Adventure Tours Curacao: Jet Ski Adventure Tour (Caracas Bay and Spanish Water)",
    "url": null,
    "soort": {
     "nl": "actief op het water",
@@ -9251,7 +9251,7 @@
   },
   {
    "id": "pocketguide-pietermaai-culinary-walk",
-   "naam": "PocketGuide: Pietermaai Culinary Walk (audiotour)",
+   "naam": "PocketGuide: Pietermaai Culinary Walk (audio tour)",
    "url": null,
    "soort": {
     "nl": "eten en cultuur",
@@ -9301,7 +9301,7 @@
   },
   {
    "id": "pocketguide-otrobanda-culinary-walk",
-   "naam": "PocketGuide: Otrobanda Culinary Walk (audiotour)",
+   "naam": "PocketGuide: Otrobanda Culinary Walk (audio tour)",
    "url": null,
    "soort": {
     "nl": "eten en cultuur",
@@ -9359,7 +9359,7 @@
   },
   {
    "id": "pocketguide-pietermaai-coffee-walk",
-   "naam": "PocketGuide: Pietermaai Coffee Walk (audiotour)",
+   "naam": "PocketGuide: Pietermaai Coffee Walk (audio tour)",
    "url": null,
    "soort": {
     "nl": "eten en cultuur",
@@ -9417,7 +9417,7 @@
   },
   {
    "id": "pocketguide-otrobanda-audio-walk",
-   "naam": "PocketGuide: Otrobanda Walking Tour (audiotour)",
+   "naam": "PocketGuide: Otrobanda Walking Tour (audio tour)",
    "url": null,
    "soort": {
     "nl": "wandeltour",
@@ -9576,7 +9576,7 @@
   },
   {
    "id": "criadero-babetti-horseback",
-   "naam": "Criadero Babetti: paardrijtocht naar Sint Jorisbaai",
+   "naam": "Criadero Babetti: horseback ride to Sint Joris Bay",
    "url": null,
    "soort": {
     "nl": "natuur",
@@ -9628,7 +9628,7 @@
   },
   {
    "id": "casador-klein-curacao",
-   "naam": "Casador Boat Trips: Klein Curaçao op motorzeiljacht Casador",
+   "naam": "Casador Boat Trips: Klein Curaçao on the motor sailing yacht Casador",
    "url": null,
    "soort": {
     "nl": "boottocht Klein Curaçao",
@@ -9688,7 +9688,7 @@
   },
   {
    "id": "living-life-klein-yacht-charter",
-   "naam": "Living Life Curaçao: Private Yacht Charter naar Klein Curaçao",
+   "naam": "Living Life Curaçao: Private Yacht Charter to Klein Curaçao",
    "url": null,
    "soort": {
     "nl": "boottocht Klein Curaçao",
@@ -10062,7 +10062,7 @@
   },
   {
    "id": "fbtt-culinary-tour",
-   "naam": "Curaçao Tours (FBTT): Culinary Tour (vrijdagavond)",
+   "naam": "Curaçao Tours (FBTT): Culinary Tour (Friday evening)",
    "url": null,
    "soort": {
     "nl": "eten en cultuur",
@@ -10246,7 +10246,7 @@
   },
   {
    "id": "powerboat-west-coast-snorkel",
-   "naam": "Powerboat Caribbean: West Coast Snorkel Adventure (Blue Room en schildpadden)",
+   "naam": "Powerboat Caribbean: West Coast Snorkel Adventure (Blue Room and turtles)",
    "url": null,
    "soort": {
     "nl": "snorkelen en duiken",
