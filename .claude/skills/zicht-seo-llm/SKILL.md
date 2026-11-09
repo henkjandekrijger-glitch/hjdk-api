@@ -42,6 +42,14 @@ Iedere chat en elk project gebruikt hetzelfde draaiboek en voedt het. Zo leert a
 - Gebruik het voor: FAQ en antwoorden uit echte vragen, nieuwe onderwerpen, titels, het AI-meetpanel (les meetpanel-echte-vragen) en om pieken te verklaren (nieuwe zoekvragen op één dag = een media- of nieuwsmoment).
 - Search Console loopt 2 tot 3 dagen achter. Voor een piek van vandaag kijk je naar de eigen bezoekteller van de site (bijv. taniakross.media /api/seo?a=bezoek&dagen=1: per uur, bron, scrolldiepte, bekeken onderdelen, kliks).
 
+## Zoekvraag-onderzoek met Demand Radar (vóór je bouwt of optimaliseert)
+
+Henkjan 9 nov 2026: "Doe goed onderzoek met demand radar waar mensen naar zoeken en optimaliseer de site daarop ... maak die skill ook beter en lerend als je wat geleerd hebt voor andere projecten."
+- Search Console laat alleen zien waar de site al voor verschijnt. Wat mensen écht zoeken over een thema (een plaats, merk of onderwerp) haal je uit Demand Radar: https://demandradar-ivory.vercel.app/api/zoekvraag?thema=<id> (openbaar; &cc=US geeft één markt helemaal). Per markt in de eigen taal elke zoekterm met het thema erin: volume per maand, jaartrend, zoekintentie, 12 maanden, en per onderwerp het totaal en de grootste termen.
+- Nieuw thema: één regel in `THEMA` in repo demand_radar, api/zoekvraag.js (regex op de zoekterm en de markten met taal). De data wordt per thema hooguit één keer per 7 dagen gekocht (DataForSEO, hooguit $0,60), daarna komt alles uit de opslag; roep het dus gerust aan, maar nooit in een lus met steeds nieuwe thema's.
+- Werkwijze: (1) leg de onderwerpen met het meeste volume naast de eigen pagina's (sitemap); (2) een onderwerp met veel volume en geen eigen pagina = de eerstvolgende pagina, in de taal van de markt waar het volume zit; (3) een onderwerp met een pagina maar zonder de zoekterm in titel of H1 = titel herschrijven (zoekterm voorop); (4) de grootste vraagtermen (hoe, wat, wanneer, is) worden FAQ op de pagina die erover gaat; (5) meld elke toepassing als proef in zicht.json (metric gsc, controle = vergelijkbare pagina's zonder wijziging); (6) na 7 dagen opnieuw ophalen en kijken wat stijgt.
+- Ook voor nieuwe projecten: draai het vóór de bouw, samen met de gatscan hieronder. Volume zonder pagina is vraag die nog niemand van jou kan krijgen.
+
 ## Persoonsmerken en mediapieken (taniakross.media en dergelijke)
 
 - Na tv, radio of krant zoeken mensen de naam op en landen op de homepage. Ze kijken alleen naar het bovenste scherm (27 okt 2026: 46 van 48 zoekbezoekers, mediaan 32 seconden). Zet daar wat ze dan zoeken: wat er nu en binnenkort te zien en te horen is, en een snelle aanmelding (les mediapiek-bovenaan-antwoord).
