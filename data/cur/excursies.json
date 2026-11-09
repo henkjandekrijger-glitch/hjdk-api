@@ -133,6 +133,51 @@
       "offroad"
      ],
      "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Eten, drinken en cultuur",
+      "en": "Food, drinks and culture",
+      "de": "Essen, Trinken und Kultur",
+      "es": "Comida, bebida y cultura",
+      "pt": "Comida, bebida e cultura"
+     },
+     "plus": [
+      "eten",
+      "cultuur"
+     ],
+     "min": [
+      "offroad"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Natuur, wandelen of paardrijden",
+      "en": "Nature, hiking or horseback riding",
+      "de": "Natur, Wandern oder Reiten",
+      "es": "Naturaleza, senderismo o caballos",
+      "pt": "Natureza, trilhas ou cavalgada"
+     },
+     "plus": [
+      "natuur"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Duiken of onder water",
+      "en": "Diving or underwater",
+      "de": "Tauchen oder unter Wasser",
+      "es": "Buceo o bajo el agua",
+      "pt": "Mergulho ou debaixo d'água"
+     },
+     "plus": [
+      "duiken"
+     ],
+     "min": [],
+     "vereist": null
     }
    ]
   },
@@ -946,7 +991,8 @@
     "snorkel",
     "schildpadden",
     "kinderen",
-    "hele-dag"
+    "hele-dag",
+    "eten"
    ],
    "prijs": {
     "bedrag": 150,
@@ -1268,7 +1314,9 @@
     "snorkel",
     "budget",
     "hele-dag",
-    "kinderen"
+    "kinderen",
+    "eten",
+    "natuur"
    ],
    "prijs": {
     "bedrag": 135,
@@ -2546,7 +2594,8 @@
    "tags": [
     "snorkel",
     "kleine-groep",
-    "halve-dag"
+    "halve-dag",
+    "duiken"
    ],
    "prijs": {
     "bedrag": 159,
@@ -2674,7 +2723,9 @@
     "kinderen",
     "kleine-groep",
     "halve-dag",
-    "cruise-gast"
+    "cruise-gast",
+    "duiken",
+    "cultuur"
    ],
    "prijs": {
     "bedrag": 135,
@@ -3031,7 +3082,8 @@
    "plaats": "Sea Aquarium, Bapor Kibra",
    "tags": [
     "kleine-groep",
-    "halve-dag"
+    "halve-dag",
+    "duiken"
    ],
    "prijs": {
     "bedrag": 450,
@@ -3133,7 +3185,8 @@
     "budget",
     "halve-dag",
     "cruise-gast",
-    "boot"
+    "boot",
+    "duiken"
    ],
    "prijs": {
     "bedrag": 39,
@@ -3213,7 +3266,9 @@
     "kinderen",
     "halve-dag",
     "cruise-gast",
-    "budget"
+    "budget",
+    "natuur",
+    "cultuur"
    ],
    "prijs": null,
    "feiten": [
@@ -3281,7 +3336,8 @@
    "tags": [
     "kinderen",
     "budget",
-    "halve-dag"
+    "halve-dag",
+    "natuur"
    ],
    "prijs": {
     "bedrag": 15,
@@ -3375,7 +3431,8 @@
     "cruise-gast",
     "budget",
     "kinderen",
-    "hele-dag"
+    "hele-dag",
+    "eten"
    ],
    "prijs": {
     "bedrag": 80,
@@ -3499,7 +3556,8 @@
    "tags": [
     "offroad",
     "kleine-groep",
-    "hele-dag"
+    "hele-dag",
+    "natuur"
    ],
    "prijs": {
     "bedrag": 109,
@@ -4480,7 +4538,8 @@
     "cruise-gast",
     "kleine-groep",
     "halve-dag",
-    "kinderen"
+    "kinderen",
+    "cultuur"
    ],
    "prijs": {
     "bedrag": 33,
@@ -4597,7 +4656,8 @@
     "stadstour",
     "cruise-gast",
     "budget",
-    "halve-dag"
+    "halve-dag",
+    "cultuur"
    ],
    "prijs": {
     "bedrag": 65,
@@ -4692,7 +4752,8 @@
     "cruise-gast",
     "budget",
     "halve-dag",
-    "boot"
+    "boot",
+    "cultuur"
    ],
    "prijs": {
     "bedrag": 79,
@@ -4887,7 +4948,9 @@
     "stadstour",
     "budget",
     "cruise-gast",
-    "halve-dag"
+    "halve-dag",
+    "eten",
+    "cultuur"
    ],
    "prijs": {
     "bedrag": 20,
@@ -4986,7 +5049,8 @@
     "catamaran",
     "boot",
     "budget",
-    "halve-dag"
+    "halve-dag",
+    "eten"
    ],
    "prijs": {
     "bedrag": 75,
@@ -5700,7 +5764,8 @@
    "tags": [
     "kajak-sup",
     "halve-dag",
-    "kinderen"
+    "kinderen",
+    "natuur"
    ],
    "prijs": null,
    "feiten": [
@@ -5880,7 +5945,10 @@
    "feiten": [
     {
      "en": "Catamaran snorkel trip to Tugboat Beach and Caracas Bay with BBQ lunch and open bar.",
-     "nl": "Catamarantocht met snorkelen bij Tugboat Beach en Caracasbaai, met BBQ-lunch en open bar."
+     "nl": "Catamarantocht met snorkelen bij Tugboat Beach en Caracasbaai, met BBQ-lunch en open bar.",
+     "de": "Katamaran-Schnorcheltour zum Tugboat Beach und zur Caracasbaai mit BBQ-Mittagessen und offener Bar.",
+     "es": "Paseo en catamarán para hacer snorkel en Tugboat Beach y la bahía de Caracas, con almuerzo BBQ y barra libre.",
+     "pt": "Passeio de catamarã com snorkel em Tugboat Beach e na baía de Caracas, com almoço de churrasco e open bar."
     },
     {
      "nl": "Ongeveer 5 uur",
@@ -5904,10 +5972,10 @@
    "tegen": {},
    "bronnen": [
     "https://www.tripadvisor.com/AttractionProductReview-g147277-d20107523-Catamaran_Snorkel_Hopping_Full_Day_Trip_with_F_B-Curacao.html",
-    "https://www.tripadvisor.com/AttractionProductReview-g147277-d20107523-Catamaran_Snorkel_Hopping_Full_Day_Trip_with_F_B-Curacao.html"
+    "https://www.bluefinncharters.com/boat-trips-curacao/snorkeling-trip/"
    ],
-   "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d20107523-Catamaran_Snorkel_Hopping_Full_Day_Trip_with_F_B-Curacao.html",
-   "boekBron": "tripadvisor",
+   "boek": "https://www.bluefinncharters.com/boat-trips-curacao/snorkeling-trip/",
+   "boekBron": "aanbieder",
    "annuleren": 24,
    "duurU": 5
   },
@@ -5932,11 +6000,11 @@
     "bedrag": 215,
     "valuta": "USD",
     "eenheid": {
-     "nl": "per voertuig",
-     "en": "per vehicle",
-     "de": "pro Fahrzeug",
-     "es": "por vehículo",
-     "pt": "por veículo"
+     "nl": "per groep",
+     "en": "per group",
+     "de": "pro Gruppe",
+     "es": "por grupo",
+     "pt": "por grupo"
     },
     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d33080345-UTV_BUGGY_Tour_with_Beach_Stop_in_Willemstad_Curacao-Curacao.html",
     "datum": "2026-11"
@@ -5944,7 +6012,10 @@
    "feiten": [
     {
      "en": "Guided off-road UTV buggy ride past windmills to Kueba di Indjan cave, Boka Patrick and Kokomo Beach.",
-     "nl": "Offroad UTV-buggytocht langs windmolens naar grot Kueba di Indjan, Boka Patrick en Kokomo Beach."
+     "nl": "Offroad UTV-buggytocht langs windmolens naar grot Kueba di Indjan, Boka Patrick en Kokomo Beach.",
+     "de": "Geführte Offroad-Tour im UTV-Buggy vorbei an Windrädern zur Höhle Kueba di Indjan, nach Boka Patrick und zum Kokomo Beach.",
+     "es": "Recorrido guiado en buggy UTV todoterreno junto a molinos de viento hasta la cueva Kueba di Indjan, Boka Patrick y Kokomo Beach.",
+     "pt": "Passeio guiado de buggy UTV off-road passando por moinhos até a caverna Kueba di Indjan, Boka Patrick e Kokomo Beach."
     },
     {
      "nl": "Ongeveer 3,5 uur",
@@ -6011,7 +6082,10 @@
    "feiten": [
     {
      "en": "ATV ride across west Curaçao from north-coast cave and wind turbines to beaches with flamingos and turtles.",
-     "nl": "Quadtocht dwars over West-Curaçao van grot en windmolens aan de noordkust naar stranden met flamingo's en schildpadden."
+     "nl": "Quadtocht dwars over West-Curaçao van grot en windmolens aan de noordkust naar stranden met flamingo's en schildpadden.",
+     "de": "Quadtour quer durch den Westen von der Höhle an der Nordküste und den Windrädern zu Stränden mit Flamingos und Schildkröten.",
+     "es": "Ruta en cuatrimoto por el oeste, desde una cueva de la costa norte y los molinos hasta playas con flamencos y tortugas.",
+     "pt": "Passeio de quadriciclo pelo oeste, de uma caverna na costa norte e das turbinas até praias com flamingos e tartarugas."
     },
     {
      "nl": "Ongeveer 3,25 uur",
@@ -6076,7 +6150,10 @@
    "feiten": [
     {
      "en": "Guided Sea-Doo jet ski tour along the west coast with turtle snorkeling and the Blue Room cave.",
-     "nl": "Jetskitocht met gids langs de westkust met snorkelen bij schildpadden en de Blue Room-grot."
+     "nl": "Jetskitocht met gids langs de westkust met snorkelen bij schildpadden en de Blue Room-grot.",
+     "de": "Geführte Jetski-Tour an der Westküste mit Schnorcheln bei Schildkröten und der Höhle Blue Room.",
+     "es": "Tour guiado en moto de agua por la costa oeste con snorkel entre tortugas y la cueva Blue Room.",
+     "pt": "Passeio guiado de jet ski pela costa oeste com snorkel entre tartarugas e a caverna Blue Room."
     },
     {
      "nl": "Ongeveer 2 uur",
@@ -6141,7 +6218,10 @@
    "feiten": [
     {
      "en": "Guided water bike ride along the coast at Playa Piskado to spot sea turtles, with free photos.",
-     "nl": "Waterfietstocht met gids langs de kust bij Playa Piskado om schildpadden te zien, met gratis foto's."
+     "nl": "Waterfietstocht met gids langs de kust bij Playa Piskado om schildpadden te zien, met gratis foto's.",
+     "de": "Geführte Fahrt mit dem Wasserfahrrad an der Küste bei Playa Piskado zu den Meeresschildkröten, mit kostenlosen Fotos.",
+     "es": "Paseo guiado en bicicleta acuática por la costa de Playa Piskado para ver tortugas marinas, con fotos gratis.",
+     "pt": "Passeio guiado de bicicleta aquática pela costa de Playa Piskado para ver tartarugas, com fotos grátis."
     },
     {
      "nl": "Ongeveer 1 uur",
@@ -6206,7 +6286,10 @@
    "feiten": [
     {
      "en": "Clear-bottom boat ride from Daaibooi past coral and turtles, with a snorkel stop at Cas Abao.",
-     "nl": "Tocht met een glazen-bodemboot vanaf Daaibooi langs koraal en schildpadden, met snorkelstop bij Cas Abao."
+     "nl": "Tocht met een glazen-bodemboot vanaf Daaibooi langs koraal en schildpadden, met snorkelstop bij Cas Abao.",
+     "de": "Fahrt im Glasbodenboot ab Daaibooi über Korallen und Schildkröten, mit Schnorchelstopp an der Cas Abao.",
+     "es": "Paseo en barco de fondo transparente desde Daaibooi sobre corales y tortugas, con parada de snorkel en Cas Abao.",
+     "pt": "Passeio de barco com fundo transparente desde Daaibooi sobre corais e tartarugas, com parada para snorkel em Cas Abao."
     },
     {
      "nl": "Ongeveer 1,5 uur",
@@ -6252,7 +6335,6 @@
    "tags": [
     "duiken",
     "budget",
-    "halve-dag",
     "cruise-gast"
    ],
    "prijs": {
@@ -6271,7 +6353,10 @@
    "feiten": [
     {
      "en": "Two guided shore dives for certified divers at sites like Tugboat, Directors Bay and Car Pile.",
-     "nl": "Twee begeleide kantduiken voor gebrevetteerde duikers bij plekken als Tugboat, Directors Bay en Car Pile."
+     "nl": "Twee begeleide kantduiken voor gebrevetteerde duikers bij plekken als Tugboat, Directors Bay en Car Pile.",
+     "de": "Zwei geführte Landtauchgänge für zertifizierte Taucher an Plätzen wie Tugboat, Directors Bay und Car Pile.",
+     "es": "Dos inmersiones guiadas desde la costa para buzos certificados en sitios como Tugboat, Directors Bay y Car Pile.",
+     "pt": "Dois mergulhos guiados a partir da costa para mergulhadores certificados em pontos como Tugboat, Directors Bay e Car Pile."
     },
     {
      "nl": "Ongeveer 2 uur",
@@ -6338,7 +6423,10 @@
    "feiten": [
     {
      "en": "Food walk through Otrobanda and Punda tasting kala and goat stew, via the floating and old market.",
-     "nl": "Eetwandeling door Otrobanda en Punda met kala en geitenstoof, langs de drijvende en de oude markt."
+     "nl": "Eetwandeling door Otrobanda en Punda met kala en geitenstoof, langs de drijvende en de oude markt.",
+     "de": "Kulinarischer Rundgang durch Otrobanda und Punda mit Kala und Ziegeneintopf, über den schwimmenden und den alten Markt.",
+     "es": "Paseo gastronómico por Otrobanda y Punda probando kala y guiso de cabra, pasando por el mercado flotante y el mercado viejo.",
+     "pt": "Passeio gastronômico por Otrobanda e Punda provando kala e ensopado de cabra, pelo mercado flutuante e o mercado antigo."
     },
     {
      "nl": "Ongeveer 3 uur",
@@ -6404,8 +6492,11 @@
    },
    "feiten": [
     {
-     "en": "Private food tour by car and on foot with local snacks, lunch at Plasa Bieu and the liqueur distillery.",
-     "nl": "Privé-eettour per auto en te voet met lokale hapjes, lunch in Plasa Bieu en de likeurstokerij."
+     "en": "Private food tour by car and on foot: local snacks, lunch at Plasa Bieu and the liqueur distillery.",
+     "nl": "Privé-eettour per auto en te voet met lokale hapjes, lunch in Plasa Bieu en de likeurstokerij.",
+     "de": "Private Food-Tour mit Auto und zu Fuß: lokale Snacks, Mittagessen im Plasa Bieu und die Likörbrennerei.",
+     "es": "Tour gastronómico privado en coche y a pie: snacks locales, almuerzo en Plasa Bieu y la destilería de licor.",
+     "pt": "Passeio gastronômico privado de carro e a pé: petiscos locais, almoço no Plasa Bieu e a destilaria de licor."
     },
     {
      "nl": "Ongeveer 4 uur",
@@ -6473,7 +6564,10 @@
    "feiten": [
     {
      "en": "Small-group cooking class with chef Helmi Smeulders using local ingredients, ending with lunch.",
-     "nl": "Kookles in kleine groep bij chef Helmi Smeulders met lokale ingrediënten, afgesloten met lunch."
+     "nl": "Kookles in kleine groep bij chef Helmi Smeulders met lokale ingrediënten, afgesloten met lunch.",
+     "de": "Kochkurs in kleiner Gruppe mit Köchin Helmi Smeulders und lokalen Zutaten, zum Abschluss ein Mittagessen.",
+     "es": "Clase de cocina en grupo reducido con la chef Helmi Smeulders e ingredientes locales, terminando con un almuerzo.",
+     "pt": "Aula de culinária em grupo pequeno com a chef Helmi Smeulders e ingredientes locais, terminando com almoço."
     },
     {
      "nl": "Ongeveer 4,5 uur",
@@ -6538,7 +6632,10 @@
    "feiten": [
     {
      "en": "Distillery tour with liqueur tasting, then mix two cocktails with Blue Curaçao at Landhuis Chobolobo.",
-     "nl": "Rondleiding door de stokerij met likeurproeverij, daarna zelf twee cocktails mixen in Landhuis Chobolobo."
+     "nl": "Rondleiding door de stokerij met likeurproeverij, daarna zelf twee cocktails mixen in Landhuis Chobolobo.",
+     "de": "Brennereiführung mit Likörverkostung, danach mixt du zwei Cocktails mit Blue Curaçao im Landhuis Chobolobo.",
+     "es": "Visita a la destilería con cata de licor y luego preparas dos cócteles con Blue Curaçao en Landhuis Chobolobo.",
+     "pt": "Visita à destilaria com degustação de licor e depois você prepara dois coquetéis com Blue Curaçao no Landhuis Chobolobo."
     },
     {
      "nl": "Ongeveer 2 uur",
@@ -6568,59 +6665,6 @@
    "boekBron": "tripadvisor",
    "annuleren": 24,
    "duurU": 2
-  },
-  {
-   "id": "shaker-shake-and-sip",
-   "naam": "Shaker Curaçao: Shake & Sip Cocktail Workshop",
-   "url": null,
-   "soort": {
-    "nl": "eten en cultuur",
-    "en": "food and culture",
-    "de": "Essen und Kultur",
-    "es": "comida y cultura",
-    "pt": "comida e cultura"
-   },
-   "plaats": "",
-   "tags": [
-    "eten",
-    "cruise-gast"
-   ],
-   "prijs": {
-    "bedrag": 80,
-    "valuta": "USD",
-    "eenheid": {
-     "nl": "per volwassene",
-     "en": "per adult",
-     "de": "pro Erwachsenem",
-     "es": "por adulto",
-     "pt": "por adulto"
-    },
-    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d34472204-Shake_Sip_Cocktail_Workshop_by_Shaker_Curacao-Curacao.html",
-    "datum": "2026-11"
-   },
-   "feiten": [
-    {
-     "en": "Private cocktail workshop with welcome shots, two local bites and stories behind popular drinks.",
-     "nl": "Privé-cocktailworkshop met welkomstshots, twee lokale hapjes en verhalen achter bekende drankjes."
-    },
-    {
-     "nl": "Ongeveer 3 uur",
-     "en": "About 3 hours",
-     "de": "Etwa 3 Stunden",
-     "es": "Unas 3 horas",
-     "pt": "Cerca de 3 horas"
-    }
-   ],
-   "scores": [],
-   "voor": {},
-   "tegen": {},
-   "bronnen": [
-    "https://www.tripadvisor.com/AttractionProductReview-g147277-d34472204-Shake_Sip_Cocktail_Workshop_by_Shaker_Curacao-Curacao.html"
-   ],
-   "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d34472204-Shake_Sip_Cocktail_Workshop_by_Shaker_Curacao-Curacao.html",
-   "boekBron": "tripadvisor",
-   "annuleren": 24,
-   "duurU": 3
   },
   {
    "id": "curacao-activities-wow-walk",
@@ -6657,7 +6701,10 @@
    "feiten": [
     {
      "en": "Guided walk through Punda and Otrobanda: colonial streets, Queen Emma Bridge and Otrobanda street art.",
-     "nl": "Wandeling met gids door Punda en Otrobanda: koloniale straten, Koningin Emmabrug en street art in Otrobanda."
+     "nl": "Wandeling met gids door Punda en Otrobanda: koloniale straten, Koningin Emmabrug en street art in Otrobanda.",
+     "de": "Geführter Rundgang durch Punda und Otrobanda: koloniale Straßen, Königin-Emma-Brücke und Streetart in Otrobanda.",
+     "es": "Paseo guiado por Punda y Otrobanda: calles coloniales, el puente Reina Emma y el arte urbano de Otrobanda.",
+     "pt": "Passeio guiado por Punda e Otrobanda: ruas coloniais, a ponte Rainha Emma e a arte de rua de Otrobanda."
     },
     {
      "nl": "Ongeveer 3 uur",
@@ -6677,6 +6724,3582 @@
    "boekBron": "aanbieder",
    "annuleren": 24,
    "duurU": 3
+  },
+  {
+   "id": "mr-hamilton-willemstad-walk",
+   "naam": "Mr. Hamilton: Willemstad Walking Tour with Local Guide",
+   "url": null,
+   "soort": {
+    "nl": "wandeltour",
+    "en": "walking tour",
+    "de": "Rundgang",
+    "es": "tour a pie",
+    "pt": "passeio a pé"
+   },
+   "plaats": "Fontein in Renaissance Mall, Otrobanda",
+   "tags": [
+    "stadstour",
+    "cultuur",
+    "budget",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 25,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": null,
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Walk from Brionplein and Kura Hulanda through Otrobanda street art, over the Queen Emma Bridge into Punda.",
+     "nl": "Wandeling van Brionplein en Kura Hulanda langs street art in Otrobanda, over de Koningin Emmabrug naar Punda.",
+     "de": "Rundgang vom Brionplein und Kura Hulanda durch die Streetart von Otrobanda und über die Königin-Emma-Brücke nach Punda.",
+     "es": "Paseo desde Brionplein y Kura Hulanda por el arte urbano de Otrobanda y sobre el puente Reina Emma hasta Punda.",
+     "pt": "Caminhada do Brionplein e Kura Hulanda pela arte de rua de Otrobanda e pela ponte Rainha Emma até Punda."
+    },
+    {
+     "nl": "Ongeveer 2,5 uur",
+     "en": "About 2.5 hours",
+     "de": "Etwa 2,5 Stunden",
+     "es": "Unas 2,5 horas",
+     "pt": "Cerca de 2,5 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [],
+   "annuleren": 24,
+   "duurU": 2.5
+  },
+  {
+   "id": "eco-cruise-e-scooter-tour",
+   "naam": "Eco Cruise: E-scooter Tour Jan Thiel",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "Parkeerplaats Jan Thiel Beach",
+   "tags": [
+    "budget",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 57,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.mycuracaoguide.com/book-tours/e-scooter-tour-eco-cruise",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Guided electric scooter ride along the coast from Jan Thiel past hidden bays, with snacks and drinks.",
+     "nl": "Elektrische scootertocht met gids langs de kust vanaf Jan Thiel langs verborgen baaien, met hapjes en drankjes.",
+     "de": "Geführte E-Scooter-Tour an der Küste ab Jan Thiel vorbei an versteckten Buchten, mit Snacks und Getränken.",
+     "es": "Recorrido guiado en patinete eléctrico por la costa desde Jan Thiel, pasando por bahías escondidas, con snacks y bebidas.",
+     "pt": "Passeio guiado de patinete elétrico pela costa a partir de Jan Thiel, por baías escondidas, com petiscos e bebidas."
+    },
+    {
+     "nl": "Ongeveer 1,5 uur",
+     "en": "About 1.5 hours",
+     "de": "Etwa 1,5 Stunden",
+     "es": "Unas 1,5 horas",
+     "pt": "Cerca de 1,5 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 210,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.mycuracaoguide.com/book-tours/e-scooter-tour-eco-cruise"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.mycuracaoguide.com/book-tours/e-scooter-tour-eco-cruise",
+    "https://ecocruisecuracao.com/tour/mid-morning-the-ultimate-etour/"
+   ],
+   "boek": "https://ecocruisecuracao.com/tour/mid-morning-the-ultimate-etour/",
+   "boekBron": "aanbieder",
+   "annuleren": 24,
+   "duurU": 1.5
+  },
+  {
+   "id": "rcc-full-tour-climb-rappel-via-ferrata",
+   "naam": "Rock Climbing Curacao: Full Tour (klimmen, abseilen en via ferrata)",
+   "url": null,
+   "soort": {
+    "nl": "natuur",
+    "en": "nature",
+    "de": "Natur",
+    "es": "naturaleza",
+    "pt": "natureza"
+   },
+   "plaats": "Rock Climbing Curacao, Santa Barbara Plantation",
+   "tags": [
+    "natuur",
+    "halve-dag",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 120,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.mycuracaoguide.com/book-tours/full-tour-rock-climbing",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Guided rock climbing, a via ferrata to the Tafelberg summit and a 50-metre abseil through El Abismo.",
+     "nl": "Rotsklimmen met gids, via ferrata naar de top van de Tafelberg en 50 meter abseilen door El Abismo.",
+     "de": "Geführtes Klettern, ein Klettersteig zum Gipfel des Tafelbergs und 50 Meter Abseilen durch El Abismo.",
+     "es": "Escalada guiada, una vía ferrata hasta la cima del Tafelberg y un rápel de 50 metros por El Abismo.",
+     "pt": "Escalada guiada, uma via ferrata até o topo do Tafelberg e um rapel de 50 metros pelo El Abismo."
+    },
+    {
+     "nl": "Ongeveer 4,5 uur",
+     "en": "About 4.5 hours",
+     "de": "Etwa 4,5 Stunden",
+     "es": "Unas 4,5 horas",
+     "pt": "Cerca de 4,5 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 104,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.mycuracaoguide.com/book-tours/full-tour-rock-climbing"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.mycuracaoguide.com/book-tours/full-tour-rock-climbing",
+    "https://rockclimbingcuracao.com/full-tour-climbing-abseiling-via-ferrata/"
+   ],
+   "boek": "https://rockclimbingcuracao.com/full-tour-climbing-abseiling-via-ferrata/",
+   "boekBron": "aanbieder",
+   "annuleren": 24,
+   "duurU": 4.5
+  },
+  {
+   "id": "rcc-sunset-hike-tafelberg",
+   "naam": "Rock Climbing Curacao: Sunset Hike Tafelberg",
+   "url": null,
+   "soort": {
+    "nl": "natuur",
+    "en": "nature",
+    "de": "Natur",
+    "es": "naturaleza",
+    "pt": "natureza"
+   },
+   "plaats": "Rock Climbing Curacao, Santa Barbara Plantation",
+   "tags": [
+    "natuur",
+    "zonsondergang",
+    "budget",
+    "kinderen",
+    "cultuur"
+   ],
+   "prijs": {
+    "bedrag": 20,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.mycuracaoguide.com/book-tours/sunset-hike",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Weekend guided 8.5 km hike up Tafelberg for sunset at the Proa lookout, descending by headlamp.",
+     "nl": "Weekendwandeling van 8,5 km met gids op de Tafelberg voor zonsondergang bij Proa, terug met hoofdlamp.",
+     "de": "Geführte Wanderung am Wochenende, 8,5 km auf den Tafelberg zum Sonnenuntergang am Aussichtspunkt Proa, Abstieg mit Stirnlampe.",
+     "es": "Caminata guiada de fin de semana de 8,5 km al Tafelberg para ver el atardecer en el mirador Proa, bajando con linterna frontal.",
+     "pt": "Trilha guiada de fim de semana de 8,5 km ao Tafelberg para o pôr do sol no mirante Proa, descendo com lanterna de cabeça."
+    },
+    {
+     "nl": "Ongeveer 3,5 uur",
+     "en": "About 3.5 hours",
+     "de": "Etwa 3,5 Stunden",
+     "es": "Unas 3,5 horas",
+     "pt": "Cerca de 3,5 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 101,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.mycuracaoguide.com/book-tours/sunset-hike"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.mycuracaoguide.com/book-tours/sunset-hike",
+    "https://rockclimbingcuracao.com/sunset-hike/"
+   ],
+   "boek": "https://rockclimbingcuracao.com/sunset-hike/",
+   "boekBron": "aanbieder",
+   "annuleren": 24,
+   "duurU": 3.5
+  },
+  {
+   "id": "rcc-rock-climbing-adventure",
+   "naam": "Rock Climbing Curacao: Rock Climbing Adventure",
+   "url": null,
+   "soort": {
+    "nl": "natuur",
+    "en": "nature",
+    "de": "Natur",
+    "es": "naturaleza",
+    "pt": "natureza"
+   },
+   "plaats": "Rock Climbing Curacao, ingang Santa Barbara Plantation",
+   "tags": [
+    "natuur",
+    "halve-dag",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 80,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.mycuracaoguide.com/book-tours/half-day-climbing-tour",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Guided outdoor rock climbing at Tafelberg, choosing one of four climbing zones that suits your level.",
+     "nl": "Rotsklimmen buiten met gids bij de Tafelberg, in een van vier klimzones die bij je niveau past.",
+     "de": "Geführtes Klettern im Freien am Tafelberg, mit Wahl aus vier Kletterzonen passend zu deinem Niveau.",
+     "es": "Escalada guiada al aire libre en el Tafelberg, eligiendo una de cuatro zonas según tu nivel.",
+     "pt": "Escalada guiada ao ar livre no Tafelberg, escolhendo uma de quatro zonas conforme o seu nível."
+    },
+    {
+     "nl": "Ongeveer 3 uur",
+     "en": "About 3 hours",
+     "de": "Etwa 3 Stunden",
+     "es": "Unas 3 horas",
+     "pt": "Cerca de 3 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 104,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.mycuracaoguide.com/book-tours/half-day-climbing-tour"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.mycuracaoguide.com/book-tours/half-day-climbing-tour",
+    "https://rockclimbingcuracao.com/half-day-climbing-tours/"
+   ],
+   "boek": "https://rockclimbingcuracao.com/half-day-climbing-tours/",
+   "boekBron": "aanbieder",
+   "annuleren": 24,
+   "duurU": 3
+  },
+  {
+   "id": "powerboat-tugboat-spanish-water",
+   "naam": "Powerboat Caribbean: Snorkel & Sightseeing Tugboat en Spaanse Water",
+   "url": null,
+   "soort": {
+    "nl": "snorkelen en duiken",
+    "en": "snorkeling and diving",
+    "de": "Schnorcheln und Tauchen",
+    "es": "snorkel y buceo",
+    "pt": "snorkel e mergulho"
+   },
+   "plaats": "Jan Thiel Beach of Mood Beach",
+   "tags": [
+    "boot",
+    "snorkel",
+    "halve-dag",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 99,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.mycuracaoguide.com/book-tours/snorkel-and-sightseeing-tour-to-tugboat-and-spanish-water-powerboat-caribbean",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "RIB speedboat trip to snorkel the Tugboat wreck, cruise Spanish Water and see Willemstad from the water.",
+     "nl": "Speedboottocht met een RIB om bij het Tugboat-wrak te snorkelen, door het Spaanse Water en langs Willemstad.",
+     "de": "Schnellboottour im RIB zum Schnorcheln am Tugboat-Wrack, durch das Spaanse Water und mit Blick auf Willemstad vom Wasser.",
+     "es": "Paseo en lancha RIB para hacer snorkel en el naufragio Tugboat, recorrer Spaanse Water y ver Willemstad desde el agua.",
+     "pt": "Passeio de lancha RIB para snorkel no naufrágio Tugboat, pela Spaanse Water e com vista de Willemstad pelo mar."
+    },
+    {
+     "nl": "Ongeveer 2,5 uur",
+     "en": "About 2.5 hours",
+     "de": "Etwa 2,5 Stunden",
+     "es": "Unas 2,5 horas",
+     "pt": "Cerca de 2,5 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 238,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.mycuracaoguide.com/book-tours/snorkel-and-sightseeing-tour-to-tugboat-and-spanish-water-powerboat-caribbean"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.mycuracaoguide.com/book-tours/snorkel-and-sightseeing-tour-to-tugboat-and-spanish-water-powerboat-caribbean",
+    "https://powerboat-caribbean.com/product/tugboat-spanish-water/"
+   ],
+   "boek": "https://powerboat-caribbean.com/product/tugboat-spanish-water/",
+   "boekBron": "aanbieder",
+   "annuleren": 24,
+   "duurU": 2.5
+  },
+  {
+   "id": "bluefinn-punda-vibes",
+   "naam": "BlueFinn: Punda Vibes City Tour (donderdagavond)",
+   "url": null,
+   "soort": {
+    "nl": "wandeltour",
+    "en": "walking tour",
+    "de": "Rundgang",
+    "es": "tour a pie",
+    "pt": "passeio a pé"
+   },
+   "plaats": "Ophalen bij hotel, of Otrobanda",
+   "tags": [
+    "stadstour",
+    "cultuur",
+    "feest"
+   ],
+   "prijs": {
+    "bedrag": 70,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.mycuracaoguide.com/book-tours/punda-vibes-city-tour-blue-finn",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Thursday evening walk through Otrobanda and Punda with Rum Berde at Netto Bar, live music and fireworks.",
+     "nl": "Wandeling op donderdagavond door Otrobanda en Punda met Rum Berde in Netto Bar, livemuziek en vuurwerk.",
+     "de": "Rundgang am Donnerstagabend durch Otrobanda und Punda mit Rum Berde in der Netto Bar, Livemusik und Feuerwerk.",
+     "es": "Paseo el jueves por la noche por Otrobanda y Punda con Rum Berde en Netto Bar, música en vivo y fuegos artificiales.",
+     "pt": "Passeio na quinta à noite por Otrobanda e Punda com Rum Berde no Netto Bar, música ao vivo e fogos de artifício."
+    },
+    {
+     "nl": "Ongeveer 4 uur",
+     "en": "About 4 hours",
+     "de": "Etwa 4 Stunden",
+     "es": "Unas 4 horas",
+     "pt": "Cerca de 4 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 994,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.mycuracaoguide.com/book-tours/punda-vibes-city-tour-blue-finn"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.mycuracaoguide.com/book-tours/punda-vibes-city-tour-blue-finn",
+    "https://www.bluefinncharters.com/land-trips-curacao/punda-vibes-city-tour/"
+   ],
+   "boek": "https://www.bluefinncharters.com/land-trips-curacao/punda-vibes-city-tour/",
+   "boekBron": "aanbieder",
+   "annuleren": 24,
+   "duurU": 4,
+   "ophalen": true
+  },
+  {
+   "id": "fbtt-punda-vibes-bus",
+   "naam": "Curaçao Tours (FBTT): Punda Vibes avondtour per bus",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "Jonckheerplein, ingang Rif Fort",
+   "tags": [
+    "stadstour",
+    "feest",
+    "cruise-gast",
+    "eten"
+   ],
+   "prijs": {
+    "bedrag": 65,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.mycuracaoguide.com/book-tours/punda-vibes-fbtt",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Thursday evening bus ride through illuminated Willemstad with a welcome cocktail, snack stop and fireworks.",
+     "nl": "Busrit op donderdagavond door verlicht Willemstad met welkomstcocktail, hapjesstop en vuurwerk.",
+     "de": "Busfahrt am Donnerstagabend durch das beleuchtete Willemstad mit Begrüßungscocktail, Snackstopp und Feuerwerk.",
+     "es": "Paseo en autobús el jueves por la noche por Willemstad iluminado, con cóctel de bienvenida, parada para picar y fuegos artificiales.",
+     "pt": "Passeio de ônibus na quinta à noite por Willemstad iluminada, com coquetel de boas-vindas, parada para petiscos e fogos."
+    },
+    {
+     "nl": "Ongeveer 3 uur",
+     "en": "About 3 hours",
+     "de": "Etwa 3 Stunden",
+     "es": "Unas 3 horas",
+     "pt": "Cerca de 3 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 55,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.mycuracaoguide.com/book-tours/punda-vibes-fbtt"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.mycuracaoguide.com/book-tours/punda-vibes-fbtt",
+    "https://www.curacao-tours.com/tour/punda-vibes-330458"
+   ],
+   "boek": "https://www.curacao-tours.com/tour/punda-vibes-330458",
+   "boekBron": "aanbieder",
+   "annuleren": 24,
+   "duurU": 3
+  },
+  {
+   "id": "fbtt-curacao-island-tour",
+   "naam": "Curaçao Tours (FBTT): Curaçao Island Tour",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "Ophalen bij hotel, of FBT Travel, Kaya Seru Mahuma 18-20",
+   "tags": [
+    "hele-dag",
+    "eten-inbegrepen",
+    "cultuur",
+    "natuur"
+   ],
+   "prijs": {
+    "bedrag": 109,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.mycuracaoguide.com/book-tours/curacao-island-tour-fbtt",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Full-day guided island tour with lunch: Chobolobo distillery, Spanish Water, Jan Kok, Shete Boka and Grote Knip.",
+     "nl": "Eilandtour van een dag met lunch: likeurstokerij Chobolobo, Spaanse Water, Jan Kok, Shete Boka en Grote Knip.",
+     "de": "Ganztägige geführte Inseltour mit Mittagessen: Brennerei Chobolobo, Spaanse Water, Jan Kok, Shete Boka und Grote Knip.",
+     "es": "Tour guiado de día completo por la isla con almuerzo: destilería Chobolobo, Spaanse Water, Jan Kok, Shete Boka y Grote Knip.",
+     "pt": "Passeio guiado de dia inteiro pela ilha com almoço: destilaria Chobolobo, Spaanse Water, Jan Kok, Shete Boka e Grote Knip."
+    },
+    {
+     "nl": "Ongeveer 7 uur",
+     "en": "About 7 hours",
+     "de": "Etwa 7 Stunden",
+     "es": "Unas 7 horas",
+     "pt": "Cerca de 7 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 55,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.mycuracaoguide.com/book-tours/curacao-island-tour-fbtt"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.mycuracaoguide.com/book-tours/curacao-island-tour-fbtt",
+    "https://www.curacao-tours.com/tour/curacao-island-tour-301652"
+   ],
+   "boek": "https://www.curacao-tours.com/tour/curacao-island-tour-301652",
+   "boekBron": "aanbieder",
+   "annuleren": 24,
+   "duurU": 7,
+   "ophalen": true
+  },
+  {
+   "id": "fbtt-beach-escape-bus",
+   "naam": "Curaçao Tours (FBTT): Beach Escape Bus Tour",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "Ophalen bij hotel, of FBT Travel, Kaya Seru Mahuma 18-20",
+   "tags": [
+    "hele-dag",
+    "snorkel"
+   ],
+   "prijs": {
+    "bedrag": 109,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.mycuracaoguide.com/book-tours/beach-escape-fbbt-travel-curacao",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Bus day to snorkel at Playa Piskado, see Kenepa, lunch at Cas Abao and flamingos at Jan Kok.",
+     "nl": "Busdag met snorkelen bij Playa Piskado, uitzicht op Kenepa, lunch bij Cas Abao en flamingo's bij Jan Kok.",
+     "de": "Bustag zum Schnorcheln an der Playa Piskado, Abstecher nach Kenepa, Mittagessen an der Cas Abao und Flamingos bei Jan Kok.",
+     "es": "Día en autobús para hacer snorkel en Playa Piskado, ver Kenepa, almorzar en Cas Abao y ver flamencos en Jan Kok.",
+     "pt": "Dia de ônibus para snorkel em Playa Piskado, ver Kenepa, almoçar em Cas Abao e ver flamingos em Jan Kok."
+    },
+    {
+     "nl": "Ongeveer 8 uur",
+     "en": "About 8 hours",
+     "de": "Etwa 8 Stunden",
+     "es": "Unas 8 horas",
+     "pt": "Cerca de 8 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.8,
+     "max": 5,
+     "aantal": 52,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.mycuracaoguide.com/book-tours/beach-escape-fbbt-travel-curacao"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.mycuracaoguide.com/book-tours/beach-escape-fbbt-travel-curacao",
+    "https://www.curacao-tours.com/tour/beach-escape-293823"
+   ],
+   "boek": "https://www.curacao-tours.com/tour/beach-escape-293823",
+   "boekBron": "aanbieder",
+   "annuleren": 24,
+   "duurU": 8,
+   "ophalen": true
+  },
+  {
+   "id": "curacao-dreams-perfect-day",
+   "naam": "Curacao Dreams Travel: Perfect Day Tour (kleine groep)",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "Ophalen bij hotel, of Gate 2 cruisepier",
+   "tags": [
+    "schildpadden",
+    "kleine-groep",
+    "natuur"
+   ],
+   "prijs": {
+    "bedrag": 119,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.viator.com/tours/Willemstad/Perfect-Day-Tour/d50233-87314P1",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Small-group highlights tour: flamingos, Shete Boka, turtle swim at Playa Piskado, Grote Knip and Chobolobo.",
+     "nl": "Hoogtepuntentour in kleine groep: flamingo's, Shete Boka, zwemmen met schildpadden bij Playa Piskado, Grote Knip en Chobolobo.",
+     "de": "Highlights-Tour in kleiner Gruppe: Flamingos, Shete Boka, Schwimmen mit Schildkröten an der Playa Piskado, Grote Knip und Chobolobo.",
+     "es": "Tour de lo mejor en grupo reducido: flamencos, Shete Boka, nado con tortugas en Playa Piskado, Grote Knip y Chobolobo.",
+     "pt": "Passeio pelos destaques em grupo pequeno: flamingos, Shete Boka, nado com tartarugas em Playa Piskado, Grote Knip e Chobolobo."
+    },
+    {
+     "nl": "Ongeveer 5,5 uur",
+     "en": "About 5.5 hours",
+     "de": "Etwa 5,5 Stunden",
+     "es": "Unas 5,5 horas",
+     "pt": "Cerca de 5,5 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 495,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/tours/Willemstad/Perfect-Day-Tour/d50233-87314P1"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/tours/Willemstad/Perfect-Day-Tour/d50233-87314P1",
+    "https://www.viator.com/tours/Willemstad/Perfect-Day-Tour/d50233-87314P1"
+   ],
+   "boek": "https://www.viator.com/tours/Willemstad/Perfect-Day-Tour/d50233-87314P1",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 5.5,
+   "ophalen": true
+  },
+  {
+   "id": "samurai-colors-flavors",
+   "naam": "Samurai Curaçao: Colors & Flavors (stad, cultuur en Blue Curaçao-proeverij)",
+   "url": null,
+   "soort": {
+    "nl": "eten en cultuur",
+    "en": "food and culture",
+    "de": "Essen und Kultur",
+    "es": "comida y cultura",
+    "pt": "comida e cultura"
+   },
+   "plaats": "Cruiseterminal (tent Online reservations) of ophalen bij hotel",
+   "tags": [
+    "cultuur",
+    "stadstour",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 65,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.viator.com/tours/Willemstad/Get-to-KNOW-FEEL-and-TASTE-the-culture-of-Curacao/d50233-110433P26",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Short city drive past Otrobanda, Scharloo and street art, with stops at Landhuis Chobolobo and Caracas Bay.",
+     "nl": "Korte stadsrit langs Otrobanda, Scharloo en street art, met stops bij Landhuis Chobolobo en Caracasbaai.",
+     "de": "Kurze Stadtrundfahrt durch Otrobanda, Scharloo und vorbei an Streetart, mit Stopps im Landhuis Chobolobo und an der Caracasbaai.",
+     "es": "Recorrido corto en coche por Otrobanda, Scharloo y el arte urbano, con paradas en Landhuis Chobolobo y la bahía de Caracas.",
+     "pt": "Passeio curto de carro por Otrobanda, Scharloo e a arte de rua, com paradas no Landhuis Chobolobo e na baía de Caracas."
+    },
+    {
+     "nl": "Ongeveer 2,5 uur",
+     "en": "About 2.5 hours",
+     "de": "Etwa 2,5 Stunden",
+     "es": "Unas 2,5 horas",
+     "pt": "Cerca de 2,5 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 125,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/tours/Willemstad/Get-to-KNOW-FEEL-and-TASTE-the-culture-of-Curacao/d50233-110433P26"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/tours/Willemstad/Get-to-KNOW-FEEL-and-TASTE-the-culture-of-Curacao/d50233-110433P26",
+    "https://www.viator.com/tours/Willemstad/Get-to-KNOW-FEEL-and-TASTE-the-culture-of-Curacao/d50233-110433P26"
+   ],
+   "boek": "https://www.viator.com/tours/Willemstad/Get-to-KNOW-FEEL-and-TASTE-the-culture-of-Curacao/d50233-110433P26",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 2.5,
+   "ophalen": true
+  },
+  {
+   "id": "janna-tuktuk-adventure",
+   "naam": "Janna Car Rentals: TukTuk Adventure Fun Tour",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "Bij gate 1 cruiseterminal, tegenover 5 O'Clock bar (Renaissance)",
+   "tags": [
+    "budget",
+    "cruise-gast",
+    "halve-dag",
+    "kleine-groep"
+   ],
+   "prijs": {
+    "bedrag": 52,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.viator.com/tours/Curacao/TukTuks-Adventure-Fun-Tour-in-Curacao-up-to-4-persons-booking/d725-436959P5",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Private tuk-tuk tour with flamingos, Kokomo Beach, Mambo Beach and Willemstad; Hato Caves entry included.",
+     "nl": "Privé-tuktuktour langs flamingo's, Kokomo Beach, Mambo Beach en Willemstad; entree Hato-grotten inbegrepen.",
+     "de": "Private Tuk-Tuk-Tour mit Flamingos, Kokomo Beach, Mambo Beach und Willemstad; Eintritt zu den Hato-Höhlen inklusive.",
+     "es": "Tour privado en tuk-tuk con flamencos, Kokomo Beach, Mambo Beach y Willemstad; entrada a las cuevas de Hato incluida.",
+     "pt": "Passeio privado de tuk-tuk com flamingos, Kokomo Beach, Mambo Beach e Willemstad; entrada nas cavernas de Hato incluída."
+    },
+    {
+     "nl": "Ongeveer 3 uur",
+     "en": "About 3 hours",
+     "de": "Etwa 3 Stunden",
+     "es": "Unas 3 horas",
+     "pt": "Cerca de 3 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 279,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/tours/Curacao/TukTuks-Adventure-Fun-Tour-in-Curacao-up-to-4-persons-booking/d725-436959P5"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/tours/Curacao/TukTuks-Adventure-Fun-Tour-in-Curacao-up-to-4-persons-booking/d725-436959P5",
+    "https://www.viator.com/tours/Curacao/TukTuks-Adventure-Fun-Tour-in-Curacao-up-to-4-persons-booking/d725-436959P5"
+   ],
+   "boek": "https://www.viator.com/tours/Curacao/TukTuks-Adventure-Fun-Tour-in-Curacao-up-to-4-persons-booking/d725-436959P5",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 3,
+   "ophalen": true
+  },
+  {
+   "id": "dushi-experiences-city-beach",
+   "naam": "Dushi Experiences: Curaçao City and Beach Tour",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "Rotonde bij ingang Renaissance Mall, of ophalen bij hotel",
+   "tags": [
+    "budget",
+    "stadstour",
+    "halve-dag",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 32,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.viator.com/tours/Curacao/Introduction-to-Curacao/d725-430221P1",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Group tour past Scharloo, Landhuis Chobolobo and Caracas Bay, ending with two hours at Mambo Beach.",
+     "nl": "Groepstour langs Scharloo, Landhuis Chobolobo en Caracasbaai, afgesloten met twee uur op Mambo Beach.",
+     "de": "Gruppentour durch Scharloo, zum Landhuis Chobolobo und zur Caracasbaai, zum Abschluss zwei Stunden am Mambo Beach.",
+     "es": "Tour en grupo por Scharloo, Landhuis Chobolobo y la bahía de Caracas, terminando con dos horas en Mambo Beach.",
+     "pt": "Passeio em grupo por Scharloo, Landhuis Chobolobo e a baía de Caracas, terminando com duas horas em Mambo Beach."
+    },
+    {
+     "nl": "Ongeveer 4 uur",
+     "en": "About 4 hours",
+     "de": "Etwa 4 Stunden",
+     "es": "Unas 4 horas",
+     "pt": "Cerca de 4 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 233,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/tours/Curacao/Introduction-to-Curacao/d725-430221P1"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/tours/Curacao/Introduction-to-Curacao/d725-430221P1",
+    "https://www.viator.com/tours/Curacao/Introduction-to-Curacao/d725-430221P1"
+   ],
+   "boek": "https://www.viator.com/tours/Curacao/Introduction-to-Curacao/d725-430221P1",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 4,
+   "ophalen": true
+  },
+  {
+   "id": "dushi-views-city-food-tour",
+   "naam": "Dushi Views: City Food Tour (foto's, drankjes en eten)",
+   "url": null,
+   "soort": {
+    "nl": "eten en cultuur",
+    "en": "food and culture",
+    "de": "Essen und Kultur",
+    "es": "comida y cultura",
+    "pt": "comida e cultura"
+   },
+   "plaats": "Renaissance Mall & Rif Fort",
+   "tags": [
+    "eten",
+    "stadstour",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 60,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.viator.com/tours/Curacao/Curacao-Private-Transportation/d725-400174P12",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Private city tour by car with a photographer, local snacks and drinks, starting at Renaissance Mall.",
+     "nl": "Privé-stadstour per auto met fotograaf, lokale hapjes en drankjes, vanaf Renaissance Mall.",
+     "de": "Private Stadttour mit dem Auto und einem Fotografen, lokalen Snacks und Getränken, Start an der Renaissance Mall.",
+     "es": "Tour privado por la ciudad en coche con fotógrafo, snacks y bebidas locales, saliendo del Renaissance Mall.",
+     "pt": "Passeio privado pela cidade de carro com fotógrafo, petiscos e bebidas locais, saindo do Renaissance Mall."
+    },
+    {
+     "nl": "Ongeveer 2 uur",
+     "en": "About 2 hours",
+     "de": "Etwa 2 Stunden",
+     "es": "Unas 2 horas",
+     "pt": "Cerca de 2 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 41,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/tours/Curacao/Curacao-Private-Transportation/d725-400174P12"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/tours/Curacao/Curacao-Private-Transportation/d725-400174P12",
+    "https://www.viator.com/tours/Curacao/Curacao-Private-Transportation/d725-400174P12"
+   ],
+   "boek": "https://www.viator.com/tours/Curacao/Curacao-Private-Transportation/d725-400174P12",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 2
+  },
+  {
+   "id": "around-curacao-full-day-private",
+   "naam": "Around Curacao Tours: Full Day Private Tour",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "Ophalen bij hotel of cruiseschip",
+   "tags": [
+    "snorkel",
+    "schildpadden",
+    "natuur",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 155,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.viator.com/tours/Willemstad/Curacao-Full-Day-Custom-Private-Tour/d50233-22051P1",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Private custom island day choosing from Grote Knip, Playa Piskado, Shete Boka, flamingos and Christoffel.",
+     "nl": "Privé-eilanddag op maat met keuze uit Grote Knip, Playa Piskado, Shete Boka, flamingo's en Christoffel.",
+     "de": "Privater Inseltag nach Wunsch mit Zielen wie Grote Knip, Playa Piskado, Shete Boka, Flamingos und Christoffelpark.",
+     "es": "Día privado por la isla a tu medida, eligiendo entre Grote Knip, Playa Piskado, Shete Boka, flamencos y Christoffel.",
+     "pt": "Dia privado pela ilha sob medida, escolhendo entre Grote Knip, Playa Piskado, Shete Boka, flamingos e Christoffel."
+    },
+    {
+     "nl": "Ongeveer 5 uur",
+     "en": "About 5 hours",
+     "de": "Etwa 5 Stunden",
+     "es": "Unas 5 horas",
+     "pt": "Cerca de 5 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 602,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/tours/Willemstad/Curacao-Full-Day-Custom-Private-Tour/d50233-22051P1"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/tours/Willemstad/Curacao-Full-Day-Custom-Private-Tour/d50233-22051P1",
+    "https://www.viator.com/tours/Willemstad/Curacao-Full-Day-Custom-Private-Tour/d50233-22051P1"
+   ],
+   "boek": "https://www.viator.com/tours/Willemstad/Curacao-Full-Day-Custom-Private-Tour/d50233-22051P1",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 5,
+   "ophalen": true
+  },
+  {
+   "id": "little-green-boat-discover-scuba",
+   "naam": "The Little Green Boat: Private Scuba Diving Experience for Beginners",
+   "url": null,
+   "soort": {
+    "nl": "snorkelen en duiken",
+    "en": "snorkeling and diving",
+    "de": "Schnorcheln und Tauchen",
+    "es": "snorkel y buceo",
+    "pt": "snorkel e mergulho"
+   },
+   "plaats": "",
+   "tags": [
+    "duiken",
+    "kleine-groep",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 103,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.mycuracaoguide.com/book-tours/private-scuba-diving-experience-for-beginners",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Private introductory scuba dive with a PADI or SSI instructor after a land briefing; minimum age 10.",
+     "nl": "Privé-introductieduik met een PADI- of SSI-instructeur na uitleg op het land; vanaf 10 jaar.",
+     "de": "Privater Schnuppertauchgang mit PADI- oder SSI-Lehrer nach einer Einweisung an Land; Mindestalter 10.",
+     "es": "Bautismo de buceo privado con instructor PADI o SSI tras una charla en tierra; edad mínima 10 años.",
+     "pt": "Batismo de mergulho privado com instrutor PADI ou SSI após uma instrução em terra; idade mínima 10 anos."
+    },
+    {
+     "nl": "Ongeveer 2,5 uur",
+     "en": "About 2.5 hours",
+     "de": "Etwa 2,5 Stunden",
+     "es": "Unas 2,5 horas",
+     "pt": "Cerca de 2,5 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 63,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.mycuracaoguide.com/book-tours/private-scuba-diving-experience-for-beginners"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.mycuracaoguide.com/book-tours/private-scuba-diving-experience-for-beginners",
+    "https://thelittlegreenboat.eco/en/expeditions-for-beginners/"
+   ],
+   "boek": "https://thelittlegreenboat.eco/en/expeditions-for-beginners/",
+   "boekBron": "aanbieder",
+   "annuleren": 24,
+   "duurU": 2.5
+  },
+  {
+   "id": "blue-bay-discover-scuba",
+   "naam": "Blue Bay Dive & Watersports: PADI Discover Scuba Dive",
+   "url": null,
+   "soort": {
+    "nl": "snorkelen en duiken",
+    "en": "snorkeling and diving",
+    "de": "Schnorcheln und Tauchen",
+    "es": "snorkel y buceo",
+    "pt": "snorkel e mergulho"
+   },
+   "plaats": "Blue Bay Resort, Sint Michiel",
+   "tags": [
+    "duiken",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 125,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.viator.com/tours/Curacao/PADI-Discover-Scuba-Dive/d725-123932P1",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "PADI introductory dive for beginners with a guide from the beach at Blue Bay Resort.",
+     "nl": "PADI-introductieduik voor beginners met gids vanaf het strand van Blue Bay Resort.",
+     "de": "PADI-Schnuppertauchen für Anfänger mit Guide vom Strand am Blue Bay Resort.",
+     "es": "Bautismo de buceo PADI para principiantes con guía desde la playa del Blue Bay Resort.",
+     "pt": "Batismo de mergulho PADI para iniciantes com guia a partir da praia do Blue Bay Resort."
+    },
+    {
+     "nl": "Ongeveer 2 uur",
+     "en": "About 2 hours",
+     "de": "Etwa 2 Stunden",
+     "es": "Unas 2 horas",
+     "pt": "Cerca de 2 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 69,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/tours/Curacao/PADI-Discover-Scuba-Dive/d725-123932P1"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/tours/Curacao/PADI-Discover-Scuba-Dive/d725-123932P1",
+    "https://www.viator.com/tours/Curacao/PADI-Discover-Scuba-Dive/d725-123932P1"
+   ],
+   "boek": "https://www.viator.com/tours/Curacao/PADI-Discover-Scuba-Dive/d725-123932P1",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 2
+  },
+  {
+   "id": "soul-divers-discover-scuba",
+   "naam": "Soul Divers: Personalized Discover Scuba Dive",
+   "url": null,
+   "soort": {
+    "nl": "snorkelen en duiken",
+    "en": "snorkeling and diving",
+    "de": "Schnorcheln und Tauchen",
+    "es": "snorkel y buceo",
+    "pt": "snorkel e mergulho"
+   },
+   "plaats": "Ophalen (o.a. cruisehaven, Marie Pampoen)",
+   "tags": [
+    "duiken",
+    "kleine-groep",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 129,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.viator.com/tours/Willemstad/Discover-Scuba-Diving-Experience-with-Soul-Divers-including-pick-up-and-return/d50233-361838P1",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Private intro scuba dive on a shore reef with basic training, gear and pickup; max four people.",
+     "nl": "Privé-introductieduik op een rif vanaf de kant met basistraining, uitrusting en ophalen; maximaal vier personen.",
+     "de": "Privater Schnuppertauchgang an einem Riff vor der Küste mit Grundausbildung, Ausrüstung und Abholung; höchstens vier Personen.",
+     "es": "Bautismo de buceo privado en un arrecife desde la costa con formación básica, equipo y recogida; máximo cuatro personas.",
+     "pt": "Batismo de mergulho privado em um recife a partir da costa com treino básico, equipamento e busca; no máximo quatro pessoas."
+    },
+    {
+     "nl": "Ongeveer 3,5 uur",
+     "en": "About 3.5 hours",
+     "de": "Etwa 3,5 Stunden",
+     "es": "Unas 3,5 horas",
+     "pt": "Cerca de 3,5 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 90,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/tours/Willemstad/Discover-Scuba-Diving-Experience-with-Soul-Divers-including-pick-up-and-return/d50233-361838P1"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/tours/Willemstad/Discover-Scuba-Diving-Experience-with-Soul-Divers-including-pick-up-and-return/d50233-361838P1",
+    "https://www.viator.com/tours/Willemstad/Discover-Scuba-Diving-Experience-with-Soul-Divers-including-pick-up-and-return/d50233-361838P1"
+   ],
+   "boek": "https://www.viator.com/tours/Willemstad/Discover-Scuba-Diving-Experience-with-Soul-Divers-including-pick-up-and-return/d50233-361838P1",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 3.5,
+   "ophalen": true
+  },
+  {
+   "id": "curious2dive-discover-diving",
+   "naam": "CURious2DIVE: Discover Diving in Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "snorkelen en duiken",
+    "en": "snorkeling and diving",
+    "de": "Schnorcheln und Tauchen",
+    "es": "snorkel y buceo",
+    "pt": "snorkel e mergulho"
+   },
+   "plaats": "Papitas, Caracasbaai",
+   "tags": [
+    "duiken",
+    "kleine-groep",
+    "kinderen",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 140,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11991487-Discover_Diving_in_Curacao-Curacao.html",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Guided intro shore dive for ages 8 and up, max four per group, with free dive photos.",
+     "nl": "Begeleide introductieduik vanaf de kant voor 8 jaar en ouder, maximaal vier per groep, met gratis duikfoto's.",
+     "de": "Geführter Schnuppertauchgang von Land ab 8 Jahren, höchstens vier pro Gruppe, mit kostenlosen Unterwasserfotos.",
+     "es": "Bautismo de buceo guiado desde la costa a partir de 8 años, máximo cuatro por grupo, con fotos gratis.",
+     "pt": "Batismo de mergulho guiado a partir da costa para maiores de 8 anos, no máximo quatro por grupo, com fotos grátis."
+    },
+    {
+     "nl": "Ongeveer 4 uur",
+     "en": "About 4 hours",
+     "de": "Etwa 4 Stunden",
+     "es": "Unas 4 horas",
+     "pt": "Cerca de 4 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 889,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11991487-Discover_Diving_in_Curacao-Curacao.html"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d11991487-Discover_Diving_in_Curacao-Curacao.html",
+    "https://www.viator.com/tours/Curacao/Discover-Diving-in-Curacao/d725-41808P1"
+   ],
+   "boek": "https://www.viator.com/tours/Curacao/Discover-Diving-in-Curacao/d725-41808P1",
+   "boekBron": "viator",
+   "duurU": 4
+  },
+  {
+   "id": "coral-divers-discover-scuba",
+   "naam": "Coral Divers Curacao: PADI Discover Scuba Dive",
+   "url": null,
+   "soort": {
+    "nl": "snorkelen en duiken",
+    "en": "snorkeling and diving",
+    "de": "Schnorcheln und Tauchen",
+    "es": "snorkel y buceo",
+    "pt": "snorkel e mergulho"
+   },
+   "plaats": "",
+   "tags": [
+    "duiken",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 125,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.viator.com/tours/Willemstad/PADI-Discover-Scuba-Dive-at-Coral-Divers-Curacao/d50233-256696P1",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "PADI introductory scuba dive for first-timers at Coral Divers dive centre.",
+     "nl": "PADI-introductieduik voor beginners bij duikcentrum Coral Divers.",
+     "de": "PADI-Schnuppertauchen für Einsteiger im Tauchzentrum Coral Divers.",
+     "es": "Bautismo de buceo PADI para principiantes en el centro de buceo Coral Divers.",
+     "pt": "Batismo de mergulho PADI para iniciantes no centro de mergulho Coral Divers."
+    },
+    {
+     "nl": "Ongeveer 2 uur",
+     "en": "About 2 hours",
+     "de": "Etwa 2 Stunden",
+     "es": "Unas 2 horas",
+     "pt": "Cerca de 2 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 35,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/tours/Willemstad/PADI-Discover-Scuba-Dive-at-Coral-Divers-Curacao/d50233-256696P1"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/tours/Willemstad/PADI-Discover-Scuba-Dive-at-Coral-Divers-Curacao/d50233-256696P1",
+    "https://www.viator.com/tours/Willemstad/PADI-Discover-Scuba-Dive-at-Coral-Divers-Curacao/d50233-256696P1"
+   ],
+   "boek": "https://www.viator.com/tours/Willemstad/PADI-Discover-Scuba-Dive-at-Coral-Divers-Curacao/d50233-256696P1",
+   "boekBron": "viator",
+   "duurU": 2
+  },
+  {
+   "id": "scubacao-intro-shore-dive",
+   "naam": "Scubaçao: Introduction Shore Dive (1 duik)",
+   "url": null,
+   "soort": {
+    "nl": "snorkelen en duiken",
+    "en": "snorkeling and diving",
+    "de": "Schnorcheln und Tauchen",
+    "es": "snorkel y buceo",
+    "pt": "snorkel e mergulho"
+   },
+   "plaats": "",
+   "tags": [
+    "duiken",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 140,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.viator.com/en-IE/tours/Curacao/Introduction-dive-with-Scubacao/d725-160050P2",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Introductory shore dive for beginners with Scubaçao, one guided dive from the coast.",
+     "nl": "Introductieduik vanaf de kant voor beginners met Scubaçao, één begeleide duik.",
+     "de": "Schnuppertauchgang von Land für Anfänger mit Scubaçao, ein geführter Tauchgang von der Küste.",
+     "es": "Inmersión de iniciación desde la costa para principiantes con Scubaçao, una inmersión guiada.",
+     "pt": "Mergulho de iniciação a partir da costa para iniciantes com a Scubaçao, um mergulho guiado."
+    },
+    {
+     "nl": "Ongeveer 3,5 uur",
+     "en": "About 3.5 hours",
+     "de": "Etwa 3,5 Stunden",
+     "es": "Unas 3,5 horas",
+     "pt": "Cerca de 3,5 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 111,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/en-IE/tours/Curacao/Introduction-dive-with-Scubacao/d725-160050P2"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/en-IE/tours/Curacao/Introduction-dive-with-Scubacao/d725-160050P2",
+    "https://www.viator.com/en-IE/tours/Curacao/Introduction-dive-with-Scubacao/d725-160050P2"
+   ],
+   "boek": "https://www.viator.com/en-IE/tours/Curacao/Introduction-dive-with-Scubacao/d725-160050P2",
+   "boekBron": "viator",
+   "duurU": 3.5
+  },
+  {
+   "id": "adventure-tours-kayak-snorkel",
+   "naam": "Adventure Tours Curacao: Kayak and Snorkel Adventure Caracasbaai",
+   "url": null,
+   "soort": {
+    "nl": "actief op het water",
+    "en": "water activity",
+    "de": "Aktivität auf dem Wasser",
+    "es": "actividad acuática",
+    "pt": "atividade na água"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "kajak-sup",
+    "snorkel",
+    "cruise-gast"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "en": "Guided double-kayak paddle across Caracas Bay past Fort Beekenburg to a quiet beach to snorkel.",
+     "nl": "Begeleide tocht in een tweepersoonskajak over de Caracasbaai langs Fort Beekenburg naar een rustig strandje om te snorkelen.",
+     "de": "Geführte Tour im Doppelkajak über die Caracasbaai vorbei am Fort Beekenburg zu einem ruhigen Strand zum Schnorcheln.",
+     "es": "Paseo guiado en kayak doble por la bahía de Caracas, pasando el Fuerte Beekenburg, hasta una playa tranquila para hacer snorkel.",
+     "pt": "Passeio guiado de caiaque duplo pela baía de Caracas, passando o Forte Beekenburg, até uma praia tranquila para snorkel."
+    },
+    {
+     "nl": "Ongeveer 2 uur",
+     "en": "About 2 hours",
+     "de": "Etwa 2 Stunden",
+     "es": "Unas 2 horas",
+     "pt": "Cerca de 2 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 46,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/tours/Curacao/Curacao-Kayak-and-Snorkel-Adventure/d725-6278KAYAK"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/tours/Curacao/Curacao-Kayak-and-Snorkel-Adventure/d725-6278KAYAK",
+    "https://www.viator.com/tours/Curacao/Curacao-Kayak-and-Snorkel-Adventure/d725-6278KAYAK"
+   ],
+   "boek": "https://www.viator.com/tours/Curacao/Curacao-Kayak-and-Snorkel-Adventure/d725-6278KAYAK",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 2
+  },
+  {
+   "id": "adventure-tours-jet-ski",
+   "naam": "Adventure Tours Curacao: Jet Ski Adventure Tour (Caracasbaai en Spaanse Water)",
+   "url": null,
+   "soort": {
+    "nl": "actief op het water",
+    "en": "water activity",
+    "de": "Aktivität auf dem Wasser",
+    "es": "actividad acuática",
+    "pt": "atividade na água"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 65,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11459276-Jet_Ski_Adventure_Tour_Curacao-Curacao.html",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Jet ski ride from Caracas Bay into open sea and calm Spanish Water after a short instruction.",
+     "nl": "Jetskitocht vanaf Caracasbaai de open zee op en het rustige Spaanse Water in, na korte instructie.",
+     "de": "Jetski-Fahrt von der Caracasbaai aufs offene Meer und ins ruhige Spaanse Water nach kurzer Einweisung.",
+     "es": "Paseo en moto de agua desde la bahía de Caracas a mar abierto y al tranquilo Spaanse Water tras una breve instrucción.",
+     "pt": "Passeio de jet ski da baía de Caracas ao mar aberto e à calma Spaanse Water após uma breve instrução."
+    },
+    {
+     "nl": "Ongeveer 1 uur",
+     "en": "About 1 hours",
+     "de": "Etwa 1 Stunden",
+     "es": "Unas 1 horas",
+     "pt": "Cerca de 1 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 89,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11459276-Jet_Ski_Adventure_Tour_Curacao-Curacao.html"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d11459276-Jet_Ski_Adventure_Tour_Curacao-Curacao.html",
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d11459276-Jet_Ski_Adventure_Tour_Curacao-Curacao.html"
+   ],
+   "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11459276-Jet_Ski_Adventure_Tour_Curacao-Curacao.html",
+   "boekBron": "tripadvisor",
+   "annuleren": 24,
+   "duurU": 1
+  },
+  {
+   "id": "sea-trek-aquajet-scooter",
+   "naam": "Sea Trek Curaçao: AquaJet Underwater Scooter",
+   "url": null,
+   "soort": {
+    "nl": "actief op het water",
+    "en": "water activity",
+    "de": "Aktivität auf dem Wasser",
+    "es": "actividad acuática",
+    "pt": "atividade na água"
+   },
+   "plaats": "Surf & Turf, Dr. Martin Luther King Blvd 74",
+   "tags": [
+    "snorkel",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 120,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.viator.com/tours/Curacao/Sublue-Underwater-Scooter-Explore-the-Reef-Effortlessly/d725-333322P15",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Guided ride on an underwater scooter over a coral reef; no swimming skills needed.",
+     "nl": "Begeleide tocht met een onderwaterscooter over een koraalrif; zwemmen is niet nodig.",
+     "de": "Geführte Fahrt mit einem Unterwasserscooter über ein Korallenriff; Schwimmkenntnisse nicht nötig.",
+     "es": "Paseo guiado en scooter submarino sobre un arrecife de coral; no hace falta saber nadar.",
+     "pt": "Passeio guiado de scooter submarino sobre um recife de coral; não é preciso saber nadar."
+    },
+    {
+     "nl": "Ongeveer 1 uur",
+     "en": "About 1 hours",
+     "de": "Etwa 1 Stunden",
+     "es": "Unas 1 horas",
+     "pt": "Cerca de 1 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 21,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/tours/Curacao/Sublue-Underwater-Scooter-Explore-the-Reef-Effortlessly/d725-333322P15"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/tours/Curacao/Sublue-Underwater-Scooter-Explore-the-Reef-Effortlessly/d725-333322P15",
+    "https://www.viator.com/tours/Curacao/Sublue-Underwater-Scooter-Explore-the-Reef-Effortlessly/d725-333322P15"
+   ],
+   "boek": "https://www.viator.com/tours/Curacao/Sublue-Underwater-Scooter-Explore-the-Reef-Effortlessly/d725-333322P15",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 1
+  },
+  {
+   "id": "fascinating-tours-nature-lovers",
+   "naam": "Curaçao Fascinating Tours: Curaçao Nature Lovers Tour",
+   "url": null,
+   "soort": {
+    "nl": "natuur",
+    "en": "nature",
+    "de": "Natur",
+    "es": "naturaleza",
+    "pt": "natureza"
+   },
+   "plaats": "Otrobanda, of ophalen bij hotel of cruisepier",
+   "tags": [
+    "natuur",
+    "schildpadden",
+    "snorkel",
+    "halve-dag"
+   ],
+   "prijs": {
+    "bedrag": 113,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d20666330-Curacao_Nature_Lovers_Tour-Curacao.html",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Nature tour to Shete Boka, turtle snorkeling at Playa Piskado, Grote Knip and the flamingo sanctuary.",
+     "nl": "Natuurtour naar Shete Boka, snorkelen met schildpadden bij Playa Piskado, Grote Knip en de flamingo's.",
+     "de": "Naturtour nach Shete Boka, Schnorcheln mit Schildkröten an der Playa Piskado, Grote Knip und das Flamingoschutzgebiet.",
+     "es": "Tour de naturaleza a Shete Boka, snorkel con tortugas en Playa Piskado, Grote Knip y el santuario de flamencos.",
+     "pt": "Passeio de natureza a Shete Boka, snorkel com tartarugas em Playa Piskado, Grote Knip e o santuário de flamingos."
+    },
+    {
+     "nl": "Ongeveer 5 uur",
+     "en": "About 5 hours",
+     "de": "Etwa 5 Stunden",
+     "es": "Unas 5 horas",
+     "pt": "Cerca de 5 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 42,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d20666330-Curacao_Nature_Lovers_Tour-Curacao.html"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d20666330-Curacao_Nature_Lovers_Tour-Curacao.html",
+    "https://www.viator.com/en-GB/tours/Curacao/Nature-Lovers-Tour/d725-255954P1"
+   ],
+   "boek": "https://www.viator.com/en-GB/tours/Curacao/Nature-Lovers-Tour/d725-255954P1",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 5,
+   "ophalen": true
+  },
+  {
+   "id": "premium-paradise-can-am-atv",
+   "naam": "Premium Paradise Tours: 3-Hour ATV Can-Am Adventure",
+   "url": null,
+   "soort": {
+    "nl": "off-road tour",
+    "en": "off-road tour",
+    "de": "Offroad-Tour",
+    "es": "tour todoterreno",
+    "pt": "passeio off-road"
+   },
+   "plaats": "Achter Veeris Pet Center, Veeris",
+   "tags": [
+    "offroad",
+    "quad",
+    "schildpadden",
+    "halve-dag",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 269,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d27801064-3_Hour_ATV_Can_Am_Adventure_Tour_in_Willemstad_Curacao-Curacao.html",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Can-Am off-road ride to Daniel, Grote Knip, Playa Piskado and the flamingo sanctuary, snorkel gear included.",
+     "nl": "Offroadrit in een Can-Am naar Daniel, Grote Knip, Playa Piskado en de flamingo's, snorkelspullen inbegrepen.",
+     "de": "Offroad-Fahrt im Can-Am nach Daniel, Grote Knip, Playa Piskado und zum Flamingoschutzgebiet, Schnorchelausrüstung inklusive.",
+     "es": "Ruta todoterreno en Can-Am a Daniel, Grote Knip, Playa Piskado y el santuario de flamencos, con equipo de snorkel.",
+     "pt": "Passeio off-road de Can-Am a Daniel, Grote Knip, Playa Piskado e o santuário de flamingos, com equipamento de snorkel."
+    },
+    {
+     "nl": "Ongeveer 3 uur",
+     "en": "About 3 hours",
+     "de": "Etwa 3 Stunden",
+     "es": "Unas 3 horas",
+     "pt": "Cerca de 3 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 166,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d27801064-3_Hour_ATV_Can_Am_Adventure_Tour_in_Willemstad_Curacao-Curacao.html"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d27801064-3_Hour_ATV_Can_Am_Adventure_Tour_in_Willemstad_Curacao-Curacao.html",
+    "https://www.viator.com/en-GB/tours/Curacao/Can-am-Tour-Curacao/d725-419483P1"
+   ],
+   "boek": "https://www.viator.com/en-GB/tours/Curacao/Can-am-Tour-Curacao/d725-419483P1",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 3
+  },
+  {
+   "id": "pirate-quest-buggy-tours",
+   "naam": "Pirate Quest Tours: Buggy Tours West Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "off-road tour",
+    "en": "off-road tour",
+    "de": "Offroad-Tour",
+    "es": "tour todoterreno",
+    "pt": "passeio off-road"
+   },
+   "plaats": "Kokomo Beach, Vaersenbaai",
+   "tags": [
+    "offroad",
+    "halve-dag",
+    "cruise-gast"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "en": "Customisable buggy tour of the west side from Kokomo Beach, with stops such as Daaibooi Beach.",
+     "nl": "Buggytour op maat over de westkant vanaf Kokomo Beach, met stops zoals Daaibooi Beach.",
+     "de": "Individuell gestaltbare Buggytour im Westen ab Kokomo Beach, mit Stopps wie dem Daaibooi Beach.",
+     "es": "Tour en buggy a medida por el oeste desde Kokomo Beach, con paradas como Daaibooi Beach.",
+     "pt": "Passeio de buggy personalizável pelo oeste a partir de Kokomo Beach, com paradas como Daaibooi Beach."
+    },
+    {
+     "nl": "Ongeveer 3 uur",
+     "en": "About 3 hours",
+     "de": "Etwa 3 Stunden",
+     "es": "Unas 3 horas",
+     "pt": "Cerca de 3 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 152,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/en-GB/tours/Curacao/Costum-trips-to-the-most-beautiful-parts-of-curacao-thr-west-side/d725-136104P1"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/en-GB/tours/Curacao/Costum-trips-to-the-most-beautiful-parts-of-curacao-thr-west-side/d725-136104P1",
+    "https://www.viator.com/en-GB/tours/Curacao/Costum-trips-to-the-most-beautiful-parts-of-curacao-thr-west-side/d725-136104P1"
+   ],
+   "boek": "https://www.viator.com/en-GB/tours/Curacao/Costum-trips-to-the-most-beautiful-parts-of-curacao-thr-west-side/d725-136104P1",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 3
+  },
+  {
+   "id": "bluefinn-go-west-utv",
+   "naam": "BlueFinn: Go West UTV Tour",
+   "url": null,
+   "soort": {
+    "nl": "off-road tour",
+    "en": "off-road tour",
+    "de": "Offroad-Tour",
+    "es": "tour todoterreno",
+    "pt": "passeio off-road"
+   },
+   "plaats": "",
+   "tags": [
+    "offroad",
+    "halve-dag",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 229,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per voertuig",
+     "en": "per vehicle",
+     "de": "pro Fahrzeug",
+     "es": "por vehículo",
+     "pt": "por veículo"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d33216681-Go_West_UTV_Tour_in_Curacao-Curacao.html",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Three-hour guided UTV off-road tour on the west side of Curaçao, up to four people per UTV.",
+     "nl": "Offroadtour van drie uur met gids in een UTV over West-Curaçao, tot vier personen per UTV.",
+     "de": "Dreistündige geführte UTV-Offroadtour im Westen von Curaçao, bis zu vier Personen pro UTV.",
+     "es": "Tour guiado todoterreno de tres horas en UTV por el oeste de Curazao, hasta cuatro personas por UTV.",
+     "pt": "Passeio guiado off-road de três horas de UTV pelo oeste de Curaçao, até quatro pessoas por UTV."
+    },
+    {
+     "nl": "Ongeveer 3 uur",
+     "en": "About 3 hours",
+     "de": "Etwa 3 Stunden",
+     "es": "Unas 3 horas",
+     "pt": "Cerca de 3 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 41,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d33216681-Go_West_UTV_Tour_in_Curacao-Curacao.html"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d33216681-Go_West_UTV_Tour_in_Curacao-Curacao.html",
+    "https://www.bluefinncharters.com/land-trips-curacao/go-east-west-atv-tour/"
+   ],
+   "boek": "https://www.bluefinncharters.com/land-trips-curacao/go-east-west-atv-tour/",
+   "boekBron": "aanbieder",
+   "duurU": 3
+  },
+  {
+   "id": "fbtt-epic-west-coast-utv",
+   "naam": "Curaçao Tours (FBTT): UTV Epic West Coast Adventure",
+   "url": null,
+   "soort": {
+    "nl": "off-road tour",
+    "en": "off-road tour",
+    "de": "Offroad-Tour",
+    "es": "tour todoterreno",
+    "pt": "passeio off-road"
+   },
+   "plaats": "",
+   "tags": [
+    "offroad",
+    "halve-dag",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 240,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per voertuig",
+     "en": "per vehicle",
+     "de": "pro Fahrzeug",
+     "es": "por vehículo",
+     "pt": "por veículo"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d23904479-Curacao_Tours_UTV_Epic_west_coast_adventure-Curacao.html",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Four-hour UTV off-road adventure along Curaçao's west coast.",
+     "nl": "Offroadavontuur van vier uur in een UTV langs de westkust van Curaçao.",
+     "de": "Vierstündiges UTV-Offroadabenteuer entlang der Westküste von Curaçao.",
+     "es": "Aventura todoterreno de cuatro horas en UTV por la costa oeste de Curazao.",
+     "pt": "Aventura off-road de quatro horas de UTV pela costa oeste de Curaçao."
+    },
+    {
+     "nl": "Ongeveer 4 uur",
+     "en": "About 4 hours",
+     "de": "Etwa 4 Stunden",
+     "es": "Unas 4 horas",
+     "pt": "Cerca de 4 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 39,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d23904479-Curacao_Tours_UTV_Epic_west_coast_adventure-Curacao.html"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d23904479-Curacao_Tours_UTV_Epic_west_coast_adventure-Curacao.html",
+    "https://www.curacao-tours.com/tour/epic-utv-buggy-west-coast-adventure-339846"
+   ],
+   "boek": "https://www.curacao-tours.com/tour/epic-utv-buggy-west-coast-adventure-339846",
+   "boekBron": "aanbieder",
+   "duurU": 4
+  },
+  {
+   "id": "bluefinn-west-coast-catamaran",
+   "naam": "BlueFinn: West Coast Catamaran Beach Tour",
+   "url": null,
+   "soort": {
+    "nl": "boottocht",
+    "en": "boat trip",
+    "de": "Bootstour",
+    "es": "paseo en barco",
+    "pt": "passeio de barco"
+   },
+   "plaats": "",
+   "tags": [
+    "boot",
+    "catamaran",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 140,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.bluefinncharters.com/boat-trips-curacao/best-of-west-beaches/",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Full-day catamaran trip to beaches on Curaçao's west coast.",
+     "nl": "Catamarantocht van een hele dag naar stranden aan de westkust van Curaçao.",
+     "de": "Ganztägige Katamaranfahrt zu Stränden an der Westküste von Curaçao.",
+     "es": "Paseo de día completo en catamarán a playas de la costa oeste de Curazao.",
+     "pt": "Passeio de dia inteiro de catamarã a praias da costa oeste de Curaçao."
+    },
+    {
+     "nl": "Ongeveer 8 uur",
+     "en": "About 8 hours",
+     "de": "Etwa 8 Stunden",
+     "es": "Unas 8 horas",
+     "pt": "Cerca de 8 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.bluefinncharters.com/boat-trips-curacao/best-of-west-beaches/"
+   ],
+   "boek": "https://www.bluefinncharters.com/boat-trips-curacao/best-of-west-beaches/",
+   "boekBron": "aanbieder",
+   "duurU": 8
+  },
+  {
+   "id": "bluefinn-east-highlights",
+   "naam": "BlueFinn: East Curaçao Highlights Tour",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "",
+   "tags": [
+    "halve-dag",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 70,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.bluefinncharters.com/land-trips-curacao/east-curacao-highlights-tour/",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Four-hour morning tour of the highlights on the east side of Curaçao.",
+     "nl": "Ochtendtour van vier uur langs de hoogtepunten van Oost-Curaçao.",
+     "de": "Vierstündige Vormittagstour zu den Highlights im Osten von Curaçao.",
+     "es": "Tour matutino de cuatro horas por lo mejor del este de Curazao.",
+     "pt": "Passeio matinal de quatro horas pelos destaques do leste de Curaçao."
+    },
+    {
+     "nl": "Ongeveer 4 uur",
+     "en": "About 4 hours",
+     "de": "Etwa 4 Stunden",
+     "es": "Unas 4 horas",
+     "pt": "Cerca de 4 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.bluefinncharters.com/land-trips-curacao/east-curacao-highlights-tour/"
+   ],
+   "boek": "https://www.bluefinncharters.com/land-trips-curacao/east-curacao-highlights-tour/",
+   "boekBron": "aanbieder",
+   "duurU": 4
+  },
+  {
+   "id": "fbtt-highlights-city-cave-coast",
+   "naam": "Curaçao Tours (FBTT): Curaçao Highlights – City, Cave & Coast",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "",
+   "tags": [
+    "stadstour",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 75,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.curacao-tours.com/tour/curacao-highlights-city-cave-coast-336595",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Five-hour guided bus tour combining Willemstad, a cave and the coast.",
+     "nl": "Bustour van vijf uur met gids langs Willemstad, een grot en de kust.",
+     "de": "Fünfstündige geführte Bustour mit Willemstad, einer Höhle und der Küste.",
+     "es": "Tour guiado en autobús de cinco horas que combina Willemstad, una cueva y la costa.",
+     "pt": "Passeio guiado de ônibus de cinco horas combinando Willemstad, uma caverna e a costa."
+    },
+    {
+     "nl": "Ongeveer 5 uur",
+     "en": "About 5 hours",
+     "de": "Etwa 5 Stunden",
+     "es": "Unas 5 horas",
+     "pt": "Cerca de 5 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.curacao-tours.com/tour/curacao-highlights-city-cave-coast-336595"
+   ],
+   "boek": "https://www.curacao-tours.com/tour/curacao-highlights-city-cave-coast-336595",
+   "boekBron": "aanbieder",
+   "duurU": 5
+  },
+  {
+   "id": "eco-cruise-spanish-water-boat",
+   "naam": "Eco Cruise: Spanish Water Boat Tour",
+   "url": null,
+   "soort": {
+    "nl": "boottocht",
+    "en": "boat trip",
+    "de": "Bootstour",
+    "es": "paseo en barco",
+    "pt": "passeio de barco"
+   },
+   "plaats": "",
+   "tags": [
+    "boot",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 75,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://ecocruisecuracao.com/tour/spanish-water-boat-tour/",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Two-hour boat tour on the Spanish Water lagoon.",
+     "nl": "Boottocht van twee uur over het Spaanse Water.",
+     "de": "Zweistündige Bootstour auf der Lagune Spaanse Water.",
+     "es": "Paseo en barco de dos horas por la laguna de Spaanse Water.",
+     "pt": "Passeio de barco de duas horas pela lagoa de Spaanse Water."
+    },
+    {
+     "nl": "Ongeveer 2 uur",
+     "en": "About 2 hours",
+     "de": "Etwa 2 Stunden",
+     "es": "Unas 2 horas",
+     "pt": "Cerca de 2 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://ecocruisecuracao.com/tour/spanish-water-boat-tour/"
+   ],
+   "boek": "https://ecocruisecuracao.com/tour/spanish-water-boat-tour/",
+   "boekBron": "aanbieder",
+   "duurU": 2
+  },
+  {
+   "id": "maxie-sailing-private-tapas",
+   "naam": "Maxie Sailing: Private Snorkeling, Sailing & Tapas Experience",
+   "url": null,
+   "soort": {
+    "nl": "boottocht",
+    "en": "boat trip",
+    "de": "Bootstour",
+    "es": "paseo en barco",
+    "pt": "passeio de barco"
+   },
+   "plaats": "",
+   "tags": [
+    "boot",
+    "snorkel",
+    "kleine-groep",
+    "cruise-gast",
+    "eten"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "en": "Private three-hour sailing trip with snorkeling and tapas on board.",
+     "nl": "Privé-zeiltocht van drie uur met snorkelen en tapas aan boord.",
+     "de": "Privater dreistündiger Segeltörn mit Schnorcheln und Tapas an Bord.",
+     "es": "Salida privada en velero de tres horas con snorkel y tapas a bordo.",
+     "pt": "Passeio privado de veleiro de três horas com snorkel e tapas a bordo."
+    },
+    {
+     "nl": "Ongeveer 3 uur",
+     "en": "About 3 hours",
+     "de": "Etwa 3 Stunden",
+     "es": "Unas 3 horas",
+     "pt": "Cerca de 3 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [],
+   "duurU": 3
+  },
+  {
+   "id": "helmi-chefs-table",
+   "naam": "Helmi Smeulders: Curaçao Chef's Table",
+   "url": null,
+   "soort": {
+    "nl": "eten en cultuur",
+    "en": "food and culture",
+    "de": "Essen und Kultur",
+    "es": "comida y cultura",
+    "pt": "comida e cultura"
+   },
+   "plaats": "My Kitchen, Djonora Marthaweg 1, Mahaai",
+   "tags": [
+    "eten",
+    "eten-inbegrepen"
+   ],
+   "prijs": {
+    "bedrag": 200,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d19066252-Curacao_Chef_s_Table-Curacao.html",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Four-course Caribbean fine-dining evening with wine pairing at chef Helmi Smeulders' kitchen, twice monthly.",
+     "nl": "Viergangen Caribisch fine dining met wijnarrangement in de keuken van chef Helmi Smeulders, twee keer per maand.",
+     "de": "Monatliches mehrgängiges Chef's-Table-Dinner mit Köchin Helmi Smeulders.",
+     "es": "Cena mensual de varios platos en la mesa del chef con Helmi Smeulders.",
+     "pt": "Jantar mensal de vários pratos na mesa da chef Helmi Smeulders."
+    },
+    {
+     "nl": "Ongeveer 4 uur",
+     "en": "About 4 hours",
+     "de": "Etwa 4 Stunden",
+     "es": "Unas 4 horas",
+     "pt": "Cerca de 4 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 20,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d19066252-Curacao_Chef_s_Table-Curacao.html"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d19066252-Curacao_Chef_s_Table-Curacao.html",
+    "https://helmismeulders.com/chefs-table/"
+   ],
+   "boek": "https://helmismeulders.com/chefs-table/",
+   "boekBron": "aanbieder",
+   "duurU": 4
+  },
+  {
+   "id": "san-nicolas-beach-picnic",
+   "naam": "Landhuis San Nicolas: Private Morning Beach Experience with Picnic",
+   "url": null,
+   "soort": {
+    "nl": "eten en cultuur",
+    "en": "food and culture",
+    "de": "Essen und Kultur",
+    "es": "comida y cultura",
+    "pt": "comida e cultura"
+   },
+   "plaats": "Landhuis San Nicolas",
+   "tags": [
+    "eten",
+    "eten-inbegrepen",
+    "kleine-groep"
+   ],
+   "prijs": {
+    "bedrag": 175,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": null,
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Private morning on a beach at Landhuis San Nicolas with a three-course picnic.",
+     "nl": "Privé-ochtend op een strand bij Landhuis San Nicolas met een driegangenpicknick.",
+     "de": "Privater Vormittag an einem Strand beim Landhuis San Nicolas mit einem Picknick in drei Gängen.",
+     "es": "Mañana privada en una playa junto a Landhuis San Nicolas con un pícnic de tres platos.",
+     "pt": "Manhã privada em uma praia do Landhuis San Nicolas com um piquenique de três pratos."
+    },
+    {
+     "nl": "Ongeveer 4 uur",
+     "en": "About 4 hours",
+     "de": "Etwa 4 Stunden",
+     "es": "Unas 4 horas",
+     "pt": "Cerca de 4 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [],
+   "duurU": 4
+  },
+  {
+   "id": "curaloe-after-sun-workshop",
+   "naam": "CurAloe: Craft Your Own After Sun Aloe Spray",
+   "url": null,
+   "soort": {
+    "nl": "eten en cultuur",
+    "en": "food and culture",
+    "de": "Essen und Kultur",
+    "es": "comida y cultura",
+    "pt": "comida e cultura"
+   },
+   "plaats": "",
+   "tags": [
+    "budget",
+    "cultuur",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 24,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": null,
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "One-hour workshop at CurAloe making your own after-sun spray from aloe vera.",
+     "nl": "Workshop van een uur bij CurAloe waarin je je eigen aftersunspray van aloë vera maakt.",
+     "de": "Einstündiger Workshop bei CurAloe, in dem du dein eigenes After-Sun-Spray aus Aloe vera herstellst.",
+     "es": "Taller de una hora en CurAloe para hacer tu propio spray para después del sol con aloe vera.",
+     "pt": "Oficina de uma hora na CurAloe para fazer seu próprio spray pós-sol de aloe vera."
+    },
+    {
+     "nl": "Ongeveer 1 uur",
+     "en": "About 1 hours",
+     "de": "Etwa 1 Stunden",
+     "es": "Unas 1 horas",
+     "pt": "Cerca de 1 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [],
+   "duurU": 1
+  },
+  {
+   "id": "hofi-mango-guided-tour",
+   "naam": "Hofi Mango: Guided Tour",
+   "url": null,
+   "soort": {
+    "nl": "natuur",
+    "en": "nature",
+    "de": "Natur",
+    "es": "naturaleza",
+    "pt": "natureza"
+   },
+   "plaats": "Santa Cruz 23, Bandabou",
+   "tags": [
+    "natuur",
+    "budget",
+    "cruise-gast",
+    "cultuur"
+   ],
+   "prijs": {
+    "bedrag": 20,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://book.hofimango.com/book/entrance-fee-guided-tour/2",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Guided walk through flower and cactus gardens and mangrove forest, up to the Hand of God viewpoint.",
+     "nl": "Rondleiding door bloemen- en cactustuinen en mangrovebos, met klim naar uitkijkpunt Hand of God.",
+     "de": "Einstündige Führung durch den Garten Hofi Mango.",
+     "es": "Visita guiada de una hora por el jardín Hofi Mango.",
+     "pt": "Visita guiada de uma hora pelo jardim Hofi Mango."
+    },
+    {
+     "nl": "Ongeveer 1 uur",
+     "en": "About 1 hours",
+     "de": "Etwa 1 Stunden",
+     "es": "Unas 1 horas",
+     "pt": "Cerca de 1 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://book.hofimango.com/book/entrance-fee-guided-tour/2"
+   ],
+   "boek": "https://book.hofimango.com/book/entrance-fee-guided-tour/2",
+   "boekBron": "aanbieder",
+   "duurU": 1
+  },
+  {
+   "id": "amazonia-jungle-experience",
+   "naam": "Amazonia: The Jungle Experience",
+   "url": null,
+   "soort": {
+    "nl": "natuur",
+    "en": "nature",
+    "de": "Natur",
+    "es": "naturaleza",
+    "pt": "natureza"
+   },
+   "plaats": "Amazonia",
+   "tags": [
+    "natuur",
+    "budget",
+    "kinderen",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 10,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": null,
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Guided jungle tour of 45 to 60 minutes at Amazonia.",
+     "nl": "Junglerondleiding van 45 tot 60 minuten bij Amazonia.",
+     "de": "Geführte Dschungeltour von 45 bis 60 Minuten bei Amazonia.",
+     "es": "Tour guiado por la jungla de 45 a 60 minutos en Amazonia.",
+     "pt": "Passeio guiado pela selva de 45 a 60 minutos na Amazonia."
+    },
+    {
+     "nl": "Ongeveer 1 uur",
+     "en": "About 1 hours",
+     "de": "Etwa 1 Stunden",
+     "es": "Unas 1 horas",
+     "pt": "Cerca de 1 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [],
+   "duurU": 1
+  },
+  {
+   "id": "pocketguide-pietermaai-culinary-walk",
+   "naam": "PocketGuide: Pietermaai Culinary Walk (audiotour)",
+   "url": null,
+   "soort": {
+    "nl": "eten en cultuur",
+    "en": "food and culture",
+    "de": "Essen und Kultur",
+    "es": "comida y cultura",
+    "pt": "comida e cultura"
+   },
+   "plaats": "Pietermaai",
+   "tags": [
+    "eten",
+    "stadstour",
+    "budget",
+    "cruise-gast",
+    "cultuur"
+   ],
+   "prijs": {
+    "bedrag": 49.5,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://pocketguideaudiotours.com/en/hiking-route/culiwalk-pietermaai",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Self-guided audio food walk through Pietermaai with six tasting stops.",
+     "nl": "Eetwandeling op eigen tempo met audiogids door Pietermaai, met zes proefstops.",
+     "de": "Kulinarischer Audiorundgang auf eigene Faust durch Pietermaai mit sechs Verkostungsstopps.",
+     "es": "Paseo gastronómico autoguiado con audio por Pietermaai con seis paradas de degustación.",
+     "pt": "Passeio gastronômico autoguiado com áudio por Pietermaai com seis paradas de degustação."
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://pocketguideaudiotours.com/en/hiking-route/culiwalk-pietermaai"
+   ],
+   "boek": "https://pocketguideaudiotours.com/en/hiking-route/culiwalk-pietermaai",
+   "boekBron": "aanbieder"
+  },
+  {
+   "id": "pocketguide-otrobanda-culinary-walk",
+   "naam": "PocketGuide: Otrobanda Culinary Walk (audiotour)",
+   "url": null,
+   "soort": {
+    "nl": "eten en cultuur",
+    "en": "food and culture",
+    "de": "Essen und Kultur",
+    "es": "comida y cultura",
+    "pt": "comida e cultura"
+   },
+   "plaats": "Otrobanda",
+   "tags": [
+    "eten",
+    "stadstour",
+    "budget",
+    "cruise-gast",
+    "cultuur"
+   ],
+   "prijs": {
+    "bedrag": 49.5,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://pocketguideaudiotours.com/en/hiking-route/culiwalk-otrobanda",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Self-guided audio food walk through Otrobanda with tastings along the way.",
+     "nl": "Eetwandeling op eigen tempo met audiogids door Otrobanda, met proeverijen onderweg.",
+     "de": "Kulinarischer Audiorundgang auf eigene Faust durch Otrobanda mit Verkostungen unterwegs.",
+     "es": "Paseo gastronómico autoguiado con audio por Otrobanda con degustaciones por el camino.",
+     "pt": "Passeio gastronômico autoguiado com áudio por Otrobanda com degustações pelo caminho."
+    },
+    {
+     "nl": "Ongeveer 2 uur",
+     "en": "About 2 hours",
+     "de": "Etwa 2 Stunden",
+     "es": "Unas 2 horas",
+     "pt": "Cerca de 2 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://pocketguideaudiotours.com/en/hiking-route/culiwalk-otrobanda"
+   ],
+   "boek": "https://pocketguideaudiotours.com/en/hiking-route/culiwalk-otrobanda",
+   "boekBron": "aanbieder",
+   "duurU": 2
+  },
+  {
+   "id": "pocketguide-pietermaai-coffee-walk",
+   "naam": "PocketGuide: Pietermaai Coffee Walk (audiotour)",
+   "url": null,
+   "soort": {
+    "nl": "eten en cultuur",
+    "en": "food and culture",
+    "de": "Essen und Kultur",
+    "es": "comida y cultura",
+    "pt": "comida e cultura"
+   },
+   "plaats": "Pietermaai",
+   "tags": [
+    "eten",
+    "stadstour",
+    "budget",
+    "cruise-gast",
+    "cultuur"
+   ],
+   "prijs": {
+    "bedrag": 27.95,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://pocketguideaudiotours.com/en/hiking-route/coffeewalk-pietermaai",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Self-guided audio walk through Pietermaai past local coffee spots.",
+     "nl": "Wandeling op eigen tempo met audiogids door Pietermaai langs lokale koffieplekken.",
+     "de": "Audiorundgang auf eigene Faust durch Pietermaai vorbei an lokalen Cafés.",
+     "es": "Paseo autoguiado con audio por Pietermaai pasando por cafeterías locales.",
+     "pt": "Passeio autoguiado com áudio por Pietermaai passando por cafés locais."
+    },
+    {
+     "nl": "Ongeveer 2 uur",
+     "en": "About 2 hours",
+     "de": "Etwa 2 Stunden",
+     "es": "Unas 2 horas",
+     "pt": "Cerca de 2 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://pocketguideaudiotours.com/en/hiking-route/coffeewalk-pietermaai"
+   ],
+   "boek": "https://pocketguideaudiotours.com/en/hiking-route/coffeewalk-pietermaai",
+   "boekBron": "aanbieder",
+   "duurU": 2
+  },
+  {
+   "id": "pocketguide-otrobanda-audio-walk",
+   "naam": "PocketGuide: Otrobanda Walking Tour (audiotour)",
+   "url": null,
+   "soort": {
+    "nl": "wandeltour",
+    "en": "walking tour",
+    "de": "Rundgang",
+    "es": "tour a pie",
+    "pt": "passeio a pé"
+   },
+   "plaats": "Otrobanda",
+   "tags": [
+    "stadstour",
+    "cultuur",
+    "budget",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 13.99,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://pocketguideaudiotours.com/en/hiking-route/audio-tour-willemstad",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Self-guided 75-minute audio walk through Otrobanda's history and culture.",
+     "nl": "Wandeling van 75 minuten op eigen tempo met audiogids door de geschiedenis en cultuur van Otrobanda.",
+     "de": "75-minütiger Audiorundgang auf eigene Faust durch Geschichte und Kultur von Otrobanda.",
+     "es": "Paseo autoguiado con audio de 75 minutos por la historia y la cultura de Otrobanda.",
+     "pt": "Passeio autoguiado com áudio de 75 minutos pela história e cultura de Otrobanda."
+    },
+    {
+     "nl": "Ongeveer 1,25 uur",
+     "en": "About 1.25 hours",
+     "de": "Etwa 1,25 Stunden",
+     "es": "Unas 1,25 horas",
+     "pt": "Cerca de 1,25 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://pocketguideaudiotours.com/en/hiking-route/audio-tour-willemstad"
+   ],
+   "boek": "https://pocketguideaudiotours.com/en/hiking-route/audio-tour-willemstad",
+   "boekBron": "aanbieder",
+   "duurU": 1.25
+  },
+  {
+   "id": "jewish-museum-audio-guide",
+   "naam": "Curacao Activities: Jewish Museum Curaçao Audio Guide",
+   "url": null,
+   "soort": {
+    "nl": "wandeltour",
+    "en": "walking tour",
+    "de": "Rundgang",
+    "es": "tour a pie",
+    "pt": "passeio a pé"
+   },
+   "plaats": "Jewish Museum Curaçao, Punda",
+   "tags": [
+    "cultuur",
+    "stadstour",
+    "budget",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 20,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://curacaoactivities.com/tour/jewish-museum-curacao-audio-guide/",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Self-guided audio tour of the Jewish Museum Curaçao, available Monday to Friday.",
+     "nl": "Audiotour op eigen tempo door het Joods Museum Curaçao, van maandag tot vrijdag.",
+     "de": "Audioführung auf eigene Faust durch das Jüdische Museum Curaçao, montags bis freitags.",
+     "es": "Visita autoguiada con audio del Museo Judío de Curazao, de lunes a viernes.",
+     "pt": "Visita autoguiada com áudio do Museu Judaico de Curaçao, de segunda a sexta."
+    },
+    {
+     "nl": "Ongeveer 1,5 uur",
+     "en": "About 1.5 hours",
+     "de": "Etwa 1,5 Stunden",
+     "es": "Unas 1,5 horas",
+     "pt": "Cerca de 1,5 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://curacaoactivities.com/tour/jewish-museum-curacao-audio-guide/"
+   ],
+   "boek": "https://curacaoactivities.com/tour/jewish-museum-curacao-audio-guide/",
+   "boekBron": "aanbieder",
+   "duurU": 1.5
+  },
+  {
+   "id": "rancho-mi-famia-horseback",
+   "naam": "Rancho Mi Famia: paardrijtochten",
+   "url": null,
+   "soort": {
+    "nl": "natuur",
+    "en": "nature",
+    "de": "Natur",
+    "es": "naturaleza",
+    "pt": "natureza"
+   },
+   "plaats": "",
+   "tags": [
+    "natuur",
+    "kinderen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "en": "Family-run ranch offering trail rides such as the Waterfront and Hidden Bay tours, plus riding lessons.",
+     "nl": "Familieranch met buitenritten zoals de Waterfront- en Hidden Bay-tour, plus rijlessen.",
+     "de": "Familienbetriebene Ranch mit Ausritten wie der Waterfront- und der Hidden-Bay-Tour sowie Reitstunden.",
+     "es": "Rancho familiar con paseos a caballo como los tours Waterfront y Hidden Bay, además de clases de equitación.",
+     "pt": "Rancho familiar com cavalgadas como os passeios Waterfront e Hidden Bay, além de aulas de equitação."
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 130,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d26554272-Reviews-Rancho_Mi_Famia-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d26554272-Reviews-Rancho_Mi_Famia-Willemstad_Curacao.html",
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d26554272-Reviews-Rancho_Mi_Famia-Willemstad_Curacao.html"
+   ],
+   "boek": "https://www.tripadvisor.com/Attraction_Review-g147278-d26554272-Reviews-Rancho_Mi_Famia-Willemstad_Curacao.html",
+   "boekBron": "tripadvisor"
+  },
+  {
+   "id": "criadero-babetti-horseback",
+   "naam": "Criadero Babetti: paardrijtocht naar Sint Jorisbaai",
+   "url": null,
+   "soort": {
+    "nl": "natuur",
+    "en": "nature",
+    "de": "Natur",
+    "es": "naturaleza",
+    "pt": "natureza"
+   },
+   "plaats": "",
+   "tags": [
+    "natuur"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "en": "Guided horseback ride past aloe and ostrich farms to Sint Joris Bay, riding into the water.",
+     "nl": "Paardrijtocht met gids langs aloë- en struisvogelboerderij naar de Sint Jorisbaai, met de paarden het water in.",
+     "de": "Geführter Ausritt vorbei an Aloe- und Straußenfarm zur Sint Joris Baai, mit Ritt ins Wasser.",
+     "es": "Paseo a caballo guiado junto a granjas de aloe y avestruces hasta la bahía de Sint Joris, entrando al agua.",
+     "pt": "Cavalgada guiada por fazendas de aloe e avestruzes até a baía de Sint Joris, entrando na água."
+    },
+    {
+     "nl": "Ongeveer 2 uur",
+     "en": "About 2 hours",
+     "de": "Etwa 2 Stunden",
+     "es": "Unas 2 horas",
+     "pt": "Cerca de 2 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 44,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d19346272-Reviews-Criadero_Babetti-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d19346272-Reviews-Criadero_Babetti-Willemstad_Curacao.html",
+    "https://www.tripadvisor.com/Attraction_Review-g147278-d19346272-Reviews-Criadero_Babetti-Willemstad_Curacao.html"
+   ],
+   "boek": "https://www.tripadvisor.com/Attraction_Review-g147278-d19346272-Reviews-Criadero_Babetti-Willemstad_Curacao.html",
+   "boekBron": "tripadvisor",
+   "duurU": 2
+  },
+  {
+   "id": "casador-klein-curacao",
+   "naam": "Casador Boat Trips: Klein Curaçao op motorzeiljacht Casador",
+   "url": null,
+   "soort": {
+    "nl": "boottocht Klein Curaçao",
+    "en": "Klein Curaçao boat trip",
+    "de": "Bootsausflug Klein Curaçao",
+    "es": "paseo en barco a Klein Curazao",
+    "pt": "passeio de barco a Klein Curaçao"
+   },
+   "plaats": "Spaanse Water",
+   "tags": [
+    "klein-curacao",
+    "boot",
+    "snorkel",
+    "eten-inbegrepen"
+   ],
+   "prijs": {
+    "bedrag": 120,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.viator.com/tours/Curacao/Klein-Curacoa-escape-the-crowds-onboard-Casador-a-68ft-luxury-motorsailing-yacht/d725-144144P7",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Trip on the 68 ft motor-sailing yacht Casador with BBQ lunch, open bar, snorkel and fishing gear.",
+     "nl": "Tocht op het 68 ft motorzeiljacht Casador met BBQ-lunch, open bar, snorkel- en visspullen.",
+     "de": "Fahrt auf der 68-Fuß-Motorsegeljacht Casador mit BBQ-Mittagessen, offener Bar, Schnorchel- und Angelausrüstung.",
+     "es": "Paseo en el velero a motor Casador de 68 pies con almuerzo BBQ, barra libre y equipo de snorkel y pesca.",
+     "pt": "Passeio no veleiro a motor Casador de 68 pés com almoço de churrasco, open bar e equipamento de snorkel e pesca."
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Viator",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 12,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.viator.com/tours/Curacao/Klein-Curacoa-escape-the-crowds-onboard-Casador-a-68ft-luxury-motorsailing-yacht/d725-144144P7"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.viator.com/tours/Curacao/Klein-Curacoa-escape-the-crowds-onboard-Casador-a-68ft-luxury-motorsailing-yacht/d725-144144P7",
+    "https://www.viator.com/tours/Curacao/Klein-Curacoa-escape-the-crowds-onboard-Casador-a-68ft-luxury-motorsailing-yacht/d725-144144P7"
+   ],
+   "boek": "https://www.viator.com/tours/Curacao/Klein-Curacoa-escape-the-crowds-onboard-Casador-a-68ft-luxury-motorsailing-yacht/d725-144144P7",
+   "boekBron": "viator",
+   "annuleren": 24
+  },
+  {
+   "id": "living-life-klein-yacht-charter",
+   "naam": "Living Life Curaçao: Private Yacht Charter naar Klein Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "boottocht Klein Curaçao",
+    "en": "Klein Curaçao boat trip",
+    "de": "Bootsausflug Klein Curaçao",
+    "es": "paseo en barco a Klein Curazao",
+    "pt": "passeio de barco a Klein Curaçao"
+   },
+   "plaats": "Vissershaven Spaanse Water, Caracasbaaiweg 394",
+   "tags": [
+    "klein-curacao",
+    "boot",
+    "eten-inbegrepen",
+    "kleine-groep"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "en": "Private six-hour boat charter to Klein Curaçao with BBQ mixed grill, champagne and local rum.",
+     "nl": "Privé-bootcharter van zes uur naar Klein Curaçao met BBQ-mixed grill, champagne en lokale rum.",
+     "de": "Private sechsstündige Bootscharter nach Klein Curaçao mit BBQ-Grillplatte, Champagner und lokalem Rum.",
+     "es": "Alquiler privado de barco de seis horas a Klein Curazao con parrillada BBQ, champán y ron local.",
+     "pt": "Fretamento privado de barco de seis horas a Klein Curaçao com churrasco misto, champanhe e rum local."
+    },
+    {
+     "nl": "Ongeveer 6 uur",
+     "en": "About 6 hours",
+     "de": "Etwa 6 Stunden",
+     "es": "Unas 6 horas",
+     "pt": "Cerca de 6 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 20,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d33369897-Exclusive_38ft_Yacht_Charter_Experience_in_Klein_Curacao-Curacao.html"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d33369897-Exclusive_38ft_Yacht_Charter_Experience_in_Klein_Curacao-Curacao.html",
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d33369897-Exclusive_38ft_Yacht_Charter_Experience_in_Klein_Curacao-Curacao.html"
+   ],
+   "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d33369897-Exclusive_38ft_Yacht_Charter_Experience_in_Klein_Curacao-Curacao.html",
+   "boekBron": "tripadvisor",
+   "annuleren": 24,
+   "duurU": 6
+  },
+  {
+   "id": "awa-salu-kiteboarding-taste",
+   "naam": "Awa Salu Kiteboarding: A Little Taste of Kiteboarding",
+   "url": null,
+   "soort": {
+    "nl": "actief op het water",
+    "en": "water activity",
+    "de": "Aktivität auf dem Wasser",
+    "es": "actividad acuática",
+    "pt": "atividade na água"
+   },
+   "plaats": "Sint Jorisbaai",
+   "tags": [
+    "kleine-groep",
+    "kinderen",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 195,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d19756436-A_little_Taste_of_Kiteboarding-Curacao.html",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Private beginner kiteboarding lesson in shallow water with all gear and radio intercom included.",
+     "nl": "Privé-kitesurfles voor beginners in ondiep water, met alle uitrusting en radio-intercom.",
+     "de": "Private Kiteboarding-Einsteigerstunde im flachen Wasser, mit kompletter Ausrüstung und Funkverbindung.",
+     "es": "Clase privada de kitesurf para principiantes en aguas poco profundas, con todo el equipo e intercomunicador por radio.",
+     "pt": "Aula privada de kitesurf para iniciantes em águas rasas, com todo o equipamento e rádio intercomunicador."
+    },
+    {
+     "nl": "Ongeveer 2 uur",
+     "en": "About 2 hours",
+     "de": "Etwa 2 Stunden",
+     "es": "Unas 2 horas",
+     "pt": "Cerca de 2 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 46,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d19756436-A_little_Taste_of_Kiteboarding-Curacao.html"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d19756436-A_little_Taste_of_Kiteboarding-Curacao.html",
+    "https://www.viator.com/tours/Curacao/A-little-taste-of-kiteboarding/d725-62072P1"
+   ],
+   "boek": "https://www.viator.com/tours/Curacao/A-little-taste-of-kiteboarding/d725-62072P1",
+   "boekBron": "viator",
+   "annuleren": 24,
+   "duurU": 2
+  },
+  {
+   "id": "broski-1h-jet-ski-west-coast",
+   "naam": "Broski Tours Curaçao: 1-Hour Jet Ski West Coast",
+   "url": null,
+   "soort": {
+    "nl": "actief op het water",
+    "en": "water activity",
+    "de": "Aktivität auf dem Wasser",
+    "es": "actividad acuática",
+    "pt": "atividade na água"
+   },
+   "plaats": "Playa Santa Cruz",
+   "tags": [
+    "kleine-groep",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 90,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d32228389-1_Hour_Jet_Ski_Adventure_Along_Curacao_s_Stunning_West_Coast-Curacao.html",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Guided Sea-Doo ride along the west coast past up to eight beaches, with a Grote Knip swim stop.",
+     "nl": "Jetskitocht met gids langs de westkust langs tot acht stranden, met zwemstop bij Grote Knip.",
+     "de": "Geführte Jetski-Fahrt an der Westküste vorbei an bis zu acht Stränden, mit Badestopp an der Grote Knip.",
+     "es": "Paseo guiado en moto de agua por la costa oeste pasando hasta ocho playas, con parada para nadar en Grote Knip.",
+     "pt": "Passeio guiado de jet ski pela costa oeste passando por até oito praias, com parada para nadar em Grote Knip."
+    },
+    {
+     "nl": "Ongeveer 1 uur",
+     "en": "About 1 hours",
+     "de": "Etwa 1 Stunden",
+     "es": "Unas 1 horas",
+     "pt": "Cerca de 1 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 105,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d32228389-1_Hour_Jet_Ski_Adventure_Along_Curacao_s_Stunning_West_Coast-Curacao.html"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d32228389-1_Hour_Jet_Ski_Adventure_Along_Curacao_s_Stunning_West_Coast-Curacao.html",
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d32228389-1_Hour_Jet_Ski_Adventure_Along_Curacao_s_Stunning_West_Coast-Curacao.html"
+   ],
+   "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d32228389-1_Hour_Jet_Ski_Adventure_Along_Curacao_s_Stunning_West_Coast-Curacao.html",
+   "boekBron": "tripadvisor",
+   "annuleren": 24,
+   "duurU": 1
+  },
+  {
+   "id": "fascinating-tours-cityscape",
+   "naam": "Curaçao Fascinating Tours: Curaçao Cityscape, Discover her Secret",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "Ophalen, of startpunt in Willemstad",
+   "tags": [
+    "stadstour",
+    "cultuur",
+    "halve-dag",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 80,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d28225421-Curacao_Cityscape_Discover_her_Secret-Curacao.html",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "City tour of Willemstad, Scharloo and Punda with Landhuis Chobolobo and two hours at Mambo Beach.",
+     "nl": "Stadstour door Willemstad, Scharloo en Punda met Landhuis Chobolobo en twee uur op Mambo Beach.",
+     "de": "Stadttour durch Willemstad, Scharloo und Punda mit Landhuis Chobolobo und zwei Stunden am Mambo Beach.",
+     "es": "Tour por Willemstad, Scharloo y Punda con Landhuis Chobolobo y dos horas en Mambo Beach.",
+     "pt": "Passeio por Willemstad, Scharloo e Punda com Landhuis Chobolobo e duas horas em Mambo Beach."
+    },
+    {
+     "nl": "Ongeveer 4 uur",
+     "en": "About 4 hours",
+     "de": "Etwa 4 Stunden",
+     "es": "Unas 4 horas",
+     "pt": "Cerca de 4 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 23,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.tripadvisor.com/AttractionProductReview-g147277-d28225421-Curacao_Cityscape_Discover_her_Secret-Curacao.html"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d28225421-Curacao_Cityscape_Discover_her_Secret-Curacao.html",
+    "https://www.tripadvisor.com/AttractionProductReview-g147277-d28225421-Curacao_Cityscape_Discover_her_Secret-Curacao.html"
+   ],
+   "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d28225421-Curacao_Cityscape_Discover_her_Secret-Curacao.html",
+   "boekBron": "tripadvisor",
+   "annuleren": 24,
+   "duurU": 4,
+   "ophalen": true
+  },
+  {
+   "id": "bluefinn-snorkel-safari",
+   "naam": "BlueFinn: Snorkel Safari Tour",
+   "url": null,
+   "soort": {
+    "nl": "snorkelen en duiken",
+    "en": "snorkeling and diving",
+    "de": "Schnorcheln und Tauchen",
+    "es": "snorkel y buceo",
+    "pt": "snorkel e mergulho"
+   },
+   "plaats": "Ophalen bij hotel",
+   "tags": [
+    "snorkel",
+    "schildpadden",
+    "offroad",
+    "natuur",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 110,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.bluefinncharters.com/land-trips-curacao/snorkel-safari-tour/",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Off-road day via a bat cave and Shete Boka to snorkel with turtles at Playa Piskado.",
+     "nl": "Offroaddag via een vleermuizengrot en Shete Boka naar snorkelen met schildpadden bij Playa Piskado.",
+     "de": "Offroad-Tag über eine Fledermaushöhle und Shete Boka zum Schnorcheln mit Schildkröten an der Playa Piskado.",
+     "es": "Día todoterreno pasando por una cueva de murciélagos y Shete Boka para hacer snorkel con tortugas en Playa Piskado.",
+     "pt": "Dia off-road passando por uma caverna de morcegos e Shete Boka para snorkel com tartarugas em Playa Piskado."
+    },
+    {
+     "nl": "Ongeveer 7 uur",
+     "en": "About 7 hours",
+     "de": "Etwa 7 Stunden",
+     "es": "Unas 7 horas",
+     "pt": "Cerca de 7 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.bluefinncharters.com/land-trips-curacao/snorkel-safari-tour/"
+   ],
+   "boek": "https://www.bluefinncharters.com/land-trips-curacao/snorkel-safari-tour/",
+   "boekBron": "aanbieder",
+   "duurU": 7,
+   "ophalen": true
+  },
+  {
+   "id": "bluefinn-all-west-beach-hopping",
+   "naam": "BlueFinn: All West Beach Hopping Trip",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "Ophalen bij hotel",
+   "tags": [
+    "snorkel",
+    "schildpadden",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 90,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://www.bluefinncharters.com/land-trips-curacao/all-west-beach-hopping-tour/",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Van trip to Grote Knip, Daaibooi and Kokomo Beach with time to swim and snorkel at each.",
+     "nl": "Busje naar Grote Knip, Daaibooi en Kokomo Beach, met bij elk strand tijd om te zwemmen en snorkelen.",
+     "de": "Mit dem Kleinbus zur Grote Knip, nach Daaibooi und zum Kokomo Beach, überall mit Zeit zum Schwimmen und Schnorcheln.",
+     "es": "Excursión en furgoneta a Grote Knip, Daaibooi y Kokomo Beach, con tiempo para nadar y hacer snorkel en cada una.",
+     "pt": "Passeio de van a Grote Knip, Daaibooi e Kokomo Beach, com tempo para nadar e fazer snorkel em cada uma."
+    },
+    {
+     "nl": "Ongeveer 6 uur",
+     "en": "About 6 hours",
+     "de": "Etwa 6 Stunden",
+     "es": "Unas 6 horas",
+     "pt": "Cerca de 6 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.bluefinncharters.com/land-trips-curacao/all-west-beach-hopping-tour/"
+   ],
+   "boek": "https://www.bluefinncharters.com/land-trips-curacao/all-west-beach-hopping-tour/",
+   "boekBron": "aanbieder",
+   "duurU": 6,
+   "ophalen": true
+  },
+  {
+   "id": "fbtt-culinary-tour",
+   "naam": "Curaçao Tours (FBTT): Culinary Tour (vrijdagavond)",
+   "url": null,
+   "soort": {
+    "nl": "eten en cultuur",
+    "en": "food and culture",
+    "de": "Essen und Kultur",
+    "es": "comida y cultura",
+    "pt": "comida e cultura"
+   },
+   "plaats": "Jonckheerplein, ingang Rif Fort",
+   "tags": [
+    "eten",
+    "eten-inbegrepen",
+    "stadstour",
+    "cruise-gast",
+    "cultuur"
+   ],
+   "prijs": {
+    "bedrag": 135,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.mycuracaoguide.com/book-tours/culinary-tour-fbtt",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Friday evening city walk with a food guide, three tasting stops, ending at Rif Fort Village.",
+     "nl": "Stadswandeling op vrijdagavond met een foodgids, drie proefstops en afsluiting in Rif Fort Village.",
+     "de": "Stadtrundgang am Freitagabend mit Food-Guide, drei Verkostungsstopps und Abschluss im Rif Fort Village.",
+     "es": "Paseo por la ciudad el viernes por la noche con guía gastronómico, tres paradas de degustación y final en Rif Fort Village.",
+     "pt": "Passeio pela cidade na sexta à noite com guia gastronômico, três paradas de degustação e final no Rif Fort Village."
+    },
+    {
+     "nl": "Ongeveer 4 uur",
+     "en": "About 4 hours",
+     "de": "Etwa 4 Stunden",
+     "es": "Unas 4 horas",
+     "pt": "Cerca de 4 horas"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 55,
+     "peildatum": "2026-11-09",
+     "bron": "https://www.mycuracaoguide.com/book-tours/culinary-tour-fbtt"
+    }
+   ],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.mycuracaoguide.com/book-tours/culinary-tour-fbtt",
+    "https://www.curacao-tours.com/tour/culinary-tour-326870"
+   ],
+   "boek": "https://www.curacao-tours.com/tour/culinary-tour-326870",
+   "boekBron": "aanbieder",
+   "annuleren": 24,
+   "duurU": 4
+  },
+  {
+   "id": "fbtt-trolley-train",
+   "naam": "Curaçao Tours (FBTT): Trolley Train City Centre",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "",
+   "tags": [
+    "stadstour",
+    "budget",
+    "kinderen",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 29,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.curacao-tours.com/tour/trolley-train-city-centre-296606",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "One-hour ride through downtown Willemstad on a pink trolley train, Thursdays at 10:00.",
+     "nl": "Rit van een uur door het centrum van Willemstad met een roze treintje, donderdag om 10.00 uur.",
+     "de": "Einstündige Fahrt mit einer rosa Bimmelbahn durch die Innenstadt von Willemstad, donnerstags um 10:00.",
+     "es": "Paseo de una hora por el centro de Willemstad en un trenecito rosa, los jueves a las 10:00.",
+     "pt": "Passeio de uma hora pelo centro de Willemstad em um trenzinho rosa, às quintas às 10h."
+    },
+    {
+     "nl": "Ongeveer 1 uur",
+     "en": "About 1 hours",
+     "de": "Etwa 1 Stunden",
+     "es": "Unas 1 horas",
+     "pt": "Cerca de 1 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.curacao-tours.com/tour/trolley-train-city-centre-296606"
+   ],
+   "boek": "https://www.curacao-tours.com/tour/trolley-train-city-centre-296606",
+   "boekBron": "aanbieder",
+   "annuleren": 24,
+   "duurU": 1
+  },
+  {
+   "id": "fbtt-punda-vibes-e-bike",
+   "naam": "Curaçao Tours (FBTT): Punda Vibes E-bike Experience",
+   "url": null,
+   "soort": {
+    "nl": "eilandtour",
+    "en": "island tour",
+    "de": "Inseltour",
+    "es": "tour por la isla",
+    "pt": "passeio pela ilha"
+   },
+   "plaats": "",
+   "tags": [
+    "stadstour",
+    "budget",
+    "cruise-gast"
+   ],
+   "prijs": {
+    "bedrag": 52,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon",
+     "en": "per person",
+     "de": "pro Person",
+     "es": "por persona",
+     "pt": "por pessoa"
+    },
+    "bron": "https://www.curacao-tours.com/tour/punda-vibes-e-bike-experience-326864",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Guided two-hour e-bike ride through Willemstad on Thursdays.",
+     "nl": "Begeleide e-biketocht van twee uur door Willemstad, op donderdag.",
+     "de": "Geführte zweistündige E-Bike-Tour durch Willemstad, donnerstags.",
+     "es": "Paseo guiado de dos horas en bicicleta eléctrica por Willemstad, los jueves.",
+     "pt": "Passeio guiado de duas horas de bicicleta elétrica por Willemstad, às quintas."
+    },
+    {
+     "nl": "Ongeveer 2 uur",
+     "en": "About 2 hours",
+     "de": "Etwa 2 Stunden",
+     "es": "Unas 2 horas",
+     "pt": "Cerca de 2 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://www.curacao-tours.com/tour/punda-vibes-e-bike-experience-326864"
+   ],
+   "boek": "https://www.curacao-tours.com/tour/punda-vibes-e-bike-experience-326864",
+   "boekBron": "aanbieder",
+   "annuleren": 24,
+   "duurU": 2
+  },
+  {
+   "id": "powerboat-west-coast-snorkel",
+   "naam": "Powerboat Caribbean: West Coast Snorkel Adventure (Blue Room en schildpadden)",
+   "url": null,
+   "soort": {
+    "nl": "snorkelen en duiken",
+    "en": "snorkeling and diving",
+    "de": "Schnorcheln und Tauchen",
+    "es": "snorkel y buceo",
+    "pt": "snorkel e mergulho"
+   },
+   "plaats": "",
+   "tags": [
+    "boot",
+    "snorkel",
+    "schildpadden",
+    "hele-dag"
+   ],
+   "prijs": {
+    "bedrag": 185,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per volwassene",
+     "en": "per adult",
+     "de": "pro Erwachsenem",
+     "es": "por adulto",
+     "pt": "por adulto"
+    },
+    "bron": "https://powerboat-caribbean.com/product/west-coast-snorkel-adventure/",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "en": "Six-hour speedboat trip along the west coast to snorkel the Blue Room cave and with sea turtles.",
+     "nl": "Speedboottocht van zes uur langs de westkust om te snorkelen in de Blue Room-grot en bij schildpadden.",
+     "de": "Sechsstündige Schnellboottour an der Westküste zum Schnorcheln in der Höhle Blue Room und bei Meeresschildkröten.",
+     "es": "Paseo de seis horas en lancha por la costa oeste para hacer snorkel en la cueva Blue Room y con tortugas marinas.",
+     "pt": "Passeio de seis horas de lancha pela costa oeste para snorkel na caverna Blue Room e com tartarugas-marinhas."
+    },
+    {
+     "nl": "Ongeveer 6 uur",
+     "en": "About 6 hours",
+     "de": "Etwa 6 Stunden",
+     "es": "Unas 6 horas",
+     "pt": "Cerca de 6 horas"
+    }
+   ],
+   "scores": [],
+   "voor": {},
+   "tegen": {},
+   "bronnen": [
+    "https://powerboat-caribbean.com/product/west-coast-snorkel-adventure/"
+   ],
+   "boek": "https://powerboat-caribbean.com/product/west-coast-snorkel-adventure/",
+   "boekBron": "aanbieder",
+   "duurU": 6
   }
  ],
  "tussenpartijen": [
