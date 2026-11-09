@@ -214,6 +214,7 @@ export default async function handler(req, res) {
       if (req.headers['x-telegram-bot-api-secret-token'] !== geheim) return res.status(401).send('');
       await W.telegramUpdate(leesBody(req)); return res.status(200).json({ ok: true });
     }
+    if (op === 'rapport') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); const l = await W.rapporten(q('n') || 3); res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(l.length ? l.map(x => new Date(x.t).toISOString().slice(0, 16).replace('T', ' ') + ' UTC\n' + x.tekst).join('\n\n---\n\n') : 'Nog geen rapport.'); }
     if (op === 'matchronde') { if (!beschermd(host)) return res.status(404).json({ ok: false }); return res.status(200).json({ ok: true, ...(await W.matchRonde({ forceer: true })), stand: await W.zoekStand().then(z => ({ open: z.open, per: z.per, matches: z.matches })) }); }
     if (op === 'tgzet') {
       if (!beschermd(host)) return res.status(404).send('Niet gevonden');
