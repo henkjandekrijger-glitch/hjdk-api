@@ -8,6 +8,7 @@
 //   GET  /api/wam?op=hookzet&j=    advertentie-id -> hook vastleggen (beschermde host); j = [{"b":"123","hook":"teveel"}]
 //   POST /api/wam?op=tg            Telegram-webhook (als WAM_TG_TOKEN er is); GET op=tgzet zet de webhook (beschermde host)
 //   GET  /privacy, /robots.txt, /llms.txt
+import * as PUSH from '../lib/wam-push.js';
 import { randomBytes, createHmac } from 'node:crypto';
 import * as W from '../lib/wam.js';
 import { HOOKS, hookTekst, beeld } from '../lib/wam-hooks.js';
@@ -34,14 +35,15 @@ function cookie(req, naam) { const m = String(req.headers.cookie || '').match(ne
 // wit, rustig, één smalle kolom in het midden, grote eerste vraag, keuzes als duidelijke kaarten. Drie onderdelen zijn proeven die
 // zichzelf sturen (lib/wam.js UX): opener (held = grote kop, chat = kaartje), keuzes (kaarten of pillen), invoer (vast onderin of
 // meteen onder de keuzes). De server kiest per bezoeker en zet ux-<onderdeel>-<variant> op body.
-function pagina({ start, taal, kanalen }) {
+function pagina({ start, taal, kanalen, vapid }) {
   // contactkaart: zodra Telegram of WhatsApp echt antwoordt, belooft de kaart dat je daar verder kunt praten (relatie, niet alleen een mail)
   const verder = (kanalen || []).filter(k => k === 'Telegram' || k === 'WhatsApp');
   const u = Object.assign({}, ui(taal), verder.length ? { via: { nl: 'Praat verder via ' + verder.join(' of ') + ', of laat je mail achter. Ik weet nog waar we waren.', de: 'Schreib mir weiter auf ' + verder.join(' oder ') + ' oder hinterlass deine E-Mail. Ich weiß noch, wo wir waren.' }[taal] || 'Keep talking on ' + verder.join(' or ') + ', or leave your email. I\'ll remember where we were.' } : {});
   const o = start ? start.opener : { tekst: taal === 'nl' ? 'Hoi! Ik ben WAM. Waar kan ik je mee helpen?' : 'Hi! I\'m WAM. What can I help you with?', knoppen: [] };
   const ux = (start && start.ux) || { opener: 'held', keuzes: 'kaarten', invoer: 'vast' };
   const kl = Object.entries(ux).map(([d, v]) => 'ux-' + d + '-' + v).join(' ');
-  const data = { sid: start ? start.sid : '', tok: start ? start.tok : '', taal, ui: u, kanalen, opener: o, ux };
+  u.push = { nl: 'Meld me op mijn telefoon', de: 'Benachrichtige mich' }[taal] || 'Notify me on my phone';
+  const data = { sid: start ? start.sid : '', tok: start ? start.tok : '', taal, ui: u, kanalen, opener: o, ux, vapid: vapid || '' };
   return `<!doctype html><html lang="${esc(taal)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
 <title>We Are Many: ${esc(u.sub)}</title><meta name="description" content="WAM is a free AI chat that helps you pay less, cancel subscriptions, compare deals and get things sorted, and bundles people with the same wish.">
 <meta property="og:title" content="We Are Many"><meta property="og:description" content="${esc(u.sub)}"><meta name="theme-color" content="#FFFFFF">
@@ -82,7 +84,7 @@ button{font:inherit;color:inherit;cursor:pointer}button:focus-visible,input:focu
 .c input{flex:1;min-width:0;font:inherit;font-size:16px;padding:11px 14px;border:1px solid var(--line2);border-radius:9px;background:var(--bg);color:var(--ink)}
 .c .r{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .c a,.c button{font-size:15px;font-weight:600;border-radius:9px;padding:11px 16px;border:0;text-decoration:none;text-align:center}
-.mail{background:var(--accent);color:var(--accent-ink)}.tg{background:#229ED9;color:#fff}.wa{background:#25D366;color:#06301a}.nee{background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
+.mail{background:var(--accent);color:var(--accent-ink)}.c .push{display:block;width:100%;margin:0 0 12px;padding:14px 16px;font-size:16px;font-weight:700;background:var(--accent);color:var(--accent-ink)}.tg{background:#229ED9;color:#fff}.wa{background:#25D366;color:#06301a}.nee{background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
 #f{display:flex;gap:10px;align-items:center}
 .ux-invoer-vast #f{position:fixed;left:0;right:0;bottom:0;z-index:4;background:var(--bg);border-top:1px solid var(--line);padding:12px max(16px,calc(50% - 360px)) calc(12px + env(safe-area-inset-bottom))}
 .ux-invoer-inline #f{max-width:720px;margin:0 auto;padding:0 20px 40px}
@@ -108,9 +110,11 @@ function weg(){var a=L.querySelectorAll('.k,.c');for(var i=0;i<a.length;i++)a[i]
 function knoppen(k){if(!k||!k.length)return;var d=D.createElement('div');d.className='k';k.forEach(function(t){var b=D.createElement('button');b.type='button';b.textContent=t;b.onclick=function(){zeg(t,1)};d.appendChild(b)});L.appendChild(d);onder()}
 function dots(){var d=D.createElement('div');d.className='m b dots';d.innerHTML='<i></i><i></i><i></i>';L.appendChild(d);onder();return d}
 function bewaar(){try{localStorage.setItem('wam_lopend',JSON.stringify({sid:W.sid,tok:W.tok,t:Date.now(),msgs:msgs.slice(-30)}))}catch(e){}}
-function contact(c){var d=D.createElement('div');d.className='c';var h='<p>'+W.ui.via+'</p><form><input type="email" inputmode="email" autocomplete="email" placeholder="'+W.ui.mailPh+'"><button class="mail" type="submit">'+W.ui.mailKnop+'</button></form><div class="r">';
+function b64(x){x=x.replace(/-/g,'+').replace(/_/g,'/');x+='='.repeat((4-x.length%4)%4);var r=atob(x),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return a}
+function meldMe(b){b.disabled=true;bk('contact_push_tik');navigator.serviceWorker.register('/sw.js').then(function(){return navigator.serviceWorker.ready}).then(function(reg){return reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64(W.vapid)})}).then(function(sub){post('push',{sid:W.sid,tok:W.tok,sub:sub.toJSON()},function(j){if(j&&j.ok){weg();bericht('b',j.x);msgs.push({r:'b',x:j.x});bewaar()}else{b.disabled=false}})}).catch(function(){b.disabled=false;bk('contact_push_nee')})}
+function contact(c){var d=D.createElement('div');d.className='c';var kp=('serviceWorker' in navigator)&&('PushManager' in window)&&!!W.vapid&&c.some(function(o){return o.soort==='push'});var h='<p>'+W.ui.via+'</p>'+(kp?'<button class="push" type="button">'+W.ui.push+'</button>':'')+'<form><input type="email" inputmode="email" autocomplete="email" placeholder="'+W.ui.mailPh+'"><button class="mail" type="submit">'+W.ui.mailKnop+'</button></form><div class="r">';
 c.forEach(function(o){if(o.soort==='tg')h+='<a class="tg" target="_blank" rel="noopener" href="'+o.url+'" data-e="contact_tg">'+W.ui.tg+'</a>';if(o.soort==='wa')h+='<a class="wa" target="_blank" rel="noopener" href="'+o.url+'" data-e="contact_wa">'+W.ui.wa+'</a>'});
-h+='<button class="nee" type="button">'+W.ui.nee+'</button></div>';d.innerHTML=h;L.appendChild(d);onder();
+h+='<button class="nee" type="button">'+W.ui.nee+'</button></div>';d.innerHTML=h;L.appendChild(d);onder();var pb=d.querySelector('.push');if(pb)pb.onclick=function(){meldMe(pb)};
 d.querySelector('form').onsubmit=function(e){e.preventDefault();var v=d.querySelector('input').value.trim();if(!/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(v)){d.querySelector('input').focus();return}ev('contact_mail');zeg(v,0)};
 d.querySelectorAll('a[data-e]').forEach(function(a){a.onclick=function(){bk(a.getAttribute('data-e'))}});
 d.querySelector('.nee').onclick=function(){bk('contact_nee');d.remove()}}
@@ -131,8 +135,8 @@ addEventListener('pagehide',function(){bk('weg',{wacht:bezig,typte:typte,ms:Date
 
 function privacy(taal) {
   const nl = taal === 'nl';
-  const t = nl ? ['Privacy bij We Are Many', 'WAM is een AI-chat van AdsFair B.V. (KvK 60126035, Gouda). We bewaren je gesprek en wat je ons vertelt (je wensen en de feiten die je deelt) zodat we je beter kunnen helpen en je herkennen als je terugkomt. Daarvoor zetten we één eigen cookie (wam_v). We vragen geen naam, adres of bankgegevens. Getallen die je deelt (bijvoorbeeld wat je betaalt) bewaren we zonder je naam of gesprek, alleen om anoniem te vergelijken; we tonen ze alleen als gemiddelde van minstens 5 mensen.', 'Laat je je e-mail, Telegram of WhatsApp achter, dan gebruiken we die alleen om je te sturen wat je vroeg (mail via de verzenddienst Resend), en in elk bericht stop je met één klik. Wat je typt gaat via een AI-dienst (Anthropic, via Vercel) om een antwoord te maken; zoekvragen gaan naar een zoekdienst. We verkopen je gegevens niet. Cijfers die we tonen zijn anoniem en nooit naar jou te herleiden.', 'Alles laten wissen of een vraag? Mail privacy@adsfair.xyz of zeg het gewoon in de chat.']
-    : ['Privacy at We Are Many', 'WAM is an AI chat by AdsFair B.V. (Dutch Chamber of Commerce 60126035, Gouda, the Netherlands). We store your conversation and what you tell us (your wishes and the facts you share) to help you better and to recognise you when you come back, using one first-party cookie (wam_v). We never ask for your name, address or bank details. Numbers you share (for example what you pay) are stored without your name or conversation, only to compare anonymously, and are only ever shown as averages of at least 5 people.', 'If you leave your email, Telegram or WhatsApp, we only use it to send you what you asked for (email via our mail service Resend), and every message has a one-click stop. What you type is processed by an AI service (Anthropic, via Vercel) to write a reply; search questions go to a search service. We do not sell your data. Numbers we show are anonymous and never traceable to you.', 'Want everything deleted, or have a question? Email privacy@adsfair.xyz or just say so in the chat.'];
+  const t = nl ? ['Privacy bij We Are Many', 'WAM is een AI-chat van AdsFair B.V. (KvK 60126035, Gouda). We bewaren je gesprek en wat je ons vertelt (je wensen en de feiten die je deelt) zodat we je beter kunnen helpen en je herkennen als je terugkomt. Daarvoor zetten we één eigen cookie (wam_v). We vragen geen naam, adres of bankgegevens. Getallen die je deelt (bijvoorbeeld wat je betaalt) bewaren we zonder je naam of gesprek, alleen om anoniem te vergelijken; we tonen ze alleen als gemiddelde van minstens 5 mensen.', 'Laat je je e-mail, Telegram of WhatsApp achter, dan gebruiken we die alleen om je te sturen wat je vroeg (mail via de verzenddienst Resend; voor een melding op je telefoon bewaren we alleen het meldadres dat je browser ons geeft, geen naam of nummer, en je zet het uit in je browser), en in elk bericht stop je met één klik. Wat je typt gaat via een AI-dienst (Anthropic, via Vercel) om een antwoord te maken; zoekvragen gaan naar een zoekdienst. We verkopen je gegevens niet. Cijfers die we tonen zijn anoniem en nooit naar jou te herleiden.', 'Alles laten wissen of een vraag? Mail privacy@adsfair.xyz of zeg het gewoon in de chat.']
+    : ['Privacy at We Are Many', 'WAM is an AI chat by AdsFair B.V. (Dutch Chamber of Commerce 60126035, Gouda, the Netherlands). We store your conversation and what you tell us (your wishes and the facts you share) to help you better and to recognise you when you come back, using one first-party cookie (wam_v). We never ask for your name, address or bank details. Numbers you share (for example what you pay) are stored without your name or conversation, only to compare anonymously, and are only ever shown as averages of at least 5 people.', 'If you leave your email, Telegram or WhatsApp, we only use it to send you what you asked for (email via our mail service Resend; for a notification on your phone we only store the push address your browser gives us, no name or number, and you turn it off in your browser), and every message has a one-click stop. What you type is processed by an AI service (Anthropic, via Vercel) to write a reply; search questions go to a search service. We do not sell your data. Numbers we show are anonymous and never traceable to you.', 'Want everything deleted, or have a question? Email privacy@adsfair.xyz or just say so in the chat.'];
   return '<!doctype html><html lang="' + (nl ? 'nl' : 'en') + '"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + t[0] + '</title><style>body{font:16px/1.6 -apple-system,system-ui,sans-serif;max-width:640px;margin:0 auto;padding:20px;color:#1d1d1f}a{color:#0F6E56}</style></head><body><h1>' + t[0] + '</h1><p>' + t[1] + '</p><p>' + t[2] + '</p><p>' + t[3] + '</p><p><a href="/">← WAM</a></p></body></html>';
 }
 
@@ -147,7 +151,7 @@ export default async function handler(req, res) {
       const ua = String(req.headers['user-agent'] || ''); const land = String(req.headers['x-vercel-ip-country'] || '').toUpperCase().slice(0, 2);
       const taal = W.taalVan(req.headers['accept-language'], land); const k = W.kanalen();
       res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'index, follow');
-      if (W.lijktBot(ua)) { await W.tel({ bot: 1 }); return res.status(200).send(pagina({ start: null, taal, kanalen: k })); }
+      if (W.lijktBot(ua)) { await W.tel({ bot: 1 }); return res.status(200).send(pagina({ start: null, taal, kanalen: k, vapid: '' })); }
       let vid = cookie(req, 'wam_v'); const uitPost = q('w') ? await W.vidVanLink(q('w')) : null; if (uitPost) vid = uitPost; // link uit een mail: zelfde profiel, ook op een ander toestel
       if (!/^[0-9a-f]{16}$/.test(vid)) vid = randomBytes(8).toString('hex');
       res.setHeader('set-cookie', 'wam_v=' + vid + '; Path=/; Max-Age=31536000; SameSite=Lax; Secure');
@@ -159,7 +163,7 @@ export default async function handler(req, res) {
       if (beschermd(host) && q('ux')) { const t = {}; for (const x of q('ux').split(',')) { const [d, v] = x.split(':'); if (W.UX[d] && W.UX[d].includes(v)) t[d] = v; } ctx.uxTest = t; }
       const params = { n: schoon(q('n'), /^[a-z]{2,12}$/), z: schoon(q('z'), /^[\w{}\[\]-]{1,20}$/), c: schoon(q('c'), /^[\w{}\[\]-]{1,20}$/), b: schoon(q('b'), /^[\w{}\[\]-]{1,20}$/), mmc: schoon(q('mmc'), /^[0-9a-f]{8,24}$/) };
       const start = await W.startSessie({ vid, ctx, params });
-      return res.status(200).send(pagina({ start, taal, kanalen: k }));
+      return res.status(200).send(pagina({ start, taal, kanalen: k, vapid: await PUSH.publiek().catch(() => '') }));
     }
     if (op === 'zeg') {
       // GET alleen op de beschermde host, om te testen (?sid=&tok=&x=)
@@ -167,6 +171,9 @@ export default async function handler(req, res) {
       const b = req.method === 'POST' ? leesBody(req) : { sid: q('sid'), tok: q('tok'), x: q('x'), knop: q('knop') }; const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0];
       return res.status(200).json(await W.zeg({ sid: b.sid, tok: b.tok, x: b.x, knop: b.knop, ip }));
     }
+    if (op === 'push') { const b = leesBody(req); return res.status(200).json(await W.pushIn({ sid: b.sid, tok: b.tok, sub: b.sub })); }
+    if (op === 'pushinhoud') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(await W.pushInhoud(q('e'))); }
+    if (op === 'sw') { res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('cache-control', 'no-cache'); res.setHeader('service-worker-allowed', '/'); return res.status(200).send(PUSH.SW); }
     if (op === 'ev') { const b = leesBody(req); return res.status(200).json(await W.gebeurtenis(b.sid, b.tok, String(b.e || ''), b.d || {})); }
     if (op === 'beeld') {
       const img = await beeld(q('h'), q('t') || 'en', q('v') === 'icon' ? 'icon' : 'img'); const buf = Buffer.from(await img.arrayBuffer());
