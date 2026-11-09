@@ -56,6 +56,7 @@ button{font:inherit;color:inherit;cursor:pointer}button:focus-visible,input:focu
 .eb{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;flex:none}
 .pr{margin-left:auto;font-size:13px;color:var(--muted);text-decoration:none}
+@media (max-width:440px){.eb{display:none}}
 #log{max-width:720px;margin:0 auto;padding:22px 20px 24px;display:flex;flex-direction:column}
 .ux-invoer-vast #log{padding-bottom:120px}
 .m{margin:10px 0;max-width:62ch;white-space:pre-wrap;word-wrap:break-word;animation:in .2s ease-out}
