@@ -173,6 +173,10 @@
       "schedule": "35 6 * * *"
     },
     {
+      "path": "/api/keuze-tools?tool=cur&op=touronderhoud",
+      "schedule": "23 */2 * * *"
+    },
+    {
       "path": "/api/keuze-tools?tool=cur&op=gidsgezond",
       "schedule": "5 7 * * *"
     },

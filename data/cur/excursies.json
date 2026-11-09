@@ -3413,7 +3413,8 @@
     "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html",
     "https://www.carmabi.org/blog/carmabi-news-1/shete-boka-national-park-to-open-one-hour-earlier-starting-july-1-2026-82",
     "https://www.curacaochronicle.com/post/local/carmabi-adjusts-entrance-fees-for-nature-parks-local-visitor-rates-reduced"
-   ]
+   ],
+   "site": "https://www.carmabi.org/blog/carmabi-news-1/shete-boka-national-park-to-open-one-hour-earlier-starting-july-1-2026-82"
   },
   {
    "id": "yellow-complete-island-tour",
@@ -3659,7 +3660,8 @@
    "boekBron": "tripadvisor",
    "annuleren": 24,
    "duurU": 6,
-   "ophalen": true
+   "ophalen": true,
+   "site": "https://www.yellowadventures.com/"
   },
   {
    "id": "yellow-snorkel-beach-adventure",
@@ -4164,7 +4166,8 @@
    "boekBron": "tripadvisor",
    "annuleren": 24,
    "duurU": 4,
-   "ophalen": true
+   "ophalen": true,
+   "site": "https://www.curacao-atv.com/"
   },
   {
    "id": "living-life-atv-westpoint",
@@ -4279,7 +4282,8 @@
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c61-t211-Curacao.html"
    ],
    "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d33455494-Curacao_ATV_Westpoint_beach_hopping_off_road_adventure-Curacao.html",
-   "boekBron": "tripadvisor"
+   "boekBron": "tripadvisor",
+   "site": "https://livinglifecuracao.com/"
   },
   {
    "id": "utv-buggy-expedition-west",
@@ -4638,7 +4642,8 @@
    "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d23574256-The_best_walking_tour_Willemstad-Curacao.html",
    "boekBron": "tripadvisor",
    "annuleren": 24,
-   "duurU": 1.5
+   "duurU": 1.5,
+   "site": "https://dundutours.com/"
   },
   {
    "id": "irie-city-highlights",
@@ -5341,7 +5346,8 @@
    "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d27000993-Sunset_Cruise_Party_All_Inclusive_Experience-Curacao.html",
    "boekBron": "tripadvisor",
    "annuleren": 24,
-   "duurU": 3
+   "duurU": 3,
+   "site": "https://www.allboatcharters.com/"
   },
   {
    "id": "fuik-boat-party",
@@ -5747,7 +5753,8 @@
    ],
    "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d26021502-Curacao_Clear_Kayak_Photoshoot_FREE_Videoshoot_Cocktails_Shots-Curacao.html",
    "boekBron": "tripadvisor",
-   "duurU": 0.5
+   "duurU": 0.5,
+   "site": "https://dushiviews.com/"
   },
   {
    "id": "sup-mangrove-eco-tour",
@@ -5907,7 +5914,8 @@
     "https://www.mycuracaoguide.com/fishing-charters"
    ],
    "annuleren": 24,
-   "duurU": 5
+   "duurU": 5,
+   "site": "https://fishchartercuracao.com/"
   },
   {
    "id": "bluefinn-3-in-1-snorkel",
@@ -6182,7 +6190,8 @@
    "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d34459105-2_Hour_Jet_Ski_Adventure_with_Sea_Turtles_and_Blue_Room-Curacao.html",
    "boekBron": "tripadvisor",
    "annuleren": 24,
-   "duurU": 2
+   "duurU": 2,
+   "site": "https://broskitours.com/"
   },
   {
    "id": "water-bikes-curacao",
@@ -6250,7 +6259,8 @@
    "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d27995351-Curacao_Easy_Water_Bike_Ride_with_Sea_Turtle_Viewing_Photos-Curacao.html",
    "boekBron": "tripadvisor",
    "annuleren": 24,
-   "duurU": 1
+   "duurU": 1,
+   "site": "https://waterbikescuracao.com/"
   },
   {
    "id": "clearboat-curacao",
@@ -6596,7 +6606,8 @@
    "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d15684562-Curacao_Cooking_Class-Curacao.html",
    "boekBron": "tripadvisor",
    "annuleren": 24,
-   "duurU": 4.5
+   "duurU": 4.5,
+   "site": "https://www.helmismeulders.com/"
   },
   {
    "id": "chobolobo-cocktail-workshop",
@@ -6664,7 +6675,8 @@
    "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d13886387-Chobolobo_s_Cocktail_Workshop-Curacao.html",
    "boekBron": "tripadvisor",
    "annuleren": 24,
-   "duurU": 2
+   "duurU": 2,
+   "site": "https://chobolobo.com/"
   },
   {
    "id": "curacao-activities-wow-walk",
@@ -7660,7 +7672,8 @@
    "boekBron": "viator",
    "annuleren": 24,
    "duurU": 4,
-   "ophalen": true
+   "ophalen": true,
+   "site": "https://dushiexperiences.com/"
   },
   {
    "id": "dushi-views-city-food-tour",
@@ -8064,7 +8077,8 @@
    ],
    "boek": "https://www.viator.com/tours/Curacao/Discover-Diving-in-Curacao/d725-41808P1",
    "boekBron": "viator",
-   "duurU": 4
+   "duurU": 4,
+   "site": "https://www.curious2dive.com/"
   },
   {
    "id": "coral-divers-discover-scuba",
@@ -8194,7 +8208,8 @@
    ],
    "boek": "https://www.viator.com/en-IE/tours/Curacao/Introduction-dive-with-Scubacao/d725-160050P2",
    "boekBron": "viator",
-   "duurU": 3.5
+   "duurU": 3.5,
+   "site": "https://scubacao.com/"
   },
   {
    "id": "adventure-tours-kayak-snorkel",
@@ -8314,7 +8329,8 @@
    "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d11459276-Jet_Ski_Adventure_Tour_Curacao-Curacao.html",
    "boekBron": "tripadvisor",
    "annuleren": 24,
-   "duurU": 1
+   "duurU": 1,
+   "site": "https://adventuretourscuracao.com/"
   },
   {
    "id": "sea-trek-aquajet-scooter",
@@ -8968,7 +8984,8 @@
    "voor": {},
    "tegen": {},
    "bronnen": [],
-   "duurU": 3
+   "duurU": 3,
+   "site": "https://www.maxiesailing.com/"
   },
   {
    "id": "helmi-chefs-table",
@@ -9137,7 +9154,8 @@
    "voor": {},
    "tegen": {},
    "bronnen": [],
-   "duurU": 1
+   "duurU": 1,
+   "site": "https://www.curaloefarm.com/"
   },
   {
    "id": "hofi-mango-guided-tour",
@@ -9247,7 +9265,8 @@
    "voor": {},
    "tegen": {},
    "bronnen": [],
-   "duurU": 1
+   "duurU": 1,
+   "site": "https://amazoniacuracao.com/"
   },
   {
    "id": "pocketguide-pietermaai-culinary-walk",
@@ -9624,7 +9643,8 @@
    ],
    "boek": "https://www.tripadvisor.com/Attraction_Review-g147278-d19346272-Reviews-Criadero_Babetti-Willemstad_Curacao.html",
    "boekBron": "tripadvisor",
-   "duurU": 2
+   "duurU": 2,
+   "site": "https://criaderobabetti.com/"
   },
   {
    "id": "casador-klein-curacao",
@@ -9873,7 +9893,8 @@
    "boek": "https://www.tripadvisor.com/AttractionProductReview-g147277-d32228389-1_Hour_Jet_Ski_Adventure_Along_Curacao_s_Stunning_West_Coast-Curacao.html",
    "boekBron": "tripadvisor",
    "annuleren": 24,
-   "duurU": 1
+   "duurU": 1,
+   "site": "https://broskitours.com/"
   },
   {
    "id": "fascinating-tours-cityscape",
