@@ -182,7 +182,7 @@
     },
     {
       "path": "/api/wam?op=leer",
-      "schedule": "9 * * * *"
+      "schedule": "9,39 * * * *"
     }
   ],
   "rewrites": [
