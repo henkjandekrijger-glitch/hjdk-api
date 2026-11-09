@@ -11,6 +11,7 @@
 import { randomBytes, createHmac } from 'node:crypto';
 import * as W from '../lib/wam.js';
 import { HOOKS, hookTekst, beeld } from '../lib/wam-hooks.js';
+import * as POST from '../lib/wam-post.js';
 
 const beschermd = host => /\.vercel\.app$/i.test(host);
 const isCron = req => (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
@@ -92,8 +93,8 @@ addEventListener('pagehide',function(){bk('weg',{wacht:bezig,typte:typte,ms:Date
 
 function privacy(taal) {
   const nl = taal === 'nl';
-  const t = nl ? ['Privacy bij We Are Many', 'WAM is een AI-chat van AdsFair B.V. (KvK 60126035, Gouda). We bewaren je gesprek en wat je ons vertelt (je wensen en de feiten die je deelt) zodat we je beter kunnen helpen en je herkennen als je terugkomt. Daarvoor zetten we één eigen cookie (wam_v). We vragen geen naam, adres of bankgegevens.', 'Laat je je e-mail, Telegram of WhatsApp achter, dan gebruiken we die alleen om je te laten weten wat je vroeg. Wat je typt gaat via een AI-dienst (Anthropic, via Vercel) om een antwoord te maken; zoekvragen gaan naar een zoekdienst. We verkopen je gegevens niet. Cijfers die we tonen zijn anoniem en nooit naar jou te herleiden.', 'Alles laten wissen of een vraag? Mail privacy@adsfair.xyz of zeg het gewoon in de chat.']
-    : ['Privacy at We Are Many', 'WAM is an AI chat by AdsFair B.V. (Dutch Chamber of Commerce 60126035, Gouda, the Netherlands). We store your conversation and what you tell us (your wishes and the facts you share) to help you better and to recognise you when you come back, using one first-party cookie (wam_v). We never ask for your name, address or bank details.', 'If you leave your email, Telegram or WhatsApp, we only use it to tell you what you asked for. What you type is processed by an AI service (Anthropic, via Vercel) to write a reply; search questions go to a search service. We do not sell your data. Numbers we show are anonymous and never traceable to you.', 'Want everything deleted, or have a question? Email privacy@adsfair.xyz or just say so in the chat.'];
+  const t = nl ? ['Privacy bij We Are Many', 'WAM is een AI-chat van AdsFair B.V. (KvK 60126035, Gouda). We bewaren je gesprek en wat je ons vertelt (je wensen en de feiten die je deelt) zodat we je beter kunnen helpen en je herkennen als je terugkomt. Daarvoor zetten we één eigen cookie (wam_v). We vragen geen naam, adres of bankgegevens.', 'Laat je je e-mail, Telegram of WhatsApp achter, dan gebruiken we die alleen om je te sturen wat je vroeg (mail via de verzenddienst Resend), en in elk bericht stop je met één klik. Wat je typt gaat via een AI-dienst (Anthropic, via Vercel) om een antwoord te maken; zoekvragen gaan naar een zoekdienst. We verkopen je gegevens niet. Cijfers die we tonen zijn anoniem en nooit naar jou te herleiden.', 'Alles laten wissen of een vraag? Mail privacy@adsfair.xyz of zeg het gewoon in de chat.']
+    : ['Privacy at We Are Many', 'WAM is an AI chat by AdsFair B.V. (Dutch Chamber of Commerce 60126035, Gouda, the Netherlands). We store your conversation and what you tell us (your wishes and the facts you share) to help you better and to recognise you when you come back, using one first-party cookie (wam_v). We never ask for your name, address or bank details.', 'If you leave your email, Telegram or WhatsApp, we only use it to send you what you asked for (email via our mail service Resend), and every message has a one-click stop. What you type is processed by an AI service (Anthropic, via Vercel) to write a reply; search questions go to a search service. We do not sell your data. Numbers we show are anonymous and never traceable to you.', 'Want everything deleted, or have a question? Email privacy@adsfair.xyz or just say so in the chat.'];
   return '<!doctype html><html lang="' + (nl ? 'nl' : 'en') + '"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + t[0] + '</title><style>body{font:16px/1.6 -apple-system,system-ui,sans-serif;max-width:640px;margin:0 auto;padding:20px;color:#1d1d1f}a{color:#0F6E56}</style></head><body><h1>' + t[0] + '</h1><p>' + t[1] + '</p><p>' + t[2] + '</p><p>' + t[3] + '</p><p><a href="/">← WAM</a></p></body></html>';
 }
 
@@ -109,7 +110,8 @@ export default async function handler(req, res) {
       const taal = W.taalVan(req.headers['accept-language'], land); const k = W.kanalen();
       res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'index, follow');
       if (W.lijktBot(ua)) { await W.tel({ bot: 1 }); return res.status(200).send(pagina({ start: null, taal, kanalen: k })); }
-      let vid = cookie(req, 'wam_v'); if (!/^[0-9a-f]{16}$/.test(vid)) vid = randomBytes(8).toString('hex');
+      let vid = cookie(req, 'wam_v'); const uitPost = q('w') ? await W.vidVanLink(q('w')) : null; if (uitPost) vid = uitPost; // link uit een mail: zelfde profiel, ook op een ander toestel
+      if (!/^[0-9a-f]{16}$/.test(vid)) vid = randomBytes(8).toString('hex');
       res.setHeader('set-cookie', 'wam_v=' + vid + '; Path=/; Max-Age=31536000; SameSite=Lax; Secure');
       let stad = ''; try { stad = decodeURIComponent(String(req.headers['x-vercel-ip-city'] || '')).slice(0, 40); } catch (e) {}
       const tz = String(req.headers['x-vercel-ip-timezone'] || '').slice(0, 40); const app = W.apparaat(ua);
@@ -148,6 +150,19 @@ export default async function handler(req, res) {
       const uit = []; for (const x of (Array.isArray(l) ? l : []).slice(0, 80)) { if (!HOOKS[x.hook]) { uit.push({ b: x.b, fout: 'onbekende hook' }); continue; } const t = hookTekst(x.hook, x.taal || 'en'); uit.push({ b: x.b, ok: await W.zetHook(x.b, { hook: x.hook, familie: HOOKS[x.hook].familie, tekst: t && t.titel, taal: x.taal || 'en', camp: x.c || '' }) }); }
       return res.status(200).json({ ok: true, uit });
     }
+    if (op === 'stop') { // stoplink uit een mail (GET via de link, POST via List-Unsubscribe one-click)
+      const weer = q('weer') === '1'; const p = await W.stopPost(q('w'), weer); if (req.method === 'POST') return res.status(200).json({ ok: !!p });
+      const nl = p && p.taal === 'nl', de = p && p.taal === 'de'; res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('x-robots-tag', 'noindex');
+      const t = !p ? 'Link niet (meer) geldig / link not valid.' : weer ? (nl ? 'Je krijgt weer berichten als je iets vraagt.' : de ? 'Du bekommst wieder Nachrichten, wenn du etwas anfragst.' : 'You will get messages again when you ask for something.') : (nl ? 'Klaar: je krijgt geen berichten meer van WAM.' : de ? 'Erledigt: du bekommst keine Nachrichten mehr von WAM.' : 'Done: you will not get any more messages from WAM.');
+      const terug = p && !weer ? '<p><a href="/api/wam?op=stop&w=' + encodeURIComponent(q('w')) + '&weer=1">' + (nl ? 'Toch weer aanzetten' : de ? 'Doch wieder einschalten' : 'Turn back on') + '</a></p>' : '';
+      return res.status(200).send('<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WAM</title><style>body{font:17px/1.6 -apple-system,system-ui,sans-serif;max-width:560px;margin:0 auto;padding:28px 20px;color:#1d1d1f}a{color:#0F6E56}</style></head><body><p><b>WAM</b></p><p>' + t + '</p>' + terug + '<p><a href="/">wearemany.now</a></p></body></html>');
+    }
+    if (op === 'post') { if (!isCron(req) && !beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.beloftenRonde()), stand: await W.beloftenStand() }); }
+    if (op === 'postvoorbeeld') {
+      if (!beschermd(host)) return res.status(404).send('Niet gevonden'); const r = await W.postVoorbeeld(q('vid'), q('id'));
+      if (q('html') === '1' && r.ok) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(r.html); } return res.status(200).json(r);
+    }
+    if (op === 'maildomein') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await POST.domein(q('maak') === '1')); }
     if (op === 'tg') {
       const tok = process.env.WAM_TG_TOKEN; if (!tok) return res.status(404).send('');
       const geheim = createHmac('sha256', tok).update('wam-tg').digest('hex').slice(0, 32);
