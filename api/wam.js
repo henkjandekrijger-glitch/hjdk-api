@@ -216,8 +216,16 @@ export default async function handler(req, res) {
     if (op === 'tgzet') {
       if (!beschermd(host)) return res.status(404).send('Niet gevonden'); const tok = process.env.WAM_TG_TOKEN; if (!tok) return res.status(400).json({ ok: false, fout: 'WAM_TG_TOKEN ontbreekt' });
       const geheim = createHmac('sha256', tok).update('wam-tg').digest('hex').slice(0, 32);
-      const r = await fetch('https://api.telegram.org/bot' + tok + '/setWebhook', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ url: 'https://wearemany.now/api/wam?op=tg', secret_token: geheim, allowed_updates: ['message'] }) });
-      return res.status(200).json({ ok: r.ok, telegram: await r.json().catch(() => null) });
+      const tg = (m, body) => fetch('https://api.telegram.org/bot' + tok + '/' + m, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) }).then(x => x.json()).catch(e => ({ ok: false, fout: String(e).slice(0, 80) }));
+      const r = await tg('setWebhook', { url: 'https://wearemany.now/api/wam?op=tg', secret_token: geheim, allowed_updates: ['message'] });
+      // beschrijving en korte tekst van de bot, per taal (geen sleutels, alleen publieke tekst)
+      const BES = { en: ['WAM is your own personal fixer. Ask anything: I look things up, compare prices, help you cancel or complain, and remember what you asked so I can tell you when something changes. Free.', 'Your own personal fixer. Free.'],
+        nl: ['WAM is je eigen regelaar. Vraag wat je wilt: ik zoek dingen uit, vergelijk prijzen, help je opzeggen of klagen en onthoud wat je vroeg, zodat ik je laat weten als er iets verandert. Gratis.', 'Je eigen regelaar. Gratis.'],
+        de: ['WAM ist dein eigener Kümmerer. Frag einfach: Ich recherchiere, vergleiche Preise, helfe beim Kündigen oder Beschweren und merke mir, was du gefragt hast, damit ich mich melde, wenn sich etwas ändert. Kostenlos.', 'Dein eigener Kümmerer. Kostenlos.'] };
+      const uit = { webhook: r };
+      for (const [t, [lang, kort]] of Object.entries(BES)) { const lc = t === 'en' ? {} : { language_code: t }; uit['beschrijving_' + t] = (await tg('setMyDescription', { description: lang, ...lc })).ok; uit['kort_' + t] = (await tg('setMyShortDescription', { short_description: kort, ...lc })).ok; }
+      uit.info = await tg('getWebhookInfo', {}); if (uit.info && uit.info.result) uit.info = { url: uit.info.result.url, wachtend: uit.info.result.pending_update_count, fout: uit.info.result.last_error_message || '' };
+      return res.status(200).json({ ok: !!(r && r.ok), ...uit });
     }
     return res.status(404).json({ ok: false, fout: 'onbekende op' });
   } catch (e) {
