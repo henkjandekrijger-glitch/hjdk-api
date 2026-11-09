@@ -30,32 +30,66 @@ const ui = t => UI[t] || UI.en;
 
 function cookie(req, naam) { const m = String(req.headers.cookie || '').match(new RegExp('(?:^|; )' + naam + '=([^;]+)')); return m ? decodeURIComponent(m[1]) : ''; }
 
+// Scherm in de stijl van outname.now (Henkjan 9 nov: "UX is volkomen kut ... Pak ux van outname.now en maak de hele UX ook lerend"):
+// wit, rustig, één smalle kolom in het midden, grote eerste vraag, keuzes als duidelijke kaarten. Drie onderdelen zijn proeven die
+// zichzelf sturen (lib/wam.js UX): opener (held = grote kop, chat = kaartje), keuzes (kaarten of pillen), invoer (vast onderin of
+// meteen onder de keuzes). De server kiest per bezoeker en zet ux-<onderdeel>-<variant> op body.
 function pagina({ start, taal, kanalen }) {
   const u = ui(taal); const o = start ? start.opener : { tekst: taal === 'nl' ? 'Hoi! Ik ben WAM. Waar kan ik je mee helpen?' : 'Hi! I\'m WAM. What can I help you with?', knoppen: [] };
-  const data = { sid: start ? start.sid : '', tok: start ? start.tok : '', taal, ui: u, kanalen, opener: o };
+  const ux = (start && start.ux) || { opener: 'held', keuzes: 'kaarten', invoer: 'vast' };
+  const kl = Object.entries(ux).map(([d, v]) => 'ux-' + d + '-' + v).join(' ');
+  const data = { sid: start ? start.sid : '', tok: start ? start.tok : '', taal, ui: u, kanalen, opener: o, ux };
   return `<!doctype html><html lang="${esc(taal)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
 <title>We Are Many: ${esc(u.sub)}</title><meta name="description" content="WAM is a free AI chat that helps you pay less, cancel subscriptions, compare deals and get things sorted, and bundles people with the same wish.">
-<meta property="og:title" content="We Are Many"><meta property="og:description" content="${esc(u.sub)}"><meta name="theme-color" content="#0F6E56">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F6E56'/%3E%3Ctext x='32' y='42' font-size='26' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="We Are Many"><meta property="og:description" content="${esc(u.sub)}"><meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232B47C4'/%3E%3Ctext x='32' y='42' font-size='26' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
 <style>
-*{box-sizing:border-box}html,body{margin:0;height:100%}body{font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f4f4f1;color:#1d1d1f;display:flex;flex-direction:column;height:100dvh}
-#top{flex:0 0 auto;padding:8px 14px;font-size:13px;color:#5f5e5a;display:flex;justify-content:space-between;align-items:center}#top b{color:#0F6E56;font-size:14px}#top a{color:#5f5e5a;text-decoration:none}
-#log{flex:1 1 auto;overflow-y:auto;padding:6px 12px 12px;-webkit-overflow-scrolling:touch}
-.m{max-width:86%;margin:6px 0;padding:10px 13px;border-radius:18px;white-space:pre-wrap;word-wrap:break-word;animation:in .18s ease-out}
-.b{background:#fff;border:1px solid #e6e5df;border-bottom-left-radius:6px}.u{background:#0F6E56;color:#fff;margin-left:auto;border-bottom-right-radius:6px}
-.b a{color:#0F6E56}.k{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 10px}.k button{font:inherit;font-size:15px;border:1.5px solid #0F6E56;color:#0F6E56;background:#fff;border-radius:999px;padding:8px 14px;cursor:pointer}
-.k button:active{background:#e1f5ee}.dots{display:inline-flex;gap:4px;padding:14px 16px}.dots i{width:7px;height:7px;border-radius:50%;background:#b4b2a9;animation:d 1s infinite}.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
-.c{background:#fff;border:1px solid #e6e5df;border-radius:16px;padding:12px;margin:6px 0 10px;max-width:92%}.c p{margin:0 0 8px;font-size:14px;color:#5f5e5a}.c form{display:flex;gap:8px}.c input{flex:1;font:inherit;padding:10px 12px;border:1px solid #d3d1c7;border-radius:12px;min-width:0}
-.c .r{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.c a,.c button{font:inherit;font-size:15px;border-radius:12px;padding:10px 14px;border:0;cursor:pointer;text-decoration:none;text-align:center}
-.mail{background:#0F6E56;color:#fff}.tg{background:#229ED9;color:#fff}.wa{background:#25D366;color:#fff}.nee{background:#f1efe8;color:#5f5e5a}
-#f{flex:0 0 auto;display:flex;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:#f4f4f1;border-top:1px solid #e6e5df}
-#i{flex:1;font:inherit;padding:11px 14px;border:1px solid #d3d1c7;border-radius:22px;background:#fff;min-width:0;outline:none}#i:focus{border-color:#0F6E56}
-#s{font:inherit;border:0;background:#0F6E56;color:#fff;border-radius:22px;padding:0 18px;cursor:pointer}#s:disabled{opacity:.5}
-@keyframes in{from{opacity:0;transform:translateY(4px)}to{opacity:1}}@keyframes d{0%,80%,100%{opacity:.3}40%{opacity:1}}
-</style></head><body>
-<div id="top"><span><b>We Are Many</b> · ${esc(u.sub)}</span><a href="/privacy">${esc(u.privacy)}</a></div>
-<div id="log" aria-live="polite"><div class="m b">${esc(o.tekst)}</div><div class="k" id="k0">${(o.knoppen || []).map(k => '<button type="button">' + esc(k) + '</button>').join('')}</div></div>
-<form id="f" autocomplete="off"><input id="i" enterkeyhint="send" placeholder="${esc(u.ph)}" aria-label="${esc(u.ph)}"><button id="s" type="submit">${esc(u.stuur)}</button></form>
+:root{--bg:#FFFFFF;--panel:#FFFFFF;--ink:#111113;--body:#3A3F47;--muted:#6B7280;--line:#E5E7EB;--line2:#B9BFC7;--accent:#2B47C4;--accent-ink:#FFFFFF;--soft:#EEF1FC;--ok:#1F7A4D;--warn:#B3261E;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0F1116;--panel:#161922;--ink:#F2F3F5;--body:#C9CDD3;--muted:#8B929B;--line:#272C37;--line2:#4A5260;--accent:#93A6FF;--accent-ink:#0B1022;--soft:#1B2246;--ok:#71CF9E;--warn:#F08A7E;color-scheme:dark}}
+*,*::before,*::after{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--body);font:17px/1.6 "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;cursor:pointer}button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.top-in{max-width:760px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:12px}
+.brand{font-weight:700;letter-spacing:-.02em;font-size:18px;color:var(--ink);text-decoration:none;white-space:nowrap}.brand span{color:var(--accent)}
+.eb{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;flex:none}
+.pr{margin-left:auto;font-size:13px;color:var(--muted);text-decoration:none}
+#log{max-width:720px;margin:0 auto;padding:22px 20px 24px;display:flex;flex-direction:column}
+.ux-invoer-vast #log{padding-bottom:120px}
+.m{margin:10px 0;max-width:62ch;white-space:pre-wrap;word-wrap:break-word;animation:in .2s ease-out}
+.m.b{color:var(--ink)}.m.b a{color:var(--accent)}
+.m.u{align-self:flex-end;background:var(--soft);color:var(--ink);border-radius:18px 18px 6px 18px;padding:10px 15px;max-width:82%}
+.ux-opener-held .m.eerste{font-size:clamp(27px,6.4vw,40px);line-height:1.14;letter-spacing:-.035em;font-weight:700;margin:18px 0 26px;text-wrap:balance}
+.ux-opener-chat .m.b{background:var(--panel);border:1px solid var(--line);border-radius:6px 18px 18px 18px;padding:12px 16px;box-shadow:0 5px 22px #15214b08}
+.k{margin:2px 0 14px;animation:in .2s ease-out}
+.ux-keuzes-kaarten .k{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:600px){.ux-keuzes-kaarten .k{grid-template-columns:1fr 1fr}}
+.ux-keuzes-kaarten .k button{display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;font-size:16px;font-weight:600;color:var(--ink);transition:border-color .15s,transform .15s}
+.ux-keuzes-kaarten .k button::after{content:"→";color:var(--accent);font-weight:700}
+.ux-keuzes-kaarten .k button:hover{border-color:var(--accent);transform:translateY(-1px)}.ux-keuzes-kaarten .k button:active{background:var(--soft)}
+.ux-keuzes-pillen .k{display:flex;flex-wrap:wrap;gap:10px}
+.ux-keuzes-pillen .k button{border:1.5px solid var(--accent);color:var(--accent);background:transparent;border-radius:999px;padding:9px 16px;font-size:15px;font-weight:600}
+.ux-keuzes-pillen .k button:active{background:var(--soft)}
+.dots{display:inline-flex;gap:5px;padding:12px 2px}.dots i{width:8px;height:8px;border-radius:50%;background:var(--accent);opacity:.3;animation:d 1s infinite}.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
+.c{border:1px solid var(--line);border-radius:16px;padding:16px;margin:6px 0 16px;box-shadow:0 5px 22px #15214b06;max-width:520px}
+.c p{margin:0 0 10px;font-size:14px;color:var(--muted)}.c form{display:flex;gap:8px}
+.c input{flex:1;min-width:0;font:inherit;font-size:16px;padding:11px 14px;border:1px solid var(--line2);border-radius:9px;background:var(--bg);color:var(--ink)}
+.c .r{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.c a,.c button{font-size:15px;font-weight:600;border-radius:9px;padding:11px 16px;border:0;text-decoration:none;text-align:center}
+.mail{background:var(--accent);color:var(--accent-ink)}.tg{background:#229ED9;color:#fff}.wa{background:#25D366;color:#06301a}.nee{background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
+#f{display:flex;gap:10px;align-items:center}
+.ux-invoer-vast #f{position:fixed;left:0;right:0;bottom:0;z-index:4;background:var(--bg);border-top:1px solid var(--line);padding:12px max(16px,calc(50% - 360px)) calc(12px + env(safe-area-inset-bottom))}
+.ux-invoer-inline #f{max-width:720px;margin:0 auto;padding:0 20px 40px}
+#i{flex:1;min-width:0;font:inherit;font-size:16px;padding:13px 18px;border:1px solid var(--line2);border-radius:999px;background:var(--bg);color:var(--ink);outline:none}#i:focus{border-color:var(--accent)}
+#s{flex:none;width:48px;height:48px;border:0;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center}#s:disabled{opacity:.45}
+.vt{position:absolute;left:-9999px}
+@keyframes in{from{opacity:0;transform:translateY(5px)}to{opacity:1}}@keyframes d{0%,80%,100%{opacity:.25}40%{opacity:1}}
+</style><script src="/cm.js" data-site="wam" async></script></head><body class="${esc(kl)}">
+<header class="top"><div class="top-in"><a class="brand" href="/">We Are <span>Many</span></a><span class="eb"><span class="dot" aria-hidden="true"></span>${esc(u.sub)}</span><a class="pr" href="/privacy">${esc(u.privacy)}</a></div></header>
+<main id="log" aria-live="polite"><div class="m b eerste">${esc(o.tekst)}</div><div class="k" id="k0">${(o.knoppen || []).map(k => '<button type="button">' + esc(k) + '</button>').join('')}</div></main>
+<form id="f" autocomplete="off"><label class="vt" for="i">${esc(u.ph)}</label><input id="i" enterkeyhint="send" placeholder="${esc(u.ph)}"><button id="s" type="submit" aria-label="${esc(u.stuur)}">→</button></form>
 <noscript><p style="padding:12px">WAM is a chat. Please enable JavaScript.</p></noscript>
 <script>window.WAM=${JSON.stringify(data).replace(/</g, '\\u003c')};</script>
 <script>(function(){var W=window.WAM,D=document,L=D.getElementById('log'),F=D.getElementById('f'),I=D.getElementById('i'),S=D.getElementById('s');
@@ -63,7 +97,7 @@ var bezig=0,typte=0,tBot=Date.now(),msgs=[{r:'b',x:W.opener.tekst,k:W.opener.kno
 function post(op,b,cb){try{fetch('/api/wam?op='+op,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(b),keepalive:op==='ev'}).then(function(r){return r.json()}).then(function(j){cb&&cb(j)}).catch(function(){cb&&cb(null)})}catch(e){cb&&cb(null)}}
 function bk(e,d){var b=JSON.stringify({sid:W.sid,tok:W.tok,e:e,d:d||{}});try{if(!(navigator.sendBeacon&&navigator.sendBeacon('/api/wam?op=ev',new Blob([b],{type:'text/plain'}))))post('ev',JSON.parse(b))}catch(x){}}
 function ev(e,d){if(W.sid)post('ev',{sid:W.sid,tok:W.tok,e:e,d:d||{}})}
-function onder(){L.scrollTop=L.scrollHeight}
+function onder(){try{var z=L.lastElementChild;if(z&&z.scrollIntoView)z.scrollIntoView({block:'end',behavior:'smooth'});else window.scrollTo(0,D.body.scrollHeight)}catch(e){window.scrollTo(0,D.body.scrollHeight)}}
 function link(t){var d=D.createElement('div');d.textContent=t;return d.innerHTML.replace(/(https?:\\/\\/[^\\s<)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>')}
 function bericht(r,x){var m=D.createElement('div');m.className='m '+r;if(r==='b')m.innerHTML=link(x);else m.textContent=x;L.appendChild(m);onder();return m}
 function weg(){var a=L.querySelectorAll('.k,.c');for(var i=0;i<a.length;i++)a[i].remove()}
@@ -83,7 +117,7 @@ F.onsubmit=function(e){e.preventDefault();zeg(I.value,0)};
 I.addEventListener('input',function(){if(!typte){typte=1;ev('typt')}});
 var k0=D.getElementById('k0');if(k0)k0.querySelectorAll('button').forEach(function(b){b.onclick=function(){zeg(b.textContent,1)}});
 /* lopend gesprek na herladen terugzetten (30 min) */
-try{var o=JSON.parse(localStorage.getItem('wam_lopend')||'null');if(o&&o.sid&&Date.now()-o.t<18e5&&o.msgs&&o.msgs.some(function(m){return m.r==='u'})){W.sid=o.sid;W.tok=o.tok;msgs=o.msgs;L.innerHTML='';msgs.forEach(function(m){bericht(m.r,m.x)});var lm=msgs[msgs.length-1];if(lm&&lm.r==='b')knoppen(lm.k)}}catch(e){}
+try{var o=JSON.parse(localStorage.getItem('wam_lopend')||'null');if(o&&o.sid&&Date.now()-o.t<18e5&&o.msgs&&o.msgs.some(function(m){return m.r==='u'})){W.sid=o.sid;W.tok=o.tok;msgs=o.msgs;L.innerHTML='';msgs.forEach(function(m,i){var x=bericht(m.r,m.x);if(i===0)x.className+=' eerste'});var lm=msgs[msgs.length-1];if(lm&&lm.r==='b')knoppen(lm.k)}}catch(e){}
 var dz=new Date();ev('js',{tz:(Intl.DateTimeFormat().resolvedOptions().timeZone||''),uur:dz.getHours(),scherm:screen.width+'x'+screen.height,aanraak:('ontouchstart' in window)||navigator.maxTouchPoints>0,taal:navigator.language||'',donker:matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches});
 var zt=null;function zicht(){if(D.visibilityState==='visible'&&!zt)zt=setTimeout(function(){ev('zicht1')},1000)}zicht();
 D.addEventListener('visibilitychange',function(){if(D.visibilityState==='hidden'){bk('verborgen',{wacht:bezig,typte:typte,ms:Date.now()-tBot})}else{zicht();bk('terug')}});
@@ -116,6 +150,8 @@ export default async function handler(req, res) {
       let stad = ''; try { stad = decodeURIComponent(String(req.headers['x-vercel-ip-city'] || '')).slice(0, 40); } catch (e) {}
       const tz = String(req.headers['x-vercel-ip-timezone'] || '').slice(0, 40); const app = W.apparaat(ua);
       const ctx = { test: beschermd(host) || undefined, taal: q('taal') && beschermd(host) ? q('taal') : taal, land, stad, tz, uur: W.lokaalUur(tz), os: app.os, mobiel: app.mobiel, app: app.app, asn: String(req.headers['x-vercel-ip-as-number'] || '').slice(0, 10), ref: String(req.headers.referer || '').slice(0, 120) };
+      // scherm-proef forceren om te testen, alleen op de beschermde host: ?ux=opener:chat,keuzes:pillen,invoer:inline
+      if (beschermd(host) && q('ux')) { const t = {}; for (const x of q('ux').split(',')) { const [d, v] = x.split(':'); if (W.UX[d] && W.UX[d].includes(v)) t[d] = v; } ctx.uxTest = t; }
       const params = { n: schoon(q('n'), /^[a-z]{2,12}$/), z: schoon(q('z'), /^[\w{}\[\]-]{1,20}$/), c: schoon(q('c'), /^[\w{}\[\]-]{1,20}$/), b: schoon(q('b'), /^[\w{}\[\]-]{1,20}$/), mmc: schoon(q('mmc'), /^[0-9a-f]{8,24}$/) };
       const start = await W.startSessie({ vid, ctx, params });
       return res.status(200).send(pagina({ start, taal, kanalen: k }));
@@ -149,6 +185,10 @@ export default async function handler(req, res) {
       let l = []; try { l = JSON.parse(q('j') || '[]'); } catch (e) { return res.status(400).json({ ok: false, fout: 'j is geen JSON' }); }
       const uit = []; for (const x of (Array.isArray(l) ? l : []).slice(0, 80)) { if (!HOOKS[x.hook]) { uit.push({ b: x.b, fout: 'onbekende hook' }); continue; } const t = hookTekst(x.hook, x.taal || 'en'); uit.push({ b: x.b, ok: await W.zetHook(x.b, { hook: x.hook, familie: HOOKS[x.hook].familie, tekst: t && t.titel, taal: x.taal || 'en', camp: x.c || '' }) }); }
       return res.status(200).json({ ok: true, uit });
+    }
+    if (op === 'gesprekken') {
+      if (!beschermd(host)) return res.status(404).send('Niet gevonden');
+      res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(await W.gesprekkenHtml({ dagen: q('dagen'), min: q('min') === '' ? 1 : q('min') }));
     }
     if (op === 'stop') { // stoplink uit een mail (GET via de link, POST via List-Unsubscribe one-click)
       const weer = q('weer') === '1'; const p = await W.stopPost(q('w'), weer); if (req.method === 'POST') return res.status(200).json({ ok: !!p });
