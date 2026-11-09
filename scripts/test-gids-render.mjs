@@ -21,6 +21,7 @@ for(const p of bewijs.ONDERZOEK){const {body}=await render('slug=onderzoek-'+p.i
 assert.ok((await render('slug=onderzoek-en-bronnen')).body.includes('geen onafhankelijke testorganisatie'));
 const all=(await render('slug=alle-producten')).body;assert.equal((all.match(/<tr id="product-/g)||[]).length,catalog.filter(i=>i.vr!==false).length); assert.ok(all.includes('/alle-producten'));
 const home=(await render('')).body;assert.ok(home.includes('/onderzoek-en-bronnen'));
+const leg=(await render('slug=houten-legpuzzel-volwassenen')).body;assert.ok(leg.includes('href="https://pubmed.ncbi.nlm.nih.gov/39842256/"'));assert.ok(leg.includes('Bronnen en beperkingen'));assert.ok(!leg.includes('snel mee klaar'));
 for(const id of ['vaas-verse-bloemen','tafellamp-lumen','bamboe-textiel-claims'])assert.ok(home.includes('href="/onderzoek-'+id+'"'));
 assert.ok(!home.includes('producten van onafhankelijke Europese makers'));
 const rub=(await render('rubriek=wonen')).body; const schema=[...rub.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1])['@graph']||[]).find(x=>x['@type']==='ItemList'&&x.name.startsWith('Nieuw in')); assert.equal(schema.itemListElement.length,24); assert.equal((rub.match(/class="nw-a"/g)||[]).length,24);await render('slug=nieuw-bij-kadoly');await render('slug=3d-houten-puzzel-volwassenen');
@@ -29,5 +30,6 @@ assert.ok((await render('op=llmsfull')).body.includes('Ravensburger'));
 const report=(await render('op=groei','hjdk-api-henq.vercel.app')).body;assert.ok(report.includes('noindex,nofollow'));
 assert.equal((await render('op=onderzoekstand')).body.exactModelGetest,0);
 console.log(JSON.stringify({routes:'8 onderwerpen, bronhub, home, rubriek, nieuw, bestaande gids, sitemap, llms-full, beschermd groeirapport',dekking:bewijs.dekking(catalog)},null,2));
+
 
 

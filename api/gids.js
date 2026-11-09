@@ -12,7 +12,7 @@ import { lookNieuw } from '../lib/look.js';
 import { GIDSEN, GIDS_IDS } from '../lib/gidsen-kadoly.js';
 import { berichten, HAIKU } from '../lib/ai.js';
 import { createHash } from 'node:crypto';
-import { ONDERZOEK, BRONNEN, ONDERZOEK_DAG, onderwerpDag, adviesBlok, bronLink, dekking, onderzoekHub, onderzoekPagina, onderzoekTekst } from '../lib/gids-onderzoek.js';
+import { ONDERZOEK, BRONNEN, ONDERZOEK_DAG, onderwerpDag, bronnenHtml, adviesBlok, bronLink, dekking, onderzoekHub, onderzoekPagina, onderzoekTekst } from '../lib/gids-onderzoek.js';
 import { bronScript, groeiRonde, groeiStand, groeiHtml } from '../lib/gids-groei.js';
 import * as NB from '../lib/kadoly-nieuws.js'; // aanmelding mail en meldingen (2 nov 2026)
 
@@ -49,7 +49,7 @@ function ldJson(g, items) {
   const lijst = { '@type': 'ItemList', name: g.h1, itemListElement: items.map((x, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'Product', name: x.naam, image: x.img || undefined, brand: x.merk ? { '@type': 'Brand', name: x.merk } : undefined, description: x.waarom, offers: { '@type': 'Offer', price: N(x.prijs).toFixed(2), priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: 'https://kadoly.com/product/' + x.pid, shippingDetails: { '@type': 'OfferShippingDetails', shippingRate: { '@type': 'MonetaryAmount', value: N(x.verzending).toFixed(2), currency: 'EUR' }, shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'NL' } } } } })) };
   const faq = g.faq && g.faq.length ? { '@type': 'FAQPage', mainEntity: g.faq.map(f => ({ '@type': 'Question', name: f.v, acceptedAnswer: { '@type': 'Answer', text: f.a } })) } : null;
   const kruim = { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Kadoly gids', item: HOST + '/' }, { '@type': 'ListItem', position: 2, name: g.h1, item: HOST + '/' + g.slug }] };
-  const art = { '@type': 'Article', headline: g.h1, dateModified: g.bijgewerkt, author: { '@id': HOST + '/#org' }, publisher: { '@id': HOST + '/#org' }, mainEntityOfPage: HOST + '/' + g.slug };
+  const art = { '@type': 'Article', headline: g.h1, dateModified: g.bijgewerkt, author: { '@id': HOST + '/#org' }, publisher: { '@id': HOST + '/#org' }, mainEntityOfPage: HOST + '/' + g.slug, citation:g.bronnen?.map(id => BRONNEN[id]?.url).filter(Boolean) };
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': [org, art, kruim, lijst, faq].filter(Boolean) }).replace(/</g, '\\u003c');
 }
 
@@ -251,6 +251,7 @@ ${check}
 ${(g.uitleg || []).map((b, i) => `<h2${i === 0 ? ' id="uitleg"' : ''}>${esc(b.kop)}</h2>${b.alineas.map(p => `<p>${esc(p)}</p>`).join('')}`).join('')}
 <h2 id="zo-kozen-we">Zo kozen we</h2><p>${esc(g.zoKozenWe)}</p>
 ${adviesBlok(g.keuze.map(k => cat[k.pid]).filter(Boolean))}
+${g.bronnen?.length ? `<section id="bronnen"><h2>Bronnen en beperkingen</h2><p>Externe bronnen, gecontroleerd ${esc(g.bronnenControle || g.bijgewerkt)}. Categorieonderzoek is geen producttest.</p>${bronnenHtml(g.bronnen,g.bronnenControle)}</section>` : ''}
 <h2 id="bestellen">Zo werkt een bestelling bij Kadoly</h2>${BESTELLEN}
 ${g.faq && g.faq.length ? `<h2 id="vragen">Veelgestelde vragen</h2>${g.faq.map(f => `<details class="faq"><summary>${esc(f.v)}</summary><div class="a"><p>${esc(f.a)}</p></div></details>`).join('')}` : ''}
 <p style="margin:28px 0 0"><a class="btn deel" href="${esc(delen)}" rel="nofollow noopener">Deel deze gids via WhatsApp</a></p>
@@ -421,7 +422,7 @@ async function llmsVol() {
     for (const k of g.keuze) { const i = cat[k.pid]; if (!i || i.vr === false) continue; t += '- ' + k.label + ': ' + (k.naam || i.t) + ', ' + euro(thuis(i)) + ' inclusief verzending, https://kadoly.com/product/' + k.pid + '. ' + k.waarom + (k.beperking ? ' Let op: ' + k.beperking : '') + '\n'; }
     if (g.tabel && g.tabel.length) { t += '\n### ' + (g.tabelKop || 'Welke past bij jouw situatie?') + '\n\n'; for (const r of g.tabel) t += '- ' + r.situatie + ': ' + r.advies + '\n'; }
     for (const b of (g.uitleg || [])) t += '\n### ' + b.kop + '\n\n' + b.alineas.join('\n\n') + '\n';
-    t += '\n### Zo kozen we\n\n' + g.zoKozenWe + '\n\n### Veelgestelde vragen\n\n' + (g.faq || []).map(f => '**' + f.v + '**\n' + f.a).join('\n\n') + '\n\n'; }
+    t += '\n### Zo kozen we\n\n' + g.zoKozenWe + '\n\n### Veelgestelde vragen\n\n' + (g.faq || []).map(f => '**' + f.v + '**\n' + f.a).join('\n\n') + '\n\n'; if(g.bronnen?.length)t+='### Bronnen en beperkingen\n\n'+g.bronnen.map(id=>{const b=BRONNEN[id];return '- '+b.titel+', '+b.organisatie+', '+b.datum+'. '+b.url+'. '+b.grens;}).join('\n')+'\n\n'; }
   const NF = await nieuwFeiten(); if (NF.n) t += '## Nieuw bij Kadoly (afgelopen ' + NIEUW_DAGEN + ' dagen)\n\n' + HOST + NIEUW_PAD + '\n\n' + NF.kort + '\n\n' + NF.groepen.map(([c, l]) => '- ' + naamR(c) + ': ' + l.length + ' nieuw, ' + HOST + NIEUW_PAD + '#n-' + c).join('\n') + '\n\nIn het aanbod hieronder staat bij elk nieuw product de dag waarop het in de winkel kwam.\n\n';
   const R = await rubrieken(); t += '## Het hele aanbod van Kadoly per rubriek\n\n'; // 4 nov: alles wat in de winkel staat, zodat AI-assistenten elk product kunnen noemen
   for (const r of R) { t += '### ' + r.naam + '\n\n' + HOST + '/rubriek/' + r.c + '\n\n'; for (const [sb, l] of Object.entries(r.subs).sort((a, b) => (a[0] === 'overig') - (b[0] === 'overig') || b[1].length - a[1].length)) t += '#### ' + naamS(sb) + '\n\n' + l.slice().sort((a, b) => N(b.sc) - N(a.sc)).map(i => llmRegel(i, true)).join('\n') + '\n\n'; }
@@ -641,6 +642,7 @@ export default async function handler(req, res) {
     return res.status(200).send(await gidsPagina(g));
   } catch (e) { res.setHeader('cache-control', 'no-store'); return res.status(500).send('Er ging iets mis: ' + esc(String(e && e.message || e).slice(0, 120))); }
 }
+
 
 
 
