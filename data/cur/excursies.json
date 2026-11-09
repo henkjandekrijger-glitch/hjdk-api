@@ -4291,7 +4291,8 @@
    "boekBron": "tripadvisor",
    "site": "https://livinglifecuracao.com/",
    "nietBeeld": [
-    "1b9780f47c"
+    "1b9780f47c",
+    "52aa4d8c51"
    ]
   },
   {
@@ -5768,7 +5769,8 @@
    "duurU": 0.5,
    "site": "https://dushiviews.com/",
    "nietBeeld": [
-    "10eb999f1e"
+    "10eb999f1e",
+    "3257dea531"
    ]
   },
   {
@@ -5932,6 +5934,7 @@
    "duurU": 5,
    "site": "https://fishchartercuracao.com/",
    "nietBeeld": [
+    "0358ac0f5b",
     "6e01f18a5f"
    ]
   },
@@ -6283,7 +6286,8 @@
    "duurU": 1,
    "site": "https://waterbikescuracao.com/",
    "nietBeeld": [
-    "329cfb45a9"
+    "329cfb45a9",
+    "66d8100e22"
    ]
   },
   {
@@ -6633,7 +6637,8 @@
    "duurU": 4.5,
    "site": "https://www.helmismeulders.com/",
    "nietBeeld": [
-    "79e152f597"
+    "79e152f597",
+    "87eb207309"
    ]
   },
   {
@@ -6703,7 +6708,10 @@
    "boekBron": "tripadvisor",
    "annuleren": 24,
    "duurU": 2,
-   "site": "https://chobolobo.com/"
+   "site": "https://chobolobo.com/",
+   "nietBeeld": [
+    "9c7dbae1ed"
+   ]
   },
   {
    "id": "curacao-activities-wow-walk",
@@ -8359,6 +8367,7 @@
    "duurU": 1,
    "site": "https://adventuretourscuracao.com/",
    "nietBeeld": [
+    "90c04530c1",
     "ff963b161c"
    ]
   },
