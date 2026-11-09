@@ -179,9 +179,53 @@
     {
       "path": "/api/keuze-tools?tool=cur&op=gidsbouw",
       "schedule": "45 7 * * *"
+    },
+    {
+      "path": "/api/wam?op=leer",
+      "schedule": "9 * * * *"
     }
   ],
   "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=pagina"
+    },
+    {
+      "source": "/privacy",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=privacy"
+    },
+    {
+      "source": "/robots.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=robots"
+    },
+    {
+      "source": "/llms.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=llms"
+    },
     {
       "source": "/curacao-gids",
       "destination": "/api/keuze-tools?tool=cur"
@@ -1191,6 +1235,9 @@
     },
     "api/keuze-updates.js": {
       "maxDuration": 180
+    },
+    "api/wam.js": {
+      "maxDuration": 120
     }
   },
   "redirects": [
