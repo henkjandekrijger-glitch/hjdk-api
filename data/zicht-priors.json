@@ -901,5 +901,17 @@
   "effect": "geen valse crawlalarmen, echte crawlval blijft zichtbaar",
   "moeite": 1,
   "meten": "/api/zicht?op=crawl googlebot7dMediaan"
+ },
+ {
+  "id": "crawlstop-geen-nieuwbouw",
+  "les": "Leest Googlebot een site bijna niet meer, bouw dan geen nieuwe pagina's: ze worden niet eens gevonden en vergroten alleen de stapel onbekende URL's. Steek de bouwronde in het verbeteren van bestaande pagina's tot de crawl herstelt.",
+  "kanaal": "google",
+  "bewijs": "9 nov 2026: keuzehulp.best Googlebot 2 keer in 7 dagen (gemiddeld 33 in de drie weken ervoor, 16 op 20 okt). URL-inspectie bevestigt het: laatste crawls 20 en 21 okt, 380 van 504 URL's onbekend bij Google, ook oude kernpagina's als blender en stofzuiger. Toch bouwde kzmaak nog 2 nieuwe pagina's per dag. Bingbot las in dezelfde week 113 keer, dus de site is bereikbaar.",
+  "bron": "https://hjdk-api-henq.vercel.app/api/zicht?op=crawl",
+  "datum": "2026-11-09",
+  "sterkte": 2,
+  "effect": "bouwwerk naar bestaande pagina's zolang Google niet leest",
+  "moeite": 1,
+  "meten": "proef kz-crawlstop-1109, /api/zicht?op=crawl"
  }
 ]
