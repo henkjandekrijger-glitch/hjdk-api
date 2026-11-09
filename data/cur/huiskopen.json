@@ -1,6 +1,6 @@
 {
  "id": "huiskopen",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-09",
  "onderwerp": {
   "nl": "makelaar",
   "en": "real estate agent",
@@ -380,6 +380,13 @@
      "de": "US-Franchise",
      "es": "franquicia estadounidense",
      "pt": "franquia americana"
+    },
+    {
+     "nl": "op Curaçao sinds oktober 2023",
+     "en": "on Curaçao since October 2023",
+     "de": "auf Curaçao seit Oktober 2023",
+     "es": "en Curazao desde octubre de 2023",
+     "pt": "em Curaçao desde outubro de 2023"
     }
    ],
    "scores": [
@@ -409,7 +416,8 @@
    "bronnen": [
     "https://kw-curacao.com/blog/mortgage-curacao-complete-guide-financing-your-property-purchase",
     "https://caribbeanhousehunt.com/curacao/realtors/",
-    "https://ikzoekdebestemakelaar.nl/en/kennisbank/huis-kopen-op-curacao-hoe-vind-je-een-goede-makelaar-op-curacao"
+    "https://ikzoekdebestemakelaar.nl/en/kennisbank/huis-kopen-op-curacao-hoe-vind-je-een-goede-makelaar-op-curacao",
+    "https://inman.com/2023/10/19/keller-williams-announces-launch-of-new-franchise-in-curacao"
    ]
   },
   {
@@ -489,6 +497,13 @@
      "de": "auch auf Aruba aktiv",
      "es": "también activa en Aruba",
      "pt": "também atua em Aruba"
+    },
+    {
+     "nl": "eigen kantoor op Curaçao sinds september 2025",
+     "en": "own office on Curaçao since September 2025",
+     "de": "eigenes Büro auf Curaçao seit September 2025",
+     "es": "oficina propia en Curazao desde septiembre de 2025",
+     "pt": "escritório próprio em Curaçao desde setembro de 2025"
     }
    ],
    "scores": [],
@@ -508,7 +523,8 @@
    },
    "bronnen": [
     "https://christiesrealestate.com/news/press-releases/christies-international-real-estate-expands-to-curaao-with-bold-properties",
-    "https://inman.com/2024/01/17/christies-international-real-estate-expands-into-curacao-with-affiliate"
+    "https://inman.com/2024/01/17/christies-international-real-estate-expands-into-curacao-with-affiliate",
+    "https://boldrealestatearuba.com/blog/bold-properties-curacao-office-opening"
    ]
   },
   {
