@@ -4293,7 +4293,8 @@
    "nietBeeld": [
     "1b9780f47c",
     "52aa4d8c51"
-   ]
+   ],
+   "beeldUit": true
   },
   {
    "id": "utv-buggy-expedition-west",
@@ -6639,7 +6640,8 @@
    "nietBeeld": [
     "79e152f597",
     "87eb207309"
-   ]
+   ],
+   "beeldUit": true
   },
   {
    "id": "chobolobo-cocktail-workshop",
