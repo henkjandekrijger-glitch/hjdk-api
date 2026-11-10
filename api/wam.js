@@ -197,6 +197,8 @@ export default async function handler(req, res) {
     if (op === 'ev') { const b = leesBody(req); return res.status(200).json(await W.gebeurtenis(b.sid, b.tok, String(b.e || ''), b.d || {})); }
     if (op === 'inbox') { const b = leesBody(req); return res.status(200).json(await W.inbox(b.sid, b.tok)); }
     // testen van de chat met GET, alleen op de beschermde host en alleen voor testsessies (ctx.test)
+    // nieuwe testsessie zonder HTML (alleen beschermde host): ?op=testsessie&o=<opener>&land=CA&stad=Montreal
+    if (op === 'testsessie' && beschermd(host)) { const st = await W.startSessie({ vid: randomBytes(8).toString('hex'), ctx: { test: true, taal: q('taal') || 'en', land: String(q('land') || 'US').toUpperCase().slice(0, 2), stad: String(q('stad') || '').slice(0, 40), tz: '', uur: 10, os: 'android', mobiel: true, app: '', asn: '', ref: '', openerTest: q('o') || undefined }, params: {} }); return res.status(200).json({ ok: true, sid: st && st.sid, tok: st && st.tok, opener: st && st.opener }); }
     if (op === 'zegtest' && beschermd(host)) { const ss = await W.sessie(q('sid')); if (!ss || !(ss.ctx && ss.ctx.test)) return res.status(404).json({ ok: false }); return res.status(200).json(q('inbox') ? await W.inbox(q('sid'), q('tok')) : await W.zeg({ sid: q('sid'), tok: q('tok'), x: q('x') || undefined, knop: q('knop') || undefined, ip: 'test' })); }
     if (op === 'beeld') {
       const img = await beeld(q('h'), q('t') || 'en', q('v') === 'icon' ? 'icon' : 'img'); const buf = Buffer.from(await img.arrayBuffer());
