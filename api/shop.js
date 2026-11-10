@@ -113,13 +113,17 @@ async function haalFeed() {
   try { return await kv.get('hjdk:shop:lusfeed'); } catch (e) { return null; }
 }
 async function sync() { // de shop zelf vertelt wat er te koop is, wat het kost en wat bekeken/bewaard wordt
-  const items = []; let off = 0;
-  for (let i = 0; i < 200; i++) {
+  const items = []; let off = 0, totaal = null; const t0 = Date.now();
+  // 10 nov 2026: grens van 200 naar 600 pagina's (24 per pagina, dus tot 14.400 producten): bij 200 pagina's viel alles boven 4.800 weg.
+  // Te traag of afgekapt: niets opslaan, de vorige catalogus blijft staan (anders verdwijnen producten ten onrechte).
+  for (let i = 0; i < 600; i++) {
+    if (Date.now() - t0 > 270e3) throw new Error('shop-sync te traag na ' + items.length + ' producten');
     const r = await fetch(SHOP + '/api/shop?lang=nl&offset=' + off, { headers: shopKop() });
     if (!r.ok) throw new Error('shop gaf HTTP ' + r.status);
-    const j = await r.json(); const l = j.items || []; l.forEach(x => items.push(compact(x)));
+    const j = await r.json(); const l = j.items || []; l.forEach(x => items.push(compact(x))); if (j.total != null) totaal = Number(j.total);
     if (j.next == null || !l.length) break; off = j.next;
   }
+  if (totaal && items.length < totaal * 0.9) throw new Error('shop-sync onvolledig: ' + items.length + ' van ' + totaal);
   if (items.length < 10) throw new Error('shop gaf maar ' + items.length + ' producten');
   // wat staat er al van de briefing? (voor de vinkjes op /api/shop/briefing)
   const velden = {}; for (const [k, n] of VELDEN) velden[n] = items.filter(i => i[k] !== undefined).length;

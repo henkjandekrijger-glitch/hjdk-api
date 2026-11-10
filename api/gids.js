@@ -10,6 +10,7 @@ import { gidsIndexPlan } from '../lib/gids-indexnow.js';
 import { kv } from '../lib/db.js';
 import { lookNieuw } from '../lib/look.js';
 import { GIDSEN, GIDS_IDS } from '../lib/gidsen-kadoly.js';
+import { alleVan } from '../lib/gidsen-alle.js'; // alles van een soort onder de keuze (10 nov 2026)
 import { berichten, HAIKU } from '../lib/ai.js';
 import { createHash } from 'node:crypto';
 import { ONDERZOEK, BRONNEN, ONDERZOEK_DAG, onderwerpDag, bronnenHtml, adviesBlok, bronLink, dekking, onderzoekHub, onderzoekPagina, onderzoekTekst } from '../lib/gids-onderzoek.js';
@@ -44,13 +45,14 @@ const nlDatum = d => d.toLocaleDateString('nl-NL', { timeZone: 'Europe/Amsterdam
 // teller per gids per dag in één hash (klein: de database is krap)
 async function tel(slug, soort) { try { const k = 'gk:d:' + DAG(); await kv.raw(['HINCRBY', k, slug + '|' + soort, '1']); await kv.raw(['EXPIRE', k, String(60 * 86400)]); } catch (e) {} }
 
-function ldJson(g, items) {
+function ldJson(g, items, A) {
   const org = { '@type': 'Organization', '@id': HOST + '/#org', name: 'Kadoly', url: 'https://kadoly.com' };
   const lijst = { '@type': 'ItemList', name: g.h1, itemListElement: items.map((x, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'Product', name: x.naam, image: x.img || undefined, brand: x.merk ? { '@type': 'Brand', name: x.merk } : undefined, description: x.waarom, offers: { '@type': 'Offer', price: N(x.prijs).toFixed(2), priceCurrency: 'EUR', availability: 'https://schema.org/InStock', url: 'https://kadoly.com/product/' + x.pid, shippingDetails: { '@type': 'OfferShippingDetails', shippingRate: { '@type': 'MonetaryAmount', value: N(x.verzending).toFixed(2), currency: 'EUR' }, shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'NL' } } } } })) };
   const faq = g.faq && g.faq.length ? { '@type': 'FAQPage', mainEntity: g.faq.map(f => ({ '@type': 'Question', name: f.v, acceptedAnswer: { '@type': 'Answer', text: f.a } })) } : null;
   const kruim = { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Kadoly gids', item: HOST + '/' }, { '@type': 'ListItem', position: 2, name: g.h1, item: HOST + '/' + g.slug }] };
   const art = { '@type': 'Article', headline: g.h1, dateModified: g.bijgewerkt, author: { '@id': HOST + '/#org' }, publisher: { '@id': HOST + '/#org' }, mainEntityOfPage: HOST + '/' + g.slug, citation:g.bronnen?.map(id => BRONNEN[id]?.url).filter(Boolean) };
-  return JSON.stringify({ '@context': 'https://schema.org', '@graph': [org, art, kruim, lijst, faq].filter(Boolean) }).replace(/</g, '\\u003c');
+  const alleL = A && A.n ? { '@type': 'ItemList', name: A.def.kop + ' bij Kadoly', numberOfItems: A.totaal, itemListElement: A.lijst.slice(0, 50).map((i, k) => ({ '@type': 'ListItem', position: k + 1, name: i.t, url: 'https://kadoly.com/product/' + i.id })) } : null;
+  return JSON.stringify({ '@context': 'https://schema.org', '@graph': [org, art, kruim, lijst, alleL, faq].filter(Boolean) }).replace(/</g, '\\u003c');
 }
 
 const KAD = 'html{--prim:#111827;--on-prim:#fff;--link:#2563EB;--nav:hsla(0,0%,100%,.86);--veld:rgba(15,23,42,.05);--sh:0 16px 40px -12px rgba(15,23,42,.22),0 2px 6px rgba(15,23,42,.06)}';
@@ -224,12 +226,19 @@ function baken(slug) {
 }
 const datumNl = d => { try { return new Date(d + 'T12:00:00Z').toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' }); } catch (e) { return d; } };
 const BESTELLEN = `<dl class="rows"><div class="r"><dt>Betalen</dt><dd>iDEAL, PayPal of creditcard, ook zonder account. Je koopt bij Kadoly (ADSFAIR B.V.).</dd></div><div class="r"><dt>Verzending</dt><dd>Het merk stuurt het pakket rechtstreeks naar jou, met track en trace. Je eerste bestelling wordt gratis verzonden.</dd></div><div class="r"><dt>Retour</dt><dd>14 dagen na ontvangst, met een retourlabel en het hele bedrag terug.</dd></div><div class="r"><dt>Bundelkorting</dt><dd>5% bij 2 producten, oplopend tot 20% bij 6.</dd></div></dl>`;
+// alles van deze soort uit de winkel, onder de keuze (lib/gidsen-alle.js); kliks met b=alle tellen in gk:p:<gids> en sturen de volgorde
+const alleRij = (i, g) => `<li><a class="nw-a" href="/naar/${encodeURIComponent(i.id)}?g=${encodeURIComponent(g)}&amp;b=alle" rel="nofollow">${i.img ? `<img src="${esc(i.img)}" width="64" height="64" alt="${esc(i.t)}" loading="lazy" decoding="async">` : '<span class="nw-leeg"></span>'}<span class="nw-t"><b>${esc(i.t)}</b>${i.b ? `<span>${esc(i.b)}</span>` : ''}<span><b>${euro(thuis(i))}</b> incl. verzending${N(i.lt) ? ' · in huis rond ' + esc(nlDatum(leverDatum(i.lt))) : ''}</span></span></a></li>`;
+function alleHtml(g, A) {
+  if (!A || !A.n) return '';
+  return `<section id="alle"><h2>${esc(A.def.kop)} bij Kadoly (${A.totaal})</h2><p>Naast onze keuze hierboven: ${A.totaal === 1 ? 'het andere product' : 'alle ' + A.totaal + ' andere producten'} van deze soort die Kadoly nu heeft, van ${euro(A.van)} tot ${euro(A.tot)} inclusief verzending, met de bezorgdag van vandaag. Deze hebben we niet een voor een naast elkaar gezet: lees bij het product wat de maker opgeeft en wat erbij zit.${A.totaal > A.n ? ` We tonen de ${A.n} die lezers hier het vaakst kozen, daarna van laag naar hoog in prijs; de rest staat bij <a href="/alle-producten">alle producten</a>.` : ''}</p>${A.groepen.map(gr => `<h3>${esc(gr.naam)} (${gr.items.length})</h3><ul class="nwl">${gr.items.map(i => alleRij(i, g.slug)).join('')}</ul>`).join('')}</section>`;
+}
 async function gidsPagina(g) {
   const cat = await catalogus();
   const items = g.keuze.map(k => { const i = cat[k.pid]; if (!i || i.vr === false) return null; return Object.assign({}, k, { naam: k.naam || i.t, prijs: N(i.p), verzending: i.fs ? 0 : N(i.vk), lt: N(i.lt) || 0, img: i.img || '', merk: i.b || '' }); }).filter(Boolean);
   const perPid = {}; items.forEach(x => { perPid[x.pid] = x; });
   // volgorde leert van de lezers: na 60 weergaven telt de klikkans per product (met voorkennis voor de redactievolgorde), daarvoor de redactievolgorde
   const L = await geleerd(g.slug); const vw = N(L._v);
+  const A = alleVan(g.slug, g.keuze.map(k => k.pid), cat, L, thuis);
   if (vw >= 60) { items.forEach((x, i) => { x._s = (N(L[x.pid]) + Math.max(0.2, 1.5 - i * 0.2)) / (vw + 30); }); items.sort((a, b) => b._s - a._s); }
   const top = items.reduce((m, x) => (N(L[x.pid]) > N(L[m && m.pid])) ? x : m, null); if (top && N(L[top.pid]) >= 10) top.meest = true;
   const rijen = (g.tabel || []).map(r => { const x = perPid[r.pid]; return `<div class="r"><dt>${esc(r.situatie)}</dt><dd>${esc(r.advies)}${x ? ` <a href="/naar/${encodeURIComponent(x.pid)}?g=${encodeURIComponent(g.slug)}&b=tabel" rel="nofollow">${esc(x.naam)}</a>, ${euro(x.prijs + x.verzending)}` : ''}</dd></div>`; }).join('');
@@ -239,8 +248,8 @@ async function gidsPagina(g) {
   const delen = 'https://wa.me/?text=' + encodeURIComponent(g.h1 + ' ' + HOST + '/' + g.slug);
   const ogImg = items[0] && items[0].img ? `<meta property="og:image" content="${esc(items[0].img)}"><meta name="twitter:card" content="summary_large_image">` : '';
   const andere = GIDS_IDS.filter(id => id !== g.slug).map(id => GIDSEN[id]);
-  const toc = [['keuze', 'Onze keuze'], rijen ? ['situatie', 'Welke past bij jou'] : null, g.check ? ['check', 'Snelle check'] : null, (g.uitleg || []).length ? ['uitleg', 'Waar let je op'] : null, ['bestellen', 'Bestellen'], g.faq && g.faq.length ? ['vragen', 'Vragen'] : null].filter(Boolean);
-  return kop(g.titel, g.beschrijving, '/' + g.slug, ogImg + `<script type="application/ld+json">${ldJson(g, items)}</script>`) +
+  const toc = [['keuze', 'Onze keuze'], rijen ? ['situatie', 'Welke past bij jou'] : null, g.check ? ['check', 'Snelle check'] : null, (g.uitleg || []).length ? ['uitleg', 'Waar let je op'] : null, ['bestellen', 'Bestellen'], g.faq && g.faq.length ? ['vragen', 'Vragen'] : null, A && A.n ? ['alle', A.def.kop] : null].filter(Boolean);
+  return kop(g.titel, g.beschrijving, '/' + g.slug, ogImg + `<script type="application/ld+json">${ldJson(g, items, A)}</script>` + (A && A.n ? NW_CSS : '')) +
     `<article><nav class="crumbs" aria-label="Kruimelpad"><a href="/">Kadoly gids</a> › ${esc(g.h1)}</nav><p class="kicker"><span class="live-dot"></span>${esc(g.kicker)}</p><h1>${esc(g.h1)}</h1>
 <p class="meta">Door de redactie van Kadoly · bijgewerkt <time datetime="${esc(g.bijgewerkt)}">${esc(datumNl(g.bijgewerkt))}</time> · prijs en levertijd van vandaag</p>
 <div class="answer"><p><strong>In het kort.</strong> ${esc(g.kort)}</p></div>
@@ -254,6 +263,7 @@ ${adviesBlok(g.keuze.map(k => cat[k.pid]).filter(Boolean))}
 ${g.bronnen?.length ? `<section id="bronnen"><h2>Bronnen en beperkingen</h2><p>Externe bronnen, gecontroleerd ${esc(g.bronnenControle || g.bijgewerkt)}. Categorieonderzoek is geen producttest.</p>${bronnenHtml(g.bronnen,g.bronnenControle)}</section>` : ''}
 <h2 id="bestellen">Zo werkt een bestelling bij Kadoly</h2>${BESTELLEN}
 ${g.faq && g.faq.length ? `<h2 id="vragen">Veelgestelde vragen</h2>${g.faq.map(f => `<details class="faq"><summary>${esc(f.v)}</summary><div class="a"><p>${esc(f.a)}</p></div></details>`).join('')}` : ''}
+${alleHtml(g, A)}
 <p style="margin:28px 0 0"><a class="btn deel" href="${esc(delen)}" rel="nofollow noopener">Deel deze gids via WhatsApp</a></p>
 ${andere.length ? `<h2>Andere gidsen van Kadoly</h2><div class="cards">${andere.map(a => `<a class="card" href="/${esc(a.slug)}"><span class="cat">${esc(a.kicker)}</span><h3>${esc(a.h1)}</h3><p>${esc(a.beschrijving)}</p></a>`).join('')}</div>` : ''}</article>
 ${baken(g.slug)}` + VOET(g, await armKans());
@@ -421,6 +431,7 @@ async function llmsVol() {
   for (const id of GIDS_IDS) { const g = GIDSEN[id]; t += '## ' + g.h1 + '\n\n' + HOST + '/' + id + '\n\n' + g.kort + '\n\n### Onze keuze\n\n';
     for (const k of g.keuze) { const i = cat[k.pid]; if (!i || i.vr === false) continue; t += '- ' + k.label + ': ' + (k.naam || i.t) + ', ' + euro(thuis(i)) + ' inclusief verzending, https://kadoly.com/product/' + k.pid + '. ' + k.waarom + (k.beperking ? ' Let op: ' + k.beperking : '') + '\n'; }
     if (g.tabel && g.tabel.length) { t += '\n### ' + (g.tabelKop || 'Welke past bij jouw situatie?') + '\n\n'; for (const r of g.tabel) t += '- ' + r.situatie + ': ' + r.advies + '\n'; }
+    { const A = alleVan(g.slug, g.keuze.map(k => k.pid), cat, {}, thuis); if (A && A.n) t += '\n### ' + A.def.kop + ' bij Kadoly\n\n' + A.totaal + ' producten van deze soort, van ' + euro(A.van) + ' tot ' + euro(A.tot) + ' inclusief verzending: ' + A.groepen.map(x => x.naam.toLowerCase() + ' (' + x.items.length + ')').join(', ') + '. Volledige lijst met prijs en bezorgdag: ' + HOST + '/' + g.slug + '#alle\n'; }
     for (const b of (g.uitleg || [])) t += '\n### ' + b.kop + '\n\n' + b.alineas.join('\n\n') + '\n';
     t += '\n### Zo kozen we\n\n' + g.zoKozenWe + '\n\n### Veelgestelde vragen\n\n' + (g.faq || []).map(f => '**' + f.v + '**\n' + f.a).join('\n\n') + '\n\n'; if(g.bronnen?.length)t+='### Bronnen en beperkingen\n\n'+g.bronnen.map(id=>{const b=BRONNEN[id];return '- '+b.titel+', '+b.organisatie+', '+b.datum+'. '+b.url+'. '+b.grens;}).join('\n')+'\n\n'; }
   const NF = await nieuwFeiten(); if (NF.n) t += '## Nieuw bij Kadoly (afgelopen ' + NIEUW_DAGEN + ' dagen)\n\n' + HOST + NIEUW_PAD + '\n\n' + NF.kort + '\n\n' + NF.groepen.map(([c, l]) => '- ' + naamR(c) + ': ' + l.length + ' nieuw, ' + HOST + NIEUW_PAD + '#n-' + c).join('\n') + '\n\nIn het aanbod hieronder staat bij elk nieuw product de dag waarop het in de winkel kwam.\n\n';
@@ -563,7 +574,7 @@ export default async function handler(req, res) {
       await groeiRonde(kv, items, req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN).catch(e => console.error('gids-groeimeting', String(e.message).slice(0,120)));
       const RR = await rubrieken(); const NF = await nieuwFeiten();
       let oud = null; try { oud = await kv.get('gk:indexnow'); } catch (e) {}
-      const plan = gidsIndexPlan({ host:HOST, items, gidsen:GIDS_IDS.map(id => GIDSEN[id]), onderzoek:ONDERZOEK, bronnen:BRONNEN, nieuw:NF.L, rubrieken:RR, vorig:oud, versies:{home:'koopchecks-1107',checks:'vaas,lumen,bamboe',catalogus:'1',rubrieken:'1',nieuw:'1',gidsen:'1',onderzoek:ONDERZOEK_DAG} });
+      const plan = gidsIndexPlan({ host:HOST, items, gidsen:GIDS_IDS.map(id => GIDSEN[id]), onderzoek:ONDERZOEK, bronnen:BRONNEN, nieuw:NF.L, rubrieken:RR, vorig:oud, versies:{home:'koopchecks-1107',checks:'vaas,lumen,bamboe',catalogus:'1',rubrieken:'1',nieuw:'1',gidsen:'2-alle',onderzoek:ONDERZOEK_DAG} });
       const urls = q.get('alles') === '1' ? [...new Set([...Object.keys(plan.paginas), ...plan.urls])] : plan.urls;
       if (!urls.length) return res.status(200).json({ ok:true, niets:true, gewijzigd:0 });
       let status = 0; try { const r = await fetch('https://api.indexnow.org/indexnow', { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify({ host: 'gids.kadoly.com', key: INDEXNOW_KEY, keyLocation: HOST + '/' + INDEXNOW_KEY + '.txt', urlList: urls }), signal: AbortSignal.timeout(15000) }); status = r.status; } catch (e) {}
