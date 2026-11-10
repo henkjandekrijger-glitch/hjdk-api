@@ -45,6 +45,7 @@
 //   /cm.js                              CLICKMIND in één regel (uitkomsten, mensmeter bij betaald verkeer, lerende modal)
 //   /mmm.js                             DE LERENDE MODAL (lib/modal.js): <script src="https://whichtobuy.best/mmm.js" data-site="<site>" async></script>; testen met ?mmm=<arm-id> in de pagina-URL
 //   /api/mm/modal?site=&q=&c=&v=&mob=   beslissing per paginabezoek (e-mail, andere site of niets); /api/mm/modalev?mid=&e=toon|klik|sluit|hoofd; /api/mm/modalmail (POST)
+//   /api/mm/proef?site=&c=  beslissing per bezoeker voor alle onderdelen van de proef; /api/mm/proefev (POST) zie/stap; /api/mm/proefstand?site=[&vorm=tekst]; /api/mm/proefzet?site=&aan=&ronde=1&j= (beschermd) — lib/proef.js
 //   /api/mm/modalbeheer[?site=][&j=<json>][&mail=<lijst>&formaat=csv]   instellingen, stand en adressen (beschermde host)
 //   /api/mm/zones?net=mondiad&dagen=3   oordeel per zone (zelfde vorm als rereview /api/b/zones, leesbaar voor de Mondiad-wacht)
 //   /api/mm/patronen?dagen=1            botfarms: vingerafdrukken in veel zones of netwerken
@@ -187,6 +188,15 @@ export default async function handler(req, res) {
       res.setHeader('set-cookie', 'mmrt=uit; Max-Age=31536000; Path=/; Secure; SameSite=Lax');
       const c = leesCookie(req, 'mmp'); if (/^[0-9a-f]{16}$/.test(c)) { try { await kv.set('mm:rtuit:' + c, 1, { ex: 400 * 86400 }); } catch (e) {} }
       return res.status(200).json({ ok: true, afgemeld: true });
+    }
+    if (op === 'proef' || op === 'proefev' || op === 'proefstand' || op === 'proefzet') { // Clickmind-proeven (lib/proef.js, 10 nov)
+      cors(res); res.setHeader('cache-control', 'no-store'); if (req.method === 'OPTIONS') return res.status(204).end();
+      const PF = await import('../lib/proef.js');
+      if (op === 'proef') return res.status(200).json(await PF.proefBeslis(kv, { site: q('site'), ctx: q('c') }).catch(() => ({ ok: false })));
+      if (op === 'proefev') { const b = req.method === 'POST' ? (leesJson(req.body) || {}) : Object.fromEntries(url.searchParams); return res.status(200).json(await PF.proefEv(kv, b).catch(() => ({ ok: false }))); }
+      if (op === 'proefstand') { const s = await PF.proefStand(kv, q('site') || 'kadoly'); if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(PF.proefTekst(s)); } return res.status(200).json(s); }
+      if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
+      return res.status(200).json(await PF.proefZet(kv, q('site') || 'kadoly', { aan: q('aan') == null ? null : q('aan') === '1', j: q('j') || (req.method === 'POST' ? leesJson(req.body) : null), ronde: q('ronde') === '1' }).catch(e => ({ ok: false, fout: String(e.message || e) })));
     }
     if (op === 'modal' || op === 'modalev' || op === 'modalmail' || op === 'modalgedrag') {
       cors(res); res.setHeader('cache-control', 'no-store');
@@ -700,7 +710,41 @@ W.mmModalStand=function(){return{site:site,besluit:B,getoond:getoond,stoort:stoo
 
 // CLICKMIND in één regel voor elke eigen pagina: uitkomsten (automatisch echt, actie, aanmelding bij een klik-id), de mensmeter (alleen bij
 // betaald verkeer: een zone, klik-id of mmc in de URL) en de lerende modal.  <script src="https://whichtobuy.best/cm.js" data-site="<site>" async></script>
-const CM_JS = MMU_JS + '\n(function(){try{var cs=document.currentScript,u=new URL(location.href).searchParams;window.__cmMeet=!(cs&&cs.getAttribute("data-meet")==="0")&&!!(u.get("zone")||u.get("z")||u.get("zoneid")||u.get("subid")||u.get("clickid")||u.get("mmc"))}catch(e){}})();\nif(window.__cmMeet){' + MM_JS + '}\n' + MMM_JS + '\n' + RT_JS;
+const PF_JS = String.raw`/* clickmind proef: elke versie leert (10 nov, Henkjan: "maak alles daarvan lerend") */(function(){var W=window,D=document,N=navigator;
+function q(f){try{return f()}catch(e){return null}}
+try{if(W.cmPf)return;W.cmPf=1;var P=null,h=D.documentElement;W.cmProef=function(f){return P&&P.v&&P.v[f]||'a'};if(N.webdriver===true){h.classList.remove('cm-wacht');return}
+var S=D.currentScript||q(function(){var a=D.querySelectorAll('script[src*="/cm.js"]');return a[a.length-1]}),site=S&&(S.getAttribute('data-proef')||S.getAttribute('data-modal')||S.getAttribute('data-site'));if(!site||site==='0'){h.classList.remove('cm-wacht');return}
+var O=q(function(){return new URL(S.src).origin})||'https://whichtobuy.best',LK='cmpf';
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,String(v))}catch(e){return null}}
+var ua=N.userAgent||'',ctx=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&N.maxTouchPoints>1)?'i':/Android/.test(ua)?'a':'d';
+var t0=+q(function(){return sessionStorage.getItem('cmpf0')})||0;if(!t0){t0=Date.now();q(function(){sessionStorage.setItem('cmpf0',String(t0))})}
+P=q(function(){return JSON.parse(ls(LK)||'null')});if(P&&!(P.pid&&P.v&&Date.now()-(+P.t||0)<6*864e5))P=null;
+var st=D.createElement('style');st.textContent='[data-cm-v][hidden]{display:none!important}';(D.head||h).appendChild(st);
+var zien={},gestuurd={},gestart=0,tm=0;
+function zet(){if(!P)return;var per={},els=D.querySelectorAll('[data-cm-v]');
+[].forEach.call(els,function(el){var x=String(el.getAttribute('data-cm-v')).split(':');if(x.length===2)(per[x[0]]=per[x[0]]||{})[x[1]]=1});
+for(var f in P.v)h.setAttribute('data-cm-'+f,P.v[f]);
+[].forEach.call(els,function(el){var x=String(el.getAttribute('data-cm-v')).split(':'),k=P.v[x[0]];if(x.length!==2||k==null)return;var toon=per[x[0]][k]?k:'a';el.hidden=x[1]!==toon;if(!el.hidden)zien[x[0]]=toon});
+[].forEach.call(D.querySelectorAll('[data-cm-proef]'),function(el){String(el.getAttribute('data-cm-proef')).split(/[\s,]+/).forEach(function(f){if(f&&P.v[f]!=null&&!zien[f])zien[f]=P.v[f]})});
+h.classList.remove('cm-wacht')}
+function stuur(e,x){if(!P)return;var b={site:site,pid:P.pid,d:P.d,r:P.r,e:e,c:ctx},k;for(k in x)b[k]=x[k];var body=JSON.stringify(b),u=O+'/api/mm/proefev';
+if(e==='zie'&&W.fetch){fetch(u,{method:'POST',body:body,keepalive:true,credentials:'omit'}).then(function(r){return r.json()}).then(function(j){if(j&&(j.oud||j.uit)){ls(LK,null);if(j.uit){for(var f in P.v)P.v[f]='a';zet()}}})['catch'](function(){});return}
+q(function(){if(!(N.sendBeacon&&N.sendBeacon(u,body))&&W.fetch)fetch(u,{method:'POST',body:body,keepalive:true,mode:'no-cors',credentials:'omit'})})}
+function meld(){if(!P)return;zet();var v={},n=0,f;for(f in zien)if(!gestuurd[f]){gestuurd[f]=1;v[f]=zien[f];n++}if(n)stuur('zie',{v:v,sec:Math.round((Date.now()-t0)/1000)})}
+function later(){clearTimeout(tm);tm=setTimeout(meld,250)}
+function stappen(){var pa=location.pathname.toLowerCase(),kas=/checkout|afreken|kassa|betal/.test(pa),s={},stap=function(e,x){if(s[e])return;s[e]=1;stuur(e,x||{})};
+var bet=function(){var el=D.querySelector('[data-cm-betaald]');if(el){stap('koop',{bedrag:parseFloat(String(el.getAttribute('data-cm-betaald')).replace(',','.'))||0});return 1}},nb=0;if(!bet()){var ib=setInterval(function(){if(bet()||++nb>10)clearInterval(ib)},1500)}
+D.addEventListener('click',function(e){var m=e.target&&e.target.closest&&e.target.closest('[data-cm-stap]');if(m){var x=m.getAttribute('data-cm-stap');if(/^(veld|methode|betaal)$/.test(x))stap(x)}},true);
+if(!kas)return;var vz=0,vt=D.visibilityState==='visible'?Date.now():0;D.addEventListener('visibilitychange',function(){if(D.visibilityState==='visible'){if(!vt)vt=Date.now()}else if(vt){vz+=Date.now()-vt;vt=0}});
+var it=setInterval(function(){if(vz+(vt?Date.now()-vt:0)>=20000){stap('b20');clearInterval(it)}},1000);
+D.addEventListener('focusin',function(e){var t=e.target;if(t&&/^(INPUT|SELECT|TEXTAREA)$/.test(t.tagName)&&!/radio|checkbox|hidden|submit|button/.test(t.type||''))stap('veld')},true);
+D.addEventListener('change',function(e){var t=e.target;if(t&&(t.type==='radio'||t.tagName==='SELECT')){var n=((t.name||'')+' '+(t.value||'')+' '+(t.id||'')).toLowerCase();if(/pay|betaal|method|ideal|wero|paypal|card|kaart|klarna|bancontact|apple|google/.test(n))stap('methode')}},true);
+D.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a,button,[role=button],input[type=submit],label,[data-method],[class*=pay-opt],[class*=method]');if(!a)return;var t=((a.innerText||a.value||'')+' '+(a.id||'')+' '+String(a.className||'')+' '+(a.getAttribute('data-method')||'')).toLowerCase();if(/ideal|wero|paypal|creditcard|betaalpas|klarna|bancontact|apple pay|google pay|andere betaal/.test(t)&&!/betalen\b/.test(t))stap('methode');if(a.tagName!=='LABEL'&&/betalen|pay now|bestelling plaatsen|place order/.test(t)&&!/snel afrekenen/.test(t))stap('betaal')},true);
+W.addEventListener('blur',function(){var f=D.activeElement;if(f&&f.tagName==='IFRAME'){var n=((f.src||'')+' '+(f.name||'')+' '+(f.title||'')).toLowerCase();if(/paypal/.test(n))stap('betaal');else if(/stripe|klarna/.test(n))stap('methode')}})}
+function start(){if(gestart)return;gestart=1;zet();var klaar=function(){meld();q(function(){D.dispatchEvent(new CustomEvent('cm:proef',{detail:P.v}))});if(W.MutationObserver){var mo=new MutationObserver(later);mo.observe(D.body||h,{childList:true,subtree:true});setTimeout(function(){mo.disconnect()},10000)}};if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',klaar);else klaar();stappen()}
+if(P)start();else if(W.fetch){fetch(O+'/api/mm/proef?site='+encodeURIComponent(site)+'&c='+ctx,{credentials:'omit'}).then(function(r){return r.json()}).then(function(j){if(j&&j.ok&&j.aan&&j.pid){P={pid:j.pid,d:j.d,r:j.r,v:j.v,t:Date.now()};ls(LK,JSON.stringify(P));start()}else h.classList.remove('cm-wacht')})['catch'](function(){h.classList.remove('cm-wacht')})}
+}catch(e){q(function(){document.documentElement.classList.remove('cm-wacht')})}})();`;
+const CM_JS = MMU_JS + '\n(function(){try{var cs=document.currentScript,u=new URL(location.href).searchParams;window.__cmMeet=!(cs&&cs.getAttribute("data-meet")==="0")&&!!(u.get("zone")||u.get("z")||u.get("zoneid")||u.get("subid")||u.get("clickid")||u.get("mmc"))}catch(e){}})();\nif(window.__cmMeet){' + MM_JS + '}\n' + MMM_JS + '\n' + RT_JS + '\n' + PF_JS;
 
 // ---- status bovenaan het overzicht: draait alles, en wat wordt per klik (nog) niet gemeten ----
 async function statusBlok({ e, leer, inst, st }) {
