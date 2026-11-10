@@ -196,6 +196,8 @@ export default async function handler(req, res) {
     if (op === 'sw') { res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('cache-control', 'no-cache'); res.setHeader('service-worker-allowed', '/'); return res.status(200).send(PUSH.SW); }
     if (op === 'ev') { const b = leesBody(req); return res.status(200).json(await W.gebeurtenis(b.sid, b.tok, String(b.e || ''), b.d || {})); }
     if (op === 'inbox') { const b = leesBody(req); return res.status(200).json(await W.inbox(b.sid, b.tok)); }
+    // testen van de chat met GET, alleen op de beschermde host en alleen voor testsessies (ctx.test)
+    if (op === 'zegtest' && beschermd(host)) { const ss = await W.sessie(q('sid')); if (!ss || !(ss.ctx && ss.ctx.test)) return res.status(404).json({ ok: false }); return res.status(200).json(q('inbox') ? await W.inbox(q('sid'), q('tok')) : await W.zeg({ sid: q('sid'), tok: q('tok'), x: q('x') || undefined, knop: q('knop') || undefined, ip: 'test' })); }
     if (op === 'beeld') {
       const img = await beeld(q('h'), q('t') || 'en', q('v') === 'icon' ? 'icon' : 'img'); const buf = Buffer.from(await img.arrayBuffer());
       res.setHeader('content-type', 'image/png'); res.setHeader('cache-control', 'public, max-age=86400, s-maxage=604800'); return res.status(200).send(buf);
