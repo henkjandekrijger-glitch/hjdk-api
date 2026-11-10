@@ -74,7 +74,6 @@ button{font:inherit;color:inherit;cursor:pointer}button:focus-visible,input:focu
 .brand{font-weight:700;letter-spacing:-.02em;font-size:18px;color:var(--ink);text-decoration:none;white-space:nowrap}.brand span{color:var(--accent)}
 .eb{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:8px;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;flex:none}
-.pr{margin-left:auto;font-size:13px;color:var(--muted);text-decoration:none}
 @media (max-width:440px){.eb{display:none}}
 #log{max-width:720px;margin:0 auto;padding:22px 20px 24px;display:flex;flex-direction:column}
 .ux-invoer-vast #log{padding-bottom:120px}
