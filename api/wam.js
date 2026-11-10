@@ -284,6 +284,7 @@ export default async function handler(req, res) {
       return res.status(200).json(await W.mailIn(m, id));
     }
     if (op === 'mailontvang') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await POST.ontvangAan('https://wearemany.now/api/wam?op=mailin')); }
+    if (op === 'mailproef') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.mailProef(q('code') || '')); }
     if (op === 'detailmail') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.detailMails({ nu: q('nu') === '1' })); }
     if (op === 'maildomein') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await POST.domein(q('maak') === '1')); }
     if (op === 'tg') {
