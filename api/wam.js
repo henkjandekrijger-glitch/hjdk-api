@@ -287,6 +287,7 @@ export default async function handler(req, res) {
       return res.status(200).json(await W.mailIn(m, id));
     }
     if (op === 'mailontvang') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await POST.ontvangAan('https://wearemany.now/api/wam?op=mailin')); }
+    if (op === 'waprobe') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); const WA = await import('../lib/wam-wa.js'); return res.status(200).json(await WA.waProbe()); }
     if (op === 'stadstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.stadStand(q('land') ? String(q('land')).toUpperCase() : '')); }
     if (op === 'herkomst') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.herkomst(Number(q('n')) || 40)); }
     if (op === 'mailproef') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.mailProef(q('code') || '')); }
