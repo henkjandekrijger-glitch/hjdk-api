@@ -6,6 +6,7 @@
 //   GET  /api/wam?op=leer          leerronde (cron, elk uur) ; ?forceer=1 op de beschermde host
 //   GET  /api/wam?op=stand         eigenaarspagina (alleen op *.vercel.app, achter Vercel-inlog)
 //   GET  /api/wam?op=hookzet&j=    advertentie-id -> hook vastleggen (beschermde host); j = [{"b":"123","hook":"teveel"}]
+//   POST /api/wam?op=wareg|wain|wauit  WhatsApp-koppeling (sleutel van de koppeling, trust on first use); GET op=wastand (beschermde host)
 //   POST /api/wam?op=tg            Telegram-webhook (als WAM_TG_TOKEN er is); GET op=tgzet zet de webhook (beschermde host)
 //   GET  /privacy, /robots.txt, /llms.txt
 import * as PUSH from '../lib/wam-push.js';
@@ -287,7 +288,13 @@ export default async function handler(req, res) {
       return res.status(200).json(await W.mailIn(m, id));
     }
     if (op === 'mailontvang') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await POST.ontvangAan('https://wearemany.now/api/wam?op=mailin')); }
-    if (op === 'waprobe') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); const WA = await import('../lib/wam-wa.js'); return res.status(200).json(await WA.waProbe()); }
+    // WhatsApp-koppeling (repo whatsappp-mcp, src/wam.js): aanmelden, binnenkomende berichten, wachtrij ophalen. Alles met de sleutel van de koppeling.
+    if (op === 'wareg' || op === 'wain' || op === 'wauit') {
+      if (req.method !== 'POST') return res.status(405).end(); const b = leesBody(req) || {};
+      const r = op === 'wareg' ? await W.waReg(b) : op === 'wain' ? await W.waIn(b) : await W.waUit(b);
+      return res.status(r.fout === 'sleutel' ? 401 : 200).json(r);
+    }
+    if (op === 'wastand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.waStand()); }
     if (op === 'stadstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.stadStand(q('land') ? String(q('land')).toUpperCase() : '')); }
     if (op === 'herkomst') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.herkomst(Number(q('n')) || 40)); }
     if (op === 'mailproef') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.mailProef(q('code') || '')); }
