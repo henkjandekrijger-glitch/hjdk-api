@@ -550,6 +550,13 @@ export default async function handler(req, res) {
       if (q.get('f') === 'json') return res.status(200).json(stand);
       return res.status(200).send(kop('Organische groei | Kadoly gids', 'Beheer van metingen en inhoud.', '/', '<meta name="robots" content="noindex,nofollow">') + groeiHtml(stand) + '</main></body></html>');
     }
+    if (op === 'vraagkansen') { // Henkjan 10 nov 2026: onderwerpen die ChatGPT naar boven haalt en die in de winkel komen. Zoekvraag (Demand Radar) naast aanbod en gidsen. Cron 00:20 UTC met vers=1.
+      const { vraagKansen } = await import('../lib/kadoly-vraag.js');
+      const r = await vraagKansen({ vers: q.get('vers') === '1', catItems: Object.values(await catalogus()) });
+      res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
+      if (q.get('kort') === '1' && r.ok) return res.status(200).json({ ...r, kansen: r.kansen.slice(0, 15).map(x => ({ id: x.id, naam: x.naam, actie: x.actie, zoekenPerMaand: x.zoekenPerMaand, piekmaand: x.piekmaand, aanbod: x.aanbod, gidsen: x.gidsen, vragen: x.vragen.slice(0, 4).map(v => v.k + ' (' + v.perMaand + ')') })), weinig: undefined });
+      return res.status(200).json(r);
+    }
     if (op === 'onderzoekstand') { const m = await kv.get('gk:groei:laatste').catch(() => null); res.setHeader('cache-control', 'no-store'); return res.status(200).json({ ok: true, ...dekking(Object.values(await catalogus())), meetbaarheid: { dag: m?.dag || null, google: m?.google?.status || 'nog-niet-gemeten', googleDagen: m?.google?.dagen?.length || 0, googleBlokkade: m?.google?.reden || null, ai: m?.ai?.status || 'nog-niet-gemeten', aiGeslaagd: m?.ai?.geslaagd || 0, aiBlokkade: m?.ai?.fouten?.[0] || null } }); }
     if (op === 'indexnow') { // dagelijks: groeimeting zonder betaalde AI-aanroepen, daarna gewijzigde URLs aanmelden
       const items = Object.values(await catalogus());
