@@ -913,5 +913,17 @@
   "effect": "bouwwerk naar bestaande pagina's zolang Google niet leest",
   "moeite": 1,
   "meten": "proef kz-crawlstop-1109, /api/zicht?op=crawl"
+ },
+ {
+  "id": "geen-tweede-pagina-voor-zelfde-zoekvraag",
+  "les": "Komt een zoekvraag al binnen op een bestaande pagina (positie 4 tot 20), maak dan geen nieuwe pagina met hetzelfde kernwoord maar verbeter die bestaande pagina: twee eigen pagina's op dezelfde vraag verdelen de signalen en ogen als dunne herhaling.",
+  "kanaal": "google",
+  "bewijs": "10 nov 2026: keuzehulp.best had strijkplank, strijkplank-kleine-ruimte en (9 nov nieuw) strijkplank-afmetingen-kiezen, terwijl de vragen 'afmetingen strijkplank' en 'strijkplank kleine ruimte' al op /strijkplank stonden (positie 15,8 en 11). Het plan van 10 nov had nog strijkplank-tafelmodel, sapcentrifuge (vraag 'sapcentrifuge of slow juicer' staat op /slowjuicer, positie 19,8), heggenschaar-elektrisch (/heggenschaar op 7,7) en leeslamp-bed. Proef kz-geen-dubbel-zoekvraag-1110.",
+  "bron": "dagcontrole",
+  "datum": "2026-11-10",
+  "sterkte": 2,
+  "effect": "minder dubbele pagina's, signalen op één pagina",
+  "moeite": 1,
+  "meten": "proef kz-geen-dubbel-zoekvraag-1110, /api/kzmaak?op=kort (dubbelGeweerd)"
  }
 ]

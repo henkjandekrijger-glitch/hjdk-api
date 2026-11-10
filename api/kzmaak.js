@@ -279,6 +279,12 @@ async function maakPlan(d, extraUitsluiten) {
     if (!slug || have.has(slug) || RESERVED.has(slug) || plan.some(x => x.slug === slug)) return;
     plan.push({ slug, term: String(p.term || slug.replace(/-/g, ' ')).slice(0, 60), cat: CATS.includes(p.cat) ? p.cat : (start.find(s => s.slug === slug) || {}).cat || 'Wonen', waarom: String(p.waarom || '').slice(0, 200), bron: String(p.bron || '').slice(0, 30) });
   });
+  // geen tweede pagina voor een zoekvraag die al op een bestaande pagina binnenkomt (strijkplank, strijkplank-kleine-ruimte en strijkplank-afmetingen-kiezen streden om dezelfde vragen): zoekvraag-onderwerpen waarvan het kernwoord al een eigen pagina of zoekkans heeft vallen af (proef kz-geen-dubbel-zoekvraag-1110)
+  try { const STOP = new Set(['kiezen', 'kopen', 'beste', 'welke', 'goede', 'voor', 'met', 'en', 'of', 'de', 'het', 'een']); const kansen = gsc.kansen || []; const weg = [];
+    for (let i = plan.length - 1; i >= 0; i--) { const p = plan[i]; if (p.bron !== 'search-console') continue; const kern = p.slug.split('-').filter(w => w.length >= 4 && !STOP.has(w))[0]; if (!kern) continue;
+      const k = kansen.find(x => x.slug === kern || String(x.q || '').toLowerCase().split(/[^a-z0-9]+/).includes(kern)); const thuis = have.has(kern) ? kern : k ? k.slug : null;
+      if (thuis) { weg.push(p.slug + ' -> ' + thuis); plan.splice(i, 1); } }
+    if (weg.length) await kv.set('hjdk:kz:maak:dubbel', { dag: d, weg }).catch(() => {}); } catch (e) {}
   start.forEach(s => { if (plan.length < Math.max(8, PER_DAG() * 2) && !plan.some(x => x.slug === s.slug)) plan.push(Object.assign({ bron: 'startlijst' }, s)); }); // vangnet
   return { lijst: plan, ververs: plan.ververs || [] };
 }
@@ -513,7 +519,7 @@ export default async function handler(req, res) {
     }
     if (op === 'signalen') { if (!isCron && !isToken) return res.status(401).json({ error: 'alleen cron of token' }); const s = await signalen(); return res.status(200).json({ ok: true, dag: s.dag, metingen: s.metingen, weer: s.weer, nieuws: (s.nieuws || []).length, stijgers: s.stijgers.slice(0, 10), ms: s.ms }); }
     if (op === 'kort') { const d = DAY(); const plan = (await kv.get(K.plan(d))) || {}; const have = new Set((await bestaande()).map(b => b.slug));
-      return res.status(200).json({ ok: true, dag: d, klaar: (plan.klaar || []).map(x => (x.slug || x) + ' (' + (x.bron || '') + ')'), mislukt: (plan.mislukt || []).slice(-8).map(m => m.slug + ': ' + String(m.waarom || '').slice(0, 60)), open: (plan.lijst || []).filter(x => !have.has(x.slug) && !(plan.mislukt || []).some(m => m.slug === x.slug)).slice(0, 12).map(x => x.slug + ' (' + x.bron + ')'), totaal: have.size, extraVandaag: Number(await kv.get('c:kzmaak-extra-' + d).catch(() => 0)) || 0 }); }
+      return res.status(200).json({ ok: true, dag: d, klaar: (plan.klaar || []).map(x => (x.slug || x) + ' (' + (x.bron || '') + ')'), mislukt: (plan.mislukt || []).slice(-8).map(m => m.slug + ': ' + String(m.waarom || '').slice(0, 60)), open: (plan.lijst || []).filter(x => !have.has(x.slug) && !(plan.mislukt || []).some(m => m.slug === x.slug)).slice(0, 12).map(x => x.slug + ' (' + x.bron + ')'), totaal: have.size, extraVandaag: Number(await kv.get('c:kzmaak-extra-' + d).catch(() => 0)) || 0, dubbelGeweerd: (await kv.get('hjdk:kz:maak:dubbel').catch(() => null)) || null }); }
     if (op === 'speer') { // speerpunt nu verdiepen (openbaar, hooguit 1x per week per pagina)
       const sp = ((await kv.get('hjdk:kz:speerpunt')) || {}); const lijst = sp.speer && sp.speer.length ? sp.speer : ['printer']; const slug = url.searchParams.get('slug') || lijst[0];
       if (!lijst.includes(slug)) return res.status(400).json({ ok: false, fout: 'geen speerpunt', speerpunten: lijst });
