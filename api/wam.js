@@ -275,6 +275,16 @@ export default async function handler(req, res) {
       if (!beschermd(host)) return res.status(404).send('Niet gevonden'); const r = await W.postVoorbeeld(q('vid'), q('id'));
       if (q('html') === '1' && r.ok) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(r.html); } return res.status(200).json(r);
     }
+    if (op === 'mailin') { // Resend-webhook email.received: antwoorden op WAM-mails (Henkjan 10 nov: "hij kan gewoon reply sturen, die vang je op")
+      if (req.method !== 'POST') return res.status(405).end(); const b = leesBody(req) || {}; const d = b.data || {};
+      if (b.type && b.type !== 'email.received') return res.status(200).json({ ok: true, overgeslagen: b.type });
+      const aan = [].concat(d.to || []).join(',').toLowerCase(); if (aan && !aan.includes('wearemany.now')) return res.status(200).json({ ok: true, nietVoorWam: true });
+      const id = String(d.email_id || d.id || '').replace(/[^a-z0-9-]/gi, '').slice(0, 60); if (!id) return res.status(400).json({ ok: false });
+      const m = await POST.ontvangen(id); if (!m) return res.status(200).json({ ok: false, waarom: 'ophalen mislukt' });
+      return res.status(200).json(await W.mailIn(m, id));
+    }
+    if (op === 'mailontvang') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await POST.ontvangAan('https://wearemany.now/api/wam?op=mailin')); }
+    if (op === 'detailmail') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.detailMails({ nu: q('nu') === '1' })); }
     if (op === 'maildomein') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await POST.domein(q('maak') === '1')); }
     if (op === 'tg') {
       const tok = process.env.WAM_TG_TOKEN; if (!tok) return res.status(404).send('');

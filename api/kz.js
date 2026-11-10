@@ -855,6 +855,7 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
       const r = await fetch('https://api.resend.com/emails/receiving/' + id, { headers: H }); const m = await r.json().catch(() => ({}));
       if (!r.ok) return res.status(200).json({ ok: false, why: 'ophalen ' + r.status + ' ' + String(m.message || '').slice(0, 100) });
       const from = String(m.from || d.from || ''); const to = [].concat(m.to || d.to || []).join(', '); const subject = String(m.subject || d.subject || '(geen onderwerp)');
+      if (/wearemany\.now/i.test(to)) { const W = await import('../lib/wam.js'); return res.status(200).json(Object.assign({ wam: true }, await W.mailIn(m, id))); } // WAM vangt zijn eigen antwoorden op
       const attachments = []; try { const ar = await fetch('https://api.resend.com/emails/receiving/' + id + '/attachments', { headers: H }); const aj = await ar.json().catch(() => ({})); let total = 0;
         for (const a of (aj.data || aj.attachments || [])) { const u = a.download_url || a.url; if (!u || total > 8e6) continue; const f = await fetch(u); if (!f.ok) continue; const buf = Buffer.from(await f.arrayBuffer()); total += buf.length; attachments.push({ filename: a.filename || a.name || 'bijlage', content: buf.toString('base64') }); } } catch (e) {}
       const fwd = process.env.KZ_FORWARD_TO || SITE.forward || 'henkjandekrijger@gmail.com';
