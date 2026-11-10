@@ -174,9 +174,9 @@ export default async function handler(req, res) {
       let vid = cookie(req, 'wam_v'); const uitPost = q('w') ? await W.vidVanLink(q('w')) : null; if (uitPost) vid = uitPost; // link uit een mail: zelfde profiel, ook op een ander toestel
       if (!/^[0-9a-f]{16}$/.test(vid)) vid = randomBytes(8).toString('hex');
       res.setHeader('set-cookie', 'wam_v=' + vid + '; Path=/; Max-Age=31536000; SameSite=Lax; Secure');
-      let stad = ''; try { stad = decodeURIComponent(String(req.headers['x-vercel-ip-city'] || '')).slice(0, 40); } catch (e) {}
+      let stad = ''; try { stad = decodeURIComponent(String(req.headers['x-vercel-ip-city'] || '')).slice(0, 40); } catch (e) {} if (q('stad') && beschermd(host)) stad = String(q('stad')).slice(0, 40);
       const tz = String(req.headers['x-vercel-ip-timezone'] || '').slice(0, 40); const app = W.apparaat(ua);
-      const ctx = { test: beschermd(host) || undefined, taal: q('taal') && beschermd(host) ? q('taal') : taal, land, stad, tz, uur: W.lokaalUur(tz), os: app.os, mobiel: app.mobiel, app: app.app, asn: String(req.headers['x-vercel-ip-as-number'] || '').slice(0, 10), ref: String(req.headers.referer || '').slice(0, 120) };
+      const ctx = { test: beschermd(host) || undefined, taal: q('taal') && beschermd(host) ? q('taal') : taal, land: q('land') && beschermd(host) ? String(q('land')).toUpperCase().slice(0, 2) : land, stad, tz, uur: W.lokaalUur(tz), os: app.os, mobiel: app.mobiel, app: app.app, asn: String(req.headers['x-vercel-ip-as-number'] || '').slice(0, 10), ref: String(req.headers.referer || '').slice(0, 120) };
       // scherm-proef forceren om te testen, alleen op de beschermde host: ?ux=opener:chat,keuzes:pillen,invoer:inline
       if (beschermd(host) && q('o')) ctx.openerTest = q('o');
       if (beschermd(host) && q('ux')) { const t = {}; for (const x of q('ux').split(',')) { const [d, v] = x.split(':'); if (W.UX[d] && W.UX[d].includes(v)) t[d] = v; } ctx.uxTest = t; }
