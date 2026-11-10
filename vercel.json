@@ -215,6 +215,16 @@
       "destination": "/api/wam?op=privacy"
     },
     {
+      "source": "/terms",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=terms"
+    },
+    {
       "source": "/sw.js",
       "has": [
         {
