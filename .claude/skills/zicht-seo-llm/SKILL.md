@@ -49,6 +49,12 @@ Henkjan 9 nov 2026: "Doe goed onderzoek met demand radar waar mensen naar zoeken
 - Nieuw thema: één regel in `THEMA` in repo demand_radar, api/zoekvraag.js (regex op de zoekterm en de markten met taal). De data wordt per thema hooguit één keer per 7 dagen gekocht (DataForSEO, hooguit $0,60), daarna komt alles uit de opslag; roep het dus gerust aan, maar nooit in een lus met steeds nieuwe thema's.
 - Werkwijze: (1) leg de onderwerpen met het meeste volume naast de eigen pagina's (sitemap); (2) een onderwerp met veel volume en geen eigen pagina = de eerstvolgende pagina, in de taal van de markt waar het volume zit; (3) een onderwerp met een pagina maar zonder de zoekterm in titel of H1 = titel herschrijven (zoekterm voorop); (4) de grootste vraagtermen (hoe, wat, wanneer, is) worden FAQ op de pagina die erover gaat; (5) meld elke toepassing als proef in zicht.json (metric gsc, controle = vergelijkbare pagina's zonder wijziging); (6) na 7 dagen opnieuw ophalen en kijken wat stijgt.
 - Ook voor nieuwe projecten: draai het vóór de bouw, samen met de gatscan hieronder. Volume zonder pagina is vraag die nog niemand van jou kan krijgen.
+- Lessen uit de eerste ronde (curacao.day, 10 nov 2026, 6 markten, 700 termen per markt):
+  - Kijk naar de maandreeks (`m`, 12 maanden), niet alleen naar het laatste volume. Een piek in één maand (WK-wedstrijd: 5 miljoen in juni) is een gebeurtenis; reken met de laagste recente maanden als vaste vraag.
+  - De grootste vragen zijn vaak geen reisvragen: waar ligt de plaats ('where is curacao' 18-27k per maand in de VS, 'onde fica curaçao' 15-33k in Brazilië), sport ('curacao voetbal' 90-246k in NL de laatste maanden) en een product met de naam van de plaats ('blue curacao', 90k per maand in de VS, het hele jaar). Maak daar eerlijke antwoordpagina's voor die naar de plaats terugleiden (de echte likeur wordt op het eiland gemaakt, de stokerij is te bezoeken).
+  - Sport en nieuws alleen met uitslagen uit een bron met datum (Wikipedia-groepspagina, bond), nooit uit het geheugen; zet de datum van controle erbij.
+  - De onderwerpgroepen in /api/zoekvraag zijn een grove indeling op woorden ('costa rica vs curaçao' viel onder geld door 'cost'): lees de toptermen per groep zelf na voordat je een gat kiest.
+  - Het eindpunt kost geld binnen de gedeelde dagrem van de radar ($1,50 per dag). Krijg je 503 'daily data budget reached', probeer dan één keer na 00:00 UTC opnieuw, nooit in een lus.
 
 ## Persoonsmerken en mediapieken (taniakross.media en dergelijke)
 
