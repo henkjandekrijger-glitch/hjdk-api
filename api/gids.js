@@ -481,7 +481,7 @@ async function nieuwsOp(op, req, res, q, host, ua) {
     return res.status(200).json(await NB.ronde({ droog: q.get('droog') === '1', test: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(test) ? test : '', mailNu: beschermdHost(host) && q.get('mailnu') === '1' })); }
   if (op === 'nbnieuws') { if (!beschermdHost(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await NB.nieuwsZet(q)); }
   if (op === 'nbstand') return res.status(200).json(await NB.stand(beschermdHost(host)));
-  if (op === 'nbdomeinweg') { if (!beschermdHost(host) || q.get('zeker') !== '1') return res.status(404).send('Niet gevonden'); return res.status(200).json(await NB.domeinWeg(q.get('naam'))); } // 6 nov: plek maken bij Resend, alleen op Henkjans woord
+  if (op === 'nbdomeinweg') { if (!beschermdHost(host) || q.get('zeker') !== '1') return res.status(404).send('Niet gevonden'); return res.status(200).json(await NB.domeinWeg(q.get('naam'), { ookGeverifieerd: q.get('geverifieerd') === '1' })); } // 6 nov: plek maken bij Resend, alleen op Henkjans woord
   if (op === 'nbdomein') { if (!beschermdHost(host)) return res.status(404).send('Niet gevonden'); const d = await NB.domein(q.get('maak') === '1'); MAILK_AT = 0; return res.status(200).json(d); }
   if (op === 'nbbericht') return res.status(200).json(await NB.bericht(await leesBody(req)));
   if (op === 'nbpush') { if (req.method !== 'POST') return res.status(200).json({ vapid: await NB.vapidPub() }); if (!vanHier() || isBot(ua)) return res.status(403).json({ ok: false }); const b = await leesBody(req); return res.status(200).json(await NB.pushAan({ ...b, waar: waar(b) })); }
