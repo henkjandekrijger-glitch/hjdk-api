@@ -286,6 +286,36 @@
       "name": "Ondernemersplein: beroepsaansprakelijkheid",
       "url": "https://ondernemersplein.overheid.nl/bedrijfsvoering/verzekeringen/verzekering-beroepsaansprakelijkheid/",
       "reviewedAt": "2026-11-10"
+    },
+    "allianz-auto-risk": {
+      "id": "allianz-auto-risk",
+      "name": "Allianz Direct: eigen risico",
+      "url": "https://www.allianzdirect.nl/klantenservice/autoverzekering/eigen-risico/",
+      "reviewedAt": "2026-11-10"
+    },
+    "allianz-auto-05": {
+      "id": "allianz-auto-05",
+      "name": "Allianz Direct: productvoorwaarden 05, juni 2026",
+      "url": "https://www.allianzdirect.nl/dam/documents/motor/dncar202606/voorwaarden_05.pdf",
+      "reviewedAt": "2026-11-10"
+    },
+    "allianz-auto-artikel": {
+      "id": "allianz-auto-artikel",
+      "name": "Allianz Direct: toelichting eigen risico",
+      "url": "https://www.allianzdirect.nl/autoverzekering/eigen-risico-autoverzekering/",
+      "reviewedAt": "2026-11-10"
+    },
+    "ohra-auto-risk": {
+      "id": "ohra-auto-risk",
+      "name": "OHRA: eigen risico en ruitschade",
+      "url": "https://www.ohra.nl/autoverzekering/schade/eigen-risico",
+      "reviewedAt": "2026-11-10"
+    },
+    "cb-auto-risk": {
+      "id": "cb-auto-risk",
+      "name": "Centraal Beheer: eigen risico auto",
+      "url": "https://www.centraalbeheer.nl/verzekeringen/autoverzekering/eigen-risico",
+      "reviewedAt": "2026-11-10"
     }
   },
   "policies": [
@@ -632,10 +662,14 @@
       "year": null,
       "premium": null,
       "coverage": "Aansprakelijkheid voor schade met de auto aan anderen.",
-      "watch": "Eigen autoschade wordt niet door alleen WA gedekt. Controleer schadevrije jaren, reparatiesturing en gebruik.",
-      "excess": "Per gebeurtenis en herstelkeuze; vraag de exacte bedragen op.",
+      "watch": "Eigen autoschade wordt niet door alleen WA gedekt. Controleer schadevrije jaren, reparatiesturing en gebruik. De twee officiële uitlegpagina’s verschillen over eigen risico bij niet-eigen schuld; laat de toepasselijke polisregels bevestigen.",
+      "excess": "Volgens de FAQ standaard €0; eigen autoschade valt niet onder alleen WA.",
       "limit": "Vergelijk dagwaarde, aanschaf-/nieuwwaarde en duur van waarderegelingen.",
-      "variant": true
+      "variant": true,
+      "detailSources": [
+        "allianz-auto-risk",
+        "allianz-auto-05"
+      ]
     },
     {
       "id": "allianz-direct-beperkt-casco",
@@ -647,10 +681,14 @@
       "year": null,
       "premium": null,
       "coverage": "Naast WA een beperkte cascodekking; vergelijk onder meer brand, diefstal, ruit en storm.",
-      "watch": "Zelf veroorzaakte aanrijdingsschade is geen standaard beperkt-cascodekking. Controleer schadevrije jaren, reparatiesturing en gebruik.",
-      "excess": "Per gebeurtenis en herstelkeuze; vraag de exacte bedragen op.",
+      "watch": "Zelf veroorzaakte aanrijdingsschade is geen standaard beperkt-cascodekking. Controleer schadevrije jaren, reparatiesturing en gebruik. De twee officiële uitlegpagina’s verschillen over eigen risico bij niet-eigen schuld; laat de toepasselijke polisregels bevestigen.",
+      "excess": "FAQ noemt €0; model05 noemt bij niet-aangesloten herstel €250 voor ruitreparatie of €500 bij ruitvervanging/blikschade. Vrije reparatiekeuze kan andere regels geven.",
       "limit": "Vergelijk dagwaarde, aanschaf-/nieuwwaarde en duur van waarderegelingen.",
-      "variant": true
+      "variant": true,
+      "detailSources": [
+        "allianz-auto-risk",
+        "allianz-auto-05"
+      ]
     },
     {
       "id": "allianz-direct-all-risk",
@@ -662,10 +700,14 @@
       "year": null,
       "premium": null,
       "coverage": "Naast WA een volledige cascodekking; vergelijk schade aan de eigen auto door een aanrijding.",
-      "watch": "Allrisk betekent niet dat iedere oorzaak of ieder gebruik verzekerd is. Controleer schadevrije jaren, reparatiesturing en gebruik.",
-      "excess": "Per gebeurtenis en herstelkeuze; vraag de exacte bedragen op.",
+      "watch": "Allrisk betekent niet dat iedere oorzaak of ieder gebruik verzekerd is. Controleer schadevrije jaren, reparatiesturing en gebruik. De twee officiële uitlegpagina’s verschillen over eigen risico bij niet-eigen schuld; laat de toepasselijke polisregels bevestigen.",
+      "excess": "Keuze €0, €250, €500 of €1.000; herstel buiten het partnernetwerk kan een extra eigen bijdrage geven. Lees de toepasselijke versie.",
       "limit": "Vergelijk dagwaarde, aanschaf-/nieuwwaarde en duur van waarderegelingen.",
-      "variant": true
+      "variant": true,
+      "detailSources": [
+        "allianz-auto-risk",
+        "allianz-auto-05"
+      ]
     },
     {
       "id": "ohra-wa",
@@ -678,9 +720,12 @@
       "premium": null,
       "coverage": "Aansprakelijkheid voor schade met de auto aan anderen.",
       "watch": "Eigen autoschade wordt niet door alleen WA gedekt. Controleer schadevrije jaren, reparatiesturing en gebruik.",
-      "excess": "Per gebeurtenis en herstelkeuze; vraag de exacte bedragen op.",
+      "excess": "WA: geen eigen risico voor eigen autoschade, want die is niet gedekt.",
       "limit": "Vergelijk dagwaarde, aanschaf-/nieuwwaarde en duur van waarderegelingen.",
-      "variant": true
+      "variant": true,
+      "detailSources": [
+        "ohra-auto-risk"
+      ]
     },
     {
       "id": "ohra-wa-plus",
@@ -693,9 +738,12 @@
       "premium": null,
       "coverage": "Naast WA een beperkte cascodekking; vergelijk onder meer brand, diefstal, ruit en storm.",
       "watch": "Zelf veroorzaakte aanrijdingsschade is geen standaard beperkt-cascodekking. Controleer schadevrije jaren, reparatiesturing en gebruik.",
-      "excess": "Per gebeurtenis en herstelkeuze; vraag de exacte bedragen op.",
+      "excess": "Keuze €0, €150, €300 of €450. Ruitreparatie bij partner €0; ruitvervanging bij partner de helft van gekozen eigen risico. Herstelkeuze kan aanvullende gevolgen hebben.",
       "limit": "Vergelijk dagwaarde, aanschaf-/nieuwwaarde en duur van waarderegelingen.",
-      "variant": true
+      "variant": true,
+      "detailSources": [
+        "ohra-auto-risk"
+      ]
     },
     {
       "id": "ohra-all-risk",
@@ -708,9 +756,12 @@
       "premium": null,
       "coverage": "Naast WA een volledige cascodekking; vergelijk schade aan de eigen auto door een aanrijding.",
       "watch": "Allrisk betekent niet dat iedere oorzaak of ieder gebruik verzekerd is. Controleer schadevrije jaren, reparatiesturing en gebruik.",
-      "excess": "Per gebeurtenis en herstelkeuze; vraag de exacte bedragen op.",
+      "excess": "Keuze €0, €150, €300 of €450. Ruitreparatie bij partner €0; ruitvervanging bij partner de helft van gekozen eigen risico. Herstelkeuze kan aanvullende gevolgen hebben.",
       "limit": "Vergelijk dagwaarde, aanschaf-/nieuwwaarde en duur van waarderegelingen.",
-      "variant": true
+      "variant": true,
+      "detailSources": [
+        "ohra-auto-risk"
+      ]
     },
     {
       "id": "centraal-beheer-wa",
@@ -723,9 +774,12 @@
       "premium": null,
       "coverage": "Aansprakelijkheid voor schade met de auto aan anderen.",
       "watch": "Eigen autoschade wordt niet door alleen WA gedekt. Controleer schadevrije jaren, reparatiesturing en gebruik.",
-      "excess": "Per gebeurtenis en herstelkeuze; vraag de exacte bedragen op.",
+      "excess": "Geen gekozen casco-eigen-risico voor alleen WA.",
       "limit": "Vergelijk dagwaarde, aanschaf-/nieuwwaarde en duur van waarderegelingen.",
-      "variant": true
+      "variant": true,
+      "detailSources": [
+        "cb-auto-risk"
+      ]
     },
     {
       "id": "centraal-beheer-wa-beperkt-casco",
@@ -738,9 +792,12 @@
       "premium": null,
       "coverage": "Naast WA een beperkte cascodekking; vergelijk onder meer brand, diefstal, ruit en storm.",
       "watch": "Zelf veroorzaakte aanrijdingsschade is geen standaard beperkt-cascodekking. Controleer schadevrije jaren, reparatiesturing en gebruik.",
-      "excess": "Per gebeurtenis en herstelkeuze; vraag de exacte bedragen op.",
+      "excess": "De productpagina noemt keuze €0, €150 of €300. Controleer daarnaast voorwaarden voor ruit en herstel buiten het netwerk op je offerte en polisblad.",
       "limit": "Vergelijk dagwaarde, aanschaf-/nieuwwaarde en duur van waarderegelingen.",
-      "variant": true
+      "variant": true,
+      "detailSources": [
+        "cb-auto-risk"
+      ]
     },
     {
       "id": "centraal-beheer-all-risk",
@@ -753,9 +810,12 @@
       "premium": null,
       "coverage": "Naast WA een volledige cascodekking; vergelijk schade aan de eigen auto door een aanrijding.",
       "watch": "Allrisk betekent niet dat iedere oorzaak of ieder gebruik verzekerd is. Controleer schadevrije jaren, reparatiesturing en gebruik.",
-      "excess": "Per gebeurtenis en herstelkeuze; vraag de exacte bedragen op.",
+      "excess": "De productpagina noemt keuze €0, €150 of €300. Controleer daarnaast voorwaarden voor ruit en herstel buiten het netwerk op je offerte en polisblad.",
       "limit": "Vergelijk dagwaarde, aanschaf-/nieuwwaarde en duur van waarderegelingen.",
-      "variant": true
+      "variant": true,
+      "detailSources": [
+        "cb-auto-risk"
+      ]
     },
     {
       "id": "centraal-beheer-inboedelverzekering",
