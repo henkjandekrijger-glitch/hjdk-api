@@ -35,7 +35,7 @@ function cookie(req, naam) { const m = String(req.headers.cookie || '').match(ne
 // wit, rustig, één smalle kolom in het midden, grote eerste vraag, keuzes als duidelijke kaarten. Drie onderdelen zijn proeven die
 // zichzelf sturen (lib/wam.js UX): opener (held = grote kop, chat = kaartje), keuzes (kaarten of pillen), invoer (vast onderin of
 // meteen onder de keuzes). De server kiest per bezoeker en zet ux-<onderdeel>-<variant> op body.
-function pagina({ start, taal, kanalen, vapid, w, bord}) {
+function pagina({ start, taal, kanalen, vapid, w, bord, erger }) {
   // contactkaart: zodra Telegram of WhatsApp echt antwoordt, belooft de kaart dat je daar verder kunt praten (relatie, niet alleen een mail)
   const verder = (kanalen || []).filter(k => k === 'Telegram' || k === 'WhatsApp');
   const u = Object.assign({}, ui(taal), verder.length ? { via: { nl: 'Praat verder via ' + verder.join(' of ') + ', of laat je mail achter. Ik weet nog waar we waren.', de: 'Schreib mir weiter auf ' + verder.join(' oder ') + ' oder hinterlass deine E-Mail. Ich weiß noch, wo wir waren.' }[taal] || 'Keep talking on ' + verder.join(' or ') + ', or leave your email. I\'ll remember where we were.' } : {});
@@ -43,7 +43,7 @@ function pagina({ start, taal, kanalen, vapid, w, bord}) {
   const ux = (start && start.ux) || { opener: 'held', keuzes: 'kaarten', invoer: 'vast' };
   const kl = Object.entries(ux).map(([d, v]) => 'ux-' + d + '-' + v).join(' ');
   // kop lerend (Henkjan 10 nov: "Fixer niet maar matchmaker, connection"): drie varianten, Thompson in wam:ux (onderdeel kop)
-  const KOP = { match: { en: 'your matchmaker for anything', nl: 'jouw matchmaker voor alles', de: 'dein Matchmaker für alles' }, connect: { en: 'we connect who needs with who offers', nl: 'we verbinden wie zoekt met wie biedt', de: 'wir verbinden, wer sucht, mit wer bietet' }, many: { en: 'one chat, hundreds of people', nl: 'één chat, honderden mensen', de: 'ein Chat, Hunderte Leute' } };
+  const KOP = { match: { en: 'your matchmaker for anything', nl: 'jouw matchmaker voor alles', de: 'dein Matchmaker für alles' }, connect: { en: 'we connect who needs with who offers', nl: 'we verbinden wie zoekt met wie biedt', de: 'wir verbinden, wer sucht, mit wer bietet' }, commons: { en: 'a commons: put in anything you offer or need', nl: 'een commons: zet erin wat je biedt of zoekt', de: 'eine Allmende für alles, was du bietest oder suchst' }, many: { en: 'one chat, hundreds of people', nl: 'één chat, honderden mensen', de: 'ein Chat, Hunderte Leute' } };
   if (KOP[ux.kop]) u.sub = KOP[ux.kop][taal] || KOP[ux.kop].en;
   u.uitslag = { nl: '{n} antwoorden tot nu toe', de: '{n} Antworten bisher' }[taal] || '{n} answers so far';
   u.terms = { nl: 'Voorwaarden', de: 'Bedingungen' }[taal] || 'Terms'; u.contact = { nl: 'Contact', de: 'Kontakt' }[taal] || 'Contact';
@@ -110,7 +110,7 @@ button{font:inherit;color:inherit;cursor:pointer}button:focus-visible,input:focu
 @keyframes in{from{opacity:0;transform:translateY(5px)}to{opacity:1}}@keyframes d{0%,80%,100%{opacity:.25}40%{opacity:1}}
 </style><script src="/cm.js" data-site="wam" async></script></head><body class="${esc(kl)}">
 <header class="top"><div class="top-in"><a class="brand" href="/" id="logo">We Are <span>Many</span></a><span class="eb"><span class="dot" aria-hidden="true"></span>${esc(u.sub)}</span></div></header>
-<main id="log" aria-live="polite"><div class="m b eerste">${esc(o.tekst)}</div><div class="k" id="k0">${(o.knoppen || []).map(k => '<button type="button">' + esc(k) + '</button>').join('')}</div>${bord ? '<div class="bord" id="bord"><div class="bt"><i aria-hidden="true"></i>' + esc(bord.titel) + (bord.vandaag ? '<span> · ' + esc(bord.vandaag) + '</span>' : '') + '</div><div class="bcs">' + bord.chips.map(c => '<button type="button" class="bc" data-k="' + esc(c.knop) + '"><b>' + c.n + '</b> ' + esc(c.lab) + '</button>').join('') + '</div></div>' : ''}</main>
+<main id="log" aria-live="polite"><div class="m b eerste">${esc(o.tekst)}</div><div class="k" id="k0">${(o.knoppen || []).map(k => '<button type="button">' + esc(k) + '</button>').join('')}</div>${bord ? '<div class="bord" id="bord"><div class="bt"><i aria-hidden="true"></i>' + esc(bord.titel) + (bord.vandaag ? '<span> · ' + esc(bord.vandaag) + '</span>' : '') + '</div><div class="bcs">' + bord.chips.map(c => '<button type="button" class="bc" data-k="' + esc(c.knop) + '"><b>' + c.n + '</b> ' + esc(c.lab) + '</button>').join('') + '</div></div>' : ''}${erger ? '<div class="bord erg" id="erger"><div class="bt">' + esc(erger.titel) + '</div><div class="bcs">' + erger.chips.map(c => '<button type="button" class="bc" data-k="' + esc(c.knop) + '">' + esc(c.lab) + ' <b>' + c.p + '%</b></button>').join('') + '<button type="button" class="bc" data-k="' + esc(erger.eigen) + '">' + esc(erger.eigen) + '</button></div></div>' : ''}</main>
 <form id="f" autocomplete="off"><label class="vt" for="i">${esc(u.ph)}</label><input id="i" enterkeyhint="send" placeholder="${esc(u.ph)}"><button id="s" type="submit" aria-label="${esc(u.stuur)}">→</button></form>
 <footer class="ft">© We Are Many · <a href="/privacy">${esc(u.privacy)}</a> · <a href="/terms">${esc(u.terms)}</a> · <a href="#" id="ct">${esc(u.contact)}</a></footer>
 <noscript><p style="padding:12px">WAM is a chat. Please enable JavaScript.</p></noscript>
@@ -153,6 +153,7 @@ var k0=D.getElementById('k0');if(k0)k0.querySelectorAll('button').forEach(functi
 var lg=D.getElementById('logo');if(lg)lg.onclick=function(e){e.preventDefault();bk('logo_tik');try{window.scrollTo({top:0,behavior:'smooth'})}catch(x){window.scrollTo(0,0)}};
 var ct=D.getElementById('ct');if(ct)ct.onclick=function(e){e.preventDefault();I.value=W.ui.contactPre;I.focus();try{I.setSelectionRange(I.value.length,I.value.length)}catch(x){}F.scrollIntoView({block:'center'})};
 var bo=D.getElementById('bord');if(bo)bo.querySelectorAll('.bc').forEach(function(b){b.onclick=function(){bk('bord_tik');zeg(b.getAttribute('data-k'),1)}});
+var eg=D.getElementById('erger');if(eg)eg.querySelectorAll('.bc').forEach(function(b){b.onclick=function(){bk('erger_tik');zeg(b.getAttribute('data-k'),1)}});
 /* lopend gesprek na herladen terugzetten (30 min) */
 try{var o=JSON.parse(localStorage.getItem('wam_lopend')||'null');if(o&&o.sid&&Date.now()-o.t<18e5&&o.msgs&&o.msgs.some(function(m){return m.r==='u'})){W.sid=o.sid;W.tok=o.tok;msgs=o.msgs;L.innerHTML='';msgs.forEach(function(m,i){var x=bericht(m.r,m.x);if(i===0)x.className+=' eerste'});var lm=msgs[msgs.length-1];if(lm&&lm.r==='b')knoppen(lm.k)}}catch(e){}
 var dz=new Date();ev('js',{tz:(Intl.DateTimeFormat().resolvedOptions().timeZone||''),uur:dz.getHours(),scherm:screen.width+'x'+screen.height,aanraak:('ontouchstart' in window)||navigator.maxTouchPoints>0,taal:navigator.language||'',donker:matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches});
@@ -213,7 +214,8 @@ export default async function handler(req, res) {
       const start = await W.startSessie({ vid, ctx, params });
       if (uitPost && q('van') === 'bewaar') await W.tel({ bewaar_terug: 1 }).catch(() => {});
       const bord = start && start.ux && start.ux.bord === 'aan' ? await W.bordVoor(ctx.land, ctx.taal).catch(() => null) : null;
-      return res.status(200).send(pagina({ start, taal, kanalen: k, vapid: await PUSH.publiek().catch(() => ''), w: await W.linkTok(vid).catch(() => ''), bord }));
+      const erger = start && start.ux && start.ux.erger === 'aan' ? await W.ergerVoor(ctx.land, ctx.taal).catch(() => null) : null;
+      return res.status(200).send(pagina({ start, taal, kanalen: k, vapid: await PUSH.publiek().catch(() => ''), w: await W.linkTok(vid).catch(() => ''), bord, erger }));
     }
     if (op === 'zeg') {
       // GET alleen op de beschermde host, om te testen (?sid=&tok=&x=)
@@ -285,6 +287,7 @@ export default async function handler(req, res) {
       return res.status(200).json(await W.mailIn(m, id));
     }
     if (op === 'mailontvang') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await POST.ontvangAan('https://wearemany.now/api/wam?op=mailin')); }
+    if (op === 'stadstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.stadStand(q('land') ? String(q('land')).toUpperCase() : '')); }
     if (op === 'herkomst') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.herkomst(Number(q('n')) || 40)); }
     if (op === 'mailproef') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.mailProef(q('code') || '')); }
     if (op === 'detailmail') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.detailMails({ nu: q('nu') === '1' })); }
