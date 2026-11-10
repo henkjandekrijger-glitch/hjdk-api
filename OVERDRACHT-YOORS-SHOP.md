@@ -18,34 +18,51 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - **Strategie van de dag** (Henkjan 19 okt: "Ik ga alle prijzen vandaag nog naar kostprijs brengen" en "En we kiezen strategieen iedere dag. Bijv iets heel goedkoops en dan een bundel laten maken die alles compenseert. Vooraf bundels samenstellen."): `auto` (standaard) kiest `kostprijs` zodra de helft van de catalogus geen 50 cent marge meer heeft; dan geen margefilter, wel 'niet duurder dan elders all-in'. Vastzetten: `/api/shop/kies?strategie=marge|kostprijs|auto` via de beschermde host. Volgende stap (voorstel): vooraf samengestelde bundels per merk (een keer verzending) als strategie 'lokker + bundel'; vraagt een bundellink in de shop.
 - **Slots**: eigen plafond SHOP-LUS 35 per dag (Henkjan: "Ik heb meer ruimte deze maand 100 slots").
 
-## Doel (Henkjan)
-- Direct op verkoop testen: elke advertentieklik gaat via Clickmind in één keer naar de productpagina op yoo.rs. Geen keuzehulpen meer.
-- Eén product per campagne. Producten kiezen met Demand Radar (`https://demandradar-ivory.vercel.app/api/demand?view=products&cc=NL`) plus onze eigen tractie.
-- Meer verkeer op producten die tractie tonen.
-- De lus sluiten met marge: per product een maximum aan advertentiekosten, dat meebeweegt met de prijs.
+## Stand nu (10 nov 2026, 13:00 UTC)
+- **Netwerk:** alleen PropellerAds. MGID uit sinds 6 nov (propellerads-mcp `lib/budget.ts` SHOP_MGID_UIT=true; Henkjan: "geloof ik niet meer in"). Mondiad uit. BOOST ZONES 12093795 uit.
+- **10 testcampagnes vandaag**, allemaal nooit eerder getest, gekozen op Demand Radar NL, elk 8 advertenties, **bod 0,12** (Henkjan 12:38 UTC "ver dubbel verkeer nu"; in de code staat DAGBOD 2026-11-10 nog op 0,06, uurritme houdt 0,12 als basis):
+  - Kerst: 12124038 Gouden Decoratieve Kerstboom, 12124042 Vintage Kerstboom Ornamenten (9), 12124053 Metalen Kerststal, 12124052 Roze Gouden Disco Bal, 12124054 Kerstornament voor de Liefste Mama.
+  - Sinterklaas: 12124063 3D Puzzel Eend Spaarpot, 12124199 Schoenzetmat XL, 12124200 Welkom Sint & Piet muurcirkel, 12124201 Kleine Prins wensbrievenbus, 12124204 Harry Potter Herbologie-bouwset.
+  - Vandaag uitgezet: 12124040 Kerstboomrok, 12124066 Geurkaars, 12124069 Kerstlepels, 12124072 Kerstman-mobiel (Henkjan: "Teveel kerst halveer"), 12124048 dubbele Kerststal.
+- **Remarketing** 12099947 (publiek 183278, Clickmind stuurt ieder naar het eigen favoriete product): bod 0,06.
+- **Campagnes van 9 nov** (12119232 t/m 12119271) staan stil en worden niet herstart (`teHerstarten` slaat SHOP-LUS op PropellerAds over).
+- **Plafond Kadoly vandaag $20** (budgetwacht). Bij 0,12 waarschijnlijk op rond 17-18 UTC; daarna staat Kadoly stil tot 05:00 UTC. $40 alleen op Henkjans woord (gevraagd om 12:44 UTC, nog geen antwoord).
+- **Morgen (11 nov) staat er geen DAGPLAN: er start niets** tot Henkjan zegt wat. Zie "Hoe een dag werkt".
+- **Resultaat:** nog nooit betaald door een vreemde. 9 nov: 6.103 kliks, 514 echte mensen, 35 op de afrekenpagina, 1 koos een betaalmethode, 0 drukten op Betalen, 0 betaald. 10 nov tot 12:17 UTC: 618 kliks, 57 echte mensen, 2 keer mandje en afrekenen (Schoenzetmat, Kerststal), 0 betaald.
+- **Grootste lek:** het afrekenformulier (geopend, niets ingevuld, weg). Voorstel voor Babita (nog niet verstuurd, Henkjan beslist): iDEAL vooraf gekozen, postcode + huisnummer vult het adres, Apple Pay en Google Pay als eerste knop. Daarnaast TAAK 0 in `lib/shopprompt.js` en de uitdagers in `research/kadoly-lekken-backlog.md`.
 
-## Hoe het nu loopt
-- **Route (nooit een tussenpagina, Henkjan 28 okt).** Campagnelink `keuzehulp.best/shop?...&p=<product-id>` → `direct()` in `api/shop.js` → Clickmind `verwerkKlik` → 302 naar kadoly.com/product/<id>. Bots meet Clickmind; zelfverklaarde bots krijgen geen doorstuur. (Oud: 302 naar `yoors.shop/product/<id>?...&hj=<kenmerk>&mmc=<klik-id>&lang=nl`. Aandeel direct: 100% (Henkjan 14 okt).
-- **Meting op yoors.shop.** cm.js van Clickmind staat sinds 16 okt in de shop (sinds 26 okt yoors.shop, laadt bij mmc) en meldt `echt` (aanraking of scroll en 3 seconden zichtbaar) en `actie` (eerste tik). De eerste tik is het hoofddoel voor het netwerk.
-- **Shopmeldingen.** De shop meldt via `yoors-shop-conversies.php` aan `/api/shop/px`: winkelwagen, afrekenen, betaling gestart, mislukt en betaald (versie 2 van 17 okt, met betaalmethode). PropellerAds doel 2 = afrekenen, doel 3 = betaald. Een winkelwagen zonder eerdere tik meldt het hoofddoel als terugval.
-- **Controle achteraf.** De lus haalt elk uur `yoors.shop/shop/api/lus-feed` op (header `X-Lus-Key` = Vercel-variabele `SHOP_FEED_KEY`). Daar staan inkoop per product en de bestellingen. Een betaalde bestelling met kenmerk telt ook als de directe melding niet afging, en gaat dan alsnog naar het netwerk.
-- **Marge.** `lib/shopmarge.js`: marge = (prijs + verzending klant) / 1,21 − inkoop − onze verzending − betaalkosten (2,9% + €0,30). Hooguit de helft van de marge per verkoop aan advertenties. Testbudget per product = 2 × dat bedrag.
-- **Per uur.** `lib/shopuur.js` telt elk uur elke stap (één Redis-hash per dag). De pagina per uur: `/api/shop/lekken?k=<Babita's link>`. Betaalde PropellerAds-kliks per uur komen via de PropellerAds-lus (`propellerads-mcp /api/statistiek`, `perUur`).
-- **PropellerAds-lus.** Repo propellerads-mcp, `lib/shop.ts`, cron `3 5-21 * * *`. Beheert campagnes met SHOP-LUS in de naam. `vervangt=<id>` in de naam stopt de oude campagne zodra de nieuwe loopt. `thema=solo|skull|sint|advent` voegt geen extra advertenties toe.
+## Open bij Henkjan
+1. Testbetaling door een vreemde via een advertentieklik (iDEAL, PayPal als gast, kaart).
+2. Naam KADOLY in Stripe en PayPal (afschrift); handelsnaam Kadoly bij de KvK.
+3. Plafond vandaag $20 of $40.
+4. Plan voor morgen: welke producten, hoeveel, welk bod (anders start er niets).
+5. Bericht aan Babita over het afrekenformulier (drie punten hierboven).
+6. Arm "Bewaar dit idee" ja of nee, en de stopregel (beide in `research/kadoly-lekken-backlog.md`).
+7. Reviews: Trustpilot-account aanmaken (Henkjan); de uitnodigingsmail schrijven wij en tonen we eerst.
+8. Alleen melden, ander project: todayin MGID 12534692 loopt nog.
 
-## Openstaande lekken (stand 19 okt, twee doorlichtingen samen)
-1. **Meting van de kassa.** De shop meldt "afrekenen", "betaling gestart" en "betaald via iDEAL" niet aan `/api/shop/px` (laatste winkelwagenmelding 17 okt; de shop zelf telde 4 keer afrekenen). PropellerAds krijgt dus nooit doel 2 en 3. Henkjan meldt dat afrekenen voor de klant werkt (19 okt). Ligt bij Babita: het meldbestand (PHP versie 2) bij elke stap, ook iDEAL.
-2. **Serverfouten en snelheid op yoo.rs.** 502/504 bij gelijktijdige laads (ook op de afrekenpagina en de datapagina), HTML 0,5 tot 3 s, 37 scripts. Ligt bij de hosting.
-3. **Productpagina voor advertentiebezoekers.** 6 à 7,5% echte mensen tegen 24% op onze eigen landingspagina. Yoors-menu (Stories, Collab, Inloggen) bovenaan, koopbalk half buiten beeld. Voorstel: lichte pagina voor bezoekers met `hj`, als arm tegen de huidige, gemeten op echt mens en "Nu kopen".
-4. **Prijs met verzending.** Elk merk verstuurt apart (€4,25 tot €18,15). Van de producten die elders te koop zijn, zijn we all-in bij 84% duurder. Sinds 19 okt adverteert de shoptest alleen wat all-in niet duurder is of nergens anders te koop is (181 producten afgewezen). Verzending testen waar de marge het toelaat.
-5. **Vertrouwen en eerlijkheid.** yoors.shop toont niet ingelogd een welkomstpagina met "100.000 klanten" en geen producten: eerlijkheidsfout, weghalen; yoors.shop met 301 naar yoo.rs/shop. Dubbele producten in het overzicht. De bubble pot toont planten in de pot terwijl je alleen de pot koopt.
-6. **Botverkeer in de shopteller.** De meeste productweergaven komen van computers uit VS, China, Singapore en Korea. Optimaliseer op Clickmind (echte mensen uit betaald verkeer), niet op de shopteller. Een direct bezoek werd als PropellerAds gelabeld: uitzoeken.
-7. **Volume.** Bij $0,01 CPA zo'n 20 à 25 echte mensen per dag; met 0,2% koopkans is 0 verkopen te verwachten. Meer volume via Google Shopping of een hoger bod op de beste producten, alleen op Henkjans woord.
+## Hoe een dag werkt (shoptest)
+- **Waar:** propellerads-mcp `lib/shoptest.ts`, cron 05:15 UTC en elk uur op :15 tot 21:15; met de hand via MCP-tool `shoptest` (`droog`, `max`), uitslag via `shoptest_log`. Een PropellerAds-dag loopt van 05:00 tot 05:00 UTC.
+- **Per dag in de code:** `DAGPLAN[dag] = {succes, doel}` (zonder plan start niets, sinds 7 nov); `DAGBOD[dag]` = bod (zonder DAGBOD valt hij terug op 0,30: altijd zetten); `VOORKEUR[dag]` = volgorde voor verse kopieën van succesproducten (Clickmind-ranglijst `/api/mm/ruwstand?producten=1`); `NIEUWKEUZE[dag]` = welke nieuwe producten als test, in volgorde. `doel` telt alle nieuwe starts van die dag mee (ook gestopte).
+- **Producten buiten de dagkeuze** (bijv. Sinterklaas op 10 nov): hjdk-api `api/shop.js` `VAST_DAG[dag]` zet ze altijd in `/api/shop/kies` (hoe = vast); `metVerkoop` doet vaste producten eerst.
+- **Advertenties:** elke start is een kopie van sjabloon 12016783 met precies 8 advertenties (kies8 in `lib/tekstleer.ts`); minder dan 8 = overgeslagen. Teksten schrijft Claude zelf in hjdk-api `lib/shopteksten-hand.js` (HANDTEKSTEN, 9 per product); de keuring `lib/shoptekst.js` tekstFout weigert prijs, cijfers, "!", "gratis", levertijd, woorden in hoofdletters, en titel > 30, tekst > 40, knop > 15 tekens.
+- **Bod per uur:** het uurritme in de shoptest zet TEST-campagnes minstens op DAGBOD en past een Clickmind-uurfactor toe; een met de hand gezet hoger bod wordt de nieuwe basis.
+- **Botplekken:** de ronde van propellerads-mcp blokkeert elke 10 minuten plekken met te weinig echte mensen (Clickmind `lib/shopbot.js`, Wilson-grenzen).
+- **Netwerkconversies:** PropellerAds doel 1 = echt mens; doel 2 (en bij MGID de beslissing) alleen bij bewust afrekenen (`lib/shopdirect.js` isBewust/kassaDoel).
+- **Let op:** geeft de MCP-tool `shoptest` "server draining" of een time-out, dan loopt de ronde vaak toch door. Eerst `shoptest_log` lezen, niet herhalen (10 nov ontstond zo een dubbele campagne).
+- **Kosten:** geen betaalde opvragingen (Demand Radar-zoekvolumes, AI via de Vercel-gateway) zonder Henkjans woord; hjdk-api heeft geen DEMANDRADAR_KEY, dus `/api/zicht?op=volumes` werkt daar niet.
 
-## Campagnes
-- **STAND 3 nov 14:30 UTC: AAN, 26 campagnes, bod 0,60, budget $50** (Henkjan: "Zet 20 campagnes aan bepaal wat beste zijn voor nu op basis van data . En zoek beste zones met clickmind .", daarna "max 50 uitgeven vandaag us bod kan om hoog", "Ver 3 voudig bezoek" en "Niet 40 campagnes !! ... Als aangemaakt hoef je niet te reverten"). De 20 producten met de meeste winkelwagens plus 6 die er per ongeluk bij kwamen (12094012-12094021, producten 21-26, blijven staan op zijn woord), allemaal 8 teksten van Claude met knop. Het sterkste product (Diepzeeverkenner) loopt als 12093795 BOOST ZONES op 41 Clickmind-zones, verkenner kadoly-nl houdt die bij. Bod 0,60 vandaag (DAGBOD in lib/shoptest.ts, ook ondergrens in het uurritme) om het bezoek te verdrievoudigen; budget $20 + $30. DAGPLAN 3 nov 20/20: geen nieuwe starts meer. Uit: SHOP_UIT op true, alleen op Henkjans woord.
-- **PropellerAds** (stand 26 okt 15:30 UTC, na de verhuizing naar yoors.shop): 6 campagnes lopen, de nieuwste campagne van de 6 producten met de meeste winkelwagens (veelbelovend, 0 verkopen): 12047779 Puzzel Diepzeeverkenner (14 winkelwagens, 152 echte mensen, CPA 0,03), 12047781 Pompoen kaarsenset (9/140, 0,03), 12046372 Walnoten sleutelhanger (7/89, 0,01), 12053415 Windspinner vlinder (5/24, 0,01), 12053416 Skull lantaarn cortenstaal (4/27, 0,01), 12047780 Portemonnee kurk Delfts blauw (4/59, 0,03). Alle $10/dag, $30 totaal. De andere 29 veelbelovende producten (1 tot 3 winkelwagens) staan nog uit: er was vandaag nog 1 slot over. Nieuwe testproducten staan uit (`SHOPTEST_NIEUW = false` in propellerads-mcp lib/shoptest.ts) tot Henkjan zegt. SUPPL 12048306-09 nooit herstarten. SHOP-LUS testdag 8 van 10 op 26 okt.
-- **Mondiad:** alle 21 shopcampagnes staan op gepauzeerd (stand 20 okt).
+## Route en meting
+- **Route (nooit een tussenpagina, Henkjan 28 okt):** campagnelink `keuzehulp.best/shop?...&p=<product-id>` (de Clickmind-link) → `direct()` in `api/shop.js` → Clickmind `verwerkKlik` → 302 naar `kadoly.com/product/<id>`.
+- **Meting op kadoly.com:** cm.js van Clickmind zet per klik gedragsvlaggen (geladen, echt mens, 15 s, 60 s, kassa-stappen). De shop meldt via PHP aan `/api/shop/px`: mandje, afrekenen, betaling gestart, mislukt (reden in Redis `hjdk:shop:betaalfout`) en betaald.
+- **Blijvend:** elk klikrecord en de kassalog gaan per dag naar Vercel Blob (`lib/shcarchief.js`, cron 04 UTC).
+- **Marge:** `lib/shopmarge.js`: (prijs + verzending klant) / 1,21 − inkoop − onze verzending − betaalkosten (2,9% + €0,30); hooguit de helft daarvan aan advertenties per verkoop.
+
+## Snel meten (beschermde host, met web_fetch_vercel_url)
+- Per campagne, product, advertentie en plek, vandaag: `/api/shop?op=netdetail&net=pa`.
+- Afrekenpagina stap voor stap: `/api/shop?op=kassa` (of `&dag=2026-11-09`).
+- Per dag en netwerk: `/api/shop?op=trechter`. Kosten per project: MCP `budget_stand`. Dagkeuze: `/api/shop/kies?n=20` (groot; opslaan en lokaal lezen).
+- Catalogus doorzoeken: `/api/shop?op=zoek&kort=1&q=term1,term2`.
 
 ## Waar de stand staat
 - Babita's pagina met de briefing: `/api/shop/advies?k=<haar link>` (de link heeft Henkjan).
@@ -76,8 +93,11 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - `api/shop.js`: route `direct()`, landingspagina, `pxVerwerk`/`pixel`, `haalFeed`, ronde, trechter, lekken, feedcheck, advies, overdracht.
 - `lib/shopdirect.js` (route en uitkomsten), `lib/shopuur.js` (per uur), `lib/shopmarge.js` (marge), `lib/shopadvies.js` (Babita's pagina), `lib/shopphp.js` (het PHP-bestand voor de shop).
 - PropellerAds-lus: repo propellerads-mcp, `lib/shop.ts` en `app/api/statistiek/route.ts`.
+- Shoptest: propellerads-mcp `lib/shoptest.ts` (DAGPLAN, DAGBOD, VOORKEUR, NIEUWKEUZE), budgetwacht `lib/budget.ts` (HENKJAN_EXTRA, SHOP_UIT, SHOP_PA_UIT, SHOP_MGID_UIT), tekstleer `lib/tekstleer.ts`.
+- hjdk-api: dagkeuze `lib/shopkies.js` (+ VAST_DAG in `api/shop.js`), teksten `lib/shopteksten-hand.js` en `lib/shoptekst.js`, bots `lib/shopbot.js`, niet geladen `lib/shopniet.js`, archief `lib/shcarchief.js`, kassadoel `lib/shopdirect.js`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 2026-11-10 13:00 UTC (Henkjan: "Maak handover voor ander account moet echt compleet zijn ." en "Zet op vercel de handover ."): stand bovenaan herschreven (oude stand van 19 okt t/m 3 nov eruit): Stand nu, Open bij Henkjan, Hoe een dag werkt, Route en meting, Snel meten.
 - 2026-11-10 12:44 UTC (Henkjan: "ver dubbel verkeer nu .  Gebruik ook remarketing ."; even daarvoor "Zorg dat je niets aan extra kosten maken ."): bod van de 10 lopende Kadoly-tests 0,06 → 0,12 (rechtstreeks via update_campaign; DAGBOD in de code blijft 0,06, uurritme neemt 0,12 als basis), remarketing 12099947 0,03 → 0,06. Kadoly-plafond blijft $20; om 12:35 UTC $2,29 uitgegeven. Bij dit tempo is $20 rond 17-18 UTC op, daarna staat Kadoly stil tot morgen; hoger plafond alleen op Henkjans woord.
 - 2026-11-10 11:56 UTC (Henkjan: "Teveel kerst halveer en maak andere helft allemaal sinterklaas . VINDT DEMAND !"): 5 kerst blijven (12124038 Kerstboom, 12124042 Ornamenten, 12124053 Kerststal, 12124052 Discobal, 12124054 Ornament mama); uit: 12124040 Kerstboomrok, 12124066 Geurkaars, 12124069 Kerstlepels, 12124072 Kerstman-mobiel en dubbele Kerststal 12124048 (ontstond doordat een aanroep met "server draining" toch doorliep en ik hem herhaalde: bij die fout eerst shoptest_log lezen, niet herhalen). 5 Sinterklaas: 12124063 Eend-spaarpot, 12124199 Schoenzetmat XL, 12124200 Sint & Piet muurcirkel, 12124201 Kleine Prins wensbrievenbus, 12124204 Harry Potter Herbologie-bouwset. Nieuw in hjdk-api: VAST_DAG in api/shop.js zet producten buiten de score in de dagkeuze (kies vast, hoe=vast), metVerkoop doet vaste producten eerst, 36 handteksten in lib/shopteksten-hand.js. Demand Radar NL: sinterklaas cadeautjes 40.500/mnd, surprise knutselen 5.400; zoekvolumes per term lukten niet (hjdk-api heeft geen DEMANDRADAR_KEY).
 - 2026-11-10 11:25 UTC (Henkjan: "Doe een totaal nieuwe test 10 complete campagens 8 ads goede CTA s kijk naar demandadar voor input . Start nu ."): 10 nooit geteste producten als nieuwe test op PropellerAds, 8 advertenties elk, bod 0,06, Kadoly-plafond $20 (propellerads-mcp lib/shoptest.ts NIEUWKEUZE + DAGPLAN/DAGBOD 2026-11-10, 7d5a554). Keuze op Demand Radar NL: kerstboom kopen 22k/mnd, kerstverlichting 40k, kerstcadeaus 8k (+83%), sinterklaas cadeautjes 40k, kerstkaarsen. Producten: Gouden Decoratieve Kerstboom, Gouden Kerstboomrok, Vintage Kerstboom Ornamenten (9), Metalen Kerststal (12124048), Roze Gouden Disco Bal (12124052), Kerstornament Liefste Mama (12124054), 3D Houten Puzzel Eend Spaarpot (12124063), Vanille Geurkaars (12124066), Gouden Kerstlepels (12124069), Hangende Kerstman Mobiel (12124072). De 9 campagnes van 9 nov blijven uit. 9 nov totaal: 6.103 kliks, 514 echte mensen, 35 op de afrekenpagina, 1 betaalmethode gekozen, 0 betaald.
