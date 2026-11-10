@@ -35,7 +35,7 @@ function cookie(req, naam) { const m = String(req.headers.cookie || '').match(ne
 // wit, rustig, één smalle kolom in het midden, grote eerste vraag, keuzes als duidelijke kaarten. Drie onderdelen zijn proeven die
 // zichzelf sturen (lib/wam.js UX): opener (held = grote kop, chat = kaartje), keuzes (kaarten of pillen), invoer (vast onderin of
 // meteen onder de keuzes). De server kiest per bezoeker en zet ux-<onderdeel>-<variant> op body.
-function pagina({ start, taal, kanalen, vapid }) {
+function pagina({ start, taal, kanalen, vapid, w}) {
   // contactkaart: zodra Telegram of WhatsApp echt antwoordt, belooft de kaart dat je daar verder kunt praten (relatie, niet alleen een mail)
   const verder = (kanalen || []).filter(k => k === 'Telegram' || k === 'WhatsApp');
   const u = Object.assign({}, ui(taal), verder.length ? { via: { nl: 'Praat verder via ' + verder.join(' of ') + ', of laat je mail achter. Ik weet nog waar we waren.', de: 'Schreib mir weiter auf ' + verder.join(' oder ') + ' oder hinterlass deine E-Mail. Ich weiß noch, wo wir waren.' }[taal] || 'Keep talking on ' + verder.join(' or ') + ', or leave your email. I\'ll remember where we were.' } : {});
@@ -45,7 +45,14 @@ function pagina({ start, taal, kanalen, vapid }) {
   u.uitslag = { nl: '{n} antwoorden tot nu toe', de: '{n} Antworten bisher' }[taal] || '{n} answers so far';
   u.push = { nl: 'Meld me op mijn telefoon', de: 'Benachrichtige mich' }[taal] || 'Notify me on my phone';
   u.viaPush = { nl: 'Eén tik en je krijgt een melding op je telefoon zodra ik het heb. Geen naam, geen nummer.', de: 'Ein Tipp und du bekommst eine Nachricht aufs Handy, sobald ich es habe. Kein Name, keine Nummer.' }[taal] || 'One tap and I\'ll notify you on your phone as soon as I have it. No name, no number.';
-  const data = { sid: start ? start.sid : '', tok: start ? start.tok : '', taal, ui: u, kanalen, opener: o, ux, vapid: vapid || '' };
+  // Bewaren zonder contact (10 nov: 9 van 9 meldingen bij de contactknop mislukten, 0 contact): stuur jezelf de link
+  u.bw = { nl: 'Dan geen melding. Bewaar dit gesprek in één tik: stuur de link naar jezelf en open hem wanneer je wilt. Ik weet nog waar we waren.', de: 'Dann keine Benachrichtigung. Speichere den Chat mit einem Tipp: schick dir den Link und öffne ihn, wann du willst. Ich weiß noch, wo wir waren.' }[taal] || 'No notification then. Save this chat in one tap: send the link to yourself and open it anytime. I\'ll remember where we were.';
+  u.bwWa = { nl: 'Naar mijn WhatsApp', de: 'An mein WhatsApp' }[taal] || 'Send to my WhatsApp';
+  u.bwDeel = { nl: 'Bewaar of deel', de: 'Speichern oder teilen' }[taal] || 'Save or share';
+  u.bwKopie = { nl: 'Kopieer link', de: 'Link kopieren' }[taal] || 'Copy link';
+  u.bwKlaar = { nl: 'Gekopieerd', de: 'Kopiert' }[taal] || 'Copied';
+  u.bwTekst = { nl: 'Mijn WAM-gesprek:', de: 'Mein WAM-Chat:' }[taal] || 'My WAM chat:';
+  const data = { sid: start ? start.sid : '', tok: start ? start.tok : '', taal, ui: u, kanalen, opener: o, ux, vapid: vapid || '', w: w || '' };
   return `<!doctype html><html lang="${esc(taal)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
 <title>We Are Many: ${esc(u.sub)}</title><meta name="description" content="WAM is a free AI chat that helps you pay less, cancel subscriptions, compare deals and get things sorted, and bundles people with the same wish.">
 <meta property="og:title" content="We Are Many"><meta property="og:description" content="${esc(u.sub)}"><meta name="theme-color" content="#FFFFFF">
@@ -110,7 +117,7 @@ function onder(){try{var z=L.lastElementChild;if(z&&z.scrollIntoView)z.scrollInt
 function link(t){var d=D.createElement('div');d.textContent=t;return d.innerHTML.replace(/(https?:\\/\\/[^\\s<)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>')}
 function bericht(r,x){var m=D.createElement('div');m.className='m '+r;if(r==='b')m.innerHTML=link(x);else m.textContent=x;L.appendChild(m);onder();return m}
 function weg(){var a=L.querySelectorAll('.k,.c');for(var i=0;i<a.length;i++)a[i].remove()}
-function knoppen(k){if(!k||!k.length)return;var d=D.createElement('div');d.className='k';k.forEach(function(t){var b=D.createElement('button');b.type='button';b.textContent=t;b.onclick=function(){if(t===W.cpil&&kanPush())meldDirect();zeg(t,1)};d.appendChild(b)});L.appendChild(d);onder()}
+function knoppen(k){if(!k||!k.length)return;var d=D.createElement('div');d.className='k';k.forEach(function(t){var b=D.createElement('button');b.type='button';b.textContent=t;b.onclick=function(){if(t===W.cpil){if(kanPush())meldDirect();else setTimeout(bewaarDeel,2500)}zeg(t,1)};d.appendChild(b)});L.appendChild(d);onder()}
 function dots(){var d=D.createElement('div');d.className='m b dots';d.innerHTML='<i></i><i></i><i></i>';L.appendChild(d);onder();return d}
 function bewaar(){try{localStorage.setItem('wam_lopend',JSON.stringify({sid:W.sid,tok:W.tok,t:Date.now(),msgs:msgs.slice(-30)}))}catch(e){}}
 function esc2(t){var x=D.createElement('div');x.textContent=t;return x.innerHTML}
@@ -118,7 +125,10 @@ function uitslag(p){var d=D.createElement('div');d.className='pu';var h='<div cl
 function b64(x){x=x.replace(/-/g,'+').replace(/_/g,'/');x+='='.repeat((4-x.length%4)%4);var r=atob(x),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return a}
 function meldMe(b){b.disabled=true;bk('contact_push_tik');navigator.serviceWorker.register('/sw.js').then(function(){return navigator.serviceWorker.ready}).then(function(reg){return reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64(W.vapid)})}).then(function(sub){post('push',{sid:W.sid,tok:W.tok,sub:sub.toJSON()},function(j){if(j&&j.ok){weg();bericht('b',j.x);msgs.push({r:'b',x:j.x});bewaar()}else{b.disabled=false}})}).catch(function(){b.disabled=false;bk('contact_push_nee')})}
 function kanPush(){return ('serviceWorker' in navigator)&&('PushManager' in window)&&!!W.vapid}
-function meldDirect(){bk('contact_push_direct');var pr;try{pr=(window.Notification&&Notification.requestPermission)?Notification.requestPermission():Promise.resolve('default')}catch(e){pr=Promise.resolve('default')}Promise.resolve(pr).then(function(){return navigator.serviceWorker.register('/sw.js')}).then(function(){return navigator.serviceWorker.ready}).then(function(reg){return reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64(W.vapid)})}).then(function(sub){post('push',{sid:W.sid,tok:W.tok,sub:sub.toJSON()},function(j){if(j&&j.ok){var w=function(){var c=L.querySelectorAll('.c');for(var i=0;i<c.length;i++)c[i].remove();bericht('b',j.x);msgs.push({r:'b',x:j.x});bewaar()};if(bezig)setTimeout(w,1500);else w()}})}).catch(function(){bk('contact_push_nee')})}
+function meldDirect(){bk('contact_push_direct');var pr;try{pr=(window.Notification&&Notification.requestPermission)?Notification.requestPermission():Promise.resolve('default')}catch(e){pr=Promise.resolve('default')}Promise.resolve(pr).then(function(){return navigator.serviceWorker.register('/sw.js')}).then(function(){return navigator.serviceWorker.ready}).then(function(reg){return reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64(W.vapid)})}).then(function(sub){post('push',{sid:W.sid,tok:W.tok,sub:sub.toJSON()},function(j){if(j&&j.ok){var w=function(){var c=L.querySelectorAll('.c');for(var i=0;i<c.length;i++)c[i].remove();bericht('b',j.x);msgs.push({r:'b',x:j.x});bewaar()};if(bezig)setTimeout(w,1500);else w()}})}).catch(function(x){bk('contact_push_nee');var p='';try{p=window.Notification?Notification.permission:''}catch(e){}bk(p==='denied'?'push_denied':p==='default'?'push_default':'push_fout');setTimeout(bewaarDeel,bezig?1800:300)})}
+function bewaarDeel(){if(!W.w||L.querySelector('.bw'))return;var u='https://wearemany.now/?w='+W.w+'&van=bewaar',tx=W.ui.bwTekst+' '+u,d=D.createElement('div');d.className='c bw';var h='<p>'+W.ui.bw+'</p><div class="r"><a class="wa" target="_blank" rel="noopener" href="https://wa.me/?text='+encodeURIComponent(tx)+'" data-e="bewaar_wa">'+W.ui.bwWa+'</a>';if(navigator.share)h+='<button class="deel" type="button">'+W.ui.bwDeel+'</button>';h+='<button class="kop" type="button">'+W.ui.bwKopie+'</button></div>';d.innerHTML=h;L.appendChild(d);onder();bk('bewaar_toon');
+d.querySelectorAll('a[data-e]').forEach(function(a){a.onclick=function(){bk(a.getAttribute('data-e'))}});var sb=d.querySelector('.deel');if(sb)sb.onclick=function(){bk('bewaar_share');try{navigator.share({title:'WAM',text:W.ui.bwTekst,url:u}).catch(function(){})}catch(e){}};
+d.querySelector('.kop').onclick=function(){var k=this;bk('bewaar_kopie');try{navigator.clipboard.writeText(u).then(function(){k.textContent=W.ui.bwKlaar}).catch(function(){prompt('',u)})}catch(e){prompt('',u)}}}
 function contact(c){var d=D.createElement('div');d.className='c';var kp=('serviceWorker' in navigator)&&('PushManager' in window)&&!!W.vapid&&c.some(function(o){return o.soort==='push'});var h='<p>'+(kp?W.ui.viaPush:W.ui.via)+'</p>'+(kp?'<button class="push" type="button">'+W.ui.push+'</button>':'')+'<form><input type="email" inputmode="email" autocomplete="email" placeholder="'+W.ui.mailPh+'"><button class="mail" type="submit">'+W.ui.mailKnop+'</button></form><div class="r">';
 c.forEach(function(o){if(o.soort==='tg')h+='<a class="tg" target="_blank" rel="noopener" href="'+o.url+'" data-e="contact_tg">'+W.ui.tg+'</a>';if(o.soort==='wa')h+='<a class="wa" target="_blank" rel="noopener" href="'+o.url+'" data-e="contact_wa">'+W.ui.wa+'</a>'});
 h+='<button class="nee" type="button">'+W.ui.nee+'</button></div>';d.innerHTML=h;L.appendChild(d);onder();bk(kp?'kaart_push':'kaart_mail');var pb=d.querySelector('.push');if(pb)pb.onclick=function(){meldMe(pb)};
@@ -170,7 +180,8 @@ export default async function handler(req, res) {
       if (beschermd(host) && q('ux')) { const t = {}; for (const x of q('ux').split(',')) { const [d, v] = x.split(':'); if (W.UX[d] && W.UX[d].includes(v)) t[d] = v; } ctx.uxTest = t; }
       const params = { n: schoon(q('n'), /^[a-z]{2,12}$/), z: schoon(q('z'), /^[\w{}\[\]-]{1,20}$/), c: schoon(q('c'), /^[\w{}\[\]-]{1,20}$/), b: schoon(q('b'), /^[\w{}\[\]-]{1,20}$/), mmc: schoon(q('mmc'), /^[0-9a-f]{8,24}$/) };
       const start = await W.startSessie({ vid, ctx, params });
-      return res.status(200).send(pagina({ start, taal, kanalen: k, vapid: await PUSH.publiek().catch(() => '') }));
+      if (uitPost && q('van') === 'bewaar') await W.tel({ bewaar_terug: 1 }).catch(() => {});
+      return res.status(200).send(pagina({ start, taal, kanalen: k, vapid: await PUSH.publiek().catch(() => ''), w: await W.linkTok(vid).catch(() => '') }));
     }
     if (op === 'zeg') {
       // GET alleen op de beschermde host, om te testen (?sid=&tok=&x=)
