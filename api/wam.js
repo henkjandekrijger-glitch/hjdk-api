@@ -199,6 +199,7 @@ export default async function handler(req, res) {
     if (op === 'cijfers') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.cijfers(Math.min(14, Number(q('dagen')) || 3))), kostVandaag: await W.kostVandaag() }); }
     // gedeelde team-sleutel (SHOP_SLEUTEL, header x-shop-sleutel): de dagelijkse WAM-kopieën in propellerads-mcp koppelen zo hun nieuwe banners
     const metSleutel = !!process.env.SHOP_SLEUTEL && req.headers['x-shop-sleutel'] === process.env.SHOP_SLEUTEL;
+    if (op === 'hookscore') { if (!beschermd(host) && !metSleutel) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.hookScore(Math.min(7, Number(q('dagen')) || 3))) }); }
     if (op === 'wamtitels') { if (!beschermd(host) && !metSleutel) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, titels: await W.titelHooks() }); }
     if (op === 'hookzet') {
       if (!beschermd(host) && !metSleutel) return res.status(404).send('Niet gevonden');
