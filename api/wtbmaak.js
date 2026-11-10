@@ -11,6 +11,7 @@ import { organicStatus } from '../lib/organic.js';
 import { keepa } from '../lib/cc.js';
 import { MARKETS, K, DAY, log, items, amzSearch, amzReady, claude, json, indexnow } from '../lib/wtb.js';
 import { compact } from '../lib/ai.js';
+import { WTB_HAND } from '../lib/wtb-hand.js';
 
 let OIDC = '';
 async function trendsRss(geo) {
@@ -139,10 +140,38 @@ async function stap(m, extra) {
   } catch (e) { todo.status = 'fout'; todo.fout = String(e.message).slice(0, 200); await kv.set(K.plan(m.id, DAY()), plan, { ex: 4 * 86400 }); await log({ m: m.id, wat: 'fout', slug: todo.slug, fout: todo.fout }); return { m: m.id, fout: todo.fout }; }
 }
 
+
+// ---- met de hand geschreven gidsen (lib/wtb-hand.js), zelfde Amazon-toets, geen AI-aanroep ----
+async function handRonde(m, o) {
+  const d = DAY(); const uit = [];
+  for (const h of (WTB_HAND[m.id] || [])) {
+    if (o.slug && h.slug !== o.slug) continue;
+    const bestaat = await kv.get(K.item(m.id, h.slug)).catch(() => null);
+    if (bestaat && bestaat.handV === (h.v || 1)) { uit.push({ m: m.id, slug: h.slug, gedaan: 'al live' }); continue; }
+    if (h.vanaf && h.vanaf > d) { uit.push({ m: m.id, slug: h.slug, gedaan: 'wacht tot ' + h.vanaf }); continue; }
+    const it = JSON.parse(JSON.stringify(h)); delete it.vanaf; it.handV = h.v || 1; it.bron = 'hand';
+    const fout = []; ['slug', 'term', 'cat', 'title', 'h1', 'kort', 'guide'].forEach(k => { if (!it[k]) fout.push(k); }); if (!Array.isArray(it.questions) || it.questions.length !== 3) fout.push('3 vragen'); if (!Array.isArray(it.faq) || it.faq.length < 3) fout.push('faq');
+    if (fout.length) { uit.push({ m: m.id, slug: h.slug, gedaan: 'fout', fout }); continue; }
+    const tt = await toets(m, it);
+    if (o.dry || !tt.ok) { uit.push({ m: m.id, slug: h.slug, gedaan: o.dry ? 'proef' : 'Amazon-toets niet gehaald', toets: tt }); continue; }
+    it.publishAt = (bestaat && bestaat.publishAt) || d; it.updatedAt = d; it.gemaakt = (bestaat && bestaat.gemaakt) || new Date().toISOString();
+    await kv.set(K.item(m.id, it.slug), it);
+    const idx = (await kv.get(K.index(m.id))) || []; if (!idx.includes(it.slug)) { idx.push(it.slug); await kv.set(K.index(m.id), idx); }
+    const st = await indexnow(m, ['https://' + m.host + '/' + it.slug, 'https://' + m.host + '/', 'https://' + m.host + '/sitemap.xml', 'https://' + m.host + '/llms.txt']);
+    await log({ m: m.id, wat: 'hand', slug: it.slug, indexnow: st, toets: tt }); uit.push({ m: m.id, slug: it.slug, gedaan: 'gepubliceerd', url: 'https://' + m.host + '/' + it.slug, toets: tt });
+  }
+  return uit;
+}
 export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x'); const op = url.searchParams.get('op') || 'dag';
   OIDC = String(req.headers['x-vercel-oidc-token'] || ''); res.setHeader('cache-control', 'no-store');
   const isCron = /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+  if (op === 'hand') { // openbaar en gratis: publiceert alleen wat in de repo staat (lib/wtb-hand.js); dry=1 toont de toets
+    const n = await kv.incr('c:wtbmaak-hand-' + DAY()).catch(() => 1); if (n > 40) return res.status(429).json({ ok: false, reden: 'vandaag al 40 keer' });
+    const wm = url.searchParams.get('m'); const ms = wm && MARKETS[wm] ? [MARKETS[wm]] : Object.values(MARKETS); const uit = [];
+    for (const m of ms) uit.push(...await handRonde(m, { dry: url.searchParams.get('dry') === '1', slug: url.searchParams.get('slug') || '' }));
+    return res.status(200).json({ ok: true, amazonApi: amzReady(), stappen: uit });
+  }
   const tok = url.searchParams.get('token'); const mag = isCron || (process.env.HJDK_TOKEN && tok === process.env.HJDK_TOKEN);
   if (!mag) return res.status(401).json({ ok: false, fout: 'token' });
   const which = url.searchParams.get('m'); const markets = which && MARKETS[which] ? [MARKETS[which]] : Object.values(MARKETS);
@@ -151,6 +180,7 @@ export default async function handler(req, res) {
   for (const m of markets) {
     const lk = await kv.get(K.lock(m.id)); if (lk && Date.now() - lk < 280000) { out.push({ m: m.id, overgeslagen: 'loopt al' }); continue; }
     await kv.set(K.lock(m.id), Date.now(), { ex: 300 });
+    if (op !== 'plan') { try { const hr = (await handRonde(m, {})).filter(x => x.gedaan !== 'al live'); if (hr.length) out.push({ m: m.id, hand: hr }); } catch (e) {} }
     try { out.push(op === 'plan' ? { m: m.id, plan: (await maakPlan(m)).topics.map(t => ({ slug: t.slug, status: t.status, blind: t.blind && t.blind.score })) } : await stap(m, !!url.searchParams.get('extra'))); }
     catch (e) { out.push({ m: m.id, fout: String(e.message).slice(0, 200) }); await log({ m: m.id, wat: 'fout', fout: String(e.message).slice(0, 200) }); }
     finally { try { await kv.set(K.lock(m.id), 0, { ex: 5 }); } catch (e) {} }
