@@ -1,6 +1,6 @@
 {
  "id": "esim",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-10",
  "onderwerp": {
   "nl": "eSIM of simkaart",
   "en": "eSIM or SIM card",
@@ -30,11 +30,11 @@
   "pt": "{n} formas de ter internet móvel em Curaçao: eSIMs de viagem, chips turísticos da Digicel e da Flow e roaming da sua operadora, com preços por plano."
  },
  "kort": {
-  "nl": "EU-roaming geldt niet op Curaçao, dus zonder bundel betaal je bij KPN en Vodafone €2,50 per MB. Een eSIM met 5 GB voor 30 dagen kost $19 tot $31 (Nomad, Saily), en Digicel verkoopt een toeristensim met 7 GB plus belminuten voor $30 per week. Onbeperkt kan vanaf $19,99 per week bij Maya Mobile of $84,90 bij Holafly.",
-  "en": "A travel eSIM with 5 GB for 30 days runs about $19 to $31 (Nomad, Saily), while Digicel's local tourist SIM gives 7 GB plus call minutes for $30 a week and works on Aruba and Bonaire too. Unlimited plans start at $19.99 a week with Maya Mobile, or $84.90 with Holafly on the Digicel network.",
-  "de": "Eine Reise-eSIM mit 5 GB für 30 Tage kostet etwa $19 bis $31 (Nomad, Saily), die lokale Touristen-SIM von Digicel bietet 7 GB plus Gesprächsminuten für $30 pro Woche und funktioniert auch auf Aruba und Bonaire. Unlimited-Tarife gibt es ab $19.99 pro Woche bei Maya Mobile oder für $84.90 bei Holafly im Digicel-Netz.",
-  "es": "Una eSIM de viaje con 5 GB por 30 días cuesta entre $19 y $31 (Nomad, Saily), mientras que la SIM turística local de Digicel da 7 GB más minutos de llamadas por $30 a la semana y también funciona en Aruba y Bonaire. Los planes ilimitados parten de $19.99 por semana con Maya Mobile, o $84.90 con Holafly en la red de Digicel.",
-  "pt": "Uma eSIM de viagem com 5 GB por 30 dias custa cerca de $19 a $31 (Nomad, Saily), enquanto o chip turístico local da Digicel dá 7 GB mais minutos de ligação por $30 por semana e também funciona em Aruba e Bonaire. Os planos ilimitados começam em $19.99 por semana com a Maya Mobile, ou $84.90 com a Holafly na rede da Digicel."
+  "nl": "EU-roaming geldt niet op Curaçao, dus zonder bundel betaal je bij KPN en Vodafone €2,50 per MB. Een eSIM met 5 GB voor 30 dagen kost $17 tot $31 (Nomad, Saily), en Digicel verkoopt een toeristensim met 7 GB plus belminuten voor $30 per week. Onbeperkt kan vanaf $19,99 per week bij Maya Mobile of $84,90 bij Holafly.",
+  "en": "A travel eSIM with 5 GB for 30 days runs about $17 to $31 (Nomad, Saily), while Digicel's local tourist SIM gives 7 GB plus call minutes for $30 a week and works on Aruba and Bonaire too. Unlimited plans start at $19.99 a week with Maya Mobile, or $84.90 with Holafly on the Digicel network.",
+  "de": "Eine Reise-eSIM mit 5 GB für 30 Tage kostet etwa $17 bis $31 (Nomad, Saily), die lokale Touristen-SIM von Digicel bietet 7 GB plus Gesprächsminuten für $30 pro Woche und funktioniert auch auf Aruba und Bonaire. Unlimited-Tarife gibt es ab $19.99 pro Woche bei Maya Mobile oder für $84.90 bei Holafly im Digicel-Netz.",
+  "es": "Una eSIM de viaje con 5 GB por 30 días cuesta entre $17 y $31 (Nomad, Saily), mientras que la SIM turística local de Digicel da 7 GB más minutos de llamadas por $30 a la semana y también funciona en Aruba y Bonaire. Los planes ilimitados parten de $19.99 por semana con Maya Mobile, o $84.90 con Holafly en la red de Digicel.",
+  "pt": "Uma eSIM de viagem com 5 GB por 30 dias custa cerca de $17 a $31 (Nomad, Saily), enquanto o chip turístico local da Digicel dá 7 GB mais minutos de ligação por $30 por semana e também funciona em Aruba e Bonaire. Os planos ilimitados começam em $19.99 por semana com a Maya Mobile, ou $84.90 com a Holafly na rede da Digicel."
  },
  "vragen": [
   {
@@ -257,7 +257,7 @@
      "pt": "5 GB, 60 dias (Discover)"
     },
     "bron": "https://esimdb.com/fr/curacao/airalo",
-    "datum": "2026-10"
+    "datum": "2026-11"
    },
    "feiten": [
     {
@@ -375,7 +375,7 @@
      "pt": "ilimitado, 7 dias"
     },
     "bron": "https://esim.holafly.com/internet/mobile-internet-curacao",
-    "datum": "2026-06"
+    "datum": "2026-11"
    },
    "feiten": [
     {
@@ -386,11 +386,11 @@
      "pt": "Funciona na rede da Digicel"
     },
     {
-     "nl": "1 dag $21,90, 20 dagen $139,90",
-     "en": "1 day $21.90, 20 days $139.90",
-     "de": "1 Tag $21.90, 20 Tage $139.90",
-     "es": "1 día $21.90, 20 días $139.90",
-     "pt": "1 dia $21.90, 20 dias $139.90"
+     "nl": "1 dag $21,90, 5 dagen $60,90, 10 dagen $102,90, 20 dagen $139,90",
+     "en": "1 day $21.90, 5 days $60.90, 10 days $102.90, 20 days $139.90",
+     "de": "1 Tag $21.90, 5 Tage $60.90, 10 Tage $102.90, 20 Tage $139.90",
+     "es": "1 día $21.90, 5 días $60.90, 10 días $102.90, 20 días $139.90",
+     "pt": "1 dia $21.90, 5 dias $60.90, 10 dias $102.90, 20 dias $139.90"
     },
     {
      "nl": "Bellen alleen via apps",
@@ -493,7 +493,7 @@
      "pt": "5 GB, 30 dias"
     },
     "bron": "https://saily.com/nl/esim-curacao/",
-    "datum": "2026-10"
+    "datum": "2026-11"
    },
    "feiten": [
     {
@@ -502,6 +502,13 @@
      "de": "1 GB für 7 Tage $7.99",
      "es": "1 GB por 7 días $7.99",
      "pt": "1 GB por 7 dias $7.99"
+    },
+    {
+     "nl": "3 GB 30 dagen $20,99",
+     "en": "3 GB for 30 days $20.99",
+     "de": "3 GB für 30 Tage $20.99",
+     "es": "3 GB por 30 días $20.99",
+     "pt": "3 GB por 30 dias $20.99"
     },
     {
      "nl": "Hotspot zonder beperking",
@@ -556,7 +563,7 @@
     "lang"
    ],
    "prijs": {
-    "bedrag": 19,
+    "bedrag": 17,
     "valuta": "USD",
     "eenheid": {
      "nl": "5 GB, 30 dagen",
@@ -566,15 +573,22 @@
      "pt": "5 GB, 30 dias"
     },
     "bron": "https://esimdb.com/curacao/nomad",
-    "datum": "2026-10"
+    "datum": "2026-11"
    },
    "feiten": [
     {
-     "nl": "10 GB 30 dagen $34",
-     "en": "10 GB for 30 days $34",
-     "de": "10 GB für 30 Tage $34",
-     "es": "10 GB por 30 días $34",
-     "pt": "10 GB por 30 dias $34"
+     "nl": "10 GB 30 dagen $28",
+     "en": "10 GB for 30 days $28",
+     "de": "10 GB für 30 Tage $28",
+     "es": "10 GB por 30 días $28",
+     "pt": "10 GB por 30 dias $28"
+    },
+    {
+     "nl": "20 GB 30 dagen $39",
+     "en": "20 GB for 30 days $39",
+     "de": "20 GB für 30 Tage $39",
+     "es": "20 GB por 30 días $39",
+     "pt": "20 GB por 30 dias $39"
     },
     {
      "nl": "Hotspot toegestaan",
@@ -638,7 +652,7 @@
      "pt": "10 GB, 30 dias"
     },
     "bron": "https://esimdb.com/curacao/ubigi",
-    "datum": "2026-10"
+    "datum": "2026-11"
    },
    "feiten": [
     {
@@ -693,25 +707,25 @@
     "onbeperkt"
    ],
    "prijs": {
-    "bedrag": 29,
+    "bedrag": 27.87,
     "valuta": "USD",
     "eenheid": {
-     "nl": "5 GB, 15 dagen (Antillen-bundel)",
-     "en": "5 GB, 15 days (Antilles plan)",
-     "de": "5 GB, 15 Tage (Antillen-Tarif)",
-     "es": "5 GB, 15 días (plan Antillas)",
-     "pt": "5 GB, 15 dias (plano Antilhas)"
+     "nl": "5 GB, 30 dagen (Antillen-bundel, €25)",
+     "en": "5 GB, 30 days (Antilles plan, €25)",
+     "de": "5 GB, 30 Tage (Antillen-Tarif, €25)",
+     "es": "5 GB, 30 días (plan Antillas, €25)",
+     "pt": "5 GB, 30 dias (plano Antilhas, €25)"
     },
     "bron": "https://esimdb.com/curacao/yesim",
-    "datum": "2026-10"
+    "datum": "2026-11"
    },
    "feiten": [
     {
-     "nl": "Onbeperkt 7 dagen $48,72",
-     "en": "Unlimited 7 days $48.72",
-     "de": "Unlimited 7 Tage $48.72",
-     "es": "Ilimitado 7 días $48.72",
-     "pt": "Ilimitado 7 dias $48.72"
+     "nl": "Onbeperkt 7 dagen $46,83 (Antillen)",
+     "en": "Unlimited 7 days $46.83 (Antilles)",
+     "de": "Unlimited 7 Tage $46.83 (Antillen)",
+     "es": "Ilimitado 7 días $46.83 (Antillas)",
+     "pt": "Ilimitado 7 dias $46.83 (Antilhas)"
     },
     {
      "nl": "Onbeperkt kan vertraagd worden",
@@ -833,7 +847,7 @@
      "pt": "5 GB, 15 dias"
     },
     "bron": "https://esimdb.com/curacao/gigsky",
-    "datum": "2026-10"
+    "datum": "2026-11"
    },
    "feiten": [
     {
@@ -938,17 +952,17 @@
     "kort"
    ],
    "prijs": {
-    "bedrag": 7.87,
+    "bedrag": 3.91,
     "valuta": "USD",
     "eenheid": {
-     "nl": "8 GB, 2 dagen",
-     "en": "8 GB, 2 days",
-     "de": "8 GB, 2 Tage",
-     "es": "8 GB, 2 días",
-     "pt": "8 GB, 2 dias"
+     "nl": "8 GB, 1 dag",
+     "en": "8 GB, 1 day",
+     "de": "8 GB, 1 Tag",
+     "es": "8 GB, 1 día",
+     "pt": "8 GB, 1 dia"
     },
-    "bron": "https://esims.io/countries/curacao/best-providers",
-    "datum": "2026-10"
+    "bron": "https://www.esims.io/countries/curacao",
+    "datum": "2026-11"
    },
    "feiten": [],
    "scores": [],
@@ -967,7 +981,7 @@
     "pt": []
    },
    "bronnen": [
-    "https://esims.io/countries/curacao/best-providers"
+    "https://www.esims.io/countries/curacao"
    ]
   },
   {
@@ -1597,11 +1611,11 @@
     "pt": "Qual é a eSIM mais barata para Curaçao?"
    },
    "a": {
-    "nl": "Voor 5 GB in 30 dagen is Nomad met $19 een van de goedkoopste. GlobaleSIM bood 10 GB voor 30 dagen voor $12,96 met korting.",
-    "en": "For 5 GB over 30 days, Nomad at $19 is among the cheapest. GlobaleSIM listed 10 GB for 30 days at $12.96 with a discount.",
-    "de": "Für 5 GB über 30 Tage gehört Nomad mit $19 zu den günstigsten. GlobaleSIM führte 10 GB für 30 Tage mit Rabatt für $12.96.",
-    "es": "Para 5 GB durante 30 días, Nomad a $19 es de las más baratas. GlobaleSIM ofrecía 10 GB por 30 días a $12.96 con descuento.",
-    "pt": "Para 5 GB por 30 dias, a Nomad a $19 está entre as mais baratas. A GlobaleSIM listava 10 GB por 30 dias a $12.96 com desconto."
+    "nl": "Voor 5 GB in 30 dagen is Nomad met $17 een van de goedkoopste (esimdb, november 2026). Firsty geeft 8 GB voor 1 dag voor $3,91 en GlobaleSIM bood 10 GB voor 30 dagen voor $12,96 met korting.",
+    "en": "For 5 GB over 30 days, Nomad at $17 is among the cheapest (esimdb, November 2026). Firsty sells 8 GB for 1 day at $3.91, and GlobaleSIM listed 10 GB for 30 days at $12.96 with a discount.",
+    "de": "Für 5 GB über 30 Tage gehört Nomad mit $17 zu den günstigsten (esimdb, November 2026). Firsty bietet 8 GB für 1 Tag für $3.91, GlobaleSIM führte 10 GB für 30 Tage mit Rabatt für $12.96.",
+    "es": "Para 5 GB durante 30 días, Nomad a $17 es de las más baratas (esimdb, noviembre de 2026). Firsty vende 8 GB por 1 día a $3.91 y GlobaleSIM ofrecía 10 GB por 30 días a $12.96 con descuento.",
+    "pt": "Para 5 GB por 30 dias, a Nomad a $17 está entre as mais baratas (esimdb, novembro de 2026). A Firsty vende 8 GB por 1 dia a $3.91 e a GlobaleSIM listava 10 GB por 30 dias a $12.96 com desconto."
    }
   },
   {
