@@ -925,5 +925,17 @@
   "effect": "minder dubbele pagina's, signalen op één pagina",
   "moeite": 1,
   "meten": "proef kz-geen-dubbel-zoekvraag-1110, /api/kzmaak?op=kort (dubbelGeweerd)"
+ },
+ {
+  "id": "inhoud-vroeg-in-de-html",
+  "les": "Zet de inhoud vroeg in de HTML: AI-zoekers (OAI-SearchBot, ChatGPT-User) en Bing lezen de ruwe HTML. Grote inline CSS en SVG vóór de h1 duwen het antwoord tienduizenden tekens naar achteren. Zet CSS in één cachebaar bestand per paginasoort en controleer waar de h1 in de bytes staat.",
+  "kanaal": "llm",
+  "bewijs": "10 nov 2026, curacao.day: de h1 stond pas na 105 tot 182 KB (100 tot 124 KB inline CSS, op de voorpagina ook 69 KB inline SVG); de tekst was 5 tot 70 KB van 250 tot 560 KB HTML. Na CSS naar /s/<hash>.css: h1 op 15 tot 19 KB (events, wat te doen), voorpagina 84 KB. Proef cd-css-extern-1110 (curacao.day/zicht.json). Meten: bezoek uit ChatGPT en OAI-SearchBot-crawls per dag.",
+  "bron": "curacao.day",
+  "datum": "2026-11-10",
+  "sterkte": 2,
+  "effect": "midden",
+  "moeite": 2,
+  "meten": "llm"
  }
 ]
