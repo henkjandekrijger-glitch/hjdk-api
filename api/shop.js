@@ -133,6 +133,9 @@ async function geheim() { let s = process.env.SHOP_SLEUTEL || ''; if (!s) { try 
 // ---------------- thema's en rangorde ----------------
 const mmdd = () => new Date().toISOString().slice(5, 10);
 const inSeizoen = t => { const n = mmdd(); return t.van <= t.tot ? n >= t.van && n <= t.tot : n >= t.van || n <= t.tot; };
+// vaste producten in de dagkeuze (10 nov, Henkjan: "Teveel kerst halveer en maak andere helft allemaal sinterklaas . VINDT DEMAND !"; Demand Radar NL:
+// sinterklaas cadeautjes 40.500 per maand, surprise knutselen 5.400). De shoptest in propellerads-mcp kiest daaruit met NIEUWKEUZE.
+const VAST_DAG = { '2026-11-10': ['oc_4174004652687361', 'oc_4174004537769985', 'oc_4174004527562753', 'oc_4174004519092225'] };
 function themaVan(it) { const s = (it.t + ' ' + it.s + ' ' + it.c).toLowerCase(); for (const [naam, t] of Object.entries(seed.themas)) if (t.woorden.some(w => s.includes(w))) return naam; return it.c || 'overig'; }
 function seizoen(it) { const s = (it.t + ' ' + it.s).toLowerCase(); let f = 1; for (const t of Object.values(seed.themas)) if (t.woorden.some(w => s.includes(w))) f = Math.max(f, inSeizoen(t) ? t.extra : (t.extra > 1.4 ? 0.4 : 1)); return f; } // buiten het seizoen zakt een seizoensproduct weg
 const engels = t => / (for|with|by|and|the|of|from) /i.test(' ' + t + ' ') && !/ (voor|met|van|en|de|het|op|uit|om) /i.test(' ' + t + ' '); // een deel van de shop is nog niet vertaald; die producten zetten we niet vooraan op een Nederlandse pagina
@@ -893,13 +896,13 @@ export default async function handler(req, res) {
       const vals = []; for (let i = 0; i < keys.length; i += 480) vals.push(...await kv.mget(...keys.slice(i, i + 480)));
       const tellers = {}; items.forEach((it, i) => { const o = {}; let iets = 0; SRT.forEach((x, j) => { o[x] = num(vals[i * SRT.length + j]); iets += o[x]; }); o.dv += o.himp; o.dm += o.lm; o.da += o.la; if (iets) tellers[it.id] = o; }); // 28 okt: route via onze pagina (himp/lm/la) telt mee
       const strategie = STRATEGIEEN.includes(url.searchParams.get('strategie')) ? url.searchParams.get('strategie') : ((await kv.get(K_STRATEGIE).catch(() => null)) || 'auto');
-      const uit = kies({ strategie, items, kaart, markt, termen, tellers, getest, seizoen, thema: themaVan, vandaag: dag, n, plaatje: pid => ({ icon: beeld(pid, 'icon'), image: beeld(pid, 'pa'), link: 'https://kadoly.com/product/' + pid + '?lang=nl' }) });
+      const uit = kies({ strategie, items, kaart, markt, termen, tellers, getest, seizoen, thema: themaVan, vandaag: dag, n, vast: VAST_DAG[dag] || [], plaatje: pid => ({ icon: beeld(pid, 'icon'), image: beeld(pid, 'pa'), link: 'https://kadoly.com/product/' + pid + '?lang=nl' }) });
       uit.bronnen = { catalogus: items.length, metInkoop: Object.keys(kaart).length, marktprijzen: Object.keys(markt).length, vraagtermen: termen.length, metVerkeer: Object.keys(tellers).length, alGetest: Object.keys(getest).length };
       if (url.searchParams.get('kort') === '1') { // compact voor de dagelijkse gidsronde (gids.kadoly.com, 30 okt): welke producten tractie hebben, met titel en categorie
         const perId = {}; items.forEach(i => { perId[i.id] = i; }); const lijst = (uit.presterend || []).concat(uit.veelbelovend || []).slice(0, 40).map(x => { const i = perId[x.pid] || {}; return { pid: x.pid, titel: i.t, merk: i.b || null, cat: i.c, sub: i.s, thuis: Math.round((num(i.p) + (i.fs ? 0 : num(i.vk))) * 100) / 100, waarom: x.waarom }; });
         return res.status(200).json({ ok: true, dag, tractie: lijst }); }
       if (cache) { // dagkeuze blijft die van vanochtend; oordelen en de vaste plekken voor presterend en veelbelovend zijn altijd vers
-        const vast = (cache.gekozen || []).filter(x => x.hoe !== 'presterend' && x.hoe !== 'veelbelovend'); const extra = (uit.gekozen || []).filter(x => (x.hoe === 'presterend' || x.hoe === 'veelbelovend') && !vast.some(v => v.pid === x.pid));
+        const vast = (cache.gekozen || []).filter(x => x.hoe !== 'presterend' && x.hoe !== 'veelbelovend'); const extra = (uit.gekozen || []).filter(x => (x.hoe === 'presterend' || x.hoe === 'veelbelovend' || x.hoe === 'vast') && !vast.some(v => v.pid === x.pid));
         const gk = vast.concat(extra); const ai = await metVerkoop(gk);
         return res.status(200).json(Object.assign({ ok: true, uitCache: true, verkoopteksten: ai }, cache, { gekozen: gk, presterend: uit.presterend, veelbelovend: uit.veelbelovend, af: uit.af, onbeslist: uit.onbeslist, gemiddeldeTikratio: uit.gemiddeldeTikratio })); }
       uit.verkoopteksten = await metVerkoop(uit.gekozen, 150000); // verse dagkeuze (ochtend, opgewarmd om 04:25 UTC): ruim de tijd
