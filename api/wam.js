@@ -42,6 +42,7 @@ function pagina({ start, taal, kanalen, vapid }) {
   const o = start ? start.opener : { tekst: taal === 'nl' ? 'Hoi! Ik ben WAM. Waar kan ik je mee helpen?' : 'Hi! I\'m WAM. What can I help you with?', knoppen: [] };
   const ux = (start && start.ux) || { opener: 'held', keuzes: 'kaarten', invoer: 'vast' };
   const kl = Object.entries(ux).map(([d, v]) => 'ux-' + d + '-' + v).join(' ');
+  u.uitslag = { nl: '{n} antwoorden tot nu toe', de: '{n} Antworten bisher' }[taal] || '{n} answers so far';
   u.push = { nl: 'Meld me op mijn telefoon', de: 'Benachrichtige mich' }[taal] || 'Notify me on my phone';
   u.viaPush = { nl: 'Eén tik en je krijgt een melding op je telefoon zodra ik het heb. Geen naam, geen nummer.', de: 'Ein Tipp und du bekommst eine Nachricht aufs Handy, sobald ich es habe. Kein Name, keine Nummer.' }[taal] || 'One tap and I\'ll notify you on your phone as soon as I have it. No name, no number.';
   const data = { sid: start ? start.sid : '', tok: start ? start.tok : '', taal, ui: u, kanalen, opener: o, ux, vapid: vapid || '' };
@@ -85,6 +86,7 @@ button{font:inherit;color:inherit;cursor:pointer}button:focus-visible,input:focu
 .c input{flex:1;min-width:0;font:inherit;font-size:16px;padding:11px 14px;border:1px solid var(--line2);border-radius:9px;background:var(--bg);color:var(--ink)}
 .c .r{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .c a,.c button{font-size:15px;font-weight:600;border-radius:9px;padding:11px 16px;border:0;text-decoration:none;text-align:center}
+.pu{border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:4px 0 8px;max-width:520px;animation:in .2s ease-out}.pt{font-size:13px;color:var(--muted);margin:0 0 6px}.pr{display:grid;grid-template-columns:minmax(96px,40%) 1fr 42px;gap:10px;align-items:center;margin:7px 0;font-size:15px;color:var(--ink)}.pb{height:10px;background:var(--soft);border-radius:99px;overflow:hidden}.pb i{display:block;height:100%;background:var(--line2);border-radius:99px;transition:width .6s ease-out}.pr.jij{font-weight:700}.pr.jij .pb i{background:var(--accent)}.pp{text-align:right;font-variant-numeric:tabular-nums}
 .mail{background:var(--accent);color:var(--accent-ink)}.c .push{display:block;width:100%;margin:0 0 12px;padding:14px 16px;font-size:16px;font-weight:700;background:var(--accent);color:var(--accent-ink)}.tg{background:#229ED9;color:#fff}.wa{background:#25D366;color:#06301a}.nee{background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
 #f{display:flex;gap:10px;align-items:center}
 .ux-invoer-vast #f{position:fixed;left:0;right:0;bottom:0;z-index:4;background:var(--bg);border-top:1px solid var(--line);padding:12px max(16px,calc(50% - 360px)) calc(12px + env(safe-area-inset-bottom))}
@@ -111,6 +113,8 @@ function weg(){var a=L.querySelectorAll('.k,.c');for(var i=0;i<a.length;i++)a[i]
 function knoppen(k){if(!k||!k.length)return;var d=D.createElement('div');d.className='k';k.forEach(function(t){var b=D.createElement('button');b.type='button';b.textContent=t;b.onclick=function(){zeg(t,1)};d.appendChild(b)});L.appendChild(d);onder()}
 function dots(){var d=D.createElement('div');d.className='m b dots';d.innerHTML='<i></i><i></i><i></i>';L.appendChild(d);onder();return d}
 function bewaar(){try{localStorage.setItem('wam_lopend',JSON.stringify({sid:W.sid,tok:W.tok,t:Date.now(),msgs:msgs.slice(-30)}))}catch(e){}}
+function esc2(t){var x=D.createElement('div');x.textContent=t;return x.innerHTML}
+function uitslag(p){var d=D.createElement('div');d.className='pu';var h='<div class="pt">'+W.ui.uitslag.replace('{n}',p.n)+'</div>';p.opties.forEach(function(o){h+='<div class="pr'+(o.jij?' jij':'')+'"><span>'+esc2(o.k)+(o.jij?' ✓':'')+'</span><span class="pb"><i style="width:0" data-w="'+o.p+'"></i></span><span class="pp">'+o.p+'%</span></div>'});d.innerHTML=h;L.appendChild(d);setTimeout(function(){d.querySelectorAll('i[data-w]').forEach(function(i){i.style.width=i.getAttribute('data-w')+'%'})},30);onder()}
 function b64(x){x=x.replace(/-/g,'+').replace(/_/g,'/');x+='='.repeat((4-x.length%4)%4);var r=atob(x),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return a}
 function meldMe(b){b.disabled=true;bk('contact_push_tik');navigator.serviceWorker.register('/sw.js').then(function(){return navigator.serviceWorker.ready}).then(function(reg){return reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64(W.vapid)})}).then(function(sub){post('push',{sid:W.sid,tok:W.tok,sub:sub.toJSON()},function(j){if(j&&j.ok){weg();bericht('b',j.x);msgs.push({r:'b',x:j.x});bewaar()}else{b.disabled=false}})}).catch(function(){b.disabled=false;bk('contact_push_nee')})}
 function contact(c){var d=D.createElement('div');d.className='c';var kp=('serviceWorker' in navigator)&&('PushManager' in window)&&!!W.vapid&&c.some(function(o){return o.soort==='push'});var h='<p>'+(kp?W.ui.viaPush:W.ui.via)+'</p>'+(kp?'<button class="push" type="button">'+W.ui.push+'</button>':'')+'<form><input type="email" inputmode="email" autocomplete="email" placeholder="'+W.ui.mailPh+'"><button class="mail" type="submit">'+W.ui.mailKnop+'</button></form><div class="r">';
@@ -121,7 +125,7 @@ d.querySelectorAll('a[data-e]').forEach(function(a){a.onclick=function(){bk(a.ge
 d.querySelector('.nee').onclick=function(){bk('contact_nee');d.remove()}}
 function zeg(t,isKnop){t=String(t||'').trim();if(!t||bezig)return;weg();bericht('u',t);msgs.push({r:'u',x:t});bewaar();I.value='';bezig=1;S.disabled=true;var dd=dots();
 post('zeg',isKnop?{sid:W.sid,tok:W.tok,knop:t}:{sid:W.sid,tok:W.tok,x:t},function(j){dd.remove();bezig=0;S.disabled=false;tBot=Date.now();typte=0;
-if(!j||!j.ok){bericht('b',W.ui.fout);return}bericht('b',j.x);msgs.push({r:'b',x:j.x,k:j.knoppen});bewaar();if(j.contact)contact(j.contact);knoppen(j.knoppen)})}
+if(!j||!j.ok){bericht('b',W.ui.fout);return}if(j.peiling)uitslag(j.peiling);bericht('b',j.x);msgs.push({r:'b',x:j.x,k:j.knoppen});bewaar();if(j.contact)contact(j.contact);knoppen(j.knoppen)})}
 F.onsubmit=function(e){e.preventDefault();zeg(I.value,0)};
 I.addEventListener('input',function(){if(!typte){typte=1;ev('typt')}});
 var k0=D.getElementById('k0');if(k0)k0.querySelectorAll('button').forEach(function(b){b.onclick=function(){zeg(b.textContent,1)}});
