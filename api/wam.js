@@ -197,10 +197,15 @@ export default async function handler(req, res) {
       res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(await W.standHtml());
     }
     if (op === 'cijfers') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.cijfers(Math.min(14, Number(q('dagen')) || 3))), kostVandaag: await W.kostVandaag() }); }
+    // gedeelde team-sleutel (SHOP_SLEUTEL, header x-shop-sleutel): de dagelijkse WAM-kopieën in propellerads-mcp koppelen zo hun nieuwe banners
+    const metSleutel = !!process.env.SHOP_SLEUTEL && req.headers['x-shop-sleutel'] === process.env.SHOP_SLEUTEL;
+    if (op === 'wamtitels') { if (!beschermd(host) && !metSleutel) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, titels: await W.titelHooks() }); }
     if (op === 'hookzet') {
-      if (!beschermd(host)) return res.status(404).send('Niet gevonden');
-      let l = []; try { l = JSON.parse(q('j') || '[]'); } catch (e) { return res.status(400).json({ ok: false, fout: 'j is geen JSON' }); }
-      const uit = []; for (const x of (Array.isArray(l) ? l : []).slice(0, 80)) { if (!HOOKS[x.hook]) { uit.push({ b: x.b, fout: 'onbekende hook' }); continue; } const t = hookTekst(x.hook, x.taal || 'en'); uit.push({ b: x.b, ok: await W.zetHook(x.b, { hook: x.hook, familie: HOOKS[x.hook].familie, tekst: String(x.tekst || (t && t.titel) || '').slice(0, 80), taal: x.taal || 'en', camp: x.c || '' }) }); }
+      if (!beschermd(host) && !metSleutel) return res.status(404).send('Niet gevonden');
+      let l = []; if (req.method === 'POST') { const b = leesBody(req); l = Array.isArray(b) ? b : (b.j || []); } else { try { l = JSON.parse(q('j') || '[]'); } catch (e) { return res.status(400).json({ ok: false, fout: 'j is geen JSON' }); } }
+      const titels = (Array.isArray(l) && l.some(x => x && !x.hook && x.titel)) ? await W.titelHooks() : {};
+      for (const x of (Array.isArray(l) ? l : [])) if (x && !x.hook && x.titel && titels[x.titel]) { x.hook = titels[x.titel].hook; x.taal = x.taal || titels[x.titel].taal; x.tekst = x.tekst || x.titel; }
+      const uit = []; for (const x of (Array.isArray(l) ? l : []).slice(0, 80)) { if (!HOOKS[x.hook]) { uit.push({ b: x.b, fout: 'onbekende hook' }); continue; } const t = hookTekst(x.hook, x.taal || 'en'); const tekst = String(x.tekst || (t && t.titel) || '').slice(0, 80); uit.push({ b: x.b, ok: await W.zetHook(x.b, { hook: x.hook, familie: HOOKS[x.hook].familie, tekst, taal: x.taal || 'en', camp: x.c || '' }) }); if (x.tekst) await W.onthoudTitel(tekst, { hook: x.hook, taal: x.taal || 'en', knop: String(x.knop || (t && t.knop) || '').slice(0, 30) }); }
       return res.status(200).json({ ok: true, uit });
     }
     if (op === 'gesprekken') {
