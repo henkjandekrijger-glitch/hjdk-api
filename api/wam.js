@@ -137,7 +137,9 @@ d.querySelectorAll('a[data-e]').forEach(function(a){a.onclick=function(){bk(a.ge
 d.querySelector('.nee').onclick=function(){bk('contact_nee');d.remove()}}
 function zeg(t,isKnop){t=String(t||'').trim();if(!t||bezig)return;weg();bericht('u',t);msgs.push({r:'u',x:t});bewaar();I.value='';bezig=1;S.disabled=true;var dd=dots();
 post('zeg',isKnop?{sid:W.sid,tok:W.tok,knop:t}:{sid:W.sid,tok:W.tok,x:t},function(j){dd.remove();bezig=0;S.disabled=false;tBot=Date.now();typte=0;
-if(!j||!j.ok){bericht('b',W.ui.fout);return}if(j.cpil)W.cpil=j.cpil;if(j.peiling)uitslag(j.peiling);bericht('b',j.x);msgs.push({r:'b',x:j.x,k:j.knoppen});bewaar();if(j.contact)contact(j.contact);knoppen(j.knoppen)})}
+if(!j||!j.ok){bericht('b',W.ui.fout);return}if(j.cpil)W.cpil=j.cpil;if(j.peiling)uitslag(j.peiling);bericht('b',j.x);msgs.push({r:'b',x:j.x,k:j.knoppen});if(j.match){bericht('b',j.match);msgs.push({r:'b',x:j.match,k:j.knoppen})}bewaar();if(j.contact)contact(j.contact);knoppen(j.knoppen)})}
+var nIn=0;function inbox(){if(!W.sid||bezig||D.visibilityState!=='visible')return;nIn++;post('inbox',{sid:W.sid,tok:W.tok},function(j){if(!j||!j.items||!j.items.length)return;weg();j.items.forEach(function(it){bericht('b',it.x);msgs.push({r:'b',x:it.x,k:it.k})});bewaar();knoppen(j.items[j.items.length-1].k)})}
+setTimeout(inbox,1500);setInterval(function(){if(nIn<40||nIn%3===0)inbox();else nIn++},20000);
 F.onsubmit=function(e){e.preventDefault();zeg(I.value,0)};
 I.addEventListener('input',function(){if(!typte){typte=1;ev('typt')}});
 var k0=D.getElementById('k0');if(k0)k0.querySelectorAll('button').forEach(function(b){b.onclick=function(){zeg(b.textContent,1)}});
@@ -193,6 +195,7 @@ export default async function handler(req, res) {
     if (op === 'pushinhoud') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(await W.pushInhoud(q('e'))); }
     if (op === 'sw') { res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('cache-control', 'no-cache'); res.setHeader('service-worker-allowed', '/'); return res.status(200).send(PUSH.SW); }
     if (op === 'ev') { const b = leesBody(req); return res.status(200).json(await W.gebeurtenis(b.sid, b.tok, String(b.e || ''), b.d || {})); }
+    if (op === 'inbox') { const b = leesBody(req); return res.status(200).json(await W.inbox(b.sid, b.tok)); }
     if (op === 'beeld') {
       const img = await beeld(q('h'), q('t') || 'en', q('v') === 'icon' ? 'icon' : 'img'); const buf = Buffer.from(await img.arrayBuffer());
       res.setHeader('content-type', 'image/png'); res.setHeader('cache-control', 'public, max-age=86400, s-maxage=604800'); return res.status(200).send(buf);
