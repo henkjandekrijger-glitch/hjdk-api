@@ -45,7 +45,7 @@
 //   /cm.js                              CLICKMIND in één regel (uitkomsten, mensmeter bij betaald verkeer, lerende modal)
 //   /mmm.js                             DE LERENDE MODAL (lib/modal.js): <script src="https://whichtobuy.best/mmm.js" data-site="<site>" async></script>; testen met ?mmm=<arm-id> in de pagina-URL
 //   /api/mm/modal?site=&q=&c=&v=&mob=   beslissing per paginabezoek (e-mail, andere site of niets); /api/mm/modalev?mid=&e=toon|klik|sluit|hoofd; /api/mm/modalmail (POST)
-//   /api/mm/proef?site=&c=  beslissing per bezoeker voor alle onderdelen van de proef; /api/mm/proefev (POST) zie/stap; /api/mm/proefstand?site=[&vorm=tekst]; /api/mm/proefzet?site=&aan=&ronde=1&j= (beschermd) — lib/proef.js
+//   /api/mm/proefkies?site=&c=  beslissing per bezoeker voor alle onderdelen van de proef; /api/mm/proefev (POST) zie/stap; /api/mm/proefstand?site=[&vorm=tekst]; /api/mm/proefzet?site=&aan=&ronde=1&j= (beschermd) — lib/proef.js
 //   /api/mm/modalbeheer[?site=][&j=<json>][&mail=<lijst>&formaat=csv]   instellingen, stand en adressen (beschermde host)
 //   /api/mm/zones?net=mondiad&dagen=3   oordeel per zone (zelfde vorm als rereview /api/b/zones, leesbaar voor de Mondiad-wacht)
 //   /api/mm/patronen?dagen=1            botfarms: vingerafdrukken in veel zones of netwerken
@@ -189,10 +189,10 @@ export default async function handler(req, res) {
       const c = leesCookie(req, 'mmp'); if (/^[0-9a-f]{16}$/.test(c)) { try { await kv.set('mm:rtuit:' + c, 1, { ex: 400 * 86400 }); } catch (e) {} }
       return res.status(200).json({ ok: true, afgemeld: true });
     }
-    if (op === 'proef' || op === 'proefev' || op === 'proefstand' || op === 'proefzet') { // Clickmind-proeven (lib/proef.js, 10 nov)
+    if (op === 'proefkies' || op === 'proefev' || op === 'proefstand' || op === 'proefzet') { // Clickmind-proeven (lib/proef.js, 10 nov)
       cors(res); res.setHeader('cache-control', 'no-store'); if (req.method === 'OPTIONS') return res.status(204).end();
       const PF = await import('../lib/proef.js');
-      if (op === 'proef') return res.status(200).json(await PF.proefBeslis(kv, { site: q('site'), ctx: q('c') }).catch(() => ({ ok: false })));
+      if (op === 'proefkies') return res.status(200).json(await PF.proefBeslis(kv, { site: q('site'), ctx: q('c') }).catch(() => ({ ok: false })));
       if (op === 'proefev') { const b = req.method === 'POST' ? (leesJson(req.body) || {}) : Object.fromEntries(url.searchParams); return res.status(200).json(await PF.proefEv(kv, b).catch(() => ({ ok: false }))); }
       if (op === 'proefstand') { const s = await PF.proefStand(kv, q('site') || 'kadoly'); if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(PF.proefTekst(s)); } return res.status(200).json(s); }
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
@@ -742,7 +742,7 @@ D.addEventListener('change',function(e){var t=e.target;if(t&&(t.type==='radio'||
 D.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a,button,[role=button],input[type=submit],label,[data-method],[class*=pay-opt],[class*=method]');if(!a)return;var t=((a.innerText||a.value||'')+' '+(a.id||'')+' '+String(a.className||'')+' '+(a.getAttribute('data-method')||'')).toLowerCase();if(/ideal|wero|paypal|creditcard|betaalpas|klarna|bancontact|apple pay|google pay|andere betaal/.test(t)&&!/betalen\b/.test(t))stap('methode');if(a.tagName!=='LABEL'&&/betalen|pay now|bestelling plaatsen|place order/.test(t)&&!/snel afrekenen/.test(t))stap('betaal')},true);
 W.addEventListener('blur',function(){var f=D.activeElement;if(f&&f.tagName==='IFRAME'){var n=((f.src||'')+' '+(f.name||'')+' '+(f.title||'')).toLowerCase();if(/paypal/.test(n))stap('betaal');else if(/stripe|klarna/.test(n))stap('methode')}})}
 function start(){if(gestart)return;gestart=1;zet();var klaar=function(){meld();q(function(){D.dispatchEvent(new CustomEvent('cm:proef',{detail:P.v}))});if(W.MutationObserver){var mo=new MutationObserver(later);mo.observe(D.body||h,{childList:true,subtree:true});setTimeout(function(){mo.disconnect()},10000)}};if(D.readyState==='loading')D.addEventListener('DOMContentLoaded',klaar);else klaar();stappen()}
-if(P)start();else if(W.fetch){fetch(O+'/api/mm/proef?site='+encodeURIComponent(site)+'&c='+ctx,{credentials:'omit'}).then(function(r){return r.json()}).then(function(j){if(j&&j.ok&&j.aan&&j.pid){P={pid:j.pid,d:j.d,r:j.r,v:j.v,t:Date.now()};ls(LK,JSON.stringify(P));start()}else h.classList.remove('cm-wacht')})['catch'](function(){h.classList.remove('cm-wacht')})}
+if(P)start();else if(W.fetch){fetch(O+'/api/mm/proefkies?site='+encodeURIComponent(site)+'&c='+ctx,{credentials:'omit'}).then(function(r){return r.json()}).then(function(j){if(j&&j.ok&&j.aan&&j.pid){P={pid:j.pid,d:j.d,r:j.r,v:j.v,t:Date.now()};ls(LK,JSON.stringify(P));start()}else h.classList.remove('cm-wacht')})['catch'](function(){h.classList.remove('cm-wacht')})}
 }catch(e){q(function(){document.documentElement.classList.remove('cm-wacht')})}})();`;
 const CM_JS = MMU_JS + '\n(function(){try{var cs=document.currentScript,u=new URL(location.href).searchParams;window.__cmMeet=!(cs&&cs.getAttribute("data-meet")==="0")&&!!(u.get("zone")||u.get("z")||u.get("zoneid")||u.get("subid")||u.get("clickid")||u.get("mmc"))}catch(e){}})();\nif(window.__cmMeet){' + MM_JS + '}\n' + MMM_JS + '\n' + RT_JS + '\n' + PF_JS;
 
