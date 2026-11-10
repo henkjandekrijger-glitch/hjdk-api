@@ -937,5 +937,16 @@
   "effect": "midden",
   "moeite": 2,
   "meten": "llm"
+ },
+ {
+  "id": "verzekeringen-bronjaar-provisie",
+  "les": "Bij verzekeringsgidsen polisjaar, premiegrondslag en broncontrole apart tonen; ontbrekende gegevens onbekend houden. Publiek affiliateprogramma is geen eigen toelating, lead, verkoop of vergunning.",
+  "kanaal": "beide",
+  "bewijs": "10 nov: 72 product/dekkingsvarianten, 22 aanbieders, 20 soorten; alleen 2 zorgpremies 2027 bronbevestigd. Awin8558 publiceert 23,50 maar lijstlabels2025/26; Awin8601 noemt historisch2025. DSW en Stad Holland bevestigen173,25/176,50 en eigenrisico390 tegenover wettelijk400. Geen omzet of groeieffect gemeten.",
+  "bron": "https://keuzehulp.best/verzekeringen; https://www.afm.nl/nl-nl/sector/themas/dienstverlening-aan-consumenten/financiele-producten/vergelijkingssites",
+  "sterkte": 3,
+  "moeite": 2,
+  "meten": "gsc",
+  "risico": "Geen automatische persoonlijke productaanbeveling of geactiveerde provisie zonder passende contracten en AFM-inrichting."
  }
 ]

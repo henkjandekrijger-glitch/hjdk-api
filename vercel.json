@@ -191,9 +191,53 @@
     {
       "path": "/api/gids?op=vraagkansen&vers=1",
       "schedule": "20 0 * * *"
+    },
+    {
+      "path": "/api/verzekeringen?op=controle",
+      "schedule": "15 7 * * *"
     }
   ],
   "rewrites": [
+    {
+      "source": "/verzekeringen",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "/api/verzekeringen?op=page"
+    },
+    {
+      "source": "/verzekeringen/partners",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "/api/verzekeringen?op=partners"
+    },
+    {
+      "source": "/verzekeringen/status",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "/api/verzekeringen?op=status&format=html"
+    },
+    {
+      "source": "/verzekeringen/bron/:id",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "/api/verzekeringen?op=out&id=:id"
+    },
     {
       "source": "/",
       "has": [
@@ -1210,6 +1254,15 @@
           "value": "noindex"
         }
       ]
+    },
+    {
+      "source": "/verzekeringen",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "index,follow"
+        }
+      ]
     }
   ],
   "functions": {
@@ -1266,6 +1319,9 @@
     },
     "api/wam.js": {
       "maxDuration": 120
+    },
+    "api/verzekeringen.js": {
+      "maxDuration": 180
     }
   },
   "redirects": [
@@ -1596,6 +1652,17 @@
         }
       ],
       "destination": "/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/keuzehulp/verzekeringen",
+      "has": [
+        {
+          "type": "host",
+          "value": "keuzehulp.best"
+        }
+      ],
+      "destination": "/verzekeringen",
       "permanent": true
     }
   ]
