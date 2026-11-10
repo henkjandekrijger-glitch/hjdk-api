@@ -79,3 +79,29 @@ test('Curaçao-dagtelling loopt niet op UTC vooruit',()=>{assert.equal(insurance
 test('publicatie heeft één centrale gids, dagelijkse controle en vaste canonical',async()=>{
  const config=JSON.parse(await readFile(new URL('../vercel.json',import.meta.url),'utf8'));assert.ok(config.rewrites.some(x=>x.source==='/verzekeringen'&&x.destination==='/api/verzekeringen?op=page'));assert.ok(config.crons.some(x=>x.path==='/api/verzekeringen?op=controle'&&x.schedule==='15 7 * * *'));assert.ok(renderInsurance(data,null).includes('rel="canonical" href="https://keuzehulp.best/verzekeringen"'));
 });
+function clientHarness(){
+ class Element{constructor(props={}){Object.assign(this,{dataset:{},handlers:{},hidden:false,value:'',textContent:'',innerHTML:'',attrs:{}},props);}addEventListener(k,fn){this.handlers[k]=fn;}setAttribute(k,v){this.attrs[k]=v;}removeAttribute(k){delete this.attrs[k];}focus(){}showModal(){this.open=true;}close(){this.open=false;}}
+ const ids=Object.fromEntries([...INSURANCE_CLIENT.matchAll(/getElementById\('([^']+)'\)/g)].map(m=>[m[1],new Element()]));ids['insurance-data'].textContent=JSON.stringify({policies:data.policies});
+ const rows=data.policies.map(p=>new Element({dataset:{policy:p.id,year:String(p.year||''),search:[p.carrier,p.name,p.coverage,p.kind].join(' ').toLowerCase()}}));
+ const sections=INSURANCE_KINDS.map(k=>{const el=new Element({dataset:{insuranceKind:k.id}});el.querySelectorAll=()=>rows.filter(row=>data.policies.find(p=>p.id===row.dataset.policy).kind===k.id);return el;});
+ const filters=['all',...INSURANCE_KINDS.map(k=>k.id)].map(kind=>new Element({dataset:{kindFilter:kind}}));
+ const picks=data.policies.map(p=>new Element({dataset:{pickPolicy:p.id}}));
+ const document={getElementById:id=>ids[id],querySelectorAll:q=>q==='[data-insurance-kind]'?sections:q==='[data-kind-filter]'?filters:q==='[data-pick-policy]'?picks:[]};
+ vm.runInNewContext(INSURANCE_CLIENT,{document,location:{search:'?qa=updates'},URLSearchParams,Intl,Set,JSON,window:{print(){}},setTimeout:()=>1,clearTimeout(){},navigator:{sendBeacon(){throw Error('QA mag niet meten');}}});
+ return{ids,rows,filters,picks,visible:()=>rows.filter(r=>!r.hidden),clickFilter:kind=>filters.find(x=>x.dataset.kindFilter===kind).handlers.click(),pick:id=>picks.find(x=>x.dataset.pickPolicy===id).handlers.click()};
+}
+test('echte clientcode toont 2027-rijen nadat eerder op CZ en auto is gefilterd',()=>{
+ const ui=clientHarness();ui.ids['insurance-search'].value='CZ';ui.ids['insurance-search'].handlers.input();assert.equal(ui.visible().length,3);
+ ui.clickFilter('auto');assert.equal(ui.visible().length,9);assert.equal(ui.ids['insurance-search'].value,'');
+ ui.ids['insurance-year'].value='2027';ui.ids['insurance-year'].handlers.change();assert.equal(ui.visible().length,2);
+ const carriers=ui.visible().map(r=>data.policies.find(p=>p.id===r.dataset.policy).carrier).sort();assert.deepEqual(carriers,['DSW','Stad Holland']);
+});
+test('echte clientcode vergelijkt, weigert gemengde soorten en kan daarna opnieuw kiezen',()=>{
+ const ui=clientHarness(),zorg=data.policies.filter(p=>p.carrier==='CZ'),auto=data.policies.filter(p=>p.kind==='auto');
+ ui.pick(zorg[0].id);ui.pick(zorg[1].id);assert.equal(ui.ids['insurance-compare'].disabled,false);ui.ids['insurance-compare'].handlers.click();
+ assert.equal(ui.ids['insurance-dialog'].open,true);assert.ok(ui.ids['insurance-comparison'].innerHTML.includes(zorg[0].name));assert.ok(ui.ids['insurance-comparison'].innerHTML.includes('2026, referentie'));
+ ui.ids['insurance-close'].handlers.click();assert.equal(ui.ids['insurance-dialog'].open,false);
+ ui.pick(auto[0].id);assert.match(ui.ids['insurance-selection-message'].textContent,/dezelfde verzekeringssoort/);
+ ui.ids['insurance-clear'].handlers.click();assert.equal(ui.ids['insurance-tray'].hidden,true);
+ ui.pick(auto[0].id);ui.pick(auto[1].id);ui.ids['insurance-compare'].handlers.click();assert.ok(ui.ids['insurance-comparison'].innerHTML.includes(auto[0].name));
+});
