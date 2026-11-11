@@ -51,7 +51,9 @@ function ldJson(g, items, A) {
   const faq = g.faq && g.faq.length ? { '@type': 'FAQPage', mainEntity: g.faq.map(f => ({ '@type': 'Question', name: f.v, acceptedAnswer: { '@type': 'Answer', text: f.a } })) } : null;
   const kruim = { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Kadoly gids', item: HOST + '/' }, { '@type': 'ListItem', position: 2, name: g.h1, item: HOST + '/' + g.slug }] };
   const art = { '@type': 'Article', headline: g.h1, dateModified: g.bijgewerkt, author: { '@id': HOST + '/#org' }, publisher: { '@id': HOST + '/#org' }, mainEntityOfPage: HOST + '/' + g.slug, citation:g.bronnen?.map(id => BRONNEN[id]?.url).filter(Boolean) };
-  const alleL = A && A.n ? { '@type': 'ItemList', name: A.def.kop + ' bij Kadoly', numberOfItems: A.totaal, itemListElement: A.lijst.slice(0, 50).map((i, k) => ({ '@type': 'ListItem', position: k + 1, name: i.t, url: 'https://kadoly.com/product/' + i.id })) } : null;
+  // Per gids uitrollen: bestaande vergelijkbare proef-/controlepagina's blijven gelijk.
+  const schemaAlle = A && (g.alleSchemaVolledig ? A.groepen.flatMap(gr => gr.items) : A.lijst.slice(0, 50));
+  const alleL = A && A.n ? { '@type': 'ItemList', name: A.def.kop + ' bij Kadoly', numberOfItems: g.alleSchemaVolledig ? schemaAlle.length : A.totaal, itemListElement: schemaAlle.map((i, k) => ({ '@type': 'ListItem', position: k + 1, name: i.t, url: 'https://kadoly.com/product/' + i.id })) } : null;
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': [org, art, kruim, lijst, alleL, faq].filter(Boolean) }).replace(/</g, '\\u003c');
 }
 
@@ -660,6 +662,7 @@ export default async function handler(req, res) {
     return res.status(200).send(await gidsPagina(g));
   } catch (e) { res.setHeader('cache-control', 'no-store'); return res.status(500).send('Er ging iets mis: ' + esc(String(e && e.message || e).slice(0, 120))); }
 }
+
 
 
 
