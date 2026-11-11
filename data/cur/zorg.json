@@ -1,6 +1,6 @@
 {
  "id": "zorg",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-11",
  "onderwerp": {
   "nl": "arts, ziekenhuis of apotheek",
   "en": "doctor, hospital or pharmacy",
@@ -256,11 +256,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Spoed 24/7, nummer 910",
-     "en": "24/7 ER, dial 910",
-     "de": "Notaufnahme rund um die Uhr, Nummer 910",
-     "es": "Urgencias las 24 horas, marca 910",
-     "pt": "Pronto-socorro 24 horas, ligue 910"
+     "nl": "Spoed 24/7: levensbedreigend 910, ambulance 912",
+     "en": "24/7 ER: life threatening 910, ambulance 912",
+     "de": "Notaufnahme rund um die Uhr: lebensbedrohlich 910, Krankenwagen 912",
+     "es": "Urgencias 24 horas: riesgo vital 910, ambulancia 912",
+     "pt": "Pronto-socorro 24 horas: risco de vida 910, ambulância 912"
     },
     {
      "nl": "Enige IC van het eiland",
@@ -275,6 +275,13 @@
      "de": "Dekompressionskammer, bis zu 10 Personen",
      "es": "Cámara de descompresión, hasta 10 personas",
      "pt": "Câmara de descompressão, até 10 pessoas"
+    },
+    {
+     "nl": "WhatsApp +5999 745 0000 voor afspraak, uitslag of herhaalrecept",
+     "en": "WhatsApp +5999 745 0000 for appointments, results or repeat prescriptions",
+     "de": "WhatsApp +5999 745 0000 für Termine, Befunde oder Folgerezepte",
+     "es": "WhatsApp +5999 745 0000 para citas, resultados o recetas repetidas",
+     "pt": "WhatsApp +5999 745 0000 para consultas, resultados ou receitas repetidas"
     }
    ],
    "scores": [],
@@ -297,7 +304,9 @@
     "https://www.curacao.com/en/questions/health-and-vaccinations/how-many-hospitals-does-curacao-have",
     "https://relaxedcuracao.com/en/static/emergency",
     "https://www.gov.uk/foreign-travel-advice/curacao/health",
-    "https://www.mycuracaoguide.com/about-curacao/healthcare"
+    "https://www.mycuracaoguide.com/about-curacao/healthcare",
+    "https://www.cmc.cw/emergency/?lang=en",
+    "https://www.cmc.cw/news/connect-with-all-cmc-clinics-via-whatsapp/?lang=en"
    ]
   },
   {
@@ -365,7 +374,7 @@
     "es": "hospital privado",
     "pt": "hospital particular"
    },
-   "plaats": null,
+   "plaats": "Willemstad",
    "tags": [
     "ziekenhuis"
    ],
@@ -377,6 +386,13 @@
      "de": "Fachärzte und allgemeine Versorgung",
      "es": "Especialistas y atención general",
      "pt": "Especialistas e atendimento geral"
+    },
+    {
+     "nl": "Directeur-generaal Elaine Striebeek sinds 1 januari 2026",
+     "en": "Director General Elaine Striebeek since 1 January 2026",
+     "de": "Generaldirektorin Elaine Striebeek seit 1. Januar 2026",
+     "es": "Directora general Elaine Striebeek desde el 1 de enero de 2026",
+     "pt": "Diretora geral Elaine Striebeek desde 1 de janeiro de 2026"
     }
    ],
    "scores": [],
@@ -396,7 +412,8 @@
    },
    "bronnen": [
     "https://www.curacao.com/en/questions/health-and-vaccinations/how-many-hospitals-does-curacao-have",
-    "https://www.gov.uk/foreign-travel-advice/curacao/health"
+    "https://www.gov.uk/foreign-travel-advice/curacao/health",
+    "https://www.curacaochronicle.com/post/local/elaine-striebeek-appointed-new-director-general-of-antillean-adventist-hospital"
    ]
   },
   {
@@ -478,11 +495,11 @@
      "pt": "Fins de semana e feriados 24 horas"
     },
     {
-     "nl": "Tel. +5999 462 9252",
-     "en": "Phone +5999 462 9252",
-     "de": "Telefon +5999 462 9252",
-     "es": "Teléfono +5999 462 9252",
-     "pt": "Telefone +5999 462 9252"
+     "nl": "Tel. +5999 462 9252 of kort 9252",
+     "en": "Tel. +5999 462 9252 or short 9252",
+     "de": "Tel. +5999 462 9252 oder kurz 9252",
+     "es": "Tel. +5999 462 9252 o corto 9252",
+     "pt": "Tel. +5999 462 9252 ou curto 9252"
     }
    ],
    "scores": [],
@@ -503,7 +520,8 @@
    "bronnen": [
     "https://relaxedcuracao.com/en/static/emergency",
     "https://www.curacao.com/en/questions/health-and-vaccinations/where-should-i-go-if-i-need-medical-attention-while-visiting-curacao",
-    "https://www.mycuracaoguide.com/about-curacao/healthcare"
+    "https://www.mycuracaoguide.com/about-curacao/healthcare",
+    "https://relaxedcuracao.com/en/static/emergency/"
    ]
   },
   {
@@ -552,6 +570,13 @@
      "de": "WhatsApp +599 9 524 2944",
      "es": "WhatsApp +599 9 524 2944",
      "pt": "WhatsApp +599 9 524 2944"
+    },
+    {
+     "nl": "Avond, weekend en huisbezoek met toeslag",
+     "en": "Surcharge for evenings, weekends and house calls",
+     "de": "Aufpreis für Abend, Wochenende und Hausbesuch",
+     "es": "Recargo por tarde, fin de semana y visita a domicilio",
+     "pt": "Taxa extra à noite, fim de semana e visita domiciliar"
     }
    ],
    "scores": [],
@@ -942,6 +967,13 @@
      "de": "Plan über das Hotel oder Botika di Servisio",
      "es": "Horarios a través del hotel o Botika di Servisio",
      "pt": "Escala pelo hotel ou pela Botika di Servisio"
+    },
+    {
+     "nl": "Van 0:00 tot 8:00 dient de dienstapotheek van de vorige avond; rooster op botikadiservisio.com",
+     "en": "From midnight to 8:00 the previous evening's duty pharmacy serves; schedule on botikadiservisio.com",
+     "de": "Von 0 bis 8 Uhr ist die Notdienstapotheke vom Vorabend zuständig; Plan auf botikadiservisio.com",
+     "es": "De 0:00 a 8:00 atiende la farmacia de guardia de la noche anterior; horario en botikadiservisio.com",
+     "pt": "Das 0:00 às 8:00 atende a farmácia de plantão da noite anterior; escala em botikadiservisio.com"
     }
    ],
    "scores": [],
@@ -961,7 +993,8 @@
    },
    "bronnen": [
     "https://relaxedcuracao.com/en/static/emergency",
-    "https://www.curacao.com/en/questions/health-and-vaccinations/are-there-pharmacies-available-in-curacao"
+    "https://www.curacao.com/en/questions/health-and-vaccinations/are-there-pharmacies-available-in-curacao",
+    "https://relaxedcuracao.com/en/static/emergency/"
    ]
   },
   {
@@ -1128,11 +1161,11 @@
     "pt": "Qual é o número de emergência em Curaçao?"
    },
    "a": {
-    "nl": "912 voor een ambulance, 911 voor politie en brandweer, 913 voor de kustwacht en 917 voor de toeristenpolitie.",
-    "en": "912 for an ambulance, 911 for police and fire, 913 for the Coast Guard and 917 for the tourist police.",
-    "de": "912 für einen Krankenwagen, 911 für Polizei und Feuerwehr, 913 für die Küstenwache und 917 für die Touristenpolizei.",
-    "es": "912 para una ambulancia, 911 para policía y bomberos, 913 para la Guardia Costera y 917 para la policía turística.",
-    "pt": "912 para ambulância, 911 para polícia e bombeiros, 913 para a Guarda Costeira e 917 para a polícia turística."
+    "nl": "912 voor een ambulance, 910 voor de spoedeisende hulp van het CMC, 911 voor politie en brandweer, 913 voor de kustwacht en 917 voor de toeristenpolitie.",
+    "en": "912 for an ambulance, 910 for the CMC emergency room, 911 for police and fire, 913 for the Coast Guard and 917 for the tourist police.",
+    "de": "912 für einen Krankenwagen, 910 für die Notaufnahme des CMC, 911 für Polizei und Feuerwehr, 913 für die Küstenwache und 917 für die Touristenpolizei.",
+    "es": "912 para una ambulancia, 910 para urgencias del CMC, 911 para policía y bomberos, 913 para la Guardia Costera y 917 para la policía turística.",
+    "pt": "912 para ambulância, 910 para o pronto-socorro do CMC, 911 para polícia e bombeiros, 913 para a Guarda Costeira e 917 para a polícia turística."
    }
   },
   {
