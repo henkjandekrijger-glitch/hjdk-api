@@ -144,7 +144,7 @@ d.querySelector('form').onsubmit=function(e){e.preventDefault();var v=d.querySel
 d.querySelectorAll('a[data-e]').forEach(function(a){a.onclick=function(){bk(a.getAttribute('data-e'))}});
 d.querySelector('.nee').onclick=function(){bk('contact_nee');d.remove()}}
 function zeg(t,isKnop){t=String(t||'').trim();if(!t||bezig)return;weg();bericht('u',t);msgs.push({r:'u',x:t});bewaar();I.value='';bezig=1;S.disabled=true;var dd=dots();
-post('zeg',isKnop?{sid:W.sid,tok:W.tok,knop:t}:{sid:W.sid,tok:W.tok,x:t},function(j){dd.remove();bezig=0;S.disabled=false;tBot=Date.now();typte=0;verwerk(j)})}
+post('zeg',isKnop?{sid:W.sid,tok:W.tok,knop:t}:{sid:W.sid,tok:W.tok,x:t},function(j){dd.remove();bezig=0;S.disabled=false;setTimeout(inbox,1200);tBot=Date.now();typte=0;verwerk(j)})}
 function verwerk(j){if(!j||!j.ok){bericht('b',W.ui.fout);return}if(j.cpil)W.cpil=j.cpil;if(j.peiling)uitslag(j.peiling);if(j.match){bericht('b',j.match);msgs.push({r:'b',x:j.match})}bericht('b',j.x);msgs.push({r:'b',x:j.x,k:j.knoppen});bewaar();if(j.contact)contact(j.contact);if(j.google&&W.gid)gKaart();knoppen(j.knoppen)}
 // Google One Tap (Henkjan 10 nov): het script laadt pas als er om contact gevraagd wordt; Google geeft een ondertekend token, de server controleert het
 var GL=0,GQ=[];function gsi(f){if(!W.gid)return;if(window.google&&google.accounts&&google.accounts.id){f();return}GQ.push(f);if(GL)return;GL=1;var sc=D.createElement('script');sc.src='https://accounts.google.com/gsi/client';sc.async=true;sc.onload=function(){try{google.accounts.id.initialize({client_id:W.gid,callback:gCred,auto_select:false,cancel_on_tap_outside:true,itp_support:true,use_fedcm_for_prompt:true,context:'use'})}catch(e){}GQ.splice(0).forEach(function(x){try{x()}catch(e){}})};D.head.appendChild(sc)}
