@@ -139,7 +139,7 @@ const mmdd = () => new Date().toISOString().slice(5, 10);
 const inSeizoen = t => { const n = mmdd(); return t.van <= t.tot ? n >= t.van && n <= t.tot : n >= t.van || n <= t.tot; };
 // vaste producten in de dagkeuze (10 nov, Henkjan: "Teveel kerst halveer en maak andere helft allemaal sinterklaas . VINDT DEMAND !"; Demand Radar NL:
 // sinterklaas cadeautjes 40.500 per maand, surprise knutselen 5.400). De shoptest in propellerads-mcp kiest daaruit met NIEUWKEUZE.
-const VAST_DAG = { '2026-11-10': ['oc_4174004652687361', 'oc_4174004537769985', 'oc_4174004527562753', 'oc_4174004519092225'] };
+const VAST_DAG = { '2026-11-11': ['oc_4174004527562753', 'oc_4174004652687361', 'oc_4174004537769985', 'oc_4174004519092225', 'oc_4174003416580097', 'oc_4173958884671489', 'oc_4174002184486913', 'oc_4173957649006593', 'oc_4174004320108545', 'oc_4174004650409987'], '2026-11-10': ['oc_4174004652687361', 'oc_4174004537769985', 'oc_4174004527562753', 'oc_4174004519092225'] }; // 11 nov (Henkjan: "Ga voor 20"): de 10 van vandaag, ook als ze al veelbelovend zijn, zodat ze eerst hun verkoopteksten krijgen
 function themaVan(it) { const s = (it.t + ' ' + it.s + ' ' + it.c).toLowerCase(); for (const [naam, t] of Object.entries(seed.themas)) if (t.woorden.some(w => s.includes(w))) return naam; return it.c || 'overig'; }
 function seizoen(it) { const s = (it.t + ' ' + it.s).toLowerCase(); let f = 1; for (const t of Object.values(seed.themas)) if (t.woorden.some(w => s.includes(w))) f = Math.max(f, inSeizoen(t) ? t.extra : (t.extra > 1.4 ? 0.4 : 1)); return f; } // buiten het seizoen zakt een seizoensproduct weg
 const engels = t => / (for|with|by|and|the|of|from) /i.test(' ' + t + ' ') && !/ (voor|met|van|en|de|het|op|uit|om) /i.test(' ' + t + ' '); // een deel van de shop is nog niet vertaald; die producten zetten we niet vooraan op een Nederlandse pagina
@@ -168,7 +168,7 @@ function jsonUitTekst(s) { const a = s.indexOf('{'); if (a < 0) return null; let
 // 10 advertenties van Claude volgens de tekstregels (lib/shoptekst.js), 3 dagen bewaard; hooguit 40 seconden per aanroep (150 bij een verse dagkeuze), de rest
 // houdt de sjablonen tot de volgende aanroep. Model: SHOP_VERKOOP_MODEL, anders Haiku (29 okt: tokens sparen; de keuring en de lessen uit de cijfers houden de kwaliteit).
 async function metVerkoop(lijst, budget = 40000) {
-  const t0 = Date.now(), alle = (lijst || []).filter(p => p && p.pid), todo = alle.filter(p => p.hoe === 'vast').concat(alle.filter(p => p.hoe !== 'vast')).slice(0, 90); let ai = 0; // 10 nov: vaste producten eerst, anders vielen ze buiten de 90
+  const t0 = Date.now(), alle = (lijst || []).filter(p => p && p.pid), vn = VAST_DAG[DAY()] || [], eerst = p => p.hoe === 'vast' || vn.includes(p.pid), todo = alle.filter(eerst).concat(alle.filter(p => !eerst(p))).slice(0, 90); let ai = 0; // 10 nov: vaste producten eerst, anders vielen ze buiten de 90
   const lessen = await kv.get('hjdk:shop:tekstlessen').catch(() => null); // beste en slechtste teksten van de PropellerAds-lus (lib/tekstleer.ts)
   for (let i = 0; i < todo.length && Date.now() - t0 < budget; i += 12) await Promise.all(todo.slice(i, i + 12).map(async p => { try { const a = await verkoopTeksten(kv, p, claudeJson, process.env.SHOP_VERKOOP_MODEL || HAIKU, lessen); if (a) { p.advertenties = a; ai++; } } catch (e) {} }));
   return ai;
