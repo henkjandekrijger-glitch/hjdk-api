@@ -948,5 +948,17 @@
   "moeite": 2,
   "meten": "gsc",
   "risico": "Geen automatische persoonlijke productaanbeveling of geactiveerde provisie zonder passende contracten en AFM-inrichting."
+ },
+ {
+  "id": "crawlstop-vaste-basislijn",
+  "les": "Meet een crawlinstorting tegen het niveau van vóór de instorting en houd dat vast. Een vergelijking met 'de drie weken ervoor' zakt mee met een lange instorting, zodat de stop vanzelf uitgaat terwijl Google nog steeds bijna niet leest. Hef de stop pas op als de crawl weer minstens de helft van het oude niveau haalt.",
+  "kanaal": "google",
+  "bewijs": "11 nov 2026: keuzehulp.best Googlebot 8 keer in 7 dagen (1 per dag sinds 21 okt), tegen 33 per 7 dagen vóór de instorting. De drieweekse basislijn was gezakt naar 26 en de mediaan naar 7, dus crawlStop ging op 11 nov uit en kzmaak bouwde 2 nieuwe pagina's. Nu een grendel in lib/organic.js (kv zicht:crawlstop:<site>).",
+  "bron": "https://hjdk-api-henq.vercel.app/api/zicht?op=crawl",
+  "datum": "2026-11-11",
+  "sterkte": 2,
+  "effect": "geen nieuwbouw in een stille crawlperiode die langer dan drie weken duurt",
+  "moeite": 1,
+  "meten": "proef kz-crawlgrendel-1111, /api/zicht?op=organisch"
  }
 ]
