@@ -237,7 +237,7 @@ export default async function handler(req, res) {
     if (op === 'inbox') { const b = leesBody(req); return res.status(200).json(await W.inbox(b.sid, b.tok)); }
     // testen van de chat met GET, alleen op de beschermde host en alleen voor testsessies (ctx.test)
     // nieuwe testsessie zonder HTML (alleen beschermde host): ?op=testsessie&o=<opener>&land=CA&stad=Montreal
-    if (op === 'testsessie' && beschermd(host)) { const st = await W.startSessie({ vid: randomBytes(8).toString('hex'), ctx: { test: true, taal: q('taal') || 'en', land: String(q('land') || 'US').toUpperCase().slice(0, 2), stad: String(q('stad') || '').slice(0, 40), tz: '', uur: 10, os: 'android', mobiel: true, app: '', asn: '', ref: '', openerTest: q('o') || undefined }, params: {} }); return res.status(200).json({ ok: true, sid: st && st.sid, tok: st && st.tok, opener: st && st.opener }); }
+    if (op === 'testsessie' && beschermd(host)) { const st = await W.startSessie({ vid: randomBytes(8).toString('hex'), ctx: { test: true, taal: q('taal') || 'en', land: String(q('land') || 'US').toUpperCase().slice(0, 2), stad: String(q('stad') || '').slice(0, 40), tz: '', uur: 10, os: 'android', mobiel: true, app: '', asn: '', ref: '', openerTest: q('o') || undefined, cq: q('cq') ? 1 : undefined }, params: {} }); return res.status(200).json({ ok: true, sid: st && st.sid, tok: st && st.tok, opener: st && st.opener }); }
     if (op === 'zegtest' && beschermd(host)) { const ss = await W.sessie(q('sid')); if (!ss || !(ss.ctx && ss.ctx.test)) return res.status(404).json({ ok: false }); return res.status(200).json(q('inbox') ? await W.inbox(q('sid'), q('tok')) : await W.zeg({ sid: q('sid'), tok: q('tok'), x: q('x') || undefined, knop: q('knop') || undefined, ip: 'test' })); }
     if (op === 'beeld') {
       const img = await beeld(q('h'), q('t') || 'en', q('v') === 'icon' ? 'icon' : 'img'); const buf = Buffer.from(await img.arrayBuffer());
@@ -300,6 +300,8 @@ export default async function handler(req, res) {
       const r = op === 'wareg' ? await W.waReg(b) : op === 'wain' ? await W.waIn(b) : await W.waUit(b);
       return res.status(r.fout === 'sleutel' ? 401 : 200).json(r);
     }
+    if (op === 'cq') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); res.setHeader('cache-control', 'no-store'); return res.status(200).json(await W.cqLijst()); }
+    if (op === 'cqantw') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.cqAntw({ sid: q('sid'), x: q('x'), k: q('k') })); }
     if (op === 'wastand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.waStand()); }
     if (op === 'stadstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.stadStand(q('land') ? String(q('land')).toUpperCase() : '')); }
     if (op === 'herkomst') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.herkomst(Number(q('n')) || 40)); }
