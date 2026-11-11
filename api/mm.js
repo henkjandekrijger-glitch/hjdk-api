@@ -191,7 +191,7 @@ export default async function handler(req, res) {
     }
     if (op === 'kadolychat') { // chat in de modal en op WhatsApp (lib/kadolychat.js, 11 nov)
       cors(res); res.setHeader('cache-control', 'no-store'); if (req.method === 'OPTIONS') return res.status(204).end(); if (req.method !== 'POST' && !beschermd(req)) return res.status(405).json({ ok: false });
-      const b = req.method === 'POST' ? (leesJson(req.body) || {}) : { vraag: q('vraag'), keuze: q('keuze'), kanaal: q('kanaal'), ctx: { titel: q('titel') || '', levering: q('levering') || '' } }; // GET alleen op de beschermde host, om te testen const { kadolyAntwoord } = await import('../lib/kadolychat.js'); const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim();
+      const b = req.method === 'POST' ? (leesJson(req.body) || {}) : { vraag: q('vraag'), keuze: q('keuze'), kanaal: q('kanaal'), ctx: { titel: q('titel') || '', levering: q('levering') || '' } }; /* GET alleen op de beschermde host, om te testen */ const { kadolyAntwoord } = await import('../lib/kadolychat.js'); const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim();
       return res.status(200).json(await kadolyAntwoord(kv, { vraag: b.vraag, hist: b.hist, kanaal: b.kanaal, ctx: b.ctx, keuze: b.keuze, ip }).catch(() => ({ ok: false })));
     }
     if (op === 'modaluur') { // uurupdate van de modal (11 nov), beschermde host; ?droog=1 bewaart het vergelijkpunt niet
