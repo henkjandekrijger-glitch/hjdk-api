@@ -216,7 +216,7 @@ function productKaart(x, slug, blok, eerste, nr) {
   const dat = leverDatum(x.lt); const href = `/naar/${encodeURIComponent(x.pid)}?g=${encodeURIComponent(slug)}&b=${blok}`;
   return `<article class="pk" id="p-${esc(x.pid)}"><a class="pk-img" href="${href}" rel="nofollow" tabindex="-1" aria-hidden="true">${x.img ? `<img src="${esc(x.img)}" width="120" height="120" alt="${esc(x.naam)}" ${eerste ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">` : ''}</a><div>
 <p class="pk-lab"><span class="pk-nr">${nr}</span>${esc(x.label)}${x.meest ? ' · meest aangeklikt door lezers' : ''}</p><h3>${esc(x.naam)}</h3>
-<p class="pk-prijs"><b>${euro(x.prijs + x.verzending)}</b> inclusief ${x.verzending ? euro(x.verzending) + ' verzending' : 'verzending'}${x.lt ? ` · <span class="pk-dag">in huis rond ${esc(nlDatum(dat))}</span>` : ''}</p>
+<p class="pk-prijs"><b>${euro(x.prijs + x.verzending)}</b> inclusief ${x.verzending ? euro(x.verzending) + ' verzending (eerste bestelling gratis verzonden: ' + euro(x.prijs) + ')' : 'verzending'}${x.lt ? ` · <span class="pk-dag">in huis rond ${esc(nlDatum(dat))}</span>` : ''}</p>
 <p>${esc(x.waarom)}</p>${x.beperking ? `<p class="pk-let"><b>Let op:</b> ${esc(x.beperking)}</p>` : ''}<a class="btn knop" href="${href}" rel="nofollow">Bekijk bij Kadoly</a></div></article>`;
 }
 
