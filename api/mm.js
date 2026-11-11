@@ -189,6 +189,11 @@ export default async function handler(req, res) {
       const c = leesCookie(req, 'mmp'); if (/^[0-9a-f]{16}$/.test(c)) { try { await kv.set('mm:rtuit:' + c, 1, { ex: 400 * 86400 }); } catch (e) {} }
       return res.status(200).json({ ok: true, afgemeld: true });
     }
+    if (op === 'modaluur') { // uurupdate van de modal (11 nov), beschermde host; ?droog=1 bewaart het vergelijkpunt niet
+      if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
+      const { modalUur } = await import('../lib/modal.js'); const r = await modalUur(kv, q('site') || 'kadoly', { bewaar: q('droog') !== '1' });
+      res.setHeader('cache-control', 'no-store'); if (q('vorm') === 'json') return res.status(200).json(r); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(r.tekst || r.fout || 'fout');
+    }
     if (op === 'proefkies' || op === 'proefev' || op === 'proefstand' || op === 'proefzet') { // Clickmind-proeven (lib/proef.js, 10 nov)
       cors(res); res.setHeader('cache-control', 'no-store'); if (req.method === 'OPTIONS') return res.status(204).end();
       const PF = await import('../lib/proef.js');
