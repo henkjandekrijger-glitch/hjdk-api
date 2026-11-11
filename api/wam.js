@@ -302,6 +302,9 @@ export default async function handler(req, res) {
     }
     if (op === 'cq') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); res.setHeader('cache-control', 'no-store'); return res.status(200).json(await W.cqLijst()); }
     if (op === 'cqantw') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.cqAntw({ sid: q('sid'), x: q('x'), k: q('k') })); }
+    if (op === 'waqr') { if (req.method !== 'POST') return res.status(405).end(); const r = await W.waQr(leesBody(req) || {}); return res.status(r.ok ? 200 : 401).json(r); }
+    if (op === 'watweede') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.waTweede({ aan: q('aan') === '1', nr: q('nr') })); }
+    if (op === 'waqrpagina') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(await W.waQrPagina()); }
     if (op === 'wastand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.waStand()); }
     if (op === 'stadstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.stadStand(q('land') ? String(q('land')).toUpperCase() : '')); }
     if (op === 'herkomst') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.herkomst(Number(q('n')) || 40)); }
