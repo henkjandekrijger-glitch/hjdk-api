@@ -18,22 +18,18 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - **Strategie van de dag** (Henkjan 19 okt: "Ik ga alle prijzen vandaag nog naar kostprijs brengen" en "En we kiezen strategieen iedere dag. Bijv iets heel goedkoops en dan een bundel laten maken die alles compenseert. Vooraf bundels samenstellen."): `auto` (standaard) kiest `kostprijs` zodra de helft van de catalogus geen 50 cent marge meer heeft; dan geen margefilter, wel 'niet duurder dan elders all-in'. Vastzetten: `/api/shop/kies?strategie=marge|kostprijs|auto` via de beschermde host. Volgende stap (voorstel): vooraf samengestelde bundels per merk (een keer verzending) als strategie 'lokker + bundel'; vraagt een bundellink in de shop.
 - **Slots**: eigen plafond SHOP-LUS 35 per dag (Henkjan: "Ik heb meer ruimte deze maand 100 slots").
 
-## Stand nu (11 nov 2026, 12:00 UTC)
+## Stand nu (11 nov 2026, 23:30 UTC)
 - **Netwerk:** alleen PropellerAds. MGID, Mondiad en BOOST ZONES 12093795 uit.
-- **10 campagnes vandaag** (Henkjan 11:40 UTC: "Ga voor 20"), 10 slots van de 50 voor SHOP-LUS, bod 0,12, Kadoly-plafond $20, elk 8 advertenties. Gekozen op Clickmind (14 dagen: mandjes en bewust afrekenen):
-  - Sinterklaas: 12128842 Kleine Prins wensbrievenbus, 12128845 Schoenzetmat XL, 12128848 Welkom Sint & Piet muurcirkel, 12128851 Harry Potter Herbologie-bouwset, en nieuw: Schoenzetmat Rond (oc_4174004650409987; start in de cronronde van 12:15 UTC, NIEUWKEUZE).
-  - Kerst: 12128852 Gouden Decoratieve Kerstboom.
-  - Sterkste van eerder: 12128854 Plantenset, 12128855 Handzeep, 12128857 Houten Wereldkaart, 12128859 Houten Puzzel Schildpad.
-- **Remarketing** 12099947 (publiek 183278) bod 0,06; loopt alleen als hij niet door het plafond stilgezet is.
-- **Campagnes van 9 en 10 nov** staan stil en worden niet herstart.
-- **10 nov (hele dag):** de Sint-producten haalden elk 3-4 mandjes (wensbrievenbus ook 2 keer bewust afrekenen), de kerstboom 5 mandjes; 0 betaald.
-- **Grootste lek blijft het afrekenformulier** (geopend, niets ingevuld). Voorstel voor Babita (Henkjan beslist): iDEAL vooraf gekozen, postcode + huisnummer vult het adres, Apple Pay en Google Pay eerst.
-- **Morgen (12 nov) staat er geen DAGPLAN: er start niets** tot Henkjan zegt wat.
+- **11 nov:** 10 campagnes (128842-128970 reeks) op 0,12, plafond $20 bereikt ($19,22). 5.204 kliks, 449 echte mensen (9%), 11 mandjes, 12 op de afrekenpagina, 0 betaald. Kosten per echt mens $0,043, per mandje $1,75.
+- **Geleerd:** op 0,03 (9 nov) ~500 kliks en ~2 mandjes per dollar, op 0,12 ~270 kliks en ~0,6 mandje per dollar; het plafond bindt toch, dus een lager bod geeft meer mensen voor hetzelfde geld en verkeer tot in de avond. Mandjes kwamen 2 dagen op rij van Sint & Piet muurcirkel, Kleine Prins wensbrievenbus, Harry Potter-bouwset, kerstboom, wereldkaart en handzeep; Plantenset, Puzzel Schildpad en Schoenzetmat XL gaven op 11 nov 0 mandjes.
+- **Plan 12 nov (staat klaar, start vanzelf om 05:15 UTC):** 10 campagnes, 10 slots, **bod 0,03**, plafond $20 (Henkjan 23:10 UTC: "Morgen nieuwe campagnes met geleerde er in verwerkt max 20"). 7 verse kopieen (VOORKEUR): Sint & Piet muurcirkel, Kleine Prins wensbrievenbus, Harry Potter Herbologie, Houten Wereldkaart, Gouden Kerstboom, Handzeep, Schoenzetmat Rond. 3 nieuwe Sint-tests (NIEUWKEUZE, teksten door Claude): Sint & Piet muurcirkel binnen en buiten (oc_4174004571406337), Harry Potter Toverdrankenles (oc_4174004519501825), Sticker Sinterklaas Welkom zwart (oc_4174004654489602). Alle 10 in VAST_DAG 2026-11-12.
+- **Remarketing** 12099947 (publiek 183278) bod 0,06; komt sinds 11 nov na een budgetstop de volgende dag vanzelf terug (`teHerstarten` slaat alleen de andere SHOP-LUS-campagnes over).
+- **Grootste lek blijft het afrekenformulier:** in 3 dagen ~25 mandjes en 0 betalingen. Voorstel voor Babita (Henkjan beslist): iDEAL vooraf gekozen, postcode + huisnummer vult het adres, Apple Pay en Google Pay eerst.
+- **Leverlanden:** de lus-feed heeft geen leverlanden per product en de shop is er alleen in NL/EN/ES. Bericht aan Babita (leverlanden per product, shop in DE en FR) is opgesteld; daarna kan de shoptest per land kiezen. Belgie (Vlaanderen) is de snelste eerste stap.
 
 ## Open bij Henkjan
 1. Testbetaling door een vreemde via een advertentieklik (iDEAL, PayPal als gast, kaart).
 2. Naam KADOLY in Stripe en PayPal (afschrift); handelsnaam Kadoly bij de KvK.
-4. Plan voor morgen: welke producten, hoeveel, welk bod (anders start er niets).
 5. Bericht aan Babita over het afrekenformulier (drie punten hierboven).
 6. Arm "Bewaar dit idee" ja of nee, en de stopregel (beide in `research/kadoly-lekken-backlog.md`).
 7. Reviews: Trustpilot-account aanmaken (Henkjan); de uitnodigingsmail schrijven wij en tonen we eerst.
@@ -95,6 +91,7 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - hjdk-api: dagkeuze `lib/shopkies.js` (+ VAST_DAG in `api/shop.js`), teksten `lib/shopteksten-hand.js` en `lib/shoptekst.js`, bots `lib/shopbot.js`, niet geladen `lib/shopniet.js`, archief `lib/shcarchief.js`, kassadoel `lib/shopdirect.js`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 2026-11-11 23:30 UTC (Henkjan: "Morgen nieuwe campagnes met geleerde er in verwerkt max 20 ."): plan 12 nov in propellerads-mcp (DAGPLAN {7,10}, DAGBOD 0,03, VOORKEUR 7, NIEUWKEUZE 3; 3fa396f) en hjdk-api (VAST_DAG 12 nov, 27 handteksten; 4db3488). Remarketing herstart voortaan na een budgetstop. Bod omlaag van 0,12 naar 0,03 op de cijfers van 9 en 11 nov.
 - 2026-11-11 15:50 UTC (Henkjan: "Post cadoly werkt"): post.kadoly.com geverifieerd bij Resend, mailklaar aan: de mailversies van de modal (ideeen, keuze) doen mee. Modal opwarmen: het model koos na 4 uur 2.382 keer niets tonen tegen 274 keer een versie; nu 10% willekeurig en niets tonen alleen via de controlegroep tot elke versie 300 beslissingen heeft (lib/modal.js kiesArm).
 - 2026-11-11 11:55 UTC (Henkjan: "Hebben we campagne lopen vandaag ? Ga voor 20 . Show me . Hoeveel slots pak je ?"): 10 campagnes, 10 slots, bod 0,12, plafond $20 (DAGPLAN {9,10}, VOORKEUR, NIEUWKEUZE, DAGBOD 11-11 in propellerads-mcp; VAST_DAG 11-11 in hjdk-api zodat alle 10 eerst hun teksten krijgen; HANDTEKSTEN voor Schoenzetmat Rond). 9 gestart 11:52 UTC, de 10e volgt in de cronronde van 12:15.
 - 2026-11-11 03:55 UTC (ochtendtaak Claude): handteksten voor 1 product van de dagkeuze (Roze Gouden Disco Bal, oc_4174002180079619), 9 teksten, alle goedgekeurd door tekstFout; de rest van de 153 had al 8+ advertenties of handteksten.
