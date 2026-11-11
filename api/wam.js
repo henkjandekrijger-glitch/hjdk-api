@@ -221,7 +221,7 @@ export default async function handler(req, res) {
       if (uitPost && q('van') === 'bewaar') await W.tel({ bewaar_terug: 1 }).catch(() => {});
       const bord = start && start.ux && start.ux.bord === 'aan' ? await W.bordVoor(ctx.land, ctx.taal).catch(() => null) : null;
       const erger = start && start.ux && start.ux.erger === 'aan' ? await W.ergerVoor(ctx.land, ctx.taal).catch(() => null) : null;
-      return res.status(200).send(pagina({ start, taal, kanalen: k, vapid: await PUSH.publiek().catch(() => ''), w: await W.linkTok(vid).catch(() => ''), bord, erger }));
+      return res.status(200).send(pagina({ start, taal: ctx.taal || taal, kanalen: k, vapid: await PUSH.publiek().catch(() => ''), w: await W.linkTok(vid).catch(() => ''), bord, erger }));
     }
     if (op === 'zeg') {
       // GET alleen op de beschermde host, om te testen (?sid=&tok=&x=)
