@@ -972,5 +972,17 @@
   "effect": "geen nieuwbouw in een stille crawlperiode die langer dan drie weken duurt",
   "moeite": 1,
   "meten": "proef kz-crawlgrendel-1111, /api/zicht?op=organisch"
+ },
+ {
+  "id": "verhuisde-paginas-apart-tellen",
+  "les": "Tel pagina's die naar een ander domein zijn verhuisd (308) apart in de Google-cijfers. Google blijft ze weken tonen onder het oude domein, zodat het site-totaal groei laat zien die niet van de eigen pagina's komt. Oordeel over een site alleen op de eigen pagina's.",
+  "kanaal": "google",
+  "bewijs": "12 nov 2026, Search Console 14 okt tot 10 nov: whichtobuy.best site-totaal 365 vertoningen en 4 kliks, waarvan eigen keuzehulp-pagina's 20 vertoningen en 0 kliks (Curaçao-pagina's 367 en 14, paginatelling); kaufberater.best 1320 en 8, eigen 23 en 2 (Curaçao 1349 en 15); keuzehulp.best 0 verhuisd. De stijging van US 3 naar 365 en DE 0 naar 1320 sinds 21 okt kwam bijna helemaal van de Curaçao-gids.",
+  "bron": "https://hjdk-api-henq.vercel.app/api/gsc?op=totalen",
+  "datum": "2026-11-12",
+  "sterkte": 3,
+  "effect": "juiste beoordeling van US en DE; voorkomt valse winnaars in proeven",
+  "moeite": 1,
+  "meten": "eigenImp en eigenClicks in /api/zicht?op=stand historie vanaf 13 nov"
  }
 ]
