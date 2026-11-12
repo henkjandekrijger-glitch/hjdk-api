@@ -1,6 +1,6 @@
 {
  "id": "huishuren",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-12",
  "onderwerp": {
   "nl": "huurwoning",
   "en": "long-term rental",
@@ -331,6 +331,20 @@
      "de": "€751 bis €5,791 im Monat",
      "es": "€751 a €5,791 al mes",
      "pt": "€751 a €5,791 por mês"
+    },
+    {
+     "nl": "borg meestal één maand huur",
+     "en": "deposit usually one month's rent",
+     "de": "Kaution meist eine Monatsmiete",
+     "es": "depósito normalmente de un mes de alquiler",
+     "pt": "depósito normalmente de um mês de aluguel"
+    },
+    {
+     "nl": "huurder betaalt geen courtage",
+     "en": "no commission for tenants",
+     "de": "keine Provision für Mieter",
+     "es": "el inquilino no paga comisión",
+     "pt": "o inquilino não paga comissão"
     }
    ],
    "scores": [
@@ -359,7 +373,8 @@
    },
    "bronnen": [
     "https://www.realestate-curacao.com/en/homes/homes-for-rent/",
-    "https://caribbeanhousehunt.com/curacao/realtors/"
+    "https://caribbeanhousehunt.com/curacao/realtors/",
+    "https://www.realestate-curacao.com/en/information/rent-a-home-curacao.html"
    ]
   },
   {
