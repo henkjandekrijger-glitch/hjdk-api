@@ -64,8 +64,8 @@ function pagina({ start, taal, kanalen, vapid, w, bord, erger, meta }) {
   if (P) u.ph = P.ph; if (K && !K.eigen) u.ph = K.ph;
   const data = { sid: start ? start.sid : '', tok: start ? start.tok : '', taal, ui: u, kanalen, opener: o, ux, punch: P ? { kl: P.kl || '' } : null, kring: K || null, vapid: vapid || '', w: w || '', gid: process.env.WAM_GOOGLE_CLIENT_ID || '', wa: (start && start.wa) || null };
   return `<!doctype html><html lang="${esc(taal)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
-<title>${esc(meta ? meta.titel : NMV + ': ' + u.sub)}</title><meta name="description" content="WAM is a free AI matchmaker chat: tell it what you offer or need (a room, work, a service, a better deal) and it connects you with people who match, anonymously until you both say yes.">
-<meta property="og:title" content="${esc(meta ? meta.titel : NMV)}"><meta property="og:description" content="${esc(meta ? meta.tekst : u.sub)}"><meta name="theme-color" content="#FFFFFF">
+<title>${esc(meta ? meta.titel : NMV + ': ' + (P ? P.kop : u.sub))}</title><meta name="description" content="WAM is a free AI matchmaker chat: tell it what you offer or need (a room, work, a service, a better deal) and it connects you with people who match, anonymously until you both say yes.">
+<meta property="og:title" content="${esc(meta ? meta.titel : NMV)}"><meta property="og:description" content="${esc(meta ? meta.tekst : (P ? P.kop : u.sub))}"><meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232B47C4'/%3E%3Ctext x='32' y='42' font-size='26' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
 <style>
 :root{--bg:#FFFFFF;--panel:#FFFFFF;--ink:#111113;--body:#3A3F47;--muted:#6B7280;--line:#E5E7EB;--line2:#B9BFC7;--accent:#2B47C4;--accent-ink:#FFFFFF;--soft:#EEF1FC;--ok:#1F7A4D;--warn:#B3261E;color-scheme:light}
