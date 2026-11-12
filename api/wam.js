@@ -316,6 +316,7 @@ export default async function handler(req, res) {
     if (op === 'leerstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, cta: await W.ctaStand(), diepte: await W.diepteStand(), deel: await W.deelStand() }); }
     if (op === 'deelstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.deelStand()) }); }
     if (op === 'paren') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.parenStand(Number(q('dagen')) || 1)) }); }
+    if (op === 'gesprekkort') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.gesprekKort({ land: q('land'), camp: q('c'), n: Number(q('n')) || 15 })); }
     if (op === 'herkomst') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.herkomst(Number(q('n')) || 40)); }
     if (op === 'mailproef') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.mailProef(q('code') || '')); }
     if (op === 'detailmail') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.detailMails({ nu: q('nu') === '1' })); }
