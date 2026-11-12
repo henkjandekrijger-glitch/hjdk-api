@@ -58,7 +58,7 @@ function pagina({ start, taal, kanalen, vapid, w, bord, erger }) {
   u.bwKopie = { nl: 'Kopieer link', de: 'Link kopieren' }[taal] || 'Copy link';
   u.bwKlaar = { nl: 'Gekopieerd', de: 'Kopiert' }[taal] || 'Copied';
   u.bwTekst = { nl: 'Mijn WAM-gesprek:', de: 'Mein WAM-Chat:' }[taal] || 'My WAM chat:';
-  const data = { sid: start ? start.sid : '', tok: start ? start.tok : '', taal, ui: u, kanalen, opener: o, ux, vapid: vapid || '', w: w || '', gid: process.env.WAM_GOOGLE_CLIENT_ID || '' };
+  const data = { sid: start ? start.sid : '', tok: start ? start.tok : '', taal, ui: u, kanalen, opener: o, ux, vapid: vapid || '', w: w || '', gid: process.env.WAM_GOOGLE_CLIENT_ID || '', wa: (start && start.wa) || null };
   return `<!doctype html><html lang="${esc(taal)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
 <title>We Are Many: ${esc(u.sub)}</title><meta name="description" content="WAM is a free AI matchmaker chat: tell it what you offer or need (a room, work, a service, a better deal) and it connects you with people who match, anonymously until you both say yes.">
 <meta property="og:title" content="We Are Many"><meta property="og:description" content="${esc(u.sub)}"><meta name="theme-color" content="#FFFFFF">
@@ -159,7 +159,7 @@ var nIn=0;function inbox(){if(!W.sid||bezig||D.visibilityState!=='visible')retur
 setTimeout(inbox,1500);setInterval(function(){if(nIn<40||nIn%3===0)inbox();else nIn++},20000);
 F.onsubmit=function(e){e.preventDefault();zeg(I.value,0)};
 I.addEventListener('input',function(){if(!typte){typte=1;ev('typt')}});
-var k0=D.getElementById('k0');if(k0)k0.querySelectorAll('button').forEach(function(b){b.onclick=function(){zeg(b.textContent,1)}});
+var k0=D.getElementById('k0');if(W.wa&&W.wa.nr&&W.wa.code){var wu=function(t){return 'https://wa.me/'+W.wa.nr+'?text='+encodeURIComponent((t?t+' ':'')+'(WAM code '+W.wa.code+')')};var naarWa=function(t){bk('wa_start');setTimeout(function(){location.href=wu(t)},120)};if(k0)k0.querySelectorAll('button').forEach(function(b){b.onclick=function(){naarWa(b.textContent)}});var wb=D.createElement('div');wb.className='c bw wk';var hi=W.taal==='nl'?'Hoi WAM!':W.taal==='de'?'Hallo WAM!':'Hi WAM!';wb.innerHTML='<div class="r"><a class="wa" href="'+wu(hi)+'">'+W.wa.cta+'</a></div>';wb.querySelector('a').onclick=function(e){e.preventDefault();naarWa(hi)};L.appendChild(wb);if(F)F.style.display='none';var bo0=D.getElementById('bord');if(bo0)bo0.remove()}else if(k0)k0.querySelectorAll('button').forEach(function(b){b.onclick=function(){zeg(b.textContent,1)}});
 var lg=D.getElementById('logo');if(lg)lg.onclick=function(e){e.preventDefault();bk('logo_tik');try{window.scrollTo({top:0,behavior:'smooth'})}catch(x){window.scrollTo(0,0)}};
 var ct=D.getElementById('ct');if(ct)ct.onclick=function(e){e.preventDefault();I.value=W.ui.contactPre;I.focus();try{I.setSelectionRange(I.value.length,I.value.length)}catch(x){}F.scrollIntoView({block:'center'})};
 var bo=D.getElementById('bord');if(bo)bo.querySelectorAll('.bc').forEach(function(b){b.onclick=function(){bk('bord_tik');zeg(b.getAttribute('data-k'),1)}});
@@ -219,6 +219,7 @@ export default async function handler(req, res) {
       const ctx = { test: beschermd(host) || undefined, taal: q('taal') && beschermd(host) ? q('taal') : taal, land: q('land') && beschermd(host) ? String(q('land')).toUpperCase().slice(0, 2) : land, stad, tz, uur: W.lokaalUur(tz), os: app.os, mobiel: app.mobiel, app: app.app, asn: String(req.headers['x-vercel-ip-as-number'] || '').slice(0, 10), ref: String(req.headers.referer || '').slice(0, 120) };
       // scherm-proef forceren om te testen, alleen op de beschermde host: ?ux=opener:chat,keuzes:pillen,invoer:inline
       if (beschermd(host) && q('o')) ctx.openerTest = q('o');
+      if (beschermd(host) && q('st')) ctx.startTest = q('st');
       if (beschermd(host) && q('ux')) { const t = {}; for (const x of q('ux').split(',')) { const [d, v] = x.split(':'); if (W.UX[d] && W.UX[d].includes(v)) t[d] = v; } ctx.uxTest = t; }
       const params = { n: schoon(q('n'), /^[a-z]{2,12}$/), z: schoon(q('z'), /^[\w{}\[\]-]{1,20}$/), c: schoon(q('c'), /^[\w{}\[\]-]{1,20}$/), b: schoon(q('b'), /^[\w{}\[\]-]{1,20}$/), mmc: schoon(q('mmc'), /^[0-9a-f]{8,24}$/), r: schoon(q('r'), /^[0-9a-f]{8}$/), d: schoon(q('d'), /^[a-z]{2,10}-[a-z]{2,8}(-[a-z0-9]{1,6})?$/), zr: schoon(q('z'), /^[0-9a-f]{8}$/) };
       const start = await W.startSessie({ vid, ctx, params });
@@ -241,7 +242,7 @@ export default async function handler(req, res) {
     if (op === 'inbox') { const b = leesBody(req); return res.status(200).json(await W.inbox(b.sid, b.tok)); }
     // testen van de chat met GET, alleen op de beschermde host en alleen voor testsessies (ctx.test)
     // nieuwe testsessie zonder HTML (alleen beschermde host): ?op=testsessie&o=<opener>&land=CA&stad=Montreal
-    if (op === 'testsessie' && beschermd(host)) { const st = await W.startSessie({ vid: randomBytes(8).toString('hex'), ctx: { test: true, taal: q('taal') || 'en', land: String(q('land') || 'US').toUpperCase().slice(0, 2), stad: String(q('stad') || '').slice(0, 40), tz: '', uur: 10, os: 'android', mobiel: true, app: '', asn: '', ref: '', openerTest: q('o') || undefined, cq: q('cq') ? 1 : undefined, deelTest: q('dm') || undefined, diepteTest: q('dd') || undefined }, params: { r: schoon(q('r'), /^[0-9a-f]{8}$/), d: schoon(q('d'), /^[a-z]{2,10}-[a-z]{2,8}(-[a-z0-9]{1,6})?$/), zr: schoon(q('z'), /^[0-9a-f]{8}$/) } }); return res.status(200).json({ ok: true, sid: st && st.sid, tok: st && st.tok, opener: st && st.opener }); }
+    if (op === 'testsessie' && beschermd(host)) { const st = await W.startSessie({ vid: randomBytes(8).toString('hex'), ctx: { test: true, taal: q('taal') || 'en', land: String(q('land') || 'US').toUpperCase().slice(0, 2), stad: String(q('stad') || '').slice(0, 40), tz: '', uur: 10, os: 'android', mobiel: true, app: '', asn: '', ref: '', openerTest: q('o') || undefined, cq: q('cq') ? 1 : undefined, deelTest: q('dm') || undefined, diepteTest: q('dd') || undefined, startTest: q('st') || undefined }, params: { r: schoon(q('r'), /^[0-9a-f]{8}$/), d: schoon(q('d'), /^[a-z]{2,10}-[a-z]{2,8}(-[a-z0-9]{1,6})?$/), zr: schoon(q('z'), /^[0-9a-f]{8}$/) } }); return res.status(200).json({ ok: true, sid: st && st.sid, tok: st && st.tok, opener: st && st.opener }); }
     if (op === 'zegtest' && beschermd(host)) { const ss = await W.sessie(q('sid')); if (!ss || !(ss.ctx && ss.ctx.test)) return res.status(404).json({ ok: false }); if (q('ctx')) return res.status(200).json({ ok: true, ctx: ss.ctx }); return res.status(200).json(q('inbox') ? await W.inbox(q('sid'), q('tok')) : await W.zeg({ sid: q('sid'), tok: q('tok'), x: q('x') || undefined, knop: q('knop') || undefined, ip: 'test' })); }
     if (op === 'beeld') {
       const img = await beeld(q('h'), q('t') || 'en', q('v') === 'icon' ? 'icon' : 'img'); const buf = Buffer.from(await img.arrayBuffer());
@@ -313,7 +314,7 @@ export default async function handler(req, res) {
     if (op === 'tellers') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.tellers(q('dagen') || 1)); }
     if (op === 'wastand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.waStand()); }
     if (op === 'stadstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.stadStand(q('land') ? String(q('land')).toUpperCase() : '')); }
-    if (op === 'leerstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, cta: await W.ctaStand(), diepte: await W.diepteStand(), deel: await W.deelStand() }); }
+    if (op === 'leerstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, start: await W.startStand(), cta: await W.ctaStand(), diepte: await W.diepteStand(), deel: await W.deelStand() }); }
     if (op === 'deelstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.deelStand()) }); }
     if (op === 'paren') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.parenStand(Number(q('dagen')) || 1)) }); }
     if (op === 'gesprekkort') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.gesprekKort({ land: q('land'), camp: q('c'), n: Number(q('n')) || 15 })); }
