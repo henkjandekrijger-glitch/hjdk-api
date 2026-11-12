@@ -57,6 +57,7 @@ async function saveFaq(m, it, nieuw) {
   const base = it.faq || []; await kv.set(key, Object.assign({}, cur || {}, { slug: it.slug, override: true, faq: [...((cur && cur.faq) || base), ...nieuw], updatedAt: DAY() }));
   const idx = (await kv.get('hjdk:kz:index')) || []; if (!idx.includes(it.slug)) { idx.push(it.slug); await kv.set('hjdk:kz:index', idx); }
 }
+const verhuisdPad = u => { try { return /cura(c|ç)ao|curazao/i.test(decodeURIComponent(new URL(u).pathname)); } catch (e) { return false; } };
 // sitemap eens per dag opnieuw indienen, zodat Google nieuwe keuzehulpen sneller ophaalt
 async function smap(id, prop, oidc, force) {
   try { if (!force && (await kv.get('hjdk:gsc:smap:' + id)) === DAY()) return { ok: true, al: 'vandaag ingediend' };
@@ -237,11 +238,14 @@ export default async function handler(req, res) {
       return res.status(200).json({ ok: true, sites: out }); }
     if (op === 'totalen') {
       const lijst = await sites(oidc); const out = {};
-      const syncTotal = async (id, total) => { const key = 'hjdk:gsc:' + id; const current = await kv.get(key).catch(() => null); if (current && (!current.periode || current.periode.endDate <= total.periode.endDate)) await kv.set(key, { ...current, zoekvraagTotaal: current.zoekvraagTotaal || (!current.periode ? current.totaal : null), periode: total.periode, totaal: { imp: total.imp, clicks: total.clicks, ctr: total.ctr, pos: total.pos }, totaalBasis: 'Google-site-totaal zonder zoekvraagfilter (inclusief anonieme zoekvragen)', totaalGecontroleerdOp: total.at }); };
+      const syncTotal = async (id, total) => { const key = 'hjdk:gsc:' + id; const current = await kv.get(key).catch(() => null); if (current && (!current.periode || current.periode.endDate <= total.periode.endDate)) await kv.set(key, { ...current, zoekvraagTotaal: current.zoekvraagTotaal || (!current.periode ? current.totaal : null), periode: total.periode, totaal: { imp: total.imp, clicks: total.clicks, ctr: total.ctr, pos: total.pos }, totaalBasis: 'Google-site-totaal zonder zoekvraagfilter (inclusief anonieme zoekvragen)', totaalGecontroleerdOp: total.at, eigen: total.eigen || current.eigen || null, verhuisd: total.verhuisd || current.verhuisd || null }); };
       for (const [id, host] of Object.entries(SITES)) { const key = 'hjdk:gsc:totalen:' + id; const cache = await kv.get(key).catch(() => null);
-        if (cache && Date.now() - cache.at < 6 * 3600e3) { await syncTotal(id, cache); out[id] = cache; continue; }
+        if (cache && cache.eigen && Date.now() - cache.at < 6 * 3600e3) { await syncTotal(id, cache); out[id] = cache; continue; }
         const prop = propFor(lijst, host); if (!prop) { out[id] = { fout: 'geen toegang' }; continue; }
-        try { const total = { at: Date.now(), dag: DAY(), host, ...await totals(prop, 28, oidc) }; await kv.set(key, total); await syncTotal(id, total); out[id] = total; } catch (e) { out[id] = { fout: String(e.message).slice(0, 160) }; }
+        try { const total = { at: Date.now(), dag: DAY(), host, ...await totals(prop, 28, oidc) };
+          // 12 nov 2026 (ZICHT-dagcontrole): de Curaçao-pagina's zijn naar curacao.day verhuisd (308), maar tellen nog mee in het Google-totaal van deze domeinen; apart houden zodat de lus op de eigen keuzehulp-pagina's oordeelt
+          try { const pg = await pageRows(prop, 28, oidc); const e = { imp: 0, clicks: 0 }, v = { imp: 0, clicks: 0 }; pg.forEach(r => { const x = verhuisdPad(r.page) ? v : e; x.imp += r.imp; x.clicks += r.clicks; }); total.eigen = { ...e, basis: 'paginatotalen zonder de naar curacao.day verhuisde Curaçao-pagina\'s' }; total.verhuisd = v; } catch (e) {}
+          await kv.set(key, total); await syncTotal(id, total); out[id] = total; } catch (e) { out[id] = { fout: String(e.message).slice(0, 160) }; }
       }
       return res.status(200).json({ ok: true, sites: out, basis: 'Google Search Console site-totaal zonder zoekvraagfilter; definitieve gegevens, laatste twee dagen ontbreken.' });
     }
