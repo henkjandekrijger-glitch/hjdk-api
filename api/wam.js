@@ -325,6 +325,7 @@ export default async function handler(req, res) {
     if (op === 'wastand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.waStand()); }
     if (op === 'stadstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.stadStand(q('land') ? String(q('land')).toUpperCase() : '')); }
     // groepsvraag en beginscherm (beschermd): virale stand, interesselijst besloten WAM, live regel, steden van vandaag eenmalig vullen
+    if (op === 'kost') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, dagen: await W.kostStand(Math.min(14, Number(q('dagen')) || 3)) }); }
     if (op === 'kring') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.kringStand()) }); }
     if (op === 'prive') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); const { kv } = await import('../lib/db.js'); const l = (await kv.raw(['LRANGE', 'wam:prive', '0', '-1']).catch(() => [])) || []; return res.status(200).json({ ok: true, n: l.length, lijst: l.map(j => { try { return typeof j === 'string' ? JSON.parse(j) : j; } catch (e) { return null; } }) }); }
     if (op === 'live') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, live: await W.liveRegel(String(q('land') || 'CA').toUpperCase(), q('taal') || 'en') }); }
