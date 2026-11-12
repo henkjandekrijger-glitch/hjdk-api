@@ -44,7 +44,7 @@ function pagina({ start, taal, kanalen, vapid, w, bord, erger, meta }) {
   const o = start ? start.opener : { tekst: taal === 'nl' ? 'Hoi! Ik ben WAM. Waar kan ik je mee helpen?' : 'Hi! I\'m WAM. What can I help you with?', knoppen: [] };
   const ux = (start && start.ux) || { opener: 'held', keuzes: 'kaarten', invoer: 'vast' };
   // beginscherm met kernzin (scherm p1-p3) en groepsvraag (kring): eigen opbouw, invoer direct onder de vraag (Henkjan 12 nov 21:53 UTC)
-  const P = start && start.punch, K = start && start.kring, NM = { wam: ['We Are ', 'Many'], kort: ['WA', 'M'], pally: ['Pal', 'ly'], matchy: ['Match', 'y'], hoi: ['Ho', 'i'] }[ux.naam] || ['We Are ', 'Many'], NMV = NM.join('');
+  const P = start && start.punch, K = start && start.kring, NM = { wam: ['We Are ', 'Many'], folky: ['Folk', 'y'], whoz: ['Who', 'z'], yoohoo: ['Yoo', 'hoo'], hooman: ['Hoo', 'man'] }[ux.naam] || ['We Are ', 'Many'], NMV = NM.join('');
   const kl = Object.entries(ux).map(([d, v]) => 'ux-' + d + '-' + v).join(' ') + (P || K ? ' pk-aan ux-invoer-inline' : '');
   // kop lerend (Henkjan 10 nov: "Fixer niet maar matchmaker, connection"): drie varianten, Thompson in wam:ux (onderdeel kop)
   const KOP = { match: { en: 'your matchmaker for anything', nl: 'jouw matchmaker voor alles', de: 'dein Matchmaker für alles' }, connect: { en: 'we connect who needs with who offers', nl: 'we verbinden wie zoekt met wie biedt', de: 'wir verbinden, wer sucht, mit wer bietet' }, commons: { en: 'a commons: put in anything you offer or need', nl: 'een commons: zet erin wat je biedt of zoekt', de: 'eine Allmende für alles, was du bietest oder suchst' }, many: { en: 'one chat, hundreds of people', nl: 'één chat, honderden mensen', de: 'ein Chat, Hunderte Leute' } };
