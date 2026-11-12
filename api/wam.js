@@ -219,7 +219,7 @@ export default async function handler(req, res) {
       // scherm-proef forceren om te testen, alleen op de beschermde host: ?ux=opener:chat,keuzes:pillen,invoer:inline
       if (beschermd(host) && q('o')) ctx.openerTest = q('o');
       if (beschermd(host) && q('ux')) { const t = {}; for (const x of q('ux').split(',')) { const [d, v] = x.split(':'); if (W.UX[d] && W.UX[d].includes(v)) t[d] = v; } ctx.uxTest = t; }
-      const params = { n: schoon(q('n'), /^[a-z]{2,12}$/), z: schoon(q('z'), /^[\w{}\[\]-]{1,20}$/), c: schoon(q('c'), /^[\w{}\[\]-]{1,20}$/), b: schoon(q('b'), /^[\w{}\[\]-]{1,20}$/), mmc: schoon(q('mmc'), /^[0-9a-f]{8,24}$/), r: schoon(q('r'), /^[0-9a-f]{8}$/), d: schoon(q('d'), /^[a-z]{2,10}-[a-z]{2,8}$/), zr: schoon(q('z'), /^[0-9a-f]{8}$/) };
+      const params = { n: schoon(q('n'), /^[a-z]{2,12}$/), z: schoon(q('z'), /^[\w{}\[\]-]{1,20}$/), c: schoon(q('c'), /^[\w{}\[\]-]{1,20}$/), b: schoon(q('b'), /^[\w{}\[\]-]{1,20}$/), mmc: schoon(q('mmc'), /^[0-9a-f]{8,24}$/), r: schoon(q('r'), /^[0-9a-f]{8}$/), d: schoon(q('d'), /^[a-z]{2,10}-[a-z]{2,8}(-[a-z0-9]{1,6})?$/), zr: schoon(q('z'), /^[0-9a-f]{8}$/) };
       const start = await W.startSessie({ vid, ctx, params });
       if (uitPost && q('van') === 'bewaar') await W.tel({ bewaar_terug: 1 }).catch(() => {});
       const bord = start && start.ux && start.ux.bord === 'aan' ? await W.bordVoor(ctx.land, ctx.taal).catch(() => null) : null;
@@ -240,7 +240,7 @@ export default async function handler(req, res) {
     if (op === 'inbox') { const b = leesBody(req); return res.status(200).json(await W.inbox(b.sid, b.tok)); }
     // testen van de chat met GET, alleen op de beschermde host en alleen voor testsessies (ctx.test)
     // nieuwe testsessie zonder HTML (alleen beschermde host): ?op=testsessie&o=<opener>&land=CA&stad=Montreal
-    if (op === 'testsessie' && beschermd(host)) { const st = await W.startSessie({ vid: randomBytes(8).toString('hex'), ctx: { test: true, taal: q('taal') || 'en', land: String(q('land') || 'US').toUpperCase().slice(0, 2), stad: String(q('stad') || '').slice(0, 40), tz: '', uur: 10, os: 'android', mobiel: true, app: '', asn: '', ref: '', openerTest: q('o') || undefined, cq: q('cq') ? 1 : undefined, deelTest: q('dm') || undefined }, params: { r: schoon(q('r'), /^[0-9a-f]{8}$/), d: schoon(q('d'), /^[a-z]{2,10}-[a-z]{2,8}$/), zr: schoon(q('z'), /^[0-9a-f]{8}$/) } }); return res.status(200).json({ ok: true, sid: st && st.sid, tok: st && st.tok, opener: st && st.opener }); }
+    if (op === 'testsessie' && beschermd(host)) { const st = await W.startSessie({ vid: randomBytes(8).toString('hex'), ctx: { test: true, taal: q('taal') || 'en', land: String(q('land') || 'US').toUpperCase().slice(0, 2), stad: String(q('stad') || '').slice(0, 40), tz: '', uur: 10, os: 'android', mobiel: true, app: '', asn: '', ref: '', openerTest: q('o') || undefined, cq: q('cq') ? 1 : undefined, deelTest: q('dm') || undefined, diepteTest: q('dd') || undefined }, params: { r: schoon(q('r'), /^[0-9a-f]{8}$/), d: schoon(q('d'), /^[a-z]{2,10}-[a-z]{2,8}(-[a-z0-9]{1,6})?$/), zr: schoon(q('z'), /^[0-9a-f]{8}$/) } }); return res.status(200).json({ ok: true, sid: st && st.sid, tok: st && st.tok, opener: st && st.opener }); }
     if (op === 'zegtest' && beschermd(host)) { const ss = await W.sessie(q('sid')); if (!ss || !(ss.ctx && ss.ctx.test)) return res.status(404).json({ ok: false }); if (q('ctx')) return res.status(200).json({ ok: true, ctx: ss.ctx }); return res.status(200).json(q('inbox') ? await W.inbox(q('sid'), q('tok')) : await W.zeg({ sid: q('sid'), tok: q('tok'), x: q('x') || undefined, knop: q('knop') || undefined, ip: 'test' })); }
     if (op === 'beeld') {
       const img = await beeld(q('h'), q('t') || 'en', q('v') === 'icon' ? 'icon' : 'img'); const buf = Buffer.from(await img.arrayBuffer());
@@ -312,6 +312,7 @@ export default async function handler(req, res) {
     if (op === 'tellers') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.tellers(q('dagen') || 1)); }
     if (op === 'wastand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.waStand()); }
     if (op === 'stadstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.stadStand(q('land') ? String(q('land')).toUpperCase() : '')); }
+    if (op === 'leerstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, cta: await W.ctaStand(), diepte: await W.diepteStand(), deel: await W.deelStand() }); }
     if (op === 'deelstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.deelStand()) }); }
     if (op === 'paren') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.parenStand(Number(q('dagen')) || 1)) }); }
     if (op === 'herkomst') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.herkomst(Number(q('n')) || 40)); }
