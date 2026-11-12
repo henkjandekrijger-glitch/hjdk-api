@@ -321,6 +321,7 @@ export default async function handler(req, res) {
     if (op === 'wafunnel') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.waFunnel(q('dag'))) }); }
     if (op === 'foto') { const r = await W.fotoLees(String(q('f') || ''), String(q('t') || '')); if (!r || !r.stream) return res.status(404).send('Niet gevonden'); res.setHeader('content-type', (r.blob && r.blob.contentType) || 'image/jpeg'); res.setHeader('cache-control', 'private, max-age=86400'); return res.status(200).send(Buffer.from(await new Response(r.stream).arrayBuffer())); }
     if (op === 'kaart') { const k = await W.kaartPagina(String(q('r') || ''), String(q('z') || ''), String(q('f') || ''), String(q('t') || '')); res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('x-robots-tag', 'noindex'); return res.status(k ? 200 : 404).send(k || 'Niet gevonden'); }
+    if (op === 'dagvraag') { if (!beschermd(host) && !isCron(req)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, stand: await LEER.dagvStand(), ...(q('droog') ? { droog: await W.dagvraagRonde({ droog: true }) } : {}) }); }
     if (op === 'alertstand') return res.status(200).json({ ok: true, ...(await LEER.alertStand()) });
     if (op === 'wastart') return res.status(200).json({ ok: true, ...(await LEER.waStand()) });
     if (op === 'vraagstand') return res.status(200).json({ ok: true, ...(await LEER.vbStand()) });
