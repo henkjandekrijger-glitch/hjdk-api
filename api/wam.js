@@ -319,6 +319,7 @@ export default async function handler(req, res) {
     if (op === 'leerstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, start: await W.startStand(), cta: await W.ctaStand(), diepte: await W.diepteStand(), vraag: await LEER.vbStand(), deel: await W.deelStand(), veilig: await LEER.veiligStand() }); }
     // minste info voor een goede match, usecases en vandalen (12 nov): cijfers zonder namen of teksten; voorbeeldzinnen alleen op de beschermde host
     if (op === 'wafunnel') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.waFunnel(q('dag'))) }); }
+    if (op === 'alertstand') return res.status(200).json({ ok: true, ...(await LEER.alertStand()) });
     if (op === 'wastart') return res.status(200).json({ ok: true, ...(await LEER.waStand()) });
     if (op === 'vraagstand') return res.status(200).json({ ok: true, ...(await LEER.vbStand()) });
     if (op === 'usecases') return res.status(200).json({ ok: true, ...(await LEER.ucStand({ metVoorbeelden: beschermd(host) })) });
