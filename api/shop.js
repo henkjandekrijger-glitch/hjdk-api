@@ -40,6 +40,7 @@ import { uurTel, uurStand, lekkenPagina, uurAanvullen, uurRitme, verkoopUren } f
 import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdracht.js';
 import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
+const K_MAXLEV = 'hjdk:shop:maxlev'; // B4 (12 nov): hoogste levertijd in werkdagen voor de dagkeuze; ?maxlev=<dagen> op de beschermde host, 0 = geen grens
 import { demandRadar } from '../lib/demandradar.js';
 const SHOP_UIT = false; // 27 okt: shop op kadoly.com; Henkjan: "Zet er 20 aan maar verander domeinnaam in kadoly.com" (ook propellerads-mcp lib/budget.ts SHOP_UIT)
 const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
@@ -891,6 +892,7 @@ export default async function handler(req, res) {
         let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
         const g = (await kv.get(K_GETEST)) || {}; let nieuw = 0; for (const p of (Array.isArray(b.pids) ? b.pids : [])) { const id = pidOk(p); if (id && !g[id]) { g[id] = DAY(); nieuw++; } }
         if (nieuw) await kv.set(K_GETEST, g); return res.status(200).json({ ok: true, nieuw, totaal: Object.keys(g).length }); }
+      if (/^\d{1,2}$/.test(url.searchParams.get('maxlev') || '') && /\.vercel\.app$/i.test(host)) await kv.set(K_MAXLEV, Math.min(30, Number(url.searchParams.get('maxlev')))).catch(() => {}); // levertijdgrens vastzetten; geldt vanaf de volgende verse keuze
       if (STRATEGIEEN.includes(url.searchParams.get('strategie')) && /\.vercel\.app$/i.test(host)) await kv.set(K_STRATEGIE, url.searchParams.get('strategie')).catch(() => {}); // strategie vastzetten (alleen via de beschermde host); geldt vanaf de volgende keuze
       const dag = DAY(), ck = 'hjdk:shop:kies:' + dag, n = Math.max(1, Math.min(80, Number(url.searchParams.get('n')) || KIES_REGELS.n)); // tot 80 (Henkjan 26 okt: "Morgen 50 producten testen")
       let cache = null; if (!url.searchParams.get('vers')) { const c = await kv.get(ck).catch(() => null); if (c && c.n >= n) cache = c; }
@@ -901,7 +903,8 @@ export default async function handler(req, res) {
       const vals = []; for (let i = 0; i < keys.length; i += 480) vals.push(...await kv.mget(...keys.slice(i, i + 480)));
       const tellers = {}; items.forEach((it, i) => { const o = {}; let iets = 0; SRT.forEach((x, j) => { o[x] = num(vals[i * SRT.length + j]); iets += o[x]; }); o.dv += o.himp; o.dm += o.lm; o.da += o.la; if (iets) tellers[it.id] = o; }); // 28 okt: route via onze pagina (himp/lm/la) telt mee
       const strategie = STRATEGIEEN.includes(url.searchParams.get('strategie')) ? url.searchParams.get('strategie') : ((await kv.get(K_STRATEGIE).catch(() => null)) || 'auto');
-      const uit = kies({ strategie, items, kaart, markt, termen, tellers, getest, seizoen, thema: themaVan, vandaag: dag, n, vast: VAST_DAG[dag] || [], plaatje: pid => ({ icon: beeld(pid, 'icon'), image: beeld(pid, 'pa'), link: 'https://kadoly.com/product/' + pid + '?lang=nl' }) });
+      const ml0 = await kv.get(K_MAXLEV).catch(() => null), maxLev = ml0 != null && ml0 !== '' ? Number(ml0) : KIES_REGELS.maxLevertijd;
+      const uit = kies({ strategie, items, kaart, markt, termen, tellers, getest, seizoen, thema: themaVan, vandaag: dag, n, vast: VAST_DAG[dag] || [], maxLev, plaatje: pid => ({ icon: beeld(pid, 'icon'), image: beeld(pid, 'pa'), link: 'https://kadoly.com/product/' + pid + '?lang=nl' }) });
       uit.bronnen = { catalogus: items.length, metInkoop: Object.keys(kaart).length, marktprijzen: Object.keys(markt).length, vraagtermen: termen.length, metVerkeer: Object.keys(tellers).length, alGetest: Object.keys(getest).length };
       if (url.searchParams.get('kort') === '1') { // compact voor de dagelijkse gidsronde (gids.kadoly.com, 30 okt): welke producten tractie hebben, met titel en categorie
         const perId = {}; items.forEach(i => { perId[i.id] = i; }); const lijst = (uit.presterend || []).concat(uit.veelbelovend || []).slice(0, 40).map(x => { const i = perId[x.pid] || {}; return { pid: x.pid, titel: i.t, merk: i.b || null, cat: i.c, sub: i.s, thuis: Math.round((num(i.p) + (i.fs ? 0 : num(i.vk))) * 100) / 100, waarom: x.waarom }; });
