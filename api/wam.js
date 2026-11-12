@@ -300,7 +300,7 @@ export default async function handler(req, res) {
       const r = op === 'wareg' ? await W.waReg(b) : op === 'wain' ? await W.waIn(b) : await W.waUit(b);
       return res.status(r.fout === 'sleutel' ? 401 : 200).json(r);
     }
-    if (op === 'cq') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); res.setHeader('cache-control', 'no-store'); return res.status(200).json(await W.cqLijst()); }
+    if (op === 'cq') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); res.setHeader('cache-control', 'no-store'); return res.status(200).json(await W.cqLijst(q('kort') === '1')); }
     if (op === 'cqbatch') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); let l = []; try { l = JSON.parse(q('j') || '[]'); } catch (e) { return res.status(400).json({ ok: false, fout: 'j is geen JSON' }); } const uit = []; for (const x of (Array.isArray(l) ? l : []).slice(0, 30)) { const r = await W.cqAntw({ sid: x.sid, x: x.x, k: x.k || [] }).catch(e => ({ ok: false, fout: String(e.message || e).slice(0, 80) })); uit.push({ sid: x.sid, ok: !!(r && r.ok) }); } return res.status(200).json({ ok: true, n: uit.filter(u => u.ok).length, uit }); }
     if (op === 'cqantw') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.cqAntw({ sid: q('sid'), x: q('x'), k: q('k') })); }
     if (op === 'waqr') { if (req.method !== 'POST') return res.status(405).end(); const r = await W.waQr(leesBody(req) || {}); return res.status(r.ok ? 200 : 401).json(r); }
