@@ -309,6 +309,7 @@ export default async function handler(req, res) {
     if (op === 'tellers') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.tellers(q('dagen') || 1)); }
     if (op === 'wastand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.waStand()); }
     if (op === 'stadstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.stadStand(q('land') ? String(q('land')).toUpperCase() : '')); }
+    if (op === 'paren') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.parenStand(Number(q('dagen')) || 1)) }); }
     if (op === 'herkomst') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.herkomst(Number(q('n')) || 40)); }
     if (op === 'mailproef') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.mailProef(q('code') || '')); }
     if (op === 'detailmail') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.detailMails({ nu: q('nu') === '1' })); }
