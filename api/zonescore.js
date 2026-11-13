@@ -4,9 +4,9 @@
 //   POST /api/zonescore?op=wacht {email,nets,spend}      wachtlijst voor de volledige lijsten (5 per uur per IP), meldt Henkjan via todayin-spel /api/meld
 //   POST /api/zonescore?op=ev                            gedrag op de pagina (tijd zichtbaar, scroll, kliks), zonder cookies
 //   GET  /api/zonescore?op=bewijs                        de afgeronde live cijfers die op de pagina staan
-//   Beschermd (*.vercel.app): ?op=stand, ?op=wachtlijst, ?op=wachtweg&email=, ?op=wacht via GET (testen)
+//   Beschermd (*.vercel.app): ?op=stand, ?op=wachtlijst, ?op=wachtweg&email=, ?op=wacht via GET (testen), ?op=indexnow (pagina bij Bing/IndexNow aanmelden)
 import { kv } from '../lib/db.js';
-import { check, leesInvoer, limiet, tel, bewijs, wacht, wachtlijst, wachtWeg, ev, stand, pagina, kaartHtml, bronVanRef } from '../lib/zonescore.js';
+import { CANON, check, leesInvoer, limiet, tel, bewijs, wacht, wachtlijst, wachtWeg, ev, stand, pagina, kaartHtml, bronVanRef } from '../lib/zonescore.js';
 
 const BOT = /bot\b|bot\/|crawler|spider|slurp|curl\/|wget|python|headless|lighthouse|preview|fetch|monitor/i;
 const beschermd = req => /\.vercel\.app$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]) && /\.vercel\.app$/i.test(String(req.headers.host || '').split(':')[0]);
@@ -30,10 +30,11 @@ export default async function handler(req, res) {
       return res.status(r.ok ? 200 : 400).json(r);
     }
     if (op === 'bewijs') return res.status(200).json(await bewijs(kv));
-    if (op === 'stand' || op === 'wachtlijst' || op === 'wachtweg') {
+    if (op === 'stand' || op === 'wachtlijst' || op === 'wachtweg' || op === 'indexnow') {
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen op de beschermde host' });
       if (op === 'stand') return res.status(200).json(await stand(kv));
       if (op === 'wachtlijst') return res.status(200).json({ ok: true, aanmeldingen: await wachtlijst(kv) });
+      if (op === 'indexnow') { const { MARKETS, indexnow } = await import('../lib/wtb.js'); return res.status(200).json({ ok: true, url: CANON, indexnow: await indexnow(MARKETS.us, [CANON]) }); }
       return res.status(200).json(await wachtWeg(kv, q('email')));
     }
     const zoneQ = q('zone');
