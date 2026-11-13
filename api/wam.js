@@ -83,18 +83,18 @@ button{font:inherit;color:inherit;cursor:pointer}button:focus-visible,input:focu
 #log{max-width:720px;margin:0 auto;padding:22px 20px 24px;display:flex;flex-direction:column}
 .ux-invoer-vast #log{padding-bottom:120px}
 .m{margin:10px 0;max-width:62ch;white-space:pre-wrap;word-wrap:break-word;animation:in .2s ease-out}
-.m.b{color:var(--ink)}.m.b a{color:var(--accent)}
-.m.u{align-self:flex-end;background:var(--soft);color:var(--ink);border-radius:18px 18px 6px 18px;padding:10px 15px;max-width:82%}
+.m.b{color:var(--ink);margin:18px 0 6px;line-height:1.5}.m.b a{color:var(--accent)}.m.b .vs{display:block;color:var(--body)}.m.b .vq{display:block;margin-top:6px;color:var(--ink);font-weight:600;font-size:19px;line-height:1.35;letter-spacing:-.01em}
+.m.u{align-self:flex-end;background:var(--soft);color:var(--accent);font-weight:600;font-size:16px;line-height:1.35;border-radius:999px;padding:9px 18px;max-width:82%;margin:14px 0 4px}
 .ux-opener-held .m.eerste{font-size:clamp(27px,6.4vw,40px);line-height:1.14;letter-spacing:-.035em;font-weight:700;margin:18px 0 26px;text-wrap:balance}
 .ux-opener-chat .m.b{background:var(--panel);border:1px solid var(--line);border-radius:6px 18px 18px 18px;padding:12px 16px;box-shadow:0 5px 22px #15214b08}
-.k{margin:2px 0 14px;animation:in .2s ease-out}
+.k{margin:10px 0 8px;animation:in .2s ease-out}
 .ux-keuzes-kaarten .k{display:grid;grid-template-columns:1fr;gap:10px}
 @media (min-width:600px){.ux-keuzes-kaarten .k{grid-template-columns:1fr 1fr}}
 .ux-keuzes-kaarten .k button{display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;font-size:16px;font-weight:600;color:var(--ink);transition:border-color .15s,transform .15s}
 .ux-keuzes-kaarten .k button::after{content:"→";color:var(--accent);font-weight:700}
 .ux-keuzes-kaarten .k button:hover{border-color:var(--accent);transform:translateY(-1px)}.ux-keuzes-kaarten .k button:active{background:var(--soft)}
-.ux-keuzes-pillen .k{display:flex;flex-wrap:wrap;gap:10px}
-.ux-keuzes-pillen .k button{border:0;box-shadow:inset 0 0 0 1.5px var(--accent);color:var(--accent);background:transparent;border-radius:999px;padding:11px 20px;font-size:16px;font-weight:600;line-height:1.3;text-align:left;transition:background .15s,transform .15s}.ux-keuzes-pillen .k button:hover{background:var(--soft);transform:translateY(-1px)}
+.ux-keuzes-pillen .k{display:flex;flex-wrap:wrap;gap:8px}
+.ux-keuzes-pillen .k button{border:0;box-shadow:inset 0 0 0 1.5px var(--accent);color:var(--accent);background:transparent;border-radius:999px;padding:10px 18px;font-size:16px;font-weight:600;line-height:1.3;text-align:left;transition:background .15s,transform .15s}.ux-keuzes-pillen .k button:hover{background:var(--soft);transform:translateY(-1px)}
 .ux-keuzes-pillen .k button:active{background:var(--soft)}
 .dots{display:inline-flex;gap:5px;padding:12px 2px}.dots i{width:8px;height:8px;border-radius:50%;background:var(--accent);opacity:.3;animation:d 1s infinite}.dots i:nth-child(2){animation-delay:.15s}.dots i:nth-child(3){animation-delay:.3s}
 .c{border:1px solid var(--line);border-radius:16px;padding:16px;margin:6px 0 16px;box-shadow:0 5px 22px #15214b06;max-width:520px}
@@ -128,7 +128,8 @@ function bk(e,d){var b=JSON.stringify({sid:W.sid,tok:W.tok,e:e,d:d||{}});try{if(
 function ev(e,d){if(W.sid)post('ev',{sid:W.sid,tok:W.tok,e:e,d:d||{}})}
 function onder(){try{var z=L.lastElementChild;if(z&&z.scrollIntoView)z.scrollIntoView({block:'end',behavior:'smooth'});else window.scrollTo(0,D.body.scrollHeight)}catch(e){window.scrollTo(0,D.body.scrollHeight)}}
 function link(t){var d=D.createElement('div');d.textContent=t;return d.innerHTML.replace(/(https?:\\/\\/[^\\s<)]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>')}
-function bericht(r,x){var m=D.createElement('div');m.className='m '+r;if(r==='b')m.innerHTML=link(x);else m.textContent=x;L.appendChild(m);onder();return m}
+function strak(h){var ps=h.split('\\n\\n'),l=ps.pop(),zs=l.replace(/([.!?])\\s+/g,'$1\\u0001').split('\\u0001'),qi=-1;for(var i=zs.length-1;i>=0;i--){if(/\\?["”]?\\s*$/.test(zs[i])){qi=i;break}}if(qi<0)return h;var q=zs.splice(qi,1)[0],rest=zs.join(' ');ps.push((rest?'<span class="vs">'+rest+'</span>':'')+'<span class="vq">'+q+'</span>');return ps.join('\\n\\n')}
+function bericht(r,x){var m=D.createElement('div');m.className='m '+r;if(r==='b')m.innerHTML=strak(link(x));else m.textContent=x;L.appendChild(m);onder();return m}
 function weg(){var a=L.querySelectorAll('.k,.c,.bord');for(var i=0;i<a.length;i++)a[i].remove()}
 function knoppen(k){if(!k||!k.length)return;var d=D.createElement('div');d.className='k';k.forEach(function(t){var b=D.createElement('button');b.type='button';b.textContent=t;b.onclick=function(){if(t===W.cpil){if(kanPush())meldDirect();else setTimeout(bewaarDeel,2500)}zeg(t,1)};d.appendChild(b)});L.appendChild(d);onder()}
 function dots(){var d=D.createElement('div');d.className='m b dots';d.innerHTML='<i></i><i></i><i></i>';L.appendChild(d);onder();return d}
