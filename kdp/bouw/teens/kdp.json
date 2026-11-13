@@ -1,0 +1,26 @@
+{
+ "titel": "Stocking Stuffers For Teens",
+ "ondertitel": "The Weirdest, Smartest, Most Hilarious 408 Facts You Will Ever Hear: Blow Minds, Break the Ice, and Become the Funniest Person in the Room (Even If You're Just Killing Time in the Bathroom)",
+ "auteur": [
+  "Elias",
+  "Grant"
+ ],
+ "formaat": "hardcover, maken via de boekenplank bij de bestaande paperback (YX7G68DWSFT, ASIN B0DJQLBM75): + Create hardcover, zodat titel, beschrijving, zoekwoorden en categorieen worden overgenomen en de reviews (119 in CA) gedeeld worden",
+ "trim": "5.5 x 8.5 in",
+ "papier": "zwart-wit, wit papier",
+ "bleed": true,
+ "afwerking": "glanzend (case laminate)",
+ "paginas": 147,
+ "bestanden": {
+  "binnenwerk": "/home/claude/boek/teens/binnenwerk_hard_5.5x8.5.pdf (ontbreekt hij: python3 /home/claude/boek/teens/bouw_hard.py)",
+  "omslag": "/home/claude/boek/teens/omslag_hard.pdf (13,0983 x 9,918 inch, rug 0,5223; opnieuw: python3 /home/claude/boek/teens/omslag_cfg.py)"
+ },
+ "prijzen": {
+  "usd": "19.99",
+  "cad": "27.99",
+  "gbp": "16.99",
+  "eur": "19,99"
+ },
+ "ai": "zelfde antwoord als de paperback (daar staat Nee, Henkjans eerdere verklaring); niet zelf wijzigen",
+ "leesleeftijd": "12-17, zoals de paperback"
+}

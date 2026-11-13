@@ -26,11 +26,12 @@ def vink(kleur):
 def html(c, W, H, RUG, BO=B, PW=6, SH=0):
     X_RUG = BO + PW; fp = X_RUG + RUG; fx = fp + SH; ty = BO
     k = c['kleur']
+    TH = c.get('trim_h', 9); TW = c.get('trim_w', 6); AB = c.get('achter_breed', 5)
     titels = ''.join(f'<div class="titel abs" style="left:{fx+0.38}in; top:{ty+top}in; font-size:{sz}pt;">{t}</div>'
                      for t, sz, top in c['titel'])
     em = ''.join(img(e, fx + x, ty + y, s, r) for e, x, y, s, r in c['emoji'])
     held = img(*((c['held'][0], fx + c['held'][1], ty + c['held'][2]) + tuple(c['held'][3:]))) if c.get('held') else ''
-    kaarten = ''.join(f'<div class="kaart" style="left:{BO+0.5}in; top:{ty+top}in; width:5in;"><b class="nr">{nr}</b>{t}</div>'
+    kaarten = ''.join(f'<div class="kaart" style="left:{BO+0.5}in; top:{ty+top}in; width:{AB}in;"><b class="nr">{nr}</b>{t}</div>'
                       for nr, t, top in c['kaarten'])
     lijst = ''.join(f'<div>{vink(k["accent"])}&nbsp; {t}</div>' for t in c['lijst'])
     em_a = ''.join(img(e, BO + x, ty + y, s, r) for e, x, y, s, r in c.get('emoji_achter', []))
@@ -56,21 +57,21 @@ body {{ width:{W}in; height:{H}in; position:relative; overflow:hidden;
 {held}
 <div class="abs" style="left:{fx+0.42}in; top:{ty+c['sub_top']}in; width:{c.get('sub_breed', 4.6)}in; font-family:PopB; font-size:{c.get('sub_pt', 17)}pt; line-height:1.22; color:{k['inkt']};">{c['sub']}</div>
 {em}
-<div class="abs" style="left:{fx}in; top:{ty+7.62}in; width:6in; text-align:center; font-family:PopB; font-size:15pt; letter-spacing:.3em; color:{k['inkt']};">{c['auteur'].upper()}</div>
-<div class="abs" style="left:{fp}in; top:{ty+8.15}in; width:{round(W-fp,4)}in; height:{round(H-ty-8.15,4)}in; background:{k['band']}; color:{k['bandinkt']};
+<div class="abs" style="left:{fx}in; top:{ty+TH-1.38}in; width:{TW}in; text-align:center; font-family:PopB; font-size:15pt; letter-spacing:.3em; color:{k['inkt']};">{c['auteur'].upper()}</div>
+<div class="abs" style="left:{fp}in; top:{ty+TH-0.85}in; width:{round(W-fp,4)}in; height:{round(H-ty-(TH-0.85),4)}in; background:{k['band']}; color:{k['bandinkt']};
   font-family:PopB; text-align:center; letter-spacing:.08em; font-size:{c.get('band_pt', 13.5)}pt; padding-top:.27in; box-sizing:border-box; padding-right:{BO}in;">{c['band']}</div>
 <div class="abs" style="left:{X_RUG}in; top:0; width:{RUG}in; height:{H}in; display:{'block' if c['paginas'] >= 80 and c['rug'] else 'none'};">
   <div style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) rotate(90deg); white-space:nowrap;
-       font-family:PopB; font-size:7.6pt; color:{k['inkt']}; letter-spacing:.06em;">{c['rug']}&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family:PopM;">{c['auteur'].upper()}</span></div>
+       font-family:PopB; font-size:{c.get('rug_pt', 7.6)}pt; color:{k['inkt']}; letter-spacing:.06em;">{c['rug']}&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family:PopM;">{c['auteur'].upper()}</span></div>
 </div>
-<div class="abs" style="left:{BO+0.5}in; top:{ty+0.5}in; width:5in;">
+<div class="abs" style="left:{BO+0.5}in; top:{ty+0.5}in; width:{AB}in;">
   <div style="font-family:PopB; font-size:25pt; line-height:1.1; color:{k['inkt']};">{c['kop']}</div>
   <div style="font-family:Car; font-size:13pt; line-height:1.38; color:{k['inkt']}; margin-top:.16in;">{c['blurb']}</div>
 </div>
 {kaarten}
-<div class="abs lijst" style="left:{BO+0.55}in; top:{ty+c['lijst_top']}in; width:5in;">{lijst}</div>
+<div class="abs lijst" style="left:{BO+0.55}in; top:{ty+c['lijst_top']}in; width:{AB}in;">{lijst}</div>
 {em_a}
-<div class="abs" style="left:{BO+0.55}in; top:{ty+8.2}in; font-family:PopM; font-size:10pt; letter-spacing:.2em; color:{k['inkt']};">{c['auteur'].upper()}</div>
+<div class="abs" style="left:{BO+0.55}in; top:{ty+TH-0.8}in; font-family:PopM; font-size:10pt; letter-spacing:.2em; color:{k['inkt']};">{c['auteur'].upper()}</div>
 </body></html>"""
 
 
