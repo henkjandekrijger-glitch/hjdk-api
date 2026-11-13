@@ -268,6 +268,19 @@ async function ronde(droog) {
   return uit;
 }
 
+// organisch bezoek (zoekmachines en AI-assistenten) in dezelfde dagteller als de gids (gk:d:<dag>, veld <pad>|v-<bron>), zodat ZICHT het meetelt
+function bronVan(req, url) {
+  const r = String(req.headers.referer || '').toLowerCase(); const s = r + ' ' + String(url.searchParams.get('utm_source') || '').toLowerCase();
+  if (/chatgpt|openai/.test(s)) return 'chatgpt'; if (/perplexity/.test(s)) return 'perplexity'; if (/copilot|bing\.com\/chat/.test(s)) return 'copilot';
+  if (/gemini\.google/.test(s)) return 'gemini'; if (/claude\.ai/.test(s)) return 'claude'; if (/(^|\/\/|\.)google\./.test(r)) return 'google';
+  if (/bing\.com/.test(r)) return 'bing'; if (/duckduckgo/.test(r)) return 'duckduckgo'; return null;
+}
+async function telBron(req, url, pad) {
+  const b = bronVan(req, url); if (!b) return; const k = 'gk:d:' + new Date().toISOString().slice(0, 10);
+  try { await kv.raw(['HINCRBY', k, pad + '|v-' + b, '1']); await kv.raw(['EXPIRE', k, String(60 * 86400)]); } catch (e) {}
+  await D.tel('bron', b);
+}
+
 export default async function handler(req, res) {
   const host = String(req.headers['x-forwarded-host'] || req.headers.host || '');
   const url = new URL(req.url, 'https://' + (host || 'gids.kadoly.com'));
@@ -295,6 +308,7 @@ export default async function handler(req, res) {
     if (op === 'af') { const ok = await D.meldAf(q('t')); res.setHeader('cache-control', 'no-store');
       return res.status(200).send(schil(Object.assign({}, bron, { titel: 'Kadoly', view: 'af', ssr: `<h1>${esc(ok ? t.af_ok : t.fout)}</h1><p><a class="k" href="${BASIS}">${esc(t.naam_product)}</a></p>` }))); }
     res.setHeader('cache-control', 'no-store');
+    if (!g) await telBron(req, url, BASIS + (p ? '/' + (D.geldigId(p) && !['lootjes', 'gedicht'].includes(p) ? 'lijst' : p) : ''));
     if (g && m) { const G = await D.leesGroep(g); return res.status(200).send(schil(Object.assign({}, bron, { titel: (G ? G.naam + ' · ' : '') + t.lt_h1, view: 'lid', data: { g, m }, ssr: `<p>${esc(t.bezig)}</p>` }))); }
     if (g) { const G = await D.leesGroep(g); await D.tel('groep_open'); return res.status(200).send(schil(Object.assign({}, bron, { titel: (G ? G.naam + ' · ' : '') + t.lt_h1, beschrijving: t.lt_sub, view: 'groep', data: { g, naam: G ? G.naam : '', datum: G ? G.datum : null }, ssr: `<h1>${esc(G ? G.naam : t.lt_h1)}</h1><p>${esc(t.bezig)}</p>` }))); }
     if (p === 'lootjes') { await D.tel('lt_view', taal); 
