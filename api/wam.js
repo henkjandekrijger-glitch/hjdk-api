@@ -328,6 +328,9 @@ export default async function handler(req, res) {
     // groepsvraag en beginscherm (beschermd): virale stand, interesselijst besloten WAM, live regel, steden van vandaag eenmalig vullen
     // schermcijfers van een onderdeel wissen na een ontwerpwijziging (beschermd): ?op=uxwis&d=scherm&v=h1,h2
     if (op === 'uxwis') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); const { kv } = await import('../lib/db.js'); const d = String(q('d') || ''), vs = String(q('v') || '').split(',').filter(Boolean); if (!W.UX[d]) return res.status(400).json({ ok: false }); let n = 0; for (const v of vs) for (const f of ['g', 'e', 'b3', 'c', 't', 'v']) n += Number(await kv.raw(['HDEL', 'wam:ux', d + '|' + v + '|' + f]).catch(() => 0)) || 0; return res.status(200).json({ ok: true, gewist: n }); }
+    // matchflow (beschermd): stand per stap en wat de regels niet snapten; woorden erbij met ?op=flowkw&j={"dienst|klusjes":"drywall,tiling"} (leeg = weg)
+    if (op === 'flowstat') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.flowStand(Number(q('n')) || 60)) }); }
+    if (op === 'flowkw') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); let j = null; try { j = JSON.parse(String(q('j') || '{}')); } catch (e) { return res.status(400).json({ ok: false, fout: 'j is geen JSON' }); } return res.status(200).json({ ok: true, gezet: await W.flowKwZet(j) }); }
     if (op === 'hulp') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.hulpStand()) }); }
     if (op === 'alv') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, alv: await W.alvStand() }); }
     if (op === 'macht') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, macht: await W.machtStand() }); }
