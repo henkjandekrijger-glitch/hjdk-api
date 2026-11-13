@@ -79,7 +79,7 @@ Alle Amazon-campagnes: Dynamic bids down only, alleen Amazon (Limit reach to Ama
 | Apocrypha UK | B09YTZ72KZ | £3,36 (£4,56 bij £12,99) | 50% |
 | Duitse titels (paperback EUR 12,99, vanaf ~20 nov) | | ~EUR 5,5 | ~EUR 2,75 |
 
-Cijfers: 11 nov $20,40; 12 nov $13,70; november t/m 13 nov $166,38; Teens november $76,34 uit 27 bestellingen (13 nov).
+Cijfers: 11 nov $20,40; 12 nov $13,70; 13 nov $8,20 (Enoch, Teens, Mom's Word Search; ads $3,10 Apocrypha UK); 7-13 nov $122,39; november t/m 13 nov $166,38; Teens november $76,34 uit 27 bestellingen (13 nov).
 
 ## Teens naar #1 in Canada
 
@@ -90,3 +90,4 @@ Teens B0DJQLBM75 (119 reviews, 4,5 ster in CA) verkoopt vooral in Canada: CA-ran
 - Kindle-eBooks Wait, That's True?! (A1NZ4PXA2W9L9O) en For Men (A34DE110B1IJJG): Publish faalt met "Please fix the highlighted error(s)" zonder rood veld. Elke VOL-ronde een nieuwe poging; blijft het falen: KDP Support.
 - Zondag 15 nov 00:12 UTC (trig_01EDncuGEXzWK6QZmy923y8f): paperbacks + hardcovers Adventskalender für Männer en Moment mal, das stimmt?! Für Männer klaarzetten.
 - 15 nov 15:17 UTC: biedingen LC NIEUWJAAR herijken (trig_01XFKR9gQ6X5ahE3CiEckxBh).
+- Ronde A 14 nov: KDP Griddle EXACT 0.40 (sinds 11 nov geen vertoningen) en Crock Pot EXACT 0.35 (bijna geen) een stap omhoog binnen de marge (Griddle hoogstens $0,50, Crock Pot hoogstens $0,45); Teens CA AUTO en PT na 15 nov zonder vertoningen naar CA$0,45.
