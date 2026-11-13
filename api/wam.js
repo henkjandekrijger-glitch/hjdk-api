@@ -331,6 +331,7 @@ export default async function handler(req, res) {
     if (op === 'waqrpagina') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(await W.waQrPagina()); }
     if (op === 'tellers') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.tellers(q('dagen') || 1)); }
     if (op === 'wastand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.waStand()); }
+    if (op === 'smsstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); const { smsStand } = await import('../lib/wam-sms.js'); return res.status(200).json(await smsStand()); }
     if (op === 'stadstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.stadStand(q('land') ? String(q('land')).toUpperCase() : '')); }
     // groepsvraag en beginscherm (beschermd): virale stand, interesselijst besloten WAM, live regel, steden van vandaag eenmalig vullen
     // schermcijfers van een onderdeel wissen na een ontwerpwijziging (beschermd): ?op=uxwis&d=scherm&v=h1,h2
