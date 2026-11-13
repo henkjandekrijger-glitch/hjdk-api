@@ -338,6 +338,7 @@ export default async function handler(req, res) {
     // matchflow (beschermd): stand per stap en wat de regels niet snapten; woorden erbij met ?op=flowkw&j={"dienst|klusjes":"drywall,tiling"} (leeg = weg)
     // evolutionaire groei (beschermd): cellen land|stad|soort met gewicht, schaarse kant en advertentie-advies; eenmalig vullen met op=celvul
     if (op === 'rep') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.repOverzicht()), ...(q('droog') ? { checkin_droog: await W.checkinRonde({ droog: true }) } : {}) }); } // reputatie: meldingen, dicht, geven, check-in-wachtrij (geen ids)
+    if (op === 'botcheck') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.botCheck(q('dagen') || 1)) }); }
     if (op === 'cellen') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.celStand(Number(q('n')) || 25)) }); }
     if (op === 'celvul') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.celVul()) }); }
     if (op === 'flowstat') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.flowStand(Number(q('n')) || 60)) }); }
