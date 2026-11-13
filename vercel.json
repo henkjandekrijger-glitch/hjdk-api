@@ -199,6 +199,10 @@
   ],
   "rewrites": [
     {
+      "source": "/zone-score",
+      "destination": "/api/zonescore?op=pagina"
+    },
+    {
       "source": "/verzekeringen",
       "has": [
         {
@@ -1325,6 +1329,9 @@
     },
     "api/verzekeringen.js": {
       "maxDuration": 180
+    },
+    "api/zonescore.js": {
+      "maxDuration": 30
     }
   },
   "redirects": [
