@@ -51,7 +51,7 @@ const lidSleutel = (s, id) => D.hash('wl-lid:' + s + ':' + id).slice(0, 24); // 
 async function api(b, ctx) {
   const op = String(b.op || ''); const ip = ctx.ip; const taal = T[b.taal] ? b.taal : ctx.taal;
   // dagplafond voor alle bezoekers samen (Haiku ~ $0,003 per vraag, Sonnet-gedicht ~ $0,01): hoogstens 1500 AI-vragen en 200 gedichten per dag
-  if (['foto', 'smaak', 'tips', 'zoek', 'gedicht'].includes(op) && !await D.mag('alle', op === 'gedicht' ? 'ged-totaal' : 'ai-totaal', op === 'gedicht' ? 200 : 1500)) return op === 'tips' ? { ok: true, per: {}, tips: [] } : druk;
+  if (['foto', 'smaak', 'zoek', 'gedicht'].includes(op) && !await D.mag('alle', op === 'gedicht' ? 'ged-totaal' : 'ai-totaal', op === 'gedicht' ? 200 : 1500)) return druk;
   const eigen = async () => { const l = await D.leesLijst(b.l); return D.isEigenaar(l, b.k) ? l : null; };
 
   if (op === 'maak') {
@@ -156,7 +156,7 @@ async function api(b, ctx) {
     const sig = D.hash((l.items || []).map(x => x.i).join(',') + ':' + (l.smaak ? l.smaak.tekst : '')).slice(0, 12);
     l.kd = l.kd || {}; let x = l.kd[taal];
     if (!x || x.sig !== sig || Date.now() - x.t > 86400000) {
-      if (!await D.mag(ip, 'ai', 80)) return { ok: true, per: {}, tips: [] };
+      if (!await D.mag(ip, 'ai', 80) || !await D.mag('alle', 'ai-totaal', 1500)) return { ok: true, per: {}, tips: [] };
       try { x = Object.assign(await S.kadolyTips({ items: l.items.slice(0, 20), smaak: l.smaak && l.smaak.tekst, taal }), { sig, t: Date.now() }); } catch (e) { console.log('wl tips', e.message); return { ok: true, per: {}, tips: [] }; }
       l.kd[taal] = x; await kv.set('wl:l:' + l.id, l, { ex: D.TTL });
     }
