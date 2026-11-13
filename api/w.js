@@ -131,8 +131,8 @@ async function api(b, ctx) {
   if (op === 'herinner') {
     if (!D.geldigeMail(b.mail) || !await D.mag(ip, 'mail', 20)) return { ok: false, fout: 'fout' };
     const l = await D.leesLijst(b.l); if (!l || !l.datum) return { ok: false, fout: 'fout' };
-    const dg = new Date(l.datum + 'T12:00:00Z'); const nu = new Date(D.dagNL() + 'T12:00:00Z'); const dagen = Math.round((dg - nu) / 86400000); if (dagen < 2) return { ok: false, fout: 'fout' };
-    const wanneer = new Date(dg.getTime() - (dagen > 7 ? 7 : 1) * 86400000).toISOString().slice(0, 10);
+    const dg = new Date(l.datum + 'T12:00:00Z'); const nu = new Date(D.dagNL() + 'T12:00:00Z'); const dagen = Math.round((dg - nu) / 86400000); if (dagen <= 7) return { ok: false, fout: 'fout' };
+    const wanneer = new Date(dg.getTime() - 7 * 86400000).toISOString().slice(0, 10);
     await kv.raw(['RPUSH', 'wl:h:' + wanneer, JSON.stringify({ mail: String(b.mail).trim().toLowerCase(), l: l.id, taal })]); await kv.raw(['EXPIRE', 'wl:h:' + wanneer, String(40 * 86400)]);
     await D.tel('herinner'); return { ok: true };
   }
