@@ -224,8 +224,9 @@ export default async function handler(req, res) {
       // groepsvraag: de linkvoorbeeld-bot (WhatsApp, Telegram) krijgt de vraag als titel; een ophaling telt als 'echt in een chat geplakt'
       const krId = schoon(q('kr'), /^[0-9a-f]{10}$/), hId = schoon(q('h'), /^[0-9a-f]{8}$/), bot = W.lijktBot(ua);
       // doorgestuurde vraag: voorvertoning met de vraag zelf; haalt de linkvoorbeeld-bot hem op, dan staat het bericht echt in een chat (prev, eenmaal per link)
-      const meta = krId ? await W.kringMeta(krId).catch(() => null) : hId ? await W.hulpMeta(hId, bot).catch(() => null) : null;
-      if (bot) { await W.tel(krId && meta ? { bot: 1, kring_voorbeeld: 1 } : { bot: 1 }); return res.status(200).send(pagina({ start: null, taal, kanalen: k, vapid: '', meta })); }
+      const rId = schoon(q('r'), /^[0-9a-f]{8}$/);
+      const meta = krId ? await W.kringMeta(krId).catch(() => null) : hId ? await W.hulpMeta(hId, bot).catch(() => null) : rId ? await W.refMeta(rId, q('z'), taal).catch(() => null) : null;
+      if (bot) { await W.tel(krId && meta ? { bot: 1, kring_voorbeeld: 1 } : rId && !hId ? { bot: 1, ref_voorbeeld: 1 } : { bot: 1 }); return res.status(200).send(pagina({ start: null, taal, kanalen: k, vapid: '', meta })); }
       let vid = cookie(req, 'wam_v'); const uitPost = q('w') ? await W.vidVanLink(q('w')) : null; if (uitPost) vid = uitPost; // link uit een mail: zelfde profiel, ook op een ander toestel
       if (!/^[0-9a-f]{16}$/.test(vid)) vid = randomBytes(8).toString('hex');
       res.setHeader('set-cookie', 'wam_v=' + vid + '; Path=/; Max-Age=31536000; SameSite=Lax; Secure');
