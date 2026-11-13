@@ -291,10 +291,10 @@ function pagina(ruw, sam, munt, melding) {
   h += '<h2>Wat nog ontbreekt</h2><div class="kaart"><ul class="lijst">' + mist.map(x => '<li>' + x + '</li>').join('') + '</ul></div>';
 
   // de munt
-  h += '<h2 id="munt">Waarde per uitkomst</h2><p>Wat elke uitkomst je waard is, in dollars. Waar "schatting" staat, is het een standaardgetal: zet je eigen getal en druk op Opslaan. Verkoop is de marge per verkoop, niet de omzet.</p><form method="post" action="/api/geld">';
+  h += '<h2 id="munt">Waarde per uitkomst</h2><p>Wat elke uitkomst je waard is, in dollars. Clickmind rekent dit zelf uit wat er echt verkocht wordt ("door Clickmind"); waar nog geen verkopen zijn, staat de doelwaarde van het project. Overschrijven kan, dan geldt jouw getal. Verkoop is de marge per verkoop, niet de omzet.</p><form method="post" action="/api/geld">';
   for (const p of PROJECTEN) {
     h += '<div class="proj"><h3>' + esc(PROJECT_NAAM[p]) + '</h3><div class="velden">';
-    for (const u of UITKOMSTEN) { const c = munt.cent[p][u]; h += '<div><label for="w_' + p + '_' + u + '">' + esc(UITKOMST_NAAM[u]) + '</label><input id="w_' + p + '_' + u + '" name="w.' + p + '.' + u + '" inputmode="decimal" value="' + esc(String(Math.round(c * 100) / 10000).replace('.', ',')) + '"><span class="bron">' + (munt.bron[p][u] === 'eigen' ? 'eigen getal' : 'schatting, zet je eigen getal') + '</span></div>'; }
+    for (const u of UITKOMSTEN) { const c = munt.cent[p][u]; h += '<div><label for="w_' + p + '_' + u + '">' + esc(UITKOMST_NAAM[u]) + '</label><input id="w_' + p + '_' + u + '" name="w.' + p + '.' + u + '" inputmode="decimal" value="' + esc(String(Math.round(c * 100) / 10000).replace('.', ',')) + '"><span class="bron">' + (munt.bron[p][u] === 'eigen' ? 'eigen getal' : munt.bron[p][u] === 'clickmind' ? 'door Clickmind' : 'doelwaarde') + '</span></div>'; }
     h += '</div></div>';
   }
   h += '<div class="proj"><h3>Koers</h3><div class="velden"><div><label for="eurUsd">1 euro in dollar</label><input id="eurUsd" name="eurUsd" inputmode="decimal" value="' + esc(String(munt.eurUsd).replace('.', ',')) + '"><span class="bron">' + (munt.eurUsdBron === 'eigen' ? 'eigen getal' : 'schatting, zet je eigen getal') + '</span></div></div></div>';
