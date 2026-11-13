@@ -195,9 +195,113 @@
     {
       "path": "/api/verzekeringen?op=controle",
       "schedule": "15 7 * * *"
+    },
+    {
+      "path": "/api/w?op=ronde",
+      "schedule": "20 7 * * *"
     }
   ],
   "rewrites": [
+    {
+      "source": "/w",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/w"
+    },
+    {
+      "source": "/w/app.js",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/w?op=js"
+    },
+    {
+      "source": "/w/api",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/w?op=api"
+    },
+    {
+      "source": "/w/uit",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/w?op=uit"
+    },
+    {
+      "source": "/w/af",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/w?op=af"
+    },
+    {
+      "source": "/w/lootjes",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/w?p=lootjes"
+    },
+    {
+      "source": "/w/zoek",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/w?p=zoek"
+    },
+    {
+      "source": "/w/g/:g([a-z0-9]{6,12})/:m([a-z0-9]{4,12})",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/w?g=:g&m=:m"
+    },
+    {
+      "source": "/w/g/:g([a-z0-9]{6,12})",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/w?g=:g"
+    },
+    {
+      "source": "/w/:p([a-z0-9]{6,12})",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/w?p=:p"
+    },
     {
       "source": "/zone-score",
       "destination": "/api/zonescore?op=pagina"
@@ -1332,6 +1436,9 @@
     },
     "api/zonescore.js": {
       "maxDuration": 30
+    },
+    "api/w.js": {
+      "maxDuration": 120
     }
   },
   "redirects": [
