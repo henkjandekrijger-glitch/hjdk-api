@@ -153,7 +153,7 @@ async function api(b, ctx) {
   }
   if (op === 'tips') {
     const l = await D.leesLijst(b.l); if (!l || !(l.items || []).length) return { ok: true, per: {}, tips: [] };
-    const sig = D.hash((l.items || []).map(x => x.i).join(',') + ':' + (l.smaak ? l.smaak.tekst : '')).slice(0, 12);
+    const sig = D.hash('v2:' + (l.items || []).map(x => x.i).join(',') + ':' + (l.smaak ? l.smaak.tekst : '')).slice(0, 12);
     l.kd = l.kd || {}; let x = l.kd[taal];
     if (!x || x.sig !== sig || Date.now() - x.t > 86400000) {
       if (!await D.mag(ip, 'ai', 80) || !await D.mag('alle', 'ai-totaal', 1500)) return { ok: true, per: {}, tips: [] };
