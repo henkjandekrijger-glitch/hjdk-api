@@ -50,6 +50,8 @@ const lidSleutel = (s, id) => D.hash('wl-lid:' + s + ':' + id).slice(0, 24); // 
 
 async function api(b, ctx) {
   const op = String(b.op || ''); const ip = ctx.ip; const taal = T[b.taal] ? b.taal : ctx.taal;
+  // dagplafond voor alle bezoekers samen (Haiku ~ $0,003 per vraag, Sonnet-gedicht ~ $0,01): hoogstens 1500 AI-vragen en 200 gedichten per dag
+  if (['foto', 'smaak', 'tips', 'zoek', 'gedicht'].includes(op) && !await D.mag('alle', op === 'gedicht' ? 'ged-totaal' : 'ai-totaal', op === 'gedicht' ? 200 : 1500)) return op === 'tips' ? { ok: true, per: {}, tips: [] } : druk;
   const eigen = async () => { const l = await D.leesLijst(b.l); return D.isEigenaar(l, b.k) ? l : null; };
 
   if (op === 'maak') {
