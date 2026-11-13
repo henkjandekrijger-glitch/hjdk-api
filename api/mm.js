@@ -40,7 +40,7 @@
 //   /api/mm/verken?sleutel=todayin-us   voorstel witte lijst verkenningscampagne; POST /api/mm/verkengedaan (SHOP_SLEUTEL) = uitgevoerd
 //   /api/mm/instelling[?j=<json>]       schakelaars, o.a. blokkeren aan/uit (beschermde host)
 //   /api/mm/overzicht                   alles op één pagina (beschermde host)
-//   /api/mm/terugbetaling?net=propeller&van=&tot=[&formaat=csv]   bewijs per klik voor een terugbetalingsverzoek (beschermde host; indienen alleen op Henkjans woord)
+//   /api/mm/terugbetaling?net=propeller&van=&tot=[&formaat=csv]   bewijs per klik voor een terugbetalingsverzoek (beschermde host; PropellerAds dient Clickmind sinds 13 nov zelf in, zie lib/terugauto.js)
 //   /api/mm/terugdag                    cron: elke dag het dossier van gisteren per netwerk
 //   /cm.js                              CLICKMIND in één regel (uitkomsten, mensmeter bij betaald verkeer, lerende modal)
 //   /mmm.js                             DE LERENDE MODAL (lib/modal.js): <script src="https://whichtobuy.best/mmm.js" data-site="<site>" async></script>; testen met ?mmm=<arm-id> in de pagina-URL
@@ -352,6 +352,16 @@ export default async function handler(req, res) {
       if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
       if (q('lees') === '1') return res.status(200).json({ laatst: await kv.get('mm:leer:laatst'), log: ((await kv.raw(['LRANGE', 'mm:leerlog', 0, 47])) || []).map(String) });
       return res.status(200).json(await leerRonde(kv, { droog: q('droog') === '1' }));
+    }
+    // terugbetaling zelf indienen (lib/terugauto.js, 13 nov): ?dag=&droog=1 rekent alleen; terugingediend markeert wat met de hand ging; resenddomeinen toont de afzenders
+    if (op === 'terugindien' || op === 'terugingediend' || op === 'resenddomeinen') {
+      res.setHeader('cache-control', 'no-store');
+      const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET);
+      if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde vercel.app-host' });
+      const TA = await import('../lib/terugauto.js');
+      if (op === 'resenddomeinen') return res.status(200).json(await TA.resendDomeinen(kv));
+      if (op === 'terugingediend') return res.status(200).json(await TA.markeerIngediend(kv, { net: netNaam(q('net') || 'propeller'), dag: q('dag'), via: q('via') || 'hand', sterk: q('sterk') ? Number(q('sterk')) : null }));
+      return res.status(200).json(await TA.indienAuto(kv, { net: netNaam(q('net') || 'propeller'), dag: q('dag'), droog: q('droog') === '1' }));
     }
     if (op === 'terugdag') {
       res.setHeader('cache-control', 'no-store');
@@ -810,7 +820,7 @@ async function statusBlok({ e, leer, inst, st }) {
   h += rij('Zone-oordeel', N(zo.onbekend) < 0.8 * zTot, (zTot - N(zo.onbekend)) + ' van ' + zTot + ' zones beoordeeld (' + N(zo.zwart) + ' zwart, ' + N(zo.wit) + ' wit)', 'Zonder browsermeting kan Clickmind een zone wel als bot herkennen, maar nooit als mens.');
   let bg = null; try { const l = await kv.raw(['LRANGE', 'mm:blokgedaan:propeller', 0, 0]); bg = l && l[0] ? JSON.parse(l[0]) : null; } catch (x) {}
   h += rij('Blokkeren door Clickmind', !!inst.blokkeren && (!bg || !(bg.fouten || []).length), inst.blokkeren ? 'aan' + (bg ? '; laatste uitvoering ' + ago(min(bg.t)) + ': ' + e(bg.samenvatting) : '; eerste uitvoering om :20') : 'uit (alleen voorstel)', 'PropellerAds: elk uur om :20 voegt de PropellerAds-lus de zones toe aan de uitsluitlijst van de campagnes waar ze kliks hadden. Nooit de grootste bron van een campagne, nooit zones met echte uitkomsten, nooit iets eraf.');
-  h += rij('Terugbetalingsdossier', idx.length > 0, idx.length ? 'laatste: ' + e(idx[0]) : 'eerste dossier vannacht 05:40 UTC', 'Indienen alleen op Henkjans woord.');
+  h += rij('Terugbetalingsdossier', idx.length > 0, idx.length ? 'laatste: ' + e(idx[0]) : 'eerste dossier vannacht 05:40 UTC', 'PropellerAds: elke ochtend zelf ingediend (Henkjan 13 nov).');
   h += rij('Lerende modal', true, modAan.length ? 'aan op ' + e(modAan.join(', ')) + '; uit op ' + (mds.length - modAan.length) + ' sites' : 'overal uit', '');
   if (dir) h += rij('Yoors Shop: direct naar de productpagina', !!(meet && meet.aan), dir.pct + '% direct; vandaag ' + dv + ' aangekomen; cm.js op yoo.rs: ' + (meet && meet.aan ? 'meet' : 'nog niet'), 'Zonder cm.js op yoo.rs: geen eerste tik als conversie voor het netwerk en geen mensoordeel per zone.');
   return h + '</table></div>';
@@ -858,7 +868,7 @@ async function overzicht() {
   }
   const idx = (((await kv.raw(['SMEMBERS', 'mm:terug:index']).catch(() => [])) || []).map(String)).sort().reverse().slice(0, 14);
   const dos = (await Promise.all(idx.map(k => kv.get('mm:terug:' + k).catch(() => null)))).filter(Boolean);
-  h += '<h2>Terugbetaling (bewijs per klik, indienen alleen op jouw woord)</h2><div class="w">' + tabel(['netwerk', 'dag', 'kliks via ons', 'verdacht', 'sterk bewijs', 'uiterlijk indienen', 'hoe', 'csv'], dos.map(x => [x.netwerk, x.van, x.kliksViaOns, x.verdacht + ' (' + x.pctVerdacht + '%)', x.sterkBewijs, x.uiterlijkIndienen || 'onbekend', x.indienen, '/api/mm/terugbetaling?net=' + x.netwerk + '&van=' + x.van + '&formaat=csv'])) + '</div>';
+  h += '<h2>Terugbetaling (bewijs per klik; PropellerAds dient Clickmind elke ochtend zelf in)</h2><div class="w">' + tabel(['netwerk', 'dag', 'kliks via ons', 'verdacht', 'sterk bewijs', 'uiterlijk indienen', 'hoe', 'csv'], dos.map(x => [x.netwerk, x.van, x.kliksViaOns, x.verdacht + ' (' + x.pctVerdacht + '%)', x.sterkBewijs, x.uiterlijkIndienen || 'onbekend', x.indienen, '/api/mm/terugbetaling?net=' + x.netwerk + '&van=' + x.van + '&formaat=csv'])) + '</div>';
   h += '<h2>Leerlog</h2><div class="w">' + tabel(['ronde'], (log || []).map(x => [String(x)])) + '</div>';
   h += '<h2>Vandaag per netwerk (mensmeter)</h2><div class="w">' + tabel(['netwerk', 'bezoeken', 'via /go en /w', 'gemeten op pagina', 'mens', 'datacenter', 'headless'], Object.entries(st.netwerken || {}).map(([n, x]) => [n, x.bezoeken, x.viaGo, x.gemeten, p(x.mensPct), p(x.datacenterPct), p(x.headlessPct)])) + '</div>';
   return h + '</body></html>';
