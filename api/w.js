@@ -197,12 +197,12 @@ async function api(b, ctx) {
     const g = await D.leesGroep(b.g); const ik = g && g.leden.find(x => x.m === b.m); if (!ik || ik.sh !== D.hash(b.s)) return { ok: false, fout: 'fout' };
     const doelM = g.trek ? g.trek[ik.m] : null; const doel = doelM ? g.leden.find(x => x.m === doelM) : null;
     if (op === 'lot') {
-      if (g.trek && !ik.open) { ik.open = Date.now(); await D.bewaarGroep(g); await D.tel('lot_open'); }
+      const alOpen = !!ik.open; if (g.trek && !ik.open) { ik.open = Date.now(); await D.bewaarGroep(g); await D.tel('lot_open'); }
       let dl = null;
       if (doel) { const l = doel.lijst ? await D.leesLijst(doel.lijst) : null;
         if (l) { const [c, p] = await Promise.all([D.leesClaims(l.id), D.leesPotten(l.id)]); dl = { m: doel.m, naam: doel.naam, lijst: D.openbaar(l), claims: claimsUit(c), potten: pottenUit(p) }; await D.tel('lot_lijst'); }
         else dl = { m: doel.m, naam: doel.naam, lijst: null }; }
-      return { ok: true, ik: { naam: ik.naam, lijst: ik.lijst || null, open: !!ik.open }, groep: { naam: g.naam, datum: g.datum, budget: g.budget, gel: g.gel }, doel: dl,
+      return { ok: true, ik: { naam: ik.naam, lijst: ik.lijst || null, open: alOpen }, groep: { naam: g.naam, datum: g.datum, budget: g.budget, gel: g.gel }, doel: dl,
         roddel: doel ? ((g.roddel || {})[doel.m] || []).map(x => x.tekst) : [], leden: g.leden.filter(x => x.m !== ik.m).map(x => ({ m: x.m, naam: x.naam })) };
     }
     if (op === 'lotlijst') {
