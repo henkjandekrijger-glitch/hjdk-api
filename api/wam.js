@@ -231,7 +231,7 @@ export default async function handler(req, res) {
       if (beschermd(host) && q('st')) ctx.startTest = q('st');
       if (beschermd(host) && q('wv')) ctx.waVTest = q('wv');
       if (beschermd(host) && q('ux')) { const t = {}; for (const x of q('ux').split(',')) { const [d, v] = x.split(':'); if (W.UX[d] && W.UX[d].includes(v)) t[d] = v; } ctx.uxTest = t; }
-      const params = { n: schoon(q('n'), /^[a-z]{2,12}$/), z: schoon(q('z'), /^[\w{}\[\]-]{1,20}$/), c: schoon(q('c'), /^[\w{}\[\]-]{1,20}$/), b: schoon(q('b'), /^[\w{}\[\]-]{1,20}$/), mmc: schoon(q('mmc'), /^[0-9a-f]{8,24}$/), r: schoon(q('r'), /^[0-9a-f]{8}$/), d: schoon(q('d'), /^[a-z]{2,10}-[a-z]{2,8}(-[a-z0-9]{1,6})?$/), zr: schoon(q('z'), /^[0-9a-f]{8}$/) };
+      const params = { n: schoon(q('n'), /^[a-z]{2,12}$/), z: schoon(q('z'), /^[\w{}\[\]-]{1,20}$/), c: schoon(q('c'), /^[\w{}\[\]-]{1,20}$/), b: schoon(q('b'), /^[\w{}\[\]-]{1,20}$/), mmc: schoon(q('mmc'), /^[0-9a-f]{8,24}$/), r: schoon(q('r'), /^[0-9a-f]{8}$/), d: schoon(q('d'), /^[a-z]{2,10}-[a-z]{2,8}(-[a-z0-9]{1,6})?$/), zr: schoon(q('z'), /^[0-9a-f]{8}$/), h: schoon(q('h'), /^[0-9a-f]{8}$/) };
       const start = await W.startSessie({ vid, ctx, params });
       if (uitPost && q('van') === 'bewaar') await W.tel({ bewaar_terug: 1 }).catch(() => {});
       const bord = start && start.ux && start.ux.bord === 'aan' ? await W.bordVoor(ctx.land, ctx.taal).catch(() => null) : null;
@@ -327,6 +327,7 @@ export default async function handler(req, res) {
     // groepsvraag en beginscherm (beschermd): virale stand, interesselijst besloten WAM, live regel, steden van vandaag eenmalig vullen
     // schermcijfers van een onderdeel wissen na een ontwerpwijziging (beschermd): ?op=uxwis&d=scherm&v=h1,h2
     if (op === 'uxwis') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); const { kv } = await import('../lib/db.js'); const d = String(q('d') || ''), vs = String(q('v') || '').split(',').filter(Boolean); if (!W.UX[d]) return res.status(400).json({ ok: false }); let n = 0; for (const v of vs) for (const f of ['g', 'e', 'b3', 'c', 't', 'v']) n += Number(await kv.raw(['HDEL', 'wam:ux', d + '|' + v + '|' + f]).catch(() => 0)) || 0; return res.status(200).json({ ok: true, gewist: n }); }
+    if (op === 'hulp') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.hulpStand()) }); }
     if (op === 'alv') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, alv: await W.alvStand() }); }
     if (op === 'macht') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, macht: await W.machtStand() }); }
     if (op === 'knoppen') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, knoppen: await W.knopStand() }); }
