@@ -38,6 +38,7 @@
 //   /api/mm/lookalike?project=todayin&land=us   lookalikes op uitkomst (lib/lookalike.js; openbaar, alleen zone-nummers)
 //   /api/mm/puit (POST {vid, soort})    uitkomst van een paginabezoek (aanmelding, actie) voor het converteerdersprofiel
 //   /api/mm/verken?sleutel=todayin-us   voorstel witte lijst verkenningscampagne; POST /api/mm/verkengedaan (SHOP_SLEUTEL) = uitgevoerd
+//   /api/mm/bewezen[?sleutel=][&vers=1] bewezen zones per verkenner voor de aparte BEWEZEN-campagnes (80/20, 13 nov 2026; lib/lookalike.js)
 //   /api/mm/instelling[?j=<json>]       schakelaars, o.a. blokkeren aan/uit (beschermde host)
 //   /api/mm/overzicht                   alles op één pagina (beschermde host)
 //   /api/mm/terugbetaling?net=propeller&van=&tot=[&formaat=csv]   bewijs per klik voor een terugbetalingsverzoek (beschermde host; PropellerAds dient Clickmind sinds 13 nov zelf in, zie lib/terugauto.js)
@@ -290,6 +291,9 @@ export default async function handler(req, res) {
     }
     // verkenner: voorstel voor de witte lijst van de vaste verkenningscampagne (uitvoerder: propellerads-mcp app/api/verken)
     if (op === 'verken') { res.setHeader('cache-control', 'no-store'); cors(res); const { verkenVoorstel } = await import('../lib/lookalike.js'); try { return res.status(200).json(await verkenVoorstel(kv, String(q('sleutel') || 'todayin-us'))); } catch (e) { return res.status(500).json({ ok: false, fout: String(e && e.message || e).slice(0, 200) }); } }
+    // bewezen zones per verkenner (13 nov 2026, 80/20): lijsten voor de aparte BEWEZEN-campagnes; openbaar zoals lookalike (zone-nummers,
+    // aantallen, kosten); 30 minuten in de cache, ?vers=1 rekent opnieuw, ?sleutel=<verkenner> alleen die
+    if (op === 'bewezen') { res.setHeader('cache-control', 'no-store'); cors(res); const { bewezenVoorstellen } = await import('../lib/lookalike.js'); try { const sl = q('sleutel') ? String(q('sleutel')).split(',').map(s => s.replace(/[^a-z0-9-]/g, '')).filter(Boolean).slice(0, 20) : null; return res.status(200).json(await bewezenVoorstellen(kv, { sleutels: sl, vers: q('vers') === '1' })); } catch (e) { return res.status(500).json({ ok: false, fout: String(e && e.message || e).slice(0, 200) }); } }
     if (op === 'verkengedaan') { // de uitvoerder meldt de lijst die echt op de campagne staat (gedeelde SHOP_SLEUTEL)
       const s = process.env.SHOP_SLEUTEL || ''; if (!s || req.headers['x-shop-sleutel'] !== s) return res.status(401).json({ ok: false });
       const b = leesJson(req.body) || {}; const { verkenGedaan } = await import('../lib/lookalike.js');
