@@ -268,6 +268,7 @@ export default async function handler(req, res) {
   const q = k => url.searchParams.get(k);
   const op = q('op') || ''; const { taal, vast } = kiesTaal(req, url);
   const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() || '';
+  if (req.headers['x-vercel-oidc-token']) process.env.VERCEL_OIDC_TOKEN = String(req.headers['x-vercel-oidc-token']); // AI Gateway (lib/ai.js) leest het token uit de omgeving
   try {
     if (op === 'js') { res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=600, s-maxage=86400'); return res.status(200).send(APP_JS); }
     if (op === 'api') {
