@@ -426,7 +426,7 @@ export default async function handler(req, res) {
       if (op === 'overzicht') { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(await overzicht()); }
       if (op === 'clickmind') { const { clickmindKaart } = await import('../lib/kaart.js'); res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(await clickmindKaart(kv)); }
       if (op === 'terugbetaling') {
-        const d = await dossier(kv, { net: netNaam(q('net') || 'propeller'), van: q('van'), tot: q('tot') });
+        const d = await dossier(kv, { net: netNaam(q('net') || 'propeller'), van: q('van'), tot: q('tot'), maxRijen: Math.max(1, Math.min(20000, Number(q('max')) || 5000)) }); // max= tot 20.000 rijen (13 nov: 12 nov had ~7.000 verdachte kliks)
         if (q('formaat') === 'csv') { res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('content-disposition', 'attachment; filename="terugbetaling-' + d.netwerk + '-' + d.van + '_' + d.tot + '.csv"'); return res.status(200).send(naarCsv(d)); }
         return res.status(200).json(d);
       }
