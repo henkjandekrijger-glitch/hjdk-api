@@ -372,6 +372,7 @@ export default async function handler(req, res) {
     }
     return res.status(404).json({ ok: false, fout: 'onbekende op' });
   } catch (e) {
+    console.error('WAM fout', String(req.query && req.query.op || ''), e && e.stack ? String(e.stack).slice(0, 600) : String(e));
     return res.status(500).json({ ok: false, fout: String(e && e.message || e).slice(0, 200) });
   }
 }
