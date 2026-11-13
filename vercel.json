@@ -1304,6 +1304,9 @@
     "api/mm.js": {
       "maxDuration": 60
     },
+    "api/geld.js": {
+      "maxDuration": 120
+    },
     "api/zicht.js": {
       "maxDuration": 300,
       "includeFiles": ".claude/skills/**"
