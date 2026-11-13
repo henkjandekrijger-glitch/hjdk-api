@@ -107,6 +107,8 @@ Henkjan 9 nov 2026: "Doe goed onderzoek met demand radar waar mensen naar zoeken
 - **Jonge site: indexering eerst.** 96 van 416 pagina's geïndexeerd. Dagelijks links vanaf verse pagina's, eerlijke lastmod, IndexNow, dunne pagina's noindex (les index-knelpunt-jonge-site).
 - **Compleet zijn, en het zeggen.** Toon de complete lijst (alle 240 autoverhuurders, niet alleen 66 vergeleken) en zeg het in de titel; proef cd-autohuur-compleet-1113 (les compleetheid-in-titel).
 - **De chat kent de hele catalogus.** Live zoeken in alle bedrijven op de woorden van de vraag beantwoordt vragen naar één aanbieder meteen, met link naar de eigen pagina (les chat-kent-hele-catalogus).
+- **Gelijk verdeeld bezoek is geen mens.** De gidsen telden 29.152 bezoekers in 7 dagen, 98% direct en per gids bijna gelijk (626 tot 834), maar Google stuurde 159 en AI 52, met 4 adressen. Stuur alleen op bezoek uit zoek en AI (les gelijk-verdeeld-bezoek-is-geen-mens).
+- **Generiek ver weg, namen dichtbij.** Brede vragen staan op plek 40 tot 90 (hotels in curacao 46, wedding venues 69), namen en lange vragen op 5 tot 11 (seru largu 8, trabajos para extranjeros 5,8, starlink 10). Beantwoord eerst die laatste in kort en FAQ; proeven cd-gids-faq-zoekvragen-1113, cd-gids-compleet-1113, cd-bedrijf-buurt-1113 (les generiek-ver-weg-naam-dichtbij).
 - **Werkwijze voor een groeidoel (10x in een week):** meet elke dag organisch (zoek en AI, site en gidsen samen) tegen een vaste basis (6 tot 13 nov: 48 per dag), werk eerst aan de grootste hefboom (indexering, dan pagina's die AI voor echte vragers leest en zoekvragen op plek 4 tot 15, dan nieuwe pagina's op grote vragen), zet elke wijziging als proef en elk inzicht als les terug in deze skill.
 
 ## Na elke wijziging: terugmelden

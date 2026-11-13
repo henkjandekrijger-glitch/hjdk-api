@@ -1049,5 +1049,31 @@
   "moeite": "laag",
   "meten": "chatvragen zonder antwoord per dag",
   "status": "nieuw"
+ },
+ {
+  "id": "gelijk-verdeeld-bezoek-is-geen-mens",
+  "les": "Telt een gidsenset per pagina en per taal bijna hetzelfde bezoek, dan zijn het geen mensen. Stuur dan alleen op bezoek uit zoekmachines en AI (met verwijzer), niet op het totaal.",
+  "kanaal": "beide",
+  "bewijs": "curacao.day gidsen 6 tot 13 nov 2026: 29.152 'mensen' in 7 dagen, waarvan 28.560 direct (98%); elk van de 24 gidsen 626 tot 834 en per taal 100 tot 230, terwijl Google maar 159 en AI 52 bezoekers stuurde en er 4 adressen kwamen. Echt organisch = 211 per week, 30 per dag.",
+  "bron": "bzz /api/cw?w=gidsen",
+  "datum": "2026-11-13",
+  "sterkte": 2,
+  "effect": "juiste nulmeting voor het 10x-doel",
+  "moeite": "laag",
+  "meten": "bezoek zoek+ai per dag",
+  "status": "actief"
+ },
+ {
+  "id": "generiek-ver-weg-naam-dichtbij",
+  "les": "Een jonge plaatsgids staat op generieke vragen ver weg (plek 40 tot 90) en op namen en lange vragen dichtbij (plek 5 tot 11). Begin bij de vragen op plek 4 tot 15 met een direct antwoord en FAQ, niet bij de brede gidsvraag.",
+  "kanaal": "google",
+  "bewijs": "curacao.day, Search Console 28 dagen tot 11 nov 2026: hotels in curacao pos 46, curacao wedding venues 69, home internet curacao 83, auto kopen curacao 86 tegen seru largu curacao 8, trabajos en curazao para extranjeros 5,8, starlink curacao 10, flughafen curacao abflug heute 9,7, moret real estate 7,9; allemaal 0 kliks bij 2 tot 22 vertoningen.",
+  "bron": "bzz /api/cw?w=gidsen (zoekvragen uit ZICHT)",
+  "datum": "2026-11-13",
+  "sterkte": 2,
+  "effect": "eerste kliks uit Google binnen weken",
+  "moeite": "laag",
+  "meten": "proef cd-gids-faq-zoekvragen-1113",
+  "status": "actief"
  }
 ]
