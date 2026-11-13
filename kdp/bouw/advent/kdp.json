@@ -1,0 +1,75 @@
+{
+ "titel": "Adventskalender für Männer",
+ "ondertitel": "24 Tage kuriose Fakten, unglaubliche Geschichten und Angeberwissen – das lustige Geschenk für Männer, die schon alles haben",
+ "auteur": [
+  "Max",
+  "Falk"
+ ],
+ "taal": "German",
+ "primaire_markt": "Amazon.de",
+ "large_print": false,
+ "zoekwoorden": [
+  "adventskalender männer buch",
+  "geschenk für männer die schon alles haben",
+  "kuriose fakten trivia buch",
+  "wichtelgeschenk für männer lustig",
+  "adventskalender für papa ehemann opa",
+  "lustige geschenke für männer weihnachten",
+  "angeberwissen buch für männer"
+ ],
+ "categorieen_de": [
+  [
+   "Bücher",
+   "Geschenkbücher",
+   "Advent & Weihnachten"
+  ],
+  [
+   "Bücher",
+   "Geschenkbücher",
+   "Nach Personen",
+   "Männer"
+  ],
+  [
+   "Bücher",
+   "Humor",
+   "Lustige Fakten & Kuriositäten"
+  ]
+ ],
+ "categorieen_us_fallback": [
+  [
+   "Humor & Entertainment",
+   "Trivia & Fun Facts",
+   "Curiosities & Wonders"
+  ],
+  [
+   "Nonfiction",
+   "Holidays",
+   "Christmas & Advent"
+  ],
+  [
+   "Humor & Entertainment",
+   "Puzzles & Games",
+   "Trivia"
+  ]
+ ],
+ "prijzen": {
+  "eur": "12,99",
+  "usd": "14.99",
+  "gbp": "11.99",
+  "cad": "19.99",
+  "aud": "21.99"
+ },
+ "glanzend": true,
+ "papier": "wit",
+ "ai": {
+  "teksten": "AI-generated, hele werk, tool Claude",
+  "afbeeldingen": "geen",
+  "vertalingen": "AI-generated (Claude), deels vertaald uit eigen Engelse titel Wait, That's True?! For Men"
+ },
+ "bestanden": {
+  "binnenwerk": "/home/claude/boek/advent/binnenwerk.pdf",
+  "omslag": "/home/claude/boek/advent/omslag.pdf"
+ },
+ "paginas": 80,
+ "beschrijving_html": "<p><b>Er hat schon alles? Dann schenk ihm 24 Türchen voller Staunen.</b></p><p>Wusstest du, dass Bertha Benz 1888 die erste Fernfahrt der Autogeschichte machte und unterwegs eine Benzinleitung mit ihrer Hutnadel reparierte? Dass ein Bär namens Wojtek im Zweiten Weltkrieg Korporal der polnischen Armee war? Und dass die ersten künstlichen Weihnachtsbäume aus Gänsefedern gemacht wurden?</p><p><b>Adventskalender für Männer</b> ist der Kalender, den er wirklich öffnet: Hinter jedem der 24 Türchen warten 20 kuriose, wahre Fakten zu einem Thema, vom Kälterekord am 1. Dezember bis zu den seltsamsten Weihnachtsbräuchen an Heiligabend.</p><p><b>Darauf darf er sich freuen:</b></p><ul><li>480 geprüfte Fakten in 24 Türchen: Autos, Fußball, Bier und Whisky, Weltraum, Grillen, Rock, wilde Tiere, Made in Germany und vieles mehr</li><li>Jeden Tag ein Türchen, in fünf Minuten gelesen</li><li>Bonus-Quiz mit 24 Wahr-oder-falsch-Fragen für Heiligabend mit der ganzen Familie</li><li>Angeberwissen für den nächsten Grillabend, die Kneipe und das Familienessen</li></ul><p>Das ideale Geschenk für Papa, Ehemann, Freund, Bruder oder Opa, als Adventskalender, Wichtelgeschenk oder für den Nikolausstiefel.</p><p><b>Scroll nach oben und leg ihm dieses Jahr etwas in den Adventskalender, das er nicht schon hat.</b></p>"
+}
