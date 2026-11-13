@@ -446,6 +446,8 @@ export default async function handler(req, res) {
       }
     }
     if (op === 'uurritme') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(Object.assign({ ok: true }, await ritme(kv, { net: netNaam(q('net') || 'propeller'), camps: String(q('camps') || '').split(',').map(x => x.trim()).filter(x => /^[A-Za-z0-9_.:-]{1,40}$/.test(x)).slice(0, 300), tz: String(q('tz') || 'Europe/Amsterdam').slice(0, 40) }))); } // openbaar, alleen tellers: welk uur koopt minder in (lib/uurritme.js)
+    // 13 nov: de volledige zonelijsten zijn het betaalde deel van Clickmind Zone Score; alleen op de beschermde host of met de gedeelde sleutel
+    if ((op === 'zones' || op === 'patronen') && !beschermd(req) && !(process.env.SHOP_SLEUTEL && req.headers['x-shop-sleutel'] === process.env.SHOP_SLEUTEL)) return res.status(403).json({ ok: false, fout: 'alleen de beschermde host; gratis zone-check: https://whichtobuy.best/zone-score' });
     if (op === 'zones') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(await zones(kv, { net: q('net') || '', dagen: q('dagen') })); }
     if (op === 'patronen') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(await patronen(kv, { dagen: q('dagen') })); }
     if (op === 'stand') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(await stand(kv)); }
