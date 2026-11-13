@@ -80,7 +80,7 @@ Cijfers: 11 nov $20,40; 12 nov $13,70; november t/m 13 nov $166,38; Teens novemb
 
 ## Teens naar #1 in Canada
 
-Teens B0DJQLBM75 (119 reviews, 4,5 ster in CA) verkoopt vooral in Canada: CA-rang 10.505 (13 nov), beste in 30 dagen 2.614, vorig jaar ~20 dec CA #99. Doel: oranje #1 in CA Teen & Young Adult > Education & Reference > Reference (node 20941581011; #1 op 13 nov rang 3.290) en Teen > Games & Activities > Questions & Answers (202398473011). Curiosities & Wonders (#1 Guinness, rang 38) is niet haalbaar. Categoriewijziging in KDP-paperback YX7G68DWSFT (Curiosities & Wonders + Teen Q&A + Teen Reference in plaats van Antiques & Collectibles). Check met Keepa get_products (domain ca, raw: categories bevat 20941581011) en get_best_sellers (20941581011, ca, 3).
+Teens B0DJQLBM75 (119 reviews, 4,5 ster in CA) verkoopt vooral in Canada: CA-rang 10.505 (13 nov), beste in 30 dagen 2.614, vorig jaar ~20 dec CA #99. Doel: oranje #1 in CA Teen & Young Adult > Education & Reference > Reference (node 20941581011; #1 op 13 nov rang 3.290) en Teen > Games & Activities > Questions & Answers (202398473011). Curiosities & Wonders (#1 Guinness, rang 38) is niet haalbaar. Categoriewijziging in KDP-paperback YX7G68DWSFT (Curiosities & Wonders + Teen Q&A + Teen Reference in plaats van Antiques & Collectibles) is op 13 nov ~16:15 UTC door Henkjan gepubliceerd; KDP verwerkt dat in hooguit 72 uur. Meld in elke ronde of de nodes al live zijn en de rang tegen #1. Idee voor later: hardcover van Teens (hardcover kent geen 5x8, dus binnenwerk naar 5,5 x 8,5 omzetten; daarvoor is het originele binnenwerk-PDF van Henkjan nodig). Check met Keepa get_products (domain ca, raw: categories bevat 20941581011) en get_best_sellers (20941581011, ca, 3).
 
 ## Openstaand
 
