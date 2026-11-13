@@ -10,6 +10,7 @@ import * as D from '../lib/lijst/data.js';
 import { haalLink, koopUrl, zoekUrl, catalogus, kdKaart, schoon, vergelijkBronnen, BRONNAAM } from '../lib/lijst/haal.js';
 import * as S from '../lib/lijst/slim.js';
 import { schil, APP_JS, esc, mailHtml, mailTekst } from '../lib/lijst/pagina.js';
+import { TITEL, seoBlok, seoLd } from '../lib/lijst/seo.js';
 
 const ADRES = 'https://gids.kadoly.com';
 const BASIS = '/w';
@@ -224,6 +225,11 @@ async function api(b, ctx) {
         await D.tel('gedicht'); return { ok: true, tekst }; } catch (e) { console.log('wl gedicht', e.message); return { ok: false, fout: 'fout' }; }
     }
   }
+  if (op === 'gedicht' && b.los && !b.g) { // losse Sinterklaasgedicht-pagina (/w/gedicht), zonder groep; niets van de invoer wordt bewaard
+    if (!await D.mag(ip, 'gedicht', 15)) return druk; const naam = kort(b.naam, 40); if (!naam) return { ok: false, fout: 'fout' };
+    try { const tekst = await S.gedicht({ naam, gel: GELEGENHEID.includes(b.gel) ? b.gel : 'anders', taal, items: [], roddel: kort(b.over, 400) ? [kort(b.over, 400)] : [], extra: '', budget: '' }); await D.tel('gedicht', 'los'); return { ok: true, tekst }; }
+    catch (e) { console.log('wl gedicht los', e.message); return { ok: false, fout: 'fout' }; }
+  }
   if (op === 'zoek') {
     if (!await D.mag(ip, 'zoek', 30)) return druk; const tekst = kort(b.tekst, 600); if (tekst.length < 4) return { ok: false, fout: 'fout' };
     let lijst = ''; if (b.l && D.geldigId(b.l)) { const l = await D.leesLijst(b.l); if (l) lijst = (l.items || []).slice(0, 15).map(x => x.t).join('; ') + (l.smaak ? ' | ' + l.smaak.tekst : ''); }
@@ -292,9 +298,11 @@ export default async function handler(req, res) {
     if (g && m) { const G = await D.leesGroep(g); return res.status(200).send(schil(Object.assign({}, bron, { titel: (G ? G.naam + ' · ' : '') + t.lt_h1, view: 'lid', data: { g, m }, ssr: `<p>${esc(t.bezig)}</p>` }))); }
     if (g) { const G = await D.leesGroep(g); await D.tel('groep_open'); return res.status(200).send(schil(Object.assign({}, bron, { titel: (G ? G.naam + ' · ' : '') + t.lt_h1, beschrijving: t.lt_sub, view: 'groep', data: { g, naam: G ? G.naam : '', datum: G ? G.datum : null }, ssr: `<h1>${esc(G ? G.naam : t.lt_h1)}</h1><p>${esc(t.bezig)}</p>` }))); }
     if (p === 'lootjes') { await D.tel('lt_view', taal); 
-      return res.status(200).send(schil(Object.assign({}, bron, { titel: t.lt_h1 + ' · Kadoly', beschrijving: t.lt_sub, view: 'lootjes', index: true, pad: BASIS + '/lootjes', ssr: `<h1>${esc(t.lt_h1)}</h1><p class="sub">${esc(t.lt_sub)}</p>` }))); }
+      return res.status(200).send(schil(Object.assign({}, bron, { titel: TITEL.lootjes[taal] + ' | Kadoly', beschrijving: t.lt_sub, view: 'lootjes', index: true, pad: BASIS + '/lootjes', ssr: `<h1>${esc(t.lt_h1)}</h1><p class="sub">${esc(t.lt_sub)}</p>`, na: seoBlok('lootjes', taal), ld: seoLd('lootjes', taal, BASIS + '/lootjes') }))); }
+    if (p === 'gedicht') { await D.tel('ged_view', taal);
+      return res.status(200).send(schil(Object.assign({}, bron, { titel: TITEL.gedicht[taal] + ' | Kadoly', beschrijving: t.ged_pagina_s, view: 'gedicht', index: true, pad: BASIS + '/gedicht', ssr: `<h1>${esc(t.ged_h1)}</h1><p class="sub">${esc(t.ged_pagina_s)}</p>`, na: seoBlok('gedicht', taal), ld: seoLd('gedicht', taal, BASIS + '/gedicht') }))); }
     if (p === 'zoek') { await D.tel('zoek_view', taal);
-      return res.status(200).send(schil(Object.assign({}, bron, { titel: t.zk_h1 + ' · Kadoly', beschrijving: t.zk_sub, view: 'zoek', index: !q('voor') && !q('l'), pad: BASIS + '/zoek', data: { voor: kort(q('voor'), 40), l: D.geldigId(q('l')) ? q('l') : '' }, ssr: `<h1>${esc(t.zk_h1)}</h1><p class="sub">${esc(t.zk_sub)}</p>` }))); }
+      return res.status(200).send(schil(Object.assign({}, bron, { titel: TITEL.zoek[taal] + ' | Kadoly', beschrijving: t.zk_sub, view: 'zoek', index: !q('voor') && !q('l'), pad: BASIS + '/zoek', data: { voor: kort(q('voor'), 40), l: D.geldigId(q('l')) ? q('l') : '' }, ssr: `<h1>${esc(t.zk_h1)}</h1><p class="sub">${esc(t.zk_sub)}</p>`, na: seoBlok('zoek', taal), ld: seoLd('zoek', taal, BASIS + '/zoek') }))); }
     if (p && D.geldigId(p)) {
       const l = await D.leesLijst(p);
       if (!l) { res.statusCode = 404; return res.end(schil(Object.assign({}, bron, { titel: t.naam_product, view: 'home', ssr: '' }))); }
@@ -302,7 +310,7 @@ export default async function handler(req, res) {
       return res.status(200).send(schil(Object.assign({}, bron, { titel, beschrijving: eerste || t.deel_s, view: 'lijst', data: L, ogImg: ((l.items || []).find(x => x.img && /^https:/.test(x.img)) || {}).img,
         ssr: `<h1>${esc(titel)}</h1><p>${esc(t.bezig)}</p><noscript><ul>${(l.items || []).map(x => `<li>${esc(x.t)}</li>`).join('')}</ul></noscript>` }))); }
     await D.tel('home', taal); 
-    return res.status(200).send(schil(Object.assign({}, bron, { titel: t.h1 + ' · Kadoly', beschrijving: t.sub, view: 'home', index: true, pad: BASIS, ssr: `<h1>${esc(t.h1)}</h1><p class="sub">${esc(t.sub)}</p>` })));
+    return res.status(200).send(schil(Object.assign({}, bron, { titel: TITEL.home[taal] + ' | Kadoly', beschrijving: t.sub, view: 'home', index: true, pad: BASIS, ssr: `<h1>${esc(t.h1)}</h1><p class="sub">${esc(t.sub)}</p>`, na: seoBlok('home', taal), ld: seoLd('home', taal, BASIS) })));
   } catch (e) {
     console.log('wl fout', op, e && e.message);
     if (op === 'api') return res.status(200).json({ ok: false, fout: 'fout' });
