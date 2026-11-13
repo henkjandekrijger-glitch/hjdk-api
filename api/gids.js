@@ -446,7 +446,7 @@ async function llmsVol() {
 }
 // zicht.json: het manifest voor de ZICHT-lus (lib/zicht-projecten.js), met eigen meting van lezers en AI-bots
 async function zichtJson() {
-  const vragen = ['lootjes trekken online', 'sinterklaasgedicht maken', 'verlanglijstje maken', 'online verlanglijst met links uit elke winkel']; for (const id of GIDS_IDS) { // 13 nov: echte seizoensvragen eerst (les meetpanel-echte-vragen) const g = GIDSEN[id]; vragen.push(g.h1.replace(/\?$/, '')); for (const f of (g.faq || [])) vragen.push(f.v); }
+  const vragen = ['lootjes trekken online', 'sinterklaasgedicht maken', 'verlanglijstje maken', 'online verlanglijst met links uit elke winkel']; /* 13 nov: echte seizoensvragen eerst (les meetpanel-echte-vragen) */ for (const id of GIDS_IDS) { const g = GIDSEN[id]; vragen.push(g.h1.replace(/\?$/, '')); for (const f of (g.faq || [])) vragen.push(f.v); }
   const per = { google: 0, bing: 0, chatgpt: 0, perplexity: 0, copilot: 0, gemini: 0, claude: 0, duckduckgo: 0 }, bots = {};
   for (let i = 0; i < 7; i++) { const d = new Date(Date.now() - i * 864e5).toISOString().slice(0, 10); try { const a = await kv.raw(['HGETALL', 'gk:d:' + d]); if (Array.isArray(a)) for (let j = 0; j + 1 < a.length; j += 2) { const f = a[j], n = N(a[j + 1]); const m = f.match(/\|v-([a-z]+)$/); if (m && per[m[1]] !== undefined) per[m[1]] += n; const b = f.match(/^_bot\|([a-z-]+)\|/); if (b) bots[b[1]] = N(bots[b[1]]) + n; } } catch (e) {} }
   const zoek = per.google + per.bing + per.duckduckgo, ai = per.chatgpt + per.perplexity + per.copilot + per.gemini + per.claude;
