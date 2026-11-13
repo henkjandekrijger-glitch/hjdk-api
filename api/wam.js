@@ -378,6 +378,7 @@ export default async function handler(req, res) {
       await W.telegramUpdate(leesBody(req)); return res.status(200).json({ ok: true });
     }
     if (op === 'rapport') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); const l = await W.rapporten(q('n') || 3); res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(l.length ? l.map(x => new Date(x.t).toISOString().slice(0, 16).replace('T', ' ') + ' UTC\n' + x.tekst).join('\n\n---\n\n') : 'Nog geen rapport.'); }
+    if (op === 'ideeen') { if (!beschermd(host)) return res.status(404).json({ ok: false }); if (q('id') && q('gebouwd')) return res.status(200).json(await W.ideeKlaar(q('id'), q('gebouwd'))); return res.status(200).json({ ok: true, ideeen: await W.ideeen() }); }
     if (op === 'keur') { if (!beschermd(host)) return res.status(404).json({ ok: false }); if (q('wisnooit') === '1') await W.wisNooit(); const nu = q('nu') === '1' ? { match: await W.matchKeur({ uren: Number(q('uren')) || 0 }), antwoord: await W.antwoordKeur({ forceer: true }) } : null; return res.status(200).json({ ok: true, ...(nu ? { nu } : {}), ...(await W.keurStand()) }); }
     if (op === 'matchronde') { if (!beschermd(host)) return res.status(404).json({ ok: false }); return res.status(200).json({ ok: true, ...(await W.matchRonde({ forceer: true })), stand: await W.zoekStand().then(z => ({ open: z.open, per: z.per, matches: z.matches })) }); }
     if (op === 'tgzet') {
