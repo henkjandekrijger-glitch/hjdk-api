@@ -100,6 +100,15 @@ Henkjan 9 nov 2026: "Doe goed onderzoek met demand radar waar mensen naar zoeken
 - **Zelfherstel.** Loop aanbiederslinks dagelijks in porties na; twee keer dood = link weg en op een nakijklijst voor de gidsronde (les zelfherstel-dode-aanbiederslinks, lib/cur.js curGezond).
 - **Uitrollen naar een andere plaats:** volg het draaiboek in de repo todayin, spel/leerlus/werking.md sectie 0b.
 
+## Geleerd op curacao.day (13 nov 2026, doel 10 keer meer organisch verkeer)
+
+- **Gecrawld is niet geciteerd.** ChatGPT las curacao.day 30.000 keer in een week om te zoeken, maar maar 131 keer voor een echte vrager, en er kwamen 52 bezoekers uit AI. Prioriteit: de pagina's die ChatGPT-User leest, antwoord bovenaan met feiten, bron en datum (les gecrawld-is-niet-geciteerd).
+- **Merknaam in de bedrijvengids: plek 6 tot 10, 0 kliks.** Google beantwoordt naam-zoekvragen zelf. Geef de bedrijfspagina wat het kennispaneel niet heeft: live open nu, lezersreviews, vandaag in de buurt, foto's (les merknaam-gids-nul-kliks).
+- **Jonge site: indexering eerst.** 96 van 416 pagina's geïndexeerd. Dagelijks links vanaf verse pagina's, eerlijke lastmod, IndexNow, dunne pagina's noindex (les index-knelpunt-jonge-site).
+- **Compleet zijn, en het zeggen.** Toon de complete lijst (alle 240 autoverhuurders, niet alleen 66 vergeleken) en zeg het in de titel; proef cd-autohuur-compleet-1113 (les compleetheid-in-titel).
+- **De chat kent de hele catalogus.** Live zoeken in alle bedrijven op de woorden van de vraag beantwoordt vragen naar één aanbieder meteen, met link naar de eigen pagina (les chat-kent-hele-catalogus).
+- **Werkwijze voor een groeidoel (10x in een week):** meet elke dag organisch (zoek en AI, site en gidsen samen) tegen een vaste basis (6 tot 13 nov: 48 per dag), werk eerst aan de grootste hefboom (indexering, dan pagina's die AI voor echte vragers leest en zoekvragen op plek 4 tot 15, dan nieuwe pagina's op grote vragen), zet elke wijziging als proef en elk inzicht als les terug in deze skill.
+
 ## Na elke wijziging: terugmelden
 
 Zonder terugmelding leert niemand ervan.

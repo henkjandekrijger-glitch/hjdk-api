@@ -984,5 +984,70 @@
   "effect": "juiste beoordeling van US en DE; voorkomt valse winnaars in proeven",
   "moeite": 1,
   "meten": "eigenImp en eigenClicks in /api/zicht?op=stand historie vanaf 13 nov"
+ },
+ {
+  "id": "gecrawld-is-niet-geciteerd",
+  "les": "Hoe vaak ChatGPT een site leest zegt weinig: tel per pagina de leesbeurten voor een echte vrager (ChatGPT-User, niet OAI-SearchBot) en bouw eerst die pagina's uit met het antwoord bovenaan en feiten met bron en datum.",
+  "kanaal": "llm",
+  "bewijs": "curacao.day en gidsen, 7 dagen tot 13 nov 2026: OAI-SearchBot 30.172 keer, ChatGPT-User 131, GPTBot 1.252, Meta 2.970, Applebot 1.663; bezoekers uit AI-assistenten 52. 12 nov: 3.452 zoekcrawls tegen 112 leesbeurten voor iemand.",
+  "bron": "https://bzz-henq.vercel.app/api/cw?w=organisch",
+  "datum": "2026-11-13",
+  "sterkte": 3,
+  "effect": "juiste prioriteit voor AI-vindbaarheid",
+  "moeite": "laag",
+  "meten": "ChatGPT-User per pagina en AI-verwijzingen per pagina, voor en na",
+  "status": "nieuw"
+ },
+ {
+  "id": "merknaam-gids-nul-kliks",
+  "les": "Een bedrijvengids op een plaatsmerk staat bij zoekvragen op een bedrijfsnaam vaak op plek 6 tot 10 met 0 kliks: Google beantwoordt de vraag zelf met het kennispaneel. Alleen wat het paneel niet heeft trekt kliks: live open nu, eigen lezersreviews, vandaag in de buurt, foto's.",
+  "kanaal": "google",
+  "bewijs": "curacao.day bedrijvengids, Search Console 28 dagen tot 13 nov 2026: 'flakos curacao' 55 vertoningen plek 6,9; 'la granja curacao' 51 plek 10; 'dominos curacao' 39 plek 9,8; 'welcome shop curacao' 30 plek 6: allemaal 0 kliks.",
+  "bron": "https://bzz-henq.vercel.app/api/cw?w=organisch",
+  "datum": "2026-11-13",
+  "sterkte": 3,
+  "effect": "bedrijfspagina's krijgen eigen waarde boven het kennispaneel",
+  "moeite": "middel",
+  "meten": "kliks per merknaam-zoekvraag na Vandaag in de buurt en lezersreviews",
+  "status": "nieuw"
+ },
+ {
+  "id": "index-knelpunt-jonge-site",
+  "les": "Bij een jonge site is indexering het knelpunt: link elke dag vanaf verse pagina's naar wat nog niet geïndexeerd is, eerlijke lastmod, IndexNow bij elke wijziging, dunne pagina's noindex.",
+  "kanaal": "google",
+  "bewijs": "curacao.day 13 nov 2026: 96 van 416 bekeken pagina's geïndexeerd; Googlebot 340 tot 1.850 keer per dag; 645 vertoningen en 3 kliks op 12 nov.",
+  "bron": "https://bzz-henq.vercel.app/api/cw?w=organisch",
+  "datum": "2026-11-13",
+  "sterkte": 2,
+  "effect": "meer pagina's die kunnen ranken",
+  "moeite": "laag",
+  "meten": "geïndexeerd van bekeken per dag",
+  "status": "nieuw"
+ },
+ {
+  "id": "compleetheid-in-titel",
+  "les": "Zeg in de titel dat de lijst compleet is en hoeveel er echt vergeleken zijn ('alle 240 verhuurders, 66 vergeleken') en toon die complete lijst op de pagina; zoekers en AI kiezen de bron die alles heeft.",
+  "kanaal": "beide",
+  "bewijs": "Hypothese 13 nov 2026: de autohuurgids van curacao.day vergeleek 66 verhuurders, de bedrijvengids kende er 253. Proef cd-autohuur-compleet-1113.",
+  "bron": "https://curacao.day/nl/auto-huren",
+  "datum": "2026-11-13",
+  "sterkte": 1,
+  "effect": "meer kliks op lijstpagina's",
+  "moeite": "laag",
+  "meten": "vertoningen, kliks en positie van de autohuurpagina's, 21 dagen voor en na",
+  "status": "proef"
+ },
+ {
+  "id": "chat-kent-hele-catalogus",
+  "les": "Laat de chat op de site de hele catalogus kennen (alle bedrijven en aanbieders, live doorzocht op de woorden van de vraag), niet alleen de vergeleken top: een vraag naar een telefoonnummer of één aanbieder krijgt dan meteen het antwoord met link naar de eigen pagina.",
+  "kanaal": "llm",
+  "bewijs": "curacao.day 13 nov 2026: 'Wat is het nummer van Rekwest Car Rental?' gaf eerst geen antwoord (niet in de gids van 66), na live zoeken in de bedrijvengids van 12.000 bedrijven '+599 9 676 6969' met de bedrijfspagina.",
+  "bron": "todayin bzz/lib/cwama.js (gidszoek), bzz/lib/cwautohuur.js",
+  "datum": "2026-11-13",
+  "sterkte": 2,
+  "effect": "meer beantwoorde chatvragen en interne kliks",
+  "moeite": "laag",
+  "meten": "chatvragen zonder antwoord per dag",
+  "status": "nieuw"
  }
 ]
