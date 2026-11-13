@@ -327,6 +327,7 @@ export default async function handler(req, res) {
     // groepsvraag en beginscherm (beschermd): virale stand, interesselijst besloten WAM, live regel, steden van vandaag eenmalig vullen
     // schermcijfers van een onderdeel wissen na een ontwerpwijziging (beschermd): ?op=uxwis&d=scherm&v=h1,h2
     if (op === 'uxwis') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); const { kv } = await import('../lib/db.js'); const d = String(q('d') || ''), vs = String(q('v') || '').split(',').filter(Boolean); if (!W.UX[d]) return res.status(400).json({ ok: false }); let n = 0; for (const v of vs) for (const f of ['g', 'e', 'b3', 'c', 't', 'v']) n += Number(await kv.raw(['HDEL', 'wam:ux', d + '|' + v + '|' + f]).catch(() => 0)) || 0; return res.status(200).json({ ok: true, gewist: n }); }
+    if (op === 'alv') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, alv: await W.alvStand() }); }
     if (op === 'macht') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, macht: await W.machtStand() }); }
     if (op === 'knoppen') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, knoppen: await W.knopStand() }); }
     if (op === 'kost') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, dagen: await W.kostStand(Math.min(14, Number(q('dagen')) || 3)) }); }
