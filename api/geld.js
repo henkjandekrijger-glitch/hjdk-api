@@ -129,8 +129,9 @@ async function berekenRuw() {
   } catch (e) { versp.dubbelFout = String(e && e.message || e).slice(0, 100); }
   try { // zones op het blokvoorstel en wat ze kostten (PropellerAds per zone, campagnes met uitgaven)
     const b = (await kv.get('mm:blok:propeller')) || {}, klaar = new Set((b.zones || []).map(String)), wacht = new Set((b.wachtOpHenkjan || []).map(String));
-    const idsVan = ds => { const s = {}; for (const d of ds) for (const r of pa[d].rijen) if (r.kosten > 0) s[r.camp] = N(s[r.camp]) + r.kosten; return Object.entries(s).sort((a, c) => c[1] - a[1]).slice(0, 80).map(x => x[0]); };
-    const zk = async (ids, van, tot) => { if (!ids.length) return { ok: true, rijen: [] }; return paPost({ perZone: true, campagnes: ids, van, tot }, 25000); };
+    const idsVan = ds => { const s = {}; for (const d of ds) for (const r of pa[d].rijen) if (r.kosten > 0) s[r.camp] = N(s[r.camp]) + r.kosten; return Object.entries(s).sort((a, c) => c[1] - a[1]).slice(0, 320).map(x => x[0]); };
+    // perZone neemt hoogstens 80 campagnes per keer: in blokken, en de zones samentellen
+    const zk = async (ids, van, tot) => { if (!ids.length) return { ok: true, rijen: [] }; const blok = []; for (let i = 0; i < ids.length; i += 80) blok.push(ids.slice(i, i + 80)); const rs = await Promise.all(blok.map(b2 => paPost({ perZone: true, campagnes: b2, van, tot }, 25000))); const f = rs.find(x => !x.ok); if (f) return f; return { ok: true, rijen: rs.flatMap(x => x.rijen || []) }; };
     const [zv, z7] = await Promise.all([zk(idsVan([D[0]]), D[0], D[0]), zk(idsVan(D), D[6], D[0])]);
     const som = (j, set) => (j.rijen || []).filter(r => set.has(String(r.zone))).reduce((s, r) => s + N(r.kosten), 0);
     const tel2 = (j, set) => (j.rijen || []).filter(r => set.has(String(r.zone)) && N(r.kosten) > 0).length;
@@ -147,7 +148,7 @@ async function berekenRuw() {
   try {
     const idx = (((await kv.raw(['SMEMBERS', 'mm:terug:index'])) || []).map(String)).filter(k => D.includes(k.split(':')[1])).sort().reverse();
     for (const k of idx.slice(0, 14)) {
-      const [net, d] = k.split(':'); const x = await kv.get('mm:terug:' + k).catch(() => null); if (!x) continue;
+      const [net, d] = k.split(':'); if (net === 'onbekend' || net === 'test') continue; const x = await kv.get('mm:terug:' + k).catch(() => null); if (!x || !N(x.verdacht)) continue;
       const ing = await kv.get('mm:terug:ingediend:' + k).catch(() => null);
       // ongeveer: sterk bewijs per campagne x de klikprijs van die campagne die dag (alleen PropellerAds, UTC-dag)
       let dollar = null; if (net === 'propeller' && pa[d]) { const cpc = {}; for (const r of pa[d].rijen) if (r.kliks) cpc[r.camp] = r.kosten / r.kliks; dollar = r2((x.perCampagne || []).reduce((s, c) => s + N(c.sterk) * N(cpc[String(c.campagne)]), 0)); }
@@ -254,7 +255,7 @@ function pagina(ruw, sam, munt, melding) {
     h += '<div class="kaart"><h3>' + esc(o.naam) + '</h3>' + regel('Vandaag', o.vandaag) + regel('Gisteren', o.gisteren) + regel('Zeven dagen', o.week)
       + '<p>PropellerAds-dag (sinds 05:00 UTC): ' + usd(o.paDag) + ' uit. Zeven dagen: PropellerAds ' + usd(o.week.pa) + (o.week.md ? ', Mondiad ' + usd(o.week.md) : '') + ', ' + getal(o.week.kliks) + ' betaalde kliks, ' + tal(o.campagnes7, 'campagne', 'campagnes') + ' met uitgaven.</p>'
       + '<p>Waarde zeven dagen: ' + esc(opbouwTekst(o.week, munt, p)) + '.</p>';
-    if (p === 'kadoly') { const s = sam.shop; h += '<p>Verkopen in de shop (zeven dagen): ' + getal(s.verkopen7) + (s.verkopen7 ? ', omzet ' + eur(s.omzetEur7) + (s.margeBekend ? ', marge uit de inkoopprijzen ' + eur(s.margeEur7) + ' (' + usd(s.margeUsd7) + ')' : '') + '; ' + getal(s.metKenmerk) + ' daarvan kwam via een advertentie' : '') + '. Gelezen uit de shop zelf (bijgewerkt ' + esc(tijd(s.feedAt)) + '), want de shop meldt verkopen niet altijd aan Clickmind.</p>'; }
+    if (p === 'kadoly') { const s = sam.shop; h += '<p>Verkopen in de shop (zeven dagen): ' + getal(s.verkopen7) + (s.verkopen7 ? ', omzet ' + eur(s.omzetEur7) + (s.margeBekend ? ', marge uit de inkoopprijzen ' + eur(s.margeEur7) + ' (' + usd(s.margeUsd7) + ')' : '') + '; ' + (s.metKenmerk ? getal(s.metKenmerk) + ' daarvan had een advertentiekenmerk' : 'geen enkele had een advertentiekenmerk, dus of ze uit een advertentie kwamen is niet zeker') : '') + '. De waarde hierboven rekent met ' + usd(munt.cent.kadoly.koop / 100) + ' per verkoop (de munt). Gelezen uit de shop zelf (bijgewerkt ' + esc(tijd(s.feedAt)) + '), want de shop meldt verkopen niet altijd aan Clickmind.</p>'; }
     if (o.week.pbbot) h += '<p>Conversies die Clickmind niet aan het netwerk meldde omdat de zone een botzone is: vandaag ' + getal(o.vandaag.pbbot) + ', zeven dagen ' + getal(o.week.pbbot) + '.</p>';
     h += '</div>';
   }
@@ -262,7 +263,7 @@ function pagina(ruw, sam, munt, melding) {
   // verspild
   const V = ruw.verspild, dub = V.dubbel || {}, dubV = N(dub[D[0]]), dub7 = D.reduce((a, d) => a + N(dub[d]), 0);
   h += '<h2>Verspild</h2><div class="kaart"><ul class="lijst">';
-  h += '<li><b>Herhaalkliks</b> (betaald voor iemand die we die dag al hadden): ' + (Object.keys(dub).length ? 'vandaag ' + usd(dubV) + ', zeven dagen ' + usd(dub7) + '. Alleen meetbaar voor kliks via /go.' : 'niets te meten: er liep de laatste zeven dagen geen verkeer via /go (Amazon staat uit).') + (V.dubbelFout ? ' Fout: ' + esc(V.dubbelFout) : '') + '</li>';
+  h += '<li><b>Herhaalkliks</b> (betaald voor iemand die we die dag al hadden): ' + (Object.keys(dub).length ? 'vandaag ' + usd(dubV) + ', zeven dagen ' + usd(dub7) + '. Alleen meetbaar voor kliks via het klikregister (/go en /w), alle projecten samen.' : 'niets te meten: er liep de laatste zeven dagen geen verkeer via het klikregister (/go en /w).') + (V.dubbelFout ? ' Fout: ' + esc(V.dubbelFout) : '') + '</li>';
   const B = V.blok;
   if (B && !B.fout) h += '<li><b>Zones op het blokvoorstel</b>: ' + getal(B.klaar) + ' klaar om te blokkeren, ' + getal(B.wacht) + ' wachten op jouw woord (grootste bron van een campagne). Blokkeren staat ' + (B.aan ? 'aan' : 'uit') + '. ' + (B.vandaag ? 'Die zones kostten vandaag nog ' + usd(B.vandaag.klaar) + ' (' + tal(B.vandaag.zonesKlaar, 'zone', 'zones') + ' met uitgaven)' + (B.vandaag.wacht ? ' plus ' + usd(B.vandaag.wacht) + ' aan zones die op jou wachten' : '') + '. ' : '') + (B.week ? 'Zeven dagen: ' + usd(B.week.klaar) + (B.week.wacht ? ' plus ' + usd(B.week.wacht) + ' wachtend' : '') + ' (ook van voordat ze op de lijst kwamen).' : '') + '</li>';
   else h += '<li><b>Zones op het blokvoorstel</b>: kosten per zone niet op te halen' + (B && B.fout ? ' (' + esc(B.fout) + ')' : '') + '.</li>';
@@ -274,7 +275,7 @@ function pagina(ruw, sam, munt, melding) {
   h += '<h2>Wat Clickmind deed</h2><div class="kaart"><ul class="lijst">';
   h += '<li><b>Blokkeren</b>: ' + (C.blokgedaan.length ? C.blokgedaan.slice(0, 4).map(x => esc(tijd(x.t)) + ': ' + tal(x.geblokkeerd, 'zone', 'zones') + ' uitgesloten' + (x.samenvatting ? ' (' + esc(x.samenvatting) + ')' : '') + (x.fouten ? ', ' + x.fouten + ' fouten' : '')).join('<br>') : 'nog geen uitvoering gemeld.') + '</li>';
   h += '<li><b>Conversies tegengehouden voor botzones</b> (zodat het netwerk daar niet leert inkopen): vandaag ' + getal(botV) + ', zeven dagen ' + getal(bot7) + '.</li>';
-  h += '<li><b>Terugbetalingsdossiers</b> (indienen alleen op jouw woord): ' + (C.dossiers.length ? '<br>' + C.dossiers.map(x => esc(x.netwerk) + ' ' + esc(dagNL(x.dag)) + ': ' + getal(x.verdacht) + ' verdachte kliks, ' + getal(x.sterk) + ' met sterk bewijs' + (x.dollar != null ? ', ongeveer ' + usd(x.dollar) : '') + '. ' + (x.ingediend ? 'Ingediend' + (typeof x.ingediend === 'string' ? ' ' + esc(tijd(x.ingediend)) : '') + '.' : 'Nog niet ingediend' + (x.uiterlijk ? ', uiterlijk ' + esc(dagNL(x.uiterlijk)) : '') + '.')).join('<br>') : 'geen dossiers in de laatste zeven dagen.') + '</li></ul>'
+  h += '<li><b>Terugbetalingsdossiers</b> (verdachte kliks met bewijs per klik): ' + (C.dossiers.length ? '<br>' + C.dossiers.map(x => esc(x.netwerk) + ' ' + esc(dagNL(x.dag)) + ': ' + getal(x.verdacht) + ' verdachte kliks, ' + getal(x.sterk) + ' met sterk bewijs' + (x.dollar != null ? ', ongeveer ' + usd(x.dollar) : '') + '. ' + (x.ingediend ? 'Ingediend' + (typeof x.ingediend === 'string' ? ' ' + esc(tijd(x.ingediend)) : '') + '.' : (x.uiterlijk && x.uiterlijk < D[0] ? 'Niet ingediend, termijn verlopen (' + esc(dagNL(x.uiterlijk)) + ').' : 'Nog niet ingediend' + (x.uiterlijk ? ', uiterlijk ' + esc(dagNL(x.uiterlijk)) : '') + '.'))).join('<br>') : 'geen dossiers in de laatste zeven dagen.') + '</li></ul>'
     + '<p><a class="knop" href="/api/mm/terugbetaling?net=propeller&van=' + D[1] + '&tot=' + D[1] + '&formaat=csv">Bewijs gisteren (CSV)</a></p></div>';
 
   // ontbreekt
@@ -285,7 +286,7 @@ function pagina(ruw, sam, munt, melding) {
     'Kadoly-verkopen komen uit de shop zelf; per campagne weten we niet welke advertentie verkocht.',
     'Vandaag, gisteren en zeven dagen zijn UTC-dagen; het budget telt per PropellerAds-dag (05:00 UTC).',
   ];
-  if (ruw.zonderNaam) mist.push(getal(ruw.zonderNaam) + ' campagnes met uitkomsten maar zonder uitgaven in deze zeven dagen staan onder overig.');
+  if (ruw.zonderNaam) mist.push(tal(ruw.zonderNaam, 'campagne', 'campagnes') + ' met uitkomsten maar zonder uitgaven in deze zeven dagen ' + (ruw.zonderNaam === 1 ? 'staat' : 'staan') + ' onder overig.');
   for (const f of ruw.fouten) mist.push('Fout bij ophalen: ' + esc(f));
   h += '<h2>Wat nog ontbreekt</h2><div class="kaart"><ul class="lijst">' + mist.map(x => '<li>' + x + '</li>').join('') + '</ul></div>';
 
