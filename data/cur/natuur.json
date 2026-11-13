@@ -1,6 +1,6 @@
 {
  "id": "natuur",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "natuurgebied",
   "en": "nature spot",
@@ -1860,17 +1860,17 @@
     "entree"
    ],
    "prijs": {
-    "bedrag": 135,
+    "bedrag": 140,
     "valuta": "USD",
     "eenheid": {
-     "nl": "per persoon (boottocht, $135 tot $170)",
-     "en": "per person (boat trip, $135 to $170)",
-     "de": "pro Person (Bootstour, 135 bis 170 $)",
-     "es": "por persona (paseo en barco, $135 a $170)",
-     "pt": "por pessoa (passeio de barco, $135 a $170)"
+     "nl": "per persoon (boottocht, $140 tot $170)",
+     "en": "per person (boat trip, $140 to $170)",
+     "de": "pro Person (Bootstour, 140 bis 170 $)",
+     "es": "por persona (paseo en barco, $140 a $170)",
+     "pt": "por pessoa (passeio de barco, $140 a $170)"
     },
     "bron": "https://www.mycuracaoguide.com/klein-curacao",
-    "datum": "2026-10"
+    "datum": "2026-11"
    },
    "feiten": [
     {
@@ -2164,7 +2164,7 @@
   {
    "id": "seru-largu-park",
    "naam": "Seru Largu National Park",
-   "url": null,
+   "url": "https://serulargupark.org",
    "soort": {
     "nl": "nieuw nationaal park",
     "en": "new national park",
@@ -2240,7 +2240,8 @@
    },
    "bronnen": [
     "https://www.carmabi.org/presskit-serulargupark",
-    "https://www.carmabi.org/"
+    "https://www.carmabi.org/",
+    "https://www.curacao.com/en/activity/seru-largu-national-park"
    ]
   },
   {
@@ -3797,6 +3798,54 @@
     "de": "Ja, es gibt kein Tor und kein Kassenhäuschen. Komm bei Wind und steigender Flut, zieh feste Schuhe an und plane 30 bis 60 Minuten ein.",
     "es": "Sí, no hay puerta ni taquilla. Ve con viento y marea creciente, usa calzado resistente y calcula de 30 a 60 minutos.",
     "pt": "Sim, não há portão nem bilheteria. Vá com vento e maré enchendo, use calçado resistente e reserve de 30 a 60 minutos."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe kom je op Klein Curaçao en wat kost dat?",
+    "en": "How do you get to Klein Curaçao and what does it cost?",
+    "de": "Wie kommt man nach Klein Curaçao und was kostet das?",
+    "es": "¿Cómo se llega a Klein Curaçao y cuánto cuesta?",
+    "pt": "Como chegar a Klein Curaçao e quanto custa?"
+   },
+   "a": {
+    "nl": "Alleen per boot: er is geen brug of veer. Dagtochten vertrekken vanaf Santa Barbara, Jan Thiel en Caracasbaai en kosten voor volwassenen ongeveer $140 tot $170, kinderen $70 tot $135. Je vaart 50 minuten tot 2 uur, de wandeling naar de vuurtoren en het wrak duurt 20 tot 30 minuten. Aan boord is schaduw, een deel van de boten heeft ook schaduw op het eiland. Een toegangsprijs voor het eiland noemt de bron niet.",
+    "en": "Boat only: there is no bridge or ferry. Day trips leave from Santa Barbara, Jan Thiel and Caracas Bay and cost adults about $140 to $170, children $70 to $135. The crossing takes 50 minutes to 2 hours, and the walk to the lighthouse and the shipwreck takes 20 to 30 minutes. There is shade on board, and some boats also have shade on the island. The source names no entrance fee for the island.",
+    "de": "Nur per Boot: Es gibt keine Brücke und keine Fähre. Tagestouren starten in Santa Barbara, Jan Thiel und Caracasbaai und kosten Erwachsene etwa 140 bis 170 $, Kinder 70 bis 135 $. Die Überfahrt dauert 50 Minuten bis 2 Stunden, der Weg zum Leuchtturm und zum Wrack 20 bis 30 Minuten. An Bord gibt es Schatten, bei manchen Booten auch auf der Insel. Einen Eintrittspreis für die Insel nennt die Quelle nicht.",
+    "es": "Solo en barco: no hay puente ni ferri. Las excursiones de un día salen de Santa Barbara, Jan Thiel y Caracasbaai y cuestan a los adultos unos $140 a $170, a los niños $70 a $135. La travesía dura de 50 minutos a 2 horas y la caminata al faro y al naufragio, de 20 a 30 minutos. A bordo hay sombra y algunos barcos también la tienen en la isla. La fuente no menciona entrada para la isla.",
+    "pt": "Só de barco: não há ponte nem balsa. Os passeios de um dia saem de Santa Barbara, Jan Thiel e Caracasbaai e custam para adultos cerca de $140 a $170 e para crianças $70 a $135. A travessia leva de 50 minutos a 2 horas e a caminhada até o farol e o naufrágio, de 20 a 30 minutos. Há sombra a bordo e alguns barcos também têm sombra na ilha. A fonte não cita taxa de entrada para a ilha."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost het Curaçao Sea Aquarium en wat kun je er doen?",
+    "en": "What does the Curaçao Sea Aquarium cost and what can you do there?",
+    "de": "Was kostet das Curaçao Sea Aquarium und was kann man dort tun?",
+    "es": "¿Cuánto cuesta el Curaçao Sea Aquarium y qué se puede hacer?",
+    "pt": "Quanto custa o Curaçao Sea Aquarium e o que dá para fazer?"
+   },
+   "a": {
+    "nl": "Het ligt bij Bapor Kibra in Willemstad, naast Mambo Beach. Een algemene toegangsprijs staat niet in onze bron. Wel zijn er boekbare ervaringen, met aquariumtoegang inbegrepen: de Ocean Lens rondleiding kost $59 voor volwassenen en $29 voor kinderen van 6 tot 12, snorkelen met dieren $75 en $40, en de dolfijnprogramma's van Dolphin Academy $114 tot $210 (dinsdag tot en met zaterdag). Check de actuele prijs en openingstijden op de eigen site.",
+    "en": "It is at Bapor Kibra in Willemstad, next to Mambo Beach. Our source gives no general admission price. It does list bookable experiences with aquarium entrance included: the Ocean Lens guided tour is $59 for adults and $29 for kids 6 to 12, animal encounter snorkeling $75 and $40, and the Dolphin Academy programs $114 to $210 (Tuesday to Saturday). Check current prices and hours on the official site.",
+    "de": "Es liegt in Bapor Kibra in Willemstad, neben dem Mambo Beach. Einen allgemeinen Eintrittspreis nennt unsere Quelle nicht. Buchbar sind Erlebnisse mit Aquariumseintritt: Die Ocean-Lens-Führung kostet 59 $ für Erwachsene und 29 $ für Kinder von 6 bis 12, Schnorcheln mit Tieren 75 $ und 40 $, die Dolphin-Academy-Programme 114 bis 210 $ (Dienstag bis Samstag). Aktuelle Preise und Zeiten prüfst du auf der offiziellen Website.",
+    "es": "Está en Bapor Kibra, en Willemstad, junto a Mambo Beach. Nuestra fuente no da un precio de entrada general. Sí lista experiencias reservables con la entrada al acuario incluida: la visita guiada Ocean Lens cuesta $59 para adultos y $29 para niños de 6 a 12, el snorkel con animales $75 y $40, y los programas de Dolphin Academy $114 a $210 (de martes a sábado). Consulta precios y horarios actuales en la web oficial.",
+    "pt": "Fica em Bapor Kibra, em Willemstad, ao lado de Mambo Beach. Nossa fonte não traz um preço geral de entrada. Lista experiências reserváveis com entrada no aquário incluída: a visita guiada Ocean Lens custa $59 para adultos e $29 para crianças de 6 a 12, o snorkel com animais $75 e $40 e os programas da Dolphin Academy $114 a $210 (de terça a sábado). Confira preços e horários atuais no site oficial."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is Seru Largu en kun je er wandelen?",
+    "en": "What is Seru Largu and can you hike there?",
+    "de": "Was ist Seru Largu und kann man dort wandern?",
+    "es": "¿Qué es Seru Largu y se puede hacer senderismo?",
+    "pt": "O que é Seru Largu e dá para fazer trilhas?"
+   },
+   "a": {
+    "nl": "Seru Largu is een nationaal park bij Sint Willibrordus, beheerd door Carmabi. Je kunt er een wandeling maken, meer leren over natuur, geschiedenis en tradities en bij de nabije zoutvlakten zijn vaak flamingo's te zien. Er zijn wekelijkse rondleidingen. Entree en openingstijden staan niet bij onze bronnen: bel +599 9 515 7010 of kijk op serulargupark.org.",
+    "en": "Seru Largu is a national park near Sint Willibrordus, managed by Carmabi. You can take a walk, learn about nature, history and traditions, and flamingos often gather at the nearby salt flats. There are weekly guided tours. Entrance fee and opening hours are not in our sources: call +599 9 515 7010 or check serulargupark.org.",
+    "de": "Seru Largu ist ein Nationalpark bei Sint Willibrordus, verwaltet von Carmabi. Du kannst spazieren gehen, mehr über Natur, Geschichte und Traditionen erfahren, und an den nahen Salzebenen sind oft Flamingos zu sehen. Es gibt wöchentliche Führungen. Eintritt und Öffnungszeiten stehen nicht in unseren Quellen: Ruf +599 9 515 7010 an oder schau auf serulargupark.org.",
+    "es": "Seru Largu es un parque nacional cerca de Sint Willibrordus, administrado por Carmabi. Puedes caminar, aprender sobre naturaleza, historia y tradiciones, y en las salinas cercanas suelen verse flamencos. Hay visitas guiadas semanales. La entrada y el horario no figuran en nuestras fuentes: llama al +599 9 515 7010 o consulta serulargupark.org.",
+    "pt": "Seru Largu é um parque nacional perto de Sint Willibrordus, administrado pela Carmabi. Dá para caminhar, aprender sobre natureza, história e tradições, e nas salinas próximas costumam aparecer flamingos. Há visitas guiadas semanais. Entrada e horários não constam nas nossas fontes: ligue para +599 9 515 7010 ou veja serulargupark.org."
    }
   }
  ],

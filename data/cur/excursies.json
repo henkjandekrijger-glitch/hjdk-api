@@ -1,6 +1,6 @@
 {
  "id": "excursies",
- "peildatum": "2026-11-09",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "excursie",
   "en": "excursion",
@@ -8877,7 +8877,7 @@
   },
   {
    "id": "fbtt-highlights-city-cave-coast",
-   "naam": "Curaçao Tours (FBTT): Curaçao Highlights – City, Cave & Coast",
+   "naam": "Curaçao Tours (FBTT): Curaçao Highlights: City, Cave & Coast",
    "url": null,
    "soort": {
     "nl": "eilandtour",

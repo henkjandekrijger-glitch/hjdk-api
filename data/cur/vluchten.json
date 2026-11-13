@@ -1,6 +1,6 @@
 {
  "id": "vluchten",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "vlucht naar Curaçao",
   "en": "flight to Curaçao",
@@ -2387,6 +2387,22 @@
     "de": "Nimm einen Inselflug: Divi Divi Air und Z Air fliegen mehrmals täglich nach Bonaire, und Divi Divi fliegt auch nach Aruba. Winair und EZAir fliegen nach Sint Maarten.",
     "es": "Toma un vuelo entre islas: Divi Divi Air y Z Air vuelan a Bonaire varias veces al día, y Divi Divi también vuela a Aruba. Winair y EZAir vuelan a Sint Maarten.",
     "pt": "Pegue um voo entre ilhas: a Divi Divi Air e a Z Air voam para Bonaire várias vezes por dia, e a Divi Divi também voa para Aruba. A Winair e a EZAir voam para Sint Maarten."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar zie ik de vertrektijden van vandaag op Curaçao International Airport?",
+    "en": "Where can I see today's departures at Curaçao International Airport?",
+    "de": "Wo sehe ich die heutigen Abflüge am Flughafen Curaçao (Hato)?",
+    "es": "¿Dónde veo las salidas de hoy en el aeropuerto internacional de Curazao?",
+    "pt": "Onde vejo as partidas de hoje no Aeroporto Internacional de Curaçao?"
+   },
+   "a": {
+    "nl": "De officiële vertrektijden staan op https://curacao-airport.com/flights/?tab=departures (tabblad Departures, in realtime bijgewerkt; aankomsten staan op dezelfde pagina). De luchthaven meldt dat de gegevens van derden komen en fouten kunnen bevatten: controleer je vlucht ook bij je maatschappij. Online inchecken kan bij de meeste maatschappijen tot 24 uur voor vertrek; op de luchthaven zijn er acht zelfbedieningszuilen voor een aantal maatschappijen (curacao-airport.com, peildatum 13 november 2026). De exacte baliesluiting en aanbevolen aankomsttijd staan bij je maatschappij.",
+    "en": "The official departures list is at https://curacao-airport.com/flights/?tab=departures (Departures tab, updated in real time; arrivals are on the same page). The airport notes the data comes from third parties and may contain errors, so also check your flight with your airline. Most airlines allow online check-in up to 24 hours before departure; at the airport there are eight self-service kiosks for selected airlines (curacao-airport.com, as of 13 November 2026). Exact counter closing times and the recommended arrival time come from your airline.",
+    "de": "Die offiziellen Abflugzeiten stehen unter https://curacao-airport.com/flights/?tab=departures (Reiter Departures, in Echtzeit aktualisiert; Ankünfte auf derselben Seite). Der Flughafen weist darauf hin, dass die Daten von Dritten stammen und Fehler enthalten können: prüfe deinen Flug auch bei deiner Airline. Bei den meisten Airlines ist Online-Check-in bis 24 Stunden vor Abflug möglich; am Flughafen gibt es acht Self-Service-Kioske für ausgewählte Airlines (curacao-airport.com, Stand 13. November 2026). Genaue Schalterschlusszeiten und die empfohlene Ankunftszeit nennt deine Airline.",
+    "es": "La lista oficial de salidas está en https://curacao-airport.com/flights/?tab=departures (pestaña Departures, actualizada en tiempo real; las llegadas están en la misma página). El aeropuerto indica que los datos vienen de terceros y pueden contener errores, así que confirma tu vuelo también con tu aerolínea. La mayoría de las aerolíneas permiten el check-in en línea hasta 24 horas antes de la salida; en el aeropuerto hay ocho quioscos de autoservicio para algunas aerolíneas (curacao-airport.com, al 13 de noviembre de 2026). El cierre exacto del mostrador y la hora de llegada recomendada los da tu aerolínea.",
+    "pt": "A lista oficial de partidas está em https://curacao-airport.com/flights/?tab=departures (aba Departures, atualizada em tempo real; as chegadas estão na mesma página). O aeroporto avisa que os dados vêm de terceiros e podem conter erros, então confirme o voo também com a sua companhia. A maioria das companhias permite check-in online até 24 horas antes da partida; no aeroporto há oito quiosques de autoatendimento para algumas companhias (curacao-airport.com, em 13 de novembro de 2026). O fechamento exato do balcão e o horário de chegada recomendado vêm da sua companhia."
    }
   }
  ],

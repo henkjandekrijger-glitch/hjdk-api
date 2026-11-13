@@ -1,6 +1,6 @@
 {
  "id": "uitgaan",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "uitgaansplek",
   "en": "nightlife spot",
@@ -4588,6 +4588,164 @@
    "bronnen": [
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
     "https://www.hotelscombined.com.sg/Place/Curacao.htm"
+   ]
+  },
+  {
+   "id": "mr-porter",
+   "naam": "Mr Porter Street Café",
+   "url": null,
+   "soort": {
+    "nl": "straatcafé met livemuziek",
+    "en": "street café with live music",
+    "de": "Straßencafé mit Livemusik",
+    "es": "café de calle con música en vivo",
+    "pt": "café de rua com música ao vivo"
+   },
+   "plaats": "Nieuwestraat, Willemstad",
+   "tags": [
+    "bar",
+    "live-muziek"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Soms livemuziek",
+     "en": "Live music at times",
+     "de": "Zeitweise Livemusik",
+     "es": "A veces música en vivo",
+     "pt": "Às vezes música ao vivo"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 176,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/bar/mr-porter"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/bar/mr-porter",
+    "https://curalink.com/events/life-music-at-mr-porter/",
+    "https://www.funcuracao.com/en/mr-porter-street-cafe/"
+   ]
+  },
+  {
+   "id": "schooner-bar",
+   "naam": "Schooner Bar & Terrace",
+   "url": null,
+   "soort": {
+    "nl": "bar met terras aan zee",
+    "en": "bar with seaside terrace",
+    "de": "Bar mit Terrasse am Meer",
+    "es": "bar con terraza junto al mar",
+    "pt": "bar com terraço à beira-mar"
+   },
+   "plaats": "Pietermaai, Willemstad",
+   "tags": [
+    "bar",
+    "pietermaai"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Terras aan het water",
+     "en": "Waterside terrace",
+     "de": "Terrasse am Wasser",
+     "es": "Terraza junto al agua",
+     "pt": "Terraço à beira-d'água"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 130,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/bar/schooner-bar"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/bar/schooner-bar",
+    "https://pietermaaidistrict.com/restaurant/schooner-bar/",
+    "https://www.funcuracao.com/en/schooner-bar-restaurant/"
+   ]
+  },
+  {
+   "id": "5-oclock-somewhere",
+   "naam": "5 O'Clock Somewhere Bar & Grill",
+   "url": null,
+   "soort": {
+    "nl": "bar en grill",
+    "en": "bar and grill",
+    "de": "Bar und Grill",
+    "es": "bar y parrilla",
+    "pt": "bar e grill"
+   },
+   "plaats": "Baden Powellweg, Willemstad",
+   "tags": [
+    "bar"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 222,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/bar/5-o-clock-somewhere-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/bar/5-o-clock-somewhere-curacao",
+    "https://www.tripadvisor.com/Restaurant_Review-g147278-d24913947-Reviews-5_o_Clock_Somewhere_Bar_Grill-Willemstad_Curacao.html"
    ]
   }
  ],

@@ -1132,6 +1132,14 @@
      "aantal": 612,
      "peildatum": "2026-10-20",
      "bron": "https://www.hotelscombined.com.sg/Place/Curacao.htm"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 2075,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/kunuku-aqua-resort"
     }
    ],
    "voor": {
@@ -2508,6 +2516,14 @@
      "aantal": null,
      "peildatum": "2026-10-20",
      "bron": "https://au.trip.com/hotels/willemstad-hotels-list-62137"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 1979,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/sonesta-hotels-en-resorts-livingstone-curacao"
     }
    ],
    "voor": {
@@ -3210,7 +3226,16 @@
    ],
    "prijs": null,
    "feiten": [],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 170,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/piscadera-harbour-village-resort"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -4502,6 +4527,14 @@
      "aantal": 45,
      "peildatum": "2026-10-20",
      "bron": "https://au.trip.com/hotels/willemstad-hotels-list-62137"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 1050,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/trupial-inn-hotel-en-casino"
     }
    ],
    "voor": {
@@ -4546,6 +4579,14 @@
      "aantal": null,
      "peildatum": "2026-10-20",
      "bron": "https://au.trip.com/hotels/willemstad-hotels-list-62137"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 140,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/art-hotel-curacao"
     }
    ],
    "voor": {
@@ -5342,6 +5383,1054 @@
    },
    "bronnen": [
     "https://booking.com/reviews/country/cw.html"
+   ]
+  },
+  {
+   "id": "kura-hulanda-village",
+   "naam": "Kura Hulanda Village and Spa",
+   "url": "http://www.kurahulanda.com/",
+   "soort": {
+    "nl": "hotel",
+    "en": "hotel",
+    "de": "Hotel",
+    "es": "hotel",
+    "pt": "hotel"
+   },
+   "plaats": "Otrobanda (Langestraat 8)",
+   "tags": [
+    "otrobanda"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 593,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/kura-hulanda-village-and-spa"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/kura-hulanda-village-and-spa"
+   ]
+  },
+  {
+   "id": "holiday-beach-resort",
+   "naam": "Holiday Beach Resort and Casino",
+   "url": "http://www.holiday-beach.com/",
+   "soort": {
+    "nl": "resort",
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
+   },
+   "plaats": "Willemstad (Pater Euwensweg 31)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.3,
+     "max": 5,
+     "aantal": 436,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/holiday-beach-resort-and-casino"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/holiday-beach-resort-and-casino"
+   ]
+  },
+  {
+   "id": "bario-hotel",
+   "naam": "Bario Hotel",
+   "url": "http://www.bariohotel.com/",
+   "soort": {
+    "nl": "hotel",
+    "en": "hotel",
+    "de": "Hotel",
+    "es": "hotel",
+    "pt": "hotel"
+   },
+   "plaats": "Willemstad (De Rouvilleweg)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 346,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/bario-hotel"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/bario-hotel"
+   ]
+  },
+  {
+   "id": "pearl-of-the-caribbean",
+   "naam": "Vakantiepark The Pearl of the Caribbean",
+   "url": "http://www.thepearlofthecaribbean.com/",
+   "soort": {
+    "nl": "vakantiepark",
+    "en": "holiday park",
+    "de": "Ferienpark",
+    "es": "parque vacacional",
+    "pt": "parque de férias"
+   },
+   "plaats": "Weg naar Santa Catharina",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 317,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/vakantiepark-the-pearl-of-the-caribbean"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/vakantiepark-the-pearl-of-the-caribbean"
+   ]
+  },
+  {
+   "id": "bon-bini-resort",
+   "naam": "Bon Bini Resort",
+   "url": "http://www.bonbiniseasideresort.com/",
+   "soort": {
+    "nl": "resort",
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
+   },
+   "plaats": "Bapor Kibra (Mambo)",
+   "tags": [
+    "mambo"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 282,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/bon-bini-resort"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/bon-bini-resort"
+   ]
+  },
+  {
+   "id": "abc-resort-curacao",
+   "naam": "ABC Resort Curaçao",
+   "url": "http://abc-resort.com/",
+   "soort": {
+    "nl": "resort",
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
+   },
+   "plaats": "Willemstad (Zorgendal 2)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 276,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/abc-resort-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/abc-resort-curacao"
+   ]
+  },
+  {
+   "id": "bed-and-bike-pietermaai",
+   "naam": "Bed & Bike Pietermaai",
+   "url": "http://www.bedandbikecuracao.com/",
+   "soort": {
+    "nl": "hotel",
+    "en": "hotel",
+    "de": "Hotel",
+    "es": "hotel",
+    "pt": "hotel"
+   },
+   "plaats": "Pietermaai (Ansinghstraat 1)",
+   "tags": [
+    "pietermaai-punda"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 256,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/bed-en-bike-pietermaai"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/bed-en-bike-pietermaai"
+   ]
+  },
+  {
+   "id": "lagun-blou-resort",
+   "naam": "Lagun Blou Resort",
+   "url": "http://www.lagunblou.com/",
+   "soort": {
+    "nl": "resort",
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
+   },
+   "plaats": "Lagun (west)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 207,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/lagun-blou-resort"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/lagun-blou-resort"
+   ]
+  },
+  {
+   "id": "mondi-lodge",
+   "naam": "Mondi Lodge",
+   "url": "http://www.mondilodge.com/",
+   "soort": {
+    "nl": "lodge",
+    "en": "lodge",
+    "de": "Lodge",
+    "es": "lodge",
+    "pt": "lodge"
+   },
+   "plaats": "Klein Sint Michiel",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 163,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/mondi-lodge"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/mondi-lodge"
+   ]
+  },
+  {
+   "id": "villa-amalie",
+   "naam": "Villa Amalie",
+   "url": "http://www.villaamalie.com/",
+   "soort": {
+    "nl": "boetiekhotel",
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
+   },
+   "plaats": "Scharloo (Scharlooweg 21)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 149,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/villa-amalie"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/villa-amalie"
+   ]
+  },
+  {
+   "id": "savanah-resort",
+   "naam": "Savanah Resort Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
+   },
+   "plaats": "Weg naar Westpunt",
+   "tags": [
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 142,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/savanah-resort-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/savanah-resort-curacao"
+   ]
+  },
+  {
+   "id": "green-flamingo-bungalow-park",
+   "naam": "Dream of the Green Flamingo - Bungalow Park",
+   "url": "https://www.greenflamingocuracao.com/",
+   "soort": {
+    "nl": "vakantiepark",
+    "en": "holiday park",
+    "de": "Ferienpark",
+    "es": "parque vacacional",
+    "pt": "parque de férias"
+   },
+   "plaats": "Sint Willibrordus",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 131,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/dream-of-the-green-flamingo-bungalow-park"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/dream-of-the-green-flamingo-bungalow-park"
+   ]
+  },
+  {
+   "id": "spanish-water-apartments",
+   "naam": "Spanish Water Apartments",
+   "url": "http://www.spanishwaterapartments.com/",
+   "soort": {
+    "nl": "appartementen",
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
+   },
+   "plaats": "Jan Thiel (Caracasbaaiweg 403)",
+   "tags": [
+    "jan-thiel"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 131,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/spanish-water-apartments"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/spanish-water-apartments"
+   ]
+  },
+  {
+   "id": "bb-toni-kunchi",
+   "naam": "Bed and Breakfast Toni Kunchi Curaçao",
+   "url": "https://www.tonikunchi.com/",
+   "soort": {
+    "nl": "bed and breakfast",
+    "en": "bed and breakfast",
+    "de": "Bed and Breakfast",
+    "es": "bed and breakfast",
+    "pt": "bed and breakfast"
+   },
+   "plaats": "Willemstad",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 104,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/bed-and-breakfast-toni-kunchi-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/bed-and-breakfast-toni-kunchi-curacao"
+   ]
+  },
+  {
+   "id": "willemstad-resort",
+   "naam": "Willemstad Resort",
+   "url": "http://www.willemstad-resort.com/",
+   "soort": {
+    "nl": "resort",
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
+   },
+   "plaats": "Willemstad (Rembrandtstraat 8)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 100,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/willemstad-resort"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/willemstad-resort"
+   ]
+  },
+  {
+   "id": "boutique-hotel-jt",
+   "naam": "Boutique Hotel JT Curaçao",
+   "url": "http://www.boutiquehoteljt.com/",
+   "soort": {
+    "nl": "boetiekhotel",
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
+   },
+   "plaats": "Jan Thiel (Kaya Índiko)",
+   "tags": [
+    "jan-thiel"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 95,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/boutique-hotel-jt-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/boutique-hotel-jt-curacao"
+   ]
+  },
+  {
+   "id": "liverpool-resort",
+   "naam": "Liverpool Resort",
+   "url": "https://m.facebook.com/liverpoolresort/",
+   "soort": {
+    "nl": "resort",
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
+   },
+   "plaats": "Willemstad",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 78,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/liverpool-resort"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/liverpool-resort"
+   ]
+  },
+  {
+   "id": "weto-mini-resort",
+   "naam": "Weto Mini Resort",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
+   },
+   "plaats": "Willemstad",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 77,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/weto-mini-resort"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/weto-mini-resort"
+   ]
+  },
+  {
+   "id": "moonlight-resort",
+   "naam": "Moonlight Resort",
+   "url": null,
+   "soort": {
+    "nl": "resort",
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
+   },
+   "plaats": "Willemstad (Cubaweg)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 76,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/moonlight-resort-2"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/moonlight-resort-2"
+   ]
+  },
+  {
+   "id": "landhuis-bona-vista",
+   "naam": "Landhuis Bona Vista Curaçao",
+   "url": "https://www.landhuisbonavista.com/",
+   "soort": {
+    "nl": "landhuis",
+    "en": "historic plantation house",
+    "de": "Landhaus",
+    "es": "casa de hacienda",
+    "pt": "casa de fazenda"
+   },
+   "plaats": "Willemstad",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 75,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/landhuis-bona-vista-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/landhuis-bona-vista-curacao"
+   ]
+  },
+  {
+   "id": "sirena-resort",
+   "naam": "Sirena Resort Curaçao",
+   "url": "https://www.sirenaresortcuracao.com/",
+   "soort": {
+    "nl": "resort",
+    "en": "resort",
+    "de": "Resort",
+    "es": "resort",
+    "pt": "resort"
+   },
+   "plaats": "Willemstad (Kaya Djembe 23)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 67,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/sirena-resort-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/sirena-resort-curacao"
+   ]
+  },
+  {
+   "id": "saint-joris-boutique-resort",
+   "naam": "Saint Joris Boutique Resort",
+   "url": "http://www.saintjoris.com/",
+   "soort": {
+    "nl": "boetiekhotel",
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
+   },
+   "plaats": "St. Jorisbaai",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 64,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/saint-joris-boutique-resort"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/saint-joris-boutique-resort"
+   ]
+  },
+  {
+   "id": "drift-hotels",
+   "naam": "Drift Hotels",
+   "url": "https://www.drifthotels.com/",
+   "soort": {
+    "nl": "boetiekhotel",
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
+   },
+   "plaats": "Punda (Frederikstraat)",
+   "tags": [
+    "pietermaai-punda"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 62,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/drift-hotels"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/drift-hotels"
+   ]
+  },
+  {
+   "id": "pm-78-boutique-apartments",
+   "naam": "PM 78 Boutique Apartments",
+   "url": "http://www.pietermaai78.com/",
+   "soort": {
+    "nl": "appartementen",
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
+   },
+   "plaats": "Pietermaai (Pietermaai 78)",
+   "tags": [
+    "pietermaai-punda"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 55,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/pm-78-boutique-apartments"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/pm-78-boutique-apartments"
    ]
   }
  ],

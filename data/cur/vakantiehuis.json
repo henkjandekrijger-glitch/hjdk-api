@@ -1,6 +1,6 @@
 {
  "id": "vakantiehuis",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "vakantiehuis",
   "en": "vacation rental",
@@ -670,7 +670,16 @@
      "pt": "Apartamento júnior para 2-3 pessoas"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 76,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/hotel/all-west-apartments-en-diving"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -809,7 +818,16 @@
      "pt": "O armário de equipamentos do The Dive Bus"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 148,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/merakii-seaview-escape-curacao"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -920,6 +938,1093 @@
    },
    "bronnen": [
     "https://www.curacao.com/en/category/dive-operators"
+   ]
+  },
+  {
+   "id": "quints-travelers-inn-vh",
+   "naam": "Quint's Travelers Inn",
+   "url": "https://quints-cw.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Willemstad (Corriweg 8)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 178,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/quint-s-travelers-inn"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/quint-s-travelers-inn"
+   ]
+  },
+  {
+   "id": "curadise-living",
+   "naam": "Curadise Living",
+   "url": "https://www.facebook.com/Curadise-Living-341677729309771/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Willemstad (Seru Fortunaweg)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 163,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/curadise-living"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/curadise-living"
+   ]
+  },
+  {
+   "id": "jan-kok-lodges",
+   "naam": "Jan Kok Lodges",
+   "url": "http://www.jankok-lodges.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "St. Willibrordus (Jan Kok 51)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 153,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/jan-kok-lodges"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/jan-kok-lodges"
+   ]
+  },
+  {
+   "id": "curacao-island-rentals",
+   "naam": "Curacao Island Rentals (Curacao Ocean Resort)",
+   "url": "https://www.curacaoislandrentals.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Bapor Kibrá (Mambo)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 113,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/curacao-island-rentals-curacao-ocean-resort"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/curacao-island-rentals-curacao-ocean-resort"
+   ]
+  },
+  {
+   "id": "tuk-jan-thiel",
+   "naam": "TUK Tropical Boutique Resort Jan Thiel",
+   "url": "http://www.tukjanthiel.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Jan Thiel (Kaya Tibourin 26)",
+   "tags": [
+    "jan-thiel"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 113,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/curacao-island-rentals-curacao-ocean-resort"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/curacao-island-rentals-curacao-ocean-resort"
+   ]
+  },
+  {
+   "id": "advantage-apartments",
+   "naam": "Advantage Apartments Curacao",
+   "url": "http://www.advantageapartmentscuracao.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Willemstad (Bottelier)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 90,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/advantage-apartments-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/advantage-apartments-curacao"
+   ]
+  },
+  {
+   "id": "malvales-resort",
+   "naam": "Malvales Resort",
+   "url": "https://malvalesresort.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Jan Thiel (Kaya Tibourin 7)",
+   "tags": [
+    "jan-thiel"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 87,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/malvales-resort-appartementen-verhuur"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/malvales-resort-appartementen-verhuur"
+   ]
+  },
+  {
+   "id": "la-maya-beach-curacao",
+   "naam": "La Maya Beach Curacao",
+   "url": "https://noomcuracao.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Brakkeput Abou",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 74,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/la-maya-beach-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/la-maya-beach-curacao"
+   ]
+  },
+  {
+   "id": "green-view-blue-bay",
+   "naam": "Green View",
+   "url": null,
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Blue Bay (Sint Michiel)",
+   "tags": [
+    "blue-bay"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 70,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/green-view"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/green-view"
+   ]
+  },
+  {
+   "id": "westhill-bungalows",
+   "naam": "Westhill Bungalows",
+   "url": "http://www.westhillcuracao.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Sabana Westpunt",
+   "tags": [
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 69,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/westhill-bungalows"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/westhill-bungalows"
+   ]
+  },
+  {
+   "id": "citylife-apartments",
+   "naam": "Citylife Apartments Curacao",
+   "url": "http://www.citylifeapartmentscuracao.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Willemstad (Jan Erasmusstraat 15)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 67,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/citylife-apartments-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/citylife-apartments-curacao"
+   ]
+  },
+  {
+   "id": "curinjo-apartments",
+   "naam": "Curinjo Apartments",
+   "url": "http://www.curinjo.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Willemstad (Carawaraweg 84)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 62,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/curinjo-apartements"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/curinjo-apartements"
+   ]
+  },
+  {
+   "id": "chichi-apartments",
+   "naam": "Chichi Apartments Grote Berg",
+   "url": null,
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Grote Berg",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 59,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/chichi-apartments-grote-berg"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/chichi-apartments-grote-berg"
+   ]
+  },
+  {
+   "id": "bubi-blou-apartments",
+   "naam": "Bubi Blou Apartments",
+   "url": "http://www.huren-op-curacao.nl/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Willemstad (Kaya Bach 15)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 56,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/bubi-blou-apartments-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/bubi-blou-apartments-curacao"
+   ]
+  },
+  {
+   "id": "kdf-apartments",
+   "naam": "KDF Apartments",
+   "url": null,
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Bonam (Kaya Nehemiah 12)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 52,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/kdf-apartments"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/kdf-apartments"
+   ]
+  },
+  {
+   "id": "rian-apartments",
+   "naam": "Rian Apartments",
+   "url": "http://rian-appartementen.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Willemstad (St Michielsweg 34)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 48,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/rian-apartments"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/rian-apartments"
+   ]
+  },
+  {
+   "id": "lagun-sunset-resort",
+   "naam": "Lagun Sunset Resort",
+   "url": "https://www.lagunsunset.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Lagun (Lagun 27)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 40,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/lagun-sunset-resort-all-natural"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/lagun-sunset-resort-all-natural"
+   ]
+  },
+  {
+   "id": "4blessings-curacao",
+   "naam": "4BlessingsCuracao",
+   "url": "http://4blessingscuracao.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Willemstad (Kaya Bach 62)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 38,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/4blessingscuracao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/4blessingscuracao"
+   ]
+  },
+  {
+   "id": "indigo-apartments-suites",
+   "naam": "Indigo Apartments & Suites",
+   "url": "http://www.indigoapartmentscuracao.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Jan Thiel (Kaya Bolo Pretu 2)",
+   "tags": [
+    "jan-thiel"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 34,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/indigo-apartments-en-suites"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/indigo-apartments-en-suites"
+   ]
+  },
+  {
+   "id": "wederfoort-apartments",
+   "naam": "Wederfoort Apartments",
+   "url": "http://www.wederfoort-apartments.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Sint Michiel (Redaweg 64)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 34,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/wederfoort-apartments"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/wederfoort-apartments"
+   ]
+  },
+  {
+   "id": "sunda-ville-apartments",
+   "naam": "Sunda Ville Apartments",
+   "url": "http://www.sundavillecuracao.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Willemstad (Seru Waterloo)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 33,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/sunda-ville-apartments"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/sunda-ville-apartments"
+   ]
+  },
+  {
+   "id": "whitehouse-lagun",
+   "naam": "Whitehouse Lagun",
+   "url": "https://www.whitehouselagun.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Lagun (Lagun 15)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 32,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/whitehouse-lagun"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/whitehouse-lagun"
+   ]
+  },
+  {
+   "id": "sea-horizon-apartments",
+   "naam": "Sea Horizon Apartments",
+   "url": null,
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Bapor Kibrá (Mambo)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 30,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/sea-horizon-apartments"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/sea-horizon-apartments"
+   ]
+  },
+  {
+   "id": "bed-and-breakfast-curacao",
+   "naam": "Bed and Breakfast Curacao",
+   "url": "http://www.bbcuracao.com/",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Jan Thiel (Kaya Marmara 12)",
+   "tags": [
+    "jan-thiel"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 29,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/bed-and-breakfast-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/bed-and-breakfast-curacao"
+   ]
+  },
+  {
+   "id": "one-mambo-bocobay",
+   "naam": "ONE Mambo by Bocobay",
+   "url": "https://www.bocobay.com/destinations/onemambo",
+   "soort": {
+    "nl": "vakantieappartementen",
+    "en": "vacation apartments",
+    "de": "Ferienwohnungen",
+    "es": "apartamentos vacacionales",
+    "pt": "apartamentos de temporada"
+   },
+   "plaats": "Bapor Kibrá (Mambo)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 27,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/holiday-apartment-rental/one-mambo-by-bocobay"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/holiday-apartment-rental/one-mambo-by-bocobay"
    ]
   }
  ],

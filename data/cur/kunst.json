@@ -1,6 +1,6 @@
 {
  "id": "kunst",
- "peildatum": "2026-11-07",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "kunstplek",
   "en": "art spot",
@@ -1569,6 +1569,126 @@
    },
    "bronnen": [
     "https://eventscuracao.com/art-galleries-museums/"
+   ]
+  },
+  {
+   "id": "lara-bonomo-galerie",
+   "naam": "Galerie Lara Bonomo",
+   "url": null,
+   "soort": {
+    "nl": "galerie en atelier",
+    "en": "gallery and studio",
+    "de": "Galerie und Atelier",
+    "es": "galería y estudio",
+    "pt": "galeria e ateliê"
+   },
+   "plaats": "Berg Altena, Willemstad",
+   "tags": [
+    "galerie",
+    "hedendaags",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Geopend in april 2026",
+     "en": "Opened in April 2026",
+     "de": "Eröffnet im April 2026",
+     "es": "Abierta en abril de 2026",
+     "pt": "Aberta em abril de 2026"
+    },
+    {
+     "nl": "Wo tot vr 10:00 tot 16:00, of op afspraak",
+     "en": "Wed to Fri 10 a.m. to 4 p.m., or by appointment",
+     "de": "Mi bis Fr 10 bis 16 Uhr oder nach Vereinbarung",
+     "es": "Mié a vie 10:00 a 16:00, o con cita",
+     "pt": "Qua a sex 10h às 16h, ou com hora marcada"
+    },
+    {
+     "nl": "Muurschilderingen en schilderijen over emotie en introspectie",
+     "en": "Murals and paintings about emotion and introspection",
+     "de": "Wandbilder und Gemälde über Emotion und Introspektion",
+     "es": "Murales y pinturas sobre emoción e introspección",
+     "pt": "Murais e pinturas sobre emoção e introspecção"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/unknown/artist-lara-bonomo-opens-immersive-gallery-space-in-willemstad"
+   ]
+  },
+  {
+   "id": "interactive-experience-museum",
+   "naam": "Curaçao Interactive Experience Museum",
+   "url": null,
+   "soort": {
+    "nl": "interactief museum",
+    "en": "interactive museum",
+    "de": "interaktives Museum",
+    "es": "museo interactivo",
+    "pt": "museu interativo"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "museum",
+    "hedendaags",
+    "willemstad"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Geopend in 2026",
+     "en": "Opened in 2026",
+     "de": "Eröffnet 2026",
+     "es": "Abierto en 2026",
+     "pt": "Aberto em 2026"
+    },
+    {
+     "nl": "Vaste tentoonstelling over geschiedenis, natuur en cultuur, plus wisselende kunst",
+     "en": "Permanent exhibition on history, nature and culture, plus rotating art",
+     "de": "Dauerausstellung zu Geschichte, Natur und Kultur, dazu wechselnde Kunst",
+     "es": "Exposición permanente sobre historia, naturaleza y cultura, más arte rotativo",
+     "pt": "Exposição permanente sobre história, natureza e cultura, mais arte rotativa"
+    },
+    {
+     "nl": "Tijdelijke tentoonstelling in april 2026 in het West End Building, Brionplein",
+     "en": "Temporary exhibition in April 2026 at the West End Building, Brionplein",
+     "de": "Wechselausstellung im April 2026 im West End Building, Brionplein",
+     "es": "Exposición temporal en abril de 2026 en el West End Building, Brionplein",
+     "pt": "Exposição temporária em abril de 2026 no West End Building, Brionplein"
+    }
+   ],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://www.curacaochronicle.com/post/unknown/curacao-opens-new-interactive-museum-with-focus-on-art-culture-and-innovation"
    ]
   }
  ],

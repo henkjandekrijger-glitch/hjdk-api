@@ -1,6 +1,6 @@
 {
  "id": "trouwen",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "trouwlocatie of weddingplanner",
   "en": "wedding venue or planner",
@@ -1940,6 +1940,22 @@
     "de": "Unter anderem das Sandals Royal Curaçao, Dreams, Sunscape, Zoetry, Marriott, Renaissance Wind Creek, ACOYA, Baoase, Papagayo und die beiden Corendon-Resorts am Mambo Beach.",
     "es": "Entre ellos, Sandals Royal Curaçao, Dreams, Sunscape, Zoetry, Marriott, Renaissance Wind Creek, ACOYA, Baoase, Papagayo y los dos resorts Corendon en Mambo Beach.",
     "pt": "Entre eles, Sandals Royal Curaçao, Dreams, Sunscape, Zoetry, Marriott, Renaissance Wind Creek, ACOYA, Baoase, Papagayo e os dois resorts Corendon na Mambo Beach."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat voor trouwlocaties zijn er op Curaçao?",
+    "en": "What kinds of wedding venues are there in Curaçao?",
+    "de": "Welche Hochzeitslocations gibt es auf Curaçao?",
+    "es": "¿Qué tipos de lugares para bodas hay en Curazao?",
+    "pt": "Que tipos de locais para casamento existem em Curaçao?"
+   },
+   "a": {
+    "nl": "Je kiest tussen een strand, een resort of hotel en een landhuis. Strandlocaties zijn onder meer Cas Abao, Grote Knip, Porto Mari en Mambo Beach. Resorts en hotels met bruiloftspakketten zijn onder meer Sandals Royal, Zoetry, Baoase, Papagayo en Avila. Landhuizen zijn Landhuis Chobolobo, Brakkeput Mei Mei en Daniel. Een weddingplanner regelt de locatie, bijvoorbeeld BanKasa (actief sinds 2001). Het wettelijke deel doe je los van de locatie: meld je minstens twee maanden vooraf schriftelijk bij de burgerlijke stand.",
+    "en": "You choose between a beach, a resort or hotel, and a landhuis (country house). Beach venues include Cas Abao, Grote Knip, Porto Mari and Mambo Beach. Resorts and hotels with wedding packages include Sandals Royal, Zoetry, Baoase, Papagayo and Avila. Landhuizen include Landhuis Chobolobo, Brakkeput Mei Mei and Daniel. A wedding planner can arrange the venue, for example BanKasa (active since 2001). The legal side is separate from the venue: notify the civil registry in writing at least two months ahead.",
+    "de": "Du wählst zwischen Strand, Resort oder Hotel und Landhaus. Strandlocations sind unter anderem Cas Abao, Grote Knip, Porto Mari und Mambo Beach. Resorts und Hotels mit Hochzeitspaketen sind unter anderem Sandals Royal, Zoetry, Baoase, Papagayo und Avila. Landhäuser sind Landhuis Chobolobo, Brakkeput Mei Mei und Daniel. Ein Weddingplanner organisiert die Location, zum Beispiel BanKasa (seit 2001 aktiv). Der rechtliche Teil ist unabhängig von der Location: Melde dich mindestens zwei Monate vorher schriftlich beim Standesamt an.",
+    "es": "Eliges entre una playa, un resort u hotel y un landhuis (casa de campo). Entre las playas están Cas Abao, Grote Knip, Porto Mari y Mambo Beach. Entre los resorts y hoteles con paquetes de boda, Sandals Royal, Zoetry, Baoase, Papagayo y Avila. Los landhuizen son Landhuis Chobolobo, Brakkeput Mei Mei y Daniel. Una wedding planner organiza el lugar, por ejemplo BanKasa (activa desde 2001). Lo legal va aparte del lugar: avisa por escrito al registro civil al menos dos meses antes.",
+    "pt": "Você escolhe entre uma praia, um resort ou hotel e um landhuis (casa de campo). Entre as praias estão Cas Abao, Grote Knip, Porto Mari e Mambo Beach. Entre os resorts e hotéis com pacotes de casamento, Sandals Royal, Zoetry, Baoase, Papagayo e Avila. Os landhuizen são Landhuis Chobolobo, Brakkeput Mei Mei e Daniel. Uma wedding planner organiza o local, por exemplo a BanKasa (ativa desde 2001). A parte legal é separada do local: avise o registro civil por escrito pelo menos dois meses antes."
    }
   }
  ],

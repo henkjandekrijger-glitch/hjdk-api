@@ -1,6 +1,6 @@
 {
  "id": "internet",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "internetaanbieder",
   "en": "internet provider",
@@ -1208,6 +1208,70 @@
     "de": "Die Tarife von Digicel reichen von XCG 95 im Monat (10 GB) bis XCG 235 im Monat (80 GB, unbegrenzte Anrufe auch ins Ausland).",
     "es": "Los planes de Digicel van desde XCG 95 al mes (10 GB) hasta XCG 235 al mes (80 GB, llamadas ilimitadas incluidas las internacionales).",
     "pt": "Os planos da Digicel vão de XCG 95 por mês (10 GB) a XCG 235 por mês (80 GB, ligações ilimitadas, inclusive internacionais)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe bestel ik Starlink op Curaçao en wat kost het?",
+    "en": "How do I get Starlink in Curaçao and what does it cost?",
+    "de": "Wie bekomme ich Starlink auf Curaçao und was kostet es?",
+    "es": "¿Cómo consigo Starlink en Curazao y cuánto cuesta?",
+    "pt": "Como contratar o Starlink em Curaçao e quanto custa?"
+   },
+   "a": {
+    "nl": "Starlink is op Curaçao beschikbaar sinds 14 oktober 2026, ongeveer een week nadat de regering de concessie tekende (teslanorth.com, 14 oktober 2026). Starlink verwees naar een eigen Curaçao-pagina op zijn site: controleer daar eerst of jouw adres bediend kan worden. Lokale prijzen noemde de aankondiging niet, kijk dus op Starlinks site voor de actuele prijs van de set en het abonnement. Starlink valt onder dezelfde belasting-, invoerrecht- en afluisterregels als andere telecombedrijven. Voor de concessie waarschuwde toezichthouder RAC dat verkoop en gebruik niet waren toegestaan.",
+    "en": "Starlink has been available in Curaçao since October 14, 2026, about a week after the government signed the concession (teslanorth.com, October 14, 2026). Starlink pointed to its own Curaçao page: check there first whether your address can be served. The announcement gave no local prices, so check Starlink's site for the current price of the kit and the plan. Starlink must follow the same tax, import duty and lawful interception rules as other telecom companies. Before the concession, the regulator RAC warned that sale and use were not allowed.",
+    "de": "Starlink ist auf Curaçao seit dem 14. Oktober 2026 verfügbar, etwa eine Woche nachdem die Regierung die Konzession unterzeichnet hatte (teslanorth.com, 14. Oktober 2026). Starlink verwies auf eine eigene Curaçao-Seite: prüfe dort zuerst, ob deine Adresse versorgt werden kann. Lokale Preise nannte die Ankündigung nicht, schau also auf der Starlink-Seite nach dem aktuellen Preis für Set und Tarif. Für Starlink gelten dieselben Steuer-, Einfuhrzoll- und Abhörregeln wie für andere Telekomfirmen. Vor der Konzession warnte die Aufsicht RAC, dass Verkauf und Nutzung nicht erlaubt waren.",
+    "es": "Starlink está disponible en Curazao desde el 14 de octubre de 2026, aproximadamente una semana después de que el gobierno firmara la concesión (teslanorth.com, 14 de octubre de 2026). Starlink remitió a su propia página de Curazao: revisa primero allí si tu dirección tiene servicio. El anuncio no dio precios locales, así que consulta el sitio de Starlink para el precio actual del kit y del plan. Starlink debe cumplir las mismas reglas de impuestos, aranceles e interceptación legal que otras empresas de telecomunicaciones. Antes de la concesión, el regulador RAC advirtió que la venta y el uso no estaban permitidos.",
+    "pt": "O Starlink está disponível em Curaçao desde 14 de outubro de 2026, cerca de uma semana depois de o governo assinar a concessão (teslanorth.com, 14 de outubro de 2026). O Starlink indicou uma página própria de Curaçao: veja primeiro lá se o seu endereço é atendido. O anúncio não trouxe preços locais, então consulte o site do Starlink para o preço atual do kit e do plano. O Starlink segue as mesmas regras de impostos, tarifas de importação e interceptação legal que as outras empresas de telecomunicações. Antes da concessão, o regulador RAC avisou que a venda e o uso não eram permitidos."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is er 4G op Curaçao en hoe goed is het bereik?",
+    "en": "Is there 4G in Curaçao and how good is the coverage?",
+    "de": "Gibt es 4G auf Curaçao und wie gut ist der Empfang?",
+    "es": "¿Hay 4G en Curazao y qué tan buena es la cobertura?",
+    "pt": "Há 4G em Curaçao e como é a cobertura?"
+   },
+   "a": {
+    "nl": "Ja. Digicel, Flow (UTS, prepaid onder de naam Chippie) en TeleCuraçao bieden 4G. Volgens mybestsim.com (bijgewerkt 13 november 2026) is het bereik goed in Willemstad, Mambo Beach, Jan Thiel en de resortgebieden, en zwakker in onder meer Westpunt en Shete Boka; afgelegen duikplekken en stranden hebben beperkt of geen 4G en Klein Curaçao heeft geen bereik. 5G is volgens dezelfde bron nog beperkt. Gemiddeld ligt 4G tussen 15 en 35 Mbps; in de Ookla-meting (eerste helft 2025) was Flow met ongeveer 39 Mbps het snelst. Neem voor je reis een eSIM of lokale SIM, zie de eSIM-gids.",
+    "en": "Yes. Digicel, Flow (UTS, prepaid under the name Chippie) and TeleCuraçao offer 4G. According to mybestsim.com (updated November 13, 2026) coverage is good in Willemstad, Mambo Beach, Jan Thiel and the resort areas, and weaker in places such as Westpunt and Shete Boka; remote dive sites and beaches have limited or no 4G and Klein Curaçao has no coverage. 5G is still limited according to the same source. Average 4G speeds are 15 to 35 Mbps; in Ookla's measurement (first half of 2025) Flow was fastest at about 39 Mbps. Get an eSIM or local SIM before your trip, see the eSIM guide.",
+    "de": "Ja. Digicel, Flow (UTS, Prepaid unter dem Namen Chippie) und TeleCuraçao bieten 4G. Laut mybestsim.com (Stand 13. November 2026) ist der Empfang in Willemstad, Mambo Beach, Jan Thiel und den Resortgebieten gut, in Westpunt und Shete Boka etwa schwächer; abgelegene Tauchplätze und Strände haben begrenztes oder kein 4G, Klein Curaçao hat keinen Empfang. 5G ist laut derselben Quelle noch begrenzt. Im Schnitt liegt 4G bei 15 bis 35 Mbit/s; in der Ookla-Messung (erstes Halbjahr 2025) war Flow mit etwa 39 Mbit/s am schnellsten. Besorge vor der Reise eine eSIM oder lokale SIM, siehe eSIM-Ratgeber.",
+    "es": "Sí. Digicel, Flow (UTS, prepago bajo el nombre Chippie) y TeleCuraçao ofrecen 4G. Según mybestsim.com (actualizado el 13 de noviembre de 2026) la cobertura es buena en Willemstad, Mambo Beach, Jan Thiel y las zonas de resorts, y más débil en lugares como Westpunt y Shete Boka; los sitios de buceo y playas remotos tienen 4G limitado o nulo y Klein Curaçao no tiene cobertura. El 5G sigue siendo limitado según la misma fuente. El 4G promedia entre 15 y 35 Mbps; en la medición de Ookla (primer semestre de 2025) Flow fue la más rápida con unos 39 Mbps. Consigue una eSIM o SIM local antes del viaje, mira la guía de eSIM.",
+    "pt": "Sim. Digicel, Flow (UTS, pré-pago com o nome Chippie) e TeleCuraçao oferecem 4G. Segundo o mybestsim.com (atualizado em 13 de novembro de 2026) a cobertura é boa em Willemstad, Mambo Beach, Jan Thiel e nas áreas de resorts, e mais fraca em lugares como Westpunt e Shete Boka; locais de mergulho e praias remotas têm 4G limitado ou nenhum e Klein Curaçao não tem cobertura. O 5G ainda é limitado segundo a mesma fonte. O 4G fica em média entre 15 e 35 Mbps; na medição da Ookla (primeiro semestre de 2025) a Flow foi a mais rápida, com cerca de 39 Mbps. Consiga um eSIM ou SIM local antes da viagem, veja o guia de eSIM."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is Flow op Curaçao en wat biedt Flow?",
+    "en": "What is Flow in Curaçao and what does it offer?",
+    "de": "Was ist Flow auf Curaçao und was bietet es?",
+    "es": "¿Qué es Flow en Curazao y qué ofrece?",
+    "pt": "O que é a Flow em Curaçao e o que oferece?"
+   },
+   "a": {
+    "nl": "Flow is de grootste internetaanbieder van Curaçao en onderdeel van Liberty Latin America (dat UTS in 2019 kocht). Flow levert thuisinternet en mobiel; Chippie is het prepaidmerk. Extra data bij Flow/Chippie kost XCG 10 per GB, een toeristen-SIM met 3 GB ongeveer €26 (saily.com, augustus 2026). Flow had op 14 juni 2025 een eilandbrede storing van bijna een dag en begin 2026 weken met haperingen; wie thuis werkt houdt dus een back-up (mobiele data of Starlink). Concurrent voor vast internet is Digicel+ glasvezel vanaf XCG 209 per maand.",
+    "en": "Flow is Curaçao's largest internet provider and part of Liberty Latin America (which bought UTS in 2019). Flow offers home internet and mobile; Chippie is the prepaid brand. Extra data at Flow/Chippie costs XCG 10 per GB, a tourist SIM with 3 GB about €26 (saily.com, August 2026). Flow had an island-wide outage of almost a full day on June 14, 2025 and weeks of interruptions in early 2026, so if you work from home keep a backup (mobile data or Starlink). The fixed-internet competitor is Digicel+ fiber from XCG 209 a month.",
+    "de": "Flow ist der größte Internetanbieter Curaçaos und Teil von Liberty Latin America (das 2019 UTS kaufte). Flow bietet Heiminternet und Mobilfunk; Chippie ist die Prepaid-Marke. Zusätzliche Daten bei Flow/Chippie kosten XCG 10 pro GB, eine Touristen-SIM mit 3 GB etwa €26 (saily.com, August 2026). Am 14. Juni 2025 fiel Flow auf der ganzen Insel fast einen Tag lang aus, Anfang 2026 gab es wochenlang Störungen; wer von zu Hause arbeitet, hält also ein Backup bereit (mobile Daten oder Starlink). Konkurrent im Festnetz ist Digicel+ Glasfaser ab XCG 209 im Monat.",
+    "es": "Flow es el mayor proveedor de internet de Curazao y forma parte de Liberty Latin America (que compró UTS en 2019). Flow ofrece internet en casa y móvil; Chippie es la marca prepago. Los datos adicionales en Flow/Chippie cuestan XCG 10 por GB, una SIM para turistas con 3 GB unos €26 (saily.com, agosto de 2026). Flow tuvo una caída en toda la isla de casi un día el 14 de junio de 2025 y semanas de interrupciones a principios de 2026; si trabajas desde casa, ten un respaldo (datos móviles o Starlink). La competencia en internet fijo es la fibra de Digicel+ desde XCG 209 al mes.",
+    "pt": "A Flow é a maior provedora de internet de Curaçao e faz parte da Liberty Latin America (que comprou a UTS em 2019). A Flow oferece internet residencial e móvel; Chippie é a marca pré-paga. Dados extras na Flow/Chippie custam XCG 10 por GB, um SIM para turistas com 3 GB cerca de €26 (saily.com, agosto de 2026). A Flow teve uma queda em toda a ilha de quase um dia em 14 de junho de 2025 e semanas de interrupções no início de 2026; quem trabalha em casa deve ter um reserva (dados móveis ou Starlink). A concorrente na internet fixa é a fibra da Digicel+ a partir de XCG 209 por mês."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welk thuisinternet kan ik op Curaçao nemen?",
+    "en": "Which home internet can I get in Curaçao?",
+    "de": "Welches Heiminternet kann ich auf Curaçao nehmen?",
+    "es": "¿Qué internet para el hogar puedo contratar en Curazao?",
+    "pt": "Qual internet residencial posso contratar em Curaçao?"
+   },
+   "a": {
+    "nl": "Je hebt vier opties. Digicel+ glasvezel kost XCG 209 per maand voor 250/100 Mbps met 84 tv-zenders, tot XCG 399 voor 600/250 Mbps (belasting inbegrepen, oktober 2026) en had volgens Ookla (eerste helft 2025) het snelste vaste internet; je betaalt bij aanmelding een borg, vraag hoeveel. Flow is de grootste aanbieder. Qonèkt (Aquatel) is nieuw en legt glasvezel aan, begonnen in Vidanova en St. Joris: vraag of jouw wijk al is aangesloten. Starlink is er sinds 14 oktober 2026 als alternatief los van de kabels, na controle van je adres. Peildatum 13 november 2026.",
+    "en": "You have four options. Digicel+ fiber costs XCG 209 a month for 250/100 Mbps with 84 TV channels, up to XCG 399 for 600/250 Mbps (tax included, October 2026) and had the fastest fixed internet per Ookla (first half of 2025); you pay a deposit when you sign up, so ask how much. Flow is the largest provider. Qonèkt (Aquatel) is new and is rolling out fiber, starting in Vidanova and St. Joris: ask whether your neighborhood is connected yet. Starlink has been available since October 14, 2026 as an alternative independent of cables, after checking your address. As of November 13, 2026.",
+    "de": "Du hast vier Möglichkeiten. Digicel+ Glasfaser kostet XCG 209 im Monat für 250/100 Mbit/s mit 84 TV-Sendern, bis XCG 399 für 600/250 Mbit/s (inklusive Steuern, Oktober 2026) und hatte laut Ookla (erstes Halbjahr 2025) das schnellste Festnetz-Internet; bei der Anmeldung zahlst du eine Kaution, frag nach der Höhe. Flow ist der größte Anbieter. Qonèkt (Aquatel) ist neu und baut Glasfaser aus, begonnen in Vidanova und St. Joris: frag, ob dein Viertel schon angeschlossen ist. Starlink gibt es seit dem 14. Oktober 2026 als kabelunabhängige Alternative, nach Prüfung deiner Adresse. Stand 13. November 2026.",
+    "es": "Tienes cuatro opciones. La fibra de Digicel+ cuesta XCG 209 al mes por 250/100 Mbps con 84 canales de TV, hasta XCG 399 por 600/250 Mbps (impuestos incluidos, octubre de 2026) y tuvo el internet fijo más rápido según Ookla (primer semestre de 2025); al contratar se paga un depósito, pregunta cuánto. Flow es el mayor proveedor. Qonèkt (Aquatel) es nuevo y despliega fibra, empezando en Vidanova y St. Joris: pregunta si tu barrio ya está conectado. Starlink existe desde el 14 de octubre de 2026 como alternativa sin cables, tras revisar tu dirección. Al 13 de noviembre de 2026.",
+    "pt": "Você tem quatro opções. A fibra da Digicel+ custa XCG 209 por mês por 250/100 Mbps com 84 canais de TV, até XCG 399 por 600/250 Mbps (impostos incluídos, outubro de 2026) e teve a internet fixa mais rápida segundo a Ookla (primeiro semestre de 2025); ao contratar paga-se uma caução, pergunte quanto. A Flow é a maior provedora. A Qonèkt (Aquatel) é nova e está instalando fibra, começando em Vidanova e St. Joris: pergunte se o seu bairro já está conectado. O Starlink existe desde 14 de outubro de 2026 como alternativa sem cabos, após verificar o seu endereço. Em 13 de novembro de 2026."
    }
   }
  ],

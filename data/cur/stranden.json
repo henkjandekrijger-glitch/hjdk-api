@@ -1,6 +1,6 @@
 {
  "id": "stranden",
- "peildatum": "2026-11-08",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "strand",
   "en": "beach",
@@ -360,6 +360,14 @@
      "aantal": 5098,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 2595,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/grote-knip"
     }
    ],
    "voor": {
@@ -410,7 +418,8 @@
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://nomadicniko.com/curacao/beaches/",
     "https://majesticpalace.city/guides/best-beaches-in-curacao",
-    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html",
+    "https://curacao.day/en/businesses/beach/grote-knip"
    ]
   },
   {
@@ -471,6 +480,14 @@
      "aantal": 28,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 1434,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/kleine-knip"
     }
    ],
    "voor": {
@@ -520,7 +537,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://nomadicniko.com/curacao/beaches/",
-    "https://majesticpalace.city/guides/best-beaches-in-curacao"
+    "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "https://curacao.day/en/businesses/beach/kleine-knip"
    ]
   },
   {
@@ -581,6 +599,14 @@
      "aantal": 1021,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 1686,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/playa-lagun"
     }
    ],
    "voor": {
@@ -625,7 +651,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://nomadicniko.com/curacao/beaches/",
-    "https://majesticpalace.city/guides/best-beaches-in-curacao"
+    "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "https://curacao.day/en/businesses/beach/playa-lagun"
    ]
   },
   {
@@ -683,6 +710,14 @@
      "aantal": 905,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 774,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/playa-piskado"
     }
    ],
    "voor": {
@@ -728,7 +763,8 @@
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://nomadicniko.com/curacao/beaches/",
     "https://majesticpalace.city/guides/best-beaches-in-curacao",
-    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html",
+    "https://curacao.day/en/businesses/beach/playa-piskado"
    ]
   },
   {
@@ -786,6 +822,14 @@
      "aantal": 240,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 699,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/playa-forti"
     }
    ],
    "voor": {
@@ -825,7 +869,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://majesticpalace.city/guides/best-beaches-in-curacao",
-    "https://nomadicniko.com/curacao/beaches/"
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://curacao.day/en/businesses/beach/playa-forti"
    ]
   },
   {
@@ -884,6 +929,14 @@
      "aantal": 403,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 677,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/playa-jeremi"
     }
    ],
    "voor": {
@@ -928,7 +981,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://nomadicniko.com/curacao/beaches/",
-    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html",
+    "https://curacao.day/en/businesses/beach/playa-jeremi"
    ]
   },
   {
@@ -967,6 +1021,14 @@
      "aantal": 512,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 1170,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/playa-kalki"
     }
    ],
    "voor": {
@@ -995,7 +1057,8 @@
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
-    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao"
+    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao",
+    "https://curacao.day/en/businesses/beach/playa-kalki"
    ]
   },
   {
@@ -1104,7 +1167,16 @@
      "pt": "Pouco estacionamento"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 56,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/playa-hundu"
+    }
+   ],
    "voor": {
     "nl": [
      "Rif met veel koraal vlak voor de kust",
@@ -1151,7 +1223,8 @@
    },
    "bronnen": [
     "https://www.duikersgids.nl/en/playa-hundu",
-    "https://seafariadventurescuracao.com/en/inspiration/beaches"
+    "https://seafariadventurescuracao.com/en/inspiration/beaches",
+    "https://curacao.day/en/businesses/beach/playa-hundu"
    ]
   },
   {
@@ -1190,7 +1263,16 @@
      "pt": "Estrada de terra, pouco estacionamento"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 109,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/playa-manzalina"
+    }
+   ],
    "voor": {
     "nl": [
      "Koraaltuinen om te snorkelen"
@@ -1228,7 +1310,8 @@
    "bronnen": [
     "https://curacaotodo.com/beaches/playa-manzalina",
     "https://www.duikersgids.nl/en/dive-spots/playa-manzalina-392",
-    "https://seafariadventurescuracao.com/en/inspiration/beaches"
+    "https://seafariadventurescuracao.com/en/inspiration/beaches",
+    "https://curacao.day/en/businesses/beach/playa-manzalina"
    ]
   },
   {
@@ -1293,6 +1376,14 @@
      "aantal": 245,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 378,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/playa-santa-cruz"
     }
    ],
    "voor": {
@@ -1331,7 +1422,8 @@
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
-    "https://nomadicniko.com/curacao/beaches/"
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://curacao.day/en/businesses/beach/playa-santa-cruz"
    ]
   },
   {
@@ -1464,6 +1556,14 @@
      "aantal": 2842,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 315,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/cas-abao"
     }
    ],
    "voor": {
@@ -1520,7 +1620,8 @@
     "https://curatogo.com/beach.html?id=cas",
     "https://nomadicniko.com/curacao/beaches/",
     "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
-    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html",
+    "https://curacao.day/en/businesses/beach/cas-abao"
    ]
   },
   {
@@ -1595,6 +1696,14 @@
      "aantal": 1833,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 1556,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/playa-porto-marie"
     }
    ],
    "voor": {
@@ -1652,7 +1761,8 @@
     "https://majesticpalace.city/guides/best-beaches-in-curacao",
     "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
     "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html",
-    "https://curatogo.com/beach.html?id=porto"
+    "https://curatogo.com/beach.html?id=porto",
+    "https://curacao.day/en/businesses/beach/playa-porto-marie"
    ]
   },
   {
@@ -1720,6 +1830,14 @@
      "aantal": 469,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 1551,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/daaibooi-beach"
     }
    ],
    "voor": {
@@ -1770,7 +1888,8 @@
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
     "https://majesticpalace.city/guides/best-beaches-in-curacao",
-    "https://curatogo.com/beach.html?id=daaibooi"
+    "https://curatogo.com/beach.html?id=daaibooi",
+    "https://curacao.day/en/businesses/beach/daaibooi-beach"
    ]
   },
   {
@@ -1864,7 +1983,7 @@
   {
    "id": "kokomo",
    "naam": "Kokomo Beach (Vaersenbaai)",
-   "url": null,
+   "url": "http://www.kokomo-beach.com/",
    "soort": {
     "nl": "beachclub",
     "en": "beach club",
@@ -1924,6 +2043,14 @@
      "aantal": 600,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 186,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/kokomo"
     }
    ],
    "voor": {
@@ -1970,7 +2097,8 @@
     "https://majesticpalace.city/guides/best-beaches-in-curacao",
     "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/",
     "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao",
-    "https://curatogo.com/beach.html?id=kokomo"
+    "https://curatogo.com/beach.html?id=kokomo",
+    "https://curacao.day/en/businesses/beach/kokomo"
    ]
   },
   {
@@ -2024,6 +2152,14 @@
      "aantal": 830,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 599,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/blue-bay-curacao"
     }
    ],
    "voor": {
@@ -2059,7 +2195,8 @@
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://majesticpalace.city/guides/best-beaches-in-curacao",
     "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao",
-    "https://curatogo.com/beach.html?id=blue-bay"
+    "https://curatogo.com/beach.html?id=blue-bay",
+    "https://curacao.day/en/businesses/beach/blue-bay-curacao"
    ]
   },
   {
@@ -2117,6 +2254,14 @@
      "aantal": 6,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 37,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/boka-sint-michiel"
     }
    ],
    "voor": {
@@ -2146,7 +2291,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://curatogo.com/beach.html?id=boka-sami",
-    "https://seafariadventurescuracao.com/en/inspiration/beaches"
+    "https://seafariadventurescuracao.com/en/inspiration/beaches",
+    "https://curacao.day/en/businesses/beach/boka-sint-michiel"
    ]
   },
   {
@@ -2175,6 +2321,14 @@
      "aantal": 3,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 314,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/marie-pampoen-beach"
     }
    ],
    "voor": {
@@ -2212,13 +2366,14 @@
     ]
    },
    "bronnen": [
-    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://curacao.day/en/businesses/beach/marie-pampoen-beach"
    ]
   },
   {
    "id": "mambo-beach",
    "naam": "Mambo Beach",
-   "url": null,
+   "url": "http://www.mambobeach.com/",
    "soort": {
     "nl": "strandboulevard",
     "en": "beach strip",
@@ -2278,6 +2433,14 @@
      "aantal": 1550,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 5568,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/mambo-beach"
     }
    ],
    "voor": {
@@ -2323,7 +2486,8 @@
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://nomadicniko.com/curacao/beaches/",
     "https://majesticpalace.city/guides/best-beaches-in-curacao",
-    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html",
+    "https://curacao.day/en/businesses/beach/mambo-beach"
    ]
   },
   {
@@ -2361,6 +2525,14 @@
      "aantal": 37,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 3.8,
+     "max": 5,
+     "aantal": 127,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/cabana-beach-curacao"
     }
    ],
    "voor": {
@@ -2389,7 +2561,8 @@
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
-    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao"
+    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao",
+    "https://curacao.day/en/businesses/beach/cabana-beach-curacao"
    ]
   },
   {
@@ -2455,6 +2628,14 @@
      "aantal": 1238,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 765,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/jan-thiel-beach"
     }
    ],
    "voor": {
@@ -2500,7 +2681,8 @@
     "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
     "https://nomadicniko.com/curacao/beaches/",
     "https://majesticpalace.city/guides/best-beaches-in-curacao",
-    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html"
+    "https://www.vakantie-met-kinderen.com/kindvriendelijke-stranden-curacao.html",
+    "https://curacao.day/en/businesses/beach/jan-thiel-beach"
    ]
   },
   {
@@ -2531,7 +2713,16 @@
      "pt": "Bar e espreguiçadeiras"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 29,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/baya-beach"
+    }
+   ],
    "voor": {
     "nl": [
      "Weekendsfeer met muziek"
@@ -2567,7 +2758,8 @@
     ]
    },
    "bronnen": [
-    "https://majesticpalace.city/guides/best-beaches-in-curacao"
+    "https://majesticpalace.city/guides/best-beaches-in-curacao",
+    "https://curacao.day/en/businesses/beach/baya-beach"
    ]
   },
   {
@@ -2597,7 +2789,16 @@
      "pt": "Restaurante na outra ponta"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 215,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/caracas-bay"
+    }
+   ],
    "voor": {
     "nl": [
      "Populair bij snorkelaars en duikers"
@@ -2623,13 +2824,14 @@
     "pt": []
    },
    "bronnen": [
-    "https://nomadicniko.com/curacao/beaches/"
+    "https://nomadicniko.com/curacao/beaches/",
+    "https://curacao.day/en/businesses/beach/caracas-bay"
    ]
   },
   {
    "id": "tugboat-beach",
    "naam": "Tugboat Beach",
-   "url": null,
+   "url": "https://www.tugboat-beach.com/",
    "soort": {
     "nl": "snorkelstrand",
     "en": "snorkel beach",
@@ -2674,7 +2876,16 @@
      "pt": "Bar de praia e centro de mergulho"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 768,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/tugboat-beach"
+    }
+   ],
    "voor": {
     "nl": [
      "Een van de beste gratis snorkelplekken"
@@ -2712,7 +2923,8 @@
    "bronnen": [
     "https://majesticpalace.city/guides/best-beaches-in-curacao",
     "https://nomadicniko.com/curacao/beaches/",
-    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao"
+    "https://webwoordenboek.nl/kenniscentrum/wat-kosten-de-stranden-op-curacao",
+    "https://curacao.day/en/businesses/beach/tugboat-beach"
    ]
   },
   {
@@ -2829,6 +3041,14 @@
      "aantal": 3,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 110,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/santa-barbara-beach-curacao"
     }
    ],
    "voor": {
@@ -2866,7 +3086,8 @@
     ]
    },
    "bronnen": [
-    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://curacao.day/en/businesses/beach/santa-barbara-beach-curacao"
    ]
   },
   {
@@ -2904,6 +3125,14 @@
      "aantal": 29,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 183,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/playa-kanoa"
     }
    ],
    "voor": {
@@ -2941,7 +3170,8 @@
     ]
    },
    "bronnen": [
-    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html"
+    "https://www.tripadvisor.com/Attractions-g147277-Activities-c47-t52-Curacao.html",
+    "https://curacao.day/en/businesses/beach/playa-kanoa"
    ]
   },
   {
@@ -3105,6 +3335,135 @@
     "https://www.tripadvisor.com/Attractions-g147277-Activities-Curacao.html",
     "https://www.mycuracaoguide.com/klein-curacao",
     "https://travander.nl/en/the-most-beautiful-beaches-of-curacao/"
+   ]
+  },
+  {
+   "id": "fuik-beach",
+   "naam": "Fuik Beach",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach",
+    "de": "Strand",
+    "es": "playa",
+    "pt": "praia"
+   },
+   "plaats": "Newport",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 41,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/fuik-beach"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/beach/fuik-beach"
+   ]
+  },
+  {
+   "id": "boka-hulu",
+   "naam": "Boka Hulu",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach",
+    "de": "Strand",
+    "es": "playa",
+    "pt": "praia"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 29,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/boka-hulu"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/beach/boka-hulu"
+   ]
+  },
+  {
+   "id": "parasasa-beach",
+   "naam": "Parasasa Beach",
+   "url": null,
+   "soort": {
+    "nl": "strand",
+    "en": "beach",
+    "de": "Strand",
+    "es": "playa",
+    "pt": "praia"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 565,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/beach/parasasa-beach"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/beach/parasasa-beach"
    ]
   }
  ],

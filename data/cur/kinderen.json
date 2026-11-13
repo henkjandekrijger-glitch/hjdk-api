@@ -1,6 +1,6 @@
 {
  "id": "kinderen",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "uitje of school met kinderen",
   "en": "kids activity or school",
@@ -330,8 +330,34 @@
     "peuters",
     "oost"
    ],
-   "prijs": null,
+   "prijs": {
+    "bedrag": 20,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per persoon vanaf 12 jaar (5 tot 12 jaar $10)",
+     "en": "per person aged 12 and up (ages 5 to 12 $10)",
+     "de": "pro Person ab 12 Jahren (5 bis 12 Jahre $10)",
+     "es": "por persona desde 12 años (5 a 12 años $10)",
+     "pt": "por pessoa a partir de 12 anos (5 a 12 anos $10)"
+    },
+    "bron": "https://curacao-sea-aquarium.com/experiences/curacao-sea-aquarium/",
+    "datum": "2026-11"
+   },
    "feiten": [
+    {
+     "nl": "Dinsdag tot en met zaterdag 8:00 tot 17:00 volgens de officiële site",
+     "en": "Tuesday to Saturday 8:00 to 17:00 according to the official site",
+     "de": "Dienstag bis Samstag 8:00 bis 17:00 laut offizieller Website",
+     "es": "De martes a sábado de 8:00 a 17:00 según el sitio oficial",
+     "pt": "De terça a sábado, das 8h às 17h, segundo o site oficial"
+    },
+    {
+     "nl": "Kinderen tot 5 jaar gratis",
+     "en": "Children under 5 free",
+     "de": "Kinder unter 5 Jahren kostenlos",
+     "es": "Niños menores de 5 años gratis",
+     "pt": "Crianças com menos de 5 anos grátis"
+    },
     {
      "nl": "Touch tanks en flamingo's voeren",
      "en": "Touch tanks and flamingo feeding",
@@ -407,6 +433,9 @@
     ]
    },
    "bronnen": [
+    "https://curacao-sea-aquarium.com/experiences/curacao-sea-aquarium/",
+    "https://www.naarcuracao.com/en/tour-item/sea-aquarium-admission/",
+    "https://www.visit-curacao.com/fun-and-family-activities/i/35513727/curacao-sea-aquarium",
     "https://www.tripadvisor.com/Attraction_Review-g147278-d286262-Reviews-Curacao_Sea_Aquarium-Willemstad_Curacao.html",
     "https://www.curacao.com/en/article/curacao-for-families",
     "https://papagayo.com/curacao-tips/things-to-do/10-curacao-activities-your-kids-will-love"
@@ -3524,6 +3553,22 @@
     "de": "Unter anderem das Vespucci College, das Radulphus College, die Schroederschool (privat), die Marnixschool, die Johan van Walbeeckschool, die Dr. Albert Schweitzerschool, die Römerschool und die katholischen Schulen Santa Margaretha, Sint Franciscus, Santa Famia und Maria Auxiliadora.",
     "es": "Entre ellas, Vespucci College, Radulphus College, Schroederschool (privada), Marnixschool, Johan van Walbeeckschool, Dr. Albert Schweitzerschool, Römerschool y las escuelas católicas Santa Margaretha, Sint Franciscus, Santa Famia y Maria Auxiliadora.",
     "pt": "Entre elas, Vespucci College, Radulphus College, Schroederschool (particular), Marnixschool, Johan van Walbeeckschool, Dr. Albert Schweitzerschool, Römerschool e as escolas católicas Santa Margaretha, Sint Franciscus, Santa Famia e Maria Auxiliadora."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is het Curaçao Sea Aquarium open en wat kost een kaartje?",
+    "en": "Is the Curaçao Sea Aquarium open and how much is a ticket?",
+    "de": "Ist das Curaçao Sea Aquarium geöffnet und was kostet eine Eintrittskarte?",
+    "es": "¿Está abierto el Curaçao Sea Aquarium y cuánto cuesta una entrada?",
+    "pt": "O Curaçao Sea Aquarium está aberto e quanto custa um ingresso?"
+   },
+   "a": {
+    "nl": "Ja, het Curaçao Sea Aquarium bij Bapor Kibra (Mambo Beach) is open. Volgens de officiële site kost een kaartje $20 vanaf 12 jaar en $10 van 5 tot 12 jaar; kinderen tot 5 jaar zijn gratis. Openingstijden volgens de officiële site: dinsdag tot en met zaterdag 8:00 tot 17:00. Een andere bron noemt $21 en $11 inclusief 9% omzetbelasting en dagelijks open, dus controleer de tijden en prijs voor je gaat.",
+    "en": "Yes, the Curaçao Sea Aquarium at Bapor Kibra (Mambo Beach) is open. According to the official site a ticket costs $20 from age 12 and $10 for ages 5 to 12; children under 5 are free. Opening hours on the official site: Tuesday to Saturday, 8:00 to 17:00. Another source lists $21 and $11 including 9% sales tax and daily opening, so check the hours and price before you go.",
+    "de": "Ja, das Curaçao Sea Aquarium bei Bapor Kibra (Mambo Beach) ist geöffnet. Laut offizieller Website kostet ein Ticket 20 $ ab 12 Jahren und 10 $ für 5 bis 12 Jahre; Kinder unter 5 Jahren sind kostenlos. Öffnungszeiten laut offizieller Website: Dienstag bis Samstag, 8:00 bis 17:00. Eine andere Quelle nennt 21 $ und 11 $ inklusive 9 % Umsatzsteuer und tägliche Öffnung, prüfe Zeiten und Preis also vor dem Besuch.",
+    "es": "Sí, el Curaçao Sea Aquarium en Bapor Kibra (Mambo Beach) está abierto. Según el sitio oficial, la entrada cuesta $20 desde los 12 años y $10 de 5 a 12 años; los menores de 5 años entran gratis. Horario según el sitio oficial: de martes a sábado, de 8:00 a 17:00. Otra fuente indica $21 y $11 con 9% de impuesto y apertura diaria, así que comprueba horario y precio antes de ir.",
+    "pt": "Sim, o Curaçao Sea Aquarium em Bapor Kibra (Mambo Beach) está aberto. Segundo o site oficial, o ingresso custa $20 a partir de 12 anos e $10 de 5 a 12 anos; crianças com menos de 5 anos entram grátis. Horário segundo o site oficial: de terça a sábado, das 8h às 17h. Outra fonte indica $21 e $11 com 9% de imposto e abertura diária, então confira horário e preço antes de ir."
    }
   }
  ],

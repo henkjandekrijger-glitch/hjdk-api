@@ -1,6 +1,6 @@
 {
  "id": "huiskopen",
- "peildatum": "2026-11-09",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "makelaar",
   "en": "real estate agent",
@@ -331,9 +331,9 @@
      "platform": "Google",
      "score": 4.7,
      "max": 5,
-     "aantal": 120,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "aantal": 130,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/century-21-1-real-estate"
     }
    ],
    "voor": {
@@ -392,11 +392,11 @@
    "scores": [
     {
      "platform": "Google",
-     "score": 5.0,
+     "score": 5,
      "max": 5,
-     "aantal": 17,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "aantal": 23,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/keller-williams-curacao"
     }
    ],
    "voor": {
@@ -446,7 +446,16 @@
      "pt": "parceiro da ThirdHome"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 8,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/curacao-sotheby-s-international-realty"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -611,11 +620,11 @@
    "scores": [
     {
      "platform": "Google",
-     "score": 4.0,
+     "score": 3.8,
      "max": 5,
-     "aantal": 17,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "aantal": 18,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/new-winds-realty"
     }
    ],
    "voor": {
@@ -668,8 +677,8 @@
      "score": 3.5,
      "max": 5,
      "aantal": 10,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/landmark-real-estate-nv"
     }
    ],
    "voor": {
@@ -792,11 +801,11 @@
    "scores": [
     {
      "platform": "Google",
-     "score": 5.0,
+     "score": 5,
      "max": 5,
-     "aantal": 32,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "aantal": 40,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/palmstone-real-estate-en-appraisals-curacao"
     }
    ],
    "voor": {
@@ -831,7 +840,7 @@
     "es": "agencia local",
     "pt": "imobiliária local"
    },
-   "plaats": null,
+   "plaats": "Willemstad (Pietermaai 35A)",
    "tags": [
     "en-sprekend"
    ],
@@ -848,11 +857,11 @@
    "scores": [
     {
      "platform": "Google",
-     "score": 5.0,
+     "score": 5,
      "max": 5,
-     "aantal": 31,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "aantal": 45,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/moret-real-estate"
     }
    ],
    "voor": {
@@ -893,11 +902,11 @@
    "scores": [
     {
      "platform": "Google",
-     "score": 5.0,
+     "score": 4.9,
      "max": 5,
-     "aantal": 15,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "aantal": 19,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/sun-life-real-estate-curacao"
     }
    ],
    "voor": {
@@ -937,11 +946,11 @@
    "scores": [
     {
      "platform": "Google",
-     "score": 5.0,
+     "score": 5,
      "max": 5,
-     "aantal": 2,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "aantal": 11,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/firstbrick-curacao"
     }
    ],
    "voor": {
@@ -1090,9 +1099,9 @@
      "platform": "Google",
      "score": 4.8,
      "max": 5,
-     "aantal": 36,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "aantal": 38,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/livinggoed-real-estate-curacao"
     }
    ],
    "voor": {
@@ -1134,11 +1143,11 @@
    "scores": [
     {
      "platform": "Google",
-     "score": 4.8,
+     "score": 4.6,
      "max": 5,
-     "aantal": 23,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "aantal": 24,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/ruseler-makelaars-curacao"
     }
    ],
    "voor": {
@@ -1179,11 +1188,11 @@
    "scores": [
     {
      "platform": "Google",
-     "score": 4.6,
+     "score": 4.4,
      "max": 5,
-     "aantal": 26,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "aantal": 27,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/nick-hoetmer"
     }
    ],
    "voor": {
@@ -1226,8 +1235,8 @@
      "score": 4.6,
      "max": 5,
      "aantal": 8,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/simmer-real-estate"
     }
    ],
    "voor": {
@@ -1335,8 +1344,8 @@
      "score": 4.4,
      "max": 5,
      "aantal": 26,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/caresto-real-estate-curacao"
     }
    ],
    "voor": {
@@ -1362,7 +1371,7 @@
   {
    "id": "top-makelaar-curacao",
    "naam": "TOP Makelaar Curaçao",
-   "url": "https://topmakelaarcuracao.com/",
+   "url": "https://www.topmakelaarcuracao.com/",
    "soort": {
     "nl": "lokaal kantoor",
     "en": "local agency",
@@ -1370,7 +1379,7 @@
     "es": "agencia local",
     "pt": "imobiliária local"
    },
-   "plaats": null,
+   "plaats": "Willemstad (Top Business Center, Caracasbaaiweg 199)",
    "tags": [
     "nl-sprekend"
    ],
@@ -1382,8 +1391,8 @@
      "score": 4.4,
      "max": 5,
      "aantal": 11,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/topmakelaar-curacao"
     }
    ],
    "voor": {
@@ -1491,8 +1500,8 @@
      "score": 4.3,
      "max": 5,
      "aantal": 12,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/ambiente-real-estate-makelaar-broker-curacao"
     }
    ],
    "voor": {
@@ -1692,7 +1701,7 @@
     "es": "agencia local",
     "pt": "imobiliária local"
    },
-   "plaats": null,
+   "plaats": "Willemstad (Emancipatie Boulevard 25)",
    "tags": [],
    "prijs": null,
    "feiten": [],
@@ -1702,8 +1711,8 @@
      "score": 3.2,
      "max": 5,
      "aantal": 9,
-     "peildatum": "2026-10-20",
-     "bron": "https://caribbeanhousehunt.com/curacao/realtors/"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/joubert-realty"
     }
    ],
    "voor": {
@@ -1868,7 +1877,16 @@
    "tags": [],
    "prijs": null,
    "feiten": [],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 5,
+     "max": 5,
+     "aantal": 10,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/sunset-realtors"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2339,7 +2357,16 @@
      "pt": "assessora sobre terrenos no Veeris Estate"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 51,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/dushi-homes-curacao"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2373,7 +2400,16 @@
    "tags": [],
    "prijs": null,
    "feiten": [],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 8,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/els-van-barneveld"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2441,7 +2477,16 @@
    "tags": [],
    "prijs": null,
    "feiten": [],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 14,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/gs-real-estate-b-v"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2509,7 +2554,16 @@
    "tags": [],
    "prijs": null,
    "feiten": [],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4,
+     "max": 5,
+     "aantal": 5,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/novo-casa-realty-n-v"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2655,7 +2709,16 @@
      "pt": "assessora sobre terrenos no Veeris Estate"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 6,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/smart-homes-realty"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2723,7 +2786,16 @@
    "tags": [],
    "prijs": null,
    "feiten": [],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4,
+     "max": 5,
+     "aantal": 4,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/hopi-bon-real-estate"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2862,7 +2934,16 @@
    ],
    "prijs": null,
    "feiten": [],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 10,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/droomhuis-curacao"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -3054,6 +3135,135 @@
    },
    "bronnen": [
     "https://makelaarcuracao.nl/"
+   ]
+  },
+  {
+   "id": "het-woonburo",
+   "naam": "Het Woonburo",
+   "url": "https://www.hetwoonburo.net/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency",
+    "de": "lokale Agentur",
+    "es": "agencia local",
+    "pt": "imobiliária local"
+   },
+   "plaats": "Willemstad (Mahaai)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 17,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/het-woonburo"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/real-estate-agency/het-woonburo"
+   ]
+  },
+  {
+   "id": "halabi-real-estate",
+   "naam": "Halabi Real Estate",
+   "url": "http://www.halabire.com/",
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency",
+    "de": "lokale Agentur",
+    "es": "agencia local",
+    "pt": "imobiliária local"
+   },
+   "plaats": "Willemstad (Schottegatweg Oost 82)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.2,
+     "max": 5,
+     "aantal": 6,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/halabi-real-estate"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/real-estate-agency/halabi-real-estate"
+   ]
+  },
+  {
+   "id": "prudential-real-estate-curacao",
+   "naam": "Prudential Real Estate Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "lokaal kantoor",
+    "en": "local agency",
+    "de": "lokale Agentur",
+    "es": "agencia local",
+    "pt": "imobiliária local"
+   },
+   "plaats": "Willemstad (Santa Rosaweg)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 3.8,
+     "max": 5,
+     "aantal": 4,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/real-estate-agency/prudential-real-estate-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/real-estate-agency/prudential-real-estate-curacao"
    ]
   }
  ],

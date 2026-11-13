@@ -1,6 +1,6 @@
 {
  "id": "autokopen",
- "peildatum": "2026-11-06",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "autodealer",
   "en": "car dealer",
@@ -323,8 +323,8 @@
      "score": 4.2,
      "max": 5,
      "aantal": 152,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJTZmR0YKChI4RAEIclGjIGxk"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/garage-cordia"
     }
    ],
    "voor": {
@@ -430,8 +430,8 @@
      "score": 4.0,
      "max": 5,
      "aantal": 107,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJo9e0uH19g44RBMZeTmsezPE"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/universal-motors-b-v"
     }
    ],
    "voor": {
@@ -522,9 +522,9 @@
      "platform": "Google",
      "score": 3.9,
      "max": 5,
-     "aantal": 171,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJ976dAH59g44RSOM-9eEearw"
+     "aantal": 169,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/autocity-bv"
     }
    ],
    "voor": {
@@ -614,8 +614,8 @@
      "score": 4.5,
      "max": 5,
      "aantal": 67,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJSy1vueOChI4RS6Id_UX7TIk"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/star-motors-nv"
     }
    ],
    "voor": {
@@ -712,11 +712,11 @@
    "scores": [
     {
      "platform": "Google",
-     "score": 4.2,
+     "score": 4.1,
      "max": 5,
-     "aantal": 151,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJnRX3n_qChI4RtHBr1XMMz90"
+     "aantal": 150,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/crown-automotives"
     }
    ],
    "voor": {
@@ -797,8 +797,8 @@
      "score": 4.0,
      "max": 5,
      "aantal": 24,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJ3Q8Tl_qChI4RlD43vjTR-MM"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/bmw-ultimate-automobiles"
     }
    ],
    "voor": {
@@ -872,8 +872,8 @@
      "score": 4.8,
      "max": 5,
      "aantal": 11,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJH38wcvCChI4Rw7JdwbbqV30"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/used-car-dealer/occasions-seridomi"
     }
    ],
    "voor": {
@@ -953,9 +953,9 @@
      "platform": "Google",
      "score": 4.4,
      "max": 5,
-     "aantal": 37,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJA0iC1RJ9g44R-euAsiqUCzw"
+     "aantal": 34,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/select-automotive"
     }
    ],
    "voor": {
@@ -1034,8 +1034,8 @@
      "score": 4.3,
      "max": 5,
      "aantal": 93,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJF9VuSv19g44RnT6HlFAuJ98"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/volkswagen-curacao"
     }
    ],
    "voor": {
@@ -1114,8 +1114,8 @@
      "score": 4.9,
      "max": 5,
      "aantal": 8,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJsXGyuWh9g44RaKHh3p2OaWw"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/audi-curacao"
     }
    ],
    "voor": {
@@ -1390,8 +1390,8 @@
      "score": 4.6,
      "max": 5,
      "aantal": 28,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJC4a7DuOChI4RWGvfxOnjjGQ"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/i-cars-curacao-jeep-chrysler-dodge"
     }
    ],
    "voor": {
@@ -1624,11 +1624,11 @@
    "scores": [
     {
      "platform": "Google",
-     "score": 5.0,
+     "score": 5,
      "max": 5,
-     "aantal": 7,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJFzHnwBqDhI4RQ_oo5oTaLyQ"
+     "aantal": 6,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/total-motors"
     }
    ],
    "voor": {
@@ -1696,8 +1696,8 @@
      "score": 4.8,
      "max": 5,
      "aantal": 4,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJGQaHmFF9g44R5ooCamy8p_Q"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/amp-motors"
     }
    ],
    "voor": {
@@ -1760,8 +1760,8 @@
      "score": 4.1,
      "max": 5,
      "aantal": 110,
-     "peildatum": "2026-10-20",
-     "bron": "https://www.google.com/maps/place/?q=place_id:ChIJZclU6q5ig44R9Kq2Yk-_vQY"
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/used-car-dealer/economic-auto-center"
     }
    ],
    "voor": {
@@ -2091,6 +2091,126 @@
    "bronnen": [
     "https://www.google.com/maps/place/?q=place_id:ChIJOcIGXSGDhI4RABJmo8eO9sw"
    ]
+  },
+  {
+   "id": "caribbean-motors",
+   "naam": "Caribbean Motors",
+   "url": null,
+   "soort": {
+    "nl": "autodealer",
+    "en": "car dealer",
+    "de": "Autohändler",
+    "es": "concesionario",
+    "pt": "concessionária"
+   },
+   "plaats": "Jan Noorduynweg",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 54,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/caribbean-motors"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-dealer/caribbean-motors"
+   ]
+  },
+  {
+   "id": "autos-op-curacao",
+   "naam": "Auto's Op Curaçao",
+   "url": "https://autosopcuracao.com/",
+   "soort": {
+    "nl": "autodealer",
+    "en": "car dealer",
+    "de": "Autohändler",
+    "es": "concesionario",
+    "pt": "concessionária"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 6,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-dealer/auto-s-op-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-dealer/auto-s-op-curacao"
+   ]
+  },
+  {
+   "id": "mini-curacao",
+   "naam": "MINI Curaçao",
+   "url": "https://www.minicaribbean.com/en_CC/home/dealers.html",
+   "soort": {
+    "nl": "autodealer",
+    "en": "car dealer",
+    "de": "Autohändler",
+    "es": "concesionario",
+    "pt": "concessionária"
+   },
+   "plaats": "Kaya Tula 44, Seru Domi",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-dealer/mini-curacao-willemstad"
+   ]
   }
  ],
  "tussenpartijen": [
@@ -2312,6 +2432,22 @@
     "de": "An der Prüfstelle des UOVV (Verkehrs- und Transportbehörde) in Willemstad. Von Januar bis April 2026 bestanden 24,010 Fahrzeuge, 231 fielen durch und 11,183 wechselten den Besitzer.",
     "es": "En la estación de inspección del UOVV (autoridad de tránsito y transporte) en Willemstad. De enero a abril de 2026 aprobaron 24,010 vehículos, 231 reprobaron y 11,183 cambiaron de dueño.",
     "pt": "No posto de inspeção do UOVV (autoridade de trânsito e transporte) em Willemstad. De janeiro a abril de 2026, 24,010 veículos foram aprovados, 231 reprovaram e 11,183 mudaram de dono."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar vind ik een Volkswagen-dealer op Curaçao?",
+    "en": "Where can I find a Volkswagen dealer in Curaçao?",
+    "de": "Wo finde ich einen Volkswagen-Händler auf Curaçao?",
+    "es": "¿Dónde encuentro un concesionario Volkswagen en Curazao?",
+    "pt": "Onde encontro uma concessionária Volkswagen em Curaçao?"
+   },
+   "a": {
+    "nl": "Volkswagen Curaçao zit aan de Seru Loraweg in Willemstad, bij onder meer Audi en Select Automotive. Op Google staat het met 4,3 uit 93 beoordelingen (november 2026).",
+    "en": "Volkswagen Curaçao is on Seru Loraweg in Willemstad, next to Audi and Select Automotive among others. On Google it scores 4.3 from 93 reviews (November 2026).",
+    "de": "Volkswagen Curaçao sitzt an der Seru Loraweg in Willemstad, unter anderem neben Audi und Select Automotive. Bei Google steht es bei 4,3 aus 93 Bewertungen (November 2026).",
+    "es": "Volkswagen Curaçao está en Seru Loraweg, en Willemstad, junto a Audi y Select Automotive, entre otros. En Google tiene 4,3 con 93 reseñas (noviembre de 2026).",
+    "pt": "A Volkswagen Curaçao fica na Seru Loraweg, em Willemstad, ao lado de Audi e Select Automotive, entre outras. No Google tem 4,3 com 93 avaliações (novembro de 2026)."
    }
   }
  ],

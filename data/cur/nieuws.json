@@ -1,6 +1,6 @@
 {
  "id": "nieuws",
- "peildatum": "2026-11-04",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "nieuwsbron",
   "en": "news source",
@@ -435,8 +435,8 @@
      "es": "al mes (Amigoe Online)",
      "pt": "por mês (Amigoe Online)"
     },
-    "bron": "https://www.amigoe.com",
-    "datum": "2026-10"
+    "bron": "https://amigoe.com/abonneren/amigoeonline",
+    "datum": "2026-11"
    },
    "feiten": [
     {

@@ -1,6 +1,6 @@
 {
  "id": "evenementen",
- "peildatum": "2026-11-05",
+ "peildatum": "2026-11-13",
  "reviewGewicht": 0,
  "onderwerp": {
   "nl": "evenement",
@@ -1776,10 +1776,18 @@
     "eten",
     "jaarlijks",
     "mei-jun",
-    "jul-aug"
+    "jul-aug",
+    "sep-okt"
    ],
    "prijs": null,
    "feiten": [
+    {
+     "nl": "2026: 1 t/m 17 oktober",
+     "en": "2026: October 1 to 17",
+     "de": "2026: 1. bis 17. Oktober",
+     "es": "2026: del 1 al 17 de octubre",
+     "pt": "2026: de 1 a 17 de outubro"
+    },
     {
      "nl": "2025: 25 juni t/m 5 juli",
      "en": "2025: June 25 to July 5",
@@ -1818,7 +1826,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://www.curacaochronicle.com/post/local/curacao-launches-first-ever-dine-out-week-with-over-35-restaurants-participating"
+    "https://www.curacaochronicle.com/post/local/curacao-launches-first-ever-dine-out-week-with-over-35-restaurants-participating",
+    "https://www.curacao.com/en/event/dine-out-week-curacao-11-1-2026"
    ]
   },
   {
@@ -2342,6 +2351,13 @@
      "pt": "Final de setembro, início de outubro"
     },
     {
+     "nl": "2026: 30 sept t/m 4 okt",
+     "en": "2026: Sep 30 to Oct 4",
+     "de": "2026: 30. September bis 4. Oktober",
+     "es": "2026: del 30 de septiembre al 4 de octubre",
+     "pt": "2026: de 30 de setembro a 4 de outubro"
+    },
+    {
      "nl": "2025: 30 sept t/m 5 okt",
      "en": "2025: Sep 30 to Oct 5",
      "de": "2025: 30. September bis 5. Oktober",
@@ -2383,7 +2399,8 @@
    },
    "bronnen": [
     "https://www.curacaopride.org/?p=11074",
-    "https://www.curacaochronicle.com/post/local/curacao-pride-parade-celebrates-love-equality-and-diversity"
+    "https://www.curacaochronicle.com/post/local/curacao-pride-parade-celebrates-love-equality-and-diversity",
+    "https://www.curacao.com/en/event/curacao-pride-week-2026"
    ]
   },
   {
@@ -2688,6 +2705,13 @@
      "pt": "Final de novembro, numa quinta-feira"
     },
     {
+     "nl": "2026: donderdag 12 november",
+     "en": "2026: Thursday, November 12",
+     "de": "2026: Donnerstag, 12. November",
+     "es": "2026: jueves 12 de noviembre",
+     "pt": "2026: quinta-feira, 12 de novembro"
+    },
+    {
      "nl": "2025: 27 nov om 18.45 uur",
      "en": "2025: Nov 27 at 6:45 p.m.",
      "de": "2025: 27. November um 18:45 Uhr",
@@ -2718,7 +2742,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://www.curacaochronicle.com/post/local/punda-lights-up-christmas-season-on-thursday-with-tree-lighting-music-and-festivities"
+    "https://www.curacaochronicle.com/post/local/punda-lights-up-christmas-season-on-thursday-with-tree-lighting-music-and-festivities",
+    "https://www.curacao.nu/nieuws/evenementen/98479/kerstseizoen-in-punda-begonnen-met-ontsteken-kerstverlichting"
    ]
   },
   {

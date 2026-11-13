@@ -1,6 +1,6 @@
 {
  "id": "restaurants",
- "peildatum": "2026-11-02",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "restaurant",
   "en": "restaurant",
@@ -30,11 +30,11 @@
   "pt": "{n} restaurantes de Curaçao lado a lado: comida local Krioyo, frutos do mar, carnes, sushi, beira-mar e alta gastronomia, com avaliações do Google e do Tripadvisor e preços."
  },
  "kort": {
-  "nl": "We vergelijken 162 restaurants op Curaçao, van eetstalletjes tot proefmenu's. Lokaal eten kan voor ongeveer $12 (stoofpot geit in Plasa Bieuw) tot $20 (Jaanchie's in Westpunt); een hoofdgerecht bij Gouverneur De Rouville kost rond $27. Voor een romantisch diner scoren Kome, Haven en Baoase hoog, voor vis bij zonsondergang Pop's Place en Sea Side Terrace, en voor lokaal eten Plasa Bieuw en Komedor Krioyo.",
-  "en": "We compare 162 restaurants in Curaçao, from food stalls to tasting menus. Local food runs about $12 (goat stew at the Old Market) to $20 (Jaanchie's in Westpunt); a dinner main at Gouverneur De Rouville is around $27. For a romantic dinner, Kome, Haven and Baoase rate highly; for seafood at sunset, Pop's Place and Sea Side Terrace; and for local food, the Old Market and Komedor Krioyo.",
-  "de": "Wir vergleichen 162 Restaurants auf Curaçao, von Imbissständen bis zu Degustationsmenüs. Lokales Essen kostet etwa 12 $ (Ziegeneintopf auf dem Old Market) bis 20 $ (Jaanchie's in Westpunt); ein Hauptgericht zum Abendessen im Gouverneur De Rouville kostet rund 27 $. Für ein romantisches Dinner sind Kome, Haven und Baoase hoch bewertet; für Meeresfrüchte bei Sonnenuntergang Pop's Place und Sea Side Terrace; und für lokale Küche der Old Market und Komedor Krioyo.",
-  "es": "Comparamos 162 restaurantes de Curazao, desde puestos de comida hasta menús de degustación. La comida local cuesta entre unos $12 (guiso de cabro en el Old Market) y $20 (Jaanchie's en Westpunt); un plato fuerte de cena en Gouverneur De Rouville ronda los $27. Para una cena romántica, Kome, Haven y Baoase tienen muy buenas calificaciones; para mariscos al atardecer, Pop's Place y Sea Side Terrace; y para comida local, el Old Market y Komedor Krioyo.",
-  "pt": "Comparamos 162 restaurantes de Curaçao, de barraquinhas de comida a menus degustação. A comida local custa cerca de US$ 12 (ensopado de cabrito no Old Market) a US$ 20 (Jaanchie's em Westpunt); um prato principal de jantar no Gouverneur De Rouville custa em torno de US$ 27. Para um jantar romântico, Kome, Haven e Baoase têm notas altas; para frutos do mar no pôr do sol, Pop's Place e Sea Side Terrace; e para comida local, o Old Market e o Komedor Krioyo."
+  "nl": "We vergelijken 187 restaurants op Curaçao, van eetstalletjes tot proefmenu's. Lokaal eten kan voor ongeveer $12 (stoofpot geit in Plasa Bieuw) tot $20 (Jaanchie's in Westpunt); een hoofdgerecht bij Gouverneur De Rouville kost rond $27. Voor een romantisch diner scoren Kome, Haven en Baoase hoog, voor vis bij zonsondergang Pop's Place en Sea Side Terrace, en voor lokaal eten Plasa Bieuw en Komedor Krioyo.",
+  "en": "We compare 187 restaurants in Curaçao, from food stalls to tasting menus. Local food runs about $12 (goat stew at the Old Market) to $20 (Jaanchie's in Westpunt); a dinner main at Gouverneur De Rouville is around $27. For a romantic dinner, Kome, Haven and Baoase rate highly; for seafood at sunset, Pop's Place and Sea Side Terrace; and for local food, the Old Market and Komedor Krioyo.",
+  "de": "Wir vergleichen 187 Restaurants auf Curaçao, von Imbissständen bis zu Degustationsmenüs. Lokales Essen kostet etwa 12 $ (Ziegeneintopf auf dem Old Market) bis 20 $ (Jaanchie's in Westpunt); ein Hauptgericht zum Abendessen im Gouverneur De Rouville kostet rund 27 $. Für ein romantisches Dinner sind Kome, Haven und Baoase hoch bewertet; für Meeresfrüchte bei Sonnenuntergang Pop's Place und Sea Side Terrace; und für lokale Küche der Old Market und Komedor Krioyo.",
+  "es": "Comparamos 187 restaurantes de Curazao, desde puestos de comida hasta menús de degustación. La comida local cuesta entre unos $12 (guiso de cabro en el Old Market) y $20 (Jaanchie's en Westpunt); un plato fuerte de cena en Gouverneur De Rouville ronda los $27. Para una cena romántica, Kome, Haven y Baoase tienen muy buenas calificaciones; para mariscos al atardecer, Pop's Place y Sea Side Terrace; y para comida local, el Old Market y Komedor Krioyo.",
+  "pt": "Comparamos 187 restaurantes de Curaçao, de barraquinhas de comida a menus degustação. A comida local custa cerca de US$ 12 (ensopado de cabrito no Old Market) a US$ 20 (Jaanchie's em Westpunt); um prato principal de jantar no Gouverneur De Rouville custa em torno de US$ 27. Para um jantar romântico, Kome, Haven e Baoase têm notas altas; para frutos do mar no pôr do sol, Pop's Place e Sea Side Terrace; e para comida local, o Old Market e o Komedor Krioyo."
  },
  "vragen": [
   {
@@ -1208,11 +1208,11 @@
      "pt": "À beira da água, junto à ponte Rainha Emma"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -1434,11 +1434,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -1533,11 +1533,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -1757,11 +1757,11 @@
      "pt": "De terça a sábado, das 12h às 22h"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -1861,11 +1861,11 @@
      "pt": "Saltos de penhasco ao lado do terraço"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     },
     {
      "nl": "Ma t/m vr 10:30 tot 19:00, za en zo tot 20:00",
@@ -1974,11 +1974,11 @@
      "pt": "Número 1 no Tripadvisor Curaçao"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -2052,11 +2052,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -2125,11 +2125,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -2202,11 +2202,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -2286,11 +2286,11 @@
      "pt": "No 4º andar"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -2365,11 +2365,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -2534,11 +2534,11 @@
      "pt": "Só mesas ao ar livre"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -2694,11 +2694,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -2847,11 +2847,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -2925,11 +2925,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -3007,11 +3007,11 @@
      "pt": "Café da manhã, almoço e jantar"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -3087,11 +3087,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     },
     {
      "nl": "Ma t/m za 12:00 tot 23:00, zo 15:00 tot 23:00",
@@ -3168,11 +3168,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -3320,11 +3320,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -3404,11 +3404,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -3481,11 +3481,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -3549,11 +3549,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -3682,11 +3682,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -3745,11 +3745,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -3880,11 +3880,11 @@
      "pt": "Noite do coco às sextas"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4039,11 +4039,11 @@
      "pt": "Ambiente de jardim"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4118,11 +4118,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4184,11 +4184,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4247,11 +4247,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4311,11 +4311,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4374,11 +4374,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4439,11 +4439,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4580,11 +4580,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4644,11 +4644,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4717,11 +4717,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4780,11 +4780,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4844,11 +4844,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4909,11 +4909,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -4974,11 +4974,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -5050,11 +5050,11 @@
      "pt": "Segundas de salsa, quintas de lagosta"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -5125,11 +5125,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -5188,11 +5188,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -5256,11 +5256,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -5320,11 +5320,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -5388,11 +5388,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -5452,11 +5452,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -5605,11 +5605,11 @@
      "pt": "Sorveteria e esportes nas telas"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -5688,11 +5688,11 @@
      "pt": "Happy hour no pôr do sol"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -5825,11 +5825,11 @@
      "pt": "Noite cubana aos domingos"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -5964,11 +5964,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -6027,11 +6027,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -6167,11 +6167,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -6312,11 +6312,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -6375,11 +6375,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -6440,11 +6440,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -6505,11 +6505,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -6569,11 +6569,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -6632,11 +6632,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -6698,11 +6698,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -6840,11 +6840,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -6903,11 +6903,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -7030,11 +7030,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -7094,11 +7094,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -7296,11 +7296,11 @@
      "pt": "Fechado aos domingos e segundas"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -7424,11 +7424,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -7488,11 +7488,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -7558,11 +7558,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -7622,11 +7622,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -7750,11 +7750,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -7823,11 +7823,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -7887,11 +7887,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -7951,11 +7951,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8015,11 +8015,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8076,11 +8076,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8140,11 +8140,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8287,11 +8287,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8355,11 +8355,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8418,11 +8418,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8481,11 +8481,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8544,11 +8544,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8607,11 +8607,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8678,11 +8678,11 @@
      "pt": "Só em dias úteis"
     },
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8742,11 +8742,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8806,11 +8806,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8869,11 +8869,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8933,11 +8933,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -8997,11 +8997,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9060,11 +9060,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9123,11 +9123,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9186,11 +9186,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9241,11 +9241,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9305,11 +9305,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9370,11 +9370,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9434,11 +9434,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9498,11 +9498,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9629,11 +9629,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9702,11 +9702,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9752,13 +9752,13 @@
    "naam": "Mondi Jan Thiel Restaurant",
    "url": null,
    "soort": {
-    "nl": "Italiaans",
-    "en": "Italian",
-    "de": "Italienisch",
-    "es": "Italiana",
-    "pt": "Italiana"
+    "nl": "Italiaans en Caribisch",
+    "en": "Italian and Caribbean",
+    "de": "Italienisch und karibisch",
+    "es": "italiana y caribeña",
+    "pt": "italiana e caribenha"
    },
-   "plaats": "Jan Thiel",
+   "plaats": "Jan Thiel (Kaya Adriàtiko 20-26)",
    "tags": [
     "italiaans",
     "jan-thiel"
@@ -9766,11 +9766,32 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Dagelijks open van 7:30 tot 22:00 (ontbijt, lunch, diner)",
+     "en": "Open daily 7:30 a.m. to 10 p.m. (breakfast, lunch, dinner)",
+     "de": "Täglich geöffnet von 7:30 bis 22 Uhr (Frühstück, Mittag-, Abendessen)",
+     "es": "Abierto todos los días de 7:30 a 22:00 (desayuno, almuerzo, cena)",
+     "pt": "Aberto todos os dias das 7h30 às 22h (café da manhã, almoço, jantar)"
+    },
+    {
+     "nl": "Adres: Kaya Adriàtiko 20-26, Jan Thiel",
+     "en": "Address: Kaya Adriàtiko 20-26, Jan Thiel",
+     "de": "Adresse: Kaya Adriàtiko 20-26, Jan Thiel",
+     "es": "Dirección: Kaya Adriàtiko 20-26, Jan Thiel",
+     "pt": "Endereço: Kaya Adriàtiko 20-26, Jan Thiel"
+    },
+    {
+     "nl": "Telefoon +599 9 747 0332, reserveren kan",
+     "en": "Phone +599 9 747 0332, reservations accepted",
+     "de": "Telefon +599 9 747 0332, Reservierung möglich",
+     "es": "Teléfono +599 9 747 0332, se puede reservar",
+     "pt": "Telefone +599 9 747 0332, aceita reservas"
+    },
+    {
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9779,33 +9800,63 @@
      "score": 4.6,
      "max": 5,
      "aantal": 38,
-     "peildatum": "2026-10-20",
+     "peildatum": "2026-11-13",
      "bron": "https://www.tripadvisor.com/Restaurant_Review-g147278-d34249890-Reviews-Mondi_Jan_Thiel_Restaurant-Willemstad_Curacao.html"
     }
    ],
    "voor": {
     "nl": [
-     "Gezellig diner met vrienden"
+     "Gezellig diner met vrienden",
+     "Zelf pizza maken is populair bij groepen",
+     "Vriendelijke, attente bediening volgens reviews"
     ],
     "en": [
-     "Fun dinner with friends"
+     "Fun dinner with friends",
+     "Making your own pizza is popular with groups",
+     "Friendly, attentive staff according to reviews"
     ],
     "de": [
-     "Lustiges Abendessen mit Freunden"
+     "Lustiges Abendessen mit Freunden",
+     "Pizza selbst belegen kommt bei Gruppen gut an",
+     "Freundliches, aufmerksames Personal laut Bewertungen"
     ],
     "es": [
-     "Cena divertida con amigos"
+     "Cena divertida con amigos",
+     "Hacer tu propia pizza gusta a los grupos",
+     "Personal amable y atento según las reseñas"
     ],
     "pt": [
-     "Jantar divertido com amigos"
+     "Jantar divertido com amigos",
+     "Montar a própria pizza agrada aos grupos",
+     "Equipe simpática e atenciosa segundo as avaliações"
     ]
    },
    "tegen": {
-    "nl": [],
-    "en": [],
-    "de": [],
-    "es": [],
-    "pt": []
+    "nl": [
+     "Soms zijn bestelde gerechten niet beschikbaar",
+     "Service kan traag zijn",
+     "Weinig parkeerplek"
+    ],
+    "en": [
+     "Some ordered dishes are sometimes unavailable",
+     "Service can be slow",
+     "Limited parking"
+    ],
+    "de": [
+     "Manchmal sind bestellte Gerichte nicht verfügbar",
+     "Der Service kann langsam sein",
+     "Wenig Parkplätze"
+    ],
+    "es": [
+     "A veces no hay platos pedidos",
+     "El servicio puede ser lento",
+     "Poco estacionamiento"
+    ],
+    "pt": [
+     "Às vezes pratos pedidos não estão disponíveis",
+     "O atendimento pode ser lento",
+     "Pouco estacionamento"
+    ]
    },
    "bronnen": [
     "https://www.tripadvisor.com/Restaurant_Review-g147278-d34249890-Reviews-Mondi_Jan_Thiel_Restaurant-Willemstad_Curacao.html"
@@ -9827,11 +9878,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9890,11 +9941,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -9955,11 +10006,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -10021,11 +10072,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -10085,11 +10136,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -10149,11 +10200,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -10203,11 +10254,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -10266,11 +10317,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -10331,11 +10382,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -10459,11 +10510,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -10522,11 +10573,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -10585,11 +10636,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -10648,11 +10699,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -10830,11 +10881,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -10893,11 +10944,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -10956,11 +11007,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -11020,11 +11071,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -11081,11 +11132,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -11142,11 +11193,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -11205,11 +11256,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -11268,11 +11319,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -11332,11 +11383,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -11395,11 +11446,11 @@
    "prijs": null,
    "feiten": [
     {
-     "nl": "Prijsniveau $$–$$$ (Tripadvisor)",
-     "en": "Price level $$–$$$ (Tripadvisor)",
-     "de": "Preisniveau $$–$$$ (Tripadvisor)",
-     "es": "Nivel de precio $$–$$$ (Tripadvisor)",
-     "pt": "Faixa de preço $$–$$$ (Tripadvisor)"
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
     }
    ],
    "scores": [
@@ -11920,6 +11971,1102 @@
     "https://wanderlog.com/list/geoCategory/205691/where-to-eat-best-restaurants-in-curacao",
     "https://winecellar.cw"
    ]
+  },
+  {
+   "id": "de-buren",
+   "naam": "De Buren Curaçao",
+   "url": "http://www.deburencuracao.com/",
+   "soort": {
+    "nl": "restaurant",
+    "en": "restaurant",
+    "de": "Restaurant",
+    "es": "restaurante",
+    "pt": "restaurante"
+   },
+   "plaats": "Punda, Wilhelminaplein",
+   "tags": [
+    "punda"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 1581,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/de-buren-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/de-buren-curacao"
+   ]
+  },
+  {
+   "id": "marfas-good-hangout",
+   "naam": "Marfa's Good Hangout",
+   "url": null,
+   "soort": {
+    "nl": "restaurant",
+    "en": "restaurant",
+    "de": "Restaurant",
+    "es": "restaurante",
+    "pt": "restaurante"
+   },
+   "plaats": "Sint Willibrordus",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 1333,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/marfa-s-good-hangout"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/marfa-s-good-hangout"
+   ]
+  },
+  {
+   "id": "the-green-house",
+   "naam": "The Green House",
+   "url": "https://thegreenhousecw.com/",
+   "soort": {
+    "nl": "restaurant",
+    "en": "restaurant",
+    "de": "Restaurant",
+    "es": "restaurante",
+    "pt": "restaurante"
+   },
+   "plaats": "Sea Aquarium Boulevard",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 967,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/the-green-house-3"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/the-green-house-3"
+   ]
+  },
+  {
+   "id": "ceviche-91",
+   "naam": "Ceviche 91 gastrobar",
+   "url": "http://www.ceviche91curacao.com/",
+   "soort": {
+    "nl": "ceviche en gastrobar",
+    "en": "ceviche and gastrobar",
+    "de": "Ceviche und Gastrobar",
+    "es": "ceviche y gastrobar",
+    "pt": "ceviche e gastrobar"
+   },
+   "plaats": null,
+   "tags": [
+    "vis"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 865,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/seafood-restaurant/ceviche-91-gastrobar"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/seafood-restaurant/ceviche-91-gastrobar"
+   ]
+  },
+  {
+   "id": "larrys-grill-bar",
+   "naam": "Larry's Grill & Bar",
+   "url": "http://www.larrysgrillandbar.com/",
+   "soort": {
+    "nl": "grill en bar",
+    "en": "grill and bar",
+    "de": "Grill und Bar",
+    "es": "parrilla y bar",
+    "pt": "grelhados e bar"
+   },
+   "plaats": "Oude Caracasbaaiweg",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 811,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/larry-s-grill-en-bar"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/larry-s-grill-en-bar"
+   ]
+  },
+  {
+   "id": "the-pancake-sensation",
+   "naam": "The Pancake Sensation",
+   "url": "http://www.thepancakesensation.com/",
+   "soort": {
+    "nl": "pannenkoeken",
+    "en": "pancakes",
+    "de": "Pfannkuchen",
+    "es": "panqueques",
+    "pt": "panquecas"
+   },
+   "plaats": "Otrobanda, Riffort Village",
+   "tags": [
+    "otrobanda"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 694,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/the-pancake-sensation"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/the-pancake-sensation"
+   ]
+  },
+  {
+   "id": "osteria-rosso",
+   "naam": "Osteria Rosso",
+   "url": "https://osteriarosso.com/",
+   "soort": {
+    "nl": "Italiaans",
+    "en": "Italian",
+    "de": "Italienisch",
+    "es": "Italiana",
+    "pt": "Italiana"
+   },
+   "plaats": null,
+   "tags": [
+    "italiaans"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 681,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/italian-restaurant/osteria-rosso"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/italian-restaurant/osteria-rosso"
+   ]
+  },
+  {
+   "id": "kas-di-piskado-purunchi",
+   "naam": "Kas di Piskado Purunchi",
+   "url": "https://www.facebook.com/piskafresku/",
+   "soort": {
+    "nl": "visrestaurant",
+    "en": "fish restaurant",
+    "de": "Fischrestaurant",
+    "es": "restaurante de pescado",
+    "pt": "restaurante de peixe"
+   },
+   "plaats": "John F. Kennedy Boulevard",
+   "tags": [
+    "vis"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 669,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/kas-di-piskado-purunchi"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/kas-di-piskado-purunchi"
+   ]
+  },
+  {
+   "id": "hofi-cas-cora",
+   "naam": "Hofi Cas Cora",
+   "url": "http://www.hoficascora.com/",
+   "soort": {
+    "nl": "restaurant",
+    "en": "restaurant",
+    "de": "Restaurant",
+    "es": "restaurante",
+    "pt": "restaurante"
+   },
+   "plaats": "Landhuis Cas Cora",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 495,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/cafe/hofi-cas-cora"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/cafe/hofi-cas-cora"
+   ]
+  },
+  {
+   "id": "il-forno-caracasbaai",
+   "naam": "Il Forno Caracasbaai",
+   "url": "https://www.ilfornocuracao.pizza/",
+   "soort": {
+    "nl": "pizza",
+    "en": "pizza",
+    "de": "Pizza",
+    "es": "pizza",
+    "pt": "pizza"
+   },
+   "plaats": "Jan Thiel, Caracasbaaiweg",
+   "tags": [
+    "italiaans",
+    "jan-thiel"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 457,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/il-forno-caracasbaai"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/il-forno-caracasbaai"
+   ]
+  },
+  {
+   "id": "panaderia-restaurante-latina-g",
+   "naam": "Panaderia & Restaurante Latina G.",
+   "url": "http://www.facebook.com/panaderialatinag",
+   "soort": {
+    "nl": "bakkerij en restaurant",
+    "en": "bakery and restaurant",
+    "de": "Bäckerei und Restaurant",
+    "es": "panadería y restaurante",
+    "pt": "padaria e restaurante"
+   },
+   "plaats": "Santa Rosaweg",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 454,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/panaderia-en-restaurante-latina-g"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/panaderia-en-restaurante-latina-g"
+   ]
+  },
+  {
+   "id": "fish-and-joy",
+   "naam": "Fish & Joy Bistro & Wine Bar Curaçao",
+   "url": "https://www.instagram.com/fishbarcuracao",
+   "soort": {
+    "nl": "bistro en wijnbar",
+    "en": "bistro and wine bar",
+    "de": "Bistro und Weinbar",
+    "es": "bistró y bar de vinos",
+    "pt": "bistrô e wine bar"
+   },
+   "plaats": "Pietermaai, Penstraat",
+   "tags": [
+    "pietermaai"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 433,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/seafood-restaurant/fish-en-joy-bistro-en-wine-bar-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/seafood-restaurant/fish-en-joy-bistro-en-wine-bar-curacao"
+   ]
+  },
+  {
+   "id": "omundo",
+   "naam": "Omundo",
+   "url": "https://www.omundo.cw/",
+   "soort": {
+    "nl": "restaurant",
+    "en": "restaurant",
+    "de": "Restaurant",
+    "es": "restaurante",
+    "pt": "restaurante"
+   },
+   "plaats": "Zuikertuin Mall",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 421,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/omundo"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/omundo"
+   ]
+  },
+  {
+   "id": "la-granja",
+   "naam": "La Granja Restaurant",
+   "url": "https://www.facebook.com/lagranjacuracao/",
+   "soort": {
+    "nl": "restaurant",
+    "en": "restaurant",
+    "de": "Restaurant",
+    "es": "restaurante",
+    "pt": "restaurante"
+   },
+   "plaats": "Santa Rosaweg",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 420,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/la-granja-restaurant"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/la-granja-restaurant"
+   ]
+  },
+  {
+   "id": "de-fles",
+   "naam": "De Fles Bar & Restaurant",
+   "url": null,
+   "soort": {
+    "nl": "bar en restaurant",
+    "en": "bar and restaurant",
+    "de": "Bar und Restaurant",
+    "es": "bar y restaurante",
+    "pt": "bar e restaurante"
+   },
+   "plaats": "Schottegatweg West",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 392,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/de-fles-bar-en-restaurant"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/de-fles-bar-en-restaurant"
+   ]
+  },
+  {
+   "id": "kuminda-surinam",
+   "naam": "Kuminda Surinam Restaurant",
+   "url": "http://www.kumindasurinam.com/",
+   "soort": {
+    "nl": "Surinaams",
+    "en": "Surinamese",
+    "de": "Surinamisch",
+    "es": "surinamesa",
+    "pt": "surinamesa"
+   },
+   "plaats": "Santa Rosaweg",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 391,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/kuminda-surinam-restaurant"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/kuminda-surinam-restaurant"
+   ]
+  },
+  {
+   "id": "deli-arepas-cafe",
+   "naam": "Deli Arepas Café",
+   "url": null,
+   "soort": {
+    "nl": "café met arepa's",
+    "en": "cafe with arepas",
+    "de": "Café mit Arepas",
+    "es": "café con arepas",
+    "pt": "café com arepas"
+   },
+   "plaats": "Salinja",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 382,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/cafe/deli-arepas-cafe"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/cafe/deli-arepas-cafe"
+   ]
+  },
+  {
+   "id": "texas-alaparia",
+   "naam": "Texas Alaparia Restaurant",
+   "url": "https://www.texas-alaparia.com/",
+   "soort": {
+    "nl": "restaurant",
+    "en": "restaurant",
+    "de": "Restaurant",
+    "es": "restaurante",
+    "pt": "restaurante"
+   },
+   "plaats": "Schottegatweg Oost",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 381,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/texas-alaparia-restaurant"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/texas-alaparia-restaurant"
+   ]
+  },
+  {
+   "id": "homemade-at-the-pier",
+   "naam": "Homemade at The Pier",
+   "url": null,
+   "soort": {
+    "nl": "restaurant",
+    "en": "restaurant",
+    "de": "Restaurant",
+    "es": "restaurante",
+    "pt": "restaurante"
+   },
+   "plaats": "Jan Thiel, Caracasbaaiweg",
+   "tags": [
+    "jan-thiel"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 369,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/homemade-at-the-pier"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/homemade-at-the-pier"
+   ]
+  },
+  {
+   "id": "kafe-5999",
+   "naam": "Kafé 5999",
+   "url": "http://www.kafe5999.com/",
+   "soort": {
+    "nl": "café",
+    "en": "cafe",
+    "de": "Café",
+    "es": "café",
+    "pt": "café"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 347,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/kafe-5999"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/kafe-5999"
+   ]
+  },
+  {
+   "id": "fusions-restaurant-bar",
+   "naam": "Fusions Restaurant & Bar",
+   "url": null,
+   "soort": {
+    "nl": "restaurant en bar",
+    "en": "restaurant and bar",
+    "de": "Restaurant und Bar",
+    "es": "restaurante y bar",
+    "pt": "restaurante e bar"
+   },
+   "plaats": "Salinja",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 329,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/fusions-restaurant-en-bar"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/fusions-restaurant-en-bar"
+   ]
+  },
+  {
+   "id": "la-hacienda-olivia",
+   "naam": "La Hacienda Olivia",
+   "url": "https://www.lahaciendaolivia.com/",
+   "soort": {
+    "nl": "restaurant",
+    "en": "restaurant",
+    "de": "Restaurant",
+    "es": "restaurante",
+    "pt": "restaurante"
+   },
+   "plaats": null,
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 309,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/la-hacienda-olivia"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/la-hacienda-olivia"
+   ]
+  },
+  {
+   "id": "disfruta-mas",
+   "naam": "Disfruta Más",
+   "url": null,
+   "soort": {
+    "nl": "restaurant",
+    "en": "restaurant",
+    "de": "Restaurant",
+    "es": "restaurante",
+    "pt": "restaurante"
+   },
+   "plaats": "Caracasbaaiweg",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 292,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/disfruta-mas"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/disfruta-mas"
+   ]
+  },
+  {
+   "id": "saltwater-rifterrace",
+   "naam": "Saltwater Rifterrace",
+   "url": "https://www.facebook.com/SaltRifTerrace/",
+   "soort": {
+    "nl": "terras",
+    "en": "terrace",
+    "de": "Terrasse",
+    "es": "terraza",
+    "pt": "terraço"
+   },
+   "plaats": "Otrobanda, Riffort Village",
+   "tags": [
+    "otrobanda"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 282,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/seafood-restaurant/saltwater-rifterrace"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/seafood-restaurant/saltwater-rifterrace"
+   ]
+  },
+  {
+   "id": "restaurant-nultwintig",
+   "naam": "Restaurant Nultwintig",
+   "url": "https://restaurant020.com/",
+   "soort": {
+    "nl": "restaurant",
+    "en": "restaurant",
+    "de": "Restaurant",
+    "es": "restaurante",
+    "pt": "restaurante"
+   },
+   "plaats": "Pietermaai, Penstraat",
+   "tags": [
+    "pietermaai"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 275,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/restaurant/restaurant-nultwintig"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/restaurant/restaurant-nultwintig"
+   ]
   }
  ],
  "tussenpartijen": [
@@ -12146,6 +13293,22 @@
     "de": "De Dames (Pancakes und French Toast, 4,7 bei Google), Java Café in Salinja, The Lemon Tree in Pietermaai, BijBlauw am Meer und Koko's am Strand von Jan Thiel.",
     "es": "De Dames (panqueques y tostadas francesas, 4,7 en Google), Java Café en Salinja, The Lemon Tree en Pietermaai, BijBlauw junto al mar y Koko's en la playa de Jan Thiel.",
     "pt": "De Dames (panquecas e rabanada, 4,7 no Google), Java Café em Salinja, The Lemon Tree em Pietermaai, BijBlauw à beira-mar e Koko's na praia de Jan Thiel."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat zijn de openingstijden van Mondi Jan Thiel?",
+    "en": "What are the opening hours of Mondi Jan Thiel?",
+    "de": "Wie sind die Öffnungszeiten von Mondi Jan Thiel?",
+    "es": "¿Cuál es el horario de Mondi Jan Thiel?",
+    "pt": "Qual é o horário do Mondi Jan Thiel?"
+   },
+   "a": {
+    "nl": "Mondi Jan Thiel (Kaya Adriàtiko 20-26, Jan Thiel) is volgens Tripadvisor dagelijks open van 7:30 tot 22:00, voor ontbijt, lunch en diner. De keuken is Italiaans en Caribisch, het prijsniveau $$-$$$ en reserveren kan via +599 9 747 0332. Tripadvisor geeft 4,6 uit 38 reviews (13 november 2026).",
+    "en": "According to Tripadvisor, Mondi Jan Thiel (Kaya Adriàtiko 20-26, Jan Thiel) is open daily from 7:30 a.m. to 10 p.m. for breakfast, lunch and dinner. The cuisine is Italian and Caribbean, the price level $$-$$$, and you can reserve on +599 9 747 0332. Tripadvisor shows 4.6 from 38 reviews (November 13, 2026).",
+    "de": "Laut Tripadvisor ist das Mondi Jan Thiel (Kaya Adriàtiko 20-26, Jan Thiel) täglich von 7:30 bis 22 Uhr für Frühstück, Mittag- und Abendessen geöffnet. Die Küche ist italienisch und karibisch, das Preisniveau $$-$$$, reservieren kannst du unter +599 9 747 0332. Tripadvisor zeigt 4,6 aus 38 Bewertungen (13. November 2026).",
+    "es": "Según Tripadvisor, Mondi Jan Thiel (Kaya Adriàtiko 20-26, Jan Thiel) abre todos los días de 7:30 a 22:00 para desayuno, almuerzo y cena. La cocina es italiana y caribeña, el nivel de precio $$-$$$ y se puede reservar en el +599 9 747 0332. Tripadvisor muestra 4,6 con 38 reseñas (13 de noviembre de 2026).",
+    "pt": "Segundo o Tripadvisor, o Mondi Jan Thiel (Kaya Adriàtiko 20-26, Jan Thiel) abre todos os dias das 7h30 às 22h para café da manhã, almoço e jantar. A cozinha é italiana e caribenha, a faixa de preço $$-$$$ e dá para reservar pelo +599 9 747 0332. O Tripadvisor mostra 4,6 com 38 avaliações (13 de novembro de 2026)."
    }
   }
  ],

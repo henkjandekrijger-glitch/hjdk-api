@@ -1,6 +1,6 @@
 {
  "id": "duiken",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "duikschool",
   "en": "dive shop",
@@ -510,6 +510,14 @@
      "aantal": 588,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attraction_Review-g1724323-d2099541-Reviews-GO_WEST_Diving-Sabana_Westpunt_Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 283,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/dive-shop/go-west-diving-curacao"
     }
    ],
    "voor": {
@@ -574,7 +582,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g1724323-d2099541-Reviews-GO_WEST_Diving-Sabana_Westpunt_Curacao.html",
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
-    "https://www.curacao.com/en/category/dive-operators"
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://curacao.day/en/businesses/dive-shop/go-west-diving-curacao"
    ]
   },
   {
@@ -650,6 +659,14 @@
      "aantal": 2075,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d1062985-Reviews-The_Dive_Bus-Willemstad_Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 308,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/the-dive-bus-curacao-en-scubapro-curacao"
     }
    ],
    "voor": {
@@ -710,7 +727,8 @@
     "https://www.tripadvisor.com/Attraction_Review-g147278-d1062985-Reviews-The_Dive_Bus-Willemstad_Curacao.html",
     "https://travel.padi.com/dive-trip/willemstad/2-tank-guided-dive-the-dive-bus-house-reef-12430",
     "https://travel.padi.com/dive-center/curacao/the-dive-bus",
-    "https://www.divecuracao.info/dive-travel/choosing-a-curacao-dive-shop/"
+    "https://www.divecuracao.info/dive-travel/choosing-a-curacao-dive-shop/",
+    "https://curacao.day/en/businesses/diving-center/the-dive-bus-curacao-en-scubapro-curacao"
    ]
   },
   {
@@ -757,6 +775,14 @@
      "aantal": 1280,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d5011203-Reviews-Scuba_Lodge_Dive_Center_Pietermaai-Willemstad_Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 199,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/dive-shop/dive-center-pietermaai"
     }
    ],
    "voor": {
@@ -796,7 +822,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147278-d5011203-Reviews-Scuba_Lodge_Dive_Center_Pietermaai-Willemstad_Curacao.html",
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
-    "https://www.curacao.com/en/category/dive-operators"
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://curacao.day/en/businesses/dive-shop/dive-center-pietermaai"
    ]
   },
   {
@@ -827,7 +854,16 @@
      "pt": "No local, nos apartamentos de praia"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 59,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/dive-shop/dive-center-lagun"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -844,7 +880,8 @@
    },
    "bronnen": [
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
-    "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/"
+    "https://www.divecuracao.info/dive-travel/choosing-a-dive-resort-in-curacao/",
+    "https://curacao.day/en/businesses/dive-shop/dive-center-lagun"
    ]
   },
   {
@@ -884,6 +921,14 @@
      "aantal": 586,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d7395474-Reviews-B_Diving_Watersports-Willemstad_Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 114,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/dive-shop/b-diving-en-watersports"
     }
    ],
    "voor": {
@@ -938,7 +983,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147278-d7395474-Reviews-B_Diving_Watersports-Willemstad_Curacao.html",
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
-    "https://esim.holafly.com/nl/blog/duiken-curacao/"
+    "https://esim.holafly.com/nl/blog/duiken-curacao/",
+    "https://curacao.day/en/businesses/dive-shop/b-diving-en-watersports"
    ]
   },
   {
@@ -1005,6 +1051,14 @@
      "aantal": 489,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d4545228-Reviews-Blue_Bay_Dive_Watersports-Willemstad_Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 79,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/blue-bay-dive-en-watersports-curacao"
     }
    ],
    "voor": {
@@ -1059,7 +1113,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147278-d4545228-Reviews-Blue_Bay_Dive_Watersports-Willemstad_Curacao.html",
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
-    "https://www.curacao.com/en/category/dive-operators"
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://curacao.day/en/businesses/diving-center/blue-bay-dive-en-watersports-curacao"
    ]
   },
   {
@@ -1119,6 +1174,14 @@
      "aantal": 392,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d12930256-Reviews-Coral_Divers-Willemstad_Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 72,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/coral-divers-curacao"
     }
    ],
    "voor": {
@@ -1173,7 +1236,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147278-d12930256-Reviews-Coral_Divers-Willemstad_Curacao.html",
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
-    "https://www.curacao.com/en/category/dive-operators"
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://curacao.day/en/businesses/diving-center/coral-divers-curacao"
    ]
   },
   {
@@ -1202,7 +1266,16 @@
      "pt": "Também formação IAHD"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 284,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/dive-shop/curious-2-dive"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -1220,7 +1293,8 @@
    "bronnen": [
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
     "https://www.curacao.com/en/category/dive-operators",
-    "https://www.scubadiving.com/guide-diving-curacao"
+    "https://www.scubadiving.com/guide-diving-curacao",
+    "https://curacao.day/en/businesses/dive-shop/curious-2-dive"
    ]
   },
   {
@@ -1266,6 +1340,14 @@
      "aantal": 549,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d6840982-Reviews-Dive_Center_Scuba_Do-Willemstad_Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 315,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/dive-center-scuba-do-curacao"
     }
    ],
    "voor": {
@@ -1305,7 +1387,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147278-d6840982-Reviews-Dive_Center_Scuba_Do-Willemstad_Curacao.html",
     "https://www.tripadvisor.com/AttractionProductReview-g147278-d24962117-Discover_Scuba_Diving_Experience-Willemstad_Curacao.html",
-    "https://esim.holafly.com/nl/blog/duiken-curacao/"
+    "https://esim.holafly.com/nl/blog/duiken-curacao/",
+    "https://curacao.day/en/businesses/diving-center/dive-center-scuba-do-curacao"
    ]
   },
   {
@@ -1354,6 +1437,14 @@
      "aantal": 252,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attraction_Review-g147277-d3421179-Reviews-Goby_Divers-Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 105,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/dive-center-curacao-goby-divers-padi-ssi-sdi-and-iantd"
     }
    ],
    "voor": {
@@ -1408,7 +1499,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147277-d3421179-Reviews-Goby_Divers-Curacao.html",
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
-    "https://www.undercurrent.org/UCnow/dive_reviews/Curacao"
+    "https://www.undercurrent.org/UCnow/dive_reviews/Curacao",
+    "https://curacao.day/en/businesses/diving-center/dive-center-curacao-goby-divers-padi-ssi-sdi-and-iantd"
    ]
   },
   {
@@ -1476,6 +1568,14 @@
      "aantal": 832,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d15209116-Reviews-Jan_Thiel_Diving-Willemstad_Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 220,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/jan-thiel-diving-curacao"
     }
    ],
    "voor": {
@@ -1520,7 +1620,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147278-d15209116-Reviews-Jan_Thiel_Diving-Willemstad_Curacao.html",
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
-    "https://www.curacao.com/en/category/dive-operators"
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://curacao.day/en/businesses/diving-center/jan-thiel-diving-curacao"
    ]
   },
   {
@@ -1562,6 +1663,14 @@
      "aantal": 416,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attraction_Review-g3754516-d3975971-Reviews-Porto_Mari_Dive_Center-Sint_Willibrordus_Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 114,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/porto-mari-dive-center"
     }
    ],
    "voor": {
@@ -1610,7 +1719,8 @@
    },
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g3754516-d3975971-Reviews-Porto_Mari_Dive_Center-Sint_Willibrordus_Curacao.html",
-    "https://www.divecuracao.info/dive/dive-shops-curacao/"
+    "https://www.divecuracao.info/dive/dive-shops-curacao/",
+    "https://curacao.day/en/businesses/diving-center/porto-mari-dive-center"
    ]
   },
   {
@@ -1668,6 +1778,14 @@
      "aantal": 1262,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attraction_Review-g147278-d7093418-Reviews-Scubacao_Diving_Adventures-Willemstad_Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 279,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/scubacao-diving-adventures"
     }
    ],
    "voor": {
@@ -1722,7 +1840,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/Attraction_Review-g147278-d7093418-Reviews-Scubacao_Diving_Adventures-Willemstad_Curacao.html",
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
-    "https://www.curacao.com/en/category/dive-operators"
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://curacao.day/en/businesses/diving-center/scubacao-diving-adventures"
    ]
   },
   {
@@ -1798,7 +1917,16 @@
      "pt": "Sem mergulhos de barco"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 118,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/dive-shop/the-diveshop-curacao"
+    }
+   ],
    "voor": {
     "nl": [
      "Professioneel en veilig",
@@ -1851,7 +1979,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/ShowUserReviews-g147278-d7738636-r365815786-The_Diveshop_Curacao-Willemstad_Curacao.html",
     "https://www.divecuracao.info/dive/dive-shops-curacao/",
-    "https://www.curacao.com/en/category/dive-operators"
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://curacao.day/en/businesses/dive-shop/the-diveshop-curacao"
    ]
   },
   {
@@ -2224,6 +2353,14 @@
      "aantal": 145,
      "peildatum": "2026-10-20",
      "bron": "https://www.tripadvisor.com/Attraction_Review-g3754516-d4553093-Reviews-Divers_Republic-Sint_Willibrordus_Curacao.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 122,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/divers-republic"
     }
    ],
    "voor": {
@@ -2276,7 +2413,8 @@
     ]
    },
    "bronnen": [
-    "https://www.tripadvisor.com/Attraction_Review-g3754516-d4553093-Reviews-Divers_Republic-Sint_Willibrordus_Curacao.html"
+    "https://www.tripadvisor.com/Attraction_Review-g3754516-d4553093-Reviews-Divers_Republic-Sint_Willibrordus_Curacao.html",
+    "https://curacao.day/en/businesses/diving-center/divers-republic"
    ]
   },
   {
@@ -2386,7 +2524,16 @@
    ],
    "prijs": null,
    "feiten": [],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 111,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/rebel-diving-curacao"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2403,7 +2550,8 @@
    },
    "bronnen": [
     "https://diveplannerpro.com/dive-centers/cw/cw-rebel-diving-curacao",
-    "https://www.curacao.com/en/category/dive-operators"
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://curacao.day/en/businesses/diving-center/rebel-diving-curacao"
    ]
   },
   {
@@ -2432,7 +2580,16 @@
      "pt": "Avaliada na Undercurrent em 2026"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 125,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/sublime-diving-curacao"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2450,7 +2607,8 @@
    "bronnen": [
     "https://diveplannerpro.com/dive-centers/cw/cw-sublime-diving",
     "https://www.undercurrent.org/UCnow/dive_reviews/Curacao",
-    "https://www.curacao.com/en/category/dive-operators"
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://curacao.day/en/businesses/diving-center/sublime-diving-curacao"
    ]
   },
   {
@@ -2471,7 +2629,16 @@
    ],
    "prijs": null,
    "feiten": [],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 184,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/relaxed-guided-dives"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2489,7 +2656,8 @@
    "bronnen": [
     "https://diveplannerpro.com/dive-centers/cw/cw-relaxed-guided-dives",
     "https://www.divessi.com/nl/divecenter/relaxed-guided-dives-willemstad-curacao-curaao-714185",
-    "https://www.curacao.com/en/category/dive-operators"
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://curacao.day/en/businesses/diving-center/relaxed-guided-dives"
    ]
   },
   {
@@ -2537,7 +2705,16 @@
      "pt": "Revisão de reguladores"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 228,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/duikcentrum-van-de-ven"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2553,7 +2730,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://www.divessi.com/nl/divecenter/dive-center-van-de-ven-willemstad-curacao-curaao-759015"
+    "https://www.divessi.com/nl/divecenter/dive-center-van-de-ven-willemstad-curacao-curaao-759015",
+    "https://curacao.day/en/businesses/diving-center/duikcentrum-van-de-ven"
    ]
   },
   {
@@ -2601,7 +2779,16 @@
      "pt": "Mergulho de alcance estendido"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 86,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/unique-diving"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2617,7 +2804,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://www.divessi.com/ko/divecenter/unique-diving-udi-willemstad-curacao-curaao-714170"
+    "https://www.divessi.com/ko/divecenter/unique-diving-udi-willemstad-curacao-curaao-714170",
+    "https://curacao.day/en/businesses/diving-center/unique-diving"
    ]
   },
   {
@@ -2648,7 +2836,16 @@
      "pt": "Seis idiomas, inclusive holandês"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 148,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/fundiving-curacao-padi-5-star-idc-en-technical-diving-center"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2664,7 +2861,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://travel.padi.com/nl/dive-center/curacao/fundiving-curacao/"
+    "https://travel.padi.com/nl/dive-center/curacao/fundiving-curacao/",
+    "https://curacao.day/en/businesses/diving-center/fundiving-curacao-padi-5-star-idc-en-technical-diving-center"
    ]
   },
   {
@@ -2784,7 +2982,16 @@
      "pt": "Oferece mergulhos introdutórios"
     }
    ],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 78,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/all-about-scuba-curacao"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2801,7 +3008,8 @@
    },
    "bronnen": [
     "https://www.curacao.com/en/category/dive-operators",
-    "https://cursosdebuceo.com/fr/cours/willemstad/all-about-scuba-curacao/introductie-duik-discover-scuba-dive/177209"
+    "https://cursosdebuceo.com/fr/cours/willemstad/all-about-scuba-curacao/introductie-duik-discover-scuba-dive/177209",
+    "https://curacao.day/en/businesses/diving-center/all-about-scuba-curacao"
    ]
   },
   {
@@ -2853,7 +3061,16 @@
    "tags": [],
    "prijs": null,
    "feiten": [],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 45,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/dushi-diving"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2870,7 +3087,8 @@
    },
    "bronnen": [
     "https://www.curacao.com/en/category/dive-operators",
-    "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html"
+    "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html",
+    "https://curacao.day/en/businesses/diving-center/dushi-diving"
    ]
   },
   {
@@ -2888,7 +3106,16 @@
    "tags": [],
    "prijs": null,
    "feiten": [],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 104,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/epsilon-dive-center-curacao"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2904,7 +3131,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://www.curacao.com/en/category/dive-operators"
+    "https://www.curacao.com/en/category/dive-operators",
+    "https://curacao.day/en/businesses/diving-center/epsilon-dive-center-curacao"
    ]
   },
   {
@@ -2956,7 +3184,16 @@
    "tags": [],
    "prijs": null,
    "feiten": [],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 106,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/dive-wederfoort"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -2972,7 +3209,8 @@
     "pt": []
    },
    "bronnen": [
-    "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html"
+    "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html",
+    "https://curacao.day/en/businesses/diving-center/dive-wederfoort"
    ]
   },
   {
@@ -2990,7 +3228,16 @@
    "tags": [],
    "prijs": null,
    "feiten": [],
-   "scores": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 89,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/dive-shop/red-snapper-diving"
+    }
+   ],
    "voor": {
     "nl": [],
     "en": [],
@@ -3006,7 +3253,551 @@
     "pt": []
    },
    "bronnen": [
-    "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html"
+    "https://www.tripadvisor.co.uk/Attraction_Review-g147277-d3156023-Reviews-Curacao_Divers-Curacao.html",
+    "https://curacao.day/en/businesses/dive-shop/red-snapper-diving"
+   ]
+  },
+  {
+   "id": "duiken-in-curacao",
+   "naam": "Duiken In Curaçao",
+   "url": "https://www.duikenincuracao.nl/",
+   "soort": {
+    "nl": "Nederlandstalig, bij Santa Barbara",
+    "en": "Dutch-speaking, at Santa Barbara",
+    "de": "Niederländischsprachig, bei Santa Barbara",
+    "es": "De habla neerlandesa, en Santa Barbara",
+    "pt": "Fala neerlandês, em Santa Barbara"
+   },
+   "plaats": "Santa Barbara Beach, Willemstad",
+   "tags": [
+    "nl-sprekend",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 473,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/duiken-in-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/diving-center/duiken-in-curacao"
+   ]
+  },
+  {
+   "id": "curadivers",
+   "naam": "Curadivers",
+   "url": "http://www.curadivers.com/",
+   "soort": {
+    "nl": "lokaal",
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
+   },
+   "plaats": "Brakkeput Abou, Willemstad",
+   "tags": [
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 141,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/curadivers"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/diving-center/curadivers"
+   ]
+  },
+  {
+   "id": "duikstudio-leon",
+   "naam": "Duikstudio Leon Curaçao",
+   "url": "http://www.duikstudioleon.com/",
+   "soort": {
+    "nl": "lokaal",
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
+   },
+   "plaats": "Kaya Grote Berg, Willemstad",
+   "tags": [
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 70,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/duikstudio-leon-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/diving-center/duikstudio-leon-curacao"
+   ]
+  },
+  {
+   "id": "twindivers",
+   "naam": "TwinDivers",
+   "url": "http://www.twin-divers.com/",
+   "soort": {
+    "nl": "lokaal",
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
+   },
+   "plaats": "Boulevard, Willemstad",
+   "tags": [
+    "midden"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 77,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/dive-shop/twindivers"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/dive-shop/twindivers"
+   ]
+  },
+  {
+   "id": "about-jackie-fine-diving",
+   "naam": "About Jackie Fine Diving",
+   "url": "https://aboutjackiefinediving.com/",
+   "soort": {
+    "nl": "lokaal",
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
+   },
+   "plaats": "Spaanse Water, Willemstad",
+   "tags": [
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 66,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/about-jackie-fine-diving"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/diving-center/about-jackie-fine-diving"
+   ]
+  },
+  {
+   "id": "tug-divers",
+   "naam": "Tug Divers Curaçao",
+   "url": "https://www.tugboat-beach.com/diving-curacao",
+   "soort": {
+    "nl": "lokaal",
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
+   },
+   "plaats": "Caracasbaai",
+   "tags": [
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 58,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/tug-divers-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/diving-center/tug-divers-curacao"
+   ]
+  },
+  {
+   "id": "paradise-diving",
+   "naam": "Paradise Diving Curacao",
+   "url": "http://www.paradisedivingcuracao.com/",
+   "soort": {
+    "nl": "lokaal",
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
+   },
+   "plaats": "Kaya Caracas, Willemstad",
+   "tags": [
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 56,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/paradise-diving-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/diving-center/paradise-diving-curacao"
+   ]
+  },
+  {
+   "id": "little-green-boat",
+   "naam": "The Little Green Boat Curaçao",
+   "url": "https://thelittlegreenboat.eco/",
+   "soort": {
+    "nl": "lokaal",
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
+   },
+   "plaats": "Caracasbaaiweg, Willemstad",
+   "tags": [
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 50,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/the-little-green-boat-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/diving-center/the-little-green-boat-curacao"
+   ]
+  },
+  {
+   "id": "seanatives",
+   "naam": "SeaNatives",
+   "url": null,
+   "soort": {
+    "nl": "lokaal",
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
+   },
+   "plaats": "Fisherman's Wharf, Caracasbaaiweg",
+   "tags": [
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 36,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/seanatives"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/diving-center/seanatives"
+   ]
+  },
+  {
+   "id": "dive-in-curacao-boat-dives",
+   "naam": "Dive In Curaçao (Boat Dives Curaçao)",
+   "url": "http://www.dive-incuracao.com/",
+   "soort": {
+    "nl": "boot, lokaal",
+    "en": "boat, local",
+    "de": "Boot, lokal",
+    "es": "barco, local",
+    "pt": "barco, local"
+   },
+   "plaats": "Caracasbaaiweg, Willemstad",
+   "tags": [
+    "boot",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 35,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/dive-in-curacao-boat-dives-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/diving-center/dive-in-curacao-boat-dives-curacao"
+   ]
+  },
+  {
+   "id": "freediving-curacao",
+   "naam": "Freediving Curaçao",
+   "url": "http://www.freedivingcuracao.com/",
+   "soort": {
+    "nl": "freediving",
+    "en": "freediving",
+    "de": "Freitauchen",
+    "es": "buceo libre",
+    "pt": "mergulho livre"
+   },
+   "plaats": "Caracasbaaiweg, Willemstad",
+   "tags": [
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 28,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/diving-center/freediving-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/diving-center/freediving-curacao"
+   ]
+  },
+  {
+   "id": "dive-charter-curacao",
+   "naam": "Dive Charter Curacao",
+   "url": "https://www.divechartercuracao.com/",
+   "soort": {
+    "nl": "bootduiken, lokaal",
+    "en": "boat diving, local",
+    "de": "Bootstauchen, lokal",
+    "es": "buceo en barco, local",
+    "pt": "mergulho de barco, local"
+   },
+   "plaats": "Caracasbaaiweg, Jan Thiel",
+   "tags": [
+    "boot",
+    "oost"
+   ],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 26,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/dive-shop/dive-charter-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/dive-shop/dive-charter-curacao"
    ]
   }
  ],

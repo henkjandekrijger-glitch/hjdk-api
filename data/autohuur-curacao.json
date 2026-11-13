@@ -1,6 +1,6 @@
 {
- "peildatum": "2026-10-20",
- "gepubliceerd": "2026-10-20",
+ "peildatum": "2026-11-13",
+ "gepubliceerd": "2026-11-13",
  "verhuurders": [
   {
    "id": "prins-car-rental",
@@ -5209,6 +5209,1032 @@
    "bronnen": [
     "https://baoase.com/wp-content/uploads/2026/07/Baoase-Car-Rental-Brochure-2026.pdf"
    ]
+  },
+  {
+   "id": "huurauto-curacao",
+   "naam": "Huurauto Curacao",
+   "type": "lokaal",
+   "plaats": "Hanenberg Noord z/n, Willemstad",
+   "url": "https://www.huurauto-curacao.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 748,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/huurauto-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/huurauto-curacao",
+    "https://www.huurauto-curacao.com/"
+   ]
+  },
+  {
+   "id": "rekwest-car-rental",
+   "naam": "Rekwest Car Rental",
+   "type": "lokaal",
+   "plaats": "121-34 Kaya De Savaan, Willemstad",
+   "url": "https://rekwestrentalcars.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 706,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/rekwest-car-rental-en-services"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/rekwest-car-rental-en-services",
+    "https://rekwestrentalcars.com/",
+    "https://www.curacao.com/en/category/car-rentals"
+   ]
+  },
+  {
+   "id": "auto-deal-curacao",
+   "naam": "Auto Deal Curaçao",
+   "type": "lokaal",
+   "plaats": "z/n Jan Thiel, Willemstad",
+   "url": "https://www.autodealcuracao.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 386,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/auto-deal-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/auto-deal-curacao",
+    "https://www.autodealcuracao.com/"
+   ]
+  },
+  {
+   "id": "rw-rental",
+   "naam": "RW Rental",
+   "type": "lokaal",
+   "plaats": "36 Socratesstraat, Willemstad",
+   "url": "http://www.rwrental.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 349,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/rw-rental"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/rw-rental",
+    "http://www.rwrental.com/"
+   ]
+  },
+  {
+   "id": "xs-car-rental",
+   "naam": "Xs Car Rental",
+   "type": "lokaal",
+   "plaats": "8 dr jonkheerstraat, Willemstad",
+   "url": "https://xscarrental-curacao.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 307,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/xs-car-rental"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/xs-car-rental",
+    "https://xscarrental-curacao.com/",
+    "https://www.curacao.com/en/category/car-rentals"
+   ]
+  },
+  {
+   "id": "loulou-car-rental",
+   "naam": "Loulou Car Rental",
+   "type": "lokaal",
+   "plaats": "19 Troepiaalweg, Willemstad",
+   "url": "http://www.louloucarrental.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 245,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/loulou-car-rental"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/loulou-car-rental",
+    "http://www.louloucarrental.com/"
+   ]
+  },
+  {
+   "id": "blue-lobster-car-rentals",
+   "naam": "Blue Lobster Car Rentals",
+   "type": "lokaal",
+   "plaats": "2 Kaya Grote Berg, Willemstad",
+   "url": "https://bluelobsterrentals.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 225,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/blue-lobster-car-rentals"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/blue-lobster-car-rentals",
+    "https://bluelobsterrentals.com/"
+   ]
+  },
+  {
+   "id": "jhx-curacao-car-rental",
+   "naam": "JHX Curaçao Car rental",
+   "type": "lokaal",
+   "plaats": "157 Kralendijkweg, Willemstad",
+   "url": "https://www.facebook.com/JHX-Curacao-Carrental-946811215452314/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 221,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/jhx-curacao-car-rental"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/jhx-curacao-car-rental",
+    "https://www.facebook.com/JHX-Curacao-Carrental-946811215452314/"
+   ]
+  },
+  {
+   "id": "blue-rental-repair",
+   "naam": "Blue Rental & Repair (scooter)",
+   "type": "lokaal",
+   "plaats": "3a Mato Grossostraat, Willemstad",
+   "url": "https://www.bluerentalcuracao.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 181,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/scooter-rental-service/blue-rental-en-repair"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/scooter-rental-service/blue-rental-en-repair",
+    "https://www.bluerentalcuracao.com/"
+   ]
+  },
+  {
+   "id": "j-i-services-car-rental",
+   "naam": "J&I Services Car Rental",
+   "type": "lokaal",
+   "plaats": "34 Kaya Dalakochi, Willemstad",
+   "url": "https://www.jiservices-curacao.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 140,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/j-en-i-services-car-rental"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/j-en-i-services-car-rental",
+    "https://www.jiservices-curacao.com/"
+   ]
+  },
+  {
+   "id": "paradisus-car-rental",
+   "naam": "Paradisus Car Rental",
+   "type": "lokaal",
+   "plaats": "Willemstad",
+   "url": null,
+   "ophalen": [],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 128,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/paradisus-car-rental-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/paradisus-car-rental-curacao"
+   ]
+  },
+  {
+   "id": "platinum-car-rental",
+   "naam": "Platinum Car Rental",
+   "type": "lokaal",
+   "plaats": "511 Franklin D. Rooseveltweg, Willemstad",
+   "url": "http://www.platinumcuracao.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 127,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/platinum-car-rental"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/platinum-car-rental",
+    "http://www.platinumcuracao.com/"
+   ]
+  },
+  {
+   "id": "longterm-car-rental",
+   "naam": "LongTerm Car Rental",
+   "type": "lokaal",
+   "plaats": "55 Bottelier Kaya A, Willemstad",
+   "url": "http://www.ltcarrental.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 124,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/longterm-car-rental-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/longterm-car-rental-curacao",
+    "http://www.ltcarrental.com/"
+   ]
+  },
+  {
+   "id": "booking-cars",
+   "naam": "Booking Cars",
+   "type": "lokaal",
+   "plaats": "24 Koraalspechtweg, Willemstad",
+   "url": "https://bookingcarscuracao.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 120,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/booking-cars"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/booking-cars",
+    "https://bookingcarscuracao.com/",
+    "https://www.curacao.com/en/category/car-rentals"
+   ]
+  },
+  {
+   "id": "fraai-car-rental",
+   "naam": "Fraai Car Rental",
+   "type": "lokaal",
+   "plaats": "342 Kaya Minadó, Willemstad",
+   "url": "http://www.fraaicarrental.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 115,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/fraai-car-rental-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/fraai-car-rental-curacao",
+    "http://www.fraaicarrental.com/"
+   ]
+  },
+  {
+   "id": "pelican-rentals",
+   "naam": "Pelican Rentals",
+   "type": "lokaal",
+   "plaats": "7 Koninginnelaan, Willemstad",
+   "url": "https://pelicanrentals.cw/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 113,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/pelican-rentals"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/pelican-rentals",
+    "https://pelicanrentals.cw/"
+   ]
+  },
+  {
+   "id": "around-curacao-car-rental",
+   "naam": "Around Curacao Car Rental",
+   "type": "lokaal",
+   "plaats": "Z/N Breedestraat, Willemstad",
+   "url": "https://aroundcuracaorental.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 112,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/around-curacao-car-rental"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/around-curacao-car-rental",
+    "https://aroundcuracaorental.com/"
+   ]
+  },
+  {
+   "id": "viva-la-diva-curacao",
+   "naam": "Viva La Diva Curacao",
+   "type": "lokaal",
+   "plaats": "18 Kaya Seru Anita, Willemstad",
+   "url": "http://www.vivaladivacuracao.com/",
+   "ophalen": [
+    "aflevering",
+    "vliegveld",
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": {
+    "valuta": "ANG",
+    "bedrag": 1000.0
+   },
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 106,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/viva-la-diva-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/viva-la-diva-curacao",
+    "http://www.vivaladivacuracao.com/",
+    "https://viva-la-diva.odoo.com/en/about-us"
+   ]
+  },
+  {
+   "id": "nr1-scooter-rental",
+   "naam": "Nr1 Scooter Rental",
+   "type": "lokaal",
+   "plaats": "33 Lindberghweg, Willemstad",
+   "url": "http://www.nr1scooterrental.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 104,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/scooter-rental-service/nr1-scooter-rental-scooter-huren"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/scooter-rental-service/nr1-scooter-rental-scooter-huren",
+    "http://www.nr1scooterrental.com/"
+   ]
+  },
+  {
+   "id": "wevisit-curacao",
+   "naam": "WeVisit Curaçao",
+   "type": "lokaal",
+   "plaats": "178 Jan Sofat, Willemstad",
+   "url": "https://www.wevisitcuracao.com/",
+   "ophalen": [
+    "kantoor"
+   ],
+   "prijs": null,
+   "prijsVanaf": 0,
+   "borg": null,
+   "borgLaag": false,
+   "eigenRisico": null,
+   "minLeeftijd": null,
+   "jeep": false,
+   "zevenPersoons": false,
+   "automaat": false,
+   "suv": false,
+   "volledigVerzekerd": false,
+   "schadeKlachten": false,
+   "creditcardNodig": null,
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 102,
+     "peildatum": "2026-11-13",
+     "bron": "https://curacao.day/en/businesses/car-rental-agency/wevisit-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/car-rental-agency/wevisit-curacao",
+    "https://www.wevisitcuracao.com/"
+   ]
   }
  ],
  "brokers": [
@@ -5677,6 +6703,86 @@
     "de": "Am Flughafen Hato haben vor allem die internationalen Marken einen Schalter. Viele lokale Vermieter sitzen direkt am Flughafen an der FD Rooseveltweg und holen dich mit einem Shuttle ab oder bringen das Auto zu deinem Hotel oder Apartment. Wähle oben aus, wie du das Auto abholen willst.",
     "es": "Los mostradores del aeropuerto de Hato son sobre todo de las marcas internacionales. Muchas empresas locales están justo al lado del aeropuerto, en la FD Rooseveltweg, y te recogen con un traslado o llevan el auto a tu hotel o alojamiento. Elige cómo quieres recoger el auto en la herramienta de arriba.",
     "pt": "Os balcões do aeroporto de Hato são principalmente das marcas internacionais. Muitas locadoras locais ficam bem ao lado do aeroporto, na FD Rooseveltweg, e buscam você com um traslado ou levam o carro ao seu hotel ou hospedagem. Escolha como quer retirar o carro na ferramenta acima."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is de goedkoopste autoverhuurder op Curaçao?",
+    "en": "What is the cheapest car rental in Curaçao?",
+    "de": "Welche ist die günstigste Autovermietung auf Curaçao?",
+    "es": "¿Cuál es el alquiler de autos más barato en Curazao?",
+    "pt": "Qual é a locadora de carros mais barata em Curaçao?"
+   },
+   "a": {
+    "nl": "Op prijsvergelijkers staan in oktober 2026 deze lokale verhuurders het laagst: Boric Car Rental vanaf $36,37 per dag (DiscoverCars, zoekopdracht 22 tot 30 oktober 2026), Palm Trees Car Rental vanaf $40,98 (DiscoverCars, zelfde zoekopdracht), America Car Rental vanaf $42,90 (Skyscanner, okt 2026) en Prins Car Rental vanaf $43,95 (EconomyBookings, okt 2026). Dat zijn vanaf-prijzen voor een kleine auto: borg, verzekering en toeslagen komen erbij en in het hoogseizoen ligt het hoger. Vergelijk dus de totaalprijs inclusief verzekering en kijk ook naar de reviews.",
+    "en": "On price comparison sites in October 2026 these local companies are lowest: Boric Car Rental from $36.37 per day (DiscoverCars, search 22 to 30 October 2026), Palm Trees Car Rental from $40.98 (DiscoverCars, same search), America Car Rental from $42.90 (Skyscanner, Oct 2026) and Prins Car Rental from $43.95 (EconomyBookings, Oct 2026). These are from-prices for a small car: deposit, insurance and extras come on top and prices are higher in peak season. So compare the total price including insurance and check the reviews too.",
+    "de": "Auf Preisvergleichsseiten liegen im Oktober 2026 diese lokalen Vermieter vorn: Boric Car Rental ab $36,37 pro Tag (DiscoverCars, Suche 22. bis 30. Oktober 2026), Palm Trees Car Rental ab $40,98 (DiscoverCars, gleiche Suche), America Car Rental ab $42,90 (Skyscanner, Okt 2026) und Prins Car Rental ab $43,95 (EconomyBookings, Okt 2026). Das sind Ab-Preise für einen Kleinwagen: Kaution, Versicherung und Extras kommen dazu, in der Hochsaison ist es teurer. Vergleiche also den Gesamtpreis inklusive Versicherung und schau auf die Bewertungen.",
+    "es": "En comparadores de precios en octubre de 2026 estas empresas locales son las más baratas: Boric Car Rental desde $36,37 por día (DiscoverCars, búsqueda del 22 al 30 de octubre de 2026), Palm Trees Car Rental desde $40,98 (DiscoverCars, misma búsqueda), America Car Rental desde $42,90 (Skyscanner, oct 2026) y Prins Car Rental desde $43,95 (EconomyBookings, oct 2026). Son precios desde para un auto pequeño: el depósito, el seguro y los extras se suman y en temporada alta es más caro. Compara el precio total con seguro y mira también las reseñas.",
+    "pt": "Em comparadores de preços em outubro de 2026 estas locadoras locais são as mais baratas: Boric Car Rental a partir de $36,37 por dia (DiscoverCars, busca de 22 a 30 de outubro de 2026), Palm Trees Car Rental a partir de $40,98 (DiscoverCars, mesma busca), America Car Rental a partir de $42,90 (Skyscanner, out 2026) e Prins Car Rental a partir de $43,95 (EconomyBookings, out 2026). São preços a partir de, para um carro pequeno: caução, seguro e extras são cobrados à parte e na alta temporada é mais caro. Compare o preço total com seguro e veja também as avaliações."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar kan ik op Curaçao een jeep huren?",
+    "en": "Where can I rent a jeep in Curaçao?",
+    "de": "Wo kann ich auf Curaçao einen Jeep mieten?",
+    "es": "¿Dónde puedo alquilar un jeep en Curazao?",
+    "pt": "Onde posso alugar um jeep em Curaçao?"
+   },
+   "a": {
+    "nl": "In de vergelijking hebben deze verhuurders een jeep of 4x4 in het aanbod: Curaçao Jeep Experience, Ruseler Car Rentals, Ross Rental Cars en Baoase Car Rental (vanaf $49 per dag volgens de brochure van 2026). Voor de meeste stranden en de grote wegen heb je geen jeep nodig, een gewone kleine auto is genoeg. Een jeep of 4x4 is handig voor onverharde wegen, bijvoorbeeld in het westen en in Christoffelpark. Check voor je boekt of de verzekering onverharde wegen dekt.",
+    "en": "In the comparison these companies offer a jeep or 4x4: Curaçao Jeep Experience, Ruseler Car Rentals, Ross Rental Cars and Baoase Car Rental (from $49 per day per the 2026 brochure). For most beaches and main roads you do not need a jeep, a regular small car is enough. A jeep or 4x4 helps on unpaved roads, for example in the west and in Christoffel Park. Before you book, check whether the insurance covers unpaved roads.",
+    "de": "Im Vergleich haben diese Vermieter einen Jeep oder 4x4 im Angebot: Curaçao Jeep Experience, Ruseler Car Rentals, Ross Rental Cars und Baoase Car Rental (ab $49 pro Tag laut Broschüre 2026). Für die meisten Strände und Hauptstraßen brauchst du keinen Jeep, ein normaler Kleinwagen reicht. Ein Jeep oder 4x4 hilft auf unbefestigten Wegen, etwa im Westen und im Christoffelpark. Prüfe vor der Buchung, ob die Versicherung unbefestigte Straßen abdeckt.",
+    "es": "En la comparación, estas empresas ofrecen jeep o 4x4: Curaçao Jeep Experience, Ruseler Car Rentals, Ross Rental Cars y Baoase Car Rental (desde $49 por día según el folleto de 2026). Para la mayoría de las playas y las carreteras principales no necesitas un jeep, un auto pequeño normal basta. Un jeep o 4x4 ayuda en caminos sin asfaltar, por ejemplo en el oeste y en el Parque Christoffel. Antes de reservar, revisa si el seguro cubre caminos sin asfaltar.",
+    "pt": "Na comparação, estas locadoras oferecem jeep ou 4x4: Curaçao Jeep Experience, Ruseler Car Rentals, Ross Rental Cars e Baoase Car Rental (a partir de $49 por dia segundo o folheto de 2026). Para a maioria das praias e das estradas principais você não precisa de jeep, um carro pequeno comum basta. Um jeep ou 4x4 ajuda em estradas de terra, por exemplo no oeste e no Parque Christoffel. Antes de reservar, veja se o seguro cobre estradas de terra."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kan ik op Curaçao een scooter huren en welk rijbewijs heb ik nodig?",
+    "en": "Can I rent a scooter in Curaçao and which license do I need?",
+    "de": "Kann ich auf Curaçao einen Roller mieten und welchen Führerschein brauche ich?",
+    "es": "¿Puedo alquilar una scooter en Curazao y qué licencia necesito?",
+    "pt": "Posso alugar uma scooter em Curaçao e que carteira preciso?"
+   },
+   "a": {
+    "nl": "Ja. Een 50cc-scooter kost volgens curacaotodo.com ongeveer $25 tot $50 per dag (peildatum 13 november 2026), langer huren is vaak goedkoper. Je hebt een geldig rijbewijs nodig en de minimumleeftijd is 18. Een helm draag je altijd. Sommige verhuurders vragen een creditcard voor de borg. Of je rijbewijs voor een scooter geldig is, verschilt per verhuurder: vraag het vooraf. Scooterverhuurders in de gids zijn onder meer Nr1 Scooter Rental en Blue Rental & Repair.",
+    "en": "Yes. A 50cc scooter costs about $25 to $50 per day according to curacaotodo.com (as of 13 November 2026), renting longer is often cheaper. You need a valid driver's license and the minimum age is 18. Always wear a helmet. Some companies ask for a credit card for the deposit. Whether your license is valid for a scooter differs per company: ask in advance. Scooter companies in the guide include Nr1 Scooter Rental and Blue Rental & Repair.",
+    "de": "Ja. Ein 50-cc-Roller kostet laut curacaotodo.com etwa $25 bis $50 pro Tag (Stand 13. November 2026), bei längerer Miete oft weniger. Du brauchst einen gültigen Führerschein, das Mindestalter ist 18. Trage immer einen Helm. Manche Vermieter verlangen für die Kaution eine Kreditkarte. Ob dein Führerschein für einen Roller gilt, hängt vom Vermieter ab: frag vorher nach. Rollervermieter im Ratgeber sind unter anderem Nr1 Scooter Rental und Blue Rental & Repair.",
+    "es": "Sí. Una scooter de 50cc cuesta unos $25 a $50 por día según curacaotodo.com (al 13 de noviembre de 2026), y alquilar más tiempo suele salir más barato. Necesitas una licencia de conducir válida y la edad mínima es 18. Usa siempre casco. Algunas empresas piden tarjeta de crédito para el depósito. Si tu licencia vale para una scooter depende de la empresa: pregunta antes. Entre las empresas de scooters de la guía están Nr1 Scooter Rental y Blue Rental & Repair.",
+    "pt": "Sim. Uma scooter de 50cc custa cerca de $25 a $50 por dia segundo o curacaotodo.com (em 13 de novembro de 2026), e alugar por mais tempo costuma sair mais barato. Você precisa de carteira de motorista válida e a idade mínima é 18. Use sempre capacete. Algumas locadoras pedem cartão de crédito para a caução. Se a sua carteira vale para scooter depende da locadora: pergunte antes. Entre as locadoras de scooter do guia estão a Nr1 Scooter Rental e a Blue Rental & Repair."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost benzine op Curaçao en hoe tank ik?",
+    "en": "How much is gasoline in Curaçao and how do I fill up?",
+    "de": "Was kostet Benzin auf Curaçao und wie tanke ich?",
+    "es": "¿Cuánto cuesta la gasolina en Curazao y cómo se llena el tanque?",
+    "pt": "Quanto custa a gasolina em Curaçao e como abastecer?"
+   },
+   "a": {
+    "nl": "Sinds 3 november 2026 kost benzine Cg 2,80 en diesel Cg 2,96 per liter (RAC, via NU.cw 29 oktober 2026, nu.cw/2026/10/29); de overheid stelt de prijs elke maand opnieuw vast. De prijs is overal op het eiland gelijk en staat op de pomp. Je betaalt meestal eerst bij de kassa en tankt daarna, wat je te veel betaalt krijg je terug. Creditcards worden niet overal geaccepteerd (sommige stations nemen geen buitenlandse creditcards): neem een pinpas of contant geld in gulden of dollars mee. Buiten Willemstad liggen weinig stations, tank dus voor een lange rit.",
+    "en": "Since 3 November 2026 gasoline costs Cg 2.80 and diesel Cg 2.96 per liter (RAC, via NU.cw 29 October 2026, nu.cw/2026/10/29); the government resets the price every month. The price is the same across the island and is posted on the pump. You usually pay at the counter first and then fill up, and any unused credit is refunded. Credit cards are not accepted everywhere (some stations do not take foreign credit cards): bring a debit card or cash in guilders or dollars. There are few stations outside Willemstad, so fill up before a long drive.",
+    "de": "Seit dem 3. November 2026 kostet Benzin Cg 2,80 und Diesel Cg 2,96 pro Liter (RAC, laut NU.cw vom 29. Oktober 2026, nu.cw/2026/10/29); die Regierung legt den Preis jeden Monat neu fest. Der Preis ist auf der ganzen Insel gleich und steht an der Zapfsäule. Meist zahlst du zuerst an der Kasse und tankst danach, nicht verbrauchtes Guthaben wird erstattet. Kreditkarten werden nicht überall akzeptiert (manche Tankstellen nehmen keine ausländischen Kreditkarten): nimm eine Debitkarte oder Bargeld in Gulden oder Dollar mit. Außerhalb von Willemstad gibt es wenige Tankstellen, tanke also vor einer langen Fahrt.",
+    "es": "Desde el 3 de noviembre de 2026 la gasolina cuesta Cg 2,80 y el diésel Cg 2,96 por litro (RAC, según NU.cw del 29 de octubre de 2026, nu.cw/2026/10/29); el gobierno fija el precio cada mes. El precio es el mismo en toda la isla y está en el surtidor. Normalmente pagas primero en la caja y luego llenas, y lo que no uses se devuelve. No en todos lados aceptan tarjetas de crédito (algunas estaciones no aceptan tarjetas de crédito extranjeras): lleva tarjeta de débito o efectivo en florines o dólares. Fuera de Willemstad hay pocas estaciones, así que llena antes de un viaje largo.",
+    "pt": "Desde 3 de novembro de 2026 a gasolina custa Cg 2,80 e o diesel Cg 2,96 por litro (RAC, segundo o NU.cw de 29 de outubro de 2026, nu.cw/2026/10/29); o governo fixa o preço todo mês. O preço é igual em toda a ilha e está na bomba. Normalmente você paga primeiro no caixa e depois abastece, e o crédito não usado é devolvido. Nem todo lugar aceita cartão de crédito (alguns postos não aceitam cartões de crédito estrangeiros): leve cartão de débito ou dinheiro em florins ou dólares. Fora de Willemstad há poucos postos, então abasteça antes de uma viagem longa."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar en hoe parkeer ik in Willemstad (Punda en Otrobanda)?",
+    "en": "Where and how do I park in Willemstad (Punda and Otrobanda)?",
+    "de": "Wo und wie parke ich in Willemstad (Punda und Otrobanda)?",
+    "es": "¿Dónde y cómo estaciono en Willemstad (Punda y Otrobanda)?",
+    "pt": "Onde e como estaciono em Willemstad (Punda e Otrobanda)?"
+   },
+   "a": {
+    "nl": "Op de meeste plaatsen op het eiland is parkeren makkelijk en gratis. In het centrum is het betaald: volgens curacao.com geldt dat voor het grootste deel van Punda en grote delen van Otrobanda, van maandag tot en met zaterdag tussen 8:00 en 18:00 uur, voor 1 gulden per uur. De parkeermeters nemen munten of een voorafbetaalde parkeerkaart (te koop bij parkeerwachters) en geen pinpas of creditcard. Met de Flowbird-app betaal je online met creditcard. Voer je kenteken in, betaal en leg het kaartje zichtbaar achter de voorruit. Kaarten en uitleg staan op parking.cw. Tarieven en uren kunnen veranderen, controleer ze ter plaatse.",
+    "en": "On most of the island parking is easy and free. In the center it is paid: per curacao.com this covers most of Punda and large parts of Otrobanda, Monday to Saturday between 8 AM and 6 PM, at 1 guilder per hour. The meters take coins or a prepaid parking card (sold by parking attendants) and no debit or credit cards. With the Flowbird app you pay online by credit card. Enter your plate number, pay and put the ticket visibly on your dashboard. Maps and info are on parking.cw. Rates and hours can change, so check on site.",
+    "de": "Fast überall auf der Insel ist Parken einfach und kostenlos. Im Zentrum kostet es: laut curacao.com gilt das für den Großteil von Punda und große Teile von Otrobanda, Montag bis Samstag zwischen 8 und 18 Uhr, für 1 Gulden pro Stunde. Die Parkautomaten nehmen Münzen oder eine vorausbezahlte Parkkarte (bei Parkwächtern erhältlich), keine Debit- oder Kreditkarten. Mit der Flowbird-App zahlst du online per Kreditkarte. Gib dein Kennzeichen ein, zahle und lege das Ticket sichtbar hinter die Windschutzscheibe. Karten und Infos gibt es auf parking.cw. Tarife und Zeiten können sich ändern, prüfe sie vor Ort.",
+    "es": "En casi toda la isla estacionar es fácil y gratis. En el centro es de pago: según curacao.com aplica a la mayor parte de Punda y a grandes zonas de Otrobanda, de lunes a sábado entre las 8:00 y las 18:00, a 1 florín por hora. Los parquímetros aceptan monedas o una tarjeta de estacionamiento prepagada (la venden los vigilantes) y no tarjetas de débito ni de crédito. Con la app Flowbird pagas en línea con tarjeta de crédito. Escribe tu placa, paga y deja el ticket visible en el tablero. Mapas e información en parking.cw. Las tarifas y horarios pueden cambiar, verifícalos en el lugar.",
+    "pt": "Na maior parte da ilha estacionar é fácil e grátis. No centro é pago: segundo o curacao.com vale para a maior parte de Punda e grandes áreas de Otrobanda, de segunda a sábado entre 8h e 18h, a 1 florim por hora. Os parquímetros aceitam moedas ou um cartão de estacionamento pré-pago (vendido pelos fiscais) e não aceitam cartão de débito nem de crédito. Com o app Flowbird você paga online com cartão de crédito. Digite a placa, pague e deixe o bilhete visível no painel. Mapas e informações em parking.cw. Tarifas e horários podem mudar, confira no local."
    }
   }
  ],

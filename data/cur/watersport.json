@@ -1,6 +1,6 @@
 {
  "id": "watersport",
- "peildatum": "2026-11-07",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "watersport en sport",
   "en": "water sports and activities",
@@ -1542,13 +1542,40 @@
     "es": "alquiler de bote sloop",
     "pt": "aluguel de barco sloop"
    },
-   "plaats": null,
+   "plaats": "Spaanse Water",
    "tags": [
     "boot",
     "verhuur"
    ],
-   "prijs": null,
-   "feiten": [],
+   "prijs": {
+    "bedrag": 229,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "vanaf, per boot, 3 uur, tot 6 personen, zonder vaarbewijs",
+     "en": "from, per boat, 3 hours, up to 6 people, no license",
+     "de": "ab, pro Boot, 3 Stunden, bis zu 6 Personen, ohne Bootsführerschein",
+     "es": "desde, por bote, 3 horas, hasta 6 personas, sin licencia",
+     "pt": "a partir de, por barco, 3 horas, até 6 pessoas, sem habilitação"
+    },
+    "bron": "https://www.naarcuracao.com/en/tour-item/boat-rental-curacao/",
+    "datum": "2026-11"
+   },
+   "feiten": [
+    {
+     "nl": "Zelf varen, alleen op het Spaanse Water, bestuurder minimaal 21 jaar",
+     "en": "Self-drive, Spanish Water only, driver at least 21",
+     "de": "Selbst fahren, nur auf dem Spanish Water, Fahrer mindestens 21",
+     "es": "Se conduce uno mismo, solo en Spanish Water, conductor de al menos 21 años",
+     "pt": "Você mesmo pilota, só em Spanish Water, condutor com pelo menos 21 anos"
+    },
+    {
+     "nl": "Borg $350 bij inchecken",
+     "en": "Security deposit $350 at check-in",
+     "de": "Kaution 350 $ beim Einchecken",
+     "es": "Depósito de $350 al registrarse",
+     "pt": "Caução de $350 no check-in"
+    }
+   ],
    "scores": [],
    "voor": {
     "nl": [],
@@ -1566,7 +1593,8 @@
    },
    "bronnen": [
     "https://www.curacao.com/en/activity/sloep-huren-curacao",
-    "https://www.curacao.com/en/category/water-activities"
+    "https://www.curacao.com/en/category/water-activities",
+    "https://www.naarcuracao.com/en/tour-item/boat-rental-curacao/"
    ]
   },
   {
@@ -3447,6 +3475,22 @@
     "de": "Ja. The Challenge in Jan Thiel und Oxygen Fitness Zone im Sambil bieten Yogakurse an, und BookRetreats listet mehrtägige Yoga-Retreats.",
     "es": "Sí. The Challenge, en Jan Thiel, y Oxygen Fitness Zone, en Sambil, ofrecen clases de yoga, y BookRetreats incluye retiros de yoga de varios días.",
     "pt": "Sim. A The Challenge, em Jan Thiel, e a Oxygen Fitness Zone, no Sambil, oferecem aulas de yoga, e o BookRetreats lista retiros de yoga de vários dias."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar kan ik een sloep huren op Curaçao en wat kost dat?",
+    "en": "Where can I rent a sloep (sloop boat) in Curaçao and what does it cost?",
+    "de": "Wo kann ich auf Curaçao eine Sloep (Sloop-Boot) mieten und was kostet das?",
+    "es": "¿Dónde puedo alquilar una sloep (bote sloop) en Curazao y cuánto cuesta?",
+    "pt": "Onde posso alugar uma sloep (barco sloop) em Curaçao e quanto custa?"
+   },
+   "a": {
+    "nl": "Je huurt een sloep op het Spaanse Water bij Jan Thiel. Tiki Boats Rental vraagt $269 per boot voor 4 uur (tot 6 personen, extra uur $35, dinsdag tot en met zaterdag). El Capitano vraagt $229 per boot voor 3 uur inclusief brandstof (tot 6 personen, borg $350 bij inchecken, bestuurder minimaal 21 jaar). Een vaarbewijs is bij beide niet nodig. Je vaart alleen op het Spaanse Water, niet op open zee.",
+    "en": "You rent a sloep on Spanish Water near Jan Thiel. Tiki Boats Rental charges $269 per boat for 4 hours (up to 6 people, extra hour $35, Tuesday to Saturday). El Capitano charges $229 per boat for 3 hours including fuel (up to 6 people, $350 security deposit at check-in, driver at least 21). Neither requires a boating license. You sail on Spanish Water only, not on the open sea.",
+    "de": "Du mietest eine Sloep auf dem Spanish Water bei Jan Thiel. Tiki Boats Rental verlangt 269 $ pro Boot für 4 Stunden (bis zu 6 Personen, zusätzliche Stunde 35 $, Dienstag bis Samstag). El Capitano verlangt 229 $ pro Boot für 3 Stunden inklusive Treibstoff (bis zu 6 Personen, 350 $ Kaution beim Einchecken, Fahrer mindestens 21). Einen Bootsführerschein braucht man bei beiden nicht. Gefahren wird nur auf dem Spanish Water, nicht auf offener See.",
+    "es": "Alquilas una sloep en Spanish Water, cerca de Jan Thiel. Tiki Boats Rental cobra $269 por bote por 4 horas (hasta 6 personas, hora extra $35, de martes a sábado). El Capitano cobra $229 por bote por 3 horas con combustible incluido (hasta 6 personas, depósito de $350 al registrarse, conductor de al menos 21 años). En ninguno se necesita licencia de navegación. Solo se navega en Spanish Water, no en mar abierto.",
+    "pt": "Você aluga uma sloep em Spanish Water, perto de Jan Thiel. A Tiki Boats Rental cobra $269 por barco por 4 horas (até 6 pessoas, hora extra $35, de terça a sábado). A El Capitano cobra $229 por barco por 3 horas com combustível incluído (até 6 pessoas, caução de $350 no check-in, condutor com pelo menos 21 anos). Nenhuma exige habilitação náutica. Navega-se só em Spanish Water, não em mar aberto."
    }
   }
  ],
