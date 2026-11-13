@@ -914,9 +914,9 @@ export default async function handler(req, res) {
         const perId = {}; items.forEach(i => { perId[i.id] = i; }); const lijst = (uit.presterend || []).concat(uit.veelbelovend || []).slice(0, 40).map(x => { const i = perId[x.pid] || {}; return { pid: x.pid, titel: i.t, merk: i.b || null, cat: i.c, sub: i.s, thuis: Math.round((num(i.p) + (i.fs ? 0 : num(i.vk))) * 100) / 100, waarom: x.waarom }; });
         return res.status(200).json({ ok: true, dag, tractie: lijst }); }
       if (cache) { // dagkeuze blijft die van vanochtend; oordelen en de vaste plekken voor presterend en veelbelovend zijn altijd vers
-        const vast = (cache.gekozen || []).filter(x => x.hoe !== 'presterend' && x.hoe !== 'veelbelovend'); const extra = (uit.gekozen || []).filter(x => (x.hoe === 'presterend' || x.hoe === 'veelbelovend' || x.hoe === 'vast') && !vast.some(v => v.pid === x.pid));
+        const dd = uit.duurderDanElders || {}; const vast = (cache.gekozen || []).filter(x => x.hoe !== 'presterend' && x.hoe !== 'veelbelovend' && !dd[x.pid]); // 13 nov: nooit wat elders goedkoper is const extra = (uit.gekozen || []).filter(x => (x.hoe === 'presterend' || x.hoe === 'veelbelovend' || x.hoe === 'vast') && !vast.some(v => v.pid === x.pid));
         const gk = vast.concat(extra); const ai = await metVerkoop(gk);
-        return res.status(200).json(Object.assign({ ok: true, uitCache: true, verkoopteksten: ai }, cache, { gekozen: gk, presterend: uit.presterend, veelbelovend: uit.veelbelovend, af: uit.af, onbeslist: uit.onbeslist, gemiddeldeTikratio: uit.gemiddeldeTikratio })); }
+        return res.status(200).json(Object.assign({ ok: true, uitCache: true, verkoopteksten: ai }, cache, { gekozen: gk, duurderDanElders: uit.duurderDanElders, presterend: uit.presterend, veelbelovend: uit.veelbelovend, af: uit.af, onbeslist: uit.onbeslist, gemiddeldeTikratio: uit.gemiddeldeTikratio })); }
       uit.verkoopteksten = await metVerkoop(uit.gekozen, 150000); // verse dagkeuze (ochtend, opgewarmd om 04:25 UTC): ruim de tijd
       await kv.set(ck, uit, { ex: 3 * 86400 }).catch(() => {});
       return res.status(200).json(Object.assign({ ok: true }, uit)); }
