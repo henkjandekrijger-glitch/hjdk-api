@@ -1,6 +1,6 @@
 {
  "id": "hotels",
- "peildatum": "2026-10-20",
+ "peildatum": "2026-11-13",
  "onderwerp": {
   "nl": "hotel of resort",
   "en": "hotel or resort",
@@ -30,11 +30,11 @@
   "pt": "{n} hotéis e resorts de Curaçao lado a lado: tudo incluído ou não, qual região, notas no Tripadvisor e no Booking e preços a partir de."
  },
  "kort": {
-  "nl": "We zetten 76 hotels en resorts op Curaçao naast elkaar, waarvan 9 all-inclusive. Tripadvisor-prijzen voor een standaardkamer beginnen rond $172 per nacht (Kunuku, all-inclusive) en lopen op tot $980 of meer (Baoase). Voor stellen scoren Sandals Royal (alleen 18+) en Baoase het hoogst, gezinnen zitten goed bij Sunscape of Kunuku, en wie zelf wil eten en duiken kiest Avila, LionsDive of Scuba Lodge.",
-  "en": "We compare 76 hotels and resorts on Curaçao, 9 of them all-inclusive. Tripadvisor rates for a standard room start around $172 a night (Kunuku, all-inclusive) and run to $980 or more (Baoase). Couples rate Sandals Royal (18+ only) and Baoase highest, families do well at Sunscape or Kunuku, and if you'd rather eat out and dive, look at Avila, LionsDive or Scuba Lodge.",
-  "de": "Wir vergleichen 76 Hotels und Resorts auf Curaçao, 9 davon All-inclusive. Die Tripadvisor-Preise für ein Standardzimmer beginnen bei etwa $172 pro Nacht (Kunuku, All-inclusive) und reichen bis $980 oder mehr (Baoase). Paare bewerten Sandals Royal (nur ab 18) und Baoase am besten, Familien sind bei Sunscape oder Kunuku gut aufgehoben, und wenn du lieber auswärts isst und tauchst, schau dir Avila, LionsDive oder Scuba Lodge an.",
-  "es": "Comparamos 76 hoteles y resorts de Curazao, 9 de ellos todo incluido. Las tarifas de Tripadvisor para una habitación estándar van desde unos $172 por noche (Kunuku, todo incluido) hasta $980 o más (Baoase). Las parejas califican mejor a Sandals Royal (solo mayores de 18) y a Baoase, las familias están bien en Sunscape o Kunuku, y si prefieres comer afuera y bucear, mira Avila, LionsDive o Scuba Lodge.",
-  "pt": "Comparamos 76 hotéis e resorts em Curaçao, 9 deles com tudo incluído. As diárias do Tripadvisor para um quarto standard vão de cerca de $172 por noite (Kunuku, tudo incluído) a $980 ou mais (Baoase). Os casais avaliam melhor o Sandals Royal (só maiores de 18) e o Baoase, as famílias se dão bem no Sunscape ou no Kunuku, e se você prefere comer fora e mergulhar, veja o Avila, o LionsDive ou o Scuba Lodge."
+  "nl": "We zetten 77 hotels en resorts op Curaçao naast elkaar, waarvan 10 all-inclusive. Tripadvisor-prijzen voor een standaardkamer beginnen rond $172 per nacht (Kunuku, all-inclusive) en lopen op tot $980 of meer (Baoase). Voor stellen scoren Sandals Royal (alleen 18+) en Baoase het hoogst, gezinnen zitten goed bij Sunscape of Kunuku, en wie zelf wil eten en duiken kiest Avila, LionsDive of Scuba Lodge.",
+  "en": "We compare 77 hotels and resorts on Curaçao, 10 of them all-inclusive. Tripadvisor rates for a standard room start around $172 a night (Kunuku, all-inclusive) and run to $980 or more (Baoase). Couples rate Sandals Royal (18+ only) and Baoase highest, families do well at Sunscape or Kunuku, and if you'd rather eat out and dive, look at Avila, LionsDive or Scuba Lodge.",
+  "de": "Wir vergleichen 77 Hotels und Resorts auf Curaçao, 10 davon All-inclusive. Die Tripadvisor-Preise für ein Standardzimmer beginnen bei etwa $172 pro Nacht (Kunuku, All-inclusive) und reichen bis $980 oder mehr (Baoase). Paare bewerten Sandals Royal (nur ab 18) und Baoase am besten, Familien sind bei Sunscape oder Kunuku gut aufgehoben, und wenn du lieber auswärts isst und tauchst, schau dir Avila, LionsDive oder Scuba Lodge an.",
+  "es": "Comparamos 77 hoteles y resorts de Curazao, 10 de ellos todo incluido. Las tarifas de Tripadvisor para una habitación estándar van desde unos $172 por noche (Kunuku, todo incluido) hasta $980 o más (Baoase). Las parejas califican mejor a Sandals Royal (solo mayores de 18) y a Baoase, las familias están bien en Sunscape o Kunuku, y si prefieres comer afuera y bucear, mira Avila, LionsDive o Scuba Lodge.",
+  "pt": "Comparamos 77 hotéis e resorts em Curaçao, 10 deles com tudo incluído. As diárias do Tripadvisor para um quarto standard vão de cerca de $172 por noite (Kunuku, tudo incluído) a $980 ou mais (Baoase). Os casais avaliam melhor o Sandals Royal (só maiores de 18) e o Baoase, as famílias se dão bem no Sunscape ou no Kunuku, e se você prefere comer fora e mergulhar, veja o Avila, o LionsDive ou o Scuba Lodge."
  },
  "vragen": [
   {
@@ -491,6 +491,13 @@
      "de": "Alle Zimmer haben einen Balkon",
      "es": "Todas las habitaciones tienen balcón",
      "pt": "Todos os quartos têm varanda"
+    },
+    {
+     "nl": "Spa-dagpas ook voor niet-gasten",
+     "en": "Spa day pass for non-guests too",
+     "de": "Spa-Tagespass auch für Nicht-Gäste",
+     "es": "Pase de día al spa también para no huéspedes",
+     "pt": "Passe diário de spa também para não hóspedes"
     }
    ],
    "scores": [
@@ -569,7 +576,8 @@
     "https://www.tripadvisor.com/19141400",
     "https://www.kayak.com/Willemstad-Hotels-Curacao-Caribbean-Resort.5351952.ksp",
     "https://www.curacaochronicle.com/post/main/hilton-becomes-dreams-resort/",
-    "https://www.cvent.com/venues/zh-CHT/results/Cura%C3%A7ao?p=1"
+    "https://www.cvent.com/venues/zh-CHT/results/Cura%C3%A7ao?p=1",
+    "https://www.curacao.com/en/article/going-beyond-the-blue-whats-new-in-curacao-for-2026"
    ]
   },
   {
@@ -625,6 +633,13 @@
      "de": "Kostenloser Shuttle in die Stadt",
      "es": "Traslado gratis al centro",
      "pt": "Traslado gratuito para a cidade"
+    },
+    {
+     "nl": "Spa-dagpas ook voor niet-gasten",
+     "en": "Spa day pass for non-guests too",
+     "de": "Spa-Tagespass auch für Nicht-Gäste",
+     "es": "Pase de día al spa también para no huéspedes",
+     "pt": "Passe diário de spa também para não hóspedes"
     }
    ],
    "scores": [
@@ -703,7 +718,8 @@
     "https://www.tripadvisor.com/Hotel_Review-d254238",
     "https://kayak.sg/Willemstad-Hotels-Sunscape-Curacao-Resort-Spa-Casino.38172.ksp",
     "https://theculturetrip.com/articles/the-best-all-inclusive-hotels-to-book-in-curacao",
-    "https://www.hotelscombined.com.sg/Place/Curacao.htm"
+    "https://www.hotelscombined.com.sg/Place/Curacao.htm",
+    "https://www.curacao.com/en/article/going-beyond-the-blue-whats-new-in-curacao-for-2026"
    ]
   },
   {
@@ -752,6 +768,13 @@
      "de": "Früher das Floris Suite Hotel",
      "es": "Antes el Floris Suite Hotel",
      "pt": "Antigo Floris Suite Hotel"
+    },
+    {
+     "nl": "Spa-dagpas ook voor niet-gasten",
+     "en": "Spa day pass for non-guests too",
+     "de": "Spa-Tagespass auch für Nicht-Gäste",
+     "es": "Pase de día al spa también para no huéspedes",
+     "pt": "Passe diário de spa também para não hóspedes"
     }
    ],
    "scores": [
@@ -830,7 +853,8 @@
     "https://www.tripadvisor.com/23764604",
     "https://www.hotelscombined.com.sg/Place/Curacao.htm",
     "https://www.reischeck.nl/adults-only-hotels-curacao/",
-    "https://www.wakacje.pl/hotele/curacao/zoetry-curacao-ex-floris-suite-29496.html"
+    "https://www.wakacje.pl/hotele/curacao/zoetry-curacao-ex-floris-suite-29496.html",
+    "https://www.curacao.com/en/article/going-beyond-the-blue-whats-new-in-curacao-for-2026"
    ]
   },
   {
@@ -1240,7 +1264,7 @@
   {
    "id": "the-pyrmont-curacao",
    "naam": "The Pyrmont Curaçao, Autograph Collection",
-   "url": null,
+   "url": "https://thepyrmontcuracao.com/",
    "soort": {
     "nl": "all-inclusive, nieuw",
     "en": "all-inclusive, new",
@@ -1256,28 +1280,47 @@
     "strand-aan-hotel",
     "pietermaai-punda"
    ],
-   "prijs": null,
+   "prijs": {
+    "bedrag": 673,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per nacht voor twee",
+     "en": "per night for two",
+     "de": "pro Nacht für zwei",
+     "es": "por noche para dos",
+     "pt": "por noite para dois"
+    },
+    "bron": "https://larevuedeshotels.com/en/pyrmont-curacao-resort-opens-willemstad-late-2026-305-rooms",
+    "datum": "2026-10"
+   },
    "feiten": [
     {
-     "nl": "Opent 16 november 2026",
-     "en": "Opens November 16, 2026",
-     "de": "Eröffnung am 16. November 2026",
-     "es": "Abre el 16 de noviembre de 2026",
-     "pt": "Abre em 16 de novembro de 2026"
+     "nl": "Opening verschoven naar begin december 2026 (eerder 16 november)",
+     "en": "Opening moved to early December 2026 (was November 16)",
+     "de": "Eröffnung auf Anfang Dezember 2026 verschoben (zuvor 16. November)",
+     "es": "Apertura aplazada a principios de diciembre de 2026 (antes 16 de noviembre)",
+     "pt": "Abertura adiada para o início de dezembro de 2026 (antes 16 de novembro)"
     },
     {
-     "nl": "300 kamers, alleen volwassenen",
-     "en": "300 rooms, adults only",
-     "de": "300 Zimmer, nur für Erwachsene",
-     "es": "300 habitaciones, solo adultos",
-     "pt": "300 quartos, só adultos"
+     "nl": "305 kamers waarvan 36 suites, alleen volwassenen",
+     "en": "305 rooms incl. 36 suites, adults only",
+     "de": "305 Zimmer, davon 36 Suiten, nur für Erwachsene",
+     "es": "305 habitaciones, 36 de ellas suites, solo adultos",
+     "pt": "305 quartos, 36 deles suítes, só adultos"
     },
     {
-     "nl": "Aangekondigd vanaf ruim $600",
-     "en": "Announced from upper $600s",
-     "de": "Angekündigt im oberen $600er-Bereich",
-     "es": "Anunciado desde los $600 altos",
-     "pt": "Anunciado na faixa alta dos $600"
+     "nl": "Vanaf $673 per nacht voor twee, all-inclusive, excl. belasting",
+     "en": "From $673 a night for two, all-inclusive, excl. taxes",
+     "de": "Ab $673 pro Nacht für zwei, All-inclusive, ohne Steuern",
+     "es": "Desde $673 por noche para dos, todo incluido, sin impuestos",
+     "pt": "A partir de $673 por noite para dois, tudo incluído, sem impostos"
+    },
+    {
+     "nl": "Zeven restaurants en bars, drie zwembaden, spa",
+     "en": "Seven restaurants and bars, three pools, spa",
+     "de": "Sieben Restaurants und Bars, drei Pools, Spa",
+     "es": "Siete restaurantes y bares, tres piscinas, spa",
+     "pt": "Sete restaurantes e bares, três piscinas, spa"
     }
    ],
    "scores": [],
@@ -1296,8 +1339,113 @@
     "pt": []
    },
    "bronnen": [
+    "https://caribbeanmag.com/pyrmont-curacao/",
+    "https://larevuedeshotels.com/en/pyrmont-curacao-resort-opens-willemstad-late-2026-305-rooms",
     "https://www.curacaochronicle.com/post/local/the-pyrmont-curacao-sets-november-16-opening-for-new-300-room-luxury-all-inclusive-resort",
     "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation"
+   ]
+  },
+  {
+   "id": "tui-blue-curacao",
+   "naam": "TUI BLUE Curaçao",
+   "url": "https://www.tuibluecuracao.com/",
+   "soort": {
+    "nl": "all-inclusive, nieuw",
+    "en": "all-inclusive, new",
+    "de": "All-inclusive, neu",
+    "es": "todo incluido, nuevo",
+    "pt": "tudo incluído, novo"
+   },
+   "plaats": "Groot Santa Martha (west)",
+   "tags": [
+    "all-inclusive",
+    "strand-aan-hotel",
+    "zwembad",
+    "gezin",
+    "duiken"
+   ],
+   "prijs": {
+    "bedrag": 294,
+    "valuta": "USD",
+    "eenheid": {
+     "nl": "per nacht",
+     "en": "per night",
+     "de": "pro Nacht",
+     "es": "por noche",
+     "pt": "por noite"
+    },
+    "bron": "https://www.caribjournal.com/2026/08/04/all-inclusive-resort-tui-curacao-opening/",
+    "datum": "2026-08"
+   },
+   "feiten": [
+    {
+     "nl": "Open sinds najaar 2026, deels nog in aanbouw",
+     "en": "Open since fall 2026, partly still under construction",
+     "de": "Seit Herbst 2026 geöffnet, teils noch im Bau",
+     "es": "Abierto desde el otoño de 2026, en parte aún en obras",
+     "pt": "Aberto desde o outono de 2026, em parte ainda em obras"
+    },
+    {
+     "nl": "Eigen strand, swim-upkamers, zes restaurants",
+     "en": "Private beach, swim-up rooms, six restaurants",
+     "de": "Eigener Strand, Swim-up-Zimmer, sechs Restaurants",
+     "es": "Playa privada, habitaciones swim-up, seis restaurantes",
+     "pt": "Praia privada, quartos swim-up, seis restaurantes"
+    },
+    {
+     "nl": "Kinderbad en gezinsactiviteiten, swim-upsuites voor volwassenen",
+     "en": "Kids pool and family activities, adults-only swim-up suites",
+     "de": "Kinderbecken und Familienprogramm, Swim-up-Suiten nur für Erwachsene",
+     "es": "Piscina infantil y actividades familiares, suites swim-up solo adultos",
+     "pt": "Piscina infantil e atividades em família, suítes swim-up só para adultos"
+    },
+    {
+     "nl": "Ongeveer 27 minuten van het vliegveld",
+     "en": "About 27 minutes from the airport",
+     "de": "Etwa 27 Minuten vom Flughafen",
+     "es": "A unos 27 minutos del aeropuerto",
+     "pt": "A cerca de 27 minutos do aeroporto"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Tripadvisor",
+     "score": 5.0,
+     "max": 5,
+     "aantal": 13,
+     "peildatum": "2026-11-13",
+     "bron": "https://www.tripadvisor.com/Hotel_Review-g147278-d34028370-Reviews-TUI_BLUE_Curacao-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [
+     "Nog deels in aanbouw"
+    ],
+    "en": [
+     "Still partly under construction"
+    ],
+    "de": [
+     "Noch teilweise im Bau"
+    ],
+    "es": [
+     "Todavía en parte en obras"
+    ],
+    "pt": [
+     "Ainda em parte em obras"
+    ]
+   },
+   "bronnen": [
+    "https://www.caribjournal.com/2026/08/04/all-inclusive-resort-tui-curacao-opening/",
+    "https://www.curacaochronicle.com/post/unknown/tui-delays-opening-of-tui-blue-curacao-until-november-1",
+    "https://www.tripadvisor.com/Hotel_Review-g147278-d34028370-Reviews-TUI_BLUE_Curacao-Willemstad_Curacao.html",
+    "https://www.curacao.com/en/article/going-beyond-the-blue-whats-new-in-curacao-for-2026"
    ]
   },
   {
@@ -1330,7 +1478,15 @@
     "bron": "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation",
     "datum": "2026-10"
    },
-   "feiten": [],
+   "feiten": [
+    {
+     "nl": "Twee nieuwe villa's: Villa Azure Vista (6 slaapkamers) en Villa Brillante",
+     "en": "Two new villas: Villa Azure Vista (6 bedrooms) and Villa Brillante",
+     "de": "Zwei neue Villen: Villa Azure Vista (6 Schlafzimmer) und Villa Brillante",
+     "es": "Dos villas nuevas: Villa Azure Vista (6 dormitorios) y Villa Brillante",
+     "pt": "Duas vilas novas: Villa Azure Vista (6 quartos) e Villa Brillante"
+    }
+   ],
    "scores": [],
    "voor": {
     "nl": [],
@@ -1348,7 +1504,8 @@
    },
    "bronnen": [
     "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation",
-    "https://ph.trip.com/hotels/curacao-hotel-detail-8502129/oasis-coral-estate-beach-dive-and-wellness-resort"
+    "https://ph.trip.com/hotels/curacao-hotel-detail-8502129/oasis-coral-estate-beach-dive-and-wellness-resort",
+    "https://www.curacao.com/en/article/going-beyond-the-blue-whats-new-in-curacao-for-2026"
    ]
   },
   {
@@ -1653,6 +1810,13 @@
      "de": "Vier Restaurants im Haus",
      "es": "Cuatro restaurantes en el hotel",
      "pt": "Quatro restaurantes no hotel"
+    },
+    {
+     "nl": "Nieuwe Oceanfront Blues-kamers op de pier in de Blue Wing (18+)",
+     "en": "New Oceanfront Blues rooms on the pier in the Blue Wing (18+)",
+     "de": "Neue Oceanfront-Blues-Zimmer auf dem Pier im Blue Wing (ab 18)",
+     "es": "Nuevas habitaciones Oceanfront Blues sobre el muelle en el Blue Wing (18+)",
+     "pt": "Novos quartos Oceanfront Blues sobre o píer no Blue Wing (18+)"
     }
    ],
    "scores": [
@@ -1739,7 +1903,8 @@
     "https://www.tripadvisor.com/Hotel_Review-d148585",
     "https://www.hotelscombined.com.sg/Place/Curacao.htm",
     "https://app-aws-test.booking.com/hotel/cw/avila.en-gb.html",
-    "https://cdn.fodors.com/world/caribbean/curacao/places/willemstad/hotels"
+    "https://cdn.fodors.com/world/caribbean/curacao/places/willemstad/hotels",
+    "https://www.curacao.com/en/article/going-beyond-the-blue-whats-new-in-curacao-for-2026"
    ]
   },
   {
@@ -1786,6 +1951,13 @@
      "de": "Tripadvisor Best of the Best",
      "es": "Tripadvisor Best of the Best",
      "pt": "Tripadvisor Best of the Best"
+    },
+    {
+     "nl": "Nummer 1 resort van de Cariben bij Travel + Leisure 2025",
+     "en": "No. 1 resort in the Caribbean, Travel + Leisure 2025",
+     "de": "Nr. 1 Resort der Karibik bei Travel + Leisure 2025",
+     "es": "Resort n.º 1 del Caribe según Travel + Leisure 2025",
+     "pt": "Resort n.º 1 do Caribe segundo a Travel + Leisure 2025"
     }
    ],
    "scores": [
@@ -1865,7 +2037,8 @@
     "https://www.hotelscombined.com.sg/Place/Curacao.htm",
     "https://cdn.fodors.com/world/caribbean/curacao/places/willemstad/hotels",
     "https://www.klm.com/travel-guide/inspiration/curacao-s-romantic-boutique-hotels",
-    "https://baoase.com/pt/tripadvisor-award-2025/"
+    "https://baoase.com/pt/tripadvisor-award-2025/",
+    "https://www.curacao.com/en/article/going-beyond-the-blue-whats-new-in-curacao-for-2026"
    ]
   },
   {
@@ -2023,7 +2196,15 @@
     "bron": "https://www.tripadvisor.com/1418873",
     "datum": "2026-10"
    },
-   "feiten": [],
+   "feiten": [
+    {
+     "nl": "22 nieuwe luxe kamers erbij in 2026 (The Beach House)",
+     "en": "22 new luxury rooms added in 2026 (The Beach House)",
+     "de": "22 neue Luxuszimmer 2026 (The Beach House)",
+     "es": "22 nuevas habitaciones de lujo en 2026 (The Beach House)",
+     "pt": "22 novos quartos de luxo em 2026 (The Beach House)"
+    }
+   ],
    "scores": [
     {
      "platform": "Tripadvisor",
@@ -2099,7 +2280,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/1418873",
     "https://www.hotelscombined.com.sg/Place/Curacao.htm",
-    "https://booking.com/reviews/country/cw.html"
+    "https://booking.com/reviews/country/cw.html",
+    "https://www.curacao.com/en/article/going-beyond-the-blue-whats-new-in-curacao-for-2026"
    ]
   },
   {
@@ -2227,7 +2409,15 @@
     "jan-thiel"
    ],
    "prijs": null,
-   "feiten": [],
+   "feiten": [
+    {
+     "nl": "Ç Spa & Wellness, de grootste spa van het eiland",
+     "en": "Ç Spa & Wellness, the largest spa on the island",
+     "de": "Ç Spa & Wellness, das größte Spa der Insel",
+     "es": "Ç Spa & Wellness, el spa más grande de la isla",
+     "pt": "Ç Spa & Wellness, o maior spa da ilha"
+    }
+   ],
    "scores": [
     {
      "platform": "Booking",
@@ -2254,28 +2444,54 @@
    },
    "bronnen": [
     "https://app-aws-test.booking.com/district/cw/willemstad/janthiel.en-gb.html",
-    "https://cdn.fodors.com/world/caribbean/curacao/places/willemstad/hotels"
+    "https://cdn.fodors.com/world/caribbean/curacao/places/willemstad/hotels",
+    "https://www.curacao.com/en/article/going-beyond-the-blue-whats-new-in-curacao-for-2026"
    ]
   },
   {
    "id": "livingstone-jan-thiel",
-   "naam": "Livingstone Jan Thiel Resort",
+   "naam": "Sonesta Resort Curaçao (voorheen Livingstone Jan Thiel)",
    "url": null,
    "soort": {
-    "nl": "appartementen",
-    "en": "apartments",
-    "de": "Apartments",
-    "es": "apartamentos",
-    "pt": "apartamentos"
+    "nl": "strandresort",
+    "en": "beach resort",
+    "de": "Strandresort",
+    "es": "resort de playa",
+    "pt": "resort de praia"
    },
    "plaats": "Jan Thiel",
    "tags": [
     "jan-thiel",
     "appartement-keuken",
-    "budget"
+    "budget",
+    "duiken",
+    "zwembad",
+    "strand-aan-hotel"
    ],
    "prijs": null,
-   "feiten": [],
+   "feiten": [
+    {
+     "nl": "Sinds april 2026 Sonesta, voorheen Livingstone",
+     "en": "Sonesta since April 2026, formerly Livingstone",
+     "de": "Seit April 2026 Sonesta, früher Livingstone",
+     "es": "Sonesta desde abril de 2026, antes Livingstone",
+     "pt": "Sonesta desde abril de 2026, antes Livingstone"
+    },
+    {
+     "nl": "196 kamers boven Jan Thiel Beach",
+     "en": "196 rooms above Jan Thiel Beach",
+     "de": "196 Zimmer oberhalb von Jan Thiel Beach",
+     "es": "196 habitaciones sobre Jan Thiel Beach",
+     "pt": "196 quartos acima de Jan Thiel Beach"
+    },
+    {
+     "nl": "5-sterren PADI-duikcentrum, groot zwembad, Italiaans restaurant",
+     "en": "5-star PADI dive center, large pool, Italian restaurant",
+     "de": "5-Sterne-PADI-Tauchcenter, großer Pool, italienisches Restaurant",
+     "es": "Centro de buceo PADI 5 estrellas, piscina grande, restaurante italiano",
+     "pt": "Centro de mergulho PADI 5 estrelas, piscina grande, restaurante italiano"
+    }
+   ],
    "scores": [
     {
      "platform": "Booking",
@@ -2309,6 +2525,7 @@
     "pt": []
    },
    "bronnen": [
+    "https://newsroom.sonesta.com/openings-renovations/sonesta-announces-the-opening-of-sonesta-resort-curacao/",
     "https://app-aws-test.booking.com/district/cw/willemstad/janthiel.en-gb.html",
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
     "https://cdn.fodors.com/world/caribbean/curacao/places/willemstad/hotels",
@@ -3230,6 +3447,13 @@
      "de": "Eigenes PADI-Tauchcenter",
      "es": "Centro de buceo PADI propio",
      "pt": "Centro de mergulho PADI próprio"
+    },
+    {
+     "nl": "Combineer met de tweede vestiging in Lagun",
+     "en": "Combine with the second location in Lagun",
+     "de": "Kombinierbar mit dem zweiten Standort in Lagun",
+     "es": "Se puede combinar con la segunda sede en Lagun",
+     "pt": "Dá para combinar com a segunda unidade em Lagun"
     }
    ],
    "scores": [
@@ -3307,7 +3531,8 @@
    "bronnen": [
     "https://www.tripadvisor.com/1535133",
     "https://au.trip.com/hotels/willemstad-hotels-list-62137",
-    "https://cdn.fodors.com/world/caribbean/curacao/places/willemstad/hotels"
+    "https://cdn.fodors.com/world/caribbean/curacao/places/willemstad/hotels",
+    "https://www.caribjournal.com/2026/01/09/curacao-island-dive-resort-expanding/"
    ]
   },
   {
@@ -5023,7 +5248,7 @@
   },
   {
    "id": "bahia-apartments-diving",
-   "naam": "Bahia Appartementen & Diving",
+   "naam": "Scuba Lodge Lagun Beach (voorheen Bahia Appartementen & Diving)",
    "url": null,
    "soort": {
     "nl": "duikappartementen",
@@ -5040,6 +5265,20 @@
    ],
    "prijs": null,
    "feiten": [
+    {
+     "nl": "Sinds januari 2026 tweede vestiging van Scuba Lodge",
+     "en": "Second Scuba Lodge location since January 2026",
+     "de": "Seit Januar 2026 zweiter Standort von Scuba Lodge",
+     "es": "Segunda sede de Scuba Lodge desde enero de 2026",
+     "pt": "Segunda unidade da Scuba Lodge desde janeiro de 2026"
+    },
+    {
+     "nl": "19 appartementen boven de baai van Lagun, kantduiken",
+     "en": "19 apartments above Lagun cove, shore diving",
+     "de": "19 Apartments über der Bucht von Lagun, Landtauchgänge",
+     "es": "19 apartamentos sobre la cala de Lagun, buceo desde la orilla",
+     "pt": "19 apartamentos acima da enseada de Lagun, mergulho de costa"
+    },
     {
      "nl": "Zelf koken, à-la-carterestaurant",
      "en": "Self-catering, a la carte restaurant",
@@ -5064,6 +5303,8 @@
     "pt": []
    },
    "bronnen": [
+    "https://www.caribjournal.com/2026/01/09/curacao-island-dive-resort-expanding/",
+    "https://www.curacaochronicle.com/post/tourism/scuba-lodge-expands-with-the-acquisition-of-bahia-apartments-lagun",
     "https://www.reischeck.nl/adults-only-hotels-curacao/"
    ]
   },
@@ -5227,11 +5468,11 @@
    "pt": "Jan Thiel tem ladeiras: hóspedes do Morena e do Chogogo dizem que muitas vezes é preciso táxi ou carro."
   },
   {
-   "nl": "The Pyrmont, het eerste all-inclusive van Marriott op Curaçao, opent op 16 november 2026 met 300 kamers voor volwassenen.",
-   "en": "The Pyrmont, Marriott's first all-inclusive on Curaçao, opens November 16, 2026, with 300 adults-only rooms.",
-   "de": "Das Pyrmont, das erste All-inclusive-Haus von Marriott auf Curaçao, eröffnet am 16. November 2026 mit 300 Zimmern nur für Erwachsene.",
-   "es": "El Pyrmont, el primer todo incluido de Marriott en Curazao, abre el 16 de noviembre de 2026 con 300 habitaciones solo para adultos.",
-   "pt": "O Pyrmont, o primeiro tudo incluído da Marriott em Curaçao, abre em 16 de novembro de 2026 com 300 quartos só para adultos."
+   "nl": "The Pyrmont, het eerste all-inclusive van Marriott op Curaçao, opent begin december 2026 met 305 kamers voor volwassenen.",
+   "en": "The Pyrmont, Marriott's first all-inclusive on Curaçao, opens in early December 2026 with 305 adults-only rooms.",
+   "de": "Das Pyrmont, das erste All-inclusive-Haus von Marriott auf Curaçao, eröffnet Anfang Dezember 2026 mit 305 Zimmern nur für Erwachsene.",
+   "es": "El Pyrmont, el primer todo incluido de Marriott en Curazao, abre a principios de diciembre de 2026 con 305 habitaciones solo para adultos.",
+   "pt": "O Pyrmont, o primeiro tudo incluído da Marriott em Curaçao, abre no início de dezembro de 2026 com 305 quartos só para adultos."
   }
  ],
  "faq": [
@@ -5244,11 +5485,11 @@
     "pt": "Quais resorts tudo incluído existem em Curaçao?"
    },
    "a": {
-    "nl": "Sandals Royal Curaçao (alleen stellen, 18+), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (18+), Mangrove Beach Corendon en The Rif (Otrobanda), Kunuku Resort (Daniel, met glijbanen), Kura Hulanda Lodge (Westpunt) en vanaf 16 november 2026 The Pyrmont (18+).",
-    "en": "Sandals Royal Curaçao (couples only, 18+), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (18+), Mangrove Beach Corendon and The Rif (Otrobanda), Kunuku Resort (Daniel, with water slides), Kura Hulanda Lodge (Westpunt), and from November 16, 2026, The Pyrmont (18+).",
-    "de": "Sandals Royal Curaçao (nur Paare, ab 18), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (ab 18), Mangrove Beach Corendon und The Rif (Otrobanda), Kunuku Resort (Daniel, mit Wasserrutschen), Kura Hulanda Lodge (Westpunt) und ab dem 16. November 2026 The Pyrmont (ab 18).",
-    "es": "Sandals Royal Curaçao (solo parejas, mayores de 18), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (mayores de 18), Mangrove Beach Corendon y The Rif (Otrobanda), Kunuku Resort (Daniel, con toboganes), Kura Hulanda Lodge (Westpunt) y, desde el 16 de noviembre de 2026, The Pyrmont (mayores de 18).",
-    "pt": "Sandals Royal Curaçao (só casais, maiores de 18), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (maiores de 18), Mangrove Beach Corendon e The Rif (Otrobanda), Kunuku Resort (Daniel, com toboáguas), Kura Hulanda Lodge (Westpunt) e, a partir de 16 de novembro de 2026, The Pyrmont (maiores de 18)."
+    "nl": "Sandals Royal Curaçao (alleen stellen, 18+), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (18+), Mangrove Beach Corendon en The Rif (Otrobanda), Kunuku Resort (Daniel, met glijbanen), Kura Hulanda Lodge (Westpunt), TUI BLUE Curaçao (Groot Santa Martha, nieuw) en vanaf begin december 2026 The Pyrmont (18+).",
+    "en": "Sandals Royal Curaçao (couples only, 18+), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (18+), Mangrove Beach Corendon and The Rif (Otrobanda), Kunuku Resort (Daniel, with water slides), Kura Hulanda Lodge (Westpunt), TUI BLUE Curaçao (Groot Santa Martha, new), and from early December 2026, The Pyrmont (18+).",
+    "de": "Sandals Royal Curaçao (nur Paare, ab 18), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (ab 18), Mangrove Beach Corendon und The Rif (Otrobanda), Kunuku Resort (Daniel, mit Wasserrutschen), Kura Hulanda Lodge (Westpunt), TUI BLUE Curaçao (Groot Santa Martha, neu) und ab Anfang Dezember 2026 The Pyrmont (ab 18).",
+    "es": "Sandals Royal Curaçao (solo parejas, mayores de 18), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (mayores de 18), Mangrove Beach Corendon y The Rif (Otrobanda), Kunuku Resort (Daniel, con toboganes), Kura Hulanda Lodge (Westpunt), TUI BLUE Curaçao (Groot Santa Martha, nuevo) y, desde principios de diciembre de 2026, The Pyrmont (mayores de 18).",
+    "pt": "Sandals Royal Curaçao (só casais, maiores de 18), Dreams Curaçao (Piscadera), Sunscape Curaçao (Mambo Beach), Zoëtry Curaçao (maiores de 18), Mangrove Beach Corendon e The Rif (Otrobanda), Kunuku Resort (Daniel, com toboáguas), Kura Hulanda Lodge (Westpunt), TUI BLUE Curaçao (Groot Santa Martha, novo) e, a partir do início de dezembro de 2026, The Pyrmont (maiores de 18)."
    }
   },
   {
@@ -5276,11 +5517,11 @@
     "pt": "Quais hotéis de Curaçao são só para adultos?"
    },
    "a": {
-    "nl": "Sandals Royal en Zoëtry (allebei 18+, all-inclusive), The Pyrmont (opent november 2026), en kleinere adressen zoals Casa Amalia in Jan Thiel en The Ritz Village in Scharloo (allebei vanaf 16 jaar).",
-    "en": "Sandals Royal and Zoëtry (both 18+, all-inclusive), The Pyrmont (opens November 2026), plus smaller places like Casa Amalia in Jan Thiel and The Ritz Village in Scharloo (both 16+).",
-    "de": "Sandals Royal und Zoëtry (beide ab 18, All-inclusive), The Pyrmont (eröffnet im November 2026) sowie kleinere Häuser wie Casa Amalia in Jan Thiel und The Ritz Village in Scharloo (beide ab 16).",
-    "es": "Sandals Royal y Zoëtry (ambos para mayores de 18, todo incluido), The Pyrmont (abre en noviembre de 2026), además de lugares más pequeños como Casa Amalia en Jan Thiel y The Ritz Village en Scharloo (ambos para mayores de 16).",
-    "pt": "Sandals Royal e Zoëtry (ambos para maiores de 18, tudo incluído), The Pyrmont (abre em novembro de 2026), além de lugares menores como Casa Amalia, em Jan Thiel, e The Ritz Village, em Scharloo (ambos para maiores de 16)."
+    "nl": "Sandals Royal en Zoëtry (allebei 18+, all-inclusive), The Pyrmont (opent begin december 2026), en kleinere adressen zoals Casa Amalia in Jan Thiel en The Ritz Village in Scharloo (allebei vanaf 16 jaar).",
+    "en": "Sandals Royal and Zoëtry (both 18+, all-inclusive), The Pyrmont (opens early December 2026), plus smaller places like Casa Amalia in Jan Thiel and The Ritz Village in Scharloo (both 16+).",
+    "de": "Sandals Royal und Zoëtry (beide ab 18, All-inclusive), The Pyrmont (eröffnet Anfang Dezember 2026) sowie kleinere Häuser wie Casa Amalia in Jan Thiel und The Ritz Village in Scharloo (beide ab 16).",
+    "es": "Sandals Royal y Zoëtry (ambos para mayores de 18, todo incluido), The Pyrmont (abre a principios de diciembre de 2026), además de lugares más pequeños como Casa Amalia en Jan Thiel y The Ritz Village en Scharloo (ambos para mayores de 16).",
+    "pt": "Sandals Royal e Zoëtry (ambos para maiores de 18, tudo incluído), The Pyrmont (abre no início de dezembro de 2026), além de lugares menores como Casa Amalia, em Jan Thiel, e The Ritz Village, em Scharloo (ambos para maiores de 16)."
    }
   },
   {
@@ -5356,11 +5597,11 @@
     "pt": "Qual hotel de Curaçao é bom para mergulhadores?"
    },
    "a": {
-    "nl": "LionsDive (Mambo), Scuba Lodge (Pietermaai, eigen PADI-centrum, 4,7 van 5 op Tripadvisor), Chogogo (Jan Thiel) en in het westen Marazul, Bahia Appartementen en Kura Hulanda Lodge. Bij Sandals zit duiken in de prijs.",
-    "en": "LionsDive (Mambo), Scuba Lodge (Pietermaai, own PADI center, 4.7 out of 5 on Tripadvisor), Chogogo (Jan Thiel), and out west Marazul, Bahia Apartments and Kura Hulanda Lodge. At Sandals, diving is included.",
-    "de": "LionsDive (Mambo), Scuba Lodge (Pietermaai, eigenes PADI-Center, 4.7 von 5 bei Tripadvisor), Chogogo (Jan Thiel) und im Westen Marazul, Bahia Apartments und Kura Hulanda Lodge. Bei Sandals ist Tauchen inklusive.",
-    "es": "LionsDive (Mambo), Scuba Lodge (Pietermaai, centro PADI propio, 4.7 de 5 en Tripadvisor), Chogogo (Jan Thiel) y, en el oeste, Marazul, Bahia Apartments y Kura Hulanda Lodge. En Sandals el buceo está incluido.",
-    "pt": "LionsDive (Mambo), Scuba Lodge (Pietermaai, centro PADI próprio, 4.7 de 5 no Tripadvisor), Chogogo (Jan Thiel) e, no oeste, Marazul, Bahia Apartments e Kura Hulanda Lodge. No Sandals, o mergulho está incluído."
+    "nl": "LionsDive (Mambo), Scuba Lodge (Pietermaai, eigen PADI-centrum, 4,7 van 5 op Tripadvisor), Chogogo (Jan Thiel) en in het westen Marazul, Scuba Lodge Lagun Beach (voorheen Bahia) en Kura Hulanda Lodge. Bij Sandals zit duiken in de prijs.",
+    "en": "LionsDive (Mambo), Scuba Lodge (Pietermaai, own PADI center, 4.7 out of 5 on Tripadvisor), Chogogo (Jan Thiel), and out west Marazul, Scuba Lodge Lagun Beach and Kura Hulanda Lodge. At Sandals, diving is included.",
+    "de": "LionsDive (Mambo), Scuba Lodge (Pietermaai, eigenes PADI-Center, 4.7 von 5 bei Tripadvisor), Chogogo (Jan Thiel) und im Westen Marazul, Scuba Lodge Lagun Beach und Kura Hulanda Lodge. Bei Sandals ist Tauchen inklusive.",
+    "es": "LionsDive (Mambo), Scuba Lodge (Pietermaai, centro PADI propio, 4.7 de 5 en Tripadvisor), Chogogo (Jan Thiel) y, en el oeste, Marazul, Scuba Lodge Lagun Beach y Kura Hulanda Lodge. En Sandals el buceo está incluido.",
+    "pt": "LionsDive (Mambo), Scuba Lodge (Pietermaai, centro PADI próprio, 4.7 de 5 no Tripadvisor), Chogogo (Jan Thiel) e, no oeste, Marazul, Scuba Lodge Lagun Beach e Kura Hulanda Lodge. No Sandals, o mergulho está incluído."
    }
   }
  ],
