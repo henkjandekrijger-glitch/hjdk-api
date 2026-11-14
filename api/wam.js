@@ -406,6 +406,7 @@ export default async function handler(req, res) {
     if (op === 'vraagstand') return res.status(200).json({ ok: true, ...(await LEER.vbStand()) });
     if (op === 'usecases') return res.status(200).json({ ok: true, ...(await LEER.ucStand({ metVoorbeelden: beschermd(host) })) });
     if (op === 'veilig') return res.status(200).json({ ok: true, ...(await LEER.veiligStand()) });
+    if (op === 'pad') { if (!beschermd(host)) return res.status(404).json({ ok: false }); return res.status(200).json({ ok: true, ...(await W.padStand(q('land') || 'CA')) }); } // de kortste weg: verbinders van deze week per land (zonder namen)
     if (op === 'deelstand') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.deelStand()) }); }
     if (op === 'paren') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json({ ok: true, ...(await W.parenStand(Number(q('dagen')) || 1)) }); }
     if (op === 'gesprekkort') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await W.gesprekKort({ land: q('land'), camp: q('c'), n: Number(q('n')) || 15 })); }
