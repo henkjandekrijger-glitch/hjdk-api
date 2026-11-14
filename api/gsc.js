@@ -269,7 +269,10 @@ export default async function handler(req, res) {
       else { const tech = await kv.get('zicht:tech:' + id).catch(() => null); urls = (tech && tech.sitemapVoorbeeld) || [];
         if (!urls.length) { const xml = await (await fetch('https://' + host + '/sitemap.xml')).text().catch(() => ''); urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim()).filter(u => !/\.xml($|\?)/.test(u)); } }
       // pagina's van lopende ZICHT-proeven (getest en controle) altijd meenemen en eerst bekijken, zodat de proef te beoordelen is
-      const proefUrls = ((await kv.get('zicht:exp:' + id).catch(() => null)) || []).filter(p => p.status === 'loopt' && p.metric === 'index').flatMap(p => [...(p.urls || []), ...(p.controle || [])]).filter(u => /^https?:\/\//.test(u)).slice(0, 300);
+      // 14 nov 2026: bij de eigen sites (kz/us/de) alleen proefpagina's die nog in de sitemap staan. Naar curacao.day verhuisde adressen
+      // (308) bleven via oude proeven meegeteld als 'onbekend bij Google' en blies inSitemap op (keuzehulp.best 521 i.p.v. de echte sitemap).
+      const inMap = SITEMAPS[id] && urls.length ? new Set(urls) : null; const nSitemap = urls.length;
+      const proefUrls = ((await kv.get('zicht:exp:' + id).catch(() => null)) || []).filter(p => p.status === 'loopt' && p.metric === 'index').flatMap(p => [...(p.urls || []), ...(p.controle || [])]).filter(u => /^https?:\/\//.test(u) && (!inMap || inMap.has(u))).slice(0, 300);
       urls = [...new Set([...proefUrls, ...urls])]; const isProef = new Set(proefUrls);
       const map = (await kv.get(mk).catch(() => null)) || {}; const dag = new Date().toISOString().slice(0, 10);
       // volgorde: nooit bekeken, dan niet geïndexeerd en langst geleden, dan geïndexeerd en langst geleden
@@ -278,7 +281,7 @@ export default async function handler(req, res) {
       Object.keys(map).forEach(u => { if (!urls.includes(u)) delete map[u]; }); await kv.set(mk, map).catch(() => {});
       const alles = urls.filter(u => map[u]).map(u => ({ url: u, verdict: map[u].v, staat: map[u].s, gecrawld: map[u].c, dag: map[u].d, canoniek: map[u].canoniek, opgegevenCanoniek: map[u].opgegevenCanoniek, robots: map[u].robots, indexToegestaan: map[u].indexToegestaan, opgehaald: map[u].opgehaald }));
       const per = {}; alles.forEach(x => { const k = x.staat || x.verdict || 'onbekend'; per[k] = (per[k] || 0) + 1; });
-      const res0 = { at: Date.now(), dag, site: host, inSitemap: urls.length, bekeken: alles.length, vandaagBekeken: n, geindexeerd: alles.filter(x => x.verdict === 'PASS').length, perStaat: per, nietGeindexeerd: alles.filter(x => x.verdict !== 'PASS').slice(0, 150).map(x => ({ url: x.url, staat: x.staat, gecrawld: x.gecrawld, canoniek: x.canoniek, robots: x.robots, indexToegestaan: x.indexToegestaan, opgehaald: x.opgehaald })), alles };
+      const res0 = { at: Date.now(), dag, site: host, inSitemap: inMap ? nSitemap : urls.length, bekeken: alles.length, vandaagBekeken: n, geindexeerd: alles.filter(x => x.verdict === 'PASS').length, perStaat: per, nietGeindexeerd: alles.filter(x => x.verdict !== 'PASS').slice(0, 150).map(x => ({ url: x.url, staat: x.staat, gecrawld: x.gecrawld, canoniek: x.canoniek, robots: x.robots, indexToegestaan: x.indexToegestaan, opgehaald: x.opgehaald })), alles };
       await kv.set(ck, res0).catch(() => {}); const hist = (await kv.get(ck + ':hist').catch(() => null)) || []; const h1 = { dag, inSitemap: res0.inSitemap, bekeken: res0.bekeken, geindexeerd: res0.geindexeerd }; await kv.set(ck + ':hist', [h1, ...hist.filter(x => x.dag !== dag)].slice(0, 90)).catch(() => {});
       return res.status(200).json(Object.assign({ ok: true }, res0, { alles: undefined, historie: [h1, ...hist.filter(x => x.dag !== dag)].slice(0, 14) }));
     }
