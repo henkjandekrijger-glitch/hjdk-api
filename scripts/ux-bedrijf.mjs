@@ -25,7 +25,7 @@ const REGELS = {
   hoofd: 'naam of adres in HOOFDLETTERS of helemaal klein in een lijst',
   breed: 'pagina scrollt zijwaarts',
   week: 'zeven regels openingstijden: één regel ("Elke dag 08:00-20:00") met uitklap',
-  geenfeit: 'geen feitenblok (tijden, telefoon, adres) direct onder de knoppen',
+  geenfeit: 'tijden, telefoon en adres ontbreken (in de chat als regels, of zonder JavaScript als feitenblok)',
   tikklein: 'knop of link kleiner dan 40 px hoog in het eerste scherm',
   chat: 'de chat van de site over deze zaak ontbreekt, of er staat nog een los vraagveld naast',
 };
@@ -49,7 +49,7 @@ for (const f of files) {
       const h2 = [...main.querySelectorAll('h2')].filter(zicht).map(x => x.innerText.trim());
       const caps = [...main.querySelectorAll('a.bz-rij b, a.bz-rij small, .g-rij a, .g-sub')].filter(zicht).map(x => x.innerText.trim()).filter(t => (/[A-Z]{4}/.test(t) && t === t.toUpperCase()) || (/^[a-z]{3}/.test(t) && t === t.toLowerCase()));
       const rijen = [...main.querySelectorAll('section')].filter(zicht).map(s => s.querySelectorAll('.line').length).reduce((a, x) => Math.max(a, x), 0);
-      const chat = !!document.querySelector('[data-cw-ama][data-ond]') && !document.querySelector('form.cwq'), feit = !!main.querySelector('.bz-feit'), cwa = [...document.querySelectorAll('section.cwa')].filter(zicht).length;
+      const chat = !!document.querySelector('[data-cw-ama][data-ond]') && !document.querySelector('form.cwq'), feit = !!main.querySelector('.bz-feit, li.ama-feit'), cwa = [...document.querySelectorAll('section.cwa')].filter(zicht).length;
       return { chat, tekst, con, tb: tb ? { bottom: tb.bottom } : null, klein, h2, caps, rijen, feit, cwa, hoogte: document.documentElement.scrollHeight, breed: document.documentElement.scrollWidth > document.documentElement.clientWidth + 2 };
     }, { w, h });
     const tag = w + 'x' + h + (cs === 'dark' ? ' donker' : '');

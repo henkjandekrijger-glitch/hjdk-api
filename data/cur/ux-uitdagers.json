@@ -25,16 +25,16 @@
         "wat": "Kleine kaart met de zaak en de 6 dichtstbijzijnde, tik = die zaak"
       }
     ],
-    "chat": [
+    "vragen": [
       {
-        "id": "onder-knoppen",
+        "id": "drie",
         "mpa": "P",
-        "wat": "De chat direct onder de knoppen, de feiten erna"
+        "wat": "Drie slimme vragen in plaats van twee (derde: website of open op feestdagen, alleen met gegevens)"
       },
       {
         "id": "echte-vraag",
         "mpa": "M",
-        "wat": "Vierde voorbeeldvraag: de vaakst gestelde echte chatvraag over deze soort zaak (alleen met antwoord uit de gegevens)"
+        "wat": "De vaakst gestelde echte chatvraag over deze soort zaak als slimme vraag (alleen met antwoord uit de gegevens)"
       }
     ]
   },
@@ -73,6 +73,10 @@
     {
       "dag": "2026-11-14",
       "wat": "Ronde 2 (Henkjan: \"Veel te druk moet veel cleaner . Chat moet zelfde zijn als heel curacaoday maar dan volledig zijn ingericht op bedrijven met de voorbeelden .\"): feiten zonder blauw vlak, sterren als één regel, websiteknop weg, blok vandaag weg, aanmeldvak klein, eigenaar in één regel, de chat van de site met kop en drie voorbeeldvragen over de zaak met direct antwoord. Proef nu knop, buurt, chat (rv, vraag, vandaag vervallen). 2.047 px."
+    },
+    {
+      "dag": "2026-11-14",
+      "wat": "Ronde 3 (Henkjan: \"Dit moet echt via onze chat : Tijden, telefoon en adres als losse regels, met als laatste regel Been there? en dan intelligente eenvoudige vragen .\"): feiten, sterren en twee slimme vragen als regels in de chat van de site; sterren in de chat gaan naar de reviews van de zaak; typen gaat met de feiten als context naar de chat. Proef: knop, buurt, vragen (twee slimme vragen of geen)."
     }
   ]
 }
