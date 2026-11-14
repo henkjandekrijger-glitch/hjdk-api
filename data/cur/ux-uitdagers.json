@@ -78,5 +78,23 @@
       "dag": "2026-11-14",
       "wat": "Ronde 3 (Henkjan: \"Dit moet echt via onze chat : Tijden, telefoon en adres als losse regels, met als laatste regel Been there? en dan intelligente eenvoudige vragen .\"): feiten, sterren en twee slimme vragen als regels in de chat van de site; sterren in de chat gaan naar de reviews van de zaak; typen gaat met de feiten als context naar de chat. Proef: knop, buurt, vragen (twee slimme vragen of geen)."
     }
-  ]
+  ],
+  "titels": [
+    {
+      "id": "score",
+      "mpa": "M",
+      "wat": "Naam Curaçao (4,9★): openingstijden en telefoon; alleen bij 20 of meer Google-reviews"
+    },
+    {
+      "id": "open-vandaag",
+      "mpa": "P",
+      "wat": "Naam Curaçao: vandaag open? Tijden, telefoon en route"
+    },
+    {
+      "id": "soort-wijk",
+      "mpa": "M",
+      "wat": "Naam, <soort enkelvoud> in <wijk> (Curaçao); eerst enkelvoud per soort in data/cur/gidsnamen.json"
+    }
+  ],
+  "uitleg_titels": "Titelproef op de bedrijfspagina's (lib/curvind.js TITEL_PROEF, arm uit de slug): wint een versie (oordeel in /api/gsc?op=curvind), dan wordt die a en komt de bovenste titel hieronder als b, met een nieuwe startdatum (sinds) zodat er opnieuw gemeten wordt."
 }

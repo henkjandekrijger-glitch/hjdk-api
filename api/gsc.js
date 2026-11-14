@@ -163,6 +163,12 @@ export default async function handler(req, res) {
       const l = await sites(oidc); const prop = propFor(l, 'curacao.day'); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot curacao.day' });
       const GV = await import('../lib/curgevonden.js'), C = await import('../lib/cur.js'); return res.status(200).json({ ok: true, ...(await GV.gscRonde(pageRows, prop, oidc, { GIDS_PAD: C.GIDS_PAD, ONDERWERPEN: C.ONDERWERPEN })) });
     }
+    if (op === 'curvind') { // 14 nov 2026 (Henkjan: "En zorg dat ze iedere dag beter gevonden worden met de nacht lus voor bedrijfs keuzehulpen ."): vindbaarheid van bedrijfspagina's en keuzehulpen, titelproef en kansen (lib/curvind.js); beschermde host of token
+      if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken && !isCron) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const l = await sites(oidc); const prop = propFor(l, 'curacao.day'); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot curacao.day' });
+      const V = await import('../lib/curvind.js'), C = await import('../lib/cur.js'); res.setHeader('cache-control', 'no-store');
+      return res.status(200).json({ ok: true, ...(await V.curVind({ pageRows, rows, prop, oidc, GIDS_PAD: C.GIDS_PAD, ONDERWERPEN: C.ONDERWERPEN })) });
+    }
     if (op === 'curinhoud') { // 8 nov 2026 contentlus curacao.day (Henkjan: "maak een optimalisatie content lus voor de hele site dagelijks ... onderhoud van alle content . Wekelijks"): pagina's en zoekvragen uit Search Console, standaard 28 dagen; alleen via de beschermde host of token
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const l = await sites(oidc); const prop = propFor(l, 'curacao.day'); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot curacao.day' });
