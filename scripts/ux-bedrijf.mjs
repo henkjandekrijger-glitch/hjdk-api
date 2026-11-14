@@ -28,6 +28,7 @@ const REGELS = {
   geenfeit: 'tijden, telefoon en adres ontbreken (in de chat als regels, of zonder JavaScript als feitenblok)',
   tikklein: 'knop of link kleiner dan 40 px hoog in het eerste scherm',
   chat: 'de chat van de site over deze zaak ontbreekt, of er staat nog een los vraagveld naast',
+  rust: 'meer dan de vaste typografie: lettermaat buiten 13/16/18/24 (30+ mag voor de titel), meer dan één labelstijl of meer dan één linkstijl (lib/currust.js)',
 };
 
 function lum(c) { const m = String(c).match(/\d+(\.\d+)?/g); if (!m) return null; const [r, g, b] = m.slice(0, 3).map(Number).map(v => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }); return 0.2126 * r + 0.7152 * g + 0.0722 * b; }
@@ -50,7 +51,8 @@ for (const f of files) {
       const caps = [...main.querySelectorAll('a.bz-rij b, a.bz-rij small, .g-rij a, .g-sub')].filter(zicht).map(x => x.innerText.trim()).filter(t => (/[A-Z]{4}/.test(t) && t === t.toUpperCase()) || (/^[a-z]{3}/.test(t) && t === t.toLowerCase()));
       const rijen = [...main.querySelectorAll('section')].filter(zicht).map(s => s.querySelectorAll('.line').length).reduce((a, x) => Math.max(a, x), 0);
       const chat = !!document.querySelector('[data-cw-ama][data-ond]') && !document.querySelector('form.cwq'), feit = !!main.querySelector('.bz-feit, li.ama-feit'), cwa = [...document.querySelectorAll('section.cwa')].filter(zicht).length;
-      return { chat, tekst, con, tb: tb ? { bottom: tb.bottom } : null, klein, h2, caps, rijen, feit, cwa, hoogte: document.documentElement.scrollHeight, breed: document.documentElement.scrollWidth > document.documentElement.clientWidth + 2 };
+      const rust = { maat: [], lab: new Set(), link: new Set() }; for (const el of document.querySelectorAll('body *')) { if (!zicht(el) || el.closest('.brand,.merk')) continue; const t = [...el.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent.trim()).join('').trim(); if (t.length < 2) continue; const s = getComputedStyle(el), px = parseFloat(s.fontSize); if (px < 30 && ![13, 16, 18, 24].includes(px) && rust.maat.length < 3) rust.maat.push(s.fontSize + ' "' + t.slice(0, 20) + '"'); if (s.textTransform === 'uppercase') rust.lab.add(s.fontSize + ' ' + s.fontWeight + ' ' + s.color); if (el.tagName === 'A' && s.textDecorationLine.includes('underline')) rust.link.add(s.fontSize + ' ' + s.fontWeight + ' ' + s.color + ' ' + s.textDecorationColor); }
+      return { rust: { maat: rust.maat, lab: [...rust.lab], link: [...rust.link] }, chat, tekst, con, tb: tb ? { bottom: tb.bottom } : null, klein, h2, caps, rijen, feit, cwa, hoogte: document.documentElement.scrollHeight, breed: document.documentElement.scrollWidth > document.documentElement.clientWidth + 2 };
     }, { w, h });
     const tag = w + 'x' + h + (cs === 'dark' ? ' donker' : '');
     if (cs === 'light' && w === 390) {
@@ -65,6 +67,7 @@ for (const f of files) {
       if (d.rijen >= 7) voeg('week', d.rijen + ' regels');
       if (!d.feit) voeg('geenfeit', '');
       if (!d.chat) voeg('chat', '');
+      if (d.rust.maat.length || d.rust.lab.length > 1 || d.rust.link.length > 1) voeg('rust', [d.rust.maat.join(', '), d.rust.lab.length > 1 ? d.rust.lab.length + ' labelstijlen' : '', d.rust.link.length > 1 ? d.rust.link.length + ' linkstijlen' : ''].filter(Boolean).join('; '));
     }
     if (w === 360) { if (!d.tb || d.tb.bottom > h) voeg('vouw', d.tb ? 'onderkant knoppen op ' + Math.round(d.tb.bottom) + ' px' : 'geen knoppen'); if (d.klein.length) voeg('tikklein', d.klein[0]); }
     if (d.breed) voeg('breed', tag);
