@@ -22,7 +22,7 @@ const REGELS = {
   contrast: 'tekst haalt geen contrast 4,5 (WCAG AA) tegen zijn achtergrond',
   vouw: 'de knoppen (bellen, route) staan niet in het eerste scherm van 360x640',
   lang: 'pagina langer dan 2.800 px op 390 breed: te veel elementen',
-  hoofd: 'naam of adres in HOOFDLETTERS in een lijst',
+  hoofd: 'naam of adres in HOOFDLETTERS of helemaal klein in een lijst',
   breed: 'pagina scrollt zijwaarts',
   week: 'zeven regels openingstijden: één regel ("Elke dag 08:00-20:00") met uitklap',
   geenfeit: 'geen feitenblok (tijden, telefoon, adres) direct onder de knoppen',
@@ -47,7 +47,7 @@ for (const f of files) {
       const tik = main.querySelector('.tik'), tb = tik ? tik.getBoundingClientRect() : null;
       const klein = [...main.querySelectorAll('.tik a, .bz-feit a, a.bz-rij')].filter(zicht).filter(a => { const r = a.getBoundingClientRect(); return r.top < h && r.height < 40 && !a.closest('.bz-feit'); }).map(a => a.innerText.trim().slice(0, 30));
       const h2 = [...main.querySelectorAll('h2')].filter(zicht).map(x => x.innerText.trim());
-      const caps = [...main.querySelectorAll('a.bz-rij b, a.bz-rij small, .g-rij a, .g-sub')].filter(zicht).map(x => x.innerText.trim()).filter(t => /[A-Z]{4}/.test(t) && t === t.toUpperCase());
+      const caps = [...main.querySelectorAll('a.bz-rij b, a.bz-rij small, .g-rij a, .g-sub')].filter(zicht).map(x => x.innerText.trim()).filter(t => (/[A-Z]{4}/.test(t) && t === t.toUpperCase()) || (/^[a-z]{3}/.test(t) && t === t.toLowerCase()));
       const rijen = [...main.querySelectorAll('section')].filter(zicht).map(s => s.querySelectorAll('.line').length).reduce((a, x) => Math.max(a, x), 0);
       const chat = !!document.querySelector('[data-cw-ama][data-ond]') && !document.querySelector('form.cwq'), feit = !!main.querySelector('.bz-feit'), cwa = [...document.querySelectorAll('section.cwa')].filter(zicht).length;
       return { chat, tekst, con, tb: tb ? { bottom: tb.bottom } : null, klein, h2, caps, rijen, feit, cwa, hoogte: document.documentElement.scrollHeight, breed: document.documentElement.scrollWidth > document.documentElement.clientWidth + 2 };
