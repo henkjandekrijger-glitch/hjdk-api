@@ -25,6 +25,19 @@ De overdracht is de complete werking en stand (Henkjan 19 okt: "Zorg dat op verc
 - Werk je aan Clickmind? De overdracht daarvan bouwt zichzelf op uit `lib/overdracht.js` (https://hjdk-api-henq.vercel.app/api/mm/overdracht); zet nieuwe vaste kennis daar.
 - Werk je aan de Amazon-blanket, Mondiad of CTR-tests? Vaste kennis in `lib/handover.js` en in de skill campagnes-henkjan.
 
+## curacao.day bedrijfspagina's: strak en lerend (Henkjan, 14 nov 2026)
+
+"Deze paginas moeten echt veel veel strakker ... doe ook echt UX asessment ... en neem dan mee in dagelijkse update vd bedrijven" en "Maak de pagina helemaal lerend op interactiviteit ."
+
+- Code: `lib/cur.js` renderGidsBedrijf, `lib/curux.js` (opmaak, proef in de pagina, tikken per blok), `lib/curbedrijf.js`. Volgorde: kaart (open nu, score, knoppen), feitenblok (tijden op één regel, telefoon als +599 9 738 4660, adres zonder Plus Code), sterren, vraag en ochtendmail (één keer), zaken dichtbij met afstand, gevonden, eigenaar.
+- Lerend: Clickmind-proef `curbedrijf` (`lib/proef.js`): elke bezoeker krijgt per onderdeel een versie, waarde = zijn sterkste tik (bellen 10, WhatsApp 10, route 8, website 5, vraag 4, sterren 3, ander bedrijf 2, iets aangetikt 1, claim 12). Stand: `https://keuzehulp.best/api/mm/proefstand?site=curbedrijf&vorm=tekst`. Tikken per blok per 100 bezoeken: `https://hjdk-api-henq.vercel.app/curacao-gids?op=uxstand`.
+- Elke nachtronde van de gidsen en bedrijvengids doet ook de UX-ronde:
+  1. Haal 3 bedrijfspagina's op met web_fetch_vercel_url (`https://hjdk-api-henq.vercel.app/curacao-gids?m=<taal>&s=businesses&b=<soort>&c=<zaak>`): één uit de categorieën van vannacht, één met veel reviews, één zonder tijden of telefoon; elke nacht een andere taal. Bewaar het veld "text" als .html en draai `node scripts/ux-bedrijf.mjs <bestanden>`. Repareer elke fout (hooguit 5 per nacht) en draai opnieuw tot hij slaagt.
+  2. Lees de proefstand. Heeft een onderdeel "winnaar: x": maak die versie de standaard (versie a in de code), zet de verliezer uit (`uit: true`) en zet de bovenste uitdager van dat onderdeel uit `data/cur/ux-uitdagers.json` erbij als nieuwe versie; hoogstens één onderdeel per nacht. Zet de uitkomst onder `gedaan`.
+  3. Lees uxstand: het blok met de minste tikken per 100 bezoeken (vanaf 200 bezoeken) is het grootste lek. Bepaal of het motivatie, vermogen of prompt is (leerlus-skill, B = MAP) en zet een uitdager voor dat blok bovenaan de lijst.
+  4. Eén regel in het logboek van `lib/overdracht-kz-tekst.js` en in het eindbericht: welke fouten gerepareerd, welke versie wint, wat erbij kwam. Geen nullen melden.
+- Vaste regels (de controle bewaakt ze): geen Plus Code, telefoon leesbaar, geen "nog geen" of nullen, geen blok twee keer, knoppen in het eerste scherm van 360x640, contrast 4,5 in licht en donker, pagina korter dan 2.800 px, namen niet in HOOFDLETTERS, tijden op één regel.
+
 ## Altijd
 
 - Altijd eerst `git pull --rebase`, daarna pushen naar main (Vercel rolt uit). Commit met expliciete bestandsnamen (nooit `git add -A`). Sleutels nooit in code, pagina's of URL's.
