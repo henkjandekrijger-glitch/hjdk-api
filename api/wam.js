@@ -360,9 +360,9 @@ export default async function handler(req, res) {
     }
     if (op === 'mailontvang') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); return res.status(200).json(await POST.ontvangAan('https://wearemany.now/api/wam?op=mailin')); }
     // WhatsApp-koppeling (repo whatsappp-mcp, src/wam.js): aanmelden, binnenkomende berichten, wachtrij ophalen. Alles met de sleutel van de koppeling.
-    if (op === 'wareg' || op === 'wain' || op === 'wauit' || op === 'wakoppel') {
+    if (op === 'wareg' || op === 'wain' || op === 'wauit' || op === 'wakoppel' || op === 'wanr') {
       if (req.method !== 'POST') return res.status(405).end(); const b = leesBody(req) || {};
-      const r = W.wamSchoon(op === 'wareg' ? await W.waReg(b) : op === 'wain' ? await W.waIn(b) : op === 'wakoppel' ? await W.waKoppel(b) : await W.waUit(b));
+      const r = W.wamSchoon(op === 'wareg' ? await W.waReg(b) : op === 'wain' ? await W.waIn(b) : op === 'wakoppel' ? await W.waKoppel(b) : op === 'wanr' ? await W.waNr(b) : await W.waUit(b));
       return res.status(r.fout === 'sleutel' ? 401 : 200).json(r);
     }
     if (op === 'cq') { if (!beschermd(host)) return res.status(404).send('Niet gevonden'); res.setHeader('cache-control', 'no-store'); return res.status(200).json(await W.cqLijst(q('kort') === '1')); }
