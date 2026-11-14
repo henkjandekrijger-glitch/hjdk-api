@@ -27,6 +27,7 @@ const REGELS = {
   week: 'zeven regels openingstijden: één regel ("Elke dag 08:00-20:00") met uitklap',
   geenfeit: 'geen feitenblok (tijden, telefoon, adres) direct onder de knoppen',
   tikklein: 'knop of link kleiner dan 40 px hoog in het eerste scherm',
+  chat: 'de chat van de site over deze zaak ontbreekt, of er staat nog een los vraagveld naast',
 };
 
 function lum(c) { const m = String(c).match(/\d+(\.\d+)?/g); if (!m) return null; const [r, g, b] = m.slice(0, 3).map(Number).map(v => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }); return 0.2126 * r + 0.7152 * g + 0.0722 * b; }
@@ -48,8 +49,8 @@ for (const f of files) {
       const h2 = [...main.querySelectorAll('h2')].filter(zicht).map(x => x.innerText.trim());
       const caps = [...main.querySelectorAll('a.bz-rij b, a.bz-rij small, .g-rij a, .g-sub')].filter(zicht).map(x => x.innerText.trim()).filter(t => /[A-Z]{4}/.test(t) && t === t.toUpperCase());
       const rijen = [...main.querySelectorAll('section')].filter(zicht).map(s => s.querySelectorAll('.line').length).reduce((a, x) => Math.max(a, x), 0);
-      const feit = !!main.querySelector('.bz-feit'), cwa = [...document.querySelectorAll('section.cwa')].filter(zicht).length;
-      return { tekst, con, tb: tb ? { bottom: tb.bottom } : null, klein, h2, caps, rijen, feit, cwa, hoogte: document.documentElement.scrollHeight, breed: document.documentElement.scrollWidth > document.documentElement.clientWidth + 2 };
+      const chat = !!document.querySelector('[data-cw-ama][data-ond]') && !document.querySelector('form.cwq'), feit = !!main.querySelector('.bz-feit'), cwa = [...document.querySelectorAll('section.cwa')].filter(zicht).length;
+      return { chat, tekst, con, tb: tb ? { bottom: tb.bottom } : null, klein, h2, caps, rijen, feit, cwa, hoogte: document.documentElement.scrollHeight, breed: document.documentElement.scrollWidth > document.documentElement.clientWidth + 2 };
     }, { w, h });
     const tag = w + 'x' + h + (cs === 'dark' ? ' donker' : '');
     if (cs === 'light' && w === 390) {
@@ -63,6 +64,7 @@ for (const f of files) {
       if (d.caps.length) voeg('hoofd', d.caps[0]);
       if (d.rijen >= 7) voeg('week', d.rijen + ' regels');
       if (!d.feit) voeg('geenfeit', '');
+      if (!d.chat) voeg('chat', '');
     }
     if (w === 360) { if (!d.tb || d.tb.bottom > h) voeg('vouw', d.tb ? 'onderkant knoppen op ' + Math.round(d.tb.bottom) + ' px' : 'geen knoppen'); if (d.klein.length) voeg('tikklein', d.klein[0]); }
     if (d.breed) voeg('breed', tag);

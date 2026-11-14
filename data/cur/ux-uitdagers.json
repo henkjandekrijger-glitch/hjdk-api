@@ -2,30 +2,77 @@
   "uitleg": "Uitdagers voor de Clickmind-proef curbedrijf (bedrijfspagina's curacao.day, lib/proef.js PROEVEN.curbedrijf, lib/curux.js). De nachtronde pakt per nacht hoogstens één: heeft een onderdeel een winnaar (95% kans, elke versie 300 keer gezien), dan wordt die standaard en komt de bovenste uitdager van dat onderdeel erbij als nieuwe versie. Een onderdeel zonder uitdagers gaat uit de proef en het bovenste nieuwe onderdeel komt erin. mpa = waar het op werkt (B = MAP: motivatie, vermogen, prompt). Haal een uitdager weg zodra hij gebouwd is; zet erbij wat de uitkomst was onder 'gedaan'.",
   "onderdelen": {
     "knop": [
-      { "id": "wa-voor", "mpa": "P", "wat": "WhatsApp gevuld voorop als het nummer mobiel is (9-5xx, 9-6xx), anders Bellen" },
-      { "id": "vast", "mpa": "A", "wat": "Bellen en Route als vaste balk onderaan zodra de knoppen uit beeld zijn" }
+      {
+        "id": "wa-voor",
+        "mpa": "P",
+        "wat": "WhatsApp gevuld voorop als het nummer mobiel is (9-5xx, 9-6xx), anders Bellen"
+      },
+      {
+        "id": "vast",
+        "mpa": "A",
+        "wat": "Bellen en Route als vaste balk onderaan zodra de knoppen uit beeld zijn"
+      }
     ],
     "buurt": [
-      { "id": "open-stip", "mpa": "M", "wat": "Dichtbij met een groene stip en 'open' per zaak die nu open is" },
-      { "id": "kaart", "mpa": "A", "wat": "Kleine kaart met de zaak en de 6 dichtstbijzijnde, tik = die zaak" }
+      {
+        "id": "open-stip",
+        "mpa": "M",
+        "wat": "Dichtbij met een groene stip en 'open' per zaak die nu open is"
+      },
+      {
+        "id": "kaart",
+        "mpa": "A",
+        "wat": "Kleine kaart met de zaak en de 6 dichtstbijzijnde, tik = die zaak"
+      }
     ],
-    "rv": [
-      { "id": "in-kaart", "mpa": "P", "wat": "Eén rij sterren direct onder de knoppen ('Was je er? ★★★★★'), het formulier pas na een tik" }
-    ],
-    "vraag": [
-      { "id": "voorbeelden", "mpa": "A", "wat": "Twee voorbeeldvragen als tik ('Open op zondag?', 'Kan ik pinnen?') boven het vraagveld" }
-    ],
-    "vandaag": [
-      { "id": "dichtbij-3km", "mpa": "M", "wat": "Alleen wat vandaag binnen 3 km van de zaak gebeurt (agenda met coördinaten), anders niets" }
+    "chat": [
+      {
+        "id": "onder-knoppen",
+        "mpa": "P",
+        "wat": "De chat direct onder de knoppen, de feiten erna"
+      },
+      {
+        "id": "echte-vraag",
+        "mpa": "M",
+        "wat": "Vierde voorbeeldvraag: de vaakst gestelde echte chatvraag over deze soort zaak (alleen met antwoord uit de gegevens)"
+      }
     ]
   },
   "nieuw": [
-    { "id": "deel", "mpa": "P", "wat": "Knop 'Stuur adres door' (WhatsApp-deel met naam, tijden en routelink) onder de feiten" },
-    { "id": "foto", "mpa": "M", "wat": "Eerste foto van de zaak (van de eigenaar of een vrije foto met maker) bovenaan de kaart" },
-    { "id": "kop", "mpa": "M", "wat": "Onder de naam één regel met soort en wijk ('Supermarkt in Seru Largu') in plaats van alleen de rubriek bovenaan" },
-    { "id": "drukte", "mpa": "M", "wat": "Regel 'meestal rustig nu' uit de openingstijden en het uur (alleen met bron, anders weglaten)" }
+    {
+      "id": "deel",
+      "mpa": "P",
+      "wat": "Knop 'Stuur adres door' (WhatsApp-deel met naam, tijden en routelink) onder de feiten"
+    },
+    {
+      "id": "foto",
+      "mpa": "M",
+      "wat": "Eerste foto van de zaak (van de eigenaar of een vrije foto met maker) bovenaan de kaart"
+    },
+    {
+      "id": "kop",
+      "mpa": "M",
+      "wat": "Onder de naam één regel met soort en wijk ('Supermarkt in Seru Largu') in plaats van alleen de rubriek bovenaan"
+    },
+    {
+      "id": "drukte",
+      "mpa": "M",
+      "wat": "Regel 'meestal rustig nu' uit de openingstijden en het uur (alleen met bron, anders weglaten)"
+    },
+    {
+      "id": "vandaag-3km",
+      "mpa": "M",
+      "wat": "Regel met wat vandaag binnen 3 km gebeurt (agenda met coördinaten), alleen als er iets is; nooit het hele eiland"
+    }
   ],
   "gedaan": [
-    { "dag": "2026-11-14", "wat": "Nieuwe opmaak (UX-controle: 13 fouten → 0): één kaart, feitenblok, sterren zonder 'nog geen', één aanmeldvak, dichtbij met afstand, belknop weer leesbaar (contrast 1,5 → wit op blauw). Proef gestart met knop, buurt, rv, vraag, vandaag." }
+    {
+      "dag": "2026-11-14",
+      "wat": "Nieuwe opmaak (UX-controle: 13 fouten → 0): één kaart, feitenblok, sterren zonder 'nog geen', één aanmeldvak, dichtbij met afstand, belknop weer leesbaar (contrast 1,5 → wit op blauw). Proef gestart met knop, buurt, rv, vraag, vandaag."
+    },
+    {
+      "dag": "2026-11-14",
+      "wat": "Ronde 2 (Henkjan: \"Veel te druk moet veel cleaner . Chat moet zelfde zijn als heel curacaoday maar dan volledig zijn ingericht op bedrijven met de voorbeelden .\"): feiten zonder blauw vlak, sterren als één regel, websiteknop weg, blok vandaag weg, aanmeldvak klein, eigenaar in één regel, de chat van de site met kop en drie voorbeeldvragen over de zaak met direct antwoord. Proef nu knop, buurt, chat (rv, vraag, vandaag vervallen). 2.047 px."
+    }
   ]
 }
