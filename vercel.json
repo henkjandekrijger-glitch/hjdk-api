@@ -361,6 +361,26 @@
       "destination": "/api/wam?op=pagina"
     },
     {
+      "source": "/about",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=over"
+    },
+    {
+      "source": "/over",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=over"
+    },
+    {
       "source": "/privacy",
       "has": [
         {
