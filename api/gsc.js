@@ -5,7 +5,7 @@
 import { kv } from '../lib/db.js';
 import { queryMatchesGuide } from '../lib/organic-policy.js';
 import { nieuweProef } from '../lib/zicht.js';
-import { SITES, SITEMAPS, claims, sites, propFor, rows, totals, pageRows, analyse, submitSitemap, sitemapInfo, ruis, inspect } from '../lib/gsc.js';
+import { SITES, SITEMAPS, claims, sites, propFor, rows, totals, pageRows, analyse, submitSitemap, sitemapInfo, ruis, inspect, token } from '../lib/gsc.js';
 import { kwaliteitRonde } from '../lib/kwaliteit.js';
 import { MARKETS, items as wtbItems, K as WK, claude, json, indexnow as wtbIndexnow } from '../lib/wtb.js';
 import seed from '../data/kz.json' with { type: 'json' };
@@ -162,6 +162,17 @@ export default async function handler(req, res) {
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken && !isCron) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const l = await sites(oidc); const prop = propFor(l, 'curacao.day'); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot curacao.day' });
       const GV = await import('../lib/curgevonden.js'), C = await import('../lib/cur.js'); return res.status(200).json({ ok: true, ...(await GV.gscRonde(pageRows, prop, oidc, { GIDS_PAD: C.GIDS_PAD, ONDERWERPEN: C.ONDERWERPEN })) });
+    }
+    if (op === 'ytzoek') { // 14 nov 2026 (Henkjan: "dus van dingen die gebeuren op een dag meteen pics bij plaatsen" en "Loop met met door"): YouTube-video's van vandaag rond Curaçao voor 'In beeld' bij evenementen (todayin spel/leerlus/taak-beeld.md); zelfde serviceaccount, YouTube Data API v3 moet aan staan in project hjdk-seo. Beschermde host of token.
+      if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken && !isCron) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      res.setHeader('cache-control', 'no-store'); const qq = String(url.searchParams.get('q') || '').slice(0, 120), na = /^\d{4}-\d{2}-\d{2}$/.test(url.searchParams.get('na') || '') ? url.searchParams.get('na') : new Date(Date.now() - 4 * 36e5).toISOString().slice(0, 10);
+      try {
+        const at = await token(oidc, 'https://www.googleapis.com/auth/youtube.readonly');
+        const p = new URLSearchParams({ part: 'snippet', type: 'video', order: 'date', maxResults: '15', location: '12.17,-68.99', locationRadius: '45km', publishedAfter: na + 'T04:00:00Z', ...(qq ? { q: qq } : {}) });
+        const r = await fetch('https://www.googleapis.com/youtube/v3/search?' + p, { headers: { authorization: 'Bearer ' + at } }); const j = await r.json().catch(() => ({}));
+        if (!r.ok) return res.status(200).json({ ok: false, status: r.status, fout: (j.error && (j.error.message || j.error.status)) || 'fout', reden: j.error && j.error.errors && j.error.errors[0] && j.error.errors[0].reason });
+        return res.status(200).json({ ok: true, na, q: qq, videos: (j.items || []).map(x => ({ id: x.id && x.id.videoId, url: 'https://www.youtube.com/watch?v=' + (x.id && x.id.videoId), titel: x.snippet.title, kanaal: x.snippet.channelTitle, om: x.snippet.publishedAt, live: x.snippet.liveBroadcastContent })) });
+      } catch (e) { return res.status(200).json({ ok: false, fout: String(e.message || e).slice(0, 200) }); }
     }
     if (op === 'curvind') { // 14 nov 2026 (Henkjan: "En zorg dat ze iedere dag beter gevonden worden met de nacht lus voor bedrijfs keuzehulpen ."): vindbaarheid van bedrijfspagina's en keuzehulpen, titelproef en kansen (lib/curvind.js); beschermde host of token
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken && !isCron) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
