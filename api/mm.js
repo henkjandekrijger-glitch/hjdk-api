@@ -365,7 +365,7 @@ export default async function handler(req, res) {
       const TA = await import('../lib/terugauto.js');
       if (op === 'resenddomeinen') return res.status(200).json(await TA.resendDomeinen(kv));
       if (op === 'terugingediend') return res.status(200).json(await TA.markeerIngediend(kv, { net: netNaam(q('net') || 'propeller'), dag: q('dag'), via: q('via') || 'hand', sterk: q('sterk') ? Number(q('sterk')) : null }));
-      return res.status(200).json(await TA.indienAuto(kv, { net: netNaam(q('net') || 'propeller'), dag: q('dag'), droog: q('droog') === '1' }));
+      return res.status(200).json(await TA.indienAuto(kv, { net: netNaam(q('net') || 'propeller'), dag: q('dag'), droog: q('droog') === '1', opnieuw: q('opnieuw') === '1' }));
     }
     if (op === 'terugdag') {
       res.setHeader('cache-control', 'no-store');
