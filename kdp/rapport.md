@@ -82,7 +82,7 @@ Alle Amazon-campagnes: Dynamic bids down only, alleen Amazon (Limit reach to Ama
 | Apocrypha UK | B09YTZ72KZ | £3,36 (£4,56 bij £12,99) | 50% |
 | Duitse titels (paperback EUR 12,99, vanaf ~20 nov) | | ~EUR 5,5 | ~EUR 2,75 |
 
-Cijfers: 11 nov $20,40; 12 nov $13,70; 13 nov $8,20 (Enoch AU $4,21, Teens $2,33, Mom's Word Search US $1,66; ads $3,10 Apocrypha UK + $5,50 Amazon); 7-13 nov $122,39; 1-14 nov $173,35 (nov 2026 ~$12/dag tegen nov 2025 $101/dag); november t/m 13 nov $166,38; Teens november $76,34 uit 27 bestellingen (13 nov).
+Cijfers 14 nov tot 17:30 UTC: $6,70, alles Teens Canada (~2 stuks); Amazon-ads 13-14 nov ~$7,80 + CA$1,80 (PIT BOSS $5,39 7 kliks, Wait That's True $1,97 2 kliks, Teens CA EXACT CA$1,80 2 kliks), 0 aankopen; Teens CA AUTO 249 en PT 85 vertoningen sinds de duw (eerst 42 en 0); Apocrypha UK PropellerAds 14 nov $1,76, 275 kliks; Teens CA-rang 8.889. Cijfers: 11 nov $20,40; 12 nov $13,70; 13 nov $8,20 (Enoch AU $4,21, Teens $2,33, Mom's Word Search US $1,66; ads $3,10 Apocrypha UK + $5,50 Amazon); 7-13 nov $122,39; 1-14 nov $173,35 (nov 2026 ~$12/dag tegen nov 2025 $101/dag); november t/m 13 nov $166,38; Teens november $76,34 uit 27 bestellingen (13 nov).
 
 ## Teens naar #1 in Canada
 
@@ -92,6 +92,8 @@ Teens B0DJQLBM75 (119 reviews, 4,5 ster in CA) verkoopt vooral in Canada: CA-ran
 
 ## Openstaand
 
+- Hardcovers Wait, That's True?! (B0HRKRTRFF) en For Men (B0HRHVDSRT) Live, $24,99 (gezien 14 nov 17:30 UTC).
+- Stocking Stuffers for Adults Kindle (B0DJ3MHCH4, A284PODSXOKXOK): KDP-kwaliteitsmelding "Keywords are missing"; 14 nov 7 zoekwoorden ingevuld en als concept bewaard (stocking stuffers for adults, white elephant gifts for adults funny, fun facts trivia book for adults, bathroom reader for adults, gifts for men who have everything, secret santa gifts for coworkers, conversation starters book for adults). Henkjan klikt Publish: https://kdp.amazon.com/en_US/title-setup/kindle/A284PODSXOKXOK/pricing
 - Kindle-eBooks Wait, That's True?! (A1NZ4PXA2W9L9O) en For Men (A34DE110B1IJJG): Publish faalt met "Please fix the highlighted error(s)" zonder rood veld. 14 nov gecontroleerd: Details en Content Complete, Pricing "In Progress", alle velden gevuld (KDP Select aan, alle territoria, 70%, US $4,99). Publish is Henkjans knop: links in het rapport; blijft het falen, dan KDP Support (alleen met Henkjans ja).
 - Zondag 15 nov 00:12 UTC (trig_01EDncuGEXzWK6QZmy923y8f): paperbacks + hardcovers Adventskalender für Männer en Moment mal, das stimmt?! Für Männer klaarzetten.
 - 15 nov 15:17 UTC: biedingen LC NIEUWJAAR herijken (trig_01XFKR9gQ6X5ahE3CiEckxBh).
