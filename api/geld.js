@@ -7,7 +7,7 @@
 // lib/waarde.js, plus echte Kadoly-verkopen uit de shop zelf), dollar terug per dollar uit, verspild geld en wat Clickmind deed.
 // Alleen lezen: dit scherm wijzigt nooit campagnes, biedingen, budgetten of instellingen van netwerken.
 import { kv } from '../lib/db.js';
-import { leesWaarde, zetWaarde, projectVan, waardeVan, PROJECTEN, PROJECT_NAAM, UITKOMSTEN, UITKOMST_NAAM } from '../lib/waarde.js';
+import { leesWaarde, zetWaarde, ijkWaarde, projectVan, waardeVan, PROJECTEN, PROJECT_NAAM, UITKOMSTEN, UITKOMST_NAAM } from '../lib/waarde.js';
 
 const N = x => { const n = Number(x); return Number.isFinite(n) ? n : 0; };
 const r2 = x => Math.round(N(x) * 100) / 100;
@@ -96,7 +96,7 @@ async function berekenRuw() {
       if (!NETTEN.includes(net)) { if (net !== 'test' && net !== 'onbekend') andereNetten[net] = N(andereNetten[net]) + N(u.echt) + N(u.actie) + N(u.aanmelding) + N(u.dialoog) + N(u.koop); continue; }
       let p = projVan(k); if (!p) { p = 'overig'; zonderNaam[k] = 1; }
       const t = tel[p][d] || (tel[p][d] = { echt: 0, actie: 0, aanmelding: 0, lezer: 0, dialoog: 0, koop: 0 });
-      t.echt += Math.max(N(u.echt), N(x.m), N(m.mens)); t.actie += N(u.actie) + N(x.actie); t.aanmelding += N(u.aanmelding) + N(x.aanmelding); t.dialoog += N(u.dialoog); t.koop += N(u.koop);
+      t.echt += Math.max(N(u.echt), N(x.m), N(m.mens)); t.actie += N(u.actie) + N(x.actie); t.aanmelding += N(u.aanmelding) + N(x.aanmelding); t.dialoog += N(u.dialoog); t.koop += N(u.koop); t.koopAd = N(t.koopAd) + N(u.koop); /* koopAd: verkoop die aantoonbaar uit een advertentie kwam (klik-id), voor de ijk */
       if (N(u.pbbot)) pbbot[p][d] = N(pbbot[p][d]) + N(u.pbbot);
     }
     // lezers komen alleen per zone binnen (todayin Curaçao, bzz /api/cw): toegerekend aan todayin
@@ -106,6 +106,7 @@ async function berekenRuw() {
 
   // 3. Kadoly: de shop zelf (betaalde bestellingen uit de datapagina van de shop, elk uur door de shop-lus opgehaald)
   const shop = { verkopen: {}, omzetEur: {}, margeEur: {}, margeBekend: 0, metKenmerk: 0, bestellingen: [], feedAt: null };
+  const shopAd = {};
   try {
     const f = await kv.get('hjdk:shop:lusfeed'); shop.feedAt = f && f.at ? new Date(f.at).toISOString() : null;
     let kost = null; try { kost = await kv.get('hjdk:shop:kost'); } catch (e) {}
@@ -115,11 +116,11 @@ async function berekenRuw() {
       const v = N(o.v), n = Math.max(1, N(o.n)), k = kost && kost[o.p];
       let marge = null; if (k && k.c != null) marge = v / 1.21 - n * N(k.c) - N(k.z) - (0.029 * v + 0.30); else if (k && k.m != null) marge = n * N(k.m);
       shop.verkopen[d] = N(shop.verkopen[d]) + 1; shop.omzetEur[d] = N(shop.omzetEur[d]) + v; if (marge != null) { shop.margeEur[d] = N(shop.margeEur[d]) + marge; shop.margeBekend++; }
-      if (o.hj) shop.metKenmerk++;
+      if (o.hj) { shop.metKenmerk++; shopAd[d] = N(shopAd[d]) + 1; }
       shop.bestellingen.push({ dag: d, bedragEur: r2(v), margeEur: marge == null ? null : r2(marge), viaAdvertentie: !!o.hj, methode: o.m || '' });
     }
   } catch (e) { fouten.push('shopbestellingen: ' + String(e && e.message || e).slice(0, 80)); }
-  for (const d of D) if (shop.verkopen[d]) { const t = tel.kadoly[d] || (tel.kadoly[d] = { echt: 0, actie: 0, aanmelding: 0, lezer: 0, dialoog: 0, koop: 0 }); t.koop = Math.max(t.koop, shop.verkopen[d]); }
+  for (const d of D) if (shop.verkopen[d]) { const t = tel.kadoly[d] || (tel.kadoly[d] = { echt: 0, actie: 0, aanmelding: 0, lezer: 0, dialoog: 0, koop: 0 }); t.koop = Math.max(t.koop, shop.verkopen[d]); t.koopAd = Math.max(N(t.koopAd), N(shopAd[d])); }
 
   // 4. verspild
   const versp = { dubbel: {}, dubbelFout: null, blok: null, aankomst: null };
@@ -168,7 +169,7 @@ async function ruwStand(vers) {
   // al iemand aan het rekenen? dan de vorige stand (als die er is)
   const slot = await kv.raw(['SET', K_LOCK, '1', 'NX', 'EX', '100']).catch(() => 'OK');
   if (slot !== 'OK' && c) return c;
-  try { const r = await berekenRuw(); await kv.set(K_STAND, r, { ex: 6 * 3600 }).catch(() => {}); return r; }
+  try { const r = await berekenRuw(); await kv.set(K_STAND, r, { ex: 6 * 3600 }).catch(() => {}); await ijkWaarde(kv, r).catch(() => {}); return r; }
   finally { await kv.del([K_LOCK]).catch(() => {}); }
 }
 
@@ -312,8 +313,17 @@ function leesBody(req) {
 
 export default async function handler(req, res) {
   res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
-  if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
   const url = new URL(req.url, 'https://' + (req.headers.host || 'x'));
+  // cron (elk uur op :08, voor de leerronde van :12): verse stand en de munt ijken; geeft geen cijfers terug
+  if (url.searchParams.get('op') === 'cron') {
+    const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+    if (!isCron && !beschermd(req)) return res.status(403).json({ ok: false });
+    let c = null; try { c = await kv.get(K_STAND); } catch (e) {}
+    const oud = c && c.at ? Date.now() - Date.parse(c.at) : Infinity;
+    try { const r = await ruwStand(oud > 30 * 60e3); if (oud <= 30 * 60e3) await ijkWaarde(kv, r).catch(() => {}); return res.status(200).json({ ok: true, at: r.at }); }
+    catch (e) { return res.status(500).json({ ok: false, fout: String(e && e.message || e).slice(0, 120) }); }
+  }
+  if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
   try {
     if (req.method === 'POST') {
       const b = leesBody(req); let obj;

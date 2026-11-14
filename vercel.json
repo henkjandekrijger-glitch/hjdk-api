@@ -101,6 +101,10 @@
       "schedule": "40 5 * * *"
     },
     {
+      "path": "/api/geld?op=cron",
+      "schedule": "8 * * * *"
+    },
+    {
       "path": "/api/mm/ruwarchief",
       "schedule": "23 * * * *"
     },
