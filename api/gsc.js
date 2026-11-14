@@ -235,6 +235,25 @@ export default async function handler(req, res) {
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const { merchantStand } = await import('../lib/merchant.js'); const { token } = await import('../lib/gsc.js'); return res.status(200).json(await merchantStand(await token(oidc, 'https://www.googleapis.com/auth/content'), url.searchParams.get('account') || '5876502305', { dev: url.searchParams.get('dev') || '' }));
     }
+    if (op === 'radar') { // 14 nov 2026 (Henkjan: "voer door"): Demand Radar leest de zoekvragen van alle eigen sites als gratis Google-bron.
+      // Alleen voor het Vercel-project demand_radar (ondertekend OIDC-token, geen gedeeld geheim). 2 × 14 dagen per land, 12 uur bewaard.
+      const { verifyVercelOidc } = await import('../lib/oidcverify.js'), { queryCountryRows } = await import('../lib/gsc.js');
+      try { await verifyVercelOidc(String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''), { owner: 'henq', projects: ['demand_radar'] }); }
+      catch (e) { return res.status(401).json({ ok: false, fout: 'alleen voor demand_radar (' + String(e.message).slice(0, 60) + ')' }); }
+      const ck = 'hjdk:gsc:radar', c0 = await kv.get(ck).catch(() => null);
+      if (c0 && c0.t > Date.now() - 12 * 3600e3 && !url.searchParams.get('vers')) return res.status(200).json(c0);
+      const list = await sites(oidc), out = { ok: true, t: Date.now(), sites: [] };
+      for (const prop of list.slice(0, 25)) {
+        try {
+          const [nu, voor] = await Promise.all([queryCountryRows(prop, 3, 16, oidc), queryCountryRows(prop, 17, 30, oidc)]);
+          const prev = new Map(voor.map(r => [r[0] + '|' + r[1], r[2]]));
+          const rows = nu.map(r => [r[0], r[1], r[2], prev.get(r[0] + '|' + r[1]) || 0, r[3], r[4]]).filter(r => r[2] >= 5 || r[3] >= 5).sort((a, b) => b[2] - a[2]).slice(0, 500);
+          out.sites.push({ prop, rows });
+        } catch (e) { out.sites.push({ prop, fout: String(e.message).slice(0, 120) }); }
+      }
+      await kv.set(ck, out, { ex: 86400 }).catch(() => {});
+      return res.status(200).json(out);
+    }
     if (op === 'whoami') { const c = claims(oidc); let google = null; try { const l = await sites(oidc); google = { ok: true, eigendommen: l.length, sites: Object.fromEntries(Object.entries(SITES).map(([k, h]) => [h, !!propFor(l, h)])) }; } catch (e) { google = { ok: false, fout: String(e.message).slice(0, 200) }; } return res.status(200).json({ ok: !!c, iss: c && c.iss, aud: c && c.aud, sub: c && c.sub, google }); }
     if (op === 'kwaliteit') { // kwaliteitsronde los draaien (gratis: Search Console-paginatotalen + bewaarde indexstatus), alleen via de beschermde host of token; lezen: op=kwaliteit&lees=1
       if (url.searchParams.get('lees') === '1') { const v = await kv.mget('hjdk:kw:kz', 'hjdk:kw:us', 'hjdk:kw:de'); return res.status(200).json({ ok: true, kz: v[0], us: v[1], de: v[2] }); }
