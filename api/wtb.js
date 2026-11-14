@@ -13,7 +13,7 @@ import { lookNieuw } from '../lib/look.js';
 import { colourTag, colourReport, measureTag } from '../lib/kleur.js';
 import { kwaliteit } from '../lib/kwaliteit.js';
 import { faqZonderDubbel } from '../lib/faq-dubbel.js';
-import { MARKETS, marketFor, K, DAY, esc, items, amzSearch, amzReady, searchLink, INDEXNOW_KEY } from '../lib/wtb.js';
+import { MARKETS, marketFor, K, DAY, esc, items, amzSearch, amzReady, searchLink, INDEXNOW_KEY, indexnow, log } from '../lib/wtb.js';
 
 const BOTS = [['googlebot', /Googlebot|Google-InspectionTool|GoogleOther/i], ['bingbot', /bingbot/i], ['oai-searchbot', /OAI-SearchBot/i], ['chatgpt-user', /ChatGPT-User/i], ['gptbot', /GPTBot/i], ['claude', /Claude-User|Claude-SearchBot|ClaudeBot|anthropic-ai/i], ['perplexity', /Perplexity/i], ['applebot', /Applebot/i], ['meta', /meta-external|facebookexternalhit/i], ['amazonbot', /Amazonbot/i], ['duckduck', /DuckDuck/i]];
 const botOf = ua => { for (const [n, re] of BOTS) if (re.test(ua)) return n; return /bot|crawl|spider|slurp|preview/i.test(ua) ? 'other' : ''; };
@@ -147,6 +147,12 @@ export default async function handler(req, res) {
   const m = marketFor(req); if (!m) return res.status(404).send('unknown site');
   const path = '/' + String(q.get('slug') || '');
   if (GSC_FILES.includes(path.slice(1))) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send('google-site-verification: ' + path.slice(1)); } // eigendomsbewijs Search Console
+  if (op === 'indexnow-boeken') { // boekgidsen (lib/kdp-guides.js) melden bij Bing/IndexNow; Bing voedt ChatGPT-zoeken en Copilot. Hooguit eens per 6 uur.
+    res.setHeader('cache-control', 'no-store'); const sl = 'hjdk:wtb:' + m.id + ':indexnow-boeken'; if (await kv.get(sl).catch(() => null)) return res.status(200).json({ ok: true, overgeslagen: 'al gemeld in de laatste 6 uur' });
+    const urls = (await items(m)).filter(x => x.decisionKind === 'boek').map(x => 'https://' + m.host + '/' + x.slug); if (!urls.length) return res.status(200).json({ ok: true, urls: 0 });
+    const st = await indexnow(m, urls.concat(['https://' + m.host + '/', 'https://' + m.host + '/sitemap.xml', 'https://' + m.host + '/llms.txt'])); await kv.set(sl, { at: Date.now(), st, n: urls.length }, { ex: 21600 }); await log({ m: m.id, wat: 'indexnow-boeken', n: urls.length, indexnow: st });
+    return res.status(200).json({ ok: st >= 200 && st < 300, status: st, urls });
+  }
   if (op === 'robots') { res.setHeader('content-type', 'text/plain'); return res.status(200).send(`# Buying guides may be read and cited by search engines and AI assistants. Summary: https://${m.host}/llms.txt\nUser-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: https://${m.host}/sitemap.xml\n${process.env.CUR_THUIS !== 'oud' ? '' : (m.host.startsWith('kaufberater') ? ['de'] : ['en', 'es', 'pt']).map(l => `Sitemap: https://${m.host}/api/keuze-tools?tool=cur&op=gidssitemap&m=${l}\n`).join('')}`); }
   if (op === 'ixkey') { res.setHeader('content-type', 'text/plain'); return res.status(200).send(INDEXNOW_KEY); }
   let all = await items(m);
