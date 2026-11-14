@@ -101,4 +101,17 @@ assert.ok(fh.includes('niet dat onze producten zijn teruggeroepen'));
 assert.ok((await render('op=llmsfull')).body.includes(bewijs.BRONNEN.ethanolHouswise.url));
 console.log('Tafelhaard: zes feitenkaarten, bronnen/schema gelijk en geen automatische brandend-gebruikaanbeveling.');
 
+const candle=gidsen.GIDSEN['kaarsen-cadeau'];
+assert.ok(!JSON.stringify(candle).includes('veilige grens'));
+assert.ok(candle.faq.find(f=>f.v.includes('opgegeven brandduur')).a.includes('onbekend'));
+assert.ok(!candle.check.regels.find(r=>r.id==='geurgevoelig').pid);
+const ch=(await render('slug=kaarsen-cadeau')).body;
+const cg=[...ch.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1])['@graph']||[]);
+assert.deepEqual(cg.find(x=>x['@type']==='Article').citation,candle.bronnen.map(id=>bewijs.BRONNEN[id].url));
+for(const id of candle.bronnen)assert.ok(ch.includes('href="'+bewijs.BRONNEN[id].url+'"'));
+assert.ok(ch.includes('geen zuivere vergelijking van wassoorten'));
+assert.ok(ch.includes('voedselcontactgeschiktheid'));
+console.log('Kaarsen: bronnen zichtbaar/schema gelijk, onbekende brandduur en geurklachtenroute gecontroleerd.');
+
+
 
