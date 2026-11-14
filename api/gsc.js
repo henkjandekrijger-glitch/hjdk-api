@@ -158,6 +158,11 @@ export default async function handler(req, res) {
       const top = pag.sort((a, b) => b.clicks - a.clicks).slice(0, 60).map(p => ({ ...p, ctr: Math.round(p.ctr * 1000) / 10, pos: Math.round(p.pos * 10) / 10, vragen: rij.filter(x => x.page === p.page).sort((a, b) => b.clicks - a.clicks).slice(0, 4).map(x => `${x.q} (${x.clicks})`) }));
       return res.status(200).json({ ok: true, eigendom: prop, dagen, paginas: pag.length, kliks: pag.reduce((a, x) => a + x.clicks, 0), top });
     }
+    if (op === 'curgevonden') { // alleen het gevonden-deel van de dagronde, met de hand (beschermde host of token)
+      if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken && !isCron) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const l = await sites(oidc); const prop = propFor(l, 'curacao.day'); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot curacao.day' });
+      const GV = await import('../lib/curgevonden.js'), C = await import('../lib/cur.js'); return res.status(200).json({ ok: true, ...(await GV.gscRonde(pageRows, prop, oidc, { GIDS_PAD: C.GIDS_PAD, ONDERWERPEN: C.ONDERWERPEN })) });
+    }
     if (op === 'curinhoud') { // 8 nov 2026 contentlus curacao.day (Henkjan: "maak een optimalisatie content lus voor de hele site dagelijks ... onderhoud van alle content . Wekelijks"): pagina's en zoekvragen uit Search Console, standaard 28 dagen; alleen via de beschermde host of token
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const l = await sites(oidc); const prop = propFor(l, 'curacao.day'); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot curacao.day' });
@@ -291,7 +296,7 @@ export default async function handler(req, res) {
     }
     if (!isCron && !isToken) return res.status(401).json({ error: 'alleen cron of token' });
     if (op === 'sites') return res.status(200).json({ ok: true, sites: await sites(oidc) });
-    if (op === 'dag') { await kv.set('hjdk:gsc:lastrun', Date.now()); return res.status(200).json(Object.assign({ ok: true }, await ronde(oidc))); }
+    if (op === 'dag') { await kv.set('hjdk:gsc:lastrun', Date.now()); const r = await ronde(oidc); let gevonden = null; try { const l = await sites(oidc), prop = propFor(l, 'curacao.day'); if (prop) { const GV = await import('../lib/curgevonden.js'), C = await import('../lib/cur.js'); gevonden = await GV.gscRonde(pageRows, prop, oidc, { GIDS_PAD: C.GIDS_PAD, ONDERWERPEN: C.ONDERWERPEN }); } } catch (e) { gevonden = { fout: String(e.message || e).slice(0, 120) }; } return res.status(200).json(Object.assign({ ok: true, gevonden }, r)); } // gevonden per bedrijf (lib/curgevonden.js, 14 nov 2026)
     return res.status(400).json({ error: 'onbekende op' });
   } catch (e) { await log({ wat: op, fout: String(e.message).slice(0, 300) }); return res.status(500).json({ ok: false, fout: String(e.message).slice(0, 300) }); }
 }
