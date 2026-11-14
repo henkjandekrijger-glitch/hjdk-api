@@ -31,6 +31,13 @@ Vastgelegd 13 nov 2026 op verzoek van Henkjan: "maak het dus vast inderdaad en b
 - **VS, trivia voor senioren**: zwak.
 - **Canada, Stocking Stuffers For Teens** (eigen boek): CA-rang 10.505, vorig jaar 20 dec CA #99; #1 in Teen > Education & Reference > Reference CA staat op rang 3.290.
 
+## Bewijs 14 nov 2026 (Keepa)
+
+- **Duitsland, feitenboeken voor teenagers**: Unnützes Wissen für Teenager B0C9S9CCP4 #2.419 (indie, sinds 2023), FAKTISCH! 1970904135 nieuw 19 okt #14.382, Achtsam Ausrasten für Teenager 391155219X nieuw 30 sep al #138 (humor-cadeau voor teens). Kandidaat: Duitse vertaling van Teens (76).
+- **Frankrijk, feiten voor ado's**: MAIS WHAT?! B0HMS6BRQ8 (indie) nieuw 12 okt, nu #2.484. Kandidaat: Franse vertaling van Teens voor FR en Frans Canada (75).
+- **Spanje, datos curiosos adolescentes**: zwak (beste nieuwe #8.269). Kandidaat 48.
+- **Canada, Teens na de categoriewijziging**: Amazon.ca plaatste het boek op 14 nov in Children's > Games > Questions & Answers (938856, #1 rang 28) en Party Games (938852, #1 rang 51), niet in de Teen-nodes. Rang 6.789 (was 10-11k).
+
 ## Werkwijze per nieuw boek
 
 Bouwers en bronnen staan in `kdp/bouw/` (spiegel van `/home/claude/boek` in de cloudsessie): `bouw_boek.py <map> <uit.pdf>` (binnenwerk, reportlab, alle fonts ingebed), `omslag_gen.py` via `<map>/omslag_cfg.py` (paperback, en met `hard=dict(spine, w, h)` de hardcover), `bouw_epub.py` (Kindle). Per boek: `config.py`, feitenbestanden, `kdp.json` (titel, ondertitel, 7 zoekwoorden, categorieen, prijzen, AI-verklaring, beschrijving). Fonts: Poppins en Carlito uit /usr/share/fonts, emoji Noto (Apache 2.0) in `kdp/bouw/emoji`.

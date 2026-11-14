@@ -1,6 +1,6 @@
 # KDP-wachtrij (gesorteerd op score, zie boekwedstrijd.md)
 
-Bijgewerkt: 13 nov 2026 middag (kdp-chat). Nieuwste stand bovenaan per titel.
+Bijgewerkt: 14 nov 2026 ronde A (kdp-rapport). Nieuwste stand bovenaan per titel.
 
 | # | Titel | Markt | Score | Status | Volgende stap |
 |---|---|---|---|---|---|
@@ -8,11 +8,14 @@ Bijgewerkt: 13 nov 2026 middag (kdp-chat). Nieuwste stand bovenaan per titel.
 | 2 | Moment mal, das stimmt?! Für Männer (Max Falk) | DE | 83 | Gebouwd: 400 feiten, 80 p., paperback- en hardcoveromslag, kdp.json | Zondag 15 nov paperbackplek 2 |
 | 3 | Klobuch voor mannen DE (eigen titel, sjabloon Kack dich schlau) | DE | 77 | Idee, nieuwe inhoud nodig (geen feiten uit de twee Duitse boeken) | Bouwen deze week, paperbackplek 22 nov |
 | 3a | Hardcover Stocking Stuffers For Teens (Elias Grant) | US/CA/UK/EU | 81 | Gebouwd 13 nov uit Henkjans Kindle Create-bestand: binnenwerk 5,5 x 8,5 met bleed (147 p.), omslag 13,0983 x 9,918 (rug 0,5223); 119 reviews tellen mee | Zondag 15 nov hardcoverplek 2, USD 19,99 / CAD 27,99 (hardcover gaat via Amazon.com ook naar Amazon.ca) |
+| 3b | Echt jetzt?! Fakten für Teenager (Duitse vertaling van Teens, Elias Grant; titel zonder "Unnützes Wissen") | DE | 76 | Idee 14 nov. Bewijs: Unnützes Wissen für Teenager B0C9S9CCP4 #2.419 (indie), FAKTISCH! 1970904135 nieuw 19 okt #14.382, Achtsam Ausrasten für Teenager 391155219X nieuw 30 sep #138 (humor, cadeau voor teens) | Bron: tekst van Teens uit de KPF halen (OCR), vertalen, eigen titel; paperbackplek 22 nov naast Klobuch |
+| 3c | Sérieux, c'est vrai ?! Le cadeau pour ado (Franse vertaling van Teens) | FR + CA | 75 | Idee 14 nov. Bewijs: MAIS WHAT?! B0HMS6BRQ8 nieuw 12 okt, na 4 weken #2.484 in FR; CA Teen Reference wordt gedomineerd door Franse uitgevers (Fleurus, Gallimard, Larousse) | Na de Duitse Teens; zelfde OCR-bron |
 | 4 | Hardcover Adventskalender | DE | 75 | Omslag klaar (13,944 x 10,417 in, rug 0,369) | Zondag 15 nov hardcoverplek 1, EUR 19,99 / USD 24,99 |
 | 4b | Hardcover Moment mal, das stimmt?! | DE | 72 | Omslag klaar | Zondag 22 nov |
 | 5 | Adventskalender für Frauen | DE | 68 | Idee; dit jaar te laat (concurrenten live aug-sep) | Volgend jaar augustus |
 | 6 | Ho Ho Ha Ha! (kerstmoppen kinderen 6-12, Elias Grant) | US | 58 | Gebouwd: 62 p., omslag, kdp.json | Alleen als er een plek over is voor ~1 dec; anders november 2027 |
 | 7 | Choose Wisely, Darling (Would You Rather voor stellen) | US | 53 | Gebouwd: 58 p. | Begin januari, voor Valentijn |
 | 8 | Back in Our Day (quiz senioren, grote letters) | US | 52 | Gebouwd: 114 p. | Wacht op beter bewijs |
+| 9 | Datos curiosos para adolescentes (Spaanse vertaling van Teens) | ES | 48 | Idee 14 nov. Bewijs zwak: beste nieuwe titel 500+ Datos Alucinantes B0HJMJFNF3 #8.269 | Pas na DE en FR |
 
 Diskwalificaties: "Unnützes Wissen ..." als titel (NEON/Heyne-reeks), een Britse kopie van For Men (dubbele inhoud).
