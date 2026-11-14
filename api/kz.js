@@ -435,6 +435,8 @@ async function page(item, res, req) {
   const q = new URL(req.url, 'http://x').searchParams; const src = String(q.get('utm_source') || '').toLowerCase().slice(0, 20);
   const clickid = String(q.get('clickid') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 80); const zone = String(q.get('zoneid') || '').replace(/\D/g, '').slice(0, 12); const creative = String(q.get('creativeid') || '').replace(/\D/g, '').slice(0, 12);
   const code = clickid ? shortId(clickid) : ''; const tag = (zone ? '-Z' + zone : '') + (code ? '-' + code : '');
+  // 14 nov 2026: kannibaal (lib/kwaliteit.js regel 3) gaat met een 301 naar de sterkste pagina over hetzelfde, zodat Google alle signalen op één pagina telt
+  if (!clickid && !zone) { const D3 = ((await kwaliteit('kz')).dun || {})[item.slug]; if (D3 && D3.regel === 3 && D3.naar && D3.naar !== item.slug) { const qs = q.toString(); res.setHeader('location', pathOf(req, '/keuzehulp/' + D3.naar) + (qs ? '?' + qs : '')); res.setHeader('cache-control', 'public, max-age=3600'); return res.status(301).end(); } }
   const hits = [];
   if (code) { try { await kv.set('hjdk:cid:' + code, { c: clickid, s: src || 'propellerads', z: zone, g: 'kz:' + item.slug, v: 'k', at: Date.now() }, { ex: 10 * 86400 }); } catch (e) {} }
   if (zone || clickid) { hits.push(['c:hjdk6-kz-paid-view', 1], ['c:hjdk6-kz-paid-' + (zone || '0') + '-view', 1], ['c:hjdk6-kz-paid-' + (zone || '0') + '-v2', 1], ['c:hjdk6-kz-paid-' + (zone || '0') + '-' + item.slug + '-view', 1]); if (creative) hits.push(['c:hjdk6-kzc-' + creative + '-view', 1]); }

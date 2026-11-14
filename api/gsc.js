@@ -131,7 +131,7 @@ async function ronde(oidc) {
       const res = { host, prop, dag: DAY(), periode: google && google.periode, totaalBasis: google ? 'Google-site-totaal zonder zoekvraagfilter (inclusief anonieme zoekvragen)' : 'Google-totaal niet beschikbaar; zoekvraagregels apart, niet als volledig totaal gebruiken', totaal: google ? { imp: google.imp, clicks: google.clicks, ctr: google.ctr, pos: google.pos } : null, zoekvraagTotaal: a.totaal, open: a.open, laagCtr: a.laagCtr.map(p => ({ slug: p.slug, imp: p.imp, clicks: p.clicks, pos: p.pos, topQ: p.topQ })), titelsVernieuwd: fixes, faqErbij: faqs, subvragen: a.subvragen.slice(0, 30), kansen: a.kansen.slice(0, 20) };
       // 13 nov 2026 (ZICHT-dagcontrole): de dagronde zet zelf ook het eigen deel (zonder verhuisde Curaçao-pagina's), anders bleef eigenImp in de stand leeg zolang niemand op=totalen opvroeg
       try { const pg = await pageRows(prop, 28, oidc); const e = { imp: 0, clicks: 0 }, v = { imp: 0, clicks: 0 }; pg.forEach(r => { const x = verhuisdPad(r.page) ? v : e; x.imp += r.imp; x.clicks += r.clicks; }); res.eigen = { ...e, basis: 'paginatotalen zonder de naar curacao.day verhuisde Curaçao-pagina\'s' }; res.verhuisd = v; } catch (e) {}
-      try { res.kwaliteit = await kwaliteitRonde(id, host, its, await pageRows(prop, 90, oidc), protectedUrls); } catch (e) { res.kwaliteit = { fout: String(e.message).slice(0, 120) }; }
+      try { res.kwaliteit = await kwaliteitRonde(id, host, its, await pageRows(prop, 90, oidc), protectedUrls, { qrows: rs }); } catch (e) { res.kwaliteit = { fout: String(e.message).slice(0, 120) }; }
       await kv.set('hjdk:gsc:' + id, res); out.sites[id] = { host, totaal: res.totaal, open: a.open.length, laagCtr: a.laagCtr.length, titelsVernieuwd: fixes.length, kwaliteit: res.kwaliteit, faqErbij: faqs.reduce((t, f) => t + ((f.vragen || []).length), 0) };
     } catch (e) { out.sites[id] = { host, fout: String(e.message).slice(0, 200) }; }
   }
@@ -242,7 +242,7 @@ export default async function handler(req, res) {
       const l = await sites(oidc); const out = {};
       for (const [id, host] of Object.entries(SITES)) { const prop = propFor(l, host); if (!prop) { out[id] = { fout: 'geen toegang' }; continue; }
         try { const m = id === 'kz' ? null : MARKETS[id]; const its = m ? await wtbItems(m) : await kzItems(); const running = ((await kv.get('zicht:exp:' + id).catch(() => null)) || []).filter(p => p.status === 'loopt'); const prot = new Set(running.flatMap(p => [...(p.urls || []), ...(p.controle || [])]));
-          out[id] = await kwaliteitRonde(id, host, its, await pageRows(prop, 90, oidc), prot); } catch (e) { out[id] = { fout: String(e.message).slice(0, 160) }; } }
+          out[id] = await kwaliteitRonde(id, host, its, await pageRows(prop, 90, oidc), prot, { qrows: await rows(prop, 28, oidc).catch(() => []), proef: url.searchParams.get('proef') === '1' }); } catch (e) { out[id] = { fout: String(e.message).slice(0, 160) }; } }
       return res.status(200).json({ ok: true, sites: out }); }
     if (op === 'totalen') {
       const lijst = await sites(oidc); const out = {};
