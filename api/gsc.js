@@ -174,6 +174,30 @@ export default async function handler(req, res) {
         return res.status(200).json({ ok: true, na, q: qq, videos: (j.items || []).map(x => ({ id: x.id && x.id.videoId, url: 'https://www.youtube.com/watch?v=' + (x.id && x.id.videoId), titel: x.snippet.title, kanaal: x.snippet.channelTitle, om: x.snippet.publishedAt, live: x.snippet.liveBroadcastContent })) });
       } catch (e) { return res.status(200).json({ ok: false, fout: String(e.message || e).slice(0, 200) }); }
     }
+    if (op === 'ytvandaag') { // 14 nov 2026 (Henkjan: "Ik wil dat je plaats maakt voor die vids en paar keer per dag wisselt ."): openbaar voor het blok Vandaag op video op curacao.day (todayin bzz/lib/cwvideo.js). Vaste zoekvraag, alleen het huidige blok van 4 uur (s=<dag>-<0..5>), CDN-cache, zodat het quotum veilig is.
+      const nuL = new Date(Date.now() - 4 * 36e5), dagL = nuL.toISOString().slice(0, 10), slot = dagL + '-' + Math.floor(nuL.getUTCHours() / 4);
+      if (url.searchParams.get('s') !== slot) { res.setHeader('cache-control', 'no-store'); return res.status(400).json({ ok: false, fout: 'alleen het huidige blok', s: slot }); }
+      res.setHeader('cache-control', 'public, s-maxage=14400, stale-while-revalidate=3600');
+      globalThis.__ytv = globalThis.__ytv || {}; if (globalThis.__ytv[slot]) return res.status(200).json(globalThis.__ytv[slot]);
+      // redactie: dit blok is beeld van de dag, geen nieuws; politiek, misdaad, ongelukken, volksliederen en games laten we weg
+      const WEG = /warn|waarschuw|advert[eê]n|politi|minist|electi|verkiez|elecci|elei[cç]|crime|crimin|murder|moord|asesin|assassin|shoot|schiet|tiroteo|accident|ongeluk|acidente|death|dood|muert|morte|funeral|begrafenis|hino|himno|anthem|volkslied|gamer|gaming|minecraft|roblox|fortnite|gta\b|nsfw|sexy|bikini/i;
+      try {
+        const at = await token(oidc, 'https://www.googleapis.com/auth/youtube.readonly'), H = { authorization: 'Bearer ' + at };
+        const zoek = async na => { const p = new URLSearchParams({ part: 'snippet', type: 'video', order: 'date', maxResults: '30', location: '12.17,-68.99', locationRadius: '45km', publishedAfter: na + 'T04:00:00Z', safeSearch: 'strict', videoEmbeddable: 'true', q: 'curacao|curaçao|willemstad|korsou|curazao' }); const r = await fetch('https://www.googleapis.com/youtube/v3/search?' + p, { headers: H }); const j = await r.json().catch(() => ({})); if (!r.ok) throw new Error((j.error && j.error.message) || 'HTTP ' + r.status); return j.items || []; };
+        let it = (await zoek(dagL)).filter(x => x.id && x.id.videoId && x.snippet && x.snippet.liveBroadcastContent !== 'upcoming');
+        let van = dagL; if (it.length < 6) { van = new Date(Date.now() - 28 * 36e5).toISOString().slice(0, 10); it = (await zoek(van)).filter(x => x.id && x.id.videoId && x.snippet && x.snippet.liveBroadcastContent !== 'upcoming'); }
+        const ids = [...new Set(it.map(x => x.id.videoId))].slice(0, 50), det = {};
+        if (ids.length) { const r = await fetch('https://www.googleapis.com/youtube/v3/videos?' + new URLSearchParams({ part: 'contentDetails,statistics,status', id: ids.join(',') }), { headers: H }); const j = await r.json().catch(() => ({})); for (const v of j.items || []) det[v.id] = v; }
+        const sec = d => { const m = String(d || '').match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/); return m ? (+m[1] || 0) * 3600 + (+m[2] || 0) * 60 + (+m[3] || 0) : 0; };
+        const ont = s => String(s || '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+        const videos = it.map(x => { const d = det[x.id.videoId] || {}, st = d.statistics || {}; return { id: x.id.videoId, titel: ont(x.snippet.title), kanaal: ont(x.snippet.channelTitle), kanaalId: x.snippet.channelId, om: x.snippet.publishedAt, duur: sec(d.contentDetails && d.contentDetails.duration), kijkers: +st.viewCount || 0, likes: +st.likeCount || 0, ok: !d.status || (d.status.embeddable !== false && d.status.privacyStatus === 'public') }; })
+          .filter(v => v.ok && v.duur >= 8 && !WEG.test(v.titel + ' ' + v.kanaal))
+          .map(v => ({ ...v, score: Math.round(100 * (Math.log10(1 + v.kijkers) + 2 * Math.log10(1 + v.likes) + (v.duur >= 30 ? .5 : 0))) / 100 }))
+          .sort((a, b) => b.score - a.score);
+        const uit = { ok: true, s: slot, van, n: videos.length, videos };
+        globalThis.__ytv = { [slot]: uit }; return res.status(200).json(uit);
+      } catch (e) { res.setHeader('cache-control', 'public, s-maxage=600'); return res.status(200).json({ ok: false, s: slot, fout: String(e.message || e).slice(0, 200), videos: [] }); }
+    }
     if (op === 'curvind') { // 14 nov 2026 (Henkjan: "En zorg dat ze iedere dag beter gevonden worden met de nacht lus voor bedrijfs keuzehulpen ."): vindbaarheid van bedrijfspagina's en keuzehulpen, titelproef en kansen (lib/curvind.js); beschermde host of token
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken && !isCron) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const l = await sites(oidc); const prop = propFor(l, 'curacao.day'); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot curacao.day' });
