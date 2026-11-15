@@ -219,6 +219,116 @@
   ],
   "rewrites": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed"
+    },
+    {
+      "source": "/robots.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?op=robots"
+    },
+    {
+      "source": "/sitemap.xml",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?op=sitemap"
+    },
+    {
+      "source": "/llms.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?op=llms"
+    },
+    {
+      "source": "/zicht.json",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?op=zicht"
+    },
+    {
+      "source": "/logo.svg",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?op=logo"
+    },
+    {
+      "source": "/favicon.ico",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?op=logo"
+    },
+    {
+      "source": "/b6f1c0d4e93a47a58c2e1f7d0a9b3c65.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?op=key"
+    },
+    {
+      "source": "/:taal(nl|de|en)",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?taal=:taal"
+    },
+    {
+      "source": "/:taal(nl|de|en)/:slug([a-z0-9-]+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?taal=:taal&slug=:slug"
+    },
+    {
+      "source": "/:slug([a-z0-9-]+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?taal=zz"
+    },
+    {
       "source": "/w",
       "has": [
         {
@@ -1479,6 +1589,9 @@
     },
     "api/w.js": {
       "maxDuration": 120
+    },
+    "api/sealed.js": {
+      "maxDuration": 15
     }
   },
   "redirects": [
