@@ -9,14 +9,16 @@ import * as catalog from '../lib/tsc-catalog.js';
 import * as ranking from '../lib/tsc-reviewrank.js';
 import * as engage from '../lib/tsc-engagement.js';
 import * as signup from '../lib/tsc-signup.js';
+import { SURGERY_FAVICON } from '../lib/tsc-design.js';
+import { topicPicker } from '../lib/tsc-topic-picker.js';
 import * as data from '../lib/tsc-data.js';
 import { LIJSTEN,RANK_SLUGS } from '../lib/tsc-rank.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 let checks=0;
 async function test(name,fn){await fn();checks++;console.log('ok',name);}
 const raw=fs.readFileSync(path.join(root,'lib/tsc.js'),'utf8').replace(/^import .*;\n/gm,'');
-const names={...data,ROUTES:JSON.parse(fs.readFileSync(path.join(root,'data/tsc-routes.json'))),LIJSTEN,RANK_SLUGS,...ui,...catalog,...signup};
-const render=new Function(...Object.keys(names),raw.replace(/export /g,'')+';return {home,rankPagina,pagina,checkPagina,llms,ALL,pageDate};')(...Object.values(names));
+const names={...data,SURGERY_FAVICON,ROUTES:JSON.parse(fs.readFileSync(path.join(root,'data/tsc-routes.json'))),LIJSTEN,RANK_SLUGS,...ui,...catalog,...signup};
+const render=new Function(...Object.keys(names),raw.replace(/export /g,'')+';return {home,rankPagina,pagina,checkPagina,llms,ALL,pageDate,tscHandler};')(...Object.values(names));
 const out=path.join(root,'qa-render');fs.mkdirSync(out,{recursive:true});
 const scriptCheck=html=>{for(const m of html.matchAll(/<script(?![^>]*application\/ld\+json)[^>]*>([\s\S]*?)<\/script>/g))new vm.Script(m[1]);};
 await test('all public SSR pages: unique IDs, correct language, scripts and metadata',()=>{
@@ -71,7 +73,39 @@ await test('consent, topics, legacy delivery and self-declared warmth',()=>{
  assert.equal(engage.dueToday({actief:true,frequency:'daily',consent_version:engage.CONSENT_VERSION},'2026-11-15',[]),true);
  assert.equal(engage.warmth({opens:900,clicks:900}).stage,'unknown');assert.equal(engage.experimentVerdict(0,0,0,0).winner,null);
 });
-await test('changing the primary signup topic cannot retain a hidden preselected topic',()=>{const html=signup.signupBlock(data.SITE.base,'test',{ingreep:'hair'},'nl');assert.ok(!/name="topic"[^>]*checked/.test(html));assert.equal((html.match(/id="tsc-learn"/g)||[]).length,1);});
+await test('signup uses an explicit daily request, custom picker and no consent checkbox',()=>{
+ for(const tl of ['nl','en','de']){
+  const html=signup.signupBlock(data.SITE.base,'test',{ingreep:'hair'},tl);
+  assert.ok(!/type="checkbox"/.test(html));assert.ok(!/select[^>]+id="tsc-(?:topic|ingreep)"/.test(html));
+  assert.equal((html.match(/id="tsc-learn"/g)||[]).length,1);assert.equal((html.match(/data-tp-id=/g)||[]).length,42);
+  assert.ok(html.includes('request_button_and_email_confirmation'));assert.ok(html.includes('aria-haspopup="dialog"'));
+  assert.ok(html.includes(signup.SIGNUP_COPY[tl].success));scriptCheck(html);
+ }
+});
+await test('topic picker: searches, limits to 8, saves explicitly, cancels and restores focus',()=>{
+ const make=()=>({value:'',hidden:false,attributes:{},events:{},dataset:{},setAttribute(k,v){this.attributes[k]=v},getAttribute(k){return this.attributes[k]},addEventListener(k,fn){this.events[k]=fn},dispatchEvent(){},focus(){d.activeElement=this}});
+ const byId=Object.fromEntries(['tp-dialog','tp-open','tsc-topics','tp-search','tp-count','tp-error','tp-apply','tp-value','tp-close','tp-empty','tp-clear'].map(id=>[id,make()]));
+ const groups=['',...new Set(catalog.PROCEDURES.map(p=>p.group))].map(group=>{const e=make();e.dataset.tpGroup=group;return e});
+ const options=catalog.PROCEDURES.map(p=>{const li=make(),button=make(),mark=make();li.dataset={group:p.group,search:(p.nl+' '+p.en).toLowerCase()};button.dataset.tpId=p.id;button.querySelector=()=>mark;li.querySelector=()=>button;return {li,button}});
+ const panel=make(),modal=byId['tp-dialog'];modal.querySelectorAll=s=>s==='[data-tp-id]'?options.map(x=>x.button):s==='[data-tp-item]'?options.map(x=>x.li):groups;modal.querySelector=()=>panel;
+ modal.showModal=()=>{modal.open=true};modal.close=()=>{modal.open=false;modal.events.close()};
+ const docEvents={},d={getElementById:id=>byId[id],addEventListener(k,fn){docEvents[k]=fn},activeElement:null};
+ vm.runInNewContext(topicPicker('nl',['hair']).match(/<script>([\s\S]*?)<\/script>/)[1],{document:d,Event:class{}});
+ const open=()=>byId['tp-open'].onclick(),choose=id=>options.find(x=>x.button.dataset.tpId===id).button.onclick();
+ assert.deepEqual(JSON.parse(byId['tsc-topics'].value),['hair']);open();assert.equal(d.activeElement,byId['tp-search']);
+ byId['tp-search'].value='oog';byId['tp-search'].events.input();assert.ok(options.some(x=>!x.li.hidden&&x.button.dataset.tpId==='laser-eye'));assert.ok(options.find(x=>x.button.dataset.tpId==='hair').li.hidden);
+ choose('laser-eye');byId['tp-close'].onclick();assert.deepEqual(JSON.parse(byId['tsc-topics'].value),['hair']);assert.equal(d.activeElement,byId['tp-open']);
+ open();choose('hair');choose('laser-eye');byId['tp-apply'].onclick();assert.deepEqual(JSON.parse(byId['tsc-topics'].value),['laser-eye']);
+ open();byId['tp-clear'].onclick();assert.equal(byId['tp-apply'].disabled,true);for(const p of catalog.PROCEDURES.slice(0,9))choose(p.id);assert.match(byId['tp-count'].textContent,/^8 \/ 8/);assert.ok(byId['tp-error'].textContent);byId['tp-apply'].onclick();assert.equal(JSON.parse(byId['tsc-topics'].value).length,8);
+ open();assert.equal(options.filter(x=>!x.li.hidden).length,42);groups.find(g=>g.dataset.tpGroup==='ogen').onclick();assert.equal(options.filter(x=>!x.li.hidden).length,4);
+ byId['tp-value']=null;assert.doesNotThrow(()=>docEvents.click({target:{closest:()=>({dataset:{followTopic:'hair'}})}}));
+});
+await test('catalog filters do not touch the topic picker; favicon is served before database work',async()=>{
+ const html=render.home(data.SITE.base,'nl',false);assert.ok(html.includes("querySelectorAll('#sr-topicgroups>section[data-group]')"));assert.ok(html.includes('/surgery/favicon.svg?v=4'));
+ const headers={},res={setHeader(k,v){headers[k]=v},status(n){this.code=n;return this},send(body){this.body=body;return this}};
+ await render.tscHandler({headers:{host:'todayin.email'}},res,new URL('https://todayin.email/true-surgery?p=favicon.svg'));
+ assert.equal(res.code,200);assert.match(headers['content-type'],/image\/svg\+xml/);assert.equal(res.body,SURGERY_FAVICON);assert.ok(!res.body.includes('<script'));
+});
 await test('preference HTML resists script injection',()=>{
  const html=signup.preferencesBlock(data.SITE.base,'a'.repeat(48),{taal:'nl',topics:['hair']},'</script><script>alert(1)</script>');assert.ok(!html.includes('alert(1)'));scriptCheck(html);
 });
