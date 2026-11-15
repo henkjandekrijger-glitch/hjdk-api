@@ -3,6 +3,12 @@
 Productbesluit van 15 november 2026. Opdracht: eigen onderzoek, een reviewmodel, een consistente UX en een verdienmodel voor aanvragen aan artsen. Dit document maakt onderscheid tussen onderzoeksbewijs, reeds gebouwde functionaliteit en voorgestelde vervolgbouw.
 
 
+## Landen vergelijken vanuit je eigen land
+
+Landenkeuze (15 november 2026): eigen doorzoekbaar landendialoog in todayin-design, met toetsenbordbediening en mobiel paneel. Ik vergelijk vanuit ondersteunt 249 landen/gebieden; 73 bestemmingen plus het gekozen thuisland en alle bronlanden blijven selecteerbaar. Eigen land, buurlanden en dezelfde regio komen eerst; dat is een geografische menuvolgorde, geen medische aanbeveling. Naam- en bestemmingsfilter werken samen voor klinieken, artsen en gepubliceerde stafnamen. Aantallen betreffen dossiers inclusief niet-gerangschikte aanbieders; ontbrekende dossiers worden expliciet gemeld. Bestemmingsspecifieke pagina’s linken naar dezelfde ingreep in alle landen. Twaalf primaire brongebaseerde tandheelkundige dossiers toegevoegd in data/tsc-country-expansion.json: tanden bleken nu 16 dossiers in 12 landen; vier nieuwe organisatieprofielen hebben een onafhankelijke Trustpilot-snapshot, acht blijven zonder ranking. Filters in EN/NL/DE; herkomstvoorkeur lokaal, geen automatische locatiebepaling of nieuwe overdracht naar klinieken.
+
+De twaalf aanvullingen bevatten gepubliceerde behandelingen in Nederland, België, Duitsland, Spanje, Portugal, Hongarije, Polen, Tsjechië, Slowakije, Kroatië en Bulgarije. Dit is een broninventaris. Reviewcijfers blijven op organisatieniveau; er is geen artsregistratie, locatievergunning of behandelingsresultaat uit afgeleid. De bronpagina en leesdatum staan per behandeling in het record. Onvoldoende reviewbewijs levert een dossier zonder rang op.
+
 ## Actuele uitvoering: reviewranking en dagelijkse keuzehulp
 
 De gebruikersinstructie van later op 15 november vervangt de eerdere vergelijking met drie geselecteerde dossiers. De live opzet is nu een **genummerde reviewranking**, met aparte ranglijsten van klinieken en individuele artsen, 42 onderwerpen in het keuzemenu en 31 extra aanbieders. Alle dossiers staan in de server-HTML. De bronselectie is geen volledige wereldmarkt; ontbrekende individuele artsreviews worden niet aangevuld met klinieksterren.
@@ -193,4 +199,5 @@ Omzetmodel: **geldige aanvragen × gerealiseerde vergoeding**. Brutomarge: omzet
 | Gebruikerstest en conversie-/besliskwaliteitmeting | Volgende validatiestap; het ontwerp is nog niet met patiënten gevalideerd |
 
 Naast de brede catalogus moet de dagelijkse verdieping per ingreep voldoende actuele arts-, locatie- en reviewbronnen opleveren. Brede dekking vervangt die controle niet. Voer daarna vijf echte gebruikstesten uit met zoekers: kunnen zij de behandelaar herkennen, de verschillen uitleggen, een ontbrekende controle noemen en de juiste vervolgvraag stellen? Dit is een onderzoeksplan, geen uitgevoerd patiëntenonderzoek.
+
 

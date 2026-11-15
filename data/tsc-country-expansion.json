@@ -1,0 +1,434 @@
+{
+  "version": 1,
+  "checked_at": "2026-11-15",
+  "notes": [
+    "Provider treatment pages establish published treatment availability, not individual medical suitability, registration or outcomes.",
+    "Organisation reviews can cover several locations and treatments. No clinic stars are copied to individual doctors.",
+    "Records without an independent review aggregate remain in the unranked directory. No rating is invented.",
+    "Trustpilot figures are snapshots read from its public search index on the stated date. The provider website is the treatment source."
+  ],
+  "providers": [
+    {
+      "id": "tandarts-jordaan",
+      "naam": "Tandarts Jordaan",
+      "site": "https://tandartsjordaan.nl",
+      "land": "NL",
+      "stad": "Amsterdam",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-15",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "whitening": {
+          "source_url": "https://tandartsjordaan.nl/tandarts-behandelingen/tanden-bleken/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "veneers": {
+          "source_url": "https://tandartsjordaan.nl/tandarts-behandelingen/facings/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "dental-implants": {
+          "source_url": "https://tandartsjordaan.nl/tandarts-behandelingen/implantologie/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        }
+      }
+    },
+    {
+      "id": "dental-clinics-nl",
+      "naam": "Dental Clinics",
+      "site": "https://www.dentalclinics.nl",
+      "land": "NL",
+      "stad": "",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-15",
+      "artsen": [],
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.1,
+          "max": 5,
+          "aantal": 1207,
+          "bron": "https://nl.trustpilot.com/review/www.dentalclinics.nl",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "offers": {
+        "whitening": {
+          "source_url": "https://www.dentalclinics.nl/behandelingen/esthetische-tandheelkunde/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "veneers": {
+          "source_url": "https://www.dentalclinics.nl/behandelingen/esthetische-tandheelkunde/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "crowns": {
+          "source_url": "https://www.dentalclinics.nl/behandelingen/esthetische-tandheelkunde/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "dental-implants": {
+          "source_url": "https://www.dentalclinics.nl/behandelingen/esthetische-tandheelkunde/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "aligners": {
+          "source_url": "https://www.dentalclinics.nl/behandelingen/esthetische-tandheelkunde/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        }
+      }
+    },
+    {
+      "id": "benedenti",
+      "naam": "Benedenti",
+      "site": "https://www.benedenti.be",
+      "land": "BE",
+      "stad": "",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-15",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "whitening": {
+          "source_url": "https://www.benedenti.be/nl/tanden-bleachen",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "veneers": {
+          "source_url": "https://www.benedenti.be/nl/esthetische-tandheelkunde",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "crowns": {
+          "source_url": "https://www.benedenti.be/nl/kroon-en-brugwerk",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "dental-implants": {
+          "source_url": "https://www.benedenti.be/nl/tand-implantaten",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        }
+      }
+    },
+    {
+      "id": "alldent-zahnzentrum",
+      "naam": "AllDent Zahnzentrum",
+      "site": "https://www.alldent-zahnzentrum.de",
+      "land": "DE",
+      "stad": "",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-15",
+      "artsen": [],
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 2.5,
+          "max": 5,
+          "aantal": 152,
+          "bron": "https://de.trustpilot.com/review/www.alldent-zahnzentrum.de",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "offers": {
+        "whitening": {
+          "source_url": "https://www.alldent-zahnzentrum.de/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "crowns": {
+          "source_url": "https://www.alldent-zahnzentrum.de/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "dental-implants": {
+          "source_url": "https://www.alldent-zahnzentrum.de/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        }
+      }
+    },
+    {
+      "id": "sanitas-dental",
+      "naam": "Sanitas Dental",
+      "site": "https://www.sanitas.es/dental",
+      "land": "ES",
+      "stad": "",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-15",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "whitening": {
+          "source_url": "https://www.sanitas.es/dental/tratamientos-dentales/estetica-dental",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "veneers": {
+          "source_url": "https://www.sanitas.es/dental/tratamientos-dentales/estetica-dental",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "dental-implants": {
+          "source_url": "https://www.sanitas.es/dental/tratamientos-dentales/estetica-dental",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "aligners": {
+          "source_url": "https://www.sanitas.es/dental/tratamientos-dentales/estetica-dental",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        }
+      }
+    },
+    {
+      "id": "malo-clinic-portugal",
+      "naam": "MALO CLINIC",
+      "site": "https://www.maloclinics.com",
+      "land": "PT",
+      "stad": "",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-15",
+      "artsen": [],
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.7,
+          "max": 5,
+          "aantal": 61,
+          "bron": "https://uk.trustpilot.com/review/maloclinics.com",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "offers": {
+        "whitening": {
+          "source_url": "https://www.maloclinics.com/tratamentos/branqueamento-dentario",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "dental-implants": {
+          "source_url": "https://www.maloclinics.com/tratamentos",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "all-on-4": {
+          "source_url": "https://www.maloclinics.com/tratamentos",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        }
+      }
+    },
+    {
+      "id": "puredental-budapest",
+      "naam": "PureDental",
+      "site": "https://puredental.hu",
+      "land": "HU",
+      "stad": "Budapest",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-15",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "whitening": {
+          "source_url": "https://puredental.hu/en/services/teeth-whitening/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        }
+      }
+    },
+    {
+      "id": "indexmedica",
+      "naam": "INDEXMEDICA",
+      "site": "https://www.indexmedica.com",
+      "land": "PL",
+      "stad": "Kraków",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-15",
+      "artsen": [],
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 3.9,
+          "max": 5,
+          "aantal": 9,
+          "bron": "https://uk.trustpilot.com/review/indexmedica.com",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "offers": {
+        "whitening": {
+          "source_url": "https://www.indexmedica.com/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "dental-implants": {
+          "source_url": "https://www.indexmedica.com/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "crowns": {
+          "source_url": "https://www.indexmedica.com/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "veneers": {
+          "source_url": "https://www.indexmedica.com/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        }
+      }
+    },
+    {
+      "id": "smile-centrum",
+      "naam": "Smile Centrum",
+      "site": "https://www.smilecentrum.cz/en/",
+      "land": "CZ",
+      "stad": "Prague",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-15",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "whitening": {
+          "source_url": "https://www.smilecentrum.cz/en/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "dental-implants": {
+          "source_url": "https://www.smilecentrum.cz/en/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "crowns": {
+          "source_url": "https://www.smilecentrum.cz/en/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "veneers": {
+          "source_url": "https://www.smilecentrum.cz/en/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        }
+      }
+    },
+    {
+      "id": "smile-clinic-slovakia",
+      "naam": "Smile Clinic",
+      "site": "https://www.smileclinic.sk",
+      "land": "SK",
+      "stad": "Bratislava, Piešťany",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-15",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "whitening": {
+          "source_url": "https://www.smileclinic.sk/en/prices/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "dental-implants": {
+          "source_url": "https://www.smileclinic.sk/en/prices/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "crowns": {
+          "source_url": "https://www.smileclinic.sk/en/prices/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "veneers": {
+          "source_url": "https://www.smileclinic.sk/en/prices/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        }
+      }
+    },
+    {
+      "id": "bagatin",
+      "naam": "Poliklinika Bagatin",
+      "site": "https://www.poliklinikabagatin.hr",
+      "land": "HR",
+      "stad": "Zagreb, Split",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-15",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "whitening": {
+          "source_url": "https://www.poliklinikabagatin.hr/eng/Dentistry/Zoom-teeth-whitening",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "dental-implants": {
+          "source_url": "https://www.poliklinikabagatin.hr/eng/Dentistry/Dental-implants",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "veneers": {
+          "source_url": "https://www.poliklinikabagatin.hr/Stomatologija/stomatologija",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        }
+      }
+    },
+    {
+      "id": "dr-botev-varna",
+      "naam": "Dr. Botev Dental Clinic",
+      "site": "https://botev-dent.com",
+      "land": "BG",
+      "stad": "Varna",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-15",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "whitening": {
+          "source_url": "https://botev-dent.com/en/pricelist/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "dental-implants": {
+          "source_url": "https://botev-dent.com/en/pricelist/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "crowns": {
+          "source_url": "https://botev-dent.com/en/pricelist/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        },
+        "veneers": {
+          "source_url": "https://botev-dent.com/en/pricelist/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-15"
+        }
+      }
+    }
+  ]
+}

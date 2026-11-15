@@ -20,7 +20,7 @@ const raw=fs.readFileSync(path.join(root,'lib/tsc.js'),'utf8').replace(/^import 
 const names={...data,SURGERY_FAVICON,ROUTES:JSON.parse(fs.readFileSync(path.join(root,'data/tsc-routes.json'))),LIJSTEN,RANK_SLUGS,...ui,...catalog,...signup};
 const render=new Function(...Object.keys(names),raw.replace(/export /g,'')+';return {home,rankPagina,pagina,checkPagina,llms,ALL,pageDate,tscHandler};')(...Object.values(names));
 const out=path.join(root,'qa-render');fs.mkdirSync(out,{recursive:true});
-const scriptCheck=html=>{for(const m of html.matchAll(/<script(?![^>]*application\/ld\+json)[^>]*>([\s\S]*?)<\/script>/g))new vm.Script(m[1]);};
+const scriptCheck=html=>{for(const m of html.matchAll(/<script(?![^>]*application\/(?:ld\+)?json)[^>]*>([\s\S]*?)<\/script>/g))new vm.Script(m[1]);};
 await test('all public SSR pages: unique IDs, correct language, scripts and metadata',()=>{
  for(const tl of ['en','nl','de']){
   for(const cat of [false,true]){const html=render.home(data.SITE.base,tl,cat);assert.equal((html.match(/id="mail"/g)||[]).length,1);assert.ok(html.indexOf('id="mail"')<html.indexOf('id="ingrepen"'));scriptCheck(html);fs.writeFileSync(path.join(out,(cat?'catalog-':'home-')+tl+'.html'),html);}
@@ -30,11 +30,11 @@ await test('all public SSR pages: unique IDs, correct language, scripts and meta
    assert.equal((html.match(/id="mail"/g)||[]).length,1);assert.ok(html.indexOf('id="mail"')<html.indexOf('id="clinics"'));
    const ids=[...html.matchAll(/\sid="([^"]+)"/g)].map(x=>x[1]);assert.equal(new Set(ids).size,ids.length,'duplicate ID '+slug);
    for(const [other,s] of Object.entries(l.slugs))assert.ok(html.includes('hreflang="'+other+'" href="'+data.SITE.base+'/'+s+'"'));
-   const ld=JSON.parse(html.match(/application\/ld\+json">([\s\S]*?)<\/script>/)[1]);const lists=ld['@graph'].filter(x=>x['@type']==='ItemList');assert.equal(lists.length,2);
+   const ld=JSON.parse(html.match(/application\/(?:ld\+)?json">([\s\S]*?)<\/script>/)[1]);const lists=ld['@graph'].filter(x=>x['@type']==='ItemList');assert.equal(lists.length,2);
    for(const [i,kind]of ['clinic','doctor'].entries()){const r=ranking.reviewRanking(l,kind);assert.deepEqual(lists[i].itemListElement.map(x=>x.name),r.ranked.map(x=>x.k.naam));for(const item of lists[i].itemListElement)assert.ok(html.includes('id="'+item.url.split('#')[1]+'"'));}
    assert.equal(html.includes('content="noindex"'),!!l.noindex);assert.ok(!html.includes('aggregateRating'));
    assert.ok(ui.choiceTitle(l,tl).length<=60);assert.ok(ui.choiceDescription(l,tl).length<=155);
-   scriptCheck(html);if(['procedure-laser-eye','tummy-mexico','hair-turkey'].includes(id))fs.writeFileSync(path.join(out,slug.replaceAll('/','_')+'.html'),html);
+   scriptCheck(html);if(['procedure-laser-eye','procedure-whitening','tummy-mexico','hair-turkey'].includes(id))fs.writeFileSync(path.join(out,slug.replaceAll('/','_')+'.html'),html);
   }
  }
  for(const [slug,pg]of Object.entries(data.PAGES)){const html=render.pagina(data.SITE.base,slug,pg,{});scriptCheck(html);assert.equal((html.match(/id="mail"/g)||[]).length,1);}
@@ -161,3 +161,4 @@ await test('LLM subsite citations require structured URLs inside surgery',()=>{
  assert.deepEqual(fn(site,{choices:[{message:{content:'https://todayin.email/surgery'}}]}),[]);assert.deepEqual(fn(site,{citations:['https://todayin.email/curacao/nl','https://todayin.email/surgery-other','https://todayin.email/surgery/nl']}),['https://todayin.email/surgery/nl']);
 });
 console.log(JSON.stringify({checks,ssrRankPages:Object.keys(RANK_SLUGS).length,topics:catalog.PROCEDURES.length,lists:Object.keys(LIJSTEN).length,indexableLists:Object.values(LIJSTEN).filter(l=>!l.noindex).length,realEmailsSent:0}));
+
