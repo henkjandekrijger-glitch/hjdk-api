@@ -223,6 +223,12 @@ export default async function handler(req, res) {
       for (const m of maps) uit[m] = await submitSitemap(prop, m, oidc);
       return res.status(200).json({ ok: true, eigendom: prop, sitemaps: uit });
     }
+    if (op === 'surgery') { // todayin surgery (15 nov 2026): sitemap van todayin.email/surgery indienen bij sc-domain:todayin.email en lezen wat Google ervan heeft
+      if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const l = await sites(oidc); const prop = propFor(l, 'todayin.email'); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot todayin.email', eigendommen: l });
+      const m = 'https://todayin.email/surgery/sitemap.xml', ingediend = await submitSitemap(prop, m, oidc), info = await sitemapInfo(prop, oidc).catch(e => ({ fout: String(e.message || e) }));
+      return res.status(200).json({ ok: true, eigendom: prop, sitemap: m, ingediend, info });
+    }
     if (op === 'verifieer') { // 30 okt (Henkjan: "optimaliseer extreem voor SEO en LLM en Google shopping"): kadoly.com als domein in Search Console via een DNS-TXT, daarna Merchant Center-website claimen. Stap 1 zonder &doe=1: geeft de TXT-regel. Stap 2 met &doe=1: verifieert en voegt sc-domain toe.
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const site = String(url.searchParams.get('site') || '').toLowerCase(); if (!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(site)) return res.status(400).json({ ok: false, fout: 'site=domein' });
