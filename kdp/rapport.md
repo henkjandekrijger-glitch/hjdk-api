@@ -7,6 +7,7 @@ Bron voor alle geplande KDP-rondes. De geplande berichten zelf zijn kort en verw
 - 6 nov: "Gebruik /campagnes-henkjan iedere dag nieuwe copy maken enz. Rapporteer hier iedere dag. Ik stuur je verkoop."
 - 11 nov: "Ja speel met de beide ads platforms en maak het zeer hoge ROI. Zet aan en leer iedere dag van de ads. En verbeter dan ook de ads." / "Optimaliseer ze maximaal met goed research" / "Ik wil geen cent verspillen !!"
 - 13 nov: "Dit moet jij gewoon doen als rendement daar hoger door wordt" en daarna **"Ja je mag dus alles doen als ROI maar maximaal is . En je hier dagelijks minimaal 4 x rapporteert ."**
+- 15 nov: **"Geef hier ook altijd organische resultaten van de keuzehulpen ."** Dus elk rapport (alle 4 rondes) heeft een regel ORGANISCH, ook als het weinig is (dan kort: wat er staat en wat de volgende stap is).
 - 13 nov over Teens: "Kunnen we deze niet naar nr1 brengen ?" / over nieuwe boeken: "blijf iedere dag onderzoeken welke we als volgende moeten gaan maken En laat die dan tegen elkaar op boksen om uiteindelijk beste max aantal te releasen".
 
 Dus: elke stap die het rendement maximaliseert doe je zelf en meld je daarna (biedingen, pauzeren, campagnes bijzetten of opschalen, zoekwoorden, categorieen, prijzen, beschrijvingen, nieuwe boeken klaarzetten). Grenzen die blijven: hoogstens $10 per dag per campagne (uitzondering alleen met Henkjans woord), margeregel (alle ads van een boek samen hoogstens 50% van de royalty van dat boek), geen conversie-postback naar PropellerAds voor KDP, nooit wachtwoorden typen, geen dubbele inhoud of andermans merk/reekstitel (KDP-regels). Geen cent verspillen: wat geld kost zonder verkoop gaat uit.
@@ -22,21 +23,27 @@ Publish-knoppen in KDP (Publish Your Paperback/Hardcover/Kindle eBook) klikt Cla
 | C | 17:20 | 13:20 | TUSSEN |
 | D | 22:20 | 18:20 | TUSSEN + dagafsluiting |
 
-Elke ronde is een send_later-keten die zichzelf 24 uur later opnieuw plant (stap 0, altijd eerst). Rapport altijd HIER in de chat met SendUserMessage, kort Nederlands, alleen wat nieuw is (geen geleerde lessen herhalen), nooit nulgroei tonen. Daarna in de handover (Vercel-tool web_fetch_vercel_url: https://hjdk-api-henq.vercel.app/api/mm/handover?log=...&wie=kdp-rapport).
+Elke ronde is een send_later-keten die zichzelf 24 uur later opnieuw plant (stap 0, altijd eerst).
+
+ORGANISCH in elke ronde: web_fetch_vercel_url https://hjdk-api-henq.vercel.app/api/wtb?op=boekstand&m=us (compact): per site (keuzehulp.best, whichtobuy.best, kaufberater.best) echte bezoekers uit zoek en AI in 7 dagen, Google 28 dagen (vertoningen, kliks, pagina's in Google), en per boekgids bezoek uit zoek en AI 7 dagen, Amazon-kliks 7 dagen, Google-vertoningen en zoekvragen met plek. Zet het tegen de vorige ronde (laatste regel hieronder bij Organisch). Ronde A doet daarnaast de indexaanvragen (GSC, 8 tot 10 per dag) en IndexNow voor gewijzigde gidsen.
+
+## Organisch (keuzehulpen, nieuwste boven)
+
+- 15 nov 12:40 UTC (start meting): keuzehulp.best 117 van 518 in Google, 7 dagen 0 uit zoek en 4 uit AI (ChatGPT), Google 28 dagen 612 vertoningen 5 kliks. whichtobuy.best 4 van 155 in Google (148 onbekend bij Google), 7 dagen 1 uit zoek, eigen pagina's 19 vertoningen 0 kliks. kaufberater.best 8 van 83 in Google, 7 dagen 1 uit zoek (Bing), eigen 24 vertoningen 2 kliks. Boekgidsen: nog geen Google-vertoningen (indexaanvragen 14 en 15 nov, 10 van 12 gedaan); nieuwe Duitse gids /adventskalender-fuer-maenner. Teller per gids voor bezoek uit zoek/AI en Amazon-kliks per dag loopt vanaf 15 nov. Rapport altijd HIER in de chat met SendUserMessage, kort Nederlands, alleen wat nieuw is (geen geleerde lessen herhalen), nooit nulgroei tonen. Daarna in de handover (Vercel-tool web_fetch_vercel_url: https://hjdk-api-henq.vercel.app/api/mm/handover?log=...&wie=kdp-rapport).
 
 ### VOL (ronde A)
 1. Verkoop gisteren per boek en land: KDP Reports > Royalties Estimator in Chrome (kdpreports.amazon.com/royalties; kalendericoon Start Date, dag, nog eens de dag voor End Date; marktplaatsfilter). KDP gaat voor Keepa.
 2. Ads per boek op beide platforms tegen royalty (tabel hieronder). Pas de stopregels toe, schaal winnaars op.
 3. Teens #1 Canada: stand (zie onder).
 4. Boekwedstrijd: 3 nieuwe kandidaten onderzoeken en scoren (kdp/boekwedstrijd.md, kdp/wachtrij.md), commit + push.
-5. Rapport: VERKOOP eerst, per boek ads tegen royalty, wat werkt en wat niet, wat geleerd (nieuw), wat ik verbeterde of stopte, Teens-rang tegen #1, top 3 wachtrij, tempo naar 10x (nov 2025: $101/dag royalty).
+5. Rapport: VERKOOP eerst, ORGANISCH (boekstand, tegen gisteren), per boek ads tegen royalty, wat werkt en wat niet, wat geleerd (nieuw), wat ik verbeterde of stopte, Teens-rang tegen #1, top 3 wachtrij, tempo naar 10x (nov 2025: $101/dag royalty).
 
 ### TUSSEN (rondes B, C, D)
 1. Ads van vandaag sinds middernacht per campagne (Amazon US + Canada, PropellerAds Apocrypha): vertoningen, kliks, kosten, aankopen. Stopregels toepassen; campagnes zonder vertoningen een stap omhoog binnen de marge; zoektermen met aankoop exact toevoegen.
 2. Verkoop vandaag tot nu (Royalties Estimator, vandaag) als KDP het al toont.
 3. Teens CA-rang en #1 in Teen Reference (Keepa), status van openstaande KDP-wijzigingen (in review / live).
 4. Iets wat het rendement verhoogt en nu kan: doen.
-5. Rapport in hooguit 6 regels: verkoop vandaag, kosten vandaag, wat ik veranderde, wat opviel. Ronde D sluit de dag af: totaal royalty en ads vandaag, plan voor morgen.
+5. Rapport in hooguit 7 regels: verkoop vandaag, kosten vandaag, ORGANISCH (boekstand: bezoek uit zoek en AI, Amazon-kliks uit de boekgidsen, nieuw in Google), wat ik veranderde, wat opviel. Ronde D sluit de dag af: totaal royalty en ads vandaag, plan voor morgen.
 
 ## Campagnes
 
