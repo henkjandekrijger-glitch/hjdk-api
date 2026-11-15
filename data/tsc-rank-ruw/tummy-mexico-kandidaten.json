@@ -1,0 +1,1301 @@
+{
+  "gecontroleerd": "2026-11-15",
+  "toelichting": "Kandidatenlijst tummy tuck Tijuana. Onafhankelijke bronnen zijn vooral RealSelf (profielen, artsenlijsten per ingreep en patientverslagen; bij verslagen is alleen de titel gebruikt, niet de inhoud), de ASPS-zoekgids (pagina 1), de AMCPER-ledengids en twee oude forumdraden (TripAdvisor, BajaNomad). Reddit was niet bereikbaar. RealSelf-lijsten zijn deels gesponsord (Guerrero staat als gesponsord in de mommy makeover-lijst) en tonen per lijst maar 15 tot 20 artsen. Chirurgen komen waar mogelijk van de eigen site; waar die niet te openen was staat RealSelf als bron, met de certificering zoals RealSelf die noemt. Klinieken 20 tot 23 hebben geen onafhankelijke vermelding gevonden. Bewust niet opgenomen als kandidaat: Art Siluette Aesthetic Surgery en Dr. Jesus Manuel Baez Lopez, in het nieuws (NBC San Diego 2023, Mexico News Daily 2021, Newsweek 2021) na de dood van een patient tijdens o.a. een tummy tuck en zonder opleiding tot plastisch chirurg volgens die berichten; en Dr. Eduardo Gongora (Genesis Clinic) omdat hij in Rosarito zit. NBC San Diego (2023) raadt aan het CMCPER-nummer van een chirurg op te zoeken in de CMCPER-gids en bij CONACEM. Spampagina's over 'EOC Plastics' op universiteitsdomeinen zijn genegeerd.",
+  "niet_bereikbaar": [
+    {
+      "url": "reddit.com (r/PlasticSurgery, r/TummyTuck, r/MedicalTourism)",
+      "waarom": "WebSearch met domeinfilter reddit.com gaf een fout van de proxy, WebFetch van reddit werd geweigerd (geen toestemming). Geen Reddit-vermeldingen opgenomen."
+    },
+    {
+      "url": "drisabelbalza.com, ricardovega.com, healthandbeautytj.com, marcialesplasticsurgery.com, moranplasticsurgery.com, aliciasiglermd.com, doctorlaraplasticsurgery.com, vidawellnessandbeauty.com, guerreroplasticsurgery.com",
+      "waarom": "Eigen sites niet te openen (toestemming voor de URL niet gegeven); chirurggegevens komen daarom van RealSelf, de AMCPER-gids of de site van Mexico Cosmetic Center."
+    },
+    {
+      "url": "https://moneywise.com/news/top-stories/mommy-makeover-mexico-cosmetic-surgery-costs",
+      "waarom": "Pagina gaf een fout."
+    },
+    {
+      "url": "CMCPER-directorio en ISAPS find-a-surgeon",
+      "waarom": "Niet gevonden via zoeken; CMCPER-nummers alleen overgenomen zoals vermeld op RealSelf of eigen sites, niet zelf gecontroleerd."
+    },
+    {
+      "url": "https://find.plasticsurgery.org/city/tijuana/?page=1",
+      "waarom": "Alleen pagina 1 van 5 gelezen; andere ASPS-vermeldingen kunnen ontbreken."
+    }
+  ],
+  "klinieken": [
+    {
+      "naam": "Dr. Omar Lazos (praktijk zonder eigen naam)",
+      "stad": "Tijuana",
+      "site": "",
+      "site_bron": "",
+      "chirurgen": [
+        {
+          "naam": "Omar Lazos",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg; RealSelf noemt certificering CMCPER",
+          "bron": "https://www.realself.com/dr/omar-lazos-tijuana-mexico"
+        }
+      ],
+      "ziekenhuis": "",
+      "ziekenhuis_bron": "",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/omar-lazos-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,8 sterren uit circa 500 reviews, praktijk in Zona Rio, website verwijst alleen naar Instagram."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Lazos staat in de RealSelf tummy tuck-artsenlijst Mexico."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Lazos staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Lazos staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Male-Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Lazos staat in de RealSelf male tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck-Revision",
+          "soort": "realself",
+          "wat": "Lazos staat in de RealSelf tummy tuck revision-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/review/tummy-tuck-dr-omar-lazos",
+          "soort": "realself",
+          "wat": "Patientverslag over een tummy tuck bij Lazos (titel)."
+        },
+        {
+          "url": "https://www.realself.com/review/tummy-tuck-lazos-doll-love",
+          "soort": "realself",
+          "wat": "Tweede patientverslag over een tummy tuck bij Lazos (titel)."
+        },
+        {
+          "url": "https://curemeabroad.com/doctors/omar-lazos",
+          "soort": "betaald/makelaar",
+          "wat": "Profiel bij bemiddelaar CureMeAbroad."
+        }
+      ]
+    },
+    {
+      "naam": "Dr. Carmina Cardenas (praktijk zonder eigen naam)",
+      "stad": "Tijuana",
+      "site": "",
+      "site_bron": "",
+      "chirurgen": [
+        {
+          "naam": "Laura Carmina Cardenas",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg; RealSelf noemt abdominoplastiek als expertise, geen certificering vermeld",
+          "bron": "https://www.realself.com/dr/carmina-cardenas-tijuana-mexico"
+        }
+      ],
+      "ziekenhuis": "",
+      "ziekenhuis_bron": "",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/carmina-cardenas-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,8 sterren uit circa 380 reviews; abdominoplastiek als expertise, geen eigen website of adres."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Cardenas staat in de RealSelf tummy tuck-artsenlijst Mexico."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Cardenas staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Male-Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Cardenas staat in de RealSelf male tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck-Revision",
+          "soort": "realself",
+          "wat": "Cardenas staat in de RealSelf tummy tuck revision-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/review/tijuana-mexico-tummy-tuck-experience-dr-carmina-simply",
+          "soort": "realself",
+          "wat": "Patientverslag over een tummy tuck bij Cardenas (titel)."
+        },
+        {
+          "url": "https://www.realself.com/review/mexico-tummy-tuck-dra-cardenas-june-11th",
+          "soort": "realself",
+          "wat": "Patientverslag over een tummy tuck bij Cardenas (titel)."
+        },
+        {
+          "url": "https://www.realself.com/review/mexico-mx-great-experience-dr-cardenas-back-finally-tummy-tuck",
+          "soort": "realself",
+          "wat": "Patientverslag over een tummy tuck bij Cardenas (titel)."
+        },
+        {
+          "url": "https://www.realself.com/review/body-lift-wrong-tijuana-dr-cardenas",
+          "soort": "realself",
+          "wat": "Kritisch patientverslag over een bodylift bij Cardenas (titel)."
+        },
+        {
+          "url": "https://mommy-makeover-packages.pages.dev/north-america/mexico/tijuana/dr-carmina-cardenas",
+          "soort": "betaald/makelaar",
+          "wat": "Vermelding op een pakkettenvergelijker."
+        }
+      ]
+    },
+    {
+      "naam": "Health & Beauty by Dr. Pantoja",
+      "stad": "Tijuana",
+      "site": "healthandbeautytj.com",
+      "site_bron": "https://www.realself.com/dr/salvador-pantoja-tijuana-mexico",
+      "chirurgen": [
+        {
+          "naam": "Salvador Pantoja",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg; RealSelf noemt lidmaatschap ISAPS, geen certificering vermeld",
+          "bron": "https://www.realself.com/dr/salvador-pantoja-tijuana-mexico"
+        }
+      ],
+      "ziekenhuis": "",
+      "ziekenhuis_bron": "",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/salvador-pantoja-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,6 sterren uit circa 477 reviews, lid van ISAPS volgens het profiel."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Pantoja staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Male-Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Pantoja staat in de RealSelf male tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck-Revision",
+          "soort": "realself",
+          "wat": "Pantoja staat in de RealSelf tummy tuck revision-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/review/tijuana-mx-tummy-tuck-45-child-1-2-yo-upper-ab-muscle-repair-w-tt-dr-pantoja",
+          "soort": "realself",
+          "wat": "Patientverslag over tummy tuck met spierherstel bij Pantoja (titel)."
+        },
+        {
+          "url": "https://www.realself.com/review/tijuana-mexico-44-years-tummy-tuck-muscle-repair-dr-pantoja",
+          "soort": "realself",
+          "wat": "Patientverslag over tummy tuck met spierherstel bij Pantoja (titel)."
+        },
+        {
+          "url": "https://www.realself.com/review/tijuana-mx-tummy-tuck-stars-dr-pantoja-amp-staff",
+          "soort": "realself",
+          "wat": "Patientverslag over een tummy tuck bij Pantoja (titel)."
+        },
+        {
+          "url": "https://www.realself.com/review/tijuana-mexico-excellent-experience-dr-pantoja-tijuana-mexico-tummy-tuck-w",
+          "soort": "realself",
+          "wat": "Patientverslag over een tummy tuck bij Pantoja (titel)."
+        },
+        {
+          "url": "https://www.whatclinic.com/cosmetic-plastic-surgery/mexico/tijuana/dr-salvador-pantoja-tijuana-plastic-surgery",
+          "soort": "betaald/makelaar",
+          "wat": "Kliniekprofiel op WhatClinic."
+        }
+      ]
+    },
+    {
+      "naam": "VIDA Wellness and Beauty / Cosmed Clinic Plastic Surgery Center",
+      "stad": "Tijuana",
+      "site": "vidawellnessandbeauty.com (ook cosmedclinic.com, vida.clinic)",
+      "site_bron": "https://www.realself.com/practices/vida-wellness-beauty-tijuana-baja-california",
+      "chirurgen": [
+        {
+          "naam": "Alejandro J. Quiroz",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg; CMCPER, leden ASAPS, ISAPS en AMCPER volgens RealSelf",
+          "bron": "https://www.realself.com/dr/alejandro-j-quiroz-tijuana-mexico"
+        },
+        {
+          "naam": "Juan Carlos Fuentes",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg; CMCPER, leden AMCPER en ISAPS volgens RealSelf",
+          "bron": "https://www.realself.com/dr/juan-carlos-fuentes-tijuana-mexico"
+        },
+        {
+          "naam": "Francisco Bucio",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg (Bucio Surgicenter); geen certificering vermeld",
+          "bron": "https://www.realself.com/dr/francisco-bucio-tijuana-mexico"
+        },
+        {
+          "naam": "Carlos Castaneda",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg",
+          "bron": "https://www.realself.com/practices/cosmed-clinic-plastic-surgery-center-tijuana-baja-california"
+        },
+        {
+          "naam": "Enrique Quiros Lim",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg",
+          "bron": "https://www.realself.com/practices/cosmed-clinic-plastic-surgery-center-tijuana-baja-california"
+        }
+      ],
+      "ziekenhuis": "Eigen kliniek, Calle Brasilia No. 1, Fracc. El Paraiso, Tijuana 22106",
+      "ziekenhuis_bron": "https://www.realself.com/dr/alejandro-j-quiroz-tijuana-mexico",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/practices/vida-wellness-beauty-tijuana-baja-california",
+          "soort": "realself",
+          "wat": "Praktijkprofiel met circa 535 reviews en acht artsen."
+        },
+        {
+          "url": "https://www.realself.com/practices/cosmed-clinic-plastic-surgery-center-tijuana-baja-california",
+          "soort": "realself",
+          "wat": "Zelfde adres onder de naam Cosmed, circa 528 reviews."
+        },
+        {
+          "url": "https://www.realself.com/dr/alejandro-j-quiroz-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel Quiroz, 4,4 sterren uit circa 250 reviews."
+        },
+        {
+          "url": "https://www.realself.com/dr/juan-carlos-fuentes-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel Fuentes, 4,7 sterren uit circa 190 reviews."
+        },
+        {
+          "url": "https://www.realself.com/dr/francisco-bucio-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel Bucio, 4,2 sterren uit 39 reviews."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Quiroz staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Quiroz staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Male-Tummy-Tuck",
+          "soort": "realself",
+          "wat": "VIDA en Cosmed staat in de RealSelf male tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck-Revision",
+          "soort": "realself",
+          "wat": "VIDA, Cosmed, Quiroz en Fuentes staat in de RealSelf tummy tuck revision-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Bucio staat in de RealSelf tummy tuck-artsenlijst Mexico."
+        },
+        {
+          "url": "https://www.realself.com/review/tijuana-bc-mx-tummy-tuck-bad-experience",
+          "soort": "realself",
+          "wat": "Kritisch patientverslag over een tummy tuck dat in de zoekresultaten bij VIDA verscheen (titel; arts niet gecontroleerd)."
+        },
+        {
+          "url": "https://forums.bajanomad.com/viewthread.php?tid=12771",
+          "soort": "forum",
+          "wat": "Forumdraad uit 2005 deelt een krantenstuk over operaties in Tijuana waarin Quiroz als chirurg van bodylifts genoemd wordt."
+        },
+        {
+          "url": "https://us-uk.bookimed.com/clinic/cosmed-clinic/procedure=fleur-de-lis-tummy-tuck/",
+          "soort": "betaald/makelaar",
+          "wat": "Cosmed staat bij bemiddelaar Bookimed."
+        },
+        {
+          "url": "https://www.mymeditravel.com/medical-centers/mexico/tijuana/diego-rivera/vida-wellness-and-beauty",
+          "soort": "betaald/makelaar",
+          "wat": "VIDA staat op MyMediTravel."
+        }
+      ]
+    },
+    {
+      "naam": "Dr Isabel Balza Mirabal Plastic Surgery",
+      "stad": "Tijuana",
+      "site": "drisabelbalza.com",
+      "site_bron": "https://www.realself.com/dr/isabel-balza-tijuana-bc-mexico",
+      "chirurgen": [
+        {
+          "naam": "Isabel Cristina Balza Mirabal",
+          "titel": "Dra., MD",
+          "specialisme": "Plastisch chirurg; CMCPER volgens RealSelf, lid AMCPER",
+          "bron": "https://cirugiaplastica.mx/directorio/baja-california/1401"
+        }
+      ],
+      "ziekenhuis": "Praktijk: Diego Rivera 2386, 5e verdieping, kantoor 503, Tijuana 22660 (ziekenhuis niet genoemd)",
+      "ziekenhuis_bron": "https://www.realself.com/dr/isabel-balza-tijuana-bc-mexico",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/isabel-balza-tijuana-bc-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,9 sterren uit 82 reviews, 38 in de categorie abdominoplastiek."
+        },
+        {
+          "url": "https://cirugiaplastica.mx/directorio/baja-california/1401",
+          "soort": "artsengids",
+          "wat": "Staat in de ledengids van AMCPER met cedula profesional en cedula de especialidad."
+        },
+        {
+          "url": "https://www.realself.com/practices/dr-isabel-balza-mirabal-plastic-surgery-tijuana-baja-california",
+          "soort": "realself",
+          "wat": "Praktijkprofiel op RealSelf."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Balza staat in de RealSelf tummy tuck-artsenlijst Mexico."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Balza staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Balza staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck-Revision",
+          "soort": "realself",
+          "wat": "Balza staat in de RealSelf tummy tuck revision-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/review/tummy-tuck-dr-balza-exceeded-expectations",
+          "soort": "realself",
+          "wat": "Patientverslag over een tummy tuck bij Balza (titel)."
+        },
+        {
+          "url": "https://www.realself.com/review/tummy-tuck-amazing-experience-balza-surgeon",
+          "soort": "realself",
+          "wat": "Patientverslag over een tummy tuck bij Balza (titel)."
+        },
+        {
+          "url": "https://health.bookimed.com/clinic/dr-isabel-balza-plastic-surgery",
+          "soort": "betaald/makelaar",
+          "wat": "Staat bij bemiddelaar Bookimed."
+        }
+      ]
+    },
+    {
+      "naam": "Vemont Plastic Surgery",
+      "stad": "Tijuana",
+      "site": "ricardovega.com",
+      "site_bron": "https://www.realself.com/dr/ricardo-vega-tijuana-mexico",
+      "chirurgen": [
+        {
+          "naam": "Ricardo Vega",
+          "titel": "MD",
+          "specialisme": "Plastisch en reconstructief chirurg (opleiding 1997), lid ISAPS volgens RealSelf",
+          "bron": "https://www.realself.com/dr/ricardo-vega-tijuana-mexico"
+        }
+      ],
+      "ziekenhuis": "Praktijk: The F Tower, Circuito Bursatil 9043, suite 306, Zona Rio (ziekenhuis niet genoemd)",
+      "ziekenhuis_bron": "https://www.realself.com/dr/ricardo-vega-tijuana-mexico",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/ricardo-vega-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,7 sterren uit circa 146 reviews."
+        },
+        {
+          "url": "https://find.plasticsurgery.org/city/tijuana/?page=1",
+          "soort": "artsengids",
+          "wat": "Staat in de zoekgids van de American Society of Plastic Surgeons voor Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/practices/vemont-plastic-surgery-tijuana-baja-california",
+          "soort": "realself",
+          "wat": "Praktijkprofiel Vemont op RealSelf."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Vega staat in de RealSelf tummy tuck-artsenlijst Mexico."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Vega staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Vega staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Male-Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Vega staat in de RealSelf male tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/review/mommy-makeover-with-dr-ricardo-vega",
+          "soort": "realself",
+          "wat": "Patientverslag over een mommy makeover bij Vega (titel)."
+        },
+        {
+          "url": "https://www.whatclinic.com/cosmetic-plastic-surgery/mexico/baja-california/dr-ricardo-vega-plastic-surgeon",
+          "soort": "betaald/makelaar",
+          "wat": "Profiel op WhatClinic."
+        }
+      ]
+    },
+    {
+      "naam": "Plastic Surgery Tijuana (PLASTIKS)",
+      "stad": "Tijuana",
+      "site": "plasticsurgery-tijuana.com",
+      "site_bron": "https://www.plasticsurgery-tijuana.com/",
+      "chirurgen": [
+        {
+          "naam": "Rafael Camberos Solis",
+          "titel": "Dr., MD",
+          "specialisme": "Board-certified plastisch chirurg volgens eigen site; actief lid AMCPER, internationaal lid ASPS",
+          "bron": "https://www.plasticsurgery-tijuana.com/"
+        }
+      ],
+      "ziekenhuis": "Praktijk Paseo del Centenario 9580-1003 (New City Medical Plaza); RealSelf noemt opnamerecht in Hospital Angeles en CER",
+      "ziekenhuis_bron": "https://www.plasticsurgery-tijuana.com/",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/rafael-camberos-solis-tijuana-baja-california-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,8 sterren uit circa 72 reviews, opnamerecht Hospital Angeles en CER."
+        },
+        {
+          "url": "https://find.plasticsurgery.org/city/tijuana/?page=1",
+          "soort": "artsengids",
+          "wat": "Staat in de ASPS-zoekgids met adres in New City Medical Plaza."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Camberos staat in de RealSelf tummy tuck-artsenlijst Mexico."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Camberos staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Camberos staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Male-Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Camberos staat in de RealSelf male tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck-Revision",
+          "soort": "realself",
+          "wat": "Camberos staat in de RealSelf tummy tuck revision-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/review/tummy-tuck-amazing-transformation-with-camberos",
+          "soort": "realself",
+          "wat": "Patientverslag over een tummy tuck bij Camberos (titel)."
+        },
+        {
+          "url": "https://health.bookimed.com/clinics/country=mexico/city=tijuana/procedure=abdominoplasty",
+          "soort": "betaald/makelaar",
+          "wat": "PLASTIKS staat in de Bookimed-ranglijst voor tummy tuck in Tijuana."
+        }
+      ]
+    },
+    {
+      "naam": "Marciales Plastic Surgery",
+      "stad": "Tijuana",
+      "site": "marcialesplasticsurgery.com",
+      "site_bron": "https://www.realself.com/dr/carlos-marciales-tijuana-baja-california-mexico",
+      "chirurgen": [
+        {
+          "naam": "Carlos Marciales Chacon",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg; CMCPER, lid AMCPER volgens RealSelf",
+          "bron": "https://www.realself.com/dr/carlos-marciales-tijuana-baja-california-mexico"
+        }
+      ],
+      "ziekenhuis": "Hospital Angeles Tijuana en New City Medical (opnamerecht volgens RealSelf)",
+      "ziekenhuis_bron": "https://www.realself.com/dr/carlos-marciales-tijuana-baja-california-mexico",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/carlos-marciales-tijuana-baja-california-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,9 sterren uit 41 reviews, opnamerecht Hospital Angeles."
+        },
+        {
+          "url": "https://find.plasticsurgery.org/city/tijuana/?page=1",
+          "soort": "artsengids",
+          "wat": "Staat in de ASPS-zoekgids, New City Medical Tower suite 804."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Marciales staat in de RealSelf tummy tuck-artsenlijst Mexico."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Marciales staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Marciales staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Male-Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Marciales staat in de RealSelf male tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck-Revision",
+          "soort": "realself",
+          "wat": "Marciales staat in de RealSelf tummy tuck revision-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.placidway.com/article/3743/Top-Clinics-for-Plus-Size-Tummy-Tucks-in-Tijuana-Mexico-Expert-Surgeons-Beautiful-Results",
+          "soort": "betaald/makelaar",
+          "wat": "Genoemd in een PlacidWay-lijst voor tummy tuck bij overgewicht."
+        },
+        {
+          "url": "https://curemeabroad.com/doctors/carlos-marciales",
+          "soort": "betaald/makelaar",
+          "wat": "Profiel bij bemiddelaar CureMeAbroad."
+        }
+      ]
+    },
+    {
+      "naam": "Cervantes & Aragon Plastic Surgery Group",
+      "stad": "Tijuana",
+      "site": "",
+      "site_bron": "",
+      "chirurgen": [
+        {
+          "naam": "Juan Pablo Cervantes",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg; CMCPER, lid ISAPS volgens RealSelf",
+          "bron": "https://www.realself.com/dr/juan-pablo-cervantes-zona-rio-tijuana-mexico"
+        }
+      ],
+      "ziekenhuis": "Hospital Angeles Tijuana (opnamerecht volgens RealSelf)",
+      "ziekenhuis_bron": "https://www.realself.com/dr/juan-pablo-cervantes-zona-rio-tijuana-mexico",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/juan-pablo-cervantes-zona-rio-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,6 sterren uit circa 124 reviews."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Cervantes staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Male-Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Cervantes staat in de RealSelf male tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck-Revision",
+          "soort": "realself",
+          "wat": "Cervantes staat in de RealSelf tummy tuck revision-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/review/tijuana-mx-tummy-tuck-like-dr-cervantes",
+          "soort": "realself",
+          "wat": "Patientverslag over een tummy tuck bij Cervantes (titel)."
+        },
+        {
+          "url": "https://www.realself.com/review/tijuana-mexico-tummy-tuck-rumors-true-dr-cerrvantes",
+          "soort": "realself",
+          "wat": "Patientverslag over een tummy tuck bij Cervantes (titel)."
+        },
+        {
+          "url": "https://www.realself.com/review/zona-r-o-tijuana-mommy-makeover-regret-procedure-dr-juan-pablo-cervantes",
+          "soort": "realself",
+          "wat": "Kritisch patientverslag over een mommy makeover bij Cervantes (titel)."
+        },
+        {
+          "url": "https://www.whatclinic.com/cosmetic-plastic-surgery/mexico/tijuana/cervantes-aragon-plastic-surgery-group",
+          "soort": "betaald/makelaar",
+          "wat": "Groepsprofiel op WhatClinic."
+        }
+      ]
+    },
+    {
+      "naam": "Guerrero Plastic Surgery",
+      "stad": "Tijuana",
+      "site": "guerreroplasticsurgery.com",
+      "site_bron": "https://es-us.noticias.yahoo.com/plastic-surgery-tijuana-achieving-desired-213000844.html",
+      "chirurgen": [
+        {
+          "naam": "Luis Eduardo Guerrero",
+          "titel": "Dr.",
+          "specialisme": "Esthetisch en reconstructief plastisch chirurg; CMCPER, AMCPER, ASPS volgens de site van Mexico Cosmetic Center",
+          "bron": "https://mexicocosmeticcenter.com/surgeons/"
+        }
+      ],
+      "ziekenhuis": "Hospital Angeles (opnamerecht volgens RealSelf)",
+      "ziekenhuis_bron": "https://www.realself.com/dr/luis-eduardo-guerrero-tijuana-mexico",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/luis-eduardo-guerrero-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 5,0 sterren uit 52 reviews, opnamerecht Hospital Angeles."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Guerrero staat in de RealSelf tummy tuck-artsenlijst Mexico."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Guerrero staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Guerrero (als gesponsord gemarkeerd) staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/review/tummy-tuck-wildest-dreams-expectations",
+          "soort": "realself",
+          "wat": "Patientverslag over een tummy tuck dat bij Guerrero in de zoekresultaten verscheen (titel)."
+        },
+        {
+          "url": "https://es-us.noticias.yahoo.com/plastic-surgery-tijuana-achieving-desired-213000844.html",
+          "soort": "betaald/makelaar",
+          "wat": "Stuk van San Diego Red via Yahoo (2023) dat de kliniek met contactgegevens aanprijst; niet als advertentie gemarkeerd maar promotioneel."
+        },
+        {
+          "url": "https://www.placidway.com/package/6809/Tummy-Tuck-Package-in-Tijuana-Mexico-by-Guerrero-Plastic-Surgery",
+          "soort": "betaald/makelaar",
+          "wat": "Tummy tuck-pakket bij PlacidWay."
+        }
+      ]
+    },
+    {
+      "naam": "Dr. Nicolas Leyva Plastic and Reconstructive Surgery",
+      "stad": "Tijuana",
+      "site": "drnicolasleyva.com",
+      "site_bron": "https://drnicolasleyva.com/",
+      "chirurgen": [
+        {
+          "naam": "Nicolas Leyva",
+          "titel": "Dr.",
+          "specialisme": "Plastisch en reconstructief chirurg (UNAM), CMCPER, lid AMCPER; focus op lichaamscontouren na veel gewichtsverlies",
+          "bron": "https://drnicolasleyva.com/"
+        }
+      ],
+      "ziekenhuis": "Praktijk New City Medical Plaza, Paseo del Centenario 9580, kantoor 2405 (operatieziekenhuis niet genoemd)",
+      "ziekenhuis_bron": "https://drnicolasleyva.com/",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/nicolas-leyva-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,9 sterren uit 70 reviews."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Leyva staat in de RealSelf tummy tuck-artsenlijst Mexico."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Leyva staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Leyva staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.sandiegored.com/en/news/199910/Board-Certified-plastic-surgeons-in-Tijuana-elevate-the-standards-of-medical-care",
+          "soort": "betaald/makelaar",
+          "wat": "San Diego Red-stuk (2021) noemt Leyva en verwijst voor afspraken naar bemiddelaar MedBaja."
+        }
+      ]
+    },
+    {
+      "naam": "Dr. Eduardo Ochoa (EOC)",
+      "stad": "Tijuana",
+      "site": "",
+      "site_bron": "",
+      "chirurgen": [
+        {
+          "naam": "Eduardo Ochoa",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg; CMCPER volgens RealSelf",
+          "bron": "https://www.realself.com/dr/eduardo-ochoa-tijuana-mexico"
+        }
+      ],
+      "ziekenhuis": "New City Medical Plaza (opnamerecht volgens RealSelf)",
+      "ziekenhuis_bron": "https://www.realself.com/dr/eduardo-ochoa-tijuana-mexico",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/eduardo-ochoa-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,8 sterren uit 84 reviews."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Ochoa staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Ochoa staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.sandiegored.com/en/news/199910/Board-Certified-plastic-surgeons-in-Tijuana-elevate-the-standards-of-medical-care",
+          "soort": "betaald/makelaar",
+          "wat": "San Diego Red-stuk (2021) noemt Ochoa naast MedBaja."
+        }
+      ]
+    },
+    {
+      "naam": "Mexico Cosmetic Center",
+      "stad": "Tijuana",
+      "site": "mexicocosmeticcenter.com",
+      "site_bron": "https://mexicocosmeticcenter.com/surgeons/",
+      "chirurgen": [
+        {
+          "naam": "Jorge Chang Contreras",
+          "titel": "Dr.",
+          "specialisme": "Plastisch chirurg; CMCPER, ASPS, AMCPER, ISAPS",
+          "bron": "https://mexicocosmeticcenter.com/surgeons/"
+        },
+        {
+          "naam": "Carlos Illich Navarro",
+          "titel": "Dr.",
+          "specialisme": "Plastisch chirurg; CMCPER, ASPS (kandidaat), AMCPER",
+          "bron": "https://mexicocosmeticcenter.com/surgeons/"
+        },
+        {
+          "naam": "Daniela Leon",
+          "titel": "Dra.",
+          "specialisme": "Esthetisch en reconstructief plastisch chirurg; CMCPER, AMCPER",
+          "bron": "https://mexicocosmeticcenter.com/surgeons/"
+        },
+        {
+          "naam": "Ignacio Del Carmen",
+          "titel": "Dr.",
+          "specialisme": "Esthetisch en reconstructief plastisch chirurg; CMCPER, AMCPER, ISAPS",
+          "bron": "https://mexicocosmeticcenter.com/surgeons/"
+        },
+        {
+          "naam": "Jesus Manuel Vargas Rocha",
+          "titel": "Dr.",
+          "specialisme": "Esthetisch en reconstructief plastisch chirurg; CMCPER, AMCPER",
+          "bron": "https://mexicocosmeticcenter.com/surgeons/"
+        },
+        {
+          "naam": "Peter Lopez",
+          "titel": "Dr.",
+          "specialisme": "Plastisch, esthetisch en reconstructief chirurg",
+          "bron": "https://mexicocosmeticcenter.com/surgeons/"
+        }
+      ],
+      "ziekenhuis": "Hospital Azar genoemd bij Leon en Chang; RealSelf noemt voor Navarro Dreams Hospital en Azar Hospital",
+      "ziekenhuis_bron": "https://mexicocosmeticcenter.com/surgeons/",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/carlos-navarro-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel Navarro, 4,5 sterren uit 29 reviews, CMCPER 2022 en CMCGAC."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Navarro staat in de RealSelf tummy tuck-artsenlijst Mexico."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Navarro staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Navarro staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://find.plasticsurgery.org/city/tijuana/?page=1",
+          "soort": "artsengids",
+          "wat": "Jorge Chang Contreras staat in de ASPS-zoekgids voor Tijuana."
+        },
+        {
+          "url": "https://medicaltourismresourceguide.com/mexico/plastic-surgeons/dr-jorge-chang/",
+          "soort": "betaald/makelaar",
+          "wat": "Profiel Chang bij Medical Tourism Resource Guide."
+        },
+        {
+          "url": "https://medicaltourismresourceguide.com/mexico/plastic-surgeons/dr-illich-navarro/",
+          "soort": "betaald/makelaar",
+          "wat": "Profiel Navarro bij Medical Tourism Resource Guide."
+        }
+      ]
+    },
+    {
+      "naam": "Moran Plastic Surgery",
+      "stad": "Tijuana",
+      "site": "moranplasticsurgery.com",
+      "site_bron": "https://www.realself.com/dr/mario-arturo-moran-tijuana-mexico",
+      "chirurgen": [
+        {
+          "naam": "Mario Arturo Moran Romero",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg; CMCPER, lid AMCPER volgens RealSelf",
+          "bron": "https://www.realself.com/dr/mario-arturo-moran-tijuana-mexico"
+        }
+      ],
+      "ziekenhuis": "Hospital Angeles Tijuana en Hospital del Prado (opnamerecht volgens RealSelf)",
+      "ziekenhuis_bron": "https://www.realself.com/dr/mario-arturo-moran-tijuana-mexico",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/mario-arturo-moran-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 5,0 sterren uit circa 24 tot 29 reviews."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Moran staat in de RealSelf tummy tuck-artsenlijst Mexico."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Moran staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Moran staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        }
+      ]
+    },
+    {
+      "naam": "Dr. Alicia Sigler",
+      "stad": "Tijuana",
+      "site": "aliciasiglermd.com",
+      "site_bron": "https://www.realself.com/dr/alicia-sigler-tijuana-mexico",
+      "chirurgen": [
+        {
+          "naam": "Alicia Sigler",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg; CMCPER, lid AMCPER volgens RealSelf",
+          "bron": "https://www.realself.com/dr/alicia-sigler-tijuana-mexico"
+        }
+      ],
+      "ziekenhuis": "Opnamerecht volgens RealSelf: Hospital de las Californias, Hospital CER, TJ Plast, Hospital Angeles, Hospital Blue Tower",
+      "ziekenhuis_bron": "https://www.realself.com/dr/alicia-sigler-tijuana-mexico",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/alicia-sigler-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,6 sterren uit circa 63 reviews."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Sigler staat in de RealSelf tummy tuck-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Male-Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Sigler staat in de RealSelf male tummy tuck-artsenlijst Tijuana."
+        }
+      ]
+    },
+    {
+      "naam": "Doctor Lara Plastic Surgery",
+      "stad": "Tijuana",
+      "site": "doctorlaraplasticsurgery.com",
+      "site_bron": "https://www.realself.com/dr/alberto-lara-jimenez-tijuana-bc-mexico",
+      "chirurgen": [
+        {
+          "naam": "Alberto Lara Jimenez",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg; CMCPER, lid AMCPER volgens RealSelf",
+          "bron": "https://www.realself.com/dr/alberto-lara-jimenez-tijuana-bc-mexico"
+        }
+      ],
+      "ziekenhuis": "Unidad Quirurgica Rio (opnamerecht volgens RealSelf)",
+      "ziekenhuis_bron": "https://www.realself.com/dr/alberto-lara-jimenez-tijuana-bc-mexico",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/alberto-lara-jimenez-tijuana-bc-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,6 sterren uit circa 50 reviews."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Male-Tummy-Tuck",
+          "soort": "realself",
+          "wat": "Lara staat in de RealSelf male tummy tuck-artsenlijst Tijuana."
+        }
+      ]
+    },
+    {
+      "naam": "Dr. Andrei Rios (praktijk zonder eigen naam)",
+      "stad": "Tijuana",
+      "site": "",
+      "site_bron": "",
+      "chirurgen": [
+        {
+          "naam": "Andrei Rios",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg; CMCPER en CMCGAC volgens RealSelf",
+          "bron": "https://www.realself.com/dr/andrei-rios-tijuana-mexico"
+        }
+      ],
+      "ziekenhuis": "Hospital Angeles Tijuana en Hospital CER (opnamerecht volgens RealSelf)",
+      "ziekenhuis_bron": "https://www.realself.com/dr/andrei-rios-tijuana-mexico",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/andrei-rios-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 5,0 sterren uit 23 reviews."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Rios staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck-Revision",
+          "soort": "realself",
+          "wat": "Rios staat in de RealSelf tummy tuck revision-artsenlijst Tijuana."
+        }
+      ]
+    },
+    {
+      "naam": "Dr. Tania Najar (praktijk zonder eigen naam)",
+      "stad": "Tijuana",
+      "site": "",
+      "site_bron": "",
+      "chirurgen": [
+        {
+          "naam": "Tania Najar",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg; CMCPER volgens RealSelf",
+          "bron": "https://www.realself.com/dr/tania-najar-tijuana-mexico"
+        }
+      ],
+      "ziekenhuis": "SIMNSA (Sistemas Medicos Nacionales), opnamerecht volgens RealSelf",
+      "ziekenhuis_bron": "https://www.realself.com/dr/tania-najar-tijuana-mexico",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/tania-najar-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,7 sterren uit 22 reviews."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Mommy-Makeover",
+          "soort": "realself",
+          "wat": "Najar staat in de RealSelf mommy makeover-artsenlijst Tijuana."
+        }
+      ]
+    },
+    {
+      "naam": "Dr. Jaime Caloca Jr.",
+      "stad": "Tijuana",
+      "site": "medi-systems.com/ms/drcaloca",
+      "site_bron": "https://www.realself.com/dr/jaime-caloca-zona-rio-tijuana-mexico",
+      "chirurgen": [
+        {
+          "naam": "Jaime Caloca Jr.",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg (opleiding Hospital General de Mexico 2001); lid AMCPER, ISAPS, SBCP volgens RealSelf",
+          "bron": "https://www.realself.com/dr/jaime-caloca-zona-rio-tijuana-mexico"
+        }
+      ],
+      "ziekenhuis": "Elite Medical Center (opnamerecht volgens RealSelf)",
+      "ziekenhuis_bron": "https://www.realself.com/dr/jaime-caloca-zona-rio-tijuana-mexico",
+      "vermeld_in": [
+        {
+          "url": "https://www.realself.com/dr/jaime-caloca-zona-rio-tijuana-mexico",
+          "soort": "realself",
+          "wat": "Profiel met 4,9 sterren uit 39 reviews."
+        },
+        {
+          "url": "https://www.realself.com/find/Mexico/Tijuana/Tummy-Tuck-Revision",
+          "soort": "realself",
+          "wat": "Caloca staat in de RealSelf tummy tuck revision-artsenlijst Tijuana."
+        },
+        {
+          "url": "https://www.realself.com/review/caloca-mexico-terrible-tummy-tuck",
+          "soort": "realself",
+          "wat": "Kritisch patientverslag over een tummy tuck bij Caloca (titel)."
+        },
+        {
+          "url": "https://www.complaintsboard.com/dr-jaime-caloca-jr-cosmetic-injecton-nightmare-c590269",
+          "soort": "forum",
+          "wat": "Klacht op ComplaintsBoard over een injectiebehandeling bij Caloca."
+        }
+      ]
+    },
+    {
+      "naam": "Mexico Plastic Surgery Group (mexicotummytuck.com, ook merk Aligno)",
+      "stad": "Tijuana",
+      "site": "mexicotummytuck.com",
+      "site_bron": "https://mexicotummytuck.com/",
+      "chirurgen": [
+        {
+          "naam": "Alfredo Chama Naranjo",
+          "titel": "Dr.",
+          "specialisme": "Plastisch, esthetisch en reconstructief chirurg (UNAM); CMCPER 2607",
+          "bron": "https://dralfredochama.com/en/dr-chama/"
+        },
+        {
+          "naam": "Jorge Galaz Martinez",
+          "titel": "Dr.",
+          "specialisme": "Plastisch chirurg; CMCPER 2338",
+          "bron": "https://mexicotummytuck.com/"
+        }
+      ],
+      "ziekenhuis": "Ziekenhuis-OK in Tijuana zonder naam; praktijk Chama: Plaza Peninsula, Via Rapida Ote. 15000",
+      "ziekenhuis_bron": "https://dralfredochama.com/en/dr-chama/",
+      "vermeld_in": []
+    },
+    {
+      "naam": "Dr. Diaz Plastic Surgery",
+      "stad": "Tijuana",
+      "site": "drdiazplasticsurgery.com",
+      "site_bron": "https://www.drdiazplasticsurgery.com/",
+      "chirurgen": [
+        {
+          "naam": "Jorge L. Diaz Martinez",
+          "titel": "Dr.",
+          "specialisme": "Gecertificeerd plastisch chirurg; CMCPER 2333, AMCPER",
+          "bron": "https://www.drdiazplasticsurgery.com/"
+        }
+      ],
+      "ziekenhuis": "Praktijk New City Medical Plaza, suite 1102 (operatieziekenhuis niet genoemd)",
+      "ziekenhuis_bron": "https://www.drdiazplasticsurgery.com/",
+      "vermeld_in": []
+    },
+    {
+      "naam": "Vive Plastic Surgery",
+      "stad": "Tijuana",
+      "site": "viveplasticsurgery.com",
+      "site_bron": "https://www.viveplasticsurgery.com/services/tummy-tuck-surgery",
+      "chirurgen": [
+        {
+          "naam": "Felix Omar Marquez Villalobos",
+          "titel": "Dr.",
+          "specialisme": "Lichaamscontouren; site zegt CMCPER-gecertificeerd",
+          "bron": "https://www.viveplasticsurgery.com/services/tummy-tuck-surgery"
+        },
+        {
+          "naam": "Jose Alonso Rivera Ruvalcaba",
+          "titel": "Dr.",
+          "specialisme": "Facelift; site zegt CMCPER-gecertificeerd",
+          "bron": "https://www.viveplasticsurgery.com/services/tummy-tuck-surgery"
+        }
+      ],
+      "ziekenhuis": "",
+      "ziekenhuis_bron": "",
+      "vermeld_in": []
+    },
+    {
+      "naam": "Ciplastic (Hospital Ciplastic)",
+      "stad": "Tijuana",
+      "site": "ciplastic.com",
+      "site_bron": "https://ciplastic.com/",
+      "chirurgen": [
+        {
+          "naam": "Hermes Avila Pelayo",
+          "titel": "Dr.",
+          "specialisme": "Board-certified plastisch chirurg; CMCPER, ISAPS, ASPS volgens de site",
+          "bron": "https://ciplastic.com/"
+        }
+      ],
+      "ziekenhuis": "Hospital Ciplastic, Tijuana (geen adres op de site)",
+      "ziekenhuis_bron": "https://ciplastic.com/",
+      "vermeld_in": []
+    },
+    {
+      "naam": "MyBestBodyEver!",
+      "stad": "Tijuana",
+      "site": "mybestbodyever.com",
+      "site_bron": "https://www.mybestbodyever.com/services/tummy-tuck/",
+      "chirurgen": [
+        {
+          "naam": "Rodolfo Castillo Calderon",
+          "titel": "Dr.",
+          "specialisme": "Board-certified plastisch chirurg; noemt banden met AMCPER, ASPS, ISAPS, FILACP",
+          "bron": "https://www.mybestbodyever.com/services/tummy-tuck/"
+        }
+      ],
+      "ziekenhuis": "Eigen operatiecentrum zonder naam; spreekkamer NewCity Medical Plaza, consultorio 407",
+      "ziekenhuis_bron": "https://www.mybestbodyever.com/services/tummy-tuck/",
+      "vermeld_in": [
+        {
+          "url": "https://find.plasticsurgery.org/city/tijuana/?page=1",
+          "soort": "artsengids",
+          "wat": "Rodolfo Castillo staat in de ASPS-zoekgids op hetzelfde adres (suite 407)."
+        },
+        {
+          "url": "https://www.whatclinic.com/cosmetic-plastic-surgery/mexico/tijuana/my-best-body-ever",
+          "soort": "betaald/makelaar",
+          "wat": "Profiel op WhatClinic."
+        }
+      ]
+    },
+    {
+      "naam": "Cosmetic & Bariatric Surgery Center",
+      "stad": "Tijuana",
+      "site": "cosmeticsurgeryinmexico.com",
+      "site_bron": "https://cosmeticsurgeryinmexico.com/plastic-surgery-tijuana/body/tummy-tuck/post-weight-loss-tummy-tuck/",
+      "chirurgen": [
+        {
+          "naam": "Manuel Antonio Gutierrez Romero",
+          "titel": "Dr.",
+          "specialisme": "Plastisch chirurg; Mexican Board of Plastic, Aesthetic and Reconstructive Surgery; leden ASPS, AMCPER, ISAPS",
+          "bron": "https://cosmeticsurgeryinmexico.com/plastic-surgery-tijuana/body/tummy-tuck/post-weight-loss-tummy-tuck/"
+        }
+      ],
+      "ziekenhuis": "Praktijk Av. Via Oriente 9750, suites 102 en 103 (operatieziekenhuis niet genoemd)",
+      "ziekenhuis_bron": "https://cosmeticsurgeryinmexico.com/plastic-surgery-tijuana/body/tummy-tuck/post-weight-loss-tummy-tuck/",
+      "vermeld_in": [
+        {
+          "url": "https://www.tripadvisor.com/ShowTopic-g150776-i761-k3590959-Plastic_Surgeon-Tijuana_Baja_California.html",
+          "soort": "forum",
+          "wat": "Oude TripAdvisor-draad (circa 15 jaar oud) waarin een gebruiker Manuel Gutierrez noemt voor een ooglidcorrectie."
+        },
+        {
+          "url": "https://www.whatclinic.com/cosmetic-plastic-surgery/mexico/tijuana/tummy-tuck-in-mexico-by-dr-manuel-gutierrez-romero",
+          "soort": "betaald/makelaar",
+          "wat": "Tummy tuck-profiel op WhatClinic."
+        }
+      ]
+    },
+    {
+      "naam": "Dr. Arturo Munoz Meza Plastic Surgery",
+      "stad": "Tijuana",
+      "site": "",
+      "site_bron": "",
+      "chirurgen": [
+        {
+          "naam": "Arturo Munoz Meza",
+          "titel": "MD",
+          "specialisme": "Plastisch chirurg (ASPS-gids)",
+          "bron": "https://find.plasticsurgery.org/city/tijuana/?page=1"
+        }
+      ],
+      "ziekenhuis": "Praktijk Plaza Viva Tijuana, Via de la Amistad 8800, gebouw 22, suite 108",
+      "ziekenhuis_bron": "https://find.plasticsurgery.org/city/tijuana/?page=1",
+      "vermeld_in": [
+        {
+          "url": "https://find.plasticsurgery.org/city/tijuana/?page=1",
+          "soort": "artsengids",
+          "wat": "Staat in de ASPS-zoekgids voor Tijuana."
+        },
+        {
+          "url": "https://health.bookimed.com/clinics/country=mexico/city=tijuana/procedure=abdominoplasty",
+          "soort": "betaald/makelaar",
+          "wat": "Staat bovenaan de Bookimed-lijst voor tummy tuck in Tijuana."
+        }
+      ]
+    },
+    {
+      "naam": "Dr. Victor Gutierrez Uribe",
+      "stad": "Tijuana",
+      "site": "",
+      "site_bron": "",
+      "chirurgen": [],
+      "ziekenhuis": "",
+      "ziekenhuis_bron": "",
+      "vermeld_in": [
+        {
+          "url": "https://www.tripadvisor.com/ShowTopic-g150776-i761-k3590959-Plastic_Surgeon-Tijuana_Baja_California.html",
+          "soort": "forum",
+          "wat": "Oude TripAdvisor-draad (circa 16 jaar oud): een gebruiker plande een tummy tuck bij hem; geen uitkomst gemeld. Eigen site niet gevonden."
+        }
+      ]
+    }
+  ],
+  "makelaars": [
+    {
+      "naam": "Bookimed",
+      "bron": "https://health.bookimed.com/clinics/country=mexico/city=tijuana/procedure=abdominoplasty",
+      "reden": "Platform dat klinieken rangschikt en patienten doorstuurt; opereert zelf niet."
+    },
+    {
+      "naam": "PlacidWay",
+      "bron": "https://www.placidway.com/article/3743/Top-Clinics-for-Plus-Size-Tummy-Tucks-in-Tijuana-Mexico-Expert-Surgeons-Beautiful-Results",
+      "reden": "Medisch-toerismeplatform met pakketten en top-lijsten; zegt zelf dat 'Top' geen onafhankelijke ranking is."
+    },
+    {
+      "naam": "WhatClinic",
+      "bron": "https://www.whatclinic.com/cosmetic-plastic-surgery/mexico/tijuana/tummy-tuck",
+      "reden": "Kliniekgids met offerteaanvragen (56 tummy tuck-klinieken in Tijuana)."
+    },
+    {
+      "naam": "MyMediTravel",
+      "bron": "https://www.mymeditravel.com/medical-centers/mexico/tijuana/diego-rivera/vida-wellness-and-beauty",
+      "reden": "Prijs- en boekingsplatform voor klinieken."
+    },
+    {
+      "naam": "CureMeAbroad",
+      "bron": "https://curemeabroad.com/doctors/omar-lazos",
+      "reden": "Bemiddelaar met artsenprofielen."
+    },
+    {
+      "naam": "Medical Tourism Resource Guide",
+      "bron": "https://medicaltourismresourceguide.com/mexico/plastic-surgeons/dr-jorge-chang/",
+      "reden": "Gids met chirurgprofielen voor medisch toerisme."
+    },
+    {
+      "naam": "MedBaja",
+      "bron": "https://www.sandiegored.com/en/news/199910/Board-Certified-plastic-surgeons-in-Tijuana-elevate-the-standards-of-medical-care",
+      "reden": "Medisch-toerismedienst die afspraken bij Tijuana-chirurgen regelt."
+    },
+    {
+      "naam": "Jet Medical Tourism",
+      "bron": "https://jetmedicaltourism.com",
+      "reden": "Bemiddelaar voor operaties in Tijuana."
+    },
+    {
+      "naam": "MedicalTourismCo",
+      "bron": "https://www.medicaltourismco.com/?p=11710",
+      "reden": "Bemiddelaar voor medisch toerisme naar Mexico."
+    },
+    {
+      "naam": "Mommy Makeover Packages (pages.dev)",
+      "bron": "https://mommy-makeover-packages.pages.dev/north-america/mexico/tijuana/dr-carmina-cardenas",
+      "reden": "Pakkettenvergelijker zonder eigen zorg."
+    },
+    {
+      "naam": "MedicalTourism.com",
+      "bron": "https://www.magazine.medicaltourism.com/article/tummy-tucks-at-hospital-bc-what-to-expect",
+      "reden": "Medisch-toerismeplatform met tijdschrift."
+    }
+  ]
+}

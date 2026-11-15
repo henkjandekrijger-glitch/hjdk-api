@@ -1,0 +1,743 @@
+{
+ "gecontroleerd": "2026-11-15",
+ "niet_bereikbaar": [
+  "travel.state.gov Mexico-advies en landenpagina: fout van de site; geen tekst van het State Department over medisch toerisme gelezen",
+  "cosmeticsurgeryinmexico.com/about/faq/: toestemming niet gegeven",
+  "medi-systems.com/ms/drcaloca: niet geopend",
+  "vidawellnessandbeauty.com/prices/: prijstabel laadde niet (wel prijs op de tummy tuck-pagina)",
+  "mexicobusiness.news (Tijuana medical tourism under scrutiny) en univision.com (Blanca Zamora): fout van de site",
+  "Geen eigen site gevonden voor Lazos, Cardenas, Cervantes & Aragon, Ochoa, Rios, Najar, Munoz Meza, Gutierrez Uribe; openheid daar onbekend",
+  "Nieuwszoektocht per naam: alleen zoekmachine (WebSearch, VS); COFEPRIS-, CONAMED- en rechtbankdatabanken niet rechtstreeks doorzocht"
+ ],
+ "algemeen": [
+  {
+   "wat": "COEPRIS Baja California schorste in 2022 23 klinieken in de regio Tijuana (slechte praktijken, nepartsen, ontbrekende vergunningen), na twee overlijdens na cosmetische ingrepen (Beauty Diagnosis, Hospital Jerusalem). Geen kandidaat genoemd.",
+   "datum": "2022-08-01",
+   "bron": "https://mexiconewsdaily.com/news/deaths-shut-cosmetic-clinics-baja-california"
+  },
+  {
+   "wat": "Hospital Jerusalem (Playas de Tijuana): patiente overleden juli 2022, kliniek werkte zonder vergunning; eigenaar en een arts aangehouden. Geen kandidaat.",
+   "datum": "2022-07",
+   "bron": "https://zetatijuana.com/2022/07/muere-en-tijuana-esposa-de-consul-de-guatemala-clinica-operaba-sin-permisos/"
+  },
+  {
+   "wat": "Na wetswijziging in Baja California eerste aanhoudingen voor beroepsmisbruik en dood door schuld bij cosmetische chirurgie in Tijuana (namen niet genoemd). Geen kandidaat.",
+   "datum": "2023-03-20",
+   "bron": "https://zetatijuana.com/2023/03/tras-reforma-a-la-ley-de-salud-caen-los-primeros-por-mala-praxis/"
+  },
+  {
+   "wat": "Beauty Hospital, Tijuana: patiente overleden tijdens een mommy makeover op 8 nov 2023; COEPRIS sloot de operatiekamers, FGE onderzoekt kliniek en chirurg. Geen kandidaat.",
+   "datum": "2023-11-20",
+   "bron": "https://zetatijuana.com/2023/11/mmuere-otra-mujer-en-quirofano-por-cirugia-estetica-opacidad-en-la-clinica-de-tijuana/"
+  },
+  {
+   "wat": "COEPRIS Baja California: 23 schorsingen van esthetische klinieken en spreekkamers in 2023 (namen niet gepubliceerd, alleen Clinica Jerusalem nog gesloten).",
+   "datum": "2023-12-07",
+   "bron": "https://zetatijuana.com/2023/12/23-clinicas-suspendidas-en-bc-por-la-coepris-en-2023/"
+  },
+  {
+   "wat": "Rio Medica, Zona Rio Tijuana: influencer overleden op 7 jan 2025 na mommy makeover met abdominoplastiek; FGE onderzoekt als verdacht overlijden, deel van de kliniek verzegeld, wacht op CONAMED. COEPRIS telde 49 klachten tegen cosmetische klinieken in BC in 2022 tot 2024. Geen kandidaat.",
+   "datum": "2025-01-20",
+   "bron": "https://zetatijuana.com/2025/01/fge-investiga-muerte-de-mujeres-por-cirugia-estetica-y-bariatrica-en-tijuana-y-mexicali/"
+  },
+  {
+   "wat": "Gemeente Tijuana sloot een esthetische kliniek in Las Palmas (naam niet genoemd) na ademstilstand van een patiente, wegens onvoldoende veiligheidsmaatregelen.",
+   "datum": "2026-02-04",
+   "bron": "https://www.elimparcial.com/tij/tijuana/2026/02/04/clausuran-clinica-estetica-en-las-palmas-por-irregularidades-de-seguridad/"
+  },
+  {
+   "wat": "COEPRIS Baja California meldt voor 2026 99 inspecties van medische zaken (73 in Tijuana) en 13 schorsingen.",
+   "datum": "2026-08-03",
+   "bron": "https://zetatijuana.com/2026/08/denuncia-secuelas-permanentes-por-tratamiento-estetico-en-tijuana/"
+  },
+  {
+   "wat": "FGE onderzoekt als dood door schuld het overlijden (13 sep 2026) van een vrouw die volgens bronnen een abdominoplastiek had en een chirurge publiek verantwoordelijk hield; kliniek en arts niet genoemd, geen aangifte.",
+   "datum": "2026-10-19",
+   "bron": "https://zetatijuana.com/2026/10/investigan-como-homicidio-culposo-suicidio-de-mujer-que-denuncio-secuelas-tras-cirugia-estetica/"
+  },
+  {
+   "wat": "WHO/PAHO: uitbraak van resistente Pseudomonas na operaties (vooral maagverkleining) in Grand View Hospital Tijuana; 20 gevallen in 9 VS-staten, 1 dode. Geen kandidaat.",
+   "datum": "2019-03-05",
+   "bron": "https://www.who.int/emergencies/disease-outbreak-news/item/5-march-2019-carbapenem-resistant-p-aeruginosa-mex-en"
+  },
+  {
+   "wat": "Health Alert van het VS-consulaat Tijuana: CDC bevestigde resistente infecties na operaties in Grand View Hospital; VS-overheidspersoneel moest daar geen behandeling zoeken.",
+   "datum": "2019-02-15",
+   "bron": "https://mx.usembassy.gov/health-alert-u-s-consulate-tijuana-feb-15-2019/"
+  },
+  {
+   "wat": "CDC Health Alert: schimmelmeningitis bij VS-patienten na cosmetische ingrepen onder epidurale verdoving in twee klinieken in Matamoros (niet Tijuana).",
+   "datum": "2023-05-17",
+   "bron": "https://www.cdc.gov/han/2023/han00492.html"
+  },
+  {
+   "wat": "CDC-pagina medisch toerisme: waarschuwt voor infecties met resistente bacterien, zwakkere vergunningseisen, bloedstolsels bij vliegen kort na een operatie (10 tot 14 dagen wachten) en kosten van complicaties thuis; Mexico als meest gekozen land. Geen datum op de pagina.",
+   "datum": "onbekend (gelezen 2026-11-15)",
+   "bron": "https://wwwnc.cdc.gov/travel/page/medical-tourism"
+  }
+ ],
+ "klinieken": [
+  {
+   "naam": "Dr. Omar Lazos (praktijk zonder eigen naam)",
+   "site": "",
+   "prijs": {
+    "bedrag": "niet gepubliceerd (geen eigen site; RealSelf verwijst naar Instagram)",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "Geen eigen site gevonden; niet gecontroleerd.",
+    "arts_opereert": "onbekend",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "ziekenhuis": {
+    "naam": "",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "Niet gecontroleerd (site niet te openen of geen eigen site).",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Carmina Cardenas (praktijk zonder eigen naam)",
+   "site": "",
+   "prijs": {
+    "bedrag": "niet gepubliceerd (geen eigen site)",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "Geen eigen site gevonden; niet gecontroleerd.",
+    "arts_opereert": "onbekend",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "ziekenhuis": {
+    "naam": "",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "Niet gecontroleerd (site niet te openen of geen eigen site).",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": []
+  },
+  {
+   "naam": "Health & Beauty by Dr. Pantoja",
+   "site": "https://www.healthandbeautytj.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://www.healthandbeautytj.com/tummytuck"
+   },
+   "wie_opereert": {
+    "tekst": "Tummy tuck-pagina noemt geen chirurg die zelf opereert; alleen patientverhalen noemen Dr. Pantoja als behandelaar.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://www.healthandbeautytj.com/tummytuck"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd op de tummy tuck-pagina",
+    "bron": "https://www.healthandbeautytj.com/tummytuck"
+   },
+   "nazorg": {
+    "tekst": "Geen garantie, revisiebeleid of complicatieverzekering genoemd; geen herstelhuis beschreven.",
+    "garantie": false,
+    "bron": "https://www.healthandbeautytj.com/tummytuck"
+   },
+   "risico": []
+  },
+  {
+   "naam": "VIDA Wellness and Beauty / Cosmed Clinic Plastic Surgery Center",
+   "site": "https://www.vidawellnessandbeauty.com/",
+   "prijs": {
+    "bedrag": "$4,500 (volledige tummy tuck, inclusief chirurg, faciliteit en anesthesie); mini tummy tuck gemiddeld $3,800 USD",
+    "bron": "https://www.vidawellnessandbeauty.com/plastic-surgery/tummy-tuck/"
+   },
+   "wie_opereert": {
+    "tekst": "Geen chirurg bij naam: 'the board-certified plastic surgeon'; werkt 'with an experienced anesthesiologist' (niet bij naam).",
+    "arts_opereert": "nee",
+    "anesthesioloog": "ja",
+    "bron": "https://www.vidawellnessandbeauty.com/plastic-surgery/tummy-tuck/"
+   },
+   "ziekenhuis": {
+    "naam": "Eigen operatiekliniek VIDA Wellness and Beauty, Calle Brasilia No. 1, Tijuana; site noemt het 'the first AAAASF-accredited surgical facility in Mexico' (zelf niet gecontroleerd)",
+    "bron": "https://www.vidawellnessandbeauty.com/plastic-surgery/tummy-tuck/"
+   },
+   "nazorg": {
+    "tekst": "Herstelverblijf ('recovery boutique') voor patienten van buiten, nacontrole met verwijderen van de drain; geen garantie, revisiebeleid of complicatieverzekering genoemd.",
+    "garantie": false,
+    "bron": "https://www.vidawellnessandbeauty.com/plastic-surgery/tummy-tuck/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr Isabel Balza Mirabal Plastic Surgery",
+   "site": "https://www.drisabelbalza.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd (alleen VS-bereik $8,500 tot $16,000 en '40% to 60% less')",
+    "bron": "https://www.drisabelbalza.com/tummy-tuck-procedure/"
+   },
+   "wie_opereert": {
+    "tekst": "'Dr. Isabel Balza is a board-certified plastic surgeon specializing in cosmetic and plastic surgery'; niet expliciet dat zij zelf opereert, anesthesioloog niet genoemd.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://www.drisabelbalza.com/tummy-tuck-procedure/"
+   },
+   "ziekenhuis": {
+    "naam": "CER Hospital, Tijuana ('Located at CER Hospital')",
+    "bron": "https://www.drisabelbalza.com/tummy-tuck-procedure/"
+   },
+   "nazorg": {
+    "tekst": "Verwijst naar een 'Recovery Center'-pagina zonder details; geen garantie, revisiebeleid of complicatieverzekering genoemd.",
+    "garantie": false,
+    "bron": "https://www.drisabelbalza.com/tummy-tuck-procedure/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Vemont Plastic Surgery",
+   "site": "https://ricardovega.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://ricardovega.com/tummy-tuck/"
+   },
+   "wie_opereert": {
+    "tekst": "'Dr. Vega will close the incisions and apply sterile surgical dressings'; anesthesioloog niet genoemd, tegenstrijdige tekst over soort anesthesie.",
+    "arts_opereert": "ja",
+    "anesthesioloog": "nee",
+    "bron": "https://ricardovega.com/tummy-tuck/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd (alleen praktijkadres Circuito Bursatil 9043, suite 306)",
+    "bron": "https://ricardovega.com/our-doctors/"
+   },
+   "nazorg": {
+    "tekst": "Geen herstelhuis, garantie, revisiebeleid of complicatieverzekering genoemd.",
+    "garantie": false,
+    "bron": "https://ricardovega.com/tummy-tuck/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Plastic Surgery Tijuana (PLASTIKS)",
+   "site": "https://www.plasticsurgery-tijuana.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd (prijspagina: 'depends on each patient'; pakketten met chirurg, ziekenhuis en anesthesioloog)",
+    "bron": "https://www.plasticsurgery-tijuana.com/plastic-surgery-cost/"
+   },
+   "wie_opereert": {
+    "tekst": "Tummy tuck-pagina: hij 'combines lipocontouring and abdominoplasty in all cases'; team met 'anesthesiologists'; anesthesiologist's fee in prijs.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "ja",
+    "bron": "https://www.plasticsurgery-tijuana.com/plastic-surgery-cost/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd op de site ('a fully accredited facility'); RealSelf noemt opnamerecht Hospital Angeles en CER",
+    "bron": "https://www.plasticsurgery-tijuana.com/"
+   },
+   "nazorg": {
+    "tekst": "Geen herstelhuis, garantie of complicatieverzekering genoemd; hotel en vervoer als extra pakket.",
+    "garantie": false,
+    "bron": "https://www.plasticsurgery-tijuana.com/plastic-surgery-cost/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Marciales Plastic Surgery",
+   "site": "https://marcialesplasticsurgery.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd (offerte op maat; consult $50 online of $100 USD)",
+    "bron": "https://marcialesplasticsurgery.com/procedures/tummy-tuck"
+   },
+   "wie_opereert": {
+    "tekst": "'Dr. Marciales removes excess skin and fat'; FAQ: 'Anesthesia is administered by a qualified anesthesiologist'.",
+    "arts_opereert": "ja",
+    "anesthesioloog": "ja",
+    "bron": "https://marcialesplasticsurgery.com/faq"
+   },
+   "ziekenhuis": {
+    "naam": "'the accredited hospital within New City Medical Plaza' (naam ziekenhuis niet gegeven); herstel in een hotel in hetzelfde gebouw",
+    "bron": "https://marcialesplasticsurgery.com/faq"
+   },
+   "nazorg": {
+    "tekst": "Coordinator regelt herstelverblijf en follow-up; revisies van elders welkom, maar geen garantie, eigen revisievoorwaarden of complicatieverzekering genoemd.",
+    "garantie": false,
+    "bron": "https://marcialesplasticsurgery.com/faq"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Cervantes & Aragon Plastic Surgery Group",
+   "site": "",
+   "prijs": {
+    "bedrag": "niet gepubliceerd (geen eigen site gevonden)",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "Geen eigen site gevonden; niet gecontroleerd.",
+    "arts_opereert": "onbekend",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "ziekenhuis": {
+    "naam": "",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "Niet gecontroleerd (site niet te openen of geen eigen site).",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": []
+  },
+  {
+   "naam": "Guerrero Plastic Surgery",
+   "site": "https://guerreroplasticsurgery.com/en/home/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://guerreroplasticsurgery.com/en/abdominoplasty/"
+   },
+   "wie_opereert": {
+    "tekst": "Noemt 'Dr. Luis Eduardo Guerrero, Certified Plastic Surgeon', niet dat hij zelf opereert; anesthesioloog niet genoemd.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://guerreroplasticsurgery.com/en/abdominoplasty/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd (alleen kliniekadres Paseo de los Heroes 10999)",
+    "bron": "https://guerreroplasticsurgery.com/en/abdominoplasty/"
+   },
+   "nazorg": {
+    "tekst": "Geen garantie, revisie of complicatieverzekering; FAQ: geen restitutie na consult met plan, 50% van aanbetaling bij niet verschijnen.",
+    "garantie": false,
+    "bron": "https://guerreroplasticsurgery.com/en/preguntas-frecuentes/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Nicolas Leyva Plastic and Reconstructive Surgery",
+   "site": "https://drnicolasleyva.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://drnicolasleyva.com/body/"
+   },
+   "wie_opereert": {
+    "tekst": "'a board certified Plastic Surgeon'; niet gezegd wie de tummy tuck doet; anesthesioloog niet genoemd.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://drnicolasleyva.com/body/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd (praktijk New City Medical Plaza)",
+    "bron": "https://drnicolasleyva.com/"
+   },
+   "nazorg": {
+    "tekst": "Geen herstelhuis, garantie of complicatieverzekering genoemd.",
+    "garantie": false,
+    "bron": "https://drnicolasleyva.com/body/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Eduardo Ochoa (EOC)",
+   "site": "",
+   "prijs": {
+    "bedrag": "niet gepubliceerd (geen eigen site gevonden; zoekresultaten tonen vooral spampagina's)",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "Geen eigen site gevonden; niet gecontroleerd.",
+    "arts_opereert": "onbekend",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "ziekenhuis": {
+    "naam": "",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "Niet gecontroleerd (site niet te openen of geen eigen site).",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": []
+  },
+  {
+   "naam": "Mexico Cosmetic Center",
+   "site": "https://mexicocosmeticcenter.com/",
+   "prijs": {
+    "bedrag": "\"$7,800+ USD\" (vergelijkingstabel, vanafprijs voor Mexico)",
+    "bron": "https://mexicocosmeticcenter.com/cost-of-tummy-tuck/"
+   },
+   "wie_opereert": {
+    "tekst": "Vijf chirurgen noemen tummy tuck; niet per patient wie opereert. Pakket bevat 'Anesthesiologist fee'.",
+    "arts_opereert": "nee",
+    "anesthesioloog": "ja",
+    "bron": "https://mexicocosmeticcenter.com/mexico-plastic-surgery-pricing/"
+   },
+   "ziekenhuis": {
+    "naam": "Geen ziekenhuis voor tummy tuck ('top hospital facilities across Tijuana'); Hospital Azar genoemd bij twee chirurgen",
+    "bron": "https://mexicocosmeticcenter.com/surgeons/"
+   },
+   "nazorg": {
+    "tekst": "Pakket met hotel, verpleegbezoek in hotel, vervoer, medicatie; geen garantie of complicatieverzekering genoemd.",
+    "garantie": false,
+    "bron": "https://mexicocosmeticcenter.com/mexico-plastic-surgery-pricing/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Moran Plastic Surgery",
+   "site": "https://moranplasticsurgery.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://moranplasticsurgery.com/body-contouring-surgeries-in-women/"
+   },
+   "wie_opereert": {
+    "tekst": "'Dr. Mario Moran will remove excess skin, tighten the underlying muscles'; anesthesioloog niet genoemd.",
+    "arts_opereert": "ja",
+    "anesthesioloog": "nee",
+    "bron": "https://moranplasticsurgery.com/body-contouring-surgeries-in-women/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd (praktijk New City Medical Plaza); RealSelf noemt Hospital Angeles en Hospital del Prado",
+    "bron": "https://moranplasticsurgery.com/body-contouring-surgeries-in-women/"
+   },
+   "nazorg": {
+    "tekst": "Geen herstelhuis, garantie of complicatieverzekering genoemd.",
+    "garantie": false,
+    "bron": "https://moranplasticsurgery.com/body-contouring-surgeries-in-women/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Alicia Sigler",
+   "site": "https://www.aliciasiglermd.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd ('Pricing may vary')",
+    "bron": "https://www.aliciasiglermd.com/procedures/tummy-tuck.html"
+   },
+   "wie_opereert": {
+    "tekst": "'Your surgeon will remove the excess skin and fat'; niet expliciet dat zij zelf opereert, anesthesioloog niet genoemd.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://www.aliciasiglermd.com/procedures/tummy-tuck.html"
+   },
+   "ziekenhuis": {
+    "naam": "Operatielocatie niet genoemd; spreekkamer in Hospital Blue & Medical Tower",
+    "bron": "https://www.aliciasiglermd.com/procedures/tummy-tuck.html"
+   },
+   "nazorg": {
+    "tekst": "Herstelinstructies (drains, hechtingen); geen herstelhuis, garantie of complicatieverzekering.",
+    "garantie": false,
+    "bron": "https://www.aliciasiglermd.com/procedures/tummy-tuck.html"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Doctor Lara Plastic Surgery",
+   "site": "https://doctorlaraplasticsurgery.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://doctorlaraplasticsurgery.com/body-surgery/tummy-tuck-abdominoplasty/"
+   },
+   "wie_opereert": {
+    "tekst": "In de ik-vorm: 'As a board-certified plastic surgeon, I offer' de ingreep; anesthesioloog alleen in een patientverhaal.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://doctorlaraplasticsurgery.com/body-surgery/tummy-tuck-abdominoplasty/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd; RealSelf noemt Unidad Quirurgica Rio",
+    "bron": "https://doctorlaraplasticsurgery.com/body-surgery/tummy-tuck-abdominoplasty/"
+   },
+   "nazorg": {
+    "tekst": "Post-operatieve massages als dienst; geen garantie of complicatieverzekering.",
+    "garantie": false,
+    "bron": "https://doctorlaraplasticsurgery.com/body-surgery/tummy-tuck-abdominoplasty/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Andrei Rios (praktijk zonder eigen naam)",
+   "site": "",
+   "prijs": {
+    "bedrag": "niet gepubliceerd (geen eigen site gevonden)",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "Geen eigen site gevonden; niet gecontroleerd.",
+    "arts_opereert": "onbekend",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "ziekenhuis": {
+    "naam": "",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "Niet gecontroleerd (site niet te openen of geen eigen site).",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Tania Najar (praktijk zonder eigen naam)",
+   "site": "",
+   "prijs": {
+    "bedrag": "niet gepubliceerd (geen eigen site gevonden)",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "Geen eigen site gevonden; niet gecontroleerd.",
+    "arts_opereert": "onbekend",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "ziekenhuis": {
+    "naam": "",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "Niet gecontroleerd (site niet te openen of geen eigen site).",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Jaime Caloca Jr.",
+   "site": "medi-systems.com/ms/drcaloca",
+   "prijs": {
+    "bedrag": "niet gecontroleerd (site niet geopend)",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "Site niet te openen of geen eigen site; niet gecontroleerd.",
+    "arts_opereert": "onbekend",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "ziekenhuis": {
+    "naam": "",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "Niet gecontroleerd (site niet te openen of geen eigen site).",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": []
+  },
+  {
+   "naam": "Mexico Plastic Surgery Group (mexicotummytuck.com, ook merk Aligno)",
+   "site": "https://mexicotummytuck.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd ('individualized pricing before you travel')",
+    "bron": "https://mexicotummytuck.com/"
+   },
+   "wie_opereert": {
+    "tekst": "'performed by CMCPER-certified plastic surgeons'; Chama en Galaz genoemd, niet wie opereert; anesthesioloog niet genoemd.",
+    "arts_opereert": "nee",
+    "anesthesioloog": "nee",
+    "bron": "https://mexicotummytuck.com/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd (kliniek Blvd. de las Bellas Artes 19315)",
+    "bron": "https://mexicotummytuck.com/"
+   },
+   "nazorg": {
+    "tekst": "Hoteladvies, nazorginstructies en 'Virtual follow-up after you return home'; geen garantie of complicatieverzekering.",
+    "garantie": false,
+    "bron": "https://mexicotummytuck.com/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Diaz Plastic Surgery",
+   "site": "https://www.drdiazplasticsurgery.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd (alleen financiering voor Mexicaanse patienten)",
+    "bron": "https://www.drdiazplasticsurgery.com/"
+   },
+   "wie_opereert": {
+    "tekst": "Berichten op naam van Dr. Jorge L. Diaz Martinez, 'Cirujano Plastico Certificado'; niet expliciet dat hij zelf opereert.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://www.drdiazplasticsurgery.com/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd (praktijk New City Medical Plaza, suite 1102)",
+    "bron": "https://www.drdiazplasticsurgery.com/"
+   },
+   "nazorg": {
+    "tekst": "Geen herstelhuis, garantie of complicatieverzekering genoemd.",
+    "garantie": false,
+    "bron": "https://www.drdiazplasticsurgery.com/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Vive Plastic Surgery",
+   "site": "https://www.viveplasticsurgery.com/",
+   "prijs": {
+    "bedrag": "$6,200 (tegen $14,500 VS/Canada; niet vermeld wat erin zit)",
+    "bron": "https://www.viveplasticsurgery.com/services/tummy-tuck-surgery"
+   },
+   "wie_opereert": {
+    "tekst": "'every procedure is performed by board-certified plastic surgeons'; twee namen, niet wie de tummy tuck doet; anesthesioloog niet genoemd.",
+    "arts_opereert": "nee",
+    "anesthesioloog": "nee",
+    "bron": "https://www.viveplasticsurgery.com/services/tummy-tuck-surgery"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd ('our state-of-the-art facility in Tijuana'); 'a private recovery house nearby' via pakketten",
+    "bron": "https://www.viveplasticsurgery.com/services/tummy-tuck-surgery"
+   },
+   "nazorg": {
+    "tekst": "Herstelhuis-pakketten, drains, nacontroles; geen garantie of complicatieverzekering ('results are not guaranteed').",
+    "garantie": false,
+    "bron": "https://www.viveplasticsurgery.com/services/tummy-tuck-surgery"
+   },
+   "risico": [
+    {
+     "wat": "Een Amerikaanse patient diende bij COEPRIS Baja California een klacht in over brandplekken na een laserbehandeling van het gezicht (maart 2026) bij Vive Medical Spa Tijuana; Felix Omar Marquez Villalobos staat als verantwoordelijke arts van de zaak. COEPRIS bevestigt dat de klacht in behandeling is en naar inspectie is doorverwezen; geen uitspraak. RealSelf koppelt Vive Medical Spa (met Marquez) aan Vive Plastic Surgery. Geen tummy tuck.",
+     "datum": "2026-08-03",
+     "bron": "https://zetatijuana.com/2026/08/denuncia-secuelas-permanentes-por-tratamiento-estetico-en-tijuana/",
+     "ernst": "licht"
+    }
+   ]
+  },
+  {
+   "naam": "Ciplastic (Hospital Ciplastic)",
+   "site": "https://ciplastic.com/",
+   "prijs": {
+    "bedrag": "\"Price starting at: $6,200 usd\" (FAQ op dezelfde pagina noemt $5,600 USD)",
+    "bron": "https://ciplastic.com/procedures/body/abdominoplasty/"
+   },
+   "wie_opereert": {
+    "tekst": "Geen chirurg bij naam voor tummy tuck ('a team of Certified Specialists'); anesthesioloog niet genoemd.",
+    "arts_opereert": "nee",
+    "anesthesioloog": "nee",
+    "bron": "https://ciplastic.com/procedures/body/abdominoplasty/"
+   },
+   "ziekenhuis": {
+    "naam": "Hospital Ciplastic, Tijuana (eigen ziekenhuis, geen adres op de site)",
+    "bron": "https://ciplastic.com/procedures/body/abdominoplasty/"
+   },
+   "nazorg": {
+    "tekst": "Geen herstelhuis, garantie of complicatieverzekering genoemd.",
+    "garantie": false,
+    "bron": "https://ciplastic.com/procedures/body/abdominoplasty/"
+   },
+   "risico": [
+    {
+     "wat": "Een patiente meldt complicaties na een borstverkleining (januari 2023) bij Ciplastic door Dr. Hermes Avila Pelayo en diende een aangifte wegens nalatigheid in bij de Fiscalia (FGE) en een klacht bij de medische arbitragecommissie CAMEBC; bemiddeling zonder akkoord, aangifte lag stil. De chirurg betwist dit. Geen uitspraak.",
+     "datum": "2024-04-15",
+     "bron": "https://zetatijuana.com/2024/04/busca-justicia-tras-negligencia-medica-en-tijuana-medicos-senalan-extorsion/",
+     "ernst": "middel"
+    }
+   ]
+  },
+  {
+   "naam": "MyBestBodyEver!",
+   "site": "https://www.mybestbodyever.com/",
+   "prijs": {
+    "bedrag": "\"tummy tucks starting at just $5,500\" (all-inclusive pakket met hotel, vervoer, medicatie)",
+    "bron": "https://www.mybestbodyever.com/services/tummy-tuck/"
+   },
+   "wie_opereert": {
+    "tekst": "'Dr. Castillo will then tighten your abdominal muscles'; anesthesioloog niet genoemd.",
+    "arts_opereert": "ja",
+    "anesthesioloog": "nee",
+    "bron": "https://www.mybestbodyever.com/services/tummy-tuck/"
+   },
+   "ziekenhuis": {
+    "naam": "Eigen operatiecentrum zonder naam ('our world-class surgical center')",
+    "bron": "https://www.mybestbodyever.com/services/tummy-tuck/"
+   },
+   "nazorg": {
+    "tekst": "Herstel 'under our supervision', vervoer en verblijf geregeld; geen garantie of complicatieverzekering ('results are not guaranteed').",
+    "garantie": false,
+    "bron": "https://www.mybestbodyever.com/financing-and-insurance-for-cosmetic-surgery/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Cosmetic & Bariatric Surgery Center",
+   "site": "https://cosmeticsurgeryinmexico.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd ('personalized cost estimate')",
+    "bron": "https://cosmeticsurgeryinmexico.com/plastic-surgery-tijuana/body/tummy-tuck/post-weight-loss-tummy-tuck/"
+   },
+   "wie_opereert": {
+    "tekst": "Dr. Gutierrez 'offers expertly performed tummy tuck procedures'; niet expliciet zelf; anesthesioloog niet genoemd.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://cosmeticsurgeryinmexico.com/plastic-surgery-tijuana/body/tummy-tuck/post-weight-loss-tummy-tuck/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd (Cosmetic & Bariatric Surgery Center, Tijuana)",
+    "bron": "https://cosmeticsurgeryinmexico.com/plastic-surgery-tijuana/body/tummy-tuck/post-weight-loss-tummy-tuck/"
+   },
+   "nazorg": {
+    "tekst": "Team helpt met vervoer, verblijf en nazorg (1 tot 2 weken in Tijuana); geen garantie of complicatieverzekering op de pagina; FAQ niet te openen.",
+    "garantie": false,
+    "bron": "https://cosmeticsurgeryinmexico.com/plastic-surgery-tijuana/body/tummy-tuck/post-weight-loss-tummy-tuck/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Arturo Munoz Meza Plastic Surgery",
+   "site": "",
+   "prijs": {
+    "bedrag": "niet gepubliceerd (geen eigen site gevonden)",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "Geen eigen site gevonden; niet gecontroleerd.",
+    "arts_opereert": "onbekend",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "ziekenhuis": {
+    "naam": "",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "Niet gecontroleerd (site niet te openen of geen eigen site).",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Victor Gutierrez Uribe",
+   "site": "",
+   "prijs": {
+    "bedrag": "niet gepubliceerd (geen eigen site gevonden)",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "Geen eigen site gevonden; niet gecontroleerd.",
+    "arts_opereert": "onbekend",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "ziekenhuis": {
+    "naam": "",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "Niet gecontroleerd (site niet te openen of geen eigen site).",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": []
+  }
+ ]
+}

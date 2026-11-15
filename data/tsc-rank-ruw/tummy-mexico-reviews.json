@@ -1,0 +1,736 @@
+{
+ "gecontroleerd": "2026-11-15",
+ "methode": "Per kandidaat het RealSelf-profiel van de hoofdchirurg (of praktijk) met WebFetch geopend en score, aantal en datum van de nieuwste zichtbare review genoteerd. RealSelf toont per profiel geen totaal Worth It-percentage, alleen een label per review; daarom alleen sterren. Trustpilot, Yelp, BBB en ComplaintsBoard via WebSearch met domeinfilter; WhatClinic- en Bookimed-pagina's uit de kandidatenlijst geopend en als makelaar gemarkeerd. Yelp-aantallen komen uit de titel van het zoekresultaat omdat Yelp-pagina's niet te openen waren. Geen reviewteksten overgenomen. Eigen sites niet meegeteld. Bij VIDA/Cosmed overlappen praktijk- en artsprofielen: niet optellen. Google-scores niet opgenomen (geen onafhankelijke pagina gezien).",
+ "niet_bereikbaar": [
+  {
+   "url": "https://www.trustpilot.com/review/<domein>",
+   "waarom": "Zelf samengestelde Trustpilot-URL's werden geweigerd (geen toestemming). WebSearch met domeinfilter trustpilot.com op kliniek- en artsnamen vond voor geen enkele kandidaat een Trustpilot-pagina; dat bewijst niet dat er geen is."
+  },
+  {
+   "url": "yelp.com/biz/*",
+   "waarom": "Yelp blokkeert ophalen (robots); score en datum niet gezien, alleen aantallen uit zoekresultaten."
+  },
+  {
+   "url": "bbb.org",
+   "waarom": "Zoeken gaf geen BBB-profiel voor een kandidaat (alleen Amerikaanse klinieken)."
+  },
+  {
+   "url": "Google Maps",
+   "waarom": "Niet gezocht op een onafhankelijke pagina; geen Google-scores opgenomen."
+  },
+  {
+   "url": "RealSelf-profielen voor Alfredo Chama Naranjo, Jorge Galaz Martinez, Hermes Avila Pelayo (alleen een review zonder profiel bij 'Dr Hermes Pelayo', Ciplastic America, 17-10-2025), Jose Alonso Rivera Ruvalcaba, Jorge Chang Contreras, Victor Gutierrez Uribe",
+   "waarom": "Niet gevonden via zoeken."
+  }
+ ],
+ "klinieken": [
+  {
+   "naam": "Dr. Omar Lazos (praktijk zonder eigen naam)",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 496,
+     "pct_1ster": null,
+     "laatste_review": "2026-10-19",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/omar-lazos-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Carmina Cardenas (praktijk zonder eigen naam)",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 377,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "Profiel toont geen plaatsingsdatums, alleen tijd na operatie.",
+     "bron": "https://www.realself.com/dr/carmina-cardenas-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Health & Beauty by Dr. Pantoja",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 477,
+     "pct_1ster": null,
+     "laatste_review": "2025-06-07",
+     "waarschuwing": "Nieuwste zichtbare review is van juni 2025.",
+     "bron": "https://www.realself.com/dr/salvador-pantoja-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "Yelp",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 18,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "Yelp-pagina niet te openen (robots); alleen het aantal uit de titel van het zoekresultaat, score niet gezien.",
+     "bron": "https://www.yelp.com/biz/health-y-beauty-by-dr-pantoja-tijuana",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "WhatClinic",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 6,
+     "pct_1ster": null,
+     "laatste_review": "2023-04-18",
+     "waarschuwing": "Makelaar; geen ServiceScore; zes reviews over klantenservice, totaal niet vermeld.",
+     "bron": "https://www.whatclinic.com/cosmetic-plastic-surgery/mexico/tijuana/dr-salvador-pantoja-tijuana-plastic-surgery",
+     "gezien": "2026-11-15",
+     "makelaar": true
+    }
+   ]
+  },
+  {
+   "naam": "VIDA Wellness and Beauty / Cosmed Clinic Plastic Surgery Center",
+   "platforms": [
+    {
+     "platform": "RealSelf (praktijk VIDA)",
+     "score": 4.5,
+     "schaal": "5 sterren",
+     "aantal": 535,
+     "pct_1ster": null,
+     "laatste_review": "2026-09-18",
+     "waarschuwing": "Praktijkprofiel; telt reviews van acht artsen samen, ook niet-plastisch chirurgen. Niet optellen bij het Cosmed-profiel of de artsprofielen.",
+     "bron": "https://www.realself.com/practices/vida-wellness-beauty-tijuana-baja-california",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "RealSelf (praktijk Cosmed)",
+     "score": 4.5,
+     "schaal": "5 sterren",
+     "aantal": 528,
+     "pct_1ster": null,
+     "laatste_review": "2026-11-04",
+     "waarschuwing": "Zelfde artsen als VIDA, grotendeels dezelfde reviews.",
+     "bron": "https://www.realself.com/practices/cosmed-clinic-plastic-surgery-center-tijuana-baja-california",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "RealSelf (Quiroz)",
+     "score": 4.4,
+     "schaal": "5 sterren",
+     "aantal": 251,
+     "pct_1ster": null,
+     "laatste_review": "2026-08-12",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/alejandro-j-quiroz-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "RealSelf (Fuentes)",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 190,
+     "pct_1ster": null,
+     "laatste_review": "2026-09-18",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/juan-carlos-fuentes-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "RealSelf (Bucio)",
+     "score": 4.2,
+     "schaal": "5 sterren",
+     "aantal": 39,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/francisco-bucio-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "RealSelf (Castaneda)",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 75,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "Alleen aantal gezien op de praktijkpagina.",
+     "bron": "https://www.realself.com/practices/vida-wellness-beauty-tijuana-baja-california",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "RealSelf (Quiros Lim)",
+     "score": 4.2,
+     "schaal": "5 sterren",
+     "aantal": 5,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/find/Mexico/Tijuana/Plastic-Surgeon",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "Yelp",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 128,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "Yelp-pagina niet te openen (robots); alleen het aantal uit de titel van het zoekresultaat, score niet gezien.",
+     "bron": "https://www.yelp.com/biz/cosmed-tijuana-2",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr Isabel Balza Mirabal Plastic Surgery",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 82,
+     "pct_1ster": null,
+     "laatste_review": "2026-08-13",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/isabel-balza-tijuana-bc-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "Bookimed",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 0,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "Makelaar; als 'New' vermeld zonder score of reviews.",
+     "bron": "https://health.bookimed.com/clinics/country=mexico/city=tijuana/procedure=abdominoplasty",
+     "gezien": "2026-11-15",
+     "makelaar": true
+    }
+   ]
+  },
+  {
+   "naam": "Vemont Plastic Surgery",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 146,
+     "pct_1ster": null,
+     "laatste_review": "2026-10-18",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/ricardo-vega-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "Yelp",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 25,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "Yelp-pagina niet te openen (robots); alleen het aantal uit de titel van het zoekresultaat, score niet gezien.",
+     "bron": "https://www.yelp.com/biz/dr-ricardo-vega-tijuana",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "WhatClinic",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 1,
+     "pct_1ster": null,
+     "laatste_review": "2018-04-24",
+     "waarschuwing": "Makelaar; ServiceScore 6,3 (Good) uit 57 interacties, schaal niet vermeld.",
+     "bron": "https://www.whatclinic.com/cosmetic-plastic-surgery/mexico/baja-california/dr-ricardo-vega-plastic-surgeon",
+     "gezien": "2026-11-15",
+     "makelaar": true
+    }
+   ]
+  },
+  {
+   "naam": "Plastic Surgery Tijuana (PLASTIKS)",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 71,
+     "pct_1ster": null,
+     "laatste_review": "2026-10-01",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/rafael-camberos-solis-tijuana-baja-california-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "Yelp",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": null,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "Vermelding PLASTIKS gevonden, aantal niet in zoekresultaat en pagina niet te openen.",
+     "bron": "https://www.yelp.com/biz/plastiks-tijuana",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "Bookimed",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 0,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "Makelaar; als 'New' vermeld zonder score of reviews.",
+     "bron": "https://health.bookimed.com/clinics/country=mexico/city=tijuana/procedure=abdominoplasty",
+     "gezien": "2026-11-15",
+     "makelaar": true
+    }
+   ]
+  },
+  {
+   "naam": "Marciales Plastic Surgery",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 41,
+     "pct_1ster": null,
+     "laatste_review": "2026-11-06",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/carlos-marciales-tijuana-baja-california-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Cervantes & Aragon Plastic Surgery Group",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 124,
+     "pct_1ster": null,
+     "laatste_review": "2026-05-03",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/juan-pablo-cervantes-zona-rio-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "RealSelf (Jacqueline Aragon)",
+     "score": 4.5,
+     "schaal": "5 sterren",
+     "aantal": 24,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "Uit de artsenlijst Tijuana, profiel niet apart geopend.",
+     "bron": "https://www.realself.com/find/Mexico/Tijuana/Plastic-Surgeon",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "WhatClinic",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 1,
+     "pct_1ster": null,
+     "laatste_review": "2014-05-16",
+     "waarschuwing": "Makelaar; ServiceScore 6,2 (Good) uit 136 interacties.",
+     "bron": "https://www.whatclinic.com/cosmetic-plastic-surgery/mexico/tijuana/cervantes-aragon-plastic-surgery-group",
+     "gezien": "2026-11-15",
+     "makelaar": true
+    }
+   ]
+  },
+  {
+   "naam": "Guerrero Plastic Surgery",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 52,
+     "pct_1ster": null,
+     "laatste_review": "2026-10-14",
+     "waarschuwing": "AI-samenvatting noemt 57 reviews, profiel 52.",
+     "bron": "https://www.realself.com/dr/luis-eduardo-guerrero-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Nicolas Leyva Plastic and Reconstructive Surgery",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 70,
+     "pct_1ster": null,
+     "laatste_review": "2026-11-11",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/nicolas-leyva-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Eduardo Ochoa (EOC)",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 84,
+     "pct_1ster": null,
+     "laatste_review": "2025-03-20",
+     "waarschuwing": "Nieuwste zichtbare review is van maart 2025.",
+     "bron": "https://www.realself.com/dr/eduardo-ochoa-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Mexico Cosmetic Center",
+   "platforms": [
+    {
+     "platform": "RealSelf (Navarro)",
+     "score": 4.5,
+     "schaal": "5 sterren",
+     "aantal": 29,
+     "pct_1ster": null,
+     "laatste_review": "2026-08-09",
+     "waarschuwing": "Alleen Navarro heeft een RealSelf-profiel gevonden; Chang en de andere chirurgen niet.",
+     "bron": "https://www.realself.com/dr/carlos-navarro-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Moran Plastic Surgery",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 24,
+     "pct_1ster": null,
+     "laatste_review": "2026-07-23",
+     "waarschuwing": "Profiel 24, AI-samenvatting 32, artsenlijst 29: tellingen lopen uiteen.",
+     "bron": "https://www.realself.com/dr/mario-arturo-moran-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Alicia Sigler",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 63,
+     "pct_1ster": null,
+     "laatste_review": "2026-03-09",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/alicia-sigler-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Doctor Lara Plastic Surgery",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 50,
+     "pct_1ster": null,
+     "laatste_review": "2023-09-17",
+     "waarschuwing": "Nieuwste zichtbare review is van september 2023.",
+     "bron": "https://www.realself.com/dr/alberto-lara-jimenez-tijuana-bc-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Andrei Rios (praktijk zonder eigen naam)",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 23,
+     "pct_1ster": null,
+     "laatste_review": "2026-07-27",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/andrei-rios-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Tania Najar (praktijk zonder eigen naam)",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 22,
+     "pct_1ster": null,
+     "laatste_review": "2026-10-12",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/tania-najar-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Jaime Caloca Jr.",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 39,
+     "pct_1ster": null,
+     "laatste_review": "2026-07-31",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/jaime-caloca-zona-rio-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "ComplaintsBoard",
+     "score": null,
+     "schaal": "klachten",
+     "aantal": 1,
+     "pct_1ster": null,
+     "laatste_review": "2022-09-09",
+     "waarschuwing": "Een klacht uit februari 2012 over een aanbetaling en injectiebehandeling, als opgelost gemarkeerd; daaronder drie negatieve reacties (2012, 2017, 2022).",
+     "bron": "https://www.complaintsboard.com/dr-jaime-caloca-jr-cosmetic-injecton-nightmare-c590269",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Mexico Plastic Surgery Group (mexicotummytuck.com, ook merk Aligno)",
+   "platforms": []
+  },
+  {
+   "naam": "Dr. Diaz Plastic Surgery",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 1,
+     "pct_1ster": null,
+     "laatste_review": "2025-04-04",
+     "waarschuwing": "Accepteert geen consulten via RealSelf; geen Verified-badge.",
+     "bron": "https://www.realself.com/dr/jorge-luis-diaz-martinez-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Vive Plastic Surgery",
+   "platforms": [
+    {
+     "platform": "RealSelf (praktijk)",
+     "score": 3.2,
+     "schaal": "5 sterren",
+     "aantal": 17,
+     "pct_1ster": null,
+     "laatste_review": "2025-01-23",
+     "waarschuwing": "Praktijkprofiel; accepteert geen consulten via RealSelf; artstellingen (42+68+3) groter dan praktijktelling.",
+     "bron": "https://www.realself.com/practices/vive-plastic-surgery-tijuana-baja-california",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "RealSelf (Marquez)",
+     "score": 4.2,
+     "schaal": "5 sterren",
+     "aantal": 68,
+     "pct_1ster": null,
+     "laatste_review": "2023-06-09",
+     "waarschuwing": "Geen Verified-badge; accepteert geen consulten via RealSelf; nieuwste zichtbare review juni 2023.",
+     "bron": "https://www.realself.com/dr/felix-omar-marquez-villalobos-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "Yelp",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 83,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "Yelp-pagina niet te openen (robots); alleen het aantal uit de titel van het zoekresultaat, score niet gezien. Titel zegt bijgewerkt november 2026; een andere titel noemde 82.",
+     "bron": "https://www.yelp.com/biz/vive-plastic-surgery-tijuana",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Ciplastic (Hospital Ciplastic)",
+   "platforms": []
+  },
+  {
+   "naam": "MyBestBodyEver!",
+   "platforms": [
+    {
+     "platform": "RealSelf (Castillo)",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 75,
+     "pct_1ster": null,
+     "laatste_review": "2026-04-25",
+     "waarschuwing": "Profiel zonder praktijknaam of adres; koppeling aan MyBestBodyEver via de kandidatenlijst (ASPS-adres).",
+     "bron": "https://www.realself.com/dr/rodolfo-castillo-tijuana-mexico-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "Yelp",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 23,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "Yelp-pagina niet te openen (robots); alleen het aantal uit de titel van het zoekresultaat, score niet gezien.",
+     "bron": "https://www.yelp.com/biz/dr-rodolfo-castillo-tijuana-2",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "WhatClinic",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 1,
+     "pct_1ster": null,
+     "laatste_review": "2017-03-22",
+     "waarschuwing": "Makelaar; ServiceScore 6,3 (Good) uit 31 interacties.",
+     "bron": "https://www.whatclinic.com/cosmetic-plastic-surgery/mexico/tijuana/my-best-body-ever",
+     "gezien": "2026-11-15",
+     "makelaar": true
+    }
+   ]
+  },
+  {
+   "naam": "Cosmetic & Bariatric Surgery Center",
+   "platforms": [
+    {
+     "platform": "RealSelf (Gutierrez Romero)",
+     "score": 4.2,
+     "schaal": "5 sterren",
+     "aantal": 101,
+     "pct_1ster": null,
+     "laatste_review": "2026-03-14",
+     "waarschuwing": "Geen Verified-badge; accepteert geen consulten via RealSelf.",
+     "bron": "https://www.realself.com/dr/manuel-gutierrez-romero-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "Yelp",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 12,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "Yelp-pagina niet te openen (robots); alleen het aantal uit de titel van het zoekresultaat, score niet gezien. Vermelding 'Manuel Gutierrez', Paseo Bursatil, door Yelp onder San Diego gezet; dat het dezelfde chirurg is, is niet gecontroleerd.",
+     "bron": "https://www.yelp.com/biz/manuel-gutierrez-san-diego",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "WhatClinic",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 3,
+     "pct_1ster": null,
+     "laatste_review": "2025-06-18",
+     "waarschuwing": "Makelaar; ServiceScore 8,2 (Excellent) uit 79 interacties.",
+     "bron": "https://www.whatclinic.com/cosmetic-plastic-surgery/mexico/tijuana/tummy-tuck-in-mexico-by-dr-manuel-gutierrez-romero",
+     "gezien": "2026-11-15",
+     "makelaar": true
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Arturo Munoz Meza Plastic Surgery",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 51,
+     "pct_1ster": null,
+     "laatste_review": "2026-05-06",
+     "waarschuwing": "Profiel als SPONSORED gemarkeerd; accepteert geen consulten via RealSelf; geen Verified-badge.",
+     "bron": "https://www.realself.com/dr/arturo-munoz-meza-tijuana-mexico",
+     "gezien": "2026-11-15",
+     "makelaar": false
+    },
+    {
+     "platform": "Bookimed",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 2,
+     "pct_1ster": null,
+     "laatste_review": "",
+     "waarschuwing": "Makelaar; staat bovenaan de Bookimed-lijst tummy tuck Tijuana met maar 2 reviews.",
+     "bron": "https://health.bookimed.com/clinics/country=mexico/city=tijuana/procedure=abdominoplasty",
+     "gezien": "2026-11-15",
+     "makelaar": true
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Victor Gutierrez Uribe",
+   "platforms": []
+  }
+ ]
+}

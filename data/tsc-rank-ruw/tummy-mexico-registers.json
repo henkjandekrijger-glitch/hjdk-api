@@ -1,0 +1,1694 @@
+{
+ "gecontroleerd": "2026-11-15",
+ "niet_bereikbaar": [
+  "CMCPER directorio: https://directorio.cmcper.mx/, https://cmcper.org.mx/directorio/certificado/, https://cmcper.org/directorio/certificado/1069/ en https://directorio.cmcper.mx/doctores/estado/oaxaca/ geweigerd door robots.txt (robots_disallowed) bij WebFetch; per-staatpagina's bestaan (patroon /doctores/estado/<staat>/) maar zijn niet gelezen. https://cmcper.org/si/cirujanos/consulta-certificaciones/ is alleen voor ingelogde chirurgen (geen openbare zoekfunctie). Nieuwe directory www.cirujanoscertificados.org/directorio (genoemd op https://cmcper.org/blog/nuevo-directorio-cmcper/) niet opgehaald.",
+  "Colegio de Cirujanos Plásticos de Baja California: https://cirujanosplasticoscertificadosbc.com/directorio/ geweigerd door robots.txt. Wel gelezen: CCPERBC op https://ccperbc.org/en/directorio/ (37 vermeldingen).",
+  "ISAPS: https://www.isaps.org/discover/find-a-surgeon/ laadt (Page 1 of 427) maar het landfilter werkt via een formulier; ?country=Mexico gaf ongefilterde resultaten (VAE, Albanië, Argentinië). Geen Tijuana-leden vast te stellen.",
+  "ASPS: paginering op find.plasticsurgery.org werkt via JavaScript; page=1,2,4,5 gaven dezelfde 12 namen, page=3 en /city/tijuana gaven andere sets. Er zijn minstens 5 pagina's; de lijst hieronder (27 namen) is dus onvolledig.",
+  "AMCPER: http://directorio.cirugiaplastica.mx/public/ (doorverwijzing van cirugiaplastica.mx/directorioamcper) niet opgehaald (toestemming niet beantwoord); de staatpagina https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA wel (148 vermeldingen, 147 unieke artsen).",
+  "SEP cédula: https://www.cedulaprofesional.sep.gob.mx/ niet opgehaald (toestemming niet beantwoord). Niet automatisch te lezen vastgesteld; handmatig per naam controleren.",
+  "CSG: alle gob.mx-pdf's met de lijst van gecertificeerde establecimientos (EAM_con_certificado_vigente__3_dic_2025_.pdf, EAM_CERTIFICADOS_VIGENTES_SEPT_2025.pdf, EAM_CERTIFICADOS_VIGENTES_JUNIO_2025.pdf, INF_PUB_CERT_02_05_2024_86_EAM.pdf) en https://www.gob.mx/csg/documentos/listado-de-establecimientos-de-atencion-medica gaven client_error. Alleen een zoekresultaatfragment bleef over.",
+  "JCI: https://www.jointcommissioninternational.org/who-we-are/accredited-organizations/ niet opgehaald (toestemming niet beantwoord). JCI-status alleen uit eigen claims/persberichten, niet uit het JCI-register.",
+  "COFEPRIS: geen openbaar register met licencia sanitaria per ziekenhuis gevonden of gelezen.",
+  "Vervolg 15 nov: cirujanoscertificados.org/directorio/doctor/... ook geweigerd door robots.txt. CMCPER vastgesteld via zoekindex (WebSearch met allowed_domains cmcper.org, cmcper.org.mx, directorio.cmcper.mx, cirujanoscertificados.org): alleen 'ja' als de naam in URL of titel staat. ISAPS: ook URL met parameters (sortOrder, page, memberGroupIds) geeft geen landfilter; landveld zit in een formulier zonder zichtbare parameternaam. 'onbekend' bij AMCPER/CCPERBC/ASPS betekent: niet gevonden in de gelezen lijst (ASPS-lijst onvolledig)."
+ ],
+ "cmcper": [
+  {
+   "arts": "alle Tijuana-chirurgen",
+   "status": "onbekend (register niet leesbaar, zie niet_bereikbaar)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Omar Lazos",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Laura Carmina Cardenas",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Salvador Pantoja",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Alejandro J. Quiroz",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://directorio.cmcper.mx/doctor/293/"
+  },
+  {
+   "arts": "Juan Carlos Fuentes",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://directorio.cmcper.mx/certificado/847/"
+  },
+  {
+   "arts": "Francisco Bucio",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://directorio.cmcper.mx/doctor/francisco-javier-bucio-montemayor"
+  },
+  {
+   "arts": "Carlos Castaneda",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://cmcper.org/directorio/doctor/carlos-eduardo-mario-castaneda-reichert/"
+  },
+  {
+   "arts": "Enrique Quiros Lim",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://cmcper.org/directorio/doctor/hector-enrique-quiros-lim/"
+  },
+  {
+   "arts": "Isabel Cristina Balza Mirabal",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Ricardo Vega",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://cmcper.org.mx/directorio/doctor/ricardo-vega-montiel/"
+  },
+  {
+   "arts": "Rafael Camberos Solis",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Carlos Marciales Chacon",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://directorio.cmcper.mx/doctor/1976/"
+  },
+  {
+   "arts": "Juan Pablo Cervantes",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://cirujanoscertificados.org/directorio/doctor/juan-pablo-cervantes-diaz"
+  },
+  {
+   "arts": "Luis Eduardo Guerrero",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Nicolas Leyva",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Eduardo Ochoa",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Jorge Chang Contreras",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://cmcper.org.mx/directorio/doctor/jorge-eduardo-chang-contreras/"
+  },
+  {
+   "arts": "Carlos Illich Navarro",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Daniela Leon",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Ignacio Del Carmen",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Jesus Manuel Vargas Rocha",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Peter Lopez",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Mario Arturo Moran Romero",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://cmcper.org.mx/directorio/doctor/mario-arturo-moran-romero/"
+  },
+  {
+   "arts": "Alicia Sigler",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://directorio.cmcper.mx/doctor/924/"
+  },
+  {
+   "arts": "Alberto Lara Jimenez",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Andrei Rios",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Tania Najar",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Jaime Caloca Jr.",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Alfredo Chama Naranjo",
+   "status": "waarschijnlijk: zoekindex toont CMCPER-certificaatpagina met hetzelfde nummer als de eigen opgave van de arts; naam niet zichtbaar, pagina niet gelezen (robots.txt) (CMCPER 2607)",
+   "bron": "https://directorio.cmcper.mx/certificado/2607/"
+  },
+  {
+   "arts": "Jorge Galaz Martinez",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://cmcper.org.mx/directorio/doctor/jorge-galaz-martinez"
+  },
+  {
+   "arts": "Jorge L. Diaz Martinez",
+   "status": "waarschijnlijk: zoekindex toont CMCPER-certificaatpagina met hetzelfde nummer als de eigen opgave van de arts; naam niet zichtbaar, pagina niet gelezen (robots.txt) (CMCPER 2333)",
+   "bron": "https://directorio.cmcper.mx/certificado/2333/"
+  },
+  {
+   "arts": "Felix Omar Marquez Villalobos",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://cmcper.org/directorio/doctor/felix-omar-marquez-villalobos/"
+  },
+  {
+   "arts": "Jose Alonso Rivera Ruvalcaba",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://directorio.cmcper.mx/doctor/2294/"
+  },
+  {
+   "arts": "Hermes Avila Pelayo",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://cmcper.org.mx/directorio/doctor/hermes-avila-pelayo/"
+  },
+  {
+   "arts": "Rodolfo Castillo Calderon",
+   "status": "ja: naam staat in URL of titel van een CMCPER-directorypagina in de zoekindex (pagina zelf niet gelezen wegens robots.txt; geldigheid niet gecontroleerd)",
+   "bron": "https://cmcper.org/directorio/doctor/rodolfo-castillo-calderon/"
+  },
+  {
+   "arts": "Manuel Antonio Gutierrez Romero",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Arturo Munoz Meza",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  },
+  {
+   "arts": "Victor Gutierrez Uribe",
+   "status": "onbekend: zoekindex gaf geen CMCPER-pagina met deze naam; directory niet leesbaar (robots.txt)",
+   "bron": "https://directorio.cmcper.mx/"
+  }
+ ],
+ "amcper": [
+  {
+   "arts": "Dr(a). Josue Humberto Velarde Galvez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Ricardo Vega Montiel",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Armando Torres Madueña",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Francisco Toledo Gomez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Caroll Toledo Nader",
+   "status": "lid AMCPER (Vitalicio); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Marco Antonio Soto Ledesma",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Katheryn Michelle Solis Salgado",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Alicia Sigler Moreno",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Victor Javier Sanchez Aldaco",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Yazmin Sanchez Delgado",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Susel Paola Sanchez Tavizon",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Adda Maria Sanchez Durazo",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jose Oracio Ruiz Gastelum",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Miguel A. Rolon Hernandez",
+   "status": "lid AMCPER (Miembro Vitalicio); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Irving Rodriguez Lopez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Erik Andres Rodriguez Martin",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Marco Antonio Rodas Nava",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Marco Antonio Rodas Ruiz",
+   "status": "lid AMCPER (Vitalicio); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Fernando Robles Rodriguez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Zona Río (Tijuana)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Arnulfo Andrei Rios Cantu",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Angel Gabriel Rios Gonzalez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Gina Sofia Rincon Montes",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Manuel Ramos Gallo",
+   "status": "lid AMCPER (Vitalicio); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Alejandro Juventino Quiroz Tejeda",
+   "status": "lid AMCPER (Vitalicio); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Hector Enrique Quiros Lim",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Pedro Leonel Puebla Lavernia",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jorge Perez Olivas",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Alberto Enrique Perez Bañuelos",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jose Antonio Perez Hernandez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Miguel Angel Parra Esquivel",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Ariel Ulises Nieblas Barreras",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Carlos Illich Navarro Delgadillo",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Arturo Muñoz Meza",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Elsy Candelaria De La Concepcion Montufar Cervera",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Gilberto Montfort Margain",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Hector Moises Milla Hinojosa",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Carlos Armando Marciales Chacon",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Hector Arturo Maldonado Arenas",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Luis Fernando Loustaunau Caballero",
+   "status": "lid AMCPER (Vitalicio); stad in AMCPER-lijst: Zona Río (Tijuana)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Alejandro Lopez Gaxiola",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Hector Guillermo Lino Ortiz",
+   "status": "lid AMCPER (Miembro Vitalicio); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Nicolas Leyva Pavon",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Omar Lazos Rodriguez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Alberto Lara Jimenez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Grecia Judith Juarez Velazquez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). David Walter Jimenez Ferguson",
+   "status": "lid AMCPER (Miembro Vitalicio); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Joel Sealtiel Hernandez Machuca",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Manuel Antonio Gutierrez Romero",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Victor Eduardo Gutierrez Uribe",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Marco Antonio Gutierrez Lamadrid",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Luis Eduardo Guerrero Becerril",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Silvia Gonzalez Arias",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Arturo Gabriel Gonzalez Montes",
+   "status": "lid AMCPER (Vitalicio); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Eduardo Ulises Gongora Alejandre",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Miguel Angel Gaxiola Garcia",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Juan Carlos Garcia Norzagaray",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Javier Nicolas Garcia Muñoz",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Alejandro Galvez Zepeda",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jorge Galaz Martinez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jorge Luis Diaz Martinez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Gaston De La Garza Martinez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Pedro Alfredo Cota Reyes",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jorge Eduardo Chang Contreras",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Bernardo Cervantes Sanchez",
+   "status": "lid AMCPER (Vitalicio); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Rodolfo Castillo Calderon",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Carlos Eduardo Mario Castañeda Reichert",
+   "status": "lid AMCPER (geen status vermeld); stad in AMCPER-lijst: La Mesa (Tijuana)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jaime Enrique Campos Leon",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Daniel Enrique Camacho Melo",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Francisco Javier Bucio Montemayor",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Eldher Bravo Valle",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jose Barragan Cabral",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Fernando Barbosa Villarreal",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Isabel Cristina Balza Mirabal",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Joaquin Cuauhtlatohuac Ayala Del Muro",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Zona Río (Tijuana)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Hermes Avila Pelayo",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Brenda Arcos Vera",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Luciano Alfredo Alonso Rosales",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Andrey Aleksandrovich Shakhov",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: Tijuana",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jose Luis Valero Salas",
+   "status": "lid AMCPER (Vitalicio); stad in AMCPER-lijst: leeg (Tijuana volgens cirugiaplastica.mx/directorio/baja-california)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jaime Caloca Acosta",
+   "status": "lid AMCPER (Vitalicio); stad in AMCPER-lijst: leeg (Tijuana volgens cirugiaplastica.mx/directorio/baja-california)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Rodrigo Valero Jarillo",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: leeg (Tijuana volgens CCPERBC)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Luis Suarez Avalos",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: leeg (Tijuana volgens CCPERBC en ASPS)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Julio Alfonso Saldaña Angulo",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: leeg (Tijuana volgens CCPERBC)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Salvador Medina Sanchez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: leeg (Tijuana volgens ASPS)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Eduardo Gregorio Ochoa Tovar",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: leeg (Tijuana volgens CCPERBC)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Arianna Gabriela Ibarra Reyes",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: leeg (Tijuana volgens CCPERBC en ASPS)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Alfredo Harris Dominguez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: leeg (Tijuana volgens CCPERBC en ASPS)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Juan Carlos Fuentes Amezcua",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: leeg (Tijuana volgens ASPS)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jose Luis Flores Valdivia",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: leeg (Tijuana volgens CCPERBC en ASPS)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Juan Pablo Cervantes Diaz",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: leeg (Tijuana volgens CCPERBC en ASPS)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Laura Carmina Cardenas Malta",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: leeg (Tijuana volgens CCPERBC)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Rafael Camberos Solis",
+   "status": "lid AMCPER (geen status vermeld); stad in AMCPER-lijst: leeg (Tijuana volgens CCPERBC)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jean Carlo Barragan Chavez",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: leeg (Tijuana volgens CCPERBC en ASPS)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jacqueline Ivonne Aragon Inclan",
+   "status": "lid AMCPER (Titular); stad in AMCPER-lijst: leeg (Tijuana volgens CCPERBC en ASPS)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jesus Manuel Vargas Rocha",
+   "status": "lid AMCPER (Titular, stad leeg)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Tania Karen Najar Sanchez",
+   "status": "lid AMCPER (Titular, stad leeg)",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  },
+  {
+   "arts": "Dr(a). Jaime Caloca Valenzuela",
+   "status": "lid AMCPER (Titular, stad leeg; aangenomen dat Jr. = Caloca Valenzuela, naast Jaime Caloca Acosta (Vitalicio))",
+   "bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA"
+  }
+ ],
+ "colegio_bc": [
+  {
+   "arts": "Dr(a). Laura Carmina Cárdenas Malta",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Ricardo Vega Montiel",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Rafael Camberos Solís",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Jacqueline Ivonne Aragón Inclán",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Jaime Enrique Campos Leon",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Juan Pablo Cervantes Diaz",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Marco Antonio Rodas Nava",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Gina Sofia Rincón Montes",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). José Luis Valero Salas",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Marco Antonio Soto Ledesma",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Julio Alfonso Saldaña Angulo",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Rodolfo Castillo Calderón",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Alberto Enrique Perez Bañuelos",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Irving Rodriguez Lopez",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Alfredo Harris Dominguez",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Angel Eduardo Valenzuela Acosta",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Mexicali",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Luis Suarez Avalos",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Francisco Toledo Gomez",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Rodrigo Valero Jarillo",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Alicia Sigler Moreno",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Daniel Camacho Melo",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Fernando Robles Rodriguez",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Arnulfo Andrei Ríos Cantú",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). José Luis Flores Valdivia",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Gastón de la Garza Martínez",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Isabel Cristina Balza Mirabal",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Miguel Ángel Parra Esquivel",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Eduardo Gregorio Ochoa Tovar",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Eduardo Ulises Góngora Alejandre",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana (adres Rosarito)",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Ariel Ulises Nieblas Barreras",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Francisco Javier Amaya Blas",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Mexicali (adres)",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Jorge Eduardo Chang Contreras",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Grecia Judith Juárez Velázquez",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana (adres)",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Héctor Enrique Quirós Lim",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana (adres)",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Abraham Juarez Lopez de Nava",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Mexicali",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Arianna Gabriela Ibarra Reyes",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  },
+  {
+   "arts": "Dr(a). Jean Carlo Barragan Chavez",
+   "status": "lid Colegio de Cirujanos Plásticos, Estéticos y Reconstructivos de Baja California (CCPERBC); stad: Tijuana",
+   "bron": "https://ccperbc.org/en/directorio/"
+  }
+ ],
+ "isaps": [
+  {
+   "arts": "alle Tijuana-chirurgen",
+   "status": "onbekend (zoekfilter niet leesbaar)",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Omar Lazos",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Laura Carmina Cardenas",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Salvador Pantoja",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Alejandro J. Quiroz",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Juan Carlos Fuentes",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Francisco Bucio",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Carlos Castaneda",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Enrique Quiros Lim",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Isabel Cristina Balza Mirabal",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Ricardo Vega",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Rafael Camberos Solis",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Carlos Marciales Chacon",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Juan Pablo Cervantes",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Luis Eduardo Guerrero",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Nicolas Leyva",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Eduardo Ochoa",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Jorge Chang Contreras",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Carlos Illich Navarro",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Daniela Leon",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Ignacio Del Carmen",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Jesus Manuel Vargas Rocha",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Peter Lopez",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Mario Arturo Moran Romero",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Alicia Sigler",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Alberto Lara Jimenez",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Andrei Rios",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Tania Najar",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Jaime Caloca Jr.",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Alfredo Chama Naranjo",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Jorge Galaz Martinez",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Jorge L. Diaz Martinez",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Felix Omar Marquez Villalobos",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Jose Alonso Rivera Ruvalcaba",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Hermes Avila Pelayo",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Rodolfo Castillo Calderon",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Manuel Antonio Gutierrez Romero",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Arturo Munoz Meza",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  },
+  {
+   "arts": "Victor Gutierrez Uribe",
+   "status": "onbekend: ISAPS find-a-surgeon niet filterbaar zonder formulier; zoekresultaten op isaps.org gaven geen profiel",
+   "bron": "https://www.isaps.org/discover/find-a-surgeon/"
+  }
+ ],
+ "asps": [
+  {
+   "arts": "Isabel Balza, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC"
+  },
+  {
+   "arts": "Jose Luis Flores Valdivia, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC"
+  },
+  {
+   "arts": "Salvador Medina Sanchez, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC"
+  },
+  {
+   "arts": "Jose Ruiz Gastelum, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC"
+  },
+  {
+   "arts": "Luis Suarez, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC"
+  },
+  {
+   "arts": "Jean Barragan Chavez, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC"
+  },
+  {
+   "arts": "Carlos Castaneda, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC"
+  },
+  {
+   "arts": "Marco Antonio Soto Ledesma, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC"
+  },
+  {
+   "arts": "Rodolfo Castillo, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC"
+  },
+  {
+   "arts": "Juan Carlos Fuentes, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC"
+  },
+  {
+   "arts": "Arianna Ibarra Reyes",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC"
+  },
+  {
+   "arts": "Andrey Shakhov, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC"
+  },
+  {
+   "arts": "Carlos Marciales Chacon, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/city/tijuana"
+  },
+  {
+   "arts": "Javier Cabrera Ramirez, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/city/tijuana"
+  },
+  {
+   "arts": "Juan Pablo Cervantes, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/city/tijuana"
+  },
+  {
+   "arts": "Miguel Parra Esquivel, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/city/tijuana"
+  },
+  {
+   "arts": "Jacqueline Aragon, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/city/tijuana"
+  },
+  {
+   "arts": "Luciano Alonso Rosales, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/city/tijuana"
+  },
+  {
+   "arts": "Jorge Chang Contreras, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/city/tijuana"
+  },
+  {
+   "arts": "Luis Guerrero, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?lat=32.52026225064857&lon=-117.01243710076704&page=3"
+  },
+  {
+   "arts": "Armando Torres Maduena, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?lat=32.52026225064857&lon=-117.01243710076704&page=3"
+  },
+  {
+   "arts": "Hermes Avila Pelayo, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?lat=32.52026225064857&lon=-117.01243710076704&page=3"
+  },
+  {
+   "arts": "Susel Sanchez Tavizon, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?lat=32.52026225064857&lon=-117.01243710076704&page=3"
+  },
+  {
+   "arts": "Alejandro Quiroz, MD, FACS",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?lat=32.52026225064857&lon=-117.01243710076704&page=3"
+  },
+  {
+   "arts": "Alfredo Harris, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?lat=32.52026225064857&lon=-117.01243710076704&page=3"
+  },
+  {
+   "arts": "Manuel Gutierrez, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://find.plasticsurgery.org/?lat=32.52026225064857&lon=-117.01243710076704&page=3"
+  },
+  {
+   "arts": "Victor E. Gutierrez Uribe, MD",
+   "status": "ASPS International Member, Tijuana B.C.",
+   "bron": "https://www.plasticsurgery.org/md/Victor-Gutierrez%20Uribe-137209.html"
+  },
+  {
+   "arts": "Jaime Campos Leon, MD",
+   "status": "onbekend: zoekresultaattitel noemt hem, maar de pagina gaf bij ophalen 'No Results Found'",
+   "bron": "https://find.plasticsurgery.org/?member=jaime+campos"
+  },
+  {
+   "arts": "Arturo Munoz Meza, MD (fotogalerij ASPS, Tijuana B.C.; lidtype niet gelezen)",
+   "status": "ASPS, Tijuana B.C.",
+   "bron": "https://www.plasticsurgery.org/photo-gallery/case/40878"
+  }
+ ],
+ "ziekenhuizen": [
+  {
+   "naam": "Obesity Control Center (Paseo de los Héroes 9111 #100, Zona Río)",
+   "stad": "Tijuana",
+   "csg": "onbekend",
+   "csg_bron": "",
+   "jci": "ja volgens eigen site ('JCI accredited for the third time'), niet geverifieerd in JCI-register; bariatrie, geen plastische chirurgie; site noemt zichzelf 'scheduling facilitator, not a healthcare provider'",
+   "jci_bron": "https://www.obesitycontrolcenter.com/about/international-certification",
+   "cofepris": "onbekend (alleen Permiso de Publicidad 233300201A0601 vermeld)",
+   "cofepris_bron": "https://www.obesitycontrolcenter.com/about/international-certification"
+  },
+  {
+   "naam": "Hospital BC",
+   "stad": "Tijuana",
+   "csg": "onbekend",
+   "csg_bron": "",
+   "jci": "ja volgens persbericht van 31 maart 2026, niet geverifieerd in JCI-register",
+   "jci_bron": "https://abnews-wire.blogspot.com/2026/03/internationally-accredited-hospital-bc.html",
+   "cofepris": "onbekend",
+   "cofepris_bron": ""
+  },
+  {
+   "naam": "Hospital Velmar (Impulsora de Salud de Baja California)",
+   "stad": "Tijuana",
+   "csg": "waarschijnlijk ja: zoekresultaat toont 'Hospital Velmar Impulsora de Salud de Baja California' als eerste regel van de CSG-lijst EAM certificados vigentes sept 2025; pdf zelf niet leesbaar, stad niet in fragment bevestigd",
+   "csg_bron": "https://www.gob.mx/cms/uploads/attachment/file/1025022/EAM_CERTIFICADOS_VIGENTES_SEPT_2025.pdf",
+   "jci": "onbekend",
+   "jci_bron": "",
+   "cofepris": "onbekend",
+   "cofepris_bron": ""
+  },
+  {
+   "naam": "Hospital Ángeles Tijuana",
+   "stad": "Tijuana",
+   "csg": "onbekend",
+   "csg_bron": "",
+   "jci": "onbekend",
+   "jci_bron": "",
+   "cofepris": "onbekend",
+   "cofepris_bron": ""
+  }
+ ],
+ "toelichting": "Leesbaar: AMCPER (staatlijst Baja California, 148 vermeldingen, status Titular/Vitalicio; 94 met Tijuana als stad of via CCPERBC/ASPS aan Tijuana te koppelen, stad uit de AMCPER-lijst staat in status), CCPERBC (Colegio BC, 37 leden, ca. 35 Tijuana), ASPS (27 International Members in Tijuana gezien, lijst onvolledig door JS-paginering). ASPS-pagina's tonen bij elke kaart ook badges 'U.S./Canada Board Certified'; dat lijkt een algemene legenda en is NIET overgenomen als certificering. Niet leesbaar: CMCPER (robots.txt), ISAPS (formulier), SEP, CSG-pdf's, JCI-register, COFEPRIS. AMCPER-lidmaatschap is geen CMCPER-certificering; die moet apart (handmatig of met andere fetcher) worden gecontroleerd. Het register zegt niet wie tummy tucks doet; selectie daarop moet uit andere bronnen komen. Hospital Velmar CSG berust op een zoekfragment, niet op de gelezen pdf.",
+ "per_kandidaat": [
+  {
+   "arts": "Omar Lazos",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Omar Lazos Rodriguez (Titular, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Laura Carmina Cardenas",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Laura Carmina Cardenas Malta (Titular, stad leeg)",
+   "colegio_bc": "ja",
+   "colegio_bc_bron": "https://ccperbc.org/en/directorio/",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Salvador Pantoja",
+   "cmcper": "onbekend",
+   "amcper": "onbekend",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Alejandro J. Quiroz",
+   "cmcper": "ja",
+   "cmcper_bron": "https://directorio.cmcper.mx/doctor/293/",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Alejandro Juventino Quiroz Tejeda (Vitalicio, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "ja",
+   "asps_bron": "https://find.plasticsurgery.org/?lat=32.52026225064857&lon=-117.01243710076704&page=3",
+   "asps_naam": "Alejandro Quiroz, MD, FACS",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Juan Carlos Fuentes",
+   "cmcper": "ja",
+   "cmcper_bron": "https://directorio.cmcper.mx/certificado/847/",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Juan Carlos Fuentes Amezcua (Titular, stad leeg)",
+   "colegio_bc": "onbekend",
+   "asps": "ja",
+   "asps_bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC",
+   "asps_naam": "Juan Carlos Fuentes, MD",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Francisco Bucio",
+   "cmcper": "ja",
+   "cmcper_bron": "https://directorio.cmcper.mx/doctor/francisco-javier-bucio-montemayor",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Francisco Javier Bucio Montemayor (Titular, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Carlos Castaneda",
+   "cmcper": "ja",
+   "cmcper_bron": "https://cmcper.org/directorio/doctor/carlos-eduardo-mario-castaneda-reichert/",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Carlos Eduardo Mario Castañeda Reichert (geen status vermeld, La Mesa)",
+   "colegio_bc": "onbekend",
+   "asps": "ja",
+   "asps_bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC",
+   "asps_naam": "Carlos Castaneda, MD",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Enrique Quiros Lim",
+   "cmcper": "ja",
+   "cmcper_bron": "https://cmcper.org/directorio/doctor/hector-enrique-quiros-lim/",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Hector Enrique Quiros Lim (Titular, Tijuana)",
+   "colegio_bc": "ja",
+   "colegio_bc_bron": "https://ccperbc.org/en/directorio/",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Isabel Cristina Balza Mirabal",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Isabel Cristina Balza Mirabal (Titular, Tijuana)",
+   "colegio_bc": "ja",
+   "colegio_bc_bron": "https://ccperbc.org/en/directorio/",
+   "asps": "ja",
+   "asps_bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC",
+   "asps_naam": "Isabel Balza, MD",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Ricardo Vega",
+   "cmcper": "ja",
+   "cmcper_bron": "https://cmcper.org.mx/directorio/doctor/ricardo-vega-montiel/",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Ricardo Vega Montiel (Titular, Tijuana)",
+   "colegio_bc": "ja",
+   "colegio_bc_bron": "https://ccperbc.org/en/directorio/",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Rafael Camberos Solis",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Rafael Camberos Solis (geen status vermeld, stad leeg)",
+   "colegio_bc": "ja",
+   "colegio_bc_bron": "https://ccperbc.org/en/directorio/",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Carlos Marciales Chacon",
+   "cmcper": "ja",
+   "cmcper_bron": "https://directorio.cmcper.mx/doctor/1976/",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Carlos Armando Marciales Chacon (Titular, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "ja",
+   "asps_bron": "https://find.plasticsurgery.org/city/tijuana",
+   "asps_naam": "Carlos Marciales Chacon, MD",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Juan Pablo Cervantes",
+   "cmcper": "ja",
+   "cmcper_bron": "https://cirujanoscertificados.org/directorio/doctor/juan-pablo-cervantes-diaz",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Juan Pablo Cervantes Diaz (Titular, stad leeg)",
+   "colegio_bc": "ja",
+   "colegio_bc_bron": "https://ccperbc.org/en/directorio/",
+   "asps": "ja",
+   "asps_bron": "https://find.plasticsurgery.org/city/tijuana",
+   "asps_naam": "Juan Pablo Cervantes, MD",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Luis Eduardo Guerrero",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Luis Eduardo Guerrero Becerril (Titular, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "ja",
+   "asps_bron": "https://find.plasticsurgery.org/?lat=32.52026225064857&lon=-117.01243710076704&page=3",
+   "asps_naam": "Luis Guerrero, MD",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Nicolas Leyva",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Nicolas Leyva Pavon (Titular, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Eduardo Ochoa",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Eduardo Gregorio Ochoa Tovar (Titular, stad leeg)",
+   "colegio_bc": "ja",
+   "colegio_bc_bron": "https://ccperbc.org/en/directorio/",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Jorge Chang Contreras",
+   "cmcper": "ja",
+   "cmcper_bron": "https://cmcper.org.mx/directorio/doctor/jorge-eduardo-chang-contreras/",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Jorge Eduardo Chang Contreras (Titular, Tijuana)",
+   "colegio_bc": "ja",
+   "colegio_bc_bron": "https://ccperbc.org/en/directorio/",
+   "asps": "ja",
+   "asps_bron": "https://find.plasticsurgery.org/city/tijuana",
+   "asps_naam": "Jorge Chang Contreras, MD",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Carlos Illich Navarro",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Carlos Illich Navarro Delgadillo (Titular, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Daniela Leon",
+   "cmcper": "onbekend",
+   "amcper": "onbekend",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Ignacio Del Carmen",
+   "cmcper": "onbekend",
+   "amcper": "onbekend",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Jesus Manuel Vargas Rocha",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Jesus Manuel Vargas Rocha (Titular, stad leeg)",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Peter Lopez",
+   "cmcper": "onbekend",
+   "amcper": "onbekend",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Mario Arturo Moran Romero",
+   "cmcper": "ja",
+   "cmcper_bron": "https://cmcper.org.mx/directorio/doctor/mario-arturo-moran-romero/",
+   "amcper": "onbekend",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Alicia Sigler",
+   "cmcper": "ja",
+   "cmcper_bron": "https://directorio.cmcper.mx/doctor/924/",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Alicia Sigler Moreno (Titular, Tijuana)",
+   "colegio_bc": "ja",
+   "colegio_bc_bron": "https://ccperbc.org/en/directorio/",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Alberto Lara Jimenez",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Alberto Lara Jimenez (Titular, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Andrei Rios",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Arnulfo Andrei Rios Cantu (Titular, Tijuana)",
+   "colegio_bc": "ja",
+   "colegio_bc_bron": "https://ccperbc.org/en/directorio/",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Tania Najar",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Tania Karen Najar Sanchez (Titular, stad leeg)",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Jaime Caloca Jr.",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Jaime Caloca Valenzuela (Titular, stad leeg; aangenomen dat Jr. = Caloca Valenzuela, naast Jaime Caloca Acosta (Vitalicio))",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Alfredo Chama Naranjo",
+   "cmcper": "waarschijnlijk",
+   "cmcper_bron": "https://directorio.cmcper.mx/certificado/2607/",
+   "amcper": "onbekend",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Jorge Galaz Martinez",
+   "cmcper": "ja",
+   "cmcper_bron": "https://cmcper.org.mx/directorio/doctor/jorge-galaz-martinez",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Jorge Galaz Martinez (Titular, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Jorge L. Diaz Martinez",
+   "cmcper": "waarschijnlijk",
+   "cmcper_bron": "https://directorio.cmcper.mx/certificado/2333/",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Jorge Luis Diaz Martinez (Titular, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Felix Omar Marquez Villalobos",
+   "cmcper": "ja",
+   "cmcper_bron": "https://cmcper.org/directorio/doctor/felix-omar-marquez-villalobos/",
+   "amcper": "onbekend",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Jose Alonso Rivera Ruvalcaba",
+   "cmcper": "ja",
+   "cmcper_bron": "https://directorio.cmcper.mx/doctor/2294/",
+   "amcper": "onbekend",
+   "colegio_bc": "onbekend",
+   "asps": "onbekend",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Hermes Avila Pelayo",
+   "cmcper": "ja",
+   "cmcper_bron": "https://cmcper.org.mx/directorio/doctor/hermes-avila-pelayo/",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Hermes Avila Pelayo (Titular, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "ja",
+   "asps_bron": "https://find.plasticsurgery.org/?lat=32.52026225064857&lon=-117.01243710076704&page=3",
+   "asps_naam": "Hermes Avila Pelayo, MD",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Rodolfo Castillo Calderon",
+   "cmcper": "ja",
+   "cmcper_bron": "https://cmcper.org/directorio/doctor/rodolfo-castillo-calderon/",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Rodolfo Castillo Calderon (Titular, Tijuana)",
+   "colegio_bc": "ja",
+   "colegio_bc_bron": "https://ccperbc.org/en/directorio/",
+   "asps": "ja",
+   "asps_bron": "https://find.plasticsurgery.org/?country=mexico&city=Tijuana%2C+BC",
+   "asps_naam": "Rodolfo Castillo, MD",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Manuel Antonio Gutierrez Romero",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Manuel Antonio Gutierrez Romero (Titular, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "ja",
+   "asps_bron": "https://find.plasticsurgery.org/?lat=32.52026225064857&lon=-117.01243710076704&page=3",
+   "asps_naam": "Manuel Gutierrez, MD",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Arturo Munoz Meza",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Arturo Muñoz Meza (Titular, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "ja",
+   "asps_bron": "https://www.plasticsurgery.org/photo-gallery/case/40878",
+   "asps_naam": "Arturo Munoz Meza, MD (fotogalerij ASPS, Tijuana B.C.; lidtype niet gelezen)",
+   "isaps": "onbekend"
+  },
+  {
+   "arts": "Victor Gutierrez Uribe",
+   "cmcper": "onbekend",
+   "amcper": "ja",
+   "amcper_bron": "https://directorio.cirugiaplastica.mx/public/estado?estado=BAJA+CALIFORNIA",
+   "amcper_naam": "Victor Eduardo Gutierrez Uribe (Titular, Tijuana)",
+   "colegio_bc": "onbekend",
+   "asps": "ja",
+   "asps_bron": "https://www.plasticsurgery.org/md/Victor-Gutierrez%20Uribe-137209.html",
+   "asps_naam": "Victor E. Gutierrez Uribe, MD",
+   "isaps": "onbekend"
+  }
+ ]
+}
