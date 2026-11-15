@@ -113,5 +113,20 @@ assert.ok(ch.includes('geen zuivere vergelijking van wassoorten'));
 assert.ok(ch.includes('voedselcontactgeschiktheid'));
 console.log('Kaarsen: bronnen zichtbaar/schema gelijk, onbekende brandduur en geurklachtenroute gecontroleerd.');
 
+const desk=gidsen.GIDSEN['houten-bureau-accessoires'];
+assert.ok(desk.kort.includes('capaciteit is niet onderling gemeten'));
+assert.ok(!desk.check.regels.find(x=>x.id==='pennen').pid);
+assert.ok(desk.check.regels.find(x=>x.id==='twijfel-zelf').als.wat.includes('pennen'));
+assert.ok(!JSON.stringify(desk).includes('krasvrij'));
+assert.ok(bewijs.bronLink({id:'oc_4173957651300353',t:'OakyBlocks'}).includes('Prijs en variant niet bevestigd'));
+const list=alle.alleVan('houten-bureau-accessoires',[],{'oc_price':{id:'oc_price',t:'Modulaire Houten Bureau Organisers Set - Oakywood',p:27,vr:true}}, {},i=>i.p);
+assert.equal(list.n,0);
+const dh=(await render('slug=houten-bureau-accessoires')).body;
+const dg=[...dh.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1])['@graph']||[]);
+assert.deepEqual(dg.find(x=>x['@type']==='Article').citation,desk.bronnen.map(id=>bewijs.BRONNEN[id].url));
+assert.ok(dh.includes('20 studies met 2.478'));
+console.log('Bureau: bron-/variantgrenzen, prijsuitsluiting en conditionele keuzecheck geslaagd.');
+
+
 
 
