@@ -213,7 +213,11 @@ export default async function handler(req, res) {
       const vragen = rij.sort((a, b) => b.imp - a.imp).slice(0, 300).map(x => ({ q: x.q, page: x.page, clicks: x.clicks, imp: x.imp, ctr: r1(x.ctr), pos: r2(x.pos) }));
       // kansen: veel vertoningen en weinig kliks (titel en description beter), of zoekvragen waar we op pagina 2+ staan (eigen antwoordpagina)
       const titel = paginas.filter(p => p.imp >= 30 && p.ctr < 2).slice(0, 20), dieper = vragen.filter(x => x.imp >= 5 && x.pos > 10).slice(0, 40);
-      return res.status(200).json({ ok: true, eigendom: prop, dagen, kliks: pag.reduce((a, x) => a + x.clicks, 0), vertoningen: pag.reduce((a, x) => a + x.imp, 0), paginas, vragen, kansen: { titel, dieper } });
+      // per soort adres (15 nov 2026, snoeien van dunne paginasoorten): eerste deel na de taal, met de 5 talen van dezelfde soort samen
+      const SOORTNAAM = { featured: 'uitgelicht', uitgelicht: 'uitgelicht', destacados: 'uitgelicht', destaques: 'uitgelicht', empfohlen: 'uitgelicht', businesses: 'bedrijven', bedrijven: 'bedrijven', empresas: 'bedrijven', firmen: 'bedrijven', neighborhoods: 'wijken', wijken: 'wijken', barrios: 'wijken', bairros: 'wijken', viertel: 'wijken' };
+      const typen = {}; for (const p of pag) { let d; try { d = new URL(p.page).pathname.split('/').filter(Boolean); } catch (e) { continue; } let k = d.length < 2 ? '(voorpagina)' : /^\d{4}-\d\d-\d\d$/.test(d[1]) ? '(dagpagina)' : (SOORTNAAM[d[1]] || d[1]) + (d.length > 2 ? '/*' : ''); const o = typen[k] = typen[k] || { vertoningen: 0, kliks: 0, paginas: 0 }; o.vertoningen += p.imp; o.kliks += p.clicks; o.paginas++; }
+      const per_type = Object.fromEntries(Object.entries(typen).sort((a, b) => b[1].vertoningen - a[1].vertoningen));
+      return res.status(200).json({ ok: true, eigendom: prop, dagen, kliks: pag.reduce((a, x) => a + x.clicks, 0), vertoningen: pag.reduce((a, x) => a + x.imp, 0), per_type, paginas, vragen, kansen: { titel, dieper } });
     }
     if (op === 'yoors') { // Yoors Shop in Search Console (Henkjan 20 okt "Nu ook bing voor console"): eigendom zoeken en sitemaps indienen
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
