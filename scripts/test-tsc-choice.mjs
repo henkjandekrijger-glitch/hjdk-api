@@ -71,6 +71,7 @@ await test('consent, topics, legacy delivery and self-declared warmth',()=>{
  assert.equal(engage.dueToday({actief:true,frequency:'daily',consent_version:engage.CONSENT_VERSION},'2026-11-15',[]),true);
  assert.equal(engage.warmth({opens:900,clicks:900}).stage,'unknown');assert.equal(engage.experimentVerdict(0,0,0,0).winner,null);
 });
+await test('changing the primary signup topic cannot retain a hidden preselected topic',()=>{const html=signup.signupBlock(data.SITE.base,'test',{ingreep:'hair'},'nl');assert.ok(!/name="topic"[^>]*checked/.test(html));assert.equal((html.match(/id="tsc-learn"/g)||[]).length,1);});
 await test('preference HTML resists script injection',()=>{
  const html=signup.preferencesBlock(data.SITE.base,'a'.repeat(48),{taal:'nl',topics:['hair']},'</script><script>alert(1)</script>');assert.ok(!html.includes('alert(1)'));scriptCheck(html);
 });
