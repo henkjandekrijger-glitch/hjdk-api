@@ -108,6 +108,7 @@ async function allItems(withFuture) {
   extraItems('nl').concat(seed.items, seed2.items, extra.filter(v => !v.override)).forEach(it0 => { const it1 = !it0.tool && ov[it0.slug] ? vastTerug(it0, Object.assign({}, it0, ov[it0.slug])) : it0; const it = Array.isArray(it1.faq) && it1.faq.length > 1 ? Object.assign({}, it1, { faq: faqZonderDubbel(it1.faq) }) : it1; if (!seen[it.slug] && (withFuture || isLive(it))) { seen[it.slug] = 1; out.push(it); } });
   return out;
 }
+export { allItems }; // ook gebruikt door het intentiemodel (lib/intentmodel.js)
 async function getItem(slug, withFuture) { const all = await allItems(withFuture); return all.find(i => i.slug === slug) || null; }
 // de nieuwste keuzehulp (vandaag of de laatst gepubliceerde): voor de welkomstmail en het "Nieuw vandaag"-blok
 // Seizoenskalender NL: in dit venster komen deze keuzehulpen bovenaan ("Nu actueel") en krijgen ze voorrang in de dagmail

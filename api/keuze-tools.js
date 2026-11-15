@@ -44,6 +44,12 @@ export default async function handler(req, res) {
   res.setHeader('x-content-type-options', 'nosniff');
   if(q.get('tool')==='intentie'){ // intentielog van de vraagbalk en het zoekvak (lib/intentie.js, 15 nov 2026); stand openbaar zonder de vragen, met vragen op de beschermde host
     const I=await import('../lib/intentie.js');res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
+    const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
+    if(op==='model'||op==='bouw'||op==='rijen'){const M=await import('../lib/intentmodel.js'); // intentiemodel (lib/intentmodel.js): samenvatting openbaar, bouwen en rijen alleen beschermd of via de cron
+      if(op==='model')return res.status(200).json({ok:true,stand:await M.modelStand(kv)});
+      if(!beschermd)return res.status(403).json({ok:false});
+      if(op==='bouw')return res.status(200).json({ok:true,stand:await M.bouwModel(kv).catch(e=>({fout:String(e.message||e).slice(0,200)}))});
+      const r=await M.modelRijen(q.get('site')||'nl'),b=q.get('bron');return res.status(200).json({ok:true,n:r.length,rijen:r.filter(x=>!b||x.bron===b).slice(0,Math.min(2000,Number(q.get('n'))||200))});}
     if(req.method==='POST'){let b=req.body;try{if(typeof b==='string'){if(b.length>2000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}return res.status(200).json(await I.intentieLog(kv,b||{},req).catch(()=>({ok:false})));}
     return res.status(200).json(await I.intentieStand(kv,{vol:/\.vercel\.app$/i.test(String(req.headers.host||'')),n:Math.min(200,Number(q.get('n'))||40)}).catch(()=>({ok:false})));
   }

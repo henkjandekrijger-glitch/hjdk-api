@@ -209,6 +209,10 @@
       "schedule": "20 7 * * *"
     },
     {
+      "path": "/api/keuze-tools?tool=intentie&op=bouw",
+      "schedule": "55 4 * * *"
+    },
+    {
       "path": "/api/keuze-tools?tool=tsc&p=ronde",
       "schedule": "10 8 * * *"
     }
