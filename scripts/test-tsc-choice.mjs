@@ -94,6 +94,8 @@ await test('topic picker: searches, limits to 8, saves explicitly, cancels and r
  const open=()=>byId['tp-open'].onclick(),choose=id=>options.find(x=>x.button.dataset.tpId===id).button.onclick();
  assert.deepEqual(JSON.parse(byId['tsc-topics'].value),['hair']);open();assert.equal(d.activeElement,byId['tp-search']);
  byId['tp-search'].value='oog';byId['tp-search'].events.input();assert.ok(options.some(x=>!x.li.hidden&&x.button.dataset.tpId==='laser-eye'));assert.ok(options.find(x=>x.button.dataset.tpId==='hair').li.hidden);
+ byId['tp-search'].value='zzzz-no-match';byId['tp-search'].events.input();let prevented=false;byId['tp-search'].events.keydown({key:'Enter',preventDefault(){prevented=true}});assert.ok(prevented);
+
  choose('laser-eye');byId['tp-close'].onclick();assert.deepEqual(JSON.parse(byId['tsc-topics'].value),['hair']);assert.equal(d.activeElement,byId['tp-open']);
  open();choose('hair');choose('laser-eye');byId['tp-apply'].onclick();assert.deepEqual(JSON.parse(byId['tsc-topics'].value),['laser-eye']);
  open();byId['tp-clear'].onclick();assert.equal(byId['tp-apply'].disabled,true);for(const p of catalog.PROCEDURES.slice(0,9))choose(p.id);assert.match(byId['tp-count'].textContent,/^8 \/ 8/);assert.ok(byId['tp-error'].textContent);byId['tp-apply'].onclick();assert.equal(JSON.parse(byId['tsc-topics'].value).length,8);
