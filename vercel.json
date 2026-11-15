@@ -9,6 +9,10 @@
       "schedule": "47 17 * * *"
     },
     {
+      "path": "/api/gids?op=dkronde",
+      "schedule": "4 6 * * *"
+    },
+    {
       "path": "/api/hjdk/iterate",
       "schedule": "17 */6 * * *"
     },
