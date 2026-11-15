@@ -1,0 +1,2761 @@
+{
+  "version": 3,
+  "checked_at": "2026-11-15",
+  "procedures": [
+    {
+      "id": "hair",
+      "nl": "Haartransplantatie",
+      "en": "Hair transplant",
+      "de": "Haartransplantation",
+      "group": "haar",
+      "match": "haartransplant|hair.transplant|fue.behandeling|dhi.behandeling",
+      "slugs": {
+        "nl": "haartransplantatie",
+        "en": "hair",
+        "de": "haartransplantation"
+      }
+    },
+    {
+      "id": "beard",
+      "nl": "Baardtransplantatie",
+      "en": "Beard transplant",
+      "de": "Barttransplantation",
+      "group": "haar",
+      "match": "haartransplantatie/baard|beard.transplant",
+      "slugs": {
+        "nl": "baardtransplantatie",
+        "en": "beard",
+        "de": "barttransplantation"
+      }
+    },
+    {
+      "id": "laser-eye",
+      "nl": "Ooglaseren",
+      "en": "Laser eye surgery",
+      "de": "Augenlasern",
+      "group": "ogen",
+      "match": "ooglaseren|ogen.laseren|augenlasern|laser.eye|lasik|smile.pro|transprk|laser.vision|smartsight",
+      "slugs": {
+        "nl": "ooglaseren",
+        "en": "laser-eye",
+        "de": "augenlasern"
+      }
+    },
+    {
+      "id": "lens-replacement",
+      "nl": "Lensvervanging",
+      "en": "Lens replacement",
+      "de": "Linsenaustausch",
+      "group": "ogen",
+      "match": "lensvervang|lenswissel|lens.replacement|refractive.lens.exchange|linsenoperation|multifokallinsen",
+      "slugs": {
+        "nl": "lensvervanging",
+        "en": "lens-replacement",
+        "de": "linsenaustausch"
+      }
+    },
+    {
+      "id": "icl",
+      "nl": "Voorzetlenzen ICL",
+      "en": "Implantable contact lenses ICL",
+      "de": "ICL Linsen",
+      "group": "ogen",
+      "match": "voorzetlens|voorzetlenzen|(?:^|[/-])icl(?:[/?_-]|$)|implantable.contact|evo.visian",
+      "slugs": {
+        "nl": "voorzetlenzen-icl",
+        "en": "icl",
+        "de": "icl-linsen"
+      }
+    },
+    {
+      "id": "cataract",
+      "nl": "Staaroperatie",
+      "en": "Cataract surgery",
+      "de": "Kataraktoperation",
+      "group": "ogen",
+      "match": "cataract|grauer.star|katarakt|staaroperatie",
+      "slugs": {
+        "nl": "staaroperatie",
+        "en": "cataract",
+        "de": "kataraktoperation"
+      }
+    },
+    {
+      "id": "eyelid",
+      "nl": "Ooglidcorrectie",
+      "en": "Eyelid surgery",
+      "de": "Lidstraffung",
+      "group": "gezicht",
+      "match": "ooglidcorrect|ooglidchirurgie|blepharoplast|eyelid.surg|lidstraff",
+      "slugs": {
+        "nl": "ooglidcorrectie",
+        "en": "eyelid",
+        "de": "lidstraffung"
+      }
+    },
+    {
+      "id": "rhinoplasty",
+      "nl": "Neuscorrectie",
+      "en": "Rhinoplasty",
+      "de": "Nasenkorrektur",
+      "group": "gezicht",
+      "match": "neuscorrectie|rhinoplast|nasenkorrektur|nose.job",
+      "slugs": {
+        "nl": "neuscorrectie",
+        "en": "rhinoplasty",
+        "de": "nasenkorrektur"
+      }
+    },
+    {
+      "id": "facelift",
+      "nl": "Facelift",
+      "en": "Facelift",
+      "de": "Facelift",
+      "group": "gezicht",
+      "match": "facelift|face.lift|macs.lift|(?:/|-)s.lift(?:/|\\?|$)",
+      "slugs": {
+        "nl": "facelift",
+        "en": "facelift",
+        "de": "facelift"
+      }
+    },
+    {
+      "id": "necklift",
+      "nl": "Halslift",
+      "en": "Neck lift",
+      "de": "Halsstraffung",
+      "group": "gezicht",
+      "match": "halslift|neck.lift|halsstraff",
+      "slugs": {
+        "nl": "halslift",
+        "en": "necklift",
+        "de": "halsstraffung"
+      }
+    },
+    {
+      "id": "browlift",
+      "nl": "Wenkbrauwlift",
+      "en": "Brow lift",
+      "de": "Augenbrauenlifting",
+      "group": "gezicht",
+      "match": "wenkbrauwlift|brow.lift|voorhoofdslift",
+      "slugs": {
+        "nl": "wenkbrauwlift",
+        "en": "browlift",
+        "de": "augenbrauenlifting"
+      }
+    },
+    {
+      "id": "otoplasty",
+      "nl": "Oorcorrectie",
+      "en": "Ear surgery",
+      "de": "Ohrenkorrektur",
+      "group": "gezicht",
+      "match": "oorcorrectie|oorcorrecties|otoplast|ear.surg",
+      "slugs": {
+        "nl": "oorcorrectie",
+        "en": "otoplasty",
+        "de": "ohrenkorrektur"
+      }
+    },
+    {
+      "id": "lip-lift",
+      "nl": "Liplift",
+      "en": "Lip lift",
+      "de": "Lippenlifting",
+      "group": "gezicht",
+      "match": "liplift|lip.lift",
+      "slugs": {
+        "nl": "liplift",
+        "en": "lip-lift",
+        "de": "lippenlifting"
+      }
+    },
+    {
+      "id": "chin",
+      "nl": "Kincorrectie",
+      "en": "Chin surgery",
+      "de": "Kinnkorrektur",
+      "group": "gezicht",
+      "match": "kincorrectie|chin.surg",
+      "slugs": {
+        "nl": "kincorrectie",
+        "en": "chin",
+        "de": "kinnkorrektur"
+      }
+    },
+    {
+      "id": "breast-augmentation",
+      "nl": "Borstvergroting",
+      "en": "Breast augmentation",
+      "de": "Brustvergrößerung",
+      "group": "borst",
+      "match": "borstvergroting|breast.augment|brustvergr",
+      "slugs": {
+        "nl": "borstvergroting",
+        "en": "breast-augmentation",
+        "de": "brustvergroerung"
+      }
+    },
+    {
+      "id": "breast-reduction",
+      "nl": "Borstverkleining",
+      "en": "Breast reduction",
+      "de": "Brustverkleinerung",
+      "group": "borst",
+      "match": "borstverkleining|breast.reduct|brustverkl",
+      "slugs": {
+        "nl": "borstverkleining",
+        "en": "breast-reduction",
+        "de": "brustverkleinerung"
+      }
+    },
+    {
+      "id": "breast-lift",
+      "nl": "Borstlift",
+      "en": "Breast lift",
+      "de": "Bruststraffung",
+      "group": "borst",
+      "match": "borstlift|breast.lift|bruststraff",
+      "slugs": {
+        "nl": "borstlift",
+        "en": "breast-lift",
+        "de": "bruststraffung"
+      }
+    },
+    {
+      "id": "implant-removal",
+      "nl": "Borstimplantaten verwijderen",
+      "en": "Breast implant removal",
+      "de": "Brustimplantate entfernen",
+      "group": "borst",
+      "match": "implant.*remov|protheses.verwijderen|borstprothesen|implantaten.{0,35}verwijderen",
+      "slugs": {
+        "nl": "borstimplantaten-verwijderen",
+        "en": "implant-removal",
+        "de": "brustimplantate-entfernen"
+      }
+    },
+    {
+      "id": "gynecomastia",
+      "nl": "Gynaecomastie",
+      "en": "Gynecomastia surgery",
+      "de": "Gynäkomastie",
+      "group": "borst",
+      "match": "gynaecomast|gynecomast|borstverkleining.man",
+      "slugs": {
+        "nl": "gynaecomastie",
+        "en": "gynecomastia",
+        "de": "gynakomastie"
+      }
+    },
+    {
+      "id": "nipple",
+      "nl": "Tepelcorrectie",
+      "en": "Nipple correction",
+      "de": "Brustwarzenkorrektur",
+      "group": "borst",
+      "match": "tepelcorrect|nipple.correct",
+      "slugs": {
+        "nl": "tepelcorrectie",
+        "en": "nipple",
+        "de": "brustwarzenkorrektur"
+      }
+    },
+    {
+      "id": "tummy",
+      "nl": "Buikwandcorrectie",
+      "en": "Tummy tuck",
+      "de": "Bauchdeckenstraffung",
+      "group": "lichaam",
+      "match": "buikwandcorrectie|tummy.tuck|abdominoplast|bauchdeckenstraff",
+      "slugs": {
+        "nl": "buikwandcorrectie",
+        "en": "tummy",
+        "de": "bauchdeckenstraffung"
+      }
+    },
+    {
+      "id": "lipo",
+      "nl": "Liposuctie",
+      "en": "Liposuction",
+      "de": "Fettabsaugung",
+      "group": "lichaam",
+      "match": "liposuctie|liposculpt|liposuction|fettabsaug",
+      "slugs": {
+        "nl": "liposuctie",
+        "en": "lipo",
+        "de": "fettabsaugung"
+      }
+    },
+    {
+      "id": "bbl",
+      "nl": "Brazilian butt lift",
+      "en": "Brazilian butt lift",
+      "de": "Brazilian Butt Lift",
+      "group": "lichaam",
+      "match": "brazilian.butt|butt.lift|bbl.surg",
+      "slugs": {
+        "nl": "brazilian-butt-lift",
+        "en": "bbl",
+        "de": "brazilian-butt-lift"
+      }
+    },
+    {
+      "id": "mommy",
+      "nl": "Mommy makeover",
+      "en": "Mommy makeover",
+      "de": "Mommy Makeover",
+      "group": "lichaam",
+      "match": "mommy.makeover",
+      "slugs": {
+        "nl": "mommy-makeover",
+        "en": "mommy",
+        "de": "mommy-makeover"
+      }
+    },
+    {
+      "id": "arm-lift",
+      "nl": "Armlift",
+      "en": "Arm lift",
+      "de": "Oberarmstraffung",
+      "group": "lichaam",
+      "match": "armlift|arm.lift|oberarmstraff",
+      "slugs": {
+        "nl": "armlift",
+        "en": "arm-lift",
+        "de": "oberarmstraffung"
+      }
+    },
+    {
+      "id": "thigh-lift",
+      "nl": "Dijbeenlift",
+      "en": "Thigh lift",
+      "de": "Oberschenkelstraffung",
+      "group": "lichaam",
+      "match": "dijbeenlift|thigh.lift|oberschenkelstraff",
+      "slugs": {
+        "nl": "dijbeenlift",
+        "en": "thigh-lift",
+        "de": "oberschenkelstraffung"
+      }
+    },
+    {
+      "id": "body-lift",
+      "nl": "Bodylift",
+      "en": "Body lift",
+      "de": "Bodylift",
+      "group": "lichaam",
+      "match": "bodylift|body.lift|ruglift",
+      "slugs": {
+        "nl": "bodylift",
+        "en": "body-lift",
+        "de": "bodylift"
+      }
+    },
+    {
+      "id": "lipofilling",
+      "nl": "Lipofilling",
+      "en": "Fat transfer",
+      "de": "Eigenfettbehandlung",
+      "group": "lichaam",
+      "match": "lipofilling|fat.transfer|fat.graft|eigenfett",
+      "slugs": {
+        "nl": "lipofilling",
+        "en": "lipofilling",
+        "de": "eigenfettbehandlung"
+      }
+    },
+    {
+      "id": "labiaplasty",
+      "nl": "Schaamlipcorrectie",
+      "en": "Labiaplasty",
+      "de": "Schamlippenkorrektur",
+      "group": "lichaam",
+      "match": "schaamlipcorrectie|labiacorrectie|labiaplast",
+      "slugs": {
+        "nl": "schaamlipcorrectie",
+        "en": "labiaplasty",
+        "de": "schamlippenkorrektur"
+      }
+    },
+    {
+      "id": "botox",
+      "nl": "Botox",
+      "en": "Botox",
+      "de": "Botox",
+      "group": "huid",
+      "match": "botox|botuline|antirimpel",
+      "slugs": {
+        "nl": "botox",
+        "en": "botox",
+        "de": "botox"
+      }
+    },
+    {
+      "id": "fillers",
+      "nl": "Fillers",
+      "en": "Dermal fillers",
+      "de": "Hyaluron Filler",
+      "group": "huid",
+      "match": "fillers|dermal.filler|injectables",
+      "slugs": {
+        "nl": "fillers",
+        "en": "fillers",
+        "de": "hyaluron-filler"
+      }
+    },
+    {
+      "id": "skin-laser",
+      "nl": "Huidlaserbehandeling",
+      "en": "Skin laser treatment",
+      "de": "Laser Hautbehandlung",
+      "group": "huid",
+      "match": "laserbehandelingen|cosmetische.laser|skin.laser",
+      "slugs": {
+        "nl": "huidlaserbehandeling",
+        "en": "skin-laser",
+        "de": "laser-hautbehandlung"
+      }
+    },
+    {
+      "id": "scar",
+      "nl": "Littekencorrectie",
+      "en": "Scar treatment",
+      "de": "Narbenkorrektur",
+      "group": "huid",
+      "match": "littekencorrectie|littekens.corrigeren|scar.treat|narbenkorrektur",
+      "slugs": {
+        "nl": "littekencorrectie",
+        "en": "scar",
+        "de": "narbenkorrektur"
+      }
+    },
+    {
+      "id": "mole",
+      "nl": "Moedervlek verwijderen",
+      "en": "Mole removal",
+      "de": "Muttermal entfernen",
+      "group": "huid",
+      "match": "moedervlek|mole.remov",
+      "slugs": {
+        "nl": "moedervlek-verwijderen",
+        "en": "mole",
+        "de": "muttermal-entfernen"
+      }
+    },
+    {
+      "id": "tattoo",
+      "nl": "Tatoeage verwijderen",
+      "en": "Tattoo removal",
+      "de": "Tattooentfernung",
+      "group": "huid",
+      "match": "tattoo.verwijderen|tattoo.remov|tattooentfernung",
+      "slugs": {
+        "nl": "tatoeage-verwijderen",
+        "en": "tattoo",
+        "de": "tattooentfernung"
+      }
+    },
+    {
+      "id": "laser-hair",
+      "nl": "Laserontharen",
+      "en": "Laser hair removal",
+      "de": "Laser Haarentfernung",
+      "group": "huid",
+      "match": "laser.ontharen|definitief.ontharen|laser.hair.remov",
+      "slugs": {
+        "nl": "laserontharen",
+        "en": "laser-hair",
+        "de": "laser-haarentfernung"
+      }
+    },
+    {
+      "id": "dental-implants",
+      "nl": "Tandimplantaten",
+      "en": "Dental implants",
+      "de": "Zahnimplantate",
+      "group": "tanden",
+      "match": "dental.implant|tooth.implant|tandimplant|zahnimplant",
+      "slugs": {
+        "nl": "tandimplantaten",
+        "en": "dental-implants",
+        "de": "zahnimplantate"
+      }
+    },
+    {
+      "id": "all-on-4",
+      "nl": "All-on-4 implantaten",
+      "en": "All-on-4 implants",
+      "de": "All-on-4 Implantate",
+      "group": "tanden",
+      "match": "all.on.4|full.arch.implant",
+      "slugs": {
+        "nl": "all-on-4-implantaten",
+        "en": "all-on-4",
+        "de": "all-on-4-implantate"
+      }
+    },
+    {
+      "id": "veneers",
+      "nl": "Facings",
+      "en": "Dental veneers",
+      "de": "Veneers",
+      "group": "tanden",
+      "match": "veneer|facings",
+      "slugs": {
+        "nl": "facings",
+        "en": "veneers",
+        "de": "veneers"
+      }
+    },
+    {
+      "id": "crowns",
+      "nl": "Tandkronen",
+      "en": "Dental crowns",
+      "de": "Zahnkronen",
+      "group": "tanden",
+      "match": "dental.crown|zirconium.crown|tandkroon|zahnkron",
+      "slugs": {
+        "nl": "tandkronen",
+        "en": "crowns",
+        "de": "zahnkronen"
+      }
+    },
+    {
+      "id": "whitening",
+      "nl": "Tanden bleken",
+      "en": "Teeth whitening",
+      "de": "Zahnbleaching",
+      "group": "tanden",
+      "match": "teeth.whitening|tanden.bleken|zahnbleach",
+      "slugs": {
+        "nl": "tanden-bleken",
+        "en": "whitening",
+        "de": "zahnbleaching"
+      }
+    },
+    {
+      "id": "aligners",
+      "nl": "Onzichtbare beugel",
+      "en": "Clear aligners",
+      "de": "Unsichtbare Zahnschiene",
+      "group": "tanden",
+      "match": "aligner|invisalign",
+      "slugs": {
+        "nl": "onzichtbare-beugel",
+        "en": "aligners",
+        "de": "unsichtbare-zahnschiene"
+      }
+    }
+  ],
+  "providers": [
+    {
+      "id": "boerhaave",
+      "naam": "Boerhaave Kliniek",
+      "site": "https://www.boerhaave.nl",
+      "land": "NL",
+      "stad": "Amsterdam, Utrecht, Arnhem",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.3,
+          "max": 5,
+          "aantal": 269,
+          "bron": "https://www.trustpilot.com/review/www.boerhaave.nl",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        },
+        {
+          "platform": "ZorgkaartNederland",
+          "score": 9.2,
+          "max": 10,
+          "aantal": 372,
+          "bron": "https://www.zorgkaartnederland.nl/zorginstelling/esthetisch-medisch-centrum-boerhaave-amsterdam-amsterdam-101617",
+          "datum": "2026-11-15",
+          "scope": "facility",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [
+        {
+          "naam": "A.A. Liem",
+          "titel": "Medisch specialist volgens kliniek",
+          "bron": "https://www.boerhaave.nl/medisch-specialisten/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "B.J. Putting",
+          "titel": "Medisch specialist volgens kliniek",
+          "bron": "https://www.boerhaave.nl/medisch-specialisten/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "E.J.C.M.P. Lommen",
+          "titel": "Medisch specialist volgens kliniek",
+          "bron": "https://www.boerhaave.nl/medisch-specialisten/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "E.W.H. Bodde",
+          "titel": "Medisch specialist volgens kliniek",
+          "bron": "https://www.boerhaave.nl/medisch-specialisten/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "F. van Zijl",
+          "titel": "Medisch specialist volgens kliniek",
+          "bron": "https://www.boerhaave.nl/medisch-specialisten/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "F. Vegter",
+          "titel": "Medisch specialist volgens kliniek",
+          "bron": "https://www.boerhaave.nl/medisch-specialisten/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "J. Zguricas",
+          "titel": "Medisch specialist volgens kliniek",
+          "bron": "https://www.boerhaave.nl/medisch-specialisten/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "LP van der Weij",
+          "titel": "Medisch specialist volgens kliniek",
+          "bron": "https://www.boerhaave.nl/medisch-specialisten/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "M. Enajat",
+          "titel": "Medisch specialist volgens kliniek",
+          "bron": "https://www.boerhaave.nl/medisch-specialisten/",
+          "registration_status": "provider_claim"
+        }
+      ],
+      "offers": {
+        "eyelid": {
+          "source_url": "https://boerhaave.nl/behandelingen/gezicht/ooglidcorrectie/?hsLang=nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "rhinoplasty": {
+          "source_url": "https://www.boerhaave.nl/voor-en-na-fotos/205034-neuscorrectie-van-zijl?hsLang=nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "necklift": {
+          "source_url": "https://www.boerhaave.nl/voor-en-na-fotos/231321-face-halslift-aganloo?hsLang=nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-augmentation": {
+          "source_url": "https://www.boerhaave.nl/voor-en-na-fotos/228298-borstvergroting-fortuin?hsLang=nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lipo": {
+          "source_url": "https://boerhaave.nl/behandelingen/lichaam/liposuctie/?hsLang=nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "facelift": {
+          "source_url": "https://boerhaave.nl/behandelingen/gezicht/facelift/?hsLang=nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "browlift": {
+          "source_url": "https://boerhaave.nl/ervaringen/ooglidcorrectie-wenkbrauwlift-bij-dr-maclennan?hsLang=nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-reduction": {
+          "source_url": "https://boerhaave.nl/behandelingen/borsten/borstverkleining/?hsLang=nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-lift": {
+          "source_url": "https://boerhaave.nl/behandelingen/borsten/borstlift/?hsLang=nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "tummy": {
+          "source_url": "https://boerhaave.nl/behandelingen/lichaam/buikwandcorrectie/?hsLang=nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lipofilling": {
+          "source_url": "https://boerhaave.nl/behandelingen/lichaam/lipofilling/?hsLang=nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "labiaplasty": {
+          "source_url": "https://boerhaave.nl/ervaringen/schaamlipcorrectie-bij-dr-maclennan?hsLang=nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "scar": {
+          "source_url": "https://boerhaave.nl/ervaringen/littekencorrectie-door-dr-maclennan?hsLang=nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "velthuis",
+      "naam": "Velthuis kliniek",
+      "site": "https://velthuiskliniek.nl",
+      "land": "NL",
+      "stad": "Nederland",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.3,
+          "max": 5,
+          "aantal": 145,
+          "bron": "https://www.trustpilot.com/review/velthuiskliniek.nl",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        },
+        {
+          "platform": "ZorgkaartNederland",
+          "score": 7.8,
+          "max": 10,
+          "aantal": 13,
+          "bron": "https://www.zorgkaartnederland.nl/zorginstelling/overige-kliniek-velthuis-kliniek-eindhoven-3051024",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [
+        {
+          "naam": "Dr. Léon van Adrichem",
+          "titel": "Specialist volgens kliniek",
+          "bron": "https://www.velthuiskliniek.nl/specialisten",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Wiebren van den Berg",
+          "titel": "Specialist volgens kliniek",
+          "bron": "https://www.velthuiskliniek.nl/specialisten",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Joeri van Boxtel",
+          "titel": "Specialist volgens kliniek",
+          "bron": "https://www.velthuiskliniek.nl/specialisten",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Dr. Evert-Jan ten Dam",
+          "titel": "Specialist volgens kliniek",
+          "bron": "https://www.velthuiskliniek.nl/specialisten",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Daniëlle Derks",
+          "titel": "Specialist volgens kliniek",
+          "bron": "https://www.velthuiskliniek.nl/specialisten",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Dr. Marijke van den Elzen",
+          "titel": "Specialist volgens kliniek",
+          "bron": "https://www.velthuiskliniek.nl/specialisten",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Dr. Pim Godefroy",
+          "titel": "Specialist volgens kliniek",
+          "bron": "https://www.velthuiskliniek.nl/specialisten",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Emiel van Haren",
+          "titel": "Specialist volgens kliniek",
+          "bron": "https://www.velthuiskliniek.nl/specialisten",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Jasper Hoorweg",
+          "titel": "Specialist volgens kliniek",
+          "bron": "https://www.velthuiskliniek.nl/specialisten",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Dr. David Krijgh",
+          "titel": "Specialist volgens kliniek",
+          "bron": "https://www.velthuiskliniek.nl/specialisten",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Dr. Jacques van der Meulen",
+          "titel": "Specialist volgens kliniek",
+          "bron": "https://www.velthuiskliniek.nl/specialisten",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Dr. Vera Negenborn",
+          "titel": "Specialist volgens kliniek",
+          "bron": "https://www.velthuiskliniek.nl/specialisten",
+          "registration_status": "provider_claim"
+        }
+      ],
+      "offers": {
+        "eyelid": {
+          "source_url": "https://www.velthuiskliniek.nl/ooglidcorrectie",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "rhinoplasty": {
+          "source_url": "https://www.velthuiskliniek.nl/plastische-chirurgie/gezicht/neuscorrectie",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "facelift": {
+          "source_url": "https://www.velthuiskliniek.nl/plastische-chirurgie/gezicht/facelift",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-augmentation": {
+          "source_url": "https://www.velthuiskliniek.nl/plastische-chirurgie/lichaam/borstvergroting",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-lift": {
+          "source_url": "https://www.velthuiskliniek.nl/ervaringen/borstlift-dewi",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "tummy": {
+          "source_url": "https://www.velthuiskliniek.nl/plastische-chirurgie/lichaam/buikwandcorrectie",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lipo": {
+          "source_url": "https://www.velthuiskliniek.nl/plastische-chirurgie/lichaam/liposuctie",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "fillers": {
+          "source_url": "https://www.velthuiskliniek.nl/injectables",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "veldhoven",
+      "naam": "Kliniek Veldhoven",
+      "site": "https://kliniekveldhoven.nl",
+      "land": "NL",
+      "stad": "Veldhoven",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.5,
+          "max": 5,
+          "aantal": 84,
+          "bron": "https://www.trustpilot.com/review/www.kliniekveldhoven.nl",
+          "datum": "2026-11-15",
+          "scope": "facility",
+          "retrieval": "public_search_index"
+        },
+        {
+          "platform": "ZorgkaartNederland",
+          "score": 8.9,
+          "max": 10,
+          "aantal": 39,
+          "bron": "https://www.zorgkaartnederland.nl/zorginstelling/esthetisch-medisch-centrum-kliniek-veldhoven-veldhoven-3036425",
+          "datum": "2026-11-15",
+          "scope": "facility",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [
+        {
+          "naam": "Harm Hawinkels",
+          "titel": "Plastisch chirurg",
+          "bron": "https://kliniekveldhoven.nl/over-de-kliniek/medewerkers/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Vincent Donders",
+          "titel": "Plastisch chirurg",
+          "bron": "https://kliniekveldhoven.nl/over-de-kliniek/medewerkers/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "David Schiettecatte",
+          "titel": "Plastisch chirurg",
+          "bron": "https://kliniekveldhoven.nl/over-de-kliniek/medewerkers/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Tom Decates",
+          "titel": "Cosmetisch arts",
+          "bron": "https://kliniekveldhoven.nl/over-de-kliniek/medewerkers/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Bas Franssen",
+          "titel": "Plastisch chirurg",
+          "bron": "https://kliniekveldhoven.nl/over-de-kliniek/medewerkers/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Steven Klein",
+          "titel": "Plastisch chirurg",
+          "bron": "https://kliniekveldhoven.nl/over-de-kliniek/medewerkers/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Ed Hartman",
+          "titel": "Plastisch chirurg",
+          "bron": "https://kliniekveldhoven.nl/over-de-kliniek/medewerkers/",
+          "registration_status": "provider_claim"
+        }
+      ],
+      "offers": {
+        "hair": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/haartransplantatie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "eyelid": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/ooglidcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "facelift": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/facelift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "otoplasty": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/oorcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-augmentation": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/borstvergroting/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-reduction": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/borstverkleining/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-lift": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/borstlift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "gynecomastia": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/borstverkleining-man/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "tummy": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/mini-buikwandcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lipo": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/liposuctie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "mommy": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/mommy-makeover/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "arm-lift": {
+          "source_url": "https://kliniekveldhoven.nl/ervaringen/armlift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "thigh-lift": {
+          "source_url": "https://kliniekveldhoven.nl/ervaringen/dijbeenlift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lipofilling": {
+          "source_url": "https://kliniekveldhoven.nl/prijzen/lipofilling/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "labiaplasty": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/labiacorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "fillers": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/injectables/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "skin-laser": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/laserbehandelingen/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "scar": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/littekens-corrigeren/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "mole": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/moedervlekken-verwijderen/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "tattoo": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/tattoo-verwijderen/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "laser-hair": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/definitief-ontharen/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "necklift": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/facelift/halslift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "browlift": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/facelift/wenkbrauwlift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "implant-removal": {
+          "source_url": "https://kliniekveldhoven.nl/behandelingen/borstvergroting/borstimplantaten-definitief-laten-verwijderen/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "facility"
+    },
+    {
+      "id": "bodyclinic",
+      "naam": "The Body Clinic",
+      "site": "https://www.bodyclinic.nl",
+      "land": "NL",
+      "stad": "Nederland",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.6,
+          "max": 5,
+          "aantal": 186,
+          "bron": "https://www.trustpilot.com/review/bodyclinic.nl",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "eyelid": {
+          "source_url": "https://www.bodyclinic.nl/behandelingen/ooglidcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "necklift": {
+          "source_url": "https://www.bodyclinic.nl/behandelingen/huidverstrakking/halslift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "botox": {
+          "source_url": "https://www.bodyclinic.nl/behandelingen/botox/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "fillers": {
+          "source_url": "https://www.bodyclinic.nl/behandelingen/fillers/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "skinsurgery",
+      "naam": "SkinSurgery Clinics",
+      "site": "https://www.skin-surgery.nl",
+      "land": "NL",
+      "stad": "Nederland",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.0,
+          "max": 5,
+          "aantal": 47,
+          "bron": "https://www.trustpilot.com/review/www.skin-surgery.nl",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "eyelid": {
+          "source_url": "https://skin-surgery.nl/ooglidcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "facelift": {
+          "source_url": "https://skin-surgery.nl/facelift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "necklift": {
+          "source_url": "https://skin-surgery.nl/facelift/face-en-halslift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lipo": {
+          "source_url": "https://skin-surgery.nl/liposuctie-hals/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lipofilling": {
+          "source_url": "https://skin-surgery.nl/lipofilling/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "labiaplasty": {
+          "source_url": "https://skin-surgery.nl/schaamlipcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "botox": {
+          "source_url": "https://skin-surgery.nl/botox-behandeling/wat-wens-je/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "fillers": {
+          "source_url": "https://skin-surgery.nl/fillers/lippen/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "bolwerk",
+      "naam": "Kliniek Het Bolwerk",
+      "site": "https://kliniekhetbolwerk.nl",
+      "land": "NL",
+      "stad": "Haarlem",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.6,
+          "max": 5,
+          "aantal": 20,
+          "bron": "https://www.trustpilot.com/review/kliniekhetbolwerk.nl",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [
+        {
+          "naam": "David Jairath",
+          "titel": "Plastisch chirurg volgens kliniek",
+          "bron": "https://kliniekhetbolwerk.nl",
+          "registration_status": "provider_claim"
+        }
+      ],
+      "offers": {
+        "eyelid": {
+          "source_url": "https://kliniekhetbolwerk.nl/ooglidcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "browlift": {
+          "source_url": "https://kliniekhetbolwerk.nl/wenkbrauwlift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "otoplasty": {
+          "source_url": "https://kliniekhetbolwerk.nl/oorcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-augmentation": {
+          "source_url": "https://kliniekhetbolwerk.nl/borstvergroting/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-reduction": {
+          "source_url": "https://kliniekhetbolwerk.nl/borstverkleining/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-lift": {
+          "source_url": "https://kliniekhetbolwerk.nl/borstlift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "nipple": {
+          "source_url": "https://kliniekhetbolwerk.nl/tepelcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "tummy": {
+          "source_url": "https://kliniekhetbolwerk.nl/buikwandcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "labiaplasty": {
+          "source_url": "https://kliniekhetbolwerk.nl/schaamlipcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "botox": {
+          "source_url": "https://kliniekhetbolwerk.nl/injectables/antirimpel-behandelingen/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "fillers": {
+          "source_url": "https://kliniekhetbolwerk.nl/injectables/antirimpel-behandelingen/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "scar": {
+          "source_url": "https://kliniekhetbolwerk.nl/littekencorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "mole": {
+          "source_url": "https://kliniekhetbolwerk.nl/moedervlek-verwijderen-haarlem/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "aklinieken",
+      "naam": "A Klinieken",
+      "site": "https://aklinieken.nl",
+      "land": "NL",
+      "stad": "Nederland",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 3.6,
+          "max": 5,
+          "aantal": 10,
+          "bron": "https://www.trustpilot.com/review/aklinieken.nl",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [
+        {
+          "naam": "E. B. H. van Onselen",
+          "titel": "Plastisch chirurg volgens kliniek",
+          "bron": "https://aklinieken.nl/lichaam/bilvergroting/",
+          "registration_status": "provider_claim"
+        }
+      ],
+      "offers": {
+        "eyelid": {
+          "source_url": "https://aklinieken.nl/hoofd-hals/ooglidcorrectie-van-de-bovenoogleden/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "rhinoplasty": {
+          "source_url": "https://aklinieken.nl/hoofd-hals/neuscorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "facelift": {
+          "source_url": "https://aklinieken.nl/hoofd-hals/facelift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "necklift": {
+          "source_url": "https://aklinieken.nl/hoofd-hals/facelift-halslift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "browlift": {
+          "source_url": "https://aklinieken.nl/hoofd-hals/wenkbrauwlift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "otoplasty": {
+          "source_url": "https://aklinieken.nl/hoofd-hals/oorcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-augmentation": {
+          "source_url": "https://aklinieken.nl/borsten/borstvergroting/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-reduction": {
+          "source_url": "https://aklinieken.nl/borsten/borstverkleining/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "breast-lift": {
+          "source_url": "https://aklinieken.nl/borsten/borstlift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "nipple": {
+          "source_url": "https://aklinieken.nl/borsten/tepelcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "tummy": {
+          "source_url": "https://aklinieken.nl/lichaam/buikwandcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lipo": {
+          "source_url": "https://aklinieken.nl/lichaam/liposuctie-liposculpture/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "arm-lift": {
+          "source_url": "https://aklinieken.nl/lichaam/armlift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "thigh-lift": {
+          "source_url": "https://aklinieken.nl/lichaam/dijbeenlift/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "labiaplasty": {
+          "source_url": "https://aklinieken.nl/genitalien/schaamlipcorrectie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "fillers": {
+          "source_url": "https://aklinieken.nl/injectables/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "bbl": {
+          "source_url": "https://aklinieken.nl/lichaam/bilvergroting/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "zipper",
+      "naam": "Zipper Clinics",
+      "site": "https://www.zipperclinics.nl",
+      "land": "NL",
+      "stad": "Apeldoorn, Enschede",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 3.4,
+          "max": 5,
+          "aantal": 8,
+          "bron": "https://www.trustpilot.com/review/www.zipperclinics.nl",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [
+        {
+          "naam": "Lennart Steenbeek",
+          "titel": "Plastisch chirurg volgens kliniek",
+          "bron": "https://www.zipperclinics.nl",
+          "registration_status": "provider_claim"
+        }
+      ],
+      "offers": {
+        "eyelid": {
+          "source_url": "https://www.zipperclinics.nl/ooglidchirurgie",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "browlift": {
+          "source_url": "https://www.zipperclinics.nl/ooglidchirurgie/wenkbrauwlift",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "otoplasty": {
+          "source_url": "https://www.zipperclinics.nl/chirurgie/oorcorrecties",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lip-lift": {
+          "source_url": "https://www.zipperclinics.nl/chirurgie/liplift",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "nipple": {
+          "source_url": "https://www.zipperclinics.nl/chirurgie/tepelcorrecties",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "labiaplasty": {
+          "source_url": "https://www.zipperclinics.nl/chirurgie/schaamlipcorrectie",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "botox": {
+          "source_url": "https://www.zipperclinics.nl/injectables/botulinetoxine",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "fillers": {
+          "source_url": "https://www.zipperclinics.nl/injectables",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "scar": {
+          "source_url": "https://www.zipperclinics.nl/chirurgie/littekencorrectie",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "mole": {
+          "source_url": "https://www.zipperclinics.nl/chirurgie/moedervlek",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "fueperfect",
+      "naam": "FUE Perfect",
+      "site": "https://fueperfect.nl",
+      "land": "NL",
+      "stad": "Hoofddorp",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.9,
+          "max": 5,
+          "aantal": 119,
+          "bron": "https://www.trustpilot.com/review/fueperfect.nl",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "hair": {
+          "source_url": "https://www.fueperfect.nl/haartransplantatie/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "beard": {
+          "source_url": "https://www.fueperfect.nl/haartransplantatie/baard/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "visus",
+      "naam": "Visus Oogkliniek",
+      "site": "https://visusoogkliniek.nl",
+      "land": "NL",
+      "stad": "Nederland",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.8,
+          "max": 5,
+          "aantal": 4551,
+          "bron": "https://www.trustpilot.com/review/www.visusoogkliniek.nl",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        },
+        {
+          "platform": "ZorgkaartNederland",
+          "score": 9.0,
+          "max": 10,
+          "aantal": 376,
+          "bron": "https://www.zorgkaartnederland.nl/zorginstelling/oogkliniek-visus-oogkliniek-amsterdam-10084057",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [
+        {
+          "naam": "Otto Wolter",
+          "titel": "Oogarts",
+          "bron": "https://visusoogkliniek.nl/onze-specialisten/",
+          "big_published": "49056187301",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Rahman Korkmaz",
+          "titel": "Oogarts",
+          "bron": "https://visusoogkliniek.nl/onze-specialisten/",
+          "big_published": "79065568601",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Valentin Apostolov",
+          "titel": "Oogarts",
+          "bron": "https://visusoogkliniek.nl/onze-specialisten/",
+          "big_published": "39056602101",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Ahmet Kinaci",
+          "titel": "Oogarts",
+          "bron": "https://visusoogkliniek.nl/onze-specialisten/",
+          "big_published": "39920279301",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Chelo Burgers-Temprano Acedo",
+          "titel": "Oogarts",
+          "bron": "https://visusoogkliniek.nl/onze-specialisten/",
+          "big_published": "19024238001",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Hayati Güzel",
+          "titel": "Refractiechirurg volgens kliniek",
+          "bron": "https://visusoogkliniek.nl/onze-specialisten/",
+          "registration_status": "provider_claim"
+        }
+      ],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://visusoogkliniek.nl/behandelmethodes/intralasik/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://visusoogkliniek.nl/behandelmethodes/lensvervanging/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://visusoogkliniek.nl/behandelmethodes/voorzetlens/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "memira",
+      "naam": "Memira by Bergman Clinics",
+      "site": "https://www.memira.nl",
+      "land": "NL",
+      "stad": "Nederland",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.4,
+          "max": 5,
+          "aantal": 95,
+          "bron": "https://www.trustpilot.com/review/memira.nl",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        },
+        {
+          "platform": "ZorgkaartNederland",
+          "score": 8.9,
+          "max": 10,
+          "aantal": 790,
+          "bron": "https://www.zorgkaartnederland.nl/zorginstelling/oogkliniek-memira-by-bergman-clinics-naarden-10016956",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [
+        {
+          "naam": "Jolien de Jager",
+          "titel": "Oogarts",
+          "bron": "https://www.memira.nl/onze-oogartsen/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Leo de Jong",
+          "titel": "Oogarts",
+          "bron": "https://www.memira.nl/onze-oogartsen/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Michiel Blok",
+          "titel": "Oogarts",
+          "bron": "https://www.memira.nl/onze-oogartsen/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Anne de Boer",
+          "titel": "Oogarts",
+          "bron": "https://www.memira.nl/onze-oogartsen/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Wim Hament",
+          "titel": "Oogarts",
+          "bron": "https://www.memira.nl/onze-oogartsen/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Nedim Dzino",
+          "titel": "Oogarts",
+          "bron": "https://www.memira.nl/onze-oogartsen/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Sicco Schwartzenberg",
+          "titel": "Oogarts",
+          "bron": "https://www.memira.nl/onze-oogartsen/",
+          "registration_status": "provider_claim"
+        }
+      ],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://www.memira.nl/behandelingen/ooglaseren/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://www.memira.nl/behandelingen/lenswissel-rle/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://www.memira.nl/behandelingen/voorzetlenzen-icl/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "fyeo",
+      "naam": "FYEO",
+      "site": "https://www.fyeo.nl",
+      "land": "NL",
+      "stad": "Nederland",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.4,
+          "max": 5,
+          "aantal": 1793,
+          "bron": "https://www.trustpilot.com/review/fyeo.nl",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index",
+          "merged": true
+        },
+        {
+          "platform": "ZorgkaartNederland",
+          "score": 8.2,
+          "max": 10,
+          "aantal": 12,
+          "bron": "https://www.zorgkaartnederland.nl/zorginstelling/oogkliniek-fyeo-eersel-10020589",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [
+        {
+          "naam": "Dr. Frank Kerkhoff",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Stefan de Geus",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Barbara Leyssens",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Dr. Gergely Losonczy",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Ellen van den Wittenboer",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Arnaldo Gonçalves",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Ali Dulaimi",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Dr. Lenneke de Visser",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Dr. Mathijs van de Put",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Oscar Paling",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Karin van der Maesen",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Richard Hommersom",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Dr. Melissa Vereecken",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Frederik Dijkman",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Daan Beetsma",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Dr. Mari Elshout",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Thijs Vaessen",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Ceciel van den Berg",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Drs. Mateusz Mika",
+          "titel": "Oogarts",
+          "bron": "https://fyeo.nl/oogarts/",
+          "registration_status": "provider_claim"
+        }
+      ],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://fyeo.nl/ooglaseren/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://fyeo.nl/lensimplantatie/lensvervanging-replacelens/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://fyeo.nl/lensimplantatie/voorzetlens-extralens/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "eyescan",
+      "naam": "Eyescan",
+      "site": "https://eyescan.nl",
+      "land": "NL",
+      "stad": "Nederland",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 2.6,
+          "max": 5,
+          "aantal": 211,
+          "bron": "https://www.trustpilot.com/review/eyescan.nl",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        },
+        {
+          "platform": "ZorgkaartNederland",
+          "score": 8.7,
+          "max": 10,
+          "aantal": 13613,
+          "bron": "https://www.zorgkaartnederland.nl/zorginstelling/oogkliniek-eyescan-utrecht-3056960",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://nl.trustpilot.com/review/eyescan.nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_statement_on_platform"
+        },
+        "icl": {
+          "source_url": "https://nl.trustpilot.com/review/eyescan.nl",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_statement_on_platform"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "noc",
+      "naam": "Nationaal Oogcentrum",
+      "site": "https://nationaaloogcentrum.com",
+      "land": "NL",
+      "stad": "Naarden",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.7,
+          "max": 5,
+          "aantal": 121,
+          "bron": "https://www.trustpilot.com/review/nationaaloogcentrum.com",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index",
+          "merged": true
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://nationaaloogcentrum.com/nl-nl/ogen-laseren/gratis-vooronderzoek/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://nationaaloogcentrum.com/nl-nl/lensimplantatie/voorzetlenzen/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "euroeyes",
+      "naam": "EuroEyes Duitsland",
+      "site": "https://www.euroeyes.de",
+      "land": "DE",
+      "stad": "Duitsland",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.3,
+          "max": 5,
+          "aantal": 822,
+          "bron": "https://www.trustpilot.com/review/euroeyes.de",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://www.euroeyes.de/voraussetzungen-augenlasern/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://www.euroeyes.de/linsenoperation/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://www.euroeyes.de/evo-icl-die-implantierbare-kontaktlinse/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "cataract": {
+          "source_url": "https://www.euroeyes.de/grauer-star/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "smileeyes",
+      "naam": "Smile Eyes",
+      "site": "https://www.smileeyes.de",
+      "land": "DE",
+      "stad": "Duitsland",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 3.7,
+          "max": 5,
+          "aantal": 113,
+          "bron": "https://www.trustpilot.com/review/smileeyes.de",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://smileeyes.de/sehen-ohne-brille/augenlasern/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://smileeyes.de/sehen-ohne-brille/linsenimplantation/icl-linsen/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "cataract": {
+          "source_url": "https://smileeyes.de/augenmedizin/augenkrankheiten/grauer-star-katarakt/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "opticaluk",
+      "naam": "Optical Express UK",
+      "site": "https://www.opticalexpress.co.uk",
+      "land": "GB",
+      "stad": "Verenigd Koninkrijk",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.6,
+          "max": 5,
+          "aantal": 20193,
+          "bron": "https://www.trustpilot.com/review/www.opticalexpress.co.uk",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index",
+          "merged": true
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://www.opticalexpress.co.uk/laser-eye-surgery",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://www.opticalexpress.co.uk/lens-replacement",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "cataract": {
+          "source_url": "https://www.opticalexpress.co.uk/cataract-surgery",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "optegra",
+      "naam": "Optegra Eye Health Care",
+      "site": "https://optegra.com",
+      "land": "GB",
+      "stad": "Verenigd Koninkrijk",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.7,
+          "max": 5,
+          "aantal": 9929,
+          "bron": "https://www.trustpilot.com/review/optegra.com",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://www.optegra.com/laser-eye-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://www.optegra.com/lens-replacement/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://www.optegra.com/laser-eye-surgery/icl-evo/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "cataract": {
+          "source_url": "https://www.optegra.com/cataract-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "londonvision",
+      "naam": "London Vision Clinic",
+      "site": "https://londonvisionclinic.com",
+      "land": "GB",
+      "stad": "London",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.9,
+          "max": 5,
+          "aantal": 2358,
+          "bron": "https://www.trustpilot.com/review/londonvisionclinic.com",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://londonvisionclinic.com/treatment/laser-eye-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://londonvisionclinic.com/treatment/lens-replacement-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://londonvisionclinic.com/treatment/icl-lens-implants-london/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "cataract": {
+          "source_url": "https://londonvisionclinic.com/treatment/refractive-cataract-surgery-london/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "ocl",
+      "naam": "OCL Vision",
+      "site": "https://oclvision.com",
+      "land": "GB",
+      "stad": "London",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.8,
+          "max": 5,
+          "aantal": 2346,
+          "bron": "https://www.trustpilot.com/review/oclvision.com",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://www.oclvision.com/procedures/laser-vision-correction/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://www.oclvision.com/procedures/lens-replacement-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "cataract": {
+          "source_url": "https://www.oclvision.com/procedures/cataracts/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "eyelid": {
+          "source_url": "https://www.oclvision.com/procedures/cosmetic-oculoplastic/upper-blepharoplasty-brow-rejuvenation/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "accuvision",
+      "naam": "AccuVision",
+      "site": "https://www.accuvision.co.uk",
+      "land": "GB",
+      "stad": "Verenigd Koninkrijk",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.9,
+          "max": 5,
+          "aantal": 313,
+          "bron": "https://www.trustpilot.com/review/www.accuvision.co.uk",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://www.accuvision.co.uk/laser-eye-surgery/our-technology/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://www.accuvision.co.uk/lens-replacement-surgery-yorkshire/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "cataract": {
+          "source_url": "https://www.accuvision.co.uk/lens-eye-surgery/cataract-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "eyelid": {
+          "source_url": "https://www.accuvision.co.uk/specialist-eye-care/what-is-blepharoplasty-eyelid-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "optimax",
+      "naam": "Optimax Eye Surgery Specialists",
+      "site": "https://www.optimax.co.uk",
+      "land": "GB",
+      "stad": "Verenigd Koninkrijk",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.9,
+          "max": 5,
+          "aantal": 4077,
+          "bron": "https://www.trustpilot.com/review/www.optimax.co.uk",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://www.optimax.co.uk/laser-eye-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://www.optimax.co.uk/lens-replacement-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://www.optimax.co.uk/implantable-contact-lenses/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "cataract": {
+          "source_url": "https://www.optimax.co.uk/cataract-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "focuslondon",
+      "naam": "Focus Clinics",
+      "site": "https://www.focusclinics.com",
+      "land": "GB",
+      "stad": "London",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.9,
+          "max": 5,
+          "aantal": 2599,
+          "bron": "https://www.trustpilot.com/review/www.focusclinics.com",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [
+        {
+          "naam": "David Allamby",
+          "titel": "Oogchirurg volgens kliniek",
+          "bron": "https://www.focusclinics.com",
+          "registration_status": "provider_claim"
+        }
+      ],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://www.focusclinics.com/laser-eye-surgery/ray-tracing-guided-lasik/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://www.focusclinics.com/lens-replacement-surgery/refractive-lens-exchange/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://www.focusclinics.com/lens-replacement-surgery/implantable-contact-lens/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "cataract": {
+          "source_url": "https://www.focusclinics.com/lens-replacement-surgery/cataract-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "laservision",
+      "naam": "LaserVision",
+      "site": "https://laservision.co.uk",
+      "land": "GB",
+      "stad": "Verenigd Koninkrijk",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 5.0,
+          "max": 5,
+          "aantal": 640,
+          "bron": "https://www.trustpilot.com/review/laservision.co.uk",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://laservision.co.uk",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://www.laservision.co.uk/treatments/refractive-lens-exchange-rle/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://www.laservision.co.uk/treatments/implantable-contact-lens-icl/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "cataract": {
+          "source_url": "https://www.laservision.co.uk/treatments/cataract-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "eyelid": {
+          "source_url": "https://www.laservision.co.uk/treatments/blepharoplasty/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "eyecorrection",
+      "naam": "Eye Correction Centre",
+      "site": "https://eyecorrectioncentre.co.uk",
+      "land": "GB",
+      "stad": "Verenigd Koninkrijk",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 5.0,
+          "max": 5,
+          "aantal": 788,
+          "bron": "https://www.trustpilot.com/review/eyecorrectioncentre.co.uk",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://eyecorrectioncentre.co.uk/service/laser-eye-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://eyecorrectioncentre.co.uk/service/lens-replacement-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://eyecorrectioncentre.co.uk/service/implantable-contact-lens-icl-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "cataract": {
+          "source_url": "https://eyecorrectioncentre.co.uk/service/advanced-cataract-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "maurino",
+      "naam": "Vincenzo Maurino",
+      "site": "https://vincenzomaurino.co.uk",
+      "land": "GB",
+      "stad": "London",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.9,
+          "max": 5,
+          "aantal": 556,
+          "bron": "https://www.trustpilot.com/review/vincenzomaurino.co.uk",
+          "datum": "2026-11-15",
+          "scope": "doctor",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "doctor",
+      "artsen": [
+        {
+          "naam": "Vincenzo Maurino",
+          "titel": "Oogchirurg volgens eigen praktijk",
+          "bron": "https://vincenzomaurino.co.uk",
+          "registration_status": "provider_claim"
+        }
+      ],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://www.vincenzomaurino.co.uk/treatments/laser-vision-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://www.vincenzomaurino.co.uk/treatments/refractive-lens-exchange/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://www.vincenzomaurino.co.uk/treatments/evo-visian-icl/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "cataract": {
+          "source_url": "https://www.vincenzomaurino.co.uk/treatments/cataract-surgery/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "doctor"
+    },
+    {
+      "id": "gore",
+      "naam": "Daniel Gore",
+      "site": "https://danielgore.com",
+      "land": "GB",
+      "stad": "London",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.9,
+          "max": 5,
+          "aantal": 395,
+          "bron": "https://www.trustpilot.com/review/danielgore.com",
+          "datum": "2026-11-15",
+          "scope": "doctor",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "doctor",
+      "artsen": [
+        {
+          "naam": "Daniel Gore",
+          "titel": "Oogchirurg volgens eigen praktijk",
+          "bron": "https://danielgore.com",
+          "registration_status": "provider_claim"
+        }
+      ],
+      "offers": {
+        "laser-eye": {
+          "source_url": "https://danielgore.com/index.php/treatments/laser-eye-surgery",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "lens-replacement": {
+          "source_url": "https://danielgore.com/index.php/treatments/refractive-lens-exchange",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "icl": {
+          "source_url": "https://danielgore.com/index.php/treatments/icl-implants",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "cataract": {
+          "source_url": "https://danielgore.com/index.php/treatments/cataract-surgery",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "doctor"
+    },
+    {
+      "id": "smiledental",
+      "naam": "Smile Dental Turkey",
+      "site": "https://smiledentalturkey.com",
+      "land": "TR",
+      "stad": "Antalya",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.9,
+          "max": 5,
+          "aantal": 1189,
+          "bron": "https://www.trustpilot.com/review/smiledentalturkey.com",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index",
+          "merged": true
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [
+        {
+          "naam": "Özkan Özkaynak",
+          "titel": "D.D.S., Ph.D. volgens kliniek",
+          "bron": "https://www.smiledentalturkey.com/doctor/dds-phd-ozkan-ozkaynak/",
+          "registration_status": "provider_claim"
+        },
+        {
+          "naam": "Uğur Gültekinler",
+          "titel": "D.D.S. volgens kliniek",
+          "bron": "https://www.smiledentalturkey.com/doctor/dr-dt-ugur-gultekinler/",
+          "registration_status": "provider_claim"
+        }
+      ],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.smiledentalturkey.com/treatment/dental-implants/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "all-on-4": {
+          "source_url": "https://www.smiledentalturkey.com/treatment/all-on-4-dental-implants/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "veneers": {
+          "source_url": "https://www.smiledentalturkey.com/treatment/dental-veneers/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "crowns": {
+          "source_url": "https://www.smiledentalturkey.com/treatment/dental-crowns/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "whitening": {
+          "source_url": "https://www.smiledentalturkey.com/treatment/professional-teeth-whitening/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "dentakay",
+      "naam": "Dentakay",
+      "site": "https://dentakay.com",
+      "land": "TR",
+      "stad": "Turkije",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.3,
+          "max": 5,
+          "aantal": 1687,
+          "bron": "https://www.trustpilot.com/review/dentakay.com",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://dentakay.com/prices/dental-implants-costs-and-packages-in-turkey",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "all-on-4": {
+          "source_url": "https://dentakay.com/prices/full-arch-implants-costs-and-packages-in-turkey",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "veneers": {
+          "source_url": "https://dentakay.com/prices/veneers-costs-and-packages-in-turkey",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "crowns": {
+          "source_url": "https://dentakay.com/prices/dental-crowns-costs-and-packages-in-turkey",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "whitening": {
+          "source_url": "https://dentakay.com/treatments/teeth-whitening",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "dentatur",
+      "naam": "DentaTur",
+      "site": "https://dentatur.com",
+      "land": "TR",
+      "stad": "Antalya, Istanbul",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.9,
+          "max": 5,
+          "aantal": 1261,
+          "bron": "https://www.trustpilot.com/review/dentatur.com",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://dentatur.com/treatments/dental-implants-turkey/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "all-on-4": {
+          "source_url": "https://dentatur.com/treatments/all-on-4-dental-implants-in-turkey-cost-packages-procedure/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "veneers": {
+          "source_url": "https://dentatur.com/treatments/veneers-in-turkey-cost-procedure-aftercare/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "crowns": {
+          "source_url": "https://dentatur.com/treatments/dental-crowns-in-turkey-cost-zirconium-porcelain-e-max/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "whitening": {
+          "source_url": "https://dentatur.com/treatments/teeth-whitening/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    },
+    {
+      "id": "dentspa",
+      "naam": "DentSpa",
+      "site": "https://dentspa.com.tr",
+      "land": "TR",
+      "stad": "Istanbul",
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.5,
+          "max": 5,
+          "aantal": 1063,
+          "bron": "https://www.trustpilot.com/review/dentspa.com.tr",
+          "datum": "2026-11-15",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "kind": "clinic",
+      "artsen": [],
+      "offers": {
+        "botox": {
+          "source_url": "https://dentspa.com/treatments/masseter-botox/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "dental-implants": {
+          "source_url": "https://dentspa.com/treatments/tooth-implant-procedure/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "all-on-4": {
+          "source_url": "https://dentspa.com/treatments/all-on-4-dental-implants/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "veneers": {
+          "source_url": "https://dentspa.com/treatments/dental-veneers/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "crowns": {
+          "source_url": "https://dentspa.com/treatments/dental-crowns/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "whitening": {
+          "source_url": "https://dentspa.com/treatments/teeth-whitening/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        },
+        "aligners": {
+          "source_url": "https://dentspa.com/treatments/clear-aligners/",
+          "checked_at": "2026-11-15",
+          "source_type": "provider_website"
+        }
+      },
+      "checked_at": "2026-11-15",
+      "scope": "organization"
+    }
+  ],
+  "notes": [
+    "Scores zijn geobserveerde platformaggregaten; geen unieke geverifieerde patiënten of medische uitkomstmaat.",
+    "Een op de klinieksite gepubliceerd BIG-nummer is geen onafhankelijke registercontrole.",
+    "Reviewprofielen via openbare zoekindex gelezen waar het platform automatische directe toegang blokkeerde; de bron kan een oudere momentopname zijn.",
+    "Procedurekoppeling volgt een daadwerkelijk geobserveerde behandellink of expliciete eigen aanbiederverklaring.",
+    "Geen gegevens gekocht buiten de bestaande Demand Radar-dagrem."
+  ]
+}

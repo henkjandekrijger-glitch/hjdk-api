@@ -2,135 +2,125 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import path from 'node:path';
+import { createHash,randomBytes } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import * as choice from '../lib/tsc-choice.js';
-import { eligibility, experienceSummary, rankExperience, wilson } from '../lib/tsc-evidence.js';
+import * as ui from '../lib/tsc-ranking-ui.js';
+import * as catalog from '../lib/tsc-catalog.js';
+import * as ranking from '../lib/tsc-reviewrank.js';
+import * as engage from '../lib/tsc-engagement.js';
+import * as signup from '../lib/tsc-signup.js';
 import * as data from '../lib/tsc-data.js';
-
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const RANK = JSON.parse(fs.readFileSync(path.join(root, 'data/tsc-rank.json'), 'utf8'));
-const ROUTES = JSON.parse(fs.readFileSync(path.join(root, 'data/tsc-routes.json'), 'utf8'));
-const source = fs.readFileSync(path.join(root, 'lib/tsc.js'), 'utf8').replace(/^import .*;\n/gm, '').replace('export async function tscHandler', 'async function tscHandler');
-const names = ['SITE', 'SRC', 'HOME', 'HOMES', 'PAGES', 'CHECK', 'ROUTES', 'RANK_SLUGS', 'LIJSTEN', ...Object.keys(choice)];
-const slugs = Object.fromEntries(Object.entries(RANK.lijsten).flatMap(([id, l]) => Object.entries(l.slugs).map(([language, slug]) => [slug, { id, taal: language }])));
-const values = [data.SITE, data.SRC, data.HOME, data.HOMES, data.PAGES, data.CHECK, ROUTES, slugs, RANK.lijsten, ...Object.values(choice)];
-const renderer = new Function(...names, source + '\nreturn {home, rankPagina, pagina, llms, checkPagina};')(...values);
-let checks = 0;
-const test = (name, fn) => { fn(); checks++; console.log('ok', name); };
-const outputs = [];
-
-for (const language of ['en', 'nl', 'de']) {
-  test('home SSR, CSS, language and canonical ' + language, () => {
-    const html = renderer.home(data.SITE.base, language);
-    assert.match(html, /class="choice-wide"/);
-    assert.match(html, /\.sc-provider\{/);
-    assert.ok(html.includes('lang="' + language + '"'));
-    assert.ok(html.includes('rel="canonical"'));
-    assert.ok(!html.includes('Where people go'));
-    assert.ok(!html.includes('van ~198'));
-    assert.equal((html.match(/<h1>/g) || []).length, 1);
-    outputs.push({ slug: language === 'en' ? '' : language, html });
-  });
-  for (const [id, list] of Object.entries(RANK.lijsten)) test('comparison SSR and script ' + id + '/' + language, () => {
-    const slug = list.slugs[language];
-    if (!slug) return;
-    const html = renderer.rankPagina(data.SITE.base, slug, { id, taal: language }, {});
-    assert.ok(html.includes('id="sc-table"'));
-    assert.ok(html.includes('id="sc-more"'));
-    assert.ok(html.includes('class="sc-context"'));
-    assert.ok(!html.includes('<!--sc-help-->'));
-    assert.ok(!html.includes('score op 100'));
-    assert.ok(!html.includes('The highest score goes to'));
-    const faqSchema = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m => JSON.parse(m[1]));
-    for (const ld of faqSchema) for (const node of ld['@graph'] || []) if (node['@type'] === 'FAQPage') assert.deepEqual(node.mainEntity.map(q => q.name), choice.choiceCopy(language).qs);
-    assert.equal((html.match(/data-provider=/g) || []).length, list.klinieken.length);
-    for (const [, attributes, text] of html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/g)) {
-      if (attributes.includes('application/ld+json')) {
-        const ld = JSON.parse(text); const itemList = ld['@graph']?.find(x => x['@type'] === 'ItemList');
-        if (itemList) { assert.equal(itemList.numberOfItems, list.klinieken.length); assert.ok(!JSON.stringify(itemList).includes('aggregateRating')); }
-      } else new vm.Script(text);
-    }
-    assert.ok(html.match(/<title>([^<]{1,60})<\/title>/));
-    outputs.push({ slug, html });
-  });
-}
-
-test('future routes retain their own name', () => {
-  const list = { id: 'another-route', tekst: { en: { h1: 'A different procedure and destination' } } };
-  assert.equal(choice.choiceTitle(list, 'en'), 'Compare doctors and clinics');
-});
-test('accreditation does not count as legal permission', () => {
-  const list = { klinieken: [{ id: 'x', naam: 'Example', signalen: { jci: true, jci_bron: 'https://example.org/jci', acc: 'ja', acc_bron: 'https://example.org/acc' } }] };
-  assert.equal(choice.choiceRows(list)[0].permission, '');
-});
-test('negative guarantee free text does not count as aftercare verification', () => {
-  const row = choice.choiceRows({ klinieken: [{ naam: 'Example', openheid: { garantie: 'Geen garantie genoemd' } }] })[0];
-  assert.equal(row.aftercare, ''); assert.equal(row.coverage, 0);
-});
-test('payment and reviews cannot buy evidence coverage', () => {
-  const a = { id: 'a', naam: 'A', partner_fee: 0 };
-  const b = { id: 'b', naam: 'B', partner_fee: 999999, reviews: [{ score: 5, aantal: 1000000 }] };
-  assert.deepEqual(choice.choiceRows({ klinieken: [b, a] }).map(r => r.k.id), ['a', 'b']);
-});
-test('unknown and expired checks block recommendation eligibility', () => {
-  assert.equal(eligibility({}).status, 'incomplete');
-  const checks = Object.fromEntries(['identity', 'registration', 'procedure_scope', 'facility_permission', 'operator_roles', 'restrictions'].map(k => [k, { status: 'verified', source_url: 'https://example.org/register', verified_at: '2026-11-01', valid_until: '2026-12-01' }]));
-  assert.equal(eligibility({ checks }, '2026-11-15').status, 'eligible');
-  checks.registration.valid_until = '2026-11-14'; assert.equal(eligibility({ checks }, '2026-11-15').status, 'incomplete');
-  checks.registration.status = 'failed'; assert.equal(eligibility({ checks }, '2026-11-15').status, 'held_for_review');
-});
-test('one patient episode per wave, latest revision, same doctor/procedure only', () => {
-  const review = { review_id: 'r1', source_type: 'own', relationship_verified: true, moderation_status: 'published', episode_id: 'private-1', followup_wave: '3m', doctor_id: 'a', procedure_id: 'p', facility_id: 'f', communication: 5, published_at: '2026-11-01' };
-  const summary = experienceSummary([review, { ...review, review_id: 'r2', communication: 1, published_at: '2026-11-02' }, { ...review, episode_id: 'private-2', doctor_id: 'other' }, { ...review, episode_id: 'private-3', source_type: 'external' }], { doctor_id: 'a', procedure_id: 'p', facility_id: 'f', followup_wave: '3m' });
-  assert.equal(summary.unique_episodes, 1); assert.equal(summary.dimensions.communication.favourable, 0);
-});
-test('sampling uncertainty and invalid review denominator', () => {
-  assert.equal(wilson(1, 0), null); assert.equal(wilson(21, 20), null);
-  assert.ok(wilson(18, 20).low < 0.9); assert.ok(wilson(900, 1000).low > wilson(18, 20).low);
-  assert.equal(rankExperience([{ id: 'x', experience: { dimensions: { aftercare: { answered: 9999, low: 0.99, high: 1 } } } }], 'aftercare').ordered.length, 0);
-});
-
-// The actual generated client code is exercised with a minimal DOM contract, without a browser.
-class Element {
-  constructor(tag = 'div') { this.tagName = tag; this.children = []; this.listeners = {}; this.dataset = {}; this.hidden = false; this.checked = false; this.value = ''; this.textContent = ''; }
-  appendChild(el) { this.children.push(el); return el; }
-  replaceChildren() { this.children = []; }
-  addEventListener(type, fn) { this.listeners[type] = fn; }
-  focus() { this.focused = true; }
-  scrollIntoView() { this.scrolled = true; }
-}
-test('generated compare UI: first three, maximum three, search and clear', () => {
-  const list = RANK.lijsten['hair-turkey'], rows = choice.choiceRows(list);
-  const html = choice.choiceRanking(list, 'nl', data.SITE.base);
-  const script = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].at(-1)[1];
-  const ids = Object.fromEntries(['sc-bar', 'sc-comparison', 'sc-feedback', 'sc-count', 'sc-show', 'sc-table', 'sc-close', 'sc-clear', 'sc-search', 'sc-match', 'sc-more'].map(id => [id, new Element()]));
-  const boxes = rows.map((r, i) => { const b = new Element('input'); b.dataset.compare = String(i); return b; });
-  const cards = rows.map(r => { const c = new Element('article'); c.dataset.name = (r.k.naam + ' ' + r.doctors.map(a => a.naam).join(', ')).toLocaleLowerCase('nl'); return c; });
-  const document = { getElementById: id => { assert.ok(ids[id], id); return ids[id]; }, createElement: tag => new Element(tag), querySelectorAll: selector => selector === '[data-compare]' ? boxes : selector === '[data-provider]' ? cards : [] };
-  vm.runInNewContext(script, { document, matchMedia: () => ({ matches: true }) });
-  assert.equal(cards.filter(c => !c.hidden).length, 3);
-  for (let i = 0; i < 4; i++) { boxes[i].checked = true; boxes[i].listeners.change(); }
-  assert.equal(boxes[3].checked, false); assert.ok(ids['sc-feedback'].textContent.includes('maximaal'));
-  assert.equal(ids['sc-show'].disabled, false); ids['sc-show'].onclick(); assert.equal(ids['sc-comparison'].hidden, false);
-  assert.equal(ids['sc-table'].children[0].children[0].children.length, 4);
-  ids['sc-search'].value = rows[4].k.naam.toLowerCase(); ids['sc-search'].listeners.input.call(ids['sc-search']); assert.ok(!cards[4].hidden);
-  ids['sc-clear'].onclick(); assert.ok(boxes.every(b => !b.checked)); assert.equal(ids['sc-comparison'].hidden, true);
-});
-test('untrusted profile text is escaped in markup and inline script', () => {
-  const list = { id: 'x', gecontroleerd: '2026-11-15', tekst: { en: { h1: 'Example' } }, klinieken: [{ id: 'x', naam: '</script><img src=x onerror=alert(1)>', site: 'javascript:alert(1)', reviews: [] }] };
-  const html = choice.choiceRanking(list, 'en', data.SITE.base);
-  assert.ok(!html.includes('<img src=x')); assert.ok(!html.includes('href="javascript:'));
-  const script = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].at(-1)[1]; new vm.Script(script);
-});
-test('guides keep working and llms matches the new comparison', () => {
-  for (const [slug, pg] of Object.entries(data.PAGES)) {
-    const html = renderer.pagina(data.SITE.base, slug, pg, {}); assert.ok(html.includes('<h1>')); assert.ok(html.includes('application/ld+json'));
+import { LIJSTEN,RANK_SLUGS } from '../lib/tsc-rank.js';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+let checks=0;
+async function test(name,fn){await fn();checks++;console.log('ok',name);}
+const raw=fs.readFileSync(path.join(root,'lib/tsc.js'),'utf8').replace(/^import .*;\n/gm,'');
+const names={...data,ROUTES:JSON.parse(fs.readFileSync(path.join(root,'data/tsc-routes.json'))),LIJSTEN,RANK_SLUGS,...ui,...catalog,...signup};
+const render=new Function(...Object.keys(names),raw.replace(/export /g,'')+';return {home,rankPagina,pagina,checkPagina,llms,ALL,pageDate};')(...Object.values(names));
+const out=path.join(root,'qa-render');fs.mkdirSync(out,{recursive:true});
+const scriptCheck=html=>{for(const m of html.matchAll(/<script(?![^>]*application\/ld\+json)[^>]*>([\s\S]*?)<\/script>/g))new vm.Script(m[1]);};
+await test('all public SSR pages: unique IDs, correct language, scripts and metadata',()=>{
+ for(const tl of ['en','nl','de']){
+  for(const cat of [false,true]){const html=render.home(data.SITE.base,tl,cat);assert.equal((html.match(/id="mail"/g)||[]).length,1);assert.ok(html.indexOf('id="mail"')<html.indexOf('id="ingrepen"'));scriptCheck(html);fs.writeFileSync(path.join(out,(cat?'catalog-':'home-')+tl+'.html'),html);}
+  for(const [id,l] of Object.entries(LIJSTEN)){
+   const slug=l.slugs[tl];if(!slug)continue;const html=render.rankPagina(data.SITE.base,slug,{id,taal:tl},{});
+   assert.equal((html.match(/<h1>/g)||[]).length,1);assert.ok(html.includes('lang="'+tl+'"'));assert.ok(html.includes('href="'+data.SITE.base+'/'+slug+'"'));assert.ok(!html.includes('data-compare'));
+   assert.equal((html.match(/id="mail"/g)||[]).length,1);assert.ok(html.indexOf('id="mail"')<html.indexOf('id="clinics"'));
+   const ids=[...html.matchAll(/\sid="([^"]+)"/g)].map(x=>x[1]);assert.equal(new Set(ids).size,ids.length,'duplicate ID '+slug);
+   for(const [other,s] of Object.entries(l.slugs))assert.ok(html.includes('hreflang="'+other+'" href="'+data.SITE.base+'/'+s+'"'));
+   const ld=JSON.parse(html.match(/application\/ld\+json">([\s\S]*?)<\/script>/)[1]);const lists=ld['@graph'].filter(x=>x['@type']==='ItemList');assert.equal(lists.length,2);
+   for(const [i,kind]of ['clinic','doctor'].entries()){const r=ranking.reviewRanking(l,kind);assert.deepEqual(lists[i].itemListElement.map(x=>x.name),r.ranked.map(x=>x.k.naam));for(const item of lists[i].itemListElement)assert.ok(html.includes('id="'+item.url.split('#')[1]+'"'));}
+   assert.equal(html.includes('content="noindex"'),!!l.noindex);assert.ok(!html.includes('aggregateRating'));
+   assert.ok(ui.choiceTitle(l,tl).length<=60);assert.ok(ui.choiceDescription(l,tl).length<=155);
+   scriptCheck(html);if(['procedure-laser-eye','tummy-mexico','hair-turkey'].includes(id))fs.writeFileSync(path.join(out,slug.replaceAll('/','_')+'.html'),html);
   }
-  assert.ok(renderer.llms().includes('Profiles are ordered by documented fields'));
-  assert.ok(!renderer.llms().includes('Smile Hair Clinic, HLC Hairline Clinic and Asmed score highest'));
+ }
+ for(const [slug,pg]of Object.entries(data.PAGES)){const html=render.pagina(data.SITE.base,slug,pg,{});scriptCheck(html);assert.equal((html.match(/id="mail"/g)||[]).length,1);}
 });
-if (process.env.SURGERY_RENDER_DIR) {
-  fs.mkdirSync(process.env.SURGERY_RENDER_DIR, { recursive: true });
-  for (const out of outputs) fs.writeFileSync(path.join(process.env.SURGERY_RENDER_DIR, (out.slug || 'home').replaceAll('/', '_') + '.html'), out.html);
-}
-console.log(checks + ' checks passed; ' + outputs.length + ' pages rendered.');
+await test('sitemap excludes sparse pages and uses page-specific dates',()=>{
+ const all=render.ALL();for(const [slug,i]of Object.entries(RANK_SLUGS))assert.equal(all.includes(slug),!LIJSTEN[i.id].noindex);
+ assert.equal(render.pageDate('check-surgeon-turkey'),'2026-11-14');assert.ok(!render.llms().includes('Profiles are ordered by documented fields'));
+});
+const rv=(platform,score,n,scope='organization',extra={})=>({platform,score,max:5,aantal:n,scope,bron:'https://'+platform+'.example/review/a',datum:'2026-11-15',...extra});
+await test('review scope: doctor and facility figures cannot inflate clinic score',()=>{
+ const p={reviews:[rv('A',2,100),rv('B',5,500,'doctor'),rv('C',5,500,'facility')]};assert.equal(ranking.reviewSources(p).included.length,1);assert.equal(ranking.experienceIndex(p,4).score,(200+80)/120);
+});
+await test('invalid, unavailable and suspended reviews excluded visibly',()=>{
+ const p={reviews:[rv('A',5,100,'organization',{waarschuwing:'account suspended'}),rv('B',4,20,'organization',{rating_available:false})]};const r=ranking.experienceIndex(p);assert.equal(r.eligible,false);assert.equal(r.sources.excluded[0].reason,'platform_restriction');
+ const actual=ranking.reviewRanking(LIJSTEN['hair-turkey'],'doctor');assert.ok(actual.unranked.some(r=>r.k.naam.includes('Serkan')));
+});
+await test('duplicate URL and multiple profiles from one platform count once',()=>{
+ const a=rv('A',4,10),b={...a,bron:a.bron+'/branch',aantal:50},p={reviews:[a,a,b]};assert.equal(ranking.reviewSources(p).included.length,1);assert.equal(ranking.reviewSources(p).included[0].aantal,50);
+});
+await test('10-point scale, platform cap, strong disagreement and no unique-patient total',()=>{
+ const p={reviews:[rv('A',2.6,211),rv('B',8.7,13613,'organization',{max:10})]},r=ranking.experienceIndex(p,4);
+ assert.ok(r.range>1.7);assert.equal(r.unique_patients,null);assert.equal(r.source_counts[1].count,13613);
+ assert.equal(ranking.experienceIndex({reviews:[rv('A',5,100)]},4).score,ranking.experienceIndex({reviews:[rv('A',5,1000000)]},4).score);
+});
+await test('ranking invariant to payment; serious unresolved issues outside ranking',()=>{
+ const p={naam:'A',id:'a',reviews:[rv('A',4.5,100)]};assert.deepEqual(ranking.experienceIndex(p),ranking.experienceIndex({...p,paid:999999,boost:100}));assert.equal(ranking.experienceIndex({...p,risico:[{ernst:'zwaar'}]}).eligible,false);
+});
+await test('individual doctor reviews match identity and never inherit clinic rating',()=>{
+ const p={naam:'Clinic',artsen:[{naam:'Ada Smith',bron:'https://clinic.example/ada'}],reviews:[rv('A',5,100)]};assert.equal(ranking.physicianRecords([p]).length,0);
+ p.reviews.push(rv('RealSelf',4,30,'doctor',{bron:'https://www.realself.com/dr/ada-smith-london'}));assert.equal(ranking.physicianRecords([p])[0].reviews.length,1);
+});
+await test('consent, topics, legacy delivery and self-declared warmth',()=>{
+ assert.equal(engage.signupPreferences({topics:['laser-eye']}).ok,false);assert.equal(engage.signupPreferences({topics:['bad'],consent:true}).ok,false);
+ assert.deepEqual(engage.selectedTopics({topics:['hair','hair','laser-eye']}),['hair','laser-eye']);
+ assert.equal(engage.dueToday({actief:true,ingreep:'hair'},'2026-11-15',[]),false);
+ assert.equal(engage.dueToday({actief:true,frequency:'daily',consent_version:engage.CONSENT_VERSION},'2026-11-15',[]),true);
+ assert.equal(engage.warmth({opens:900,clicks:900}).stage,'unknown');assert.equal(engage.experimentVerdict(0,0,0,0).winner,null);
+});
+await test('preference HTML resists script injection',()=>{
+ const html=signup.preferencesBlock(data.SITE.base,'a'.repeat(48),{taal:'nl',topics:['hair']},'</script><script>alert(1)</script>');assert.ok(!html.includes('alert(1)'));scriptCheck(html);
+});
+// In-memory Redis/provider adapters: exercise the real mail module without sending mail or touching production.
+const db=new Map(),sent=[],metrics=[],news=JSON.parse(fs.readFileSync(path.join(root,'data/tsc-nieuws.json')));let sendHook=null;
+const clone=v=>v==null?v:structuredClone(v);
+const kv={async get(k){return clone(db.get(k)??null)},async set(k,v){db.set(k,clone(v));return 'OK'},async incr(k){const n=(Number(db.get(k))||0)+1;db.set(k,n);return n},async raw(args){const[cmd,key,...args2]=args;if(cmd==='GET'){const v=db.get(key);return v==null?null:typeof v==='string'?v:JSON.stringify(v)}if(cmd==='SET'){if(args2.includes('NX')&&db.has(key))return null;db.set(key,args2[0]);return 'OK'}if(cmd==='SMEMBERS')return [...(db.get(key)||new Set())];if(cmd==='SADD'){const s=db.get(key)||new Set(),old=s.size;args2.forEach(x=>s.add(x));db.set(key,s);return s.size-old}if(cmd==='SREM'){const s=db.get(key)||new Set();return Number(s.delete(args2[0]))}if(cmd==='HGETALL')return Object.entries(db.get(key)||{}).flatMap(([k,v])=>[k,String(v)]);if(cmd==='HINCRBY'){const h=db.get(key)||{};h[args2[0]]=(Number(h[args2[0]])||0)+Number(args2[1]);db.set(key,h);return h[args2[0]]}if(cmd==='EXPIRE')return 1;if(cmd==='EVAL'){const realkey=args2[1],arg=args2[2];if(key.includes('ARGV[2]')){const v=db.get(realkey),raw=typeof v==='string'?v:JSON.stringify(v);if(raw!==arg)return 0;db.set(realkey,args2[3]);return 1}if(key.includes('cjson.decode')){const a=db.get(realkey);if(!a)return null;const merged={...clone(a),...JSON.parse(arg)};db.set(realkey,merged);return JSON.stringify(merged)}if(db.get(realkey)===arg){db.delete(realkey);return 1}return 0}throw new Error('unexpected Redis command '+cmd)}};
+// Raw SET stores encoded JSON, just as production Redis does.
+const get=kv.get;kv.get=async k=>{const v=await get(k);if(typeof v==='string'&&v[0]==='{'){try{return JSON.parse(v)}catch{}}return v};
+const mailSource=fs.readFileSync(path.join(root,'lib/tsc-mail-v3.js'),'utf8').replace(/^import .*;\n/gm,'').replace(/^export \{[^}]+\};\n/gm,'').replace(/export /g,'');
+const inputs={createHash,randomBytes,kv,SITE:data.SITE,SRC:data.SRC,NEWS:news,...catalog,...engage,stuur:async(m,idem)=>{if(sendHook)await sendHook();sent.push({m,idem});return {id:'test'}},tel:async(...x)=>metrics.push(x),geopend:async()=>{},klik:async()=>data.SITE.base,oldStand:async()=>({abonnees:0})};
+const M=new Function(...Object.keys(inputs),mailSource+';return {aanmelden,bevestig,afmelden,preferences,savePreferences,deliver,ronde,past,routeMail,learningStand};')(...Object.values(inputs));
+const D=new Date().toISOString().slice(0,10),H=t=>createHash('sha256').update(t).digest('hex');
+const subscriber=(id,extra={})=>({id,email:id+'@example.invalid',taal:'nl',topics:['laser-eye'],ingreep:'laser-eye',naar:'any',actief:true,frequency:'daily',consent_version:engage.CONSENT_VERSION,af:'a'.repeat(48),pref:'b'.repeat(48),gezien:[],...extra});
+const save=async a=>{await kv.set('tsc:abo:'+a.id,a);await kv.set('tsc:af:'+H(a.af),a.id);await kv.set('tsc:pref:'+H(a.pref),a.id);await kv.raw(['SADD','tsc:abos',a.id])};
+await test('double opt-in flow: selected topics, no hidden destination, no second mail same day',async()=>{
+ db.clear();sent.length=0;metrics.length=0;
+ const b={email:'test@example.invalid',taal:'nl',topics:['laser-eye','lipo'],naar:'turkey',consent:true,learn:false,ms:2000,variant:'A',entry_topic:'hair'};assert.equal((await M.aanmelden(b,'test-ip')).ok,true);assert.equal(sent.length,1);
+ const t=sent[0].m[0].html.match(/bevestig\?t=([a-f0-9]{48})/)[1];const a=await M.bevestig(t);assert.equal(a.naar,'any');assert.deepEqual(a.topics,['laser-eye','lipo']);assert.equal(sent.length,2);assert.ok(!sent[1].m[0].html.includes('<img'));
+ await M.bevestig(t);await M.ronde();assert.equal(sent.length,2);assert.equal(metrics.filter(x=>x[0]==='bevestigd').length,1);
+});
+await test('daily no-news mail uses a real lesson and matching rotating topic URL',()=>{
+ const a=subscriber('links',{topics:['hair','laser-eye']});const m=M.routeMail(a,[],false,D),lesson=engage.dailyLesson(a,D);assert.ok(m.html.includes(catalog.procedureSlug(lesson.topic,'nl')+'?bron=mail'));assert.ok(m.html.includes('geen nieuw nieuws'));assert.ok(!m.html.includes('choosing-who-will-do-your-cosmetic-procedure'));
+});
+await test('dry run makes no writes and all 101 subscribers are considered',async()=>{
+ db.clear();for(let i=0;i<101;i++)await save(subscriber('s'+i,{af:String(i).padStart(48,'a'),pref:String(i).padStart(48,'b')}));const size=db.size;const r=await M.ronde({droog:true});assert.equal(r.mail,101);assert.equal(db.size,size);
+ sent.length=0;const live=await M.ronde();assert.equal(live.mail,101);assert.equal(sent.length,101);await M.ronde();assert.equal(sent.length,101);
+});
+await test('concurrent sends share recipient lock and preserve unsubscribe during send',async()=>{
+ db.clear();sent.length=0;const a=subscriber('race');await save(a);sendHook=async()=>{sendHook=null;await M.afmelden(a.af)};
+ await Promise.all([M.deliver(a,[]),M.deliver(a,[])]);assert.equal(sent.length,1);assert.equal((await kv.get('tsc:abo:'+a.id)).actief,false);assert.equal((await M.ronde()).mail,0);
+});
+await test('fresh changes-only preference overrides a stale daily snapshot',async()=>{
+ db.clear();sent.length=0;const a=subscriber('changed');await save({...a,frequency:'changes',gezien:news.items.map(x=>x.id)});assert.equal(await M.deliver(a,[]),false);assert.equal(sent.length,0);
+});
+await test('preference save never reactivates an unsubscribed user or needs tracking consent',async()=>{
+ db.clear();const a=subscriber('prefs',{actief:false});await save(a);const r=await M.savePreferences({token:a.pref,topics:['lipo'],stage:'consult',consent:true,learn:false});assert.equal(r.ok,true);assert.equal((await kv.get('tsc:abo:'+a.id)).actief,false);assert.equal(r.warmth.stage,'consult');
+});
+await test('legacy malformed seen collection and missing preference token recover safely',async()=>{
+ db.clear();sent.length=0;const a=subscriber('legacy',{topics:['lipo'],ingreep:'lipo',gezien:{},pref:undefined,frequency:'changes',consent_version:undefined});await kv.set('tsc:abo:'+a.id,a);await kv.raw(['SADD','tsc:abos',a.id]);assert.equal(await M.deliver(a,[]),true);const saved=await kv.get('tsc:abo:'+a.id);assert.ok(Array.isArray(saved.gezien));assert.match(saved.pref,/^[a-f0-9]{48}$/);assert.equal(saved.frequency,'changes');
+});
+await test('saved outbox cannot deliver topics after preference changes',async()=>{
+ db.clear();sent.length=0;const a=subscriber('outbox');await save(a);let attempts=0;sendHook=async()=>{attempts++;throw Error('temporary provider failure')};await assert.rejects(M.deliver(a,[]));sendHook=null;await M.savePreferences({token:a.pref,topics:['lipo'],consent:true,learn:false});assert.equal(await M.deliver(a,[]),false);assert.equal(sent.length,0);assert.equal(attempts,1);
+});
+await test('GSC subsite regex includes surgery and excludes sibling and Curaçao paths',()=>{
+ const src=fs.readFileSync(path.join(root,'lib/gsc.js'),'utf8'),a=src.indexOf('export function pageScopeFilter'),b=src.indexOf('\nexport async function rows',a);const fn=new Function(src.slice(a,b).replace('export ','')+';return pageScopeFilter;')();const f=fn('https://todayin.email/surgery'),re=new RegExp(f.dimensionFilterGroups[0].filters[0].expression);
+ assert.ok(re.test('https://todayin.email/surgery'));assert.ok(re.test('https://todayin.email/surgery/nl'));assert.ok(!re.test('https://todayin.email/surgery-other'));assert.ok(!re.test('https://todayin.email/curacao'));assert.deepEqual(fn(),{});
+});
+await test('LLM subsite citations require structured URLs inside surgery',()=>{
+ const src=fs.readFileSync(path.join(root,'lib/zicht.js'),'utf8'),a=src.indexOf('export function scopedCitationURLs'),b=src.indexOf('\nexport async function meetLLM',a);const fn=new Function(src.slice(a,b).replace('export ','')+';return scopedCitationURLs;')(),site={host:'todayin.email',pathPrefix:'/surgery'};
+ assert.deepEqual(fn(site,{choices:[{message:{content:'https://todayin.email/surgery'}}]}),[]);assert.deepEqual(fn(site,{citations:['https://todayin.email/curacao/nl','https://todayin.email/surgery-other','https://todayin.email/surgery/nl']}),['https://todayin.email/surgery/nl']);
+});
+console.log(JSON.stringify({checks,ssrRankPages:Object.keys(RANK_SLUGS).length,topics:catalog.PROCEDURES.length,lists:Object.keys(LIJSTEN).length,indexableLists:Object.values(LIJSTEN).filter(l=>!l.noindex).length,realEmailsSent:0}));

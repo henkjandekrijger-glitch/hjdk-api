@@ -2,6 +2,25 @@
 
 Productbesluit van 15 november 2026. Opdracht: eigen onderzoek, een reviewmodel, een consistente UX en een verdienmodel voor aanvragen aan artsen. Dit document maakt onderscheid tussen onderzoeksbewijs, reeds gebouwde functionaliteit en voorgestelde vervolgbouw.
 
+
+## Actuele uitvoering: reviewranking en dagelijkse keuzehulp
+
+De gebruikersinstructie van later op 15 november vervangt de eerdere vergelijking met drie geselecteerde dossiers. De live opzet is nu een **genummerde reviewranking**, met aparte ranglijsten van klinieken en individuele artsen, 42 onderwerpen in het keuzemenu en 31 extra aanbieders. Alle dossiers staan in de server-HTML. De bronselectie is geen volledige wereldmarkt; ontbrekende individuele artsreviews worden niet aangevuld met klinieksterren.
+
+De publieke review-index is een redactionele ervaringsmaat. Normaliseer naar 5; per platform gewicht min(n,100); voeg 20 pseudo-waarnemingen op de vergelijkingsmediaan toe; neem het gelijke gemiddelde van de gecorrigeerde platformscores. Minimaal één passende bron met 5 reviews. Exacte profielduplicaten en meerdere profielen op één platform tellen eenmaal. Organisatie, locatie en arts blijven gescheiden. Geschorste/ongeldige bronnen zijn uitgesloten en zichtbaar met reden; zware onopgeloste kwesties blijven buiten de ranking. Dit is geen gevalideerde medische score of statistisch betrouwbaarheidsinterval. We sommeren aantallen niet tot unieke patiënten. Betaling verandert niets.
+
+Bronnen bevatten zowel rechtstreekse platformgegevens als zichtbare snapshots uit hun openbare zoekindex. De datum is de leesdatum, niet automatisch de publicatiedatum van het platformcijfer. De gebruiker kan elk profiel openen. Onderlinge verschillen, kleine aantallen en ontbrekende tweede bronnen staan in de conclusie. Individuele reviewteksten zijn niet voor alle aanbieders verzameld; we verzinnen daarom geen thema’s zoals goede nazorg op basis van alleen sterren.
+
+Aanmelden staat bovenaan. De bezoeker kiest maximaal 8 onderwerpen en geeft expliciete toestemming voor gebruik van die gezondheidsinteresses. Na dubbele opt-in volgt dagelijks rond 08:10 UTC een mail: passende bronwijzigingen of, bij geen nieuws, één herkenbaar vaste keuzevraag. De frequentie wordt vooraf vermeld. Oude inschrijvingen behouden alleen-bij-wijziging. Voorkeuren aanpassen en afmelden kan in elke mail; geen verborgen bestemmingsfilter en geen gegevensoverdracht aan klinieken.
+
+De leerlus vergelijkt knopteksten op bevestigde inschrijvingen en onderwerpregels op expliciete keuzefasewijzigingen na de mail, alleen met afzonderlijke meettoestemming. Fases zijn oriënteren, vergelijken en een consult overwegen; dit is geen medische beoordeling of consultaanvraag. [Apple bevestigt dat mailcontent ook zonder werkelijk lezen op de achtergrond wordt opgehaald](https://www.apple.com/legal/privacy/data/en/mail-privacy-protection/). Nieuwe mails hebben geen openpixel. Automatische klik-GETs bepalen geen warmte. Vanaf 200 waarnemingen per arm en 30 uitkomsten kan een 99%-vergelijking een kandidaatwinnaar opleveren; 10% blijft uitdager. Deze adaptieve praktijkregel is geen klinische validatie of sluitend causaal experiment.
+
+De technische keten gebruikt gedeelde ontvangerlocks, een vaste dagpayload, ontvanger/dag-idempotency bij Resend en atomaire deelupdates. Welkomstmail en cron tellen samen als maximaal één dagmail. Een droogrun wijzigt geen abonnementen en verstuurt niets. Tests gebruiken alleen een in-memory provider; geen echt testadres is ingeschreven.
+
+Vindbaarheid: een apart ZICHT-profiel surgery meet Google-totalen, pagina’s en zoekvragen met hetzelfde /surgery-filter, plus een eigen vast AI-vragenpanel. Het oude todayin-profiel bevat ook Curaçao en is geen surgery-resultaat. Procedurepagina’s krijgen pas indexatie bij voldoende werkelijk rangschikbare dossiers en eigen ingreepcontext; andere pagina’s blijven bruikbaar met noindex. Canonicals, werkelijke vertalingen, beide ItemLists en paginadatum staan in de server-HTML. Demand Radar v3 filtert vervuilde bestaande cache zonder aankoop en breidt de volgende toegestane verversing uit met ogen/tanden. Ontbrekende volumes zijn onbekend, geen nul, en synoniemen zijn geen unieke zoekers.
+
+Validatie: scripts/test-tsc-choice.mjs controleert alle 126 rankingvertalingen, metadata/anchors, bronnen/scope/duplicaten, toestemming, volledige double-opt-in met gemockte verzending, 101 ontvangers zonder afkap, dezelfde-dag-idempotency, afmelden tijdens verzending, voorkeurwijziging en scriptinjectie. Werkelijke inboxbezorging en gebruikstesten met patiënten zijn nog niet gemeten.
+
 ## Wat wij aan de zoeker leveren
 
 Een bezoeker wil weten: wie behandelt mij, op welke plaats, met welke aantoonbare ervaring, wat kan ik verwachten, wat kost het volledige traject en wie helpt mij als het herstel anders verloopt? De uitkomst van onze dienst is een onderbouwde shortlist, een concreet consultdossier en desgewenst contact met een zelfgekozen behandelaar. Ook uitstellen, een andere behandeling of thuis behandelen blijven legitieme uitkomsten.
@@ -21,7 +40,7 @@ Onzekerheid verminderen betekent ontbrekende informatie invullen en grenzen zich
 | Reviewherkomst, selectie, berekening en controle moeten duidelijk zijn; positieve en negatieve ervaringen horen zichtbaar te zijn. | [ACM](https://www.acm.nl/nl/verkoop-aan-consumenten/reclame-en-verleiden/online-beinvloeden/reviews-en-beoordelingen-gebruiken), [FTC platform guidance](https://www.ftc.gov/business-guidance/resources/featuring-online-customer-reviews-guide-platforms) | Eén neutrale uitnodigings- en moderatieregel voor iedere uitkomst. |
 | Een responspercentage vraagt om expliciete teller en noemer. | [AHRQ: calculating response rates](https://www.ahrq.gov/cahps/surveys-guidance/survey-methods-research/calculating-response-rates.html) | Publiceer uitgenodigd, ontvangen, bruikbaar en follow-upuitval. |
 
-De keuze voor drie eerste kaarten, maximaal drie naast elkaar, zes vaste kaartonderwerpen en de onderstaande publicatiedrempels is een ontwerpkeuze. Daarvoor is geen conversiewinst of medische validatie aangetoond.
+De oorspronkelijke driekaartvergelijking is vervangen door de bovenstaande reviewranking. De indexparameters en publicatiedrempels zijn redactionele ontwerpkeuzes, zonder bewezen conversiewinst of medische validatie.
 
 ## Audit van de huidige gegevens
 
@@ -161,8 +180,8 @@ Omzetmodel: **geldige aanvragen × gerealiseerde vergoeding**. Brutomarge: omzet
 
 | Onderdeel | Status |
 |---|---|
-| Homepage en vergelijkingsschermen EN/NL/DE | Gebouwd in lib/tsc-choice.js en aangesloten op bestaande routes |
-| Zoekfunctie, maximaal drie naast elkaar, consistente kaarten | Gebouwd, geen verzending van persoonsgegevens |
+| Homepage, catalogus en ranking EN/NL/DE | Gebouwd in lib/tsc-ranking-ui.js en aangesloten op bestaande en nieuwe routes |
+| Genummerde reviewranking, aparte artsen/klinieken, naam- en landfilter | Gebouwd in lib/tsc-ranking-ui.js; vergelijking met vinkjes vervallen |
 | Afzonderlijke reviewplatforms en zichtbare ontbrekende controles | Gebouwd |
 | Reparatie garantietekst en nieuwe chatcontext | Gebouwd |
 | Review- en toelatingsmodel met ontdubbeling en onzekerheid | Voorbereid als pure functies in lib/tsc-evidence.js |
@@ -171,4 +190,5 @@ Omzetmodel: **geldige aanvragen × gerealiseerde vergoeding**. Brutomarge: omzet
 | Artsencontracten, landencontrole, beveiligde aanvraagoverdracht en facturatie | Nog in te richten; er is geen actieve leadverkoop |
 | Gebruikerstest en conversie-/besliskwaliteitmeting | Volgende validatiestap; het ontwerp is nog niet met patiënten gevalideerd |
 
-Begin met één ingreep in één bestemming en voldoende geverifieerde artsendossiers, in plaats van dagelijks onvergelijkbare lijsten uit te breiden. Voer daarna vijf echte gebruikstesten uit met zoekers: kunnen zij de behandelaar herkennen, de verschillen uitleggen, een ontbrekende controle noemen en de juiste vervolgvraag stellen? Dit is een onderzoeksplan, geen uitgevoerd patiëntenonderzoek.
+Naast de brede catalogus moet de dagelijkse verdieping per ingreep voldoende actuele arts-, locatie- en reviewbronnen opleveren. Brede dekking vervangt die controle niet. Voer daarna vijf echte gebruikstesten uit met zoekers: kunnen zij de behandelaar herkennen, de verschillen uitleggen, een ontbrekende controle noemen en de juiste vervolgvraag stellen? Dit is een onderzoeksplan, geen uitgevoerd patiëntenonderzoek.
+
