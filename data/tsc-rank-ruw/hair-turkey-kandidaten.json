@@ -1,0 +1,815 @@
+{
+ "gecontroleerd": "2026-11-15",
+ "toelichting": "vermeld_in = onafhankelijke lijsten, forumdraden, nieuws en artsengidsen (ISHRS, IAHRS, AHLA, Hair Transplant Network) die de kliniek of haar hoofdarts noemen. Veel 'top 10'-lijsten zijn gesponsord (press releases, partnerartikelen); ze tellen mee als zichtbaarheid, niet als oordeel. artsen = alleen wat op de eigen site van de kliniek is gezien; leeg als die pagina niet bereikbaar was.",
+ "klinieken": [
+  {
+   "naam": "ASMED",
+   "stad": "Istanbul",
+   "site": "hairtransplantfue.org",
+   "site_bron": "https://www.hairtransplantfue.org/about-asmed/dr-koray-erdogan",
+   "artsen": [
+    {
+     "naam": "Koray Erdoğan",
+     "titel": "Dr.",
+     "bron": "https://www.hairtransplantfue.org/about-asmed/dr-koray-erdogan"
+    }
+   ],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://www.ibtimes.co.uk/top-hair-transplant-clinics-turkey-1790109",
+    "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+    "https://medihair.com/de/haartransplantation-tuerkei/",
+    "https://www.flaunt.com/post/best-hair-transplant-clinics-in-turkey-for-2026",
+    "https://resident.com/style-and-personal-care-resources/2026/09/22/best-hair-transplant-clinics-in-turkey-in-2026-10-clinics-to-compare",
+    "https://resident.com/style-and-personal-care-resources/2026/08/22/10-best-hair-transplant-clinics-in-turkey-2026-a-mens-grooming-guide",
+    "https://fortune.com/press-releases/best-hair-transplant-turkey-2026-ranking-price-tech-success-rates-2025-12-22",
+    "https://sociallifemagazine.com/the-archive/top-10-hair-transplant-clinics-in-turkey-2026/",
+    "https://resident.com/travel-resources/2026/10/21/the-best-hair-transplant-clinics-in-turkey-for-luxury-travellers-where-high-standards-meet-world-class-results-in-2026",
+    "https://mail.hairlosslearningcenter.org/best-hair-transplant-surgeons-turkey",
+    "https://euroweeklynews.com/2026/10/19/top-10-hair-transplant-doctors-in-turkey-2026-the-surgeons-behind-the-best-results/",
+    "https://www.realself.com/find/Turkey/Hair-Restoration-Surgeon",
+    "https://americanhairloss.org/hair-transplant-surgeons",
+    "https://www.under30ceo.com/ten-hair-transplant-doctors-based-in-turkey-to-look-for-in-2026/",
+    "https://www.heidelberg24.de/ratgeber/die-beste-haartransplantation-tuerkei-testsieger-2026-unter-den-top-10-kliniken-92282539.html",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-testsieger-vergleich",
+    "https://ostdeutscheallgemeine.com/article/top-5-der-besten-haartransplantation-kliniken-in-der-tuerkei-10008940",
+    "https://www.insidermonkey.com/blog/top-10-hair-transplant-clinics-in-turkey-2025-edition-1575488",
+    "https://www.gigwise.com/the-10-best-hair-transplant-clinics-in-turkey-for-international-patients/",
+    "https://www.jpost.com/health-and-wellness/article-907161",
+    "https://londonlovesbusiness.com/the-five-clinics-worth-considering-for-a-hair-transplant-in-turkey-in-2026-and-the-one-that-leads-them-all/",
+    "https://mail.hairlosslearningcenter.org/hair-transplant-network-announces-dr-koray-erdogan-istanbul-turkey-its-newest-recommended-physician",
+    "https://www.iahrs.org/hair-transplant/koray-erdogan"
+   ],
+   "opmerking": "Twee sponsorlijsten (northpennnow, azbigmedia) koppelen Koray Erdoğan ten onrechte aan HLC; die zijn hier niet meegeteld. De moderatorpost op r/HairTransplants zet ASMED in de lijst 'hair mills'."
+  },
+  {
+   "naam": "HLC (Hairline Clinic)",
+   "stad": "Ankara",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://www.ibtimes.co.uk/top-hair-transplant-clinics-turkey-1790109",
+    "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+    "https://medihair.com/de/haartransplantation-tuerkei/",
+    "https://www.flaunt.com/post/best-hair-transplant-clinics-in-turkey-for-2026",
+    "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+    "https://northpennnow.com/news/2026/apr/01/top-10-hair-transplant-clinics-in-turkey-2026-what-to-know-before-you-book-a-flight",
+    "https://fortune.com/press-releases/best-hair-transplant-turkey-2026-ranking-price-tech-success-rates-2025-12-22",
+    "https://sociallifemagazine.com/the-archive/top-10-hair-transplant-clinics-in-turkey-2026/",
+    "https://resident.com/travel-resources/2026/10/21/the-best-hair-transplant-clinics-in-turkey-for-luxury-travellers-where-high-standards-meet-world-class-results-in-2026",
+    "https://www.apetogentleman.com/best-hair-transplant-surgeons-turkey/",
+    "https://azbigmedia.com/lifestyle/top-10-hair-transplant-clinics-in-turkey-only-surgeon-performed-surgery/",
+    "https://www.realself.com/find/Turkey/Hair-Restoration-Surgeon",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-testsieger-vergleich",
+    "https://medihair.com/de/location/tuerkei/",
+    "https://www.insidermonkey.com/blog/top-10-hair-transplant-clinics-in-turkey-2025-edition-1575488",
+    "https://www.gigwise.com/the-10-best-hair-transplant-clinics-in-turkey-for-international-patients/",
+    "https://www.hairrestorationnetwork.com/topic/69824-if-money-is-no-object-what-are-the-top-5-docs-in-turkey-for-ht/",
+    "https://www.hairrestorationnetwork.com/topic/56967-advice-needed-who-to-choose-in-turkey/",
+    "https://londonlovesbusiness.com/the-five-clinics-worth-considering-for-a-hair-transplant-in-turkey-in-2026-and-the-one-that-leads-them-all/",
+    "https://ishrs.org/doctor/51125/"
+   ],
+   "opmerking": "Officiële site niet bereikt. Lijsten noemen Dr. Özgür Öztan als oprichter (apetogentleman, ISHRS-profiel); niet op de eigen site gecontroleerd."
+  },
+  {
+   "naam": "Smile Hair Clinic",
+   "stad": "Istanbul",
+   "site": "smilehairclinic.com",
+   "site_bron": "https://www.smilehairclinic.com/en/medical-board",
+   "artsen": [
+    {
+     "naam": "Gökay Bilgin",
+     "titel": "Dr., Co-Founder, Hair Transplant Specialist",
+     "bron": "https://www.smilehairclinic.com/en/medical-board"
+    },
+    {
+     "naam": "Mehmet Erdoğan",
+     "titel": "Dr., Co-Founder, Hair Transplant Specialist",
+     "bron": "https://www.smilehairclinic.com/en/medical-board"
+    },
+    {
+     "naam": "Ali Osman Soluk",
+     "titel": "Dr.",
+     "bron": "https://www.smilehairclinic.com/en/medical-board"
+    },
+    {
+     "naam": "M. Reşat Arpacı",
+     "titel": "Dr.",
+     "bron": "https://www.smilehairclinic.com/en/medical-board"
+    }
+   ],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://www.ibtimes.co.uk/top-hair-transplant-clinics-turkey-1790109",
+    "https://www.the-berliner.com/berlin/top-10-best-hair-transplant-clinics-in-turkey-reviewed/",
+    "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+    "https://resident.com/style-and-personal-care-resources/2026/09/22/best-hair-transplant-clinics-in-turkey-in-2026-10-clinics-to-compare",
+    "https://northpennnow.com/news/2026/apr/01/top-10-hair-transplant-clinics-in-turkey-2026-what-to-know-before-you-book-a-flight",
+    "https://fortune.com/press-releases/best-hair-transplant-turkey-2026-ranking-price-tech-success-rates-2025-12-22",
+    "https://euroweeklynews.com/2026/10/15/ten-hair-transplant-clinics-in-turkey-worth-researching-in-2026/",
+    "https://euroweeklynews.com/2026/10/19/top-10-hair-transplant-doctors-in-turkey-2026-the-surgeons-behind-the-best-results/",
+    "https://www.kpbs.org/news/international/2025/10/06/how-one-country-has-become-a-top-destination-for-hair-transplants",
+    "https://www.inyourpocket.com/turkey/hair-transplant-clinics-in-istanbul_81124f",
+    "https://www.heidelberg24.de/ratgeber/die-beste-haartransplantation-tuerkei-testsieger-2026-unter-den-top-10-kliniken-92282539.html",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-testsieger-vergleich",
+    "https://ostdeutscheallgemeine.com/article/top-5-der-besten-haartransplantation-kliniken-in-der-tuerkei-10008940",
+    "https://www.top10berlin.de/de/cat/wellness-272/haartransplantation-tuerkei",
+    "https://medihair.com/de/location/tuerkei/",
+    "https://www.gigwise.com/the-10-best-hair-transplant-clinics-in-turkey-for-international-patients/",
+    "https://hollywoodlife.com/2026/03/27/top-10-hair-transplant-clinics-in-turkey/amp/",
+    "https://pressbooks.cuny.edu/vision/part/top-10-hair-transplant-clinics-istanbul-2026/",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-top-7-kliniken-im-vergleich"
+   ],
+   "opmerking": "KPBS/NPR-nieuwsreportage noemt Dr. Mehmet Erdoğan van Smile Hair Clinic. Moderatorpost r/HairTransplants zet de kliniek onder 'hair mills'."
+  },
+  {
+   "naam": "Vera Clinic",
+   "stad": "Istanbul",
+   "site": "veraclinic.net",
+   "site_bron": "https://veraclinic.net/about-us",
+   "artsen": [],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://www.ibtimes.co.uk/top-hair-transplant-clinics-turkey-1790109",
+    "https://www.the-berliner.com/berlin/top-10-best-hair-transplant-clinics-in-turkey-reviewed/",
+    "https://www.flaunt.com/post/best-hair-transplant-clinics-in-turkey-for-2026",
+    "https://resident.com/style-and-personal-care-resources/2026/09/22/best-hair-transplant-clinics-in-turkey-in-2026-10-clinics-to-compare",
+    "https://resident.com/style-and-personal-care-resources/2026/08/22/10-best-hair-transplant-clinics-in-turkey-2026-a-mens-grooming-guide",
+    "https://fortune.com/press-releases/best-hair-transplant-turkey-2026-ranking-price-tech-success-rates-2025-12-22",
+    "https://sociallifemagazine.com/the-archive/top-10-hair-transplant-clinics-in-turkey-2026/",
+    "https://www.inyourpocket.com/turkey/hair-transplant-clinics-in-istanbul_81124f",
+    "https://www.heidelberg24.de/ratgeber/die-beste-haartransplantation-tuerkei-testsieger-2026-unter-den-top-10-kliniken-92282539.html",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-testsieger-vergleich",
+    "https://www.top10berlin.de/de/cat/wellness-272/haartransplantation-tuerkei",
+    "https://www.insidermonkey.com/blog/top-10-hair-transplant-clinics-in-turkey-2025-edition-1575488",
+    "https://www.gigwise.com/the-10-best-hair-transplant-clinics-in-turkey-for-international-patients/",
+    "https://hollywoodlife.com/2026/03/27/top-10-hair-transplant-clinics-in-turkey/amp/",
+    "https://pressbooks.cuny.edu/vision/part/top-10-hair-transplant-clinics-istanbul-2026/",
+    "https://www.jpost.com/health-and-wellness/article-907161",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-top-7-kliniken-im-vergleich"
+   ],
+   "trustpilot": "https://uk.trustpilot.com/review/www.veraclinic.net?page=4",
+   "opmerking": "De About-pagina noemt oprichter Kazim Sipahi zonder medische titel en geen artsen met naam. Lijsten noemen Dr. Emin Gül (niet op eigen site gecontroleerd). Trustpilot-titel: 1.863 reviews."
+  },
+  {
+   "naam": "Cosmedica",
+   "stad": "Istanbul",
+   "site": "cosmedica.com",
+   "site_bron": "https://cosmedica.com/de/dr-levent-acar",
+   "artsen": [
+    {
+     "naam": "Levent Acar",
+     "titel": "Dr., Haartransplantation Spezialist, Gründer und Leiter der Cosmedica Clinic",
+     "bron": "https://cosmedica.com/de/dr-levent-acar"
+    }
+   ],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://www.ibtimes.co.uk/top-hair-transplant-clinics-turkey-1790109",
+    "https://www.the-berliner.com/berlin/top-10-best-hair-transplant-clinics-in-turkey-reviewed/",
+    "https://www.flaunt.com/post/best-hair-transplant-clinics-in-turkey-for-2026",
+    "https://resident.com/style-and-personal-care-resources/2026/09/22/best-hair-transplant-clinics-in-turkey-in-2026-10-clinics-to-compare",
+    "https://resident.com/style-and-personal-care-resources/2026/08/22/10-best-hair-transplant-clinics-in-turkey-2026-a-mens-grooming-guide",
+    "https://fortune.com/press-releases/best-hair-transplant-turkey-2026-ranking-price-tech-success-rates-2025-12-22",
+    "https://sociallifemagazine.com/the-archive/top-10-hair-transplant-clinics-in-turkey-2026/",
+    "https://euroweeklynews.com/2026/10/19/top-10-hair-transplant-doctors-in-turkey-2026-the-surgeons-behind-the-best-results/",
+    "https://www.under30ceo.com/ten-hair-transplant-doctors-based-in-turkey-to-look-for-in-2026/",
+    "https://www.heidelberg24.de/ratgeber/die-beste-haartransplantation-tuerkei-testsieger-2026-unter-den-top-10-kliniken-92282539.html",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-testsieger-vergleich",
+    "https://www.top10berlin.de/de/cat/wellness-272/haartransplantation-tuerkei",
+    "https://www.gigwise.com/the-10-best-hair-transplant-clinics-in-turkey-for-international-patients/",
+    "https://hollywoodlife.com/2026/03/27/top-10-hair-transplant-clinics-in-turkey/amp/",
+    "https://pressbooks.cuny.edu/vision/part/top-10-hair-transplant-clinics-istanbul-2026/",
+    "https://www.jpost.com/health-and-wellness/article-907161",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-top-7-kliniken-im-vergleich"
+   ],
+   "trustpilot": "https://au.trustpilot.com/review/cosmedica.com?page=10"
+  },
+  {
+   "naam": "Dr. Serkan Aygın Clinic",
+   "stad": "Istanbul",
+   "site": "drserkanaygin.com",
+   "site_bron": "https://drserkanaygin.com/about/",
+   "artsen": [
+    {
+     "naam": "Serkan Aygın",
+     "titel": "Dr., Medical director (Dermatology)",
+     "bron": "https://drserkanaygin.com/about/"
+    }
+   ],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://www.ibtimes.co.uk/top-hair-transplant-clinics-turkey-1790109",
+    "https://www.the-berliner.com/berlin/top-10-best-hair-transplant-clinics-in-turkey-reviewed/",
+    "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+    "https://resident.com/style-and-personal-care-resources/2026/09/22/best-hair-transplant-clinics-in-turkey-in-2026-10-clinics-to-compare",
+    "https://resident.com/style-and-personal-care-resources/2026/08/22/10-best-hair-transplant-clinics-in-turkey-2026-a-mens-grooming-guide",
+    "https://fortune.com/press-releases/best-hair-transplant-turkey-2026-ranking-price-tech-success-rates-2025-12-22",
+    "https://euroweeklynews.com/2026/10/19/top-10-hair-transplant-doctors-in-turkey-2026-the-surgeons-behind-the-best-results/",
+    "https://www.under30ceo.com/ten-hair-transplant-doctors-based-in-turkey-to-look-for-in-2026/",
+    "https://www.heidelberg24.de/ratgeber/die-beste-haartransplantation-tuerkei-testsieger-2026-unter-den-top-10-kliniken-92282539.html",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-testsieger-vergleich",
+    "https://www.top10berlin.de/de/cat/wellness-272/haartransplantation-tuerkei",
+    "https://www.gigwise.com/the-10-best-hair-transplant-clinics-in-turkey-for-international-patients/",
+    "https://pressbooks.cuny.edu/vision/part/top-10-hair-transplant-clinics-istanbul-2026/",
+    "https://www.jpost.com/health-and-wellness/article-907161",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-top-7-kliniken-im-vergleich"
+   ],
+   "trustpilot": "https://no.trustpilot.com/review/www.drserkanaygin.com"
+  },
+  {
+   "naam": "Dr. Kaan Pekiner",
+   "stad": "Ankara",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+    "https://medihair.com/de/haartransplantation-tuerkei/",
+    "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+    "https://fortune.com/press-releases/best-hair-transplant-turkey-2026-ranking-price-tech-success-rates-2025-12-22",
+    "https://resident.com/travel-resources/2026/10/21/the-best-hair-transplant-clinics-in-turkey-for-luxury-travellers-where-high-standards-meet-world-class-results-in-2026",
+    "https://www.apetogentleman.com/best-hair-transplant-surgeons-turkey/",
+    "https://euroweeklynews.com/2026/10/19/top-10-hair-transplant-doctors-in-turkey-2026-the-surgeons-behind-the-best-results/",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-testsieger-vergleich",
+    "https://medihair.com/de/location/tuerkei/",
+    "https://www.hairrestorationnetwork.com/topic/69824-if-money-is-no-object-what-are-the-top-5-docs-in-turkey-for-ht/",
+    "https://www.hairrestorationnetwork.com/topic/65565-looking-for-clinics-in-turkey-not-hlc/page/2/",
+    "https://www.hairrestorationnetwork.com/topic/56967-advice-needed-who-to-choose-in-turkey/",
+    "https://ishrs.org/doctor/607225/"
+   ],
+   "opmerking": "Officiële site niet gevonden; arts volgt uit de kliniknaam, niet op een eigen site gecontroleerd. Meest genoemde arts in forumdraad HRN 69824 (6 posters)."
+  },
+  {
+   "naam": "Dr. Resul Yaman Hair Clinic (Yaman Surgery Center)",
+   "stad": "Istanbul",
+   "site": "resulyaman.com",
+   "site_bron": "https://nl.trustpilot.com/review/resulyaman.com",
+   "artsen": [],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+    "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+    "https://resident.com/style-and-personal-care-resources/2026/08/22/10-best-hair-transplant-clinics-in-turkey-2026-a-mens-grooming-guide",
+    "https://mail.hairlosslearningcenter.org/best-hair-transplant-surgeons-turkey",
+    "https://www.apetogentleman.com/best-hair-transplant-surgeons-turkey/",
+    "https://www.realself.com/find/Turkey/Hair-Restoration-Surgeon",
+    "https://www.under30ceo.com/ten-hair-transplant-doctors-based-in-turkey-to-look-for-in-2026/",
+    "https://www.jpost.com/health-and-wellness/article-907161",
+    "https://www.hairrestorationnetwork.com/topic/65565-looking-for-clinics-in-turkey-not-hlc/page/2/",
+    "https://www.hairrestorationnetwork.com/topic/56967-advice-needed-who-to-choose-in-turkey/",
+    "https://mail.hairlosslearningcenter.org/hair-transplant-network-recommends-dr-resul-yaman-istanbul-turkey",
+    "https://www.iahrs.org/hair-transplant/resul-yaman"
+   ],
+   "trustpilot": "https://nl.trustpilot.com/review/resulyaman.com",
+   "opmerking": "Eigen site niet opgehaald; arts volgt uit de kliniknaam."
+  },
+  {
+   "naam": "FUECAPILAR",
+   "stad": "Istanbul",
+   "site": "fuecapilar.com",
+   "site_bron": "https://www.americanhairloss.org/hair-transplant-surgeons/dogan-turan/",
+   "artsen": [],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+    "https://medihair.com/de/haartransplantation-tuerkei/",
+    "https://www.apetogentleman.com/best-hair-transplant-surgeons-turkey/",
+    "https://www.realself.com/find/Turkey/Hair-Restoration-Surgeon",
+    "https://americanhairloss.org/hair-transplant-surgeons",
+    "https://medihair.com/de/location/tuerkei/",
+    "https://www.hairrestorationnetwork.com/topic/69824-if-money-is-no-object-what-are-the-top-5-docs-in-turkey-for-ht/",
+    "https://www.hairrestorationnetwork.com/topic/65565-looking-for-clinics-in-turkey-not-hlc/page/2/",
+    "https://mail.hairlosslearningcenter.org/dr-dogan-turan",
+    "https://mail.hairlosslearningcenter.org/dr-gokhan-gur",
+    "https://www.iahrs.org/hair-transplant/do%C4%9Fan-turan"
+   ],
+   "opmerking": "Kliniek van Dr. Doğan Turan; Hair Transplant Network plaatst ook Dr. Gökhan Gür bij FUECAPILAR (Kadıköy). Medihair noemt Dr. Gür apart. Eigen site (fuecapilar.com/en) kon niet worden opgehaald, dus artsen niet op de eigen site gecontroleerd."
+  },
+  {
+   "naam": "Dr. Muttalip Keser (Derma-Plast Clinic)",
+   "stad": "Ankara",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+    "https://medihair.com/de/haartransplantation-tuerkei/",
+    "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+    "https://www.apetogentleman.com/best-hair-transplant-surgeons-turkey/",
+    "https://medihair.com/de/location/tuerkei/",
+    "https://www.insidermonkey.com/blog/top-10-hair-transplant-clinics-in-turkey-2025-edition-1575488",
+    "https://www.hairrestorationnetwork.com/topic/69824-if-money-is-no-object-what-are-the-top-5-docs-in-turkey-for-ht/",
+    "https://www.hairrestorationnetwork.com/topic/65565-looking-for-clinics-in-turkey-not-hlc/page/2/",
+    "https://londonlovesbusiness.com/the-five-clinics-worth-considering-for-a-hair-transplant-in-turkey-in-2026-and-the-one-that-leads-them-all/"
+   ],
+   "opmerking": "Officiële site niet gevonden. Insidermonkey zet hem onder Istanbul maar geeft een adres in Çankaya (Ankara)."
+  },
+  {
+   "naam": "Elithair",
+   "stad": "Istanbul",
+   "site": "elithairtransplant.com",
+   "site_bron": "https://www.ausgezeichnet.org/bewertungen-elithairtransplant.com-26GZ80",
+   "artsen": [],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://www.the-berliner.com/berlin/top-10-best-hair-transplant-clinics-in-turkey-reviewed/",
+    "https://northpennnow.com/news/2026/apr/01/top-10-hair-transplant-clinics-in-turkey-2026-what-to-know-before-you-book-a-flight",
+    "https://azbigmedia.com/lifestyle/top-10-hair-transplant-clinics-in-turkey-only-surgeon-performed-surgery/",
+    "https://community.realself.com/forum/clinics-turkey-recommend-hair-transplant",
+    "https://ostdeutscheallgemeine.com/article/top-5-der-besten-haartransplantation-kliniken-in-der-tuerkei-10008940",
+    "https://medihair.com/de/location/tuerkei/",
+    "https://hollywoodlife.com/2026/03/27/top-10-hair-transplant-clinics-in-turkey/amp/",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-top-7-kliniken-im-vergleich",
+    "https://www.mallorcamagazin.com/nachrichten/leben-und-stil/2025/11/14/144681/beste-haartransplantation-klinik-der-turkei-treffen-sie-die-richtige-wahl.html"
+   ],
+   "opmerking": "Sterk in Duitsland. Lijsten noemen Dr. Abdulaziz Balwi; northpennnow en azbigmedia noemen ten onrechte Dr. Levent Acar. Eigen site niet opgehaald."
+  },
+  {
+   "naam": "Özlem Biçer, MD Clinic",
+   "stad": "Istanbul",
+   "site": "ozlembicer.com",
+   "site_bron": "https://www.americanhairloss.org/?p=913",
+   "artsen": [],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+    "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+    "https://www.apetogentleman.com/best-hair-transplant-surgeons-turkey/",
+    "https://euroweeklynews.com/2026/10/19/top-10-hair-transplant-doctors-in-turkey-2026-the-surgeons-behind-the-best-results/",
+    "https://americanhairloss.org/hair-transplant-surgeons",
+    "https://www.hairrestorationnetwork.com/topic/69824-if-money-is-no-object-what-are-the-top-5-docs-in-turkey-for-ht/",
+    "https://www.hairrestorationnetwork.com/topic/65565-looking-for-clinics-in-turkey-not-hlc/page/2/",
+    "https://iahrs.org/hair-transplant/ozlem-bicer"
+   ],
+   "opmerking": "AHLA-gids: Ataşehir, Istanbul. Eigen site niet opgehaald."
+  },
+  {
+   "naam": "AHD Clinic",
+   "stad": "Antalya",
+   "site": "drhakandoganay.com",
+   "site_bron": "https://www.americanhairloss.org/hair-transplant-surgeons/hakan-doganay/",
+   "artsen": [],
+   "vermeld_in": [
+    "https://resident.com/style-and-personal-care-resources/2026/08/22/10-best-hair-transplant-clinics-in-turkey-2026-a-mens-grooming-guide",
+    "https://fortune.com/press-releases/best-hair-transplant-turkey-2026-ranking-price-tech-success-rates-2025-12-22",
+    "https://www.apetogentleman.com/best-hair-transplant-surgeons-turkey/",
+    "https://www.realself.com/find/Turkey/Hair-Restoration-Surgeon",
+    "https://americanhairloss.org/hair-transplant-surgeons",
+    "https://www.under30ceo.com/ten-hair-transplant-doctors-based-in-turkey-to-look-for-in-2026/",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-testsieger-vergleich",
+    "https://www.insidermonkey.com/blog/top-10-hair-transplant-clinics-in-turkey-2025-edition-1575488",
+    "https://www.jpost.com/health-and-wellness/article-907161"
+   ],
+   "opmerking": "Kliniek van Dr. Hakan Doğanay, Serik (Antalya) volgens AHLA; jpost noemt ook Istanbul. Eigen site niet opgehaald."
+  },
+  {
+   "naam": "Hermest Hair Clinic",
+   "stad": "Istanbul",
+   "site": "hermestclinic.com",
+   "site_bron": "https://uk.trustpilot.com/review/hermestclinic.com",
+   "artsen": [],
+   "vermeld_in": [
+    "https://www.the-berliner.com/berlin/top-10-best-hair-transplant-clinics-in-turkey-reviewed/",
+    "https://www.flaunt.com/post/best-hair-transplant-clinics-in-turkey-for-2026",
+    "https://fortune.com/press-releases/best-hair-transplant-turkey-2026-ranking-price-tech-success-rates-2025-12-22",
+    "https://sociallifemagazine.com/the-archive/top-10-hair-transplant-clinics-in-turkey-2026/",
+    "https://resident.com/travel-resources/2026/10/21/the-best-hair-transplant-clinics-in-turkey-for-luxury-travellers-where-high-standards-meet-world-class-results-in-2026",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-testsieger-vergleich",
+    "https://www.top10berlin.de/de/cat/wellness-272/haartransplantation-tuerkei",
+    "https://hollywoodlife.com/2026/03/27/top-10-hair-transplant-clinics-in-turkey/amp/",
+    "https://londonlovesbusiness.com/the-five-clinics-worth-considering-for-a-hair-transplant-in-turkey-in-2026-and-the-one-that-leads-them-all/"
+   ],
+   "trustpilot": "https://uk.trustpilot.com/review/hermestclinic.com",
+   "opmerking": "Kadıköy. Lijsten noemen Dr. Ahmet Murat en Dr. Nesim Tüğen (niet op eigen site gecontroleerd). Trustpilot-titel: 1.109 reviews."
+  },
+  {
+   "naam": "Armamed (Dr. Erkan Demirsoy)",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+    "https://medihair.com/de/haartransplantation-tuerkei/",
+    "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+    "https://www.apetogentleman.com/best-hair-transplant-surgeons-turkey/",
+    "https://www.insidermonkey.com/blog/top-10-hair-transplant-clinics-in-turkey-2025-edition-1575488",
+    "https://www.hairrestorationnetwork.com/topic/65565-looking-for-clinics-in-turkey-not-hlc/page/2/",
+    "https://www.hairrestorationnetwork.com/topic/56967-advice-needed-who-to-choose-in-turkey/"
+   ],
+   "opmerking": "Officiële site niet gevonden."
+  },
+  {
+   "naam": "Dr. Cinik Hospital",
+   "stad": "Istanbul",
+   "site": "emrahcinik.com",
+   "site_bron": "https://emrahcinik.com/emrah-cink-md",
+   "artsen": [
+    {
+     "naam": "Emrah Cinik",
+     "titel": "Dr, Leading Hair Transplant Surgeon",
+     "bron": "https://emrahcinik.com/emrah-cink-md"
+    }
+   ],
+   "vermeld_in": [
+    "https://medihair.com/de/haartransplantation-tuerkei/",
+    "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+    "https://northpennnow.com/news/2026/apr/01/top-10-hair-transplant-clinics-in-turkey-2026-what-to-know-before-you-book-a-flight",
+    "https://azbigmedia.com/lifestyle/top-10-hair-transplant-clinics-in-turkey-only-surgeon-performed-surgery/",
+    "https://www.under30ceo.com/ten-hair-transplant-doctors-based-in-turkey-to-look-for-in-2026/",
+    "https://medihair.com/de/location/tuerkei/",
+    "https://www.hairrestorationnetwork.com/topic/56967-advice-needed-who-to-choose-in-turkey/"
+   ],
+   "trustpilot": "https://www.trustpilot.com/review/emrahcinik.com?page=6",
+   "opmerking": "Adres eigen site: Dikilitaş, Beşiktaş, Istanbul. Trustpilot-titel: 6.831 reviews."
+  },
+  {
+   "naam": "Asli Tarcan Clinic",
+   "stad": "Istanbul",
+   "site": "aslitarcanclinic.com",
+   "site_bron": "https://se.trustpilot.com/review/aslitarcanclinic.com",
+   "artsen": [],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://www.the-berliner.com/berlin/top-10-best-hair-transplant-clinics-in-turkey-reviewed/",
+    "https://euroweeklynews.com/2026/10/15/ten-hair-transplant-clinics-in-turkey-worth-researching-in-2026/",
+    "https://www.heidelberg24.de/ratgeber/die-beste-haartransplantation-tuerkei-testsieger-2026-unter-den-top-10-kliniken-92282539.html",
+    "https://www.top10berlin.de/de/cat/wellness-272/haartransplantation-tuerkei",
+    "https://hollywoodlife.com/2026/03/27/top-10-hair-transplant-clinics-in-turkey/amp/"
+   ],
+   "trustpilot": "https://se.trustpilot.com/review/aslitarcanclinic.com",
+   "opmerking": "Euroweeklynews noemt Dr. Bülent Catikkas als hoofdarts (niet op eigen site gecontroleerd). Trustpilot-titel: 821 reviews."
+  },
+  {
+   "naam": "Estepera Hair Clinic",
+   "stad": "Istanbul",
+   "site": "estepera.com",
+   "site_bron": "https://trustpilot.com/review/estepera.com",
+   "artsen": [],
+   "vermeld_in": [
+    "https://www.the-berliner.com/berlin/top-10-best-hair-transplant-clinics-in-turkey-reviewed/",
+    "https://resident.com/style-and-personal-care-resources/2026/09/22/best-hair-transplant-clinics-in-turkey-in-2026-10-clinics-to-compare",
+    "https://northpennnow.com/news/2026/apr/01/top-10-hair-transplant-clinics-in-turkey-2026-what-to-know-before-you-book-a-flight",
+    "https://azbigmedia.com/lifestyle/top-10-hair-transplant-clinics-in-turkey-only-surgeon-performed-surgery/",
+    "https://hollywoodlife.com/2026/03/27/top-10-hair-transplant-clinics-in-turkey/amp/",
+    "https://pressbooks.cuny.edu/vision/part/top-10-hair-transplant-clinics-istanbul-2026/"
+   ],
+   "trustpilot": "https://trustpilot.com/review/estepera.com"
+  },
+  {
+   "naam": "Hair of Istanbul",
+   "stad": "Istanbul",
+   "site": "hairofistanbul.com",
+   "site_bron": "https://www.hairofistanbul.com/medical-team",
+   "artsen": [
+    {
+     "naam": "Mahmut Satekin",
+     "titel": "Dr",
+     "bron": "https://www.hairofistanbul.com/medical-team"
+    },
+    {
+     "naam": "Ahmet Dilber",
+     "titel": "Dr",
+     "bron": "https://www.hairofistanbul.com/medical-team"
+    },
+    {
+     "naam": "Barış Adaklı",
+     "titel": "Specialist Dr",
+     "bron": "https://www.hairofistanbul.com/medical-team"
+    },
+    {
+     "naam": "Hayriye Dilber",
+     "titel": "Dr",
+     "bron": "https://www.hairofistanbul.com/medical-team"
+    }
+   ],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://northpennnow.com/news/2026/apr/01/top-10-hair-transplant-clinics-in-turkey-2026-what-to-know-before-you-book-a-flight",
+    "https://azbigmedia.com/lifestyle/top-10-hair-transplant-clinics-in-turkey-only-surgeon-performed-surgery/",
+    "https://community.realself.com/forum/clinics-turkey-recommend-hair-transplant",
+    "https://www.top10berlin.de/de/cat/wellness-272/haartransplantation-tuerkei",
+    "https://pressbooks.cuny.edu/vision/part/top-10-hair-transplant-clinics-istanbul-2026/"
+   ],
+   "opmerking": "Adres eigen site: Ataköy, Bakırköy, Istanbul. Sponsorlijsten noemen Dr. Adem Aydin; die staat niet op de medical-team-pagina."
+  },
+  {
+   "naam": "Clinicana",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://www.flaunt.com/post/best-hair-transplant-clinics-in-turkey-for-2026",
+    "https://resident.com/style-and-personal-care-resources/2026/08/22/10-best-hair-transplant-clinics-in-turkey-2026-a-mens-grooming-guide",
+    "https://sociallifemagazine.com/the-archive/top-10-hair-transplant-clinics-in-turkey-2026/",
+    "https://www.top10berlin.de/de/cat/wellness-272/haartransplantation-tuerkei",
+    "https://www.jpost.com/health-and-wellness/article-907161",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-top-7-kliniken-im-vergleich"
+   ],
+   "opmerking": "In het Acıbadem Taksim-ziekenhuis volgens lijsten. Hamburg-magazin noemt Prof. Dr. Soner Tatlıdede (niet op eigen site gecontroleerd)."
+  },
+  {
+   "naam": "Nimclinic",
+   "stad": "Istanbul",
+   "site": "nimclinic.com",
+   "site_bron": "https://au.trustpilot.com/review/nimclinic.com?page=4",
+   "artsen": [],
+   "vermeld_in": [
+    "https://fortune.com/press-releases/best-hair-transplant-turkey-2026-ranking-price-tech-success-rates-2025-12-22",
+    "https://resident.com/travel-resources/2026/10/21/the-best-hair-transplant-clinics-in-turkey-for-luxury-travellers-where-high-standards-meet-world-class-results-in-2026",
+    "https://www.heidelberg24.de/ratgeber/die-beste-haartransplantation-tuerkei-testsieger-2026-unter-den-top-10-kliniken-92282539.html",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-testsieger-vergleich",
+    "https://hollywoodlife.com/2026/03/27/top-10-hair-transplant-clinics-in-turkey/amp/",
+    "https://londonlovesbusiness.com/the-five-clinics-worth-considering-for-a-hair-transplant-in-turkey-in-2026-and-the-one-that-leads-them-all/"
+   ],
+   "trustpilot": "https://au.trustpilot.com/review/nimclinic.com?page=4",
+   "opmerking": "Lijsten noemen Dr. Musa Yetim (niet op eigen site gecontroleerd)."
+  },
+  {
+   "naam": "Dr. Terziler Exclusive Clinic",
+   "stad": "Istanbul",
+   "site": "drterziler.com",
+   "site_bron": "https://nz.trustpilot.com/review/drterziler.com",
+   "artsen": [],
+   "vermeld_in": [
+    "https://resident.com/style-and-personal-care-resources/2026/09/22/best-hair-transplant-clinics-in-turkey-in-2026-10-clinics-to-compare",
+    "https://resident.com/style-and-personal-care-resources/2026/08/22/10-best-hair-transplant-clinics-in-turkey-2026-a-mens-grooming-guide",
+    "https://www.top10berlin.de/de/cat/wellness-272/haartransplantation-tuerkei",
+    "https://www.gigwise.com/the-10-best-hair-transplant-clinics-in-turkey-for-international-patients/",
+    "https://www.jpost.com/health-and-wellness/article-907161"
+   ],
+   "trustpilot": "https://nz.trustpilot.com/review/drterziler.com",
+   "opmerking": "Arts volgt uit de naam (Dr. Servet Terziler volgens lijsten). Trustpilot-titel: 259 reviews."
+  },
+  {
+   "naam": "MedHair Clinic",
+   "stad": "Istanbul",
+   "site": "medhairclinic.eu",
+   "site_bron": "https://www.trustpilot.com/review/medhairclinic.eu",
+   "artsen": [],
+   "vermeld_in": [
+    "https://www.the-berliner.com/berlin/top-10-best-hair-transplant-clinics-in-turkey-reviewed/",
+    "https://www.flaunt.com/post/best-hair-transplant-clinics-in-turkey-for-2026",
+    "https://sociallifemagazine.com/the-archive/top-10-hair-transplant-clinics-in-turkey-2026/",
+    "https://www.heidelberg24.de/ratgeber/die-beste-haartransplantation-tuerkei-testsieger-2026-unter-den-top-10-kliniken-92282539.html",
+    "https://hollywoodlife.com/2026/03/27/top-10-hair-transplant-clinics-in-turkey/amp/"
+   ],
+   "trustpilot": "https://www.trustpilot.com/review/medhairclinic.eu",
+   "opmerking": "Lijsten noemen Dr. Vedat Tosun en de Liv Hospital (niet op eigen site gecontroleerd)."
+  },
+  {
+   "naam": "Dr. Ekrem Civas (Civas & Akpınar Hair Transplant)",
+   "stad": "Ankara",
+   "site": "civashairtransplant.com",
+   "site_bron": "https://www.americanhairloss.org/hair-transplant-surgeons/ekrem-civas/",
+   "artsen": [],
+   "vermeld_in": [
+    "https://www.apetogentleman.com/best-hair-transplant-surgeons-turkey/",
+    "https://americanhairloss.org/hair-transplant-surgeons",
+    "https://www.gigwise.com/the-10-best-hair-transplant-clinics-in-turkey-for-international-patients/",
+    "https://iahrs.org/hair-transplant/ekrem-civas",
+    "https://ishrs.org/doctor/ekrem-civas/"
+   ],
+   "trustpilot": "https://www.trustpilot.com/review/civashairtransplant.com"
+  },
+  {
+   "naam": "Dr. Bekir Bek Hair Transplant",
+   "stad": "Ankara",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+    "https://www.apetogentleman.com/best-hair-transplant-surgeons-turkey/",
+    "https://medihair.com/de/location/tuerkei/",
+    "https://mail.hairlosslearningcenter.org/dr-bek",
+    "https://www.hairrestorationnetwork.com/topic/71112-drbekir-bek-3511-grafts-ankara/"
+   ],
+   "opmerking": "Adres volgens Hair Transplant Network: Çukurambar, Ankara. Officiële site niet bevestigd."
+  },
+  {
+   "naam": "EsteNove",
+   "stad": "",
+   "site": "estenove.com",
+   "site_bron": "https://jp.trustpilot.com/review/estenove.com",
+   "artsen": [],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://www.ibtimes.co.uk/top-hair-transplant-clinics-turkey-1790109",
+    "https://www.flaunt.com/post/best-hair-transplant-clinics-in-turkey-for-2026",
+    "https://sociallifemagazine.com/the-archive/top-10-hair-transplant-clinics-in-turkey-2026/"
+   ]
+  },
+  {
+   "naam": "Memorial Hair Transplant Center (Memorial Hospitals)",
+   "stad": "Istanbul",
+   "site": "memorial.com.tr",
+   "site_bron": "https://www.memorial.com.tr/en/doctors",
+   "artsen": [],
+   "vermeld_in": [
+    "https://www.flaunt.com/post/best-hair-transplant-clinics-in-turkey-for-2026",
+    "https://sociallifemagazine.com/the-archive/top-10-hair-transplant-clinics-in-turkey-2026/",
+    "https://us-uk.bookimed.com/clinics/country=turkey/procedure=hair-transplant/best/",
+    "https://medihair.com/de/location/tuerkei/"
+   ],
+   "opmerking": "Ziekenhuisgroep; Bookimed noemt Memorial Şişli en Memorial Bahçelievler, Medihair Dr Mehmet Dogruer."
+  },
+  {
+   "naam": "Dr. Tayfun Oğuzoğlu",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://www.realself.com/find/Turkey/Hair-Restoration-Surgeon",
+    "https://www.under30ceo.com/ten-hair-transplant-doctors-based-in-turkey-to-look-for-in-2026/",
+    "https://www.gigwise.com/the-10-best-hair-transplant-clinics-in-turkey-for-international-patients/"
+   ]
+  },
+  {
+   "naam": "Este Medical Group",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://www.the-berliner.com/berlin/top-10-best-hair-transplant-clinics-in-turkey-reviewed/",
+    "https://www.top10berlin.de/de/cat/wellness-272/haartransplantation-tuerkei",
+    "https://hollywoodlife.com/2026/03/27/top-10-hair-transplant-clinics-in-turkey/amp/"
+   ]
+  },
+  {
+   "naam": "Now Hair Time",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://northpennnow.com/news/2026/apr/01/top-10-hair-transplant-clinics-in-turkey-2026-what-to-know-before-you-book-a-flight",
+    "https://azbigmedia.com/lifestyle/top-10-hair-transplant-clinics-in-turkey-only-surgeon-performed-surgery/"
+   ]
+  },
+  {
+   "naam": "Long Hair Center",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://cal1.lr.ggtyler.dev/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+    "https://northpennnow.com/news/2026/apr/01/top-10-hair-transplant-clinics-in-turkey-2026-what-to-know-before-you-book-a-flight",
+    "https://azbigmedia.com/lifestyle/top-10-hair-transplant-clinics-in-turkey-only-surgeon-performed-surgery/"
+   ]
+  },
+  {
+   "naam": "Sule Hair Transplant",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://northpennnow.com/news/2026/apr/01/top-10-hair-transplant-clinics-in-turkey-2026-what-to-know-before-you-book-a-flight",
+    "https://azbigmedia.com/lifestyle/top-10-hair-transplant-clinics-in-turkey-only-surgeon-performed-surgery/",
+    "https://www.under30ceo.com/ten-hair-transplant-doctors-based-in-turkey-to-look-for-in-2026/"
+   ],
+   "opmerking": "Twee van de drie bronnen zijn gesponsorde stukken die Sule bovenaan zetten."
+  },
+  {
+   "naam": "Hair Center of Turkey",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://resident.com/style-and-personal-care-resources/2026/09/22/best-hair-transplant-clinics-in-turkey-in-2026-10-clinics-to-compare",
+    "https://resident.com/style-and-personal-care-resources/2026/08/22/10-best-hair-transplant-clinics-in-turkey-2026-a-mens-grooming-guide",
+    "https://www.jpost.com/health-and-wellness/article-907161"
+   ]
+  },
+  {
+   "naam": "Este Favor",
+   "stad": "Istanbul",
+   "site": "estefavor.com",
+   "site_bron": "https://uk.trustpilot.com/review/estefavor.com",
+   "artsen": [],
+   "vermeld_in": [
+    "https://www.jpost.com/consumerism/article-889959",
+    "https://euroweeklynews.com/2026/10/15/ten-hair-transplant-clinics-in-turkey-worth-researching-in-2026/",
+    "https://euroweeklynews.com/2026/10/19/top-10-hair-transplant-doctors-in-turkey-2026-the-surgeons-behind-the-best-results/"
+   ],
+   "trustpilot": "https://uk.trustpilot.com/review/estefavor.com"
+  },
+  {
+   "naam": "Hairmedico (Dr. Arslan Musbeh)",
+   "stad": "Istanbul",
+   "site": "hairmedico.com",
+   "site_bron": "https://hairmedico.com/best-hair-transplant-in-turkey-reddit-2025",
+   "artsen": [],
+   "vermeld_in": [
+    "https://medihair.com/de/haartransplantation-tuerkei/",
+    "https://medihair.com/de/location/tuerkei/",
+    "https://www.hairrestorationnetwork.com/topic/62720-dr-arslan-musbeh-from-hairmedico-in-istanbul-any-thoughtsfeedback-from-20212022/"
+   ]
+  },
+  {
+   "naam": "Capital Hair Center",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://resident.com/style-and-personal-care-resources/2026/08/22/10-best-hair-transplant-clinics-in-turkey-2026-a-mens-grooming-guide",
+    "https://www.jpost.com/health-and-wellness/article-907161"
+   ],
+   "opmerking": "Lijsten noemen Dr. Ekrem Keskin."
+  },
+  {
+   "naam": "Esteworld",
+   "stad": "",
+   "site": "esteworld.com.tr",
+   "site_bron": "https://au.trustpilot.com/review/www.esteworld.com.tr",
+   "artsen": [],
+   "vermeld_in": [
+    "https://ostdeutscheallgemeine.com/article/top-5-der-besten-haartransplantation-kliniken-in-der-tuerkei-10008940",
+    "https://www.hamburg-magazin.de/artikel/haartransplantation-tuerkei-top-7-kliniken-im-vergleich"
+   ]
+  },
+  {
+   "naam": "Estetik International (BHT Clinic)",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://www.gigwise.com/the-10-best-hair-transplant-clinics-in-turkey-for-international-patients/",
+    "https://pressbooks.cuny.edu/vision/part/top-10-hair-transplant-clinics-istanbul-2026/"
+   ],
+   "opmerking": "Beide bronnen noemen Dr. Bülent Cihantimur; gigwise noemt ook Bursa."
+  },
+  {
+   "naam": "Capil Clinic",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://euroweeklynews.com/2026/10/19/top-10-hair-transplant-doctors-in-turkey-2026-the-surgeons-behind-the-best-results/",
+    "https://www.insidermonkey.com/blog/top-10-hair-transplant-clinics-in-turkey-2025-edition-1575488"
+   ],
+   "opmerking": "Insidermonkey: Istanbul en Madrid. Euroweeklynews noemt Dr. Oğuz Kayıran."
+  },
+  {
+   "naam": "Sapphire Hair Clinic",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://www.jpost.com/consumerism/article-889959",
+    "https://euroweeklynews.com/2026/10/15/ten-hair-transplant-clinics-in-turkey-worth-researching-in-2026/"
+   ]
+  },
+  {
+   "naam": "HairNeva",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://resident.com/style-and-personal-care-resources/2026/09/22/best-hair-transplant-clinics-in-turkey-in-2026-10-clinics-to-compare",
+    "https://euroweeklynews.com/2026/10/15/ten-hair-transplant-clinics-in-turkey-worth-researching-in-2026/"
+   ]
+  },
+  {
+   "naam": "BUK Clinic",
+   "stad": "Istanbul",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://euroweeklynews.com/2026/10/15/ten-hair-transplant-clinics-in-turkey-worth-researching-in-2026/",
+    "https://www.heidelberg24.de/ratgeber/die-beste-haartransplantation-tuerkei-testsieger-2026-unter-den-top-10-kliniken-92282539.html"
+   ]
+  },
+  {
+   "naam": "PROFUE Hair Clinic",
+   "stad": "Antalya",
+   "site": "",
+   "site_bron": "",
+   "artsen": [],
+   "vermeld_in": [
+    "https://www.jpost.com/consumerism/article-889959",
+    "https://kemer-antalya.com/hair-transplant-in-antalya-turkey"
+   ],
+   "opmerking": "Beide bronnen noemen Dr. Erhan Aydoğan."
+  }
+ ]
+}

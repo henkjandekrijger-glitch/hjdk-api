@@ -1,0 +1,85 @@
+{
+  "gecontroleerd": "2026-11-15",
+  "methode": "WebSearch + WebFetch op 2026-11-15. De ISHRS-zoekfunctie (ishrs.org/find-a-doctor) laadt resultaten dynamisch en gaf geen lijst; leden zijn daarom gevonden via losse ISHRS-profielpagina's (ishrs.org/doctor/<id>). De lijst kan onvolledig zijn.",
+  "ishrs": [
+    {"arts": "Kayihan Sahinoglu, MD, FISHRS", "stad": "Istanbul (Atasehir)", "kliniek": "Get New Hair (getnewhair.com); naam kliniek niet op profiel", "lid": "Fellow (FISHRS)", "bron": "https://ishrs.org/doctor/37676"},
+    {"arts": "Ali Emre Karadeniz, MD, FISHRS", "stad": "Istanbul", "kliniek": "AEK Hair Clinic", "lid": "Fellow (FISHRS)", "bron": "https://ishrs.org/doctor/50809/"},
+    {"arts": "Ozlem Bicer, MD, FISHRS", "stad": "Istanbul (Atasehir)", "kliniek": "Dr. Ozlem Bicer MD Clinic", "lid": "Fellow (FISHRS) volgens https://ishrs.org/doctor/ozlem-bicer/; de pagina https://ishrs.org/doctor/629051 toont 'Full Member'", "bron": "https://ishrs.org/doctor/ozlem-bicer/"},
+    {"arts": "Ekrem Civas, MD, MBA, FISHRS", "stad": "Ankara", "kliniek": "Dr. Civas Hair Transplant Clinic (civashairtransplant.com)", "lid": "Fellow (FISHRS)", "bron": "https://ishrs.org/doctor/48947/"},
+    {"arts": "Osman Tayfun Oguzoglu, MD, FISHRS", "stad": "Ankara (Cankaya)", "kliniek": "DrT Hair Transplant Clinic", "lid": "Fellow (FISHRS)", "bron": "https://ishrs.org/doctor/48486/"},
+    {"arts": "Ozgur Oztan, MD, PhD, FISHRS", "stad": "Ankara", "kliniek": "HLC Clinic", "lid": "Fellow (FISHRS)", "bron": "https://ishrs.org/doctor/51125/"},
+    {"arts": "Mehmet (Faruk) Yavuz, MD", "stad": "Istanbul (Besiktas/Etiler)", "kliniek": "niet genoemd (mehmetfarukyavuz.com)", "lid": "Full Member", "bron": "https://ishrs.org/doctor/699392"},
+    {"arts": "Ilhan Serdaroglu, MD", "stad": "Istanbul (Kadikoy/Suadiye)", "kliniek": "Dr. Ilhan Serdaroglu Clinic", "lid": "Full Member", "bron": "https://ishrs.org/doctor/51520/"},
+    {"arts": "M. Sirac Demir, MD", "stad": "Istanbul", "kliniek": "niet genoemd (siracdemir.com / turhair.com)", "lid": "Full Member", "bron": "https://ishrs.org/doctor/618202/"},
+    {"arts": "Ilker Apaydin, MD", "stad": "Istanbul", "kliniek": "Dr. Ilker Apaydin's Clinic", "lid": "Full Member", "bron": "https://ishrs.org/doctor/49926/"},
+    {"arts": "Sait (Gokhan) Bircan, MD", "stad": "Istanbul (Sisli)", "kliniek": "niet genoemd (doctorbircan.com)", "lid": "Full Member (sinds 2017)", "bron": "https://ishrs.org/doctor/618533/"},
+    {"arts": "Meltem Senturk, MD", "stad": "Antalya", "kliniek": "DK Klinik", "lid": "Full Member", "bron": "https://ishrs.org/doctor/617359/"},
+    {"arts": "Melike Kulahci, MD", "stad": "Istanbul (Besiktas/Levent)", "kliniek": "Transmed (medisch directeur)", "lid": "Full Member", "bron": "https://ishrs.org/doctor/37381"},
+    {"arts": "Erkan Demirsoy, MD", "stad": "Istanbul (Atasehir)", "kliniek": "Armamed (hairtransplants-armamed.com)", "lid": "Full Member", "bron": "https://ishrs.org/doctor/48271/"},
+    {"arts": "Kaan Pekiner, MD", "stad": "Ankara", "kliniek": "PHR Clinic (phrclinic.com)", "lid": "Full Member", "bron": "https://ishrs.org/doctor/607225"},
+    {"arts": "Sacit Karademir, MD", "stad": "Istanbul (Nisantasi)", "kliniek": "Natures", "lid": "Associate Member", "bron": "https://ishrs.org/doctor/50490"},
+    {"arts": "Nesim Tugen, MD", "stad": "Istanbul (Kadikoy/Fenerbahce)", "kliniek": "Hermest Clinic (profiel linkt naar hermestclinic.com)", "lid": "Associate Member", "bron": "https://ishrs.org/doctor/nesim-tugen/"},
+    {"arts": "Mehmet Erdogan, MD", "stad": "onbekend", "kliniek": "onbekend; of dit dezelfde Mehmet Erdogan is als die van Smile Hair is niet vastgesteld", "lid": "onbekend: profiel bestaat in zoekindex, maar de pagina gaf geen gegevens", "bron": "https://ishrs.org/doctor/639249"},
+    {"arts": "Ozge Ergun, MD", "stad": "onbekend op ISHRS (Istanbul volgens medihair.com)", "kliniek": "onbekend", "lid": "onbekend: profiel bestaat in zoekindex, maar de pagina gaf geen gegevens", "bron": "https://ishrs.org/doctor/51157/"},
+    {"arts": "Beyhan Zeybek, MD", "stad": "onbekend op ISHRS (Istanbul volgens medihair.com)", "kliniek": "onbekend (profiel-URL verwijst naar plusmedsaglik.com)", "lid": "onbekend: profiel bestaat in zoekindex, maar de pagina laadde niet", "bron": "https://ishrs.org/doctor/48710/"}
+  ],
+  "ishrs_niet_lid_meer": [
+    {"arts": "Koray Erdogan (ASMED)", "wat": "Eigen site: ISHRS-lid 2007-2015, 'left on his own accord'; nu ESHRS, IAHRS, ISHR.", "bron": "https://www.hairtransplantfue.org/about-asmed/dr-koray-erdogan"}
+  ],
+  "abhrs": [
+    {"arts": "Ozlem Bicer", "stad": "Istanbul", "kliniek": "Dr. Ozlem Bicer Clinic", "lid": "Diplomate ABHRS", "bron": "https://abhrs.org/directory/"},
+    {"arts": "Ekrem Civas, Assoc. Prof., MD", "stad": "Ankara", "kliniek": "Nokta Plaza, Cankaya", "lid": "Diplomate ABHRS", "bron": "https://abhrs.org/directory/"},
+    {"arts": "Ali Emre Karadeniz, MD", "stad": "Istanbul", "kliniek": "Atasehir Brandium (AEK Hair Clinic)", "lid": "Diplomate ABHRS", "bron": "https://abhrs.org/directory/"},
+    {"arts": "Osman Tayfun Oguzoglu, MD", "stad": "Istanbul (ABHRS-adres: Medistate Hospital, Kavacik/Beykoz; ISHRS noemt Ankara)", "kliniek": "Medistate Hospital Kavacik / DrT Hair", "lid": "Diplomate ABHRS", "bron": "https://abhrs.org/directory/"},
+    {"arts": "Ozgur Oztan, MD, PhD", "stad": "Ankara", "kliniek": "HLC Medical Clinic", "lid": "Diplomate ABHRS", "bron": "https://abhrs.org/directory/"},
+    {"arts": "Kayihan Sahinoglu, MD", "stad": "Istanbul", "kliniek": "Atasehir Brandium (Get New Hair)", "lid": "Diplomate ABHRS", "bron": "https://abhrs.org/directory/"}
+  ],
+  "abhrs_opmerking": "De ABHRS-directory toonde 326 resultaten wereldwijd; daarin 6 in Turkije. Alle 6 zijn ook ISHRS Fellow.",
+  "jci": [
+    {"instelling": "Memorial Sisli Hospital", "stad": "Istanbul", "sinds": "2002 (eerste JCI in Turkije; vernieuwd 2005, 2008, 2011, 2014 volgens eigen pagina)", "haartransplantatie": "Memorial-groep wel, maar het haarcentrum zit in Memorial Bahcelievler, dat niet als JCI wordt genoemd", "status": "eigen opgave ziekenhuis, niet gecontroleerd bij JCI", "bron": "https://www.memorial.com.tr/en/corporate/qualit-management-system ; https://www.memorial.com.tr/en/hair-transplant-turkey"},
+    {"instelling": "Acibadem Maslak Hospital", "stad": "Istanbul", "sinds": "2010-10-02", "haartransplantatie": "Acibadem-haarunit noemt alleen Taksim, Bakirkoy en Kartal (niet in de JCI-lijst)", "status": "eigen opgave groep, niet gecontroleerd bij JCI", "bron": "https://www.acibadem.com.tr/en/corporate-informations/quality-policy/ ; https://acibademinternational.com/treatment/hair-transplant-center/"},
+    {"instelling": "Acibadem Mehmet Ali Aydinlar University Atakent Hospital", "stad": "Istanbul", "sinds": "2017-12-16", "haartransplantatie": "zie Maslak", "status": "eigen opgave groep, niet gecontroleerd bij JCI", "bron": "https://www.acibadem.com.tr/en/corporate-informations/quality-policy/"},
+    {"instelling": "Acibadem Altunizade Hospital", "stad": "Istanbul", "sinds": "2019-12-14", "haartransplantatie": "zie Maslak", "status": "eigen opgave groep, niet gecontroleerd bij JCI", "bron": "https://www.acibadem.com.tr/en/corporate-informations/quality-policy/"},
+    {"instelling": "Acibadem Kent Hospital", "stad": "Izmir", "sinds": "2006-06-10", "haartransplantatie": "zie Maslak", "status": "eigen opgave groep, niet gecontroleerd bij JCI", "bron": "https://www.acibadem.com.tr/en/corporate-informations/quality-policy/"},
+    {"instelling": "Acibadem Adana Hospital", "stad": "Adana", "sinds": "2010-09-25", "haartransplantatie": "zie Maslak", "status": "eigen opgave groep, niet gecontroleerd bij JCI", "bron": "https://www.acibadem.com.tr/en/corporate-informations/quality-policy/"},
+    {"instelling": "Istanbul Florence Nightingale Hospital", "stad": "Istanbul", "sinds": "2013 (certificaten 2013-2016 t/m 2025-2028)", "haartransplantatie": "niet vastgesteld", "status": "eigen opgave ziekenhuis, niet gecontroleerd bij JCI", "bron": "https://www.florence.com.tr/en-us/jci"},
+    {"instelling": "Medipol Mega Hospitals Complex", "stad": "Istanbul", "sinds": "certificaat Academic Medical Center 2023-02-25 t/m 2026-02-24 (verlenging niet gevonden)", "haartransplantatie": "aangeboden volgens bookimed (derde partij)", "status": "certificaat-PDF ziekenhuis, niet gecontroleerd bij JCI; mogelijk verlopen", "bron": "https://www.medipol.edu.tr/sites/default/files/2023-04/medipol-mega-hospitals-complex-certificate.pdf"},
+    {"instelling": "Medicana Bursa Hastanesi", "stad": "Bursa", "sinds": "certificaat 2025-08-16 t/m 2028-08-15", "haartransplantatie": "niet vastgesteld", "status": "certificaat-PDF ziekenhuis, niet gecontroleerd bij JCI", "bron": "https://img.medicana.com.tr/uploads/jci-sertifika.pdf"}
+  ],
+  "jci_opmerking": "De officiele JCI-zoekfunctie (jointcommissioninternational.org/who-we-are/accredited-organizations) kon niet worden opgehaald (toegang geweigerd in deze sessie). Geen van de genoemde losse haarklinieken (Cosmedica, Aygin, Smile Hair, Vera, Asmed, Hermest, Clinicana, Cinik, Estenove, Este Favor) is met een JCI-bron gevonden. Let op: een JCI-ziekenhuis in een groep betekent niet dat de haarafdeling in dat ziekenhuis zit (Memorial, Acibadem).",
+  "healthturkiye": {
+    "hoe": "healthturkiye.gov.tr kon niet worden opgehaald (toegang geweigerd in deze sessie); of er een publieke zoekfunctie is, is dus niet vastgesteld. Het ministerie (afdeling Sağlık Turizmi, SHGM) publiceert de officiele lijsten van zorgaanbieders met health-tourism-vergunning op https://shgmturizmdb.saglik.gov.tr/EN-69063/healthcare-providers-authorized-by-the-ministry.html (pagina gedateerd 20 aug 2026), verdeeld in vier lijsten: ziekenhuizen (https://shgmturizmdb.saglik.gov.tr/TR-94834/yetkili-hastaneler.html), medische centra (https://shgmturizmdb.saglik.gov.tr/TR-94835/yetkili-tip-merkezleri.html), praktijken/muayenehaneler (https://shgmturizmdb.saglik.gov.tr/TR-94836/yetkili-muayenehaneler.html) en overige zorginstellingen (https://shgmturizmdb.saglik.gov.tr/TR-94837/yetkili-diger-saglik-tesisleri.html). Het zijn webpagina's, geen download; een zoekfunctie wordt niet beschreven. Haarklinieken vallen meestal onder medische centra of overige instellingen (met haartransplantatie-unit), maar dat is niet op de lijsten zelf gecontroleerd. De lijstpagina's blokkeren automatisch ophalen (robots.txt), dus moeten ze met de hand in een browser worden doorzocht (Ctrl+F op de kliniek- of bedrijfsnaam).",
+    "resultaten": [
+      {"kliniek": "Cosmedica", "status": "niet gecontroleerd (lijst niet bereikbaar)", "bron": "https://shgmturizmdb.saglik.gov.tr/EN-69063/healthcare-providers-authorized-by-the-ministry.html"},
+      {"kliniek": "Dr. Serkan Aygin", "status": "niet gecontroleerd (lijst niet bereikbaar)", "bron": "https://shgmturizmdb.saglik.gov.tr/EN-69063/healthcare-providers-authorized-by-the-ministry.html"},
+      {"kliniek": "Smile Hair Clinic", "status": "niet gecontroleerd (lijst niet bereikbaar)", "bron": "https://shgmturizmdb.saglik.gov.tr/EN-69063/healthcare-providers-authorized-by-the-ministry.html"},
+      {"kliniek": "Vera Clinic", "status": "niet gecontroleerd (lijst niet bereikbaar)", "bron": "https://shgmturizmdb.saglik.gov.tr/EN-69063/healthcare-providers-authorized-by-the-ministry.html"},
+      {"kliniek": "Asmed", "status": "niet gecontroleerd (lijst niet bereikbaar)", "bron": "https://shgmturizmdb.saglik.gov.tr/EN-69063/healthcare-providers-authorized-by-the-ministry.html"},
+      {"kliniek": "Hermest", "status": "niet gecontroleerd (lijst niet bereikbaar)", "bron": "https://shgmturizmdb.saglik.gov.tr/EN-69063/healthcare-providers-authorized-by-the-ministry.html"},
+      {"kliniek": "Clinicana", "status": "niet gecontroleerd (lijst niet bereikbaar)", "bron": "https://shgmturizmdb.saglik.gov.tr/EN-69063/healthcare-providers-authorized-by-the-ministry.html"},
+      {"kliniek": "Dr. Cinik", "status": "niet gecontroleerd (lijst niet bereikbaar)", "bron": "https://shgmturizmdb.saglik.gov.tr/EN-69063/healthcare-providers-authorized-by-the-ministry.html"},
+      {"kliniek": "Estenove", "status": "niet gecontroleerd (lijst niet bereikbaar)", "bron": "https://shgmturizmdb.saglik.gov.tr/EN-69063/healthcare-providers-authorized-by-the-ministry.html"},
+      {"kliniek": "Este Favor", "status": "niet gecontroleerd (lijst niet bereikbaar)", "bron": "https://shgmturizmdb.saglik.gov.tr/EN-69063/healthcare-providers-authorized-by-the-ministry.html"}
+    ]
+  },
+  "specialisme": [
+    {"arts": "Ekrem Civas (Ankara)", "specialisme": "dermatoloog", "bron": "https://ishrs.org/doctor/48947/"},
+    {"arts": "Serkan Aygin (Dr. Serkan Aygin Clinic)", "specialisme": "dermatoloog (opleiding Vakif Gureba Hospital), volgens eigen site; geen verenigingen genoemd", "bron": "https://drserkanaygin.com/about/"},
+    {"arts": "Ali Emre Karadeniz (AEK Hair Clinic)", "specialisme": "opleiding plastische chirurgie (ISHRS-profiel)", "bron": "https://ishrs.org/doctor/50809/"},
+    {"arts": "Ilhan Serdaroglu", "specialisme": "plastisch en reconstructief chirurg (ISHRS-profiel)", "bron": "https://ishrs.org/doctor/51520/"},
+    {"arts": "Ilker Apaydin", "specialisme": "esthetisch, plastisch en reconstructief chirurg (ISHRS-profiel)", "bron": "https://ishrs.org/doctor/49926/"},
+    {"arts": "Mehmet Erdogan (Smile Hair)", "specialisme": "geen specialisme in dermatologie of plastische chirurgie genoemd; 'Medical Doctor', certificaat bedrijfsarts; lid SAÇREHDER (voorzitter), World FUE Institute, FUE Europe", "bron": "https://www.smilehairclinic.com/en/doctor/dr-mehmet-erdogan/"},
+    {"arts": "Gokay Bilgin (Smile Hair)", "specialisme": "geen specialisme in dermatologie of plastische chirurgie genoemd; medisch-esthetisch arts, geen verenigingen genoemd", "bron": "https://www.smilehairclinic.com/en/doctor/dr-gokay-bilgin/"},
+    {"arts": "Koray Erdogan (Asmed)", "specialisme": "geen specialisme genoemd; arts (Hacettepe), eerder thoraxchirurgie Marmara", "bron": "https://www.hairtransplantfue.org/about-asmed/dr-koray-erdogan"},
+    {"arts": "Levent Acar (Cosmedica)", "specialisme": "geen specialisme genoemd; neemt deel aan ISHRS-congressen (certificaten 2015-2019), lidmaatschap niet vermeld", "bron": "https://cosmedica.com/de/dr-levent-acar"},
+    {"arts": "Emrah Cinik (Dr. Cinik)", "specialisme": "geen specialisme genoemd; esthetische geneeskunde na arts-diploma Uludag (2002); site noemt 'Membership of ISHRS' onder accreditaties van de kliniek, niet duidelijk of het hem persoonlijk betreft; niet gevonden in de ISHRS-directory", "bron": "https://emrahcinik.com/emrah-cink-md"}
+  ],
+  "specialisme_opmerking": "Geen publieke ledenzoekfunctie gevonden bij TPRECD (dernek.plastikcerrahi.org.tr) of de Turkse Dermatologievereniging (turkdermatoloji.org.tr); lidmaatschap daar is dus voor niemand bevestigd. Voor Vera Clinic, Hermest (behalve Nesim Tugen, ISHRS Associate), Clinicana, Estenove en Este Favor is geen behandelend arts met specialisme uit een publieke bron vastgesteld.",
+  "niet_gecontroleerd": [
+    "ishrs.org/find-a-doctor zoeklijst (dynamisch, niet leesbaar; lijst opgebouwd uit losse profielen)",
+    "jointcommissioninternational.org accredited-organizations zoekfunctie (toegang geweigerd)",
+    "healthturkiye.gov.tr (toegang geweigerd)",
+    "shgmturizmdb.saglik.gov.tr vergunningslijsten (robots.txt blokkeert ophalen)",
+    "ISHRS-profielen 639249, 51157, 48710 (gaven geen gegevens)"
+  ]
+}

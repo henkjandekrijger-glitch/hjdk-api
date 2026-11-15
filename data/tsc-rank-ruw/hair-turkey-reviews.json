@@ -1,0 +1,1034 @@
+{
+ "gecontroleerd": "2026-11-15",
+ "methode": "Trustpilot, RealSelf, Bookimed en clinic-sites opgehaald op 2026-11-15. Trustpilot-cijfers van www.trustpilot.com (lokale versies tonen andere aantallen). Forum: alleen Hair Restoration Network via zoekresultaat-titels.",
+ "niet_bereikbaar": [
+  "WhatClinic (www.whatclinic.com: toestemming niet beantwoord)",
+  "Reddit (old.reddit.com: toestemming niet beantwoord; zoekmachine indexeert reddit niet)",
+  "Hair Restoration Network threads (pagina gaf fout, alleen titels uit zoekresultaten)",
+  "clinicana.com, hermestclinic.com, elithair.co.uk (toestemming niet beantwoord)",
+  "Google-scores uit zoekresultaten (zoekresultaten tonen geen sterren); alleen wat clinic-sites zelf tonen"
+ ],
+ "klinieken": [
+  {
+   "naam": "Cosmedica (Dr. Levent Acar)",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "aantal": 963,
+     "pct_1ster": "2%",
+     "waarschuwing": "Trustpilot WAARSCHUWING: score niet beschikbaar wegens schending richtlijnen; Trustpilot heeft een aantal nep-reviews verwijderd",
+     "bron": "https://www.trustpilot.com/review/cosmedica.com",
+     "gezien": "2026-11-15",
+     "notitie": "205 reviews in laatste 12 mnd; verdeling 94% 5 ster"
+    },
+    {
+     "platform": "RealSelf (praktijk)",
+     "score": 4.0,
+     "aantal": 22,
+     "pct_1ster": null,
+     "waarschuwing": "RealSelf: arts-profiel Levent Acar gemarkeerd 'Account Suspended'; neemt geen consulten via RealSelf",
+     "bron": "https://www.realself.com/practices/cosmedica-istanbul-marmara",
+     "gezien": "2026-11-15"
+    },
+    {
+     "platform": "RealSelf (arts Levent Acar)",
+     "score": 4.8,
+     "aantal": 94,
+     "pct_1ster": null,
+     "waarschuwing": "RealSelf: 'Account Suspended'",
+     "bron": "https://www.realself.com/dr/levent-acar-istanbul-turkey",
+     "gezien": "2026-11-15"
+    },
+    {
+     "platform": "Google (op eigen site)",
+     "score": 4.9,
+     "aantal": null,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://cosmedica.com/",
+     "gezien": "2026-11-15",
+     "notitie": "alleen score in afbeelding-tekst, geen aantal"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "onduidelijk_of_neutraal": [
+     "https://www.hairrestorationnetwork.com/topic/71806-cosmedica-ht-by-dr-acar/",
+     "https://www.hairrestorationnetwork.com/topic/78737-my-4000-graft-hair-transplant-at-cosmedica-vip-dr-levent-acar-my-honest-experience-nearly-one-year-later/",
+     "https://www.hairrestorationnetwork.com/topic/47219-dr-acar-cosmedica-4700-grafts-fue-istanbul-turkey/",
+     "https://www.hairrestorationnetwork.com/topic/48133-dr-acarcosmedica-4000-grafts-15-years-post-results/",
+     "https://www.hairrestorationnetwork.com/topic/46480-my-experience-at-cosmedica-3000-grafts-for-hair-and-beard-on-82510/",
+     "https://hairlosstalk.com/interact/threads/cosmedica-mixed-reports-on-reputation-of-the-clinic.128024/"
+    ],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Dr. Serkan Aygin",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "aantal": 2437,
+     "pct_1ster": "5%",
+     "waarschuwing": "Trustpilot WAARSCHUWING: score niet beschikbaar wegens schending richtlijnen; Trustpilot heeft een aantal nep-reviews verwijderd",
+     "bron": "https://www.trustpilot.com/review/www.drserkanaygin.com",
+     "gezien": "2026-11-15",
+     "notitie": "1.086 reviews in laatste 12 mnd; 88% 5 ster"
+    },
+    {
+     "platform": "RealSelf (arts)",
+     "score": 4.4,
+     "aantal": 56,
+     "pct_1ster": null,
+     "waarschuwing": "zoekresultaat-titel toont 'Account Suspended'; de opgehaalde pagina toonde dat niet",
+     "bron": "https://www.realself.com/dr/serkan-aygin-istanbul-turkey",
+     "gezien": "2026-11-15"
+    },
+    {
+     "platform": "Google (op eigen site)",
+     "score": null,
+     "aantal": null,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.drserkanaygin.com/",
+     "gezien": "2026-11-15",
+     "notitie": "geen score of aantal op de homepage"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "onduidelijk_of_neutraal": [
+     "https://www.hairrestorationnetwork.com/topic/70289-dhi-dr-serkan-aygin-thoughts-awarenessworst-case/",
+     "https://www.hairrestorationnetwork.com/topic/68181-my-hair-transplant-experience-with-dr-serkan-aygin/",
+     "https://www.hairrestorationnetwork.com/topic/68888-dr-serkan-aygin-reviews/",
+     "https://www.hairrestorationnetwork.com/topic/55118-opinion-on-dr-serkan-aygin/",
+     "https://www.hairrestorationnetwork.com/topic/48958-4500-graft-dr-serkan-aygin-turkey/"
+    ],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Smile Hair Clinic",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 4182,
+     "pct_1ster": "1%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief",
+     "bron": "https://www.trustpilot.com/review/smilehairclinic.com",
+     "gezien": "2026-11-15"
+    },
+    {
+     "platform": "RealSelf (praktijk)",
+     "score": 5.0,
+     "aantal": 598,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/smile-hair-clinic-istanbul",
+     "gezien": "2026-11-15",
+     "notitie": "lijstpagina toonde 594"
+    },
+    {
+     "platform": "Bookimed",
+     "score": 4.7,
+     "aantal": 43,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://us-uk.bookimed.com/clinic/reviews/smile-hair-clinic/procedure=hair-transplant/",
+     "gezien": "2026-11-15",
+     "notitie": "Bookimed toont ook 'Google 4.9' zonder aantal"
+    },
+    {
+     "platform": "Google (op eigen site)",
+     "score": null,
+     "aantal": null,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.smilehairclinic.com/en/",
+     "gezien": "2026-11-15",
+     "notitie": "badge '2.500+ Reviews' zonder score; site toont ook ProvenExpert 7.048 reviews en RealSelf 500+"
+    },
+    {
+     "platform": "ProvenExpert (op eigen site)",
+     "score": null,
+     "aantal": 7048,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.smilehairclinic.com/en/",
+     "gezien": "2026-11-15",
+     "notitie": "aantal uit widget op eigen site, geen score getoond"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "onduidelijk_of_neutraal": [
+     "https://www.hairrestorationnetwork.com/topic/76552-review-smile-hair-clinic/",
+     "https://www.hairrestorationnetwork.com/topic/70531-smile-hair-clinic/",
+     "https://www.hairrestorationnetwork.com/topic/62450-smile-hair-clinic-istanbul/",
+     "https://www.hairrestorationnetwork.com/topic/78755-smile-hair-clinic-vs-medart-istanbul-sapphire-fue-vs-dhi-looking-for-real-experiences-before-i-book"
+    ],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Vera Clinic",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.8,
+     "aantal": 1897,
+     "pct_1ster": "2%",
+     "waarschuwing": "Trustpilot: bedrijf nodigt klanten uit voor reviews",
+     "bron": "https://www.trustpilot.com/review/www.veraclinic.net",
+     "gezien": "2026-11-15",
+     "notitie": "claimed sinds mrt 2019, betaald abonnement"
+    },
+    {
+     "platform": "RealSelf (praktijk)",
+     "score": 4.9,
+     "aantal": 104,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/vera-clinic-istanbul-turkey",
+     "gezien": "2026-11-15"
+    },
+    {
+     "platform": "Bookimed",
+     "score": null,
+     "aantal": null,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://us-uk.bookimed.com/clinic/vera-clinic/",
+     "gezien": "2026-11-15",
+     "notitie": "geen Bookimed-score; pagina toont 'Google 4.4' bij '5 Google reviews' (lijkt een steekproef, niet het Google-totaal)"
+    },
+    {
+     "platform": "Eigen site (platform onbekend)",
+     "score": 4.82,
+     "aantal": 2382,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.veraclinic.net/",
+     "gezien": "2026-11-15",
+     "notitie": "'4.82 out of 5, 2382 reviews', platformnaam afgekapt"
+    }
+   ],
+   "forum": {
+    "positief": 1,
+    "negatief": 1,
+    "bronnen": [
+     "https://www.hairrestorationnetwork.com/topic/54248-good-results-with-vera-clinic/",
+     "https://www.hairrestorationnetwork.com/topic/70583-vera-clinic-bad-experience/"
+    ],
+    "onduidelijk_of_neutraal": [
+     "https://www.hairrestorationnetwork.com/topic/64503-vera-clinic-in-turkey-any-thoughts/",
+     "https://www.hairrestorationnetwork.com/topic/53000-hair-transplant-in-vera-clinic-turkish/",
+     "https://www.hairrestorationnetwork.com/topic/68942-vera-clinic-in-turkey-reviews-what-is-the-best-doctorclinic-in-turkey/"
+    ],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Asmed (Dr. Koray Erdogan)",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.3,
+     "aantal": 87,
+     "pct_1ster": "5%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief; profiel samengevoegd",
+     "bron": "https://www.trustpilot.com/review/asmed.com.tr",
+     "gezien": "2026-11-15",
+     "notitie": "pagina toont 4.3 met label 'Excellent'; 2 reviews in laatste 12 mnd"
+    },
+    {
+     "platform": "RealSelf (arts Koray Erdogan)",
+     "score": 4.9,
+     "aantal": 30,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/koray-erdogan-istanbul-turkey",
+     "gezien": "2026-11-15"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "onduidelijk_of_neutraal": [
+     "https://www.hairrestorationnetwork.com/topic/63071-asmed-5064-fue-dr-koray-erdogan-6-month/page/2/",
+     "https://www.hairrestorationnetwork.com/topic/52972-asmed-dr-erdogan-5020-grafts/",
+     "https://www.hairrestorationnetwork.com/topic/58578-5062-graft-asmed-dr-koray-erdogan/"
+    ],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld. Veel Asmed-threads op HRN zijn door de kliniek zelf geplaatst (sectie 'Results Posted by Leading Hair Restoration Clinics') en niet meegeteld."
+   }
+  },
+  {
+   "naam": "Hermest Hair Clinic",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 1339,
+     "pct_1ster": "1%",
+     "waarschuwing": "Trustpilot: bedrijf nodigt klanten uit voor reviews; profiel samengevoegd met andere profielen",
+     "bron": "https://www.trustpilot.com/review/hermestclinic.com",
+     "gezien": "2026-11-15",
+     "notitie": "claimed jan 2026, betaald abonnement; reageert op 12% van negatieve reviews"
+    },
+    {
+     "platform": "RealSelf (praktijk Kadikoy)",
+     "score": 4.9,
+     "aantal": 39,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/hermest-hair-transplant-clinic-kadikoy-istanbul",
+     "gezien": "2026-11-15",
+     "notitie": "er is ook een Uskudar-praktijkpagina, niet opgehaald"
+    },
+    {
+     "platform": "Google (op eigen site)",
+     "score": null,
+     "aantal": null,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.hermestclinic.com/",
+     "gezien": "2026-11-15",
+     "notitie": "pagina geblokkeerd (toestemming niet beantwoord)"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "onduidelijk_of_neutraal": [
+     "https://www.hairrestorationnetwork.com/topic/77832-6-month-hair-transplant-review-3000-grafts-hermest-hair-transplant-clinic/"
+    ],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Clinicana",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 1573,
+     "pct_1ster": "<1%",
+     "waarschuwing": "Trustpilot: bedrijf nodigt klanten uit voor reviews",
+     "bron": "https://www.trustpilot.com/review/clinicana.com",
+     "gezien": "2026-11-15",
+     "notitie": "279 in laatste 12 mnd; sommige reviews 'Verified'"
+    },
+    {
+     "platform": "Google (op eigen site)",
+     "score": null,
+     "aantal": null,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.clinicana.com/",
+     "gezien": "2026-11-15",
+     "notitie": "pagina geblokkeerd (toestemming niet beantwoord)"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Dr. Cinik (Emrah Cinik)",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.8,
+     "aantal": 6944,
+     "pct_1ster": "2%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief",
+     "bron": "https://www.trustpilot.com/review/emrahcinik.com",
+     "gezien": "2026-11-15",
+     "notitie": "claimed sinds aug 2016; 572 in laatste 12 mnd; reageert op 89% negatieve reviews"
+    },
+    {
+     "platform": "RealSelf (praktijk Cinik Hospital)",
+     "score": 4.9,
+     "aantal": 1711,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/cinik-hospital-istanbul-turkey",
+     "gezien": "2026-11-15",
+     "notitie": "lijstpagina toonde 1.730; aparte praktijkpagina dr-cinik-clinic 4.9 / 1.745 (https://www.realself.com/practices/dr-cinik-clinic-istanbul-turkey), arts-profiel 4.9 / 1.724; overlappen waarschijnlijk"
+    },
+    {
+     "platform": "Bookimed",
+     "score": null,
+     "aantal": null,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://us-uk.bookimed.com/doctor/emrah-cinik/",
+     "gezien": "2026-11-15",
+     "notitie": "geen score op artspagina"
+    },
+    {
+     "platform": "Google (op eigen site)",
+     "score": null,
+     "aantal": null,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.emrahcinik.com/",
+     "gezien": "2026-11-15",
+     "notitie": "alleen sterren zonder getal; site toont Trustpilot 4.8 en '10,000+ reviews on independent platforms'"
+    }
+   ],
+   "forum": {
+    "positief": 1,
+    "negatief": 1,
+    "bronnen": [
+     "https://www.hairrestorationnetwork.com/topic/48586-4250-grafts-with-dr-cinik-at-istambul-amazing-experience/",
+     "https://www.hairrestorationnetwork.com/topic/61539-why-dr-cinik-is-bad/"
+    ],
+    "onduidelijk_of_neutraal": [
+     "https://www.hairrestorationnetwork.com/topic/63579-dr-cinik-review/",
+     "https://www.hairrestorationnetwork.com/topic/52115-dr-cinik-4300-grafts-results-progress/",
+     "https://www.hairrestorationnetwork.com/topic/48457-dr-emrah-cinik-2500-grafts-usa-to-istanbul/"
+    ],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Estenove",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 1230,
+     "pct_1ster": "1%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief; reageert niet op negatieve reviews",
+     "bron": "https://www.trustpilot.com/review/estenove.com",
+     "gezien": "2026-11-15"
+    },
+    {
+     "platform": "Google + Trustpilot (op eigen site)",
+     "score": 4.9,
+     "aantal": null,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://estenove.com/",
+     "gezien": "2026-11-15",
+     "notitie": "gecombineerd '4.9, 2,500+ verified reviews on Google and Trustpilot', geen aparte Google-cijfers"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Este Favor",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.7,
+     "aantal": 67,
+     "pct_1ster": "3%",
+     "waarschuwing": "Trustpilot: bedrijf nodigt klanten uit voor reviews; reageert niet op negatieve reviews",
+     "bron": "https://www.trustpilot.com/review/estefavor.com",
+     "gezien": "2026-11-15"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Clinic Center",
+   "platforms": [],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   },
+   "notitie": "Geen Trustpilot-profiel gevonden; WhatClinic-pagina gevonden maar WhatClinic geblokkeerd (https://www.whatclinic.com/hair-loss/turkey/istanbul-province/istanbul/clinic-center-hair-transplant-clinic-turkey)."
+  },
+  {
+   "naam": "Medart Hair",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 289,
+     "pct_1ster": "2%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief",
+     "bron": "https://www.trustpilot.com/review/medarthair.com",
+     "gezien": "2026-11-15",
+     "notitie": "117 in laatste 12 mnd. Eigen site claimt 'Trustpilot 4.9 from 380+ reviews' terwijl Trustpilot 289 toont"
+    },
+    {
+     "platform": "Google (op eigen site)",
+     "score": 4.9,
+     "aantal": "420+",
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://medarthair.com/",
+     "gezien": "2026-11-15",
+     "notitie": "'Google rating 4.9 out of 5 from 420+ reviews'"
+    },
+    {
+     "platform": "Bookimed",
+     "score": null,
+     "aantal": null,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://us-uk.bookimed.com/clinic/medart-clinic/direction=plastic-surgery/",
+     "gezien": "2026-11-15",
+     "notitie": "geen kliniekscore"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Heva Clinic",
+   "platforms": [
+    {
+     "platform": "RealSelf (praktijk)",
+     "score": 5.0,
+     "aantal": 313,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/heva-clinic-istanbul-turkey",
+     "gezien": "2026-11-15",
+     "notitie": "lijstpagina toonde 320"
+    },
+    {
+     "platform": "Trustpilot (hevaclinic.com, 'Heva International')",
+     "score": 3.2,
+     "aantal": null,
+     "pct_1ster": "100%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief; reageert niet op negatieve reviews",
+     "bron": "https://www.trustpilot.com/review/hevaclinic.com",
+     "gezien": "2026-11-15",
+     "notitie": "pagina toont 1 review in laatste 12 mnd; totaal niet duidelijk; heel klein profiel"
+    },
+    {
+     "platform": "Bookimed",
+     "score": null,
+     "aantal": null,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://us-uk.bookimed.com/clinic/heva-clinic/",
+     "gezien": "2026-11-15",
+     "notitie": "geen Bookimed-score; toont 'Google 4.9' bij '5 Google reviews' (steekproef)"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   },
+   "notitie": "Heva heeft veel RealSelf-reviews maar vrijwel geen Trustpilot-aanwezigheid; eigen site gaf een fout."
+  },
+  {
+   "naam": "Hairmedico (Dr. Arslan Musbeh)",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 121,
+     "pct_1ster": "7%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief",
+     "bron": "https://ca.trustpilot.com/review/hairmedico.com",
+     "gezien": "2026-11-15",
+     "notitie": "www.trustpilot.com gaf fout, ca-versie gebruikt; 12 in laatste 12 mnd"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Dr. Resul Yaman",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 3.4,
+     "aantal": 6,
+     "pct_1ster": "33%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief; reageert niet op negatieve reviews",
+     "bron": "https://www.trustpilot.com/review/resulyaman.com",
+     "gezien": "2026-11-15"
+    },
+    {
+     "platform": "RealSelf (arts)",
+     "score": 4.6,
+     "aantal": 16,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/resul-yaman-istanbul-turkey",
+     "gezien": "2026-11-15"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "onduidelijk_of_neutraal": [
+     "https://www.hairrestorationnetwork.com/topic/71460-going-to-dr-yaman-next-month-should-i-feel-confident-in-dr-yamans-work/"
+    ],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Longevita",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.8,
+     "aantal": 2196,
+     "pct_1ster": "1%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief; profiel samengevoegd",
+     "bron": "https://www.trustpilot.com/review/longevita.co.uk",
+     "gezien": "2026-11-15",
+     "notitie": "180 in laatste 12 mnd; reageert op 100% negatieve reviews"
+    },
+    {
+     "platform": "ProvenExpert (op eigen site)",
+     "score": 4.8,
+     "aantal": 3783,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.longevita.co.uk/",
+     "gezien": "2026-11-15",
+     "notitie": "badge 'rated 4.8 out of 5 from 3,783'; geen Google-score op site"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 1,
+    "bronnen": [
+     "https://www.hairrestorationnetwork.com/topic/54439-longevita-yasemin-turgut-failed-hair-transplant/"
+    ],
+    "onduidelijk_of_neutraal": [
+     "https://www.hairrestorationnetwork.com/topic/62895-longevita-honest-review-please/",
+     "https://www.hairrestorationnetwork.com/topic/29274-anyone-heard-of-a-company-called-longevita-in-uk-london/page/3/"
+    ],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   },
+   "notitie": "Longevita is een Britse bemiddelaar met klinieken in Istanbul/Izmir."
+  },
+  {
+   "naam": "Hairline Clinic Istanbul",
+   "platforms": [],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   },
+   "notitie": "Niet eenduidig gevonden op Trustpilot, RealSelf of Bookimed."
+  },
+  {
+   "naam": "Istanbul Hair Center",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.2,
+     "aantal": 6,
+     "pct_1ster": "0%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief",
+     "bron": "https://www.trustpilot.com/review/istanbulhaircenter.com",
+     "gezien": "2026-11-15"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Westmed",
+   "platforms": [],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   },
+   "notitie": "Niet gevonden; zoekresultaten tonen alleen 'Westmodern Clinic' (Bookimed/WhatClinic), mogelijk een andere kliniek."
+  },
+  {
+   "naam": "Elithair (incl. Dr. Balwi)",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.7,
+     "aantal": 4611,
+     "pct_1ster": "4%",
+     "waarschuwing": "Trustpilot: bedrijf nodigt klanten uit voor reviews; profiel samengevoegd",
+     "bron": "https://www.trustpilot.com/review/elithair.com",
+     "gezien": "2026-11-15",
+     "notitie": "claimed mei 2026, betaald abonnement"
+    },
+    {
+     "platform": "RealSelf (praktijk)",
+     "score": 5.0,
+     "aantal": 2,
+     "pct_1ster": null,
+     "waarschuwing": "neemt geen consulten via RealSelf",
+     "bron": "https://www.realself.com/practices/elithair-istanbul-turkey",
+     "gezien": "2026-11-15"
+    },
+    {
+     "platform": "RealSelf (arts Abdulaziz Balwi)",
+     "score": 1.0,
+     "aantal": 2,
+     "pct_1ster": "100%",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/abdulaziz-balwi-istanbul-turkey",
+     "gezien": "2026-11-15"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "onduidelijk_of_neutraal": [
+     "https://www.hairrestorationnetwork.com/topic/70742-is-elithair-legit/",
+     "https://www.hairrestorationnetwork.com/topic/73087-first-timer-elithair/",
+     "https://www.hairrestorationnetwork.com/topic/49248-my-hair-transplant-experience-with-elithairtransplant/"
+    ],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   },
+   "notitie": "Dr. Balwi is de arts van Elithair (medihair.com/en/clinic/dr-balwi-elithairtransplant/); daarom samengevoegd. Eigen site elithair.co.uk geblokkeerd."
+  },
+  {
+   "naam": "Dr. Balwi",
+   "platforms": [],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   },
+   "notitie": "Zie Elithair (incl. Dr. Balwi); geen eigen Trustpilot-profiel (drbalwi.com niet gevonden)."
+  },
+  {
+   "naam": "Sule Clinic",
+   "platforms": [],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   },
+   "notitie": "Geen Trustpilot-profiel gevonden (suleclinic.com bestaat niet op Trustpilot). Site: sule-hairtransplant.com; ProvenExpert-profiel bestaat (https://www.provenexpert.com/en-gb/sule-hair-transplant/), niet opgehaald."
+  },
+  {
+   "naam": "Get Hair",
+   "platforms": [],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   },
+   "notitie": "Trustpilot gethair.co.uk is een Londense haarproductwinkel ('Not Actively Used For Reviews', 1.4), niet deze kliniek; niet gebruikt."
+  },
+  {
+   "naam": "Natural Hair Clinic",
+   "platforms": [
+    {
+     "platform": "Trustpilot (naturalhairturkey.com)",
+     "score": 3.0,
+     "aantal": 929,
+     "pct_1ster": "19%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief; reageert niet op negatieve reviews",
+     "bron": "https://www.trustpilot.com/review/naturalhairturkey.com",
+     "gezien": "2026-11-15"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   },
+   "notitie": "Koppeling onzeker: profiel 'naturalhairturkey' met postcode 09100 (Aydin), niet zeker dezelfde kliniek."
+  },
+  {
+   "naam": "Ozel Hair",
+   "platforms": [],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   },
+   "notitie": "Niet gevonden."
+  },
+  {
+   "naam": "Hair of Istanbul",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.7,
+     "aantal": 77,
+     "pct_1ster": "4%",
+     "waarschuwing": "Trustpilot: bedrijf nodigt klanten uit voor reviews; Trustpilot-voorzichtigheidsmelding voor medische/cosmetische bedrijven",
+     "bron": "https://www.trustpilot.com/review/hairofistanbul.com",
+     "gezien": "2026-11-15",
+     "notitie": "15 in laatste 12 mnd; lokale Trustpilot-versies tonen 82"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Capilclinic",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.6,
+     "aantal": 200,
+     "pct_1ster": "7%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief",
+     "bron": "https://www.trustpilot.com/review/capilclinic.es",
+     "gezien": "2026-11-15",
+     "notitie": "Spaans bedrijf (Madrid/Barcelona) met kliniek in Istanbul; 47 in laatste 12 mnd"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "BHT Clinic (Tema Hospital)",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "aantal": 46,
+     "pct_1ster": "26%",
+     "waarschuwing": "Trustpilot WAARSCHUWING: score niet beschikbaar wegens schending richtlijnen; Trustpilot heeft een aantal nep-reviews verwijderd",
+     "bron": "https://www.trustpilot.com/review/bhtclinic.com.tr",
+     "gezien": "2026-11-15",
+     "notitie": "43 in laatste 12 mnd; 70% 5 ster"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Lion Hair",
+   "platforms": [],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   },
+   "notitie": "Niet gevonden."
+  },
+  {
+   "naam": "Kosmed",
+   "platforms": [],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   },
+   "notitie": "Niet gevonden (kosmedclinic.com niet op Trustpilot; zoekopdrachten leveren Cosmedica op)."
+  },
+  {
+   "naam": "Este Medical Group (extra)",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 10127,
+     "pct_1ster": "<1%",
+     "waarschuwing": "Trustpilot: bedrijf nodigt klanten uit voor reviews; reageert niet op negatieve reviews",
+     "bron": "https://www.trustpilot.com/review/estemedicalgroup.uk",
+     "gezien": "2026-11-15",
+     "notitie": "Trustpilot-adres Birmingham (VK); kliniek in Istanbul"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "IdealofMeD (extra)",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.8,
+     "aantal": 679,
+     "pct_1ster": "<1%",
+     "waarschuwing": "Trustpilot: bedrijf nodigt klanten uit voor reviews",
+     "bron": "https://www.trustpilot.com/review/idealofmed.com",
+     "gezien": "2026-11-15",
+     "notitie": "Istanbul (Sisli)"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Bio Hair Clinic (extra)",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.0,
+     "aantal": 433,
+     "pct_1ster": "8%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief; reageert niet op negatieve reviews",
+     "bron": "https://www.trustpilot.com/review/biohairclinic.com",
+     "gezien": "2026-11-15",
+     "notitie": "Istanbul (Kagithane)"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "HairNeva / DRGO (extra)",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.7,
+     "aantal": 339,
+     "pct_1ster": "2%",
+     "waarschuwing": "Trustpilot: bedrijf nodigt klanten uit voor reviews",
+     "bron": "https://www.trustpilot.com/review/hairneva.com",
+     "gezien": "2026-11-15"
+    },
+    {
+     "platform": "RealSelf (praktijk)",
+     "score": 4.9,
+     "aantal": 448,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/hairneva-clinic-istanbul-istanbul",
+     "gezien": "2026-11-15"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Dr Hakan Clinic (extra)",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 227,
+     "pct_1ster": "0%",
+     "waarschuwing": "Trustpilot: bedrijf nodigt klanten uit voor reviews; reageert niet op negatieve reviews",
+     "bron": "https://www.trustpilot.com/review/drhakanclinic.com",
+     "gezien": "2026-11-15"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "Istanbul Vita Hair Clinic (extra)",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "aantal": 302,
+     "pct_1ster": "3%",
+     "waarschuwing": "Trustpilot WAARSCHUWING: score niet beschikbaar wegens schending richtlijnen; Trustpilot heeft een aantal nep-reviews verwijderd",
+     "bron": "https://trustpilot.com/review/istanbulvita.com",
+     "gezien": "2026-11-15"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  },
+  {
+   "naam": "HWT Clinic (extra)",
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.7,
+     "aantal": 141,
+     "pct_1ster": "1%",
+     "waarschuwing": "Trustpilot: bedrijf heeft klanten recent niet uitgenodigd, reviews mogelijk niet representatief",
+     "bron": "https://www.trustpilot.com/review/hwtclinic.com",
+     "gezien": "2026-11-15"
+    }
+   ],
+   "forum": {
+    "positief": 0,
+    "negatief": 0,
+    "bronnen": [],
+    "notitie": "Telling op threadtitel (via zoekresultaten); threads zelf en Reddit waren niet te openen. Alleen titels met duidelijke strekking geteld."
+   }
+  }
+ ]
+}

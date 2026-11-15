@@ -1,0 +1,290 @@
+{
+  "gecontroleerd": "2026-11-15",
+  "methode": "Eigen sites via WebFetch (alleen URL's uit zoekresultaten konden worden opgehaald); nieuws/officiele bronnen via WebSearch. Zoekbudget raakte op halverwege de nieuwsronde: 'geen risico gevonden' betekent hier 'niet gevonden in een beperkte ronde', niet 'schoon'.",
+  "algemeen": [
+    {"wat": "ISHRS waarschuwt voor 'black market clinics' waar ongelicentieerde behandelaars ingrepen doen of meerdere patienten per dag afraffelen; Turks ministerie van Volksgezondheid belooft strenger toezicht en meer inspecties (geen kliniek genoemd behalve Smile Hair, zonder kritiek).", "datum": "2025-10-06", "bron": "https://www.kpbs.org/news/international/2025/10/06/how-one-country-has-become-a-top-destination-for-hair-transplants"},
+    {"wat": "UK ASA verbood in 2023 advertenties van Turkse klinieken (o.a. Get DHI Hair Clinic, WHM Hair Transplant and Aesthetics, Erdem Clinic, Aestheal Clinic, Dakik Saglik/ClinicExpert). Geen van de 25 klinieken in deze lijst wordt in die rulings genoemd. Let op: 'Get DHI' is niet GetHair.", "datum": "2023-10-11", "bron": "https://www.asa.org.uk/rulings/get-dhi-hair-clinic-a23-1199875-getdhi.html"},
+    {"wat": "Doodsfeit Mentor Rama (Brit, 36) na haartransplantatie in Istanbul, politie onderzoekt mogelijke 'reckless homicide'; kliniek NIET genoemd in de bron (niet toeschrijven aan Dr. Cinik).", "datum": "2025-11-14", "bron": "https://thenightly.com.au/world/mentor-rama-british-man-dies-after-hair-transplant-and-dental-treatment-in-turkey-c-20674853"}
+  ],
+  "klinieken": [
+    {
+      "naam": "Cosmedica",
+      "site": "https://www.cosmedica.com/price",
+      "prijs": {"bedrag": "FUE Sapphire vanaf EUR 2.550 (tot 4.000 grafts; megasessie tot 6.000 +EUR 900); Micro Sapphire DHI vanaf EUR 3.290; VIP Micro Sapphire DHI vanaf EUR 8.000", "inbegrepen": "Consult en haarlijnontwerp door Dr. Acar, 5-sterrenhotel, VIP-transfers, begeleider/tolk, controle volgende dag, zuurstoftherapie; DHI +2 maanden boosterpakket. Niet: vluchten, verzekering, extra nachten. Pagina spreekt zichzelf tegen over PRP/medicatie.", "bron": "https://www.cosmedica.com/price"},
+      "wie_opereert": {"tekst": "Standaard: alleen consult en haarlijn door Dr. Acar; wie extraheert/implanteert staat er niet. Alleen VIP: \"Operation incision by Dr. Acar\". Geen technici genoemd.", "bron": "https://www.cosmedica.com/price"},
+      "grafts": {"tekst": "Tot 4.000 grafts standaard, tot 6.000 met megasessie; geen 'unlimited'.", "bron": "https://www.cosmedica.com/price"},
+      "nazorg": {"tekst": "Schriftelijke 'Growth & Graft Guarantee': gratis revisie als grafts niet groeien buiten schuld patient (uitsluitingen o.a. roken, alcohol). Geen 12-maandscontrole genoemd. Geen kantoor/partner UK/DE/NL; alleen 'representatives for 19 countries'.", "bron": "https://www.cosmedica.com/price"},
+      "sinds": "Actief sinds 2007 (\"since 2007\", ca. 20.000 ingrepen); geen oprichtingsjaar",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Dr. Serkan Aygin",
+      "site": "https://www.drserkanaygin.com/",
+      "prijs": {"bedrag": "Black-Friday-actie EUR 3.200 (ingreep mei 2027); pakketten Turkije ca. EUR 2.300-4.650; titel zegt 'ab 3.500 EUR' - cijfers onderling niet consistent", "inbegrepen": "Behandelplan, luxe hotel, VIP-transfers, nazorg en support, vertaling", "bron": "https://www.drserkanaygin.com/de/haartransplantation/haartransplantation-kosten/"},
+      "wie_opereert": {"tekst": "Niet vermeld of Dr. Aygin zelf extraheert of implanteert; alleen algemene ervaringsclaims. Geen technici genoemd.", "bron": "https://www.drserkanaygin.com/de/haartransplantation/haartransplantation-kosten/"},
+      "grafts": {"tekst": "Pakketten dekken de 'maximale Graft-Anzahl' per sessie, ca. 5.000 genoemd; geen 'unlimited'.", "bron": "https://www.drserkanaygin.com/de/haartransplantation/haartransplantation-kosten/"},
+      "nazorg": {"tekst": "Geen garantie genoemd. Nazorg vaak virtueel; geen 12-maandscontrole. Kantoor in Berlijn (Silvio-Meier-Strasse 2) plus kliniek Sisli Istanbul; geen UK/NL.", "bron": "https://www.drserkanaygin.com/"},
+      "sinds": "Geen oprichtingsjaar; claimt '20+ jaar' en elders 'fast fuenf Jahrzehnte' ervaring (tegenstrijdig)",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Smile Hair Clinic",
+      "site": "https://www.smilehairclinic.com/en/",
+      "prijs": {"bedrag": "Gold EUR 2.390; Platinum EUR 3.290; Diamond EUR 5.790 (vast voor vertrek, grafts veranderen prijs niet)", "inbegrepen": "Hotel (2-3 nachten), VIP-transfers, consult, haarlijn, sapphire-incisie, micromotor-FUE, bloedtest, PRP, nazorgpakket; Diamond +exosomen. Niet: vluchten, maaltijden, verzekering, tweede sessie.", "bron": "https://www.smilehairclinic.com/en/hair-transplant-turkey-cost/"},
+      "wie_opereert": {"tekst": "Gold/Platinum: \"Manual implantation by surgical technicians\"; Gold-incisie door technici, Platinum-incisie door twee artsen. Diamond: \"Performed exclusively by our founding doctors\" of senior arts; per stap niet gespecificeerd.", "bron": "https://www.smilehairclinic.com/en/hair-transplant-turkey-cost/"},
+      "grafts": {"tekst": "Geen maximum en geen 'unlimited'; aantal bepaald door donorgebied. Waarschuwt tegen 'single mega-session of several thousand grafts'.", "bron": "https://www.smilehairclinic.com/en/"},
+      "nazorg": {"tekst": "Geen garantie; touch-up als 'standard remedy'. '1-Year Comprehensive Care Plan' met online check-ins. Geen kantoor UK/DE/NL (alleen Umraniye, Istanbul).", "bron": "https://www.smilehairclinic.com/en/hair-transplant-turkey-cost/"},
+      "sinds": "2018 (opgericht door Dr. Mehmet Erdogan en Dr. Gokay Bilgin)",
+      "risico": [],
+      "positief": [{"wat": "Genoemd in NPR-reportage (onafhankelijk, neutraal): ca. 5.000 patienten per jaar, geopend 2018.", "bron": "https://www.kpbs.org/news/international/2025/10/06/how-one-country-has-become-a-top-destination-for-hair-transplants"}]
+    },
+    {
+      "naam": "Vera Clinic",
+      "site": "https://www.veraclinic.net/",
+      "prijs": {"bedrag": "EUR 2.990 - 5.890 afhankelijk van pakket", "inbegrepen": "Alleen 'advanced techniques, personalized aftercare'; geen lijst", "bron": "https://www.veraclinic.net/hair-transplant/"},
+      "wie_opereert": {"tekst": "\"led by Dr. Kerim Benan Unsal\" met team; niet vermeld wie extraheert/implanteert, geen technici genoemd.", "bron": "https://www.veraclinic.net/hair-transplant/"},
+      "grafts": {"tekst": "'Max Grafting System', geen getal en geen 'unlimited'.", "bron": "https://www.veraclinic.net/hair-transplant/"},
+      "nazorg": {"tekst": "Homepage noemt 'Guarantee Program' zonder voorwaarden; 'Regular Checkups', geen 12 maanden genoemd. Geen kantoor UK/DE/NL. Prijspagina en verblijfpagina laadden niet (client_error).", "bron": "https://www.veraclinic.net/"},
+      "sinds": "2013 (\"Conceived in 2013\")",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Asmed (Dr. Koray Erdogan)",
+      "site": "https://hairtransplantfue.org/",
+      "prijs": {"bedrag": "Niet gepubliceerd", "inbegrepen": "Nazorgkit met medicatie, nekkussen, ijsgel, wassen en controle volgende dag", "bron": "https://hairtransplantfue.org/about-asmed/what-we-do-at-asmed"},
+      "wie_opereert": {"tekst": "\"Dr. Koray Erdogan personally creates these sites\" (incisies); extractie en plaatsing niet aan hem toegeschreven; technicus, anesthesist en coordinator genoemd.", "bron": "https://hairtransplantfue.org/about-asmed/what-we-do-at-asmed"},
+      "grafts": {"tekst": "Geen maximum, geen 'unlimited', geen patienten-per-dag genoemd.", "bron": "https://hairtransplantfue.org/about-asmed/what-we-do-at-asmed"},
+      "nazorg": {"tekst": "Geen garantie genoemd. Coordinator volgt herstel 12-15 maanden. Geen kantoor UK/DE/NL. (asmed.com is een ander bedrijf - IT-opleider in de VS.)", "bron": "https://hairtransplantfue.org/about-asmed/what-we-do-at-asmed"},
+      "sinds": "2001",
+      "risico": [],
+      "positief": [{"wat": "IAHRS-lid sinds 2013 (ledenlijst International Alliance of Hair Restoration Surgeons).", "bron": "https://www.iahrs.org/hair-transplant/koray-erdogan"}]
+    },
+    {
+      "naam": "Hermest",
+      "site": "https://www.en.hermest.com.tr/about-us/",
+      "prijs": {"bedrag": "Niet gepubliceerd op Engelse 'about'-pagina (Turkse prijspagina hermest.com.tr/sac-ekim-fiyatlari bestaat, niet gecontroleerd)", "inbegrepen": "Noemt haartransplantatie, transfer, verblijf; geen pakketinhoud", "bron": "https://www.en.hermest.com.tr/about-us/"},
+      "wie_opereert": {"tekst": "Geen arts of team genoemd; verwijst naar \"contracted hospitals in Istanbul\" goedgekeurd door ministerie.", "bron": "https://www.en.hermest.com.tr/about-us/"},
+      "grafts": {"tekst": "Niet vermeld.", "bron": "https://www.en.hermest.com.tr/about-us/"},
+      "nazorg": {"tekst": "Algemene claim \"Lifelong guaranteed permanent solutions are possible\" zonder voorwaarden; geen nazorg/12 maanden; geen kantoor UK/DE/NL.", "bron": "https://www.en.hermest.com.tr/about-us/"},
+      "sinds": "Copyright vanaf 2014 (geen oprichtingsjaar vermeld)",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Clinicana",
+      "site": "https://www.clinicana.com/",
+      "prijs": {"bedrag": "Basic EUR 2.500 (alleen ingreep); Standard EUR 2.850; Premium EUR 3.000; Premium Mega DHI EUR 4.500; Exosome EUR 3.950; Stem Cell VIP EUR 5.500", "inbegrepen": "Alle: consult, bloedtest, ingreep, medicatie. Vanaf Standard: hotel, transfers, nazorgkit, tolk, maandelijkse WhatsApp-fotocheck 6-12 mnd. Niet: vluchten, tweede sessie, bankkosten.", "bron": "https://www.clinicana.com/hair-transplant-cost-turkey/"},
+      "wie_opereert": {"tekst": "Niet vermeld wie extraheert/implanteert; \"Medically reviewed protocols led by a hair transplant surgeon\" (Prof. Dr. Soner Tatlidede).", "bron": "https://www.clinicana.com/team/"},
+      "grafts": {"tekst": "DHI Basic/Standard tot 4.000; FUE 'maximum your donor area can safely give'; geen 'unlimited'.", "bron": "https://www.clinicana.com/hair-transplant-cost-turkey/"},
+      "nazorg": {"tekst": "'Clinicana Guarantee Certificate': belofte het afgesproken plan te corrigeren, expliciet geen biologisch resultaat gegarandeerd. Fotocheck 6-12 mnd. Geen kantoor UK/DE/NL.", "bron": "https://www.clinicana.com/hair-transplant-cost-turkey/"},
+      "sinds": "Niet vermeld (arts: '22+ jaar ervaring')",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Dr. Cinik (Emrah Cinik)",
+      "site": "https://emrahcinik.com/prices",
+      "prijs": {"bedrag": "FUE EUR 2.350; DHI EUR 3.090; Premium Doctor EUR 3.590; Manual FUE EUR 3.990; Long Hair FUE EUR 5.200; Signature EUR 5.990; elders in GBP (Classic FUE GBP 1.995) - EUR- en GBP-bedragen niet consistent", "inbegrepen": "Anesthesie, ingreep, hotel, transfers, ECG, bloedtest, PRP, laser, medicatie, tolk, eerste wasbeurt, follow-up. Niet: vluchten, extra nachten. Niet-restitueerbare aanbetaling.", "bron": "https://emrahcinik.com/prices"},
+      "wie_opereert": {"tekst": "Alleen Signature: \"Channel Opening Performed by Dr. Emrah Cinik\"; extractie door \"specialised technicians\"; Premium: \"Doctor-Supervised Procedure\".", "bron": "https://emrahcinik.com/prices"},
+      "grafts": {"tekst": "FAQ: \"no limit on the number of grafts needed for your particular case\"; geen getal.", "bron": "https://emrahcinik.com/prices"},
+      "nazorg": {"tekst": "Geen garantie genoemd. Remote check-ins week 1, maand 1/3/6/12; Signature 24 maanden. Sectie 'Dr Cinik London' zonder bevestigd fysiek adres; DE/NL alleen taalversies.", "bron": "https://emrahcinik.com/prices"},
+      "sinds": "Niet vermeld; banner '+20 Years of Excellence'",
+      "risico": [
+        {"wat": "Britse patient (38, Martyn Latchman) overleden bij Dr Cinik-kliniek in Besiktas, Istanbul; Turkse gezondheidsautoriteiten openden onderzoek, autopsie bij Forensisch Instituut; FCDO bevestigt steun aan familie. Kliniek: patient werd \"unexpectedly ... unwell\", ingreep was nog niet begonnen, zaak onderzocht door justitie.", "datum": "2025-08-03", "bron": "https://www.aol.com/british-man-dies-going-turkey-183131499.html"},
+        {"wat": "GB News: lokale politie onderzoekt de kliniek als mogelijke 'reckless homicide'; chirurg, anesthesist en verpleging verhoord (volgens berichtgeving).", "datum": "2025-08-01", "bron": "https://www.gbnews.com/news/british-tourist-dies-turkey-hair-transplant"},
+        {"wat": "Kliniekreactie: patient was gescreend en goedgekeurd, direct behandeld en naar universitair ziekenhuis overgebracht; documenten aan autoriteiten overgedragen (verwijst naar Guardian 3 aug 2025).", "datum": "2025-08-05", "bron": "https://thegrio.com/2025/08/05/british-man-dies-during-prep-for-hair-transplant-in-turkey-clinic-responds"}
+      ],
+      "positief": []
+    },
+    {
+      "naam": "Estenove",
+      "site": "https://www.estenove.com/",
+      "prijs": {"bedrag": "EUR 3.395 / 4.595 / 6.595 (Sapphire FUE EUR 3.395)", "inbegrepen": "VIP-transfer, hotel 3-4 nachten, nazorgkit, 18 mnd 'Novecare' WhatsApp-support, PRP, Comfort-in anesthesie, extra wasbeurt. Niet: vluchten, maaltijden, extra nachten.", "bron": "https://www.estenove.com/hair-transplant-cost-istanbul-turkey/"},
+      "wie_opereert": {"tekst": "Geen arts genoemd; pakketitems \"MD Participation in Extraction\" en \"MD Participation in Incision\" zonder omvang.", "bron": "https://www.estenove.com/hair-transplant-cost-istanbul-turkey/"},
+      "grafts": {"tekst": "'maximum number of grafts necessary'; geen getal en geen 'unlimited'.", "bron": "https://www.estenove.com/hair-transplant-cost-istanbul-turkey/"},
+      "nazorg": {"tekst": "Geen garantie genoemd; 18 mnd WhatsApp-support. Alleen kantoor Sisli Istanbul.", "bron": "https://www.estenove.com/hair-transplant-cost-istanbul-turkey/"},
+      "sinds": "Niet vermeld; claimt '20+ Years of experience'",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Este Favor",
+      "site": "https://estefavor.com/en/",
+      "prijs": {"bedrag": "USD 2.000 - 4.500", "inbegrepen": "Bloedtest, haarlijnconsult, Sapphire FUE of DHI, anesthesie, eerste wasbeurt, nazorgkit met medicatie, 3 nachten 4-sterrenhotel, VIP-transfers, EN/DE-coordinator, tolk, 12 mnd remote follow-up. Niet: verzekering, extra nachten.", "bron": "https://estefavor.com/en/whats-included-in-an-all-inclusive-hair-transplant-package/"},
+      "wie_opereert": {"tekst": "\"The senior doctor personally conducts the hairline design\"; kanalen 'performs or directly supervises'; extractie niet aan arts toegeschreven.", "bron": "https://estefavor.com/en/whats-included-in-an-all-inclusive-hair-transplant-package/"},
+      "grafts": {"tekst": "'maximum grafts as assessed' tot afgesproken maximum; geen 'unlimited'.", "bron": "https://estefavor.com/en/whats-included-in-an-all-inclusive-hair-transplant-package/"},
+      "nazorg": {"tekst": "Geen garantie; artsbetrokkenheid 'documented ... in the written package agreement'. Fotoreviews maand 1/3/6/12. Geen kantoor UK/DE/NL.", "bron": "https://estefavor.com/en/whats-included-in-an-all-inclusive-hair-transplant-package/"},
+      "sinds": "Niet vermeld (copyright 2021-2026)",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Clinic Center",
+      "site": "https://cliniccenter.co.uk/hair-transplant-in-turkey/",
+      "prijs": {"bedrag": "FUE GBP 1.500-2.100; Sapphire FUE GBP 1.750-2.200; DHI GBP 1.700-2.200", "inbegrepen": "Ingreep, medicatie, verblijf, transfers, shampoo en lotions", "bron": "https://cliniccenter.co.uk/hair-transplant-in-turkey/"},
+      "wie_opereert": {"tekst": "\"Clinic Center partner specialists perform hair transplantation\"; geen opererende arts genoemd (Prof. Dr. Aydin alleen als reviewer).", "bron": "https://cliniccenter.co.uk/hair-transplant-in-turkey/"},
+      "grafts": {"tekst": "Vaste prijs dekt 'up to 5000 grafts'.", "bron": "https://cliniccenter.co.uk/hair-transplant-in-turkey/"},
+      "nazorg": {"tekst": "'Guarantee certificate' en gratis herbehandeling bij malpractice, voorwaarden niet gepubliceerd. 12 mnd support en fotochecks; gratis nazorgafspraken in UK en Duitsland, kantoor in Londen; geen NL.", "bron": "https://cliniccenter.co.uk/hair-transplant-in-turkey/"},
+      "sinds": "Niet vermeld; claimt 'Over 15 years of experience'",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Medart (Medart Hair)",
+      "site": "https://www.medarthair.com/",
+      "prijs": {"bedrag": "Premium EUR 2.950; Elite EUR 3.750; Luxury EUR 4.500; Long FUE en Mega Session EUR 6.250 (contantprijs)", "inbegrepen": "Hybride Sapphire FUE + DHI, 3 hotelnachten, VIP-transfers, PRP, 15-daagse medicatie, begeleider/tolk. Niet: vluchten, extra nachten, maaltijden, verzekering.", "bron": "https://www.medarthair.com/hair-transplant-turkey-package/"},
+      "wie_opereert": {"tekst": "\"Experienced extraction specialists carry out graft extraction\"; arts doet incisies haarlijn en begin DHI-implantatie; extractie door arts tegen EUR 1.000 extra.", "bron": "https://www.medarthair.com/hair-transplant-turkey-package/"},
+      "grafts": {"tekst": "Kop claimt \"Unlimited Grafts\", tekst zegt aantal begrensd door donorcapaciteit (tegenstrijdig). Long FUE tot 2.500; Mega 5.500+ over twee dagen.", "bron": "https://www.medarthair.com/hair-transplant-turkey-package/"},
+      "nazorg": {"tekst": "Garantie met 'full terms in writing with your treatment plan'. Configurator: '1 Year Post-Op Follow-Up' EUR 0. Geen kantoor UK/DE/NL (Sisli). Let op: medartclinic.com is een andere kliniek (Cyprus/Athene).", "bron": "https://www.medarthair.com/hair-transplant-turkey-package/"},
+      "sinds": "Niet vermeld; artsen bij Medart sinds 2021 en 2026",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Heva Clinic",
+      "site": "https://hevaclinic.com/",
+      "prijs": {"bedrag": "Niet gecontroleerd: site laadde niet (client_error)", "inbegrepen": "", "bron": "https://hevaclinic.com/"},
+      "wie_opereert": {"tekst": "Niet gecontroleerd: site laadde niet", "bron": "https://hevaclinic.com/"},
+      "grafts": {"tekst": "Niet gecontroleerd", "bron": "https://hevaclinic.com/"},
+      "nazorg": {"tekst": "Niet gecontroleerd", "bron": "https://hevaclinic.com/"},
+      "sinds": "Onbekend",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Hairmedico",
+      "site": "https://hairmedico.com/hair-transplant-cost-in-istanbul",
+      "prijs": {"bedrag": "'vanaf EUR 3.200' (hero) en 'vanaf EUR 2.600' elders - tegenstrijdig; Silver/Gold/VIP-prijzen niet vermeld", "inbegrepen": "EUR 2.600-pakket: chirurg-geleide ingreep, 2 nachten 5-sterrenhotel, VIP-transfers, PRP en LOREW-nazorgkit, 12 mnd follow-up", "bron": "https://hairmedico.com/hair-transplant-cost-in-istanbul"},
+      "wie_opereert": {"tekst": "Dr. Arslan Musbeh: kanalen in Gold/VIP; extractie en \"Graft placement is also his personally in the VIP package\"; Silver/Gold plaatsing door team.", "bron": "https://hairmedico.com/hair-transplant-cost-in-istanbul"},
+      "grafts": {"tekst": "FUE 'Up to 5,000 grafts' standaard; geen 'unlimited'.", "bron": "https://hairmedico.com/hair-transplant-cost-in-istanbul"},
+      "nazorg": {"tekst": "Geen schriftelijke garantie. Check-ins week 2, maand 1/3/6/9/12 via WhatsApp. Geen kantoor UK/DE/NL (Levent, Besiktas).", "bron": "https://hairmedico.com/hair-transplant-cost-in-istanbul"},
+      "sinds": "2005 (\"since 2005\" in Levent)",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Dr. Resul Yaman",
+      "site": "https://resulyaman.com/hair-transplant-cost-turkey/",
+      "prijs": {"bedrag": "Geen eigen vaste prijs; marktbandbreedte EUR 2.500-10.000 (FAQ: 11.000), tegenstrijdig", "inbegrepen": "'usually' transfers, hotel, vervoer, ingreep, medicatie (algemeen, niet kliniekspecifiek)", "bron": "https://resulyaman.com/hair-transplant-cost-turkey/"},
+      "wie_opereert": {"tekst": "Dr. Yaman \"personally takes part in every patient's procedure\"; welke stappen staat er niet.", "bron": "https://resulyaman.com/hair-transplant-cost-turkey/"},
+      "grafts": {"tekst": "4.000-4.500 grafts per dag; daarboven tweede dag / megasessie 6.000+ over twee dagen.", "bron": "https://resulyaman.com/hair-transplant-cost-turkey/"},
+      "nazorg": {"tekst": "Geen garantie genoemd; arts controleert elke patient na ingreep; geen vaste 12-maandscontrole; geen kantoor UK/DE/NL.", "bron": "https://resulyaman.com/hair-transplant-cost-turkey/"},
+      "sinds": "Niet vermeld; arts '18+ jaar' ervaring, eigen kliniek sinds 2009 (IAHRS)",
+      "risico": [],
+      "positief": [{"wat": "IAHRS Associate Member; IAHRS-profiel: opereert in eigen kliniek Istanbul sinds 2009.", "bron": "https://www.iahrs.org/hair-transplant/resul-yaman"}]
+    },
+    {
+      "naam": "Longevita",
+      "site": "https://www.longevita.co.uk/guides/hair-transplant-turkey-cost/",
+      "prijs": {"bedrag": "Bandbreedte GBP 1.100-4.400 (FUE GBP 1.900-4.400; DHI GBP 2.000-5.300); GBP 0,50-2,20 per graft", "inbegrepen": "Medicatie, virtuele nazorg, consulten, bloedtest, lokale anesthesie, PRP, laser/ozon, host en tolk. Niet: vluchten.", "bron": "https://www.longevita.co.uk/guides/hair-transplant-turkey-cost/"},
+      "wie_opereert": {"tekst": "Bemiddelaar: plan door \"independent clinician you choose\"; geen opererende arts genoemd.", "bron": "https://www.longevita.co.uk/guides/hair-transplant-turkey-cost/"},
+      "grafts": {"tekst": "Claim: clinici \"always provide maximum grafts for single session\"; geen getal.", "bron": "https://www.longevita.co.uk/guides/hair-transplant-turkey-cost/"},
+      "nazorg": {"tekst": "Geen garantie. Virtuele nazorg 'up to one year'. Longevita London Ltd, UK-geregistreerd kantoor Londen SE11; verklaart zelf facilitator te zijn, geen ingrepen te doen en niet CQC-geregistreerd te zijn.", "bron": "https://www.longevita.co.uk/guides/hair-transplant-turkey-cost/"},
+      "sinds": "Niet vermeld",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Hairline Clinic Istanbul (HLC Hairline Clinic)",
+      "site": "https://www.fue-hlc.com/",
+      "prijs": {"bedrag": "Niet gepubliceerd", "inbegrepen": "", "bron": "https://www.fue-hlc.com/"},
+      "wie_opereert": {"tekst": "\"will personally be performed by our hair surgeons\"; \"Only Surgeons!\" \"No Assistants!\" (Dr. Oztan Ozgur oprichter).", "bron": "https://www.fue-hlc.com/"},
+      "grafts": {"tekst": "Geen maximum genoemd.", "bron": "https://www.fue-hlc.com/"},
+      "nazorg": {"tekst": "Geen garantie, geen 12-maandscontrole genoemd. Site noemt alleen Ankara als locatie (Facebook: Ankara, Istanbul) - controleren of dit de bedoelde kliniek is.", "bron": "https://www.fue-hlc.com/"},
+      "sinds": "2002 (elders 2003, tegenstrijdig)",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Istanbul Hair Center",
+      "site": "https://istanbulhaircenter.com/",
+      "prijs": {"bedrag": "EUR 2.000 - 3.000 per pakket", "inbegrepen": "Ingreep, 3 nachten Istanbul, transfers, tolk, medicatie, nazorgkit, follow-up maand 1/3/6/12", "bron": "https://istanbulhaircenter.com/"},
+      "wie_opereert": {"tekst": "\"Carried out in our Istanbul clinic, by our own physicians\"; Dr. Erman Yilmaz en specialist Fatih genoemd, stappen niet toegewezen.", "bron": "https://istanbulhaircenter.com/"},
+      "grafts": {"tekst": "Geen maximum, geen 'unlimited'.", "bron": "https://istanbulhaircenter.com/"},
+      "nazorg": {"tekst": "Geen garantie; follow-up maand 1/3/6/12 in eigen taal; geen kantoor UK/DE/NL (Sisli).", "bron": "https://istanbulhaircenter.com/"},
+      "sinds": "1999 (\"Open since 1999\")",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Westmed",
+      "site": "",
+      "prijs": {"bedrag": "Niet gecontroleerd: geen eigen site met deze naam gevonden (wel 'WestModern Clinic', niet als zelfde behandeld)", "inbegrepen": "", "bron": ""},
+      "wie_opereert": {"tekst": "Niet gecontroleerd", "bron": ""},
+      "grafts": {"tekst": "Niet gecontroleerd", "bron": ""},
+      "nazorg": {"tekst": "Niet gecontroleerd", "bron": ""},
+      "sinds": "Onbekend",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Elithair",
+      "site": "https://elithair.com/",
+      "prijs": {"bedrag": "GBP 2.849 (tot 2.000 grafts) tot GBP 3.449 (5.000+); +GBP 85 per 500 extra grafts; US-site 'from $3,899'", "inbegrepen": "DHI, NEO FUE-serum, Pre-Test, sedatie, 3 hotelnachten, VIP-transfers, 1x PRP, medicatie/nazorgpakket, medische controle, 12 mnd app-nazorg. Niet: vluchten.", "bron": "https://elithair.com/uk/costs-hair-transplant/"},
+      "wie_opereert": {"tekst": "\"Trained medical specialists carry out the technical steps under medical supervision\"; \"A physician oversees every step\"; geen opererende arts genoemd.", "bron": "https://elithair.com/uk/costs-hair-transplant/"},
+      "grafts": {"tekst": "Geen eigen maximum op site (tiers '5,000+'); woordvoerder tegen t-online: sessies beperkt tot ca. 5.000 grafts.", "bron": "https://elithair.com/uk/costs-hair-transplant/"},
+      "nazorg": {"tekst": "\"20-year written guarantee\", voorwaarde: nazorginstructies volgen en voortgang documenteren in app; uitsluitingen niet gepubliceerd. 12 mnd app-nazorg. Geen kantoor UK/DE/NL; TUV Thuringen-certificering (ISO 9001).", "bron": "https://elithair.com/price/"},
+      "sinds": "Niet vermeld ('more than 150,000 treatments')",
+      "risico": [{"wat": "Ervaringsverslag/opinie t-online (Patrick Diekmann): in verkoopgesprek ca. 3.000 grafts, luxe hotel en 30-jaar garantie beloofd; kreeg 4.800+ grafts, 200 euro extra, verblijf in kliniek i.p.v. hotel; woordvoerder: tot 100 operaties per dag; garantie vereist maandelijkse foto-upload. Auteur grotendeels tevreden.", "datum": "2023-12-31", "bron": "https://www.t-online.de/nachrichten/panorama/id_100308208/haartransplantation-in-der-tuerkei-im-test-so-laeuft-der-eingriff-bei-elithair-.html"}],
+      "positief": []
+    },
+    {
+      "naam": "Sule Clinic (Sule Hair Transplant)",
+      "site": "https://sule-hairtransplant.com/",
+      "prijs": {"bedrag": "EUR 2.990 (Renew Basic) tot EUR 5.500 (Platinum Total Care); 7 pakketten", "inbegrepen": "Basic: tot 5.000 grafts, 3 nachten 5-sterrenhotel, VIP-transfers, sedatie, PRP, tolk, nazorgkit, 12 mnd follow-up. Kaart/overboeking kan duurder zijn dan contant.", "bron": "https://sule-hairtransplant.com/llms.txt"},
+      "wie_opereert": {"tekst": "Dr. Enver Kayikcioglu doet de incisies; \"Not performed by him: graft extraction, graft sorting and implantation\" - door team assistent-practitioners, expliciet geen medische licentie.", "bron": "https://sule-hairtransplant.com/llms.txt"},
+      "grafts": {"tekst": "Tot 5.000 standaard; unshaven 2.000-3.000; megasessie 7.000-9.000 over 2 dagen; geen 'unlimited'.", "bron": "https://sule-hairtransplant.com/llms.txt"},
+      "nazorg": {"tekst": "Expliciet geen resultaat- of levenslange garantie. 12-Month Follow-Up Program met 7 fotomomenten via portal. Geen kantoor UK/DE/NL.", "bron": "https://sule-hairtransplant.com/llms.txt"},
+      "sinds": "Niet vermeld; '15+ years of experience'",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Get Hair (GetHair)",
+      "site": "https://gethair.co.uk/how-much-does-a-turkey-hair-transplant-cost/",
+      "prijs": {"bedrag": "USD 1.899 - 3.549 (Turkije-pakketten)", "inbegrepen": "Airport transfers en hotel; 'continuous monitoring'; 0% APR-betaling", "bron": "https://gethair.co.uk/how-much-does-a-turkey-hair-transplant-cost/"},
+      "wie_opereert": {"tekst": "Niet vermeld; Dr. Tayfun Oguzoglu onder 'Our Doctors', zonder te zeggen dat hij opereert.", "bron": "https://gethair.co.uk/how-much-does-a-turkey-hair-transplant-cost/"},
+      "grafts": {"tekst": "Niet vermeld.", "bron": "https://gethair.co.uk/how-much-does-a-turkey-hair-transplant-cost/"},
+      "nazorg": {"tekst": "Geen garantie of 12-maandscontrole. UK-adres 167-169 Great Portland Street, Londen; 'managed by Global Medical Assistance Ltd' (onduidelijk welke entiteit opereert).", "bron": "https://gethair.co.uk/how-much-does-a-turkey-hair-transplant-cost/"},
+      "sinds": "Niet vermeld",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Dr. Balwi",
+      "site": "https://drbalwi.com/haartransplantation-kosten/",
+      "prijs": {"bedrag": "Geen vaste prijslijst; FAQ: gemiddeld ca. EUR 3.300", "inbegrepen": "Transplantatie, 1x PRP, 4-sterrenhotel, VIP-transfer, voor- en nacontrole, medicatie, Duitstalige tolk, 24/7 service", "bron": "https://drbalwi.com/haartransplantation-kosten/"},
+      "wie_opereert": {"tekst": "Niet vermeld of Dr. Balwi zelf opereert; alleen 'über 50.000 Behandlungen'.", "bron": "https://drbalwi.com/haartransplantation-kosten/"},
+      "grafts": {"tekst": "Niet vermeld.", "bron": "https://drbalwi.com/haartransplantation-kosten/"},
+      "nazorg": {"tekst": "Geen garantie, geen 12-maandscontrole genoemd. Contact-e-mail op elithairtransplant.com-domein (relatie met Elithair niet uitgesproken).", "bron": "https://drbalwi.com/haartransplantation-kosten/"},
+      "sinds": "Niet vermeld",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Natural Hair Clinic (Natural Hair Turkey / Natural Clinic)",
+      "site": "https://naturalhairturkey.com/en",
+      "prijs": {"bedrag": "EUR 1.600 (alleen ingreep); EUR 1.800 (+3 hotelnachten); EUR 2.100 (+fibroblast)", "inbegrepen": "Tot 5.000 grafts, transfers, tolk, lokale anesthesie, 12 mnd follow-up met vaste contactpersoon; hogere pakketten +5-sterrenhotel en nazorgproducten", "bron": "https://naturalhairturkey.com/en"},
+      "wie_opereert": {"tekst": "Niet vermeld; geen chirurg genoemd op de pagina.", "bron": "https://naturalhairturkey.com/en"},
+      "grafts": {"tekst": "'up to 5,000 grafts' per pakket.", "bron": "https://naturalhairturkey.com/en"},
+      "nazorg": {"tekst": "Geen garantie; 12 mnd follow-up; geen kantoor UK/DE/NL (Atakoy, Bakirkoy). Controleren of dit de bedoelde 'Natural Hair Clinic' is.", "bron": "https://naturalhairturkey.com/en"},
+      "sinds": "Niet vermeld",
+      "risico": [],
+      "positief": []
+    },
+    {
+      "naam": "Lion Hair",
+      "site": "",
+      "prijs": {"bedrag": "Niet gecontroleerd: geen eigen site gevonden", "inbegrepen": "", "bron": ""},
+      "wie_opereert": {"tekst": "Niet gecontroleerd", "bron": ""},
+      "grafts": {"tekst": "Niet gecontroleerd", "bron": ""},
+      "nazorg": {"tekst": "Niet gecontroleerd", "bron": ""},
+      "sinds": "Onbekend",
+      "risico": [],
+      "positief": []
+    }
+  ]
+}
