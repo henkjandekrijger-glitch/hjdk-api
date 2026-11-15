@@ -1,12 +1,31 @@
 {
-  "uitleg": "Ontwikkelingen per route voor de ochtendmail van todayin surgery (lib/tsc-mail.js). Elke dag zet de geplande Claude-taak hier nieuwe items bij: alleen echte feiten met bron en datum, nieuwste bovenaan. taal: en|nl|de|*; ingreep: hair|tummy|eyelid|*; naar: turkey|mexico|colombia|dominican-republic|thailand|south-korea|abroad|home|*; pagina: slug op todayin.email/surgery.",
+  "uitleg": "Ontwikkelingen per route voor de ochtendmail van todayin surgery (lib/tsc-mail.js). Elke dag zet de geplande Claude-taak hier nieuwe items bij: alleen echte feiten met bron en datum, nieuwste bovenaan. taal: en|nl|de|*; ingreep: hair|tummy|eyelid|lipo|*; naar: turkey|mexico|colombia|dominican-republic|thailand|south-korea|abroad|home|*; pagina: slug op todayin.email/surgery.",
   "items": [
+    {
+      "id": "2026-11-15-nl-premie-2027",
+      "dag": "2026-11-15",
+      "taal": "nl",
+      "ingreep": [
+        "*"
+      ],
+      "naar": [
+        "*"
+      ],
+      "kop": "Zorgpremie 2027 bekend: gemiddeld EUR 173,13 per maand",
+      "tekst": "Alle basispremies voor 2027 zijn bekend: gemiddeld EUR 173,13 per maand, EUR 14,83 meer dan in 2026. De aanvullende dekkingen, ook voor plastische chirurgie, zijn uiterlijk 19 november bekend. Van DSW, Salland en Stad Holland dekt geen enkele aanvullende verzekering plastische chirurgie.",
+      "bron": "zorgwijzer2027",
+      "pagina": "nl/liposuctie-kosten"
+    },
     {
       "id": "2026-11-15-nl-oog-2027",
       "dag": "2026-11-15",
       "taal": "nl",
-      "ingreep": ["eyelid"],
-      "naar": ["*"],
+      "ingreep": [
+        "eyelid"
+      ],
+      "naar": [
+        "*"
+      ],
       "kop": "Aanvullende verzekering 2027: nog geen dekking voor een bovenooglidcorrectie",
       "tekst": "Van DSW, Salland en Stad Holland, de eerste drie verzekeraars met polissen voor 2027, dekt geen enkele aanvullende verzekering een bovenooglidcorrectie. De andere verzekeraars maken hun premies uiterlijk 19 november bekend.",
       "bron": "consBondOog",
@@ -16,8 +35,14 @@
       "id": "2026-11-15-en-fcdo-turkey",
       "dag": "2026-11-15",
       "taal": "en",
-      "ingreep": ["hair", "tummy"],
-      "naar": ["turkey", "abroad"],
+      "ingreep": [
+        "hair",
+        "tummy"
+      ],
+      "naar": [
+        "turkey",
+        "abroad"
+      ],
       "kop": "UK travel advice for Turkey counts 7 British deaths after medical procedures in 2025",
       "tekst": "The UK Foreign Office health advice for Turkey reports 7 deaths of British nationals after medical procedures in 2025. Our check list for Turkish clinics and surgeons is on the page below.",
       "bron": "fcdoTr",
@@ -27,8 +52,12 @@
       "id": "2026-11-15-de-tr-regeln",
       "dag": "2026-11-15",
       "taal": "de",
-      "ingreep": ["hair"],
-      "naar": ["turkey"],
+      "ingreep": [
+        "hair"
+      ],
+      "naar": [
+        "turkey"
+      ],
       "kop": "Türkei: Komplikationsversicherung bei Operationen für ausländische Patienten ist Pflicht",
       "tekst": "Seit der Verordnung vom 26. April 2025 müssen Kliniken für ausländische Patienten lizenziert sein und Vermittler eine USHAS-Lizenz haben. Fragen Sie vor der Buchung nach der Police.",
       "bron": "mondaqTr",
