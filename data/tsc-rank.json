@@ -1,4 +1,1488 @@
 {
-  "uitleg": "Rankings van klinieken voor todayin surgery (lib/tsc-rank.js). Per lijst: slugs per taal, tekst per taal, klinieken met signalen, reviews, openheid, risico en conclusie; elk feit met bron. Een lijst zonder klinieken staat nergens.",
-  "lijsten": {}
+ "uitleg": "Rankings van klinieken voor todayin surgery (lib/tsc-rank.js). Per lijst: slugs per taal, tekst per taal, klinieken met signalen, reviews, openheid, risico en conclusie; elk feit met bron. Een lijst zonder klinieken staat nergens.",
+ "lijsten": {
+  "hair-turkey": {
+   "id": "hair-turkey",
+   "land": "TR",
+   "ingreep": "hair",
+   "naar": "turkey",
+   "gecontroleerd": "2026-11-15",
+   "gepubliceerd": "2026-11-15",
+   "slugs": {
+    "en": "best-hair-transplant-clinics-turkey",
+    "nl": "nl/beste-haartransplantatie-klinieken-turkije",
+    "de": "de/beste-haartransplantation-kliniken-tuerkei"
+   },
+   "klinieken": [
+    {
+     "id": "asmed",
+     "naam": "Asmed (Dr. Koray Erdoğan)",
+     "stad": "Istanbul",
+     "site": "https://hairtransplantfue.org",
+     "artsen": [
+      {
+       "naam": "Koray Erdoğan",
+       "titel": "Dr.",
+       "bron": "https://www.hairtransplantfue.org/about-asmed/dr-koray-erdogan"
+      }
+     ],
+     "signalen": {
+      "iahrs": "member",
+      "iahrs_bron": "https://www.iahrs.org/"
+     },
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.3,
+       "aantal": 87,
+       "pct_1ster": 5.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/asmed.com.tr",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "aantal": 30,
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/koray-erdogan-istanbul-turkey",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [
+      "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+      "https://americanhairloss.org/hair-transplant-surgeons"
+     ],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://hairtransplantfue.org/about-asmed/what-we-do-at-asmed",
+      "arts_opereert": "deels",
+      "arts_tekst": "\"Dr. Koray Erdogan personally creates these sites\" (incisies); extractie en plaatsing niet aan hem toegeschreven; technicus, anesthesist en coordinator genoemd.",
+      "arts_bron": "https://hairtransplantfue.org/about-asmed/what-we-do-at-asmed",
+      "garantie": "Geen garantie genoemd. Coordinator volgt herstel 12-15 maanden. Geen kantoor UK/DE/NL. (asmed.com is een ander bedrijf - IT-opleider in de VS.)",
+      "garantie_bron": "https://hairtransplantfue.org/about-asmed/what-we-do-at-asmed"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Koray Erdoğan has been an IAHRS member since 2013 (ISHRS from 2007 to 2015) and makes the incisions himself. Reviews are few: 117 on Trustpilot and RealSelf, average 4.5. No price published.",
+      "nl": "Dr. Koray Erdoğan is sinds 2013 lid van de IAHRS (ISHRS van 2007 tot 2015) en maakt de incisies zelf. Weinig reviews: 117 op Trustpilot en RealSelf, gemiddeld 4,5. Geen prijs gepubliceerd.",
+      "de": "Dr. Koray Erdoğan ist seit 2013 IAHRS-Mitglied (ISHRS von 2007 bis 2015) und setzt die Schnitte selbst. Wenige Bewertungen: 117 auf Trustpilot und RealSelf, im Schnitt 4,5. Kein Preis veröffentlicht."
+     }
+    },
+    {
+     "id": "hlc",
+     "naam": "HLC Hairline Clinic (Dr. Özgür Öztan)",
+     "stad": "Ankara",
+     "site": "https://www.fue-hlc.com",
+     "artsen": [],
+     "signalen": {
+      "ishrs": "Fellow (FISHRS)",
+      "ishrs_bron": "https://ishrs.org/doctor/51125/",
+      "abhrs": true,
+      "abhrs_bron": "https://abhrs.org/directory/"
+     },
+     "reviews": [],
+     "vermeld": [
+      "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+      "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+      "https://www.hairrestorationnetwork.com/topic/69824-if-money-is-no-object-what-are-the-top-5-docs-in-turkey-for-ht/",
+      "https://www.hairrestorationnetwork.com/topic/56967-advice-needed-who-to-choose-in-turkey/"
+     ],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://www.fue-hlc.com/",
+      "arts_opereert": "ja",
+      "arts_tekst": "\"will personally be performed by our hair surgeons\"; \"Only Surgeons!\" \"No Assistants!\" (Dr. Oztan Ozgur oprichter).",
+      "arts_bron": "https://www.fue-hlc.com/",
+      "garantie": "",
+      "garantie_bron": "https://www.fue-hlc.com/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Ranked on qualifications, not reviews: founder Dr. Özgür Öztan is an ISHRS Fellow and ABHRS diplomate, and four independent patient forums name the clinic. Its site says only surgeons operate, no assistants. No price published and no review profile found.",
+      "nl": "Op kwalificaties, niet op reviews: oprichter Dr. Özgür Öztan is ISHRS-fellow en ABHRS-diplomate, en vier onafhankelijke patiëntenforums noemen de kliniek. De site zegt dat alleen chirurgen opereren, geen assistenten. Geen prijs en geen reviewprofiel gevonden.",
+      "de": "Nach Qualifikation, nicht nach Bewertungen: Gründer Dr. Özgür Öztan ist ISHRS-Fellow und ABHRS-Diplomate, vier unabhängige Patientenforen nennen die Klinik. Laut Website operieren nur Chirurgen, keine Assistenten. Kein Preis und kein Bewertungsprofil gefunden."
+     }
+    },
+    {
+     "id": "smile",
+     "naam": "Smile Hair Clinic",
+     "stad": "Istanbul",
+     "site": "https://smilehairclinic.com",
+     "artsen": [
+      {
+       "naam": "Gökay Bilgin",
+       "titel": "Dr., Co-Founder, Hair Transplant Specialist",
+       "bron": "https://www.smilehairclinic.com/en/medical-board"
+      },
+      {
+       "naam": "Mehmet Erdoğan",
+       "titel": "Dr., Co-Founder, Hair Transplant Specialist",
+       "bron": "https://www.smilehairclinic.com/en/medical-board"
+      },
+      {
+       "naam": "Ali Osman Soluk",
+       "titel": "Dr.",
+       "bron": "https://www.smilehairclinic.com/en/medical-board"
+      },
+      {
+       "naam": "M. Reşat Arpacı",
+       "titel": "Dr.",
+       "bron": "https://www.smilehairclinic.com/en/medical-board"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.9,
+       "aantal": 4182,
+       "pct_1ster": 1.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/smilehairclinic.com",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "aantal": 598,
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/smile-hair-clinic-istanbul",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "Bookimed",
+       "score": 4.7,
+       "aantal": 43,
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://us-uk.bookimed.com/clinic/reviews/smile-hair-clinic/procedure=hair-transplant/",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [
+      "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816"
+     ],
+     "openheid": {
+      "prijs": "Gold EUR 2.390; Platinum EUR 3.290; Diamond EUR 5.790 (vast voor vertrek, grafts veranderen prijs niet)",
+      "prijs_bron": "https://www.smilehairclinic.com/en/hair-transplant-turkey-cost/",
+      "arts_opereert": "deels",
+      "arts_tekst": "Gold/Platinum: \"Manual implantation by surgical technicians\"; Gold-incisie door technici, Platinum-incisie door twee artsen. Diamond: \"Performed exclusively by our founding doctors\" of senior arts; per stap niet gespecificeerd.",
+      "arts_bron": "https://www.smilehairclinic.com/en/hair-transplant-turkey-cost/",
+      "garantie": "Geen garantie; touch-up als 'standard remedy'. '1-Year Comprehensive Care Plan' met online check-ins. Geen kantoor UK/DE/NL (alleen Umraniye, Istanbul).",
+      "garantie_bron": "https://www.smilehairclinic.com/en/hair-transplant-turkey-cost/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Highest score on the data: about 4,800 reviews averaging 4.9, and clear published prices. The site says technicians do the implantation in the two cheaper packages; only the top package names the founding doctors. We found no ISHRS or ABHRS credential for its doctors.",
+      "nl": "Hoogste score op de data: zo'n 4.800 reviews met gemiddeld 4,9, en duidelijke prijzen. De site zegt dat in de twee goedkopere pakketten technici de haren plaatsen; alleen het duurste pakket noemt de oprichtende artsen. Voor de artsen vonden we geen ISHRS- of ABHRS-kwalificatie.",
+      "de": "Höchste Punktzahl nach den Daten: rund 4.800 Bewertungen mit durchschnittlich 4,9 und klare Preise. Laut Website setzen in den zwei günstigeren Paketen Techniker die Grafts ein; nur das teuerste Paket nennt die Gründerärzte. Für die Ärzte fanden wir keine ISHRS- oder ABHRS-Qualifikation."
+     }
+    },
+    {
+     "id": "vera",
+     "naam": "Vera Clinic",
+     "stad": "Istanbul",
+     "site": "https://veraclinic.net",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.8,
+       "aantal": 1897,
+       "pct_1ster": 2.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/www.veraclinic.net",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "aantal": 104,
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/vera-clinic-istanbul-turkey",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "EUR 2.990 - 5.890 afhankelijk van pakket",
+      "prijs_bron": "https://www.veraclinic.net/hair-transplant/",
+      "arts_opereert": "",
+      "arts_tekst": "",
+      "arts_bron": "https://www.veraclinic.net/hair-transplant/",
+      "garantie": "",
+      "garantie_bron": "https://www.veraclinic.net/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "4.8 from about 2,000 reviews and published prices, but the site does not say who operates and its guarantee programme has no published terms.",
+      "nl": "4,8 uit zo'n 2.000 reviews en prijzen op de site, maar de site zegt niet wie opereert en het garantieprogramma heeft geen gepubliceerde voorwaarden.",
+      "de": "4,8 aus rund 2.000 Bewertungen und veröffentlichte Preise, aber die Website sagt nicht, wer operiert, und das Garantieprogramm hat keine veröffentlichten Bedingungen."
+     }
+    },
+    {
+     "id": "cosmedica",
+     "naam": "Cosmedica (Dr. Levent Acar)",
+     "stad": "Istanbul",
+     "site": "https://cosmedica.com",
+     "artsen": [
+      {
+       "naam": "Levent Acar",
+       "titel": "Dr., Haartransplantation Spezialist, Gründer und Leiter der Cosmedica Clinic",
+       "bron": "https://cosmedica.com/de/dr-levent-acar"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": null,
+       "aantal": 963,
+       "pct_1ster": 2.0,
+       "waarschuwing": "Trustpilot removed fake reviews",
+       "bron": "https://www.trustpilot.com/review/cosmedica.com",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.0,
+       "aantal": 22,
+       "pct_1ster": null,
+       "waarschuwing": "account suspended",
+       "bron": "https://www.realself.com/practices/cosmedica-istanbul-marmara",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "aantal": 94,
+       "pct_1ster": null,
+       "waarschuwing": "account suspended",
+       "bron": "https://www.realself.com/dr/levent-acar-istanbul-turkey",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "FUE Sapphire vanaf EUR 2.550 (tot 4.000 grafts; megasessie tot 6.000 +EUR 900); Micro Sapphire DHI vanaf EUR 3.290; VIP Micro Sapphire DHI vanaf EUR 8.000",
+      "prijs_bron": "https://www.cosmedica.com/price",
+      "arts_opereert": "deels",
+      "arts_tekst": "Standaard: alleen consult en haarlijn door Dr. Acar; wie extraheert/implanteert staat er niet. Alleen VIP: \"Operation incision by Dr. Acar\". Geen technici genoemd.",
+      "arts_bron": "https://www.cosmedica.com/price",
+      "garantie": "Schriftelijke 'Growth & Graft Guarantee': gratis revisie als grafts niet groeien buiten schuld patient (uitsluitingen o.a. roken, alcohol). Geen 12-maandscontrole genoemd. Geen kantoor/partner UK/DE/NL; alleen 'representatives for 19 countries'.",
+      "garantie_bron": "https://www.cosmedica.com/price"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Trustpilot removed fake reviews and shows no score, and RealSelf suspended Dr. Acar's account. Prices and a written regrowth guarantee are clear; Dr. Acar makes the incisions himself only in the EUR 8,000 VIP package.",
+      "nl": "Trustpilot verwijderde nepreviews en toont geen score, en RealSelf schortte het account van Dr. Acar op. Prijzen en een schriftelijke groeigarantie zijn duidelijk; Dr. Acar maakt de incisies alleen zelf in het VIP-pakket van EUR 8.000.",
+      "de": "Trustpilot hat gefälschte Bewertungen entfernt und zeigt keine Punktzahl, RealSelf hat das Konto von Dr. Acar gesperrt. Preise und eine schriftliche Anwachsgarantie sind klar; Dr. Acar setzt die Schnitte nur im VIP-Paket für 8.000 Euro selbst."
+     }
+    },
+    {
+     "id": "aygin",
+     "naam": "Dr. Serkan Aygın Clinic",
+     "stad": "Istanbul",
+     "site": "https://drserkanaygin.com",
+     "artsen": [
+      {
+       "naam": "Serkan Aygın",
+       "titel": "Dr., Medical director (Dermatology)",
+       "bron": "https://drserkanaygin.com/about/"
+      }
+     ],
+     "signalen": {
+      "specialist": "dermatologist",
+      "specialist_bron": "https://drserkanaygin.com/about/"
+     },
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": null,
+       "aantal": 2437,
+       "pct_1ster": 5.0,
+       "waarschuwing": "Trustpilot removed fake reviews",
+       "bron": "https://www.trustpilot.com/review/www.drserkanaygin.com",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.4,
+       "aantal": 56,
+       "pct_1ster": null,
+       "waarschuwing": "account suspended",
+       "bron": "https://www.realself.com/dr/serkan-aygin-istanbul-turkey",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [
+      "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816"
+     ],
+     "openheid": {
+      "prijs": "Black-Friday-actie EUR 3.200 (ingreep mei 2027); pakketten Turkije ca. EUR 2.300-4.650; titel zegt 'ab 3.500 EUR' - cijfers onderling niet consistent",
+      "prijs_bron": "https://www.drserkanaygin.com/de/haartransplantation/haartransplantation-kosten/",
+      "arts_opereert": "",
+      "arts_tekst": "",
+      "arts_bron": "https://www.drserkanaygin.com/de/haartransplantation/haartransplantation-kosten/",
+      "garantie": "",
+      "garantie_bron": "https://www.drserkanaygin.com/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Trustpilot removed fake reviews and shows no score. Dr. Serkan Aygın is a dermatologist according to his own site, and the clinic has an office in Berlin.",
+      "nl": "Trustpilot verwijderde nepreviews en toont geen score. Dr. Serkan Aygın is volgens zijn eigen site dermatoloog, en de kliniek heeft een kantoor in Berlijn.",
+      "de": "Trustpilot hat gefälschte Bewertungen entfernt und zeigt keine Punktzahl. Dr. Serkan Aygın ist laut eigener Website Dermatologe, die Klinik hat ein Büro in Berlin."
+     }
+    },
+    {
+     "id": "pekiner",
+     "naam": "PHR Clinic (Dr. Kaan Pekiner)",
+     "stad": "Ankara",
+     "site": "",
+     "artsen": [],
+     "signalen": {
+      "ishrs": "Full Member",
+      "ishrs_bron": "https://ishrs.org/doctor/607225"
+     },
+     "reviews": [],
+     "vermeld": [
+      "https://www.reddit.com/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+      "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+      "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+      "https://www.hairrestorationnetwork.com/topic/69824-if-money-is-no-object-what-are-the-top-5-docs-in-turkey-for-ht/"
+     ],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Kaan Pekiner is an ISHRS member and the most-named doctor in an independent forum thread. No prices or review profile found.",
+      "nl": "Dr. Kaan Pekiner is ISHRS-lid en de meest genoemde arts in een onafhankelijke forumdraad. Geen prijzen of reviewprofiel gevonden.",
+      "de": "Dr. Kaan Pekiner ist ISHRS-Mitglied und der meistgenannte Arzt in einem unabhängigen Forumsthread. Keine Preise und kein Bewertungsprofil gefunden."
+     }
+    },
+    {
+     "id": "yaman",
+     "naam": "Dr. Resul Yaman Hair Clinic",
+     "stad": "Istanbul",
+     "site": "https://resulyaman.com",
+     "artsen": [],
+     "signalen": {
+      "iahrs": "associate",
+      "iahrs_bron": "https://www.iahrs.org/"
+     },
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 3.4,
+       "aantal": 6,
+       "pct_1ster": 33.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/resulyaman.com",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.6,
+       "aantal": 16,
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/resul-yaman-istanbul-turkey",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [
+      "https://www.reddit.com/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+      "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+      "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+      "https://www.hairrestorationnetwork.com/topic/65565-looking-for-clinics-in-turkey-not-hlc/page/2/"
+     ],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://resulyaman.com/hair-transplant-cost-turkey/",
+      "arts_opereert": "deels",
+      "arts_tekst": "Dr. Yaman \"personally takes part in every patient's procedure\"; welke stappen staat er niet.",
+      "arts_bron": "https://resulyaman.com/hair-transplant-cost-turkey/",
+      "garantie": "",
+      "garantie_bron": "https://resulyaman.com/hair-transplant-cost-turkey/"
+     },
+     "risico": []
+    },
+    {
+     "id": "fuecapilar",
+     "naam": "FUECAPILAR (Dr. Doğan Turan)",
+     "stad": "Istanbul",
+     "site": "https://fuecapilar.com",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [],
+     "vermeld": [
+      "https://www.reddit.com/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+      "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+      "https://americanhairloss.org/hair-transplant-surgeons",
+      "https://www.hairrestorationnetwork.com/topic/69824-if-money-is-no-object-what-are-the-top-5-docs-in-turkey-for-ht/"
+     ],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "keser",
+     "naam": "Derma-Plast Clinic (Dr. Muttalip Keser)",
+     "stad": "Ankara",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [],
+     "vermeld": [
+      "https://www.reddit.com/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+      "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+      "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+      "https://www.hairrestorationnetwork.com/topic/69824-if-money-is-no-object-what-are-the-top-5-docs-in-turkey-for-ht/"
+     ],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "elithair",
+     "naam": "Elithair",
+     "stad": "Istanbul",
+     "site": "https://elithairtransplant.com",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.7,
+       "aantal": 4611,
+       "pct_1ster": 4.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/elithair.com",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "aantal": 2,
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/elithair-istanbul-turkey",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 1.0,
+       "aantal": 2,
+       "pct_1ster": 100.0,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/abdulaziz-balwi-istanbul-turkey",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [
+      "https://community.realself.com/forum/clinics-turkey-recommend-hair-transplant"
+     ],
+     "openheid": {
+      "prijs": "GBP 2.849 (tot 2.000 grafts) tot GBP 3.449 (5.000+); +GBP 85 per 500 extra grafts; US-site 'from $3,899'",
+      "prijs_bron": "https://elithair.com/uk/costs-hair-transplant/",
+      "arts_opereert": "nee",
+      "arts_tekst": "\"Trained medical specialists carry out the technical steps under medical supervision\"; \"A physician oversees every step\"; geen opererende arts genoemd.",
+      "arts_bron": "https://elithair.com/uk/costs-hair-transplant/",
+      "garantie": "\"20-year written guarantee\", voorwaarde: nazorginstructies volgen en voortgang documenteren in app; uitsluitingen niet gepubliceerd. 12 mnd app-nazorg. Geen kantoor UK/DE/NL; TUV Thuringen-certificering (ISO 9001).",
+      "garantie_bron": "https://elithair.com/price/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "4.7 from about 4,600 reviews and the only 20-year written guarantee we found (conditions not published). The site says trained specialists do the technical steps under a doctor's supervision.",
+      "nl": "4,7 uit zo'n 4.600 reviews en de enige schriftelijke garantie van 20 jaar die we vonden (voorwaarden niet gepubliceerd). De site zegt dat getrainde specialisten de technische stappen doen onder toezicht van een arts.",
+      "de": "4,7 aus rund 4.600 Bewertungen und die einzige schriftliche 20-Jahres-Garantie, die wir fanden (Bedingungen nicht veröffentlicht). Laut Website machen geschulte Fachkräfte die technischen Schritte unter ärztlicher Aufsicht."
+     }
+    },
+    {
+     "id": "bicer",
+     "naam": "Dr. Özlem Biçer Clinic",
+     "stad": "Istanbul",
+     "site": "https://ozlembicer.com",
+     "artsen": [],
+     "signalen": {
+      "ishrs": "Fellow (FISHRS)",
+      "ishrs_bron": "https://ishrs.org/doctor/ozlem-bicer/",
+      "abhrs": true,
+      "abhrs_bron": "https://abhrs.org/directory/"
+     },
+     "reviews": [],
+     "vermeld": [
+      "https://www.reddit.com/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+      "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+      "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+      "https://americanhairloss.org/hair-transplant-surgeons"
+     ],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "Ranked on qualifications: Dr. Özlem Biçer is an ISHRS Fellow and ABHRS diplomate, and independent forums recommend her. No review profile or price found.",
+      "nl": "Op kwalificaties: Dr. Özlem Biçer is ISHRS-fellow en ABHRS-diplomate, en onafhankelijke forums raden haar aan. Geen reviewprofiel of prijs gevonden.",
+      "de": "Nach Qualifikation: Dr. Özlem Biçer ist ISHRS-Fellow und ABHRS-Diplomate, unabhängige Foren empfehlen sie. Kein Bewertungsprofil und kein Preis gefunden."
+     }
+    },
+    {
+     "id": "ahd",
+     "naam": "AHD Clinic (Dr. Hakan Doğanay)",
+     "stad": "Antalya",
+     "site": "https://drhakandoganay.com",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [],
+     "vermeld": [
+      "https://americanhairloss.org/hair-transplant-surgeons"
+     ],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "hermest",
+     "naam": "Hermest Hair Clinic",
+     "stad": "Istanbul",
+     "site": "https://hermestclinic.com",
+     "artsen": [],
+     "signalen": {
+      "ishrs": "Associate Member",
+      "ishrs_bron": "https://ishrs.org/doctor/nesim-tugen/"
+     },
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.9,
+       "aantal": 1339,
+       "pct_1ster": 1.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/hermestclinic.com",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "aantal": 39,
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/hermest-hair-transplant-clinic-kadikoy-istanbul",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://www.en.hermest.com.tr/about-us/",
+      "arts_opereert": "",
+      "arts_tekst": "",
+      "arts_bron": "https://www.en.hermest.com.tr/about-us/",
+      "garantie": "",
+      "garantie_bron": "https://www.en.hermest.com.tr/about-us/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "4.9 from about 1,400 reviews and one doctor with ISHRS associate membership, but the site names no doctor, publishes no price and claims a lifetime guarantee without terms.",
+      "nl": "4,9 uit zo'n 1.400 reviews en één arts die geassocieerd lid is van de ISHRS, maar de site noemt geen arts, geen prijs en belooft levenslange garantie zonder voorwaarden.",
+      "de": "4,9 aus rund 1.400 Bewertungen und ein Arzt mit assoziierter ISHRS-Mitgliedschaft, aber die Website nennt keinen Arzt, keinen Preis und verspricht lebenslange Garantie ohne Bedingungen."
+     }
+    },
+    {
+     "id": "armamed",
+     "naam": "Armamed (Dr. Erkan Demirsoy)",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {
+      "ishrs": "Full Member",
+      "ishrs_bron": "https://ishrs.org/doctor/48271/"
+     },
+     "reviews": [],
+     "vermeld": [
+      "https://www.reddit.com/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+      "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+      "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+      "https://www.hairrestorationnetwork.com/topic/65565-looking-for-clinics-in-turkey-not-hlc/page/2/"
+     ],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Erkan Demirsoy is an ISHRS member and is recommended in independent forums. No prices or review profile found.",
+      "nl": "Dr. Erkan Demirsoy is ISHRS-lid en wordt aangeraden in onafhankelijke forums. Geen prijzen of reviewprofiel gevonden.",
+      "de": "Dr. Erkan Demirsoy ist ISHRS-Mitglied und wird in unabhängigen Foren empfohlen. Keine Preise und kein Bewertungsprofil gefunden."
+     }
+    },
+    {
+     "id": "cinik",
+     "naam": "Dr. Cinik Hospital (Dr. Emrah Cinik)",
+     "stad": "Istanbul",
+     "site": "https://emrahcinik.com",
+     "artsen": [
+      {
+       "naam": "Emrah Cinik",
+       "titel": "Dr, Leading Hair Transplant Surgeon",
+       "bron": "https://emrahcinik.com/emrah-cink-md"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.8,
+       "aantal": 6944,
+       "pct_1ster": 2.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/emrahcinik.com",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "aantal": 1711,
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/cinik-hospital-istanbul-turkey",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [
+      "https://www.hairlosstalk.com/interact/threads/getting-a-hair-transplant-in-turkey-which-doctor-should-i-go-with.135816",
+      "https://www.hairrestorationnetwork.com/topic/56967-advice-needed-who-to-choose-in-turkey/"
+     ],
+     "openheid": {
+      "prijs": "FUE EUR 2.350; DHI EUR 3.090; Premium Doctor EUR 3.590; Manual FUE EUR 3.990; Long Hair FUE EUR 5.200; Signature EUR 5.990; elders in GBP (Classic FUE GBP 1.995) - EUR- en GBP-bedragen niet consistent",
+      "prijs_bron": "https://emrahcinik.com/prices",
+      "arts_opereert": "deels",
+      "arts_tekst": "Alleen Signature: \"Channel Opening Performed by Dr. Emrah Cinik\"; extractie door \"specialised technicians\"; Premium: \"Doctor-Supervised Procedure\".",
+      "arts_bron": "https://emrahcinik.com/prices",
+      "garantie": "Geen garantie genoemd. Remote check-ins week 1, maand 1/3/6/12; Signature 24 maanden. Sectie 'Dr Cinik London' zonder bevestigd fysiek adres; DE/NL alleen taalversies.",
+      "garantie_bron": "https://emrahcinik.com/prices"
+     },
+     "risico": [
+      {
+       "wat": "A 38-year-old British patient died in the clinic in July 2025 before his operation started; Turkish authorities opened an investigation and the clinic says the courts are investigating",
+       "datum": "2025-08-03",
+       "bron": "https://www.aol.com/british-man-dies-going-turkey-183131499.html",
+       "ernst": "zwaar"
+      }
+     ],
+     "conclusie": {
+      "en": "The most reviews of all (about 8,700, average 4.8), but a British patient died at the clinic in July 2025 before his operation; Turkish authorities are investigating. Technicians do the extraction; Dr. Cinik opens the channels only in the Signature package.",
+      "nl": "De meeste reviews van allemaal (zo'n 8.700, gemiddeld 4,8), maar in juli 2025 overleed een Britse patiënt in de kliniek voor zijn operatie; de Turkse autoriteiten onderzoeken het. Technici halen de haren weg; Dr. Cinik maakt de kanalen alleen in het Signature-pakket.",
+      "de": "Die meisten Bewertungen von allen (rund 8.700, im Schnitt 4,8), aber im Juli 2025 starb ein britischer Patient vor seiner Operation in der Klinik; die türkischen Behörden ermitteln. Techniker entnehmen die Grafts; Dr. Cinik öffnet die Kanäle nur im Signature-Paket."
+     }
+    },
+    {
+     "id": "aslitarcan",
+     "naam": "Asli Tarcan Clinic",
+     "stad": "Istanbul",
+     "site": "https://aslitarcanclinic.com",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "hairofistanbul",
+     "naam": "Hair of Istanbul",
+     "stad": "Istanbul",
+     "site": "https://hairofistanbul.com",
+     "artsen": [
+      {
+       "naam": "Mahmut Satekin",
+       "titel": "Dr",
+       "bron": "https://www.hairofistanbul.com/medical-team"
+      },
+      {
+       "naam": "Ahmet Dilber",
+       "titel": "Dr",
+       "bron": "https://www.hairofistanbul.com/medical-team"
+      },
+      {
+       "naam": "Barış Adaklı",
+       "titel": "Specialist Dr",
+       "bron": "https://www.hairofistanbul.com/medical-team"
+      },
+      {
+       "naam": "Hayriye Dilber",
+       "titel": "Dr",
+       "bron": "https://www.hairofistanbul.com/medical-team"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.7,
+       "aantal": 77,
+       "pct_1ster": 4.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/hairofistanbul.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [
+      "https://community.realself.com/forum/clinics-turkey-recommend-hair-transplant"
+     ],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "clinicana",
+     "naam": "Clinicana",
+     "stad": "Istanbul",
+     "site": "https://www.clinicana.com",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.9,
+       "aantal": 1573,
+       "pct_1ster": 1.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/clinicana.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "Basic EUR 2.500 (alleen ingreep); Standard EUR 2.850; Premium EUR 3.000; Premium Mega DHI EUR 4.500; Exosome EUR 3.950; Stem Cell VIP EUR 5.500",
+      "prijs_bron": "https://www.clinicana.com/hair-transplant-cost-turkey/",
+      "arts_opereert": "",
+      "arts_tekst": "",
+      "arts_bron": "https://www.clinicana.com/team/",
+      "garantie": "'Clinicana Guarantee Certificate': belofte het afgesproken plan te corrigeren, expliciet geen biologisch resultaat gegarandeerd. Fotocheck 6-12 mnd. Geen kantoor UK/DE/NL.",
+      "garantie_bron": "https://www.clinicana.com/hair-transplant-cost-turkey/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "4.9 from about 1,600 Trustpilot reviews, published prices and a guarantee certificate. The site does not say who extracts and implants.",
+      "nl": "4,9 uit zo'n 1.600 Trustpilot-reviews, prijzen op de site en een garantiecertificaat. De site zegt niet wie de haren weghaalt en plaatst.",
+      "de": "4,9 aus rund 1.600 Trustpilot-Bewertungen, veröffentlichte Preise und ein Garantiezertifikat. Die Website sagt nicht, wer entnimmt und einsetzt."
+     }
+    },
+    {
+     "id": "civas",
+     "naam": "Dr. Civas Hair Transplant (Dr. Ekrem Civas)",
+     "stad": "Ankara",
+     "site": "https://civashairtransplant.com",
+     "artsen": [],
+     "signalen": {
+      "ishrs": "Fellow (FISHRS)",
+      "ishrs_bron": "https://ishrs.org/doctor/48947/",
+      "abhrs": true,
+      "abhrs_bron": "https://abhrs.org/directory/",
+      "specialist": "dermatologist",
+      "specialist_bron": "https://ishrs.org/doctor/48947/"
+     },
+     "reviews": [],
+     "vermeld": [
+      "https://americanhairloss.org/hair-transplant-surgeons"
+     ],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "drt",
+     "naam": "DrT Hair (Dr. Tayfun Oğuzoğlu)",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {
+      "ishrs": "Fellow (FISHRS)",
+      "ishrs_bron": "https://ishrs.org/doctor/48486/",
+      "abhrs": true,
+      "abhrs_bron": "https://abhrs.org/directory/"
+     },
+     "reviews": [],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "aek",
+     "naam": "AEK Hair Clinic (Dr. Emre Karadeniz)",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {
+      "ishrs": "Fellow (FISHRS)",
+      "ishrs_bron": "https://ishrs.org/doctor/50809/",
+      "abhrs": true,
+      "abhrs_bron": "https://abhrs.org/directory/",
+      "specialist": "plastic surgery training",
+      "specialist_bron": "https://ishrs.org/doctor/50809/"
+     },
+     "reviews": [],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "getnewhair",
+     "naam": "Get New Hair (Dr. Kayıhan Şahinoğlu)",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {
+      "ishrs": "Fellow (FISHRS)",
+      "ishrs_bron": "https://ishrs.org/doctor/37676",
+      "abhrs": true,
+      "abhrs_bron": "https://abhrs.org/directory/"
+     },
+     "reviews": [],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "estenove",
+     "naam": "Estenove",
+     "stad": "Istanbul",
+     "site": "https://estenove.com",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.9,
+       "aantal": 1230,
+       "pct_1ster": 1.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/estenove.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "EUR 3.395 / 4.595 / 6.595 (Sapphire FUE EUR 3.395)",
+      "prijs_bron": "https://www.estenove.com/hair-transplant-cost-istanbul-turkey/",
+      "arts_opereert": "",
+      "arts_tekst": "",
+      "arts_bron": "https://www.estenove.com/hair-transplant-cost-istanbul-turkey/",
+      "garantie": "",
+      "garantie_bron": "https://www.estenove.com/hair-transplant-cost-istanbul-turkey/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "4.9 from about 1,200 Trustpilot reviews and published prices, but no doctor is named and no guarantee is given.",
+      "nl": "4,9 uit zo'n 1.200 Trustpilot-reviews en prijzen op de site, maar geen arts genoemd en geen garantie.",
+      "de": "4,9 aus rund 1.200 Trustpilot-Bewertungen und veröffentlichte Preise, aber kein Arzt genannt und keine Garantie."
+     }
+    },
+    {
+     "id": "estemedical",
+     "naam": "Este Medical Group",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.9,
+       "aantal": 10127,
+       "pct_1ster": 1.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/estemedicalgroup.uk",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "estefavor",
+     "naam": "Este Favor",
+     "stad": "Istanbul",
+     "site": "https://estefavor.com",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.7,
+       "aantal": 67,
+       "pct_1ster": 3.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/estefavor.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "USD 2.000 - 4.500",
+      "prijs_bron": "https://estefavor.com/en/whats-included-in-an-all-inclusive-hair-transplant-package/",
+      "arts_opereert": "deels",
+      "arts_tekst": "\"The senior doctor personally conducts the hairline design\"; kanalen 'performs or directly supervises'; extractie niet aan arts toegeschreven.",
+      "arts_bron": "https://estefavor.com/en/whats-included-in-an-all-inclusive-hair-transplant-package/",
+      "garantie": "",
+      "garantie_bron": "https://estefavor.com/en/whats-included-in-an-all-inclusive-hair-transplant-package/"
+     },
+     "risico": []
+    },
+    {
+     "id": "sule",
+     "naam": "Sule Hair Transplant",
+     "stad": "Istanbul",
+     "site": "https://sule-hairtransplant.com",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "EUR 2.990 (Renew Basic) tot EUR 5.500 (Platinum Total Care); 7 pakketten",
+      "prijs_bron": "https://sule-hairtransplant.com/llms.txt",
+      "arts_opereert": "nee",
+      "arts_tekst": "Dr. Enver Kayikcioglu doet de incisies; \"Not performed by him: graft extraction, graft sorting and implantation\" - door team assistent-practitioners, expliciet geen medische licentie.",
+      "arts_bron": "https://sule-hairtransplant.com/llms.txt",
+      "garantie": "Expliciet geen resultaat- of levenslange garantie. 12-Month Follow-Up Program met 7 fotomomenten via portal. Geen kantoor UK/DE/NL.",
+      "garantie_bron": "https://sule-hairtransplant.com/llms.txt"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "The most open site we found: it says plainly that assistants without a medical licence do the extraction and implantation, and it gives no result guarantee.",
+      "nl": "De meest open site die we vonden: hij zegt eerlijk dat assistenten zonder medische bevoegdheid de haren weghalen en plaatsen, en geeft geen resultaatgarantie.",
+      "de": "Die offenste Website, die wir fanden: Sie sagt klar, dass Assistenten ohne ärztliche Zulassung entnehmen und einsetzen, und gibt keine Ergebnisgarantie."
+     }
+    },
+    {
+     "id": "hairmedico",
+     "naam": "Hairmedico (Dr. Arslan Musbeh)",
+     "stad": "Istanbul",
+     "site": "https://hairmedico.com",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.9,
+       "aantal": 121,
+       "pct_1ster": 7.0,
+       "waarschuwing": "",
+       "bron": "https://ca.trustpilot.com/review/hairmedico.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [
+      "https://www.hairrestorationnetwork.com/topic/62720-dr-arslan-musbeh-from-hairmedico-in-istanbul-any-thoughtsfeedback-from-20212022/"
+     ],
+     "openheid": {
+      "prijs": "'vanaf EUR 3.200' (hero) en 'vanaf EUR 2.600' elders - tegenstrijdig; Silver/Gold/VIP-prijzen niet vermeld",
+      "prijs_bron": "https://hairmedico.com/hair-transplant-cost-in-istanbul",
+      "arts_opereert": "deels",
+      "arts_tekst": "Dr. Arslan Musbeh: kanalen in Gold/VIP; extractie en \"Graft placement is also his personally in the VIP package\"; Silver/Gold plaatsing door team.",
+      "arts_bron": "https://hairmedico.com/hair-transplant-cost-in-istanbul",
+      "garantie": "Geen schriftelijke garantie. Check-ins week 2, maand 1/3/6/9/12 via WhatsApp. Geen kantoor UK/DE/NL (Levent, Besiktas).",
+      "garantie_bron": "https://hairmedico.com/hair-transplant-cost-in-istanbul"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "4.9 from 121 Trustpilot reviews and check-ins up to 12 months. The doctor places the grafts himself only in the VIP package, and the site gives two different starting prices.",
+      "nl": "4,9 uit 121 Trustpilot-reviews en contact tot 12 maanden na de ingreep. De arts plaatst de haren alleen in het VIP-pakket zelf, en de site noemt twee verschillende vanafprijzen.",
+      "de": "4,9 aus 121 Trustpilot-Bewertungen und Kontrollen bis 12 Monate. Der Arzt setzt die Grafts nur im VIP-Paket selbst ein, und die Website nennt zwei verschiedene Ab-Preise."
+     }
+    },
+    {
+     "id": "medart",
+     "naam": "Medart Hair",
+     "stad": "Istanbul",
+     "site": "https://www.medarthair.com",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.9,
+       "aantal": 289,
+       "pct_1ster": 2.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/medarthair.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "Premium EUR 2.950; Elite EUR 3.750; Luxury EUR 4.500; Long FUE en Mega Session EUR 6.250 (contantprijs)",
+      "prijs_bron": "https://www.medarthair.com/hair-transplant-turkey-package/",
+      "arts_opereert": "deels",
+      "arts_tekst": "\"Experienced extraction specialists carry out graft extraction\"; arts doet incisies haarlijn en begin DHI-implantatie; extractie door arts tegen EUR 1.000 extra.",
+      "arts_bron": "https://www.medarthair.com/hair-transplant-turkey-package/",
+      "garantie": "Garantie met 'full terms in writing with your treatment plan'. Configurator: '1 Year Post-Op Follow-Up' EUR 0. Geen kantoor UK/DE/NL (Sisli). Let op: medartclinic.com is een andere kliniek (Cyprus/Athene).",
+      "garantie_bron": "https://www.medarthair.com/hair-transplant-turkey-package/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "4.9 from 289 Trustpilot reviews, prices from EUR 2,950 and written guarantee terms. Extraction is done by 'extraction specialists'; a doctor doing it costs EUR 1,000 extra. Its own site claims more reviews than Trustpilot shows.",
+      "nl": "4,9 uit 289 Trustpilot-reviews, prijzen vanaf EUR 2.950 en schriftelijke garantievoorwaarden. De haren worden weggehaald door 'extraction specialists'; een arts daarvoor kost EUR 1.000 extra. De eigen site noemt meer reviews dan Trustpilot laat zien.",
+      "de": "4,9 aus 289 Trustpilot-Bewertungen, Preise ab 2.950 Euro und schriftliche Garantiebedingungen. Die Entnahme machen 'Extraction Specialists'; ein Arzt dafür kostet 1.000 Euro extra. Die eigene Website nennt mehr Bewertungen, als Trustpilot zeigt."
+     }
+    },
+    {
+     "id": "heva",
+     "naam": "Heva Clinic",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "aantal": 313,
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/heva-clinic-istanbul-turkey",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "Trustpilot",
+       "score": 3.2,
+       "aantal": null,
+       "pct_1ster": 100.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/hevaclinic.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "cliniccenter",
+     "naam": "Clinic Center",
+     "stad": "Istanbul",
+     "site": "https://cliniccenter.co.uk",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "FUE GBP 1.500-2.100; Sapphire FUE GBP 1.750-2.200; DHI GBP 1.700-2.200",
+      "prijs_bron": "https://cliniccenter.co.uk/hair-transplant-in-turkey/",
+      "arts_opereert": "",
+      "arts_tekst": "",
+      "arts_bron": "https://cliniccenter.co.uk/hair-transplant-in-turkey/",
+      "garantie": "'Guarantee certificate' en gratis herbehandeling bij malpractice, voorwaarden niet gepubliceerd. 12 mnd support en fotochecks; gratis nazorgafspraken in UK en Duitsland, kantoor in Londen; geen NL.",
+      "garantie_bron": "https://cliniccenter.co.uk/hair-transplant-in-turkey/"
+     },
+     "risico": []
+    },
+    {
+     "id": "istanbulhaircenter",
+     "naam": "Istanbul Hair Center",
+     "stad": "Istanbul",
+     "site": "https://istanbulhaircenter.com",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.2,
+       "aantal": 6,
+       "pct_1ster": 0.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/istanbulhaircenter.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "EUR 2.000 - 3.000 per pakket",
+      "prijs_bron": "https://istanbulhaircenter.com/",
+      "arts_opereert": "ja",
+      "arts_tekst": "\"Carried out in our Istanbul clinic, by our own physicians\"; Dr. Erman Yilmaz en specialist Fatih genoemd, stappen niet toegewezen.",
+      "arts_bron": "https://istanbulhaircenter.com/",
+      "garantie": "Geen garantie; follow-up maand 1/3/6/12 in eigen taal; geen kantoor UK/DE/NL (Sisli).",
+      "garantie_bron": "https://istanbulhaircenter.com/"
+     },
+     "risico": []
+    },
+    {
+     "id": "naturalhair",
+     "naam": "Natural Hair Turkey",
+     "stad": "Istanbul",
+     "site": "https://naturalhairturkey.com",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 3.0,
+       "aantal": 929,
+       "pct_1ster": 19.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/naturalhairturkey.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "EUR 1.600 (alleen ingreep); EUR 1.800 (+3 hotelnachten); EUR 2.100 (+fibroblast)",
+      "prijs_bron": "https://naturalhairturkey.com/en",
+      "arts_opereert": "",
+      "arts_tekst": "",
+      "arts_bron": "https://naturalhairturkey.com/en",
+      "garantie": "Geen garantie; 12 mnd follow-up; geen kantoor UK/DE/NL (Atakoy, Bakirkoy). Controleren of dit de bedoelde 'Natural Hair Clinic' is.",
+      "garantie_bron": "https://naturalhairturkey.com/en"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Lowest score: 3.0 from 929 Trustpilot reviews, 19% of them one star. Low prices from EUR 1,600, but no surgeon is named.",
+      "nl": "Laagste score: 3,0 uit 929 Trustpilot-reviews, waarvan 19% één ster. Lage prijzen vanaf EUR 1.600, maar geen chirurg genoemd.",
+      "de": "Niedrigste Punktzahl: 3,0 aus 929 Trustpilot-Bewertungen, davon 19% mit einem Stern. Niedrige Preise ab 1.600 Euro, aber kein Chirurg genannt."
+     }
+    },
+    {
+     "id": "hairneva",
+     "naam": "HairNeva",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.7,
+       "aantal": 339,
+       "pct_1ster": 2.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/hairneva.com",
+       "datum": "2026-11-15"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "aantal": 448,
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/hairneva-clinic-istanbul-istanbul",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "capil",
+     "naam": "Capilclinic",
+     "stad": "Istanbul",
+     "site": "https://fuecapilar.com",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.6,
+       "aantal": 200,
+       "pct_1ster": 7.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/capilclinic.es",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [
+      "https://www.reddit.com/r/HairTransplants/comments/14lyogc/extended_list_of_budget_value_options",
+      "https://hairrestorationnetwork.com/topic/73590-looking-for-recommendations-for-the-best-hair-transplant-clinic-in-turkey",
+      "https://americanhairloss.org/hair-transplant-surgeons",
+      "https://www.hairrestorationnetwork.com/topic/69824-if-money-is-no-object-what-are-the-top-5-docs-in-turkey-for-ht/"
+     ],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "bht",
+     "naam": "BHT Clinic",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": null,
+       "aantal": 46,
+       "pct_1ster": 26.0,
+       "waarschuwing": "Trustpilot removed fake reviews",
+       "bron": "https://www.trustpilot.com/review/bhtclinic.com.tr",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "idealofmed",
+     "naam": "IdealofMeD",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.8,
+       "aantal": 679,
+       "pct_1ster": 1.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/idealofmed.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "biohair",
+     "naam": "Bio Hair Clinic",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.0,
+       "aantal": 433,
+       "pct_1ster": 8.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/biohairclinic.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "drhakan",
+     "naam": "Dr Hakan Clinic",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.9,
+       "aantal": 227,
+       "pct_1ster": 0.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/drhakanclinic.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "istanbulvita",
+     "naam": "Istanbul Vita Hair Clinic",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": null,
+       "aantal": 302,
+       "pct_1ster": 3.0,
+       "waarschuwing": "Trustpilot removed fake reviews",
+       "bron": "https://trustpilot.com/review/istanbulvita.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "hwt",
+     "naam": "HWT Clinic",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "Trustpilot",
+       "score": 4.7,
+       "aantal": 141,
+       "pct_1ster": 1.0,
+       "waarschuwing": "",
+       "bron": "https://www.trustpilot.com/review/hwtclinic.com",
+       "datum": "2026-11-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "gethair",
+     "naam": "GetHair",
+     "stad": "Istanbul",
+     "site": "https://gethair.co.uk",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "USD 1.899 - 3.549 (Turkije-pakketten)",
+      "prijs_bron": "https://gethair.co.uk/how-much-does-a-turkey-hair-transplant-cost/",
+      "arts_opereert": "",
+      "arts_tekst": "",
+      "arts_bron": "https://gethair.co.uk/how-much-does-a-turkey-hair-transplant-cost/",
+      "garantie": "",
+      "garantie_bron": "https://gethair.co.uk/how-much-does-a-turkey-hair-transplant-cost/"
+     },
+     "risico": []
+    },
+    {
+     "id": "transmed",
+     "naam": "Transmed (Dr. Melike Külahçı)",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {
+      "ishrs": "Full Member",
+      "ishrs_bron": "https://ishrs.org/doctor/37381"
+     },
+     "reviews": [],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "dkklinik",
+     "naam": "DK Klinik (Dr. Meltem Şentürk)",
+     "stad": "Antalya",
+     "site": "",
+     "artsen": [],
+     "signalen": {
+      "ishrs": "Full Member",
+      "ishrs_bron": "https://ishrs.org/doctor/617359/"
+     },
+     "reviews": [],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "serdaroglu",
+     "naam": "Dr. İlhan Serdaroğlu Clinic",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {
+      "ishrs": "Full Member",
+      "ishrs_bron": "https://ishrs.org/doctor/51520/",
+      "specialist": "plastic surgeon",
+      "specialist_bron": "https://ishrs.org/doctor/51520/"
+     },
+     "reviews": [],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "apaydin",
+     "naam": "Dr. İlker Apaydın Clinic",
+     "stad": "Istanbul",
+     "site": "",
+     "artsen": [],
+     "signalen": {
+      "ishrs": "Full Member",
+      "ishrs_bron": "https://ishrs.org/doctor/49926/",
+      "specialist": "plastic surgeon",
+      "specialist_bron": "https://ishrs.org/doctor/49926/"
+     },
+     "reviews": [],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    }
+   ],
+   "niet_gerangschikt": [
+    {
+     "naam": "Longevita",
+     "reden": "broker, not a clinic: says itself it does no procedures",
+     "bron": "https://www.longevita.co.uk/guides/hair-transplant-turkey-cost/"
+    }
+   ],
+   "tekst": {
+    "en": {
+     "title": "Best hair transplant clinics in Turkey 2026, ranked on data",
+     "h1": "The best hair transplant clinics in Turkey, ranked on public data",
+     "desc": "46 Turkish hair clinics checked on qualifications, reviews, transparency and reported risks. Every fact links to its source. No clinic pays.",
+     "kort": "On public data checked on 15 November 2026, Smile Hair Clinic, HLC Hairline Clinic and Asmed score highest. Big clinics win on reviews and clear prices; small surgeon-led clinics win on verified qualifications (ISHRS Fellow, ABHRS) but have few public reviews. Trustpilot removed fake reviews at Cosmedica and Dr. Serkan Aygın, and a patient died at Dr. Cinik in 2025. We could not yet check any clinic in the official Turkish licence register online, so that part scores zero for every clinic.",
+     "faq": [
+      {
+       "q": "What is the best hair transplant clinic in Turkey?",
+       "a": "On our data from 15 November 2026, Smile Hair Clinic scores highest on reviews and transparency, and HLC Hairline Clinic highest on verified qualifications. Which one fits you depends on whether you want the named surgeon to do the work himself."
+      },
+      {
+       "q": "How did you rank the clinics?",
+       "a": "Every clinic gets points for qualifications of the lead doctor, licence and accreditation, patient reviews on independent platforms, transparency about price and who operates, and minus points for reported risks. The method is on the page and the same for every clinic."
+      },
+      {
+       "q": "Do clinics pay to be listed?",
+       "a": "No. No clinic pays to be listed or ranked, and paid top-10 articles do not count as a source."
+      }
+     ]
+    },
+    "nl": {
+     "title": "Beste haartransplantatie klinieken Turkije 2026: op data",
+     "h1": "De beste klinieken voor een haartransplantatie in Turkije, op openbare data",
+     "desc": "46 Turkse haarklinieken nagekeken op kwalificaties, reviews, openheid en gemelde risico's. Elk feit met bron. Geen kliniek betaalt.",
+     "kort": "Op openbare data van 15 november 2026 scoren Smile Hair Clinic, HLC Hairline Clinic en Asmed het hoogst. Grote klinieken winnen op reviews en duidelijke prijzen; kleine klinieken waar de chirurg zelf werkt winnen op bewezen kwalificaties (ISHRS-fellow, ABHRS) maar hebben weinig openbare reviews. Trustpilot verwijderde nepreviews bij Cosmedica en Dr. Serkan Aygın, en bij Dr. Cinik overleed in 2025 een patiënt. Het officiële Turkse vergunningenregister konden we nog voor geen enkele kliniek online controleren; dat deel scoort voor iedereen nul.",
+     "faq": [
+      {
+       "q": "Wat is de beste kliniek voor een haartransplantatie in Turkije?",
+       "a": "Op onze data van 15 november 2026 scoort Smile Hair Clinic het hoogst op reviews en openheid, en HLC Hairline Clinic het hoogst op bewezen kwalificaties. Welke bij jou past hangt ervan af of je wilt dat de genoemde chirurg het werk zelf doet."
+      },
+      {
+       "q": "Hoe hebben jullie de klinieken gerangschikt?",
+       "a": "Elke kliniek krijgt punten voor de kwalificaties van de hoofdarts, vergunning en accreditatie, reviews op onafhankelijke platforms, openheid over prijs en wie opereert, en aftrek voor gemelde risico's. De methode staat op de pagina en is voor elke kliniek gelijk."
+      },
+      {
+       "q": "Betalen klinieken voor een plek?",
+       "a": "Nee. Geen kliniek betaalt voor een plek of ranking, en betaalde top-10-artikelen tellen niet als bron."
+      }
+     ]
+    },
+    "de": {
+     "title": "Beste Haartransplantation Kliniken Türkei 2026: nach Daten",
+     "h1": "Die besten Kliniken für eine Haartransplantation in der Türkei, nach öffentlichen Daten",
+     "desc": "46 türkische Haarkliniken geprüft nach Qualifikation, Bewertungen, Transparenz und gemeldeten Risiken. Jede Angabe mit Quelle. Keine Klinik zahlt.",
+     "kort": "Nach öffentlichen Daten vom 15. November 2026 schneiden Smile Hair Clinic, HLC Hairline Clinic und Asmed am besten ab. Große Kliniken punkten mit Bewertungen und klaren Preisen, kleine Kliniken, in denen der Chirurg selbst arbeitet, mit belegten Qualifikationen (ISHRS-Fellow, ABHRS), haben aber wenige öffentliche Bewertungen. Trustpilot hat bei Cosmedica und Dr. Serkan Aygın gefälschte Bewertungen entfernt, und bei Dr. Cinik starb 2025 ein Patient. Das offizielle türkische Lizenzregister konnten wir online noch für keine Klinik prüfen; dieser Teil zählt für alle null.",
+     "faq": [
+      {
+       "q": "Welche ist die beste Klinik für eine Haartransplantation in der Türkei?",
+       "a": "Nach unseren Daten vom 15. November 2026 schneidet Smile Hair Clinic bei Bewertungen und Transparenz am besten ab, HLC Hairline Clinic bei belegten Qualifikationen. Welche zu Ihnen passt, hängt davon ab, ob der genannte Chirurg selbst arbeiten soll."
+      },
+      {
+       "q": "Wie haben Sie die Kliniken bewertet?",
+       "a": "Jede Klinik bekommt Punkte für die Qualifikation des leitenden Arztes, Lizenz und Akkreditierung, Bewertungen auf unabhängigen Plattformen, Transparenz über Preis und wer operiert, und Abzug für gemeldete Risiken. Die Methode steht auf der Seite und gilt für jede Klinik gleich."
+      },
+      {
+       "q": "Zahlen Kliniken für einen Platz?",
+       "a": "Nein. Keine Klinik zahlt für einen Platz oder ein Ranking, und bezahlte Top-10-Artikel zählen nicht als Quelle."
+      }
+     ]
+    }
+   }
+  }
+ }
 }
