@@ -70,4 +70,16 @@ p.find('nonsense-country');assert.equal(p.items().length,0);assert.equal(p.ids['
 p.ids['sr-place-dialog'].dispatchEvent({type:'cancel',preventDefault(){}});assert.equal(p.ids['sr-country'].value,'BE');
 const q=setup('?van=CW&land=PL','US');assert.equal(q.ids['sr-origin'].value,'CW');assert.equal(q.ids['sr-country'].value,'PL');
 const bad=setup('?van=__proto__&land=ZZ','<script>');assert.equal(bad.ids['sr-origin'].value,'NL');assert.equal(bad.ids['sr-country'].value,'');
+const rankedRow={dataset:{country:'NL',name:'dental clinics'},hidden:false},unrankedRow={dataset:{country:'BE',name:'benedenti'},hidden:false};
+const field=()=>({value:'',textContent:'',events:{},addEventListener(k,f){this.events[k]=f},dispatchEvent(e){this.events[e.type]?.(e)}});
+const fields=Object.fromEntries(['sr-search','sr-country','sr-empty','sr-empty-message','sr-country-reset','sr-country-value'].map(k=>[k,field()]));
+const heading=field(),tab=field(),unrankedCount=field(),unranked={hidden:false,open:false,querySelector:()=>unrankedCount};
+const section={id:'clinics',querySelectorAll:s=>s.startsWith('.sr-ranked')?[rankedRow]:[rankedRow,unrankedRow],querySelector:s=>s==='h2 span'?heading:unranked};
+const filterDoc={getElementById:id=>fields[id]||null,querySelectorAll:s=>s==='[data-provider]'?[rankedRow,unrankedRow]:s==='.sr-cohort'?[section]:[],querySelector:s=>s.startsWith('[data-cohort-count=')?tab:null};
+const filterScript=choiceRanking(list,'nl','https://todayin.email/surgery').match(/<script>\(function\(\)\{var d=document,s=([\s\S]*?)<\/script>/)[0].replace(/^<script>|<\/script>$/g,'');
+vm.runInNewContext(filterScript,{document:filterDoc,URL,Event:class{constructor(type){this.type=type}}});
+fields['sr-country'].value='BE';fields['sr-country'].events.change();
+assert.equal(rankedRow.hidden,true);assert.equal(unrankedRow.hidden,false);assert.equal(unranked.open,true);assert.equal(unrankedCount.textContent,1);assert.equal(tab.textContent,1);assert.equal(fields['sr-empty'].hidden,true);
+fields['sr-search'].value='not found';fields['sr-search'].events.input();assert.equal(fields['sr-empty'].hidden,false);assert.equal(heading.textContent,0);
+fields['sr-country-reset'].onclick();assert.equal(fields['sr-search'].value,'');assert.equal(fields['sr-country'].value,'');assert.equal(tab.textContent,2);
 console.log(JSON.stringify({origins:COUNTRY_CODES.length,destinations:DESTINATION_CODES.length,whiteningProviders:list.klinieken.length,whiteningCountries:12,searchKeyboardFocusOriginAndInvalidInputs:'passed'}));
