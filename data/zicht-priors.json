@@ -1075,5 +1075,18 @@
   "moeite": "laag",
   "meten": "proef cd-gids-faq-zoekvragen-1113",
   "status": "actief"
+ },
+ {
+  "id": "zoekterm-al-bij-andere-eigen-pagina",
+  "les": "Heeft een pagina 0 vertoningen terwijl Google zijn eigen zoekterm al aan een andere pagina van hetzelfde domein geeft, dan is het een dubbel: canonical naar de pagina die Google kiest en uit de sitemap, zodat de crawl naar pagina's gaat die nog niets hebben. De kannibaalregel ziet dit niet, want er is geen gedeelde zoekvraag.",
+  "kanaal": "google",
+  "bewijs": "keuzehulp.best, Search Console 28 dagen tot 13 nov 2026: /strijkplank staat op 'strijkplank kleine ruimte' plek 11 en 'strijkplank afmetingen' plek 14, terwijl /strijkplank-kleine-ruimte en /strijkplank-afmetingen-kiezen 0 vertoningen hebben en nog index,follow met eigen canonical gaven; kannibaalcontrole (op=kwaliteit&proef=1) vond 0 gedeelde zoekvragen bij 205 rijen.",
+  "bron": "ZICHT-dagcontrole 15 nov",
+  "datum": "2026-11-15",
+  "sterkte": 1,
+  "effect": "signalen en crawl op één pagina per zoekvraag",
+  "moeite": "laag",
+  "meten": "proef kz-dubbel-zoekvraag-1115",
+  "status": "actief"
  }
 ]
