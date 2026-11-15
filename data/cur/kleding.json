@@ -1,0 +1,1998 @@
+{
+ "id": "kleding",
+ "peildatum": "2026-11-15",
+ "onderwerp": {
+  "nl": "kleding en schoenen",
+  "en": "clothing and shoes",
+  "de": "Kleidung und Schuhe",
+  "es": "ropa y calzado",
+  "pt": "roupas e calçados"
+ },
+ "h1": {
+  "nl": "Kleding en schoenen kopen op Curaçao: waar ga je heen?",
+  "en": "Buying clothes and shoes in Curaçao: where should you go?",
+  "de": "Kleidung und Schuhe kaufen auf Curaçao: Wohin solltest du gehen?",
+  "es": "Comprar ropa y calzado en Curazao: ¿adónde debes ir?",
+  "pt": "Comprar roupas e calçados em Curaçao: aonde você deve ir?"
+ },
+ "titel": {
+  "nl": "Kleding kopen op Curaçao: {n} winkels vergeleken",
+  "en": "Clothes shopping in Curaçao: {n} stores compared",
+  "de": "Kleidung kaufen auf Curaçao: {n} Geschäfte im Vergleich",
+  "es": "Comprar ropa en Curazao: {n} tiendas comparadas",
+  "pt": "Comprar roupas em Curaçao: {n} lojas comparadas"
+ },
+ "metaDesc": {
+  "nl": "Kleding, schoenen, lingerie en badmode op Curaçao: {n} winkels in Punda, Otrobanda en Sambil met Google-scores, wat ze verkopen en wanneer ze open zijn.",
+  "en": "Clothes, shoes, lingerie and swimwear in Curaçao: {n} stores in Punda, Otrobanda and Sambil with Google scores, what they sell and when they are open.",
+  "de": "Kleidung, Schuhe, Dessous und Bademode auf Curaçao: {n} Geschäfte in Punda, Otrobanda und im Sambil mit Google-Bewertungen, Sortiment und Öffnungszeiten.",
+  "es": "Ropa, calzado, lencería y trajes de baño en Curazao: {n} tiendas en Punda, Otrobanda y Sambil con puntuaciones de Google, qué venden y cuándo abren.",
+  "pt": "Roupas, calçados, lingerie e moda praia em Curaçao: {n} lojas em Punda, Otrobanda e Sambil com notas do Google, o que vendem e quando abrem."
+ },
+ "kort": {
+  "nl": "We vergelijken 24 kleding- en schoenenwinkels op Curaçao. Wil je losse winkels in de stad, ga dan naar Punda en Otrobanda, waar Breedestraat en Heerenstraat vol boetieks zitten. Voor internationale ketens kijk je in Sambil, dat zijn eigen winkeloverzicht heeft. Het best beoordeeld op Google, met minstens 45 reviews, zijn Curves & Hips (4,9) en Mayas Clothing (4,9), en Gazini & Sun Moon (4,5) met 80 reviews.",
+  "en": "We compare 24 clothing and shoe stores in Curaçao. For independent shops in town, head to Punda and Otrobanda, where Breedestraat and Heerenstraat are lined with boutiques. For international chains, look in Sambil, which keeps its own store directory. Best rated on Google with at least 45 reviews are Curves & Hips (4.9) and Mayas Clothing (4.9), and Gazini & Sun Moon (4.5) with 80 reviews.",
+  "de": "Wir vergleichen 24 Bekleidungs- und Schuhgeschäfte auf Curaçao. Für einzelne Läden in der Stadt gehst du nach Punda und Otrobanda, wo Breedestraat und Heerenstraat voller Boutiquen sind. Für internationale Ketten schaust du ins Sambil, das ein eigenes Geschäftsverzeichnis führt. Am besten bewertet bei Google, mit mindestens 45 Bewertungen, sind Curves & Hips (4,9) und Mayas Clothing (4,9) sowie Gazini & Sun Moon (4,5) mit 80 Bewertungen.",
+  "es": "Comparamos 24 tiendas de ropa y calzado en Curazao. Para tiendas sueltas en la ciudad, ve a Punda y Otrobanda, donde Breedestraat y Heerenstraat están llenas de boutiques. Para cadenas internacionales, mira en Sambil, que tiene su propio directorio de tiendas. Las mejor valoradas en Google, con al menos 45 reseñas, son Curves & Hips (4,9) y Mayas Clothing (4,9), y Gazini & Sun Moon (4,5) con 80 reseñas.",
+  "pt": "Comparamos 24 lojas de roupas e calçados em Curaçao. Para lojas avulsas na cidade, vá a Punda e Otrobanda, onde Breedestraat e Heerenstraat estão cheias de boutiques. Para redes internacionais, olhe no Sambil, que tem seu próprio diretório de lojas. As mais bem avaliadas no Google, com pelo menos 45 avaliações, são Curves & Hips (4,9) e Mayas Clothing (4,9), e Gazini & Sun Moon (4,5) com 80 avaliações."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat zoek je?",
+    "en": "What are you looking for?",
+    "de": "Was suchst du?",
+    "es": "¿Qué buscas?",
+    "pt": "O que você procura?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anything",
+      "de": "Egal",
+      "es": "Cualquier cosa",
+      "pt": "Qualquer coisa"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Dameskleding",
+      "en": "Women's clothing",
+      "de": "Damenmode",
+      "es": "Ropa de mujer",
+      "pt": "Roupa feminina"
+     },
+     "plus": [
+      "dames"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Herenkleding",
+      "en": "Men's clothing",
+      "de": "Herrenmode",
+      "es": "Ropa de hombre",
+      "pt": "Roupa masculina"
+     },
+     "plus": [
+      "heren"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Kinderkleding",
+      "en": "Children's clothing",
+      "de": "Kinderkleidung",
+      "es": "Ropa de niños",
+      "pt": "Roupa infantil"
+     },
+     "plus": [
+      "kinderen"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Schoenen",
+      "en": "Shoes",
+      "de": "Schuhe",
+      "es": "Zapatos",
+      "pt": "Sapatos"
+     },
+     "plus": [
+      "schoenen"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Lingerie",
+      "en": "Lingerie",
+      "de": "Dessous",
+      "es": "Lencería",
+      "pt": "Lingerie"
+     },
+     "plus": [
+      "lingerie"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Badmode",
+      "en": "Swimwear",
+      "de": "Bademode",
+      "es": "Trajes de baño",
+      "pt": "Moda praia"
+     },
+     "plus": [
+      "badmode"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Accessoires",
+      "en": "Accessories",
+      "de": "Accessoires",
+      "es": "Accesorios",
+      "pt": "Acessórios"
+     },
+     "plus": [
+      "accessoires"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Waar wil je winkelen?",
+    "en": "Where do you want to shop?",
+    "de": "Wo möchtest du einkaufen?",
+    "es": "¿Dónde quieres comprar?",
+    "pt": "Onde você quer fazer compras?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anywhere",
+      "de": "Egal",
+      "es": "Donde sea",
+      "pt": "Qualquer lugar"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Punda",
+      "en": "Punda",
+      "de": "Punda",
+      "es": "Punda",
+      "pt": "Punda"
+     },
+     "plus": [
+      "punda"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Otrobanda",
+      "en": "Otrobanda",
+      "de": "Otrobanda",
+      "es": "Otrobanda",
+      "pt": "Otrobanda"
+     },
+     "plus": [
+      "otrobanda"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "In een mall (Sambil, Zuikertuin, Promenade)",
+      "en": "In a mall (Sambil, Zuikertuin, Promenade)",
+      "de": "In einem Einkaufszentrum (Sambil, Zuikertuin, Promenade)",
+      "es": "En un centro comercial (Sambil, Zuikertuin, Promenade)",
+      "pt": "Em um shopping (Sambil, Zuikertuin, Promenade)"
+     },
+     "plus": [
+      "mall"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat voor winkel?",
+    "en": "What kind of shop?",
+    "de": "Was für ein Geschäft?",
+    "es": "¿Qué tipo de tienda?",
+    "pt": "Que tipo de loja?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anything",
+      "de": "Egal",
+      "es": "Cualquiera",
+      "pt": "Qualquer uma"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Bekende merken en ketens",
+      "en": "Well-known brands and chains",
+      "de": "Bekannte Marken und Ketten",
+      "es": "Marcas y cadenas conocidas",
+      "pt": "Marcas e redes conhecidas"
+     },
+     "plus": [
+      "merk"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Lokaal gemaakt",
+      "en": "Made locally",
+      "de": "Lokal gefertigt",
+      "es": "Hecho localmente",
+      "pt": "Feito localmente"
+     },
+     "plus": [
+      "lokaal"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "changes",
+   "naam": "Changes",
+   "url": "https://www.facebook.com/changescuracao/",
+   "soort": {
+    "nl": "schoenen- en kledingwinkel",
+    "en": "shoe and clothing store",
+    "de": "Schuh- und Bekleidungsgeschäft",
+    "es": "tienda de calzado y ropa",
+    "pt": "loja de calçados e roupas"
+   },
+   "plaats": "Saliña, Kaminda Saliña",
+   "tags": [
+    "schoenen",
+    "accessoires",
+    "merk"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Verkoopt volgens eigen omschrijving schoenen, casual- en fitnesskleding en accessoires van bekende merken",
+     "en": "Sells shoes, casual and fitness clothing and accessories from well-known brands, by its own description",
+     "de": "Verkauft laut eigener Beschreibung Schuhe, Casual- und Fitnesskleidung und Accessoires bekannter Marken",
+     "es": "Vende, según su propia descripción, calzado, ropa casual y deportiva y accesorios de marcas conocidas",
+     "pt": "Vende, segundo a própria descrição, calçados, roupa casual e fitness e acessórios de marcas conhecidas"
+    },
+    {
+     "nl": "Heeft volgens eigen omschrijving ook filialen in Punda en aan de Jan Noorduynweg",
+     "en": "Also has branches in Punda and on Jan Noorduynweg, by its own description",
+     "de": "Hat laut eigener Beschreibung auch Filialen in Punda und am Jan Noorduynweg",
+     "es": "Tiene también sucursales en Punda y en Jan Noorduynweg, según su propia descripción",
+     "pt": "Tem também filiais em Punda e na Jan Noorduynweg, segundo a própria descrição"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-za 09:00-18:30, zo dicht",
+     "en": "Opening hours (Google): Mon-Sat 09:00-18:30, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Sa 09:00-18:30, So geschlossen",
+     "es": "Horario (Google): lun-sáb 09:00-18:30, dom cerrado",
+     "pt": "Horário (Google): seg-sáb 09:00-18:30, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 149,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/changes"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/changes"
+   ]
+  },
+  {
+   "id": "mister-and-miss-exclusive",
+   "naam": "Mister & Miss Exclusive Santa Maria",
+   "url": "http://www.shopmisterandmissexclusive.com/",
+   "soort": {
+    "nl": "kleding en bedrijfskleding",
+    "en": "clothing and uniforms",
+    "de": "Kleidung und Berufskleidung",
+    "es": "ropa y uniformes",
+    "pt": "roupas e uniformes"
+   },
+   "plaats": "Santa Maria, Winston Churchillweg",
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Verkoopt kant-en-klare kleding en maakt bedrijfskleding op maat met borduurwerk en bedrukking",
+     "en": "Sells ready-to-wear clothing and makes custom uniforms with embroidery and printing",
+     "de": "Verkauft Konfektionskleidung und fertigt Berufskleidung nach Maß mit Stickerei und Druck",
+     "es": "Vende ropa confeccionada y hace uniformes a medida con bordado y estampado",
+     "pt": "Vende roupas prontas e faz uniformes sob medida com bordado e estampa"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-vr 09:00-13:00, 14:00-18:30, za 09:00-19:00, zo 10:00-14:00",
+     "en": "Opening hours (Google): Mon-Fri 09:00-13:00, 14:00-18:30, Sat 09:00-19:00, Sun 10:00-14:00",
+     "de": "Öffnungszeiten (Google): Mo-Fr 09:00-13:00, 14:00-18:30, Sa 09:00-19:00, So 10:00-14:00",
+     "es": "Horario (Google): lun-vie 09:00-13:00, 14:00-18:30, sáb 09:00-19:00, dom 10:00-14:00",
+     "pt": "Horário (Google): seg-sex 09:00-13:00, 14:00-18:30, sáb 09:00-19:00, dom 10:00-14:00"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4,
+     "max": 5,
+     "aantal": 110,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/mister-en-miss-exclusive-sta-maria"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/mister-en-miss-exclusive-sta-maria"
+   ]
+  },
+  {
+   "id": "balanis",
+   "naam": "Balani's",
+   "url": "https://www.facebook.com/BalanisCuracao/",
+   "soort": {
+    "nl": "modewinkel",
+    "en": "fashion store",
+    "de": "Modegeschäft",
+    "es": "tienda de moda",
+    "pt": "loja de moda"
+   },
+   "plaats": "Santa Rosa, Santa Rosaweg",
+   "tags": [
+    "dames",
+    "heren"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Mode voor mannen en vrouwen, volgens eigen omschrijving voor lage prijzen",
+     "en": "Fashion for men and women, at low prices by its own description",
+     "de": "Mode für Männer und Frauen, laut eigener Beschreibung zu günstigen Preisen",
+     "es": "Moda para hombre y mujer, con precios bajos según su propia descripción",
+     "pt": "Moda para homens e mulheres, com preços baixos segundo a própria descrição"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-za 09:00-19:00, zo 09:30-14:00",
+     "en": "Opening hours (Google): Mon-Sat 09:00-19:00, Sun 09:30-14:00",
+     "de": "Öffnungszeiten (Google): Mo-Sa 09:00-19:00, So 09:30-14:00",
+     "es": "Horario (Google): lun-sáb 09:00-19:00, dom 09:30-14:00",
+     "pt": "Horário (Google): seg-sáb 09:00-19:00, dom 09:30-14:00"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 90,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/balani-s"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/balani-s"
+   ]
+  },
+  {
+   "id": "gazini-and-sun-moon",
+   "naam": "Gazini & Sun Moon",
+   "url": "http://www.facebook.com/gazini.sunmoon",
+   "soort": {
+    "nl": "kledingwinkel",
+    "en": "clothing store",
+    "de": "Bekleidungsgeschäft",
+    "es": "tienda de ropa",
+    "pt": "loja de roupas"
+   },
+   "plaats": "Mecaniciensweg",
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Openingstijden (Google): ma-za 09:00-18:30, zo dicht",
+     "en": "Opening hours (Google): Mon-Sat 09:00-18:30, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Sa 09:00-18:30, So geschlossen",
+     "es": "Horario (Google): lun-sáb 09:00-18:30, dom cerrado",
+     "pt": "Horário (Google): seg-sáb 09:00-18:30, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 80,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/gazini-en-sun-moon"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/gazini-en-sun-moon"
+   ]
+  },
+  {
+   "id": "victorias-secret-punda",
+   "naam": "Victoria's Secret Punda",
+   "url": null,
+   "soort": {
+    "nl": "lingerie en beauty",
+    "en": "lingerie and beauty",
+    "de": "Dessous und Beauty",
+    "es": "lencería y belleza",
+    "pt": "lingerie e beleza"
+   },
+   "plaats": "Punda, Heerenstraat",
+   "tags": [
+    "lingerie",
+    "accessoires",
+    "merk",
+    "punda"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Verkoopt volgens de omschrijving Victoria's Secret-parfum, verzorging en accessoires zoals tassen, sjaals en zonnebrillen",
+     "en": "Sells Victoria's Secret fragrances, body care and accessories such as bags, scarves and sunglasses, per its description",
+     "de": "Verkauft laut Beschreibung Victoria's-Secret-Düfte, Körperpflege und Accessoires wie Taschen, Schals und Sonnenbrillen",
+     "es": "Vende, según la descripción, fragancias, cuidado corporal y accesorios de Victoria's Secret como bolsos, pañuelos y gafas de sol",
+     "pt": "Vende, segundo a descrição, fragrâncias, cuidados com o corpo e acessórios da Victoria's Secret, como bolsas, lenços e óculos de sol"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-wo 09:00-18:00, do 09:00-19:00, vr-za 09:00-18:00, zo dicht",
+     "en": "Opening hours (Google): Mon-Wed 09:00-18:00, Thu 09:00-19:00, Fri-Sat 09:00-18:00, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Mi 09:00-18:00, Do 09:00-19:00, Fr-Sa 09:00-18:00, So geschlossen",
+     "es": "Horario (Google): lun-mié 09:00-18:00, jue 09:00-19:00, vie-sáb 09:00-18:00, dom cerrado",
+     "pt": "Horário (Google): seg-qua 09:00-18:00, qui 09:00-19:00, sex-sáb 09:00-18:00, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 60,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/lingerie-store/victoria-s-secret-curacao-in-punda"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/lingerie-store/victoria-s-secret-curacao-in-punda"
+   ]
+  },
+  {
+   "id": "curves-and-hips",
+   "naam": "Curves & Hips",
+   "url": "https://curvesnhips.com/",
+   "soort": {
+    "nl": "lingerie, strand- en nachtkleding",
+    "en": "lingerie, beach and sleepwear",
+    "de": "Dessous, Strand- und Nachtwäsche",
+    "es": "lencería, ropa de playa y de dormir",
+    "pt": "lingerie, moda praia e roupa de dormir"
+   },
+   "plaats": "Promenade Shopping Center, Schottegatweg Oost",
+   "tags": [
+    "lingerie",
+    "badmode",
+    "accessoires",
+    "merk",
+    "mall"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Lingerie, strand- en nachtkleding van bekende merken en accessoires, met nadruk op comfort",
+     "en": "Lingerie, beach and sleepwear from well-known brands plus accessories, with a focus on comfort",
+     "de": "Dessous, Strand- und Nachtwäsche bekannter Marken und Accessoires, mit Schwerpunkt auf Komfort",
+     "es": "Lencería, ropa de playa y de dormir de marcas conocidas y accesorios, con foco en la comodidad",
+     "pt": "Lingerie, moda praia e roupa de dormir de marcas conhecidas e acessórios, com foco no conforto"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-vr 10:00-18:00, za 09:30-17:30, zo dicht",
+     "en": "Opening hours (Google): Mon-Fri 10:00-18:00, Sat 09:30-17:30, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Fr 10:00-18:00, Sa 09:30-17:30, So geschlossen",
+     "es": "Horario (Google): lun-vie 10:00-18:00, sáb 09:30-17:30, dom cerrado",
+     "pt": "Horário (Google): seg-sex 10:00-18:00, sáb 09:30-17:30, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 50,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/lingerie-store/curves-en-hips"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/lingerie-store/curves-en-hips"
+   ]
+  },
+  {
+   "id": "superline-otrobanda",
+   "naam": "Superline Otrobanda",
+   "url": null,
+   "soort": {
+    "nl": "familiekledingwinkel",
+    "en": "family clothing store",
+    "de": "Familienbekleidung",
+    "es": "ropa para toda la familia",
+    "pt": "roupas para toda a família"
+   },
+   "plaats": "Otrobanda, Breedestraat 71",
+   "tags": [
+    "dames",
+    "heren",
+    "kinderen",
+    "otrobanda"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Verkoopt kleding voor het hele gezin, bij de Artis supermarkt",
+     "en": "Sells clothing for the whole family, next to the Artis supermarket",
+     "de": "Verkauft Kleidung für die ganze Familie, neben dem Artis-Supermarkt",
+     "es": "Vende ropa para toda la familia, junto al supermercado Artis",
+     "pt": "Vende roupas para toda a família, junto ao supermercado Artis"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-di 08:45-18:30, wo 08:45-18:45, do 08:30-18:45, vr 08:45-19:00, za 09:00-19:00, zo 09:00-15:00",
+     "en": "Opening hours (Google): Mon-Tue 08:45-18:30, Wed 08:45-18:45, Thu 08:30-18:45, Fri 08:45-19:00, Sat 09:00-19:00, Sun 09:00-15:00",
+     "de": "Öffnungszeiten (Google): Mo-Di 08:45-18:30, Mi 08:45-18:45, Do 08:30-18:45, Fr 08:45-19:00, Sa 09:00-19:00, So 09:00-15:00",
+     "es": "Horario (Google): lun-mar 08:45-18:30, mié 08:45-18:45, jue 08:30-18:45, vie 08:45-19:00, sáb 09:00-19:00, dom 09:00-15:00",
+     "pt": "Horário (Google): seg-ter 08:45-18:30, qua 08:45-18:45, qui 08:30-18:45, sex 08:45-19:00, sáb 09:00-19:00, dom 09:00-15:00"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 48,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/superline-otrabanda-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/superline-otrabanda-curacao"
+   ]
+  },
+  {
+   "id": "mayas-clothing",
+   "naam": "Mayas Clothing Curaçao",
+   "url": "http://www.cutoutfly.com/",
+   "soort": {
+    "nl": "kledingwinkel",
+    "en": "clothing store",
+    "de": "Bekleidungsgeschäft",
+    "es": "tienda de ropa",
+    "pt": "loja de roupas"
+   },
+   "plaats": "Punda, Prinsenstraat",
+   "tags": [
+    "merk",
+    "punda"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Biedt volgens eigen omschrijving kwaliteitsmerken en service",
+     "en": "Offers quality brands and service, by its own description",
+     "de": "Bietet laut eigener Beschreibung Qualitätsmarken und Service",
+     "es": "Ofrece, según su propia descripción, marcas de calidad y servicio",
+     "pt": "Oferece, segundo a própria descrição, marcas de qualidade e atendimento"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-do 09:00-18:00, vr-za 09:00-18:30, zo dicht",
+     "en": "Opening hours (Google): Mon-Thu 09:00-18:00, Fri-Sat 09:00-18:30, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Do 09:00-18:00, Fr-Sa 09:00-18:30, So geschlossen",
+     "es": "Horario (Google): lun-jue 09:00-18:00, vie-sáb 09:00-18:30, dom cerrado",
+     "pt": "Horário (Google): seg-qui 09:00-18:00, sex-sáb 09:00-18:30, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 48,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/mayas-clothing-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/mayas-clothing-curacao"
+   ]
+  },
+  {
+   "id": "maison-zuly",
+   "naam": "Maison Zuly",
+   "url": "http://www.facebook.com/MaisonZuly/",
+   "soort": {
+    "nl": "dameskleding",
+    "en": "women's boutique",
+    "de": "Damenboutique",
+    "es": "boutique de mujer",
+    "pt": "boutique feminina"
+   },
+   "plaats": "Dr. M.J. Hugenholtzweg",
+   "tags": [
+    "dames"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Damesmode in maat S tot 3XL, elke week nieuwe collectie",
+     "en": "Women's fashion in sizes S to 3XL, new arrivals weekly",
+     "de": "Damenmode in den Größen S bis 3XL, jede Woche Neuheiten",
+     "es": "Moda de mujer de la talla S a la 3XL, novedades cada semana",
+     "pt": "Moda feminina do tamanho P ao 3XG, novidades toda semana"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-vr 14:00-18:30, za 10:00-18:30, zo dicht",
+     "en": "Opening hours (Google): Mon-Fri 14:00-18:30, Sat 10:00-18:30, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Fr 14:00-18:30, Sa 10:00-18:30, So geschlossen",
+     "es": "Horario (Google): lun-vie 14:00-18:30, sáb 10:00-18:30, dom cerrado",
+     "pt": "Horário (Google): seg-sex 14:00-18:30, sáb 10:00-18:30, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 40,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/boutique/maison-zuly"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/boutique/maison-zuly"
+   ]
+  },
+  {
+   "id": "scandal-salina",
+   "naam": "Scandal (Saliña)",
+   "url": "http://www.facebook.com/scandalcuracao",
+   "soort": {
+    "nl": "herenmode",
+    "en": "men's clothing",
+    "de": "Herrenmode",
+    "es": "moda masculina",
+    "pt": "moda masculina"
+   },
+   "plaats": "Saliña, Schottegatweg Oost",
+   "tags": [
+    "heren",
+    "schoenen",
+    "accessoires"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Herenmode: pakken, overhemden, guayaberas, schoenen, riemen en stropdassen, ook trouwpakken",
+     "en": "Men's fashion: suits, shirts, guayaberas, shoes, belts and ties, including wedding suits",
+     "de": "Herrenmode: Anzüge, Hemden, Guayaberas, Schuhe, Gürtel und Krawatten, auch Hochzeitsanzüge",
+     "es": "Moda masculina: trajes, camisas, guayaberas, zapatos, cinturones y corbatas, también trajes de boda",
+     "pt": "Moda masculina: ternos, camisas, guayaberas, sapatos, cintos e gravatas, inclusive ternos de casamento"
+    },
+    {
+     "nl": "Openingstijden (Google): ma dicht, di-vr 09:00-12:30, 14:00-18:00, za 09:00-18:00, zo dicht",
+     "en": "Opening hours (Google): Mon closed, Tue-Fri 09:00-12:30, 14:00-18:00, Sat 09:00-18:00, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo geschlossen, Di-Fr 09:00-12:30, 14:00-18:00, Sa 09:00-18:00, So geschlossen",
+     "es": "Horario (Google): lun cerrado, mar-vie 09:00-12:30, 14:00-18:00, sáb 09:00-18:00, dom cerrado",
+     "pt": "Horário (Google): seg fechado, ter-sex 09:00-12:30, 14:00-18:00, sáb 09:00-18:00, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 37,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/men-s-clothing-store/scandal-salina"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/men-s-clothing-store/scandal-salina"
+   ]
+  },
+  {
+   "id": "look-at-me",
+   "naam": "Look@me",
+   "url": "https://m.facebook.com/lookatmecuracao/",
+   "soort": {
+    "nl": "kledingwinkel",
+    "en": "clothing store",
+    "de": "Bekleidungsgeschäft",
+    "es": "tienda de ropa",
+    "pt": "loja de roupas"
+   },
+   "plaats": "Winston Churchillweg",
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Openingstijden (Google): ma-do 09:30-18:30, vr-za 09:30-19:00, zo dicht",
+     "en": "Opening hours (Google): Mon-Thu 09:30-18:30, Fri-Sat 09:30-19:00, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Do 09:30-18:30, Fr-Sa 09:30-19:00, So geschlossen",
+     "es": "Horario (Google): lun-jue 09:30-18:30, vie-sáb 09:30-19:00, dom cerrado",
+     "pt": "Horário (Google): seg-qui 09:30-18:30, sex-sáb 09:30-19:00, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 35,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/look-me"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/look-me"
+   ]
+  },
+  {
+   "id": "mango",
+   "naam": "Mango",
+   "url": null,
+   "soort": {
+    "nl": "modeketen",
+    "en": "fashion chain",
+    "de": "Modekette",
+    "es": "cadena de moda",
+    "pt": "rede de moda"
+   },
+   "plaats": "Baden Powellweg",
+   "tags": [
+    "dames",
+    "accessoires",
+    "merk"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Modeketen met damesmode en accessoires",
+     "en": "Fashion chain with womenswear and accessories",
+     "de": "Modekette mit Damenmode und Accessoires",
+     "es": "Cadena de moda con ropa de mujer y accesorios",
+     "pt": "Rede de moda com roupas femininas e acessórios"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-za 09:00-19:00, zo dicht",
+     "en": "Opening hours (Google): Mon-Sat 09:00-19:00, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Sa 09:00-19:00, So geschlossen",
+     "es": "Horario (Google): lun-sáb 09:00-19:00, dom cerrado",
+     "pt": "Horário (Google): seg-sáb 09:00-19:00, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 33,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/mango"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/mango"
+   ]
+  },
+  {
+   "id": "ciao-curacao",
+   "naam": "Ciao Curaçao",
+   "url": null,
+   "soort": {
+    "nl": "linnen en merkkleding",
+    "en": "linen and brand clothing",
+    "de": "Leinen- und Markenkleidung",
+    "es": "lino y ropa de marca",
+    "pt": "linho e roupas de marca"
+   },
+   "plaats": "Punda, Breedestraat",
+   "tags": [
+    "merk",
+    "accessoires",
+    "punda"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Zegt de enige multimerkenwinkel en linnenspecialist van Curaçao te zijn, met merken als Cubavera, Fariani en Penguin",
+     "en": "Calls itself Curaçao's only multi-brand store and linen specialist, with brands such as Cubavera, Fariani and Penguin",
+     "de": "Bezeichnet sich als Curaçaos einziges Multi-Marken-Geschäft und Leinenspezialist, mit Marken wie Cubavera, Fariani und Penguin",
+     "es": "Se presenta como la única tienda multimarca y especialista en lino de Curazao, con marcas como Cubavera, Fariani y Penguin",
+     "pt": "Apresenta-se como a única loja multimarcas e especialista em linho de Curaçao, com marcas como Cubavera, Fariani e Penguin"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-wo 09:00-19:00, do 09:00-21:00, vr-za 09:00-19:00, zo dicht",
+     "en": "Opening hours (Google): Mon-Wed 09:00-19:00, Thu 09:00-21:00, Fri-Sat 09:00-19:00, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Mi 09:00-19:00, Do 09:00-21:00, Fr-Sa 09:00-19:00, So geschlossen",
+     "es": "Horario (Google): lun-mié 09:00-19:00, jue 09:00-21:00, vie-sáb 09:00-19:00, dom cerrado",
+     "pt": "Horário (Google): seg-qua 09:00-19:00, qui 09:00-21:00, sex-sáb 09:00-19:00, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 31,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/ciao-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/ciao-curacao"
+   ]
+  },
+  {
+   "id": "brokx-shoes",
+   "naam": "Brokx Shoes",
+   "url": "http://www.facebook.com/BrokxShoesCuracao/",
+   "soort": {
+    "nl": "schoenenwinkel",
+    "en": "shoe store",
+    "de": "Schuhgeschäft",
+    "es": "zapatería",
+    "pt": "sapataria"
+   },
+   "plaats": "Schottegatweg Noord",
+   "tags": [
+    "schoenen",
+    "accessoires",
+    "merk"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Schoenen van onder meer Finncomfort, Josef Seibel, Rieker en Sioux, plus leren tassen",
+     "en": "Shoes from brands including Finncomfort, Josef Seibel, Rieker and Sioux, plus leather bags",
+     "de": "Schuhe unter anderem von Finncomfort, Josef Seibel, Rieker und Sioux, dazu Ledertaschen",
+     "es": "Zapatos de marcas como Finncomfort, Josef Seibel, Rieker y Sioux, además de bolsos de cuero",
+     "pt": "Sapatos de marcas como Finncomfort, Josef Seibel, Rieker e Sioux, além de bolsas de couro"
+    },
+    {
+     "nl": "Openingstijden (Google): ma dicht, di-za 09:00-17:00, zo dicht",
+     "en": "Opening hours (Google): Mon closed, Tue-Sat 09:00-17:00, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo geschlossen, Di-Sa 09:00-17:00, So geschlossen",
+     "es": "Horario (Google): lun cerrado, mar-sáb 09:00-17:00, dom cerrado",
+     "pt": "Horário (Google): seg fechado, ter-sáb 09:00-17:00, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 30,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/shoe-store/brokx-shoes"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/shoe-store/brokx-shoes"
+   ]
+  },
+  {
+   "id": "silk-and-sea",
+   "naam": "Silk and Sea",
+   "url": "https://silknsea.com/",
+   "soort": {
+    "nl": "lingerie en badmode",
+    "en": "lingerie and swimwear",
+    "de": "Dessous und Bademode",
+    "es": "lencería y trajes de baño",
+    "pt": "lingerie e moda praia"
+   },
+   "plaats": "Zuikertuin Mall",
+   "tags": [
+    "lingerie",
+    "badmode",
+    "dames",
+    "merk",
+    "mall"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Lingerie, shapewear, nachtkleding, badmode en sportkleding, met het merk Leonisa",
+     "en": "Lingerie, shapewear, sleepwear, swimwear and sportswear, with the Leonisa brand",
+     "de": "Dessous, Shapewear, Nachtwäsche, Bademode und Sportbekleidung, mit der Marke Leonisa",
+     "es": "Lencería, ropa moldeadora, ropa de dormir, trajes de baño y ropa deportiva, con la marca Leonisa",
+     "pt": "Lingerie, modeladores, roupa de dormir, moda praia e roupa esportiva, com a marca Leonisa"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-za 09:00-19:00, zo dicht",
+     "en": "Opening hours (Google): Mon-Sat 09:00-19:00, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Sa 09:00-19:00, So geschlossen",
+     "es": "Horario (Google): lun-sáb 09:00-19:00, dom cerrado",
+     "pt": "Horário (Google): seg-sáb 09:00-19:00, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 5,
+     "max": 5,
+     "aantal": 29,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/lingerie-store/silk-and-sea"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/lingerie-store/silk-and-sea"
+   ]
+  },
+  {
+   "id": "hippie",
+   "naam": "Hippie",
+   "url": null,
+   "soort": {
+    "nl": "kledingwinkel op het strand",
+    "en": "beach clothing store",
+    "de": "Bekleidungsgeschäft am Strand",
+    "es": "tienda de ropa en la playa",
+    "pt": "loja de roupas na praia"
+   },
+   "plaats": "Mambo Beach",
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Gevestigd in Mambo Beach Club",
+     "en": "Located in Mambo Beach Club",
+     "de": "Im Mambo Beach Club",
+     "es": "En el Mambo Beach Club",
+     "pt": "No Mambo Beach Club"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-zo 10:00-18:00",
+     "en": "Opening hours (Google): Mon-Sun 10:00-18:00",
+     "de": "Öffnungszeiten (Google): Mo-So 10:00-18:00",
+     "es": "Horario (Google): lun-dom 10:00-18:00",
+     "pt": "Horário (Google): seg-dom 10:00-18:00"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 2.5,
+     "max": 5,
+     "aantal": 25,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/hippie"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [
+     "Lage Google-score: 2,5 uit 5"
+    ],
+    "en": [
+     "Low Google score: 2.5 out of 5"
+    ],
+    "de": [
+     "Niedrige Google-Bewertung: 2,5 von 5"
+    ],
+    "es": [
+     "Puntuación baja en Google: 2,5 de 5"
+    ],
+    "pt": [
+     "Nota baixa no Google: 2,5 de 5"
+    ]
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/hippie"
+   ]
+  },
+  {
+   "id": "mommies-angels",
+   "naam": "Mommies Angels",
+   "url": "https://www.facebook.com/mommiesangelscuracao/",
+   "soort": {
+    "nl": "baby- en kinderkleding",
+    "en": "baby and children's clothing",
+    "de": "Baby- und Kinderkleidung",
+    "es": "ropa de bebé y niños",
+    "pt": "roupas de bebê e criança"
+   },
+   "plaats": "Santa Rosa, Santa Rosaweg",
+   "tags": [
+    "kinderen",
+    "schoenen",
+    "accessoires"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Kleding en schoenen voor jongens, meisjes en baby's, plus speelgoed en babymeubels",
+     "en": "Clothing and shoes for boys, girls and babies, plus toys and baby furniture",
+     "de": "Kleidung und Schuhe für Jungen, Mädchen und Babys, dazu Spielzeug und Babymöbel",
+     "es": "Ropa y calzado para niños, niñas y bebés, además de juguetes y muebles para bebé",
+     "pt": "Roupas e calçados para meninos, meninas e bebês, além de brinquedos e móveis para bebê"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-vr 09:00-19:00, za 09:00-19:30, zo 10:00-14:00",
+     "en": "Opening hours (Google): Mon-Fri 09:00-19:00, Sat 09:00-19:30, Sun 10:00-14:00",
+     "de": "Öffnungszeiten (Google): Mo-Fr 09:00-19:00, Sa 09:00-19:30, So 10:00-14:00",
+     "es": "Horario (Google): lun-vie 09:00-19:00, sáb 09:00-19:30, dom 10:00-14:00",
+     "pt": "Horário (Google): seg-sex 09:00-19:00, sáb 09:00-19:30, dom 10:00-14:00"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 24,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/baby-clothing-store/mommies-angels"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/baby-clothing-store/mommies-angels"
+   ]
+  },
+  {
+   "id": "charms-accessories",
+   "naam": "Charms Accessories & More",
+   "url": "https://m.facebook.com/CharmsCuracao/",
+   "soort": {
+    "nl": "modeaccessoires",
+    "en": "fashion accessories",
+    "de": "Modeaccessoires",
+    "es": "accesorios de moda",
+    "pt": "acessórios de moda"
+   },
+   "plaats": "Brievengat, Kaya Charles Maduro",
+   "tags": [
+    "accessoires",
+    "dames",
+    "heren",
+    "kinderen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Modeaccessoires voor vrouwen, mannen en kinderen, ook cadeaubonnen",
+     "en": "Fashion accessories for women, men and kids, plus gift cards",
+     "de": "Modeaccessoires für Frauen, Männer und Kinder, auch Geschenkkarten",
+     "es": "Accesorios de moda para mujer, hombre y niños, también tarjetas de regalo",
+     "pt": "Acessórios de moda para mulheres, homens e crianças, também vale-presente"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-vr 09:00-12:00, 14:00-18:00, za 09:00-18:00, zo dicht",
+     "en": "Opening hours (Google): Mon-Fri 09:00-12:00, 14:00-18:00, Sat 09:00-18:00, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Fr 09:00-12:00, 14:00-18:00, Sa 09:00-18:00, So geschlossen",
+     "es": "Horario (Google): lun-vie 09:00-12:00, 14:00-18:00, sáb 09:00-18:00, dom cerrado",
+     "pt": "Horário (Google): seg-sex 09:00-12:00, 14:00-18:00, sáb 09:00-18:00, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4,
+     "max": 5,
+     "aantal": 23,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/fashion-accessories-store/charms-accessories-en-more"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fashion-accessories-store/charms-accessories-en-more"
+   ]
+  },
+  {
+   "id": "handmade-avarcas",
+   "naam": "Handmade Avarcas and Espadrilles",
+   "url": "https://handmadethebrand.com/",
+   "soort": {
+    "nl": "handgemaakte schoenen",
+    "en": "handmade shoes",
+    "de": "handgemachte Schuhe",
+    "es": "calzado hecho a mano",
+    "pt": "sapatos feitos à mão"
+   },
+   "plaats": "Punda, Heerenstraat 13",
+   "tags": [
+    "schoenen",
+    "lokaal",
+    "punda"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Familiebedrijf met Spaanse Menorquinas, espadrilles en leren schoenen, lokaal gemaakt door ambachtslieden",
+     "en": "Family-owned shop with Spanish Menorquinas, espadrilles and leather shoes, made locally by artisans",
+     "de": "Familienbetrieb mit spanischen Menorquinas, Espadrilles und Lederschuhen, lokal von Handwerkern gefertigt",
+     "es": "Negocio familiar con menorquinas españolas, alpargatas y zapatos de cuero, hechos localmente por artesanos",
+     "pt": "Negócio familiar com menorquinas espanholas, alpargatas e sapatos de couro, feitos localmente por artesãos"
+    },
+    {
+     "nl": "Espadrilles kunnen op maat worden gemaakt, in de winkel",
+     "en": "Espadrilles can be made to order in the shop",
+     "de": "Espadrilles können im Geschäft nach Maß gefertigt werden",
+     "es": "Las alpargatas se pueden hacer a medida en la tienda",
+     "pt": "As alpargatas podem ser feitas sob medida na loja"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-zo 09:00-18:00",
+     "en": "Opening hours (Google): Mon-Sun 09:00-18:00",
+     "de": "Öffnungszeiten (Google): Mo-So 09:00-18:00",
+     "es": "Horario (Google): lun-dom 09:00-18:00",
+     "pt": "Horário (Google): seg-dom 09:00-18:00"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 22,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/shoe-store/handmade-avarcas-and-espadrilles"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/shoe-store/handmade-avarcas-and-espadrilles"
+   ]
+  },
+  {
+   "id": "graficos-fashion",
+   "naam": "Graficos Fashion",
+   "url": null,
+   "soort": {
+    "nl": "kledingwinkel",
+    "en": "clothing store",
+    "de": "Bekleidungsgeschäft",
+    "es": "tienda de ropa",
+    "pt": "loja de roupas"
+   },
+   "plaats": "Breedestraat 81",
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Openingstijden (Google): ma-za 08:30-18:00, zo dicht",
+     "en": "Opening hours (Google): Mon-Sat 08:30-18:00, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Sa 08:30-18:00, So geschlossen",
+     "es": "Horario (Google): lun-sáb 08:30-18:00, dom cerrado",
+     "pt": "Horário (Google): seg-sáb 08:30-18:00, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 21,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/graficos-fashion"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/graficos-fashion"
+   ]
+  },
+  {
+   "id": "jolly-fashion",
+   "naam": "Jolly Fashion by Prakash",
+   "url": null,
+   "soort": {
+    "nl": "kleding voor dames en heren",
+    "en": "women's and men's clothing",
+    "de": "Damen- und Herrenbekleidung",
+    "es": "ropa de mujer y hombre",
+    "pt": "roupas femininas e masculinas"
+   },
+   "plaats": "Jan Noorduynweg 20",
+   "tags": [
+    "dames",
+    "heren",
+    "schoenen",
+    "accessoires"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Kleding voor dames en heren, plus schoenen, parfum, tassen, portemonnees en accessoires",
+     "en": "Clothing for women and men, plus shoes, perfume, handbags, wallets and accessories",
+     "de": "Kleidung für Damen und Herren, dazu Schuhe, Parfum, Handtaschen, Geldbörsen und Accessoires",
+     "es": "Ropa de mujer y hombre, además de zapatos, perfume, bolsos, carteras y accesorios",
+     "pt": "Roupas femininas e masculinas, além de sapatos, perfume, bolsas, carteiras e acessórios"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-za 09:00-19:00, zo 09:00-14:00",
+     "en": "Opening hours (Google): Mon-Sat 09:00-19:00, Sun 09:00-14:00",
+     "de": "Öffnungszeiten (Google): Mo-Sa 09:00-19:00, So 09:00-14:00",
+     "es": "Horario (Google): lun-sáb 09:00-19:00, dom 09:00-14:00",
+     "pt": "Horário (Google): seg-sáb 09:00-19:00, dom 09:00-14:00"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 21,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/jolly-fashion-by-prakash"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/jolly-fashion-by-prakash"
+   ]
+  },
+  {
+   "id": "aldo-sambil",
+   "naam": "ALDO Sambil",
+   "url": "https://www.facebook.com/aldocuracao/",
+   "soort": {
+    "nl": "schoenen en accessoires",
+    "en": "shoes and accessories",
+    "de": "Schuhe und Accessoires",
+    "es": "calzado y accesorios",
+    "pt": "calçados e acessórios"
+   },
+   "plaats": "Sambil",
+   "tags": [
+    "schoenen",
+    "accessoires",
+    "merk",
+    "mall"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Modeschoenen, lederwaren en accessoires, in Sambil bij de Cas Abou-ingang (unit L-33)",
+     "en": "Fashion footwear, leather goods and accessories, in Sambil at the Cas Abou entrance (unit L-33)",
+     "de": "Modeschuhe, Lederwaren und Accessoires, im Sambil am Cas-Abou-Eingang (Unit L-33)",
+     "es": "Calzado de moda, artículos de cuero y accesorios, en Sambil junto a la entrada Cas Abou (local L-33)",
+     "pt": "Calçados de moda, artigos de couro e acessórios, no Sambil na entrada Cas Abou (unidade L-33)"
+    },
+    {
+     "nl": "Openingstijden (Sambil): ma-do 10:00-20:00, vr-za 10:00-21:00, zo 12:00-20:00",
+     "en": "Opening hours (Sambil): Mon-Thu 10:00-20:00, Fri-Sat 10:00-21:00, Sun 12:00-20:00",
+     "de": "Öffnungszeiten (Sambil): Mo-Do 10:00-20:00, Fr-Sa 10:00-21:00, So 12:00-20:00",
+     "es": "Horario (Sambil): lun-jue 10:00-20:00, vie-sáb 10:00-21:00, dom 12:00-20:00",
+     "pt": "Horário (Sambil): seg-qui 10:00-20:00, sex-sáb 10:00-21:00, dom 12:00-20:00"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 21,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/aldo-sambil-curazao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/aldo-sambil-curazao",
+    "https://www.sambil.cw/store/aldo",
+    "https://www.sambil.cw/directory"
+   ]
+  },
+  {
+   "id": "athletes-foot",
+   "naam": "Athlete's Foot",
+   "url": "http://www.theathletesfoot.com/",
+   "soort": {
+    "nl": "sportschoenen en sportkleding",
+    "en": "athletic shoes and apparel",
+    "de": "Sportschuhe und Sportbekleidung",
+    "es": "calzado y ropa deportiva",
+    "pt": "calçados e roupas esportivas"
+   },
+   "plaats": "Breedestraat 29",
+   "tags": [
+    "schoenen",
+    "dames",
+    "heren",
+    "kinderen",
+    "merk"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Keten met sportschoenen, sportkleding en accessoires voor mannen, vrouwen en kinderen",
+     "en": "Chain with athletic shoes, apparel and accessories for men, women and children",
+     "de": "Kette mit Sportschuhen, Sportbekleidung und Accessoires für Männer, Frauen und Kinder",
+     "es": "Cadena con calzado, ropa y accesorios deportivos para hombre, mujer y niños",
+     "pt": "Rede com calçados, roupas e acessórios esportivos para homens, mulheres e crianças"
+    },
+    {
+     "nl": "Prijsniveau gemiddeld (Google)",
+     "en": "Price level moderate (Google)",
+     "de": "Preisniveau mittel (Google)",
+     "es": "Nivel de precio medio (Google)",
+     "pt": "Faixa de preço média (Google)"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-za 09:00-18:30, zo dicht",
+     "en": "Opening hours (Google): Mon-Sat 09:00-18:30, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Sa 09:00-18:30, So geschlossen",
+     "es": "Horario (Google): lun-sáb 09:00-18:30, dom cerrado",
+     "pt": "Horário (Google): seg-sáb 09:00-18:30, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 20,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/athlete-s-foot"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/athlete-s-foot"
+   ]
+  },
+  {
+   "id": "wheres-charlie",
+   "naam": "Where's Charlie",
+   "url": "https://www.instagram.com/wherescharliecuracao",
+   "soort": {
+    "nl": "eilandboetiek",
+    "en": "island boutique",
+    "de": "Inselboutique",
+    "es": "boutique isleña",
+    "pt": "boutique de ilha"
+   },
+   "plaats": "Otrobanda, Kura Hulanda Village, Langestraat 36",
+   "tags": [
+    "heren",
+    "dames",
+    "schoenen",
+    "accessoires",
+    "otrobanda"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Casual-, streetstyle- en resortkleding voor mannen, vrouwen en uni, met Panamahoeden, tassen en leren riemen",
+     "en": "Casual, street style and resort clothing for men, women and unisex, with Panama hats, bags and leather belts",
+     "de": "Casual-, Streetstyle- und Resortmode für Männer, Frauen und Unisex, mit Panamahüten, Taschen und Ledergürteln",
+     "es": "Ropa casual, urbana y de resort para hombre, mujer y unisex, con sombreros panamá, bolsos y cinturones de cuero",
+     "pt": "Roupas casuais, streetstyle e de resort para homens, mulheres e unissex, com chapéus panamá, bolsas e cintos de couro"
+    },
+    {
+     "nl": "Verkoopt ook Cubaanse sigaren, samen met La Casa Del Habano Curaçao",
+     "en": "Also sells Cuban cigars, with La Casa Del Habano Curaçao",
+     "de": "Verkauft auch kubanische Zigarren, zusammen mit La Casa Del Habano Curaçao",
+     "es": "También vende puros cubanos, junto con La Casa Del Habano Curazao",
+     "pt": "Também vende charutos cubanos, com a La Casa Del Habano Curaçao"
+    },
+    {
+     "nl": "Openingstijden (Google): ma-za 10:00-18:00, zo dicht",
+     "en": "Opening hours (Google): Mon-Sat 10:00-18:00, Sun closed",
+     "de": "Öffnungszeiten (Google): Mo-Sa 10:00-18:00, So geschlossen",
+     "es": "Horario (Google): lun-sáb 10:00-18:00, dom cerrado",
+     "pt": "Horário (Google): seg-sáb 10:00-18:00, dom fechado"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 17,
+     "peildatum": "2026-11-15",
+     "bron": "https://curacao.day/en/businesses/clothing-store/where-s-charlie"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/clothing-store/where-s-charlie",
+    "https://www.kurahulandavillage.com/place/wheres-charlie/"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Sambil Curaçao",
+   "url": "https://www.sambil.cw/directory",
+   "uitleg": {
+    "nl": "Het winkelcentrum zet zijn winkels in een eigen overzicht, onder meer Zara, Aldo, Crocs, Levi's, Skechers en Victoria's Secret. Handig om te zien wie er zit voor je erheen rijdt.",
+    "en": "The mall lists its stores in its own directory, including Zara, Aldo, Crocs, Levi's, Skechers and Victoria's Secret. Handy to see who is there before you drive over.",
+    "de": "Das Einkaufszentrum listet seine Geschäfte in einem eigenen Verzeichnis, darunter Zara, Aldo, Crocs, Levi's, Skechers und Victoria's Secret. Praktisch, um vor der Fahrt zu sehen, wer dort ist.",
+    "es": "El centro comercial lista sus tiendas en su propio directorio, entre ellas Zara, Aldo, Crocs, Levi's, Skechers y Victoria's Secret. Útil para ver quién está antes de ir.",
+    "pt": "O shopping lista suas lojas em um diretório próprio, entre elas Zara, Aldo, Crocs, Levi's, Skechers e Victoria's Secret. Útil para ver quem está lá antes de ir."
+   }
+  },
+  {
+   "naam": "Kura Hulanda Village",
+   "url": "https://www.kurahulandavillage.com/",
+   "uitleg": {
+    "nl": "In Otrobanda, met onder meer de boetiek Where's Charlie. Eén keer per maand is er een koopavond op donderdag met live muziek.",
+    "en": "In Otrobanda, with the boutique Where's Charlie among others. Once a month there is a late-night shopping evening on Thursday with live music.",
+    "de": "In Otrobanda, unter anderem mit der Boutique Where's Charlie. Einmal im Monat gibt es donnerstags einen Einkaufsabend mit Livemusik.",
+    "es": "En Otrobanda, con la boutique Where's Charlie entre otras. Una vez al mes hay una noche de compras el jueves con música en vivo.",
+    "pt": "Em Otrobanda, com a boutique Where's Charlie, entre outras. Uma vez por mês há uma noite de compras na quinta-feira com música ao vivo."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Op zondag zijn volgens Google maar 8 van de 24 winkels open, en vaak maar een paar uur. Plan je zondag dus zorgvuldig, of ga naar Sambil: ALDO is daar op zondag open van 12:00 tot 20:00.",
+   "en": "On Sunday only 8 of the 24 stores are open according to Google, and often just for a few hours. Plan carefully, or go to Sambil: ALDO is open there on Sunday from 12:00 to 20:00.",
+   "de": "Sonntags haben laut Google nur 8 von 24 Geschäften geöffnet, oft nur wenige Stunden. Plane also sorgfältig oder fahre ins Sambil: ALDO ist dort sonntags von 12:00 bis 20:00 geöffnet.",
+   "es": "El domingo solo abren 8 de las 24 tiendas según Google, y a menudo solo unas horas. Planifica bien, o ve a Sambil: ALDO abre allí el domingo de 12:00 a 20:00.",
+   "pt": "No domingo, só 8 das 24 lojas abrem segundo o Google, e muitas vezes por poucas horas. Planeje bem, ou vá ao Sambil: a ALDO abre lá no domingo das 12:00 às 20:00."
+  },
+  {
+   "nl": "Veel winkels sluiten tussen 18:00 en 19:00, een paar eerder. Ga je in de middag, dan red je het bijna overal.",
+   "en": "Many stores close between 18:00 and 19:00, a few earlier. Go in the afternoon and you will make it almost everywhere.",
+   "de": "Viele Geschäfte schließen zwischen 18:00 und 19:00 Uhr, einige früher. Am Nachmittag schaffst du es fast überall.",
+   "es": "Muchas tiendas cierran entre las 18:00 y las 19:00, algunas antes. Si vas por la tarde, llegas casi a todas.",
+   "pt": "Muitas lojas fecham entre 18:00 e 19:00, algumas antes. Indo à tarde, você chega em quase todas."
+  },
+  {
+   "nl": "Maison Zuly (damesmode) is op werkdagen pas open vanaf 14:00 en op zaterdag vanaf 10:00. Scandal (herenmode) en Brokx Shoes zijn op maandag dicht.",
+   "en": "Maison Zuly (women's fashion) opens only from 14:00 on weekdays and from 10:00 on Saturday. Scandal (menswear) and Brokx Shoes are closed on Monday.",
+   "de": "Maison Zuly (Damenmode) öffnet werktags erst um 14:00 Uhr und samstags um 10:00 Uhr. Scandal (Herrenmode) und Brokx Shoes sind montags geschlossen.",
+   "es": "Maison Zuly (moda de mujer) abre entre semana solo desde las 14:00 y el sábado desde las 10:00. Scandal (moda masculina) y Brokx Shoes cierran los lunes.",
+   "pt": "A Maison Zuly (moda feminina) abre nos dias úteis só a partir das 14:00 e no sábado a partir das 10:00. A Scandal (moda masculina) e a Brokx Shoes fecham na segunda-feira."
+  },
+  {
+   "nl": "Op dagen dat er cruiseschepen liggen is het in Punda van late ochtend tot de middag druk. Controleer de cruisekalender de avond ervoor.",
+   "en": "On days when cruise ships are in port, Punda is busy from late morning to mid afternoon. Check the cruise calendar the night before.",
+   "de": "An Tagen mit Kreuzfahrtschiffen ist es in Punda von später Vormittags- bis Nachmittagszeit voll. Prüfe den Kreuzfahrtkalender am Vorabend.",
+   "es": "Los días con cruceros en puerto, Punda se llena desde media mañana hasta media tarde. Mira el calendario de cruceros la noche anterior.",
+   "pt": "Nos dias com cruzeiros no porto, Punda fica cheia do fim da manhã até a metade da tarde. Veja o calendário de cruzeiros na noite anterior."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Waar kan ik kleding kopen op Curaçao?",
+    "en": "Where can I buy clothes in Curaçao?",
+    "de": "Wo kann ich auf Curaçao Kleidung kaufen?",
+    "es": "¿Dónde puedo comprar ropa en Curazao?",
+    "pt": "Onde posso comprar roupas em Curaçao?"
+   },
+   "a": {
+    "nl": "In de winkelstraten van Punda en Otrobanda (Breedestraat, Heerenstraat, Prinsenstraat), in Kura Hulanda Village en in winkelcentra als Sambil, Zuikertuin en Promenade. Sambil heeft internationale ketens zoals Zara, Levi's en Skechers.",
+    "en": "In the shopping streets of Punda and Otrobanda (Breedestraat, Heerenstraat, Prinsenstraat), in Kura Hulanda Village and in malls such as Sambil, Zuikertuin and Promenade. Sambil has international chains such as Zara, Levi's and Skechers.",
+    "de": "In den Einkaufsstraßen von Punda und Otrobanda (Breedestraat, Heerenstraat, Prinsenstraat), im Kura Hulanda Village und in Einkaufszentren wie Sambil, Zuikertuin und Promenade. Das Sambil hat internationale Ketten wie Zara, Levi's und Skechers.",
+    "es": "En las calles comerciales de Punda y Otrobanda (Breedestraat, Heerenstraat, Prinsenstraat), en Kura Hulanda Village y en centros comerciales como Sambil, Zuikertuin y Promenade. Sambil tiene cadenas internacionales como Zara, Levi's y Skechers.",
+    "pt": "Nas ruas comerciais de Punda e Otrobanda (Breedestraat, Heerenstraat, Prinsenstraat), no Kura Hulanda Village e em shoppings como Sambil, Zuikertuin e Promenade. O Sambil tem redes internacionais como Zara, Levi's e Skechers."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke winkels zitten in Sambil?",
+    "en": "Which stores are in Sambil?",
+    "de": "Welche Geschäfte gibt es im Sambil?",
+    "es": "¿Qué tiendas hay en Sambil?",
+    "pt": "Quais lojas há no Sambil?"
+   },
+   "a": {
+    "nl": "Volgens de eigen winkelgids van Sambil onder meer Zara, ALDO, Crocs, Levi's, Skechers, Tommy Hilfiger, Calvin Klein, Cotton On, American Eagle, Jack & Jones, ONLY, Nine West, Adidas en Victoria's Secret. Wij vergelijken hier ALDO.",
+    "en": "According to Sambil's own store directory, among others Zara, ALDO, Crocs, Levi's, Skechers, Tommy Hilfiger, Calvin Klein, Cotton On, American Eagle, Jack & Jones, ONLY, Nine West, Adidas and Victoria's Secret. We compare ALDO here.",
+    "de": "Laut dem eigenen Geschäftsverzeichnis des Sambil unter anderem Zara, ALDO, Crocs, Levi's, Skechers, Tommy Hilfiger, Calvin Klein, Cotton On, American Eagle, Jack & Jones, ONLY, Nine West, Adidas und Victoria's Secret. Wir vergleichen hier ALDO.",
+    "es": "Según el directorio propio de Sambil, entre otras Zara, ALDO, Crocs, Levi's, Skechers, Tommy Hilfiger, Calvin Klein, Cotton On, American Eagle, Jack & Jones, ONLY, Nine West, Adidas y Victoria's Secret. Aquí comparamos ALDO.",
+    "pt": "Segundo o diretório do próprio Sambil, entre outras Zara, ALDO, Crocs, Levi's, Skechers, Tommy Hilfiger, Calvin Klein, Cotton On, American Eagle, Jack & Jones, ONLY, Nine West, Adidas e Victoria's Secret. Aqui comparamos a ALDO."
+   }
+  },
+  {
+   "q": {
+    "nl": "Zijn winkels op zondag open op Curaçao?",
+    "en": "Are stores open on Sunday in Curaçao?",
+    "de": "Haben Geschäfte auf Curaçao sonntags geöffnet?",
+    "es": "¿Abren las tiendas los domingos en Curazao?",
+    "pt": "As lojas abrem aos domingos em Curaçao?"
+   },
+   "a": {
+    "nl": "Meestal niet. Van de 24 winkels hier zijn er volgens Google 8 op zondag open, vaak korter: Mister & Miss, Balani's, Mommies Angels en Jolly Fashion tot 14:00, Superline tot 15:00, Hippie en Handmade tot 18:00, en ALDO in Sambil van 12:00 tot 20:00. De andere 16 zijn dicht.",
+    "en": "Mostly not. Of the 24 stores here, 8 are open on Sunday according to Google, often for shorter hours: Mister & Miss, Balani's, Mommies Angels and Jolly Fashion until 14:00, Superline until 15:00, Hippie and Handmade until 18:00, and ALDO in Sambil from 12:00 to 20:00. The other 16 are closed.",
+    "de": "Meistens nicht. Von den 24 Geschäften hier haben laut Google 8 sonntags geöffnet, oft kürzer: Mister & Miss, Balani's, Mommies Angels und Jolly Fashion bis 14:00, Superline bis 15:00, Hippie und Handmade bis 18:00 sowie ALDO im Sambil von 12:00 bis 20:00. Die anderen 16 sind geschlossen.",
+    "es": "Casi siempre no. De las 24 tiendas aquí, 8 abren el domingo según Google, a menudo menos horas: Mister & Miss, Balani's, Mommies Angels y Jolly Fashion hasta las 14:00, Superline hasta las 15:00, Hippie y Handmade hasta las 18:00, y ALDO en Sambil de 12:00 a 20:00. Las otras 16 cierran.",
+    "pt": "Quase sempre não. Das 24 lojas aqui, 8 abrem no domingo segundo o Google, muitas vezes por menos horas: Mister & Miss, Balani's, Mommies Angels e Jolly Fashion até as 14:00, Superline até as 15:00, Hippie e Handmade até as 18:00, e ALDO no Sambil das 12:00 às 20:00. As outras 16 fecham."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar koop ik badmode op Curaçao?",
+    "en": "Where do I buy swimwear in Curaçao?",
+    "de": "Wo kaufe ich Bademode auf Curaçao?",
+    "es": "¿Dónde compro trajes de baño en Curazao?",
+    "pt": "Onde compro moda praia em Curaçao?"
+   },
+   "a": {
+    "nl": "Silk and Sea in Zuikertuin Mall verkoopt lingerie, nachtkleding en badmode van het merk Leonisa, en Curves & Hips in Promenade Shopping Center heeft lingerie, strand- en nachtkleding. Beide scoren 4,9 of hoger op Google.",
+    "en": "Silk and Sea in Zuikertuin Mall sells lingerie, sleepwear and swimwear of the Leonisa brand, and Curves & Hips in Promenade Shopping Center has lingerie, beach and sleepwear. Both score 4.9 or higher on Google.",
+    "de": "Silk and Sea in der Zuikertuin Mall verkauft Dessous, Nachtwäsche und Bademode der Marke Leonisa, und Curves & Hips im Promenade Shopping Center hat Dessous, Strand- und Nachtwäsche. Beide haben bei Google 4,9 oder mehr.",
+    "es": "Silk and Sea en Zuikertuin Mall vende lencería, ropa de dormir y trajes de baño de la marca Leonisa, y Curves & Hips en Promenade Shopping Center tiene lencería, ropa de playa y de dormir. Ambas tienen 4,9 o más en Google.",
+    "pt": "A Silk and Sea no Zuikertuin Mall vende lingerie, roupa de dormir e moda praia da marca Leonisa, e a Curves & Hips no Promenade Shopping Center tem lingerie, moda praia e roupa de dormir. Ambas têm 4,9 ou mais no Google."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar koop ik schoenen op Curaçao?",
+    "en": "Where do I buy shoes in Curaçao?",
+    "de": "Wo kaufe ich Schuhe auf Curaçao?",
+    "es": "¿Dónde compro zapatos en Curazao?",
+    "pt": "Onde compro sapatos em Curaçao?"
+   },
+   "a": {
+    "nl": "Brokx Shoes aan de Schottegatweg Noord verkoopt comfortschoenen van merken als Finncomfort en Rieker. Handmade Avarcas and Espadrilles in de Heerenstraat in Punda verkoopt lokaal gemaakte espadrilles, ook op maat. Athlete's Foot heeft sportschoenen en ALDO modeschoenen in Sambil.",
+    "en": "Brokx Shoes on Schottegatweg Noord sells comfort shoes from brands such as Finncomfort and Rieker. Handmade Avarcas and Espadrilles on Heerenstraat in Punda sells locally made espadrilles, also made to order. Athlete's Foot has athletic shoes and ALDO has fashion shoes in Sambil.",
+    "de": "Brokx Shoes am Schottegatweg Noord verkauft Komfortschuhe von Marken wie Finncomfort und Rieker. Handmade Avarcas and Espadrilles in der Heerenstraat in Punda verkauft lokal gefertigte Espadrilles, auch nach Maß. Athlete's Foot hat Sportschuhe und ALDO Modeschuhe im Sambil.",
+    "es": "Brokx Shoes en Schottegatweg Noord vende zapatos de confort de marcas como Finncomfort y Rieker. Handmade Avarcas and Espadrilles en la Heerenstraat de Punda vende alpargatas hechas localmente, también a medida. Athlete's Foot tiene calzado deportivo y ALDO calzado de moda en Sambil.",
+    "pt": "A Brokx Shoes na Schottegatweg Noord vende sapatos de conforto de marcas como Finncomfort e Rieker. A Handmade Avarcas and Espadrilles na Heerenstraat, em Punda, vende alpargatas feitas localmente, também sob medida. A Athlete's Foot tem calçados esportivos e a ALDO calçados de moda no Sambil."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar koop ik kinderkleding op Curaçao?",
+    "en": "Where do I buy children's clothing in Curaçao?",
+    "de": "Wo kaufe ich Kinderkleidung auf Curaçao?",
+    "es": "¿Dónde compro ropa de niños en Curazao?",
+    "pt": "Onde compro roupas infantis em Curaçao?"
+   },
+   "a": {
+    "nl": "Mommies Angels aan de Santa Rosaweg verkoopt kleding en schoenen voor jongens, meisjes en baby's, plus speelgoed en babymeubels. Ook Superline in Otrobanda verkoopt kleding voor het hele gezin, en Athlete's Foot sportkleding voor kinderen.",
+    "en": "Mommies Angels on Santa Rosaweg sells clothing and shoes for boys, girls and babies, plus toys and baby furniture. Superline in Otrobanda also sells clothing for the whole family, and Athlete's Foot has athletic wear for children.",
+    "de": "Mommies Angels am Santa Rosaweg verkauft Kleidung und Schuhe für Jungen, Mädchen und Babys, dazu Spielzeug und Babymöbel. Auch Superline in Otrobanda verkauft Kleidung für die ganze Familie, und Athlete's Foot hat Sportbekleidung für Kinder.",
+    "es": "Mommies Angels en Santa Rosaweg vende ropa y calzado para niños, niñas y bebés, además de juguetes y muebles para bebé. También Superline en Otrobanda vende ropa para toda la familia, y Athlete's Foot tiene ropa deportiva para niños.",
+    "pt": "A Mommies Angels na Santa Rosaweg vende roupas e calçados para meninos, meninas e bebês, além de brinquedos e móveis para bebê. A Superline em Otrobanda também vende roupas para toda a família, e a Athlete's Foot tem roupas esportivas para crianças."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "kleding kopen curaçao",
+   "kledingwinkels curaçao",
+   "winkelen punda",
+   "schoenenwinkel curaçao",
+   "sambil curaçao winkels"
+  ],
+  "en": [
+   "clothes shopping curaçao",
+   "clothing stores curaçao",
+   "shopping in punda",
+   "shoe store curaçao",
+   "sambil curaçao stores"
+  ],
+  "de": [
+   "Kleidung kaufen Curaçao",
+   "Bekleidungsgeschäfte Curaçao",
+   "Shopping Punda",
+   "Schuhgeschäft Curaçao",
+   "Sambil Curaçao Geschäfte"
+  ],
+  "es": [
+   "comprar ropa curazao",
+   "tiendas de ropa curazao",
+   "compras en punda",
+   "zapatería curazao",
+   "tiendas sambil curazao"
+  ],
+  "pt": [
+   "comprar roupas curaçao",
+   "lojas de roupas curaçao",
+   "compras em punda",
+   "sapataria curaçao",
+   "lojas sambil curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Waar kan ik het best kleding kopen op Curaçao?",
+   "Welke kledingwinkels in Punda zijn de moeite waard?",
+   "Zijn winkels op Curaçao op zondag open?",
+   "Waar vind ik lingerie of badmode op Curaçao?"
+  ],
+  "en": [
+   "Where is the best place to buy clothes in Curaçao?",
+   "Which clothing stores in Punda are worth visiting?",
+   "Are stores in Curaçao open on Sundays?",
+   "Where can I find lingerie or swimwear in Curaçao?"
+  ],
+  "de": [
+   "Wo kaufe ich auf Curaçao am besten Kleidung?",
+   "Welche Bekleidungsgeschäfte in Punda lohnen sich?",
+   "Haben Geschäfte auf Curaçao sonntags geöffnet?",
+   "Wo finde ich auf Curaçao Dessous oder Bademode?"
+  ],
+  "es": [
+   "¿Dónde es mejor comprar ropa en Curazao?",
+   "¿Qué tiendas de ropa de Punda valen la pena?",
+   "¿Abren las tiendas de Curazao los domingos?",
+   "¿Dónde encuentro lencería o trajes de baño en Curazao?"
+  ],
+  "pt": [
+   "Onde é melhor comprar roupas em Curaçao?",
+   "Quais lojas de roupas em Punda valem a pena?",
+   "As lojas de Curaçao abrem aos domingos?",
+   "Onde encontro lingerie ou moda praia em Curaçao?"
+  ]
+ }
+}
