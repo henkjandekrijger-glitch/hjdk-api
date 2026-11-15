@@ -27,9 +27,9 @@
     ],
     "vragen": [
       {
-        "id": "drie",
-        "mpa": "P",
-        "wat": "Drie slimme vragen in plaats van twee (derde: website of open op feestdagen, alleen met gegevens)"
+        "id": "faq-geleerd",
+        "mpa": "M",
+        "wat": "De FAQ-vraag die per soort zaak het vaakst getikt wordt bovenaan, de minst getikte vervangen door een echte chatvraag over die soort"
       },
       {
         "id": "echte-vraag",
@@ -77,6 +77,10 @@
     {
       "dag": "2026-11-14",
       "wat": "Ronde 3 (Henkjan: \"Dit moet echt via onze chat : Tijden, telefoon en adres als losse regels, met als laatste regel Been there? en dan intelligente eenvoudige vragen .\"): feiten, sterren en twee slimme vragen als regels in de chat van de site; sterren in de chat gaan naar de reviews van de zaak; typen gaat met de feiten als context naar de chat. Proef: knop, buurt, vragen (twee slimme vragen of geen)."
+    },
+    {
+      "dag": "2026-11-15",
+      "wat": "Ronde 4 (Henkjan: \"chat bedoel ik niet dom invullen bedrijfsgegevens maar context aware maken omdat je bij bedrijven zit dus context van die pagina een beetje faq achtig .\"): feitenregels (telefoon, adres, website) uit de chat; drie FAQ-vragen per soort zaak die de chat met de pagina als context beantwoordt, één praktische vraag, Been there. Proef vragen: drie of twee FAQ-vragen. Omschrijving alleen in de taal van de pagina en in hele zinnen."
     }
   ],
   "titels": [
