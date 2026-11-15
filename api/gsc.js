@@ -308,7 +308,7 @@ export default async function handler(req, res) {
       const l = await sites(oidc); const out = {};
       for (const [id, host] of Object.entries(SITES)) { const prop = propFor(l, host); if (!prop) { out[id] = { fout: 'geen toegang' }; continue; }
         try { const m = id === 'kz' ? null : MARKETS[id]; const its = m ? await wtbItems(m) : await kzItems(); const running = ((await kv.get('zicht:exp:' + id).catch(() => null)) || []).filter(p => p.status === 'loopt'); const prot = new Set(running.flatMap(p => [...(p.urls || []), ...(p.controle || [])]));
-          out[id] = await kwaliteitRonde(id, host, its, await pageRows(prop, 90, oidc), prot, { qrows: await rows(prop, 28, oidc).catch(() => []), proef: url.searchParams.get('proef') === '1' }); } catch (e) { out[id] = { fout: String(e.message).slice(0, 160) }; } }
+          out[id] = await kwaliteitRonde(id, host, its, await pageRows(prop, 90, oidc), prot, { qrows: await rows(prop, 28, oidc).catch(() => []), proef: url.searchParams.get('proef') === '1', kijk: url.searchParams.get('kijk') || '' }); } catch (e) { out[id] = { fout: String(e.message).slice(0, 160) }; } }
       return res.status(200).json({ ok: true, sites: out }); }
     if (op === 'totalen') {
       const lijst = await sites(oidc); const out = {};
