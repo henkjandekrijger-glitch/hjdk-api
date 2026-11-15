@@ -3,6 +3,7 @@ import { guideAnswers, guideDecision } from '../lib/us-demand-guides.js';
 import { decisionHtml, guideSections } from '../lib/us-demand-view.js';
 import { boekLd } from '../lib/kdp-guides.js';
 import { koopBlok, koopMeetScript } from '../lib/koopblok.js';
+import { kzuxBlok, zoekLogJs } from '../lib/kzux.js';
 // WTB-pagina's: whichtobuy.best (VS) en kaufberater.best (DE). Zelfde idee als keuzehulp.best: 3 vragen, 1 eerlijke keuze, prijs van vandaag (Amazon).
 // Routes (vercel.json, op host): / , /<slug>, /sitemap.xml, /robots.txt, /llms.txt, /llms-full.txt, /<indexnow-sleutel>.txt, /about, /privacy
 // API: /api/wtb?op=advice&slug=..&a=0-1-2 (producten voor de antwoorden), /api/wtb?op=status (openbaar overzicht)
@@ -81,6 +82,9 @@ async function page(m, it, all, req) {
   const veel = (sterk.length ? '<p style="margin:14px 0 0;font-size:15px">' + (m.id === 'us' ? 'Popular' : 'Oft gesucht') + ': ' + sterk.map(x => '<a href="/' + esc(x.slug) + '">' + esc(x.title) + '</a>').join(' · ') + '</p>' : '') + ookNieuw;
   const qs = (it.questions || []).map((q, qi) => `<div class="q" data-q="${qi}" role="group" aria-labelledby="question-${qi}"><h2 id="question-${qi}">${qi + 1}. ${esc(q.q)}</h2><div class="opts">${(q.options || []).map((o, oi) => `<button class="opt${a0[qi] === oi ? ' on' : ''}" type="button" data-o="${oi}" aria-pressed="${a0[qi] === oi}">${esc(o.label)}</button>`).join('')}</div></div>`).join('');
   const upd = contentDate(it);
+  // nieuwe bovenkant, lerend (lib/kzux.js, proef kzuxus of kzuxde): de 3 beste met prijs, situaties als pills, vraagbalk; niet op boekgidsen (eigen opzet)
+  const q0 = (it.questions || []).find(x => x && x.options && x.options.length >= 2 && x.options.length <= 6); const q0i = q0 ? it.questions.indexOf(q0) : -1;
+  const kx = adv.decision ? '' : kzuxBlok({ taal: m.id, site: 'kzux' + m.id, slug: it.slug, term: it.term || it.title, shop: 'Amazon', link: adv.link, prods: (adv.products || []).map((p, i) => ({ naam: (t => { const k = t.split(/\s[-–|,(]\s?|\s\(|,\s/)[0].trim(); return (k.length >= 18 ? k : t).slice(0, 70); })(String(p.title || '').replace(/\s+/g, ' ').trim()), rol: i === 0 ? s.pick : s.alt, prijs: p.price != null ? (p.priceText || m.money(p.price)) : '', url: p.url })), opties: q0 ? q0.options.map((o, oi) => ({ qi: q0i, oi, label: o.label })) : [], faq: it.faq || [] });
   const ld = { '@context': 'https://schema.org', '@graph': [
     { '@type': 'Article', headline: it.h1, description: it.metaDesc, inLanguage: m.locale, ...(it.publishAt ? { datePublished: it.publishAt } : {}), ...(upd ? { dateModified: upd } : {}), author: { '@type': 'Organization', name: m.name, url: base }, publisher: { '@type': 'Organization', name: m.name, url: base }, mainEntityOfPage: base + '/' + it.slug, about: { '@type': 'Thing', name: it.term } },
     { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: m.name, item: base + '/' }, { '@type': 'ListItem', position: 2, name: it.title, item: base + '/' + it.slug }] },
@@ -89,7 +93,7 @@ async function page(m, it, all, req) {
     ...(adv.products.length ? [{ '@type': 'ItemList', name: it.title, itemListElement: adv.products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title.slice(0, 110), url: p.url })) }] : []) ] };
   const body = `<p class="crumbs"><a href="/">${esc(m.name)}</a> › ${esc(it.cat)}</p><p class="kicker">${esc(it.cat)}</p><h1>${esc(it.h1)}</h1><p class="standfirst">${esc(it.intro)}</p>
 <div class="answer"><p>${firstBold(it.kort)}</p></div><p class="meta">${upd ? `${esc(s.updated)}&nbsp;<time datetime="${esc(upd)}">${esc(upd)}</time> · ` : ""}${esc(s.by)} ${m.id === 'us' ? 'the editors' : 'der Redaktion'}</p>
-<h2>${esc(s.q)}</h2>${qs}
+${kx}<h2>${esc(s.q)}</h2>${qs}
 <div class="guide-actions"><button type="button" id="share-guide">${m.id === 'de' ? 'Ergebnis kopieren' : 'Copy this result'}</button><span id="share-status" role="status"></span></div><p id="advice-status" role="status"></p><div id="adv" aria-live="polite" aria-atomic="true" style="margin:14px 0">${adviceHtml(m, adv)}</div>
 ${guideSections(it,esc)}
 ${(it.aiMiss || []).length ? `<div class="box ai"><h2>${esc(s.aimiss)}</h2><ul>${it.aiMiss.map(x => '<li>' + esc(x) + '</li>').join('')}</ul></div>` : ''}
@@ -125,7 +129,7 @@ ${newest.length ? `<h2>${esc(T.nieuw)}</h2><div class="grid">${newest.map(tegel)
 <h2>${esc(T.cur)}</h2><div class="grid"><a class="card" href="https://curacao.day/${us ? 'en' : 'de'}/gids"><div class="cat">Curaçao</div><h3>${esc(T.curH)}</h3><p>${esc(T.curP)}</p><span class="meer">${esc(T.meer)}</span></a></div>
 <h2>${esc(T.alle)}</h2><div class="grid">${catsS.map(c => `<details class="card"><summary><h3>${esc(c)}</h3><p>${cats[c].slice(0, 3).map(i => esc(i.title)).join(', ')}</p><span class="meer">${cats[c].length} ${esc(T.n)} →</span></summary><ul>${cats[c].map(i => `<li><a href="/${esc(i.slug)}">${esc(i.title)}</a></li>`).join('')}</ul></details>`).join('')}</div>
 <div class="txt"><h2>${esc(T.how)}</h2><p>${esc(T.howP)}</p></div><p class="disc">${esc(s.disc)}</p>
-<script>(function(){var I=${idx},z=document.getElementById('zoek2'),r=document.getElementById('zres'),g=document.getElementById('zgeen');function e(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}z.addEventListener('input',function(){var q=z.value.toLowerCase().trim();if(q.length<2){r.hidden=true;g.hidden=true;return}var m=I.filter(function(i){return (i[0]+' '+i[1]+' '+i[2]).toLowerCase().indexOf(q)>=0}).slice(0,12);r.innerHTML=m.map(function(i){return '<a class="card" href="/'+e(i[0])+'"><div class="cat">'+e(i[2])+'</div><h3>'+e(i[1])+'</h3><p>'+e(i[3])+'…</p></a>'}).join('');r.hidden=!m.length;g.hidden=!!m.length})})();</script>`;
+<script>(function(){var I=${idx},z=document.getElementById('zoek2'),r=document.getElementById('zres'),g=document.getElementById('zgeen');function e(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}z.addEventListener('input',function(){var q=z.value.toLowerCase().trim();if(q.length<2){r.hidden=true;g.hidden=true;return}var m=I.filter(function(i){return (i[0]+' '+i[1]+' '+i[2]).toLowerCase().indexOf(q)>=0}).slice(0,12);r.innerHTML=m.map(function(i){return '<a class="card" href="/'+e(i[0])+'"><div class="cat">'+e(i[2])+'</div><h3>'+e(i[1])+'</h3><p>'+e(i[3])+'…</p></a>'}).join('');r.hidden=!m.length;g.hidden=!!m.length})})();</script>${zoekLogJs(m.id)}`;
   const base = 'https://' + m.host;
   return shell(m, { title: m.name + (us ? ': Buying guides that ask 3 questions' : ': Kaufberatung in 3 Fragen'), desc: s.heroP, path: '/', body, ld: { '@context': 'https://schema.org', '@graph': [{ '@type': 'WebSite', name: m.name, url: base, inLanguage: m.locale }, { '@type': 'Organization', name: m.name, url: base }, { '@type': 'ItemList', itemListElement: all.map((i, n) => ({ '@type': 'ListItem', position: n + 1, name: i.title, url: base + '/' + i.slug })) }] } });
 }
