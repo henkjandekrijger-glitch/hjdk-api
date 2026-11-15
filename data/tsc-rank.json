@@ -1,0 +1,4 @@
+{
+  "uitleg": "Rankings van klinieken voor todayin surgery (lib/tsc-rank.js). Per lijst: slugs per taal, tekst per taal, klinieken met signalen, reviews, openheid, risico en conclusie; elk feit met bron. Een lijst zonder klinieken staat nergens.",
+  "lijsten": {}
+}
