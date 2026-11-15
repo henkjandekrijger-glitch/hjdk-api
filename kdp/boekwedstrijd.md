@@ -41,3 +41,10 @@ Vastgelegd 13 nov 2026 op verzoek van Henkjan: "maak het dus vast inderdaad en b
 ## Werkwijze per nieuw boek
 
 Bouwers en bronnen staan in `kdp/bouw/` (spiegel van `/home/claude/boek` in de cloudsessie): `bouw_boek.py <map> <uit.pdf>` (binnenwerk, reportlab, alle fonts ingebed), `omslag_gen.py` via `<map>/omslag_cfg.py` (paperback, en met `hard=dict(spine, w, h)` de hardcover), `bouw_epub.py` (Kindle). Per boek: `config.py`, feitenbestanden, `kdp.json` (titel, ondertitel, 7 zoekwoorden, categorieen, prijzen, AI-verklaring, beschrijving). Fonts: Poppins en Carlito uit /usr/share/fonts, emoji Noto (Apache 2.0) in `kdp/bouw/emoji`.
+
+## Bewijs 15 nov 2026 (Keepa)
+
+- **Canada, feitenboeken voor kinderen 8-12**: The Ultimate Book of Random Fun Facts 1648451233 #179, Quiz Whiz 1426310188 #246, Super Interesting Facts For Smart Kids B0BGGM9SGY #625 (30 dagen geleden ~10k: kerstpiek begint). Indie-doorbraak: 500+ Wild & Awesome Hockey Facts Book For Kids B0FZBZPFPQ (nov 2025) nu #1.938 in CA. Kandidaten: Hockey Facts for Kids (CA/US, 72) en Stocking Stuffers For Kids 8-12, het kleine broertje van Teens (CA/US, 70).
+- **VS, kerst-Bijbel kleuren op nummer**: zwak. Christmas Nativity Color By Number B0HG1QNQ66 (aug 2026) #216.709; Christmas Color by Number for Kids (merk Majosta, B0FWKLZFYB #108.575, B08NS4FYXG #29.717). Kandidaat 42.
+- **VK, Apocrypha hardcover**: zwak. Hardcover-concurrenten #241k tot #918k; alleen de Ethiopische Bijbel (B0FNMP7R17, #7.150, GBP 43) loopt. Geen kandidaat.
+- **Eigen verkoop 12-14 nov**: Teens $18,04 (Canada), Bible Color By Number $6,30, Apocrypha $4,44, Enoch $4,19, Mom's Word Search $1,66. Bible Color By Number verkoopt zonder ads: kandidaat voor een eigen boekgids-push en een hardcover later.

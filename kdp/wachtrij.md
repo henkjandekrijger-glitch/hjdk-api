@@ -17,5 +17,8 @@ Bijgewerkt: 14 nov 2026 ronde A (kdp-rapport). Nieuwste stand bovenaan per titel
 | 7 | Choose Wisely, Darling (Would You Rather voor stellen) | US | 53 | Gebouwd: 58 p. | Begin januari, voor Valentijn |
 | 8 | Back in Our Day (quiz senioren, grote letters) | US | 52 | Gebouwd: 114 p. | Wacht op beter bewijs |
 | 9 | Datos curiosos para adolescentes (Spaanse vertaling van Teens) | ES | 48 | Idee 14 nov. Bewijs zwak: beste nieuwe titel 500+ Datos Alucinantes B0HJMJFNF3 #8.269 | Pas na DE en FR |
+| 10 | Hockey Facts for Kids (Canadese invalshoek, ook US) | CA/US | 72 | Idee 15 nov. Bewijs: indie B0FZBZPFPQ (nov 2025) #1.938 CA; kinderfeiten top #179-#625 CA. Feiten alleen met bron (NHL, Hockey Hall of Fame) | Paperbackplek 29 nov als gebouwd; hardcover later |
+| 11 | Stocking Stuffers For Kids 8-12 (broertje van Teens, Elias Grant) | CA/US | 70 | Idee 15 nov. Bewijs: Random Fun Facts #179, Quiz Whiz #246, Super Interesting Facts #625 in CA; nieuwe inhoud nodig (geen Teens-feiten) | Na Hockey |
+| 12 | Christmas Bible Color By Number (Majosta) | US | 42 | Idee 15 nov. Bewijs zwak (#29k-#216k); eigen Bible Color By Number verkoopt wel | Niet dit jaar |
 
 Diskwalificaties: "Unnützes Wissen ..." als titel (NEON/Heyne-reeks), een Britse kopie van For Men (dubbele inhoud).
