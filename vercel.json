@@ -203,6 +203,10 @@
     {
       "path": "/api/w?op=ronde",
       "schedule": "20 7 * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=tsc&p=ronde",
+      "schedule": "10 8 * * *"
     }
   ],
   "rewrites": [
@@ -433,6 +437,10 @@
     {
       "source": "/curacao-gids",
       "destination": "/api/keuze-tools?tool=cur"
+    },
+    {
+      "source": "/true-surgery",
+      "destination": "/api/keuze-tools?tool=tsc"
     },
     {
       "source": "/",

@@ -42,6 +42,7 @@ function laadSchema() {
 export default async function handler(req, res) {
   const url = new URL(req.url, 'https://keuzehulp.best'), q = url.searchParams, op = q.get('op') || '';
   res.setHeader('x-content-type-options', 'nosniff');
+  if(q.get('tool')==='tsc'){const {tscHandler}=await import('../lib/tsc.js');return tscHandler(req,res,url);}
   if(q.get('tool')==='cur'){const {curHandler}=await import('../lib/cur.js');return curHandler(req,res,url);}
   if(q.get('tool')==='autohuur'){const {autohuurHandler}=await import('../lib/autohuur-curacao.js');return autohuurHandler(req,res,url,q.get('market')||'nl');}
   if(q.get('tool')==='energy'){const {energyHandler}=await import('../lib/energie-page.js');return energyHandler(req,res);}
