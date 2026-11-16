@@ -443,12 +443,12 @@ async function direct(req, res, x) {
   let mmp = leesCookie(req, 'mmp'); const nieuwP = !/^[0-9a-f]{16}$/.test(mmp); if (nieuwP) mmp = nieuwId(8);
   let rec = null; try { rec = await kv.get(K.rec(code)); } catch (e) {}
   const cid = (rec && rec.mmc) || nieuwId(6);
-  const doel = 'https://kadoly.com/' + (x.kassa ? 'checkout/' : 'product/') + encodeURIComponent(pid) + '?utm_source=' + (x.bron ? (x.bron.source || 'kadoly-gids') : NETTEN[net].toLowerCase()) + '&utm_medium=' + (x.bron ? x.bron.medium : (x.vorm || 'push')) + '&utm_campaign=' + (x.bron ? encodeURIComponent(x.bron.campaign) : 'shoplus') + '&utm_content=' + encodeURIComponent(pk(pid)) + '&hj=' + code + '&mmc=' + cid + '&lang=' + (/^(nl|de|es|en)$/.test(x.taal || '') ? x.taal : 'nl'); // 16 nov: buitenlandse campagnes landen in de taal van hun land (shoptest geeft &lang= mee)
+  const doel = 'https://kadoly.com/' + (x.voorkant ? '' : (x.kassa ? 'checkout/' : 'product/') + encodeURIComponent(pid)) + '?utm_source=' + (x.bron ? (x.bron.source || 'kadoly-gids') : NETTEN[net].toLowerCase()) + '&utm_medium=' + (x.bron ? x.bron.medium : (x.vorm || 'push')) + '&utm_campaign=' + (x.bron ? encodeURIComponent(x.bron.campaign) : 'shoplus') + '&utm_content=' + (x.voorkant ? 'voorkant' : encodeURIComponent(pk(pid))) + '&hj=' + code + '&mmc=' + cid + '&lang=' + (/^(nl|de|es|en)$/.test(x.taal || '') ? x.taal : 'nl'); // 16 nov: buitenlandse campagnes landen in de taal van hun land (shoptest geeft &lang= mee)
   if (!weiger && !prefetch && (!rec || !rec.mmc)) {
-    const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; rec.mmc = cid; rec.mp = mmp; if (x.rt) rec.rt = x.rt; if (test) rec.t = 1; if (eerst && x.extra && Object.keys(x.extra).length) rec.q = x.extra; /* 5 nov: wat het netwerk meegeeft (MGID src, srcid, cat, cpc, geo) blijft bij de klik */
+    const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; rec.mmc = cid; rec.mp = mmp; if (x.rt) rec.rt = x.rt; if (x.voorkant) rec.vk = 1; if (test) rec.t = 1; if (eerst && x.extra && Object.keys(x.extra).length) rec.q = x.extra; /* 5 nov: wat het netwerk meegeeft (MGID src, srcid, cat, cpc, geo) blijft bij de klik */
     try { await Promise.all([kv.set(K.rec(code), rec, { ex: 7 * 86400 }), cidKoppel(kv, { cid, pid: mmp, arm: rec.arm === 'd' ? 'direct' : 'pagina', tag: 'yoors-shop', net: test ? 'test' : CM_NET[net], zone: zone || '-', camp: camp || '-', shop: code })]); } catch (e) {}
     if (eerst && !test) {
-      const keys = ['sh-' + net + '-dv', 'sh-d' + D8() + '-' + net + '-dv', 'sh-u' + nlUur() + '-dv', 'sh-p-' + pk(pid) + '-dv'];
+      const keys = ['sh-' + net + '-dv', 'sh-d' + D8() + '-' + net + '-dv', 'sh-u' + nlUur() + '-dv', x.voorkant ? 'sh-vk-dv' : 'sh-p-' + pk(pid) + '-dv'];
       if (zone) keys.push('sh-' + net + '-z' + zone + '-dv', 'sh-' + net + '-z' + zone + '-hv'); if (cr) keys.push('sh-' + net + '-a' + cr + '-dv'); if (camp) keys.push('sh-' + net + '-k' + camp + '-dv');
       const werk = laterAf(Promise.all([
         inc(keys), uurTel(kv, net, 'dv'), sadd(K.set('p'), pid), zone ? sadd(K.set('z', net), zone) : null, cr ? sadd(K.set('a', net), cr) : null, camp ? sadd(K.set('k', net), camp) : null,
@@ -473,7 +473,7 @@ async function land(req, res, url) {
   // zodat we patronen kunnen vinden"): de vorm (utm_medium: ipp, push, native, pop) en elke andere parameter (os, browser, carrier, subid, ...),
   // ook macro's die het netwerk niet invulde (dan staat er [os]: zo zien we welke macro's werken).
   const vorm = String(q.get('utm_medium') || '').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 12);
-  const extra = {}; let nx = 0; for (const [k0, v0] of q.entries()) { const k1 = String(k0).toLowerCase().replace(/[^a-z0-9_]/g, '').slice(0, 20); if (!k1 || /^(utm_source|utm_medium|utm_campaign|clickid|zoneid|creativeid|campaignid|p|arm)$/.test(k1) || nx >= 16) continue; extra[k1] = String(v0).slice(0, 60); nx++; }
+  const extra = {}; let nx = 0; for (const [k0, v0] of q.entries()) { const k1 = String(k0).toLowerCase().replace(/[^a-z0-9_]/g, '').slice(0, 20); if (!k1 || /^(utm_source|utm_medium|utm_campaign|clickid|zoneid|creativeid|campaignid|p|arm|naar)$/.test(k1) || nx >= 16) continue; extra[k1] = String(v0).slice(0, 60); nx++; }
   const cat = await catalog(); const perId = {}; cat.items.forEach(i => { perId[i.id] = i; });
   let top = null; try { top = await kv.get(K.top); } catch (e) {} const topIds = (top && top.ids && top.ids.length ? top.ids : seed.ads.map(a => a.pid)).filter(id => perId[id] && perId[id].vr !== false);
   let pid = pidOk(q.get('p')); if (pid && (!perId[pid] || perId[pid].vr === false)) pid = '';
@@ -490,7 +490,8 @@ async function land(req, res, url) {
   // Betaald verkeer met een klik-id gaat altijd in één keer via Clickmind (302) naar de productpagina op kadoly.com, ook met arm=l in de link.
   // Bots meet Clickmind (cm.js op de shop: echt mens of niet, per plek) en de zonelijst weert slechte plekken; wie zich als bot meldt gaat niet door (direct()).
   const taal = (() => { const l = String(q.get('lang') || '').toLowerCase(); if (/^(nl|de|es|en)$/.test(l)) return l; const lc = String(q.get('utm_campaign') || '').slice(0, 3).toLowerCase(); return ({ 'de-': 'de', 'at-': 'de', 'lu-': 'de', 'es-': 'es', 'ie-': 'en', 'mt-': 'en' })[lc] || 'nl'; })(); // 16 nov: taal van de landingspagina per land
-  if (code) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt, taal });
+  const voorkant = q.get('naar') === 'voorkant'; // 16 nov (Henkjan): een algemene advertentie landt op de voorkant van kadoly.com, met Clickmind ertussen
+  if (code) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt, taal, voorkant });
   if (!bot) {
     let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, { ex: 7 * 86400 }); } catch (e) {} }
     if (nieuw) { const keys = ['sh-' + net + '-view', 'sh-d' + D8() + '-' + net + '-view', 'sh-u' + nlUur() + '-view', 'sh-p-' + pk(pid) + '-himp'].concat(meer.map(m => 'sh-p-' + pk(m.id) + '-imp'));
