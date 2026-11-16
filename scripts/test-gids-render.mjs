@@ -49,6 +49,22 @@ console.log(JSON.stringify({routes:'8 onderwerpen, bronhub, home, rubriek, nieuw
 
 
 
+
+// Badset: onbekende huidgegevens mogen geen veiligheidsrang of automatische aankoop geven.
+const badset=gidsen.GIDSEN['badset-cadeau'];
+const onbekend=badset.check.regels.find(x=>x.id==='weet-huid');
+assert.equal(onbekend.pid,undefined);
+assert.ok(!badset.kort.includes('Geen enkele maker geeft'));
+assert.ok(!JSON.stringify(badset).includes('de veiligste keuze'));
+assert.ok(!JSON.stringify(badset).includes('Die gebruikt iedereen'));
+assert.ok(!JSON.stringify(badset).includes('Alleen de geur verschilt'));
+const bh=(await render('slug=badset-cadeau')).body;
+const bg=[...bh.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1])['@graph']||[]);
+assert.deepEqual(bg.find(x=>x['@type']==='Article').citation,badset.bronnen.map(id=>bewijs.BRONNEN[id].url));
+assert.ok(bh.includes('Sanofi en Regeneron'));
+assert.ok(bh.includes('geopende hygiëneproducten'));
+console.log('Badset: onbekend zonder koopadvies, online/etiketgrens, sponsors en bron/schema gelijk.');
+
 const sh=(await render('slug=serviesset')).body;
 const graph=sh.split('<script type="application/ld+json">').slice(1).flatMap(s=>JSON.parse(s.split('</script>')[0])['@graph']||[]);
 const al=graph.find(x=>x['@type']==='ItemList'&&x.name==='Alle servies bij Kadoly');
@@ -126,6 +142,7 @@ const dg=[...dh.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/scri
 assert.deepEqual(dg.find(x=>x['@type']==='Article').citation,desk.bronnen.map(id=>bewijs.BRONNEN[id].url));
 assert.ok(dh.includes('20 studies met 2.478'));
 console.log('Bureau: bron-/variantgrenzen, prijsuitsluiting en conditionele keuzecheck geslaagd.');
+
 
 
 
