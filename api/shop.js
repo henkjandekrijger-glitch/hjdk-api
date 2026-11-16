@@ -468,7 +468,8 @@ async function land(req, res, url) {
   const src = String(q.get('utm_source') || '').toLowerCase(); const net = netVan(src);
   let clickid = String(q.get('clickid') || '').replace(/[^A-Za-z0-9_.-]/g, '').slice(0, 120); if (/^(subid|clickid|click_id|visitor_id)$/i.test(clickid) || /^__[A-Z_]+__$/.test(String(q.get('clickid') || ''))) clickid = '';
   if (net === 'tt' && !clickid) clickid = String(q.get('ttclid') || '').replace(/[^A-Za-z0-9_.~+\/=-]/g, '').slice(0, 600); if (net === 'tt' && !clickid && !bot) clickid = 'ttx' + randomBytes(6).toString('hex'); // geen ttclid meegekregen: toch via Clickmind en de directe route (geen tussenpagina), alleen zonder koppeling aan de TikTok-klik // TikTok zet zelf ttclid achter de link (lang, ongewijzigd bewaren: de Events API koppelt er de conversie mee)
-  const zone = plekId(q.get('zoneid')), cr = digits(q.get('creativeid')), camp = digits(q.get('campaignid'));
+  const ttZonder = net === 'tt' && /^ttx/.test(clickid); // 16 nov: TikTok-keuring en voorbeelden komen zonder ttclid; die tellen niet mee per advertentie (plek 'ttx')
+  const zone = ttZonder ? 'ttx' : plekId(q.get('zoneid')), cr = ttZonder ? '' : digits(q.get('creativeid'), net === 'tt' ? 20 : 14), camp = ttZonder ? '' : digits(q.get('campaignid'), net === 'tt' ? 20 : 14); // TikTok-id's zijn 16 cijfers
   // Clickmind neemt alles mee wat het netwerk in de link zet (Henkjan 3 nov: "Zorg dat je alles meeneemt in clickmind ook van mondiads . OS VPN etc
   // zodat we patronen kunnen vinden"): de vorm (utm_medium: ipp, push, native, pop) en elke andere parameter (os, browser, carrier, subid, ...),
   // ook macro's die het netwerk niet invulde (dan staat er [os]: zo zien we welke macro's werken).
