@@ -50,8 +50,8 @@ const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
 const SHOP = 'https://kadoly.com/shop';
 // Terugmeldlinks per netwerk (PB) staan in lib/shopdirect.js. Clickadu: zet de link in SHOP_PB_CLICKADU met {clickid} op de plek van de klik-id.
-const NETTEN = { md: 'Mondiad', pa: 'PropellerAds', ra: 'RichAds', ca: 'Clickadu', mg: 'MGID', tt: 'TikTok', wh: 'Whop', pi: 'Pinterest', x: 'Overig' }; // wh: Meta via Whop Ads (16 nov 2026, Henkjan: "Zet cadoly campagne op met 20 te testen ads") // mg: MGID native (4 nov 2026, Henkjan: "Zet voor morgen MGID op voor 10 kansrijke producten")
-const netVan = src => /mondiad/.test(src) ? 'md' : /propeller/.test(src) ? 'pa' : /richads/.test(src) ? 'ra' : /clickadu/.test(src) ? 'ca' : /mgid/.test(src) ? 'mg' : /tiktok/.test(src) ? 'tt' : /^pinterest$/.test(src) ? 'pi' : /whop|facebook|instagram|^meta$|^fb$/.test(src) ? 'wh' : 'x'; // tt: TikTok (16 nov 2026, Henkjan: "Ik wil vandaag Tiktok advertentie starten")
+const NETTEN = { md: 'Mondiad', pa: 'PropellerAds', ra: 'RichAds', ca: 'Clickadu', mg: 'MGID', tt: 'TikTok', wh: 'Whop', pi: 'Pinterest', bi: 'Bing', x: 'Overig' }; // bi: Microsoft Advertising (16 nov 2026, Henkjan: "clickmind ertussen !!") // wh: Meta via Whop Ads (16 nov 2026, Henkjan: "Zet cadoly campagne op met 20 te testen ads") // mg: MGID native (4 nov 2026, Henkjan: "Zet voor morgen MGID op voor 10 kansrijke producten")
+const netVan = src => /mondiad/.test(src) ? 'md' : /propeller/.test(src) ? 'pa' : /richads/.test(src) ? 'ra' : /clickadu/.test(src) ? 'ca' : /mgid/.test(src) ? 'mg' : /tiktok/.test(src) ? 'tt' : /^pinterest$/.test(src) ? 'pi' : /whop|facebook|instagram|^meta$|^fb$/.test(src) ? 'wh' : /^(bing|microsoft|msads)$/.test(src) ? 'bi' : 'x'; // tt: TikTok (16 nov 2026, Henkjan: "Ik wil vandaag Tiktok advertentie starten")
 const plekId = s => { s = String(s || '').replace(/[^A-Za-z0-9]/g, '').toLowerCase().slice(0, 40); return /^(zoneid|siteid|publisherid|sourceid)$/.test(s) ? '' : s; }; // Mondiad en PropellerAds: cijfers; RichAds: site-id van 32 tekens
 const NAAM = 'SHOP-LUS'; // elke campagne met dit in de naam hoort bij de lus
 const ACC = { acc: '#1e3a8a', acc2: '#e8edfb', accD: '#a5b4fc', acc2D: '#161b33' };
@@ -436,7 +436,7 @@ async function direct(req, res, x) {
   // aankomsten en geen echte mensen op kadoly.com) krijgen 403 en komen nooit op de shop. Echte mensen gaan altijd in een keer door
   // (nooit een tussenpagina). Een controle van het netwerk zonder klik-id (moderatie, voorbeeld) wordt niet als datacenter geweerd.
   let weiger = bot ? 'bot' : '';
-  if (!weiger && !test && !x.vrij && net !== 'pi' && echteKlikId(clickid) && !/^ttx/.test(clickid)) { // 16 nov: TikTok-keuring (geen ttclid, niet betaald) nooit weren, anders keurt TikTok de advertentie af // gidsbezoekers (x.vrij) komen uit Google en kunnen een VPN of kantoornetwerk hebben: alleen zelfverklaarde bots weren
+  if (!weiger && !test && !x.vrij && net !== 'pi' && echteKlikId(clickid) && !/^(ttx|bix)/.test(clickid)) { // 16 nov: TikTok-keuring (geen ttclid, niet betaald) nooit weren, anders keurt TikTok de advertentie af // gidsbezoekers (x.vrij) komen uit Google en kunnen een VPN of kantoornetwerk hebben: alleen zelfverklaarde bots weren
     try { await Promise.race([laadDc(kv), new Promise(r => setTimeout(r, 250))]); } catch (e) {}
     try { if (dcVan(serverSignalen(req)).dc === true) weiger = 'datacenter'; } catch (e) {}
     if (!weiger) { try { if (await isBotZone(kv, net, zone)) weiger = 'botplek'; } catch (e) {} }
@@ -472,7 +472,9 @@ async function direct(req, res, x) {
   return res.end();
 }
 async function land(req, res, url) {
-  const q = url.searchParams; const ua = req.headers['user-agent'] || ''; const bot = isBot(ua);
+  const q = url.searchParams; const ua = req.headers['user-agent'] || '';
+  // Bing: de keuring van Microsoft (AdIdxBot, BingPreview) moet de doorstuur naar kadoly.com zien, anders keurt Microsoft de advertentie af (16 nov 2026)
+  const msKeur = /^(bing|microsoft|msads)$/.test(String(q.get('utm_source') || '').toLowerCase()) && /adidxbot|bingpreview/i.test(ua); const bot = isBot(ua) && !msKeur;
   const src = String(q.get('utm_source') || '').toLowerCase(); const rawNet = q.get('wacid') ? 'wh' : netVan(src); const net = rawNet === 'pi' && !/^(paid_social|paid-social|cpc|paid)$/.test(String(q.get('utm_medium') || '').toLowerCase()) ? 'x' : rawNet; // Whop zet zelf utm_source (facebook, instagram, ...) en utm_medium=paid_social; wacid is altijd van Whop
   let clickid = String(q.get('clickid') || '').replace(/[^A-Za-z0-9_.-]/g, '').slice(0, 120); if (/^(subid|clickid|click_id|visitor_id)$/i.test(clickid) || /^__[A-Z_]+__$/.test(String(q.get('clickid') || ''))) clickid = '';
   // Pinterest has a separate paid cohort; a missing epik gets a local request id, not a fabricated Pinterest click id.
@@ -480,10 +482,11 @@ async function land(req, res, url) {
   const pinEpik = rawEpik && !/[{}]|^__[A-Z_]+__$/.test(rawEpik) ? rawEpik.replace(/[^A-Za-z0-9_.~+\/=\-]/g, '').slice(0, 600) : '';
   if (net === 'pi' && !clickid) clickid = pinEpik || 'pix' + randomBytes(6).toString('hex');
   if (net === 'tt' && !clickid) clickid = String(q.get('ttclid') || '').replace(/[^A-Za-z0-9_.~+\/=-]/g, '').slice(0, 600); if (net === 'tt' && !clickid && !bot) clickid = 'ttx' + randomBytes(6).toString('hex'); // geen ttclid meegekregen: toch via Clickmind en de directe route (geen tussenpagina), alleen zonder koppeling aan de TikTok-klik // TikTok zet zelf ttclid achter de link (lang, ongewijzigd bewaren: de Events API koppelt er de conversie mee)
-  const ttZonder = net === 'tt' && /^ttx/.test(clickid); // 16 nov: TikTok-keuring en voorbeelden komen zonder ttclid; die tellen niet mee per advertentie (plek 'ttx')
+  if (net === 'bi' && !clickid) clickid = String(q.get('msclkid') || '').replace(/[^A-Za-z0-9_.-]/g, '').slice(0, 120); if (net === 'bi' && !clickid && !bot) clickid = 'bix' + randomBytes(6).toString('hex'); // Bing: msclkid via {msclkid}; keuring en voorbeelden zonder klik-id gaan als bix door (zoals ttx)
+  const ttZonder = (net === 'tt' && /^ttx/.test(clickid)) || (net === 'bi' && /^bix/.test(clickid)); // 16 nov: TikTok-keuring en voorbeelden komen zonder ttclid; die tellen niet mee per advertentie (plek 'ttx')
   if (net === 'wh' && !clickid) clickid = String(q.get('fbclid') || '').replace(/[^A-Za-z0-9_.~+\/=-]/g, '').slice(0, 600); if (net === 'wh' && !clickid && !bot) clickid = 'whx' + randomBytes(6).toString('hex'); // Whop/Meta: Meta zet fbclid achter de link; zonder fbclid toch via Clickmind (eigen klik-id), de Events API koppelt dan via wacid/waid
   const wh = net === 'wh'; // Whop zet wacid (campagne), wasid (advertentiegroep) en waid (advertentie) achter de link
-  const zone = wh ? plekId(q.get('wasid') || q.get('zoneid')) : ttZonder ? 'ttx' : plekId(q.get('zoneid')), cr = wh ? whId(q.get('waid') || q.get('creativeid')) : ttZonder ? '' : digits(q.get('creativeid'), net === 'tt' ? 20 : 14), camp = wh ? whId(q.get('wacid') || q.get('campaignid')) : ttZonder ? '' : digits(q.get('campaignid'), net === 'tt' ? 20 : 14); // TikTok-id's zijn 16 cijfers
+  const zone = wh ? plekId(q.get('wasid') || q.get('zoneid')) : ttZonder ? (net === 'bi' ? 'bix' : 'ttx') : plekId(q.get('zoneid')), cr = wh ? whId(q.get('waid') || q.get('creativeid')) : ttZonder ? '' : digits(q.get('creativeid'), net === 'tt' ? 20 : 14), camp = wh ? whId(q.get('wacid') || q.get('campaignid')) : ttZonder ? '' : digits(q.get('campaignid'), net === 'tt' ? 20 : 14); // TikTok-id's zijn 16 cijfers
   const whp = wh ? Object.fromEntries(['wacid', 'wasid', 'waid', 'fbclid', 'utm_source', 'utm_medium', 'utm_campaign'].map(k => [k, String(q.get(k) || '').slice(0, k === 'fbclid' ? 600 : 80)]).filter(([, v]) => v)) : null;
   // Clickmind neemt alles mee wat het netwerk in de link zet (Henkjan 3 nov: "Zorg dat je alles meeneemt in clickmind ook van mondiads . OS VPN etc
   // zodat we patronen kunnen vinden"): de vorm (utm_medium: ipp, push, native, pop) en elke andere parameter (os, browser, carrier, subid, ...),
@@ -498,7 +501,8 @@ async function land(req, res, url) {
     return res.status(404).send('Dit product is niet beschikbaar.');
   }
   let top = null; try { top = await kv.get(K.top); } catch (e) {} const topIds = (top && top.ids && top.ids.length ? top.ids : seed.ads.map(a => a.pid)).filter(id => perId[id] && perId[id].vr !== false);
-  let pid = pidOk(q.get('p')); if (pid && (!perId[pid] || perId[pid].vr === false)) pid = '';
+  const biLp = net === 'bi' ? String(q.get('lp') || '') : ''; const biPid = (biLp.match(/kadoly\.com\/product\/([^?&#\/]+)/) || [])[1] || ''; // Bing: Microsoft zet de landingspagina met {lpurl} in lp; een productpagina wordt p, anders de voorkant
+  let pid = pidOk(q.get('p') || (biPid ? (() => { try { return decodeURIComponent(biPid); } catch (e) { return biPid; } })() : '')); if (pid && (!perId[pid] || perId[pid].vr === false)) pid = '';
   if (!pid && cr && net !== 'x') { try { const m = (await kv.get(K.crmap)) || {}; if (perId[m[net + ':' + cr]] && perId[m[net + ':' + cr]].vr !== false) pid = m[net + ':' + cr]; } catch (e) {} }
   if (!pid) pid = topIds[0] || cat.items[0].id;
   let rt = ''; if (q.get('rt') === '1') { rt = 'mis'; const mp = leesCookie(req, 'mmp'); if (/^[0-9a-f]{16}$/.test(mp)) { try { const w = await kv.get('hjdk:warm:' + mp); if (w && w.p && perId[w.p] && perId[w.p].vr !== false) { pid = w.p; rt = w.stap; } } catch (e) {} } laterAf(inc(['sh-rt-' + (rt === 'mis' ? 'mis' : 'raak'), 'sh-d' + D8() + '-rt-' + (rt === 'mis' ? 'mis' : 'raak')])); } // remarketing: naar het eigen mandjeproduct
@@ -512,7 +516,7 @@ async function land(req, res, url) {
   // Betaald verkeer met een klik-id gaat altijd in één keer via Clickmind (302) naar de productpagina op kadoly.com, ook met arm=l in de link.
   // Bots meet Clickmind (cm.js op de shop: echt mens of niet, per plek) en de zonelijst weert slechte plekken; wie zich als bot meldt gaat niet door (direct()).
   const taal = (() => { const l = String(q.get('lang') || '').toLowerCase(); if (/^(nl|de|es|en)$/.test(l)) return l; const lc = String(q.get('utm_campaign') || '').slice(0, 3).toLowerCase(); return ({ 'de-': 'de', 'at-': 'de', 'lu-': 'de', 'es-': 'es', 'ie-': 'en', 'mt-': 'en' })[lc] || 'nl'; })(); // 16 nov: taal van de landingspagina per land
-  const voorkant = q.get('naar') === 'voorkant'; // 16 nov (Henkjan): een algemene advertentie landt op de voorkant van kadoly.com, met Clickmind ertussen
+  const voorkant = q.get('naar') === 'voorkant' || (net === 'bi' && !q.get('p') && !biPid); // 16 nov (Henkjan): een algemene advertentie landt op de voorkant van kadoly.com, met Clickmind ertussen
   if (code) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt, taal, voorkant, epik: pinEpik, bron: net === 'pi' ? { source: 'pinterest', medium: 'paid_social', campaign: camp || 'pinterest-test' } : undefined, wh: whp ? Object.assign({ pr: held && Number(held.p) > 0 ? Number(held.p) : undefined }, whp) : null });
   if (!bot) {
     let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, { ex: 7 * 86400 }); } catch (e) {} }
