@@ -1,0 +1,25 @@
+name: Sealed Intent checks
+on:
+  push:
+    paths:
+      - 'api/sealed.js'
+      - 'lib/sealed*.js'
+      - 'scripts/test-sealed-anonymous.mjs'
+      - '.github/workflows/sealed-checks.yml'
+  pull_request:
+    paths:
+      - 'api/sealed.js'
+      - 'lib/sealed*.js'
+      - 'scripts/test-sealed-anonymous.mjs'
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: node scripts/test-sealed-anonymous.mjs
+      - run: node --check api/sealed.js
