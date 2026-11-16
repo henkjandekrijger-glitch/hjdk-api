@@ -44,3 +44,8 @@ Productie gebruikt Node 24 en JSON import attributes. Gebruik een passende runti
 Voer `node scripts/test-tsc-choice.mjs` en `node scripts/test-tsc-countries.mjs` uit bij wijzigingen aan die routes/contracts. Nieuwe fouten eerst oplossen. QA gebruikt een in-memory mailprovider; geen echte testabonnees aanmelden. Check bronlinks, mobiel land-/onderwerppaneel, unieke ids, scripts, canonical/hreflang/noindex en sitemap/llms. Browsercontroles met `?controle=1` niet als echt bezoek meten. Runtime-errors op de eigen deployment bekijken. IndexNow pas melden na READY en publieke inhoudscontrole.
 
 Werklog: `/api/mm/handover?wie=surgery-tandheelkunde&log=...`, met concrete wijzigingen, tests, commit, deployment en wat niet geverifieerd is. WERKING/OPEN in lib/tsc-overdracht.js en lib/werking.js dezelfde commit; SEO-log in lib/overdracht-kz-tekst.js. Geen nieuwe advertentieuitgaven, domeinaankoop, betaalde keywordinkoop of contactoverdracht zonder concrete opdracht.
+
+
+## Bekende uitvoerstatus 16 november
+
+Eerste automatische ChatGPT-poging: algemene foutmelding, geen technische oorzaak of vraag om gebruikersactie. Herhaalprompt daarna in de actieve chat uitgevoerd; taak blijft dagelijks ingeschakeld, toekomstige achtergrondrun nog onbewezen. De bestaande mailcron werkte wel: 1 provideracceptatie, 0 fouten. Neem de eerstvolgende echte taakuitkomst opnieuw door en rapporteer een mislukking eerlijk. Geen platformfout als bron-/conversiesucces presenteren. Oude rendercohorten blijven onder legacy_cohorts, buiten de actieve v2-zichtbaarheidsproef. Browser-QA van de nieuwe versie had een sessiefout; SSR/metadata/scripts zijn wel publiek gecontroleerd.

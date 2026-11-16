@@ -975,6 +975,27 @@
         "travel"
       ],
       "is_from": true
+    },
+    {
+      "provider": "nofrills-singapore",
+      "topic": "aligners",
+      "from": 1888,
+      "to": 6500,
+      "currency": "SGD",
+      "scope": "invisalign_course",
+      "unit": "treatment",
+      "source_url": "https://www.nofrillsdental.com/treatment-fees/",
+      "source_as_of": "2026-08-06",
+      "checked_at": "2026-11-16",
+      "tax": "before_GST",
+      "includes": [],
+      "unknown": [
+        "case_complexity",
+        "retainers",
+        "extra_aligners",
+        "follow_up",
+        "travel"
+      ]
     }
   ]
 }

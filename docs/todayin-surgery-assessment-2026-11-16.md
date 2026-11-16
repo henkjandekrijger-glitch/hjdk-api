@@ -39,7 +39,7 @@ Vraagmeting: Demand Radar-cache van 16 november, thema plastische-chirurgie, NL,
 | --- | --- |
 | Facings, kronen, aligners en bleken hadden noindex | Eigen consultcontext met primaire ADA/NHS/FDA-bronnen toegevoegd; voldoende gevulde overzichten in EN/NL/DE mogen indexeren. Dunne andere onderwerpen behouden noindex. |
 | Alleen drie alignerdossiers | Uitgebreid naar zestien met expliciete behandel- en merkbronnen. |
-| Prijzen konden een schroef met een complete tand verwarren | Elf gedateerde snapshots met munt, eenheid, omvang, inclusies en open posten; geen landgemiddelden of automatische wisselkoersconversies. |
+| Prijzen konden een schroef met een complete tand verwarren | Twaalf gedateerde snapshots met munt, eenheid, omvang, inclusies en open posten; geen landgemiddelden of automatische wisselkoersconversies. |
 | Alleen vier nieuwsitems, geen tandheelkunde | Negen duidelijk gelabelde eigen broninventaris-/gidsupdates voor drie tandonderwerpen in drie talen. Geen prijsverandering verzonnen. |
 | NL-verzekeringsnieuws kon tandabonnees bereiken | Onderwerp- en thuislandvoorwaarden aangescherpt; expliciete behandellanden worden in nieuwsselectie en bronoverzicht gerespecteerd. |
 | Snel invullen onder 1,5 seconde gaf succes zonder mail | Tijdval verwijderd; snelle autofill werkt. Honeypot en begrenzing blijven. |
@@ -120,3 +120,10 @@ ZICHT volgt een 14-daagse indexeerbaarheidsproef voor tandhub/facings/aligners m
 De ingeschakelde nachtelijke taak draait vanaf maandag rond 01:30 Curaçao en daarna dagelijks, vóór de bestaande mailcron van 08:10 UTC (04:10 Curaçao). Hij herleest actuele repo en overdracht, verdiept echte bronlacunes, controleert inhoud en acquisitie, voert betekenisvolle QA uit en publiceert alleen na verificatie. Zie docs/todayin-surgery-onderhoud.md. Bestaande Claude-rondes en mailcron blijven staan; dezelfde bronwijziging niet dubbel publiceren.
 
 De implementatie wordt getest met in-memory database en mailprovider, waaronder snelle autofill, providerfout/herhaalpoging, dubbele klik, zichtbaarheid/varianttoewijzing, herkomst/landfiltering, late ACK, dag-idempotency, afmelden tijdens verzenden en SSR/metadata in drie talen. Geen echte testmails. Live deployment, IndexNow-status en browsercontrole staan feitelijk in het werklog; een testpass is geen bewijs van inboxbezorging of verkeerstoename.
+
+
+## Gecontroleerde uitkomst 16 november, ochtend
+
+Alle 18 tandheelkundige behandelingsoverzichten en drie hubs EN/NL/DE geven publiek HTTP200 met passende canonical, hreflang, scripts en indexeerbaarheid. Voorbeeldmail heeft noindex. Sitemap bevat inmiddels 78 URL's, inclusief de door de bestaande dagronde toegevoegde borstgids; IndexNow antwoordde 200. De bestaande mailcron van 08:10 UTC had één provideracceptatie en nul fouten; latere droogrun één al-vandaag en nul fouten. Geen inboxbezorging afgeleid. Visuele controle van deze versie liep vast op een browsersessiefout en is niet afgetekend.
+
+De eerste automatische onderhoudspoging mislukte met alleen een algemene platformmelding. De herhaalprompt is daarna in de actieve chat uitgevoerd. Het dagelijkse schema blijft ingeschakeld; een toekomstige achtergrondrun is nog niet als succesvol geverifieerd. Oude formulier-rendercohorten staan apart als legacy, niet als actieve zichtbare-formulierproef. Nieuwe primaire broncontrole van Smile Clinic, INDEXMEDICA en NoFrills; twaalfde prijssnapshot is een gepubliceerde Invisalign-band in SGD vóór GST met open posten voor persoonlijke omvang, retainers, extra series en controles. Dit is geen actuele persoonlijke offerte. De nieuwe vier tandvragen leverden bij de eerste ZICHT-meting nul eigen citaties; Google surgery bleef 0/0 en gemeten Google/Bing/AI-bezoek nul.
