@@ -434,7 +434,7 @@ async function direct(req, res, x) {
   // aankomsten en geen echte mensen op kadoly.com) krijgen 403 en komen nooit op de shop. Echte mensen gaan altijd in een keer door
   // (nooit een tussenpagina). Een controle van het netwerk zonder klik-id (moderatie, voorbeeld) wordt niet als datacenter geweerd.
   let weiger = bot ? 'bot' : '';
-  if (!weiger && !test && !x.vrij && echteKlikId(clickid)) { // gidsbezoekers (x.vrij) komen uit Google en kunnen een VPN of kantoornetwerk hebben: alleen zelfverklaarde bots weren
+  if (!weiger && !test && !x.vrij && echteKlikId(clickid) && !/^ttx/.test(clickid)) { // 16 nov: TikTok-keuring (geen ttclid, niet betaald) nooit weren, anders keurt TikTok de advertentie af // gidsbezoekers (x.vrij) komen uit Google en kunnen een VPN of kantoornetwerk hebben: alleen zelfverklaarde bots weren
     try { await Promise.race([laadDc(kv), new Promise(r => setTimeout(r, 250))]); } catch (e) {}
     try { if (dcVan(serverSignalen(req)).dc === true) weiger = 'datacenter'; } catch (e) {}
     if (!weiger) { try { if (await isBotZone(kv, net, zone)) weiger = 'botplek'; } catch (e) {} }
