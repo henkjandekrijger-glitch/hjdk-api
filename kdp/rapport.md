@@ -39,14 +39,14 @@ ORGANISCH in elke ronde: web_fetch_vercel_url https://hjdk-api-henq.vercel.app/a
 2. Ads per boek op beide platforms tegen royalty (tabel hieronder). Pas de stopregels toe, schaal winnaars op.
 3. Teens #1 Canada: stand (zie onder).
 4. Boekwedstrijd: 3 nieuwe kandidaten onderzoeken en scoren (kdp/boekwedstrijd.md, kdp/wachtrij.md), commit + push.
-5. Rapport: VERKOOP eerst, ORGANISCH (boekstand, tegen gisteren), per boek ads tegen royalty, wat werkt en wat niet, wat geleerd (nieuw), wat ik verbeterde of stopte, Teens-rang tegen #1, top 3 wachtrij, tempo naar 10x (nov 2025: $101/dag royalty).
+5. Rapport: VERKOOP eerst, ROI (per boek ROAS tegen break-even en doel, ROI op royalty, totaal alle ads; gisteren en 7 dagen; zie ROI en ROAS), ORGANISCH (boekstand, tegen gisteren), wat werkt en wat niet, wat geleerd (nieuw), wat ik verbeterde of stopte, Teens-rang tegen #1, top 3 wachtrij, tempo naar 10x (nov 2025: $101/dag royalty).
 
 ### TUSSEN (rondes B, C, D)
 1. Ads van vandaag sinds middernacht per campagne (Amazon US + Canada, PropellerAds Apocrypha): vertoningen, kliks, kosten, aankopen. Stopregels toepassen; campagnes zonder vertoningen een stap omhoog binnen de marge; zoektermen met aankoop exact toevoegen.
 2. Verkoop vandaag tot nu (Royalties Estimator, vandaag) als KDP het al toont.
 3. Teens CA-rang en #1 in Teen Reference (Keepa), status van openstaande KDP-wijzigingen (in review / live).
 4. Iets wat het rendement verhoogt en nu kan: doen.
-5. Rapport in hooguit 7 regels: verkoop vandaag, kosten vandaag, ORGANISCH (boekstand: bezoek uit zoek en AI, Amazon-kliks uit de boekgidsen, nieuw in Google), wat ik veranderde, wat opviel. Ronde D sluit de dag af: totaal royalty en ads vandaag, plan voor morgen.
+5. Rapport in hooguit 7 regels: verkoop vandaag, kosten vandaag, ROI (ROAS per boek met ads tegen break-even, totaal), ORGANISCH (boekstand: bezoek uit zoek en AI, Amazon-kliks uit de boekgidsen, nieuw in Google), wat ik veranderde, wat opviel. Ronde D sluit de dag af: totaal royalty en ads vandaag, plan voor morgen.
 
 ## KERSTPLAN naar $1000/dag (Henkjan 15 nov: "We moeten naar 1000 per dag maak een plan asap !")
 
@@ -56,7 +56,7 @@ Vorig jaar (KDP Royalties Estimator): 15 nov-25 dec 2025 $11.084 (gem. $270/dag,
 - Rest (VK e.a.) ca. $1.060: Apocrypha ca. $450.
 Amazon-ads 18 nov-25 dec 2025: $3.081 kosten, $6.993 omzet, 371 aankopen. PIT BOSS - SP - Manual KW 511 kliks, 118 aankopen, $896 (start 14 nov 2025); PIT BOSS EXACT 569 kliks, 90 aankopen, $772; PIT BOSS 2025 BROAD 195 kliks, 44 aankopen, $287; PIT BOSS Cerebro BROAD2 238 kliks, 33 aankopen, $191; Aut Experiment UK (VK auto) $213 kosten, $739 omzet; LC KW $163; B0F1SM1L5J-AUTO $112, $359 omzet. In het seizoen converteren de PIT BOSS-woorden 16-23% per klik.
 Nu (16 nov): PIT BOSS VS rang 869.000 (prijs $17,04, lijstprijs $18), LC VS rang 1,05 mln, Teens CA rang 7.571 (vorig jaar half nov 840).
-- 16 nov 06:35 UTC GEDAAN binnen de regels: PIT BOSS - SP - Manual KW (A06472010M5G9DRRZ8PS) en PIT BOSS EXACT (A043648439COJRMAUIRWM) weer aan, budget van $30 en $20 naar $10/dag, biedingen van vorig jaar. Stopregel: PIT BOSS-ads 3 dagen achter elkaar meer dan 50% van de PIT BOSS-royalty = pauzeren.
+- 16 nov 06:35 UTC GEDAAN binnen de regels: PIT BOSS - SP - Manual KW (A06472010M5G9DRRZ8PS) en PIT BOSS EXACT (A043648439COJRMAUIRWM) weer aan, budget van $30 en $20 naar $10/dag; biedingen 16 nov 12:00 UTC naar hoogstens $0,40 (zie ROI en ROAS). Stopregel: PIT BOSS-ads 3 dagen achter elkaar meer dan 50% van de PIT BOSS-royalty = pauzeren.
 - WACHT op Henkjans ja (gevraagd 15 nov): budgetten van vorig jaar ($20-30/dag per campagne, samen ca. $150/dag) en de andere winnaars aan (PIT BOSS 2025 BROAD, Aut Experiment UK, Adults en Dad Jokes Canada). Adventskalender DE-ads wachten op zijn eenmalige login op advertising.amazon.de.
 - PropellerAds Apocrypha UK: beide kopieën stonden 15 nov op gestopt; 16 nov 05:47 geen nieuwe kopie. Niet zelf herstarten (PropellerAds-wijziging alleen met zijn ja); voorstel: vervangen door Amazon VK auto (vorig jaar 29% ACOS).
 
@@ -69,7 +69,7 @@ Alle Amazon-campagnes: Dynamic bids down only, alleen Amazon (Limit reach to Ama
 - TESTUITSLAG 15 nov 06:40 UTC (12-14 nov, VS-dag 15 nov nog niet begonnen): PIT BOSS Cerebro BROAD2 $9,44 ads, 12 kliks, 0 aankopen, PIT BOSS-royalty $0 = GEPAUZEERD. Enoch scaling KW $1,87, 4 kliks, 0 aankopen, Enoch US-royalty $0 (de $4,19 Enoch kwam uit AU) = GEPAUZEERD; Enoch Cerebro KW 0.12 blijft als goedkope versie. Lasting change LASTING CHANGE KW: vertoningen, 0 kosten, LC-royalty $0 = blijft (kost niets). Les: marktbod op oude PIT BOSS- en Enoch-woorden levert kliks zonder verkoop; niet herhalen zonder nieuw bewijs.
 - KDP For Men KERST EXACT 0.45 | 13nov (A094841238T75L5P00YDA): For Men B0HRGNJ7CY, 12 kerstcadeauwoorden $0,45 (3 niche $0,50).
 - KDP Feitenboeken PT concurrenten 0.35 | 13nov (A002679099X7YQ0MNAMT): Wait, That's True?! B0HRFY3TLB + For Men B0HRGNJ7CY op 11 boekpagina's exact $0,35 (160433696X, B0FVKQH4KS, 1922590657, B0HMFZDC2G, 1648451233, B0B6XFT4RH, 3982670632, B0DJQLBM75, B0H8LY3F6V, 1648451306, 1648451217). Boeken zonder reviews: pagina met kosten > $3,40 en 0 verkopen pauzeren.
-- KDP Wait Thats True EXACT | 12nov (A05992682MW2DU09KSFTY, marktbod, max $3,35/aankoop).
+- KDP Wait Thats True EXACT | 12nov (A05992682MW2DU09KSFTY; marktbod tot 16 nov, toen $3,26 zonder aankoop = alle 10 woorden naar $0,35).
 - B0F1SM1L5J-AUTO (A03228661CQIWZXX5IXLQ), Traeger Cerebro BROAD Copy 2 (A07419671HF50HRG5N4MG, max $2,95), KDP Crock Pot EXACT 0.35 (A1041734BNY8PUAJFCY2, sinds 14 nov alle 10 woorden $0,45, max $3,74), KDP Griddle EXACT 0.40 (A06363731IM3I67SGN8N7, sinds 14 nov alle 10 woorden $0,50, max $5,07), Enoch Cerebro KW 0.12 (A0731099I4B9XDZBQXPG, $5).
 - Les 12 nov: ook op marktbod nauwelijks vertoningen op de oude zoekwoorden; groei komt van concurrentpagina's en cadeauzoekwoorden.
 - Les 14 nov: voorgestelde biedingen zijn $0,75-$1,47 (Griddle $1,06-$1,47, Crock Pot $0,75-$1,01); onze $0,35-$0,50 halen 2-3 vertoningen in 3 dagen. Break-even CPC = max ads per verkoop x conversie (~10%): Griddle ~$0,50, Crock Pot ~$0,37. Hoger bieden dan dat is verlies; deze campagnes blijven dus klein. 11-13 nov: PIT BOSS 4.633 vertoningen, 7 kliks, $5,64, 0 aankopen (test, oordeel 15 nov); Wait That's True EXACT 279 vertoningen, 1 klik $1,29; Teens CA AUTO 42, EXACT 19, PT 0 vertoningen.
@@ -105,6 +105,39 @@ Alle Amazon-campagnes: Dynamic bids down only, alleen Amazon (Limit reach to Ama
 | Enoch ($15,99) | B0B5KV79N1 | $6,54 | $3,27 |
 | Apocrypha UK | B09YTZ72KZ | £3,36 (£4,56 bij £12,99) | 50% |
 | Duitse titels (paperback EUR 12,99, vanaf ~20 nov) | | ~EUR 5,5 | ~EUR 2,75 |
+| Adventskalender fuer Maenner DE (EUR 13,90) | B0HRRCXTNV | ~EUR 5,74 | ~EUR 2,87 |
+
+## ROI en ROAS (Henkjan 16 nov: "HOu mn ROI in de gaten en de ROAS !!")
+
+- ROAS = ad-omzet / ad-kosten (ACOS = 1 / ROAS). Break-even ROAS = prijs / royalty: daaronder kost elke ad-verkoop meer dan hij oplevert. Doel-ROAS (margeregel, ads hoogstens 50% van de royalty) = 2 x break-even.
+- ROI op ads = (royalty uit ad-aankopen - ad-kosten) / ad-kosten; royalty uit ad-aankopen = aantal ad-aankopen x royalty per stuk (tabel hierboven).
+- Max CPC = max ads per verkoop x conversie per klik (nieuw boek zonder reviews ~10%, PIT BOSS in het seizoen 16-23%). Hoger bieden is verlies.
+
+| Boek | Break-even ROAS | Doel-ROAS | Max CPC |
+|---|---|---|---|
+| Teens CA (CA$13,99) | 2,93 | 5,85 | CA$0,24 (duw = uitzondering, oordeel 18 nov op totaal) |
+| Teens US ($9,99) | 3,09 | 6,19 | $0,16 |
+| Wait, That's True?! ($14,99) | 2,24 | 4,47 | $0,35 |
+| For Men ($14,99) | 2,19 | 4,38 | $0,35 |
+| Lasting Change ($24,99) | 2,10 | 4,19 | $0,60 |
+| PIT BOSS ($17,04) | 4,26 | 8,52 | $0,40 (bij 20% conversie) |
+| Traeger ($16,99) | 2,88 | 5,76 | $0,30 |
+| Enoch ($15,99) | 2,45 | 4,89 | $0,33 |
+| Crock Pot / Griddle | prijs aanvullen | | $0,37 / $0,50 |
+| Adventskalender DE (EUR 13,90) | 2,42 | 4,84 | EUR 0,29 |
+
+Regels:
+- Elk rapport heeft een regel ROI: per boek met ads de ad-kosten, ad-omzet, ROAS tegen break-even en doel, en ROI op royalty; daarna het totaal van alle ads (Amazon en PropellerAds). Ronde A over gisteren en de laatste 7 dagen, B/C/D over vandaag tot nu (Amazon loopt achter: gisteren + vandaag).
+- ROAS 7 dagen onder break-even en minstens 1x max ads per verkoop uitgegeven zonder genoeg aankopen = biedingen naar max CPC of pauzeren. ROAS 7 dagen boven doel = opschalen tot $10/dag (meer alleen met Henkjans ja). De Teens CA-duw houdt zijn eigen stopregel op totale CA-royalty (18 nov).
+- Altijd: dynamic bids down only, alleen Amazon, geen bod boven max CPC.
+
+Stand 16 nov 12:00 UTC (Amazon-ads 9-15 nov): kosten $43,61, ad-omzet $49,02 (4 aankopen, alle Teens CA), ROAS 1,12, royalty uit ad-aankopen ~$13,40 = ROI -69%. Teens CA (3 campagnes) CA$38,04 kosten, CA$69,95 omzet, ROAS 1,84 tegen break-even 2,93. Rest $16,96 zonder aankoop: PIT BOSS Cerebro BROAD2 $9,44 en Enoch scaling $2,49 (beide gepauzeerd 15 nov), Wait That's True EXACT $3,26 (3 kliks), Feitenboeken PT $0,98, LC auto $0,44, Traeger $0,34. PropellerAds Apocrypha 7-13 nov $17,60 tegen $29,38 UK-royalty (ads 60%), nu gestopt.
+
+16 nov ~12:00 UTC GEDAAN voor ROI:
+- PIT BOSS - SP - Manual KW: 4 woorden ($0,45-$1,00) naar $0,40; stond op dynamic up and down (bod tot 2x) = nu down only; nu alleen Amazon.
+- PIT BOSS EXACT: 352 woorden ($0,42-$1,52) naar $0,40 (2 woorden op $0,31 blijven); stond op off-Amazon = nu alleen Amazon.
+- Wait That's True EXACT: 10 woorden van marktbod ($0,67-$1,58) naar $0,35 (3 kliks $3,26 zonder aankoop = max ads per verkoop bereikt).
+- Waarom: vorig seizoen had PIT BOSS ROAS 2,0-2,3 tegen break-even 4,26, dus elke ad-verkoop kostte $7,60-8,60 bij ~$4 royalty. Met $0,40 en 16-23% conversie wordt dat $1,74-2,50 per verkoop (binnen de margeregel). Minder vertoningen is de prijs; opschalen alleen als de ROAS het bewijst.
 
 Cijfers 14 nov definitief: $9,85 (Teens $6,70 CA, Bible Color By Number $3,15). 12-14 nov $35,06 (Teens $18,04, Bible Color $6,30, Apocrypha $4,44, Enoch $4,19, Mom's Word Search $1,66). 1-15 nov $183,40. Amazon-ads 12-14 nov CA$39,12 (~$27). Cijfers 14 nov dagafsluiting 22:30 UTC: KDP $6,70 (nog niet bijgewerkt sinds de middag), alle Amazon-ads 14 nov CA$13,89 (~$9,70) met 2 ad-aankopen (Teens CA AUTO), PropellerAds Apocrypha $1,79 (284 kliks), Teens CA-rang 10.204. Eerder: tot 17:30 UTC $6,70, alles Teens Canada (~2 stuks); Amazon-ads 13-14 nov ~$7,80 + CA$1,80 (PIT BOSS $5,39 7 kliks, Wait That's True $1,97 2 kliks, Teens CA EXACT CA$1,80 2 kliks), 0 aankopen; Teens CA AUTO 249 en PT 85 vertoningen sinds de duw (eerst 42 en 0); Apocrypha UK PropellerAds 14 nov $1,76, 275 kliks; Teens CA-rang 8.889. Cijfers: 11 nov $20,40; 12 nov $13,70; 13 nov $8,20 (Enoch AU $4,21, Teens $2,33, Mom's Word Search US $1,66; ads $3,10 Apocrypha UK + $5,50 Amazon); 7-13 nov $122,39; 1-14 nov $173,35 (nov 2026 ~$12/dag tegen nov 2025 $101/dag); november t/m 13 nov $166,38; Teens november $76,34 uit 27 bestellingen (13 nov).
 
