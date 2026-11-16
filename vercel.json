@@ -223,6 +223,10 @@
   ],
   "rewrites": [
     {
+      "source": "/o",
+      "destination": "/api/shop?op=org"
+    },
+    {
       "source": "/",
       "has": [
         {
@@ -1681,7 +1685,7 @@
       "permanent": false
     },
     {
-      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|shop$).+)",
+      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|shop$|o$).+)",
       "has": [
         {
           "type": "host",
