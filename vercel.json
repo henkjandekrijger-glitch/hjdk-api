@@ -74,7 +74,7 @@
     },
     {
       "path": "/api/shop?op=whopronde",
-      "schedule": "11,41 * * * *"
+      "schedule": "11,26,41,56 * * * *"
     },
     {
       "path": "/api/shop/ronde",

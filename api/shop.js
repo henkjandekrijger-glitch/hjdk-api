@@ -31,7 +31,7 @@ import { SHOP_PHP } from '../lib/shopphp.js';
 import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
 import { PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, GEDRAG, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel, ttEvent } from '../lib/shopdirect.js';
-import { whEvent, whopKlaar, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL } from '../lib/whop.js';
+import { whEvent, whopKlaar, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget } from '../lib/whop.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
 import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
@@ -1076,6 +1076,13 @@ export default async function handler(req, res) {
           stappen: rec ? Object.keys(rec).filter(k => /^y[a-z0-9]{1,2}$/.test(k)).map(k => LET[k.slice(1)] || k).slice(0, 40) : null }); }
       const samen = {}; for (const b of best) { const k = b.net || '?'; const o = samen[k] = samen[k] || { bestellingen: 0, betaald: 0, verlopen: 0, anders: 0, methodes: {} }; o.bestellingen++; if (/paid|betaald/i.test(b.status)) o.betaald++; else if (/expir|verlop/i.test(b.status)) o.verlopen++; else o.anders++; o.methodes[(b.methode || '-') + ':' + b.status] = (o.methodes[(b.methode || '-') + ':' + b.status] || 0) + 1; }
       res.setHeader('cache-control', 'no-store'); return res.status(200).json({ ok: true, dagen, perNet, bestellingen: { totaal: best.length, perNet: samen, feedFout, lijst: best } }); }
+    if (op === 'whdiag' || op === 'whbudget') { // 16 nov: opbouw van de Whop-campagne zien (groepen, budget, doel, creatives) en het budget zetten op Henkjans woord (hoogstens WH_BUDGET_MAX)
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const camp = await whopCampagnes(); const cid = camp.ok && camp.campagnes[0] ? camp.campagnes[0].id : null; if (!cid) return res.status(200).json({ ok: false, fout: 'geen campagne', camp });
+      if (op === 'whbudget') { const b = Number(url.searchParams.get('bedrag')); const r = await whopZetBudget(cid, b); try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'budget naar $' + b + ' per dag (Henkjan 16 nov: "Ja" op PropellerAds-shop uit en Meta naar $20): ' + (r.ok ? 'gelukt' : 'mislukt') })]); } catch (e) {} return res.status(200).json(r); }
+      const g = await whopGroepen(cid); const c = await whopApi('/ad_campaigns/' + cid); const a = await whopApi('/ads?account_id=' + WHOP_BIZ + '&first=2'); const ad = a.j && a.j.data && a.j.data[0];
+      const kort = o => o && typeof o === 'object' ? Object.fromEntries(Object.entries(o).filter(([k, v]) => !/spend|cost|click|impress|reach|freq|purchase|lead|result|roas|return|schedul|regist|contact|applic|viewed|cart|unique/.test(k)).map(([k, v]) => [k, typeof v === 'object' && v !== null ? JSON.stringify(v).slice(0, 300) : v])) : o;
+      return res.status(200).json({ ok: true, campagne: kort(c.j), groepenPad: g.pad, groepen: g.groepen.map(kort), advertentie: kort(ad), advVelden: ad ? Object.keys(ad) : [] }); }
     if (op === 'whopronde' || op === 'whopstand') { // 16 nov (Henkjan: "Ik wil dat je per 30 mins monitort en leert"): elke 30 minuten de Whop/Meta-advertenties van Kadoly naast Clickmind
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0], ua = String(req.headers['user-agent'] || '');
       const mag = /vercel-cron/i.test(ua) || /\.vercel\.app$/i.test(host) || (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET);
