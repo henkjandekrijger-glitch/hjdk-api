@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { anonymousService, validateAnonymous } from '../lib/sealed-anonymous.js';
 import { renderPagina, renderSealedSpecial, sitemap } from '../lib/sealed.js';
 import { PAGINAS } from '../lib/sealed-content.js';
+import { GUIDANCE, proposalBrief } from '../lib/sealed-briefs.js';
 import vm from 'node:vm';
 
 const records=new Map(), lists=new Map();
@@ -37,4 +38,31 @@ for(const h of [...PAGINAS.map(p=>renderPagina(p)),...['nl','en','de'].flatMap(t
  assert(!h.includes('type="email"'));assert(!h.includes('<li>undefined</li>'));
 }
 for(const t of ['nl','en','de']){const h=renderSealedSpecial(t,'manage');assert(h.includes('noindex,follow'));assert(!h.includes('src="/cm.js"'));}
-console.log(JSON.stringify({ok:true,checks:'anonymous persistence, rejection, hashed controls, unauthorised access, withdrawal, AI failure, rate limiting, public/private rendering',pages:19,sitemap:35,scripts}));
+// What the form shows must be the same brief the AI is asked to assess.
+let briefChecks=0, reviewContext;
+const typedService=anonymousService(kv,async(text,context)=>{reviewContext=context;return {status:'advisory',understands:false,specific:false,personal_details:false,missing:['Explain your approach']};});
+assert.throws(()=>proposalBrief('unknown'));
+for(const language of ['nl','en','de']){
+ records.delete('si:ai:'+new Date().toISOString().slice(0,10)); // isolate each language's review budget
+ assert.equal(new Set(Object.values(GUIDANCE[language]).map(pair=>pair[1])).size,8);
+ for(const partner of [false,true]){
+  const html=renderSealedSpecial(language,partner?'partners':'seal');
+  const script=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].find(m=>m[1].includes('function formBrowser'))[1];
+  const guide={},select={value:'',addEventListener:(event,fn)=>{select.change=fn;}}, form={elements:{type:select}}, notice={};
+  vm.runInNewContext(script,{document:{getElementById:id=>({'anonymous-form':form,'anon-notice':notice,'anon-guidance':guide}[id])},location:{search:'?type=board'},URLSearchParams});
+  assert.equal(select.value,'board');assert.equal(guide.textContent,GUIDANCE[language].board[partner?1:0]);
+  for(const type of Object.keys(GUIDANCE[language])){
+   select.value=type;select.change();assert.equal(guide.textContent,GUIDANCE[language][type][partner?1:0]);
+   if(partner){
+    assert.equal(proposalBrief(type,language),guide.textContent);
+    const result=await typedService.submit({headers:{'x-forwarded-for':'192.0.2.'+(30+briefChecks)}},{...valid,mode:'partner',type,language,terms:valid.terms+' I would discuss the practical limits and missing information before asking to identify the person behind these conditions.'});
+    assert.equal(result.status,201);assert.deepEqual(reviewContext,{type,language});assert.equal(records.get('si:i:'+result.body.id).status,'pending-review');briefChecks++;
+   }
+  }
+ }
+}
+records.set('si:ai:'+new Date().toISOString().slice(0,10),20);reviewContext=null;
+const capped=await typedService.submit({headers:{'x-forwarded-for':'192.0.2.200'}},{...valid,mode:'partner',terms:valid.terms+' I would discuss practical limits and missing information before asking for any identifying information.'});
+assert.equal(capped.status,201);assert.equal(reviewContext,null);assert.equal(records.get('si:i:'+capped.body.id).screening.status,'pending-manual');
+console.log(JSON.stringify({ok:true,checks:'anonymous persistence, rejection, hashed controls, unauthorised access, withdrawal, AI failure, rate limiting, public/private rendering, type-specific form and AI context',pages:19,sitemap:35,scripts,briefChecks}));
+
