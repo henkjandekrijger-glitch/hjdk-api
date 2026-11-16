@@ -223,6 +223,10 @@
     {
       "path": "/api/keuze-tools?tool=tsc&p=ronde",
       "schedule": "10 8 * * *"
+    },
+    {
+      "path": "/api/shop?op=ttronde",
+      "schedule": "9 * * * *"
     }
   ],
   "rewrites": [
