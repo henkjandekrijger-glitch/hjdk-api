@@ -1,0 +1,1039 @@
+{
+ "gecontroleerd": "2026-11-16",
+ "methode": "RealSelf-lijsten Colombia (Brazilian-Butt-Lift, Liposuction, Tummy-Tuck, Plastic-Surgeon, Mommy-Makeover, Breast-Lift) en per stad (Medellín, Bogotá, Cali, Cartagena) gelezen; elke lijst toont alleen de eerste 15 van 22 tot 130 resultaten (?page=2 gaf dezelfde 15). Per arts het /dr-profiel geopend voor aantal, score, datum nieuwste review en meldingen. Google-cijfers via colombiahealthcare.com (directory die Google-reviews synchroniseert, stand per vermelding 29 sep tot 3 nov 2026; geen bemiddelaar volgens eigen tekst, betaalde plaatsingen gemarkeerd), voor Premium Care ook via trustindex.io. Doctoralia via profielen gevonden met zoeken. Reviewteksten niet overgenomen. pct_1ster alleen ingevuld waar een volledige sterverdeling zichtbaar was: de RealSelf-sterrengrafiek bleek een deelscore (90 tot 100 procent 5 sterren ook bij gemiddelden van 3.1), dus niet gebruikt. Bij Google is de nieuwste review alleen relatief zichtbaar (laatste_review_relatief).",
+ "niet_bereikbaar": [
+  "Directe toegang tot realself.com, trustpilot.com, doctoralia.co en google.com via curl: geweigerd door de proxy (alleen via WebFetch)",
+  "https://www.realself.com/find/Colombia/Brazilian-Butt-Lift?page=2 en verder: geen paginering, alleen de eerste 15 resultaten per lijst zichtbaar",
+  "https://www.trustpilot.com/review/premiumcareplasticsurgery.com: niet opgehaald (toestemming niet op tijd); geen enkele Trustpilot-pagina van een kandidaat gevonden via zoeken (alleen clinicasesteticas.com.co, 3,4 van 5, valt buiten deze lijst)",
+  "Google Maps zelf: niet bereikbaar; Google-cijfers alleen via colombiahealthcare.com en trustindex.io",
+  "https://colombiahealthcare.com/listing/dr-luis-pavajeau-ciencia-y-estetica-cirugia-plastica: niet opgehaald (toestemming niet op tijd), cijfers van de lijstpagina gebruikt",
+  "colombiabz.com en co.top10place.com: site gaf een fout",
+  "Google-cijfers voor Plazas, Juan Diego Mejía, Lina Rodríguez, Carlos Gómez, Javier Soto en de kleinere Cali-artsen niet gevonden"
+ ],
+ "klinieken": [
+  {
+   "naam": "Premium Care Plastic Surgery (praktijk)",
+   "stad": "Cartagena",
+   "arts": "Alex Campbell / Carolina Restrepo (praktijk met meerdere chirurgen)",
+   "platforms": [
+    {
+     "platform": "RealSelf (praktijk Premium Care Plastic Surgery)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 297,
+     "pct_1ster": null,
+     "laatste_review": "2026-08-03",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/premium-care-plastic-surgery-cartagena-bolivar",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "RealSelf (Dr. Alex Campbell)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 200,
+     "pct_1ster": null,
+     "laatste_review": "2026-07-30",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/alex-campbell-bocagrande-cartagena-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "RealSelf (Dr. Carolina Restrepo)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 42,
+     "pct_1ster": null,
+     "laatste_review": "2026-08-03",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/carolina-restrepo-cartagena-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 188,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-09-29",
+     "bron": "https://colombiahealthcare.com/listing/premium-care-plastic-surgery-cirugia-plastica-cartagena-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false,
+     "laatste_review_relatief": "1 maand geleden (gezien op stand 2026-09-29)"
+    },
+    {
+     "platform": "Google + Trustindex (via trustindex.io)",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 196,
+     "pct_1ster": 6.1,
+     "laatste_review": "2026-11-14",
+     "waarschuwing": "Samengeteld: 192 Google + 4 Trustindex; verdeling 182x5, 0x4, 1x3, 1x2, 12x1 ster. Trustindex is een widgetdienst die de kliniek zelf kiest.",
+     "bron": "https://www.trustindex.io/reviews/www.premiumcareplasticsurgery.com",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Doctoralia",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 0,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Praktijkprofiel zonder opinies",
+     "bron": "https://www.doctoralia.co/clinicas/premium-care-plastic-surgery",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Doctoralia",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 0,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Profiel Dr. Christopher Alexander Campbell zonder opinies",
+     "bron": "https://www.doctoralia.co/alex-campbell/cirujano-plastico/cartagena",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Alan González Cirugía Plástica y Salud Estética",
+   "stad": "Barranquilla, Bogotá en Cali",
+   "arts": "Alan González Varela, MD, FACS",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Alan Gonzalez)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 165,
+     "pct_1ster": null,
+     "laatste_review": "2026-10-14",
+     "waarschuwing": "Op het profiel staat de praktijk 'Care Me 360 - Account Suspended' (Barranquilla)",
+     "bron": "https://www.realself.com/dr/alan-gonzalez-bogota-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 594,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-09-30; vestiging Bogotá",
+     "bron": "https://colombiahealthcare.com/listing/alan-gonzalez-cirugia-plastica-y-salud-estetica",
+     "gezien": "2026-11-16",
+     "makelaar": false,
+     "laatste_review_relatief": "2 maanden geleden (gezien op stand 2026-09-30)"
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 202,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-09-30; vestiging Barranquilla",
+     "bron": "https://colombiahealthcare.com/listing/alan-gonzalez-cirugia-plastica-y-salud-estetica-barranquilla",
+     "gezien": "2026-11-16",
+     "makelaar": false,
+     "laatste_review_relatief": "ongeveer 1 maand geleden (gezien op stand 2026-09-30)"
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 83,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op lijstpagina zonder datum; vestiging Cali, alleen van de lijstpagina",
+     "bron": "https://colombiahealthcare.com/specialties/general-plastic-surgery/cali",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Doctoralia",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 0,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Profiel zonder opinies",
+     "bron": "https://www.doctoralia.co/alan-gonzalez/cirujano-plastico/bogota",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Top Doctors Colombia",
+     "score": 5.0,
+     "schaal": "schaal niet vermeld",
+     "aantal": 1,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.topdoctors.com.co/doctor/alan-gonzalez-varela/opiniones/",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Luis Eduardo Plazas",
+   "stad": "Cali",
+   "arts": "Luis Eduardo Plazas",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Luis Eduardo Plazas)",
+     "score": 3.7,
+     "schaal": "5 sterren",
+     "aantal": 151,
+     "pct_1ster": null,
+     "laatste_review": "2023-06-29",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/luis-eduardo-plazas-cali-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "AmayaClinic Cirugía Plástica",
+   "stad": "Bogotá",
+   "arts": "Felipe Amaya Espinosa",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Felipe Amaya)",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 127,
+     "pct_1ster": null,
+     "laatste_review": "2026-10-07",
+     "waarschuwing": "Lijstpagina's toonden wisselend 126 tot 128 reviews en 4.6 of 4.7",
+     "bron": "https://www.realself.com/dr/felipe-amaya-bogota-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 251,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-09-30",
+     "bron": "https://colombiahealthcare.com/listing/amayaclinic-cirugia-plastica",
+     "gezien": "2026-11-16",
+     "makelaar": false,
+     "laatste_review_relatief": "11 dagen geleden (gezien op stand 2026-09-30)"
+    },
+    {
+     "platform": "Doctoralia",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 56,
+     "pct_1ster": null,
+     "laatste_review": "2026-10-22",
+     "waarschuwing": "",
+     "bron": "https://www.doctoralia.co/felipe-amaya-espinosa/cirujano-plastico/bogota",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Luis Pavajeau, Ciencia y Estética",
+   "stad": "Bogotá",
+   "arts": "Luis Pavajeau",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Luis Pavajeau)",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 119,
+     "pct_1ster": null,
+     "laatste_review": "2023-06-24",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/luis-pavajeau-bogota-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.4,
+     "schaal": "5 sterren",
+     "aantal": 123,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op lijstpagina zonder datum; alleen van de lijstpagina; profielpagina niet bereikbaar",
+     "bron": "https://colombiahealthcare.com/specialties/general-plastic-surgery/bogota",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Juan Diego Mejía",
+   "stad": "Medellín",
+   "arts": "Juan Diego Mejía",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Juan Diego Mejia)",
+     "score": 4.1,
+     "schaal": "5 sterren",
+     "aantal": 115,
+     "pct_1ster": null,
+     "laatste_review": "2024-12-13",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'; geen RealSelf Verified-badge",
+     "bron": "https://www.realself.com/dr/juan-diego-mejia-medellin-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Harold Villalobos",
+   "stad": "Cali",
+   "arts": "Harold Villalobos",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Harold Villalobos)",
+     "score": 3.9,
+     "schaal": "5 sterren",
+     "aantal": 86,
+     "pct_1ster": null,
+     "laatste_review": "2023-12-19",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/harold-villalobos-cali-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 108,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op lijstpagina zonder datum; alleen van de lijstpagina",
+     "bron": "https://colombiahealthcare.com/specialties/general-plastic-surgery/cali",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dra. Lina Triana",
+   "stad": "Cali",
+   "arts": "Lina María Triana Lloreda",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Lina Triana)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 68,
+     "pct_1ster": null,
+     "laatste_review": "2025-12-18",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'; geen RealSelf Verified-badge",
+     "bron": "https://www.realself.com/dr/lina-triana-cali-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 236,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-09-29",
+     "bron": "https://colombiahealthcare.com/listing/dr-lina-triana/",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Doctoralia",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 0,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Twee profielen, beide zonder opinies",
+     "bron": "https://www.doctoralia.co/lina-triana/cirujano-plastico-medico-estetico/cali",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Doctoralia",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 0,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Tweede profiel zonder opinies",
+     "bron": "https://www.doctoralia.co/lina-maria-triana-lloreda/cirujano-plastico/cali",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Héctor García",
+   "stad": "Medellín (Google-directory noemt Bucaramanga)",
+   "arts": "Héctor J. García",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Hector Garcia)",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 66,
+     "pct_1ster": null,
+     "laatste_review": "2025-03-14",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'; geen RealSelf Verified-badge",
+     "bron": "https://www.realself.com/dr/hector-garcia-medellin-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": null,
+     "schaal": "geen Google-score",
+     "aantal": null,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "'No Google rating on file', vermelding in Bucaramanga, stand 2026-09-29",
+     "bron": "https://colombiahealthcare.com/listing/dr-hector-garcia/",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Centro Médico Santuario (Dr. Carlos Alberto Ríos García)",
+   "stad": "Cali",
+   "arts": "Carlos Alberto Ríos García",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Carlos Alberto Ríos García)",
+     "score": 4.5,
+     "schaal": "5 sterren",
+     "aantal": 56,
+     "pct_1ster": null,
+     "laatste_review": "2022-03-01",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/carlos-albe-cali-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "RealSelf (praktijk Santuario Medical Center - Cali)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 2,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "alleen van de lijstpagina",
+     "bron": "https://www.realself.com/find/Colombia/Cali/Liposculpture",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 167,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op lijstpagina zonder datum; vermelding 'Dr. Carlos Alberto Ríos (Retiro de Biopolímeros)'",
+     "bron": "https://colombiahealthcare.com/specialties/general-plastic-surgery/cali",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.5,
+     "schaal": "5 sterren",
+     "aantal": 61,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op lijstpagina zonder datum; vermelding 'Centro Médico Santuario SAS'",
+     "bron": "https://colombiahealthcare.com/specialties/general-plastic-surgery/cali",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dra. Lina Rodríguez",
+   "stad": "Barranquilla (Puerto Colombia)",
+   "arts": "Lina Rodríguez",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Lina Rodriguez)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 48,
+     "pct_1ster": null,
+     "laatste_review": "2026-06-02",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/lina-rodriguez-puerto-colombia-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Alfredo Hoyos (Total Definer)",
+   "stad": "Bogotá",
+   "arts": "Alfredo Hoyos",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Alfredo Hoyos)",
+     "score": 3.5,
+     "schaal": "5 sterren",
+     "aantal": 45,
+     "pct_1ster": null,
+     "laatste_review": "2026-06-03",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/alfredo-hoyos-bogota-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 120,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-11-03",
+     "bron": "https://colombiahealthcare.com/listing/dr-alfredo-hoyos-cirujano-plastico",
+     "gezien": "2026-11-16",
+     "makelaar": false,
+     "laatste_review_relatief": "5 maanden geleden (gezien op stand 2026-11-03)"
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Carlos Gómez",
+   "stad": "Cali",
+   "arts": "Carlos Gómez",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Carlos Gomez)",
+     "score": 3.1,
+     "schaal": "5 sterren",
+     "aantal": 43,
+     "pct_1ster": null,
+     "laatste_review": "2026-06-11",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/carlos-gomez-cali-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Javier Soto",
+   "stad": "Cartagena",
+   "arts": "Javier Soto",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Javier Soto)",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 38,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'; profiel toont geen reviewdatums; lijstpagina's toonden 39 en 4.2",
+     "bron": "https://www.realself.com/dr/javier-soto-cartagena-bolivar-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Consultorio Dr. Fulvio Correa",
+   "stad": "Cartagena",
+   "arts": "Fulvio Correa",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Fulvio Correa)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 36,
+     "pct_1ster": null,
+     "laatste_review": "2026-04-10",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/fulvio-correa-bogota-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "RealSelf (praktijk Fulvio Correa Plastic Surgery)",
+     "score": 3.0,
+     "schaal": "5 sterren",
+     "aantal": 1,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "alleen van de lijstpagina",
+     "bron": "https://www.realself.com/find/Colombia/Cartagena/Liposculpture",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 122,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-09-30",
+     "bron": "https://colombiahealthcare.com/listing/dr-fulvio-correa-cirujano-plastico-cartagena-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false,
+     "laatste_review_relatief": "3 maanden geleden (gezien op stand 2026-09-30)"
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Andrés Díaz Paz",
+   "stad": "Cali",
+   "arts": "Andrés Díaz Paz",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Andres Diaz Paz)",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 25,
+     "pct_1ster": null,
+     "laatste_review": "2023-06-05",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/andres-diaz-paz-cali-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Alder James Henao Bonilla",
+   "stad": "Cali",
+   "arts": "Alder James Henao Bonilla",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Alder James Henao Bonilla)",
+     "score": 2.8,
+     "schaal": "5 sterren",
+     "aantal": 21,
+     "pct_1ster": null,
+     "laatste_review": "2026-03-31",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'; geen RealSelf Verified-badge",
+     "bron": "https://www.realself.com/dr/alder-james-henao-bonilla-cali-valle-del-cauca-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Carlos Recio",
+   "stad": "Cali",
+   "arts": "Carlos Recio",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Carlos Recio)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 18,
+     "pct_1ster": null,
+     "laatste_review": "2019-05-08",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/carlos-r-cali-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Oswaldo J. Gómez Díaz",
+   "stad": "Bogotá",
+   "arts": "Oswaldo J. Gómez Díaz",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Oswaldo J. Gomez Diaz)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 15,
+     "pct_1ster": null,
+     "laatste_review": "2018-06-19",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/oswaldo-j-gomez-diaz-bogota-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. David Guarín",
+   "stad": "Cali",
+   "arts": "David Guarín",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. David Guarin)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 15,
+     "pct_1ster": null,
+     "laatste_review": "2023-07-22",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/david-guarin-cali-valle-del-cauca-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. John Orlas Blair",
+   "stad": "Medellín",
+   "arts": "John Orlas Blair",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. John Orlas Blair)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 13,
+     "pct_1ster": null,
+     "laatste_review": "2020-01-04",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'; geen RealSelf Verified-badge",
+     "bron": "https://www.realself.com/dr/john-orlas-blair-medellin-poblado-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 30,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op lijstpagina zonder datum; alleen van de lijstpagina",
+     "bron": "https://colombiahealthcare.com/specialties/general-plastic-surgery/medellin",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Juan Manuel Flórez",
+   "stad": "Cali",
+   "arts": "Juan Manuel Flórez",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Juan Manuel Florez)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 13,
+     "pct_1ster": null,
+     "laatste_review": "2019-09-17",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/juan-manuel-florez-cali-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Carlos Betancur",
+   "stad": "Medellín",
+   "arts": "Carlos Betancur",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Carlos Betancur)",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 9,
+     "pct_1ster": null,
+     "laatste_review": "2020-10-26",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/carlos-betancur-medellin-antioquia-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Jaime Pachón",
+   "stad": "Bogotá",
+   "arts": "Jaime Pachón",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Jaime Pachon)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 8,
+     "pct_1ster": null,
+     "laatste_review": "2024-04-22",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/jaime-pachon-bogota-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 402,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-09-30",
+     "bron": "https://colombiahealthcare.com/listing/cirujano-plastico-en-bogota-dr-jaime-pachon",
+     "gezien": "2026-11-16",
+     "makelaar": false,
+     "laatste_review_relatief": "1 maand geleden (gezien op stand 2026-09-30)"
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Santiago Ruiz Gnecco",
+   "stad": "Bogotá",
+   "arts": "Santiago Ruiz Gnecco",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Santiago Ruiz Gnecco)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 8,
+     "pct_1ster": null,
+     "laatste_review": "2017-07-21",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/santiago-ruiz-gnecco-bogota-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Yesid Cárdenas",
+   "stad": "Medellín",
+   "arts": "Yesid Cárdenas",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Yesid Cardenas)",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 6,
+     "pct_1ster": null,
+     "laatste_review": "2024-12-21",
+     "waarschuwing": "RealSelf: 'not currently accepting consultations through RealSelf'; geen RealSelf Verified-badge",
+     "bron": "https://www.realself.com/dr/yesid-cardenas-medellin-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 328,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-10-16",
+     "bron": "https://colombiahealthcare.com/listing/dr-yesid-cardenas",
+     "gezien": "2026-11-16",
+     "makelaar": false,
+     "laatste_review_relatief": "7 maanden geleden (gezien op stand 2026-10-16)"
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Zamir Páez",
+   "stad": "Medellín",
+   "arts": "Zamir Páez",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Zamir Paez)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 2,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "alleen van de lijstpagina; praktijkprofiel met 0 reviews: https://www.realself.com/practices/zamir-paez-plastic-surgeon-medellin-colombia",
+     "bron": "https://www.realself.com/find/Colombia/Medell%C3%ADn/Plastic-Surgeon",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 168,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-10-16",
+     "bron": "https://colombiahealthcare.com/listing/dr-zamir-paez",
+     "gezien": "2026-11-16",
+     "makelaar": false,
+     "laatste_review_relatief": "12 dagen geleden (gezien op stand 2026-10-16)"
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Milton Rincón Carranza",
+   "stad": "Medellín",
+   "arts": "Milton Rincón Carranza",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Milton Rincon)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 2,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "alleen van de lijstpagina",
+     "bron": "https://www.realself.com/find/Colombia/Medell%C3%ADn/Plastic-Surgeon",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 164,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-10-16",
+     "bron": "https://colombiahealthcare.com/listing/dr-milton-rincon-carranza",
+     "gezien": "2026-11-16",
+     "makelaar": false,
+     "laatste_review_relatief": "4 maanden geleden (gezien op stand 2026-10-16)"
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Daniel Andrés Correa Posada",
+   "stad": "Medellín",
+   "arts": "Daniel Andrés Correa Posada",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Daniel Correa)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 2,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "alleen van de lijstpagina; niet zeker dat dit dezelfde arts is als de Google-vermelding",
+     "bron": "https://www.realself.com/find/Colombia/Medell%C3%ADn/Plastic-Surgeon",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 1704,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-10-02",
+     "bron": "https://colombiahealthcare.com/listing/daniel-correa",
+     "gezien": "2026-11-16",
+     "makelaar": false,
+     "laatste_review_relatief": "8 maanden geleden (gezien op stand 2026-10-02)"
+    }
+   ]
+  },
+  {
+   "naam": "Clínica Especialistas del Poblado",
+   "stad": "Medellín",
+   "arts": "(kliniek, geen enkele hoofdchirurg)",
+   "platforms": [
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 1947,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-09-30",
+     "bron": "https://colombiahealthcare.com/listing/clinica-especialistas-del-poblado",
+     "gezien": "2026-11-16",
+     "makelaar": false,
+     "laatste_review_relatief": "3 maanden geleden (gezien op stand 2026-09-30)"
+    }
+   ]
+  },
+  {
+   "naam": "Juan Pablo Rodríguez MD",
+   "stad": "Bogotá",
+   "arts": "Juan Pablo Rodríguez",
+   "platforms": [
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 1469,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op 2026-09-30",
+     "bron": "https://colombiahealthcare.com/listing/juan-pablo-rodriguez-md",
+     "gezien": "2026-11-16",
+     "makelaar": false,
+     "laatste_review_relatief": "5 maanden geleden (gezien op stand 2026-09-30)"
+    }
+   ]
+  },
+  {
+   "naam": "Dra. Sandra Ortega",
+   "stad": "Bogotá",
+   "arts": "Sandra Ortega",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Sandra Ortega)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 3,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "alleen van de lijstpagina",
+     "bron": "https://www.realself.com/find/Colombia/Plastic-Surgeon",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    },
+    {
+     "platform": "Google (via colombiahealthcare.com, gesynchroniseerd uit Google)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 71,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Bron is een directory die Google-reviews overneemt (clinic kan ze daar niet wijzigen volgens de site); stand op lijstpagina zonder datum; alleen van de lijstpagina",
+     "bron": "https://colombiahealthcare.com/specialties/general-plastic-surgery/bogota",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Andrés Durán",
+   "stad": "Barranquilla",
+   "arts": "Andrés Durán",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Andres Duran)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 1,
+     "pct_1ster": null,
+     "laatste_review": "2026-06-17",
+     "waarschuwing": "Profielnaam luidt 'Andres Duran, MD - Account Suspended'; RealSelf: 'not currently accepting consultations through RealSelf'",
+     "bron": "https://www.realself.com/dr/andres-duran-barranquilla-colombia",
+     "gezien": "2026-11-16",
+     "makelaar": false
+    }
+   ]
+  }
+ ]
+}

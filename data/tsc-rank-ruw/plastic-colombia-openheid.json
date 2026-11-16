@@ -1,0 +1,631 @@
+{
+ "gecontroleerd": "2026-11-16",
+ "niet_bereikbaar": [
+  "https://www.realself.com/find/Colombia/Brazilian-Butt-Lift (toestemming verlopen; kandidaten uit /find/Colombia/Liposuction, /Butt-Lift, /Plastic-Surgeon en stadspagina's)",
+  "https://www.realself.com/find/Colombia/Tummy-Tuck (toestemming verlopen)",
+  "https://www.realself.com/find/Colombia/Barranquilla/Plastic-Surgeon (0 resultaten)",
+  "http://drfernandortega.com/ (Fernando Ortega Solarte, Cali, 46 reviews: blijft doorverwijzen, niet gecontroleerd)",
+  "https://sublimeplasticsurgerygroup.com/cartagena-en/ (fout bij ophalen)",
+  "https://doctorpuello.com/en/pages/turismo-medico-cirugia-plastica-colombia (fout bij ophalen)",
+  "https://juandiegomejia.com.co/ (PHP-fout op de site)",
+  "https://www.mejorescirujanosplasticosdecolombia.com/en/tummy-tuck-in-colombia-cd1d (fout bij ophalen)"
+ ],
+ "algemeen": [
+  {
+   "wat": "Antioquia: 17 doden na cosmetische ingrepen in twee jaar (11 in 2024 in Medellín, 5 in 2025 volgens tekst, 1 in 2026), 379 gevallen van ernstige complicaties; Seccional de Salud deed 80 inspecties en sloot 64 zaken. Bogotá: 171 inspecties en 16 sluitingen in 2026 (Secretaría de Salud).",
+   "datum": "2026-05-21",
+   "bron": "https://www.infobae.com/colombia/2026/05/21/medellin-encabeza-la-lista-de-fallecidos-por-cirugias-esteticas-en-clinicas-de-garaje-van-17-casos-en-dos-anos/"
+  },
+  {
+   "wat": "Secretaría de Salud de Antioquia: 70 zaken onderzocht in acht maanden van 2026, 17 vestigingen verzegeld (vooral Medellín, Envigado, Bello); 64% van de zaken stond niet in het REPS.",
+   "datum": "2026-09-04",
+   "bron": "https://es-us.noticias.yahoo.com/alerta-antioquia-17-centros-est%C3%A9ticos-230821697.html"
+  },
+  {
+   "wat": "Secretaría Distrital de Salud Bogotá: 282 klachten over cosmetische diensten (jan 2025 tot mei 2026), waarvan 194 over clandestiene of niet-geautoriseerde plekken; in 2025 563 operaties, 814 inspecties en 39 maatregelen. Advies: controleer habilitación in REPS en de arts in RETHUS; schoonheidssalons mogen geen liposuctie doen.",
+   "datum": "2026-05-15",
+   "bron": "https://bogota.gov.co/mi-ciudad/salud/bogota-refuerza-controles-quirofanos-clandestinos-e-ilegales-2026"
+  },
+  {
+   "wat": "Rapport Universidad Nacional en Hospital Universitario Nacional: 13 vrouwen overleden na cosmetische ingrepen in Bogotá (2023 tot 2026); 68% van ruim 450 klachten betrof illegale centra.",
+   "datum": "2026-09-29",
+   "bron": "https://www.eltiempo.com/bogota/13-mujeres-murieron-tras-procedimientos-esteticos-en-bogota-informe-pone-sobre-la-mesa-las-alertas-fisicas-y-psicologicas-antes-de-una-cirugia-3589792"
+  },
+  {
+   "wat": "SCCP (na zaak Yulixa Toloza): controleer de arts in ReTHUS en een plastisch chirurg met specialisatie (7 jaar geneeskunde plus 4 jaar specialisatie), opereer alleen in een kliniek die door de secretaría de salud is gehabiliteerd, eis volledige preoperatieve beoordeling, wantrouw 'lipo sin dolor' en 'lipólisis láser'.",
+   "datum": "2026-05-20",
+   "bron": "https://www.infobae.com/colombia/2026/05/20/sociedad-colombiana-de-cirugia-plastica-rechazo-el-caso-de-yulixa-toloza-y-dio-recomendaciones-no-queremos-mas-victimas/"
+  },
+  {
+   "wat": "SCCP vraagt het Congres de wet op cosmetische chirurgie aan te nemen (zesde poging): alleen geaccrediteerde professionals, veilige faciliteiten, uitgebreide informed consent en verplichte complicatieverzekering. Secretarías van Bogotá en Antioquia melden 32 doden in recente jaren; er is geen nationaal register van doden of complicaties.",
+   "datum": "2026-08-09",
+   "bron": "https://www.noticiasrcn.com/colombia/sociedad-colombiana-de-cirugia-plastica-insiste-el-congreso-debe-aprobar-la-ley-para-regular-procedimientos-de-este-tipo-1048531"
+  },
+  {
+   "wat": "Supersalud sloot tijdelijk de dienst plastische chirurgie van Clínica de Obesidad y Envejecimiento (Bogotá, zonder vergunning aangeboden) en legde Clínica Láser Surgical een voorzorgsmaatregel op; diensten van die laatste zijn uit het REPS gehaald.",
+   "datum": "2026-05-30",
+   "bron": "https://www.vanguardia.com/colombia/2026/05/30/supersalud-ordena-cierre-temporal-a-clinica-de-cirugia-plastica-en-bogota/"
+  },
+  {
+   "wat": "Secretaría de Salud de Cali: in 2025 84 tijdelijke sluitingen van diensten bij IPS zonder habilitación, 3 doden na plastische chirurgie in 2025. Medicina Legal: 71 doden na plastische chirurgie in Cali 2013 tot 2023, waarvan 17 door vetinjectie in de billen en 10 door meerdere ingrepen tegelijk.",
+   "datum": "2026-06-02",
+   "bron": "https://www.elpais.com.co/contenido-exclusivo/de-la-detective-de-nueva-york-a-la-prima-de-francia-marquez-las-tragicas-muertes-que-revelan-el-boom-de-clinicas-que-no-cumplen-las-normas-en-cali-2556.html"
+  }
+ ],
+ "klinieken": [
+  {
+   "naam": "Premium Care Plastic Surgery (Alex Campbell)",
+   "arts": "Alex Campbell",
+   "stad": "Cartagena",
+   "site": "https://premiumcareplasticsurgery.com/",
+   "prijs": {
+    "bedrag": "USD 5.800 tot 6.200 all-inclusive buikwandcorrectie (gemiddeld, artikel 19 nov 2025)",
+    "bron": "https://premiumcareplasticsurgery.com/en/tummy-tuck-cost-miami-toronto-vs-colombia-premium-care/"
+   },
+   "wie_opereert": {
+    "tekst": "Campbell en Restrepo genoemd als chirurgen; 'two surgeons often operating together'; niet expliciet wie welke stappen doet. Narcose 'managed by board-certified anesthesiologists'.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "ja",
+    "bron": "https://premiumcareplasticsurgery.com/en/body-plastic-surgery-colombia/tummy-tuck-in-colombia/"
+   },
+   "ziekenhuis": {
+    "naam": "Premium Care Medical Suites, Bocagrande",
+    "habilitacion": "Alleen 'fully accredited' surgical facilities; geen REPS-code of habilitación genoemd",
+    "bron": "https://premiumcareplasticsurgery.com/en/body-plastic-surgery-colombia/tummy-tuck-in-colombia/"
+   },
+   "nazorg": {
+    "tekst": "Eigen herstelsuites met 24/7 verpleging, lymfedrainage, controles en virtuele nazorg. Geen schriftelijke garantie, revisiebeleid of complicatieverzekering op de site.",
+    "garantie": false,
+    "bron": "https://premiumcareplasticsurgery.com/en/all-inclusive-packages/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Premium Care Plastic Surgery (Carolina Restrepo)",
+   "arts": "Carolina Restrepo",
+   "stad": "Cartagena",
+   "site": "https://premiumcareplasticsurgery.com/en/us/carolina-restrepo-md/",
+   "prijs": {
+    "bedrag": "USD 5.800 tot 6.200 all-inclusive buikwandcorrectie (gemiddeld, gedeelde praktijk met Campbell)",
+    "bron": "https://premiumcareplasticsurgery.com/en/tummy-tuck-cost-miami-toronto-vs-colombia-premium-care/"
+   },
+   "wie_opereert": {
+    "tekst": "'Dr. Restrepo performs procedures at Premium Care Medical Suites'; niet expliciet dat zij de hoofdstappen zelf doet. Noemt 'Specialized Anesthesiologists'.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "ja",
+    "bron": "https://premiumcareplasticsurgery.com/en/us/carolina-restrepo-md/"
+   },
+   "ziekenhuis": {
+    "naam": "Premium Care Medical Suites, Bocagrande",
+    "habilitacion": "Geen habilitación of REPS genoemd",
+    "bron": "https://premiumcareplasticsurgery.com/en/us/carolina-restrepo-md/"
+   },
+   "nazorg": {
+    "tekst": "Herstelsuites met 24/7 verpleging (praktijkbreed). Geen garantie, revisiebeleid of verzekering genoemd.",
+    "garantie": false,
+    "bron": "https://premiumcareplasticsurgery.com/en/all-inclusive-packages/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Alan González Cirugía Plástica / Vitalum IPS (Alan González)",
+   "arts": "Alan Albeiro González",
+   "stad": "Barranquilla (ook Bogotá en Cali)",
+   "site": "https://alangonzalez.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://alangonzalez.com/tummy-tuck-surgery-everything-you-need-to-know/"
+   },
+   "wie_opereert": {
+    "tekst": "'Dr. Alan has three state-of-the-art facilities in Colombia where he performs all his tummy tuck procedures'; BBL-pagina: 'Dr. Alan performs all liposuction procedures'. Geen anesthesioloog genoemd.",
+    "arts_opereert": "ja",
+    "anesthesioloog": "nee",
+    "bron": "https://alangonzalez.com/tummy-tuck-surgery-everything-you-need-to-know/"
+   },
+   "ziekenhuis": {
+    "naam": "Instituto de Cirugía Plástica, Reconstructiva y Salud Estética Vitalum I.P.S S.A.S (in voettekst; niet expliciet als operatielocatie)",
+    "habilitacion": "Geen habilitación, REPS of accreditatie genoemd",
+    "bron": "https://alangonzalez.com/locations/"
+   },
+   "nazorg": {
+    "tekst": "Concierge: hotel bij de praktijk, verpleging, vervoer; minstens 1 tot 2 weken blijven. Geen herstelhuis, garantie of revisiebeleid genoemd.",
+    "garantie": false,
+    "bron": "https://alangonzalez.com/procedimiento/bbl-butt-lift/"
+   },
+   "risico": [
+    {
+     "wat": "Fiscalía stelde Alan Albeiro González en twee andere artsen in staat van beschuldiging (imputación) voor homicidio culposo na het overlijden van patiënte Cecilia Peña Herrera in april 2019 na een hidrolipoclasia; verdachten aanvaardden de aanklacht niet; geen uitspraak gemeld.",
+     "datum": "2022-12-14",
+     "bron": "https://www.eltiempo.com/justicia/delitos/fiscalia-imputa-a-reconocido-cirujano-por-homicidio-culposo-725932",
+     "ernst": "middel"
+    }
+   ]
+  },
+  {
+   "naam": "AmayaClinic (Felipe Amaya)",
+   "arts": "Felipe Amaya Espinosa",
+   "stad": "Bogotá",
+   "site": "https://amayaclinic.co/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://amayaclinic.co/abdominoplastia-lipectomia-bogota/"
+   },
+   "wie_opereert": {
+    "tekst": "Felipe Amaya genoemd als bedenker van de techniek en leider van de kliniek; niet expliciet dat hij zelf opereert. Blog: anesthesie 'administered by a certified anesthesiologist'.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "ja",
+    "bron": "https://amayaclinic.co/en/blog/anestesia-en-cirugia-plastica-3/"
+   },
+   "ziekenhuis": {
+    "naam": "AmayaClinic Institute / Body Institute (Bogotá); operatiekamer niet bij naam",
+    "habilitacion": "Geen habilitación of REPS; alleen 'meets all international standards for anesthetic safety'",
+    "bron": "https://amayaclinic.co/en/"
+   },
+   "nazorg": {
+    "tekst": "AmayaClinic Recovery Suites (eigen verblijf); naar huis met pijnpomp, drain 10 tot 12 dagen. Geen garantie of revisiebeleid genoemd.",
+    "garantie": false,
+    "bron": "https://amayaclinic.co/en/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Ciencia y Estética / Body Institute (Luis Pavajeau)",
+   "arts": "Luis Anselmo Pavajeau Muñoz",
+   "stad": "Bogotá",
+   "site": "https://www.mejorescirujanosplasticosdecolombia.com/en/liposuction-colombia",
+   "prijs": {
+    "bedrag": "Operatieprijs niet gepubliceerd; extra's: nacht in ziekenhuis USD 120, privéverpleging in hotel USD 60 per nacht",
+    "bron": "https://www.mejorescirujanosplasticosdecolombia.com/en/liposuction-colombia"
+   },
+   "wie_opereert": {
+    "tekst": "Liposuctiepagina: 'Dr. PAVAJEAU will make tiny (3 millimeter) incisions'; anesthesiologen van de faciliteiten 'very experienced'. Site noemt ook Nicolás Pavajeau als chirurg.",
+    "arts_opereert": "ja",
+    "anesthesioloog": "ja",
+    "bron": "https://www.mejorescirujanosplasticosdecolombia.com/en/liposuction-colombia"
+   },
+   "ziekenhuis": {
+    "naam": "Body Institute, Calle 95 #11A-27, Bogotá",
+    "habilitacion": "Alleen 'fully accredited facilities'; geen REPS-code",
+    "bron": "https://www.mejorescirujanosplasticosdecolombia.com/en/copia-de-body-institute"
+   },
+   "nazorg": {
+    "tekst": "Na ca. 1 uur uitslaapkamer naar hotel met begeleider; Body Institute heeft 12 herstelunits. Geen garantie of revisiebeleid genoemd.",
+    "garantie": false,
+    "bron": "https://www.mejorescirujanosplasticosdecolombia.com/en/copia-de-body-institute"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Juan Diego Mejía (Juan Diego Mejía)",
+   "arts": "Juan Diego Mejía Jiménez",
+   "stad": "Medellín",
+   "site": "https://drjuandiegomejia.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://drjuandiegomejia.com/"
+   },
+   "wie_opereert": {
+    "tekst": "Alleen 'Especialista en cirugía plástica facial y corporal'; niet gezegd wie opereert. Geen anesthesioloog genoemd. Naam op site wisselt tussen Mejía en Jiménez.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://drjuandiegomejia.com/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd ('Quirófanos equipados con la última tecnología')",
+    "habilitacion": "Alleen '100% Seguridad certificada', zonder instantie of REPS",
+    "bron": "https://drjuandiegomejia.com/"
+   },
+   "nazorg": {
+    "tekst": "Alleen 'acompañamiento integral'; geen herstelhuis, garantie of revisiebeleid.",
+    "garantie": false,
+    "bron": "https://drjuandiegomejia.com/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Harold Villalobos (Harold Villalobos)",
+   "arts": "Harold Villalobos Cárdenas",
+   "stad": "Cali",
+   "site": "https://haroldvillalobos.co/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://haroldvillalobos.co/lipoescultura/"
+   },
+   "wie_opereert": {
+    "tekst": "'El doctor realiza procedimientos quirúrgicos estéticos'; niet specifiek dat hij de hoofdstappen zelf doet. Geen anesthesioloog genoemd.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://haroldvillalobos.co/lipoescultura/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd; alleen in een getuigenis 'una Clínica acreditada de Cali'",
+    "habilitacion": "Geen habilitación of REPS genoemd",
+    "bron": "https://haroldvillalobos.co/lipoescultura/"
+   },
+   "nazorg": {
+    "tekst": "Geen herstelhuis, garantie of revisiebeleid genoemd.",
+    "garantie": false,
+    "bron": "https://haroldvillalobos.co/lipoescultura/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dra. Lina Triana (Lina Triana)",
+   "arts": "Lina María Triana Lloreda",
+   "stad": "Cali",
+   "site": "https://drlinatriana.com/en/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://drlinatriana.com/en/aesthetic-surgery-international-patients/"
+   },
+   "wie_opereert": {
+    "tekst": "'Your surgeon will always be Dr. Lina Triana.' Team met 'specialists in plastic surgery, anesthesiology, and aesthetic nursing'.",
+    "arts_opereert": "ja",
+    "anesthesioloog": "ja",
+    "bron": "https://drlinatriana.com/en/aesthetic-surgery-international-patients/"
+   },
+   "ziekenhuis": {
+    "naam": "Eigen kliniek in San Fernando, Cali (niet bij naam als operatielocatie)",
+    "habilitacion": "Alleen 'Nationally and internationally certified'; geen REPS-code",
+    "bron": "https://drlinatriana.com/en/aesthetic-surgery-international-patients/"
+   },
+   "nazorg": {
+    "tekst": "Controles, begeleid herstel, wellness- en herstelruimte met lymfedrainage; advies over verblijf. Geen garantie of revisiebeleid genoemd.",
+    "garantie": false,
+    "bron": "https://drlinatriana.com/en/aesthetic-surgery-international-patients/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Héctor García (Héctor García)",
+   "arts": "Héctor Javier García Salazar",
+   "stad": "Medellín (site noemt ook adres Bucaramanga, Clínica Ardila Lulle)",
+   "site": "https://www.drhectorjgarcia.com/en/tummy-tuck",
+   "prijs": {
+    "bedrag": "Niet gepubliceerd; wel aanbetaling USD 300 niet-restitueerbaar om datum vast te leggen",
+    "bron": "https://hectorgarcia.squarespace.com/en/international-patients"
+   },
+   "wie_opereert": {
+    "tekst": "Niet expliciet wie opereert; 'always performed in an operating room at a plastic surgery licensed clinic'. Geen anesthesioloog genoemd, alleen algehele narcose.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://www.drhectorjgarcia.com/en/tummy-tuck"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd ('plastic surgery licensed clinic')",
+    "habilitacion": "Alleen 'licensed clinic' en 'certified facilities'; geen REPS-code",
+    "bron": "https://www.drhectorjgarcia.com/en/tummy-tuck"
+   },
+   "nazorg": {
+    "tekst": "Nacht ter observatie in de kliniek; contact met eigenaren van herstelhuizen kan worden gelegd. Geen garantie of revisiebeleid.",
+    "garantie": false,
+    "bron": "https://hectorgarcia.squarespace.com/en/international-patients"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Centro Médico Santuario (Carlos Alberto Ríos García)",
+   "arts": "Carlos Alberto Ríos García",
+   "stad": "Cali",
+   "site": "https://santuario.com.co/en/home-english/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://santuario.com.co/en/home-english/"
+   },
+   "wie_opereert": {
+    "tekst": "Team 'led by Dr. Carlos Alberto Ríos'; niet expliciet dat hij zelf opereert. Geen anesthesioloog genoemd.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://santuario.com.co/en/home-english/"
+   },
+   "ziekenhuis": {
+    "naam": "Centro Médico Santuario, Calle 4 #35A-08, Cali",
+    "habilitacion": "Geen habilitación of REPS genoemd",
+    "bron": "https://santuario.com.co/en/home-english/"
+   },
+   "nazorg": {
+    "tekst": "Geen herstelhuis, garantie of revisiebeleid genoemd.",
+    "garantie": false,
+    "bron": "https://santuario.com.co/en/home-english/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dra. Lina Rodríguez (Lina Rodríguez)",
+   "arts": "Lina María Rodríguez",
+   "stad": "Barranquilla / Puerto Colombia",
+   "site": "https://linarodriguez.co/",
+   "prijs": {
+    "bedrag": "Niet gepubliceerd (prijs pas na beoordeling)",
+    "bron": "https://linarodriguez.co/servicios/lipoescultura/"
+   },
+   "wie_opereert": {
+    "tekst": "'La Dra Lina Rodriguez realiza los procedimientos'. Algehele narcose, geen anesthesioloog genoemd.",
+    "arts_opereert": "ja",
+    "anesthesioloog": "nee",
+    "bron": "https://linarodriguez.co/servicios/lipoescultura/"
+   },
+   "ziekenhuis": {
+    "naam": "Clínica Porto Azul en Clínica del Caribe, Barranquilla",
+    "habilitacion": "Alleen 'aptas y completamente seguras'; geen REPS-code",
+    "bron": "https://linarodriguez.co/servicios/lipoescultura/"
+   },
+   "nazorg": {
+    "tekst": "Verblijf 10 tot 15 dagen in de stad aangeraden; annulerings- en restitutiebeleid gelinkt. Geen herstelhuis, garantie of revisiebeleid genoemd.",
+    "garantie": false,
+    "bron": "https://linarodriguez.co/servicios/lipoescultura/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Alfredo Hoyos / Total Definer (Alfredo Hoyos)",
+   "arts": "Alfredo Ernesto Hoyos Ariza",
+   "stad": "Bogotá",
+   "site": "https://alfredohoyos.com/en",
+   "prijs": {
+    "bedrag": "Niet gepubliceerd (kostenoverzicht via coördinator)",
+    "bron": "https://alfredohoyos.com/en/patient-journey"
+   },
+   "wie_opereert": {
+    "tekst": "Traject 'led by Dr. Alfredo Hoyos and his team'; niet expliciet dat hij zelf opereert. Anesthesie alleen als kostenpost.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://alfredohoyos.com/en/patient-journey"
+   },
+   "ziekenhuis": {
+    "naam": "Clínica Dhara, Bogotá",
+    "habilitacion": "Geen habilitación of REPS genoemd",
+    "bron": "https://alfredohoyos.com/en/patient-journey"
+   },
+   "nazorg": {
+    "tekst": "Nazorg bij Total Definer Beauty Clinic, Calle 93 #14-55; minstens 14 dagen blijven, verblijf voor eigen rekening. Geen garantie of revisiebeleid.",
+    "garantie": false,
+    "bron": "https://alfredohoyos.com/en/patient-journey"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Carlos Gómez (Carlos Gómez)",
+   "arts": "Carlos Gómez",
+   "stad": "Cali",
+   "site": "https://drcarlosgomez.co/en/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://drcarlosgomez.co/en/"
+   },
+   "wie_opereert": {
+    "tekst": "Alleen ervaring ('more than 3,000 successful interventions'); niet gezegd wie opereert. Geen anesthesioloog.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://drcarlosgomez.co/en/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd",
+    "habilitacion": "Geen habilitación of REPS genoemd",
+    "bron": "https://drcarlosgomez.co/en/"
+   },
+   "nazorg": {
+    "tekst": "Geen herstelhuis, garantie of revisiebeleid genoemd.",
+    "garantie": false,
+    "bron": "https://drcarlosgomez.co/en/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Sublime Plastic Surgery Group (Javier Soto)",
+   "arts": "Javier Soto",
+   "stad": "Cartagena",
+   "site": "https://sublimeplasticsurgerygroup.com/about-us/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://sublimeplasticsurgerygroup.com/about-us/"
+   },
+   "wie_opereert": {
+    "tekst": "Over-ons-pagina noemt geen chirurg bij naam ('a team of plastic surgeons in Cartagena and Miami'). Geen anesthesioloog.",
+    "arts_opereert": "",
+    "anesthesioloog": "nee",
+    "bron": "https://sublimeplasticsurgerygroup.com/about-us/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd (kantoor Km 12 vía al mar, Edificio Aed, Cartagena)",
+    "habilitacion": "Alleen 'local and international medical standards'; geen REPS",
+    "bron": "https://sublimeplasticsurgerygroup.com/about-us/"
+   },
+   "nazorg": {
+    "tekst": "Geen herstelhuis, garantie of revisiebeleid genoemd.",
+    "garantie": false,
+    "bron": "https://sublimeplasticsurgerygroup.com/about-us/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Fulvio Correa Plastic Surgery (Fulvio Correa)",
+   "arts": "Fulvio Correa",
+   "stad": "Cartagena",
+   "site": "https://fulviocorrea.com/",
+   "prijs": {
+    "bedrag": "Niet gepubliceerd ('This practice does not publish surgery prices'); consult USD 150 / COP 400.000",
+    "bron": "https://fulviocorrea.com/plastic-surgery-colombia/"
+   },
+   "wie_opereert": {
+    "tekst": "'Dr. Fulvio Correa performs surgery at CAPRI Clinic in Cartagena.' Anesthesie als aparte dienst, geen anesthesioloog genoemd.",
+    "arts_opereert": "ja",
+    "anesthesioloog": "nee",
+    "bron": "https://fulviocorrea.com/international-patients/"
+   },
+   "ziekenhuis": {
+    "naam": "CAPRI Clinic, Anillo Vial Km 12, Edificio Génesis, Cartagena",
+    "habilitacion": "Geen REPS-code; site raadt aan de geldige vergunning van de operatiedienst te vragen",
+    "bron": "https://fulviocorrea.com/plastic-surgery-colombia/"
+   },
+   "nazorg": {
+    "tekst": "Herstelhuis met 24/7 verpleging, geregeld bij de beoordeling, zonder pakketprijs. Geen garantie; site zegt dat SCCP-lidmaatschap geen garantie op uitkomst is.",
+    "garantie": false,
+    "bron": "https://fulviocorrea.com/international-patients/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Doctor Andrés Díaz Paz (Andrés Díaz Paz)",
+   "arts": "Andrés Felipe Díaz Paz",
+   "stad": "Cali",
+   "site": "https://doctorandresdiaz.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://doctorandresdiaz.com/"
+   },
+   "wie_opereert": {
+    "tekst": "Biedt 'una amplia variedad de servicios quirúrgicos'; niet expliciet dat hij zelf opereert. Geen anesthesioloog.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://doctorandresdiaz.com/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd (spreekkamer Calle 36N #6A-65, Cali)",
+    "habilitacion": "Geen habilitación of REPS genoemd",
+    "bron": "https://doctorandresdiaz.com/"
+   },
+   "nazorg": {
+    "tekst": "Geen herstelhuis, garantie of revisiebeleid genoemd.",
+    "garantie": false,
+    "bron": "https://doctorandresdiaz.com/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Carlos Recio (Carlos Recio)",
+   "arts": "Carlos Recio",
+   "stad": "Cali",
+   "site": "https://doctorcarlosrecio.com/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://doctorcarlosrecio.com/catalogos/lipoescultura-en-cali/"
+   },
+   "wie_opereert": {
+    "tekst": "'El Dr. Recio realiza sus procedimientos en quirófanos habilitados' ... 'con anestesiólogos certificados'.",
+    "arts_opereert": "ja",
+    "anesthesioloog": "ja",
+    "bron": "https://doctorcarlosrecio.com/catalogos/lipoescultura-en-cali/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet bij naam genoemd",
+    "habilitacion": "Zegt 'quirófanos habilitados', zonder REPS-code",
+    "bron": "https://doctorcarlosrecio.com/catalogos/lipoescultura-en-cali/"
+   },
+   "nazorg": {
+    "tekst": "Nazorg met korset en lymfedrainage; geen herstelhuis, garantie of revisiebeleid.",
+    "garantie": false,
+    "bron": "https://doctorcarlosrecio.com/catalogos/lipoescultura-en-cali/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Oswaldo Gómez (Oswaldo Gómez Díaz)",
+   "arts": "Oswaldo Javier Gómez Díaz",
+   "stad": "Bogotá",
+   "site": "https://cirujanoplasticobogota.co/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://cirujanoplasticobogota.co/nosotros/"
+   },
+   "wie_opereert": {
+    "tekst": "'la cirugía propuesta con el Dr. Oswaldo Gómez'; niet expliciet dat hij de hoofdstappen zelf doet. Geen anesthesioloog.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://cirujanoplasticobogota.co/nosotros/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd (spreekkamer Calle 99 #49-38)",
+    "habilitacion": "Geen habilitación of REPS genoemd",
+    "bron": "https://cirujanoplasticobogota.co/nosotros/"
+   },
+   "nazorg": {
+    "tekst": "Begeleide nazorg ('tenemos un equipo completo'); geen herstelhuis, garantie of revisiebeleid.",
+    "garantie": false,
+    "bron": "https://cirujanoplasticobogota.co/nosotros/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. John Orlas Blair (John Orlas Blair)",
+   "arts": "John Orlas Blair",
+   "stad": "Medellín",
+   "site": "https://johnorlasblair.com/en/home/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://johnorlasblair.com/en/body-surgery/lipoabdominoplasty/"
+   },
+   "wie_opereert": {
+    "tekst": "Consult door hem ('I will perform a detailed body assessment'); niet expliciet dat hij opereert. Noemt 'our anesthesia team'.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "ja",
+    "bron": "https://johnorlasblair.com/en/body-surgery/lipoabdominoplasty/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd ('certified operating rooms'); kantoor Calle 7 #39-107, El Poblado",
+    "habilitacion": "Geen REPS-code; raadt aan SCCP-certificering te controleren",
+    "bron": "https://johnorlasblair.com/en/body-surgery/lipoabdominoplasty/"
+   },
+   "nazorg": {
+    "tekst": "'If necessary, correction procedures may be performed'; controles zoals nodig; 15 dagen in de stad blijven. Geen schriftelijke garantie of verzekering.",
+    "garantie": false,
+    "bron": "https://johnorlasblair.com/en/body-surgery/lipoabdominoplasty/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Carlos Betancur (Carlos Betancur)",
+   "arts": "Carlos Betancur",
+   "stad": "Medellín",
+   "site": "https://cirujanoplasticomedellin.co/",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://cirujanoplasticomedellin.co/"
+   },
+   "wie_opereert": {
+    "tekst": "'El Dr. Carlos Betancur es experto en realizar cirugías estéticas'; niet expliciet per operatie. Geen anesthesioloog.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "nee",
+    "bron": "https://cirujanoplasticomedellin.co/"
+   },
+   "ziekenhuis": {
+    "naam": "Niet genoemd (spreekkamer Torre Médica El Tesoro); exploitant QUIROSOLUCIONES S.A.S.",
+    "habilitacion": "Geen habilitación of REPS; FAQ raadt controle via ReTHUS en SCCP aan",
+    "bron": "https://cirujanoplasticomedellin.co/"
+   },
+   "nazorg": {
+    "tekst": "Geen herstelhuis, garantie of revisiebeleid genoemd.",
+    "garantie": false,
+    "bron": "https://cirujanoplasticomedellin.co/"
+   },
+   "risico": []
+  },
+  {
+   "naam": "Dr. Jorge Puello White (Jorge Puello White)",
+   "arts": "Jorge Puello White",
+   "stad": "Cartagena en Bogotá",
+   "site": "https://doctorpuello.com/quien-soy",
+   "prijs": {
+    "bedrag": "niet gepubliceerd",
+    "bron": "https://doctorpuello.com/quien-soy"
+   },
+   "wie_opereert": {
+    "tekst": "Niet expliciet wie opereert; ingrepen 'con equipos completos de anestesiología, enfermería e instrumentación'.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "ja",
+    "bron": "https://doctorpuello.com/quien-soy"
+   },
+   "ziekenhuis": {
+    "naam": "Bogotá: Clínica Dhara, CICP, Clínica Symmetry; Cartagena: Medihelp Services, Clínica Crecer, Clínica de la Mujer, IPS Delta",
+    "habilitacion": "Alleen 'instituciones acreditadas'; geen REPS-code",
+    "bron": "https://doctorpuello.com/quien-soy"
+   },
+   "nazorg": {
+    "tekst": "Postoperatieve controles; geen herstelhuis, garantie of revisiebeleid genoemd.",
+    "garantie": false,
+    "bron": "https://doctorpuello.com/quien-soy"
+   },
+   "risico": []
+  }
+ ]
+}

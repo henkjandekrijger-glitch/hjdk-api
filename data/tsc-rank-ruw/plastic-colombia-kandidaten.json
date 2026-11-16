@@ -1,0 +1,964 @@
+{
+ "gecontroleerd": "2026-11-16",
+ "toelichting": "Kandidaten vooral uit RealSelf-artsenlijsten (Colombia BBL, tummy tuck, liposuction; Bogota, Cali, Cartagena, Medellin) en de ASPS-zoekgids (internationale leden). Alleen Luis Devoz staat als SPONSORED gemarkeerd. Onafhankelijk nieuws over individuele chirurgen is schaars; alleen Lina Triana heeft echte interviews (El Pais, Portafolio). Veel RealSelf-profielen noemen geen praktijk, site of ziekenhuis; sites komen dan uit een scrape-directory (mommy-makeover-packages.pages.dev) en zijn niet op de eigen site gecontroleerd. RealSelf-reviewaantallen verschillen soms tussen lijst en profiel. Medellin heeft op RealSelf weinig reviews per arts; Medellin-kandidaten steunen vooral op ASPS. Doctoralia en Bookimed/WhatClinic niet als onafhankelijk geteld.",
+ "niet_bereikbaar": [
+  {
+   "url": "https://www.realself.com/find/Colombia/Tummy-Tuck",
+   "waarom": "Eerste poging: toestemming voor de URL kwam niet op tijd; later via zoekresultaat wel gelezen."
+  },
+  {
+   "url": "https://www.realself.com/find/Colombia/Medellin/Brazilian-Butt-Lift",
+   "waarom": "Niet opgehaald; Medellin gedekt via de lijsten Plastic-Surgeon, Tummy-Tuck en Liposuction voor Medellin."
+  },
+  {
+   "url": "https://www.realself.com/find/Colombia/Barranquilla/Butt-Lift",
+   "waarom": "Bereikt maar 0 resultaten; ook Barranquilla/Tummy-Tuck 0 resultaten (Barranquilla-artsen staan wel in de landelijke lijsten)."
+  },
+  {
+   "url": "https://find.plasticsurgery.org/country/colombia",
+   "waarom": "Bereikt, maar de volgorde wisselt per bezoek en profiel-URL's ontbreken; slechts 2 van 5+ pagina's gezien."
+  },
+  {
+   "url": "reddit.com / tripadvisor.com",
+   "waarom": "Zoekmachine gaf geen relevante draadjes; RealSelf-forumdraadjes 2024 en 2025 bevatten geen namen."
+  }
+ ],
+ "bewust_niet_of_let_op": [
+  {
+   "naam": "Clinica Bella Vie (Laureles, Medellin)",
+   "reden": "Secretaria de Salud de Antioquia schortte cirurgie en consulten op na overlijden van een patiente van 35 na drie ingrepen (feb 2020).",
+   "bron": "https://www.lafm.com.co/colombia/tras-muerte-de-una-mujer-suspenden-servicios-de-clinica-estetica-en-medellin"
+  },
+  {
+   "naam": "Clinica Laser Surgical (Bogota, oprichter Gabriel Cubillos)",
+   "reden": "Supersalud nam voorzorgsmaatregel (29 mei 2026) en sloot op 6 jun 2026 plastische chirurgie, anesthesie en apotheek omdat ze zonder toestemming heropenden.",
+   "bron": "https://lakalle.bluradio.com/noticias/bogota/clausuran-una-de-las-clinicas-esteticas-mas-famosas-de-bogota-su-dueno-enfrenta-denuncias-rg10"
+  },
+  {
+   "naam": "Clinica de Obesidad y Envejecimiento (Bogota)",
+   "reden": "Supersalud sloot tijdelijk de dienst plastische en esthetische chirurgie wegens ingrepen zonder habilitacion (mei 2026).",
+   "bron": "https://www.vanguardia.com/colombia/2026/05/30/supersalud-ordena-cierre-temporal-a-clinica-de-cirugia-plastica-en-bogota/"
+  },
+  {
+   "naam": "Beauty Laser (Bogota)",
+   "reden": "Yulixa Toloza overleed na een ingreep in dit centrum (mei 2026); een tweede clandestiene vestiging werd ontdekt.",
+   "bron": "https://www.publimetro.co/noticias/2026/05/19/el-caso-yulixa-toloza-destapo-el-horror-de-otra-sede-oculta-de-beauty-laser-en-el-norte-de-bogota/"
+  },
+  {
+   "naam": "Harker Lloreda (Bogota, Simon Harker en Carlos Lloreda)",
+   "reden": "Geen negatief nieuws; alleen gevonden in betaalde inhoud (Forbes Colombia 'Contenido Patrocinado', 10 nov 2025), daarom geen kandidaat zonder onafhankelijke vermelding.",
+   "bron": "https://forbes.co/2025/11/10/negocios/harker-lloreda-dos-mentes-cuatro-manos-y-una-vision-integral-de-la-cirugia-plastica/"
+  },
+  {
+   "naam": "Luis Devoz (Bogota)",
+   "reden": "Bovenaan de RealSelf-lijsten maar als SPONSORED gemarkeerd, slechts 5 reviews (3,8); niet als kandidaat opgenomen.",
+   "bron": "https://www.realself.com/find/Colombia/Bogotá/Brazilian-Butt-Lift"
+  },
+  {
+   "naam": "Let op: lage RealSelf-score",
+   "reden": "Alder James Henao Bonilla (2,8), Carlos Gomez (3,1), Alfredo Hoyos (3,5), Luis Eduardo Plazas (3,7) hebben lage gemiddelden ondanks veel reviews; Plazas en Pavajeau hebben ook negatieve patientverslagen.",
+   "bron": "https://www.realself.com/find/Colombia/Cali/Brazilian-Butt-Lift"
+  }
+ ],
+ "klinieken": [
+  {
+   "naam": "Premium Care Plastic Surgery (Alex Campbell)",
+   "stad": "Cartagena",
+   "site": "https://www.premiumcareplasticsurgery.com/",
+   "site_bron": "RealSelf-profiel Alex Campbell",
+   "chirurgen": [
+    {
+     "naam": "Alex Campbell",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon; RealSelf meldt American Board of Plastic Surgery, SCCP, ASPS",
+     "bron": "https://www.realself.com/dr/alex-campbell-bocagrande-cartagena-colombia"
+    },
+    {
+     "naam": "Carolina Restrepo",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/carolina-restrepo-cartagena-colombia"
+    }
+   ],
+   "ziekenhuis": "Medihelp Clinic; Premium Care Medical Suites",
+   "ziekenhuis_bron": "https://www.realself.com/dr/alex-campbell-bocagrande-cartagena-colombia",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Cartagena/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Campbell 200 reviews (4,8), Restrepo 42 (4,8), praktijk 297 reviews (4,8); niet als gesponsord gemarkeerd."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Campbell eerste op de Colombia-lijst tummy tuck (95 resultaten), praktijk 297 reviews."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Liposuction",
+     "soort": "realself",
+     "wat": "Campbell 200 reviews en praktijk 297 reviews in de Colombia-lijst liposuction."
+    },
+    {
+     "url": "https://www.newswire.ca/news-releases/largest-study-to-date-shows-plastic-surgery-medical-tourism-can-match-or-surpass-u-s-safety-benchmarks-850315519.html",
+     "soort": "betaald/makelaar",
+     "wat": "Persbericht van de kliniek zelf (6 okt 2025) over eigen studie in PRS Global Open: 2.324 patienten, 6,2% complicaties; niet onafhankelijk."
+    },
+    {
+     "url": "https://www.medicaltourismpackages.com/medical-professional/dr-alex-campbell-carolina-restrepo/",
+     "soort": "betaald/makelaar",
+     "wat": "Vermeld op bemiddelaarssite voor medisch toerisme."
+    }
+   ]
+  },
+  {
+   "naam": "Sublime Plastic Surgery (Javier Soto)",
+   "stad": "Cartagena",
+   "site": "https://sublimeplasticsurgerygroup.com/",
+   "site_bron": "Bedrijvenlijst mommy-makeover-packages.pages.dev (https://mommy-makeover-packages.pages.dev/south-america/colombia/cartagena/sublime-plastic-surgery)",
+   "chirurgen": [
+    {
+     "naam": "Javier Soto",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/javier-soto-cartagena-bolivar-colombia"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Cartagena/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "39 reviews (4,2), niet gesponsord."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "In de Colombia-lijst BBL met 39 reviews (4,2)."
+    }
+   ]
+  },
+  {
+   "naam": "Consultorio Dr Fulvio Correa (Fulvio Correa)",
+   "stad": "Cartagena",
+   "site": "https://fulviocorrea.com.co/plastic-surgery-colombia",
+   "site_bron": "Bedrijvenlijst mommy-makeover-packages.pages.dev (https://mommy-makeover-packages.pages.dev/south-america/colombia/cartagena/dr-fulvio-correa-cirujano-plastico-cartagena-colombia)",
+   "chirurgen": [
+    {
+     "naam": "Fulvio Correa",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/fulvio-correa-bogota-colombia"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Cartagena/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "36 reviews (4,9), plus praktijkvermelding Fulvio Correa Plastic Surgery Cartagena/Bogota; niet gesponsord."
+    }
+   ]
+  },
+  {
+   "naam": "Alan Gonzalez Cirugia Plastica (Alan Gonzalez)",
+   "stad": "Barranquilla",
+   "site": "https://alangonzalez.com/",
+   "site_bron": "RealSelf-profiel Alan Gonzalez",
+   "chirurgen": [
+    {
+     "naam": "Alan Gonzalez Varela",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon; RealSelf meldt ASPS, FACS, ISAPS",
+     "bron": "https://www.realself.com/dr/alan-gonzalez-bogota-colombia"
+    }
+   ],
+   "ziekenhuis": "Clinica Iberoamericana (Barranquilla); ook Complejo Internacional de Cirugia Plastica (Bogota) en Clinica Lungavita (Cali)",
+   "ziekenhuis_bron": "https://www.realself.com/dr/alan-gonzalez-bogota-colombia",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Liposuction",
+     "soort": "realself",
+     "wat": "Eerste in de Colombia-lijst liposuction: 165 reviews (5,0), label Destination Doctor, niet gesponsord."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "165 reviews (5,0) in de Colombia-lijst BBL."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/colombia?page=2",
+     "soort": "asps",
+     "wat": "ASPS-zoekgids noemt Alan Gonzalez Varela, MD met adres in Bogota (Carrera 7 Bis 124-26)."
+    },
+    {
+     "url": "https://www.medicaltourism.com/providers/alan-gonzalez-cirugia-plastica-y-tratamientos-esteticos",
+     "soort": "betaald/makelaar",
+     "wat": "Vermeld op MedicalTourism.com."
+    },
+    {
+     "url": "https://us-uk.bookimed.com/doctor/alan-gonzalez/",
+     "soort": "betaald/makelaar",
+     "wat": "Vermeld op Bookimed."
+    }
+   ]
+  },
+  {
+   "naam": "Dra. Lina Rodriguez Cirugia Plastica (Lina Rodriguez)",
+   "stad": "Barranquilla",
+   "site": "http://www.linarodriguez.co/",
+   "site_bron": "Bedrijvenlijst mommy-makeover-packages.pages.dev (https://mommy-makeover-packages.pages.dev/south-america/colombia/barranquilla/dr-lina-rodriguez-cirugia-plastica)",
+   "chirurgen": [
+    {
+     "naam": "Lina Rodriguez",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/lina-rodriguez-puerto-colombia-colombia"
+    }
+   ],
+   "ziekenhuis": "Complejo Medico Portoazul, Puerto Colombia (praktijkadres)",
+   "ziekenhuis_bron": "https://mommy-makeover-packages.pages.dev/south-america/colombia/barranquilla/dr-lina-rodriguez-cirugia-plastica",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "48 reviews (5,0) in de Colombia-lijst tummy tuck."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Liposuction",
+     "soort": "realself",
+     "wat": "48 reviews (5,0) in de Colombia-lijst liposuction."
+    }
+   ]
+  },
+  {
+   "naam": "AmayaClinic Body Institute (Felipe Amaya)",
+   "stad": "Bogota",
+   "site": "https://amayaclinic.co/",
+   "site_bron": "RealSelf-profiel Felipe Amaya",
+   "chirurgen": [
+    {
+     "naam": "Felipe Amaya",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon; RealSelf meldt lidmaatschap SCCP",
+     "bron": "https://www.realself.com/dr/felipe-amaya-bogota-colombia"
+    }
+   ],
+   "ziekenhuis": "AmayaClinic Body Institute",
+   "ziekenhuis_bron": "https://www.realself.com/dr/felipe-amaya-bogota-colombia",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Bogotá/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "128 reviews (4,7), niet gesponsord."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "126 reviews (4,6) in de Colombia-lijst tummy tuck."
+    },
+    {
+     "url": "https://www.eltiempo.com/carrusel/tratamientos-esteticos-en-colombia-381414",
+     "soort": "nieuws",
+     "wat": "El Tiempo 27 jun 2019 noemt Amaya bij huidbehandeling; stuk heeft promotionele trekken (sectie Carrusel)."
+    },
+    {
+     "url": "https://us-uk.bookimed.com/clinic/amayaclinic/",
+     "soort": "betaald/makelaar",
+     "wat": "Vermeld op Bookimed."
+    }
+   ]
+  },
+  {
+   "naam": "Ciencia y Estetica Cirugia Plastica (Luis Pavajeau)",
+   "stad": "Bogota",
+   "site": "https://www.mejorescirujanosplasticosdecolombia.com/",
+   "site_bron": "Bedrijvenlijst mommy-makeover-packages.pages.dev (https://mommy-makeover-packages.pages.dev/south-america/colombia/bogota/dr-luis-pavajeau-ciencia-y-estetica-cirugia-plastica)",
+   "chirurgen": [
+    {
+     "naam": "Luis Pavajeau",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/luis-pavajeau-bogota-colombia"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Bogotá/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "119 reviews (4,7), niet gesponsord; neemt via RealSelf geen consulten aan."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "119 reviews (4,7) in de Colombia-lijst tummy tuck."
+    },
+    {
+     "url": "https://www.realself.com/review/hair-transplant-beware-dr-pavajeau-puts-life-risk",
+     "soort": "realself",
+     "wat": "Negatief patientverslag (titel): 'Hair transplant beware dr Pavajeau puts life risk'."
+    },
+    {
+     "url": "https://us-uk.bookimed.com/doctor/luis-pavajeau/",
+     "soort": "betaald/makelaar",
+     "wat": "Vermeld op Bookimed."
+    },
+    {
+     "url": "https://www.whatclinic.com/cosmetic-plastic-surgery/colombia/bogota/dr-luis-pavajeau-munoz-plastic-surgery",
+     "soort": "betaald/makelaar",
+     "wat": "Vermeld op WhatClinic."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Alfredo Hoyos (Alfredo Hoyos)",
+   "stad": "Bogota",
+   "site": "https://alfredohoyos.com",
+   "site_bron": "Zoekresultaat eigen site (alfredohoyos.com)",
+   "chirurgen": [
+    {
+     "naam": "Alfredo Hoyos",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon; RealSelf meldt SCCP",
+     "bron": "https://www.realself.com/dr/alfredo-hoyos-bogota-colombia"
+    }
+   ],
+   "ziekenhuis": "Clinica Dhara, Bogota",
+   "ziekenhuis_bron": "https://www.realself.com/dr/alfredo-hoyos-bogota-colombia",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Bogotá/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "45 reviews (3,5), niet gesponsord."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "45 reviews (3,5) in de Colombia-lijst BBL."
+    },
+    {
+     "url": "https://www.colombia.com/vida-sana/tendencias/sdi/70967/lipoescultura-4d-una-alternativa-mas-sana-que-la-liposuccion-tradicional",
+     "soort": "nieuws",
+     "wat": "Colombia.com (18 sep 2013) over zijn 4D-liposuctietechniek; promotioneel van toon."
+    },
+    {
+     "url": "https://www.imcas.com/en/profile/dr-alfredo-ernesto-hoyos-ariza",
+     "soort": "nieuws",
+     "wat": "Sprekersprofiel op het congres IMCAS (vakcongres, geen nieuws in strikte zin)."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk Oswaldo J. Gomez Diaz",
+   "stad": "Bogota",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "Oswaldo J. Gomez Diaz",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/oswaldo-j-gomez-diaz-bogota-colombia"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Bogotá/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "15 reviews (5,0), niet gesponsord."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "15 reviews (5,0) in de Colombia-lijst BBL."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk Gerardo Camacho",
+   "stad": "Bogota",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "Gerardo Camacho",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://find.plasticsurgery.org/country/colombia"
+    }
+   ],
+   "ziekenhuis": "Edificio Tierra Firme, Carrera 9 115-06 (praktijkadres volgens ASPS)",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/country/colombia",
+   "vermeld_in": [
+    {
+     "url": "https://find.plasticsurgery.org/country/colombia",
+     "soort": "asps",
+     "wat": "ASPS-zoekgids, internationaal lid in Bogota."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Bogotá/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "6 reviews (4,3), niet gesponsord."
+    }
+   ]
+  },
+  {
+   "naam": "Dr Jorge Puello White",
+   "stad": "Bogota",
+   "site": "https://doctorpuello.com/pages/cirujano-plastico-bogota",
+   "site_bron": "Bedrijvenlijst mommy-makeover-packages.pages.dev (https://mommy-makeover-packages.pages.dev/south-america/colombia/bogota/dr-jorge-puello-white-cirujano-plastico-mommy-makeover-liposuccion-abdominoplastia-mamoplastia)",
+   "chirurgen": [
+    {
+     "naam": "Jorge Puello White",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/jorge-puello-white-cartagena-colombia"
+    }
+   ],
+   "ziekenhuis": "Habital Medical Center, Bogota (praktijkadres)",
+   "ziekenhuis_bron": "https://mommy-makeover-packages.pages.dev/south-america/colombia/bogota/dr-jorge-puello-white-cirujano-plastico-mommy-makeover-liposuccion-abdominoplastia-mamoplastia",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Cartagena/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Staat in de Cartagena-lijst BBL met 9 reviews (5,0); praktijkadres elders is Bogota."
+    }
+   ]
+  },
+  {
+   "naam": "Clinica Corpus y Rostrum (Lina Triana)",
+   "stad": "Cali",
+   "site": "https://drlinatriana.com",
+   "site_bron": "Afgeleid van het contactadres colombia@drlinatriana.com in de ASPS-gids (domein niet als site genoemd)",
+   "chirurgen": [
+    {
+     "naam": "Lina Triana",
+     "titel": "MD",
+     "specialisme": "Plastic surgeon, ASPS International Member",
+     "bron": "https://www.plasticsurgery.org/md/Lina-Triana.html"
+    },
+    {
+     "naam": "John Garcia Serna",
+     "titel": "MD",
+     "specialisme": "Plastic surgeon, ASPS-lid (adres Clinica Corpus y Rostrum)",
+     "bron": "https://find.plasticsurgery.org/country/colombia"
+    }
+   ],
+   "ziekenhuis": "Clinica Corpus y Rostrum, Calle 3 Oeste, San Fernando, Cali",
+   "ziekenhuis_bron": "https://www.plasticsurgery.org/md/Lina-Triana.html",
+   "vermeld_in": [
+    {
+     "url": "https://www.plasticsurgery.org/md/Lina-Triana.html",
+     "soort": "asps",
+     "wat": "ASPS International Member, praktijk Clinica Corpus and Rostrum, 30 ingrepen waaronder BBL, liposuctie, tummy tuck."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Cali/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "68 reviews (4,9), niet gesponsord."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "68 reviews (4,9) in de Colombia-lijst tummy tuck."
+    },
+    {
+     "url": "https://www.elpais.com.co/salud/le-llevamos-anos-luz-al-resto-del-mundo-liliana-triana.html",
+     "soort": "nieuws",
+     "wat": "El Pais Cali (2 apr 2023) interview: president ISAPS, eerste vrouwelijke voorzitter SCCP 2014-2015."
+    },
+    {
+     "url": "https://www.portafolio.co/negocios/empresas/entrevista-lina-triana-presidenta-de-la-sociedad-internacional-de-cirugia-plastica-estetica-588703",
+     "soort": "nieuws",
+     "wat": "Portafolio interview als president van ISAPS."
+    },
+    {
+     "url": "https://www.isaps.org/education/residents-program/isaps-fellowship-program/colombia-cali/",
+     "soort": "asps",
+     "wat": "ISAPS (niet ASPS): fellowship-host in Cali."
+    },
+    {
+     "url": "https://us-uk.bookimed.com/doctor/lina-triana-23392/",
+     "soort": "betaald/makelaar",
+     "wat": "Vermeld op Bookimed."
+    }
+   ]
+  },
+  {
+   "naam": "Santuario Medical Center (Carlos Alberto Rios Garcia)",
+   "stad": "Cali",
+   "site": "http://drcarlosalbertorios.com/",
+   "site_bron": "RealSelf-profiel Carlos Alberto Rios Garcia",
+   "chirurgen": [
+    {
+     "naam": "Carlos Alberto Rios Garcia",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon; RealSelf meldt SCCP; nadruk op verwijderen van siliconeninjecties",
+     "bron": "https://www.realself.com/dr/carlos-albe-cali-colombia"
+    }
+   ],
+   "ziekenhuis": "Santillana General Hospital, Cali (zoals RealSelf het noemt)",
+   "ziekenhuis_bron": "https://www.realself.com/dr/carlos-albe-cali-colombia",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Cali/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "56 reviews (4,5) plus praktijk Santuario Medical Center (2 reviews); niet gesponsord."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "56 reviews (4,5) in de Colombia-lijst tummy tuck."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk Luis Eduardo Plazas",
+   "stad": "Cali",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "Luis Eduardo Plazas",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/luis-eduardo-plazas-cali-colombia"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Cali/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "151 reviews (3,7), niet gesponsord; neemt via RealSelf geen consulten aan."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "151 reviews (3,7) in de Colombia-lijst tummy tuck."
+    },
+    {
+     "url": "https://community.realself.com/forum/good-bbl-doctors-colombia",
+     "soort": "forum",
+     "wat": "RealSelf-forum (feb 2017): naam Plazas genoemd als vaak gehoorde BBL-chirurg."
+    },
+    {
+     "url": "https://www.realself.com/review/colombia-unsatisfied-dr-plazas",
+     "soort": "realself",
+     "wat": "Negatief patientverslag (titel): 'Colombia unsatisfied dr Plazas'."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk Harold Villalobos",
+   "stad": "Cali",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "Harold Villalobos",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/harold-villalobos-cali-colombia"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Cali/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "86 reviews (3,9), niet gesponsord."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk Carlos Gomez",
+   "stad": "Cali",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "Carlos Gomez",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/carlos-gomez-cali-colombia"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Cali/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "43 reviews (3,1), niet gesponsord."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "43 reviews (3,1) in de Colombia-lijst tummy tuck."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk Harold Paz",
+   "stad": "Cali",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "Harold Paz",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/harold-paz-cali-colombia"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Cali/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "35 reviews (4,0), niet gesponsord."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk Andres Diaz Paz",
+   "stad": "Cali",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "Andres Diaz Paz",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/andres-diaz-paz-cali-colombia"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Cali/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "25 reviews (4,3), niet gesponsord."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk Alder James Henao Bonilla",
+   "stad": "Cali",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "Alder James Henao Bonilla",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/alder-james-henao-bonilla-cali-valle-del-cauca-colombia"
+    }
+   ],
+   "ziekenhuis": "Calle 5B 3 38-44, consultorio 201 (praktijkadres volgens ASPS)",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/country/colombia",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Cali/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "21 reviews (2,8), niet gesponsord."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/colombia",
+     "soort": "asps",
+     "wat": "ASPS-zoekgids, internationaal lid in Cali."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Carlos Recio",
+   "stad": "Cali",
+   "site": "https://doctorcarlosrecio.com/",
+   "site_bron": "Bedrijvenlijst mommy-makeover-packages.pages.dev (https://mommy-makeover-packages.pages.dev/south-america/colombia/cali/dr-carlos-recio-cirujano-plastico-en-cali-especialista-en-deep-plane-estiramiento-facial)",
+   "chirurgen": [
+    {
+     "naam": "Carlos Recio",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/carlos-r-cali-colombia"
+    }
+   ],
+   "ziekenhuis": "Unicentro Oasis, Cali (praktijkadres)",
+   "ziekenhuis_bron": "https://mommy-makeover-packages.pages.dev/south-america/colombia/cali/dr-carlos-recio-cirujano-plastico-en-cali-especialista-en-deep-plane-estiramiento-facial",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Cali/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "18 reviews (4,9), niet gesponsord."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "18 reviews (4,9) in de Colombia-lijst tummy tuck."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk David Guarin",
+   "stad": "Cali",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "David Guarin",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/david-guarin-cali-valle-del-cauca-colombia"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Cali/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "15 reviews (5,0), niet gesponsord."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk Juan Diego Mejia",
+   "stad": "Medellin",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "Juan Diego Mejia",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/juan-diego-mejia-medellin-colombia"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Medellín/Plastic-Surgeon",
+     "soort": "realself",
+     "wat": "115 reviews (4,1), meeste in Medellin; niet gesponsord; neemt via RealSelf geen consulten aan."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Medellín/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "115 reviews (4,1) in de Medellin-lijst tummy tuck."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk Hector Garcia (Medellin)",
+   "stad": "Medellin",
+   "site": "",
+   "site_bron": "Niet gevonden (de site hectorgarcia.squarespace.com hoort bij een naamgenoot in Bucaramanga)",
+   "chirurgen": [
+    {
+     "naam": "Hector Garcia",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/hector-garcia-medellin-colombia"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Medellín/Plastic-Surgeon",
+     "soort": "realself",
+     "wat": "66 reviews (4,7), niet gesponsord."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "66 reviews (4,7) in de Colombia-lijst BBL."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk John Orlas Blair",
+   "stad": "Medellin",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "John Fredy Orlas Blair",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/john-orlas-blair-medellin-poblado-colombia"
+    }
+   ],
+   "ziekenhuis": "Calle 7 39-107, El Poblado (praktijkadres)",
+   "ziekenhuis_bron": "https://www.realself.com/dr/john-orlas-blair-medellin-poblado-colombia",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Medellín/Plastic-Surgeon",
+     "soort": "realself",
+     "wat": "13 reviews (5,0), niet gesponsord."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/city/medellin",
+     "soort": "asps",
+     "wat": "ASPS-zoekgids Medellin: John Fredy Orlas Blair, MD."
+    },
+    {
+     "url": "https://us-uk.bookimed.com/doctor/john-orlas-blair/",
+     "soort": "betaald/makelaar",
+     "wat": "Vermeld op Bookimed."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Carlos Betancur",
+   "stad": "Medellin",
+   "site": "https://www.cirujanoplasticomedellin.co/",
+   "site_bron": "Bedrijvenlijst mommy-makeover-packages.pages.dev (https://mommy-makeover-packages.pages.dev/south-america/colombia/medellin/dr-carlos-betancur-cirujano-plastico-en-medellin)",
+   "chirurgen": [
+    {
+     "naam": "Carlos Betancur",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/carlos-betancur-medellin-antioquia-colombia"
+    }
+   ],
+   "ziekenhuis": "Torre Medica El Tesoro, El Poblado (praktijkadres)",
+   "ziekenhuis_bron": "https://mommy-makeover-packages.pages.dev/south-america/colombia/medellin/dr-carlos-betancur-cirujano-plastico-en-medellin",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/find/Colombia/Medellín/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "9 reviews (4,7), niet gesponsord."
+    },
+    {
+     "url": "https://www.whatclinic.com/cosmetic-plastic-surgery/colombia/medellin/dr-carlos-betancur",
+     "soort": "betaald/makelaar",
+     "wat": "Vermeld op WhatClinic."
+    }
+   ]
+  },
+  {
+   "naam": "Zamir Paez Plastic Surgeon (Zamir Paez)",
+   "stad": "Medellin",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "Zamir Eid Paez Mojica",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://find.plasticsurgery.org/city/medellin"
+    }
+   ],
+   "ziekenhuis": "Edificio Q Office, Calle 2 20-50 (praktijkadres volgens ASPS)",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/city/medellin",
+   "vermeld_in": [
+    {
+     "url": "https://find.plasticsurgery.org/city/medellin",
+     "soort": "asps",
+     "wat": "ASPS-zoekgids Medellin."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Medellín/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "2 reviews (5,0), plus praktijkvermelding; niet gesponsord."
+    },
+    {
+     "url": "https://us-uk.bookimed.com/clinic/dr-zamir-paez/",
+     "soort": "betaald/makelaar",
+     "wat": "Vermeld op Bookimed."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk Yesid Cardenas",
+   "stad": "Medellin",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "Yesid Cardenas Castellanos",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://find.plasticsurgery.org/city/medellin"
+    }
+   ],
+   "ziekenhuis": "Torre Intermedica, Calle 7 39-197 (praktijkadres volgens ASPS)",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/city/medellin",
+   "vermeld_in": [
+    {
+     "url": "https://find.plasticsurgery.org/city/medellin",
+     "soort": "asps",
+     "wat": "ASPS-zoekgids Medellin."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Medellín/Plastic-Surgeon",
+     "soort": "realself",
+     "wat": "6 reviews (4,3), niet gesponsord."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk J. Nicolas McLean",
+   "stad": "Medellin",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "J. Nicolas McLean",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://find.plasticsurgery.org/city/medellin"
+    }
+   ],
+   "ziekenhuis": "Torre Medica El Tesoro (praktijkadres volgens ASPS)",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/city/medellin",
+   "vermeld_in": [
+    {
+     "url": "https://find.plasticsurgery.org/city/medellin",
+     "soort": "asps",
+     "wat": "ASPS-zoekgids Medellin."
+    },
+    {
+     "url": "https://www.realself.com/find/Colombia/Medellín/Plastic-Surgeon",
+     "soort": "realself",
+     "wat": "1 review (5,0), niet gesponsord."
+    }
+   ]
+  },
+  {
+   "naam": "Praktijk Jorge Mejia Canas",
+   "stad": "Medellin",
+   "site": "",
+   "site_bron": "Niet gevonden",
+   "chirurgen": [
+    {
+     "naam": "Jorge Mejía Cañas",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://find.plasticsurgery.org/city/medellin"
+    }
+   ],
+   "ziekenhuis": "Edificio Forum, Calle 7 Sur 42-70 (praktijkadres volgens ASPS)",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/city/medellin",
+   "vermeld_in": [
+    {
+     "url": "https://find.plasticsurgery.org/city/medellin",
+     "soort": "asps",
+     "wat": "ASPS-zoekgids Medellin."
+    }
+   ]
+  }
+ ]
+}

@@ -2824,6 +2824,1252 @@
      ]
     }
    }
+  },
+  "plastic-colombia": {
+   "id": "plastic-colombia",
+   "land": "CO",
+   "ingreep": "bbl",
+   "comparison_title": {
+    "en": "Plastic surgery Colombia",
+    "nl": "Plastische chirurgie Colombia",
+    "de": "Schönheitschirurgie Kolumbien"
+   },
+   "naar": "colombia",
+   "methode": "plastisch",
+   "registers": {
+    "board": "SCCP",
+    "vereniging": "",
+    "regionaal": "",
+    "acc": "ICONTEC (Acreditación en Salud)",
+    "boardTekst": {
+     "en": "member of SCCP, the Colombian plastic surgery society, which admits only plastic surgeons with a recognised specialist training",
+     "nl": "lid van SCCP, de Colombiaanse vereniging voor plastische chirurgie, die alleen plastisch chirurgen met een erkende specialistenopleiding toelaat",
+     "de": "Mitglied der SCCP, der kolumbianischen Gesellschaft für plastische Chirurgie, die nur plastische Chirurgen mit anerkannter Facharztausbildung aufnimmt"
+    },
+    "boardKort": {
+     "en": "verified SCCP membership",
+     "nl": "bewezen lidmaatschap van SCCP",
+     "de": "belegter SCCP-Mitgliedschaft"
+    }
+   },
+   "gecontroleerd": "2026-11-16",
+   "gepubliceerd": "2026-11-16",
+   "slugs": {
+    "en": "best-plastic-surgeons-colombia",
+    "nl": "nl/beste-plastisch-chirurgen-colombia",
+    "de": "de/beste-schoenheitschirurgen-kolumbien"
+   },
+   "klinieken": [
+    {
+     "id": "premiumcare",
+     "naam": "Premium Care Plastic Surgery (Dr. Alex Campbell, Dr. Carolina Restrepo)",
+     "stad": "Cartagena",
+     "site": "https://premiumcareplasticsurgery.com/",
+     "artsen": [
+      {
+       "naam": "Alex Campbell",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/alex-campbell-bocagrande-cartagena-colombia"
+      },
+      {
+       "naam": "Carolina Restrepo",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/carolina-restrepo-cartagena-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Alex Campbell (Christopher Alexander Campbell)",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/?city=Telefonos&country=Colombia"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 297,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/premium-care-plastic-surgery-cartagena-bolivar",
+       "datum": "2026-11-16",
+       "laatste": "2026-08-03"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 200,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/alex-campbell-bocagrande-cartagena-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2026-07-30"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 42,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/carolina-restrepo-cartagena-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2026-08-03"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "USD 5.800 tot 6.200 all-inclusive buikwandcorrectie (gemiddeld, artikel 19 nov 2025)",
+      "prijs_bron": "https://premiumcareplasticsurgery.com/en/tummy-tuck-cost-miami-toronto-vs-colombia-premium-care/",
+      "arts_opereert": "deels",
+      "arts_bron": "https://premiumcareplasticsurgery.com/en/body-plastic-surgery-colombia/tummy-tuck-in-colombia/",
+      "garantie": "",
+      "garantie_bron": "https://premiumcareplasticsurgery.com/en/all-inclusive-packages/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Premium Care is the only practice in this list with enough practice reviews to rank as a clinic: 297 on RealSelf, average 4.8, the newest from August 2026. Dr. Alex Campbell is an international ASPS member. It is the only practice that publishes a price (USD 5,800 to 6,200 all inclusive for a tummy tuck) and it has its own recovery suites. The site does not say which surgeon does which steps.",
+      "nl": "Premium Care is de enige praktijk in deze lijst met genoeg praktijkreviews om als kliniek te tellen: 297 op RealSelf, gemiddeld 4,8, de nieuwste van augustus 2026. Dr. Alex Campbell is internationaal lid van ASPS. Het is de enige praktijk met een prijs online (5.800 tot 6.200 dollar alles inbegrepen voor een buikwandcorrectie) en heeft eigen herstelsuites. De site zegt niet welke chirurg welke stappen doet.",
+      "de": "Premium Care ist die einzige Praxis dieser Liste mit genug Praxisbewertungen für einen Platz als Klinik: 297 auf RealSelf, im Schnitt 4,8, die neueste vom August 2026. Dr. Alex Campbell ist internationales ASPS-Mitglied. Nur diese Praxis veröffentlicht einen Preis (5.800 bis 6.200 Dollar alles inklusive für eine Bauchdeckenstraffung) und hat eigene Erholungssuiten. Wer welchen Schritt macht, sagt die Website nicht."
+     }
+    },
+    {
+     "id": "gonzalez",
+     "naam": "Dr. Alan González (Vitalum IPS)",
+     "stad": "Bogotá, Barranquilla, Cali",
+     "site": "https://alangonzalez.com/",
+     "artsen": [
+      {
+       "naam": "Alan Gonzalez Varela",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/alan-gonzalez-bogota-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Alan Gonzalez (Alan Gonzalez Varela)",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/colombia?page=2"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 165,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/alan-gonzalez-bogota-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2026-10-14"
+      },
+      {
+       "platform": "Top Doctors",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 1,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.topdoctors.com.co/doctor/alan-gonzalez-varela/opiniones/",
+       "datum": "2026-11-16",
+       "laatste": ""
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://alangonzalez.com/tummy-tuck-surgery-everything-you-need-to-know/",
+      "arts_opereert": "ja",
+      "arts_bron": "https://alangonzalez.com/tummy-tuck-surgery-everything-you-need-to-know/",
+      "garantie": "",
+      "garantie_bron": "https://alangonzalez.com/procedimiento/bbl-butt-lift/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Alan González has 165 reviews on RealSelf with an average of 5.0, the newest from October 2026. ASPS lists an Alan Gonzalez Varela in Bogotá as an international member. His site says he performs all tummy tucks himself, in Bogotá, Cali and Barranquilla. No price is published.",
+      "nl": "Dr. Alan González heeft 165 reviews op RealSelf, gemiddeld 5,0, de nieuwste van oktober 2026. ASPS noemt een Alan Gonzalez Varela in Bogotá als internationaal lid. Zijn site zegt dat hij elke buikwandcorrectie zelf doet, in Bogotá, Cali en Barranquilla. Er staat geen prijs online.",
+      "de": "Dr. Alan González hat 165 Bewertungen auf RealSelf, im Schnitt 5,0, die neueste vom Oktober 2026. Die ASPS führt einen Alan Gonzalez Varela in Bogotá als internationales Mitglied. Laut seiner Website macht er jede Bauchdeckenstraffung selbst, in Bogotá, Cali und Barranquilla. Ein Preis steht nicht online."
+     }
+    },
+    {
+     "id": "amaya",
+     "naam": "AmayaClinic (Dr. Felipe Amaya)",
+     "stad": "Bogotá",
+     "site": "https://amayaclinic.co/",
+     "artsen": [
+      {
+       "naam": "Felipe Amaya",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/felipe-amaya-bogota-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Felipe Amaya"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.6,
+       "max": 5,
+       "aantal": 127,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/felipe-amaya-bogota-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2026-10-07"
+      },
+      {
+       "platform": "Doctoralia",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 56,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.doctoralia.co/felipe-amaya-espinosa/cirujano-plastico/bogota",
+       "datum": "2026-11-16",
+       "laatste": "2026-10-22"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://amayaclinic.co/abdominoplastia-lipectomia-bogota/",
+      "arts_opereert": "deels",
+      "arts_bron": "https://amayaclinic.co/en/blog/anestesia-en-cirugia-plastica-3/",
+      "garantie": "",
+      "garantie_bron": "https://amayaclinic.co/en/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Felipe Amaya has 127 reviews on RealSelf (average 4.6, newest October 2026) and 56 on Doctoralia (average 5.0). AmayaClinic has its own recovery suites. The site presents him as head of the clinic but does not say he performs the operation himself. We could not verify a society membership.",
+      "nl": "Dr. Felipe Amaya heeft 127 reviews op RealSelf (gemiddeld 4,6, de nieuwste van oktober 2026) en 56 op Doctoralia (gemiddeld 5,0). AmayaClinic heeft eigen herstelsuites. De site noemt hem als hoofd van de kliniek maar zegt niet dat hij zelf opereert. Een lidmaatschap konden we niet nakijken.",
+      "de": "Dr. Felipe Amaya hat 127 Bewertungen auf RealSelf (im Schnitt 4,6, die neueste vom Oktober 2026) und 56 auf Doctoralia (im Schnitt 5,0). Die AmayaClinic hat eigene Erholungssuiten. Die Website nennt ihn als Leiter, sagt aber nicht, dass er selbst operiert. Eine Mitgliedschaft konnten wir nicht prüfen."
+     }
+    },
+    {
+     "id": "pavajeau",
+     "naam": "Ciencia y Estética (Dr. Luis Pavajeau)",
+     "stad": "Bogotá",
+     "site": "https://www.mejorescirujanosplasticosdecolombia.com/en/liposuction-colombia",
+     "artsen": [
+      {
+       "naam": "Luis Pavajeau",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/luis-pavajeau-bogota-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Luis Pavajeau"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.7,
+       "max": 5,
+       "aantal": 119,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/luis-pavajeau-bogota-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2023-06-24"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://www.mejorescirujanosplasticosdecolombia.com/en/liposuction-colombia",
+      "arts_opereert": "ja",
+      "arts_bron": "https://www.mejorescirujanosplasticosdecolombia.com/en/liposuction-colombia",
+      "garantie": "",
+      "garantie_bron": "https://www.mejorescirujanosplasticosdecolombia.com/en/copia-de-body-institute"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Luis Pavajeau has 119 reviews on RealSelf with an average of 4.7, but the newest is from June 2023. His site says he makes the incisions himself and that he operates at Body Institute in Bogotá. Only extras are priced, not the operation.",
+      "nl": "Dr. Luis Pavajeau heeft 119 reviews op RealSelf, gemiddeld 4,7, maar de nieuwste is van juni 2023. Zijn site zegt dat hij de sneden zelf maakt en opereert in Body Institute in Bogotá. Alleen extra's hebben een prijs, de operatie niet.",
+      "de": "Dr. Luis Pavajeau hat 119 Bewertungen auf RealSelf, im Schnitt 4,7, die neueste aber vom Juni 2023. Laut seiner Website setzt er die Schnitte selbst und operiert im Body Institute in Bogotá. Nur Extras haben einen Preis, die Operation nicht."
+     }
+    },
+    {
+     "id": "plazas",
+     "naam": "Dr. Luis Eduardo Plazas",
+     "stad": "Cali",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Luis Eduardo Plazas",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/luis-eduardo-plazas-cali-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Luis Eduardo Plazas"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 3.7,
+       "max": 5,
+       "aantal": 151,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/luis-eduardo-plazas-cali-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2023-06-29"
+      }
+     ],
+     "vermeld": [
+      "https://community.realself.com/forum/good-bbl-doctors-colombia"
+     ],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Luis Eduardo Plazas has 151 reviews on RealSelf, but an average of 3.7 and the newest from June 2023. We found no website of his own.",
+      "nl": "Dr. Luis Eduardo Plazas heeft 151 reviews op RealSelf, maar gemiddeld 3,7 en de nieuwste van juni 2023. We vonden geen eigen site.",
+      "de": "Dr. Luis Eduardo Plazas hat 151 Bewertungen auf RealSelf, aber im Schnitt 3,7 und die neueste vom Juni 2023. Eine eigene Website fanden wir nicht."
+     }
+    },
+    {
+     "id": "mejia",
+     "naam": "Dr. Juan Diego Mejía",
+     "stad": "Medellín",
+     "site": "https://drjuandiegomejia.com/",
+     "artsen": [
+      {
+       "naam": "Juan Diego Mejia",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/juan-diego-mejia-medellin-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Juan Diego Mejia"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.1,
+       "max": 5,
+       "aantal": 115,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/juan-diego-mejia-medellin-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2024-12-13"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://drjuandiegomejia.com/",
+      "arts_opereert": "",
+      "arts_bron": "https://drjuandiegomejia.com/",
+      "garantie": "",
+      "garantie_bron": "https://drjuandiegomejia.com/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Juan Diego Mejía has 115 reviews on RealSelf with an average of 4.1, the newest from December 2024. His site does not say who performs the operation and publishes no price.",
+      "nl": "Dr. Juan Diego Mejía heeft 115 reviews op RealSelf, gemiddeld 4,1, de nieuwste van december 2024. Zijn site zegt niet wie opereert en noemt geen prijs.",
+      "de": "Dr. Juan Diego Mejía hat 115 Bewertungen auf RealSelf, im Schnitt 4,1, die neueste vom Dezember 2024. Seine Website sagt nicht, wer operiert, und nennt keinen Preis."
+     }
+    },
+    {
+     "id": "villalobos",
+     "naam": "Dr. Harold Villalobos",
+     "stad": "Cali",
+     "site": "https://haroldvillalobos.co/",
+     "artsen": [
+      {
+       "naam": "Harold Villalobos",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/harold-villalobos-cali-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Harold Villalobos"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 3.9,
+       "max": 5,
+       "aantal": 86,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/harold-villalobos-cali-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2023-12-19"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://haroldvillalobos.co/lipoescultura/",
+      "arts_opereert": "deels",
+      "arts_bron": "https://haroldvillalobos.co/lipoescultura/",
+      "garantie": "",
+      "garantie_bron": "https://haroldvillalobos.co/lipoescultura/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Harold Villalobos has 86 reviews on RealSelf with an average of 3.9, the newest from December 2023.",
+      "nl": "Dr. Harold Villalobos heeft 86 reviews op RealSelf, gemiddeld 3,9, de nieuwste van december 2023.",
+      "de": "Dr. Harold Villalobos hat 86 Bewertungen auf RealSelf, im Schnitt 3,9, die neueste vom Dezember 2023."
+     }
+    },
+    {
+     "id": "triana",
+     "naam": "Corpus & Rostrum (Dr. Lina Triana)",
+     "stad": "Cali",
+     "site": "https://drlinatriana.com/en/",
+     "artsen": [
+      {
+       "naam": "Lina Triana",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/lina-triana-cali-colombia"
+      },
+      {
+       "naam": "John Garcia Serna",
+       "titel": "MD",
+       "bron": "https://find.plasticsurgery.org/country/colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Lina Maria Triana Lloreda",
+      "board": true,
+      "board_bron": "https://cirugiaplastica.org.co/quienes-somos/",
+      "asps": true,
+      "asps_bron": "https://www.plasticsurgery.org/md/Lina-Triana.html",
+      "isaps": true,
+      "isaps_bron": "https://www.isaps.org/education/residents-program/isaps-fellowship-program/colombia-cali/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 68,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/lina-triana-cali-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2025-12-18"
+      }
+     ],
+     "vermeld": [
+      "https://www.elpais.com.co/salud/le-llevamos-anos-luz-al-resto-del-mundo-liliana-triana.html",
+      "https://www.portafolio.co/negocios/empresas/entrevista-lina-triana-presidenta-de-la-sociedad-internacional-de-cirugia-plastica-estetica-588703"
+     ],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://drlinatriana.com/en/aesthetic-surgery-international-patients/",
+      "arts_opereert": "ja",
+      "arts_bron": "https://drlinatriana.com/en/aesthetic-surgery-international-patients/",
+      "garantie": "",
+      "garantie_bron": "https://drlinatriana.com/en/aesthetic-surgery-international-patients/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Lina Triana is on the national board of the plastic surgery society SCCP, hosts ISAPS fellows in Cali and is listed by ASPS. She has 68 reviews on RealSelf with an average of 4.9, the newest from December 2025. Her site says your surgeon will always be her. No price is published.",
+      "nl": "Dr. Lina Triana zit in het landelijk bestuur van de vereniging voor plastische chirurgie SCCP, leidt ISAPS-fellows op in Cali en staat bij ASPS. Ze heeft 68 reviews op RealSelf, gemiddeld 4,9, de nieuwste van december 2025. Haar site zegt dat zij altijd zelf je chirurg is. Er staat geen prijs online.",
+      "de": "Dr. Lina Triana sitzt im nationalen Vorstand der Fachgesellschaft SCCP, bildet in Cali ISAPS-Fellows aus und ist bei der ASPS gelistet. Sie hat 68 Bewertungen auf RealSelf, im Schnitt 4,9, die neueste vom Dezember 2025. Laut ihrer Website ist sie immer selbst die Chirurgin. Ein Preis steht nicht online."
+     }
+    },
+    {
+     "id": "garcia",
+     "naam": "Dr. Héctor García",
+     "stad": "Medellín",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Hector Garcia",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/hector-garcia-medellin-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Hector Garcia"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.7,
+       "max": 5,
+       "aantal": 66,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/hector-garcia-medellin-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2025-03-14"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://hectorgarcia.squarespace.com/en/international-patients",
+      "arts_opereert": "",
+      "arts_bron": "https://www.drhectorjgarcia.com/en/tummy-tuck",
+      "garantie": "",
+      "garantie_bron": "https://hectorgarcia.squarespace.com/en/international-patients"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Héctor García has 66 reviews on RealSelf with an average of 4.7, the newest from March 2025. RealSelf places him in Medellín, while a website under his name gives an address in Bucaramanga, so we did not link a website.",
+      "nl": "Dr. Héctor García heeft 66 reviews op RealSelf, gemiddeld 4,7, de nieuwste van maart 2025. RealSelf zet hem in Medellín, een site op zijn naam noemt een adres in Bucaramanga; daarom koppelen we geen site.",
+      "de": "Dr. Héctor García hat 66 Bewertungen auf RealSelf, im Schnitt 4,7, die neueste vom März 2025. RealSelf verortet ihn in Medellín, eine Website unter seinem Namen nennt eine Adresse in Bucaramanga; deshalb verknüpfen wir keine Website."
+     }
+    },
+    {
+     "id": "rios",
+     "naam": "Centro Médico Santuario (Dr. Carlos Alberto Ríos)",
+     "stad": "Cali",
+     "site": "https://santuario.com.co/en/home-english/",
+     "artsen": [
+      {
+       "naam": "Carlos Alberto Rios Garcia",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/carlos-albe-cali-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Carlos Alberto Rios Garcia"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.5,
+       "max": 5,
+       "aantal": 56,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/carlos-albe-cali-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2022-03-01"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 2,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/find/Colombia/Cali/Liposculpture",
+       "datum": "2026-11-16",
+       "laatste": ""
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://santuario.com.co/en/home-english/",
+      "arts_opereert": "deels",
+      "arts_bron": "https://santuario.com.co/en/home-english/",
+      "garantie": "",
+      "garantie_bron": "https://santuario.com.co/en/home-english/"
+     },
+     "risico": []
+    },
+    {
+     "id": "rodriguez",
+     "naam": "Dr. Lina Rodríguez",
+     "stad": "Barranquilla",
+     "site": "https://linarodriguez.co/",
+     "artsen": [
+      {
+       "naam": "Lina Rodriguez",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/lina-rodriguez-puerto-colombia-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Lina Rodriguez"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 48,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/lina-rodriguez-puerto-colombia-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2026-06-02"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://linarodriguez.co/servicios/lipoescultura/",
+      "arts_opereert": "ja",
+      "arts_bron": "https://linarodriguez.co/servicios/lipoescultura/",
+      "garantie": "",
+      "garantie_bron": "https://linarodriguez.co/servicios/lipoescultura/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Lina Rodríguez has 48 reviews on RealSelf with an average of 5.0, the newest from June 2026. Her site says she performs the procedures herself, at Clínica Porto Azul and Clínica del Caribe in Barranquilla. We found no register membership we could check, and the price follows only after an assessment.",
+      "nl": "Dr. Lina Rodríguez heeft 48 reviews op RealSelf, gemiddeld 5,0, de nieuwste van juni 2026. Haar site zegt dat zij de ingrepen zelf doet, in Clínica Porto Azul en Clínica del Caribe in Barranquilla. We vonden geen lidmaatschap dat we konden nakijken, en de prijs volgt pas na een beoordeling.",
+      "de": "Dr. Lina Rodríguez hat 48 Bewertungen auf RealSelf, im Schnitt 5,0, die neueste vom Juni 2026. Laut ihrer Website operiert sie selbst, in der Clínica Porto Azul und der Clínica del Caribe in Barranquilla. Eine prüfbare Mitgliedschaft fanden wir nicht, den Preis gibt es erst nach einer Beurteilung."
+     }
+    },
+    {
+     "id": "hoyos",
+     "naam": "Total Definer (Dr. Alfredo Hoyos)",
+     "stad": "Bogotá",
+     "site": "https://alfredohoyos.com/en",
+     "artsen": [
+      {
+       "naam": "Alfredo Hoyos",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/alfredo-hoyos-bogota-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Alfredo Hoyos Ariza",
+      "isaps": true,
+      "isaps_bron": "https://isaps.org/education/residents-program/isaps-mentor-program/isaps-mentors"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 3.5,
+       "max": 5,
+       "aantal": 45,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/alfredo-hoyos-bogota-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2026-06-03"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://alfredohoyos.com/en/patient-journey",
+      "arts_opereert": "deels",
+      "arts_bron": "https://alfredohoyos.com/en/patient-journey",
+      "garantie": "",
+      "garantie_bron": "https://alfredohoyos.com/en/patient-journey"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Alfredo Hoyos is an ISAPS mentor. He has 45 reviews on RealSelf with an average of 3.5, the newest from June 2026. His site names Clínica Dhara in Bogotá as the place of surgery but does not say he performs the operation himself.",
+      "nl": "Dr. Alfredo Hoyos is mentor bij ISAPS. Hij heeft 45 reviews op RealSelf, gemiddeld 3,5, de nieuwste van juni 2026. Zijn site noemt Clínica Dhara in Bogotá als plek van de operatie, maar zegt niet dat hij zelf opereert.",
+      "de": "Dr. Alfredo Hoyos ist ISAPS-Mentor. Er hat 45 Bewertungen auf RealSelf, im Schnitt 3,5, die neueste vom Juni 2026. Seine Website nennt die Clínica Dhara in Bogotá als Ort der Operation, sagt aber nicht, dass er selbst operiert."
+     }
+    },
+    {
+     "id": "gomez",
+     "naam": "Dr. Carlos Gómez",
+     "stad": "Cali",
+     "site": "https://drcarlosgomez.co/en/",
+     "artsen": [
+      {
+       "naam": "Carlos Gomez",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/carlos-gomez-cali-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Carlos Gomez"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 3.1,
+       "max": 5,
+       "aantal": 43,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/carlos-gomez-cali-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2026-06-11"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://drcarlosgomez.co/en/",
+      "arts_opereert": "",
+      "arts_bron": "https://drcarlosgomez.co/en/",
+      "garantie": "",
+      "garantie_bron": "https://drcarlosgomez.co/en/"
+     },
+     "risico": []
+    },
+    {
+     "id": "soto",
+     "naam": "Sublime Plastic Surgery (Dr. Javier Soto)",
+     "stad": "Cartagena",
+     "site": "https://sublimeplasticsurgerygroup.com/about-us/",
+     "artsen": [
+      {
+       "naam": "Javier Soto",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/javier-soto-cartagena-bolivar-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Javier Soto",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/?city=Telefonos&country=Colombia"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.3,
+       "max": 5,
+       "aantal": 38,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/javier-soto-cartagena-bolivar-colombia",
+       "datum": "2026-11-16",
+       "laatste": ""
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://sublimeplasticsurgerygroup.com/about-us/",
+      "arts_opereert": "",
+      "arts_bron": "https://sublimeplasticsurgerygroup.com/about-us/",
+      "garantie": "",
+      "garantie_bron": "https://sublimeplasticsurgerygroup.com/about-us/"
+     },
+     "risico": []
+    },
+    {
+     "id": "correa",
+     "naam": "Dr. Fulvio Correa",
+     "stad": "Cartagena",
+     "site": "https://fulviocorrea.com/",
+     "artsen": [
+      {
+       "naam": "Fulvio Correa",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/fulvio-correa-bogota-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Fulvio Correa"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 36,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/fulvio-correa-bogota-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2026-04-10"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 3.0,
+       "max": 5,
+       "aantal": 1,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/find/Colombia/Cartagena/Liposculpture",
+       "datum": "2026-11-16",
+       "laatste": ""
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://fulviocorrea.com/plastic-surgery-colombia/",
+      "arts_opereert": "ja",
+      "arts_bron": "https://fulviocorrea.com/international-patients/",
+      "garantie": "",
+      "garantie_bron": "https://fulviocorrea.com/international-patients/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "Dr. Fulvio Correa has 36 reviews on RealSelf with an average of 4.9, the newest from April 2026. His site says he operates at CAPRI Clinic in Cartagena and that he does not publish prices.",
+      "nl": "Dr. Fulvio Correa heeft 36 reviews op RealSelf, gemiddeld 4,9, de nieuwste van april 2026. Zijn site zegt dat hij opereert in CAPRI Clinic in Cartagena en dat hij geen prijzen publiceert.",
+      "de": "Dr. Fulvio Correa hat 36 Bewertungen auf RealSelf, im Schnitt 4,9, die neueste vom April 2026. Laut seiner Website operiert er in der CAPRI Clinic in Cartagena und veröffentlicht keine Preise."
+     }
+    },
+    {
+     "id": "diazpaz",
+     "naam": "Dr. Andrés Díaz Paz",
+     "stad": "Cali",
+     "site": "https://doctorandresdiaz.com/",
+     "artsen": [
+      {
+       "naam": "Andres Diaz Paz",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/andres-diaz-paz-cali-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Diaz Paz"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.3,
+       "max": 5,
+       "aantal": 25,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/andres-diaz-paz-cali-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2023-06-05"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://doctorandresdiaz.com/",
+      "arts_opereert": "deels",
+      "arts_bron": "https://doctorandresdiaz.com/",
+      "garantie": "",
+      "garantie_bron": "https://doctorandresdiaz.com/"
+     },
+     "risico": []
+    },
+    {
+     "id": "henao",
+     "naam": "Dr. Alder James Henao Bonilla",
+     "stad": "Cali",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Alder James Henao Bonilla",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/alder-james-henao-bonilla-cali-valle-del-cauca-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Alder James Henao Bonilla",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/colombia"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 2.8,
+       "max": 5,
+       "aantal": 21,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/alder-james-henao-bonilla-cali-valle-del-cauca-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2026-03-31"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "recio",
+     "naam": "Dr. Carlos Recio",
+     "stad": "Cali",
+     "site": "https://doctorcarlosrecio.com/",
+     "artsen": [
+      {
+       "naam": "Carlos Recio",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/carlos-r-cali-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Carlos Recio"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 18,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/carlos-r-cali-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2019-05-08"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://doctorcarlosrecio.com/catalogos/lipoescultura-en-cali/",
+      "arts_opereert": "ja",
+      "arts_bron": "https://doctorcarlosrecio.com/catalogos/lipoescultura-en-cali/",
+      "garantie": "",
+      "garantie_bron": "https://doctorcarlosrecio.com/catalogos/lipoescultura-en-cali/"
+     },
+     "risico": []
+    },
+    {
+     "id": "oswaldo",
+     "naam": "Dr. Oswaldo Gómez Díaz",
+     "stad": "Bogotá",
+     "site": "https://cirujanoplasticobogota.co/",
+     "artsen": [
+      {
+       "naam": "Oswaldo J. Gomez Diaz",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/oswaldo-j-gomez-diaz-bogota-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Oswaldo J. Gomez Diaz"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 15,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/oswaldo-j-gomez-diaz-bogota-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2018-06-19"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://cirujanoplasticobogota.co/nosotros/",
+      "arts_opereert": "deels",
+      "arts_bron": "https://cirujanoplasticobogota.co/nosotros/",
+      "garantie": "",
+      "garantie_bron": "https://cirujanoplasticobogota.co/nosotros/"
+     },
+     "risico": []
+    },
+    {
+     "id": "guarin",
+     "naam": "Dr. David Guarín",
+     "stad": "Cali",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "David Guarin",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/david-guarin-cali-valle-del-cauca-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "David Guarin Sastre",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/?city=Cali&country=Colombia"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 15,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/david-guarin-cali-valle-del-cauca-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2023-07-22"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "orlas",
+     "naam": "Dr. John Orlas Blair",
+     "stad": "Medellín",
+     "site": "https://johnorlasblair.com/en/home/",
+     "artsen": [
+      {
+       "naam": "John Fredy Orlas Blair",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/john-orlas-blair-medellin-poblado-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "John Fredy Orlas Blair",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/?country=Colombia&city=Medellin"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 13,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/john-orlas-blair-medellin-poblado-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2020-01-04"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://johnorlasblair.com/en/body-surgery/lipoabdominoplasty/",
+      "arts_opereert": "deels",
+      "arts_bron": "https://johnorlasblair.com/en/body-surgery/lipoabdominoplasty/",
+      "garantie": "",
+      "garantie_bron": "https://johnorlasblair.com/en/body-surgery/lipoabdominoplasty/"
+     },
+     "risico": []
+    },
+    {
+     "id": "betancur",
+     "naam": "Dr. Carlos Betancur",
+     "stad": "Medellín",
+     "site": "https://cirujanoplasticomedellin.co/",
+     "artsen": [
+      {
+       "naam": "Carlos Betancur",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/carlos-betancur-medellin-antioquia-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Carlos Betancur"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.7,
+       "max": 5,
+       "aantal": 9,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/carlos-betancur-medellin-antioquia-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2020-10-26"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://cirujanoplasticomedellin.co/",
+      "arts_opereert": "deels",
+      "arts_bron": "https://cirujanoplasticomedellin.co/",
+      "garantie": "",
+      "garantie_bron": "https://cirujanoplasticomedellin.co/"
+     },
+     "risico": []
+    },
+    {
+     "id": "puello",
+     "naam": "Dr. Jorge Puello White",
+     "stad": "Bogotá, Cartagena",
+     "site": "https://doctorpuello.com/quien-soy",
+     "artsen": [
+      {
+       "naam": "Jorge Puello White",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/jorge-puello-white-cartagena-colombia"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Jorge Puello White"
+     },
+     "reviews": [],
+     "vermeld": [],
+     "openheid": {
+      "prijs": "",
+      "prijs_bron": "https://doctorpuello.com/quien-soy",
+      "arts_opereert": "",
+      "arts_bron": "https://doctorpuello.com/quien-soy",
+      "garantie": "",
+      "garantie_bron": "https://doctorpuello.com/quien-soy"
+     },
+     "risico": []
+    },
+    {
+     "id": "cardenas",
+     "naam": "Dr. Yesid Cárdenas",
+     "stad": "Medellín",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Yesid Cardenas Castellanos",
+       "titel": "MD",
+       "bron": "https://find.plasticsurgery.org/city/medellin"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Yesid Cardenas Castellanos",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/?country=Colombia&city=Medellin"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.3,
+       "max": 5,
+       "aantal": 6,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/yesid-cardenas-medellin-colombia",
+       "datum": "2026-11-16",
+       "laatste": "2024-12-21"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    },
+    {
+     "id": "paez",
+     "naam": "Dr. Zamir Páez",
+     "stad": "Medellín",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Zamir Eid Paez Mojica",
+       "titel": "MD",
+       "bron": "https://find.plasticsurgery.org/city/medellin"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Zamir Eid Paez Mojica",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/?country=Colombia&city=Medellin"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 2,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/find/Colombia/Medell%C3%ADn/Plastic-Surgeon",
+       "datum": "2026-11-16",
+       "laatste": ""
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": []
+    }
+   ],
+   "niet_gerangschikt": [
+    {
+     "naam": "Clínica Láser Surgical (Bogotá)",
+     "reden": "not ranked: the health supervisor Supersalud closed its plastic surgery service in June 2026",
+     "bron": "https://lakalle.bluradio.com/noticias/bogota/clausuran-una-de-las-clinicas-esteticas-mas-famosas-de-bogota-su-dueno-enfrenta-denuncias-rg10"
+    },
+    {
+     "naam": "Clínica de Obesidad y Envejecimiento (Bogotá)",
+     "reden": "not ranked: Supersalud temporarily closed its plastic surgery service in May 2026 for operating without a licence",
+     "bron": "https://www.vanguardia.com/colombia/2026/05/30/supersalud-ordena-cierre-temporal-a-clinica-de-cirugia-plastica-en-bogota/"
+    }
+   ],
+   "tekst": {
+    "en": {
+     "title": "Best plastic surgeons in Colombia 2026, ranked on data",
+     "h1": "The best plastic surgeons in Colombia, ranked on public data",
+     "desc": "25 plastic surgeons in Bogotá, Medellín, Cali, Cartagena and Barranquilla checked on reviews, memberships, prices and risks. Every fact has a source.",
+     "kort": "On public data checked on 16 November 2026, Dr. Alan González (165 RealSelf reviews, average 5.0), Dr. Lina Rodríguez (48, average 5.0) and Dr. Lina Triana (68, average 4.9) score highest of 25 surgeons. Only one practice, Premium Care in Cartagena, publishes a price, and none offers a written guarantee. Google ratings were only available through a directory where clinics buy placements, so they do not count. Antioquia counted 17 deaths after cosmetic procedures in two years, mostly in unlicensed clinics.",
+     "faq": [
+      {
+       "q": "Who is the best plastic surgeon in Colombia?",
+       "a": "On our data from 16 November 2026, Dr. Alan González, Dr. Lina Rodríguez and Dr. Lina Triana score highest on independent patient reviews. Dr. Triana is also on the national board of the plastic surgery society SCCP."
+      },
+      {
+       "q": "How much is plastic surgery in Colombia?",
+       "a": "Of the 25 surgeons we checked, only Premium Care in Cartagena publishes a price: on average USD 5,800 to 6,200 all inclusive for a tummy tuck. The others give a price only after an assessment."
+      },
+      {
+       "q": "How do I check a plastic surgeon in Colombia?",
+       "a": "Check the surgeon in the national register ReTHUS, ask for membership of the plastic surgery society SCCP and check that the clinic is licensed (habilitada) in the REPS register. The SCCP gives this advice itself."
+      },
+      {
+       "q": "Do clinics pay to be listed?",
+       "a": "No. No clinic pays to be listed or ranked, and paid articles, agents and directories with paid placements do not count as a source."
+      }
+     ]
+    },
+    "nl": {
+     "title": "Beste plastisch chirurgen Colombia 2026: op data",
+     "h1": "De beste plastisch chirurgen in Colombia, op openbare data",
+     "desc": "25 plastisch chirurgen in Bogotá, Medellín, Cali, Cartagena en Barranquilla nagekeken op reviews, lidmaatschappen, prijzen en risico's. Elk feit met bron.",
+     "kort": "Op openbare data van 16 november 2026 scoren Dr. Alan González (165 reviews op RealSelf, gemiddeld 5,0), Dr. Lina Rodríguez (48, gemiddeld 5,0) en Dr. Lina Triana (68, gemiddeld 4,9) het hoogst van 25 chirurgen. Maar één praktijk, Premium Care in Cartagena, zet een prijs online, en geen enkele geeft een schriftelijke garantie. Google-scores waren alleen te vinden via een gids waar klinieken plaatsingen kopen, dus die tellen niet. Antioquia telde in twee jaar 17 doden na cosmetische ingrepen, vooral in klinieken zonder vergunning.",
+     "faq": [
+      {
+       "q": "Wie is de beste plastisch chirurg in Colombia?",
+       "a": "Op onze data van 16 november 2026 scoren Dr. Alan González, Dr. Lina Rodríguez en Dr. Lina Triana het hoogst op onafhankelijke reviews van patiënten. Dr. Triana zit ook in het landelijk bestuur van de vereniging voor plastische chirurgie SCCP."
+      },
+      {
+       "q": "Wat kost plastische chirurgie in Colombia?",
+       "a": "Van de 25 chirurgen die we nakeken zet alleen Premium Care in Cartagena een prijs online: gemiddeld 5.800 tot 6.200 dollar alles inbegrepen voor een buikwandcorrectie. De anderen noemen pas een prijs na een beoordeling."
+      },
+      {
+       "q": "Hoe controleer ik een plastisch chirurg in Colombia?",
+       "a": "Zoek de chirurg op in het nationale register ReTHUS, vraag naar het lidmaatschap van de vereniging SCCP en controleer of de kliniek een vergunning heeft (habilitada) in het register REPS. Dat advies geeft de SCCP zelf."
+      },
+      {
+       "q": "Betalen klinieken voor een plek?",
+       "a": "Nee. Geen kliniek betaalt voor een plek, en betaalde artikelen, bemiddelaars en gidsen met betaalde plaatsingen tellen niet als bron."
+      }
+     ]
+    },
+    "de": {
+     "title": "Beste Schönheitschirurgen Kolumbien 2026 nach Daten",
+     "h1": "Die besten plastischen Chirurgen in Kolumbien, nach öffentlichen Daten",
+     "desc": "25 plastische Chirurgen in Bogotá, Medellín, Cali, Cartagena und Barranquilla geprüft: Bewertungen, Mitgliedschaften, Preise, Risiken. Mit Quellen.",
+     "kort": "Nach öffentlichen Daten vom 16. November 2026 liegen Dr. Alan González (165 Bewertungen auf RealSelf, im Schnitt 5,0), Dr. Lina Rodríguez (48, im Schnitt 5,0) und Dr. Lina Triana (68, im Schnitt 4,9) unter 25 Chirurgen vorn. Nur eine Praxis, Premium Care in Cartagena, veröffentlicht einen Preis, und keine bietet eine schriftliche Garantie. Google-Bewertungen gab es nur über ein Verzeichnis, in dem Kliniken Plätze kaufen, deshalb zählen sie nicht. Antioquia zählte in zwei Jahren 17 Todesfälle nach Schönheitseingriffen, vor allem in Kliniken ohne Zulassung.",
+     "faq": [
+      {
+       "q": "Wer ist der beste Schönheitschirurg in Kolumbien?",
+       "a": "Nach unseren Daten vom 16. November 2026 liegen Dr. Alan González, Dr. Lina Rodríguez und Dr. Lina Triana bei unabhängigen Patientenbewertungen vorn. Dr. Triana sitzt außerdem im nationalen Vorstand der Fachgesellschaft SCCP."
+      },
+      {
+       "q": "Was kostet eine Schönheitsoperation in Kolumbien?",
+       "a": "Von den 25 geprüften Chirurgen veröffentlicht nur Premium Care in Cartagena einen Preis: im Schnitt 5.800 bis 6.200 Dollar alles inklusive für eine Bauchdeckenstraffung. Die anderen nennen einen Preis erst nach einer Beurteilung."
+      },
+      {
+       "q": "Wie prüfe ich einen plastischen Chirurgen in Kolumbien?",
+       "a": "Den Chirurgen im nationalen Register ReTHUS suchen, nach der Mitgliedschaft in der Fachgesellschaft SCCP fragen und prüfen, ob die Klinik im Register REPS zugelassen ist (habilitada). So rät es die SCCP selbst."
+      },
+      {
+       "q": "Zahlen Kliniken für einen Platz?",
+       "a": "Nein. Keine Klinik zahlt für einen Platz, und bezahlte Artikel, Vermittler und Verzeichnisse mit bezahlten Plätzen zählen nicht als Quelle."
+      }
+     ]
+    }
+   }
   }
  }
 }
