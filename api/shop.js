@@ -31,7 +31,7 @@ import { SHOP_PHP } from '../lib/shopphp.js';
 import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
 import { PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, GEDRAG, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel, ttEvent } from '../lib/shopdirect.js';
-import { whEvent, whopKlaar, whopAds, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ } from '../lib/whop.js';
+import { whEvent, whopKlaar, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ } from '../lib/whop.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
 import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
@@ -1042,14 +1042,14 @@ export default async function handler(req, res) {
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0], ua = String(req.headers['user-agent'] || '');
       const mag = /vercel-cron/i.test(ua) || /\.vercel\.app$/i.test(host) || (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET);
       if (op === 'whopstand') { let st = null, lg = []; try { st = await kv.get('hjdk:whop:stand'); lg = ((await kv.raw(['LRANGE', 'hjdk:whop:log', '0', '19'])) || []).map(x => { try { return typeof x === 'string' ? JSON.parse(x) : x; } catch (e) { return null; } }).filter(Boolean); } catch (e) {}
-        if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); const r = st || {}; return res.status(200).send(!st ? 'Nog geen ronde (WHOP_API_KEY ' + (whopKlaar() ? 'staat' : 'ontbreekt') + ')' : `Kadoly Meta via Whop, stand ${r.at}\nVandaag: $${(r.dagSpend || 0).toFixed(2)} uitgegeven, ${r.dag ? r.dag.aan + ' aangekomen, ' + r.dag.echt + ' echte mensen, ' + r.dag.tik + ' tikken op de koopknop, ' + r.dag.kassa + ' op de afrekenpagina, ' + r.dag.koop + ' bestellingen' : ''}\nAdvertenties (totaal sinds start):\n` + (r.rijen || []).map(x => `${x.status === 'active' ? 'aan' : x.status} | ${String(x.titel || x.id).slice(0, 40)} | $${x.spend.toFixed(2)} | ${x.kliks} kliks (Whop) | ${x.aan} aangekomen | ${x.echt} echt | ${x.tik} tik | ${x.kassa} kassa | ${x.koop} koop`).join('\n') + '\n\nRondes:\n' + lg.map(l => `${l.at} ${l.wat}`).join('\n')); }
+        if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); const r = st || {}; return res.status(200).send(!st ? 'Nog geen ronde (WHOP_API_KEY ' + (whopKlaar() ? 'staat' : 'ontbreekt') + ')' : `Kadoly Meta via Whop, stand ${r.at}\n` + (r.campagnes || []).map(c => c.fout ? c.fout : `Campagne ${c.titel || c.id}: ${c.status || '?'}${c.levering ? ' (' + c.levering + ')' : ''}${c.budget != null ? ', budget ' + c.budget : ''}`).join('\n') + `\nVandaag: $${(r.dagSpend || 0).toFixed(2)} uitgegeven, ${r.dag ? r.dag.aan + ' aangekomen, ' + r.dag.echt + ' echte mensen, ' + r.dag.tik + ' tikken op de koopknop, ' + r.dag.kassa + ' op de afrekenpagina, ' + r.dag.koop + ' bestellingen' : ''}\nAdvertenties (totaal sinds start):\n` + (r.rijen || []).map(x => `${x.status === 'active' ? 'aan' : x.status} | ${String(x.titel || x.id).slice(0, 40)} | $${x.spend.toFixed(2)} | ${x.kliks} kliks (Whop) | ${x.aan} aangekomen | ${x.echt} echt | ${x.tik} tik | ${x.kassa} kassa | ${x.koop} koop`).join('\n') + '\n\nRondes:\n' + lg.map(l => `${l.at} ${l.wat}`).join('\n')); }
         return res.status(200).json({ ok: true, stand: st, log: lg }); }
       if (!mag) return res.status(404).send('Niet gevonden');
       if (!whopKlaar()) return res.status(200).json({ ok: true, overgeslagen: 'geen WHOP_API_KEY' });
       const droog = !!url.searchParams.get('droog'), nu = new Date(), dagNL = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Amsterdam' }).format(nu);
       const lg = async (wat, extra) => { try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify(Object.assign({ at: nu.toISOString(), wat }, extra || {}))]); await kv.raw(['LTRIM', 'hjdk:whop:log', '0', '499']); } catch (e) {} };
       const eenmaal = async (k, tekst) => { try { const kk = 'hjdk:whop:alarm:' + k + ':' + dagNL; if (await kv.get(kk)) return; await kv.set(kk, 1, { ex: 2 * 86400 }); } catch (e) {} await whMeld(tekst); };
-      const [alle, dag] = await Promise.all([whopAds(), whopAds(dagNL + 'T00:00:00', nu.toISOString())]);
+      const [alle, dag, camp] = await Promise.all([whopAds(), whopAds(dagNL + 'T00:00:00', nu.toISOString()), whopCampagnes()]);
       if (!alle.ok) { await lg('fout bij ophalen: ' + alle.fout); if (alle.status === 401 || alle.status === 403) await eenmaal('sleutel', 'Kadoly Meta (Whop): de API-sleutel werkt niet (' + alle.fout + '). Controleer WHOP_API_KEY in Vercel (rechten ads lezen, pauzeren en events).'); return res.status(200).json({ ok: false, fout: alle.fout }); }
       const perDag = {}; (dag.ads || []).forEach(a => { perDag[a.id] = Number(a.spend) || 0; }); const dagSpend = Object.values(perDag).reduce((a, b) => a + b, 0);
       const ids = alle.ads.map(a => whId(a.id)); const cm = await tellers('wh', 'a', ids);
@@ -1062,7 +1062,8 @@ export default async function handler(req, res) {
       if (kl >= WH_REGEL.minKliksAankomst && aanT / kl < WH_REGEL.aankomstAlarm) await eenmaal('aankomst', `Kadoly Meta (Whop): ALARM, maar ${Math.round(aanT / kl * 100)}% komt aan (${aanT} van ${kl} kliks). Landingspagina of meting kapot?`);
       if (dagSpend > WH_REGEL.dagMax) await eenmaal('budget', `Kadoly Meta (Whop): vandaag al $${dagSpend.toFixed(2)} uitgegeven, boven de grens van $${WH_REGEL.dagMax}.`);
       if (gedaan.some(g => g.ok)) await whMeld('Kadoly Meta (Whop): ' + gedaan.filter(g => g.ok).length + ' advertentie(s) uitgezet. ' + gedaan.filter(g => g.ok).map(g => g.reden).join(' | '));
-      const stand = { at: nu.toISOString(), dagSpend, dag: dagCm, besteTik, rijen: rijen.sort((a, b) => b.spend - a.spend), uitgezet: gedaan };
+      const campagnes = camp.ok ? camp.campagnes.map(({ velden, ...c }) => droog ? Object.assign({ velden }, c) : c) : [{ fout: 'campagnes niet op te halen: ' + (camp.fout || camp.status) }];
+      const stand = { at: nu.toISOString(), campagnes, dagSpend, dag: dagCm, besteTik, rijen: rijen.sort((a, b) => b.spend - a.spend), uitgezet: gedaan };
       if (!droog) { try { await kv.set('hjdk:whop:stand', stand, { ex: 30 * 86400 }); } catch (e) {} await lg(`$${dagSpend.toFixed(2)} vandaag, ${rijen.filter(x => x.status === 'active').length} aan, ${dagCm.aan} aangekomen, ${dagCm.echt} echt, ${dagCm.tik} tik, ${dagCm.koop} koop` + (gedaan.length ? ', uit: ' + gedaan.map(g => String(g.id)).join(' ') : ''), { uit: gedaan.length }); }
       return res.status(200).json({ ok: true, droog, ...stand }); }
     if (op === 'tttest') { // 16 nov: testgebeurtenis naar de TikTok Events API (alleen via de beschermde vercel.app-host), met de testcode uit Events Manager > Test events; zonder code een gewone ViewContent met een nep-ttclid
