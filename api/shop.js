@@ -661,7 +661,7 @@ async function pixel(req, res, url) {
 
 // ---------------- advertentiebeeld ----------------
 // De productfoto zelf, op maat gesneden als JPEG (klein bestand, ook als de bron webp of png is). icon = 192x192, md = 720x360 (Mondiad), pa = 492x328 (PropellerAds), ca = 360x180 (Clickadu staat hooguit 362x182 toe).
-const MATEN = { icon: [192, 192, 'cover'], md: [720, 360, 'contain'], pa: [492, 328, 'contain'], ca: [360, 180, 'contain'], mg: [984, 656, 'contain'] }; // mg: MGID 3:2, minstens 492x328
+const MATEN = { icon: [192, 192, 'cover'], md: [720, 360, 'contain'], pa: [492, 328, 'contain'], ca: [360, 180, 'contain'], mg: [984, 656, 'contain'], ig: [1080, 1350, 'contain'], sq: [1080, 1080, 'contain'] }; // mg: MGID 3:2, minstens 492x328; ig: Instagram/Facebook 4:5, sq: vierkant (16 nov, Kadoly sociale posts)
 async function plaatje(req, res, url) {
   const cat = await catalog(); const it = cat.items.find(i => i.id === pidOk(url.searchParams.get('p'))); const m = MATEN[String(url.searchParams.get('t') || 'icon').replace(/\.(jpe?g|png|webp)$/i, '')] || MATEN.icon; // /api/shop/beeld/<pid>/<t>.jpg: MGID wil een link die op .jpg eindigt
   if (!it || !it.img) { res.statusCode = 404; return res.end('onbekend product'); }
@@ -913,7 +913,7 @@ export default async function handler(req, res) {
       kv.set('hjdk:shop:duurder', uit.duurderDanElders || {}, { ex: 3 * 86400 }).catch(() => {}); // 13 nov: de verlanglijst (api/w.js) toont nooit wat elders goedkoper is
       uit.bronnen = { catalogus: items.length, metInkoop: Object.keys(kaart).length, marktprijzen: Object.keys(markt).length, vraagtermen: termen.length, metVerkeer: Object.keys(tellers).length, alGetest: Object.keys(getest).length };
       if (url.searchParams.get('kort') === '1') { // compact voor de dagelijkse gidsronde (gids.kadoly.com, 30 okt): welke producten tractie hebben, met titel en categorie
-        const perId = {}; items.forEach(i => { perId[i.id] = i; }); const lijst = (uit.presterend || []).concat(uit.veelbelovend || []).slice(0, 40).map(x => { const i = perId[x.pid] || {}; return { pid: x.pid, titel: i.t, merk: i.b || null, cat: i.c, sub: i.s, thuis: Math.round((num(i.p) + (i.fs ? 0 : num(i.vk))) * 100) / 100, waarom: x.waarom }; });
+        const dd = uit.duurderDanElders || {}; const perId = {}; items.forEach(i => { perId[i.id] = i; }); const lijst = (uit.presterend || []).concat(uit.veelbelovend || []).filter(x => !dd[x.pid] && perId[x.pid] && perId[x.pid].vr !== false).slice(0, 40).map(x => { const i = perId[x.pid] || {}; return { pid: x.pid, titel: i.t, merk: i.b || null, cat: i.c, sub: i.s, thuis: Math.round((num(i.p) + (i.fs ? 0 : num(i.vk))) * 100) / 100, waarom: x.waarom, beeld: i.img ? beeld(x.pid, 'ig') : null }; }); // 16 nov: nooit wat elders goedkoper is of uitverkocht; beeld = 1080x1350 voor de Kadoly-posts (kadoly/taak-social.md)
         return res.status(200).json({ ok: true, dag, tractie: lijst }); }
       if (cache) { // dagkeuze blijft die van vanochtend; oordelen en de vaste plekken voor presterend en veelbelovend zijn altijd vers
         const dd = uit.duurderDanElders || {}; const vast = (cache.gekozen || []).filter(x => x.hoe !== 'presterend' && x.hoe !== 'veelbelovend' && !dd[x.pid]); // 13 nov: nooit wat elders goedkoper is

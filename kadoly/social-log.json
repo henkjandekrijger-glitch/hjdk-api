@@ -1,0 +1,16 @@
+{
+  "uitleg": "Log van de Kadoly-posts op Facebook en Instagram (kadoly/taak-social.md). Alleen toevoegen; cijfers per post na 24 uur.",
+  "zernio_profiel": "6afaf9820c09220040d746f4",
+  "accounts": {
+    "facebook": { "pagina": "Kadoly", "pagina_id": "61596079596846", "account_id": null },
+    "instagram": { "handle": null, "account_id": null }
+  },
+  "lerend": {
+    "aantal_per_dag": 2,
+    "tijdvakken_nl": ["12:15", "19:45"],
+    "soorten": ["sieraad", "mandje", "nieuw", "wonen"],
+    "besluiten": []
+  },
+  "volgers": {},
+  "posts": []
+}
