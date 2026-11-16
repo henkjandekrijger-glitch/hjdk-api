@@ -5,12 +5,15 @@
     "facebook": {
       "pagina": "Kadoly",
       "pagina_id": "61596079596846",
-      "account_id": null,
+      "account_id": "6afafaf7446856cecd87324f",
       "profiel": "bio, categorieen, omslag, profielfoto (logo), e-mail, telefoon, privacylink, impressum, prijsklasse, actieknop (16 nov)"
     },
     "instagram": {
-      "handle": null,
-      "account_id": null
+      "handle": "kadoly.shop",
+      "account_id": null,
+      "ig_id": "17841476967447591",
+      "zernio": "niet gekoppeld: Zernio vraagt een betaalmethode vanaf het 3e account ($6 per maand); Henkjan beslist",
+      "profiel": "naam Kadoly, bio, logo (16 nov); websitelink kan alleen in de app"
     }
   },
   "lerend": {
@@ -37,6 +40,25 @@
       "via": "chrome",
       "wat": "Maak de zin af: het slechtste cadeau dat ik ooit kreeg was... (beeld 1080x1350, geen link)",
       "tijdvak": "13:54"
+    },
+    {
+      "tijd": "2026-11-16T14:02:00Z",
+      "dag": "2026-11-16",
+      "platform": "instagram",
+      "soort": "hook",
+      "via": "chrome",
+      "wat": "Maak de zin af: het slechtste cadeau dat ik ooit kreeg was... (4:5, hashtags)",
+      "tijdvak": "15:02"
+    },
+    {
+      "tijd": "2026-11-16T18:45:00Z",
+      "dag": "2026-11-16",
+      "platform": "facebook",
+      "soort": "sieraad",
+      "pid": "oc_4174005832564737",
+      "tijdvak": "19:45",
+      "via": "zernio",
+      "zernio_id": "6afb0dc13d037958d891cf2b"
     }
   ]
 }
