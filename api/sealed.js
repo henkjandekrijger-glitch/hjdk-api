@@ -6,6 +6,7 @@
 import { kv } from '../lib/db.js';
 import { PAGINAS, UI, BIJGEWERKT } from '../lib/sealed-content.js';
 import { ICONS } from '../lib/sealed-icons.js';
+import { renderPartij, zoekPartij, PARTIJ_INDEX } from '../lib/sealed.js';
 import { renderPagina, renderHub, renderVoordeur, zoekPagina, sitemap, ROBOTS, llms, zichtJson, LOGO_SVG, INDEXNOW_KEY, BASE, HOST, url } from '../lib/sealed.js';
 
 const GSC_META = process.env.SEALED_GSC_META || '';
@@ -24,11 +25,11 @@ export function kiesTaal(req) {
 }
 const MANIFEST = JSON.stringify({ name: 'Sealed Intent', short_name: 'Sealed Intent', start_url: '/', display: 'browser', background_color: '#ffffff', theme_color: '#2B47C4', icons: [{ src: '/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/icon-512.png', sizes: '512x512', type: 'image/png' }] });
 
-function stuur(res, status, type, body, cache = 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400', taal = '') {
+function stuur(res, status, type, body, cache = 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400', taal = '', robots = '') {
   res.statusCode = status;
   res.setHeader('Content-Type', type);
   res.setHeader('Cache-Control', cache);
-  if (/html/.test(type)) { res.setHeader('X-Robots-Tag', status === 200 ? 'index, follow' : 'noindex'); if (taal) res.setHeader('Content-Language', taal); }
+  if (/html/.test(type)) { res.setHeader('X-Robots-Tag', robots || (status === 200 ? 'index, follow' : 'noindex')); if (taal) res.setHeader('Content-Language', taal); }
   res.end(body);
 }
 const schoon = (s, n = 200) => String(s == null ? '' : s).replace(/[\u0000-\u001f<>]/g, ' ').trim().slice(0, n);
@@ -63,12 +64,30 @@ async function intent(req, res) {
   return stuur(res, 200, 'application/json', JSON.stringify({ ok: true, id }), 'no-store');
 }
 
+// Aanvraag van een partij (koper, investeerder, adviseur, headhunter, outplacement): opslaan en melden; toegang geven we pas na controle.
+async function partij(req, res) {
+  const b = await leesBody(req);
+  const mail = schoon(b.mail, 120).toLowerCase(), bedrijf = schoon(b.bedrijf, 120);
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail) || !bedrijf) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store');
+  const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim();
+  try { const k = 'si:rl:' + ip + ':' + new Date().toISOString().slice(0, 13); const n = await kv.incr(k); if (n === 1) await kv.raw(['EXPIRE', k, 3600]); if (n > 10) return stuur(res, 429, 'application/json', '{"ok":false}', 'no-store'); } catch (e) {}
+  const id = 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+  const lijst = x => Array.isArray(x) ? x.slice(0, 12).map(v => schoon(v, 40)) : [];
+  const rec = { id, t: new Date().toISOString(), taal: schoon(b.taal, 2), soort: schoon(b.soort, 60), bedrijf, site: schoon(b.site, 120), sectoren: lijst(b.sectoren), regios: lijst(b.regios), mail, stijl: schoon(b.stijl, 2), ref: schoon(b.ref, 200), url: schoon(b.url, 200), land: schoon(req.headers['x-vercel-ip-country'], 2) };
+  try { await kv.set('si:p:' + id, rec, { ex: 400 * 86400 }); await kv.raw(['LPUSH', 'si:plist', id]); await kv.raw(['LTRIM', 'si:plist', 0, 4999]); }
+  catch (e) { return stuur(res, 503, 'application/json', '{"ok":false}', 'no-store'); }
+  await meld(`Aanvraag toegang Sealed Intent (${rec.taal.toUpperCase()}, ${rec.land || '?'})\n${rec.soort || 'soort onbekend'}: ${rec.bedrijf}${rec.site ? ' (' + rec.site + ')' : ''}\nSectoren: ${rec.sectoren.join(', ') || '-'}\nLanden: ${rec.regios.join(', ') || '-'}\nid ${id}`);
+  return stuur(res, 200, 'application/json', JSON.stringify({ ok: true, id }), 'no-store');
+}
+
 async function eigenaar(op, res) {
   if (op === 'intents') {
     const ids = await kv.raw(['LRANGE', 'si:list', 0, 49]).catch(() => []);
     const recs = ids.length ? await kv.mget(...ids.map(i => 'si:i:' + i)) : [];
     const lijst = recs.filter(Boolean).map(r => ({ ...r, mail: r.mail.replace(/^(.).*(@.*)$/, '$1***$2') }));
-    return stuur(res, 200, 'application/json', JSON.stringify({ n: await kv.get('si:n').catch(() => null), lijst }, null, 1), 'no-store');
+    const pids = await kv.raw(['LRANGE', 'si:plist', 0, 49]).catch(() => []); const precs = pids.length ? await kv.mget(...pids.map(i => 'si:p:' + i)) : [];
+    const partijen = precs.filter(Boolean).map(r => ({ ...r, mail: r.mail.replace(/^(.).*(@.*)$/, '$1***$2') }));
+    return stuur(res, 200, 'application/json', JSON.stringify({ n: await kv.get('si:n').catch(() => null), lijst, partijen }, null, 1), 'no-store');
   }
   if (op === 'indexnow') {
     const oud = await kv.get('si:indexnow').catch(() => null); if (oud && oud.versie === BIJGEWERKT) return stuur(res, 200, 'application/json', JSON.stringify({ al: true, ...oud }), 'no-store');
@@ -84,6 +103,7 @@ export default async function handler(req, res) {
   const u = new URL(req.url, 'https://' + HOST), q = u.searchParams, op = q.get('op') || '';
   if (req.method === 'OPTIONS') return stuur(res, 204, 'text/plain', '', 'no-store');
   if (op === 'intent' && req.method === 'POST') return intent(req, res);
+  if (op === 'partij' && req.method === 'POST') return partij(req, res);
   if (op === 'indexnow') return eigenaar(op, res);
   if (op === 'intents') {
     if (!process.env.HJDK_TOKEN || q.get('token') !== process.env.HJDK_TOKEN) return stuur(res, 403, 'application/json', '{"ok":false}', 'no-store');
@@ -107,6 +127,7 @@ export default async function handler(req, res) {
   }
   if (!UI[taal]) return stuur(res, 404, 'text/html; charset=utf-8', renderVoordeur(opts), 'public, max-age=60');
   if (!slug) return stuur(res, 200, 'text/html; charset=utf-8', renderHub(taal, opts), undefined, taal);
+  if (zoekPartij(taal, slug)) { const aantal = +(await kv.get('si:n').catch(() => 0)) || 0; return stuur(res, 200, 'text/html; charset=utf-8', renderPartij(taal, { ...opts, aantal }), 'public, max-age=60, s-maxage=300', taal, PARTIJ_INDEX ? '' : 'noindex, follow'); }
   const p = zoekPagina(taal, slug);
   if (!p) return stuur(res, 404, 'text/html; charset=utf-8', renderHub(taal, opts), 'public, max-age=60');
   return stuur(res, 200, 'text/html; charset=utf-8', renderPagina(p, opts), undefined, taal);
