@@ -2,6 +2,28 @@
   "uitleg": "Ontwikkelingen per route voor de ochtendmail van todayin surgery (lib/tsc-mail.js). Elke dag zet de geplande Claude-taak hier nieuwe items bij: alleen echte feiten met bron en datum, nieuwste bovenaan. taal: en|nl|de|*; ingreep: hair|tummy|eyelid|lipo|*; naar: turkey|mexico|colombia|dominican-republic|thailand|south-korea|abroad|home|*; pagina: slug op todayin.email/surgery.",
   "items": [
     {
+      "id": "2026-11-16-nl-zk-2027",
+      "dag": "2026-11-16",
+      "taal": "nl",
+      "ingreep": [
+        "eyelid",
+        "lipo",
+        "tummy",
+        "breast",
+        "breast-augmentation"
+      ],
+      "naar": [
+        "*"
+      ],
+      "kop": "Zilveren Kruis 2027: geen aanvullende dekking voor plastische chirurgie",
+      "tekst": "Zilveren Kruis geeft in 2027 in geen enkele aanvullende verzekering extra vergoeding voor plastische chirurgie. Alleen de basisverzekering betaalt, bij medische noodzaak, met verwijzing en toestemming vooraf. Liposuctie van de buik staat bij wat niet vergoed wordt; een bovenooglidcorrectie alleen bij een ernstige beperking van het gezichtsveld.",
+      "bron": "zkPlast2027",
+      "pagina": "nl/borstvergroting-kosten",
+      "home_countries": [
+        "NL"
+      ]
+    },
+    {
       "id": "2026-11-15-nl-premie-2027",
       "dag": "2026-11-15",
       "taal": "nl",
