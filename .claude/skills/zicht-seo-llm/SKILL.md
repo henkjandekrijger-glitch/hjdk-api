@@ -154,3 +154,10 @@ Zonder token kun je verder lezen, eens per uur een meting starten (/api/zicht?op
 ## Melden aan Henkjan
 
 Resultaat eerst, in gewone taal, met cijfers en een link naar /api/zicht?op=stand, de overdracht of het draaiboek. Geen jargon, geen spreadsheet.
+
+
+## Geleerd op surgery, 16 november 2026
+
+- Een subproject gebruikt eerst zijn expliciete sitemap en host/padfilter. Een lege techcache met een root-sitemapINDEX kan geen nul pagina's bewijzen. Fetch-/parsefouten behouden de vorige inspectiemap en heten meetfout/onbekend. Vergelijk totale sitemapomvang met daadwerkelijk bekeken URLs.
+- Vraaginventaris: cache-spellingen en synoniemen overlappen; tel geen unieke mensen. Een brede implant-filter nam haarimplantaten en implantable contact lens mee. In twee marktsteekproeven bleven na 107 duidelijke uitsluitingen 537 tandkandidaten over. Automatische landingstoewijzing bewijst geen volledige beantwoording.
+- Een publieksniche is een te toetsen ingang, geen reden om alle andere bronlanden te verwijderen. Surgery test de complete implantaat-offerte als beslismoment, met een vrije lokale checker vóór abonneren. Geen groei- of omzetclaim uit de positionering afleiden.

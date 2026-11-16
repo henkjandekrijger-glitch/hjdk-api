@@ -1,0 +1,33 @@
+name: Surgery checks
+on:
+  push:
+    branches: [main, codex/surgery-organic-20261116]
+    paths:
+      - 'lib/tsc*.js'
+      - 'data/tsc*.json'
+      - 'lib/gsc-sitemap.js'
+      - 'api/gsc.js'
+      - 'scripts/test-tsc*.mjs'
+      - 'scripts/test-gsc-sitemap.mjs'
+      - '.github/workflows/surgery-checks.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Core choices, signup, quote tools and rendered pages
+        run: node scripts/test-tsc-choice.mjs
+      - name: Countries and filtering
+        run: node scripts/test-tsc-countries.mjs
+      - name: Scoped sitemap and failure handling
+        run: node scripts/test-gsc-sitemap.mjs

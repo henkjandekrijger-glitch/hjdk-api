@@ -10,6 +10,7 @@ import { kwaliteitRonde } from '../lib/kwaliteit.js';
 import { MARKETS, items as wtbItems, K as WK, claude, json, indexnow as wtbIndexnow } from '../lib/wtb.js';
 import seed from '../data/kz.json' with { type: 'json' };
 import { faqZonderDubbel } from '../lib/faq-dubbel.js';
+import {sitemapTargets,inSiteScope} from '../lib/gsc-sitemap.js';
 
 const KZ_INDEXNOW = '466971cbc1bbe43e6bb64a94465e4470';
 const DAY = () => new Date().toISOString().slice(0, 10);
@@ -338,21 +339,24 @@ export default async function handler(req, res) {
         if (!kand.length) return res.status(200).json({ ok: true, niets: 'geen ander project met Search Console-toegang (serviceaccount seo-leerlus@hjdk-seo.iam.gserviceaccount.com toevoegen)' });
         const at = await Promise.all(kand.map(x => kv.get('hjdk:gsc:index:' + x.id).then(v => (v && v.at) || 0).catch(() => 0))); id = kand[at.indexOf(Math.min(...at))].id; }
       if (!SITES[id] && !ZS[id]) id = 'kz'; const host = SITES[id] || ZS[id].host; const ck = 'hjdk:gsc:index:' + id; const mk = ck + ':map';
-      const c0 = await kv.get(ck).catch(() => null); if (c0 && Date.now() - c0.at < 6 * 3600e3 && !isToken && !isCron) return res.status(200).json(Object.assign({ ok: true, uitCache: true }, c0, { alles: undefined }));
+      const c0 = await kv.get(ck).catch(() => null); if (c0 && c0.inSitemap > 0 && Date.now() - c0.at < 6 * 3600e3 && !isToken && !isCron) return res.status(200).json(Object.assign({ ok: true, uitCache: true }, c0, { alles: undefined }));
       const l = await sites(oidc); const prop = propFor(l, host); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot ' + host });
-      let urls; if (SITEMAPS[id]) { const xml = await (await fetch(SITEMAPS[id])).text(); urls = [...new Set([...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim()))]; }
+      const project={...(ZS[id]||{}),host,sitemap:SITEMAPS[id]||ZS[id]?.sitemap};
+      let urls; if(project.sitemap){try{urls=(await sitemapTargets(project)).urls;}catch(e){return res.status(200).json({ok:false,site:id,measurement:'unavailable',fout:String(e.message||e).slice(0,180),previous_preserved:true,previous:c0?{dag:c0.dag,inSitemap:c0.inSitemap,bekeken:c0.bekeken,geindexeerd:c0.geindexeerd}:null});}}
       else { const tech = await kv.get('zicht:tech:' + id).catch(() => null); urls = (tech && tech.sitemapVoorbeeld) || [];
         if (!urls.length) { const xml = await (await fetch('https://' + host + '/sitemap.xml')).text().catch(() => ''); urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1].trim()).filter(u => !/\.xml($|\?)/.test(u)); } }
       // pagina's van lopende ZICHT-proeven (getest en controle) altijd meenemen en eerst bekijken, zodat de proef te beoordelen is
       // 14 nov 2026: bij de eigen sites (kz/us/de) alleen proefpagina's die nog in de sitemap staan. Naar curacao.day verhuisde adressen
       // (308) bleven via oude proeven meegeteld als 'onbekend bij Google' en blies inSitemap op (keuzehulp.best 521 i.p.v. de echte sitemap).
-      const inMap = SITEMAPS[id] && urls.length ? new Set(urls) : null; const nSitemap = urls.length;
+      urls=urls.filter(u=>inSiteScope(u,project));if(!urls.length)return res.status(200).json({ok:false,site:id,measurement:'unavailable',fout:'no project URLs resolved',previous_preserved:true});
+      const inMap = project.sitemap && urls.length ? new Set(urls) : null; const nSitemap = urls.length;
       const proefUrls = ((await kv.get('zicht:exp:' + id).catch(() => null)) || []).filter(p => p.status === 'loopt' && p.metric === 'index').flatMap(p => [...(p.urls || []), ...(p.controle || [])]).filter(u => /^https?:\/\//.test(u) && (!inMap || inMap.has(u))).slice(0, 300);
       urls = [...new Set([...proefUrls, ...urls])]; const isProef = new Set(proefUrls);
       const map = (await kv.get(mk).catch(() => null)) || {}; const dag = new Date().toISOString().slice(0, 10);
       // volgorde: nooit bekeken, dan niet geïndexeerd en langst geleden, dan geïndexeerd en langst geleden
       const todo = urls.slice().sort((x, y) => { const a = map[x], b = map[y]; const ka = !a ? 0 : a.v === 'PASS' ? 2 : 1, kb = !b ? 0 : b.v === 'PASS' ? 2 : 1; const pa = isProef.has(x) && (!a || a.d !== dag) ? 0 : 1, pb = isProef.has(y) && (!b || b.d !== dag) ? 0 : 1; return pa - pb || ka - kb || String((a || {}).d || '').localeCompare(String((b || {}).d || '')); });
-      let n = 0; for (let i = 0; i < todo.length; i += 8) { const part = await Promise.all(todo.slice(i, i + 8).map(u => inspect(prop, u, oidc))); part.forEach(x => { if (!x.fout) { map[x.url] = { v: x.verdict, s: x.staat, c: x.gecrawld, d: dag, canoniek: x.canoniek, opgegevenCanoniek: x.opgegevenCanoniek, robots: x.robots, indexToegestaan: x.indexToegestaan, opgehaald: x.opgehaald }; n++; } }); if (Date.now() - t0 > 230e3) break; }
+      const priority=new Set(url.searchParams.getAll('url').filter(u=>urls.includes(u)));todo.sort((a,b)=>Number(priority.has(b))-Number(priority.has(a)));const max=Math.max(1,Math.min(todo.length,Number(url.searchParams.get('n'))||todo.length));const selected=todo.slice(0,max);
+      let n = 0; for (let i = 0; i < selected.length; i += 8) { const part = await Promise.all(selected.slice(i, i + 8).map(u => inspect(prop, u, oidc))); part.forEach(x => { if (!x.fout) { map[x.url] = { v: x.verdict, s: x.staat, c: x.gecrawld, d: dag, canoniek: x.canoniek, opgegevenCanoniek: x.opgegevenCanoniek, robots: x.robots, indexToegestaan: x.indexToegestaan, opgehaald: x.opgehaald }; n++; } }); if (Date.now() - t0 > 230e3) break; }
       Object.keys(map).forEach(u => { if (!urls.includes(u)) delete map[u]; }); await kv.set(mk, map).catch(() => {});
       const alles = urls.filter(u => map[u]).map(u => ({ url: u, verdict: map[u].v, staat: map[u].s, gecrawld: map[u].c, dag: map[u].d, canoniek: map[u].canoniek, opgegevenCanoniek: map[u].opgegevenCanoniek, robots: map[u].robots, indexToegestaan: map[u].indexToegestaan, opgehaald: map[u].opgehaald }));
       const per = {}; alles.forEach(x => { const k = x.staat || x.verdict || 'onbekend'; per[k] = (per[k] || 0) + 1; });
@@ -370,3 +374,4 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'onbekende op' });
   } catch (e) { await log({ wat: op, fout: String(e.message).slice(0, 300) }); return res.status(500).json({ ok: false, fout: String(e.message).slice(0, 300) }); }
 }
+
