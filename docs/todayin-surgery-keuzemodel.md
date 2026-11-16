@@ -2,6 +2,14 @@
 
 Productbesluit van 15 november 2026. Opdracht: eigen onderzoek, een reviewmodel, een consistente UX en een verdienmodel voor aanvragen aan artsen. Dit document maakt onderscheid tussen onderzoeksbewijs, reeds gebouwde functionaliteit en voorgestelde vervolgbouw.
 
+## Aanvulling 16 november: tandheelkunde en nieuwsbriefwaarde
+
+Actuele bronselectie: 35 unieke tandaanbieders in 25 landen; implantaten 35 dossiers, All-on-4 14, facings 31, kronen 22, aligners 16 (12 met expliciete Invisalign-bron), bleken 28. Zes voldoende gevulde behandelingsoverzichten indexeerbaar in EN/NL/DE, drie tandhubs en een openbare voorbeeldmail. Elf bronprijzen houden valuta, eenheid, omvang, bekende inclusies en open posten gescheiden. De onderstaande aantallen van eerdere rondes zijn historische implementatiestappen, geen huidige totaaltelling.
+
+Abonneren levert na bevestiging een bronoverzicht en offertechecklist, daarna bronwijzigingen of een concrete vergelijkstap voor de gekozen onderwerpen en landen. Dezelfde zoekbare landenkiezer als de lijsten; zichtbare thuisland-/bestemmingssamenvatting. Snelle autofill, tijdelijke providerfout en retry gerepareerd; GET/HEAD activeert of beëindigt geen abonnement. Zichtbare-formulierproef v2 met serverreceipt en campagneattributie vervangt renderweergaven als denominator; drempels en onzekerheid blijven behouden.
+
+Volledig assessment, vraagmeting, campagneboodschap, resterende blinde vlekken en de vergelijking vóór/na staan in [todayin-surgery-assessment-2026-11-16.md](todayin-surgery-assessment-2026-11-16.md). Dagelijkse bron-, inhouds-, acquisitie- en conversielus vanaf rond 01:30 Curaçao in [todayin-surgery-onderhoud.md](todayin-surgery-onderhoud.md). Dit is geen klinische kwaliteitsgarantie of reeds aangetoonde verkeerstoename.
+
 
 ## Landen vergelijken vanuit je eigen land
 

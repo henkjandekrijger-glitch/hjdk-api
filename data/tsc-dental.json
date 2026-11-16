@@ -1,0 +1,980 @@
+{
+  "version": 1,
+  "checked_at": "2026-11-16",
+  "note": "Source inventory and published-price snapshots. No complete market, licence, suitability, outcome or guaranteed-savings claim. Provider groups can span locations. Brand availability is explicitly sourced and may vary by practice. Amounts retain currency, unit, treatment scope and known omissions; no synthetic FX or country averages.",
+  "providers": [
+    {
+      "id": "lassus",
+      "naam": "Lassus Tandartsen",
+      "site": "https://lassustandartsen.nl",
+      "land": "NL",
+      "stad": "Amsterdam",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 2.7,
+          "max": 5,
+          "aantal": 16,
+          "bron": "https://nl.trustpilot.com/review/lassustandartsen.nl",
+          "datum": "2026-11-16",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://lassustandartsen.nl/specialisatie/implantaten/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://lassustandartsen.nl/specialisatie/facings/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "crowns": {
+          "source_url": "https://lassustandartsen.nl/specialisatie/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "whitening": {
+          "source_url": "https://lassustandartsen.nl/specialisatie/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "aligners": {
+          "source_url": "https://lassustandartsen.nl/specialisatie/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16",
+          "brands": [
+            "Invisalign"
+          ]
+        }
+      }
+    },
+    {
+      "id": "bupa-dental-care",
+      "naam": "Bupa Dental Care UK",
+      "site": "https://www.bupa.co.uk/dental/dental-care",
+      "land": "GB",
+      "stad": "",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.8,
+          "max": 5,
+          "aantal": 26055,
+          "bron": "https://uk.trustpilot.com/review/www.bupa.co.uk/dental/dental-care",
+          "datum": "2026-11-16",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.bupa.co.uk/dental/dental-care/treatments",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://www.bupa.co.uk/dental/dental-care/treatments",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "aligners": {
+          "source_url": "https://www.bupa.co.uk/dental/dental-care/treatments/orthodontics/types-of-braces/clear-aligners/invisalign",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16",
+          "brands": [
+            "Invisalign"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mydentist",
+      "naam": "mydentist",
+      "site": "https://www.mydentist.co.uk",
+      "land": "GB",
+      "stad": "",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [
+        {
+          "platform": "Trustpilot",
+          "score": 4.4,
+          "max": 5,
+          "aantal": 8824,
+          "bron": "https://www.trustpilot.com/review/mydentist.co.uk",
+          "datum": "2026-11-16",
+          "scope": "organization",
+          "retrieval": "public_search_index"
+        }
+      ],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.mydentist.co.uk/dental-health",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "aligners": {
+          "source_url": "https://www.mydentist.co.uk/dental-health",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16",
+          "brands": [
+            "Invisalign",
+            "ClearCorrect"
+          ]
+        }
+      }
+    },
+    {
+      "id": "dentgroup-kosuyolu",
+      "naam": "Dentgroup Koşuyolu",
+      "site": "https://dentgroup.com.tr/en/kosuyolu-dental-clinic",
+      "land": "TR",
+      "stad": "Istanbul",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://dentgroup.com.tr/en/kosuyolu-dental-clinic",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "all-on-4": {
+          "source_url": "https://dentgroup.com.tr/en/kosuyolu-dental-clinic",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://dentgroup.com.tr/en/kosuyolu-dental-clinic",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "whitening": {
+          "source_url": "https://dentgroup.com.tr/en/kosuyolu-dental-clinic",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "aligners": {
+          "source_url": "https://dentgroup.com.tr/en/kosuyolu-dental-clinic",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16",
+          "brands": [
+            "Invisalign"
+          ]
+        }
+      }
+    },
+    {
+      "id": "helvetic-budapest",
+      "naam": "Helvetic Clinics Budapest",
+      "site": "https://www.helvetic-clinics.co.uk",
+      "land": "HU",
+      "stad": "Budapest",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.helvetic-clinics.co.uk/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://www.helvetic-clinics.co.uk/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "crowns": {
+          "source_url": "https://www.helvetic-clinics.co.uk/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "whitening": {
+          "source_url": "https://www.helvetic-clinics.co.uk/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        }
+      }
+    },
+    {
+      "id": "rident",
+      "naam": "Rident",
+      "site": "https://rident.hr/en/",
+      "land": "HR",
+      "stad": "Rijeka, Poreč",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://rident.hr/en/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "all-on-4": {
+          "source_url": "https://rident.hr/en/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://rident.hr/en/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "crowns": {
+          "source_url": "https://rident.hr/en/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        }
+      }
+    },
+    {
+      "id": "bangkok-smile",
+      "naam": "Bangkok Smile Dental Clinic",
+      "site": "https://www.bangkoksmiledental.com",
+      "land": "TH",
+      "stad": "Bangkok",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.bangkoksmiledental.com/booking/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "all-on-4": {
+          "source_url": "https://www.bangkoksmiledental.com/booking/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://www.bangkoksmiledental.com/booking/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "crowns": {
+          "source_url": "https://www.bangkoksmiledental.com/booking/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "whitening": {
+          "source_url": "https://www.bangkoksmiledental.com/booking/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "aligners": {
+          "source_url": "https://www.bangkoksmiledental.com/booking/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16",
+          "brands": [
+            "Invisalign"
+          ]
+        }
+      }
+    },
+    {
+      "id": "bangkok-hospital-dental",
+      "naam": "Bangkok Hospital Dental Center",
+      "site": "https://www.bangkokhospital.com",
+      "land": "TH",
+      "stad": "Bangkok",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.bangkokhospital.com/en/bangkok/center-clinic/dental-care/bangkok-hospital-dental-center/dental-services",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "all-on-4": {
+          "source_url": "https://www.bangkokhospital.com/en/bangkok/center-clinic/dental-care/bangkok-hospital-dental-center/dental-services",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://www.bangkokhospital.com/en/bangkok/center-clinic/dental-care/bangkok-hospital-dental-center/dental-services",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "crowns": {
+          "source_url": "https://www.bangkokhospital.com/en/bangkok/center-clinic/dental-care/bangkok-hospital-dental-center/dental-services",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "whitening": {
+          "source_url": "https://www.bangkokhospital.com/en/bangkok/center-clinic/dental-care/bangkok-hospital-dental-center/dental-services",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "aligners": {
+          "source_url": "https://www.bangkokhospital.com/en/bangkok/center-clinic/dental-care/invisalign/overview",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16",
+          "brands": [
+            "Invisalign"
+          ]
+        }
+      }
+    },
+    {
+      "id": "dentics-cancun",
+      "naam": "Dentics Cancun",
+      "site": "https://denticscancun.com",
+      "land": "MX",
+      "stad": "Cancún",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://denticscancun.com/dental-services/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "all-on-4": {
+          "source_url": "https://denticscancun.com/dental-services/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://denticscancun.com/dental-services/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "crowns": {
+          "source_url": "https://denticscancun.com/dental-services/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        }
+      }
+    },
+    {
+      "id": "costa-rica-dental",
+      "naam": "Costa Rica Dental",
+      "site": "https://costaricadental.com",
+      "land": "CR",
+      "stad": "",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://costaricadental.com/dental-implants",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "all-on-4": {
+          "source_url": "https://costaricadental.com/dental-implants",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://costaricadental.com/dental-implants",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        }
+      }
+    },
+    {
+      "id": "sdc-medellin",
+      "naam": "Smile Dental Center Medellín",
+      "site": "https://smiledentalcentermedellin.com",
+      "land": "CO",
+      "stad": "Medellín",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://smiledentalcentermedellin.com/en/treatments",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "all-on-4": {
+          "source_url": "https://smiledentalcentermedellin.com/en/treatments",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://smiledentalcentermedellin.com/en/treatments",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "whitening": {
+          "source_url": "https://smiledentalcentermedellin.com/en/treatments",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        }
+      }
+    },
+    {
+      "id": "dentalpro-malaysia",
+      "naam": "Dentalpro",
+      "site": "https://dentalpro.org",
+      "land": "MY",
+      "stad": "Kuala Lumpur",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.dentalpro.org/sites/default/files/misc/DP_Brochure_Mobile-v2.pdf",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "all-on-4": {
+          "source_url": "https://www.dentalpro.org/sites/default/files/misc/DP_Brochure_Mobile-v2.pdf",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://www.dentalpro.org/sites/default/files/misc/DP_Brochure_Mobile-v2.pdf",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "crowns": {
+          "source_url": "https://www.dentalpro.org/sites/default/files/misc/DP_Brochure_Mobile-v2.pdf",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "whitening": {
+          "source_url": "https://www.dentalpro.org/sites/default/files/misc/DP_Brochure_Mobile-v2.pdf",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        }
+      }
+    },
+    {
+      "id": "lumino",
+      "naam": "Lumino The Dentists",
+      "site": "https://lumino.co.nz",
+      "land": "NZ",
+      "stad": "",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://lumino.co.nz/treatments/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://lumino.co.nz/treatments/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "crowns": {
+          "source_url": "https://lumino.co.nz/treatments/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "whitening": {
+          "source_url": "https://lumino.co.nz/treatments/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "aligners": {
+          "source_url": "https://lumino.co.nz/treatments/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16",
+          "brands": [
+            "Invisalign"
+          ]
+        }
+      }
+    },
+    {
+      "id": "nofrills-singapore",
+      "naam": "NoFrills Dental Singapore",
+      "site": "https://www.nofrillsdental.com",
+      "land": "SG",
+      "stad": "Singapore",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.nofrillsdental.com/treatment-fees/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://www.nofrillsdental.com/veneers/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "crowns": {
+          "source_url": "https://www.nofrillsdental.com/dental-services/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "whitening": {
+          "source_url": "https://www.nofrillsdental.com/dental-services/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "aligners": {
+          "source_url": "https://www.nofrillsdental.com/invisalign-singapore/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16",
+          "brands": [
+            "Invisalign"
+          ]
+        }
+      }
+    },
+    {
+      "id": "apollo-dental",
+      "naam": "Apollo Hospitals Dental Care",
+      "site": "https://www.apollohospitals.com",
+      "land": "IN",
+      "stad": "",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.apollohospitals.com/departments/dental-care",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://www.apollohospitals.com/departments/dental-care",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "whitening": {
+          "source_url": "https://www.apollohospitals.com/departments/dental-care",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "aligners": {
+          "source_url": "https://www.apollohospitals.com/departments/dental-care",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        }
+      }
+    },
+    {
+      "id": "aspen-dental",
+      "naam": "Aspen Dental",
+      "site": "https://www.aspendental.com",
+      "land": "US",
+      "stad": "",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.aspendental.com/dental-care-resources/veneers-vs-implants/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://www.aspendental.com/dental-care-resources/veneers-vs-implants/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "aligners": {
+          "source_url": "https://www.aspendental.com/dental-services/cosmetic-dentistry/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16",
+          "brands": [
+            "Motto"
+          ]
+        }
+      }
+    },
+    {
+      "id": "national-dental-care",
+      "naam": "National Dental Care",
+      "site": "https://www.nationaldentalcare.com.au",
+      "land": "AU",
+      "stad": "",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.nationaldentalcare.com.au/treatments",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "all-on-4": {
+          "source_url": "https://www.nationaldentalcare.com.au/treatments",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://www.nationaldentalcare.com.au/treatments",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "crowns": {
+          "source_url": "https://www.nationaldentalcare.com.au/treatments",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "whitening": {
+          "source_url": "https://www.nationaldentalcare.com.au/treatments",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "aligners": {
+          "source_url": "https://www.nationaldentalcare.com.au/treatments",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16",
+          "brands": [
+            "Invisalign"
+          ]
+        }
+      }
+    },
+    {
+      "id": "123dentist",
+      "naam": "123Dentist",
+      "site": "https://www.123dentist.com",
+      "land": "CA",
+      "stad": "",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.123dentist.com/faqs/dental-procedures-treatments/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        }
+      }
+    },
+    {
+      "id": "meddental-dubai",
+      "naam": "The Dome MedDental Clinic",
+      "site": "https://www.meddental.ae",
+      "land": "AE",
+      "stad": "Dubai",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-16",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.meddental.ae/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "veneers": {
+          "source_url": "https://www.meddental.ae/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "whitening": {
+          "source_url": "https://www.meddental.ae/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "aligners": {
+          "source_url": "https://www.meddental.ae/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16",
+          "brands": [
+            "Invisalign"
+          ]
+        }
+      }
+    }
+  ],
+  "patches": [
+    {
+      "id": "dental-clinics-nl",
+      "offers": {
+        "aligners": {
+          "source_url": "https://www.dentalclinics.nl/behandelingen/beugel/invisalign-beugel/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16",
+          "brands": [
+            "Invisalign",
+            "Spark"
+          ]
+        }
+      }
+    },
+    {
+      "id": "puredental-budapest",
+      "offers": {
+        "aligners": {
+          "source_url": "https://puredental.hu/en/services/orthodontics/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16",
+          "brands": [
+            "Invisalign",
+            "Spark"
+          ]
+        },
+        "veneers": {
+          "source_url": "https://puredental.hu/en/services/dental-veneers/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "dental-implants": {
+          "source_url": "https://puredental.hu/en/services/dental-prosthetics-and-dental-implants/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        },
+        "crowns": {
+          "source_url": "https://puredental.hu/en/services/dental-prosthetics-and-dental-implants/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-16"
+        }
+      }
+    }
+  ],
+  "prices": [
+    {
+      "provider": "smile-clinic-slovakia",
+      "topic": "dental-implants",
+      "from": 1415,
+      "currency": "EUR",
+      "scope": "implant_abutment_crown",
+      "unit": "tooth",
+      "source_url": "https://www.smileclinic.sk/en/prices/",
+      "checked_at": "2026-11-16",
+      "includes": [
+        "implant",
+        "abutment",
+        "crown"
+      ],
+      "unknown": [
+        "travel",
+        "accommodation",
+        "extra_visits"
+      ]
+    },
+    {
+      "provider": "smile-clinic-slovakia",
+      "topic": "veneers",
+      "from": 495,
+      "currency": "EUR",
+      "scope": "ceramic_veneer",
+      "unit": "tooth",
+      "source_url": "https://www.smileclinic.sk/en/prices/",
+      "checked_at": "2026-11-16",
+      "includes": [],
+      "unknown": [
+        "preparation",
+        "travel",
+        "extra_visits"
+      ]
+    },
+    {
+      "provider": "smile-clinic-slovakia",
+      "topic": "crowns",
+      "from": 495,
+      "currency": "EUR",
+      "scope": "crown",
+      "unit": "tooth",
+      "source_url": "https://www.smileclinic.sk/en/prices/",
+      "checked_at": "2026-11-16",
+      "includes": [],
+      "unknown": [
+        "root_canal",
+        "travel",
+        "extra_visits"
+      ]
+    },
+    {
+      "provider": "indexmedica",
+      "topic": "dental-implants",
+      "from": 1552,
+      "currency": "EUR",
+      "scope": "implant_abutment_crown",
+      "unit": "tooth",
+      "source_url": "https://www.indexmedica.com/prices/",
+      "checked_at": "2026-11-16",
+      "includes": [
+        "implant",
+        "abutment",
+        "crown"
+      ],
+      "unknown": [
+        "bone_graft",
+        "travel",
+        "accommodation"
+      ]
+    },
+    {
+      "provider": "indexmedica",
+      "topic": "veneers",
+      "from": 575,
+      "currency": "EUR",
+      "scope": "ceramic_veneer",
+      "unit": "tooth",
+      "source_url": "https://www.indexmedica.com/prices/",
+      "checked_at": "2026-11-16",
+      "includes": [],
+      "unknown": [
+        "preparation",
+        "travel",
+        "extra_visits"
+      ]
+    },
+    {
+      "provider": "indexmedica",
+      "topic": "crowns",
+      "from": 469,
+      "currency": "EUR",
+      "scope": "zirconia_crown",
+      "unit": "tooth",
+      "source_url": "https://www.indexmedica.com/prices/",
+      "checked_at": "2026-11-16",
+      "includes": [],
+      "unknown": [
+        "root_canal",
+        "travel",
+        "extra_visits"
+      ]
+    },
+    {
+      "provider": "helvetic-budapest",
+      "topic": "whitening",
+      "from": 390,
+      "currency": "EUR",
+      "scope": "whitening",
+      "unit": "treatment",
+      "source_url": "https://www.helvetic-clinics.co.uk/prices-dental-implants/",
+      "checked_at": "2026-11-16",
+      "includes": [],
+      "unknown": [
+        "method",
+        "travel"
+      ]
+    },
+    {
+      "provider": "nofrills-singapore",
+      "topic": "dental-implants",
+      "from": 1950,
+      "currency": "SGD",
+      "scope": "implant_with_tooth",
+      "unit": "tooth",
+      "source_url": "https://www.nofrillsdental.com/treatment-fees/",
+      "checked_at": "2026-11-16",
+      "includes": [],
+      "unknown": [
+        "implant_system",
+        "crown_material",
+        "travel"
+      ],
+      "to": 6000,
+      "tax": "before_GST"
+    },
+    {
+      "provider": "nofrills-singapore",
+      "topic": "veneers",
+      "from": 600,
+      "currency": "SGD",
+      "scope": "bonding_or_veneer",
+      "unit": "tooth",
+      "source_url": "https://www.nofrillsdental.com/veneers/",
+      "checked_at": "2026-11-16",
+      "includes": [
+        "impressions",
+        "design",
+        "temporary_veneer"
+      ],
+      "unknown": [
+        "material",
+        "travel"
+      ],
+      "to": 1300,
+      "open_upper_bound": true,
+      "tax": "before_GST"
+    },
+    {
+      "provider": "costa-rica-dental",
+      "topic": "dental-implants",
+      "from": 1600,
+      "currency": "USD",
+      "scope": "implant_with_crown",
+      "unit": "tooth",
+      "source_url": "https://costaricadental.com/dental-implants",
+      "checked_at": "2026-11-16",
+      "includes": [
+        "implant",
+        "crown"
+      ],
+      "unknown": [
+        "abutment",
+        "bone_graft",
+        "travel"
+      ],
+      "is_from": true
+    },
+    {
+      "provider": "costa-rica-dental",
+      "topic": "all-on-4",
+      "from": 13000,
+      "currency": "USD",
+      "scope": "full_arch_final",
+      "unit": "arch",
+      "source_url": "https://costaricadental.com/dental-implants",
+      "checked_at": "2026-11-16",
+      "includes": [
+        "final_prosthesis"
+      ],
+      "unknown": [
+        "temporary_prosthesis",
+        "bone_graft",
+        "travel"
+      ],
+      "is_from": true
+    }
+  ]
+}

@@ -6,7 +6,8 @@
       "dag": "2026-11-15",
       "taal": "nl",
       "ingreep": [
-        "*"
+        "eyelid",
+        "lipo"
       ],
       "naar": [
         "*"
@@ -14,7 +15,10 @@
       "kop": "Zorgpremie 2027 bekend: gemiddeld EUR 173,13 per maand",
       "tekst": "Alle basispremies voor 2027 zijn bekend: gemiddeld EUR 173,13 per maand, EUR 14,83 meer dan in 2026. De aanvullende dekkingen, ook voor plastische chirurgie, zijn uiterlijk 19 november bekend. Van DSW, Salland en Stad Holland dekt geen enkele aanvullende verzekering plastische chirurgie.",
       "bron": "zorgwijzer2027",
-      "pagina": "nl/liposuctie-kosten"
+      "pagina": "nl/liposuctie-kosten",
+      "home_countries": [
+        "NL"
+      ]
     },
     {
       "id": "2026-11-15-nl-oog-2027",
@@ -62,6 +66,210 @@
       "tekst": "Seit der Verordnung vom 26. April 2025 müssen Kliniken für ausländische Patienten lizenziert sein und Vermittler eine USHAS-Lizenz haben. Fragen Sie vor der Buchung nach der Police.",
       "bron": "mondaqTr",
       "pagina": "de/haartransplantation-tuerkei"
+    },
+    {
+      "id": "dental-dossiers-2026-11-16-nl-1",
+      "dag": "2026-11-16",
+      "taal": "nl",
+      "ingreep": [
+        "dental-implants",
+        "all-on-4"
+      ],
+      "naar": [
+        "*"
+      ],
+      "home_countries": [
+        "*"
+      ],
+      "countries": [
+        "*"
+      ],
+      "kind": "directory_update",
+      "kop": "Tandimplantaten: vergelijk een complete tand met een complete tand",
+      "tekst": "Onze vergelijking bevat nu gepubliceerde prijsvoorbeelden met valuta, eenheid en genoemde onderdelen. Implantaat, abutment en kroon zijn apart herkenbaar; reis, botopbouw en extra afspraken blijven zichtbaar als ze nog moeten worden uitgevraagd.",
+      "pagina": "nl/ingrepen/tandimplantaten",
+      "source_url": "https://www.smileclinic.sk/en/prices/"
+    },
+    {
+      "id": "dental-dossiers-2026-11-16-nl-2",
+      "dag": "2026-11-16",
+      "taal": "nl",
+      "ingreep": [
+        "veneers",
+        "crowns"
+      ],
+      "naar": [
+        "*"
+      ],
+      "home_countries": [
+        "*"
+      ],
+      "countries": [
+        "*"
+      ],
+      "kind": "directory_update",
+      "kop": "Facings en kronen: materiaal en prijsomvang erbij",
+      "tekst": "Onze dossiers zijn uitgebreid met primaire aanbiedersbronnen in Europa en daarbuiten. De vergelijking maakt materiaal, prijs per tand en ontbrekende onderdelen zichtbaar. Een kliniekreview blijft een ervaring met de organisatie, geen behandeluitkomst.",
+      "pagina": "nl/ingrepen/facings",
+      "source_url": "https://www.mouthhealthy.org/all-topics-a-z/veneers"
+    },
+    {
+      "id": "dental-dossiers-2026-11-16-nl-3",
+      "dag": "2026-11-16",
+      "taal": "nl",
+      "ingreep": [
+        "aligners"
+      ],
+      "naar": [
+        "*"
+      ],
+      "home_countries": [
+        "*"
+      ],
+      "countries": [
+        "*"
+      ],
+      "kind": "directory_update",
+      "kop": "Invisalign herkennen tussen andere aligners",
+      "tekst": "De vergelijking noemt Invisalign alleen bij een expliciete aanbiedersbron. Ook andere merken blijven herkenbaar. Neem controles, extra series en retainers mee in je offertevragen.",
+      "pagina": "nl/ingrepen/onzichtbare-beugel",
+      "source_url": "https://www.fda.gov/medical-devices/dental-devices/clear-dental-aligners"
+    },
+    {
+      "id": "dental-dossiers-2026-11-16-en-1",
+      "dag": "2026-11-16",
+      "taal": "en",
+      "ingreep": [
+        "dental-implants",
+        "all-on-4"
+      ],
+      "naar": [
+        "*"
+      ],
+      "home_countries": [
+        "*"
+      ],
+      "countries": [
+        "*"
+      ],
+      "kind": "directory_update",
+      "kop": "Compare a complete implant tooth with a complete tooth",
+      "tekst": "The comparison now includes published price examples with currency, unit and listed components. Implant, abutment and crown are distinct; travel, grafting and extra visits remain open questions where not specified.",
+      "pagina": "procedures/dental-implants",
+      "source_url": "https://www.smileclinic.sk/en/prices/"
+    },
+    {
+      "id": "dental-dossiers-2026-11-16-en-2",
+      "dag": "2026-11-16",
+      "taal": "en",
+      "ingreep": [
+        "veneers",
+        "crowns"
+      ],
+      "naar": [
+        "*"
+      ],
+      "home_countries": [
+        "*"
+      ],
+      "countries": [
+        "*"
+      ],
+      "kind": "directory_update",
+      "kop": "Veneers and crowns: material and price scope",
+      "tekst": "Dossiers now include more primary provider sources in Europe and beyond. Compare material, price per tooth and missing components. Organisation reviews are not treatment outcomes.",
+      "pagina": "procedures/veneers",
+      "source_url": "https://www.mouthhealthy.org/all-topics-a-z/veneers"
+    },
+    {
+      "id": "dental-dossiers-2026-11-16-en-3",
+      "dag": "2026-11-16",
+      "taal": "en",
+      "ingreep": [
+        "aligners"
+      ],
+      "naar": [
+        "*"
+      ],
+      "home_countries": [
+        "*"
+      ],
+      "countries": [
+        "*"
+      ],
+      "kind": "directory_update",
+      "kop": "Distinguish Invisalign from other clear aligners",
+      "tekst": "Invisalign appears only with an explicit provider source. Other brands remain identifiable. Include check-ups, extra aligner series and retainers in your quote questions.",
+      "pagina": "procedures/aligners",
+      "source_url": "https://www.fda.gov/medical-devices/dental-devices/clear-dental-aligners"
+    },
+    {
+      "id": "dental-dossiers-2026-11-16-de-1",
+      "dag": "2026-11-16",
+      "taal": "de",
+      "ingreep": [
+        "dental-implants",
+        "all-on-4"
+      ],
+      "naar": [
+        "*"
+      ],
+      "home_countries": [
+        "*"
+      ],
+      "countries": [
+        "*"
+      ],
+      "kind": "directory_update",
+      "kop": "Kompletten Implantatzahn mit komplettem Zahn vergleichen",
+      "tekst": "Der Vergleich enthält veröffentlichte Preisbeispiele mit Währung, Einheit und genannten Bestandteilen. Implantat, Abutment und Krone bleiben unterscheidbar; Reise, Knochenaufbau und Zusatztermine sind gegebenenfalls offen.",
+      "pagina": "de/behandlungen/zahnimplantate",
+      "source_url": "https://www.smileclinic.sk/en/prices/"
+    },
+    {
+      "id": "dental-dossiers-2026-11-16-de-2",
+      "dag": "2026-11-16",
+      "taal": "de",
+      "ingreep": [
+        "veneers",
+        "crowns"
+      ],
+      "naar": [
+        "*"
+      ],
+      "home_countries": [
+        "*"
+      ],
+      "countries": [
+        "*"
+      ],
+      "kind": "directory_update",
+      "kop": "Veneers und Kronen: Material und Preisumfang",
+      "tekst": "Weitere primäre Anbieterquellen in Europa und anderen Regionen sind erfasst. Material, Preis pro Zahn und fehlende Bestandteile vergleichen. Organisationsbewertungen sind keine Behandlungsergebnisse.",
+      "pagina": "de/behandlungen/veneers",
+      "source_url": "https://www.mouthhealthy.org/all-topics-a-z/veneers"
+    },
+    {
+      "id": "dental-dossiers-2026-11-16-de-3",
+      "dag": "2026-11-16",
+      "taal": "de",
+      "ingreep": [
+        "aligners"
+      ],
+      "naar": [
+        "*"
+      ],
+      "home_countries": [
+        "*"
+      ],
+      "countries": [
+        "*"
+      ],
+      "kind": "directory_update",
+      "kop": "Invisalign und andere Aligner unterscheiden",
+      "tekst": "Invisalign wird nur mit ausdrücklicher Anbieterquelle genannt. Andere Marken bleiben erkennbar. Kontrollen, Zusatzserien und Retainer in den Angebotsfragen berücksichtigen.",
+      "pagina": "de/behandlungen/unsichtbare-zahnschiene",
+      "source_url": "https://www.fda.gov/medical-devices/dental-devices/clear-dental-aligners"
     }
   ]
 }
