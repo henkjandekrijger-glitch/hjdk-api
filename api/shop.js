@@ -32,7 +32,7 @@ import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
 import { PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, GEDRAG, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel, ttEvent } from '../lib/shopdirect.js';
 import { TT_REGEL, TT_GROEPEN, ttSleutel, ttKoppelUrl, ttRuil, ttRapport, ttAds, ttUit, ttOordeel, ttMeld, ttTekst } from '../lib/tiktok.js';
-import { whEvent, whopKlaar, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd } from '../lib/whop.js';
+import { whEvent, whopKlaar, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd, whProject, whLead, WH_PROJECTEN } from '../lib/whop.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
 import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
@@ -1077,6 +1077,23 @@ export default async function handler(req, res) {
           stappen: rec ? Object.keys(rec).filter(k => /^y[a-z0-9]{1,2}$/.test(k)).map(k => LET[k.slice(1)] || k).slice(0, 40) : null }); }
       const samen = {}; for (const b of best) { const k = b.net || '?'; const o = samen[k] = samen[k] || { bestellingen: 0, betaald: 0, verlopen: 0, anders: 0, methodes: {} }; o.bestellingen++; if (/paid|betaald/i.test(b.status)) o.betaald++; else if (/expir|verlop/i.test(b.status)) o.verlopen++; else o.anders++; o.methodes[(b.methode || '-') + ':' + b.status] = (o.methodes[(b.methode || '-') + ':' + b.status] || 0) + 1; }
       res.setHeader('cache-control', 'no-store'); return res.status(200).json({ ok: true, dagen, perNet, bestellingen: { totaal: best.length, perNet: samen, feedFout, lijst: best } }); }
+    if (op === 'whlead') { // 16 nov: aanmelding na een Meta-klik via Whop (Curacao.day, later Sealed Intent): eenmaal per aanmelding een 'lead' naar de Events API van het Whop-bedrijf van dat project
+      res.setHeader('access-control-allow-origin', '*'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
+      const sp = url.searchParams, p = String(sp.get('p') || '').replace(/[^a-z]/g, '').slice(0, 12), pr = whProject(p);
+      const rauw = k => String(sp.get(k) || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 60); // Whop-id's ongewijzigd laten (hoofdletters en _ tellen mee voor de koppeling)
+      const wacid = rauw('wacid'), eid = String(sp.get('eid') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40), ev = String(sp.get('ev') || 'lead').replace(/[^a-z_]/g, '').slice(0, 30);
+      const leeg = () => { res.setHeader('content-type', 'image/gif'); return res.status(200).send(Buffer.from('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', 'base64')); };
+      if (!pr || !wacid || eid.length < 6 || isBot(String(req.headers['user-agent'] || ''))) return leeg();
+      const ipk = createHash('sha256').update(String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() + '|whl').digest('hex').slice(0, 16);
+      try { const n = num(await kv.raw(['INCR', 'hjdk:whl:ip:' + ipk])); if (n === 1) await kv.raw(['EXPIRE', 'hjdk:whl:ip:' + ipk, '3600']); if (n > 5) return leeg(); } catch (e) {}
+      let nieuw = false; try { nieuw = (await kv.raw(['SET', 'hjdk:whl:' + p + ':' + ev + ':' + eid, '1', 'NX', 'EX', String(30 * 86400)])) === 'OK'; } catch (e) {}
+      if (!nieuw) return leeg();
+      const st = await whLead(pr, { ev, eid, wacid, wasid: rauw('wasid'), waid: rauw('waid'), fbclid: String(sp.get('fbclid') || '').replace(/[^A-Za-z0-9_.~+\/=-]/g, '').slice(0, 600), u: String(sp.get('u') || '').slice(0, 300), ua: String(req.headers['user-agent'] || '').slice(0, 200) });
+      try { await kv.raw(['HINCRBY', 'hjdk:whl:tel:' + p, DAY() + '|' + ev + '|' + st, '1']); await kv.raw(['EXPIRE', 'hjdk:whl:tel:' + p, String(90 * 86400)]); await kv.raw(['HINCRBY', 'hjdk:whl:tel:' + p, DAY() + '|' + ev + '|' + st + '|ad:' + (rauw('waid') || '-'), '1']); } catch (e) {}
+      return leeg(); }
+    if (op === 'whleadstand') { // tellingen per project per dag (alleen aantallen)
+      const out = {}; for (const p of Object.keys(WH_PROJECTEN)) { const pr = whProject(p); let t = {}; try { const h = await kv.raw(['HGETALL', 'hjdk:whl:tel:' + p]); if (Array.isArray(h)) for (let i = 0; i + 1 < h.length; i += 2) t[h[i]] = num(h[i + 1]); else t = h || {}; } catch (e) {} out[p] = { klaar: pr.klaar, sleutel: !!pr.key, bedrijf: !!pr.biz, tellingen: t }; }
+      return res.status(200).json({ ok: true, projecten: out }); }
     if (op === 'whdiag' || op === 'whbudget') { // 16 nov: opbouw van de Whop-campagne zien (groepen, budget, doel, creatives) en het budget zetten op Henkjans woord (hoogstens WH_BUDGET_MAX)
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const camp = await whopCampagnes(); const cid = camp.ok && camp.campagnes[0] ? camp.campagnes[0].id : null; if (!cid) return res.status(200).json({ ok: false, fout: 'geen campagne', camp });
