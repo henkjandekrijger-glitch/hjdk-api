@@ -73,6 +73,10 @@
       "schedule": "*/10 3-23 * * *"
     },
     {
+      "path": "/api/shop?op=whopronde",
+      "schedule": "11,41 * * * *"
+    },
+    {
       "path": "/api/shop/ronde",
       "schedule": "23 5-21 * * *"
     },
