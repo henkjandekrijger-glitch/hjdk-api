@@ -29,6 +29,7 @@ ORGANISCH in elke ronde: web_fetch_vercel_url https://hjdk-api-henq.vercel.app/a
 
 ## Organisch (keuzehulpen, nieuwste boven)
 
+- 16 nov 06:40 UTC (ronde A): whichtobuy.best 5 van 156 in Google (was 4), 7 dagen 2 uit zoek (Google 1, DuckDuckGo 1); kaufberater.best 9 van 85 in Google (was 8), 1 uit Bing; keuzehulp.best 3 uit ChatGPT. Boekgidsen nog zonder Google-vertoningen; indexaanvraag apocrypha-book gedaan, pellet-grill-cookbook gaf Quota exceeded (morgen). Demand Radar thema kdp-boeken (16 nov): boekspecifieke zoektermen zitten niet in de top-700 per markt; grote volumes zijn algemene cadeauvragen (white elephant 135k, stocking stuffers 74k US) met media, Reddit en Pinterest bovenaan; DE adventskalender männer/mann 74k+74k per maand (CPC ca. EUR 0,50), top met winkels en vergelijkers. Gatscan 10 boekvragen (Perplexity): bij fun facts, Pit Boss-kookboek, Apocrypha en Bible coloring citeert AI vooral één Amazon-pagina (zwakte 5): de Amazon-detailpagina is wat AI noemt. Conclusie: de keuzehulpen leveren deze kerst geen royalty van betekenis; doorbouwen voor januari.
 - 15 nov 22:30 UTC (ronde D, dagafsluiting): ongewijzigd tegen 17:40 (de ZICHT-meting ververst om 05:50 UTC). Boekgidsen nog zonder Google-vertoningen en organisch bezoek; Adventskalender-gids 7 bezoeken, 0 Amazon-kliks.
 - 15 nov 17:40 UTC (ronde C): gelijk aan 12:40 (keuzehulp.best 4 uit ChatGPT, whichtobuy.best 1 uit Google, kaufberater.best 1 uit Bing in 7 dagen; Google 28 dagen 612/380/1.338 vertoningen). Boekgidsen nog zonder Google-vertoningen en zonder organisch bezoek; Adventskalender-gids 6 bezoeken. Hardcovers van Teens, Wait That's True en For Men staan nu in de gidsen en in het Book-schema.
 - 15 nov 12:40 UTC (start meting): keuzehulp.best 117 van 518 in Google, 7 dagen 0 uit zoek en 4 uit AI (ChatGPT), Google 28 dagen 612 vertoningen 5 kliks. whichtobuy.best 4 van 155 in Google (148 onbekend bij Google), 7 dagen 1 uit zoek, eigen pagina's 19 vertoningen 0 kliks. kaufberater.best 8 van 83 in Google, 7 dagen 1 uit zoek (Bing), eigen 24 vertoningen 2 kliks. Boekgidsen: nog geen Google-vertoningen (indexaanvragen 14 en 15 nov, 10 van 12 gedaan); nieuwe Duitse gids /adventskalender-fuer-maenner. Teller per gids voor bezoek uit zoek/AI en Amazon-kliks per dag loopt vanaf 15 nov. Rapport altijd HIER in de chat met SendUserMessage, kort Nederlands, alleen wat nieuw is (geen geleerde lessen herhalen), nooit nulgroei tonen. Daarna in de handover (Vercel-tool web_fetch_vercel_url: https://hjdk-api-henq.vercel.app/api/mm/handover?log=...&wie=kdp-rapport).
@@ -46,6 +47,18 @@ ORGANISCH in elke ronde: web_fetch_vercel_url https://hjdk-api-henq.vercel.app/a
 3. Teens CA-rang en #1 in Teen Reference (Keepa), status van openstaande KDP-wijzigingen (in review / live).
 4. Iets wat het rendement verhoogt en nu kan: doen.
 5. Rapport in hooguit 7 regels: verkoop vandaag, kosten vandaag, ORGANISCH (boekstand: bezoek uit zoek en AI, Amazon-kliks uit de boekgidsen, nieuw in Google), wat ik veranderde, wat opviel. Ronde D sluit de dag af: totaal royalty en ads vandaag, plan voor morgen.
+
+## KERSTPLAN naar $1000/dag (Henkjan 15 nov: "We moeten naar 1000 per dag maak een plan asap !")
+
+Vorig jaar (KDP Royalties Estimator): 15 nov-25 dec 2025 $11.084 (gem. $270/dag, beste dagen half dec $600-700). 1-15 nov 2025 $1.156 tegen 1-15 nov 2026 $191 (17%).
+- VS $5.911: PIT BOSS $3.919, Lasting Change $1.420 (rest klein; Teens VS maar $46).
+- Canada $4.114: Teens $3.495, Adults $316, LC $162, Dad Jokes $91.
+- Rest (VK e.a.) ca. $1.060: Apocrypha ca. $450.
+Amazon-ads 18 nov-25 dec 2025: $3.081 kosten, $6.993 omzet, 371 aankopen. PIT BOSS - SP - Manual KW 511 kliks, 118 aankopen, $896 (start 14 nov 2025); PIT BOSS EXACT 569 kliks, 90 aankopen, $772; PIT BOSS 2025 BROAD 195 kliks, 44 aankopen, $287; PIT BOSS Cerebro BROAD2 238 kliks, 33 aankopen, $191; Aut Experiment UK (VK auto) $213 kosten, $739 omzet; LC KW $163; B0F1SM1L5J-AUTO $112, $359 omzet. In het seizoen converteren de PIT BOSS-woorden 16-23% per klik.
+Nu (16 nov): PIT BOSS VS rang 869.000 (prijs $17,04, lijstprijs $18), LC VS rang 1,05 mln, Teens CA rang 7.571 (vorig jaar half nov 840).
+- 16 nov 06:35 UTC GEDAAN binnen de regels: PIT BOSS - SP - Manual KW (A06472010M5G9DRRZ8PS) en PIT BOSS EXACT (A043648439COJRMAUIRWM) weer aan, budget van $30 en $20 naar $10/dag, biedingen van vorig jaar. Stopregel: PIT BOSS-ads 3 dagen achter elkaar meer dan 50% van de PIT BOSS-royalty = pauzeren.
+- WACHT op Henkjans ja (gevraagd 15 nov): budgetten van vorig jaar ($20-30/dag per campagne, samen ca. $150/dag) en de andere winnaars aan (PIT BOSS 2025 BROAD, Aut Experiment UK, Adults en Dad Jokes Canada). Adventskalender DE-ads wachten op zijn eenmalige login op advertising.amazon.de.
+- PropellerAds Apocrypha UK: beide kopieën stonden 15 nov op gestopt; 16 nov 05:47 geen nieuwe kopie. Niet zelf herstarten (PropellerAds-wijziging alleen met zijn ja); voorstel: vervangen door Amazon VK auto (vorig jaar 29% ACOS).
 
 ## Campagnes
 
