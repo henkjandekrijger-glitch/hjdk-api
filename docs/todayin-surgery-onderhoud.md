@@ -9,6 +9,14 @@ Ingang: https://todayin.email/surgery/overdracht?vorm=json. Lees ook CLAUDE.md, 
 - Bestaande Claude-dagronde 11:37 UTC en rankingronde 13:13 UTC behouden; hun actuele bestaan/status via eigen taakomgeving controleren. De ChatGPT-taak heeft die externe scheduler niet gewijzigd of onafhankelijk bevestigd.
 - Eerste nacht: tandheelkundige bronnen, NL-campagne, voorbeeldmail en aanmelding verdiepen vóór de lezerswerving. Weekevaluatie zondag 22 november, niet pas na veertien dagen naar nul verkeer kijken.
 
+### Hervatten zonder werk te verliezen (16 november)
+
+Werk in drie begrensde stappen: (1) actuele stand, laatste afgeronde commit en concrete volgende stap lezen; (2) één inhoudsgat of fout afhandelen en controleren; (3) commit/deployment/QA en resterende stap vastleggen. Schrijf na elke afgeronde grote stap een kort werklog met wat werkelijk klaar is, welke controle nog openstaat en vanaf welk punt de volgende ronde verdergaat. Begin een volgende ronde niet opnieuw aan al geverifieerd werk.
+
+Bij een tool- of browsersessiefout: hoogstens één gerichte herstelpoging met een korte timeout. Blijft de browser onbereikbaar, ga door met bron-/SSR-/scriptcontroles en Node 24 CI; markeer visuele QA als open. Gebruik voor Vercel-pagina’s de werkende connector wanneer lokale DNS faalt. Een platformfout van de nachttaak heeft nog geen bewezen oorzaak; een gewijzigde werkwijze is geen bewijs dat de volgende achtergrondrun slaagt. Bewaar bestaande cron, mailtoestemming en experiment.
+
+Browsercontrole 16 november hervat: offerte-LP op 360px, som 1.500 + 200 + 300 = 2.000 met abutment/controles/nazorg als open posten; onderwerpzoeken, twee onderwerpen bewaren en NL→PL-bestemming met zichtbare samenvatting geslaagd. Geen echte inschrijving of testmail. Voorbeeldmail krijgt dezelfde pagina in EN/NL/DE bij taalwissel en blijft noindex. Nieuwe publieke versie na READY opnieuw op die links controleren.
+
 ## Elke ronde
 
 1. Lees eigen `/surgery/stand`, ZICHT surgery-stand, open vragen/correcties en de campagnereceipts via de gekoppelde beschermde Vercel-host. Houd onbekend, niet gecontroleerd, geen verkeer en werkelijk nul uiteen. Noem de meetperiode en de beperkingen.
