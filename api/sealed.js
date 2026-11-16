@@ -1,18 +1,19 @@
 // Sealed Intent (sealedintent.com). Alle verzoeken op die host komen via vercel.json hier binnen.
 // Pagina's: / (voordeur), /nl /de /en (hub), /<taal>/<slug> (landingspagina). Verder robots.txt, sitemap.xml, llms.txt, zicht.json,
 // logo.svg en het IndexNow-sleutelbestand. POST ?op=intent bewaart een verzegelde intentie en meldt hem via Telegram.
-// Eigenaar: ?op=intents&token=HJDK_TOKEN (laatste 50, e-mail gemaskeerd), ?op=indexnow&token=... (ping alle URL's eenmalig).
+// Eigenaar: ?op=intents&token=HJDK_TOKEN (laatste 50, e-mail gemaskeerd). ?op=indexnow pingt alle URL's één keer per versie (BIJGEWERKT);
+// daarna geeft hij alleen de bewaarde uitkomst terug, dus veilig om aan te roepen (kost niets, nooit in een lus).
 import { kv } from '../lib/db.js';
-import { PAGINAS, UI } from '../lib/sealed-content.js';
+import { PAGINAS, UI, BIJGEWERKT } from '../lib/sealed-content.js';
 import { renderPagina, renderHub, renderVoordeur, zoekPagina, sitemap, ROBOTS, llms, zichtJson, LOGO_SVG, INDEXNOW_KEY, BASE, HOST, url } from '../lib/sealed.js';
 
 const GSC_META = process.env.SEALED_GSC_META || '';
 
-function stuur(res, status, type, body, cache = 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400') {
+function stuur(res, status, type, body, cache = 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400', taal = '') {
   res.statusCode = status;
   res.setHeader('Content-Type', type);
   res.setHeader('Cache-Control', cache);
-  if (/html/.test(type)) { res.setHeader('X-Robots-Tag', status === 200 ? 'index, follow' : 'noindex'); res.setHeader('Content-Language', 'nl, de, en'); }
+  if (/html/.test(type)) { res.setHeader('X-Robots-Tag', status === 200 ? 'index, follow' : 'noindex'); if (taal) res.setHeader('Content-Language', taal); }
   res.end(body);
 }
 const schoon = (s, n = 200) => String(s == null ? '' : s).replace(/[\u0000-\u001f<>]/g, ' ').trim().slice(0, n);
@@ -55,9 +56,10 @@ async function eigenaar(op, res) {
     return stuur(res, 200, 'application/json', JSON.stringify({ n: await kv.get('si:n').catch(() => null), lijst }, null, 1), 'no-store');
   }
   if (op === 'indexnow') {
+    const oud = await kv.get('si:indexnow').catch(() => null); if (oud && oud.versie === BIJGEWERKT) return stuur(res, 200, 'application/json', JSON.stringify({ al: true, ...oud }), 'no-store');
     const urlList = [BASE + '/', ...Object.keys(UI).map(t => BASE + '/' + t), ...PAGINAS.map(url), BASE + '/sitemap.xml', BASE + '/llms.txt'];
     let status = 0; try { const r = await fetch('https://api.indexnow.org/indexnow', { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify({ host: HOST, key: INDEXNOW_KEY, keyLocation: BASE + '/' + INDEXNOW_KEY + '.txt', urlList }), signal: AbortSignal.timeout(15000) }); status = r.status; } catch (e) { status = String(e.message || e).slice(0, 80); }
-    try { await kv.set('si:indexnow', { t: new Date().toISOString(), status, n: urlList.length }); } catch (e) {}
+    try { if (status === 200 || status === 202) await kv.set('si:indexnow', { versie: BIJGEWERKT, t: new Date().toISOString(), status, n: urlList.length }); } catch (e) {}
     return stuur(res, 200, 'application/json', JSON.stringify({ status, n: urlList.length }), 'no-store');
   }
   return stuur(res, 404, 'application/json', '{}', 'no-store');
@@ -67,7 +69,8 @@ export default async function handler(req, res) {
   const u = new URL(req.url, 'https://' + HOST), q = u.searchParams, op = q.get('op') || '';
   if (req.method === 'OPTIONS') return stuur(res, 204, 'text/plain', '', 'no-store');
   if (op === 'intent' && req.method === 'POST') return intent(req, res);
-  if (op === 'intents' || op === 'indexnow') {
+  if (op === 'indexnow') return eigenaar(op, res);
+  if (op === 'intents') {
     if (!process.env.HJDK_TOKEN || q.get('token') !== process.env.HJDK_TOKEN) return stuur(res, 403, 'application/json', '{"ok":false}', 'no-store');
     return eigenaar(op, res);
   }
@@ -79,10 +82,10 @@ export default async function handler(req, res) {
   if (op === 'key') return stuur(res, 200, 'text/plain; charset=utf-8', INDEXNOW_KEY, 'public, max-age=86400');
   const taal = q.get('taal') || '', slug = q.get('slug') || '';
   const opts = { gscMeta: GSC_META };
-  if (!taal) return stuur(res, 200, 'text/html; charset=utf-8', renderVoordeur(opts));
+  if (!taal) return stuur(res, 200, 'text/html; charset=utf-8', renderVoordeur(opts), undefined, 'en');
   if (!UI[taal]) return stuur(res, 404, 'text/html; charset=utf-8', renderVoordeur(opts), 'public, max-age=60');
-  if (!slug) return stuur(res, 200, 'text/html; charset=utf-8', renderHub(taal, opts));
+  if (!slug) return stuur(res, 200, 'text/html; charset=utf-8', renderHub(taal, opts), undefined, taal);
   const p = zoekPagina(taal, slug);
   if (!p) return stuur(res, 404, 'text/html; charset=utf-8', renderHub(taal, opts), 'public, max-age=60');
-  return stuur(res, 200, 'text/html; charset=utf-8', renderPagina(p, opts));
+  return stuur(res, 200, 'text/html; charset=utf-8', renderPagina(p, opts), undefined, taal);
 }
