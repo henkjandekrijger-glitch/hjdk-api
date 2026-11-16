@@ -1088,5 +1088,17 @@
   "moeite": "laag",
   "meten": "proef kz-dubbel-zoekvraag-1115",
   "status": "actief"
+ },
+ {
+  "id": "seizoen-niet-dun-voor-piek",
+  "les": "Haal een seizoenspagina (kerst, cadeau, Black Friday, Cyber Monday, Silvester) niet uit Google omdat Google hem gelezen maar niet opgenomen heeft voordat het seizoen begint. Zonder zoekvraag neemt Google zo'n pagina vaak nog niet op; noindex sluit hem dan juist uit op het moment dat de vraag komt. Wacht tot het seizoen voorbij is voordat je hem dun noemt.",
+  "kanaal": "google",
+  "bewijs": "16 nov 2026: de kwaliteitsregel had op kaufberater.best 34 van 116 pagina's op noindex (de grens van 30%), waarvan 13 seizoenspagina's, onder andere cyber-monday-2026 (1 nov, vier weken voor Cyber Monday) en raclette-fondue-set-silvester-2026 (16 nov); op whichtobuy.best 3 (Black Friday, Thanksgiving, cadeaus) en op keuzehulp.best 1. Kaufberater staat met 9 van 85 in Google. Proeven seizoen-niet-dun-1116-de, -us en -kz meten of ze in de piek worden opgenomen.",
+  "bron": "dagcontrole 16 nov 2026, /api/gsc?op=kwaliteit&lees=1",
+  "sterkte": 1,
+  "effect": 2,
+  "moeite": 1,
+  "meten": "geindexeerd en vertoningen van de vrijgegeven seizoenspagina's tussen 16 nov en 7 jan",
+  "status": "actief"
  }
 ]
