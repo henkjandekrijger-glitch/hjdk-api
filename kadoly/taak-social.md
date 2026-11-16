@@ -7,7 +7,7 @@ Henkjan 16 nov 2026: "Maak af de Kadoly faceook en instagram we kunnen nu auto p
 Accounts (Zernio-profiel Kadoly, profile_id `6afaf9820c09220040d746f4`):
 - Facebook-pagina Kadoly (https://www.facebook.com/profile.php?id=61596079596846). Gebruikersnaam kan Facebook nog niet geven (nieuwe pagina); probeer het elke maandag in Chrome als dat werkt (Accounts Center > Kadoly > Username, `kadolyshop`).
 - Facebook in Zernio: account_id `6afafaf7446856cecd87324f`.
-- Instagram @kadoly.shop (ig id 17841476967447591), 16 nov door Henkjan aangemaakt; nog NIET in Zernio: het 3e account vraagt een betaalmethode ($6 per maand), dat beslist Henkjan. Tot hij gekoppeld is: alleen Facebook plannen, en in het eindbericht één regel dat Instagram wacht op de koppeling. De websitelink in het Instagram-profiel kan alleen in de app.
+- Instagram @kadoly.shop (ig id 17841476967447591) in Zernio: account_id `6afb8787a26245ebf04dc7be` (zakelijk, sinds 16 nov). De websitelink in het profiel kan alleen in de app (go.kadoly.com/o?k=ig&c=bio).
 
 Vraag niets; kies bij twijfel de veiligste optie (liever een post minder dan een foute post). Zuinig met tokens. Kadoly is een webshop voor alles, niet alleen cadeaus: presenteer hem nooit als cadeauwinkel.
 

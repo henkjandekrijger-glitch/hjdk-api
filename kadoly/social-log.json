@@ -10,9 +10,9 @@
     },
     "instagram": {
       "handle": "kadoly.shop",
-      "account_id": null,
+      "account_id": "6afb8787a26245ebf04dc7be",
       "ig_id": "17841476967447591",
-      "zernio": "niet gekoppeld: Zernio vraagt een betaalmethode vanaf het 3e account ($6 per maand); Henkjan beslist",
+      "zernio": "gekoppeld 16 nov 22:55 UTC (zakelijk account, categorie Shopping & retail)",
       "profiel": "naam Kadoly, bio, logo (16 nov); websitelink kan alleen in de app"
     }
   },
@@ -58,7 +58,19 @@
       "pid": "oc_4174005832564737",
       "tijdvak": "19:45",
       "via": "zernio",
-      "zernio_id": "6afb0dc13d037958d891cf2b"
+      "zernio_id": "6afb0dc13d037958d891cf2b",
+      "link": "go.kadoly.com/o?k=fb&p=oc_4174005832564737&c=1116-sieraad",
+      "status": "gepubliceerd"
+    },
+    {
+      "tijd": "2026-11-16T22:56:00Z",
+      "dag": "2026-11-16",
+      "platform": "instagram",
+      "soort": "sieraad",
+      "pid": "oc_4174005817131010",
+      "tijdvak": "23:56",
+      "via": "zernio",
+      "zernio_id": "6afb87a68c190e4bc31e99a1"
     }
   ]
 }
