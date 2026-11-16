@@ -157,6 +157,10 @@
       "schedule": "40 6 * * *"
     },
     {
+      "path": "/api/sealed?op=indexnow",
+      "schedule": "10 7 * * *"
+    },
+    {
       "path": "/api/keuze-tools?tool=autohuur&market=nl&op=reviews",
       "schedule": "20 7,15 * * *"
     },
