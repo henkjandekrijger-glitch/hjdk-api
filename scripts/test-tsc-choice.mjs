@@ -6,6 +6,7 @@ import { createHash,randomBytes } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import * as ui from '../lib/tsc-ranking-ui.js';
 import * as dental from '../lib/tsc-dental.js';
+import * as searchIntent from '../lib/tsc-search-intent.js';
 import * as acquisition from '../lib/tsc-acquisition.js';
 import * as catalog from '../lib/tsc-catalog.js';
 import * as ranking from '../lib/tsc-reviewrank.js';
@@ -19,7 +20,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 let checks=0;
 async function test(name,fn){await fn();checks++;console.log('ok',name);}
 const raw=fs.readFileSync(path.join(root,'lib/tsc.js'),'utf8').replace(/^import .*;\n/gm,'');
-const names={...data,SURGERY_FAVICON,ROUTES:JSON.parse(fs.readFileSync(path.join(root,'data/tsc-routes.json'))),LIJSTEN,RANK_SLUGS,...ui,...catalog,...signup,...dental};
+const names={...data,SURGERY_FAVICON,ROUTES:JSON.parse(fs.readFileSync(path.join(root,'data/tsc-routes.json'))),LIJSTEN,RANK_SLUGS,...ui,...catalog,...signup,...dental,...searchIntent};
 const render=new Function(...Object.keys(names),raw.replace(/export /g,'')+';return {home,rankPagina,pagina,checkPagina,llms,ALL,pageDate,tscHandler};')(...Object.values(names));
 const out=path.join(root,'qa-render');fs.mkdirSync(out,{recursive:true});
 const scriptCheck=html=>{for(const m of html.matchAll(/<script(?![^>]*application\/(?:ld\+)?json)[^>]*>([\s\S]*?)<\/script>/g))new vm.Script(m[1]);};
@@ -201,7 +202,7 @@ await test('confirmation and unsubscribe GET/HEAD do not mutate subscriptions',a
 });
 await test('dental campaign starts with visible dental topics and sourced fallback answers',()=>{
  const html=signup.signupBlock(data.SITE.base,'nl/tandheelkunde',{topics:['dental-implants','veneers','aligners']},'nl');assert.ok(html.includes('dental-implants'));assert.ok(html.includes('veneers'));assert.ok(html.includes('aligners'));
- const src=fs.readFileSync(path.join(root,'lib/tsc-chat.js'),'utf8'),a=src.indexOf('const STOP ='),b=src.indexOf('export async function tscVraag',a),find=new Function('PAGES','zonderBron','dentalChatQuestions','dentalSlug',src.slice(a,b)+';return zoekAntwoord;')(data.PAGES,s=>s,dental.dentalChatQuestions,dental.dentalSlug);
+ const src=fs.readFileSync(path.join(root,'lib/tsc-chat.js'),'utf8'),a=src.indexOf('const STOP ='),b=src.indexOf('export async function tscVraag',a),find=new Function('PAGES','zonderBron','dentalChatQuestions','dentalSlug','dentalSearchQuestions','quoteGuideSlug',src.slice(a,b)+';return zoekAntwoord;')(data.PAGES,s=>s,dental.dentalChatQuestions,dental.dentalSlug,searchIntent.dentalSearchQuestions,searchIntent.quoteGuideSlug);
  const answer=find('Is Invisalign hetzelfde als aligners?','nl/tandheelkunde','nl');assert.equal(answer.pagina,'nl/tandheelkunde');assert.ok(answer.a.includes('merk'));assert.ok(!dental.quoteChecklist('nl',false).includes('Implantaat'));
 });
 await test('GSC subsite regex includes surgery and excludes sibling and Curaçao paths',()=>{
@@ -212,5 +213,15 @@ await test('LLM subsite citations require structured URLs inside surgery',()=>{
  const src=fs.readFileSync(path.join(root,'lib/zicht.js'),'utf8'),a=src.indexOf('export function scopedCitationURLs'),b=src.indexOf('\nexport async function meetLLM',a);const fn=new Function(src.slice(a,b).replace('export ','')+';return scopedCitationURLs;')(),site={host:'todayin.email',pathPrefix:'/surgery'};
  assert.deepEqual(fn(site,{choices:[{message:{content:'https://todayin.email/surgery'}}]}),[]);assert.deepEqual(fn(site,{citations:['https://todayin.email/curacao/nl','https://todayin.email/surgery-other','https://todayin.email/surgery/nl']}),['https://todayin.email/surgery/nl']);
 });
+
+await test('focused quote landing: three indexable translations and value before signup',async()=>{
+ const routeSource=raw.replace(/await import\('\.\/db\.js'\)/g,"await __load('db')"),route=new Function(...Object.keys(names),'__load',routeSource.replace(/export /g,'')+';return tscHandler;')(...Object.values(names),async()=>({kv}));
+ for(const language of ['nl','en','de']){const slug=searchIntent.quoteGuideSlug(language);let html='',status=0;const res={setHeader(){},status(n){status=n;return this},send(s){html=s;return this}};await route({headers:{host:'todayin.email'},method:'GET'},res,new URL('https://todayin.email/true-surgery?p='+slug));assert.equal(status,200);assert.ok(!html.includes('content="noindex"'));assert.ok(html.indexOf('id="quote-check"')<html.indexOf('id="mail"'));const ids=[...html.matchAll(/\sid="([^"]+)"/g)].map(x=>x[1]);assert.equal(new Set(ids).size,ids.length);assert.ok(render.ALL().includes(slug));assert.ok(render.llms().includes(slug));scriptCheck(html);for(const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g))JSON.parse(m[1]);}
+});
+await test('quote checker preserves unknowns and transmits no amounts',()=>{
+ const html=searchIntent.quoteGuideBody(data.SITE.base,'nl','',''),source=html.match(/<script>([\s\S]*?)<\/script>/)[1],els={'quote-check':{},'quote-result':{},'quote-currency':{value:'EUR'}};for(let i=0;i<3;i++)els['quote-amount-'+i]={value:[1000,250,200][i]};for(let i=0;i<5;i++)els['quote-part-'+i]={checked:false};new Function('document',source)({getElementById:id=>els[id]});els['quote-check'].onsubmit({preventDefault(){}});assert.ok(els['quote-result'].textContent.includes('1.450'));assert.ok(els['quote-result'].textContent.includes('Nog te bevestigen'));assert.ok(!/fetch\(|sendBeacon|XMLHttpRequest/.test(source));
+});
+
 console.log(JSON.stringify({checks,ssrRankPages:Object.keys(RANK_SLUGS).length,topics:catalog.PROCEDURES.length,lists:Object.keys(LIJSTEN).length,indexableLists:Object.values(LIJSTEN).filter(l=>!l.noindex).length,realEmailsSent:0}));
+
 
