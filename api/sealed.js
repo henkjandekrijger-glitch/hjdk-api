@@ -5,9 +5,24 @@
 // daarna geeft hij alleen de bewaarde uitkomst terug, dus veilig om aan te roepen (kost niets, nooit in een lus).
 import { kv } from '../lib/db.js';
 import { PAGINAS, UI, BIJGEWERKT } from '../lib/sealed-content.js';
+import { ICONS } from '../lib/sealed-icons.js';
 import { renderPagina, renderHub, renderVoordeur, zoekPagina, sitemap, ROBOTS, llms, zichtJson, LOGO_SVG, INDEXNOW_KEY, BASE, HOST, url } from '../lib/sealed.js';
 
 const GSC_META = process.env.SEALED_GSC_META || '';
+
+// Voordeur kiest de taal van de bezoeker (Henkjan 15 nov 2026: "Moet totaal taal agnostisch zijn based on browser"):
+// eerst de eigen keuze (cookie si_taal, gezet bij een tik op een taal), dan Accept-Language op volgorde van q, anders Engels.
+// Zonder Accept-Language (de meeste bots) toont hij de voordeur zelf; dat adres is x-default (ZICHT-les vary-bij-taalkeuze).
+export function kiesTaal(req) {
+  const c = (String(req.headers.cookie || '').match(/(?:^|;\s*)si_taal=([a-z]{2})/) || [])[1];
+  if (c && UI[c]) return c;
+  const al = String(req.headers['accept-language'] || '').trim();
+  if (!al) return '';
+  const lijst = al.split(',').map((x, i) => { const [t, q] = x.trim().split(/;\s*q=/); return { t: String(t || '').slice(0, 2).toLowerCase(), q: q == null ? 1 : parseFloat(q) || 0, i }; }).sort((a, b) => b.q - a.q || a.i - b.i);
+  for (const x of lijst) if (UI[x.t]) return x.t;
+  return 'en';
+}
+const MANIFEST = JSON.stringify({ name: 'Sealed Intent', short_name: 'Sealed Intent', start_url: '/', display: 'browser', background_color: '#ffffff', theme_color: '#2B47C4', icons: [{ src: '/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/icon-512.png', sizes: '512x512', type: 'image/png' }] });
 
 function stuur(res, status, type, body, cache = 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400', taal = '') {
   res.statusCode = status;
@@ -79,10 +94,17 @@ export default async function handler(req, res) {
   if (op === 'llms') return stuur(res, 200, 'text/plain; charset=utf-8', llms());
   if (op === 'zicht') return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(zichtJson(), null, 1));
   if (op === 'logo') return stuur(res, 200, 'image/svg+xml', LOGO_SVG, 'public, max-age=86400');
+  if (op === 'icon') { const f = ICONS[q.get('f') || '']; if (!f) return stuur(res, 404, 'text/plain', '', 'no-store'); res.statusCode = 200; res.setHeader('Content-Type', f[0]); res.setHeader('Cache-Control', 'public, max-age=604800'); return res.end(Buffer.from(f[1], 'base64')); }
+  if (op === 'manifest') return stuur(res, 200, 'application/manifest+json', MANIFEST, 'public, max-age=86400');
   if (op === 'key') return stuur(res, 200, 'text/plain; charset=utf-8', INDEXNOW_KEY, 'public, max-age=86400');
   const taal = q.get('taal') || '', slug = q.get('slug') || '';
   const opts = { gscMeta: GSC_META };
-  if (!taal) return stuur(res, 200, 'text/html; charset=utf-8', renderVoordeur(opts), undefined, 'en');
+  if (!taal) {
+    res.setHeader('Vary', 'Accept-Language, Cookie');
+    const k = kiesTaal(req);
+    if (k) { res.statusCode = 302; res.setHeader('Location', '/' + k + (u.search || '')); res.setHeader('Cache-Control', 'private, no-store'); return res.end(); }
+    return stuur(res, 200, 'text/html; charset=utf-8', renderVoordeur(opts), 'private, no-store', 'en');
+  }
   if (!UI[taal]) return stuur(res, 404, 'text/html; charset=utf-8', renderVoordeur(opts), 'public, max-age=60');
   if (!slug) return stuur(res, 200, 'text/html; charset=utf-8', renderHub(taal, opts), undefined, taal);
   const p = zoekPagina(taal, slug);

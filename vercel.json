@@ -286,7 +286,67 @@
           "value": "sealedintent\\.com"
         }
       ],
+      "destination": "/api/sealed?op=icon&f=favicon.ico"
+    },
+    {
+      "source": "/favicon.svg",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
       "destination": "/api/sealed?op=logo"
+    },
+    {
+      "source": "/apple-touch-icon.png",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?op=icon&f=apple-touch-icon.png"
+    },
+    {
+      "source": "/apple-touch-icon-precomposed.png",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?op=icon&f=apple-touch-icon.png"
+    },
+    {
+      "source": "/icon-192.png",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?op=icon&f=icon-192.png"
+    },
+    {
+      "source": "/icon-512.png",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?op=icon&f=icon-512.png"
+    },
+    {
+      "source": "/site.webmanifest",
+      "has": [
+        {
+          "type": "host",
+          "value": "sealedintent\\.com"
+        }
+      ],
+      "destination": "/api/sealed?op=manifest"
     },
     {
       "source": "/b6f1c0d4e93a47a58c2e1f7d0a9b3c65.txt",
