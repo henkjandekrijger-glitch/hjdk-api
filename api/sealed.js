@@ -6,6 +6,8 @@
 import { kv } from '../lib/db.js';
 import { PAGINAS, UI, BIJGEWERKT } from '../lib/sealed-content.js';
 import { ICONS } from '../lib/sealed-icons.js';
+import { VAST, overdracht, overdrachtTekst } from '../lib/sealed-overdracht.js';
+import { proefStand, proefTekst } from '../lib/proef.js';
 import { renderPartij, zoekPartij, PARTIJ_INDEX } from '../lib/sealed.js';
 import { renderPagina, renderHub, renderVoordeur, zoekPagina, sitemap, ROBOTS, llms, zichtJson, LOGO_SVG, INDEXNOW_KEY, BASE, HOST, url } from '../lib/sealed.js';
 
@@ -109,6 +111,7 @@ export default async function handler(req, res) {
     if (!process.env.HJDK_TOKEN || q.get('token') !== process.env.HJDK_TOKEN) return stuur(res, 403, 'application/json', '{"ok":false}', 'no-store');
     return eigenaar(op, res);
   }
+  if (op === 'overdracht') { const r = await overdracht(kv, { proefStand, proefTekst }); res.setHeader('X-Robots-Tag', 'noindex'); if (q.get('format') === 'json') return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ werking: VAST, stand: r }, null, 1), 'no-store', '', 'noindex'); return stuur(res, 200, 'text/plain; charset=utf-8', VAST + '\n' + overdrachtTekst(r) + '\n', 'no-store'); }
   if (op === 'robots') return stuur(res, 200, 'text/plain; charset=utf-8', ROBOTS);
   if (op === 'sitemap') return stuur(res, 200, 'application/xml; charset=utf-8', sitemap());
   if (op === 'llms') return stuur(res, 200, 'text/plain; charset=utf-8', llms());
