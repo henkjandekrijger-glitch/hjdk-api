@@ -2,15 +2,41 @@
   "uitleg": "Log van de Kadoly-posts op Facebook en Instagram (kadoly/taak-social.md). Alleen toevoegen; cijfers per post na 24 uur.",
   "zernio_profiel": "6afaf9820c09220040d746f4",
   "accounts": {
-    "facebook": { "pagina": "Kadoly", "pagina_id": "61596079596846", "account_id": null },
-    "instagram": { "handle": null, "account_id": null }
+    "facebook": {
+      "pagina": "Kadoly",
+      "pagina_id": "61596079596846",
+      "account_id": null,
+      "profiel": "bio, categorieen, omslag, profielfoto (logo), e-mail, telefoon, privacylink, impressum, prijsklasse, actieknop (16 nov)"
+    },
+    "instagram": {
+      "handle": null,
+      "account_id": null
+    }
   },
   "lerend": {
     "aantal_per_dag": 2,
-    "tijdvakken_nl": ["12:15", "19:45"],
-    "soorten": ["sieraad", "mandje", "nieuw", "wonen"],
+    "tijdvakken_nl": [
+      "12:15",
+      "19:45"
+    ],
+    "soorten": [
+      "sieraad",
+      "mandje",
+      "nieuw",
+      "wonen"
+    ],
     "besluiten": []
   },
   "volgers": {},
-  "posts": []
+  "posts": [
+    {
+      "tijd": "2026-11-16T12:54:00Z",
+      "dag": "2026-11-16",
+      "platform": "facebook",
+      "soort": "hook",
+      "via": "chrome",
+      "wat": "Maak de zin af: het slechtste cadeau dat ik ooit kreeg was... (beeld 1080x1350, geen link)",
+      "tijdvak": "13:54"
+    }
+  ]
 }
