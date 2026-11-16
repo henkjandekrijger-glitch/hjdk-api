@@ -1,0 +1,25 @@
+{
+  "opmerking": "Extra advertentieteksten per product voor de Whop/Meta-ronde (16 nov 2026, Henkjan: \"zorg dat het extreem lerend is\"). De ronde zet hoogstens 3 per dag bij, bij het product met de beste verwachte ROAS, met de foto van de advertentie die er al staat. Alleen feiten die op de productpagina staan.",
+  "varianten": [
+    { "product": "Vivi dip dye kaarsen", "invalshoek": "tafel", "kop": "Zo staat je tafel er mooi bij", "tekst": "Dip dye kaarsen van Vivi in zachte kleuren. Aansteken en je tafel is klaar voor de feestdagen." },
+    { "product": "Vivi dip dye kaarsen", "invalshoek": "kleur", "kop": "Kaarsen met een kleurverloop", "tekst": "Handgedipte kaarsen van Vivi, van licht naar donker. Mooi in een kandelaar, ook als ze niet branden." },
+    { "product": "Scheerolie", "invalshoek": "huid", "kop": "Minder trekken, minder rode huid", "tekst": "Natuurlijke scheerolie van Green Goose, 30 ml, vegan. Een paar druppels en het mes glijdt." },
+    { "product": "Scheerolie", "invalshoek": "klein", "kop": "Past in elke toilettas", "tekst": "Scheerolie van Green Goose in een flesje van 30 ml. Natuurlijk en vegan. Klein cadeau, groot verschil." },
+    { "product": "Muursticker puntjes", "invalshoek": "huur", "kop": "Ook in een huurhuis", "tekst": "Muursticker met getekende puntjes. Geen verf, geen gaten. Plakken en gladstrijken." },
+    { "product": "Muursticker puntjes", "invalshoek": "zelf", "kop": "Zelf een muur aankleden", "tekst": "Getekende puntjes als muursticker voor de kinderkamer. Je bepaalt zelf waar ze komen." },
+    { "product": "Bloempot Colyn groen", "invalshoek": "hoogte", "kop": "Je plant een stukje hoger", "tekst": "Bloempot Colyn op een slank onderstel, in zachtgroen. Zo komt een plant naast de bank echt tot zijn recht." },
+    { "product": "Bloempot Colyn groen", "invalshoek": "kleur", "kop": "Zachtgroen in de woonkamer", "tekst": "Bloempot Colyn van Mica Decorations. Een rustige kleur die bij bijna elk interieur past." },
+    { "product": "Alpaca sokken rendier", "invalshoek": "duo", "kop": "Twee paar voor koude dagen", "tekst": "Dames alpaca sokken met rendier, 2 paar. Eén voor jou, één om weg te geven." },
+    { "product": "Alpaca sokken rendier", "invalshoek": "bank", "kop": "Voor op de bank met thee", "tekst": "Zachte alpaca sokken voor dames, met rendier. Warm zonder dat ze kriebelen." },
+    { "product": "Travertine pot", "invalshoek": "klein", "kop": "Een kleine pot die opvalt", "tekst": "Keramische pot in travertinelook, 9 cm. Precies goed voor een stekje of een kleine cactus." },
+    { "product": "Travertine pot", "invalshoek": "steen", "kop": "Ziet eruit als steen", "tekst": "Keramische pot van Kolibri met travertinelook. Licht van gewicht, mooi op de vensterbank." },
+    { "product": "Whiskyglazen", "invalshoek": "set", "kop": "Alles voor een goed glas whisky", "tekst": "Twee whiskyglazen op een houten standaard, met keramische ijsblokjes erbij. Mooi op de bar of de kast." },
+    { "product": "Whiskyglazen", "invalshoek": "vader", "kop": "Cadeau voor vader of opa", "tekst": "Whiskyglazen met houten standaard en ijsblokjes van keramiek. Koud, zonder dat het waterig wordt." },
+    { "product": "Portemonnee kurk delfts", "invalshoek": "licht", "kop": "Licht in je tas", "tekst": "Portemonnee van kurk met Delfts blauw motief. Licht, stevig en met een ritsvak voor kleingeld." },
+    { "product": "Portemonnee kurk delfts", "invalshoek": "cadeau", "kop": "Een Hollands cadeau", "tekst": "Dames portemonnee van kurk in Delfts blauw. Leuk voor iemand die van Holland houdt, of juist ver weg woont." },
+    { "product": "Orchideeen set roze", "invalshoek": "weinig zorg", "kop": "Bijna geen verzorging nodig", "tekst": "Roze orchideeen met een succulent in een set van Kolibri. Weinig water, lang mooi." },
+    { "product": "Orchideeen set roze", "invalshoek": "moeder", "kop": "Voor je moeder, zomaar", "tekst": "Gradience-set van Kolibri met roze orchideeen en een succulent. Klaar om te geven, geen boeket dat na een week weg is." },
+    { "product": "Schoenzetmat XL", "invalshoek": "kinderen", "kop": "Twee schoenen, twee kinderen", "tekst": "Schoenzetmat XL met plek voor twee schoenen. Geen gedoe meer over wie waar mag zetten." },
+    { "product": "Schoenzetmat XL", "invalshoek": "traditie", "kop": "Elk jaar dezelfde mat", "tekst": "Sinterklaas schoenzetmat XL: Welkom Sint en Piet. Gaat jaren mee en hoort er gewoon bij." }
+  ]
+}
