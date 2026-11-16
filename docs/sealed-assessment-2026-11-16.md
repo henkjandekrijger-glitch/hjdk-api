@@ -116,3 +116,10 @@ We onderzoeken een vertrouwelijke ingang voor bestuurders die alleen voor de jui
 Lokale functionele checks: anonieme opslagallowlist, weigering van contactdetails/onvoldoende tekst, toestemming, private hashes, verkeerde sleutel geweigerd, intrekken, AI-uitval naar menselijke beoordeling, spamlimiet, 35 sitemap-URL's, JSON-LD en syntaxis van ingesloten scripts. Productie- en browseruitkomsten in het centrale werklog vastleggen zodra die gecontroleerd zijn. Geen testpass claimen voor een nog niet uitgevoerde livecontrole.
 
 Bronnen: actuele Vercel-projectgegevens, live Sealed Intent-overdracht, /api/zicht?op=stand&site=sealed, /api/gsc?op=index&site=sealed&n=5, Demand Radar-thema's sealed-beslismomenten en sealed-talen. SEO-uitgangspunt: https://developers.google.com/search/docs/appearance/ai-features . Open to Work: https://www.linkedin.com/help/linkedin/answer/a507508 . Opvolging: https://www.kvk.nl/verkopen-en-overnemen/een-koper-zoeken-voor-je-bedrijf/ ; https://www.ihk.de/ostwestfalen/gruendung-und-nachfolge/unternehmensnachfolge/ihk-nachfolge-pool-nrw-6640306 .
+
+
+### Uitrol en vervolgcontrole
+
+Productiecommit 73436bcc1deb5d7411d1e14a974d87d8b64c2c32 was READY; GitHub Actions-run 43959661803 slaagde op Node 24. De nieuwe conceptpagina en anonieme intake zijn zichtbaar in de browser. Een technische inzending met een fictief e-mailadres werd live geweigerd met de correcte melding; er is geen testprofiel aangemaakt. Verdere opslag-, privésleutel-, verwijderings- en AI-uitvalcontroles zijn functioneel getest met een gecontroleerde opslagadapter, niet als complete live introductie. De visuele vervolgcontrole leidde tot een correctie van de flex-volgorde en het verwijderen van een dubbele kop.
+
+De dagelijkse uitvoertaak is ingesteld op circa 07:10 Curaçao, 17 t/m 22 november: meten, maximaal twee onderbouwde verbeteringen, productie controleren en kort terugmelden. Nieuwe betaalde data niet opnieuw ophalen; e-mailproeven voorbereiden, geen automatische verzending.
