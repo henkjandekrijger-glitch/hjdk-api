@@ -1,6 +1,6 @@
 {
  "id": "duiken",
- "peildatum": "2026-11-13",
+ "peildatum": "2026-11-16",
  "onderwerp": {
   "nl": "duikschool",
   "en": "dive shop",
@@ -30,11 +30,11 @@
   "pt": "{n} escolas de mergulho de Curaçao lado a lado: notas, preços de batismo, Open Water e mergulho de costa, idioma e região."
  },
  "kort": {
-  "nl": "We vonden 37 duikscholen en duikbases op Curaçao. Een eerste proefduik (Discover Scuba) kost $125 tot $140, de PADI Open Water rond $450 tot $525, een begeleide kantduik vanaf $39 en vijf dagen onbeperkt kantduiken vanaf $210. Nooit gedoken: kijk naar The Dive Bus of Jan Thiel Diving; ervaren en tec: Goby Divers; Westpunt: GO WEST Diving; Nederlandstalig: Dive Center Van de Ven of Unique Diving.",
-  "en": "We found 37 dive shops and dive bases on Curaçao. A first try dive (Discover Scuba) costs $125 to $140, PADI Open Water about $450 to $525, a guided shore dive from $39, and five days of unlimited shore diving from $210. Never dived: look at The Dive Bus or Jan Thiel Diving; experienced and tech: Goby Divers; Westpunt: GO WEST Diving; Dutch-speaking: Dive Center Van de Ven or Unique Diving.",
-  "de": "Wir haben auf Curaçao 37 Tauchbasen und Tauchstationen gefunden. Ein erster Schnuppertauchgang (Discover Scuba) kostet $125 bis $140, PADI Open Water etwa $450 bis $525, ein geführter Landtauchgang ab $39 und fünf Tage unbegrenztes Tauchen vom Ufer ab $210. Noch nie getaucht: Schau dir The Dive Bus oder Jan Thiel Diving an; erfahren und Technical: Goby Divers; Westpunt: GO WEST Diving; niederländischsprachig: Dive Center Van de Ven oder Unique Diving.",
-  "es": "Encontramos 37 tiendas y bases de buceo en Curazao. Un primer bautismo de buceo (Discover Scuba) cuesta $125 a $140, el PADI Open Water unos $450 a $525, una inmersión guiada desde la orilla desde $39 y cinco días de buceo ilimitado desde la orilla desde $210. Si nunca has buceado: mira The Dive Bus o Jan Thiel Diving; para experimentados y técnico: Goby Divers; Westpunt: GO WEST Diving; en neerlandés: Dive Center Van de Ven o Unique Diving.",
-  "pt": "Encontramos 37 escolas e bases de mergulho em Curaçao. Um primeiro batismo de mergulho (Discover Scuba) custa $125 a $140, o PADI Open Water cerca de $450 a $525, um mergulho de costa guiado a partir de $39 e cinco dias de mergulho de costa ilimitado a partir de $210. Nunca mergulhou: veja a The Dive Bus ou a Jan Thiel Diving; experientes e técnico: Goby Divers; Westpunt: GO WEST Diving; em holandês: Dive Center Van de Ven ou Unique Diving."
+  "nl": "We vonden 50 duikscholen en duikbases op Curaçao. Een eerste proefduik (Discover Scuba) kost $125 tot $140, de PADI Open Water rond $450 tot $525, een begeleide kantduik vanaf $39 en vijf dagen onbeperkt kantduiken vanaf $210. Nooit gedoken: kijk naar The Dive Bus of Jan Thiel Diving; ervaren en tec: Goby Divers; Westpunt: GO WEST Diving; Nederlandstalig: Dive Center Van de Ven of Unique Diving.",
+  "en": "We found 50 dive shops and dive bases on Curaçao. A first try dive (Discover Scuba) costs $125 to $140, PADI Open Water about $450 to $525, a guided shore dive from $39, and five days of unlimited shore diving from $210. Never dived: look at The Dive Bus or Jan Thiel Diving; experienced and tech: Goby Divers; Westpunt: GO WEST Diving; Dutch-speaking: Dive Center Van de Ven or Unique Diving.",
+  "de": "Wir haben auf Curaçao 50 Tauchbasen und Tauchstationen gefunden. Ein erster Schnuppertauchgang (Discover Scuba) kostet $125 bis $140, PADI Open Water etwa $450 bis $525, ein geführter Landtauchgang ab $39 und fünf Tage unbegrenztes Tauchen vom Ufer ab $210. Noch nie getaucht: Schau dir The Dive Bus oder Jan Thiel Diving an; erfahren und Technical: Goby Divers; Westpunt: GO WEST Diving; niederländischsprachig: Dive Center Van de Ven oder Unique Diving.",
+  "es": "Encontramos 50 tiendas y bases de buceo en Curazao. Un primer bautismo de buceo (Discover Scuba) cuesta $125 a $140, el PADI Open Water unos $450 a $525, una inmersión guiada desde la orilla desde $39 y cinco días de buceo ilimitado desde la orilla desde $210. Si nunca has buceado: mira The Dive Bus o Jan Thiel Diving; para experimentados y técnico: Goby Divers; Westpunt: GO WEST Diving; en neerlandés: Dive Center Van de Ven o Unique Diving.",
+  "pt": "Encontramos 50 escolas e bases de mergulho em Curaçao. Um primeiro batismo de mergulho (Discover Scuba) custa $125 a $140, o PADI Open Water cerca de $450 a $525, um mergulho de costa guiado a partir de $39 e cinco dias de mergulho de costa ilimitado a partir de $210. Nunca mergulhou: veja a The Dive Bus ou a Jan Thiel Diving; experientes e técnico: Goby Divers; Westpunt: GO WEST Diving; em holandês: Dive Center Van de Ven ou Unique Diving."
  },
  "vragen": [
   {
@@ -3798,6 +3798,49 @@
    },
    "bronnen": [
     "https://curacao.day/en/businesses/dive-shop/dive-charter-curacao"
+   ]
+  },
+  {
+   "id": "at-divers-choice-curacao",
+   "naam": "At Divers Choice Curacao",
+   "url": "https://curacao.day/en/businesses/dive-shop/at-divers-choice-curacao",
+   "soort": {
+    "nl": "lokaal",
+    "en": "local",
+    "de": "lokal",
+    "es": "local",
+    "pt": "local"
+   },
+   "plaats": "Kaya Ma Pieternella, Sint Michiel",
+   "tags": [],
+   "prijs": null,
+   "feiten": [],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 30,
+     "peildatum": "2026-11-16",
+     "bron": "https://curacao.day/en/businesses/dive-shop/at-divers-choice-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/dive-shop/at-divers-choice-curacao"
    ]
   }
  ],

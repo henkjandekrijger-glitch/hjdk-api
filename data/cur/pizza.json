@@ -1,0 +1,1385 @@
+{
+ "id": "pizza",
+ "peildatum": "2026-11-16",
+ "onderwerp": {
+  "nl": "pizza",
+  "en": "pizza",
+  "de": "Pizza",
+  "es": "pizza",
+  "pt": "pizza"
+ },
+ "h1": {
+  "nl": "Pizza eten op Curaçao: welke pizzeria kies je?",
+  "en": "Eating pizza in Curaçao: which pizza place should you pick?",
+  "de": "Pizza essen auf Curaçao: Welche Pizzeria wählst du?",
+  "es": "Comer pizza en Curazao: ¿qué pizzería eliges?",
+  "pt": "Comer pizza em Curaçao: qual pizzaria você escolhe?"
+ },
+ "titel": {
+  "nl": "Pizza op Curaçao: {n} pizzeria's vergeleken",
+  "en": "Pizza in Curaçao: {n} pizza places compared",
+  "de": "Pizza auf Curaçao: {n} Pizzerien im Vergleich",
+  "es": "Pizza en Curazao: {n} pizzerías comparadas",
+  "pt": "Pizza em Curaçao: {n} pizzarias comparadas"
+ },
+ "metaDesc": {
+  "nl": "Pizza op Curaçao: {n} pizzeria's met Google-scores, adressen en telefoonnummers, van houtovenpizza tot Domino's en Pizza Hut, plus waar je bezorging vindt.",
+  "en": "Pizza in Curaçao: {n} pizza places with Google scores, addresses and phone numbers, from wood-fired pizza to Domino's and Pizza Hut, plus where to find delivery.",
+  "de": "Pizza auf Curaçao: {n} Pizzerien mit Google-Bewertungen, Adressen und Telefonnummern, von Holzofenpizza bis Domino's und Pizza Hut, plus Lieferdienste.",
+  "es": "Pizza en Curazao: {n} pizzerías con puntuaciones de Google, direcciones y teléfonos, de pizza al horno de leña a Domino's y Pizza Hut, y dónde pedir a domicilio.",
+  "pt": "Pizza em Curaçao: {n} pizzarias com notas do Google, endereços e telefones, de pizza no forno a lenha a Domino's e Pizza Hut, e onde pedir entrega."
+ },
+ "kort": {
+  "nl": "We vergelijken 12 pizzeria's op Curaçao met minstens 15 Google-reviews. Het best beoordeeld zijn Pizzarroni (4,8 uit 374 reviews), New Yorker's Pizza (4,7, maar maar 26 reviews) en Pizzaliña en Pizza Mia (beide 4,5). De ketens Domino's en Pizza Hut hebben de meeste reviews, met scores tussen 3,9 en 4,3. Prijzen en openingstijden hebben we niet voor elke zaak kunnen bevestigen, dus bel of check de website voor je gaat.",
+  "en": "We compare 12 pizza places in Curaçao with at least 15 Google reviews. Best rated are Pizzarroni (4.8 from 374 reviews), New Yorker's Pizza (4.7, but only 26 reviews) and Pizzaliña and Pizza Mia (both 4.5). The chains Domino's and Pizza Hut have the most reviews, with scores between 3.9 and 4.3. We could not confirm prices and opening hours for every place, so call or check the website before you go.",
+  "de": "Wir vergleichen 12 Pizzerien auf Curaçao mit mindestens 15 Google-Bewertungen. Am besten bewertet sind Pizzarroni (4,8 aus 374 Bewertungen), New Yorker's Pizza (4,7, aber nur 26 Bewertungen) sowie Pizzaliña und Pizza Mia (beide 4,5). Die Ketten Domino's und Pizza Hut haben die meisten Bewertungen, mit Werten zwischen 3,9 und 4,3. Preise und Öffnungszeiten konnten wir nicht für jedes Lokal bestätigen, ruf also an oder prüfe die Website, bevor du losgehst.",
+  "es": "Comparamos 12 pizzerías de Curazao con al menos 15 reseñas en Google. Las mejor valoradas son Pizzarroni (4,8 con 374 reseñas), New Yorker's Pizza (4,7, pero solo 26 reseñas) y Pizzaliña y Pizza Mia (ambas 4,5). Las cadenas Domino's y Pizza Hut tienen más reseñas, con notas entre 3,9 y 4,3. No hemos podido confirmar precios y horarios de todas, así que llama o mira su web antes de ir.",
+  "pt": "Comparamos 12 pizzarias em Curaçao com pelo menos 15 avaliações no Google. As mais bem avaliadas são Pizzarroni (4,8 com 374 avaliações), New Yorker's Pizza (4,7, mas só 26 avaliações) e Pizzaliña e Pizza Mia (ambas 4,5). As redes Domino's e Pizza Hut têm mais avaliações, com notas entre 3,9 e 4,3. Não conseguimos confirmar preços e horários de todas, então ligue ou veja o site antes de ir."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Hoe wil je je pizza?",
+    "en": "How do you want your pizza?",
+    "de": "Wie möchtest du deine Pizza?",
+    "es": "¿Cómo quieres tu pizza?",
+    "pt": "Como você quer sua pizza?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anything",
+      "de": "Egal",
+      "es": "Cualquier cosa",
+      "pt": "Qualquer coisa"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Laten bezorgen",
+      "en": "Delivered",
+      "de": "Liefern lassen",
+      "es": "A domicilio",
+      "pt": "Entregue em casa"
+     },
+     "plus": [
+      "bezorgen"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Afhalen",
+      "en": "Take away",
+      "de": "Zum Mitnehmen",
+      "es": "Para llevar",
+      "pt": "Para levar"
+     },
+     "plus": [
+      "afhalen"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Zitten en eten",
+      "en": "Eat in",
+      "de": "Vor Ort essen",
+      "es": "Comer allí",
+      "pt": "Comer no local"
+     },
+     "plus": [
+      "zitten"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat voor pizzeria?",
+    "en": "What kind of pizza place?",
+    "de": "Was für eine Pizzeria?",
+    "es": "¿Qué tipo de pizzería?",
+    "pt": "Que tipo de pizzaria?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anything",
+      "de": "Egal",
+      "es": "Cualquier cosa",
+      "pt": "Qualquer coisa"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Houtoven",
+      "en": "Wood-fired oven",
+      "de": "Holzofen",
+      "es": "Horno de leña",
+      "pt": "Forno a lenha"
+     },
+     "plus": [
+      "houtoven"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Bekende keten",
+      "en": "Well-known chain",
+      "de": "Bekannte Kette",
+      "es": "Cadena conocida",
+      "pt": "Rede conhecida"
+     },
+     "plus": [
+      "keten"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Lokale pizzeria",
+      "en": "Local pizzeria",
+      "de": "Lokale Pizzeria",
+      "es": "Pizzería local",
+      "pt": "Pizzaria local"
+     },
+     "plus": [
+      "lokaal"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Waar?",
+    "en": "Where?",
+    "de": "Wo?",
+    "es": "¿Dónde?",
+    "pt": "Onde?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anything",
+      "de": "Egal",
+      "es": "Cualquier cosa",
+      "pt": "Qualquer coisa"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "In Bandabou",
+      "en": "In Bandabou",
+      "de": "In Bandabou",
+      "es": "En Bandabou",
+      "pt": "Em Bandabou"
+     },
+     "plus": [
+      "bandabou"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "In winkelcentrum Sambil",
+      "en": "In Sambil mall",
+      "de": "Im Einkaufszentrum Sambil",
+      "es": "En el centro comercial Sambil",
+      "pt": "No shopping Sambil"
+     },
+     "plus": [
+      "mall"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "pizzarroni",
+   "naam": "Pizzarroni",
+   "url": "https://curacao.day/en/businesses/pizza-restaurant/pizzarroni",
+   "soort": {
+    "nl": "pizza uit houtoven",
+    "en": "wood-fired pizza",
+    "de": "Holzofenpizza",
+    "es": "pizza al horno de leña",
+    "pt": "pizza no forno a lenha"
+   },
+   "plaats": "Oude Caracasbaaiweg",
+   "tags": [
+    "zitten",
+    "lokaal",
+    "houtoven"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 158 Oude Caracasbaaiweg",
+     "en": "Address (Google): 158 Oude Caracasbaaiweg",
+     "de": "Adresse (Google): 158 Oude Caracasbaaiweg",
+     "es": "Dirección (Google): 158 Oude Caracasbaaiweg",
+     "pt": "Endereço (Google): 158 Oude Caracasbaaiweg"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 843 0870",
+     "en": "Phone (Google): +599 9 843 0870",
+     "de": "Telefon (Google): +599 9 843 0870",
+     "es": "Teléfono (Google): +599 9 843 0870",
+     "pt": "Telefone (Google): +599 9 843 0870"
+    },
+    {
+     "nl": "Serveert volgens curacaotodo.com lunch en diner, met zitplaatsen binnen en buiten en vegan opties",
+     "en": "Serves lunch and dinner with indoor and outdoor seating and vegan options, according to curacaotodo.com",
+     "de": "Serviert laut curacaotodo.com Mittag- und Abendessen, mit Sitzplätzen drinnen und draußen und veganen Optionen",
+     "es": "Sirve almuerzo y cena, con mesas dentro y fuera y opciones veganas, según curacaotodo.com",
+     "pt": "Serve almoço e jantar, com mesas dentro e fora e opções veganas, segundo o curacaotodo.com"
+    },
+    {
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 374,
+     "peildatum": "2026-11-16",
+     "bron": "https://curacao.day/en/businesses/pizza-restaurant/pizzarroni"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 60,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Restaurant_Review-g147278-d20000278-Reviews-Pizzarroni-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Pizza uit de houtoven met zorg gemaakt (Tripadvisor)"
+    ],
+    "en": [
+     "Wood-fired pizza made with care (Tripadvisor)"
+    ],
+    "de": [
+     "Mit Sorgfalt gemachte Holzofenpizza (Tripadvisor)"
+    ],
+    "es": [
+     "Pizza al horno de leña hecha con esmero (Tripadvisor)"
+    ],
+    "pt": [
+     "Pizza no forno a lenha feita com capricho (Tripadvisor)"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/pizza-restaurant/pizzarroni",
+    "https://curacaotodo.com/en/company/pizzarroni",
+    "https://www.tripadvisor.com/Restaurant_Review-g147278-d20000278-Reviews-Pizzarroni-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "pizzalina",
+   "naam": "Pizzaliña",
+   "url": "https://www.pizzalinacuracao.com/",
+   "soort": {
+    "nl": "pizza uit houtoven",
+    "en": "wood-fired pizza",
+    "de": "Holzofenpizza",
+    "es": "pizza al horno de leña",
+    "pt": "pizza no forno a lenha"
+   },
+   "plaats": "Schottegatweg Zuid",
+   "tags": [
+    "afhalen",
+    "bezorgen",
+    "lokaal",
+    "houtoven"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Schottegatweg Zuid",
+     "en": "Address (Google): Schottegatweg Zuid",
+     "de": "Adresse (Google): Schottegatweg Zuid",
+     "es": "Dirección (Google): Schottegatweg Zuid",
+     "pt": "Endereço (Google): Schottegatweg Zuid"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 683 0707",
+     "en": "Phone (Google): +599 9 683 0707",
+     "de": "Telefon (Google): +599 9 683 0707",
+     "es": "Teléfono (Google): +599 9 683 0707",
+     "pt": "Telefone (Google): +599 9 683 0707"
+    },
+    {
+     "nl": "Noemt zichzelf geschikt voor lunch, diner of afhalen (mycuracaoguide.com)",
+     "en": "Describes itself as suited for lunch, dinner or take away (mycuracaoguide.com)",
+     "de": "Beschreibt sich als geeignet für Mittag, Abendessen oder zum Mitnehmen (mycuracaoguide.com)",
+     "es": "Se presenta como ideal para almuerzo, cena o para llevar (mycuracaoguide.com)",
+     "pt": "Apresenta-se como ideal para almoço, jantar ou para levar (mycuracaoguide.com)"
+    },
+    {
+     "nl": "HappyCow vermeldt bezorgen en afhalen en een afhaalluik met margherita met vegan kaas, maar die vermelding is sinds juli 2025 niet bijgewerkt: bel eerst",
+     "en": "HappyCow lists delivery and take-out and a takeaway window with a vegan-cheese margherita, but that listing has not been updated since July 2025: call first",
+     "de": "HappyCow nennt Lieferung und Take-out sowie ein Abholfenster mit Margherita mit veganem Käse, doch der Eintrag wurde seit Juli 2025 nicht aktualisiert: ruf vorher an",
+     "es": "HappyCow indica entrega y comida para llevar y una ventanilla con pizza margarita con queso vegano, pero esa ficha no se actualiza desde julio de 2025: llama antes",
+     "pt": "O HappyCow indica entrega e retirada e uma janela de retirada com margherita de queijo vegano, mas essa ficha não é atualizada desde julho de 2025: ligue antes"
+    },
+    {
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 174,
+     "peildatum": "2026-11-16",
+     "bron": "https://curacao.day/en/businesses/pizza-restaurant/pizzalina"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 41,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Restaurant_Review-g147278-d23900180-Reviews-Pizzalina-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Echte pizza uit de houtoven (Tripadvisor)"
+    ],
+    "en": [
+     "Authentic wood-fired pizza (Tripadvisor)"
+    ],
+    "de": [
+     "Authentische Holzofenpizza (Tripadvisor)"
+    ],
+    "es": [
+     "Auténtica pizza al horno de leña (Tripadvisor)"
+    ],
+    "pt": [
+     "Autêntica pizza no forno a lenha (Tripadvisor)"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/pizza-restaurant/pizzalina",
+    "https://www.mycuracaoguide.com/discover/pizzalina",
+    "https://happycow.net/reviews/pizzalina-willemstad-366012",
+    "https://www.tripadvisor.com/Restaurant_Review-g147278-d23900180-Reviews-Pizzalina-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "pizza-mia",
+   "naam": "Pizza Mia",
+   "url": "https://www.facebook.com/pizzamiacuracao/",
+   "soort": {
+    "nl": "pizzeria",
+    "en": "pizzeria",
+    "de": "Pizzeria",
+    "es": "pizzería",
+    "pt": "pizzaria"
+   },
+   "plaats": "Caracasbaaiweg",
+   "tags": [
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Caracasbaaiweg",
+     "en": "Address (Google): Caracasbaaiweg",
+     "de": "Adresse (Google): Caracasbaaiweg",
+     "es": "Dirección (Google): Caracasbaaiweg",
+     "pt": "Endereço (Google): Caracasbaaiweg"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 767 7330",
+     "en": "Phone (Google): +599 9 767 7330",
+     "de": "Telefon (Google): +599 9 767 7330",
+     "es": "Teléfono (Google): +599 9 767 7330",
+     "pt": "Telefone (Google): +599 9 767 7330"
+    },
+    {
+     "nl": "Heeft een tweede vestiging in Sambil (hieronder apart vermeld)",
+     "en": "Has a second branch in Sambil (listed separately below)",
+     "de": "Hat eine zweite Filiale im Sambil (unten separat aufgeführt)",
+     "es": "Tiene una segunda sucursal en Sambil (listada aparte más abajo)",
+     "pt": "Tem uma segunda filial no Sambil (listada separadamente abaixo)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 76,
+     "peildatum": "2026-11-16",
+     "bron": "https://curacao.day/en/businesses/pizza-restaurant/pizza-mia"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/pizza-restaurant/pizza-mia",
+    "https://curacao.day/en/businesses/pizza-restaurant/pizza-mia-2"
+   ]
+  },
+  {
+   "id": "new-yorker-s-pizza",
+   "naam": "New Yorker's Pizza",
+   "url": "https://curacao.day/en/businesses/pizza-restaurant/new-yorker-s-pizza",
+   "soort": {
+    "nl": "pizzeria",
+    "en": "pizzeria",
+    "de": "Pizzeria",
+    "es": "pizzería",
+    "pt": "pizzaria"
+   },
+   "plaats": "Schottegatweg Oost",
+   "tags": [
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 167B Schottegatweg Oost",
+     "en": "Address (Google): 167B Schottegatweg Oost",
+     "de": "Adresse (Google): 167B Schottegatweg Oost",
+     "es": "Dirección (Google): 167B Schottegatweg Oost",
+     "pt": "Endereço (Google): 167B Schottegatweg Oost"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 724 0580",
+     "en": "Phone (Google): +599 9 724 0580",
+     "de": "Telefon (Google): +599 9 724 0580",
+     "es": "Teléfono (Google): +599 9 724 0580",
+     "pt": "Telefone (Google): +599 9 724 0580"
+    },
+    {
+     "nl": "Hoge score, maar op nog maar 26 Google-reviews",
+     "en": "High score, but on only 26 Google reviews",
+     "de": "Hohe Bewertung, aber bisher nur 26 Google-Bewertungen",
+     "es": "Puntuación alta, pero con solo 26 reseñas en Google",
+     "pt": "Nota alta, mas com apenas 26 avaliações no Google"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 26,
+     "peildatum": "2026-11-16",
+     "bron": "https://curacao.day/en/businesses/pizza-restaurant/new-yorker-s-pizza"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/pizza-restaurant/new-yorker-s-pizza"
+   ]
+  },
+  {
+   "id": "dominos-pizza",
+   "naam": "Domino's Pizza",
+   "url": "https://www.dominos.cw/",
+   "soort": {
+    "nl": "pizzaketen",
+    "en": "pizza chain",
+    "de": "Pizzakette",
+    "es": "cadena de pizzerías",
+    "pt": "rede de pizzarias"
+   },
+   "plaats": "Schottegatweg Oost",
+   "tags": [
+    "keten"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 48 Schottegatweg Oost",
+     "en": "Address (Google): 48 Schottegatweg Oost",
+     "de": "Adresse (Google): 48 Schottegatweg Oost",
+     "es": "Dirección (Google): 48 Schottegatweg Oost",
+     "pt": "Endereço (Google): 48 Schottegatweg Oost"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 736 6555",
+     "en": "Phone (Google): +599 9 736 6555",
+     "de": "Telefon (Google): +599 9 736 6555",
+     "es": "Teléfono (Google): +599 9 736 6555",
+     "pt": "Telefone (Google): +599 9 736 6555"
+    },
+    {
+     "nl": "Heeft een eigen website voor Curaçao: dominos.cw (Google)",
+     "en": "Has its own Curaçao website: dominos.cw (Google)",
+     "de": "Hat eine eigene Curaçao-Website: dominos.cw (Google)",
+     "es": "Tiene su propio sitio web para Curazao: dominos.cw (Google)",
+     "pt": "Tem um site próprio para Curaçao: dominos.cw (Google)"
+    },
+    {
+     "nl": "Ruim 500 Google-reviews",
+     "en": "Over 500 Google reviews",
+     "de": "Über 500 Google-Bewertungen",
+     "es": "Más de 500 reseñas en Google",
+     "pt": "Mais de 500 avaliações no Google"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 522,
+     "peildatum": "2026-11-16",
+     "bron": "https://curacao.day/en/businesses/pizza-restaurant/dominos-pizza"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/pizza-restaurant/dominos-pizza",
+    "https://www.dominos.cw/"
+   ]
+  },
+  {
+   "id": "il-forno",
+   "naam": "Il Forno",
+   "url": "https://curacao.day/en/businesses/pizza-restaurant/il-forno",
+   "soort": {
+    "nl": "pizzeria met houtoven",
+    "en": "wood-oven pizzeria",
+    "de": "Pizzeria mit Holzofen",
+    "es": "pizzería con horno de leña",
+    "pt": "pizzaria com forno a lenha"
+   },
+   "plaats": "Schout bij Nacht Doormanweg",
+   "tags": [
+    "houtoven",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Schout Bij Nacht Doormanweg",
+     "en": "Address (Google): Schout Bij Nacht Doormanweg",
+     "de": "Adresse (Google): Schout Bij Nacht Doormanweg",
+     "es": "Dirección (Google): Schout Bij Nacht Doormanweg",
+     "pt": "Endereço (Google): Schout Bij Nacht Doormanweg"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 736 2323",
+     "en": "Phone (Google): +599 9 736 2323",
+     "de": "Telefon (Google): +599 9 736 2323",
+     "es": "Teléfono (Google): +599 9 736 2323",
+     "pt": "Telefone (Google): +599 9 736 2323"
+    },
+    {
+     "nl": "Een blog uit 2015 schrijft dat Il Forno pizza's vers bakt in een houtoven, met vestigingen in Mahaai, aan de Caracasbaaiweg en op Gomezplein in Punda",
+     "en": "A 2015 blog says Il Forno bakes pizzas fresh in a wood-burning oven, with branches in Mahaai, on Caracasbaaiweg and on Gomezplein in Punda",
+     "de": "Ein Blog von 2015 schreibt, Il Forno backe Pizzen frisch im Holzofen, mit Filialen in Mahaai, an der Caracasbaaiweg und am Gomezplein in Punda",
+     "es": "Un blog de 2015 dice que Il Forno hornea las pizzas al momento en horno de leña, con sucursales en Mahaai, en Caracasbaaiweg y en Gomezplein, en Punda",
+     "pt": "Um blog de 2015 diz que o Il Forno assa as pizzas na hora em forno a lenha, com filiais em Mahaai, na Caracasbaaiweg e na Gomezplein, em Punda"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 255,
+     "peildatum": "2026-11-16",
+     "bron": "https://curacao.day/en/businesses/pizza-restaurant/il-forno"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/pizza-restaurant/il-forno",
+    "https://www.villaseashell.com/post/2015/04/02/the-great-pizza-count-down-in-curacao"
+   ]
+  },
+  {
+   "id": "il-forno-savaan",
+   "naam": "Il Forno Savaan",
+   "url": "https://curacao.day/en/businesses/pizza-restaurant/il-forno-savaan",
+   "soort": {
+    "nl": "pizzeria",
+    "en": "pizzeria",
+    "de": "Pizzeria",
+    "es": "pizzería",
+    "pt": "pizzaria"
+   },
+   "plaats": "De Savaan",
+   "tags": [
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 10 A de Savaan",
+     "en": "Address (Google): 10 A de Savaan",
+     "de": "Adresse (Google): 10 A de Savaan",
+     "es": "Dirección (Google): 10 A de Savaan",
+     "pt": "Endereço (Google): 10 A de Savaan"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 840 5555",
+     "en": "Phone (Google): +599 9 840 5555",
+     "de": "Telefon (Google): +599 9 840 5555",
+     "es": "Teléfono (Google): +599 9 840 5555",
+     "pt": "Telefone (Google): +599 9 840 5555"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 38,
+     "peildatum": "2026-11-16",
+     "bron": "https://curacao.day/en/businesses/pizza-restaurant/il-forno-savaan"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/pizza-restaurant/il-forno-savaan"
+   ]
+  },
+  {
+   "id": "pizza-hut-curacao-sta-maria",
+   "naam": "Pizza Hut Santa Maria",
+   "url": "http://www.pizzahut.cw/",
+   "soort": {
+    "nl": "pizzaketen",
+    "en": "pizza chain",
+    "de": "Pizzakette",
+    "es": "cadena de pizzerías",
+    "pt": "rede de pizzarias"
+   },
+   "plaats": "Jan Noorduynweg",
+   "tags": [
+    "keten",
+    "afhalen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 3 Jan Noorduynweg",
+     "en": "Address (Google): 3 Jan Noorduynweg",
+     "de": "Adresse (Google): 3 Jan Noorduynweg",
+     "es": "Dirección (Google): 3 Jan Noorduynweg",
+     "pt": "Endereço (Google): 3 Jan Noorduynweg"
+    },
+    {
+     "nl": "Volgens curacaotodo.com heeft Pizza Hut vier vestigingen op het eiland: Saliña, Santa Maria, Brionplein en Brievengat",
+     "en": "According to curacaotodo.com, Pizza Hut has four branches on the island: Saliña, Santa Maria, Brionplein and Brievengat",
+     "de": "Laut curacaotodo.com hat Pizza Hut vier Filialen auf der Insel: Saliña, Santa Maria, Brionplein und Brievengat",
+     "es": "Según curacaotodo.com, Pizza Hut tiene cuatro sucursales en la isla: Saliña, Santa Maria, Brionplein y Brievengat",
+     "pt": "Segundo o curacaotodo.com, a Pizza Hut tem quatro filiais na ilha: Saliña, Santa Maria, Brionplein e Brievengat"
+    },
+    {
+     "nl": "Take-out bestel je volgens curacaotodo.com via de website van Pizza Hut (pizzahut.cw)",
+     "en": "According to curacaotodo.com, you order take-out through Pizza Hut's website (pizzahut.cw)",
+     "de": "Laut curacaotodo.com bestellst du Take-out über die Website von Pizza Hut (pizzahut.cw)",
+     "es": "Según curacaotodo.com, el pedido para llevar se hace en el sitio web de Pizza Hut (pizzahut.cw)",
+     "pt": "Segundo o curacaotodo.com, o pedido para viagem é feito no site da Pizza Hut (pizzahut.cw)"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 868 8277",
+     "en": "Phone (Google): +599 9 868 8277",
+     "de": "Telefon (Google): +599 9 868 8277",
+     "es": "Teléfono (Google): +599 9 868 8277",
+     "pt": "Telefone (Google): +599 9 868 8277"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 1067,
+     "peildatum": "2026-11-16",
+     "bron": "https://curacao.day/en/businesses/pizza-restaurant/pizza-hut-curacao-sta-maria"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/pizza-restaurant/pizza-hut-curacao-sta-maria",
+    "http://www.pizzahut.cw/",
+    "https://curacaotodo.com/en/company/pizza-hut"
+   ]
+  },
+  {
+   "id": "pizza-hut-curacao-salina",
+   "naam": "Pizza Hut Saliña",
+   "url": "http://www.pizzahut.cw/",
+   "soort": {
+    "nl": "pizzaketen",
+    "en": "pizza chain",
+    "de": "Pizzakette",
+    "es": "cadena de pizzerías",
+    "pt": "rede de pizzarias"
+   },
+   "plaats": "Schottegatweg Oost",
+   "tags": [
+    "keten",
+    "afhalen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 193 Schottegatweg Oost",
+     "en": "Address (Google): 193 Schottegatweg Oost",
+     "de": "Adresse (Google): 193 Schottegatweg Oost",
+     "es": "Dirección (Google): 193 Schottegatweg Oost",
+     "pt": "Endereço (Google): 193 Schottegatweg Oost"
+    },
+    {
+     "nl": "Volgens curacaotodo.com heeft Pizza Hut vier vestigingen op het eiland: Saliña, Santa Maria, Brionplein en Brievengat",
+     "en": "According to curacaotodo.com, Pizza Hut has four branches on the island: Saliña, Santa Maria, Brionplein and Brievengat",
+     "de": "Laut curacaotodo.com hat Pizza Hut vier Filialen auf der Insel: Saliña, Santa Maria, Brionplein und Brievengat",
+     "es": "Según curacaotodo.com, Pizza Hut tiene cuatro sucursales en la isla: Saliña, Santa Maria, Brionplein y Brievengat",
+     "pt": "Segundo o curacaotodo.com, a Pizza Hut tem quatro filiais na ilha: Saliña, Santa Maria, Brionplein e Brievengat"
+    },
+    {
+     "nl": "Take-out bestel je volgens curacaotodo.com via de website van Pizza Hut (pizzahut.cw)",
+     "en": "According to curacaotodo.com, you order take-out through Pizza Hut's website (pizzahut.cw)",
+     "de": "Laut curacaotodo.com bestellst du Take-out über die Website von Pizza Hut (pizzahut.cw)",
+     "es": "Según curacaotodo.com, el pedido para llevar se hace en el sitio web de Pizza Hut (pizzahut.cw)",
+     "pt": "Segundo o curacaotodo.com, o pedido para viagem é feito no site da Pizza Hut (pizzahut.cw)"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 6161",
+     "en": "Phone (Google): +599 9 461 6161",
+     "de": "Telefon (Google): +599 9 461 6161",
+     "es": "Teléfono (Google): +599 9 461 6161",
+     "pt": "Telefone (Google): +599 9 461 6161"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4,
+     "max": 5,
+     "aantal": 814,
+     "peildatum": "2026-11-16",
+     "bron": "https://curacao.day/en/businesses/pizza-restaurant/pizza-hut-curacao-salina"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/pizza-restaurant/pizza-hut-curacao-salina",
+    "http://www.pizzahut.cw/",
+    "https://curacaotodo.com/en/company/pizza-hut"
+   ]
+  },
+  {
+   "id": "pizza-hut-curacao-brievengat",
+   "naam": "Pizza Hut Brievengat",
+   "url": "http://www.pizzahut.cw/",
+   "soort": {
+    "nl": "pizzaketen",
+    "en": "pizza chain",
+    "de": "Pizzakette",
+    "es": "cadena de pizzerías",
+    "pt": "rede de pizzarias"
+   },
+   "plaats": "Kaya Charles Maduro",
+   "tags": [
+    "keten",
+    "afhalen"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 3 Kaya Charles Maduro",
+     "en": "Address (Google): 3 Kaya Charles Maduro",
+     "de": "Adresse (Google): 3 Kaya Charles Maduro",
+     "es": "Dirección (Google): 3 Kaya Charles Maduro",
+     "pt": "Endereço (Google): 3 Kaya Charles Maduro"
+    },
+    {
+     "nl": "Volgens curacaotodo.com heeft Pizza Hut vier vestigingen op het eiland: Saliña, Santa Maria, Brionplein en Brievengat",
+     "en": "According to curacaotodo.com, Pizza Hut has four branches on the island: Saliña, Santa Maria, Brionplein and Brievengat",
+     "de": "Laut curacaotodo.com hat Pizza Hut vier Filialen auf der Insel: Saliña, Santa Maria, Brionplein und Brievengat",
+     "es": "Según curacaotodo.com, Pizza Hut tiene cuatro sucursales en la isla: Saliña, Santa Maria, Brionplein y Brievengat",
+     "pt": "Segundo o curacaotodo.com, a Pizza Hut tem quatro filiais na ilha: Saliña, Santa Maria, Brionplein e Brievengat"
+    },
+    {
+     "nl": "Take-out bestel je volgens curacaotodo.com via de website van Pizza Hut (pizzahut.cw)",
+     "en": "According to curacaotodo.com, you order take-out through Pizza Hut's website (pizzahut.cw)",
+     "de": "Laut curacaotodo.com bestellst du Take-out über die Website von Pizza Hut (pizzahut.cw)",
+     "es": "Según curacaotodo.com, el pedido para llevar se hace en el sitio web de Pizza Hut (pizzahut.cw)",
+     "pt": "Segundo o curacaotodo.com, o pedido para viagem é feito no site da Pizza Hut (pizzahut.cw)"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 737 2400",
+     "en": "Phone (Google): +599 9 737 2400",
+     "de": "Telefon (Google): +599 9 737 2400",
+     "es": "Teléfono (Google): +599 9 737 2400",
+     "pt": "Telefone (Google): +599 9 737 2400"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 226,
+     "peildatum": "2026-11-16",
+     "bron": "https://curacao.day/en/businesses/pizza-restaurant/pizza-hut-curacao-brievengat"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/pizza-restaurant/pizza-hut-curacao-brievengat",
+    "http://www.pizzahut.cw/",
+    "https://curacaotodo.com/en/company/pizza-hut"
+   ]
+  },
+  {
+   "id": "pizza-and-more-curacao",
+   "naam": "Pizza and More",
+   "url": "http://www.pizzaandmorecuracao.com/",
+   "soort": {
+    "nl": "pizzeria",
+    "en": "pizzeria",
+    "de": "Pizzeria",
+    "es": "pizzería",
+    "pt": "pizzaria"
+   },
+   "plaats": "Coral Estate Rif, Sint Marie",
+   "tags": [
+    "bandabou",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Coral Estate Rif, St. Marie",
+     "en": "Address (Google): Coral Estate Rif, St. Marie",
+     "de": "Adresse (Google): Coral Estate Rif, St. Marie",
+     "es": "Dirección (Google): Coral Estate Rif, St. Marie",
+     "pt": "Endereço (Google): Coral Estate Rif, St. Marie"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 724 5667",
+     "en": "Phone (Google): +599 9 724 5667",
+     "de": "Telefon (Google): +599 9 724 5667",
+     "es": "Teléfono (Google): +599 9 724 5667",
+     "pt": "Telefone (Google): +599 9 724 5667"
+    },
+    {
+     "nl": "Prijsniveau $$-$$$ (Tripadvisor)",
+     "en": "Price level $$-$$$ (Tripadvisor)",
+     "de": "Preisniveau $$-$$$ (Tripadvisor)",
+     "es": "Nivel de precio $$-$$$ (Tripadvisor)",
+     "pt": "Faixa de preço $$-$$$ (Tripadvisor)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4,
+     "max": 5,
+     "aantal": 50,
+     "peildatum": "2026-11-16",
+     "bron": "https://curacao.day/en/businesses/pizza-restaurant/pizza-and-more-curacao"
+    },
+    {
+     "platform": "Tripadvisor",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 22,
+     "peildatum": "2026-10-20",
+     "bron": "https://www.tripadvisor.com/Restaurant_Review-g147278-d19213695-Reviews-Pizza_And_More-Willemstad_Curacao.html"
+    }
+   ],
+   "voor": {
+    "nl": [
+     "Een van de weinige pizzeria's in Bandabou (Tripadvisor)"
+    ],
+    "en": [
+     "One of the few pizza places in Bandabou (Tripadvisor)"
+    ],
+    "de": [
+     "Eine der wenigen Pizzerien in Bandabou (Tripadvisor)"
+    ],
+    "es": [
+     "Una de las pocas pizzerías de Bandabou (Tripadvisor)"
+    ],
+    "pt": [
+     "Uma das poucas pizzarias de Bandabou (Tripadvisor)"
+    ]
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/pizza-restaurant/pizza-and-more-curacao",
+    "https://www.tripadvisor.com/Restaurant_Review-g147278-d19213695-Reviews-Pizza_And_More-Willemstad_Curacao.html"
+   ]
+  },
+  {
+   "id": "pizza-mia-2",
+   "naam": "Pizza Mia Sambil",
+   "url": "https://curacao.day/en/businesses/pizza-restaurant/pizza-mia-2",
+   "soort": {
+    "nl": "pizzeria in het winkelcentrum",
+    "en": "pizzeria in the mall",
+    "de": "Pizzeria im Einkaufszentrum",
+    "es": "pizzería en el centro comercial",
+    "pt": "pizzaria no shopping"
+   },
+   "plaats": "Sambil, Piscadera",
+   "tags": [
+    "lokaal",
+    "mall"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Veeris 27, Piscadera, Sambil",
+     "en": "Address (Google): Veeris 27, Piscadera, Sambil",
+     "de": "Adresse (Google): Veeris 27, Piscadera, Sambil",
+     "es": "Dirección (Google): Veeris 27, Piscadera, Sambil",
+     "pt": "Endereço (Google): Veeris 27, Piscadera, Sambil"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 688 9431",
+     "en": "Phone (Google): +599 9 688 9431",
+     "de": "Telefon (Google): +599 9 688 9431",
+     "es": "Teléfono (Google): +599 9 688 9431",
+     "pt": "Telefone (Google): +599 9 688 9431"
+    },
+    {
+     "nl": "De Google-vermelding verwijst voor bestellen naar spoonityorder.com",
+     "en": "The Google listing points to spoonityorder.com for ordering",
+     "de": "Der Google-Eintrag verweist zum Bestellen auf spoonityorder.com",
+     "es": "La ficha de Google remite a spoonityorder.com para pedir",
+     "pt": "A ficha do Google remete a spoonityorder.com para pedidos"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 17,
+     "peildatum": "2026-11-16",
+     "bron": "https://curacao.day/en/businesses/pizza-restaurant/pizza-mia-2"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/pizza-restaurant/pizza-mia-2"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Bob Delivery",
+   "url": "https://sentoo.io/blog/making-food-delivery-easier-in-curacao-how-bob-delivery-and-sentoo-work-together",
+   "uitleg": {
+    "nl": "Bezorgdienst met eigen bezorgers op scooters. Je bestelt in de app (Android en iOS) bij meer dan 50 restaurants en betaalt in de app met bankrekening, Visa of Mastercard. Welke pizzeria's meedoen zie je in de app.",
+    "en": "Delivery service with its own riders on scooters. You order in the app (Android and iOS) from over 50 restaurants and pay in the app by bank account, Visa or Mastercard. The app shows which pizza places take part.",
+    "de": "Lieferdienst mit eigenen Fahrern auf Rollern. Du bestellst in der App (Android und iOS) bei mehr als 50 Restaurants und zahlst in der App per Bankkonto, Visa oder Mastercard. Welche Pizzerien mitmachen, siehst du in der App.",
+    "es": "Servicio de entrega con repartidores propios en scooter. Pides en la app (Android e iOS) en más de 50 restaurantes y pagas en la app con cuenta bancaria, Visa o Mastercard. En la app ves qué pizzerías participan.",
+    "pt": "Serviço de entrega com entregadores próprios de scooter. Você pede no app (Android e iOS) em mais de 50 restaurantes e paga no app com conta bancária, Visa ou Mastercard. No app você vê quais pizzarias participam."
+   }
+  },
+  {
+   "naam": "Click 2 Eat Curacao",
+   "url": "https://apps.apple.com/us/app/id1591832814",
+   "uitleg": {
+    "nl": "Gratis app voor eten laten bezorgen: je kiest een restaurant, gerecht en bijgerecht en het wordt thuisbezorgd. Welke restaurants erbij zitten staat niet op de App Store-pagina.",
+    "en": "Free app for food delivery: you pick a restaurant, dish and side and it is brought to your door. Which restaurants are included is not stated on the App Store page.",
+    "de": "Kostenlose App für Essenslieferung: Du wählst Restaurant, Gericht und Beilage und bekommst es nach Hause geliefert. Welche Restaurants dabei sind, steht nicht auf der App-Store-Seite.",
+    "es": "App gratuita para pedir comida a domicilio: eliges restaurante, plato y guarnición y te lo llevan a casa. Qué restaurantes participan no figura en la página de la App Store.",
+    "pt": "App gratuito para pedir comida em casa: você escolhe restaurante, prato e acompanhamento e recebe em casa. Quais restaurantes participam não consta na página da App Store."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Wil je pizza laten bezorgen, begin dan bij de bezorgapps Bob Delivery en Click 2 Eat Curacao. Bezorgen hangt van de zaak af: Pizzaliña noemt HappyCow, de rest heb je via de app of telefoon.",
+   "en": "If you want pizza delivered, start with the delivery apps Bob Delivery and Click 2 Eat Curacao. Delivery depends on the place: HappyCow lists it for Pizzaliña, for the rest use the app or the phone.",
+   "de": "Willst du Pizza liefern lassen, beginne bei den Lieferapps Bob Delivery und Click 2 Eat Curacao. Ob geliefert wird, hängt vom Lokal ab: HappyCow nennt es für Pizzaliña, bei den übrigen hilft die App oder das Telefon.",
+   "es": "Si quieres pizza a domicilio, empieza por las apps Bob Delivery y Click 2 Eat Curacao. Depende del local: HappyCow lo indica para Pizzaliña; para el resto usa la app o el teléfono.",
+   "pt": "Se quer pizza em casa, comece pelos apps Bob Delivery e Click 2 Eat Curacao. Depende do local: o HappyCow indica para a Pizzaliña; para as demais use o app ou o telefone."
+  },
+  {
+   "nl": "De drie best beoordeelde pizzeria's op Google zijn geen keten. Domino's en Pizza Hut scoren tussen 3,9 en 4,3, maar hebben veel reviews en meerdere vestigingen.",
+   "en": "The three best rated pizza places on Google are not chains. Domino's and Pizza Hut score between 3.9 and 4.3, but have many reviews and several branches.",
+   "de": "Die drei bestbewerteten Pizzerien bei Google sind keine Kette. Domino's und Pizza Hut liegen zwischen 3,9 und 4,3, haben aber viele Bewertungen und mehrere Filialen.",
+   "es": "Las tres pizzerías mejor valoradas en Google no son una cadena. Domino's y Pizza Hut puntúan entre 3,9 y 4,3, pero tienen muchas reseñas y varias sucursales.",
+   "pt": "As três pizzarias mais bem avaliadas no Google não são uma rede. Domino's e Pizza Hut ficam entre 3,9 e 4,3, mas têm muitas avaliações e várias filiais."
+  },
+  {
+   "nl": "Bel altijd even voor je gaat: de telefoonnummers staan bij elke zaak. Openingstijden en prijzen hebben we niet voor alle zaken uit een betrouwbare bron.",
+   "en": "Always call before you go: the phone numbers are listed for each place. We do not have opening hours and prices from a reliable source for every place.",
+   "de": "Ruf vor dem Besuch kurz an: Die Telefonnummern stehen bei jedem Lokal. Öffnungszeiten und Preise haben wir nicht für jedes Lokal aus verlässlicher Quelle.",
+   "es": "Llama siempre antes de ir: los teléfonos figuran en cada local. No tenemos horarios ni precios de una fuente fiable para todos.",
+   "pt": "Ligue sempre antes de ir: os telefones estão em cada local. Não temos horários e preços de uma fonte confiável para todos."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Kan ik pizza laten bezorgen op Curaçao?",
+    "en": "Can I get pizza delivered in Curaçao?",
+    "de": "Kann ich auf Curaçao Pizza liefern lassen?",
+    "es": "¿Puedo pedir pizza a domicilio en Curazao?",
+    "pt": "Posso pedir pizza em casa em Curaçao?"
+   },
+   "a": {
+    "nl": "Ja, via bezorgapps. Bob Delivery werkt met meer dan 50 restaurants en een eigen bezorgvloot op scooters, en Click 2 Eat Curacao is een gratis bezorgapp. Welke pizzeria's erbij zitten zie je in de app. Pizzaliña staat bij HappyCow met bezorgen en afhalen, maar die vermelding is sinds juli 2025 niet bijgewerkt.",
+    "en": "Yes, through delivery apps. Bob Delivery works with over 50 restaurants and its own fleet of scooters, and Click 2 Eat Curacao is a free delivery app. The apps show which pizza places take part. Pizzaliña is listed on HappyCow with delivery and take-out, but that listing has not been updated since July 2025.",
+    "de": "Ja, über Lieferapps. Bob Delivery arbeitet mit mehr als 50 Restaurants und einer eigenen Rollerflotte, und Click 2 Eat Curacao ist eine kostenlose Lieferapp. Welche Pizzerien mitmachen, siehst du in der App. Pizzaliña steht bei HappyCow mit Lieferung und Take-out, doch der Eintrag wurde seit Juli 2025 nicht aktualisiert.",
+    "es": "Sí, con apps de reparto. Bob Delivery trabaja con más de 50 restaurantes y una flota propia de scooters, y Click 2 Eat Curacao es una app gratuita de reparto. En la app ves qué pizzerías participan. Pizzaliña figura en HappyCow con entrega y comida para llevar, pero esa ficha no se actualiza desde julio de 2025.",
+    "pt": "Sim, por apps de entrega. O Bob Delivery trabalha com mais de 50 restaurantes e uma frota própria de scooters, e o Click 2 Eat Curacao é um app gratuito de entrega. No app você vê quais pizzarias participam. A Pizzaliña consta no HappyCow com entrega e retirada, mas essa ficha não é atualizada desde julho de 2025."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke pizzeria op Curaçao is het best beoordeeld?",
+    "en": "Which pizza place in Curaçao is best rated?",
+    "de": "Welche Pizzeria auf Curaçao ist am besten bewertet?",
+    "es": "¿Qué pizzería de Curazao tiene mejor valoración?",
+    "pt": "Qual pizzaria de Curaçao é a mais bem avaliada?"
+   },
+   "a": {
+    "nl": "Op Google Maps is dat Pizzarroni met 4,8 uit 374 reviews. New Yorker's Pizza heeft 4,7, maar op maar 26 reviews. Daarna volgen Pizzaliña (4,5, 174 reviews) en Pizza Mia (4,5, 76 reviews).",
+    "en": "On Google Maps that is Pizzarroni with 4.8 from 374 reviews. New Yorker's Pizza has 4.7, but on only 26 reviews. Next come Pizzaliña (4.5, 174 reviews) and Pizza Mia (4.5, 76 reviews).",
+    "de": "Bei Google Maps ist das Pizzarroni mit 4,8 aus 374 Bewertungen. New Yorker's Pizza hat 4,7, aber nur 26 Bewertungen. Danach folgen Pizzaliña (4,5, 174 Bewertungen) und Pizza Mia (4,5, 76 Bewertungen).",
+    "es": "En Google Maps es Pizzarroni con 4,8 sobre 374 reseñas. New Yorker's Pizza tiene 4,7, pero con solo 26 reseñas. Después vienen Pizzaliña (4,5, 174 reseñas) y Pizza Mia (4,5, 76 reseñas).",
+    "pt": "No Google Maps é a Pizzarroni, com 4,8 em 374 avaliações. A New Yorker's Pizza tem 4,7, mas só 26 avaliações. Depois vêm a Pizzaliña (4,5, 174 avaliações) e a Pizza Mia (4,5, 76 avaliações)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar zitten Pizza Hut en Domino's op Curaçao?",
+    "en": "Where are Pizza Hut and Domino's in Curaçao?",
+    "de": "Wo gibt es Pizza Hut und Domino's auf Curaçao?",
+    "es": "¿Dónde están Pizza Hut y Domino's en Curazao?",
+    "pt": "Onde ficam a Pizza Hut e a Domino's em Curaçao?"
+   },
+   "a": {
+    "nl": "Pizza Hut zit volgens Google aan de Jan Noorduynweg 3 (Santa Maria), Schottegatweg Oost 193 (Saliña) en Kaya Charles Maduro 3 (Brievengat). curacaotodo.com noemt ook Brionplein. Domino's zit aan de Schottegatweg Oost 48 en heeft de website dominos.cw.",
+    "en": "According to Google, Pizza Hut is at Jan Noorduynweg 3 (Santa Maria), Schottegatweg Oost 193 (Saliña) and Kaya Charles Maduro 3 (Brievengat). curacaotodo.com also lists Brionplein. Domino's is at Schottegatweg Oost 48 and has the website dominos.cw.",
+    "de": "Laut Google ist Pizza Hut am Jan Noorduynweg 3 (Santa Maria), Schottegatweg Oost 193 (Saliña) und Kaya Charles Maduro 3 (Brievengat). curacaotodo.com nennt zusätzlich Brionplein. Domino's ist am Schottegatweg Oost 48 und hat die Website dominos.cw.",
+    "es": "Según Google, Pizza Hut está en Jan Noorduynweg 3 (Santa Maria), Schottegatweg Oost 193 (Saliña) y Kaya Charles Maduro 3 (Brievengat). curacaotodo.com añade Brionplein. Domino's está en Schottegatweg Oost 48 y tiene el sitio dominos.cw.",
+    "pt": "Segundo o Google, a Pizza Hut fica na Jan Noorduynweg 3 (Santa Maria), Schottegatweg Oost 193 (Saliña) e Kaya Charles Maduro 3 (Brievengat). O curacaotodo.com cita também Brionplein. A Domino's fica na Schottegatweg Oost 48 e tem o site dominos.cw."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost een pizza op Curaçao?",
+    "en": "How much does a pizza cost in Curaçao?",
+    "de": "Was kostet eine Pizza auf Curaçao?",
+    "es": "¿Cuánto cuesta una pizza en Curazao?",
+    "pt": "Quanto custa uma pizza em Curaçao?"
+   },
+   "a": {
+    "nl": "Een betrouwbare actuele prijs per pizzeria hebben we niet kunnen vinden, dus noemen we er geen. Tripadvisor geeft Pizzarroni, Pizzaliña en Pizza And More het prijsniveau $$-$$$. De actuele kaart staat op de website of Facebookpagina van de zaak, of hoor het aan de telefoon.",
+    "en": "We could not find a reliable current price for any pizza place, so we do not quote one. Tripadvisor gives Pizzarroni, Pizzaliña and Pizza And More the price level $$-$$$. The current menu is on the place's website or Facebook page, or ask by phone.",
+    "de": "Einen verlässlichen aktuellen Preis konnten wir für keine Pizzeria finden, deshalb nennen wir keinen. Tripadvisor gibt Pizzarroni, Pizzaliña und Pizza And More das Preisniveau $$-$$$. Die aktuelle Karte steht auf der Website oder Facebook-Seite des Lokals, oder frag telefonisch nach.",
+    "es": "No hemos encontrado un precio actual fiable de ninguna pizzería, así que no damos ninguno. Tripadvisor da a Pizzarroni, Pizzaliña y Pizza And More el nivel de precio $$-$$$. La carta actual está en la web o la página de Facebook del local, o pregunta por teléfono.",
+    "pt": "Não encontramos um preço atual confiável de nenhuma pizzaria, então não citamos nenhum. O Tripadvisor dá à Pizzarroni, Pizzaliña e Pizza And More a faixa de preço $$-$$$. O cardápio atual está no site ou na página do Facebook do local, ou pergunte por telefone."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke pizzeria is laat open of op zondag?",
+    "en": "Which pizza place is open late or on Sunday?",
+    "de": "Welche Pizzeria hat spät oder sonntags geöffnet?",
+    "es": "¿Qué pizzería abre tarde o en domingo?",
+    "pt": "Qual pizzaria abre tarde ou no domingo?"
+   },
+   "a": {
+    "nl": "Daar hebben we geen betrouwbare gegevens over: de openingstijden van deze pizzeria's konden we niet uit een eigen bron bevestigen. Bel de zaak, het nummer staat bij elke pizzeria, of kijk op Google Maps.",
+    "en": "We have no reliable data on that: we could not confirm these places' opening hours from a source of their own. Call the place, the number is listed for each one, or check Google Maps.",
+    "de": "Dazu haben wir keine verlässlichen Daten: Die Öffnungszeiten dieser Pizzerien konnten wir nicht aus einer eigenen Quelle bestätigen. Ruf im Lokal an, die Nummer steht bei jeder Pizzeria, oder schau bei Google Maps nach.",
+    "es": "No tenemos datos fiables sobre eso: no pudimos confirmar los horarios de estas pizzerías con una fuente propia. Llama al local, el teléfono figura en cada pizzería, o mira Google Maps.",
+    "pt": "Não temos dados confiáveis sobre isso: não conseguimos confirmar os horários dessas pizzarias numa fonte própria. Ligue para o local, o telefone está em cada pizzaria, ou veja o Google Maps."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar vind ik pizza uit een houtoven op Curaçao?",
+    "en": "Where can I find wood-fired pizza in Curaçao?",
+    "de": "Wo finde ich Holzofenpizza auf Curaçao?",
+    "es": "¿Dónde encuentro pizza al horno de leña en Curazao?",
+    "pt": "Onde encontro pizza no forno a lenha em Curaçao?"
+   },
+   "a": {
+    "nl": "Tripadvisor omschrijft Pizzarroni (Oude Caracasbaaiweg) en Pizzaliña (Schottegatweg Zuid) als houtovenpizza. Een blog uit 2015 schrijft dat ook Il Forno zijn pizza's in een houtoven bakt.",
+    "en": "Tripadvisor describes Pizzarroni (Oude Caracasbaaiweg) and Pizzaliña (Schottegatweg Zuid) as wood-fired pizza. A 2015 blog says Il Forno also bakes its pizzas in a wood-burning oven.",
+    "de": "Tripadvisor beschreibt Pizzarroni (Oude Caracasbaaiweg) und Pizzaliña (Schottegatweg Zuid) als Holzofenpizza. Ein Blog von 2015 schreibt, dass auch Il Forno seine Pizzen im Holzofen backt.",
+    "es": "Tripadvisor describe Pizzarroni (Oude Caracasbaaiweg) y Pizzaliña (Schottegatweg Zuid) como pizza al horno de leña. Un blog de 2015 dice que también Il Forno hornea sus pizzas en horno de leña.",
+    "pt": "O Tripadvisor descreve a Pizzarroni (Oude Caracasbaaiweg) e a Pizzaliña (Schottegatweg Zuid) como pizza no forno a lenha. Um blog de 2015 diz que o Il Forno também assa suas pizzas em forno a lenha."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is er een pizzeria in Bandabou, het westen van Curaçao?",
+    "en": "Is there a pizza place in Bandabou, the west of Curaçao?",
+    "de": "Gibt es eine Pizzeria in Bandabou, im Westen von Curaçao?",
+    "es": "¿Hay una pizzería en Bandabou, el oeste de Curazao?",
+    "pt": "Há uma pizzaria em Bandabou, o oeste de Curaçao?"
+   },
+   "a": {
+    "nl": "Pizza and More zit aan Coral Estate Rif in Sint Marie, telefoon +599 9 724 5667. Tripadvisor noemt het een van de weinige pizzeria's in Bandabou (4,6 uit 22 reviews), Google geeft 4,0 uit 50 reviews.",
+    "en": "Pizza and More is at Coral Estate Rif in Sint Marie, phone +599 9 724 5667. Tripadvisor calls it one of the few pizza places in Bandabou (4.6 from 22 reviews), Google gives 4.0 from 50 reviews.",
+    "de": "Pizza and More liegt am Coral Estate Rif in Sint Marie, Telefon +599 9 724 5667. Tripadvisor nennt es eine der wenigen Pizzerien in Bandabou (4,6 aus 22 Bewertungen), Google gibt 4,0 aus 50 Bewertungen.",
+    "es": "Pizza and More está en Coral Estate Rif, en Sint Marie, teléfono +599 9 724 5667. Tripadvisor la llama una de las pocas pizzerías de Bandabou (4,6 con 22 reseñas), Google le da 4,0 con 50 reseñas.",
+    "pt": "A Pizza and More fica em Coral Estate Rif, em Sint Marie, telefone +599 9 724 5667. O Tripadvisor a chama de uma das poucas pizzarias de Bandabou (4,6 em 22 avaliações), o Google dá 4,0 em 50 avaliações."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "pizza curaçao",
+   "pizza bezorgen curaçao",
+   "beste pizza curaçao",
+   "pizzeria curaçao",
+   "pizza hut curaçao",
+   "domino's curaçao"
+  ],
+  "en": [
+   "pizza curaçao",
+   "pizza delivery curaçao",
+   "best pizza curaçao",
+   "pizza places curaçao",
+   "pizza hut curaçao",
+   "domino's curaçao"
+  ],
+  "de": [
+   "Pizza Curaçao",
+   "Pizza Lieferung Curaçao",
+   "beste Pizza Curaçao",
+   "Pizzeria Curaçao",
+   "Pizza Hut Curaçao",
+   "Domino's Curaçao"
+  ],
+  "es": [
+   "pizza curazao",
+   "pizza a domicilio curazao",
+   "mejor pizza curazao",
+   "pizzería curazao",
+   "pizza hut curazao",
+   "domino's curazao"
+  ],
+  "pt": [
+   "pizza curaçao",
+   "pizza entrega curaçao",
+   "melhor pizza curaçao",
+   "pizzaria curaçao",
+   "pizza hut curaçao",
+   "domino's curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Waar kan ik het best pizza eten op Curaçao?",
+   "Kan ik pizza laten bezorgen op Curaçao?",
+   "Waar zit Pizza Hut of Domino's op Curaçao?",
+   "Welke pizzeria op Curaçao bakt in een houtoven?"
+  ],
+  "en": [
+   "Where is the best place to eat pizza in Curaçao?",
+   "Can I get pizza delivered in Curaçao?",
+   "Where are Pizza Hut and Domino's in Curaçao?",
+   "Which pizza place in Curaçao uses a wood-fired oven?"
+  ],
+  "de": [
+   "Wo esse ich auf Curaçao am besten Pizza?",
+   "Kann ich auf Curaçao Pizza liefern lassen?",
+   "Wo gibt es Pizza Hut oder Domino's auf Curaçao?",
+   "Welche Pizzeria auf Curaçao backt im Holzofen?"
+  ],
+  "es": [
+   "¿Dónde se come mejor la pizza en Curazao?",
+   "¿Puedo pedir pizza a domicilio en Curazao?",
+   "¿Dónde están Pizza Hut y Domino's en Curazao?",
+   "¿Qué pizzería de Curazao usa horno de leña?"
+  ],
+  "pt": [
+   "Onde se come a melhor pizza em Curaçao?",
+   "Posso pedir pizza em casa em Curaçao?",
+   "Onde ficam a Pizza Hut e a Domino's em Curaçao?",
+   "Qual pizzaria de Curaçao usa forno a lenha?"
+  ]
+ }
+}
