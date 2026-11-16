@@ -1681,7 +1681,7 @@
       "permanent": false
     },
     {
-      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/).+)",
+      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|shop$).+)",
       "has": [
         {
           "type": "host",

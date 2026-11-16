@@ -30,7 +30,7 @@ import seed from '../data/shop-seed.json' with { type: 'json' };
 import { SHOP_PHP } from '../lib/shopphp.js';
 import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
-import { PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, GEDRAG, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel } from '../lib/shopdirect.js';
+import { PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, GEDRAG, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel, ttEvent } from '../lib/shopdirect.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
 import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
@@ -48,8 +48,8 @@ const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
 const SHOP = 'https://kadoly.com/shop';
 // Terugmeldlinks per netwerk (PB) staan in lib/shopdirect.js. Clickadu: zet de link in SHOP_PB_CLICKADU met {clickid} op de plek van de klik-id.
-const NETTEN = { md: 'Mondiad', pa: 'PropellerAds', ra: 'RichAds', ca: 'Clickadu', mg: 'MGID', x: 'Overig' }; // mg: MGID native (4 nov 2026, Henkjan: "Zet voor morgen MGID op voor 10 kansrijke producten")
-const netVan = src => /mondiad/.test(src) ? 'md' : /propeller/.test(src) ? 'pa' : /richads/.test(src) ? 'ra' : /clickadu/.test(src) ? 'ca' : /mgid/.test(src) ? 'mg' : 'x';
+const NETTEN = { md: 'Mondiad', pa: 'PropellerAds', ra: 'RichAds', ca: 'Clickadu', mg: 'MGID', tt: 'TikTok', x: 'Overig' }; // mg: MGID native (4 nov 2026, Henkjan: "Zet voor morgen MGID op voor 10 kansrijke producten")
+const netVan = src => /mondiad/.test(src) ? 'md' : /propeller/.test(src) ? 'pa' : /richads/.test(src) ? 'ra' : /clickadu/.test(src) ? 'ca' : /mgid/.test(src) ? 'mg' : /tiktok/.test(src) ? 'tt' : 'x'; // tt: TikTok (16 nov 2026, Henkjan: "Ik wil vandaag Tiktok advertentie starten")
 const plekId = s => { s = String(s || '').replace(/[^A-Za-z0-9]/g, '').toLowerCase().slice(0, 40); return /^(zoneid|siteid|publisherid|sourceid)$/.test(s) ? '' : s; }; // Mondiad en PropellerAds: cijfers; RichAds: site-id van 32 tekens
 const NAAM = 'SHOP-LUS'; // elke campagne met dit in de naam hoort bij de lus
 const ACC = { acc: '#1e3a8a', acc2: '#e8edfb', accD: '#a5b4fc', acc2D: '#161b33' };
@@ -223,8 +223,8 @@ async function shopStand(pid) {
     fotos: fotos ? (fotos.match(/"src"/g) || []).length : null, shipDays: ship, afrekenDagen: (c.match(/Thuisbezorgd, ([0-9–-]+ werkdagen)/) || [])[1] || null, shippingCost: (p.match(/"shipping_cost":([^,]*),/) || [])[1] || null };
   try { await kv.set(key, o, { ex: 6 * 3600 }); } catch (e) {} return o;
 }
-async function dagTotaal(dag) { const nets = ['md', 'pa', 'ra', 'ca', 'mg', 'x']; const keys = []; nets.forEach(n => SOORTEN.forEach(s => keys.push('c:sh-d' + dag.replace(/-/g, '') + '-' + n + '-' + s))); const v = await kv.mget(...keys); const out = {}; nets.forEach((n, i) => { out[n] = {}; SOORTEN.forEach((s, j) => { out[n][s] = num(v[i * SOORTEN.length + j]); }); }); return out; }
-async function netTotaal() { const nets = ['md', 'pa', 'ra', 'ca', 'mg', 'x']; const keys = []; nets.forEach(n => SOORTEN.forEach(s => keys.push('c:sh-' + n + '-' + s))); const v = await kv.mget(...keys); const out = {}; nets.forEach((n, i) => { out[n] = {}; SOORTEN.forEach((s, j) => { out[n][s] = num(v[i * SOORTEN.length + j]); }); }); return out; }
+async function dagTotaal(dag) { const nets = ['md', 'pa', 'ra', 'ca', 'mg', 'tt', 'x']; const keys = []; nets.forEach(n => SOORTEN.forEach(s => keys.push('c:sh-d' + dag.replace(/-/g, '') + '-' + n + '-' + s))); const v = await kv.mget(...keys); const out = {}; nets.forEach((n, i) => { out[n] = {}; SOORTEN.forEach((s, j) => { out[n][s] = num(v[i * SOORTEN.length + j]); }); }); return out; }
+async function netTotaal() { const nets = ['md', 'pa', 'ra', 'ca', 'mg', 'tt', 'x']; const keys = []; nets.forEach(n => SOORTEN.forEach(s => keys.push('c:sh-' + n + '-' + s))); const v = await kv.mget(...keys); const out = {}; nets.forEach((n, i) => { out[n] = {}; SOORTEN.forEach((s, j) => { out[n][s] = num(v[i * SOORTEN.length + j]); }); }); return out; }
 // Oordeel over een advertentieplek. netKliks = kliks volgens het netwerk, o = onze eigen tellers.
 // Directe route (lib/shopdirect.js): aangekomen = view (landingspagina) + dv (direct). Zodra cm.js op yoo.rs meet (meet), tellen dm (echt mens
 // op de shop) en da (eerste tik op de shop) mee als mens en doorklik; daarvoor oordelen we over mensen en doorkliks alleen op de landingspagina.
@@ -466,7 +466,8 @@ async function direct(req, res, x) {
 async function land(req, res, url) {
   const q = url.searchParams; const ua = req.headers['user-agent'] || ''; const bot = isBot(ua);
   const src = String(q.get('utm_source') || '').toLowerCase(); const net = netVan(src);
-  let clickid = String(q.get('clickid') || '').replace(/[^A-Za-z0-9_.-]/g, '').slice(0, 120); if (/^(subid|clickid|click_id|visitor_id)$/i.test(clickid)) clickid = '';
+  let clickid = String(q.get('clickid') || '').replace(/[^A-Za-z0-9_.-]/g, '').slice(0, 120); if (/^(subid|clickid|click_id|visitor_id)$/i.test(clickid) || /^__[A-Z_]+__$/.test(String(q.get('clickid') || ''))) clickid = '';
+  if (net === 'tt' && !clickid) clickid = String(q.get('ttclid') || '').replace(/[^A-Za-z0-9_.~+\/=-]/g, '').slice(0, 600); // TikTok zet zelf ttclid achter de link (lang, ongewijzigd bewaren: de Events API koppelt er de conversie mee)
   const zone = plekId(q.get('zoneid')), cr = digits(q.get('creativeid')), camp = digits(q.get('campaignid'));
   // Clickmind neemt alles mee wat het netwerk in de link zet (Henkjan 3 nov: "Zorg dat je alles meeneemt in clickmind ook van mondiads . OS VPN etc
   // zodat we patronen kunnen vinden"): de vorm (utm_medium: ipp, push, native, pop) en elke andere parameter (os, browser, carrier, subid, ...),
@@ -645,8 +646,9 @@ async function pxVerwerk(code, wRuw, v, order, methode, bron, t) {
     // anders leren PropellerAds en Mondiad op CPA niets. Eenmaal per klik (rec.conv), nooit voor testkliks.
     if (w === 'cart' || w === 'afreken' || w === 'betaal') { try { await kassaDoel(kv, rec); } catch (e) {} } // 5 nov: kassadoelen (PropellerAds doel 2 en terugval-hoofdconversie, MGID decision) alleen bij bewust afrekenen (lib/shopdirect.js isBewust); anders later, zodra cm.js een bewuste stap meldt
     if (oud === 'koop') { let st = 0; if (v > 0) { try { await kv.incrMany([['c:sh-' + net + '-omzet', Math.round(v * 100)], ['c:sh-d' + D8() + '-' + net + '-omzet', Math.round(v * 100)]]); } catch (e) {} if (!rec.t) await uurTel(kv, net, 'omzet', t, Math.round(v * 100)); }
+      if (net === 'tt' && rec.c && !rec.t && !rec.tk) { rec.tk = Date.now(); st = await ttEvent(rec, 'CompletePayment', v); rec.conv = rec.conv || Date.now(); } // TikTok: betaald met bedrag via de Events API
       if (rec.c && PB[net] && (net !== 'ra' || !rec.conv) && !rec.t) { try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(net === 'mg' ? mgUrl(rec.c, mgEvent(MG_STAP.koop, rec.k), v) : PB[net].replace('{clickid}', encodeURIComponent(rec.c)) + (net === 'ra' ? '' : '&payout=' + v.toFixed(2)) + (net === 'pa' ? '&goal=3' : ''), { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (e) {} rec.conv = rec.conv || Date.now(); }
-      await log({ soort: 'bestelling', wat: (v ? eur(v) + ' ' : '') + 'via ' + (net === 'x' ? 'eigen verkeer' : NETTEN[net]) + (m ? ' (' + m + ')' : ''), waarom: 'plek ' + (rec.z || '?') + ', advertentie ' + (rec.a || '?') + (rec.c && PB[net] ? ', gemeld aan het netwerk (HTTP ' + st + ')' : '') + (bron === 'feed' ? ', gevonden in de datapagina van de shop' : '') }); } }
+      await log({ soort: 'bestelling', wat: (v ? eur(v) + ' ' : '') + 'via ' + (net === 'x' ? 'eigen verkeer' : NETTEN[net]) + (m ? ' (' + m + ')' : ''), waarom: 'plek ' + (rec.z || '?') + ', advertentie ' + (rec.a || '?') + (rec.c && (PB[net] || net === 'tt') ? ', gemeld aan het netwerk (HTTP ' + st + ')' : '') + (bron === 'feed' ? ', gevonden in de datapagina van de shop' : '') }); } }
   try { await kv.set(K.rec(code), rec, { ex: 30 * 86400 }); } catch (e) {}
   return { ok: true };
 }
