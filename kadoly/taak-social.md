@@ -9,6 +9,8 @@ Accounts (Zernio-profiel Kadoly, profile_id `6afaf9820c09220040d746f4`):
 - Facebook in Zernio: account_id `6afafaf7446856cecd87324f`.
 - Instagram @kadoly.shop (ig id 17841476967447591) in Zernio: account_id `6afb8787a26245ebf04dc7be` (zakelijk, sinds 16 nov). De websitelink in het profiel kan alleen in de app (go.kadoly.com/o?k=ig&c=bio).
 
+- Pinterest @kadolyshop (16 nov, nieuw; het oude account op henkjan@yoo.rs kreeg een overtredingsmelding): Zernio account_id `6afb8a5d86e8bb18f844fc95`, borden Sieraden 271060540011940606, Wonen en decoratie 271060540011940607, Cadeau-ideeën 271060540011940609, Hobby en creatief 271060540011940610. Posten met de tool `posts_create_post` (call_tool) en `platformSpecificData` {boardId, title (max 100), link}. Pinterest-regels: GEEN doorstuurlinks (Pinterest ziet die als spam): link direct naar `https://kadoly.com/product/<pid>?lang=nl&utm_source=pinterest&utm_medium=social&utm_campaign=pin-<post>&utm_content=<pid>` (Clickmind meet via cm.js op kadoly.com). Rustig opbouwen: week 1 en 2 hooguit 3 pins per dag, nooit twee keer hetzelfde product binnen 14 dagen, titel met zoekwoord voorop (bijv. 'Verstelbare roze hartring'), beschrijving 1 tot 2 zinnen met zoekwoorden, geen hashtags.
+
 Vraag niets; kies bij twijfel de veiligste optie (liever een post minder dan een foute post). Zuinig met tokens. Kadoly is een webshop voor alles, niet alleen cadeaus: presenteer hem nooit als cadeauwinkel.
 
 ## Stappen

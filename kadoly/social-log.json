@@ -14,6 +14,18 @@
       "ig_id": "17841476967447591",
       "zernio": "gekoppeld 16 nov 22:55 UTC (zakelijk account, categorie Shopping & retail)",
       "profiel": "naam Kadoly, bio, logo (16 nov); websitelink kan alleen in de app"
+    },
+    "pinterest": {
+      "handle": "kadolyshop",
+      "account_id": "6afb8a5d86e8bb18f844fc95",
+      "email": "henkjan@kadoly.com (bevestigen door Henkjan)",
+      "borden": {
+        "Sieraden": "271060540011940606",
+        "Wonen en decoratie": "271060540011940607",
+        "Cadeau-ideeën": "271060540011940609",
+        "Hobby en creatief": "271060540011940610"
+      },
+      "oud": "oude account op henkjan@yoo.rs kreeg 11 nov een overtredingsmelding; niet meer gebruiken"
     }
   },
   "lerend": {
@@ -71,6 +83,17 @@
       "tijdvak": "23:56",
       "via": "zernio",
       "zernio_id": "6afb87a68c190e4bc31e99a1"
+    },
+    {
+      "tijd": "2026-11-16T22:58:00Z",
+      "dag": "2026-11-16",
+      "platform": "pinterest",
+      "soort": "sieraad",
+      "pid": "oc_4174005832564737",
+      "bord": "Sieraden",
+      "via": "zernio",
+      "zernio_id": "6afb8a7f8c190e4bc31ea106",
+      "post_id": "271060471319430779"
     }
   ]
 }
