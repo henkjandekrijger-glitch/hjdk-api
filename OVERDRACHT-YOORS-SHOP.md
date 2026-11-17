@@ -94,6 +94,7 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - hjdk-api: dagkeuze `lib/shopkies.js` (+ VAST_DAG in `api/shop.js`), teksten `lib/shopteksten-hand.js` en `lib/shoptekst.js`, bots `lib/shopbot.js`, niet geladen `lib/shopniet.js`, archief `lib/shcarchief.js`, kassadoel `lib/shopdirect.js`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 17 nov 2026: TikTok-landers op de afrekenpagina gaven 'betaalknop in beeld' meteen (32 van 32, niets ingevuld) en dat ging als InitiateCheckout naar TikTok; telt voor hen niet meer (lib/shopdirect.js KA_BEWUST). Nieuw: /api/shop/ttvideo?p=<pid> geeft de advertentievideo per product voor de shop.
 - 17 nov 2026: bundel van de dag (lib/bundel.js, op=bundel en op=bundelronde, cron 04:47 UTC): 2 of 3 producten van hetzelfde merk met één verzending, marge minstens EUR 15, klant bespaart minstens 10%. Waarom: per product blijft er EUR 0 tot 2 over terwijl een TikTok-verkoop rond EUR 11 kost; een set telt de marges op en betaalt één keer advertentie. Landing ?bundel=<code> naar kadoly.com/bundel/<code>. Tafelhaard zand en serveertray uit op TikTok (8 advertenties, haalden de EUR 15-regel niet).
 
 - **17 nov 2026 — /api/shop?op=prijsadvies (beschermde host):** prijsadvies van lib/shopprijs.js met marktprijzen (Demand Radar) en inkoop per product als compacte JSON, ?q=termen; voor het margeadvies aan Henkjan ("gezonde marge die wel concurreert").
