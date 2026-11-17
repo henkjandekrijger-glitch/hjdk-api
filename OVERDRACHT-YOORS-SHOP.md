@@ -34,7 +34,7 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 6. Arm "Bewaar dit idee" ja of nee, en de stopregel (beide in `research/kadoly-lekken-backlog.md`).
 7. Reviews: Trustpilot-account aanmaken (Henkjan); de uitnodigingsmail schrijven wij en tonen we eerst.
 8. Alleen melden, ander project: todayin MGID 12534692 loopt nog.
-9. Shop (Babita), 17 nov, TikTok-tafelhaard (oc_4174002164744193 en de andere Housevitamin-tafelhaarden): prijs naar EUR 29,95 (nu 19,79 + 8,50 verzending, marge EUR 0,93; elders kost een tafelhaard 33 tot 50 euro); op de productpagina "gratis verzending bij je eerste bestelling" laten zien in plaats van EUR 8,50; vermelden welke brandstof nodig is en of die erbij zit. Henkjan zei "Los 1 -5 op".
+9. Shop, 17 nov (Henkjan voert de code zelf door, opdracht staat in de TikTok-chat): koopknop werkend en gemeten in de TikTok-browser, tafelhaarden duurder (EUR 29,95 en 34,95), gratis verzending vervalt overal (Henkjan 17 nov: "Gratis verzending doen we niet meer") en verzendkosten zichtbaar bij de prijs, brandstofinfo, vertrouwen bij de knop en echte reviews (nooit verzonnen).
 
 ## Hoe een dag werkt (shoptest)
 - **Waar:** propellerads-mcp `lib/shoptest.ts`, cron 05:15 UTC en elk uur op :15 tot 21:15; met de hand via MCP-tool `shoptest` (`droog`, `max`), uitslag via `shoptest_log`. Een PropellerAds-dag loopt van 05:00 tot 05:00 UTC.
