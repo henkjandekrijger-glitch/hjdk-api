@@ -308,11 +308,11 @@
    "scores": [
     {
      "platform": "Trustpilot",
-     "score": 1.3,
+     "score": 1.4,
      "max": 5,
-     "aantal": 9184,
-     "peildatum": "2026-10-20",
-     "bron": "https://ca.trustpilot.com/review/www.klm.com?page=5"
+     "aantal": 9047,
+     "peildatum": "2026-11-17",
+     "bron": "https://www.trustpilot.com/review/www.klm.com"
     }
    ],
    "voor": {
@@ -367,7 +367,8 @@
    "bronnen": [
     "https://www.klm.nl/nl-nl/vluchten-amsterdam-naar-curacao-eiland",
     "https://www.flightsfrom.com/AMS-CUR",
-    "https://flights.idealo.com/route/Netherlands-NL/Curacao-CUR/"
+    "https://flights.idealo.com/route/Netherlands-NL/Curacao-CUR/",
+    "https://www.trustpilot.com/review/www.klm.com"
    ]
   },
   {
