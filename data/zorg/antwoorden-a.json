@@ -1,0 +1,830 @@
+{
+ "antwoorden": [
+  {
+   "vraag": "Tot wanneer kan ik overstappen van zorgverzekering?",
+   "antwoord": "Je kunt overstappen tot en met 31 december 2026. Sluit je voor die datum een nieuwe basisverzekering af, dan zegt de nieuwe verzekeraar je oude polis automatisch op. Heb je zelf voor 1 januari opgezegd, dan heb je tot 1 februari 2027 om een nieuwe te kiezen, en die gaat dan met terugwerkende kracht in op 1 januari.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/overstappen-zorgverzekeraar"
+  },
+  {
+   "vraag": "Kan ik midden in het jaar overstappen van zorgverzekering?",
+   "antwoord": "Meestal niet, want je basisverzekering loopt per kalenderjaar. Tussentijds kan alleen in een paar gevallen: als je verzekeraar de voorwaarden in je nadeel wijzigt, als je naar een werkgever gaat die ook een collectieve verzekering heeft, of als je naar of uit het buitenland verhuist. In alle andere gevallen stap je over per 1 januari.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/wijzigingen-in-huidige-zorgverzekering-doorvoeren"
+  },
+  {
+   "vraag": "Kan ik na 1 januari nog overstappen of zit ik dan een jaar vast?",
+   "antwoord": "Alleen als je je oude verzekering zelf voor 1 januari hebt opgezegd. Dan heb je tot 1 februari 2027 om een nieuwe basisverzekering af te sluiten, die met terugwerkende kracht ingaat op 1 januari. Heb je niet opgezegd, dan loopt je huidige polis het hele jaar 2027 door, behalve in de uitzonderingen zoals verhuizen naar het buitenland.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/overstappen-zorgverzekeraar"
+  },
+  {
+   "vraag": "Hoe stap ik over naar een andere zorgverzekering?",
+   "antwoord": "Je sluit de nieuwe basisverzekering af bij de verzekeraar van je keuze, meestal met een online formulier van een paar minuten. Daarin geef je aan dat zij je oude verzekering opzeggen, dan hoef je zelf niets te doen. Wil je ook een aanvullend pakket, kijk dan of er gezondheidsvragen of wachttijden gelden voordat je je oude aanvullende polis laat stoppen.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/overstappen-zorgverzekeraar"
+  },
+  {
+   "vraag": "Moet ik dit jaar overstappen van zorgverzekering?",
+   "antwoord": "Dat hangt af van wat je nu betaalt en welke zorg je verwacht. Alle polissen worden in 2027 duurder, de ene met € 5,50 en de andere met € 25 per maand, en tussen de goedkoopste (€ 148,40) en de duurste polis (€ 202,50) zit € 649 per jaar. Overstappen is vooral interessant als je een duurdere polis hebt dan je nodig hebt, of als je vaste zorgverlener geen contract heeft met je huidige polis.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Kan een nieuwe zorgverzekeraar mij weigeren of eisen stellen aan mijn gezondheid?",
+   "antwoord": "Voor de basisverzekering niet: elke verzekeraar moet je accepteren en mag je niet meer laten betalen vanwege je leeftijd of gezondheid. Alleen als een eerdere verzekering bij die verzekeraar in de afgelopen 5 jaar is beëindigd wegens fraude of niet betalen, mag hij weigeren. Voor een aanvullende verzekering mag een verzekeraar wel gezondheidsvragen stellen, een wachttijd hanteren of je weigeren.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/acceptatieplicht-zorgverzekering"
+  },
+  {
+   "vraag": "Moet een nieuwe zorgverzekeraar mijn chronisch zieke partner ook verzekeren?",
+   "antwoord": "Ja, voor de basisverzekering geldt de acceptatieplicht voor iedere persoon, dus ook voor een partner met een chronische ziekte. De verzekeraar mag daarvoor ook geen hogere premie vragen. Voor de aanvullende verzekering beoordeelt de verzekeraar ieder gezinslid apart en kan hij wel vragen stellen of weigeren.",
+   "cluster": "overstappen",
+   "pagina": "chronisch-ziek",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/acceptatieplicht-zorgverzekering"
+  },
+  {
+   "vraag": "Wat gebeurt er met mijn lopende behandeling als ik overstap?",
+   "antwoord": "Een behandeling in het ziekenhuis die in 2026 begon, valt onder de voorwaarden en het eigen risico van je oude verzekeraar. Een vervolgtraject dat in 2027 start, valt onder je nieuwe polis. Kijk daarom vooraf of je ziekenhuis of behandelaar een contract heeft met de nieuwe polis en hoeveel je terugkrijgt als dat niet zo is.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/overstappen"
+  },
+  {
+   "vraag": "Mijn ziekenhuis heeft volgend jaar geen contract met mijn verzekeraar maar ik ben daar onder behandeling, wat nu?",
+   "antwoord": "Een behandeltraject dat in 2026 is begonnen, valt nog onder de voorwaarden van 2026. Voor een nieuw traject in 2027 krijg je zonder contract alleen het percentage terug dat in je polis staat, bij naturapolissen meestal 60 tot 80 procent van het gemiddelde contracttarief. Tot en met 31 december kun je nog overstappen naar een polis die wel een contract heeft met dat ziekenhuis, of naar een combinatiepolis die zonder contract meestal 100 procent vergoedt.",
+   "cluster": "overstappen",
+   "pagina": "natura-of-restitutie",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/overstappen"
+  },
+  {
+   "vraag": "Kan ik overstappen als ik al veel zorgkosten heb?",
+   "antwoord": "Ja. Voor de basisverzekering moet elke verzekeraar je accepteren, hoeveel zorg je ook gebruikt, en de premie is voor iedereen gelijk. Het verschil zit in contracten met jouw vaste zorgverleners en in de aanvullende verzekering, waar een nieuwe verzekeraar wel gezondheidsvragen mag stellen. Zeg je oude aanvullende polis pas op als de nieuwe je heeft geaccepteerd.",
+   "cluster": "overstappen",
+   "pagina": "chronisch-ziek",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/acceptatieplicht-zorgverzekering"
+  },
+  {
+   "vraag": "Waar moet ik op letten als ik wil overstappen naar een andere zorgverzekeraar?",
+   "antwoord": "Kijk eerst naar de premie, en daarna of je vaste zorgverleners een contract hebben met de nieuwe polis. Zonder contract krijg je bij een naturapolis meestal 60 tot 80 procent terug. Bij een aanvullend pakket kunnen gezondheidsvragen, wachttijden en maxima gelden, bijvoorbeeld een wachttijd van een jaar voor orthodontie bij CZ.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.consumentenbond.nl/acties-claims/nieuws/2026/nza-moet-optreden-tegen-onduidelijke-zorgpolissen"
+  },
+  {
+   "vraag": "Kan ik overstappen en toch vrije keuze houden in zorgverleners?",
+   "antwoord": "Ja. Een echte restitutiepolis bestaat sinds 2025 niet meer, maar een combinatiepolis vergoedt voor de meeste zorg 100 procent, ook bij een zorgverlener zonder contract. Combinatiepolissen die zonder contract 100 procent vergoeden kosten in 2027 € 176,45 tot € 198,10 per maand. Voor ggz en wijkverpleging geldt ook bij die polissen vaak een lagere vergoeding, zoals 75 of 80 procent.",
+   "cluster": "overstappen",
+   "pagina": "natura-of-restitutie",
+   "bron": "https://www.rijksoverheid.nl/themas/migratie-en-reizen/immigratie-naar-nederland/vraag-en-antwoord/zorgverzekering/polissen-zorgverzekeraar"
+  },
+  {
+   "vraag": "Krijg je korting als je lang bij dezelfde zorgverzekeraar blijft?",
+   "antwoord": "Nee, op de basisverzekering bestaat geen korting voor trouwe klanten. De premie van een polis is voor nieuwe en bestaande klanten gelijk. Verzekeraars passen premie en voorwaarden elk jaar aan, dus een polis die vorig jaar goed paste kan nu duurder uitvallen dan een andere.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Ik zit bij Zilveren Kruis, moet ik overstappen?",
+   "antwoord": "Zilveren Kruis stijgt in 2027 relatief weinig: Basis Start gaat met € 5,50 omhoog naar € 159,45, Basis Zeker naar € 164,95 en Basis Exclusief naar € 186,95 per maand. De goedkoopste polis van 2027 is VinkVink voor € 148,40, dat scheelt met Basis Start € 132,60 per jaar. Of overstappen voor jou uitpakt, hangt vooral af van of je zorgverleners een contract hebben met de andere polis.",
+   "cluster": "overstappen",
+   "pagina": "zilveren-kruis",
+   "bron": "https://www.zilverenkruis.nl/consumenten/zorgverzekering/veranderingen/overzicht-van-de-premies"
+  },
+  {
+   "vraag": "Ik zit bij VGZ, moet ik overstappen?",
+   "antwoord": "VGZ stijgt in 2027 meer dan gemiddeld: Basis Keuze gaat met € 17,50 omhoog naar € 167,40 per maand, Ruime Keuze naar € 170,75 en Eigen Keuze naar € 188,15. Met de goedkoopste polis van 2027, VinkVink voor € 148,40, scheelt Basis Keuze € 228 per jaar. Wat voor jou uitmaakt is of je zorgverleners een contract hebben met de polis waar je naar kijkt.",
+   "cluster": "overstappen",
+   "pagina": "vgz",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Wat doe ik als de zorgcontracten pas na 1 januari rond zijn?",
+   "antwoord": "Dat komt vaak voor: eind 2025 had ongeveer 60 procent van de ggz-behandelaren nog geen contract voor 2026. Vraag je zorgverlener met welke verzekeraars hij afspraken heeft, en kijk in je polis hoeveel je zonder contract terugkrijgt. Wil je meer tijd, dan kun je zelf opzeggen voor 31 december en tot 1 februari 2027 kiezen, met terugwerkende kracht tot 1 januari.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.consumentenbond.nl/acties-claims/nieuws/2026/nza-moet-optreden-tegen-onduidelijke-zorgpolissen"
+  },
+  {
+   "vraag": "Heeft mijn zorgverzekeraar in 2027 een contract met mijn ziekenhuis?",
+   "antwoord": "Dat verschilt per verzekeraar en soms per polis. Je zoekt het op in de zorgzoeker op de site van de verzekeraar, of je vraagt het aan het ziekenhuis zelf. Contracten zijn in het overstapseizoen niet altijd rond, en ook met een contract kan een ziekenhuis later in het jaar een omzetplafond bereiken.",
+   "cluster": "overstappen",
+   "pagina": "natura-of-restitutie",
+   "bron": "https://www.consumentenbond.nl/acties-claims/nieuws/2026/nza-moet-optreden-tegen-onduidelijke-zorgpolissen"
+  },
+  {
+   "vraag": "Kan ik mijn zorgverzekering in januari nog aanpassen?",
+   "antwoord": "Je basisverzekering alleen als je voor 1 januari zelf hebt opgezegd; dan heb je tot 1 februari 2027 om een nieuwe te kiezen. Je aanvullende verzekering en je eigen risico kun je soms nog in januari wijzigen, maar de uiterste datum verschilt per verzekeraar: bijvoorbeeld 31 december 2026, 7 januari of 31 januari 2027. Kijk dus bij je eigen verzekeraar welke datum geldt.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/wijzigingen-in-huidige-zorgverzekering-doorvoeren"
+  },
+  {
+   "vraag": "Kan ik mijn zorgverzekering tussentijds aanpassen?",
+   "antwoord": "Je basisverzekering wissel je in principe alleen per 1 januari, behalve als je verzekeraar de voorwaarden in je nadeel wijzigt, je via een nieuwe werkgever een collectieve verzekering kunt nemen of je naar of uit het buitenland verhuist. Je vrijwillig eigen risico en je aanvullende verzekering pas je meestal aan per 1 januari, met een uiterste wijzigdatum die per verzekeraar verschilt. Wat er tussentijds mag bij je aanvullende pakket staat in de voorwaarden van je verzekeraar.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/wijzigingen-in-huidige-zorgverzekering-doorvoeren"
+  },
+  {
+   "vraag": "Kan ik mijn nieuwe zorgverzekering nog annuleren, heb ik bedenktijd?",
+   "antwoord": "Ja, als je online of telefonisch hebt afgesloten heb je 14 dagen bedenktijd. Je kunt dan zonder kosten en zonder reden annuleren, betaalde premie krijg je terug en je komt weer bij je oude verzekeraar terecht. Bel voor de zekerheid je oude verzekeraar om te controleren dat je polis doorloopt.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.zorgwijzer.nl/faq/ik-ben-overgestapt-naar-een-andere-zorgverzekeraar-kan-ik-dit-nog-annuleren"
+  },
+  {
+   "vraag": "Hoeveel mensen stappen dit jaar over van zorgverzekering?",
+   "antwoord": "Voor 2026 stapte 6,4 procent van de verzekerden over, ongeveer 1,1 miljoen mensen, volgens een analyse van Overstappen.nl op cijfers van Vektis. Het jaar daarvoor was dat 7 procent. Hoeveel mensen overstappen naar 2027 is pas na de overstapperiode bekend.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.overstappen.nl/nieuws/aantal-zorgverzekering-overstappers-daalt-naar-6-procent-maar-verschillen-per-gemeente-groot/"
+  },
+  {
+   "vraag": "Is overstappen via een vergelijkingssite hetzelfde als rechtstreeks bij de verzekeraar?",
+   "antwoord": "Ja, de premie van een polis is wettelijk voor iedereen gelijk, of je nu via een vergelijkingssite of rechtstreeks afsluit. Een vergelijkingssite stuurt je aanvraag door en de nieuwe verzekeraar zegt je oude polis op. Let wel op dat niet elke vergelijkingssite alle verzekeraars en polissen laat zien.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://wetten.overheid.nl/BWBR0018450/2027-01-01"
+  },
+  {
+   "vraag": "Krijg ik een cadeau als ik overstap via een vergelijkingssite?",
+   "antwoord": "Sommige vergelijkingssites geven een cadeaukaart of beloning als je via hen overstapt. Dat betalen ze uit de vergoeding die ze van verzekeraars krijgen; de premie van de polis verandert er niet door. Kies daarom eerst de polis die bij je past en kijk pas daarna naar een cadeau.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": null
+  },
+  {
+   "vraag": "Kan ik de zorgverzekering voor 2027 al afsluiten?",
+   "antwoord": "Ja. Alle verzekeraars hebben hun premies voor 2027 uiterlijk 12 november 2026 bekendgemaakt, en vanaf dan kun je een polis voor 2027 afsluiten. Overstappen kan tot en met 31 december 2026, en de nieuwe polis gaat in op 1 januari 2027.",
+   "cluster": "overstappen",
+   "pagina": "overstappen",
+   "bron": "https://www.overstappen.nl/nieuws/zorgpremies-2027-bekend-alle-polissen-duurder-premiekloof-stijgt-naar-649-euro-per-jaar/"
+  },
+  {
+   "vraag": "Hoe zeg ik mijn zorgverzekering op?",
+   "antwoord": "De makkelijkste manier is een nieuwe basisverzekering afsluiten voor 31 december: de nieuwe verzekeraar zegt je oude polis dan voor je op. Zelf opzeggen kan meestal online via de site of app van je verzekeraar, of met een e-mail of aangetekende brief. Geef daarbij duidelijk aan of je de basisverzekering, de aanvullende verzekering of allebei wilt beëindigen.",
+   "cluster": "opzeggen",
+   "pagina": "overstappen",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/opzeggen"
+  },
+  {
+   "vraag": "Moet ik mijn oude zorgverzekering zelf opzeggen als ik overstap?",
+   "antwoord": "Nee. Sluit je voor 31 december een nieuwe basisverzekering af, dan zegt de nieuwe verzekeraar je oude polis op via de opzegservice. Zelf opzeggen is alleen nodig als je nog twijfelt en meer tijd wilt: dan heb je tot 1 februari 2027 om een nieuwe te kiezen.",
+   "cluster": "opzeggen",
+   "pagina": "overstappen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/overstappen-zorgverzekeraar"
+  },
+  {
+   "vraag": "Ben ik dubbel verzekerd als ik een nieuwe zorgverzekering neem en de oude vergeet op te zeggen?",
+   "antwoord": "Nee, als je voor 31 december overstapt zegt de nieuwe verzekeraar je oude basisverzekering automatisch op. Je aanvullende verzekering bij je oude verzekeraar loopt wel door als die bij een andere verzekeraar zit en je die niet laat opzeggen. Controleer in januari of je oude verzekeraar geen premie meer afschrijft.",
+   "cluster": "opzeggen",
+   "pagina": "overstappen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/overstappen-zorgverzekeraar"
+  },
+  {
+   "vraag": "Als ik voor 31 december opzeg, hoe lang heb ik dan om een nieuwe zorgverzekering te kiezen?",
+   "antwoord": "Tot 1 februari 2027. Sluit je in januari een nieuwe basisverzekering af, dan ben je met terugwerkende kracht vanaf 1 januari verzekerd en zit er geen gat in je dekking. Zorg die je in januari al gebruikte, valt dan onder je nieuwe polis.",
+   "cluster": "opzeggen",
+   "pagina": "overstappen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/overstappen-zorgverzekeraar"
+  },
+  {
+   "vraag": "Hoe zeg ik de zorgverzekering op bij overlijden?",
+   "antwoord": "Dat hoeft niet. Bij overlijden stopt de zorgverzekering vanzelf op de dag na het overlijden. Laat de verzekeraar het wel weten als de nabestaanden nog premie zien afgaan of als er nog rekeningen openstaan.",
+   "cluster": "opzeggen",
+   "pagina": "overstappen",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/opzeggen"
+  },
+  {
+   "vraag": "Hoe zeg ik mijn zorgverzekering op als ik emigreer?",
+   "antwoord": "Geef je vertrek door aan je zorgverzekeraar; verhuizen naar het buitenland is een van de redenen waarom je tussentijds mag opzeggen. Woon je met een Nederlands wettelijk pensioen of een uitkering in een verdragsland, dan ben je daar via het CAK verzekerd en heb je geen Nederlandse zorgverzekering meer.",
+   "cluster": "opzeggen",
+   "pagina": "buitenland",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/wijzigingen-in-huidige-zorgverzekering-doorvoeren"
+  },
+  {
+   "vraag": "Hoe zeg ik mijn CZ zorgverzekering op?",
+   "antwoord": "Stap je over naar een andere verzekeraar, sluit dan voor 31 december 2026 je nieuwe polis af: de nieuwe verzekeraar zegt CZ dan voor je op. Wil je zelf opzeggen, doe dat dan uiterlijk 31 december online, per e-mail of met een aangetekende brief. Daarna heb je tot 1 februari 2027 om een nieuwe basisverzekering te kiezen.",
+   "cluster": "opzeggen",
+   "pagina": "cz",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/opzeggen"
+  },
+  {
+   "vraag": "Hoe zeg ik mijn Zilveren Kruis zorgverzekering op?",
+   "antwoord": "Sluit je voor 31 december 2026 een polis bij een andere verzekeraar af, dan zegt die Zilveren Kruis voor je op. Zelf opzeggen kan uiterlijk 31 december online, per e-mail of met een aangetekende brief. Na zelf opzeggen heb je tot 1 februari 2027 om een nieuwe basisverzekering af te sluiten.",
+   "cluster": "opzeggen",
+   "pagina": "zilveren-kruis",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/opzeggen"
+  },
+  {
+   "vraag": "Kan ik mijn zorgverzekering stopzetten, bijvoorbeeld als ik de premie niet kan betalen?",
+   "antwoord": "Nee, iedereen die in Nederland woont of werkt moet een basisverzekering hebben, dus stopzetten kan niet. Bij een betalingsachterstand blijf je verzekerd voor de basis; alleen je aanvullende verzekering kan worden beëindigd. Kun je de premie niet betalen, vraag dan een betalingsregeling aan bij je verzekeraar en kijk of je recht hebt op zorgtoeslag.",
+   "cluster": "opzeggen",
+   "pagina": "laag-inkomen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/wat-gebeurt-er-als-ik-de-premie-van-mijn-zorgverzekering-niet-betaal"
+  },
+  {
+   "vraag": "Kan ik alleen mijn aanvullende verzekering opzeggen en de basis houden?",
+   "antwoord": "Ja, de aanvullende verzekering is een aparte verzekering die je los kunt opzeggen. Geef bij het opzeggen duidelijk aan dat het alleen om de aanvullende verzekering gaat. Wil je een nieuw aanvullend pakket bij een andere verzekeraar, zeg je oude dan pas op als de nieuwe je heeft geaccepteerd.",
+   "cluster": "opzeggen",
+   "pagina": "overstappen",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/opzeggen"
+  },
+  {
+   "vraag": "Moet ik mijn zorgverzekering opzeggen als ik bij Defensie ga werken?",
+   "antwoord": "Als je in actieve dienst gaat, ben je verplicht verzekerd via de ziektekostenregeling voor militairen en hoef je geen gewone zorgverzekering te hebben. Defensie regelt die verzekering en houdt de premie in op je salaris. Geef je indiensttreding door aan je zorgverzekeraar, en sluit na je diensttijd zelf weer een zorgverzekering af.",
+   "cluster": "opzeggen",
+   "pagina": "overstappen",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/militair"
+  },
+  {
+   "vraag": "Wat is het verschil tussen een naturapolis en een restitutiepolis?",
+   "antwoord": "Een echte restitutiepolis, die bij elke zorgverlener volledig vergoedt, bestaat sinds 2025 niet meer. Bij een naturapolis krijg je alles vergoed bij zorgverleners met een contract en meestal 60 tot 80 procent van het contracttarief bij zorgverleners zonder contract. De opvolger van de restitutiepolis is de combinatiepolis, die voor de meeste zorg ook zonder contract 100 procent vergoedt.",
+   "cluster": "polisvorm",
+   "pagina": "natura-of-restitutie",
+   "bron": "https://www.rijksoverheid.nl/themas/migratie-en-reizen/immigratie-naar-nederland/vraag-en-antwoord/zorgverzekering/polissen-zorgverzekeraar"
+  },
+  {
+   "vraag": "Heb ik met een naturapolis geen vrije artsenkeuze?",
+   "antwoord": "Je mag met een naturapolis naar elke zorgverlener, alleen krijg je bij een zorgverlener zonder contract niet alles terug. Hoeveel wel, staat in je polis: in 2027 meestal 60 tot 80 procent van het gemiddelde contracttarief. Volgens de rechtspraak mag die vergoeding geen drempel zijn om naar een andere zorgverlener te gaan; rond 75 procent wordt vaak als grens genoemd.",
+   "cluster": "polisvorm",
+   "pagina": "natura-of-restitutie",
+   "bron": "https://www.zorgwijzer.nl/faq/hinderpaalcriterium"
+  },
+  {
+   "vraag": "Zijn er bij naturapolissen minder goede zorgverleners?",
+   "antwoord": "Bij een naturapolis kiest de verzekeraar met welke zorgverleners hij een contract sluit; bij een budgetpolis zijn dat er minder. De zorg uit de basisverzekering is wettelijk bij elke polis hetzelfde. Of jouw ziekenhuis of behandelaar een contract heeft, zie je in de zorgzoeker van de verzekeraar.",
+   "cluster": "polisvorm",
+   "pagina": "natura-of-restitutie",
+   "bron": "https://www.rijksoverheid.nl/themas/migratie-en-reizen/immigratie-naar-nederland/vraag-en-antwoord/zorgverzekering/polissen-zorgverzekeraar"
+  },
+  {
+   "vraag": "Bestaat de restitutiepolis nog, en wat als mijn verzekeraar hem niet meer aanbiedt?",
+   "antwoord": "Nee, een volledige restitutiepolis wordt sinds 2025 niet meer aangeboden. Wie vrije keuze wil, komt nu uit bij een combinatiepolis, die voor de meeste zorg ook zonder contract 100 procent vergoedt, zoals VGZ Eigen Keuze (€ 188,15) of Zilveren Kruis Basis Exclusief (€ 186,95). Bij ggz en wijkverpleging vergoeden ook die polissen zonder contract vaak minder, bijvoorbeeld 75 tot 85 procent.",
+   "cluster": "polisvorm",
+   "pagina": "natura-of-restitutie",
+   "bron": "https://www.rijksoverheid.nl/themas/migratie-en-reizen/immigratie-naar-nederland/vraag-en-antwoord/zorgverzekering/polissen-zorgverzekeraar"
+  },
+  {
+   "vraag": "Ben ik met een naturapolis wel goed verzekerd?",
+   "antwoord": "Ja, wat in de basisverzekering zit is bij elke polis wettelijk gelijk. Het enige verschil is de vergoeding als je naar een zorgverlener zonder contract gaat. Ga je naar een ziekenhuis of behandelaar met contract, dan krijg je bij een naturapolis net zoveel vergoed als bij een duurdere polis.",
+   "cluster": "polisvorm",
+   "pagina": "natura-of-restitutie",
+   "bron": "https://www.rijksoverheid.nl/themas/migratie-en-reizen/immigratie-naar-nederland/vraag-en-antwoord/zorgverzekering/polissen-zorgverzekeraar"
+  },
+  {
+   "vraag": "Wat is het verschil tussen een budgetpolis en een gewone naturapolis?",
+   "antwoord": "Een budgetpolis is een naturapolis met minder gecontracteerde zorgverleners of een lagere vergoeding zonder contract. Bij Zilveren Kruis krijg je zonder contract bijvoorbeeld 70 procent bij Basis Start en 75 procent bij Basis Zeker; bij VGZbewuzt is dat 60 procent. De budgetpolis is meestal een paar euro per maand goedkoper.",
+   "cluster": "polisvorm",
+   "pagina": "natura-of-restitutie",
+   "bron": "https://www.rijksoverheid.nl/themas/migratie-en-reizen/immigratie-naar-nederland/vraag-en-antwoord/zorgverzekering/polissen-zorgverzekeraar"
+  },
+  {
+   "vraag": "Wat is het verschil tussen VGZ Basis Keuze en VGZ Ruime Keuze?",
+   "antwoord": "Beide zijn naturapolissen met dezelfde dekking. Het verschil zit in wat je terugkrijgt bij een zorgverlener zonder contract: 70 procent van het gemiddelde contracttarief bij Basis Keuze en 80 procent bij Ruime Keuze. Basis Keuze kost in 2027 € 167,40 per maand en Ruime Keuze € 170,75, een verschil van € 40,20 per jaar.",
+   "cluster": "polisvorm",
+   "pagina": "vgz",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Wat is een combinatiepolis?",
+   "antwoord": "Bij een combinatiepolis heb je voor sommige zorg recht op zorg van gecontracteerde zorgverleners, zoals bij een naturapolis, en voor andere zorg recht op een vergoeding, ook zonder contract. Hoeveel je zonder contract terugkrijgt verschilt sterk: van 50 tot 100 procent bij VinkVink (€ 148,40) tot 100 procent voor bijna alle zorg bij de duurdere combinatiepolissen. De duurste is CZ Zorgvariatiepolis voor € 202,50 per maand.",
+   "cluster": "polisvorm",
+   "pagina": "natura-of-restitutie",
+   "bron": "https://www.rijksoverheid.nl/themas/migratie-en-reizen/immigratie-naar-nederland/vraag-en-antwoord/zorgverzekering/polissen-zorgverzekeraar"
+  },
+  {
+   "vraag": "Welke beperkingen heeft een goedkope polis zoals Zilveren Kruis Basis Start?",
+   "antwoord": "De dekking is gelijk aan elke andere basisverzekering. Het verschil zit in de vergoeding zonder contract: bij Basis Start krijg je 70 procent van het gemiddelde contracttarief, voor ggz 65 procent, tegen 75 en 70 procent bij Basis Zeker. Basis Start kost in 2027 € 159,45 per maand, € 5,50 minder dan Basis Zeker.",
+   "cluster": "polisvorm",
+   "pagina": "zilveren-kruis",
+   "bron": "https://www.zilverenkruis.nl/consumenten/zorgverzekering/veranderingen/overzicht-van-de-premies"
+  },
+  {
+   "vraag": "Hoeveel krijg ik vergoed bij een zorgverlener zonder contract?",
+   "antwoord": "Dat staat in je polis. Bij naturapolissen is het in 2027 meestal 60 tot 80 procent van het gemiddelde contracttarief, bij Salland 90 procent. Bij combinatiepolissen is het voor de meeste zorg 100 procent, maar voor ggz en wijkverpleging vaak 75 tot 85 procent. De verzekeraar mag de vergoeding niet zo laag maken dat je in feite niet naar een andere zorgverlener kunt.",
+   "cluster": "polisvorm",
+   "pagina": "natura-of-restitutie",
+   "bron": "https://wetten.overheid.nl/BWBR0018450/2027-01-01"
+  },
+  {
+   "vraag": "Is een contract met mijn zorgverlener een garantie dat ik het hele jaar terecht kan?",
+   "antwoord": "Niet altijd. Een contract kan een omzetplafond hebben, waardoor een zorgverlener later in het jaar geen nieuwe patiënten van die verzekeraar meer aanneemt. Vraag bij een geplande behandeling aan je zorgverlener of er zo'n plafond geldt.",
+   "cluster": "polisvorm",
+   "pagina": "natura-of-restitutie",
+   "bron": "https://www.consumentenbond.nl/acties-claims/nieuws/2026/nza-moet-optreden-tegen-onduidelijke-zorgpolissen"
+  },
+  {
+   "vraag": "Krijg ik een behandeling op advies van mijn arts altijd vergoed?",
+   "antwoord": "Nee, alleen als de behandeling in het basispakket of in je aanvullende verzekering zit. Zo stopt per 2027 de vergoeding voor hartrevalidatie bij stabiele angina pectoris, ook voor wie daar in 2026 mee begon. Voor sommige behandelingen moet je ook vooraf toestemming van je verzekeraar hebben, dat heet een machtiging.",
+   "cluster": "polisvorm",
+   "pagina": "basispakket-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekering-wat-verandert-er"
+  },
+  {
+   "vraag": "Wordt het beste medicijn voor mij altijd vergoed, en welke verzekeraar vergoedt het merkmedicijn?",
+   "antwoord": "Welke medicijnen in de basisverzekering zitten, bepaalt het ministerie van VWS, dus dat is bij elke verzekeraar gelijk. Wel vergoeden verzekeraars van een medicijn soms maar één merk. Vindt je arts dat je dat merk niet kunt gebruiken, dan krijg je een ander merk vergoed. Kost een medicijn meer dan de vergoeding, dan betaal je een eigen bijdrage van maximaal € 250 per jaar.",
+   "cluster": "polisvorm",
+   "pagina": "basispakket-2027",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/geneesmiddelen/welke-medicijnen-krijg-ik-vergoed"
+  },
+  {
+   "vraag": "Heb ik een aanvullende verzekering nodig als ik gezond ben en weinig zorg gebruik?",
+   "antwoord": "Een aanvullende verzekering is niet verplicht. Je hebt hem vooral voor zorg die niet in de basis zit, zoals de tandarts vanaf 18 jaar, de eerste behandelingen fysiotherapie en een bril. Er zijn ook kleine modules, zoals de Basis Plus Module van Zilveren Kruis voor € 2,25 per maand, die alleen tandzorg na een ongeval en spoedzorg in het buitenland dekt.",
+   "cluster": "polisvorm",
+   "pagina": "beste-zorgverzekering-2027",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/wat-is-een-aanvullende-zorgverzekering"
+  },
+  {
+   "vraag": "Is het slim om een goedkope basis te nemen en meer uit te geven aan de aanvullende verzekering?",
+   "antwoord": "De basisverzekering dekt bij elke verzekeraar hetzelfde, het verschil zit in de premie en de vergoeding bij zorgverleners zonder contract. Een aanvullende verzekering dekt juist andere zorg, zoals tandarts, fysiotherapie en bril. Basis en aanvullend mogen bij verschillende verzekeraars, maar sommige verzekeraars bieden hun aanvullende pakket alleen aan samen met hun eigen basis.",
+   "cluster": "polisvorm",
+   "pagina": "beste-zorgverzekering-2027",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/wat-is-een-aanvullende-zorgverzekering"
+  },
+  {
+   "vraag": "Moet ik basis en aanvullende verzekering bij dezelfde zorgverzekeraar afsluiten?",
+   "antwoord": "Nee, dat mag los van elkaar. Wel bieden sommige verzekeraars hun aanvullende pakketten alleen aan als je ook hun basisverzekering neemt. Vergelijk dus eerst de basis en kijk daarna of het aanvullende pakket dat je wilt los af te sluiten is.",
+   "cluster": "polisvorm",
+   "pagina": "beste-zorgverzekering-2027",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/wat-is-een-aanvullende-zorgverzekering"
+  },
+  {
+   "vraag": "Waarom zijn er grote verschillen tussen de aanvullende verzekeringen van verzekeraars?",
+   "antwoord": "Wat in de basisverzekering zit, bepaalt de wet, maar de inhoud en premie van een aanvullende verzekering bepaalt elke verzekeraar zelf. Daardoor lopen de vergoedingen ver uiteen: voor alternatieve zorg bijvoorbeeld van € 100 per jaar bij ONVZ Startfit tot € 1.000 bij ONVZ Topfit. Ook acceptatie en wachttijden mag elke verzekeraar zelf regelen.",
+   "cluster": "polisvorm",
+   "pagina": "beste-zorgverzekering-2027",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/wat-is-een-aanvullende-zorgverzekering"
+  },
+  {
+   "vraag": "Wat gebeurt er met mijn aanvullende verzekering als ik die een jaar niet gebruik?",
+   "antwoord": "Je betaalt de premie en krijgt die niet terug, en vergoedingen gelden per kalenderjaar. Bij sommige pakketten kun je ongebruikte fysiotherapie deels meenemen naar het volgende jaar, zoals maximaal 5 behandelingen bij CZ en maximaal 3 bij de Aanvullend-sterrenpakketten van Zilveren Kruis. Brillen worden vaak per 2 of 3 jaar vergoed, dus daar telt een jaar zonder gebruik niet als verlies.",
+   "cluster": "polisvorm",
+   "pagina": "beste-zorgverzekering-2027",
+   "bron": "https://www.cz.nl/zorgverzekering/aanvullende-verzekering"
+  },
+  {
+   "vraag": "Gelden er wachttijden of voorwaarden als ik met mijn aanvullende verzekering overstap?",
+   "antwoord": "Dat kan, want voor een aanvullende verzekering geldt geen acceptatieplicht. Een verzekeraar mag een wachttijd hanteren: je bent dan wel verzekerd, maar bepaalde kosten worden nog niet vergoed, zoals orthodontie in het eerste jaar bij CZ en bij de duurdere tandartspakketten van VGZ. Een nieuwe verzekeraar hoeft lopende zorg uit je oude aanvullende pakket ook niet zonder voorwaarden over te nemen.",
+   "cluster": "polisvorm",
+   "pagina": "overstappen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/wat-is-een-aanvullende-zorgverzekering"
+  },
+  {
+   "vraag": "Welke zorgverzekering vergoedt het meest voor alternatieve geneeswijzen?",
+   "antwoord": "In 2027 is dat ONVZ Vrije Keuze Topfit, met tot € 1.000 per jaar voor € 74,40 per maand. Daarna komen CZ Top en ONVZ Optifit met € 550 per jaar en VGZ Aanvullend Best met € 500. In de basisverzekering zit geen vergoeding voor alternatieve zorg.",
+   "cluster": "polisvorm",
+   "pagina": "alternatieve-zorg-vergoeding",
+   "bron": null
+  },
+  {
+   "vraag": "Zijn er zorgverzekeraars die sport vergoeden?",
+   "antwoord": "Sportmedisch advies zit niet in de basisverzekering, maar sommige aanvullende verzekeringen vergoeden het wel. Voor 2027 noemt de Consumentenbond onder meer UnitedConsumers met € 75 tot € 600, Univé met € 200 tot € 500 en VGZ met € 75 tot € 500 per jaar, afhankelijk van het pakket. Bij CZdirect, FBTO, Interpolis, VinkVink en ZieZo staat geen vergoeding vermeld.",
+   "cluster": "polisvorm",
+   "pagina": "beste-zorgverzekering-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/vergoedingen/sport-medisch-advies"
+  },
+  {
+   "vraag": "Waarom vergoeden zorgverzekeraars zo weinig preventieve zorg?",
+   "antwoord": "Veel preventie loopt niet via de zorgverzekering maar via landelijke programma's. Zo start in 2027 een vaccinatie tegen gordelroos voor 60-jarigen. De basisverzekering vergoedt wel een stoppen-met-rokenprogramma tot drie keer per jaar en de gecombineerde leefstijlinterventie, die buiten het eigen risico valt.",
+   "cluster": "polisvorm",
+   "pagina": "basispakket-2027",
+   "bron": "https://www.rijksoverheid.nl/actueel/nieuws/2026/09/15/kabinet-zet-in-op-gezondheid-en-op-zorg-die-klaar-is-voor-de-toekomst"
+  },
+  {
+   "vraag": "Wat zit er precies in een aanvullend pakket?",
+   "antwoord": "Een aanvullend pakket vergoedt zorg die niet of maar deels in de basis zit, meestal fysiotherapie, een bril of lenzen, alternatieve zorg en spoedzorg in het buitenland; de tandarts zit vaak in een apart pakket. Hoeveel verschilt per pakket: VGZ Aanvullend Goed (€ 11,70) vergoedt bijvoorbeeld 9 behandelingen fysiotherapie per jaar, VGZ Aanvullend Best (€ 48,50) 20 behandelingen en € 500 alternatieve zorg.",
+   "cluster": "polisvorm",
+   "pagina": "beste-zorgverzekering-2027",
+   "bron": "https://www.vgz.nl/zorgverzekering/aanvullende-verzekering"
+  },
+  {
+   "vraag": "Hoe hoog is het eigen risico in 2027, en gaat het omhoog?",
+   "antwoord": "Het verplicht eigen risico is in 2027 € 400 per jaar voor iedereen van 18 jaar en ouder, € 15 meer dan de € 385 van 2026. Het stijgt mee met de inflatie. Een extra verhoging is naar 2028 verschoven en nog niet door het parlement aangenomen.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://wetten.overheid.nl/BWBR0018450/2027-01-01"
+  },
+  {
+   "vraag": "Hoe hoog wordt het eigen risico in 2028?",
+   "antwoord": "Dat is nog niet vastgesteld. Het kabinet heeft een extra verhoging van het eigen risico naar 2028 verschoven, maar het wetsvoorstel daarvoor is nog niet aangenomen. Voor 2027 staat het eigen risico vast op € 400.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://www.tweedekamer.nl/kamerstukken/detail?id=2026Z09664&did=2026D27584"
+  },
+  {
+   "vraag": "Komt er vanaf 2028 een maximum eigen risico per behandeling?",
+   "antwoord": "Dat is het plan: vanaf 2028 wil het kabinet in het ziekenhuis hoogstens € 150 eigen risico per behandeling laten rekenen. Dat moet nog worden geregeld en geldt niet in 2027. In 2027 betaal je per jaar maximaal je eigen risico van € 400, ongeacht hoeveel behandelingen je hebt.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://zoek.officielebekendmakingen.nl/kst-36943-3.pdf"
+  },
+  {
+   "vraag": "Is er in 2027 iets geregeld voor het eigen risico van chronisch zieken?",
+   "antwoord": "Nee, het eigen risico is in 2027 voor iedereen € 400. Het kabinet werkt nog aan maatregelen voor de zorgkosten van chronisch zieken, maar concrete bedragen voor 2027 zijn er niet. Wel valt ketenzorg bij diabetes type 2, COPD en hart- en vaatziekten buiten het eigen risico, en kun je bij je gemeente vragen naar een meerkostenregeling of bijzondere bijstand.",
+   "cluster": "eigen risico",
+   "pagina": "chronisch-ziek",
+   "bron": "https://www.rijksoverheid.nl/actueel/nieuws/2026/09/15/kabinet-zet-in-op-gezondheid-en-op-zorg-die-klaar-is-voor-de-toekomst"
+  },
+  {
+   "vraag": "Gaat het eigen risico in 2027 echt naar 165 euro?",
+   "antwoord": "Nee, dat plan gaat niet door. Het eigen risico gaat in 2027 juist omhoog van € 385 naar € 400. Artikelen over € 165 zijn verouderd.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://wetten.overheid.nl/BWBR0018450/2027-01-01"
+  },
+  {
+   "vraag": "Is het verstandig om mijn eigen risico te verhogen?",
+   "antwoord": "Alleen als je weinig zorg verwacht. Je kunt tot € 500 extra kiezen, en bij Zilveren Kruis Basis Start scheelt dat € 210 per jaar aan premie. Je bent dan goedkoper uit zolang je zorgkosten onder het eigen risico onder ongeveer € 610 blijven; heb je veel zorg nodig, dan betaal je in het slechtste geval € 290 meer dan zonder verhoging.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://www.zilverenkruis.nl/consumenten/zorgverzekering/veranderingen/overzicht-van-de-premies"
+  },
+  {
+   "vraag": "Hoeveel korting krijg ik als ik mijn eigen risico verhoog naar 900 euro?",
+   "antwoord": "Het hoogste vrijwillige eigen risico is € 500 extra, samen met het verplichte deel € 900. De korting verschilt per polis: meestal tussen € 150 en € 250 per jaar, bij Zilveren Kruis Basis Start € 210 (€ 17,50 per maand). Bij een paar polissen is het veel minder, zoals € 60 per jaar bij VinkVink en Nationale-Nederlanden Zorg Voordelig.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://www.rijksoverheid.nl/documenten/vraag-en-antwoord/zorgverzekering/eigen-risico-zorgverzekering"
+  },
+  {
+   "vraag": "Moet ik het eigen risico in een keer betalen of kan dat gespreid?",
+   "antwoord": "Het kan gespreid: je kunt bij je verzekeraar een betalingsregeling afspreken en het eigen risico in termijnen betalen. Bij sommige verzekeraars kun je het ook vooraf per maand met je premie laten afschrijven. Heb je een vrijwillig eigen risico, dan kan een betalingsregeling bij sommige verzekeraars niet.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/eigen-risico"
+  },
+  {
+   "vraag": "Betaal ik eigen risico voor de huisartsenpost?",
+   "antwoord": "Nee. Zorg van de huisarts gaat niet van je eigen risico af, en dat geldt ook voor de huisartsenpost buiten kantoortijd. Stuurt de huisartsenpost je door naar het ziekenhuis, dan betaal je daar wel eigen risico.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/eerstelijnszorg/huisartsenpost-spoedeisende-hulp"
+  },
+  {
+   "vraag": "Betaal ik eigen risico voor de spoedeisende hulp?",
+   "antwoord": "Ja. De spoedeisende hulp is ziekenhuiszorg en valt onder het eigen risico. Heb je je eigen risico van € 400 nog niet opgemaakt, dan betaal je zelf een deel van de rekening.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/eerstelijnszorg/huisartsenpost-spoedeisende-hulp"
+  },
+  {
+   "vraag": "Betaal ik eigen risico voor wijkverpleging?",
+   "antwoord": "Nee, wijkverpleging valt buiten het eigen risico. Dat geldt ook voor de huisarts, verloskundige zorg en kraamzorg.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://www.rijksoverheid.nl/documenten/vraag-en-antwoord/zorgverzekering/eigen-risico-zorgverzekering"
+  },
+  {
+   "vraag": "Is het eigen risico voor iedereen verplicht?",
+   "antwoord": "Voor iedereen van 18 jaar en ouder met een basisverzekering, in 2027 € 400 per jaar. Kinderen tot 18 jaar hebben geen eigen risico. Je betaalt het alleen als je zorg gebruikt die eronder valt, dus niet voor de huisarts, wijkverpleging of verloskundige zorg.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://www.rijksoverheid.nl/documenten/vraag-en-antwoord/zorgverzekering/eigen-risico-zorgverzekering"
+  },
+  {
+   "vraag": "Hoe kan het dat sommige zorgkosten van mijn eigen risico afgaan maar mijn medicijnen gewoon vergoed worden?",
+   "antwoord": "Medicijnen uit de basisverzekering vallen in principe wel onder het eigen risico. Verzekeraars mogen bepaalde medicijnen, hulpmiddelen of aanbieders uitzonderen, bijvoorbeeld een voorkeursmiddel. Is je eigen risico al op, of zit het medicijn in je aanvullende verzekering, dan merk je er ook niets van.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/geneesmiddelen/welke-medicijnen-krijg-ik-vergoed"
+  },
+  {
+   "vraag": "Heeft het zin de rekening te controleren als mijn eigen risico al op is?",
+   "antwoord": "Ja. Een fout op een rekening kan ervoor zorgen dat je eigen risico eerder op is dan nodig, en verzekeraars mogen het eigen risico tot 5 jaar later nog innen, ook als je bent overgestapt. Klopt iets niet, vraag het dan eerst na bij de zorgverlener en meld het daarna bij je verzekeraar.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/eigen-risico"
+  },
+  {
+   "vraag": "Kan ik het eigen risico of de eigen bijdrage voor een gehoorapparaat bijverzekeren?",
+   "antwoord": "Vanaf 18 jaar betaal je in 2027 zelf 25 procent van de prijs van een hoortoestel, en meestal gaat het toestel ook van je eigen risico af. Een aanvullende verzekering kan die eigen bijdrage van 25 procent geheel of deels vergoeden, maar niet bij elke verzekeraar: a.s.r., Menzis en Interpolis vergoeden het niet. Het verplicht eigen risico van € 400 zelf zit in geen enkele aanvullende verzekering.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://www.zorgwijzer.nl/vergoeding/gehoorapparaat"
+  },
+  {
+   "vraag": "Kan ik vooraf zien wat een ziekenhuisbehandeling kost voor mijn eigen risico?",
+   "antwoord": "Je kunt het ziekenhuis of je verzekeraar vooraf om een kostenindicatie vragen. Voor zorg uit de basisverzekering betaal je per jaar nooit meer dan je eigen risico, in 2027 € 400, of tot € 900 als je het vrijwillig hebt verhoogd. Daarbovenop kunnen alleen eigen bijdragen komen, zoals voor bepaalde medicijnen of hulpmiddelen.",
+   "cluster": "eigen risico",
+   "pagina": "eigen-risico-2027",
+   "bron": "https://www.rijksoverheid.nl/documenten/vraag-en-antwoord/zorgverzekering/eigen-risico-zorgverzekering"
+  },
+  {
+   "vraag": "Hoeveel gaat mijn zorgpremie omhoog in 2027?",
+   "antwoord": "Gemiddeld ongeveer € 15 per maand: de gemiddelde basispremie komt in 2027 boven de € 170, tegen € 157 in 2026. Alle polissen worden duurder, de ene met € 5,50 en de andere met € 25 per maand. Hoeveel jij meer betaalt, staat in de premiebrief van je eigen verzekeraar.",
+   "cluster": "premie",
+   "pagina": "goedkoopste-zorgverzekering-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Zijn de zorgpremies voor 2027 al bekend?",
+   "antwoord": "Ja, alle verzekeraars hebben hun basispremies voor 2027 op 12 november 2026 bekendgemaakt. De goedkoopste polis is VinkVink voor € 148,40 per maand en de duurste CZ Zorgvariatiepolis voor € 202,50. De premies van aanvullende verzekeringen moeten uiterlijk 19 november bekend zijn.",
+   "cluster": "premie",
+   "pagina": "goedkoopste-zorgverzekering-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Welke zorgverzekering is het goedkoopst in 2027, en is die ook goed?",
+   "antwoord": "De goedkoopste basisverzekering van 2027 is VinkVink voor € 148,40 per maand, gevolgd door FBTO Basis (€ 154,75) en De Friesland Zelf Bewust Polis (€ 156,75). De dekking is wettelijk gelijk aan elke andere basisverzekering. Het verschil zit in de vergoeding bij zorgverleners zonder contract, bij VinkVink 50 tot 100 procent, en in het contact: VinkVink werkt alleen online en via chat.",
+   "cluster": "premie",
+   "pagina": "goedkoopste-zorgverzekering-2027",
+   "bron": "https://www.vinkvink.nl/zorgverzekering/basisverzekering"
+  },
+  {
+   "vraag": "Wat kost een zorgverzekering per maand in 2027?",
+   "antwoord": "Een basisverzekering kost in 2027 tussen € 148,40 en € 202,50 per maand, gemiddeld iets meer dan € 170. Voor kinderen tot 18 jaar betaal je niets. Een aanvullende verzekering komt daar bovenop, van een paar euro tot ruim € 70 per maand.",
+   "cluster": "premie",
+   "pagina": "goedkoopste-zorgverzekering-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Waarom is de premie voor de basisverzekering niet bij elke verzekeraar hetzelfde?",
+   "antwoord": "Wat er in de basisverzekering zit, bepaalt de wet, maar elke verzekeraar stelt zelf zijn premie vast. Het verschil komt onder meer door de afspraken met zorgverleners, de vergoeding zonder contract en hoeveel een verzekeraar uit zijn reserves bijlegt. In 2027 scheelt de goedkoopste met de duurste polis € 54,10 per maand.",
+   "cluster": "premie",
+   "pagina": "goedkoopste-zorgverzekering-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Waarom stijgt de zorgpremie in 2027 zo hard?",
+   "antwoord": "De zorgkosten stijgen omdat mensen ouder worden, er meer zieken zijn en nieuwe behandelingen geld kosten. Verzekeraars zeggen ook extra te investeren in kortere wachtlijsten, zoals CZ bij ziekenhuizen en ggz. Doordat de extra verhoging van het eigen risico naar 2028 is verschoven, stijgt het eigen risico in 2027 maar € 15.",
+   "cluster": "premie",
+   "pagina": "goedkoopste-zorgverzekering-2027",
+   "bron": "https://www.omroepbrabant.nl/nieuws/6034753/directeur-cz-legt-uit-waarom-zorgpremie-hard-stijgt-doordachte-keuze"
+  },
+  {
+   "vraag": "Hoeveel meer betalen we als gezin met twee volwassenen in 2027?",
+   "antwoord": "Bij een gemiddelde stijging van ongeveer € 15 per maand per volwassene is dat samen zo'n € 30 per maand, rond € 360 per jaar. Voor kinderen tot 18 jaar betaal je geen premie en geen eigen risico. Daarnaast stijgt het eigen risico met € 15 per volwassene, naar € 400.",
+   "cluster": "premie",
+   "pagina": "kinderen-en-gezin",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Gaat de zorgpremie in 2027 voor het eerst boven de 2.000 euro per jaar?",
+   "antwoord": "Gemiddeld wel: bij een gemiddelde maandpremie van ruim € 170 betaal je meer dan € 2.040 per jaar, tegen € 1.884 in 2026. Met de goedkoopste polis, VinkVink voor € 148,40 per maand, blijf je eronder met € 1.780,80 per jaar.",
+   "cluster": "premie",
+   "pagina": "goedkoopste-zorgverzekering-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Hoe groot is het verschil tussen de goedkoopste en de duurste basisverzekering in 2027?",
+   "antwoord": "€ 54,10 per maand, of € 649,20 per jaar. De goedkoopste is VinkVink voor € 148,40 per maand en de duurste CZ Zorgvariatiepolis voor € 202,50. De dekking van de basis is bij allebei hetzelfde; de duurdere polis vergoedt meer bij zorgverleners zonder contract.",
+   "cluster": "premie",
+   "pagina": "goedkoopste-zorgverzekering-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Krijg ik korting als ik de premie voor 2027 in een keer per jaar betaal?",
+   "antwoord": "Bij veel verzekeraars wel. Bij Zilveren Kruis, VGZ, Menzis en FBTO is het 1 procent, bij DSW en Just 2 procent, bij IZA 2,1 procent en bij Salland 4 procent bij jaarbetaling vooraf. Voor de zorgtoeslag telt je vermogen op 1 januari 2027: betaal je de jaarpremie daarvoor, dan staat er op die datum minder op je rekening.",
+   "cluster": "premie",
+   "pagina": "goedkoopste-zorgverzekering-2027",
+   "bron": "https://www.zilverenkruis.nl/consumenten/zorgverzekering/veranderingen/overzicht-van-de-premies"
+  },
+  {
+   "vraag": "Bepaalt de overheid de zorgpremie?",
+   "antwoord": "Nee, de premie voor de basisverzekering bepaalt elke verzekeraar zelf. De overheid bepaalt wel wat er in het basispakket zit, hoe hoog het eigen risico is (€ 400 in 2027) en het percentage van de inkomensafhankelijke bijdrage, die je werkgever over je loon betaalt: 6,27 procent in 2027.",
+   "cluster": "premie",
+   "pagina": "goedkoopste-zorgverzekering-2027",
+   "bron": "https://www.zorgwijzer.nl/faq/wat-is-de-inkomensafhankelijke-bijdrage"
+  },
+  {
+   "vraag": "Gebruiken zorgverzekeraars de winst voor zichzelf?",
+   "antwoord": "Voor zorgverzekeraars gold een tijdelijk verbod op het uitkeren van winst, en in 2017 stemde de Tweede Kamer voor een definitief verbod. Wat een verzekeraar overhoudt, gaat naar zijn reserves, en verzekeraars zetten reserves soms in om de premie lager te houden. Mede daardoor verschilt per verzekeraar hoeveel de premie stijgt.",
+   "cluster": "premie",
+   "pagina": "goedkoopste-zorgverzekering-2027",
+   "bron": "https://radar.avrotros.nl/artikel/meerderheid-tweede-kamer-winstuitkeringverbod-zorgverzekeraars-blijft-20836"
+  },
+  {
+   "vraag": "Hoe kan ik besparen op mijn zorgverzekering?",
+   "antwoord": "Vergelijk eerst de basispremie: tussen de goedkoopste en de duurste polis zit in 2027 € 649 per jaar. Verder kun je een hoger vrijwillig eigen risico kiezen (meestal € 150 tot € 250 korting per jaar bij € 500 extra), de premie per jaar vooruit betalen voor 1 tot 4 procent korting, en kijken of je aanvullende pakket past bij wat je echt gebruikt. Met een laag inkomen heb je mogelijk recht op zorgtoeslag.",
+   "cluster": "premie",
+   "pagina": "goedkoopste-zorgverzekering-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Welke zorgverzekering is het voordeligst voor mij?",
+   "antwoord": "Dat hangt af van je zorggebruik. Gebruik je weinig zorg en heb je geen vaste behandelaar, dan kom je met de goedkoopste naturapolis het laagst uit, eventueel met een hoger eigen risico. Heb je een vaste zorgverlener, kijk dan eerst of die een contract heeft met de polis, want zonder contract krijg je bij een naturapolis meestal maar 60 tot 80 procent terug.",
+   "cluster": "premie",
+   "pagina": "beste-zorgverzekering-2027",
+   "bron": null
+  },
+  {
+   "vraag": "Welke zorgverzekering is goedkoper dan Menzis?",
+   "antwoord": "De goedkoopste Menzis-polis, Basis Voordelig, kost in 2027 € 160,75 per maand. Goedkoper zijn VinkVink (€ 148,40, ook van Menzis), FBTO Basis (€ 154,75), De Friesland Zelf Bewust Polis (€ 156,75) en Zilveren Kruis Basis Start (€ 159,45). De gewone Menzis Basis kost € 165,75.",
+   "cluster": "premie",
+   "pagina": "menzis",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Hoeveel premie bespaar ik als ik overstap naar de goedkoopste polis?",
+   "antwoord": "Betaal je de gemiddelde premie van ruim € 170 per maand, dan scheelt de goedkoopste polis (VinkVink, € 148,40) ruim € 21 per maand, ongeveer € 260 per jaar. Vanaf de duurste polis, CZ Zorgvariatiepolis, is dat € 649,20 per jaar. Let wel op de vergoeding bij zorgverleners zonder contract, die bij de goedkoopste polissen lager is.",
+   "cluster": "premie",
+   "pagina": "goedkoopste-zorgverzekering-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Heeft overstappen zin als wat bij de ene verzekeraar goedkoop is bij de andere duurder is?",
+   "antwoord": "De basisverzekering dekt bij elke verzekeraar hetzelfde, dus daar kun je gewoon op premie en vergoeding zonder contract vergelijken. Bij aanvullende pakketten verschillen inhoud en premie wel per verzekeraar, en is het vaak een afweging. Je kunt basis en aanvullend ook bij verschillende verzekeraars afsluiten, al bieden sommige hun aanvullende pakket alleen aan met hun eigen basis.",
+   "cluster": "premie",
+   "pagina": "beste-zorgverzekering-2027",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/wat-is-een-aanvullende-zorgverzekering"
+  },
+  {
+   "vraag": "Hoeveel kost CZ in 2027?",
+   "antwoord": "De basisverzekering van CZ kost in 2027 € 176,25 per maand voor de Zorgbewustpolis, € 177,25 voor de Zorg-op-maatpolis en € 202,50 voor de Zorgvariatiepolis, de duurste polis van Nederland. CZdirect, dat alleen online werkt, kost € 165,15. De Zorg-op-maatpolis wordt € 17,26 per maand duurder.",
+   "cluster": "verzekeraar",
+   "pagina": "cz",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Hoeveel gaat Zilveren Kruis omhoog in 2027?",
+   "antwoord": "Zilveren Kruis stijgt in 2027 met € 5,50 tot € 10,50 per maand. Basis Start gaat naar € 159,45, Basis Zeker naar € 164,95 en Basis Exclusief naar € 186,95 per maand. Bij jaarbetaling krijg je 1 procent korting.",
+   "cluster": "verzekeraar",
+   "pagina": "zilveren-kruis",
+   "bron": "https://www.zilverenkruis.nl/consumenten/zorgverzekering/veranderingen/overzicht-van-de-premies"
+  },
+  {
+   "vraag": "Wat kost VGZ in 2027?",
+   "antwoord": "VGZ Basis Keuze kost in 2027 € 167,40 per maand, Ruime Keuze € 170,75 en Eigen Keuze € 188,15. De premies stijgen met € 16,50 tot € 17,50 per maand. VGZbewuzt, het digitale label van VGZ, kost € 165,40.",
+   "cluster": "verzekeraar",
+   "pagina": "vgz",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Wat kost Menzis in 2027?",
+   "antwoord": "Menzis Basis Voordelig kost in 2027 € 160,75 per maand, Menzis Basis € 165,75 en Basis Vrij € 188,25. Dat is € 9,50 tot € 12,50 meer dan in 2026. VinkVink, de goedkoopste polis van 2027 voor € 148,40, valt ook onder Menzis.",
+   "cluster": "verzekeraar",
+   "pagina": "menzis",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Wat is de premie van DSW in 2027?",
+   "antwoord": "De basisverzekering van DSW kost in 2027 € 173,25 per maand, € 14,75 meer dan in 2026. Bij DSW is het verplicht eigen risico € 390 in plaats van € 400. Bij jaarbetaling krijg je 2 procent korting.",
+   "cluster": "verzekeraar",
+   "pagina": "dsw",
+   "bron": "https://www.dsw.nl/consumenten/zorgverzekering/basisverzekering"
+  },
+  {
+   "vraag": "Is VinkVink echt de goedkoopste zorgverzekering in 2027?",
+   "antwoord": "Ja, met € 148,40 per maand is VinkVink in 2027 de goedkoopste basisverzekering. VinkVink valt onder Menzis, werkt alleen online en via chat en vergoedt zonder contract 50 tot 100 procent, afhankelijk van het soort zorg. Met € 500 vrijwillig eigen risico daalt de premie maar € 5, naar € 143,40.",
+   "cluster": "verzekeraar",
+   "pagina": "vinkvink",
+   "bron": "https://www.vinkvink.nl/zorgverzekering/basisverzekering"
+  },
+  {
+   "vraag": "Wat kost FBTO in 2027?",
+   "antwoord": "FBTO Basis kost in 2027 € 154,75 per maand, de goedkoopste naturapolis van een groot label. Basis Plus kost € 164,95 en Basis Vrij € 179,75. Bij jaarbetaling krijg je 1 procent korting.",
+   "cluster": "verzekeraar",
+   "pagina": "fbto",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Wat kost de zorgverzekering van Univé in 2027?",
+   "antwoord": "Univé heeft in 2027 vier basisverzekeringen: Zorg Select voor € 165,40 per maand, Zorg Basis voor € 167,90, Zorg Geregeld voor € 171,25 en Zorg Uitgebreid voor € 189,70. Klanten van ZEKUR gaan per 2027 automatisch over naar Zorg Geregeld of Zorg Uitgebreid.",
+   "cluster": "verzekeraar",
+   "pagina": "unive",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Wat kost de zorgverzekering van NN in 2027?",
+   "antwoord": "Nationale-Nederlanden Zorg Voordelig kost in 2027 € 164,45 per maand, € 22 meer dan in 2026. Zorg Vrij, een combinatiepolis die voor bijna alle zorg ook zonder contract 100 procent vergoedt, kost € 178,85. NN hoort bij de CZ-groep.",
+   "cluster": "verzekeraar",
+   "pagina": "nationale-nederlanden",
+   "bron": "https://www.nn.nl/nieuws/zorgverzekering-nationale-nederlanden-2027-beschikbaar/"
+  },
+  {
+   "vraag": "Wat zijn de aanvullende verzekeringen van Menzis in 2027?",
+   "antwoord": "Menzis heeft de pakketten ExtraVerzorgd 1, 2 en 3, JongerenVerzorgd, Aanvullend en Extra Aanvullend, plus de tandartspakketten TandVerzorgd 250, 500 en 750. In 2026 kostten die van € 8,60 (ExtraVerzorgd 1) tot € 45,80 (ExtraVerzorgd 3) per maand. De premies van de aanvullende pakketten voor 2027 moeten uiterlijk 19 november bekend zijn.",
+   "cluster": "verzekeraar",
+   "pagina": "menzis",
+   "bron": "https://www.keuze.nl/zorgverzekering/zorgverzekeraars/menzis"
+  },
+  {
+   "vraag": "Wat zijn de aanvullende verzekeringen van a.s.r. in 2027?",
+   "antwoord": "a.s.r. heeft in 2027 zes aanvullende pakketten, van ZorgInstap voor € 1,75 tot ZorgBest voor € 42,95 per maand, en vijf tandartspakketten van TandBewust (€ 10) tot TandPlus (€ 48,95). Daarnaast zijn er losse modules, zoals Bril en lenzen voor € 4,50 of € 7,95 en een ongevallendekking vanaf € 0,75.",
+   "cluster": "verzekeraar",
+   "pagina": "a-s-r",
+   "bron": "https://www.keuze.nl/zorgverzekering/zorgverzekeraars/asr"
+  },
+  {
+   "vraag": "Welke zorgverzekeraars zijn er in Nederland?",
+   "antwoord": "De vier grote zorgverzekeraars zijn Achmea (onder meer Zilveren Kruis, FBTO, Interpolis en De Friesland), VGZ (onder meer VGZ, Univé, IZA en UnitedConsumers), CZ (onder meer CZ, OHRA en Nationale-Nederlanden) en Menzis (onder meer Menzis en VinkVink). Kleinere verzekeraars zijn onder andere DSW, ONVZ, a.s.r., Zorg en Zekerheid, Aevitae en Salland. Vanaf 2027 is VGZ ook de verzekeraar achter ONVZ.",
+   "cluster": "verzekeraar",
+   "pagina": "beste-zorgverzekering-2027",
+   "bron": null
+  },
+  {
+   "vraag": "Welke zorgverzekeraar heeft de meeste klachten?",
+   "antwoord": "Een openbare ranglijst van klachten per verzekeraar is er niet; de geschillencommissie SKGZ kreeg in 2025 in totaal 1.988 klachten over alle zorgverzekeraars samen. In de klantbeoordelingen op Zorgwijzer scoren VinkVink (6,5), ZEKUR (6,9) en UMC (6,9) het laagst.",
+   "cluster": "verzekeraar",
+   "pagina": "beste-zorgverzekering-2027",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2026/over-deze-3-zorgverzekeraars-komen-de-meeste-klachten-binnen"
+  },
+  {
+   "vraag": "Welke zorgverzekeraar heeft de meest tevreden klanten?",
+   "antwoord": "In de klantbeoordelingen op Zorgwijzer staat DSW al vijf jaar bovenaan, met een 8,9 uit ruim 1.250 reviews. Daarna volgen UnitedConsumers en OHRA met een 8,7, en De Friesland en Stad Holland met een 8,4.",
+   "cluster": "verzekeraar",
+   "pagina": "beste-zorgverzekering-2027",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2026/deze-zorgverzekeraar-wordt-al-5-jaar-het-beste-beoordeeld-en-dit-is-waarom"
+  },
+  {
+   "vraag": "Wat is het verschil tussen de aanvullende verzekeringen van CZ en IZA?",
+   "antwoord": "IZA hoort bij VGZ en is een collectieve verzekering voor mensen in overheid en onderwijs; CZ is een eigen verzekeraar die iedereen kan afsluiten. CZ heeft in 2027 de pakketten Start (€ 2,15), Basis (€ 11,50), Plus (€ 28,15) en Top (€ 51,45), met bijvoorbeeld € 350 en € 550 per jaar voor alternatieve zorg bij Plus en Top. De aanvullende pakketten van IZA voor 2027 hebben wij nog niet kunnen vergelijken.",
+   "cluster": "verzekeraar",
+   "pagina": "iza",
+   "bron": "https://www.cz.nl/zorgverzekering/aanvullende-verzekering"
+  },
+  {
+   "vraag": "Valt OHRA onder CZ, en welke merken horen bij welke verzekeraar?",
+   "antwoord": "Ja, OHRA hoort bij de CZ-groep, net als CZdirect, Nationale-Nederlanden en Just. Bij Achmea horen Zilveren Kruis, FBTO, Interpolis, De Friesland en ZieZo, bij VGZ onder meer Univé, IZA, UnitedConsumers, VGZbewuzt en Zorgzaam, en bij Menzis hoort VinkVink. Anderzorg gaat per 2027 op in Menzis.",
+   "cluster": "verzekeraar",
+   "pagina": "ohra",
+   "bron": null
+  },
+  {
+   "vraag": "ZEKUR stopt, wat gebeurt er met mijn polis in 2027?",
+   "antwoord": "ZEKUR stopt per 1 januari 2027 en je polis gaat automatisch over naar Univé. ZEKUR Zorg Basis wordt Univé Zorg Geregeld (€ 171,25 per maand) en Zorg Plus wordt Zorg Uitgebreid (€ 189,70). Wil je liever een andere verzekeraar, dan kun je tot en met 31 december 2026 overstappen.",
+   "cluster": "verzekeraar",
+   "pagina": "unive",
+   "bron": "https://www.overstappen.nl/nieuws/zorgpremies-van-vgz-en-bijbehorende-labels-stijgen-in-2027/"
+  },
+  {
+   "vraag": "Ik zit bij ZEKUR met een achterstand bij het CAK, wat gebeurt er als ik naar Univé ga?",
+   "antwoord": "Zolang je in de regeling van het CAK zit, kun je niet zelf overstappen naar een andere verzekeraar. Omdat ZEKUR stopt, gaat je polis per 1 januari 2027 automatisch over naar Univé. Je achterstand verdwijnt daarmee niet; met een betalingsregeling bij je verzekeraar kom je uit de regeling en betaal je weer de gewone premie.",
+   "cluster": "verzekeraar",
+   "pagina": "unive",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/dit-gebeurt-er-als-je-de-zorgpremie-niet-betaalt"
+  },
+  {
+   "vraag": "Welke zorgverzekering heb ik eigenlijk?",
+   "antwoord": "Dat staat op je zorgpas, op je polisblad en in de online omgeving van je verzekeraar. Je ziet het ook op je bankafschrift bij de maandelijkse premie. Weet je het echt niet, dan kan je huisarts of apotheek het voor je opzoeken.",
+   "cluster": "verzekeraar",
+   "pagina": "overstappen",
+   "bron": null
+  },
+  {
+   "vraag": "Mag ik overstappen als ik een betalingsachterstand heb bij mijn zorgverzekeraar?",
+   "antwoord": "Met een achterstand op de premie kun je je verzekering niet opzeggen, tenzij je een betalingsregeling hebt. Zit je in de regeling van het CAK, dan kun je niet overstappen. Heb je alleen een achterstand op je eigen risico, dan mag je wel overstappen, maar die schuld blijft bestaan.",
+   "cluster": "betalen/achterstand",
+   "pagina": "laag-inkomen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/wat-gebeurt-er-als-ik-de-premie-van-mijn-zorgverzekering-niet-betaal"
+  },
+  {
+   "vraag": "Wat gebeurt er als ik mijn zorgpremie niet betaal?",
+   "antwoord": "Je krijgt eerst herinneringen en een aanmaning, en daarna kan je verzekeraar je aanvullende verzekering stopzetten; de basisverzekering blijft altijd. Bij 2 en 4 maanden achterstand krijg je een brief met een aanbod voor een betalingsregeling. Na 6 maanden meldt de verzekeraar je aan bij het CAK, en dan betaal je een hogere premie die op je loon of uitkering wordt ingehouden.",
+   "cluster": "betalen/achterstand",
+   "pagina": "laag-inkomen",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/dit-gebeurt-er-als-je-de-zorgpremie-niet-betaalt"
+  },
+  {
+   "vraag": "Komt een achterstand bij de zorgverzekering bij het BKR?",
+   "antwoord": "Nee, een betalingsachterstand op je zorgpremie wordt niet bij het BKR geregistreerd. Het BKR registreert leningen en kredieten. De gevolgen van niet betalen lopen via je verzekeraar en na 6 maanden via het CAK.",
+   "cluster": "betalen/achterstand",
+   "pagina": "laag-inkomen",
+   "bron": "https://www.bnnvara.nl/kassa/artikelen/met-welke-leningen-en-kredieten-krijg-je-wel-geen-registratie-bij-het-bkr"
+  },
+  {
+   "vraag": "Wat doet het CAK bij een achterstand in de zorgpremie?",
+   "antwoord": "Na 6 maanden achterstand meldt je verzekeraar je aan bij het CAK. Je betaalt dan geen premie meer aan je verzekeraar, maar een bestuursrechtelijke premie aan het CAK die 10 procent hoger is dan de gemiddelde premie (in 2026 € 172,70 per maand). Het CAK houdt die in op je loon, uitkering of pensioen, en je zorgtoeslag gaat ook naar het CAK.",
+   "cluster": "betalen/achterstand",
+   "pagina": "laag-inkomen",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/dit-gebeurt-er-als-je-de-zorgpremie-niet-betaalt"
+  },
+  {
+   "vraag": "Wat gebeurt er als het CJIB mijn zorgpremie gaat innen?",
+   "antwoord": "Lukt het het CAK niet om de bestuursrechtelijke premie in te houden op je loon, uitkering of pensioen, dan krijg je via het CJIB een bericht hoe je moet betalen. Dat blijft zo tot je schuld bij de verzekeraar is afbetaald, of tot je schuldhulp hebt of in de wettelijke schuldsanering zit.",
+   "cluster": "betalen/achterstand",
+   "pagina": "laag-inkomen",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/dit-gebeurt-er-als-je-de-zorgpremie-niet-betaalt"
+  },
+  {
+   "vraag": "Hoe los ik een achterstand bij mijn zorgverzekering af?",
+   "antwoord": "Spreek met je zorgverzekeraar een betalingsregeling af, dan kun je in termijnen aflossen. Zit je al in de regeling van het CAK, dan kom je eruit zodra je met je verzekeraar een betalingsregeling hebt, en betaal je daarna weer de gewone premie. Lukt dat niet zelf, dan kun je bij je gemeente terecht voor schuldhulp.",
+   "cluster": "betalen/achterstand",
+   "pagina": "laag-inkomen",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/dit-gebeurt-er-als-je-de-zorgpremie-niet-betaalt"
+  },
+  {
+   "vraag": "Wordt de regeling voor betalingsachterstand zorgpremie afgeschaft?",
+   "antwoord": "Dat is het plan van het kabinet, maar het is nog niet besloten. Op Prinsjesdag 2026 stelde het kabinet voor de regeling af te schaffen, en de opslag van 10 procent wil het per 2029 schrappen. In 2027 geldt de regeling dus nog gewoon.",
+   "cluster": "betalen/achterstand",
+   "pagina": "laag-inkomen",
+   "bron": "https://www.tweedekamer.nl/downloads/document?id=2026D45591"
+  },
+  {
+   "vraag": "Hoe groot is het risico als ik een eigen bijdrage of eigen risico niet betaal?",
+   "antwoord": "Een achterstand op je eigen risico of een eigen bijdrage valt niet onder de regeling van het CAK; die geldt alleen voor de premie. De verzekeraar kan wel aanmanen en een incassobureau inschakelen, en de schuld blijft ook bestaan als je overstapt. Je kunt bij je verzekeraar een betalingsregeling vragen om het in termijnen te betalen.",
+   "cluster": "betalen/achterstand",
+   "pagina": "laag-inkomen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/wat-gebeurt-er-als-ik-de-premie-van-mijn-zorgverzekering-niet-betaal"
+  }
+ ]
+}
