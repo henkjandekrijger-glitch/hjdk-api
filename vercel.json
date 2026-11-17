@@ -1767,7 +1767,8 @@
   ],
   "functions": {
     "api/gids.js": {
-      "maxDuration": 120
+      "maxDuration": 120,
+      "includeFiles": "OVERDRACHT-KADOLY-SPAARPOT.md"
     },
     "api/kz.js": {
       "maxDuration": 60,
