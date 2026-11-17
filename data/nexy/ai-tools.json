@@ -1,0 +1,2165 @@
+{
+ "opgehaald": "2026-11-17",
+ "tools": [
+  {
+   "slug": "chatgpt",
+   "naam": "ChatGPT",
+   "maker": "OpenAI",
+   "categorien": [
+    "assistant",
+    "search",
+    "image",
+    "voice",
+    "code"
+   ],
+   "bestVoor": "A general assistant for writing, questions, analysis, web search, image creation and voice chat in one app. Paid tiers add deep research, Codex for coding and higher limits.",
+   "gratis": true,
+   "gratisWat": "Unlimited everyday text chats (subject to abuse guardrails), web search, file and image uploads, limited image creation, voice, memory and deep research. Ads may appear in the Free tier in certain countries.",
+   "plannen": [
+    {
+     "naam": "Go",
+     "usd": 8,
+     "eur": null,
+     "wat": "More messages, uploads, image creation and voice, longer memory. This plan may include ads."
+    },
+    {
+     "naam": "Plus",
+     "usd": 20,
+     "eur": null,
+     "wat": "Advanced reasoning models, deep research, Codex, projects, scheduled tasks, custom GPTs. No ads."
+    },
+    {
+     "naam": "Pro",
+     "usd": 100,
+     "eur": null,
+     "wat": "From $100 per month, with tiers at $100, $200 or $500. Maximum deep research and memory, monthly API credits."
+    },
+    {
+     "naam": "Business",
+     "usd": 25,
+     "eur": null,
+     "wat": "Per user per month billed monthly, or $20 per user per month billed annually, from 2 users. No training on business data by default."
+    },
+    {
+     "naam": "Enterprise",
+     "usd": null,
+     "eur": null,
+     "wat": "Contact sales. SCIM, audit logs, data residency."
+    }
+   ],
+   "platforms": [
+    "web",
+    "iOS",
+    "Android",
+    "Windows",
+    "macOS"
+   ],
+   "privacy": "Consumer chats may be used to train models by default. You can opt out in Data Controls or the OpenAI privacy portal; new chats are then not used. Business and Enterprise content is not used for training by default.",
+   "beperkingen": "Usage limits on every plan. Ads are being introduced on Free and Go; Plus, Pro, Business and Enterprise stay ad free.",
+   "bronnen": [
+    "https://learn.chatgpt.com/docs/pricing",
+    "https://chatgpt.com/pricing/",
+    "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
+    "https://openai.com/index/our-approach-to-advertising-and-expanding-access/",
+    "https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "claude",
+   "naam": "Claude",
+   "maker": "Anthropic",
+   "categorien": [
+    "assistant",
+    "writing",
+    "code",
+    "voice"
+   ],
+   "bestVoor": "Strong at long documents, careful writing, analysis and coding, with Artifacts, file creation and web search. Paid plans include Claude Code and connect to tools such as Chrome and Microsoft 365.",
+   "gratis": true,
+   "gratisWat": "Chat on web, desktop and mobile, web search, file creation with code execution, memory, Artifacts and voice mode. Claude Code is not included.",
+   "plannen": [
+    {
+     "naam": "Pro",
+     "usd": 20,
+     "eur": null,
+     "wat": "Billed monthly, or $17 per month billed annually ($200 up front). More usage, Claude Code, projects, scheduled tasks."
+    },
+    {
+     "naam": "Max",
+     "usd": 100,
+     "eur": null,
+     "wat": "From $100 per month. 5x Pro usage, priority at peak times, monthly API credits."
+    },
+    {
+     "naam": "Ultra",
+     "usd": 200,
+     "eur": null,
+     "wat": "Renamed Max 20x plan. 10x Pro usage per week, priority access to new models and features."
+    },
+    {
+     "naam": "Team standard seat",
+     "usd": 25,
+     "eur": null,
+     "wat": "Per seat billed monthly, or $20 billed annually. 2 to 150 seats, includes Claude Code and Cowork, SSO."
+    },
+    {
+     "naam": "Team premium seat",
+     "usd": 125,
+     "eur": null,
+     "wat": "Per seat billed monthly, or $100 billed annually. 5x a standard seat."
+    },
+    {
+     "naam": "Enterprise",
+     "usd": 20,
+     "eur": null,
+     "wat": "Per seat per month billed annually, 20 seat minimum, plus usage at API rates."
+    }
+   ],
+   "platforms": [
+    "web",
+    "iOS",
+    "Android",
+    "Windows",
+    "macOS"
+   ],
+   "privacy": "On Free, Pro, Max and Ultra you choose whether your chats may be used to improve Claude. If you allow it, data is kept up to five years; if not, the 30 day retention applies. Incognito chats are never used for training. Team, Enterprise and API fall under commercial terms and are not covered by this choice.",
+   "beperkingen": "Usage limits apply to all plans, including a five hour session limit for unverified Ultra accounts. Voice mode is in beta.",
+   "bronnen": [
+    "https://claude.com/pricing?m=1",
+    "https://support.claude.com/en/articles/17728952-what-is-the-ultra-plan",
+    "https://support.claude.com/en/articles/11101966-use-voice-mode",
+    "https://www.anthropic.com/news/updates-to-our-consumer-terms",
+    "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "gemini",
+   "naam": "Gemini",
+   "maker": "Google",
+   "categorien": [
+    "assistant",
+    "search",
+    "image",
+    "video",
+    "voice"
+   ],
+   "bestVoor": "A general assistant tied into Google services, with Deep Research, image generation and editing, and Gemini Live for spoken conversation with the camera. Paid Google AI plans add Gemini in Gmail and Docs, video generation, more storage and higher limits.",
+   "gratis": true,
+   "gratisWat": "Flash-Lite model, image generation and editing, Deep Research, Gemini Live, Canvas, Skills, limited Google Flow, Gemini Notebook and 15 GB storage.",
+   "plannen": [
+    {
+     "naam": "Google AI Plus",
+     "usd": 4.99,
+     "eur": null,
+     "wat": "2x Free limits, video generation, 200 Flow credits, Gemini in Gmail and Vids, 400 GB storage."
+    },
+    {
+     "naam": "Google AI Pro",
+     "usd": 19.99,
+     "eur": null,
+     "wat": "4x Free limits, Pro model, Deep Research, limited Veo 3.1 Lite trial, Gemini in Gmail and Docs, 5 TB storage, YouTube Premium Lite."
+    },
+    {
+     "naam": "Google AI Ultra (5x)",
+     "usd": 99.99,
+     "eur": null,
+     "wat": "5x Pro usage, top models, 10,000 Flow credits, early access to Agent Mode, 20 TB storage."
+    },
+    {
+     "naam": "Google AI Ultra (20x)",
+     "usd": 199.99,
+     "eur": null,
+     "wat": "20x Pro usage, 25,000 Flow credits, highest limits."
+    }
+   ],
+   "platforms": [
+    "web",
+    "iOS",
+    "Android",
+    "desktop"
+   ],
+   "privacy": "A chat training setting in Gemini History controls whether your chats are used to train Google models; with it off, future chats are not used unless you send feedback. A subset of chats is read by human reviewers, and reviewed chats are kept up to three years. Default auto delete is 18 months.",
+   "beperkingen": "Google AI plans and Gemini in Gmail and Docs are only for ages 18 and up. Paid plans are sold in more than 150 countries and territories.",
+   "bronnen": [
+    "https://gemini.google/subscriptions/",
+    "https://gemini.google/about/",
+    "https://support.google.com/gemini/answer/13594961?hl=en"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "microsoft-copilot",
+   "naam": "Microsoft Copilot",
+   "maker": "Microsoft",
+   "categorien": [
+    "assistant",
+    "image",
+    "voice",
+    "writing"
+   ],
+   "bestVoor": "A free chat assistant from Microsoft that also lives inside Word, Excel, PowerPoint and Outlook when you have a Microsoft 365 subscription. Useful if you already work in Office documents.",
+   "gratis": true,
+   "gratisWat": "A limited free version of Copilot, subject to available capacity. Microsoft does not list exact free limits.",
+   "plannen": [
+    {
+     "naam": "Microsoft 365 Personal",
+     "usd": 9.99,
+     "eur": null,
+     "wat": "1 person, 1 TB storage, Copilot in Word, Excel, PowerPoint and Outlook desktop apps, higher usage than free."
+    },
+    {
+     "naam": "Microsoft 365 Family",
+     "usd": 12.99,
+     "eur": null,
+     "wat": "Up to 6 people and 2 TB shared storage; Copilot features only for the subscription owner."
+    },
+    {
+     "naam": "Microsoft 365 Premium",
+     "usd": 19.99,
+     "eur": null,
+     "wat": "Extensive usage, Premium only Copilot features, limited agent tasks such as advanced research."
+    }
+   ],
+   "platforms": [
+    "web",
+    "Windows",
+    "macOS",
+    "iOS",
+    "Android"
+   ],
+   "privacy": "Microsoft says it uses data from Copilot conversations for AI training unless you opt out in Copilot privacy controls. Users not signed in, and users in Brazil, China (excluding Hong Kong), Israel, Nigeria, South Korea and Vietnam, are excluded. This statement covers the older Copilot app.",
+   "beperkingen": "Mobile app availability varies by country. AI audio is English only on paid plans.",
+   "bronnen": [
+    "https://www.microsoft.com/en-us/microsoft-365-copilot/pricing/individuals",
+    "https://www.microsoft.com/en-us/microsoft-365-copilot/personal",
+    "https://www.microsoft.com/en-us/microsoft-copilot/for-individuals/get-copilot",
+    "https://support.microsoft.com/en-us/microsoft-copilot/privacy-faq-for-microsoft-copilot"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "perplexity",
+   "naam": "Perplexity",
+   "maker": "Perplexity AI",
+   "categorien": [
+    "assistant",
+    "search",
+    "research"
+   ],
+   "bestVoor": "An answer engine that searches the web and shows its sources next to every answer. Paid plans add Deep Research, a choice of top models and an agent called Computer that carries out tasks.",
+   "gratis": true,
+   "gratisWat": "Practically unlimited basic searches with citations, a very limited number of Pro searches, limited file uploads. No advanced models or image generation.",
+   "plannen": [
+    {
+     "naam": "Pro",
+     "usd": 17,
+     "eur": null,
+     "wat": "Price when billed annually. Deep Research, choice of top models, higher limits, premium data sources, expanded Computer access."
+    },
+    {
+     "naam": "Max",
+     "usd": 167,
+     "eur": null,
+     "wat": "Price when billed annually. Maximum Computer usage, monthly credits, frontier models, highest limits."
+    },
+    {
+     "naam": "Enterprise Pro",
+     "usd": 40,
+     "eur": null,
+     "wat": "Per seat per month, or $400 per seat per year. Enterprise data never used for training."
+    }
+   ],
+   "platforms": [
+    "web",
+    "iOS",
+    "Android"
+   ],
+   "privacy": "On Free, Pro and Max the AI data retention setting is on by default, so your data can be used to train models. Turn it off under Account settings, Preferences. Opt out only applies from that date. Enterprise data is never used for training.",
+   "beperkingen": "Monthly billing prices for Pro and Max were not shown on the pricing page we read.",
+   "bronnen": [
+    "https://www.perplexity.ai/hub/pricing",
+    "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+    "https://www.perplexity.ai/help-center/en/articles/11564572-data-collection-at-perplexity"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "grok",
+   "naam": "Grok",
+   "maker": "SpaceXAI (formerly xAI)",
+   "categorien": [
+    "assistant",
+    "image",
+    "video",
+    "voice",
+    "code"
+   ],
+   "bestVoor": "A chat assistant built into X with live access to posts on X, plus image and video creation. Since 2026 one subscription covers Grok, X premium features and the Cursor code editor.",
+   "gratis": true,
+   "gratisWat": "Limited chat and agent requests, plus posting, replying and following on X.",
+   "plannen": [
+    {
+     "naam": "Plus",
+     "usd": 8,
+     "eur": null,
+     "wat": "Shared AI usage pool for Grok Chat, Voice, Imagine and Build, Grok API access and Cursor; premium checkmark and fewer ads on X."
+    },
+    {
+     "naam": "Premium",
+     "usd": 30,
+     "eur": null,
+     "wat": "4x Plus usage, latest Grok models, image and video creation, cloud agents, mostly ad free X."
+    },
+    {
+     "naam": "Super",
+     "usd": 100,
+     "eur": null,
+     "wat": "15x Plus usage and priority at peak times."
+    },
+    {
+     "naam": "Ultra",
+     "usd": 200,
+     "eur": null,
+     "wat": "50x Plus usage."
+    }
+   ],
+   "platforms": [
+    "web",
+    "iOS",
+    "Android",
+    "X"
+   ],
+   "privacy": "Grok conversations and your public X data may be used for training. Opt out with the Improve the model setting (Grok app or grok.com) and in X under Privacy and safety, Data sharing. Private Chat is not used for training and is deleted within 30 days.",
+   "beperkingen": "Feedback you send can still be used for training after opting out.",
+   "bronnen": [
+    "https://x.ai/pricing?amp=&amp=",
+    "https://x.ai/legal/faq",
+    "https://help.x.com/en/using-x/about-grok"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "meta-ai",
+   "naam": "Meta AI",
+   "maker": "Meta",
+   "categorien": [
+    "assistant",
+    "messaging",
+    "image",
+    "video"
+   ],
+   "bestVoor": "A free assistant inside WhatsApp, Instagram, Facebook and Messenger, plus its own app, the web and Meta AI glasses. Handy when you want quick answers or images without leaving a chat app.",
+   "gratis": true,
+   "gratisWat": "Meta AI stays free for everyday use, including in WhatsApp.",
+   "plannen": [
+    {
+     "naam": "Meta One Core",
+     "usd": 7.99,
+     "eur": null,
+     "wat": "More image creation and editing and video generation with Meta AI, plus more Instagram AI tools."
+    },
+    {
+     "naam": "Meta One Premium",
+     "usd": 19.99,
+     "eur": null,
+     "wat": "The most room to create with Meta AI across Meta apps."
+    }
+   ],
+   "platforms": [
+    "WhatsApp",
+    "Instagram",
+    "Facebook",
+    "Messenger",
+    "web",
+    "iOS",
+    "Android",
+    "AI glasses"
+   ],
+   "privacy": "Since 16 December 2025 Meta uses your interactions with its AI features to personalize content and ads. Meta describes no specific opt out, only Ads Preferences. Meta AI chats on WhatsApp are not used across your other accounts unless WhatsApp is linked in Accounts Center.",
+   "beperkingen": "Plans, benefits and prices may vary by region, app and account.",
+   "bronnen": [
+    "https://ai.meta.com/get-meta-ai/",
+    "https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/",
+    "https://about.fb.com/news/2025/10/improving-your-recommendations-apps-ai-meta/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "mistral-vibe",
+   "naam": "Mistral Vibe (formerly Le Chat)",
+   "maker": "Mistral AI",
+   "categorien": [
+    "assistant",
+    "code",
+    "image"
+   ],
+   "bestVoor": "A European assistant for chat, web search, image generation and coding in the CLI, IDE or web. Le Chat now goes by the name Vibe.",
+   "gratis": true,
+   "gratisWat": "Limited messages, web searches and coding sessions on web and mobile, basic image generation and editing, 100+ connectors.",
+   "plannen": [
+    {
+     "naam": "Pro",
+     "usd": 14.99,
+     "eur": null,
+     "wat": "Higher limits, all day coding, more images, $15 per month in API credits. Excludes tax."
+    },
+    {
+     "naam": "Student",
+     "usd": 5.99,
+     "eur": null,
+     "wat": "Pro for verified students for up to 12 months."
+    },
+    {
+     "naam": "Team",
+     "usd": 24.99,
+     "eur": null,
+     "wat": "Per user per month. Higher limits, up to 30 GB storage per user, domain verification."
+    },
+    {
+     "naam": "Enterprise",
+     "usd": null,
+     "eur": null,
+     "wat": "Custom pricing. Private deployments, SAML SSO, audit logs."
+    }
+   ],
+   "platforms": [
+    "web",
+    "iOS",
+    "Android"
+   ],
+   "privacy": "Individual users are not opted out of training by default; you can opt out at any time in settings (mobile: Data and Account Controls, Enable data sharing). Team admins can turn training off for the organization. Enterprise is opted out by default.",
+   "beperkingen": "EUR prices are offered on the pricing page but were not readable in the text we checked.",
+   "bronnen": [
+    "https://mistral.ai/pricing/",
+    "https://mistral.ai/products/vibe/",
+    "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "deepseek",
+   "naam": "DeepSeek",
+   "maker": "DeepSeek",
+   "categorien": [
+    "assistant",
+    "code"
+   ],
+   "bestVoor": "A free chat app on DeepSeek's own models, strong at reasoning, math and code. Its low API prices make it popular with developers.",
+   "gratis": true,
+   "gratisWat": "The app is free: chat with DeepSeek's latest flagship model.",
+   "plannen": [],
+   "platforms": [
+    "iOS",
+    "Android"
+   ],
+   "privacy": "Data is collected, processed and stored in the People's Republic of China. User input, including prompts, uploads and chat history, is used to train and improve models. The policy lists a right to opt out of training; requests go to privacy@deepseek.com.",
+   "beperkingen": "No paid consumer plan listed. Privacy policy last updated 10 February 2026.",
+   "bronnen": [
+    "https://www.deepseek.com/en/download/",
+    "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
+    "https://api-docs.deepseek.com/news/news261113/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "apple-intelligence-siri",
+   "naam": "Apple Intelligence and Siri AI",
+   "maker": "Apple",
+   "categorien": [
+    "assistant",
+    "writing",
+    "image",
+    "voice"
+   ],
+   "bestVoor": "AI built into iPhone, iPad, Mac, Watch and Vision Pro. Siri AI can now answer almost any question, search your own messages, email and photos, act inside apps and understand what is on screen.",
+   "gratis": true,
+   "gratisWat": "Currently free on supported devices, with daily limits on server based features such as Siri AI and Image Playground. Apple says expanded access will cost a fee in the future.",
+   "plannen": [],
+   "platforms": [
+    "iOS",
+    "iPadOS",
+    "macOS",
+    "watchOS",
+    "visionOS"
+   ],
+   "privacy": "Models run on device and on Apple's Private Cloud Compute servers. Apple says personal data handled there is not stored nor made accessible to Apple or anyone else, and outside experts can verify this.",
+   "beperkingen": "Needs iPhone 15 Pro or newer, or an M1 or later iPad or Mac, on version 27 software. Siri AI is in beta, in English first, with French, Japanese, Korean, Portuguese and Spanish to follow. Siri AI is not initially available in the EU on iOS, iPadOS and watchOS, and not in China.",
+   "bronnen": [
+    "https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here/",
+    "https://www.apple.com/au/apple-intelligence/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "chatgpt-whatsapp",
+   "naam": "1-800-ChatGPT on WhatsApp",
+   "maker": "OpenAI",
+   "categorien": [
+    "messaging"
+   ],
+   "bestVoor": "Used to let you chat with ChatGPT inside WhatsApp. It no longer works.",
+   "gratis": false,
+   "gratisWat": null,
+   "plannen": [],
+   "platforms": [
+    "WhatsApp"
+   ],
+   "privacy": null,
+   "beperkingen": "Discontinued: ChatGPT is no longer available on WhatsApp after 15 January 2026, due to a policy and terms change from WhatsApp. Use the ChatGPT app instead.",
+   "bronnen": [
+    "https://openai.com/index/chatgpt-whatsapp-transition/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "ask-perplexity-messaging",
+   "naam": "Ask Perplexity (WhatsApp, Telegram, X)",
+   "maker": "Perplexity AI",
+   "categorien": [
+    "messaging",
+    "search"
+   ],
+   "bestVoor": "Lets you ask Perplexity questions from a chat app or by tagging it on X. Answers come with sources, like the main app.",
+   "gratis": null,
+   "gratisWat": null,
+   "plannen": [],
+   "platforms": [
+    "WhatsApp",
+    "Telegram",
+    "X"
+   ],
+   "privacy": "Same Perplexity privacy settings as the main product apply, as far as stated.",
+   "beperkingen": "Perplexity's page still lists WhatsApp (number 1-833-436-3285), Telegram and X. We could not confirm that the WhatsApp route still works after WhatsApp's January 2026 policy change that ended ChatGPT on WhatsApp.",
+   "bronnen": [
+    "https://www.social.perplexity.ai/",
+    "https://openai.com/index/chatgpt-whatsapp-transition/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "juney-trillet",
+   "naam": "Juney (formerly Trillet AI receptionist)",
+   "maker": "Trillet",
+   "categorien": [
+    "calls",
+    "receptionist"
+   ],
+   "bestVoor": "An AI receptionist that answers your business calls 24/7, sends your booking link and texts a follow up after each call. Pro books into Google Calendar and transfers urgent calls to you.",
+   "gratis": false,
+   "gratisWat": "No free plan. Juney Pro has a 7 day free trial with 50 minutes, once per Apple or Google account.",
+   "plannen": [
+    {
+     "naam": "Juney Starter",
+     "usd": 49,
+     "eur": null,
+     "wat": "200 minutes a month (about 200 calls)."
+    },
+    {
+     "naam": "Juney Pro",
+     "usd": 99,
+     "eur": null,
+     "wat": "800 minutes a month, Google Calendar booking, urgent transfers, caller memory. Or $990 a year."
+    },
+    {
+     "naam": "Juney Enterprise",
+     "usd": null,
+     "eur": null,
+     "wat": "Custom. Multiple locations, SSO, integrations."
+    }
+   ],
+   "platforms": [
+    "phone",
+    "iOS",
+    "Android"
+   ],
+   "privacy": null,
+   "beperkingen": "Top ups cost $20 per 100 minutes. Without minutes Juney stops answering; there are no overage charges. Supported languages not stated. Existing Trillet customers keep their plan.",
+   "bronnen": [
+    "https://trillet.ai/receptionist/pricing"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "smith-ai",
+   "naam": "Smith.ai AI Receptionist",
+   "maker": "Smith.ai",
+   "categorien": [
+    "calls",
+    "receptionist"
+   ],
+   "bestVoor": "An AI receptionist that answers calls, qualifies leads and books appointments, with optional live human agents as backup. Popular with law firms and small service businesses.",
+   "gratis": true,
+   "gratisWat": "Free forever plan with 25 calls a month, then $3 per call. Credit card required.",
+   "plannen": [
+    {
+     "naam": "Pro",
+     "usd": 150,
+     "eur": null,
+     "wat": "$2 per call, dedicated onboarding, live support, custom SMS branding."
+    },
+    {
+     "naam": "Enterprise",
+     "usd": 500,
+     "eur": null,
+     "wat": "$1.67 per call, full service setup, custom integrations, multi location."
+    }
+   ],
+   "platforms": [
+    "phone"
+   ],
+   "privacy": null,
+   "beperkingen": "English and Spanish. Live agent backup is a paid per call add on.",
+   "bronnen": [
+    "https://smith.ai/ai-receptionist"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "rosie",
+   "naam": "Rosie",
+   "maker": "Rosie (heyrosie.com)",
+   "categorien": [
+    "calls",
+    "receptionist"
+   ],
+   "bestVoor": "An AI answering service for small businesses that answers calls 24/7, takes messages, books appointments and sends you a summary, transcript and recording of every call.",
+   "gratis": false,
+   "gratisWat": "7 day free trial with all features.",
+   "plannen": [
+    {
+     "naam": "Professional",
+     "usd": 49,
+     "eur": null,
+     "wat": "250 minutes a month, message taking, booking links by text, website chat widget."
+    },
+    {
+     "naam": "Scale",
+     "usd": 149,
+     "eur": null,
+     "wat": "1,000 minutes, calendar booking, warm and live transfers."
+    },
+    {
+     "naam": "Growth",
+     "usd": 299,
+     "eur": null,
+     "wat": "2,000 minutes, unlimited scenarios, custom training, priority support."
+    }
+   ],
+   "platforms": [
+    "phone",
+    "iOS",
+    "Android",
+    "web chat widget"
+   ],
+   "privacy": null,
+   "beperkingen": "English and Spanish. Annual billing gives 2 months free.",
+   "bronnen": [
+    "https://heyrosie.com/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "goodcall",
+   "naam": "Goodcall",
+   "maker": "Goodcall",
+   "categorien": [
+    "calls",
+    "receptionist"
+   ],
+   "bestVoor": "An AI phone agent for small businesses that answers calls with no per minute charge. You pay per unique caller per month, not per call.",
+   "gratis": true,
+   "gratisWat": "Start free with a demo agent; you pay once you connect a phone number.",
+   "plannen": [
+    {
+     "naam": "Starter",
+     "usd": 79,
+     "eur": null,
+     "wat": "100 unique customers a month, 79 cents per extra customer."
+    },
+    {
+     "naam": "Growth",
+     "usd": 129,
+     "eur": null,
+     "wat": "500 unique customers, 26 cents per extra."
+    },
+    {
+     "naam": "Scale",
+     "usd": 299,
+     "eur": null,
+     "wat": "2,000 unique customers, 15 cents per extra."
+    },
+    {
+     "naam": "Enterprise",
+     "usd": null,
+     "eur": null,
+     "wat": "Custom, volume pricing and SLA."
+    }
+   ],
+   "platforms": [
+    "phone"
+   ],
+   "privacy": null,
+   "beperkingen": "Unlimited minutes and calls. Supported languages not stated on the pricing page.",
+   "bronnen": [
+    "https://www.goodcall.com/pricing"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "synthflow",
+   "naam": "Synthflow",
+   "maker": "Synthflow",
+   "categorien": [
+    "calls",
+    "receptionist"
+   ],
+   "bestVoor": "An enterprise platform for AI voice agents that answer and make calls inside a company's existing phone system. Built for larger contact centers, not solo users.",
+   "gratis": false,
+   "gratisWat": "No free plan and no trial.",
+   "plannen": [
+    {
+     "naam": "Enterprise agreement",
+     "usd": null,
+     "eur": null,
+     "wat": "Annual agreement priced per deployment after a scoping call. No per minute list price."
+    }
+   ],
+   "platforms": [
+    "phone"
+   ],
+   "privacy": null,
+   "beperkingen": "Not for teams that want to sign up and build alone. Languages not stated.",
+   "bronnen": [
+    "https://synthflow.ai/enterprise-comparison"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "google-call-screen",
+   "naam": "Call Screen and Call Assist on Pixel",
+   "maker": "Google",
+   "categorien": [
+    "calls"
+   ],
+   "bestVoor": "Pixel phones can answer unknown callers for you, ask who is calling and why, and show a live transcript before you pick up. Related features take messages and suggest calendar events after a call.",
+   "gratis": true,
+   "gratisWat": "Built into the Phone app on Pixel phones at no extra cost.",
+   "plannen": [],
+   "platforms": [
+    "Android (Pixel)",
+    "Pixel Watch"
+   ],
+   "privacy": "Call Screen runs on the device and does not use Wi-Fi or mobile data. Screened calls are not saved to your Google Account.",
+   "beperkingen": "Automatic screening only in Australia, Canada, Ireland, UK and US. Manual screening also in France, Germany, India (Pixel 10 and newer), Italy, Japan and Spain. Other Android phones: manual screening in US and Canada only.",
+   "bronnen": [
+    "https://support.google.com/phoneapp/answer/9118387?hl=en",
+    "https://blog.google/products-and-platforms/devices/pixel/calling-updates-pixel-10/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "otter",
+   "naam": "Otter.ai",
+   "maker": "Otter.ai",
+   "categorien": [
+    "meetings",
+    "notes"
+   ],
+   "bestVoor": "Records and transcribes meetings live and lets you chat with AI about one or many meetings. Joins Zoom, Meet and Teams and has mobile apps for in person conversations.",
+   "gratis": true,
+   "gratisWat": "300 minutes per user per month, up to 30 minutes per conversation, 3 file imports in total, AI chat, live transcription.",
+   "plannen": [
+    {
+     "naam": "Pro",
+     "usd": 16.99,
+     "eur": null,
+     "wat": "List price billed monthly ($8.33 billed annually); a discount was shown at $8.49. 1,200 minutes a month, 90 minutes per conversation."
+    },
+    {
+     "naam": "Business",
+     "usd": 30,
+     "eur": null,
+     "wat": "List price billed monthly ($19.99 billed annually); a discount was shown at $24. Unlimited meetings, 4 hours per conversation."
+    },
+    {
+     "naam": "Enterprise",
+     "usd": null,
+     "eur": null,
+     "wat": "Custom. SSO, API, HIPAA add on."
+    }
+   ],
+   "platforms": [
+    "web",
+    "iOS",
+    "Android"
+   ],
+   "privacy": null,
+   "beperkingen": "Transcription in English, Spanish, French, German, Japanese and Chinese.",
+   "bronnen": [
+    "https://otter.ai/pricing"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "fireflies",
+   "naam": "Fireflies.ai",
+   "maker": "Fireflies.ai",
+   "categorien": [
+    "meetings",
+    "notes"
+   ],
+   "bestVoor": "An AI notetaker that joins your calls, transcribes them and writes summaries and action items you can search later. Includes unlimited voice dictation in its desktop app on every plan.",
+   "gratis": true,
+   "gratisWat": "Free plan available, including Fireflies Talk dictation. Exact free limits not shown on the page we read.",
+   "plannen": [
+    {
+     "naam": "Pro",
+     "usd": 18,
+     "eur": null,
+     "wat": "Per user billed monthly, or $10 billed annually."
+    },
+    {
+     "naam": "Business",
+     "usd": 29,
+     "eur": null,
+     "wat": "Per user billed monthly, or $19 billed annually."
+    },
+    {
+     "naam": "Enterprise",
+     "usd": 39,
+     "eur": null,
+     "wat": "Per user per month, billed annually."
+    }
+   ],
+   "platforms": [
+    "web",
+    "desktop"
+   ],
+   "privacy": null,
+   "beperkingen": "Languages and storage limits not stated on the plan overview we read.",
+   "bronnen": [
+    "https://guide.fireflies.ai/articles/3734844560-learn-about-the-fireflies-pricing-plans"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "fathom",
+   "naam": "Fathom",
+   "maker": "Fathom",
+   "categorien": [
+    "meetings",
+    "notes"
+   ],
+   "bestVoor": "A meeting notetaker with a generous free plan: unlimited recordings and transcripts with instant summaries. You can record with a visible bot or without one (bot free capture is in beta).",
+   "gratis": true,
+   "gratisWat": "Free forever: unlimited recordings and transcriptions, instant AI summaries, clips and search.",
+   "plannen": [
+    {
+     "naam": "Premium",
+     "usd": 20,
+     "eur": null,
+     "wat": "Individual plan billed monthly, or $16 billed annually."
+    },
+    {
+     "naam": "Team",
+     "usd": 19,
+     "eur": null,
+     "wat": "Per user billed monthly, or $15 annually. 2 user minimum."
+    },
+    {
+     "naam": "Business",
+     "usd": 34,
+     "eur": null,
+     "wat": "Per user billed monthly, or $25 annually. 2 user minimum."
+    },
+    {
+     "naam": "Enterprise",
+     "usd": 35,
+     "eur": null,
+     "wat": "Per user per month, annual only."
+    }
+   ],
+   "platforms": [
+    "Zoom",
+    "Google Meet",
+    "Microsoft Teams",
+    "Slack Huddles"
+   ],
+   "privacy": null,
+   "beperkingen": "Multi language support is listed, but languages are not named. Some prices on the page were unlabeled; monthly versus annual is our best reading.",
+   "bronnen": [
+    "https://www.fathom.ai/pricing"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "tldv",
+   "naam": "tl;dv",
+   "maker": "tl;dv",
+   "categorien": [
+    "meetings",
+    "notes"
+   ],
+   "bestVoor": "Records Google Meet, Zoom and Teams calls and writes AI notes in over 30 languages. Good free plan for occasional meetings.",
+   "gratis": true,
+   "gratisWat": "Unlimited recordings and transcripts, 10 meetings with AI notes, 10 AI questions, 5 uploads, data kept up to 3 months.",
+   "plannen": [
+    {
+     "naam": "Pro",
+     "usd": 29,
+     "eur": 29,
+     "wat": "Per seat billed monthly, or $18 billed annually."
+    },
+    {
+     "naam": "Business",
+     "usd": 39,
+     "eur": 39,
+     "wat": "Per seat billed monthly, or $29 billed annually."
+    },
+    {
+     "naam": "Enterprise",
+     "usd": null,
+     "eur": null,
+     "wat": "Custom, usage based pricing available."
+    }
+   ],
+   "platforms": [
+    "Google Meet",
+    "Zoom",
+    "Microsoft Teams",
+    "desktop",
+    "iOS",
+    "Android"
+   ],
+   "privacy": null,
+   "beperkingen": "Joins calls as a visible bot; the desktop app can record without a bot. Prices come from tl;dv's own blog review dated 11 August 2026, which says euro prices match the dollar figures.",
+   "bronnen": [
+    "https://tldv.io/blog/tldv-honest-review/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "granola",
+   "naam": "Granola",
+   "maker": "Granola",
+   "categorien": [
+    "meetings",
+    "notes"
+   ],
+   "bestVoor": "A notepad that listens to your meeting on your own device and turns your rough notes into clean meeting notes. No meeting cap, even on the free plan.",
+   "gratis": true,
+   "gratisWat": "Unlimited meetings with 30 days of meeting history; older notes are hidden until you upgrade. Slack integration only.",
+   "plannen": [
+    {
+     "naam": "Business",
+     "usd": 14,
+     "eur": null,
+     "wat": "Per user per month. Unlimited history, advanced AI models, integrations (Notion, HubSpot, Zapier and more), API."
+    },
+    {
+     "naam": "Enterprise",
+     "usd": 35,
+     "eur": null,
+     "wat": "Per user per month. SSO for 50+ users, priority support, organization wide training opt out."
+    }
+   ],
+   "platforms": [
+    "macOS",
+    "Windows",
+    "iOS",
+    "Android"
+   ],
+   "privacy": "Basic and Business users can opt out of model training in their own settings. Enterprise opts the whole organization out by default. Third party AI providers are contractually barred from training on transcripts.",
+   "beperkingen": "Granola asks you to tell attendees that it is transcribing.",
+   "bronnen": [
+    "https://www.granola.ai/blog/granola-pricing-teams-per-user-enterprise"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "zoom-ai-companion",
+   "naam": "Zoom AI Companion",
+   "maker": "Zoom",
+   "categorien": [
+    "meetings",
+    "notes"
+   ],
+   "bestVoor": "Summarizes Zoom meetings, answers questions about what was said and drafts follow ups inside Zoom Workplace. Zoom's own product pages now also call the assistant ZoomMate, with AI credits per user.",
+   "gratis": true,
+   "gratisWat": "A limited basic version is included with the free Zoom Workplace Basic plan.",
+   "plannen": [
+    {
+     "naam": "Included with paid Zoom Workplace",
+     "usd": null,
+     "eur": null,
+     "wat": "Available with eligible paid Zoom Workplace accounts or as a standalone offering. Paid tiers list 2,200 AI credits per user per month."
+    }
+   ],
+   "platforms": [
+    "Zoom Workplace"
+   ],
+   "privacy": "Zoom says AI Companion does not use customer content to train its models or third party models.",
+   "beperkingen": "Exact add on prices were not readable on the page we checked.",
+   "bronnen": [
+    "https://news.zoom.com/ec26-zoom-ai/",
+    "https://www.zoom.com/en/products/ai-assistant/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "google-meet-gemini-notes",
+   "naam": "Take notes for me (Gemini in Google Meet)",
+   "maker": "Google",
+   "categorien": [
+    "meetings",
+    "notes"
+   ],
+   "bestVoor": "Gemini writes meeting notes into a Google Doc during a Meet call, lets latecomers catch up with a summary so far, and emails the organizer a recap.",
+   "gratis": false,
+   "gratisWat": null,
+   "plannen": [
+    {
+     "naam": "Google AI Pro",
+     "usd": 19.99,
+     "eur": null,
+     "wat": "One of the Google AI plans; Google says the feature needs an eligible Workspace edition or Google AI plan."
+    }
+   ],
+   "platforms": [
+    "Google Meet"
+   ],
+   "privacy": null,
+   "beperkingen": "Meetings must be in English, French, German, Italian, Japanese, Korean, Portuguese or Spanish, one language per meeting.",
+   "bronnen": [
+    "https://support.google.com/meet/answer/14754931?hl=en&co=GENIE.Platform%3DDesktop",
+    "https://gemini.google/subscriptions/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "teams-copilot",
+   "naam": "Copilot in Microsoft Teams",
+   "maker": "Microsoft",
+   "categorien": [
+    "meetings",
+    "notes"
+   ],
+   "bestVoor": "Gives you an intelligent recap of a Teams meeting, with a personal summary and jumps to the moments that matter, and lets you ask Copilot about the meeting.",
+   "gratis": false,
+   "gratisWat": null,
+   "plannen": [
+    {
+     "naam": "Microsoft 365 Copilot Business",
+     "usd": 21,
+     "eur": null,
+     "wat": "Per user per month with annual commitment ($18 promotional first year until 31 December 2026), or $25.20 billed monthly. Add on for Microsoft 365 business plans."
+    },
+    {
+     "naam": "Teams Premium",
+     "usd": null,
+     "eur": null,
+     "wat": "Add on license that also includes intelligent recap. Price not checked."
+    }
+   ],
+   "platforms": [
+    "Microsoft Teams"
+   ],
+   "privacy": null,
+   "beperkingen": "Needs a Teams license plus a Microsoft Copilot or Teams Premium license from your IT admin.",
+   "bronnen": [
+    "https://support.microsoft.com/en-us/teams/meetings/recap-in-microsoft-teams",
+    "https://www.microsoft.com/en-us/microsoft-365-copilot/pricing"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "motion",
+   "naam": "Motion",
+   "maker": "Motion",
+   "categorien": [
+    "planning",
+    "calendar"
+   ],
+   "bestVoor": "An AI calendar that plans your tasks into your day, flags deadlines at risk and re-plans when things change. It also bundles projects, docs and meeting notes.",
+   "gratis": false,
+   "gratisWat": "Free trial; length not stated.",
+   "plannen": [
+    {
+     "naam": "Pro AI",
+     "usd": 19,
+     "eur": null,
+     "wat": "Per seat per month. AI calendar, tasks, docs, 7,500 credits per seat."
+    },
+    {
+     "naam": "Business AI",
+     "usd": 29,
+     "eur": null,
+     "wat": "Per seat per month. Capacity planning, dashboards, Gantt, time tracking, 15,000 credits per seat."
+    }
+   ],
+   "platforms": [
+    "desktop",
+    "mobile"
+   ],
+   "privacy": null,
+   "beperkingen": "The page offers annual billing (save 33%) but shows only one price per plan.",
+   "bronnen": [
+    "https://www.usemotion.com/pricing",
+    "https://www.usemotion.com/calendar"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "reclaim",
+   "naam": "Reclaim.ai",
+   "maker": "Reclaim.ai",
+   "categorien": [
+    "planning",
+    "calendar"
+   ],
+   "bestVoor": "Automatically blocks time in your calendar for tasks, habits and breaks, and moves them when meetings shift. Works on top of Google Calendar and Outlook.",
+   "gratis": true,
+   "gratisWat": "Lite: 1 user, 5 AI agents, 1 week scheduling range, 2 connected calendars, 1 scheduling link.",
+   "plannen": [
+    {
+     "naam": "Starter",
+     "usd": 12,
+     "eur": null,
+     "wat": "Per seat billed monthly, or $10 billed annually. Up to 10 seats, 8 week range."
+    },
+    {
+     "naam": "Business",
+     "usd": 18,
+     "eur": null,
+     "wat": "Per seat billed monthly, or $15 billed annually. Up to 100 seats, 12 week range."
+    },
+    {
+     "naam": "Enterprise",
+     "usd": 22,
+     "eur": null,
+     "wat": "Per seat per month, annual only. SSO, SCIM."
+    }
+   ],
+   "platforms": [
+    "web",
+    "Google Calendar",
+    "Outlook"
+   ],
+   "privacy": null,
+   "beperkingen": "Only Google Calendar and Outlook Calendar are supported.",
+   "bronnen": [
+    "https://reclaim.ai/pricing"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "google-calendar-gemini",
+   "naam": "Gemini in Google Calendar",
+   "maker": "Google",
+   "categorien": [
+    "planning",
+    "calendar"
+   ],
+   "bestVoor": "Gemini checks everyone's availability and suggests meeting times when you create or reschedule an event. In Gmail it can suggest times to meet from an email thread.",
+   "gratis": false,
+   "gratisWat": null,
+   "plannen": [],
+   "platforms": [
+    "Google Calendar",
+    "Gmail"
+   ],
+   "privacy": null,
+   "beperkingen": "Requires an eligible Google Workspace plan; Google does not name the editions on the help page.",
+   "bronnen": [
+    "https://support.google.com/calendar/answer/16690875?hl=en",
+    "https://support.google.com/calendar/answer/16865189"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "cozi",
+   "naam": "Cozi",
+   "maker": "Cozi",
+   "categorien": [
+    "planning",
+    "family"
+   ],
+   "bestVoor": "A shared family calendar with grocery and to-do lists. The Max plan adds AI that pulls events from emails into the calendar and plans meals.",
+   "gratis": true,
+   "gratisWat": "Shared calendar, notifications, shared grocery and to-do lists, recipe library. Has ads.",
+   "plannen": [
+    {
+     "naam": "Gold",
+     "usd": 3.25,
+     "eur": null,
+     "wat": "Billed $39 per year for the whole family. Ad free, month view, calendar search, birthday tracker."
+    },
+    {
+     "naam": "Max",
+     "usd": 6.58,
+     "eur": null,
+     "wat": "Billed $79 per year. Adds AI Event Import from email, AI Recipe Creator and AI Meal Planner."
+    }
+   ],
+   "platforms": [
+    "web",
+    "iOS",
+    "Android"
+   ],
+   "privacy": null,
+   "beperkingen": "Only annual prices are listed; monthly figures here are the annual price divided by 12.",
+   "bronnen": [
+    "https://www.cozi.com/compare-plans/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "familywall",
+   "naam": "FamilyWall",
+   "maker": "FamilyWall",
+   "categorien": [
+    "planning",
+    "family"
+   ],
+   "bestVoor": "A family organizer with shared calendar, lists, messenger and location sharing. It can be connected to an AI assistant such as Claude.",
+   "gratis": true,
+   "gratisWat": "Most features are free; some are Premium only.",
+   "plannen": [
+    {
+     "naam": "Premium",
+     "usd": null,
+     "eur": null,
+     "wat": "Document sharing, budget tracker, meal planner, Google and Outlook calendar sync, real time location, 25 GB storage. Monthly or yearly; prices not listed in the help article. 30 day trial."
+    }
+   ],
+   "platforms": [
+    "iOS",
+    "Android",
+    "web"
+   ],
+   "privacy": null,
+   "beperkingen": "No built in AI features are described in the Premium overview.",
+   "bronnen": [
+    "https://support.familywall.com/en/support/solutions/articles/47001239196-what-is-included-in-familywall-premium-",
+    "https://support.familywall.com/en/support/solutions/articles/47001308120-use-familywall-with-claude"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "ohai",
+   "naam": "Ohai",
+   "maker": "Ohai.ai",
+   "categorien": [
+    "planning",
+    "family",
+    "messaging"
+   ],
+   "bestVoor": "An AI household assistant you can text: forward school and sports emails, screenshots or photos and it turns them into events, tasks and reminders for the family.",
+   "gratis": false,
+   "gratisWat": "Free trial for new users; no free plan listed.",
+   "plannen": [
+    {
+     "naam": "Individual Premium",
+     "usd": 9.99,
+     "eur": null,
+     "wat": "One person."
+    },
+    {
+     "naam": "Premium Plus (Duo)",
+     "usd": 19.99,
+     "eur": null,
+     "wat": "Two people."
+    },
+    {
+     "naam": "Premium Group",
+     "usd": 29.99,
+     "eur": null,
+     "wat": "A household group."
+    }
+   ],
+   "platforms": [
+    "SMS",
+    "email",
+    "iOS",
+    "Android"
+   ],
+   "privacy": null,
+   "beperkingen": "WhatsApp is not mentioned. Countries served are not stated.",
+   "bronnen": [
+    "https://www.ohai.ai/how-it-works/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "skylight",
+   "naam": "Skylight Calendar",
+   "maker": "Skylight",
+   "categorien": [
+    "planning",
+    "family"
+   ],
+   "bestVoor": "A wall mounted touchscreen family calendar. With the Plus plan you can forward school emails or PDFs and photograph flyers, and it turns them into calendar events.",
+   "gratis": false,
+   "gratisWat": "The device is a one time purchase; the first month of Plus is free.",
+   "plannen": [
+    {
+     "naam": "Calendar 2 device",
+     "usd": null,
+     "eur": null,
+     "wat": "$299.99 one time, including one free month of Plus."
+    },
+    {
+     "naam": "Plus",
+     "usd": 6.58,
+     "eur": null,
+     "wat": "Billed $79 per year. Includes Magic Import from email, PDF and photos."
+    }
+   ],
+   "platforms": [
+    "Skylight device"
+   ],
+   "privacy": null,
+   "beperkingen": "Needs the hardware. The product page does not call Magic Import an AI feature.",
+   "bronnen": [
+    "https://myskylight.com/products/skylight-calendar"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "grammarly",
+   "naam": "Grammarly",
+   "maker": "Grammarly (Superhuman)",
+   "categorien": [
+    "writing"
+   ],
+   "bestVoor": "Checks spelling, grammar and tone wherever you type, in the browser, Office, Google Docs and on your phone. Pro rewrites whole sentences and checks plagiarism and AI text.",
+   "gratis": true,
+   "gratisWat": "Spelling and grammar fixes, tone detection and 100 AI prompts a month.",
+   "plannen": [
+    {
+     "naam": "Pro",
+     "usd": 12,
+     "eur": null,
+     "wat": "Full sentence rewrites, tone adjustment, plagiarism and AI text detection, 2,000 AI prompts per member per month."
+    },
+    {
+     "naam": "Enterprise",
+     "usd": null,
+     "eur": null,
+     "wat": "Contact sales; available through Superhuman Go."
+    }
+   ],
+   "platforms": [
+    "Windows",
+    "macOS",
+    "Chrome",
+    "Safari",
+    "Firefox",
+    "Edge",
+    "Microsoft Office",
+    "Google Docs",
+    "iOS",
+    "Android"
+   ],
+   "privacy": null,
+   "beperkingen": "Annual pricing not shown on the plans page.",
+   "bronnen": [
+    "https://www.grammarly.com/plans"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "notion-ai",
+   "naam": "Notion AI",
+   "maker": "Notion",
+   "categorien": [
+    "writing",
+    "notes",
+    "meetings"
+   ],
+   "bestVoor": "AI inside Notion that drafts docs, fills databases, takes meeting notes and searches across your workspace and connected apps. Full AI comes with the Business plan.",
+   "gratis": true,
+   "gratisWat": "A trial of Notion AI on Free and Plus.",
+   "plannen": [
+    {
+     "naam": "Plus",
+     "usd": 10,
+     "eur": null,
+     "wat": "Per member per month. Notion AI trial only."
+    },
+    {
+     "naam": "Business",
+     "usd": 20,
+     "eur": null,
+     "wat": "Per member per month. Notion AI included: Notion Agent, AI Meeting Notes, Enterprise Search (beta)."
+    },
+    {
+     "naam": "Enterprise",
+     "usd": null,
+     "eur": null,
+     "wat": "Custom. Adds zero data retention with LLM providers for Notion AI."
+    }
+   ],
+   "platforms": [
+    "web",
+    "desktop",
+    "mobile"
+   ],
+   "privacy": "On Enterprise, Notion AI runs with zero data retention at its LLM providers.",
+   "beperkingen": "Yearly billing saves up to 20%; separate annual prices not listed.",
+   "bronnen": [
+    "https://www.notion.com/pricing"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "jasper",
+   "naam": "Jasper",
+   "maker": "Jasper",
+   "categorien": [
+    "writing",
+    "marketing"
+   ],
+   "bestVoor": "An AI writing platform for marketing teams, with brand voices and agents for campaigns, translation and research. Aimed at companies rather than casual users.",
+   "gratis": false,
+   "gratisWat": "7 day free trial on Pro.",
+   "plannen": [
+    {
+     "naam": "Pro",
+     "usd": 69,
+     "eur": null,
+     "wat": "Billed monthly, or $59 per month billed yearly. 1 seat, 2 brand voices."
+    },
+    {
+     "naam": "Business",
+     "usd": null,
+     "eur": null,
+     "wat": "Custom pricing, 12 month commitment."
+    }
+   ],
+   "platforms": [
+    "web"
+   ],
+   "privacy": null,
+   "beperkingen": "No free plan.",
+   "bronnen": [
+    "https://www.jasper.ai/pricing"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "wordtune",
+   "naam": "Wordtune",
+   "maker": "AI21 Labs",
+   "categorien": [
+    "writing"
+   ],
+   "bestVoor": "Suggests better ways to phrase a sentence as you write and summarizes long texts. Simple and cheap for people who mostly want rewrites.",
+   "gratis": true,
+   "gratisWat": "10 rewrites and AI suggestions per day, 3 summaries a month, unlimited spelling and grammar.",
+   "plannen": [
+    {
+     "naam": "Advanced",
+     "usd": 6.99,
+     "eur": null,
+     "wat": "Billed monthly, or $4.89 billed annually. 30 rewrites per day, 15 summaries a month."
+    },
+    {
+     "naam": "Unlimited",
+     "usd": 9.99,
+     "eur": null,
+     "wat": "Billed monthly, or $6.99 billed annually. Unlimited rewrites and summaries."
+    }
+   ],
+   "platforms": [
+    "Chrome",
+    "Edge",
+    "iOS"
+   ],
+   "privacy": null,
+   "beperkingen": "Daily caps on the free and Advanced plans.",
+   "bronnen": [
+    "https://www.wordtune.com/plans"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "quillbot",
+   "naam": "QuillBot",
+   "maker": "QuillBot (Learneo)",
+   "categorien": [
+    "writing"
+   ],
+   "bestVoor": "Paraphrases and summarizes text, fixes grammar and translates. Popular with students.",
+   "gratis": true,
+   "gratisWat": "Paraphrase up to 125 words in 2 modes, basic grammar fixes, summaries up to 1,200 words, limited AI detector. No credit card.",
+   "plannen": [
+    {
+     "naam": "Premium",
+     "usd": 8.33,
+     "eur": null,
+     "wat": "Per month billed annually. Unlimited paraphrasing modes, 6,000 word summaries, 23 paraphrasing languages."
+    }
+   ],
+   "platforms": [
+    "web",
+    "Chrome",
+    "Edge",
+    "macOS",
+    "Word",
+    "iOS",
+    "Android"
+   ],
+   "privacy": null,
+   "beperkingen": "Monthly billing price not clearly labeled on the page.",
+   "bronnen": [
+    "https://quillbot.com/premium"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "midjourney",
+   "naam": "Midjourney",
+   "maker": "Midjourney",
+   "categorien": [
+    "image",
+    "video"
+   ],
+   "bestVoor": "Makes highly artistic, stylized images and short videos from text prompts. Many designers use it for mood boards and concept art.",
+   "gratis": false,
+   "gratisWat": "No free trial mentioned on the pricing page.",
+   "plannen": [
+    {
+     "naam": "Basic",
+     "usd": 10,
+     "eur": null,
+     "wat": "Billed monthly, or $8 billed yearly. About 200 image jobs a month."
+    },
+    {
+     "naam": "Standard",
+     "usd": 30,
+     "eur": null,
+     "wat": "Or $24 yearly. 15 fast GPU hours, unlimited relaxed images."
+    },
+    {
+     "naam": "Pro",
+     "usd": 60,
+     "eur": null,
+     "wat": "Or $48 yearly. 30 fast hours, stealth mode."
+    },
+    {
+     "naam": "Mega",
+     "usd": 120,
+     "eur": null,
+     "wat": "Or $96 yearly. 60 fast hours, stealth mode."
+    }
+   ],
+   "platforms": [
+    "web"
+   ],
+   "privacy": null,
+   "beperkingen": "Stealth mode (keeping images private) only on Pro and Mega.",
+   "bronnen": [
+    "https://www.midjourney.com/pricing"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "chatgpt-images",
+   "naam": "ChatGPT image generation",
+   "maker": "OpenAI",
+   "categorien": [
+    "image"
+   ],
+   "bestVoor": "Create and edit images by describing them in a ChatGPT chat, including text in images and edits of your own photos.",
+   "gratis": true,
+   "gratisWat": "Free users can create images within a separate image limit.",
+   "plannen": [
+    {
+     "naam": "Plus",
+     "usd": 20,
+     "eur": null,
+     "wat": "Expanded image creation."
+    },
+    {
+     "naam": "Pro",
+     "usd": 100,
+     "eur": null,
+     "wat": "Unlimited and faster image creation, subject to abuse guardrails."
+    }
+   ],
+   "platforms": [
+    "web",
+    "iOS",
+    "Android",
+    "Windows",
+    "macOS"
+   ],
+   "privacy": "Same as ChatGPT: consumer content may be used for training unless you opt out.",
+   "beperkingen": "Exact free image limits are not published.",
+   "bronnen": [
+    "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq",
+    "https://chatgpt.com/pricing/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "adobe-firefly",
+   "naam": "Adobe Firefly",
+   "maker": "Adobe",
+   "categorien": [
+    "image",
+    "video"
+   ],
+   "bestVoor": "Adobe's AI studio for images, video, vectors and photo edits, which also offers partner models such as FLUX, Gemini, GPT Image, Ideogram, Runway, Kling, Luma and Veo. Adobe's own models are trained on licensed content.",
+   "gratis": true,
+   "gratisWat": "Free Creative Cloud users get complimentary generations on a curated set of models.",
+   "plannen": [
+    {
+     "naam": "Firefly Pro (teams)",
+     "usd": null,
+     "eur": null,
+     "wat": "4,000 generative credits a month. Price not listed on the pages we read."
+    },
+    {
+     "naam": "Firefly Pro Plus (teams)",
+     "usd": null,
+     "eur": null,
+     "wat": "10,000 credits a month."
+    },
+    {
+     "naam": "Firefly Premium (teams)",
+     "usd": null,
+     "eur": null,
+     "wat": "50,000 credits a month."
+    }
+   ],
+   "platforms": [
+    "web",
+    "iOS",
+    "Android"
+   ],
+   "privacy": "Adobe says it does not train on Creative Cloud subscribers' personal content. Its own models are trained on licensed content such as Adobe Stock and public domain content.",
+   "beperkingen": "Partner models use credits too. Prices are on Adobe's plans page, which we could not read.",
+   "bronnen": [
+    "https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/adobe-firefly-overview.html",
+    "https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/adobe-firefly-faq.html"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "ideogram",
+   "naam": "Ideogram",
+   "maker": "Ideogram",
+   "categorien": [
+    "image"
+   ],
+   "bestVoor": "An image generator known for getting text inside images right, which suits posters, logos and social graphics.",
+   "gratis": true,
+   "gratisWat": "Weekly free credits (amount may vary). Images made on the free plan are public.",
+   "plannen": [
+    {
+     "naam": "Plus",
+     "usd": 20,
+     "eur": null,
+     "wat": "Billed monthly, or $15 per month billed annually. 2,400 priority credits, private generation."
+    },
+    {
+     "naam": "Pro",
+     "usd": 60,
+     "eur": null,
+     "wat": "Or $42 per month billed annually. 7,500 priority credits, private generation."
+    }
+   ],
+   "platforms": [
+    "web"
+   ],
+   "privacy": null,
+   "beperkingen": "Prices exclude tax.",
+   "bronnen": [
+    "https://ideogram.ai/pricing/?tab=personal"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "canva-ai",
+   "naam": "Canva AI",
+   "maker": "Canva",
+   "categorien": [
+    "image",
+    "design",
+    "writing"
+   ],
+   "bestVoor": "AI tools inside Canva for generating images, text and designs for social posts, slides and print. Useful when you need a finished layout, not just a picture.",
+   "gratis": true,
+   "gratisWat": "Canva has a free plan; free AI allowances were not readable on the pages we tried.",
+   "plannen": [
+    {
+     "naam": "Canva Pro",
+     "usd": 12.99,
+     "eur": null,
+     "wat": "For up to 5 people, or $119.99 per year. Extra members $7 a month."
+    }
+   ],
+   "platforms": [
+    "web"
+   ],
+   "privacy": null,
+   "beperkingen": "AI usage per plan is governed by Canva's AI Pass; details not verified here.",
+   "bronnen": [
+    "https://www.canva.com/pro/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "sora",
+   "naam": "Sora",
+   "maker": "OpenAI",
+   "categorien": [
+    "video"
+   ],
+   "bestVoor": "Was OpenAI's video generator and social video app.",
+   "gratis": false,
+   "gratisWat": null,
+   "plannen": [],
+   "platforms": [],
+   "privacy": null,
+   "beperkingen": "Discontinued: OpenAI states that as of 26 April 2026 the Sora product is no longer available.",
+   "bronnen": [
+    "https://openai.com/index/sora-2/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "gemini-omni-video",
+   "naam": "Gemini Omni (video in the Gemini app, replacing Veo)",
+   "maker": "Google",
+   "categorien": [
+    "video"
+   ],
+   "bestVoor": "Creates 10 second videos with native audio from text or images and edits videos inside the Gemini app. Google says Gemini Omni replaces Veo in the Gemini app.",
+   "gratis": false,
+   "gratisWat": "Needs a Google AI subscription; features vary by tier and region.",
+   "plannen": [
+    {
+     "naam": "Google AI Plus",
+     "usd": 4.99,
+     "eur": null,
+     "wat": "Includes video generation."
+    },
+    {
+     "naam": "Google AI Pro",
+     "usd": 19.99,
+     "eur": null,
+     "wat": "Includes video generation."
+    },
+    {
+     "naam": "Google AI Ultra",
+     "usd": 99.99,
+     "eur": null,
+     "wat": "Highest limits; Flow credits."
+    }
+   ],
+   "platforms": [
+    "web",
+    "iOS",
+    "Android"
+   ],
+   "privacy": "All videos made in the Gemini app carry SynthID, Google's invisible watermark.",
+   "beperkingen": "Daily limits not stated.",
+   "bronnen": [
+    "https://gemini.google/my/overview/video-generation/?hl=en",
+    "https://gemini.google/subscriptions/"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "pika",
+   "naam": "Pika",
+   "maker": "Pika Labs",
+   "categorien": [
+    "video"
+   ],
+   "bestVoor": "Short AI videos and effects from text or images, with access to several video models in one place.",
+   "gratis": true,
+   "gratisWat": "Free account with no monthly credits; you buy credit packs. No commercial license.",
+   "plannen": [
+    {
+     "naam": "Starter",
+     "usd": 10,
+     "eur": null,
+     "wat": "Billed monthly, or $8 billed annually. 600 credits, commercial use."
+    },
+    {
+     "naam": "Creator",
+     "usd": 35,
+     "eur": null,
+     "wat": "Or $28 annually. 2,600 credits."
+    },
+    {
+     "naam": "Fancy",
+     "usd": 95,
+     "eur": null,
+     "wat": "From $95, or from $76 annually. 8,550+ credits."
+    }
+   ],
+   "platforms": [
+    "web"
+   ],
+   "privacy": null,
+   "beperkingen": "No watermark on any plan, per the pricing page.",
+   "bronnen": [
+    "https://pika.art/pricing"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "elevenlabs",
+   "naam": "ElevenLabs",
+   "maker": "ElevenLabs",
+   "categorien": [
+    "voice"
+   ],
+   "bestVoor": "Very natural text to speech, voice cloning and dubbing into many languages. Used for audiobooks, videos and voice agents.",
+   "gratis": true,
+   "gratisWat": "10,000 credits a month (about 10 minutes of audio). No commercial license.",
+   "plannen": [
+    {
+     "naam": "Starter",
+     "usd": 6,
+     "eur": null,
+     "wat": "30,000 credits (about 30 min), instant voice cloning, commercial license."
+    },
+    {
+     "naam": "Creator",
+     "usd": 22,
+     "eur": null,
+     "wat": "121,000 credits, professional voice cloning."
+    },
+    {
+     "naam": "Pro",
+     "usd": 99,
+     "eur": null,
+     "wat": "600,000 credits."
+    },
+    {
+     "naam": "Scale",
+     "usd": 299,
+     "eur": null,
+     "wat": "1.8 million credits, 3 professional voice clones."
+    },
+    {
+     "naam": "Business",
+     "usd": 990,
+     "eur": null,
+     "wat": "6 million credits, 10 professional voice clones."
+    }
+   ],
+   "platforms": [
+    "web",
+    "API"
+   ],
+   "privacy": null,
+   "beperkingen": "Starter and Creator had reduced first month prices at the time of checking.",
+   "bronnen": [
+    "https://elevenlabs.io/pricing"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "github-copilot",
+   "naam": "GitHub Copilot",
+   "maker": "GitHub (Microsoft)",
+   "categorien": [
+    "code"
+   ],
+   "bestVoor": "Code completions and an AI agent inside your editor and on GitHub. Works in more editors than most rivals, including VS Code, Visual Studio, JetBrains and Xcode.",
+   "gratis": true,
+   "gratisWat": "2,000 completions a month, limited chat and agent use, entry level models. No credit card.",
+   "plannen": [
+    {
+     "naam": "Pro",
+     "usd": 10,
+     "eur": null,
+     "wat": "Per user. Unlimited completions, cloud agents, model choice, $15 in AI credits."
+    },
+    {
+     "naam": "Pro+",
+     "usd": 39,
+     "eur": null,
+     "wat": "Per user. Premium models, $70 in AI credits."
+    },
+    {
+     "naam": "Max",
+     "usd": 100,
+     "eur": null,
+     "wat": "Per user. $200 in AI credits, priority access."
+    },
+    {
+     "naam": "Business and Enterprise",
+     "usd": null,
+     "eur": null,
+     "wat": "Contact sales."
+    }
+   ],
+   "platforms": [
+    "VS Code",
+    "Visual Studio",
+    "JetBrains",
+    "Xcode",
+    "Neovim",
+    "Eclipse",
+    "Zed",
+    "CLI"
+   ],
+   "privacy": null,
+   "beperkingen": "Chat and agent use draws on AI credits (1 credit = $0.01); completions do not on paid plans.",
+   "bronnen": [
+    "https://github.com/features/copilot/plans"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "cursor",
+   "naam": "Cursor",
+   "maker": "SpaceX (Anysphere, acquired 2026)",
+   "categorien": [
+    "code"
+   ],
+   "bestVoor": "An AI first code editor that writes and edits code across your project with agents. SpaceX completed its acquisition of Cursor on 14 August 2026, and its plans are now shared with Grok.",
+   "gratis": true,
+   "gratisWat": "Limited agent and chat requests, limited Grok Build and image generation.",
+   "plannen": [
+    {
+     "naam": "Plus",
+     "usd": 8,
+     "eur": null,
+     "wat": "Shared usage pool across Cursor and Grok; Grok models only."
+    },
+    {
+     "naam": "Premium",
+     "usd": 30,
+     "eur": null,
+     "wat": "4x Plus usage, cloud agents, AI code review, third party models at API list price."
+    },
+    {
+     "naam": "Super",
+     "usd": 100,
+     "eur": null,
+     "wat": "15x Plus usage."
+    },
+    {
+     "naam": "Ultra",
+     "usd": 200,
+     "eur": null,
+     "wat": "50x Plus usage."
+    },
+    {
+     "naam": "Teams",
+     "usd": 30,
+     "eur": null,
+     "wat": "From $30 per user per month. SSO, admin, team privacy settings."
+    }
+   ],
+   "platforms": [
+    "desktop"
+   ],
+   "privacy": "With Privacy mode on, Cursor guarantees code is not used for training by Cursor or its model providers.",
+   "beperkingen": "Third party model usage is billed separately. Prices exclude tax.",
+   "bronnen": [
+    "https://cursor.com/pricing",
+    "https://cursor.com/blog/joining-spacex"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "claude-code",
+   "naam": "Claude Code",
+   "maker": "Anthropic",
+   "categorien": [
+    "code"
+   ],
+   "bestVoor": "An AI coding agent that works in your terminal or IDE, reads your codebase, edits files and runs commands. Included with paid Claude plans.",
+   "gratis": false,
+   "gratisWat": "Not included in the Claude Free plan.",
+   "plannen": [
+    {
+     "naam": "Claude Pro",
+     "usd": 20,
+     "eur": null,
+     "wat": "Includes Claude Code ($17 per month billed annually)."
+    },
+    {
+     "naam": "Claude Max",
+     "usd": 100,
+     "eur": null,
+     "wat": "From $100. 5x Pro usage."
+    },
+    {
+     "naam": "Claude Ultra",
+     "usd": 200,
+     "eur": null,
+     "wat": "10x Pro usage per week."
+    },
+    {
+     "naam": "Team standard seat",
+     "usd": 25,
+     "eur": null,
+     "wat": "Includes Claude Code and Cowork ($20 billed annually)."
+    }
+   ],
+   "platforms": [
+    "terminal",
+    "VS Code",
+    "Cursor",
+    "JetBrains"
+   ],
+   "privacy": "Same consumer choice as Claude for Pro, Max and Ultra; Team and Enterprise fall under commercial terms.",
+   "beperkingen": "Shares usage limits with your Claude plan.",
+   "bronnen": [
+    "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan",
+    "https://claude.com/pricing?m=1"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "replit",
+   "naam": "Replit",
+   "maker": "Replit",
+   "categorien": [
+    "code"
+   ],
+   "bestVoor": "Build and publish apps in the browser by describing them to the Replit Agent, with hosting and a database included. Good for non developers who want a working app.",
+   "gratis": true,
+   "gratisWat": "Starter: daily Agent allowance, basic Agent access, one published app.",
+   "plannen": [
+    {
+     "naam": "Core",
+     "usd": 17,
+     "eur": null,
+     "wat": "Billed $204 per year. $20 monthly credits, full Agent, up to 5 collaborators, unlimited published apps."
+    },
+    {
+     "naam": "Pro",
+     "usd": 100,
+     "eur": null,
+     "wat": "Up to 10 parallel Agent tasks, up to 15 builders, credits roll over two months."
+    }
+   ],
+   "platforms": [
+    "web"
+   ],
+   "privacy": null,
+   "beperkingen": "Core monthly billing price was not shown in the docs we read; the Core figure is the annual price divided by 12.",
+   "bronnen": [
+    "https://docs.replit.com/help/pricing-and-plans"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "chatgpt-search",
+   "naam": "ChatGPT search",
+   "maker": "OpenAI",
+   "categorien": [
+    "search"
+   ],
+   "bestVoor": "ChatGPT searches the web for up to date answers with links to sources, inside a normal chat.",
+   "gratis": true,
+   "gratisWat": "Free users can search the web and get up to date information.",
+   "plannen": [
+    {
+     "naam": "Plus",
+     "usd": 20,
+     "eur": null,
+     "wat": "Higher limits and deep research."
+    }
+   ],
+   "platforms": [
+    "web",
+    "iOS",
+    "Android",
+    "Windows",
+    "macOS"
+   ],
+   "privacy": "Same as ChatGPT: consumer content may be used for training unless you opt out.",
+   "beperkingen": null,
+   "bronnen": [
+    "https://help.openai.com/en/articles/9275245-chatgpt-free-tier-faq"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "google-ai-mode",
+   "naam": "AI Mode in Google Search",
+   "maker": "Google",
+   "categorien": [
+    "search"
+   ],
+   "bestVoor": "Google Search answers with an AI written response, splits your question into subtopics it searches at the same time, and keeps links to the web. You can ask follow up questions.",
+   "gratis": true,
+   "gratisWat": "Available from google.com, google.com/ai and the Google app.",
+   "plannen": [
+    {
+     "naam": "Google AI Ultra",
+     "usd": 99.99,
+     "eur": null,
+     "wat": "Adds Gemini 4 Carbon in AI Mode, with daily limits."
+    }
+   ],
+   "platforms": [
+    "web",
+    "Google app (iOS, Android)"
+   ],
+   "privacy": null,
+   "beperkingen": "Offered in many countries and languages. Personalization is only for users 18 and over.",
+   "bronnen": [
+    "https://support.google.com/websearch/answer/16011537?hl=en&co=GENIE.Platform%3DDesktop"
+   ],
+   "bronDatum": "2026-11-17"
+  },
+  {
+   "slug": "gemini-notebook",
+   "naam": "Gemini Notebook (NotebookLM)",
+   "maker": "Google",
+   "categorien": [
+    "research",
+    "notes"
+   ],
+   "bestVoor": "Upload your own sources such as PDFs, docs and links, then ask questions, get summaries and listen to Audio Overviews based only on those sources.",
+   "gratis": true,
+   "gratisWat": "Up to 100 notebooks, 50 sources per notebook, basic model access; visible watermark kept.",
+   "plannen": [
+    {
+     "naam": "Google AI Plus",
+     "usd": 4.99,
+     "eur": null,
+     "wat": "Up to 200 notebooks, 100 sources each."
+    },
+    {
+     "naam": "Google AI Pro",
+     "usd": 19.99,
+     "eur": null,
+     "wat": "Up to 500 notebooks, 300 sources each, watermark removed."
+    },
+    {
+     "naam": "Google AI Ultra",
+     "usd": 99.99,
+     "eur": null,
+     "wat": "Up to 500 notebooks, 500 or more sources each."
+    }
+   ],
+   "platforms": [
+    "web"
+   ],
+   "privacy": null,
+   "beperkingen": "Daily limits apply and can change.",
+   "bronnen": [
+    "https://support.google.com/notebooklm/answer/16213268?hl=en",
+    "https://gemini.google/subscriptions/"
+   ],
+   "bronDatum": "2026-11-17"
+  }
+ ]
+}
