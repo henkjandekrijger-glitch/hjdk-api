@@ -659,6 +659,36 @@
       "destination": "/api/wam?op=llms"
     },
     {
+      "source": "/zorgverzekering/sitemap.xml",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=zorg&op=sitemap"
+    },
+    {
+      "source": "/zorgverzekering/:p",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=zorg&p=:p"
+    },
+    {
+      "source": "/zorgverzekering",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=zorg"
+    },
+    {
       "source": "/rotterdam/sitemap.xml",
       "has": [
         {
