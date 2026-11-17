@@ -16,12 +16,13 @@ import { SURGERY_FAVICON } from '../lib/tsc-design.js';
 import { topicPicker } from '../lib/tsc-topic-picker.js';
 import * as data from '../lib/tsc-data.js';
 import { LIJSTEN,RANK_SLUGS } from '../lib/tsc-rank.js';
+import * as provider from '../lib/tsc-provider.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 let checks=0;
 async function test(name,fn){await fn();checks++;console.log('ok',name);}
 const raw=fs.readFileSync(path.join(root,'lib/tsc.js'),'utf8').replace(/^import .*;\n/gm,'');
-const names={...data,SURGERY_FAVICON,ROUTES:JSON.parse(fs.readFileSync(path.join(root,'data/tsc-routes.json'))),LIJSTEN,RANK_SLUGS,...ui,...catalog,...signup,...dental,...searchIntent};
-const render=new Function(...Object.keys(names),raw.replace(/export /g,'')+';return {home,rankPagina,pagina,checkPagina,llms,ALL,pageDate,tscHandler};')(...Object.values(names));
+const names={...data,SURGERY_FAVICON,ROUTES:JSON.parse(fs.readFileSync(path.join(root,'data/tsc-routes.json'))),LIJSTEN,RANK_SLUGS,...ui,...catalog,...signup,...dental,...searchIntent,...provider};
+const render=new Function(...Object.keys(names),raw.replace(/export /g,'')+';return {home,rankPagina,pagina,checkPagina,extraPagina,llms,ALL,pageDate,tscHandler};')(...Object.values(names));
 const out=path.join(root,'qa-render');fs.mkdirSync(out,{recursive:true});
 const scriptCheck=html=>{for(const m of html.matchAll(/<script(?![^>]*application\/(?:ld\+)?json)[^>]*>([\s\S]*?)<\/script>/g))new vm.Script(m[1]);};
 await test('all public SSR pages: unique IDs, correct language, scripts and metadata',()=>{

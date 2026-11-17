@@ -27,6 +27,8 @@ jobs:
           package-manager-cache: false
       - name: Core choices, signup, quote tools and rendered pages
         run: node scripts/test-tsc-choice.mjs
+      - name: Provider pages, ranking summaries and data pages
+        run: node scripts/test-tsc-provider.mjs
       - name: Countries and filtering
         run: node scripts/test-tsc-countries.mjs
       - name: Scoped sitemap and failure handling
