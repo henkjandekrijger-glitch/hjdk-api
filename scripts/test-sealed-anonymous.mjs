@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
-import { anonymousService, validateAnonymous } from '../lib/sealed-anonymous.js';
-import { renderPagina, renderSealedSpecial, sitemap } from '../lib/sealed.js';
+import { anonymousService, validateAnonymous, CHANNELS } from '../lib/sealed-anonymous.js';
+import { renderPagina, renderSealedSpecial, sitemap, GROWTH_SCRIPT } from '../lib/sealed.js';
 import { PAGINAS } from '../lib/sealed-content.js';
 import { GUIDANCE, proposalBrief } from '../lib/sealed-briefs.js';
 import vm from 'node:vm';
@@ -14,6 +14,7 @@ const kv={
  raw:async([op,k,...args])=>{if(op==='SET'){if(!records.has(k))records.set(k,args[0]);return 'OK';}if(op==='LPUSH'){lists.set(k,[args[0],...(lists.get(k)||[])]);return 1;}if(op==='LREM')lists.set(k,(lists.get(k)||[]).filter(x=>x!==args[1]));return 'OK';}
 };
 const valid={type:'succession',sector:'services',market:'europe',timing:'one-year',terms:'I would consider a gradual transfer if the team can continue and the proposed financing is explained first.',consent:true,language:'en'};
+assert(CHANNELS.includes('test')); assert(GROWTH_SCRIPT.includes("q.get('qa')==='1'"));
 const service=anonymousService(kv,async()=>{throw Error('provider unavailable');});
 assert.equal(validateAnonymous({...valid,terms:'not enough'}).error,'more-detail');
 assert.equal(validateAnonymous({...valid,terms:valid.terms+' Contact me at private@example.com'}).error,'contact-details');
