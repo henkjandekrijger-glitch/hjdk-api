@@ -11,7 +11,8 @@ import { VAST, overdracht, overdrachtTekst } from '../lib/sealed-overdracht.js';
 import { proefStand, proefTekst } from '../lib/proef.js';
 import { zoekLp, bewaarKoper, vulKoperAan, lijstKopers, LP_INDEX } from '../lib/sealed-lp.js';
 import { infoPagina, infoLinks, doorsturen } from '../lib/sealed-info.js';
-import { renderChatPage, renderManagePage } from '../lib/sealed-chatpage.js';
+import { eigenaarPost, koperPost, gesprekkenLijst, maakMailer } from '../lib/sealed-post.js';
+import { renderChatPage, renderManagePage, renderThreadPage } from '../lib/sealed-chatpage.js';
 import { chatStart, chatEv, chatVrij, chatVraag, chatStand, chatStandTekst, chatLeer } from '../lib/sealed-chat.js';
 import { berichten, HAIKU } from '../lib/ai.js';
 import { GROWTH_SCRIPT } from '../lib/sealed.js';
@@ -127,9 +128,19 @@ export default async function handler(req, res) {
     if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
     try { const b = await leesBody(req); if (JSON.stringify(b).length > 2048) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store'); return stuur(res, 200, 'application/json', JSON.stringify({ ok: await vulKoperAan(kv, b) }), 'no-store', '', 'noindex, nofollow'); } catch { return stuur(res, 503, 'application/json', '{"ok":false}', 'no-store'); }
   }
+  // Anonieme berichten: de eigenaar met zijn privésleutel (op=post), de koper met de sleutel uit zijn link (op=gesprek).
+  if (op === 'post' || op === 'gesprek') {
+    if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
+    try { const b = await leesBody(req); if (JSON.stringify(b).length > 4096) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store', '', 'noindex, nofollow');
+      const mailer = maakMailer(kv); let r;
+      if (op === 'post') { const c = await anonymous.control('receipt', b); if (c.status !== 200) return stuur(res, 404, 'application/json', '{"ok":false}', 'no-store', '', 'noindex, nofollow'); r = await eigenaarPost(kv, c.body.record, b, { stuurMail: mailer && mailer.koper, meld }); }
+      else r = await koperPost(kv, b, { meld, seintje: mailer && mailer.eigenaar });
+      return stuur(res, r.ok ? 200 : 400, 'application/json', JSON.stringify(r), 'no-store', '', 'noindex, nofollow');
+    } catch { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
+  }
   if (op === 'kopers') {
     if (!process.env.HJDK_TOKEN || q.get('token') !== process.env.HJDK_TOKEN) return stuur(res, 403, 'application/json', '{"ok":false}', 'no-store');
-    return stuur(res, 200, 'application/json', JSON.stringify(await lijstKopers(kv), null, 1), 'no-store');
+    return stuur(res, 200, 'application/json', JSON.stringify({ ...(await lijstKopers(kv)), mailAan: !!process.env.SEALED_MAIL_FROM, gesprekken: await gesprekkenLijst(kv) }, null, 1), 'no-store');
   }
   if (op === 'indexnow') return eigenaar(op, res);
   if (op === 'intents') {
@@ -164,6 +175,7 @@ export default async function handler(req, res) {
   if (naar) { res.statusCode = 301; res.setHeader('Location', naar); res.setHeader('Cache-Control', 'public, max-age=3600'); res.setHeader('X-Robots-Tag', 'noindex'); return res.end(); }
   const info = infoPagina(taal, slug);
   if (info) return stuur(res, 200, 'text/html; charset=utf-8', renderChatPage(taal, null, { ...chatOpts, pagina: info, links: infoLinks(taal, slug) }), 'public, max-age=60, s-maxage=300', taal);
+  if (slug === 'gesprek') return stuur(res, 200, 'text/html; charset=utf-8', renderThreadPage(taal), 'private, no-store', taal, 'noindex, nofollow');
   if (slug === 'manage') return stuur(res, 200, 'text/html; charset=utf-8', renderManagePage(taal), 'private, no-store', taal, 'noindex, nofollow');
   return nietGevonden(taal);
 }
