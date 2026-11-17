@@ -32,7 +32,7 @@ import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
 import { pinCohortEntries, PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, GEDRAG, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel, ttEvent } from '../lib/shopdirect.js';
 import { ttFeedCsv, ttVideo, TT_VIDEO, TT_REGEL, TT_GROEPEN, ttSleutel, ttKoppelUrl, ttRuil, ttRapport, ttAds, ttUit, ttOordeel, ttMeld, ttTekst } from '../lib/tiktok.js';
-import { whEvent, whopKlaar, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd, whProject, whLead, WH_PROJECTEN, koppelWaid, whopAan, whopZetDoel, whFormBouw, leadForm } from '../lib/whop.js';
+import { whEvent, whopKlaar, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd, whProject, whLead, WH_PROJECTEN, koppelWaid, whopAan, whopZetDoel, whFormBouw, leadForm, whFormFix } from '../lib/whop.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
 import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
@@ -1223,6 +1223,7 @@ export default async function handler(req, res) {
       if (url.searchParams.get('voorbeeld')) return res.status(200).json({ ok: true, nl_vandaag: leadForm('nl', 'vandaag'), nl_strand: leadForm('nl', 'strand'), de_fernweh: leadForm('de', 'fernweh'), ca_vandaag: leadForm('ca', 'vandaag') });
       const pr = whProject('curacao'); if (!pr.klaar) return res.status(200).json({ ok: false, mist: [!pr.key && 'WHOP_API_KEY_CURACAO in Vercel', !pr.biz && 'bedrijf'].filter(Boolean) });
       const cid = String(url.searchParams.get('c') || 'adcamp_fWuShwnhuwl').replace(/[^A-Za-z0-9_]/g, '');
+      if (url.searchParams.get('fix') === '1') return res.status(200).json(await whFormFix(pr, cid));
       const r = await whFormBouw(pr, cid, url.searchParams.get('uitvoeren') === '1');
       if (r.uitgevoerd) try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'Curacao naar Facebook-formulieren (Henkjan 17 nov): ' + (r.log || []).map(x => x.groep + ' ' + (x.id ? x.ads.filter(a => a.id).length + '/' + x.ads.length + ' ads' : 'mislukt: ' + x.fout)).join(', ') })]); } catch (e) {}
       return res.status(200).json(r); }
