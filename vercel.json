@@ -227,6 +227,10 @@
     {
       "path": "/api/shop?op=ttronde",
       "schedule": "9 * * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=rdam&op=ververs",
+      "schedule": "20 3 * * *"
     }
   ],
   "rewrites": [
@@ -637,6 +641,46 @@
         }
       ],
       "destination": "/api/wam?op=llms"
+    },
+    {
+      "source": "/rotterdam/sitemap.xml",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=rdam&op=sitemap"
+    },
+    {
+      "source": "/rotterdam/:d/:z",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=rdam&d=:d&z=:z"
+    },
+    {
+      "source": "/rotterdam/:d",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=rdam&d=:d"
+    },
+    {
+      "source": "/rotterdam",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=rdam"
     },
     {
       "source": "/curacao-gids",

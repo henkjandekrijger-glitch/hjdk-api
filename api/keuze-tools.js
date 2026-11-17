@@ -42,6 +42,15 @@ function laadSchema() {
 export default async function handler(req, res) {
   const url = new URL(req.url, 'https://keuzehulp.best'), q = url.searchParams, op = q.get('op') || '';
   res.setHeader('x-content-type-options', 'nosniff');
+  if(q.get('tool')==='rdam'){ // dienstengids Rotterdam (lib/rdam.js, 17 nov 2026)
+    const R=await import('../lib/rdam.js');const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
+    if(op==='tik'){let b=req.body;try{if(typeof b==='string')b=JSON.parse(b.slice(0,800));}catch{b={};}res.setHeader('cache-control','no-store');return res.status(200).json(await R.tik(b||{}));}
+    if(op==='ververs'){res.setHeader('cache-control','no-store');if(!beschermd)return res.status(403).json({ok:false});const r=q.get('d')?await R.ververs(q.get('d')):await R.verversOudste();const m=await R.meldNieuw().catch(e=>({fout:String(e.message||e).slice(0,80)}));return res.status(200).json({...r,indexnow:m});}
+    if(op==='stand'){res.setHeader('cache-control','no-store');return res.status(200).json(await R.stand());}
+    if(op==='sitemap'){const x=await R.sitemap();res.setHeader('content-type','application/xml; charset=utf-8');res.setHeader('cache-control','public, s-maxage=3600');return res.status(200).send(x.xml);}
+    const html=q.get('z')?await R.zaakPagina(q.get('d'),q.get('z')):q.get('d')?await R.dienstPagina(q.get('d')):await R.hub();
+    res.setHeader('content-type','text/html; charset=utf-8');if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/rotterdam">Alle diensten in Rotterdam</a></p>');}
+    res.setHeader('cache-control','public, s-maxage=300, stale-while-revalidate=3600');return res.status(200).send(html);}
   if(q.get('tool')==='intentie'){ // intentielog van de vraagbalk en het zoekvak (lib/intentie.js, 15 nov 2026); stand openbaar zonder de vragen, met vragen op de beschermde host
     const I=await import('../lib/intentie.js');res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
     const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
