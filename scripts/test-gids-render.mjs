@@ -59,6 +59,9 @@ const wg=[...wh.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/scri
 assert.deepEqual(wg.find(x=>x['@type']==='Article').citation,whisky.bronnen.map(id=>bewijs.BRONNEN[id].url));
 assert.ok(wh.includes('geen huidige veiligheidsgarantie')||wh.includes('geen huidige veiligheidsgarantie'.replace('huidige','actuele'))||wh.includes('geen huidige')||wh.includes('geen actuele veiligheidsgarantie'));
 assert.ok(wh.includes('ICP-MS'));
+assert.ok(!wh.includes('eerste bestelling gratis verzonden'));
+assert.ok(wh.includes('Actueel verzendbeleid'));
+assert.ok(wh.includes('waardevermindering'));
 const wc={'oc_machine':{id:'oc_machine',t:'3kg Rotatie Tumbler voor Sieraden Polijsten van VEVOR',p:20,vr:true},'oc_drink':{id:'oc_drink',t:'Mini Whiskey Tumbler Glazen',p:20,vr:true},'oc_acryl':{id:'oc_acryl',t:'Witte Acrylaat Laag Tumbler Set van 6',p:20,vr:true}};
 const wl=alle.alleVan('whisky-set-cadeau',[],wc,{},i=>i.p);
 assert.equal(wl.n,2);

@@ -218,7 +218,7 @@ function productKaart(x, slug, blok, eerste, nr) {
   const dat = leverDatum(x.lt); const href = `/naar/${encodeURIComponent(x.pid)}?g=${encodeURIComponent(slug)}&b=${blok}`;
   return `<article class="pk" id="p-${esc(x.pid)}"><a class="pk-img" href="${href}" rel="nofollow" tabindex="-1" aria-hidden="true">${x.img ? `<img src="${esc(x.img)}" width="120" height="120" alt="${esc(x.naam)}" ${eerste ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">` : ''}</a><div>
 <p class="pk-lab"><span class="pk-nr">${nr}</span>${esc(x.label)}${x.meest ? ' · meest aangeklikt door lezers' : ''}</p><h3>${esc(x.naam)}</h3>
-<p class="pk-prijs"><b>${euro(x.prijs + x.verzending)}</b> inclusief ${x.verzending ? euro(x.verzending) + ' verzending (eerste bestelling gratis verzonden: ' + euro(x.prijs) + ')' : 'verzending'}${x.lt ? ` · <span class="pk-dag">in huis rond ${esc(nlDatum(dat))}</span>` : ''}</p>
+<p class="pk-prijs"><b>${euro(x.prijs + x.verzending)}</b> inclusief ${x.verzending ? euro(x.verzending) + ' verzending' + (GIDSEN[slug]?.actueleBestelinfo ? '' : ' (eerste bestelling gratis verzonden: ' + euro(x.prijs) + ')') : 'verzending'}${x.lt ? ` · <span class="pk-dag">in huis rond ${esc(nlDatum(dat))}</span>` : ''}</p>
 <p>${esc(x.waarom)}</p>${x.beperking ? `<p class="pk-let"><b>Let op:</b> ${esc(x.beperking)}</p>` : ''}<a class="btn knop" href="${href}" rel="nofollow">Bekijk bij Kadoly</a></div></article>`;
 }
 
@@ -263,7 +263,7 @@ ${(g.uitleg || []).map((b, i) => `<h2${i === 0 ? ' id="uitleg"' : ''}>${esc(b.ko
 <h2 id="zo-kozen-we">Zo kozen we</h2><p>${esc(g.zoKozenWe)}</p>
 ${adviesBlok(g.keuze.map(k => cat[k.pid]).filter(Boolean))}
 ${g.bronnen?.length ? `<section id="bronnen"><h2>Bronnen en beperkingen</h2><p>Externe bronnen, gecontroleerd ${esc(g.bronnenControle || g.bijgewerkt)}. Categorieonderzoek is geen producttest.</p>${bronnenHtml(g.bronnen,g.bronnenControle)}</section>` : ''}
-<h2 id="bestellen">Zo werkt een bestelling bij Kadoly</h2>${BESTELLEN}
+<h2 id="bestellen">Zo werkt een bestelling bij Kadoly</h2>${g.actueleBestelinfo ? "<dl class=\"rows\"><div class=\"r\"><dt>Verkoper</dt><dd>Je koopt bij Kadoly, ADSFAIR B.V.</dd></div><div class=\"r\"><dt>Verzending en levering</dt><dd>Met track &amp; trace. Controleer kosten, landen en bezorgschatting voor jouw adres vóór betaling. Een gratis eerste verzending of bundelkorting is bij deze controle niet bevestigd. <a href=\"https://kadoly.com/shipping\">Actueel verzendbeleid</a>.</dd></div><div class=\"r\"><dt>Retour</dt><dd>Binnen 14 dagen na ontvangst melden, daarna nog 14 dagen versturen met gratis retourlabel. Bij meer gebruik dan nodig voor beoordeling kan waardevermindering gelden. <a href=\"https://kadoly.com/returns\">Actueel retourbeleid</a>.</dd></div></dl>" : BESTELLEN}
 ${g.faq && g.faq.length ? `<h2 id="vragen">Veelgestelde vragen</h2>${g.faq.map(f => `<details class="faq"><summary>${esc(f.v)}</summary><div class="a"><p>${esc(f.a)}</p></div></details>`).join('')}` : ''}
 ${alleHtml(g, A)}
 <p style="margin:28px 0 0"><a class="btn deel" href="${esc(delen)}" rel="nofollow noopener">Deel deze gids via WhatsApp</a></p>
