@@ -92,7 +92,7 @@ async function page(m, it, all, req) {
     ...((it.faq || []).length ? [{ '@type': 'FAQPage', mainEntity: faqZonderDubbel(it.faq).map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
     ...(it.decisionKind === 'boek' ? boekLd(it) : []),
     ...(adv.products.length ? [{ '@type': 'ItemList', name: it.title, itemListElement: adv.products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title.slice(0, 110), url: p.url })) }] : []) ] };
-  const body = `<p class="crumbs"><a href="/">${esc(m.name)}</a> › ${esc(it.cat)}</p><p class="kicker">${esc(it.cat)}</p><h1>${esc(it.h1)}</h1><p class="standfirst">${esc(it.intro)}</p>
+  const body = `<p class="crumbs"><a href="/">${esc(m.name)}</a> › ${esc(it.cat)}</p><h1>${esc(it.h1)}</h1><p class="standfirst">${esc(it.intro)}</p>
 <div class="answer"><p>${firstBold(it.kort)}</p></div><p class="meta">${upd ? `${esc(s.updated)}&nbsp;<time datetime="${esc(upd)}">${esc(upd)}</time> · ` : ""}${esc(s.by)} ${m.id === 'us' ? 'the editors' : 'der Redaktion'}</p>
 ${kx}<h2>${esc(s.q)}</h2>${qs}
 <div class="guide-actions"><button type="button" id="share-guide">${m.id === 'de' ? 'Ergebnis kopieren' : 'Copy this result'}</button><span id="share-status" role="status"></span></div><p id="advice-status" role="status"></p><div id="adv" aria-live="polite" aria-atomic="true" style="margin:14px 0">${adviceHtml(m, adv)}</div>
