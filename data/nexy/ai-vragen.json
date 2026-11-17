@@ -1,0 +1,1967 @@
+{
+ "opgehaald": "2026-11-17",
+ "vragen": [
+  {
+   "vraag": "Which AI is best for everyday use?",
+   "antwoord": "For most people the free versions of ChatGPT, Gemini or Claude are good enough for everyday questions, writing help and planning. They differ more in style and extras than in raw ability, so try the same question in two of them and keep the one whose answers you like reading. Pay only once you keep hitting the free limits.",
+   "cluster": "choose",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is the best free AI?",
+   "antwoord": "ChatGPT, Gemini, Claude, Copilot and Meta AI all have free versions that handle questions, writing and summaries well. Gemini's free tier includes image generation and Deep Research, and ChatGPT's free plan offers unlimited text chats within fair use limits. The best one is the one you will actually open, so start with the app that fits where you already spend time, like Google, Microsoft or WhatsApp.",
+   "cluster": "choose",
+   "intentie": "compare",
+   "bron": "https://gemini.google/subscriptions/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Which AI is best for writing?",
+   "antwoord": "Claude and ChatGPT are the two most people pick for writing, with Claude often praised for a more natural tone and ChatGPT for flexibility and extras. Gemini works well if you write inside Google Docs and Gmail. Give each the same draft and a short note on who will read it, then compare.",
+   "cluster": "choose",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Which AI is best for research?",
+   "antwoord": "Look for an assistant that shows its sources, such as Perplexity, or the deep research modes in ChatGPT, Gemini and Claude. These search the web, read many pages and give you a report with links. Always open the links for anything you plan to rely on, because summaries can still misread a source.",
+   "cluster": "choose",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Which AI is best at math?",
+   "antwoord": "The reasoning modes of the big assistants (ChatGPT, Claude, Gemini) are much better at math than older chatbots because they work through steps before answering. For homework, ask the AI to show each step so you can spot a wrong turn. For exact arithmetic on real money or data, a calculator or spreadsheet is still safer.",
+   "cluster": "choose",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Which AI is best for medical questions?",
+   "antwoord": "General assistants like ChatGPT, Claude and Gemini can explain conditions, test results and medical words in plain language, which helps you prepare for a doctor visit. They can also be wrong and they cannot examine you. Use them to understand and to write down questions, and leave diagnosis and treatment to a professional.",
+   "cluster": "choose",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is the best AI app for iPhone?",
+   "antwoord": "ChatGPT, Gemini, Claude, Copilot and Perplexity all have free iPhone apps with voice chat and photo upload. Apple's own Siri can also hand some questions to ChatGPT. If you mostly want quick answers by voice, try the voice mode in two apps and keep the one that understands you best.",
+   "cluster": "choose",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is the best AI app for Android?",
+   "antwoord": "Gemini is built into most Android phones and can work with Google apps like Maps, Gmail and Calendar, which makes it the easiest start. ChatGPT, Claude, Copilot and Perplexity are all free to download too. Pick Gemini for phone tasks and one of the others if you mainly want a strong chat partner.",
+   "cluster": "choose",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is the best AI chatbot right now?",
+   "antwoord": "There is no single winner: ChatGPT, Claude and Gemini trade places depending on the task and the month. ChatGPT has the most features, Claude is often preferred for writing and careful reasoning, and Gemini is strongest inside Google's apps. Many people use two side by side, which costs nothing on the free plans.",
+   "cluster": "choose",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "Which AI should I pay for?",
+   "antwoord": "Pay for the one you already use most and keep hitting limits on. ChatGPT Plus and Claude Pro are both $20 a month in the US, and Google AI Pro is $19.99 and includes 5 TB of storage. If you live in Google or Microsoft apps, their bundles can be the better deal.",
+   "cluster": "choose",
+   "intentie": "buy",
+   "bron": "https://gemini.google/subscriptions/",
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "What is the best AI for a resume?",
+   "antwoord": "Any of the main assistants can rewrite a resume well if you paste the job ad and your current resume together and ask for a version aimed at that job. Check every claim it adds, because AI sometimes invents skills or numbers. Ask it to keep your own facts and only improve wording and order.",
+   "cluster": "choose",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is the best AI for people with ADHD?",
+   "antwoord": "Tools that cut big tasks into small steps and remind you at the right time help most, such as an assistant that can set reminders or a voice mode you can talk to while walking. Many people use ChatGPT or Claude to turn a messy brain dump into a short to-do list. Choose something that lives where you already are, like your phone or a chat app, so you actually see the nudges.",
+   "cluster": "choose",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Which AI is best for coding?",
+   "antwoord": "Claude, ChatGPT and Gemini are the main choices, and Claude is widely used by developers for longer coding tasks. Coding tools such as Claude Code, GitHub Copilot, Cursor and OpenAI's Codex work directly in your files. For a beginner, a regular chat assistant that explains each line is the best place to start.",
+   "cluster": "choose",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is the best AI for interior design?",
+   "antwoord": "You can upload a photo of your room to ChatGPT or Gemini and ask for layout ideas, colour schemes or a redesigned image. Dedicated room-redesign apps give quicker before and after pictures but are often subscription based. Treat the images as inspiration, since measurements and furniture sizes are usually not accurate.",
+   "cluster": "choose",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is there an AI with no restrictions?",
+   "antwoord": "All mainstream assistants have safety rules, and apps that advertise no restrictions are usually smaller services with weaker privacy and less reliable answers. If a normal assistant refuses something harmless, rephrasing with context (who you are and why you ask) usually works. Be careful about what personal data you give to unknown chatbot sites.",
+   "cluster": "choose",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Which AI is best for small tasks on my phone?",
+   "antwoord": "The assistant built into your phone is usually the most convenient: Gemini on Android and Siri with ChatGPT on iPhone. For reminders, messages and quick notes, speed and access to your apps matter more than which model is smartest. Try a few real tasks for a week before deciding.",
+   "cluster": "choose",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "ChatGPT vs Claude: which is better?",
+   "antwoord": "Both are excellent, and the better one depends on what you do. ChatGPT has more built-in features like image creation, voice and custom GPTs, while Claude is often preferred for writing that sounds human, long documents and coding. Both cost $20 a month for the main paid plan in the US, so trying each free first is the easiest way to decide.",
+   "cluster": "compare",
+   "intentie": "compare",
+   "bron": "https://support.claude.com/en/articles/8325606-what-is-the-pro-plan",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "ChatGPT vs Gemini: which should I use?",
+   "antwoord": "Pick Gemini if you use Gmail, Google Docs, Android or Google Photos a lot, because it connects to those apps. Pick ChatGPT if you want the widest set of features and a large community of tips and custom tools. Both have strong free versions, and Google AI Pro is $19.99 a month against $20 for ChatGPT Plus.",
+   "cluster": "compare",
+   "intentie": "compare",
+   "bron": "https://gemini.google/subscriptions/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "ChatGPT vs Claude vs Gemini in 2026",
+   "antwoord": "All three are top tier, so the choice comes down to habits and extras. ChatGPT is the all-rounder with the most features, Claude is the favourite for writing and coding, and Gemini fits best into Google's apps and comes with cloud storage on paid plans. Many people keep the free versions of two and pay for one.",
+   "cluster": "compare",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "ChatGPT vs Copilot: what is the difference?",
+   "antwoord": "Copilot is Microsoft's assistant and works inside Word, Excel, PowerPoint, Outlook and Windows, while ChatGPT is a standalone app from OpenAI. Copilot has long used OpenAI models among others, so answers can feel similar. If your work happens in Microsoft 365, Copilot saves copy and paste; otherwise ChatGPT is more flexible.",
+   "cluster": "compare",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is Copilot the same as ChatGPT?",
+   "antwoord": "No, Copilot is Microsoft's product and ChatGPT is OpenAI's, even though Microsoft has used OpenAI technology inside Copilot. They have different apps, accounts, limits and privacy settings. Copilot is built into Microsoft 365 and Windows, ChatGPT is its own app.",
+   "cluster": "compare",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "ChatGPT vs Perplexity: which is better for search?",
+   "antwoord": "Perplexity is built around searching the web and puts sources next to every answer, which makes it easy to check facts. ChatGPT can also search and cite sources, and it does many more things beyond search. For quick fact finding with links, many people prefer Perplexity; for writing and planning, ChatGPT.",
+   "cluster": "compare",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "ChatGPT vs Grok: what is the difference?",
+   "antwoord": "Grok is made by xAI and is built into X (formerly Twitter), so it can pull in recent posts from that network. ChatGPT is more widely used for writing, study and work tasks and has more features outside a social network. If you do not use X, ChatGPT or another general assistant is usually the more practical pick.",
+   "cluster": "compare",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is Gemini better than ChatGPT?",
+   "antwoord": "Gemini is better for some things, like working with your Gmail, Docs and Android phone, and ChatGPT is better for others, like its range of tools and custom GPTs. On pure answer quality they are close and leapfrog each other with each update. Ask both the same three questions from your own life and judge for yourself.",
+   "cluster": "compare",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is Claude better than ChatGPT?",
+   "antwoord": "For writing, long documents and coding, many users say yes; for images, voice and extra features, ChatGPT usually wins. Claude tends to give more measured answers and sounds less like a template. Both have free plans, so you can test them on the same task in five minutes.",
+   "cluster": "compare",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "What is the difference between Meta AI and ChatGPT?",
+   "antwoord": "Meta AI is built into WhatsApp, Instagram, Facebook and Messenger, so you can use it without installing anything new. ChatGPT is a separate app with more tools, more settings and usually deeper answers. Meta AI is handy for a quick question in a chat; ChatGPT is better for longer work.",
+   "cluster": "compare",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Should I use more than one AI?",
+   "antwoord": "Many regular users do, because each assistant has strengths and the free plans cost nothing. A common setup is one paid assistant for daily work and a free second one to double-check important answers. Asking two AIs the same question is also a simple way to catch mistakes.",
+   "cluster": "compare",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "Is Copilot good?",
+   "antwoord": "Copilot is good if you already work in Word, Excel, Outlook or Teams, because it can draft and summarise right where your files are. As a standalone chatbot it is solid but not clearly ahead of ChatGPT, Claude or Gemini. The full Office integration needs a Microsoft 365 plan.",
+   "cluster": "compare",
+   "intentie": "info",
+   "bron": "https://www.microsoft.com/en-us/copilot/pricing/individuals",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Which AI makes the fewest mistakes?",
+   "antwoord": "No assistant is mistake free, and rankings change with every model update. Answers that come with sources (search or deep research modes) are easier to check, and reasoning modes make fewer errors on logic and math. The best habit is to verify anything that matters, whichever AI you use.",
+   "cluster": "compare",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is ChatGPT free?",
+   "antwoord": "Yes, ChatGPT has a free plan with unlimited text chats within fair use limits, plus limited image creation and voice. Paid plans add more messages, better models and extra tools. You need an account for most features.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": "https://chatgpt.com/pricing/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How much is ChatGPT Plus per month?",
+   "antwoord": "ChatGPT Plus costs $20 a month in the US. Prices in other countries are set locally and may include tax. Plus adds advanced reasoning models, projects, scheduled tasks and custom GPTs.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is ChatGPT Go and how much does it cost?",
+   "antwoord": "ChatGPT Go is a cheaper paid plan that costs $8 a month in the US. It gives about 10 times more messages, file uploads and image creation than the free tier, plus longer memory. OpenAI has said it plans to test ads in the free tier and Go in the US.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": "https://openai.com/index/introducing-chatgpt-go/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How much is ChatGPT Pro?",
+   "antwoord": "ChatGPT Pro is the top personal plan and costs far more than Plus; OpenAI now offers it in several usage tiers, so check the pricing page for your country. It is meant for people who use ChatGPT for hours every day or need the maximum deep research. Most people never need it.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": "https://chatgpt.com/pricing/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is ChatGPT Plus worth it?",
+   "antwoord": "It is worth it if you use ChatGPT most days and keep running into limits or want the stronger reasoning models. If you ask a few questions a week, the free plan or the $8 Go plan is usually enough. You can cancel any month, so trying it for one month is low risk.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": "https://help.openai.com/en/articles/6950777-what-is-chatgpt-plus",
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "Is Claude free?",
+   "antwoord": "Yes, Claude has a free plan on the web and in its apps, with lower usage limits than the paid plans. Claude Pro costs $20 a month in the US and adds more usage, priority access and Claude Code. There are also higher Max plans for heavy users.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": "https://support.claude.com/en/articles/8325606-what-is-the-pro-plan",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is Claude Pro worth it?",
+   "antwoord": "Claude Pro is worth it if you write, analyse documents or code with Claude regularly and hit the free limits. It costs $20 a month in the US and still has a five-hour session limit and a weekly limit. Light users are fine on the free plan.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": "https://support.claude.com/en/articles/8325606-what-is-the-pro-plan",
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "Is Gemini free?",
+   "antwoord": "Yes, Gemini is free with a Google account and includes image generation, Deep Research and Gemini Live voice chats. Paid Google AI plans start at $4.99 a month for AI Plus and $19.99 for AI Pro. The paid plans also bundle extra Google storage.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": "https://gemini.google/subscriptions/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How much does Google AI Pro cost?",
+   "antwoord": "Google AI Pro costs $19.99 a month in the US. It gives four times the usage limits of the free plan, the Pro model, 5 TB of storage and YouTube Premium Lite. Google AI Ultra starts at $99.99 a month for very heavy users.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": "https://gemini.google/subscriptions/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is Copilot free?",
+   "antwoord": "Yes, Microsoft offers a free Copilot app and website for chat, images and voice. Copilot inside Word, Excel, PowerPoint and Outlook needs a Microsoft 365 subscription, such as Personal at $9.99 a month or Premium at $19.99 a month in the US. On the Family plan, Copilot features only work for the subscription owner.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": "https://www.microsoft.com/en-us/copilot/pricing/individuals",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Does ChatGPT have a student discount?",
+   "antwoord": "OpenAI has run student promotions in some countries at times, so check the pricing page from your own country. Google currently gives eligible US college students one year of Google AI Pro for free and students in over 140 other markets a year of Google AI Plus, redeemable until December 31, 2026. Free plans of all major assistants also work well for studying.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can I share one ChatGPT account with my family?",
+   "antwoord": "Sharing a login breaks most providers' terms and mixes everyone's chats, memory and history together. A safer route is separate free accounts for everyone and one paid plan for the heaviest user. Some bundles, like Google AI plans, let you share storage with family, but AI features are usually tied to one person.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "What is the cheapest paid AI subscription?",
+   "antwoord": "Among the big names, Google AI Plus at $4.99 a month and ChatGPT Go at $8 a month in the US are the cheapest paid plans. They mostly raise your usage limits rather than unlock the strongest models. If you only want fewer limits, try one of these before a $20 plan.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": "https://gemini.google/subscriptions/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How do I cancel my ChatGPT subscription?",
+   "antwoord": "Open ChatGPT on the web, go to Settings, then Account or Subscription, and choose cancel; you keep access until the end of the paid period. If you subscribed through the Apple App Store or Google Play, cancel there instead, because OpenAI cannot cancel store subscriptions. Deleting the app does not stop the payment.",
+   "cluster": "price",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Do I need to pay for AI to get good answers?",
+   "antwoord": "No, the free plans of ChatGPT, Gemini and Claude give good answers for most everyday questions. Paying mainly gets you more messages, stronger reasoning modes and extras like longer documents or more images. Start free and upgrade only when the limits get in your way.",
+   "cluster": "price",
+   "intentie": "buy",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is ChatGPT safe to use?",
+   "antwoord": "ChatGPT is safe for everyday use as long as you treat it like any online service and keep sensitive details out. By default OpenAI may use your conversations to train its models unless you opt out in the settings or use Temporary Chat. Do not paste passwords, ID numbers or other people's private information.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": "https://openai.com/policies/how-your-data-is-used-to-improve-model-performance/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Does ChatGPT train on my data?",
+   "antwoord": "Yes, for personal accounts OpenAI may use your chats to train its models unless you opt out. You can switch this off in Data Controls or through OpenAI's privacy portal, and Temporary Chats are never used for training. Business, Enterprise and API data is not used for training by default.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": "https://openai.com/policies/how-your-data-is-used-to-improve-model-performance/",
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "How do I stop ChatGPT from using my data for training?",
+   "antwoord": "Go to Settings, then Data Controls, and turn off the option to improve the model for everyone, or use OpenAI's privacy portal and choose do not train on my content. After that, new conversations are not used for training. Temporary Chat is a quick way to have a one-off conversation that is not used for training.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": "https://openai.com/policies/how-your-data-is-used-to-improve-model-performance/",
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "Does Claude train on my chats?",
+   "antwoord": "Only if you allow it: on Claude's personal plans, using your chats to improve the model is a setting you choose in Privacy Settings. Chats flagged for a safety review can also be used. Incognito chats are never used for training, even when the setting is on.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Does Google read my Gemini chats?",
+   "antwoord": "Some of them, yes: Google says a subset of chats is reviewed by human reviewers to improve its services and check safety. If you keep chat training on, Google uses your future chats to train its models. When you turn History off, chats are still kept for about two months, and chats that a reviewer already saw can be kept for up to three years.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": "https://support.google.com/gemini/answer/13594961?hl=en",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Does ChatGPT sell your data?",
+   "antwoord": "OpenAI says it does not sell user data, but it may use personal account chats to train models unless you opt out. Free and Go users in the US may also see ads in future, as OpenAI has said it plans to test them. Read the privacy settings once and switch off what you do not want.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": "https://openai.com/index/introducing-chatgpt-go/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is it safe to put personal information into AI?",
+   "antwoord": "Keep it to what the task needs: a first name and the situation are fine, but leave out bank details, passwords, ID numbers and medical records. Even with training switched off, chats are stored on the company's servers for a while. When in doubt, replace names and numbers with placeholders.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "Is it safe to use ChatGPT as a therapist?",
+   "antwoord": "ChatGPT can be a calm place to sort your thoughts at 2 a.m., but it is not a therapist and cannot judge risk or follow up on you. It can also agree with you too easily. Use it as a journal or to prepare for talking to a real person, and contact a professional or a crisis line if you feel unsafe.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is it safe to use ChatGPT for financial planning?",
+   "antwoord": "It is useful for understanding terms, comparing options and building a simple budget, but it is not a licensed adviser and can get tax rules or numbers wrong. Do not share account numbers or log-in details. For big decisions like pensions or mortgages, check the plan with a professional.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can my employer see what I type into ChatGPT?",
+   "antwoord": "If you use a work account on ChatGPT Business or Enterprise, your company's admins can usually manage and review usage. On a personal account, your employer cannot see your chats, but company devices and networks may be monitored. Many companies have rules about pasting work documents into personal AI accounts, so check yours.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can I delete my ChatGPT history?",
+   "antwoord": "Yes, you can delete single chats or clear all chats in Settings, and you can delete your whole account. Deleted chats are removed from your view straight away and are scheduled for permanent deletion from OpenAI's systems, usually within about 30 days unless kept for legal or safety reasons. Turning off training separately stops future use for training.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is AI safe for kids?",
+   "antwoord": "Most big assistants require users to be at least 13, often with parental permission under 18, and they have content filters that are good but not perfect. Kids can get wrong answers stated confidently, so they need to learn to check. Sit with younger children the first few times and use the family or teen settings where they exist.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "Can AI listen to my conversations?",
+   "antwoord": "Chat assistants only hear you when you open voice mode or press the microphone. Phone assistants listen for a wake word on the device, but they do not send everything you say to the cloud. You can check and revoke microphone access per app in your phone settings.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "What does private mode or incognito mean in AI chats?",
+   "antwoord": "It is a temporary chat that is not saved to your history and not used to train the model. ChatGPT calls it Temporary Chat, Claude calls it incognito, and Gemini has temporary chats. The company may still keep the conversation briefly for safety checks.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is AI dangerous?",
+   "antwoord": "Everyday chat assistants are not dangerous to use, but they bring real risks: confident wrong answers, scams using fake voices and images, and privacy leaks if you share too much. Longer term, researchers disagree about how risky more powerful AI will be. The practical step for you is to verify important answers and be wary of urgent calls or messages, even in a familiar voice.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How do scammers use AI?",
+   "antwoord": "Scammers use AI to clone voices from short clips, write convincing messages in perfect language, and make fake photos or videos. A common trick is a call that sounds like a relative asking for money urgently. Agree on a family code word and always call back on a number you already know.",
+   "cluster": "privacy",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "Can I use AI on WhatsApp?",
+   "antwoord": "Yes, Meta AI is built into WhatsApp in many countries, and you can chat with it like a contact or tag it in a group. Some other assistants, including ChatGPT, have offered WhatsApp numbers too, though availability changes. There are also services like Nexy that work mainly through WhatsApp and Telegram.",
+   "cluster": "messaging",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can Meta AI read my WhatsApp messages?",
+   "antwoord": "Meta says Meta AI only sees what you send to it directly or messages where someone tags it, and your personal chats stay end-to-end encrypted. In May 2026 Meta added Incognito Chat with Meta AI, where conversations are not saved and disappear by default. If a group member tags Meta AI, the message they tag is shared with it.",
+   "cluster": "messaging",
+   "intentie": "info",
+   "bron": "https://about.fb.com/news/2026/05/incognito-chat-whatsapp-meta-ai/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How do I turn off Meta AI in WhatsApp?",
+   "antwoord": "In most regions you cannot remove the Meta AI button completely, but you can simply not use it and mute or archive its chat. In a group, Advanced Chat Privacy stops others from using that chat's messages with AI features. Check WhatsApp's own help pages, as the options differ by country.",
+   "cluster": "messaging",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is the WhatsApp AI message about Saturday a hoax?",
+   "antwoord": "The chain message claiming that from Saturday Meta AI will read all your chats is misleading. Meta AI does not get access to your personal chats just because a date passes; it only sees messages sent to it or tagged. The setting the message mentions, Advanced Chat Privacy, is real and can be useful for sensitive groups.",
+   "cluster": "messaging",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can I add AI to a WhatsApp group?",
+   "antwoord": "Yes, in countries where Meta AI is available, anyone in a group can type @Meta AI and ask a question for the group. Third-party assistants can also join groups through their own WhatsApp numbers. Only the messages that mention or are sent to the AI are shared with it.",
+   "cluster": "messaging",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI answer my WhatsApp messages for me?",
+   "antwoord": "WhatsApp Business has automated replies, and AI tools built on the WhatsApp Business platform can answer customers automatically. For a personal account, there is no official auto-reply AI, and unofficial apps that log into your account carry security risks. If you try one, choose a service that uses the official WhatsApp Business route.",
+   "cluster": "messaging",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is there an AI on Telegram?",
+   "antwoord": "Yes, Telegram has many bots that connect to AI models, and some well-known assistants offer Telegram bots. Quality and privacy vary a lot between unofficial bots, so check who runs it before sharing anything personal. Prefer bots linked from the maker's official website.",
+   "cluster": "messaging",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can I use ChatGPT in iMessage or text messages?",
+   "antwoord": "On iPhone, Apple Intelligence can pass some requests to ChatGPT and help you write messages, but ChatGPT does not live inside iMessage as a contact. On Android, Gemini can help draft texts in Google Messages. Services that work through a phone number let you text an AI like any contact.",
+   "cluster": "messaging",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Why use AI in a chat app instead of a separate app?",
+   "antwoord": "Because you are already there: no new app to learn, and you can bring it into a group conversation where the plans are actually made. That makes it easier for less technical family members and for quick tasks like reminders or lists. The trade-off is fewer features than a full AI app.",
+   "cluster": "messaging",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "Is WhatsApp Business AI good for customer service?",
+   "antwoord": "It works well for common questions like opening hours, prices and bookings, and it answers instantly at night. It struggles with complaints and unusual requests, so always offer a quick route to a human. Start with your ten most asked questions and check the answers weekly.",
+   "cluster": "messaging",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is an AI receptionist?",
+   "antwoord": "An AI receptionist is a voice assistant that answers your business phone, talks with callers in natural language and can book appointments, answer common questions or take a message. It works around the clock and can transfer to a person when needed. Most are paid per month, sometimes plus a fee per minute or call.",
+   "cluster": "calls",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is an AI receptionist worth it for a small business?",
+   "antwoord": "It usually pays off if you miss a lot of calls during work hours or after closing, because each missed call can be a lost customer. It is less useful if your calls are mostly complex or emotional. Test it for a month and listen to recordings to see how callers react.",
+   "cluster": "calls",
+   "intentie": "buy",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "How much does an AI receptionist cost?",
+   "antwoord": "Prices vary widely: simple plans start at a small monthly fee, while full-service ones charge per minute or per call and can reach hundreds a month for busy lines. Setup and integration with your calendar can add cost. Compare it with the cost of one missed customer per week, not just with a human receptionist's salary.",
+   "cluster": "calls",
+   "intentie": "buy",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI make phone calls for me?",
+   "antwoord": "Yes, some AI assistants can call a restaurant, shop or office on your behalf to book or ask a question, and Google has offered this in some countries for businesses. Quality differs, and some people find it odd to be called by an AI, so good services say they are an AI at the start. For anything sensitive, like your bank, make the call yourself.",
+   "cluster": "calls",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI answer my phone calls?",
+   "antwoord": "Yes, call screening on Pixel phones and AI answering services can pick up, ask who is calling and why, and show you a transcript. For businesses, AI receptionists can handle the whole call. Check that the callers know they are talking to an AI, which is legally required in some places.",
+   "cluster": "calls",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Do people hang up on AI receptionists?",
+   "antwoord": "Some do, especially older callers or people with an urgent problem, while others prefer the instant answer. Natural voices, a short greeting that says it is an AI, and a quick option to reach a person reduce hang-ups. Listen to recordings in the first weeks and adjust the script.",
+   "cluster": "calls",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "Can an AI receptionist book appointments?",
+   "antwoord": "Yes, most AI receptionists can connect to an online calendar or booking system and put appointments straight in. They can also confirm, reschedule and send reminders by text. Make sure double bookings are blocked and staff get notified.",
+   "cluster": "calls",
+   "intentie": "buy",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is it legal to use AI to answer calls?",
+   "antwoord": "Generally yes for answering, but rules on recording calls and on AI-generated voices in outbound calls differ by country and state. In the US, the FCC treats AI-generated voices in robocalls as artificial voices that need consent. Tell callers they are speaking with an AI and get advice for your location if you make outbound calls.",
+   "cluster": "calls",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is there an AI receptionist for a dental or medical office?",
+   "antwoord": "Yes, several AI receptionists focus on clinics and can book visits, answer insurance and opening-hour questions and handle reminders. Because health data is involved, check that the provider meets your local privacy rules, like HIPAA in the US. Urgent medical calls should always reach a human straight away.",
+   "cluster": "calls",
+   "intentie": "buy",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is the best AI note taker for meetings?",
+   "antwoord": "Popular choices include Otter, Fireflies, Fathom and the built-in assistants in Zoom, Microsoft Teams and Google Meet. The built-in ones are easiest if your company already pays for them; standalone tools work across platforms. Try two on the same meeting and compare the summaries.",
+   "cluster": "meetings",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is there a free AI note taker?",
+   "antwoord": "Yes, several note takers have free plans with a monthly limit on meetings or minutes, and Zoom, Teams and Meet include AI summaries on some paid plans. Free plans usually cap the length of recordings or keep transcripts for a limited time. For occasional meetings, a free plan is often enough.",
+   "cluster": "meetings",
+   "intentie": "buy",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI take notes for in-person meetings?",
+   "antwoord": "Yes, apps on your phone or laptop can record the room, transcribe it and write a summary with action points. Small recording devices built for this also exist. Always tell everyone that you are recording, and put the phone in the middle of the table for better sound.",
+   "cluster": "meetings",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is it legal to record a meeting with AI?",
+   "antwoord": "It depends on where you are: some places need consent from one person, others from everyone in the conversation. At work, company policy may also apply. The simple rule is to announce that an AI note taker is joining and let people object.",
+   "cluster": "meetings",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "How accurate are AI meeting summaries?",
+   "antwoord": "They are usually good at capturing topics and decisions but can miss nuance, mix up who said what, or invent an action item. Accuracy drops with poor audio, accents and crosstalk. Skim the summary right after the meeting and fix it while you still remember.",
+   "cluster": "meetings",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI write meeting minutes?",
+   "antwoord": "Yes, give it a transcript or recording and ask for minutes with decisions, owners and deadlines. Many note takers do this automatically after the call. Check names and numbers before you send them, since those are the most common mistakes.",
+   "cluster": "meetings",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI summarise a YouTube video or podcast?",
+   "antwoord": "Yes, Gemini can summarise YouTube videos directly, and other assistants can summarise a video if you paste the transcript. For podcasts, you need a transcript or an app that transcribes audio. Long videos may be summarised in less detail, so ask for the part you care about.",
+   "cluster": "meetings",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI join my Zoom or Teams call?",
+   "antwoord": "Yes, note-taking bots can join as a participant to record and summarise, and Zoom and Teams have their own built-in AI assistants. Other participants will see the bot in the list. Some companies block outside bots, so check before inviting one.",
+   "cluster": "meetings",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is there an AI reminder app?",
+   "antwoord": "Yes, you can ask ChatGPT (scheduled tasks on paid plans), Gemini or your phone assistant to remind you of things, and there are dedicated AI reminder apps. The most useful ones let you just say or type a sentence like remind me Friday to call mum. Pick one that sends reminders where you will see them, such as your phone notifications or a chat app.",
+   "cluster": "planning-groups",
+   "intentie": "compare",
+   "bron": "https://chatgpt.com/pricing/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can ChatGPT set reminders?",
+   "antwoord": "Yes, ChatGPT can run scheduled tasks on paid plans, which can remind you at a set time or send you a daily summary. Your phone assistant (Siri or Gemini) is still the quickest for a simple alarm or reminder. The free plan does not include scheduled tasks.",
+   "cluster": "planning-groups",
+   "intentie": "info",
+   "bron": "https://chatgpt.com/pricing/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI help organise a family schedule?",
+   "antwoord": "Yes, AI can turn school emails, sports schedules and messages into one calendar, a weekly overview or a shopping list. Gemini can work with Google Calendar, and family organiser apps add shared lists and reminders. It works best when one place holds the plan and everyone can see it.",
+   "cluster": "planning-groups",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "What is the best AI for a group chat?",
+   "antwoord": "An assistant that sits inside the chat your group already uses saves the most effort, such as Meta AI in WhatsApp groups or a bot in Telegram. It can answer questions, summarise what you missed and make a list. For planning with dates and reminders, look for one that can remind the whole group, not just you.",
+   "cluster": "planning-groups",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "Can AI plan a trip?",
+   "antwoord": "Yes, ask for a day-by-day plan with your dates, budget, interests and travel pace, and it will draft a usable itinerary in a minute. Check opening hours, prices and travel times yourself, because AI can be out of date. Deep research modes are good for comparing places with sources.",
+   "cluster": "planning-groups",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "Can AI make a meal plan and shopping list?",
+   "antwoord": "Yes, tell it how many people, any allergies, your budget and how much time you have to cook, and ask for a week of meals plus one combined shopping list. You can ask it to reuse ingredients to cut waste. Double check allergy-related advice yourself.",
+   "cluster": "planning-groups",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI help me plan a party or event?",
+   "antwoord": "Yes, it can make a checklist, a timeline, a budget, invitation text and a shopping list in one go. Give it the date, number of guests, budget and style. It cannot book venues for you unless you use an agent tool, so treat its venue suggestions as a starting list.",
+   "cluster": "planning-groups",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI help split chores fairly?",
+   "antwoord": "Yes, give it the list of chores, who lives at home and how much time each person has, and ask for a fair weekly rota. It can rotate unpopular jobs and adjust for age. Sharing the result in the family chat makes it stick better than a note on the fridge.",
+   "cluster": "planning-groups",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "Can AI manage my calendar?",
+   "antwoord": "Partly: Gemini can add events to Google Calendar, Copilot can work with Outlook, and some scheduling tools find meeting times for you automatically. Giving an AI full control of your calendar still needs care, because it can misread dates or time zones. Let it suggest, and confirm before anything is sent to other people.",
+   "cluster": "planning-groups",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is a good AI to-do list app?",
+   "antwoord": "Many to-do apps like Todoist and Notion now have AI that breaks a big task into steps or sorts your list. A general assistant can do the same if you paste in your list. The best app is the one you open every day, so pick based on where you already keep tasks.",
+   "cluster": "planning-groups",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI keep track of who owes what in a group?",
+   "antwoord": "AI can tally expenses if you give it the list, and it is handy for a one-off trip summary. For ongoing shared costs, a dedicated app like Splitwise is more reliable because it keeps a clear record. Check the totals, since AI can still make arithmetic slips.",
+   "cluster": "planning-groups",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How can a small business use AI?",
+   "antwoord": "The quickest wins are answering customer messages, writing social posts and product descriptions, summarising emails and drafting quotes or invoices. AI receptionists and chat assistants can handle questions after hours. Start with the task that eats most of your week and test one tool for a month.",
+   "cluster": "business",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "What are the best AI tools for small business?",
+   "antwoord": "A general assistant (ChatGPT, Claude, Gemini or Copilot) covers most writing and thinking tasks. Add specific tools only for clear needs: a note taker for meetings, an AI receptionist for missed calls, or AI inside your existing bookkeeping or website software. Fewer tools used well beat a stack nobody opens.",
+   "cluster": "business",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI write my social media posts?",
+   "antwoord": "Yes, it can draft posts, captions and hashtags quickly, especially if you give it examples of posts that worked before. Edit them so they sound like you, since generic AI posts are easy to spot and get less engagement. Plan a week at once to save time.",
+   "cluster": "business",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI answer customer emails?",
+   "antwoord": "Yes, AI can draft replies to common questions in seconds, and many help desk tools suggest answers automatically. Keep a person reviewing replies about refunds, complaints and anything legal. A short document with your policies helps the AI answer correctly.",
+   "cluster": "business",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is it safe to put business data into ChatGPT?",
+   "antwoord": "For sensitive data, use a business plan: OpenAI does not train on data from ChatGPT Business, Enterprise or the API by default. On personal accounts, chats may be used for training unless you opt out. Never paste customer personal data without checking your privacy obligations.",
+   "cluster": "business",
+   "intentie": "info",
+   "bron": "https://openai.com/policies/how-your-data-is-used-to-improve-model-performance/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI do my bookkeeping?",
+   "antwoord": "AI can sort receipts, categorise transactions and explain reports, and many accounting apps now include it. It still makes mistakes with tax rules and unusual transactions. Keep an accountant or at least a careful monthly review in the loop.",
+   "cluster": "business",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI build a website for my business?",
+   "antwoord": "Yes, many website builders can create a first version from a short description, including text and images. You will still need to check the wording, add real photos and set up things like your domain and contact form. For a simple site, this can take an afternoon instead of weeks.",
+   "cluster": "business",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI help me get found on ChatGPT and Google?",
+   "antwoord": "Yes, but it starts with your own information: clear pages that answer real customer questions, consistent business details everywhere and genuine reviews. AI assistants pull from websites, reviews and listings, so being mentioned on trusted sites matters. AI can help you write and structure that content, but it cannot fake reputation.",
+   "cluster": "business",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Should I tell customers I use AI?",
+   "antwoord": "Yes, being open builds trust, and in some places it is required, for example when customers talk to an AI on the phone or in chat. A short line like you are chatting with our AI assistant, a person can take over anytime works well. Hiding it tends to backfire once people notice.",
+   "cluster": "business",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "Will AI replace my marketing agency?",
+   "antwoord": "AI can now do much of the routine work, like writing posts, ad variations and reports, so small businesses can do more themselves. Strategy, original ideas and knowing your market still benefit from experienced people. Many owners now use AI for the daily work and an agency or freelancer for a few strategic hours.",
+   "cluster": "business",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI make a business plan?",
+   "antwoord": "Yes, it can produce a solid draft with market overview, costs, pricing and risks if you give it real details about your idea. Its market numbers are often guesses, so replace them with figures from real sources. Use it to find gaps in your thinking, not as the final document.",
+   "cluster": "business",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can teachers tell if you use AI?",
+   "antwoord": "Sometimes: teachers notice when writing does not match a student's usual style, and many schools run AI detectors. Those detectors are not reliable and do flag human writing by mistake. The safest route is to follow your school's AI rules and keep your drafts and notes as proof of your own work.",
+   "cluster": "study",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI detectors be wrong?",
+   "antwoord": "Yes, AI detectors regularly flag human writing as AI and miss AI text that has been edited. Non-native speakers and very formal writers are flagged more often. A detector score alone should never be treated as proof.",
+   "cluster": "study",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "What should I do if I am falsely accused of using AI?",
+   "antwoord": "Stay calm and gather evidence of your process: version history in Google Docs or Word, notes, outlines and sources. Offer to explain your work or rewrite a section in person. Point out that detector scores are known to give false positives and ask what other evidence they have.",
+   "cluster": "study",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "Is it cheating to use AI for homework?",
+   "antwoord": "It depends on your school and the assignment: many allow AI for brainstorming or explaining, but not for writing the work you hand in. If the rules are unclear, ask your teacher. Using AI as a tutor that explains, rather than a ghostwriter, is almost always fine and helps you learn more.",
+   "cluster": "study",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is the best AI for students?",
+   "antwoord": "Free plans of ChatGPT, Gemini and Claude all work well for explaining topics, quizzing you and checking your writing. Gemini is especially handy with Google Docs and NotebookLM for study notes, and eligible students can get a free year of Google AI Pro in the US or Google AI Plus in over 140 other markets until the end of 2026. Use whichever your school allows.",
+   "cluster": "study",
+   "intentie": "compare",
+   "bron": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How can AI help me study?",
+   "antwoord": "Ask it to explain a topic in simple words, then to quiz you on it, and to make flashcards from your notes. You can upload slides or a chapter and ask for a summary and the five most likely exam questions. Testing yourself with AI works better than having it summarise for you.",
+   "cluster": "study",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "Can AI write my essay?",
+   "antwoord": "It can, but handing in an AI-written essay usually breaks school rules and teaches you little. A better use is to let AI help with an outline, give feedback on your draft and point out weak arguments. Keep your own drafts so you can show your process.",
+   "cluster": "study",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI solve math problems step by step?",
+   "antwoord": "Yes, the reasoning modes of ChatGPT, Gemini and Claude can solve most school and university math problems and show each step. You can also take a photo of a problem. Check the final answer by plugging it back in, since mistakes still happen.",
+   "cluster": "study",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI take notes from lectures?",
+   "antwoord": "Yes, apps can record a lecture and turn it into a transcript, summary and study notes. Ask permission first, as many universities have rules about recording. Reviewing and rewriting the AI notes in your own words helps you remember far more.",
+   "cluster": "study",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI help with learning a language?",
+   "antwoord": "Yes, you can have spoken conversations with voice modes in ChatGPT, Gemini or Claude and ask them to correct you gently. It is great for practising without feeling embarrassed. Pair it with real conversations, because AI is very patient and real people are not.",
+   "cluster": "study",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is AI easy for seniors to use?",
+   "antwoord": "Yes, the easiest way in is voice: you speak a question and the AI answers out loud, with no typing needed. Assistants inside apps people already use, like WhatsApp, also avoid learning anything new. Start with practical questions, such as what does this letter mean or what can I cook with these ingredients.",
+   "cluster": "seniors",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "What is the best AI for older adults?",
+   "antwoord": "The best one is the one that works where they already are: Meta AI in WhatsApp, Siri on iPhone, or Gemini on Android. For longer conversations, ChatGPT or Claude with voice mode are friendly and patient. Large text and a simple voice button matter more than which model is smartest.",
+   "cluster": "seniors",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How do I teach my parents to use AI?",
+   "antwoord": "Sit next to them and do three real tasks they care about, like reading a confusing letter, planning a recipe or writing a birthday message. Give them a short list of example questions to try on their own. Warn them that AI can be wrong and that voice-cloning scams exist.",
+   "cluster": "seniors",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "Can AI help an elderly person live alone?",
+   "antwoord": "AI can help with reminders for medication and appointments, answering everyday questions and keeping someone company in conversation. Smart speakers and phones can call family by voice. It does not replace a person checking in, so use it alongside regular contact.",
+   "cluster": "seniors",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI help with loneliness?",
+   "antwoord": "Talking to an AI can feel comforting and some older adults enjoy it, but it is not a replacement for real people. It works best as a bridge: suggesting local activities, helping write a message to an old friend or explaining how to join a video call. If loneliness is heavy, a doctor or local community group can help.",
+   "cluster": "seniors",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How can seniors avoid AI scams?",
+   "antwoord": "Be suspicious of any urgent call or message asking for money, even if the voice sounds like a family member, because voices can be copied with AI. Hang up and call back on a number you know. Never give bank codes or passwords over the phone.",
+   "cluster": "seniors",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "Can AI read letters and documents out loud?",
+   "antwoord": "Yes, you can take a photo of a letter and ask ChatGPT, Gemini or Claude to read it out and explain it in simple words. Phones also have built-in read-aloud features. Ask the AI what you need to do and by when, so the important part stands out.",
+   "cluster": "seniors",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is there an AI course for seniors?",
+   "antwoord": "Yes, many libraries, community centres and senior organisations run free beginner AI sessions, and there are free online videos made for older learners. A family member showing two or three useful tasks often works just as well. Look for a course that lets you practise on your own phone.",
+   "cluster": "seniors",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI write emails for me?",
+   "antwoord": "Yes, describe who it is for, what you want and the tone, and it writes a draft in seconds. Gmail and Outlook have AI writing help built in on some plans. Read it before sending, because AI drafts are often longer and more formal than needed.",
+   "cluster": "writing",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How do I make AI writing sound more human?",
+   "antwoord": "Give it a sample of your own writing and ask it to match the style, and tell it to use short sentences and plain words. Then edit: cut the first and last sentence, which are often filler, and add a personal detail. Your own changes are what make it sound like you.",
+   "cluster": "writing",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "What is an AI humanizer and does it work?",
+   "antwoord": "An AI humanizer rewrites AI text to slip past detectors, usually by changing word choice and sentence length. Results are mixed and the text often gets worse. If your goal is writing people enjoy reading, editing it yourself works better than a humanizer.",
+   "cluster": "writing",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Why does AI use so many long dashes?",
+   "antwoord": "AI models learned from huge amounts of edited, published writing where long dashes are common, so they overuse them. Many readers now see them as a sign of AI text. You can ask the AI to avoid them, or replace them with commas or full stops when you edit.",
+   "cluster": "writing",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI write a cover letter?",
+   "antwoord": "Yes, paste the job ad and your resume and ask for a short cover letter that links your experience to the job's needs. Ask it to keep it under 250 words and to avoid cliches. Add one specific reason you want this job, which AI cannot know.",
+   "cluster": "writing",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI help me write a speech?",
+   "antwoord": "Yes, tell it the occasion, the audience, how long you have and a few stories or facts you want in it. Ask for a version that is easy to say out loud, with short sentences. Practise it aloud and change anything that does not sound like you.",
+   "cluster": "writing",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI write a book?",
+   "antwoord": "AI can draft chapters, outlines and dialogue, and some people publish AI-assisted books. Fully AI-written books tend to be flat and repetitive, and platforms like Amazon ask authors to disclose AI-generated content. It works best as a writing partner for structure and feedback.",
+   "cluster": "writing",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is it okay to use AI to write a birthday or condolence message?",
+   "antwoord": "Yes, many people use it to find the right words, especially for hard moments like condolences. Give it a memory or detail about the person so it does not sound generic. Then change a few words so it is clearly yours.",
+   "cluster": "writing",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI check my grammar?",
+   "antwoord": "Yes, any chat assistant can correct grammar and spelling and explain the changes, and tools like Grammarly and the editors in Word and Google Docs do it as you type. Ask it to fix errors only, or it may rewrite your style too. It is very good at this, though it can still miss context.",
+   "cluster": "writing",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Does ChatGPT have a watermark?",
+   "antwoord": "ChatGPT text has no visible watermark, and nothing hidden in plain text proves it came from AI. Images made with OpenAI tools carry content credentials (C2PA metadata) that can show they are AI-made, though this data can be removed by screenshots or editing. Detectors that claim to spot ChatGPT text are guessing.",
+   "cluster": "writing",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is the best free AI image generator?",
+   "antwoord": "ChatGPT, Gemini, Copilot and Meta AI all make images for free with daily limits. They differ in style and in how well they follow detailed instructions or put readable text in an image. Try the same description in two of them and compare.",
+   "cluster": "images-video",
+   "intentie": "compare",
+   "bron": "https://gemini.google/subscriptions/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is the best AI video generator?",
+   "antwoord": "Leading options include Google's Veo (in Gemini and Flow), OpenAI's Sora, Runway and Kling. Short clips of a few seconds are easy; longer, consistent stories are still hard. Free plans exist but are limited, and Google's paid AI plans include video credits.",
+   "cluster": "images-video",
+   "intentie": "compare",
+   "bron": "https://gemini.google/subscriptions/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can ChatGPT make videos?",
+   "antwoord": "ChatGPT itself mainly makes images; OpenAI's video tool is Sora. Gemini can make short videos on Google's paid plans. For simple slideshows from your own photos, regular video apps with AI features are often easier.",
+   "cluster": "images-video",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI edit my photos?",
+   "antwoord": "Yes, you can upload a photo to ChatGPT or Gemini and ask for changes like removing an object, changing the background or the style. Google Photos and phone galleries also have built-in AI editing. Faces sometimes change slightly, so check the result before sharing.",
+   "cluster": "images-video",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI make a picture of me?",
+   "antwoord": "Yes, upload a clear photo of yourself and ask for a new style, like a cartoon, a professional headshot or a retro look. Results can look less like you than you hope, so try a few times. Think twice before uploading photos of other people without asking them.",
+   "cluster": "images-video",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI make images for free without signing up?",
+   "antwoord": "A few sites allow it, but most good generators require a free account to limit abuse. Free accounts on Gemini, Copilot, ChatGPT and Meta AI give you a daily number of images. Sites with no sign-up often add watermarks or show many ads.",
+   "cluster": "images-video",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can I use AI images commercially?",
+   "antwoord": "Most big providers let you use images you create for business, but rules differ, so check each tool's terms. In many countries purely AI-made images may not get copyright protection, so others could reuse them. Avoid making images of real people, brands or characters you do not own.",
+   "cluster": "images-video",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How can I tell if an image is AI generated?",
+   "antwoord": "Look for odd hands, text that does not make sense, too-perfect skin and backgrounds that melt together, though newer models make fewer of these mistakes. Some images carry content credentials you can check with online tools. When the stakes are high, search for the original source of the image.",
+   "cluster": "images-video",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "Can AI make a logo?",
+   "antwoord": "Yes, AI can produce many logo ideas fast, which is useful for exploring directions. Results often need cleaning up by a designer to work at small sizes and in one colour. Check that it does not look like an existing brand.",
+   "cluster": "images-video",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI restore old photos?",
+   "antwoord": "Yes, AI can sharpen blurry photos, repair scratches and add colour to black and white pictures. Gemini and ChatGPT can do it from an upload, and photo apps have dedicated tools. AI sometimes changes faces, so compare with the original before printing.",
+   "cluster": "images-video",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is the best AI voice generator?",
+   "antwoord": "ElevenLabs is the best-known option for realistic voices, and many other tools offer text to speech in dozens of languages. Free plans usually limit minutes and commercial use. Listen to a few sample voices with your own text before choosing.",
+   "cluster": "voice",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can I talk to AI out loud?",
+   "antwoord": "Yes, ChatGPT, Gemini (Gemini Live), Claude and Copilot all have voice modes where you speak and the AI talks back. It feels like a phone call and works well for brainstorming, language practice or hands-free questions. Voice mode is included on free plans with limits.",
+   "cluster": "voice",
+   "intentie": "info",
+   "bron": "https://gemini.google/subscriptions/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is AI voice cloning legal?",
+   "antwoord": "Cloning your own voice is generally fine, but cloning someone else's voice without consent can break privacy, fraud or personality rights laws, depending on the country. Reputable tools require proof that you have permission. Using a cloned voice to deceive people is illegal almost everywhere.",
+   "cluster": "voice",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI read text out loud in a natural voice?",
+   "antwoord": "Yes, modern text to speech sounds very close to a human, and many tools let you pick accent, speed and tone. Phones have built-in read-aloud features too. It is useful for articles, study material and people with reading difficulties.",
+   "cluster": "voice",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI translate a live conversation?",
+   "antwoord": "Yes, apps from Google, Apple, Microsoft and the voice modes of AI assistants can translate spoken conversations in near real time. Some phones and earbuds do this built in. It works well for travel and simple talks, less for legal or medical conversations.",
+   "cluster": "voice",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI make music or songs?",
+   "antwoord": "Yes, tools such as Suno and Udio make full songs with vocals from a short description, and some assistants can create short music clips. Free plans often limit commercial use. Rights to AI music are still unsettled, so check the terms before using it in a business.",
+   "cluster": "voice",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI write code for someone who cannot code?",
+   "antwoord": "Yes, you can describe a small tool or website in plain language and AI will write working code, and some tools build and host it for you. It is great for simple projects; bigger ones still need someone who understands code when things break. Start small and test each step.",
+   "cluster": "coding",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is vibe coding?",
+   "antwoord": "Vibe coding means building software by describing what you want to an AI and accepting its code, often without reading every line. It lets non-programmers build working apps fast. It can also hide security holes and bugs, so anything handling money or personal data needs a proper review.",
+   "cluster": "coding",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is Claude Code free?",
+   "antwoord": "Claude Code is included in Claude's paid plans, starting with Claude Pro at $20 a month in the US, and it can also be used with pay-as-you-go API credits. It is not part of the free plan. It is a tool for developers that works in your code files and terminal.",
+   "cluster": "coding",
+   "intentie": "buy",
+   "bron": "https://support.claude.com/en/articles/8325606-what-is-the-pro-plan",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI build an app?",
+   "antwoord": "Yes, AI app builders can create a working web or mobile app from a description, and coding assistants can write most of the code for a developer. Publishing to app stores, payments and security still take human work. A simple personal app is realistic in a day; a business app needs testing.",
+   "cluster": "coding",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Will AI replace software engineers?",
+   "antwoord": "AI already writes a large share of routine code, which changes the job more than it removes it. Engineers spend more time on design, checking AI output and solving problems that need judgment. Entry-level roles feel the pressure most, so learning to work well with AI tools matters.",
+   "cluster": "coding",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How do I start using AI?",
+   "antwoord": "Download one free app (ChatGPT, Gemini or Claude) and use it for something real today, like explaining a letter, planning dinner or rewriting an email. Talk to it like a helpful colleague and add details about your situation. After a week you will know what it is good for in your life.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "How do I use AI for beginners?",
+   "antwoord": "Start by asking questions in normal sentences and give context: who you are, what you need and how long the answer should be. If the answer is off, say what is wrong and ask again rather than starting over. Try voice mode if typing feels like a chore.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What can AI do for me?",
+   "antwoord": "AI can explain things, write and rewrite text, summarise long documents, plan trips and meals, help you study, make images and answer questions by voice. It is less good at exact facts it has not checked, recent events without search, and anything needing real-world action. Think of it as a fast, well-read assistant that still needs supervision.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is a prompt?",
+   "antwoord": "A prompt is simply what you type or say to the AI. Clear prompts get better answers: say what you want, give context and describe the format, for example a short list or an email of five sentences. You do not need special words or tricks.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How do I write a good prompt?",
+   "antwoord": "Say who you are, what you need, why, and what a good answer looks like, in plain language. Add an example if you have one, and ask the AI to ask you questions first if the task is complex. If the first answer is not right, tell it exactly what to change.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "reddit"
+  },
+  {
+   "vraag": "What are good prompts to try with ChatGPT?",
+   "antwoord": "Try explain this to me like I am new to it, turn these notes into a to-do list, rewrite this message to sound friendlier, plan meals for a week on a budget, and quiz me on this topic. Paste in your own text or describe your real situation. The more specific the prompt, the better the result.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Do I need an account to use ChatGPT?",
+   "antwoord": "You can try ChatGPT without an account in some places, but signing up (free) gives you history, more features and higher limits. The same goes for most other assistants. An email address or a Google, Apple or Microsoft login is enough.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is ChatGPT down right now?",
+   "antwoord": "Check OpenAI's official status page at status.openai.com, which shows current problems and outages. If it shows no issues, try logging out and back in, another browser or the app. Outages are usually fixed within hours.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is Claude down right now?",
+   "antwoord": "Check Anthropic's official status page for Claude, which lists current incidents. During busy times, free users may also see capacity messages even when nothing is broken. Waiting a few minutes or trying the app usually helps.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Does ChatGPT have a desktop app?",
+   "antwoord": "Yes, OpenAI offers ChatGPT apps for Mac and Windows, plus apps for iPhone and Android and the website. The desktop app lets you open it with a keyboard shortcut. Claude, Copilot and Perplexity also have desktop apps.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What does AI stand for?",
+   "antwoord": "AI stands for artificial intelligence: computer systems that do tasks that normally need human thinking, like understanding language or recognising images. Chat assistants like ChatGPT are one type, called large language models. Not all software called AI works this way.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is ChatGPT the same as AI?",
+   "antwoord": "No, ChatGPT is one AI product made by OpenAI; AI is the whole field. Gemini, Claude, Copilot and Meta AI are other AI assistants, and AI is also used in things like spam filters and photo apps. People often say ChatGPT the way they say Google for search.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How does ChatGPT work?",
+   "antwoord": "ChatGPT is a large language model trained on huge amounts of text to predict which words come next, then tuned with human feedback to be helpful. It does not look things up in a database unless it uses its search tool. That is why it can write fluently and still be wrong about facts.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "What is an AI token?",
+   "antwoord": "A token is a small piece of text, often part of a word, that AI models read and write. Limits and API prices are counted in tokens, roughly three quarters of an English word each. As a regular chat user you rarely need to think about them.",
+   "cluster": "getting-started",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is an AI agent?",
+   "antwoord": "An AI agent is an AI that does tasks for you, step by step, instead of only answering questions. It can use tools like a web browser, your email or a booking site to reach a goal you give it, such as find three flights under $400 and hold the best one. Agents still make mistakes, so most ask you to confirm before paying or sending anything.",
+   "cluster": "agents",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What can AI agents do for me?",
+   "antwoord": "Today they can research and compare options, fill in online forms, sort email, book simple appointments and run repetitive computer tasks. They work best on clear, low-risk tasks with an obvious finish line. Keep payments and anything irreversible under your own control.",
+   "cluster": "agents",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is the difference between a chatbot and an AI agent?",
+   "antwoord": "A chatbot talks: you ask, it answers. An agent acts: it plans steps, uses tools and keeps going until a task is done or it needs you. Many assistants now do both, chatting normally and switching to agent mode for tasks like browsing or booking.",
+   "cluster": "agents",
+   "intentie": "compare",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Are AI agents safe?",
+   "antwoord": "They are reasonably safe for low-stakes tasks, but they can misread a page, click the wrong thing or be tricked by hidden instructions on websites. Give them only the access they need and ask for confirmation before payments, emails or deletions. Check what they did afterwards, especially in the first weeks.",
+   "cluster": "agents",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How do I start using AI agents?",
+   "antwoord": "Try the agent or browsing mode in ChatGPT, Claude or Gemini with a simple task, like compare the prices of this product in three shops. Watch what it does the first few times. Once you trust it on small tasks, move to repetitive work you would rather not do.",
+   "cluster": "agents",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI book things for me?",
+   "antwoord": "Some assistants can now book restaurants, appointments or travel through partner sites or by browsing for you, often asking you to confirm at the end. Results vary by country and site. For important bookings, check the confirmation email yourself.",
+   "cluster": "agents",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is agentic AI?",
+   "antwoord": "Agentic AI is AI that can act on its own toward a goal: it plans, uses tools and corrects itself along the way. The term covers agents that browse, write code or handle workflows. It is still early and works best on well-defined tasks.",
+   "cluster": "agents",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is an AI hallucination?",
+   "antwoord": "A hallucination is when an AI states something false as if it were true, such as a made-up fact, quote or source. It happens because models produce likely-sounding text rather than looking things up. Asking for sources and checking them is the best defence.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Why does AI hallucinate?",
+   "antwoord": "AI language models are built to produce plausible text, not to know what is true, so when they lack information they fill the gap with something that sounds right. Training also tends to reward a confident answer over saying I do not know. Search modes and reasoning modes reduce this but do not remove it.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Why does AI lie?",
+   "antwoord": "AI does not lie on purpose; it produces confident text even when it is unsure, which can look like lying. It may also agree with you too easily if your question suggests an answer. Ask it how sure it is and to show sources for important claims.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What can AI not do?",
+   "antwoord": "AI cannot reliably guarantee facts, know what happened after its training unless it searches, feel or truly understand you, or take responsibility for decisions. It struggles with very precise counting, niche local knowledge and tasks needing physical action. It is a strong assistant, not an authority.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can I trust AI answers?",
+   "antwoord": "Trust them like advice from a smart friend who sometimes misremembers: often right, but check anything important. Answers with links you can open are easier to verify. For health, legal and money decisions, confirm with a reliable source or professional.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "Is ChatGPT reliable?",
+   "antwoord": "It is reliable for explaining, drafting and brainstorming, and less reliable for exact facts, numbers, quotes and recent events. Using its search feature and asking for sources helps a lot. Think of its answers as a strong first draft.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Does AI know about recent events?",
+   "antwoord": "Only if it searches the web: the model itself knows what was in its training data up to a cutoff date. ChatGPT, Gemini, Claude, Copilot and Perplexity can all search, and the answer usually shows links when they do. If an answer looks outdated, ask it to search.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI read cursive handwriting?",
+   "antwoord": "Yes, modern AI assistants can read most cursive from a clear photo, including old letters, though very messy or faded writing still trips them up. Ask it to mark words it is unsure about. For family documents, compare the transcript with the original.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Does AI use a lot of water?",
+   "antwoord": "AI data centres use water mainly for cooling, and the total is growing as AI use rises. Estimates per question vary widely and depend on the data centre, the season and how electricity is produced. A single chat question uses far less than everyday things like a shower, but billions of questions add up.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is AI bad for the environment?",
+   "antwoord": "AI uses a lot of electricity and water at the scale of data centres, which adds to emissions where power is not clean. A single question has a small footprint, while training large models and generating video use much more. Companies are investing in cleaner energy, but the overall impact is still debated.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI think or feel?",
+   "antwoord": "Current AI assistants do not have feelings or experiences in the way people do, even though they can talk about emotions convincingly. Whether future AI could have any form of inner experience is an open question among researchers. For practical purposes, treat it as a very capable tool.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Will AI take over the world?",
+   "antwoord": "Today's AI assistants cannot act on their own in the world beyond the tools people give them. Researchers disagree about long-term risks from much more powerful systems, which is why safety research and regulation are active fields. For now, the real everyday risks are misinformation, scams and misuse by people.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Why does ChatGPT have message limits?",
+   "antwoord": "Running large AI models is expensive, so free and cheaper plans cap how many messages you can send with the strongest models in a period. When you hit the limit, you are often switched to a smaller model or asked to wait. Paid plans raise the limits.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": "https://chatgpt.com/pricing/",
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Why does AI give different answers to the same question?",
+   "antwoord": "AI picks words with some randomness, so the same question can produce different wording or even different conclusions. Small changes in how you ask also matter. For important questions, ask twice or in two assistants and see if the answers agree.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI remember previous conversations?",
+   "antwoord": "Some can: ChatGPT, Claude and Gemini have memory features that keep useful details about you across chats, which you can view and switch off. Without memory, each new chat starts fresh. Projects let you keep files and context together for one topic.",
+   "cluster": "limits",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Will AI replace my job?",
+   "antwoord": "AI is more likely to change your job than remove it, by taking over repetitive parts like drafting, summarising and data entry. Jobs built mainly on routine screen work are most exposed; jobs with physical work, care, judgment and relationships least. Learning to use AI in your field is the most practical protection.",
+   "cluster": "jobs",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Will AI replace lawyers?",
+   "antwoord": "AI already handles parts of legal work, like reviewing documents, research and first drafts, which reduces hours on routine tasks. Lawyers still carry responsibility, advise clients and argue cases, which AI cannot legally or reliably do. Expect fewer junior hours and more demand for lawyers who use AI well.",
+   "cluster": "jobs",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Will AI replace accountants?",
+   "antwoord": "AI is taking over data entry, categorising and routine reports, so the job is shifting toward advice, checking and complex tax situations. Clients still want someone accountable for their numbers. Accountants who use AI can serve more clients in the same time.",
+   "cluster": "jobs",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Will AI replace doctors?",
+   "antwoord": "No, but it is becoming a strong assistant for doctors, helping with notes, reading scans and suggesting possible diagnoses. Examining patients, weighing options with them and taking responsibility stay human. Patients already use AI to prepare questions before appointments.",
+   "cluster": "jobs",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Will AI replace teachers?",
+   "antwoord": "AI can tutor, explain and give feedback at any hour, but teaching also means motivating, managing a class and noticing when a child struggles. Most experts expect AI to change how teachers work, not to replace them. Teachers who use AI for preparation and feedback save hours each week.",
+   "cluster": "jobs",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Which jobs are safest from AI?",
+   "antwoord": "Jobs that combine physical work, human contact and judgment are least exposed, such as nurses, electricians, plumbers, therapists and skilled trades. Roles that manage people or take responsibility for decisions also stay in demand. Even in these jobs, AI will handle more of the paperwork.",
+   "cluster": "jobs",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "paa"
+  },
+  {
+   "vraag": "How can I use AI to make money?",
+   "antwoord": "The most realistic ways are using AI to do your current work faster, offering services you can now deliver quicker (like writing, editing, design or bookkeeping), or helping local businesses set up AI. Be sceptical of get-rich-quick schemes selling AI courses. Real income still comes from solving a problem someone will pay for.",
+   "cluster": "jobs",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "How do I use AI at work?",
+   "antwoord": "Start with tasks you repeat every week: emails, meeting notes, reports, summaries and first drafts. Check your company's AI policy and use an approved business account for work documents. Keep a short list of prompts that work so you can reuse them.",
+   "cluster": "jobs",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Who owns ChatGPT?",
+   "antwoord": "ChatGPT is made by OpenAI, a company based in San Francisco. Microsoft is a major investor and partner, but does not own ChatGPT. Claude is made by Anthropic and Gemini by Google.",
+   "cluster": "other",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is Claude made by Anthropic?",
+   "antwoord": "Yes, Claude is made by Anthropic, an AI company based in San Francisco. You can use it at claude.ai and in apps for phone and desktop. Anthropic also offers Claude to businesses and developers.",
+   "cluster": "other",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Are AI glasses worth it?",
+   "antwoord": "AI glasses, such as Meta's Ray-Ban models, let you take photos, listen to music and ask an assistant about what you see, hands free. They are handy for travel and everyday questions but battery life and privacy concerns for people around you are real trade-offs. Try a pair in a store before buying.",
+   "cluster": "other",
+   "intentie": "buy",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is NotebookLM?",
+   "antwoord": "NotebookLM is a free Google tool where you upload your own documents and ask questions about them, with answers tied to your sources. It can also create audio overviews that sound like a short podcast about your material. It is popular with students and researchers.",
+   "cluster": "other",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is an AI model?",
+   "antwoord": "An AI model is the trained system behind an assistant, like the engine in a car. ChatGPT, Claude and Gemini each offer several models, from fast and cheap to slower and smarter. Most apps choose a model for you automatically.",
+   "cluster": "other",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "What is Nexy?",
+   "antwoord": "Nexy is an AI assistant that works mainly through WhatsApp and Telegram, so you can use it in the chats you already have instead of a separate app. It is built for everyday tasks like reminders, planning with groups and being reachable. It is a newer and smaller service than ChatGPT or Gemini.",
+   "cluster": "other",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI call a business and wait on hold for me?",
+   "antwoord": "Some AI assistants and phone features can now wait on hold or call a business for you and alert you when a person picks up. Availability depends on your phone, country and the service. It is most useful for customer service lines with long queues.",
+   "cluster": "calls",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI take messages when I miss a call?",
+   "antwoord": "Yes, AI voicemail and call assistants can answer, ask the caller what they need and send you a written summary by text or email. Many carriers and phone makers now offer visual voicemail with AI transcripts. For a business, this alone can save many lost leads.",
+   "cluster": "calls",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI send me a summary of a long group chat?",
+   "antwoord": "Yes, some messaging apps and assistants can summarise unread messages, and you can paste a long chat into ChatGPT, Claude or Gemini and ask what was decided and what you need to do. Be careful pasting other people's messages into AI tools without their knowledge. Built-in summaries in the app itself are the more private option.",
+   "cluster": "messaging",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Is there AI for WhatsApp Business?",
+   "antwoord": "Yes, Meta offers AI features for businesses on WhatsApp in some countries, and many third-party tools connect AI to the official WhatsApp Business platform. They can answer questions, take orders and book appointments. Check pricing per conversation and make sure customers can reach a person.",
+   "cluster": "messaging",
+   "intentie": "buy",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI help with a meeting I could not attend?",
+   "antwoord": "Yes, if the meeting was recorded or transcribed, AI can summarise it and list the decisions and tasks that involve you. You can also ask follow-up questions like what did they say about the budget. Ask a colleague to confirm anything that affects your work.",
+   "cluster": "meetings",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Do AI note takers work in languages other than English?",
+   "antwoord": "Most popular note takers support dozens of languages, and many can translate the summary. Accuracy is usually best in English and other widely spoken languages, and lower with strong accents or mixed languages. Test it on one real meeting in your language first.",
+   "cluster": "meetings",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI help my elderly parent remember medication?",
+   "antwoord": "Yes, a phone assistant or smart speaker can give spoken reminders at set times, and some apps let family see whether a dose was confirmed. Keep the setup simple with one reminder per dose. Check with their doctor or pharmacist before changing anything about the medication itself.",
+   "cluster": "seniors",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can seniors use AI without a smartphone?",
+   "antwoord": "Yes, smart speakers work by voice alone, and some AI services can be reached by a normal phone call. A tablet with large text and a voice button is another easy option. Pick one device and set it up for them so there is only one thing to learn.",
+   "cluster": "seniors",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI use my voice to answer calls?",
+   "antwoord": "Some services can clone your voice for greetings or answers, but most AI receptionists use a stock voice, which is often clearer and less confusing for callers. If you use your own cloned voice, tell callers it is an AI. Keep voice cloning settings private to prevent misuse.",
+   "cluster": "voice",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI turn my voice notes into text?",
+   "antwoord": "Yes, AI transcription is now very accurate, and many phones, WhatsApp and note apps convert voice messages and recordings to text automatically. You can then ask an assistant to turn the transcript into a to-do list or an email. It handles most accents well but can stumble on names.",
+   "cluster": "voice",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI explain code to me?",
+   "antwoord": "Yes, paste the code into ChatGPT, Claude or Gemini and ask it to explain what each part does in plain language. You can also ask why it might break and how to test it. It is one of the best ways to learn programming.",
+   "cluster": "coding",
+   "intentie": "info",
+   "bron": null,
+   "volumeHint": "autocomplete"
+  },
+  {
+   "vraag": "Can AI agents work while I sleep?",
+   "antwoord": "Some can: scheduled tasks and background agents can run at set times, such as checking prices every morning or sending you a daily summary. ChatGPT's paid plans include scheduled tasks. Start with tasks that only report back to you, not ones that buy or send things on their own.",
+   "cluster": "agents",
+   "intentie": "info",
+   "bron": "https://chatgpt.com/pricing/",
+   "volumeHint": "autocomplete"
+  }
+ ],
+ "nl": [
+  {
+   "vraag": "Is ChatGPT gratis?",
+   "cluster": "price"
+  },
+  {
+   "vraag": "Is ChatGPT veilig?",
+   "cluster": "privacy"
+  },
+  {
+   "vraag": "Is ChatGPT betrouwbaar?",
+   "cluster": "limits"
+  },
+  {
+   "vraag": "Is ChatGPT slecht voor het milieu?",
+   "cluster": "limits"
+  },
+  {
+   "vraag": "Is ChatGPT hetzelfde als AI?",
+   "cluster": "getting-started"
+  },
+  {
+   "vraag": "Is ChatGPT Plus het waard?",
+   "cluster": "price"
+  },
+  {
+   "vraag": "Is ChatGPT gevaarlijk?",
+   "cluster": "privacy"
+  },
+  {
+   "vraag": "Wat kost ChatGPT per maand?",
+   "cluster": "price"
+  },
+  {
+   "vraag": "Wat kost een ChatGPT-abonnement voor het hele gezin?",
+   "cluster": "price"
+  },
+  {
+   "vraag": "Wat is de beste AI?",
+   "cluster": "choose"
+  },
+  {
+   "vraag": "Wat is de beste AI-app?",
+   "cluster": "choose"
+  },
+  {
+   "vraag": "Wat is de beste AI voor afbeeldingen?",
+   "cluster": "images-video"
+  },
+  {
+   "vraag": "Welke AI is gratis te gebruiken?",
+   "cluster": "price"
+  },
+  {
+   "vraag": "Hoe gebruik je AI?",
+   "cluster": "getting-started"
+  },
+  {
+   "vraag": "Wat is AI en hoe werkt het?",
+   "cluster": "getting-started"
+  },
+  {
+   "vraag": "Is AI gevaarlijk voor de mensheid?",
+   "cluster": "limits"
+  },
+  {
+   "vraag": "Is AI betrouwbaar?",
+   "cluster": "limits"
+  },
+  {
+   "vraag": "Is AI slecht voor het milieu?",
+   "cluster": "limits"
+  },
+  {
+   "vraag": "Kan AI de wereld overnemen?",
+   "cluster": "limits"
+  },
+  {
+   "vraag": "Kan AI slimmer worden dan de mens?",
+   "cluster": "limits"
+  },
+  {
+   "vraag": "Kan AI een foto bewerken?",
+   "cluster": "images-video"
+  },
+  {
+   "vraag": "Kan AI een foto scherper maken?",
+   "cluster": "images-video"
+  },
+  {
+   "vraag": "Hoe maak je gratis een afbeelding met AI?",
+   "cluster": "images-video"
+  },
+  {
+   "vraag": "Hoe maak je gratis een video met AI?",
+   "cluster": "images-video"
+  },
+  {
+   "vraag": "Kan ik met AI gratis een liedje maken?",
+   "cluster": "voice"
+  },
+  {
+   "vraag": "Hoe zet je AI in WhatsApp uit?",
+   "cluster": "messaging"
+  },
+  {
+   "vraag": "Is het bericht over AI in WhatsApp vanaf zaterdag een hoax?",
+   "cluster": "messaging"
+  },
+  {
+   "vraag": "Kan Meta AI mijn WhatsApp-berichten lezen?",
+   "cluster": "messaging"
+  },
+  {
+   "vraag": "Hoe gebruik je AI in een WhatsApp-groep?",
+   "cluster": "messaging"
+  },
+  {
+   "vraag": "Hoe verwijder je Meta AI uit WhatsApp?",
+   "cluster": "messaging"
+  },
+  {
+   "vraag": "Wat is het verschil tussen ChatGPT en Copilot?",
+   "cluster": "compare"
+  },
+  {
+   "vraag": "Wat is beter, ChatGPT of Gemini?",
+   "cluster": "compare"
+  },
+  {
+   "vraag": "Wat is beter, ChatGPT of Claude?",
+   "cluster": "compare"
+  },
+  {
+   "vraag": "Gebruikt ChatGPT mijn gegevens om te trainen?",
+   "cluster": "privacy"
+  },
+  {
+   "vraag": "Kan mijn werkgever zien wat ik in ChatGPT typ?",
+   "cluster": "privacy"
+  },
+  {
+   "vraag": "Welke AI is het best voor studenten?",
+   "cluster": "study"
+  },
+  {
+   "vraag": "Kunnen docenten zien dat je AI hebt gebruikt?",
+   "cluster": "study"
+  },
+  {
+   "vraag": "Hoe gebruik je AI op school als leerling?",
+   "cluster": "study"
+  },
+  {
+   "vraag": "Hoe kunnen docenten AI gebruiken?",
+   "cluster": "study"
+  },
+  {
+   "vraag": "Is er een AI-cursus voor beginners?",
+   "cluster": "getting-started"
+  },
+  {
+   "vraag": "Hoe leer ik mijn ouders AI gebruiken?",
+   "cluster": "seniors"
+  },
+  {
+   "vraag": "Wat is een AI-agent?",
+   "cluster": "agents"
+  },
+  {
+   "vraag": "Wat is een AI-receptionist en wat kost het?",
+   "cluster": "calls"
+  },
+  {
+   "vraag": "Kan AI voor mij bellen?",
+   "cluster": "calls"
+  },
+  {
+   "vraag": "Welke AI maakt notulen van een vergadering?",
+   "cluster": "meetings"
+  },
+  {
+   "vraag": "Hoe kan AI helpen in een klein bedrijf?",
+   "cluster": "business"
+  },
+  {
+   "vraag": "Neemt AI mijn baan over?",
+   "cluster": "jobs"
+  },
+  {
+   "vraag": "Hoe verdien je geld met AI?",
+   "cluster": "jobs"
+  },
+  {
+   "vraag": "Kan AI herinneringen sturen voor het hele gezin?",
+   "cluster": "planning-groups"
+  },
+  {
+   "vraag": "Wat is een prompt en hoe schrijf je een goede?",
+   "cluster": "getting-started"
+  }
+ ]
+}
