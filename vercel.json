@@ -1794,7 +1794,7 @@
   },
   "redirects": [
     {
-      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:bundel|ttvideo|ttfeed|beeld/|prijslijst)|shop$|o$).+)",
+      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:bundel|ttvideo|ttfeed|beeld/|prijslijst|tlogo)|shop$|o$).+)",
       "has": [
         {
           "type": "host",
