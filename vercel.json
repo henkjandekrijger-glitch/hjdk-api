@@ -233,6 +233,10 @@
       "schedule": "9 * * * *"
     },
     {
+      "path": "/api/shop?op=bundelronde",
+      "schedule": "47 4 * * *"
+    },
+    {
       "path": "/api/keuze-tools?tool=rdam&op=ververs",
       "schedule": "20 */3 * * *"
     },

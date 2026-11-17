@@ -36,6 +36,8 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 8. Alleen melden, ander project: todayin MGID 12534692 loopt nog.
 9. Shop, 17 nov (Henkjan voert de code zelf door, opdracht staat in de TikTok-chat): koopknop werkend en gemeten in de TikTok-browser, tafelhaarden duurder (EUR 29,95 en 34,95), gratis verzending vervalt overal (Henkjan 17 nov: "Gratis verzending doen we niet meer") en verzendkosten zichtbaar bij de prijs, brandstofinfo, vertrouwen bij de knop en echte reviews (nooit verzonnen).
 
+10. Bundel van de dag, 17 nov: de shop moet kadoly.com/bundel/<code> tonen en in één keer afrekenen (opdracht in de TikTok-chat; gegevens uit https://go.kadoly.com/api/shop/bundel?code=<code>). Daarna gaan de bundeladvertenties op TikTok aan.
+
 ## Hoe een dag werkt (shoptest)
 - **Waar:** propellerads-mcp `lib/shoptest.ts`, cron 05:15 UTC en elk uur op :15 tot 21:15; met de hand via MCP-tool `shoptest` (`droog`, `max`), uitslag via `shoptest_log`. Een PropellerAds-dag loopt van 05:00 tot 05:00 UTC.
 - **Per dag in de code:** `DAGPLAN[dag] = {succes, doel}` (zonder plan start niets, sinds 7 nov); `DAGBOD[dag]` = bod (zonder DAGBOD valt hij terug op 0,30: altijd zetten); `VOORKEUR[dag]` = volgorde voor verse kopieën van succesproducten (Clickmind-ranglijst `/api/mm/ruwstand?producten=1`); `NIEUWKEUZE[dag]` = welke nieuwe producten als test, in volgorde. `doel` telt alle nieuwe starts van die dag mee (ook gestopte).
@@ -92,6 +94,7 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - hjdk-api: dagkeuze `lib/shopkies.js` (+ VAST_DAG in `api/shop.js`), teksten `lib/shopteksten-hand.js` en `lib/shoptekst.js`, bots `lib/shopbot.js`, niet geladen `lib/shopniet.js`, archief `lib/shcarchief.js`, kassadoel `lib/shopdirect.js`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 17 nov 2026: bundel van de dag (lib/bundel.js, op=bundel en op=bundelronde, cron 04:47 UTC): 2 of 3 producten van hetzelfde merk met één verzending, marge minstens EUR 15, klant bespaart minstens 10%. Waarom: per product blijft er EUR 0 tot 2 over terwijl een TikTok-verkoop rond EUR 11 kost; een set telt de marges op en betaalt één keer advertentie. Landing ?bundel=<code> naar kadoly.com/bundel/<code>. Tafelhaard zand en serveertray uit op TikTok (8 advertenties, haalden de EUR 15-regel niet).
 
 - **17 nov 2026 — /api/shop?op=prijsadvies (beschermde host):** prijsadvies van lib/shopprijs.js met marktprijzen (Demand Radar) en inkoop per product als compacte JSON, ?q=termen; voor het margeadvies aan Henkjan ("gezonde marge die wel concurreert").
 - **17 nov 2026 — Marge van de catalogus (TikTok-trendronde):** /api/shop?op=zoek kent nu &minmarge=<euro> (alleen op voorraad, hoogste marge eerst) en geeft in &kort=1 ook de marge. Uitkomst: 27 van de 3.005 producten halen EUR 8 marge per verkoop, meestal producten van EUR 187 tot 608; de 102 kerstproducten zitten op EUR 0,02 tot 2,25 behalve één. Betaald adverteren loont zo bijna nergens; prijzen moeten omhoog voordat kerst (de sterkste trend op TikTok NL) kan.
