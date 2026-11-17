@@ -1,0 +1,10 @@
+{
+ "ignoreCommand": "git diff HEAD^ HEAD --quiet -- .",
+ "functions": {
+  "api/maak.js": { "maxDuration": 300, "includeFiles": "{lib/Poppins-Bold.ttf,node_modules/ffmpeg-static/ffmpeg}" }
+ },
+ "crons": [
+  { "path": "/api/maak", "schedule": "10 4 * * *" },
+  { "path": "/api/maak", "schedule": "40 4 * * *" }
+ ]
+}

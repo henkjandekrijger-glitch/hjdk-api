@@ -1,0 +1,11 @@
+{
+ "name": "kadoly-video",
+ "private": true,
+ "type": "module",
+ "description": "Kadoly: elke nacht korte productvideo's voor Instagram, Facebook, YouTube en TikTok (apart project, zodat de shop geen videosoftware draagt)",
+ "dependencies": {
+  "@vercel/blob": "2.8.0",
+  "@vercel/og": "0.8.5",
+  "ffmpeg-static": "5.2.0"
+ }
+}

@@ -40,6 +40,8 @@ import { K_KOST, ontvang as margeOntvang, margeStand, zetMarge } from '../lib/sh
 import { prijsStand, prijsCsv } from '../lib/shopprijs.js';
 import { testRonde, testLabels, testTekst, TT_TEST } from '../lib/tttest.js';
 import { kiesBundel, bundelOpenbaar, bundelTekst, bundelCode, BUNDEL_REGEL } from '../lib/bundel.js';
+import { videoPlan, VIDEO_REGEL } from '../lib/kadolyvideoplan.js';
+import reels from '../kadoly/reels.json' with { type: 'json' };
 import { uurTel, uurStand, lekkenPagina, uurAanvullen, uurRitme, verkoopUren } from '../lib/shopuur.js';
 import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdracht.js';
 import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
@@ -1143,6 +1145,16 @@ export default async function handler(req, res) {
       const tel = {}; rijen.forEach(r => { tel[r.uitkomst] = (tel[r.uitkomst] || 0) + 1; });
       if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send('Kadoly: wat er gebeurde na een tik op de koopknop, ' + dg + ' (' + rijen.length + ' bezoekers)\n' + Object.entries(tel).sort((a, b) => b[1] - a[1]).map(([k, v]) => v + ' x ' + k).join('\n') + '\n\nPer bezoeker (nieuwste eerst)\n' + rijen.map(r => `${r.uur} ${r.net} ${r.product} zone ${r.zone || '-'} | tik na ${r.secTotTik ?? '?'} s | ${r.uitkomst} | daarna: ${r.na.join(', ') || 'niets'}${r.winkel.length ? ' | winkel: ' + r.winkel.join(', ') : ''} | doel 1 naar het netwerk: ${r.doel1 == null ? 'nee' : '+' + r.doel1 + 's'}`).join('\n')); }
       return res.status(200).json({ ok: true, dag: dg, aantal: rijen.length, uitkomsten: tel, bezoekers: rijen }); }
+    if (op === 'videoplan') { // 17 nov (Henkjan: "moet hele NL dag ... al via clickmind en lerend" en "Zet dit door"): welke producten vannacht een video krijgen; het project kadoly-video haalt dit op en rendert. Eén plan per dag (vast in kv), zonder marges in het antwoord.
+      const dag = DAY(), kp = 'hjdk:kadoly:videoplan:' + dag; let plan = await kv.get(kp).catch(() => null);
+      if (!plan || url.searchParams.get('opnieuw') === '1' && /\.vercel\.app$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || ''))) {
+        const cat = await catalog(true), gebruikt = (await kv.get('hjdk:kadoly:videopids').catch(() => null)) || {};
+        for (const v of (reels.videos || [])) for (const p of (v.pids || [])) if (!gebruikt[p]) gebruikt[p] = '2026-11-17';
+        plan = videoPlan(cat.items, gebruikt, reels.lerend, Math.min(4, Number(url.searchParams.get('n')) || VIDEO_REGEL.PER_NACHT), dag);
+        for (const v of plan) for (const p of v.pids) gebruikt[p] = dag;
+        await kv.set('hjdk:kadoly:videopids', gebruikt); await kv.set(kp, plan, { ex: 3 * 86400 });
+      }
+      return res.status(200).json({ ok: true, dag, regel: VIDEO_REGEL, plan }); }
     if (op === 'fotob64') { // 16 nov: productfoto's als base64 voor het maken van advertentievideo's (alleen via de beschermde vercel.app-host); ?p=pid,pid&t=ig
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const t = /^(ig|sq|md|mg)$/.test(url.searchParams.get('t') || '') ? url.searchParams.get('t') : 'ig'; const out = {};
