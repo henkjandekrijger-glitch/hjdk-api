@@ -5,21 +5,20 @@ import { anonymousService, CHANNELS } from '../lib/sealed-anonymous.js';
 // Eigenaar: ?op=intents&token=HJDK_TOKEN (laatste 50, e-mail gemaskeerd). ?op=indexnow pingt alle URL's één keer per versie (BIJGEWERKT);
 // daarna geeft hij alleen de bewaarde uitkomst terug, dus veilig om aan te roepen (kost niets, nooit in een lus).
 import { kv } from '../lib/db.js';
-import { PAGINAS, UI, BIJGEWERKT } from '../lib/sealed-content.js';
+import { UI, BIJGEWERKT } from '../lib/sealed-content.js';
 import { ICONS } from '../lib/sealed-icons.js';
 import { VAST, overdracht, overdrachtTekst } from '../lib/sealed-overdracht.js';
 import { proefStand, proefTekst } from '../lib/proef.js';
-import { renderSealedSpecial, renderPartij, zoekPartij, PARTIJ_INDEX } from '../lib/sealed.js';
-import { zoekLp, bewaarKoper, lijstKopers, LP_INDEX } from '../lib/sealed-lp.js';
-import { renderChatPage } from '../lib/sealed-chatpage.js';
+import { zoekLp, bewaarKoper, vulKoperAan, lijstKopers, LP_INDEX } from '../lib/sealed-lp.js';
+import { infoPagina, infoLinks, doorsturen } from '../lib/sealed-info.js';
+import { renderChatPage, renderManagePage } from '../lib/sealed-chatpage.js';
 import { chatStart, chatEv, chatVrij, chatVraag, chatStand, chatStandTekst, chatLeer } from '../lib/sealed-chat.js';
-import { extraPages } from '../lib/sealed-pages.js';
 import { berichten, HAIKU } from '../lib/ai.js';
 import { GROWTH_SCRIPT } from '../lib/sealed.js';
-import { renderPagina, renderHub, renderVoordeur, zoekPagina, sitemap, ROBOTS, llms, zichtJson, LOGO_SVG, INDEXNOW_KEY, BASE, HOST, url } from '../lib/sealed.js';
+import { sitemap, ROBOTS, llms, zichtJson, LOGO_SVG, INDEXNOW_KEY, BASE, HOST, url } from '../lib/sealed.js';
 
 const anonymous = anonymousService(kv);
-const INDEX_VERSION = BIJGEWERKT + '-anonymous-v2';
+const INDEX_VERSION = BIJGEWERKT + '-chat-v3'; // 17 nov 2026: 18 pagina's in de nieuwe opmaak, IndexNow pingt ze één keer opnieuw
 const GSC_META = process.env.SEALED_GSC_META || '';
 
 // Voordeur kiest de taal van de bezoeker (Henkjan 15 nov 2026: "Moet totaal taal agnostisch zijn based on browser"):
@@ -34,7 +33,7 @@ export function kiesTaal(req) {
   for (const x of lijst) if (UI[x.t]) return x.t;
   return 'en';
 }
-const MANIFEST = JSON.stringify({ name: 'Sealed Intent', short_name: 'Sealed Intent', start_url: '/', display: 'browser', background_color: '#ffffff', theme_color: '#2B47C4', icons: [{ src: '/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/icon-512.png', sizes: '512x512', type: 'image/png' }] });
+const MANIFEST = JSON.stringify({ name: 'Sealed Intent', short_name: 'Sealed Intent', start_url: '/', display: 'browser', background_color: '#ffffff', theme_color: '#111113', icons: [{ src: '/icon-192.png', sizes: '192x192', type: 'image/png' }, { src: '/icon-512.png', sizes: '512x512', type: 'image/png' }] });
 
 function stuur(res, status, type, body, cache = 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400', taal = '', robots = '') {
   res.statusCode = status;
@@ -113,6 +112,7 @@ export default async function handler(req, res) {
       const mail = String(b.mail || '').trim().toLowerCase().slice(0, 160); if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/.test(mail)) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store');
       const c = await anonymous.control('receipt', b); if (c.status !== 200) return stuur(res, 404, 'application/json', '{"ok":false}', 'no-store');
       await kv.set('si:notify:' + String(b.id), { mail, at: new Date().toISOString() }, { ex: 90 * 86400 });
+      try { await meld('Een eigenaar vraagt een seintje per mail als een koper past (adres staat bij de inzending, niet in deze melding). Het seintje gaat nog niet automatisch.'); } catch { /* melding is extra */ }
       return stuur(res, 200, 'application/json', '{"ok":true}', 'no-store');
     } catch { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
   }
@@ -122,6 +122,10 @@ export default async function handler(req, res) {
     if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
     res.setHeader('X-Robots-Tag', 'noindex, nofollow');
     try { const b = await leesBody(req); if (JSON.stringify(b).length > 8192) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store'); const r = await bewaarKoper(kv, req, b, meld); return stuur(res, r.status, 'application/json', JSON.stringify(r.body), 'no-store'); } catch { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
+  }
+  if (op === 'koperplus') {
+    if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
+    try { const b = await leesBody(req); if (JSON.stringify(b).length > 2048) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store'); return stuur(res, 200, 'application/json', JSON.stringify({ ok: await vulKoperAan(kv, b) }), 'no-store', '', 'noindex, nofollow'); } catch { return stuur(res, 503, 'application/json', '{"ok":false}', 'no-store'); }
   }
   if (op === 'kopers') {
     if (!process.env.HJDK_TOKEN || q.get('token') !== process.env.HJDK_TOKEN) return stuur(res, 403, 'application/json', '{"ok":false}', 'no-store');
@@ -147,16 +151,19 @@ export default async function handler(req, res) {
     res.setHeader('Vary', 'Accept-Language, Cookie');
     const k = kiesTaal(req);
     if (k) { res.statusCode = 302; res.setHeader('Location', '/' + k + (u.search || '')); res.setHeader('Cache-Control', 'private, no-store'); return res.end(); }
-    return stuur(res, 200, 'text/html; charset=utf-8', renderVoordeur(opts), 'private, no-store', 'en');
+    return stuur(res, 200, 'text/html; charset=utf-8', renderChatPage('en', null, { ...opts, growthScript: GROWTH_SCRIPT, links: infoLinks('en') }), 'private, no-store', 'en');
   }
-  if (!UI[taal]) return stuur(res, 404, 'text/html; charset=utf-8', renderVoordeur(opts), 'public, max-age=60');
-  if (!slug) { const links = [...PAGINAS.filter(p => p.taal === taal).map(p => ({ href: '/' + taal + '/' + p.slug, tekst: p.h1 })), ...extraPages().filter(p => p.language === taal).map(p => ({ href: '/' + taal + '/' + p.slug, tekst: p.title }))]; return stuur(res, 200, 'text/html; charset=utf-8', renderChatPage(taal, null, { ...opts, growthScript: GROWTH_SCRIPT, links }), 'public, max-age=60, s-maxage=300', taal); }
-  if (zoekLp(taal, slug)) return stuur(res, 200, 'text/html; charset=utf-8', renderChatPage(taal, zoekLp(taal, slug), { ...opts, growthScript: GROWTH_SCRIPT }), 'public, max-age=60, s-maxage=300', taal, LP_INDEX ? '' : 'noindex, follow');
-  if (zoekPartij(taal, slug)) { const aantal = +(await kv.get('si:n').catch(() => 0)) || 0; return stuur(res, 200, 'text/html; charset=utf-8', renderPartij(taal, { ...opts, aantal }), 'public, max-age=60, s-maxage=300', taal, PARTIJ_INDEX ? '' : 'noindex, follow'); }
-  const special=renderSealedSpecial(taal,slug,opts);
-  if(special){const priv=['seal','manage','partners'].includes(slug);return stuur(res,200,'text/html; charset=utf-8',special,priv?'private, no-store':undefined,taal,priv?'noindex, follow':'');}
-  const p = zoekPagina(taal, slug);
-  if (!p) return stuur(res, 404, 'text/html; charset=utf-8', renderHub(taal, opts), 'public, max-age=60');
-  return stuur(res, 200, 'text/html; charset=utf-8', renderPagina(p, opts), undefined, taal);
+  const chatOpts = { ...opts, growthScript: GROWTH_SCRIPT };
+  // Onbekend adres: dezelfde chatpagina als de voordeur, met 404 en noindex (de oude blauwe hub is weg).
+  const nietGevonden = t => stuur(res, 404, 'text/html; charset=utf-8', renderChatPage(t, null, { ...chatOpts, links: infoLinks(t), noindex: true }), 'public, max-age=60', t);
+  if (!UI[taal]) return nietGevonden('en');
+  if (!slug) return stuur(res, 200, 'text/html; charset=utf-8', renderChatPage(taal, null, { ...chatOpts, links: infoLinks(taal) }), 'public, max-age=60, s-maxage=300', taal);
+  if (zoekLp(taal, slug)) return stuur(res, 200, 'text/html; charset=utf-8', renderChatPage(taal, zoekLp(taal, slug), chatOpts), 'public, max-age=60, s-maxage=300', taal, LP_INDEX ? '' : 'noindex, follow');
+  // Opgeruimd 17 nov 2026 (Henkjan: "Ja prima voer door"): executive-pagina's, oud formulier, oude partijpagina en 'goede reactie' sturen door.
+  const naar = doorsturen(taal, slug);
+  if (naar) { res.statusCode = 301; res.setHeader('Location', naar); res.setHeader('Cache-Control', 'public, max-age=3600'); res.setHeader('X-Robots-Tag', 'noindex'); return res.end(); }
+  const info = infoPagina(taal, slug);
+  if (info) return stuur(res, 200, 'text/html; charset=utf-8', renderChatPage(taal, null, { ...chatOpts, pagina: info, links: infoLinks(taal, slug) }), 'public, max-age=60, s-maxage=300', taal);
+  if (slug === 'manage') return stuur(res, 200, 'text/html; charset=utf-8', renderManagePage(taal), 'private, no-store', taal, 'noindex, nofollow');
+  return nietGevonden(taal);
 }
-

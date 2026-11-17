@@ -32,7 +32,7 @@ const partner=await service.submit(req,{...valid,mode:'partner',terms:valid.term
 assert.equal(partner.status,201);assert.equal(records.get('si:i:'+partner.body.id).screening.status,'unavailable-pending-manual');
 assert.equal((await service.control('withdraw',{id,token})).status,200);assert.equal((await service.control('receipt',{id,token})).status,404);
 for(let i=0;i<3;i++)await service.submit(req,valid);assert.equal((await service.submit(req,valid)).status,429);
-const xml=sitemap();assert.equal([...xml.matchAll(/<loc>/g)].length,35);assert(!/<loc>[^<]*\/(seal|manage|partners)<\/loc>/.test(xml));
+const xml=sitemap();assert.equal([...xml.matchAll(/<loc>/g)].length,28);assert(!/<loc>[^<]*\/(seal|manage|partners)<\/loc>/.test(xml));
 let scripts=0;
 for(const h of [...PAGINAS.map(p=>renderPagina(p)),...['nl','en','de'].flatMap(t=>['seal','manage','partners'].map(s=>renderSealedSpecial(t,s)))]){
  for(const m of h.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)){if(m[0].includes('application/ld+json'))JSON.parse(m[1]);else{new vm.Script(m[1]);scripts++;}}
