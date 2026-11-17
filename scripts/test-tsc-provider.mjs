@@ -70,7 +70,20 @@ for (const [slug, info] of Object.entries(provider.DATA_SLUGS())) {
   fs.writeFileSync(path.join(out, 'data-' + info.kind + '-' + info.taal + '.html'), html);
 }
 for (const [slug, language] of Object.entries(provider.ABOUT_SLUGS())) { const html = render.extraPagina(B, slug, language, provider.aboutPage(B, language)); scripts(html); assert.ok(html.includes('AdsFair B.V.')); fs.writeFileSync(path.join(out, 'about-' + language + '.html'), html); }
-ok('datapagina\'s en over ons in drie talen');
+for (const [slug, info] of Object.entries(provider.COMPARE_SLUGS())) {
+  const pg = provider.comparePage(B, info.pair, info.taal), html = render.extraPagina(B, slug, info.taal, pg, {});
+  scripts(html); assert.equal((html.match(/<h1/g) || []).length, 1); assert.equal((html.match(/id="mail"/g) || []).length, 1);
+  for (const tl of LANGS) assert.ok(html.includes('hreflang="' + tl + '" href="' + B + '/' + info.pair.slugs[tl] + '"'));
+  if (info.taal !== 'nl') assert.ok(!NL_ONLY.test(text(html)), 'Nederlandse werknotitie op ' + slug);
+  assert.ok(html.includes(info.pair.x.slugs[info.taal]) && html.includes(info.pair.y.slugs[info.taal]), 'vergelijking linkt naar beide aanbieders');
+  if (slug === 'nl/vergelijk/smile-hair-clinic-vs-vera-clinic') fs.writeFileSync(path.join(out, 'compare-smile-vera-nl.html'), html);
+}
+assert.ok(Object.keys(provider.COMPARE_SLUGS()).length <= 18, 'hooguit zes paren: geen pagina per combinatie');
+const top = provider.mailTopThree(['hair', 'laser-eye'], 'nl', s => B + '/' + s);
+assert.ok(top.includes('/nl/klinieken/') && /\d,\d\d\/5/.test(top), 'maildeel noemt de top drie met cijfers en eigen pagina');
+assert.equal(provider.mailTopThree(['bestaat-niet'], 'en', s => s), '');
+for (const language of LANGS) assert.ok(render.extraPagina(B, provider.aboutSlug(language), language, provider.aboutPage(B, language)).includes('Henkjan de Krijger'), 'uitgever bij naam op over ons');
+ok('datapagina\'s, vergelijkingen, maildeel en over ons in drie talen');
 
 for (const [slug, info] of Object.entries(RANK_SLUGS)) {
   const html = render.rankPagina(B, slug, info, {}), list = LIJSTEN[info.id];

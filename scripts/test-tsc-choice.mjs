@@ -122,7 +122,7 @@ const kv={async get(k){return clone(db.get(k)??null)},async set(k,v){db.set(k,cl
 // Raw SET stores encoded JSON, just as production Redis does.
 const get=kv.get;kv.get=async k=>{const v=await get(k);if(typeof v==='string'&&v[0]==='{'){try{return JSON.parse(v)}catch{}}return v};
 const mailSource=fs.readFileSync(path.join(root,'lib/tsc-mail-v3.js'),'utf8').replace(/^import .*;\n/gm,'').replace(/^export \{[^}]+\};\n/gm,'').replace(/export /g,'');
-const inputs={createHash,randomBytes,kv,SITE:data.SITE,SRC:data.SRC,NEWS:news,...catalog,...engage,...acquisition,...dental,stuur:async(m,idem)=>{if(sendHook)await sendHook(m,idem);sent.push({m,idem});return {id:'test'}},tel:async(...x)=>metrics.push(x),geopend:async()=>{},klik:async()=>data.SITE.base,oldStand:async()=>({abonnees:0})};
+const inputs={createHash,randomBytes,kv,SITE:data.SITE,SRC:data.SRC,NEWS:news,...catalog,...engage,...acquisition,...dental,mailTopThree:provider.mailTopThree,stuur:async(m,idem)=>{if(sendHook)await sendHook(m,idem);sent.push({m,idem});return {id:'test'}},tel:async(...x)=>metrics.push(x),geopend:async()=>{},klik:async()=>data.SITE.base,oldStand:async()=>({abonnees:0})};
 const M=new Function(...Object.keys(inputs),mailSource+';return {aanmelden,bevestig,afmelden,preferences,savePreferences,deliver,ronde,past,routeMail,learningStand,mailEvent,acquisitionStand};')(...Object.values(inputs));
 const D=new Date().toISOString().slice(0,10),H=t=>createHash('sha256').update(t).digest('hex');
 const subscriber=(id,extra={})=>({id,email:id+'@example.invalid',taal:'nl',topics:['laser-eye'],ingreep:'laser-eye',naar:'any',actief:true,frequency:'daily',consent_version:engage.CONSENT_VERSION,af:'a'.repeat(48),pref:'b'.repeat(48),gezien:[],...extra});
