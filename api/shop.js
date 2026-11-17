@@ -435,7 +435,7 @@ function dbNood() { if (Date.now() - DB_NOOD < 300000) return; DB_NOOD = Date.no
 async function slugVan(pid) {
   const k = 'hjdk:shop:slug:' + pid; let sl = null; try { sl = await kv.get(k); } catch (e) {}
   if (sl) return sl === '-' ? '' : String(sl);
-  laterAf((async () => { try { const r = await fetch('https://kadoly.com/product/' + encodeURIComponent(pid) + '?lang=nl', { redirect: 'manual', signal: AbortSignal.timeout(4000) }); const loc = String(r.headers.get('location') || ''); const m = loc.match(/\/product\/([a-z0-9-]{3,140})(?:[?#]|$)/i); await kv.set(k, m && m[1] !== pid ? m[1] : '-', { ex: 7 * 86400 }); } catch (e) {} })());
+  laterAf((async () => { try { const r = await fetch('https://kadoly.com/product/' + encodeURIComponent(pid) + '?lang=nl', { redirect: 'manual', headers: { 'user-agent': UA, 'accept-language': 'nl-NL,nl;q=0.9' }, signal: AbortSignal.timeout(4000) }); const loc = String(r.headers.get('location') || ''); const m = loc.match(/\/product\/([a-z0-9-]{3,140})(?:[?#]|$)/i); await kv.set(k, m && m[1] !== pid ? m[1] : '-', { ex: 7 * 86400 }); } catch (e) {} })());
   return '';
 }
 async function direct(req, res, x) {
