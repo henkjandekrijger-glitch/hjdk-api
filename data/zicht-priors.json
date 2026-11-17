@@ -1100,5 +1100,17 @@
   "moeite": 1,
   "meten": "geindexeerd en vertoningen van de vrijgegeven seizoenspagina's tussen 16 nov en 7 jan",
   "status": "actief"
+ },
+ {
+  "id": "handaanvraag-geeft-crawl-niet-opname",
+  "les": "Een handmatige indexaanvraag in Search Console laat Google een onbekende pagina van een jonge site binnen 1 tot 2 dagen lezen; zonder aanvraag blijft dezelfde soort pagina wekenlang onbekend, ook met sitemap, IndexNow en homepage-link. Lezen is nog geen opnemen: Google kan hem daarna als 'Gecrawld, niet geindexeerd' laten liggen. Gebruik de aanvraag (ongeveer 10 per dag) voor pagina's met een piek op korte termijn.",
+  "kanaal": "google",
+  "bewijs": "17 nov 2026, whichtobuy.best: van de 12 boekgidsen met handaanvraag op 14 nov (proef wtb-kdp-boekgidsen-1114) werden er 11 op 14 tot 16 nov gecrawld, van de 6 cadeaugidsen zonder aanvraag 0 (nog 'URL is onbekend', in de sitemap sinds 9 tot 18 okt). Opgenomen: 0 van 11 na 1 tot 3 dagen. Googlebot US 15 naar 49 keer in 7 dagen, piek 27 op 15 nov. Site staat met 5 van 160 in Google.",
+  "bron": "dagcontrole 17 nov 2026, /api/gsc?op=index&site=us en /api/zicht?op=crawl&site=us",
+  "sterkte": 2,
+  "effect": 2,
+  "moeite": 1,
+  "meten": "proef wtb-bf-handaanvraag-1117: gecrawld en opgenomen van 10 Black Friday-gidsen met aanvraag tegen 4 zonder, voor 1 dec",
+  "status": "actief"
  }
 ]
