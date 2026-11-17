@@ -11,7 +11,7 @@ import { VAST, overdracht, overdrachtTekst } from '../lib/sealed-overdracht.js';
 import { proefStand, proefTekst } from '../lib/proef.js';
 import { zoekLp, bewaarKoper, vulKoperAan, lijstKopers, LP_INDEX } from '../lib/sealed-lp.js';
 import { infoPagina, infoLinks, doorsturen } from '../lib/sealed-info.js';
-import { eigenaarPost, koperPost, gesprekkenLijst, maakMailer } from '../lib/sealed-post.js';
+import { eigenaarPost, koperPost, gesprekkenLijst, maakMailer, bezorgWachtend } from '../lib/sealed-post.js';
 import { renderChatPage, renderManagePage, renderThreadPage } from '../lib/sealed-chatpage.js';
 import { chatStart, chatEv, chatVrij, chatVraag, chatStand, chatStandTekst, chatLeer } from '../lib/sealed-chat.js';
 import { berichten, HAIKU } from '../lib/ai.js';
@@ -122,7 +122,7 @@ export default async function handler(req, res) {
   if (op === 'koper') {
     if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
     res.setHeader('X-Robots-Tag', 'noindex, nofollow');
-    try { const b = await leesBody(req); if (JSON.stringify(b).length > 8192) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store'); const r = await bewaarKoper(kv, req, b, meld); return stuur(res, r.status, 'application/json', JSON.stringify(r.body), 'no-store'); } catch { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
+    try { const b = await leesBody(req); if (JSON.stringify(b).length > 8192) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store'); const r = await bewaarKoper(kv, req, b, meld); if (r.status === 201) { try { const k = await kv.get('si:b:' + r.body.id), m = maakMailer(kv); if (k) await bezorgWachtend(kv, k, { stuurMail: m && m.koper, meld }); } catch { /* bezorgen is extra */ } } return stuur(res, r.status, 'application/json', JSON.stringify(r.body), 'no-store'); } catch { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
   }
   if (op === 'koperplus') {
     if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
