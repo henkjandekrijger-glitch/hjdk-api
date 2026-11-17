@@ -1,0 +1,33 @@
+{
+  "opmerking": "Bewezen producten uit de Meta Ad Library (17 nov 2026, Henkjan: \"Vindt de meta ads library en match op onze producten dus daar bewezen gaan we ook testen\" en \"2. JA\": eerst de prijzen naar het prijsadvies, dan testen). De Whop-ronde zet een product pas in de Kadoly-campagne als de shop het tegen de nieuwe prijs verkoopt (marge minstens margeMin euro) en het op voorraad is; per ronde hoogstens één product met zijn twee advertenties. Kandidaten op volgorde: de eerste die voldoet wordt gebruikt. Teksten alleen met feiten uit de titel of productpagina, geen prijzen (Henkjan 29 okt).",
+  "margeMin": 10,
+  "producten": [
+    {
+      "naam": "Tavellio lamp",
+      "bewijs": "NL Ad Library 17 nov: Tavellio zelf 25+ actieve advertenties; Luminize loopt 443 dagen; LucyLights 11 advertenties (81 tot 8 dagen, nieuwe varianten = opschalen); Creative.Lighting 160 dagen. Haak: licht zonder snoer, overal neer te zetten.",
+      "kandidaten": ["oc_4173959235305473", "oc_4173959227441153", "oc_4173959224754177", "oc_4173959228096513", "oc_4173959218839553"],
+      "varianten": [
+        { "invalshoek": "zonder snoer", "kop": "Licht waar je maar wilt", "tekst": "Oplaadbare lamp van Tavellio, zonder snoer. Op tafel, in de vensterbank of naast je bed." },
+        { "invalshoek": "cadeau", "kop": "Een cadeau dat elke avond aangaat", "tekst": "Draadloze, oplaadbare lamp van Tavellio. Sfeerlicht, ook waar geen stopcontact is." }
+      ]
+    },
+    {
+      "naam": "Wollen deken MoST",
+      "bewijs": "NL Ad Library 17 nov: Kico Label wikkeldeken 47 dagen; Woolville 64 tot 17 dagen (blijft varianten bijzetten). Haak: warm in de winter, cadeau voor koude avonden.",
+      "kandidaten": ["oc_4174003731562498", "oc_4174003732054018", "oc_4174003731808258"],
+      "varianten": [
+        { "invalshoek": "warm", "kop": "Warm onder 100% wol", "tekst": "Wollen deken van MoST met een vrolijk zigzagpatroon. Voor op de bank als het buiten koud is." },
+        { "invalshoek": "cadeau", "kop": "Cadeau voor koude avonden", "tekst": "Deken van 100% wol met zigzagpatroon, van MoST. Iets om jarenlang onder te kruipen." }
+      ]
+    },
+    {
+      "naam": "Serviesset steengoed",
+      "bewijs": "NL Ad Library 17 nov: Mimo Homeware 8 advertenties (148 tot 5 dagen, schaalt op), Karakushome 196 dagen. Haak: de tafel klaar voor de feestdagen.",
+      "kandidaten": ["oc_4174003356876801", "oc_4174003357499393", "oc_4174003271188481"],
+      "varianten": [
+        { "invalshoek": "feestdagen", "kop": "De tafel klaar voor de feestdagen", "tekst": "Serviesset van steengoed, 16-delig voor 4 personen. In één keer een gedekte tafel." },
+        { "invalshoek": "elke dag", "kop": "Steengoed voor elke dag", "tekst": "16-delige serviesset voor 4 personen, van steengoed. Rustig van kleur, past bij elke tafel." }
+      ]
+    }
+  ]
+}
