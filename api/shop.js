@@ -1201,12 +1201,14 @@ export default async function handler(req, res) {
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const lf = { name: 'probe', form_type: 'more_volume', questions: [{ type: 'email' }], privacy_policy: { url: 'https://curacao.day/nl/privacy' } };
       const p1 = await whopApi('/ad_groups', { method: 'POST', body: { ad_campaign_id: 'adcamp_xxxxxxxxxxxxxx', title: 'probe', status: 'paused', conversion_location: 'instant_forms' } });
-      const p2 = await whopApi('/ads', { method: 'POST', body: { ad_group_id: 'adgrp_xxxxxxxxxxxxxx', title: 'probe', call_to_action: 'sign_up', lead_form: lf, primary_texts: [{ text: 'x' }], headlines: [{ text: 'x' }] } });
+      const adBody = { ad_group_id: 'adgrp_xxxxxxxxxxxxxx', title: 'probe', call_to_action: 'sign_up', lead_form: lf, primary_texts: [{ text: 'x' }], headlines: [{ text: 'x' }] };
+      const p2 = await whopApi('/ads', { method: 'POST', body: adBody });
+      const versies = {}; for (const v of ['2026-10-06', '2026-11-01', '2026-11-10', '2026-11-16-2', '2026-12-01']) { const r = await whopApi('/ads', { method: 'POST', body: adBody, versie: v }); versies[v] = r.status + ' ' + (r.fout || ''); }
       const p3 = await whopApi('/ad_groups', { method: 'POST', body: { ad_campaign_id: 'adcamp_xxxxxxxxxxxxxx', title: 'probe', status: 'paused', bestaatniet_veld: 1 } });
       const sa = await whopApi('/social_accounts?account_id=' + WHOP_BIZ); const said = sa.ok && sa.j && Array.isArray(sa.j.data) && sa.j.data[0] ? sa.j.data[0].id : '';
       const p4 = said ? await whopApi('/social_accounts/' + said + '/lead_forms?account_id=' + WHOP_BIZ) : { status: 0, fout: 'geen social account' };
       const kort = r => ({ status: r.status, fout: r.fout || null, sleutels: r.j && typeof r.j === 'object' ? Object.keys(r.j).slice(0, 8) : null });
-      return res.status(200).json({ ok: true, groep_met_conversion_location: kort(p1), ad_met_lead_form: kort(p2), controle_onbekend_veld: kort(p3), social_accounts: { status: sa.status, n: sa.j && Array.isArray(sa.j.data) ? sa.j.data.length : null, velden: sa.j && Array.isArray(sa.j.data) && sa.j.data[0] ? Object.keys(sa.j.data[0]) : null }, lead_forms: kort(p4) }); }
+      return res.status(200).json({ ok: true, groep_met_conversion_location: kort(p1), ad_met_lead_form: kort(p2), versies, controle_onbekend_veld: kort(p3), social_accounts: { status: sa.status, n: sa.j && Array.isArray(sa.j.data) ? sa.j.data.length : null, velden: sa.j && Array.isArray(sa.j.data) && sa.j.data[0] ? Object.keys(sa.j.data[0]) : null }, lead_forms: kort(p4) }); }
     if (op === 'whleadstand') { // tellingen per project per dag (alleen aantallen)
       const out = {}; for (const p of Object.keys(WH_PROJECTEN)) { const pr = whProject(p); let t = {}; try { const h = await kv.raw(['HGETALL', 'hjdk:whl:tel:' + p]); if (Array.isArray(h)) for (let i = 0; i + 1 < h.length; i += 2) t[h[i]] = num(h[i + 1]); else t = h || {}; } catch (e) {} out[p] = { klaar: pr.klaar, sleutel: !!pr.key, bedrijf: !!pr.biz, tellingen: t }; }
       return res.status(200).json({ ok: true, projecten: out }); }
