@@ -1,6 +1,28 @@
 {
-  "uitleg": "Ontwikkelingen per route voor de ochtendmail van todayin surgery (lib/tsc-mail.js). Elke dag zet de geplande Claude-taak hier nieuwe items bij: alleen echte feiten met bron en datum, nieuwste bovenaan. taal: en|nl|de|*; ingreep: hair|tummy|eyelid|lipo|*; naar: turkey|mexico|colombia|dominican-republic|thailand|south-korea|abroad|home|*; pagina: slug op todayin.email/surgery.",
+  "uitleg": "Ontwikkelingen per route voor de ochtendmail van todayin surgery (lib/tsc-mail.js). Elke dag zet de geplande Claude-taak hier nieuwe items bij: alleen echte feiten met bron en datum, nieuwste bovenaan. taal: en|nl|de|*; ingreep: hair|tummy|eyelid|lipo|breast|breast-reduction|*; naar: turkey|mexico|colombia|dominican-republic|thailand|south-korea|abroad|home|*; pagina: slug op todayin.email/surgery.",
   "items": [
+    {
+      "id": "2026-11-17-nl-onvz-2027",
+      "dag": "2026-11-17",
+      "taal": "nl",
+      "ingreep": [
+        "eyelid",
+        "lipo",
+        "tummy",
+        "breast",
+        "breast-reduction"
+      ],
+      "naar": [
+        "*"
+      ],
+      "kop": "Alle polissen 2027 bekend: alleen ONVZ Topfit vergoedt nog plastische chirurgie",
+      "tekst": "Nu alle zorgpolissen voor 2027 bekend zijn, heeft alleen ONVZ met Topfit nog een aanvullende verzekering die plastische chirurgie vergoedt, en dan alleen als het medisch noodzakelijk is. Voor een ingreep om er anders uit te zien betaalt geen enkele verzekeraar. Een borstverkleining kan wel uit de basisverzekering, bij een grote cupmaat met lichamelijke klachten; we zetten de voorwaarden op een rij.",
+      "bron": "geldPlast",
+      "pagina": "nl/borstverkleining-kosten",
+      "home_countries": [
+        "NL"
+      ]
+    },
     {
       "id": "2026-11-16-nl-zk-2027",
       "dag": "2026-11-16",
