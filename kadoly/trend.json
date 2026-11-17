@@ -1,0 +1,6 @@
+{
+ "uitleg": "Producten die passen bij wat nu trending is op TikTok NL. De dagelijkse TikTok-trendscan (geplande taak 'Kadoly TikTok-trendscan') zet hier hoogstens 10 product-id's met de trend erbij; /api/shop?op=videoplan (lib/kadolyvideoplan.js) geeft ze voorrang in de video's van de nacht.",
+ "bijgewerkt": null,
+ "pids": [],
+ "trends": []
+}
