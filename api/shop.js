@@ -30,7 +30,7 @@ import seed from '../data/shop-seed.json' with { type: 'json' };
 import { SHOP_PHP } from '../lib/shopphp.js';
 import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
-import { PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, GEDRAG, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel, ttEvent } from '../lib/shopdirect.js';
+import { pinCohortEntries, PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, GEDRAG, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel, ttEvent } from '../lib/shopdirect.js';
 import { TT_REGEL, TT_GROEPEN, ttSleutel, ttKoppelUrl, ttRuil, ttRapport, ttAds, ttUit, ttOordeel, ttMeld, ttTekst } from '../lib/tiktok.js';
 import { whEvent, whopKlaar, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd, whProject, whLead, WH_PROJECTEN, koppelWaid, whopAan } from '../lib/whop.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
@@ -72,7 +72,7 @@ const pk = pid => String(pid).toLowerCase().replace(/[^a-z0-9]/g, ''); // produc
 const digits = (s, n = 14) => String(s || '').replace(/\D/g, '').slice(0, n);
 const isBot = ua => /bot|crawl|spider|slurp|headless|preview|facebookexternalhit|python|curl|wget|monitor|lighthouse|pingdom/i.test(String(ua || ''));
 function shortId(s) { let h1 = 0x811c9dc5, h2 = 0x01000193; for (let i = 0; i < s.length; i++) { const ch = s.charCodeAt(i); h1 = Math.imul(h1 ^ ch, 16777619) >>> 0; h2 = Math.imul(h2 + ch, 2246822519) >>> 0; } return (h1.toString(36) + h2.toString(36)).slice(0, 12); }
-const inc = async keys => { try { if (keys.length) await kv.incrMany(keys.map(k => ['c:' + k, 1])); } catch (e) {} };
+const inc = async (keys, rec) => { try { if (keys.length) await kv.incrMany(pinCohortEntries(rec, keys.map(k => ['c:' + k, 1]))); } catch (e) {} };
 const sadd = async (key, ...members) => { const m = members.filter(Boolean).map(String); if (!m.length) return; try { await kv.raw(['SADD', key, ...m]); } catch (e) {} };
 const smembers = async key => { try { return (await kv.raw(['SMEMBERS', key])) || []; } catch (e) { return []; } };
 async function log(e) { try { const l = (await kv.get(K.log)) || []; l.unshift(Object.assign({ at: new Date().toISOString() }, e)); await kv.set(K.log, l.slice(0, 500)); } catch (x) {} }
@@ -446,7 +446,7 @@ async function direct(req, res, x) {
   let mmp = leesCookie(req, 'mmp'); const nieuwP = !/^[0-9a-f]{16}$/.test(mmp); if (nieuwP) mmp = nieuwId(8);
   let rec = null; try { rec = await kv.get(K.rec(code)); } catch (e) {}
   const cid = (rec && rec.mmc) || nieuwId(6);
-  const doel = 'https://kadoly.com/' + (x.voorkant ? '' : (x.kassa ? 'checkout/' : 'product/') + encodeURIComponent(pid)) + '?utm_source=' + (x.bron ? (x.bron.source || 'kadoly-gids') : NETTEN[net].toLowerCase()) + '&utm_medium=' + (x.bron ? x.bron.medium : (x.vorm || 'push')) + '&utm_campaign=' + (x.bron ? encodeURIComponent(x.bron.campaign) : 'shoplus') + '&utm_content=' + (x.voorkant ? 'voorkant' : encodeURIComponent(pk(pid))) + '&hj=' + code + '&mmc=' + cid + '&lang=' + (/^(nl|de|es|en)$/.test(x.taal || '') ? x.taal : 'nl') + (net === 'pi' && x.epik ? '&epik=' + encodeURIComponent(x.epik) : ''); // 16 nov: buitenlandse campagnes landen in de taal van hun land (shoptest geeft &lang= mee)
+  const doel = 'https://kadoly.com/' + (x.voorkant ? '' : (x.kassa ? 'checkout/' : 'product/') + encodeURIComponent(pid)) + '?utm_source=' + (x.bron ? (x.bron.source || 'kadoly-gids') : NETTEN[net].toLowerCase()) + '&utm_medium=' + (x.bron ? x.bron.medium : (x.vorm || 'push')) + '&utm_campaign=' + (x.bron ? encodeURIComponent(x.bron.campaign) : 'shoplus') + '&utm_content=' + (x.voorkant ? 'voorkant' : encodeURIComponent(pk(pid))) + '&hj=' + code + '&mmc=' + cid + '&lang=' + (/^(nl|de|es|en)$/.test(x.taal || '') ? x.taal : 'nl') + (net === 'pi' && x.epik ? '&epik=' + encodeURIComponent(x.epik) : '') + (net === 'pi' ? '&pin_traffic=' + (rec && rec.pc || x.pinClass || 'unknown') + (x.pinClass === 'paid' ? '&pp=0' : x.pinClass === 'earned' ? '&pp=1' : '') : ''); // 16 nov: buitenlandse campagnes landen in de taal van hun land (shoptest geeft &lang= mee)
   // Link previews get the same offer without a visitor record, measurement id or cookie.
   if (net === 'pi' && bot) {
     const preview = new URL(doel); preview.searchParams.delete('hj'); preview.searchParams.delete('mmc');
@@ -454,13 +454,13 @@ async function direct(req, res, x) {
     return res.end();
   }
   if (!weiger && !prefetch && (!rec || !rec.mmc)) {
-    const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; rec.mmc = cid; rec.mp = mmp; if (x.wh) { rec.w = x.wh; rec.ua = String(req.headers['user-agent'] || '').slice(0, 200); } if (x.rt) rec.rt = x.rt; if (x.voorkant) rec.vk = 1; if (test) rec.t = 1; if (eerst && x.extra && Object.keys(x.extra).length) rec.q = x.extra; /* 5 nov: wat het netwerk meegeeft (MGID src, srcid, cat, cpc, geo) blijft bij de klik */
+    const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; if (net === 'pi' && eerst) rec.pc = x.pinClass || 'unknown'; rec.mmc = cid; rec.mp = mmp; if (x.wh) { rec.w = x.wh; rec.ua = String(req.headers['user-agent'] || '').slice(0, 200); } if (x.rt) rec.rt = x.rt; if (x.voorkant) rec.vk = 1; if (test) rec.t = 1; if (eerst && x.extra && Object.keys(x.extra).length) rec.q = x.extra; /* 5 nov: wat het netwerk meegeeft (MGID src, srcid, cat, cpc, geo) blijft bij de klik */
     try { await Promise.all([kv.set(K.rec(code), rec, { ex: 7 * 86400 }), cidKoppel(kv, { cid, pid: mmp, arm: rec.arm === 'd' ? 'direct' : 'pagina', tag: 'yoors-shop', net: test ? 'test' : CM_NET[net], zone: zone || '-', camp: camp || '-', shop: code })]); } catch (e) {}
     if (eerst && !test) {
       const keys = ['sh-' + net + '-dv', 'sh-d' + D8() + '-' + net + '-dv', 'sh-u' + nlUur() + '-dv', x.voorkant ? 'sh-vk-dv' : 'sh-p-' + pk(pid) + '-dv'];
       if (zone) keys.push('sh-' + net + '-z' + zone + '-dv', 'sh-' + net + '-z' + zone + '-hv'); if (cr) keys.push('sh-' + net + '-a' + cr + '-dv'); if (camp) keys.push('sh-' + net + '-k' + camp + '-dv');
       const werk = laterAf(Promise.all([
-        inc(keys), uurTel(kv, net, 'dv'), sadd(K.set('p'), pid), zone ? sadd(K.set('z', net), zone) : null, cr ? sadd(K.set('a', net), cr) : null, camp ? sadd(K.set('k', net), camp) : null,
+        inc(keys, rec), uurTel(kv, net, 'dv'), sadd(K.set('p'), pid), zone ? sadd(K.set('z', net), zone) : null, cr ? sadd(K.set('a', net), cr) : null, camp ? sadd(K.set('k', net), camp) : null,
         zone ? kv.raw(['PFADD', K.hll(net, zone), apparaat(req)]).then(() => kv.raw(['EXPIRE', K.hll(net, zone), String(30 * 86400)])).catch(() => {}) : null,
         verwerkKlik(kv, { cid, pid: mmp, nieuw: nieuwP, arm: '302', tag: 'yoors-shop', net: CM_NET[net], camp, zone, sub: clickid, cr, kw: pid, doel, p: 'shop', vorm: x.vorm, q: x.extra }, serverSignalen(req))
       ]).catch(e => { const m = String(e && e.message || e); console.log('shop direct fout', m); if (/OOM/.test(m)) dbNood(); }));
@@ -479,6 +479,7 @@ async function land(req, res, url) {
   const src = String(q.get('utm_source') || '').toLowerCase(); const rawNet = q.get('wacid') ? 'wh' : netVan(src); const net = rawNet === 'pi' && !/^(paid_social|paid-social|cpc|paid)$/.test(String(q.get('utm_medium') || '').toLowerCase()) ? 'x' : rawNet; // Whop zet zelf utm_source (facebook, instagram, ...) en utm_medium=paid_social; wacid is altijd van Whop
   let clickid = String(q.get('clickid') || '').replace(/[^A-Za-z0-9_.-]/g, '').slice(0, 120); if (/^(subid|clickid|click_id|visitor_id)$/i.test(clickid) || /^__[A-Z_]+__$/.test(String(q.get('clickid') || ''))) clickid = '';
   // Pinterest has a separate paid cohort; a missing epik gets a local request id, not a fabricated Pinterest click id.
+  const pinClass = q.get('pp') === '0' ? 'paid' : q.get('pp') === '1' ? 'earned' : 'unknown';
   const rawEpik = net === 'pi' ? String(q.get('epik') || '') : '';
   const pinEpik = rawEpik && !/[{}]|^__[A-Z_]+__$/.test(rawEpik) ? rawEpik.replace(/[^A-Za-z0-9_.~+\/=\-]/g, '').slice(0, 600) : '';
   if (net === 'pi' && !clickid) clickid = pinEpik || 'pix' + randomBytes(6).toString('hex');
@@ -510,7 +511,7 @@ async function land(req, res, url) {
   const held = perId[pid]; const thema = (top && top.thema && top.thema[pid]) || themaVan(held);
   const zelfde = topIds.filter(id => id !== pid && ((top && top.thema && top.thema[id]) || themaVan(perId[id])) === thema).slice(0, 3);
   const meer = [...zelfde, ...topIds.filter(id => id !== pid && !zelfde.includes(id))].slice(0, 8).map(id => perId[id]);
-  const code = clickid && net !== 'x' ? shortId(net + ':' + clickid) : '';
+  const code = clickid && net !== 'x' ? shortId(net + ':' + clickid + (net === 'pi' ? ':' + pinClass : '')) : '';
   // directe route (lib/shopdirect.js): per persoon vast naar deze landingspagina (l) of in één keer naar de productpagina op yoo.rs (d).
   // Alleen betaald verkeer met een klik-id. Iedereen krijgt dezelfde behandeling, ook wat op een bot lijkt (geen cloaking).
   // NOOIT een tussenpagina (Henkjan 28 okt: "Haal tussenpagina voor altijd weg !!!!!! Bot meet je op clickmind niet een tusspagina met een klik").
@@ -519,7 +520,7 @@ async function land(req, res, url) {
   const taal = (() => { const l = String(q.get('lang') || '').toLowerCase(); if (/^(nl|de|es|en)$/.test(l)) return l; const lc = String(q.get('utm_campaign') || '').slice(0, 3).toLowerCase(); return ({ 'de-': 'de', 'at-': 'de', 'lu-': 'de', 'es-': 'es', 'ie-': 'en', 'mt-': 'en' })[lc] || 'nl'; })(); // 16 nov: taal van de landingspagina per land
   const voorkant = q.get('naar') === 'voorkant' || (net === 'bi' && !q.get('p') && !biPid); // 16 nov (Henkjan): een algemene advertentie landt op de voorkant van kadoly.com, met Clickmind ertussen
   if (net === 'wh' && cr && pid && !bot) { laterAf(kv.raw(['HSETNX', 'hjdk:whop:waidp', cr, pid]).catch(() => {})); if (whp && whp.wa) laterAf(kv.raw(['HSETNX', 'hjdk:whop:waidwa', cr, whId(whp.wa)]).catch(() => {})); } // 17 nov: Whop zet in waid een eigen nummer, niet de ad-id van de API; de ronde koppelt het via product (p) of onze eigen wa
-  if (code) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt, taal, voorkant, epik: pinEpik, bron: net === 'pi' ? { source: 'pinterest', medium: 'paid_social', campaign: camp || 'pinterest-test' } : undefined, wh: whp ? Object.assign({ pr: held && Number(held.p) > 0 ? Number(held.p) : undefined }, whp) : null });
+  if (code) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt, taal, voorkant, epik: pinEpik, pinClass, bron: net === 'pi' ? { source: 'pinterest', medium: pinClass === 'earned' ? 'organic_social' : 'paid_social', campaign: camp || 'pinterest-test' } : undefined, wh: whp ? Object.assign({ pr: held && Number(held.p) > 0 ? Number(held.p) : undefined }, whp) : null });
   if (!bot) {
     let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, { ex: 7 * 86400 }); } catch (e) {} }
     if (nieuw) { const keys = ['sh-' + net + '-view', 'sh-d' + D8() + '-' + net + '-view', 'sh-u' + nlUur() + '-view', 'sh-p-' + pk(pid) + '-himp'].concat(meer.map(m => 'sh-p-' + pk(m.id) + '-imp'));
@@ -670,12 +671,12 @@ async function pxVerwerk(code, wRuw, v, order, methode, bron, t) {
   if (w === 'betaal') { try { await kassaDoel(kv, rec); } catch (e) {} } // betaling gestart is altijd bewust (5 nov)
   if (oud && !(oud === 'cart' && (rec.px.cartTeld || (w === 'afreken' && rec.px.cart)))) { if (oud === 'cart') rec.px.cartTeld = Date.now();
     const keys = ['sh-' + net + '-' + oud, 'sh-d' + D8() + '-' + net + '-' + oud]; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-' + oud); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-' + oud); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-' + oud); if (rec.p) keys.push('sh-p-' + pk(rec.p) + '-' + oud);
-    await inc(keys);
+    await inc(keys, rec);
     // PropellerAds kent drie doelen: 1 = doorklik naar de shop (meldt de uitgang zelf), 2 = afrekenpagina geopend, 3 = betaald (met bedrag)
     // Directe route (arm d): zolang cm.js op yoo.rs de eerste tik niet meldt, is de afrekenpagina (of de betaling) het hoofddoel,
     // anders leren PropellerAds en Mondiad op CPA niets. Eenmaal per klik (rec.conv), nooit voor testkliks.
     if (w === 'cart' || w === 'afreken' || w === 'betaal') { try { await kassaDoel(kv, rec); } catch (e) {} } // 5 nov: kassadoelen (PropellerAds doel 2 en terugval-hoofdconversie, MGID decision) alleen bij bewust afrekenen (lib/shopdirect.js isBewust); anders later, zodra cm.js een bewuste stap meldt
-    if (oud === 'koop') { let st = 0; if (v > 0) { try { await kv.incrMany([['c:sh-' + net + '-omzet', Math.round(v * 100)], ['c:sh-d' + D8() + '-' + net + '-omzet', Math.round(v * 100)]]); } catch (e) {} if (!rec.t) await uurTel(kv, net, 'omzet', t, Math.round(v * 100)); }
+    if (oud === 'koop') { let st = 0; if (v > 0) { try { await kv.incrMany(pinCohortEntries(rec, [['c:sh-' + net + '-omzet', Math.round(v * 100)], ['c:sh-d' + D8() + '-' + net + '-omzet', Math.round(v * 100)]].concat(net === 'pi' && rec.a ? [['c:sh-pi-a' + rec.a + '-omzet', Math.round(v * 100)]] : []))); } catch (e) {} if (!rec.t) await uurTel(kv, net, 'omzet', t, Math.round(v * 100)); }
       if (net === 'tt' && rec.c && !rec.t && !rec.tk) { rec.tk = Date.now(); st = await ttEvent(rec, 'CompletePayment', v); rec.conv = rec.conv || Date.now(); } // TikTok: betaald met bedrag via de Events API
       if (net === 'wh' && rec.c && !rec.t && !rec.wk) { rec.wk = Date.now(); st = await whEvent(rec, 'purchase', v); rec.conv = rec.conv || Date.now(); } // Whop (Meta): betaald met bedrag via de Events API van Whop
       if (rec.c && PB[net] && (net !== 'ra' || !rec.conv) && !rec.t) { try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(net === 'mg' ? mgUrl(rec.c, mgEvent(MG_STAP.koop, rec.k), v) : PB[net].replace('{clickid}', encodeURIComponent(rec.c)) + (net === 'ra' ? '' : '&payout=' + v.toFixed(2)) + (net === 'pa' ? '&goal=3' : ''), { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (e) {} rec.conv = rec.conv || Date.now(); }
@@ -1032,11 +1033,17 @@ export default async function handler(req, res) {
       const rijen = Object.values(per).filter(v => v.ev.kpag).sort((a, b) => b.ev.kpag.t - a.ev.kpag.t).slice(0, 60).map(v => { const e = v.ev, kp = e.kpag.t; return { net: v.net, product: v.p, zone: v.zone, uur: new Date(kp).toISOString().slice(11, 16), minTotAfrekenen: v.aan ? Math.round((kp - v.aan) / 6e4 * 10) / 10 : null, secOpAfrekenpagina: e.kweg ? Math.round((e.kweg.t - kp) / 1000) : null, prijs: e.kprijs ? e.kprijs.w : null, kopersbescherming: e.kfee ? e.kfee.w : null, deed: ['kt5', 'kscroll', 'kterug', 'kknop', 'kmail', 'kadres', 'kmeth', 'kpp', 'kpay', 'kfout', 'kt20', 'kt60', 'kweg', 'kweg5', 'kweg20', 'kweglang'].filter(k => e[k]) }; });
       if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send('Kadoly afrekenpagina per bezoeker (nieuwste eerst)\n' + rijen.map(r => `${r.uur} ${r.net} ${r.product} | ${r.minTotAfrekenen ?? '?'} min tot afrekenen | ${r.secOpAfrekenpagina ?? '?'} s op de pagina | prijs ${r.prijs ?? '?'} | kopersbescherming ${r.kopersbescherming ?? '-'} | ${r.deed.join(', ') || 'niets'}`).join('\n')); }
       return res.status(200).json({ ok: true, bezoekers: rijen }); }
-    if (op === 'pinads') { // Read-only Pinterest paid funnel; interaction signals are not unique people.
-      const ids = await smembers(K.set('a', 'pi')); const t = await tellers('pi', 'a', ids); const ads = {};
-      for (const [id, v] of Object.entries(t)) ads[id] = { aan: v.dv, echt: v.dm, actie: v.da, t15: v.dt15, t60: v.dt60, scroll50: v.ds50, tik: v.dwk, kassa: v.dkp, cart: v.cart, koop: v.koop, omzet: Math.round((v.omzet || 0)) / 100 };
-      const d = (await dagTotaal(DAY())).pi;
-      return res.status(200).json({ ok: true, netwerk: 'pinterest', at: new Date().toISOString(), meetversie: '2026-11-16-pinterest-paid', vandaag: { aan: d.dv, echt: d.dm, actie: d.da, t15: d.dt15, t60: d.dt60, scroll50: d.ds50, tik: d.dwk, kassa: d.dkp, cart: d.cart, koop: d.koop }, ads, uitleg: 'aan=requests; echt=Clickmind-interactiesignaal, geen unieke mensen; cart=geslaagde winkelwagenmelding; koop=betaalde order; eigen test-clickids uitgesloten' });
+    if (op === 'pinads') { // pi is the Pinterest family; only pp=0 is confirmed paid delivery.
+      const ids = await smembers(K.set('a', 'pi'));
+      const fields = v => ({ aan: num(v.dv), echt: num(v.dm), actie: num(v.da), t15: num(v.dt15), t60: num(v.dt60), scroll50: num(v.ds50), tik: num(v.dwk), kassa: num(v.dkp), cart: num(v.cart), koop: num(v.koop), omzet: num(v.omzet) / 100 });
+      const cohorten = {};
+      for (const c of ['paid', 'earned', 'unknown']) {
+        const net = 'pi-' + c, t = await tellers(net, 'a', ids), ads = {};
+        for (const [id, v] of Object.entries(t)) ads[id] = fields(v);
+        const vals = await kv.mget(...SOORTEN.map(k => 'c:sh-d' + D8() + '-' + net + '-' + k));
+        cohorten[c] = { vandaag: fields(Object.fromEntries(SOORTEN.map((k, i) => [k, vals[i]]))), ads };
+      }
+      return res.status(200).json({ ok: true, netwerk: 'pinterest', at: new Date().toISOString(), meetversie: '2026-11-17-pinterest-pp', vandaag: cohorten.paid.vandaag, ads: cohorten.paid.ads, cohorten, allePinterest: fields((await dagTotaal(DAY())).pi), uitleg: 'paid=pp0; earned=pp1; unknown=pp ontbreekt/ongeldig; geen historische herindeling; aan=requests; echt=interactiesignaal, geen unieke mensen; cart=geslaagde winkelwagenmelding; koop=betaalde order; eigen tests uitgesloten' });
     }
     if (op === 'ttads') { // 16 nov (Henkjan: "Yes start en ga leren . Zet clikmind er tussen ."): per TikTok-advertentie (ad-id uit __CID__) wat Clickmind zag, voor de leerronde; alleen tellingen
       const ids = await smembers(K.set('a', 'tt')); const t = await tellers('tt', 'a', ids); const ads = {};

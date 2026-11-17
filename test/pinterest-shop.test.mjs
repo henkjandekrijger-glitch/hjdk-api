@@ -42,7 +42,7 @@ function harness() {
     whId: s => String(s || ''),
     pk: s => String(s).toLowerCase().replace(/[^a-z0-9]/g, ''),
     laterAf: p => p,
-    inc: async keys => kv.incrMany(keys.map(k => ['c:' + k, 1])),
+    inc: async (keys, rec) => kv.incrMany(context.api.pinCohortEntries(rec, keys.map(k => ['c:' + k, 1]))),
     uurTel: async (...a) => calls.push(['hour', ...a.slice(1)]),
     sadd: async (...a) => calls.push(['setMembers', ...a]),
     cidKoppel: async (_, x) => calls.push(['cid', x]),
@@ -63,9 +63,9 @@ function harness() {
   });
   const cm = directSource.split('\n').find(l => l.startsWith('export const CM_NET ='));
   vm.runInContext(line('const NETTEN =') + '\n' + line('const netVan =') + '\n' +
-    cm.replace('export const', 'const') + '\n' + fn('direct') + '\n' + fn('land') + '\n' + fn('pxVerwerk') +
+    directSource.split('\n').find(l => l.startsWith('export function pinCohortEntries')).replace('export ', '') + '\n' + cm.replace('export const', 'const') + '\n' + fn('direct') + '\n' + fn('land') + '\n' + fn('pxVerwerk') +
     '\n' + line('async function dagTotaal(') + '\n' + line('async function netTotaal(') +
-    '\nthis.api = { land, direct, netVan, dagTotaal, netTotaal, pxVerwerk, CM_NET };', context);
+    '\nthis.api = { pinCohortEntries, land, direct, netVan, dagTotaal, netTotaal, pxVerwerk, CM_NET };', context);
   function response() {
     return {
       statusCode: 200, headers: {}, body: null,
@@ -79,7 +79,7 @@ function harness() {
   return { ...context.api, context, response, item, calls, records, counters };
 }
 async function visit(h, query = {}, ua = 'Mozilla/5.0 Mobile Safari/604.1') {
-  const q = new URLSearchParams({ p: h.item.id, utm_source: 'pinterest', utm_medium: 'paid_social', campaignid: '626760328323', creativeid: '687000000001', zoneid: '268000000001', ...query });
+  const q = new URLSearchParams({ p: h.item.id, utm_source: 'pinterest', utm_medium: 'paid_social', campaignid: '626760328323', pp: '0', creativeid: '687000000001', zoneid: '268000000001', ...query });
   const res = h.response();
   await h.land({ headers: { 'user-agent': ua } }, res, new URL('https://keuzehulp.best/shop?' + q));
   return res;
@@ -170,6 +170,7 @@ test('daily and all-time totals include Pinterest without changing other sources
 test('read-only paid report keeps successful cart and paid-order counts distinct', async () => {
   const h = harness();
   h.context.smembers = async () => ['687000000001'];
+  h.context.num = v => Number(v) || 0; h.context.D8 = () => '20261116';
   h.context.tellers = async () => ({ '687000000001': { dv: 10, dm: 3, cart: 1, koop: 0, omzet: 0 } });
   const start = source.indexOf("    if (op === 'pinads') {"), end = source.indexOf("    if (op === 'ttads') {", start);
   assert.ok(start > 0 && end > start);
@@ -198,4 +199,80 @@ test('real paid cart and order stay attributed to Pinterest and duplicate orders
   assert.equal(h.counters.get('c:sh-pi-koop'), 1);
   assert.equal(h.counters.get('c:sh-pi-omzet'), 2000);
   assert.equal(h.counters.get('c:sh-x-koop'), undefined);
+});
+
+test('pp0, pp1 and missing or invalid pp retain separate attribution through late orders', async () => {
+  for (const [pp, cohort, medium] of [['0', 'paid', 'paid_social'], ['1', 'earned', 'organic_social'], ['', 'unknown', 'paid_social'], ['bogus', 'unknown', 'paid_social']]) {
+    const h = harness(), r = await visit(h, { pp });
+    const target = new URL(r.headers.location), code = target.searchParams.get('hj');
+    assert.equal(target.searchParams.get('pin_traffic'), cohort);
+    assert.equal(target.searchParams.get('utm_medium'), medium);
+    assert.equal(target.searchParams.get('pp'), /^[01]$/.test(pp) ? pp : null);
+    assert.equal([...h.records.values()][0].pc, cohort);
+    assert.equal(h.counters.get('c:sh-pi-' + cohort + '-dv'), 1);
+    await h.pxVerwerk(code, 'cart', 0, '', '', 'unit');
+    await h.pxVerwerk(code, 'koop', 19.95, 'order-' + cohort, '', 'unit');
+    await h.pxVerwerk(code, 'koop', 19.95, 'order-' + cohort, '', 'unit');
+    assert.equal(h.counters.get('c:sh-pi-' + cohort + '-cart'), 1);
+    assert.equal(h.counters.get('c:sh-pi-' + cohort + '-koop'), 1);
+    assert.equal(h.counters.get('c:sh-pi-' + cohort + '-omzet'), 1995);
+    assert.equal(h.counters.get('c:sh-pi-' + cohort + '-a687000000001-omzet'), 1995);
+    for (const other of ['paid', 'earned', 'unknown'].filter(c => c !== cohort)) assert.equal(h.counters.get('c:sh-pi-' + other + '-koop'), undefined);
+  }
+});
+test('saved-ad and paid clicks sharing an epik do not merge cohorts', async () => {
+  const h = harness();
+  const a = await visit(h, { epik: 'same-epik', pp: '0' }), b = await visit(h, { epik: 'same-epik', pp: '1' });
+  assert.notEqual(new URL(a.headers.location).searchParams.get('hj'), new URL(b.headers.location).searchParams.get('hj'));
+  assert.equal(h.records.size, 2);
+});
+test('unknown historical record is not retrospectively labelled paid', () => {
+  const h = harness();
+  const entries = h.pinCohortEntries({s: 'pi'}, [['c:sh-pi-koop', 1]]);
+  assert.ok(entries.some(([k]) => k === 'c:sh-pi-unknown-koop'));
+  assert.ok(!entries.some(([k]) => k === 'c:sh-pi-paid-koop'));
+});
+test('cohort helper leaves other networks and tests unchanged', () => {
+  const h = harness(), e = [['c:sh-tt-cart', 1], ['c:sh-pi-cart', 1]];
+  assert.equal(h.pinCohortEntries({s: 'tt'}, e), e);
+  assert.equal(h.pinCohortEntries({s: 'pi', t: 1}, e), e);
+});
+test('earned previews and own QA cannot pollute any cohort', async () => {
+  for (const pp of ['0', '1', '']) {
+    const h = harness();
+    await visit(h, { pp }, 'Pinterestbot/1.0');
+    assert.equal(h.counters.size, 0);
+    const r = await visit(h, { pp, clickid: 'test-pinterest-pp-' + pp });
+    await h.pxVerwerk(new URL(r.headers.location).searchParams.get('hj'), 'koop', 20, 'qa-order', '', 'unit');
+    assert.equal(h.counters.size, 0);
+  }
+});
+test('actual shop interaction handler mirrors the retained cohort', async () => {
+  const h = harness(), r = await visit(h, { pp: '1' });
+  const code = new URL(r.headers.location).searchParams.get('hj'), rec = h.records.get('rec:' + code);
+  h.records.set('hjdk:shc:' + code, rec);
+  Object.assign(h.context, { GEDRAG: { t15: 't15' }, BEWUST: [], KASSALOG: new Set(), PA_TIK_MIN: 10000, K_MEET: 'test-meet' });
+  const at = directSource.indexOf('export async function shopUitkomst(');
+  const handler = vm.runInContext('(' + directSource.slice(at).replace('export ', '') + ')', h.context);
+  await handler(h.context.kv, code, 'echt');
+  await handler(h.context.kv, code, 't15');
+  await handler(h.context.kv, code, 'echt');
+  assert.equal(h.counters.get('c:sh-pi-earned-dm'), 1);
+  assert.equal(h.counters.get('c:sh-pi-earned-dt15'), 1);
+  assert.equal(h.counters.get('c:sh-pi-paid-dm'), undefined);
+});
+test('public report excludes earned and unknown from top-level paid totals', async () => {
+  const h = harness();
+  await visit(h, { pp: '1' });
+  await visit(h, { pp: '' });
+  h.context.smembers = async () => ['687000000001'];
+  h.context.tellers = vm.runInContext('(' + fn('tellers') + '\n)', h.context);
+  const start = source.indexOf("    if (op === 'pinads') {"), end = source.indexOf("    if (op === 'ttads') {", start);
+  const reader = vm.runInContext('(async function(res) { const op="pinads";' + source.slice(start, end) + '})', h.context);
+  const r = h.response(); await reader(r);
+  assert.equal(r.body.vandaag.aan, 0);
+  assert.equal(r.body.ads['687000000001'].aan, 0);
+  assert.equal(r.body.cohorten.earned.vandaag.aan, 1);
+  assert.equal(r.body.cohorten.unknown.vandaag.aan, 1);
+  assert.equal(r.body.allePinterest.aan, 2);
 });
