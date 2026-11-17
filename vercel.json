@@ -259,6 +259,21 @@
   ],
   "rewrites": [
     {
+      "source": "/nexyhelp/api/:rest*",
+      "has": [{"type": "host", "value": "(www\\.)?keuzehulp\\.best"}],
+      "destination": "/api/:rest*"
+    },
+    {
+      "source": "/nexyhelp",
+      "has": [{"type": "host", "value": "(www\\.)?keuzehulp\\.best"}],
+      "destination": "/api/keuze-tools?tool=nexy&p="
+    },
+    {
+      "source": "/nexyhelp/:pad*",
+      "has": [{"type": "host", "value": "(www\\.)?keuzehulp\\.best"}],
+      "destination": "/api/keuze-tools?tool=nexy&p=:pad*"
+    },
+    {
       "source": "/sitemap.xml",
       "has": [{"type": "host", "value": "(www\\.)?nexy\\.help"}],
       "destination": "/api/keuze-tools?tool=nexy&op=sitemap"
