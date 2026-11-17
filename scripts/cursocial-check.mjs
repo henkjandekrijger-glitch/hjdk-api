@@ -58,3 +58,9 @@ test('normalizing twice has the same result', () => {
 test('does not modify non-article and unrelated responses', () => {
  for(const h of [null,42,'<body>No head</body>',page('x').replace('curacao.day','other.example')])assert.equal(socialHtml(h),h);
 });
+
+test('prefers the named place photo over unrelated category illustrations above it', () => {
+ const h=socialHtml(page('<img src="/foto/categorie-lagun.jpg" alt="Playa Lagun"><img src="/foto/fotoroute-eigen.jpg" alt="Fotoroute"><figcaption>Eigen foto</figcaption>'));
+ assert.match(h,/og:image" content="https:\/\/curacao.day\/foto\/fotoroute-eigen.jpg"/);
+ assert.doesNotMatch(h,/og:image" content="[^"]*categorie-lagun/);
+});
