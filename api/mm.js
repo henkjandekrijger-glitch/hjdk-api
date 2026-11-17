@@ -47,7 +47,7 @@
 //   /mmm.js                             DE LERENDE MODAL (lib/modal.js): <script src="https://whichtobuy.best/mmm.js" data-site="<site>" async></script>; testen met ?mmm=<arm-id> in de pagina-URL
 //   /api/mm/modal?site=&q=&c=&v=&mob=   beslissing per paginabezoek (e-mail, andere site of niets); /api/mm/modalev?mid=&e=toon|klik|sluit|hoofd; /api/mm/modalmail (POST)
 //   /api/mm/proefkies?site=&c=  beslissing per bezoeker voor alle onderdelen van de proef; /api/mm/proefev (POST) zie/stap; /api/mm/proefstand?site=[&vorm=tekst]; /api/mm/proefzet?site=&aan=&ronde=1&j= (beschermd) — lib/proef.js
-//   /api/mm/modalbeheer[?site=][&j=<json>][&mail=<lijst>&formaat=csv]   instellingen, stand en adressen (beschermde host)
+//   /api/mm/modalbeheer[?site=][&j=<json>][&mail=<lijst>&formaat=csv]   instellingen, stand en adressen (beschermde host); &kort=1 alleen de tellers
 //   /api/mm/zones?net=mondiad&dagen=3   oordeel per zone (zelfde vorm als rereview /api/b/zones, leesbaar voor de Mondiad-wacht)
 //   /api/mm/patronen?dagen=1            botfarms: vingerafdrukken in veel zones of netwerken
 //   /api/mm/stand                       vandaag per netwerk, slechtste zones, datacenterlijst
@@ -272,7 +272,12 @@ export default async function handler(req, res) {
         res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('content-disposition', 'attachment; filename="lijst-' + lijst + '.csv"');
         return res.status(200).send(['email,datum,site,arm,netwerk,zone,campagne,land,toestemming,bevestigd'].concat(rijen.map(([e, x]) => [e, x.t, x.site, x.arm, x.net, x.zone, x.camp, x.land, x.toestemming, x.bevestigd ? 'ja' : 'nee'].map(qq).join(','))).join('\n'));
       }
-      if (q('site')) { const m = await leesModal(kv, q('site'), true); if (!m) return res.status(404).json({ ok: false, fout: 'onbekende site' }); const st = await modalStand(kv, m, Number(q('dagen')) || 14); return res.status(200).json({ modal: m, stand: [...st], momenten: st.momenten, vormen: st.vormen, stijlen: st.stijlen, sluiten: st.sluiten, varianten: st.varianten, script: '<script src="https://whichtobuy.best/cm.js" data-site="' + m.site + '" async></script>', scriptEigenDomein: '<script src="https://go.<eigen domein>/cm.js" data-site="<meetsite>" data-modal="' + m.site + '" async></script>' }); }
+      if (q('site')) { const m = await leesModal(kv, q('site'), true); if (!m) return res.status(404).json({ ok: false, fout: 'onbekende site' }); const st = await modalStand(kv, m, Number(q('dagen')) || 14);
+        if (q('kort') === '1') { // kort (17 nov 2026): alleen de tellers, voor het uurrapport zonder het hele model
+          const k = x => ({ n: x.n, toon: x.toon, klik: x.klik, aanmelding: x.aanmelding }), rij = (l, s) => (l || []).filter(x => x.n).map(x => ({ [s]: x[s], ...k(x) }));
+          return res.status(200).json({ site: m.site, uit: !!m.uit, armen: [...st].filter(x => x.n).map(x => ({ id: x.id, ...k(x), hoofdTegenControle: x.hoofdTegenControle })), momenten: rij(st.momenten, 'moment'), vormen: rij(st.vormen, 'vorm'), stijlen: rij(st.stijlen, 'stijl'), varianten: Object.fromEntries(Object.entries(st.varianten || {}).map(([a, l]) => [a, (l || []).filter(v => v.n).map(v => ({ vid: v.vid, titel: v.titel, ...k(v) }))]).filter(([, l]) => l.length)) });
+        }
+        return res.status(200).json({ modal: m, stand: [...st], momenten: st.momenten, vormen: st.vormen, stijlen: st.stijlen, sluiten: st.sluiten, varianten: st.varianten, script: '<script src="https://whichtobuy.best/cm.js" data-site="' + m.site + '" async></script>', scriptEigenDomein: '<script src="https://go.<eigen domein>/cm.js" data-site="<meetsite>" data-modal="' + m.site + '" async></script>' }); }
       return res.status(200).json({ modals: await alleModals(kv) });
     }
     if (op === 'blokgedaan') { // de uitvoerder in propellerads-mcp meldt wat hij uitsloot (gedeelde SHOP_SLEUTEL)
