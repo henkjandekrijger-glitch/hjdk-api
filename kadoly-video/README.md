@@ -7,3 +7,5 @@ Werking:
 - Rendert per plan-item een video van 12 s (1080x1920, productfoto's met zachte zoom, tekstregels als PNG-laag in Poppins Bold, merk kadoly.com) met ffmpeg-static, en zet hem in Vercel Blob `kadoly/video/<id>.mp4` (openbaar). Hooguit 200 s per ronde; de tweede cron maakt de rest af.
 - `kadoly/lijst.json` in Blob is de wachtrij; `/api/lijst` geeft hem terug. De dagtaak social (`kadoly/taak-social.md`, stap 7b) zet nieuwe video's achteraan in `kadoly/reels.json` en plant ze over de hele dag op Instagram, Facebook, YouTube en TikTok (die twee zodra ze in Zernio staan).
 - Renderen kan alleen via de cron of een beschermde deployment-URL; de vaste projectnaam geeft 404.
+
+Vercel: project kadoly-video (prj_g9biV2AEp1vmAhFO0JW1uUdaE3G2), Blob-store kadoly-video (store_gA3hUWvh2mwRWyPU, openbaar, iad1), aangemaakt 17 nov 2026.
