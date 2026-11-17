@@ -1221,6 +1221,12 @@ export default async function handler(req, res) {
       const r = await whFormBouw(pr, cid, url.searchParams.get('uitvoeren') === '1');
       if (r.uitgevoerd) try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'Curacao naar Facebook-formulieren (Henkjan 17 nov): ' + (r.log || []).map(x => x.groep + ' ' + (x.id ? x.ads.filter(a => a.id).length + '/' + x.ads.length + ' ads' : 'mislukt: ' + x.fout)).join(', ') })]); } catch (e) {}
       return res.status(200).json(r); }
+    if (op === 'whget') { // 17 nov: alleen-lezen diagnose bij Whop (levering per advertentie, problemen); beschermde host, alleen GET op advertentiepaden
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const pad = String(url.searchParams.get('pad') || ''); if (!/^\/(ad_issues|ads|ad_groups|ad_campaigns|ad_stats)(\/[A-Za-z0-9_]+)?(\?[A-Za-z0-9_=&:.,-]*)?$/.test(pad)) return res.status(400).json({ ok: false, fout: 'pad' });
+      const pr = url.searchParams.get('p') ? whProject(String(url.searchParams.get('p'))) : null; const r = await whopApi(pad, pr && pr.key ? { key: pr.key } : {});
+      const kort = x => x && typeof x === 'object' ? Object.fromEntries(Object.entries(x).filter(([k]) => /^(id|title|status|delivery_status|issues|impressions|spend|link_clicks|clicks|content_review|learning_progress|reason|message|severity|code|ad|ad_group|ad_campaign|created_at|description)$/.test(k))) : x;
+      return res.status(200).json({ ok: r.ok, status: r.status, fout: r.fout || null, data: r.j && Array.isArray(r.j.data) ? r.j.data.map(kort) : kort(r.j) }); }
     if (op === 'whleadstand') { // tellingen per project per dag (alleen aantallen)
       const out = {}; for (const p of Object.keys(WH_PROJECTEN)) { const pr = whProject(p); let t = {}; try { const h = await kv.raw(['HGETALL', 'hjdk:whl:tel:' + p]); if (Array.isArray(h)) for (let i = 0; i + 1 < h.length; i += 2) t[h[i]] = num(h[i + 1]); else t = h || {}; } catch (e) {} out[p] = { klaar: pr.klaar, sleutel: !!pr.key, bedrijf: !!pr.biz, tellingen: t }; }
       return res.status(200).json({ ok: true, projecten: out }); }
