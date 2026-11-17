@@ -1224,6 +1224,10 @@ export default async function handler(req, res) {
       const pr = whProject('curacao'); if (!pr.klaar) return res.status(200).json({ ok: false, mist: [!pr.key && 'WHOP_API_KEY_CURACAO in Vercel', !pr.biz && 'bedrijf'].filter(Boolean) });
       const cid = String(url.searchParams.get('c') || 'adcamp_fWuShwnhuwl').replace(/[^A-Za-z0-9_]/g, '');
       if (url.searchParams.get('fix') === '1') return res.status(200).json(await whFormFix(pr, cid));
+      if (url.searchParams.get('opruimen') === '1') { // de formuliergroepen die Whop zonder eigen Facebook-pagina tot websitegroepen zonder link maakte, weer weg (alleen titels met 'formulier')
+        const gr = await whopApi(`/ad_groups?account_id=${pr.biz}&ad_campaign_id=${cid}&first=50`, { key: pr.key }); const weg = [];
+        for (const g of (gr.j && gr.j.data) || []) if (/formulier/i.test(g.title || '')) { const d = await whopApi('/ad_groups/' + g.id, { method: 'DELETE', key: pr.key }); weg.push(g.title + ': ' + d.status + (d.fout ? ' ' + d.fout : '')); }
+        return res.status(200).json({ ok: true, weg }); }
       const r = await whFormBouw(pr, cid, url.searchParams.get('uitvoeren') === '1');
       if (r.uitgevoerd) try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'Curacao naar Facebook-formulieren (Henkjan 17 nov): ' + (r.log || []).map(x => x.groep + ' ' + (x.id ? x.ads.filter(a => a.id).length + '/' + x.ads.length + ' ads' : 'mislukt: ' + x.fout)).join(', ') })]); } catch (e) {}
       return res.status(200).json(r); }
