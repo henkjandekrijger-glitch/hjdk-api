@@ -935,7 +935,7 @@ export default async function handler(req, res) {
       const cat = await catalog(true), kaart = (await kv.get(K_KOST).catch(() => null)) || {}; const f = ttFeedCsv(cat.items, kaart, testLabels(await kv.get('hjdk:tt:test').catch(() => null))); res.setHeader('cache-control', 'public, max-age=900');
       if (url.searchParams.get('vorm') === 'stand') return res.status(200).json(Object.assign({ ok: true }, f.tel));
       res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('content-disposition', 'inline; filename="kadoly-tiktok.csv"'); return res.status(200).send(f.csv); }
-    if (op === 'tttest') { // 17 nov (Henkjan: "iedere dag een aantal testen of toevoegen aan lopende testen om de winnaars te vinden"): dagelijkse producttest op TikTok (lib/tttest.js)
+    if (op === 'ttproef') { // 17 nov (Henkjan: "iedere dag een aantal testen of toevoegen aan lopende testen om de winnaars te vinden"): dagelijkse producttest op TikTok (lib/tttest.js)
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0], ua = String(req.headers['user-agent'] || ''), beschermd = /\.vercel\.app$/i.test(host);
       const st0 = await kv.get('hjdk:tt:test').catch(() => null); const cat = await catalog(true); const perId = {}; cat.items.forEach(i => { perId[i.id] = i; });
       const ids = Object.keys((st0 && st0.items) || {}); const telP = async lijst => { const t = await tellers('tt', 'p', lijst.map(pk)); return t; };

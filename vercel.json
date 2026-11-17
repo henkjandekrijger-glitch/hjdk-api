@@ -237,7 +237,7 @@
       "schedule": "47 4 * * *"
     },
     {
-      "path": "/api/shop?op=tttest",
+      "path": "/api/shop?op=ttproef",
       "schedule": "57 4 * * *"
     },
     {
