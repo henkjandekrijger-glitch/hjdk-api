@@ -47,8 +47,8 @@ export default async function handler(req, res) {
     const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
     if(op==='chat'||op==='chatstand'){const C=await import('../lib/kzchat.js'); // intentiechat op alle keuzehulpen (lib/kzchat.js, 16 nov 2026)
       if(op==='chatstand')return res.status(200).json(await C.kzChatStand(beschermd).catch(()=>({ok:false})));
-      if(req.method!=='POST')return res.status(405).json({ok:false});
-      let b=req.body;try{if(typeof b==='string'){if(b.length>6000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}
+      if(req.method!=='POST'&&!(beschermd&&req.query.v))return res.status(405).json({ok:false}); // GET alleen beschermd, om de chat te testen
+      let b=req.method==='POST'?req.body:{site:req.query.site,slug:req.query.slug,v:req.query.v,h:[],test:1};try{if(typeof b==='string'){if(b.length>6000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}
       b=b||{};const ip=String(req.headers['x-forwarded-for']||'').split(',')[0].trim();
       return res.status(200).json(await C.kzChat({site:b.site,slug:String(b.slug||'').replace(/[^a-z0-9-]/gi,'').slice(0,90),vraag:b.v,hist:b.h,ip,oidc:String(req.headers['x-vercel-oidc-token']||process.env.VERCEL_OIDC_TOKEN||''),test:!!(b.test&&beschermd)}).catch(e=>({ok:false,fout:String(e.message||e).slice(0,80)})));}
     if(op==='model'||op==='bouw'||op==='rijen'){const M=await import('../lib/intentmodel.js'); // intentiemodel (lib/intentmodel.js): samenvatting openbaar, bouwen en rijen alleen beschermd of via de cron
