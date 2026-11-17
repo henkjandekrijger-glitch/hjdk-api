@@ -1,0 +1,466 @@
+{
+ "items": [
+  {
+   "id": "premies-2027",
+   "dag": "2026-11-17",
+   "kop": "Alle premies 2027 zijn bekend",
+   "tekst": "De goedkoopste basisverzekering is VinkVink voor € 148,40 per maand, de duurste CZ Zorgvariatiepolis voor € 202,50. Dat is ruim € 649 per jaar verschil voor dezelfde basisdekking.",
+   "pad": "/goedkoopste-zorgverzekering-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors",
+   "labels": [
+    "*"
+   ]
+  },
+  {
+   "id": "eigen-risico-2027",
+   "dag": "2026-11-17",
+   "kop": "Eigen risico 2027 wordt € 400",
+   "tekst": "Het verplicht eigen risico gaat van € 385 naar € 400. Het plan om het te verlagen naar € 165 gaat niet door. Huisarts, verloskunde en wijkverpleging vallen er nog steeds niet onder.",
+   "pad": "/eigen-risico-2027",
+   "bron": "https://wetten.overheid.nl/BWBR0018450/2027-01-01",
+   "labels": [
+    "*"
+   ]
+  },
+  {
+   "id": "labels-stoppen-2027",
+   "dag": "2026-11-17",
+   "kop": "Vier labels stoppen per 2027",
+   "tekst": "ZEKUR gaat op in Univé, Anderzorg in Menzis, VvAA in ONVZ en Interpolis ZorgCompact wordt ZorgActief. Klanten worden meestal automatisch overgezet; check wel of de nieuwe polis en premie bij je passen.",
+   "pad": "",
+   "bron": null,
+   "labels": [
+    "*"
+   ]
+  },
+  {
+   "id": "basispakket-2027",
+   "dag": "2026-11-17",
+   "kop": "Basispakket 2027: niets erbij, wel andere eigen bijdragen",
+   "tekst": "Er komt niets bij in het basispakket. Ziekenvervoer kost € 140 eigen bijdrage, kraamzorg thuis € 6 per uur en pruiken worden vergoed tot € 571,50.",
+   "pad": "/basispakket-2027",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekering-wat-verandert-er",
+   "labels": [
+    "*"
+   ]
+  },
+  {
+   "id": "zorgtoeslag-vermogen-2027",
+   "dag": "2026-11-17",
+   "kop": "Zorgtoeslag: vermogensgrens 2027 bekend",
+   "tekst": "Op 1 januari 2027 mag je als alleenstaande € 119.122 vermogen hebben en samen met een toeslagpartner € 158.748. Zit je erboven, geef dat dan uiterlijk 8 december door.",
+   "pad": "/zorgtoeslag-2027",
+   "bron": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/berichten/nieuws/toeslagen/lagere-vermogensgrenzen-zorgtoeslag-kindgebonden-budget-vanaf-1-januari-2027",
+   "labels": [
+    "*"
+   ]
+  },
+  {
+   "id": "zorgtoeslag-8-december",
+   "dag": "2026-12-04",
+   "kop": "Zorgtoeslag: nog 4 dagen om je vermogen door te geven",
+   "tekst": "Heb je op 1 januari meer vermogen dan de grens (€ 119.122 alleen, € 158.748 samen), geef dat dan uiterlijk 8 december door aan Dienst Toeslagen.",
+   "pad": "/zorgtoeslag-2027",
+   "bron": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/berichten/nieuws/toeslagen/lagere-vermogensgrenzen-zorgtoeslag-kindgebonden-budget-vanaf-1-januari-2027",
+   "labels": [
+    "*"
+   ]
+  },
+  {
+   "id": "deadline-20-dec",
+   "dag": "2026-12-20",
+   "kop": "Nog 11 dagen om over te stappen",
+   "tekst": "Opzeggen kan tot en met 31 december. Sluit je een nieuwe basisverzekering af, dan zegt je nieuwe verzekeraar je oude polis voor je op.",
+   "pad": "/overstappen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/overstappen-zorgverzekeraar",
+   "labels": [
+    "*"
+   ]
+  },
+  {
+   "id": "deadline-30-dec",
+   "dag": "2026-12-30",
+   "kop": "Morgen is de laatste dag om op te zeggen",
+   "tekst": "Na 31 december kun je je basisverzekering voor 2027 niet meer opzeggen. Heb je al opgezegd, dan heb je tot 1 februari om een nieuwe te kiezen.",
+   "pad": "/overstappen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/overstappen-zorgverzekeraar",
+   "labels": [
+    "*"
+   ]
+  },
+  {
+   "id": "deadline-25-jan",
+   "dag": "2027-01-25",
+   "kop": "Nog een week om je nieuwe basisverzekering af te sluiten",
+   "tekst": "Heb je voor 1 januari opgezegd maar nog niets nieuws? Sluit voor 1 februari af, dan ben je met terugwerkende kracht verzekerd vanaf 1 januari.",
+   "pad": "/overstappen",
+   "bron": "https://www.rijksoverheid.nl/onderwerpen/zorgverzekering/vraag-en-antwoord/overstappen-zorgverzekeraar",
+   "labels": [
+    "*"
+   ]
+  },
+  {
+   "id": "premie-zilveren-kruis",
+   "dag": "2026-11-17",
+   "kop": "Zilveren Kruis 2027: premie vanaf € 159,45 per maand",
+   "tekst": "Per maand in 2027: Basis Start € 159,45 (was € 153,95, +€ 5,50); Basis Zeker € 164,95 (was € 159,25, +€ 5,70); Basis Exclusief € 186,95 (was € 176,45, +€ 10,50).",
+   "pad": "/zilveren-kruis",
+   "bron": "https://www.zilverenkruis.nl/consumenten/zorgverzekering/veranderingen/overzicht-van-de-premies",
+   "labels": [
+    "zilveren-kruis"
+   ]
+  },
+  {
+   "id": "premie-fbto",
+   "dag": "2026-11-17",
+   "kop": "FBTO 2027: premie vanaf € 154,75 per maand",
+   "tekst": "Per maand in 2027: Basis € 154,75 (was € 148,75, +€ 6,00); Basis Plus € 164,95 (was € 159,25, +€ 5,70); Basis Vrij € 179,75 (was € 167,95, +€ 11,80).",
+   "pad": "/fbto",
+   "bron": "https://www.fbto.nl/-/media/documenten/Zorg/zorgverzekering-premieoverzicht.pdf",
+   "labels": [
+    "fbto"
+   ]
+  },
+  {
+   "id": "premie-interpolis",
+   "dag": "2026-11-17",
+   "kop": "Interpolis 2027: premie vanaf € 164,95 per maand",
+   "tekst": "Per maand in 2027: ZorgActief € 164,95 (was € 159,25, +€ 5,70).",
+   "pad": "/interpolis",
+   "bron": "https://www.interpolis.nl/verzekeren/zorgverzekering/overzicht-premies",
+   "labels": [
+    "interpolis"
+   ]
+  },
+  {
+   "id": "premie-de-friesland",
+   "dag": "2026-11-17",
+   "kop": "De Friesland 2027: premie vanaf € 156,75 per maand",
+   "tekst": "Per maand in 2027: Zelf Bewust Polis € 156,75 (was € 150,75, +€ 6,00); Alles Verzorgd Polis € 164,95 (was € 159,25, +€ 5,70).",
+   "pad": "/de-friesland",
+   "bron": "https://www.defriesland.nl/zorgverzekering/basisverzekering/premies-zorgverzekeringen",
+   "labels": [
+    "de-friesland"
+   ]
+  },
+  {
+   "id": "premie-ziezo-zilveren-kruis",
+   "dag": "2026-11-17",
+   "kop": "ZieZo 2027: premie vanaf € 164,95 per maand",
+   "tekst": "Per maand in 2027: ZieZo Basis € 164,95 (was € 157,95, +€ 7,00).",
+   "pad": "/ziezo-zilveren-kruis",
+   "bron": "https://www.zilverenkruis.nl/ziezo/zorgverzekering/premie",
+   "labels": [
+    "ziezo-zilveren-kruis"
+   ]
+  },
+  {
+   "id": "premie-de-christelijke-zorgverzekeraar",
+   "dag": "2026-11-17",
+   "kop": "De christelijke zorgverzekeraar 2027: premie vanaf € 160,95 per maand",
+   "tekst": "Per maand in 2027: Principe Polis € 160,95 (was € 155,25, +€ 5,70).",
+   "pad": "/de-christelijke-zorgverzekeraar",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekeraar/de-christelijke",
+   "labels": [
+    "de-christelijke-zorgverzekeraar"
+   ]
+  },
+  {
+   "id": "premie-cz",
+   "dag": "2026-11-17",
+   "kop": "CZ 2027: premie vanaf € 176,25 per maand",
+   "tekst": "Per maand in 2027: Zorgbewustpolis € 176,25 (was € 156,95, +€ 19,30); Zorg-op-maatpolis € 177,25 (was € 159,99, +€ 17,26); Zorgvariatiepolis € 202,50 (was € 177,50, +€ 25,00).",
+   "pad": "/cz",
+   "bron": "https://www.cz.nl/en/zorgverzekering/zorgpremie",
+   "labels": [
+    "cz"
+   ]
+  },
+  {
+   "id": "premie-czdirect",
+   "dag": "2026-11-17",
+   "kop": "CZdirect 2027: premie vanaf € 165,15 per maand",
+   "tekst": "Per maand in 2027: CZdirect Basisverzekering € 165,15 (was € 148,95, +€ 16,20).",
+   "pad": "/czdirect",
+   "bron": "https://czdirect.cz.nl/en/zorgverzekering/basisverzekering",
+   "labels": [
+    "czdirect"
+   ]
+  },
+  {
+   "id": "premie-just",
+   "dag": "2026-11-17",
+   "kop": "Just 2027: premie vanaf € 168,50 per maand",
+   "tekst": "Per maand in 2027: Just Basic € 168,50 (was € 151,45, +€ 17,05).",
+   "pad": "/just",
+   "bron": "https://www.just.nl/zorgverzekering/zorgverzekering-2027",
+   "labels": [
+    "just"
+   ]
+  },
+  {
+   "id": "premie-nationale-nederlanden",
+   "dag": "2026-11-17",
+   "kop": "Nationale-Nederlanden 2027: premie vanaf € 164,45 per maand",
+   "tekst": "Per maand in 2027: Zorg Voordelig € 164,45 (was € 142,45, +€ 22,00); Zorg Vrij € 178,85 (was € 160,95, +€ 17,90).",
+   "pad": "/nationale-nederlanden",
+   "bron": "https://www.nn.nl/nieuws/zorgverzekering-nationale-nederlanden-2027-beschikbaar/",
+   "labels": [
+    "nationale-nederlanden"
+   ]
+  },
+  {
+   "id": "premie-ohra",
+   "dag": "2026-11-17",
+   "kop": "OHRA 2027: premie vanaf € 177,35 per maand",
+   "tekst": "Per maand in 2027: OHRA Zorgverzekering (basis) € 177,35 (was € 159,55, +€ 17,80).",
+   "pad": "/ohra",
+   "bron": "https://www.ohra.nl/over-ohra/nieuws/13-11-2026-ohra-maakt-zorgpremie-2027-bekend",
+   "labels": [
+    "ohra"
+   ]
+  },
+  {
+   "id": "premie-pzp-politie-zorgpolis",
+   "dag": "2026-11-17",
+   "kop": "PZP 2027: premie vanaf € 165,15 per maand",
+   "tekst": "Per maand in 2027: PZPdirect € 165,15 (was € 148,95, +€ 16,20); PZP Zorgbewustpolis € 176,25 (was € 156,95, +€ 19,30); PZP Zorg-op-maatpolis € 177,25 (was € 159,99, +€ 17,26).",
+   "pad": "/pzp-politie-zorgpolis",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/premieoverzicht-basisverzekering",
+   "labels": [
+    "pzp-politie-zorgpolis"
+   ]
+  },
+  {
+   "id": "premie-vgz",
+   "dag": "2026-11-17",
+   "kop": "VGZ 2027: premie vanaf € 167,40 per maand",
+   "tekst": "Per maand in 2027: Basis Keuze € 167,40 (was € 149,90, +€ 17,50); Ruime Keuze € 170,75 (was € 154,25, +€ 16,50); Eigen Keuze € 188,15 (was € 171,65, +€ 16,50).",
+   "pad": "/vgz",
+   "bron": "https://www.vgz.nl/zorgverzekering/premie-overzicht",
+   "labels": [
+    "vgz"
+   ]
+  },
+  {
+   "id": "premie-vgzbewuzt",
+   "dag": "2026-11-17",
+   "kop": "VGZbewuzt 2027: premie vanaf € 165,40 per maand",
+   "tekst": "Per maand in 2027: VGZbewuzt Basisverzekering € 165,40 (was € 147,40, +€ 18,00).",
+   "pad": "/vgzbewuzt",
+   "bron": "https://www.vgzbewuzt.nl/zorgverzekering",
+   "labels": [
+    "vgzbewuzt"
+   ]
+  },
+  {
+   "id": "premie-iza",
+   "dag": "2026-11-17",
+   "kop": "IZA 2027: premie vanaf € 166,40 per maand",
+   "tekst": "Per maand in 2027: IZA Basis Keuze € 166,40 (was € 148,90, +€ 17,50); IZA Ruime Keuze € 170,15 (was € 153,65, +€ 16,50); IZA Eigen Keuze € 177,45 (was € 160,95, +€ 16,50).",
+   "pad": "/iza",
+   "bron": "https://www.iza.nl/collectieve-zorgverzekering/premie-overzicht",
+   "labels": [
+    "iza"
+   ]
+  },
+  {
+   "id": "premie-umc-zorgverzekering",
+   "dag": "2026-11-17",
+   "kop": "UMC Zorgverzekering 2027: premie vanaf € 167,40 per maand",
+   "tekst": "Per maand in 2027: UMC Ruime Keuze € 167,40 (was € 150,90, +€ 16,50); UMC Eigen Keuze € 176,45 (was € 159,95, +€ 16,50).",
+   "pad": "/umc-zorgverzekering",
+   "bron": "https://www.umczorgverzekering.nl/zorgverzekering/premie-overzicht",
+   "labels": [
+    "umc-zorgverzekering"
+   ]
+  },
+  {
+   "id": "premie-unive",
+   "dag": "2026-11-17",
+   "kop": "Univé 2027: premie vanaf € 165,40 per maand",
+   "tekst": "Per maand in 2027: Zorg Select € 165,40 (was € 147,40, +€ 18,00); Zorg Basis € 167,90 (was € 149,90, +€ 18,00); Zorg Geregeld € 171,25 (was € 155,00, +€ 16,25); Zorg Uitgebreid € 189,70 (was € 173,20, +€ 16,50).",
+   "pad": "/unive",
+   "bron": "https://www.unive.nl/zorgverzekering/zorgverzekering-2027",
+   "labels": [
+    "unive"
+   ]
+  },
+  {
+   "id": "premie-unitedconsumers",
+   "dag": "2026-11-17",
+   "kop": "UnitedConsumers 2027: premie vanaf € 165,40 per maand",
+   "tekst": "Per maand in 2027: Bewuste Keuze € 165,40 (was € 147,40, +€ 18,00); Basis Keuze € 167,40 (was € 149,90, +€ 17,50); Ruime Keuze € 170,75 (was € 154,25, +€ 16,50); Eigen Keuze € 188,15 (was € 171,65, +€ 16,50).",
+   "pad": "/unitedconsumers",
+   "bron": "https://www.unitedconsumers.com/zorgverzekering/basisverzekering",
+   "labels": [
+    "unitedconsumers"
+   ]
+  },
+  {
+   "id": "premie-izz-door-vgz",
+   "dag": "2026-11-17",
+   "kop": "IZZ 2027: premie vanaf € 165,40 per maand",
+   "tekst": "Per maand in 2027: Variant Bewuzt € 165,40 (was € 147,40, +€ 18,00); Variant Basis € 167,40 (was € 149,90, +€ 17,50); Variant Natura € 170,75 (was € 154,25, +€ 16,50); Variant Combinatie € 188,15 (was € 171,65, +€ 16,50).",
+   "pad": "/izz-door-vgz",
+   "bron": "https://www.zorgwijzer.nl/zorgpremie",
+   "labels": [
+    "izz-door-vgz"
+   ]
+  },
+  {
+   "id": "premie-zorgzaam",
+   "dag": "2026-11-17",
+   "kop": "Zorgzaam 2027: premie vanaf € 170,75 per maand",
+   "tekst": "Per maand in 2027: Zorgzaam Ruime Keuze € 170,75 (was € 154,25, +€ 16,50).",
+   "pad": "/zorgzaam",
+   "bron": "https://www.zorgzaam.nl/zorgverzekering/premie-overzicht",
+   "labels": [
+    "zorgzaam"
+   ]
+  },
+  {
+   "id": "premie-onvz",
+   "dag": "2026-11-17",
+   "kop": "ONVZ 2027: premie vanaf € 167,40 per maand",
+   "tekst": "Per maand in 2027: Bewuste Keuze € 167,40 (was € 156,10, +€ 11,30); Ruime Keuze € 170,75; Vrije Keuze € 183,60 (was € 166,10, +€ 17,50).",
+   "pad": "/onvz",
+   "bron": "https://www.onvz.nl/zorgverzekering/basisverzekering",
+   "labels": [
+    "onvz"
+   ]
+  },
+  {
+   "id": "premie-menzis",
+   "dag": "2026-11-17",
+   "kop": "Menzis 2027: premie vanaf € 160,75 per maand",
+   "tekst": "Per maand in 2027: Basis Voordelig € 160,75 (was € 151,25, +€ 9,50); Basis € 165,75 (was € 156,25, +€ 9,50); Basis Vrij € 188,25 (was € 175,75, +€ 12,50).",
+   "pad": "/menzis",
+   "bron": "https://www.menzis.nl/zorgverzekering/premies/premie-2027",
+   "labels": [
+    "menzis"
+   ]
+  },
+  {
+   "id": "premie-vinkvink",
+   "dag": "2026-11-17",
+   "kop": "VinkVink 2027: premie vanaf € 148,40 per maand",
+   "tekst": "Per maand in 2027: VinkVink Basisverzekering € 148,40 (was € 142,40, +€ 6,00).",
+   "pad": "/vinkvink",
+   "bron": "https://www.vinkvink.nl/zorgverzekering/basisverzekering",
+   "labels": [
+    "vinkvink"
+   ]
+  },
+  {
+   "id": "premie-dsw",
+   "dag": "2026-11-17",
+   "kop": "DSW 2027: premie vanaf € 173,25 per maand",
+   "tekst": "Per maand in 2027: Basisverzekering € 173,25 (was € 158,50, +€ 14,75).",
+   "pad": "/dsw",
+   "bron": "https://www.dsw.nl/consumenten/zorgverzekering/basisverzekering",
+   "labels": [
+    "dsw"
+   ]
+  },
+  {
+   "id": "premie-stad-holland",
+   "dag": "2026-11-17",
+   "kop": "Stad Holland 2027: premie vanaf € 176,50 per maand",
+   "tekst": "Per maand in 2027: Basisverzekering € 176,50 (was € 164,75, +€ 11,75).",
+   "pad": "/stad-holland",
+   "bron": "https://www.stadholland.nl/Consumenten/zorgverzekering/basisverzekering",
+   "labels": [
+    "stad-holland"
+   ]
+  },
+  {
+   "id": "premie-a-s-r",
+   "dag": "2026-11-17",
+   "kop": "a.s.r. 2027: premie vanaf € 164,50 per maand",
+   "tekst": "Per maand in 2027: Bewuste Keuze € 164,50 (was € 149,80, +€ 14,70); Ruime Keuze € 172,50 (was € 154,50, +€ 18,00); Eigen Keuze € 197,50 (was € 185,00, +€ 12,50).",
+   "pad": "/a-s-r",
+   "bron": "https://www.asr.nl/zorgverzekering/wijzigingen",
+   "labels": [
+    "a-s-r"
+   ]
+  },
+  {
+   "id": "premie-a-s-r-ik-kies-zelf",
+   "dag": "2026-11-17",
+   "kop": "a.s.r. Ik kies zelf 2027: premie vanaf € 172,50 per maand",
+   "tekst": "Per maand in 2027: Goede Keuze € 172,50 (was € 154,50, +€ 18,00); Juiste Keuze € 174,50 (was € 153,50, +€ 21,00); Vrije Keuze € 197,50 (was € 185,00, +€ 12,50).",
+   "pad": "/a-s-r-ik-kies-zelf",
+   "bron": "https://www.asr.nl/zorgverzekering/wijzigingen",
+   "labels": [
+    "a-s-r-ik-kies-zelf"
+   ]
+  },
+  {
+   "id": "premie-zorg-en-zekerheid",
+   "dag": "2026-11-17",
+   "kop": "Zorg en Zekerheid 2027: premie vanaf € 169,95 per maand",
+   "tekst": "Per maand in 2027: Zorg Gemak Polis € 169,95 (was € 150,45, +€ 19,50); Zorg Zeker Polis € 174,50 (was € 156,75, +€ 17,75); Zorg Vrij Polis € 188,50 (was € 166,50, +€ 22,00).",
+   "pad": "/zorg-en-zekerheid",
+   "bron": "https://www.zorgenzekerheid.nl/zorgverzekeringen/onze-zorgverzekeringen/premies-2027-bekend",
+   "labels": [
+    "zorg-en-zekerheid"
+   ]
+  },
+  {
+   "id": "premie-azvz",
+   "dag": "2026-11-17",
+   "kop": "AZVZ 2027: premie vanaf € 174,50 per maand",
+   "tekst": "Per maand in 2027: Zorg Zeker Polis € 174,50 (was € 156,75, +€ 17,75).",
+   "pad": "/azvz",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/premieoverzicht-basisverzekering",
+   "labels": [
+    "azvz"
+   ]
+  },
+  {
+   "id": "premie-salland",
+   "dag": "2026-11-17",
+   "kop": "Salland 2027: premie vanaf € 171,45 per maand",
+   "tekst": "Per maand in 2027: Basisverzekering € 171,45 (was € 157,50, +€ 13,95).",
+   "pad": "/salland",
+   "bron": "https://www.salland.nl/zorgverzekering/basisverzekering",
+   "labels": [
+    "salland"
+   ]
+  },
+  {
+   "id": "premie-hollandzorg",
+   "dag": "2026-11-17",
+   "kop": "HollandZorg 2027: premie vanaf € 173,95 per maand",
+   "tekst": "Per maand in 2027: HollandZorg Basisverzekering € 173,95 (was € 160,80, +€ 13,15).",
+   "pad": "/hollandzorg",
+   "bron": "https://www.hollandzorg.com/nl/particulier/flexibele-zorgverzekering/basisverzekering",
+   "labels": [
+    "hollandzorg"
+   ]
+  },
+  {
+   "id": "premie-aevitae",
+   "dag": "2026-11-17",
+   "kop": "Aevitae 2027: premie vanaf € 171,90 per maand",
+   "tekst": "Per maand in 2027: Natura Select € 171,90 (was € 155,40, +€ 16,50); Natura € 182,90 (was € 163,90, +€ 19,00); Combinatie € 198,10 (was € 177,10, +€ 21,00).",
+   "pad": "/aevitae",
+   "bron": "https://www.aevitae.com/zorgverzekeringen/basisverzekering/premies-2027",
+   "labels": [
+    "aevitae"
+   ]
+  },
+  {
+   "id": "premie-care4life-aevitae-bewust-verzekerd",
+   "dag": "2026-11-17",
+   "kop": "Care4Life 2027: premie vanaf € 168,60 per maand",
+   "tekst": "Per maand in 2027: Bewust Verzekerd Natura Select € 168,60 (was € 152,10, +€ 16,50); Bewust Verzekerd Natura € 175,90 (was € 156,90, +€ 19,00); Bewust Verzekerd Combinatie € 198,10 (was € 177,10, +€ 21,00).",
+   "pad": "/care4life-aevitae-bewust-verzekerd",
+   "bron": "https://www.aevitae.com/zorgverzekeringen/basisverzekering/bewust-verzekerd",
+   "labels": [
+    "care4life-aevitae-bewust-verzekerd"
+   ]
+  }
+ ]
+}

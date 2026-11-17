@@ -247,6 +247,14 @@
     {
       "path": "/api/keuze-tools?tool=rdam&op=verrijk",
       "schedule": "50 */2 * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=zorg&op=check",
+      "schedule": "37 5 * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=zorg&op=ronde",
+      "schedule": "13 7 * * *"
     }
   ],
   "rewrites": [
