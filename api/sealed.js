@@ -12,7 +12,7 @@ import { proefStand, proefTekst } from '../lib/proef.js';
 import { renderSealedSpecial, renderPartij, zoekPartij, PARTIJ_INDEX } from '../lib/sealed.js';
 import { zoekLp, bewaarKoper, lijstKopers, LP_INDEX } from '../lib/sealed-lp.js';
 import { renderChatPage } from '../lib/sealed-chatpage.js';
-import { chatStart, chatEv, chatVrij, chatStand, chatStandTekst, chatLeer } from '../lib/sealed-chat.js';
+import { chatStart, chatEv, chatVrij, chatVraag, chatStand, chatStandTekst, chatLeer } from '../lib/sealed-chat.js';
 import { extraPages } from '../lib/sealed-pages.js';
 import { berichten, HAIKU } from '../lib/ai.js';
 import { GROWTH_SCRIPT } from '../lib/sealed.js';
@@ -98,7 +98,7 @@ export default async function handler(req, res) {
     if(req.method!=='POST')return stuur(res,405,'application/json','{"ok":false}','no-store');
     return anonymousRequest(req,res,op);
   }
-  if (op === 'chatstart' || op === 'chatev' || op === 'chatvrij' || op === 'chatsein') {
+  if (op === 'chatstart' || op === 'chatev' || op === 'chatvrij' || op === 'chatvraag' || op === 'chatsein') {
     if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
     res.setHeader('X-Robots-Tag', 'noindex, nofollow');
     try {
@@ -107,6 +107,7 @@ export default async function handler(req, res) {
       if (op === 'chatstart') { const r = await chatStart(kv, { rol: b.rol, taal: b.taal, bot }); return stuur(res, r ? 200 : 400, 'application/json', JSON.stringify(r || { ok: false }), 'no-store'); }
       if (bot) return stuur(res, 200, 'application/json', '{"ok":true}', 'no-store');
       if (op === 'chatev') return stuur(res, 200, 'application/json', JSON.stringify({ ok: await chatEv(kv, b) }), 'no-store');
+      if (op === 'chatvraag') return stuur(res, 200, 'application/json', JSON.stringify(await chatVraag(kv, b, o => berichten({ ...o, model: HAIKU }))), 'no-store');
       if (op === 'chatvrij') return stuur(res, 200, 'application/json', JSON.stringify({ ok: await chatVrij(kv, b) }), 'no-store');
       // seintje: alleen met de geldige privésleutel van de inzending; los van de anonieme record bewaard en mee verwijderd bij intrekken
       const mail = String(b.mail || '').trim().toLowerCase().slice(0, 160); if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/.test(mail)) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store');
