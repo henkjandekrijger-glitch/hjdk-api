@@ -1,99 +1,170 @@
 {
-  "uitleg": "Log van de Kadoly-posts op Facebook en Instagram (kadoly/taak-social.md). Alleen toevoegen; cijfers per post na 24 uur.",
-  "zernio_profiel": "6afaf9820c09220040d746f4",
-  "accounts": {
-    "facebook": {
-      "pagina": "Kadoly",
-      "pagina_id": "61596079596846",
-      "account_id": "6afafaf7446856cecd87324f",
-      "profiel": "bio, categorieen, omslag, profielfoto (logo), e-mail, telefoon, privacylink, impressum, prijsklasse, actieknop (16 nov)"
-    },
-    "instagram": {
-      "handle": "kadoly.shop",
-      "account_id": "6afb8787a26245ebf04dc7be",
-      "ig_id": "17841476967447591",
-      "zernio": "gekoppeld 16 nov 22:55 UTC (zakelijk account, categorie Shopping & retail)",
-      "profiel": "naam Kadoly, bio, logo (16 nov); websitelink kan alleen in de app"
-    },
-    "pinterest": {
-      "handle": "kadolyshop",
-      "account_id": "6afb8a5d86e8bb18f844fc95",
-      "email": "henkjan@kadoly.com (bevestigen door Henkjan)",
-      "borden": {
-        "Sieraden": "271060540011940606",
-        "Wonen en decoratie": "271060540011940607",
-        "Cadeau-ideeën": "271060540011940609",
-        "Hobby en creatief": "271060540011940610"
-      },
-      "oud": "oude account op henkjan@yoo.rs kreeg 11 nov een overtredingsmelding; niet meer gebruiken"
-    }
+ "uitleg": "Log van de Kadoly-posts op Facebook en Instagram (kadoly/taak-social.md). Alleen toevoegen; cijfers per post na 24 uur.",
+ "zernio_profiel": "6afaf9820c09220040d746f4",
+ "accounts": {
+  "facebook": {
+   "pagina": "Kadoly",
+   "pagina_id": "61596079596846",
+   "account_id": "6afafaf7446856cecd87324f",
+   "profiel": "bio, categorieen, omslag, profielfoto (logo), e-mail, telefoon, privacylink, impressum, prijsklasse, actieknop (16 nov)"
   },
-  "lerend": {
-    "aantal_per_dag": 2,
-    "tijdvakken_nl": [
-      "12:15",
-      "19:45"
-    ],
-    "soorten": [
-      "sieraad",
-      "mandje",
-      "nieuw",
-      "wonen"
-    ],
-    "besluiten": []
+  "instagram": {
+   "handle": "kadoly.shop",
+   "account_id": "6afb8787a26245ebf04dc7be",
+   "ig_id": "17841476967447591",
+   "zernio": "gekoppeld 16 nov 22:55 UTC (zakelijk account, categorie Shopping & retail)",
+   "profiel": "naam Kadoly, bio, logo (16 nov); websitelink kan alleen in de app"
   },
-  "volgers": {},
-  "posts": [
-    {
-      "tijd": "2026-11-16T12:54:00Z",
-      "dag": "2026-11-16",
-      "platform": "facebook",
-      "soort": "hook",
-      "via": "chrome",
-      "wat": "Maak de zin af: het slechtste cadeau dat ik ooit kreeg was... (beeld 1080x1350, geen link)",
-      "tijdvak": "13:54"
-    },
-    {
-      "tijd": "2026-11-16T14:02:00Z",
-      "dag": "2026-11-16",
-      "platform": "instagram",
-      "soort": "hook",
-      "via": "chrome",
-      "wat": "Maak de zin af: het slechtste cadeau dat ik ooit kreeg was... (4:5, hashtags)",
-      "tijdvak": "15:02"
-    },
-    {
-      "tijd": "2026-11-16T18:45:00Z",
-      "dag": "2026-11-16",
-      "platform": "facebook",
-      "soort": "sieraad",
-      "pid": "oc_4174005832564737",
-      "tijdvak": "19:45",
-      "via": "zernio",
-      "zernio_id": "6afb0dc13d037958d891cf2b",
-      "link": "go.kadoly.com/o?k=fb&p=oc_4174005832564737&c=1116-sieraad",
-      "status": "gepubliceerd"
-    },
-    {
-      "tijd": "2026-11-16T22:56:00Z",
-      "dag": "2026-11-16",
-      "platform": "instagram",
-      "soort": "sieraad",
-      "pid": "oc_4174005817131010",
-      "tijdvak": "23:56",
-      "via": "zernio",
-      "zernio_id": "6afb87a68c190e4bc31e99a1"
-    },
-    {
-      "tijd": "2026-11-16T22:58:00Z",
-      "dag": "2026-11-16",
-      "platform": "pinterest",
-      "soort": "sieraad",
-      "pid": "oc_4174005832564737",
-      "bord": "Sieraden",
-      "via": "zernio",
-      "zernio_id": "6afb8a7f8c190e4bc31ea106",
-      "post_id": "271060471319430779"
-    }
-  ]
+  "pinterest": {
+   "handle": "kadolyshop",
+   "account_id": "6afb8a5d86e8bb18f844fc95",
+   "email": "henkjan@kadoly.com (bevestigen door Henkjan)",
+   "borden": {
+    "Sieraden": "271060540011940606",
+    "Wonen en decoratie": "271060540011940607",
+    "Cadeau-ideeën": "271060540011940609",
+    "Hobby en creatief": "271060540011940610"
+   },
+   "oud": "oude account op henkjan@yoo.rs kreeg 11 nov een overtredingsmelding; niet meer gebruiken"
+  }
+ },
+ "lerend": {
+  "aantal_per_dag": 2,
+  "tijdvakken_nl": [
+   "12:15",
+   "19:45"
+  ],
+  "soorten": [
+   "sieraad",
+   "mandje",
+   "nieuw",
+   "wonen"
+  ],
+  "besluiten": [],
+  "rotatie": "sieraad schuift elke dag één tijdvak op; 17 nov: 12:15 sieraad, 19:45 mandje; 18 nov: 12:15 mandje, 19:45 nieuw; 19 nov: 12:15 nieuw, 19:45 wonen; 20 nov: 12:15 wonen, 19:45 sieraad"
+ },
+ "volgers": {},
+ "posts": [
+  {
+   "tijd": "2026-11-16T12:54:00Z",
+   "dag": "2026-11-16",
+   "platform": "facebook",
+   "soort": "hook",
+   "via": "chrome",
+   "wat": "Maak de zin af: het slechtste cadeau dat ik ooit kreeg was... (beeld 1080x1350, geen link)",
+   "tijdvak": "13:54"
+  },
+  {
+   "tijd": "2026-11-16T14:02:00Z",
+   "dag": "2026-11-16",
+   "platform": "instagram",
+   "soort": "hook",
+   "via": "chrome",
+   "wat": "Maak de zin af: het slechtste cadeau dat ik ooit kreeg was... (4:5, hashtags)",
+   "tijdvak": "15:02"
+  },
+  {
+   "tijd": "2026-11-16T18:45:00Z",
+   "dag": "2026-11-16",
+   "platform": "facebook",
+   "soort": "sieraad",
+   "pid": "oc_4174005832564737",
+   "tijdvak": "19:45",
+   "via": "zernio",
+   "zernio_id": "6afb0dc13d037958d891cf2b",
+   "link": "go.kadoly.com/o?k=fb&p=oc_4174005832564737&c=1116-sieraad",
+   "status": "gepubliceerd"
+  },
+  {
+   "tijd": "2026-11-16T22:56:00Z",
+   "dag": "2026-11-16",
+   "platform": "instagram",
+   "soort": "sieraad",
+   "pid": "oc_4174005817131010",
+   "tijdvak": "23:56",
+   "via": "zernio",
+   "zernio_id": "6afb87a68c190e4bc31e99a1"
+  },
+  {
+   "tijd": "2026-11-16T22:58:00Z",
+   "dag": "2026-11-16",
+   "platform": "pinterest",
+   "soort": "sieraad",
+   "pid": "oc_4174005832564737",
+   "bord": "Sieraden",
+   "via": "zernio",
+   "zernio_id": "6afb8a7f8c190e4bc31ea106",
+   "post_id": "271060471319430779"
+  },
+  {
+   "tijd": "2026-11-17T11:15:00Z",
+   "dag": "2026-11-17",
+   "platform": "facebook",
+   "soort": "sieraad",
+   "pid": "oc_4174005947613185",
+   "tijdvak": "12:15",
+   "via": "zernio",
+   "zernio_id": "6afc13bf4050bd248b00143d",
+   "status": "gepland",
+   "link": "go.kadoly.com/o?k=fb&p=oc_4174005947613185&c=1117-sieraad"
+  },
+  {
+   "tijd": "2026-11-17T11:15:00Z",
+   "dag": "2026-11-17",
+   "platform": "instagram",
+   "soort": "sieraad",
+   "pid": "oc_4174005947613185",
+   "tijdvak": "12:15",
+   "via": "zernio",
+   "zernio_id": "6afc13bff1d3e0ba41c3361e",
+   "status": "gepland"
+  },
+  {
+   "tijd": "2026-11-17T11:15:00Z",
+   "dag": "2026-11-17",
+   "platform": "pinterest",
+   "soort": "sieraad",
+   "pid": "oc_4174005947613185",
+   "tijdvak": "12:15",
+   "via": "zernio",
+   "zernio_id": "6afc13d54050bd248b001483",
+   "status": "gepland",
+   "bord": "Sieraden"
+  },
+  {
+   "tijd": "2026-11-17T18:45:00Z",
+   "dag": "2026-11-17",
+   "platform": "facebook",
+   "soort": "mandje",
+   "pid": "oc_4174005828042753",
+   "tijdvak": "19:45",
+   "via": "zernio",
+   "zernio_id": "6afc13c08f873c82867e0adc",
+   "status": "gepland",
+   "link": "go.kadoly.com/o?k=fb&p=oc_4174005828042753&c=1117-mandje"
+  },
+  {
+   "tijd": "2026-11-17T18:45:00Z",
+   "dag": "2026-11-17",
+   "platform": "instagram",
+   "soort": "mandje",
+   "pid": "oc_4174005828042753",
+   "tijdvak": "19:45",
+   "via": "zernio",
+   "zernio_id": "6afc13c14050bd248b001446",
+   "status": "gepland"
+  },
+  {
+   "tijd": "2026-11-17T18:45:00Z",
+   "dag": "2026-11-17",
+   "platform": "pinterest",
+   "soort": "mandje",
+   "pid": "oc_4174005828042753",
+   "tijdvak": "19:45",
+   "via": "zernio",
+   "zernio_id": "6afc13d68f873c82867e0b22",
+   "status": "gepland",
+   "bord": "Wonen en decoratie"
+  }
+ ]
 }
