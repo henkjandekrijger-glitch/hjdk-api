@@ -1229,7 +1229,7 @@ export default async function handler(req, res) {
     if (op === 'whget') { // 17 nov: alleen-lezen diagnose bij Whop (levering per advertentie, problemen); beschermde host, alleen GET op advertentiepaden
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const pad = String(url.searchParams.get('pad') || ''); if (!/^\/(ad_issues|ads|ad_groups|ad_campaigns|ad_stats)(\/[A-Za-z0-9_]+)?(\?[A-Za-z0-9_=&:.,-]*)?$/.test(pad)) return res.status(400).json({ ok: false, fout: 'pad' });
-      const pr = url.searchParams.get('p') ? whProject(String(url.searchParams.get('p'))) : null; const r = await whopApi(pad, pr && pr.key ? { key: pr.key } : {});
+      const pr = url.searchParams.get('p') ? whProject(String(url.searchParams.get('p'))) : null; const vv = String(url.searchParams.get('v') || '').replace(/[^0-9-]/g, ''); const r = await whopApi(pad, Object.assign(pr && pr.key ? { key: pr.key } : {}, vv ? { versie: vv } : {})); if (url.searchParams.get('vol')) return res.status(200).json({ ok: r.ok, status: r.status, fout: r.fout || null, data: r.j });
       const kort = x => x && typeof x === 'object' ? Object.fromEntries(Object.entries(x).filter(([k]) => /^(id|title|status|delivery_status|issues|impressions|spend|link_clicks|clicks|content_review|learning_progress|reason|message|severity|code|ad|ad_group|ad_campaign|created_at|description)$/.test(k))) : x;
       return res.status(200).json({ ok: r.ok, status: r.status, fout: r.fout || null, data: r.j && Array.isArray(r.j.data) ? r.j.data.map(kort) : kort(r.j) }); }
     if (op === 'whleadstand') { // tellingen per project per dag (alleen aantallen)
