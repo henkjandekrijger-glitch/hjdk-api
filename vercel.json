@@ -230,7 +230,7 @@
     },
     {
       "path": "/api/keuze-tools?tool=rdam&op=ververs",
-      "schedule": "20 3 * * *"
+      "schedule": "20 */3 * * *"
     }
   ],
   "rewrites": [
