@@ -1,0 +1,2279 @@
+{
+ "id": "fastfood",
+ "peildatum": "2026-11-17",
+ "onderwerp": {
+  "nl": "fast food",
+  "en": "fast food",
+  "de": "Fast Food",
+  "es": "comida rápida",
+  "pt": "fast food"
+ },
+ "h1": {
+  "nl": "Fast food op Curaçao: welke zaak kies je?",
+  "en": "Fast food in Curaçao: which place should you pick?",
+  "de": "Fast Food auf Curaçao: Welches Lokal wählst du?",
+  "es": "Comida rápida en Curazao: ¿qué local eliges?",
+  "pt": "Fast food em Curaçao: qual lugar você escolhe?"
+ },
+ "titel": {
+  "nl": "Fast food op Curaçao: {n} zaken vergeleken",
+  "en": "Fast food in Curaçao: {n} places compared",
+  "de": "Fast Food auf Curaçao: {n} Lokale im Vergleich",
+  "es": "Comida rápida en Curazao: {n} locales comparados",
+  "pt": "Fast food em Curaçao: {n} lugares comparados"
+ },
+ "metaDesc": {
+  "nl": "Fast food op Curaçao: {n} zaken met Google-scores, adressen en telefoonnummers, van McDonald's, KFC en Burger King tot foodtrucks en frietzaken zoals The Flakos Grill.",
+  "en": "Fast food in Curaçao: {n} places with Google scores, addresses and phone numbers, from McDonald's, KFC and Burger King to food trucks and fries spots like The Flakos Grill.",
+  "de": "Fast Food auf Curaçao: {n} Lokale mit Google-Bewertungen, Adressen und Telefonnummern, von McDonald's, KFC und Burger King bis zu Foodtrucks und Pommes-Imbissen wie The Flakos Grill.",
+  "es": "Comida rápida en Curazao: {n} locales con puntuaciones de Google, direcciones y teléfonos, de McDonald's, KFC y Burger King a food trucks y locales de papas como The Flakos Grill.",
+  "pt": "Fast food em Curaçao: {n} lugares com notas do Google, endereços e telefones, de McDonald's, KFC e Burger King a food trucks e casas de batata frita como The Flakos Grill."
+ },
+ "kort": {
+  "nl": "We vergelijken 27 fastfoodzaken op Curaçao met minstens 15 Google-reviews. Het best beoordeeld zijn Snackbar Curaçao Babymonkey Smulkar (4,8 uit 40 reviews), The Flakos Grill (4,7 uit 69) en Dushi loempia Saliña (4,7 uit 23), daarna Fridays Baby Truck (4,6 uit 483). De bekende ketens McDonald's, KFC, Burger King, Subway, Wendy's en Quiznos scoren tussen 3,9 en 4,1, maar hebben de meeste reviews. Prijzen en openingstijden hebben we niet kunnen bevestigen, dus bel of check de website voor je gaat.",
+  "en": "We compare 27 fast food places in Curaçao with at least 15 Google reviews. Best rated are Snackbar Curaçao Babymonkey Smulkar (4.8 from 40 reviews), The Flakos Grill (4.7 from 69) and Dushi loempia Saliña (4.7 from 23), then Fridays Baby Truck (4.6 from 483). The well-known chains McDonald's, KFC, Burger King, Subway, Wendy's and Quiznos score between 3.9 and 4.1, but have the most reviews. We could not confirm prices and opening hours, so call or check the website before you go.",
+  "de": "Wir vergleichen 27 Fast-Food-Lokale auf Curaçao mit mindestens 15 Google-Bewertungen. Am besten bewertet sind Snackbar Curaçao Babymonkey Smulkar (4,8 aus 40 Bewertungen), The Flakos Grill (4,7 aus 69) und Dushi loempia Saliña (4,7 aus 23), danach Fridays Baby Truck (4,6 aus 483). Die bekannten Ketten McDonald's, KFC, Burger King, Subway, Wendy's und Quiznos liegen zwischen 3,9 und 4,1, haben aber die meisten Bewertungen. Preise und Öffnungszeiten konnten wir nicht bestätigen, ruf also an oder prüfe die Website, bevor du losgehst.",
+  "es": "Comparamos 27 locales de comida rápida en Curazao con al menos 15 reseñas en Google. Los mejor valorados son Snackbar Curaçao Babymonkey Smulkar (4,8 con 40 reseñas), The Flakos Grill (4,7 con 69) y Dushi loempia Saliña (4,7 con 23), y después Fridays Baby Truck (4,6 con 483). Las cadenas conocidas McDonald's, KFC, Burger King, Subway, Wendy's y Quiznos puntúan entre 3,9 y 4,1, pero tienen más reseñas. No hemos podido confirmar precios ni horarios, así que llama o mira su web antes de ir.",
+  "pt": "Comparamos 27 lugares de fast food em Curaçao com pelo menos 15 avaliações no Google. Os mais bem avaliados são Snackbar Curaçao Babymonkey Smulkar (4,8 em 40 avaliações), The Flakos Grill (4,7 em 69) e Dushi loempia Saliña (4,7 em 23), depois Fridays Baby Truck (4,6 em 483). As redes conhecidas McDonald's, KFC, Burger King, Subway, Wendy's e Quiznos têm notas entre 3,9 e 4,1, mas têm mais avaliações. Não conseguimos confirmar preços e horários, então ligue ou veja o site antes de ir."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Waar heb je trek in?",
+    "en": "What are you craving?",
+    "de": "Worauf hast du Lust?",
+    "es": "¿Qué te apetece?",
+    "pt": "Do que você está com vontade?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anything",
+      "de": "Egal",
+      "es": "Cualquier cosa",
+      "pt": "Qualquer coisa"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Burgers",
+      "en": "Burgers",
+      "de": "Burger",
+      "es": "Hamburguesas",
+      "pt": "Hambúrgueres"
+     },
+     "plus": [
+      "burger"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Gebakken kip",
+      "en": "Fried chicken",
+      "de": "Brathähnchen",
+      "es": "Pollo frito",
+      "pt": "Frango frito"
+     },
+     "plus": [
+      "kip"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Broodjes",
+      "en": "Sandwiches",
+      "de": "Sandwiches",
+      "es": "Sándwiches",
+      "pt": "Sanduíches"
+     },
+     "plus": [
+      "broodje"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Friet en snacks",
+      "en": "Fries and snacks",
+      "de": "Pommes und Snacks",
+      "es": "Papas fritas y snacks",
+      "pt": "Batata frita e petiscos"
+     },
+     "plus": [
+      "friet",
+      "snack"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat voor zaak?",
+    "en": "What kind of place?",
+    "de": "Was für ein Lokal?",
+    "es": "¿Qué tipo de local?",
+    "pt": "Que tipo de lugar?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anything",
+      "de": "Egal",
+      "es": "Cualquier cosa",
+      "pt": "Qualquer coisa"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Bekende keten",
+      "en": "Well-known chain",
+      "de": "Bekannte Kette",
+      "es": "Cadena conocida",
+      "pt": "Rede conhecida"
+     },
+     "plus": [
+      "keten"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Lokale zaak",
+      "en": "Local place",
+      "de": "Lokales Lokal",
+      "es": "Local de la isla",
+      "pt": "Lugar local"
+     },
+     "plus": [
+      "lokaal"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Foodtruck",
+      "en": "Food truck",
+      "de": "Foodtruck",
+      "es": "Food truck",
+      "pt": "Food truck"
+     },
+     "plus": [
+      "foodtruck"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Waar?",
+    "en": "Where?",
+    "de": "Wo?",
+    "es": "¿Dónde?",
+    "pt": "Onde?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anything",
+      "de": "Egal",
+      "es": "Cualquier cosa",
+      "pt": "Qualquer coisa"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Rond Caracasbaai en Jan Thiel",
+      "en": "Around Caracasbaai and Jan Thiel",
+      "de": "Rund um Caracasbaai und Jan Thiel",
+      "es": "Cerca de Caracasbaai y Jan Thiel",
+      "pt": "Perto de Caracasbaai e Jan Thiel"
+     },
+     "plus": [
+      "caracasbaai",
+      "janthiel"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Op de luchthaven",
+      "en": "At the airport",
+      "de": "Am Flughafen",
+      "es": "En el aeropuerto",
+      "pt": "No aeroporto"
+     },
+     "plus": [
+      "luchthaven"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "snackbar-curacao-foodtruck-babymonkey-smulkar",
+   "naam": "Snackbar Curaçao Babymonkey Smulkar",
+   "url": "https://curacao.day/en/businesses/fast-food-restaurant/snackbar-curacao-foodtruck-babymonkey-smulkar",
+   "soort": {
+    "nl": "foodtruck",
+    "en": "food truck",
+    "de": "Foodtruck",
+    "es": "food truck",
+    "pt": "food truck"
+   },
+   "plaats": "Sint Michiel",
+   "tags": [
+    "lokaal",
+    "foodtruck",
+    "snack"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 33 Jan Doret, Sint Michiel, Curaçao",
+     "en": "Address (Google): 33 Jan Doret, Sint Michiel, Curaçao",
+     "de": "Adresse (Google): 33 Jan Doret, Sint Michiel, Curaçao",
+     "es": "Dirección (Google): 33 Jan Doret, Sint Michiel, Curaçao",
+     "pt": "Endereço (Google): 33 Jan Doret, Sint Michiel, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 692 1331",
+     "en": "Phone (Google): +599 9 692 1331",
+     "de": "Telefon (Google): +599 9 692 1331",
+     "es": "Teléfono (Google): +599 9 692 1331",
+     "pt": "Telefone (Google): +599 9 692 1331"
+    },
+    {
+     "nl": "Heeft alleen een Facebookpagina als website (Google)",
+     "en": "Has only a Facebook page as its website (Google)",
+     "de": "Hat nur eine Facebook-Seite als Website (Google)",
+     "es": "Solo tiene una página de Facebook como sitio web (Google)",
+     "pt": "Tem apenas uma página no Facebook como site (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 40,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/snackbar-curacao-foodtruck-babymonkey-smulkar"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/snackbar-curacao-foodtruck-babymonkey-smulkar",
+    "https://www.facebook.com/people/Babymonkey-smulkar/100082215307949/"
+   ]
+  },
+  {
+   "id": "the-flakos-grill",
+   "naam": "The Flakos Grill",
+   "url": "https://curacao.day/en/businesses/fast-food-restaurant/the-flakos-grill",
+   "soort": {
+    "nl": "grillzaak",
+    "en": "grill",
+    "de": "Grill-Lokal",
+    "es": "parrilla",
+    "pt": "grill"
+   },
+   "plaats": "Franklin D. Rooseveltweg",
+   "tags": [
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 184 Franklin D. Rooseveltweg, Willemstad, Curaçao",
+     "en": "Address (Google): 184 Franklin D. Rooseveltweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 184 Franklin D. Rooseveltweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 184 Franklin D. Rooseveltweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 184 Franklin D. Rooseveltweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 663 9666",
+     "en": "Phone (Google): +599 9 663 9666",
+     "de": "Telefon (Google): +599 9 663 9666",
+     "es": "Teléfono (Google): +599 9 663 9666",
+     "pt": "Telefone (Google): +599 9 663 9666"
+    },
+    {
+     "nl": "Een menu hebben we niet kunnen vinden, bel de zaak voor het aanbod",
+     "en": "We could not find a menu, so call the place for what is on offer",
+     "de": "Eine Speisekarte haben wir nicht gefunden, ruf das Lokal für das Angebot an",
+     "es": "No hemos encontrado un menú, llama al local para ver qué ofrece",
+     "pt": "Não encontramos um cardápio, ligue para o local para saber o que oferece"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 69,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/the-flakos-grill"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/the-flakos-grill"
+   ]
+  },
+  {
+   "id": "dushi-loempia-salina",
+   "naam": "Dushi loempia Saliña",
+   "url": "https://curacao.day/en/businesses/fast-food-restaurant/dushi-loempia-salina",
+   "soort": {
+    "nl": "loempia's en snacks",
+    "en": "spring rolls and snacks",
+    "de": "Frühlingsrollen und Snacks",
+    "es": "rollitos y snacks",
+    "pt": "rolinhos primavera e petiscos"
+   },
+   "plaats": "Caracasbaaiweg, Jan Thiel",
+   "tags": [
+    "lokaal",
+    "snack",
+    "janthiel"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Jan Thiel, Caracasbaaiweg, 49A, Curaçao",
+     "en": "Address (Google): Jan Thiel, Caracasbaaiweg, 49A, Curaçao",
+     "de": "Adresse (Google): Jan Thiel, Caracasbaaiweg, 49A, Curaçao",
+     "es": "Dirección (Google): Jan Thiel, Caracasbaaiweg, 49A, Curaçao",
+     "pt": "Endereço (Google): Jan Thiel, Caracasbaaiweg, 49A, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 1344",
+     "en": "Phone (Google): +599 9 461 1344",
+     "de": "Telefon (Google): +599 9 461 1344",
+     "es": "Teléfono (Google): +599 9 461 1344",
+     "pt": "Telefone (Google): +599 9 461 1344"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 23,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/dushi-loempia-salina"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/dushi-loempia-salina"
+   ]
+  },
+  {
+   "id": "fridays-baby-truck",
+   "naam": "Fridays Baby Truck",
+   "url": "http://fridays.cw/",
+   "soort": {
+    "nl": "foodtruck",
+    "en": "food truck",
+    "de": "Foodtruck",
+    "es": "food truck",
+    "pt": "food truck"
+   },
+   "plaats": "Caracasbaaiweg",
+   "tags": [
+    "lokaal",
+    "foodtruck",
+    "caracasbaai"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 216 Caracasbaaiweg, Willemstad, Curaçao",
+     "en": "Address (Google): 216 Caracasbaaiweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 216 Caracasbaaiweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 216 Caracasbaaiweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 216 Caracasbaaiweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 511 3297",
+     "en": "Phone (Google): +599 9 511 3297",
+     "de": "Telefon (Google): +599 9 511 3297",
+     "es": "Teléfono (Google): +599 9 511 3297",
+     "pt": "Telefone (Google): +599 9 511 3297"
+    },
+    {
+     "nl": "Website: fridays.cw (Google)",
+     "en": "Website: fridays.cw (Google)",
+     "de": "Website: fridays.cw (Google)",
+     "es": "Sitio web: fridays.cw (Google)",
+     "pt": "Site: fridays.cw (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 483,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/fridays-baby-truck"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/fridays-baby-truck",
+    "http://fridays.cw/"
+   ]
+  },
+  {
+   "id": "grote-berg-patat-shivi-s-foodbox",
+   "naam": "Grote Berg Patat - Shivi's Foodbox",
+   "url": "https://curacao.day/en/businesses/fast-food-restaurant/grote-berg-patat-shivi-s-foodbox",
+   "soort": {
+    "nl": "frietzaak",
+    "en": "fries spot",
+    "de": "Pommes-Imbiss",
+    "es": "local de papas fritas",
+    "pt": "casa de batatas fritas"
+   },
+   "plaats": "Daniel",
+   "tags": [
+    "lokaal",
+    "friet"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 6X3P+87, Daniel, Curaçao",
+     "en": "Address (Google): 6X3P+87, Daniel, Curaçao",
+     "de": "Adresse (Google): 6X3P+87, Daniel, Curaçao",
+     "es": "Dirección (Google): 6X3P+87, Daniel, Curaçao",
+     "pt": "Endereço (Google): 6X3P+87, Daniel, Curaçao"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 25,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/grote-berg-patat-shivi-s-foodbox"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/grote-berg-patat-shivi-s-foodbox"
+   ]
+  },
+  {
+   "id": "friethuis-caracasbaai",
+   "naam": "Friethuis Caracasbaai",
+   "url": "http://www.friethuiscaracasbaai.com/",
+   "soort": {
+    "nl": "frietzaak",
+    "en": "fries spot",
+    "de": "Pommes-Imbiss",
+    "es": "local de papas fritas",
+    "pt": "casa de batatas fritas"
+   },
+   "plaats": "Caracasbaaiweg",
+   "tags": [
+    "lokaal",
+    "friet",
+    "caracasbaai"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Caracasbaaiweg, Willemstad, Curaçao",
+     "en": "Address (Google): Caracasbaaiweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): Caracasbaaiweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): Caracasbaaiweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Caracasbaaiweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 788 0091",
+     "en": "Phone (Google): +599 9 788 0091",
+     "de": "Telefon (Google): +599 9 788 0091",
+     "es": "Teléfono (Google): +599 9 788 0091",
+     "pt": "Telefone (Google): +599 9 788 0091"
+    },
+    {
+     "nl": "Website: friethuiscaracasbaai.com (Google)",
+     "en": "Website: friethuiscaracasbaai.com (Google)",
+     "de": "Website: friethuiscaracasbaai.com (Google)",
+     "es": "Sitio web: friethuiscaracasbaai.com (Google)",
+     "pt": "Site: friethuiscaracasbaai.com (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 272,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/friethuis-caracasbaai"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/friethuis-caracasbaai",
+    "http://www.friethuiscaracasbaai.com/"
+   ]
+  },
+  {
+   "id": "cvc-streetfoods-truck",
+   "naam": "CVC Streetfoods Truck",
+   "url": "https://curacao.day/en/businesses/fast-food-restaurant/cvc-streetfoods-truck",
+   "soort": {
+    "nl": "streetfood-truck",
+    "en": "street food truck",
+    "de": "Streetfood-Truck",
+    "es": "food truck de comida callejera",
+    "pt": "food truck de comida de rua"
+   },
+   "plaats": "Architectenweg",
+   "tags": [
+    "lokaal",
+    "foodtruck"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 435W+9J8, Architectenweg, Willemstad, Curaçao",
+     "en": "Address (Google): 435W+9J8, Architectenweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 435W+9J8, Architectenweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 435W+9J8, Architectenweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 435W+9J8, Architectenweg, Willemstad, Curaçao"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 22,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/cvc-streetfoods-truck"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/cvc-streetfoods-truck"
+   ]
+  },
+  {
+   "id": "dutch-treat",
+   "naam": "Dutch Treat",
+   "url": "https://curacao.day/en/businesses/fast-food-restaurant/dutch-treat",
+   "soort": {
+    "nl": "frietzaak",
+    "en": "fries spot",
+    "de": "Pommes-Imbiss",
+    "es": "local de papas fritas",
+    "pt": "casa de batatas fritas"
+   },
+   "plaats": "De Rouvilleweg, Otrobanda",
+   "tags": [
+    "lokaal",
+    "friet"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): z/n De Rouvilleweg, Willemstad, Curaçao",
+     "en": "Address (Google): z/n De Rouvilleweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): z/n De Rouvilleweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): z/n De Rouvilleweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): z/n De Rouvilleweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 2007",
+     "en": "Phone (Google): +599 9 461 2007",
+     "de": "Telefon (Google): +599 9 461 2007",
+     "es": "Teléfono (Google): +599 9 461 2007",
+     "pt": "Telefone (Google): +599 9 461 2007"
+    },
+    {
+     "nl": "Heeft alleen een Facebookpagina als website (Google)",
+     "en": "Has only a Facebook page as its website (Google)",
+     "de": "Hat nur eine Facebook-Seite als Website (Google)",
+     "es": "Solo tiene una página de Facebook como sitio web (Google)",
+     "pt": "Tem apenas uma página no Facebook como site (Google)"
+    },
+    {
+     "nl": "Een blog uit 2014 beschrijft Dutch Treat als straatkraam in Otrobanda met Hollandse friet met mayonaise er rijkelijk bovenop (Caribjournal)",
+     "en": "A 2014 article describes Dutch Treat as a street stand in Otrobanda serving Dutch-style fries with mayonnaise generously on top (Caribjournal)",
+     "de": "Ein Artikel von 2014 beschreibt Dutch Treat als Straßenstand in Otrobanda mit holländischen Pommes und reichlich Mayonnaise obendrauf (Caribjournal)",
+     "es": "Un artículo de 2014 describe Dutch Treat como un puesto callejero en Otrobanda con papas fritas al estilo holandés y mayonesa generosa por encima (Caribjournal)",
+     "pt": "Uma matéria de 2014 descreve o Dutch Treat como uma barraca de rua em Otrobanda com batata frita holandesa e maionese por cima (Caribjournal)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 254,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/dutch-treat"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/dutch-treat",
+    "http://www.facebook.com/godutchcuracao",
+    "https://www.caribjournal.com/?p=46086"
+   ]
+  },
+  {
+   "id": "subway",
+   "naam": "Subway Saliña",
+   "url": "https://restaurantes.subway.com/subway-willemstad-56781",
+   "soort": {
+    "nl": "broodjesketen",
+    "en": "sandwich chain",
+    "de": "Sandwichkette",
+    "es": "cadena de sándwiches",
+    "pt": "rede de sanduíches"
+   },
+   "plaats": "Saliña",
+   "tags": [
+    "keten",
+    "broodje"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Salina 127, 1 & 2 Unit, Willemstad, Curaçao",
+     "en": "Address (Google): Salina 127, 1 & 2 Unit, Willemstad, Curaçao",
+     "de": "Adresse (Google): Salina 127, 1 & 2 Unit, Willemstad, Curaçao",
+     "es": "Dirección (Google): Salina 127, 1 & 2 Unit, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Salina 127, 1 & 2 Unit, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 8670",
+     "en": "Phone (Google): +599 9 461 8670",
+     "de": "Telefon (Google): +599 9 461 8670",
+     "es": "Teléfono (Google): +599 9 461 8670",
+     "pt": "Telefone (Google): +599 9 461 8670"
+    },
+    {
+     "nl": "Website: restaurantes.subway.com/subway-willemstad-56781 (Google)",
+     "en": "Website: restaurantes.subway.com/subway-willemstad-56781 (Google)",
+     "de": "Website: restaurantes.subway.com/subway-willemstad-56781 (Google)",
+     "es": "Sitio web: restaurantes.subway.com/subway-willemstad-56781 (Google)",
+     "pt": "Site: restaurantes.subway.com/subway-willemstad-56781 (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 654,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/subway"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/subway",
+    "https://restaurantes.subway.com/subway-willemstad-56781"
+   ]
+  },
+  {
+   "id": "subway-2",
+   "naam": "Subway Winston Churchillweg",
+   "url": "https://restaurantes.subway.com/subway-curacao-56780",
+   "soort": {
+    "nl": "broodjesketen",
+    "en": "sandwich chain",
+    "de": "Sandwichkette",
+    "es": "cadena de sándwiches",
+    "pt": "rede de sanduíches"
+   },
+   "plaats": "Winston Churchillweg",
+   "tags": [
+    "keten",
+    "broodje"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Winston Chucrhillweg, 173 Suite, Curaçao",
+     "en": "Address (Google): Winston Chucrhillweg, 173 Suite, Curaçao",
+     "de": "Adresse (Google): Winston Chucrhillweg, 173 Suite, Curaçao",
+     "es": "Dirección (Google): Winston Chucrhillweg, 173 Suite, Curaçao",
+     "pt": "Endereço (Google): Winston Chucrhillweg, 173 Suite, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 868 0349",
+     "en": "Phone (Google): +599 9 868 0349",
+     "de": "Telefon (Google): +599 9 868 0349",
+     "es": "Teléfono (Google): +599 9 868 0349",
+     "pt": "Telefone (Google): +599 9 868 0349"
+    },
+    {
+     "nl": "Website: restaurantes.subway.com/subway-curacao-56780 (Google)",
+     "en": "Website: restaurantes.subway.com/subway-curacao-56780 (Google)",
+     "de": "Website: restaurantes.subway.com/subway-curacao-56780 (Google)",
+     "es": "Sitio web: restaurantes.subway.com/subway-curacao-56780 (Google)",
+     "pt": "Site: restaurantes.subway.com/subway-curacao-56780 (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 610,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/subway-2"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/subway-2",
+    "https://restaurantes.subway.com/subway-curacao-56780"
+   ]
+  },
+  {
+   "id": "kfc-curacao-colon",
+   "naam": "KFC Colon",
+   "url": "https://curacao.day/en/businesses/fast-food-restaurant/kfc-curacao-colon",
+   "soort": {
+    "nl": "kippenketen",
+    "en": "fried chicken chain",
+    "de": "Hähnchenkette",
+    "es": "cadena de pollo frito",
+    "pt": "rede de frango frito"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "keten",
+    "kip"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Willemstad, Curaçao",
+     "en": "Address (Google): Willemstad, Curaçao",
+     "de": "Adresse (Google): Willemstad, Curaçao",
+     "es": "Dirección (Google): Willemstad, Curaçao",
+     "pt": "Endereço (Google): Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 462 5163",
+     "en": "Phone (Google): +599 9 462 5163",
+     "de": "Telefon (Google): +599 9 462 5163",
+     "es": "Teléfono (Google): +599 9 462 5163",
+     "pt": "Telefone (Google): +599 9 462 5163"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 380,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/kfc-curacao-colon"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/kfc-curacao-colon"
+   ]
+  },
+  {
+   "id": "subway-curacao-brionplein",
+   "naam": "Subway Brionplein",
+   "url": "https://restaurantes.subway.com/subway-otrobanda-56782",
+   "soort": {
+    "nl": "broodjesketen",
+    "en": "sandwich chain",
+    "de": "Sandwichkette",
+    "es": "cadena de sándwiches",
+    "pt": "rede de sanduíches"
+   },
+   "plaats": "Brionplein",
+   "tags": [
+    "keten",
+    "broodje"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Brionplein Unit No. H-101 The Brionplein Shops, Willemstad, Curaçao",
+     "en": "Address (Google): Brionplein Unit No. H-101 The Brionplein Shops, Willemstad, Curaçao",
+     "de": "Adresse (Google): Brionplein Unit No. H-101 The Brionplein Shops, Willemstad, Curaçao",
+     "es": "Dirección (Google): Brionplein Unit No. H-101 The Brionplein Shops, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Brionplein Unit No. H-101 The Brionplein Shops, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 1661",
+     "en": "Phone (Google): +599 9 461 1661",
+     "de": "Telefon (Google): +599 9 461 1661",
+     "es": "Teléfono (Google): +599 9 461 1661",
+     "pt": "Telefone (Google): +599 9 461 1661"
+    },
+    {
+     "nl": "Website: restaurantes.subway.com/subway-otrobanda-56782 (Google)",
+     "en": "Website: restaurantes.subway.com/subway-otrobanda-56782 (Google)",
+     "de": "Website: restaurantes.subway.com/subway-otrobanda-56782 (Google)",
+     "es": "Sitio web: restaurantes.subway.com/subway-otrobanda-56782 (Google)",
+     "pt": "Site: restaurantes.subway.com/subway-otrobanda-56782 (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 277,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/subway-curacao-brionplein"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/subway-curacao-brionplein",
+    "https://restaurantes.subway.com/subway-otrobanda-56782"
+   ]
+  },
+  {
+   "id": "quiznos",
+   "naam": "Quiznos",
+   "url": "https://curacao.day/en/businesses/fast-food-restaurant/quiznos",
+   "soort": {
+    "nl": "broodjesketen",
+    "en": "sandwich chain",
+    "de": "Sandwichkette",
+    "es": "cadena de sándwiches",
+    "pt": "rede de sanduíches"
+   },
+   "plaats": "Ontarioweg",
+   "tags": [
+    "keten",
+    "broodje"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 101 Ontarioweg, Willemstad, Curaçao",
+     "en": "Address (Google): 101 Ontarioweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 101 Ontarioweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 101 Ontarioweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 101 Ontarioweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 465 7978",
+     "en": "Phone (Google): +599 9 465 7978",
+     "de": "Telefon (Google): +599 9 465 7978",
+     "es": "Teléfono (Google): +599 9 465 7978",
+     "pt": "Telefone (Google): +599 9 465 7978"
+    },
+    {
+     "nl": "Heeft alleen een Facebookpagina als website (Google)",
+     "en": "Has only a Facebook page as its website (Google)",
+     "de": "Hat nur eine Facebook-Seite als Website (Google)",
+     "es": "Solo tiene una página de Facebook como sitio web (Google)",
+     "pt": "Tem apenas uma página no Facebook como site (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 218,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/quiznos"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/quiznos",
+    "http://www.facebook.com/quiznoscur/"
+   ]
+  },
+  {
+   "id": "golden-gate-snack",
+   "naam": "Golden Gate Snack",
+   "url": "https://curacao.day/en/businesses/fast-food-restaurant/golden-gate-snack",
+   "soort": {
+    "nl": "snackbar",
+    "en": "snack bar",
+    "de": "Imbiss",
+    "es": "snack bar",
+    "pt": "lanchonete"
+   },
+   "plaats": "Kaminda Saliña",
+   "tags": [
+    "lokaal",
+    "snack"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 31 Kaminda Saliña, Willemstad, Curaçao",
+     "en": "Address (Google): 31 Kaminda Saliña, Willemstad, Curaçao",
+     "de": "Adresse (Google): 31 Kaminda Saliña, Willemstad, Curaçao",
+     "es": "Dirección (Google): 31 Kaminda Saliña, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 31 Kaminda Saliña, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 0193",
+     "en": "Phone (Google): +599 9 461 0193",
+     "de": "Telefon (Google): +599 9 461 0193",
+     "es": "Teléfono (Google): +599 9 461 0193",
+     "pt": "Telefone (Google): +599 9 461 0193"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 204,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/golden-gate-snack"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/golden-gate-snack"
+   ]
+  },
+  {
+   "id": "subway-3",
+   "naam": "Subway Wiriweg",
+   "url": "https://restaurantes.subway.com/subway-curacao-56783",
+   "soort": {
+    "nl": "broodjesketen",
+    "en": "sandwich chain",
+    "de": "Sandwichkette",
+    "es": "cadena de sándwiches",
+    "pt": "rede de sanduíches"
+   },
+   "plaats": "Wiriweg",
+   "tags": [
+    "keten",
+    "broodje"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 4 Wiriweg, Willemstad, Curaçao",
+     "en": "Address (Google): 4 Wiriweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 4 Wiriweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 4 Wiriweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 4 Wiriweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 738 9890",
+     "en": "Phone (Google): +599 9 738 9890",
+     "de": "Telefon (Google): +599 9 738 9890",
+     "es": "Teléfono (Google): +599 9 738 9890",
+     "pt": "Telefone (Google): +599 9 738 9890"
+    },
+    {
+     "nl": "Website: restaurantes.subway.com/subway-curacao-56783 (Google)",
+     "en": "Website: restaurantes.subway.com/subway-curacao-56783 (Google)",
+     "de": "Website: restaurantes.subway.com/subway-curacao-56783 (Google)",
+     "es": "Sitio web: restaurantes.subway.com/subway-curacao-56783 (Google)",
+     "pt": "Site: restaurantes.subway.com/subway-curacao-56783 (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 162,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/subway-3"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/subway-3",
+    "https://restaurantes.subway.com/subway-curacao-56783"
+   ]
+  },
+  {
+   "id": "wendy-s",
+   "naam": "Wendy's",
+   "url": "https://www.wendys.com/",
+   "soort": {
+    "nl": "hamburgerketen",
+    "en": "burger chain",
+    "de": "Burgerkette",
+    "es": "cadena de hamburguesas",
+    "pt": "rede de hambúrgueres"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "keten",
+    "burger"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 52MV+R4C, Willemstad, Curaçao",
+     "en": "Address (Google): 52MV+R4C, Willemstad, Curaçao",
+     "de": "Adresse (Google): 52MV+R4C, Willemstad, Curaçao",
+     "es": "Dirección (Google): 52MV+R4C, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 52MV+R4C, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 515 0335",
+     "en": "Phone (Google): +599 9 515 0335",
+     "de": "Telefon (Google): +599 9 515 0335",
+     "es": "Teléfono (Google): +599 9 515 0335",
+     "pt": "Telefone (Google): +599 9 515 0335"
+    },
+    {
+     "nl": "Website: wendys.com (Google)",
+     "en": "Website: wendys.com (Google)",
+     "de": "Website: wendys.com (Google)",
+     "es": "Sitio web: wendys.com (Google)",
+     "pt": "Site: wendys.com (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 633,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/wendy-s"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/wendy-s",
+    "https://www.wendys.com/"
+   ]
+  },
+  {
+   "id": "kfc-curacao-sta-rosa-watsapp",
+   "naam": "KFC Santa Rosa",
+   "url": "http://www.kfc.cw/",
+   "soort": {
+    "nl": "kippenketen",
+    "en": "fried chicken chain",
+    "de": "Hähnchenkette",
+    "es": "cadena de pollo frito",
+    "pt": "rede de frango frito"
+   },
+   "plaats": "Wiriweg",
+   "tags": [
+    "keten",
+    "kip"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Wiriweg, Willemstad, Curaçao",
+     "en": "Address (Google): Wiriweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): Wiriweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): Wiriweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Wiriweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 869 5253",
+     "en": "Phone (Google): +599 9 869 5253",
+     "de": "Telefon (Google): +599 9 869 5253",
+     "es": "Teléfono (Google): +599 9 869 5253",
+     "pt": "Telefone (Google): +599 9 869 5253"
+    },
+    {
+     "nl": "Website: kfc.cw (Google)",
+     "en": "Website: kfc.cw (Google)",
+     "de": "Website: kfc.cw (Google)",
+     "es": "Sitio web: kfc.cw (Google)",
+     "pt": "Site: kfc.cw (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 605,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/kfc-curacao-sta-rosa-watsapp"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/kfc-curacao-sta-rosa-watsapp",
+    "http://www.kfc.cw/"
+   ]
+  },
+  {
+   "id": "burger-king-santa-maria",
+   "naam": "Burger King Santa Maria",
+   "url": "http://www.bk.com/",
+   "soort": {
+    "nl": "hamburgerketen",
+    "en": "burger chain",
+    "de": "Burgerkette",
+    "es": "cadena de hamburguesas",
+    "pt": "rede de hambúrgueres"
+   },
+   "plaats": "Winston Churchillweg",
+   "tags": [
+    "keten",
+    "burger"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): z/n Winston Churchillweg, Willemstad, Curaçao",
+     "en": "Address (Google): z/n Winston Churchillweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): z/n Winston Churchillweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): z/n Winston Churchillweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): z/n Winston Churchillweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 888 0756",
+     "en": "Phone (Google): +599 9 888 0756",
+     "de": "Telefon (Google): +599 9 888 0756",
+     "es": "Teléfono (Google): +599 9 888 0756",
+     "pt": "Telefone (Google): +599 9 888 0756"
+    },
+    {
+     "nl": "Website: bk.com (Google)",
+     "en": "Website: bk.com (Google)",
+     "de": "Website: bk.com (Google)",
+     "es": "Sitio web: bk.com (Google)",
+     "pt": "Site: bk.com (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 581,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/burger-king-santa-maria"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/burger-king-santa-maria",
+    "http://www.bk.com/"
+   ]
+  },
+  {
+   "id": "burger-king-monrepos",
+   "naam": "Burger King MonRepos",
+   "url": "http://www.bk.com/",
+   "soort": {
+    "nl": "hamburgerketen",
+    "en": "burger chain",
+    "de": "Burgerkette",
+    "es": "cadena de hamburguesas",
+    "pt": "rede de hambúrgueres"
+   },
+   "plaats": "Gosieweg",
+   "tags": [
+    "keten",
+    "burger"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 532R+2H8, Gosieweg, Willemstad, Curaçao",
+     "en": "Address (Google): 532R+2H8, Gosieweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 532R+2H8, Gosieweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 532R+2H8, Gosieweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 532R+2H8, Gosieweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 737 2096",
+     "en": "Phone (Google): +599 9 737 2096",
+     "de": "Telefon (Google): +599 9 737 2096",
+     "es": "Teléfono (Google): +599 9 737 2096",
+     "pt": "Telefone (Google): +599 9 737 2096"
+    },
+    {
+     "nl": "Website: bk.com (Google)",
+     "en": "Website: bk.com (Google)",
+     "de": "Website: bk.com (Google)",
+     "es": "Sitio web: bk.com (Google)",
+     "pt": "Site: bk.com (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 494,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/burger-king-monrepos"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/burger-king-monrepos",
+    "http://www.bk.com/"
+   ]
+  },
+  {
+   "id": "subway-cas-cora",
+   "naam": "Subway Cas Cora",
+   "url": "https://restaurantes.subway.com/subway-santa-maria-56785",
+   "soort": {
+    "nl": "broodjesketen",
+    "en": "sandwich chain",
+    "de": "Sandwichkette",
+    "es": "cadena de sándwiches",
+    "pt": "rede de sanduíches"
+   },
+   "plaats": "Cas Coraweg",
+   "tags": [
+    "keten",
+    "broodje"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): N/a, 66d Cas Coraweg, Curaçao",
+     "en": "Address (Google): N/a, 66d Cas Coraweg, Curaçao",
+     "de": "Adresse (Google): N/a, 66d Cas Coraweg, Curaçao",
+     "es": "Dirección (Google): N/a, 66d Cas Coraweg, Curaçao",
+     "pt": "Endereço (Google): N/a, 66d Cas Coraweg, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 736 6645",
+     "en": "Phone (Google): +599 9 736 6645",
+     "de": "Telefon (Google): +599 9 736 6645",
+     "es": "Teléfono (Google): +599 9 736 6645",
+     "pt": "Telefone (Google): +599 9 736 6645"
+    },
+    {
+     "nl": "Website: restaurantes.subway.com/subway-santa-maria-56785 (Google)",
+     "en": "Website: restaurantes.subway.com/subway-santa-maria-56785 (Google)",
+     "de": "Website: restaurantes.subway.com/subway-santa-maria-56785 (Google)",
+     "es": "Sitio web: restaurantes.subway.com/subway-santa-maria-56785 (Google)",
+     "pt": "Site: restaurantes.subway.com/subway-santa-maria-56785 (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.0,
+     "max": 5,
+     "aantal": 152,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/subway-cas-cora"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/subway-cas-cora",
+    "https://restaurantes.subway.com/subway-santa-maria-56785"
+   ]
+  },
+  {
+   "id": "mcdonald-s-curacao-sta-maria",
+   "naam": "McDonald's Santa Maria",
+   "url": "http://www.mcdonalds.vi/",
+   "soort": {
+    "nl": "hamburgerketen",
+    "en": "burger chain",
+    "de": "Burgerkette",
+    "es": "cadena de hamburguesas",
+    "pt": "rede de hambúrgueres"
+   },
+   "plaats": "Winston Churchillweg",
+   "tags": [
+    "keten",
+    "burger"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 209 Winston Churchillweg, Willemstad, Curaçao",
+     "en": "Address (Google): 209 Winston Churchillweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 209 Winston Churchillweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 209 Winston Churchillweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 209 Winston Churchillweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 737 0344",
+     "en": "Phone (Google): +599 9 737 0344",
+     "de": "Telefon (Google): +599 9 737 0344",
+     "es": "Teléfono (Google): +599 9 737 0344",
+     "pt": "Telefone (Google): +599 9 737 0344"
+    },
+    {
+     "nl": "Website: mcdonalds.vi (Google)",
+     "en": "Website: mcdonalds.vi (Google)",
+     "de": "Website: mcdonalds.vi (Google)",
+     "es": "Sitio web: mcdonalds.vi (Google)",
+     "pt": "Site: mcdonalds.vi (Google)"
+    },
+    {
+     "nl": "Volgens mycuracaoguide.com heeft McDonald's vijf vestigingen op Curaçao, met drive-thru bij een aantal ervan en ontbijt op het menu",
+     "en": "According to mycuracaoguide.com, McDonald's has five restaurants in Curaçao, with drive-thru at selected branches and breakfast on the menu",
+     "de": "Laut mycuracaoguide.com hat McDonald's fünf Restaurants auf Curaçao, mit Drive-thru an einigen Standorten und Frühstück auf der Karte",
+     "es": "Según mycuracaoguide.com, McDonald's tiene cinco locales en Curazao, con drive-thru en algunos y desayuno en el menú",
+     "pt": "Segundo o mycuracaoguide.com, o McDonald's tem cinco restaurantes em Curaçao, com drive-thru em alguns e café da manhã no cardápio"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 1415,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/mcdonald-s-curacao-sta-maria"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/mcdonald-s-curacao-sta-maria",
+    "http://www.mcdonalds.vi/",
+    "https://www.mycuracaoguide.com/discover/mcdonalds-curacao"
+   ]
+  },
+  {
+   "id": "kfc-curacao-salina",
+   "naam": "KFC Saliña",
+   "url": "https://www.kfc.cw/",
+   "soort": {
+    "nl": "kippenketen",
+    "en": "fried chicken chain",
+    "de": "Hähnchenkette",
+    "es": "cadena de pollo frito",
+    "pt": "rede de frango frito"
+   },
+   "plaats": "Schottegatweg Zuid",
+   "tags": [
+    "keten",
+    "kip"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Schottegatweg Zuid, Willemstad, Curaçao",
+     "en": "Address (Google): Schottegatweg Zuid, Willemstad, Curaçao",
+     "de": "Adresse (Google): Schottegatweg Zuid, Willemstad, Curaçao",
+     "es": "Dirección (Google): Schottegatweg Zuid, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Schottegatweg Zuid, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 2077",
+     "en": "Phone (Google): +599 9 461 2077",
+     "de": "Telefon (Google): +599 9 461 2077",
+     "es": "Teléfono (Google): +599 9 461 2077",
+     "pt": "Telefone (Google): +599 9 461 2077"
+    },
+    {
+     "nl": "Website: kfc.cw (Google)",
+     "en": "Website: kfc.cw (Google)",
+     "de": "Website: kfc.cw (Google)",
+     "es": "Sitio web: kfc.cw (Google)",
+     "pt": "Site: kfc.cw (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 882,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/kfc-curacao-salina"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/kfc-curacao-salina",
+    "https://www.kfc.cw/"
+   ]
+  },
+  {
+   "id": "burger-king",
+   "naam": "Burger King Schottegatweg",
+   "url": "http://www.bk.com/",
+   "soort": {
+    "nl": "hamburgerketen",
+    "en": "burger chain",
+    "de": "Burgerkette",
+    "es": "cadena de hamburguesas",
+    "pt": "rede de hambúrgueres"
+   },
+   "plaats": "Schottegatweg Oost",
+   "tags": [
+    "keten",
+    "burger"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Schottegatweg Oost, Willemstad, Curaçao",
+     "en": "Address (Google): Schottegatweg Oost, Willemstad, Curaçao",
+     "de": "Adresse (Google): Schottegatweg Oost, Willemstad, Curaçao",
+     "es": "Dirección (Google): Schottegatweg Oost, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Schottegatweg Oost, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 888 0756",
+     "en": "Phone (Google): +599 9 888 0756",
+     "de": "Telefon (Google): +599 9 888 0756",
+     "es": "Teléfono (Google): +599 9 888 0756",
+     "pt": "Telefone (Google): +599 9 888 0756"
+    },
+    {
+     "nl": "Website: bk.com (Google)",
+     "en": "Website: bk.com (Google)",
+     "de": "Website: bk.com (Google)",
+     "es": "Sitio web: bk.com (Google)",
+     "pt": "Site: bk.com (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 817,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/burger-king"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/burger-king",
+    "http://www.bk.com/"
+   ]
+  },
+  {
+   "id": "kfc-curacao-brievengat",
+   "naam": "KFC Brievengat",
+   "url": "http://www.kfc.cw/",
+   "soort": {
+    "nl": "kippenketen",
+    "en": "fried chicken chain",
+    "de": "Hähnchenkette",
+    "es": "cadena de pollo frito",
+    "pt": "rede de frango frito"
+   },
+   "plaats": "Kaya Charles Maduro, Brievengat",
+   "tags": [
+    "keten",
+    "kip"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Kaya Charles Maduro, Willemstad, Curaçao",
+     "en": "Address (Google): Kaya Charles Maduro, Willemstad, Curaçao",
+     "de": "Adresse (Google): Kaya Charles Maduro, Willemstad, Curaçao",
+     "es": "Dirección (Google): Kaya Charles Maduro, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Kaya Charles Maduro, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 738 4540",
+     "en": "Phone (Google): +599 9 738 4540",
+     "de": "Telefon (Google): +599 9 738 4540",
+     "es": "Teléfono (Google): +599 9 738 4540",
+     "pt": "Telefone (Google): +599 9 738 4540"
+    },
+    {
+     "nl": "Website: kfc.cw (Google)",
+     "en": "Website: kfc.cw (Google)",
+     "de": "Website: kfc.cw (Google)",
+     "es": "Sitio web: kfc.cw (Google)",
+     "pt": "Site: kfc.cw (Google)"
+    },
+    {
+     "nl": "Na een inbraak in augustus 2026 betaal je bij KFC Brievengat tijdelijk alleen met pin of creditcard (Curaçao Chronicle, 12 augustus 2026)",
+     "en": "After a burglary in August 2026, KFC Brievengat temporarily takes only debit or credit cards (Curaçao Chronicle, 12 August 2026)",
+     "de": "Nach einem Einbruch im August 2026 nimmt KFC Brievengat vorübergehend nur Debit- oder Kreditkarten (Curaçao Chronicle, 12. August 2026)",
+     "es": "Tras un robo en agosto de 2026, KFC Brievengat solo acepta temporalmente tarjeta de débito o crédito (Curaçao Chronicle, 12 de agosto de 2026)",
+     "pt": "Após um assalto em agosto de 2026, o KFC Brievengat aceita temporariamente só cartão de débito ou crédito (Curaçao Chronicle, 12 de agosto de 2026)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 453,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/kfc-curacao-brievengat"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/kfc-curacao-brievengat",
+    "http://www.kfc.cw/",
+    "https://www.curacaochronicle.com/post/local/kfc-brievengat-and-santa-maria-go-temporarily-cashless-after-burglaries"
+   ]
+  },
+  {
+   "id": "kuminda-di-tera",
+   "naam": "Kuminda Di Tera",
+   "url": "https://curacao.day/en/businesses/fast-food-restaurant/kuminda-di-tera",
+   "soort": {
+    "nl": "fastfoodzaak",
+    "en": "fast food place",
+    "de": "Fast-Food-Lokal",
+    "es": "local de comida rápida",
+    "pt": "lanchonete de fast food"
+   },
+   "plaats": "Kaya Junior Salas",
+   "tags": [
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 20 Kaya Junior Salas, Willemstad, Curaçao",
+     "en": "Address (Google): 20 Kaya Junior Salas, Willemstad, Curaçao",
+     "de": "Adresse (Google): 20 Kaya Junior Salas, Willemstad, Curaçao",
+     "es": "Dirección (Google): 20 Kaya Junior Salas, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 20 Kaya Junior Salas, Willemstad, Curaçao"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 27,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/kuminda-di-tera"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/kuminda-di-tera"
+   ]
+  },
+  {
+   "id": "frietboetiek-jan-thiel",
+   "naam": "Frietboetiek Jan Thiel",
+   "url": "http://www.frietboetiekjanthiel.com/",
+   "soort": {
+    "nl": "frietzaak",
+    "en": "fries spot",
+    "de": "Pommes-Imbiss",
+    "es": "local de papas fritas",
+    "pt": "casa de batatas fritas"
+   },
+   "plaats": "Papagayo plaza, Jan Thiel",
+   "tags": [
+    "friet",
+    "janthiel"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Papagayo plaza, Willemstad, Curaçao",
+     "en": "Address (Google): Papagayo plaza, Willemstad, Curaçao",
+     "de": "Adresse (Google): Papagayo plaza, Willemstad, Curaçao",
+     "es": "Dirección (Google): Papagayo plaza, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Papagayo plaza, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 524 4521",
+     "en": "Phone (Google): +599 9 524 4521",
+     "de": "Telefon (Google): +599 9 524 4521",
+     "es": "Teléfono (Google): +599 9 524 4521",
+     "pt": "Telefone (Google): +599 9 524 4521"
+    },
+    {
+     "nl": "Website: frietboetiekjanthiel.com (Google)",
+     "en": "Website: frietboetiekjanthiel.com (Google)",
+     "de": "Website: frietboetiekjanthiel.com (Google)",
+     "es": "Sitio web: frietboetiekjanthiel.com (Google)",
+     "pt": "Site: frietboetiekjanthiel.com (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 156,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/frietboetiek-jan-thiel"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/frietboetiek-jan-thiel",
+    "http://www.frietboetiekjanthiel.com/"
+   ]
+  },
+  {
+   "id": "e-marshe",
+   "naam": "é Marshe",
+   "url": "https://curacao.day/en/businesses/fast-food-restaurant/e-marshe",
+   "soort": {
+    "nl": "fast food op de luchthaven",
+    "en": "fast food at the airport",
+    "de": "Fast Food am Flughafen",
+    "es": "comida rápida en el aeropuerto",
+    "pt": "fast food no aeroporto"
+   },
+   "plaats": "Curaçao International Airport",
+   "tags": [
+    "luchthaven"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 52PR+3WC Curaçao International Airport, Departure Hall West, Willemstad, Curaçao",
+     "en": "Address (Google): 52PR+3WC Curaçao International Airport, Departure Hall West, Willemstad, Curaçao",
+     "de": "Adresse (Google): 52PR+3WC Curaçao International Airport, Departure Hall West, Willemstad, Curaçao",
+     "es": "Dirección (Google): 52PR+3WC Curaçao International Airport, Departure Hall West, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 52PR+3WC Curaçao International Airport, Departure Hall West, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Staat in de vertrekhal West van de luchthaven (Google)",
+     "en": "Located in the airport departure hall west (Google)",
+     "de": "Befindet sich in der Abflughalle West des Flughafens (Google)",
+     "es": "Está en la sala de salidas oeste del aeropuerto (Google)",
+     "pt": "Fica no saguão de embarque oeste do aeroporto (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 2.2,
+     "max": 5,
+     "aantal": 61,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/fast-food-restaurant/e-marshe"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [
+     "Dit is de enige Google-score onder 3 in deze lijst"
+    ],
+    "en": [
+     "This is the only Google score below 3 in this list"
+    ],
+    "de": [
+     "Das ist die einzige Google-Bewertung unter 3 in dieser Liste"
+    ],
+    "es": [
+     "Es la única puntuación de Google por debajo de 3 en esta lista"
+    ],
+    "pt": [
+     "É a única nota do Google abaixo de 3 nesta lista"
+    ]
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/fast-food-restaurant/e-marshe"
+   ]
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Bob Delivery",
+   "url": "https://sentoo.io/blog/making-food-delivery-easier-in-curacao-how-bob-delivery-and-sentoo-work-together",
+   "uitleg": {
+    "nl": "Bezorgdienst met eigen bezorgers op scooters. Je bestelt in de app (Android en iOS) bij meer dan 50 restaurants en betaalt in de app met bankrekening, Visa of Mastercard. Welke pizzeria's meedoen zie je in de app.",
+    "en": "Delivery service with its own riders on scooters. You order in the app (Android and iOS) from over 50 restaurants and pay in the app by bank account, Visa or Mastercard. The app shows which pizza places take part.",
+    "de": "Lieferdienst mit eigenen Fahrern auf Rollern. Du bestellst in der App (Android und iOS) bei mehr als 50 Restaurants und zahlst in der App per Bankkonto, Visa oder Mastercard. Welche Pizzerien mitmachen, siehst du in der App.",
+    "es": "Servicio de entrega con repartidores propios en scooter. Pides en la app (Android e iOS) en más de 50 restaurantes y pagas en la app con cuenta bancaria, Visa o Mastercard. En la app ves qué pizzerías participan.",
+    "pt": "Serviço de entrega com entregadores próprios de scooter. Você pede no app (Android e iOS) em mais de 50 restaurantes e paga no app com conta bancária, Visa ou Mastercard. No app você vê quais pizzarias participam."
+   }
+  },
+  {
+   "naam": "Click 2 Eat Curacao",
+   "url": "https://apps.apple.com/us/app/id1591832814",
+   "uitleg": {
+    "nl": "Gratis app voor eten laten bezorgen: je kiest een restaurant, gerecht en bijgerecht en het wordt thuisbezorgd. Welke restaurants erbij zitten staat niet op de App Store-pagina.",
+    "en": "Free app for food delivery: you pick a restaurant, dish and side and it is brought to your door. Which restaurants are included is not stated on the App Store page.",
+    "de": "Kostenlose App für Essenslieferung: Du wählst Restaurant, Gericht und Beilage und bekommst es nach Hause geliefert. Welche Restaurants dabei sind, steht nicht auf der App-Store-Seite.",
+    "es": "App gratuita para pedir comida a domicilio: eliges restaurante, plato y guarnición y te lo llevan a casa. Qué restaurantes participan no figura en la página de la App Store.",
+    "pt": "App gratuito para pedir comida em casa: você escolhe restaurante, prato e acompanhamento e recebe em casa. Quais restaurantes participam não consta na página da App Store."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Wil je fast food laten bezorgen, begin dan bij de bezorgapps Bob Delivery en Click 2 Eat Curacao. Welke zaken uit deze lijst meedoen zie je in de app; wij hebben dat niet per zaak kunnen bevestigen.",
+   "en": "If you want fast food delivered, start with the delivery apps Bob Delivery and Click 2 Eat Curacao. The apps show which places from this list take part; we could not confirm that per place.",
+   "de": "Willst du Fast Food liefern lassen, beginne bei den Lieferapps Bob Delivery und Click 2 Eat Curacao. Welche Lokale aus dieser Liste mitmachen, siehst du in der App; wir konnten das nicht pro Lokal bestätigen.",
+   "es": "Si quieres comida rápida a domicilio, empieza por las apps Bob Delivery y Click 2 Eat Curacao. En la app ves qué locales de esta lista participan; no hemos podido confirmarlo local por local.",
+   "pt": "Se quer fast food em casa, comece pelos apps Bob Delivery e Click 2 Eat Curacao. No app você vê quais lugares desta lista participam; não conseguimos confirmar isso lugar por lugar."
+  },
+  {
+   "nl": "De ketens scoren op Google tussen 3,9 en 4,1, de lokale zaken en foodtrucks vaak hoger (4,3 tot 4,8), maar met veel minder reviews. Fridays Baby Truck (4,6 uit 483) en Friethuis Caracasbaai (4,3 uit 272) combineren een goede score met veel reviews.",
+   "en": "The chains score between 3.9 and 4.1 on Google, while local places and food trucks often score higher (4.3 to 4.8), but on far fewer reviews. Fridays Baby Truck (4.6 from 483) and Friethuis Caracasbaai (4.3 from 272) combine a good score with many reviews.",
+   "de": "Die Ketten liegen bei Google zwischen 3,9 und 4,1, lokale Lokale und Foodtrucks oft höher (4,3 bis 4,8), aber mit viel weniger Bewertungen. Fridays Baby Truck (4,6 aus 483) und Friethuis Caracasbaai (4,3 aus 272) verbinden eine gute Bewertung mit vielen Bewertungen.",
+   "es": "Las cadenas puntúan entre 3,9 y 4,1 en Google, y los locales y food trucks suelen puntuar más (4,3 a 4,8), pero con muchas menos reseñas. Fridays Baby Truck (4,6 con 483) y Friethuis Caracasbaai (4,3 con 272) combinan buena puntuación con muchas reseñas.",
+   "pt": "As redes têm notas entre 3,9 e 4,1 no Google, enquanto lugares locais e food trucks costumam ter mais (4,3 a 4,8), mas com muito menos avaliações. O Fridays Baby Truck (4,6 em 483) e o Friethuis Caracasbaai (4,3 em 272) combinam boa nota e muitas avaliações."
+  },
+  {
+   "nl": "Openingstijden hebben we niet voor elke zaak kunnen bevestigen. Foodtrucks wisselen vaak van tijden, dus bel of check de pagina van de zaak voor je rijdt.",
+   "en": "We could not confirm opening hours for every place. Food trucks often change their hours, so call or check the place's page before you drive there.",
+   "de": "Öffnungszeiten konnten wir nicht für jedes Lokal bestätigen. Foodtrucks ändern oft ihre Zeiten, ruf also an oder prüfe die Seite des Lokals, bevor du losfährst.",
+   "es": "No hemos podido confirmar los horarios de todos los locales. Los food trucks cambian a menudo de horario, así que llama o mira la página del local antes de ir.",
+   "pt": "Não conseguimos confirmar os horários de todos os lugares. Food trucks costumam mudar de horário, então ligue ou veja a página do lugar antes de ir."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wat is de beste fast food op Curaçao?",
+    "en": "What is the best fast food in Curaçao?",
+    "de": "Was ist das beste Fast Food auf Curaçao?",
+    "es": "¿Cuál es la mejor comida rápida en Curazao?",
+    "pt": "Qual é o melhor fast food em Curaçao?"
+   },
+   "a": {
+    "nl": "Op Google Maps is dat Snackbar Curaçao Babymonkey Smulkar met 4,8 uit 40 reviews. The Flakos Grill heeft 4,7 uit 69 reviews en Fridays Baby Truck 4,6 uit 483. De ketens McDonald's, KFC, Burger King, Subway, Wendy's en Quiznos zitten tussen 3,9 en 4,1.",
+    "en": "On Google Maps that is Snackbar Curaçao Babymonkey Smulkar with 4.8 from 40 reviews. The Flakos Grill has 4.7 from 69 reviews and Fridays Baby Truck 4.6 from 483. The chains McDonald's, KFC, Burger King, Subway, Wendy's and Quiznos sit between 3.9 and 4.1.",
+    "de": "Bei Google Maps ist das Snackbar Curaçao Babymonkey Smulkar mit 4,8 aus 40 Bewertungen. The Flakos Grill hat 4,7 aus 69 Bewertungen und Fridays Baby Truck 4,6 aus 483. Die Ketten McDonald's, KFC, Burger King, Subway, Wendy's und Quiznos liegen zwischen 3,9 und 4,1.",
+    "es": "En Google Maps es Snackbar Curaçao Babymonkey Smulkar con 4,8 sobre 40 reseñas. The Flakos Grill tiene 4,7 con 69 reseñas y Fridays Baby Truck 4,6 con 483. Las cadenas McDonald's, KFC, Burger King, Subway, Wendy's y Quiznos están entre 3,9 y 4,1.",
+    "pt": "No Google Maps é a Snackbar Curaçao Babymonkey Smulkar, com 4,8 em 40 avaliações. A The Flakos Grill tem 4,7 em 69 avaliações e o Fridays Baby Truck 4,6 em 483. As redes McDonald's, KFC, Burger King, Subway, Wendy's e Quiznos ficam entre 3,9 e 4,1."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat staat er op het menu van The Flakos Grill op Curaçao?",
+    "en": "What is on the menu at The Flakos Grill in Curaçao?",
+    "de": "Was steht auf der Speisekarte von The Flakos Grill auf Curaçao?",
+    "es": "¿Qué hay en el menú de The Flakos Grill en Curazao?",
+    "pt": "O que tem no cardápio da The Flakos Grill em Curaçao?"
+   },
+   "a": {
+    "nl": "Een menu hebben we niet kunnen vinden. Wel weten we dat The Flakos Grill op 184 Franklin D. Rooseveltweg in Willemstad zit, telefoon +599 9 663 9666, met 4,7 uit 69 Google-reviews. Bel voor het aanbod en de prijzen.",
+    "en": "We could not find a menu. We do know that The Flakos Grill is at 184 Franklin D. Rooseveltweg in Willemstad, phone +599 9 663 9666, with 4.7 from 69 Google reviews. Call for what is on offer and the prices.",
+    "de": "Eine Speisekarte haben wir nicht gefunden. Wir wissen aber, dass The Flakos Grill an der 184 Franklin D. Rooseveltweg in Willemstad liegt, Telefon +599 9 663 9666, mit 4,7 aus 69 Google-Bewertungen. Ruf für Angebot und Preise an.",
+    "es": "No hemos encontrado un menú. Sí sabemos que The Flakos Grill está en 184 Franklin D. Rooseveltweg, en Willemstad, teléfono +599 9 663 9666, con 4,7 sobre 69 reseñas de Google. Llama para saber qué ofrece y los precios.",
+    "pt": "Não encontramos um cardápio. Sabemos que a The Flakos Grill fica na 184 Franklin D. Rooseveltweg, em Willemstad, telefone +599 9 663 9666, com 4,7 em 69 avaliações no Google. Ligue para saber o que oferece e os preços."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar zit McDonald's op Curaçao?",
+    "en": "Where is McDonald's in Curaçao?",
+    "de": "Wo gibt es McDonald's auf Curaçao?",
+    "es": "¿Dónde está McDonald's en Curazao?",
+    "pt": "Onde fica o McDonald's em Curaçao?"
+   },
+   "a": {
+    "nl": "Volgens mycuracaoguide.com heeft McDonald's vijf vestigingen op Curaçao, met drive-thru bij een aantal ervan. In onze lijst staat McDonald's Santa Maria op 209 Winston Churchillweg (3,9 uit 1.415 Google-reviews, telefoon +599 9 737 0344), de zaak met de meeste reviews.",
+    "en": "According to mycuracaoguide.com, McDonald's has five restaurants in Curaçao, with drive-thru at some of them. Our list has McDonald's Santa Maria at 209 Winston Churchillweg (3.9 from 1,415 Google reviews, phone +599 9 737 0344), the place with the most reviews.",
+    "de": "Laut mycuracaoguide.com hat McDonald's fünf Restaurants auf Curaçao, an einigen mit Drive-thru. In unserer Liste steht McDonald's Santa Maria an der 209 Winston Churchillweg (3,9 aus 1.415 Google-Bewertungen, Telefon +599 9 737 0344), das Lokal mit den meisten Bewertungen.",
+    "es": "Según mycuracaoguide.com, McDonald's tiene cinco locales en Curazao, algunos con drive-thru. En nuestra lista está McDonald's Santa Maria en 209 Winston Churchillweg (3,9 con 1.415 reseñas de Google, teléfono +599 9 737 0344), el local con más reseñas.",
+    "pt": "Segundo o mycuracaoguide.com, o McDonald's tem cinco restaurantes em Curaçao, alguns com drive-thru. Na nossa lista está o McDonald's Santa Maria na 209 Winston Churchillweg (3,9 em 1.415 avaliações no Google, telefone +599 9 737 0344), o lugar com mais avaliações."
+   }
+  },
+  {
+   "q": {
+    "nl": "Kan ik fast food laten bezorgen op Curaçao?",
+    "en": "Can I get fast food delivered in Curaçao?",
+    "de": "Kann ich auf Curaçao Fast Food liefern lassen?",
+    "es": "¿Puedo pedir comida rápida a domicilio en Curazao?",
+    "pt": "Posso pedir fast food em casa em Curaçao?"
+   },
+   "a": {
+    "nl": "Via bezorgapps, ja. Bob Delivery werkt met meer dan 50 restaurants en een eigen bezorgvloot op scooters, en Click 2 Eat Curacao is een gratis bezorgapp. Welke zaken uit deze lijst erbij zitten zie je in de app; dat hebben wij niet per zaak kunnen bevestigen.",
+    "en": "Through delivery apps, yes. Bob Delivery works with over 50 restaurants and its own fleet of scooters, and Click 2 Eat Curacao is a free delivery app. The apps show which places from this list take part; we could not confirm that per place.",
+    "de": "Über Lieferapps ja. Bob Delivery arbeitet mit mehr als 50 Restaurants und einer eigenen Rollerflotte, und Click 2 Eat Curacao ist eine kostenlose Lieferapp. Welche Lokale aus dieser Liste dabei sind, siehst du in der App; wir konnten das nicht pro Lokal bestätigen.",
+    "es": "Sí, con apps de reparto. Bob Delivery trabaja con más de 50 restaurantes y una flota propia de scooters, y Click 2 Eat Curacao es una app gratuita de reparto. En la app ves qué locales de esta lista participan; no hemos podido confirmarlo local por local.",
+    "pt": "Sim, por apps de entrega. O Bob Delivery trabalha com mais de 50 restaurantes e uma frota própria de scooters, e o Click 2 Eat Curacao é um app gratuito de entrega. No app você vê quais lugares desta lista participam; não conseguimos confirmar isso lugar por lugar."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke fastfoodketens zijn er op Curaçao?",
+    "en": "Which fast food chains are there in Curaçao?",
+    "de": "Welche Fast-Food-Ketten gibt es auf Curaçao?",
+    "es": "¿Qué cadenas de comida rápida hay en Curazao?",
+    "pt": "Quais redes de fast food existem em Curaçao?"
+   },
+   "a": {
+    "nl": "In onze lijst staan McDonald's, KFC (4 vestigingen), Burger King (3), Subway (5), Wendy's en Quiznos. Op Google scoren ze tussen 3,9 en 4,1, met 150 tot 1.415 reviews per vestiging. KFC Brievengat betaalt na een inbraak in augustus 2026 tijdelijk alleen met pin of creditcard (Curaçao Chronicle).",
+    "en": "Our list has McDonald's, KFC (4 branches), Burger King (3), Subway (5), Wendy's and Quiznos. On Google they score between 3.9 and 4.1, with 150 to 1,415 reviews per branch. After a burglary in August 2026, KFC Brievengat temporarily takes only debit or credit cards (Curaçao Chronicle).",
+    "de": "In unserer Liste stehen McDonald's, KFC (4 Filialen), Burger King (3), Subway (5), Wendy's und Quiznos. Bei Google liegen sie zwischen 3,9 und 4,1, mit 150 bis 1.415 Bewertungen pro Filiale. KFC Brievengat nimmt nach einem Einbruch im August 2026 vorübergehend nur Debit- oder Kreditkarten (Curaçao Chronicle).",
+    "es": "En nuestra lista están McDonald's, KFC (4 sucursales), Burger King (3), Subway (5), Wendy's y Quiznos. En Google puntúan entre 3,9 y 4,1, con 150 a 1.415 reseñas por sucursal. Tras un robo en agosto de 2026, KFC Brievengat solo acepta temporalmente tarjeta de débito o crédito (Curaçao Chronicle).",
+    "pt": "Na nossa lista estão McDonald's, KFC (4 filiais), Burger King (3), Subway (5), Wendy's e Quiznos. No Google têm notas entre 3,9 e 4,1, com 150 a 1.415 avaliações por filial. Após um assalto em agosto de 2026, o KFC Brievengat aceita temporariamente só cartão de débito ou crédito (Curaçao Chronicle)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Is er fast food op de luchthaven van Curaçao?",
+    "en": "Is there fast food at Curaçao airport?",
+    "de": "Gibt es Fast Food am Flughafen von Curaçao?",
+    "es": "¿Hay comida rápida en el aeropuerto de Curazao?",
+    "pt": "Há fast food no aeroporto de Curaçao?"
+   },
+   "a": {
+    "nl": "Google noemt é Marshe in de vertrekhal West van de luchthaven, met 2,2 uit 61 reviews: de laagste score in deze lijst. Wat ze serveren en wanneer ze open zijn hebben we niet kunnen bevestigen.",
+    "en": "Google lists é Marshe in the airport's departure hall west, with 2.2 from 61 reviews: the lowest score in this list. We could not confirm what they serve or when they are open.",
+    "de": "Google nennt é Marshe in der Abflughalle West des Flughafens, mit 2,2 aus 61 Bewertungen: die niedrigste Bewertung in dieser Liste. Was sie servieren und wann sie öffnen, konnten wir nicht bestätigen.",
+    "es": "Google sitúa é Marshe en la sala de salidas oeste del aeropuerto, con 2,2 sobre 61 reseñas: la puntuación más baja de esta lista. No hemos podido confirmar qué sirven ni cuándo abren.",
+    "pt": "O Google lista o é Marshe no saguão de embarque oeste do aeroporto, com 2,2 em 61 avaliações: a nota mais baixa desta lista. Não conseguimos confirmar o que servem nem quando abrem."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "fast food curaçao",
+   "flakos curaçao",
+   "mcdonalds curaçao",
+   "kfc curaçao",
+   "burger king curaçao",
+   "fast food bezorgen curaçao"
+  ],
+  "en": [
+   "fast food curaçao",
+   "flakos curaçao",
+   "mcdonalds curaçao",
+   "kfc curaçao",
+   "burger king curaçao",
+   "fast food delivery curaçao"
+  ],
+  "de": [
+   "Fast Food Curaçao",
+   "Flakos Curaçao",
+   "McDonald's Curaçao",
+   "KFC Curaçao",
+   "Burger King Curaçao",
+   "Fast Food Lieferung Curaçao"
+  ],
+  "es": [
+   "comida rápida curazao",
+   "flakos curazao",
+   "mcdonalds curazao",
+   "kfc curazao",
+   "burger king curazao",
+   "comida rápida a domicilio curazao"
+  ],
+  "pt": [
+   "fast food curaçao",
+   "flakos curaçao",
+   "mcdonalds curaçao",
+   "kfc curaçao",
+   "burger king curaçao",
+   "fast food entrega curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Waar kan ik het best fast food eten op Curaçao?",
+   "Wat staat er op het menu van The Flakos Grill op Curaçao?",
+   "Waar zit McDonald's op Curaçao?",
+   "Kan ik fast food laten bezorgen op Curaçao?"
+  ],
+  "en": [
+   "Where is the best place to eat fast food in Curaçao?",
+   "What is on the menu at The Flakos Grill in Curaçao?",
+   "Where is McDonald's in Curaçao?",
+   "Can I get fast food delivered in Curaçao?"
+  ],
+  "de": [
+   "Wo esse ich auf Curaçao am besten Fast Food?",
+   "Was steht auf der Speisekarte von The Flakos Grill auf Curaçao?",
+   "Wo gibt es McDonald's auf Curaçao?",
+   "Kann ich auf Curaçao Fast Food liefern lassen?"
+  ],
+  "es": [
+   "¿Dónde se come mejor la comida rápida en Curazao?",
+   "¿Qué hay en el menú de The Flakos Grill en Curazao?",
+   "¿Dónde está McDonald's en Curazao?",
+   "¿Puedo pedir comida rápida a domicilio en Curazao?"
+  ],
+  "pt": [
+   "Onde se come o melhor fast food em Curaçao?",
+   "O que tem no cardápio da The Flakos Grill em Curaçao?",
+   "Onde fica o McDonald's em Curaçao?",
+   "Posso pedir fast food em casa em Curaçao?"
+  ]
+ }
+}

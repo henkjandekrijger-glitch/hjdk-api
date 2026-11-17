@@ -1,6 +1,6 @@
 {
  "id": "hotels",
- "peildatum": "2026-11-13",
+ "peildatum": "2026-11-17",
  "onderwerp": {
   "nl": "hotel of resort",
   "en": "hotel or resort",
@@ -30,11 +30,11 @@
   "pt": "{n} hotéis e resorts de Curaçao lado a lado: tudo incluído ou não, qual região, notas no Tripadvisor e no Booking e preços a partir de."
  },
  "kort": {
-  "nl": "We zetten 77 hotels en resorts op Curaçao naast elkaar, waarvan 10 all-inclusive. Tripadvisor-prijzen voor een standaardkamer beginnen rond $172 per nacht (Kunuku, all-inclusive) en lopen op tot $980 of meer (Baoase). Voor stellen scoren Sandals Royal (alleen 18+) en Baoase het hoogst, gezinnen zitten goed bij Sunscape of Kunuku, en wie zelf wil eten en duiken kiest Avila, LionsDive of Scuba Lodge.",
-  "en": "We compare 77 hotels and resorts on Curaçao, 10 of them all-inclusive. Tripadvisor rates for a standard room start around $172 a night (Kunuku, all-inclusive) and run to $980 or more (Baoase). Couples rate Sandals Royal (18+ only) and Baoase highest, families do well at Sunscape or Kunuku, and if you'd rather eat out and dive, look at Avila, LionsDive or Scuba Lodge.",
-  "de": "Wir vergleichen 77 Hotels und Resorts auf Curaçao, 10 davon All-inclusive. Die Tripadvisor-Preise für ein Standardzimmer beginnen bei etwa $172 pro Nacht (Kunuku, All-inclusive) und reichen bis $980 oder mehr (Baoase). Paare bewerten Sandals Royal (nur ab 18) und Baoase am besten, Familien sind bei Sunscape oder Kunuku gut aufgehoben, und wenn du lieber auswärts isst und tauchst, schau dir Avila, LionsDive oder Scuba Lodge an.",
-  "es": "Comparamos 77 hoteles y resorts de Curazao, 10 de ellos todo incluido. Las tarifas de Tripadvisor para una habitación estándar van desde unos $172 por noche (Kunuku, todo incluido) hasta $980 o más (Baoase). Las parejas califican mejor a Sandals Royal (solo mayores de 18) y a Baoase, las familias están bien en Sunscape o Kunuku, y si prefieres comer afuera y bucear, mira Avila, LionsDive o Scuba Lodge.",
-  "pt": "Comparamos 77 hotéis e resorts em Curaçao, 10 deles com tudo incluído. As diárias do Tripadvisor para um quarto standard vão de cerca de $172 por noite (Kunuku, tudo incluído) a $980 ou mais (Baoase). Os casais avaliam melhor o Sandals Royal (só maiores de 18) e o Baoase, as famílias se dão bem no Sunscape ou no Kunuku, e se você prefere comer fora e mergulhar, veja o Avila, o LionsDive ou o Scuba Lodge."
+  "nl": "We zetten 125 hotels en resorts op Curaçao naast elkaar, waarvan 10 all-inclusive. Tripadvisor-prijzen voor een standaardkamer beginnen rond $172 per nacht (Kunuku, all-inclusive) en lopen op tot $980 of meer (Baoase). Voor stellen scoren Sandals Royal (alleen 18+) en Baoase het hoogst, gezinnen zitten goed bij Sunscape of Kunuku, en wie zelf wil eten en duiken kiest Avila, LionsDive of Scuba Lodge.",
+  "en": "We compare 125 hotels and resorts on Curaçao, 10 of them all-inclusive. Tripadvisor rates for a standard room start around $172 a night (Kunuku, all-inclusive) and run to $980 or more (Baoase). Couples rate Sandals Royal (18+ only) and Baoase highest, families do well at Sunscape or Kunuku, and if you'd rather eat out and dive, look at Avila, LionsDive or Scuba Lodge.",
+  "de": "Wir vergleichen 125 Hotels und Resorts auf Curaçao, 10 davon All-inclusive. Die Tripadvisor-Preise für ein Standardzimmer beginnen bei etwa $172 pro Nacht (Kunuku, All-inclusive) und reichen bis $980 oder mehr (Baoase). Paare bewerten Sandals Royal (nur ab 18) und Baoase am besten, Familien sind bei Sunscape oder Kunuku gut aufgehoben, und wenn du lieber auswärts isst und tauchst, schau dir Avila, LionsDive oder Scuba Lodge an.",
+  "es": "Comparamos 125 hoteles y resorts de Curazao, 10 de ellos todo incluido. Las tarifas de Tripadvisor para una habitación estándar van desde unos $172 por noche (Kunuku, todo incluido) hasta $980 o más (Baoase). Las parejas califican mejor a Sandals Royal (solo mayores de 18) y a Baoase, las familias están bien en Sunscape o Kunuku, y si prefieres comer afuera y bucear, mira Avila, LionsDive o Scuba Lodge.",
+  "pt": "Comparamos 125 hotéis e resorts em Curaçao, 10 deles com tudo incluído. As diárias do Tripadvisor para um quarto standard vão de cerca de $172 por noite (Kunuku, tudo incluído) a $980 ou mais (Baoase). Os casais avaliam melhor o Sandals Royal (só maiores de 18) e o Baoase, as famílias se dão bem no Sunscape ou no Kunuku, e se você prefere comer fora e mergulhar, veja o Avila, o LionsDive ou o Scuba Lodge."
  },
  "vragen": [
   {
@@ -364,7 +364,7 @@
     },
     {
      "platform": "Trip.com",
-     "score": 9.0,
+     "score": 9,
      "max": 10,
      "aantal": 40,
      "peildatum": "2026-10-20",
@@ -908,7 +908,7 @@
    "scores": [
     {
      "platform": "Tripadvisor",
-     "score": 3.0,
+     "score": 3,
      "max": 5,
      "aantal": 2078,
      "peildatum": "2026-10-20",
@@ -1027,7 +1027,7 @@
    "scores": [
     {
      "platform": "Travelocity",
-     "score": 8.0,
+     "score": 8,
      "max": 10,
      "aantal": 1464,
      "peildatum": "2026-10-20",
@@ -1418,7 +1418,7 @@
    "scores": [
     {
      "platform": "Tripadvisor",
-     "score": 5.0,
+     "score": 5,
      "max": 5,
      "aantal": 13,
      "peildatum": "2026-11-13",
@@ -1574,7 +1574,7 @@
     },
     {
      "platform": "Travelocity",
-     "score": 9.0,
+     "score": 9,
      "max": 10,
      "aantal": 1236,
      "peildatum": "2026-10-20",
@@ -1838,7 +1838,7 @@
     },
     {
      "platform": "HotelsCombined",
-     "score": 9.0,
+     "score": 9,
      "max": 10,
      "aantal": 1209,
      "peildatum": "2026-10-20",
@@ -2429,7 +2429,7 @@
    "scores": [
     {
      "platform": "Booking",
-     "score": 8.0,
+     "score": 8,
      "max": 10,
      "aantal": 101,
      "peildatum": "2026-10-20",
@@ -3054,7 +3054,7 @@
    "scores": [
     {
      "platform": "Booking",
-     "score": 10.0,
+     "score": 10,
      "max": 10,
      "aantal": 2,
      "peildatum": "2026-10-20",
@@ -4107,7 +4107,7 @@
    "scores": [
     {
      "platform": "Trip.com",
-     "score": 8.0,
+     "score": 8,
      "max": 10,
      "aantal": 34,
      "peildatum": "2026-10-20",
@@ -4429,7 +4429,7 @@
    "scores": [
     {
      "platform": "Trip.com",
-     "score": 8.0,
+     "score": 8,
      "max": 10,
      "aantal": 48,
      "peildatum": "2026-10-20",
@@ -4628,7 +4628,7 @@
    "scores": [
     {
      "platform": "Trip.com",
-     "score": 8.0,
+     "score": 8,
      "max": 10,
      "aantal": 38,
      "peildatum": "2026-10-20",
@@ -5841,7 +5841,7 @@
    "scores": [
     {
      "platform": "Google Maps",
-     "score": 4.0,
+     "score": 4,
      "max": 5,
      "aantal": 142,
      "peildatum": "2026-11-13",
@@ -6318,7 +6318,7 @@
    "scores": [
     {
      "platform": "Google Maps",
-     "score": 5.0,
+     "score": 5,
      "max": 5,
      "aantal": 64,
      "peildatum": "2026-11-13",
@@ -6363,7 +6363,7 @@
    "scores": [
     {
      "platform": "Google Maps",
-     "score": 5.0,
+     "score": 5,
      "max": 5,
      "aantal": 62,
      "peildatum": "2026-11-13",
@@ -6431,6 +6431,1396 @@
    },
    "bronnen": [
     "https://curacao.day/en/businesses/hotel/pm-78-boutique-apartments"
+   ]
+  },
+  {
+   "id": "all-west-apartments-and-diving",
+   "naam": "All West Apartments & Diving",
+   "url": "https://curacao.day/en/businesses/hotel/all-west-apartments-en-diving",
+   "soort": {
+    "nl": "duikappartementen",
+    "en": "dive apartments",
+    "de": "Tauchapartments",
+    "es": "apartamentos de buceo",
+    "pt": "apartamentos de mergulho"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "westpunt",
+    "duiken",
+    "appartement-keuken"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Westpunt E5, Willemstad, Curaçao",
+     "en": "Address (Google): Westpunt E5, Willemstad, Curaçao",
+     "de": "Adresse (Google): Westpunt E5, Willemstad, Curaçao",
+     "es": "Dirección (Google): Westpunt E5, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Westpunt E5, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 2310",
+     "en": "Phone (Google): +599 9 461 2310",
+     "de": "Telefon (Google): +599 9 461 2310",
+     "es": "Teléfono (Google): +599 9 461 2310",
+     "pt": "Telefone (Google): +599 9 461 2310"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 76,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/all-west-apartments-en-diving"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/all-west-apartments-en-diving"
+   ]
+  },
+  {
+   "id": "bayside-boutique-hotel-curacao",
+   "naam": "Bayside Boutique Hotel Curaçao",
+   "url": "https://curacao.day/en/businesses/hotel/bayside-boutique-hotel-curacao-blue-bay-golf-en-beach-resort",
+   "soort": {
+    "nl": "boetiekhotel",
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
+   },
+   "plaats": "Blue Bay (Sint Michiel)",
+   "tags": [
+    "blue-bay"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Blue Bay Resort, BP 04, Willemstad, Curaçao",
+     "en": "Address (Google): Blue Bay Resort, BP 04, Willemstad, Curaçao",
+     "de": "Adresse (Google): Blue Bay Resort, BP 04, Willemstad, Curaçao",
+     "es": "Dirección (Google): Blue Bay Resort, BP 04, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Blue Bay Resort, BP 04, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 844 5555",
+     "en": "Phone (Google): +599 9 844 5555",
+     "de": "Telefon (Google): +599 9 844 5555",
+     "es": "Teléfono (Google): +599 9 844 5555",
+     "pt": "Telefone (Google): +599 9 844 5555"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 422,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/bayside-boutique-hotel-curacao-blue-bay-golf-en-beach-resort"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/bayside-boutique-hotel-curacao-blue-bay-golf-en-beach-resort"
+   ]
+  },
+  {
+   "id": "bed-and-breakfast-villavermaire",
+   "naam": "Bed and breakfast VillaVermaire",
+   "url": "https://curacao.day/en/businesses/hotel/bedandbreakfast-villavermaire",
+   "soort": {
+    "nl": "bed and breakfast",
+    "en": "bed and breakfast",
+    "de": "Bed and Breakfast",
+    "es": "bed and breakfast",
+    "pt": "bed and breakfast"
+   },
+   "plaats": "Jan Thiel",
+   "tags": [
+    "jan-thiel"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Kaya Índiko, Jan Thiel, Curaçao",
+     "en": "Address (Google): Kaya Índiko, Jan Thiel, Curaçao",
+     "de": "Adresse (Google): Kaya Índiko, Jan Thiel, Curaçao",
+     "es": "Dirección (Google): Kaya Índiko, Jan Thiel, Curaçao",
+     "pt": "Endereço (Google): Kaya Índiko, Jan Thiel, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 679 1988",
+     "en": "Phone (Google): +599 9 679 1988",
+     "de": "Telefon (Google): +599 9 679 1988",
+     "es": "Teléfono (Google): +599 9 679 1988",
+     "pt": "Telefone (Google): +599 9 679 1988"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 39,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/bedandbreakfast-villavermaire"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/bedandbreakfast-villavermaire"
+   ]
+  },
+  {
+   "id": "pietermaai-oasis",
+   "naam": "Pietermaai Oasis",
+   "url": "https://curacao.day/en/businesses/hotel/pietermaai-oasis",
+   "soort": {
+    "nl": "boetiekhotel",
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
+   },
+   "plaats": "Pietermaai",
+   "tags": [
+    "pietermaai-punda"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 14 Nieuwestraat, Willemstad, Curaçao",
+     "en": "Address (Google): 14 Nieuwestraat, Willemstad, Curaçao",
+     "de": "Adresse (Google): 14 Nieuwestraat, Willemstad, Curaçao",
+     "es": "Dirección (Google): 14 Nieuwestraat, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 14 Nieuwestraat, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 524 7300",
+     "en": "Phone (Google): +599 9 524 7300",
+     "de": "Telefon (Google): +599 9 524 7300",
+     "es": "Teléfono (Google): +599 9 524 7300",
+     "pt": "Telefone (Google): +599 9 524 7300"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.8,
+     "max": 5,
+     "aantal": 37,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/pietermaai-oasis"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/pietermaai-oasis"
+   ]
+  },
+  {
+   "id": "bantopa-apartments-and-villas",
+   "naam": "Bantopa Apartments and Villas",
+   "url": "https://curacao.day/en/businesses/hotel/bantopa-apartments-and-villas",
+   "soort": {
+    "nl": "appartementen",
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
+   },
+   "plaats": "Willemstad (Kaya Kashimiri)",
+   "tags": [
+    "appartement-keuken"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 59 Kaya Kashimiri, Curacao, Curaçao",
+     "en": "Address (Google): 59 Kaya Kashimiri, Curacao, Curaçao",
+     "de": "Adresse (Google): 59 Kaya Kashimiri, Curacao, Curaçao",
+     "es": "Dirección (Google): 59 Kaya Kashimiri, Curacao, Curaçao",
+     "pt": "Endereço (Google): 59 Kaya Kashimiri, Curacao, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 692 3157",
+     "en": "Phone (Google): +599 9 692 3157",
+     "de": "Telefon (Google): +599 9 692 3157",
+     "es": "Teléfono (Google): +599 9 692 3157",
+     "pt": "Telefone (Google): +599 9 692 3157"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 49,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/bantopa-apartments-and-villas"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/bantopa-apartments-and-villas"
+   ]
+  },
+  {
+   "id": "terrakota-apartments",
+   "naam": "Terrakota Apartments",
+   "url": "https://curacao.day/en/businesses/hotel/terrakota-apartments",
+   "soort": {
+    "nl": "appartementen",
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
+   },
+   "plaats": "Willemstad (Kaya Piano)",
+   "tags": [
+    "appartement-keuken"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 26 Kaya Piano, Willemstad, Curaçao",
+     "en": "Address (Google): 26 Kaya Piano, Willemstad, Curaçao",
+     "de": "Adresse (Google): 26 Kaya Piano, Willemstad, Curaçao",
+     "es": "Dirección (Google): 26 Kaya Piano, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 26 Kaya Piano, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 565 5976",
+     "en": "Phone (Google): +599 9 565 5976",
+     "de": "Telefon (Google): +599 9 565 5976",
+     "es": "Teléfono (Google): +599 9 565 5976",
+     "pt": "Telefone (Google): +599 9 565 5976"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 35,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/terrakota-apartments"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/terrakota-apartments"
+   ]
+  },
+  {
+   "id": "amigunan",
+   "naam": "Amigunan",
+   "url": "https://curacao.day/en/businesses/hotel/amigunan",
+   "soort": {
+    "nl": "appartementen",
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
+   },
+   "plaats": "Willemstad (Seru Mangusa)",
+   "tags": [
+    "appartement-keuken"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 9 Seru Mangusa, Willemstad, Curaçao",
+     "en": "Address (Google): 9 Seru Mangusa, Willemstad, Curaçao",
+     "de": "Adresse (Google): 9 Seru Mangusa, Willemstad, Curaçao",
+     "es": "Dirección (Google): 9 Seru Mangusa, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 9 Seru Mangusa, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 515 7199",
+     "en": "Phone (Google): +599 9 515 7199",
+     "de": "Telefon (Google): +599 9 515 7199",
+     "es": "Teléfono (Google): +599 9 515 7199",
+     "pt": "Telefone (Google): +599 9 515 7199"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.7,
+     "max": 5,
+     "aantal": 31,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/amigunan"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/amigunan"
+   ]
+  },
+  {
+   "id": "blue-bay-beach-villa",
+   "naam": "Blue Bay Beach Villa",
+   "url": "https://curacao.day/en/businesses/hotel/blue-bay-beach-villa",
+   "soort": {
+    "nl": "villa",
+    "en": "villa",
+    "de": "Villa",
+    "es": "villa",
+    "pt": "villa"
+   },
+   "plaats": "Blue Bay (Sint Michiel)",
+   "tags": [
+    "blue-bay"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 37 Village, P Section Sint Michiel, Curaçao",
+     "en": "Address (Google): 37 Village, P Section Sint Michiel, Curaçao",
+     "de": "Adresse (Google): 37 Village, P Section Sint Michiel, Curaçao",
+     "es": "Dirección (Google): 37 Village, P Section Sint Michiel, Curaçao",
+     "pt": "Endereço (Google): 37 Village, P Section Sint Michiel, Curaçao"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 47,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/blue-bay-beach-villa"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/blue-bay-beach-villa"
+   ]
+  },
+  {
+   "id": "posada-amazonia",
+   "naam": "Posada Amazonia",
+   "url": "https://curacao.day/en/businesses/hotel/posada-amazonia",
+   "soort": {
+    "nl": "logies",
+    "en": "guesthouse",
+    "de": "Gästehaus",
+    "es": "posada",
+    "pt": "pousada"
+   },
+   "plaats": "Boka Sami (Sint Michiel)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Boka Sami, 70 Redaweg, Sint Michiel, Curaçao",
+     "en": "Address (Google): Boka Sami, 70 Redaweg, Sint Michiel, Curaçao",
+     "de": "Adresse (Google): Boka Sami, 70 Redaweg, Sint Michiel, Curaçao",
+     "es": "Dirección (Google): Boka Sami, 70 Redaweg, Sint Michiel, Curaçao",
+     "pt": "Endereço (Google): Boka Sami, 70 Redaweg, Sint Michiel, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 869 7648",
+     "en": "Phone (Google): +599 9 869 7648",
+     "de": "Telefon (Google): +599 9 869 7648",
+     "es": "Teléfono (Google): +599 9 869 7648",
+     "pt": "Telefone (Google): +599 9 869 7648"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 29,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/posada-amazonia"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/posada-amazonia"
+   ]
+  },
+  {
+   "id": "curanice-rentals",
+   "naam": "Curanice Rentals",
+   "url": "https://curacao.day/en/businesses/hotel/curanice-rentals",
+   "soort": {
+    "nl": "vakantiewoningen",
+    "en": "holiday rentals",
+    "de": "Ferienunterkünfte",
+    "es": "alojamientos vacacionales",
+    "pt": "casas de temporada"
+   },
+   "plaats": "Willemstad",
+   "tags": [
+    "appartement-keuken"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Yatobacoweg, Willemstad, Curaçao",
+     "en": "Address (Google): Yatobacoweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): Yatobacoweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): Yatobacoweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Yatobacoweg, Willemstad, Curaçao"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 28,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/curanice-rentals"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/curanice-rentals"
+   ]
+  },
+  {
+   "id": "westpunt-beach-apartment",
+   "naam": "Westpunt beach apartment",
+   "url": "https://curacao.day/en/businesses/hotel/westpunt-beach-apartment",
+   "soort": {
+    "nl": "appartementen",
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
+   },
+   "plaats": "Westpunt",
+   "tags": [
+    "westpunt",
+    "appartement-keuken"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 127 Westpunt O, Westpunt, Curaçao",
+     "en": "Address (Google): 127 Westpunt O, Westpunt, Curaçao",
+     "de": "Adresse (Google): 127 Westpunt O, Westpunt, Curaçao",
+     "es": "Dirección (Google): 127 Westpunt O, Westpunt, Curaçao",
+     "pt": "Endereço (Google): 127 Westpunt O, Westpunt, Curaçao"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 26,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/westpunt-beach-apartment"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/westpunt-beach-apartment"
+   ]
+  },
+  {
+   "id": "bed-and-bike-westpunt",
+   "naam": "Bed & Bike Westpunt",
+   "url": "https://curacao.day/en/businesses/hotel/bed-en-bike-westpunt",
+   "soort": {
+    "nl": "hotel met fietsverhuur",
+    "en": "hotel with bike rental",
+    "de": "Hotel mit Fahrradverleih",
+    "es": "hotel con alquiler de bicicletas",
+    "pt": "hotel com aluguel de bicicletas"
+   },
+   "plaats": "Westpunt (Playa Kalki)",
+   "tags": [
+    "westpunt"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Playa Kalki z/n, Sabana Westpunt, Curaçao",
+     "en": "Address (Google): Playa Kalki z/n, Sabana Westpunt, Curaçao",
+     "de": "Adresse (Google): Playa Kalki z/n, Sabana Westpunt, Curaçao",
+     "es": "Dirección (Google): Playa Kalki z/n, Sabana Westpunt, Curaçao",
+     "pt": "Endereço (Google): Playa Kalki z/n, Sabana Westpunt, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 888 0354",
+     "en": "Phone (Google): +599 9 888 0354",
+     "de": "Telefon (Google): +599 9 888 0354",
+     "es": "Teléfono (Google): +599 9 888 0354",
+     "pt": "Telefone (Google): +599 9 888 0354"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 53,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/bed-en-bike-westpunt"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/bed-en-bike-westpunt"
+   ]
+  },
+  {
+   "id": "terra-boutique-hotel",
+   "naam": "Terra Boutique Hotel",
+   "url": "https://curacao.day/en/businesses/hotel/terra-boutique-hotel",
+   "soort": {
+    "nl": "boetiekhotel",
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
+   },
+   "plaats": "Pietermaai",
+   "tags": [
+    "pietermaai-punda"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 60 Pietermaai, Willemstad, Curaçao",
+     "en": "Address (Google): 60 Pietermaai, Willemstad, Curaçao",
+     "de": "Adresse (Google): 60 Pietermaai, Willemstad, Curaçao",
+     "es": "Dirección (Google): 60 Pietermaai, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 60 Pietermaai, Willemstad, Curaçao"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 28,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/terra-boutique-hotel"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/terra-boutique-hotel"
+   ]
+  },
+  {
+   "id": "villa-unique",
+   "naam": "Villa Unique",
+   "url": "https://curacao.day/en/businesses/hotel/villa-unique",
+   "soort": {
+    "nl": "villa",
+    "en": "villa",
+    "de": "Villa",
+    "es": "villa",
+    "pt": "villa"
+   },
+   "plaats": "Willemstad (Kaya Beethoven)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Kaya Beethoven, Willemstad, Curaçao",
+     "en": "Address (Google): Kaya Beethoven, Willemstad, Curaçao",
+     "de": "Adresse (Google): Kaya Beethoven, Willemstad, Curaçao",
+     "es": "Dirección (Google): Kaya Beethoven, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Kaya Beethoven, Willemstad, Curaçao"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 21,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/villa-unique"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/villa-unique"
+   ]
+  },
+  {
+   "id": "sabana-cras",
+   "naam": "Sabana Cras",
+   "url": "https://curacao.day/en/businesses/hotel/sabana-cras",
+   "soort": {
+    "nl": "appartementen",
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
+   },
+   "plaats": "Willemstad (Kaya Kankantri)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Sabana cras 36, 15 Kaya Kankantri, Willemstad, Curaçao",
+     "en": "Address (Google): Sabana cras 36, 15 Kaya Kankantri, Willemstad, Curaçao",
+     "de": "Adresse (Google): Sabana cras 36, 15 Kaya Kankantri, Willemstad, Curaçao",
+     "es": "Dirección (Google): Sabana cras 36, 15 Kaya Kankantri, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Sabana cras 36, 15 Kaya Kankantri, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 698 9742",
+     "en": "Phone (Google): +599 9 698 9742",
+     "de": "Telefon (Google): +599 9 698 9742",
+     "es": "Teléfono (Google): +599 9 698 9742",
+     "pt": "Telefone (Google): +599 9 698 9742"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 20,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/sabana-cras"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/sabana-cras"
+   ]
+  },
+  {
+   "id": "mirador-apartments-and-dive",
+   "naam": "Mirador Apartments & Dive",
+   "url": "https://curacao.day/en/businesses/hotel/mirador-apartments-en-dive",
+   "soort": {
+    "nl": "duikappartementen",
+    "en": "dive apartments",
+    "de": "Tauchapartments",
+    "es": "apartamentos de buceo",
+    "pt": "apartamentos de mergulho"
+   },
+   "plaats": "Seru Bottelier",
+   "tags": [
+    "duiken",
+    "appartement-keuken"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Seru Bottelier kv 76, Willemstad, Curaçao",
+     "en": "Address (Google): Seru Bottelier kv 76, Willemstad, Curaçao",
+     "de": "Adresse (Google): Seru Bottelier kv 76, Willemstad, Curaçao",
+     "es": "Dirección (Google): Seru Bottelier kv 76, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Seru Bottelier kv 76, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 512 8115",
+     "en": "Phone (Google): +599 9 512 8115",
+     "de": "Telefon (Google): +599 9 512 8115",
+     "es": "Teléfono (Google): +599 9 512 8115",
+     "pt": "Telefone (Google): +599 9 512 8115"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4,
+     "max": 5,
+     "aantal": 29,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/mirador-apartments-en-dive"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/mirador-apartments-en-dive"
+   ]
+  },
+  {
+   "id": "academy-hotel-curacao",
+   "naam": "Academy Hotel Curacao",
+   "url": "https://curacao.day/en/businesses/hotel/academy-hotel-curacao",
+   "soort": {
+    "nl": "hotel",
+    "en": "hotel",
+    "de": "Hotel",
+    "es": "hotel",
+    "pt": "hotel"
+   },
+   "plaats": "Punda (Prinsenstraat)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 80 Prinsenstraat, Willemstad, Curaçao",
+     "en": "Address (Google): 80 Prinsenstraat, Willemstad, Curaçao",
+     "de": "Adresse (Google): 80 Prinsenstraat, Willemstad, Curaçao",
+     "es": "Dirección (Google): 80 Prinsenstraat, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 80 Prinsenstraat, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 9319",
+     "en": "Phone (Google): +599 9 461 9319",
+     "de": "Telefon (Google): +599 9 461 9319",
+     "es": "Teléfono (Google): +599 9 461 9319",
+     "pt": "Telefone (Google): +599 9 461 9319"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 112,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/academy-hotel-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/academy-hotel-curacao"
+   ]
+  },
+  {
+   "id": "apartment-rustic-curacao",
+   "naam": "Apartment Rustic Curacao",
+   "url": "https://curacao.day/en/businesses/hotel/apartment-rustic-curacao",
+   "soort": {
+    "nl": "appartementen",
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
+   },
+   "plaats": "Willemstad (Kaya Barbulété)",
+   "tags": [
+    "appartement-keuken"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Kaya Barbulété, Willemstad, Curaçao",
+     "en": "Address (Google): Kaya Barbulété, Willemstad, Curaçao",
+     "de": "Adresse (Google): Kaya Barbulété, Willemstad, Curaçao",
+     "es": "Dirección (Google): Kaya Barbulété, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Kaya Barbulété, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 515 4882",
+     "en": "Phone (Google): +599 9 515 4882",
+     "de": "Telefon (Google): +599 9 515 4882",
+     "es": "Teléfono (Google): +599 9 515 4882",
+     "pt": "Telefone (Google): +599 9 515 4882"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 26,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/apartment-rustic-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/apartment-rustic-curacao"
+   ]
+  },
+  {
+   "id": "dushi-carib-hotel",
+   "naam": "Dushi Carib Hotel",
+   "url": "https://curacao.day/en/businesses/hotel/dushi-carib-hotel",
+   "soort": {
+    "nl": "hotel",
+    "en": "hotel",
+    "de": "Hotel",
+    "es": "hotel",
+    "pt": "hotel"
+   },
+   "plaats": "Otrobanda (Breedestraat)",
+   "tags": [
+    "otrobanda"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 181 Breedestraat, Willemstad, Curaçao",
+     "en": "Address (Google): 181 Breedestraat, Willemstad, Curaçao",
+     "de": "Adresse (Google): 181 Breedestraat, Willemstad, Curaçao",
+     "es": "Dirección (Google): 181 Breedestraat, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 181 Breedestraat, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 462 5244",
+     "en": "Phone (Google): +599 9 462 5244",
+     "de": "Telefon (Google): +599 9 462 5244",
+     "es": "Teléfono (Google): +599 9 462 5244",
+     "pt": "Telefone (Google): +599 9 462 5244"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.5,
+     "max": 5,
+     "aantal": 41,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/hotel/dushi-carib-hotel"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hotel/dushi-carib-hotel"
+   ]
+  },
+  {
+   "id": "merakii-seaview-escape-curacao",
+   "naam": "Merakii Seaview Escape Curacao",
+   "url": "https://curacao.day/en/businesses/resort-hotel/merakii-seaview-escape-curacao",
+   "soort": {
+    "nl": "boetiekhotel",
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
+   },
+   "plaats": "Piscadera",
+   "tags": [
+    "piscadera"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 51 Nst Piscaderaweg, Willemstad, Curaçao",
+     "en": "Address (Google): 51 Nst Piscaderaweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 51 Nst Piscaderaweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 51 Nst Piscaderaweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 51 Nst Piscaderaweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 510 7887",
+     "en": "Phone (Google): +599 9 510 7887",
+     "de": "Telefon (Google): +599 9 510 7887",
+     "es": "Teléfono (Google): +599 9 510 7887",
+     "pt": "Telefone (Google): +599 9 510 7887"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 148,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/merakii-seaview-escape-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/merakii-seaview-escape-curacao"
+   ]
+  },
+  {
+   "id": "coconuts-curacao",
+   "naam": "Coconuts Curaçao",
+   "url": "https://curacao.day/en/businesses/resort-hotel/coconuts-curacao-tropical-boutique-hotel",
+   "soort": {
+    "nl": "boetiekhotel",
+    "en": "boutique hotel",
+    "de": "Boutique-Hotel",
+    "es": "hotel boutique",
+    "pt": "hotel boutique"
+   },
+   "plaats": "Willemstad (Kaminda Girigoria A. Curie)",
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 86 Kaminda Girigoria A. Curie, Willemstad, Curaçao",
+     "en": "Address (Google): 86 Kaminda Girigoria A. Curie, Willemstad, Curaçao",
+     "de": "Adresse (Google): 86 Kaminda Girigoria A. Curie, Willemstad, Curaçao",
+     "es": "Dirección (Google): 86 Kaminda Girigoria A. Curie, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 86 Kaminda Girigoria A. Curie, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 524 2571",
+     "en": "Phone (Google): +599 9 524 2571",
+     "de": "Telefon (Google): +599 9 524 2571",
+     "es": "Teléfono (Google): +599 9 524 2571",
+     "pt": "Telefone (Google): +599 9 524 2571"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.9,
+     "max": 5,
+     "aantal": 27,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/coconuts-curacao-tropical-boutique-hotel"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/coconuts-curacao-tropical-boutique-hotel"
+   ]
+  },
+  {
+   "id": "the-natural-curacao-clothing-optional-resort",
+   "naam": "The Natural Curacao clothing optional resort",
+   "url": "https://curacao.day/en/businesses/resort-hotel/the-natural-curacao-clothing-optional-resort",
+   "soort": {
+    "nl": "naturistenresort",
+    "en": "clothing-optional resort",
+    "de": "FKK-Resort",
+    "es": "resort naturista",
+    "pt": "resort naturista"
+   },
+   "plaats": "Sint Willibrordus",
+   "tags": [],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Weg Naar San Sebastian, Sint Willibrordus, Curaçao",
+     "en": "Address (Google): Weg Naar San Sebastian, Sint Willibrordus, Curaçao",
+     "de": "Adresse (Google): Weg Naar San Sebastian, Sint Willibrordus, Curaçao",
+     "es": "Dirección (Google): Weg Naar San Sebastian, Sint Willibrordus, Curaçao",
+     "pt": "Endereço (Google): Weg Naar San Sebastian, Sint Willibrordus, Curaçao"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 73,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/the-natural-curacao-clothing-optional-resort"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/the-natural-curacao-clothing-optional-resort"
+   ]
+  },
+  {
+   "id": "the-ritz-residence",
+   "naam": "The Ritz Residence",
+   "url": "https://curacao.day/en/businesses/resort-hotel/the-ritz-residence",
+   "soort": {
+    "nl": "appartementen",
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
+   },
+   "plaats": "Willemstad (Scharlooweg)",
+   "tags": [
+    "appartement-keuken"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 25 Scharlooweg, Willemstad, Curaçao",
+     "en": "Address (Google): 25 Scharlooweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 25 Scharlooweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 25 Scharlooweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 25 Scharlooweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 844 9950",
+     "en": "Phone (Google): +599 9 844 9950",
+     "de": "Telefon (Google): +599 9 844 9950",
+     "es": "Teléfono (Google): +599 9 844 9950",
+     "pt": "Telefone (Google): +599 9 844 9950"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 22,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/the-ritz-residence"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/the-ritz-residence"
+   ]
+  },
+  {
+   "id": "curasita-colour-appartments",
+   "naam": "Curasita colour Appartments",
+   "url": "https://curacao.day/en/businesses/resort-hotel/curasita-colour-appartments",
+   "soort": {
+    "nl": "appartementen",
+    "en": "apartments",
+    "de": "Apartments",
+    "es": "apartamentos",
+    "pt": "apartamentos"
+   },
+   "plaats": "Willemstad (Kaya Stuiver)",
+   "tags": [
+    "appartement-keuken"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 39, 36 Kaya Stuiver, Willemstad, Curaçao",
+     "en": "Address (Google): 39, 36 Kaya Stuiver, Willemstad, Curaçao",
+     "de": "Adresse (Google): 39, 36 Kaya Stuiver, Willemstad, Curaçao",
+     "es": "Dirección (Google): 39, 36 Kaya Stuiver, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 39, 36 Kaya Stuiver, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 684 7366",
+     "en": "Phone (Google): +599 9 684 7366",
+     "de": "Telefon (Google): +599 9 684 7366",
+     "es": "Teléfono (Google): +599 9 684 7366",
+     "pt": "Telefone (Google): +599 9 684 7366"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.8,
+     "max": 5,
+     "aantal": 39,
+     "peildatum": "2026-11-17",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/curasita-colour-appartments"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/resort-hotel/curasita-colour-appartments"
    ]
   }
  ],
