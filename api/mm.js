@@ -130,6 +130,9 @@ const cors = res => { res.setHeader('access-control-allow-origin', '*'); res.set
 
 export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x'); const op = String(url.searchParams.get('op') || '').toLowerCase(); const q = k => url.searchParams.get(k);
+  if (op === 'gohome') { // 17 nov (Whop-pixelcheck: "Whop couldn't load go.kadoly.com"): go.kadoly.com/ geeft een echte pagina met de Whop-pixel in de head (zelfde toestemmingsregel als op kadoly.com) en stuurt door naar kadoly.com
+    res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=300');
+    return res.status(200).send('<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kadoly</title><meta name="robots" content="noindex"><link rel="canonical" href="https://kadoly.com/"><meta http-equiv="refresh" content="1;url=https://kadoly.com/"><script>' + WH_JS + '</script></head><body style="font-family:system-ui,sans-serif;padding:24px"><p><a href="https://kadoly.com/">Naar Kadoly</a></p></body></html>'); }
   try {
     if (op === 'js') {
       res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600, s-maxage=3600'); cors(res);

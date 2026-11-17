@@ -259,6 +259,16 @@
   ],
   "rewrites": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "go.kadoly.com"
+        }
+      ],
+      "destination": "/api/mm?op=gohome"
+    },
+    {
       "source": "/o",
       "destination": "/api/shop?op=org"
     },
@@ -1783,17 +1793,6 @@
     }
   },
   "redirects": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "go.kadoly.com"
-        }
-      ],
-      "destination": "https://kadoly.com/",
-      "permanent": false
-    },
     {
       "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:bundel|ttvideo|ttfeed|beeld/|prijslijst)|shop$|o$).+)",
       "has": [
