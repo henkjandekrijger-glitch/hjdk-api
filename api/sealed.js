@@ -10,7 +10,11 @@ import { ICONS } from '../lib/sealed-icons.js';
 import { VAST, overdracht, overdrachtTekst } from '../lib/sealed-overdracht.js';
 import { proefStand, proefTekst } from '../lib/proef.js';
 import { renderSealedSpecial, renderPartij, zoekPartij, PARTIJ_INDEX } from '../lib/sealed.js';
-import { renderLp, zoekLp, bewaarKoper, lijstKopers, LP_INDEX } from '../lib/sealed-lp.js';
+import { zoekLp, bewaarKoper, lijstKopers, LP_INDEX } from '../lib/sealed-lp.js';
+import { renderChatPage } from '../lib/sealed-chatpage.js';
+import { chatStart, chatEv, chatVrij, chatStand, chatStandTekst, chatLeer } from '../lib/sealed-chat.js';
+import { extraPages } from '../lib/sealed-pages.js';
+import { berichten, HAIKU } from '../lib/ai.js';
 import { GROWTH_SCRIPT } from '../lib/sealed.js';
 import { renderPagina, renderHub, renderVoordeur, zoekPagina, sitemap, ROBOTS, llms, zichtJson, LOGO_SVG, INDEXNOW_KEY, BASE, HOST, url } from '../lib/sealed.js';
 
@@ -94,6 +98,25 @@ export default async function handler(req, res) {
     if(req.method!=='POST')return stuur(res,405,'application/json','{"ok":false}','no-store');
     return anonymousRequest(req,res,op);
   }
+  if (op === 'chatstart' || op === 'chatev' || op === 'chatvrij' || op === 'chatsein') {
+    if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
+    res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+    try {
+      const b = await leesBody(req); if (JSON.stringify(b).length > 4096) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store');
+      const bot = /bot|crawler|spider|headless/i.test(String(req.headers['user-agent'] || ''));
+      if (op === 'chatstart') { const r = await chatStart(kv, { rol: b.rol, taal: b.taal, bot }); return stuur(res, r ? 200 : 400, 'application/json', JSON.stringify(r || { ok: false }), 'no-store'); }
+      if (bot) return stuur(res, 200, 'application/json', '{"ok":true}', 'no-store');
+      if (op === 'chatev') return stuur(res, 200, 'application/json', JSON.stringify({ ok: await chatEv(kv, b) }), 'no-store');
+      if (op === 'chatvrij') return stuur(res, 200, 'application/json', JSON.stringify({ ok: await chatVrij(kv, b) }), 'no-store');
+      // seintje: alleen met de geldige privésleutel van de inzending; los van de anonieme record bewaard en mee verwijderd bij intrekken
+      const mail = String(b.mail || '').trim().toLowerCase().slice(0, 160); if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/.test(mail)) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store');
+      const c = await anonymous.control('receipt', b); if (c.status !== 200) return stuur(res, 404, 'application/json', '{"ok":false}', 'no-store');
+      await kv.set('si:notify:' + String(b.id), { mail, at: new Date().toISOString() }, { ex: 90 * 86400 });
+      return stuur(res, 200, 'application/json', '{"ok":true}', 'no-store');
+    } catch { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
+  }
+  if (op === 'chatstand') { const st = await chatStand(kv); return q.get('format') === 'json' ? stuur(res, 200, 'application/json', JSON.stringify(st, null, 1), 'no-store', '', 'noindex') : stuur(res, 200, 'text/plain; charset=utf-8', chatStandTekst(st) + '\n', 'no-store'); }
+  if (op === 'chatleer') { const r = await chatLeer(kv, { ai: o => berichten({ ...o, model: HAIKU }) }); return stuur(res, 200, 'application/json', JSON.stringify(r, null, 1), 'no-store'); }
   if (op === 'koper') {
     if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
     res.setHeader('X-Robots-Tag', 'noindex, nofollow');
@@ -126,8 +149,8 @@ export default async function handler(req, res) {
     return stuur(res, 200, 'text/html; charset=utf-8', renderVoordeur(opts), 'private, no-store', 'en');
   }
   if (!UI[taal]) return stuur(res, 404, 'text/html; charset=utf-8', renderVoordeur(opts), 'public, max-age=60');
-  if (!slug) return stuur(res, 200, 'text/html; charset=utf-8', renderHub(taal, opts), undefined, taal);
-  if (zoekLp(taal, slug)) return stuur(res, 200, 'text/html; charset=utf-8', renderLp(taal, slug, { ...opts, growthScript: GROWTH_SCRIPT }), 'public, max-age=60, s-maxage=300', taal, LP_INDEX ? '' : 'noindex, follow');
+  if (!slug) { const links = [...PAGINAS.filter(p => p.taal === taal).map(p => ({ href: '/' + taal + '/' + p.slug, tekst: p.h1 })), ...extraPages().filter(p => p.language === taal).map(p => ({ href: '/' + taal + '/' + p.slug, tekst: p.title }))]; return stuur(res, 200, 'text/html; charset=utf-8', renderChatPage(taal, null, { ...opts, growthScript: GROWTH_SCRIPT, links }), 'public, max-age=60, s-maxage=300', taal); }
+  if (zoekLp(taal, slug)) return stuur(res, 200, 'text/html; charset=utf-8', renderChatPage(taal, zoekLp(taal, slug), { ...opts, growthScript: GROWTH_SCRIPT }), 'public, max-age=60, s-maxage=300', taal, LP_INDEX ? '' : 'noindex, follow');
   if (zoekPartij(taal, slug)) { const aantal = +(await kv.get('si:n').catch(() => 0)) || 0; return stuur(res, 200, 'text/html; charset=utf-8', renderPartij(taal, { ...opts, aantal }), 'public, max-age=60, s-maxage=300', taal, PARTIJ_INDEX ? '' : 'noindex, follow'); }
   const special=renderSealedSpecial(taal,slug,opts);
   if(special){const priv=['seal','manage','partners'].includes(slug);return stuur(res,200,'text/html; charset=utf-8',special,priv?'private, no-store':undefined,taal,priv?'noindex, follow':'');}
