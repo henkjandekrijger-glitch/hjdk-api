@@ -430,6 +430,14 @@ const leesCookie = (req, naam) => { const m = new RegExp('(?:^|;\\s*)' + naam + 
 // database vol (OOM): meteen de databasewacht, hooguit eens per 5 minuten per instantie (lib/dbwacht.js, 29 okt)
 let DB_NOOD = 0;
 function dbNood() { if (Date.now() - DB_NOOD < 300000) return; DB_NOOD = Date.now(); laterAf(import('../lib/dbwacht.js').then(m => m.dbWacht(kv, { tijd: 40000 })).catch(() => {})); }
+// 17 nov (Henkjan: "Los 1 -5 op"): kadoly.com stuurt /product/<id> met een 301 door naar /product/<naam>; dat kost een laadronde. De naam wordt
+// eenmaal opgehaald (op de achtergrond) en 7 dagen bewaard; tot die tijd gaat de bezoeker via het oude adres.
+async function slugVan(pid) {
+  const k = 'hjdk:shop:slug:' + pid; let sl = null; try { sl = await kv.get(k); } catch (e) {}
+  if (sl) return sl === '-' ? '' : String(sl);
+  laterAf((async () => { try { const r = await fetch('https://kadoly.com/product/' + encodeURIComponent(pid) + '?lang=nl', { redirect: 'manual', signal: AbortSignal.timeout(4000) }); const loc = String(r.headers.get('location') || ''); const m = loc.match(/\/product\/([a-z0-9-]{3,140})(?:[?#]|$)/i); await kv.set(k, m && m[1] !== pid ? m[1] : '-', { ex: 7 * 86400 }); } catch (e) {} })());
+  return '';
+}
 async function direct(req, res, x) {
   const { net, clickid, zone, cr, camp, pid, code, bot } = x; const test = /^test/i.test(clickid);
   // Clickmind weert bots voor de doorstuur (Henkjan 28 okt: "Zorg dat clikmind echt bots blijft killen en filteren en volgende keer
@@ -446,7 +454,8 @@ async function direct(req, res, x) {
   let mmp = leesCookie(req, 'mmp'); const nieuwP = !/^[0-9a-f]{16}$/.test(mmp); if (nieuwP) mmp = nieuwId(8);
   let rec = null; try { rec = await kv.get(K.rec(code)); } catch (e) {}
   const cid = (rec && rec.mmc) || nieuwId(6);
-  const doel = 'https://kadoly.com/' + (x.voorkant ? '' : (x.kassa ? 'checkout/' : 'product/') + encodeURIComponent(pid)) + '?utm_source=' + (x.bron ? (x.bron.source || 'kadoly-gids') : NETTEN[net].toLowerCase()) + '&utm_medium=' + (x.bron ? x.bron.medium : (x.vorm || 'push')) + '&utm_campaign=' + (x.bron ? encodeURIComponent(x.bron.campaign) : 'shoplus') + '&utm_content=' + (x.voorkant ? 'voorkant' : encodeURIComponent(pk(pid))) + '&hj=' + code + '&mmc=' + cid + '&lang=' + (/^(nl|de|es|en)$/.test(x.taal || '') ? x.taal : 'nl') + (net === 'pi' && x.epik ? '&epik=' + encodeURIComponent(x.epik) : '') + (net === 'pi' ? '&pin_traffic=' + (rec && rec.pc || x.pinClass || 'unknown') + (x.pinClass === 'paid' ? '&pp=0' : x.pinClass === 'earned' ? '&pp=1' : '') : ''); // 16 nov: buitenlandse campagnes landen in de taal van hun land (shoptest geeft &lang= mee)
+  if (!x.voorkant && !x.kassa && pid) { try { x.slug = await slugVan(pid); } catch (e) {} } // 17 nov: meteen naar /product/<naam>, zonder de omleiding van /product/<id>
+  const doel = 'https://kadoly.com/' + (x.voorkant ? '' : x.kassa ? 'checkout/' + encodeURIComponent(pid) : 'product/' + (x.slug || encodeURIComponent(pid))) + '?utm_source=' + (x.bron ? (x.bron.source || 'kadoly-gids') : NETTEN[net].toLowerCase()) + '&utm_medium=' + (x.bron ? x.bron.medium : (x.vorm || 'push')) + '&utm_campaign=' + (x.bron ? encodeURIComponent(x.bron.campaign) : 'shoplus') + '&utm_content=' + (x.voorkant ? 'voorkant' : encodeURIComponent(pk(pid))) + '&hj=' + code + '&mmc=' + cid + '&lang=' + (/^(nl|de|es|en)$/.test(x.taal || '') ? x.taal : 'nl') + (net === 'pi' && x.epik ? '&epik=' + encodeURIComponent(x.epik) : '') + (net === 'pi' ? '&pin_traffic=' + (rec && rec.pc || x.pinClass || 'unknown') + (x.pinClass === 'paid' ? '&pp=0' : x.pinClass === 'earned' ? '&pp=1' : '') : ''); // 16 nov: buitenlandse campagnes landen in de taal van hun land (shoptest geeft &lang= mee)
   // Link previews get the same offer without a visitor record, measurement id or cookie.
   if (net === 'pi' && bot) {
     const preview = new URL(doel); preview.searchParams.delete('hj'); preview.searchParams.delete('mmc');
@@ -454,10 +463,10 @@ async function direct(req, res, x) {
     return res.end();
   }
   if (!weiger && !prefetch && (!rec || !rec.mmc)) {
-    const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; if (net === 'pi' && eerst) rec.pc = x.pinClass || 'unknown'; rec.mmc = cid; rec.mp = mmp; if (x.wh) { rec.w = x.wh; rec.ua = String(req.headers['user-agent'] || '').slice(0, 200); } if (x.rt) rec.rt = x.rt; if (x.voorkant) rec.vk = 1; if (test) rec.t = 1; if (eerst && x.extra && Object.keys(x.extra).length) rec.q = x.extra; /* 5 nov: wat het netwerk meegeeft (MGID src, srcid, cat, cpc, geo) blijft bij de klik */
+    const eerst = !rec; rec = rec || { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'd' }; if (net === 'pi' && eerst) rec.pc = x.pinClass || 'unknown'; rec.mmc = cid; rec.mp = mmp; if (x.wh) { rec.w = x.wh; rec.ua = String(req.headers['user-agent'] || '').slice(0, 200); } if (x.rt) rec.rt = x.rt; if (x.voorkant) rec.vk = 1; if (x.kassa && net === 'tt') rec.ka = 1; if (test) rec.t = 1; if (eerst && x.extra && Object.keys(x.extra).length) rec.q = x.extra; /* 5 nov: wat het netwerk meegeeft (MGID src, srcid, cat, cpc, geo) blijft bij de klik */
     try { await Promise.all([kv.set(K.rec(code), rec, { ex: 7 * 86400 }), cidKoppel(kv, { cid, pid: mmp, arm: rec.arm === 'd' ? 'direct' : 'pagina', tag: 'yoors-shop', net: test ? 'test' : CM_NET[net], zone: zone || '-', camp: camp || '-', shop: code })]); } catch (e) {}
     if (eerst && !test) {
-      const keys = ['sh-' + net + '-dv', 'sh-d' + D8() + '-' + net + '-dv', 'sh-u' + nlUur() + '-dv', x.voorkant ? 'sh-vk-dv' : 'sh-p-' + pk(pid) + '-dv'];
+      const keys = ['sh-' + net + '-dv', 'sh-d' + D8() + '-' + net + '-dv', 'sh-u' + nlUur() + '-dv', x.voorkant ? 'sh-vk-dv' : 'sh-p-' + pk(pid) + '-dv']; if (net === 'tt' && !x.voorkant && pid) keys.push('sh-tt-arm' + (x.kassa ? 'k' : 'p') + '-dv');
       if (zone) keys.push('sh-' + net + '-z' + zone + '-dv', 'sh-' + net + '-z' + zone + '-hv'); if (cr) keys.push('sh-' + net + '-a' + cr + '-dv'); if (camp) keys.push('sh-' + net + '-k' + camp + '-dv');
       const werk = laterAf(Promise.all([
         inc(keys, rec), uurTel(kv, net, 'dv'), sadd(K.set('p'), pid), zone ? sadd(K.set('z', net), zone) : null, cr ? sadd(K.set('a', net), cr) : null, camp ? sadd(K.set('k', net), camp) : null,
@@ -521,7 +530,8 @@ async function land(req, res, url) {
   const voorkant = q.get('naar') === 'voorkant' || (net === 'bi' && !q.get('p') && !biPid); // 16 nov (Henkjan): een algemene advertentie landt op de voorkant van kadoly.com, met Clickmind ertussen
   if (net === 'wh') { const pf = [req.headers['sec-purpose'], req.headers['purpose'], req.headers['x-purpose'], req.headers['x-moz']].map(v => String(v || '').toLowerCase()).join(' '); if (/prefetch|preview|prerender/.test(pf)) laterAf(inc(['sh-wh-pf', 'sh-d' + D8() + '-wh-pf'])); } // 17 nov: Meta laadt de landingspagina soms vooraf (zonder klik); tellen om aankomsten zonder klik te verklaren
   if (net === 'wh' && cr && pid && !bot) { laterAf(kv.raw(['HSETNX', 'hjdk:whop:waidp', cr, pid]).catch(() => {})); if (whp && whp.wa) laterAf(kv.raw(['HSETNX', 'hjdk:whop:waidwa', cr, whId(whp.wa)]).catch(() => {})); } // 17 nov: Whop zet in waid een eigen nummer, niet de ad-id van de API; de ronde koppelt het via product (p) of onze eigen wa
-  if (code) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt, taal, voorkant, epik: pinEpik, pinClass, bron: net === 'pi' ? { source: 'pinterest', medium: pinClass === 'earned' ? 'organic_social' : 'paid_social', campaign: camp || 'pinterest-test' } : undefined, wh: whp ? Object.assign({ pr: held && Number(held.p) > 0 ? Number(held.p) : undefined }, whp) : null });
+  const ttKassa = net === 'tt' && !voorkant && !!pid && !/^ttx/.test(clickid) && parseInt(createHash('sha1').update(String(clickid)).digest('hex').slice(0, 2), 16) % 2 === 1; // 17 nov (Henkjan: "Los 1 -5 op"): 0 van 153 echte TikTok-bezoekers tikte op de koopknop; de helft (vast per klik) gaat direct naar de afrekenpagina
+  if (code) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt, taal, voorkant, kassa: ttKassa, epik: pinEpik, pinClass, bron: net === 'pi' ? { source: 'pinterest', medium: pinClass === 'earned' ? 'organic_social' : 'paid_social', campaign: camp || 'pinterest-test' } : undefined, wh: whp ? Object.assign({ pr: held && Number(held.p) > 0 ? Number(held.p) : undefined }, whp) : null });
   if (!bot) {
     let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, { ex: 7 * 86400 }); } catch (e) {} }
     if (nieuw) { const keys = ['sh-' + net + '-view', 'sh-d' + D8() + '-' + net + '-view', 'sh-u' + nlUur() + '-view', 'sh-p-' + pk(pid) + '-himp'].concat(meer.map(m => 'sh-p-' + pk(m.id) + '-imp'));
@@ -1049,7 +1059,7 @@ export default async function handler(req, res) {
     if (op === 'ttads') { // 16 nov (Henkjan: "Yes start en ga leren . Zet clikmind er tussen ."): per TikTok-advertentie (ad-id uit __CID__) wat Clickmind zag, voor de leerronde; alleen tellingen
       const ids = await smembers(K.set('a', 'tt')); const t = await tellers('tt', 'a', ids); const ads = {};
       for (const [id, v] of Object.entries(t)) ads[id] = { aan: v.dv, echt: v.dm, actie: v.da, tik: v.dwk, blad: v.dbo, verder: v.dbn, kassa: v.dkp, cart: v.cart, koop: v.koop, omzet: Math.round((v.omzet || 0)) / 100 };
-      const d = (await dagTotaal(DAY())).tt; return res.status(200).json({ ok: true, at: new Date().toISOString(), vandaag: { aan: d.dv, echt: d.dm, tik: d.dwk, kassa: d.dkp, cart: d.cart, koop: d.koop }, ads }); }
+      const d = (await dagTotaal(DAY())).tt; const ar = await tellers('tt', 'arm', ['p', 'k']); const proef = {}; for (const [k, v] of Object.entries(ar)) proef[k === 'k' ? 'afrekenpagina' : 'productpagina'] = { aan: v.dv, echt: v.dm, tik: v.dwk, kassa: v.dkp, cart: v.cart, koop: v.koop }; return res.status(200).json({ ok: true, at: new Date().toISOString(), vandaag: { aan: d.dv, echt: d.dm, tik: d.dwk, kassa: d.dkp, cart: d.cart, koop: d.koop }, proef, ads }); }
     if (op === 'mandjes') { // 14 nov (Henkjan: "Zoek dit nu uit ... waarom 16 van de 19 mandjes niet doorgingen naar de afrekenpagina. Ik kijk per bezoeker wat er tussen mandje en afrekenen gebeurt"): openbaar, zonder persoonsgegevens; per bezoeker met een tik op de koopknop (wklik) van ?dag= (standaard vandaag) alles wat Clickmind daarna van hem zag, in seconden na de tik
       const dg = /^\d{4}-\d{2}-\d{2}$/.test(url.searchParams.get('dag') || '') ? url.searchParams.get('dag') : DAY();
       const ruw = await kv.raw(['LRANGE', 'hjdk:shop:kassalog', '0', '2999']).catch(() => []); const tik = {};

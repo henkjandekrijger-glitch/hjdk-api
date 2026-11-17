@@ -34,6 +34,7 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 6. Arm "Bewaar dit idee" ja of nee, en de stopregel (beide in `research/kadoly-lekken-backlog.md`).
 7. Reviews: Trustpilot-account aanmaken (Henkjan); de uitnodigingsmail schrijven wij en tonen we eerst.
 8. Alleen melden, ander project: todayin MGID 12534692 loopt nog.
+9. Shop (Babita), 17 nov, TikTok-tafelhaard (oc_4174002164744193 en de andere Housevitamin-tafelhaarden): prijs naar EUR 29,95 (nu 19,79 + 8,50 verzending, marge EUR 0,93; elders kost een tafelhaard 33 tot 50 euro); op de productpagina "gratis verzending bij je eerste bestelling" laten zien in plaats van EUR 8,50; vermelden welke brandstof nodig is en of die erbij zit. Henkjan zei "Los 1 -5 op".
 
 ## Hoe een dag werkt (shoptest)
 - **Waar:** propellerads-mcp `lib/shoptest.ts`, cron 05:15 UTC en elk uur op :15 tot 21:15; met de hand via MCP-tool `shoptest` (`droog`, `max`), uitslag via `shoptest_log`. Een PropellerAds-dag loopt van 05:00 tot 05:00 UTC.
@@ -92,6 +93,7 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
 
+- **17 nov 2026 — TikTok koopknop-lek (Henkjan: "Los 1 -5 op"):** 0 van 153 echte TikTok-bezoekers tikte op de koopknop (ander verkeer 15 nov 17 van 150). TikTok-klikken gaan nu per klik vast voor de helft direct naar de afrekenpagina (rec.ka, api/shop.js land ttKassa); het openen telt daar als dkl en de eerste bewuste stap als afrekenpagina, en TikTok krijgt InitiateCheckout pas bij die bewuste stap. Vergelijking productpagina tegen afrekenpagina in /api/shop?op=ttads (proef). Productlinks gaan meteen naar /product/<naam> (slugVan, 7 dagen in kv) in plaats van via de 301. Prijs, verzendtekst en brandstof staan als punt 9 bij Open.
 - **17 nov 2026 — Kadoly Pinterest-meting:** pp0/pp1/unknown apart in bestaande pi-opslag, inclusief interactie/cart/order/omzet; /api/shop/pinads hoofdvelden zijn uitsluitend bevestigd paid. Epik, QA-uitsluiting en bestemming behouden. Oude pi-totalen niet achteraf paid genoemd. Campagne626760328323 blijft ongeactiveerd; EUR100 totaal, spend/resterend onbekend zonder Ads Manager. Centrale uitvoeringsbron is Page page_805c1f53970481918dd480e4a0b5e205.
 - 2026-11-17 03:50 UTC (ochtendtaak Claude): 1 product van de dagkeuze zonder teksten (Geweven Zeewier tas van Soeji, oc_4173958202097665), 9 teksten met 9 hoeken in HANDTEKSTEN, alle 9 goed volgens tekstFout; strand en maten bewust weggelaten (seizoen).
 - 2026-11-16 23:00 UTC (Henkjan: "We moeten nieuw pinterest starten voor kadoly . huidige niet geaccepteerd." / "Done vul alles in voor kadoly.com"): nieuw Pinterest-bedrijfsaccount @kadolyshop (henkjan@kadoly.com): naam Kadoly, bio, logo, kadoly.com, Nederland, Home; 4 borden; in Zernio gekoppeld (6afb8a5d86e8bb18f844fc95); eerste pin (roze hartring) live met directe kadoly.com-link (Pinterest weert doorstuurlinks). Open: e-mail bevestigen (Henkjan), website claimen (meta-tag of DNS).
