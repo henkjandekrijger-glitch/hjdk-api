@@ -1753,7 +1753,7 @@
       "permanent": false
     },
     {
-      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:bundel|ttvideo|ttfeed)|shop$|o$).+)",
+      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:bundel|ttvideo|ttfeed|beeld/)|shop$|o$).+)",
       "has": [
         {
           "type": "host",
