@@ -48,3 +48,10 @@ Bouwers en bronnen staan in `kdp/bouw/` (spiegel van `/home/claude/boek` in de c
 - **VS, kerst-Bijbel kleuren op nummer**: zwak. Christmas Nativity Color By Number B0HG1QNQ66 (aug 2026) #216.709; Christmas Color by Number for Kids (merk Majosta, B0FWKLZFYB #108.575, B08NS4FYXG #29.717). Kandidaat 42.
 - **VK, Apocrypha hardcover**: zwak. Hardcover-concurrenten #241k tot #918k; alleen de Ethiopische Bijbel (B0FNMP7R17, #7.150, GBP 43) loopt. Geen kandidaat.
 - **Eigen verkoop 12-14 nov**: Teens $18,04 (Canada), Bible Color By Number $6,30, Apocrypha $4,44, Enoch $4,19, Mom's Word Search $1,66. Bible Color By Number verkoopt zonder ads: kandidaat voor een eigen boekgids-push en een hardcover later.
+
+## Bewijs 17 nov 2026 (Keepa)
+
+- **VS, feitenboek voor meiden**: The Rare and Unusual Knowledge Book for Smart Girls B0GCB9HXRM (indie, sinds 23 dec 2025) nu #944, 90 dagen gemiddeld #3.621, 62 rangdalingen in 30 dagen. Breed: Book of Unusual Knowledge #25, True Facts That Sound Like Bull$#*t #71, Ultimate Book of Random Fun Facts #381. Kandidaat: Stocking Stuffers For Teen Girls (Elias Grant, US/CA, eigen nieuwe feiten, geen Teens-feiten) 81.
+- **Canada, Would You Rather voor kinderen en teens**: Try Not to Laugh WYR 1951025083 #201, indie Would You Rather Game Book for Kids 1653075104 #885 (sinds 2020), Z Kids Made You Think 0593196791 #2.005 (met "Stocking Stuffers for Kids" in de titel); teen-specifieke indies zwak (#46k-#57k). Kandidaat: Would You Rather? Stocking Stuffers for Kids & Teens (Elias Grant, CA/US, sjabloon Choose Wisely Darling) 72.
+- **VS, kersttrivia voor gezinnen**: nieuwe indie B0HMJYGG3R (okt 2026) #15.274, de rest #30k tot #1,1 mln; verkoopt alleen tot 25 dec. Kandidaat 57, niet dit jaar.
+
