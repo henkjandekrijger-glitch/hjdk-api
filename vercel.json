@@ -235,6 +235,10 @@
     {
       "path": "/api/keuze-tools?tool=rdam&op=ververs",
       "schedule": "20 */3 * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=rdam&op=verrijk",
+      "schedule": "50 */2 * * *"
     }
   ],
   "rewrites": [

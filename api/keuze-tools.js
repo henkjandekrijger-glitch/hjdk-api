@@ -46,6 +46,7 @@ export default async function handler(req, res) {
     const R=await import('../lib/rdam.js');const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
     if(op==='tik'){let b=req.body;try{if(typeof b==='string')b=JSON.parse(b.slice(0,800));}catch{b={};}res.setHeader('cache-control','no-store');return res.status(200).json(await R.tik(b||{}));}
     if(op==='ververs'){res.setHeader('cache-control','no-store');if(!beschermd)return res.status(403).json({ok:false});const r=q.get('d')?await R.ververs(q.get('d')):await R.verversOudste();const m=await R.meldNieuw().catch(e=>({fout:String(e.message||e).slice(0,80)}));return res.status(200).json({...r,indexnow:m});}
+    if(op==='verrijk'){res.setHeader('cache-control','no-store');if(!beschermd)return res.status(403).json({ok:false});return res.status(200).json(q.get('d')?await R.verrijk(q.get('d'),Math.min(30,Number(q.get('n'))||25)):await R.verrijkRonde());}
     if(op==='stand'){res.setHeader('cache-control','no-store');return res.status(200).json(await R.stand());}
     if(op==='sitemap'){const x=await R.sitemap();res.setHeader('content-type','application/xml; charset=utf-8');res.setHeader('cache-control','public, s-maxage=3600');return res.status(200).send(x.xml);}
     const html=q.get('z')?await R.zaakPagina(q.get('d'),q.get('z')):q.get('d')?await R.dienstPagina(q.get('d')):await R.hub();
