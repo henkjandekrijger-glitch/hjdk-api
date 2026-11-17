@@ -36,6 +36,7 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 8. Alleen melden, ander project: todayin MGID 12534692 loopt nog.
 9. Shop, 17 nov (Henkjan voert de code zelf door, opdracht staat in de TikTok-chat): koopknop werkend en gemeten in de TikTok-browser, tafelhaarden duurder (EUR 29,95 en 34,95), gratis verzending vervalt overal (Henkjan 17 nov: "Gratis verzending doen we niet meer") en verzendkosten zichtbaar bij de prijs, brandstofinfo, vertrouwen bij de knop en echte reviews (nooit verzonnen).
 
+11. Prijslijst, 17 nov: Code leest https://go.kadoly.com/api/shop/prijslijst in (prijs_nieuw = productprijs zonder verzending), liefst elke nacht.
 10. Bundel van de dag, 17 nov: de shop moet kadoly.com/bundel/<code> tonen en in één keer afrekenen (opdracht in de TikTok-chat; gegevens uit https://go.kadoly.com/api/shop/bundel?code=<code>). Daarna gaan de bundeladvertenties op TikTok aan.
 
 ## Hoe een dag werkt (shoptest)
@@ -94,6 +95,7 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - hjdk-api: dagkeuze `lib/shopkies.js` (+ VAST_DAG in `api/shop.js`), teksten `lib/shopteksten-hand.js` en `lib/shoptekst.js`, bots `lib/shopbot.js`, niet geladen `lib/shopniet.js`, archief `lib/shcarchief.js`, kassadoel `lib/shopdirect.js`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 17 nov 2026: concurrerende prijslijst voor de shop (/api/shop/prijslijst, JSON of CSV; 164 prijzen) en dagelijkse TikTok-producttest (lib/tttest.js, op=ttproef, cron 04:57 UTC, labels test en winnaar in de catalogus, tellers per product alleen TikTok).
 - 17 nov 2026: TikTok-catalogus Kadoly NL staat (3.001 producten, dagelijks bijgewerkt, pixel gekoppeld). Bij de huidige prijzen haalt 1 product op voorraad EUR 15 marge en 5 halen EUR 5; met marktprijs (Demand Radar) kunnen 62 naar EUR 15. Storing: api/shop lag 13:05-13:31 UTC plat door een syntaxfout in lib/bundel.js (alle advertentiekliks gaven 500); voortaan importtest vóór push. Bundel Vivi ingetrokken: marge was te hoog berekend (onze verzending 0 = onbekend).
 - 17 nov 2026: TikTok-catalogus als CSV (/api/shop/ttfeed.csv) met margeklasse per product; bundel rekent onze verzending 0 voortaan als onbekend (marge was te hoog).
 - 17 nov 2026: TikTok-landers op de afrekenpagina gaven 'betaalknop in beeld' meteen (32 van 32, niets ingevuld) en dat ging als InitiateCheckout naar TikTok; telt voor hen niet meer (lib/shopdirect.js KA_BEWUST). Nieuw: /api/shop/ttvideo?p=<pid> geeft de advertentievideo per product voor de shop.
