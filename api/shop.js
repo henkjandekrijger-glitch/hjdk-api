@@ -31,7 +31,7 @@ import { SHOP_PHP } from '../lib/shopphp.js';
 import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
 import { pinCohortEntries, PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, GEDRAG, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel, ttEvent } from '../lib/shopdirect.js';
-import { ttVideo, TT_VIDEO, TT_REGEL, TT_GROEPEN, ttSleutel, ttKoppelUrl, ttRuil, ttRapport, ttAds, ttUit, ttOordeel, ttMeld, ttTekst } from '../lib/tiktok.js';
+import { ttFeedCsv, ttVideo, TT_VIDEO, TT_REGEL, TT_GROEPEN, ttSleutel, ttKoppelUrl, ttRuil, ttRapport, ttAds, ttUit, ttOordeel, ttMeld, ttTekst } from '../lib/tiktok.js';
 import { whEvent, whopKlaar, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd, whProject, whLead, WH_PROJECTEN, koppelWaid, whopAan } from '../lib/whop.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
 import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
@@ -930,6 +930,10 @@ export default async function handler(req, res) {
 <p class="meta">"Per verkoop" is wat we overhouden (+) of verliezen (−) op de lokker zelf, na inkoop, onze verzending en betaalkosten. Live opgebouwd ${esc(new Date().toLocaleString('nl-NL', { timeZone: 'Europe/Amsterdam' }))} uit de datapagina van de shop en Demand Radar (${Object.keys(markt).length} marktprijzen).</p>
 <p class="meta">Voorstel Henkjan en Claude (20 okt): de 3D Houten Uil Spaarpot op €9,95 (thuis €16,40 tegen €35,50 elders). Lokkercampagne loopt sinds 20 okt (PropellerAds 12032438) met de prijs die nu in de shop staat; gaat de prijs omlaag, dan passen we de advertenties aan.</p>
 </main></body></html>`); }
+    if (op === 'ttfeed' || op === 'ttfeed.csv') { // 17 nov: productcatalogus voor TikTok (CSV, dagelijks opgehaald); ?vorm=stand geeft alleen de telling
+      const cat = await catalog(true), kaart = (await kv.get(K_KOST).catch(() => null)) || {}; const f = ttFeedCsv(cat.items, kaart); res.setHeader('cache-control', 'public, max-age=900');
+      if (url.searchParams.get('vorm') === 'stand') return res.status(200).json(Object.assign({ ok: true }, f.tel));
+      res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('content-disposition', 'inline; filename="kadoly-tiktok.csv"'); return res.status(200).send(f.csv); }
     if (op === 'ttvideo') { // 17 nov: video uit de TikTok-advertentie per product, voor bovenaan de productpagina (shop, bij utm_source=tiktok); zonder p de hele lijst
       res.setHeader('cache-control', 'public, max-age=600'); res.setHeader('access-control-allow-origin', '*'); const p = String(url.searchParams.get('p') || '').slice(0, 40);
       if (!p) return res.status(200).json({ ok: true, videos: Object.fromEntries(Object.keys(TT_VIDEO).map(k => [k, ttVideo(k)])) });
