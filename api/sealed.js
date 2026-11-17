@@ -93,7 +93,7 @@ export default async function handler(req, res) {
   if(op==='growth'){const days=Array.from({length:7},(_,i)=>new Date(Date.now()-i*864e5).toISOString().slice(0,10)),counts={};for(const d of days){counts[d]={};for(const c of CHANNELS){const k='si:conversion:'+d+':'+c;counts[d][c]={browserSignals:+(await kv.get('si:visit:'+d+':'+c).catch(()=>0))||0,submissions:+(await kv.get(k).catch(()=>0))||0,intentSubmissions:+(await kv.get(k+':intent').catch(()=>0))||0,sampleReplySubmissions:+(await kv.get(k+':partner').catch(()=>0))||0,buyerCriteriaSubmissions:+(await kv.get('si:buyer-conv:'+d+':'+c).catch(()=>0))||0};}}return stuur(res,200,'application/json',JSON.stringify({basis:'Aggregate browser signals, not verified unique humans or confirmed search clicks. Anonymous submissions and buyer criteria are reported separately; test is an explicit QA channel.',segmentation:'Mode-specific anonymous counts start on 2026-11-17; earlier anonymous submissions remain only in submissions.',days:counts}),'no-store');}
   if(op==='visit'&&req.method==='POST'){const b=await leesBody(req);if(!CHANNELS.includes(b.channel)||/bot|crawler|spider|headless/i.test(String(req.headers['user-agent']||'')))return stuur(res,400,'application/json','{"ok":false}','no-store');const k='si:visit:'+new Date().toISOString().slice(0,10)+':'+b.channel;try{await kv.incr(k);await kv.raw(['EXPIRE',k,100*86400]);}catch{}return stuur(res,200,'application/json','{"ok":true}','no-store');}
   if (req.method === 'OPTIONS') return stuur(res, 204, 'text/plain', '', 'no-store');
-  if (['intent','partij','receipt','withdraw'].includes(op)) {
+  if (['intent','partij','receipt','withdraw','renew'].includes(op)) {
     if(req.method!=='POST')return stuur(res,405,'application/json','{"ok":false}','no-store');
     return anonymousRequest(req,res,op);
   }
@@ -111,7 +111,7 @@ export default async function handler(req, res) {
       // seintje: alleen met de geldige privésleutel van de inzending; los van de anonieme record bewaard en mee verwijderd bij intrekken
       const mail = String(b.mail || '').trim().toLowerCase().slice(0, 160); if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/.test(mail)) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store');
       const c = await anonymous.control('receipt', b); if (c.status !== 200) return stuur(res, 404, 'application/json', '{"ok":false}', 'no-store');
-      await kv.set('si:notify:' + String(b.id), { mail, at: new Date().toISOString() }, { ex: 90 * 86400 });
+      await kv.set('si:notify:' + String(b.id), { mail, at: new Date().toISOString() }, { ex: 37 * 86400 });
       try { await meld('Een eigenaar vraagt een seintje per mail als een koper past (adres staat bij de inzending, niet in deze melding). Het seintje gaat nog niet automatisch.'); } catch { /* melding is extra */ }
       return stuur(res, 200, 'application/json', '{"ok":true}', 'no-store');
     } catch { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }

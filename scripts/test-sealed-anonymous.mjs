@@ -8,7 +8,7 @@ import vm from 'node:vm';
 const records=new Map(), lists=new Map();
 const kv={
  get:async k=>records.get(k)||null,
- set:async(k,v,o)=>{records.set(k,v);assert.equal(o.ex,90*86400);},
+ set:async(k,v,o)=>{records.set(k,v);assert.equal(o.ex,37*86400);},
  incr:async k=>{const n=(records.get(k)||0)+1;records.set(k,n);return n;},
  del:async ks=>{let n=0;for(const k of ks)n+=records.delete(k)?1:0;return n;},
  raw:async([op,k,...args])=>{if(op==='SET'){if(!records.has(k))records.set(k,args[0]);return 'OK';}if(op==='LPUSH'){lists.set(k,[args[0],...(lists.get(k)||[])]);return 1;}if(op==='LREM')lists.set(k,(lists.get(k)||[]).filter(x=>x!==args[1]));return 'OK';}
