@@ -128,8 +128,11 @@
    "tijdvak": "12:15",
    "via": "zernio",
    "zernio_id": "6afc13d54050bd248b001483",
-   "status": "gepland",
-   "bord": "Sieraden"
+   "status": "gepubliceerd",
+   "bord": "Sieraden",
+   "post_id": "271060471319461242",
+   "public_url": "https://nl.pinterest.com/pin/271060471319461242/",
+   "geverifieerd": "2026-11-17T13:51:55.255Z"
   },
   {
    "tijd": "2026-11-17T18:45:00Z",
@@ -165,6 +168,25 @@
    "zernio_id": "6afc13d68f873c82867e0b22",
    "status": "gepland",
    "bord": "Wonen en decoratie"
+  },
+  {
+   "tijd": "2026-11-17T13:51:55.255Z",
+   "dag": "2026-11-17",
+   "platform": "pinterest",
+   "soort": "nieuw",
+   "pid": "oc_4174004659437569",
+   "bord": "Cadeau-ideeën",
+   "via": "chrome",
+   "post_id": "271060471319468893",
+   "status": "gepubliceerd",
+   "public_url": "https://nl.pinterest.com/pin/271060471319468893/",
+   "link": "https://kadoly.com/product/sinterklaaszak-welkom-sint-piet?lang=nl&utm_source=pinterest&utm_medium=social&utm_campaign=pin-1117-sintzak&utm_content=oc_4174004659437569",
+   "code": "pin-1117-sintzak",
+   "titel": "Sinterklaas cadeauzak 50 x 75 cm | Welkom Sint en Piet",
+   "tekst": "De Sinterklaascadeaus bij elkaar in een zak van 50 x 75 cm. Deze cadeauzak van Label2X heeft de opdruk ‘Welkom Sint en Piet’. Bekijk de productdetails bij Kadoly.",
+   "beeld": "https://cdn.kadoly.com/uploads/products/orderchamp/0b/0bcdaad033315e1e36aa14c875cf6f51.png",
+   "geverifieerd": "2026-11-17T13:51:55.255Z",
+   "notitie": "Eenmaal Publish; Pinterest bevestigt You created a Pin! Tijd is bevestiging; geen nauwkeuriger platformtijd bekend. Directe Kadoly-link, geen advertenties geactiveerd."
   }
  ]
 }
