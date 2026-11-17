@@ -32,7 +32,7 @@ import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
 import { pinCohortEntries, PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, GEDRAG, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel, ttEvent } from '../lib/shopdirect.js';
 import { ttFeedCsv, ttVideo, TT_VIDEO, TT_REGEL, TT_GROEPEN, ttSleutel, ttKoppelUrl, ttRuil, ttRapport, ttAds, ttUit, ttOordeel, ttMeld, ttTekst } from '../lib/tiktok.js';
-import { whEvent, whopKlaar, bewezenRonde, bewezenPlan, BEWEZEN_MARGE, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd, whProject, whLead, WH_PROJECTEN, koppelWaid, whopAan, whopZetDoel, whFormBouw, leadForm, whFormFix } from '../lib/whop.js';
+import { whEvent, whopKlaar, bewezenRonde, bewezenPlan, BEWEZEN_MARGE, whopUpload, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd, whProject, whLead, WH_PROJECTEN, koppelWaid, whopAan, whopZetDoel, whFormBouw, leadForm, whFormFix } from '../lib/whop.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
 import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
@@ -1233,6 +1233,7 @@ export default async function handler(req, res) {
       return res.status(200).json(r); }
     if (op === 'whbewezen') { // 17 nov: stand van de Ad Library-winnaars voor de Kadoly-campagne (lib/whop.js bewezenPlan): loopt al, klaar, of wacht op de nieuwe prijs in de shop
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      if (url.searchParams.get('upload') === '1') { const pid = pidOk(url.searchParams.get('p')); if (!pid) return res.status(400).json({ ok: false, fout: 'p' }); const r = await fetch(LAND() + '/api/shop/img?p=' + encodeURIComponent(pid) + '&t=ig', { signal: AbortSignal.timeout(15000) }).catch(() => null); if (!r || !r.ok) return res.status(200).json({ ok: false, fout: 'foto ' + (r ? r.status : '-') }); const up = await whopUpload(Buffer.from(await r.arrayBuffer()), 'kadoly-test-' + pid.slice(-10) + '.jpg', r.headers.get('content-type') || 'image/jpeg'); return res.status(200).json(up); } // proef: alleen de foto naar Whop, geen advertentie
       const [ads, cat] = await Promise.all([whopAds(), catalog(true)]); return res.status(200).json({ ok: true, margeMin: BEWEZEN_MARGE, advertenties: (ads.ads || []).length, plan: bewezenPlan(ads.ads || [], cat.items).map(({ varianten, ...x }) => x) }); }
     if (op === 'whget') { // 17 nov: alleen-lezen diagnose bij Whop (levering per advertentie, problemen); beschermde host, alleen GET op advertentiepaden
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
