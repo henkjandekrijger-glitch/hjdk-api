@@ -1,0 +1,2096 @@
+{
+ "opgehaald": "2026-11-17",
+ "vragen": [
+  {
+   "vraag": "Hoeveel gaat mijn zorgpremie omhoog in 2027?",
+   "cluster": "premie",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgpremie%202027"
+  },
+  {
+   "vraag": "Zijn de zorgpremies voor 2027 al bekend?",
+   "cluster": "premie",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgpremie%202027"
+  },
+  {
+   "vraag": "Welke zorgverzekering is het goedkoopste in 2027?",
+   "cluster": "premie",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=welke%20zorgverzekering"
+  },
+  {
+   "vraag": "Wat kost een zorgverzekering per maand?",
+   "cluster": "premie",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=wat%20kost%20een%20zorgverzekering"
+  },
+  {
+   "vraag": "Wat kost een zorgverzekering in Nederland?",
+   "cluster": "premie",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=wat%20kost%20een%20zorgverzekering"
+  },
+  {
+   "vraag": "Waarom is de premie voor de basisverzekering niet bij elke verzekeraar hetzelfde?",
+   "cluster": "premie",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/zorg-expert-beantwoordt-vragen-overstappen-zorgverzekering/"
+  },
+  {
+   "vraag": "Waarom stijgt de zorgpremie in 2027 zo hard?",
+   "cluster": "premie",
+   "intentie": "info",
+   "bron": "https://www.hartvannederland.nl/economie/geld/artikelen/zorgpremie-2027-overzicht-zorgverzekeraars-cz-vgz-menzis-zilveren-kruis"
+  },
+  {
+   "vraag": "Hoeveel meer betalen we als gezin met twee volwassenen in 2027?",
+   "cluster": "premie",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/zorgpremies-2027-bekend-alle-polissen-duurder-premiekloof-stijgt-naar-649-euro-per-jaar/"
+  },
+  {
+   "vraag": "Gaat de zorgpremie in 2027 voor het eerst boven de 2.000 euro per jaar?",
+   "cluster": "premie",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/zorgpremies-2027-bekend-alle-polissen-duurder-premiekloof-stijgt-naar-649-euro-per-jaar/"
+  },
+  {
+   "vraag": "Hoe groot is het verschil tussen de goedkoopste en de duurste basisverzekering in 2027?",
+   "cluster": "premie",
+   "intentie": "vergelijken",
+   "bron": "https://www.overstappen.nl/nieuws/zorgpremies-2027-bekend-alle-polissen-duurder-premiekloof-stijgt-naar-649-euro-per-jaar/"
+  },
+  {
+   "vraag": "Krijg ik korting als ik de premie voor 2027 in een keer per jaar betaal?",
+   "cluster": "premie",
+   "intentie": "vergelijken",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Bepaalt de overheid de zorgpremie?",
+   "cluster": "premie",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Gebruiken zorgverzekeraars de winst voor zichzelf?",
+   "cluster": "premie",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Hoe kan ik besparen op mijn ziektekostenverzekering?",
+   "cluster": "premie",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Kunnen we wat goedkoper uitkomen?",
+   "cluster": "premie",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Welke zorgverzekeraar is het voordeligst voor mij?",
+   "cluster": "premie",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Welke verzekering is de goedkoopste en ook de beste?",
+   "cluster": "premie",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Welke zorgverzekering is voordeliger dan Menzis?",
+   "cluster": "premie",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Hoeveel premie bespaar ik als ik overstap naar de goedkoopste polis?",
+   "cluster": "premie",
+   "intentie": "overstappen",
+   "bron": "https://www.overstappen.nl/nieuws/zorgpremies-2027-bekend-alle-polissen-duurder-premiekloof-stijgt-naar-649-euro-per-jaar/"
+  },
+  {
+   "vraag": "Heeft het wel zin om te veranderen als wat bij de ene verzekeraar goedkoop is, bij de andere duurder is?",
+   "cluster": "premie",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Hoe hoog is het eigen risico in 2027?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=eigen%20risico%20"
+  },
+  {
+   "vraag": "Hoe hoog wordt het eigen risico in 2028?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=eigen%20risico%20"
+  },
+  {
+   "vraag": "Gaat het eigen risico omhoog?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=eigen%20risico%20"
+  },
+  {
+   "vraag": "Is er in 2027 iets geregeld voor het eigen risico van chronisch zieken?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=eigen%20risico%20"
+  },
+  {
+   "vraag": "Gaat het eigen risico in 2027 echt naar 165 euro?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://www.bnnvara.nl/kassa/artikelen/lager-eigen-risico-zorgpremie-stijgt-in-2027-naar-200-euro-per-maand"
+  },
+  {
+   "vraag": "Is eigen risico verhogen verstandig?",
+   "cluster": "eigen risico",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=eigen%20risico%20verhogen"
+  },
+  {
+   "vraag": "Eigen risico verhogen of niet?",
+   "cluster": "eigen risico",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=eigen%20risico%20verhogen"
+  },
+  {
+   "vraag": "Hoe schat ik goed in of een hoger eigen risico loont?",
+   "cluster": "eigen risico",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Hoeveel verschil in premie is het bij een verhoging van het eigen risico?",
+   "cluster": "eigen risico",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Hoeveel korting krijg ik als ik mijn eigen risico verhoog naar 900 euro?",
+   "cluster": "eigen risico",
+   "intentie": "vergelijken",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2027"
+  },
+  {
+   "vraag": "Wat is het hoogste vrijwillige eigen risico dat ik in 2027 kan kiezen?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2027/eigen-risico-definitief-naar-e-400-dit-ligt-nu-vast-voor-2027-en-dit-nog-niet"
+  },
+  {
+   "vraag": "Moet ik het eigen risico in een keer betalen of kan dat gespreid?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Betaal ik eigen risico voor de huisartsenpost?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Betaal ik eigen risico voor de spoedeisende hulp?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Betaal ik eigen risico voor wijkverpleging?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Is het eigen risico voor iedereen verplicht?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Hoe kan het dat sommige zorgkosten van mijn eigen risico afgaan, maar mijn medicatie gewoon vergoed wordt?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/zorg-expert-beantwoordt-vragen-overstappen-zorgverzekering/"
+  },
+  {
+   "vraag": "Heeft het zin de rekening te controleren als mijn eigen risico al op is?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Is het verstandig om het eigen risico van een nieuw gehoorapparaat mee te verzekeren?",
+   "cluster": "eigen risico",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Komt er vanaf 2028 een maximum eigen risico per behandeling?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2027/eigen-risico-definitief-naar-e-400-dit-ligt-nu-vast-voor-2027-en-dit-nog-niet"
+  },
+  {
+   "vraag": "Kan ik vooraf zien wat een ziekenhuisbehandeling kost voor mijn eigen risico?",
+   "cluster": "eigen risico",
+   "intentie": "info",
+   "bron": "https://www.consumentenbond.nl/zorgkosten/watkostmijnzorg/mijn-ziekenhuiskosten"
+  },
+  {
+   "vraag": "Overstappen zorgverzekering: tot wanneer kan dat?",
+   "cluster": "overstappen",
+   "intentie": "overstappen",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=overstappen%20zorgverzekering"
+  },
+  {
+   "vraag": "Wanneer kan ik overstappen van zorgverzekering?",
+   "cluster": "overstappen",
+   "intentie": "overstappen",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=overstappen%20zorgverzekering"
+  },
+  {
+   "vraag": "Kan ik gedurende het jaar overstappen van zorgverzekering?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=overstappen%20zorgverzekering"
+  },
+  {
+   "vraag": "Kan ik midden in het jaar overstappen?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=overstappen%20zorgverzekering"
+  },
+  {
+   "vraag": "Kan ik na 1 januari nog overstappen?",
+   "cluster": "overstappen",
+   "intentie": "overstappen",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=overstappen%20zorgverzekering"
+  },
+  {
+   "vraag": "Wat moet ik doen bij overstappen van zorgverzekering?",
+   "cluster": "overstappen",
+   "intentie": "overstappen",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=moet%20ik%20overstappen%20zorgverzekering"
+  },
+  {
+   "vraag": "Moet ik overstappen of niet?",
+   "cluster": "overstappen",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Is overstappen dit jaar verstandig?",
+   "cluster": "overstappen",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Hoe makkelijk is het om over te stappen?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Kan ik overstappen naar een andere zorgverzekering en word ik daar geaccepteerd?",
+   "cluster": "overstappen",
+   "intentie": "overstappen",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Kan een nieuwe verzekeraar vooraf eisen stellen aan mijn gezondheid?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Is de nieuwe zorgverzekeraar verplicht mijn chronisch zieke partner mee te verzekeren?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wat gebeurt er met mijn lopende behandeling als ik overstap?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/zorg-expert-beantwoordt-vragen-overstappen-zorgverzekering/"
+  },
+  {
+   "vraag": "Wat als ik al veel zorgkosten per jaar heb, kan ik dan nog overstappen?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Waar moet ik op letten als ik wil overstappen naar een andere zorgverzekeraar?",
+   "cluster": "overstappen",
+   "intentie": "overstappen",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Kan ik overstappen en toch de keuzevrijheid houden die ik nu heb?",
+   "cluster": "overstappen",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Krijg je korting als je lang bij dezelfde zorgverzekeraar blijft?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Ik zit bij Zilveren Kruis, is dat goed of moet ik overstappen?",
+   "cluster": "overstappen",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Ik zit nu bij VGZ, moet ik overstappen?",
+   "cluster": "overstappen",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wel of niet overstappen, en wanneer en waarom?",
+   "cluster": "overstappen",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Hoe ga je ermee om dat zorgcontracten pas na 1 januari rond zijn?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/zorg-expert-beantwoordt-vragen-overstappen-zorgverzekering/"
+  },
+  {
+   "vraag": "Heeft mijn zorgverzekeraar in 2027 een contract met mijn ziekenhuis?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://radar.avrotros.nl/artikelen/54167"
+  },
+  {
+   "vraag": "Wat als mijn ziekenhuis in het nieuwe jaar niet gecontracteerd is terwijl ik daar onder behandeling ben?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Kan ik mijn zorgverzekering nog aanpassen in januari?",
+   "cluster": "overstappen",
+   "intentie": "overstappen",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=kan%20ik%20mijn%20zorgverzekering"
+  },
+  {
+   "vraag": "Kan ik mijn zorgverzekering tussentijds aanpassen?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=kan%20ik%20mijn%20zorgverzekering"
+  },
+  {
+   "vraag": "Kan ik mijn nieuwe zorgverzekering nog terugdraaien of annuleren?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=kan%20ik%20mijn%20zorgverzekering"
+  },
+  {
+   "vraag": "Heb ik bedenktijd nadat ik een nieuwe zorgverzekering heb afgesloten?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/hoe-moeilijk-is-overstappen-van-zorgverzekering/"
+  },
+  {
+   "vraag": "Hoeveel mensen stappen dit jaar over van zorgverzekering?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/grootste-verhoging-van-de-zorgpremie-ooit-mogelijk-15-miljoen-overstappers/"
+  },
+  {
+   "vraag": "Is overstappen via een vergelijkingssite hetzelfde als rechtstreeks bij de verzekeraar?",
+   "cluster": "overstappen",
+   "intentie": "overstappen",
+   "bron": "https://radar.avrotros.nl/artikelen/35143"
+  },
+  {
+   "vraag": "Krijg ik een cadeau als ik overstap via een vergelijkingssite?",
+   "cluster": "overstappen",
+   "intentie": "kopen",
+   "bron": "https://radar.avrotros.nl/artikelen/35143"
+  },
+  {
+   "vraag": "Moet ik wachten met kiezen tot de contracten met zorgverleners bekend zijn?",
+   "cluster": "overstappen",
+   "intentie": "info",
+   "bron": "https://radar.avrotros.nl/artikelen/35143"
+  },
+  {
+   "vraag": "Kan ik de zorgverzekering voor 2027 al afsluiten?",
+   "cluster": "overstappen",
+   "intentie": "kopen",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%202027%20"
+  },
+  {
+   "vraag": "Hoe zeg ik mijn zorgverzekering op?",
+   "cluster": "opzeggen",
+   "intentie": "overstappen",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20opzeggen"
+  },
+  {
+   "vraag": "Moet ik mijn oude zorgverzekering zelf opzeggen als ik overstap?",
+   "cluster": "opzeggen",
+   "intentie": "overstappen",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2026/de-deadline-nadert-maar-zo-krijg-je-toch-een-maand-extra"
+  },
+  {
+   "vraag": "Hoe werkt de opzegservice bij het overstappen?",
+   "cluster": "opzeggen",
+   "intentie": "info",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2026/de-deadline-nadert-maar-zo-krijg-je-toch-een-maand-extra"
+  },
+  {
+   "vraag": "Tot wanneer kan ik mijn zorgverzekering opzeggen voor 2027?",
+   "cluster": "opzeggen",
+   "intentie": "overstappen",
+   "bron": "https://www.overstappen.nl/nieuws/zorgpremies-2027-bekend-alle-polissen-duurder-premiekloof-stijgt-naar-649-euro-per-jaar/"
+  },
+  {
+   "vraag": "Als ik voor 31 december opzeg, hoe lang heb ik dan om een nieuwe te kiezen?",
+   "cluster": "opzeggen",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/zorgpremies-2027-bekend-alle-polissen-duurder-premiekloof-stijgt-naar-649-euro-per-jaar/"
+  },
+  {
+   "vraag": "Zit ik vast aan mijn verzekeraar als ik na 31 december nog niet gekozen heb?",
+   "cluster": "opzeggen",
+   "intentie": "info",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2026/de-deadline-nadert-maar-zo-krijg-je-toch-een-maand-extra"
+  },
+  {
+   "vraag": "Hoe zeg ik de zorgverzekering op bij overlijden?",
+   "cluster": "opzeggen",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20opzeggen"
+  },
+  {
+   "vraag": "Hoe zeg ik mijn zorgverzekering op bij emigratie?",
+   "cluster": "opzeggen",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20opzeggen"
+  },
+  {
+   "vraag": "Hoe zeg ik mijn CZ zorgverzekering op?",
+   "cluster": "opzeggen",
+   "intentie": "overstappen",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20opzeggen"
+  },
+  {
+   "vraag": "Hoe zeg ik mijn Zilveren Kruis zorgverzekering op?",
+   "cluster": "opzeggen",
+   "intentie": "overstappen",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20opzeggen"
+  },
+  {
+   "vraag": "Kan ik mijn zorgverzekering stopzetten?",
+   "cluster": "opzeggen",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=kan%20ik%20mijn%20zorgverzekering"
+  },
+  {
+   "vraag": "Kan ik alleen mijn aanvullende verzekering opzeggen en de basis houden?",
+   "cluster": "opzeggen",
+   "intentie": "overstappen",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Ben ik dubbel verzekerd als ik een nieuwe neem en de oude vergeet op te zeggen?",
+   "cluster": "opzeggen",
+   "intentie": "info",
+   "bron": "https://www.zorgwijzer.nl/faq/zorgverzekering-opzeggen"
+  },
+  {
+   "vraag": "Moet ik mijn zorgverzekering opzeggen als ik bij Defensie ga werken?",
+   "cluster": "opzeggen",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20opzeggen"
+  },
+  {
+   "vraag": "Heeft een tandartsverzekering zin?",
+   "cluster": "tandarts",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Is een tandartsverzekering wel een verzekering of een spaarpotje voor de behandelingen?",
+   "cluster": "tandarts",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Heeft een tandartsverzekering zin als het maximum maar 500 euro is?",
+   "cluster": "tandarts",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Heeft een tandartsverzekering nut als je 77 bent en nog eigen tanden hebt?",
+   "cluster": "tandarts",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Tandartsverzekering of niet, en zijn tandartskosten aftrekbaar van de belasting?",
+   "cluster": "tandarts",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Is er verschil tussen verzekeraars in de vergoeding van de tandarts?",
+   "cluster": "tandarts",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Welke tandartsverzekering is het beste in 2027?",
+   "cluster": "tandarts",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=tandartsverzekering%20"
+  },
+  {
+   "vraag": "Tandartsverzekering vergelijken: waar let ik op?",
+   "cluster": "tandarts",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=tandartsverzekering%20"
+  },
+  {
+   "vraag": "Wat vergoedt de tandartsverzekering van Zilveren Kruis?",
+   "cluster": "tandarts",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=tandartsverzekering%20"
+  },
+  {
+   "vraag": "Wat vergoedt de tandartsverzekering van CZ?",
+   "cluster": "tandarts",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=tandartsverzekering%20"
+  },
+  {
+   "vraag": "Wat vergoedt de tandartsverzekering van VGZ?",
+   "cluster": "tandarts",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=tandartsverzekering%20"
+  },
+  {
+   "vraag": "Krijg ik gezondheidsvragen bij een tandartsverzekering met een hoge vergoeding?",
+   "cluster": "tandarts",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/hoe-moeilijk-is-overstappen-van-zorgverzekering/"
+  },
+  {
+   "vraag": "Heeft overstappen invloed op mijn vergoeding voor orthodontie?",
+   "cluster": "tandarts",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/zorg-expert-beantwoordt-vragen-overstappen-zorgverzekering/"
+  },
+  {
+   "vraag": "Geldt er een wachttijd voor orthodontie als ik overstap?",
+   "cluster": "tandarts",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/hoe-moeilijk-is-overstappen-van-zorgverzekering/"
+  },
+  {
+   "vraag": "Hoeveel krijg je werkelijk terug van je tandartsverzekering?",
+   "cluster": "tandarts",
+   "intentie": "vergelijken",
+   "bron": "https://www.welingelichtekringen.nl/economie/je-betaalt-elke-maand-voor-de-tandartsverzekering-hoeveel-krijg-je-werkelijk-terug"
+  },
+  {
+   "vraag": "Mijn tandarts heeft geen contract met mijn verzekeraar, wat betekent dat voor mij?",
+   "cluster": "tandarts",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Kan ik mijn partner meeverzekeren maar extra tandzorg alleen voor haar?",
+   "cluster": "tandarts",
+   "intentie": "kopen",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wordt de tandarts vergoed na een ongeval?",
+   "cluster": "tandarts",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/zorgverzekering/vergoedingen/tandartskosten-na-een-ongeval/"
+  },
+  {
+   "vraag": "Wat kost een kunstgebit en is bijverzekeren verstandig?",
+   "cluster": "tandarts",
+   "intentie": "vergelijken",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2026/kunstgebit-nodig-wat-zijn-de-kosten-en-is-bijverzekeren-verstandig"
+  },
+  {
+   "vraag": "Wordt de mondhygienist vergoed?",
+   "cluster": "tandarts",
+   "intentie": "info",
+   "bron": "https://www.geld.nl/zorgverzekering/vergoedingen/mondhygienist"
+  },
+  {
+   "vraag": "Is fysiotherapie opgenomen in het basispakket?",
+   "cluster": "fysio",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/is-fysiotherapie-opgenomen-in-het-basispakket"
+  },
+  {
+   "vraag": "Hoeveel fysiotherapiebehandelingen zitten er in een pakket, en kan dat onbeperkt?",
+   "cluster": "fysio",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Hoe zit de vergoeding van fysiotherapie bij een chronische aandoening?",
+   "cluster": "fysio",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=fysiotherapie%20vergoeding%20"
+  },
+  {
+   "vraag": "Wordt fysiotherapie na een operatie vergoed?",
+   "cluster": "fysio",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=fysiotherapie%20vergoeding%20"
+  },
+  {
+   "vraag": "Wordt fysiotherapie voor kinderen vergoed?",
+   "cluster": "fysio",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=fysiotherapie%20vergoeding%20"
+  },
+  {
+   "vraag": "Heb ik met COPD een aanvullende verzekering voor fysio nodig?",
+   "cluster": "fysio",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wat als ik geen fysio kies en toch moet revalideren na een nieuwe heup of knie?",
+   "cluster": "fysio",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Bij welke zorgverzekering krijg ik de meeste fysiotherapie vergoed en wat kost dat?",
+   "cluster": "fysio",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Bij wie ben ik goed en voordelig verzekerd voor 40 fysiotherapiebehandelingen?",
+   "cluster": "fysio",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Is fysio vanaf 70 jaar een noodzakelijke toevoeging aan de basisverzekering?",
+   "cluster": "fysio",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Kan ik ongebruikte fysiobehandelingen meenemen naar volgend jaar?",
+   "cluster": "fysio",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Heeft fysiotherapie aanvullend verzekeren zin, of betaal je toch eerst veel zelf?",
+   "cluster": "fysio",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Accepteert een nieuwe verzekeraar de fysiobehandelingen die ik al vergoed kreeg voor mijn chronische aandoening?",
+   "cluster": "fysio",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Welke aanvullende verzekering vergoedt fysiotherapie het beste?",
+   "cluster": "fysio",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=aanvullende%20verzekering%20"
+  },
+  {
+   "vraag": "Wordt oedeemtherapie vergoed uit de basisverzekering?",
+   "cluster": "fysio",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Is een fysiopakket van 10 euro per maand de moeite waard als een behandeling 45 euro kost?",
+   "cluster": "fysio",
+   "intentie": "vergelijken",
+   "bron": "https://www.overstappen.nl/nieuws/deel-nederlanders-heeft-spijt-van-de-gekozen-zorgverzekering"
+  },
+  {
+   "vraag": "Krijg ik een bril vergoed van de zorgverzekering?",
+   "cluster": "bril",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=bril%20vergoeding%20zorgverzekering"
+  },
+  {
+   "vraag": "Wordt een bril voor mijn kind vergoed?",
+   "cluster": "bril",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=bril%20vergoeding%20zorgverzekering"
+  },
+  {
+   "vraag": "Kan ik voor twee brillen vergoeding aanvragen?",
+   "cluster": "bril",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wordt een bril met vergrotende opzetlenzen vergoed na goedkeuring van de oogarts?",
+   "cluster": "bril",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Waarom bieden verzekeraars nog brillenvergoeding als die nauwelijks opweegt tegen de premie?",
+   "cluster": "bril",
+   "intentie": "vergelijken",
+   "bron": "https://www.overstappen.nl/nieuws/zorg-expert-beantwoordt-vragen-overstappen-zorgverzekering/"
+  },
+  {
+   "vraag": "Welke verzekeraar vergoedt een bril, bijvoorbeeld ASR?",
+   "cluster": "bril",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=bril%20vergoeding%20zorgverzekering"
+  },
+  {
+   "vraag": "Wat is het verschil tussen een naturapolis en een restitutiepolis?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=naturapolis%20of%20restitutiepolis"
+  },
+  {
+   "vraag": "Heb ik met een naturapolis geen vrije artsenkeuze?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Zijn er bij naturapolissen minder goede zorgverleners?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wat is het nut van een restitutiepolis?",
+   "cluster": "polisvorm",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wat moet ik doen als mijn verzekeraar geen restitutiepolis meer aanbiedt?",
+   "cluster": "polisvorm",
+   "intentie": "overstappen",
+   "bron": "https://www.overstappen.nl/nieuws/wat-moet-je-doen-als-je-verzekeraar-geen-restitutiepolis-meer-aanbiedt/"
+  },
+  {
+   "vraag": "Ben ik met een naturapolis wel goed verzekerd?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wat is het verschil tussen een budgetpolis en een naturapolis met vrije artsenkeuze?",
+   "cluster": "polisvorm",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wat is het verschil tussen VGZ Basis Keuze en VGZ Ruime Keuze?",
+   "cluster": "polisvorm",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wat is een combinatiepolis?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Welke beperkingen heeft een goedkope selectieve polis zoals Zilveren Kruis Basis Start?",
+   "cluster": "polisvorm",
+   "intentie": "vergelijken",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Hoeveel krijg ik vergoed bij een zorgverlener zonder contract?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.consumentenbond.nl/acties-claims/nieuws/2026/nza-moet-optreden-tegen-onduidelijke-zorgpolissen"
+  },
+  {
+   "vraag": "Is gecontracteerd ook een garantie dat ik het hele jaar terecht kan?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.consumentenbond.nl/acties-claims/nieuws/2026/nza-moet-optreden-tegen-onduidelijke-zorgpolissen"
+  },
+  {
+   "vraag": "Krijg ik een behandeling op advies van mijn arts altijd vergoed?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Wordt het beste medicijn voor mij altijd vergoed?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Is een aanvullende verzekering nodig als je weinig ziektekosten hebt?",
+   "cluster": "polisvorm",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Is een aanvullende verzekering wijsheid als je gezond bent?",
+   "cluster": "polisvorm",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Is het slim om een goedkopere basis te nemen en meer in de aanvullende verzekering?",
+   "cluster": "polisvorm",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Is het raadzaam de aanvullende verzekering bij een andere verzekeraar te nemen dan de basis?",
+   "cluster": "polisvorm",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Moet ik alle zorgverzekeringen bij dezelfde zorgverzekeraar afsluiten?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Waarom zijn er grote verschillen tussen de aanvullende verzekeringen van verzekeraars?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wat gebeurt er met mijn aanvullende verzekering als ik die een jaar niet gebruik?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Hoe zit het met wachttijden voor een aanvullende verzekering?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Neemt een nieuwe verzekeraar zorg uit de aanvullende verzekering over zonder voorwaarden?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Welke verzekering geeft de hoogste vergoeding voor alternatieve geneeswijzen?",
+   "cluster": "polisvorm",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Zijn er verzekeraars die sport vergoeden?",
+   "cluster": "polisvorm",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Waarom vergoeden Nederlandse zorgverzekeraars zo weinig preventieve zorg?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/zorg-expert-beantwoordt-vragen-overstappen-zorgverzekering/"
+  },
+  {
+   "vraag": "Welke verzekering vergoedt de meeste medicijnen, met vrije keus voor het merkmedicijn?",
+   "cluster": "polisvorm",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wat zit er precies in het aanvullend pakket?",
+   "cluster": "polisvorm",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Hoeveel zorgtoeslag krijg ik in 2027?",
+   "cluster": "zorgtoeslag",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgtoeslag%202027"
+  },
+  {
+   "vraag": "Hoe bereken ik mijn zorgtoeslag voor 2027?",
+   "cluster": "zorgtoeslag",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgtoeslag%202027"
+  },
+  {
+   "vraag": "Wat is de inkomensgrens voor zorgtoeslag in 2027?",
+   "cluster": "zorgtoeslag",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgtoeslag%202027"
+  },
+  {
+   "vraag": "Wat is de vermogensgrens voor zorgtoeslag in 2027?",
+   "cluster": "zorgtoeslag",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgtoeslag%202027"
+  },
+  {
+   "vraag": "Gaat de zorgtoeslag omhoog in 2027?",
+   "cluster": "zorgtoeslag",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgtoeslag%202027"
+  },
+  {
+   "vraag": "Hoe vraag ik zorgtoeslag voor 2027 aan?",
+   "cluster": "zorgtoeslag",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgtoeslag%202027"
+  },
+  {
+   "vraag": "Hoeveel zorgtoeslag krijg ik als alleenstaande in 2027?",
+   "cluster": "zorgtoeslag",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgtoeslag%202027"
+  },
+  {
+   "vraag": "Raak ik mijn zorgtoeslag kwijt met 125.000 euro spaargeld?",
+   "cluster": "zorgtoeslag",
+   "intentie": "info",
+   "bron": "https://www.welingelichtekringen.nl/samenleving/heb-je-eur125000-spaargeld-dan-raak-je-in-2027-je-volledige-zorgtoeslag-van-eur1680-kwijt"
+  },
+  {
+   "vraag": "Hoeveel zorgtoeslag lever ik in als mijn pensioen stijgt?",
+   "cluster": "zorgtoeslag",
+   "intentie": "info",
+   "bron": "https://www.welingelichtekringen.nl/samenleving/krijg-je-in-2027-meer-pensioen-bij-abp-of-pme-van-elke-eur100-verhoging-lever-je-bijna-eur14-zorgtoeslag-in"
+  },
+  {
+   "vraag": "Wat kan ik voor 1 januari regelen om mijn zorgtoeslag niet kwijt te raken?",
+   "cluster": "zorgtoeslag",
+   "intentie": "info",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2027/raak-je-zorgtoeslag-niet-kwijt-in-2027-dit-regel-je-voor-1-januari"
+  },
+  {
+   "vraag": "Compenseert de hogere zorgtoeslag de premiestijging van 2027?",
+   "cluster": "zorgtoeslag",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/zorgverzekering/zorgverzekering-2027/"
+  },
+  {
+   "vraag": "Welke zorgverzekering neem je als je 18 wordt?",
+   "cluster": "doelgroep",
+   "intentie": "kopen",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=welke%20zorgverzekering"
+  },
+  {
+   "vraag": "Hoe werkt de zorgverzekering als je 18 wordt?",
+   "cluster": "doelgroep",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=hoe%20werkt%20zorgverzekering"
+  },
+  {
+   "vraag": "Wat kost een zorgverzekering voor een 18-jarige?",
+   "cluster": "doelgroep",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=wat%20kost%20een%20zorgverzekering"
+  },
+  {
+   "vraag": "Welke zorgverzekering is het beste voor studenten?",
+   "cluster": "doelgroep",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20student"
+  },
+  {
+   "vraag": "Bestaat er studentenkorting op de zorgverzekering?",
+   "cluster": "doelgroep",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20student"
+  },
+  {
+   "vraag": "Welke zorgverzekering neem ik als ik zwanger ben?",
+   "cluster": "doelgroep",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=welke%20zorgverzekering"
+  },
+  {
+   "vraag": "Kan ik overstappen van zorgverzekering als ik zwanger ben?",
+   "cluster": "doelgroep",
+   "intentie": "overstappen",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=overstappen%20zorgverzekering"
+  },
+  {
+   "vraag": "Hoe werkt de zorgverzekering voor een baby?",
+   "cluster": "doelgroep",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=hoe%20werkt%20zorgverzekering"
+  },
+  {
+   "vraag": "Is er een speciale zorgverzekering voor mensen die in de zorg werken?",
+   "cluster": "doelgroep",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20voor%20"
+  },
+  {
+   "vraag": "Wat is voor 70-plussers de beste, niet de duurste, basis zorgverzekering?",
+   "cluster": "doelgroep",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Ik ben 80 jaar, welke verzekering past bij mij?",
+   "cluster": "doelgroep",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wat is de beste verzekering voor mijn man die diabeet is?",
+   "cluster": "doelgroep",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Welke verzekering is gunstig voor COPD-patienten?",
+   "cluster": "doelgroep",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wat heeft een zorgcollectief voor ouderen met een dementerende thuiswonende partner?",
+   "cluster": "doelgroep",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Waar moet je je voor verzekeren en wat is onzin voor een 70-plusser?",
+   "cluster": "doelgroep",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Loopt mijn zorgverzekering gewoon door of verandert die als ik met pensioen ga?",
+   "cluster": "doelgroep",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Kan ik als 75-jarige makkelijk overstappen met een aanvullende verzekering?",
+   "cluster": "doelgroep",
+   "intentie": "overstappen",
+   "bron": "https://www.overstappen.nl/nieuws/zorg-expert-beantwoordt-vragen-overstappen-zorgverzekering/"
+  },
+  {
+   "vraag": "Hoeven kinderen geen zorgverzekering?",
+   "cluster": "doelgroep",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Waarom zit kraamzorg standaard in de aanvullende verzekering terwijl ouderen er niets aan hebben?",
+   "cluster": "doelgroep",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Hoeveel kost CZ in 2027?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgpremie%202027"
+  },
+  {
+   "vraag": "Hoeveel gaat Zilveren Kruis omhoog in 2027?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgpremie%202027"
+  },
+  {
+   "vraag": "Wat kost VGZ in 2027?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgpremie%202027"
+  },
+  {
+   "vraag": "Wat kost Menzis in 2027?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgpremie%202027"
+  },
+  {
+   "vraag": "Wat is de premie van DSW in 2027?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgpremie%202027"
+  },
+  {
+   "vraag": "Is VinkVink echt de goedkoopste zorgverzekering in 2027?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%202027%20"
+  },
+  {
+   "vraag": "Wat kost FBTO in 2027?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%202027%20"
+  },
+  {
+   "vraag": "Wat kost de zorgverzekering van Univé in 2027?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%202027%20"
+  },
+  {
+   "vraag": "Wat kost de zorgverzekering van NN in 2027?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%202027%20"
+  },
+  {
+   "vraag": "Wat zijn de aanvullende verzekeringen van Menzis in 2027?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=aanvullende%20verzekering%20"
+  },
+  {
+   "vraag": "Wat zijn de aanvullende verzekeringen van ASR in 2027?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=aanvullende%20verzekering%20"
+  },
+  {
+   "vraag": "Welke zorgverzekeraars zijn er?",
+   "cluster": "verzekeraar",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=welke%20zorgverzekering"
+  },
+  {
+   "vraag": "Welke zorgverzekeraar heeft de meeste klachten?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2026/over-deze-3-zorgverzekeraars-komen-de-meeste-klachten-binnen"
+  },
+  {
+   "vraag": "Welke zorgverzekeraar heeft de meest tevreden klanten?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/tevredenheid-zorgverzekeraars"
+  },
+  {
+   "vraag": "Waarin verschillen de aanvullende verzekeringen van CZ en IZA?",
+   "cluster": "verzekeraar",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Valt OHRA ook onder CZ, en welke merken horen bij welke verzekeraar?",
+   "cluster": "verzekeraar",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "ZEKUR stopt: wat gebeurt er met mijn polis in 2027?",
+   "cluster": "verzekeraar",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/nieuws/zorgpremies-2027-bekend-alle-polissen-duurder-premiekloof-stijgt-naar-649-euro-per-jaar/"
+  },
+  {
+   "vraag": "Ik zit bij ZEKUR met een achterstand bij het CAK, wat gebeurt er als ik naar Univé ga?",
+   "cluster": "verzekeraar",
+   "intentie": "info",
+   "bron": "https://www.unive.nl/zorgverzekering/zekur/veelgestelde-vragen/betalen/ik-ben-vanuit-zekur-zorg-aangemeld-bij-het-cak-vanwege-mijn-premieachterstand.-wat-gebeurt-er-met-de-cak-aanmelding-als-zekur-zorg-wijzigt-naar-unive-zorg-per-1-januari-2027"
+  },
+  {
+   "vraag": "Welke zorgverzekering heb ik eigenlijk?",
+   "cluster": "verzekeraar",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=welke%20zorgverzekering"
+  },
+  {
+   "vraag": "Ben ik verzekerd tijdens een vakantie in het buitenland?",
+   "cluster": "buitenland",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20buitenland"
+  },
+  {
+   "vraag": "Welke zorgverzekering heb ik nodig als ik in het buitenland woon?",
+   "cluster": "buitenland",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20buitenland"
+  },
+  {
+   "vraag": "Wat dekt mijn zorgverzekering in het buitenland?",
+   "cluster": "buitenland",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20buitenland"
+  },
+  {
+   "vraag": "Welke zorgverzekering moet een buitenlandse student in Nederland nemen?",
+   "cluster": "buitenland",
+   "intentie": "kopen",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20buitenland"
+  },
+  {
+   "vraag": "Moet ik als buitenlander in Nederland een Nederlandse zorgverzekering nemen?",
+   "cluster": "buitenland",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20buitenland"
+  },
+  {
+   "vraag": "Hoe werkt de zorgverzekering in Belgie, Duitsland of Spanje vergeleken met Nederland?",
+   "cluster": "buitenland",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=hoe%20werkt%20zorgverzekering"
+  },
+  {
+   "vraag": "Hoe zeg ik mijn zorgverzekering op als ik in het buitenland ga werken?",
+   "cluster": "buitenland",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20opzeggen"
+  },
+  {
+   "vraag": "Heb ik een aanvullende verzekering nodig voor medische hulp in het buitenland?",
+   "cluster": "buitenland",
+   "intentie": "vergelijken",
+   "bron": "https://www.overstappen.nl/nieuws/deel-nederlanders-heeft-spijt-van-de-gekozen-zorgverzekering"
+  },
+  {
+   "vraag": "Bestaat er nog collectiviteitskorting op de basisverzekering?",
+   "cluster": "collectief",
+   "intentie": "info",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/einde-aan-collectiviteitskorting-basisverzekering"
+  },
+  {
+   "vraag": "Wat is het voordeel van een collectieve verzekering nu de korting op de basis is beeindigd?",
+   "cluster": "collectief",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Is de gemeentepolis wel zo gunstig?",
+   "cluster": "collectief",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Hoe werkt de collectieve zorgverzekering van de gemeente?",
+   "cluster": "collectief",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=collectieve%20zorgverzekering"
+  },
+  {
+   "vraag": "Is de collectieve zorgverzekering via mijn werkgever goedkoper?",
+   "cluster": "collectief",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=collectieve%20zorgverzekering"
+  },
+  {
+   "vraag": "Hoe stap ik over van een collectief via mijn werkgever naar een collectief van een vereniging bij dezelfde verzekeraar?",
+   "cluster": "collectief",
+   "intentie": "overstappen",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Moet mijn partner ook lid zijn om mee te doen met het collectief?",
+   "cluster": "collectief",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Hoe krijg ik de korting van een ouderenbond bij CZ, en geldt die ook voor mijn partner?",
+   "cluster": "collectief",
+   "intentie": "kopen",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Laat het collectief weten wat er verandert, of moet ik zelf contact opnemen?",
+   "cluster": "collectief",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Mijn bank biedt ook een zorgverzekering aan, waar moet ik op letten?",
+   "cluster": "collectief",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Mag ik overstappen als ik een betalingsachterstand heb bij mijn zorgverzekeraar?",
+   "cluster": "betalen/achterstand",
+   "intentie": "overstappen",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wat gebeurt er als ik mijn zorgpremie niet betaal?",
+   "cluster": "betalen/achterstand",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/documenten/vraag-en-antwoord/zorgverzekering/wat-gebeurt-er-als-ik-de-premie-van-mijn-zorgverzekering-niet-betaal"
+  },
+  {
+   "vraag": "Komt een achterstand bij de zorgverzekering bij het BKR?",
+   "cluster": "betalen/achterstand",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20achterstand"
+  },
+  {
+   "vraag": "Wat doet het CAK bij een achterstand in de zorgpremie?",
+   "cluster": "betalen/achterstand",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20achterstand"
+  },
+  {
+   "vraag": "Wat gebeurt er als het CJIB mijn zorgpremie gaat innen?",
+   "cluster": "betalen/achterstand",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20achterstand"
+  },
+  {
+   "vraag": "Hoe los ik een achterstand bij mijn zorgverzekering af?",
+   "cluster": "betalen/achterstand",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20achterstand"
+  },
+  {
+   "vraag": "Wordt de regeling voor betalingsachterstand zorgpremie afgeschaft?",
+   "cluster": "betalen/achterstand",
+   "intentie": "info",
+   "bron": "https://www.consumentenbond.nl/acties-claims/nieuws/2026/wanbetalersregeling-gestopt"
+  },
+  {
+   "vraag": "Kan ik mijn zorgverzekering stopzetten als ik de premie niet kan betalen?",
+   "cluster": "betalen/achterstand",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Is het slim de premie voor 2027 in een keer te betalen voor korting of voor de zorgtoeslag?",
+   "cluster": "betalen/achterstand",
+   "intentie": "kopen",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2027/raak-je-zorgtoeslag-niet-kwijt-in-2027-dit-regel-je-voor-1-januari"
+  },
+  {
+   "vraag": "Hoe groot is het risico als ik een eigen bijdrage niet betaal?",
+   "cluster": "betalen/achterstand",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Welke zorgverzekering past bij mij?",
+   "cluster": "overig",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=welke%20zorgverzekering"
+  },
+  {
+   "vraag": "Welke zorgverzekering is het beste?",
+   "cluster": "overig",
+   "intentie": "vergelijken",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=welke%20zorgverzekering"
+  },
+  {
+   "vraag": "Hoe kan ik zorgverzekeringen het beste vergelijken?",
+   "cluster": "overig",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Het vergelijken van voorwaarden is onmogelijk, hoe doe je dat eenvoudig?",
+   "cluster": "overig",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Waar vind ik een goede, betrouwbare adviseur voor mijn zorgverzekering?",
+   "cluster": "overig",
+   "intentie": "vergelijken",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Wat verandert er aan de zorgverzekering in 2027?",
+   "cluster": "overig",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/zorgverzekering/zorgverzekering-2027/"
+  },
+  {
+   "vraag": "Wordt de gordelroosvaccinatie in 2027 vergoed?",
+   "cluster": "overig",
+   "intentie": "info",
+   "bron": "https://www.overstappen.nl/zorgverzekering/zorgverzekering-2027/"
+  },
+  {
+   "vraag": "Zitten gehoorapparaten in de basisverzekering?",
+   "cluster": "overig",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Worden zorghotels, hersteloorden en revalidatiecentra vergoed?",
+   "cluster": "overig",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Waarom betaal ik bij een herhaalrecept nog steeds kosten bij de apotheek?",
+   "cluster": "overig",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Hoe krijg ik zicht op de contracten die mijn verzekeraar heeft met zorgverleners?",
+   "cluster": "overig",
+   "intentie": "info",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "vraag": "Doet mijn zorgverzekeraar iets met mijn opmerkingen over een zorgrekening?",
+   "cluster": "overig",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Moet ik mijn zorgrekening zelf controleren omdat de verzekeraar het niet doet?",
+   "cluster": "overig",
+   "intentie": "info",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Hoe werkt de zorgverzekering in Nederland?",
+   "cluster": "overig",
+   "intentie": "info",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=hoe%20werkt%20zorgverzekering"
+  },
+  {
+   "vraag": "Is bij overstappen een lagere premie het belangrijkst?",
+   "cluster": "overig",
+   "intentie": "vergelijken",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "vraag": "Zijn vergelijkingssites voor zorgverzekeringen echt onafhankelijk?",
+   "cluster": "overig",
+   "intentie": "vergelijken",
+   "bron": "https://radar.avrotros.nl/artikelen/35143"
+  }
+ ],
+ "twijfels": [
+  {
+   "twijfel": "Een nieuwe verzekeraar kan mij weigeren omdat ik al klachten heb of ouder ben.",
+   "wat_klopt": "Voor de basisverzekering moet elke verzekeraar je accepteren. Alleen aanvullend kan gezondheidsvragen hebben; bij weigering blijft je oude aanvullende polis gewoon lopen.",
+   "bron": "https://www.overstappen.nl/nieuws/6-op-10-nederlanders-stapt-dit-jaar-niet-over-naar-een-andere-zorgverzekering"
+  },
+  {
+   "twijfel": "Overstappen is gedoe en kost te veel moeite.",
+   "wat_klopt": "De nieuwe verzekeraar zegt via de opzegservice je oude polis op; het is een formulier van een paar minuten. Het premieverschil voor dezelfde basis loopt in 2027 op tot 649 euro per jaar.",
+   "bron": "https://www.nivel.nl/sites/default/files/bestanden/Factsheet_verzekerden_wisselen_2017.pdf"
+  },
+  {
+   "twijfel": "Ik verlies mijn lopende behandeling, tandarts of fysio als ik overstap.",
+   "wat_klopt": "Basiszorg loopt door bij elke verzekeraar; het risico zit in contracten van de nieuwe polis met jouw zorgverlener en in wachttijden of maxima van aanvullende pakketten (orthodontie, tandarts boven 500 euro).",
+   "bron": "https://radar.avrotros.nl/artikelen/54167"
+  },
+  {
+   "twijfel": "Gecontracteerd betekent dat ik het hele jaar zeker vergoed word.",
+   "wat_klopt": "Een contract kan een omzetplafond hebben en contracten zijn vaak pas na het overstapseizoen rond. In de ggz had eind 2025 ongeveer 60% van de behandelaren nog geen contract.",
+   "bron": "https://www.consumentenbond.nl/acties-claims/nieuws/2026/nza-moet-optreden-tegen-onduidelijke-zorgpolissen"
+  },
+  {
+   "twijfel": "Ik moet mijn oude verzekering zelf opzeggen, anders ben ik dubbel verzekerd.",
+   "wat_klopt": "Bij overstappen voor 31 december zegt de nieuwe verzekeraar op. Zelf opzeggen voor 31 december geeft je tot en met 31 januari om een nieuwe te kiezen, met terugwerkende kracht.",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2026/de-deadline-nadert-maar-zo-krijg-je-toch-een-maand-extra"
+  },
+  {
+   "twijfel": "Na 31 december zit ik een jaar vast.",
+   "wat_klopt": "Wie voor 1 januari opzegt, kan tot en met 31 januari een nieuwe basis afsluiten die per 1 januari ingaat. Maar 27% kende in een Radar-peiling de juiste deadline.",
+   "bron": "https://radar.avrotros.nl/artikelen/54167"
+  },
+  {
+   "twijfel": "Het eigen risico gaat in 2027 omlaag naar 165 euro.",
+   "wat_klopt": "Dat plan is van tafel. Het verplicht eigen risico gaat in 2027 van 385 naar 400 euro; vanaf 2028 staat een verhoging met een maximum van 150 euro per behandeling op de planning. Oude artikelen ranken nog.",
+   "bron": "https://www.bnnvara.nl/kassa/artikelen/lager-eigen-risico-zorgpremie-stijgt-in-2027-naar-200-euro-per-maand"
+  },
+  {
+   "twijfel": "Alle polissen zijn eigenlijk hetzelfde, vergelijken is zinloos.",
+   "wat_klopt": "De basisdekking is wettelijk gelijk, maar premie, contracten en vergoeding bij niet-gecontracteerde zorg verschillen per polis. In 2027 stijgen alle 61 polissen, de ene met 5,70 en de andere met 25 euro per maand.",
+   "bron": "https://radar.avrotros.nl/artikelen/35143"
+  },
+  {
+   "twijfel": "Trouw wordt beloond: lang bij dezelfde verzekeraar geeft korting.",
+   "wat_klopt": "Er is geen loyaliteitskorting op de basis. Verzekeraars wijzigen jaarlijks premie en voorwaarden, dus een polis die vorig jaar paste, kan nu te duur zijn.",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "twijfel": "Basis en aanvullend moeten bij dezelfde verzekeraar.",
+   "wat_klopt": "Mag los van elkaar. Wel weigeren sommige verzekeraars een aanvullende polis zonder hun eigen basis, en pakketten zijn dan lastiger te vergelijken.",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "twijfel": "Met een naturapolis heb ik geen vrije artsenkeuze.",
+   "wat_klopt": "Je mag naar elke zorgverlener, maar bij een zorgverlener zonder contract krijg je soms maar een deel vergoed. Sinds 2025 bestaat de volledige restitutiepolis niet meer.",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "twijfel": "Een tandartsverzekering is een spaarpot die nooit loont, of juist: zonder ben ik onverzekerd.",
+   "wat_klopt": "Voor de meeste mensen met een gezond gebit is de premie hoger dan de vergoeding; het loont bij voorziene behandelingen. Hoge pakketten hebben vaak gezondheidsvragen en wachttijden.",
+   "bron": "https://www.overstappen.nl/nieuws/vergoeding-tandartsverzekering-is-te-vaak-sigaar-uit-eigen-doos"
+  },
+  {
+   "twijfel": "Een hoger vrijwillig eigen risico is altijd slim, en het eigen risico moet ik in een keer betalen.",
+   "wat_klopt": "Loont alleen als je weinig zorg verwacht; de korting bij 900 euro totaal is maximaal ongeveer 300 euro per jaar. Gespreid betalen kan bij de meeste verzekeraars, en huisarts en huisartsenpost vallen er niet onder.",
+   "bron": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/misverstanden-zorgverzekering"
+  },
+  {
+   "twijfel": "Collectieve korting via werk, gemeente of ouderenbond maakt mijn basis goedkoper.",
+   "wat_klopt": "Collectiviteitskorting op de basisverzekering is afgeschaft. Korting zit alleen nog op aanvullende pakketten; een losse goedkope basis kan voordeliger zijn.",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/einde-aan-collectiviteitskorting-basisverzekering"
+  },
+  {
+   "twijfel": "Met een betalingsachterstand mag ik niet overstappen of kan ik de verzekering stopzetten.",
+   "wat_klopt": "De zorgverzekering is verplicht en stopzetten kan niet. Bij een achterstand kan de verzekeraar een overstap blokkeren zolang er geen betalingsregeling is; de regeling betalingsachterstand zorgpremie wil het kabinet afschaffen, maar dat is nog niet besloten.",
+   "bron": "https://www.consumentenbond.nl/acties-claims/nieuws/2026/wanbetalersregeling-gestopt"
+  }
+ ],
+ "momenten": [
+  {
+   "datum": "2026-09-15",
+   "moment": "Prinsjesdag",
+   "trigger": "Kabinet maakt raming premie (2.029 euro per jaar) en eigen risico 2027 bekend; eerste golf zoekvragen naar eigen risico 2027.",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2027"
+  },
+  {
+   "datum": "2026-09-23",
+   "moment": "Eerste premie bekend (DSW)",
+   "trigger": "Nieuws over de eerste premie zet vergelijken in gang bij vroege kiezers.",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2027"
+  },
+  {
+   "datum": "2026-11-12",
+   "moment": "Alle basispremies bekend (23:59)",
+   "trigger": "Nieuwspiek op 13 november: gemiddeld 173,13 euro per maand, alle 61 polissen duurder, verschil 649 euro per jaar. Zoekvolume op premie per verzekeraar piekt.",
+   "bron": "https://www.overstappen.nl/nieuws/zorgpremies-2027-bekend-alle-polissen-duurder-premiekloof-stijgt-naar-649-euro-per-jaar/"
+  },
+  {
+   "datum": "2026-11-19",
+   "moment": "Premiebrief en aanvullende premies",
+   "trigger": "Uiterste datum waarop verzekeraars premies en vergoedingen van aanvullende verzekeringen bekendmaken; de polis voor 2027 valt in de bus of mailbox. Mensen zien hun eigen nieuwe bedrag.",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2027/eigen-risico-definitief-naar-e-400-dit-ligt-nu-vast-voor-2027-en-dit-nog-niet"
+  },
+  {
+   "datum": "2026-11",
+   "moment": "Definitieve zorgtoeslag 2027",
+   "trigger": "Definitieve bedragen en inkomensgrens zorgtoeslag worden in november vastgesteld; vragen over zorgtoeslag 2027 berekenen.",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2027/raak-je-zorgtoeslag-niet-kwijt-in-2027-dit-regel-je-voor-1-januari"
+  },
+  {
+   "datum": "2026-12",
+   "moment": "Contracten met ziekenhuizen en ggz nog niet rond",
+   "trigger": "Nieuws over ontbrekende contracten maakt mensen onzeker of hun ziekenhuis of behandelaar gedekt is.",
+   "bron": "https://www.consumentenbond.nl/acties-claims/nieuws/2026/nza-moet-optreden-tegen-onduidelijke-zorgpolissen"
+  },
+  {
+   "datum": "2026-12",
+   "moment": "Laatste kans vergoedingen 2026 opmaken",
+   "trigger": "Fysio, tandarts en bril per kalenderjaar: mensen vragen of ongebruikte vergoeding meegaat naar volgend jaar.",
+   "bron": "https://www.anbo.nl/sites/default/files/content-files/anbo-vragen-en-antwoorden-webinar-zorgverzekeringen-def.pdf"
+  },
+  {
+   "datum": "2026-12-24",
+   "moment": "Laatste week van december",
+   "trigger": "Veel overstappers wachten tot de laatste week; hoogste piek in vergelijken en afsluiten.",
+   "bron": "https://www.geld.nl/zorgverzekering/expert/nieuws/overstappers-zorgverzekering-wachten-tot-laatste-week"
+  },
+  {
+   "datum": "2026-12-31",
+   "moment": "Opzegdeadline",
+   "trigger": "Laatste dag om de huidige polis op te zeggen of via de opzegservice over te stappen per 1 januari.",
+   "bron": "https://www.overstappen.nl/nieuws/zorgpremies-2027-bekend-alle-polissen-duurder-premiekloof-stijgt-naar-649-euro-per-jaar/"
+  },
+  {
+   "datum": "2026-12-31",
+   "moment": "Peildatum vermogen zorgtoeslag",
+   "trigger": "Vermogen op 1 januari 2027 telt voor de lagere vermogensgrens (119.122 euro alleenstaand); mensen betalen de jaarpremie vooruit of lossen af.",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2027/raak-je-zorgtoeslag-niet-kwijt-in-2027-dit-regel-je-voor-1-januari"
+  },
+  {
+   "datum": "2027-01-01",
+   "moment": "Nieuwe polis gaat in",
+   "trigger": "Eigen risico 400 euro, ZEKUR-klanten automatisch naar Univé, gordelroosvaccinatie voor 60-jarigen; nieuwe pas en eerste incasso.",
+   "bron": "https://www.overstappen.nl/zorgverzekering/zorgverzekering-2027/"
+  },
+  {
+   "datum": "2027-01",
+   "moment": "Eerste incasso en loonstrook",
+   "trigger": "Mensen zien het hogere bedrag pas op afschrift of loonstrook; wie voor 31 december opzegde, kan nog kiezen. Zoekvragen als kan ik mijn zorgverzekering nog aanpassen in januari.",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=kan%20ik%20mijn%20zorgverzekering"
+  },
+  {
+   "datum": "2027-01-31",
+   "moment": "Laatste dag nieuwe basis met terugwerkende kracht",
+   "trigger": "Alleen voor wie voor 1 januari heeft opgezegd: nieuwe basis afsluiten die per 1 januari ingaat.",
+   "bron": "https://www.overstappen.nl/nieuws/zorgpremies-2027-bekend-alle-polissen-duurder-premiekloof-stijgt-naar-649-euro-per-jaar/"
+  },
+  {
+   "datum": "2027-02-01",
+   "moment": "Overstapperiode voorbij",
+   "trigger": "Daarna alleen nog wisselen bij uitzonderingen (emigratie, overlijden, werk via collectief). Maar 27% kende deze deadline.",
+   "bron": "https://radar.avrotros.nl/artikelen/54167"
+  },
+  {
+   "datum": "doorlopend",
+   "moment": "14 dagen bedenktijd",
+   "trigger": "Na afsluiten kun je binnen 14 kalenderdagen kosteloos annuleren; vragen over terugdraaien.",
+   "bron": "https://www.overstappen.nl/nieuws/hoe-moeilijk-is-overstappen-van-zorgverzekering/"
+  },
+  {
+   "datum": "doorlopend",
+   "moment": "18 worden, baby, zwanger, emigreren, overlijden",
+   "trigger": "Levensgebeurtenissen buiten het seizoen: eigen polis vanaf 18, baby aanmelden, kraamzorg en wachttijden bij zwangerschap, opzeggen bij emigratie of overlijden.",
+   "bron": "https://suggestqueries.google.com/complete/search?client=firefox&hl=nl&gl=nl&q=zorgverzekering%20voor%20"
+  },
+  {
+   "datum": "2027-09",
+   "moment": "Prinsjesdag 2027 voor polisjaar 2028",
+   "trigger": "Eigen risico 2028 met maximum van 150 euro per behandeling en verdere verhoging; nieuwe golf vragen.",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2027/eigen-risico-definitief-naar-e-400-dit-ligt-nu-vast-voor-2027-en-dit-nog-niet"
+  }
+ ],
+ "concurrenten": [
+  {
+   "zoekvraag": "zorgverzekering vergelijken 2027",
+   "top": [
+    {
+     "domein": "consumentenbond.nl",
+     "url": "https://www.consumentenbond.nl/zorgverzekering/tevredenheid-zorgverzekeraars",
+     "oordeel": "Sterk merk en vertrouwen; volledige vergelijker deels achter lidmaatschap en geen totale jaarkosten per situatie."
+    },
+    {
+     "domein": "poliswijzer.nl",
+     "url": "https://www.poliswijzer.nl/zorgverzekering/zorgpremie",
+     "oordeel": "Snelle premievergelijker van Gaslicht; weinig uitleg over contracten en vergoeding zonder contract."
+    },
+    {
+     "domein": "overstappen.nl",
+     "url": "https://www.overstappen.nl/zorgverzekering/zorgverzekering-2027/",
+     "oordeel": "Actueel met harde cijfers en een expert; evergreenpagina's dragen verouderde deadlines en het verdienmodel is provisie."
+    },
+    {
+     "domein": "zorgwijzer.nl",
+     "url": "https://www.zorgwijzer.nl/zorgvergelijker",
+     "oordeel": "Zeer actueel en met telefoonlijn; informatie versnipperd over tientallen losse artikelen."
+    },
+    {
+     "domein": "slimster.nl",
+     "url": "https://slimster.nl/zorgverzekering/",
+     "oordeel": "Simpele vergelijker; dun op uitleg en geen hulp bij keuze voor aanvullend."
+    }
+   ]
+  },
+  {
+   "zoekvraag": "goedkoopste zorgverzekering 2027",
+   "top": [
+    {
+     "domein": "keuze.nl",
+     "url": "https://www.keuze.nl/zorgverzekering/zorgverzekeraars",
+     "oordeel": "Duidelijke lijst goedkoopste verzekeraars; zegt niets over beperkingen van budgetpolissen."
+    },
+    {
+     "domein": "consumentenbond.nl",
+     "url": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors",
+     "oordeel": "Top 5 per eigen risico en jaarbetaling; beperkingen van de goedkoopste polis maar in een zin."
+    },
+    {
+     "domein": "welingelichtekringen.nl",
+     "url": "https://www.welingelichtekringen.nl/economie/premieverschil-zorgverzekering-2027",
+     "oordeel": "Snel nieuws dat rankt; geen tool, geen actie."
+    },
+    {
+     "domein": "poliswijzer.nl",
+     "url": "https://www.poliswijzer.nl/zorgverzekering/zorgpremie",
+     "oordeel": "Directe vergelijker; geen uitleg wanneer goedkoop duurkoop wordt."
+    },
+    {
+     "domein": "zorgwijzer.nl",
+     "url": "https://www.zorgwijzer.nl/zorgvergelijker/goedkoopste-zorgverzekering",
+     "oordeel": "Ranglijst met premies; vergelijkt alleen premie, niet de totale kosten met eigen risico en zorggebruik."
+    }
+   ]
+  },
+  {
+   "zoekvraag": "beste zorgverzekering 2027",
+   "top": [
+    {
+     "domein": "consumentenbond.nl",
+     "url": "https://www.consumentenbond.nl/zorgverzekering/tevredenheid-zorgverzekeraars",
+     "oordeel": "Klanttevredenheid als onafhankelijke maat; beste blijft een gemiddelde, niet beste voor jou."
+    },
+    {
+     "domein": "poliswijzer.nl",
+     "url": "https://www.poliswijzer.nl/zorgverzekering/zorgpremie",
+     "oordeel": "Vergelijker; geen onderbouwing van beste."
+    },
+    {
+     "domein": "zorgwijzer.nl",
+     "url": "https://www.zorgwijzer.nl/zorgverzekering-2027",
+     "oordeel": "Overzicht van alles rond 2027; geen persoonlijk advies."
+    },
+    {
+     "domein": "overstappen.nl",
+     "url": "https://www.overstappen.nl/zorgverzekering/zorgverzekeraars",
+     "oordeel": "Overzicht alle verzekeraars; title nog 2026."
+    },
+    {
+     "domein": "keuze.nl",
+     "url": "https://www.keuze.nl/beste-keuze/beste-zorgverzekering",
+     "oordeel": "Belooft beste keuze; inhoud nog 2026 en vooral verzekeraarsclaims."
+    }
+   ]
+  },
+  {
+   "zoekvraag": "eigen risico 2027",
+   "top": [
+    {
+     "domein": "rabobank.nl",
+     "url": "https://www.rabobank.nl/particulieren/verzekering/zorgverzekering/zorgverzekering-2027",
+     "oordeel": "Hoge domeinautoriteit; verkoopt Interpolis, dus niet onafhankelijk."
+    },
+    {
+     "domein": "zorgwijzer.nl",
+     "url": "https://www.zorgwijzer.nl/zorgverzekering-2027/eigen-risico-definitief-naar-e-400-dit-ligt-nu-vast-voor-2027-en-dit-nog-niet",
+     "oordeel": "Duidelijk wat vastligt en wat niet; het maximum per behandeling in 2028 staat alleen in een reactie."
+    },
+    {
+     "domein": "unive.nl",
+     "url": "https://www.unive.nl/inspiratie-en-voordeel/blog/samenvatting-zorg-prinsjesdag-2026",
+     "oordeel": "Nette samenvatting Prinsjesdag; verzekeraarssite."
+    },
+    {
+     "domein": "consumentenbond.nl",
+     "url": "https://www.consumentenbond.nl/zorgverzekering/verplicht-eigen-risico",
+     "oordeel": "Betrouwbare uitleg; geen rekenhulp voor wel of niet verhogen."
+    },
+    {
+     "domein": "bnnvara.nl/kassa",
+     "url": "https://www.bnnvara.nl/kassa/artikelen/lager-eigen-risico-zorgpremie-stijgt-in-2027-naar-200-euro-per-maand",
+     "oordeel": "Rankt nog met het vervallen plan van 165 euro; verouderd en misleidend."
+    }
+   ]
+  },
+  {
+   "zoekvraag": "zorgpremie 2027 / premies bekend",
+   "top": [
+    {
+     "domein": "overstappen.nl",
+     "url": "https://www.overstappen.nl/nieuws/zorgpremies-2027-bekend-alle-polissen-duurder-premiekloof-stijgt-naar-649-euro-per-jaar/",
+     "oordeel": "Volledige tabel per polis en per eigen risico op de dag zelf; geen koppeling naar wat jij nu betaalt."
+    },
+    {
+     "domein": "consumentenbond.nl",
+     "url": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors",
+     "oordeel": "Premies 2026 en 2027 per verzekeraar naast elkaar; aanvullend ontbreekt."
+    },
+    {
+     "domein": "hartvannederland.nl",
+     "url": "https://www.hartvannederland.nl/economie/geld/artikelen/zorgpremie-2027-overzicht-zorgverzekeraars-cz-vgz-menzis-zilveren-kruis",
+     "oordeel": "Helder overzicht grote vier en reserves; geen vergelijking of actie."
+    },
+    {
+     "domein": "keuze.nl",
+     "url": "https://www.keuze.nl/nieuws/zorgpremies-2027-bekend",
+     "oordeel": "Snel nieuwsbericht; dun."
+    },
+    {
+     "domein": "cnv.nl",
+     "url": "https://www.cnv.nl/nieuws/zorgpremies-voor-2027-bekend-zorgverzekering-wordt-duurder/",
+     "oordeel": "Vakbondsnieuws met ledenvoordeel; beperkt bereik en geen keuzehulp."
+    }
+   ]
+  },
+  {
+   "zoekvraag": "overstappen zorgverzekering",
+   "top": [
+    {
+     "domein": "overstappen.nl",
+     "url": "https://www.overstappen.nl/zorgverzekering/faq/overstappen-zorgverzekering-tot-wanneer-kan-dat/",
+     "oordeel": "Sterke merknaam op het zoekwoord; FAQ deels met datums van eerdere jaren."
+    },
+    {
+     "domein": "zorgwijzer.nl",
+     "url": "https://www.zorgwijzer.nl/zorgvergelijker/overstappen-zorgverzekering",
+     "oordeel": "Stappenplan plus vergelijker; geen hulp bij lopende behandelingen of weigering aanvullend."
+    },
+    {
+     "domein": "id.nl",
+     "url": "https://id.nl/zekerheid-en-gemak/verzekeringen-en-geld/verzekeringen/je-hebt-nog-een-paar-dagen-overstappen-zorgverzekering-2026-met-dubbel-voordeel",
+     "oordeel": "Laagdrempelige tips; nog op 2026 gericht."
+    },
+    {
+     "domein": "keuze.nl",
+     "url": "https://www.keuze.nl/zorgverzekering/overstappen",
+     "oordeel": "Duidelijke stappen; vooral naar eigen vergelijker sturend."
+    },
+    {
+     "domein": "radar.avrotros.nl",
+     "url": "https://radar.avrotros.nl/artikel/zorgverzekeringen-dit-verandert-in-2026-en-let-hierop-als-je-wil-overstappen-62180",
+     "oordeel": "Consumentenperspectief en vertrouwen; artikel is van vorig jaar."
+    }
+   ]
+  },
+  {
+   "zoekvraag": "zorgverzekering opzeggen",
+   "top": [
+    {
+     "domein": "unive.nl",
+     "url": "https://www.unive.nl/zorgverzekering/zekur/veelgestelde-vragen/declareren-mijn-omgeving/hoe-kan-ik-mijn-zorgverzekering-opzeggen",
+     "oordeel": "Eigen klantenservicepagina; alleen voor eigen klanten."
+    },
+    {
+     "domein": "zorgwijzer.nl",
+     "url": "https://www.zorgwijzer.nl/faq/zorgverzekering-opzeggen",
+     "oordeel": "Korte FAQ; mist uitzonderingen als emigratie en overlijden."
+    },
+    {
+     "domein": "overstappen.nl",
+     "url": "https://www.overstappen.nl/zorgverzekering/opzeggen/",
+     "oordeel": "Uitleg opzegservice; algemene tekst."
+    },
+    {
+     "domein": "sepastop.eu",
+     "url": "https://www.sepastop.eu/nl-nl/zorgverzekering/vgz-zorgverzekering/",
+     "oordeel": "Opzegbrief per verzekeraar; overbodig door de opzegservice en zet mensen op het verkeerde been."
+    },
+    {
+     "domein": "rabobank.nl",
+     "url": "https://www.rabobank.nl/particulieren/service/verzekeren/zorgverzekering-opzeggen",
+     "oordeel": "Alleen Interpolis-klanten."
+    }
+   ]
+  },
+  {
+   "zoekvraag": "tandartsverzekering 2027 / is een tandartsverzekering nodig",
+   "top": [
+    {
+     "domein": "consumentenbond.nl",
+     "url": "https://www.consumentenbond.nl/zorgverzekering/tandartsverzekering",
+     "oordeel": "Kritische en eerlijke uitleg; geen rekenhulp met jouw verwachte behandelingen."
+    },
+    {
+     "domein": "overstappen.nl",
+     "url": "https://www.overstappen.nl/zorgverzekering/tandartsverzekering/",
+     "oordeel": "Vergelijker met pakketten; titel en cijfers nog 2026."
+    },
+    {
+     "domein": "welingelichtekringen.nl",
+     "url": "https://www.welingelichtekringen.nl/economie/je-betaalt-elke-maand-voor-de-tandartsverzekering-hoeveel-krijg-je-werkelijk-terug",
+     "oordeel": "Pakkende kop over wat je terugkrijgt; geen tool."
+    },
+    {
+     "domein": "zorgwijzer.nl",
+     "url": "https://www.zorgwijzer.nl/vergoeding/tandarts",
+     "oordeel": "Vergoedingen per verzekeraar; geen break-even per persoon."
+    },
+    {
+     "domein": "bnnvara.nl/kassa",
+     "url": "https://www.bnnvara.nl/kassa/artikelen/sluit-je-wel-of-geen-aanvullende-tandartsverzekering-af-voor-2026-maak-in-vijf-stappen-de-keuze",
+     "oordeel": "Vijf stappen in gewone taal; voor 2026 en zonder rekenvoorbeeld voor 2027."
+    }
+   ]
+  },
+  {
+   "zoekvraag": "zorgtoeslag 2027",
+   "top": [
+    {
+     "domein": "hartvannederland.nl",
+     "url": "https://www.hartvannederland.nl/economie/geld/artikelen/zorgtoeslag-2027-bedrag-inkomensgrens",
+     "oordeel": "Kort en duidelijk; geen berekening voor jouw situatie."
+    },
+    {
+     "domein": "zorgwijzer.nl",
+     "url": "https://www.zorgwijzer.nl/zorgverzekering-2027/zorgtoeslag-stijgt-in-2027-zoveel-krijg-je-erbij",
+     "oordeel": "Bedragen plus tips voor 1 januari; vermogensgrens nog afhankelijk van Eerste Kamer."
+    },
+    {
+     "domein": "homefinance.nl",
+     "url": "https://www.homefinance.nl/nieuws-blog/2026/honderdduizenden-huishoudens-krijgen-volgend-jaar-een-lagere-toeslag-301972/",
+     "oordeel": "Nieuws over wie minder krijgt; geen rekenhulp."
+    },
+    {
+     "domein": "welingelichtekringen.nl",
+     "url": "https://www.welingelichtekringen.nl/samenleving/heb-je-eur125000-spaargeld-dan-raak-je-in-2027-je-volledige-zorgtoeslag-van-eur1680-kwijt",
+     "oordeel": "Scherpe voorbeelden; clickbait-toon."
+    },
+    {
+     "domein": "rekenmaat.nl",
+     "url": "https://rekenmaat.nl/toeslagen-gids-2027",
+     "oordeel": "Rekenhulp voor alle toeslagen; los van de polis- en premiekeuze."
+    }
+   ]
+  },
+  {
+   "zoekvraag": "naturapolis of restitutiepolis verschil",
+   "opmerking": "Maar 4 relevante resultaten; de rest zijn wetenschappelijke pagina's. Slecht bediende zoekvraag.",
+   "top": [
+    {
+     "domein": "homefinance.nl",
+     "url": "https://www.homefinance.nl/zorgverzekering/informatie/verschillen-natura-restitutie/",
+     "oordeel": "Rankt eerst; uitleg gaat uit van een restitutiepolis die sinds 2025 niet meer volledig bestaat."
+    },
+    {
+     "domein": "overstappen.nl",
+     "url": "https://www.overstappen.nl/nieuws/consument-betaalt-meer-voor-minder-keuzevrijheid/",
+     "oordeel": "Nieuwsinvalshoek op keuzevrijheid; geen keuzehulp."
+    },
+    {
+     "domein": "overstappen.nl",
+     "url": "https://www.overstappen.nl/nieuws/wat-moet-je-doen-als-je-verzekeraar-geen-restitutiepolis-meer-aanbiedt/",
+     "oordeel": "Wat te doen zonder restitutiepolis; los artikel."
+    },
+    {
+     "domein": "consumentenbond.nl",
+     "url": "https://www.consumentenbond.nl/zorgverzekering/naturapolis",
+     "oordeel": "Uitleg per polisvorm; rankt niet bovenaan op deze vraag."
+    }
+   ]
+  },
+  {
+   "zoekvraag": "eigen risico verhogen verstandig",
+   "top": [
+    {
+     "domein": "zorgwijzer.nl",
+     "url": "https://www.zorgwijzer.nl/faq/eigen-risico-verhogen",
+     "oordeel": "Uitleg met kortingsbedragen; geen persoonlijke rekensom op zorggebruik."
+    },
+    {
+     "domein": "hartvannederland.nl",
+     "url": "https://www.hartvannederland.nl/advies-en-tips/kopen-besparen/artikelen/verhogen-eigen-risico-zorgverzekering-levert-paar-honderd-op",
+     "oordeel": "Duidelijke kop; oud artikel."
+    },
+    {
+     "domein": "consumentenbond.nl",
+     "url": "https://www.consumentenbond.nl/zorgverzekering/vrijwillig-eigen-risico",
+     "oordeel": "Eerlijk over risico's; noemt het nieuwe maximum van 900 euro niet overal."
+    },
+    {
+     "domein": "nos.nl",
+     "url": "https://nos.nl/l/2610606",
+     "oordeel": "Nieuwswaarde en vertrouwen; geen advies."
+    },
+    {
+     "domein": "iamexpat.nl",
+     "url": "https://www.iamexpat.nl/expat-info/dutch-news/rising-health-insurance-costs-pushing-people-netherlands-switch-higher-deductibles",
+     "oordeel": "Engelstalig voor expats; nieuws, geen tool."
+    }
+   ]
+  },
+  {
+   "zoekvraag": "fysiotherapie vergoeding",
+   "top": [
+    {
+     "domein": "rijksoverheid.nl",
+     "url": "https://www.rijksoverheid.nl/vraag-en-antwoord/zorgverzekering/is-fysiotherapie-opgenomen-in-het-basispakket",
+     "oordeel": "Gezaghebbend over wat in de basis zit; geen vergelijking van aanvullende pakketten."
+    },
+    {
+     "domein": "overstappen.nl",
+     "url": "https://www.overstappen.nl/zorgverzekering/vergoedingen/fysiotherapie-na-een-ongeval/",
+     "oordeel": "Specifieke vergoedingspagina's met jaartal 2027; commercieel."
+    },
+    {
+     "domein": "zorgwijzer.nl",
+     "url": "https://www.zorgwijzer.nl/vergoeding/fysiotherapie",
+     "oordeel": "Tabel per verzekeraar; geen hulp bij hoeveel behandelingen je nodig hebt."
+    },
+    {
+     "domein": "consumentenbond.nl",
+     "url": "https://www.consumentenbond.nl/zorgverzekering/10-vragen-over-fysiotherapie",
+     "oordeel": "Tien echte vragen beantwoord; niet bijgewerkt naar 2027."
+    },
+    {
+     "domein": "skipr.nl",
+     "url": "https://www.skipr.nl/nieuws/fysiotherapie-niet-naar-basisverzekering",
+     "oordeel": "Vakmedia; niet voor consumenten."
+    }
+   ]
+  }
+ ],
+ "gaten": [
+  {
+   "vraag": "Heeft mijn ziekenhuis, ggz-behandelaar of fysio in 2027 een contract met deze polis, en hoeveel krijg ik vergoed als dat niet zo is?",
+   "waarom_gat": "Contracten zijn in het overstapseizoen vaak niet rond, omzetplafonds staan nergens en geen site combineert contractstatus met het vergoedingspercentage per polis.",
+   "bron": "https://www.consumentenbond.nl/acties-claims/nieuws/2026/nza-moet-optreden-tegen-onduidelijke-zorgpolissen"
+  },
+  {
+   "vraag": "Wat ben ik in 2027 in totaal kwijt aan premie, eigen risico en eigen bijdragen min zorgtoeslag, bij mijn verwachte zorggebruik?",
+   "waarom_gat": "Vergelijkers sorteren op maandpremie; niemand rekent de totale jaarkosten per situatie (chronisch, gezin, gezond) door.",
+   "bron": "https://www.overstappen.nl/nieuws/zorgpremies-2027-bekend-alle-polissen-duurder-premiekloof-stijgt-naar-649-euro-per-jaar/"
+  },
+  {
+   "vraag": "Loont een tandartsverzekering voor mij in 2027, gegeven mijn gebit, de verwachte behandelingen, de maxima en wachttijden?",
+   "waarom_gat": "Sites geven algemene adviezen of pakkettabellen voor 2026; geen break-even rekensom met tarieven 2027 en gezondheidsvragen.",
+   "bron": "https://www.overstappen.nl/nieuws/vergoeding-tandartsverzekering-is-te-vaak-sigaar-uit-eigen-doos"
+  },
+  {
+   "vraag": "Eigen risico verhogen naar 900 euro: bij hoeveel zorg verlies ik geld, en kan ik in januari nog terug?",
+   "waarom_gat": "Het nieuwe maximum (500 vrijwillig, totaal 900) en de stappen van 100 euro staan op weinig pagina's; veel pagina's noemen nog 885 euro en geen enkele rekent met jouw zorggebruik.",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2027"
+  },
+  {
+   "vraag": "Ik heb een betalingsachterstand of zit in de regeling van het CAK: mag ik overstappen en wat verandert er als de regeling wordt afgeschaft?",
+   "waarom_gat": "Nieuws meldt het plan tot afschaffing, maar niemand legt uit wat dit voor overstappen nu betekent; de Consumentenbond zegt er zelf niets over.",
+   "bron": "https://www.consumentenbond.nl/acties-claims/nieuws/2026/wanbetalersregeling-gestopt"
+  },
+  {
+   "vraag": "Ik ben 70 of ouder en heb een chronische aandoening: bij welke verzekeraars kan ik in 2027 met mijn aanvullende pakket overstappen zonder gezondheidsvragen?",
+   "waarom_gat": "De angst voor weigering houdt 77,5% van de 55-plussers tegen, maar acceptatiebeleid per verzekeraar en per pakket staat nergens in een overzicht.",
+   "bron": "https://www.overstappen.nl/nieuws/6-op-10-nederlanders-stapt-dit-jaar-niet-over-naar-een-andere-zorgverzekering"
+  },
+  {
+   "vraag": "Welke beperkingen hebben de goedkoopste polissen van 2027 (VinkVink, Zilveren Kruis Basis Start, VGZbewuzt) precies, en voor wie is dat een valkuil?",
+   "waarom_gat": "Toplijsten tonen premies; de beperkingen (vergoeding zonder contract, gecontracteerde ziekenhuizen) staan in polisvoorwaarden en worden in een zin afgedaan.",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/zorgverzekeringen-2027-zorgpremies-stijgen-fors"
+  },
+  {
+   "vraag": "Is mijn collectiviteit (gemeentepolis, werkgever, ouderenbond) in 2027 nog voordeliger dan de goedkoopste losse polis met dezelfde dekking?",
+   "waarom_gat": "Collectiviteitskorting op de basis is afgeschaft, maar niemand vergelijkt gemeentepolissen en collectieven 2027 tegen losse polissen.",
+   "bron": "https://www.consumentenbond.nl/zorgverzekering/einde-aan-collectiviteitskorting-basisverzekering"
+  },
+  {
+   "vraag": "Ik zit midden in een behandeling (chronische fysio, orthodontie bij mijn kind, ggz): wat gebeurt er precies als ik overstap en wat moet ik vooraf regelen?",
+   "waarom_gat": "Antwoorden zijn algemeen; geen stappenplan per soort behandeling met wachttijden, machtigingen en contracten.",
+   "bron": "https://www.overstappen.nl/nieuws/zorg-expert-beantwoordt-vragen-overstappen-zorgverzekering/"
+  },
+  {
+   "vraag": "Hoeveel zorgtoeslag krijg ik in 2027 met mijn inkomen en spaargeld, nu de vermogensgrens daalt en de Eerste Kamer nog moet beslissen?",
+   "waarom_gat": "Bedragen staan los op nieuwssites, maar niemand koppelt de onzekere vermogensgrens aan de premiekeuze en de netto kosten.",
+   "bron": "https://www.zorgwijzer.nl/zorgverzekering-2027/raak-je-zorgtoeslag-niet-kwijt-in-2027-dit-regel-je-voor-1-januari"
+  }
+ ]
+}
