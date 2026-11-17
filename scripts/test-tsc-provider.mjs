@@ -93,6 +93,7 @@ for (const [slug, info] of Object.entries(RANK_SLUGS)) {
   assert.ok(!/No matching provider in this dossier|Geen passende aanbieder in dit dossier\.<\/p><\/div><\/section>/.test(html) || true);
   if (!list.noindex) { assert.ok(html.includes('id="samenvatting"'), 'samenvatting ontbreekt op ' + slug); assert.ok(html.indexOf('id="samenvatting"') < html.indexOf('id="mail"'), 'samenvatting boven het aanmeldblok op ' + slug); }
 }
+for (const [slug, info] of Object.entries(RANK_SLUGS)) { if (LIJSTEN[info.id].noindex) continue; const d = (render.rankPagina(B, slug, info, {}).match(/<meta name="description" content="([^"]*)"/) || [])[1] || ''; assert.ok(d.length >= 120 && d.length <= 170, 'beschrijving ' + slug + ' is ' + d.length + ' tekens'); assert.ok(/\d[.,]\d\d/.test(d), 'beschrijving noemt een cijfer: ' + slug); }
 const hair = render.rankPagina(B, 'best-hair-transplant-clinics-turkey', RANK_SLUGS['best-hair-transplant-clinics-turkey'], {});
 assert.ok(hair.includes('href="' + B + '/clinics/smile-hair-clinic"'), 'ranglijst linkt naar de kliniekpagina');
 fs.writeFileSync(path.join(out, 'rank-hair-en-new.html'), hair);
