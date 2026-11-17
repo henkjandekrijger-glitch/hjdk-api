@@ -10,6 +10,8 @@ import { ICONS } from '../lib/sealed-icons.js';
 import { VAST, overdracht, overdrachtTekst } from '../lib/sealed-overdracht.js';
 import { proefStand, proefTekst } from '../lib/proef.js';
 import { renderSealedSpecial, renderPartij, zoekPartij, PARTIJ_INDEX } from '../lib/sealed.js';
+import { renderLp, zoekLp, bewaarKoper, lijstKopers, LP_INDEX } from '../lib/sealed-lp.js';
+import { GROWTH_SCRIPT } from '../lib/sealed.js';
 import { renderPagina, renderHub, renderVoordeur, zoekPagina, sitemap, ROBOTS, llms, zichtJson, LOGO_SVG, INDEXNOW_KEY, BASE, HOST, url } from '../lib/sealed.js';
 
 const anonymous = anonymousService(kv);
@@ -92,6 +94,15 @@ export default async function handler(req, res) {
     if(req.method!=='POST')return stuur(res,405,'application/json','{"ok":false}','no-store');
     return anonymousRequest(req,res,op);
   }
+  if (op === 'koper') {
+    if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
+    res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+    try { const b = await leesBody(req); if (JSON.stringify(b).length > 8192) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store'); const r = await bewaarKoper(kv, req, b, meld); return stuur(res, r.status, 'application/json', JSON.stringify(r.body), 'no-store'); } catch { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
+  }
+  if (op === 'kopers') {
+    if (!process.env.HJDK_TOKEN || q.get('token') !== process.env.HJDK_TOKEN) return stuur(res, 403, 'application/json', '{"ok":false}', 'no-store');
+    return stuur(res, 200, 'application/json', JSON.stringify(await lijstKopers(kv), null, 1), 'no-store');
+  }
   if (op === 'indexnow') return eigenaar(op, res);
   if (op === 'intents') {
     if (!process.env.HJDK_TOKEN || q.get('token') !== process.env.HJDK_TOKEN) return stuur(res, 403, 'application/json', '{"ok":false}', 'no-store');
@@ -116,6 +127,7 @@ export default async function handler(req, res) {
   }
   if (!UI[taal]) return stuur(res, 404, 'text/html; charset=utf-8', renderVoordeur(opts), 'public, max-age=60');
   if (!slug) return stuur(res, 200, 'text/html; charset=utf-8', renderHub(taal, opts), undefined, taal);
+  if (zoekLp(taal, slug)) return stuur(res, 200, 'text/html; charset=utf-8', renderLp(taal, slug, { ...opts, growthScript: GROWTH_SCRIPT }), 'public, max-age=60, s-maxage=300', taal, LP_INDEX ? '' : 'noindex, follow');
   if (zoekPartij(taal, slug)) { const aantal = +(await kv.get('si:n').catch(() => 0)) || 0; return stuur(res, 200, 'text/html; charset=utf-8', renderPartij(taal, { ...opts, aantal }), 'public, max-age=60, s-maxage=300', taal, PARTIJ_INDEX ? '' : 'noindex, follow'); }
   const special=renderSealedSpecial(taal,slug,opts);
   if(special){const priv=['seal','manage','partners'].includes(slug);return stuur(res,200,'text/html; charset=utf-8',special,priv?'private, no-store':undefined,taal,priv?'noindex, follow':'');}
