@@ -1,0 +1,12 @@
+{
+ "uitleg": "Producten die bewezen verkopen omdat anderen er al lang advertenties voor laten lopen (Meta Ad Library NL; 30 dagen of meer = winnaar, nieuwe varianten naast een oude = opschalen). Henkjan 17 nov 2026: \"kijk ook naar AD vids die al maanden draaien omdat ze verkopen\". De nachtelijke video's (/api/shop?op=videoplan) geven deze producten voorrang, samen met data/whop-bewezen.json (Meta-lijst van de Whop-chat) en kadoly/trend.json. De dagelijkse TikTok-trendscan vult deze lijst aan.",
+ "bijgewerkt": "2026-11-17",
+ "producten": [
+  {
+   "naam": "Tafelhaard (bio-ethanol, metaal en glas)",
+   "bewijs": "Meta Ad Library NL 17 nov: Creative.Lighting 'Everlasting Flame Tabletop Fireplace' loopt sinds 15 sep (63 dagen) en 24 sep (54 dagen, meerdere versies), nieuwe variant 15 okt (opschalen); Airayvis bioethanol tafelhaard nieuwe advertenties 3 en 11 nov (Black Friday). Bij ons de eerste TikTok-verkoop (17 nov, zand).",
+   "haak": "Echte vlam op tafel; zonder stopcontact; gezellige winteravond; binnen en buiten (alleen zeggen als het voor ons product klopt).",
+   "pids": ["oc_4174002164744193", "oc_4174002203230209", "oc_4174002201985025", "oc_4174002202804226", "oc_4174002165055489"]
+  }
+ ]
+}

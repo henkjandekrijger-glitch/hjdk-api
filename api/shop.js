@@ -43,6 +43,8 @@ import { kiesBundel, bundelOpenbaar, bundelTekst, bundelCode, BUNDEL_REGEL } fro
 import { videoPlan, VIDEO_REGEL } from '../lib/kadolyvideoplan.js';
 import reels from '../kadoly/reels.json' with { type: 'json' };
 import trendKadoly from '../kadoly/trend.json' with { type: 'json' };
+import bewezenKadoly from '../kadoly/bewezen.json' with { type: 'json' };
+import bewezenWhop from '../data/whop-bewezen.json' with { type: 'json' };
 import { uurTel, uurStand, lekkenPagina, uurAanvullen, uurRitme, verkoopUren } from '../lib/shopuur.js';
 import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdracht.js';
 import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
@@ -1151,7 +1153,7 @@ export default async function handler(req, res) {
       if (!plan || url.searchParams.get('opnieuw') === '1' && /\.vercel\.app$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || ''))) {
         const cat = await catalog(true), gebruikt = (await kv.get('hjdk:kadoly:videopids').catch(() => null)) || {};
         for (const v of (reels.videos || [])) for (const p of (v.pids || [])) if (!gebruikt[p]) gebruikt[p] = '2026-11-17';
-        plan = videoPlan(cat.items, gebruikt, reels.lerend, Math.min(4, Number(url.searchParams.get('n')) || VIDEO_REGEL.PER_NACHT), dag, trendKadoly.pids);
+        plan = videoPlan(cat.items, gebruikt, reels.lerend, Math.min(4, Number(url.searchParams.get('n')) || VIDEO_REGEL.PER_NACHT), dag, [...(trendKadoly.pids || []), ...(bewezenKadoly.producten || []).flatMap(p => p.pids || []), ...(bewezenWhop.producten || []).flatMap(p => p.kandidaten || [])]); // voorrang: trend op TikTok en bewezen door lang lopende advertenties (Henkjan 17 nov)
         for (const v of plan) for (const p of v.pids) gebruikt[p] = dag;
         await kv.set('hjdk:kadoly:videopids', gebruikt); await kv.set(kp, plan, { ex: 3 * 86400 });
       }
