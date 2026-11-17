@@ -259,6 +259,31 @@
   ],
   "rewrites": [
     {
+      "source": "/sitemap.xml",
+      "has": [{"type": "host", "value": "(www\\.)?nexy\\.help"}],
+      "destination": "/api/keuze-tools?tool=nexy&op=sitemap"
+    },
+    {
+      "source": "/robots.txt",
+      "has": [{"type": "host", "value": "(www\\.)?nexy\\.help"}],
+      "destination": "/api/keuze-tools?tool=nexy&op=robots"
+    },
+    {
+      "source": "/llms.txt",
+      "has": [{"type": "host", "value": "(www\\.)?nexy\\.help"}],
+      "destination": "/api/keuze-tools?tool=nexy&op=llms"
+    },
+    {
+      "source": "/",
+      "has": [{"type": "host", "value": "(www\\.)?nexy\\.help"}],
+      "destination": "/api/keuze-tools?tool=nexy&p="
+    },
+    {
+      "source": "/:pad((?!api/|466971cbc1bbe43e6bb64a94465e4470\\.txt).*)",
+      "has": [{"type": "host", "value": "(www\\.)?nexy\\.help"}],
+      "destination": "/api/keuze-tools?tool=nexy&p=:pad"
+    },
+    {
       "source": "/",
       "has": [
         {
