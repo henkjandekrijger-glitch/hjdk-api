@@ -1,0 +1,464 @@
+{
+ "gecontroleerd": "2026-11-17",
+ "opmerking": "Eigen sites van de artsen waren in deze sessie niet bereikbaar (webtoegang tot domeinen buiten de zoekresultaten werd geweigerd). Prijs, wie opereert, ziekenhuis, nazorg en ingrepen per operatie zijn daarom NIET van de eigen site gecontroleerd; waar iets staat komt het uit het RealSelf-profiel dat de arts zelf beheert (aangegeven in de tekst) en telt het niet als eigen site. Risico's zijn wel per naam gezocht (één nieuwszoekopdracht per kandidaat).",
+ "niet_bereikbaar": [
+  "https://www.realself.com/find/Dominican-Republic/Brazilian-Butt-Lift (toestemming niet op tijd; kandidaten uit /find/Dominican-Republic/Santo-Domingo/Butt-Lift (70), /Butt-Augmentation (79), /La-Esperilla/Mommy-Makeover (69), /Tummy-Tuck-Revision (71), /Brazilian-Butt-Lift-Revision (57), /Mini-Tummy-Tuck (75), /Santo-Domingo/Hip-Augmentation en /Santiago/Plastic-Surgeon; telkens alleen de eerste 15 zichtbaar)",
+  "https://www.realself.com/find/Dominican-Republic/Tummy-Tuck (toestemming niet op tijd)",
+  "https://www.realself.com/find/Dominican-Republic/Plastic-Surgeon (toestemming niet op tijd)",
+  "https://www.realself.com/find/Dominican-Republic/Punta-Cana/Plastic-Surgeon (fout bij ophalen; geen Punta Cana-kandidaten gevonden)",
+  "https://drmallol.com/ (Emmanuel Mallol Cotes, eigen site: toegang geweigerd)",
+  "https://drjairoulerio.net/ (Jairo Ulerio, eigen site: toegang geweigerd)",
+  "http://www.plastica.com.do/en (Luis Tactuk Simó, Cirugía Plástica del Caribe: niet geprobeerd na weigering andere eigen sites; niet in zoekresultaten)",
+  "http://massielguzman.com/ (Massiel Guzmán Reyes: niet in zoekresultaten, niet op te halen)",
+  "https://www.realself.com/dr/alexandrish-karvendrish-rodriguez-tavarez-santo-domingo-dominican-republic (toestemming niet op tijd)",
+  "https://diariodigitalrd.com/2024/02/04/sociedad-cirugia-plastica-para-cuidar-a-una-paciente-no-debemos-hacer-mas-de-dos-cirugias.html (SODOCIPRE over hoogstens twee ingrepen, 4 feb 2024: toegang geweigerd)",
+  "https://www.elcaribe.com.do/panorama/salud/combos-de-cirugia-se-limitaran-tres-procedimientos/ (fout bij ophalen)",
+  "Overige eigen sites: voor de meeste artsen gaf de zoekmachine alleen RealSelf, Bookimed, WhatClinic en spiegelsites (bemiddelaars, tellen niet)"
+ ],
+ "algemeen": [
+  {
+   "wat": "CDC MMWR: 93 Amerikaanse burgers overleden in de DR na cosmetische chirurgie (2009-2022), op één na vrouwen; gemiddeld 13 per jaar in 2019-2022 tegen 4,1 in 2009-2018. In 24 onderzochte sterfgevallen (2019-2020) was overal liposuctie gedaan, in 92% vettransplantatie naar de billen (BBL), in 58% buikwandcorrectie; gemiddeld drie ingrepen in één operatie (2 tot 4). 90% van de onderzochte doden door embolie (vet of trombose), 58% binnen 24 uur na de operatie.",
+   "datum": "2024-01-25",
+   "bron": "https://www.cdc.gov/mmwr/volumes/73/wr/mm7303a3.htm"
+  },
+  {
+   "wat": "Volgens dezelfde CDC-publicatie vaardigde het Dominicaanse ministerie van Volksgezondheid (MISPAS) in 2019 veiligheidsrichtlijnen uit: hart- en longonderzoek vóór de operatie en hoogstens twee grote ingrepen per operatie; daarna controlebezoeken aan 77 instellingen, infectiecommissies in drukke centra en een commissie die complicaties rond operaties beoordeelt. Het State Department adviseert een reisverzekering met medische evacuatie.",
+   "datum": "2024-01-25",
+   "bron": "https://www.cdc.gov/mmwr/volumes/73/wr/mm7303a3.htm"
+  },
+  {
+   "wat": "MISPAS sloot 501 zorg- en esthetische instellingen: 281 in 2024, 177 in 2025, 43 tot en met april 2026. In april 2026 onder meer Aplas American Plastic Surgery en Clideme (Clínica de Especialidades Médicas y Estéticas).",
+   "datum": "2026-05-01",
+   "bron": "https://diariolibre.com/actualidad/salud/2026/05/01/salud-publica-ha-clausurado-501-centros-de-salud-y-esteticos/3520509"
+  },
+  {
+   "wat": "MISPAS heeft sinds oktober 2021 1.493 zorginstellingen aangepakt of gesloten (2021: 149, 2022: 498, 2023: 458, 2024: 234, 2025: 71, 2026: 83); meest in Santo Domingo en Santiago. Hoofdovertredingen: werken zonder habilitación, diensten buiten de vergunning, niet-bevoegde mensen die zorg verlenen.",
+   "datum": "2026-07-30",
+   "bron": "https://eldia.com.do/clinicas-sin-permisos-y-servicios-ilegales-salud-publica-ha-intervenido-1493-centros-de-salud-desde-2021/"
+  },
+  {
+   "wat": "Drie doden na cosmetische ingrepen in vier maanden van 2026: 26 maart in Centro Diosa Los Jardines, Santiago (liposuctie; definitief gesloten door MISPAS; familie noemt een gynaecoloog als operateur, onderzoek loopt), 15 april in Clideme, Santo Domingo (operatiekamers gesloten), 24 juli in Clínica de Obesidad y Antienvejecimiento Dra. Griselda Basora, Santo Domingo Este (buikwandcorrectie door een man zonder artsendiploma volgens de autoriteiten; kliniek zonder vergunning, definitief gesloten).",
+   "datum": "2026-08-01",
+   "bron": "https://acento.com.do/actualidad/tres-muertes-en-cuatro-meses-tras-cirugias-esteticas-la-busqueda-de-belleza-entre-irregularidades-antecedentes-y-falta-de-control-9728778.html"
+  },
+  {
+   "wat": "Zo controleer je zelf: een instelling in de zoekfunctie van de Dirección de Habilitación de Servicios y Establecimientos de Salud (DHSES, via de site van het ministerie: 'Habilitado' of 'No habilitado'); een plastisch chirurg in de ledenlijst van SODOCIPRE (Sociedad Dominicana de Cirugía Plástica), die ook de instellingen noemt waar de chirurg werkt.",
+   "datum": "2026-07-30",
+   "bron": "https://diariolibre.com/actualidad/salud/2026/07/30/conozca-donde-buscar-si-un-medico-o-centro-de-salud-esta-habilitado/3615351"
+  },
+  {
+   "wat": "In 2019 gesloten esthetische klinieken in de DR (Diario Libre): Dermo Stetic Láser Clinic (twee keer, na twee doden), Clideme (werkte zonder vergunning), Minier Hernández (Santiago), CIPLA (na overlijden aan vetembolie), Centro Médico Monumental, Clínica Dr. Escaño (overleden Amerikaanse), Caribbean Plastic Surgery (geen vergunning, overleden man na liposuctie), Siluet Estetic Clinic, Centro Burgos Mercado en Clínica Ureña Arias (drie vrouwen overleden binnen 30 dagen).",
+   "datum": "2019-12-11",
+   "bron": "https://www.diariolibre.com/actualidad/salud/las-clinicas-de-esteticas-cerradas-en-2019-por-muerte-de-pacientes-e-irregularidades-HM15808582"
+  },
+  {
+   "wat": "Centro médico Ureña Arias (Villa Mella) gesloten na de dood van drie vrouwen in een maand (juni-juli 2019), onder wie een vrouw uit Alabama; volgens de minister niet gehabiliteerd voor cosmetische chirurgie. De operaties bij ten minste twee van hen deed Dr. Félix Almánzar (niet dezelfde als Dr. Gustavo Almanzar op RealSelf).",
+   "datum": "2019-07-09",
+   "bron": "https://elnuevodiario.com.do/ordenan-cierre-de-clinica-donde-murieron-tres-mujeres-tras-cirugia-estetica-en-un-mes/"
+  },
+  {
+   "wat": "MISPAS sloot CIPLA (Centro Internacional de Cirugía Plástica Avanzada, Santo Domingo) tijdelijk wegens tekortkomingen in hygiëne, na een CDC-melding over negen vrouwen uit de VS met infecties door snelgroeiende niet-tuberculeuze mycobacteriën na cosmetische chirurgie daar (maart-juni 2017).",
+   "datum": "2017-07-08",
+   "bron": "https://eldia.com.do/salud-publica-dispone-cierre-temporal-de-la-clinica-cipla-por-no-aplicar-medidas-de-bioseguridad/"
+  },
+  {
+   "wat": "CECIP (Centro de Cirugía Plástica y Especialidades, Santo Domingo) werd in 2015 voorlopig gesloten door de Fiscalía del Distrito Nacional na de dood van een Amerikaanse patiënte op 21 februari 2015; volgens de fiscaal was de vergunning verlopen. Later moest CECIP in twee zaken mee schadevergoeding betalen (2023, 2024).",
+   "datum": "2015-02-26",
+   "bron": "https://acento.com.do/actualidad/andeclip-critica-cierre-de-cecip-fiscal-dice-clinica-incurre-en-irregularidades-8226142.html"
+  },
+  {
+   "wat": "Rechtbank veroordeelde plastisch chirurg Asmin Aquino Rodríguez voor medische fout (liposuctie en borstimplantaten, 2020): een maand cel en RD$2 miljoen, samen met CECIP.",
+   "datum": "2024-04-17",
+   "bron": "https://diariolibre.com/actualidad/nacional/2024/04/17/tribunales-han-condenado-a-otros-centros-de-salud-por-mala-practica/2676335"
+  }
+ ],
+ "klinieken": [
+  {
+   "naam": "Dra. Yily De Los Santos",
+   "arts": "Yily De Los Santos",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden (RealSelf-profiel noemt geen site en geen prijs)", "bron": "https://www.realself.com/dr/yily-de-los-santos-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "Niet gecontroleerd op eigen site. Eigen blog noemt haar als plastisch chirurg, geen kliniek, geen ingreepbeleid.", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": "https://yilydelossantos.blogspot.com/2025/05/dr-yily-de-los-santos-warns-about.html"},
+   "ziekenhuis": {"naam": "Niet genoemd op RealSelf of eigen blog", "habilitacion": "niet genoemd", "bron": "https://www.realself.com/dr/yily-de-los-santos-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "Niet op een eigen site gecontroleerd; recovery house alleen genoemd in een patiëntreview.", "garantie": false, "bron": "https://www.realself.com/dr/yily-de-los-santos-santo-domingo-dominican-republic"},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "RealSelf-profiel (2.037 reviews, 4,3) toont 'Account Suspended' en 'not currently accepting consultations through RealSelf' op 17 nov 2026; reden niet vermeld, geen overheidsmaatregel. Patiëntreviews op RealSelf noemen operaties bij CIPLA (zie Héctor Cabral/CIPLA), maar geen betrouwbare bron koppelt haar aan CIPLA; niet meegeteld. Nieuwszoekopdracht (naam + muerte/fallece/demanda/clausura) gaf niets over haar."
+  },
+  {
+   "naam": "Dr. Emmanuel Mallol Cotes",
+   "arts": "Emmanuel Mallol Cotes",
+   "stad": "Santo Domingo",
+   "site": "https://drmallol.com/",
+   "prijs": {"bedrag": "niet gecontroleerd: eigen site niet bereikbaar (RealSelf: gratis consult, prijs op aanvraag)", "bron": "https://www.realself.com/dr/emmanuel-mallol-cotes-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd (eigen site niet bereikbaar)", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "CEGINEST Surgical Center (opnamebevoegdheid volgens RealSelf-profiel)", "habilitacion": "niet gecontroleerd", "bron": "https://www.realself.com/dr/emmanuel-mallol-cotes-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "1.287 reviews (4,7). Nieuwszoekopdracht gaf niets over hem of CEGINEST."
+  },
+  {
+   "naam": "Dra. Tania Medina de Garcia",
+   "arts": "Tania Medina de Garcia",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden; RealSelf-profiel zonder prijs", "bron": "https://www.realself.com/dr/tania-medina-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "Niet genoemd op RealSelf", "habilitacion": "niet genoemd", "bron": "https://www.realself.com/dr/tania-medina-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "813 reviews (4,5). Nieuwszoekopdracht gaf niets over haar."
+  },
+  {
+   "naam": "Dr. Jairo Ulerio (DRNIPTALK)",
+   "arts": "Jairo Ulerio",
+   "stad": "Santo Domingo",
+   "site": "https://drjairoulerio.net/",
+   "prijs": {"bedrag": "niet gecontroleerd: eigen site niet bereikbaar (RealSelf: gratis consult, prijs op aanvraag)", "bron": "https://www.realself.com/dr/jairo-ulerio-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "PLASTIMEDIC (opnamebevoegdheid volgens RealSelf); praktijk Calle Paseo de los Locutores 72, Ensanche Quisqueya", "habilitacion": "niet gecontroleerd", "bron": "https://www.realself.com/dr/jairo-ulerio-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "358 reviews (4,9). Nieuwszoekopdracht (Ulerio of Plastimedic) gaf niets."
+  },
+  {
+   "naam": "Dr. Derby Sang Caputo",
+   "arts": "Derby Sang Caputo",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden; RealSelf-profiel zonder prijs", "bron": "https://www.realself.com/dr/derby-sang-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "Niet genoemd op RealSelf", "habilitacion": "niet genoemd", "bron": "https://www.realself.com/dr/derby-sang-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "259 reviews (4,9); neemt geen consulten via RealSelf aan. Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dr. Alejandro Hernández Pizzoglio",
+   "arts": "Alejandro Hernández Pizzoglio",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden; RealSelf-profiel zonder prijs", "bron": "https://www.realself.com/dr/alejandro-hernandez-pizzoglio-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "Niet genoemd op RealSelf; volgens rechtszaak (2022) opereerde hij in CECIP (Centro de Cirugía Plástica, Santo Domingo)", "habilitacion": "niet genoemd", "bron": "https://diariolibre.com/actualidad/justicia/2023/08/02/mujer-lesionada-durante-liposuccion-recibira-rd58-millones/2421519"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [
+    {"wat": "Rechtbank (Cuarta Sala Penal, Distrito Nacional) kende een patiënte uit Puerto Rico RD$5,86 miljoen schadevergoeding toe, te betalen door de arts en CECIP samen, wegens schending van het operatieprotocol bij een operatie in 2022 (liposuctie, buikwandcorrectie, billen- en borstingreep); geen strafrechtelijke veroordeling. De arts procedeerde in 2024 op zijn beurt tegen twee MISPAS-artsen over hun rapport.", "datum": "2023-08-02", "bron": "https://diariolibre.com/actualidad/justicia/2023/08/02/mujer-lesionada-durante-liposuccion-recibira-rd58-millones/2421519", "ernst": "middel"}
+   ],
+   "toelichting": "219 reviews (4,7); neemt geen consulten via RealSelf aan. Zijn eigen tegenzaak: https://diariolibre.com/actualidad/justicia/2024/02/05/cirujano-plastico-demanda-funcionarios-del-ministerio-de-salud-publica/2598388. CECIP zelf werd in 2015 voorlopig gesloten (zie algemeen), niet in verband met hem."
+  },
+  {
+   "naam": "Dr. Manuel Diaz",
+   "arts": "Manuel Diaz",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden; RealSelf-profiel zonder prijs", "bron": "https://www.realself.com/dr/manuel-diaz-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "Niet genoemd op RealSelf", "habilitacion": "niet genoemd", "bron": "https://www.realself.com/dr/manuel-diaz-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "Niet op eigen site gecontroleerd; reviews noemen dat de praktijk vervoer en recovery house regelt.", "garantie": false, "bron": "https://www.realself.com/dr/manuel-diaz-santo-domingo-dominican-republic"},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "198 reviews (4,7). Nieuwszoekopdracht gaf niets (naam komt veel voor; geen treffer bij plastische chirurgie)."
+  },
+  {
+   "naam": "Dr. Luis A. Mejia (CECILIP)",
+   "arts": "Luis A. Mejia",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden (RealSelf: gratis consult, geen prijs)", "bron": "https://realself.com/dr/luis-a-mejia-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "CECILIP (opnamebevoegdheid volgens RealSelf)", "habilitacion": "niet gecontroleerd", "bron": "https://realself.com/dr/luis-a-mejia-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "194 reviews (4,3). Nieuwszoekopdracht gaf niets over hem of CECILIP."
+  },
+  {
+   "naam": "Nudah Clinic (Dr. Gustavo Almanzar)",
+   "arts": "Gustavo Almanzar",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "Niet op een eigen site gevonden. In een eigen antwoord op RealSelf noemt hij voor een BBL in de DR USD 3.000 tot 4.200 als 'full package' (datum en inhoud niet vermeld; geen officiële prijslijst).", "bron": "https://www.realself.com/dr/gustavo-almanzar-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "NUDAH CLINIC (opnamebevoegdheid volgens RealSelf)", "habilitacion": "niet gecontroleerd", "bron": "https://www.realself.com/dr/gustavo-almanzar-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "186 reviews (4,7). Nieuwszoekopdracht gaf niets over hem. Let op: Dr. Félix Almánzar (kliniek Ureña Arias, 2019, zie algemeen) is een andere arts."
+  },
+  {
+   "naam": "Dr. Miguel Mota",
+   "arts": "Miguel Mota",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden (RealSelf: gratis (virtueel) consult, prijs op aanvraag)", "bron": "https://www.realself.com/dr/miguel-mota-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "Niet genoemd op RealSelf", "habilitacion": "niet genoemd", "bron": "https://www.realself.com/dr/miguel-mota-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "164 reviews (4,7). Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dr. Jose Leon",
+   "arts": "Jose Leon",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden; RealSelf-profiel zonder prijs", "bron": "https://www.realself.com/dr/jose-leon-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "Niet genoemd op RealSelf", "habilitacion": "niet genoemd", "bron": "https://www.realself.com/dr/jose-leon-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "Niet op eigen site gecontroleerd; reviews noemen een recovery house dat de praktijk aanraadt.", "garantie": false, "bron": "https://www.realself.com/dr/jose-leon-santo-domingo-dominican-republic"},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "160 reviews (4,9). Nieuwszoekopdracht gaf alleen bemiddelaarspagina's."
+  },
+  {
+   "naam": "Cirugía Plástica del Caribe (Dr. Luis Tactuk Simó)",
+   "arts": "Luis Tactuk Simó",
+   "stad": "Santo Domingo",
+   "site": "http://www.plastica.com.do/en",
+   "prijs": {"bedrag": "niet gecontroleerd: eigen site niet bereikbaar; RealSelf-profiel zonder prijs", "bron": "https://www.realself.com/dr/luis-tactuk-simo-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "Centro Médico del Caribe (opnamebevoegdheid volgens RealSelf)", "habilitacion": "niet gecontroleerd", "bron": "https://www.realself.com/dr/luis-tactuk-simo-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "148 reviews (4,9). Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dr. Jean Paul Giudicelli Saba",
+   "arts": "Jean Paul Giudicelli Saba",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden; RealSelf-profiel zonder prijs", "bron": "https://www.realself.com/dr/jean-paul-giudicelli-saba-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "Niet genoemd op RealSelf", "habilitacion": "niet genoemd", "bron": "https://www.realself.com/dr/jean-paul-giudicelli-saba-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "119 reviews (4,7). Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dr. Alexandrish Karvendrish Rodríguez Tavárez",
+   "arts": "Alexandrish Karvendrish Rodríguez Tavárez",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden; RealSelf-profiel niet bereikbaar", "bron": ""},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "niet gecontroleerd", "habilitacion": "niet gecontroleerd", "bron": ""},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "110 reviews (4,9) op https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Lift. Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dra. Massiel Guzmán Reyes",
+   "arts": "Massiel Guzmán Reyes",
+   "stad": "Santo Domingo",
+   "site": "http://massielguzman.com/",
+   "prijs": {"bedrag": "niet gecontroleerd: eigen site niet bereikbaar; RealSelf-profiel zonder prijs", "bron": "https://www.realself.com/dr/massiel-guzm-n-reyes-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "Plastimedic (opnamebevoegdheid volgens RealSelf)", "habilitacion": "niet gecontroleerd", "bron": "https://www.realself.com/dr/massiel-guzm-n-reyes-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "106 reviews (5,0). Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dr. Adolfo Sesto",
+   "arts": "Adolfo Sesto",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden; RealSelf-profiel zonder prijs", "bron": "https://www.realself.com/dr/adolfo-sesto-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "Niet genoemd op RealSelf", "habilitacion": "niet genoemd", "bron": "https://www.realself.com/dr/adolfo-sesto-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "97 reviews (4,9). Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dra. Yvelise Bello Paredes",
+   "arts": "Yvelise Bello Paredes",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden", "bron": ""},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "niet gecontroleerd", "habilitacion": "niet gecontroleerd", "bron": ""},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "93 reviews (3,3) op https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Hip-Augmentation. Twijfel, niet meegeteld: Acento (3 mrt 2014) beschrijft een patiënte die zegt na een buikwandcorrectie plus liposculptuur op één dag (sept 2013) door chirurg 'Ivelisse Bello' in Santo Domingo Plastic Center een bacteriële infectie te hebben gekregen; familie wilde een zaak beginnen (https://acento.com.do/actualidad/victimas-del-bisturi-por-estar-buscando-verme-mejor-mira-como-quede-2-1166756.html). El Nuevo Diario (13 jun 2017) noemt 'la doctora Ivelise Bello' in een opsomming zonder concrete zaak. Andere spelling van de naam; niet aantoonbaar dezelfde arts."
+  },
+  {
+   "naam": "Dr. Kelvin Eusebio",
+   "arts": "Kelvin Eusebio",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden; RealSelf-profiel zonder prijs", "bron": "https://www.realself.com/dr/kelvin-eusebio-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "Niet genoemd op RealSelf", "habilitacion": "niet genoemd", "bron": "https://www.realself.com/dr/kelvin-eusebio-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "80 reviews (4,6); SODOCIPRE-ledenpagina bestaat (https://sodocipre.net/en/cirujanoplastico/dr-kelvin-eusebio-paulino/). Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dr. Francisco Rodriguez Rosario",
+   "arts": "Francisco Rodriguez Rosario",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden", "bron": ""},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "niet gecontroleerd", "habilitacion": "niet gecontroleerd", "bron": ""},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "79 reviews (4,2) op https://www.realself.com/find/Dominican-Republic/Brazilian-Butt-Lift-Revision. Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dr. Geuris Cruz Quiroz",
+   "arts": "Geuris Cruz Quiroz",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "Niet op een eigen site gevonden. RealSelf-profiel: gratis consult; 'Surgery Sister Special' USD 200 korting per patiënt als twee patiënten op dezelfde dag dezelfde operatie boeken; geen bedrag voor BBL of buikwandcorrectie.", "bron": "https://www.realself.com/dr/geuris-cruz-quiroz-santo-domingo-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "CECIP, Centro de Cirugía Plástica y Especialidades (opnamebevoegdheid volgens RealSelf)", "habilitacion": "niet gecontroleerd", "bron": "https://www.realself.com/dr/geuris-cruz-quiroz-santo-domingo-dominican-republic"},
+   "nazorg": {"tekst": "Niet op eigen site gecontroleerd; een review noemt recovery house Larimar.", "garantie": false, "bron": "https://www.realself.com/dr/geuris-cruz-quiroz-santo-domingo-dominican-republic"},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "74 reviews (4,8). Nieuwszoekopdracht gaf niets over hem. Zijn ziekenhuis CECIP werd in 2015 voorlopig gesloten en moest in 2023 en 2024 mee schadevergoeding betalen in zaken van andere chirurgen (zie algemeen); niet meegeteld omdat het niet om hem gaat."
+  },
+  {
+   "naam": "Dr. Ricardo Ventura",
+   "arts": "Ricardo Ventura",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden", "bron": ""},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "niet gecontroleerd", "habilitacion": "niet gecontroleerd", "bron": ""},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "63 reviews (4,8) op https://www.realself.com/find/Dominican-Republic/Brazilian-Butt-Lift-Revision. Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dra. Lourdes Rodriguez",
+   "arts": "Lourdes Rodriguez",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden", "bron": ""},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "niet gecontroleerd", "habilitacion": "niet gecontroleerd", "bron": ""},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "52 reviews (4,9) op https://www.realself.com/find/Dominican-Republic/Brazilian-Butt-Lift-Revision. Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dr. Gabriel Calderón Pimentel",
+   "arts": "Gabriel Calderón Pimentel",
+   "stad": "Santo Domingo (Naco)",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden", "bron": ""},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "niet gecontroleerd", "habilitacion": "niet gecontroleerd", "bron": ""},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "32 reviews (4,7) op https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Hip-Augmentation. Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dr. Manelic Mejia Lopez",
+   "arts": "Manelic Mejia Lopez",
+   "stad": "Santo Domingo",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden", "bron": ""},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "niet gecontroleerd", "habilitacion": "niet gecontroleerd", "bron": ""},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "30 reviews (4,7) op https://www.realself.com/find/Dominican-Republic/Mini-Tummy-Tuck. Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dr. Luis Eduardo Redondo",
+   "arts": "Luis Eduardo Redondo",
+   "stad": "Puerto Plata",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden; RealSelf-profiel zonder prijs", "bron": "https://www.realself.com/dr/luis-eduardo-redondo-puerto-plata-dominican-republic"},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "Niet genoemd op RealSelf (reviews noemen Centro Médico Bournigal, Puerto Plata)", "habilitacion": "niet genoemd", "bron": "https://www.realself.com/dr/luis-eduardo-redondo-puerto-plata-dominican-republic"},
+   "nazorg": {"tekst": "Geen beleid op eigen site gecontroleerd; één review zegt dat de arts vanaf zes maanden kosteloos een correctie deed (patiëntverklaring, geen schriftelijk beleid).", "garantie": false, "bron": "https://www.realself.com/dr/luis-eduardo-redondo-puerto-plata-dominican-republic"},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "29 reviews (4,8). Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dr. Nelson Rubio",
+   "arts": "Nelson Rubio",
+   "stad": "Santiago",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden", "bron": ""},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "niet gecontroleerd", "habilitacion": "niet gecontroleerd", "bron": ""},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "31 reviews (4,0); RealSelf noemt hem 'Physician', niet 'Plastic Surgeon' (https://www.realself.com/find/Dominican-Republic/Santiago/Plastic-Surgeon). Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "Dr. Rodrigo Escobar Jaramillo",
+   "arts": "Rodrigo Escobar Jaramillo",
+   "stad": "Santiago",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden", "bron": ""},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "niet gecontroleerd", "habilitacion": "niet gecontroleerd", "bron": ""},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [],
+   "toelichting": "26 reviews (4,9) op https://www.realself.com/find/Dominican-Republic/Santiago/Plastic-Surgeon. Nieuwszoekopdracht gaf niets."
+  },
+  {
+   "naam": "CIPLA, Centro Internacional de Cirugía Plástica Avanzada (Dr. Héctor Cabral)",
+   "arts": "Héctor Cabral",
+   "stad": "Santo Domingo (La Esperilla)",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden", "bron": ""},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "CIPLA (eigen kliniek; Cabral is directeur volgens El Día, nov 2023, 'meer dan 52 specialisten')", "habilitacion": "niet gecontroleerd", "bron": "https://eldia.com.do/cipla-celebra-15-anos-de-fundada/"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [
+    {"wat": "MISPAS sloot CIPLA tijdelijk wegens tekortkomingen in hygiëne, na een CDC-melding van negen vrouwen uit de VS met mycobacterie-infecties na cosmetische chirurgie in CIPLA (maart-juni 2017).", "datum": "2017-07-08", "bron": "https://eldia.com.do/salud-publica-dispone-cierre-temporal-de-la-clinica-cipla-por-no-aplicar-medidas-de-bioseguridad/", "ernst": "zwaar"},
+    {"wat": "Een 51-jarige vrouw overleed na een cosmetische ingreep in CIPLA die volgens haar dochter door Dr. Cabral werd gedaan; de dochter diende een klacht in. De Sociedad Dominicana de Cirugía Plástica meldde dat Cabral sinds 2015 als geschorst lid staat.", "datum": "2019-05-10", "bron": "https://elnuevodiario.com.do/revelan-cirujano-hector-cabral-acusado-de-mala-practica-esta-suspendido-desde-2015/", "ernst": "zwaar"},
+    {"wat": "MISPAS sloot CIPLA in mei 2019 na het overlijden van een patiënte aan vetembolie; inspectie vond onder meer verlopen medicijnen, meer operatiekamers dan toegestaan en ontbrekende reanimatiewagens.", "datum": "2019-12-11", "bron": "https://www.diariolibre.com/actualidad/salud/las-clinicas-de-esteticas-cerradas-en-2019-por-muerte-de-pacientes-e-irregularidades-HM15808582", "ernst": "zwaar"}
+   ],
+   "toelichting": "Bekende naam uit het nieuws, niet in de RealSelf-top. CIPLA bestond in november 2023 nog (15-jarig bestaan, Cabral directeur). Acento (3 mrt 2014) meldt ook een overlijden in CIPLA in juli 2011 bij een buikwandcorrectie door een andere arts, volgens de echtgenoot; niet meegeteld (beschuldiging, andere arts): https://acento.com.do/actualidad/victimas-del-bisturi-por-estar-buscando-verme-mejor-mira-como-quede-2-1166756.html"
+  },
+  {
+   "naam": "Clideme, Clínica de Especialidades Médicas y Estéticas (Dr. José del Carmen Desena Montero)",
+   "arts": "José del Carmen Desena Montero",
+   "stad": "Santo Domingo (Mirador Sur)",
+   "site": "",
+   "prijs": {"bedrag": "niet gecontroleerd: geen eigen site gevonden", "bron": ""},
+   "wie_opereert": {"tekst": "niet gecontroleerd", "arts_opereert": "", "anesthesioloog": "onbekend", "bron": ""},
+   "ziekenhuis": {"naam": "Clideme", "habilitacion": "Operatiekamers gesloten door MISPAS (april 2026)", "bron": "https://zolfm.com/noticia/salud-clausura-quirofanos-de-clinica-tras-muerte-de-paciente"},
+   "nazorg": {"tekst": "niet gecontroleerd", "garantie": false, "bron": ""},
+   "ingrepen_per_operatie": {"tekst": "niet gecontroleerd", "bron": ""},
+   "risico": [
+    {"wat": "MISPAS sloot Clideme in februari 2019 omdat het zonder vergunning werkte, met een niet-toegestane operatiekamer.", "datum": "2019-12-11", "bron": "https://www.diariolibre.com/actualidad/salud/las-clinicas-de-esteticas-cerradas-en-2019-por-muerte-de-pacientes-e-irregularidades-HM15808582", "ernst": "zwaar"},
+    {"wat": "Dr. Desena werd in september 2025 door de Octava Sala Penal (Distrito Nacional) veroordeeld voor dood door schuld van een 18-jarige patiënte (2020): een jaar voorwaardelijk en een boete; het vonnis verbood hem niet te werken. Hij was in 2021 uit SODOCIPRE gezet.", "datum": "2026-04-21", "bron": "https://cdn.com.do/nacionales/cirujano-plastico-que-opero-a-joven-fallecida-fue-condenado-en-2025-por-muerte-de-otra-paciente/", "ernst": "zwaar"},
+    {"wat": "Een 27-jarige vrouw overleed op 15 april 2026 na meerdere ingrepen bij Dr. Desena in Clideme; MISPAS sloot de operatiekamers (geen werkende spoedafdeling, defecte apparatuur). Onderzoek loopt, geen uitspraak over schuld.", "datum": "2026-04-23", "bron": "https://zolfm.com/noticia/salud-clausura-quirofanos-de-clinica-tras-muerte-de-paciente", "ernst": "zwaar"}
+   ],
+   "toelichting": "Bekende naam uit het nieuws, niet in de RealSelf-lijsten gezien. Naam van arts bij het overlijden van 2026 uit Acento (1 aug 2026): https://acento.com.do/actualidad/tres-muertes-en-cuatro-meses-tras-cirugias-esteticas-la-busqueda-de-belleza-entre-irregularidades-antecedentes-y-falta-de-control-9728778.html. Clideme staat ook bij de sluitingen van april 2026 (Diario Libre 1 mei 2026)."
+  }
+ ]
+}

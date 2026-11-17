@@ -4070,6 +4070,1488 @@
      ]
     }
    }
+  },
+  "bbl-dr": {
+   "id": "bbl-dr",
+   "land": "DO",
+   "ingreep": "bbl",
+   "comparison_title": {
+    "en": "BBL and tummy tuck Dominican Republic",
+    "nl": "BBL en buikwandcorrectie Dom. Republiek",
+    "de": "BBL und Bauchstraffung Dom. Republik"
+   },
+   "naar": "dominican-republic",
+   "methode": "plastisch",
+   "registers": {
+    "board": "SODOCIPRE",
+    "vereniging": "",
+    "regionaal": "",
+    "acc": "MISPAS (habilitación)",
+    "boardTekst": {
+     "en": "listed as a member of SODOCIPRE, the Dominican plastic surgery society that the health ministry and the press point to for checking a plastic surgeon",
+     "nl": "staat in de ledenlijst van SODOCIPRE, de Dominicaanse vereniging voor plastische chirurgie waar het ministerie en de pers naar verwijzen om een plastisch chirurg na te kijken",
+     "de": "steht in der Mitgliederliste der SODOCIPRE, der dominikanischen Gesellschaft für plastische Chirurgie, auf die Ministerium und Presse zur Prüfung eines plastischen Chirurgen verweisen"
+    },
+    "boardKort": {
+     "en": "listing in the SODOCIPRE member list",
+     "nl": "vermelding in de ledenlijst van SODOCIPRE",
+     "de": "Eintrag in der SODOCIPRE-Mitgliederliste"
+    }
+   },
+   "gecontroleerd": "2026-11-17",
+   "gepubliceerd": "2026-11-17",
+   "slugs": {
+    "en": "best-bbl-tummy-tuck-surgeons-dominican-republic",
+    "nl": "nl/beste-bbl-buikwandcorrectie-chirurgen-dominicaanse-republiek",
+    "de": "de/beste-bbl-bauchdeckenstraffung-chirurgen-dominikanische-republik"
+   },
+   "klinieken": [
+    {
+     "id": "yily",
+     "naam": "Dr. Yily De Los Santos",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Yily De Los Santos",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/yily-de-los-santos-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Yily De Los Santos",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/city/santo-domingo"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.3,
+       "max": 5,
+       "aantal": 2037,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "account suspended on RealSelf",
+       "bron": "https://www.realself.com/dr/yily-de-los-santos-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2025-09-21"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "2,037 RealSelf reviews, average 4.3, newest review September 2025. Listed in the SODOCIPRE member list and an international member of ASPS. RealSelf shows her account as suspended, without giving a reason.",
+      "nl": "2.037 reviews op RealSelf, gemiddeld 4,3, nieuwste review september 2025. Staat in de ledenlijst van SODOCIPRE en is internationaal lid van ASPS. RealSelf toont haar account als geschorst, zonder reden.",
+      "de": "2.037 Bewertungen auf RealSelf, Schnitt 4,3, neueste Bewertung September 2025. Steht in der Mitgliederliste der SODOCIPRE und ist internationales Mitglied der ASPS. RealSelf zeigt ihr Konto als gesperrt, ohne Grund."
+     }
+    },
+    {
+     "id": "hilario",
+     "naam": "Dr. Agustina Hilario Duran",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Agustina Hilario Duran",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/agustina-hilario-duran-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Agustina Hilario Duran",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.3,
+       "max": 5,
+       "aantal": 1563,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/agustina-hilario-duran-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2025-05-30"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "1,563 RealSelf reviews, average 4.3, newest review May 2025. Listed in the SODOCIPRE member list. Her SODOCIPRE profile gives the address of CIPLA, a clinic the health ministry closed in 2017 and 2019; those cases did not name her.",
+      "nl": "1.563 reviews op RealSelf, gemiddeld 4,3, nieuwste review mei 2025. Staat in de ledenlijst van SODOCIPRE. Haar SODOCIPRE-profiel geeft het adres van CIPLA, een kliniek die het ministerie in 2017 en 2019 sloot; in die zaken werd zij niet genoemd.",
+      "de": "1.563 Bewertungen auf RealSelf, Schnitt 4,3, neueste Bewertung Mai 2025. Steht in der Mitgliederliste der SODOCIPRE. Ihr SODOCIPRE-Profil nennt die Adresse von CIPLA, einer Klinik, die das Ministerium 2017 und 2019 schloss; in diesen Fällen wurde sie nicht genannt."
+     }
+    },
+    {
+     "id": "mallol",
+     "naam": "Dr. Emmanuel Mallol Cotes",
+     "stad": "Santo Domingo",
+     "site": "https://drmallol.com/",
+     "artsen": [
+      {
+       "naam": "Emmanuel Mallol Cotes",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/emmanuel-mallol-cotes-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Emmanuel Mallol Cotes",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.7,
+       "max": 5,
+       "aantal": 1287,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/emmanuel-mallol-cotes-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2026-10-04"
+      }
+     ],
+     "vermeld": [
+      "https://eldia.com.do/hay-que-disminuir-los-riesgos-cirugia-plastica/"
+     ],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "1,287 RealSelf reviews, average 4.7, newest review October 2026. Listed in the SODOCIPRE member list. The most reviews of any surgeon still taking RealSelf consultations, and El Día interviewed him in 2014 about the risks of body contouring.",
+      "nl": "1.287 reviews op RealSelf, gemiddeld 4,7, nieuwste review oktober 2026. Staat in de ledenlijst van SODOCIPRE. De meeste reviews van alle chirurgen die nog consulten via RealSelf aannemen, en El Día interviewde hem in 2014 over de risico's van lichaamscontouren.",
+      "de": "1.287 Bewertungen auf RealSelf, Schnitt 4,7, neueste Bewertung Oktober 2026. Steht in der Mitgliederliste der SODOCIPRE. Die meisten Bewertungen aller Chirurgen, die noch Beratungen über RealSelf annehmen, und El Día interviewte ihn 2014 zu den Risiken der Körperformung."
+     }
+    },
+    {
+     "id": "robles",
+     "naam": "Dr. Walkiris Robles",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Walkiris Robles",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/walkiris-robles-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Walkiris Robles",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.3,
+       "max": 5,
+       "aantal": 831,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/walkiris-robles-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2025-04-09"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "831 RealSelf reviews, average 4.3, newest review April 2025. Listed in the SODOCIPRE member list.",
+      "nl": "831 reviews op RealSelf, gemiddeld 4,3, nieuwste review april 2025. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "831 Bewertungen auf RealSelf, Schnitt 4,3, neueste Bewertung April 2025. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "medina",
+     "naam": "Dr. Tania Medina de Garcia",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Tania Medina de Garcia",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/tania-medina-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Tania Medina de Garcia",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/dominican%20republic"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.5,
+       "max": 5,
+       "aantal": 813,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/tania-medina-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2023-02-12"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "813 RealSelf reviews, average 4.5, newest review February 2023. Listed in the SODOCIPRE member list and an international member of ASPS.",
+      "nl": "813 reviews op RealSelf, gemiddeld 4,5, nieuwste review februari 2023. Staat in de ledenlijst van SODOCIPRE en is internationaal lid van ASPS.",
+      "de": "813 Bewertungen auf RealSelf, Schnitt 4,5, neueste Bewertung Februar 2023. Steht in der Mitgliederliste der SODOCIPRE und ist internationales Mitglied der ASPS."
+     }
+    },
+    {
+     "id": "fragoso",
+     "naam": "Dr. Australia Fragoso-Baez",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Australia Fragoso-Baez",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/australia-fragoso-baez-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Australia Fragoso-Baez",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.3,
+       "max": 5,
+       "aantal": 503,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/australia-fragoso-baez-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": ""
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "503 RealSelf reviews, average 4.3, no review date shown. Listed in the SODOCIPRE member list.",
+      "nl": "503 reviews op RealSelf, gemiddeld 4,3, geen reviewdatum zichtbaar. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "503 Bewertungen auf RealSelf, Schnitt 4,3, kein Bewertungsdatum sichtbar. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "ulerio",
+     "naam": "Dr. Jairo Ulerio",
+     "stad": "Santo Domingo",
+     "site": "https://drjairoulerio.net/",
+     "artsen": [
+      {
+       "naam": "Jairo Ulerio",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/jairo-ulerio-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Jairo Ulerio",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 356,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/jairo-ulerio-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2026-09-29"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "356 RealSelf reviews, average 4.9, newest review September 2026. Listed in the SODOCIPRE member list.",
+      "nl": "356 reviews op RealSelf, gemiddeld 4,9, nieuwste review september 2026. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "356 Bewertungen auf RealSelf, Schnitt 4,9, neueste Bewertung September 2026. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "sang",
+     "naam": "Dr. Derby Sang Caputo",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Derby Sang Caputo",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/derby-sang-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Derby Sang Caputo",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 259,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/derby-sang-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2025-11-14"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "259 RealSelf reviews, average 4.9, newest review November 2025. Listed in the SODOCIPRE member list.",
+      "nl": "259 reviews op RealSelf, gemiddeld 4,9, nieuwste review november 2025. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "259 Bewertungen auf RealSelf, Schnitt 4,9, neueste Bewertung November 2025. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "pizzoglio",
+     "naam": "Dr. Alejandro Hernández Pizzoglio (CECIP)",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Alejandro Hernández Pizzoglio",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/alejandro-hernandez-pizzoglio-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Alejandro Hernández Pizzoglio",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/dominican%20republic/?page=2"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.7,
+       "max": 5,
+       "aantal": 219,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/alejandro-hernandez-pizzoglio-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2025-04-26"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [
+      {
+       "wat": "A court in Santo Domingo ordered the surgeon and the CECIP clinic together to pay a patient from Puerto Rico RD$5.86 million in damages for breaching the surgical protocol in a 2022 operation; no criminal conviction.",
+       "datum": "2023-08-02",
+       "bron": "https://diariolibre.com/actualidad/justicia/2023/08/02/mujer-lesionada-durante-liposuccion-recibira-rd58-millones/2421519",
+       "ernst": "middel"
+      }
+     ],
+     "conclusie": {
+      "en": "219 RealSelf reviews, average 4.7, newest review April 2025. Listed in the SODOCIPRE member list and an international member of ASPS. In 2023 a court ordered him and the CECIP clinic to pay damages to a patient for breaching the surgical protocol; no criminal conviction.",
+      "nl": "219 reviews op RealSelf, gemiddeld 4,7, nieuwste review april 2025. Staat in de ledenlijst van SODOCIPRE en is internationaal lid van ASPS. In 2023 veroordeelde een rechtbank hem en de kliniek CECIP tot schadevergoeding aan een patiënte wegens schending van het operatieprotocol; geen strafrechtelijke veroordeling.",
+      "de": "219 Bewertungen auf RealSelf, Schnitt 4,7, neueste Bewertung April 2025. Steht in der Mitgliederliste der SODOCIPRE und ist internationales Mitglied der ASPS. 2023 verurteilte ein Gericht ihn und die Klinik CECIP zu Schadenersatz an eine Patientin wegen Verstoßes gegen das OP-Protokoll; keine strafrechtliche Verurteilung."
+     }
+    },
+    {
+     "id": "diaz-do",
+     "naam": "Dr. Manuel Díaz",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Manuel Díaz",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/manuel-diaz-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Manuel Díaz",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.7,
+       "max": 5,
+       "aantal": 198,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/manuel-diaz-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2023-05-09"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "198 RealSelf reviews, average 4.7, newest review May 2023. Listed in the SODOCIPRE member list.",
+      "nl": "198 reviews op RealSelf, gemiddeld 4,7, nieuwste review mei 2023. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "198 Bewertungen auf RealSelf, Schnitt 4,7, neueste Bewertung Mai 2023. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "mejia-do",
+     "naam": "Dr. Luis A. Mejía (CECILIP)",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Luis A. Mejía",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/luis-a-mejia-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Luis A. Mejía",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/dominican%20republic"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.3,
+       "max": 5,
+       "aantal": 195,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/luis-a-mejia-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2026-11-12"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "195 RealSelf reviews, average 4.3, newest review November 2026. Listed in the SODOCIPRE member list and an international member of ASPS.",
+      "nl": "195 reviews op RealSelf, gemiddeld 4,3, nieuwste review november 2026. Staat in de ledenlijst van SODOCIPRE en is internationaal lid van ASPS.",
+      "de": "195 Bewertungen auf RealSelf, Schnitt 4,3, neueste Bewertung November 2026. Steht in der Mitgliederliste der SODOCIPRE und ist internationales Mitglied der ASPS."
+     }
+    },
+    {
+     "id": "almanzar",
+     "naam": "Dr. Gustavo Almánzar (NUDAH Clinic)",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Gustavo Almánzar",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/gustavo-almanzar-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Gustavo Almánzar",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.7,
+       "max": 5,
+       "aantal": 186,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/gustavo-almanzar-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2026-07-19"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "186 RealSelf reviews, average 4.7, newest review July 2026. Listed in the SODOCIPRE member list.",
+      "nl": "186 reviews op RealSelf, gemiddeld 4,7, nieuwste review juli 2026. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "186 Bewertungen auf RealSelf, Schnitt 4,7, neueste Bewertung Juli 2026. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "mota",
+     "naam": "Dr. Miguel Mota",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Miguel Mota",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/miguel-mota-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Miguel Mota",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.7,
+       "max": 5,
+       "aantal": 164,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/miguel-mota-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2026-07-07"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "164 RealSelf reviews, average 4.7, newest review July 2026. Listed in the SODOCIPRE member list.",
+      "nl": "164 reviews op RealSelf, gemiddeld 4,7, nieuwste review juli 2026. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "164 Bewertungen auf RealSelf, Schnitt 4,7, neueste Bewertung Juli 2026. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "leon",
+     "naam": "Dr. José León",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "José León",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/jose-leon-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "José León",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/dominican%20republic/?page=2"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 160,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/jose-leon-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2024-11-18"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "160 RealSelf reviews, average 4.9, newest review November 2024. Listed in the SODOCIPRE member list and an international member of ASPS.",
+      "nl": "160 reviews op RealSelf, gemiddeld 4,9, nieuwste review november 2024. Staat in de ledenlijst van SODOCIPRE en is internationaal lid van ASPS.",
+      "de": "160 Bewertungen auf RealSelf, Schnitt 4,9, neueste Bewertung November 2024. Steht in der Mitgliederliste der SODOCIPRE und ist internationales Mitglied der ASPS."
+     }
+    },
+    {
+     "id": "tactuk",
+     "naam": "Cirugía Plástica del Caribe (Dr. Luis Tactuk Simó)",
+     "stad": "Santo Domingo",
+     "site": "http://www.plastica.com.do/en",
+     "artsen": [
+      {
+       "naam": "Luis Tactuk Simó",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/luis-tactuk-simo-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Luis Tactuk Simó",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 148,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/luis-tactuk-simo-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2024-07-31"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "148 RealSelf reviews, average 4.9, newest review July 2024. Listed in the SODOCIPRE member list.",
+      "nl": "148 reviews op RealSelf, gemiddeld 4,9, nieuwste review juli 2024. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "148 Bewertungen auf RealSelf, Schnitt 4,9, neueste Bewertung Juli 2024. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "disla",
+     "naam": "Dr. Cynthia Disla",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Cynthia Disla",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/cynthia-disla-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Cynthia Disla",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 3.9,
+       "max": 5,
+       "aantal": 128,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "account suspended on RealSelf",
+       "bron": "https://www.realself.com/dr/cynthia-disla-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2024-04-01"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "128 RealSelf reviews, average 3.9, newest review April 2024. Listed in the SODOCIPRE member list. RealSelf shows her account as suspended, without giving a reason.",
+      "nl": "128 reviews op RealSelf, gemiddeld 3,9, nieuwste review april 2024. Staat in de ledenlijst van SODOCIPRE. RealSelf toont haar account als geschorst, zonder reden.",
+      "de": "128 Bewertungen auf RealSelf, Schnitt 3,9, neueste Bewertung April 2024. Steht in der Mitgliederliste der SODOCIPRE. RealSelf zeigt ihr Konto als gesperrt, ohne Grund."
+     }
+    },
+    {
+     "id": "giudicelli",
+     "naam": "Dr. Jean Paul Giudicelli Saba (CECIP)",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Jean Paul Giudicelli Saba",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/jean-paul-giudicelli-saba-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Jean Paul Giudicelli Saba",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/dominican%20republic/?page=2"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.7,
+       "max": 5,
+       "aantal": 119,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/jean-paul-giudicelli-saba-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2025-09-24"
+      }
+     ],
+     "vermeld": [
+      "https://elnuevodiario.com.do/cirujanos-plasticos-saludan-medidas-del-ministerio-salud-publica/"
+     ],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "119 RealSelf reviews, average 4.7, newest review September 2025. Listed in the SODOCIPRE member list and an international member of ASPS. Named in El Nuevo Diario in 2017 when SODOCIPRE backed clinic closures by the health ministry.",
+      "nl": "119 reviews op RealSelf, gemiddeld 4,7, nieuwste review september 2025. Staat in de ledenlijst van SODOCIPRE en is internationaal lid van ASPS. Genoemd in El Nuevo Diario in 2017, toen SODOCIPRE sluitingen van klinieken door het ministerie steunde.",
+      "de": "119 Bewertungen auf RealSelf, Schnitt 4,7, neueste Bewertung September 2025. Steht in der Mitgliederliste der SODOCIPRE und ist internationales Mitglied der ASPS. 2017 in El Nuevo Diario genannt, als SODOCIPRE Klinikschließungen durch das Ministerium unterstützte."
+     }
+    },
+    {
+     "id": "rodrigueztavarez",
+     "naam": "Dr. Alexandrish Rodríguez Tavárez (CECILIP)",
+     "stad": "Santo Domingo",
+     "site": "https://alexandrishkarvendrish.com/",
+     "artsen": [
+      {
+       "naam": "Alexandrish Rodríguez Tavárez",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/alexandrish-karve-santo-domingo-distrito-nacional-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Alexandrish Rodríguez Tavárez",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/dominican%20republic/?page=3"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 110,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/alexandrish-karve-santo-domingo-distrito-nacional-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2026-08-14"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "110 RealSelf reviews, average 4.9, newest review August 2026. Listed in the SODOCIPRE member list and an international member of ASPS.",
+      "nl": "110 reviews op RealSelf, gemiddeld 4,9, nieuwste review augustus 2026. Staat in de ledenlijst van SODOCIPRE en is internationaal lid van ASPS.",
+      "de": "110 Bewertungen auf RealSelf, Schnitt 4,9, neueste Bewertung August 2026. Steht in der Mitgliederliste der SODOCIPRE und ist internationales Mitglied der ASPS."
+     }
+    },
+    {
+     "id": "guzman",
+     "naam": "Dr. Massiel Guzmán Reyes (Plastimedic)",
+     "stad": "Santo Domingo",
+     "site": "http://massielguzman.com/",
+     "artsen": [
+      {
+       "naam": "Massiel Guzmán Reyes",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/massiel-guzm-n-reyes-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Massiel Guzmán Reyes",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/dominican%20republic"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 105,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/massiel-guzm-n-reyes-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2026-06-12"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "105 RealSelf reviews, average 5.0, newest review June 2026. Listed in the SODOCIPRE member list and an international member of ASPS.",
+      "nl": "105 reviews op RealSelf, gemiddeld 5,0, nieuwste review juni 2026. Staat in de ledenlijst van SODOCIPRE en is internationaal lid van ASPS.",
+      "de": "105 Bewertungen auf RealSelf, Schnitt 5,0, neueste Bewertung Juni 2026. Steht in der Mitgliederliste der SODOCIPRE und ist internationales Mitglied der ASPS."
+     }
+    },
+    {
+     "id": "sesto",
+     "naam": "Dr. Adolfo Sesto",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Adolfo Sesto",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/adolfo-sesto-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Adolfo Sesto",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/dominican%20republic/?page=3"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 97,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/adolfo-sesto-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2021-11-07"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "97 RealSelf reviews, average 4.9, newest review November 2021. Listed in the SODOCIPRE member list and an international member of ASPS.",
+      "nl": "97 reviews op RealSelf, gemiddeld 4,9, nieuwste review november 2021. Staat in de ledenlijst van SODOCIPRE en is internationaal lid van ASPS.",
+      "de": "97 Bewertungen auf RealSelf, Schnitt 4,9, neueste Bewertung November 2021. Steht in der Mitgliederliste der SODOCIPRE und ist internationales Mitglied der ASPS."
+     }
+    },
+    {
+     "id": "eusebio",
+     "naam": "Dr. Kelvin Eusebio",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Kelvin Eusebio",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/kelvin-eusebio-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Kelvin Eusebio",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.6,
+       "max": 5,
+       "aantal": 80,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/kelvin-eusebio-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2022-12-16"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "80 RealSelf reviews, average 4.6, newest review December 2022. Listed in the SODOCIPRE member list.",
+      "nl": "80 reviews op RealSelf, gemiddeld 4,6, nieuwste review december 2022. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "80 Bewertungen auf RealSelf, Schnitt 4,6, neueste Bewertung Dezember 2022. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "rosario",
+     "naam": "Dr. Francisco Rodríguez Rosario",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Francisco Rodríguez Rosario",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/francisco-rodriguez-rosario-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Francisco Rodríguez Rosario",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.2,
+       "max": 5,
+       "aantal": 79,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/francisco-rodriguez-rosario-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2023-10-04"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "79 RealSelf reviews, average 4.2, newest review October 2023. Listed in the SODOCIPRE member list.",
+      "nl": "79 reviews op RealSelf, gemiddeld 4,2, nieuwste review oktober 2023. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "79 Bewertungen auf RealSelf, Schnitt 4,2, neueste Bewertung Oktober 2023. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "cruz",
+     "naam": "Dr. Geuris Cruz Quiroz (CECIP)",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Geuris Cruz Quiroz",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/geuris-cruz-quiroz-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Geuris Cruz Quiroz",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 74,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/geuris-cruz-quiroz-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2025-07-26"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "74 RealSelf reviews, average 4.8, newest review July 2025. Listed in the SODOCIPRE member list.",
+      "nl": "74 reviews op RealSelf, gemiddeld 4,8, nieuwste review juli 2025. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "74 Bewertungen auf RealSelf, Schnitt 4,8, neueste Bewertung Juli 2025. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "ventura",
+     "naam": "Dr. Ricardo Ventura",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Ricardo Ventura",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/ricardo-ventura-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Ricardo Ventura",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 63,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/ricardo-ventura-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2020-01-24"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "63 RealSelf reviews, average 4.8, newest review January 2020. Listed in the SODOCIPRE member list.",
+      "nl": "63 reviews op RealSelf, gemiddeld 4,8, nieuwste review januari 2020. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "63 Bewertungen auf RealSelf, Schnitt 4,8, neueste Bewertung Januar 2020. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "estevez",
+     "naam": "Dr. Rafael E. Estévez Hernández",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Rafael E. Estévez Hernández",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/rafael-e-estevez-hernandez-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Rafael E. Estévez Hernández",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/",
+      "asps": true,
+      "asps_bron": "https://www.plasticsurgery.org/for-medical-professionals/join-asps/international/membership-anniversaries",
+      "isaps": true,
+      "isaps_bron": "https://www.isaps.org/discover/about-isaps/who-we-are/committees/social-media-working-group/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 45,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/rafael-e-estevez-hernandez-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2022-01-27"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "45 RealSelf reviews, average 4.8, newest review January 2022. Listed in the SODOCIPRE member list and an international member of ASPS and a member of ISAPS. The only one of these surgeons we could confirm as an ISAPS member.",
+      "nl": "45 reviews op RealSelf, gemiddeld 4,8, nieuwste review januari 2022. Staat in de ledenlijst van SODOCIPRE en is internationaal lid van ASPS en lid van ISAPS. De enige van deze chirurgen van wie we ISAPS-lidmaatschap konden bevestigen.",
+      "de": "45 Bewertungen auf RealSelf, Schnitt 4,8, neueste Bewertung Januar 2022. Steht in der Mitgliederliste der SODOCIPRE und ist internationales Mitglied der ASPS und Mitglied der ISAPS. Der einzige dieser Chirurgen, dessen ISAPS-Mitgliedschaft wir bestätigen konnten."
+     }
+    },
+    {
+     "id": "lopezcollado",
+     "naam": "Dr. Carlos López Collado",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Carlos López Collado",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/carlos-lopez-collado-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Carlos López Collado",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/dominican%20republic/?page=2"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 38,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/carlos-lopez-collado-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2021-02-26"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "38 RealSelf reviews, average 5.0, newest review February 2021. Listed in the SODOCIPRE member list and an international member of ASPS.",
+      "nl": "38 reviews op RealSelf, gemiddeld 5,0, nieuwste review februari 2021. Staat in de ledenlijst van SODOCIPRE en is internationaal lid van ASPS.",
+      "de": "38 Bewertungen auf RealSelf, Schnitt 5,0, neueste Bewertung Februar 2021. Steht in der Mitgliederliste der SODOCIPRE und ist internationales Mitglied der ASPS."
+     }
+    },
+    {
+     "id": "rubio",
+     "naam": "Dr. Nelson Rubio",
+     "stad": "Santiago",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Nelson Rubio",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/nelson-rubio-santiago-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Nelson Rubio",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.0,
+       "max": 5,
+       "aantal": 31,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/nelson-rubio-santiago-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2021-04-03"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "31 RealSelf reviews, average 4.0, newest review April 2021. Listed in the SODOCIPRE member list.",
+      "nl": "31 reviews op RealSelf, gemiddeld 4,0, nieuwste review april 2021. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "31 Bewertungen auf RealSelf, Schnitt 4,0, neueste Bewertung April 2021. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "hungria",
+     "naam": "Dr. José Hungría",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "José Hungría",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/jose-hungria-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "José Hungría",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.6,
+       "max": 5,
+       "aantal": 30,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "account suspended on RealSelf",
+       "bron": "https://www.realself.com/dr/jose-hungria-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2019-06-18"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "30 RealSelf reviews, average 4.6, newest review June 2019. Listed in the SODOCIPRE member list. RealSelf shows his account as suspended, without giving a reason.",
+      "nl": "30 reviews op RealSelf, gemiddeld 4,6, nieuwste review juni 2019. Staat in de ledenlijst van SODOCIPRE. RealSelf toont zijn account als geschorst, zonder reden.",
+      "de": "30 Bewertungen auf RealSelf, Schnitt 4,6, neueste Bewertung Juni 2019. Steht in der Mitgliederliste der SODOCIPRE. RealSelf zeigt sein Konto als gesperrt, ohne Grund."
+     }
+    },
+    {
+     "id": "espinal",
+     "naam": "Dr. Pedro Espinal",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Pedro Espinal",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/pedro-espinal-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Pedro Espinal",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.6,
+       "max": 5,
+       "aantal": 30,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "account suspended on RealSelf",
+       "bron": "https://www.realself.com/dr/pedro-espinal-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2018-04-07"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "30 RealSelf reviews, average 4.6, newest review April 2018. Listed in the SODOCIPRE member list. RealSelf shows his account as suspended, without giving a reason.",
+      "nl": "30 reviews op RealSelf, gemiddeld 4,6, nieuwste review april 2018. Staat in de ledenlijst van SODOCIPRE. RealSelf toont zijn account als geschorst, zonder reden.",
+      "de": "30 Bewertungen auf RealSelf, Schnitt 4,6, neueste Bewertung April 2018. Steht in der Mitgliederliste der SODOCIPRE. RealSelf zeigt sein Konto als gesperrt, ohne Grund."
+     }
+    },
+    {
+     "id": "redondo",
+     "naam": "Dr. Luis E. Redondo",
+     "stad": "Puerto Plata",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Luis E. Redondo",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/luis-eduardo-redondo-puerto-plata-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Luis E. Redondo",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 29,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/luis-eduardo-redondo-puerto-plata-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2022-06-20"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "29 RealSelf reviews, average 4.8, newest review June 2022. Listed in the SODOCIPRE member list.",
+      "nl": "29 reviews op RealSelf, gemiddeld 4,8, nieuwste review juni 2022. Staat in de ledenlijst van SODOCIPRE.",
+      "de": "29 Bewertungen auf RealSelf, Schnitt 4,8, neueste Bewertung Juni 2022. Steht in der Mitgliederliste der SODOCIPRE."
+     }
+    },
+    {
+     "id": "acosta",
+     "naam": "Dr. José Luis Acosta Collado",
+     "stad": "Santo Domingo",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "José Luis Acosta Collado",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/jose-luis-acosta-collado-santo-domingo-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "José Luis Acosta Collado",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/dominican%20republic"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 29,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/jose-luis-acosta-collado-santo-domingo-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2017-05-14"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "29 RealSelf reviews, average 5.0, newest review May 2017. Listed in the SODOCIPRE member list and an international member of ASPS.",
+      "nl": "29 reviews op RealSelf, gemiddeld 5,0, nieuwste review mei 2017. Staat in de ledenlijst van SODOCIPRE en is internationaal lid van ASPS.",
+      "de": "29 Bewertungen auf RealSelf, Schnitt 5,0, neueste Bewertung Mai 2017. Steht in der Mitgliederliste der SODOCIPRE und ist internationales Mitglied der ASPS."
+     }
+    },
+    {
+     "id": "escobar",
+     "naam": "Dr. Rodrigo Escobar Jaramillo",
+     "stad": "Santiago",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Rodrigo Escobar Jaramillo",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/rodrigo-escobar-jaramillo-santiago-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Rodrigo Escobar Jaramillo",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/dominican%20republic"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 26,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/rodrigo-escobar-jaramillo-santiago-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2024-06-15"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "26 RealSelf reviews, average 4.9, newest review June 2024. Listed in the SODOCIPRE member list and an international member of ASPS.",
+      "nl": "26 reviews op RealSelf, gemiddeld 4,9, nieuwste review juni 2024. Staat in de ledenlijst van SODOCIPRE en is internationaal lid van ASPS.",
+      "de": "26 Bewertungen auf RealSelf, Schnitt 4,9, neueste Bewertung Juni 2024. Steht in der Mitgliederliste der SODOCIPRE und ist internationales Mitglied der ASPS."
+     }
+    },
+    {
+     "id": "baez",
+     "naam": "Dr. Javier Báez Anglés",
+     "stad": "Santiago",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Javier Báez Anglés",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/javier-baez-angles-santiago-dominican-republic"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Javier Báez Anglés",
+      "board": true,
+      "board_bron": "https://sodocipre.net/cirujanos-plasticos-miembros-de-sodocipre/"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.2,
+       "max": 5,
+       "aantal": 16,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "account suspended on RealSelf",
+       "bron": "https://www.realself.com/dr/javier-baez-angles-santiago-dominican-republic",
+       "datum": "2026-11-17",
+       "laatste": "2023-02-21"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "16 RealSelf reviews, average 4.2, newest review February 2023. Listed in the SODOCIPRE member list. RealSelf shows his account as suspended, without giving a reason.",
+      "nl": "16 reviews op RealSelf, gemiddeld 4,2, nieuwste review februari 2023. Staat in de ledenlijst van SODOCIPRE. RealSelf toont zijn account als geschorst, zonder reden.",
+      "de": "16 Bewertungen auf RealSelf, Schnitt 4,2, neueste Bewertung Februar 2023. Steht in der Mitgliederliste der SODOCIPRE. RealSelf zeigt sein Konto als gesperrt, ohne Grund."
+     }
+    }
+   ],
+   "niet_gerangschikt": [
+    {
+     "naam": "CIPLA, Centro Internacional de Cirugía Plástica Avanzada (Santo Domingo)",
+     "reden": "not ranked: the health ministry closed it temporarily in July 2017 after a CDC report of infections, and again in May 2019 after a patient died",
+     "bron": "https://www.diariolibre.com/actualidad/salud/las-clinicas-de-esteticas-cerradas-en-2019-por-muerte-de-pacientes-e-irregularidades-HM15808582"
+    },
+    {
+     "naam": "Clideme (Santo Domingo)",
+     "reden": "not ranked: the health ministry closed its operating rooms in April 2026 after a patient died; it had also been closed in February 2019 for operating without a licence",
+     "bron": "https://zolfm.com/noticia/salud-clausura-quirofanos-de-clinica-tras-muerte-de-paciente"
+    }
+   ],
+   "tekst": {
+    "en": {
+     "title": "Best BBL and tummy tuck surgeons Dominican Republic 2026",
+     "h1": "The best BBL and tummy tuck surgeons in the Dominican Republic, ranked on public data",
+     "desc": "33 plastic surgeons in Santo Domingo and Santiago checked on reviews, SODOCIPRE, ASPS and ISAPS membership and reported risks. Every fact has a source.",
+     "kort": "On public data checked on 17 November 2026, Dr. Massiel Guzmán Reyes (105 RealSelf reviews, average 5.0), Dr. Carlos López Collado (38, average 5.0) and Dr. José Luis Acosta Collado (29, average 5.0, newest review 2017) have the highest review index of 33 surgeons; all three are in the SODOCIPRE member list and international members of ASPS. Every surgeon we checked is in the SODOCIPRE list. Five have a suspended RealSelf account and are not ranked, among them Dr. Yily De Los Santos with the most reviews (2,037). We could not read the surgeons' own websites, so price and who operates are not shown yet. The CDC counted 93 US citizens who died after cosmetic surgery in the Dominican Republic from 2009 to 2022.",
+     "faq": [
+      {
+       "q": "Who is the best BBL surgeon in the Dominican Republic?",
+       "a": "On our data from 17 November 2026, Dr. Massiel Guzmán Reyes has the highest review index: 105 RealSelf reviews with an average of 5.0, SODOCIPRE membership and international ASPS membership. Dr. Carlos López Collado and Dr. José Luis Acosta Collado follow with fewer reviews (38 and 29)."
+      },
+      {
+       "q": "How do I check a plastic surgeon in the Dominican Republic?",
+       "a": "Look the surgeon up in the SODOCIPRE member list on sodocipre.net, check the medical licence (exequatur) with the health ministry and check that the clinic is licensed (habilitada). Since 2019 the ministry allows no more than two major procedures in one operation."
+      },
+      {
+       "q": "Is a BBL in the Dominican Republic safe?",
+       "a": "The CDC counted 93 US citizens who died after cosmetic surgery there between 2009 and 2022. The health ministry closed 501 health and beauty centres from 2024 to April 2026. Choose a SODOCIPRE member and a licensed clinic."
+      },
+      {
+       "q": "Do clinics pay to be listed?",
+       "a": "No. No clinic pays to be listed or ranked, and paid articles, agents and directories with paid placements do not count as a source."
+      }
+     ]
+    },
+    "nl": {
+     "title": "Beste BBL en buikwandcorrectie Dominicaanse Republiek",
+     "h1": "De beste chirurgen voor BBL en buikwandcorrectie in de Dominicaanse Republiek, op openbare data",
+     "desc": "33 plastisch chirurgen in Santo Domingo en Santiago nagekeken op reviews, lidmaatschap van SODOCIPRE, ASPS en ISAPS en gemelde risico's. Elk feit met bron.",
+     "kort": "Op openbare data van 17 november 2026 hebben Dr. Massiel Guzmán Reyes (105 reviews op RealSelf, gemiddeld 5,0), Dr. Carlos López Collado (38, gemiddeld 5,0) en Dr. José Luis Acosta Collado (29, gemiddeld 5,0, nieuwste review uit 2017) de hoogste review-index van 33 chirurgen; alle drie staan in de ledenlijst van SODOCIPRE en zijn internationaal lid van ASPS. Elke chirurg die we nakeken staat in de SODOCIPRE-lijst. Vijf hebben een geschorst account op RealSelf en krijgen geen plek, onder wie Dr. Yily De Los Santos met de meeste reviews (2.037). De eigen sites van de chirurgen konden we niet lezen, dus prijs en wie opereert staan er nog niet bij. De CDC telde 93 Amerikanen die tussen 2009 en 2022 overleden na cosmetische chirurgie in de Dominicaanse Republiek.",
+     "faq": [
+      {
+       "q": "Wie is de beste BBL-chirurg in de Dominicaanse Republiek?",
+       "a": "Op onze data van 17 november 2026 heeft Dr. Massiel Guzmán Reyes de hoogste review-index: 105 reviews op RealSelf met gemiddeld 5,0, lid van SODOCIPRE en internationaal lid van ASPS. Dr. Carlos López Collado en Dr. José Luis Acosta Collado volgen met minder reviews (38 en 29)."
+      },
+      {
+       "q": "Hoe controleer ik een plastisch chirurg in de Dominicaanse Republiek?",
+       "a": "Zoek de chirurg op in de ledenlijst van SODOCIPRE op sodocipre.net, controleer de artsenvergunning (exequatur) bij het ministerie van Volksgezondheid en of de kliniek een vergunning heeft (habilitada). Sinds 2019 mogen er hoogstens twee grote ingrepen in één operatie."
+      },
+      {
+       "q": "Is een BBL in de Dominicaanse Republiek veilig?",
+       "a": "De CDC telde 93 Amerikanen die daar tussen 2009 en 2022 overleden na cosmetische chirurgie. Het ministerie sloot van 2024 tot april 2026 501 zorg- en schoonheidscentra. Kies een lid van SODOCIPRE en een kliniek met vergunning."
+      },
+      {
+       "q": "Betalen klinieken voor een plek?",
+       "a": "Nee. Geen kliniek betaalt voor een vermelding of een plek, en betaalde artikelen, bemiddelaars en gidsen met betaalde plaatsingen tellen niet als bron."
+      }
+     ]
+    },
+    "de": {
+     "title": "Beste BBL und Bauchstraffung Dominikanische Republik",
+     "h1": "Die besten Chirurgen für BBL und Bauchdeckenstraffung in der Dominikanischen Republik, nach öffentlichen Daten",
+     "desc": "33 plastische Chirurgen in Santo Domingo und Santiago geprüft: Bewertungen, Mitgliedschaft in SODOCIPRE, ASPS und ISAPS, Risiken. Jede Angabe mit Quelle.",
+     "kort": "Nach öffentlichen Daten vom 17. November 2026 haben Dr. Massiel Guzmán Reyes (105 Bewertungen auf RealSelf, Schnitt 5,0), Dr. Carlos López Collado (38, Schnitt 5,0) und Dr. José Luis Acosta Collado (29, Schnitt 5,0, neueste Bewertung von 2017) den höchsten Bewertungsindex von 33 Chirurgen; alle drei stehen in der Mitgliederliste der SODOCIPRE und sind internationale Mitglieder der ASPS. Jeder geprüfte Chirurg steht in der SODOCIPRE-Liste. Fünf haben ein gesperrtes RealSelf-Konto und bekommen keinen Platz, darunter Dr. Yily De Los Santos mit den meisten Bewertungen (2.037). Die eigenen Websites der Chirurgen konnten wir nicht lesen, Preis und wer operiert fehlen daher noch. Die CDC zählte 93 US-Bürger, die von 2009 bis 2022 nach Schönheitsoperationen in der Dominikanischen Republik starben.",
+     "faq": [
+      {
+       "q": "Wer ist der beste BBL-Chirurg in der Dominikanischen Republik?",
+       "a": "Nach unseren Daten vom 17. November 2026 hat Dr. Massiel Guzmán Reyes den höchsten Bewertungsindex: 105 Bewertungen auf RealSelf mit Schnitt 5,0, Mitglied der SODOCIPRE und internationales Mitglied der ASPS. Dr. Carlos López Collado und Dr. José Luis Acosta Collado folgen mit weniger Bewertungen (38 und 29)."
+      },
+      {
+       "q": "Wie prüfe ich einen plastischen Chirurgen in der Dominikanischen Republik?",
+       "a": "Suchen Sie den Chirurgen in der Mitgliederliste der SODOCIPRE auf sodocipre.net, prüfen Sie die Approbation (Exequatur) beim Gesundheitsministerium und ob die Klinik zugelassen ist (habilitada). Seit 2019 sind höchstens zwei große Eingriffe in einer Operation erlaubt."
+      },
+      {
+       "q": "Ist ein BBL in der Dominikanischen Republik sicher?",
+       "a": "Die CDC zählte 93 US-Bürger, die dort von 2009 bis 2022 nach Schönheitsoperationen starben. Das Ministerium schloss von 2024 bis April 2026 501 Gesundheits- und Schönheitszentren. Wählen Sie ein SODOCIPRE-Mitglied und eine zugelassene Klinik."
+      },
+      {
+       "q": "Zahlen Kliniken für einen Platz?",
+       "a": "Nein. Keine Klinik zahlt für einen Eintrag oder Platz, und bezahlte Artikel, Vermittler und Verzeichnisse mit bezahlten Plätzen zählen nicht als Quelle."
+      }
+     ]
+    }
+   }
   }
  }
 }

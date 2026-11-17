@@ -1,0 +1,1523 @@
+{
+ "gecontroleerd": "2026-11-17",
+ "toelichting": "Kandidaten vooral uit RealSelf-artsenlijsten (Santo Domingo: BBL, tummy tuck, liposuctie, tummy tuck revision, butt augmentation, Lipo 360; La Esperilla BBL; Santiago: BBL en tummy tuck; land: Lipo 360 BBL) en de ASPS-zoekgids (country/dominican republic, pagina 1 tot 3). RealSelf toont per lijst alleen de eerste 15 van 63 tot 88 artsen; ?page=2 en 3 gaven dezelfde 15 in andere volgorde, dus de staart is via andere lijsten en ASPS aangevuld. Geen enkele vermelding staat als SPONSORED; Mallol Cotes en Cruz Quiroz hebben een OFFER-tag in de lijst; RealSelf Pro/Spotlight staat per profiel in de toelichting. Opvallend: het profiel met de meeste reviews (Yily De Los Santos, 2.037) staat op RealSelf als 'Account Suspended'. Veel praktijken draaien rond een paar centra: CECIP (Hernandez Pizzoglio, Giudicelli Saba, Cruz Quiroz), CECILIP (Mejia, Rodriguez Tavarez, Peralta), Plastimedic (Ulerio, Guzman Reyes). Onafhankelijk nieuws over individuele chirurgen is schaars; de Dominicaanse pers schrijft vooral over sluitingen en doden in niet-erkende klinieken. Reddit gaf via de zoekmachine geen draadjes met namen; het RealSelf-forum (jan 2026) ook niet. Punta Cana heeft op RealSelf geen BBL/tummy tuck-artsen die we konden lezen. Achtergrond (alleen kop gezien): CBS meldt volgens CDC 93 Amerikanen overleden na cosmetische chirurgie in de DR over 14 jaar (https://www.cbsnews.com/amp/news/americans-died-cosmetic-surgery-dominican-republic-cdc); SODOCIPRE-voorzitter Sergio Guzman Padilla noemt circa 40.000 buitenlandse patienten in 2022 (https://dominicantoday.com/dr/local/2024/01/27/foreigners-outnumber-dominicans-in-requests-for-plastic-surgery-in-the-dominican-republic/). Reviewcijfers van 17 nov 2026; lijst en profiel verschillen soms 1 tot 2.",
+ "niet_bereikbaar": [
+  {
+   "url": "https://www.realself.com/find/Dominican-Republic/Tummy-Tuck",
+   "waarom": "Toestemming voor de URL kwam niet op tijd; gedekt via Santo Domingo/Tummy-Tuck en Santiago/Tummy-Tuck."
+  },
+  {
+   "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Mommy-Makeover",
+   "waarom": "Site gaf een fout (client_error)."
+  },
+  {
+   "url": "https://www.realself.com/find/Dominican-Republic/Punta-Cana/Plastic-Surgeon",
+   "waarom": "Site gaf een fout (client_error); de Punta Cana-overzichtspagina toont geen artsen."
+  },
+  {
+   "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift?page=2",
+   "waarom": "Paginering werkt niet voor de lezer: steeds dezelfde 15 van 84 tot 85 artsen."
+  },
+  {
+   "url": "https://find.plasticsurgery.org/country/dominican republic/?page=4",
+   "waarom": "Pagina 4 en 5 tonen opnieuw de lijst van pagina 1; geen individuele profiel-URL's."
+  },
+  {
+   "url": "https://www.cdn.com.do/2019/05/10/doctor-hector-cabral-esta-suspendido-la-sociedad-dominicana-cirugia-plastica-desde-2015/",
+   "waarom": "robots.txt verbiedt ophalen; zelfde feit gelezen bij El Nuevo Diario."
+  },
+  {
+   "url": "https://www.elcaribe.com.do/panorama/salud/dr-plaza-adviertes-sobre-riesgos-del-intrusismo-y-defiende-la-formacion-especializada-en-cirugia-estetica/",
+   "waarom": "Site gaf een fout (client_error)."
+  },
+  {
+   "url": "reddit.com",
+   "waarom": "Zoekmachine gaf geen Reddit-draadjes over DR-chirurgen met namen."
+  }
+ ],
+ "bewust_niet_of_let_op": [
+  {
+   "naam": "Hector Cabral / CIPLA (Centro Internacional de Cirugia Plastica Avanzada, La Esperilla)",
+   "reden": "SODOCIPRE meldde in mei 2019 dat Cabral sinds 2015 als lid geschorst is; hij werd aangeklaagd na het overlijden van een patiente (51) bij CIPLA. Salud Publica sloot CIPLA in mei 2019 (verlopen medicijnen, 12 operatiekamers bij vergunning voor 6). Veel RealSelf-verslagen noemen Dr. Cabral; niet opgenomen.",
+   "bron": "https://elnuevodiario.com.do/revelan-cirujano-hector-cabral-acusado-de-mala-practica-esta-suspendido-desde-2015/"
+  },
+  {
+   "naam": "Yily De Los Santos",
+   "reden": "Wel opgenomen als kandidaat, maar haar RealSelf-profiel (2.037 reviews) staat als 'Account Suspended' en neemt geen consulten aan; reden niet vermeld. Veel van haar pers lijkt verspreide persberichten.",
+   "bron": "https://www.realself.com/dr/yily-de-los-santos-santo-domingo-dominican-republic"
+  },
+  {
+   "naam": "Clinica Ureña Arias (Villa Mella) en arts Felix Almanzar",
+   "reden": "Drie vrouwen overleden binnen 30 dagen na ingrepen (2019, o.a. na lipo en tummy tuck); kliniek gesloten. Fox noemt de arts 'reportedly not a licensed surgeon'. Geen verband met de kandidaat Gustavo of Ignacio Almanzar bekend.",
+   "bron": "https://www.foxnews.com/health/plastic-surgeon-dominican-republic-deaths"
+  },
+  {
+   "naam": "Oscar Polanco",
+   "reden": "Gynaecoloog, geen plastisch chirurg; genoemd bij overlijden van een Amerikaanse patient (2019) en volgens de familie bij het overlijden in Clinica Diosa, Santiago (maart 2026). Salud Publica sloot Diosa definitief.",
+   "bron": "https://acento.com.do/actualidad/tres-muertes-en-cuatro-meses-tras-cirugias-esteticas-la-busqueda-de-belleza-entre-irregularidades-antecedentes-y-falta-de-control-9728778.html"
+  },
+  {
+   "naam": "Clideme (Mirador Sur) en arts Jose del Carmen Desena Montero",
+   "reden": "Patiente (27) overleed april 2026 na meerdere ingrepen; Salud Publica sloot het chirurgische deel. Kliniek ook in 2019 gesloten.",
+   "bron": "https://acento.com.do/actualidad/tres-muertes-en-cuatro-meses-tras-cirugias-esteticas-la-busqueda-de-belleza-entre-irregularidades-antecedentes-y-falta-de-control-9728778.html"
+  },
+  {
+   "naam": "Clinica de Obesidad y Antienvejecimiento Dra. Griselda Basora (Santo Domingo Este)",
+   "reden": "Patiente (28) overleed na abdominoplastiek (juli 2026) door een man zonder medische titel; Salud Publica noemde het clandestien en sloot definitief.",
+   "bron": "https://acento.com.do/actualidad/tres-muertes-en-cuatro-meses-tras-cirugias-esteticas-la-busqueda-de-belleza-entre-irregularidades-antecedentes-y-falta-de-control-9728778.html"
+  },
+  {
+   "naam": "Cemekar Class (Santo Domingo Este) en Andino Grullon",
+   "reden": "Gesloten door Salud Publica op 14 jan 2025 na klachten; eigenaar zonder exequatur; SODOCIPRE zegt dat Grullon geen lid is.",
+   "bron": "https://diariolibre.com/actualidad/salud/2025/01/14/salud-publica-cierra-clinica-estetica-cemekar-class/2967661"
+  },
+  {
+   "naam": "Clinica Caribbean Plastic Surgery (Arroyo Hondo II), Clinica Dr. Escano (Gascue), Dermo Stetic Laser, Siluet Estetic, Centro Medico Monumental",
+   "reden": "In 2019 door Salud Publica gesloten, meeste na overlijden van patienten (o.a. een Amerikaanse vrouw bij Dr. Escano) of zonder vergunning voor cosmetische chirurgie.",
+   "bron": "https://www.diariolibre.com/actualidad/salud/las-clinicas-de-esteticas-cerradas-en-2019-por-muerte-de-pacientes-e-irregularidades-HM15808582"
+  },
+  {
+   "naam": "Clinica Brazil (Paseo de los Locutores 62) en Johan Tapia Bueno",
+   "reden": "Gesloten en arts gearresteerd (nov 2009) na klachten van vier vrouwen; geen bewezen chirurgentitel, geen SODOCIPRE-lid.",
+   "bron": "https://www.diariolibre.com/actualidad/clinic-closed-and-surgeon-arrested-for-malpractice-MIDL224822"
+  },
+  {
+   "naam": "Kenneth Schimensky (Cirugia Inteligente)",
+   "reden": "Geen let op over de arts zelf (oud-voorzitter SODOCIPRE), maar niet opgenomen: maar 4 RealSelf-reviews en geen BBL/tummy tuck-lijst.",
+   "bron": "https://www.realself.com/dr/kenneth-schimensky-santo-domingo-dominican-republic"
+  }
+ ],
+ "klinieken": [
+  {
+   "naam": "Dr. Emmanuel Mallol Cotes (drmallol.com)",
+   "stad": "Santo Domingo",
+   "site": "https://drmallol.com/",
+   "site_bron": "https://www.realself.com/dr/emmanuel-mallol-cotes-santo-domingo-dominican-republic",
+   "chirurgen": [
+    {
+     "naam": "Emmanuel Mallol Cotes",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg; RealSelf noemt opleiding en fellowship in Brazilie en lidmaatschap SODOCIPRE",
+     "bron": "https://www.realself.com/dr/emmanuel-mallol-cotes-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "CEGINEST Surgical Center",
+   "ziekenhuis_bron": "https://www.realself.com/dr/emmanuel-mallol-cotes-santo-domingo-dominican-republic",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/emmanuel-mallol-cotes-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,7 sterren uit 1.287 reviews; RealSelf Pro; eigen site drmallol.com; operatieprivileges CEGINEST Surgical Center. In de lijsten staat een OFFER (tummy tuck, lipo + BBL), geen SPONSORED-label."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Emmanuel Mallol Cotes staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Emmanuel Mallol Cotes staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Liposuction",
+     "soort": "realself",
+     "wat": "Emmanuel Mallol Cotes staat in de RealSelf-artsenlijst liposuctie Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Emmanuel Mallol Cotes staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Emmanuel Mallol Cotes staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Emmanuel Mallol Cotes staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://eldia.com.do/hay-que-disminuir-los-riesgos-cirugia-plastica/",
+     "soort": "nieuws",
+     "wat": "El Dia (7 okt 2014) interviewt Mallol Cotes over risico's bij lichaamscontouren (roken, bloeddruk, leeftijd); noemt hem eerste Dominicaanse afgestudeerde van de dienst Ewaldo Bolivar de Souza Pinto (Unisanta, Sao Paulo)."
+    },
+    {
+     "url": "https://www.realself.com/review/dominican-republic-liposculpture-time-dr-mallol-hoping-results-time",
+     "soort": "realself",
+     "wat": "Patientverslag over liposculptuur bij Mallol (titel)."
+    },
+    {
+     "url": "https://www.whatclinic.com/cosmetic-plastic-surgery/dominican-republic/santo-domingo/dr-emmanuel-mallol-cotes",
+     "soort": "betaald/makelaar",
+     "wat": "Vermelding bij WhatClinic."
+    },
+    {
+     "url": "https://us-uk.bookimed.com/clinic/dr-emmanuel-mallol/",
+     "soort": "betaald/makelaar",
+     "wat": "Profiel bij bemiddelaar Bookimed."
+    }
+   ]
+  },
+  {
+   "naam": "Dra. Yily De Los Santos (Yily Plastica)",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Yily De Los Santos",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf)",
+     "bron": "https://www.realself.com/dr/yily-de-los-santos-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/yily-de-los-santos-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,3 sterren uit 2.037 reviews (meeste reviews van het land), maar het profiel staat als 'Account Suspended' en neemt geen consulten via RealSelf aan; geen site of kliniek vermeld."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Yily De Los Santos staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Liposuction",
+     "soort": "realself",
+     "wat": "Yily De Los Santos staat in de RealSelf-artsenlijst liposuctie Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Yily De Los Santos staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Yily De Los Santos staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Yily De Los Santos staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://eldigital.com.do/cirujana-yily-de-los-santos-dice-que-turismo-estetico-en-rd-es-un-fenomeno-en-auge-y-popularidad",
+     "soort": "nieuws",
+     "wat": "elDigital (18 aug 2024): De Los Santos (17 jaar ervaring) over esthetisch toerisme naar de DR; geen sponsorlabel, wel promotionele toon zonder andere bronnen."
+    },
+    {
+     "url": "https://www.excelsior.com.mx/trending/yily-de-los-santos-busca-concienciar-sobre-la-cirugia-plastica/1560765",
+     "soort": "nieuws",
+     "wat": "Excelsior (Mexico) over De Los Santos en voorlichting over cosmetische chirurgie (alleen titel gezien, niet gelezen)."
+    },
+    {
+     "url": "https://forbes.es/ultima-hora/240334/yily-de-los-santos-cirujana-plastica-en-republica-dominicana-un-referente-en-su-pais/",
+     "soort": "betaald/makelaar",
+     "wat": "Forbes.es 'ultima hora'-stuk; zelfde kop ook op merca2.es en que.es: patroon van verspreide persberichten, niet als onafhankelijk geteld."
+    },
+    {
+     "url": "https://www.realself.com/review/dominican-republic-liposuction-round-lipo-w-dryily-drcabral",
+     "soort": "realself",
+     "wat": "Patientverslag dat zowel Dr. Yily als Dr. Cabral noemt (titel)."
+    }
+   ]
+  },
+  {
+   "naam": "Dra. Walkiris Robles",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Walkiris Robles",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf)",
+     "bron": "https://www.realself.com/dr/walkiris-robles-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/walkiris-robles-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,3 sterren uit 831 reviews; geen site, kliniek of ziekenhuis vermeld; neemt geen consulten via RealSelf aan."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Walkiris Robles staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/review/santo-domingo-dominican-republic-tummy-tuck-dra-walkiris-robles-in-santo-domingo",
+     "soort": "realself",
+     "wat": "Patientverslag tummy tuck bij Robles (titel)."
+    },
+    {
+     "url": "https://www.realself.com/review/dominican-republic-brazilian-butt-lift-highly-disappointed-dr-walkiris-roblesher",
+     "soort": "realself",
+     "wat": "Patientverslag BBL bij Robles met negatieve titel ('highly disappointed')."
+    },
+    {
+     "url": "https://www.whatclinic.com/cosmetic-plastic-surgery/dominican-republic/santo-domingo/dra-walkiris-robles",
+     "soort": "betaald/makelaar",
+     "wat": "Vermelding bij WhatClinic."
+    }
+   ]
+  },
+  {
+   "naam": "Dra. Tania Medina de Garcia (Arroyo Hondo)",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Tania Medina de Garcia",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf); ASPS internationaal lid",
+     "bron": "https://www.realself.com/dr/tania-medina-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/tania-medina-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,5 sterren uit 813 reviews; geen site of ziekenhuis vermeld."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Tania Medina de Garcia staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Tania Medina de Garcia staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Tania Medina de Garcia staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Tania Medina de Garcia staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Tania Medina, MD, Wilfredo Garcia No 5, Arroyo Hondo, Santo Domingo (enhanced profile)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Jairo Ulerio (DRNIPTALK, Plastimedic)",
+   "stad": "Santo Domingo",
+   "site": "https://drjairoulerio.net/",
+   "site_bron": "https://www.realself.com/dr/jairo-ulerio-santo-domingo-dominican-republic",
+   "chirurgen": [
+    {
+     "naam": "Jairo Ulerio",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg; bio zegt board-certified in plastische en reconstructieve chirurgie (board niet genoemd)",
+     "bron": "https://www.realself.com/dr/jairo-ulerio-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "Plastimedic",
+   "ziekenhuis_bron": "https://www.realself.com/dr/jairo-ulerio-santo-domingo-dominican-republic",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/jairo-ulerio-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,9 sterren uit 356 reviews (lijst: 358); RealSelf Pro en Spotlight; praktijk DRNIPTALK, Paseo de los Locutores 72, Ensanche Quisqueya; privileges Plastimedic."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Jairo Ulerio staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Jairo Ulerio staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Liposuction",
+     "soort": "realself",
+     "wat": "Jairo Ulerio staat in de RealSelf-artsenlijst liposuctie Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Jairo Ulerio staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Jairo Ulerio staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Jairo Ulerio staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/review/rep-blica-dominicana-santo-domingo-tummy-tuck-quede-muy-satisfecha-con-mi-cirug",
+     "soort": "realself",
+     "wat": "Patientverslag tummy tuck bij Ulerio (titel)."
+    },
+    {
+     "url": "https://whatclinic.com/cosmetic-plastic-surgery/dominican-republic/santo-domingo/dr-jairo-ulerio-vargas",
+     "soort": "betaald/makelaar",
+     "wat": "Vermelding bij WhatClinic."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Derby Sang Caputo",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Derby Sang Caputo",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf)",
+     "bron": "https://www.realself.com/dr/derby-sang-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/derby-sang-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,9 sterren uit 259 reviews; geen site of ziekenhuis vermeld."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Derby Sang Caputo staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Derby Sang Caputo staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/review/santo-domingo-dr-tummy-tuck-bbl-tt-dr-derby-sang-caputo",
+     "soort": "realself",
+     "wat": "Patientverslag tummy tuck + BBL bij Sang Caputo (titel)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Alejandro Hernandez Pizzoglio (CECIP)",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Alejandro Hernandez Pizzoglio",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf); ASPS internationaal lid",
+     "bron": "https://www.realself.com/dr/alejandro-hernandez-pizzoglio-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "CECIP (Centro de Cirugia Plastica y Especialidades)",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/country/dominican republic/?page=2",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/alejandro-hernandez-pizzoglio-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,7 sterren uit 219 reviews; geen site of ziekenhuis op het profiel."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Alejandro Hernandez Pizzoglio staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Alejandro Hernandez Pizzoglio staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Alejandro Hernandez Pizzoglio staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic/?page=2",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Alejandro Hernandez Pizzoglio, MD, Clinica Cecip, Santo Domingo."
+    },
+    {
+     "url": "https://www.realself.com/review/santo-domingo-brazilian-butt-lift-london-dr-alejandro-hernandez-pizzoglio",
+     "soort": "realself",
+     "wat": "Patientverslag BBL (patient uit Londen) bij Hernandez Pizzoglio (titel)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Manuel Diaz",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Manuel Diaz",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf)",
+     "bron": "https://www.realself.com/dr/manuel-diaz-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/manuel-diaz-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,7 sterren uit 198 reviews; geen site of ziekenhuis vermeld."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Manuel Diaz staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.whatclinic.com/cosmetic-plastic-surgery/dominican-republic/santo-domingo/dr-manuel-diaz-guzman",
+     "soort": "betaald/makelaar",
+     "wat": "Vermelding bij WhatClinic (Dr. Manuel Diaz Guzman; niet zeker dezelfde persoon)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Luis A. Mejia (CECILIP)",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Luis A. Mejia",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf); ASPS internationaal lid",
+     "bron": "https://www.realself.com/dr/luis-a-mejia-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "CECILIP (Centro de Cirugia Plastica y Lipoescultura)",
+   "ziekenhuis_bron": "https://www.realself.com/dr/luis-a-mejia-santo-domingo-dominican-republic",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/luis-a-mejia-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,3 sterren uit 195 reviews; RealSelf Pro en Spotlight; privileges CECILIP."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Luis A. Mejia staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Luis A. Mejia staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Liposuction",
+     "soort": "realself",
+     "wat": "Luis A. Mejia staat in de RealSelf-artsenlijst liposuctie Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Luis A. Mejia staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Luis A. Mejia staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Luis A. Mejia staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Luis Mejia, MD, CECILIP, Wilfredo Garcia Reyes 5, Arroyo Hondo."
+    },
+    {
+     "url": "https://www.realself.com/question/montreal-qc-dominican-republic-colombian-bbl-surgeon",
+     "soort": "realself",
+     "wat": "Mejia beantwoordt op RealSelf Q&A een vraag over zwelling na BBL."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Gustavo Almanzar (NUDAH Clinic)",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Gustavo Almanzar",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf)",
+     "bron": "https://www.realself.com/dr/gustavo-almanzar-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "NUDAH Clinic",
+   "ziekenhuis_bron": "https://www.realself.com/dr/gustavo-almanzar-santo-domingo-dominican-republic",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/gustavo-almanzar-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,7 sterren uit 186 reviews; RealSelf Pro; privileges NUDAH Clinic."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Gustavo Almanzar staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Gustavo Almanzar staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Liposuction",
+     "soort": "realself",
+     "wat": "Gustavo Almanzar staat in de RealSelf-artsenlijst liposuctie Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Gustavo Almanzar staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Gustavo Almanzar staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Gustavo Almanzar staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Miguel Mota",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Miguel Mota",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg; residency Santa Casa da Misericordia, Rio de Janeiro (RealSelf)",
+     "bron": "https://www.realself.com/dr/miguel-mota-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/miguel-mota-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,7 sterren uit 164 reviews; RealSelf Pro en Spotlight; geen site of ziekenhuis vermeld."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Miguel Mota staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Miguel Mota staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Liposuction",
+     "soort": "realself",
+     "wat": "Miguel Mota staat in de RealSelf-artsenlijst liposuctie Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Miguel Mota staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Miguel Mota staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Miguel Mota staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Jose Leon",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Jose Leon",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf); ASPS internationaal lid",
+     "bron": "https://www.realself.com/dr/jose-leon-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/jose-leon-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,9 sterren uit 160 reviews; geen site of ziekenhuis vermeld."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Jose Leon staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Jose Leon staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic/?page=2",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Jose Leon, MD, Santo Domingo."
+    },
+    {
+     "url": "https://www.realself.com/review/santo-domingo-brazilian-butt-lift-bbl-dr-jose-leon-dominican-republic",
+     "soort": "realself",
+     "wat": "Patientverslag BBL bij Leon (titel)."
+    },
+    {
+     "url": "https://us-uk.bookimed.com/clinic/dr-jose-leon-md/procedure=brazilian-butt-lift/",
+     "soort": "betaald/makelaar",
+     "wat": "Profiel bij bemiddelaar Bookimed."
+    }
+   ]
+  },
+  {
+   "naam": "Cirugia Plastica del Caribe (Luis Tactuk Simo)",
+   "stad": "Santo Domingo",
+   "site": "http://www.plastica.com.do/en",
+   "site_bron": "https://www.realself.com/dr/luis-tactuk-simo-santo-domingo-dominican-republic",
+   "chirurgen": [
+    {
+     "naam": "Luis Tactuk Simo",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg; profiel zegt board certified (board niet genoemd)",
+     "bron": "https://www.realself.com/dr/luis-tactuk-simo-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "Centro Medico del Caribe",
+   "ziekenhuis_bron": "https://www.realself.com/dr/luis-tactuk-simo-santo-domingo-dominican-republic",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/luis-tactuk-simo-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,9 sterren uit 148 reviews; RealSelf Pro; site plastica.com.do; privileges Centro Medico del Caribe."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Luis Tactuk Simo staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Luis Tactuk Simo staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Liposuction",
+     "soort": "realself",
+     "wat": "Luis Tactuk Simo staat in de RealSelf-artsenlijst liposuctie Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Luis Tactuk Simo staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Luis Tactuk Simo staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Luis Tactuk Simo staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/review/cirugia-pl-stica-del-caribe-breast-augmentation-dream-true",
+     "soort": "realself",
+     "wat": "Patientverslag bij Cirugia Plastica del Caribe (titel)."
+    },
+    {
+     "url": "https://www.whatclinic.com/cosmetic-plastic-surgery/dominican-republic/santo-domingo/cirugia-plastica-del-caribe",
+     "soort": "betaald/makelaar",
+     "wat": "Vermelding bij WhatClinic."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Jean Paul Giudicelli Saba (CECIP)",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Jean Paul Giudicelli Saba",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf); ASPS internationaal lid",
+     "bron": "https://www.realself.com/dr/jean-paul-giudicelli-saba-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "CECIP",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/country/dominican republic/?page=2",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/jean-paul-giudicelli-saba-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,7 sterren uit 119 reviews; neemt geen consulten via RealSelf aan; geen site vermeld."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Jean Paul Giudicelli Saba staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Jean Paul Giudicelli Saba staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic/?page=2",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Jean Paul Giudicelli Saba, MD, CECIP, Santo Domingo."
+    },
+    {
+     "url": "https://elnuevodiario.com.do/cirujanos-plasticos-saludan-medidas-del-ministerio-salud-publica/",
+     "soort": "nieuws",
+     "wat": "El Nuevo Diario (21 jul 2017): SODOCIPRE steunt sluitingen door Salud Publica; Giudicelli Saba staat in het fotobijschrift (bestandsnaam suggereert voorzitter, tekst bevestigt dat niet)."
+    }
+   ]
+  },
+  {
+   "naam": "Dra. Alexandrish Karvendrish Rodriguez Tavarez (CECILIP)",
+   "stad": "Santo Domingo",
+   "site": "https://alexandrishkarvendrish.com/",
+   "site_bron": "https://www.realself.com/dr/alexandrish-karve-santo-domingo-distrito-nacional-dominican-republic",
+   "chirurgen": [
+    {
+     "naam": "Alexandrish Karvendrish Rodriguez Tavarez",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg; RealSelf noemt lidmaatschap ASPS, SODOCIPRE en ISAPS",
+     "bron": "https://www.realself.com/dr/alexandrish-karve-santo-domingo-distrito-nacional-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "CECILIP",
+   "ziekenhuis_bron": "https://www.realself.com/dr/alexandrish-karve-santo-domingo-distrito-nacional-dominican-republic",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/alexandrish-karve-santo-domingo-distrito-nacional-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,9 sterren uit 110 reviews; RealSelf Pro; site alexandrishkarvendrish.com; privileges CECILIP."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Alexandrish Karvendrish Rodriguez Tavarez staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Alexandrish Karvendrish Rodriguez Tavarez staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Liposuction",
+     "soort": "realself",
+     "wat": "Alexandrish Karvendrish Rodriguez Tavarez staat in de RealSelf-artsenlijst liposuctie Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Alexandrish Karvendrish Rodriguez Tavarez staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Alexandrish Karvendrish Rodriguez Tavarez staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Alexandrish Karvendrish Rodriguez Tavarez staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic/?page=3",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Alexandrish Rodriguez Tavarez, MD, Arroyo Hondo, Santo Domingo."
+    },
+    {
+     "url": "https://www.realself.com/review/mommy-makeover-dra-karvendrish",
+     "soort": "realself",
+     "wat": "Patientverslag mommy makeover (titel)."
+    }
+   ]
+  },
+  {
+   "naam": "Dra. Massiel Guzman Reyes (Plastimedic)",
+   "stad": "Santo Domingo",
+   "site": "http://massielguzman.com/",
+   "site_bron": "https://www.realself.com/dr/massiel-guzm-n-reyes-santo-domingo-dominican-republic",
+   "chirurgen": [
+    {
+     "naam": "Massiel Guzman Reyes",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg; bio zegt board-certified (board niet genoemd); ASPS internationaal lid",
+     "bron": "https://www.realself.com/dr/massiel-guzm-n-reyes-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "Plastimedic",
+   "ziekenhuis_bron": "https://www.realself.com/dr/massiel-guzm-n-reyes-santo-domingo-dominican-republic",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/massiel-guzm-n-reyes-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 5,0 sterren uit 105 reviews (lijst: 106); RealSelf Pro; site massielguzman.com; privileges Plastimedic."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Massiel Guzman Reyes staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Massiel Guzman Reyes staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Liposuction",
+     "soort": "realself",
+     "wat": "Massiel Guzman Reyes staat in de RealSelf-artsenlijst liposuctie Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Massiel Guzman Reyes staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Massiel Guzman Reyes staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Massiel Guzman Reyes staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Massiel Guzman Reyes, MD, Socrates Nolasco 4, Ensanche Naco."
+    },
+    {
+     "url": "https://us-uk.bookimed.com/doctor/massiel-guzman/",
+     "soort": "betaald/makelaar",
+     "wat": "Profiel bij bemiddelaar Bookimed."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Adolfo Sesto (Corazones Unidos)",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Adolfo Sesto",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf); ASPS internationaal lid",
+     "bron": "https://www.realself.com/dr/adolfo-sesto-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "Clinica Corazones Unidos",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/country/dominican republic/?page=3",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/adolfo-sesto-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,9 sterren uit 97 reviews; geen site of ziekenhuis vermeld."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Adolfo Sesto staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Adolfo Sesto staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic/?page=3",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Adolfo Sesto, MD, Consultorios Medicos II, Clinica Corazones Unidos, Ensanche Naco."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Kelvin Eusebio",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Kelvin Eusebio",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf)",
+     "bron": "https://www.realself.com/dr/kelvin-eusebio-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/kelvin-eusebio-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,6 sterren uit 80 reviews; geen site of ziekenhuis vermeld."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Kelvin Eusebio staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Geuris Cruz Quiroz (CECIP)",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Geuris Cruz Quiroz",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg; bio zegt board certified (board niet genoemd)",
+     "bron": "https://www.realself.com/dr/geuris-cruz-quiroz-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "CECIP (Centro de Cirugia Plastica y Especialidades)",
+   "ziekenhuis_bron": "https://www.realself.com/dr/geuris-cruz-quiroz-santo-domingo-dominican-republic",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/geuris-cruz-quiroz-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,8 sterren uit 74 reviews; RealSelf Pro en Spotlight; privileges CECIP. In de lijsten staat een OFFER ('Surgery Sister Special'), geen SPONSORED-label."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Geuris Cruz Quiroz staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Geuris Cruz Quiroz staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Liposuction",
+     "soort": "realself",
+     "wat": "Geuris Cruz Quiroz staat in de RealSelf-artsenlijst liposuctie Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck-Revision",
+     "soort": "realself",
+     "wat": "Geuris Cruz Quiroz staat in de RealSelf-artsenlijst tummy tuck revision Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Geuris Cruz Quiroz staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Geuris Cruz Quiroz staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Rodrigo Escobar Jaramillo (Hospital Metropolitano de Santiago)",
+   "stad": "Santiago de los Caballeros",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Rodrigo Escobar Jaramillo",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf); ASPS internationaal lid",
+     "bron": "https://www.realself.com/dr/rodrigo-escobar-jaramillo-santiago-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "Hospital Metropolitano de Santiago (HOMS)",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/country/dominican republic",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/rodrigo-escobar-jaramillo-santiago-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 4,9 sterren uit 26 reviews; suite 707, Santiago; neemt geen consulten via RealSelf aan."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santiago/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Rodrigo Escobar Jaramillo staat in de RealSelf-artsenlijst BBL Santiago (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santiago/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Rodrigo Escobar Jaramillo staat in de RealSelf-artsenlijst tummy tuck Santiago (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Rodrigo Escobar Jaramillo, MD, Suite 707, Hospital Metropolitano de Santiago."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Nelson Rubio",
+   "stad": "Santiago de los Caballeros",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Nelson Rubio",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf)",
+     "bron": "https://www.realself.com/dr/nelson-rubio-santiago-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/nelson-rubio-santiago-dominican-republic",
+     "soort": "realself",
+     "wat": "In de lijst: 4,0 sterren uit 31 reviews (profiel niet apart gelezen)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santiago/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Nelson Rubio staat in de RealSelf-artsenlijst tummy tuck Santiago (17 nov 2026, geen SPONSORED-label)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Luis E. Redondo",
+   "stad": "Puerto Plata / Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Luis E. Redondo",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf)",
+     "bron": "https://www.realself.com/dr/luis-eduardo-redondo-puerto-plata-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/luis-eduardo-redondo-puerto-plata-dominican-republic",
+     "soort": "realself",
+     "wat": "In de lijst: 4,8 sterren uit 29 reviews; profiel-URL verwijst naar Puerto Plata (profiel niet apart gelezen)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Luis E. Redondo staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    }
+   ]
+  },
+  {
+   "naam": "MP Plastic Surgery (Manuel Peralta Garcia)",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Manuel Peralta Garcia",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf); ASPS internationaal lid",
+     "bron": "https://www.realself.com/dr/manuel-peralta-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/manuel-peralta-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "Profiel: 5,0 sterren uit 16 reviews; reviews noemen Cecilip; geen site vermeld."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Liposuction",
+     "soort": "realself",
+     "wat": "Manuel Peralta Garcia staat in de RealSelf-artsenlijst liposuctie Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic/?page=2",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Manuel Peralta Garcia, MD, MP Plastic Surgery, Santo Domingo."
+    }
+   ]
+  },
+  {
+   "naam": "Dra. Jacqueline Miranda (HOMS)",
+   "stad": "Santiago de los Caballeros",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Jacqueline Miranda",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf); ASPS internationaal lid",
+     "bron": "https://www.realself.com/dr/jacqueline-miranda-santiago-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "HOMS (Hospital Metropolitano de Santiago)",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/country/dominican republic/?page=3",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/jacqueline-miranda-santiago-dominican-republic",
+     "soort": "realself",
+     "wat": "In de lijst: 5,0 sterren uit 11 reviews (profiel niet apart gelezen)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santiago/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Jacqueline Miranda staat in de RealSelf-artsenlijst BBL Santiago (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santiago/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Jacqueline Miranda staat in de RealSelf-artsenlijst tummy tuck Santiago (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic/?page=3",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Jacqueline Miranda, MD, HOMS, suite 1014, Santiago."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Nelson Garcia Mendez",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Nelson Garcia Mendez",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf); ASPS internationaal lid",
+     "bron": "https://www.realself.com/dr/nelson-garcia-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/nelson-garcia-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "In de lijst: 5,0 sterren uit 10 reviews; enige arts in de RealSelf-lijst Lipo 360 BBL voor het hele land."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Lipo-360-BBL",
+     "soort": "realself",
+     "wat": "Nelson Garcia Mendez staat in de RealSelf-artsenlijst Lipo 360 BBL Dominicaanse Republiek (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Lipo-360",
+     "soort": "realself",
+     "wat": "Nelson Garcia Mendez staat in de RealSelf-artsenlijst Lipo 360 Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic/?page=3",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Nelson Garcia Mendez, MD, Santo Domingo."
+    },
+    {
+     "url": "https://www.realself.com/review/dominican-republic-brazilian-butt-lift-liposculpture-bbl-undecided-doctor-nelson",
+     "soort": "realself",
+     "wat": "Patientverslag BBL dat twijfelt over 'doctor Nelson' (titel, niet zeker deze arts)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Rafael Baez Fernandez",
+   "stad": "Santiago de los Caballeros",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Rafael Baez Fernandez",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf)",
+     "bron": "https://www.realself.com/dr/rafael-baez-fernandez-santiago-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/rafael-baez-fernandez-santiago-dominican-republic",
+     "soort": "realself",
+     "wat": "In de lijst: 4,1 sterren uit 10 reviews (profiel niet apart gelezen)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santiago/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Rafael Baez Fernandez staat in de RealSelf-artsenlijst BBL Santiago (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santiago/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Rafael Baez Fernandez staat in de RealSelf-artsenlijst tummy tuck Santiago (17 nov 2026, geen SPONSORED-label)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Danivel Cespedes",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Danivel Cespedes",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf)",
+     "bron": "https://www.realself.com/dr/danivel-cespedes-santo-domingo-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/danivel-cespedes-santo-domingo-dominican-republic",
+     "soort": "realself",
+     "wat": "In de lijst: 4,6 sterren uit 9 reviews; een review in de lijst noemt een andere naam (profiel niet apart gelezen)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Danivel Cespedes staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Danivel Cespedes staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Liposuction",
+     "soort": "realself",
+     "wat": "Danivel Cespedes staat in de RealSelf-artsenlijst liposuctie Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Butt-Augmentation",
+     "soort": "realself",
+     "wat": "Danivel Cespedes staat in de RealSelf-artsenlijst butt augmentation Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Danivel Cespedes staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Ignacio Almanzar",
+   "stad": "Santiago de los Caballeros",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Ignacio Almanzar",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf)",
+     "bron": "https://www.realself.com/dr/ignacio-almanzar-santiago-de-los-caballero-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/ignacio-almanzar-santiago-de-los-caballero-dominican-republic",
+     "soort": "realself",
+     "wat": "In de lijst: 4,6 sterren uit 9 reviews (profiel niet apart gelezen)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santiago/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Ignacio Almanzar staat in de RealSelf-artsenlijst tummy tuck Santiago (17 nov 2026, geen SPONSORED-label)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Pedro Jose Garcia Lopez",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Pedro Jose Garcia Lopez",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf)",
+     "bron": "https://www.realself.com/dr/pedro-jose-garcia-lopez-santo-domingo-distrito-nacional-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "",
+   "ziekenhuis_bron": "",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/pedro-jose-garcia-lopez-santo-domingo-distrito-nacional-dominican-republic",
+     "soort": "realself",
+     "wat": "In de lijst: 3,7 sterren uit 7 reviews (profiel niet apart gelezen). ASPS noemt een 'Pedro Garcia, MD' in Santo Domingo; niet zeker dezelfde persoon."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Pedro Jose Garcia Lopez staat in de RealSelf-artsenlijst BBL Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Pedro Jose Garcia Lopez staat in de RealSelf-artsenlijst tummy tuck Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Liposuction",
+     "soort": "realself",
+     "wat": "Pedro Jose Garcia Lopez staat in de RealSelf-artsenlijst liposuctie Santo Domingo (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/La-Esperilla/Brazilian-Butt-Lift",
+     "soort": "realself",
+     "wat": "Pedro Jose Garcia Lopez staat in de RealSelf-artsenlijst BBL La Esperilla (17 nov 2026, geen SPONSORED-label)."
+    }
+   ]
+  },
+  {
+   "naam": "Plasticenter (Jose Plaza)",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Jose Plaza",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg; ASPS internationaal lid",
+     "bron": "https://find.plasticsurgery.org/country/dominican republic/?page=2"
+    }
+   ],
+   "ziekenhuis": "Plasticenter",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/country/dominican republic/?page=2",
+   "vermeld_in": [
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic/?page=2",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Jose Plaza, MD, Plasticenter, Santo Domingo."
+    },
+    {
+     "url": "https://www.elcaribe.com.do/panorama/salud/dr-plaza-adviertes-sobre-riesgos-del-intrusismo-y-defiende-la-formacion-especializada-en-cirugia-estetica/",
+     "soort": "nieuws",
+     "wat": "El Caribe: 'Dr. Plaza' waarschuwt voor intrusismo en verdedigt specialistische opleiding (alleen titel gezien; pagina niet leesbaar, niet zeker dezelfde Plaza)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Roberto Gutierrez Genao (Hospital Metropolitano de Santiago)",
+   "stad": "Santiago de los Caballeros",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Roberto Gutierrez Genao",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg (RealSelf); ASPS internationaal lid",
+     "bron": "https://www.realself.com/dr/roberto-gutierrez-genao-santiago-de-los-caballeros-dominican-republic"
+    }
+   ],
+   "ziekenhuis": "Hospital Metropolitano de Santiago",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/country/dominican republic/?page=2",
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/roberto-gutierrez-genao-santiago-de-los-caballeros-dominican-republic",
+     "soort": "realself",
+     "wat": "In de lijst: nog geen reviews (0)."
+    },
+    {
+     "url": "https://www.realself.com/find/Dominican-Republic/Santiago/Tummy-Tuck",
+     "soort": "realself",
+     "wat": "Roberto Gutierrez Genao staat in de RealSelf-artsenlijst tummy tuck Santiago (17 nov 2026, geen SPONSORED-label)."
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic/?page=2",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Roberto Gutierrez Genao, MD, Hospital Metropolitano de Santiago."
+    }
+   ]
+  },
+  {
+   "naam": "CIPLA (Jose Acosta Collado)",
+   "stad": "Santo Domingo",
+   "site": "",
+   "site_bron": "",
+   "chirurgen": [
+    {
+     "naam": "Jose Acosta Collado",
+     "titel": "MD",
+     "specialisme": "Plastisch chirurg; ASPS internationaal lid",
+     "bron": "https://find.plasticsurgery.org/country/dominican republic"
+    }
+   ],
+   "ziekenhuis": "Centro Internacional de Cirugia Plastica Avanzada (CIPLA), Av. Pedro Henriquez Urena 137",
+   "ziekenhuis_bron": "https://find.plasticsurgery.org/country/dominican republic",
+   "vermeld_in": [
+    {
+     "url": "https://find.plasticsurgery.org/country/dominican republic",
+     "soort": "asps",
+     "wat": "ASPS Find a Surgeon: Jose Acosta Collado, MD, CIPLA, suite 202, Av. Pedro Henriquez Urena 137."
+    },
+    {
+     "url": "https://www.diariolibre.com/actualidad/salud/las-clinicas-de-esteticas-cerradas-en-2019-por-muerte-de-pacientes-e-irregularidades-HM15808582",
+     "soort": "nieuws",
+     "wat": "Diario Libre: CIPLA in mei 2019 door Salud Publica gesloten (zie bewust_niet_of_let_op); Acosta Collado zelf wordt niet genoemd."
+    }
+   ]
+  }
+ ]
+}

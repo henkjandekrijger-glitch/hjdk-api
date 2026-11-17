@@ -1,0 +1,679 @@
+{
+ "gecontroleerd": "2026-11-17",
+ "methode": "RealSelf-lijsten Dominicaanse Republiek gelezen via WebFetch: Brazilian-Butt-Lift (93 resultaten), Plastic-Surgeon (118), Liposuction (100), Mommy-Makeover (78), Butt-Augmentation (79), Tummy-Tuck-Revision (71), Rhinoplasty (74), Lipo-360-BBL (1), en per stad Santo-Domingo/Plastic-Surgeon (103), Santo-Domingo/Brazilian-Butt-Lift (84), Santiago/Tummy-Tuck (13) en Santiago/Brazilian-Butt-Lift (9). Elke lijst toont alleen de eerste 15 zonder paginering; de grote profielen Agustina Hilario Duran (1563), Walkiris Robles (831), Australia Fragoso-Baez (503), Cynthia Disla, Francisco Rodriguez Rosario, Estevez, Lopez Collado en de geschorste accounts staan niet in die top 15 en zijn gevonden via WebSearch (realself.com/dr, review-pagina's, praktijkpagina DRNIPTALK). Per arts het /dr/-profiel geopend voor score, aantal (ratingblok; afwijkende tellingen in de AI-samenvatting staan als waarschuwing), datum van de nieuwste getoonde review (vaak de nieuwste van de 10 getoonde) en meldingen (Account Suspended, niet bereikbaar voor consultaties, Verified). Opgenomen: de 32 artsen met de meeste RealSelf-reviews die gevonden zijn (25 of meer), plus Javier Baez Angles (Santiago, geschorst). Kleinere profielen gezien maar niet opgenomen: Roberto Guerrero 25 (geschorst), Kemil Issa 22 (geschorst), Manuel Peralta 16, Rafael Lluberes Freites 15 (geschorst), Ramon Alberto Rodriguez Estrella 15, Jacqueline Miranda 11 (Santiago), Rafael Baez Fernandez 10 (Santiago, 40% 1 ster in de grafiek), Nelson Garcia Mendez 10, Ignacio Almanzar 9 (Santiago), Danivel Cespedes 9, Angel Alejandro Mora 9 (geschorst), Pedro José García López 7. Andere platforms: Doctoralia (geen .com.do-site gevonden), Top Doctors (geen DR-profielen gevonden), Trustpilot (geen pagina van een kandidaat gevonden), Yelp (geen DR-plastisch chirurgen gevonden), Google (nergens direct en betrouwbaar gezien). Bemiddelaars WhatClinic en Bookimed bekeken; alleen voor Mallol stond een cijfer, gemarkeerd makelaar:true. pct_1ster overal null: de RealSelf-grafiek is geen sterverdeling. Reviewteksten niet overgenomen.",
+ "niet_bereikbaar": [
+  "https://www.realself.com/find/Dominican-Republic/Tummy-Tuck: toestemming voor ophalen niet op tijd beantwoord (eerste poging), daarna niet opnieuw geprobeerd; Santiago/Tummy-Tuck wel gelezen",
+  "https://www.realself.com/find/Dominican-Republic/Punta-Cana/Plastic-Surgeon: fout bij ophalen; https://www.realself.com/find/Dominican-Republic/Punta-Cana toont zonder JavaScript geen artsen, dus geen Punta Cana-artsen op RealSelf gevonden",
+  "https://www.realself.com/find/Dominican-Republic/Santo-Domingo/Mommy-Makeover: fout bij ophalen",
+  "RealSelf-lijsten: geen paginering, alleen de eerste 15 van 71 tot 118 resultaten zichtbaar; grote profielen buiten die 15 kunnen ontbreken",
+  "Dr. Hector Cabral (Guerrero), CIPLA: veel RealSelf-reviewpagina's noemen hem, maar geen /dr/-profiel met score gevonden",
+  "Google Maps: niet bereikbaar; geen betrouwbare Google-score en aantal gevonden voor een kandidaat",
+  "Doctoralia Dominicaanse Republiek (doctoralia.com.do): via zoeken geen site of profielen gevonden",
+  "Top Doctors, Trustpilot, Yelp: geen profielen van kandidaten gevonden via zoeken"
+ ],
+ "klinieken": [
+  {
+   "naam": "Dr. Yily De Los Santos",
+   "stad": "Santo Domingo",
+   "arts": "Yily De Los Santos",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Yily De Los Santos)",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 2037,
+     "pct_1ster": null,
+     "laatste_review": "2025-09-21",
+     "waarschuwing": "Account Suspended op RealSelf (in naam en paginatitel); niet meer bereikbaar voor consultaties via RealSelf; geen Verified-badge; AI-samenvatting van RealSelf noemt recente reviews overwegend ontevreden.",
+     "bron": "https://www.realself.com/dr/yily-de-los-santos-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Agustina Hilario Duran",
+   "stad": "Santo Domingo",
+   "arts": "Agustina Hilario Duran",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Agustina Hilario Duran)",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 1563,
+     "pct_1ster": null,
+     "laatste_review": "2025-05-30",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Geen Verified-badge. Staat niet in de zichtbare top 15 van de RealSelf-lijsten, wel gevonden via zoeken.",
+     "bron": "https://www.realself.com/dr/agustina-hilario-duran-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Emmanuel Mallol Cotes",
+   "stad": "Santo Domingo",
+   "arts": "Emmanuel Mallol Cotes",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Emmanuel Mallol Cotes)",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 1287,
+     "pct_1ster": null,
+     "laatste_review": "2026-10-04",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/emmanuel-mallol-cotes-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    },
+    {
+     "platform": "WhatClinic (Dr. Emmanuel Mallol Cotes)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 2,
+     "pct_1ster": null,
+     "laatste_review": "2017-04-28",
+     "waarschuwing": "Bemiddelaar. Daarnaast een eigen ServiceScore 8,8 (schaal niet vermeld, 71 interacties) en ongeverifieerde servicecommentaren tot 2024-09-02.",
+     "bron": "https://www.whatclinic.com/cosmetic-plastic-surgery/dominican-republic/santo-domingo/dr-emmanuel-mallol-cotes",
+     "gezien": "2026-11-17",
+     "makelaar": true
+    },
+    {
+     "platform": "Google (zoals getoond op Bookimed)",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 5,
+     "pct_1ster": null,
+     "laatste_review": "2026-07-12",
+     "waarschuwing": "Niet op Google zelf gezien: cijfer staat op de pagina van bemiddelaar Bookimed; 5 reviews is waarschijnlijk een selectie, niet het volledige Google-profiel. Niet gebruiken als Google-score.",
+     "bron": "https://us-uk.bookimed.com/clinic/dr-emmanuel-mallol/",
+     "gezien": "2026-11-17",
+     "makelaar": true
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Walkiris Robles",
+   "stad": "Santo Domingo",
+   "arts": "Walkiris Robles",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Walkiris Robles)",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 831,
+     "pct_1ster": null,
+     "laatste_review": "2025-04-09",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Niet in de zichtbare top 15 van de lijsten; datum is de nieuwste van de 10 getoonde reviews.",
+     "bron": "https://www.realself.com/dr/walkiris-robles-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Tania Medina de Garcia",
+   "stad": "Santo Domingo",
+   "arts": "Tania Medina de Garcia",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Tania Medina de Garcia)",
+     "score": 4.5,
+     "schaal": "5 sterren",
+     "aantal": 813,
+     "pct_1ster": null,
+     "laatste_review": "2023-02-12",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Geen Verified-badge.",
+     "bron": "https://www.realself.com/dr/tania-medina-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Australia Fragoso-Baez",
+   "stad": "Santo Domingo",
+   "arts": "Australia Fragoso-Baez",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Australia Fragoso-Baez)",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 503,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Reviews tonen geen datum; stad niet op profiel (slug: Santo Domingo).",
+     "bron": "https://www.realself.com/dr/australia-fragoso-baez-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Jairo Ulerio",
+   "stad": "Santo Domingo",
+   "arts": "Jairo Ulerio",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Jairo Ulerio)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 356,
+     "pct_1ster": null,
+     "laatste_review": "2026-09-29",
+     "waarschuwing": "Lijstpagina's tonen 355 tot 358; profiel 356. Gekoppeld aan praktijk DRNIPTALK.",
+     "bron": "https://www.realself.com/dr/jairo-ulerio-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    },
+    {
+     "platform": "RealSelf (praktijk DRNIPTALK - Santo Domingo)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 1,
+     "pct_1ster": null,
+     "laatste_review": "2023-11-28",
+     "waarschuwing": "Praktijkpagina met 26 artsen, van wie 10 'Account Suspended' (o.a. Cynthia Disla, Jose Hungria, Roberto Guerrero); niet bereikbaar voor consultaties via RealSelf; de ene review noemt een arts die niet in de lijst staat.",
+     "bron": "https://www.realself.com/practices/drniptalk-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Derby Sang Caputo",
+   "stad": "Santo Domingo",
+   "arts": "Derby Sang Caputo",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Derby Sang Caputo)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 259,
+     "pct_1ster": null,
+     "laatste_review": "2025-11-14",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Geen Verified-badge.",
+     "bron": "https://www.realself.com/dr/derby-sang-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Alejandro Hernandez Pizzoglio",
+   "stad": "Santo Domingo",
+   "arts": "Alejandro Hernandez Pizzoglio",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Alejandro Hernandez Pizzoglio)",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 219,
+     "pct_1ster": null,
+     "laatste_review": "2025-04-26",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel).",
+     "bron": "https://www.realself.com/dr/alejandro-hernandez-pizzoglio-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Manuel Diaz",
+   "stad": "Santo Domingo",
+   "arts": "Manuel Diaz",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Manuel Diaz)",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 198,
+     "pct_1ster": null,
+     "laatste_review": "2023-05-09",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Geen Verified-badge.",
+     "bron": "https://www.realself.com/dr/manuel-diaz-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Luis A. Mejia",
+   "stad": "Santo Domingo",
+   "arts": "Luis A. Mejia",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Luis A. Mejia)",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 195,
+     "pct_1ster": null,
+     "laatste_review": "2026-11-12",
+     "waarschuwing": "AI-samenvatting van RealSelf noemt zorgen over resultaten en nazorg bij arm- en borstlift. Lijstpagina's tonen 190 tot 194.",
+     "bron": "https://www.realself.com/dr/luis-a-mejia-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Gustavo Almanzar",
+   "stad": "Santo Domingo",
+   "arts": "Gustavo Almanzar",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Gustavo Almanzar)",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 186,
+     "pct_1ster": null,
+     "laatste_review": "2026-07-19",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/gustavo-almanzar-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Miguel Mota",
+   "stad": "Santo Domingo",
+   "arts": "Miguel Mota",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Miguel Mota)",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 164,
+     "pct_1ster": null,
+     "laatste_review": "2026-07-07",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/miguel-mota-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Jose Leon",
+   "stad": "Santo Domingo",
+   "arts": "Jose Leon",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Jose Leon)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 160,
+     "pct_1ster": null,
+     "laatste_review": "2024-11-18",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Datum is de nieuwste van de 10 getoonde reviews.",
+     "bron": "https://www.realself.com/dr/jose-leon-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Luis Tactuk Simó",
+   "stad": "Santo Domingo",
+   "arts": "Luis Tactuk Simó",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Luis Tactuk Simó)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 148,
+     "pct_1ster": null,
+     "laatste_review": "2024-07-31",
+     "waarschuwing": "AI-samenvatting van RealSelf noemt enkele zorgwekkende meldingen over resultaat en nazorg.",
+     "bron": "https://www.realself.com/dr/luis-tactuk-simo-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Cynthia Disla",
+   "stad": "Santo Domingo",
+   "arts": "Cynthia Disla",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Cynthia Disla)",
+     "score": 3.9,
+     "schaal": "5 sterren",
+     "aantal": 128,
+     "pct_1ster": null,
+     "laatste_review": "2024-04-01",
+     "waarschuwing": "Account Suspended op RealSelf; Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel).",
+     "bron": "https://www.realself.com/dr/cynthia-disla-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Jean Paul Giudicelli Saba",
+   "stad": "Santo Domingo",
+   "arts": "Jean Paul Giudicelli Saba",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Jean Paul Giudicelli Saba)",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 119,
+     "pct_1ster": null,
+     "laatste_review": "2025-09-24",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Niet Verified; AI-samenvatting noemt zorgen over nazorg en communicatie (spreekt van 92 geverifieerde reviews).",
+     "bron": "https://www.realself.com/dr/jean-paul-giudicelli-saba-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Alexandrish Karvendrish Rodríguez Tavárez",
+   "stad": "Santo Domingo",
+   "arts": "Alexandrish Karvendrish Rodríguez Tavárez",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Alexandrish Karvendrish Rodríguez Tavárez)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 110,
+     "pct_1ster": null,
+     "laatste_review": "2026-08-14",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/alexandrish-karve-santo-domingo-distrito-nacional-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Massiel Guzmán Reyes",
+   "stad": "Santo Domingo",
+   "arts": "Massiel Guzmán Reyes",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Massiel Guzmán Reyes)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 105,
+     "pct_1ster": null,
+     "laatste_review": "2026-06-12",
+     "waarschuwing": "Lijstpagina's tonen 106; profiel 105.",
+     "bron": "https://www.realself.com/dr/massiel-guzm-n-reyes-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Adolfo Sesto",
+   "stad": "Santo Domingo",
+   "arts": "Adolfo Sesto",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Adolfo Sesto)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 97,
+     "pct_1ster": null,
+     "laatste_review": "2021-11-07",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Geen review sinds 2021.",
+     "bron": "https://www.realself.com/dr/adolfo-sesto-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Kelvin Eusebio",
+   "stad": "Santo Domingo",
+   "arts": "Kelvin Eusebio",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Kelvin Eusebio)",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 80,
+     "pct_1ster": null,
+     "laatste_review": "2022-12-16",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel).",
+     "bron": "https://www.realself.com/dr/kelvin-eusebio-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Francisco Rodriguez Rosario",
+   "stad": "Santo Domingo",
+   "arts": "Francisco Rodriguez Rosario",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Francisco Rodriguez Rosario)",
+     "score": 4.2,
+     "schaal": "5 sterren",
+     "aantal": 79,
+     "pct_1ster": null,
+     "laatste_review": "2023-10-04",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). AI-samenvatting noemt 98 geverifieerde reviews, ratingblok 79.",
+     "bron": "https://www.realself.com/dr/francisco-rodriguez-rosario-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Geuris Cruz Quiroz",
+   "stad": "Santo Domingo",
+   "arts": "Geuris Cruz Quiroz",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Geuris Cruz Quiroz)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 74,
+     "pct_1ster": null,
+     "laatste_review": "2025-07-26",
+     "waarschuwing": "AI-samenvatting noemt 92 geverifieerde reviews, ratingblok 74.",
+     "bron": "https://www.realself.com/dr/geuris-cruz-quiroz-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Ricardo Ventura",
+   "stad": "Santo Domingo",
+   "arts": "Ricardo Ventura",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Ricardo Ventura)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 63,
+     "pct_1ster": null,
+     "laatste_review": "2020-01-24",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Datum is de nieuwste van de 10 getoonde reviews.",
+     "bron": "https://www.realself.com/dr/ricardo-ventura-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Rafael E. Estevez Hernandez",
+   "stad": "Santo Domingo",
+   "arts": "Rafael E. Estevez Hernandez",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Rafael E. Estevez Hernandez)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 45,
+     "pct_1ster": null,
+     "laatste_review": "2022-01-27",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). AI-samenvatting noemt 100+ reviews, ratingblok 45.",
+     "bron": "https://www.realself.com/dr/rafael-e-estevez-hernandez-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Carlos Lopez Collado",
+   "stad": "Santo Domingo",
+   "arts": "Carlos Lopez Collado",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Carlos Lopez Collado)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 38,
+     "pct_1ster": null,
+     "laatste_review": "2021-02-26",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). AI-samenvatting noemt 82 reviews, ratingblok 38.",
+     "bron": "https://www.realself.com/dr/carlos-lopez-collado-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Nelson Rubio",
+   "stad": "Santiago",
+   "arts": "Nelson Rubio",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Nelson Rubio)",
+     "score": 4.0,
+     "schaal": "5 sterren",
+     "aantal": 31,
+     "pct_1ster": null,
+     "laatste_review": "2021-04-03",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Profiel lijkt niet geclaimd (uitnodiging om te claimen); profiel noemt 'Physician'; AI-samenvatting noemt ontevredenheid over borstvergroting.",
+     "bron": "https://www.realself.com/dr/nelson-rubio-santiago-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Jose Hungria",
+   "stad": "Santo Domingo",
+   "arts": "Jose Hungria",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Jose Hungria)",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 30,
+     "pct_1ster": null,
+     "laatste_review": "2019-06-18",
+     "waarschuwing": "Account Suspended op RealSelf; Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel).",
+     "bron": "https://www.realself.com/dr/jose-hungria-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Pedro Espinal",
+   "stad": "Santo Domingo",
+   "arts": "Pedro Espinal",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Pedro Espinal)",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 30,
+     "pct_1ster": null,
+     "laatste_review": "2018-04-07",
+     "waarschuwing": "Account Suspended op RealSelf; Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel).",
+     "bron": "https://www.realself.com/dr/pedro-espinal-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Luis E. Redondo",
+   "stad": "Puerto Plata / Santo Domingo",
+   "arts": "Luis E. Redondo",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Luis E. Redondo)",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 29,
+     "pct_1ster": null,
+     "laatste_review": "2022-06-20",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Werkt in Puerto Plata en Santo Domingo.",
+     "bron": "https://www.realself.com/dr/luis-eduardo-redondo-puerto-plata-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Jose Luis Acosta Collado",
+   "stad": "Santo Domingo",
+   "arts": "Jose Luis Acosta Collado",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Jose Luis Acosta Collado)",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 29,
+     "pct_1ster": null,
+     "laatste_review": "2017-05-14",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Geen review sinds 2017.",
+     "bron": "https://www.realself.com/dr/jose-luis-acosta-collado-santo-domingo-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Rodrigo Escobar Jaramillo",
+   "stad": "Santiago",
+   "arts": "Rodrigo Escobar Jaramillo",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Rodrigo Escobar Jaramillo)",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 26,
+     "pct_1ster": null,
+     "laatste_review": "2024-06-15",
+     "waarschuwing": "Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel).",
+     "bron": "https://www.realself.com/dr/rodrigo-escobar-jaramillo-santiago-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Javier Baez Angles",
+   "stad": "Santiago",
+   "arts": "Javier Baez Angles",
+   "platforms": [
+    {
+     "platform": "RealSelf (Dr. Javier Baez Angles)",
+     "score": 4.2,
+     "schaal": "5 sterren",
+     "aantal": 16,
+     "pct_1ster": null,
+     "laatste_review": "2023-02-21",
+     "waarschuwing": "Account Suspended op RealSelf; Niet meer bereikbaar voor consultaties via RealSelf (melding op profiel). Opgenomen omdat het de grootste Santiago-arts met schorsing is.",
+     "bron": "https://www.realself.com/dr/javier-baez-angles-santiago-dominican-republic",
+     "gezien": "2026-11-17",
+     "makelaar": false
+    }
+   ]
+  }
+ ]
+}
