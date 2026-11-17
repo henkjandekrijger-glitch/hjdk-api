@@ -255,6 +255,10 @@
     {
       "path": "/api/keuze-tools?tool=zorg&op=ronde",
       "schedule": "13 7 * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=nexy&op=ronde",
+      "schedule": "17 12 * * *"
     }
   ],
   "rewrites": [
