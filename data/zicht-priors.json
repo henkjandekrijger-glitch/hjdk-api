@@ -413,7 +413,7 @@
   "id": "interne-links-niet-geindexeerd",
   "les": "Link pagina's die Google nog niet kent of nog niet opnam vanaf de homepage en vanaf andere pagina's, zodat Google ze vindt.",
   "kanaal": "google",
-  "bewijs": "15 okt 2026: 129 van 272 pagina's van keuzehulp.best onbekend bij Google; proef met 80% gelinkt, 20% controle.",
+  "bewijs": "15 okt 2026: 129 van 272 pagina's van keuzehulp.best onbekend bij Google; proef met 80% gelinkt, 20% controle. 17 nov 2026 (gids.kadoly.com, jong subdomein): 2 dagen na links vanaf de geindexeerde /w-paginas naar 8 gidsen staat er geen in Google; van 47 niet geindexeerde URLs zijn er 24 gevonden maar niet gecrawld en 20 onbekend, bij 7 Googlebot-bezoeken in 7 dagen. Op een host met weinig crawl is crawlprioriteit de rem, niet ontdekking; links vanaf een host die Google vaak leest (keuzehulp.best) zijn dan de betere proef (kadolygids-kz-voetgidsen-1117).",
   "bron": "eigen data",
   "sterkte": 3,
   "moeite": 1,
