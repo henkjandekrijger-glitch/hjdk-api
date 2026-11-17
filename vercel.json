@@ -237,6 +237,10 @@
       "schedule": "47 4 * * *"
     },
     {
+      "path": "/api/shop?op=tttest",
+      "schedule": "57 4 * * *"
+    },
+    {
       "path": "/api/keuze-tools?tool=rdam&op=ververs",
       "schedule": "20 */3 * * *"
     },
@@ -1753,7 +1757,7 @@
       "permanent": false
     },
     {
-      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:bundel|ttvideo|ttfeed|beeld/)|shop$|o$).+)",
+      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:bundel|ttvideo|ttfeed|beeld/|prijslijst)|shop$|o$).+)",
       "has": [
         {
           "type": "host",

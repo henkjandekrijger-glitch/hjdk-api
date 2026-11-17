@@ -38,6 +38,7 @@ import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
 import { K_KOST, ontvang as margeOntvang, margeStand, zetMarge } from '../lib/shopmarge.js';
 import { prijsStand, prijsCsv } from '../lib/shopprijs.js';
+import { testRonde, testLabels, testTekst, TT_TEST } from '../lib/tttest.js';
 import { kiesBundel, bundelOpenbaar, bundelTekst, bundelCode, BUNDEL_REGEL } from '../lib/bundel.js';
 import { uurTel, uurStand, lekkenPagina, uurAanvullen, uurRitme, verkoopUren } from '../lib/shopuur.js';
 import { overdrachtTekst, liveRegels, overdrachtPagina } from '../lib/shopoverdracht.js';
@@ -73,7 +74,7 @@ const pk = pid => String(pid).toLowerCase().replace(/[^a-z0-9]/g, ''); // produc
 const digits = (s, n = 14) => String(s || '').replace(/\D/g, '').slice(0, n);
 const isBot = ua => /bot|crawl|spider|slurp|headless|preview|facebookexternalhit|python|curl|wget|monitor|lighthouse|pingdom/i.test(String(ua || ''));
 function shortId(s) { let h1 = 0x811c9dc5, h2 = 0x01000193; for (let i = 0; i < s.length; i++) { const ch = s.charCodeAt(i); h1 = Math.imul(h1 ^ ch, 16777619) >>> 0; h2 = Math.imul(h2 + ch, 2246822519) >>> 0; } return (h1.toString(36) + h2.toString(36)).slice(0, 12); }
-const inc = async (keys, rec) => { try { if (keys.length) await kv.incrMany(pinCohortEntries(rec, keys.map(k => ['c:' + k, 1]))); } catch (e) {} };
+const inc = async (keys, rec) => { try { if (rec && rec.s === 'tt' && rec.p && !rec.vk) { const pre = 'sh-p-' + pk(rec.p) + '-'; keys = keys.concat(keys.filter(k => k.startsWith(pre)).map(k => 'sh-tt-p' + pk(rec.p) + '-' + k.slice(pre.length))); } if (keys.length) await kv.incrMany(pinCohortEntries(rec, keys.map(k => ['c:' + k, 1]))); } catch (e) {} }; // 17 nov: TikTok ook per product apart (sh-tt-p<pid>-*), voor de dagelijkse producttest
 const sadd = async (key, ...members) => { const m = members.filter(Boolean).map(String); if (!m.length) return; try { await kv.raw(['SADD', key, ...m]); } catch (e) {} };
 const smembers = async key => { try { return (await kv.raw(['SMEMBERS', key])) || []; } catch (e) { return []; } };
 async function log(e) { try { const l = (await kv.get(K.log)) || []; l.unshift(Object.assign({ at: new Date().toISOString() }, e)); await kv.set(K.log, l.slice(0, 500)); } catch (x) {} }
@@ -931,9 +932,27 @@ export default async function handler(req, res) {
 <p class="meta">Voorstel Henkjan en Claude (20 okt): de 3D Houten Uil Spaarpot op €9,95 (thuis €16,40 tegen €35,50 elders). Lokkercampagne loopt sinds 20 okt (PropellerAds 12032438) met de prijs die nu in de shop staat; gaat de prijs omlaag, dan passen we de advertenties aan.</p>
 </main></body></html>`); }
     if (op === 'ttfeed' || op === 'ttfeed.csv') { // 17 nov: productcatalogus voor TikTok (CSV, dagelijks opgehaald); ?vorm=stand geeft alleen de telling
-      const cat = await catalog(true), kaart = (await kv.get(K_KOST).catch(() => null)) || {}; const f = ttFeedCsv(cat.items, kaart); res.setHeader('cache-control', 'public, max-age=900');
+      const cat = await catalog(true), kaart = (await kv.get(K_KOST).catch(() => null)) || {}; const f = ttFeedCsv(cat.items, kaart, testLabels(await kv.get('hjdk:tt:test').catch(() => null))); res.setHeader('cache-control', 'public, max-age=900');
       if (url.searchParams.get('vorm') === 'stand') return res.status(200).json(Object.assign({ ok: true }, f.tel));
       res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('content-disposition', 'inline; filename="kadoly-tiktok.csv"'); return res.status(200).send(f.csv); }
+    if (op === 'tttest') { // 17 nov (Henkjan: "iedere dag een aantal testen of toevoegen aan lopende testen om de winnaars te vinden"): dagelijkse producttest op TikTok (lib/tttest.js)
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0], ua = String(req.headers['user-agent'] || ''), beschermd = /\.vercel\.app$/i.test(host);
+      const st0 = await kv.get('hjdk:tt:test').catch(() => null); const cat = await catalog(true); const perId = {}; cat.items.forEach(i => { perId[i.id] = i; });
+      const ids = Object.keys((st0 && st0.items) || {}); const telP = async lijst => { const t = await tellers('tt', 'p', lijst.map(pk)); return t; };
+      const mag = /vercel-cron/i.test(ua) || beschermd || (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET); if (!mag) return res.status(404).send('Niet gevonden'); // marges: alleen intern
+      if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(testTekst(st0, await telP(ids), perId)); }
+      const droog = !!url.searchParams.get('droog'), dagNL = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Amsterdam' }).format(new Date());
+      if (!droog && !url.searchParams.get('opnieuw') && st0 && st0.dag === dagNL) return res.status(200).json({ ok: true, al: true, tekst: testTekst(st0, await telP(ids), perId) });
+      const kaart = (await kv.get(K_KOST).catch(() => null)) || {}; const r = testRonde(JSON.parse(JSON.stringify(st0 || { items: {} })), cat.items, kaart, await telP(ids), dagNL, { perDag: Number(url.searchParams.get('n')) || undefined });
+      const tekst = 'TikTok producttest ' + dagNL + ': ' + r.nieuw.length + ' erbij, ' + r.lopend + ' lopend, ' + r.kandidaten + ' kandidaten met marge >= EUR ' + TT_TEST.MIN_MARGE + (r.gedaan.length ? '; ' + r.gedaan.map(g => g.uitslag + ': ' + String(g.t).slice(0, 40) + ' (' + g.reden + ')').join('; ') : '');
+      if (!droog) { try { await kv.set('hjdk:tt:test', r.state, { ex: 120 * 86400 }); } catch (e) {} if (r.nieuw.length || r.gedaan.length) { try { await kv.raw(['LPUSH', 'mm:handover:log', JSON.stringify({ t: new Date().toISOString(), wie: 'tiktok-test', tekst })]); await kv.raw(['LTRIM', 'mm:handover:log', '0', '299']); } catch (e) {} } }
+      return res.status(200).json({ ok: true, droog, tekst, nieuw: r.nieuw, gedaan: r.gedaan, lopend: r.lopend, kandidaten: r.kandidaten }); }
+    if (op === 'prijslijst') { // 17 nov (Henkjan: "Ja zet concurrerende lijst klaar"): nieuwe prijzen voor de shop (lib/shopprijs.js advies), zonder inkoop of marge; per stap hooguit 50% omhoog
+      const cat = await catalog(true); const st = await prijsStand(kv, cat.items); const nu = new Date().toISOString();
+      const rijen = st.rows.filter(r => (r.stand === 'omhoog' || r.stand === 'omlaag') && r.nieuwP != null).map(r => { let nieuwP = r.nieuwP, stap = false; if (nieuwP > r.p * 1.5) { nieuwP = Math.max(r.p, Math.floor(r.p * 1.5 - 0.95) + 0.95); stap = true; } return { id: r.id, titel: r.t, prijs_nu: r.p, prijs_nieuw: Math.round(nieuwP * 100) / 100, verzending: r.vk, totaal_nieuw: Math.round((nieuwP + r.vk) * 100) / 100, richting: nieuwP > r.p ? 'omhoog' : 'omlaag', zelfde_product_elders: !!r.zeker, waarom: r.waarom + (stap ? ' (eerste stap, hooguit 50% omhoog per keer)' : '') }; }).filter(x => Math.abs(x.prijs_nieuw - x.prijs_nu) >= 0.5);
+      res.setHeader('cache-control', 'no-store'); res.setHeader('access-control-allow-origin', '*');
+      if (url.searchParams.get('vorm') === 'csv') { const q = v => { const s2 = String(v == null ? '' : v); return /[",\n]/.test(s2) ? '"' + s2.replace(/"/g, '""') + '"' : s2; }; res.setHeader('content-type', 'text/csv; charset=utf-8'); return res.status(200).send(['id,titel,prijs_nu,prijs_nieuw,verzending,totaal_nieuw,richting,zelfde_product_elders,waarom', ...rijen.map(x => [x.id, x.titel, x.prijs_nu, x.prijs_nieuw, x.verzending, x.totaal_nieuw, x.richting, x.zelfde_product_elders ? 'ja' : 'nee', x.waarom].map(q).join(','))].join('\n') + '\n'); }
+      return res.status(200).json({ ok: true, at: nu, marktprijzenVan: st.at || null, aantal: rijen.length, omhoog: rijen.filter(x => x.richting === 'omhoog').length, omlaag: rijen.filter(x => x.richting === 'omlaag').length, uitleg: 'prijs_nieuw is de productprijs zonder verzending. Nooit boven de goedkoopste aanbieder van hetzelfde product; vergelijkbare producten: hooguit 25% omhoog of 15% omlaag per keer; per stap hooguit 50% omhoog. Elke dag opnieuw berekend uit Demand Radar.', rijen }); }
     if (op === 'ttvideo') { // 17 nov: video uit de TikTok-advertentie per product, voor bovenaan de productpagina (shop, bij utm_source=tiktok); zonder p de hele lijst
       res.setHeader('cache-control', 'public, max-age=600'); res.setHeader('access-control-allow-origin', '*'); const p = String(url.searchParams.get('p') || '').slice(0, 40);
       if (!p) return res.status(200).json({ ok: true, videos: Object.fromEntries(Object.keys(TT_VIDEO).map(k => [k, ttVideo(k)])) });
