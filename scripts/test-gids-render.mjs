@@ -50,6 +50,23 @@ console.log(JSON.stringify({routes:'8 onderwerpen, bronhub, home, rubriek, nieuw
 
 
 
+
+const whisky=gidsen.GIDSEN['whisky-set-cadeau'];
+assert.ok(!JSON.stringify(whisky).includes('Te klein voor ijs'));
+assert.ok(!JSON.stringify(whisky).includes('nog maar 2 op voorraad'));
+const wh=(await render('slug=whisky-set-cadeau')).body;
+const wg=[...wh.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1])['@graph']||[]);
+assert.deepEqual(wg.find(x=>x['@type']==='Article').citation,whisky.bronnen.map(id=>bewijs.BRONNEN[id].url));
+assert.ok(wh.includes('geen huidige veiligheidsgarantie')||wh.includes('geen huidige veiligheidsgarantie'.replace('huidige','actuele'))||wh.includes('geen huidige')||wh.includes('geen actuele veiligheidsgarantie'));
+assert.ok(wh.includes('ICP-MS'));
+const wc={'oc_machine':{id:'oc_machine',t:'3kg Rotatie Tumbler voor Sieraden Polijsten van VEVOR',p:20,vr:true},'oc_drink':{id:'oc_drink',t:'Mini Whiskey Tumbler Glazen',p:20,vr:true},'oc_acryl':{id:'oc_acryl',t:'Witte Acrylaat Laag Tumbler Set van 6',p:20,vr:true}};
+const wl=alle.alleVan('whisky-set-cadeau',[],wc,{},i=>i.p);
+assert.equal(wl.n,2);
+assert.ok(wl.groepen.some(x=>x.naam==='Acrylaat drinkbekers'&&x.items[0].id==='oc_acryl'));
+assert.equal(bewijs.bronLink(wc.oc_machine),'');
+assert.ok(bewijs.bronLink(wc.oc_drink).includes('/whisky-set-cadeau'));
+console.log('Whisky: polijstmachine uitgesloten, acrylaat apart, bron/schema en materiaalgrenzen gecontroleerd.');
+
 // Badset: onbekende huidgegevens mogen geen veiligheidsrang of automatische aankoop geven.
 const badset=gidsen.GIDSEN['badset-cadeau'];
 const onbekend=badset.check.regels.find(x=>x.id==='weet-huid');
@@ -142,6 +159,7 @@ const dg=[...dh.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/scri
 assert.deepEqual(dg.find(x=>x['@type']==='Article').citation,desk.bronnen.map(id=>bewijs.BRONNEN[id].url));
 assert.ok(dh.includes('20 studies met 2.478'));
 console.log('Bureau: bron-/variantgrenzen, prijsuitsluiting en conditionele keuzecheck geslaagd.');
+
 
 
 
