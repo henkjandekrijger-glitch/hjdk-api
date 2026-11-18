@@ -21,7 +21,12 @@ Ophalen met web_fetch_vercel_url (curl naar deze domeinen wordt vanuit de cloud 
 5. Meld elk concept (zonder token mogelijk):
    `/api/post?op=meld&project=<project>&doel=<één zin>&aan=<adres>&soort=<journalist|onderzoeker|organisatie|kliniek|bedrijf|klant|partner|anders>&taal=<nl|en|de>&onderwerp=<onderwerpregel>&variant=<a|b>&lessen=<ids van de toegepaste regels, komma's>&wie=<chat>`
    Het antwoord geeft een id. Gebruik per project en doel steeds dezelfde tekst, anders zijn varianten niet te vergelijken.
+   Geef elke link in de mail mee met `&links=<url>|<url>`. Het antwoord geeft per link onder `gebruik` de meetlink (`<eigen host>/m/<code>`); zet die in de mail, niet de kale pagina. De klik komt in Clickmind (netwerk mail, campagne post-<project>) en de pagina krijgt `?mmc=<klik-id>`, zodat cm.js het gedrag daarna volgt. Links naar sites van anderen blijven kaal.
 6. Laat het concept in de chat aan Henkjan zien. Pas na zijn "verstuur" gaat het in Gmail. Nooit zelf versturen.
+
+## Links en de Gmail-koppeling van de chat (18 nov 2026: "Dit NOOIT meer doen: niet de goede link")
+
+De Gmail-koppeling van Claude herschrijft elke link die met https begint naar een google.com/url-link, ook in een a-href. Controleer dus elk concept na het aanmaken met get_draft (RAW of FULL_CONTENT). Staat er google.com/url in: niet versturen. Schrijf een link in zo'n mail zonder https ervoor (bijvoorbeeld todayin.email/surgery/m/CODE): die blijft ongemoeid. Verstuur nooit een mail waarvan je de links niet hebt teruggelezen.
 
 ## Na het versturen
 

@@ -7,7 +7,7 @@
 //   GET  /api/post?op=ronde            cron (dagelijks): Gmail nalopen op verstuurd, antwoord en bounce; Resend-stromen tellen
 //   GET  /api/post?op=koppel           Gmail koppelen (alleen lezen); Google stuurt terug naar op=terug
 // Zonder token mag een chat melden (hooguit 150 per dag); de stand toont nooit een volledig adres.
-import { regels, stand, meld, uitkomst, ronde, koppelUrl, koppelTerug, DAG, gmailLes, gmailRegels } from '../lib/postlus.js';
+import { regels, stand, meld, uitkomst, ronde, koppelUrl, koppelTerug, DAG, gmailLes, gmailRegels, klikAntwoord } from '../lib/postlus.js';
 import { leesSkill } from '../lib/skills.js';
 import { kv } from '../lib/db.js';
 
@@ -20,6 +20,7 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(204).end();
   const q = Object.assign({}, req.query || {}, typeof req.body === 'object' && req.body ? req.body : {}); const op = q.op || 'regels';
   try {
+    if (op === 'k') return await klikAntwoord(req, res, String(q.code || ''));
     if (op === 'skill') { const t = leesSkill('mail-lerend'); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return t ? res.status(200).send(t) : res.status(404).send('skill niet gevonden'); }
     if (op === 'regels') {
       const r = await regels();

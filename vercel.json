@@ -271,6 +271,10 @@
   ],
   "rewrites": [
     {
+      "source": "/m/:code([0-9a-f]{12}[1-9])",
+      "destination": "/api/post?op=k&code=:code"
+    },
+    {
       "source": "/nexyhelp/api/:rest*",
       "has": [{"type": "host", "value": "(www\\.)?keuzehulp\\.best"}],
       "destination": "/api/:rest*"
