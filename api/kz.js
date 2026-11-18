@@ -1,5 +1,5 @@
 import { faqZonderDubbel } from '../lib/faq-dubbel.js';
-import { HUISSTIJL_CSS, FAVICON, voetEenRegel } from '../lib/huisstijl.js';
+import { HUISSTIJL_CSS, FAVICON, voetEenRegel, chatErbij } from '../lib/huisstijl.js';
 import { kzuxBlok, zoekLogJs } from '../lib/kzux.js';
 import { trendingBlock } from '../lib/guide-usage.js';
 import { koopBlok, koopMeetScript } from '../lib/koopblok.js';
@@ -246,6 +246,8 @@ const baseOf = req => DOMAIN; /* één canonieke host: het eigen domein */
 const pathOf = (req, p) => p.replace(/^\/keuzehulp(?=\/|$)/, '') || '/';
 const canon = p => DOMAIN + pathOf(null, p);
 function shell(title, desc, body, canonical, extraHead) {
+  // elke pagina de chat (Henkjan 18 nov 2026: "ALLES MoET een chat hebben"): sjablonen zonder chat krijgen hem onder de kop
+  if (!/class="kx[ "]/.test(body) && /<h1/i.test(body)) { const sl = String(canonical || '').replace(/[?#].*$/, '').split('/').filter(Boolean).pop() || 'keuzehulp'; body = chatErbij(body, 'nl', { meet: { G: 'kz' }, chat: { slug: /\./.test(sl) ? 'keuzehulp' : sl } }); }
   return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="${FAVICON}"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="impact-site-verification" value="8d566ead-d770-473a-9a48-d48e24cd0bb9"><title>${esc(title)}</title><meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">${SITE.gsc ? '<meta name="google-site-verification" content="' + esc(SITE.gsc) + '">' : ''}${SITE.bing ? '<meta name="msvalidate.01" content="' + esc(SITE.bing) + '">' : ''}${PIN_VERIFY.v ? '<meta name="p:domain_verify" content="' + esc(PIN_VERIFY.v) + '">' : ''}<link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"><link rel="alternate" type="application/rss+xml" title="Nieuwe keuzehulpen" href="/feed.xml">${canonical ? '<link rel="canonical" href="' + esc(canonical) + '">' : ''}<meta property="og:type" content="article"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="${esc(SITE.name)}">${extraHead || ''}<style>${ONTWERP2 ? CSS2 : CSS}</style>${COLTAG}${MEETTAG}<script src="/cm.js" data-site="keuzehulp" data-proef="keuzehulp" data-modal="geen" async></script></head><body>
 <header class="topbar"><div class="wrap"><a class="mark" href="/keuzehulp">keuze<em>hulp</em></a><nav class="topnav" aria-label="Menu"><a href="/keuzehulp">Alle keuzehulpen</a><a href="/deals">Deals</a><a href="/keuzehulp/over">Over ons</a></nav></div></header>
 <main><div class="wrap">${/class="ov[ "]/.test(body) ? body : '<div class="ov">' + body + '</div>'}</div></main>
