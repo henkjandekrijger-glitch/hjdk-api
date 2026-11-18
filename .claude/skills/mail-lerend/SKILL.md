@@ -25,6 +25,8 @@ Ophalen met web_fetch_vercel_url (curl naar deze domeinen wordt vanuit de cloud 
 
 ## Na het versturen
 
+Verstuur je zelf vanuit de chat (na Henkjans "verstuur"), meld dat dan meteen: `/api/post?op=uitkomst&id=<id>&uitkomst=verstuurd`. Verstuur rustig: hooguit een paar per dag per project.
+
 Niets melden: de dagelijkse ronde kijkt in Gmail (alleen lezen) of de mail in Verzonden staat, of de ontvanger antwoordde en of hij terugkwam. Is Gmail niet gekoppeld (stand: gmail.gekoppeld false), meld dan zelf:
 `/api/post?op=uitkomst&id=<id>&uitkomst=<antwoord|ja|nee|klik|bounce|geen>&toelichting=<kort>`
 
