@@ -19972,7 +19972,626 @@
     "faq",
     "fouten",
     "verwant",
+    "updatedAt",
+    "secties",
+    "kern"
+   ],
+   "secties": [
+    {
+     "id": "kosten",
+     "h": "Wat kost een thuisbatterij? Prijzen per maat",
+     "p": [
+      "Een vaste thuisbatterij kost volgens de Consumentenbond gemiddeld €4.000 tot €6.000, inclusief installatie en btw. Veel leveranciers noemen prijzen zonder btw; reken die er dus bij voor je vergelijkt. Een thuisbatterij met stekker zet je zelf neer en is daardoor goedkoper per kWh in aanschaf, maar levert via het stopcontact hoogstens 800 W."
+     ],
+     "tabel": {
+      "kop": [
+       "Maat",
+       "Prijs inclusief installatie",
+       "Past bij"
+      ],
+      "rijen": [
+       [
+        "Onder 5 kWh",
+        "€1.800 tot €3.800",
+        "Klein overschot, appartement"
+       ],
+       [
+        "Rond 10 kWh",
+        "€3.300 tot €7.000",
+        "Gezin met zonnepanelen, warmtepomp"
+       ],
+       [
+        "Rond 15 kWh",
+        "€7.000 tot €9.000",
+        "Veel panelen, dynamisch contract"
+       ],
+       [
+        "Rond 20 kWh",
+        "€8.000 tot €12.000",
+        "Groot verbruik, laadpaal, handel op uurprijzen"
+       ]
+      ],
+      "bron": "Bron: offertes verzameld door Trustoo (3 nov 2026); gemiddelde volgens de Consumentenbond (19 okt 2026)."
+     }
+    },
+    {
+     "id": "merken",
+     "h": "Thuisbatterijen vergelijken: merken, opslag en prijs",
+     "p": [
+      "Dit zijn de merken waar Nederlanders het meest naar zoeken, met de opslag en de prijs die de verkoper zelf noemt. Prijzen veranderen snel, zeker rond Black Friday; kijk naar de datum en vraag bij een vaste batterij altijd een complete offerte."
+     ],
+     "tabel": {
+      "kop": [
+       "Model",
+       "Soort",
+       "Opslag",
+       "Vermogen",
+       "Prijs (bron, datum)"
+      ],
+      "rijen": [
+       [
+        "Marstek Venus E 3.0",
+        "Stekker",
+        "5,12 kWh (ca. 4,6 bruikbaar)",
+        "800 W via stopcontact",
+        "€1.319 incl. btw (123accu, BE-aanbod)"
+       ],
+       [
+        "Anker SOLIX Solarbank Max AC",
+        "Stekker",
+        "7 kWh",
+        "tot 3.500 W plug-in",
+        "€1.899 (Anker, Black Friday, 18 nov 2026)"
+       ],
+       [
+        "AEG SolarCube Pro",
+        "Stekker",
+        "6 of 9 kWh, tot 18 kWh",
+        "800 W via stopcontact",
+        "€1.755 (6 kWh) of €2.299 (9 kWh) (123accu)"
+       ],
+       [
+        "HomeWizard Plug-In Battery",
+        "Stekker",
+        "2,688 kWh per stuk, tot 4",
+        "800 W",
+        "zie winkel"
+       ],
+       [
+        "Sessy",
+        "Vast",
+        "5 kWh",
+        "2,2 kW laden, 1,7 kW ontladen",
+        "vanaf €3.350 excl. btw en installatie (Slimster, 18 nov 2026)"
+       ],
+       [
+        "Enphase IQ Battery 5P",
+        "Vast",
+        "5 kWh",
+        "3,84 kW",
+        "€2.865 incl. btw, zonder installatie (slimmelaadpunt.nl)"
+       ],
+       [
+        "Zonneplan Nexus",
+        "Vast",
+        "10 tot 35 kWh",
+        "tot 11 kW",
+        "€4.690 (10 kWh) tot €9.090 (35 kWh), na teruggave btw, incl. installatie (Zonneplan)"
+       ],
+       [
+        "Tesla Powerwall 3",
+        "Vast",
+        "13,5 kWh",
+        "11,04 kW",
+        "€9.499 incl. installatie en btw (slimmelaadpunt.nl)"
+       ],
+       [
+        "SolarEdge Home Battery",
+        "Vast",
+        "modules van 4,6 kWh, tot 23 kWh",
+        "verschilt",
+        "alleen via installateur"
+       ]
+      ],
+      "bron": "Prijzen zoals de verkoper ze op 18 november 2026 noemde. Een vergelijking van 10 stekkermodellen staat op keuzehulp.best/stekkerbatterij."
+     }
+    },
+    {
+     "id": "subsidie",
+     "h": "Subsidie thuisbatterij 2026: landelijk, provincie en gemeente",
+     "p": [
+      "Landelijk is er geen subsidie op een thuisbatterij, en het kabinet wil ook geen 0% btw op batterijen: dat mag niet van de Europese btw-regels en kan pieken op het stroomnet erger maken (Solar Magazine, 6 okt 2026). Op 19 oktober 2026 waarschuwde RVO voor een nepmail die €1.850 batterijsubsidie belooft; die regeling bestaat niet.",
+      "Wel hebben een paar provincies en gemeenten een eigen regeling. Provincie Flevoland vergoedt 25% van de kosten tot €1.250, bij een investering vanaf €3.000 exclusief btw, voor een batterij van 5 tot 20 kWh als je zonnepanelen hebt. Je mag dan tussen 12:00 en 15:00 in april tot en met september niet terugleveren en tussen 17:00 en 21:00 in oktober tot en met maart niet uit het net laden. Gemeente Noordwijk geeft tot €1.000 voor een batterij tot 11 kWh, voor eigenaar-bewoners met zonnepanelen. Zonneplan noemt ook regelingen in Purmerend, Noord-Beveland en Schouwen-Duiveland; vraag de voorwaarden na bij je gemeente.",
+      "Een subsidiecheck voor jouw adres doe je met de Energiesubsidiewijzer van Milieu Centraal op verbeterjehuis.nl: vul je woonplaats in en je ziet welke regelingen er zijn. Kijk daarna op de site van je gemeente of er nog budget is, want de potten raken vaak halverwege het jaar leeg.",
+      "Btw terugvragen kan als particulier niet als je de batterij alleen voor jezelf gebruikt. Volgens de Belastingdienst kan het alleen als je met de batterij stroom verhandelt, met een energiemanagementsysteem, een dynamisch contract en factuur en contract op je eigen naam. Voor het deel privégebruik betaal je dan terug, met een herzieningstermijn van 5 jaar."
+     ]
+    },
+    {
+     "id": "rendabel",
+     "h": "Is een thuisbatterij rendabel na 2027?",
+     "p": [
+      "Op 1 januari 2027 stopt salderen. Je krijgt dan voor teruggeleverde stroom een terugleververgoeding die tot 2030 minstens de helft van het kale leveringstarief moet zijn (Rijksoverheid). Elke kWh die je zelf opslaat en later gebruikt, levert dus meer op dan terugleveren. Toch verwacht Milieu Centraal dat een thuisbatterij zich met besparing op de energierekening nu waarschijnlijk niet terugverdient.",
+      "Een rekenvoorbeeld van De Belegger (10 okt 2026): een stekkerbatterij van €1.500 die 8 jaar meegaat, moet ongeveer €223 per jaar netto besparen om quitte te spelen. In hun scenario's bespaarde hij €72 tot €533 in 3 jaar, dus in die periode verdiende geen enkele variant zich terug.",
+      "Wat het wel beter maakt: veel overschot aan zonnestroom, terugleverkosten bij je leverancier, en vooral een dynamisch contract waarbij de batterij laadt als stroom goedkoop is en ontlaadt als hij duur is. Vereniging Eigen Huis rekende uit dat een batterij in een huis met warmtepomp en zonnepanelen in 2030 ongeveer €230 per jaar aan netkosten bespaart, van €860 naar €630, nog zonder de aanschaf mee te rekenen. Vanaf 2029 komen er tijdsafhankelijke nettarieven."
+     ]
+    },
+    {
+     "id": "soort",
+     "h": "Thuisbatterij met stekker, vast of powerstation?",
+     "p": [
+      "Drie soorten worden vaak door elkaar gehaald. Kies eerst wat je wilt bereiken, dan de maat."
+     ],
+     "tabel": {
+      "kop": [
+       "",
+       "Met stekker",
+       "Vast",
+       "Powerstation"
+      ],
+      "rijen": [
+       [
+        "Aansluiten",
+        "Zelf, in het stopcontact",
+        "Installateur, in de meterkast",
+        "Niet op het huis, apparaten direct erin"
+       ],
+       [
+        "Vermogen naar huis",
+        "Hoogstens 800 W",
+        "Enkele kW, verschilt per merk",
+        "Geen, alleen eigen stopcontacten"
+       ],
+       [
+        "Opslag",
+        "2 tot 7 kWh, stapelbaar",
+        "5 tot 35 kWh",
+        "0,3 tot 3 kWh"
+       ],
+       [
+        "Prijs",
+        "ongeveer €1.300 tot €1.900",
+        "€4.000 tot €6.000 gemiddeld",
+        "vanaf een paar honderd euro"
+       ],
+       [
+        "Bij stroomstoring",
+        "Meestal niet, soms een apart stopcontact",
+        "Alleen met back-upfunctie",
+        "Ja, voor wat erop aangesloten is"
+       ]
+      ],
+      "bron": "Prijzen: Consumentenbond (okt 2026) en verkopers (18 nov 2026)."
+     }
+    }
+   ],
+   "kern": true
+  },
+  {
+   "slug": "powerstation",
+   "cat": "Klussen",
+   "pct": 4,
+   "term": "powerstation",
+   "publishAt": "2026-11-18",
+   "updatedAt": "2026-11-18",
+   "kern": true,
+   "titleFixAt": "2026-11-18",
+   "title": "Welke powerstation past bij jou?",
+   "h1": "Powerstation kopen 2026: EcoFlow, Anker SOLIX, Jackery of Bluetti?",
+   "seoTitle": "Powerstation kopen 2026: welke en hoeveel Wh heb je nodig",
+   "metaDesc": "Powerstation voor kamperen, noodstroom of met zonnepaneel? 3 vragen, Wh en watt uitgelegd, testuitslagen ADAC en Auto Bild, EcoFlow, Anker en Jackery.",
+   "intro": "Een powerstation is een grote accu met stopcontacten, USB en een autoaansluiting. Je laadt hem op aan het stopcontact, in de auto of met een zonnepaneel, en gebruikt hem bij het kamperen, in het tuinhuis of als de stroom uitvalt. Welke past, hangt af van wat je wilt laten draaien en hoe lang. Drie vragen.",
+   "kort": "Voor kamperen, tuinhuis en een korte stroomstoring is ongeveer 1 kWh met 1.500 tot 2.000 W genoeg: Anker SOLIX C1000 Gen 2 (1.024 Wh, 2.000 W), EcoFlow DELTA 3 Plus (1.024 Wh, 1.800 W) of Jackery Explorer 1000 v2 (1.070 Wh, 1.500 W). Wil je een koelkast een dag laten draaien, kies dan ongeveer 2 kWh, zoals de Jackery Explorer 2000 v2 (2.042 Wh, 2.200 W). Een powerstation kan je huis niet terugvoeden; daarvoor heb je een thuisbatterij nodig.",
+   "questions": [
+    {
+     "q": "Waarvoor wil je hem gebruiken?",
+     "options": [
+      {
+       "label": "Kamperen, camper of tuinhuis",
+       "term": "powerstation camping",
+       "must": [
+        "powerstation",
+        "power station",
+        "draagbaar",
+        "portable",
+        "camping"
+       ]
+      },
+      {
+       "label": "Noodstroom bij een storing",
+       "term": "powerstation noodstroom",
+       "must": [
+        "powerstation",
+        "power station",
+        "noodstroom",
+        "ups",
+        "lifepo4"
+       ]
+      },
+      {
+       "label": "Met zonnepaneel, off-grid",
+       "term": "powerstation met zonnepaneel",
+       "must": [
+        "powerstation",
+        "power station",
+        "zonnepaneel",
+        "solar",
+        "solarpanel"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Wat wil je laten draaien?",
+     "options": [
+      {
+       "label": "Telefoon, laptop, lampen, koelbox",
+       "add": "500wh",
+       "must": [
+        "powerstation",
+        "power station"
+       ]
+      },
+      {
+       "label": "Koelkast, koffiezetter, gereedschap",
+       "add": "1000wh",
+       "must": [
+        "powerstation",
+        "power station"
+       ]
+      },
+      {
+       "label": "Meerdere grote apparaten een dag",
+       "add": "2000wh",
+       "must": [
+        "powerstation",
+        "power station"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Wat is je budget?",
+     "options": [
+      {
+       "label": "Tot €400",
+       "max": 400
+      },
+      {
+       "label": "€400 tot €800",
+       "min": 350,
+       "max": 850
+      },
+      {
+       "label": "Meer dan €800",
+       "min": 750
+      }
+     ]
+    }
+   ],
+   "uitleg": "Kijk naar twee getallen. De capaciteit in wattuur (Wh) bepaalt hoe lang hij meegaat; het vermogen in watt (W) welke apparaten tegelijk kunnen draaien. Een apparaat van 100 W draait op 1.024 Wh in theorie 8 tot 9 uur, min verliezen. Voor een waterkoker, föhn of cirkelzaag heb je 2.000 W of meer nodig. Kies een LiFePO4-accu: die gaat duizenden laadbeurten mee (Anker noemt 4.000 voor de C1000 Gen 2). Laad je met een zonnepaneel, kijk dan naar het maximale zonne-ingangsvermogen: meer panelen helpen alleen als de ingang ze aankan. Een powerstation voedt alleen de apparaten die je er direct op aansluit; je huis terugvoeden via een stopcontact kan en mag niet, zegt ook de Stiftung Warentest.",
+   "secties": [
+    {
+     "id": "modellen",
+     "h": "Powerstations vergelijken: opslag, vermogen en gewicht",
+     "p": [
+      "De bekendste modellen met de gegevens van de fabrikant. Prijzen wisselen per dag; de tabel helpt je kiezen, de knop eronder toont de prijs van vandaag."
+     ],
+     "tabel": {
+      "kop": [
+       "Model",
+       "Opslag",
+       "Vermogen",
+       "Gewicht",
+       "Goed voor"
+      ],
+      "rijen": [
+       [
+        "EcoFlow RIVER 3",
+        "245 Wh",
+        "300 W (600 W X-Boost)",
+        "licht",
+        "Telefoon, laptop, lamp"
+       ],
+       [
+        "Anker SOLIX C1000 Gen 2",
+        "1.024 Wh",
+        "2.000 W (3.000 W piek)",
+        "11,3 kg",
+        "Kamperen, korte storing"
+       ],
+       [
+        "EcoFlow DELTA 3 Plus",
+        "1.024 Wh",
+        "1.800 W (3.600 W piek)",
+        "12,5 kg",
+        "Kamperen, korte storing"
+       ],
+       [
+        "Jackery Explorer 1000 v2",
+        "1.070 Wh",
+        "1.500 W (3.000 W piek)",
+        "10,8 kg",
+        "Kamperen, tuinhuis"
+       ],
+       [
+        "Jackery Explorer 2000 v2",
+        "2.042 Wh",
+        "2.200 W",
+        "17,5 kg",
+        "Koelkast een dag"
+       ],
+       [
+        "Anker SOLIX F2000",
+        "2.048 Wh",
+        "2.300 W",
+        "30,5 kg",
+        "Koelkast en meer"
+       ]
+      ],
+      "bron": "Gegevens van fabrikant en winkels, gelezen 18 november 2026. Bluetti meldt de AC180 en AC200L in de Europese shop als uitgelopen."
+     }
+    },
+    {
+     "id": "test",
+     "h": "Wat zeggen de tests?",
+     "p": [
+      "Auto Bild testte 22 powerstations (gepubliceerd 28 mei 2026, prijzen van juli 2025): testwinnaar EcoFlow DELTA 3 Plus met een 1,2, daarna Anker SOLIX C1000 met een 1,3; beste prijs-kwaliteit Bluetti EB3A. De ADAC testte in juni 2025 acht modellen van 750 tot 1.500 Wh: winnaar Bluetti AC180P (2,0) voor EcoFlow DELTA 3 Plus (2,1). De Jackery Explorer 1000 v2 en Ective BlackBox 10 kregen een 5,0, omdat tegelijk laden uit de auto en van een zonnepaneel overspanning kan geven die de auto kan beschadigen. De test van de Stiftung Warentest is van 2023 en ging over kleinere modellen van 300 tot 700 W."
+     ]
+    },
+    {
+     "id": "hoeveel",
+     "h": "Hoeveel Wh heb je nodig?",
+     "p": [
+      "Tel op wat je wilt laten draaien en hoe lang. Een koelkast gebruikt ruwweg 1 tot 2 kWh per dag en vraagt bij het aanslaan een veelvoud van zijn gewone vermogen; kies dan minstens 1.500 W en ongeveer 2 kWh. Een laptop van 60 W draait op 1 kWh ruim 12 uur. Een cpap-apparaat zoals de ResMed AirSense 11 is opgegeven op 65 W, meer met de bevochtiger aan."
+     ]
+    }
+   ],
+   "fouten": [
+    "Alleen naar de Wh kijken en vergeten dat een waterkoker of föhn 2.000 W vraagt.",
+    "Een powerstation via een stopcontact aan je huisnet koppelen.",
+    "Tegelijk laden uit de auto en van een zonnepaneel als de fabrikant dat niet toestaat (ADAC).",
+    "Een uitgelopen model kopen zonder onderdelen of ondersteuning."
+   ],
+   "faq": [
+    {
+     "q": "Wat is de beste powerstation?",
+     "a": "Bij Auto Bild (mei 2026, 22 modellen) won de EcoFlow DELTA 3 Plus met een 1,2, voor de Anker SOLIX C1000 met een 1,3. Bij de ADAC (juni 2025) won de Bluetti AC180P met een 2,0. Kies op wat je wilt laten draaien: rond 1 kWh voor kamperen, rond 2 kWh voor een koelkast."
+    },
+    {
+     "q": "Wat is het verschil tussen een powerstation en een thuisbatterij?",
+     "a": "Een powerstation is draagbaar en heeft eigen stopcontacten; je sluit apparaten er direct op aan. Een thuisbatterij levert stroom terug aan je huis, met stekker tot 800 W of vast in de meterkast. Voor het opslaan van zonnestroom voor de avond heb je een thuisbatterij nodig."
+    },
+    {
+     "q": "Kan ik een powerstation opladen met een zonnepaneel?",
+     "a": "Ja, de meeste powerstations hebben een zonne-ingang. Kijk naar het maximale ingangsvermogen en de spanning, en leg een paneel zo dat het de hele dag zon krijgt. Laad niet tegelijk uit de auto en van het paneel als de fabrikant dat niet toestaat."
+    },
+    {
+     "q": "Hoe lang gaat een powerstation mee?",
+     "a": "Met een LiFePO4-accu duizenden laadbeurten: Anker noemt 4.000 of meer voor de SOLIX C1000 Gen 2. Hoe lang hij per lading meegaat, reken je uit door de Wh te delen door het vermogen van je apparaten, min ongeveer 10 tot 15% verlies."
+    },
+    {
+     "q": "Mag ik met een powerstation mijn huis van stroom voorzien?",
+     "a": "Nee, niet via een gewoon stopcontact. Een powerstation voedt alleen de apparaten die je erop aansluit. Wil je bij een storing groepen in huis laten werken, dan heb je een vaste thuisbatterij met back-upfunctie en een installateur nodig."
+    }
+   ],
+   "verwant": [
+    "thuisbatterij",
+    "stekkerbatterij",
+    "powerbank",
+    "e-bike",
+    "barbecue",
+    "koelkast"
+   ],
+   "vast": [
+    "title",
+    "h1",
+    "seoTitle",
+    "titleFixAt",
+    "metaDesc",
+    "intro",
+    "kort",
+    "uitleg",
+    "secties",
+    "faq",
+    "fouten",
+    "verwant",
+    "kern",
     "updatedAt"
+   ]
+  },
+  {
+   "slug": "marstek-venus-e-3-vs-homewizard-vs-anker-solix",
+   "cat": "Klussen",
+   "pct": 4,
+   "term": "thuisbatterij met stekker",
+   "publishAt": "2026-11-18",
+   "updatedAt": "2026-11-18",
+   "kern": true,
+   "titleFixAt": "2026-11-18",
+   "naam": "Marstek, HomeWizard of Anker SOLIX",
+   "title": "Marstek Venus E 3.0, HomeWizard of Anker SOLIX: welke past bij jou?",
+   "h1": "Marstek Venus E 3.0, HomeWizard Plug-In Battery of Anker SOLIX: welke thuisbatterij met stekker kies je?",
+   "seoTitle": "Marstek Venus E 3.0 vs HomeWizard vs Anker SOLIX (2026)",
+   "metaDesc": "Marstek Venus E 3.0 (5,12 kWh), HomeWizard (2,688 kWh) of Anker SOLIX Max AC (7 kWh)? Opslag, vermogen, prijs en voor wie elk past.",
+   "intro": "Deze drie merken worden in Nederland het meest gezocht als het om een thuisbatterij met stekker gaat. Ze werken anders: Marstek is één groot kastje, HomeWizard een stapelbare batterij met eigen meter, Anker SOLIX een systeem dat ook rechtstreeks zonnepanelen kan aannemen. Drie vragen en je ziet welke past.",
+   "kort": "Wil je veel opslag in één kastje voor weinig geld per kWh, kijk dan naar de Marstek Venus E 3.0 (5,12 kWh, ongeveer 4,6 kWh bruikbaar, 800 W via het stopcontact). Heb je al een HomeWizard P1-meter of wil je klein beginnen en later uitbreiden, dan past de HomeWizard Plug-In Battery (2,688 kWh en 800 W per stuk, tot 4 stuks). Wil je de meeste opslag en vermogen, dan de Anker SOLIX Solarbank Max AC (7 kWh, tot 3.500 W plug-in). Via een gewoon stopcontact geldt voor alle drie 800 W.",
+   "questions": [
+    {
+     "q": "Wat heb je al?",
+     "options": [
+      {
+       "label": "Zonnepanelen met omvormer",
+       "term": "thuisbatterij met stekker",
+       "must": [
+        "marstek",
+        "homewizard",
+        "solix",
+        "solarbank",
+        "thuisbatterij"
+       ]
+      },
+      {
+       "label": "Een HomeWizard P1-meter",
+       "term": "homewizard plug-in battery",
+       "must": [
+        "homewizard"
+       ]
+      },
+      {
+       "label": "Nog niets, ik begin net",
+       "term": "thuisbatterij met stekker",
+       "must": [
+        "thuisbatterij",
+        "solarbank",
+        "marstek"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Wat vind je het belangrijkst?",
+     "options": [
+      {
+       "label": "Veel opslag per euro",
+       "term": "marstek venus e 3.0",
+       "must": [
+        "marstek",
+        "venus"
+       ]
+      },
+      {
+       "label": "Klein beginnen en uitbreiden",
+       "term": "homewizard plug-in battery",
+       "must": [
+        "homewizard"
+       ]
+      },
+      {
+       "label": "Meeste vermogen en opslag",
+       "term": "anker solix solarbank",
+       "must": [
+        "anker",
+        "solix",
+        "solarbank"
+       ]
+      }
+     ]
+    },
+    {
+     "q": "Wat is je budget?",
+     "options": [
+      {
+       "label": "Tot €1.000",
+       "max": 1000
+      },
+      {
+       "label": "€1.000 tot €1.600",
+       "min": 900,
+       "max": 1700
+      },
+      {
+       "label": "Meer dan €1.600",
+       "min": 1500
+      }
+     ]
+    }
+   ],
+   "uitleg": "Kijk eerst naar je overschot: hoeveel stroom lever je op een zonnige dag terug? Daar moet de batterij bij passen. Vergelijk dan de bruikbare opslag (niet de opslag op de doos), het vermogen dat via het stopcontact mag (800 W) en de meting: de batterij moet weten wanneer je teruglevert. HomeWizard werkt met een eigen P1- of kWh-meter, Marstek en Anker hebben een eigen meter of koppeling. Milieu Centraal raadt stekkerbatterijen voorlopig af vanwege brandrisico; zet hem op een veilige plek volgens de handleiding en laat bij twijfel je groep beoordelen.",
+   "secties": [
+    {
+     "id": "vergelijk",
+     "h": "Marstek, HomeWizard en Anker SOLIX naast elkaar",
+     "p": [
+      "De gegevens zoals de fabrikant en de verkoper ze noemen. De Consumentenbond testte in november 2026 zeven stekkerbatterijen zonder winnaar aan te wijzen: de bruikbare opslag is vaak lager dan op de doos staat en de meeste zijn klein voor een gemiddeld huishouden."
+     ],
+     "tabel": {
+      "kop": [
+       "",
+       "Marstek Venus E 3.0",
+       "HomeWizard Plug-In Battery",
+       "Anker SOLIX Solarbank Max AC"
+      ],
+      "rijen": [
+       [
+        "Opslag",
+        "5,12 kWh (ca. 4,6 bruikbaar)",
+        "2,688 kWh per stuk, tot 4 stuks (10,75 kWh)",
+        "7 kWh"
+       ],
+       [
+        "Vermogen via stopcontact",
+        "800 W",
+        "800 W per batterij",
+        "800 W; tot 3.500 W plug-in, 5.000 W vast"
+       ],
+       [
+        "Meting",
+        "eigen meter",
+        "HomeWizard P1- of kWh-meter",
+        "eigen meter"
+       ],
+       [
+        "Prijs",
+        "€1.319 incl. btw (123accu, BE-aanbod)",
+        "zie winkel",
+        "€1.899 (Anker, Black Friday)"
+       ],
+       [
+        "Past bij",
+        "veel opslag in één kastje",
+        "klein beginnen, HomeWizard-gebruikers",
+        "groot overschot, veel panelen"
+       ]
+      ],
+      "bron": "Fabrikant en verkopers, gelezen 18 november 2026. Een vergelijking van 10 stekkermodellen staat op keuzehulp.best/stekkerbatterij."
+     }
+    }
+   ],
+   "fouten": [
+    "Kopen op opslag op de doos in plaats van bruikbare opslag.",
+    "Denken dat meer kWh meer vermogen geeft: via het stopcontact blijft het 800 W.",
+    "De meting vergeten: zonder geschikte meter weet de batterij niet wanneer hij moet laden."
+   ],
+   "faq": [
+    {
+     "q": "Is de Marstek Venus E 3.0 goed?",
+     "a": "Hij heeft met 5,12 kWh (ongeveer 4,6 kWh bruikbaar) veel opslag in één kastje en levert via een stopcontact 800 W. Let op de generatie (3.0), de meter die erbij hoort en de Nederlandse ondersteuning. Een onafhankelijke testuitslag per merk is niet openbaar."
+    },
+    {
+     "q": "Marstek of HomeWizard: wat is het verschil?",
+     "a": "Marstek is één kastje van 5,12 kWh. HomeWizard is 2,688 kWh per batterij en je kunt er tot 4 stapelen; hij werkt met de HomeWizard P1- of kWh-meter. Beide leveren via het stopcontact 800 W."
+    },
+    {
+     "q": "Hoeveel opslag heeft de Anker SOLIX Solarbank Max AC?",
+     "a": "7 kWh volgens Anker, met tot 3.500 W als plug-in en 5.000 W als hij vast is aangesloten. Op 18 november 2026 noemde Anker €1.899 als Black Friday-prijs."
+    },
+    {
+     "q": "Welke stekkerbatterij heeft de meeste opslag?",
+     "a": "Van deze drie de Anker SOLIX Solarbank Max AC met 7 kWh, daarna de Marstek Venus E 3.0 met 5,12 kWh. HomeWizard kun je stapelen tot 10,75 kWh met 4 batterijen."
+    }
+   ],
+   "verwant": [
+    "stekkerbatterij",
+    "thuisbatterij",
+    "powerstation",
+    "slimme-thermostaat"
+   ],
+   "vast": [
+    "title",
+    "h1",
+    "seoTitle",
+    "titleFixAt",
+    "metaDesc",
+    "intro",
+    "kort",
+    "uitleg",
+    "secties",
+    "faq",
+    "fouten",
+    "verwant",
+    "kern",
+    "updatedAt",
+    "naam"
    ]
   }
  ]

@@ -52,7 +52,7 @@ async function kernBereken() {
   const rij = items.filter(i => !dun[i.slug]).map(i => { const st = map[DOMAIN + '/' + i.slug] || {}; const pass = st.v === 'PASS' || (oud && (oud.inGoogle || []).includes(i.slug)); const b = U[i.slug] || {}; const x = imp[i.slug] || { imp: 0, clicks: 0 };
     const seizoen = (m === 10 || m === 11) && /kerst|sinterklaas|cadeau|advent|winter|black-friday|oliebol|vuurwerk|gourmet|fondue|raclette/.test(i.slug) ? 150 : 0;
     const score = (pass ? 1000 : 0) + 3 * x.imp + 50 * x.clicks + 5 * (b.clk || 0) + 2 * (b.adv || 0) + (b.page || 0) + seizoen;
-    return { slug: i.slug, pass, imp: x.imp, score, moet: pass || x.imp > 0 || proef.has(i.slug) }; }).sort((a, b) => b.score - a.score || a.slug.localeCompare(b.slug));
+    return { slug: i.slug, pass, imp: x.imp, score, moet: pass || x.imp > 0 || proef.has(i.slug) || i.kern === true }; }) // kern: true = met de hand geschreven pagina met eigen vraag uit Demand Radar (Henkjan 18 nov: "gewoon dikke top content maken"), altijd open.sort((a, b) => b.score - a.score || a.slug.localeCompare(b.slug));
   let kern = new Set([...(oud && oud.actief ? oud.slugs : []), ...rij.filter(r => r.moet).map(r => r.slug)].filter(s => rij.some(r => r.slug === s)));
   for (const r of rij) { if (kern.size >= KERN_N) break; kern.add(r.slug); }
   const inGoogle = rij.filter(r => r.pass && kern.has(r.slug)).map(r => r.slug); const pct = kern.size ? inGoogle.length / kern.size : 0;
@@ -573,6 +573,7 @@ ${rekenHtml || ''}
 ${item.kadoly ? '' : kdbHtml}
 ${situatieHtml(item, sitT)}
 <div class="txt"><h2>Waar je op moet letten</h2><p>${lk(item.uitleg)}</p></div>
+${(Array.isArray(item.secties) ? item.secties : []).map(s => '<div class="txt"><h2 id="' + esc(s.id || '') + '">' + esc(s.h) + '</h2>' + (s.p || []).map(p => '<p>' + lk(p) + '</p>').join('') + (s.tabel ? '<div style="overflow-x:auto"><table class="kz-tabel"><thead><tr>' + s.tabel.kop.map(k => '<th>' + esc(k) + '</th>').join('') + '</tr></thead><tbody>' + s.tabel.rijen.map(r => '<tr>' + r.map(c => '<td>' + esc(c) + '</td>').join('') + '</tr>').join('') + '</tbody></table></div>' + (s.tabel.bron ? '<p class="mut">' + esc(s.tabel.bron) + '</p>' : '') : '') + '</div>').join('')}
 <div class="txt"><h2>Veelgemaakte fouten</h2><ul>${item.fouten.map(f => '<li>' + lk(f) + '</li>').join('')}</ul></div>
 ${faqHtml(item, lk)}
 ${meerBlok(nieuwHtml + speerBlok(all, item.slug))}
