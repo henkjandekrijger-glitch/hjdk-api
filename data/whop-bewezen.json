@@ -1,32 +1,191 @@
 {
-  "opmerking": "Bewezen producten uit de Meta Ad Library (17 nov 2026, Henkjan: \"Vindt de meta ads library en match op onze producten dus daar bewezen gaan we ook testen\" en \"2. JA\": eerst de prijzen naar het prijsadvies, dan testen). De Whop-ronde zet een product pas in de Kadoly-campagne als de shop het tegen de nieuwe prijs verkoopt (marge minstens margeMin euro) en het op voorraad is; per ronde hoogstens één product met zijn twee advertenties. Kandidaten op volgorde: de eerste die voldoet wordt gebruikt. Teksten alleen met feiten uit de titel of productpagina, geen prijzen (Henkjan 29 okt).",
+  "opmerking": "Bewezen producten uit de Meta Ad Library (17 nov 2026, Henkjan: \"Vindt de meta ads library en match op onze producten dus daar bewezen gaan we ook testen\" en \"2. JA\": eerst de prijzen naar het prijsadvies, dan testen). De Whop-ronde zet een product pas in de Kadoly-campagne als de shop het tegen de nieuwe prijs verkoopt (marge minstens margeMin euro) en het op voorraad is; per ronde hoogstens één product met zijn twee advertenties. Kandidaten op volgorde: de eerste die voldoet wordt gebruikt. Teksten alleen met feiten uit de titel of productpagina, geen prijzen (Henkjan 29 okt). 18 nov (Henkjan: \"kijk naar meta ads library en dan zetten we onze producten er tegen aan\"): snijplank, geurstokjes, lantaarn, backgammon, bestekset en babydeken erbij; backgammon, bestekset en babydeken hebben nog een prijs nodig (geen marktprijs, marge nu EUR 1,50).",
   "margeMin": 10,
   "producten": [
     {
       "naam": "Tavellio lamp",
       "bewijs": "NL Ad Library 17 nov: Tavellio zelf 25+ actieve advertenties; Luminize loopt 443 dagen; LucyLights 11 advertenties (81 tot 8 dagen, nieuwe varianten = opschalen); Creative.Lighting 160 dagen. Haak: licht zonder snoer, overal neer te zetten.",
-      "kandidaten": ["oc_4173959235305473", "oc_4173959227441153", "oc_4173959224754177", "oc_4173959228096513", "oc_4173959218839553"],
+      "kandidaten": [
+        "oc_4173959235305473",
+        "oc_4173959227441153",
+        "oc_4173959224754177",
+        "oc_4173959228096513",
+        "oc_4173959218839553"
+      ],
       "varianten": [
-        { "invalshoek": "zonder snoer", "kop": "Licht waar je maar wilt", "tekst": "Oplaadbare lamp van Tavellio, zonder snoer. Op tafel, in de vensterbank of naast je bed." },
-        { "invalshoek": "cadeau", "kop": "Een cadeau dat elke avond aangaat", "tekst": "Draadloze, oplaadbare lamp van Tavellio. Sfeerlicht, ook waar geen stopcontact is." }
+        {
+          "invalshoek": "zonder snoer",
+          "kop": "Licht waar je maar wilt",
+          "tekst": "Oplaadbare lamp van Tavellio, zonder snoer. Op tafel, in de vensterbank of naast je bed."
+        },
+        {
+          "invalshoek": "cadeau",
+          "kop": "Een cadeau dat elke avond aangaat",
+          "tekst": "Draadloze, oplaadbare lamp van Tavellio. Sfeerlicht, ook waar geen stopcontact is."
+        }
       ]
     },
     {
       "naam": "Wollen deken MoST",
       "bewijs": "NL Ad Library 17 nov: Kico Label wikkeldeken 47 dagen; Woolville 64 tot 17 dagen (blijft varianten bijzetten). Haak: warm in de winter, cadeau voor koude avonden.",
-      "kandidaten": ["oc_4174003731562498", "oc_4174003732054018", "oc_4174003731808258"],
+      "kandidaten": [
+        "oc_4174003731562498",
+        "oc_4174003732054018",
+        "oc_4174003731808258"
+      ],
       "varianten": [
-        { "invalshoek": "warm", "kop": "Warm onder 100% wol", "tekst": "Wollen deken van MoST met een vrolijk zigzagpatroon. Voor op de bank als het buiten koud is." },
-        { "invalshoek": "cadeau", "kop": "Cadeau voor koude avonden", "tekst": "Deken van 100% wol met zigzagpatroon, van MoST. Iets om jarenlang onder te kruipen." }
+        {
+          "invalshoek": "warm",
+          "kop": "Warm onder 100% wol",
+          "tekst": "Wollen deken van MoST met een vrolijk zigzagpatroon. Voor op de bank als het buiten koud is."
+        },
+        {
+          "invalshoek": "cadeau",
+          "kop": "Cadeau voor koude avonden",
+          "tekst": "Deken van 100% wol met zigzagpatroon, van MoST. Iets om jarenlang onder te kruipen."
+        }
       ]
     },
     {
       "naam": "Serviesset steengoed",
       "bewijs": "NL Ad Library 17 nov: Mimo Homeware 8 advertenties (148 tot 5 dagen, schaalt op), Karakushome 196 dagen. Haak: de tafel klaar voor de feestdagen.",
-      "kandidaten": ["oc_4174003356876801", "oc_4174003357499393", "oc_4174003271188481"],
+      "kandidaten": [
+        "oc_4174003356876801",
+        "oc_4174003357499393",
+        "oc_4174003271188481"
+      ],
       "varianten": [
-        { "invalshoek": "feestdagen", "kop": "De tafel klaar voor de feestdagen", "tekst": "Serviesset van steengoed, 16-delig voor 4 personen. In één keer een gedekte tafel." },
-        { "invalshoek": "elke dag", "kop": "Steengoed voor elke dag", "tekst": "16-delige serviesset voor 4 personen, van steengoed. Rustig van kleur, past bij elke tafel." }
+        {
+          "invalshoek": "feestdagen",
+          "kop": "De tafel klaar voor de feestdagen",
+          "tekst": "Serviesset van steengoed, 16-delig voor 4 personen. In één keer een gedekte tafel."
+        },
+        {
+          "invalshoek": "elke dag",
+          "kop": "Steengoed voor elke dag",
+          "tekst": "16-delige serviesset voor 4 personen, van steengoed. Rustig van kleur, past bij elke tafel."
+        }
+      ]
+    },
+    {
+      "naam": "Snijplank eiken",
+      "bewijs": "NL Ad Library 18 nov: 'snijplank' 300 actieve advertenties; Maakjecadeau.nl 1014 en 812 dagen (cadeauhoek), KoopjesHub 210 dagen, Netherlshop 154 dagen. Haak: cadeau voor wie kookt, snijden en serveren.",
+      "kandidaten": [
+        "oc_4173957643665409"
+      ],
+      "varianten": [
+        {
+          "invalshoek": "serveren",
+          "kop": "Snijden en serveren op eiken",
+          "tekst": "Eiken snijplank met sapgroef en handvatten. Vlees snijden en meteen zo aan tafel."
+        },
+        {
+          "invalshoek": "cadeau",
+          "kop": "Voor wie graag kookt",
+          "tekst": "Eiken snijplank met sapgroef en twee handvatten. Een cadeau dat elke dag op het aanrecht ligt."
+        }
+      ]
+    },
+    {
+      "naam": "Geurstokjes",
+      "bewijs": "NL Ad Library 18 nov: 'geurstokjes' 570 actieve advertenties; AromaDiffusing 783 en 635 dagen, Van De Zotte 169, Geurfabriek 139. Haak: fijne geur zonder kaars, cadeau.",
+      "kandidaten": [
+        "oc_4174002164400133",
+        "oc_4174002224791553"
+      ],
+      "varianten": [
+        {
+          "invalshoek": "zonder kaars",
+          "kop": "Je huis ruikt fijn, zonder kaars",
+          "tekst": "Grote rietdiffuser van 500 ml. Stokjes erin en de geur doet de rest."
+        },
+        {
+          "invalshoek": "cadeau",
+          "kop": "Een cadeau dat je ruikt",
+          "tekst": "Rietdiffuser van 500 ml. Voor wie houdt van een huis dat lekker ruikt."
+        }
+      ]
+    },
+    {
+      "naam": "Lantaarn zwart",
+      "bewijs": "NL Ad Library 18 nov: 'lantaarn' 85 actieve advertenties; KoopjesHub 355 dagen, Love & Faith 359 tot 33 dagen (6 varianten), QOOZII 37 dagen. Haak: sfeer in de donkere maanden.",
+      "kandidaten": [
+        "oc_4174003419709441",
+        "oc_4174003419430913"
+      ],
+      "varianten": [
+        {
+          "invalshoek": "sfeer",
+          "kop": "Sfeer voor de donkere avonden",
+          "tekst": "Moderne zwarte lantaarn van Mica Decorations. Kaars erin en je hoek is af."
+        },
+        {
+          "invalshoek": "plek",
+          "kop": "Op tafel of in de vensterbank",
+          "tekst": "Zwarte lantaarn van Mica Decorations, strak en modern. Mooi met een kaars erin."
+        }
+      ]
+    },
+    {
+      "naam": "Backgammon",
+      "bewijs": "NL Ad Library 18 nov: 'backgammon' 110 actieve advertenties; House of Nobilique 4 advertenties van 272 tot 16 dagen (schaalt op, luxe sets), Schaakkoning 264 dagen. Haak: een set die mooi op tafel mag blijven liggen.",
+      "kandidaten": [
+        "oc_4174004790755329",
+        "oc_4174004875214849"
+      ],
+      "varianten": [
+        {
+          "invalshoek": "stijl",
+          "kop": "Spelavond met stijl",
+          "tekst": "Backgammonset van acryl in wit en bruin, 25x38 cm. Mooi genoeg om op tafel te laten liggen."
+        },
+        {
+          "invalshoek": "cadeau",
+          "kop": "Cadeau voor de spelletjesfan",
+          "tekst": "Acryl backgammonset van Aulica in wit en bruin. Voor lange avonden aan tafel."
+        }
+      ]
+    },
+    {
+      "naam": "Bestekset goud",
+      "bewijs": "NL Ad Library 18 nov: 'bestekset' 58 actieve advertenties; Sola 8 advertenties (13 varianten, van 17 tot 5 dagen, schaalt op in Black November, EUR 59), Marskramer 107 tot 26 dagen. Haak: de feesttafel.",
+      "kandidaten": [
+        "oc_4174004924841985",
+        "oc_4174004846542849",
+        "oc_4174005116289025"
+      ],
+      "varianten": [
+        {
+          "invalshoek": "feesttafel",
+          "kop": "De tafel in goud",
+          "tekst": "24-delige gouden bestekset voor 6 personen van Aulica. Klaar voor de feestdagen."
+        },
+        {
+          "invalshoek": "kerst",
+          "kop": "Bestek voor de kerstdis",
+          "tekst": "Gouden bestekset, 24 delen, voor 6 personen. Zo dek je een tafel die opvalt."
+        }
+      ]
+    },
+    {
+      "naam": "Babydeken muslin",
+      "bewijs": "NL Ad Library 18 nov: 'babydeken' 12 actieve advertenties; House of Bears 118 dagen, Callie 72 tot 28 dagen (3 varianten). Zwakker bewijs; kraamcadeau.",
+      "kandidaten": [
+        "oc_4174005528133633",
+        "oc_4174005523693569",
+        "oc_4174005515141121"
+      ],
+      "varianten": [
+        {
+          "invalshoek": "zacht",
+          "kop": "Zacht voor de kleinste",
+          "tekst": "4-in-1 muslin babydeken van Nordic Coast, in caramel en meer kleuren."
+        },
+        {
+          "invalshoek": "kraamcadeau",
+          "kop": "Kraamcadeau dat gebruikt wordt",
+          "tekst": "Muslin babydeken van Nordic Coast. Een kraamcadeau voor elke dag."
+        }
       ]
     }
   ]
