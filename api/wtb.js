@@ -12,6 +12,7 @@ import { organicStatus } from '../lib/organic.js';
 import { contentDate } from '../lib/organic-policy.js';
 import { lookNieuw } from '../lib/look.js';
 import { HUISSTIJL_CSS, FAVICON, voetEenRegel, chatErbij } from '../lib/huisstijl.js';
+import { FN_JS } from '../lib/funnel.js'; // funnel per persoon (18 nov 2026)
 import { colourTag, colourReport, measureTag } from '../lib/kleur.js';
 import { kwaliteit } from '../lib/kwaliteit.js';
 import { faqZonderDubbel } from '../lib/faq-dubbel.js';
@@ -89,7 +90,7 @@ function shell(m, o) {
   return `<!doctype html><html lang="${m.locale}"><head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="${FAVICON}"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="impact-site-verification" value="${m && m.id === 'us' ? 'fc9f7f92-3689-4261-8f3e-25dfc2d250df' : '01ecc8c3-63f1-46e2-bb04-8a0c5e335f43'}"><title>${esc(o.title)}</title><meta name="description" content="${esc(o.desc)}"><link rel="canonical" href="${base}${o.path}"><meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"><link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt"><meta property="og:title" content="${esc(o.title)}"><meta property="og:description" content="${esc(o.desc)}"><meta property="og:type" content="${o.og || 'website'}"><meta property="og:url" content="${base}${o.path}">${o.image ? `<meta property="og:image" content="${esc(o.image)}">` : ''}${o.ld ? `<script type="application/ld+json">${JSON.stringify(o.ld).replace(/</g, '\\u003c')}</script>` : ''}<style>${CSS()}</style></head><body>
 <header class="topbar"><div class="wrap"><a class="mark" href="/">${m.id === 'us' ? 'which<em>to</em>buy' : 'kauf<em>berater</em>'}</a><nav class="topnav" aria-label="Menu"><a href="/">${m.s.all}</a><a href="/about">${m.s.about}</a></nav></div></header><main><div class="wrap">${/class="ov[ "]/.test(o.body) ? o.body : '<div class="ov">' + o.body + '</div>'}</div></main>
 ${voetEenRegel(m.id)}
-<script>window.__h=function(k){try{navigator.sendBeacon('/api/hjdk/stats/hits',new Blob([JSON.stringify({hits:[[k,1]]})],{type:'text/plain'}))}catch(e){}};</script>${HUISSTIJL_CSS}${koopMeetScript()}<script defer src="/api/vindbaarheid?op=tracker&v=2"></script></body></html>`;
+<script>window.__h=function(k){try{navigator.sendBeacon('/api/hjdk/stats/hits',new Blob([JSON.stringify({hits:[[k,1]]})],{type:'text/plain'}))}catch(e){}};</script>${HUISSTIJL_CSS}${koopMeetScript()}<script defer src="/api/vindbaarheid?op=tracker&v=2"></script>${FN_JS('')}</body></html>`;
 }
 function card(m, p, i) {
   const role = i === 0 ? m.s.pick : m.s.alt;

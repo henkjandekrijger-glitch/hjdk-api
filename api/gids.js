@@ -601,6 +601,9 @@ export default async function handler(req, res) {
       res.setHeader('cache-control', 'no-store'); if (isFnBot(req)) return res.status(204).end();
       let id = fnIdUitCookie(req); if (!id) { id = createHash('sha256').update(String(Math.random()) + Date.now()).digest('hex').slice(0, 16); res.setHeader('set-cookie', 'mmp=' + id + '; Max-Age=15552000; Path=/; Secure; HttpOnly; SameSite=Lax'); }
       const st = String(q.get('s') || '').replace(/[^a-z]/g, '').slice(0, 10); if (!['zie', 'diep', 'keuze', 'vraag', 'wil'].includes(st)) return res.status(204).end();
+      // klik uit een campagne (Clickmind-wissel /w met mmc): deze persoon is dezelfde als de klikker op whichtobuy.best (18 nov 2026)
+      const mmc = String(q.get('m') || '').replace(/[^0-9a-f]/g, '').slice(0, 24);
+      if (st === 'zie' && mmc.length >= 8) { try { const pid = await kv.raw(['HGET', 'mm:cid:' + mmc, 'pid']); if (pid && /^[0-9a-f]{16}$/.test(String(pid)) && String(pid) !== id) { const { funnelKoppel } = await import('../lib/funnel.js'); await funnelKoppel(String(pid), id); } } catch (e) {} }
       const r = await funnelStap(id, st, String(q.get('o') || '').slice(0, 60), st === 'zie' ? bronVan(q.get('r'), q.get('b')) : '');
       return res.status(200).json({ ok: true, f: id, fase: r && r.fase }); }
     if (op === 'funnel') { // overzicht per fase en per persoon (alleen op de beschermde vercel.app-host)

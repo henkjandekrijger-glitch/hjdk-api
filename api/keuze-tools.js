@@ -10,6 +10,8 @@ import { renderThema, themaSchema, THEME_CLIENT, portionCost, heatCost, themeAdv
 import { TOOL_CLIENT } from '../lib/keuze-client.js';
 import { esc, TOOL_CSS, DOMAIN_TLDS, validDomain, normalizeLabel, nameScore, suggestDomains, normalizeQuotes, annualCosts, renderDomain, domainSchema, laadAdvice, laadResult, renderLaadpaal, laadProducts, selectChargers } from '../lib/keuze-tools.js';
 
+// funnel per persoon (lib/funnel.js) via de Clickmind-cookie mmp: chatvraag, blijven, check-in en koop (18 nov 2026)
+async function fnStap(req, st, o) { try { const F = await import('../lib/funnel.js'); if (F.isFnBot(req)) return; const id = F.fnIdUitCookie(req); if (id) await F.funnelStap(id, st, o); } catch (e) {} }
 const RATE = new Map();
 async function rateAllowed(req) {
   const network = String(req.headers['x-forwarded-for'] || req.headers['x-real-ip'] || 'unknown').split(',')[0].trim();
@@ -107,13 +109,17 @@ export default async function handler(req, res) {
       if(req.method!=='POST'&&!(beschermd&&req.query.v))return res.status(405).json({ok:false}); // GET alleen beschermd, om de chat te testen
       let b=req.method==='POST'?req.body:{site:req.query.site,slug:req.query.slug,v:req.query.v,h:[],test:1};try{if(typeof b==='string'){if(b.length>6000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}
       b=b||{};const ip=String(req.headers['x-forwarded-for']||'').split(',')[0].trim();
-      return res.status(200).json(await C.kzChat({site:b.site,slug:String(b.slug||'').replace(/[^a-z0-9-]/gi,'').slice(0,90),vraag:b.v,hist:b.h,ip,oidc:String(req.headers['x-vercel-oidc-token']||process.env.VERCEL_OIDC_TOKEN||''),test:!!(b.test&&beschermd),sid:String(b.sid||''),vt:String(b.vt||'')}).catch(e=>({ok:false,fout:String(e.message||e).slice(0,80)})));}
+      const slugC=String(b.slug||'').replace(/[^a-z0-9-]/gi,'').slice(0,90);
+      const rc=await C.kzChat({site:b.site,slug:slugC,vraag:b.v,hist:b.h,ip,oidc:String(req.headers['x-vercel-oidc-token']||process.env.VERCEL_OIDC_TOKEN||''),test:!!(b.test&&beschermd),sid:String(b.sid||''),vt:String(b.vt||'')}).catch(e=>({ok:false,fout:String(e.message||e).slice(0,80)}));
+      if(rc&&rc.ok&&!rc.geblokt&&!(b.test&&beschermd))await fnStap(req,'vraag',slugC); // funnel per persoon via Clickmind-cookie mmp (18 nov 2026)
+      return res.status(200).json(rc);}
     if(op==='koppel'||op==='koop'||op==='volgstand'){const IV=await import('../lib/intentvolg.js'); // intentie per persoon volgen en de check-in "is het gelukt" (lib/intentvolg.js, 18 nov 2026)
       if(op==='volgstand')return res.status(200).json(await IV.volgStand(beschermd).catch(()=>({ok:false})));
-      if(op==='koppel'){if(req.method!=='POST')return res.status(405).json({ok:false});let b=req.body;try{if(typeof b==='string'){if(b.length>1000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}b=b||{};return res.status(200).json(await IV.koppel({sid:String(b.sid||''),vt:String(b.vt||''),site:String(b.site||'')}).catch(()=>({ok:false})));}
+      if(op==='koppel'){if(req.method!=='POST')return res.status(405).json({ok:false});let b=req.body;try{if(typeof b==='string'){if(b.length>1000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}b=b||{};const rk=await IV.koppel({sid:String(b.sid||''),vt:String(b.vt||''),site:String(b.site||'')}).catch(()=>({ok:false}));if(b.vt)await fnStap(req,'blijf','');return res.status(200).json(rk);}
       const tok=String(q.get('t')||''),a=String(q.get('a')||'');let wat='';
       if(req.method==='POST'){let b=req.body;if(typeof b==='string'){const p=new URLSearchParams(b);wat=p.get('wat')||'';}else if(b&&typeof b==='object')wat=String(b.wat||'');}
       const r=await IV.koop(tok,req.method==='POST'?'wat':a,req.method==='POST'?wat:'').catch(()=>({ok:false}));
+      if(r&&r.ok){await fnStap(req,'checkin','');if(a==='ja'||req.method==='POST')await fnStap(req,'koop','');}
       const U=await import('../lib/keuze-updates.js');const site=r.site||({'whichtobuy.best':'us','kaufberater.best':'de'}[String(req.headers.host||'').replace(/^www\./,'')]||'kz');
       res.setHeader('content-type','text/html; charset=utf-8');return res.status(r.ok?200:404).send(U.page(site,U.UPDATE_SITES[site].name,IV.koopPagina(site,tok,r)));}
     if(op==='model'||op==='bouw'||op==='rijen'){const M=await import('../lib/intentmodel.js'); // intentiemodel (lib/intentmodel.js): samenvatting openbaar, bouwen en rijen alleen beschermd of via de cron
