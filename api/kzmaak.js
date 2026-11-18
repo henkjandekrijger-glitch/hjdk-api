@@ -27,7 +27,7 @@ const addDays = (d, n) => new Date(Date.parse(d + 'T12:00:00Z') + n * 864e5).toI
 const DOMAIN = 'https://' + ((seed.site && seed.site.domain) || 'keuzehulp.best');
 const INDEXNOW_KEY = '466971cbc1bbe43e6bb64a94465e4470';
 const PER_DAG = () => Math.max(0, Math.min(30, Number(process.env.KZ_PER_DAG || 12)));
-const VERVERS = () => Math.max(0, Math.min(10, Number(process.env.KZ_VERVERS_PER_DAG || 3)));
+const VERVERS = () => Math.max(0, Math.min(10, Number(process.env.KZ_VERVERS_PER_DAG || 5))); // 18 nov 2026: 5 (was 3) zolang de kernfase loopt: geen nieuwbouw, wel de kern beter maken
 const MAX_CLAUDE = () => PER_DAG() * 4 + VERVERS() + 12 + 40 * 4; /* + ruimte voor extra rondes (max 40 extra keuzehulpen per dag) */ // plafond op Claude-aanroepen per dag (plannen + schrijven + herstel + verversen)
 const MODELS = [...new Set([process.env.ANTHROPIC_MODEL, 'claude-sonnet-5-5', 'claude-sonnet-4-5'].filter(Boolean))];
 const GW_MODELS = [...new Set([process.env.GATEWAY_MODEL, 'anthropic/claude-sonnet-5.5', 'anthropic/claude-sonnet-5', 'anthropic/claude-sonnet-4.5'].filter(Boolean))];
@@ -286,6 +286,10 @@ async function maakPlan(d, extraUitsluiten) {
       if (thuis) { weg.push(p.slug + ' -> ' + thuis); plan.splice(i, 1); } }
     if (weg.length) await kv.set('hjdk:kz:maak:dubbel', { dag: d, weg }).catch(() => {}); } catch (e) {}
   start.forEach(s => { if (plan.length < Math.max(8, PER_DAG() * 2) && !plan.some(x => x.slug === s.slug)) plan.push(Object.assign({ bron: 'startlijst' }, s)); }); // vangnet
+  // Kernfase (18 nov 2026): verversen alleen binnen de kern (kv kz:kern, api/kz.js kernBereken), eerst wat nog niet in Google staat, per dag een ander stuk
+  try { const kern = await kv.get('kz:kern'); if (kern && kern.actief && Array.isArray(kern.slugs) && kern.slugs.length) { const ks = new Set(kern.slugs); const eerst = [...(kern.nogNietInGoogle || []), ...kern.slugs.filter(s => !(kern.nogNietInGoogle || []).includes(s))];
+    const st = (Math.floor(Date.now() / 864e5) * VERVERS()) % eerst.length; const rond = eerst.slice(st).concat(eerst.slice(0, st));
+    plan.ververs = [...new Set([...(plan.ververs || []).filter(x => ks.has(x)), ...rond])].slice(0, VERVERS()); } } catch (e) {}
   return { lijst: plan, ververs: plan.ververs || [] };
 }
 

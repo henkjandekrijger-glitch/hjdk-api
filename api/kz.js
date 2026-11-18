@@ -33,6 +33,36 @@ async function pinStats(items, d) { // 14 dagen Pinterest-resultaat per keuzehul
   const out = { dag: d, slug, varianten: vv, gepubliceerd: pub, bestV }; try { await kv.set(ck, out, { ex: 2 * 86400 }); } catch (e) {} return out;
 }
 const SPEER = { speer: ['printer'], hubs: [], vind: [], at: 0 };
+// Kern (18 nov 2026, Henkjan: "Ja voer uit . Eerst vindbaar worden, dan pas meer pagina's"): Google kende 397 van de 514 keuzehulpen niet en kwam ~20 keer
+// per week langs. Daarom: de sterkste keuzehulpen (in Google, vertoningen, gebruik, seizoen) blijven open en in de sitemap; de rest staat op noindex,follow
+// en uit de sitemap tot de kern goed in Google staat. Nooit dicht: wat Google al opnam, wat vertoningen heeft en pagina's van lopende gsc-proeven.
+// Groeien: staat 80% van de kern in Google, dan komen er elke 7 dagen 20 bij (de volgende op score). Opgeslagen in kv kz:kern; nieuwbouw pauzeert zolang
+// (lib/organic-policy.js), het verversen richt zich op de kern (api/kzmaak.js). Overzicht: /api/kz?op=kern.
+const KERN_N = 100, KERN_GROEI = 20;
+const KERNC = { at: 0, v: null };
+async function kernNu() { if (Date.now() - KERNC.at < 600000) return KERNC.v; try { const k = await kv.get('kz:kern'); KERNC.v = k && k.actief && Array.isArray(k.slugs) ? Object.assign({}, k, { set: new Set(k.slugs) }) : null; } catch (e) {} KERNC.at = Date.now(); return KERNC.v; }
+const kernDicht = (k, slug) => !!(k && k.set && !k.set.has(slug));
+async function kernBereken() {
+  const items = await allItems(); const KW = await kwaliteit('kz').catch(() => ({})); const dun = KW.dun || {};
+  const map = (await kv.get('hjdk:gsc:index:kz:map').catch(() => null)) || {}; const g = (await kv.get('hjdk:gsc:kz').catch(() => null)) || {}; const U = await usage().catch(() => ({}));
+  const imp = {}; const zet = (s, i, c) => { if (!s) return; imp[s] = imp[s] || { imp: 0, clicks: 0 }; imp[s].imp = Math.max(imp[s].imp, Number(i) || 0); imp[s].clicks = Math.max(imp[s].clicks, Number(c) || 0); };
+  Object.entries(g.paginaImp || {}).forEach(([p, v]) => zet(String(p).replace(/^\/(keuzehulp\/)?/, ''), v[0], v[1])); (g.laagCtr || []).forEach(x => zet(x.slug, x.imp, x.clicks)); (g.kansen || []).forEach(x => zet(x.slug, x.imp, 0));
+  const exp = (await kv.get('zicht:exp:kz').catch(() => null)) || []; const proef = new Set(exp.filter(p => p.status === 'loopt' && p.metric === 'gsc').flatMap(p => [...(p.urls || []), ...(p.controle || [])]).map(u => { try { return new URL(u).pathname.slice(1); } catch (e) { return ''; } }));
+  const oud = await kv.get('kz:kern').catch(() => null); const m = new Date().getUTCMonth();
+  const rij = items.filter(i => !dun[i.slug]).map(i => { const st = map[DOMAIN + '/' + i.slug] || {}; const pass = st.v === 'PASS' || (oud && (oud.inGoogle || []).includes(i.slug)); const b = U[i.slug] || {}; const x = imp[i.slug] || { imp: 0, clicks: 0 };
+    const seizoen = (m === 10 || m === 11) && /kerst|sinterklaas|cadeau|advent|winter|black-friday|oliebol|vuurwerk|gourmet|fondue|raclette/.test(i.slug) ? 150 : 0;
+    const score = (pass ? 1000 : 0) + 3 * x.imp + 50 * x.clicks + 5 * (b.clk || 0) + 2 * (b.adv || 0) + (b.page || 0) + seizoen;
+    return { slug: i.slug, pass, imp: x.imp, score, moet: pass || x.imp > 0 || proef.has(i.slug) }; }).sort((a, b) => b.score - a.score || a.slug.localeCompare(b.slug));
+  let kern = new Set([...(oud && oud.actief ? oud.slugs : []), ...rij.filter(r => r.moet).map(r => r.slug)].filter(s => rij.some(r => r.slug === s)));
+  for (const r of rij) { if (kern.size >= KERN_N) break; kern.add(r.slug); }
+  const inGoogle = rij.filter(r => r.pass && kern.has(r.slug)).map(r => r.slug); const pct = kern.size ? inGoogle.length / kern.size : 0;
+  let groei = oud && oud.groeiAt || null; if (oud && oud.actief && pct >= 0.8 && (!groei || Date.now() - Date.parse(groei) > 7 * 864e5)) { let n = 0; for (const r of rij) { if (n >= KERN_GROEI) break; if (!kern.has(r.slug)) { kern.add(r.slug); n++; } } if (n) groei = new Date().toISOString(); }
+  const volgorde = rij.filter(r => kern.has(r.slug)).map(r => r.slug); // sterkste eerst; het verversen neemt eerst wat nog niet in Google staat
+  const out = { at: new Date().toISOString(), actief: true, sinds: (oud && oud.sinds) || new Date().toISOString().slice(0, 10), n: kern.size, dicht: rij.length - kern.size, inGoogle, pctInGoogle: Math.round(pct * 100), groeiAt: groei, slugs: volgorde, nogNietInGoogle: volgorde.filter(s => !inGoogle.includes(s)), regel: 'kern open en in de sitemap, de rest noindex,follow; bij 80% van de kern in Google elke 7 dagen 20 erbij' };
+  await kv.set('kz:kern', out).catch(() => {}); KERNC.at = 0;
+  if (!(oud && oud.actief)) { try { const l = exp.map(p => p.status === 'loopt' && p.les === 'interne-links-niet-geindexeerd' ? Object.assign({}, p, { status: 'gestopt', toel: 'Gestopt 18 nov 2026: strategie kern (Henkjan); pagina\'s buiten de kern staan op noindex, dus de controlegroep is niet meer vergelijkbaar.' }) : p); await kv.set('zicht:exp:kz', l); } catch (e) {} }
+  return out;
+}
 // proef ZICHT 'interne-links-niet-geindexeerd': 1 op 5 pagina's (vaste hash) krijgt GEEN extra links en dient als controlegroep
 const isControle = slug => { let h = 0; for (const c of String(slug)) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h % 5 === 0; }; // speerpunten (eerst scoren) en knooppunten (scoren al: geven door), 10 min in het geheugen
 const kzNorm = x => String(x || '').toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -560,7 +590,8 @@ try{var m=(location.hash||'').match(/a=([\\d-]+)/);if(m){var p=m[1].split('-');v
 hit('hjdk6-kz-'+S+'-page');})();</script>`;
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', clickid || src ? 'no-store' : 'public, max-age=600');
   const html = shell(kzTitle(item), item.metaDesc || item.kort || item.intro, body + (await gateHtml(req, { slug: item.slug, term: item.term, clientId })), DUN && DUN.naar ? base + pathOf(req, '/keuzehulp/' + DUN.naar) : url, ld + (adv.products && adv.products[0] && adv.products[0].image ? '<meta property="og:image" content="' + esc(adv.products[0].image) + '">' : '') + '<meta property="og:url" content="' + esc(url) + '">');
-  return res.status(200).send(DUN && !DUN.naar ? html.replace('content="index,follow,max-snippet:-1,max-image-preview:large"', 'content="noindex,follow"') : html);
+  const KERNP = await kernNu(); // buiten de kern: dicht voor Google tot de kern bekend is (zie kernBereken)
+  return res.status(200).send((DUN && !DUN.naar) || kernDicht(KERNP, item.slug) ? html.replace('content="index,follow,max-snippet:-1,max-image-preview:large"', 'content="noindex,follow"') : html);
 }
 
 
@@ -776,8 +807,14 @@ export default async function handler(req, res) {
       return res.status(204).end();
     }
     if (op === 'opruimen') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(Object.assign({ ok: true }, await opruimen(25000))); }
+    if (op === 'kern') { // kern van keuzehulpen die open blijven voor Google (kernBereken); ?ververs=1 rekent opnieuw (eens per 10 minuten)
+      res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex'); const k0 = await kv.get('kz:kern').catch(() => null);
+      if (url.searchParams.get('ververs') === '1' && !(k0 && Date.now() - Date.parse(k0.at) < 600000)) return res.status(200).json(await kernBereken());
+      return res.status(200).json(k0 || { actief: false });
+    }
     if (op === 'keuring') { // huisstijl van alle keuzehulpen nakijken (lib/keuring.js); cron elke ochtend, ?lees=1 toont de laatste zonder nieuwe ronde
       res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex'); const KR = await import('../lib/keuring.js');
+      if (url.searchParams.get('lees') !== '1') { try { await kernBereken(); } catch (e) {} } // de kern elke ochtend bijwerken (groeit bij 80% in Google)
       const oud = await KR.laatsteKeuring(); if (url.searchParams.get('lees') === '1' || (oud && Date.now() - Date.parse(oud.at) < 600000)) return res.status(200).json(oud || { leeg: true });
       return res.status(200).json(await KR.keuring());
     }
@@ -1043,7 +1080,7 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
       if(html){const {handoverHtml}=await import('../lib/overdracht-page.js');return res.status(200).send(handoverHtml(text));}
       return res.status(200).send(text);
     }
-    if (op === 'sitemap') { const KWs = await kwaliteit('kz'); const items = (await allItems()).filter(i => !(KWs.dun || {})[i.slug]); const base = baseOf(req); res.setHeader('content-type', 'application/xml'); res.setHeader('cache-control', 'public, max-age=3600'); const cats = [...new Set(items.map(i => i.cat))];
+    if (op === 'sitemap') { const KWs = await kwaliteit('kz'); const KS = await kernNu(); const items = (await allItems()).filter(i => !(KWs.dun || {})[i.slug] && !kernDicht(KS, i.slug)); const base = baseOf(req); res.setHeader('content-type', 'application/xml'); res.setHeader('cache-control', 'public, max-age=3600'); const cats = [...new Set(items.map(i => i.cat))];
       const rows = [['/keuzehulp', null], ['/keuzehulp/deals', null], ['/keuzehulp/over', UPDATED], ['/keuzehulp/' + KERST.slug, null], ['/keuzehulp/fietsmaat', '2026-10-17']].concat(cats.map(c => ['/keuzehulp/categorie/' + catSlug(c), items.filter(i => i.cat === c).map(i => i.updatedAt || (i.publishAt && i.publishAt > UPDATED ? i.publishAt : UPDATED)).sort().pop() || UPDATED])).concat(items.map(i => ['/keuzehulp/' + i.slug, i.updatedAt || (i.publishAt && i.publishAt > UPDATED ? i.publishAt : UPDATED)]));
       const cadeau = /keuzehulp\.best/.test(base) ? ['kleine-sinterklaascadeaus', 'kerstcadeau-voor-haar', 'book-nook-kiezen'].map(g => '<url><loc>https://keuzehulp.best/cadeau/' + g + '</loc><lastmod>' + UPDATED + '</lastmod></url>').join('') : '';
       return res.status(200).send('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + rows.map(([p, d]) => '<url><loc>' + esc(base + pathOf(req, p)) + '</loc>' + (d ? '<lastmod>' + esc(d) + '</lastmod>' : '') + '</url>').join('') + cadeau + '</urlset>'); }
