@@ -1,0 +1,14 @@
+[
+  { "id": "doel-een-zin", "les": "Schrijf vooraf het doel in één zin (wat moet de ontvanger doen?) en zet precies één vraag of één actie in de mail.", "soort": "alle", "bron": "startregel, nog niet gemeten", "sterkte": 3 },
+  { "id": "eerste-zin-ontvanger", "les": "De eerste zin gaat over de ontvanger: hun eigen artikel, pagina of studie met naam en datum. Niet over ons.", "soort": "koud", "bron": "startregel, nog niet gemeten", "sterkte": 3 },
+  { "id": "bereikbaar", "les": "Elke mail zegt hoe je Henkjan bereikt: antwoorden, bellen of appen op +31 6 55395630, of direct een videogesprek via https://meeting.nexy.works/a54blu.", "soort": "alle", "bron": "Henkjan, okt 2026 (vaste eis)", "sterkte": 4, "vast": true },
+  { "id": "recht-voor-zn-raap", "les": "Professioneel maar recht voor z'n raap: geen corporate taal, geen kleinmakende zinnen, geen gedachtestreepjes, geen uitroeptekens.", "soort": "alle", "bron": "Henkjan (vaste eis)", "sterkte": 4, "vast": true },
+  { "id": "kort", "les": "Koude mail hooguit 120 woorden; de vraag staat in het eerste scherm van een telefoon.", "soort": "koud", "bron": "startregel, nog niet gemeten", "sterkte": 2 },
+  { "id": "onderwerp-concreet", "les": "Onderwerpregel noemt het concrete ding (data, pagina, hun naam of onderwerp), hooguit 60 tekens, geen reclamewoorden.", "soort": "alle", "bron": "startregel, nog niet gemeten", "sterkte": 2 },
+  { "id": "geven-voor-vragen", "les": "Bied eerst iets bruikbaars aan (data, een correctie, een bron) en vraag daarna pas om de link of het gesprek.", "soort": "koud", "bron": "startregel, nog niet gemeten", "sterkte": 2 },
+  { "id": "een-link", "les": "Hooguit twee links in een koude mail, de belangrijkste eerst en als kale URL zodat hij ook zonder opmaak werkt.", "soort": "koud", "bron": "startregel, nog niet gemeten", "sterkte": 1 },
+  { "id": "alleen-echte-feiten", "les": "Elk cijfer en elke bewering in de mail is op een pagina gelezen; een adres dat niet op een pagina is gezien wordt niet gemaild.", "soort": "alle", "bron": "Henkjan (vaste eis)", "sterkte": 4, "vast": true },
+  { "id": "eerst-tonen", "les": "Een concept gaat eerst in de chat naar Henkjan; pas na zijn 'verstuur' in Gmail. Meld het concept meteen aan de lus, anders blijft het ongemeten liggen.", "soort": "alle", "bron": "Henkjan, nov 2026; Outnamed okt 2026: 46 concepten bleven onverzonden in Gmail staan zonder dat iemand het zag", "sterkte": 4, "vast": true },
+  { "id": "twee-varianten", "les": "Bij 10 of meer mails met hetzelfde doel: twee varianten (a en b) die op één ding verschillen, om en om verdeeld. Minder dan 10: één variant.", "soort": "koud", "bron": "startregel, nog niet gemeten", "sterkte": 2 },
+  { "id": "opvolgen", "les": "Geen antwoord na 5 werkdagen: één korte opvolgmail in dezelfde draad met één nieuw feit. Daarna stoppen.", "soort": "koud", "bron": "startregel, nog niet gemeten", "sterkte": 2 }
+]

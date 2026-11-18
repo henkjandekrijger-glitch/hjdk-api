@@ -129,6 +129,10 @@
       "schedule": "30 5 * * *"
     },
     {
+      "path": "/api/post?op=ronde",
+      "schedule": "40 6 * * *"
+    },
+    {
       "path": "/api/zicht?op=ronde&alsNodig=1",
       "schedule": "30 9,13,17,21 * * *"
     },
@@ -1821,6 +1825,10 @@
     },
     "api/geld.js": {
       "maxDuration": 120
+    },
+    "api/post.js": {
+      "maxDuration": 120,
+      "includeFiles": "{.claude/skills/**,data/post-priors.json}"
     },
     "api/zicht.js": {
       "maxDuration": 300,
