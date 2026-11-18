@@ -41,9 +41,18 @@
    "wonen"
   ],
   "besluiten": [],
-  "rotatie": "sieraad schuift elke dag één tijdvak op; 17 nov: 12:15 sieraad, 19:45 mandje; 18 nov: 12:15 mandje, 19:45 nieuw; 19 nov: 12:15 nieuw, 19:45 wonen; 20 nov: 12:15 wonen, 19:45 sieraad"
+  "rotatie": "sieraad schuift elke dag één tijdvak op; 17 nov: 12:15 sieraad, 19:45 mandje; 18 nov: 12:15 mandje, 19:45 nieuw; 19 nov: 12:15 nieuw, 19:45 wonen; 20 nov: 12:15 wonen, 19:45 sieraad",
+  "notities": [
+   "2026-11-18: Zernio-analytics geven voor alle 6 posts van 16-17 nov overal 0 (ook bereik), terwijl Clickmind 7 kliks van Facebook telt (1117-sieraad 4 kliks/1 echt, 1117-mandje 3). Dus niet als gemeten genoteerd; morgen opnieuw. Volgers 0 op alle drie (17 nov)."
+  ]
  },
- "volgers": {},
+ "volgers": {
+  "2026-11-17": {
+   "facebook": 0,
+   "instagram": 0,
+   "pinterest": 0
+  }
+ },
  "posts": [
   {
    "tijd": "2026-11-16T12:54:00Z",
@@ -106,7 +115,9 @@
    "via": "zernio",
    "zernio_id": "6afc13bf4050bd248b00143d",
    "status": "gepland",
-   "link": "go.kadoly.com/o?k=fb&p=oc_4174005947613185&c=1117-sieraad"
+   "link": "go.kadoly.com/o?k=fb&p=oc_4174005947613185&c=1117-sieraad",
+   "kliks_cm": 4,
+   "echt_cm": 1
   },
   {
    "tijd": "2026-11-17T11:15:00Z",
@@ -144,7 +155,8 @@
    "via": "zernio",
    "zernio_id": "6afc13c08f873c82867e0adc",
    "status": "gepland",
-   "link": "go.kadoly.com/o?k=fb&p=oc_4174005828042753&c=1117-mandje"
+   "link": "go.kadoly.com/o?k=fb&p=oc_4174005828042753&c=1117-mandje",
+   "kliks_cm": 3
   },
   {
    "tijd": "2026-11-17T18:45:00Z",
@@ -187,6 +199,65 @@
    "beeld": "https://cdn.kadoly.com/uploads/products/orderchamp/0b/0bcdaad033315e1e36aa14c875cf6f51.png",
    "geverifieerd": "2026-11-17T13:51:55.255Z",
    "notitie": "Eenmaal Publish; Pinterest bevestigt You created a Pin! Tijd is bevestiging; geen nauwkeuriger platformtijd bekend. Directe Kadoly-link, geen advertenties geactiveerd."
+  },
+  {
+   "tijd": "2026-11-18T11:15:00Z",
+   "dag": "2026-11-18",
+   "platform": "facebook",
+   "soort": "mandje",
+   "pid": "oc_4173959354744833",
+   "tijdvak": "12:15",
+   "via": "zernio",
+   "zernio_id": "6afd653ad89d0fd48fc0cc9f",
+   "status": "gepland",
+   "link": "go.kadoly.com/o?k=fb&p=oc_4173959354744833&c=1118-mandje"
+  },
+  {
+   "tijd": "2026-11-18T11:15:00Z",
+   "dag": "2026-11-18",
+   "platform": "instagram",
+   "soort": "mandje",
+   "pid": "oc_4173959354744833",
+   "tijdvak": "12:15",
+   "via": "zernio",
+   "zernio_id": "6afd653b251783141808f3fb",
+   "status": "gepland"
+  },
+  {
+   "tijd": "2026-11-18T18:45:00Z",
+   "dag": "2026-11-18",
+   "platform": "facebook",
+   "soort": "nieuw",
+   "pid": "oc_4173958188548097",
+   "tijdvak": "19:45",
+   "via": "zernio",
+   "zernio_id": "6afd653c251783141808f405",
+   "status": "gepland",
+   "link": "go.kadoly.com/o?k=fb&p=oc_4173958188548097&c=1118-nieuw"
+  },
+  {
+   "tijd": "2026-11-18T18:45:00Z",
+   "dag": "2026-11-18",
+   "platform": "instagram",
+   "soort": "nieuw",
+   "pid": "oc_4173958188548097",
+   "tijdvak": "19:45",
+   "via": "zernio",
+   "zernio_id": "6afd653cbc74e5a61e5d31b0",
+   "status": "gepland"
+  },
+  {
+   "tijd": "2026-11-18T18:45:00Z",
+   "dag": "2026-11-18",
+   "platform": "pinterest",
+   "soort": "nieuw",
+   "pid": "oc_4173958188548097",
+   "tijdvak": "19:45",
+   "via": "zernio",
+   "zernio_id": "6afd6551bc74e5a61e5d31df",
+   "status": "gepland",
+   "bord": "Wonen en decoratie",
+   "code": "pin-1118-nieuw"
   }
  ]
 }
