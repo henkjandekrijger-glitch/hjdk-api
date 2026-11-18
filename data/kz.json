@@ -13962,8 +13962,8 @@
    "pct": 2.5,
    "term": "powerbank",
    "title": "Welke powerbank past bij jou?",
-   "h1": "Powerbank kiezen: mAh, snelladen en laptop",
-   "kort": "Telefoon 1–2× opladen: 10.000 mAh, licht. Weekend weg of tablet: 20.000 mAh met USB-C Power Delivery 20 W+. Laptop opladen: 20.000+ mAh met 65 W USB-C. In het vliegtuig maximaal 27.000 mAh (100 Wh).",
+   "h1": "Powerbank kopen: welke past bij je telefoon, laptop en vliegtuig?",
+   "kort": "Telefoon 1 tot 2 keer opladen: 10.000 mAh, licht. Weekend weg of tablet: 20.000 mAh met USB-C Power Delivery van 20 W of meer. Laptop opladen: 20.000 mAh of meer met 65 W USB-C. In het vliegtuig mag hij alleen in de handbagage, tot 100 Wh (ongeveer 27.000 mAh); KLM verbiedt gebruiken en opladen aan boord.",
    "intro": "Een powerbank met het verkeerde vermogen laadt je laptop niet of je telefoon tergend traag. Drie vragen.",
    "questions": [
     {
@@ -14046,7 +14046,7 @@
        "max": 25
       },
       {
-       "label": "€25–60",
+       "label": "€25 tot 60",
        "min": 22,
        "max": 65
       },
@@ -14057,7 +14057,7 @@
      ]
     }
    ],
-   "uitleg": "Reken de echte capaciteit op 60–70% van de mAh: 10.000 mAh laadt een telefoon 1,5–2 keer. USB-C met Power Delivery (20 W) laadt een telefoon in een uur voor de helft; voor een laptop heb je 65 W nodig. Een ingebouwde kabel is handig, een display met percentage ook. Vliegen: tot 100 Wh (27.000 mAh) mag in de handbagage, nooit in het ruim.",
+   "uitleg": "Reken de echte capaciteit op 60 tot 70% van de mAh: 10.000 mAh laadt een telefoon 1,5 tot 2 keer. USB-C met Power Delivery (20 W) laadt een telefoon in een uur voor de helft; voor een laptop heb je 65 W nodig. Een ingebouwde kabel is handig, een display met percentage ook. Vliegen: tot 100 Wh (27.000 mAh) mag in de handbagage, nooit in het ruim. Bij Action kost een powerbank van 5.000 mAh rond €12 en een Xtorm van 20.000 mAh met 30 W €19,95 (november 2026); voor een laptop is 30 W te weinig. Anker verkoopt onder meer de Nano (10.000 mAh, 45 W), de MagGo met Qi2 en de Prime (20.000 en 26.750 mAh) voor laptops. Een magnetische powerbank met Qi2 of MagSafe klikt op een iPhone vanaf de 12 en laadt draadloos, maar langzamer en met meer verlies dan via een kabel.",
    "fouten": [
     "Een 5 W-powerbank voor een moderne telefoon: 4 uur laden.",
     "Een 20.000 mAh-blok van 500 gram in de broekzak.",
@@ -14066,21 +14066,51 @@
    "faq": [
     {
      "q": "Hoe vaak laadt 10.000 mAh mijn telefoon op?",
-     "a": "1,5–2 keer bij een telefoon van 4.000–5.000 mAh, door omzettingsverlies."
-    },
-    {
-     "q": "Mag een powerbank mee in het vliegtuig?",
-     "a": "In de handbagage tot 100 Wh (ongeveer 27.000 mAh); 100–160 Wh met toestemming; nooit in het ruim."
+     "a": "1,5 tot 2 keer bij een telefoon van 4.000 tot 5.000 mAh, door omzettingsverlies."
     },
     {
      "q": "Kan ik mijn laptop opladen met een powerbank?",
      "a": "Ja, met USB-C Power Delivery van minimaal 65 W en een laptop die via USB-C laadt."
+    },
+    {
+     "q": "Mag een powerbank mee in het vliegtuig?",
+     "a": "Alleen in de handbagage, nooit in het ruim. Tot 100 Wh (ongeveer 27.000 mAh) mag zonder toestemming, 100 tot 160 Wh met toestemming van de maatschappij, daarboven niet. Sinds 27 maart 2026 geldt volgens de ICAO hoogstens 2 per passagier en niet opladen tijdens de vlucht."
+    },
+    {
+     "q": "Mag ik mijn powerbank gebruiken bij KLM?",
+     "a": "Nee. KLM staat niet toe dat je aan boord een powerbank gebruikt of oplaadt; houd hem bij je en niet in het bagagevak. Ook de Lufthansa-groep (met Eurowings) en Emirates verbieden het gebruik. Kijk vlak voor je vlucht bij je maatschappij, de regels veranderen snel."
+    },
+    {
+     "q": "Hoeveel Wh is 20.000 mAh?",
+     "a": "Ongeveer 74 Wh. 10.000 mAh is ongeveer 37 Wh en 27.000 mAh ongeveer 100 Wh, de grens voor de handbagage zonder toestemming."
+    },
+    {
+     "q": "Is een powerbank van Action goed?",
+     "a": "Voor een telefoon zijn de goedkope modellen van Action prima: 5.000 mAh voor rond €12 of een Xtorm van 20.000 mAh met 30 W voor €19,95 (november 2026). Voor een laptop heb je 65 W of meer nodig, dat haal je met deze modellen niet."
+    },
+    {
+     "q": "Welke Anker powerbank moet ik kiezen?",
+     "a": "Voor een telefoon de Anker Nano 10.000 mAh (45 W) of een MagGo met Qi2 als je magnetisch wilt laden. Voor een laptop de Anker Prime van 20.000 of 26.750 mAh. De Zolo van 20.000 mAh met 30 W is de goedkope keuze voor tablet en telefoon."
     }
    ],
    "verwant": [
     "laptoptas",
     "draadloze-oordopjes",
     "koffer"
+   ],
+   "seoTitle": "Powerbank kopen 2026: mAh, snelladen, vliegtuig en Action",
+   "titleFixAt": "2026-11-18",
+   "metaDesc": "Welke powerbank? 10.000 mAh voor je telefoon, 20.000 mAh met 30 W voor tablet, 65 W voor laptop. Vliegtuigregels 2026, Anker, MagSafe en Action.",
+   "updatedAt": "2026-11-18",
+   "vast": [
+    "h1",
+    "seoTitle",
+    "titleFixAt",
+    "metaDesc",
+    "kort",
+    "uitleg",
+    "faq",
+    "updatedAt"
    ]
   },
   {
@@ -19648,8 +19678,8 @@
    "term": "thuisbatterij",
    "publishAt": "2026-10-03",
    "title": "Welke thuisbatterij past bij jou?",
-   "h1": "Thuisbatterij kiezen: plug-in, vast of powerstation?",
-   "intro": "Op 1 januari 2027 stopt de salderingsregeling. Zonnestroom die je overdag teruglevert, levert daarna minder op, en sommige leveranciers rekenen er zelfs kosten voor. Een thuisbatterij bewaart die stroom voor de avond. Drie vragen en je weet welk type en welke maat bij jou past.",
+   "h1": "Thuisbatterij kopen in 2026: kosten, subsidie en welke past bij jou",
+   "intro": "Op 1 januari 2027 stopt de salderingsregeling. Teruggeleverde zonnestroom levert daarna minder op: de vergoeding moet tot 2030 minstens de helft van het kale leveringstarief zijn. Een thuisbatterij bewaart die stroom voor de avond. Hier lees je wat een thuisbatterij kost, of er subsidie is en welke maat en welk type bij jou past. Drie vragen en je ziet wat er vandaag te koop is.",
    "questions": [
     {
      "q": "Waarvoor wil je hem vooral gebruiken?",
@@ -19735,7 +19765,7 @@
        "max": 700
       },
       {
-       "label": "€700–1.500",
+       "label": "€700 tot 1.500",
        "min": 600,
        "max": 1600
       },
@@ -19746,30 +19776,55 @@
      ]
     }
    ],
-   "uitleg": "Kijk eerst hoeveel stroom je op een zonnige dag teruglevert; dat staat in de app van je slimme meter of omvormer. Een batterij die veel groter is dan dat overschot, staat het grootste deel van het jaar half leeg. Een plug-in batterij steek je zelf in het stopcontact en levert een beperkt vermogen aan je huis: ideaal om de basis (koelkast, router, verlichting) 's avonds op zonnestroom te laten draaien. Een vaste batterij met hybride omvormer laat je door een installateur plaatsen en kan veel meer leveren. Heb je een dynamisch energiecontract, kies dan een model met een app die op de uurprijzen kan laden en ontladen. Wil je stroom houden bij een storing, controleer dan of er een noodstroomfunctie op zit: veel thuisbatterijen schakelen bij uitval gewoon uit, een powerstation met eigen stopcontacten niet.",
+   "uitleg": "Kijk eerst hoeveel stroom je op een zonnige dag teruglevert; dat staat in de app van je slimme meter of omvormer. Een batterij die veel groter is dan dat overschot, staat het grootste deel van het jaar half leeg. Milieu Centraal noemt 6 kWh een gewone maat, met modellen van 2 tot 20 kWh. Er zijn drie soorten. Een thuisbatterij met stekker (plug-in) steek je zelf in het stopcontact en levert via dat stopcontact hoogstens 800 W: genoeg voor koelkast, router en verlichting in de avond. Een vaste thuisbatterij met hybride omvormer laat je door een installateur plaatsen en levert veel meer vermogen. Een draagbaar powerstation heeft eigen stopcontacten en is voor noodstroom, kamperen of het tuinhuis, niet om je huis terug te voeden. Kosten volgens offertes verzameld door Trustoo (nov 2026), inclusief installatie: onder 5 kWh €1.800 tot €3.800, rond 10 kWh €3.300 tot €7.000, rond 15 kWh €7.000 tot €9.000 en rond 20 kWh €8.000 tot €12.000. Let op of een prijs inclusief of exclusief btw is: veel leveranciers noemen bedragen zonder btw. Subsidie: er is geen landelijke regeling en het kabinet wil ook geen 0% btw op thuisbatterijen (oktober 2026). De provincie Flevoland vergoedt 25% tot €1.250 voor een batterij van 5 tot 20 kWh bij zonnepanelen; Noordwijk geeft tot €1.000. Kijk voor je eigen woonplaats in de Energiesubsidiewijzer van Milieu Centraal op verbeterjehuis.nl. Een mail van 'RVO' over €1.850 batterijsubsidie is nep. Terugverdienen: Milieu Centraal verwacht dat een thuisbatterij zich met besparing op de energierekening nu waarschijnlijk niet terugverdient. Interessanter wordt hij met veel overschot, terugleverkosten of een dynamisch contract, waarbij de batterij laadt als stroom goedkoop is. Heb je zo'n contract, kies dan een model met een app die op uurprijzen stuurt. Wil je stroom houden bij een storing, controleer dan of er een noodstroomfunctie op zit: veel thuisbatterijen schakelen bij uitval gewoon uit.",
    "fouten": [
     "Denken dat elke thuisbatterij stroom geeft bij een storing; dat doet alleen een model met noodstroom- of back-upfunctie.",
     "Een batterij kopen die veel groter is dan je dagelijkse overschot aan zonnestroom.",
-    "Verwachten dat een plug-in batterij je hele huis draait; hij levert een beperkt vermogen via één stopcontact.",
-    "Niet checken of de app werkt met je slimme meter (P1-poort) en met een dynamisch contract."
+    "Prijzen exclusief en inclusief btw door elkaar vergelijken.",
+    "Ingaan op een mail over landelijke batterijsubsidie: die regeling bestaat niet.",
+    "Verwachten dat een plug-in batterij je hele huis draait; hij levert hoogstens 800 W via één stopcontact."
    ],
-   "kort": "Zonnepanelen en vanaf 2027 minder vergoeding voor teruglevering? Kies een plug-in thuisbatterij die past bij je dagelijkse overschot. Wil je stroom bij een storing, kies dan een powerstation of een batterij met noodstroomfunctie. Vast in de meterkast is krachtiger, maar vraagt een installateur.",
+   "kort": "Een vaste thuisbatterij kost gemiddeld €4.000 tot €6.000 inclusief installatie en btw (Consumentenbond, okt 2026); 10 kWh kost volgens offertes €3.300 tot €7.000. Een thuisbatterij met stekker van 2 tot 7 kWh kost ongeveer €1.300 tot €1.900. Landelijke subsidie is er niet, btw-nultarief ook niet; alleen enkele gemeenten en de provincie Flevoland geven subsidie. Kies de maat op wat je op een zonnige dag teruglevert.",
    "faq": [
     {
-     "q": "Is een thuisbatterij na 2027 rendabel?",
-     "a": "Dat hangt af van hoeveel je teruglevert en van je contract. Met veel overschot, terugleverkosten of een dynamisch contract wordt hij interessanter. Reken het na met je jaarafrekening."
+     "q": "Wat kost een thuisbatterij?",
+     "a": "Een vaste thuisbatterij kost gemiddeld €4.000 tot €6.000 inclusief installatie en btw volgens de Consumentenbond (oktober 2026). Offertes per maat volgens Trustoo (november 2026): onder 5 kWh €1.800 tot €3.800, rond 10 kWh €3.300 tot €7.000, rond 20 kWh €8.000 tot €12.000. Een thuisbatterij met stekker kost ongeveer €1.300 tot €1.900."
     },
     {
-     "q": "Mag ik een plug-in thuisbatterij zelf aansluiten?",
-     "a": "Een plug-in model gaat in een gewoon stopcontact. Check bij je netbeheerder of je hem moet aanmelden via energieleveren.nl."
+     "q": "Is er subsidie op een thuisbatterij?",
+     "a": "Niet landelijk: er is geen rijkssubsidie en geen 0% btw op thuisbatterijen. Sommige gemeenten en provincies hebben wel een regeling, zoals Flevoland (25%, tot €1.250, batterij van 5 tot 20 kWh met zonnepanelen) en Noordwijk (tot €1.000). Zoek je eigen woonplaats op in de Energiesubsidiewijzer van Milieu Centraal op verbeterjehuis.nl."
+    },
+    {
+     "q": "Hoe doe ik een subsidiecheck voor een thuisbatterij?",
+     "a": "Gebruik de Energiesubsidiewijzer van Milieu Centraal op verbeterjehuis.nl en vul je woonplaats in. Kijk daarna op de site van je gemeente en provincie of er nog budget is. Krijg je een mail van RVO over batterijsubsidie: RVO waarschuwde in oktober 2026 dat zo’n regeling van €1.850 niet bestaat."
+    },
+    {
+     "q": "Kan ik de btw op een thuisbatterij terugvragen?",
+     "a": "Als particulier die de batterij alleen voor eigen gebruik heeft niet. Volgens de Belastingdienst kan het alleen als je met de batterij stroom verhandelt, met onder meer een energiemanagementsysteem, een dynamisch contract en factuur op je eigen naam. Voor het privégebruik betaal je dan een deel terug."
+    },
+    {
+     "q": "Is een thuisbatterij na 2027 rendabel?",
+     "a": "Vaak nog niet. Milieu Centraal verwacht dat een thuisbatterij zich met besparing op de energierekening waarschijnlijk niet terugverdient. Hij wordt interessanter met veel overschot aan zonnestroom, terugleverkosten of een dynamisch contract. Reken het na met je eigen jaarafrekening."
+    },
+    {
+     "q": "Hoeveel kWh thuisbatterij heb ik nodig?",
+     "a": "Ongeveer wat je op een gewone dag teruglevert en ’s avonds weer verbruikt. Milieu Centraal noemt 6 kWh een gewone maat. Een thuisbatterij van 10 kWh past bij een groot overschot of een warmtepomp; 20 kWh is vooral zinvol met een dynamisch contract."
+    },
+    {
+     "q": "Wat kost een thuisbatterij van 10 kWh?",
+     "a": "Volgens offertes die Trustoo in november 2026 verzamelde €3.300 tot €7.000 inclusief installatie. Zonneplan rekent voor de Nexus 10 kWh €4.690 inclusief installatie, maar dat bedrag is na teruggave van btw. Met stekker bereik je ongeveer 10 kWh door accu’s te stapelen, bijvoorbeeld 4 HomeWizard-batterijen van 2,688 kWh."
+    },
+    {
+     "q": "Welke merken thuisbatterij zijn er?",
+     "a": "Vast: Tesla Powerwall 3 (13,5 kWh), Zonneplan Nexus (10 tot 35 kWh), Enphase IQ Battery 5P (5 kWh), SolarEdge Home Battery (modules van 4,6 kWh) en Sessy (5 kWh). Met stekker: HomeWizard Plug-In Battery (2,688 kWh), Marstek Venus E 3.0 (5,12 kWh), Anker SOLIX Solarbank Max AC (7 kWh), AEG SolarCube Pro (6 of 9 kWh), Zendure en EcoFlow STREAM."
+    },
+    {
+     "q": "Mag ik een thuisbatterij met stekker zelf aansluiten?",
+     "a": "Een plug-in model gaat in een gewoon stopcontact en levert daar hoogstens 800 W. Meld hem aan via energieleveren.nl. Milieu Centraal raadt stekkerbatterijen voorlopig af vanwege brandrisico; laat bij twijfel je groep en stopcontact beoordelen. Een vergelijking van 10 modellen staat op keuzehulp.best/stekkerbatterij."
     },
     {
      "q": "Werkt een thuisbatterij bij een stroomstoring?",
-     "a": "Alleen als hij een noodstroom- of back-upfunctie heeft. Een powerstation met eigen stopcontacten blijft werken; veel plug-in batterijen schakelen uit."
-    },
-    {
-     "q": "Hoeveel kWh heb ik nodig?",
-     "a": "Ongeveer wat je op een gewone dag teruglevert en 's avonds weer verbruikt. Voor veel huishoudens met zonnepanelen is dat een paar kWh."
+     "a": "Alleen als hij een noodstroom- of back-upfunctie heeft. Een powerstation met eigen stopcontacten blijft werken; veel plug-in batterijen en vaste systemen zonder back-up schakelen uit."
     }
    ],
    "partners": [
@@ -19894,12 +19949,30 @@
    ],
    "pushNote": "Ook als de regels rond salderen of terugleverkosten veranderen.",
    "verwant": [
+    "stekkerbatterij",
+    "powerbank",
     "slimme-thermostaat",
-    "radiatorventilator",
+    "hybride-warmtepomp",
     "infraroodpaneel",
-    "elektrische-kachel",
-    "elektrische-deken",
-    "warmwaterkruik"
+    "elektrische-kachel"
+   ],
+   "seoTitle": "Thuisbatterij 2026: kosten, subsidie en welke kopen",
+   "titleFixAt": "2026-11-18",
+   "metaDesc": "Een thuisbatterij kost vast €4.000 tot €6.000 (Consumentenbond), met stekker vanaf circa €1.300. Kosten per kWh, subsidie, 10 kWh en merken uitgelegd.",
+   "updatedAt": "2026-11-18",
+   "vast": [
+    "title",
+    "h1",
+    "seoTitle",
+    "titleFixAt",
+    "metaDesc",
+    "intro",
+    "kort",
+    "uitleg",
+    "faq",
+    "fouten",
+    "verwant",
+    "updatedAt"
    ]
   }
  ]
