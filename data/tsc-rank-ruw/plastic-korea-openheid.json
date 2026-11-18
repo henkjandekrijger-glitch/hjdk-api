@@ -1,0 +1,794 @@
+{
+ "gecontroleerd": "2026-11-18",
+ "opmerking": "Openheid gelezen op de eigen Engelse sites (alleen pagina's die via zoeken gevonden en opgehaald konden worden), risico's uit één nieuwszoekactie per kliniek in Engels en Koreaans. Geen enkele kliniek publiceert vaste operatieprijzen; View geeft alleen een geschat bereik, Braun alleen medicijnkosten. Geen enkele kliniek heeft een schriftelijk revisie- of garantiebeleid gevonden (JW heeft wel een terugbetalingsregeling voor de aanbetaling). De meeste ernstige zaken in de pers (sterfgevallen, ghost surgery) noemen de kliniek niet; die staan onder algemeen en zijn niet aan een kliniek gekoppeld. 'Geen risico gevonden' betekent: niets gevonden in één zoekactie, niet: bewezen schoon. Voor 15 kandidaten kon geen eigen Engelse site worden gecontroleerd.",
+ "niet_bereikbaar": [
+  "https://eng.banobagi.com/korean-plastic-surgery-price/ (toestemming voor ophalen verliep)",
+  "https://www.idhospital.com/en/about-id/doctors-greeting/core-competencies (toestemming voor ophalen verliep)",
+  "https://bkhospital.com/english/ (alleen botcontrole-script, niet omzeild)",
+  "http://en.daprs.com/ (robots.txt weigert)",
+  "http://en.nanaprs.com/ (robots.txt weigert)",
+  "http://april31.com/en/document/Medical-Team (doorverwijzingslus)",
+  "TL, Dream (Seoul), Cinderella, Regen, The Line, Item, VIP, Faceline, Glovi, Hyundai Aesthetics, Jewelry, Uvita, Michelangelo, Teuim: geen officiële Engelse site gevonden via zoeken",
+  "Mine: alleen Koreaanse site gevonden (mineps.com), Engels niet gecontroleerd"
+ ],
+ "algemeen": [
+  {
+   "wat": "Since 25 September 2023 the amended Medical Service Act requires CCTV in every operating room where patients are under general anaesthesia; surgeons may only refuse recording for valid reasons, footage is viewable on request of investigators, a court or with consent of patient and staff, and leaking or falsifying footage carries up to 5 years in prison or a 50 million won fine.",
+   "datum": "2023-09-01",
+   "bron": "https://www.koreaherald.com/view.php?ud=20230901000498"
+  },
+  {
+   "wat": "In 2025 a record 2.01 million foreign patients from 201 countries were treated in Korea (1.17 million in 2024); 62.9% of visits were dermatology and 11.2% plastic surgery; 87.2% of care was in Seoul (Ministry of Health and Welfare).",
+   "datum": "2026-04-24",
+   "bron": "https://www.asiae.co.kr/en/article/2026042313352170873"
+  },
+  {
+   "wat": "Ministry figures for 2025: China 30.8%, Japan 29.8%, Taiwan 9.2% and the US 8.6% of foreign patients; US patients rose 70.4% to 173,000.",
+   "datum": "2026-04-24",
+   "bron": "https://www.koreatimes.co.kr/southkorea/20260424/foreign-patients-top-2-mil-for-1st-time-in-2025"
+  },
+  {
+   "wat": "In 2023, 605,768 foreign patients were treated, 16.8% of them for plastic surgery; reports of illegal patient solicitation to KHIDI rose from 11 (2021) to 59 (2023), with little visible follow-up.",
+   "datum": "2024-12-23",
+   "bron": "https://aljazeera.com/news/2024/12/23/as-south-korea-draws-visitors-chasing-beauty-dodgy-practices-pose-risks"
+  },
+  {
+   "wat": "Under the 2016 act on attracting foreign patients, recruiting agencies and clinics must register; unregistered brokers face up to 3 years in prison or a 30 million won fine, and clinics treating foreign patients need malpractice insurance.",
+   "datum": "2016-03-14",
+   "bron": "https://www.koreajoongangdaily.com/korea/new-act-cracks-down-on-illegal-medical-brokers/11849325"
+  },
+  {
+   "wat": "KHIDI guidelines bar unregistered hospitals from counselling or booking foreign patients online, including via foreign social media accounts; violations carry up to 3 years in prison or 30 million won.",
+   "datum": "",
+   "bron": "https://www.itij.com/latest/news/south-korea-seoul-increases-restrictions-foreign-patient-care"
+  },
+  {
+   "wat": "The 10% VAT refund for foreign patients on cosmetic surgery and dermatology ended on 31 December 2025; experts warned this may weaken price transparency and revive illegal brokers. Refunds reached 95.5 billion won in 2024.",
+   "datum": "2025-12-10",
+   "bron": "https://www.koreaherald.com/article/10633779"
+  },
+  {
+   "wat": "The Korea Consumer Agency received 4,816 plastic surgery complaints in 2013 and ruled for damages in 214 cases over two years; 80.9% of Seoul cases involved Gangnam, and only five cases were filed by foreigners.",
+   "datum": "2015-02-04",
+   "bron": "https://www.koreatimes.co.kr/www/nation/2024/06/113_173012.html"
+  },
+  {
+   "wat": "A National Forensic Service study counted 50 deaths related to cosmetic procedures from 2016 to 2024 (about 5.6 per year), rising over the period.",
+   "datum": "2026-02-10",
+   "bron": "https://www.heraldk.com/article/2026021018183919122"
+  },
+  {
+   "wat": "A Chinese woman in her 20s died in January 2024 after three liposuction sessions at an unnamed Gangnam clinic; prosecutors indicted the clinic director for professional negligence resulting in death in June 2026. He was already on trial over a 2018 death of another Chinese patient after liposuction.",
+   "datum": "2026-06-15",
+   "bron": "https://sbsstar.net/article/N1008611260/prosecutors-indict-plastic-surgeon-after-death-of-chinese-patient-in-her-20s-previous-patient-also-died"
+  },
+  {
+   "wat": "After that death the Chinese embassy in Seoul warned its citizens about cosmetic surgery risks in Korea and advised checking brokers, clinics and surgeons.",
+   "datum": "2024-01-20",
+   "bron": "https://scmp.com/news/asia/east-asia/article/3249158/chinese-embassy-warns-plastic-surgery-risks-south-korea-after-liposuction-death"
+  },
+  {
+   "wat": "A Seoul civil court ordered a surgeon at an unnamed Gangnam clinic to pay about 200 million won to the parents of a Chinese teenager who died after an 11-hour liposuction and fat-transfer operation in 2018, finding vital signs were not monitored; she had been referred by an agency.",
+   "datum": "2024-05-07",
+   "bron": "https://dailymedi.com/news/news_view.php?wr_id=911603"
+  },
+  {
+   "wat": "In the 2016 death of student Kwon Dae-hee after facial contouring surgery (a ghost surgery case), the clinic director was sentenced at first instance to 3 years in prison; the court found treatment and transfer were delayed while he lost blood.",
+   "datum": "2021-08-19",
+   "bron": "https://www.lawtimes.co.kr/news/articleView.html?idxno=172265"
+  },
+  {
+   "wat": "Prosecutors indicted a Sinsa-dong clinic operator for having a dentist perform surgeries under anaesthesia while a plastic surgeon did the consultations (33 patients, about 152 million won), after an 18-year-old patient died in 2014.",
+   "datum": "2016-04-04",
+   "bron": "https://www.khan.co.kr/article/201604041030061"
+  },
+  {
+   "wat": "In the 2020 liposuction death of Hong Kong heiress Bonnie Evita Law, reportedly introduced by an illegal broker, the surgeon was acquitted of negligent homicide at first instance but fined 3 million won for attracting foreign patients without registration.",
+   "datum": "2025-02-17",
+   "bron": "https://www.asiae.co.kr/en/article/2025021715545022690"
+  },
+  {
+   "wat": "Seoul's special judicial police found 36 medical waste violations at 25 plastic surgery and dermatology clinics, including liposuction fat and blood poured down sinks, and referred 25 people to prosecutors.",
+   "datum": "2026-09-03",
+   "bron": "https://www.koreajoongangdaily.com/korea/seoul-clinics-caught-dumping-human-fat-blood-down-sinks-and-toilets/12858856"
+  },
+  {
+   "wat": "Korea Customs Service alleged a 102 million dollar crypto laundering network around payments by Chinese patients at an unnamed large plastic surgery clinic; three people were referred to prosecutors.",
+   "datum": "2026-01-20",
+   "bron": "https://www.dlnews.com/articles/people-culture/plastic-surgery-chief-used-crypto-to-launder-payments/"
+  },
+  {
+   "wat": "The Supreme Court upheld a one-year prison sentence for a lawyer who published a secret operating room recording alleging ghost surgery at an unnamed Gangnam clinic; the courts did not find that ghost surgery occurred.",
+   "datum": "2026-07-09",
+   "bron": "https://view.asiae.co.kr/article/2026070909425476703"
+  },
+  {
+   "wat": "The Fair Trade Commission sanctioned View, DA and AB Plastic Surgery for undisclosed paid reviews and passed suspected Medical Service Act violations to the Ministry of Health and Welfare.",
+   "datum": "2026-07-13",
+   "bron": "https://www.koreatimes.co.kr/southkorea/society/20260713/gangnam-plastic-surgery-clinics-penalized-over-incentivized-positive-reviews"
+  }
+ ],
+ "klinieken": [
+  {
+   "naam": "ID Hospital",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "https://eng.idhospital.com/",
+   "prijs": {
+    "bedrag": "geen prijs gevonden (alleen prijsaanvraagformulier)",
+    "bron": "https://eng.idhospital.com/online-counseling/korean-plastic-surgery-cost/"
+   },
+   "wie_opereert": {
+    "tekst": "Site zegt \"Every operating room at ID Hospital is equipped with CCTV surveillance\" en noemt \"four or more full-time anesthesiology specialists\" zonder namen. Geen uitspraak dat de genoemde chirurg zelf opereert of over ghost surgery.",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": "https://eng.idhospital.com/why-id-hospital-safest-plastic-surgery-korea/amp/"
+   },
+   "nazorg": {
+    "tekst": "Verpleging tijdens herstel genoemd; 'id Real After Care' alleen als menulink; geen schriftelijk revisie- of garantiebeleid gevonden.",
+    "garantie": false,
+    "bron": "https://eng.idhospital.com/why-id-hospital-safest-plastic-surgery-korea/amp/"
+   },
+   "risico": [],
+   "toelichting": "Geen risico op naam gevonden in één nieuwszoekactie (EN+KO). Pagina www.idhospital.com/en/about-id/... kon niet worden opgehaald (toestemming verliep)."
+  },
+  {
+   "naam": "Banobagi",
+   "arts": "Jaesang Barn (plastisch chirurg, staf); neus: Kim Jinhyun, Eon Ju Park",
+   "stad": "Seoul",
+   "site": "https://eng.banobagi.com/",
+   "prijs": {
+    "bedrag": "geen prijs gevonden (neuspagina zegt alleen 30 tot 50% goedkoper dan VS/VK/Australië; prijsaanvraag)",
+    "bron": "https://eng.banobagi.com/rhinoplasty-korea/"
+   },
+   "wie_opereert": {
+    "tekst": "Homepage: \"Banobagi is against ghost surgeries\" en een \"REAL-NAME SYSTEM\"; neuspagina: de chirurg \"performs the entire procedure from start to finish\". Geen CCTV genoemd. Vier anesthesiologen met naam op de stafpagina (o.a. Yongju Kim, Jungyoon Choi), \"Stationed-in Anesthesiologist\".",
+    "arts_opereert": "ja",
+    "anesthesioloog": "named",
+    "bron": "https://eng.banobagi.com/wp-content/themes/banobagi/assets/about/medical-staff.html"
+   },
+   "nazorg": {
+    "tekst": "\"customized after-care\" met hechtingen verwijderen en controle op complicaties; revisieoperaties aangeboden maar geen garantievoorwaarden.",
+    "garantie": false,
+    "bron": "https://eng.banobagi.com/"
+   },
+   "risico": [],
+   "toelichting": "Stafpagina noemt anesthesioloog Yongju Kim ook als 'plastic surgeon', een tegenstrijdigheid op de site. Prijspagina eng.banobagi.com/korean-plastic-surgery-price/ niet opgehaald (toestemming verliep). Geen risico op naam gevonden."
+  },
+  {
+   "naam": "JW Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "https://jwbeauty.net/",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": "https://jwbeauty.net/special-services/?noredirect=en-US"
+   },
+   "wie_opereert": {
+    "tekst": "\"We have cameras in each of our operating rooms\" en \"Real-time video recording\". Revisiepagina: \"All procedures are executed by board-certified plastic surgery specialists\", zonder naam van de opererende chirurg. Geen anesthesioloog genoemd.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "onbekend",
+    "bron": "https://jwbeauty.net/special-services/?noredirect=en-US"
+   },
+   "nazorg": {
+    "tekst": "Vaste consulent tot laatste controle, medicijnen en zwellingsbehandeling na revisie-operaties. Schriftelijk annuleringsbeleid (90%/50%/20% van aanbetaling terug), maar geen revisie- of resultaatgarantie.",
+    "garantie": false,
+    "bron": "https://jwbeauty.net/service-period-refund-policy/"
+   },
+   "risico": [],
+   "toelichting": "Enige kliniek in de lijst met een gepubliceerd terugbetalingsbeleid voor de aanbetaling. Geen risico op naam gevonden."
+  },
+  {
+   "naam": "Grand Plastic Surgery",
+   "arts": "Rhee Se Whan (CEO, plastisch chirurg), Kim Ju Hee",
+   "stad": "Seoul",
+   "site": "https://eng.grandsurgery.com/",
+   "prijs": {
+    "bedrag": "geen prijs gevonden (pakketten zonder bedrag)",
+    "bron": "https://eng.grandsurgery.com/beautytrip/seven-days-package.php"
+   },
+   "wie_opereert": {
+    "tekst": "Site: \"shows the whole surgery process without manipulation\" en een begeleider kan \"monitor the OR upon request\"; \"Anesthesiologists attend the whole surgery process\". Anesthesioloog met naam: Lee Seoung Hyoun. Geen uitspraak dat de genoemde chirurg zelf opereert.",
+    "arts_opereert": "",
+    "anesthesioloog": "named",
+    "bron": "https://eng.grandsurgery.com/about/meet-our-doctors.php"
+   },
+   "nazorg": {
+    "tekst": "24 uur verpleegkundige, opnamekamers, nabehandelingen in het 7-dagenpakket. Belooft \"Guaranteed satisfaction\" zonder voorwaarden; geen schriftelijk garantiebeleid.",
+    "garantie": false,
+    "bron": "https://eng.grandsurgery.com/about/our-clinic.php"
+   },
+   "risico": [],
+   "toelichting": "Het bekende 'kaakbottoren'-geval (boete 3 miljoen won, jan 2014) betrof volgens Segye Oin Plastic Surgery, niet Grand. Geen risico op naam gevonden."
+  },
+  {
+   "naam": "Wonjin Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "https://wonjinbeauty.com/en/",
+   "prijs": {
+    "bedrag": "geen prijs gevonden (\"estimated price\" pas na voorconsult)",
+    "bron": "https://wonjinbeauty.com/en/about/international_clients_service.php"
+   },
+   "wie_opereert": {
+    "tekst": "\"Dedicated doctor designation system for each field\", \"From direct consultation to performing surgery\"; geen CCTV, geen anesthesioloog en geen expliciete uitspraak over wie opereert.",
+    "arts_opereert": "deels",
+    "anesthesioloog": "onbekend",
+    "bron": "https://wonjinbeauty.com/en/about/clinic_overview.php"
+   },
+   "nazorg": {
+    "tekst": "\"various post-operative care systems\" en tolk bij nazorg; geen garantiebeleid.",
+    "garantie": false,
+    "bron": "https://wonjinbeauty.com/en/about/international_clients_service.php"
+   },
+   "risico": [],
+   "toelichting": "Geen risico op naam gevonden."
+  },
+  {
+   "naam": "BK Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "https://bkhospital.com/english/",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Engelse site geeft alleen een script/cookie-doorverwijzing (botcontrole); niet omzeild. Zie niet_bereikbaar. Geen risico op naam gevonden."
+  },
+  {
+   "naam": "View Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "https://www.viewplasticsurgery.com/",
+   "prijs": {
+    "bedrag": "geen vaste prijs; borstvergroting tabel 'Estimated Price Range' bv. $10,000 tot $14,000 (Motiva Ergonomix); revisie-neus alleen marktbereik $5,000 tot $15,000",
+    "bron": "https://www.viewplasticsurgery.com/blog/breast-augmentation-cost-in-korea-2026-pricing-guide-clinical-analysis/"
+   },
+   "wie_opereert": {
+    "tekst": "CCTV \"throughout the operating rooms and clinic\", beelden \"accessible only to the patient\"; \"Real-Name Surgery System\": de chirurg is \"fully responsible for every step\" zodat \"no proxy surgeries occur\". Board-certified anesthesiologen \"always on-site\", niet bij naam.",
+    "arts_opereert": "ja",
+    "anesthesioloog": "onbekend",
+    "bron": "https://www.viewplasticsurgery.com/safe-system/safety-first.html"
+   },
+   "nazorg": {
+    "tekst": "\"Aftercare plans are personalized\", hotelpartner, Quick Recovery Care; geen eigen garantiebeleid (blog adviseert dat te vragen).",
+    "garantie": false,
+    "bron": "https://www.viewplasticsurgery.com/introduction/introduction/"
+   },
+   "risico": [
+    {
+     "wat": "The Korea Fair Trade Commission issued a corrective order to View Plastic Surgery for giving undisclosed surgery discounts to promotional models in exchange for positive reviews (2018 to May 2026), and ordered it to publish a notice of the order.",
+     "datum": "2026-07-12",
+     "bron": "https://www.koreatimes.co.kr/southkorea/society/20260713/gangnam-plastic-surgery-clinics-penalized-over-incentivized-positive-reviews",
+     "ernst": "middel"
+    }
+   ],
+   "toelichting": "FTC-sanctie juli 2026 (verborgen betaalde reviews); FTC gaf vermoedelijke schendingen van de Medical Service Act door aan het ministerie (Korea Times). Ook bron: https://dailypharm.com/user/news/340374"
+  },
+  {
+   "naam": "DA Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "https://daprs.com/",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "Engelse pagina geblokkeerd door robots.txt; niet gecontroleerd.",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [
+    {
+     "wat": "The Korea Fair Trade Commission ordered DA Plastic Surgery not to repeat giving undisclosed surgery discounts to promotional models in exchange for positive reviews.",
+     "datum": "2026-07-12",
+     "bron": "https://dailypharm.com/user/news/340374",
+     "ernst": "middel"
+    }
+   ],
+   "toelichting": "en.daprs.com weigert ophalen (robots). FTC-sanctie juli 2026, zie ook https://www.koreatimes.co.kr/southkorea/society/20260713/gangnam-plastic-surgery-clinics-penalized-over-incentivized-positive-reviews"
+  },
+  {
+   "naam": "TL Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site gevonden via zoeken; niet gecontroleerd. Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "Dream Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site van de Seoulse kliniek gevonden (dreamplasticsurgery.com is een kliniek in Singapore). Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "Cinderella Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site gevonden; niet gecontroleerd. Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "Regen Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site gevonden; niet gecontroleerd. Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "The Line Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site gevonden; niet gecontroleerd. Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "JK Plastic Surgery",
+   "arts": "Joo Kwon (oprichter)",
+   "stad": "Seoul",
+   "site": "https://www.jkplastic.com/en/",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "\"Team of anesthesiologists on site\", niet bij naam; oprichter Dr. Joo Kwon genoemd maar geen uitspraak dat hij zelf opereert; geen CCTV of ghost surgery genoemd. Claimt ministeriële erkenning als 'outstanding medical center for attracting foreigners' (eigen claim, niet geverifieerd).",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": "https://www.jkplastic.com/en/"
+   },
+   "nazorg": {
+    "tekst": "\"1:1 interpretation and care from consultation to discharge\", herstelcentrum en 24-uurs verpleging als trefwoorden; geen garantiebeleid.",
+    "garantie": false,
+    "bron": "https://www.jkplastic.com/en/about-us/our-story/jk-story.asp"
+   },
+   "risico": [],
+   "toelichting": "Geen risico op naam gevonden."
+  },
+  {
+   "naam": "Braun Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "https://www.braunps.com/",
+   "prijs": {
+    "bedrag": "geen operatieprijs; alleen \"Medication cost 50,000KRW~150,000KRW additionally\"",
+    "bron": "https://www.braunps.com/bbs/faq.php"
+   },
+   "wie_opereert": {
+    "tekst": "FAQ: \"we have an anesthesiologists with long experience\"; geen CCTV, geen uitspraak over wie opereert.",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": "https://www.braunps.com/bbs/faq.php"
+   },
+   "nazorg": {
+    "tekst": "Wondcontrole en hechtingen; prijs omvat zwellingsbehandelingen; geen garantie.",
+    "garantie": false,
+    "bron": "https://www.braunps.com/bbs/faq.php"
+   },
+   "risico": [],
+   "toelichting": "Geen risico op naam gevonden."
+  },
+  {
+   "naam": "Lienjang Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "https://ps.lienjang.com/en",
+   "prijs": {
+    "bedrag": "geen prijs gevonden (alleen link 'Non-covered Services Table' zonder bedragen op de pagina)",
+    "bron": "https://ps.lienjang.com/en"
+   },
+   "wie_opereert": {
+    "tekst": "\"a real-name system for medical staff and a 1:1 dedicated responsibility system\"; chirurgen \"personally handle everything from consultation to surgery and aftercare\"; \"An anesthesiologist is always on duty\" (geen naam); geen CCTV.",
+    "arts_opereert": "ja",
+    "anesthesioloog": "onbekend",
+    "bron": "https://ps.lienjang.com/en/page/intro"
+   },
+   "nazorg": {
+    "tekst": "\"Personalized aftercare\"; geen garantie.",
+    "garantie": false,
+    "bron": "https://ps.lienjang.com/en"
+   },
+   "risico": [],
+   "toelichting": "Geen risico op naam gevonden."
+  },
+  {
+   "naam": "April 31",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "http://april31.com/en/",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Pagina Medical-Team geeft een doorverwijzingslus (https naar http); niet gecontroleerd. Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "Item Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site gevonden. Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "Mine Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "https://mineps.com/",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Alleen Koreaanse pagina's gevonden; Engelse site niet gevonden, niet gecontroleerd. Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "Nana Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "http://en.nanaprs.com/",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Engelse site weigert ophalen (robots); niet gecontroleerd. Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "VIP Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site gevonden. Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "Faceline Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site gevonden. Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "365mc",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "https://365mcglobal.com/",
+   "prijs": {
+    "bedrag": "geen prijs gevonden (\"customized\", offerte op aanvraag)",
+    "bron": "https://365mcglobal.com/liposuction/"
+   },
+   "wie_opereert": {
+    "tekst": "Liposuctiepagina: artsen \"perform surgeries themselves\" en \"residing anesthetic specialists\", geen namen; geen CCTV genoemd.",
+    "arts_opereert": "ja",
+    "anesthesioloog": "onbekend",
+    "bron": "https://365mcglobal.com/liposuction/"
+   },
+   "nazorg": {
+    "tekst": "\"a special team exclusively for foreigners, for interpretation and after surgery care\"; Re-Liposuction alleen als menu, geen garantie.",
+    "garantie": false,
+    "bron": "https://365mcglobal.com/liposuction/"
+   },
+   "risico": [],
+   "toelichting": "Liposuctie-specialist (geen algemene plastische chirurgie). Geen risico op naam gevonden; de liposuctie-sterfgevallen bij Chinese patiënten (2018, 2024) noemen in de pers geen kliniek."
+  },
+  {
+   "naam": "Glovi Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site gevonden (alleen bemiddelaarsprofielen). Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "Hyundai Aesthetics",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site gevonden (alleen bemiddelaars). Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "Jewelry Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site gevonden. Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "Uvita",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site gevonden. Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "Michelangelo Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site gevonden. Geen nieuws op naam gevonden."
+  },
+  {
+   "naam": "Teuim Plastic Surgery",
+   "arts": "",
+   "stad": "Seoul",
+   "site": "",
+   "prijs": {
+    "bedrag": "geen prijs gevonden",
+    "bron": ""
+   },
+   "wie_opereert": {
+    "tekst": "niet gecontroleerd",
+    "arts_opereert": "",
+    "anesthesioloog": "onbekend",
+    "bron": ""
+   },
+   "nazorg": {
+    "tekst": "niet gecontroleerd",
+    "garantie": false,
+    "bron": ""
+   },
+   "risico": [],
+   "toelichting": "Geen officiële Engelse site gevonden. Geen nieuws op naam gevonden."
+  }
+ ]
+}

@@ -1,0 +1,774 @@
+{
+ "gecontroleerd": "2026-11-18",
+ "methode": "RealSelf: lijsten Seoul Plastic-Surgeon (170 resultaten, 15 zichtbaar), Seoul Facial (25, 15 zichtbaar), Seoul Asian-Rhinoplasty (73, 15 zichtbaar) en South-Korea Rhinoplasty (117, 15 zichtbaar) gelezen; verder alle praktijk- en artsenpagina's die via zoeken (WebSearch) gevonden werden. Paginering niet zichtbaar, dus elke lijst geeft alleen de eerste 15. Cijfers komen van de profielpagina zelf; wijkt een lijst af dan staat dat in opmerking. Veel profielen melden 'not currently accepting consultations through RealSelf'; dat is geen waarschuwing en staat alleen in opmerking. Trustpilot: via zoeken met domein trustpilot.com geen profiel gevonden voor de kandidaten behalve eng.grandsurgery.com (1 review); Forena Clinic (19 reviews) is geen plastisch chirurg en is weggelaten. Yelp: zoeken gaf geen Seoulse klinieken, alleen Singapore en VS. Google, Doctoralia, Gangnam Unni en Babitalk niet gelezen: geen pagina met score en aantal opgehaald. Makelaars (Bookimed, WhatClinic, PlacidWay, 10mag) kwamen in zoekresultaten maar zijn niet gelezen en tellen niet. Kandidaten met lege platforms: geen eigen RealSelf- of Trustpilotpagina gevonden in zoekresultaten, dat bewijst niet dat er geen profiel is.",
+ "niet_bereikbaar": [
+  "curl naar www.realself.com en www.trustpilot.com: egress-proxy weigert de host (connect_rejected); verder alleen via WebFetch",
+  "https://www.realself.com/find/South-Korea/Seoul/Rhinoplasty: WebFetch weigerde zelf samengestelde URL (PROVENANCE_REQUIRED)",
+  "https://www.realself.com/find/South-Korea/Seoul/Eyelid-Surgery: PROVENANCE_REQUIRED",
+  "https://www.realself.com/find/South-Korea/Seoul/Facelift: PROVENANCE_REQUIRED",
+  "https://www.realself.com/find/South-Korea/Seoul/Breast-Augmentation: PROVENANCE_REQUIRED",
+  "https://www.realself.com/find/South-Korea/Seoul/Jaw-Reduction: PROVENANCE_REQUIRED",
+  "https://www.trustpilot.com/review/idhospital.com: PROVENANCE_REQUIRED (samengestelde URL)",
+  "https://www.trustpilot.com/review/banobagi.com: PROVENANCE_REQUIRED (samengestelde URL); andere trustpilot.com/review/<domein> daarom niet geprobeerd"
+ ],
+ "klinieken": [
+  {
+   "naam": "AB Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 118,
+     "pct_1ster": null,
+     "laatste_review": "2026-11-13",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/ab-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Twee reviewers melden zelf korting of incentive voor hun review. Lijst Rhinoplasty Zuid-Korea toonde 117."
+    }
+   ]
+  },
+  {
+   "naam": "Girin Plastic Surgery & Dermatology",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 114,
+     "pct_1ster": null,
+     "laatste_review": "2026-09-11",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/girin-plastic-surgery-seoul-seoul",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Lijsten toonden 122 (Facial) en 116 (Asian Rhinoplasty); praktijkpagina 114. Neemt geen consulten via RealSelf aan."
+    }
+   ]
+  },
+  {
+   "naam": "VIP Plastic Surgery Center Korea",
+   "stad": "Jeju (volgens RealSelf-adres)",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 183,
+     "pct_1ster": null,
+     "laatste_review": "2026-09-28",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/vip-plastic-surgery-center-korea-seoul",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Adres op de pagina is Jeju (Eunnam1-gil), niet Seoul, hoewel de URL seoul zegt. Rating-verdeling 100% 5 sterren. Lijst toonde 187."
+    }
+   ]
+  },
+  {
+   "naam": "VIP Plastic Surgery Center Korea",
+   "stad": "Jeju (volgens RealSelf-adres)",
+   "arts": "Myung Ju Lee, MD, PhD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 160,
+     "pct_1ster": null,
+     "laatste_review": "2026-09-09",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/myung-ju-lee-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Lijst Rhinoplasty Zuid-Korea toonde 163 en stad Jeju."
+    }
+   ]
+  },
+  {
+   "naam": "Nana Plastic Surgery Hospital & Dermatology",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 75,
+     "pct_1ster": null,
+     "laatste_review": "2025-05-09",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/nana-plastic-surgery-hospital-seoul-seoul",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    }
+   ]
+  },
+  {
+   "naam": "DA Plastic Surgery Clinic",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 69,
+     "pct_1ster": null,
+     "laatste_review": "2026-08-23",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/da-plastic-surgery-clinic-seoul",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Neemt geen consulten via RealSelf aan."
+    }
+   ]
+  },
+  {
+   "naam": "Regen Plastic Surgery",
+   "stad": "Seoul",
+   "arts": "Myung June Oh, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.5,
+     "schaal": "5 sterren",
+     "aantal": 68,
+     "pct_1ster": null,
+     "laatste_review": "2020-08-04",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/myung-june-oh-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Profiel noemt geen kliniek; Regen-praktijkpagina noemt hem als arts. Nieuwste van 10 getoonde reviews. Geen Verified-badge."
+    }
+   ]
+  },
+  {
+   "naam": "Regen Plastic Surgery",
+   "stad": "Seoul",
+   "arts": "Seok Jun Lee, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 38,
+     "pct_1ster": null,
+     "laatste_review": "2024-04-25",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/seok-jun-lee-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Profiel noemt geen kliniek; Regen-praktijkpagina noemt hem."
+    }
+   ]
+  },
+  {
+   "naam": "Regen Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 1,
+     "pct_1ster": null,
+     "laatste_review": "2019-07-30",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/regen-plastic-surgery-seoul-seoul",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    }
+   ]
+  },
+  {
+   "naam": "View Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 59,
+     "pct_1ster": null,
+     "laatste_review": "2026-09-16",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/view-plastic-surgery-seoul-gangnam",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Lijst Facial toonde 67; praktijkpagina 59."
+    }
+   ]
+  },
+  {
+   "naam": "ID Hospital",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 48,
+     "pct_1ster": null,
+     "laatste_review": "2026-08-23",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/id-hospital-seoul-gangnam-gu",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Neemt geen consulten via RealSelf aan."
+    }
+   ]
+  },
+  {
+   "naam": "JW Plastic Surgery Center",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 48,
+     "pct_1ster": null,
+     "laatste_review": "2025-11-19",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/jw-plastic-surgery-center-seoul-gangnam-gu",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Artsen: Man Koon Suh 24, Chul Hwan Seul 12, Hong Lim Choi 3."
+    }
+   ]
+  },
+  {
+   "naam": "Banobagi Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 29,
+     "pct_1ster": null,
+     "laatste_review": "2026-09-16",
+     "waarschuwing": "Account suspended bij drie artsen op de praktijkpagina: Jaesang Barn, Shin Ki Park, Yong Joon Noh",
+     "bron": "https://www.realself.com/practices/banobagi-plastic-surgery-seoul",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Artsen o.a. Chang-Hyun Oh 35, Hyun-Taek Lee 34, Jong-Lim Park 23."
+    }
+   ]
+  },
+  {
+   "naam": "Banobagi Plastic Surgery",
+   "stad": "Seoul",
+   "arts": "Chang-Hyun Oh, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 35,
+     "pct_1ster": null,
+     "laatste_review": "2019-11-17",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/chang-hyun-oh-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "AI-samenvatting op de pagina noemt 59 reviews; kop 35."
+    }
+   ]
+  },
+  {
+   "naam": "Banobagi Plastic Surgery",
+   "stad": "Seoul",
+   "arts": "Hyun-Taek Lee, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 34,
+     "pct_1ster": null,
+     "laatste_review": "2020-02-06",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/find/South-Korea/Plastic-Surgeon/Hyun-Taek-Lee",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Profiel noemt geen kliniek; Banobagi-pagina noemt hem. AI-samenvatting noemt 41."
+    }
+   ]
+  },
+  {
+   "naam": "RNWOOD Plastic Surgery Clinic",
+   "stad": "Seoul",
+   "arts": "Min-Hee Ryu, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 37,
+     "pct_1ster": null,
+     "laatste_review": "2026-08-28",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/min-hee-ryu-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "doctor"
+    }
+   ]
+  },
+  {
+   "naam": "WOOA Plastic Surgery Clinic",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 35,
+     "pct_1ster": null,
+     "laatste_review": "2026-05-24",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/wooa-plastic-surgery-clinic-gangnam-gu-seoul",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Woo Jung Kim 31 reviews."
+    }
+   ]
+  },
+  {
+   "naam": "Eight Plastic Surgery & Dermatology",
+   "stad": "Seoul",
+   "arts": "Hanjo Kim, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 28,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/hanjo-kim-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Geen reviewdatum getoond. Lijst toonde 4.7 en 30, gesponsord."
+    }
+   ]
+  },
+  {
+   "naam": "Eight Plastic Surgery & Dermatology",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 16,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/eight-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geen reviewdatum getoond."
+    }
+   ]
+  },
+  {
+   "naam": "Braun Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.5,
+     "schaal": "5 sterren",
+     "aantal": 10,
+     "pct_1ster": null,
+     "laatste_review": "2025-07-04",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/braun-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    }
+   ]
+  },
+  {
+   "naam": "TS Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 10,
+     "pct_1ster": null,
+     "laatste_review": "2024-09-04",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/ts-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    }
+   ]
+  },
+  {
+   "naam": "Thank You Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 19,
+     "pct_1ster": null,
+     "laatste_review": "2024-08-29",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/thank-you-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    }
+   ]
+  },
+  {
+   "naam": "VG Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 8,
+     "pct_1ster": null,
+     "laatste_review": "2026-09-02",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/vg-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    }
+   ]
+  },
+  {
+   "naam": "Note Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 6,
+     "pct_1ster": null,
+     "laatste_review": "2026-11-03",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/note-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    }
+   ]
+  },
+  {
+   "naam": "Dream Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 2,
+     "pct_1ster": null,
+     "laatste_review": "2023-08-09",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/dream-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    }
+   ]
+  },
+  {
+   "naam": "Topface Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 1,
+     "pct_1ster": null,
+     "laatste_review": "2018-10-28",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/topface-plastic-surgery-seoul",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    }
+   ]
+  },
+  {
+   "naam": "Grand Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 0.0,
+     "schaal": "5 sterren",
+     "aantal": 0,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "Account Suspended (in de praktijknaam op RealSelf); pagina noindex",
+     "bron": "https://www.realself.com/practices/grand-plastic-surgery-korea-seoul",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    },
+    {
+     "platform": "Trustpilot",
+     "score": 3.2,
+     "schaal": "5 sterren (TrustScore)",
+     "aantal": 1,
+     "pct_1ster": 100,
+     "laatste_review": "2026-06-15",
+     "waarschuwing": "Onbeclaimd profiel; geen geschiedenis van reviews vragen",
+     "bron": "https://ca.trustpilot.com/review/eng.grandsurgery.com",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    }
+   ]
+  },
+  {
+   "naam": "Grand Plastic Surgery",
+   "stad": "Seoul",
+   "arts": "Rhee Se Whan, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 4,
+     "pct_1ster": null,
+     "laatste_review": "2024-12-22",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/rhee-sewhan-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Profiel noemt geen kliniek; Grand-praktijkpagina noemt hem."
+    }
+   ]
+  },
+  {
+   "naam": "Onlif Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 0.0,
+     "schaal": "5 sterren",
+     "aantal": 0,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/onlif-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    }
+   ]
+  },
+  {
+   "naam": "LUHO Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 0.0,
+     "schaal": "5 sterren",
+     "aantal": 0,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/luho-plastic-surgery-seoul",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    }
+   ]
+  },
+  {
+   "naam": "DL Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 0.0,
+     "schaal": "5 sterren",
+     "aantal": 0,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/dl-plastic-surgery-seoul",
+     "gezien": "2026-11-18",
+     "makelaar": false,
+     "scope": "organization"
+    }
+   ]
+  },
+  {
+   "naam": "Wonjin",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "BK Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "TL Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "Cinderella",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "The Line",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "JK Plastic Surgery",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "Lienjang",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "April 31",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "Item",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "Mine",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "Faceline",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "365mc",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "Glovi",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "Hyundai Aesthetics",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "Jewelry",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "Uvita",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "Michelangelo",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  },
+  {
+   "naam": "Teuim",
+   "stad": "Seoul",
+   "arts": null,
+   "platforms": []
+  }
+ ]
+}

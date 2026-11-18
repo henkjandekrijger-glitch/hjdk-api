@@ -5552,6 +5552,915 @@
      ]
     }
    }
+  },
+  "plastic-korea": {
+   "id": "plastic-korea",
+   "land": "KR",
+   "ingreep": "eyelid",
+   "comparison_title": {
+    "en": "Plastic surgery South Korea",
+    "nl": "Plastische chirurgie Zuid-Korea",
+    "de": "Schönheitschirurgie Südkorea"
+   },
+   "naar": "south-korea",
+   "methode": "plastisch",
+   "registers": {
+    "board": "KSPRS",
+    "vereniging": "",
+    "regionaal": "",
+    "acc": "KAHF (Ministry of Health designation for foreign patients)",
+    "boardTekst": {
+     "en": "a member of KSPRS, the Korean Society of Plastic and Reconstructive Surgeons, which admits only board-certified plastic surgeons (we could not read its member search, so no surgeon has these points yet)",
+     "nl": "lid van KSPRS, de Koreaanse vereniging voor plastische en reconstructieve chirurgie, die alleen erkende plastisch chirurgen toelaat (de ledenzoeker was niet te lezen, dus nog geen chirurg heeft deze punten)",
+     "de": "Mitglied der KSPRS, der koreanischen Gesellschaft für plastische und rekonstruktive Chirurgie, die nur anerkannte plastische Chirurgen aufnimmt (die Mitgliedersuche war nicht lesbar, daher hat noch kein Chirurg diese Punkte)"
+    },
+    "boardKort": {
+     "en": "verified KSPRS membership",
+     "nl": "bewezen lidmaatschap van KSPRS",
+     "de": "belegter KSPRS-Mitgliedschaft"
+    }
+   },
+   "gecontroleerd": "2026-11-18",
+   "gepubliceerd": "2026-11-18",
+   "slugs": {
+    "en": "best-plastic-surgeons-south-korea",
+    "nl": "nl/beste-plastisch-chirurgen-zuid-korea",
+    "de": "de/beste-schoenheitschirurgen-suedkorea"
+   },
+   "klinieken": [
+    {
+     "id": "ab",
+     "naam": "AB Plastic Surgery",
+     "stad": "Seoul",
+     "site": "https://abplasticsurgerykorea.com/",
+     "artsen": [
+      {
+       "naam": "Bae In Ho",
+       "titel": "MD",
+       "bron": "https://www.realself.com/practices/ab-plastic-surgery-seoul-south-korea"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Jinho Lee, Jaeik Choi",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/city/seoul"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 118,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/ab-plastic-surgery-seoul-south-korea",
+       "datum": "2026-11-18",
+       "laatste": "2026-11-13"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [
+      {
+       "wat": "The Korea Fair Trade Commission found that AB Plastic Surgery, together with two other Seoul clinics, gave promotional models undisclosed surgery discounts in exchange for positive reviews from 2018 to May 2026, and gave it a corrective order. No fine was reported.",
+       "datum": "2026-07-12",
+       "bron": "https://www.koreatimes.co.kr/southkorea/society/20260713/gangnam-plastic-surgery-clinics-penalized-over-incentivized-positive-reviews",
+       "ernst": "middel"
+      }
+     ],
+     "conclusie": {
+      "en": "118 RealSelf reviews averaging 4.9, the newest from November 2026, and two of its surgeons appear in the ASPS directory. In July 2026 the Korea Fair Trade Commission sanctioned it for giving promotional models undisclosed surgery discounts in exchange for positive reviews. It is on the 2025 Justice Ministry list of top clinics for medical tourists.",
+      "nl": "118 reviews op RealSelf met gemiddeld 4,9, de nieuwste van november 2026, en twee chirurgen staan in de ASPS-zoeker. In juli 2026 legde de Koreaanse mededingingsautoriteit (Fair Trade Commission) de kliniek een maatregel op omdat promotiemodellen zonder vermelding korting op een operatie kregen in ruil voor positieve reviews. De kliniek staat op de lijst 2025 van het ministerie van Justitie met uitmuntende klinieken voor medisch toerisme.",
+      "de": "118 Bewertungen auf RealSelf mit durchschnittlich 4,9, die neueste vom November 2026, und zwei Chirurgen stehen im ASPS-Verzeichnis. Im Juli 2026 verhängte die koreanische Wettbewerbsbehörde (Fair Trade Commission) eine Maßnahme, weil Werbemodelle ohne Hinweis Rabatt auf eine Operation für positive Bewertungen bekamen. Die Klinik steht auf der Liste 2025 des Justizministeriums mit herausragenden Kliniken für Medizintouristen."
+     }
+    },
+    {
+     "id": "girin",
+     "naam": "Girin Plastic Surgery & Dermatology",
+     "stad": "Seoul",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Seung Ryong Lee",
+       "titel": "MD",
+       "bron": "https://www.realself.com/practices/girin-plastic-surgery-seoul-seoul"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 114,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/girin-plastic-surgery-seoul-seoul",
+       "datum": "2026-11-18",
+       "laatste": "2026-09-11"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "114 RealSelf reviews averaging 4.9, the newest from September 2026. We found no register entry and no published price.",
+      "nl": "114 reviews op RealSelf met gemiddeld 4,9, de nieuwste van september 2026. We vonden geen registervermelding en geen prijs.",
+      "de": "114 Bewertungen auf RealSelf mit durchschnittlich 4,9, die neueste vom September 2026. Wir fanden keinen Registereintrag und keinen Preis."
+     }
+    },
+    {
+     "id": "vip",
+     "naam": "VIP Plastic Surgery Center Korea",
+     "stad": "Jeju",
+     "site": "http://www.vippskorea.com/",
+     "artsen": [
+      {
+       "naam": "Myung Ju Lee",
+       "titel": "MD, PhD",
+       "bron": "https://www.realself.com/dr/myung-ju-lee-seoul-south-korea"
+      },
+      {
+       "naam": "Yongwoo Lee",
+       "titel": "MD",
+       "bron": "https://www.realself.com/practices/vip-plastic-surgery-center-korea-seoul"
+      }
+     ],
+     "signalen": {
+      "chirurg": "Yongwoo Lee",
+      "asps": true,
+      "asps_bron": "https://find.plasticsurgery.org/country/south%20korea"
+     },
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 183,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/vip-plastic-surgery-center-korea-seoul",
+       "datum": "2026-11-18",
+       "laatste": "2026-09-28"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 160,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/myung-ju-lee-seoul-south-korea",
+       "datum": "2026-11-18",
+       "laatste": "2026-09-09"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "The most RealSelf reviews of any Korean practice we saw: 183, averaging 4.8, and 160 more on the profile of Dr. Myung Ju Lee. RealSelf gives an address on Jeju, not in Seoul. Dr. Yongwoo Lee is an international ASPS member.",
+      "nl": "De meeste RealSelf-reviews van alle Koreaanse praktijken die we zagen: 183, gemiddeld 4,8, en nog 160 op het profiel van Dr. Myung Ju Lee. RealSelf geeft een adres op Jeju, niet in Seoul. Dr. Yongwoo Lee is internationaal lid van ASPS.",
+      "de": "Die meisten RealSelf-Bewertungen aller koreanischen Praxen, die wir sahen: 183, im Schnitt 4,8, dazu 160 auf dem Profil von Dr. Myung Ju Lee. RealSelf nennt eine Adresse auf Jeju, nicht in Seoul. Dr. Yongwoo Lee ist internationales ASPS-Mitglied."
+     }
+    },
+    {
+     "id": "nana",
+     "naam": "Nana Plastic Surgery",
+     "stad": "Seoul",
+     "site": "http://en.nanaprs.com/",
+     "artsen": [
+      {
+       "naam": "Dong Yeon Hwang",
+       "titel": "MD",
+       "bron": "https://www.realself.com/practices/nana-plastic-surgery-hospital-seoul-seoul"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 75,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/nana-plastic-surgery-hospital-seoul-seoul",
+       "datum": "2026-11-18",
+       "laatste": "2025-05-09"
+      }
+     ],
+     "vermeld": [
+      "https://www.koreaherald.com/article/10589177"
+     ],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "75 RealSelf reviews averaging 4.8, but the newest is from May 2025. It is on the 2025 Justice Ministry list of top clinics for medical tourists.",
+      "nl": "75 reviews op RealSelf met gemiddeld 4,8, maar de nieuwste is van mei 2025. De kliniek staat op de lijst 2025 van het ministerie van Justitie met uitmuntende klinieken voor medisch toerisme.",
+      "de": "75 Bewertungen auf RealSelf mit durchschnittlich 4,8, die neueste ist aber vom Mai 2025. Die Klinik steht auf der Liste 2025 des Justizministeriums mit herausragenden Kliniken für Medizintouristen."
+     }
+    },
+    {
+     "id": "da",
+     "naam": "DA Plastic Surgery",
+     "stad": "Seoul",
+     "site": "https://daprs.com/",
+     "artsen": [
+      {
+       "naam": "Sang Woo Lee",
+       "titel": "MD",
+       "bron": "https://www.realself.com/practices/da-plastic-surgery-clinic-seoul"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.6,
+       "max": 5,
+       "aantal": 69,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/da-plastic-surgery-clinic-seoul",
+       "datum": "2026-11-18",
+       "laatste": "2026-08-23"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [
+      {
+       "wat": "The Korea Fair Trade Commission found that DA Plastic Surgery, together with two other Seoul clinics, gave promotional models undisclosed surgery discounts in exchange for positive reviews from 2018 to May 2026, and gave it an order not to repeat it. No fine was reported.",
+       "datum": "2026-07-12",
+       "bron": "https://dailypharm.com/user/news/340374",
+       "ernst": "middel"
+      }
+     ],
+     "conclusie": {
+      "en": "69 RealSelf reviews averaging 4.6. In July 2026 the Korea Fair Trade Commission sanctioned it for giving promotional models undisclosed surgery discounts in exchange for positive reviews. It is on the 2025 Justice Ministry list of top clinics for medical tourists.",
+      "nl": "69 reviews op RealSelf met gemiddeld 4,6. In juli 2026 legde de Koreaanse mededingingsautoriteit (Fair Trade Commission) de kliniek een maatregel op omdat promotiemodellen zonder vermelding korting op een operatie kregen in ruil voor positieve reviews. De kliniek staat op de lijst 2025 van het ministerie van Justitie met uitmuntende klinieken voor medisch toerisme.",
+      "de": "69 Bewertungen auf RealSelf mit durchschnittlich 4,6. Im Juli 2026 verhängte die koreanische Wettbewerbsbehörde (Fair Trade Commission) eine Maßnahme, weil Werbemodelle ohne Hinweis Rabatt auf eine Operation für positive Bewertungen bekamen. Die Klinik steht auf der Liste 2025 des Justizministeriums mit herausragenden Kliniken für Medizintouristen."
+     }
+    },
+    {
+     "id": "view",
+     "naam": "View Plastic Surgery",
+     "stad": "Seoul",
+     "site": "https://www.viewplasticsurgery.com/",
+     "artsen": [
+      {
+       "naam": "Choi Soon Woo",
+       "titel": "MD",
+       "bron": "https://www.viewplasticsurgery.com/viewis/doctors/"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 59,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/view-plastic-surgery-seoul-gangnam",
+       "datum": "2026-11-18",
+       "laatste": "2026-09-16"
+      }
+     ],
+     "vermeld": [
+      "https://www.koreatimes.co.kr/southkorea/society/20250429/from-k-pop-to-k-beauty-plastic-surgery-becomes-koreas-next-big-allure"
+     ],
+     "openheid": {
+      "prijs": "Geschatte prijsklasse per implantaat voor borstvergroting, bijvoorbeeld $10.000 tot $14.000 (Motiva Ergonomix); geen vaste prijs.",
+      "prijs_bron": "https://www.viewplasticsurgery.com/blog/breast-augmentation-cost-in-korea-2026-pricing-guide-clinical-analysis/",
+      "arts_opereert": "ja",
+      "arts_tekst": "\"Real-Name Surgery System\": de chirurg is \"fully responsible for every step\", \"no proxy surgeries occur\"; CCTV in de operatiekamers.",
+      "arts_bron": "https://www.viewplasticsurgery.com/safe-system/safety-first.html"
+     },
+     "risico": [
+      {
+       "wat": "The Korea Fair Trade Commission found that View Plastic Surgery, together with two other Seoul clinics, gave promotional models undisclosed surgery discounts in exchange for positive reviews from 2018 to May 2026, and gave it a corrective order and an order to publish a notice of it. No fine was reported.",
+       "datum": "2026-07-12",
+       "bron": "https://www.koreatimes.co.kr/southkorea/society/20260713/gangnam-plastic-surgery-clinics-penalized-over-incentivized-positive-reviews",
+       "ernst": "middel"
+      }
+     ],
+     "conclusie": {
+      "en": "59 RealSelf reviews averaging 4.8. Its site promises a real-name system without proxy surgery and CCTV in the operating rooms, and gives price ranges for breast augmentation. In July 2026 the Korea Fair Trade Commission sanctioned it for giving promotional models undisclosed surgery discounts in exchange for positive reviews.",
+      "nl": "59 reviews op RealSelf met gemiddeld 4,8. De site belooft een systeem op naam zonder vervangende chirurg en CCTV in de operatiekamers, en geeft prijsklassen voor borstvergroting. In juli 2026 legde de Koreaanse mededingingsautoriteit (Fair Trade Commission) de kliniek een maatregel op omdat promotiemodellen zonder vermelding korting op een operatie kregen in ruil voor positieve reviews.",
+      "de": "59 Bewertungen auf RealSelf mit durchschnittlich 4,8. Die Website verspricht ein Namenssystem ohne Ersatzchirurgen und Videoüberwachung im OP und nennt Preisspannen für Brustvergrößerungen. Im Juli 2026 verhängte die koreanische Wettbewerbsbehörde (Fair Trade Commission) eine Maßnahme, weil Werbemodelle ohne Hinweis Rabatt auf eine Operation für positive Bewertungen bekamen."
+     }
+    },
+    {
+     "id": "idhospital",
+     "naam": "ID Hospital",
+     "stad": "Seoul",
+     "site": "https://eng.idhospital.com/",
+     "artsen": [
+      {
+       "naam": "Sang Hoon Park",
+       "titel": "MD",
+       "bron": "https://www.realself.com/practices/id-hospital-seoul-gangnam-gu"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.3,
+       "max": 5,
+       "aantal": 48,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/id-hospital-seoul-gangnam-gu",
+       "datum": "2026-11-18",
+       "laatste": "2026-08-23"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "48 RealSelf reviews averaging 4.3, the lowest average of the large clinics we checked. Its site says every operating room has CCTV. No price published.",
+      "nl": "48 reviews op RealSelf met gemiddeld 4,3, het laagste gemiddelde van de grote klinieken die we nakeken. De site zegt dat elke operatiekamer CCTV heeft. Geen prijs.",
+      "de": "48 Bewertungen auf RealSelf mit durchschnittlich 4,3, der niedrigste Schnitt der großen Kliniken, die wir prüften. Laut Website hat jeder OP Videoüberwachung. Kein Preis."
+     }
+    },
+    {
+     "id": "jw",
+     "naam": "JW Plastic Surgery",
+     "stad": "Seoul",
+     "site": "https://jwbeauty.net/",
+     "artsen": [
+      {
+       "naam": "Man Koon Suh",
+       "titel": "MD",
+       "bron": "https://www.realself.com/practices/jw-plastic-surgery-center-seoul-gangnam-gu"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 48,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/jw-plastic-surgery-center-seoul-gangnam-gu",
+       "datum": "2026-11-18",
+       "laatste": "2025-11-19"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {
+      "arts_opereert": "deels",
+      "arts_tekst": "\"All procedures are executed by board-certified plastic surgery specialists\", zonder de opererende chirurg te noemen; camera in elke operatiekamer.",
+      "arts_bron": "https://jwbeauty.net/special-services/?noredirect=en-US"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "48 RealSelf reviews averaging 4.8, the newest from November 2025. The site says board-certified specialists do every operation and there is a camera in each operating room, but it does not name who operates.",
+      "nl": "48 reviews op RealSelf met gemiddeld 4,8, de nieuwste van november 2025. De site zegt dat erkende specialisten elke operatie doen en dat er in elke operatiekamer een camera hangt, maar noemt niet wie opereert.",
+      "de": "48 Bewertungen auf RealSelf mit durchschnittlich 4,8, die neueste vom November 2025. Laut Website operieren nur anerkannte Fachärzte und jeder OP hat eine Kamera, sie nennt aber nicht, wer operiert."
+     }
+    },
+    {
+     "id": "banobagi",
+     "naam": "Banobagi Plastic Surgery",
+     "stad": "Seoul",
+     "site": "https://eng.banobagi.com/",
+     "artsen": [
+      {
+       "naam": "Chang-Hyun Oh",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/chang-hyun-oh-seoul-south-korea"
+      },
+      {
+       "naam": "Hyun-Taek Lee",
+       "titel": "MD",
+       "bron": "https://www.realself.com/find/South-Korea/Plastic-Surgeon/Hyun-Taek-Lee"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 29,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/banobagi-plastic-surgery-seoul",
+       "datum": "2026-11-18",
+       "laatste": "2026-09-16"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 35,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/chang-hyun-oh-seoul-south-korea",
+       "datum": "2026-11-18",
+       "laatste": "2019-11-17"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 34,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/find/South-Korea/Plastic-Surgeon/Hyun-Taek-Lee",
+       "datum": "2026-11-18",
+       "laatste": "2020-02-06"
+      }
+     ],
+     "vermeld": [
+      "https://www.koreatimes.co.kr/www/nation/2020/01/113_282366.html"
+     ],
+     "openheid": {
+      "arts_opereert": "ja",
+      "arts_tekst": "\"Banobagi is against ghost surgeries\", een \"REAL-NAME SYSTEM\"; de chirurg \"performs the entire procedure from start to finish\" (neuspagina); vier anesthesiologen met naam.",
+      "arts_bron": "https://eng.banobagi.com/"
+     },
+     "risico": [],
+     "conclusie": {
+      "en": "29 reviews on the RealSelf practice profile averaging 4.8, and about 35 each for Dr. Chang-Hyun Oh and Dr. Hyun-Taek Lee. The site says it is against ghost surgery and that the surgeon does the whole operation. RealSelf shows three of its doctors with a suspended account.",
+      "nl": "29 reviews op het RealSelf-profiel van de praktijk, gemiddeld 4,8, en ongeveer 35 elk voor Dr. Chang-Hyun Oh en Dr. Hyun-Taek Lee. De site zegt tegen vervangende chirurgen te zijn en dat de chirurg de hele operatie doet. RealSelf toont drie van haar artsen met een geschorst account.",
+      "de": "29 Bewertungen auf dem RealSelf-Profil der Praxis, im Schnitt 4,8, und je rund 35 für Dr. Chang-Hyun Oh und Dr. Hyun-Taek Lee. Laut Website lehnt sie Ersatzchirurgen ab und der Chirurg macht die ganze Operation. RealSelf zeigt drei ihrer Ärzte mit gesperrtem Konto."
+     }
+    },
+    {
+     "id": "regen",
+     "naam": "Regen Plastic Surgery",
+     "stad": "Seoul",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Myung June Oh",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/myung-june-oh-seoul-south-korea"
+      },
+      {
+       "naam": "Seok Jun Lee",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/seok-jun-lee-seoul-south-korea"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.5,
+       "max": 5,
+       "aantal": 68,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/myung-june-oh-seoul-south-korea",
+       "datum": "2026-11-18",
+       "laatste": "2020-08-04"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 38,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/seok-jun-lee-seoul-south-korea",
+       "datum": "2026-11-18",
+       "laatste": "2024-04-25"
+      },
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 1,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/regen-plastic-surgery-seoul-seoul",
+       "datum": "2026-11-18",
+       "laatste": "2019-07-30"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "The practice profile has one review, so it has no rank as a clinic. Dr. Myung June Oh has 68 reviews averaging 4.5 (newest shown from 2020) and Dr. Seok Jun Lee 38 averaging 4.9.",
+      "nl": "Het praktijkprofiel heeft één review, dus geen plek als kliniek. Dr. Myung June Oh heeft 68 reviews met gemiddeld 4,5 (nieuwste getoonde uit 2020) en Dr. Seok Jun Lee 38 met gemiddeld 4,9.",
+      "de": "Das Praxisprofil hat eine Bewertung, daher kein Platz als Klinik. Dr. Myung June Oh hat 68 Bewertungen mit durchschnittlich 4,5 (neueste gezeigte von 2020), Dr. Seok Jun Lee 38 mit durchschnittlich 4,9."
+     }
+    },
+    {
+     "id": "ryu",
+     "naam": "Dr. Min-Hee Ryu (RNWOOD Plastic Surgery)",
+     "stad": "Seoul",
+     "site": "https://rnwoodseoul.com/",
+     "artsen": [
+      {
+       "naam": "Min-Hee Ryu",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/min-hee-ryu-seoul-south-korea"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 37,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/min-hee-ryu-seoul-south-korea",
+       "datum": "2026-11-18",
+       "laatste": "2026-08-28"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "37 RealSelf reviews averaging 4.9, the newest from August 2026. We found no register entry and no published price.",
+      "nl": "37 reviews op RealSelf met gemiddeld 4,9, de nieuwste van augustus 2026. We vonden geen registervermelding en geen prijs.",
+      "de": "37 Bewertungen auf RealSelf mit durchschnittlich 4,9, die neueste vom August 2026. Wir fanden keinen Registereintrag und keinen Preis."
+     }
+    },
+    {
+     "id": "wooa",
+     "naam": "WOOA Plastic Surgery",
+     "stad": "Seoul",
+     "site": "https://wooaeng.com/",
+     "artsen": [
+      {
+       "naam": "Woo Jung Kim",
+       "titel": "MD",
+       "bron": "https://www.realself.com/practices/wooa-plastic-surgery-clinic-gangnam-gu-seoul"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 35,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/wooa-plastic-surgery-clinic-gangnam-gu-seoul",
+       "datum": "2026-11-18",
+       "laatste": "2026-05-24"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "35 RealSelf reviews averaging 4.8, the newest from May 2026. No register entry or price found.",
+      "nl": "35 reviews op RealSelf met gemiddeld 4,8, de nieuwste van mei 2026. Geen registervermelding of prijs gevonden.",
+      "de": "35 Bewertungen auf RealSelf mit durchschnittlich 4,8, die neueste vom Mai 2026. Kein Registereintrag und kein Preis gefunden."
+     }
+    },
+    {
+     "id": "eight",
+     "naam": "Eight Plastic Surgery & Dermatology",
+     "stad": "Seoul",
+     "site": "",
+     "artsen": [
+      {
+       "naam": "Hanjo Kim",
+       "titel": "MD",
+       "bron": "https://www.realself.com/dr/hanjo-kim-seoul-south-korea"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 28,
+       "scope": "doctor",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/dr/hanjo-kim-seoul-south-korea",
+       "datum": "2026-11-18",
+       "laatste": ""
+      },
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 16,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/eight-plastic-surgery-seoul-south-korea",
+       "datum": "2026-11-18",
+       "laatste": ""
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "16 reviews on the practice profile and 28 for Dr. Hanjo Kim, both averaging 4.9; RealSelf shows no review dates.",
+      "nl": "16 reviews op het praktijkprofiel en 28 voor Dr. Hanjo Kim, beide gemiddeld 4,9; RealSelf toont geen datums.",
+      "de": "16 Bewertungen auf dem Praxisprofil und 28 für Dr. Hanjo Kim, beide im Schnitt 4,9; RealSelf zeigt keine Daten."
+     }
+    },
+    {
+     "id": "thankyou",
+     "naam": "Thank You Plastic Surgery",
+     "stad": "Seoul",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.9,
+       "max": 5,
+       "aantal": 19,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/thank-you-plastic-surgery-seoul-south-korea",
+       "datum": "2026-11-18",
+       "laatste": "2024-08-29"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "19 RealSelf reviews averaging 4.9, the newest from August 2024. Few reviews, so the score says little.",
+      "nl": "19 reviews op RealSelf met gemiddeld 4,9, de nieuwste van augustus 2024. Weinig reviews, dus de score zegt weinig.",
+      "de": "19 Bewertungen auf RealSelf mit durchschnittlich 4,9, die neueste vom August 2024. Wenige Bewertungen, daher sagt der Wert wenig."
+     }
+    },
+    {
+     "id": "braun",
+     "naam": "Braun Plastic Surgery",
+     "stad": "Seoul",
+     "site": "https://www.braunps.com/",
+     "artsen": [
+      {
+       "naam": "Tae-Gyu Kim",
+       "titel": "MD",
+       "bron": "https://www.realself.com/practices/braun-plastic-surgery-seoul-south-korea"
+      }
+     ],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.5,
+       "max": 5,
+       "aantal": 10,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/braun-plastic-surgery-seoul-south-korea",
+       "datum": "2026-11-18",
+       "laatste": "2025-07-04"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "10 RealSelf reviews averaging 4.5. Few reviews, so the score says little.",
+      "nl": "10 reviews op RealSelf met gemiddeld 4,5. Weinig reviews, dus de score zegt weinig.",
+      "de": "10 Bewertungen auf RealSelf mit durchschnittlich 4,5. Wenige Bewertungen, daher sagt der Wert wenig."
+     }
+    },
+    {
+     "id": "ts",
+     "naam": "TS Plastic Surgery",
+     "stad": "Seoul",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 10,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/ts-plastic-surgery-seoul-south-korea",
+       "datum": "2026-11-18",
+       "laatste": "2024-09-04"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "10 RealSelf reviews averaging 4.8, the newest from September 2024. Few reviews, so the score says little.",
+      "nl": "10 reviews op RealSelf met gemiddeld 4,8, de nieuwste van september 2024. Weinig reviews, dus de score zegt weinig.",
+      "de": "10 Bewertungen auf RealSelf mit durchschnittlich 4,8, die neueste vom September 2024. Wenige Bewertungen, daher sagt der Wert wenig."
+     }
+    },
+    {
+     "id": "vg",
+     "naam": "VG Plastic Surgery",
+     "stad": "Seoul",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 4.8,
+       "max": 5,
+       "aantal": 8,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/vg-plastic-surgery-seoul-south-korea",
+       "datum": "2026-11-18",
+       "laatste": "2026-09-02"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "8 RealSelf reviews averaging 4.8. Few reviews, so the score says little.",
+      "nl": "8 reviews op RealSelf met gemiddeld 4,8. Weinig reviews, dus de score zegt weinig.",
+      "de": "8 Bewertungen auf RealSelf mit durchschnittlich 4,8. Wenige Bewertungen, daher sagt der Wert wenig."
+     }
+    },
+    {
+     "id": "note",
+     "naam": "Note Plastic Surgery",
+     "stad": "Seoul",
+     "site": "",
+     "artsen": [],
+     "signalen": {},
+     "reviews": [
+      {
+       "platform": "RealSelf",
+       "score": 5.0,
+       "max": 5,
+       "aantal": 6,
+       "scope": "organization",
+       "pct_1ster": null,
+       "waarschuwing": "",
+       "bron": "https://www.realself.com/practices/note-plastic-surgery-seoul-south-korea",
+       "datum": "2026-11-18",
+       "laatste": "2026-11-03"
+      }
+     ],
+     "vermeld": [],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "6 RealSelf reviews, all recent, averaging 5.0. Very few reviews, so the score says little.",
+      "nl": "6 reviews op RealSelf, allemaal recent, gemiddeld 5,0. Heel weinig reviews, dus de score zegt weinig.",
+      "de": "6 Bewertungen auf RealSelf, alle neu, im Schnitt 5,0. Sehr wenige Bewertungen, daher sagt der Wert wenig."
+     }
+    },
+    {
+     "id": "jk",
+     "naam": "JK Plastic Surgery Center",
+     "stad": "Seoul",
+     "site": "https://www.jkplastic.com/en/",
+     "artsen": [
+      {
+       "naam": "Joo Kwon",
+       "titel": "MD",
+       "bron": "https://lifestyle.inquirer.net/?p=43627"
+      }
+     ],
+     "signalen": {
+      "acc": "ja",
+      "acc_bron": "https://m.dailypharm.com/user/news/21219"
+     },
+     "reviews": [],
+     "vermeld": [
+      "https://www.medicaltimes.com/Main/view.html?ID=1113654",
+      "https://m.dailypharm.com/user/news/21219",
+      "https://lifestyle.inquirer.net/?p=43627",
+      "https://www.koreabiomed.com/news/articleView.html?idxno=1499"
+     ],
+     "openheid": {},
+     "risico": [],
+     "conclusie": {
+      "en": "No review profile we could read, so no rank. It is the only plastic surgery clinic we found with the Ministry of Health designation for foreign patients (KAHF), in 2017 and again in 2023, and it is on the 2025 Justice Ministry list.",
+      "nl": "Geen reviewprofiel dat we konden lezen, dus geen plek. Het is de enige kliniek voor plastische chirurgie die we vonden met de aanwijzing van het ministerie van Volksgezondheid voor buitenlandse patiënten (KAHF), in 2017 en opnieuw in 2023, en ze staat op de lijst 2025 van het ministerie van Justitie.",
+      "de": "Kein lesbares Bewertungsprofil, daher kein Platz. Es ist die einzige Klinik für plastische Chirurgie, die wir mit der Anerkennung des Gesundheitsministeriums für ausländische Patienten (KAHF) fanden, 2017 und erneut 2023; sie steht auf der Liste 2025 des Justizministeriums."
+     }
+    }
+   ],
+   "niet_gerangschikt": [
+    {
+     "naam": "Grand Plastic Surgery (Seoul)",
+     "reden": "not ranked: RealSelf shows its practice account as suspended, with no reviews",
+     "bron": "https://www.realself.com/practices/grand-plastic-surgery-korea-seoul"
+    }
+   ],
+   "tekst": {
+    "en": {
+     "title": "Best plastic surgeons in South Korea 2026, ranked on data",
+     "h1": "The best plastic surgery clinics in South Korea, ranked on public data",
+     "desc": "19 plastic surgery clinics and surgeons in Seoul and Jeju checked on RealSelf reviews, ASPS, KAHF and reported risks. Every fact has a source.",
+     "kort": "On public data checked on 18 November 2026, AB Plastic Surgery (118 RealSelf reviews, average 4.9), Girin Plastic Surgery (114, average 4.9) and Thank You Plastic Surgery (19, average 4.9) have the highest review index of 16 ranked clinics. In July 2026 the Korea Fair Trade Commission sanctioned AB, View and DA for undisclosed paid reviews. RealSelf was the only review platform we could read, and no Korean register of specialists was readable, so qualifications barely count yet. JK Plastic Surgery Center is the only plastic surgery clinic we found with the Ministry of Health designation for foreign patients (KAHF). In 2025 2.01 million foreign patients came to Korea, 11.2% of them for plastic surgery.",
+     "faq": [
+      {
+       "q": "What is the best plastic surgery clinic in South Korea?",
+       "a": "On our data from 18 November 2026, AB Plastic Surgery and Girin Plastic Surgery have the highest review index, each with more than 110 RealSelf reviews averaging 4.9. AB was sanctioned in July 2026 by the Fair Trade Commission for undisclosed paid reviews."
+      },
+      {
+       "q": "How do I check a plastic surgeon in Korea?",
+       "a": "Ask for the specialist certificate in plastic surgery and check membership of the Korean Society of Plastic and Reconstructive Surgeons (KSPRS). Only a recognised plastic surgery specialist may open a clinic with 성형외과 in its official name. Since September 2023 you can ask for CCTV recording in the operating room under general anaesthesia."
+      },
+      {
+       "q": "What is ghost surgery?",
+       "a": "Another doctor operates while you are under anaesthesia instead of the surgeon you met. In one fatal case a Korean court sentenced the clinic director to three years in prison, and since September 2023 operating rooms must have CCTV. Banobagi, View and Lienjang say on their sites that the named surgeon does the operation."
+      },
+      {
+       "q": "Do clinics pay to be listed?",
+       "a": "No. No clinic pays to be listed or ranked, and paid articles, agents and directories with paid placements do not count as a source."
+      }
+     ]
+    },
+    "nl": {
+     "title": "Beste plastisch chirurgen Zuid-Korea 2026, op data",
+     "h1": "De beste klinieken voor plastische chirurgie in Zuid-Korea, op openbare data",
+     "desc": "19 klinieken en chirurgen in Seoul en Jeju nagekeken op RealSelf-reviews, ASPS, de KAHF-aanwijzing en gemelde risico's. Elk feit met bron.",
+     "kort": "Op openbare data van 18 november 2026 hebben AB Plastic Surgery (118 reviews op RealSelf, gemiddeld 4,9), Girin Plastic Surgery (114, gemiddeld 4,9) en Thank You Plastic Surgery (19, gemiddeld 4,9) de hoogste review-index van 16 gerangschikte klinieken. In juli 2026 legde de Koreaanse mededingingsautoriteit AB, View en DA een maatregel op voor verzwegen betaalde reviews. RealSelf was het enige reviewplatform dat we konden lezen en geen Koreaans specialistenregister was leesbaar, dus kwalificaties tellen nog nauwelijks mee. JK Plastic Surgery Center is de enige kliniek voor plastische chirurgie die we vonden met de aanwijzing van het ministerie van Volksgezondheid voor buitenlandse patiënten (KAHF). In 2025 kwamen 2,01 miljoen buitenlandse patiënten naar Korea, 11,2% voor plastische chirurgie.",
+     "faq": [
+      {
+       "q": "Wat is de beste kliniek voor plastische chirurgie in Zuid-Korea?",
+       "a": "Op onze data van 18 november 2026 hebben AB Plastic Surgery en Girin Plastic Surgery de hoogste review-index, elk met meer dan 110 reviews op RealSelf met gemiddeld 4,9. AB kreeg in juli 2026 een maatregel van de mededingingsautoriteit voor verzwegen betaalde reviews."
+      },
+      {
+       "q": "Hoe controleer ik een plastisch chirurg in Korea?",
+       "a": "Vraag naar het specialistendiploma plastische chirurgie en kijk na of de chirurg lid is van de Korean Society of Plastic and Reconstructive Surgeons (KSPRS). Alleen een erkend plastisch chirurg mag een kliniek openen met 성형외과 in de officiële naam. Sinds september 2023 kun je vragen om CCTV-opname in de operatiekamer onder narcose."
+      },
+      {
+       "q": "Wat is ghost surgery?",
+       "a": "Een andere arts opereert terwijl je onder narcose bent, in plaats van de chirurg die je sprak. In een zaak met een dode veroordeelde een Koreaanse rechter de kliniekhouder tot drie jaar cel, en sinds september 2023 moeten operatiekamers CCTV hebben. Banobagi, View en Lienjang zeggen op hun site dat de genoemde chirurg de operatie doet."
+      },
+      {
+       "q": "Betalen klinieken voor een plek?",
+       "a": "Nee. Geen kliniek betaalt voor een vermelding of een plek, en betaalde artikelen, bemiddelaars en gidsen met betaalde plaatsingen tellen niet als bron."
+      }
+     ]
+    },
+    "de": {
+     "title": "Beste Schönheitschirurgen Südkorea 2026, nach Daten",
+     "h1": "Die besten Kliniken für Schönheitschirurgie in Südkorea, nach öffentlichen Daten",
+     "desc": "19 Kliniken und Chirurgen in Seoul und Jeju geprüft auf RealSelf-Bewertungen, ASPS, die KAHF-Anerkennung und gemeldete Risiken. Jede Angabe mit Quelle.",
+     "kort": "Nach öffentlichen Daten vom 18. November 2026 haben AB Plastic Surgery (118 Bewertungen auf RealSelf, im Schnitt 4,9), Girin Plastic Surgery (114, im Schnitt 4,9) und Thank You Plastic Surgery (19, im Schnitt 4,9) den höchsten Bewertungsindex von 16 eingestuften Kliniken. Im Juli 2026 verhängte die koreanische Wettbewerbsbehörde gegen AB, View und DA Maßnahmen wegen verschwiegener bezahlter Bewertungen. RealSelf war die einzige lesbare Bewertungsplattform und kein koreanisches Facharztregister war lesbar, daher zählen Qualifikationen noch kaum. JK Plastic Surgery Center ist die einzige Klinik für plastische Chirurgie, die wir mit der Anerkennung des Gesundheitsministeriums für ausländische Patienten (KAHF) fanden. 2025 kamen 2,01 Millionen ausländische Patienten nach Korea, 11,2 % davon für plastische Chirurgie.",
+     "faq": [
+      {
+       "q": "Welche ist die beste Klinik für Schönheitschirurgie in Südkorea?",
+       "a": "Nach unseren Daten vom 18. November 2026 haben AB Plastic Surgery und Girin Plastic Surgery den höchsten Bewertungsindex, beide mit mehr als 110 RealSelf-Bewertungen im Schnitt 4,9. Gegen AB verhängte die Wettbewerbsbehörde im Juli 2026 eine Maßnahme wegen verschwiegener bezahlter Bewertungen."
+      },
+      {
+       "q": "Wie prüfe ich einen plastischen Chirurgen in Korea?",
+       "a": "Fragen Sie nach der Facharzturkunde für plastische Chirurgie und prüfen Sie die Mitgliedschaft in der Korean Society of Plastic and Reconstructive Surgeons (KSPRS). Nur ein anerkannter Facharzt für plastische Chirurgie darf eine Klinik mit 성형외과 im offiziellen Namen eröffnen. Seit September 2023 können Sie eine Videoaufzeichnung im OP unter Vollnarkose verlangen."
+      },
+      {
+       "q": "Was ist Ghost Surgery?",
+       "a": "Ein anderer Arzt operiert unter Narkose statt des Chirurgen, mit dem Sie gesprochen haben. In einem Todesfall verurteilte ein koreanisches Gericht den Klinikleiter zu drei Jahren Haft, und seit September 2023 müssen OPs Videoüberwachung haben. Banobagi, View und Lienjang sagen auf ihrer Website, dass der genannte Chirurg operiert."
+      },
+      {
+       "q": "Zahlen Kliniken für einen Platz?",
+       "a": "Nein. Keine Klinik zahlt für einen Eintrag oder Platz, und bezahlte Artikel, Vermittler und Verzeichnisse mit bezahlten Platzierungen zählen nicht als Quelle."
+      }
+     ]
+    }
+   }
   }
  }
 }

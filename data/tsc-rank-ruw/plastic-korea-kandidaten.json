@@ -1,0 +1,1459 @@
+{
+ "gecontroleerd": "2026-11-18",
+ "toelichting": "Gevonden via de RealSelf-lijsten voor Zuid-Korea en Seoul (plastisch chirurg, borstvergroting, V-line, ooglid, facelift, revisie-neuscorrectie, facial feminization) en de RealSelf-praktijk- en artsenpagina's, de ASPS-zoeker (find.plasticsurgery.org, land South Korea), de partnerlijst van het Gangnam Medical Tour Center (stadsdeelkantoor Gangnam-gu), Koreaanse vakpers over de certificering door het ministerie (Medical Times, Dailypharm), Korea Times, Korea Herald, Korea JoongAng Daily, AFP (via Inquirer en AFPBB), The World (PRX) en PurseForum-draden. Opvallend: JK Plastic Surgery Center is de enige plastische kliniek die in onafhankelijke bronnen als door het ministerie gecertificeerd voor buitenlandse patienten wordt genoemd (2017 en 2023). Op RealSelf hebben VIP (183 reviews, maar adres Jeju), AB (118), Girin (114 tot 122), Nana (75 tot 112), DA (69) en Myung June Oh van Regen (68) de meeste reviews; ID Hospital heeft het laagste gemiddelde van de grote praktijken (4,3 uit 48). Aantallen reviews verschillen tussen de praktijkpagina en de lijsten op RealSelf (bijvoorbeeld Nana 75 tegen 112); beide staan erbij. In de ASPS-zoeker staat geen van de grote Gangnam-klinieken met naam, alleen kleinere praktijken en universitaire ziekenhuizen (Honesty, Lollipop, Soonchunhyang). Een officiele lijst van KHIDI of Medical Korea met aangewezen plastische klinieken hebben we niet gevonden; koreahealthtour.co.kr is van KIMA, een vereniging, en geen overheid. Reddit leverde via de zoekmachine geen resultaten op; PurseForum is als forumbron gebruikt. Officiele sites zijn vaak niet geopend omdat de toestemming uitbleef; dan staat de bron van de link bij site_bron. Chirurgen staan er alleen met naam, titel en specialisme zoals de bron die gaf. 10 Mag-lijstjes, persberichten en KIMA-ledenprofielen zijn als niet onafhankelijk gemarkeerd.",
+ "niet_bereikbaar": [
+  {
+   "url": "https://abplasticsurgerykorea.com/",
+   "waarom": "toestemmingsvraag niet op tijd beantwoord"
+  },
+  {
+   "url": "http://www.vippskorea.com/",
+   "waarom": "toestemmingsvraag niet op tijd beantwoord"
+  },
+  {
+   "url": "https://www.idhospital.com/en/about-id/doctors-greeting/core-competencies",
+   "waarom": "doorverwijzing van en.idhospital.com; toestemming niet op tijd beantwoord"
+  },
+  {
+   "url": "https://www.wonjinbeauty.com/en/",
+   "waarom": "toestemmingsvraag niet op tijd beantwoord"
+  },
+  {
+   "url": "https://thelineclinic.com",
+   "waarom": "toestemmingsvraag niet op tijd beantwoord"
+  },
+  {
+   "url": "https://brp-prod-bcc.bloomberg.com/news/articles/2025-01-15/plastic-surgery-boom-in-korea-aggravates-doctor-shortage",
+   "waarom": "geweigerd door de automatische toestemmingscontrole (kopie van Bloomberg)"
+  },
+  {
+   "url": "https://www.immigration.go.kr/bbs/moj/184/496943/download.do",
+   "waarom": "robots.txt verbiedt ophalen (lijst ministerie van Justitie)"
+  },
+  {
+   "url": "https://www.immigration.go.kr/bbs/moj/184/597787/artclView.do",
+   "waarom": "robots.txt verbiedt ophalen (aanwijzing medisch toerisme 2025)"
+  },
+  {
+   "url": "https://www.kukinews.com/article/view/kuk202605060108",
+   "waarom": "fout bij de site"
+  },
+  {
+   "url": "https://forum.purseblog.com/threads/view-plastic-surgery-korean-rhinoplasty.1069894",
+   "waarom": "fout bij de site"
+  },
+  {
+   "url": "https://forum.purseblog.com/threads/first-time-rhinoplasty-w-girin-plastic-surgery.1083106/",
+   "waarom": "fout bij de site"
+  },
+  {
+   "url": "https://www.reddit.com",
+   "waarom": "zoeken met alleen reddit.com werd door de proxy geweigerd en gewone zoekopdrachten gaven geen Reddit-draden; Reddit niet direct opgehaald"
+  },
+  {
+   "url": "https://www.realself.com/find/South-Korea/Seoul/Plastic-Surgeon",
+   "waarom": "eerste poging: toestemming niet op tijd; tweede poging lukte en is gebruikt"
+  }
+ ],
+ "bewust_niet_of_let_op": [
+  {
+   "naam": "Seoul Guide Medical",
+   "waarom": "bemiddelingsbureau, telt niet als onafhankelijke vermelding",
+   "bron": "https://forum.purseblog.com/threads/korean-plastic-surgery-clinics-to-avoid-w-evidence.1025176/page-32"
+  },
+  {
+   "naam": "Bookimed, WhatClinic, PlacidWay, MyMediTravel, Medigence, CureMeAbroad, Lyfboat",
+   "waarom": "brokersites; verschenen in bijna elke zoekopdracht, niet gebruikt",
+   "bron": "zoekresultaten 2026-11-18"
+  },
+  {
+   "naam": "Gangnam Unni, Sungyesa, Cashdoc",
+   "waarom": "review- en boekingsapps met advertenties; Al Jazeera (23 dec 2024) meldt dat negatieve reviews op Gangnam Unni moeilijk te vinden zijn",
+   "bron": "https://aljazeera.com/news/2024/12/23/as-south-korea-draws-visitors-chasing-beauty-dodgy-practices-pose-risks"
+  },
+  {
+   "naam": "Docfinder, SeoulTU, DocFK, Seoul Cosmetic Surgery, Young Life",
+   "waarom": "vertaal- of bemiddelingsbureaus die in forums en pers worden genoemd, geen klinieken",
+   "bron": "https://forum.purseblog.com/threads/plastic-surgery-clinics-in-korea-read-1st-post-before-posting.864175/page-174 ; https://forum.purseblog.com/threads/the-ultimate-plastic-surgery-clinic-guide-in-seoul-korea.980072/page-5"
+  },
+  {
+   "naam": "korearly.pages.dev, korea-experience.pages.dev, kclinicfinder.pages.dev, satellite-*.pages.dev, koreaclinicguide.com, daebak.co",
+   "waarom": "'review'- en gidssites zonder duidelijke uitgever, vermoedelijk affiliate; niet gebruikt",
+   "bron": "zoekresultaten 2026-11-18"
+  },
+  {
+   "naam": "10 Mag (lijstje en gids)",
+   "waarom": "lijstje met deels gesponsorde vermeldingen (AB en Mind gemarkeerd); als betaald gemarkeerd",
+   "bron": "https://10mag.com/10-english-speaking-clinics-for-plastic-surgery-in-seoul"
+  },
+  {
+   "naam": "KIMA (koreahealthtour.co.kr)",
+   "waarom": "vereniging voor internationale patienten; ledenprofielen waarschijnlijk door klinieken aangeleverd; geen overheid",
+   "bron": "https://www.koreahealthtour.co.kr/eng/document/excellence"
+  },
+  {
+   "naam": "Persberichten (BusinessWire, PR Newswire, MarketersMedia, AccessNewswire)",
+   "waarom": "betaalde PR van onder meer TL en VIP; niet als onafhankelijk gerekend",
+   "bron": "zoekresultaten 2026-11-18"
+  },
+  {
+   "naam": "Mina Plastic Surgery",
+   "waarom": "twee berichten in de PurseForum-draad 'clinics to avoid' over communicatie en betaling na een operatie; ook in het 10 Mag-lijstje; niet als kandidaat opgenomen",
+   "bron": "https://forum.purseblog.com/threads/korean-plastic-surgery-clinics-to-avoid-w-evidence.1025176/page-32"
+  },
+  {
+   "naam": "Ppeum Clinic",
+   "waarom": "klacht over verkoopdruk in de PurseForum-draad 'clinics to avoid'; vooral een huidkliniek",
+   "bron": "https://forum.purseblog.com/threads/korean-plastic-surgery-clinics-to-avoid-w-evidence.1025176/page-32"
+  },
+  {
+   "naam": "Cinderella (Seoul Cinderella / Cindy Clinic)",
+   "waarom": "alleen een RealSelf-review (titel) gevonden, geen praktijkpagina of andere onafhankelijke bron",
+   "bron": "https://www.realself.com/review/seoul-kr-chin-surgery-sliding-genioplasy-facial-contouring-seoul-cinderella"
+  },
+  {
+   "naam": "Lienjang",
+   "waarom": "alleen op Bookimed gevonden",
+   "bron": "https://us-uk.bookimed.com/clinic/lienjang-plastic-surgery-aesthetic-clinic-ai/"
+  },
+  {
+   "naam": "Hyundai Aesthetics, Jewelry",
+   "waarom": "alleen op WhatClinic, Bookimed, Gangnam Unni en Korea Clinic Guide gevonden",
+   "bron": "zoekresultaten 2026-11-18"
+  },
+  {
+   "naam": "Item, Mine, Uvita, Michelangelo",
+   "waarom": "geen enkele vermelding gevonden in RealSelf, ASPS, pers of overheid",
+   "bron": "zoekresultaten 2026-11-18"
+  },
+  {
+   "naam": "Dr. Song",
+   "waarom": "niet eenduidig; mogelijk Dr. Song Sin-young van Allheart (opgenomen), niet bevestigd",
+   "bron": "https://medicaltour.gangnam.go.kr/2021/content/columnDetail.do?msg_seq=95"
+  },
+  {
+   "naam": "Kandidaten voor later",
+   "waarom": "op RealSelf of de Gangnam-lijst gezien maar niet uitgezocht: VG Plastic Surgery (4,8 uit 8), V.LIF (4,4 uit 6), ARC (5,0 uit 5), TS (4,8 uit 10), Woori, Ruby, Tailor, OLO, CBK, INIQUE, HERSHE, iWell, LaPrin, Honesty (ASPS), Lollipop (ASPS)",
+   "bron": "https://www.realself.com/find/South-Korea/Seoul/Breast-Augmentation ; https://medicaltour.gangnam.go.kr/2021/content/medicalSearchList.do ; https://find.plasticsurgery.org/country/south%20korea"
+  }
+ ],
+ "klinieken": [
+  {
+   "naam": "JK Plastic Surgery Center (제이케이성형외과의원)",
+   "stad_wijk": "Seoul, Gangnam-gu (Sinsa-dong / Apgujeong, Nonhyeon-ro 835)",
+   "site": "http://www.jkplastic.com/en/",
+   "site_bron": "https://10mag.com/directory/?p=6655 (link), zelf geopend op 2026-11-18",
+   "chirurgen": [
+    {
+     "naam": "Joo Kwon (권주)",
+     "titel": "Representative / CEO",
+     "specialisme": "plastisch chirurg (zo genoemd door AFP)",
+     "bron": "http://www.jkplastic.com/en/ en https://lifestyle.inquirer.net/?p=43627",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.medicaltimes.com/Main/view.html?ID=1113654",
+     "soort": "news",
+     "wat": "Medical Times (5 sep 2017): bij de eerste evaluatie van het ministerie van Volksgezondheid zijn vier instellingen voor buitenlandse patienten gecertificeerd, JK als enige plastische kliniek en enige instelling op kliniekniveau.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://m.dailypharm.com/user/news/21219",
+     "soort": "news",
+     "wat": "Dailypharm (27 dec 2023): van de 13 gecertificeerde instellingen voor buitenlandse patienten is 제이케이성형외과의원 de enige met 성형외과 in de naam.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://lifestyle.inquirer.net/?p=43627",
+     "soort": "news",
+     "wat": "AFP via Inquirer (27 okt 2022): een van de grootste klinieken, ongeveer de helft van de patienten niet Koreaans, 10 artsen, gemiddeld ongeveer 20 miljoen won per buitenlandse patient.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.koreahealthtour.co.kr/post/12684",
+     "soort": "other",
+     "wat": "KIMA (3 dec 2025): door Gangnam-gu gekozen als 'Outstanding Institution' (8 van 119 instellingen); vier opeenvolgende cycli certificering door het ministerie; drie jaar op rij (2023 tot 2025) aangewezen door het ministerie van Justitie. KIMA is een vereniging, geen overheid.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.koreabiomed.com/news/articleView.html?idxno=1499",
+     "soort": "news",
+     "wat": "Korea Biomedical Review (3 okt 2017): acht plastisch chirurgen, patienten uit meer dan 60 landen, buitenlandse patienten bijna 80 procent van de omzet; promotionele toon, deel van een reeks over aangewezen ziekenhuizen.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://medicaltour.gangnam.go.kr/2021/content/medicalSearchList.do",
+     "soort": "government",
+     "wat": "Staat als partnerkliniek (JK Plastic Surgery Center) in de lijst van het Gangnam Medical Tour Center van het stadsdeelkantoor Gangnam-gu; geen aparte aanduiding of beoordeling vermeld.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ],
+   "let_op": "De site zelf noemt zich de enige door KAHF geaccrediteerde plastische kliniek; KIMA zegt bij AB dat vier plastische klinieken die KAHF-accreditatie hebben. Die bewering op de eigen site is dus mogelijk verouderd."
+  },
+  {
+   "naam": "AB Plastic Surgery (에이비성형외과)",
+   "stad_wijk": "Seoul, Seocho-gu (Seocho-daero 77-gil 17, bij station Gangnam)",
+   "site": "https://abplasticsurgerykorea.com/",
+   "site_bron": "https://www.realself.com/practices/ab-plastic-surgery-seoul-south-korea (link); pagina patient-service geopend, hoofdpagina niet bereikbaar",
+   "chirurgen": [
+    {
+     "naam": "Bae In Ho",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/ab-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Ahn Seung Hyun",
+     "titel": "MD, PhD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/ab-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Kim Joo Yeon",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/ab-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/practices/ab-plastic-surgery-seoul-south-korea",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 4,9 uit 118 reviews; zegt meer dan 30 specialisten te hebben.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/find/South-Korea/Seoul/Plastic-Surgeon",
+     "soort": "realself",
+     "wat": "Nummer 2 van 15 getoonde vermeldingen op de RealSelf-lijst plastisch chirurgen Seoul (170 resultaten), 4,9 uit 118 reviews.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/find/South-Korea/Seoul/Facial-Feminization-Surgery",
+     "soort": "realself",
+     "wat": "Ook in de RealSelf-lijsten voor facial feminization, borstvergroting, V-line, ooglid, facelift en revisie-neuscorrectie, telkens 4,9 met 116 tot 118 reviews.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.koreahealthtour.co.kr/post/12594",
+     "soort": "other",
+     "wat": "KIMA-profiel (zonder datum): geaccrediteerd voor buitenlandse patienten (2021), KAHF-accreditatie (2025), Excellent Medical Tourism Institution (2025), opgericht 2020. Ledenprofiel, waarschijnlijk door de kliniek aangeleverd.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/consultation-reviews-ab-bt-braun.1073174",
+     "soort": "forum",
+     "wat": "PurseForum-draad (ca. okt 2024) vergelijkt consulten bij AB, BT en Braun.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://10mag.com/10-english-speaking-clinics-for-plastic-surgery-in-seoul",
+     "soort": "other",
+     "wat": "Staat in het lijstje '10 Best English-Speaking Plastic Surgery Clinics in Seoul' van 10 Mag (zonder datum) en is daar als gesponsord gemarkeerd. Telt niet als onafhankelijk.",
+     "betaald": true,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "VIP Plastic Surgery Center Korea",
+   "stad_wijk": "Seoul, Gangnam (zo genoemd op RealSelf); RealSelf geeft als adres Eunnam1-gil 46, Jeju",
+   "site": "http://www.vippskorea.com/",
+   "site_bron": "https://www.realself.com/practices/vip-plastic-surgery-center-korea-seoul (link); site zelf niet bereikbaar",
+   "chirurgen": [
+    {
+     "naam": "Myung Ju Lee",
+     "titel": "MD, PhD",
+     "specialisme": "Plastic Surgeon (board-certified volgens RealSelf)",
+     "bron": "https://www.realself.com/dr/myung-ju-lee-seoul-south-korea",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Yongwoo Lee",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon; ASPS International Member",
+     "bron": "https://www.realself.com/practices/vip-plastic-surgery-center-korea-seoul en https://find.plasticsurgery.org/country/south%20korea",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/practices/vip-plastic-surgery-center-korea-seoul",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 4,8 uit 183 reviews (op de artsenpagina 187), het hoogste aantal reviews van een Koreaanse praktijk dat we zagen.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/dr/myung-ju-lee-seoul-south-korea",
+     "soort": "realself",
+     "wat": "Dr. Myung Ju Lee: 4,9 uit 163 reviews, praktijk VIP Plastic Surgery Center Korea.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/find/South-Korea/Eyelid-Surgery",
+     "soort": "realself",
+     "wat": "Op de RealSelf-lijst ooglidcorrectie Zuid-Korea (120 resultaten) met 4,8 uit 183 reviews.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://find.plasticsurgery.org/country/south%20korea",
+     "soort": "asps",
+     "wat": "ASPS-zoeker: Yongwoo Lee MD als International Member, adres Eunnam-1Gil 46, Jeju-Si (hetzelfde adres als VIP op RealSelf).",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/which-are-the-best-korean-clinics-as-of-2023-and-what-is-atop-like.1060156/latest",
+     "soort": "forum",
+     "wat": "PurseForum-draad (12 mrt 2023): VIP drie keer genoemd.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/the-ultimate-plastic-surgery-clinic-guide-in-seoul-korea.980072/page-5",
+     "soort": "forum",
+     "wat": "VIP een keer genoemd in de PurseForum-gids voor Seoul.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://markets.financialcontent.com/stocks/article/marketersmedia-2024-2-2-awarded-the-best-plastic-surgeon-in-korea-dr-myung-ju-lee-is-pioneering-excellence-in-aesthetic-surgery",
+     "soort": "other",
+     "wat": "Persbericht via MarketersMedia (2 feb 2024) over Dr. Myung Ju Lee; betaalde PR, niet geopend, alleen titel in zoekresultaat.",
+     "betaald": true,
+     "gezien": "2026-11-18"
+    }
+   ],
+   "let_op": "Adres op RealSelf en ASPS is Jeju, terwijl de naam en URL Seoul noemen. Controleer of er een Seoulse vestiging is."
+  },
+  {
+   "naam": "Banobagi Plastic Surgery (바노바기성형외과의원)",
+   "stad_wijk": "Seoul, Gangnam-gu (Nonhyeon-ro 517; Korea Times noemt Cheongdam-dong)",
+   "site": "https://eng.banobagi.com/",
+   "site_bron": "https://eng.banobagi.com/medical-staff (zelf geopend)",
+   "chirurgen": [
+    {
+     "naam": "Jaesang Barn",
+     "titel": "M.D., PhD",
+     "specialisme": "Board Certified Plastic Surgeon",
+     "bron": "https://eng.banobagi.com/medical-staff",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Changhyun Oh",
+     "titel": "M.D., PhD",
+     "specialisme": "Board Certified Plastic Surgeon",
+     "bron": "https://eng.banobagi.com/medical-staff",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Sunjae Park",
+     "titel": "M.D., PhD",
+     "specialisme": "Board Certified Plastic Surgeon",
+     "bron": "https://eng.banobagi.com/medical-staff",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Minji Yun",
+     "titel": "M.D., PhD",
+     "specialisme": "Board Certified Plastic Surgeon",
+     "bron": "https://eng.banobagi.com/medical-staff",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/practices/banobagi-plastic-surgery-seoul",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 4,8 uit 29 reviews; Chang-Hyun Oh 4,9 uit 35, Hyun-Taek Lee 4,9 uit 34, Jong-Lim Park 5,0 uit 23.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/find/South-Korea/Seoul/Plastic-Surgeon",
+     "soort": "realself",
+     "wat": "Chang-Hyun Oh MD op de RealSelf-lijst plastisch chirurgen Seoul, 4,9 uit 35 reviews; ook bovenaan de lijst facial feminization Seoul.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.koreatimes.co.kr/www/nation/2020/01/113_282366.html",
+     "soort": "news",
+     "wat": "Korea Times (30 jan 2020): Banobagi beschreven als kliniek met alle specialismen; een vertegenwoordiger zegt bijna 20 jaar zonder ongelukken; samenwerking met bureau Seoul Cosmetic Surgery.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/plastic-surgery-clinics-in-korea-read-1st-post-before-posting.864175/page-174",
+     "soort": "forum",
+     "wat": "In de grote PurseForum-draad over klinieken in Korea (pagina 174) verreweg het vaakst genoemd, ruim 20 keer.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://10mag.com/10-english-speaking-clinics-for-plastic-surgery-in-seoul",
+     "soort": "other",
+     "wat": "Staat in het lijstje '10 Best English-Speaking Plastic Surgery Clinics in Seoul' van 10 Mag (zonder datum); enkele vermeldingen in dat lijstje zijn als gesponsord gemarkeerd. Telt niet als onafhankelijk.",
+     "betaald": true,
+     "gezien": "2026-11-18"
+    }
+   ],
+   "let_op": "Op RealSelf staan enkele artsenaccounts van Banobagi als 'account suspended'."
+  },
+  {
+   "naam": "Nana Plastic Surgery Hospital & Dermatology",
+   "stad_wijk": "Seoul, Gangnam-gu (HM Building, Gangnam-daero 492; Korea Herald noemt Cheongdam-dong)",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [
+    {
+     "naam": "Dong Yeon Hwang",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/nana-plastic-surgery-hospital-seoul-seoul",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Hyeong Jun Kim",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/nana-plastic-surgery-hospital-seoul-seoul",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/practices/nana-plastic-surgery-hospital-seoul-seoul",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 4,8 uit 75 reviews.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/find/South-Korea/Seoul/Breast-Augmentation",
+     "soort": "realself",
+     "wat": "Op de RealSelf-lijsten borstvergroting Seoul, V-line en facial feminization met 4,8 uit 112 reviews (wijkt af van de 75 op de praktijkpagina).",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.koreaherald.com/article/10589177",
+     "soort": "news",
+     "wat": "Korea Herald (11 okt 2025): een buitenlandse patient liet bij Nana in Cheongdam-dong een facelift en neuscorrectie doen; geen sponsorlabel.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/my-experience-w-nana-plastic-surgery-under-eye-fat-repositioning-thread-lift.1044617",
+     "soort": "forum",
+     "wat": "PurseForum-ervaringsdraad (ca. juli 2021) over Nana, met ongeveer 10 reacties.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "Girin Plastic Surgery & Dermatology",
+   "stad_wijk": "Seoul, Seocho-gu (Seocho W Tower, Seocho-daero 77-gil 54)",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [
+    {
+     "naam": "Seung Ryong Lee",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon, Medical Director",
+     "bron": "https://www.realself.com/practices/girin-plastic-surgery-seoul-seoul",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Hoon Song",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/girin-plastic-surgery-seoul-seoul",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/practices/girin-plastic-surgery-seoul-seoul",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 4,9 uit 114 reviews.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/find/South-Korea/Seoul/Breast-Augmentation",
+     "soort": "realself",
+     "wat": "Op de RealSelf-lijsten borstvergroting Seoul, V-line en facial feminization met 4,9 uit 116 tot 122 reviews.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/plastic-surgery-clinics-in-korea-read-1st-post-before-posting.864175/page-174",
+     "soort": "forum",
+     "wat": "Ongeveer drie keer genoemd in de grote PurseForum-draad over klinieken in Korea (pagina 174).",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "JW Plastic Surgery Center (JW정원성형외과의원)",
+   "stad_wijk": "Seoul, Gangnam-gu (Samseong-ro 553)",
+   "site": "http://www.jwbeauty.net/",
+   "site_bron": "https://www.realself.com/practices/jw-plastic-surgery-center-seoul-gangnam-gu (link), zelf geopend op 2026-11-18",
+   "chirurgen": [
+    {
+     "naam": "Chul Hwan Seul (설철환)",
+     "titel": "MD, PhD; representative",
+     "specialisme": "borstchirurgie (esthetisch en reconstructief)",
+     "bron": "http://www.jwbeauty.net/ en RealSelf",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Man Koon Suh (서만군)",
+     "titel": "MD; representative",
+     "specialisme": "neuscorrectie",
+     "bron": "http://www.jwbeauty.net/ en RealSelf",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Hong Lim Choi (최홍임)",
+     "titel": "MD, PhD; representative",
+     "specialisme": "ooglidchirurgie",
+     "bron": "http://www.jwbeauty.net/ en RealSelf",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/practices/jw-plastic-surgery-center-seoul-gangnam-gu",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 4,8 uit 48 reviews; Man Koon Suh 4,8 uit 24, Chul Hwan Seul 5,0 uit 12.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/find/South-Korea/Seoul/Revision-Rhinoplasty",
+     "soort": "realself",
+     "wat": "Op de RealSelf-lijsten revisie-neuscorrectie, facelift, ooglid en borstvergroting; Man Koon Suh als nummer 2 bij revisie-neuscorrectie Seoul (46 resultaten).",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://medicaltour.gangnam.go.kr/2021/content/medicalSearchList.do",
+     "soort": "government",
+     "wat": "Staat als partnerkliniek (JW Plastic Surgery) in de lijst van het Gangnam Medical Tour Center van het stadsdeelkantoor Gangnam-gu; geen aparte aanduiding of beoordeling vermeld.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/which-are-the-best-korean-clinics-as-of-2023-and-what-is-atop-like.1060156/latest",
+     "soort": "forum",
+     "wat": "PurseForum-draad (12 mrt 2023): JW twee keer genoemd.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://10mag.com/10-english-speaking-clinics-for-plastic-surgery-in-seoul",
+     "soort": "other",
+     "wat": "Staat in het lijstje '10 Best English-Speaking Plastic Surgery Clinics in Seoul' van 10 Mag (zonder datum); enkele vermeldingen in dat lijstje zijn als gesponsord gemarkeerd. Telt niet als onafhankelijk.",
+     "betaald": true,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "ID Hospital",
+   "stad_wijk": "Seoul, Gangnam-gu (Dosan-daero 142, Sinsa)",
+   "site": "http://eng.idhospital.com",
+   "site_bron": "https://10mag.com/directory/?p=6663 (link); de site stuurt door naar www.idhospital.com/en, die niet bereikbaar was",
+   "chirurgen": [
+    {
+     "naam": "Sang Hoon Park",
+     "titel": "PhD, MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/id-hospital-seoul-gangnam-gu",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Ju Yong Kwon",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/id-hospital-seoul-gangnam-gu",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/practices/id-hospital-seoul-gangnam-gu",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 4,3 uit 48 reviews, het laagste gemiddelde van de grote praktijken die we zagen; neemt geen consulten via RealSelf aan.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/find/South-Korea/V-Line-Surgery",
+     "soort": "realself",
+     "wat": "Op de RealSelf-lijsten V-line Zuid-Korea en facial feminization Seoul met 4,3 uit 48 reviews.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/korean-plastic-surgery-clinics-to-avoid-w-evidence.1025176/page-32",
+     "soort": "forum",
+     "wat": "In de PurseForum-draad 'clinics to avoid' noemt een schrijver ID en DA als klinieken die zij na negatieve reviews heroverweegt; geen bewijs gegeven.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://10mag.com/10-english-speaking-clinics-for-plastic-surgery-in-seoul",
+     "soort": "other",
+     "wat": "Staat in het lijstje '10 Best English-Speaking Plastic Surgery Clinics in Seoul' van 10 Mag (zonder datum); enkele vermeldingen in dat lijstje zijn als gesponsord gemarkeerd. Telt niet als onafhankelijk.",
+     "betaald": true,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "VIEW Plastic Surgery",
+   "stad_wijk": "Seoul, Gangnam-gu (Bongeunsa-ro 107 volgens RealSelf)",
+   "site": "https://www.viewplasticsurgery.com/",
+   "site_bron": "https://www.viewplasticsurgery.com/viewis/doctors/ (zelf geopend)",
+   "chirurgen": [
+    {
+     "naam": "Choi Soon Woo",
+     "titel": "chief surgeon (Korea Times); voormalig hoogleraar Soonchunhyang University",
+     "specialisme": "plastische en reconstructieve chirurgie (lidmaatschappen)",
+     "bron": "https://www.viewplasticsurgery.com/viewis/doctors/ en Korea Times",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Yun Chang Woon",
+     "titel": "voormalig hoogleraar Chonnam National University Hospital",
+     "specialisme": "plastische chirurgie",
+     "bron": "https://www.viewplasticsurgery.com/viewis/doctors/",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Kim Do Hyung",
+     "titel": "Professor of Plastic Surgery, Korea University Medical Center",
+     "specialisme": "board-certified plastisch chirurg",
+     "bron": "https://www.viewplasticsurgery.com/viewis/doctors/",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.koreatimes.co.kr/southkorea/society/20250429/from-k-pop-to-k-beauty-plastic-surgery-becomes-koreas-next-big-allure",
+     "soort": "news",
+     "wat": "Korea Times (29 apr 2025): buitenlandse patienten van VIEW groeien sinds 2022 met 20 tot 30 procent per jaar; ongeveer 60 coordinatoren in 10 talen; Choi Soon-woo is chief surgeon.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/practices/view-plastic-surgery-seoul-gangnam",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 4,8 uit 59 reviews.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.scmp.com/lifestyle/fashion-beauty/article/3308489/inside-south-koreas-foreign-medical-tourism-boom-and-how-k-pop-and-k-drama-act-draws",
+     "soort": "news",
+     "wat": "SCMP over medisch toerisme: alleen een foto met bronvermelding View Plastic Surgery, geen inhoudelijke vermelding.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/plastic-surgery-clinics-in-korea-read-1st-post-before-posting.864175/page-174",
+     "soort": "forum",
+     "wat": "Ongeveer drie keer genoemd in de grote PurseForum-draad (pagina 174); twee keer in de draad van 12 mrt 2023.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "DA Plastic Surgery Clinic",
+   "stad_wijk": "Seoul, Gangnam-gu (Yeoksam-dong)",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [
+    {
+     "naam": "Sang Woo Lee",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/da-plastic-surgery-clinic-seoul",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/practices/da-plastic-surgery-clinic-seoul",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 4,6 uit 69 reviews; 37 namen als medewerker, de meeste als 'Brand Representative'.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/find/South-Korea/V-Line-Surgery",
+     "soort": "realself",
+     "wat": "Op de RealSelf-lijst V-line Zuid-Korea met 4,6 uit 69 reviews.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://medicaltour.gangnam.go.kr/2021/content/medicalSearchList.do",
+     "soort": "government",
+     "wat": "Staat als partnerkliniek (DA Plastic Clinic) in de lijst van het Gangnam Medical Tour Center van het stadsdeelkantoor Gangnam-gu; geen aparte aanduiding of beoordeling vermeld.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/korean-plastic-surgery-clinics-to-avoid-w-evidence.1025176/page-32",
+     "soort": "forum",
+     "wat": "Genoemd naast ID in de PurseForum-draad 'clinics to avoid' als kliniek die een schrijver heroverweegt; geen bewijs gegeven.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "WOOA Plastic Surgery Clinic (우아성형외과의원)",
+   "stad_wijk": "Seoul, Gangnam-gu (Gangnam-daero 492)",
+   "site": "https://wooaeng.com/",
+   "site_bron": "https://www.realself.com/practices/wooa-plastic-surgery-clinic-gangnam-gu-seoul (link, niet zelf geopend)",
+   "chirurgen": [
+    {
+     "naam": "Woo Jung Kim",
+     "titel": "MD, PhD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/wooa-plastic-surgery-clinic-gangnam-gu-seoul",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Seung Hwan Lee",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon, board-certified (KSPRS)",
+     "bron": "https://www.realself.com/dr/seung-hwan-lee-seoul-south-korea",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/practices/wooa-plastic-surgery-clinic-gangnam-gu-seoul",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 4,8 uit 35 reviews; Woo Jung Kim 4,8 uit 31.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/find/South-Korea/Seoul/Plastic-Surgeon",
+     "soort": "realself",
+     "wat": "Woo Jung Kim MD PhD als nummer 3 op de RealSelf-lijst plastisch chirurgen Seoul (4,8 uit 31); WOOA ook op de lijsten borstvergroting, ooglid, facelift en revisie-neuscorrectie.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ],
+   "let_op": "Reviews bij Woo Jung Kim noemen ook Regen; controleer waar hij nu werkt."
+  },
+  {
+   "naam": "Regen Plastic Surgery (Regen Medical Group)",
+   "stad_wijk": "Seoul, Seocho-gu (Gangnam-daero 463)",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [
+    {
+     "naam": "Seok Jun Lee",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/regen-plastic-surgery-seoul-seoul",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Myung June Oh",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/regen-plastic-surgery-seoul-seoul",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/practices/regen-plastic-surgery-seoul-seoul",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 5,0 uit 1 review voor de praktijk; de artsen Myung June Oh (4,5 uit 68) en Seok Jun Lee (4,9 uit 38).",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/find/South-Korea/V-Line-Surgery",
+     "soort": "realself",
+     "wat": "Myung June Oh en Seok Jun Lee op de RealSelf-lijst V-line Zuid-Korea.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.koreatimes.co.kr/www/news/nation/2014/04/116_155302.html",
+     "soort": "news",
+     "wat": "Korea Times (13 apr 2014): managers van Regen Medical Group over Chinese patienten; geen cijfers.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://10mag.com/10-english-speaking-clinics-for-plastic-surgery-in-seoul",
+     "soort": "other",
+     "wat": "Staat in het lijstje '10 Best English-Speaking Plastic Surgery Clinics in Seoul' van 10 Mag (zonder datum); enkele vermeldingen in dat lijstje zijn als gesponsord gemarkeerd. Telt niet als onafhankelijk.",
+     "betaald": true,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "Grand Plastic Surgery (그랜드성형외과의원)",
+   "stad_wijk": "Seoul, Gangnam-gu (Nonhyeon-ro 841, JB Miso Building, Apgujeong)",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [
+    {
+     "naam": "Huh Chul",
+     "titel": "cosmetic surgeon",
+     "specialisme": "cosmetische chirurgie",
+     "bron": "https://theworld.org/stories/2016/07/31/plastic-surgery-gangnam-style",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Rhee Se Whan",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/grand-plastic-surgery-korea-seoul",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://theworld.org/stories/2016/07/31/plastic-surgery-gangnam-style",
+     "soort": "news",
+     "wat": "The World (PRX, 31 jul 2016): begon met een arts en groeide halverwege de jaren 2000 naar ongeveer 30 artsen; trekt beroemdheden.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/practices/grand-plastic-surgery-korea-seoul",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina staat als 'Account Suspended' met 0 reviews; Rhee Se Whan 5,0 uit 4.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.ktriptips.com/eng/tourspot/3366336",
+     "soort": "other",
+     "wat": "K-Trip Tips: Koreaanse naam 그랜드성형외과의원 en adres; reisgids, bron van de gegevens niet vermeld.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/the-ultimate-plastic-surgery-clinic-guide-in-seoul-korea.980072/page-5",
+     "soort": "forum",
+     "wat": "Een keer genoemd in de PurseForum-gids voor Seoul.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://10mag.com/10-english-speaking-clinics-for-plastic-surgery-in-seoul",
+     "soort": "other",
+     "wat": "Staat in het lijstje '10 Best English-Speaking Plastic Surgery Clinics in Seoul' van 10 Mag (zonder datum); enkele vermeldingen in dat lijstje zijn als gesponsord gemarkeerd. Telt niet als onafhankelijk.",
+     "betaald": true,
+     "gezien": "2026-11-18"
+    }
+   ],
+   "let_op": "RealSelf-account geschorst en op RealSelf staat een review met de titel 'Grand Plastic Surgery Unprofessional?' (alleen titel gezien)."
+  },
+  {
+   "naam": "Wonjin Plastic Surgery",
+   "stad_wijk": "Seoul, Seocho-gu (bij uitgang 10 station Gangnam)",
+   "site": "https://www.wonjinbeauty.com/en/",
+   "site_bron": "https://10mag.com/directory/?p=6661 (link); site zelf niet bereikbaar",
+   "chirurgen": [
+    {
+     "naam": "Jun Han",
+     "titel": "Dr.",
+     "specialisme": "niet vermeld (neuscorrectie volgens de draad)",
+     "bron": "https://forum.purseblog.com/threads/rhinoplasty-in-seoul-with-wonjin-plastic-surgery-cinic.1048117",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://forum.purseblog.com/threads/rhinoplasty-in-seoul-with-wonjin-plastic-surgery-cinic.1048117",
+     "soort": "forum",
+     "wat": "PurseForum-ervaringsdraad (2 dec 2021) over een neuscorrectie bij Wonjin, een reactie.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://10mag.com/directory/?p=6661",
+     "soort": "other",
+     "wat": "10 Mag-gids: meer dan 40 specialisten; gids, mogelijk betaald.",
+     "betaald": true,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://10mag.com/10-english-speaking-clinics-for-plastic-surgery-in-seoul",
+     "soort": "other",
+     "wat": "Staat in het lijstje '10 Best English-Speaking Plastic Surgery Clinics in Seoul' van 10 Mag (zonder datum); enkele vermeldingen in dat lijstje zijn als gesponsord gemarkeerd. Telt niet als onafhankelijk.",
+     "betaald": true,
+     "gezien": "2026-11-18"
+    }
+   ],
+   "let_op": "Op RealSelf staat een negatieve review over een ooglidcorrectie bij Wonjin (alleen titel gezien). Geen RealSelf-praktijkpagina gevonden."
+  },
+  {
+   "naam": "BK Plastic Surgery Hospital (BK Dongyang)",
+   "stad_wijk": "Seoul, Gangnam-gu (bij station Sinsa)",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [
+    {
+     "naam": "Kim Byung-gun",
+     "titel": "plastisch chirurg",
+     "specialisme": "plastische chirurgie",
+     "bron": "https://www.koreajoongangdaily.com/business/koreas-new-face-of-plastic-surgery/11026611 (2008)",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Shin Yong-ho",
+     "titel": "plastisch chirurg",
+     "specialisme": "plastische chirurgie",
+     "bron": "https://www.koreatimes.co.kr/lifestyle/travel-food/20110324/gangnam-where-beauty-gets-lift (2011)",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.koreatimes.co.kr/lifestyle/travel-food/20110324/gangnam-where-beauty-gets-lift",
+     "soort": "news",
+     "wat": "Korea Times (24 mrt 2011): BK Dongyang ziet 120 tot 140 buitenlandse patienten per maand.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.koreajoongangdaily.com/business/koreas-new-face-of-plastic-surgery/11026611",
+     "soort": "news",
+     "wat": "Korea JoongAng Daily (13 jul 2008): Kim Byung-gun van BK Dongyang zegt dat Koreaanse chirurgen ongeveer 10 operaties per dag doen.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ],
+   "let_op": "Alleen oude persvermeldingen (2008, 2011); geen RealSelf-praktijk gevonden."
+  },
+  {
+   "naam": "BRAUN Plastic Surgery",
+   "stad_wijk": "Seoul, Gangnam-gu (Nonhyeon-ro 857)",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [
+    {
+     "naam": "Tae-Gyu Kim",
+     "titel": "MD, PhD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/braun-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Ji-Won Lee",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/braun-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Dong-Wan Ryu",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/braun-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/practices/braun-plastic-surgery-seoul-south-korea",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 4,5 uit 10 reviews; neemt geen consulten via RealSelf aan.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/my-experience-at-braun-plastic-surgery-in-seoul-korea.1044435/page-3",
+     "soort": "forum",
+     "wat": "PurseForum-ervaringsdraad over Braun met minstens drie pagina's.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/consultation-reviews-ab-bt-braun.1073174",
+     "soort": "forum",
+     "wat": "PurseForum-draad (ca. okt 2024): consulten bij AB, BT en Braun vergeleken.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/korean-plastic-surgery-clinics-to-avoid-w-evidence.1025176/page-32",
+     "soort": "forum",
+     "wat": "In de PurseForum-draad 'clinics to avoid' een klacht over een voorhoofdscorrectie bij Braun, met een bijval; een gebruikersverhaal, niet gecontroleerd.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "April 31 Plastic Surgery Clinic",
+   "stad_wijk": "Seoul, Gangnam-gu (Nonhyeon-dong volgens RealSelf)",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://medicaltour.gangnam.go.kr/2021/content/medicalSearchList.do",
+     "soort": "government",
+     "wat": "Staat als partnerkliniek (April 31 Plastic Surgery Clinic) in de lijst van het Gangnam Medical Tour Center van het stadsdeelkantoor Gangnam-gu; geen aparte aanduiding of beoordeling vermeld.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/the-ultimate-plastic-surgery-clinic-guide-in-seoul-korea.980072/page-5",
+     "soort": "forum",
+     "wat": "Twee keer genoemd in de PurseForum-gids voor Seoul en twee keer in de grote draad (pagina 174).",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/dr/jae-hoon-kim-seoul-south-korea",
+     "soort": "realself",
+     "wat": "RealSelf-profiel Jae Hoon Kim MD (3,0 uit 4 reviews); reviews noemen April 31, het profiel bevestigt de kliniek niet.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "Dream Plastic Surgery (Dream Medical Group)",
+   "stad_wijk": "Seoul, Gangnam-gu (Nonhyeon-ro 848 volgens RealSelf; Sinsa-dong in 2008)",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [
+    {
+     "naam": "Park Yang Soo",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/dream-plastic-surgery-seoul-south-korea",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Choi Joon-yong",
+     "titel": "plastisch chirurg",
+     "specialisme": "plastische chirurgie",
+     "bron": "https://www.koreajoongangdaily.com/business/koreas-new-face-of-plastic-surgery/11026611 (2008)",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://medicaltour.gangnam.go.kr/2021/content/medicalSearchList.do",
+     "soort": "government",
+     "wat": "Staat als partnerkliniek (Dream Plastic Surgery Clinic) in de lijst van het Gangnam Medical Tour Center van het stadsdeelkantoor Gangnam-gu; geen aparte aanduiding of beoordeling vermeld.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/practices/dream-plastic-surgery-seoul-south-korea",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 5,0 uit 2 reviews.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.koreajoongangdaily.com/business/koreas-new-face-of-plastic-surgery/11026611",
+     "soort": "news",
+     "wat": "Korea JoongAng Daily (13 jul 2008): Choi Joon-yong van Dream Medical Group in Sinsa-dong aan het woord.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/the-ultimate-plastic-surgery-clinic-guide-in-seoul-korea.980072/page-5",
+     "soort": "forum",
+     "wat": "Ongeveer drie keer genoemd in de PurseForum-gids voor Seoul, met Dr. Kim Young Joon.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "TheLINE Plastic Surgery Clinic (The Line Clinic)",
+   "stad_wijk": "Seoul, Gangnam-gu (Apgujeong-ro 12-gil 24, Sinsa-dong)",
+   "site": "https://thelineclinic.com",
+   "site_bron": "https://10mag.com/directory/?p=6659 (link); site zelf niet bereikbaar",
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://medicaltour.gangnam.go.kr/2021/content/medicalSearchList.do",
+     "soort": "government",
+     "wat": "Staat als partnerkliniek (TheLINE Plastic Surgery Clinic) in de lijst van het Gangnam Medical Tour Center van het stadsdeelkantoor Gangnam-gu; geen aparte aanduiding of beoordeling vermeld.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://10mag.com/10-english-speaking-clinics-for-plastic-surgery-in-seoul",
+     "soort": "other",
+     "wat": "Staat in het lijstje '10 Best English-Speaking Plastic Surgery Clinics in Seoul' van 10 Mag (zonder datum); enkele vermeldingen in dat lijstje zijn als gesponsord gemarkeerd. Telt niet als onafhankelijk.",
+     "betaald": true,
+     "gezien": "2026-11-18"
+    }
+   ],
+   "let_op": "Weinig onafhankelijke vermeldingen gevonden; vooral op brokersites."
+  },
+  {
+   "naam": "Eight Plastic Surgery & Dermatology",
+   "stad_wijk": "Seoul, Gangnam-gu (Nonhyeon-ro 28, Kukje Bldg.)",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [
+    {
+     "naam": "Hanjo Kim",
+     "titel": "MD, Director",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/dr/hanjo-kim-seoul-south-korea",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/hanjo-kim-seoul-south-korea",
+     "soort": "realself",
+     "wat": "Hanjo Kim MD, directeur van Eight: 4,9 uit 28 reviews op zijn profiel; op de lijst plastisch chirurgen Seoul nummer 1 met 4,7 uit 30.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/practices/eight-plastic-surgery-seoul-south-korea",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 4,9 uit 16 reviews.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/consultation-reviews-ab-bt-braun.1073174",
+     "soort": "forum",
+     "wat": "In de PurseForum-draad over AB, BT en Braun raadt een reageerder Eight aan.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "RNWOOD Plastic Surgery",
+   "stad_wijk": "Seoul, Gangnam-gu (Apgujeong-ro 28-gil 17)",
+   "site": "https://rnwoodseoul.com/",
+   "site_bron": "https://www.realself.com/dr/min-hee-ryu-seoul-south-korea (link, niet zelf geopend)",
+   "chirurgen": [
+    {
+     "naam": "Min-Hee Ryu",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon (Korean Board-Certified)",
+     "bron": "https://www.realself.com/dr/min-hee-ryu-seoul-south-korea",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/dr/min-hee-ryu-seoul-south-korea",
+     "soort": "realself",
+     "wat": "Min-Hee Ryu MD: 4,9 uit 37 reviews, praktijk RNWOOD; op de RealSelf-lijsten plastisch chirurgen Seoul, ooglid en facelift.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://medicaltour.gangnam.go.kr/2021/content/medicalSearchList.do",
+     "soort": "government",
+     "wat": "Staat als partnerkliniek (RNWOOD Plastic Surgery) in de lijst van het Gangnam Medical Tour Center van het stadsdeelkantoor Gangnam-gu; geen aparte aanduiding of beoordeling vermeld.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "HUGO Plastic Surgery",
+   "stad_wijk": "Seoul, Gangnam-gu (Hakdong-ro 4-gil 7)",
+   "site": "https://www.hugo-ps-global.com/",
+   "site_bron": "https://www.realself.com/practices/hugo-plastic-surgery-gangnam-gu-seoul (link, niet zelf geopend)",
+   "chirurgen": [
+    {
+     "naam": "Seong-hyeok Yang",
+     "titel": "MD",
+     "specialisme": "Plastic Surgeon",
+     "bron": "https://www.realself.com/practices/hugo-plastic-surgery-gangnam-gu-seoul",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.realself.com/practices/hugo-plastic-surgery-gangnam-gu-seoul",
+     "soort": "realself",
+     "wat": "RealSelf-praktijkpagina: 5,0 uit 1 review; Seong-hyeok Yang 5,0 uit 4.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://medicaltour.gangnam.go.kr/2021/content/medicalSearchList.do",
+     "soort": "government",
+     "wat": "Staat als partnerkliniek (HUGO Plastic Surgery) in de lijst van het Gangnam Medical Tour Center van het stadsdeelkantoor Gangnam-gu; geen aparte aanduiding of beoordeling vermeld.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "Glovi Plastic Surgery",
+   "stad_wijk": "Seoul, Gangnam-gu",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://medicaltour.gangnam.go.kr/2021/content/medicalSearchList.do",
+     "soort": "government",
+     "wat": "Staat als partnerkliniek (Glovi Plastic Surgery) in de lijst van het Gangnam Medical Tour Center van het stadsdeelkantoor Gangnam-gu; geen aparte aanduiding of beoordeling vermeld.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.koreatimes.co.kr/amp/lifestyle/trends/20200211/plastic-surgery-hospitals-to-refuse-chinese-customers",
+     "soort": "news",
+     "wat": "Korea Times (11 feb 2020): de derde coronapatient van Korea bezocht Glovi op 22 en 24 januari 2020; geen oordeel over de kliniek.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "BT Plastic Surgery",
+   "stad_wijk": "Seoul (wijk niet vastgesteld)",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [
+    {
+     "naam": "Lee Seung Ho",
+     "titel": "Dr.",
+     "specialisme": "neuscorrectie (zo genoemd in de draad)",
+     "bron": "https://forum.purseblog.com/threads/consultation-reviews-ab-bt-braun.1073174",
+     "gezien": "2026-11-18"
+    },
+    {
+     "naam": "Lee Hobin",
+     "titel": "Dr.",
+     "specialisme": "gezichtscontouren (zo genoemd in de draad)",
+     "bron": "https://forum.purseblog.com/threads/consultation-reviews-ab-bt-braun.1073174",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://forum.purseblog.com/threads/consultation-reviews-ab-bt-braun.1073174",
+     "soort": "forum",
+     "wat": "PurseForum-draad (ca. okt 2024): schrijver koos BT na consulten bij AB, BT en Braun; een reageerder meldt een slechte ervaring bij BT.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/facial-contouring-revision-at-bt-plastic-surgery.1066286/",
+     "soort": "forum",
+     "wat": "Aparte PurseForum-draad over een revisie van gezichtscontouren bij BT (alleen titel gezien).",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "Teuim Plastic Surgery (Teium)",
+   "stad_wijk": "Seoul (wijk niet vastgesteld)",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://forum.purseblog.com/threads/plastic-surgery-clinics-in-korea-read-1st-post-before-posting.864175/page-174",
+     "soort": "forum",
+     "wat": "Drie tot vier keer genoemd in de grote PurseForum-draad (pagina 174), met een Dr. Kwon.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ],
+   "let_op": "Alleen forumvermeldingen gevonden; volledige naam van de chirurg niet in een onafhankelijke bron gezien."
+  },
+  {
+   "naam": "ATOP Plastic Surgery",
+   "stad_wijk": "Seoul, Gangnam-gu",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://medicaltour.gangnam.go.kr/2021/content/medicalSearchList.do",
+     "soort": "government",
+     "wat": "Staat als partnerkliniek (ATOP Plastic Surgery, met eigen profiel) in de lijst van het Gangnam Medical Tour Center van het stadsdeelkantoor Gangnam-gu; geen aparte aanduiding of beoordeling vermeld.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://forum.purseblog.com/threads/which-are-the-best-korean-clinics-as-of-2023-and-what-is-atop-like.1060156/latest",
+     "soort": "forum",
+     "wat": "PurseForum-draad (12 mrt 2023) 'what is ATOP like?': ATOP vier keer genoemd.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "365mc (liposuctie)",
+   "stad_wijk": "Seoul",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://www.afpbb.com/articles/-/3638567",
+     "soort": "news",
+     "wat": "AFPBB via news1 (7 jun 2026): bezoeken van buitenlanders van 6.683 (2024) naar 11.388 (2025), omzet uit buitenlanders van 6,2 naar 12,5 miljard won; cijfers van de kliniek zelf.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ],
+   "let_op": "Gespecialiseerd in liposuctie, geen algemene plastische kliniek; cijfers komen van de kliniek."
+  },
+  {
+   "naam": "Allheart Plastic Surgery",
+   "stad_wijk": "Seoul, Gangnam-gu",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [
+    {
+     "naam": "Song Sin-young",
+     "titel": "Medical Director",
+     "specialisme": "niet vermeld (column over gezichtscontouren en facelift)",
+     "bron": "https://medicaltour.gangnam.go.kr/2021/content/columnDetail.do?msg_seq=95",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://medicaltour.gangnam.go.kr/2021/content/medicalSearchList.do",
+     "soort": "government",
+     "wat": "Staat als partnerkliniek (Allheart Plastic Surgery, met eigen profiel) in de lijst van het Gangnam Medical Tour Center van het stadsdeelkantoor Gangnam-gu; geen aparte aanduiding of beoordeling vermeld.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://medicaltour.gangnam.go.kr/2021/content/columnDetail.do?msg_seq=95",
+     "soort": "government",
+     "wat": "Column op de site van het Gangnam Medical Tour Center door Dr. Song Sin-young van Allheart; geschreven door de kliniek zelf.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    },
+    {
+     "url": "https://www.realself.com/find/South-Korea/Seoul/Plastic-Surgeon",
+     "soort": "realself",
+     "wat": "Een Sinyoung Song MD staat op de RealSelf-lijst plastisch chirurgen Seoul zonder reviews; niet vastgesteld of dit dezelfde arts is.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ],
+   "let_op": "Mogelijk de 'Dr. Song' uit de zaadlijst, niet bevestigd."
+  },
+  {
+   "naam": "AgingL Plastic Surgery",
+   "stad_wijk": "Seoul, Gangnam-gu",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [
+    {
+     "naam": "Kim Soo-chul",
+     "titel": "head surgeon",
+     "specialisme": "niet vermeld; meer dan 20 jaar ervaring volgens het artikel",
+     "bron": "https://www.koreaherald.com/article/10589177",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.koreaherald.com/article/10589177",
+     "soort": "news",
+     "wat": "Korea Herald (11 okt 2025): Kim Soo-chul, head surgeon van AgingL, aan het woord; foto's aangeleverd door de kliniek, geen sponsorlabel.",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ]
+  },
+  {
+   "naam": "Faceline Plastic Surgery (페이스라인 성형외과의원)",
+   "stad_wijk": "Seoul",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://forum.purseblog.com/threads/plastic-surgery-clinics-in-korea-read-1st-post-before-posting.864175/page-174",
+     "soort": "forum",
+     "wat": "Een keer genoemd in een shortlist in de grote PurseForum-draad (pagina 174).",
+     "betaald": false,
+     "gezien": "2026-11-18"
+    }
+   ],
+   "let_op": "Zwak bewijs; Koreaanse naam alleen in de zoektitel van K-Trip Tips gezien."
+  },
+  {
+   "naam": "TL Plastic Surgery",
+   "stad_wijk": "Seoul",
+   "site": null,
+   "site_bron": "Geen officiele site gezien",
+   "chirurgen": [
+    {
+     "naam": "Choi Sewoon",
+     "titel": "Dr.",
+     "specialisme": "niet vermeld (gezichtscontouren volgens persberichten)",
+     "bron": "https://prnewswire.co.uk/news-releases/tl-plastic-surgerys-dr-choi-sewoon---selecting-a-hospital-medical-procedures-665133313.html (betaald persbericht, alleen titel)",
+     "gezien": "2026-11-18"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://prnewswire.co.uk/news-releases/tl-plastic-surgerys-dr-choi-sewoon---selecting-a-hospital-medical-procedures-665133313.html",
+     "soort": "other",
+     "wat": "Persbericht via PR Newswire; betaald, alleen titel gezien.",
+     "betaald": true,
+     "gezien": "2026-11-18"
+    }
+   ],
+   "let_op": "Geen onafhankelijke vermelding gevonden; op RealSelf staat een zeer negatieve review over V-line bij Dr. Choi van TL (alleen titel gezien)."
+  }
+ ]
+}
