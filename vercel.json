@@ -741,6 +741,46 @@
       "destination": "/api/wam?op=llms"
     },
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=voorkant&market=nl"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?whichtobuy\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=voorkant&market=us"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?kaufberater\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=voorkant&market=de"
+    },
+    {
+      "source": "/all",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?op=home"
+    },
+    {
       "source": "/cadeau-vinden",
       "has": [
         {

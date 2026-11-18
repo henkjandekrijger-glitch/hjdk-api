@@ -111,7 +111,7 @@ export default async function handler(req, res) {
       let b=req.method==='POST'?req.body:{site:req.query.site,slug:req.query.slug,v:req.query.v,h:[],test:1};try{if(typeof b==='string'){if(b.length>6000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}
       b=b||{};const ip=String(req.headers['x-forwarded-for']||'').split(',')[0].trim();
       const slugC=String(b.slug||'').replace(/[^a-z0-9-]/gi,'').slice(0,90);
-      const rc=await C.kzChat({site:b.site,slug:slugC,vraag:b.v,hist:b.h,ip,oidc:String(req.headers['x-vercel-oidc-token']||process.env.VERCEL_OIDC_TOKEN||''),test:!!(b.test&&beschermd),sid:String(b.sid||''),vt:String(b.vt||'')}).catch(e=>({ok:false,fout:String(e.message||e).slice(0,80)}));
+      const rc=await C.kzChat({site:b.site,slug:slugC,vraag:b.v,hist:b.h,ip,oidc:String(req.headers['x-vercel-oidc-token']||process.env.VERCEL_OIDC_TOKEN||''),test:!!(b.test&&beschermd),sid:String(b.sid||''),vt:String(b.vt||''),ik:Array.isArray(b.ik)?b.ik.slice(0,3).map(x=>String(x).slice(0,120)):[]}).catch(e=>({ok:false,fout:String(e.message||e).slice(0,80)}));
       if(rc&&rc.ok&&!rc.geblokt&&!(b.test&&beschermd))await fnStap(req,'vraag',slugC); // funnel per persoon via Clickmind-cookie mmp (18 nov 2026)
       return res.status(200).json(rc);}
     if(op==='koppel'||op==='koop'||op==='volgstand'){const IV=await import('../lib/intentvolg.js'); // intentie per persoon volgen en de check-in "is het gelukt" (lib/intentvolg.js, 18 nov 2026)
@@ -131,6 +131,7 @@ export default async function handler(req, res) {
     if(req.method==='POST'){let b=req.body;try{if(typeof b==='string'){if(b.length>2000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}return res.status(200).json(await I.intentieLog(kv,b||{},req).catch(()=>({ok:false})));}
     return res.status(200).json(await I.intentieStand(kv,{vol:/\.vercel\.app$/i.test(String(req.headers.host||'')),n:Math.min(200,Number(q.get('n'))||40)}).catch(()=>({ok:false})));
   }
+  if(q.get('tool')==='voorkant'){const V=await import('../lib/cadeauvinder.js');const mk=String(q.get('market')||'nl');res.setHeader('content-type','text/html; charset=utf-8');res.setHeader('cache-control','public, max-age=300');return res.status(200).send(V.voorkantPagina(['us','de'].includes(mk)?mk:'nl'));} // voorkant = chat + populaire keuzehulpen (18 nov 2026)
   if(q.get('tool')==='vinder'){const V=await import('../lib/cadeauvinder.js');const mk=String(q.get('market')||'nl');res.setHeader('content-type','text/html; charset=utf-8');res.setHeader('cache-control','public, max-age=300');return res.status(200).send(V.vinderPagina(['us','de'].includes(mk)?mk:'nl'));} // vraag-eerst cadeauvinder (18 nov 2026, 100k intenties)
   if(q.get('tool')==='tsc'){const {tscHandler}=await import('../lib/tsc.js');return tscHandler(req,res,url);}
   if(q.get('tool')==='cur'){const {curHandler}=await import('../lib/cur.js');return curHandler(req,res,url);}
