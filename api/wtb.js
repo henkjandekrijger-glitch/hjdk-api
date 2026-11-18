@@ -95,7 +95,7 @@ function adviceHtml(m, adv) {
   if(adv.decision)return decisionHtml(adv.decision,adv.link,esc);
   const buy = koopBlok({ market: m.id, subject: adv.subject || adv.kws, slug: adv.slug || '', products: adv.products, at: adv.at, fallback: adv.link });
   if (adv.products.length) return adv.products.map((p, i) => card(m, p, i)).join('') + `<p class="disc">${esc(m.s.priceNote)} ${esc(new Date(adv.at || Date.now()).toLocaleString(m.locale, { timeZone: m.id === 'us' ? 'America/New_York' : 'Europe/Berlin', dateStyle: 'medium', timeStyle: 'short' }))}; ${esc(m.s.priceNote2)}</p>` + buy;
-  return `<div class="pr best" style="grid-template-columns:1fr"><div><div class="role">${esc(m.s.fallback)}</div><div class="t">${esc(adv.kws)}</div><a class="btn" href="${esc(adv.link)}" rel="sponsored nofollow noopener" target="_blank" data-amz="search">${esc(m.s.seeAll)} →</a></div></div>` + buy;
+  return `<div class="pr best" style="grid-template-columns:1fr"><div><div class="role">${esc(m.s.fallback)}</div><div class="t">${esc(adv.subject || adv.kws)}</div><a class="btn" href="${esc(adv.link)}" rel="sponsored nofollow noopener" target="_blank" data-amz="search">${esc(m.s.seeAll)} →</a></div></div>` + buy;
 }
 
 // antwoordblok zoals nexy.help: alleen de eerste zin vet
