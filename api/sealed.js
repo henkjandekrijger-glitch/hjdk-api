@@ -12,7 +12,8 @@ import { proefStand, proefTekst } from '../lib/proef.js';
 import { zoekLp, bewaarKoper, vulKoperAan, lijstKopers, LP_INDEX } from '../lib/sealed-lp.js';
 import { infoPagina, infoLinks, doorsturen } from '../lib/sealed-info.js';
 import { eigenaarPost, koperPost, gesprekkenLijst, maakMailer, bezorgWachtend } from '../lib/sealed-post.js';
-import { renderChatPage, renderManagePage, renderThreadPage } from '../lib/sealed-chatpage.js';
+import { renderChatPage, renderManagePage, renderThreadPage, kleinePagina } from '../lib/sealed-chatpage.js';
+import * as MAIL from '../lib/sealed-mail.js';
 import { chatStart, chatEv, chatVrij, chatVraag, chatStand, chatStandTekst, chatLeer } from '../lib/sealed-chat.js';
 import { berichten, HAIKU } from '../lib/ai.js';
 import { GROWTH_SCRIPT } from '../lib/sealed.js';
@@ -113,8 +114,10 @@ export default async function handler(req, res) {
       const mail = String(b.mail || '').trim().toLowerCase().slice(0, 160); if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/.test(mail)) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store');
       const c = await anonymous.control('receipt', b); if (c.status !== 200) return stuur(res, 404, 'application/json', '{"ok":false}', 'no-store');
       await kv.set('si:notify:' + String(b.id), { mail, at: new Date().toISOString() }, { ex: 37 * 86400 });
-      try { await meld('Een eigenaar vraagt een seintje per mail als een koper past (adres staat bij de inzending, niet in deze melding). Het seintje gaat nog niet automatisch.'); } catch { /* melding is extra */ }
-      return stuur(res, 200, 'application/json', '{"ok":true}', 'no-store');
+      // Staat de mail aan, dan krijgt de eigenaar één bevestigingsmail; na zijn klik loopt alles via zijn inbox (lib/sealed-mail.js).
+      let bevestig = false; try { bevestig = await MAIL.vraagBevestiging(kv, c.body.record, mail); } catch { /* mail is extra */ }
+      try { await meld(bevestig ? 'Een eigenaar gaf zijn e-mail; de bevestigingsmail is verstuurd.' : 'Een eigenaar vraagt een seintje per mail als een koper past (adres staat bij de inzending, niet in deze melding). De mail staat nog uit.'); } catch { /* melding is extra */ }
+      return stuur(res, 200, 'application/json', JSON.stringify({ ok: true, bevestig }), 'no-store');
     } catch { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
   }
   if (op === 'chatstand') { const st = await chatStand(kv); return q.get('format') === 'json' ? stuur(res, 200, 'application/json', JSON.stringify(st, null, 1), 'no-store', '', 'noindex') : stuur(res, 200, 'text/plain; charset=utf-8', chatStandTekst(st) + '\n', 'no-store'); }
@@ -122,7 +125,7 @@ export default async function handler(req, res) {
   if (op === 'koper') {
     if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
     res.setHeader('X-Robots-Tag', 'noindex, nofollow');
-    try { const b = await leesBody(req); if (JSON.stringify(b).length > 8192) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store'); const r = await bewaarKoper(kv, req, b, meld); if (r.status === 201) { try { const k = await kv.get('si:b:' + r.body.id), m = maakMailer(kv); if (k) await bezorgWachtend(kv, k, { stuurMail: m && m.koper, meld }); } catch { /* bezorgen is extra */ } } return stuur(res, r.status, 'application/json', JSON.stringify(r.body), 'no-store'); } catch { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
+    try { const b = await leesBody(req); if (JSON.stringify(b).length > 8192) return stuur(res, 400, 'application/json', '{"ok":false}', 'no-store'); const r = await bewaarKoper(kv, req, b, meld); if (r.status === 201) { try { const k = await kv.get('si:b:' + r.body.id), m = maakMailer(kv); if (k) await bezorgWachtend(kv, k, { stuurMail: m && m.koper, meld }); } catch { /* bezorgen is extra */ } try { const k = await kv.get('si:b:' + r.body.id); if (k) await MAIL.koppelKoper(kv, k); } catch { /* mail is extra */ } } return stuur(res, r.status, 'application/json', JSON.stringify(r.body), 'no-store'); } catch { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
   }
   if (op === 'koperplus') {
     if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store');
@@ -138,9 +141,43 @@ export default async function handler(req, res) {
       return stuur(res, r.ok ? 200 : 400, 'application/json', JSON.stringify(r), 'no-store', '', 'noindex, nofollow');
     } catch { return stuur(res, 503, 'application/json', '{"ok":false,"error":"unavailable"}', 'no-store'); }
   }
+  // Sealed Intent per mail (lib/sealed-mail.js): bevestigen, verlengen en keuren via een link uit een mail, inkomende mail van Resend,
+  // de dagelijkse ronde "klopt dit nog?" en het instellen (alleen op de beschermde host *.vercel.app, achter de Vercel-inlog).
+  if (['bevestig', 'verleng', 'keur', 'mailin', 'mailronde', 'mailzet', 'mailstand', 'mailproef', 'mailaan'].includes(op)) {
+    res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+    const beschermd = /\.vercel\.app$/i.test(String(req.headers.host || '')), e = x => String(x == null ? '' : x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const pag = (taal, titel, html, status = 200) => stuur(res, status, 'text/html; charset=utf-8', kleinePagina(taal, titel, '<section><h1>' + e(titel) + '</h1>' + html + '</section>'), 'private, no-store', taal, 'noindex, nofollow');
+    const P = { nl: { bOk: ['Bevestigd', 'Je e-mailadres is bevestigd. Vanaf nu loopt alles via je inbox: een koper die past stelt zijn vraag per mail en zegt wie hij is. Jij beslist of je antwoordt.'], fout: ['Deze link werkt niet', 'De link is verlopen of niet compleet. Vragen? App Henkjan op +31 6 55395630.'], vQ: ['Kloppen je voorwaarden nog?', 'Eén tik en ze staan weer een week aan.', 'Ja, ze kloppen nog'], vOk: 'Je voorwaarden staan weer een week aan.' },
+      en: { bOk: ['Confirmed', 'Your email address is confirmed. From now on everything runs through your inbox: a buyer who fits asks his question by email and says who he is. You decide whether to answer.'], fout: ['This link does not work', 'The link has expired or is incomplete. Questions? Message Henkjan on WhatsApp at +31 6 55395630.'], vQ: ['Do your terms still hold?', 'One tap and they are active for another week.', 'Yes, they still hold'], vOk: 'Your terms are active for another week.' },
+      de: { bOk: ['Bestätigt', 'Ihre E-Mail-Adresse ist bestätigt. Ab jetzt läuft alles über Ihr Postfach: Ein passender Käufer stellt seine Frage per E-Mail und sagt, wer er ist. Sie entscheiden, ob Sie antworten.'], fout: ['Dieser Link funktioniert nicht', 'Der Link ist abgelaufen oder unvollständig. Fragen? Schreiben Sie Henkjan per WhatsApp unter +31 6 55395630.'], vQ: ['Gelten Ihre Bedingungen noch?', 'Ein Tipp, und sie sind eine weitere Woche aktiv.', 'Ja, sie gelten noch'], vOk: 'Ihre Bedingungen sind eine weitere Woche aktiv.' } };
+    const knopJs = (body, klaar) => `<script>document.querySelectorAll('[data-k]').forEach(function(b){b.onclick=function(){var d=${JSON.stringify(body)};d.ok=b.getAttribute('data-k')==='1';document.querySelectorAll('[data-k]').forEach(function(x){x.disabled=true});fetch(location.pathname+'?op=${op}',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(d)}).then(function(r){return r.json()}).then(function(j){document.getElementById('uit').textContent=j.ok?(${klaar}):'Dat ging niet goed.'}).catch(function(){document.getElementById('uit').textContent='Dat ging niet goed.'})}})</script>`;
+    try {
+      if (op === 'bevestig') { const r = await MAIL.bevestig(kv, q.get('i'), q.get('s'), { meld }), t = r.taal || kiesTaal(req) || 'en'; return r.ok ? pag(t, P[t].bOk[0], '<p>' + e(P[t].bOk[1]) + '</p>') : pag(t, P[t].fout[0], '<p>' + e(P[t].fout[1]) + '</p>', 404); }
+      if (op === 'verleng') {
+        if (req.method === 'POST') { const b = await leesBody(req), r = await MAIL.verleng(kv, b.i, b.s); return stuur(res, r.ok ? 200 : 404, 'application/json', JSON.stringify({ ok: r.ok }), 'no-store'); }
+        const i = q.get('i') || '', s = q.get('s') || '', rec = MAIL.linkKlopt('verleng', i, s) ? await kv.get('si:i:' + i).catch(() => null) : null, t = (rec && UI[rec.language] && rec.language) || kiesTaal(req) || 'en';
+        if (!rec) return pag(t, P[t].fout[0], '<p>' + e(P[t].fout[1]) + '</p>', 404);
+        return pag(t, P[t].vQ[0], '<p id="uit">' + e(P[t].vQ[1]) + '</p><p><button class="btn" data-k="1">' + e(P[t].vQ[2]) + '</button></p>' + knopJs({ i, s }, JSON.stringify(P[t].vOk)));
+      }
+      if (op === 'keur') {
+        if (req.method === 'POST') { const b = await leesBody(req), r = await MAIL.keur(kv, b.t, b.n, b.s, b.ok === true); return stuur(res, r.ok ? 200 : 404, 'application/json', JSON.stringify(r), 'no-store'); }
+        const t = q.get('t') || '', n = q.get('n') || '', s = q.get('s') || '', k = await MAIL.keurBeeld(kv, t, n, s);
+        if (!k) return pag('nl', P.nl.fout[0], '<p>' + e(P.nl.fout[1]) + '</p>', 404);
+        const kaart = (kop, x) => '<div class="kaart" style="margin:0 0 16px"><div class="kt"><b>' + e(kop) + '</b></div>' + x.split('\n').map(r => '<div class="kr"><span>' + e(r) + '</span></div>').join('') + '</div>';
+        return pag('nl', k.wie, '<p style="white-space:pre-wrap">' + e(k.tekst) + '</p>' + (k.afwijkend ? '<p><b>Let op: verstuurd vanaf een ander adres dan bij ons bekend.</b></p>' : '') + '<p id="uit">' + (k.wacht ? 'Doorlaten of tegenhouden?' : k.weg ? 'Al tegengehouden.' : 'Al doorgelaten.') + '</p>' + (k.wacht ? '<p><button class="btn" data-k="1">Laat door</button><button class="btn" data-k="0" style="background:#fff;color:#111113">Houd tegen</button></p>' : '') + kaart('Eigenaar', k.eigenaar) + kaart('Koper', k.koper) + knopJs({ t, n, s }, "j.door?(j.verstuurd?'Doorgelaten en verstuurd.':'Doorgelaten, maar de mail ging niet weg (staat de mail aan?).'):'Tegengehouden.'"));
+      }
+      if (op === 'mailin') { if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store'); const b = await leesBody(req); const r = await MAIL.mailIn(kv, b, { meld, ai: o => berichten({ ...o, model: HAIKU }) }); return stuur(res, 200, 'application/json', JSON.stringify({ ok: r.ok, waarom: r.waarom }), 'no-store'); }
+      if (op === 'mailronde') return stuur(res, 200, 'application/json', JSON.stringify(await MAIL.ronde(kv)), 'no-store');
+      if (!beschermd) return stuur(res, 404, 'application/json', '{}', 'no-store');
+      if (op === 'mailzet') return stuur(res, 200, 'application/json', JSON.stringify({ domein: await MAIL.domein(kv, q.get('maak') === '1'), haak: q.get('maak') === '1' ? await MAIL.haak(kv, BASE + '/?op=mailin') : undefined }, null, 1), 'no-store');
+      if (op === 'mailaan') { if (q.get('zet') === '1' || q.get('zet') === '0') await kv.set('si:mail:aan', q.get('zet') === '1' ? 1 : 0); return stuur(res, 200, 'application/json', JSON.stringify(await MAIL.mailStand(kv), null, 1), 'no-store'); }
+      if (op === 'mailstand') return stuur(res, 200, 'application/json', JSON.stringify(await MAIL.mailStand(kv), null, 1), 'no-store');
+      if (op === 'mailproef') { const v = MAIL.voorbeelden(q.get('taal') || 'nl'); return stuur(res, 200, 'text/plain; charset=utf-8', Object.entries(v).map(([k, [o, x]]) => '== ' + k + ' ==\nOnderwerp: ' + o + '\n\n' + x).join('\n\n\n') + '\n', 'no-store'); }
+    } catch (err) { return stuur(res, 503, 'application/json', JSON.stringify({ ok: false, error: 'unavailable' }), 'no-store'); }
+  }
   if (op === 'kopers') {
     if (!process.env.HJDK_TOKEN || q.get('token') !== process.env.HJDK_TOKEN) return stuur(res, 403, 'application/json', '{"ok":false}', 'no-store');
-    return stuur(res, 200, 'application/json', JSON.stringify({ ...(await lijstKopers(kv)), mailAan: !!process.env.SEALED_MAIL_FROM, gesprekken: await gesprekkenLijst(kv) }, null, 1), 'no-store');
+    return stuur(res, 200, 'application/json', JSON.stringify({ ...(await lijstKopers(kv)), mailAan: !!process.env.SEALED_MAIL_FROM || await MAIL.mailAan(kv), gesprekken: await gesprekkenLijst(kv) }, null, 1), 'no-store');
   }
   if (op === 'indexnow') return eigenaar(op, res);
   if (op === 'intents') {
@@ -173,7 +210,7 @@ export default async function handler(req, res) {
   // Opgeruimd 17 nov 2026 (Henkjan: "Ja prima voer door"): executive-pagina's, oud formulier, oude partijpagina en 'goede reactie' sturen door.
   const naar = doorsturen(taal, slug);
   if (naar) { res.statusCode = 301; res.setHeader('Location', naar); res.setHeader('Cache-Control', 'public, max-age=3600'); res.setHeader('X-Robots-Tag', 'noindex'); return res.end(); }
-  const info = infoPagina(taal, slug);
+  const info = infoPagina(taal, slug, { mail: await MAIL.mailAan(kv).catch(() => false) });
   if (info) return stuur(res, 200, 'text/html; charset=utf-8', renderChatPage(taal, null, { ...chatOpts, pagina: info, links: infoLinks(taal, slug) }), 'public, max-age=60, s-maxage=300', taal);
   if (slug === 'gesprek') return stuur(res, 200, 'text/html; charset=utf-8', renderThreadPage(taal), 'private, no-store', taal, 'noindex, nofollow');
   if (slug === 'manage') return stuur(res, 200, 'text/html; charset=utf-8', renderManagePage(taal), 'private, no-store', taal, 'noindex, nofollow');

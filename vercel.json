@@ -177,6 +177,10 @@
       "schedule": "19 * * * *"
     },
     {
+      "path": "/api/sealed?op=mailronde",
+      "schedule": "23 13 * * *"
+    },
+    {
       "path": "/api/keuze-tools?tool=autohuur&market=nl&op=reviews",
       "schedule": "20 7,15 * * *"
     },
