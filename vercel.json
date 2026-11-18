@@ -741,6 +741,26 @@
       "destination": "/api/wam?op=llms"
     },
     {
+      "source": "/chirurgie",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=tsc&p="
+    },
+    {
+      "source": "/chirurgie/:p*",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=tsc&p=:p*"
+    },
+    {
       "source": "/zorgverzekering/sitemap.xml",
       "has": [
         {
