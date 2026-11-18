@@ -1573,6 +1573,16 @@
       "destination": "/api/wtb?slug=:slug"
     },
     {
+      "source": "/:k(category|kategorie)/:c([a-z0-9-]+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/api/wtb?op=cat&c=:c"
+    },
+    {
       "source": "/:slug([a-z0-9-]+)",
       "has": [
         {
