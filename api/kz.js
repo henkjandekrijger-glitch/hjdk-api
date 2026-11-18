@@ -4,6 +4,7 @@ import { kzuxBlok, zoekLogJs } from '../lib/kzux.js';
 import { trendingBlock } from '../lib/guide-usage.js';
 import { koopBlok, koopMeetScript } from '../lib/koopblok.js';
 import { kadolyBlok, KDB_CSS } from '../lib/kz-kadoly.js';
+import { FN_JS } from '../lib/funnel.js'; // funnel per persoon (18 nov 2026)
 // KEUZEHULP, interactieve koopgidsen op een eigen domein (3 vragen -> één advies -> bol).
 //   GET /keuzehulp                 overzicht (ook / op het eigen domein)
 //   GET /keuzehulp/<slug>          keuzehulp-pagina (vragen + advies; server-side al gevuld voor Google)
@@ -249,7 +250,7 @@ function shell(title, desc, body, canonical, extraHead) {
 <header class="topbar"><div class="wrap"><a class="mark" href="/keuzehulp">keuze<em>hulp</em></a><nav class="topnav" aria-label="Menu"><a href="/keuzehulp">Alle keuzehulpen</a><a href="/deals">Deals</a><a href="/keuzehulp/over">Over ons</a></nav></div></header>
 <main><div class="wrap">${/class="ov[ "]/.test(body) ? body : '<div class="ov">' + body + '</div>'}</div></main>
 ${true ? voetEenRegel('nl') : `<footer><div class="wrap">${esc(SITE.name)} is een onafhankelijke keuzehulp van ${esc(SITE.owner)}, samengesteld door de redactie · <a href="/keuzehulp/over">Over ons</a> · <a href="/keuzehulp/privacy">Privacy</a> · <a href="https://wa.me/31655395630" rel="nofollow">WhatsApp de redactie</a><br><a href="/zorgverzekering">Zorgverzekering 2027 vergelijken</a> · <a href="/rotterdam">Diensten in Rotterdam vergelijken</a> (tandarts, kapper, garage en meer)<br>Ook voor kopers in de VS: <a href="https://whichtobuy.best/" hreflang="en" lang="en">whichtobuy.best</a> · in Duitsland: <a href="https://kaufberater.best/" hreflang="de" lang="de">kaufberater.best</a><br>Gratis van Kadoly: <a href="https://gids.kadoly.com/w">verlanglijstje maken</a> · <a href="https://gids.kadoly.com/w/lootjes">lootjes trekken</a> · <a href="https://gids.kadoly.com/w/gedicht">Sinterklaasgedicht maken</a><br>Cadeaugidsen van Kadoly: <a href="https://gids.kadoly.com/kaarsen-cadeau">kaarsen als cadeau</a> · <a href="https://gids.kadoly.com/badset-cadeau">badset als cadeau</a> · <a href="https://gids.kadoly.com/houten-bureau-accessoires">houten bureau-accessoires</a><br>Affiliate-vermelding: als je via onze link iets koopt bij bol, ontvangen wij een vergoeding. De prijs die je betaalt verandert daardoor niet. Prijzen en beoordelingen komen rechtstreeks van bol en worden elke 20 minuten ververst.</div></footer>`}
-${HUISSTIJL_CSS}${koopMeetScript()}<script defer src="/api/vindbaarheid?op=tracker&v=2"></script></body></html>`;
+${HUISSTIJL_CSS}${koopMeetScript()}<script defer src="/api/vindbaarheid?op=tracker&v=2"></script>${FN_JS('')}</body></html>`;
 }
 
 // Overzichtspagina's (Henkjan 17 nov 2026: "Bovenin komt chat en aanmelden . Snel keuze . Alle andere keuzehulpen daaronder . Ook op de voorkant

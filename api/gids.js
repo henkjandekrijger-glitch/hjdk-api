@@ -8,6 +8,7 @@
 import { catalogusInhoud } from '../lib/gids-catalogus.js';
 import { gidsIndexPlan } from '../lib/gids-indexnow.js';
 import { kv } from '../lib/db.js';
+import { funnelStap, funnelStand, funnelHtml, fnIdUitCookie, isFnBot, bronVan, FN_JS } from '../lib/funnel.js'; // funnel per persoon (18 nov 2026)
 import { lookNieuw } from '../lib/look.js';
 import { GIDSEN, GIDS_IDS } from '../lib/gidsen-kadoly.js';
 import { alleVan } from '../lib/gidsen-alle.js'; // alles van een soort onder de keuze (10 nov 2026)
@@ -145,7 +146,7 @@ document.getElementById('kcx').onclick=function(){c.hidden=true};document.getEle
 document.getElementById('kcf').addEventListener('submit',function(x){x.preventDefault();var v=ci.value.trim();ci.value='';vraag(v)});
 document.querySelectorAll('[data-kc]').forEach(function(a){a.addEventListener('click',function(x){x.preventDefault();open('')})});})();</script>`;
 }
-const VOET = (g, kans) => `${NB.blok(g ? g.slug : '_home', { mail: MAILK, info: NBI })}<hr style="border:0;border-top:1px solid var(--line);margin:44px 0 18px"><p class="meta">Een gids van <a href="https://kadoly.com">Kadoly</a>, de webshop met producten van makers. Prijzen en levertijden komen elke paar minuten uit de winkel zelf${g ? ', laatst inhoudelijk bijgewerkt op ' + esc(g.bijgewerkt) : ''}. Wij verdienen aan een bestelling in onze eigen winkel; daarom staat bij elk product ook waarvoor het niet geschikt is.</p><p class="meta"><a href="/">Alle gidsen</a> · <a href="/onderzoek-en-bronnen">Onderzoek en bronnen</a> · <a href="#" data-kc>Stel een vraag</a></p></main>${VOETBALK}${CHAT}${hulpScript(g ? g.slug : '_home', kans)}${NB.NB_SCRIPT}</body></html>`;
+const VOET = (g, kans) => `${NB.blok(g ? g.slug : '_home', { mail: MAILK, info: NBI })}<hr style="border:0;border-top:1px solid var(--line);margin:44px 0 18px"><p class="meta">Een gids van <a href="https://kadoly.com">Kadoly</a>, de webshop met producten van makers. Prijzen en levertijden komen elke paar minuten uit de winkel zelf${g ? ', laatst inhoudelijk bijgewerkt op ' + esc(g.bijgewerkt) : ''}. Wij verdienen aan een bestelling in onze eigen winkel; daarom staat bij elk product ook waarvoor het niet geschikt is.</p><p class="meta"><a href="/">Alle gidsen</a> · <a href="/onderzoek-en-bronnen">Onderzoek en bronnen</a> · <a href="#" data-kc>Stel een vraag</a></p></main>${VOETBALK}${CHAT}${hulpScript(g ? g.slug : '_home', kans)}${NB.NB_SCRIPT}${FN_JS(g ? g.slug : 'home')}</body></html>`;
 
 // zoeken in de shopcatalogus en de gidsen (30 okt, Henkjan: "Zet er ook een zoek boven die alles leert en ook een chat kan worden").
 // Leert: wat mensen aanklikken na een zoekvraag (gk:zk:<hash>) telt mee in de volgorde; elke vraag en vragen zonder uitkomst per dag in gk:zq:<dag>.
@@ -189,6 +190,7 @@ async function chatAntwoord(req, oidc) {
   const b = await leesBody(req); const v = (Array.isArray(b.v) ? b.v : []).slice(-8).map(m => ({ r: m && m.r === 'a' ? 'a' : 'u', t: String((m && m.t) || '').replace(/\s+/g, ' ').trim().slice(0, 400) })).filter(m => m.t);
   const laatste = [...v].reverse().find(m => m.r === 'u'); if (!laatste) return { status: 400, j: { ok: false } };
   const p = String(b.p || '').replace(/[^a-z0-9_-]/g, '').slice(0, 60); const g = GIDSEN[p];
+  let fz = null; if (!b.test) { const fid = fnIdUitCookie(req); if (fid && !isFnBot(req)) fz = await funnelStap(fid, 'vraag', p || 'gids'); } // funnel per persoon: een vraag in de chat = vergelijkt (18 nov)
   const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim(); const ik = 'gk:rl:' + qHash(ip + DAG());
   if (!b.test) try { const n = N(await kv.raw(['INCR', ik])); if (n === 1) await kv.raw(['EXPIRE', ik, '86400']); const tot = N(await kv.raw(['HINCRBY', 'gk:d:' + DAG(), 'chat|vraag', '1'])); await kv.raw(['EXPIRE', 'gk:d:' + DAG(), String(60 * 86400)]); if (n > 40 || tot > 2500) return { status: 200, j: { ok: true, antwoord: 'Ik krijg nu veel vragen. Henkjan van Kadoly helpt je graag via WhatsApp.', producten: [], dringend: true } }; } catch (e) {}
   const z1 = await zoek(laatste.t, 10); const z2 = v.length > 1 ? await zoek(v.filter(m => m.r === 'u').map(m => m.t).join(' '), 8) : { producten: [] };
@@ -196,7 +198,7 @@ async function chatAntwoord(req, oidc) {
   if (g) for (const c of g.keuze) { const i = cat[c.pid]; if (i && i.vr !== false) kand.set(c.pid, { pid: c.pid, naam: c.naam || i.t, merk: i.b || '', prijs: thuis(i), prijsTekst: prijsTekst(thuis(i)), img: i.img || '', lt: N(i.lt), datum: N(i.lt) ? nlDatum(leverDatum(i.lt)) : '', gids: c.label + ': ' + c.waarom + (c.beperking ? ' Let op: ' + c.beperking : '') }); } // de keuze van deze gids eerst, met onze uitleg
   for (const x of z1.producten.concat(z2.producten)) if (!kand.has(x.pid)) kand.set(x.pid, x);
   const lijst = [...kand.values()].slice(0, 18);
-  const ctx = 'VANDAAG: ' + nlDatum(new Date()) + '\nPAGINA: ' + (g ? g.h1 + '\nKORT ANTWOORD VAN DEZE GIDS: ' + g.kort : 'start van de gids') + '\nGIDSEN: ' + GIDS_IDS.map(id => GIDSEN[id].h1 + ' (' + HOST + '/' + id + ')').join('; ') +
+  const ctx = (fz && fz.f >= 4 ? 'BEZOEKER: staat op het punt te kopen (fase ' + fz.fase + '). Noem waar het past dat betalen in termijnen met Klarna kan en dat Henkjan via WhatsApp vragen beantwoordt.\n' : '') + 'VANDAAG: ' + nlDatum(new Date()) + '\nPAGINA: ' + (g ? g.h1 + '\nKORT ANTWOORD VAN DEZE GIDS: ' + g.kort : 'start van de gids') + '\nGIDSEN: ' + GIDS_IDS.map(id => GIDSEN[id].h1 + ' (' + HOST + '/' + id + ')').join('; ') +
     '\nKANDIDATEN (id | naam | merk | soort | prijs incl. verzending | in huis rond | uitleg uit onze gids):\n' + (lijst.length ? lijst.map(x => [x.pid, x.naam, x.merk || '-', soort(x.pid) || '-', euro(x.prijs), x.datum || 'zie product', x.gids || '-'].join(' | ')).join('\n') : '(geen passende producten gevonden)') +
     '\n\nGESPREK:\n' + v.map(m => (m.r === 'u' ? 'Bezoeker: ' : 'Kadoly: ') + m.t).join('\n');
   let out = { antwoord: '', producten: [], dringend: false, onderwerp: '' };
@@ -594,6 +596,16 @@ export default async function handler(req, res) {
     if (op === 'robots') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send('User-agent: *\nAllow: /\nDisallow: /naar/\n\n# Voor AI-assistenten: ' + HOST + '/llms.txt en ' + HOST + '/llms-full.txt\nSitemap: ' + HOST + '/sitemap.xml\n'); }
     if (op === 'sitemap') { await telBot(ua, 'sitemap'); res.setHeader('content-type', 'application/xml; charset=utf-8'); return res.status(200).send(await sitemap()); }
     if (op === 'llms') { await telBot(ua, 'llms'); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(await llms()); }
+    if (op === 'fn') { // funnel per persoon (18 nov 2026, Henkjan: "zodat we weten WIE we in de funnel hebben in welke fase"); zie lib/funnel.js
+      res.setHeader('cache-control', 'no-store'); if (isFnBot(req)) return res.status(204).end();
+      let id = fnIdUitCookie(req); if (!id) { id = createHash('sha256').update(String(Math.random()) + Date.now()).digest('hex').slice(0, 16); res.setHeader('set-cookie', 'mmp=' + id + '; Max-Age=15552000; Path=/; Secure; HttpOnly; SameSite=Lax'); }
+      const st = String(q.get('s') || '').replace(/[^a-z]/g, '').slice(0, 10); if (!['zie', 'diep', 'keuze', 'vraag', 'wil'].includes(st)) return res.status(204).end();
+      const r = await funnelStap(id, st, String(q.get('o') || '').slice(0, 60), st === 'zie' ? bronVan(q.get('r'), q.get('b')) : '');
+      return res.status(200).json({ ok: true, f: id, fase: r && r.fase }); }
+    if (op === 'funnel') { // overzicht per fase en per persoon (alleen op de beschermde vercel.app-host)
+      if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const st = await funnelStand(Math.min(60, Number(q.get('dagen')) || 7), Math.min(300, Number(q.get('n')) || 60)); res.setHeader('cache-control', 'no-store');
+      if (q.get('vorm') === 'json') return res.status(200).json(st); res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(funnelHtml(st)); }
     if (op === 'tel') { const g = String(q.get('g') || ''); const s = String(q.get('s') || '').replace(/[^a-z0-9-]/g, '').slice(0, 30); if ((GIDSEN[g] || ONDERZOEK.some(p => 'onderzoek-' + p.id === g) || g === 'onderzoek-en-bronnen' || g === '_home' || g === '_zoek' || g === '_nieuw' || g === 'catalogus' || /^r-[a-z0-9-]{2,30}$/.test(g)) && s && !isBot(ua)) { await tel(g, s); if (/^v-/.test(s) && (GIDSEN[g] || /^r-/.test(g) || g === '_home')) { try { await kv.raw(['HINCRBY', 'gk:p:' + (g === '_home' ? 'home' : g), '_v', '1']); await kv.raw(['EXPIRE', 'gk:p:' + (g === '_home' ? 'home' : g), String(120 * 86400)]); } catch (e) {} } } return res.status(204).end(); }
     if (op === 'kies') { const c = String(q.get('c') || '').replace(/[^a-z0-9-]/g, '').slice(0, 30), sb = String(q.get('s') || 'alle').replace(/[^a-z0-9-]/g, '').slice(0, 30), b = ['u25', '25-50', 'o50'].includes(q.get('b')) ? q.get('b') : 'alle', t = ['snel', 'week'].includes(q.get('t')) ? q.get('t') : 'alle';
       const r = await kies(c, sb, b, t); if (!r) return res.status(404).json({ ok: false });
