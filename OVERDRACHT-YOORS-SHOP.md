@@ -95,6 +95,7 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - hjdk-api: dagkeuze `lib/shopkies.js` (+ VAST_DAG in `api/shop.js`), teksten `lib/shopteksten-hand.js` en `lib/shoptekst.js`, bots `lib/shopbot.js`, niet geladen `lib/shopniet.js`, archief `lib/shcarchief.js`, kassadoel `lib/shopdirect.js`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 18 nov 2026 (Henkjan: "Ja . Go start morgen ochtend in NL ."): handprijzen in /api/shop/prijslijst voor backgammon (EUR 64,95 incl. verzending), gouden bestekset (EUR 60,95) en muslin babydeken (EUR 35,95); de Whop-ronde zet de bewezen producten vanaf 19 nov 9:00 NL in de campagne zodra de shop de prijzen voert; campagne mag naar 40 advertenties.
 - 18 nov 2026: Kadoly Meta (Whop) bewezen producten uitgebreid na nieuwe Ad Library-ronde (snijplank, geurstokjes, lantaarn, backgammon, bestekset, babydeken; data/whop-bewezen.json). Gaan alleen aan met marge >= EUR 10; backgammon, bestekset en babydeken wachten op een prijs (voorstel bij Henkjan).
 - 2026-11-18: 11 Droppery-producten gekoppeld (5 Bazar Bizar XL-hanglampen, 6 keukencadeaus van Kela, Viva en Joseph Joseph). Feed /api/dp?op=feed geeft ze met inkoop en verzend_nl; de Kadoly-shop moet ze nog importeren.
 - 2026-11-18: Droppery-brug live gezet (api/dp.js, lib/droppery.js): Kadoly doet zich voor Droppery voor als WooCommerce op gids.kadoly.com; shop leest /api/dp?op=feed en meldt orders via /api/dp?op=order (X-Lus-Key).
