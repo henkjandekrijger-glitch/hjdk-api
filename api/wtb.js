@@ -42,7 +42,7 @@ async function overzichtCat(m, all, c) {
   const kaart = i => K.ovKaart('/' + i.slug, '', String(i.title).length <= 60 ? i.title : naamW(i), i.kort || i.intro, '');
   const faq = volg.map(i => (i.faq || [])[0] && { q: i.faq[0].q, a: i.faq[0].a, pad: '/' + i.slug, titel: naamW(i) }).filter(f => f && f.q && f.a).filter((f, k, a) => a.findIndex(x => x.q === f.q) === k).slice(0, 8);
   const cats = [...new Set(all.map(i => i.cat))].sort((a, b) => a.localeCompare(b, m.id === 'de' ? 'de' : 'en')); const d = new Date().toISOString().slice(0, 10);
-  const body = `${K.OV3_CSS}<div class="ov"><p class="crumbs"><a href="/">${esc(m.name)}</a> › ${esc(naam)}</p><p class="ov-eb"><i></i>${esc(T.cat)} · ${inCat.length} ${esc(T.n)}</p><h1>${esc(T.h1c(naam))}</h1><p class="kz-meta">${esc(T.upd)} <time datetime="${d}">${esc(datumW(m, d))}</time></p><p class="ov-lead lead">${esc(((CAT_INFO_W[m.id] || {})[naam] || '') + ' ' + T.lead)}</p>${ovChatW(m, naam, T.ph(naam), faq)}
+  const body = `${K.OV3_CSS}<div class="ov ov-lijst"><p class="crumbs"><a href="/">${esc(m.name)}</a> › ${esc(naam)}</p><p class="ov-eb"><i></i>${esc(T.cat)} · ${inCat.length} ${esc(T.n)}</p><h1>${esc(T.h1c(naam))}</h1><p class="kz-meta">${esc(T.upd)} <time datetime="${d}">${esc(datumW(m, d))}</time></p><p class="ov-lead lead">${esc(((CAT_INFO_W[m.id] || {})[naam] || '') + ' ' + T.lead)}</p>${ovChatW(m, naam, T.ph(naam), faq)}
 <h2 class="ov-h">${esc(T.snel)}</h2><div class="ov-g">${snel.map(kaart).join('')}</div>
 ${rest.length ? `<h2 class="ov-h">${esc(T.rest)} ${esc(naam)}</h2><div class="ov-g">${rest.map(kaart).join('')}</div>` : ''}
 <h2 class="ov-h">${esc(T.all)}</h2><div class="ov-cs">${cats.map(x => K.ovPil(catPad(m, x), x, x === naam)).join('')}</div></div>`;
@@ -174,7 +174,7 @@ ${newest.length ? `<h2>${esc(T.nieuw)}</h2><div class="grid">${newest.map(tegel)
     const snel = []; for (const i of top.concat(pop)) { if (snel.length >= 6) break; if (!snel.includes(i) && snel.filter(x => x.cat === i.cat).length < 2) snel.push(i); } // hoogste prioriteit eerst, hooguit 2 per categorie
     const faq = snel.concat(all).map(i => (i.faq || [])[0] && { q: i.faq[0].q, a: i.faq[0].a, pad: '/' + i.slug, titel: naamW(i) }).filter(f => f && f.q && f.a).filter((f, k, a) => a.findIndex(x => x.q === f.q) === k).slice(0, 8);
     const voorb = c => cats[c].slice(0, 4).map(i => naamW(i).toLowerCase()).join(', ');
-    body3 = `${K.OV3_CSS}<div class="ov"><p class="ov-eb"><i></i>${esc(T.eyebrow)}</p><h1>${esc(s.hero)}</h1><p class="kz-meta">${esc(O.upd)} <time datetime="${d}">${esc(datumW(m, d))}</time></p><p class="ov-lead lead">${esc(O.lead)}</p>${ovChatW(m, us ? 'buying guides' : 'Kaufberater', O.phHome, faq)}
+    body3 = `${K.OV3_CSS}<div class="ov ov-lijst"><p class="ov-eb"><i></i>${esc(T.eyebrow)}</p><h1>${esc(s.hero)}</h1><p class="kz-meta">${esc(O.upd)} <time datetime="${d}">${esc(datumW(m, d))}</time></p><p class="ov-lead lead">${esc(O.lead)}</p>${ovChatW(m, us ? 'buying guides' : 'Kaufberater', O.phHome, faq)}
 <h2 class="ov-h">${esc(O.snel)}</h2><div class="ov-g">${snel.map(i => K.ovKaart('/' + i.slug, i.cat, String(i.title).length <= 60 ? i.title : naamW(i), i.kort || i.intro, '')).join('')}</div>
 <h2 class="ov-h">${esc(O.allP)}</h2><div class="ov-g">${catsS.map(c => K.ovKaart(catPad(m, c), cats[c].length + ' ' + O.n, c, voorb(c), O.see)).join('')}</div>
 ${newest.length ? `<h2 class="ov-h">${esc(O.nieuw)}</h2><div>${newest.map(i => K.ovRegel('/' + i.slug, i.title)).join('')}</div>` : ''}
