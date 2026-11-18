@@ -95,6 +95,7 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - hjdk-api: dagkeuze `lib/shopkies.js` (+ VAST_DAG in `api/shop.js`), teksten `lib/shopteksten-hand.js` en `lib/shoptekst.js`, bots `lib/shopbot.js`, niet geladen `lib/shopniet.js`, archief `lib/shcarchief.js`, kassadoel `lib/shopdirect.js`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 2026-11-18: 11 Droppery-producten gekoppeld (5 Bazar Bizar XL-hanglampen, 6 keukencadeaus van Kela, Viva en Joseph Joseph). Feed /api/dp?op=feed geeft ze met inkoop en verzend_nl; de Kadoly-shop moet ze nog importeren.
 - 2026-11-18: Droppery-brug live gezet (api/dp.js, lib/droppery.js): Kadoly doet zich voor Droppery voor als WooCommerce op gids.kadoly.com; shop leest /api/dp?op=feed en meldt orders via /api/dp?op=order (X-Lus-Key).
 - 18 nov 2026 01:57 UTC: TikTok nacht uit, altijd (Henkjan: "Ja nacht uit altijd"): alle 3 Kadoly-advertentiegroepen 00:00-07:00 NL uit via dayparting; budget en doelgroep ongewijzigd (groep afrekenpagina EUR 30, actief).
 - 17 nov 2026: Kadoly Meta (Whop) krijgt de Ad Library-winnaars (Tavellio lamp, wollen deken MoST, serviesset steengoed; data/whop-bewezen.json). De Whop-ronde zet ze pas aan als de shop de nieuwe prijs uit /api/shop/prijslijst voert (marge minstens EUR 10, op voorraad); stand /api/shop?op=whbewezen. Reden: Henkjan "2. JA" op eerst prijzen naar advies, dan testen.
