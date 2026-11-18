@@ -104,6 +104,7 @@ export default async function handler(req, res) {
   if(q.get('tool')==='intentie'){ // intentielog van de vraagbalk en het zoekvak (lib/intentie.js, 15 nov 2026); stand openbaar zonder de vragen, met vragen op de beschermde host
     const I=await import('../lib/intentie.js');res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
     const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
+    if(op==='100k'){const C=await import('../lib/kzchat.js');res.setHeader('cache-control','no-store');return res.status(200).json(await C.i100Stand().catch(()=>({ok:false})));} // doel 100.000 intenties voor 31 dec 2026
     if(op==='chat'||op==='chatstand'){const C=await import('../lib/kzchat.js'); // intentiechat op alle keuzehulpen (lib/kzchat.js, 16 nov 2026)
       if(op==='chatstand')return res.status(200).json(await C.kzChatStand(beschermd).catch(()=>({ok:false})));
       if(req.method!=='POST'&&!(beschermd&&req.query.v))return res.status(405).json({ok:false}); // GET alleen beschermd, om de chat te testen
@@ -130,6 +131,7 @@ export default async function handler(req, res) {
     if(req.method==='POST'){let b=req.body;try{if(typeof b==='string'){if(b.length>2000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}return res.status(200).json(await I.intentieLog(kv,b||{},req).catch(()=>({ok:false})));}
     return res.status(200).json(await I.intentieStand(kv,{vol:/\.vercel\.app$/i.test(String(req.headers.host||'')),n:Math.min(200,Number(q.get('n'))||40)}).catch(()=>({ok:false})));
   }
+  if(q.get('tool')==='vinder'){const V=await import('../lib/cadeauvinder.js');const mk=String(q.get('market')||'nl');res.setHeader('content-type','text/html; charset=utf-8');res.setHeader('cache-control','public, max-age=300');return res.status(200).send(V.vinderPagina(['us','de'].includes(mk)?mk:'nl'));} // vraag-eerst cadeauvinder (18 nov 2026, 100k intenties)
   if(q.get('tool')==='tsc'){const {tscHandler}=await import('../lib/tsc.js');return tscHandler(req,res,url);}
   if(q.get('tool')==='cur'){const {curHandler}=await import('../lib/cur.js');return curHandler(req,res,url);}
   if(q.get('tool')==='autohuur'){const {autohuurHandler}=await import('../lib/autohuur-curacao.js');return autohuurHandler(req,res,url,q.get('market')||'nl');}

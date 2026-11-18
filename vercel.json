@@ -741,6 +741,36 @@
       "destination": "/api/wam?op=llms"
     },
     {
+      "source": "/cadeau-vinden",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=vinder&market=nl"
+    },
+    {
+      "source": "/gift-finder",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?whichtobuy\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=vinder&market=us"
+    },
+    {
+      "source": "/geschenk-finden",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?kaufberater\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=vinder&market=de"
+    },
+    {
       "source": "/chirurgie",
       "has": [
         {
