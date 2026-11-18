@@ -49,7 +49,10 @@ ${rest.length ? `<h2 class="ov-h">${esc(T.rest)} ${esc(naam)}</h2><div class="ov
 <h2 class="ov-h">${esc(T.all)}</h2><div class="ov-cs">${cats.map(x => K.ovPil(catPad(m, x), x, x === naam)).join('')}</div></div>`;
   const url = base + catPad(m, naam);
   const ld = { '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: T.h1c(naam), url, inLanguage: m.locale, dateModified: d, isPartOf: { '@type': 'WebSite', name: m.name, url: base } }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: m.name, item: base + '/' }, { '@type': 'ListItem', position: 2, name: naam, item: url }] }, { '@type': 'ItemList', name: T.h1c(naam), numberOfItems: volg.length, itemListElement: volg.map((i, k) => ({ '@type': 'ListItem', position: k + 1, url: base + '/' + i.slug, name: i.title })) }] };
-  let tit = T.h1c(naam); for (let n = 3; n > 0; n--) { const t = tit + ': ' + volg.slice(0, n).map(i => naamW(i).toLowerCase()).join(', '); if (t.length <= 58) { tit = t; break; } }
+  // titel: vaste volgorde (prioriteit, niet de populariteit van vandaag) zodat Google bij elke crawl dezelfde titel ziet; geen leestekens aan het eind van een voorbeeld en afkortingen (4K, USB-C, TV) niet in kleine letters (ZICHT 18 nov: "Electronics buying guides: 4k usb-c monitor,")
+  const kortW = i => { const ws = []; for (const w of String(i.term || '').trim().split(/\s+/)) { if (/^(20\d\d|unter|under|bis|mit|with|for|für|and|und|vs|oder|or|zum|zur|to)$/i.test(w) || ws.length >= 3) break; ws.push(w.replace(/[,;:.–-]+$/, '')); if (/[,;:]$/.test(w)) break; } return ws.filter(Boolean).map(w => m.id === 'de' || /[A-Z].*[A-Z]|\d/.test(w) ? w : w.toLowerCase()).join(' '); };
+  const vast = inCat.slice().sort((a, b) => (b.priority || 0) - (a.priority || 0) || String(a.slug).localeCompare(String(b.slug))).map(kortW).filter((x, k, a) => x && a.indexOf(x) === k);
+  let tit = T.h1c(naam); for (let n = 3; n > 1; n--) { const t = tit + ': ' + vast.slice(0, n).join(', '); if (t.length <= 58) { tit = t; break; } }
   return shell(m, { title: tit + ' | ' + m.name, desc: K.kortZin(((CAT_INFO_W[m.id] || {})[naam] || '') + ' ' + inCat.length + ' ' + T.n + '.', 155), path: catPad(m, naam), body, ld });
 }
 

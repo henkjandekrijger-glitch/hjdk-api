@@ -1112,5 +1112,17 @@
   "moeite": 1,
   "meten": "proef wtb-bf-handaanvraag-1117: gecrawld en opgenomen van 10 Black Friday-gidsen met aanvraag tegen 4 zonder, voor 1 dec",
   "status": "actief"
+ },
+ {
+  "id": "index-telt-niet-als-zichtbaar",
+  "les": "Een stabiel aantal geindexeerde pagina's zegt niets over of Google ze nog toont. Kijk elke dag naar het aantal zoekvragen per dag met eigen vertoningen (op=zoekvragen); valt dat weg terwijl de indexteller gelijk blijft, dan is de site niet uit de index maar uit de resultaten gezakt, en helpen nieuwe pagina's niet: eerst de bestaande pagina's sterker maken.",
+  "kanaal": "google",
+  "bewijs": "18 nov 2026, keuzehulp.best: 117 pagina's in Google van 26 okt tot 17 nov (109 op 18 nov na het samenvoegen van categorieen), maar zoekvragen met vertoningen per dag 40 tot 54 op 18 tot 20 okt, 10 op 21 en 22 okt, 6, 3 en 1 op 23 tot 25 okt en daarna nul, op 1 zoekvraag op 3 nov na. Het 28-dagentotaal zakte daardoor van 1815 naar 177 vertoningen.",
+  "bron": "dagcontrole 18 nov 2026, /api/zicht?op=zoekvragen&site=kz&dagen=40 en op=stand",
+  "sterkte": 2,
+  "effect": 2,
+  "moeite": 1,
+  "meten": "zoekvragen per dag met vertoningen op keuzehulp.best; herstel = weer 10+ per dag",
+  "status": "actief"
  }
 ]
