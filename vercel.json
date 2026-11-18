@@ -130,7 +130,7 @@
     },
     {
       "path": "/api/post?op=ronde",
-      "schedule": "40 6 * * *"
+      "schedule": "40 0,6,12,18 * * *"
     },
     {
       "path": "/api/zicht?op=ronde&alsNodig=1",

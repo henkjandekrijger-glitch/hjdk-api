@@ -7,7 +7,7 @@
 //   GET  /api/post?op=ronde            cron (dagelijks): Gmail nalopen op verstuurd, antwoord en bounce; Resend-stromen tellen
 //   GET  /api/post?op=koppel           Gmail koppelen (alleen lezen); Google stuurt terug naar op=terug
 // Zonder token mag een chat melden (hooguit 150 per dag); de stand toont nooit een volledig adres.
-import { regels, stand, meld, uitkomst, ronde, koppelUrl, koppelTerug, DAG } from '../lib/postlus.js';
+import { regels, stand, meld, uitkomst, ronde, koppelUrl, koppelTerug, DAG, gmailLes, gmailRegels } from '../lib/postlus.js';
 import { leesSkill } from '../lib/skills.js';
 import { kv } from '../lib/db.js';
 
@@ -23,8 +23,9 @@ export default async function handler(req, res) {
     if (op === 'skill') { const t = leesSkill('mail-lerend'); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return t ? res.status(200).send(t) : res.status(404).send('skill niet gevonden'); }
     if (op === 'regels') {
       const r = await regels();
-      if (q.t) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(r.map((l, i) => (i + 1) + '. [' + (l.vast ? 'vast' : l.score) + '] ' + l.les + ' (' + l.id + '; ' + (l.verstuurd ? l.goed + ' van ' + l.verstuurd + ' mails met antwoord of klik' : l.bron) + ')').join('\n')); }
-      return res.status(200).json({ ok: true, regels: r });
+      const eigen = await gmailRegels().then(x => gmailLes(x).lessen).catch(() => []);
+      if (q.t) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send((eigen.length ? 'Geleerd uit je eigen Gmail:\n' + eigen.map(x => '- ' + x).join('\n') + '\n\n' : '') + r.map((l, i) => (i + 1) + '. [' + (l.vast ? 'vast' : l.score) + '] ' + l.les + ' (' + l.id + '; ' + (l.verstuurd ? l.goed + ' van ' + l.verstuurd + ' mails met antwoord of klik' : l.bron) + ')').join('\n')); }
+      return res.status(200).json({ ok: true, uitEigenGmail: eigen, regels: r });
     }
     if (op === 'stand') return res.status(200).json(await stand());
     if (op === 'meld' || op === 'uitkomst') {

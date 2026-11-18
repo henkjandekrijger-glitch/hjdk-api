@@ -32,6 +32,10 @@ Niets melden: de dagelijkse ronde kijkt in Gmail (alleen lezen) of de mail in Ve
 
 "ja" en "nee" zijn inhoudelijke antwoorden (link geplaatst, afspraak gemaakt, afgewezen); meld die ook als Gmail gekoppeld is, want de ronde ziet alleen dat er antwoord kwam.
 
+## Heel Gmail
+
+Is Gmail gekoppeld, dan leest de ronde vier keer per dag alle verzonden mail (alleen kenmerken: lengte, links, vraag, onderwerplengte, uur) en telt per kenmerk hoe vaak er antwoord kwam. Wat daaruit blijkt staat bovenaan de regels onder "Geleerd uit je eigen Gmail" en gaat voor op een startregel. Ook mail die Henkjan zelf typt of die een andere chat verstuurde telt zo mee, zonder melden.
+
 ## Automatische mail (Resend)
 
 Ochtendmails, updates en bevestigingen van alle projecten staan in de stand onder `automatisch`: per stroom (afzender en onderwerp) verstuurd, bezorgd, kliks, bounces en klachten over 7 dagen, en een lijst `werk` met wat aandacht vraagt. Werk je aan een project met zo'n mail: lees die lijst en pak het punt van jouw stroom op als proef in het project zelf. Geopend is alleen een aanwijzing en telt niet mee voor een oordeel.
