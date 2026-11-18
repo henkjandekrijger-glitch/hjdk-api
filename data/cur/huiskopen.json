@@ -1,6 +1,6 @@
 {
  "id": "huiskopen",
- "peildatum": "2026-11-13",
+ "peildatum": "2026-11-18",
  "onderwerp": {
   "nl": "makelaar",
   "en": "real estate agent",
@@ -332,7 +332,7 @@
      "score": 4.7,
      "max": 5,
      "aantal": 130,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/century-21-1-real-estate"
     }
    ],
@@ -395,7 +395,7 @@
      "score": 5,
      "max": 5,
      "aantal": 23,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/keller-williams-curacao"
     }
    ],
@@ -452,7 +452,7 @@
      "score": 4.8,
      "max": 5,
      "aantal": 8,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/curacao-sotheby-s-international-realty"
     }
    ],
@@ -623,7 +623,7 @@
      "score": 3.8,
      "max": 5,
      "aantal": 18,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/new-winds-realty"
     }
    ],
@@ -677,7 +677,7 @@
      "score": 3.5,
      "max": 5,
      "aantal": 10,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/landmark-real-estate-nv"
     }
    ],
@@ -804,7 +804,7 @@
      "score": 5,
      "max": 5,
      "aantal": 40,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/palmstone-real-estate-en-appraisals-curacao"
     }
    ],
@@ -852,6 +852,13 @@
      "de": "Villen, Familienhäuser, Kapitalanlagen",
      "es": "villas, casas familiares, inversiones",
      "pt": "villas, casas de família, investimentos"
+    },
+    {
+     "nl": "adres 35A Pietermaai, Willemstad, tel. +599 9 668 9500 (Google Maps, 2026-11-18)",
+     "en": "address 35A Pietermaai, Willemstad, tel. +599 9 668 9500 (Google Maps, 2026-11-18)",
+     "de": "Adresse 35A Pietermaai, Willemstad, Tel. +599 9 668 9500 (Google Maps, 2026-11-18)",
+     "es": "dirección 35A Pietermaai, Willemstad, tel. +599 9 668 9500 (Google Maps, 2026-11-18)",
+     "pt": "endereço 35A Pietermaai, Willemstad, tel. +599 9 668 9500 (Google Maps, 2026-11-18)"
     }
    ],
    "scores": [
@@ -860,7 +867,7 @@
      "score": 5,
      "max": 5,
      "aantal": 45,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/moret-real-estate"
     }
    ],
@@ -881,7 +888,8 @@
    "bronnen": [
     "https://www.curacaopride.org/?p=11060",
     "https://caribbeanhousehunt.com/curacao/realtors/",
-    "https://veerisestate.com/real-estate-agents-on-curacao/"
+    "https://veerisestate.com/real-estate-agents-on-curacao/",
+    "https://curacao.day/en/businesses/real-estate-agency/moret-real-estate"
    ]
   },
   {
@@ -905,7 +913,7 @@
      "score": 4.9,
      "max": 5,
      "aantal": 19,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/sun-life-real-estate-curacao"
     }
    ],
@@ -949,7 +957,7 @@
      "score": 5,
      "max": 5,
      "aantal": 11,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/firstbrick-curacao"
     }
    ],
@@ -1092,6 +1100,13 @@
      "de": "berät zu Grundstücken in Veeris Estate",
      "es": "asesora sobre terrenos en Veeris Estate",
      "pt": "assessora sobre terrenos no Veeris Estate"
+    },
+    {
+     "nl": "adres Kaminda Willems J. Cratz 32, Willemstad, tel. +599 9 846 9195 (Google Maps, 2026-11-18)",
+     "en": "address Kaminda Willems J. Cratz 32, Willemstad, tel. +599 9 846 9195 (Google Maps, 2026-11-18)",
+     "de": "Adresse Kaminda Willems J. Cratz 32, Willemstad, Tel. +599 9 846 9195 (Google Maps, 2026-11-18)",
+     "es": "dirección Kaminda Willems J. Cratz 32, Willemstad, tel. +599 9 846 9195 (Google Maps, 2026-11-18)",
+     "pt": "endereço Kaminda Willems J. Cratz 32, Willemstad, tel. +599 9 846 9195 (Google Maps, 2026-11-18)"
     }
    ],
    "scores": [
@@ -1100,7 +1115,7 @@
      "score": 4.8,
      "max": 5,
      "aantal": 38,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/livinggoed-real-estate-curacao"
     }
    ],
@@ -1120,7 +1135,8 @@
    },
    "bronnen": [
     "https://caribbeanhousehunt.com/curacao/realtors/",
-    "https://veerisestate.com/real-estate-agents-on-curacao/"
+    "https://veerisestate.com/real-estate-agents-on-curacao/",
+    "https://curacao.day/en/businesses/real-estate-agency/livinggoed-real-estate-curacao"
    ]
   },
   {
@@ -1146,7 +1162,7 @@
      "score": 4.6,
      "max": 5,
      "aantal": 24,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/ruseler-makelaars-curacao"
     }
    ],
@@ -1191,7 +1207,7 @@
      "score": 4.4,
      "max": 5,
      "aantal": 27,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/nick-hoetmer"
     }
    ],
@@ -1235,7 +1251,7 @@
      "score": 4.6,
      "max": 5,
      "aantal": 8,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/simmer-real-estate"
     }
    ],
@@ -1344,7 +1360,7 @@
      "score": 4.4,
      "max": 5,
      "aantal": 26,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/caresto-real-estate-curacao"
     }
    ],
@@ -1384,14 +1400,22 @@
     "nl-sprekend"
    ],
    "prijs": null,
-   "feiten": [],
+   "feiten": [
+    {
+     "nl": "adres Top Business Center 199, Caracasbaaiweg, Willemstad, tel. +599 9 650 5711 (Google Maps, 2026-11-18)",
+     "en": "address Top Business Center 199, Caracasbaaiweg, Willemstad, tel. +599 9 650 5711 (Google Maps, 2026-11-18)",
+     "de": "Adresse Top Business Center 199, Caracasbaaiweg, Willemstad, Tel. +599 9 650 5711 (Google Maps, 2026-11-18)",
+     "es": "dirección Top Business Center 199, Caracasbaaiweg, Willemstad, tel. +599 9 650 5711 (Google Maps, 2026-11-18)",
+     "pt": "endereço Top Business Center 199, Caracasbaaiweg, Willemstad, tel. +599 9 650 5711 (Google Maps, 2026-11-18)"
+    }
+   ],
    "scores": [
     {
      "platform": "Google",
      "score": 4.4,
      "max": 5,
      "aantal": 11,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/topmakelaar-curacao"
     }
    ],
@@ -1413,7 +1437,8 @@
     "https://caribbeanhousehunt.com/curacao/realtors/",
     "https://www.naarcuracao.com/wonen-curacao/huis-kopen-curacao/",
     "https://veerisestate.com/real-estate-agents-on-curacao/",
-    "https://caribbeanislandliving.com/en/realtors"
+    "https://caribbeanislandliving.com/en/realtors",
+    "https://curacao.day/en/businesses/real-estate-agency/topmakelaar-curacao"
    ]
   },
   {
@@ -1500,7 +1525,7 @@
      "score": 4.3,
      "max": 5,
      "aantal": 12,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/ambiente-real-estate-makelaar-broker-curacao"
     }
    ],
@@ -1704,14 +1729,22 @@
    "plaats": "Willemstad (Emancipatie Boulevard 25)",
    "tags": [],
    "prijs": null,
-   "feiten": [],
+   "feiten": [
+    {
+     "nl": "adres 25 Emancipatie Boulevard, Willemstad, tel. +599 9 737 6244 (Google Maps, 2026-11-18)",
+     "en": "address 25 Emancipatie Boulevard, Willemstad, tel. +599 9 737 6244 (Google Maps, 2026-11-18)",
+     "de": "Adresse 25 Emancipatie Boulevard, Willemstad, Tel. +599 9 737 6244 (Google Maps, 2026-11-18)",
+     "es": "dirección 25 Emancipatie Boulevard, Willemstad, tel. +599 9 737 6244 (Google Maps, 2026-11-18)",
+     "pt": "endereço 25 Emancipatie Boulevard, Willemstad, tel. +599 9 737 6244 (Google Maps, 2026-11-18)"
+    }
+   ],
    "scores": [
     {
      "platform": "Google",
      "score": 3.2,
      "max": 5,
      "aantal": 9,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/joubert-realty"
     }
    ],
@@ -1731,7 +1764,8 @@
    },
    "bronnen": [
     "https://caribbeanhousehunt.com/curacao/realtors/",
-    "https://veerisestate.com/real-estate-agents-on-curacao/"
+    "https://veerisestate.com/real-estate-agents-on-curacao/",
+    "https://curacao.day/en/businesses/real-estate-agency/joubert-realty"
    ]
   },
   {
@@ -1883,7 +1917,7 @@
      "score": 5,
      "max": 5,
      "aantal": 10,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/sunset-realtors"
     }
    ],
@@ -2363,7 +2397,7 @@
      "score": 4.3,
      "max": 5,
      "aantal": 51,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/dushi-homes-curacao"
     }
    ],
@@ -2406,7 +2440,7 @@
      "score": 4.8,
      "max": 5,
      "aantal": 8,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/els-van-barneveld"
     }
    ],
@@ -2483,7 +2517,7 @@
      "score": 4.4,
      "max": 5,
      "aantal": 14,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/gs-real-estate-b-v"
     }
    ],
@@ -2560,7 +2594,7 @@
      "score": 4,
      "max": 5,
      "aantal": 5,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/novo-casa-realty-n-v"
     }
    ],
@@ -2715,7 +2749,7 @@
      "score": 4.3,
      "max": 5,
      "aantal": 6,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/smart-homes-realty"
     }
    ],
@@ -2792,7 +2826,7 @@
      "score": 4,
      "max": 5,
      "aantal": 4,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/hopi-bon-real-estate"
     }
    ],
@@ -2940,7 +2974,7 @@
      "score": 4.8,
      "max": 5,
      "aantal": 10,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/droomhuis-curacao"
     }
    ],
@@ -3158,7 +3192,7 @@
      "score": 4.6,
      "max": 5,
      "aantal": 17,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/het-woonburo"
     }
    ],
@@ -3201,7 +3235,7 @@
      "score": 3.2,
      "max": 5,
      "aantal": 6,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/halabi-real-estate"
     }
    ],
@@ -3244,7 +3278,7 @@
      "score": 3.8,
      "max": 5,
      "aantal": 4,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/real-estate-agency/prudential-real-estate-curacao"
     }
    ],
@@ -3535,6 +3569,86 @@
     "de": "Die Agenturen listeten gut 800 Häuser mit einem mittleren Angebotspreis von rund €559,000 oder durchschnittlich €2,520 pro Quadratmeter. Die meisten Angebote liegen in Coral Estate, Jan Thiel und Blue Bay.",
     "es": "Las agencias listaron poco más de 800 casas con un precio de oferta mediano de unos €559,000, o €2,520 por metro cuadrado en promedio. La mayoría de las propiedades están en Coral Estate, Jan Thiel y Blue Bay.",
     "pt": "As imobiliárias listaram pouco mais de 800 casas, com preço mediano de anúncio de cerca de €559,000, ou €2,520 por metro quadrado em média. A maioria dos anúncios fica em Coral Estate, Jan Thiel e Blue Bay."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is Moret Real Estate?",
+    "en": "What is Moret Real Estate?",
+    "de": "Was ist Moret Real Estate?",
+    "es": "¿Qué es Moret Real Estate?",
+    "pt": "O que é a Moret Real Estate?"
+   },
+   "a": {
+    "nl": "Een makelaar op Curaçao met kantoor op 35A Pietermaai, Willemstad (tel. +599 9 668 9500, moretrealestate.com). Google-score 5,0 uit 5 op basis van 45 reviews (Google Maps, 2026-11-18).",
+    "en": "A real estate agency in Curaçao with an office at 35A Pietermaai, Willemstad (tel. +599 9 668 9500, moretrealestate.com). Google score 5.0 out of 5 from 45 reviews (Google Maps, 2026-11-18).",
+    "de": "Ein Immobilienmakler auf Curaçao mit Büro in 35A Pietermaai, Willemstad (Tel. +599 9 668 9500, moretrealestate.com). Google-Bewertung 5,0 von 5 aus 45 Rezensionen (Google Maps, 2026-11-18).",
+    "es": "Una inmobiliaria en Curazao con oficina en 35A Pietermaai, Willemstad (tel. +599 9 668 9500, moretrealestate.com). Puntuación en Google 5,0 de 5 con 45 reseñas (Google Maps, 2026-11-18).",
+    "pt": "Uma imobiliária em Curaçao com escritório em 35A Pietermaai, Willemstad (tel. +599 9 668 9500, moretrealestate.com). Nota no Google 5,0 de 5 com 45 avaliações (Google Maps, 2026-11-18)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is Joubert Realty?",
+    "en": "What is Joubert Realty?",
+    "de": "Was ist Joubert Realty?",
+    "es": "¿Qué es Joubert Realty?",
+    "pt": "O que é a Joubert Realty?"
+   },
+   "a": {
+    "nl": "Een makelaar op Curaçao met kantoor op 25 Emancipatie Boulevard, Willemstad (tel. +599 9 737 6244, joubertrealty.com). Google-score 3,2 uit 5 op basis van 9 reviews (Google Maps, 2026-11-18).",
+    "en": "A real estate agency in Curaçao with an office at 25 Emancipatie Boulevard, Willemstad (tel. +599 9 737 6244, joubertrealty.com). Google score 3.2 out of 5 from 9 reviews (Google Maps, 2026-11-18).",
+    "de": "Ein Immobilienmakler auf Curaçao mit Büro in 25 Emancipatie Boulevard, Willemstad (Tel. +599 9 737 6244, joubertrealty.com). Google-Bewertung 3,2 von 5 aus 9 Rezensionen (Google Maps, 2026-11-18).",
+    "es": "Una inmobiliaria en Curazao con oficina en 25 Emancipatie Boulevard, Willemstad (tel. +599 9 737 6244, joubertrealty.com). Puntuación en Google 3,2 de 5 con 9 reseñas (Google Maps, 2026-11-18).",
+    "pt": "Uma imobiliária em Curaçao com escritório em 25 Emancipatie Boulevard, Willemstad (tel. +599 9 737 6244, joubertrealty.com). Nota no Google 3,2 de 5 com 9 avaliações (Google Maps, 2026-11-18)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is TOPmakelaar Curaçao?",
+    "en": "What is TOPmakelaar Curaçao?",
+    "de": "Was ist TOPmakelaar Curaçao?",
+    "es": "¿Qué es TOPmakelaar Curaçao?",
+    "pt": "O que é a TOPmakelaar Curaçao?"
+   },
+   "a": {
+    "nl": "Een makelaar op Curaçao met kantoor op Top Business Center 199, Caracasbaaiweg, Willemstad (tel. +599 9 650 5711, topmakelaarcuracao.com). Google-score 4,4 uit 5 op basis van 11 reviews (Google Maps, 2026-11-18).",
+    "en": "A real estate agency in Curaçao with an office at Top Business Center 199, Caracasbaaiweg, Willemstad (tel. +599 9 650 5711, topmakelaarcuracao.com). Google score 4.4 out of 5 from 11 reviews (Google Maps, 2026-11-18).",
+    "de": "Ein Immobilienmakler auf Curaçao mit Büro in Top Business Center 199, Caracasbaaiweg, Willemstad (Tel. +599 9 650 5711, topmakelaarcuracao.com). Google-Bewertung 4,4 von 5 aus 11 Rezensionen (Google Maps, 2026-11-18).",
+    "es": "Una inmobiliaria en Curazao con oficina en Top Business Center 199, Caracasbaaiweg, Willemstad (tel. +599 9 650 5711, topmakelaarcuracao.com). Puntuación en Google 4,4 de 5 con 11 reseñas (Google Maps, 2026-11-18).",
+    "pt": "Uma imobiliária em Curaçao com escritório em Top Business Center 199, Caracasbaaiweg, Willemstad (tel. +599 9 650 5711, topmakelaarcuracao.com). Nota no Google 4,4 de 5 com 11 avaliações (Google Maps, 2026-11-18)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is Livinggoed Real Estate?",
+    "en": "What is Livinggoed Real Estate?",
+    "de": "Was ist Livinggoed Real Estate?",
+    "es": "¿Qué es Livinggoed Real Estate?",
+    "pt": "O que é a Livinggoed Real Estate?"
+   },
+   "a": {
+    "nl": "Een makelaar op Curaçao met kantoor op Kaminda Willems J. Cratz 32, Willemstad (tel. +599 9 846 9195, livinggoed.com). Google-score 4,8 uit 5 op basis van 38 reviews (Google Maps, 2026-11-18).",
+    "en": "A real estate agency in Curaçao with an office at Kaminda Willems J. Cratz 32, Willemstad (tel. +599 9 846 9195, livinggoed.com). Google score 4.8 out of 5 from 38 reviews (Google Maps, 2026-11-18).",
+    "de": "Ein Immobilienmakler auf Curaçao mit Büro in Kaminda Willems J. Cratz 32, Willemstad (Tel. +599 9 846 9195, livinggoed.com). Google-Bewertung 4,8 von 5 aus 38 Rezensionen (Google Maps, 2026-11-18).",
+    "es": "Una inmobiliaria en Curazao con oficina en Kaminda Willems J. Cratz 32, Willemstad (tel. +599 9 846 9195, livinggoed.com). Puntuación en Google 4,8 de 5 con 38 reseñas (Google Maps, 2026-11-18).",
+    "pt": "Uma imobiliária em Curaçao com escritório em Kaminda Willems J. Cratz 32, Willemstad (tel. +599 9 846 9195, livinggoed.com). Nota no Google 4,8 de 5 com 38 avaliações (Google Maps, 2026-11-18)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke makelaar op Curaçao heeft de beste reviews?",
+    "en": "Which real estate agent in Curaçao has the best reviews?",
+    "de": "Welcher Makler auf Curaçao hat die besten Bewertungen?",
+    "es": "¿Qué agente inmobiliario de Curazao tiene las mejores reseñas?",
+    "pt": "Qual corretor de Curaçao tem as melhores avaliações?"
+   },
+   "a": {
+    "nl": "Met minstens 20 Google-reviews scoren Moret Real Estate (5,0 uit 45), Palmstone Real Estate (5,0 uit 40) en Keller Williams Curaçao (5,0 uit 23) het hoogst. De meeste reviews heeft Century 21 #1 Real Estate (4,7 uit 130). Bron: Google Maps, 2026-11-18.",
+    "en": "With at least 20 Google reviews, Moret Real Estate (5.0 from 45), Palmstone Real Estate (5.0 from 40) and Keller Williams Curaçao (5.0 from 23) score highest. Century 21 #1 Real Estate has the most reviews (4.7 from 130). Source: Google Maps, 2026-11-18.",
+    "de": "Mit mindestens 20 Google-Rezensionen schneiden Moret Real Estate (5,0 aus 45), Palmstone Real Estate (5,0 aus 40) und Keller Williams Curaçao (5,0 aus 23) am besten ab. Die meisten Rezensionen hat Century 21 #1 Real Estate (4,7 aus 130). Quelle: Google Maps, 2026-11-18.",
+    "es": "Con al menos 20 reseñas en Google, Moret Real Estate (5,0 de 45), Palmstone Real Estate (5,0 de 40) y Keller Williams Curaçao (5,0 de 23) tienen la mejor puntuación. Century 21 #1 Real Estate tiene más reseñas (4,7 de 130). Fuente: Google Maps, 2026-11-18.",
+    "pt": "Com pelo menos 20 avaliações no Google, a Moret Real Estate (5,0 de 45), a Palmstone Real Estate (5,0 de 40) e a Keller Williams Curaçao (5,0 de 23) têm as melhores notas. A Century 21 #1 Real Estate tem mais avaliações (4,7 de 130). Fonte: Google Maps, 2026-11-18."
    }
   }
  ],

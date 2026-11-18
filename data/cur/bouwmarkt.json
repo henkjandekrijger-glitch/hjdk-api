@@ -1,0 +1,1770 @@
+{
+ "id": "bouwmarkt",
+ "peildatum": "2026-11-18",
+ "onderwerp": {
+  "nl": "bouwmarkten en ijzerwaren",
+  "en": "hardware and building stores",
+  "de": "Baumärkte und Eisenwaren",
+  "es": "ferreterías y materiales de construcción",
+  "pt": "ferragens e materiais de construção"
+ },
+ "h1": {
+  "nl": "Bouwmarkten en ijzerwaren op Curaçao: waar kies je?",
+  "en": "Hardware and building stores in Curaçao: where should you go?",
+  "de": "Baumärkte und Eisenwaren auf Curaçao: Wohin gehst du?",
+  "es": "Ferreterías y materiales de construcción en Curazao: ¿adónde vas?",
+  "pt": "Ferragens e materiais de construção em Curaçao: aonde você vai?"
+ },
+ "titel": {
+  "nl": "Bouwmarkten op Curaçao: {n} zaken vergeleken",
+  "en": "Hardware stores in Curaçao: {n} places compared",
+  "de": "Baumärkte auf Curaçao: {n} Geschäfte im Vergleich",
+  "es": "Ferreterías en Curazao: {n} tiendas comparadas",
+  "pt": "Lojas de ferragens em Curaçao: {n} lojas comparadas"
+ },
+ "metaDesc": {
+  "nl": "Bouwmarkten en ijzerwaren op Curaçao: {n} zaken met Google-scores, adressen en telefoonnummers, van Kooyman, Building Depot en Smart Home Depot tot Sherwin-Williams en andere verfzaken.",
+  "en": "Hardware and building stores in Curaçao: {n} places with Google scores, addresses and phone numbers, from Kooyman, Building Depot and Smart Home Depot to Sherwin-Williams and other paint shops.",
+  "de": "Baumärkte und Eisenwaren auf Curaçao: {n} Geschäfte mit Google-Bewertungen, Adressen und Telefonnummern, von Kooyman, Building Depot und Smart Home Depot bis Sherwin-Williams und anderen Farbengeschäften.",
+  "es": "Ferreterías y materiales de construcción en Curazao: {n} tiendas con puntuaciones de Google, direcciones y teléfonos, de Kooyman, Building Depot y Smart Home Depot a Sherwin-Williams y otras tiendas de pintura.",
+  "pt": "Ferragens e materiais de construção em Curaçao: {n} lojas com notas do Google, endereços e telefones, de Kooyman, Building Depot e Smart Home Depot a Sherwin-Williams e outras lojas de tintas."
+ },
+ "kort": {
+  "nl": "We vergelijken 21 bouwmarkten, ijzerwarenwinkels en verfzaken op Curaçao met minstens 10 Google-reviews. Het best beoordeeld zijn Sherwin-Williams aan de Caracasbaaiweg (4,6 uit 124 reviews) en aan de Schottegatweg West (4,6 uit 105 reviews), daarna Hardware Store aan de Gosieweg (4,6 uit 26 reviews). De grote bouwmarkten hebben veruit de meeste reviews: Kooyman Megastore Zeelandia (4,5 uit 1.392 reviews), Building Depot (4,3 uit 1.339 reviews) en Kooyman Megastore Jan Noorduyn (4,5 uit 845 reviews). Smart Home Depot (Japan N.V.) heeft 4,0 uit 254 reviews. Bel of check de website voor je gaat.",
+  "en": "We compare 21 hardware stores, building material stores and paint shops in Curaçao with at least 10 Google reviews. Best rated are Sherwin-Williams on Caracasbaaiweg (4.6 from 124 reviews) and on Schottegatweg West (4.6 from 105 reviews), then Hardware Store on Gosieweg (4.6 from 26 reviews). The big building stores have by far the most reviews: Kooyman Megastore Zeelandia (4.5 from 1,392 reviews), Building Depot (4.3 from 1,339 reviews) and Kooyman Megastore Jan Noorduyn (4.5 from 845 reviews). Smart Home Depot (Japan N.V.) has 4.0 from 254 reviews. Call or check the website before you go.",
+  "de": "Wir vergleichen 21 Baumärkte, Eisenwarenhändler und Farbengeschäfte auf Curaçao mit mindestens 10 Google-Bewertungen. Am besten bewertet sind Sherwin-Williams an der Caracasbaaiweg (4,6 aus 124 Bewertungen) und an der Schottegatweg West (4,6 aus 105 Bewertungen), danach Hardware Store an der Gosieweg (4,6 aus 26 Bewertungen). Die großen Baumärkte haben mit Abstand die meisten Bewertungen: Kooyman Megastore Zeelandia (4,5 aus 1.392 Bewertungen), Building Depot (4,3 aus 1.339 Bewertungen) und Kooyman Megastore Jan Noorduyn (4,5 aus 845 Bewertungen). Smart Home Depot (Japan N.V.) hat 4,0 aus 254 Bewertungen. Ruf an oder prüfe die Website, bevor du losgehst.",
+  "es": "Comparamos 21 ferreterías, tiendas de materiales de construcción y tiendas de pintura en Curazao con al menos 10 reseñas en Google. Mejor puntuadas: Sherwin-Williams en Caracasbaaiweg (4,6 sobre 124 reseñas) y en Schottegatweg West (4,6 sobre 105 reseñas), después Hardware Store en Gosieweg (4,6 sobre 26 reseñas). Las grandes tiendas de construcción tienen con diferencia más reseñas: Kooyman Megastore Zeelandia (4,5 sobre 1.392 reseñas), Building Depot (4,3 sobre 1.339 reseñas) y Kooyman Megastore Jan Noorduyn (4,5 sobre 845 reseñas). Smart Home Depot (Japan N.V.) tiene 4,0 sobre 254 reseñas. Llama o consulta la web antes de ir.",
+  "pt": "Comparamos 21 lojas de ferragens, materiais de construção e tintas em Curaçao com pelo menos 10 avaliações no Google. Mais bem avaliadas: Sherwin-Williams na Caracasbaaiweg (4,6 em 124 avaliações) e na Schottegatweg West (4,6 em 105 avaliações), depois a Hardware Store na Gosieweg (4,6 em 26 avaliações). As grandes lojas de construção têm de longe mais avaliações: Kooyman Megastore Zeelandia (4,5 em 1.392 avaliações), Building Depot (4,3 em 1.339 avaliações) e Kooyman Megastore Jan Noorduyn (4,5 em 845 avaliações). A Smart Home Depot (Japan N.V.) tem 4,0 em 254 avaliações. Ligue ou veja o site antes de ir."
+ },
+ "lede": {
+  "nl": "Voor verf scoort Sherwin-Williams het best (4,6 en 4,6). Voor bouwmaterialen kiezen de meeste Curaçaoënaars Kooyman en Building Depot: samen goed voor duizenden reviews, met 4,5 voor Kooyman Zeelandia en 4,3 voor Building Depot. Smart Home Depot (Japan N.V.) komt op 4,0.",
+  "en": "For paint, Sherwin-Williams scores best (4.6 and 4.6). For building materials, most people on Curaçao go to Kooyman and Building Depot: together thousands of reviews, with 4.5 for Kooyman Zeelandia and 4.3 for Building Depot. Smart Home Depot (Japan N.V.) gets 4.0.",
+  "de": "Bei Farbe schneidet Sherwin-Williams am besten ab (4,6 und 4,6). Für Baumaterial gehen die meisten auf Curaçao zu Kooyman und Building Depot: zusammen Tausende Bewertungen, mit 4,5 für Kooyman Zeelandia und 4,3 für Building Depot. Smart Home Depot (Japan N.V.) kommt auf 4,0.",
+  "es": "En pintura, Sherwin-Williams puntúa mejor (4,6 y 4,6). Para materiales de construcción, la mayoría en Curazao va a Kooyman y Building Depot: juntas, miles de reseñas, con 4,5 para Kooyman Zeelandia y 4,3 para Building Depot. Smart Home Depot (Japan N.V.) tiene 4,0.",
+  "pt": "Para tinta, a Sherwin-Williams tem a melhor nota (4,6 e 4,6). Para materiais de construção, a maioria em Curaçao vai à Kooyman e à Building Depot: juntas, milhares de avaliações, com 4,5 para a Kooyman Zeelandia e 4,3 para a Building Depot. A Smart Home Depot (Japan N.V.) tem 4,0."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Wat heb je nodig?",
+    "en": "What do you need?",
+    "de": "Was brauchst du?",
+    "es": "¿Qué necesitas?",
+    "pt": "Do que você precisa?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anything",
+      "de": "Egal",
+      "es": "Cualquier cosa",
+      "pt": "Qualquer coisa"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Bouwmaterialen",
+      "en": "Building materials",
+      "de": "Baumaterial",
+      "es": "Materiales de construcción",
+      "pt": "Materiais de construção"
+     },
+     "plus": [
+      "bouw"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Verf",
+      "en": "Paint",
+      "de": "Farbe",
+      "es": "Pintura",
+      "pt": "Tinta"
+     },
+     "plus": [
+      "verf"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Gereedschap en bevestigingsmateriaal",
+      "en": "Tools and fasteners",
+      "de": "Werkzeug und Befestigungsmaterial",
+      "es": "Herramientas y fijaciones",
+      "pt": "Ferramentas e fixadores"
+     },
+     "plus": [
+      "gereedschap"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Ijzerwaren en kleine klussen",
+      "en": "Hardware and small jobs",
+      "de": "Eisenwaren und kleine Arbeiten",
+      "es": "Ferretería y trabajos pequeños",
+      "pt": "Ferragens e pequenos trabalhos"
+     },
+     "plus": [
+      "ijzerwaren"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat voor zaak?",
+    "en": "What kind of place?",
+    "de": "Was für ein Geschäft?",
+    "es": "¿Qué tipo de tienda?",
+    "pt": "Que tipo de loja?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Anything",
+      "de": "Egal",
+      "es": "Cualquier cosa",
+      "pt": "Qualquer coisa"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Grote keten met meerdere winkels",
+      "en": "Big chain with several stores",
+      "de": "Große Kette mit mehreren Filialen",
+      "es": "Cadena grande con varias tiendas",
+      "pt": "Rede grande com várias lojas"
+     },
+     "plus": [
+      "keten"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Lokale zaak",
+      "en": "Local shop",
+      "de": "Lokales Geschäft",
+      "es": "Tienda local",
+      "pt": "Loja local"
+     },
+     "plus": [
+      "lokaal"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "sherwin-williams-paint-store",
+   "naam": "Sherwin-Williams Paint Store",
+   "url": "https://curacao.day/en/businesses/paint-store/sherwin-williams-paint-store",
+   "soort": {
+    "nl": "verfwinkel",
+    "en": "paint store",
+    "de": "Farbengeschäft",
+    "es": "tienda de pinturas",
+    "pt": "loja de tintas"
+   },
+   "plaats": "Caracasbaaiweg",
+   "tags": [
+    "verf",
+    "keten"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 55D Caracasbaaiweg, Willemstad, Curaçao",
+     "en": "Address (Google): 55D Caracasbaaiweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 55D Caracasbaaiweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 55D Caracasbaaiweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 55D Caracasbaaiweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +5997880031",
+     "en": "Phone (Google): +5997880031",
+     "de": "Telefon (Google): +5997880031",
+     "es": "Teléfono (Google): +5997880031",
+     "pt": "Telefone (Google): +5997880031"
+    },
+    {
+     "nl": "Website (Google): sherwin-williams.com",
+     "en": "Website (Google): sherwin-williams.com",
+     "de": "Website (Google): sherwin-williams.com",
+     "es": "Sitio web (Google): sherwin-williams.com",
+     "pt": "Site (Google): sherwin-williams.com"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 124,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/paint-store/sherwin-williams-paint-store"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/paint-store/sherwin-williams-paint-store",
+    "http://www.sherwin-williams.com/store-locator/paint-store/salina/sali/2824"
+   ]
+  },
+  {
+   "id": "sherwin-williams-paint-store-2",
+   "naam": "Sherwin-Williams Paint Store",
+   "url": "https://curacao.day/en/businesses/paint-store/sherwin-williams-paint-store-2",
+   "soort": {
+    "nl": "verfwinkel",
+    "en": "paint store",
+    "de": "Farbengeschäft",
+    "es": "tienda de pinturas",
+    "pt": "loja de tintas"
+   },
+   "plaats": "Schottegatweg West",
+   "tags": [
+    "verf",
+    "keten"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Schottegatweg West 371-C, Willemstad, Curaçao",
+     "en": "Address (Google): Schottegatweg West 371-C, Willemstad, Curaçao",
+     "de": "Adresse (Google): Schottegatweg West 371-C, Willemstad, Curaçao",
+     "es": "Dirección (Google): Schottegatweg West 371-C, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Schottegatweg West 371-C, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 868 0151",
+     "en": "Phone (Google): +599 9 868 0151",
+     "de": "Telefon (Google): +599 9 868 0151",
+     "es": "Teléfono (Google): +599 9 868 0151",
+     "pt": "Telefone (Google): +599 9 868 0151"
+    },
+    {
+     "nl": "Website (Google): sherwin-williams.com",
+     "en": "Website (Google): sherwin-williams.com",
+     "de": "Website (Google): sherwin-williams.com",
+     "es": "Sitio web (Google): sherwin-williams.com",
+     "pt": "Site (Google): sherwin-williams.com"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 105,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/paint-store/sherwin-williams-paint-store-2"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/paint-store/sherwin-williams-paint-store-2",
+    "http://www.sherwin-williams.com/store-locator/paint-store/willemstad/will/2887"
+   ]
+  },
+  {
+   "id": "hardware-store",
+   "naam": "Hardware Store",
+   "url": "https://curacao.day/en/businesses/hardware-store/hardware-store",
+   "soort": {
+    "nl": "ijzerwarenwinkel",
+    "en": "hardware store",
+    "de": "Eisenwarenhandel",
+    "es": "ferretería",
+    "pt": "loja de ferragens"
+   },
+   "plaats": "Gosieweg",
+   "tags": [
+    "ijzerwaren",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Gosieweg, Willemstad, Curaçao",
+     "en": "Address (Google): Gosieweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): Gosieweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): Gosieweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Gosieweg, Willemstad, Curaçao"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 26,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/hardware-store/hardware-store"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hardware-store/hardware-store"
+   ]
+  },
+  {
+   "id": "door-design-curacao",
+   "naam": "Door Design Curacao",
+   "url": "https://curacao.day/en/businesses/hardware-store/door-design-curacao",
+   "soort": {
+    "nl": "ijzerwarenwinkel",
+    "en": "hardware store",
+    "de": "Eisenwarenhandel",
+    "es": "ferretería",
+    "pt": "loja de ferragens"
+   },
+   "plaats": "Cas Coraweg",
+   "tags": [
+    "ijzerwaren",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 39B Cas Coraweg, Willemstad, Curaçao",
+     "en": "Address (Google): 39B Cas Coraweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 39B Cas Coraweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 39B Cas Coraweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 39B Cas Coraweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 738 5287",
+     "en": "Phone (Google): +599 9 738 5287",
+     "de": "Telefon (Google): +599 9 738 5287",
+     "es": "Teléfono (Google): +599 9 738 5287",
+     "pt": "Telefone (Google): +599 9 738 5287"
+    },
+    {
+     "nl": "Heeft alleen een Facebookpagina als website (Google)",
+     "en": "Has only a Facebook page as its website (Google)",
+     "de": "Hat nur eine Facebook-Seite als Website (Google)",
+     "es": "Solo tiene una página de Facebook como sitio web (Google)",
+     "pt": "Tem apenas uma página no Facebook como site (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 24,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/hardware-store/door-design-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hardware-store/door-design-curacao",
+    "https://www.facebook.com/doordesigncuracao/"
+   ]
+  },
+  {
+   "id": "pinturas-uno-curacao",
+   "naam": "Pinturas Uno Curacao",
+   "url": "https://curacao.day/en/businesses/paint-store/pinturas-uno-curacao",
+   "soort": {
+    "nl": "verfwinkel",
+    "en": "paint store",
+    "de": "Farbengeschäft",
+    "es": "tienda de pinturas",
+    "pt": "loja de tintas"
+   },
+   "plaats": "Nieuwe Caracasbaaiweg",
+   "tags": [
+    "verf",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 22C Nieuwe Caracasbaaiweg, Willemstad, Curaçao",
+     "en": "Address (Google): 22C Nieuwe Caracasbaaiweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 22C Nieuwe Caracasbaaiweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 22C Nieuwe Caracasbaaiweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 22C Nieuwe Caracasbaaiweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 4446",
+     "en": "Phone (Google): +599 9 461 4446",
+     "de": "Telefon (Google): +599 9 461 4446",
+     "es": "Teléfono (Google): +599 9 461 4446",
+     "pt": "Telefone (Google): +599 9 461 4446"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 14,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/paint-store/pinturas-uno-curacao"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/paint-store/pinturas-uno-curacao"
+   ]
+  },
+  {
+   "id": "kooyman-megastore-zeelandia",
+   "naam": "Kooyman Megastore Zeelandia",
+   "url": "https://curacao.day/en/businesses/building-materials-supplier/kooyman-megastore-zeelandia",
+   "soort": {
+    "nl": "bouwmarkt",
+    "en": "building materials store",
+    "de": "Baumarkt",
+    "es": "tienda de materiales de construcción",
+    "pt": "loja de materiais de construção"
+   },
+   "plaats": "Kaya W.F.G. Mensing",
+   "tags": [
+    "bouw",
+    "keten"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 44 Kaya W.F.G. Mensing, Willemstad, Curaçao",
+     "en": "Address (Google): 44 Kaya W.F.G. Mensing, Willemstad, Curaçao",
+     "de": "Adresse (Google): 44 Kaya W.F.G. Mensing, Willemstad, Curaçao",
+     "es": "Dirección (Google): 44 Kaya W.F.G. Mensing, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 44 Kaya W.F.G. Mensing, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 3333",
+     "en": "Phone (Google): +599 9 461 3333",
+     "de": "Telefon (Google): +599 9 461 3333",
+     "es": "Teléfono (Google): +599 9 461 3333",
+     "pt": "Telefone (Google): +599 9 461 3333"
+    },
+    {
+     "nl": "Website (Google): kooymanbv.com",
+     "en": "Website (Google): kooymanbv.com",
+     "de": "Website (Google): kooymanbv.com",
+     "es": "Sitio web (Google): kooymanbv.com",
+     "pt": "Site (Google): kooymanbv.com"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 1392,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/building-materials-supplier/kooyman-megastore-zeelandia"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/building-materials-supplier/kooyman-megastore-zeelandia",
+    "https://www.kooymanbv.com/curacao_en/"
+   ]
+  },
+  {
+   "id": "kooyman-megastore-jan-noorduyn",
+   "naam": "Kooyman Megastore Jan Noorduyn",
+   "url": "https://curacao.day/en/businesses/building-materials-store/kooyman-megastore-jan-noorduyn",
+   "soort": {
+    "nl": "bouwmarkt",
+    "en": "building materials store",
+    "de": "Baumarkt",
+    "es": "tienda de materiales de construcción",
+    "pt": "loja de materiais de construção"
+   },
+   "plaats": "Jan Noorduynweg",
+   "tags": [
+    "bouw",
+    "keten"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 74 Jan Noorduynweg, Willemstad, Curaçao",
+     "en": "Address (Google): 74 Jan Noorduynweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 74 Jan Noorduynweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 74 Jan Noorduynweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 74 Jan Noorduynweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 3333",
+     "en": "Phone (Google): +599 9 461 3333",
+     "de": "Telefon (Google): +599 9 461 3333",
+     "es": "Teléfono (Google): +599 9 461 3333",
+     "pt": "Telefone (Google): +599 9 461 3333"
+    },
+    {
+     "nl": "Website (Google): kooymanbv.com",
+     "en": "Website (Google): kooymanbv.com",
+     "de": "Website (Google): kooymanbv.com",
+     "es": "Sitio web (Google): kooymanbv.com",
+     "pt": "Site (Google): kooymanbv.com"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 845,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/building-materials-store/kooyman-megastore-jan-noorduyn"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/building-materials-store/kooyman-megastore-jan-noorduyn",
+    "https://www.kooymanbv.com/curacao_en/"
+   ]
+  },
+  {
+   "id": "curacao-tools-en-fasteners",
+   "naam": "Curaçao Tools & Fasteners",
+   "url": "https://curacao.day/en/businesses/tool-store/curacao-tools-en-fasteners",
+   "soort": {
+    "nl": "gereedschapswinkel",
+    "en": "tool store",
+    "de": "Werkzeughandel",
+    "es": "tienda de herramientas",
+    "pt": "loja de ferramentas"
+   },
+   "plaats": "Santa Rosaweg",
+   "tags": [
+    "gereedschap",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Santa Rosaweg, Willemstad, Curaçao",
+     "en": "Address (Google): Santa Rosaweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): Santa Rosaweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): Santa Rosaweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Santa Rosaweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 737 5550",
+     "en": "Phone (Google): +599 9 737 5550",
+     "de": "Telefon (Google): +599 9 737 5550",
+     "es": "Teléfono (Google): +599 9 737 5550",
+     "pt": "Telefone (Google): +599 9 737 5550"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 36,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/tool-store/curacao-tools-en-fasteners"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/tool-store/curacao-tools-en-fasteners"
+   ]
+  },
+  {
+   "id": "punto-total",
+   "naam": "Punto Total",
+   "url": "https://curacao.day/en/businesses/building-materials-store/punto-total",
+   "soort": {
+    "nl": "bouwmarkt",
+    "en": "building materials store",
+    "de": "Baumarkt",
+    "es": "tienda de materiales de construcción",
+    "pt": "loja de materiais de construção"
+   },
+   "plaats": "Kaya Nathan",
+   "tags": [
+    "bouw",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Kaya Nathan, Willemstad, Curaçao",
+     "en": "Address (Google): Kaya Nathan, Willemstad, Curaçao",
+     "de": "Adresse (Google): Kaya Nathan, Willemstad, Curaçao",
+     "es": "Dirección (Google): Kaya Nathan, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Kaya Nathan, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 670 0801",
+     "en": "Phone (Google): +599 9 670 0801",
+     "de": "Telefon (Google): +599 9 670 0801",
+     "es": "Teléfono (Google): +599 9 670 0801",
+     "pt": "Telefone (Google): +599 9 670 0801"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 31,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/building-materials-store/punto-total"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/building-materials-store/punto-total"
+   ]
+  },
+  {
+   "id": "ferreteria-skerpene",
+   "naam": "Ferreteria Skerpene",
+   "url": "https://curacao.day/en/businesses/building-materials-store/ferreteria-skerpene",
+   "soort": {
+    "nl": "bouwmarkt",
+    "en": "building materials store",
+    "de": "Baumarkt",
+    "es": "tienda de materiales de construcción",
+    "pt": "loja de materiais de construção"
+   },
+   "plaats": "Kaya Fraternan di Skèrpènè",
+   "tags": [
+    "bouw",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 2 Kaya Fraternan di Skèrpènè, Willemstad, Curaçao",
+     "en": "Address (Google): 2 Kaya Fraternan di Skèrpènè, Willemstad, Curaçao",
+     "de": "Adresse (Google): 2 Kaya Fraternan di Skèrpènè, Willemstad, Curaçao",
+     "es": "Dirección (Google): 2 Kaya Fraternan di Skèrpènè, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 2 Kaya Fraternan di Skèrpènè, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 767 4422",
+     "en": "Phone (Google): +599 9 767 4422",
+     "de": "Telefon (Google): +599 9 767 4422",
+     "es": "Teléfono (Google): +599 9 767 4422",
+     "pt": "Telefone (Google): +599 9 767 4422"
+    },
+    {
+     "nl": "Website (Google): ferreterianv.com",
+     "en": "Website (Google): ferreterianv.com",
+     "de": "Website (Google): ferreterianv.com",
+     "es": "Sitio web (Google): ferreterianv.com",
+     "pt": "Site (Google): ferreterianv.com"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 17,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/building-materials-store/ferreteria-skerpene"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/building-materials-store/ferreteria-skerpene",
+    "https://www.ferreterianv.com/"
+   ]
+  },
+  {
+   "id": "united-paints-en-industrial-supplies-nv",
+   "naam": "United Paints & Industrial Supplies NV",
+   "url": "https://curacao.day/en/businesses/paint-store/united-paints-en-industrial-supplies-nv",
+   "soort": {
+    "nl": "verfwinkel",
+    "en": "paint store",
+    "de": "Farbengeschäft",
+    "es": "tienda de pinturas",
+    "pt": "loja de tintas"
+   },
+   "plaats": "Schottegatweg Oost",
+   "tags": [
+    "verf",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): #60 Schottegatweg Oost, Willemstad, Curaçao",
+     "en": "Address (Google): #60 Schottegatweg Oost, Willemstad, Curaçao",
+     "de": "Adresse (Google): #60 Schottegatweg Oost, Willemstad, Curaçao",
+     "es": "Dirección (Google): #60 Schottegatweg Oost, Willemstad, Curaçao",
+     "pt": "Endereço (Google): #60 Schottegatweg Oost, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 747 7530",
+     "en": "Phone (Google): +599 9 747 7530",
+     "de": "Telefon (Google): +599 9 747 7530",
+     "es": "Teléfono (Google): +599 9 747 7530",
+     "pt": "Telefone (Google): +599 9 747 7530"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 15,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/paint-store/united-paints-en-industrial-supplies-nv"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/paint-store/united-paints-en-industrial-supplies-nv"
+   ]
+  },
+  {
+   "id": "nijpro",
+   "naam": "Nijpro",
+   "url": "https://curacao.day/en/businesses/paint-store/nijpro",
+   "soort": {
+    "nl": "verfwinkel",
+    "en": "paint store",
+    "de": "Farbengeschäft",
+    "es": "tienda de pinturas",
+    "pt": "loja de tintas"
+   },
+   "plaats": "Schottegatweg Oost",
+   "tags": [
+    "verf",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 46 Schottegatweg Oost, Willemstad, Curaçao",
+     "en": "Address (Google): 46 Schottegatweg Oost, Willemstad, Curaçao",
+     "de": "Adresse (Google): 46 Schottegatweg Oost, Willemstad, Curaçao",
+     "es": "Dirección (Google): 46 Schottegatweg Oost, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 46 Schottegatweg Oost, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 736 7714",
+     "en": "Phone (Google): +599 9 736 7714",
+     "de": "Telefon (Google): +599 9 736 7714",
+     "es": "Teléfono (Google): +599 9 736 7714",
+     "pt": "Telefone (Google): +599 9 736 7714"
+    },
+    {
+     "nl": "Website (Google): yellowpages-curacao.com",
+     "en": "Website (Google): yellowpages-curacao.com",
+     "de": "Website (Google): yellowpages-curacao.com",
+     "es": "Sitio web (Google): yellowpages-curacao.com",
+     "pt": "Site (Google): yellowpages-curacao.com"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 17,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/paint-store/nijpro"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/paint-store/nijpro",
+    "https://www.yellowpages-curacao.com/mail/693/nijpro-n-v"
+   ]
+  },
+  {
+   "id": "building-depot",
+   "naam": "Building Depot",
+   "url": "https://curacao.day/en/businesses/hardware-store/building-depot",
+   "soort": {
+    "nl": "ijzerwarenwinkel",
+    "en": "hardware store",
+    "de": "Eisenwarenhandel",
+    "es": "ferretería",
+    "pt": "loja de ferragens"
+   },
+   "plaats": "Kaya Jacob Posner",
+   "tags": [
+    "bouw",
+    "ijzerwaren",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 7 Kaya Jacob Posner, Willemstad, Curaçao",
+     "en": "Address (Google): 7 Kaya Jacob Posner, Willemstad, Curaçao",
+     "de": "Adresse (Google): 7 Kaya Jacob Posner, Willemstad, Curaçao",
+     "es": "Dirección (Google): 7 Kaya Jacob Posner, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 7 Kaya Jacob Posner, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 3233",
+     "en": "Phone (Google): +599 9 461 3233",
+     "de": "Telefon (Google): +599 9 461 3233",
+     "es": "Teléfono (Google): +599 9 461 3233",
+     "pt": "Telefone (Google): +599 9 461 3233"
+    },
+    {
+     "nl": "Website (Google): building-depot.com",
+     "en": "Website (Google): building-depot.com",
+     "de": "Website (Google): building-depot.com",
+     "es": "Sitio web (Google): building-depot.com",
+     "pt": "Site (Google): building-depot.com"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 1339,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/hardware-store/building-depot"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hardware-store/building-depot",
+    "http://www.building-depot.com/"
+   ]
+  },
+  {
+   "id": "kooyman-santa-rosa",
+   "naam": "Kooyman Santa Rosa",
+   "url": "https://curacao.day/en/businesses/building-materials-store/kooyman-santa-rosa",
+   "soort": {
+    "nl": "bouwmarkt",
+    "en": "building materials store",
+    "de": "Baumarkt",
+    "es": "tienda de materiales de construcción",
+    "pt": "loja de materiais de construção"
+   },
+   "plaats": "Santa Rosaweg",
+   "tags": [
+    "bouw",
+    "keten"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Santa Rosaweg 198, Willemstad, Curaçao",
+     "en": "Address (Google): Santa Rosaweg 198, Willemstad, Curaçao",
+     "de": "Adresse (Google): Santa Rosaweg 198, Willemstad, Curaçao",
+     "es": "Dirección (Google): Santa Rosaweg 198, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Santa Rosaweg 198, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 3333",
+     "en": "Phone (Google): +599 9 461 3333",
+     "de": "Telefon (Google): +599 9 461 3333",
+     "es": "Teléfono (Google): +599 9 461 3333",
+     "pt": "Telefone (Google): +599 9 461 3333"
+    },
+    {
+     "nl": "Website (Google): kooymanbv.com",
+     "en": "Website (Google): kooymanbv.com",
+     "de": "Website (Google): kooymanbv.com",
+     "es": "Sitio web (Google): kooymanbv.com",
+     "pt": "Site (Google): kooymanbv.com"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 347,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/building-materials-store/kooyman-santa-rosa"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/building-materials-store/kooyman-santa-rosa",
+    "https://www.kooymanbv.com/curacao_en/"
+   ]
+  },
+  {
+   "id": "avf-paints",
+   "naam": "AVF Paints",
+   "url": "https://curacao.day/en/businesses/paint-store/avf-paints",
+   "soort": {
+    "nl": "verfwinkel",
+    "en": "paint store",
+    "de": "Farbengeschäft",
+    "es": "tienda de pinturas",
+    "pt": "loja de tintas"
+   },
+   "plaats": "Kaminda Rignald S. Recordino",
+   "tags": [
+    "verf",
+    "keten"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Kaminda Rignald S. Recordino, Willemstad, Curaçao",
+     "en": "Address (Google): Kaminda Rignald S. Recordino, Willemstad, Curaçao",
+     "de": "Adresse (Google): Kaminda Rignald S. Recordino, Willemstad, Curaçao",
+     "es": "Dirección (Google): Kaminda Rignald S. Recordino, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Kaminda Rignald S. Recordino, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 736 5876",
+     "en": "Phone (Google): +599 9 736 5876",
+     "de": "Telefon (Google): +599 9 736 5876",
+     "es": "Teléfono (Google): +599 9 736 5876",
+     "pt": "Telefone (Google): +599 9 736 5876"
+    },
+    {
+     "nl": "Website (Google): avfpaint.com",
+     "en": "Website (Google): avfpaint.com",
+     "de": "Website (Google): avfpaint.com",
+     "es": "Sitio web (Google): avfpaint.com",
+     "pt": "Site (Google): avfpaint.com"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 65,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/paint-store/avf-paints"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/paint-store/avf-paints",
+    "http://www.avfpaint.com/"
+   ]
+  },
+  {
+   "id": "dijtham-tools-and-fasteners",
+   "naam": "Dijtham Tools and Fasteners",
+   "url": "https://curacao.day/en/businesses/home-improvement-store/dijtham-tools-and-fasteners",
+   "soort": {
+    "nl": "gereedschap en bevestigingsmateriaal",
+    "en": "tools and fasteners",
+    "de": "Werkzeug und Befestigungstechnik",
+    "es": "herramientas y fijaciones",
+    "pt": "ferramentas e fixadores"
+   },
+   "plaats": "Caracasbaaiweg",
+   "tags": [
+    "gereedschap",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 167 Caracasbaaiweg, Willemstad, Curaçao",
+     "en": "Address (Google): 167 Caracasbaaiweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 167 Caracasbaaiweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 167 Caracasbaaiweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 167 Caracasbaaiweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 465 4365",
+     "en": "Phone (Google): +599 9 465 4365",
+     "de": "Telefon (Google): +599 9 465 4365",
+     "es": "Teléfono (Google): +599 9 465 4365",
+     "pt": "Telefone (Google): +599 9 465 4365"
+    },
+    {
+     "nl": "Website (Google): dijtham.com",
+     "en": "Website (Google): dijtham.com",
+     "de": "Website (Google): dijtham.com",
+     "es": "Sitio web (Google): dijtham.com",
+     "pt": "Site (Google): dijtham.com"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.2,
+     "max": 5,
+     "aantal": 99,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/home-improvement-store/dijtham-tools-and-fasteners"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/home-improvement-store/dijtham-tools-and-fasteners",
+    "http://www.dijtham.com/"
+   ]
+  },
+  {
+   "id": "gomez-enterprises",
+   "naam": "Gomez Enterprises",
+   "url": "https://curacao.day/en/businesses/hardware-store/gomez-enterprises",
+   "soort": {
+    "nl": "ijzerwarenwinkel",
+    "en": "hardware store",
+    "de": "Eisenwarenhandel",
+    "es": "ferretería",
+    "pt": "loja de ferragens"
+   },
+   "plaats": "Schottegatweg Oost",
+   "tags": [
+    "ijzerwaren",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 128 Schottegatweg Oost, Willemstad, Curaçao",
+     "en": "Address (Google): 128 Schottegatweg Oost, Willemstad, Curaçao",
+     "de": "Adresse (Google): 128 Schottegatweg Oost, Willemstad, Curaçao",
+     "es": "Dirección (Google): 128 Schottegatweg Oost, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 128 Schottegatweg Oost, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 461 5155",
+     "en": "Phone (Google): +599 9 461 5155",
+     "de": "Telefon (Google): +599 9 461 5155",
+     "es": "Teléfono (Google): +599 9 461 5155",
+     "pt": "Telefone (Google): +599 9 461 5155"
+    },
+    {
+     "nl": "Heeft alleen een Facebookpagina als website (Google)",
+     "en": "Has only a Facebook page as its website (Google)",
+     "de": "Hat nur eine Facebook-Seite als Website (Google)",
+     "es": "Solo tiene una página de Facebook como sitio web (Google)",
+     "pt": "Tem apenas uma página no Facebook como site (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 53,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/hardware-store/gomez-enterprises"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hardware-store/gomez-enterprises",
+    "http://m.facebook.com/Gomez-Enterprises-378335195615625/"
+   ]
+  },
+  {
+   "id": "avf-paints-2",
+   "naam": "AVF Paints",
+   "url": "https://curacao.day/en/businesses/paint-store/avf-paints-2",
+   "soort": {
+    "nl": "verfwinkel",
+    "en": "paint store",
+    "de": "Farbengeschäft",
+    "es": "tienda de pinturas",
+    "pt": "loja de tintas"
+   },
+   "plaats": "Asteroidenweg",
+   "tags": [
+    "verf",
+    "keten"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Asteroidenweg, Willemstad, Curaçao",
+     "en": "Address (Google): Asteroidenweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): Asteroidenweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): Asteroidenweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Asteroidenweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 736 5866",
+     "en": "Phone (Google): +599 9 736 5866",
+     "de": "Telefon (Google): +599 9 736 5866",
+     "es": "Teléfono (Google): +599 9 736 5866",
+     "pt": "Telefone (Google): +599 9 736 5866"
+    },
+    {
+     "nl": "Website (Google): avfpaint.com",
+     "en": "Website (Google): avfpaint.com",
+     "de": "Website (Google): avfpaint.com",
+     "es": "Sitio web (Google): avfpaint.com",
+     "pt": "Site (Google): avfpaint.com"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4.1,
+     "max": 5,
+     "aantal": 33,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/paint-store/avf-paints-2"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/paint-store/avf-paints-2",
+    "http://www.avfpaint.com/"
+   ]
+  },
+  {
+   "id": "smart-home-depot-japan-nv",
+   "naam": "Smart Home Depot (Japan N.V.)",
+   "url": "https://curacao.day/en/businesses/hardware-store/smart-home-depot-japan-nv",
+   "soort": {
+    "nl": "ijzerwarenwinkel",
+    "en": "hardware store",
+    "de": "Eisenwarenhandel",
+    "es": "ferretería",
+    "pt": "loja de ferragens"
+   },
+   "plaats": "Schottegatweg West",
+   "tags": [
+    "ijzerwaren",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): Schottegatweg West, Willemstad, Curaçao",
+     "en": "Address (Google): Schottegatweg West, Willemstad, Curaçao",
+     "de": "Adresse (Google): Schottegatweg West, Willemstad, Curaçao",
+     "es": "Dirección (Google): Schottegatweg West, Willemstad, Curaçao",
+     "pt": "Endereço (Google): Schottegatweg West, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 888 8545",
+     "en": "Phone (Google): +599 9 888 8545",
+     "de": "Telefon (Google): +599 9 888 8545",
+     "es": "Teléfono (Google): +599 9 888 8545",
+     "pt": "Telefone (Google): +599 9 888 8545"
+    },
+    {
+     "nl": "Website (Google): smarthomedepot.online",
+     "en": "Website (Google): smarthomedepot.online",
+     "de": "Website (Google): smarthomedepot.online",
+     "es": "Sitio web (Google): smarthomedepot.online",
+     "pt": "Site (Google): smarthomedepot.online"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4,
+     "max": 5,
+     "aantal": 254,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/hardware-store/smart-home-depot-japan-nv"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hardware-store/smart-home-depot-japan-nv",
+    "http://smarthomedepot.online/"
+   ]
+  },
+  {
+   "id": "future-interior-n-v",
+   "naam": "Future Interior N.V.",
+   "url": "https://curacao.day/en/businesses/building-materials-store/future-interior-n-v",
+   "soort": {
+    "nl": "bouwmarkt",
+    "en": "building materials store",
+    "de": "Baumarkt",
+    "es": "tienda de materiales de construcción",
+    "pt": "loja de materiais de construção"
+   },
+   "plaats": "Caracasbaaiweg",
+   "tags": [
+    "bouw",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 22 B Caracasbaaiweg, Willemstad, Curaçao",
+     "en": "Address (Google): 22 B Caracasbaaiweg, Willemstad, Curaçao",
+     "de": "Adresse (Google): 22 B Caracasbaaiweg, Willemstad, Curaçao",
+     "es": "Dirección (Google): 22 B Caracasbaaiweg, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 22 B Caracasbaaiweg, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 465 2168",
+     "en": "Phone (Google): +599 9 465 2168",
+     "de": "Telefon (Google): +599 9 465 2168",
+     "es": "Teléfono (Google): +599 9 465 2168",
+     "pt": "Telefone (Google): +599 9 465 2168"
+    },
+    {
+     "nl": "Heeft alleen een Facebookpagina als website (Google)",
+     "en": "Has only a Facebook page as its website (Google)",
+     "de": "Hat nur eine Facebook-Seite als Website (Google)",
+     "es": "Solo tiene una página de Facebook como sitio web (Google)",
+     "pt": "Tem apenas uma página no Facebook como site (Google)"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 4,
+     "max": 5,
+     "aantal": 22,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/building-materials-store/future-interior-n-v"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/building-materials-store/future-interior-n-v",
+    "https://www.facebook.com/futureinteriorcuracao/"
+   ]
+  },
+  {
+   "id": "general-home-depot",
+   "naam": "General Home Depot",
+   "url": "https://curacao.day/en/businesses/hardware-store/general-home-depot",
+   "soort": {
+    "nl": "ijzerwarenwinkel",
+    "en": "hardware store",
+    "de": "Eisenwarenhandel",
+    "es": "ferretería",
+    "pt": "loja de ferragens"
+   },
+   "plaats": "Kaya W.F.G. Mensing",
+   "tags": [
+    "ijzerwaren",
+    "lokaal"
+   ],
+   "prijs": null,
+   "feiten": [
+    {
+     "nl": "Adres (Google): 41 Kaya W.F.G. Mensing, Willemstad, Curaçao",
+     "en": "Address (Google): 41 Kaya W.F.G. Mensing, Willemstad, Curaçao",
+     "de": "Adresse (Google): 41 Kaya W.F.G. Mensing, Willemstad, Curaçao",
+     "es": "Dirección (Google): 41 Kaya W.F.G. Mensing, Willemstad, Curaçao",
+     "pt": "Endereço (Google): 41 Kaya W.F.G. Mensing, Willemstad, Curaçao"
+    },
+    {
+     "nl": "Telefoon (Google): +599 9 462 9725",
+     "en": "Phone (Google): +599 9 462 9725",
+     "de": "Telefon (Google): +599 9 462 9725",
+     "es": "Teléfono (Google): +599 9 462 9725",
+     "pt": "Telefone (Google): +599 9 462 9725"
+    },
+    {
+     "nl": "Website (Google): ingcocuracao.com",
+     "en": "Website (Google): ingcocuracao.com",
+     "de": "Website (Google): ingcocuracao.com",
+     "es": "Sitio web (Google): ingcocuracao.com",
+     "pt": "Site (Google): ingcocuracao.com"
+    }
+   ],
+   "scores": [
+    {
+     "platform": "Google Maps",
+     "score": 3.9,
+     "max": 5,
+     "aantal": 23,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/hardware-store/general-home-depot"
+    }
+   ],
+   "voor": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "tegen": {
+    "nl": [],
+    "en": [],
+    "de": [],
+    "es": [],
+    "pt": []
+   },
+   "bronnen": [
+    "https://curacao.day/en/businesses/hardware-store/general-home-depot",
+    "https://ingcocuracao.com/"
+   ]
+  }
+ ],
+ "tussenpartijen": [],
+ "tips": [
+  {
+   "nl": "Zoek je verf, dan hebben de twee Sherwin-Williams-winkels (Caracasbaaiweg en Schottegatweg West) de hoogste scores met veel reviews. Voor bouwmaterialen vergelijk je de drie Kooyman-vestigingen en Building Depot; Kooyman is bereikbaar op één telefoonnummer.",
+   "en": "For paint, the two Sherwin-Williams stores (Caracasbaaiweg and Schottegatweg West) have the highest scores with plenty of reviews. For building materials, compare the three Kooyman branches and Building Depot; Kooyman shares one phone number across its branches.",
+   "de": "Für Farbe haben die beiden Sherwin-Williams-Filialen (Caracasbaaiweg und Schottegatweg West) die höchsten Bewertungen bei vielen Stimmen. Für Baumaterial vergleichst du die drei Kooyman-Filialen und Building Depot; Kooyman hat für alle Filialen eine Telefonnummer.",
+   "es": "Para pintura, las dos tiendas Sherwin-Williams (Caracasbaaiweg y Schottegatweg West) tienen las puntuaciones más altas con muchas reseñas. Para materiales de construcción, compara las tres tiendas Kooyman y Building Depot; Kooyman usa un solo teléfono para todas.",
+   "pt": "Para tinta, as duas lojas Sherwin-Williams (Caracasbaaiweg e Schottegatweg West) têm as notas mais altas com muitas avaliações. Para materiais de construção, compare as três lojas Kooyman e a Building Depot; a Kooyman usa um único telefone para todas."
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wat is de best beoordeelde bouwmarkt op Curaçao?",
+    "en": "What is the best rated building store in Curaçao?",
+    "de": "Welcher Baumarkt auf Curaçao ist am besten bewertet?",
+    "es": "¿Cuál es la tienda de construcción mejor valorada de Curazao?",
+    "pt": "Qual é a loja de construção mais bem avaliada de Curaçao?"
+   },
+   "a": {
+    "nl": "Van de grote bouwmarkten scoort Kooyman Megastore Zeelandia het best met 4,5 uit 1.392 reviews, gevolgd door Kooyman Megastore Jan Noorduyn (4,5 uit 845 reviews) en Building Depot (4,3 uit 1.339 reviews). Voor verf scoren de Sherwin-Williams-winkels hoger (4,6).",
+    "en": "Of the big building stores, Kooyman Megastore Zeelandia scores best with 4.5 from 1,392 reviews, followed by Kooyman Megastore Jan Noorduyn (4.5 from 845 reviews) and Building Depot (4.3 from 1,339 reviews). For paint, the Sherwin-Williams stores score higher (4.6).",
+    "de": "Von den großen Baumärkten schneidet Kooyman Megastore Zeelandia mit 4,5 aus 1.392 Bewertungen am besten ab, gefolgt von Kooyman Megastore Jan Noorduyn (4,5 aus 845 Bewertungen) und Building Depot (4,3 aus 1.339 Bewertungen). Bei Farbe liegen die Sherwin-Williams-Filialen höher (4,6).",
+    "es": "De las grandes tiendas de construcción, Kooyman Megastore Zeelandia puntúa mejor con 4,5 sobre 1.392 reseñas, seguida de Kooyman Megastore Jan Noorduyn (4,5 sobre 845 reseñas) y Building Depot (4,3 sobre 1.339 reseñas). En pintura, las tiendas Sherwin-Williams puntúan más alto (4,6).",
+    "pt": "Entre as grandes lojas de construção, a Kooyman Megastore Zeelandia tem a melhor nota com 4,5 em 1.392 avaliações, seguida da Kooyman Megastore Jan Noorduyn (4,5 em 845 avaliações) e da Building Depot (4,3 em 1.339 avaliações). Em tintas, as lojas Sherwin-Williams têm nota mais alta (4,6)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke bouwmarkt heeft de meeste reviews?",
+    "en": "Which building store has the most reviews?",
+    "de": "Welcher Baumarkt hat die meisten Bewertungen?",
+    "es": "¿Qué tienda de construcción tiene más reseñas?",
+    "pt": "Qual loja de construção tem mais avaliações?"
+   },
+   "a": {
+    "nl": "Kooyman Megastore Zeelandia heeft er de meeste met 1.392 Google-reviews, daarna Building Depot met 1.339 en Kooyman Megastore Jan Noorduyn met 845.",
+    "en": "Kooyman Megastore Zeelandia has the most with 1,392 Google reviews, then Building Depot with 1,339 and Kooyman Megastore Jan Noorduyn with 845.",
+    "de": "Kooyman Megastore Zeelandia hat die meisten mit 1.392 Google-Bewertungen, danach Building Depot mit 1.339 und Kooyman Megastore Jan Noorduyn mit 845.",
+    "es": "Kooyman Megastore Zeelandia tiene más, con 1.392 reseñas en Google, luego Building Depot con 1.339 y Kooyman Megastore Jan Noorduyn con 845.",
+    "pt": "A Kooyman Megastore Zeelandia tem mais, com 1.392 avaliações no Google, depois a Building Depot com 1.339 e a Kooyman Megastore Jan Noorduyn com 845."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar kun je verf kopen op Curaçao?",
+    "en": "Where can you buy paint in Curaçao?",
+    "de": "Wo kann man auf Curaçao Farbe kaufen?",
+    "es": "¿Dónde se compra pintura en Curazao?",
+    "pt": "Onde comprar tinta em Curaçao?"
+   },
+   "a": {
+    "nl": "Verfzaken met veel reviews zijn Sherwin-Williams (Caracasbaaiweg 55D, 4,6 uit 124 reviews, en Schottegatweg West 371-C, 4,6 uit 105 reviews), AVF Paints (4,3 uit 65 reviews), Pinturas Uno (4,6 uit 14 reviews), Nijpro (4,4 uit 17 reviews) en United Paints & Industrial Supplies (4,5 uit 15 reviews).",
+    "en": "Paint shops with plenty of reviews are Sherwin-Williams (Caracasbaaiweg 55D, 4.6 from 124 reviews, and Schottegatweg West 371-C, 4.6 from 105 reviews), AVF Paints (4.3 from 65 reviews), Pinturas Uno (4.6 from 14 reviews), Nijpro (4.4 from 17 reviews) and United Paints & Industrial Supplies (4.5 from 15 reviews).",
+    "de": "Farbengeschäfte mit vielen Bewertungen sind Sherwin-Williams (Caracasbaaiweg 55D, 4,6 aus 124 Bewertungen, und Schottegatweg West 371-C, 4,6 aus 105 Bewertungen), AVF Paints (4,3 aus 65 Bewertungen), Pinturas Uno (4,6 aus 14 Bewertungen), Nijpro (4,4 aus 17 Bewertungen) und United Paints & Industrial Supplies (4,5 aus 15 Bewertungen).",
+    "es": "Tiendas de pintura con muchas reseñas: Sherwin-Williams (Caracasbaaiweg 55D, 4,6 sobre 124 reseñas, y Schottegatweg West 371-C, 4,6 sobre 105 reseñas), AVF Paints (4,3 sobre 65 reseñas), Pinturas Uno (4,6 sobre 14 reseñas), Nijpro (4,4 sobre 17 reseñas) y United Paints & Industrial Supplies (4,5 sobre 15 reseñas).",
+    "pt": "Lojas de tinta com muitas avaliações: Sherwin-Williams (Caracasbaaiweg 55D, 4,6 em 124 avaliações, e Schottegatweg West 371-C, 4,6 em 105 avaliações), AVF Paints (4,3 em 65 avaliações), Pinturas Uno (4,6 em 14 avaliações), Nijpro (4,4 em 17 avaliações) e United Paints & Industrial Supplies (4,5 em 15 avaliações)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar is Smart Home Depot (Japan N.V.) op Curaçao?",
+    "en": "Where is Smart Home Depot (Japan N.V.) in Curaçao?",
+    "de": "Wo ist Smart Home Depot (Japan N.V.) auf Curaçao?",
+    "es": "¿Dónde está Smart Home Depot (Japan N.V.) en Curazao?",
+    "pt": "Onde fica a Smart Home Depot (Japan N.V.) em Curaçao?"
+   },
+   "a": {
+    "nl": "Smart Home Depot (Japan N.V.) zit aan de Schottegatweg West in Willemstad, telefoon +599 9 888 8545, website smarthomedepot.online. Op Google heeft de zaak 4,0 uit 254 reviews.",
+    "en": "Smart Home Depot (Japan N.V.) is on Schottegatweg West in Willemstad, phone +599 9 888 8545, website smarthomedepot.online. On Google it has 4.0 from 254 reviews.",
+    "de": "Smart Home Depot (Japan N.V.) liegt an der Schottegatweg West in Willemstad, Telefon +599 9 888 8545, Website smarthomedepot.online. Bei Google hat das Geschäft 4,0 aus 254 Bewertungen.",
+    "es": "Smart Home Depot (Japan N.V.) está en Schottegatweg West, en Willemstad, teléfono +599 9 888 8545, sitio web smarthomedepot.online. En Google tiene 4,0 sobre 254 reseñas.",
+    "pt": "A Smart Home Depot (Japan N.V.) fica na Schottegatweg West, em Willemstad, telefone +599 9 888 8545, site smarthomedepot.online. No Google tem 4,0 em 254 avaliações."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar vind ik gereedschap en bevestigingsmateriaal?",
+    "en": "Where do I find tools and fasteners?",
+    "de": "Wo finde ich Werkzeug und Befestigungsmaterial?",
+    "es": "¿Dónde encuentro herramientas y fijaciones?",
+    "pt": "Onde encontro ferramentas e fixadores?"
+   },
+   "a": {
+    "nl": "Curaçao Tools & Fasteners aan de Santa Rosaweg heeft 4,5 uit 36 reviews; Dijtham Tools and Fasteners (Caracasbaaiweg 167, website dijtham.com) heeft 4,2 uit 99 reviews.",
+    "en": "Curaçao Tools & Fasteners on Santa Rosaweg has 4.5 from 36 reviews; Dijtham Tools and Fasteners (167 Caracasbaaiweg, website dijtham.com) has 4.2 from 99 reviews.",
+    "de": "Curaçao Tools & Fasteners an der Santa Rosaweg hat 4,5 aus 36 Bewertungen; Dijtham Tools and Fasteners (Caracasbaaiweg 167, Website dijtham.com) hat 4,2 aus 99 Bewertungen.",
+    "es": "Curaçao Tools & Fasteners, en Santa Rosaweg, tiene 4,5 sobre 36 reseñas; Dijtham Tools and Fasteners (Caracasbaaiweg 167, sitio web dijtham.com) tiene 4,2 sobre 99 reseñas.",
+    "pt": "A Curaçao Tools & Fasteners, na Santa Rosaweg, tem 4,5 em 36 avaliações; a Dijtham Tools and Fasteners (Caracasbaaiweg 167, site dijtham.com) tem 4,2 em 99 avaliações."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar zitten de Kooyman-winkels en Building Depot?",
+    "en": "Where are the Kooyman stores and Building Depot?",
+    "de": "Wo sind die Kooyman-Filialen und Building Depot?",
+    "es": "¿Dónde están las tiendas Kooyman y Building Depot?",
+    "pt": "Onde ficam as lojas Kooyman e a Building Depot?"
+   },
+   "a": {
+    "nl": "Kooyman heeft drie vestigingen in deze lijst: Jan Noorduynweg 74, Kaya W.F.G. Mensing 44 (Zeelandia) en Santa Rosaweg 198, telefoon +599 9 461 3333. Building Depot zit aan Kaya Jacob Posner 7, telefoon +599 9 461 3233.",
+    "en": "Kooyman has three branches in this list: 74 Jan Noorduynweg, 44 Kaya W.F.G. Mensing (Zeelandia) and Santa Rosaweg 198, phone +599 9 461 3333. Building Depot is at 7 Kaya Jacob Posner, phone +599 9 461 3233.",
+    "de": "Kooyman hat drei Filialen in dieser Liste: Jan Noorduynweg 74, Kaya W.F.G. Mensing 44 (Zeelandia) und Santa Rosaweg 198, Telefon +599 9 461 3333. Building Depot liegt an der Kaya Jacob Posner 7, Telefon +599 9 461 3233.",
+    "es": "Kooyman tiene tres tiendas en esta lista: Jan Noorduynweg 74, Kaya W.F.G. Mensing 44 (Zeelandia) y Santa Rosaweg 198, teléfono +599 9 461 3333. Building Depot está en Kaya Jacob Posner 7, teléfono +599 9 461 3233.",
+    "pt": "A Kooyman tem três lojas nesta lista: Jan Noorduynweg 74, Kaya W.F.G. Mensing 44 (Zeelandia) e Santa Rosaweg 198, telefone +599 9 461 3333. A Building Depot fica na Kaya Jacob Posner 7, telefone +599 9 461 3233."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "bouwmarkt curaçao",
+   "ijzerwaren curaçao",
+   "kooyman curaçao",
+   "building depot curaçao",
+   "smart home depot curaçao",
+   "japan nv curaçao",
+   "verf kopen curaçao"
+  ],
+  "en": [
+   "hardware store curaçao",
+   "building materials curaçao",
+   "kooyman curaçao",
+   "building depot curaçao",
+   "smart home depot curaçao",
+   "japan nv curaçao",
+   "buy paint curaçao"
+  ],
+  "de": [
+   "Baumarkt Curaçao",
+   "Eisenwaren Curaçao",
+   "Kooyman Curaçao",
+   "Building Depot Curaçao",
+   "Smart Home Depot Curaçao",
+   "Japan NV Curaçao",
+   "Farbe kaufen Curaçao"
+  ],
+  "es": [
+   "ferretería curazao",
+   "materiales de construcción curazao",
+   "kooyman curazao",
+   "building depot curazao",
+   "smart home depot curazao",
+   "japan nv curazao",
+   "comprar pintura curazao"
+  ],
+  "pt": [
+   "loja de ferragens curaçao",
+   "materiais de construção curaçao",
+   "kooyman curaçao",
+   "building depot curaçao",
+   "smart home depot curaçao",
+   "japan nv curaçao",
+   "comprar tinta curaçao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Wat is de beste bouwmarkt op Curaçao?",
+   "Waar kan ik verf kopen op Curaçao?",
+   "Waar zit Smart Home Depot (Japan N.V.) op Curaçao?",
+   "Waar zit Building Depot op Curaçao?"
+  ],
+  "en": [
+   "What is the best hardware store in Curaçao?",
+   "Where can I buy paint in Curaçao?",
+   "Where is Smart Home Depot (Japan N.V.) in Curaçao?",
+   "Where is Building Depot in Curaçao?"
+  ],
+  "de": [
+   "Welcher ist der beste Baumarkt auf Curaçao?",
+   "Wo kann ich auf Curaçao Farbe kaufen?",
+   "Wo ist Smart Home Depot (Japan N.V.) auf Curaçao?",
+   "Wo ist Building Depot auf Curaçao?"
+  ],
+  "es": [
+   "¿Cuál es la mejor ferretería de Curazao?",
+   "¿Dónde puedo comprar pintura en Curazao?",
+   "¿Dónde está Smart Home Depot (Japan N.V.) en Curazao?",
+   "¿Dónde está Building Depot en Curazao?"
+  ],
+  "pt": [
+   "Qual é a melhor loja de ferragens de Curaçao?",
+   "Onde posso comprar tinta em Curaçao?",
+   "Onde fica a Smart Home Depot (Japan N.V.) em Curaçao?",
+   "Onde fica a Building Depot em Curaçao?"
+  ]
+ }
+}

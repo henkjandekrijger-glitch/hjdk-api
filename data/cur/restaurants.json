@@ -1,6 +1,6 @@
 {
  "id": "restaurants",
- "peildatum": "2026-11-13",
+ "peildatum": "2026-11-18",
  "onderwerp": {
   "nl": "restaurant",
   "en": "restaurant",
@@ -2625,6 +2625,20 @@
      "de": "Preisniveau $$$$ (Tripadvisor)",
      "es": "Nivel de precio $$$$ (Tripadvisor)",
      "pt": "Faixa de preço $$$$ (Tripadvisor)"
+    },
+    {
+     "nl": "Adres Elements Hotel & Shops, Ground Floor, Unit 2, Hendrikplein, Willemstad; tel. +599 9 525 9592 (Google Maps, 2026-11-18)",
+     "en": "Address Elements Hotel & Shops, Ground Floor, Unit 2, Hendrikplein, Willemstad; tel. +599 9 525 9592 (Google Maps, 2026-11-18)",
+     "de": "Adresse Elements Hotel & Shops, Ground Floor, Unit 2, Hendrikplein, Willemstad; Tel. +599 9 525 9592 (Google Maps, 2026-11-18)",
+     "es": "Dirección Elements Hotel & Shops, Ground Floor, Unit 2, Hendrikplein, Willemstad; tel. +599 9 525 9592 (Google Maps, 2026-11-18)",
+     "pt": "Endereço Elements Hotel & Shops, Ground Floor, Unit 2, Hendrikplein, Willemstad; tel. +599 9 525 9592 (Google Maps, 2026-11-18)"
+    },
+    {
+     "nl": "Online bestellen en menu via marytierra91curacao.everyorder.io (website volgens Google Maps, 2026-11-18)",
+     "en": "Online ordering and menu via marytierra91curacao.everyorder.io (website listed on Google Maps, 2026-11-18)",
+     "de": "Online-Bestellung und Speisekarte über marytierra91curacao.everyorder.io (Website laut Google Maps, 2026-11-18)",
+     "es": "Pedidos en línea y menú en marytierra91curacao.everyorder.io (sitio web en Google Maps, 2026-11-18)",
+     "pt": "Pedidos online e cardápio em marytierra91curacao.everyorder.io (site no Google Maps, 2026-11-18)"
     }
    ],
    "scores": [
@@ -2671,7 +2685,8 @@
    },
    "bronnen": [
     "https://www.google.com/maps?cid=11868354073145040525",
-    "https://www.tripadvisor.com/Restaurant_Review-g147278-d32974158-Reviews-Mar_Tierra_91_Curacao-Willemstad_Curacao.html"
+    "https://www.tripadvisor.com/Restaurant_Review-g147278-d32974158-Reviews-Mar_Tierra_91_Curacao-Willemstad_Curacao.html",
+    "https://curacao.day/en/businesses/restaurant/mar-en-tierra-91"
    ]
   },
   {

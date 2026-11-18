@@ -1,6 +1,6 @@
 {
  "id": "hotels",
- "peildatum": "2026-11-17",
+ "peildatum": "2026-11-18",
  "onderwerp": {
   "nl": "hotel of resort",
   "en": "hotel or resort",
@@ -516,6 +516,14 @@
      "aantal": 377,
      "peildatum": "2026-10-20",
      "bron": "https://www.kayak.com/Willemstad-Hotels-Curacao-Caribbean-Resort.5351952.ksp"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 2641,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/dreams-curacao-resort-spa-en-casino"
     }
    ],
    "voor": {
@@ -658,6 +666,14 @@
      "aantal": 1228,
      "peildatum": "2026-10-20",
      "bron": "https://kayak.sg/Willemstad-Hotels-Sunscape-Curacao-Resort-Spa-Casino.38172.ksp"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 3.8,
+     "max": 5,
+     "aantal": 4963,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/sunscape-curacao-resort-spa-en-casino"
     }
    ],
    "voor": {
@@ -921,6 +937,14 @@
      "aantal": 1707,
      "peildatum": "2026-10-20",
      "bron": "https://www.travelocity.com/Curacao-Resort-Hotels.d6143269-aaResortHotels.Travel-Guide-Accommodation"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.4,
+     "max": 5,
+     "aantal": 7594,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/hotel/mangrove-beach-corendon-curacao-all-inclusive-resort-curio-by-hilton"
     }
    ],
    "voor": {
@@ -1040,6 +1064,14 @@
      "aantal": null,
      "peildatum": "2026-10-20",
      "bron": "https://au.trip.com/hotels/willemstad-hotels-list-62137"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 3515,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/hotel/the-rif-at-mangrove-beach-corendon-curacao-all-inclusive-curio-by-hilt"
     }
    ],
    "voor": {
@@ -1138,7 +1170,7 @@
      "score": 4.1,
      "max": 5,
      "aantal": 2075,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/resort-hotel/kunuku-aqua-resort"
     }
    ],
@@ -1715,6 +1747,14 @@
      "aantal": 1199,
      "peildatum": "2026-10-20",
      "bron": "https://www.hotelscombined.com.sg/Place/Curacao.htm"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 5244,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/hotel/renaissance-wind-creek-curacao-resort"
     }
    ],
    "voor": {
@@ -1851,6 +1891,14 @@
      "aantal": null,
      "peildatum": "2026-10-20",
      "bron": "https://app-aws-test.booking.com/hotel/cw/avila.en-gb.html"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.5,
+     "max": 5,
+     "aantal": 2701,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/hotel/avila-beach-hotel"
     }
    ],
    "voor": {
@@ -1984,6 +2032,14 @@
      "aantal": 103,
      "peildatum": "2026-10-20",
      "bron": "https://www.hotelscombined.com.sg/Place/Curacao.htm"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 710,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/resort-hotel/baoase-luxury-resort"
     }
    ],
    "voor": {
@@ -2112,6 +2168,14 @@
      "aantal": 1050,
      "peildatum": "2026-10-20",
      "bron": "https://www.hotelscombined.com.sg/Place/Curacao.htm"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.6,
+     "max": 5,
+     "aantal": 1689,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/hotel/lionsdive-beach-resort-curacao"
     }
    ],
    "voor": {
@@ -2229,6 +2293,14 @@
      "aantal": 756,
      "peildatum": "2026-10-20",
      "bron": "https://www.hotelscombined.com.sg/Place/Curacao.htm"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 4.3,
+     "max": 5,
+     "aantal": 1024,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/hotel/the-kontiki-curacao-beach-resort"
     }
    ],
    "voor": {
@@ -2522,7 +2594,7 @@
      "score": 4.3,
      "max": 5,
      "aantal": 1979,
-     "peildatum": "2026-11-13",
+     "peildatum": "2026-11-18",
      "bron": "https://curacao.day/en/businesses/hotel/sonesta-hotels-en-resorts-livingstone-curacao"
     }
    ],
@@ -4768,6 +4840,14 @@
      "aantal": 1364,
      "peildatum": "2026-10-20",
      "bron": "https://www.hotelscombined.com.sg/Place/Curacao.htm"
+    },
+    {
+     "platform": "Google Maps",
+     "score": 3.7,
+     "max": 5,
+     "aantal": 523,
+     "peildatum": "2026-11-18",
+     "bron": "https://curacao.day/en/businesses/hotel/curacao-airport-hotel"
     }
    ],
    "voor": {
