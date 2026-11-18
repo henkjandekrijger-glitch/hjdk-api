@@ -8,7 +8,7 @@ import { insuranceReport, recordInsuranceEvent, checkInsuranceSources, INSURANCE
 export default async function handler(req,res){
   const u=new URL(req.url,'https://keuzehulp.best'),q=u.searchParams,op=q.get('op')||'page';
   const path=u.pathname,publicPage=(op==='page');
-  if(op==='page'||op==='partners'){const H=await import('../lib/huisstijl.js');H.metHuisstijl(res,'nl');} // huisstijl van alle keuzehulpen (lib/huisstijl.js, 18 nov 2026)
+  if(op==='page'||op==='partners'){const H=await import('../lib/huisstijl.js');H.metHuisstijl(res,'nl',{meet:{P:'kz',G:'verzekeringen'},chat:{voor:'<div class="ins-layout"',term:'verzekeringen',slug:'verzekeringen'}});} // huisstijl van alle keuzehulpen (lib/huisstijl.js, 18 nov 2026)
   res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag',publicPage?'index,follow':'noindex');
   res.setHeader('referrer-policy','no-referrer');res.setHeader('x-content-type-options','nosniff');
   try{

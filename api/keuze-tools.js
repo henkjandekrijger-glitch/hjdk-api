@@ -44,7 +44,9 @@ export default async function handler(req, res) {
   res.setHeader('x-content-type-options', 'nosniff');
   { // huisstijl van alle keuzehulpen (lib/huisstijl.js, 18 nov 2026): elke HTML-pagina van deze rekenhulpen en gidsen krijgt dezelfde kop, voet en opmaak
     const tl = q.get('tool') || '', mk = String(q.get('market') || q.get('m') || 'nl');
-    if (!/^(cur|tsc)$/.test(tl)) { const H = await import('../lib/huisstijl.js'); H.metHuisstijl(res, tl === 'nexy' || /nexy\.help/.test(String(req.headers.host || '')) ? 'nexy' : mk === 'us' || mk === 'en' ? 'us' : mk === 'de' ? 'de' : 'nl', tl === 'rdam' ? { voetExtra: 'Gegevens uit OpenStreetMap (© OpenStreetMap-bijdragers, ODbL) en reviewscores met link naar de bron; de ranglijst is onze eigen berekening' } : null); }
+    if (!/^(cur|tsc)$/.test(tl)) { const H = await import('../lib/huisstijl.js'); const st = tl === 'nexy' || /nexy\.help/.test(String(req.headers.host || '')) ? 'nexy' : mk === 'us' || mk === 'en' ? 'us' : mk === 'de' ? 'de' : 'nl';
+      const G = tl === 'rdam' ? 'rotterdam' : tl === 'zorg' ? 'zorg' : tl === 'nexy' ? 'nexy' : 'rekenhulpen', P = st === 'us' ? 'wtbus' : st === 'de' ? 'wtbde' : st === 'nexy' ? 'nexy' : 'kz';
+      H.metHuisstijl(res, st, { meet: { P, G }, chat: tl === 'rdam' ? { term: 'diensten in Rotterdam', slug: 'rotterdam' } : true, voetExtra: tl === 'rdam' ? 'Gegevens uit OpenStreetMap (© OpenStreetMap-bijdragers, ODbL) en reviewscores met link naar de bron; de ranglijst is onze eigen berekening' : '' }); }
   }
   if(q.get('tool')==='nexy'){ // nexy.help: AI-keuzehulp (lib/nexyhelp.js, 17 nov 2026)
     const N=await import('../lib/nexyhelp.js');
@@ -61,6 +63,12 @@ export default async function handler(req, res) {
     const html=N.pagina(String(q.get('p')||''));res.setHeader('content-type','text/html; charset=utf-8');
     if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Not found</title><p style="font:17px/1.6 Inter,Arial,sans-serif;max-width:640px;margin:40px auto;padding:0 20px">This page does not exist (anymore). <a href="/">Find the right AI for what you need</a> or <a href="/questions">see all questions</a>.</p>');}
     res.setHeader('cache-control','public, s-maxage=600, stale-while-revalidate=86400');return res.status(200).send(html);}
+  if(q.get('tool')==='groepen'){ // verkeer per groep keuzehulpen, per uur (lib/kzgroepen.js, 18 nov 2026); chatvragen alleen via de vercel.app-host of met CRON_SECRET
+    res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
+    const intern=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
+    const GR=await import('../lib/kzgroepen.js');const o=await GR.groepen({zet:intern&&q.get('zet')==='1'});if(!intern)o.chats=[];
+    if(q.get('vorm')==='tekst'){res.setHeader('content-type','text/plain; charset=utf-8');return res.status(200).send(GR.groepenTekst(o));}
+    return res.status(200).json({ok:true,...o,tekst:GR.groepenTekst(o)});}
   if(q.get('tool')==='stand4'){ // stand per 4 uur over alle keuzehulpen (lib/kzstand4.js, 17 nov 2026); alleen via de vercel.app-host of met CRON_SECRET
     res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
     if(!/\.vercel\.app$/i.test(String(req.headers.host||''))&&!(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET))return res.status(403).json({ok:false});

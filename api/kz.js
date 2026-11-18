@@ -18,7 +18,7 @@ import { extraItems } from '../lib/keuze-extra-content.js';
 import { look, ACCENTS, lookNieuw } from '../lib/look.js';
 import { rankUsage, usageDays, dailyUsage } from '../lib/guide-usage.js';
 import { colourTag, measureTag } from '../lib/kleur.js';
-const MEETTAG = measureTag('kz', 'a[data-kz],a[data-deal],a[href*="bol.com"]', '.opt');
+const MEETTAG = measureTag('kz', 'a[data-kz],a[data-deal],a[href*="bol.com"]', '.opt,.kx-ps button,#kxf button', 'nl');
 import { organicOpportunities } from '../lib/organic-policy.js';
 const BOOST = { set: new Set(), at: 0 };
 async function pinStats(items, d) { // 14 dagen Pinterest-resultaat per keuzehulp en per beeldvariant; 1x per dag berekend
