@@ -43,6 +43,6 @@ Ochtendmails, updates en bevestigingen van alle projecten staan in de stand onde
 ## Vaste regels
 
 - Alleen adressen die op een pagina zijn gezien. Elk cijfer in een mail is op een pagina gelezen.
-- Elke mail noemt hoe je Henkjan bereikt: antwoorden, +31 6 55395630 (bellen of appen) of https://meeting.nexy.works/a54blu.
+- Elke mail noemt hoe je Henkjan bereikt: antwoorden, of +31 6 55395630 (bellen of appen). De meetinglink voorlopig niet: hij werkt nog niet (Henkjan 18 nov 2026: "volgt later").
 - Professioneel en recht voor z'n raap. Geen gedachtestreepjes, geen reclametaal.
 - Adressen van ontvangers nooit in code, pagina's of het werklog.
