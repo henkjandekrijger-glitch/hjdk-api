@@ -2,6 +2,102 @@
   "uitleg": "Ontwikkelingen per route voor de ochtendmail van todayin surgery (lib/tsc-mail.js). Elke dag zet de geplande Claude-taak hier nieuwe items bij: alleen echte feiten met bron en datum, nieuwste bovenaan. taal: en|nl|de|*; ingreep: hair|tummy|eyelid|lipo|breast|breast-reduction|*; naar: turkey|mexico|colombia|dominican-republic|thailand|south-korea|abroad|home|*; pagina: slug op todayin.email/surgery.",
   "items": [
     {
+      "id": "2026-11-18-en-asps-trends-2027",
+      "dag": "2026-11-17",
+      "taal": "en",
+      "ingreep": [
+        "tummy",
+        "lipo",
+        "breast-reduction",
+        "breast-lift"
+      ],
+      "naar": [
+        "home"
+      ],
+      "kop": "ASPS 2027 outlook: more skin removal after weight-loss drugs, smaller breasts",
+      "tekst": "The American Society of Plastic Surgeons expects weight loss-related skin removal to keep growing as more patients move from weight-loss medication into maintenance. 82% of surveyed members had consultation requests linked to GLP-1 drugs. In 2025 upper body lifts rose 22%, arm lifts 21% and thigh lifts 20%. For breasts, the desired look is smaller and more natural.",
+      "bron": "aspsTrends27",
+      "pagina": "breast-lift-cost",
+      "home_countries": [
+        "US",
+        "UK",
+        "CA",
+        "AU"
+      ]
+    },
+    {
+      "id": "2026-11-18-en-thai-raid",
+      "dag": "2026-11-17",
+      "taal": "en",
+      "ingreep": [
+        "*"
+      ],
+      "naar": [
+        "thailand"
+      ],
+      "kop": "Thailand: police and FDA raid Bangkok clinic making unregistered injectables",
+      "tekst": "Thai police and the Thai FDA raided a clinic in Khlong Toei, Bangkok, and seized 3,367 items, including 776 bottles of unregistered injectable drugs. The drugs were mixed without sterilisation, a risk of potentially fatal bloodstream infections. Most were for foreign clients and were also sold to other beauty clinics. Ask any clinic which registered product it injects.",
+      "bron": "nationRaid",
+      "pagina": "procedures/fillers",
+      "home_countries": [
+        "*"
+      ]
+    },
+    {
+      "id": "2026-11-18-nl-thai-raid",
+      "dag": "2026-11-17",
+      "taal": "nl",
+      "ingreep": [
+        "*"
+      ],
+      "naar": [
+        "thailand"
+      ],
+      "kop": "Thailand: inval bij kliniek in Bangkok die ongeregistreerde injecties maakte",
+      "tekst": "De Thaise politie en de Thaise FDA vielen een kliniek in Khlong Toei in Bangkok binnen en namen 3.367 producten in beslag, waaronder 776 flesjes ongeregistreerde injecties. Die werden zonder sterilisatie gemengd, met kans op levensgevaarlijke bloedvergiftiging. De meeste waren voor buitenlandse klanten en gingen ook naar andere schoonheidsklinieken. Vraag elke kliniek welk geregistreerd middel ze inspuiten.",
+      "bron": "nationRaid",
+      "pagina": "nl/ingrepen/fillers",
+      "home_countries": [
+        "NL"
+      ]
+    },
+    {
+      "id": "2026-11-18-de-thai-raid",
+      "dag": "2026-11-17",
+      "taal": "de",
+      "ingreep": [
+        "*"
+      ],
+      "naar": [
+        "thailand"
+      ],
+      "kop": "Thailand: Razzia in Bangkoker Klinik mit nicht zugelassenen Spritzen",
+      "tekst": "Thailändische Polizei und die Arzneimittelbehörde FDA durchsuchten eine Klinik in Khlong Toei, Bangkok, und beschlagnahmten 3.367 Produkte, darunter 776 Fläschchen nicht zugelassener Injektionsmittel. Sie wurden ohne Sterilisation gemischt, mit dem Risiko einer lebensgefährlichen Blutvergiftung. Die meisten waren für ausländische Kunden und gingen auch an andere Schönheitskliniken. Fragen Sie jede Klinik, welches zugelassene Mittel sie spritzt.",
+      "bron": "nationRaid",
+      "pagina": "de/behandlungen/hyaluron-filler",
+      "home_countries": [
+        "DE"
+      ]
+    },
+    {
+      "id": "2026-11-18-de-kasse-2027",
+      "dag": "2026-11-18",
+      "taal": "de",
+      "ingreep": [
+        "*"
+      ],
+      "naar": [
+        "*"
+      ],
+      "kop": "Krankenkasse 2027: Zusatzbeiträge im Dezember, Zuschuss für Zahnersatz sinkt",
+      "tekst": "Die Kassen verlangen laut GKV-Spitzenverband schon jetzt im Schnitt rund 3,13 Prozent Zusatzbeitrag, die Spanne liegt zwischen 2,18 und 4,39 Prozent. Die meisten Kassen legen ihren Satz zwischen dem 10. und 20. Dezember fest. 2027 sinkt der Zuschuss für Zahnersatz von 60 auf 50 Prozent. Schönheitsoperationen zahlen Sie weiter selbst, außer bei medizinischer Notwendigkeit.",
+      "bron": "bzKasse27",
+      "pagina": "de/zahnimplantat-kosten",
+      "home_countries": [
+        "DE"
+      ]
+    },
+    {
       "id": "2026-11-17-nl-onvz-2027",
       "dag": "2026-11-17",
       "taal": "nl",
