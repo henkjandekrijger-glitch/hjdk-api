@@ -42,6 +42,10 @@ function laadSchema() {
 export default async function handler(req, res) {
   const url = new URL(req.url, 'https://keuzehulp.best'), q = url.searchParams; let op = q.get('op') || '';
   res.setHeader('x-content-type-options', 'nosniff');
+  { // huisstijl van alle keuzehulpen (lib/huisstijl.js, 18 nov 2026): elke HTML-pagina van deze rekenhulpen en gidsen krijgt dezelfde kop, voet en opmaak
+    const tl = q.get('tool') || '', mk = String(q.get('market') || q.get('m') || 'nl');
+    if (!/^(cur|tsc)$/.test(tl)) { const H = await import('../lib/huisstijl.js'); H.metHuisstijl(res, tl === 'nexy' || /nexy\.help/.test(String(req.headers.host || '')) ? 'nexy' : mk === 'us' || mk === 'en' ? 'us' : mk === 'de' ? 'de' : 'nl', tl === 'rdam' ? { voetExtra: 'Gegevens uit OpenStreetMap (© OpenStreetMap-bijdragers, ODbL) en reviewscores met link naar de bron; de ranglijst is onze eigen berekening' } : null); }
+  }
   if(q.get('tool')==='nexy'){ // nexy.help: AI-keuzehulp (lib/nexyhelp.js, 17 nov 2026)
     const N=await import('../lib/nexyhelp.js');
     { const pp=String(q.get('p')||'').replace(/^\/+/,''); if(!op&&pp==='sitemap.xml')op='sitemap'; else if(!op&&pp==='robots.txt')op='robots'; else if(!op&&pp==='llms.txt')op='llms'; else if(pp==='466971cbc1bbe43e6bb64a94465e4470.txt'){res.setHeader('content-type','text/plain');return res.status(200).send('466971cbc1bbe43e6bb64a94465e4470');} }
