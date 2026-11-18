@@ -32,7 +32,7 @@ const OVT = { us: { cat: 'Category', n: 'buying guides', all: 'All categories', 
   de: { cat: 'Kategorie', n: 'Kaufberater', all: 'Alle Kategorien', allP: 'Alle Kaufberater nach Kategorie', snel: 'Schnell wählen', rest: 'Alle weiteren Kaufberater in', upd: 'Aktualisiert', nieuw: 'Neu dazugekommen', ook: 'Auch bei', h1c: c => 'Kaufberater ' + c, kop: 'Wobei bist du unsicher?', ph: c => 'Frag etwas zu ' + c, phHome: 'Was willst du kaufen oder auswählen?', see: 'Alle ansehen', lead: 'Stell deine Frage oder wähle unten. Jeder Ratgeber stellt 3 kurze Fragen und gibt eine ehrliche Empfehlung mit dem Preis von heute.', vraagVolg: 'Soll ich dir jeden Morgen den neuen Kaufberater des Tages schicken?', volgKnop: 'Jeden Morgen der neue Ratgeber', check: 'Schau in dein Postfach und tippe auf den Knopf. Dann bekommst du jeden Morgen den neuen Ratgeber.', volgOk: 'Gefolgt. Ab morgen bekommst du jeden Morgen den neuen Ratgeber.', volgt: 'Du folgst', geen: 'Gute Frage. Sie steht jetzt auf unserer Liste für einen neuen Ratgeber. Wähle unten schon den passendsten.' } };
 const datumW = (m, d) => { try { return new Date(d + 'T12:00:00Z').toLocaleDateString(m.id === 'de' ? 'de-DE' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }); } catch (e) { return d; } };
 function ovChatW(m, term, ph, faq) { const T = OVT[m.id] || OVT.us; return kzuxBlok({ taal: m.id, site: 'kzuxov', slug: '', term, kop: T.kop, ph, faq, t: { geen: T.geen, vraagVolg: T.vraagVolg, volgKnop: T.volgKnop, check: T.check, volgOk: T.volgOk, volgt: T.volgt } }); }
-const naamW = i => { const t = String(i.term || '').trim(); return t ? t.charAt(0).toUpperCase() + t.slice(1) : String(i.title || ''); };
+const naamW = i => { const t = String(i.term || '').trim().split(/\s+/).filter(w => !/^(20\d\d|unter|under|bis|mit|with|for|für|and|und)$/i.test(w)).slice(0, 3).join(' '); return t ? t.charAt(0).toUpperCase() + t.slice(1) : String(i.title || ''); }; // korte naam: hooguit 3 woorden van de zoekterm
 async function overzichtCat(m, all, c) {
   const K = await import('./kz.js'); const T = OVT[m.id] || OVT.us; const base = 'https://' + m.host;
   const inCat = all.filter(i => catSlugW(i.cat) === c); if (!inCat.length) return null;
@@ -170,7 +170,8 @@ ${newest.length ? `<h2>${esc(T.nieuw)}</h2><div class="grid">${newest.map(tegel)
   const base = 'https://' + m.host; let body3 = body;
   if (o3) { // voorbeeld van de nieuwe voorpagina (?ontwerp=3), zelfde opzet als keuzehulp.best
     const K = await import('./kz.js'); const O = OVT[m.id] || OVT.us; const d = new Date().toISOString().slice(0, 10);
-    const snel = pop.concat(newest).filter((i, k, a) => a.indexOf(i) === k).slice(0, 6);
+    const top = all.filter(i => !/Online & Business/.test(i.cat)).sort((a, b) => (b.priority || 0) - (a.priority || 0) || String(b.publishAt || '').localeCompare(String(a.publishAt || '')));
+    const snel = []; for (const i of top.concat(pop)) { if (snel.length >= 6) break; if (!snel.includes(i) && snel.filter(x => x.cat === i.cat).length < 2) snel.push(i); } // hoogste prioriteit eerst, hooguit 2 per categorie
     const faq = snel.concat(all).map(i => (i.faq || [])[0] && { q: i.faq[0].q, a: i.faq[0].a, pad: '/' + i.slug, titel: naamW(i) }).filter(f => f && f.q && f.a).filter((f, k, a) => a.findIndex(x => x.q === f.q) === k).slice(0, 8);
     const voorb = c => cats[c].slice(0, 4).map(i => naamW(i).toLowerCase()).join(', ');
     body3 = `${K.OV3_CSS}<div class="ov"><p class="ov-eb"><i></i>${esc(T.eyebrow)}</p><h1>${esc(s.hero)}</h1><p class="kz-meta">${esc(O.upd)} <time datetime="${d}">${esc(datumW(m, d))}</time></p><p class="ov-lead lead">${esc(O.lead)}</p>${ovChatW(m, us ? 'buying guides' : 'Kaufberater', O.phHome, faq)}
