@@ -10,7 +10,7 @@ import { gidsIndexPlan } from '../lib/gids-indexnow.js';
 import { kv } from '../lib/db.js';
 import { funnelStap, funnelStand, funnelHtml, fnIdUitCookie, isFnBot, bronVan, FN_JS } from '../lib/funnel.js'; // funnel per persoon (18 nov 2026)
 import { lookNieuw } from '../lib/look.js';
-import { GIDSEN, GIDS_IDS } from '../lib/gidsen-kadoly.js';
+import { GIDSEN, GIDS_IDS, vulPids } from '../lib/gidsen-kadoly.js';
 import { alleVan } from '../lib/gidsen-alle.js'; // alles van een soort onder de keuze (10 nov 2026)
 import { berichten, HAIKU } from '../lib/ai.js';
 import { createHash } from 'node:crypto';
@@ -37,6 +37,7 @@ async function catalogus() {
   if (CAT && Date.now() - CAT_AT < 300000) return CAT;
   let c = null; try { c = await kv.get('hjdk:shop:cat'); } catch (e) {}
   const m = {}; for (const i of ((c && c.items) || [])) m[i.id] = i;
+  try { vulPids(m); } catch (e) {} // keuzes met zoek (nieuwe Droppery-producten zonder vaste id) krijgen hun shop-id op titel (18 nov)
   // 18 nov: een gids zonder één leverbaar product (bijv. de 3D-puzzels en windspinners die uit de shop zijn) verdwijnt uit lijsten, sitemap en llms en geeft 410; bij een lege of kapotte catalogus blijven alle gidsen staan
   LEVEND = Object.keys(m).length >= 50 ? new Set(GIDS_IDS.filter(id => (GIDSEN[id].keuze || []).some(k => m[k.pid] && m[k.pid].vr !== false))) : null;
   CAT = m; CAT_AT = Date.now(); return m;
