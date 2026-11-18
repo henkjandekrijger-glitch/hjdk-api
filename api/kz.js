@@ -672,7 +672,8 @@ ${aboBox(aboV, '', clientId)}
 <h2 class="ov-h">Snel kiezen</h2><div class="ov-g">${snel.map(x => ovKaart(x.href, x.eb, x.naam, x.kort, '')).join('')}</div>
 <h2 class="ov-h">Alle keuzehulpen per categorie</h2><div class="ov-g">${catsS.map(c => ovKaart('/keuzehulp/categorie/' + catSlug(c), nCat(c) + ' keuzehulpen', c, voorb(c), 'Bekijk alle')).join('')}</div>
 ${nieuw3.length ? `<h2 class="ov-h">Nieuw toegevoegd</h2><div>${nieuw3.map(i => ovRegel('/' + i.slug + pq, i.h1 || i.title)).join('')}</div>` : ''}
-<h2 class="ov-h">Ook op keuzehulp</h2><div>${ovRegel('/rotterdam', 'Diensten in Rotterdam vergelijken: tandarts, kapper, garage en meer')}${ovRegel('/curacao', 'Op reis of wonen op Curaçao: alles vergeleken')}</div></div>`;
+${(() => { const by = new Map(items.map(i => [i.slug, i])); const v = (SPEER.vind || []).filter(x => by.has(x)).slice(0, 60); return v.length ? `<h2 class="ov-h">Ook nieuw</h2><div class="ov-cs">${v.map(x => ovPil('/' + x + pq, nmK(by.get(x)))).join('')}</div>` : ''; })()}
+<h2 class="ov-h">Ook op keuzehulp</h2><div>${ovRegel('/zorgverzekering', 'Zorgverzekering 2027 vergelijken: alle polissen met premie en eigen risico')}${ovRegel('/verzekeringen', 'Verzekeringen: welke polis dekt wat je wilt verzekeren')}${ovRegel('/rotterdam', 'Diensten in Rotterdam vergelijken: tandarts, kapper, garage en meer')}${ovRegel('https://curacao.day/nl/gids', 'Op reis of wonen op Curaçao: alles vergeleken')}</div></div>`; // Ook nieuw: pagina's die Google nog niet kent (ZICHT-proef interne-links-niet-geindexeerd, SPEER.vind), zoals op de vorige voorpagina
     }
   }
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', clickid || src ? 'no-store' : 'public, max-age=600');
