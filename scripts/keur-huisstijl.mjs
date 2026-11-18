@@ -26,7 +26,8 @@ for (const [naam, url] of doelen) {
         const s = getComputedStyle(el); if (s.display === 'none' || s.visibility === 'hidden' || !el.offsetWidth || el.closest('img,picture,svg,video,iframe')) continue;
         const tekst = [...el.childNodes].some(n => n.nodeType === 3 && n.textContent.trim()), w = (el.className && String(el.className).slice(0, 30)) || el.tagName;
         if (tekst && kl(s.color)) out.push(tag + ' kleur tekst ' + s.color + ': ' + w + ' "' + el.textContent.trim().slice(0, 30) + '"');
-        if (kl(s.backgroundColor)) out.push(tag + ' kleur vlak ' + s.backgroundColor + ': ' + w);
+        if (kl(s.backgroundColor) && !(el.offsetWidth <= 12 && el.offsetHeight <= 12)) out.push( // stipjes voor open/dicht mogen kleur houden
+tag + ' kleur vlak ' + s.backgroundColor + ': ' + w);
         if (kl(s.borderTopColor) && parseFloat(s.borderTopWidth) > 0) out.push(tag + ' kleur rand: ' + w);
         if (tekst && s.color === bg(el)) out.push(tag + ' ONLEESBAAR: ' + w + ' "' + el.textContent.trim().slice(0, 30) + '"');
       }
