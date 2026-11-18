@@ -10,22 +10,24 @@ import * as alle from '../lib/gidsen-alle.js';
 import * as groei from '../lib/gids-groei.js';
 import * as gidsen from '../lib/gidsen-kadoly.js';
 const catalog=(fs.existsSync('catalog-audit.json') ? JSON.parse(fs.readFileSync('catalog-audit.json','utf8')) : ['Witte Phalaenopsis Orchidee', 'Bloempot wit', 'Tafellamp oplaadbaar', 'Bamboe sokken', 'Kaars rood', '3D houten puzzel', 'Vaas glas', 'Serviesset beige', ...Array.from({length:25},(_,i)=>'Glazen mok '+i)].map((t,i)=>({id:'oc_'+i,t,vr:true}))).map(i=>({...i,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0}));
-for(const g of Object.values(gidsen.GIDSEN)) for(const k of g.keuze) if(!catalog.some(i=>i.id===k.pid)) catalog.push({id:k.pid,t:k.naam,vr:true,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0});
+for(const g of Object.values(gidsen.GIDSEN)) for(const k of g.keuze) if(k.pid&&!catalog.some(i=>i.id===k.pid)) catalog.push({id:k.pid,t:k.naam,vr:true,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0});
 for(let k=0;k<140;k++)catalog.push({id:'oc_extra'+k,t:(k%2?'Mok':'Dinerbord')+' test '+k,vr:true,p:k+1,vk:3,c:'keuken',s:'servies',lt:3,l:Date.now()});
 for(let k=0;k<140;k++)catalog.push({id:'oc_pot'+k,t:(k%2?'Bloempot voor binnen':'Plantenbak buiten')+' test '+k,vr:true,p:k+1,vk:3,c:'wonen',s:'planten',lt:3,l:Date.now()});
 catalog.push({id:'oc_ring',t:'Metalen Paddenstoelring voor Plantenpotten',vr:true,p:20,vk:3,c:'wonen',s:'planten',lt:3,l:Date.now()});
+catalog.push({id:'oc_4174005539848193',t:'Gevlochten Roze Bedbumper 2m Katoen voor Baby',vr:true,p:20,vk:4.95,lt:8,c:'kids',s:'baby',l:Date.now()+60000,img:''});
+catalog.push({id:'oc_4174005507129345',t:'Grijze Baby Slaapzak met Fleece',vr:true,p:20,vk:4.95,lt:8,c:'kids',s:'baby',l:Date.now()+60000,img:''});
 const context=vm.createContext({console,URL,Buffer,Date,Set,Map,process:{env:{}},AbortSignal,fetch:()=>{throw Error('Geen externe requests in rendertest');}});
 const synth=obj=>new vm.SyntheticModule(Object.keys(obj),function(){for(const [k,v]of Object.entries(obj))this.setExport(k,v);},{context});
 const code=fs.readFileSync('api/gids.js','utf8');
 const kv={get:async k=>k==='hjdk:shop:cat'?{items:catalog}:null,set:async()=>{},raw:async()=>[],mget:async(...keys)=>keys.map(()=>null)};
 const nb=Object.fromEntries([...new Set([...code.matchAll(/NB\.([\w]+)/g)].map(m=>m[1]))].map(k=>[k,/^[A-Z_]+$/.test(k)?'':k==='blok'?()=>'':k==='mailKlaar'?async()=>false:k==='blokInfo'?async()=>({}):async()=>[]]));
-const stubs={'../lib/gidsen-alle.js':alle,'../lib/gids-indexnow.js':indexnow,'../lib/gids-catalogus.js':volledig,'../lib/db.js':{kv},'../lib/look.js':{lookNieuw:()=>''},'../lib/gidsen-kadoly.js':gidsen,'../lib/ai.js':{berichten:()=>{},HAIKU:'test'},'node:crypto':crypto,'../lib/kadoly-nieuws.js':nb,'../lib/gids-onderzoek.js':bewijs,'../lib/gids-groei.js':groei};
+const stubs={'../lib/funnel.js':{funnelStap:async()=>null,funnelStand:async()=>({}),funnelHtml:()=>'',fnIdUitCookie:()=>null,isFnBot:()=>true,bronVan:()=>'',FN_JS:()=>''},'../lib/gidsen-alle.js':alle,'../lib/gids-indexnow.js':indexnow,'../lib/gids-catalogus.js':volledig,'../lib/db.js':{kv},'../lib/look.js':{lookNieuw:()=>''},'../lib/gidsen-kadoly.js':gidsen,'../lib/ai.js':{berichten:()=>{},HAIKU:'test'},'node:crypto':crypto,'../lib/kadoly-nieuws.js':nb,'../lib/gids-onderzoek.js':bewijs,'../lib/gids-groei.js':groei};
 const module=new vm.SourceTextModule(code,{context});await module.link(name=>{assert.ok(stubs[name],name);return synth(stubs[name]);});await module.evaluate();
 async function render(query,host='gids.kadoly.com'){let body='',status=200;const headers={};const res={setHeader:(k,v)=>headers[k]=v,status(n){status=n;return this;},send(x){body=x;return this;},json(x){body=x;return this;},end(){return this;}};await module.namespace.default({url:'/api/gids?'+query,method:'GET',headers:{host,'user-agent':'render-test-bot'}},res);assert.equal(status,200,typeof body==='string'?body.slice(0,200):JSON.stringify(body));if(typeof body==='string'&&body.includes('<html')){assert.equal((body.match(/<h1[ >]/g)||[]).length,1);for(const match of body.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g))JSON.parse(match[1]);}return {body,headers};}
 for(const p of bewijs.ONDERZOEK){const {body}=await render('slug=onderzoek-'+p.id);assert.ok(body.includes('Wat bewijst dit niet?'));assert.ok(body.includes('Bronnen en belangen'));assert.ok(body.includes('rel="canonical" href="https://gids.kadoly.com/onderzoek-'+p.id+'"'));}
 assert.ok((await render('slug=onderzoek-en-bronnen')).body.includes('geen onafhankelijke testorganisatie'));
 const all=(await render('slug=alle-producten')).body;assert.equal((all.match(/<tr id="product-/g)||[]).length,catalog.filter(i=>i.vr!==false).length); assert.ok(all.includes('/alle-producten'));
-const home=(await render('')).body;assert.ok(home.includes('/onderzoek-en-bronnen'));
+const home=(await render('')).body;assert.ok(home.includes('/onderzoek-en-bronnen')); assert.ok(!home.includes('5% bij 2 producten')); assert.ok(!home.includes('eerste bestelling wordt gratis'));
 const leg=(await render('slug=houten-legpuzzel-volwassenen')).body;assert.ok(leg.includes('href="https://pubmed.ncbi.nlm.nih.gov/39842256/"'));assert.ok(leg.includes('Bronnen en beperkingen'));assert.ok(!leg.includes('snel mee klaar'));
 for(const slug of ['wollen-deken','kerstkrans','vaas-kiezen']) {
  const h=(await render('slug='+slug)).body;
@@ -168,3 +170,16 @@ console.log('Bureau: bron-/variantgrenzen, prijsuitsluiting en conditionele keuz
 
 
 
+
+const babyHub=(await render('slug=onderzoek-en-bronnen')).body;
+assert.ok(babyHub.includes('Wij raden dit product af voor het babybed'));
+assert.ok(babyHub.includes('TOG ontbreekt'));
+assert.ok(babyHub.includes('geen test of terugroepactie'));
+for(const slug of ['', 'nieuw-bij-kadoly', 'alle-producten']) {
+  const h=(await render('slug='+slug)).body;
+  assert.ok(h.includes('Geen NL-levering bevestigd'),slug);
+  assert.ok(h.includes('/onderzoek-en-bronnen#nieuw-productadvies'),slug);
+}
+assert.equal(bewijs.leveringsBeperking({id:'oc_other'}),'');
+assert.equal(bewijs.nieuwProductAdvies({id:'oc_other'}),'');
+console.log('Nieuwe producten: babybed-advies, onbekende TOG, NL-leveringsbeperking op home/nieuw/aanbod geslaagd.');
