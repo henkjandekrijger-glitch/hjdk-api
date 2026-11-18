@@ -271,7 +271,7 @@
   ],
   "rewrites": [
     {
-      "source": "/m/:code([0-9a-f]{12}[1-9])",
+      "source": "/m/:code([0-9a-f]{12}[1-9]|[a-z0-9]{5})",
       "destination": "/api/post?op=k&code=:code"
     },
     {
