@@ -888,7 +888,7 @@
           "value": "(www\\.)?keuzehulp\\.best"
         }
       ],
-      "destination": "/api/keuze-tools?tool=hyp&p=berekenen"
+      "destination": "/api/keuze-tools?tool=hyp&pg=berekenen"
     },
     {
       "source": "/hypotheekrente",
@@ -898,7 +898,7 @@
           "value": "(www\\.)?keuzehulp\\.best"
         }
       ],
-      "destination": "/api/keuze-tools?tool=hyp&p=rente"
+      "destination": "/api/keuze-tools?tool=hyp&pg=rente"
     },
     {
       "source": "/huis-kopen/sitemap.xml",

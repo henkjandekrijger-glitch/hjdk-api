@@ -115,9 +115,10 @@ export default async function handler(req, res) {
     if(op==='stand'){res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');return res.status(200).json(await HY.stand());}
     if(op==='ping'){res.setHeader('cache-control','no-store');if(!beschermd)return res.status(403).json({ok:false});return res.status(200).json(await HY.ping());}
     if(op==='rekenopen'){res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');const RG=await import('../lib/rekenhulpregel.js');return res.status(200).json(await RG.rekenhulpOpenLijst());} // vaste regel: onderwerpen waar een rekenhulp bij hoort (planners kzmaak/wtbmaak)
-    const p=String(q.get('p')||'');const html=p==='rente'?await HY.hypotheekrente():p==='berekenen'?await HY.hypotheekBerekenen([...q.entries()].filter(([k])=>!['tool','p','op','market'].includes(k))):null;
+    const pg=String(q.get('pg')||''),INV=new Set(['j','i1','i2','p','aow','ia','st','le','rv','r','afm','w','l','m','s','n','kp','v','h']),eigen=[...q.entries()].filter(([k])=>INV.has(k)); // pg = pagina (rewrite), de rest is invoer van het formulier zonder JavaScript
+    const html=pg==='rente'?await HY.hypotheekrente():pg==='berekenen'?await HY.hypotheekBerekenen(eigen):null;
     res.setHeader('content-type','text/html; charset=utf-8');if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/hypotheek-berekenen">Hypotheek berekenen</a></p>');}
-    res.setHeader('cache-control',[...q.keys()].some(k=>!['tool','p','market'].includes(k))?'private, no-store':'public, s-maxage=600, stale-while-revalidate=86400');return res.status(200).send(html);}
+    res.setHeader('cache-control',pg==='berekenen'&&eigen.length?'private, no-store':'public, s-maxage=600, stale-while-revalidate=86400');return res.status(200).send(html);}
   if(q.get('tool')==='huis'){ // huis kopen en makelaars per plaats (lib/huiskopen.js, 19 nov 2026)
     const HK=await import('../lib/huiskopen.js');const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
     if(op==='ververs'){res.setHeader('cache-control','no-store');if(!beschermd)return res.status(403).json({ok:false});const r=q.get('m')?await HK.ververs(q.get('m')):await HK.verversOudste();const m=await HK.meldNieuw().catch(e=>({fout:String(e.message||e).slice(0,80)}));return res.status(200).json({...r,indexnow:m});}
