@@ -19,7 +19,7 @@ import { bronScript, groeiRonde, groeiStand, groeiHtml } from '../lib/gids-groei
 import * as NB from '../lib/kadoly-nieuws.js'; // aanmelding mail en meldingen (2 nov 2026)
 
 const HOST = 'https://gids.kadoly.com';
-const ACC = { acc: '#1D9BF0', acc2: '#E8F4FD', accD: '#60A5FA', acc2D: '#13202E' }; // Kadoly-blauw (30 okt, Henkjan: "Neem design van Kadoly over"; uitgelezen met op=stijl)
+export const ACC = { acc: '#1D9BF0', acc2: '#E8F4FD', accD: '#60A5FA', acc2D: '#13202E' }; // Kadoly-blauw (30 okt, Henkjan: "Neem design van Kadoly over"; uitgelezen met op=stijl)
 const WA = '31655395630'; // WhatsApp van Henkjan voor dringende vragen (30 okt: "Kan escaleren naar mij +31655395630 whatsapp als dringende vragen over iets"); staat ook in de voet van kadoly.com
 const N = v => { const n = Number(v); return Number.isFinite(n) ? n : 0; };
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -66,7 +66,7 @@ function ldJson(g, items, A) {
 const KAD = 'html{--prim:#111827;--on-prim:#fff;--link:#2563EB;--nav:hsla(0,0%,100%,.86);--veld:rgba(15,23,42,.05);--sh:0 16px 40px -12px rgba(15,23,42,.22),0 2px 6px rgba(15,23,42,.06)}';
 const KAD_D = '--ink:#F3F4F6;--ink-2:#F3F4F6;--ink-3:#F3F4F6;--line:rgba(255,255,255,.1);--line-strong:rgba(255,255,255,.22);--bg:#0f1012;--bg-2:#17181c;--acc:#60A5FA;--acc-2:#13202E;--on-acc:#0f1012';
 const KAD_D2 = '--prim:#F3F4F6;--on-prim:#0f172a;--link:#60A5FA;--nav:rgba(20,21,23,.86);--veld:hsla(0,0%,100%,.07);--sh:0 16px 40px -12px rgba(0,0,0,.6)';
-const CSS_KADOLY = `:root{--ink:#0B0D12;--ink-2:#0B0D12;--ink-3:#0B0D12;--line:#E6E8EB;--line-strong:#C9CED6;--bg:#fff;--bg-2:#F6F7F9;--acc:#1D9BF0;--acc-2:#E8F4FD;--on-acc:#fff}${KAD}
+export const CSS_KADOLY = `:root{--ink:#0B0D12;--ink-2:#0B0D12;--ink-3:#0B0D12;--line:#E6E8EB;--line-strong:#C9CED6;--bg:#fff;--bg-2:#F6F7F9;--acc:#1D9BF0;--acc-2:#E8F4FD;--on-acc:#fff}${KAD}
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){${KAD_D};${KAD_D2}}}:root[data-theme=dark]{${KAD_D};${KAD_D2}}
 body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 .kn{position:sticky;top:0;z-index:20;background:var(--nav);-webkit-backdrop-filter:saturate(180%) blur(12px);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
@@ -91,7 +91,7 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvet
 .kv-merk{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink);font-size:1rem}.kv-pay{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:12px 0 0;font-size:.75rem}.kv-pay img,.kv-pay svg{display:block;height:18px;width:auto}.kv-onder{border-top:1px solid var(--line);margin:22px 0 0;padding:16px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between}.kv-onder a{display:inline;margin:0}.kv-legal{display:flex;flex-wrap:wrap;gap:14px}
 @media(max-width:720px){.kv-cols{grid-template-columns:1fr 1fr}}`;
 // opmaak van de gidsen: outname.now (Henkjan 30 okt: "betere kadoly opmaak meer LLM optimised bijv looks van outname.now met de plusjes"), in Kadoly-kleuren
-const CSS_GIDS = `main.wrap{padding-top:34px}.wrap{max-width:820px}.meta{opacity:1;font-size:16px;margin:0 0 22px}.kicker{color:var(--ink)}.kicker .live-dot{background:var(--acc)}
+export const CSS_GIDS = `main.wrap{padding-top:34px}.wrap{max-width:820px}.meta{opacity:1;font-size:16px;margin:0 0 22px}.kicker{color:var(--ink)}.kicker .live-dot{background:var(--acc)}
 .btn{border-radius:999px;font-weight:600;font-size:17px;padding:13px 22px}.btn.knop{background:var(--prim);border-color:var(--prim);color:var(--on-prim)}.btn.deel{background:transparent;border:1px solid var(--line-strong);color:var(--ink)}
 .toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px}.toc a{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:16px;text-decoration:none!important}.toc a:hover{border-color:var(--acc)}
 .pk{display:grid;grid-template-columns:120px 1fr;gap:20px;border:1px solid var(--line);border-radius:16px;padding:20px;margin:0 0 14px;background:var(--bg)}.pk-img img{width:120px;height:120px;object-fit:cover;border-radius:12px;background:var(--bg-2);display:block}
