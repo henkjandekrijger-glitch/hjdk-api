@@ -1128,9 +1128,10 @@ ${rest.length ? `<h2 class="ov-h">Alle andere keuzehulpen ${esc(naam)}</h2><div 
     if (op === 'indexnow') { // cron (dagelijks): nieuwe en gewijzigde pagina's direct melden bij Bing/Yandex/Seznam (IndexNow); Bing voedt ook ChatGPT-zoeken en Copilot
       res.setHeader('cache-control', 'no-store'); const items = await allItems(); const base = baseOf(req); const sent = (await kv.get('hjdk:kz:indexnow')) || {};
       const all = ['/keuzehulp', '/keuzehulp/over'].concat([...new Set(items.map(i => '/keuzehulp/categorie/' + catSlug(i.cat)))]).concat(items.map(i => '/keuzehulp/' + i.slug)).map(p => base + pathOf(req, p));
-      const todo = url.searchParams.get('alles') === '1' || !sent.at ? all : all.filter(u => !sent.urls || sent.urls.indexOf(u) < 0).concat([base + '/']);
+      const alleen = String(url.searchParams.get('u') || '').split(',').map(s => s.trim()).filter(s => items.some(i => i.slug === s)).map(s => base + pathOf(req, '/keuzehulp/' + s)); // ?u=slug1,slug2: alleen deze gewijzigde keuzehulpen melden (19 nov 2026)
+      const todo = alleen.length ? alleen : url.searchParams.get('alles') === '1' || !sent.at ? all : all.filter(u => !sent.urls || sent.urls.indexOf(u) < 0).concat([base + '/']);
       let status = 0; try { const r = await fetch('https://api.indexnow.org/indexnow', { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify({ host: base.replace(/^https?:\/\//, ''), key: INDEXNOW_KEY, keyLocation: base + '/' + INDEXNOW_KEY + '.txt', urlList: [...new Set(todo)].slice(0, 10000) }) }); status = r.status; } catch (e) {}
-      if (status >= 200 && status < 300) await kv.set('hjdk:kz:indexnow', { at: Date.now(), urls: all, laatste: todo.length });
+      if (status >= 200 && status < 300 && !alleen.length) await kv.set('hjdk:kz:indexnow', { at: Date.now(), urls: all, laatste: todo.length });
       return res.status(200).json({ ok: status >= 200 && status < 300, status, gemeld: todo.length }); }
     if (op === 'indexnowkey') { res.setHeader('content-type', 'text/plain'); return res.status(200).send(INDEXNOW_KEY); }
     if (op === 'llms' || op === 'llmsfull') { const bh = botHits(req, op); if (bh.length) { try { await kv.incrMany(bh); } catch (e) {} } }
