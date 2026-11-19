@@ -30,3 +30,16 @@ Eén URL: https://keuzehulp.best/energieleverancier-vergelijken . Goedkoopste en
 - https://www.milieucentraal.nl/energie-besparen/inzicht-in-je-energierekening/energiecontracten-welke-zijn-er/
 - https://www.rijksoverheid.nl/themas/klimaat-milieu-en-natuur/energie-thuis/salderingsregeling
 - Vergelijkuitgangen gecontroleerd: https://www.gaslicht.com/ en https://www.pricewise.nl/energie-vergelijken/ . Geen partner-ID toegevoegd.
+
+## UnitedConsumers (19 november 2026)
+
+Aanleiding: Awin-aanvraag voor UnitedConsumers NL afgewezen ("URL is niet relevant voor merk van adverteerder"). De pagina heeft nu een blok Leveranciers naast elkaar met de top 5 van Overstappen.nl (1 jaar vast, 3 nov 2026) en een feitentabel over UnitedConsumers Energie, elk feit met bron. Gewone link naar unitedconsumers.com/energie, geen partnercode (nog niet geaccepteerd). Data in `lib/energie-keuze.js` (ENERGY_TOP, ENERGY_UC).
+
+Gelezen op 19 nov 2026:
+- https://www.overstappen.nl/nieuws/dit-zijn-de-goedkoopste-energieleveranciers-in-november-2026/ (lijst 3 nov: UnitedConsumers plek 1, € 224,45 per maand, € 465 korting, hoogste gastarief van de top 5)
+- https://www.overstappen.nl/energie/leveranciers/united-consumers-energie (tarieven 19 nov, meer dan 500.000 leden, inkoop bij ENGIE, 19 staffels terugleverkosten)
+- https://www.energievergelijk.nl/energieleverancier/unitedconsumers (contracten, geen dynamisch, 8,8 uit 312 beoordelingen, opzeggen na afloop)
+- https://www.gaslicht.com/energie-vergelijken/unitedconsumers/modelcontract-stroom-en-gas-1-jaar-vast-5344 (vaste leveringskosten, stroometiket 100% groen NL, prijswijziging 16 nov)
+- Niet gelezen: unitedconsumers.com/energie zelf en de Gaslicht-leverancierspagina (fetch geweigerd). Consumentenbond-lijst van 16 nov noemt UnitedConsumers niet.
+
+Tarieven verschillen per bron en per regio (netbeheerder, verbruik). Bij een update alle vier opnieuw lezen en de datums in ENERGY_UC bijwerken.

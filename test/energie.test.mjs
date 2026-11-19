@@ -4,9 +4,9 @@ import fs from 'node:fs/promises';
 import vm from 'node:vm';
 const source=await fs.readFile(new URL('../lib/energie-keuze.js',import.meta.url),'utf8'),url='data:text/javascript;base64,'+Buffer.from(source).toString('base64'),data=await import(url);
 const pageSource=await fs.readFile(new URL('../lib/energie-page.js',import.meta.url),'utf8');
-const page=await import('data:text/javascript;base64,'+Buffer.from(pageSource.replace("import { look, ACCENTS } from './look.js';",'const look=()=>"";const ACCENTS={};').replace("'./energie-keuze.js'",JSON.stringify(url))).toString('base64'));
+const page=await import('data:text/javascript;base64,'+Buffer.from(pageSource.replace("import { lookNieuw } from './look.js';",'const lookNieuw=()=>"";').replace("'./energie-keuze.js'",JSON.stringify(url))).toString('base64'));
 test('all 27 routes render the correct existing-contract, solar and price-risk advice',()=>{
- for(let a=0;a<3;a++)for(let b=0;b<3;b++)for(let c=0;c<3;c++){const route=[a,b,c].join('-'),advice=data.energyAdvice(route),html=page.renderEnergy(route);assert.deepEqual(advice.route,[a,b,c]);assert.ok(html.includes(advice.first));assert.ok(html.includes(advice.solar));assert.ok(html.includes(advice.title));assert.match(html,/method="get"/);assert.match(html,/op=tracker&v=2/);assert.match(html,/geen leverancierstarieven/);const schema=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);assert.equal(schema['@graph'][2].mainEntity.length,8);}
+ for(let a=0;a<3;a++)for(let b=0;b<3;b++)for(let c=0;c<3;c++){const route=[a,b,c].join('-'),advice=data.energyAdvice(route),html=page.renderEnergy(route);assert.deepEqual(advice.route,[a,b,c]);assert.ok(html.includes(advice.first));assert.ok(html.includes(advice.solar));assert.ok(html.includes(advice.title));assert.match(html,/method="get"/);assert.match(html,/op=tracker&v=2/);assert.match(html,/geen leverancierstarieven/);const schema=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);assert.equal(schema['@graph'][2].mainEntity.length,9);assert.equal(schema['@graph'][0].mentions[0].name,'UnitedConsumers Energie');}
  assert.deepEqual(data.energyRoute('99--4-abc'),[2,0,2]);
 });
 test('two all-in offers include only uncounted bonuses and exit costs, never treat missing annual cost as zero',()=>{
@@ -23,4 +23,10 @@ test('browser calculator validates, calculates and clears stale answers without 
 });
 test('calculator input is not serialized into URLs; page does not fabricate current supplier prices',()=>{
  const html=page.renderEnergy('0-0-0'),form=html.match(/<form id="energy-cost-form">([\s\S]*?)<\/form>/)[1];assert.doesNotMatch(form,/name=/);assert.match(form,/required/);assert.match(html,/Geen|geen/);assert.match(html,/Delta/);assert.match(html,/2027/);assert.doesNotMatch(html,/23500|136200|24\.74/);
+});
+test('UnitedConsumers staat in de vergelijking met bron bij elk feit, zonder partnercode en zonder gedachtestreepjes',()=>{
+ const html=page.renderEnergy('0-0-0'),blok=html.match(/<section id="leveranciers">([\s\S]*?)<\/section>/)[1];
+ assert.match(blok,/UnitedConsumers Energie/);assert.match(blok,/€ 224,45/);assert.match(blok,/href="https:\/\/www\.unitedconsumers\.com\/energie"/);
+ assert.equal((blok.match(/<tbody>/g)||[]).length,2);for(const [,,b,u] of data.ENERGY_UC.feiten){assert.ok(blok.includes(u));assert.ok(b);}
+ assert.doesNotMatch(html,/—/);assert.doesNotMatch(blok,/awin|awclick|sponsored/i);
 });
