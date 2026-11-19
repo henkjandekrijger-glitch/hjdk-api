@@ -206,6 +206,7 @@ export default async function handler(req, res) {
   if(q.get('tool')==='sephora'){const {sephoraHandler}=await import('../lib/sephora-page.js');return sephoraHandler(req,res);}
   if(q.get('tool')==='temu'){const {temuHandler}=await import('../lib/temu-page.js');return temuHandler(req,res);}
   if(q.get('tool')==='huisdier'){const {huisdierHandler}=await import('../lib/huisdier.js');return huisdierHandler(req,res);} // huisdierenverzekering hond en kat (19 nov 2026)
+  if(q.get('tool')==='dienstgids'){const {dienstgidsHandler}=await import('../lib/dienstgids.js');return dienstgidsHandler(req,res);} // zonnepanelen en schoonmaakbedrijf (19 nov 2026, AI-gaten Demand Radar)
   if(q.get('tool')==='battery'){const {batteryHandler}=await import('../lib/stekkerbatterij-page.js');return batteryHandler(req,res);}
   if (['client','rules','theme-client','theme-rules'].includes(op)) {
     res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600'); res.setHeader('x-robots-tag', 'noindex'); return res.status(200).send(op === 'client' ? TOOL_CLIENT : op === 'theme-client' ? THEME_CLIENT : op === 'theme-rules' ? [portionCost, heatCost, themeAdvice].map(fn => 'export ' + fn.toString()).join('\n') : rules());

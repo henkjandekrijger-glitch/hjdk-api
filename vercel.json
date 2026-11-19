@@ -1561,6 +1561,16 @@
       "destination": "/api/keuze-tools?tool=battery&market=nl"
     },
     {
+      "source": "/zonnepanelen",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=dienstgids&g=zonnepanelen"
+    },
+    {
       "source": "/acai-bowl-maken",
       "has": [
         {
