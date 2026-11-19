@@ -1279,6 +1279,13 @@ export default async function handler(req, res) {
       const uit = []; for (const x of g.groepen) uit.push(Object.assign({ groep: x.id, was: x.conversion_event }, await whopZetDoel(x.id, ev)));
       try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'Meta stuurt nu op ' + ev + ' (Henkjan 17 nov: "Ja doen ."): ' + uit.map(u => u.groep + ' ' + (u.ok ? 'gelukt' : 'mislukt')).join(', ') })]); } catch (e) {}
       return res.status(200).json({ ok: uit.length > 0 && uit.every(u => u.ok), uit }); }
+    if (op === 'whuit') { // 19 nov (Henkjan: "ga dan nu beter adverteren en wat verkopen"): advertenties met de hand uit (lijst ad_-id's, hooguit 20), met reden in het log; alleen via de beschermde host
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const ids = String(url.searchParams.get('ids') || '').split(',').map(x => x.replace(/[^A-Za-z0-9_]/g, '').slice(0, 40)).filter(x => /^ad_/.test(x)).slice(0, 20); const waarom = String(url.searchParams.get('waarom') || '').slice(0, 200);
+      if (!ids.length) return res.status(400).json({ ok: false, fout: 'ids' });
+      const uit = []; for (const id of ids) { const r = await whopPauze(id); uit.push({ id, ok: r.ok, fout: r.fout || undefined }); }
+      try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'met de hand uit (' + waarom + '): ' + uit.map(u => u.id + (u.ok ? '' : ' mislukt')).join(', ') })]); await kv.raw(['LPUSH', 'mm:handover:log', JSON.stringify({ t: new Date().toISOString(), wie: 'whop-hand', tekst: 'Kadoly Meta: ' + uit.filter(u => u.ok).length + ' advertenties uit (' + waarom + ')' })]); } catch (e) {}
+      return res.status(200).json({ ok: uit.every(u => u.ok), uit }); }
     if (op === 'whaan') { // 17 nov: een advertentie weer aan die de ronde onterecht uitzette (oude regel: $1,50 zonder echt mens, ook zonder één klik bij Meta)
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const id = String(url.searchParams.get('id') || '').replace(/[^A-Za-z0-9_]/g, '').slice(0, 40); if (!/^ad_/.test(id)) return res.status(400).json({ ok: false, fout: 'id' });
