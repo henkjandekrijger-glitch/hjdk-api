@@ -555,6 +555,7 @@ export default async function handler(req, res) {
   if (Date.now() - META_AT > 300000) { META_AT = Date.now(); try { META = String((await kv.get('gk:gscmeta')) || ''); } catch (e) {} }
   try {
     if (/^(nieuws|nbbevestig|nbaf|nbpush|nbbericht|nbklik|nbsw|nbronde|nbnieuws|nbstand|nbdomein|nbdomeinweg|nbwin|nbregels|nbwinnaars)$/.test(op)) return await nieuwsOp(op, req, res, q, host, ua);
+    if (/^cy[a-z]*$/.test(op)) return await (await import('../lib/curady.js')).cyOp(op, { req, res, q, host }); // Curady (curady.com), high-ticket tak, 18 nov 2026
     if (/^dk[a-z]*$/.test(op)) return await (await import('../lib/dagkans.js')).dkOp(op, { req, res, q, host, ua, kaal, leesBody, isBot }); // Kadoly Winterkans (14 nov 2026), testwereld met &test=1 op de beschermde host
     if (op === 'paginacheck') { if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden'); // nakijken zonder de hele pagina op te halen: maat, titel, kop, schema, rijen (beschermde host)
       const kans = await armKans(), R = await rubrieken(); const pag = { home: await home(kans), nieuw: await nieuwPagina(kans), ['rubriek-' + R[0].c]: await rubriekPagina(R[0].c, kans) }; const uit = {};

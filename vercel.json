@@ -282,6 +282,8 @@
     {"source": "/wp-json/:path*", "has": [{"type": "host", "value": "gids\\.kadoly\\.com"}], "destination": "/api/dp?wc=:path*"},
     {"source": "/dp/wp-json", "has": [{"type": "host", "value": "gids\\.kadoly\\.com"}], "destination": "/api/dp?wc="},
     {"source": "/dp/wp-json/:path*", "has": [{"type": "host", "value": "gids\\.kadoly\\.com"}], "destination": "/api/dp?wc=:path*"},
+    {"source": "/", "has": [{"type": "host", "value": "(www\\.)?curady\\.com"}], "destination": "/api/gids?op=cyhome"},
+    {"source": "/robots.txt", "has": [{"type": "host", "value": "(www\\.)?curady\\.com"}], "destination": "/api/gids?op=cyrobots"},
     {
       "source": "/m/:code([0-9a-f]{12}[1-9]|[a-z0-9]{5})",
       "destination": "/api/post?op=k&code=:code"
