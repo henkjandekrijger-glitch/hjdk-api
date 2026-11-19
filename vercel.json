@@ -258,7 +258,11 @@
     },
     {
       "path": "/api/keuze-tools?tool=huis&op=ververs",
-      "schedule": "40 */4 * * *"
+      "schedule": "40 * * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=huis&op=scan",
+      "schedule": "7,37 * * * *"
     },
     {
       "path": "/api/keuze-tools?tool=rdam&op=verrijk",
@@ -2023,7 +2027,7 @@
       "includeFiles": ".claude/skills/**"
     },
     "api/keuze-tools.js": {
-      "maxDuration": 120
+      "maxDuration": 300
     },
     "api/vindbaarheid.js": {
       "maxDuration": 300

@@ -48,7 +48,7 @@ export default async function handler(req, res) {
     const tl = q.get('tool') || '', mk = String(q.get('market') || q.get('m') || 'nl');
     if (!/^(cur|tsc|voorkant)$/.test(tl)) { const H = await import('../lib/huisstijl.js'); const st = tl === 'nexy' || /nexy\.help/.test(String(req.headers.host || '')) ? 'nexy' : mk === 'us' || mk === 'en' ? 'us' : mk === 'de' ? 'de' : 'nl';
       const G = tl === 'rdam' ? 'rotterdam' : tl === 'huis' ? 'huis' : tl === 'zorg' ? 'zorg' : tl === 'nexy' ? 'nexy' : 'rekenhulpen', P = st === 'us' ? 'wtbus' : st === 'de' ? 'wtbde' : st === 'nexy' ? 'nexy' : 'kz';
-      H.metHuisstijl(res, st, { meet: { P, G }, chat: tl === 'rdam' ? { term: 'diensten in Rotterdam', slug: 'rotterdam' } : tl === 'huis' ? { term: 'huis kopen', slug: 'huis-kopen' } : true, voetExtra: tl === 'rdam' ? 'Gegevens uit OpenStreetMap (© OpenStreetMap-bijdragers, ODbL) en reviewscores met link naar de bron; de ranglijst is onze eigen berekening' : tl === 'huis' ? 'Makelaars uit OpenStreetMap (© OpenStreetMap-bijdragers, ODbL), zonder scores; bedragen met bron en datum' : '' }); }
+      H.metHuisstijl(res, st, { meet: { P, G }, chat: tl === 'rdam' ? { term: 'diensten in Rotterdam', slug: 'rotterdam' } : tl === 'huis' ? { term: 'huis kopen', slug: 'huis-kopen' } : true, voetExtra: tl === 'rdam' ? 'Gegevens uit OpenStreetMap (© OpenStreetMap-bijdragers, ODbL) en reviewscores met link naar de bron; de ranglijst is onze eigen berekening' : tl === 'huis' ? 'Makelaars uit OpenStreetMap (© OpenStreetMap-bijdragers, ODbL); de volgorde is onze eigen Keuzehulp-score; bedragen met bron en datum' : '' }); }
   }
   if(q.get('tool')==='nexy'){ // nexy.help: AI-keuzehulp (lib/nexyhelp.js, 17 nov 2026)
     const N=await import('../lib/nexyhelp.js');
@@ -90,6 +90,7 @@ export default async function handler(req, res) {
     if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/zorgverzekering">Zorgverzekering 2027 vergelijken</a></p>');}
     res.setHeader('cache-control','public, s-maxage=600, stale-while-revalidate=86400');return res.status(200).send(html);}
   if(q.get('tool')==='rdam'){ // dienstengids Rotterdam (lib/rdam.js, 17 nov 2026)
+    if(q.get('d')==='makelaar'){const z=String(q.get('z')||'').replace(/[^a-z0-9-]/g,'');res.setHeader('location','/makelaar/rotterdam'+(z?'/'+z:''));return res.status(301).end();} // makelaars sinds 19 nov 2026 in lib/makelaar.js
     const R=await import('../lib/rdam.js');const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
     if(op==='tik'){let b=req.body;try{if(typeof b==='string')b=JSON.parse(b.slice(0,800));}catch{b={};}res.setHeader('cache-control','no-store');return res.status(200).json(await R.tik(b||{}));}
     if(op==='ververs'){res.setHeader('cache-control','no-store');if(!beschermd)return res.status(403).json({ok:false});const r=q.get('d')?await R.ververs(q.get('d')):await R.verversOudste();const m=await R.meldNieuw().catch(e=>({fout:String(e.message||e).slice(0,80)}));return res.status(200).json({...r,indexnow:m});}
@@ -120,10 +121,16 @@ export default async function handler(req, res) {
   if(q.get('tool')==='huis'){ // huis kopen en makelaars per plaats (lib/huiskopen.js, 19 nov 2026)
     const HK=await import('../lib/huiskopen.js');const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
     if(op==='ververs'){res.setHeader('cache-control','no-store');if(!beschermd)return res.status(403).json({ok:false});const r=q.get('m')?await HK.ververs(q.get('m')):await HK.verversOudste();const m=await HK.meldNieuw().catch(e=>({fout:String(e.message||e).slice(0,80)}));return res.status(200).json({...r,indexnow:m});}
+    if(op==='scan'){res.setHeader('cache-control','no-store');if(!beschermd)return res.status(403).json({ok:false});return res.status(200).json(await HK.scanRonde(Math.min(60,Number(q.get('n'))||30)));} // eigen sites van makelaars nakijken (lib/makelaar.js)
+    if(op==='leads'){res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');if(!beschermd)return res.status(403).json({ok:false});return res.status(200).json(await HK.leads(Math.min(500,Number(q.get('n'))||50)));}
+    if(op==='tik'||op==='mening'||op==='lead'){res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');if(req.method!=='POST')return res.status(405).json({ok:false});let b=req.body;try{if(typeof b==='string')b=JSON.parse(b.slice(0,3000));}catch{b={};}b=b||{};
+      if(op==='tik')return res.status(200).json(await HK.tik(b));
+      const o=op==='mening'?await HK.meningPost(req,b):await HK.leadPost(req,b);
+      if(op==='lead'&&!/json/.test(String(req.headers['content-type']||''))){res.setHeader('content-type','text/html; charset=utf-8');const pl=String(b.pl||''),s=String(b.s||'').replace(/[^a-z0-9-]/g,'');return res.status(200).send('<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content=noindex><title>Aanvraag</title><div style="font:18px/1.6 Inter,Arial,sans-serif;max-width:560px;margin:48px auto;padding:0 20px;color:#111113"><p>'+String(o.tekst||'').replace(/[<>&]/g,'')+'</p><p><a href="/makelaar/'+(HK.isPlaats(pl)?pl+(s?'/'+s:''):'')+'" style="color:#111113">Terug</a></p></div>');}
+      return res.status(200).json(o);}
     if(op==='stand'){res.setHeader('cache-control','no-store');return res.status(200).json(await HK.stand());}
     if(op==='sitemap'){const x=await HK.sitemap();res.setHeader('content-type','application/xml; charset=utf-8');res.setHeader('cache-control','public, s-maxage=3600');return res.status(200).send(x.xml);}
     const m=String(q.get('m')||'').toLowerCase(),z=String(q.get('z')||'').toLowerCase();
-    if(m==='rotterdam'){res.setHeader('location','/rotterdam/makelaar'+(z?'/'+z:''));return res.status(301).end();}
     const html=q.has('m')?(z?await HK.zaakPagina(m,z):m&&m!=='hub'?await HK.plaatsPagina(m):await HK.hub()):await HK.huisKopen();
     res.setHeader('content-type','text/html; charset=utf-8');if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/makelaar">Makelaars per plaats</a> · <a href="/huis-kopen">Huis kopen</a></p>');}
     res.setHeader('cache-control','public, s-maxage=300, stale-while-revalidate=3600');return res.status(200).send(html);}
