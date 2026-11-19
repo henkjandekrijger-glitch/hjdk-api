@@ -103,6 +103,7 @@ Royalty per boek 2025 / okt-dec 2025: PIT BOSS $13.496 / $5.258; Lasting Change 
 | Teens CA-duw (sinds 14 nov) | tussen 18 nov: +$52,49 extra royalty tegen $43,83 ads = door. Eind 21 nov (trig_01NZvwHBWJPUGeSsczafDMJA) | Teens CA-royalty boven basis $4,79/dag moet de Teens CA-ads dekken; verlengen alleen met Henkjans woord |
 | PIT BOSS-duw 17-19 nov (prijs $14,99 sinds 17 nov) | 20 nov ronde A | PIT BOSS-royalty dagen 17-19 lager dan PIT BOSS-ads = alle biedingen terug naar $0,40. Dag 1: $8,95 ads, 1 verkoop, -$3,89 |
 | LC-duw (sinds 17 nov 13:00 UTC) | 18-20 nov | totale LC-royalty tegen LC-ads; lager = broad-woorden weer pauzeren. Piek LC is 27 dec-3 jan |
+| LC-prijs terug naar $24,99 | 20 dec ronde A | Henkjan 19 nov: akkoord op $19,99 bij de 2027-uitgave om rang op te bouwen, en op 20 dec (start KDP LC NIEUWJAAR EXACT) terug naar $24,99 (royalty $12,48). Ronde zet het prijsconcept klaar en stuurt Henkjan de link voor Publish |
 | Adults CA-test | 22 nov | Adults CA-royalty tegen Adults CA-ads |
 | Apocrypha/Enoch VK | doorlopend | 2 dagen geen vertoningen = stap omhoog binnen de marge |
 
