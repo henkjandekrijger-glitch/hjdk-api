@@ -114,7 +114,7 @@ Alle Amazon-campagnes: Dynamic bids down only, alleen Amazon (Limit reach to Ama
 | Stocking Stuffers For Teens (CA CA$13,99 / US $9,99) | B0DJQLBM75 | CA$4,78 / $3,23 | CA$2,39 / $1,61 |
 | Wait, That's True?! ($14,99) | B0HRFY3TLB | ~$6,70 | $3,35 |
 | Wait, That's True?! For Men ($14,99) | B0HRGNJ7CY | ~$6,84 | $3,42 |
-| Lasting Change Workbook ($24,99) | B0F1SM1L5J | $11,92 | $5,96 |
+| Lasting Change Workbook ($24,99; na publish 2027-uitgave drukprijs $2,51: $24,99 -> $12,48, $19,99 -> $9,48) | B0F1SM1L5J | $11,92 nu | $5,96 ($6,24 / $4,74 na publish) |
 | PIT BOSS (printkosten $5,74; $18 -> $5,06; $14,99 -> $3,25) | B0BKRPL5JX | $5,06 nu, $3,25 na publish $14,99 | $2,53 / $1,63 |
 | Traeger ($16,99) | B0C4WXBN21 | $5,90 | $2,95 |
 | Crock Pot | B09X4MCHCM | $7,47 | $3,74 |
@@ -136,7 +136,7 @@ Alle Amazon-campagnes: Dynamic bids down only, alleen Amazon (Limit reach to Ama
 | Teens US ($9,99) | 3,09 | 6,19 | $0,16 |
 | Wait, That's True?! ($14,99) | 2,24 | 4,47 | $0,35 |
 | For Men ($14,99) | 2,19 | 4,38 | $0,35 |
-| Lasting Change ($24,99) | 2,10 | 4,19 | $0,60 |
+| Lasting Change ($24,99) | 2,10 (2027-uitgave: 2,00 bij $24,99, 2,11 bij $19,99) | 4,19 | $0,60 |
 | PIT BOSS ($14,99 na publish) | 4,61 | 9,22 | $0,33 (bij 20% conversie); duw 17-19 nov als uitzondering op totale royalty |
 | Traeger ($16,99) | 2,88 | 5,76 | $0,30 |
 | Enoch ($15,99) | 2,45 | 4,89 | $0,33 |
@@ -166,6 +166,7 @@ Teens B0DJQLBM75 (119 reviews, 4,5 ster in CA) verkoopt vooral in Canada: CA-ran
 
 ## Openstaand
 
+- 19 nov 21:20 UTC LC 2027 paperback klaargezet (6FFFY398EVH): papier groundwood -> wit, No Bleed, binnenwerk 126 p. en nieuwe omslag geupload, Previewer zonder meldingen en goedgekeurd, drukprijs $2,51; QR-zin in de beschrijving. Prijsconcept $19,99 (royalty $9,48; $24,99 geeft $12,48). Wacht op Henkjan: AI-antwoorden invullen (Texts entire work/minimal, Claude; Images one or a few/minimal, Claude; Translations none), vakje, Save and Continue, prijs kiezen, Publish: https://kdp.amazon.com/en_US/print-setup/paperback/6FFFY398EVH/content . Daarna hardcover (nu 137 p., $7,29 drukprijs).
 - Hardcovers Wait, That's True?! (B0HRKRTRFF) en For Men (B0HRHVDSRT) Live, $24,99 (gezien 14 nov 17:30 UTC).
 - Stocking Stuffers for Adults Kindle (B0DJ3MHCH4, A284PODSXOKXOK): KDP-kwaliteitsmelding "Keywords are missing"; 14 nov 7 zoekwoorden ingevuld en als concept bewaard (stocking stuffers for adults, white elephant gifts for adults funny, fun facts trivia book for adults, bathroom reader for adults, gifts for men who have everything, secret santa gifts for coworkers, conversation starters book for adults). Henkjan klikt Publish: https://kdp.amazon.com/en_US/title-setup/kindle/A284PODSXOKXOK/pricing
 - Kindle-eBooks Wait, That's True?! (A1NZ4PXA2W9L9O) en For Men (A34DE110B1IJJG): Publish faalt met "Please fix the highlighted error(s)" zonder rood veld. 14 nov gecontroleerd: Details en Content Complete, Pricing "In Progress", alle velden gevuld (KDP Select aan, alle territoria, 70%, US $4,99). Publish is Henkjans knop: links in het rapport; blijft het falen, dan KDP Support (alleen met Henkjans ja).

@@ -138,6 +138,10 @@ Henkjan 19 nov: "Zet even in handover op vercel dan kan ik in andere account op 
 - Niet op de voorkant: onleesbaar als Amazon-plaatje, en het ontwerp blijft rustig. Henkjan mag hem er alsnog op willen.
 - Een doorstuurlink met teller kon niet, want het project lastingchange staat op pauze bij Vercel.
 
+**Stand 19 nov 21:20 UTC (nieuw account, op Henkjans "voer door"): paperback staat klaar, wacht op Henkjan.** Paperback-id is 6FFFY398EVH (hetzelfde id als de hardcover, het formaat staat in de URL). Huidige uitgave was 182 p., 6 x 9, groundwood-papier, met bleed. Gedaan op de Content-pagina: papier naar wit (de rug van de omslag is op wit gebouwd; beter om in te schrijven), No Bleed, binnenwerk.pdf en omslag.pdf geupload, Previewer zonder meldingen (126 p., rugtekst binnen de lijnen, barcode vrij van de QR), Approve. Dit blijft na herladen staan. Drukprijs $2,51 (was $3,07). Beschrijving: de QR-zin staat erin (Details, Save Successful). Prijsconcept staat op $19,99 (royalty $9,48; bij $24,99 is het $12,48); Canada volgt de VS (CA$27,27, royalty CA$13,09).
+NIET opgeslagen: de AI-antwoorden. KDP bewaart die alleen samen met het vakje "I confirm that my answers are accurate", en dat vakje is van Henkjan; zonder het vakje weigert ook Save as Draft. Henkjan doet op https://kdp.amazon.com/en_US/print-setup/paperback/6FFFY398EVH/content : AI-Generated Content = Yes; Texts = Entire work, with minimal or no editing, tool Claude; Images = One or a few AI-generated images, with minimal or no editing, tool Claude (de omslag is door Claude opgemaakt; wil hij "None", dan is dat zijn keuze); Translations = None; vakje aan; Save and Continue; op de prijspagina de prijs kiezen en Publish.
+Nog te doen: hardcover (nu 137 p., wit, met bleed, drukprijs $7,29): zelfde binnenwerk, eigen omslag met de maten uit de KDP-cover-calculator; pas bouwen als Henkjan de paperback heeft gezien, zodat een wijziging aan de omslag niet twee keer hoeft.
+
 **Stappen in KDP (Chrome moet in Henkjans boekenaccount zitten; op 19 nov zat de Chrome van de oude chat in een leeg account):**
 1. Boekenplank, zoek "Lasting Change". Open de paperback (B0F1SM1L5J) en kijk op Paperback Content naar trim, papier en het huidige aantal pagina's (geschat ~170 p. uit drukkosten $3,07). Let op: 6FFFY398EVH kwam ook als hardcover-id voor (hardcover B0F3TL9TWR); neem het id uit de boekenplank.
 2. Trim moet 6 x 9 zijn, wit papier, zwart-wit, geen bleed. Wijkt de trim af, dan moet `bouw.py` (W, H in motor.py) en `omslag.py` (TRIM_W, TRIM_H) mee: een trimwijziging kan niet op hetzelfde boek, dus dan eerst Henkjan vragen.
@@ -162,6 +166,9 @@ Henkjan 19 nov: "Zet even in handover op vercel dan kan ik in andere account op 
 
 ## 9. Lessen die tijd besparen
 
+- KDP Content-pagina van een live boek: uploads (manuscript, omslag), papier, bleed en de goedkeuring in de Previewer worden direct bewaard, ook zonder Save. De AI-antwoorden niet: na een nieuwe upload eist KDP het vakje "I confirm that my answers are accurate" en weigert anders ook Save as Draft; na de Previewer springen de AI-antwoorden terug naar de oude stand. Laat ze dus aan Henkjan, met de antwoorden erbij.
+- Uploaden vanuit een cloudsessie kan met file_upload op de verborgen file-input (ref uit find), pad in de repo-clone, hoogstens 3,8 MB per keer.
+- Papiersoort (wit, creme, groundwood) is op een live zwart-witboek nog te wijzigen; trim niet. Lees de papiersoort voor je een rug berekent.
 - KDP Royalties Estimator: getypte datums verversen alleen het totaal; de tabel per boek ververst pas na klikken op begin- en einddag in de kalender. Marktplaats: Deselect All, Canada, Apply. KDP loopt een dag achter; KDP gaat voor Keepa.
 - Amazon Ads: de tabel heeft een eigen datumkiezer los van de KPI-tegel (Lifetime, Yesterday). Zoekvak leegmaken met de knop "Clear search terms", niet overtypen.
 - Nooit een generieke "Apply" met JS klikken: de rij heeft een eigen Apply voor het voorgestelde bod (17 nov ging zo een VK-bod per ongeluk omlaag).
