@@ -148,9 +148,15 @@ export default async function handler(req, res) {
       let b=req.method==='POST'?req.body:{site:req.query.site,slug:req.query.slug,v:req.query.v,h:[],test:1};try{if(typeof b==='string'){if(b.length>6000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}
       b=b||{};const ip=String(req.headers['x-forwarded-for']||'').split(',')[0].trim();
       const slugC=String(b.slug||'').replace(/[^a-z0-9-]/gi,'').slice(0,90);
-      const rc=await C.kzChat({site:b.site,slug:slugC,vraag:b.v,hist:b.h,ip,oidc:String(req.headers['x-vercel-oidc-token']||process.env.VERCEL_OIDC_TOKEN||''),test:!!(b.test&&beschermd),sid:String(b.sid||''),vt:String(b.vt||''),ik:Array.isArray(b.ik)?b.ik.slice(0,3).map(x=>String(x).slice(0,120)):[]}).catch(e=>({ok:false,fout:String(e.message||e).slice(0,80)}));
+      const rc=await C.kzChat({site:b.site,slug:slugC,vraag:b.v,hist:b.h,ip,oidc:String(req.headers['x-vercel-oidc-token']||process.env.VERCEL_OIDC_TOKEN||''),test:!!(b.test&&beschermd),sid:String(b.sid||''),vt:String(b.vt||''),ik:Array.isArray(b.ik)?b.ik.slice(0,3).map(x=>String(x).slice(0,120)):[],pillPad:typeof b.pad==='string'?b.pad.slice(0,200):'',velden:b.velden&&typeof b.velden==='object'?b.velden:null,pc:b.pc?1:0}).catch(e=>({ok:false,fout:String(e.message||e).slice(0,80)}));
       if(rc&&rc.ok&&!rc.geblokt&&!(b.test&&beschermd))await fnStap(req,'vraag',slugC); // funnel per persoon via Clickmind-cookie mmp (18 nov 2026)
       return res.status(200).json(rc);}
+    if(op==='pills'||op==='pilev'||op==='cachestand'){const C=await import('../lib/kzchat.js'); // lerende pills en cache per pill-pad (19 nov 2026, chat keuzehulp-pills)
+      if(op==='cachestand')return res.status(200).json(await C.kzCacheStand().catch(()=>({ok:false})));
+      if(req.method!=='POST')return res.status(405).json({ok:false});let b=req.body;try{if(typeof b==='string'){if(b.length>4000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}b=b||{};
+      if(op==='pills')return res.status(200).json(await C.kzPills({site:String(b.site||''),stappen:b.st}).catch(()=>({ok:false})));
+      if(/bot|crawl|spider|preview|headless/i.test(String(req.headers['user-agent']||'')))return res.status(204).end();
+      return res.status(200).json(await C.kzPillEv({site:String(b.site||''),ev:b.ev}).catch(()=>({ok:false})));}
     if(op==='koppel'||op==='koop'||op==='volgstand'){const IV=await import('../lib/intentvolg.js'); // intentie per persoon volgen en de check-in "is het gelukt" (lib/intentvolg.js, 18 nov 2026)
       if(op==='volgstand')return res.status(200).json(await IV.volgStand(beschermd).catch(()=>({ok:false})));
       if(op==='koppel'){if(req.method!=='POST')return res.status(405).json({ok:false});let b=req.body;try{if(typeof b==='string'){if(b.length>1000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}b=b||{};const rk=await IV.koppel({sid:String(b.sid||''),vt:String(b.vt||''),site:String(b.site||'')}).catch(()=>({ok:false}));if(b.vt)await fnStap(req,'blijf','');return res.status(200).json(rk);}
