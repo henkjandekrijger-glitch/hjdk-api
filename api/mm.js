@@ -151,6 +151,13 @@ export default async function handler(req, res) {
       return test ? res.status(200).json(Object.assign({ ok: !!uit && !uit.fout }, uit || { fout: 'ongeldige vid (16 hex)' })) : res.status(204).end();
     }
     if (op === 'go') return await goKlik(req, res, url, q);
+    if (op.startsWith('dist')) { // Clickmind distributie: gerichte reacties, korte links en wat werkt (lib/distlus.js, Henkjan 19 nov 2026)
+      const D = await import('../lib/distlus.js'); res.setHeader('cache-control', 'no-store');
+      if (op === 'distklik') return await D.klikAntwoord(req, res, q('c'));
+      if (op === 'distmaak') return res.status(200).json(await D.maak({ project: q('project'), kanaal: q('kanaal'), plek: q('plek'), plekUrl: q('plekurl'), onderwerp: q('onderwerp'), taal: q('taal'), doel: q('doel'), tekst: q('tekst'), wie: q('wie'), geplaatst: q('geplaatst') === '1' }));
+      if (op === 'distzet') return res.status(200).json(await D.zet(q('id'), { geplaatst: q('geplaatst') === '1', plekUrl: q('plekurl'), uitkomst: q('uitkomst'), n: q('n') }));
+      if (op === 'diststand') return res.status(200).json(await D.stand({ dagen: Math.min(90, Number(q('dagen')) || 30), project: q('project') || '' }));
+    }
     if (op === 'proef') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(await proef(kv, { dagen: q('dagen'), camp: q('camp') || '' })); }
     if (op === 'export' || op === 'persoon') {
       res.setHeader('cache-control', 'no-store');
