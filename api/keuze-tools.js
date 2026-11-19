@@ -46,7 +46,7 @@ export default async function handler(req, res) {
   res.setHeader('x-content-type-options', 'nosniff');
   { // huisstijl van alle keuzehulpen (lib/huisstijl.js, 18 nov 2026): elke HTML-pagina van deze rekenhulpen en gidsen krijgt dezelfde kop, voet en opmaak
     const tl = q.get('tool') || '', mk = String(q.get('market') || q.get('m') || 'nl');
-    if (!/^(cur|tsc)$/.test(tl)) { const H = await import('../lib/huisstijl.js'); const st = tl === 'nexy' || /nexy\.help/.test(String(req.headers.host || '')) ? 'nexy' : mk === 'us' || mk === 'en' ? 'us' : mk === 'de' ? 'de' : 'nl';
+    if (!/^(cur|tsc|voorkant)$/.test(tl)) { const H = await import('../lib/huisstijl.js'); const st = tl === 'nexy' || /nexy\.help/.test(String(req.headers.host || '')) ? 'nexy' : mk === 'us' || mk === 'en' ? 'us' : mk === 'de' ? 'de' : 'nl';
       const G = tl === 'rdam' ? 'rotterdam' : tl === 'zorg' ? 'zorg' : tl === 'nexy' ? 'nexy' : 'rekenhulpen', P = st === 'us' ? 'wtbus' : st === 'de' ? 'wtbde' : st === 'nexy' ? 'nexy' : 'kz';
       H.metHuisstijl(res, st, { meet: { P, G }, chat: tl === 'rdam' ? { term: 'diensten in Rotterdam', slug: 'rotterdam' } : true, voetExtra: tl === 'rdam' ? 'Gegevens uit OpenStreetMap (© OpenStreetMap-bijdragers, ODbL) en reviewscores met link naar de bron; de ranglijst is onze eigen berekening' : '' }); }
   }
@@ -131,7 +131,21 @@ export default async function handler(req, res) {
     if(req.method==='POST'){let b=req.body;try{if(typeof b==='string'){if(b.length>2000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}return res.status(200).json(await I.intentieLog(kv,b||{},req).catch(()=>({ok:false})));}
     return res.status(200).json(await I.intentieStand(kv,{vol:/\.vercel\.app$/i.test(String(req.headers.host||'')),n:Math.min(200,Number(q.get('n'))||40)}).catch(()=>({ok:false})));
   }
-  if(q.get('tool')==='voorkant'){const V=await import('../lib/cadeauvinder.js');const mk=String(q.get('market')||'nl');res.setHeader('content-type','text/html; charset=utf-8');res.setHeader('cache-control','public, max-age=300');return res.status(200).send(V.voorkantPagina(['us','de'].includes(mk)?mk:'nl'));} // voorkant = chat + populaire keuzehulpen (18 nov 2026)
+  if(q.get('tool')==='voorkant'){ // voorkant = chat + populaire keuzehulpen (18 nov 2026); vier ontwerpen als proef kzvk (19 nov 2026, lib/proef.js)
+    const V=await import('../lib/cadeauvinder.js'),PF=await import('../lib/proef.js'),{FN_JS}=await import('../lib/funnel.js'),{measureTag}=await import('../lib/kleur.js');
+    const mk0=String(q.get('market')||'nl'),mk=['us','de'].includes(mk0)?mk0:'nl',ua=String(req.headers['user-agent']||''),c=/iPhone|iPad|iPod/.test(ua)?'i':/Android/.test(ua)?'a':'d';
+    const ck=(String(req.headers.cookie||'').match(/(?:^|;\s*)kzvk=([abcd])\.([0-9a-f]{12})\.(\d{4}-\d{2}-\d{2})\.(\d+)/)||[]);
+    let o={arm:'a',c,nieuw:0};
+    try{const cfg=await PF.leesProef(kv,'kzvk'),r=Number(cfg&&cfg.ronde)||1,f=cfg&&cfg.factoren&&cfg.factoren.find(x=>x.id==='vorm'),act=f?(f.varianten||[]).filter(x=>!x.uit).map(x=>x.id):['a'];
+      const oud=ck[1]&&Number(ck[4])===r&&act.includes(ck[1])&&Date.now()-Date.parse(ck[3])<8*864e5;
+      if(oud)o={arm:ck[1],pid:ck[2],d:ck[3],r,c,nieuw:0};
+      else if(cfg&&cfg.aan&&!/bot|crawl|spider|slurp|preview|headless/i.test(ua)){const b=await PF.proefBeslis(kv,{site:'kzvk',ctx:c});if(b&&b.aan&&b.v&&b.v.vorm){o={arm:b.v.vorm,pid:b.pid,d:b.d,r:b.r,c,nieuw:1};res.setHeader('set-cookie','kzvk='+o.arm+'.'+o.pid+'.'+o.d+'.'+o.r+'; Path=/; Max-Age='+(8*86400)+'; SameSite=Lax; Secure');}}
+      else if(act.length)o.arm=act[0];
+    }catch(e){}
+    const site={nl:'keuzehulp',us:'whichtobuy',de:'kaufberater'}[mk],P={nl:'kz',us:'wtbus',de:'wtbde'}[mk];
+    o.meet='<script src="/cm.js" data-site="'+site+'" data-proef="'+site+'-voorkant" data-modal="geen" async></script>'+FN_JS('home')+measureTag(P,'a[rel~="nofollow"],a[data-out],.pop a','.kx-ps button,#kxf button',mk);
+    res.setHeader('content-type','text/html; charset=utf-8');res.setHeader('cache-control','private, no-store');res.setHeader('vary','cookie');
+    return res.status(200).send(V.voorkantPagina(mk,o));}
   if(q.get('tool')==='vinder'){const V=await import('../lib/cadeauvinder.js');const mk=String(q.get('market')||'nl');res.setHeader('content-type','text/html; charset=utf-8');res.setHeader('cache-control','public, max-age=300');return res.status(200).send(V.vinderPagina(['us','de'].includes(mk)?mk:'nl'));} // vraag-eerst cadeauvinder (18 nov 2026, 100k intenties)
   if(q.get('tool')==='tsc'){const {tscHandler}=await import('../lib/tsc.js');return tscHandler(req,res,url);}
   if(q.get('tool')==='cur'){const {curHandler}=await import('../lib/cur.js');return curHandler(req,res,url);}
