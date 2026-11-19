@@ -41,6 +41,7 @@ const CATS = [...new Set(seed.items.map(i => i.cat))].filter(c => seed.items.fil
 // Startlijst (onderzoek okt 2026: Google-jaaroverzicht, Black Friday-cijfers Tweakers/MediaMarkt 2025, Sinterklaaslijstjes, TikTok-trends, gaten in het aanbod).
 // Volgorde = voorrang. 'vanaf' = niet eerder. De planner pakt deze eerst, tenzij een signaal (verzoek, zoekopdracht zonder resultaat, sterke stijger) zwaarder weegt.
 const STARTLIJST = [
+  { slug: 'raamrobot', term: 'raamrobot', cat: 'Huishouden', waarom: 'Henkjan 19 nov 2026 ("mensen gaan nu robots kopen, daar moet een keuzehulp voor komen"); schoonmaakrobots groeien (IDC 2025: 32,72 mln stuks, plus 20,1%), geen seizoensproduct, nog geen eigen pagina' },
   { slug: 'televisie', term: 'televisie', cat: 'Elektronica', waarom: "Black Friday-topcategorie (tv's, smartphones, laptops); acties starten rond 10 november" },
   { slug: 'spelcomputer', term: 'spelcomputer', cat: 'Elektronica', waarom: 'PS5 en Switch 2 in de tech-top 10 van Black Friday en kerst 2025' },
   { slug: 'radiatorventilator', term: 'radiatorventilator', cat: 'Wonen', waarom: 'stookseizoen, energie besparen' },
