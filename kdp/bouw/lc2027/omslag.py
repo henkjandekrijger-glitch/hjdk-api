@@ -16,6 +16,11 @@ def html(paginas):
     voor_x = BLEED + TRIM_W + rug  # linkerkant voorkant (trim)
     achter_x = BLEED
     rug_tekst = paginas > 79
+    import segno, io
+    buf = io.BytesIO()
+    segno.make('https://wa.me/31655395630?text=Dear%20John%2C%20I%20am%20a%20reader%20and%20have%20a%20question.', error='m').save(buf, kind='png', border=2, scale=24, dark='#111')
+    import base64
+    qr_svg = '<img style="width:100%;height:100%;image-rendering:pixelated" src="data:image/png;base64,' + base64.b64encode(buf.getvalue()).decode() + '">'
     return f'''<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face {{ font-family: IDB; src: url(file:///usr/share/fonts/opentype/inter/InterDisplay-Black.otf); }}
 @font-face {{ font-family: IDX; src: url(file:///usr/share/fonts/opentype/inter/InterDisplay-ExtraBold.otf); }}
@@ -74,8 +79,12 @@ body {{ width: {W}in; height: {H}in; position: relative; background: #fff; overf
     </ul>
     <p style="margin-top:0.18in; font-family:LoraI; font-weight:600; font-size:14pt;">Next December, you&rsquo;ll be glad you started today.</p>
   </div>
-  <div class="abs" style="left:0.55in; top:7.62in; width:2.9in;">
-    <div style="font-family:IDB; font-size:15pt; line-height:1.15;">One habit. 30 days.<br><span style="color:{ROOD}">3 minutes a day.</span></div>
+  <div class="abs" style="left:0.55in; top:7.2in; width:3.05in; height:1.15in; background:#F2F2F2; border-radius:0.08in;">
+    <div class="abs" style="left:0.08in; top:0.08in; width:0.99in; height:0.99in; background:#fff;">{qr_svg}</div>
+    <div class="abs" style="left:1.2in; top:0.16in; width:1.78in;">
+      <div style="font-family:PopB; font-size:11pt; line-height:1.2;">Questions?<br>Ask the author.</div>
+      <div style="font-family:Lora; font-size:9.6pt; line-height:1.35; margin-top:0.05in;">Scan to message John on WhatsApp. He answers personally.</div>
+    </div>
   </div>
 </div>
 </body></html>''', W, H

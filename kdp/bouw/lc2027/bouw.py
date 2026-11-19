@@ -98,6 +98,42 @@ def checkin(c, links, n, voorbeeld=False):
     return yT
 
 
+ASK = 'https://wa.me/31655395630?text=Dear%20John%2C%20I%20am%20a%20reader%20and%20have%20a%20question.'  # direct naar WhatsApp, met de tekst die Henkjan wil zien
+
+
+def qr(c, x, y, maat, url):
+    """QR-code met linkerbovenhoek (x, y); maat in pt, inclusief stille zone van 2 modules."""
+    import segno
+    q = segno.make(url, error='m')
+    m = list(q.matrix)
+    n = len(m)
+    mod = maat / (n + 4)
+    c.setFillColor(black)
+    for r, rij in enumerate(m):
+        for k, v in enumerate(rij):
+            if v:
+                c.rect(x + (k + 2) * mod, y - (r + 3) * mod, mod, mod, stroke=0, fill=1)
+
+
+def qr_blok(c, x, y, w, bron, kop, t, maat=66):
+    """Vak met QR links en uitleg rechts; y = bovenkant. Geeft de onderkant terug."""
+    h = maat + 12
+    c.setFillColor(VLAK)
+    c.roundRect(x, y - h, w, h, 6, stroke=0, fill=1)
+    c.setFillColor(white)
+    c.rect(x + 6, y - 6 - maat, maat, maat, stroke=0, fill=1)
+    qr(c, x + 6, y - 6, maat, ASK)
+    tx = x + maat + 18
+    c.setFillColor(black)
+    c.setFont('PopB', 10.5)
+    yy = y - 22
+    for r in wrap(kop, 'PopB', 10.5, w - maat - 26):
+        c.drawString(tx, yy, r)
+        yy -= 13.5
+    tekst(c, t, tx, yy - 1, w - maat - 26, f='Lora', s=9.6, lead=12.6)
+    return y - h
+
+
 def kop_rechts(c, tekstje):
     x0, x1 = M.marges(False)
     label_rechts(c, tekstje, x1, H - BOVEN)
@@ -639,6 +675,7 @@ def snelstart(c, nr):
     c.drawString(x0, y, 'See you on Day 1.')
     y -= 22
     tekst(c, 'Turn the page tomorrow, after your hook. Three minutes. You have got this.', x0, y, w, f='LoraI', s=11, lead=15, kleur=GRIJS)
+    qr_blok(c, x0, ONDER + 92, w, 'binnen', 'Stuck? Ask the author.', 'Scan to send John a message on WhatsApp. He answers personally.')
     paginanummer(c, nr)
 
 
@@ -735,6 +772,7 @@ def slechte_dag(c, nr):
         c.drawString(x0 + 42, y, k)
         tekst(c, t, x0 + 42, y - 15, w - 58, s=10.5, lead=13.5)
         y -= 66
+    qr_blok(c, x0 + 14, onder + 104, w - 28, 'slecht', 'Still stuck? Message the author.', 'Scan, say hi, and tell John where it got hard. He answers personally.', maat=60)
     c.setFont('LoraI', 9)
     c.setFillColor(GRIJS)
     c.drawCentredString(x0 + w / 2, onder + 12, 'Copy or photograph this page and keep it in your wallet or phone.')
@@ -805,6 +843,7 @@ def nawoord(c, nr):
     y -= 8
     c.setFont('PopM', 11)
     c.drawString(x0, y, 'John Warrior')
+    qr_blok(c, x0, ONDER + 92, w, 'eind', 'Questions, wins, your certificate?', 'Scan to send them to me on WhatsApp. I read every message and answer personally.')
     paginanummer(c, nr)
 
 
