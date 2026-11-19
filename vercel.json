@@ -867,6 +867,36 @@
       "destination": "/api/keuze-tools?tool=zorg"
     },
     {
+      "source": "/hypotheek/sitemap.xml",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=hyp&op=sitemap"
+    },
+    {
+      "source": "/hypotheek-berekenen",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=hyp&p=berekenen"
+    },
+    {
+      "source": "/hypotheekrente",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=hyp&p=rente"
+    },
+    {
       "source": "/huis-kopen/sitemap.xml",
       "has": [
         {

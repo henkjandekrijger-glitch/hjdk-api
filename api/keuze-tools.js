@@ -109,7 +109,14 @@ export default async function handler(req, res) {
         if(q.get('ruw')==='1')return res.status(200).send(t.slice(van,van+n));
         const tx=t.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g,' ').replace(/<\/(td|th)>/g,' | ').replace(/<\/(tr|p|li|h\d|div)>/g,'\n').replace(/<[^>]+>/g,' ').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&euro;/g,'€').replace(/[ \t]+/g,' ').replace(/\n\s+/g,'\n');
         return res.status(200).send('status '+r.status+' lengte '+tx.length+'\n'+tx.slice(van,van+n));}catch(e){return res.status(200).json({fout:String(e.message||e).slice(0,100)});}}
-    return res.status(404).send('Niet gevonden');}
+    const HY=await import('../lib/hypotheek.js');
+    if(op==='sitemap'){res.setHeader('content-type','application/xml; charset=utf-8');res.setHeader('cache-control','public, s-maxage=3600');return res.status(200).send(HY.sitemap());}
+    if(op==='stand'){res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');return res.status(200).json(await HY.stand());}
+    if(op==='ping'){res.setHeader('cache-control','no-store');if(!beschermd)return res.status(403).json({ok:false});return res.status(200).json(await HY.ping());}
+    if(op==='rekenopen'){res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');const RG=await import('../lib/rekenhulpregel.js');return res.status(200).json(await RG.rekenhulpOpenLijst());} // vaste regel: onderwerpen waar een rekenhulp bij hoort (planners kzmaak/wtbmaak)
+    const p=String(q.get('p')||'');const html=p==='rente'?await HY.hypotheekrente():p==='berekenen'?await HY.hypotheekBerekenen([...q.entries()].filter(([k])=>!['tool','p','op','market'].includes(k))):null;
+    res.setHeader('content-type','text/html; charset=utf-8');if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/hypotheek-berekenen">Hypotheek berekenen</a></p>');}
+    res.setHeader('cache-control',[...q.keys()].some(k=>!['tool','p','market'].includes(k))?'private, no-store':'public, s-maxage=600, stale-while-revalidate=86400');return res.status(200).send(html);}
   if(q.get('tool')==='huis'){ // huis kopen en makelaars per plaats (lib/huiskopen.js, 19 nov 2026)
     const HK=await import('../lib/huiskopen.js');const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
     if(op==='ververs'){res.setHeader('cache-control','no-store');if(!beschermd)return res.status(403).json({ok:false});const r=q.get('m')?await HK.ververs(q.get('m')):await HK.verversOudste();const m=await HK.meldNieuw().catch(e=>({fout:String(e.message||e).slice(0,80)}));return res.status(200).json({...r,indexnow:m});}

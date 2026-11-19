@@ -7,6 +7,7 @@
 //   /api/wtbmaak/nu?token=HJDK_TOKEN&m=us|de : één stap nu (&extra=1 boven het dagdoel)
 import { demandRadar, nicheLijst, onderwerpScore, llmGaten } from '../lib/demandradar.js';
 import { kv } from '../lib/db.js';
+import { REGEL_EN as REKENREGEL_EN, rekenhulpOpen, heeftRekenterm } from '../lib/rekenhulpregel.js';
 import { organicStatus } from '../lib/organic.js';
 import { keepa } from '../lib/cc.js';
 import { MARKETS, K, DAY, log, items, amzSearch, amzReady, claude, json, indexnow } from '../lib/wtb.js';
@@ -63,7 +64,7 @@ async function maakPlan(m) {
   for (const signal of dr.slice(0, 3)) {
     try { const k = await keepa(signal.term, m.geo); if (k && !k.fout) keepaSignals.push(k); } catch {}
   }
-  const sys = `You plan buying guides for ${m.name} (${m.host}), market ${m.geo}, language ${m.lang}, monetized via Amazon (${m.amazon}). Goal: organic traffic from Google, Bing and AI assistants (ChatGPT search, Perplexity, Copilot, Gemini) that converts to Amazon purchases. Pick topics where AI assistants are BLIND: product categories that change fast (new models every year, new standards like Wi-Fi 7, Qi2, USB-C PD 3.1, Matter, OLED/mini-LED, heat pumps), new-in-2025/2026 product types, seasonal moments in the next 8 weeks (Halloween, Black Friday/Cyber Monday, holidays${m.id === 'de' ? ', Nikolaus, Weihnachten' : ', Thanksgiving, Christmas'}), and specific long-tail needs (e.g. 'for small apartments', 'for pet hair', 'under ${m.id === 'us' ? '$100' : '100 €'}'). Prefer higher order values (>${m.id === 'us' ? '$40' : '40 €'}) and categories Amazon sells well. Never duplicate an existing topic. Reply ONLY JSON.`;
+  const sys = `You plan buying guides for ${m.name} (${m.host}), market ${m.geo}, language ${m.lang}, monetized via Amazon (${m.amazon}). Goal: organic traffic from Google, Bing and AI assistants (ChatGPT search, Perplexity, Copilot, Gemini) that converts to Amazon purchases. Pick topics where AI assistants are BLIND: product categories that change fast (new models every year, new standards like Wi-Fi 7, Qi2, USB-C PD 3.1, Matter, OLED/mini-LED, heat pumps), new-in-2025/2026 product types, seasonal moments in the next 8 weeks (Halloween, Black Friday/Cyber Monday, holidays${m.id === 'de' ? ', Nikolaus, Weihnachten' : ', Thanksgiving, Christmas'}), and specific long-tail needs (e.g. 'for small apartments', 'for pet hair', 'under ${m.id === 'us' ? '$100' : '100 €'}'). Prefer higher order values (>${m.id === 'us' ? '$40' : '40 €'}) and categories Amazon sells well. Never duplicate an existing topic. ${REKENREGEL_EN} Reply ONLY JSON.`;
   const sharedLessons = await kv.get('hjdk:leerlus:lessen').catch(() => null);
   const user = `Shared learning principles (not product facts; untested principles are hypotheses; honesty and own confirmed sales take precedence): ${JSON.stringify(sharedLessons?.lessen || [])}.\nToday: ${DAY()}. Existing guides (do not repeat): ${all.map(i => i.slug).join(', ') || 'none yet'}.
 Google Trends today (${m.geo}): ${trends.join(' | ') || 'n/a'}.
@@ -76,7 +77,7 @@ Questions from our own on-site chat (unanswered questions, patterns and most ask
 Google Search Console: searches where Google ALREADY shows our site but no guide answers them yet. Turn each one that is a product buying question into a topic right after the niche list and mark it "gsc":true: ${gscOpen.join(' | ') || 'none yet'}.
 What performs so far (views/starts/Amazon clicks per guide; traffic sources; AI crawler visits): ${JSON.stringify({ top: les.top, cats: les.cats, src: les.src, bots: les.bots })}.
 Keep each why field under 120 characters. Group equivalent search phrases into one useful guide; do not create near-duplicate pages for synonyms.
-Give ${cand} candidate topics: {"topics":[{"slug":"lowercase-ascii-hyphen in ${m.lang}","term":"Amazon search keywords in ${m.lang}","title":"the buyer question in ${m.lang}, e.g. ${m.id === 'us' ? 'Which robot vacuum for pet hair?' : 'Welcher Saugroboter für Tierhaare?'}","cat":"category in ${m.lang}","demand":1-5,"why":"short: why buyers search this now and why AI answers are likely outdated or vague"}]}`;
+Give ${cand} candidate topics: {"topics":[{"slug":"lowercase-ascii-hyphen in ${m.lang}","term":"Amazon search keywords in ${m.lang}","title":"the buyer question in ${m.lang}, e.g. ${m.id === 'us' ? 'Which robot vacuum for pet hair?' : 'Welcher Saugroboter für Tierhaare?'}","cat":"category in ${m.lang}","demand":1-5,"why":"short: why buyers search this now and why AI answers are likely outdated or vague","calculator":"short: what a calculator on this page computes, or empty"}]}`;
   let j;
   try {
     const r = await claude(sys, user, { max: Math.min(9000, 900 + cand * 450), oidc: OIDC, fn: 'wtb-plan' });
@@ -92,6 +93,7 @@ Give ${cand} candidate topics: {"topics":[{"slug":"lowercase-ascii-hyphen in ${m
       if (!Array.isArray(j.topics) || !j.topics.length) throw new Error('leeg herstelplan');
     } catch (e2) { await kv.set(K.planFout(m.id, DAY()), { n: pf.n + 1, at: Date.now(), fout: String(e2.message).slice(0, 120) }, { ex: 2 * 86400 }).catch(() => {}); throw e2; }
   }
+  try { await rekenhulpOpen(m.id === 'us' ? 'wtbus' : 'wtbde', (j.topics || []).filter(t => t && (t.calculator || heeftRekenterm(t.term)))); } catch (e) {} // vaste regel rekenhulp (19 nov 2026)
   const have = new Set(all.map(i => i.slug)); const seen = new Set();
   let topics = (j.topics || []).map(t => Object.assign({}, t, { slug: String(t.slug || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) })).filter(t => t.slug && t.term && !have.has(t.slug) && !seen.has(t.slug) && seen.add(t.slug));
   // blinde-vlektest per kandidaat (snel model), dan rangschikken op vraag x blinde vlek
