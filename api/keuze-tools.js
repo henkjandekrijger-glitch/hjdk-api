@@ -101,6 +101,15 @@ export default async function handler(req, res) {
     const html=q.get('z')?await R.zaakPagina(q.get('d'),q.get('z')):q.get('d')?await R.dienstPagina(q.get('d')):await R.hub();
     res.setHeader('content-type','text/html; charset=utf-8');if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/rotterdam">Alle diensten in Rotterdam</a></p>');}
     res.setHeader('cache-control','public, s-maxage=300, stale-while-revalidate=3600');return res.status(200).send(html);}
+  if(q.get('tool')==='hyp'){ // rekenhulp hypotheek berekenen en hypotheekrente (lib/hypotheek.js, 19 nov 2026)
+    const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
+    if(op==='bron'){res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');if(!beschermd)return res.status(403).json({ok:false}); // officiele bronnen nalezen (alleen beschermd, alleen deze domeinen)
+      const u=String(q.get('u')||'');if(!/^https:\/\/(www\.)?(zoek\.officielebekendmakingen\.nl|wetten\.overheid\.nl|belastingdienst\.nl|rijksoverheid\.nl|nhg\.nl|nibud\.nl|afm\.nl|data-api\.ecb\.europa\.eu|statistiek\.dnb\.nl|dnb\.nl|abnamro\.nl|ing\.nl|rabobank\.nl|hypotheker\.nl|hypotheekshop\.nl|independer\.nl|consumentenbond\.nl|eigenhuis\.nl|wijzeringeldzaken\.nl|hypotheekbond\.nl|tweedekamer\.nl|open\.overheid\.nl|volkshuisvestingnederland\.nl)\//.test(u))return res.status(400).json({ok:false});
+      try{const r=await fetch(u,{headers:{'user-agent':'Mozilla/5.0 (compatible; keuzehulp.best rekenhulp)','accept-language':'nl-NL'},signal:AbortSignal.timeout(25000)});const t=await r.text();const van=Number(q.get('van'))||0,n=Math.min(400000,Number(q.get('n'))||200000);res.setHeader('content-type','text/plain; charset=utf-8');
+        if(q.get('ruw')==='1')return res.status(200).send(t.slice(van,van+n));
+        const tx=t.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g,' ').replace(/<\/(td|th)>/g,' | ').replace(/<\/(tr|p|li|h\d|div)>/g,'\n').replace(/<[^>]+>/g,' ').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&euro;/g,'€').replace(/[ \t]+/g,' ').replace(/\n\s+/g,'\n');
+        return res.status(200).send('status '+r.status+' lengte '+tx.length+'\n'+tx.slice(van,van+n));}catch(e){return res.status(200).json({fout:String(e.message||e).slice(0,100)});}}
+    return res.status(404).send('Niet gevonden');}
   if(q.get('tool')==='huis'){ // huis kopen en makelaars per plaats (lib/huiskopen.js, 19 nov 2026)
     const HK=await import('../lib/huiskopen.js');const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
     if(op==='ververs'){res.setHeader('cache-control','no-store');if(!beschermd)return res.status(403).json({ok:false});const r=q.get('m')?await HK.ververs(q.get('m')):await HK.verversOudste();const m=await HK.meldNieuw().catch(e=>({fout:String(e.message||e).slice(0,80)}));return res.status(200).json({...r,indexnow:m});}
