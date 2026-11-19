@@ -379,7 +379,7 @@ def inhoudspagina(c, nr, plan):
     regels = [('Read this first', plan['start']), ('Pick one habit', plan['kies']), ('Day 0: where I am now', plan['dag0']), ('My contract and my buddy', plan['contract']), None]
     for wk in I.WEKEN:
         regels.append((f'Week {wk["n"]}  /  {wk["naam"]}', plan[f'week{wk["n"]}']))
-    regels += [None, ('Day 31 and beyond', plan['dag31']), ('The bad-day card', plan['slecht']), ('One-page habit plans', plan['plan']), ('My wins', plan['wins']), ('Sources', plan['bronnen'])]
+    regels += [None, ('Part 2  /  The autopilot stretch', plan['dag31']), ('Days 67 to 120', plan['tracker']), ('The bad-day card', plan['slecht']), ('One-page habit plans', plan['plan']), ('My wins', plan['wins']), ('Sources', plan['bronnen'])]
     for r in regels:
         if r is None:
             y -= 12
@@ -415,6 +415,7 @@ def lees_eerst(c, nr):
                ('Every day is two pages.', 'On the left: one small idea and today\'s 3-minute move. On the right: a short exercise and your daily check-in.'),
                ('Your habit comes on top, at its tiniest size.', 'On most days that takes under two minutes too. Tiny is not a compromise. It is the method.'),
                ('Four weeks, four skills.', 'Start tiny. Make it easy on hard days. Make it stick. Make it me. Each week builds on the one before.'),
+               ('Then part 2.', 'After Day 30, one short page a day takes you to Day 66, the point where most habits start to run on autopilot.'),
                ('You need three things.', 'This book, a pen, and one person you can text.'),
                ('Missed a day?', 'Do not skip ahead and do not start over. Just do the next day. Day 13 shows you how to bounce back.')]
     for kop, t in blokken:
@@ -665,9 +666,9 @@ def dag31(c, nr):
 
 
 def tracker(c, nr):
-    x0, x1 = M.marges(False)
+    x0, x1 = M.marges(nr % 2 == 0)
     w = x1 - x0
-    kop_rechts(c, 'Days 31 to 120')
+    (kop_links if nr % 2 == 0 else kop_rechts)(c, 'Days 67 to 120')
     y = H - BOVEN - 34
     c.setFont('PopB', 20)
     c.drawString(x0, y, 'Keep the chain going')
@@ -677,10 +678,10 @@ def tracker(c, nr):
     c.drawString(x0, y, 'Color one box for every day you do your habit.')
     c.setFillColor(black)
     y -= 16
-    kol = 10
+    kol = 6
     vak = w / kol
-    hv = min(vak * 1.6, (y - ONDER - 40) / 9)
-    for i in range(90):
+    hv = min(vak * 0.8, (y - ONDER - 40) / 9)
+    for i in range(54):
         r, k = divmod(i, kol)
         bx = x0 + k * vak
         by = y - r * hv
@@ -689,9 +690,9 @@ def tracker(c, nr):
         c.rect(bx + 1.5, by - hv + 1.5, vak - 3, hv - 3, stroke=1, fill=0)
         c.setFont('PopL', 7)
         c.setFillColor(GRIJS)
-        c.drawString(bx + 4, by - 9, str(31 + i))
+        c.drawString(bx + 4, by - 9, str(67 + i))
         c.setFillColor(black)
-        if (31 + i) == 66:
+        if (67 + i) == 120:
             c.setStrokeColor(black)
             c.setLineWidth(1.6)
             c.rect(bx + 1.5, by - hv + 1.5, vak - 3, hv - 3, stroke=1, fill=0)
@@ -699,7 +700,7 @@ def tracker(c, nr):
     yy = y - 9 * hv - 14
     c.setFont('LoraI', 9)
     c.setFillColor(GRIJS)
-    c.drawString(x0, yy, 'The bold box is Day 66. Celebrate it like a birthday.')
+    c.drawString(x0, yy, 'Day 120 is the bold box. By then this is simply who you are.')
     c.setFillColor(black)
     paginanummer(c, nr)
 
@@ -805,6 +806,132 @@ def nawoord(c, nr):
     paginanummer(c, nr)
 
 
+# ------------------------------------------------------------------ deel 2: dag 31-66
+
+def fase_van(n):
+    for a, e, naam, t in I.DEEL2_FASEN:
+        if a <= n <= e:
+            return naam
+    return ''
+
+
+def mini_checkin(c, links, n):
+    x0, x1 = M.marges(links)
+    w = x1 - x0
+    yT = ONDER + 84
+    c.setLineWidth(1.2)
+    c.line(x0, yT, x1, yT)
+    y = yT - 18
+    hokje(c, x0, y - 1.5, 10, 1.1)
+    c.setFont('LoraSB', 10)
+    c.drawString(x0 + 16, y, 'I did my habit today')
+    c.setFont('Lora', 10)
+    mx = x0 + w * 0.5
+    c.drawString(mx, y, 'Felt:')
+    bx = mx + breedte('Felt:', 'Lora', 10) + 12
+    for i in range(5):
+        c.setLineWidth(0.8)
+        c.circle(bx + i * 18, y + 3.5, 7, stroke=1, fill=0)
+        c.setFont('PopM', 7.5)
+        c.drawCentredString(bx + i * 18, y + 0.8, str(i + 1))
+    vak = w / 18
+    ys = yT - 34
+    for i in range(36):
+        r, k = divmod(i, 18)
+        d = 31 + i
+        bx2 = x0 + k * vak
+        by = ys - r * (vak - 1)
+        nu = d == n
+        c.setStrokeColor(black if nu else LIJN)
+        c.setLineWidth(1.5 if nu else 0.7)
+        c.rect(bx2 + 1, by - vak + 3, vak - 2, vak - 2, stroke=1, fill=0)
+        c.setFont('PopB' if nu else 'PopL', 5.8)
+        c.setFillColor(black if nu else GRIJS)
+        c.drawCentredString(bx2 + vak / 2, by - vak / 2 + 1, str(d))
+        c.setFillColor(black)
+    c.setStrokeColor(black)
+
+
+def deel2_dag(c, n, nr):
+    links = nr % 2 == 0
+    x0, x1 = M.marges(links)
+    w = x1 - x0
+    (label if links else (lambda cc, t, xx, yy: label_rechts(cc, t, x1, yy)))(c, f'Part 2  /  {fase_van(n)}', x0, H - BOVEN)
+    y = H - BOVEN - 36
+    c.setFont('PopB', 26)
+    c.drawString(x0, y, f'DAY {n}')
+    c.setFillColor(GRIJS)
+    c.setFont('PopM', 10)
+    rest = 66 - n
+    c.drawString(x0 + breedte(f'DAY {n}', 'PopB', 26) + 10, y + 1, (f'{rest} TO GO' if rest > 1 else ('1 TO GO' if rest == 1 else 'THE FINISH')))
+    c.setFillColor(black)
+    y -= 28
+    c.setFont('PopM', 13.5)
+    for r in wrap(I.DEEL2[n], 'PopM', 13.5, w):
+        c.drawString(x0, y, r)
+        y -= 18
+    y -= 6
+    if n == 61:
+        y = M.w_schaal(c, x0, y - 6, w, '', 10, 'still effort', 'autopilot') - 4
+    if n == 66:
+        y = M.w_tabel(c, x0, y - 4, w, ['', 'Day 0', 'Day 66'], [['Days a week I do it', '', ''], ['It feels automatic (1-10)', '', ''], ['It matters to me (1-10)', '', '']], kolw=[0.5, 0.25, 0.25], rh=24) - 2
+        c.setFont('LoraSB', 10)
+        c.drawString(x0, y, 'My rule for the next year:')
+        y -= 4
+    grens = ONDER + 84 + 18
+    y -= 18
+    while y > grens:
+        schrijflijn(c, x0, y, x1)
+        y -= SCHRIJF
+    mini_checkin(c, links, n)
+    paginanummer(c, nr)
+
+
+def deel2_links(c, nr):
+    x0, x1 = M.marges(True)
+    w = x1 - x0
+    kop_links(c, 'Part 2  /  at a glance')
+    y = H - BOVEN - 40
+    c.setFont('PopB', 20)
+    c.drawString(x0, y, 'Why 66 days?')
+    y -= 22
+    y = tekst(c, 'Here is something most habit books skip. In a study that followed people building a new daily habit, it took a median of 66 days before the habit felt automatic, and the range was wide. So Day 30 is not the finish line. It is the day you know exactly how to do it.', x0, y, w, s=10.8, lead=14.8)
+    y = tekst(c, 'Research: Lally et al. (2010)', x0, y - 1, w, f='LoraI', s=8, lead=10, kleur=GRIJS) - 14
+    y = tekst(c, 'Part 2 is lighter: one page a day, one question, a few lines and a mini check-in. About two minutes.', x0, y, w, s=10.8, lead=14.8) - 14
+    for a, e, naam, t in I.DEEL2_FASEN:
+        c.setFont('PopB', 11)
+        c.drawString(x0, y, naam.upper())
+        c.setFont('PopM', 7.5)
+        c.setFillColor(GRIJS)
+        c.drawRightString(x1, y, f'DAYS {a}-{e}')
+        c.setFillColor(black)
+        y = tekst(c, t, x0, y - 14, w, s=10.2, lead=13.5) - 12
+    y -= 6
+    teken_vol(c, x0, y, w, [('keuzes', ['Same habit, same level', 'Same habit, one notch up:'], {'titel': 'My plan for part 2'}), ('lijnen', 1, None, {'eerst': 6})], ONDER + 10, 'deel 2 links')
+    paginanummer(c, nr)
+
+
+def deel2_rechts(c, nr):
+    x0, x1 = M.marges(False)
+    w = x1 - x0
+    c.setFont('PopB', 13)
+    c.drawString(x0, H - 2.1 * 72, 'PART 2')
+    c.setFont('PopB', 100)
+    c.drawString(x0 - 4, H - 3.6 * 72, '66')
+    y = H - 4.25 * 72
+    c.setFont('PopB', 26)
+    for r in ['THE AUTOPILOT', 'STRETCH']:
+        c.drawString(x0, y, r)
+        y -= 30
+    y -= 4
+    c.setLineWidth(2)
+    c.line(x0, y, x0 + 40, y)
+    y -= 22
+    y = tekst(c, 'Days 31 to 66. Thirty-six pages, one question each. This is where your habit stops being a project and starts being part of your day.', x0, y, w, f='Lora', s=11.5, lead=16) - 10
+    tekst(c, 'Rule one still applies: tiny counts.', x0, y, w, f='LoraI', s=11.5, lead=15, kleur=GRIJS)
+    paginanummer(c, nr)
+
+
 # ------------------------------------------------------------------ plan en bouw
 
 def plan_maken():
@@ -826,7 +953,11 @@ def plan_maken():
             else:
                 P += [(dag_links, (d,)), (dag_rechts, (d,))]
     sleutels['dag31'] = len(P) + 1
-    P += [(dag31, ()), (tracker, ())]
+    P += [(deel2_links, ()), (deel2_rechts, ())]
+    for n in range(31, 67):
+        P += [(deel2_dag, (n,))]
+    sleutels['tracker'] = len(P) + 1
+    P += [(tracker, ())]
     sleutels['slecht'] = len(P) + 1
     P += [(slechte_dag, ())]
     sleutels['plan'] = len(P) + 1
