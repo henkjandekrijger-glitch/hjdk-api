@@ -564,7 +564,7 @@ async function page(item, res, req) {
   const q0 = (item.questions || []).find(x => x && x.options && x.options.length >= 2 && x.options.length <= 6); const q0i = q0 ? item.questions.indexOf(q0) : -1;
   // maat kinderfiets rekent in de chat met pills (lib/rekenhulp.js rekenKindPagina, 19 nov 2026, chat keuzehulp-pillfix); het rekenblok blijft eronder
   const rkKind = item.slug === 'kinderfiets-maat-bepalen' ? await Promise.race([rekenKindPagina(bolLink), new Promise(r => setTimeout(() => r(null), 6000))]).catch(() => null) : null;
-  const kx = kzuxBlok({ taal: 'nl', site: 'kzuxnl', slug: item.slug, term: item.term || item.title, shop: 'bol', prods: (adv.products || []).filter(p => p.price != null).map(p => ({ naam: kortTitel(p.title), rol: p.role, prijs: eur(p.price), url: p.url })), opties: q0 ? q0.options.map((o, oi) => ({ qi: q0i, oi, label: o.label })) : [], faq: item.faq || [], ...(rkKind || {}) });
+  const kx = kzuxBlok({ taal: 'nl', site: 'kzuxnl', slug: item.slug, term: item.term || item.title, shop: 'bol', prods: (adv.products || []).filter(p => p.price != null).map(p => ({ naam: kortTitel(p.title), rol: p.role, prijs: eur(p.price), url: p.url })), opties: q0 ? q0.options.map((o, oi) => ({ qi: q0i, oi, label: o.label, q: q0.q })) : [], faq: item.faq || [], ...(rkKind || {}) });
   NIEUW3 = true; // voet in één regel ook op de keuzehulp zelf
   // 18 nov (Henkjan: "niet zulke rare blob slop"): verwante keuzehulpen en de linkregels (veel gezocht, veel gebruikt, ook nieuw) samen als één rustige lijst
   // met pijltjes, zoals sealedintent.com. De links zelf blijven (interne links, ZICHT-proef interne-links-niet-geindexeerd), dubbele eruit, hooguit 14 regels.
