@@ -32,7 +32,7 @@ import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
 import { pinCohortEntries, PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, GEDRAG, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel, ttEvent } from '../lib/shopdirect.js';
 import { ttFeedCsv, ttVideo, TT_VIDEO, TT_REGEL, TT_GROEPEN, ttSleutel, ttKoppelUrl, ttRuil, ttRapport, ttAds, ttUit, ttOordeel, ttMeld, ttTekst } from '../lib/tiktok.js';
-import { whPixelHtml, whPage, whEvent, whopKlaar, bewezenRonde, bewezenPlan, BEWEZEN_MARGE, whopUpload, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd, whProject, whLead, WH_PROJECTEN, koppelWaid, whopAan, whopZetDoel, whFormBouw, leadForm, whFormFix } from '../lib/whop.js';
+import { WH_BUDGET_MAX, whPixelHtml, whPage, whopZetOptimalisatie, whEvent, whopKlaar, bewezenRonde, bewezenPlan, BEWEZEN_MARGE, whopUpload, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd, whProject, whLead, WH_PROJECTEN, koppelWaid, whopAan, whopZetDoel, whFormBouw, leadForm, whFormFix } from '../lib/whop.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
 import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
@@ -1282,6 +1282,12 @@ export default async function handler(req, res) {
     if (op === 'whleadstand') { // tellingen per project per dag (alleen aantallen)
       const out = {}; for (const p of Object.keys(WH_PROJECTEN)) { const pr = whProject(p); let t = {}; try { const h = await kv.raw(['HGETALL', 'hjdk:whl:tel:' + p]); if (Array.isArray(h)) for (let i = 0; i + 1 < h.length; i += 2) t[h[i]] = num(h[i + 1]); else t = h || {}; } catch (e) {} out[p] = { klaar: pr.klaar, sleutel: !!pr.key, bedrijf: !!pr.biz, tellingen: t }; }
       return res.status(200).json({ ok: true, projecten: out }); }
+    if (op === 'whopt') { // 19 nov (Henkjan: "Ja het moet gaan leren ... JA dus ."): optimalisatie van de advertentiegroep(en) van de Kadoly-campagne; alleen via de beschermde host
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const goal = String(url.searchParams.get('goal') || ''); const camp = await whopCampagnes(); const cid = camp.ok && camp.campagnes[0] ? camp.campagnes[0].id : null; const g = cid ? await whopGroepen(cid) : { groepen: [] };
+      const uit = []; for (const x of g.groepen) uit.push(Object.assign({ groep: x.id, was: { optimization_goal: x.optimization_goal ?? null, conversion_event: x.conversion_event ?? null } }, await whopZetOptimalisatie(x.id, goal)));
+      try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'optimalisatie naar ' + goal + ' (Henkjan 19 nov: "JA dus"): ' + uit.map(u => u.groep + ' ' + (u.ok ? 'gelukt' : 'mislukt')).join(', ') })]); } catch (e) {}
+      return res.status(200).json({ ok: uit.length > 0 && uit.every(u => u.ok), uit }); }
     if (op === 'whdoel') { // 17 nov: waar Meta op stuurt (Henkjan: "Ja doen ." op view_content), alleen via de beschermde host
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const ev = String(url.searchParams.get('ev') || ''); const camp = await whopCampagnes(); const cid = camp.ok && camp.campagnes[0] ? camp.campagnes[0].id : null; const g = cid ? await whopGroepen(cid) : { groepen: [] };
@@ -1334,6 +1340,23 @@ export default async function handler(req, res) {
       for (const x of rijen) { if (x.status === 'rejected' || x.issues.length) await eenmaal('afgekeurd:' + x.id, `Kadoly Meta (Whop): advertentie "${String(x.titel || x.id).slice(0, 60)}" ${x.status === 'rejected' ? 'afgekeurd' : 'heeft een probleem'}: ${x.issues.join('; ') || x.levering}`); }
       const kl = rijen.reduce((a, x) => a + x.kliks, 0), aanT = rijen.reduce((a, x) => a + x.aan, 0);
       if (kl >= WH_REGEL.minKliksAankomst && aanT / kl < WH_REGEL.aankomstAlarm) await eenmaal('aankomst', `Kadoly Meta (Whop): ALARM, maar ${Math.round(aanT / kl * 100)}% komt aan (${aanT} van ${kl} kliks). Landingspagina of meting kapot?`);
+      // 19 nov (Henkjan: "Voorkom deze fouten in de toekomst !!"): de levering lag vanochtend 5 uur stil zonder dat iemand het zag. Nu: alarm als de
+      // uitgave overdag 90 minuten niet beweegt terwijl er budget over is, als advertenties een dag aan staan zonder één vertoning, en als de
+      // paginaweergaven naar Whop (whPage) mislukken. Alarm via Telegram (whMeld), één keer per blok van drie uur.
+      try {
+        const uurN = uurNLv(), ls = await kv.get('hjdk:whop:spendstap'), aanCamp = (camp.campagnes || []).some(c => !c.status || c.status === 'active');
+        if (!ls || ls.dag !== dagNL || dagSpend > (Number(ls.spend) || 0) + 0.009) { if (!droog) await kv.set('hjdk:whop:spendstap', { dag: dagNL, spend: dagSpend, at: nu.toISOString() }, { ex: 3 * 86400 }); }
+        else if (uurN >= 9 && uurN <= 22 && aanCamp && Date.now() - Date.parse(ls.at) > 90 * 60e3 && dagSpend < 0.8 * WH_BUDGET_MAX) {
+          const leverendN = rijen.filter(x => x.status === 'active' && x.spend > 0).length, nooitN = rijen.filter(x => x.status === 'active' && !(x.spend > 0)).length;
+          const pgOk = num(await kv.get('sh-d' + D8() + '-wh-page-ok')), pgFout = num(await kv.get('sh-d' + D8() + '-wh-page-fout'));
+          await eenmaal('stil' + Math.floor(uurN / 3), `Kadoly Meta (Whop): ALARM, levering stil sinds ${String(ls.at).slice(11, 16)} UTC ($${dagSpend.toFixed(2)} van $${WH_BUDGET_MAX} vandaag). ${leverendN} advertenties aan die al vertoond werden, ${nooitN} aan zonder ooit een vertoning; paginaweergaven naar Whop vandaag ${pgOk} goed, ${pgFout} fout.`);
+          await lg('ALARM levering stil sinds ' + ls.at);
+        }
+        const nooit = (alle.ads || []).filter(a => a.status === 'active' && !(Number(a.impressions) > 0) && Date.now() - Date.parse(a.created_at) > 24 * 3600e3);
+        if (nooit.length >= 3) await eenmaal('nooit', `Kadoly Meta (Whop): ${nooit.length} advertenties staan al meer dan 24 uur aan zonder één vertoning (o.a. ${nooit.slice(0, 3).map(a => a.title).join(', ')}). Levert Whop wel? Kijk naar de pixel (Websites) en de levering.`);
+        const pf = num(await kv.get('sh-d' + D8() + '-wh-page-fout')), pok = num(await kv.get('sh-d' + D8() + '-wh-page-ok'));
+        if (pf >= 3 && pf > pok) await eenmaal('pagefout', `Kadoly Meta (Whop): paginaweergaven naar Whop mislukken (${pf} fout, ${pok} goed vandaag): ${String((await kv.get('hjdk:whop:pagefout')) || '').slice(0, 120)}`);
+      } catch (e) {}
       if (dagSpend > WH_REGEL.dagMax) await eenmaal('budget', `Kadoly Meta (Whop): vandaag al $${dagSpend.toFixed(2)} uitgegeven, boven de grens van $${WH_REGEL.dagMax}.`);
       if (gedaan.some(g => g.ok)) await whMeld('Kadoly Meta (Whop): ' + gedaan.filter(g => g.ok).length + ' advertentie(s) uitgezet. ' + gedaan.filter(g => g.ok).map(g => g.reden).join(' | '));
       let verkend = []; if (!droog && uurNLv() >= 9) { try { const vk = 'hjdk:whop:verkend:' + dagNL; const al = num(await kv.get(vk)); const uitNu = new Set(gedaan.filter(g => g.ok).map(g => g.id)); const rijenNa = rijen.map(x => uitNu.has(x.id) ? Object.assign({}, x, { status: 'paused' }) : x); const vp = verkenPlan(alle.ads, rijenNa, pool, al); for (const x of vp.plan) { const r = await whopNieuweAd(x); verkend.push({ titel: x.titel, ok: r.ok, waarom: x.waarom, fout: r.ok ? undefined : r.fout }); if (r.ok) await kv.set(vk, al + verkend.filter(v => v.ok).length, { ex: 2 * 86400 }); else break; } if (verkend.some(v => v.ok)) await whMeld('Kadoly Meta (Whop): ' + verkend.filter(v => v.ok).length + ' nieuwe advertentie(s) erbij: ' + verkend.filter(v => v.ok).map(v => v.titel + ' (' + v.waarom + ')').join(' | ')); if (verkend.some(v => !v.ok)) await lg('nieuwe advertentie mislukt: ' + verkend.filter(v => !v.ok).map(v => v.fout).join('; ')); } catch (e) { await lg('verkennen fout: ' + String(e.message || e).slice(0, 120)); } }
