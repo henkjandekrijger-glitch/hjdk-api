@@ -19,6 +19,11 @@ Werk je hieraan? Lees eerst dit bestand en de skill zicht-seo-llm. Werk in dezel
 - Alles van een soort (10 nov 2026): lib/gidsen-alle.js geeft per gids een titelfilter en groepen; onder de FAQ staat Alle <soort> bij Kadoly met elk passend beschikbaar product uit de catalogus (hoogstens 120, volgorde kliks in de gids en dan prijs, b=alle). Nieuwe gids = ook een regel in ALLE.
 - Pagina-opbouw: kort antwoord, Onze keuze (actuele prijs inclusief verzending volgens shopbeleid 18 november 2026; controleer land-/productuitzonderingen, bezorgschatting zonder garantie, waarom, let op), tabel per situatie, snelle check die ook kan afraden, uitleg, zo kozen we, zekerheid, FAQ, delen via WhatsApp. Schema: Organization, Article, BreadcrumbList, ItemList met Product en Offer, FAQPage.
 
+## Look en chat (sinds 19 nov 2026)
+- Look van sealedintent.com op alle pagina's (Henkjan: "pak de sealedintent.com look en voer hier door en ook op onderliggende paginas"): `CSS_SI`, `SI_KOP`, `SI_VOET` in api/gids.js. Zwart op wit, geen blauw, geen grijs, kolom 680 px, kop en voet in een regel. CSS_KADOLY en CSS_GIDS blijven voor Curady.
+- Chat: de lerende chat van de keuzehulpen (lib/kzux.js kzuxBlok, lib/kzchat.js), site `kadoly`. Altijd lenen, nooit kopieren (Henkjan: "Die lerende chat blijf je lenen van de keuzehulpen want die is dus totaal in beweging en wordt iedere dag beter"). Kadoly-eigen: `chatItems` en `kzKadoly` in api/gids.js. Vragen en intenties in kz:chat:log (site kadoly) en gk:chat. Artikelen: chat na In het kort met de vragen van het artikel (geenPillflow).
+- Oude zoekbalk in de kop en de blauwe chatlade zijn weg; /zoek en /vraag werken nog voor oude links.
+
 ## Redactie (elke dag een artikel, sinds 19 nov 2026)
 Henkjan 19 nov 2026: "Maak iedere dag een post met een redactie die nuttig is voor lezers en bezoekers op kadoly.com" en "Meet alles met clickmind . Aan links wat er in komt".
 - Waar: gids.kadoly.com/redactie (overzicht) en /redactie/<slug>. Code: lib/kadoly-redactie.js (ARTIKELEN, STATUS), routes in api/gids.js (red=, op=redlink, op=redstand) en vercel.json.
