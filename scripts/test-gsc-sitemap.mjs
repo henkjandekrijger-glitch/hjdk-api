@@ -13,6 +13,7 @@ await assert.rejects(()=>sitemapTargets(site,async()=>({ok:false,status:503})));
 const zicht=readFileSync(new URL('../lib/zicht.js',import.meta.url),'utf8');
 const gsc=readFileSync(new URL('../api/gsc.js',import.meta.url),'utf8');
 const kz=readFileSync(new URL('../api/kz.js',import.meta.url),'utf8');
+const voorkant=readFileSync(new URL('../lib/cadeauvinder.js',import.meta.url),'utf8');
 assert.match(zicht,/P2\('surgery', 'keuzehulp\.best'[\s\S]{0,500}pathPrefix: '\/chirurgie'[\s\S]{0,300}sitemap: 'https:\/\/keuzehulp\.best\/chirurgie\/sitemap\.xml'/);
 assert.doesNotMatch(zicht,/P2\('surgery', 'todayin\.email'/);
 assert.match(zicht,/canonicalExperimentUrl[\s\S]{0,300}keuzehulp\.best\/chirurgie/);
@@ -21,4 +22,5 @@ assert.doesNotMatch(gsc,/op === 'surgery'[\s\S]{0,500}propFor\(l, 'todayin\.emai
 assert.match(kz,/rows\.push\(\['\/chirurgie\/nl', '2026-11-19'\]\)/);
 assert.match(kz,/ovRegel\('\/chirurgie\/nl', 'Medische ingrepen en tandheelkunde: kosten, klinieken en broncontrole'\)/);
 assert.match(kz,/<a href="\/chirurgie\/nl">Medische ingrepen en tandheelkunde: kosten, klinieken en broncontrole/);
+assert.match(voorkant,/mk === 'nl'[\s\S]{0,300}<a href="\/chirurgie\/nl">Medische ingrepen en tandheelkunde: kosten, klinieken en broncontrole/);
 console.log('ok scoped chirurgie sitemap, canonical ZICHT/GSC scope, root-urlset and visible homepage discovery');
