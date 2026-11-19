@@ -1136,6 +1136,26 @@
       "destination": "/api/gids?op=vraag"
     },
     {
+      "source": "/redactie/:a([a-z0-9-]+)/link/:n([0-9]+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=redlink&a=:a&n=:n"
+    },
+    {
+      "source": "/redactie/:a([a-z0-9-]+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?red=:a"
+    },
+    {
       "source": "/naar/:pid",
       "has": [
         {
