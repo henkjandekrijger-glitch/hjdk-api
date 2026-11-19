@@ -132,6 +132,8 @@ Op 390×800 staan het antwoord en de eerste actieknop in het eerste scherm.
 - Advies op de pagina spreekt zichzelf niet tegen.
 - Niet herkenbaar als AI-tekst.
 
+- Nooit een interne prompt als vraag op de pagina ("I'm looking for: … Name specific names."): de FAQ-vraag is de echte zoekvraag in mensentaal. Antwoordblok en uitleg gaan door antwoordBlok en gidsBlok/leesbaarBlok (lib/leesbaar.js), op alle drie de sites.
+
 ## 6. Aansluiten bij wat er al is (niet zelf opnieuw bouwen)
 
 **Gedeelde laag.** `HUISSTIJL_CSS` uit `lib/huisstijl.js` hoort op elke pagina, via de kz/wtb-schil of `metHuisstijl`. Die laag brengt mee:

@@ -1,6 +1,6 @@
 import { faqZonderDubbel } from '../lib/faq-dubbel.js';
 import { HUISSTIJL_CSS, FAVICON, voetEenRegel, chatErbij } from '../lib/huisstijl.js';
-import { leesbaarBlok } from '../lib/leesbaar.js';
+import { leesbaarBlok, antwoordBlok } from '../lib/leesbaar.js';
 import { kzuxBlok, zoekLogJs } from '../lib/kzux.js';
 import { trendingBlock } from '../lib/guide-usage.js';
 import { koopBlok, koopMeetScript } from '../lib/koopblok.js';
@@ -560,7 +560,7 @@ async function page(item, res, req) {
   const REKEN = { 'kinderfiets-maat-bepalen': () => kinderfietsBlok(bolLink), 'kinderfiets': () => kinderfietsBlok(bolLink), 'fietshelm-kind': () => helmBlok(bolLink, true), 'fietshelm-volwassenen': () => helmBlok(bolLink, false) };
   const rekenHtml = REKEN[item.slug] ? await Promise.race([REKEN[item.slug](), new Promise(r => setTimeout(() => r(''), 6000))]).catch(() => '') : '';
   const kdb = paid ? '' : await Promise.race([kadolyBlok(item), new Promise(r => setTimeout(() => r(''), 3000))]).catch(() => ''); const kdbHtml = kdb ? '<style>' + KDB_CSS + '</style>' + kdb : '';
-  const kort = item.kort ? `<div class="answer"><p class="kicker" style="margin:0 0 6px">In het kort</p><p>${firstBold(item.kort)}</p></div>` : '';
+  const kort = item.kort ? `<div class="answer"><p class="kicker" style="margin:0 0 6px">In het kort</p>${antwoordBlok(item.kort)}</div>` : '';
   // nieuwe bovenkant, lerend (lib/kzux.js, proef kzuxnl): de 3 beste met prijs, situaties als pills, vraagbalk
   const q0 = (item.questions || []).find(x => x && x.options && x.options.length >= 2 && x.options.length <= 6); const q0i = q0 ? item.questions.indexOf(q0) : -1;
   // maat kinderfiets rekent in de chat met pills (lib/rekenhulp.js rekenKindPagina, 19 nov 2026, chat keuzehulp-pillfix); het rekenblok blijft eronder

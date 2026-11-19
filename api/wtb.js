@@ -5,6 +5,7 @@ import { boekLd } from '../lib/kdp-guides.js';
 import { dienstLd } from '../lib/wtb-dienst.js';
 import { koopBlok, koopMeetScript } from '../lib/koopblok.js';
 import { kzuxBlok, zoekLogJs } from '../lib/kzux.js';
+import { antwoordBlok, gidsBlok } from '../lib/leesbaar.js';
 // WTB-pagina's: whichtobuy.best (VS) en kaufberater.best (DE). Zelfde idee als keuzehulp.best: 3 vragen, 1 eerlijke keuze, prijs van vandaag (Amazon).
 // Routes (vercel.json, op host): / , /<slug>, /sitemap.xml, /robots.txt, /llms.txt, /llms-full.txt, /<indexnow-sleutel>.txt, /about, /privacy
 // API: /api/wtb?op=advice&slug=..&a=0-1-2 (producten voor de antwoorden), /api/wtb?op=status (openbaar overzicht)
@@ -142,12 +143,12 @@ async function page(m, it, all, req) {
     ...(adv.products.length ? [{ '@type': 'ItemList', name: it.title, itemListElement: adv.products.map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.title.slice(0, 110), url: p.url })) }] : []) ] };
   const KZ = await import('./kz.js'); // opmaak van outname.now, zelfde als keuzehulp.best (18 nov 2026)
   const body = `${KZ.OV3_CSS}<div class="ov gids"><div class="hero"><p class="crumbs"><a href="/">${esc(m.name)}</a> › <a href="${esc(catPad(m, it.cat))}">${esc(it.cat)}</a></p><p class="ov-eb" style="margin-top:22px"><i></i>${esc(it.cat)}</p><h1>${esc(it.h1)}</h1><p class="kz-meta">${upd ? `${esc(s.updated)} <time datetime="${esc(upd)}">${esc(datumW(m, upd))}</time> · ` : ""}${esc(s.by)} ${m.id === 'us' ? 'the editors' : 'der Redaktion'}</p><p class="ov-lead lead">${esc(it.intro)}</p></div>
-<div class="answer"><p>${firstBold(it.kort)}</p></div>
+<div class="answer">${antwoordBlok(it.kort, { bronLabel: m.id === 'de' ? 'Quellen' : 'Sources' })}</div>
 ${kx}<h2>${esc(s.q)}</h2>${qs}
 <div class="guide-actions"><button type="button" id="share-guide">${m.id === 'de' ? 'Ergebnis kopieren' : 'Copy this result'}</button><span id="share-status" role="status"></span></div><p id="advice-status" role="status"></p><div id="adv" aria-live="polite" aria-atomic="true" style="margin:14px 0">${adviceHtml(m, adv)}</div>
 ${guideSections(it,esc)}
 ${(it.aiMiss || []).length ? `<div class="box ai"><h2>${esc(s.aimiss)}</h2><ul>${it.aiMiss.map(x => '<li>' + esc(x) + '</li>').join('')}</ul></div>` : ''}
-<div class="box"><h2>${esc(s.guide)}</h2>${String(it.guide || '').split(/\n+/).filter(Boolean).map(p => '<p>' + esc(p) + '</p>').join('')}</div>
+<div class="box"><h2>${esc(s.guide)}</h2>${gidsBlok(it.guide, { bronLabel: m.id === 'de' ? 'Quellen' : 'Sources' })}</div>
 ${(it.mistakes || []).length ? `<div class="box"><h2>${esc(s.mistakes)}</h2><ul>${it.mistakes.map(x => '<li>' + esc(x) + '</li>').join('')}</ul></div>` : ''}
 ${(it.faq || []).length ? `<h2>${esc(s.faq)}</h2>${faqZonderDubbel(it.faq).map(f => `<details class="faq"><summary>${esc(f.q)}</summary><div class="a"><p>${esc(f.a)}</p></div></details>`).join('')}` : ''}
 ${(() => { // verwante gidsen en de linkregels (popular, also new) als één lijst met pijltjes, zoals keuzehulp.best (18 nov 2026)
