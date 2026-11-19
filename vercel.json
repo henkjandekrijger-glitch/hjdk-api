@@ -282,6 +282,14 @@
     }
   ],
   "rewrites": [
+    {"source": "/mcp", "has": [{"type": "host", "value": "(www\\.)?(keuzehulp|whichtobuy|kaufberater)\\.best"}], "destination": "/api/kzmcp"},
+    {"source": "/mcp", "has": [{"type": "host", "value": "hjdk-api.*\\.vercel\\.app"}], "destination": "/api/kzmcp"},
+    {"source": "/koppel", "has": [{"type": "host", "value": "(www\\.)?keuzehulp\\.best"}], "destination": "/api/kzmcp?op=koppel&m=nl"},
+    {"source": "/koppel", "has": [{"type": "host", "value": "hjdk-api.*\\.vercel\\.app"}], "destination": "/api/kzmcp?op=koppel"},
+    {"source": "/connect", "has": [{"type": "host", "value": "(www\\.)?whichtobuy\\.best"}], "destination": "/api/kzmcp?op=koppel&m=us"},
+    {"source": "/verbinden", "has": [{"type": "host", "value": "(www\\.)?kaufberater\\.best"}], "destination": "/api/kzmcp?op=koppel&m=de"},
+    {"source": "/.well-known/mcp.json", "has": [{"type": "host", "value": "(www\\.)?(keuzehulp|whichtobuy|kaufberater)\\.best"}], "destination": "/api/kzmcp?op=card"},
+    {"source": "/.well-known/mcp/:card(server-card\\.json|server-cards\\.json)", "has": [{"type": "host", "value": "(www\\.)?(keuzehulp|whichtobuy|kaufberater)\\.best"}], "destination": "/api/kzmcp?op=card"},
     {"source": "/wp-json", "has": [{"type": "host", "value": "gids\\.kadoly\\.com"}], "destination": "/api/dp?wc="},
     {"source": "/wp-json/:path*", "has": [{"type": "host", "value": "gids\\.kadoly\\.com"}], "destination": "/api/dp?wc=:path*"},
     {"source": "/dp/wp-json", "has": [{"type": "host", "value": "gids\\.kadoly\\.com"}], "destination": "/api/dp?wc="},
@@ -1983,6 +1991,9 @@
     "api/kz.js": {
       "maxDuration": 60,
       "includeFiles": ".claude/skills/**"
+    },
+    "api/kzmcp.js": {
+      "maxDuration": 30
     },
     "api/kzmaak.js": {
       "maxDuration": 300
