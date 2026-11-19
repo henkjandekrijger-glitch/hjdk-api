@@ -40,7 +40,7 @@ Werk je verder (ander account, andere chat)? Lees dit hele document, schrijf na 
 | C | 17:20 | 13:20 | TUSSEN |
 | D | 22:20 | 18:20 | TUSSEN + dagafsluiting |
 
-**19 nov 15:40 UTC (Henkjan: "Andere account neemt over"):** de rondes en het campagnebeheer liggen nu bij het andere account. De send_later-keten van de oorspronkelijke chat (session_018fX8wVRvYzXXcTu4rMFhXp) is gestopt; die chat doet alleen nog LC 2027 (paragraaf 7) en de geplande boekronde van zondag 22 nov 00:12 UTC (trig_01MxsrBoD9gioX5ZQd7kpUuB: Moment mal-hardcover en de volgende paperback). Het nieuwe account plant zijn eigen 4 rondes zoals hieronder. Eerste oordeel dat nu bij het nieuwe account ligt: PIT BOSS-duw (20 nov ronde A).
+**19 nov 15:40 UTC (Henkjan: "Andere account neemt over"):** de rondes en het campagnebeheer liggen nu bij het andere account. De send_later-keten van de oorspronkelijke chat (session_018fX8wVRvYzXXcTu4rMFhXp) is gestopt; LC 2027 is op 19 nov 20:50 UTC ook overgedragen (paragraaf 7a); in de oude chat staat alleen nog de geplande boekronde van zondag 22 nov 00:12 UTC (trig_01MxsrBoD9gioX5ZQd7kpUuB: Moment mal-hardcover en de volgende paperback). Het nieuwe account plant zijn eigen 4 rondes zoals hieronder. Eerste oordeel dat nu bij het nieuwe account ligt: PIT BOSS-duw (20 nov ronde A).
 
 **Neemt een ander account over?** Spreek met Henkjan af wie de rondes draait, zodat ze niet dubbel lopen: de oude keten stopt met delete_trigger op de id's hierboven (alleen het account dat ze maakte kan dat), of door de stap 0 niet meer uit te voeren. Het nieuwe account maakt 4 terugkerende geplande taken (create_trigger, cron `20 6 * * *`, `20 12 * * *`, `20 17 * * *`, `20 22 * * *`, de computer van Henkjan nodig) met de tekst hieronder; stap 0 (send_later) is dan niet nodig. Het rapport gaat dan als eindbericht van de run (en met PushNotification als dat er is).
 
@@ -110,9 +110,45 @@ Break-even ROAS: Teens CA 2,93; PIT BOSS ($14,99) 4,61; LC ($24,99) 2,10 (break-
 
 ## 7. Boeken in de maak
 
-- **Lasting Change Workbook 2027** (oorspronkelijke chat). Stand 19 nov 15:40 UTC: heel nieuw binnenwerk gebouwd, 126 pagina's 6x9 zwart-wit (kdp/bouw/lc2027/binnenwerk.pdf), fonts ingebed, marges gecontroleerd (bouwer kdp/bouw/lc2027: inhoud.py, motor.py, bouw.py; `python3 bouw.py uit.pdf`). Opzet: voorwerk (hoe het werkt, kies een gewoonte, dag 0, contract, buddy), 4 weken met elk een openingsspread, 30 dagen als spread (links idee, 3-minutenactie, waarom met echte bron, eigen oefening per dag; rechts oefening en vaste dagelijkse check-in met 30-dagenbalk), weekreviews, dag 30 met certificaat, deel 2 dag 31-66 (een pagina per dag, 66 dagen = mediaan uit Lally et al. 2010), tracker 67-120, slechte-dagkaart, 2 gewoonteplannen, wins, 15 echte bronnen. Concept-PDF naar Henkjan gestuurd. Nieuwe omslag (Henkjan 19 nov: "frontpage met 2027 erop en quote over niet nog een jaar weggooien"): kdp/bouw/lc2027/omslag.pdf, zelfde huisstijl (LASTING zwart, CHANGE rood gespiegeld), badge NEW FOR 2027, regel "Don't throw away another year.", nieuwe achterkant, rug voor 126 p. (0,284 in), 12,534 x 9,25 in, 300 dpi (`python3 omslag.py 126 uit.pdf`). Titelpagina binnenin ook met 2027 en de regel. Achterkant herschreven na 4 agenten (19 nov, Henkjan: "Moet veel meer raken ... niet negatief"): "Make 2027 the year it finally sticks." QR naar WhatsApp van Henkjan (wa.me/31655395630, tekst "Dear John, I am a reader and have a question.") op de achterkant en binnenin op p. 13, 121 en 126; in de Amazon-beschrijving alleen een verwijzing naar de QR (geen nummer of link, KDP-regel). Volgende: paginatelling en trim van de huidige uitgave in KDP lezen (geschat ~170 p. uit drukkosten $3,07); de rug van de omslag moet mee (126 p. wit papier = 0,284 in), voor- en achterkant blijven gelijk (huidige omslag uit de Previewer/proef halen); uploaden als concept; Publish is Henkjans knop. Henkjan 17 en 19 nov: zelfde boek (B0F1SM1L5J), nieuw binnenwerk, "HEEL ERG GOED", "ik wil 5 sterren voor dit boek".
+- **Lasting Change Workbook 2027**: klaar om te uploaden, zie 7a.
 - **Moment mal, das stimmt?! Für Männer** paperback GHCXH02H6WW: nieuwe omslag zonder rugtekst staat als concept; Henkjan vinkt de AI-verklaring aan en publiceert. Hardcover 22 nov (trig_01MxsrBoD9gioX5ZQd7kpUuB).
 - Volgende in de wachtrij: Stocking Stuffers For Teen Girls (81, eigen nieuwe feiten), Would You Rather? Stocking Stuffers for Kids & Teens (72), Klobuch DE (77). Zie wachtrij.
+
+### 7a. LC 2027: zo pak je het op (overgedragen 19 nov 2026, 20:50 UTC)
+
+Henkjan 19 nov: "Zet even in handover op vercel dan kan ik in andere account op pakken ." Het nieuwe account neemt LC 2027 nu over, net als de rondes.
+
+**Wat het is.** Zelfde boek (paperback ASIN B0F1SM1L5J, titel, ondertitel en auteur liggen vast: 130 reviews blijven), helemaal nieuw binnenwerk en nieuwe omslag. Henkjan: "HEEL ERG GOED", "ik wil 5 sterren voor dit boek", "frontpage met 2027 erop en quote over niet nog een jaar weggooien", achterkant "Moet veel meer raken ... niet negatief", QR "waarmee ze me kunnen appen voor advies ... Dear John, I am reader and have a question".
+
+**Bestanden (repo, map kdp/bouw/lc2027):**
+- `binnenwerk.pdf`: 126 pagina's, 6 x 9 in, zwart-wit, geen bleed, alle fonts ingebed, marges binnen 0,8 / buiten 0,6 in (gecontroleerd: geen tekst buiten de veilige zone, geen gedachtestreepjes).
+- `omslag.pdf`: hele omslag 12,534 x 9,25 in (6 x 9 met 0,125 bleed, rug 0,284 in voor 126 p. wit papier), 300 dpi, zonder losse fonts.
+- Opnieuw bouwen: `cd kdp/bouw/lc2027 && python3 bouw.py binnenwerk.pdf` (reportlab, fonts in fonts/, QR met `pip install segno`) en `python3 omslag.py 126 omslag.pdf` (Playwright/Chromium, Inter Display uit /usr/share/fonts/opentype/inter). Inhoud staat in `inhoud.py`, opmaak in `motor.py` en `bouw.py`.
+
+**Inhoud:**
+- Voorwerk: titelpagina met NEW FOR 2027 en "Don't throw away another year.", inhoud, hoe het werkt, de 30-dagenkaart, kies een gewoonte, dag 0, contract, check-in-uitleg, buddy en snelstart met QR.
+- 4 weken: Start tiny, Make it easy on hard days, Make it stick, Make it me. Elke week heeft een openingsspread; elke dag is een spread met een eigen oefening, een "Why it works" met echte bron en een vaste dagelijkse check-in. Weekreviews op dag 7, 14, 21 en 28; dag 30 met certificaat.
+- Deel 2, dag 31-66: één pagina per dag met een vraag en een mini check-in (66 dagen = mediaan uit Lally et al. 2010).
+- Achterin: tracker 67-120, slechte-dagkaart met QR, 2 gewoonteplannen, wins, 15 bronnen, slotwoord met QR.
+
+**Omslag:**
+- Voorkant: huisstijl van nu (LASTING zwart, CHANGE rood gespiegeld, WORKBOOK), badge NEW FOR 2027 en "Don't throw away another year." Bewust niet "2027 Edition": een nieuwe editie zou een nieuw boek zonder reviews betekenen.
+- Achterkant: "Make 2027 the year it finally sticks.", "It was never about willpower. It was about the plan.", 5 punten en "Next December, you'll be glad you started today." Gekozen na 4 agenten (copywriter, psycholoog, Amazon-markt, lezerspanel).
+- QR naar WhatsApp van Henkjan: https://wa.me/31655395630?text=Dear%20John%2C%20I%20am%20a%20reader%20and%20have%20a%20question. Staat op de achterkant linksonder en binnenin op p. 13, 121 en 126. Alle QR's zijn met een decoder gecontroleerd.
+- Niet op de voorkant: onleesbaar als Amazon-plaatje, en het ontwerp blijft rustig. Henkjan mag hem er alsnog op willen.
+- Een doorstuurlink met teller kon niet, want het project lastingchange staat op pauze bij Vercel.
+
+**Stappen in KDP (Chrome moet in Henkjans boekenaccount zitten; op 19 nov zat de Chrome van de oude chat in een leeg account):**
+1. Boekenplank, zoek "Lasting Change". Open de paperback (B0F1SM1L5J) en kijk op Paperback Content naar trim, papier en het huidige aantal pagina's (geschat ~170 p. uit drukkosten $3,07). Let op: 6FFFY398EVH kwam ook als hardcover-id voor (hardcover B0F3TL9TWR); neem het id uit de boekenplank.
+2. Trim moet 6 x 9 zijn, wit papier, zwart-wit, geen bleed. Wijkt de trim af, dan moet `bouw.py` (W, H in motor.py) en `omslag.py` (TRIM_W, TRIM_H) mee: een trimwijziging kan niet op hetzelfde boek, dus dan eerst Henkjan vragen.
+3. Manuscript: upload `binnenwerk.pdf`. Book cover: kies "Upload a cover you already have", upload `omslag.pdf`. Launch Previewer, controleer dat er geen meldingen zijn (rug, marges), Approve.
+4. AI-vragen: tekst door Claude (Entire work, minimal editing), afbeeldingen geen, vertalingen geen. Het vakje "I confirm that my answers are accurate" is van Henkjan.
+5. Save as Draft. Op Paperback Details de beschrijving aanvullen met de zin uit `kdp/bouw/lc/kdp.json` (beschrijving_2027_extra). Geen nummer of link in de beschrijving, want dat is een KDP-regel.
+6. Prijs: blijft $24,99. Bij 126 p. is de drukprijs ~$2,51 en de royalty ~$12,48 (was $11,92); lees de echte waarde op de prijspagina en zet die in kdp/rapport.md (Royalty per verkoop en ROI en ROAS).
+7. Publish is Henkjans knop: stuur hem de link https://kdp.amazon.com/en_US/title-setup/paperback/<id>/pricing .
+8. Daarna de hardcover B0F3TL9TWR: zelfde binnenwerk, eigen omslag (rug en hinge volgens de KDP-calculator, `omslag.py` heeft nog geen hardcovermodus; voorbeeld in kdp/bouw/omslag_gen.py met hard=...). Doel: alles live voor 15 dec.
+
+**Let op:** de geplande boekronde van zondag 22 nov 00:12 UTC (trig_01MxsrBoD9gioX5ZQd7kpUuB: Moment mal-hardcover en de volgende paperback) draait nog in de oude chat. Doet het nieuwe account die ronde zelf, dan zet Henkjan die taak uit (uitzetten vanuit de oude chat werd geblokkeerd).
 
 ## 8. Wacht op Henkjan
 
