@@ -100,7 +100,7 @@ export default async function handler(req, res) {
     if(op==='stand'){res.setHeader('cache-control','no-store');return res.status(200).json(await R.stand());}
     if(op==='beeld'){const img=await R.beeld(q.get('d')||'tandarts',q.get('v')==='icon'?'icon':'img',q.get('k')||'');const buf=Buffer.from(await img.arrayBuffer());res.setHeader('content-type','image/png');res.setHeader('cache-control','public, max-age=86400, s-maxage=604800');return res.status(200).send(buf);} // advertentiebeeld (19 nov 2026, campagne Rotterdam)
     if(op==='sitemap'){const x=await R.sitemap();res.setHeader('content-type','application/xml; charset=utf-8');res.setHeader('cache-control','public, s-maxage=3600');return res.status(200).send(x.xml);}
-    const html=q.get('z')?await R.zaakPagina(q.get('d'),q.get('z')):q.get('d')?await R.dienstPagina(q.get('d')):await R.hub();
+    const html=q.get('d')==='voor-bedrijven'?await R.voorBedrijven(q.get('zaak'),q.get('dienst')):q.get('z')?await R.zaakPagina(q.get('d'),q.get('z')):q.get('d')?await R.dienstPagina(q.get('d')):await R.hub();
     res.setHeader('content-type','text/html; charset=utf-8');if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/rotterdam">Alle diensten in Rotterdam</a></p>');}
     res.setHeader('cache-control','public, s-maxage=300, stale-while-revalidate=3600');return res.status(200).send(html);}
   if(q.get('tool')==='hyp'){ // rekenhulp hypotheek berekenen en hypotheekrente (lib/hypotheek.js, 19 nov 2026)
