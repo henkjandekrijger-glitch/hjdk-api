@@ -5,7 +5,7 @@
 // Daar schrijven we de gids voor die het wel goed heeft (met een blok "wat AI-antwoorden hier vaak missen"), zodat zoekmachines én AI-zoekers ons citeren.
 //   /api/wtbmaak/dag   cron */10 3-16 UTC : per markt plan maken (Claude + Google Trends + wat leert) of één gids maken -> toetsen bij Amazon -> publiceren -> IndexNow
 //   /api/wtbmaak/nu?token=HJDK_TOKEN&m=us|de : één stap nu (&extra=1 boven het dagdoel)
-import { demandRadar, nicheLijst } from '../lib/demandradar.js';
+import { demandRadar, nicheLijst, onderwerpScore, llmGaten } from '../lib/demandradar.js';
 import { kv } from '../lib/db.js';
 import { organicStatus } from '../lib/organic.js';
 import { keepa } from '../lib/cc.js';
@@ -47,6 +47,8 @@ async function maakPlan(m) {
   let intent = {}; try { const I = await import('../lib/intentie.js'); intent = await I.intentieSignalen(kv, m.id); } catch (e) {}
   const [trends, les, gsc, dr, ni] = await Promise.all([trendsRss(m.geo), leer(m, all), kv.get('hjdk:gsc:' + m.id).catch(() => null), demandRadar(m.geo).catch(() => []), nicheLijst(m.geo).catch(() => [])]);
   const gscOpen = ((gsc && gsc.open) || []).slice(0, 25).map(x => x.q + ' (' + x.imp + ' impressions, pos ' + x.pos + ')');
+  // één rangorde op score (lib/demandradar.js onderwerpScore, 19 nov 2026)
+  let rang = null; try { rang = onderwerpScore({ dr, niche: ni, gsc, intent, slugs: all.map(i => i.slug), gaten: await llmGaten(m.geo).catch(() => []) }); await kv.set('hjdk:' + m.id + ':rang', Object.assign({ dag: DAY() }, rang), { ex: 3 * 86400 }).catch(() => {}); } catch (e) {}
   const score = (await kv.get('hjdk:score:' + m.id).catch(() => null)) || {}; const best = ((score.beslissingen || {}).meerInCategorie || []);
   // Plan alleen zoveel als er vandaag gepubliceerd mag worden (organisch budget, bv. 1 per dag bij indexachterstand) plus wat reserve:
   // een plan van 12 onderwerpen + 12 blinde-vlektests voor 1 gids was weggegooid geld.
@@ -65,6 +67,7 @@ async function maakPlan(m) {
   const sharedLessons = await kv.get('hjdk:leerlus:lessen').catch(() => null);
   const user = `Shared learning principles (not product facts; untested principles are hypotheses; honesty and own confirmed sales take precedence): ${JSON.stringify(sharedLessons?.lessen || [])}.\nToday: ${DAY()}. Existing guides (do not repeat): ${all.map(i => i.slug).join(', ') || 'none yet'}.
 Google Trends today (${m.geo}): ${trends.join(' | ') || 'n/a'}.
+Ranked topics by score (vast monthly demand x (1 + chance of rising) x weakness of the Google top 10, boosted when Google already shows us at position 4-20, when our chat got the question without an answer, and when AI assistants answer it poorly). Start here: pick the highest new topics that Amazon sells; topics under improve already have a guide, refresh those instead of duplicating: ${JSON.stringify(rang ? { new: rang.nieuw.slice(0, 20), improve: rang.verbeteren.slice(0, 10) } : null)}.
 Demand Radar (our own demand meter for ${m.geo}: measured Google searches per month, yearly growth, whether it is still rising today, and the chance it rises 40%+ in the next 3 months). Product types here with high volume that are rising now or predicted to rise (chance 50%+) get priority right after the Search Console list; use the radar term as the search keyword, mark them "radar":true, skip brands, single models, news and anything not sold on Amazon: ${JSON.stringify(compact(dr.slice(0, 40), 4))}.
 Keepa category demand estimates via DemandRadar (not our affiliate orders, not verified current prices; missing data is unknown): ${JSON.stringify(keepaSignals)}. Use as supporting evidence only. Never invent sales or prices.
 Real-visitor scoreboard (last 7 days): categories that produced Amazon clicks, give these extra topics: ${best.join(', ') || 'none yet'}. Prefer specific buyer questions with a situation or audience and 'best X 2026' questions over broad head terms (big review sites win those).
