@@ -183,3 +183,17 @@ for(const slug of ['', 'nieuw-bij-kadoly', 'alle-producten']) {
 assert.equal(bewijs.leveringsBeperking({id:'oc_other'}),'');
 assert.equal(bewijs.nieuwProductAdvies({id:'oc_other'}),'');
 console.log('Nieuwe producten: babybed-advies, onbekende TOG, NL-leveringsbeperking op home/nieuw/aanbod geslaagd.');
+const serviesProfiel=bewijs.ONDERZOEK.find(p=>p.id==='servies-gebruik');
+for(const t of ['Nina Theeset - 3-delig','Lauren Dubbelwandig Glas 490 ml','Dubbelwandige glazen']) assert.ok(serviesProfiel.match({t}),t);
+for(const t of ['Poppen theeset speelgoed','Theepot miniatuur','Bekerhouder']) assert.equal(serviesProfiel.match({t}),false,t);
+assert.ok(bewijs.nieuwProductAdvies({id:'oc_nieuw',t:'Grijze Jersey Bedbumper voor Baby'}).includes('Niet gebruiken als bedomrander'));
+assert.equal(bewijs.nieuwProductAdvies({id:'oc_hoes',t:'Hoes voor bedbumper'}),'');
+for(const id of ['oc_4174005539848193','oc_4174005519319041','oc_4174005539094529'])assert.ok(bewijs.leveringsBeperking({id}).includes('Geen NL-levering'));
+assert.equal(bewijs.leveringsBeperking({id:'oc_ongecontroleerd',t:'Bedbumper'}),'');
+const nieuwSchema=JSON.parse((await render('slug=nieuw-bij-kadoly')).body.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+const vind=(x)=>x&&typeof x==='object'?(x['@type']==='Product'&&x.offers?.url?.endsWith('oc_4174005539848193')?[x]:Object.values(x).flatMap(vind)):[];
+const bumperSchema=vind(nieuwSchema);assert.ok(bumperSchema.length);assert.equal(bumperSchema[0].offers.shippingDetails,undefined);
+assert.ok(babyHub.includes('instroom-19nov'));assert.ok(babyHub.includes('300 cm'));assert.ok(babyHub.includes('FTC'));
+for(const id of ['dp_1010','dp_1013','dp_1017'])assert.ok(bewijs.bronLink({id}).includes('instroom-19nov'));
+assert.ok(gidsen.GIDSEN['grote-hanglamp'].faq.some(f=>f.a.includes('geen absolute voorwaarden')));
+console.log('19nov: serviesmatches/uitsluitingen, automatische bumpercheck, specifieke landrestricties en schema zonder NL-claim geslaagd.');
