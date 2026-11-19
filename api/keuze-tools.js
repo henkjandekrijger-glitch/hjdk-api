@@ -151,6 +151,12 @@ export default async function handler(req, res) {
       const rc=await C.kzChat({site:b.site,slug:slugC,vraag:b.v,hist:b.h,ip,oidc:String(req.headers['x-vercel-oidc-token']||process.env.VERCEL_OIDC_TOKEN||''),test:!!(b.test&&beschermd),sid:String(b.sid||''),vt:String(b.vt||''),ik:Array.isArray(b.ik)?b.ik.slice(0,3).map(x=>String(x).slice(0,120)):[],pillPad:typeof b.pad==='string'?b.pad.slice(0,200):'',velden:b.velden&&typeof b.velden==='object'?b.velden:null,pc:b.pc?1:0}).catch(e=>({ok:false,fout:String(e.message||e).slice(0,80)}));
       if(rc&&rc.ok&&!rc.geblokt&&!(b.test&&beschermd))await fnStap(req,'vraag',slugC); // funnel per persoon via Clickmind-cookie mmp (18 nov 2026)
       return res.status(200).json(rc);}
+    if(op==='reken'){if(req.method!=='POST')return res.status(405).json({ok:false}); // rekenchat (lib/kzux.js kxReken, 19 nov 2026): velden uit de pills als intentie, zonder AI
+      let b=req.body;try{if(typeof b==='string'){if(b.length>3000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}b=b||{};
+      if(/bot|crawl|spider|preview|headless/i.test(String(req.headers['user-agent']||'')))return res.status(204).end();
+      const C=await import('../lib/kzchat.js');const slugR=String(b.slug||'').replace(/[^a-z0-9-]/gi,'').slice(0,90);
+      const rr=await C.kzRekenLog({site:String(b.site||''),slug:slugR,q:String(b.q||''),velden:b.velden&&typeof b.velden==='object'?b.velden:null,pad:String(b.pad||''),sid:String(b.sid||''),vt:String(b.vt||''),ip:String(req.headers['x-forwarded-for']||'').split(',')[0].trim()}).catch(()=>({ok:false}));
+      if(rr&&rr.ok&&!rr.limiet)await fnStap(req,'vraag',slugR);return res.status(200).json(rr);}
     if(op==='pills'||op==='pilev'||op==='cachestand'){const C=await import('../lib/kzchat.js'); // lerende pills en cache per pill-pad (19 nov 2026, chat keuzehulp-pills)
       if(op==='cachestand')return res.status(200).json(await C.kzCacheStand().catch(()=>({ok:false})));
       if(req.method!=='POST')return res.status(405).json({ok:false});let b=req.body;try{if(typeof b==='string'){if(b.length>4000)throw new Error('groot');b=JSON.parse(b);}}catch{return res.status(400).json({ok:false});}b=b||{};

@@ -36,5 +36,17 @@ is('aftrek schijf 1', aftrekVoordeel(D.jaar[2026].ib, 30000, 10000, false), 3575
 // volledige berekening draait zonder fouten en geeft eigen geld
 const b = bereken(D, invoer({ i1: 60000, p: '1', i2: 30000, r: 3.87, rv: 10, w: 400000, s: '1', l: 'C' }));
 is('starter vrij 400k', b.k.ovb, 0); is('nhg 0,4%', b.k.nhg, b.H * 0.004, 0.01); if (!(b.l.nettoMaand < b.l.brutoMaand)) { fout++; console.log('FOUT netto niet lager dan bruto'); } else ok++;
+// rekenchat (lib/hypotheek.js REKEN, draait zo in de browser): zelfde bedragen als de kern, ook met kosten koper en netto maandlast
+{ const { _test } = await import('../lib/hypotheek.js');
+  const rk = _test.rekenBerekenen({ maand: '2026-09', O: { v: 3.87 }, P: { v: 3.28 }, reeks: { O: [['2026-08', 3.93], ['2026-09', 3.87]] } });
+  const REKEN = new Function(rk.js + ';return REKEN')();
+  const getal = h => Number((h.match(/kx-rk-g">€\s([\d.]+)/) || [])[1].replace(/\./g, ''));
+  is('chat samen 30k+20k 5%', getal(REKEN({ i1: '30000', p: '1', i2: '20000', sj: '0', l: 'geen', r: '5' }, '').h), 194043, 1);
+  is('chat alleen 50k 5%', getal(REKEN({ i1: '50000', p: '0', sj: '0', l: 'geen', r: '5' }, '').h), 194043 + 18000, 1);
+  is('chat studie 100 5%', getal(REKEN({ i1: '50000', p: '1', i2: '0', sj: '1', st: '100', l: 'geen', r: '5' }, '').h), Math.floor((50000 * 0.25 / 12 - 130) / annu(5, 360)), 1);
+  const x = invoer({ j: 2027, i1: 60000, p: '1', i2: 30000, r: 3.87, rv: 10, l: 'A' }), m = maxHypotheek(D, 2027, x), b2 = bereken(D, invoer({ j: 2027, i1: 60000, p: '1', i2: 30000, r: 3.87, rv: 10, l: 'A', w: m.max }));
+  const h = REKEN({ i1: '60000', p: '1', i2: '30000', sj: '0', l: 'A' }, '').h, E = n => '€\u00a0' + Math.round(n).toLocaleString('nl-NL');
+  is('chat gemiddelde rente max', getal(h), b2.m.max); for (const [n, v] of [['netto', b2.l.nettoMaand], ['bruto', b2.l.eerste], ['eigen geld', b2.k.eigen], ['kosten koper', b2.k.totaal - b2.k.k]]) is('chat ' + n, h.includes(E(v)) ? 1 : 0, 1);
+}
 console.log(fout ? fout + ' fout(en), ' + ok + ' goed' : 'alle ' + ok + ' controles goed (16 Nibud-voorbeelden 2026 en 2027 exact)');
 process.exit(fout ? 1 : 0);
