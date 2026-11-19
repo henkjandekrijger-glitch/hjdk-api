@@ -48,8 +48,9 @@ ok('elk gepubliceerd veld heeft lezerstekst in en, nl en de');
 
 const korea = LIJSTEN.find(l => l.id === 'plastic-korea');
 const view = korea.klinieken.find(k => k.id === 'view');
-assert.ok(view.openheid.prijs.includes('totaalprijs voor een borstvergroting per type implantaat'));
-assert.ok(view.openheid.prijs.includes('niet of consult, narcose, operatiekamer, nazorg en beide implantaten zijn inbegrepen'));
+assert.ok(view.openheid.prijs.includes('US$10.000 tot US$14.000 voor een borstvergroting met Motiva Ergonomix'));
+assert.ok(view.openheid.prijs.includes('implantaattechniek, endoscopische operatie en gespecialiseerde nazorg zijn inbegrepen'));
+assert.ok(view.openheid.prijs.includes('Consult, narcose, operatiekamer, onderzoeken, medicijnen, beide implantaten en heroperatie zijn niet gespecificeerd'));
 assert.doesNotMatch(VELD['plastic-korea|view|prijs'].en, /price ranges per implant/i);
 assert.doesNotMatch(VELD['plastic-korea|view|prijs'].nl, /prijsklassen per implantaat/i);
 assert.doesNotMatch(VELD['plastic-korea|view|prijs'].de, /Preisspannen je Implantat/i);
@@ -57,7 +58,10 @@ for (const language of LANGS) {
   const summary = provider.rankSummary(B, korea, language);
   assert.match(summary, language === 'nl' ? /maatregel van een toezichthouder/ : language === 'de' ? /Aufsichtsmaßnahme/ : /regulator action/);
 }
-ok('Korea-prijs noemt omvang en open posten; FTC-maatregel heet geen ernstig incident of lopende klacht');
+assert.match(linkLayer.rankSeoTitle(korea, 'nl'), /25 aanbieders vergeleken/);
+assert.match(linkLayer.rankSeoTitle(korea, 'en'), /25 providers compared/);
+assert.match(linkLayer.rankSeoTitle(korea, 'de'), /25 Anbieter im Vergleich/);
+ok('Korea-prijs noemt inclusies en open posten; FTC-maatregel heet geen medisch incident; artsen tellen niet als klinieken');
 
 for (const e of entries) for (const language of LANGS) {
   const pg = provider.providerPage(B, e, language), slug = e.slugs[language], html = render.extraPagina(B, slug, language, pg, {});
