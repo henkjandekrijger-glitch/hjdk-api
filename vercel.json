@@ -261,6 +261,10 @@
       "schedule": "40 * * * *"
     },
     {
+      "path": "/api/keuze-tools?tool=rijschool&op=ronde",
+      "schedule": "22,52 * * * *"
+    },
+    {
       "path": "/api/keuze-tools?tool=huis&op=scan",
       "schedule": "7,37 * * * *"
     },
@@ -916,6 +920,46 @@
         }
       ],
       "destination": "/api/keuze-tools?tool=hyp&pg=rente"
+    },
+    {
+      "source": "/rijschool/sitemap.xml",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=rijschool&op=sitemap"
+    },
+    {
+      "source": "/rijschool/:m/:z",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=rijschool&m=:m&z=:z"
+    },
+    {
+      "source": "/rijschool/:m",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=rijschool&m=:m"
+    },
+    {
+      "source": "/rijschool",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=rijschool&m=hub"
     },
     {
       "source": "/huis-kopen/sitemap.xml",

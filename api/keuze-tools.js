@@ -149,6 +149,30 @@ export default async function handler(req, res) {
     const html=q.has('m')?(z?await HK.zaakPagina(m,z):m&&m!=='hub'?await HK.plaatsPagina(m):await HK.hub()):await HK.huisKopen();
     res.setHeader('content-type','text/html; charset=utf-8');if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/makelaar">Makelaars per plaats</a> · <a href="/huis-kopen">Huis kopen</a></p>');}
     res.setHeader('cache-control','public, s-maxage=300, stale-while-revalidate=3600');return res.status(200).send(html);}
+  if(q.get('tool')==='rijschool'){ // rijscholen per plaats, aanvragen als tweede verdienmodel naast MyLevel (lib/rijschool.js, 19 nov 2026)
+    const RS=await import('../lib/rijschool.js');const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
+    const nb=()=>{res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');};
+    if(/^(ronde|ververs|scan|cbr|cbrkop|leads|ping|scaninfo)$/.test(op)){nb();if(!beschermd)return res.status(403).json({ok:false});
+      if(op==='ronde')return res.status(200).json(await RS.ronde());
+      if(op==='ververs'){const r=q.get('m')?await RS.ververs(q.get('m'),{bron:q.get('bron')||''}):await RS.verversOudste();const m=await RS.meldNieuw().catch(e=>({fout:String(e.message||e).slice(0,80)}));return res.status(200).json({...r,indexnow:m});}
+      if(op==='scan')return res.status(200).json(await RS.scanRonde(Math.min(60,Number(q.get('n'))||30)));
+      if(op==='cbr')return res.status(200).json(await RS.cbrLaad());
+      if(op==='cbrkop')return res.status(200).json(await RS.cbrKop());
+      if(op==='leads')return res.status(200).json(await RS.leads(Math.min(500,Number(q.get('n'))||50)));
+      if(op==='ping')return res.status(200).json(await RS.ping());}
+    if(op==='stand'){nb();return res.status(200).json(await RS.stand());}
+    if(op==='pc'){res.setHeader('cache-control','public, s-maxage=86400');res.setHeader('x-robots-tag','noindex');return res.status(200).json(await RS.postcode(q.get('pc')));}
+    if(op==='tik'||op==='lead'){nb();const tget=beschermd&&q.get('test')==='1'&&req.method==='GET'&&op==='lead';
+      if(req.method!=='POST'&&!tget)return res.status(405).json({ok:false});let b=tget?Object.fromEntries(q):req.body;try{if(typeof b==='string')b=JSON.parse(b.slice(0,3000));}catch{b={};}b=b||{};
+      if(op==='tik')return res.status(200).json(await RS.tik(b));
+      const o=await RS.leadPost(req,b,{test:beschermd&&q.get('test')==='1'});
+      if(!/json/.test(String(req.headers['content-type']||''))){res.setHeader('content-type','text/html; charset=utf-8');const pl=String(b.pl||'');return res.status(200).send('<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content=noindex><title>Aanvraag</title><div style="font:18px/1.6 Inter,Arial,sans-serif;max-width:560px;margin:48px auto;padding:0 20px;color:#111113"><p>'+String(o.tekst||'').replace(/[<>&]/g,'')+'</p><p><a href="/rijschool'+(RS.isPlaats(pl)?'/'+pl:'')+'" style="color:#111113">Terug</a></p></div>');}
+      return res.status(200).json(o);}
+    if(op==='sitemap'){const x=await RS.sitemap();res.setHeader('content-type','application/xml; charset=utf-8');res.setHeader('cache-control','public, s-maxage=3600');return res.status(200).send(x.xml);}
+    const m=String(q.get('m')||'').toLowerCase(),z=String(q.get('z')||'').toLowerCase();
+    const html=m==='voor-rijscholen'?await RS.voorRijscholen(String(q.get('plaats')||''),String(q.get('rs')||'').replace(/[^a-z0-9-]/g,'')):m&&m!=='hub'?(z?await RS.zaakPagina(m,z):await RS.plaatsPagina(m)):await RS.hub();
+    res.setHeader('content-type','text/html; charset=utf-8');if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/rijschool">Rijscholen per plaats</a></p>');}
+    res.setHeader('cache-control','public, s-maxage=300, stale-while-revalidate=3600');return res.status(200).send(html);}
   if(q.get('tool')==='intentie'){ // intentielog van de vraagbalk en het zoekvak (lib/intentie.js, 15 nov 2026); stand openbaar zonder de vragen, met vragen op de beschermde host
     const I=await import('../lib/intentie.js');res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
     const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
