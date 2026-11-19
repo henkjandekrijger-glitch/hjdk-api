@@ -14,7 +14,7 @@ export default async function handler(req, res) {
   if (/^kadoly-video(-henq)?\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
   const url = new URL(req.url, 'https://x');
   const id = String(url.searchParams.get('id') || '').toLowerCase().replace(/[^a-z0-9_]/g, '').slice(0, 40);
-  const pids = String(url.searchParams.get('p') || '').split(',').map(x => x.trim()).filter(x => /^oc_\d{6,30}$/.test(x)).slice(0, 4);
+  const pids = String(url.searchParams.get('p') || '').split(',').map(x => x.trim()).filter(x => /^(oc_\d{6,30}|dp_\d{3,10})$/.test(x)).slice(0, 4);
   const regels = String(url.searchParams.get('r') || '').split('|').map(x => x.trim()).filter(Boolean).slice(0, 4);
   if (!id || !pids.length || !regels.length) return res.status(400).json({ ok: false, fout: 'id, p (pids) en r (regels met |) zijn nodig' });
   while (regels.length < pids.length) regels.push(regels[regels.length - 1]);
