@@ -8,6 +8,8 @@ import { kzuxBlok, zoekLogJs } from '../lib/kzux.js';
 // Routes (vercel.json, op host): / , /<slug>, /sitemap.xml, /robots.txt, /llms.txt, /llms-full.txt, /<indexnow-sleutel>.txt, /about, /privacy
 // API: /api/wtb?op=advice&slug=..&a=0-1-2 (producten voor de antwoorden), /api/wtb?op=status (openbaar overzicht)
 import { kv } from '../lib/db.js';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { organicStatus } from '../lib/organic.js';
 import { contentDate } from '../lib/organic-policy.js';
 import { WTB_CLUSTER } from '../lib/wtb-hand.js';
@@ -212,6 +214,14 @@ export default async function handler(req, res) {
   const m = marketFor(req); if (!m) return res.status(404).send('unknown site');
   const path = '/' + String(q.get('slug') || '');
   if (GSC_FILES.includes(path.slice(1))) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send('google-site-verification: ' + path.slice(1)); } // eigendomsbewijs Search Console
+  if (op === 'kdpoverdracht') { // overdracht KDP-boeken voor een ander account of andere chat (Henkjan 19 nov 2026: "Zet handover op vercel zodat ander account kan overnemen .")
+    const host = String(req.headers['x-forwarded-host'] || req.headers.host || ''); if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+    const lees = (f) => { for (const x of [join(process.cwd(), f), new URL('../' + f, import.meta.url).pathname]) { try { return readFileSync(x, 'utf8'); } catch (e) {} } return '(' + f + ' niet gevonden)'; };
+    let log = []; try { log = ((await kv.raw(['LRANGE', 'mm:handover:log', 0, 299])) || []).map(x => { try { return JSON.parse(x); } catch (e) { return null; } }).filter(x => x && /^kdp/i.test(String(x.wie || ''))).slice(0, 20); } catch (e) {}
+    const kop = '# KDP-overdracht, live ' + new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC\n\n## Werklog KDP (nieuwste boven, uit /api/mm/handover)\n\n' + (log.length ? log.map(x => '- ' + String(x.t).slice(0, 16).replace('T', ' ') + ' ' + x.wie + ': ' + x.tekst).join('\n') : '- (nog geen regels)') + '\n\n---\n\n';
+    const md = kop + lees('OVERDRACHT-KDP.md') + '\n\n---\n\n' + lees('kdp/rapport.md') + '\n\n---\n\n' + lees('kdp/wachtrij.md') + '\n\n---\n\n' + lees('kdp/boekwedstrijd.md');
+    res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex'); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return res.status(200).send(md);
+  }
   if (op === 'boekstand') { // organisch resultaat van de keuzehulpen voor de KDP-rondes (Henkjan 15 nov 2026: "Geef hier ook altijd organische resultaten van de keuzehulpen")
     const dag = (n) => new Date(Date.now() - n * 864e5).toISOString().slice(0, 10); const d7 = [0, 1, 2, 3, 4, 5, 6].map(dag); const d28 = Array.from({ length: 28 }, (_, i) => dag(i));
     const site = async (id, orgKey) => { let mt = null; for (const d of [dag(0), dag(1)]) { mt = await kv.get('zicht:meting:' + id + ':' + d).catch(() => null); if (mt) break; }

@@ -2018,7 +2018,8 @@
       "maxDuration": 300
     },
     "api/wtb.js": {
-      "maxDuration": 30
+      "maxDuration": 30,
+      "includeFiles": "{OVERDRACHT-KDP.md,kdp/rapport.md,kdp/wachtrij.md,kdp/boekwedstrijd.md}"
     },
     "api/shop.js": {
       "maxDuration": 300,
