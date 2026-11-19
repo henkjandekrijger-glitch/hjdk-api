@@ -20,7 +20,7 @@ import { GROWTH_SCRIPT } from '../lib/sealed.js';
 import { sitemap, ROBOTS, llms, zichtJson, LOGO_SVG, INDEXNOW_KEY, BASE, HOST, url } from '../lib/sealed.js';
 
 const anonymous = anonymousService(kv);
-const INDEX_VERSION = BIJGEWERKT + '-chat-v3'; // 17 nov 2026: 18 pagina's in de nieuwe opmaak, IndexNow pingt ze één keer opnieuw
+const INDEX_VERSION = BIJGEWERKT + '-chat-v4'; // 17 nov 2026: 18 pagina's in de nieuwe opmaak, IndexNow pingt ze één keer opnieuw
 const GSC_META = process.env.SEALED_GSC_META || '';
 
 // Voordeur kiest de taal van de bezoeker (Henkjan 15 nov 2026: "Moet totaal taal agnostisch zijn based on browser"):
@@ -143,7 +143,7 @@ export default async function handler(req, res) {
   }
   // Sealed Intent per mail (lib/sealed-mail.js): bevestigen, verlengen en keuren via een link uit een mail, inkomende mail van Resend,
   // de dagelijkse ronde "klopt dit nog?" en het instellen (alleen op de beschermde host *.vercel.app, achter de Vercel-inlog).
-  if (['bevestig', 'verleng', 'keur', 'mailin', 'mailronde', 'mailzet', 'mailstand', 'mailproef', 'mailaan'].includes(op)) {
+  if (['bevestig', 'verleng', 'keur', 'mailin', 'mailronde', 'mailzet', 'mailstand', 'mailproef', 'mailaan', 'maildomeinweg'].includes(op)) {
     res.setHeader('X-Robots-Tag', 'noindex, nofollow');
     const beschermd = /\.vercel\.app$/i.test(String(req.headers.host || '')), e = x => String(x == null ? '' : x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     const pag = (taal, titel, html, status = 200) => stuur(res, status, 'text/html; charset=utf-8', kleinePagina(taal, titel, '<section><h1>' + e(titel) + '</h1>' + html + '</section>'), 'private, no-store', taal, 'noindex, nofollow');
@@ -164,13 +164,14 @@ export default async function handler(req, res) {
         const t = q.get('t') || '', n = q.get('n') || '', s = q.get('s') || '', k = await MAIL.keurBeeld(kv, t, n, s);
         if (!k) return pag('nl', P.nl.fout[0], '<p>' + e(P.nl.fout[1]) + '</p>', 404);
         const kaart = (kop, x) => '<div class="kaart" style="margin:0 0 16px"><div class="kt"><b>' + e(kop) + '</b></div>' + x.split('\n').map(r => '<div class="kr"><span>' + e(r) + '</span></div>').join('') + '</div>';
-        return pag('nl', k.wie, '<p style="white-space:pre-wrap">' + e(k.tekst) + '</p>' + (k.afwijkend ? '<p><b>Let op: verstuurd vanaf een ander adres dan bij ons bekend.</b></p>' : '') + '<p id="uit">' + (k.wacht ? 'Doorlaten of tegenhouden?' : k.weg ? 'Al tegengehouden.' : 'Al doorgelaten.') + '</p>' + (k.wacht ? '<p><button class="btn" data-k="1">Laat door</button><button class="btn" data-k="0" style="background:#fff;color:#111113">Houd tegen</button></p>' : '') + kaart('Eigenaar', k.eigenaar) + kaart('Koper', k.koper) + knopJs({ t, n, s }, "j.door?(j.verstuurd?'Doorgelaten en verstuurd.':'Doorgelaten, maar de mail ging niet weg (staat de mail aan?).'):'Tegengehouden.'"));
+        return pag('nl', k.wie, '<p class="eb">Dit gaat door (schoon)</p><p style="white-space:pre-wrap">' + e(k.tekst) + '</p>' + (k.tip ? '<p>Tip voor de ontvanger: ' + e(k.tip) + '</p>' : '') + (k.tipAfzender ? '<p>Tip voor de afzender: ' + e(k.tipAfzender) + '</p>' : '') + (k.origineel ? '<p class="eb">Zo kwam het binnen</p><p style="white-space:pre-wrap">' + e(k.origineel) + '</p>' : '') + (k.risico ? '<p><b>Let op: de AI kreeg dit niet schoon. Lees het na op herkenbare details.</b></p>' : '') + (k.afwijkend ? '<p><b>Let op: verstuurd vanaf een ander adres dan bij ons bekend.</b></p>' : '') + '<p id="uit">' + (k.wacht ? 'Doorlaten of tegenhouden?' : k.weg ? 'Al tegengehouden.' : 'Al doorgelaten.') + '</p>' + (k.wacht ? '<p><button class="btn" data-k="1">Laat door</button><button class="btn" data-k="0" style="background:#fff;color:#111113">Houd tegen</button></p>' : '') + kaart('Eigenaar', k.eigenaar) + kaart('Koper', k.koper) + knopJs({ t, n, s }, "j.door?(j.verstuurd?'Doorgelaten en verstuurd.':'Doorgelaten, maar de mail ging niet weg (staat de mail aan?).'):'Tegengehouden.'"));
       }
       if (op === 'mailin') { if (req.method !== 'POST') return stuur(res, 405, 'application/json', '{"ok":false}', 'no-store'); const b = await leesBody(req); const r = await MAIL.mailIn(kv, b, { meld, ai: o => berichten({ ...o, model: HAIKU }) }); return stuur(res, 200, 'application/json', JSON.stringify({ ok: r.ok, waarom: r.waarom }), 'no-store'); }
       if (op === 'mailronde') return stuur(res, 200, 'application/json', JSON.stringify(await MAIL.ronde(kv)), 'no-store');
       if (!beschermd) return stuur(res, 404, 'application/json', '{}', 'no-store');
       if (op === 'mailzet') return stuur(res, 200, 'application/json', JSON.stringify({ domein: await MAIL.domein(kv, q.get('maak') === '1'), haak: q.get('maak') === '1' ? await MAIL.haak(kv, BASE + '/?op=mailin') : undefined }, null, 1), 'no-store');
-      if (op === 'mailaan') { if (q.get('zet') === '1' || q.get('zet') === '0') await kv.set('si:mail:aan', q.get('zet') === '1' ? 1 : 0); return stuur(res, 200, 'application/json', JSON.stringify(await MAIL.mailStand(kv), null, 1), 'no-store'); }
+      if (op === 'mailaan') { if (q.get('zet') === '1' || q.get('zet') === '0') await kv.set('si:mail:aan', q.get('zet') === '1' ? 1 : 0); if (q.get('keur') === '1' || q.get('keur') === '0') await kv.set('si:mail:keur', q.get('keur') === '1' ? 1 : 0); return stuur(res, 200, 'application/json', JSON.stringify(await MAIL.mailStand(kv), null, 1), 'no-store'); }
+      if (op === 'maildomeinweg') return stuur(res, 200, 'application/json', JSON.stringify(await MAIL.domeinWeg(kv, q.get('naam') || ''), null, 1), 'no-store');
       if (op === 'mailstand') return stuur(res, 200, 'application/json', JSON.stringify(await MAIL.mailStand(kv), null, 1), 'no-store');
       if (op === 'mailproef') { const v = MAIL.voorbeelden(q.get('taal') || 'nl'); return stuur(res, 200, 'text/plain; charset=utf-8', Object.entries(v).map(([k, [o, x]]) => '== ' + k + ' ==\nOnderwerp: ' + o + '\n\n' + x).join('\n\n\n') + '\n', 'no-store'); }
     } catch (err) { return stuur(res, 503, 'application/json', JSON.stringify({ ok: false, error: 'unavailable' }), 'no-store'); }
