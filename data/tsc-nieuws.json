@@ -2,6 +2,104 @@
   "uitleg": "Ontwikkelingen per route voor de ochtendmail van todayin surgery (lib/tsc-mail.js). Elke dag zet de geplande Claude-taak hier nieuwe items bij: alleen echte feiten met bron en datum, nieuwste bovenaan. taal: en|nl|de|*; ingreep: hair|tummy|eyelid|lipo|breast|breast-reduction|*; naar: turkey|mexico|colombia|dominican-republic|thailand|south-korea|abroad|home|*; pagina: slug op todayin.email/surgery.",
   "items": [
     {
+      "id": "2026-11-19-en-dr-closure",
+      "dag": "2026-11-18",
+      "taal": "en",
+      "ingreep": [
+        "lipo",
+        "bbl",
+        "tummy"
+      ],
+      "naar": [
+        "dominican-republic"
+      ],
+      "kop": "Dominican Republic: health ministry closes operating rooms of a Santo Domingo clinic after a liposuction death",
+      "tekst": "The Dominican health ministry ordered a preventive closure of the operating rooms of Centro Médico Dr. Escaño in Gazcue after a 21-year-old woman died following liposuction. Inspectors found surgical staff who were not on the approved roster and building changes made without permission. Local news counts at least seven women who died during or after cosmetic procedures in the Dominican Republic in 2026. Check that your surgeon is SODOCIPRE certified and ask who else will be in the operating room.",
+      "bron": "drEscano",
+      "pagina": "check-surgeon-dominican-republic",
+      "home_countries": [
+        "*"
+      ]
+    },
+    {
+      "id": "2026-11-19-nl-dr-closure",
+      "dag": "2026-11-18",
+      "taal": "nl",
+      "ingreep": [
+        "lipo",
+        "bbl",
+        "tummy"
+      ],
+      "naar": [
+        "dominican-republic"
+      ],
+      "kop": "Dominicaanse Republiek: operatiekamers van kliniek in Santo Domingo dicht na overlijden bij liposuctie",
+      "tekst": "Het Dominicaanse ministerie van Volksgezondheid sloot de operatiekamers van Centro Médico Dr. Escaño in Gazcue, nadat een vrouw van 21 overleed na een liposuctie. Inspecteurs troffen leden van het operatieteam aan die niet op de goedgekeurde personeelslijst stonden, en verbouwingen zonder vergunning. Volgens lokale media overleden dit jaar minstens zeven vrouwen tijdens of na een cosmetische ingreep in de Dominicaanse Republiek. Controleer of je chirurg door SODOCIPRE is gecertificeerd en vraag wie er nog meer in de operatiekamer staat.",
+      "bron": "drEscano",
+      "pagina": "nl/beste-bbl-buikwandcorrectie-chirurgen-dominicaanse-republiek",
+      "home_countries": [
+        "NL"
+      ]
+    },
+    {
+      "id": "2026-11-19-de-dr-closure",
+      "dag": "2026-11-18",
+      "taal": "de",
+      "ingreep": [
+        "lipo",
+        "bbl",
+        "tummy"
+      ],
+      "naar": [
+        "dominican-republic"
+      ],
+      "kop": "Dominikanische Republik: OP-Säle einer Klinik in Santo Domingo nach Todesfall bei Fettabsaugung geschlossen",
+      "tekst": "Das dominikanische Gesundheitsministerium ließ die OP-Säle des Centro Médico Dr. Escaño in Gazcue vorsorglich schließen, nachdem eine 21-jährige Frau nach einer Fettabsaugung gestorben war. Die Prüfer fanden OP-Personal, das nicht auf der genehmigten Personalliste stand, und Umbauten ohne Genehmigung. Laut örtlichen Medien starben 2026 mindestens sieben Frauen während oder nach einem Schönheitseingriff in der Dominikanischen Republik. Prüfen Sie, ob Ihr Chirurg von SODOCIPRE zertifiziert ist, und fragen Sie, wer sonst im OP-Saal steht.",
+      "bron": "drEscano",
+      "pagina": "de/beste-bbl-bauchdeckenstraffung-chirurgen-dominikanische-republik",
+      "home_countries": [
+        "DE",
+        "AT",
+        "CH"
+      ]
+    },
+    {
+      "id": "2026-11-19-en-uk-bbl-inquest",
+      "dag": "2026-11-18",
+      "taal": "en",
+      "ingreep": [
+        "bbl"
+      ],
+      "naar": [
+        "home"
+      ],
+      "kop": "UK inquest: mother of five died after a filler 'BBL' given at a house in Gloucester",
+      "tekst": "An inquest heard that Alice Webb, 33, died after a non-surgical Brazilian butt lift with filler at a property in Gloucester in September 2024. She was given 1,400 ml, about seven times the recommended amount, the inquest heard. The pathologist gave the cause of death as hyaluronic acid entering the blood after injection into the buttocks. The inquest continues. A filler BBL is not a minor treatment: ask who injects, what product, and where you are if something goes wrong.",
+      "bron": "itvBbl",
+      "pagina": "brazilian-butt-lift-cost-risks",
+      "home_countries": [
+        "UK"
+      ]
+    },
+    {
+      "id": "2026-11-19-en-korea-volume",
+      "dag": "2026-11-19",
+      "taal": "en",
+      "ingreep": [
+        "*"
+      ],
+      "naar": [
+        "south-korea"
+      ],
+      "kop": "South Korea: 2 million foreign patients last year, hotels turn rooms into clinics",
+      "tekst": "Korea treated 2,011,822 foreign patients last year, up from 1,170,467 in 2024. Most came for dermatology (62.9%); plastic surgery accounted for 233,100 patients (11.2%). Seoul named 19 'medical-friendly' hotels, and some hotels are turning guest floors into clinic space. A clinic inside a hotel is still a clinic: check the doctor's board certificate and KSPRS membership.",
+      "bron": "sedKorea",
+      "pagina": "check-surgeon-south-korea",
+      "home_countries": [
+        "*"
+      ]
+    },
+    {
       "id": "2026-11-18-en-asps-trends-2027",
       "dag": "2026-11-17",
       "taal": "en",
