@@ -1,0 +1,148 @@
+{
+  "gecontroleerd": "2026-11-19",
+  "opmerking": "Checked the English pages of each clinic's own site through a fetch tool that obeys robots.txt. No clinic's site says that the named surgeon personally does the key steps. Yanhee, Bangkok Hospital, Phyathai and PPSI publish prices in THB. Only PPSI publishes a written revision policy. News was searched in English and Thai. Not one named clinic in this list turned up a death, a regulator ruling or a licence problem in a trusted source; the only named case is an old Bumrungrad court ruling that has nothing to do with cosmetic surgery. Recent deaths and raids involve clinics that the reports do not name, so they are listed under algemeen. Phuket International Hospital's site now shows itself as Bangkok Hospital Siriroj, and PPSI runs inside that hospital.",
+  "niet_bereikbaar": [
+    "Dr. Suporn Clinic: no official English site turned up in search, and a direct fetch of supornclinic.com was blocked because permission was not given",
+    "Mtf Aesthetic Surgery Center: no official site could be identified (search shows only directories and blogs)",
+    "yanhee.net home page and masterpiecehospital.com home page could not be fetched directly (permission not given); price and doctor pages found through search were read",
+    "kamolhospital.com (no www: /site/index, /doctors/, cost article): site gave a client error; pages on www.kamolhospital.com were read",
+    "bahrain.bumrungrad.com/en/packages/plastic-surgery-packages: robots.txt disallows it",
+    "phuketinternationalhospital.com /en/package/ and /en/sub_specialty/plastic-surgery/: robots.txt disallows them",
+    "lelux.co.th/en/packagespromotions/promotion-nose-rhinoplasty/: site gave a client error",
+    "Bangkok Hospital Phuket: no plastic surgery price or surgeon page on bangkokhospital.com/en/phuket turned up in search"
+  ],
+  "algemeen": [
+    {"wat": "CIB and the Thai FDA raided a clinic in Khlong Toei, Bangkok, that made injectable cosmetic drugs in an unlicensed, unsterile lab; officers seized 3,367 items worth more than THB 10 million, including 776 bottles of unregistered drugs. The clinic was not named.", "datum": "2026-11-17", "bron": "https://www.nationthailand.com/news/general/40073599"},
+    {"wat": "Thai authorities opened an investigation after a 43-year-old British man died following a penis enlargement procedure at a Bangkok clinic. The reports do not name the clinic.", "datum": "2026-09-09", "bron": "https://www.ctvnews.ca/health/article/thailand-investigates-after-briton-dies-from-penis-enlargement/"},
+    {"wat": "The CIB and Samut Sakhon public health office arrested five people for practising medicine or dentistry without a licence at five sites, one of them an unnamed beauty clinic in Samut Prakan that gave IV drips with no doctor present.", "datum": "2026-08-20", "bron": "https://www.khaosodenglish.com/news/2026/08/20/police-raids-five-illegal-medical-sites-seizes-1058-items/"},
+    {"wat": "Consumer Protection Police and the Department of Health Service Support arrested two unlicensed women who gave Botox and filler in homes they had made into clinics in Bangkok and Samut Prakan; both were charged under the Hospital Act 1998.", "datum": "2026-07-06", "bron": "https://www.khaosodenglish.com/news/2026/07/06/two-fake-beauty-doctors-arrested-in-bangkok-raids/"},
+    {"wat": "The DHSS announced AI-based screening of health advertising, alongside a proposal to extend the medical visa.", "datum": "2026-06-11", "bron": "https://www.nationthailand.com/health-wellness/40067356"},
+    {"wat": "The DHSS inspected an unnamed clinic in Pathum Wan after a 38-year-old man collapsed following nose and chin surgery; it found the clinic registered and passed the findings on for possible legal action.", "datum": "2026-03-09", "bron": "https://www.nationthailand.com/thailand/bangkok/40063528"},
+    {"wat": "The DHSS screens online plastic surgery ads by beauty agencies and influencers for false or exaggerated claims.", "datum": "", "bron": "https://www.bangkokpost.com/thailand/general/2903542/dhss-screens-plastic-surgery-ads"},
+    {"wat": "After a 21-year-old died following breast augmentation at an unnamed clinic, the DHSS found that the clinic lacked life-saving equipment, had altered an operating room without permission and ran unapproved ads.", "datum": "", "bron": "https://www.bangkokpost.com/thailand/general/2024731/surgery-clinic-whose-client-died-lacks-lifesaving-gear"}
+  ],
+  "klinieken": [
+    {
+      "naam": "Yanhee International Hospital", "stad": "Bangkok", "site": "https://www.yanhee.net",
+      "prijs": {"bedrag": "Nose reshaping THB 105,000 (2 nights); tip-plasty with graft THB 45,500; mid-facelift THB 165,000", "bron": "https://yanhee.net/price/plastic-surgery/nose-reshaping"},
+      "wie_opereert": {"tekst": "Each procedure page names surgeons (for example Dr. Thawatchai Boonpadhanapong for rhinoplasty) but says \"Your surgeon is confirmed at consultation.\"", "arts_opereert": "", "bron": "https://www.yanhee.net/cosmetic-services/facelift/"},
+      "nazorg": {"tekst": "No guarantee or revision policy; revision is listed only as a risk.", "garantie": false, "bron": "https://www.yanhee.net/pricing-packages/"},
+      "risico": [],
+      "toelichting": "Fixed prices per procedure, marked as subject to change after consultation. No named case found in trusted sources."
+    },
+    {
+      "naam": "Bumrungrad International Hospital", "stad": "Bangkok", "site": "https://www.bumrungrad.com",
+      "prijs": {"bedrag": "", "bron": "https://www.bumrungrad.com/plastic-surgery"},
+      "wie_opereert": {"tekst": "Lists 22 plastic surgeons by name, with profile pages; no statement about who performs a given operation.", "arts_opereert": "", "bron": "https://www.bumrungrad.com/plastic-surgery"},
+      "nazorg": {"tekst": "No guarantee or revision policy found.", "garantie": false, "bron": "https://www.bumrungrad.com/plastic-surgery"},
+      "risico": [
+        {"wat": "Thailand's Supreme Court upheld a ruling that Bumrungrad and two doctors must jointly pay THB 1 million plus interest for negligence in failing to detect a child's birth defects (obstetric case, not cosmetic surgery).", "datum": "2018-03-13", "bron": "https://www.nationthailand.com/news/30340932", "ernst": "middel"}
+      ],
+      "toelichting": "Plastic surgery page shows no prices; the regional package page is blocked by robots.txt. The only risk found is an old non-cosmetic court case."
+    },
+    {
+      "naam": "Bangkok Hospital", "stad": "Bangkok en Phuket", "site": "https://www.bangkokhospital.com",
+      "prijs": {"bedrag": "Upper or lower blepharoplasty (local anaesthesia) THB 60,000; rhinoplasty (local anaesthesia) THB 46,000; reduction rhinoplasty THB 207,000 (Bangkok branch)", "bron": "https://www.bangkokhospital.com/en/bangkok/package/plastic-surgery-packages"},
+      "wie_opereert": {"tekst": "Package and centre pages name no surgeon; \"Surgery for each patient depends on surgeon's consideration.\"", "arts_opereert": "", "bron": "https://www.bangkokhospital.com/en/bangkok/package/plastic-surgery"},
+      "nazorg": {"tekst": "No guarantee or revision policy found.", "garantie": false, "bron": "https://www.bangkokhospital.com/en/bangkok/center-clinic/surgery/bangkok-plastic-surgery-and-reconstruction-center/overview"},
+      "risico": [],
+      "toelichting": "Prices are for the Bangkok branch. The Phuket branch's endoscopic breast augmentation page gives no price and no surgeon."
+    },
+    {
+      "naam": "Samitivej", "stad": "Bangkok", "site": "https://www.samitivejhospitals.com",
+      "prijs": {"bedrag": "", "bron": "https://www.samitivejhospitals.com/package/detail/Plastic-Surgery-Package-snh"},
+      "wie_opereert": {"tekst": "The institute page names Dr. Pichit Siriwan only in patient stories; separate doctor profile pages exist (for example Veerawat Tirananmongkol, Parin Tatsanavivat). No statement about who operates.", "arts_opereert": "", "bron": "https://www.samitivejhospitals.com/center/detail/samitivej-plastic-and-esthetic-surgery-institute"},
+      "nazorg": {"tekst": "No guarantee or revision policy found.", "garantie": false, "bron": "https://www.samitivejhospitals.com/center/detail/samitivej-plastic-and-esthetic-surgery-institute"},
+      "risico": [],
+      "toelichting": "The plastic surgery package page shows an empty list."
+    },
+    {
+      "naam": "BNH Hospital", "stad": "Bangkok", "site": "https://www.bnhhospital.com",
+      "prijs": {"bedrag": "", "bron": "https://www.bnhhospital.com/doctors/prof-nond-rojvachiranonda-m-d/"},
+      "wie_opereert": {"tekst": "A doctor profile names Prof. Nond Rojvachiranonda as a plastic surgeon; no statement about who operates.", "arts_opereert": "", "bron": "https://www.bnhhospital.com/doctors/prof-nond-rojvachiranonda-m-d/"},
+      "nazorg": {"tekst": "No guarantee or revision policy found.", "garantie": false, "bron": "https://www.bnhhospital.com/doctors/prof-nond-rojvachiranonda-m-d/"},
+      "risico": [],
+      "toelichting": "Packages on the site cover check-ups, fertility and the like; no plastic surgery prices found."
+    },
+    {
+      "naam": "Phyathai Hospital", "stad": "Bangkok", "site": "https://www.phyathai.com",
+      "prijs": {"bedrag": "Sex reassignment surgery male to female (colon) THB 500,000, incl. doctor fee and 5 nights (Phyathai 2)", "bron": "https://www.phyathai.com/en/pyt2/package/sex-reassignment-surgery-pt2"},
+      "wie_opereert": {"tekst": "The package names no surgeon; it says \"consult with our experienced specialists\".", "arts_opereert": "", "bron": "https://www.phyathai.com/en/pyt2/package/sex-reassignment-surgery-pt2"},
+      "nazorg": {"tekst": "No guarantee or revision policy.", "garantie": false, "bron": "https://www.phyathai.com/en/pyt2/package/sex-reassignment-surgery-pt2"},
+      "risico": [],
+      "toelichting": "No cosmetic surgery package price found besides this one."
+    },
+    {
+      "naam": "Kamol Cosmetic Hospital", "stad": "Bangkok", "site": "https://www.kamolhospital.com",
+      "prijs": {"bedrag": "", "bron": "https://www.kamolhospital.com/service/28/top-surgery-mastectomy"},
+      "wie_opereert": {"tekst": "Pages refer to \"a team of experienced surgeons\" and \"its elite plastic surgeons\" without names.", "arts_opereert": "", "bron": "https://www.kamolhospital.com/page/world-class-elite-plastic-surgeons"},
+      "nazorg": {"tekst": "No guarantee or revision policy found.", "garantie": false, "bron": "https://www.kamolhospital.com/service/28/top-surgery-mastectomy"},
+      "risico": [],
+      "toelichting": "The site mentions only \"competitive pricing\". The doctors page and the cost article gave errors."
+    },
+    {
+      "naam": "Preecha Aesthetic Institute (PAI)", "stad": "Bangkok", "site": "https://pai.co.th",
+      "prijs": {"bedrag": "", "bron": "https://pai.co.th/srs-penile-skin-inversion/"},
+      "wie_opereert": {"tekst": "Names three surgeons: Assoc. Prof. Preecha Tiewtranon, Burin Wangjiraniran, Sutin Khobunsongserm; does not say who performs a given operation.", "arts_opereert": "", "bron": "https://pai.co.th/srs-penile-skin-inversion/"},
+      "nazorg": {"tekst": "No guarantee; the FAQ touches on revision only in general terms.", "garantie": false, "bron": "https://pai.co.th/srs-penile-skin-inversion/"},
+      "risico": [],
+      "toelichting": "The site states \"we can't provide surgery fees on line website\"."
+    },
+    {
+      "naam": "Lelux Hospital", "stad": "Bangkok", "site": "https://www.lelux.co.th/en/",
+      "prijs": {"bedrag": "", "bron": "https://lelux.co.th/en/breast-surgery"},
+      "wie_opereert": {"tekst": "Navigation lists six doctors (including Dr. Kittisak Wichachai); none is tied to a procedure, and there is no statement about who operates.", "arts_opereert": "", "bron": "https://lelux.co.th/en/breast-surgery"},
+      "nazorg": {"tekst": "No hospital guarantee; the only mention is that several implant brands carry lifetime warranties.", "garantie": false, "bron": "https://lelux.co.th/en/breast-surgery"},
+      "risico": [],
+      "toelichting": "The 'English' pages are largely in Thai. The promotion page could not be read."
+    },
+    {
+      "naam": "Phuket Plastic Surgery Institute (PPSI)", "stad": "Phuket", "site": "https://www.phuketpsi.com",
+      "prijs": {"bedrag": "Rhinoplasty from THB 30,000; upper eyelid surgery THB 25,000 (promotion valid until 31 May 2026)", "bron": "https://www.phuketpsi.com/our-services/rhinoplasty-nose-surgery/"},
+      "wie_opereert": {"tekst": "The rhinoplasty page names Dr. Sanguan Kunaporn and Dr. Pongsatorn Sanguanchua, but the surgeon bios are placeholder text; no statement about who operates.", "arts_opereert": "", "bron": "https://www.phuketpsi.com/our-services/rhinoplasty-nose-surgery/"},
+      "nazorg": {"tekst": "\"Notify PPSI within 12 months of surgery for the client to be eligible for consideration for revision surgery\"; a committee decides between no surgery, reduced-cost or free revision.", "garantie": true, "bron": "https://www.phuketpsi.com/surgical-promise-and-condition/"},
+      "risico": [],
+      "toelichting": "The only clinic with a published written revision policy. PPSI operates within Bangkok Hospital Siriroj. Some pages contain placeholder text."
+    },
+    {
+      "naam": "Phuket International Hospital (Bangkok Hospital Siriroj)", "stad": "Phuket", "site": "https://www.phuketinternationalhospital.com",
+      "prijs": {"bedrag": "", "bron": "https://www.phuketinternationalhospital.com/en/services/phuket-plastic-surgery-institute/"},
+      "wie_opereert": {"tekst": "The plastic surgery page shows a 'Featured doctors' heading with no names.", "arts_opereert": "", "bron": "https://www.phuketinternationalhospital.com/en/services/phuket-plastic-surgery-institute/"},
+      "nazorg": {"tekst": "No guarantee or revision policy on the hospital site.", "garantie": false, "bron": "https://www.phuketinternationalhospital.com/en/services/phuket-plastic-surgery-institute/"},
+      "risico": [],
+      "toelichting": "The domain now presents as Bangkok Hospital Siriroj, and plastic surgery is offered there through PPSI. Packages and doctor list are blocked by robots.txt."
+    },
+    {
+      "naam": "Dr. Suporn Clinic", "stad": "Chonburi", "site": "",
+      "prijs": {"bedrag": "", "bron": ""},
+      "wie_opereert": {"tekst": "", "arts_opereert": "", "bron": ""},
+      "nazorg": {"tekst": "", "garantie": false, "bron": ""},
+      "risico": [],
+      "toelichting": "The official site could not be read (see niet_bereikbaar). No named case found in trusted sources."
+    },
+    {
+      "naam": "Mtf Aesthetic Surgery Center", "stad": "Bangkok", "site": "",
+      "prijs": {"bedrag": "", "bron": ""},
+      "wie_opereert": {"tekst": "", "arts_opereert": "", "bron": ""},
+      "nazorg": {"tekst": "", "garantie": false, "bron": ""},
+      "risico": [],
+      "toelichting": "No official site identified. No named case found in trusted sources."
+    },
+    {
+      "naam": "Masterpiece Hospital", "stad": "Bangkok", "site": "https://www.masterpiecehospital.com/en/",
+      "prijs": {"bedrag": "", "bron": "https://www.masterpiecehospital.com/en/nose-surgery/2839/"},
+      "wie_opereert": {"tekst": "The doctor team page lists names (for example Kosit Ieochai, Chakrit Eaimkijkarn); no statement about who operates.", "arts_opereert": "", "bron": "https://www.masterpiecehospital.com/en/doctor-team/"},
+      "nazorg": {"tekst": "No guarantee or revision policy; the about page claims \"The procedure is 100% safe\".", "garantie": false, "bron": "https://en.masterpiecehospital.com/about-us/"},
+      "risico": [],
+      "toelichting": "The English rhinoplasty cost article gives no figures; a Thai price page exists but was not counted. No named case found in trusted sources."
+    },
+    {
+      "naam": "Wansiri Hospital", "stad": "Bangkok", "site": "https://www.wansirihospital.com/en/",
+      "prijs": {"bedrag": "", "bron": "https://www.wansirihospital.com/en/male-to-female/"},
+      "wie_opereert": {"tekst": "Names Dr. Saran Wannachamras (spelling varies) for sex reassignment, but describes a team: \"every surgical approach performed by surgeon specialists divided into 3 units\".", "arts_opereert": "", "bron": "https://www.wansirihospital.com/en/male-to-female/"},
+      "nazorg": {"tekst": "No guarantee or revision policy found.", "garantie": false, "bron": "https://www.wansirihospital.com/en/faq/"},
+      "risico": [],
+      "toelichting": "No prices; only free consultation is mentioned."
+    }
+  ]
+}

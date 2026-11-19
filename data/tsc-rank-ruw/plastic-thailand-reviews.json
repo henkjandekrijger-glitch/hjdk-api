@@ -1,0 +1,645 @@
+{
+ "gecontroleerd": "2026-11-19",
+ "methode": "Gelezen op 19 nov 2026 via WebFetch en WebSearch (directe verbinding met realself.com en trustpilot.com werd door de proxy geweigerd). RealSelf: lijsten Thailand Plastic Surgeon (36 resultaten, 15 zichtbaar), Bangkok Plastic Surgeon (29, 15 zichtbaar), Kathu/Phuket Plastic Surgeon (5), Phuket Rhinoplasty (4), Thailand Breast Augmentation (28, 15 zichtbaar), Thailand Breast Implants (23, 15 zichtbaar), Bangkok Facial Reconstructive Surgery (4); daarna de /dr/-profielen van de artsen met de meeste reviews voor score, aantal en datum nieuwste review (nieuwste van de 10 getoonde). Paginering (?page=2) gaf dezelfde 15, de overige resultaten per lijst zijn dus niet gezien. Geen enkel RealSelf-profiel toonde een schorsing of waarschuwing; 'neemt geen consulten aan' staat in de opmerking. pct_1ster bij RealSelf op null gezet: de uitleesstap gaf steeds 0% ook bij scores van 3.7 en 4.3, dus niet betrouwbaar. Trustpilot: profielpagina's via landversies (ie, au, nl, ca, se) gelezen met TrustScore, aantal, % 1-ster, nieuwste review en de meldingen van Trustpilot. Tripadvisor: alleen forumtopics gevonden, geen beoordeelde vermelding met score. Google en Facebook: score en aantal niet leesbaar zonder kaart of inlog, niet opgenomen. Makelaars niet meegeteld; Destination Beauty staat erin met makelaar true omdat het een groot Trustpilot-profiel heeft. Scope: praktijk = organization, /dr/ = doctor; niet optellen tussen kliniek en arts.",
+ "niet_bereikbaar": [
+  "realself.com en trustpilot.com via curl: proxy weigert de verbinding (alleen via WebFetch gelezen)",
+  "https://www.realself.com/find/Thailand/Phuket/Plastic-Surgeon (toestemming voor de URL niet op tijd beantwoord)",
+  "RealSelf lijstpagina 2 en verder: niet bereikbaar, ?page=2 toont dezelfde 15",
+  "RealSelf: geen praktijkprofiel gevonden voor Yanhee, Bumrungrad, Bangkok Hospital, Samitivej, BNH, Phyathai, Kamol, PAI, Lelux, PPSI, Phuket International, Suporn, MtF Aesthetic Surgery Center, Masterpiece, Wansiri; Dr. Suporn staat alleen als naam in reviews zonder profiel",
+  "Trustpilot: geen profiel gevonden voor Samitivej, BNH, Phyathai, PAI, Lelux, PPSI, Phuket International, Suporn, MtF, Masterpiece, Wansiri",
+  "Tripadvisor: alleen forumtopics (Bangkok en Phuket), geen score-vermelding voor de kandidaten",
+  "Google Maps en Facebook: score en aantal niet leesbaar zonder kaartweergave of inlog"
+ ],
+ "klinieken": [
+  {
+   "naam": "Yanhee International Hospital (Trustpilot: Yanhee General Hospital, th.yanhee.net)",
+   "stad": "Bangkok",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 2.8,
+     "schaal": "5 sterren",
+     "aantal": 3,
+     "pct_1ster": 67,
+     "laatste_review": "2026-10-21",
+     "waarschuwing": "Profiel niet geclaimd; bedrijf nodigt klanten niet uit, reviews zijn mogelijk niet representatief",
+     "bron": "https://ie.trustpilot.com/review/th.yanhee.net",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "1 review in de laatste 12 maanden. Zeer klein aantal. Op RealSelf geen praktijkprofiel gevonden; op Tripadvisor alleen forumtopics zonder score."
+    }
+   ]
+  },
+  {
+   "naam": "Bumrungrad International Hospital",
+   "stad": "Bangkok",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 2.4,
+     "schaal": "5 sterren",
+     "aantal": 21,
+     "pct_1ster": 48,
+     "laatste_review": "2026-07-27",
+     "waarschuwing": "Geen recente geschiedenis van uitnodigen, reviews mogelijk niet representatief; reageert niet op negatieve reviews",
+     "bron": "https://au.trustpilot.com/review/www.bumrungrad.com",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Profiel geclaimd (aug 2025). Zoekresultaat noemde 17 reviews, de pagina zelf 21. Gaat over het hele ziekenhuis, niet alleen plastische chirurgie."
+    }
+   ]
+  },
+  {
+   "naam": "Bangkok Hospital",
+   "stad": "Bangkok",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 3.0,
+     "schaal": "5 sterren",
+     "aantal": 8,
+     "pct_1ster": 63,
+     "laatste_review": "2026-10-03",
+     "waarschuwing": "Profiel niet geclaimd; bedrijf nodigt klanten niet uit, reviews mogelijk niet representatief",
+     "bron": "https://nl.trustpilot.com/review/www.bangkokhospital.com",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Domein bangkokhospital.com dekt de hele groep (ook Phuket); niet uit te splitsen per vestiging. Hele ziekenhuis, niet alleen plastische chirurgie."
+    }
+   ]
+  },
+  {
+   "naam": "Kamol Cosmetic Hospital",
+   "stad": "Bangkok",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 2.8,
+     "schaal": "5 sterren",
+     "aantal": 3,
+     "pct_1ster": 67,
+     "laatste_review": "2025-06-13",
+     "waarschuwing": "Geen recente uitnodigingen, reviews mogelijk niet representatief; 0 reviews in de laatste 12 maanden",
+     "bron": "https://nl.trustpilot.com/review/www.kamolhospital.com",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Profiel geclaimd (feb 2021). Zie ook Dr. Kamol Pansritum op RealSelf (scope doctor), niet bij elkaar optellen."
+    }
+   ]
+  },
+  {
+   "naam": "Asia Cosmetic Hospital Thailand",
+   "stad": null,
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 2.9,
+     "schaal": "5 sterren",
+     "aantal": 5,
+     "pct_1ster": 60,
+     "laatste_review": "2026-10-05",
+     "waarschuwing": "Geen recente geschiedenis van uitnodigen, reviews mogelijk niet representatief; reageert niet op negatieve reviews",
+     "bron": "https://ca.trustpilot.com/review/www.asiacosmeticthailand.com",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Stad niet vermeld op Trustpilot (contactland United States). Zoekresultaat noemde 3 reviews, de pagina 5."
+    }
+   ]
+  },
+  {
+   "naam": "Destination Beauty",
+   "stad": "Bangkok",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 615,
+     "pct_1ster": 6,
+     "laatste_review": "2026-10-14",
+     "waarschuwing": "Geen waarschuwingsbadge. Bedrijf nodigt klanten zelf uit om reviews te schrijven",
+     "bron": "https://se.trustpilot.com/review/destinationbeauty.com",
+     "gezien": "2026-11-19",
+     "makelaar": true,
+     "scope": "organization",
+     "opmerking": "Bemiddelaar/reisorganisatie voor chirurgie in Bangkok (appartementen, verpleegpost; reviews op RealSelf noemen het als regelaar voor o.a. Dr. Kasemsak). Telt niet als kliniek. Reageerde op 58% van de negatieve reviews."
+    }
+   ]
+  },
+  {
+   "naam": "Bonnie Clinic",
+   "stad": "Bangkok",
+   "arts": "Boonchai Taweerattanasil, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 116,
+     "pct_1ster": null,
+     "laatste_review": "2026-08-11",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/boonchai-taweerattanasil-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Meeste RealSelf-reviews in Thailand. Praktijk Bonnie Clinic volgens het profiel."
+    }
+   ]
+  },
+  {
+   "naam": "Kamol Cosmetic Hospital",
+   "stad": "Bangkok",
+   "arts": "Kamol Pansritum, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 55,
+     "pct_1ster": null,
+     "laatste_review": "2023-09-29",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/kamol-pansritum-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Neemt nu geen consulten via RealSelf aan (geen schorsing). Laatste review afgelezen uit de 10 getoonde."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend (opnamerecht Bumrungrad International; werkt volgens profiel met Dr. Kamol)",
+   "stad": "Bangkok",
+   "arts": "Parin Tatsanavivat, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 50,
+     "pct_1ster": null,
+     "laatste_review": "2026-09-29",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/parin-tatsanavivat-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Lijst toont 50, profiel zelf 49 reviews."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend (Thong Lo; een review noemt Vimut Hospital)",
+   "stad": "Bangkok",
+   "arts": "Siripong Prasertsuntarasai, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 43,
+     "pct_1ster": null,
+     "laatste_review": "2026-10-03",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/siripong-prasertsuntarasai-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Praktijk niet op het profiel."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend (Phuket)",
+   "stad": "Kathu, Phuket",
+   "arts": "Veerawat Tirananmongkol, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 44,
+     "pct_1ster": null,
+     "laatste_review": "2024-11-22",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/veerawat-tirananmongkol-kathu-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Neemt nu geen consulten via RealSelf aan. Praktijk niet op het profiel."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend (Sathorn)",
+   "stad": "Bangkok",
+   "arts": "Angkana Tanvatanagul, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 39,
+     "pct_1ster": null,
+     "laatste_review": "2019-08-08",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/angkana-tanvatanagul-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Neemt nu geen consulten via RealSelf aan. Nieuwste review uit 2019."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend (Sathorn; reviews noemen Destination Beauty als regelaar)",
+   "stad": "Bangkok",
+   "arts": "Kasemsak Pyungtanasup, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 36,
+     "pct_1ster": null,
+     "laatste_review": "2026-10-03",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/kasemsak-pyungtanasup-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Neemt nu geen consulten via RealSelf aan."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend (Phuket)",
+   "stad": "Phuket",
+   "arts": "Piyapas Pichaichanarong, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 3.7,
+     "schaal": "5 sterren",
+     "aantal": 29,
+     "pct_1ster": null,
+     "laatste_review": "2026-06-23",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/piyapas-pichaichanarong-phuket-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Laagste score van de Thaise artsen met veel reviews. Neemt nu geen consulten via RealSelf aan."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend (Huaykwang)",
+   "stad": "Bangkok",
+   "arts": "Chakarin Suchakaro, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 23,
+     "pct_1ster": null,
+     "laatste_review": "2024-01-31",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/chakarin-suchakaro-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": ""
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend (Bangna)",
+   "stad": "Bangkok",
+   "arts": "Ronachai Komthong, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 23,
+     "pct_1ster": null,
+     "laatste_review": "2019-12-30",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/ronachai-komthong-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "AI-samenvatting op de pagina noemt 26, de teller 23."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend (Sathorn)",
+   "stad": "Bangkok",
+   "arts": "Rungkit Tanjapatkul, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.5,
+     "schaal": "5 sterren",
+     "aantal": 16,
+     "pct_1ster": null,
+     "laatste_review": "2026-09-21",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/rungkit-tanjapatkul-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Lijst toont 16, profiel 15 reviews."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend (Sathorn)",
+   "stad": "Bangkok",
+   "arts": "Dalip Juneja, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 13,
+     "pct_1ster": null,
+     "laatste_review": "2019-04-03",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/dalip-juneja-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "AI-samenvatting noemt 15, de teller 13."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend",
+   "stad": "Nakhon Sawan",
+   "arts": "Rushapol Sdawat, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 12,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/rushapol-sdawat-nakhon-sawan-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Alleen uit de lijst afgelezen."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend",
+   "stad": "Bangkok",
+   "arts": "Kanit Wittayavanichai, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.6,
+     "schaal": "5 sterren",
+     "aantal": 10,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/kanit-wittayavanichai-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Alleen uit de lijst afgelezen."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend",
+   "stad": "Bangkok",
+   "arts": "Prichit Siriwan, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 3.7,
+     "schaal": "5 sterren",
+     "aantal": 8,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/prichit-siriwan-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Alleen uit de lijst (borstvergroting) afgelezen."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend",
+   "stad": "Phuket",
+   "arts": "Visnu Lohsiriwat, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 4,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/visnu-lohsiriwat-phuket-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Alleen uit de lijst afgelezen."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend (Phuket; een reviewlink noemt Phuket Plastic Surgery Institute)",
+   "stad": "Phuket",
+   "arts": "Parinya Yanpisitkul, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 3,
+     "pct_1ster": null,
+     "laatste_review": "2017-05-11",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/parinya-yanpisitkul-phuket-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Klein aantal en oud."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend",
+   "stad": "Bangkok",
+   "arts": "Jatuporn Suesat, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 3,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/jatuporn-suesat-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Alleen uit de lijst afgelezen."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend",
+   "stad": "Bangkok",
+   "arts": "Weerachai Weerapakorn, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 3,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/weerachai-weerapakorn-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Alleen uit de lijst afgelezen."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend",
+   "stad": "Bangkok",
+   "arts": "Phatwira Pattarajierpan, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 2,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/phatwira-pattarajierpan-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Alleen uit de lijst afgelezen."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend (998 Rim Klong Samsen Rd.)",
+   "stad": "Bangkok",
+   "arts": "Thanakom Laisakul, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 2,
+     "pct_1ster": null,
+     "laatste_review": "2016-01-28",
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/thanakom-laisakul-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "Lijst toont 0.0 bij 2 reviews (beide volgens de pagina negatief); score niet bruikbaar, daarom null."
+    }
+   ]
+  },
+  {
+   "naam": "Onbekend",
+   "stad": "Phuket",
+   "arts": "Chirayut Tolertmongkhol, MD",
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 2.0,
+     "schaal": "5 sterren",
+     "aantal": 1,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/chirayut-tolertmongkhol-phuket-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "doctor",
+     "opmerking": "1 review."
+    }
+   ]
+  },
+  {
+   "naam": "Interplast Clinic",
+   "stad": "Bangkok",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 4.5,
+     "schaal": "5 sterren",
+     "aantal": 2,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/interplast-clinic-bangkok",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Praktijkprofiel, uit de lijst afgelezen."
+    }
+   ]
+  },
+  {
+   "naam": "Yoskarn Clinic",
+   "stad": "Bangkok",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "RealSelf",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 1,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/yoskarn-clinic-bangkok-thailand",
+     "gezien": "2026-11-19",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Praktijkprofiel, uit de lijst Facial Reconstructive Surgery Bangkok."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+  "gecontroleerd": "2026-11-19",
+  "toelichting": "Gezocht met webzoeker en paginabezoek naar onafhankelijke vermeldingen: ASPS-zoeker find.plasticsurgery.org (land Thailand, pagina 1 tot 3; pagina 2 en 3 gaven dezelfde 12 namen), RealSelf (lijst plastisch chirurgen Thailand, losse profielen en reviewpagina's, alleen kliniek en arts genoteerd), nieuws (Nation Thailand, Khaosod English, Channel 4 News, Bloomberg via The Globe and Mail, Sapa-dpa via IOL, Type Investigations, Phuketwan, Thaiger, Euronews), forums (PurseForum, ASEAN NOW, Fodor's) en vakliteratuur (Seminars in Plastic Surgery 2011, Urologic Clinics of North America 2019, European Journal of Plastic Surgery 2021). Wat opviel: de zoekresultaten worden overspoeld door bemiddelaars (Bookimed, WhatClinic, Flymedi, Arokago, Vaidam, Medigence, PlacidWay, MyMediTravel) en door betaalde plekken (deals.thethaiger.com-winkels, PR-rubrieken van Nation en Bangkok Post); die tellen niet mee. Onafhankelijk nieuws over gewone esthetische chirurgie is schaars en vaak oud (2004 tot 2019); het meeste nieuws gaat over geslachtsbevestigende chirurgie (Preecha, Suporn, Kamol, Yanhee) of over doden in kleine, niet erkende klinieken. Yanhee en Bumrungrad worden het vaakst en op de meeste soorten plekken genoemd. Phuket Plastic Surgery Institute zit volgens de site van Bangkok Hospital nu in Bangkok Hospital Siriroj (gebouw 5); ASPS noemt Dr Rushapol Sdawat bij Bangkok Siriroj Hospital, Phuketwan noemde hem in 2009 bij het Phuket International Aesthetic Centre van Phuket International Hospital. Of Phuket International Hospital en Bangkok Hospital Siriroj dezelfde instelling zijn, is niet bevestigd. Voor Chiang Mai en Pattaya vonden we alleen eigen pagina's van Bangkok Hospital Chiang Mai en Bangkok Hospital Pattaya en bemiddelaars, geen onafhankelijke vermelding. Eigen sites konden we niet zelf openen (geen directe internettoegang vanuit de shell); 'site' is ingevuld waar een eigen pagina van de kliniek in de zoekresultaten stond of een derde de URL noemt, anders null. Openbare universiteits- en staatsziekenhuizen (Ramathibodi, Chulalongkorn, Vajira, Rajavithi) staan erin omdat ASPS of vakliteratuur ze noemt; ze richten zich niet op medische toeristen. Telling hieronder: alleen bronnen die echt geopend zijn.",
+  "niet_bereikbaar": [
+    "https://www.bangkokpost.com/life/social-and-lifestyle/880212/don-t-lose-face: site gaf fout (client_error), niet gelezen",
+    "https://bangkokpost.com/news/general/874096/face-off-plastic-surgery-guru-strikes-back: site gaf fout (client_error), niet gelezen",
+    "https://www.bangkokpost.com/business/general/700972/face-time: site gaf fout (client_error), niet gelezen",
+    "https://www.smartraveller.gov.au/travel-essentials/travel-health/medical-tourism: robots.txt staat ophalen niet toe, niet omzeild",
+    "https://en.wikipedia.org/wiki/Yanhee_International_Hospital: toestemming voor ophalen kwam niet op tijd, niet gelezen",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC9386637: reCAPTCHA-controle, niet gelezen",
+    "reddit.com: zoeken binnen reddit werd door de proxy geweigerd (HTTP 400), geen Reddit-draden gelezen",
+    "eigen sites van klinieken (yanhee.net, kamolhospital.com, pai.co.th, phuketpsi.com en andere): niet zelf geopend, geen directe internettoegang vanuit de shell"
+  ],
+  "bewust_niet_of_let_op": [
+    {"naam": "SP Clinic (Bangkok)", "reden": "Channel 4 News (19 feb 2015): Britse patiente overleden na billenimplantaten en een vervolgingreep; de behandelaar was volgens het bericht huisarts en geen gekwalificeerd chirurg en werd vervolgd. Niet opnemen.", "bron": "https://channel4.com/news/dangers-plastic-surgery-thailand"},
+    {"naam": "Niet genoemde kliniek in Bangkok (influencer overleden, 2026)", "reden": "Euronews (9 sep 2026): het Thaise ministerie van Volksgezondheid en de politie onderzoeken een kliniek in Bangkok na de dood van een Britse influencer, onder meer of de kliniek een geldige vergunning heeft. Kliniek niet genoemd; bij elke kandidaat de vergunning controleren.", "bron": "https://euronews.com/2026/09/09/thailand-investigates-after-british-influencer-dies-following-penis-enlargement-operation"},
+    {"naam": "Niet genoemde kliniek in Bangkok (chirurg veroordeeld, 2020)", "reden": "Thaiger (24 dec 2020): chirurg kreeg celstraf na de dood van een patient bij een facelift in 2018 en het runnen van een medische instelling zonder vergunning. Kliniek niet genoemd.", "bron": "https://thethaiger.com/news/bangkok/bangkok-cosmetic-surgeon-sentenced-to-prison-for-patients-death"},
+    {"naam": "Masterpiece Hospital (Bangkok)", "reden": "Alleen een PR-bericht in de betaalde rubriek van Nation Thailand (pr-news) en bemiddelaars (Arokago, Flymedi) gevonden; geen onafhankelijke vermelding.", "bron": "https://www.nationthailand.com/pr-news/40040374"},
+    {"naam": "Wansiri Hospital (Bangkok)", "reden": "Alleen bemiddelaars (Bookimed, Arokago) en een partnerbericht van bemiddelaar 365Asia gevonden; geen onafhankelijke vermelding.", "bron": "https://www.health365.asia/365asia-partnership-wansiri-hospital-thailand"},
+    {"naam": "Mtf Aesthetic Surgery Center, Apex, Bangkok Aesthetic Surgery Center, The Aesthetic Surgery Centre", "reden": "Geen onafhankelijke vermelding gevonden in deze ronde; alleen bemiddelaars of niets. Later opnieuw zoeken.", "bron": "zoekopdrachten van 2026-11-19"},
+    {"naam": "deals.thethaiger.com (winkels van Kamol, PAI, PPSI, Jungceylon)", "reden": "Commerciele dealpagina's van Thaiger; betaald, telt niet als vermelding.", "bron": "https://deals.thethaiger.com/shop/kamol-hospital-h567?page=10"},
+    {"naam": "Bangkok Post PR-rubriek (o.a. Dr. Weerakarn Satitniramai, Bangmod Esthetic Centre)", "reden": "Advertorials in /thailand/pr/ en /print/; betaald, telt niet.", "bron": "https://www.bangkokpost.com/thailand/pr/2906826/redefining-rhinoplasty-dr-weerakarn-satitniramai-artistic-expertise-"},
+    {"naam": "Bangkok Hospital Chiang Mai en Bangkok Hospital Pattaya", "reden": "Alleen eigen pagina's en bemiddelaars gevonden; geen onafhankelijke vermelding, daarom niet als kandidaat opgenomen.", "bron": "https://www.bangkokhospital.com/en/chiangmai/center-clinic/surgery/cosmetic-surgery-clinic-bcm/overview"}
+  ],
+  "klinieken": [
+    {
+      "naam": "Yanhee International Hospital",
+      "stad_wijk": "Bangkok",
+      "site": null,
+      "site_bron": "niet bevestigd (Wikipedia-pagina niet gelezen)",
+      "chirurgen": [
+        {"naam": "Dr Greechart Pornsinsirirak", "titel": "Dr", "specialisme": "plastisch chirurg; volgens Channel 4 hoofd cosmetische chirurgie (daar gespeld Pornsinsirisak)", "bron": "https://www.khaosodenglish.com/life/2015/02/02/1422855268/", "gezien": "2026-11-19"},
+        {"naam": "Dr Supot Sumritvanitcha", "titel": "Dr, directeur ziekenhuis", "specialisme": "niet vermeld", "bron": "https://www.nationthailand.com/news/30379032", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://www.nationthailand.com/news/30379032", "soort": "news", "wat": "Nation Thailand (3 dec 2019): Yanhee opent voor 50 miljoen baht een centrum om mislukte ingrepen van elders te herstellen, met 15 artsen.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://www.khaosodenglish.com/life/2015/02/02/1422855268/", "soort": "news", "wat": "Khaosod English (2015): Yanhee genoemd als een van de bekendste ziekenhuizen voor cosmetische chirurgie; chirurg doet ongeveer 180 geslachtsbevestigende ingrepen per jaar.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://channel4.com/news/dangers-plastic-surgery-thailand", "soort": "news", "wat": "Channel 4 News (19 feb 2015): Yanhee genoemd als internationaal geaccrediteerd ziekenhuis met afdeling cosmetische chirurgie; hoofd van die afdeling geinterviewd.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://aseannow.com/topic/98163-plastic-surgery/", "soort": "forum", "wat": "ASEAN NOW-forum: Yanhee het vaakst genoemd (ongeveer zes berichten), met drie artsen bij naam.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://aseannow.com/topic/232248-facelift-in-or-around-bangkok/", "soort": "forum", "wat": "ASEAN NOW-forum over facelift: Yanhee en Dr Greechart genoemd.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://fodors.com/community/asia/medical-tourism-facelift-in-bangkok-1650034/page2", "soort": "forum", "wat": "Fodor's-forum (2018): Yanhee een keer genoemd naast Bumrungrad.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Bumrungrad International Hospital, Plastic Surgery Center",
+      "stad_wijk": "Bangkok (gebouw A, 16A)",
+      "site": "https://www.bumrungrad.com/plastic-surgery",
+      "site_bron": "https://www.bumrungrad.com/en/doctors/amorn-poomee",
+      "chirurgen": [
+        {"naam": "Amorn Poomee", "titel": "M.D.", "specialisme": "Plastic, Cosmetic & Reconstructive Surgery", "bron": "https://www.bumrungrad.com/en/doctors/amorn-poomee", "gezien": "2026-11-19"},
+        {"naam": "Seree Iamphongsai", "titel": "M.D.", "specialisme": "Plastic Cosmetic & Reconstructive Surgery; lid ASPS", "bron": "https://www.bumrungrad.com/en/doctors/seree-iamphongsai", "gezien": "2026-11-19"},
+        {"naam": "Parin Tatsanavivat", "titel": "MD", "specialisme": "plastisch chirurg, lichaamscontouren; RealSelf noemt behandelbevoegdheid in Bumrungrad", "bron": "https://www.realself.com/dr/parin-tatsanavivat-bangkok-thailand", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://find.plasticsurgery.org/country/thailand", "soort": "asps", "wat": "ASPS-zoeker Thailand: Seree Iamphongsai MD staat erin (Bangkok).", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://www.realself.com/dr/parin-tatsanavivat-bangkok-thailand", "soort": "realself", "wat": "RealSelf-profiel van een plastisch chirurg met bevoegdheid in Bumrungrad.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://aseannow.com/topic/232248-facelift-in-or-around-bangkok/", "soort": "forum", "wat": "ASEAN NOW-forum over facelift: Bumrungrad en Dr Amorn Poomee meermaals genoemd.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://fodors.com/community/asia/medical-tourism-facelift-in-bangkok-1650034/page2", "soort": "forum", "wat": "Fodor's-forum (maart tot mei 2018): Bumrungrad vier keer genoemd door verschillende leden.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://aseannow.com/topic/98163-plastic-surgery/", "soort": "forum", "wat": "ASEAN NOW-forum: Bumrungrad in vier tot vijf berichten genoemd als duurder alternatief.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://phuketwan.com/tourism/phukets-uplifting-stitch-time-road-show/", "soort": "news", "wat": "Phuketwan (feb 2009): Bumrungrad genoemd als groot ziekenhuis in Bangkok met veel buitenlandse patienten.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Preecha Aesthetic Institute (PAI)",
+      "stad_wijk": "Bangkok",
+      "site": "https://pai.co.th/",
+      "site_bron": "https://www.transgendermap.com/medical/surgery/thailand/preecha-tiewtranon/",
+      "chirurgen": [
+        {"naam": "Preecha Tiewtranon", "titel": "Dr", "specialisme": "plastisch chirurg, pionier geslachtsbevestigende chirurgie (eerste ingreep in Thailand in 1975 volgens Bloomberg)", "bron": "https://www.theglobeandmail.com/news/world/transgender-surgery-niche-growing-in-thailand/article27002194/", "gezien": "2026-11-19"},
+        {"naam": "Prayuth Chokrungvaranont", "titel": "Dr, staflid Chulalongkorn University", "specialisme": "chirurg, geslachtsbevestigende chirurgie", "bron": "https://typeinvestigations.org/analysis/2013/10/02/global-medical-tourism-sex-reassignment-surgery/", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://www.theglobeandmail.com/news/world/transgender-surgery-niche-growing-in-thailand/article27002194/", "soort": "news", "wat": "Bloomberg via The Globe and Mail: PAI deed volgens het artikel meer dan 3.500 geslachtsbevestigende ingrepen in dertig jaar, ruim 90 procent buitenlandse clienten.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://typeinvestigations.org/analysis/2013/10/02/global-medical-tourism-sex-reassignment-surgery/", "soort": "news", "wat": "Type Investigations (2 okt 2013): PAI een van de toonaangevende klinieken in Bangkok voor Iraanse patienten (108 ingrepen 2008 tot 2011).", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "BNH Hospital (Bangkok Nursing Home)",
+      "stad_wijk": "Bangkok",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [
+        {"naam": "Preecha Tiewtranon", "titel": "Dr", "specialisme": "plastisch chirurg; opereerde in 2004 in BNH (zie ook PAI)", "bron": "https://www.iol.co.za/travel/world/famed-thai-sex-change-doc-does-it-live-229260", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://www.iol.co.za/travel/world/famed-thai-sex-change-doc-does-it-live-229260", "soort": "news", "wat": "Sapa-dpa via IOL (dec 2004): live uitgezonden ingreep in BNH tijdens de eerste Aziatische workshop voor geslachtsbevestigende chirurgie, voor 35 artsen.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://aseannow.com/topic/232248-facelift-in-or-around-bangkok/", "soort": "forum", "wat": "ASEAN NOW-forum: Bangkok Nursing Home Hospital met Dr Preecha in ongeveer drie berichten genoemd.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Kamol Cosmetic Hospital",
+      "stad_wijk": "Bangkok (Laksi)",
+      "site": "https://www.kamolhospital.com/",
+      "site_bron": "https://www.transgendermap.com/medical/surgery/thailand/kamol-pansritum/",
+      "chirurgen": [
+        {"naam": "Kamol Pansritum", "titel": "MD", "specialisme": "plastisch chirurg; geslachtsbevestigende en cosmetische chirurgie", "bron": "https://www.realself.com/find/Thailand/Plastic-Surgeon", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://www.realself.com/find/Thailand/Plastic-Surgeon", "soort": "realself", "wat": "RealSelf-lijst plastisch chirurgen Thailand: Kamol Pansritum MD (Bangkok) staat erin.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://www.realself.com/review/bangkok-thailand-mtf-vaginoplasty-kamol-cosmetic-hospital", "soort": "realself", "wat": "RealSelf-reviewpagina over een ingreep bij Kamol Cosmetic Hospital door Dr Kamol Pansritum.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://www.realself.com/find/Thailand/Transgender-Phalloplasty", "soort": "realself", "wat": "Enige aanbieder in Thailand op de RealSelf-lijst voor deze ingreep: Kamol Pansritum MD.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Suporn Clinic",
+      "stad_wijk": "Chonburi",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [
+        {"naam": "Suporn Watanyusakul", "titel": "Dr", "specialisme": "plastisch en reconstructief chirurg; geslachtsbevestigende chirurgie en gezichtsfeminisatie (Suporn-techniek)", "bron": "https://www.urotoday.com/recent-abstracts/pelvic-health-reconstruction/gu-trauma-reconstruction/116515-vaginoplasty-modifications-to-improve-vulvar-aesthetics.html", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://www.urotoday.com/recent-abstracts/pelvic-health-reconstruction/gu-trauma-reconstruction/116515-vaginoplasty-modifications-to-improve-vulvar-aesthetics.html", "soort": "academic", "wat": "Artikel in Urologic Clinics of North America (nov 2019) van Suporn Watanyusakul, affiliatie Suporn Clinic, Chonburi.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://pmc.ncbi.nlm.nih.gov/articles/3312144", "soort": "academic", "wat": "Seminars in Plastic Surgery (2011): Dr Suporn Watanyusakul genoemd als chirurg met zeer grote ervaring.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://www.realself.com/review/chonburi-thailand-gender-reassignment-surgery-dr-suporn-chonburi-thailand", "soort": "realself", "wat": "RealSelf-reviewpagina over Dr Suporn in Chonburi.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Phuket Plastic Surgery Institute (PPSI), in Bangkok Hospital Siriroj",
+      "stad_wijk": "Phuket (Bangkok Hospital Siriroj, gebouw 5, 4e verdieping)",
+      "site": "https://www.phuketpsi.com/",
+      "site_bron": "https://www.imcas.com/en/profile/dr-sanguan-kunaporn",
+      "chirurgen": [
+        {"naam": "Sanguan Kunaporn", "titel": "Dr", "specialisme": "plastisch chirurg; borst- en genitale chirurgie", "bron": "https://www.imcas.com/en/profile/dr-sanguan-kunaporn", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://pmc.ncbi.nlm.nih.gov/articles/3312144", "soort": "academic", "wat": "Seminars in Plastic Surgery (2011): Dr Sanguan Kunaporn genoemd als chirurg met zeer grote ervaring.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://forum.purseblog.com/threads/thailand-for-breast-augmentation-implant.1044424", "soort": "forum", "wat": "PurseForum-draad over borstvergroting in Thailand: Dr Sanguan in drie berichten genoemd.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://phuketwan.com/tourism/phukets-uplifting-stitch-time-road-show/", "soort": "news", "wat": "Phuketwan (feb 2009): Dr Sanguan Kunaporn genoemd in het team plastisch chirurgen van het esthetisch centrum in Phuket.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://phuketwan.com/tourism/phuket-takes-aussie-doctors-surgery-wars-12550/", "soort": "news", "wat": "Phuketwan (27 mei 2010): Dr Sanguan Kunaporn genoemd in een stuk over de strijd met Australische artsen over cosmetisch toerisme.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Bangkok Hospital Siriroj (Phuket International Aesthetic Centre, eerder bij Phuket International Hospital)",
+      "stad_wijk": "Phuket",
+      "site": "https://www.bangkokhospital.com/en/siriroj/center-clinic/surgery/phuket-plastic-surgery-institute-bsi/overview",
+      "site_bron": "https://www.bangkokhospital.com/en/siriroj/center-clinic/surgery/phuket-plastic-surgery-institute-bsi/overview",
+      "chirurgen": [
+        {"naam": "Rushapol Sdawat", "titel": "MD", "specialisme": "plastisch chirurg; ASPS-lid, adres Bangkok Siriroj Hospital Phuket", "bron": "https://find.plasticsurgery.org/country/thailand", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://find.plasticsurgery.org/country/thailand", "soort": "asps", "wat": "ASPS-zoeker Thailand: Rushapol Sdawat MD bij Bangkok Siriroj Hospital, Phuket.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://phuketwan.com/tourism/phukets-uplifting-stitch-time-road-show/", "soort": "news", "wat": "Phuketwan (feb 2009): Phuket International Hospital aan de Bypass Road en zijn Phuket International Aesthetic Centre, met Dr Rushapol Sdawat als plastisch chirurg.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://phuketwan.com/tourism/phukets-face-medi-tours-12632/", "soort": "news", "wat": "Phuketwan (juni 2010): Australische patiente liet borstvergroting doen in Phuket International Hospital; stuk over goedkoper cosmetisch toerisme via een reisbureau.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://www.realself.com/find/Thailand/Plastic-Surgeon", "soort": "realself", "wat": "RealSelf-lijst plastisch chirurgen Thailand: Rushapol Sdawat MD staat erin.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Bangkok Hospital Phuket",
+      "stad_wijk": "Phuket",
+      "site": "https://www.phukethospital.com/",
+      "site_bron": "https://www.phukethospital.com/doctor/parinya-yanpisitkul",
+      "chirurgen": [],
+      "vermeld_in": [
+        {"url": "https://phuketwan.com/tourism/phuket-takes-aussie-doctors-surgery-wars-12550/", "soort": "news", "wat": "Phuketwan (27 mei 2010): Bangkok Hospital Phuket genoemd als ziekenhuis voor cosmetische ingrepen van Australiers.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Samitivej Plastic and Esthetic Surgery Institute (Samitivej Sukhumvit en Srinakarin)",
+      "stad_wijk": "Bangkok (Sukhumvit; Srinakarin)",
+      "site": "https://www.samitivejhospitals.com/zh/center/detail/samitivej-plastic-and-esthetic-surgery-institute",
+      "site_bron": "https://www.samitivejhospitals.com/zh/center/detail/samitivej-plastic-and-esthetic-surgery-institute",
+      "chirurgen": [
+        {"naam": "Veerawat Tirananmongkol", "titel": "MD", "specialisme": "plastisch en reconstructief chirurg; artsenpagina bij Samitivej en bij Phyathai 2", "bron": "https://www.phyathai.com/en/pyt2/doctor/dr-veerawat-tirananmongkol", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://phuketwan.com/tourism/phukets-uplifting-stitch-time-road-show/", "soort": "news", "wat": "Phuketwan (feb 2009): Samitivej (daar gespeld Sanitivej) genoemd als groot ziekenhuis in Bangkok met veel buitenlandse patienten.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://www.realself.com/dr/veerawat-tirananmongkol-kathu-thailand", "soort": "realself", "wat": "RealSelf-profiel van Veerawat Tirananmongkol MD, plastisch chirurg; een reviewer noemt Samitivej Chinatown.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://forum.purseblog.com/threads/thailand-for-breast-augmentation-implant.1044424", "soort": "forum", "wat": "PurseForum: Dr Veerawat in twee berichten genoemd.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Phyathai 2 International Hospital",
+      "stad_wijk": "Bangkok",
+      "site": "https://www.phyathai.com/en/pyt2/doctor/dr-veerawat-tirananmongkol",
+      "site_bron": "https://www.phyathai.com/en/pyt2/doctor/dr-veerawat-tirananmongkol",
+      "chirurgen": [
+        {"naam": "Veerawat Tirananmongkol", "titel": "M.D.", "specialisme": "chirurgie, plastische en reconstructieve chirurgie", "bron": "https://www.phyathai.com/en/pyt2/doctor/dr-veerawat-tirananmongkol", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://www.realself.com/dr/veerawat-tirananmongkol-kathu-thailand", "soort": "realself", "wat": "RealSelf-profiel van dezelfde chirurg (zwak: profiel noemt geen ziekenhuis).", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Lelux Plastic Surgery Hospital",
+      "stad_wijk": "Nonthaburi (Muang)",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [
+        {"naam": "Vitusinee Udee", "titel": "MD", "specialisme": "plastisch chirurg; ASPS-lid", "bron": "https://find.plasticsurgery.org/country/thailand/?page=2", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://find.plasticsurgery.org/country/thailand/?page=2", "soort": "asps", "wat": "ASPS-zoeker Thailand: Vitusinee Udee MD bij Lelux Plastic Surgery Hospital, Nonthaburi.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "WIH International Hospital (met Chettawut Plastic Surgery Center)",
+      "stad_wijk": "Bangkok (Bang Na)",
+      "site": "https://chet-plasticsurgery.com",
+      "site_bron": "https://chet-plasticsurgery.com",
+      "chirurgen": [
+        {"naam": "Sahatad Haetanurak", "titel": "MD", "specialisme": "plastisch chirurg; ASPS-lid", "bron": "https://find.plasticsurgery.org/country/thailand/?page=2", "gezien": "2026-11-19"},
+        {"naam": "Chettasak (eerder Chettawut) Tulayapanich", "titel": "MD", "specialisme": "plastisch chirurg en geslachtsbevestigende chirurgie; volgens eigen site board-gecertificeerd in plastische en reconstructieve chirurgie", "bron": "https://chet-plasticsurgery.com", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://find.plasticsurgery.org/country/thailand/?page=2", "soort": "asps", "wat": "ASPS-zoeker Thailand: Sahatad Haetanurak MD bij WIH International Hospital, Bang Na.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "JIP Hospital",
+      "stad_wijk": "Pakkret (Nonthaburi)",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [
+        {"naam": "Jakkapart Manonukul", "titel": "MD", "specialisme": "plastisch chirurg; ASPS-lid", "bron": "https://find.plasticsurgery.org/country/thailand", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://find.plasticsurgery.org/country/thailand", "soort": "asps", "wat": "ASPS-zoeker Thailand: Jakkapart Manonukul MD bij JIP Hospital, Pakkret.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Jungceylon Plastic Surgery Clinic",
+      "stad_wijk": "Phuket (postcode 83120, Patong/Kathu)",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [
+        {"naam": "Piyapas Pichaichanarong", "titel": "MD", "specialisme": "plastisch chirurg; ASPS-lid", "bron": "https://find.plasticsurgery.org/country/thailand/?page=2", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://find.plasticsurgery.org/country/thailand/?page=2", "soort": "asps", "wat": "ASPS-zoeker Thailand: Piyapas Pichaichanarong MD bij Jungceylon Plastic Surgery Clinic, Phuket.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Bonnie Clinic",
+      "stad_wijk": "Bangkok (Bang Sue)",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [
+        {"naam": "Boonchai Taweerattanasil", "titel": "MD", "specialisme": "plastisch chirurg; Thaise board plastische en reconstructieve chirurgie volgens zijn RealSelf-profiel; lid ISAPS en ASPS", "bron": "https://www.realself.com/dr/boonchai-taweerattanasil-bangkok-thailand", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://www.realself.com/dr/boonchai-taweerattanasil-bangkok-thailand", "soort": "realself", "wat": "RealSelf-profiel met praktijk Bonnie Clinic, Bang Sue.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://find.plasticsurgery.org/country/thailand", "soort": "asps", "wat": "ASPS-zoeker Thailand: Boonchai Taweerattanasil MD (Bangkok) staat erin.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Plastic and Medicine clinic",
+      "stad_wijk": "Sriracha (Chonburi)",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [
+        {"naam": "Napong Bespinyowong", "titel": "MD", "specialisme": "plastisch chirurg; ASPS-lid", "bron": "https://find.plasticsurgery.org/country/thailand", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://find.plasticsurgery.org/country/thailand", "soort": "asps", "wat": "ASPS-zoeker Thailand: Napong Bespinyowong MD bij Plastic and Medicine clinic, Sriracha.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Interplast Clinic",
+      "stad_wijk": "Bangkok",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [],
+      "vermeld_in": [
+        {"url": "https://www.realself.com/find/Thailand/Plastic-Surgeon", "soort": "realself", "wat": "RealSelf-lijst plastisch chirurgen Thailand: Interplast Clinic (Bangkok) als praktijk genoemd; welke arts erbij hoort is niet vastgesteld.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Piyavate Hospital",
+      "stad_wijk": "Bangkok (centrum)",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [],
+      "vermeld_in": [
+        {"url": "https://www.theglobeandmail.com/news/world/transgender-surgery-niche-growing-in-thailand/article27002194/", "soort": "news", "wat": "Bloomberg via The Globe and Mail: een buitenlandse patient onderging in Piyavate Hospital de laatste ingreep van een transitie.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Pratunam Polyclinic",
+      "stad_wijk": "Bangkok (Pratunam)",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [
+        {"naam": "Thep Vechavisit", "titel": "Dr", "specialisme": "chirurg, geslachtsbevestigende chirurgie", "bron": "https://www.theglobeandmail.com/news/world/transgender-surgery-niche-growing-in-thailand/article27002194/", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://www.theglobeandmail.com/news/world/transgender-surgery-niche-growing-in-thailand/article27002194/", "soort": "news", "wat": "Bloomberg via The Globe and Mail: kleine solopraktijk met een sobere, goedkopere aanpak (ongeveer 2.000 dollar).", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Bangkok Hospital, Plastic Surgery and Reconstruction Center (hoofdvestiging)",
+      "stad_wijk": "Bangkok (gebouw D, 1e verdieping)",
+      "site": "https://www.bangkokhospital.com/en/bangkok/center-clinic/surgery/bangkok-plastic-surgery-and-reconstruction-center/overview",
+      "site_bron": "https://www.bangkokhospital.com/en/bangkok/center-clinic/surgery/bangkok-plastic-surgery-and-reconstruction-center/overview",
+      "chirurgen": [],
+      "opmerking": "Geen onafhankelijke vermelding gevonden; alleen opgenomen als groot ziekenhuis met eigen centrum. Zwakke kandidaat, later bron zoeken.",
+      "vermeld_in": []
+    },
+    {
+      "naam": "Bangmod Hospital (Esthetic Centre)",
+      "stad_wijk": "Bangkok",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [],
+      "vermeld_in": [
+        {"url": "https://aseannow.com/topic/98163-plastic-surgery/", "soort": "forum", "wat": "ASEAN NOW-forum: Bangmod in ongeveer vier berichten genoemd als optie, zonder oordeel.", "betaald": false, "gezien": "2026-11-19"},
+        {"url": "https://bangkokpost.com/print/385797", "soort": "news", "wat": "Advertorial in Bangkok Post over het Esthetic Centre van Bangmod (titel uit zoekresultaat); betaald, telt niet.", "betaald": true, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Ramathibodi Hospital, Division of Plastic and Maxillofacial Surgery (Mahidol, openbaar)",
+      "stad_wijk": "Bangkok",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [
+        {"naam": "Kidakorn Kiranantawat", "titel": "MD, FRCST", "specialisme": "plastisch en maxillofaciaal chirurg; ASPS-lid", "bron": "https://find.plasticsurgery.org/country/thailand/?page=2", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://find.plasticsurgery.org/country/thailand/?page=2", "soort": "asps", "wat": "ASPS-zoeker Thailand: Kidakorn Kiranantawat MD, FRCST bij Ramathibodi Hospital.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "King Chulalongkorn Memorial Hospital, afdeling Plastic and Reconstructive Surgery (Chulalongkorn University, openbaar)",
+      "stad_wijk": "Bangkok",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [
+        {"naam": "Poonpissamai Suwajo", "titel": "Dr", "specialisme": "plastisch en reconstructief chirurg; co-auteur studie geslachtsbevestigende chirurgie; heeft ook een artsenpagina bij Bangkok Hospital", "bron": "https://link.springer.com/content/pdf/10.1007/s00238-021-01857-7.pdf", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://link.springer.com/content/pdf/10.1007/s00238-021-01857-7.pdf", "soort": "academic", "wat": "European Journal of Plastic Surgery (2021/2022): studie naar seksueel functioneren na vaginoplastiek in Thailand, met de afdeling plastische chirurgie van Chulalongkorn.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Vajira Hospital, Department of Surgery (openbaar)",
+      "stad_wijk": "Bangkok",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [
+        {"naam": "Pornthep Sirimahachaiyakul", "titel": "MD", "specialisme": "plastisch chirurg; ASPS-lid", "bron": "https://find.plasticsurgery.org/country/thailand", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://find.plasticsurgery.org/country/thailand", "soort": "asps", "wat": "ASPS-zoeker Thailand: Pornthep Sirimahachaiyakul MD, Department of Surgery, Vajira Hospital.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    },
+    {
+      "naam": "Rajavithi Hospital (openbaar)",
+      "stad_wijk": "Bangkok",
+      "site": null,
+      "site_bron": "niet bevestigd",
+      "chirurgen": [
+        {"naam": "Wasita Sermsakulwat", "titel": "MD", "specialisme": "plastisch chirurg; ASPS-lid", "bron": "https://find.plasticsurgery.org/country/thailand/?page=2", "gezien": "2026-11-19"}
+      ],
+      "vermeld_in": [
+        {"url": "https://find.plasticsurgery.org/country/thailand/?page=2", "soort": "asps", "wat": "ASPS-zoeker Thailand: Wasita Sermsakulwat MD bij Rajavithi Hospital.", "betaald": false, "gezien": "2026-11-19"}
+      ]
+    }
+  ]
+}
