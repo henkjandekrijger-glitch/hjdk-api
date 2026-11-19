@@ -46,6 +46,19 @@ for (const e of entries) {
 for (const key of Object.keys(VELD)) for (const language of LANGS) assert.ok(VELD[key][language], key + ' mist ' + language);
 ok('elk gepubliceerd veld heeft lezerstekst in en, nl en de');
 
+const korea = LIJSTEN.find(l => l.id === 'plastic-korea');
+const view = korea.klinieken.find(k => k.id === 'view');
+assert.ok(view.openheid.prijs.includes('totaalprijs voor een borstvergroting per type implantaat'));
+assert.ok(view.openheid.prijs.includes('niet of consult, narcose, operatiekamer, nazorg en beide implantaten zijn inbegrepen'));
+assert.doesNotMatch(VELD['plastic-korea|view|prijs'].en, /price ranges per implant/i);
+assert.doesNotMatch(VELD['plastic-korea|view|prijs'].nl, /prijsklassen per implantaat/i);
+assert.doesNotMatch(VELD['plastic-korea|view|prijs'].de, /Preisspannen je Implantat/i);
+for (const language of LANGS) {
+  const summary = provider.rankSummary(B, korea, language);
+  assert.match(summary, language === 'nl' ? /maatregel van een toezichthouder/ : language === 'de' ? /Aufsichtsmaßnahme/ : /regulator action/);
+}
+ok('Korea-prijs noemt omvang en open posten; FTC-maatregel heet geen ernstig incident of lopende klacht');
+
 for (const e of entries) for (const language of LANGS) {
   const pg = provider.providerPage(B, e, language), slug = e.slugs[language], html = render.extraPagina(B, slug, language, pg, {});
   scripts(html);
