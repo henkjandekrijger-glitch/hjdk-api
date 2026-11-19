@@ -19,6 +19,7 @@
 //   3. Advertenties: zwakke teksten uit, elke dag nieuwe teksten voor de best lopende producten (Claude), prijs in de tekst klopt niet meer -> uit.
 //   4. Bod en budget: te weinig verkeer bij goede kwaliteit -> bod omhoog; geld weg zonder doorkliks -> campagne stil.
 import { shopRss } from '../lib/shoprss.js';
+import { gevoelig } from '../lib/shopgevoelig.js';
 import sharp from 'sharp';
 import { randomBytes, createHash } from 'node:crypto';
 import { kv } from '../lib/db.js';
@@ -103,6 +104,7 @@ async function catalog(vers) {
   if (!vers && CAT && Date.now() - CAT_AT < 300000) return CAT;
   let c = null; try { c = await kv.get(K.cat); } catch (e) {}
   if (!c || !Array.isArray(c.items) || !c.items.length) c = { at: 0, items: seed.items.map(i => Object.assign({ v: 0, f: 0, sc: 0, l: 0 }, i)), terugval: true };
+  c = Object.assign({}, c, { items: c.items.filter(i => !gevoelig(i)) }); // 19 nov: producten met naakt of intieme lichaamsdelen nooit in advertenties, gidsen of aanbevelingen (Whop-afkeuring)
   try { zetMarge(c.items, await kv.get(K_KOST)); } catch (e) {} // marge uit de inkoopprijzen die de shop doorgeeft (lib/shopmarge.js), met de live prijs
   // 12 nov (Henkjan: "Zoek uit wat hier mis gaat"): de catalogus zegt voorraad, maar Orderchamp weigert bij het plaatsen ("This item just
   // sold out"). Clickmind meldt dat vanaf de afrekenpagina (op=uitverkocht); zo'n product telt 2 dagen als uitverkocht voor campagnes, dagkeuze en gids.
@@ -522,7 +524,7 @@ async function land(req, res, url) {
     res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
     return res.status(404).send('Dit product is niet beschikbaar.');
   }
-  let top = null; try { top = await kv.get(K.top); } catch (e) {} const topIds = (top && top.ids && top.ids.length ? top.ids : seed.ads.map(a => a.pid)).filter(id => perId[id] && perId[id].vr !== false);
+  let top = null; try { top = await kv.get(K.top); } catch (e) {} const topIds = (top && top.ids && top.ids.length ? top.ids : seed.ads.map(a => a.pid)).filter(id => perId[id] && perId[id].vr !== false && !gevoelig(perId[id]));
   const biLp = net === 'bi' ? String(q.get('lp') || '') : ''; const biPid = (biLp.match(/kadoly\.com\/product\/([^?&#\/]+)/) || [])[1] || ''; // Bing: Microsoft zet de landingspagina met {lpurl} in lp; een productpagina wordt p, anders de voorkant
   let pid = pidOk(q.get('p') || (biPid ? (() => { try { return decodeURIComponent(biPid); } catch (e) { return biPid; } })() : '')); if (pid && (!perId[pid] || perId[pid].vr === false)) pid = '';
   if (!pid && cr && net !== 'x') { try { const m = (await kv.get(K.crmap)) || {}; if (perId[m[net + ':' + cr]] && perId[m[net + ':' + cr]].vr !== false) pid = m[net + ':' + cr]; } catch (e) {} }
