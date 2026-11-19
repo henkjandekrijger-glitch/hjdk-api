@@ -300,6 +300,7 @@
     {"source": "/llms.txt", "has": [{"type": "host", "value": "(www\\.)?curady\\.com"}], "destination": "/api/gids?op=cyllms"},
     {"source": "/favicon.svg", "has": [{"type": "host", "value": "(www\\.)?curady\\.com"}], "destination": "/api/gids?op=cyfav"},
     {"source": "/quote", "has": [{"type": "host", "value": "(www\\.)?curady\\.com"}], "destination": "/api/gids?op=cyquote"},
+    {"source": "/c7d2a91f4e6b8035a1c9e7d4b2f60a18.txt", "has": [{"type": "host", "value": "(www\\.)?curady\\.com"}], "destination": "/api/gids?op=cykey"},
     {"source": "/t", "has": [{"type": "host", "value": "(www\\.)?curady\\.com"}], "destination": "/api/gids?op=cytik"},
     {"source": "/:t(nl|de)", "has": [{"type": "host", "value": "(www\\.)?curady\\.com"}], "destination": "/api/gids?op=cyhome&t=:t"},
     {"source": "/:t(nl|de)/:s([a-z-]+)", "has": [{"type": "host", "value": "(www\\.)?curady\\.com"}], "destination": "/api/gids?op=cygids&t=:t&s=:s"},
