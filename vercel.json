@@ -273,6 +273,14 @@
       "schedule": "7,37 * * * *"
     },
     {
+      "path": "/api/keuze-tools?tool=adv&op=ververs",
+      "schedule": "25 * * * *"
+    },
+    {
+      "path": "/api/keuze-tools?tool=adv&op=scan",
+      "schedule": "3,23,43 * * * *"
+    },
+    {
       "path": "/api/keuze-tools?tool=rdam&op=verrijk",
       "schedule": "50 */2 * * *"
     },
@@ -984,6 +992,46 @@
         }
       ],
       "destination": "/api/keuze-tools?tool=huis"
+    },
+    {
+      "source": "/advocaat/sitemap.xml",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=adv&op=sitemap"
+    },
+    {
+      "source": "/advocaat/:m/:z",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=adv&m=:m&z=:z"
+    },
+    {
+      "source": "/advocaat/:m",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=adv&m=:m"
+    },
+    {
+      "source": "/advocaat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=adv&m=hub"
     },
     {
       "source": "/makelaar/:m/:z",
