@@ -89,6 +89,7 @@ export default async function handler(req, res) {
     const html=Z.pagina(pz);res.setHeader('content-type','text/html; charset=utf-8');
     if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/zorgverzekering">Zorgverzekering 2027 vergelijken</a></p>');}
     res.setHeader('cache-control','public, s-maxage=600, stale-while-revalidate=86400');return res.status(200).send(html);}
+  if(q.get('tool')==='deel'){const Dl=await import('../lib/deel.js');res.setHeader('cache-control','no-store');const x=await Dl.stand();if(q.get('vorm')==='tekst'){res.setHeader('content-type','text/plain; charset=utf-8');return res.status(200).send(Dl.standTekst(x));}return res.status(200).json(x);} // doorsturen per site en uur (lib/deel.js, 19 nov 2026)
   if(q.get('tool')==='rdam'){ // dienstengids Rotterdam (lib/rdam.js, 17 nov 2026)
     if(q.get('d')==='makelaar'){const z=String(q.get('z')||'').replace(/[^a-z0-9-]/g,'');res.setHeader('location','/makelaar/rotterdam'+(z?'/'+z:''));return res.status(301).end();} // makelaars sinds 19 nov 2026 in lib/makelaar.js
     const R=await import('../lib/rdam.js');const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
