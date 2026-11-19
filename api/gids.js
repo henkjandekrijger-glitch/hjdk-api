@@ -18,6 +18,7 @@ import { ONDERZOEK, BRONNEN, ONDERZOEK_DAG, onderwerpDag, bronnenHtml, adviesBlo
 import { bronScript, groeiRonde, groeiStand, groeiHtml } from '../lib/gids-groei.js';
 import * as NB from '../lib/kadoly-nieuws.js'; // aanmelding mail en meldingen (2 nov 2026)
 import * as RED from '../lib/kadoly-redactie.js'; // redactie: elke dag een artikel (19 nov 2026)
+import { kzuxBlok } from '../lib/kzux.js'; // de lerende chat van de keuzehulpen, geleend (19 nov 2026)
 
 const HOST = 'https://gids.kadoly.com';
 export const ACC = { acc: '#1D9BF0', acc2: '#E8F4FD', accD: '#60A5FA', acc2D: '#13202E' }; // Kadoly-blauw (30 okt, Henkjan: "Neem design van Kadoly over"; uitgelezen met op=stijl)
@@ -107,13 +108,46 @@ details.faq{padding:18px 0}details.faq summary{display:flex;justify-content:spac
 @media(max-width:820px){.rg{grid-template-columns:repeat(2,minmax(0,1fr))}.pg{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.rg{grid-template-columns:1fr}}
 @media(max-width:640px){.pk{grid-template-columns:84px 1fr;gap:14px;padding:16px}.pk-img img{width:84px;height:84px}dl.rows .r{grid-template-columns:1fr;gap:4px}}`;
 
+// Look van sealedintent.com (19 nov 2026, Henkjan: "Die gids ziet er niet uit pak de sealedintent.com look en voer hier door en ook op onderliggende
+// paginas"): zwart op wit, geen blauw, geen schaduwen, één smalle kolom, rustige kop en voet in één regel. Alleen hier (niet in CSS_KADOLY, dat
+// ook Curady gebruikt), als laatste laag zodat het overal wint. Altijd licht, zoals sealedintent.
+const SI_VARS = '--ink:#111113;--ink-2:#111113;--ink-3:#111113;--line:#E5E7EB;--line-strong:#111113;--bg:#fff;--bg-2:#F3F4F6;--acc:#111113;--acc-2:#F3F4F6;--on-acc:#fff;--prim:#111113;--on-prim:#fff;--link:#111113;--veld:#F3F4F6;--nav:#fff;--sh:none;color-scheme:light';
+export const CSS_SI = `:root,:root:not([data-theme=light]),:root[data-theme=dark]{${SI_VARS}}@media (prefers-color-scheme:dark){:root,:root:not([data-theme=light]),:root[data-theme=dark]{${SI_VARS}}}
+html,body{background:#fff;color:var(--ink)}body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+main.wrap{max-width:680px;margin:0 auto;padding:44px 26px 0}main.wrap.wrap{max-width:680px}
+main a{color:var(--ink)!important}main p a,main li>a,main dd a,main .meta a{text-decoration:underline!important;text-underline-offset:3px;text-decoration-thickness:1px}main a:hover{text-decoration-thickness:2px}
+.si-top{border:0;background:#fff}.si-top-in{max-width:1040px;margin:0 auto;padding:22px 26px;display:flex;align-items:center;gap:22px}
+.si-merk{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;letter-spacing:-.02em;color:var(--ink);text-decoration:none}.si-merk span span{font-weight:400}.si-merk:hover{text-decoration:none}
+.si-nav{margin-left:auto;display:flex;gap:18px;font-size:15px}.si-nav a{color:var(--ink);text-decoration:none}.si-nav a:hover{text-decoration:underline;text-underline-offset:3px}.si-nav a[aria-current]{font-weight:700}
+.si-voet{border-top:1px solid var(--line);margin-top:72px}.si-voet div{max-width:680px;margin:0 auto;padding:18px 26px 26px;font-size:13px;line-height:1.6;display:flex;justify-content:space-between;gap:10px 16px;flex-wrap:wrap}.si-voet a{color:var(--ink);text-decoration:none}.si-voet a:hover{text-decoration:underline}.si-voet span{display:flex;gap:14px;flex-wrap:wrap}
+h1{font-size:clamp(26px,3.6vw,32px)!important;line-height:1.15!important;letter-spacing:-.03em!important;font-weight:700;margin:0 0 10px!important;text-wrap:balance}
+main h2{font-size:21px;line-height:1.25;letter-spacing:-.015em;font-weight:700;margin:52px 0 12px}main h3{font-size:17px;font-weight:700}
+.kicker,.eb{font-size:13px!important;font-weight:600!important;letter-spacing:.06em!important;text-transform:uppercase;margin:0 0 14px!important;color:var(--ink)!important}.kicker .live-dot{display:none}
+.crumbs{font-size:13px!important;margin:0 0 22px!important}.crumbs a{text-decoration:none!important}
+.standfirst,.si-sub{font-size:17px!important;line-height:1.55;margin:0 0 30px}.meta{font-size:13px!important;margin:0 0 26px!important}
+.answer{background:#F3F4F6!important;border:0!important;border-radius:12px!important;padding:18px 22px!important;margin:0 0 30px!important}
+.toc{gap:8px!important;margin:0 0 6px!important}.toc a{border:1px solid var(--ink)!important;border-radius:999px!important;padding:6px 16px!important;font-size:15px!important;text-decoration:none!important}.toc a:hover{background:var(--ink);color:#fff!important}
+.btn,.btn.knop{border-radius:999px!important;font-size:16px!important;font-weight:600!important;padding:11px 22px!important;box-shadow:none!important}.btn.knop{background:var(--ink)!important;border-color:var(--ink)!important;color:#fff!important;text-decoration:none!important}.btn.deel{background:#fff!important;border:1px solid var(--ink)!important;color:var(--ink)!important;text-decoration:none!important}
+.pk{border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;padding:22px 0!important;margin:0!important;background:none!important}.pk:last-of-type{border-bottom:1px solid var(--line)!important}.pk-img img{border-radius:12px!important;background:#F3F4F6!important}.pk-nr{background:#F3F4F6!important}.pk-let{border-left:2px solid var(--ink)!important}.pk-lab{font-size:13px!important}
+dl.rows .r{padding:14px 0!important}details.faq{border-top:1px solid var(--line);padding:16px 0!important}details.faq summary{font-weight:600}
+.card,.rk,.nb,.mk img,.mk-leeg{box-shadow:none!important}.rk{border-radius:12px!important}.rk:hover,.mk:hover img{border-color:var(--ink)!important}
+.si-l{margin:8px 0 0}.si-l a{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding:15px 0;font-weight:600;text-decoration:none!important;line-height:1.4}.si-l a:last-child{border-bottom:1px solid var(--line)}.si-l a>i{flex:none;font-style:normal;font-weight:400}.si-l a small{display:block;font-weight:400;font-size:15px;margin-top:2px}.si-l a:hover{text-decoration:none}.si-l a:hover b{text-decoration:underline;text-underline-offset:3px}
+.si-sec{margin:64px 0 0}.si-sec .eb{margin:0 0 6px!important}
+.nb{background:#F3F4F6!important;border:0!important;border-radius:16px!important;margin-top:72px!important}.nb-kick i{display:none!important}.nb-tr svg{stroke:var(--ink)}.nb-f input[type=email]{border-color:var(--ink)!important;border-radius:999px!important}.nb-f button{border-radius:999px!important}.nb-f input[type=email]:focus{outline:0!important;box-shadow:0 0 0 1px var(--ink)}
+.nw-a,.nwl a{text-decoration:none!important}
+#kx{margin:0 0 8px}.kz-meta,p.kz-meta{color:var(--ink)!important;font-size:13px!important}.kz-meta a{color:var(--ink)!important}.answer.lead{font-size:17px!important;line-height:1.6!important;max-width:none}
+@media(max-width:640px){.si-top-in{padding:16px 18px;gap:14px}.si-nav{gap:14px;font-size:14px}main.wrap{padding:28px 18px 0}.si-voet div{padding:16px 18px 22px}.si-merk{font-size:18px}}`;
 function kop(titel, besch, pad, extra, zoekQ) {
-  return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(titel)}</title><meta name="description" content="${esc(besch)}"><link rel="canonical" href="${HOST}${pad}">${META ? `<meta name="google-site-verification" content="${esc(META)}">` : ''}<meta property="og:title" content="${esc(titel)}"><meta property="og:description" content="${esc(besch)}"><meta property="og:url" content="${HOST}${pad}"><meta property="og:type" content="article"><meta property="og:locale" content="nl_NL"><link rel="icon" type="image/svg+xml" href="https://cdn.kadoly.com/icon/shop/shop-mark.svg?v=1"><link rel="icon" type="image/png" sizes="32x32" href="https://cdn.kadoly.com/icon/shop/icon-32.png?v=1"><link rel="apple-touch-icon" sizes="180x180" href="https://cdn.kadoly.com/icon/shop/apple-180.png?v=1"><meta name="theme-color" content="#ffffff">${extra || ''}<style>${lookNieuw(ACC)}${CSS_KADOLY}${CSS_GIDS}${NB.NB_CSS}</style></head><body>${KOPBALK(zoekQ)}<main class="wrap">`;
+  return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(titel)}</title><meta name="description" content="${esc(besch)}"><link rel="canonical" href="${HOST}${pad}">${META ? `<meta name="google-site-verification" content="${esc(META)}">` : ''}<meta property="og:title" content="${esc(titel)}"><meta property="og:description" content="${esc(besch)}"><meta property="og:url" content="${HOST}${pad}"><meta property="og:type" content="article"><meta property="og:locale" content="nl_NL"><link rel="icon" type="image/svg+xml" href="https://cdn.kadoly.com/icon/shop/shop-mark.svg?v=1"><link rel="icon" type="image/png" sizes="32x32" href="https://cdn.kadoly.com/icon/shop/icon-32.png?v=1"><link rel="apple-touch-icon" sizes="180x180" href="https://cdn.kadoly.com/icon/shop/apple-180.png?v=1"><meta name="theme-color" content="#ffffff">${extra || ''}<style>${lookNieuw(ACC)}${CSS_KADOLY}${CSS_GIDS}${NB.NB_CSS}${CSS_SI}</style></head><body>${SI_KOP(pad)}<main class="wrap">`;
 }
 // merkteken van kadoly.com zelf (kop van kadoly.com, 30 okt uitgelezen)
 const MERK = s => `<svg width="${s}" height="${s}" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><rect width="34" height="34" rx="9" fill="#1D9BF0"/><path d="M17 21l-7-8M17 21l7-8M13 14l-3-1 .6 3.1M23.4 16.1L24 13l-3 1" stroke="#D6ECFC" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M17 28V8M18.6 10.8L17 8l-1.6 2.8" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
 const SHOPMERK = s => `<svg width="${s}" height="${s}" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><rect width="34" height="34" rx="9" fill="#1D9BF0"/><path d="M9 13h14M19 9l4 4-4 4" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M25 21H11M15 25l-4-4 4-4" stroke="#D6ECFC" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
 const KOPBALK = zq => `<header class="kn"><div class="kn-in"><a class="kn-merk" href="/" aria-label="Kadoly gids">${SHOPMERK(30)}<span>Kadoly</span><span class="kn-gids">Gids</span></a><form class="kn-zoek" role="search" action="/zoek" method="get" id="kf"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input type="search" name="q" id="kq" value="${esc(zq || '')}" placeholder="Zoek in Kadoly of stel een vraag" aria-label="Zoek in Kadoly of stel een vraag" autocomplete="off" maxlength="160" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="kz"><div class="kz" id="kz" role="listbox" hidden></div></form><a class="kn-shop" href="https://kadoly.com/shop?utm_source=kadoly-gids&amp;utm_medium=gids&amp;utm_campaign=kop">${SHOPMERK(22)}<span>Shop</span></a></div></header>`;
+// kop en voet in de sealedintent-look: merk links (zwart Kadoly-teken, "kadoly gids"), drie links rechts; voet in één regel
+const SI_MERK = s => `<svg width="${s}" height="${s}" viewBox="0 0 34 34" aria-hidden="true" focusable="false"><rect width="34" height="34" rx="9" fill="#111113"/><path d="M9 13h14M19 9l4 4-4 4" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M25 21H11M15 25l-4-4 4-4" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
+const SI_KOP = pad => { const nu = String(pad || ''); const l = [['/', 'Gidsen'], ['/redactie', 'Redactie'], ['https://kadoly.com/shop?utm_source=kadoly-gids&utm_medium=gids&utm_campaign=kop', 'Shop']]; return `<header class="si-top"><div class="si-top-in"><a class="si-merk" href="/" aria-label="Kadoly gids">${SI_MERK(26)}<span>kadoly<span> gids</span></span></a><nav class="si-nav" aria-label="Hoofdmenu">${l.map(([h, x]) => `<a href="${esc(h)}"${(h === '/' ? nu === '/' : h.startsWith('/') && nu.startsWith(h)) ? ' aria-current="page"' : ''}>${x}</a>`).join('')}</nav></div></header>`; };
+const SI_VOET = `<footer class="si-voet"><div><span>© ${new Date().getFullYear()} Kadoly · ADSFAIR B.V. · KVK 60126035</span><span><a href="https://kadoly.com/shipping">Verzending</a><a href="https://kadoly.com/returns">Retour</a><a href="https://kadoly.com/privacy">Privacy</a><a href="https://wa.me/${WA}" rel="nofollow noopener">App Henkjan</a></span></div></footer>`;
 const VOETBALK = `<footer class="kv"><div class="kv-in"><div class="kv-cols"><div><div class="kv-merk">${SHOPMERK(26)}Kadoly Shop</div><div class="kv-pay"><span>Veilig betalen met</span><img src="https://kadoly.com/img/icons/brands/ideal.svg" alt="iDEAL" width="24" height="22" loading="lazy"><img src="https://kadoly.com/img/icons/brands/paypal.png" alt="PayPal" width="62" height="15" loading="lazy" style="height:14px"><svg viewBox="0 0 38 24" width="32" height="20" role="img" aria-label="Mastercard"><circle cx="14" cy="12" r="9" fill="#EB001B"/><circle cx="24" cy="12" r="9" fill="#F79E1B"/><path d="M19 4.5a9 9 0 0 1 0 15 9 9 0 0 1 0-15z" fill="#FF5F00"/></svg></div></div>
 <div><div class="kv-h">Kopen</div><a href="https://kadoly.com/shipping">Verzending en levering</a><a href="https://kadoly.com/returns">Retourneren</a><a href="https://kadoly.com/buyer-protection">Veilig kopen</a></div><div><div class="kv-h">Gids</div><a href="/">Alle gidsen</a><a href="#" data-kc>Stel een vraag</a><a href="/llms.txt">Voor AI-assistenten</a></div><div><div class="kv-h">Bedrijf</div><a href="https://kadoly.com/about">Over Kadoly Shop</a><a href="https://kadoly.com/help">Hulp en contact</a><a href="https://kadoly.com/review-policy">Reviewbeleid</a></div></div>
 <div class="kv-onder"><span>© ${new Date().getFullYear()} Kadoly Shop · ADSFAIR B.V. · Albert Plesmanplein 20, 2805 AB Gouda · KVK 60126035 · <a href="mailto:henkjan@yoo.rs">henkjan@yoo.rs</a> · <a href="tel:+31655395630">+31 6 55 39 56 30</a></span><span class="kv-legal"><a href="https://kadoly.com/terms">Algemene voorwaarden</a><a href="https://kadoly.com/privacy">Privacybeleid</a><a href="https://kadoly.com/cookies">Cookiebeleid</a></span></div></div></footer>`;
@@ -148,7 +182,26 @@ document.getElementById('kcx').onclick=function(){c.hidden=true};document.getEle
 document.getElementById('kcf').addEventListener('submit',function(x){x.preventDefault();var v=ci.value.trim();ci.value='';vraag(v)});
 document.querySelectorAll('[data-kc]').forEach(function(a){a.addEventListener('click',function(x){x.preventDefault();open('')})});})();</script>`;
 }
-const VOET = (g, kans) => `${NB.blok(g ? g.slug : '_home', { mail: MAILK, info: NBI })}<hr style="border:0;border-top:1px solid var(--line);margin:44px 0 18px"><p class="meta">Een gids van <a href="https://kadoly.com">Kadoly</a>, de webshop met producten van makers. Prijzen en levertijden komen elke paar minuten uit de winkel zelf${g ? ', laatst inhoudelijk bijgewerkt op ' + esc(g.bijgewerkt) : ''}. Wij verdienen aan een bestelling in onze eigen winkel; daarom staat bij elk product ook waarvoor het niet geschikt is.</p><p class="meta"><a href="/">Alle gidsen</a> · <a href="/redactie">Redactie</a> · <a href="/onderzoek-en-bronnen">Onderzoek en bronnen</a> · <a href="#" data-kc>Stel een vraag</a></p></main>${VOETBALK}${CHAT}${hulpScript(g ? g.slug : '_home', kans)}${NB.NB_SCRIPT}${FN_JS(g ? g.slug : 'home')}</body></html>`;
+// De chat (lib/kzux.js, geleend van de keuzehulpen) op elke pagina: staat hij nog niet in de pagina, dan zet VOET hem erbij en schuift de chat
+// zichzelf direct onder de titel (kzux hoog()). o === false: de pagina heeft hem al zelf geplaatst.
+const siRij = (href, titel, sub) => `<a href="${esc(href)}"><span><b>${esc(titel)}</b>${sub ? `<small>${esc(sub)}</small>` : ''}</span><i aria-hidden="true">→</i></a>`;
+const HOME_VRAGEN = ['Cadeau onder 25 euro', 'Iets voor in huis', 'Sinterklaas voor een kind', 'Wanneer is het in huis?'];
+function kadolyChat(g, o = {}) {
+  const slug = o.slug || (g ? g.slug : 'vraag');
+  const faq = o.faq || (g ? (g.faq || []).map(f => ({ q: f.v, a: f.a })) : []);
+  return kzuxBlok({ taal: 'kadoly', site: 'kzuxkadoly', slug, term: o.term || (g ? g.h1.split(':')[0].replace(/\?$/, '') : ''), faq, vragen: o.vragen || (g ? null : HOME_VRAGEN), geenVolg: true, kop: o.kop || (g ? 'Vraag het Kadoly' : 'Wat zoek je?'), ph: o.ph || 'Of typ het hier' });
+}
+// e-mail uit de chat gaat naar de Kadoly-mail (lib/kadoly-nieuws.js, zelfde aanmelding als het blok onderaan, met bevestiging)
+const CHATMAIL_JS = slug => `<script>(function(){var T0=Date.now();window.__cuMail=function(m){return fetch('/nieuws',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email:m,website:'',waar:${JSON.stringify('chat-' + slug)},arm:'chat',ms:Date.now()-T0})}).then(function(r){return r.json()}).then(function(d){if(!d||!d.ok)throw d;return d})};document.querySelectorAll('[data-kc]').forEach(function(a){a.addEventListener('click',function(x){x.preventDefault();var i=document.getElementById('kxq'),k=document.getElementById('kx');if(k)k.scrollIntoView({behavior:'smooth',block:'start'});if(i)try{i.focus({preventScroll:true})}catch(e){}})})})();</script>`;
+// armproef en meting van de knoppen naar de winkel (deel van het oude hulpscript, zonder zoekbalk en oude chat)
+function armScript(slug, kans) {
+  return `<script>(function(){var G=${JSON.stringify(slug)},KANS=${Number(kans) || 0.5};function t(x){try{navigator.sendBeacon('/gidstel?g='+encodeURIComponent(G)+'&s='+x)}catch(e){}}
+var arm;try{arm=localStorage.getItem('kg_arm')}catch(x){}if(arm!=='k'&&arm!=='p'){arm=Math.random()<KANS?'k':'p';try{localStorage.setItem('kg_arm',arm)}catch(x){}}
+function naar(a){if(a.dataset.arm)return;a.dataset.arm=1;a.href+=(a.href.indexOf('?')<0?'?':'&')+'a='+arm;if(arm==='k'&&a.classList.contains('knop')&&/Bekijk bij Kadoly/.test(a.textContent))a.textContent='Bestellen bij Kadoly';}
+document.querySelectorAll('a[href^="/naar/"]').forEach(naar);t('arm-'+arm);try{new MutationObserver(function(){document.querySelectorAll('a[href^="/naar/"]:not([data-arm])').forEach(naar)}).observe(document.body,{childList:true,subtree:true})}catch(x){}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('#kx a[href^="/naar/"]');if(a)t('chat-klik')},true);})();</script>`;
+}
+const VOET = (g, kans, o) => `${o === false ? '' : kadolyChat(g, o || {})}${NB.blok(g ? g.slug : '_home', { mail: MAILK, info: NBI })}<p class="meta" style="margin-top:40px!important">Een gids van <a href="https://kadoly.com">Kadoly</a>, de webshop met producten van makers. Prijzen en levertijden komen elke paar minuten uit de winkel zelf${g ? ', laatst inhoudelijk bijgewerkt op ' + esc(g.bijgewerkt) : ''}. Wij verdienen aan een bestelling in onze eigen winkel; daarom staat bij elk product ook waarvoor het niet geschikt is.</p></main>${SI_VOET}${CHATMAIL_JS(g ? g.slug : 'home')}${armScript(g ? g.slug : '_home', kans)}${NB.NB_SCRIPT}${FN_JS(g ? g.slug : 'home')}</body></html>`;
 
 // zoeken in de shopcatalogus en de gidsen (30 okt, Henkjan: "Zet er ook een zoek boven die alles leert en ook een chat kan worden").
 // Leert: wat mensen aanklikken na een zoekvraag (gk:zk:<hash>) telt mee in de volgorde; elke vraag en vragen zonder uitkomst per dag in gk:zq:<dag>.
@@ -213,6 +266,57 @@ async function chatAntwoord(req, oidc) {
   return { status: 200, j: { ok: true, antwoord, producten: prods, dringend } };
 }
 
+// De lerende chat van de keuzehulpen op gids.kadoly.com (19 nov 2026, Henkjan: "gebruik de lerende chat die we nu in alle keuzehulpen aan het hangen zijn"
+// en "Die lerende chat blijf je lenen van de keuzehulpen want die is dus totaal in beweging en wordt iedere dag beter"): lib/kzux.js en lib/kzchat.js met
+// site 'kadoly'. Hier alleen wat Kadoly eigen is: welke pagina's de chat kent (chatItems) en het antwoord uit de winkel (kzKadoly), met producten,
+// prijs inclusief verzending en bezorgdag van vandaag. Heeft Kadoly niets wat past, dan zegt de chat dat en adviseert hij eerlijk wat je elders zoekt
+// (Henkjan: "Je mag ook prima iets anders adviseren als wij het niet hebben").
+export async function chatItems() {
+  const l = [{ slug: 'vraag', pad: '/', term: 'iets van Kadoly', title: 'Kadoly gids', kort: 'Voorkant van de gids: zoek uit wat de bezoeker zoekt, voor wie en met welk budget, en noem de beste producten uit de winkel.' }];
+  for (const id of LEVENDE()) { const g = GIDSEN[id]; l.push({ slug: id, pad: '/' + id, term: g.h1.split(':')[0], title: g.h1, kort: g.kort, faq: (g.faq || []).map(f => ({ q: f.v, a: f.a })) }); }
+  try { for (const r of await rubrieken()) l.push({ slug: 'rubriek-' + r.c, pad: '/rubriek/' + r.c, term: r.naam.toLowerCase(), title: r.naam + ' bij Kadoly', kort: r.n + ' producten, ' + euro(r.min) + ' tot ' + euro(r.max) + ' inclusief verzending.' }); } catch (e) {}
+  for (const a of RED.nieuwsteEerst()) l.push({ slug: 'redactie-' + a.slug, pad: '/redactie/' + a.slug, term: a.zoekterm || a.titel, title: a.titel, kort: a.besch, faq: (a.faq || []).map(([q, x]) => ({ q, a: String(x).replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/\s*\(\s*\)/g, '') })) });
+  return l;
+}
+const KZ_SYS = `Je bent de chat van gids.kadoly.com, de gids van Kadoly (kadoly.com): een Nederlandse webshop van ADSFAIR B.V. met producten van makers. Je helpt een bezoeker kiezen en je zoekt uit wat hij echt wil.
+Regels:
+- Antwoord in het Nederlands, hoogstens 3 korte zinnen, gewone woorden, geen lijstjes, geen gedachtestreepjes, geen woorden in hoofdletters.
+- Noem alleen producten uit KANDIDATEN, met prijs (inclusief verzending) en zet hun id in "producten" (hoogstens 3, beste eerst). Verzin geen eigenschappen, maten of materialen; staat het er niet, zeg dan dat het op de productpagina staat. Levertijd: neem "in huis rond" letterlijk over.
+- Vraagt iemand naar het goedkoopste, het beste of wat past: noem de concrete keuze met prijs, niet alleen een bandbreedte.
+- Past niets uit KANDIDATEN: zeg eerlijk dat Kadoly het niet heeft en geef één concreet advies waar of waarnaar je dan zoekt (soort product, waar je op let). Noem dan geen prijzen en geen winkels die je niet kent. Zet weet op true als je zo eerlijk hebt geholpen.
+- Past een gids uit GIDSEN beter bij de vraag, zet de slug in "pagina", anders een lege string.
+- Bestelinfo die klopt: betalen met iDEAL, PayPal, creditcard of Klarna, zonder account; het merk verstuurt met track en trace; 14 dagen retour met retourlabel en het hele bedrag terug.
+- Zet "dringend" op true bij een probleem met een bestelling of betaling, een klacht, een vraag om een mens, een grote of zakelijke bestelling, of een cadeau dat zeker op een vaste datum binnen moet zijn terwijl de levertijd krap is. Zeg dan dat Henkjan van Kadoly via WhatsApp meteen helpt.
+- Vraag nooit opnieuw wat de bezoeker al zei. Stel daarna hoogstens één korte vervolgvraag, alleen als het antwoord het advies verandert (voor wie, budget, wanneer nodig), met 2 of 3 korte tikbare antwoorden in "opties" (hoogstens 4 woorden).
+- Vul "intentie" alleen met wat de bezoeker zei: wat, voorWie, budget, wanneer (lege string als onbekend). "samen" is true als de bezoeker samen met anderen beslist.
+Geef alleen JSON: {"a":"antwoord","weet":true,"producten":["oc_..."],"pagina":"","vraag":"","opties":[],"intentie":{"wat":"","voorWie":"","budget":"","wanneer":""},"samen":false,"dringend":false}`;
+const kortNaam = s => { s = String(s || '').replace(/\s+/g, ' ').trim(); const d = s.split(/\s[-–|]\s/)[0]; return (d.length > 46 ? d.slice(0, 46).replace(/\s+\S*$/, '') : d) || s.slice(0, 46); };
+export async function kzKadoly({ slug, vraag, hist, velden, ik, oidc }) {
+  const pg = String(slug || ''); const g = GIDSEN[pg] || null; const vel = velden && typeof velden === 'object' ? velden : {};
+  const eerder = (Array.isArray(hist) ? hist : []).filter(x => x && x[0] !== 'k').map(x => String(x[1] || '')).join(' ');
+  const z1 = await zoek([vel.wat, vel.situatie, vraag].filter(Boolean).join(' '), 10); const z2 = eerder ? await zoek(eerder + ' ' + vraag, 6) : { producten: [] };
+  const z3 = pg.startsWith('rubriek-') ? await zoek(pg.slice(8).replace(/-/g, ' '), 6) : { producten: [] };
+  const cat = await catalogus(); const kand = new Map(); const soort = pid => { const i = cat[pid] || {}; return [i.c, i.s].filter(Boolean).join('/'); };
+  if (g) for (const c of g.keuze) { const i = cat[c.pid]; if (i && i.vr !== false) kand.set(c.pid, { pid: c.pid, naam: c.naam || i.t, merk: i.b || '', prijs: thuis(i), datum: N(i.lt) ? nlDatum(leverDatum(i.lt)) : '', gids: c.label + ': ' + c.waarom + (c.beperking ? ' Let op: ' + c.beperking : '') }); }
+  for (const x of z1.producten.concat(z2.producten, z3.producten)) if (!kand.has(x.pid)) kand.set(x.pid, x);
+  const lijst = [...kand.values()].slice(0, 18);
+  const h = (Array.isArray(hist) ? hist : []).slice(-6).map(x => (x && x[0] === 'k' ? 'Kadoly: ' : 'Bezoeker: ') + String((x && x[1]) || '').slice(0, 300)).join('\n');
+  const user = 'VANDAAG: ' + nlDatum(new Date()) + '\nPAGINA: ' + (g ? g.h1 + '\nKORT ANTWOORD VAN DEZE GIDS: ' + g.kort : pg || 'voorkant van de gids') +
+    '\nGIDSEN (slug: titel): ' + LEVENDE().map(id => id + ': ' + GIDSEN[id].h1).join(' | ') +
+    '\nKANDIDATEN (id | naam | merk | soort | prijs incl. verzending | in huis rond | uitleg uit onze gids):\n' + (lijst.length ? lijst.map(x => [x.pid, x.naam, x.merk || '-', soort(x.pid) || '-', euro(x.prijs), x.datum || 'zie product', x.gids || '-'].join(' | ')).join('\n') : '(geen passende producten gevonden)') +
+    (Array.isArray(ik) && ik.length ? '\nEERDER ZOCHT DEZE BEZOEKER: ' + ik.slice(0, 3).join(' | ') : '') + (h ? '\n\nGESPREK TOT NU:\n' + h : '') + '\n\nNIEUW BERICHT: ' + String(vraag || '').slice(0, 400);
+  const r = await berichten({ fn: 'gids-kz', model: HAIKU, system: KZ_SYS, user, max: 500, oidc, timeout: 20000, directKey: process.env.ANTHROPIC_API_KEY });
+  const m = String(r.txt || '').match(/\{[\s\S]*\}/); const j = m ? JSON.parse(m[0]) : null; if (!j) return null;
+  j.a = String(j.a || '').replace(/\s*[—–]\s*/g, ', ');
+  const prods = (Array.isArray(j.producten) ? j.producten : []).map(id => kand.get(String(id))).filter(Boolean).slice(0, 3);
+  const bron = g ? g.slug : pg.startsWith('rubriek-') || pg.startsWith('redactie-') ? pg.slice(0, 60) : 'zoek';
+  j.verder = prods.map(x => [kortNaam(x.naam) + ' · ' + euro(x.prijs) + (x.datum ? ' · in huis ' + x.datum : ''), '/naar/' + encodeURIComponent(x.pid) + '?g=' + encodeURIComponent(bron) + '&b=chat']);
+  if (j.dringend) j.verder.push(['App Henkjan van Kadoly', 'https://wa.me/' + WA + '?text=' + encodeURIComponent('Hoi Kadoly, ik heb een vraag via de gids: ' + String(vraag || '').slice(0, 200))]);
+  if (j.pagina && GIDSEN[j.pagina] && j.pagina === pg) j.pagina = '';
+  try { await kv.raw(['LPUSH', 'gk:chat', JSON.stringify({ at: Date.now(), p: pg || '_home', a: 'kz', v: String(vraag || '').slice(0, 300), ant: j.a.slice(0, 300), d: j.dringend ? 1 : 0, pr: prods.map(x => x.pid) })]); await kv.raw(['LTRIM', 'gk:chat', '0', '1999']); if (!prods.length) await kv.raw(['HINCRBY', 'gk:d:' + DAG(), 'chat|zonderproduct', '1']); } catch (e) {}
+  return j;
+}
+
 // armproef (30 okt, Henkjan: "Bekijk maar ook direct naar reken af"): de knop gaat naar de productpagina (p) of meteen naar afrekenen (k).
 // Leert: zodra beide armen 40 kliks hebben en de ene duidelijk beter verkoopt (betaald x10, betaling gestart x3, afrekenpagina x1, per klik), krijgt die 80%.
 let KANS = null, KANS_AT = 0;
@@ -261,8 +365,8 @@ async function gidsPagina(g) {
   const toc = [['keuze', 'Onze keuze'], rijen ? ['situatie', 'Welke past bij jou'] : null, g.check ? ['check', 'Snelle check'] : null, (g.uitleg || []).length ? ['uitleg', 'Waar let je op'] : null, ['bestellen', 'Bestellen'], g.faq && g.faq.length ? ['vragen', 'Vragen'] : null, A && A.n ? ['alle', A.def.kop] : null].filter(Boolean);
   return kop(g.titel, g.beschrijving, '/' + g.slug, ogImg + `<script type="application/ld+json">${ldJson(g, items, A)}</script>` + (A && A.n ? NW_CSS : '')) +
     `<article><nav class="crumbs" aria-label="Kruimelpad"><a href="/">Kadoly gids</a> › ${esc(g.h1)}</nav><p class="kicker"><span class="live-dot"></span>${esc(g.kicker)}</p><h1>${esc(g.h1)}</h1>
-<p class="meta">Door de redactie van Kadoly · bijgewerkt <time datetime="${esc(g.bijgewerkt)}">${esc(datumNl(g.bijgewerkt))}</time> · prijs en levertijd van vandaag</p>
-<div class="answer"><p><strong>In het kort.</strong> ${esc(g.kort)}</p></div>
+<p class="meta kz-meta">Door de redactie van Kadoly · bijgewerkt <time datetime="${esc(g.bijgewerkt)}">${esc(datumNl(g.bijgewerkt))}</time> · prijs en levertijd van vandaag</p>
+<div class="answer lead"><p><strong>In het kort.</strong> ${esc(g.kort)}</p></div>
 <nav class="toc" aria-label="Op deze pagina">${toc.map(([id, t]) => `<a href="#${id}">${esc(t)}</a>`).join('')}</nav>
 <h2 id="keuze">Onze keuze</h2>${items.map((x, i) => productKaart(x, g.slug, 'keuze', i === 0, i + 1)).join('')}
 ${rijen ? `<h2 id="situatie">${esc(g.tabelKop || 'Welke past bij jouw situatie?')}</h2><dl class="rows">${rijen}</dl>` : ''}
@@ -275,7 +379,7 @@ ${g.bronnen?.length ? `<section id="bronnen"><h2>Bronnen en beperkingen</h2><p>E
 ${g.faq && g.faq.length ? `<h2 id="vragen">Veelgestelde vragen</h2>${g.faq.map(f => `<details class="faq"><summary>${esc(f.v)}</summary><div class="a"><p>${esc(f.a)}</p></div></details>`).join('')}` : ''}
 ${alleHtml(g, A)}
 <p style="margin:28px 0 0"><a class="btn deel" href="${esc(delen)}" rel="nofollow noopener">Deel deze gids via WhatsApp</a></p>
-${andere.length ? `<h2>Andere gidsen van Kadoly</h2><div class="cards">${andere.map(a => `<a class="card" href="/${esc(a.slug)}"><span class="cat">${esc(a.kicker)}</span><h3>${esc(a.h1)}</h3><p>${esc(a.beschrijving)}</p></a>`).join('')}</div>` : ''}</article>
+${andere.length ? `<section class="si-sec"><p class="eb">Andere gidsen van Kadoly</p><div class="si-l">${andere.slice(0, 8).map(a => `<a href="/${esc(a.slug)}"><span><b>${esc(a.h1)}</b></span><i aria-hidden="true">→</i></a>`).join('')}</div><p style="margin:14px 0 0"><a href="/">Alle ${andere.length + 1} gidsen</a></p></section>` : ''}</article>
 ${baken(g.slug)}` + VOET(g, await armKans());
 }
 
@@ -416,17 +520,15 @@ async function home(kans) {
   const ld = JSON.stringify({ '@context': 'https://schema.org', '@graph': [ORG, { '@type': 'WebSite', name: 'Kadoly gids', url: HOST + '/', publisher: { '@id': HOST + '/#org' }, inLanguage: 'nl-NL' }, { '@type': 'ItemList', name: 'Keuzehulpen van Kadoly', itemListElement: R.map((r, k) => ({ '@type': 'ListItem', position: k + 1, name: r.naam, url: HOST + '/rubriek/' + r.c })).concat(NF.n ? [{ '@type': 'ListItem', position: R.length + 1, name: 'Nieuw bij Kadoly', url: HOST + NIEUW_PAD }] : []) }, { '@type': 'FAQPage', mainEntity: faq.map(([v, a]) => ({ '@type': 'Question', name: v, acceptedAnswer: { '@type': 'Answer', text: a } })) }] }).replace(/</g, '\\u003c');
   const rij = R.map(r => `<div class="r"><dt><a href="/rubriek/${esc(r.c)}">${esc(r.naam)}</a></dt><dd>${r.n} producten, ${euro(r.min)} tot ${euro(r.max)} inclusief verzending. ${esc(Object.entries(r.subs).filter(([x]) => x !== 'overig').sort((a, b) => b[1].length - a[1].length).slice(0, 5).map(([x]) => naamS(x)).join(', '))}</dd></div>`).join('');
   return kop('Kadoly gids: keuzehulp voor alles van Kadoly', `Kies stap voor stap uit ${alle} producten van makers, met prijs inclusief verzending en bezorgdag van vandaag. Eerlijk, ook als niets past.`, '/', `<script type="application/ld+json">${ld}</script>${NW_CSS}`) +
-    `<p class="kicker"><span class="live-dot"></span>Kadoly keuzehulp</p><h1>Eerlijk kiezen, ook als het antwoord niet kopen is</h1><p class="standfirst">Beantwoord een paar vragen en je krijgt de 3 producten die het best bij je passen, met wat het vandaag kost inclusief verzending en wanneer het in huis is. Past niets, dan zeggen we dat.</p>
-${keuzeHulp(R, '', '_home')}
-<section aria-labelledby="lijst"><h2 id="lijst">Verlanglijst, lootjes en gedicht</h2><ul>${W_PAGINAS.map(x => `<li><a href="${x.pad}">${esc(x.naam)}</a></li>`).join('')}</ul></section>
-<p><a href="/alle-producten">Bekijk alle ${alle} beschikbare producten, per rubriek</a></p>
-<p><a href="/onderzoek-en-bronnen">Wat onderzoek wel en niet zegt over ons aanbod</a></p>
-<section aria-labelledby="redactie"><h2 id="redactie">Van de redactie</h2><ul>${RED.nieuwsteEerst().slice(0, 3).map(a => `<li><a href="/redactie/${esc(a.slug)}">${esc(a.titel)}</a></li>`).join('')}</ul><p><a href="/redactie">Alle artikelen</a></p></section>
-<section aria-labelledby="koopchecks"><h2 id="koopchecks">Eerst controleren, dan kiezen</h2><p>Deze koopchecks helpen je om claims en ontbrekende gegevens te beoordelen. We zijn de verkoper en gebruiken externe bronnen; we hebben de producten niet zelf getest.</p><ul><li><a href="/onderzoek-vaas-verse-bloemen">Vaas voor verse bloemen: water, opening en schoonmaken</a></li><li><a href="/onderzoek-tafellamp-lumen">Tafellamp: genoeg leeslicht, accuduur en buitengebruik</a></li><li><a href="/onderzoek-bamboe-textiel-claims">Bamboe textiel: vezels en onderbouwing van claims</a></li></ul><p><a href="/onderzoek-en-bronnen">Alle acht koopchecks en hun bronnen</a></p></section>
-<h2 id="rubrieken">Per rubriek</h2><dl class="rows">${rij}</dl>
-${NF.n ? `<h2 id="nieuw">Nieuw bij Kadoly</h2><p>${NF.n} producten kwamen er de afgelopen ${NIEUW_DAGEN} dagen bij. Dit zijn de nieuwste; <a href="${NIEUW_PAD}">bekijk alles wat nieuw is, per rubriek</a>.</p><ul class="nwl">${NF.L.slice(0, 6).map(i => nieuwRij(i, '_home')).join('')}</ul>` : ''}
-${LEVENDE().length ? `<h2 id="gidsen">Uitgebreide keuzehulpen</h2><ul>${LEVENDE().map(id => GIDSEN[id]).map(x => `<li><a href="/${esc(x.slug)}">${esc(x.h1)}</a></li>`).join('')}</ul>` : ''}
-<h2 id="vragen">Vragen over Kadoly</h2>${faq.map(([v, a]) => `<details class="faq"><summary>${esc(v)}</summary><div class="a"><p>${esc(a)}</p></div></details>`).join('')}${baken('_home')}` + VOET(null, kans);
+    `<p class="kicker">Kadoly gids</p><h1>Eerlijk kiezen, ook als het antwoord niet kopen is</h1><p class="standfirst">${alle} producten van makers. Bij alles de prijs inclusief verzending en de dag dat het in huis is. Past niets, dan zeggen we dat.</p>
+${kadolyChat(null)}
+${LEVENDE().length ? `<section class="si-sec" aria-labelledby="gidsen"><p class="eb" id="gidsen">Gidsen</p><div class="si-l">${LEVENDE().map(id => GIDSEN[id]).map(x => siRij('/' + x.slug, x.h1)).join('')}</div></section>` : ''}
+<section class="si-sec" aria-labelledby="redactie"><p class="eb" id="redactie">Van de redactie</p><div class="si-l">${RED.nieuwsteEerst().slice(0, 3).map(a => siRij('/redactie/' + a.slug, a.titel)).join('')}${siRij('/redactie', 'Alle artikelen van de redactie')}</div></section>
+<section class="si-sec" aria-labelledby="rubrieken"><p class="eb" id="rubrieken">Per rubriek</p><div class="si-l">${R.map(r => siRij('/rubriek/' + r.c, r.naam, r.n + ' producten, ' + euro(r.min) + ' tot ' + euro(r.max) + ' inclusief verzending')).join('')}${siRij('/alle-producten', 'Alle ' + alle + ' producten op een rij')}</div></section>
+${NF.n ? `<section class="si-sec" aria-labelledby="nieuw"><p class="eb" id="nieuw">Nieuw bij Kadoly</p><p>${NF.n} producten kwamen er de afgelopen ${NIEUW_DAGEN} dagen bij.</p><ul class="nwl">${NF.L.slice(0, 4).map(i => nieuwRij(i, '_home')).join('')}</ul><div class="si-l">${siRij(NIEUW_PAD, 'Alles wat nieuw is, per rubriek')}</div></section>` : ''}
+<section class="si-sec" aria-labelledby="lijst"><p class="eb" id="lijst">Gratis hulpmiddelen</p><div class="si-l">${W_PAGINAS.map(x => siRij(x.pad, x.naam)).join('')}</div></section>
+<section class="si-sec" aria-labelledby="koopchecks"><p class="eb" id="koopchecks">Eerst controleren, dan kiezen</p><p>We zijn de verkoper en gebruiken externe bronnen; we hebben de producten niet zelf getest.</p><div class="si-l">${siRij('/onderzoek-vaas-verse-bloemen', 'Vaas voor verse bloemen: water, opening en schoonmaken')}${siRij('/onderzoek-tafellamp-lumen', 'Tafellamp: genoeg leeslicht, accuduur en buitengebruik')}${siRij('/onderzoek-bamboe-textiel-claims', 'Bamboe textiel: vezels en onderbouwing van claims')}${siRij('/onderzoek-en-bronnen', 'Alle koopchecks en hun bronnen')}</div></section>
+<section class="si-sec" aria-labelledby="vragen"><p class="eb" id="vragen">Vragen over Kadoly</p>${faq.map(([v, a]) => `<details class="faq"><summary>${esc(v)}</summary><div class="a"><p>${esc(a)}</p></div></details>`).join('')}</section>${baken('_home')}` + VOET(null, kans, false);
 }
 
 // 13 nov 2026 (Henkjan: verlanglijst voor alles, lootjes, cadeauzoeker; api/w.js): eigen pagina's op deze host, met de dag van de laatste echte inhoudswijziging
@@ -486,7 +588,7 @@ async function feiten(pid) {
 // aanmelding voor de Kadoly-mail en meldingen (lib/kadoly-nieuws.js): /nieuws, /nieuws/bevestig, /nieuws/af, /nieuws/push, /nieuws/bericht, /nieuws/klik, /kadoly-sw.js
 const beschermdHost = h => /\.vercel\.app$/i.test(h);
 let MAILK = false, MAILK_AT = 0, NBI = {}; // staat het mailformulier aan (verzenddomein geverifieerd bij Resend)?
-const kaal = (titel, inhoud, script) => kop(titel + ' | Kadoly', titel, '/nieuws', '<meta name="robots" content="noindex">') + inhoud + '</main>' + VOETBALK + (script || '') + '</body></html>';
+const kaal = (titel, inhoud, script) => kop(titel + ' | Kadoly', titel, '/nieuws', '<meta name="robots" content="noindex">') + inhoud + '</main>' + SI_VOET + (script || '') + '</body></html>';
 const gidsLijst = () => '<h2>Alvast lezen</h2><ul class="toc">' + NB.gidsenNieuw().slice(0, 5).map(g => `<li><a href="/${esc(g.slug)}">${esc(g.h1)}</a></li>`).join('') + '</ul>';
 async function winOpties() { // prijzen voor de winnaar: elk product uit een keuzehulp dat in de winkel staat, tot de prijsgrens incl. verzending
   const cat = await catalogus(), max = await NB.prijsMax(), uit = [], gezien = new Set();
