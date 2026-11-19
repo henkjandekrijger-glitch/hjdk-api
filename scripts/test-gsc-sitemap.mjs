@@ -20,4 +20,5 @@ assert.match(gsc,/op === 'surgery'[\s\S]{0,800}propFor\(l, 'keuzehulp\.best'\)[\
 assert.doesNotMatch(gsc,/op === 'surgery'[\s\S]{0,500}propFor\(l, 'todayin\.email'\)/);
 assert.match(kz,/rows\.push\(\['\/chirurgie\/nl', '2026-11-19'\]\)/);
 assert.match(kz,/ovRegel\('\/chirurgie\/nl', 'Medische ingrepen en tandheelkunde: kosten, klinieken en broncontrole'\)/);
+assert.match(kz,/<a href="\/chirurgie\/nl">Medische ingrepen en tandheelkunde: kosten, klinieken en broncontrole/);
 console.log('ok scoped chirurgie sitemap, canonical ZICHT/GSC scope, root-urlset and visible homepage discovery');
