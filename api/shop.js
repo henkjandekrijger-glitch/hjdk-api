@@ -942,7 +942,12 @@ export default async function handler(req, res) {
 <p class="meta">Voorstel Henkjan en Claude (20 okt): de 3D Houten Uil Spaarpot op €9,95 (thuis €16,40 tegen €35,50 elders). Lokkercampagne loopt sinds 20 okt (PropellerAds 12032438) met de prijs die nu in de shop staat; gaat de prijs omlaag, dan passen we de advertenties aan.</p>
 </main></body></html>`); }
     if (op === 'ttfeed' || op === 'ttfeed.csv') { // 17 nov: productcatalogus voor TikTok (CSV, dagelijks opgehaald); ?vorm=stand geeft alleen de telling
-      const cat = await catalog(true), kaart = (await kv.get(K_KOST).catch(() => null)) || {}; const f = ttFeedCsv(cat.items, kaart, testLabels(await kv.get('hjdk:tt:test').catch(() => null))); res.setHeader('cache-control', 'public, max-age=900');
+      const cat = await catalog(true), kaart = Object.assign({}, (await kv.get(K_KOST).catch(() => null)) || {});
+      try { // 19 nov: Droppery-producten (dp_<id>) kenden geen inkoop in de kostenkaart en vielen als 'onbekend' buiten de productset marge15; inkoop (excl. btw), verzending en de verplichte fitting komen uit de Droppery-feed
+        const dpf = await (await import('../lib/droppery.js')).dpFeed(); const perSku = {}; for (const x of dpf.producten || []) perSku[x.sku] = x;
+        for (const x of dpf.producten || []) { const id = 'dp_' + x.dp_id; if (kaart[id] || x.inkoop == null) continue; const fit = x.fitting_sku && perSku[x.fitting_sku] ? Number(perSku[x.fitting_sku].inkoop) || 0 : 0; kaart[id] = { c: Number(x.inkoop) + fit, z: Number(x.verzend_nl) || 0 }; }
+      } catch (e) {}
+      const f = ttFeedCsv(cat.items, kaart, testLabels(await kv.get('hjdk:tt:test').catch(() => null))); res.setHeader('cache-control', 'public, max-age=900');
       if (url.searchParams.get('vorm') === 'stand') return res.status(200).json(Object.assign({ ok: true }, f.tel));
       res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('content-disposition', 'inline; filename="kadoly-tiktok.csv"'); return res.status(200).send(f.csv); }
     if (op === 'ttproef') { // 17 nov (Henkjan: "iedere dag een aantal testen of toevoegen aan lopende testen om de winnaars te vinden"): dagelijkse producttest op TikTok (lib/tttest.js)
