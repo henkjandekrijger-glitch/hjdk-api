@@ -339,6 +339,7 @@ def week_rechts(c, wk, nr):
 def titelpagina(c, nr):
     x0, x1 = M.marges(False)
     w = x1 - x0
+    label(c, 'New for 2027', x0, H - 2.6 * 72 + 46, kleur=black, s=8.5)
     y = H - 2.6 * 72
     c.setFont('PopB', 30)
     for r in ['LASTING', 'CHANGE', 'WORKBOOK']:
@@ -349,6 +350,7 @@ def titelpagina(c, nr):
     c.line(x0, y, x0 + 50, y)
     y -= 26
     y = tekst(c, I.ONDERTITEL, x0, y, w * 0.8, f='Lora', s=13, lead=18)
+    tekst(c, '\u201cDon\u2019t throw away another year.\u201d', x0, y - 22, w, f='LoraI', s=15, lead=19)
     c.setFont('PopM', 11)
     c.drawString(x0, 1.3 * 72, I.AUTEUR.upper())
     c.setFont('LoraI', 10)
