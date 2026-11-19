@@ -211,9 +211,6 @@ export default async function handler(req, res) {
     out.log = ((await kv.get(K.log)) || []).slice(0, 30);
     res.setHeader('cache-control', 'no-store'); return res.status(200).json(out);
   }
-  const m = marketFor(req); if (!m) return res.status(404).send('unknown site');
-  const path = '/' + String(q.get('slug') || '');
-  if (GSC_FILES.includes(path.slice(1))) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send('google-site-verification: ' + path.slice(1)); } // eigendomsbewijs Search Console
   if (op === 'kdpoverdracht') { // overdracht KDP-boeken voor een ander account of andere chat (Henkjan 19 nov 2026: "Zet handover op vercel zodat ander account kan overnemen .")
     const host = String(req.headers['x-forwarded-host'] || req.headers.host || ''); if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
     const lees = (f) => { for (const x of [join(process.cwd(), f), new URL('../' + f, import.meta.url).pathname]) { try { return readFileSync(x, 'utf8'); } catch (e) {} } return '(' + f + ' niet gevonden)'; };
@@ -222,6 +219,9 @@ export default async function handler(req, res) {
     const md = kop + lees('OVERDRACHT-KDP.md') + '\n\n---\n\n' + lees('kdp/rapport.md') + '\n\n---\n\n' + lees('kdp/wachtrij.md') + '\n\n---\n\n' + lees('kdp/boekwedstrijd.md');
     res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex'); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return res.status(200).send(md);
   }
+  const m = marketFor(req); if (!m) return res.status(404).send('unknown site');
+  const path = '/' + String(q.get('slug') || '');
+  if (GSC_FILES.includes(path.slice(1))) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send('google-site-verification: ' + path.slice(1)); } // eigendomsbewijs Search Console
   if (op === 'boekstand') { // organisch resultaat van de keuzehulpen voor de KDP-rondes (Henkjan 15 nov 2026: "Geef hier ook altijd organische resultaten van de keuzehulpen")
     const dag = (n) => new Date(Date.now() - n * 864e5).toISOString().slice(0, 10); const d7 = [0, 1, 2, 3, 4, 5, 6].map(dag); const d28 = Array.from({ length: 28 }, (_, i) => dag(i));
     const site = async (id, orgKey) => { let mt = null; for (const d of [dag(0), dag(1)]) { mt = await kv.get('zicht:meting:' + id + ':' + d).catch(() => null); if (mt) break; }
