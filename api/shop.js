@@ -32,7 +32,7 @@ import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
 import { pinCohortEntries, PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, GEDRAG, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel, ttEvent } from '../lib/shopdirect.js';
 import { ttFeedCsv, ttVideo, TT_VIDEO, TT_REGEL, TT_GROEPEN, ttSleutel, ttKoppelUrl, ttRuil, ttRapport, ttAds, ttUit, ttOordeel, ttMeld, ttTekst } from '../lib/tiktok.js';
-import { WH_BUDGET_MAX, whPixelHtml, whPage, whopZetOptimalisatie, whEvent, whopKlaar, bewezenRonde, bewezenPlan, BEWEZEN_MARGE, whopUpload, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd, whProject, whLead, WH_PROJECTEN, koppelWaid, whopAan, whopZetDoel, whFormBouw, leadForm, whFormFix } from '../lib/whop.js';
+import { WH_BUDGET_MAX, whLpvBouw, whPixelHtml, whPage, whopZetOptimalisatie, whEvent, whopKlaar, bewezenRonde, bewezenPlan, BEWEZEN_MARGE, whopUpload, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd, whProject, whLead, WH_PROJECTEN, koppelWaid, whopAan, whopZetDoel, whFormBouw, leadForm, whFormFix } from '../lib/whop.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
 import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
@@ -1282,6 +1282,12 @@ export default async function handler(req, res) {
     if (op === 'whleadstand') { // tellingen per project per dag (alleen aantallen)
       const out = {}; for (const p of Object.keys(WH_PROJECTEN)) { const pr = whProject(p); let t = {}; try { const h = await kv.raw(['HGETALL', 'hjdk:whl:tel:' + p]); if (Array.isArray(h)) for (let i = 0; i + 1 < h.length; i += 2) t[h[i]] = num(h[i + 1]); else t = h || {}; } catch (e) {} out[p] = { klaar: pr.klaar, sleutel: !!pr.key, bedrijf: !!pr.biz, tellingen: t }; }
       return res.status(200).json({ ok: true, projecten: out }); }
+    if (op === 'whlpv') { // 19 nov (Henkjan: "Ja het moet gaan leren ... JA dus ."): nieuwe campagne op landingspaginaweergaven met de advertenties die nu aan staan, oude op pauze; zonder &uitvoeren=1 alleen het plan; beschermde host
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const budget = Math.min(WH_BUDGET_MAX, Math.max(5, Number(url.searchParams.get('budget')) || WH_BUDGET_MAX)); const camp = await whopCampagnes(); const oud = String(url.searchParams.get('oud') || (camp.ok && camp.campagnes[0] ? camp.campagnes[0].id : '')).replace(/[^A-Za-z0-9_]/g, '');
+      const r = await whLpvBouw(oud, budget, url.searchParams.get('uitvoeren') === '1');
+      if (r && !r.droog) { try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'wissel naar landingspaginaweergaven (Henkjan 19 nov: "JA dus"): ' + JSON.stringify(r.log || r).slice(0, 600) })]); await kv.raw(['LPUSH', 'mm:handover:log', JSON.stringify({ t: new Date().toISOString(), wie: 'whop-lpv', tekst: 'Kadoly Meta: nieuwe campagne ' + (r.nieuweCampagne || '-') + ' op landingspaginaweergaven, budget $' + budget + ', oude ' + oud + ' op pauze' })]); } catch (e) {} }
+      return res.status(200).json(r); }
     if (op === 'whopt') { // 19 nov (Henkjan: "Ja het moet gaan leren ... JA dus ."): optimalisatie van de advertentiegroep(en) van de Kadoly-campagne; alleen via de beschermde host
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const goal = String(url.searchParams.get('goal') || ''); const camp = await whopCampagnes(); const cid = camp.ok && camp.campagnes[0] ? camp.campagnes[0].id : null; const g = cid ? await whopGroepen(cid) : { groepen: [] };
