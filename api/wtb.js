@@ -10,6 +10,9 @@ import { kzuxBlok, zoekLogJs } from '../lib/kzux.js';
 import { kv } from '../lib/db.js';
 import { organicStatus } from '../lib/organic.js';
 import { contentDate } from '../lib/organic-policy.js';
+import { WTB_CLUSTER } from '../lib/wtb-hand.js';
+// onderwerpclusters (lib/wtb-hand.js): gidsen in hetzelfde cluster linken altijd naar elkaar, ook zonder verwant per gids (19 nov 2026, batterijcluster)
+const zelfdeCluster = (mid, a, b) => (WTB_CLUSTER[mid] || []).some(c => c.includes(a) && c.includes(b));
 import { lookNieuw } from '../lib/look.js';
 import { HUISSTIJL_CSS, FAVICON, voetEenRegel, chatErbij } from '../lib/huisstijl.js';
 import { FN_JS } from '../lib/funnel.js'; // funnel per persoon (18 nov 2026)
@@ -111,7 +114,7 @@ async function vindLijst(id) { const v = VIND[id]; if (v && Date.now() - v.at < 
 async function page(m, it, all, req) {
   const s = m.s; const base = 'https://' + m.host; const a0 = guideAnswers(it, new URL(req.url,'http://x').searchParams.get('answers'));
   const adv = await advice(m, it, a0, req.headers['x-vercel-ip-country']);
-  const boost = new Set((await kv.get('hjdk:gsc:' + m.id + ':boost').catch(() => null)) || []); const sc = x => (x.cat === it.cat ? 2 : 0) + (boost.has(x.slug) ? 1 : 0) + ((it.verwant || []).includes(x.slug) || (x.verwant || []).includes(it.slug) ? 20 : 0);
+  const boost = new Set((await kv.get('hjdk:gsc:' + m.id + ':boost').catch(() => null)) || []); const sc = x => (x.cat === it.cat ? 2 : 0) + (boost.has(x.slug) ? 1 : 0) + ((it.verwant || []).includes(x.slug) || (x.verwant || []).includes(it.slug) || zelfdeCluster(m.id, it.slug, x.slug) ? 20 : 0);
   const KW = await kwaliteit(m.id); const DUN = (KW.dun || {})[it.slug]; const wacht = new Set(KW.wacht || []);
   // kwaliteitsronde: geen links naar uitgesloten pagina's, extra links naar pagina's die Google nog niet las, "veel gezocht" naar de sterkste
   const sc2 = x => sc(x) + (wacht.has(x.slug) && x.cat === it.cat ? 1.5 : 0);
