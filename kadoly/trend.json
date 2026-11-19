@@ -1,20 +1,31 @@
 {
  "uitleg": "Producten die passen bij wat nu trending is op TikTok NL. De dagelijkse TikTok-trendscan (geplande taak 'Kadoly TikTok-trendscan') zet hier hoogstens 10 product-id's met de trend erbij; /api/shop?op=videoplan (lib/kadolyvideoplan.js) geeft ze voorrang in de video's van de nacht.",
- "bijgewerkt": "2026-11-18",
+ "bijgewerkt": "2026-11-19",
  "pids": [
+  "oc_4173959227441153",
   "oc_4174003357777921",
   "oc_4174003356876801",
-  "oc_4173959227441153",
+  "oc_4174003419709441",
+  "oc_4174003419430913",
   "oc_4174003731562498",
-  "oc_4174003731808258",
   "oc_4174003732054018",
   "oc_4174002202804226",
-  "oc_4174002165055489"
+  "oc_4174002165055489",
+  "oc_4174003731808258"
  ],
  "trends": [
   {
+   "hashtag": "deko",
+   "rank_change": 43,
+   "woord": "lantaarn",
+   "pids": [
+    "oc_4174003419709441",
+    "oc_4174003419430913"
+   ]
+  },
+  {
    "hashtag": "christmastree",
-   "rank_change": 12,
+   "rank_change": 17,
    "woord": "kerstboom",
    "pids": [
     "oc_4174003357777921"
@@ -22,7 +33,7 @@
   },
   {
    "hashtag": "uitzet",
-   "rank_change": 19,
+   "rank_change": 12,
    "woord": "servies",
    "pids": [
     "oc_4174003356876801"
@@ -30,7 +41,7 @@
   },
   {
    "hashtag": "woonkamerinspiratie",
-   "rank_change": 14,
+   "rank_change": 11,
    "woord": "lamp",
    "pids": [
     "oc_4173959227441153"
@@ -38,12 +49,12 @@
   },
   {
    "hashtag": "cozyhome",
-   "rank_change": 9,
+   "rank_change": 7,
    "woord": "deken, tafelhaard",
    "pids": [
     "oc_4174003731562498",
-    "oc_4174003731808258",
     "oc_4174003732054018",
+    "oc_4174003731808258",
     "oc_4174002202804226",
     "oc_4174002165055489"
    ]
