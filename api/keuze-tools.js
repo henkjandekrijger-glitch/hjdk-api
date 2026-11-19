@@ -47,8 +47,8 @@ export default async function handler(req, res) {
   { // huisstijl van alle keuzehulpen (lib/huisstijl.js, 18 nov 2026): elke HTML-pagina van deze rekenhulpen en gidsen krijgt dezelfde kop, voet en opmaak
     const tl = q.get('tool') || '', mk = String(q.get('market') || q.get('m') || 'nl');
     if (!/^(cur|tsc|voorkant)$/.test(tl)) { const H = await import('../lib/huisstijl.js'); const st = tl === 'nexy' || /nexy\.help/.test(String(req.headers.host || '')) ? 'nexy' : mk === 'us' || mk === 'en' ? 'us' : mk === 'de' ? 'de' : 'nl';
-      const G = tl === 'rdam' ? 'rotterdam' : tl === 'zorg' ? 'zorg' : tl === 'nexy' ? 'nexy' : 'rekenhulpen', P = st === 'us' ? 'wtbus' : st === 'de' ? 'wtbde' : st === 'nexy' ? 'nexy' : 'kz';
-      H.metHuisstijl(res, st, { meet: { P, G }, chat: tl === 'rdam' ? { term: 'diensten in Rotterdam', slug: 'rotterdam' } : true, voetExtra: tl === 'rdam' ? 'Gegevens uit OpenStreetMap (© OpenStreetMap-bijdragers, ODbL) en reviewscores met link naar de bron; de ranglijst is onze eigen berekening' : '' }); }
+      const G = tl === 'rdam' ? 'rotterdam' : tl === 'huis' ? 'huis' : tl === 'zorg' ? 'zorg' : tl === 'nexy' ? 'nexy' : 'rekenhulpen', P = st === 'us' ? 'wtbus' : st === 'de' ? 'wtbde' : st === 'nexy' ? 'nexy' : 'kz';
+      H.metHuisstijl(res, st, { meet: { P, G }, chat: tl === 'rdam' ? { term: 'diensten in Rotterdam', slug: 'rotterdam' } : tl === 'huis' ? { term: 'huis kopen', slug: 'huis-kopen' } : true, voetExtra: tl === 'rdam' ? 'Gegevens uit OpenStreetMap (© OpenStreetMap-bijdragers, ODbL) en reviewscores met link naar de bron; de ranglijst is onze eigen berekening' : tl === 'huis' ? 'Makelaars uit OpenStreetMap (© OpenStreetMap-bijdragers, ODbL), zonder scores; bedragen met bron en datum' : '' }); }
   }
   if(q.get('tool')==='nexy'){ // nexy.help: AI-keuzehulp (lib/nexyhelp.js, 17 nov 2026)
     const N=await import('../lib/nexyhelp.js');
@@ -100,6 +100,16 @@ export default async function handler(req, res) {
     if(op==='sitemap'){const x=await R.sitemap();res.setHeader('content-type','application/xml; charset=utf-8');res.setHeader('cache-control','public, s-maxage=3600');return res.status(200).send(x.xml);}
     const html=q.get('z')?await R.zaakPagina(q.get('d'),q.get('z')):q.get('d')?await R.dienstPagina(q.get('d')):await R.hub();
     res.setHeader('content-type','text/html; charset=utf-8');if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/rotterdam">Alle diensten in Rotterdam</a></p>');}
+    res.setHeader('cache-control','public, s-maxage=300, stale-while-revalidate=3600');return res.status(200).send(html);}
+  if(q.get('tool')==='huis'){ // huis kopen en makelaars per plaats (lib/huiskopen.js, 19 nov 2026)
+    const HK=await import('../lib/huiskopen.js');const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''))||(process.env.CRON_SECRET&&String(req.headers.authorization||'')==='Bearer '+process.env.CRON_SECRET);
+    if(op==='ververs'){res.setHeader('cache-control','no-store');if(!beschermd)return res.status(403).json({ok:false});const r=q.get('m')?await HK.ververs(q.get('m')):await HK.verversOudste();const m=await HK.meldNieuw().catch(e=>({fout:String(e.message||e).slice(0,80)}));return res.status(200).json({...r,indexnow:m});}
+    if(op==='stand'){res.setHeader('cache-control','no-store');return res.status(200).json(await HK.stand());}
+    if(op==='sitemap'){const x=await HK.sitemap();res.setHeader('content-type','application/xml; charset=utf-8');res.setHeader('cache-control','public, s-maxage=3600');return res.status(200).send(x.xml);}
+    const m=String(q.get('m')||'').toLowerCase(),z=String(q.get('z')||'').toLowerCase();
+    if(m==='rotterdam'){res.setHeader('location','/rotterdam/makelaar'+(z?'/'+z:''));return res.status(301).end();}
+    const html=q.has('m')?(z?await HK.zaakPagina(m,z):m&&m!=='hub'?await HK.plaatsPagina(m):await HK.hub()):await HK.huisKopen();
+    res.setHeader('content-type','text/html; charset=utf-8');if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/makelaar">Makelaars per plaats</a> · <a href="/huis-kopen">Huis kopen</a></p>');}
     res.setHeader('cache-control','public, s-maxage=300, stale-while-revalidate=3600');return res.status(200).send(html);}
   if(q.get('tool')==='intentie'){ // intentielog van de vraagbalk en het zoekvak (lib/intentie.js, 15 nov 2026); stand openbaar zonder de vragen, met vragen op de beschermde host
     const I=await import('../lib/intentie.js');res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');

@@ -257,6 +257,10 @@
       "schedule": "20 */3 * * *"
     },
     {
+      "path": "/api/keuze-tools?tool=huis&op=ververs",
+      "schedule": "40 */4 * * *"
+    },
+    {
       "path": "/api/keuze-tools?tool=rdam&op=verrijk",
       "schedule": "50 */2 * * *"
     },
@@ -859,6 +863,56 @@
         }
       ],
       "destination": "/api/keuze-tools?tool=zorg"
+    },
+    {
+      "source": "/huis-kopen/sitemap.xml",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=huis&op=sitemap"
+    },
+    {
+      "source": "/huis-kopen",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=huis"
+    },
+    {
+      "source": "/makelaar/:m/:z",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=huis&m=:m&z=:z"
+    },
+    {
+      "source": "/makelaar/:m",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=huis&m=:m"
+    },
+    {
+      "source": "/makelaar",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=huis&m=hub"
     },
     {
       "source": "/rotterdam/sitemap.xml",
