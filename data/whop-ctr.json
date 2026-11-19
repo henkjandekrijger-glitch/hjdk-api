@@ -1,0 +1,77 @@
+{
+  "opmerking": "19 nov 2026, Henkjan: \"WHOP moet gewoon beter ingeregeld worden die campagne betere creatives betere CTA . Als CTR niet boven 1% kill en nieuwe ad .\" Nieuwe advertenties voor de bewezen producten: een eigen beeld (stijl band of warm, getekend door /api/shop/img?t=ig&s=...), drie teksten en drie koppen per advertentie (Meta kiest zelf de beste combinatie) en een andere knop. Alleen feiten uit de producttitel en de landingspagina, geen prijzen (Henkjan 29 okt). Volgorde per product = volgorde van inzetten; de ronde neemt de eerste hoek die nog niet als advertentie bestaat.",
+  "regel": { "ctrMin": 0.01, "minVert": 300, "perRonde": 4 },
+  "voet": "14 dagen bedenktijd · betalen met iDEAL",
+  "producten": [
+    { "naam": "Tavellio lamp", "pid": "oc_4173959227441153", "hoeken": [
+      { "hoek": "geen stopcontact", "stijl": "band", "band": "Oplaadbaar, zonder snoer", "cta": "order_now",
+        "koppen": ["Sfeerlicht zonder snoer", "Licht waar geen stopcontact is", "Deze lamp kan overal staan"],
+        "teksten": ["Geen stopcontact in de buurt? Deze lamp van Tavellio laad je op en zet je neer waar je wilt: op tafel, in de vensterbank of naast je bed.", "Eén keer opladen en je hebt sfeerlicht op de eettafel, zonder snoer over het tafelkleed.", "Ontwerp van Tavellio uit Amsterdam. Oplaadbaar en draadloos, dus zo mee van de bank naar het balkon."],
+        "omschrijving": "Draadloze lamp van Tavellio" },
+      { "hoek": "warm cadeau", "stijl": "warm", "band": "Een cadeau dat elke avond aangaat", "cta": "shop_now",
+        "koppen": ["Het cadeau dat elke avond aangaat", "Voor wie houdt van sfeer", "Licht als cadeau"],
+        "teksten": ["Op zoek naar een cadeau dat echt gebruikt wordt? Deze oplaadbare lamp van Tavellio staat elke avond aan.", "Sfeerlicht zonder snoer, ontworpen in Amsterdam. Mooi ingepakt onder de boom of in de schoen.", "Iedereen heeft een plek waar een lamp mist. Deze heeft geen stopcontact nodig."],
+        "omschrijving": "Ontwerp van Tavellio uit Amsterdam" }
+    ]},
+    { "naam": "Wollen deken MoST", "pid": "oc_4174003731562498", "hoeken": [
+      { "hoek": "koude avond", "stijl": "band", "band": "100% wol", "cta": "order_now",
+        "koppen": ["Warm de winter door", "100% wol voor op de bank", "Kruip eronder"],
+        "teksten": ["Koude avond, warme bank. Deze deken van MoST is van 100% wol, met een vrolijk zigzagpatroon.", "Wol is warm en ademt. Deze deken van MoST ligt zo over de bank.", "De verwarming een graadje lager en toch warm: een wollen deken van MoST met zigzagpatroon."],
+        "omschrijving": "Wollen deken van MoST" },
+      { "hoek": "cadeau voor haar", "stijl": "warm", "band": "Cadeau voor koude avonden", "cta": "shop_now",
+        "koppen": ["Een cadeau om onder te kruipen", "Warm cadeau voor de feestdagen", "Iets dat jaren meegaat"],
+        "teksten": ["Een cadeau dat elke winter terugkomt: een deken van 100% wol van MoST.", "Voor wie altijd koude voeten heeft op de bank. Wol, zigzagpatroon, jarenlang mooi.", "Geen gadget maar iets dat blijft: een wollen deken van MoST."],
+        "omschrijving": "100% wol, zigzagpatroon" }
+    ]},
+    { "naam": "Serviesset steengoed", "pid": "oc_4174003356876801", "hoeken": [
+      { "hoek": "gedekte tafel", "stijl": "band", "band": "16-delig voor 4 personen", "cta": "order_now",
+        "koppen": ["In één keer een gedekte tafel", "Klaar voor de feestdagen", "Nieuw servies voor de kerstdis"],
+        "teksten": ["Een complete serviesset van 16 delen voor 4 personen, van steengoed. In één doos in huis.", "De feestdagen komen eraan. Met deze 16-delige set van steengoed staat de tafel in één keer.", "Steengoed is stevig en past bij elke tafel. 16 delen voor 4 personen."],
+        "omschrijving": "16-delige set van steengoed" },
+      { "hoek": "elke dag", "stijl": "warm", "band": "Steengoed voor elke dag", "cta": "see_more",
+        "koppen": ["Servies voor elke dag", "Rustig servies dat overal bij past", "Eindelijk een set die bij elkaar past"],
+        "teksten": ["Losse borden die niet bij elkaar passen? Deze serviesset van steengoed is 16-delig voor 4 personen.", "Rustige kleur, stevig steengoed. Een set voor elke dag en voor als er bezoek komt.", "Ontbijt, lunch, diner: 16 delen steengoed voor 4 personen."],
+        "omschrijving": "Steengoed, 4 personen" }
+    ]},
+    { "naam": "Snijplank eiken", "pid": "oc_4173957643665409", "hoeken": [
+      { "hoek": "aan tafel", "stijl": "band", "band": "Eiken, met sapgroef", "cta": "order_now",
+        "koppen": ["Van snijplank naar tafel", "Snijden en serveren op eiken", "Een plank die op tafel mag"],
+        "teksten": ["Vlees snijden en zo op tafel zetten. Eiken snijplank met sapgroef en twee handvatten.", "Kaas, worst, brood: deze eiken plank is mooi genoeg om op tafel te laten staan.", "Met de sapgroef blijft het sap op de plank en niet op het tafelkleed."],
+        "omschrijving": "Eiken snijplank met handvatten" },
+      { "hoek": "voor de kok", "stijl": "warm", "band": "Voor wie graag kookt", "cta": "shop_now",
+        "koppen": ["Cadeau voor wie graag kookt", "Een cadeau dat elke dag gebruikt wordt", "Eiken voor de keuken"],
+        "teksten": ["Weet je niet wat je een kok moet geven? Een eiken snijplank met sapgroef ligt elke dag op het aanrecht.", "Eiken plank met sapgroef en twee handvatten. Een cadeau dat jaren meegaat.", "Voor de gastheer of gastvrouw die altijd een plank met hapjes neerzet."],
+        "omschrijving": "Eiken, sapgroef, twee handvatten" }
+    ]},
+    { "naam": "Lantaarn zwart", "pid": "oc_4174003419709441", "hoeken": [
+      { "hoek": "donkere avond", "stijl": "band", "band": "Sfeer voor donkere avonden", "cta": "order_now",
+        "koppen": ["Sfeer in de donkere maanden", "Kaars erin en klaar", "De hoek die nog licht mist"],
+        "teksten": ["Om vijf uur al donker? Zet een kaars in deze zwarte lantaarn van Mica Decorations en je kamer is meteen anders.", "Strak, zwart en modern. Op tafel, in de vensterbank of buiten bij de deur.", "Een kaars in een lantaarn geeft meer sfeer dan een lamp. Deze is van Mica Decorations."],
+        "omschrijving": "Zwarte lantaarn van Mica Decorations" },
+      { "hoek": "vensterbank", "stijl": "warm", "band": "Op tafel of in de vensterbank", "cta": "see_more",
+        "koppen": ["Mooi in de vensterbank", "Strak en zwart", "Licht voor de feestdagen"],
+        "teksten": ["Een moderne zwarte lantaarn die past bij elk interieur. Mooi met een kaars erin.", "Voor de vensterbank, de eettafel of de voordeur. Lantaarn van Mica Decorations.", "Feestdagen in huis: een lantaarn met een kaars doet het altijd."],
+        "omschrijving": "Moderne lantaarn voor binnen" }
+    ]},
+    { "naam": "Backgammon", "pid": "oc_4174004790755329", "hoeken": [
+      { "hoek": "spelavond", "stijl": "band", "band": "Acryl, wit en bruin", "cta": "order_now",
+        "koppen": ["Spelavond met stijl", "Backgammon die op tafel mag blijven", "Een spel dat je laat liggen"],
+        "teksten": ["Een backgammonset die je niet in de kast stopt. Acryl in wit en bruin, 25 bij 38 cm.", "Telefoon weg, bord op tafel. Backgammon van Aulica voor lange avonden.", "Mooi genoeg voor op de salontafel, gemaakt om elke avond mee te spelen."],
+        "omschrijving": "Backgammon van Aulica" },
+      { "hoek": "cadeau voor hem", "stijl": "warm", "band": "Cadeau voor de spelletjesfan", "cta": "shop_now",
+        "koppen": ["Cadeau voor de spelletjesfan", "Voor wie altijd wil winnen", "Een cadeau voor samen"],
+        "teksten": ["Ken je iemand die altijd een potje wil spelen? Deze backgammonset van acryl is een cadeau dat op tafel blijft liggen.", "Wit en bruin acryl, strak ontwerp van Aulica. Voor vader, opa of je beste vriend.", "Een cadeau dat je samen gebruikt: backgammon voor de feestdagen."],
+        "omschrijving": "Acryl backgammonset" }
+    ]},
+    { "naam": "Bestekset goud", "pid": "oc_4174004924841985", "hoeken": [
+      { "hoek": "kerstdis", "stijl": "band", "band": "24-delig voor 6 personen", "cta": "order_now",
+        "koppen": ["Een kersttafel in goud", "Goud op tafel deze feestdagen", "Bestek dat opvalt"],
+        "teksten": ["Zes personen aan tafel met kerst? Deze gouden bestekset van Aulica is 24-delig.", "Een witte tafel met gouden bestek ziet er meteen feestelijk uit.", "24 delen in goud, voor 6 personen aan tafel."],
+        "omschrijving": "Gouden bestekset van Aulica" },
+      { "hoek": "nieuwe start", "stijl": "warm", "band": "De tafel in goud", "cta": "see_more",
+        "koppen": ["Je tafel in één keer anders", "Bestek dat je wilt laten zien", "Goud voor elke dag"],
+        "teksten": ["Nieuw bestek en de tafel ziet er meteen anders uit. 24 delen in goud voor 6 personen.", "Voor wie graag gasten ontvangt: gouden bestek van Aulica.", "Feestelijk met kerst, mooi op elke doordeweekse avond."],
+        "omschrijving": "24 delen, 6 personen" }
+    ]}
+  ]
+}
