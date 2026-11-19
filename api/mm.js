@@ -151,6 +151,13 @@ export default async function handler(req, res) {
       return test ? res.status(200).json(Object.assign({ ok: !!uit && !uit.fout }, uit || { fout: 'ongeldige vid (16 hex)' })) : res.status(204).end();
     }
     if (op === 'go') return await goKlik(req, res, url, q);
+    if (op === 'geven' || op === 'gevenstand') { // geven: echte antwoorden op vragen over Curaçao (lib/geven.js, Henkjan 19 nov 2026)
+      const G = await import('../lib/geven.js');
+      if (op === 'gevenstand') return res.status(200).json(await G.stand(Math.min(14, Number(q('dagen')) || 3)));
+      const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+      const droog = !(isCron || beschermd(req)) || q('droog') === '1';
+      return res.status(200).json(await G.ronde({ droog }));
+    }
     if (op.startsWith('dist')) { // Clickmind distributie: gerichte reacties, korte links en wat werkt (lib/distlus.js, Henkjan 19 nov 2026)
       const D = await import('../lib/distlus.js'); res.setHeader('cache-control', 'no-store');
       if (op === 'distklik') return await D.klikAntwoord(req, res, q('c'));

@@ -169,6 +169,10 @@
       "schedule": "40 6 * * *"
     },
     {
+      "path": "/api/mm?op=geven",
+      "schedule": "41 * * * *"
+    },
+    {
       "path": "/api/sealed?op=indexnow",
       "schedule": "10 7 * * *"
     },
