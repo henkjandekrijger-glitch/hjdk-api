@@ -35,7 +35,7 @@ body {{ width: {W}in; height: {H}in; position: relative; background: #fff; overf
 .badge {{ width: 1.28in; height: 1.28in; border-radius: 50%; background: {ROOD}; color: #fff; text-align: center; transform: rotate(8deg); }}
 .badge .k {{ font-family: PopB; font-size: 9.5pt; letter-spacing: 0.18em; margin-top: 0.27in; }}
 .badge .j {{ font-family: IDB; font-size: 30pt; line-height: 1; margin-top: 0.02in; }}
-.achter h2 {{ font-family: IDB; font-size: 20pt; line-height: 1.12; margin: 0; }}
+.achter h2 {{ font-family: IDB; font-size: 30pt; line-height: 1.05; margin: 0; }}
 .achter p, .achter li {{ font-family: Lora; font-size: 11.2pt; line-height: 1.45; margin: 0; }}
 .achter ul {{ margin: 0; padding: 0; list-style: none; }}
 .achter li {{ padding-left: 0.22in; position: relative; margin-bottom: 0.06in; }}
@@ -61,18 +61,18 @@ body {{ width: {W}in; height: {H}in; position: relative; background: #fff; overf
 <div class="abs rug">{'<div class="rugtekst">LASTING CHANGE WORKBOOK &nbsp;&middot;&nbsp; JOHN WARRIOR</div>' if rug_tekst else ''}</div>
 
 <div class="abs achter">
-  <div class="abs" style="left:0.55in; top:0.6in; width:4.9in;">
-    <h2>Another year is almost over.<br>Will the next one look exactly the same?</h2>
-    <p style="margin-top:0.2in">Every January starts with big plans. By February the old habits are back. That is not a lack of willpower. It is the lack of a system that fits into a normal, busy day.</p>
-    <p style="margin-top:0.14in">This workbook is that system: <b>one habit, about 3 minutes a day</b>. No lectures, no 5 a.m. miracle routine. Just small daily moves you actually finish, and a check-in that takes 30 seconds.</p>
+  <div class="abs" style="left:0.55in; top:0.62in; width:4.9in;">
+    <h2>Make <span style="color:{ROOD}">2027</span> the year<br>it finally sticks.</h2>
+    <p style="margin-top:0.22in; font-family:PopB; font-size:12.5pt; line-height:1.35;">It was never about willpower.<br>It was about the plan.</p>
+    <p style="margin-top:0.12in">This workbook gives you one. Pick one habit, give it about <b>3 minutes a day</b>, and let 30 small, playful moves do the heavy lifting. Then 36 short pages carry you to Day 66, the point where habits typically start to feel automatic.</p>
     <ul style="margin-top:0.2in">
-      <li><b>30 days, 30 different moves.</b> Shrink it, anchor it, celebrate it, bundle it, swap it. Never boring twice.</li>
-      <li><b>A plan for bad days.</b> A 30-second version that still counts, and a comeback plan for when you miss one.</li>
-      <li><b>Identity first.</b> Stop trying to change and start acting like the person who already does it.</li>
-      <li><b>Bring your people along.</b> A buddy, a script for the people close to you, a contract you both sign.</li>
-      <li><b>Part 2: Days 31 to 66.</b> One short page a day until your habit runs on autopilot.</li>
+      <li><b>Never boring twice.</b> A different 3-minute move every day: shrink it, anchor it, celebrate it, play it.</li>
+      <li><b>Win on any day.</b> Three sizes for normal, busy and terrible days, plus a plan for missed ones.</li>
+      <li><b>Become that person.</b> Every check-in is a vote for who you are becoming.</li>
+      <li><b>Bring your people.</b> A buddy, a signed contract and a script for the people close to you.</li>
+      <li><b>Real research, zero fluff.</b> 15 sources, listed in the back and explained in plain words.</li>
     </ul>
-    <p style="margin-top:0.16in">Built on real research on habits and goals, with every source listed in the back.</p>
+    <p style="margin-top:0.18in; font-family:LoraI; font-weight:600; font-size:14pt;">Next December, you&rsquo;ll be glad you started today.</p>
   </div>
   <div class="abs" style="left:0.55in; top:7.62in; width:2.9in;">
     <div style="font-family:IDB; font-size:15pt; line-height:1.15;">One habit. 30 days.<br><span style="color:{ROOD}">3 minutes a day.</span></div>
