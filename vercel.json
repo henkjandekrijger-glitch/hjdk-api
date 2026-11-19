@@ -1541,6 +1541,16 @@
       "destination": "/api/keuze-tools?tool=temu&market=nl"
     },
     {
+      "source": "/huisdierenverzekering",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=huisdier"
+    },
+    {
       "source": "/stekkerbatterij",
       "has": [
         {
@@ -2063,6 +2073,12 @@
     }
   },
   "redirects": [
+    {
+      "source": "/huisdierverzekering",
+      "has": [{"type": "host", "value": "(www\\.)?keuzehulp\\.best"}],
+      "destination": "https://keuzehulp.best/huisdierenverzekering",
+      "permanent": true
+    },
     {
       "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:bundel|ttvideo|ttfeed|beeld/|prijslijst|tlogo)|shop$|o$).+)",
       "has": [
