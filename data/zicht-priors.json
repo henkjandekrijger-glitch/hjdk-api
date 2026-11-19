@@ -1124,5 +1124,17 @@
   "moeite": 1,
   "meten": "zoekvragen per dag met vertoningen op keuzehulp.best; herstel = weer 10+ per dag",
   "status": "actief"
+ },
+ {
+  "id": "indexteller-moet-vers-zijn",
+  "les": "Een indexteller is alleen waar als elke geindexeerde pagina zelf recent is nagekeken. Kijk geindexeerde pagina's minstens elke 7 dagen opnieuw na, ook als de lijst lang is, en tel een pagina niet als 'in Google' op grond van een oude uitslag. Een vlakke teller terwijl de vertoningen wegvallen betekent eerst: meting verouderd, pas daarna: uit de resultaten gezakt.",
+  "kanaal": "google",
+  "bewijs": "19 nov 2026, keuzehulp.best: de indexcheck zette geindexeerde pagina's achteraan; bij 514 URL's en de tijdsgrens van 230 s werden ze wekenlang niet nagekeken en bleef de teller 117 (26 okt tot 17 nov). Na de kernfase (sitemap 161) keek de ronde in een keer alles na: 14 in Google, 100 'Gecrawld, niet geindexeerd', 47 onbekend. 87 van de 101 kernpagina's die als 'in Google' golden staan er niet in. Dat past bij 0 zoekvragen met vertoningen sinds 25 okt en 69 vertoningen in 28 dagen. Ook de kern plakte: kernBereken telde een pagina als in Google zodra hij dat ooit was (73% tegen echt 10%).",
+  "bron": "dagcontrole 19 nov 2026, /api/gsc?op=index&site=kz en /api/kz?op=kern",
+  "sterkte": 3,
+  "effect": 3,
+  "moeite": 1,
+  "meten": "ouderDan7Dagen in /api/gsc?op=index blijft 0; uitGoogleGevallen toont wanneer pagina's wegvallen",
+  "status": "actief"
  }
 ]
