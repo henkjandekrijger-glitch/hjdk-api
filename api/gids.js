@@ -280,8 +280,8 @@ export async function chatItems() {
 }
 const KZ_SYS = `Je bent de chat van gids.kadoly.com, de gids van Kadoly (kadoly.com): een Nederlandse webshop van ADSFAIR B.V. met producten van makers. Je helpt een bezoeker kiezen en je zoekt uit wat hij echt wil.
 Regels:
-- Antwoord in het Nederlands, hoogstens 3 korte zinnen, gewone woorden, geen lijstjes, geen gedachtestreepjes, geen woorden in hoofdletters.
-- Noem alleen producten uit KANDIDATEN, met prijs (inclusief verzending) en zet hun id in "producten" (hoogstens 3, beste eerst). Verzin geen eigenschappen, maten of materialen; staat het er niet, zeg dan dat het op de productpagina staat. Levertijd: neem "in huis rond" letterlijk over.
+- Antwoord in het Nederlands, hoogstens 2 korte zinnen en hoogstens 35 woorden, gewone woorden, geen lijstjes, geen gedachtestreepjes, geen woorden in hoofdletters.
+- Noem alleen producten uit KANDIDATEN en zet hun id in "producten" (hoogstens 3, beste eerst). Die verschijnen onder je antwoord als kaart met naam, prijs en bezorgdag: herhaal prijs en bezorgdag dus niet en noem een product kort (zonder merk of maten). Zeg waarom het past. Verzin geen eigenschappen, maten of materialen; staat het er niet, zeg dan dat het op de productpagina staat. Levertijd: neem "in huis rond" letterlijk over.
 - Vraagt iemand naar het goedkoopste, het beste of wat past: noem de concrete keuze met prijs, niet alleen een bandbreedte.
 - Past niets uit KANDIDATEN: zeg eerlijk dat Kadoly het niet heeft en geef één concreet advies waar of waarnaar je dan zoekt (soort product, waar je op let). Noem dan geen prijzen en geen winkels die je niet kent. Zet weet op true als je zo eerlijk hebt geholpen.
 - Past een gids uit GIDSEN beter bij de vraag, zet de slug in "pagina", anders een lege string.
@@ -297,7 +297,7 @@ export async function kzKadoly({ slug, vraag, hist, velden, ik, oidc }) {
   const z1 = await zoek([vel.wat, vel.situatie, vraag].filter(Boolean).join(' '), 10); const z2 = eerder ? await zoek(eerder + ' ' + vraag, 6) : { producten: [] };
   const z3 = pg.startsWith('rubriek-') ? await zoek(pg.slice(8).replace(/-/g, ' '), 6) : { producten: [] };
   const cat = await catalogus(); const kand = new Map(); const soort = pid => { const i = cat[pid] || {}; return [i.c, i.s].filter(Boolean).join('/'); };
-  if (g) for (const c of g.keuze) { const i = cat[c.pid]; if (i && i.vr !== false) kand.set(c.pid, { pid: c.pid, naam: c.naam || i.t, merk: i.b || '', prijs: thuis(i), datum: N(i.lt) ? nlDatum(leverDatum(i.lt)) : '', gids: c.label + ': ' + c.waarom + (c.beperking ? ' Let op: ' + c.beperking : '') }); }
+  if (g) for (const c of g.keuze) { const i = cat[c.pid]; if (i && i.vr !== false) kand.set(c.pid, { pid: c.pid, naam: c.naam || i.t, merk: i.b || '', img: i.img || '', prijs: thuis(i), datum: N(i.lt) ? nlDatum(leverDatum(i.lt)) : '', gids: c.label + ': ' + c.waarom + (c.beperking ? ' Let op: ' + c.beperking : '') }); }
   for (const x of z1.producten.concat(z2.producten, z3.producten)) if (!kand.has(x.pid)) kand.set(x.pid, x);
   const lijst = [...kand.values()].slice(0, 18);
   const h = (Array.isArray(hist) ? hist : []).slice(-6).map(x => (x && x[0] === 'k' ? 'Kadoly: ' : 'Bezoeker: ') + String((x && x[1]) || '').slice(0, 300)).join('\n');
@@ -310,7 +310,8 @@ export async function kzKadoly({ slug, vraag, hist, velden, ik, oidc }) {
   j.a = String(j.a || '').replace(/\s*[—–]\s*/g, ', ');
   const prods = (Array.isArray(j.producten) ? j.producten : []).map(id => kand.get(String(id))).filter(Boolean).slice(0, 3);
   const bron = g ? g.slug : pg.startsWith('rubriek-') || pg.startsWith('redactie-') ? pg.slice(0, 60) : 'zoek';
-  j.verder = prods.map(x => [kortNaam(x.naam) + ' · ' + euro(x.prijs) + (x.datum ? ' · in huis ' + x.datum : ''), '/naar/' + encodeURIComponent(x.pid) + '?g=' + encodeURIComponent(bron) + '&b=chat']);
+  j.producten = prods.map(x => ({ n: kortNaam(x.naam), p: euro(x.prijs) + ' inclusief verzending', d: x.datum ? 'in huis ' + x.datum : '', u: '/naar/' + encodeURIComponent(x.pid) + '?g=' + encodeURIComponent(bron) + '&b=chat', i: x.img || '' }));
+  j.verder = [];
   if (j.dringend) j.verder.push(['App Henkjan van Kadoly', 'https://wa.me/' + WA + '?text=' + encodeURIComponent('Hoi Kadoly, ik heb een vraag via de gids: ' + String(vraag || '').slice(0, 200))]);
   if (j.pagina && GIDSEN[j.pagina] && j.pagina === pg) j.pagina = '';
   try { await kv.raw(['LPUSH', 'gk:chat', JSON.stringify({ at: Date.now(), p: pg || '_home', a: 'kz', v: String(vraag || '').slice(0, 300), ant: j.a.slice(0, 300), d: j.dringend ? 1 : 0, pr: prods.map(x => x.pid) })]); await kv.raw(['LTRIM', 'gk:chat', '0', '1999']); if (!prods.length) await kv.raw(['HINCRBY', 'gk:d:' + DAG(), 'chat|zonderproduct', '1']); } catch (e) {}
