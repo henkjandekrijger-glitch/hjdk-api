@@ -50,7 +50,7 @@ import trendKadoly from '../kadoly/trend.json' with { type: 'json' };
 import bewezenKadoly from '../kadoly/bewezen.json' with { type: 'json' };
 import bewezenWhop from '../data/whop-bewezen.json' with { type: 'json' };
 import { uurTel, uurStand, lekkenPagina, uurAanvullen, uurRitme, verkoopUren } from '../lib/shopuur.js';
-import { overdrachtTekst, liveRegels, overdrachtPagina, ttOverdrachtTekst } from '../lib/shopoverdracht.js';
+import { overdrachtTekst, liveRegels, overdrachtPagina, ttOverdrachtTekst, socOverdrachtTekst } from '../lib/shopoverdracht.js';
 import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 const K_MAXLEV = 'hjdk:shop:maxlev'; // B4 (12 nov): hoogste levertijd in werkdagen voor de dagkeuze; ?maxlev=<dagen> op de beschermde host, 0 = geen grens
@@ -65,6 +65,25 @@ const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/
 const SHOP = 'https://kadoly.com/shop';
 // Terugmeldlinks per netwerk (PB) staan in lib/shopdirect.js. Clickadu: zet de link in SHOP_PB_CLICKADU met {clickid} op de plek van de klik-id.
 const KAN_ORG = { fb: 'facebook', ig: 'instagram', pin: 'pinterest', tt: 'tiktok', th: 'threads', x: 'x', li: 'linkedin', yt: 'youtube', tg: 'telegram', wa: 'whatsapp', gbp: 'google-business', nb: 'nieuwsbrief', bs: 'bluesky', rd: 'reddit' }; // organische kanalen (op=org, 16 nov)
+// stand van het organische verkeer via Clickmind (op=orgstand en op=socoverdracht): kliks per dag, keten per kanaal en per post
+async function orgStand(kv, n) {
+  const uit = {}; for (let i = 0; i < n; i++) { const d = new Date(Date.now() - i * 864e5).toISOString().slice(0, 10); const h = await kv.raw(['HGETALL', 'org:d:' + d]).catch(() => null); if (h && h.length) { const o = {}; for (let j = 0; j < h.length; j += 2) o[h[j]] = Number(h[j + 1]); uit[d] = o; } }
+  const ST = ['dv', 'dm', 'da', 'cart', 'koop']; const NAAM = { dv: 'kliks', dm: 'echt', da: 'actie', cart: 'mandje', koop: 'koop' };
+  const reeks = async pre => { const v = await kv.mget(...ST.map(x => pre + '-' + x)).catch(() => []); const o = {}; ST.forEach((x, i) => { const m = Number(v[i]) || 0; if (m) o[NAAM[x]] = m; }); return o; };
+  const kanalen = {}; for (const k of Object.keys(KAN_ORG)) { const o = await reeks('c:sh-x-zo' + k); if (Object.keys(o).length) kanalen[KAN_ORG[k]] = o; }
+  const posts = {}; let lijst = []; try { lijst = ((await kv.raw(['SMEMBERS', 'org:posts'])) || []).slice(0, 300); } catch (e) {} for (const p of lijst) { const o = await reeks('c:sh-x-k' + p); if (Object.keys(o).length) posts[p] = o; }
+  return { dagen: uit, kanalen, posts };
+}
+function orgRegels(st) {
+  const ket = o => ['kliks', 'echt', 'actie', 'mandje', 'koop'].filter(x => o[x]).map(x => o[x] + ' ' + x).join(', ');
+  const r = ['## Live stand Clickmind (nu, ' + new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC)', ''];
+  const kn = Object.entries(st.kanalen || {}); r.push('Per kanaal sinds 16 nov: ' + (kn.length ? kn.map(([k, o]) => k + ' ' + ket(o)).join('; ') : 'nog niets') + '.');
+  const ds = Object.entries(st.dagen || {}).sort((a, b) => b[0] < a[0] ? -1 : 1).slice(0, 7);
+  if (ds.length) { r.push('', 'Kliks per dag (uit = klik naar de shop, voorbeeld = linkvoorvertoning door een bot):'); for (const [d, o] of ds) r.push('- ' + d + ': ' + Object.entries(o).map(([k, v]) => k.replace('|', ' ') + ' ' + v).join(', ')); }
+  const ps = Object.entries(st.posts || {}).sort((a, b) => ((b[1].koop || 0) * 100 + (b[1].mandje || 0) * 10 + (b[1].echt || 0) * 2 + (b[1].kliks || 0)) - ((a[1].koop || 0) * 100 + (a[1].mandje || 0) * 10 + (a[1].echt || 0) * 2 + (a[1].kliks || 0))).slice(0, 12);
+  if (ps.length) { r.push('', 'Beste posts (koop x100, mandje x10, echt x2, kliks):'); for (const [p, o] of ps) r.push('- ' + p + ': ' + ket(o)); }
+  r.push('', 'Bereik per post staat in Zernio (analytics_get_analytics, profiel 6afaf9820c09220040d746f4), niet hier.', ''); return r.join('\n');
+}
 const NETTEN = { md: 'Mondiad', pa: 'PropellerAds', ra: 'RichAds', ca: 'Clickadu', mg: 'MGID', tt: 'TikTok', wh: 'Whop', pi: 'Pinterest', bi: 'Bing', x: 'Overig' }; // bi: Microsoft Advertising (16 nov 2026, Henkjan: "clickmind ertussen !!") // wh: Meta via Whop Ads (16 nov 2026, Henkjan: "Zet cadoly campagne op met 20 te testen ads") // mg: MGID native (4 nov 2026, Henkjan: "Zet voor morgen MGID op voor 10 kansrijke producten")
 const netVan = src => /mondiad/.test(src) ? 'md' : /propeller/.test(src) ? 'pa' : /richads/.test(src) ? 'ra' : /clickadu/.test(src) ? 'ca' : /mgid/.test(src) ? 'mg' : /tiktok/.test(src) ? 'tt' : /^pinterest$/.test(src) ? 'pi' : /whop|facebook|instagram|^meta$|^fb$/.test(src) ? 'wh' : /^(bing|microsoft|msads)$/.test(src) ? 'bi' : 'x'; // tt: TikTok (16 nov 2026, Henkjan: "Ik wil vandaag Tiktok advertentie starten")
 const plekId = s => { s = String(s || '').replace(/[^A-Za-z0-9]/g, '').toLowerCase().slice(0, 40); return /^(zoneid|siteid|publisherid|sourceid)$/.test(s) ? '' : s; }; // Mondiad en PropellerAds: cijfers; RichAds: site-id van 32 tekens
@@ -1120,12 +1139,14 @@ export default async function handler(req, res) {
       const clickid = 'org-' + k + '-' + (post || 'x') + '-' + randomBytes(6).toString('hex');
       return await direct(req, res, { net: 'x', clickid, zone: 'o' + k, cr: '', camp: post, pid, code: shortId('x:' + clickid), bot, vrij: true, bron: { source: KAN[k], medium: 'social', campaign: post || KAN[k] } }); } // zone = kanaal, camp = post: Clickmind telt de hele keten (klik, echt mens, actie, mandje, koop) per kanaal en per post (sh-x-zo<k>-<stap>, sh-x-k<post>-<stap>)
     if (op === 'orgstand') { // openbaar, alleen totalen: kliks per organisch kanaal per dag (?dagen=7)
-      const n = Math.min(30, Math.max(1, Number(url.searchParams.get('dagen')) || 7)); const uit = {}; for (let i = 0; i < n; i++) { const d = new Date(Date.now() - i * 864e5).toISOString().slice(0, 10); const h = await kv.raw(['HGETALL', 'org:d:' + d]).catch(() => null); if (h && h.length) { const o = {}; for (let j = 0; j < h.length; j += 2) o[h[j]] = Number(h[j + 1]); uit[d] = o; } }
-      const ST = ['dv', 'dm', 'da', 'cart', 'koop']; const NAAM = { dv: 'kliks', dm: 'echt', da: 'actie', cart: 'mandje', koop: 'koop' };
-      const reeks = async pre => { const v = await kv.mget(...ST.map(x => pre + '-' + x)).catch(() => []); const o = {}; ST.forEach((x, i) => { const n = Number(v[i]) || 0; if (n) o[NAAM[x]] = n; }); return o; };
-      const kanalen = {}; for (const k of Object.keys(KAN_ORG)) { const o = await reeks('c:sh-x-zo' + k); if (Object.keys(o).length) kanalen[KAN_ORG[k]] = o; }
-      const posts = {}; let lijst = []; try { lijst = ((await kv.raw(['SMEMBERS', 'org:posts'])) || []).slice(0, 300); } catch (e) {} for (const p of lijst) { const o = await reeks('c:sh-x-k' + p); if (Object.keys(o).length) posts[p] = o; }
-      return res.status(200).json({ ok: true, uitleg: 'kliks per dag (org:d), keten per kanaal en per post via Clickmind (kliks, echt mens, actie, mandje, koop; sinds 16 nov 23:00 UTC)', dagen: uit, kanalen, posts }); }
+      const n = Math.min(30, Math.max(1, Number(url.searchParams.get('dagen')) || 7));
+      return res.status(200).json(Object.assign({ ok: true, uitleg: 'kliks per dag (org:d), keten per kanaal en per post via Clickmind (kliks, echt mens, actie, mandje, koop; sinds 16 nov 23:00 UTC)' }, await orgStand(kv, n))); }
+    if (op === 'socoverdracht') { // 20 nov: overdracht Kadoly social met live Clickmind-stand bovenaan (alleen beschermde vercel.app-host)
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      let lv = ''; try { lv = orgRegels(await orgStand(kv, 14)); } catch (e) { lv = '## Live stand Clickmind\n\n(niet te lezen: ' + String(e && e.message || e).slice(0, 80) + ')\n'; }
+      const md = socOverdrachtTekst(); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
+      if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(md.replace(/\n## /, '\n' + lv + '\n## ')); }
+      res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(overdrachtPagina('', md.replace(/\n## /, '\n' + lv + '\n## '), esc).replace('<title>Overdracht Yoors Shop</title>', '<title>Overdracht Kadoly social</title>')); }
     if (op === 'gidsuit') { // klik vanuit gids.kadoly.com naar een product: via Clickmind (direct), zodat de keten tot betaald per gids gemeten wordt (30 okt)
       const pid = pidOk(url.searchParams.get('p')); const g = String(url.searchParams.get('g') || '').replace(/[^a-z0-9-]/g, '').slice(0, 60); const b = String(url.searchParams.get('b') || '').replace(/[^a-z]/g, '').slice(0, 12);
       if (!pid) { res.statusCode = 302; res.setHeader('location', 'https://kadoly.com/'); return res.end(); }
