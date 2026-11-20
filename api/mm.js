@@ -279,7 +279,7 @@ export default async function handler(req, res) {
       res.setHeader('cache-control', 'no-store');
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
       if (q('catalogus')) { if (q('j')) { const r = await bewaarCatalogus(kv, JSON.parse(q('j'))); return res.status(r.ok ? 200 : 400).json(r); } return res.status(200).json({ catalogus: await catalogus(kv) }); }
-      if (q('j') || req.method === 'POST') { const j = req.method === 'POST' ? leesJson(req.body) : leesJson(q('j')); const r = await bewaarModal(kv, j); return res.status(r.ok ? 200 : 400).json(r); }
+      if (q('j') || req.method === 'POST') { const j = req.method === 'POST' ? leesJson(req.body) : leesJson(q('j')); const r = await bewaarModal(kv, j); return res.status(r.ok ? 200 : 400).json(q('stil') ? { ok: r.ok, fout: r.fout, versie: r.modal && r.modal.versie, armen: r.modal && (r.modal.armen || []).map(x => x.id + ':' + x.wie) } : r); } // stil=1: kort antwoord
       if (q('alias')) { const r = await zetModalAlias(kv, q('alias'), q('naar') || ''); return res.status(r.ok ? 200 : 400).json(r); } // ?alias=yoors&naar=kadoly (leeg naar = weg)
       if (q('site') && (q('aan') === '1' || q('aan') === '0')) { const m = await kv.get('mm:modal:' + String(q('site')).toLowerCase()); if (!m) return res.status(404).json({ ok: false, fout: 'onbekende site' }); const { model, leer, momLeer, vormLeer, varLeer, rem, ...rest } = m; const r = await bewaarModal(kv, { ...rest, uit: q('aan') !== '1' }); return res.status(r.ok ? 200 : 400).json({ ok: r.ok, site: m.site, uit: r.modal && r.modal.uit, fout: r.fout }); } // 5 nov: aan of uit in één tik
       if (q('mail')) {
