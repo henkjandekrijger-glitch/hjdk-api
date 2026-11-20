@@ -99,7 +99,9 @@ Henkjan 20 nov: "Maak het economisch totaal werkend en groeiende dus bij groei g
   - een startbudget per dag, alleen op Henkjans woord (`&startbudget=<euro>`).
 - **Spaarrente.** Het bedrag per klik, per vriendenklik en de bonus voor 10 dagen op rij zetten zich elke maandag (`renteZet` in de ochtendronde).
   - De verwachte kosten van nieuw tegoed mogen niet hoger zijn dan de inkomsten.
-  - Verwachte kosten = het deel van het tegoed dat echt een cadeau wordt (30% tot er €100 aan cadeaus is, daarna gemeten) maal het tegoed. Cadeaus tellen tegen kostprijs: prijs min marge uit de catalogus.
+  - Verwachte kosten = het deel van het tegoed dat echt een cadeau wordt (30% tot er €100 aan cadeaus is, daarna gemeten) maal wat een cadeau Henkjan per euro tegoed kost.
+  - Een cadeau kost Henkjan wat hij betaalt (Henkjan 20 nov: "Ik moet dat cadeau inkoop en verzend betalen natuurlijk"): inkoop met btw plus de verzending die wij betalen, uit `hjdk:shop:kost` (lib/shopmarge.js). Zonder doorgegeven inkoop is het een schatting uit de marge.
+  - De cadeaulijst kiest de cadeaus met het meeste cadeau per uitgegeven euro, en nooit een cadeau dat meer kost dan het tegoed. De bestelmail aan Henkjan noemt wat het cadeau hem kost.
   - Per week hooguit een kwart omhoog of omlaag, tussen 20% en 200% van de basis (€0,10, €0,10 en €1). De eerste keer staat hij op de basis.
   - Wat in een pot zit, verandert nooit.
 - **Vaste bedragen (acquisitie).** De startpot (€5) en de vriendbonus (€1 voor beiden zodra een nieuwe vriend 3 dagen klikt) staan apart in de stand, met de verwachte kosten per nieuw lid. Vergelijk die met wat een advertentie per lid kost.
@@ -299,6 +301,8 @@ Henkjan 20 nov: "Kijk in quiz md wat wel en niet werkte en nu gaan we dit compou
 **Kern van Henkjan ("hoe meer mensen, hoe meer korting, tot 100%"):** het voorstel is "Samen naar 100%": je kiest een product, elke klik van een vriend geeft % korting op dat product en elke nieuwe vriend een grote stap; bij 100% is het gratis, daaronder is het korting in de kassa. Het aantal benodigde klikken hangt af van de kostprijs, zodat elke klik begrensd geld kost.
 
 ## 9. Logboek (nieuwste bovenaan)
+
+- 2026-11-20: Kosten van een cadeau = inkoop met btw + verzending die wij betalen (`hjdk:shop:kost`), anders geschat uit de marge. Cadeaulijst op meeste cadeau per uitgegeven euro, nooit duurder dan het tegoed. Bestelmail noemt de kosten. De spaarrente rekent hiermee.
 
 - 2026-11-20: Economie gebouwd (sectie 4.2b): spaarrente die zich elke maandag instelt op de inkomsten (nieuwe leden via vriend of site, winst op aankopen, merken, startbudget), vriendbonus €1 voor beiden, stand op `op=dkeco`, voorwaarden aangepast. Getest met 22 testdagen: de rente zakt met een kwart per week als er niets binnenkomt en stijgt als er geld van merken bij komt. Open: winst op aankopen automatisch doorgeven vanuit de shop (`ecoVerkoop`).
 
