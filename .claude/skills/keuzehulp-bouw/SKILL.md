@@ -100,6 +100,7 @@ De volledige regels staan in de skill `zicht-seo-llm`, sectie AI-gaten (regel 1 
 | VS | massage near me | whichtobuy.best/massage-near-me-where-to-book-and-how-much-it-costs | `lib/wtb-dienst.js` |
 | VS | dentists | whichtobuy.best/dentists-how-to-find-one-with-or-without-insurance | `lib/wtb-dienst.js` |
 | VS | humanoid robot | whichtobuy.best/humanoid-robot-for-home-which-one-can-you-buy-now | `lib/wtb-robot.js` |
+| NL, in het Engels | energy supplier Netherlands | whichtobuy.best/energy-supplier-netherlands-which-contract-to-choose | `lib/wtb-energie-nl.js` (leest de bedragen uit `lib/energie-keuze.js`) |
 | DE | führerschein | kaufberater.best/fuehrerschein-kosten-2026-theorie-app-fahrschule-ablauf | `lib/kb-dienst.js` |
 | DE | tagesgeld konto | kaufberater.best/tagesgeld-vergleich-zinsen-2026-ohne-neukundenbonus | `lib/kb-dienst.js` |
 | DE | anwalt | kaufberater.best/anwalt-erstberatung-kosten-online-fachanwalt-beratungshilfe | `lib/kb-dienst.js` |
@@ -116,7 +117,7 @@ Henkjan, 18 nov 2026: "Eerst vindbaar worden, dan pas meer pagina's."
 - Stand van nu: https://hjdk-api-henq.vercel.app/api/zicht?op=organisch&t=1 en https://hjdk-api-henq.vercel.app/api/kzmaak?op=kort.
 - **Een handgemaakte toppagina** krijgt `kern: true`. Zonder dat veld staat een nieuwe pagina in de kernfase op noindex.
 - **Eén sterke pagina per echte vraag.** Geen varianten per getal, persoon of kleine zoekvariant die naar hetzelfde antwoord leiden. Dubbele en dunne pagina's ruimt `lib/kwaliteit.js` op (canonical, 301 of noindex).
-- **Talen.** Elke keuzehulp hoort er in het Nederlands, Engels en Duits te komen (Henkjan, 10 nov 2026). Begin in het land waar de vraag zit. De andere talen volgen zodra de rem het toelaat.
+- **Talen.** Elke keuzehulp hoort er in het Nederlands, Engels en Duits te komen (Henkjan, 10 nov 2026). Begin in het land waar de vraag zit. De andere talen volgen zodra de rem het toelaat. Een Engelse versie van een Nederlandse beslisgids komt op whichtobuy.best en leest zijn bedragen uit de Nederlandse module, zodat er één plek is om prijzen te verversen (proef sinds 20 nov 2026: `lib/wtb-energie-nl.js`; bij Nederlandse dienstvragen haalt Perplexity vaak Engelstalige pagina's aan).
 
 ## 4. Vanuit de gebruiker: zoektermen eerst
 
