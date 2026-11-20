@@ -60,6 +60,13 @@ De overdracht is de complete werking en stand (Henkjan 19 okt: "Zorg dat op verc
 - Bedrijvengids alleen in NL en EN in Google (Henkjan 18 nov 2026: "Los op vind oorzaak", na −92% Google-vertoningen vanaf 15 nov): bedrijfs- en soortpagina's in DE, ES en PT zijn noindex,follow en staan niet in hreflang (`lib/cur.js` GIDS_INDEX_TALEN); ze gaven sinds 1 nov 588 vertoningen en 4 kliks op 13.665 pagina's. Zet geen nieuwe automatisch vertaalde gidspagina's zonder eigen inhoud in Google. Waarom en hoe terug: `lib/werking.js`, proef cd-gids-kern-nl-en-1118.
 - Vaste regels (de controle bewaakt ze): geen Plus Code, telefoon leesbaar, geen "nog geen" of nullen, geen blok twee keer, de chat van de site en geen los vraagveld, knoppen in het eerste scherm van 360x640, contrast 4,5 in licht en donker, pagina korter dan 2.800 px, namen niet in HOOFDLETTERS, tijden op één regel.
 
+## Nooit vastlopen (Henkjan 20 nov 2026: "Ik moet iets in prompt zeggen dat er altijd checks zijn en nooit lang hangen in mogelijke fout")
+
+- Bouw je iets (pagina, chat, campagne, lus), bouw dan in dezelfde stap de controle die meet of het doet wat het moet, met een drempel waarop het zelf ingrijpt. Draaien is niet hetzelfde als werken.
+- Zie je in de data een lek (een stap die op nul blijft, gesprekken die na één antwoord stoppen, een campagne die niets oplevert): los het meteen op binnen de harde grenzen en meld het daarna. Niet melden en wachten, niet alleen voorstellen.
+- Na een fout hooguit één nieuwe poging op dezelfde manier; daarna een andere aanpak, of melden met de reden. Blijf nooit langer dan 15 minuten hangen op een mogelijke fout.
+- Elk rapport noemt bij elk lek wat er al aan gedaan is en wanneer de controle het volgende oordeel geeft.
+
 ## Altijd
 
 - Altijd eerst `git pull --rebase`, daarna pushen naar main (Vercel rolt uit). Commit met expliciete bestandsnamen (nooit `git add -A`). Sleutels nooit in code, pagina's of URL's.
