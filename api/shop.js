@@ -925,6 +925,13 @@ ${vt([['sold_7d', 'getal', '4', 'Stuks verkocht in de laatste 7 dagen.'], ['sold
 <p class="note">Deze pagina is alleen-lezen: er staan geen sleutels op en je kunt er niets mee wijzigen.</p></main></body></html>`;
 }
 
+// Clickmind-kosten per advertentie per dag (20 nov): HSET cm:kosten:<dag> net|id -> {naam, kosten, kliks, vert, groep}, 120 dagen
+async function cmZetKosten(kv, net, dag, rows) {
+  const args = []; for (const r of (rows || []).slice(0, 300)) { const id = String(r && r.id || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40); if (!id) continue; const kosten = Math.max(0, Math.round((Number(r.kosten) || 0) * 100) / 100), kliks = Math.max(0, Math.round(Number(r.kliks) || 0)), vert = Math.max(0, Math.round(Number(r.vert) || 0)); if (!kosten && !kliks && !vert) continue; args.push(net + '|' + id, JSON.stringify({ naam: String(r.naam || '').slice(0, 80), kosten, kliks, vert, groep: String(r.groep || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40) })); }
+  if (args.length) { const k = 'cm:kosten:' + dag; await kv.raw(['HSET', k, ...args]); await kv.raw(['EXPIRE', k, String(120 * 86400)]); await kv.set('cm:kosten:laatst:' + net, Date.now()); }
+  return args.length / 2;
+}
+
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(204).end();
   const url = new URL(req.url, 'http://x'); const op = (url.searchParams.get('op') || 'status').toLowerCase();
@@ -1229,9 +1236,11 @@ export default async function handler(req, res) {
         const net = String(sp.get('net') || '').replace(/[^a-z]/g, '').slice(0, 4); const dagQ = String(sp.get('dag') || ''); const dag = /^\d{4}-\d{2}-\d{2}$/.test(dagQ) ? dagQ : new Date().toISOString().slice(0, 10);
         let rows = []; try { rows = JSON.parse(sp.get('d') || '[]'); } catch (e) { return res.status(400).json({ ok: false, fout: 'd is geen JSON' }); }
         if (!NETTEN[net] || !Array.isArray(rows)) return res.status(400).json({ ok: false, fout: 'net onbekend of d geen lijst' });
-        const args = []; for (const r of rows.slice(0, 300)) { const id = String(r && r.id || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40); if (!id) continue; args.push(net + '|' + id, JSON.stringify({ naam: String(r.naam || '').slice(0, 80), kosten: Math.max(0, Math.round((Number(r.kosten) || 0) * 100) / 100), kliks: Math.max(0, Math.round(Number(r.kliks) || 0)), vert: Math.max(0, Math.round(Number(r.vert) || 0)), groep: String(r.groep || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40) })); }
-        if (args.length) { const k = 'cm:kosten:' + dag; await kv.raw(['HSET', k, ...args]); await kv.raw(['EXPIRE', k, String(120 * 86400)]); await kv.set('cm:kosten:laatst:' + net, Date.now()); }
-        return res.status(200).json({ ok: true, net, dag, opgeslagen: args.length / 2 }); }
+        if (net === 'tt' && sp.get('haal')) { // kosten zelf bij TikTok ophalen, ?dagen=1..30 terug (Amsterdamse dagen)
+          const n = Math.max(1, Math.min(30, Number(sp.get('dagen')) || 7)); const uit = {};
+          for (let i = 0; i < n; i++) { const dg = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Amsterdam' }).format(new Date(Date.now() - i * 864e5)); const r = await ttRapport(dg); uit[dg] = r.ok ? await cmZetKosten(kv, 'tt', dg, r.rijen.map(x => ({ id: x.id, naam: x.naam, kosten: x.spend, kliks: x.kliks, vert: x.vert, groep: x.groep }))) : r.fout; }
+          return res.status(200).json({ ok: true, net, opgeslagen: uit }); }
+        return res.status(200).json({ ok: true, net, dag, opgeslagen: await cmZetKosten(kv, net, dag, rows) }); }
       const dagen = Math.max(1, Math.min(60, Number(sp.get('dagen')) || 7)); const nuMs = Date.now();
       const dagLijst = []; for (let i = 0; i < dagen; i++) dagLijst.push(new Date(nuMs - i * 864e5).toISOString().slice(0, 10));
       const netten = {}; const netVan = n => netten[n] = netten[n] || { net: n, naam: NETTEN[n] || n, aangekomen: 0, mens: 0, afreken: 0, verkopen: 0, omzet: 0, kosten: 0, marge: 0 };
@@ -1485,6 +1494,8 @@ export default async function handler(req, res) {
         if (!droog) { try { await kv.set('hjdk:tt:stand', stand, { ex: 30 * 86400 }); } catch (e) {} } await lg('TikTok niet te lezen: ' + wacht + '; Clickmind vandaag ' + dagCm.aan + ' aan, ' + dagCm.echt + ' echt, ' + dagCm.tik + ' tik, ' + dagCm.koop + ' koop');
         if (!lev.geenSleutel) await eenmaal('sleutel', 'Kadoly TikTok: de uurwacht kan TikTok niet lezen (' + lev.fout + '). Koppel opnieuw via https://hjdk-api-henq.vercel.app/api/shop/ttkoppel'); return res.status(200).json({ ok: false, ...stand }); }
       const perDag = {}; (dag.ok ? dag.rijen : []).forEach(x => { perDag[x.id] = x.spend; });
+      if (!droog && dag.ok) { try { await cmZetKosten(kv, 'tt', dagNL, dag.rijen.map(x => ({ id: x.id, naam: x.naam, kosten: x.spend, kliks: x.kliks, vert: x.vert, groep: x.groep }))); // Clickmind-gezicht: kosten per advertentie, elk uur
+        const gister = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Amsterdam' }).format(new Date(nu.getTime() - 864e5)); if (!(await kv.get('cm:kosten:af:tt:' + gister))) { const g = await ttRapport(gister); if (g.ok) { await cmZetKosten(kv, 'tt', gister, g.rijen.map(x => ({ id: x.id, naam: x.naam, kosten: x.spend, kliks: x.kliks, vert: x.vert, groep: x.groep }))); if (uurNL >= 3) await kv.set('cm:kosten:af:tt:' + gister, 1, { ex: 3 * 86400 }); } } } catch (e) {} }
       const stat = new Map((ads.ok ? ads.ads : []).map(a => [a.id, a])); const cm = await tellers('tt', 'a', lev.rijen.map(x => x.id));
       const rijen = lev.rijen.map(x => { const c = cm[x.id] || {}, a = stat.get(x.id), tik = num(c.dwk), kassa = num(c.dkp), cart = num(c.cart); return Object.assign({}, x, { vandaag: perDag[x.id] || 0, aan: !!(a && a.aan), status: a ? a.status : '', aanCm: num(c.dv), echt: num(c.dm), tik, kassa, cart, koop: num(c.koop), omzet: num(c.omzet) / 100, stap: tik + kassa + cart }); }).sort((a, b) => b.spend - a.spend || b.kliks - a.kliks);
       const { uit, tegen } = ads.ok ? ttOordeel(rijen) : { uit: [], tegen: [] }; const gedaan = [];
