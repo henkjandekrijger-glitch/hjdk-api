@@ -88,6 +88,29 @@ Rekenvoorbeeld (cadeaus beginnen nu rond €8,74, de pot start op €5):
 
 Wat het kost: €5 startpot per bevestigd adres, maar die is pas te gebruiken als de pot een cadeau dekt; wie niet blijft klikken kost niets (pot vervalt na 30 dagen). Per actieve deelnemer verder hooguit €1 tegoed per dag (plus €1 per 10 dagen reeks); pot nooit boven €30.
 
+### 4.2b Economie: de pot betaalt zichzelf (20 nov 2026)
+
+Henkjan 20 nov: "Maak het economisch totaal werkend en groeiende dus bij groei gaat relatief minder kosten ?"
+
+- **Elk tegoed komt uit iets wat al geld oplevert.** Bronnen per 30 dagen:
+  - €0,50 per nieuw lid via een vriend of site (wat een advertentie anders kost, `ECO.lidWaard`);
+  - 50% van de winst op aankopen van leden (`ecoVerkoop`, nog te koppelen aan de shop);
+  - geld van merken (`op=dkeco&merk=<euro>`);
+  - een startbudget per dag, alleen op Henkjans woord (`&startbudget=<euro>`).
+- **Spaarrente.** Het bedrag per klik, per vriendenklik en de bonus voor 10 dagen op rij zetten zich elke maandag (`renteZet` in de ochtendronde).
+  - De verwachte kosten van nieuw tegoed mogen niet hoger zijn dan de inkomsten.
+  - Verwachte kosten = het deel van het tegoed dat echt een cadeau wordt (30% tot er €100 aan cadeaus is, daarna gemeten) maal het tegoed. Cadeaus tellen tegen kostprijs: prijs min marge uit de catalogus.
+  - Per week hooguit een kwart omhoog of omlaag, tussen 20% en 200% van de basis (€0,10, €0,10 en €1). De eerste keer staat hij op de basis.
+  - Wat in een pot zit, verandert nooit.
+- **Vaste bedragen (acquisitie).** De startpot (€5) en de vriendbonus (€1 voor beiden zodra een nieuwe vriend 3 dagen klikt) staan apart in de stand, met de verwachte kosten per nieuw lid. Vergelijk die met wat een advertentie per lid kost.
+- **Waarom het bij groei relatief goedkoper wordt:**
+  - Steeds meer leden komen via vrienden en sites. Die betalen we uit wat ze opleveren, niet vooraf.
+  - Merken betalen meer voor een groter publiek.
+  - Vaste kosten (mail, techniek) verdelen zich over meer leden.
+  - Vervallen tegoed vloeit terug.
+  - De rente stijgt mee als de inkomsten per lid stijgen, en dat maakt meedoen weer aantrekkelijker.
+- **Stand:** `op=dkeco` (beschermde host; `&test=1` voor de testwereld), met een `tekst` in gewone taal.
+
 ### 4.3 Juridisch
 
 - **Geen kansspel**: er wordt niets verloot, iedereen krijgt wat hij spaart. De Gedragscode Promotionele Kansspelen, de einddatum, het plafond van €4.500 en kansspelbelasting gelden dus niet.
@@ -248,6 +271,10 @@ Henkjan 20 nov: "Maak het volkomen lerend . ALLE variabelen . /campagnes-henkjan
 6. **Live-adres** op gids.kadoly.com en het startmoment (`dk:aan`).
 7. ~~De wekelijkse winactie van de Kadoly-nieuwsbrief~~: gestopt op 20 nov 2026 (Henkjan: "stop wekelijks actie"). Er waren 0 aanmelders en geen trekkingen.
 
+8. **Winst op aankopen in de pot-economie**: de shop moet bij een betaalde bestelling die via een Spaarpot-link kwam (utm_source=spaarpot, Clickmind-klik van `op=dkgo`) `ecoVerkoop(test, winstCent)` aanroepen. Tot dan telt alleen het geld van nieuwe leden, merken en het startbudget.
+9. **Startbudget per dag** (Henkjans woord): bijvoorbeeld wat de advertenties voor dezelfde adressen zouden kosten. Zonder startbudget of merken zakt de spaarrente in de eerste weken naar 20% van de basis.
+10. **Sites en verenigingen die het blokje plaatsen en meeverdienen** (Henkjan 20 nov): voorstel €0,50 per lezer die 3 dagen klikt plus 20% van de winst op hun aankopen; eerst op de eigen sites meten.
+
 ## 8. Assessment en economie (20 nov 2026)
 
 Henkjan 20 nov: "Kijk in quiz md wat wel en niet werkte en nu gaan we dit compounden . Doe verder onderzoek naar bestaande loyaltie programmas ... Hier is kern : Je klikt voor elkaar dus hoe meer mensen hoe meer korting of zelfs 100% korting . Doe totaal asessemnet ook even verder nog voor economics".
@@ -272,6 +299,8 @@ Henkjan 20 nov: "Kijk in quiz md wat wel en niet werkte en nu gaan we dit compou
 **Kern van Henkjan ("hoe meer mensen, hoe meer korting, tot 100%"):** het voorstel is "Samen naar 100%": je kiest een product, elke klik van een vriend geeft % korting op dat product en elke nieuwe vriend een grote stap; bij 100% is het gratis, daaronder is het korting in de kassa. Het aantal benodigde klikken hangt af van de kostprijs, zodat elke klik begrensd geld kost.
 
 ## 9. Logboek (nieuwste bovenaan)
+
+- 2026-11-20: Economie gebouwd (sectie 4.2b): spaarrente die zich elke maandag instelt op de inkomsten (nieuwe leden via vriend of site, winst op aankopen, merken, startbudget), vriendbonus €1 voor beiden, stand op `op=dkeco`, voorwaarden aangepast. Getest met 22 testdagen: de rente zakt met een kwart per week als er niets binnenkomt en stijgt als er geld van merken bij komt. Open: winst op aankopen automatisch doorgeven vanuit de shop (`ecoVerkoop`).
 
 - 2026-11-20: Live nagekeken: cadeau-idee van vandaag en "Nog €X" staan er weer (catalogus 3.021 producten, 738 cadeaus tot €30, 2.127 tot €60; telling in `op=dkstand` onder `cat`). Een lege catalogus wordt niet meer 10 minuten onthouden, en babyspullen (verschoonmat, bedbumper, peuterlepels) zijn geen cadeau of eerste doel meer.
 
