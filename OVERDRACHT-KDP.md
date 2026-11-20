@@ -188,3 +188,25 @@ Nog te doen: hardcover (nu 137 p., wit, met bleed, drukprijs $7,29): zelfde binn
 - kdp/bouw/: bouwers (bouw_boek.py binnenwerk, omslag_gen.py, bouw_epub.py), per boek een map met config, feiten en kdp.json; kdp/bouw/lc2027 voor de nieuwe LC.
 - lib/kdp-guides.js en /api/wtb?op=boekstand: boekgidsen op whichtobuy.best en kaufberater.best (organisch).
 - lib/werking.js: korte werking van het geheel (KDP-regels).
+
+## 11. Kerstsprint (Henkjan 20 nov 2026: "Check status . En go we gaan niet hard genoeg . Kom met een plan .")
+
+**Wie wat doet:** beslissingen komen uit de oorspronkelijke KDP-chat (Henkjan 20 nov: "We gaan hier nu bepalen"); het andere account draait de rondes en volgt de regels met "BESLUITEN HENKJAN" in het werklog.
+
+**Besluiten 20 nov:**
+1. Wait That's True en For Men naar $9,99: ja (Publish is Henkjans knop).
+2. PIT BOSS-ads uit: gedaan 15:15 UTC, beide campagnes op pauze. Niet weer aanzetten.
+3. Teens Australië A$10/dag als korte test: ja. Wacht op Henkjans eenmalige login op amazon.com.au (de AU-console vraagt inloggen).
+4. LC blijft $19,99 en start nu: KDP LC NIEUWJAAR EXACT (A00430132MU3YXJN4IMNK) loopt sinds 20 nov (was 20 dec), tot 30 jan, $10/dag.
+
+**Stand bij de start (20 nov):** royalty nov 1-20 $379, laatste 7 dagen $209 (~$30/dag); ads 7 dagen $144, ROAS 1,46. Vorig jaar 15 nov tot 25 dec gemiddeld $270/dag. Doel tot 20 dec: ~$60/dag eind november, $150-250/dag van 10 tot 20 december, LC in januari. $1.000/dag is met de huidige titels niet haalbaar (daarvoor ~20 titels van ~$50/dag; volgend jaar in augustus beginnen).
+
+**Plan:**
+1. Elke zondag de weeklimiet vol, en nieuwe titels eerst als hardcover lanceren (hardcover heeft een eigen limiet). Wat na ~6 dec live komt, mist kerst.
+   - Zo 22 nov: Echt jetzt?! (Teens in het Duits, paperback + hardcover, klaar in kdp/bouw/teens_de) en de Moment mal-hardcover.
+   - Zo 29 nov: Stocking Stuffers for Teen Girls (VS/CA), Teens in het Frans (FR + CA), Stocking Stuffers for Kids 8-12.
+2. Teens overal waar hij verkoopt omhoog: Australië (test), VK en VS alleen met het model dat werkt (AUTO Substitutes, PT Interesting Facts); A+ vergelijkingstabel met de hele reeks.
+3. Nieuwjaar: 2027-planners onder het LC-merk (habit tracker 2027, goal planner 2027), gebouwd met de LC-bouwer.
+4. Geen ads waar de ROAS onder break-even zit zonder dat de totale royalty stijgt.
+
+**Echt jetzt?! (kdp/bouw/teens_de):** 400 Duitse feiten in 20 hoofdstukken, gebaseerd op Teens maar gecorrigeerd: de vele mythes en dubbelingen uit het Engelse boek (o.a. Mona Lisa vrije dag, 17 spieren om te lachen, kauwgom 7 jaar) zijn vervangen door feiten die kloppen. 80 p. 6x9, wit, Wahr-oder-falsch-quiz. Omslag in de Teens-stijl (zwart, geel, emoji), geen rugtekst (80 p.), hardcover-omslag 13,944 x 10,417 in (rug 0,369, gelijk aan de Adventskalender; controleer in de KDP-calculator). Prijs EUR 9,99 (past in het wichtelbudget van 10 euro), hardcover EUR 17,99. Metadata en beschrijving: kdp.json. Bouwen: `python3 bouw_boek.py teens_de uit.pdf` (vanuit kdp/bouw) en `python3 omslag_cfg.py 80` / `python3 omslag_cfg.py 80 hard`.

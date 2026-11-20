@@ -1,6 +1,6 @@
 # KDP-wachtrij (gesorteerd op score, zie boekwedstrijd.md)
 
-Bijgewerkt: 17 nov 2026 ronde A (kdp-rapport). Nieuwste stand bovenaan per titel.
+Bijgewerkt: 20 nov 2026 (kdp-chat). Nieuwste stand bovenaan per titel.
 
 | # | Titel | Markt | Score | Status | Volgende stap |
 |---|---|---|---|---|---|
@@ -10,7 +10,7 @@ Bijgewerkt: 17 nov 2026 ronde A (kdp-rapport). Nieuwste stand bovenaan per titel
 | 2c | Would You Rather? Stocking Stuffers for Kids & Teens (Elias Grant) | CA/US | 72 | Idee 17 nov. Bewijs: WYR-boeken #201, #885 (indie), #2.005 in CA | Na Teen Girls; sjabloon Choose Wisely, Darling |
 | 3 | Klobuch voor mannen DE (eigen titel, sjabloon Kack dich schlau) | DE | 77 | Idee, nieuwe inhoud nodig (geen feiten uit de twee Duitse boeken) | Bouwen deze week, paperbackplek 22 nov |
 | 3a | Hardcover Stocking Stuffers For Teens (Elias Grant) | US/CA/UK/EU | 81 | Gebouwd 13 nov uit Henkjans Kindle Create-bestand: binnenwerk 5,5 x 8,5 met bleed (147 p.), omslag 13,0983 x 9,918 (rug 0,5223); 119 reviews tellen mee | 15 nov door Henkjan gepubliceerd, in review; gemaakt bij paperback YX7G68DWSFT (Create hardcover, ISBN 9798142652461, 5,5 x 8,5 met bleed, glanzend). Binnenwerk voor de upload kleiner gemaakt (46 MB naar 7 MB, kdp/bouw/teens/klein_maken.py: lichte achtergrond 100 dpi + zwarte en grijze 1-bit maskers 300 dpi, titelpagina volledig). Zoekwoord 7: teen boy read |
-| 3b | Echt jetzt?! Fakten für Teenager (Duitse vertaling van Teens, Elias Grant; titel zonder "Unnützes Wissen") | DE | 76 | Idee 14 nov. Bewijs: Unnützes Wissen für Teenager B0C9S9CCP4 #2.419 (indie), FAKTISCH! 1970904135 nieuw 19 okt #14.382, Achtsam Ausrasten für Teenager 391155219X nieuw 30 sep #138 (humor, cadeau voor teens) | Bron: tekst van Teens uit de KPF halen (OCR), vertalen, eigen titel; paperbackplek 22 nov naast Klobuch |
+| 3b | Echt jetzt?! 400 Fakten für Teenager (Duitse uitgave van Teens, Elias Grant) | DE | 76 | GEBOUWD 20 nov: kdp/bouw/teens_de (80 p., paperback- en hardcoveromslag, kdp.json, EUR 9,99 / 17,99) | Zondag 22 nov: paperback + hardcover |
 | 3c | Sérieux, c'est vrai ?! Le cadeau pour ado (Franse vertaling van Teens) | FR + CA | 75 | Idee 14 nov. Bewijs: MAIS WHAT?! B0HMS6BRQ8 nieuw 12 okt, na 4 weken #2.484 in FR; CA Teen Reference wordt gedomineerd door Franse uitgevers (Fleurus, Gallimard, Larousse) | Na de Duitse Teens; zelfde OCR-bron |
 | 4 | Hardcover Adventskalender | DE | 75 | Omslag klaar (13,944 x 10,417 in, rug 0,369) | LIVE 15 nov: hardcover B0HRR4JXPP (ISBN 9798142650207; EUR 19,99, USD 24,99, GBP 18,99, Amazon.ca USD 23,99; previewer goedgekeurd) |
 | 4b | Hardcover Moment mal, das stimmt?! | DE | 72 | Omslag klaar | Zondag 22 nov |
