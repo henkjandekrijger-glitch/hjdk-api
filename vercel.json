@@ -789,6 +789,36 @@
       "destination": "/api/wam?op=llms"
     },
     {
+      "source": "/chat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=lp&market=nl"
+    },
+    {
+      "source": "/chat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?whichtobuy\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=lp&market=us"
+    },
+    {
+      "source": "/chat",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?kaufberater\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=lp&market=de"
+    },
+    {
       "source": "/",
       "has": [
         {

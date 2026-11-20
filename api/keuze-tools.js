@@ -288,6 +288,21 @@ export default async function handler(req, res) {
     o.meet='<script src="/cm.js" data-site="'+site+'" data-proef="'+site+'-voorkant" data-modal="geen" async></script>'+FN_JS('home')+measureTag(P,'a[rel~="nofollow"],a[data-out],.pop a','.kx-ps button,#kxf button',mk);
     res.setHeader('content-type','text/html; charset=utf-8');res.setHeader('cache-control','private, no-store');res.setHeader('vary','cookie');
     return res.status(200).send(V.voorkantPagina(mk,o));}
+  if(q.get('tool')==='lp'){ // algemene chat-LP /chat (20 nov 2026, lib/cadeauvinder.js lpPagina, proef kzlp<markt>)
+    const V=await import('../lib/cadeauvinder.js'),PF=await import('../lib/proef.js'),C=await import('../lib/kzchat.js');
+    const mk0=String(q.get('market')||'nl'),mk=['us','de'].includes(mk0)?mk0:'nl',ua=String(req.headers['user-agent']||''),c=/iPhone|iPad|iPod/.test(ua)?'i':/Android/.test(ua)?'a':'d',ps='kzlp'+mk;
+    const ck=(String(req.headers.cookie||'').match(/(?:^|;\s*)kzlp=([ab])\.([0-9a-f]{12})\.(\d{4}-\d{2}-\d{2})\.(\d+)/)||[]);
+    let o={arm:'a',c,nieuw:0};
+    try{const cfg=await PF.leesProef(kv,ps),r=Number(cfg&&cfg.ronde)||1,f=cfg&&cfg.factoren&&cfg.factoren.find(x=>x.id==='start'),act=f?(f.varianten||[]).filter(x=>!x.uit).map(x=>x.id):['a'];
+      if(ck[1]&&Number(ck[4])===r&&act.includes(ck[1])&&Date.now()-Date.parse(ck[3])<8*864e5)o={arm:ck[1],pid:ck[2],d:ck[3],r,c,nieuw:0};
+      else if(cfg&&cfg.aan&&!/bot|crawl|spider|slurp|preview|headless/i.test(ua)){const b=await PF.proefBeslis(kv,{site:ps,ctx:c});if(b&&b.aan&&b.v&&b.v.start){o={arm:b.v.start,pid:b.pid,d:b.d,r:b.r,c,nieuw:1};res.setHeader('set-cookie','kzlp='+o.arm+'.'+o.pid+'.'+o.d+'.'+o.r+'; Path=/; Max-Age='+(8*86400)+'; SameSite=Lax; Secure');}}
+      else if(act.length)o.arm=act[0];
+    }catch(e){}
+    try{o.n=(await C.alle(mk)).filter(x=>x&&x.slug&&!['alles','vraag','cadeau-vinden'].includes(x.slug)).length;}catch(e){}
+    const site={nl:'keuzehulp',us:'whichtobuy',de:'kaufberater'}[mk];
+    o.meet='<script src="/cm.js" data-site="'+site+'" data-proef="'+site+'-chatlp" data-modal="geen" async></script>';
+    res.setHeader('content-type','text/html; charset=utf-8');res.setHeader('cache-control','private, no-store');res.setHeader('vary','cookie');
+    return res.status(200).send(V.lpPagina(mk,o));}
   if(q.get('tool')==='vinder'){const V=await import('../lib/cadeauvinder.js');const mk=String(q.get('market')||'nl');res.setHeader('content-type','text/html; charset=utf-8');res.setHeader('cache-control','public, max-age=300');return res.status(200).send(V.vinderPagina(['us','de'].includes(mk)?mk:'nl'));} // vraag-eerst cadeauvinder (18 nov 2026, 100k intenties)
   if(q.get('tool')==='tsc'){const {tscHandler}=await import('../lib/tsc.js');return tscHandler(req,res,url);}
   if(q.get('tool')==='cur'){const {curHandler}=await import('../lib/cur.js');return curHandler(req,res,url);}
