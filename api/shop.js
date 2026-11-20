@@ -1330,6 +1330,15 @@ export default async function handler(req, res) {
       const uit = []; for (const x of g.groepen) uit.push(Object.assign({ groep: x.id, was: x.conversion_event }, await whopZetDoel(x.id, ev)));
       try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'Meta stuurt nu op ' + ev + ' (Henkjan 17 nov: "Ja doen ."): ' + uit.map(u => u.groep + ' ' + (u.ok ? 'gelukt' : 'mislukt')).join(', ') })]); } catch (e) {}
       return res.status(200).json({ ok: uit.length > 0 && uit.every(u => u.ok), uit }); }
+    if (op === 'whstop') { // 20 nov (Henkjan: "Ja meta heeft nul opbrengst dus verschuif"): alle Kadoly-campagnes bij Whop op pauze en de halfuurronde stil (geen nieuwe advertenties, geen meldingen); &aan=1 haalt alleen de stilstand van de ronde weg, campagnes blijven op pauze; beschermde host
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      if (url.searchParams.get('aan') === '1') { await kv.del(['hjdk:whop:stop']); try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'ronde weer aan (campagnes blijven op pauze)' })]); } catch (e) {} return res.status(200).json({ ok: true, ronde: 'aan' }); }
+      const camp = await whopCampagnes(); if (!camp.ok) return res.status(200).json({ ok: false, fout: camp.fout || 'campagnes niet op te halen' });
+      const uit = []; for (const c of camp.campagnes) { if (c.status !== 'active') { uit.push({ id: c.id, titel: c.titel, al: c.status }); continue; } let r = await whopApi('/ad_campaigns/' + c.id + '/pause', { method: 'POST' }); if (!r.ok && (r.status === 404 || r.status === 405)) r = await whopApi('/ad_campaigns/' + c.id, { method: 'PATCH', body: { status: 'paused' } }); const na = await whopApi('/ad_campaigns/' + c.id); uit.push({ id: c.id, titel: c.titel, ok: r.ok, status: na.j ? na.j.status : null, fout: r.ok ? undefined : r.fout }); }
+      const waarom = String(url.searchParams.get('waarom') || 'Henkjan 20 nov: Meta heeft nul opbrengst, budget naar TikTok en Google Shopping').slice(0, 200);
+      await kv.set('hjdk:whop:stop', { at: new Date().toISOString(), waarom });
+      try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'gestopt (' + waarom + '): ' + uit.map(u => u.id + ' ' + (u.al ? 'was al ' + u.al : (u.status || (u.ok ? 'pauze' : 'mislukt')))).join(', ') })]); await kv.raw(['LPUSH', 'mm:handover:log', JSON.stringify({ t: new Date().toISOString(), wie: 'whop-stop', tekst: 'Kadoly Meta via Whop gestopt: ' + uit.map(u => (u.titel || u.id) + ' ' + (u.al || u.status || '?')).join(', ') + ' (' + waarom + ')' })]); } catch (e) {}
+      return res.status(200).json({ ok: uit.every(u => u.al || u.ok), uit }); }
     if (op === 'whuit') { // 19 nov (Henkjan: "ga dan nu beter adverteren en wat verkopen"): advertenties met de hand uit (lijst ad_-id's, hooguit 20), met reden in het log; alleen via de beschermde host
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const ids = String(url.searchParams.get('ids') || '').split(',').map(x => x.replace(/[^A-Za-z0-9_]/g, '').slice(0, 40)).filter(x => /^ad_/.test(x)).slice(0, 20); const waarom = String(url.searchParams.get('waarom') || '').slice(0, 200);
@@ -1356,6 +1365,7 @@ export default async function handler(req, res) {
         return res.status(200).json({ ok: true, stand: st, log: lg }); }
       if (!mag) return res.status(404).send('Niet gevonden');
       if (!whopKlaar()) return res.status(200).json({ ok: true, overgeslagen: 'geen WHOP_API_KEY' });
+      { let gestopt = null; try { gestopt = await kv.get('hjdk:whop:stop'); } catch (e) {} if (gestopt) return res.status(200).json({ ok: true, overgeslagen: 'Whop gestopt: geen nieuwe advertenties, geen meldingen (op=whstop; weer aan met op=whstop&aan=1)', gestopt }); } // 20 nov (Henkjan: "Ja meta heeft nul opbrengst dus verschuif")
       const droog = !!url.searchParams.get('droog'), nu = new Date(), dagNL = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Amsterdam' }).format(nu);
       const uurNLv = () => Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Amsterdam', hour: 'numeric', hourCycle: 'h23' }).format(nu));
       const lg = async (wat, extra) => { try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify(Object.assign({ at: nu.toISOString(), wat }, extra || {}))]); await kv.raw(['LTRIM', 'hjdk:whop:log', '0', '499']); } catch (e) {} };
