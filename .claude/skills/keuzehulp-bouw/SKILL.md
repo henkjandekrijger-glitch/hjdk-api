@@ -228,6 +228,31 @@ Op 390×800 staan het antwoord en de eerste actieknop in het eerste scherm.
 - Dezelfde actie heeft overal dezelfde stijl.
 - Hoogstens 4 vraag-pills in de chat.
 
+**De chat: doel, pills en start (Henkjan, 20 nov 2026).**
+
+Henkjan: "beste is geen pills vooraf zelfs denk ik of wel maar dan starten ze chat. Maak dit lerend en doe A B tests ook. Doel en dat moet in de skill ook heel duidelijk zijn. Engagen en intent opslaan en blijven voeden, dus engagen en contact vastleggen."
+
+- **Doel van de chat, in deze volgorde:**
+  1. De bezoeker gaat praten: een vraag gesteld of een pill getikt.
+  2. De intentie wordt bewaard: wat, voor wie, situatie en budget, zodra er 2 velden zijn.
+  3. Contact vastleggen: volgen, e-mail, WhatsApp of koppelen aan de eigen assistent, zodat we de intentie blijven voeden.
+
+  De proefwaarde in `lib/proef.js` (`kzuxnl`, `kzuxus`, `kzuxde`) volgt dit: tik 1, pill 2, vraag 4, winkel 10, blijf 12, intentie 30, gekoppeld 40.
+- **Een pill past altijd bij de pagina.**
+  - "Voor wie is het?" alleen bij cadeaus.
+  - "Wat wil je uitgeven?" alleen op pagina's met producten.
+  - Een pagina zonder producten en zonder eigen situaties krijgt geen vaste stappen, maar zijn eigen vragen (FAQ) als pills. Dat regelt `pillStappen` in `lib/kzux.js`.
+  - Een pill die niet bij het onderwerp past, is een fout. Diensten, contracten, verzekeringen, advocaten, makelaars, rijscholen en energie krijgen nooit voor wie of budget (20 nov 2026: dat stond op energie vergelijken, "belachelijk natuurlijk").
+- **De start van de chat is een lopende proef.** Factor `start` in de proef van de markt:
+  - a: de eigen vragen van de pagina als pills;
+  - b: geen pills vooraf; de chat stelt een open vraag in het invoerveld;
+  - c: drie pills die een gesprek starten ("Help me kiezen", "Ik twijfel tussen twee", "Wat past bij mij?").
+
+  De rechter is intenties en contact per 100 bezoekers, niet het aantal tikken. Stand: `/api/mm/proefstand?site=kzuxnl&vorm=tekst`.
+
+  Wint een arm (kans beste 95% vanaf 300 per arm), maak die de standaard in `lib/kzux.js`. Zet daarna de volgende uitdager erin. Doe dat met één factor tegelijk.
+- **Een nieuwe pagina** volgt de winnende start. Bouw geen eigen pill-stappen tenzij de pagina echte situaties heeft met verschillende antwoorden.
+
 **Tabellen.**
 - Hoogstens 3 kolommen op mobiel. Breder stapelt `TABEL_JS` vanzelf.
 - Geen knoppen in rijen, geen cel langer dan 140 tekens.
