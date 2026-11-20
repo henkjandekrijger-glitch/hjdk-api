@@ -273,6 +273,8 @@ Henkjan 20 nov: "Kijk in quiz md wat wel en niet werkte en nu gaan we dit compou
 
 ## 9. Logboek (nieuwste bovenaan)
 
+- 2026-11-20: Live nagekeken: cadeau-idee van vandaag en "Nog €X" staan er weer (catalogus 3.021 producten, 738 cadeaus tot €30, 2.127 tot €60; telling in `op=dkstand` onder `cat`). Een lege catalogus wordt niet meer 10 minuten onthouden, en babyspullen (verschoonmat, bedbumper, peuterlepels) zijn geen cadeau of eerste doel meer.
+
 - 2026-11-20: Live gezien dat er geen cadeau en geen cadeau-idee meer verscheen: de shopcatalogus (3.021 producten) geeft de levertijd niet meer bij elk product mee, en de lijst vroeg een bekende levertijd van hooguit 3 werkdagen. Nu: levertijd bekend en hooguit 7, of onbekend, kortste eerst; de belofte "binnen 3 werkdagen" is uit de teksten en voorwaarden (de levertijd staat bij elk cadeau).
 - 2026-11-20: Alles lerend: Clickmind-proef spaarpot met 7 onderdelen (kop, knop, onderwerp, mailknop, deelkanaal WhatsApp/mail, deeltekst, plek van het product), gebeurtenissen vanuit de server, cm.js op elke pagina, alle mail- en productlinks via op=dkgo in het Clickmind-register, deelknoppen via op=dkdeel; delen volgens de quizlessen. Assessment en economie in sectie 8.
 - 2026-11-20: Startpot €5 en samen klikken (elke klik geeft direct alle vrienden €0,10; vrienden van vrienden vervallen); ochtendmail "Samen gespaard" met wie gisteren voor je klikte en knop "Klik voor je vrienden"; na de klik het cadeau-idee van vandaag bovenaan; overal klik in plaats van tik; bereikbaarheid van Henkjan onder elke mail (regel uit de POST-lus). Acht advertenties voor e-mailadressen in NL gemaakt (beelden 492x328 en icoon 192x192), nog niet geplaatst.
