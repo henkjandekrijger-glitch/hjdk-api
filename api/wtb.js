@@ -224,6 +224,13 @@ export default async function handler(req, res) {
     const md = kop + lees('OVERDRACHT-KDP.md') + '\n\n---\n\n' + lees('kdp/rapport.md') + '\n\n---\n\n' + lees('kdp/wachtrij.md') + '\n\n---\n\n' + lees('kdp/boekwedstrijd.md');
     res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex'); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return res.status(200).send(md);
   }
+  if (op === 'tkoverdracht') { // overdracht taniakross.media voor een ander account (Henkjan 20 nov 2026: "Zet overdracht op vercel zodat ik verder kan in ander account . Grondige overdracht !!")
+    const host = String(req.headers['x-forwarded-host'] || req.headers.host || ''); if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+    const lees = (f) => { for (const x of [join(process.cwd(), f), new URL('../' + f, import.meta.url).pathname]) { try { return readFileSync(x, 'utf8'); } catch (e) {} } return '(' + f + ' niet gevonden)'; };
+    let log = []; try { log = ((await kv.raw(['LRANGE', 'mm:handover:log', 0, 299])) || []).map(x => { try { return JSON.parse(x); } catch (e) { return null; } }).filter(x => x && /taniakross|^tk-/i.test(String(x.wie || ''))).slice(0, 20); } catch (e) {}
+    const kop = '# taniakross.media-overdracht, live ' + new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC\n\n## Werklog taniakross (nieuwste boven, uit /api/mm/handover)\n\n' + (log.length ? log.map(x => '- ' + String(x.t).slice(0, 16).replace('T', ' ') + ' ' + x.wie + ': ' + x.tekst).join('\n') : '- (nog geen regels)') + '\n\n---\n\n';
+    res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex'); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return res.status(200).send(kop + lees('OVERDRACHT-TANIAKROSS.md'));
+  }
   const m = marketFor(req); if (!m) return res.status(404).send('unknown site');
   const path = '/' + String(q.get('slug') || '');
   if (GSC_FILES.includes(path.slice(1))) { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send('google-site-verification: ' + path.slice(1)); } // eigendomsbewijs Search Console

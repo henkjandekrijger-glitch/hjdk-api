@@ -2259,7 +2259,7 @@
     },
     "api/wtb.js": {
       "maxDuration": 30,
-      "includeFiles": "{OVERDRACHT-KDP.md,kdp/rapport.md,kdp/wachtrij.md,kdp/boekwedstrijd.md}"
+      "includeFiles": "{OVERDRACHT-KDP.md,OVERDRACHT-TANIAKROSS.md,kdp/rapport.md,kdp/wachtrij.md,kdp/boekwedstrijd.md}"
     },
     "api/shop.js": {
       "maxDuration": 300,
