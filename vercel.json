@@ -1710,6 +1710,26 @@
       "destination": "/api/keuze-tools?tool=dienstgids&g=schoonmaakbedrijf"
     },
     {
+      "source": "/iphone-18",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=dienstgids&g=iphone-18"
+    },
+    {
+      "source": "/elektrische-auto",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=dienstgids&g=elektrische-auto"
+    },
+    {
       "source": "/acai-bowl-maken",
       "has": [
         {
