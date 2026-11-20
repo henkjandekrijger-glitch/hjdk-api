@@ -325,6 +325,7 @@
     {"source": "/:t(nl|de)", "has": [{"type": "host", "value": "(www\\.)?curady\\.com"}], "destination": "/api/gids?op=cyhome&t=:t"},
     {"source": "/:t(nl|de)/:s([a-z-]+)", "has": [{"type": "host", "value": "(www\\.)?curady\\.com"}], "destination": "/api/gids?op=cygids&t=:t&s=:s"},
     {"source": "/:s(barrel-saunas|hot-tubs|wood-fired-hot-tubs|massage-chairs|infrared-saunas|ice-baths|kamado-grills)", "has": [{"type": "host", "value": "(www\\.)?curady\\.com"}], "destination": "/api/gids?op=cygids&s=:s"},
+    { "source": "/clickmind", "destination": "/api/shop?op=clickmind" },
     {
       "source": "/m/:code([0-9a-f]{12}[1-9]|[a-z0-9]{5})",
       "destination": "/api/post?op=k&code=:code"

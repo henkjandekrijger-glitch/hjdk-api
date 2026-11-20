@@ -40,6 +40,7 @@ import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '..
 import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
 import { K_KOST, ontvang as margeOntvang, margeStand, zetMarge } from '../lib/shopmarge.js';
+import { gebruikerVan, koppel as cmKoppel, zoek as cmZoek, zetOpKlik as cmZetOpKlik, telMatch as cmTel } from '../lib/cmmatch.js'; // 20 nov: Clickmind-matching (verkopen terugvinden, herkenning zonder klik-id)
 import { prijsStand, prijsCsv } from '../lib/shopprijs.js';
 import { testRonde, testLabels, testTekst, TT_TEST } from '../lib/tttest.js';
 import { kiesBundel, bundelOpenbaar, bundelTekst, bundelCode, BUNDEL_REGEL } from '../lib/bundel.js';
@@ -128,8 +129,8 @@ async function haalFeed() {
       st.sleutels = Object.keys(j).slice(0, 20); st.prodVelden = prod[0] ? Object.keys(prod[0]).slice(0, 40) : []; st.orderVelden = orders[0] ? Object.keys(orders[0]).slice(0, 40) : [];
       st.betaald = st.orders.filter(o => /paid|betaald/i.test(o.s)).length; st.metHj = st.orders.filter(o => o.hj).length;
       // controle achteraf: elke betaalde bestelling met kenmerk telt, ook als de directe melding vanuit de shop niet afging (hooguit 9 dagen terug)
-      let nagemeld = 0; for (const o of orders.slice(0, 500)) { const hj = String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); if (!hj || !/paid|betaald/i.test(String(o.status || ''))) continue; const at = Date.parse(o.paid_at || o.created_at || '') || 0; if (at && Date.now() - at > 9 * 864e5) continue;
-        try { const r = await pxVerwerk(hj, 'koop', num(o.amount), String(o.order_id || o.id || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40) || 'feed', o.payment_method || o.methode, 'feed', at || undefined); if (r && !r.dubbel) nagemeld++; } catch (e) {} }
+      let nagemeld = 0; for (const o of orders.slice(0, 500)) { const hj = String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); const ou = gebruikerVan(o); if ((!hj && !ou.em && !ou.ph) || !/paid|betaald/i.test(String(o.status || ''))) continue; // 20 nov: ook zonder kenmerk als er een e-mail- of telefoonhash bij staat const at = Date.parse(o.paid_at || o.created_at || '') || 0; if (at && Date.now() - at > 9 * 864e5) continue;
+        try { const r = await pxVerwerk(hj, 'koop', num(o.amount), String(o.order_id || o.id || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40) || 'feed', o.payment_method || o.methode, 'feed', at || undefined, ou); if (r && !r.dubbel) nagemeld++; } catch (e) {} }
       st.nagemeld = nagemeld; }
     await kv.set('hjdk:shop:lusfeed', st); } catch (e) { try { await kv.set('hjdk:shop:lusfeed', { at: Date.now(), fout: String(e.message || e).slice(0, 120) }); } catch (x) {} }
   try { return await kv.get('hjdk:shop:lusfeed'); } catch (e) { return null; }
@@ -678,13 +679,19 @@ async function baken(req, res) {
 // met de bestellingen uit de datapagina van de shop (bron feed), zodat een betaling nooit wegvalt als de directe melding niet afging.
 const PX_SOORT = { koop: 'koop', cart: 'cart', afreken: 'afreken', betaal: 'betaal', fout: 'fout' };
 // warm publiek: warmZet staat in lib/shopdirect.js (4 nov)
-async function pxVerwerk(code, wRuw, v, order, methode, bron, t) {
-  const w = PX_SOORT[wRuw] || 'cart'; const oud = w === 'koop' ? 'koop' : (w === 'cart' || w === 'afreken') ? 'cart' : null; // oud = de tellers van voor 17 okt
+async function pxVerwerk(code, wRuw, v, order, methode, bron, t, u) {
+  const w = PX_SOORT[wRuw] || 'cart'; u = u || {}; let herv = false;
+  if (!code && w === 'koop' && (u.em || u.ph)) { const c = await cmZoek(kv, u); if (c) { code = c; herv = true; } } // 20 nov: bestelling zonder kenmerk, maar dezelfde e-mail of telefoon (hash) als bij een eerdere klik: die klik krijgt de verkoop const oud = w === 'koop' ? 'koop' : (w === 'cart' || w === 'afreken') ? 'cart' : null; // oud = de tellers van voor 17 okt
   const m = String(methode || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 16);
   if (bron !== 'feed') { const laatst = { at: Date.now(), test: /^test/i.test(code), bedrag: v, order: !!order, methode: m || null, bron: bron || 'shop' }; try { await kv.set('hjdk:shop:pxlaatst:' + w, laatst); if (m) await kv.set('hjdk:shop:pxlaatst:' + w + ':' + m, laatst, { ex: 60 * 86400 }); } catch (e) {} }
-  if (!code) { await uurTel(kv, '?', [w].concat(m ? [w + ':' + m] : []), t); if (w === 'koop' && v > 0) await uurTel(kv, '?', 'omzet', t, Math.round(v * 100)); return { ok: true, zonderKenmerk: true }; }
+  if (!code) { if (bron !== 'feed') { await uurTel(kv, '?', [w].concat(m ? [w + ':' + m] : []), t); if (w === 'koop' && v > 0) await uurTel(kv, '?', 'omzet', t, Math.round(v * 100)); } // de feed-controle loopt elk uur: zonder kenmerk niet nog eens tellen
+    // 20 nov: betaald zonder klik maar met vingerafdruk: één keer per bestelling aan TikTok melden met alleen e-mail en telefoon (hash), zodat TikTok zelf kijkt of de koper eerder een advertentie zag. Telt bij ons niet als TikTok-verkoop.
+    if (w === 'koop' && v > 0 && order && order !== 'feed' && (u.em || u.ph)) { try { const g = await kv.raw(['SET', 'cm:ov:' + order, '1', 'NX', 'EX', String(90 * 86400)]); if (g) { const st = await ttEvent({ c: '', u: { em: u.em, ph: u.ph } }, 'CompletePayment', v, null, { ip: u.ip, ua: u.ua, orderId: order }); await cmTel(kv, 'alleenVingerafdruk'); await log({ soort: 'bestelling', wat: eur(v) + ' zonder klik, met vingerafdruk aan TikTok gemeld', waarom: 'HTTP ' + st }); } } catch (e) {} }
+    return { ok: true, zonderKenmerk: true }; }
   let rec = null; try { rec = await kv.get(K.rec(code)); } catch (e) {}
   if (rec && rec.s === 'pi' && rec.t) return { ok: true, test: true }; // Pinterest QA must not enter cart/order cohorts.
+  if (rec && !rec.t && (u.em || u.ph)) { cmZetOpKlik(rec, u); await cmKoppel(kv, code, u); }
+  if (rec && herv && !rec.hv) { rec.hv = Date.now(); await cmTel(kv, 'teruggevonden'); await log({ soort: 'bestelling', wat: (v ? eur(v) + ' ' : '') + 'teruggevonden via e-mail', waarom: 'bestelling zonder kenmerk hoort bij klik ' + code + ' (' + (NETTEN[rec.s] || rec.s) + ')' }); }
   if (rec && rec.mp && !rec.t) await warmZet(kv, rec.mp, rec.p, w === 'koop' || w === 'betaal' || isBewust(rec) ? w : 'bekeken'); // 5 nov: een snelle tik op de koopbalk is geen warm publiek
   const merk = w + (order ? ':' + order : '');
   if (!rec) { // kenmerk onbekend (bijv. de database was vol toen de klik binnenkwam): wel per uur tellen, zodat het lek zichtbaar blijft
@@ -708,7 +715,7 @@ async function pxVerwerk(code, wRuw, v, order, methode, bron, t) {
     // anders leren PropellerAds en Mondiad op CPA niets. Eenmaal per klik (rec.conv), nooit voor testkliks.
     if (w === 'cart' || w === 'afreken' || w === 'betaal') { try { await kassaDoel(kv, rec); } catch (e) {} } // 5 nov: kassadoelen (PropellerAds doel 2 en terugval-hoofdconversie, MGID decision) alleen bij bewust afrekenen (lib/shopdirect.js isBewust); anders later, zodra cm.js een bewuste stap meldt
     if (oud === 'koop') { let st = 0; if (v > 0) { try { await kv.incrMany(pinCohortEntries(rec, [['c:sh-' + net + '-omzet', Math.round(v * 100)], ['c:sh-d' + D8() + '-' + net + '-omzet', Math.round(v * 100)]].concat(net === 'pi' && rec.a ? [['c:sh-pi-a' + rec.a + '-omzet', Math.round(v * 100)]] : []))); } catch (e) {} if (!rec.t) await uurTel(kv, net, 'omzet', t, Math.round(v * 100)); }
-      if (net === 'tt' && rec.c && !rec.t && !rec.tk) { rec.tk = Date.now(); st = await ttEvent(rec, 'CompletePayment', v); rec.conv = rec.conv || Date.now(); } // TikTok: betaald met bedrag via de Events API
+      if (net === 'tt' && rec.c && !rec.t && !rec.tk) { rec.tk = Date.now(); st = await ttEvent(rec, 'CompletePayment', v, null, { ip: u.ip, ua: u.ua }); rec.conv = rec.conv || Date.now(); } // TikTok: betaald met bedrag via de Events API (sinds 20 nov met e-mail- en telefoonhash, IP en browser als die er zijn)
       if (net === 'wh' && rec.c && !rec.t && !rec.wk) { rec.wk = Date.now(); st = await whEvent(rec, 'purchase', v); rec.conv = rec.conv || Date.now(); } // Whop (Meta): betaald met bedrag via de Events API van Whop
       if (rec.c && PB[net] && (net !== 'ra' || !rec.conv) && !rec.t) { try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 2500); const r = await fetch(net === 'mg' ? mgUrl(rec.c, mgEvent(MG_STAP.koop, rec.k), v) : PB[net].replace('{clickid}', encodeURIComponent(rec.c)) + (net === 'ra' ? '' : '&payout=' + v.toFixed(2)) + (net === 'pa' ? '&goal=3' : ''), { signal: ctl.signal }); clearTimeout(tm); st = r.status; } catch (e) {} rec.conv = rec.conv || Date.now(); }
       await log({ soort: 'bestelling', wat: (v ? eur(v) + ' ' : '') + 'via ' + (net === 'x' ? 'eigen verkeer' : NETTEN[net]) + (m ? ' (' + m + ')' : ''), waarom: 'plek ' + (rec.z || '?') + ', advertentie ' + (rec.a || '?') + (rec.c && (PB[net] || net === 'tt' || net === 'wh') ? ', gemeld aan het netwerk (HTTP ' + st + ')' : '') + (bron === 'feed' ? ', gevonden in de datapagina van de shop' : '') }); } }
@@ -718,7 +725,7 @@ async function pxVerwerk(code, wRuw, v, order, methode, bron, t) {
 async function pixel(req, res, url) {
   const q = url.searchParams; const code = String(q.get('c') || '').replace(/[^a-z0-9]/gi, '').slice(0, 14);
   const v = Math.max(0, Math.min(100000, num(q.get('v')))); const order = String(q.get('o') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40);
-  try { await pxVerwerk(code, String(q.get('w') || ''), v, order, q.get('m'), 'shop'); } catch (e) {}
+  try { await pxVerwerk(code, String(q.get('w') || ''), v, order, q.get('m'), 'shop', undefined, gebruikerVan(q)); } catch (e) {} // em/ph = sha256 van e-mail/telefoon (alleen hashes), ip/ua van de koper
   // 5 nov (panel): de reden van een mislukte betaling niet meer weggooien (per methode), zodat het lek tussen betaling gestart en betaald zichtbaar is
   if (String(q.get('w') || '') === 'fout' || q.get('r')) { try { await kv.raw(['LPUSH', 'hjdk:shop:betaalfout', JSON.stringify({ at: Date.now(), c: code, w: String(q.get('w') || '').slice(0, 12), m: String(q.get('m') || '').slice(0, 20), r: String(q.get('r') || '').slice(0, 200), v })]); await kv.raw(['LTRIM', 'hjdk:shop:betaalfout', '0', '499']); await kv.raw(['EXPIRE', 'hjdk:shop:betaalfout', String(90 * 86400)]); } catch (e) {} }
   res.setHeader('content-type', 'image/gif'); res.setHeader('cache-control', 'no-store'); return res.end(Buffer.from('R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7', 'base64'));
@@ -1214,6 +1221,49 @@ export default async function handler(req, res) {
       const ev0 = String(url.searchParams.get('ev') || 'view_content').replace(/[^a-z_]/g, '').slice(0, 30);
       const st = ev0 === 'page' ? await whPage({ clickid: 'test-' + Date.now().toString(36), url: 'https://go.kadoly.com/shop?whtest=1&utm_source=whop&utm_campaign=test', ua: String(req.headers['user-agent'] || '').slice(0, 300), utm_source: 'whop', utm_campaign: 'test' }) : await whEvent({ c: 'test-' + Date.now().toString(36), p: 'oc_4174003416580097', w: { utm_source: 'whop', utm_campaign: 'test' } }, ev0, Number(url.searchParams.get('v')) || 0);
       return res.status(200).json({ ok: st === 200, status: st, sleutel: whopKlaar(), account: WHOP_BIZ }); }
+    if (op === 'kosten' || op === 'clickmind') { // 20 nov (Henkjan: "Clickmind heeft voor mij nu geen gezicht maak dat er meteen bij"): advertentiekosten per advertentie opslaan en het overzicht winst per advertentie. Alleen via de beschermde vercel.app-host
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const sp = url.searchParams; res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
+      const hmap = r => { if (!r) return {}; if (Array.isArray(r)) { const o = {}; for (let i = 0; i + 1 < r.length; i += 2) o[r[i]] = r[i + 1]; return o; } return r; };
+      if (op === 'kosten') { // ?net=tt&dag=JJJJ-MM-DD&d=[{"id":"<advertentie-id>","naam":"...","kosten":1.23,"kliks":4,"vert":300}]
+        const net = String(sp.get('net') || '').replace(/[^a-z]/g, '').slice(0, 4); const dagQ = String(sp.get('dag') || ''); const dag = /^\d{4}-\d{2}-\d{2}$/.test(dagQ) ? dagQ : new Date().toISOString().slice(0, 10);
+        let rows = []; try { rows = JSON.parse(sp.get('d') || '[]'); } catch (e) { return res.status(400).json({ ok: false, fout: 'd is geen JSON' }); }
+        if (!NETTEN[net] || !Array.isArray(rows)) return res.status(400).json({ ok: false, fout: 'net onbekend of d geen lijst' });
+        const args = []; for (const r of rows.slice(0, 300)) { const id = String(r && r.id || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40); if (!id) continue; args.push(net + '|' + id, JSON.stringify({ naam: String(r.naam || '').slice(0, 80), kosten: Math.max(0, Math.round((Number(r.kosten) || 0) * 100) / 100), kliks: Math.max(0, Math.round(Number(r.kliks) || 0)), vert: Math.max(0, Math.round(Number(r.vert) || 0)), groep: String(r.groep || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40) })); }
+        if (args.length) { const k = 'cm:kosten:' + dag; await kv.raw(['HSET', k, ...args]); await kv.raw(['EXPIRE', k, String(120 * 86400)]); await kv.set('cm:kosten:laatst:' + net, Date.now()); }
+        return res.status(200).json({ ok: true, net, dag, opgeslagen: args.length / 2 }); }
+      const dagen = Math.max(1, Math.min(60, Number(sp.get('dagen')) || 7)); const nuMs = Date.now();
+      const dagLijst = []; for (let i = 0; i < dagen; i++) dagLijst.push(new Date(nuMs - i * 864e5).toISOString().slice(0, 10));
+      const netten = {}; const netVan = n => netten[n] = netten[n] || { net: n, naam: NETTEN[n] || n, aangekomen: 0, mens: 0, afreken: 0, verkopen: 0, omzet: 0, kosten: 0, marge: 0 };
+      for (const dag of dagLijst) { let t = null; try { t = await dagTotaal(dag); } catch (e) {} if (!t) continue; for (const [n, o] of Object.entries(t)) { const a = num(o.view) + num(o.dv), mm = num(o.dm) + num(o.mens), kp = num(o.dkp); if (!a && !mm && !kp) continue; const x = netVan(n); x.aangekomen += a; x.mens += mm; x.afreken += kp; } }
+      const ads = {}; for (const dag of dagLijst) { let h = {}; try { h = hmap(await kv.raw(['HGETALL', 'cm:kosten:' + dag])); } catch (e) {} for (const [f, v] of Object.entries(h)) { let o = null; try { o = typeof v === 'string' ? JSON.parse(v) : v; } catch (e) {} if (!o) continue; const [n, id] = f.split('|'); const a = ads[f] = ads[f] || { id, net: n, netNaam: NETTEN[n] || n, naam: o.naam, kosten: 0, kliks: 0, verkopen: 0, omzet: 0, marge: 0 }; a.kosten += num(o.kosten); a.kliks += num(o.kliks); if (o.naam) a.naam = o.naam; netVan(n).kosten += num(o.kosten); } }
+      let items = []; try { items = (await catalog()).items || []; } catch (e) {} const mg = {}, naamP = {}; for (const i of items) { if (i.mg != null) mg[i.id] = Number(i.mg); naamP[i.id] = i.t || i.title || i.naam || i.id; }
+      let feed = null; try { feed = await kv.get('hjdk:shop:lusfeed'); } catch (e) {}
+      const vanaf = nuMs - dagen * 864e5, orders = []; let betaald = 0, metKlik = 0, geschat = 0;
+      for (const o of ((feed && feed.orders) || [])) { const at = Date.parse(o.at || '') || 0; if (!at || at < vanaf) continue; const paid = /paid|betaald/i.test(o.s || ''); let rec = null; if (o.hj) { try { rec = await kv.get(K.rec(o.hj)); } catch (e) {} } if (rec && rec.t) continue;
+        const n = rec ? rec.s : (o.hj ? '?' : 'geen'); const v = num(o.v); const stuks = num(o.n) || 1; let marge = mg[o.p] != null ? mg[o.p] * stuks : null; if (marge == null && paid) { marge = v / 1.21 * 0.35; geschat++; }
+        orders.push({ dag: String(o.at).slice(0, 10), product: String(naamP[o.p] || o.p || '').slice(0, 60), bedrag: v, bron: rec ? (NETTEN[rec.s] || rec.s) + (rec.hv ? ' (teruggevonden)' : '') : 'zonder klik', advertentie: rec && rec.z ? ((ads[rec.s + '|' + rec.z] || {}).naam || rec.z) : '', status: paid ? 'betaald' : (/expir/i.test(o.s || '') ? 'verlopen' : String(o.s || '')) });
+        if (!paid) continue; betaald++; if (rec) metKlik++;
+        const x = netVan(rec ? rec.s : 'geen'); if (!rec) x.naam = 'Zonder klik (direct, Google, terug)'; x.verkopen++; x.omzet += v; x.marge += marge || 0;
+        if (rec && rec.z) { const f = rec.s + '|' + rec.z; const a = ads[f] = ads[f] || { id: rec.z, net: rec.s, netNaam: NETTEN[rec.s] || rec.s, naam: '', kosten: 0, kliks: 0, verkopen: 0, omzet: 0, marge: 0 }; a.verkopen++; a.omzet += v; a.marge += marge || 0; } }
+      const match = { betaald, metKlik }; for (const dag of dagLijst) { try { const h = hmap(await kv.raw(['HGETALL', 'cm:match:' + dag.replace(/-/g, '')])); for (const [k, v] of Object.entries(h)) match[k] = (match[k] || 0) + num(v); } catch (e) {} }
+      const nl = Object.values(netten).filter(x => x.aangekomen || x.kosten || x.verkopen).sort((a, b) => (b.kosten + b.omzet) - (a.kosten + a.omzet));
+      const al = Object.values(ads).filter(a => a.kosten || a.verkopen).sort((a, b) => (b.marge - b.kosten) - (a.marge - a.kosten) || b.kosten - a.kosten);
+      const tot = nl.reduce((s, x) => ({ kosten: s.kosten + x.kosten, mens: s.mens + x.mens, verkopen: s.verkopen + x.verkopen, omzet: s.omzet + x.omzet, marge: s.marge + x.marge }), { kosten: 0, mens: 0, verkopen: 0, omzet: 0, marge: 0 });
+      const { advies: cmAdvies, render: cmRender } = await import('../lib/clickmind-gezicht.js');
+      const stop = al.filter(a => cmAdvies(a).woord === 'stop').map(a => a.naam || a.id), opsch = al.filter(a => cmAdvies(a).woord === 'opschalen').map(a => a.naam || a.id);
+      const adviesTekst = [opsch.length ? 'meer budget naar ' + opsch.slice(0, 3).join(', ') : '', stop.length ? 'stop ' + stop.slice(0, 5).join(', ') : ''].filter(Boolean).join('; ') + (geschat ? ' (marge van ' + geschat + ' bestelling' + (geschat > 1 ? 'en' : '') + ' geschat op 35%, inkoopprijs ontbreekt)' : '');
+      let kl = {}; for (const n of ['tt', 'wh', 'pa']) { try { kl[n] = num(await kv.get('cm:kosten:laatst:' + n)); } catch (e) {} } let emZien = 0; try { emZien = num(await kv.get('cm:emzien')); } catch (e) {}
+      const wanneer = ms => ms ? new Date(ms).toISOString().slice(0, 16).replace('T', ' ') + ' UTC' : '';
+      const koppelingen = [
+        { naam: 'TikTok verkopen (Events API, server)', aan: !!(process.env.TIKTOK_TOKEN || process.env.TIKTOK_EVENTS_TOKEN) },
+        { naam: 'Meta via Whop (Events API, server)', aan: whopKlaar() },
+        { naam: 'PropellerAds terugmelding', aan: !!PB.pa },
+        { naam: 'TikTok advertentiekosten', aan: !!kl.tt, uitleg: kl.tt ? 'laatst ' + wanneer(kl.tt) : 'komt elk uur binnen via de TikTok-ronde' },
+        { naam: 'E-mailvingerafdruk uit de shop (terugvinden)', aan: !!emZien, uitleg: emZien ? 'laatst ' + wanneer(emZien) : 'de shop stuurt nog geen sha256 van het e-mailadres mee (opdracht voor de Kadoly-code)' }];
+      const html = cmRender({ kop: 'Kadoly', periode: dagen === 1 ? 'Vandaag' : 'Laatste ' + dagen + ' dagen', totaal: tot, netten: nl, ads: al, orders, match, koppelingen, adviesTekst: adviesTekst || '', nu: new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC' });
+      if (sp.get('vorm') === 'json') return res.status(200).json({ ok: true, dagen, totaal: tot, netten: nl, ads: al, orders, match, koppelingen });
+      res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(html); }
     if (op === 'kassalek') { // 16 nov (Henkjan: "Ja zoek maar uit maar ik denk dat het verkeersbron is ."): waar strandt het betalen, per verkeersbron. Alleen tellingen en bestellingen zonder persoonsgegevens, alleen via de beschermde vercel.app-host
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const dagen = Math.max(1, Math.min(60, Number(url.searchParams.get('dagen')) || 28));
