@@ -233,7 +233,7 @@ function koopAdvies(item, adv) {
 
 /* partnerproducten buiten bol (bijv. Jackery via Impact): kies het product dat het best bij de antwoorden past; prijs tonen we niet (die staat live bij de fabrikant) */
 const IMPACT = { Jackery: 'https://itjackery.pxf.io/c/3526280/1762660/20686' };
-function partnerLink(shop, url, key) { const b = IMPACT[shop]; return b ? b + '?subId1=' + encodeURIComponent(key) + '&u=' + encodeURIComponent(url) : url; }
+function partnerLink(shop, url, key) { const b = IMPACT[shop]; return b ? '/api/keuze-tools?tool=aff&p=jackery-nl&s=' + encodeURIComponent(String(key || '').slice(0, 80)) + '&u=' + encodeURIComponent(url) : url; } // via lib/aff.js: klik-ID als subId1, verkoop komt terug (20 nov 2026)
 function pickPartner(item, route, key) {
   if (!item.partners || !item.partners.length) return null;
   const sc = p => (p.fit || []).reduce((n, f, i) => n + (Array.isArray(f) && f.indexOf(route[i]) >= 0 ? (i === 0 ? 3 : 1) : 0), 0);

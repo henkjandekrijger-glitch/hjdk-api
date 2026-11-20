@@ -14,7 +14,8 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { organicStatus } from '../lib/organic.js';
 import { contentDate } from '../lib/organic-policy.js';
-import { WTB_CLUSTER } from '../lib/wtb-hand.js';
+import { WTB_CLUSTER, WTB_HAND } from '../lib/wtb-hand.js';
+import { herstellerBlok } from '../lib/aff.js'; // direct bij de fabrikant via impact/Awin met ons klik-ID (20 nov 2026)
 // onderwerpclusters (lib/wtb-hand.js): gidsen in hetzelfde cluster linken altijd naar elkaar, ook zonder verwant per gids (19 nov 2026, batterijcluster)
 const zelfdeCluster = (mid, a, b) => (WTB_CLUSTER[mid] || []).some(c => c.includes(a) && c.includes(b));
 import { lookNieuw } from '../lib/look.js';
@@ -146,6 +147,7 @@ async function page(m, it, all, req) {
 <div class="answer">${antwoordBlok(it.kort, { bronLabel: m.id === 'de' ? 'Quellen' : 'Sources' })}</div>
 ${kx}<h2>${esc(s.q)}</h2>${qs}
 <div class="guide-actions"><button type="button" id="share-guide">${m.id === 'de' ? 'Ergebnis kopieren' : 'Copy this result'}</button><span id="share-status" role="status"></span></div><p id="advice-status" role="status"></p><div id="adv" aria-live="polite" aria-atomic="true" style="margin:14px 0">${adviceHtml(m, adv)}</div>
+${herstellerBlok(m.id === 'de' ? 'de' : 'us', it.slug, it.hersteller || ((WTB_HAND[m.id] || []).find(h => h.slug === it.slug) || {}).hersteller)}
 ${guideSections(it,esc)}
 ${(it.aiMiss || []).length ? `<div class="box ai"><h2>${esc(s.aimiss)}</h2><ul>${it.aiMiss.map(x => '<li>' + esc(x) + '</li>').join('')}</ul></div>` : ''}
 <div class="box"><h2>${esc(s.guide)}</h2>${gidsBlok(it.guide, { bronLabel: m.id === 'de' ? 'Quellen' : 'Sources' })}</div>
