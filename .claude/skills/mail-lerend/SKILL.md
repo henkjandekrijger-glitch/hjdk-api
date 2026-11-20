@@ -26,7 +26,7 @@ Ophalen met web_fetch_vercel_url (curl naar deze domeinen wordt vanuit de cloud 
 
 ## Links en de Gmail-koppeling van de chat (18 nov 2026: "Dit NOOIT meer doen: niet de goede link")
 
-De Gmail-koppeling van Claude herschrijft elke link die met https begint naar een google.com/url-link, ook in een a-href. Controleer dus elk concept na het aanmaken met get_draft (RAW of FULL_CONTENT). Staat er google.com/url in: niet versturen. Schrijf een link in zo'n mail zonder https ervoor (bijvoorbeeld todayin.email/surgery/m/CODE): die blijft ongemoeid. Verstuur nooit een mail waarvan je de links niet hebt teruggelezen.
+De Gmail-koppeling van Claude herschrijft elke link die met https begint naar een google.com/url-link, ook in een a-href. Controleer dus elk concept na het aanmaken met get_draft (RAW of FULL_CONTENT). Staat er google.com/url in: niet versturen. Zonder https ervoor helpt niet meer: op 20 nov 2026 herschreef de koppeling ook gids.kadoly.com/m/CODE en zelfs een kaal kadoly.com (getest met een concept, vier creatormails gingen zo de deur uit). Een mail met een link verstuur je daarom via Gmail in de browser (Chrome, tab daarna sluiten) of je laat de link weg. Verstuur nooit een mail waarvan je de links niet hebt teruggelezen; maak bij twijfel eerst een testconcept aan jezelf en lees het terug.
 
 ## Na het versturen
 
