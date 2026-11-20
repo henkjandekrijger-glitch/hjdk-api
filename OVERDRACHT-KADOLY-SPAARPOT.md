@@ -73,7 +73,7 @@ Alle bedragen staan in centen bovenaan `lib/dagkans.js` in `R`:
 | Per klik van een vriend | €0,10 voor jou, direct | `vriend: 10` |
 | Van vrienden samen per dag | hooguit €0,90 | `vriendMax: 90` |
 | Pot | hooguit €30 | `potMax: 3000` |
-| Cadeau | tot €30 incl. verzending, levertijd hooguit 3 werkdagen | `prijsMax: 30`, `leverMax: 3` |
+| Cadeau | tot €30 incl. verzending; levertijd bekend en hooguit 7 werkdagen, of onbekend (kortste eerst) | `prijsMax: 30`, `leverMax: 7` |
 | Vriend telt mee na | 3 klikdagen van de nieuwe | `vriendDagen: 3` |
 | Geen ochtendmail meer na | 14 dagen zonder klik (link blijft werken) | `rustNa: 14` |
 | Pot vervalt na | 30 dagen zonder klik, ook wat vrienden spaarden | `vervalNa: 30` |
@@ -273,6 +273,7 @@ Henkjan 20 nov: "Kijk in quiz md wat wel en niet werkte en nu gaan we dit compou
 
 ## 9. Logboek (nieuwste bovenaan)
 
+- 2026-11-20: Live gezien dat er geen cadeau en geen cadeau-idee meer verscheen: de shopcatalogus (3.021 producten) geeft de levertijd niet meer bij elk product mee, en de lijst vroeg een bekende levertijd van hooguit 3 werkdagen. Nu: levertijd bekend en hooguit 7, of onbekend, kortste eerst; de belofte "binnen 3 werkdagen" is uit de teksten en voorwaarden (de levertijd staat bij elk cadeau).
 - 2026-11-20: Alles lerend: Clickmind-proef spaarpot met 7 onderdelen (kop, knop, onderwerp, mailknop, deelkanaal WhatsApp/mail, deeltekst, plek van het product), gebeurtenissen vanuit de server, cm.js op elke pagina, alle mail- en productlinks via op=dkgo in het Clickmind-register, deelknoppen via op=dkdeel; delen volgens de quizlessen. Assessment en economie in sectie 8.
 - 2026-11-20: Startpot €5 en samen klikken (elke klik geeft direct alle vrienden €0,10; vrienden van vrienden vervallen); ochtendmail "Samen gespaard" met wie gisteren voor je klikte en knop "Klik voor je vrienden"; na de klik het cadeau-idee van vandaag bovenaan; overal klik in plaats van tik; bereikbaarheid van Henkjan onder elke mail (regel uit de POST-lus). Acht advertenties voor e-mailadressen in NL gemaakt (beelden 492x328 en icoon 192x192), nog niet geplaatst.
 - 2026-11-17: Dit document gemaakt en live gezet op `op=dkoverdracht` (Henkjan: "Zet uitgebreide MD op vercel dan kan ik gaan testen in ander account").
