@@ -19,6 +19,7 @@ import { LIJSTEN,RANK_SLUGS } from '../lib/tsc-rank.js';
 import * as provider from '../lib/tsc-provider.js';
 import * as lookLayer from '../lib/tsc-look.js';
 import * as linkLayer from '../lib/tsc-links.js';
+import * as chirurgie from '../lib/chirurgie.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 let checks=0;
 async function test(name,fn){await fn();checks++;console.log('ok',name);}
@@ -27,6 +28,20 @@ const names={...data,SURGERY_FAVICON,ROUTES:JSON.parse(fs.readFileSync(path.join
 const render=new Function(...Object.keys(names),raw.replace(/export /g,'')+';return {home,rankPagina,pagina,checkPagina,extraPagina,llms,ALL,pageDate,tscHandler};')(...Object.values(names));
 const out=path.join(root,'qa-render');fs.mkdirSync(out,{recursive:true});
 const scriptCheck=html=>{for(const m of html.matchAll(/<script(?![^>]*application\/(?:ld\+)?json)[^>]*>([\s\S]*?)<\/script>/g))new vm.Script(m[1]);};
+await test('active surgery renderer keeps dental answers and limits ranking claims',()=>{
+ const ids=[['procedure-dental-implants','Wat kost een implantaat inclusief abutment en kroon?'],['procedure-veneers','Kan ik facings zonder slijpen kiezen?'],['procedure-aligners','Zijn retainers inbegrepen in de prijs?']];
+ for(const [id,q] of ids){
+  const html=chirurgie.lijstPagina(data.SITE.base,id,'nl',{aanmeld:'<section id="mail"></section>'});
+  assert.ok(html.includes(q),id);assert.ok(html.includes('rel="noopener nofollow"'),id);assert.ok(html.includes('Alle tandheelkundige onderwerpen'),id);
+  assert.ok(!/Onze eerste keus|De beste klinieken/.test(html),id);assert.ok(html.includes('geen oordeel over veiligheid, geschiktheid of behandelresultaat'),id);
+  scriptCheck(html);
+ }
+ const dr=chirurgie.rang('bbl-dr'),y=[...dr.rij,...dr.rest].find(x=>/Yily De Los Santos/i.test(x.k.naam));
+ assert.ok(y);assert.equal(y.e.sources.included.some(x=>/suspend|geschorst/i.test(x.waarschuwing||'')),false);assert.ok(y.s.erv<30);
+ assert.ok(!/Kies Dr\. Yily|Choose Dr\. Yily|Wählen Sie Dr\. Yily/.test(chirurgie.lijstPagina(data.SITE.base,'bbl-dr','nl',{})));
+ const direct=Object.entries(LIJSTEN).flatMap(([id,l])=>(l.klinieken||[]).filter(k=>k.kind==='doctor').map(k=>({id,k}))).find(x=>chirurgie.PAGINA[Object.keys(chirurgie.PAGINA).find(slug=>chirurgie.PAGINA[slug].id===x.id&&chirurgie.PAGINA[slug].k===x.k.id&&chirurgie.PAGINA[slug].taal==='en')]);
+ if(direct){const slug=Object.keys(chirurgie.PAGINA).find(x=>chirurgie.PAGINA[x].id===direct.id&&chirurgie.PAGINA[x].k===direct.k.id&&chirurgie.PAGINA[x].taal==='en'),html=chirurgie.pagina(data.SITE.base,slug,{}),ld=JSON.parse(html.match(/application\/ld\+json">([\s\S]*?)<\/script>/)[1]);assert.ok(ld['@graph'].some(x=>x['@type']==='Physician'&&x.name===direct.k.naam));}
+});
 await test('all public SSR pages: unique IDs, correct language, scripts and metadata',()=>{
  for(const tl of ['en','nl','de']){
   for(const cat of [false,true]){const html=render.home(data.SITE.base,tl,cat);assert.equal((html.match(/id="mail"/g)||[]).length,1);assert.ok(html.indexOf('id="mail"')<html.indexOf('id="ingrepen"'));scriptCheck(html);fs.writeFileSync(path.join(out,(cat?'catalog-':'home-')+tl+'.html'),html);}
