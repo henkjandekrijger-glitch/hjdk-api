@@ -94,11 +94,14 @@ export default async function handler(req, res) {
   if(q.get('tool')==='tafel'){ // live tafel met de AI als gastvrouw (lib/tafel.js, 20 nov 2026)
     const TF=await import('../lib/tafel.js');const op=String(q.get('op')||'');res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
     if(op==='stand')return res.status(200).json(await TF.stand());
+    if(op==='actief'){res.setHeader('cache-control','public, s-maxage=20, stale-while-revalidate=40');const h=String(req.headers['x-forwarded-host']||req.headers.host||'');const s=['nl','us','de'].includes(q.get('s'))?q.get('s'):/whichtobuy/.test(h)?'us':/kaufberater/.test(h)?'de':'nl';return res.status(200).json(await TF.actief(s));} // Nu actief en mensen online op de voorkant (20 nov 2026)
+    if(op==='dialoog'){if(!/\.vercel\.app$/i.test(String(req.headers.host||'')))return res.status(403).json({ok:false,fout:'alleen via de beschermde vercel.app-host'});return res.status(200).json(await TF.dialoog(q.get('min')));} // halfuurrapport aan Henkjan
     if(req.method!=='POST')return res.status(405).json({ok:false});let b=req.body;try{if(typeof b==='string')b=JSON.parse(b.slice(0,4000));}catch{b={};}b=b||{};
     if(BOT_UA.test(String(req.headers['user-agent']||'')))return res.status(200).json({ok:false});
     const oidc=String(req.headers['x-vercel-oidc-token']||process.env.VERCEL_OIDC_TOKEN||'');
     if(op==='binnen')return res.status(200).json(await TF.binnen(b,oidc).catch(e=>({ok:false,fout:String(e.message||e).slice(0,80)})));
     if(op==='zeg')return res.status(200).json(await TF.zeg(b,oidc).catch(e=>({ok:false,fout:String(e.message||e).slice(0,80)})));
+    if(op==='hier')return res.status(200).json(await TF.hier(b));
     if(op==='maak')return res.status(200).json(await TF.maak(b));
     if(op==='volg')return res.status(200).json(await TF.volg(b));
     return res.status(404).json({ok:false});
