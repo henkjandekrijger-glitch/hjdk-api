@@ -1,250 +1,387 @@
 {
- "uitleg": "Wachtrij van Kadoly-video's (9:16, 12 s, zonder geluid) voor Instagram Reels, de Facebook-pagina, YouTube Shorts en TikTok (die twee zodra ze in Zernio staan). De dagtaak (kadoly/taak-social.md, stap 7b) plant ze over de hele Nederlandse dag en leert per tijdvak en per soort. Video's maakt de TikTok-chat; nieuwe achteraan toevoegen.",
- "videos": [
-  {
-   "id": "tafelhaard_kleur",
-   "url": "https://propellerads-mcp.vercel.app/tt/org_tafelhaard_kleur.mp4",
-   "pids": [
-    "oc_4174002164744193",
-    "oc_4174002203230209",
-    "oc_4174002201985025"
-   ],
-   "tekst": "Zand, taupe of zwart? Echt vuur op tafel, zonder schoorsteen. Zet je nummer in de reacties.\n\nLink in bio, zoek op tafelhaard.\n\n#kadoly #tafelhaard #wooninspiratie #interieur #kerstdecoratie",
-   "tiktok_tekst": "Zand, taupe of zwart? Echt vuur op tafel, zonder schoorsteen. Link in bio. #tafelhaard #wooninspiratie #interieur #homedecor #kerstdecoratie",
-   "soort": "kleurkeuze",
-   "gepost": "2026-11-18",
-   "platforms": {
-    "instagram": {
-     "zernio_id": "6afd654ebc74e5a61e5d31cb",
-     "tijdvak": "15:30",
-     "status": "gepland"
+  "uitleg": "Wachtrij van Kadoly-video's (9:16, 12 s, zonder geluid) voor Instagram Reels, de Facebook-pagina, YouTube Shorts en TikTok (die twee zodra ze in Zernio staan). De dagtaak (kadoly/taak-social.md, stap 7b) plant ze over de hele Nederlandse dag en leert per tijdvak en per soort. Video's maakt de TikTok-chat; nieuwe achteraan toevoegen.",
+  "videos": [
+    {
+      "id": "tafelhaard_kleur",
+      "url": "https://propellerads-mcp.vercel.app/tt/org_tafelhaard_kleur.mp4",
+      "pids": [
+        "oc_4174002164744193",
+        "oc_4174002203230209",
+        "oc_4174002201985025"
+      ],
+      "tekst": "Zand, taupe of zwart? Echt vuur op tafel, zonder schoorsteen. Zet je nummer in de reacties.\n\nLink in bio, zoek op tafelhaard.\n\n#kadoly #tafelhaard #wooninspiratie #interieur #kerstdecoratie",
+      "tiktok_tekst": "Zand, taupe of zwart? Echt vuur op tafel, zonder schoorsteen. Link in bio. #tafelhaard #wooninspiratie #interieur #homedecor #kerstdecoratie",
+      "soort": "kleurkeuze",
+      "gepost": "2026-11-18",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6afd654ebc74e5a61e5d31cb",
+          "tijdvak": "15:30",
+          "status": "gepubliceerd"
+        },
+        "facebook": {
+          "zernio_id": "6afd654ed89d0fd48fc0cce8",
+          "tijdvak": "15:30",
+          "status": "gepubliceerd"
+        }
+      },
+      "gemeten": {
+        "instagram": {
+          "weergaven": 2,
+          "dag": "2026-11-20"
+        },
+        "facebook": {
+          "weergaven": 1,
+          "dag": "2026-11-20"
+        },
+        "clickmind": {
+          "kliks": 1,
+          "echt": 1
+        }
+      }
     },
-    "facebook": {
-     "zernio_id": "6afd654ed89d0fd48fc0cce8",
-     "tijdvak": "15:30",
-     "status": "gepland"
-    }
-   }
-  },
-  {
-   "id": "kerstballen_kleur",
-   "url": "https://propellerads-mcp.vercel.app/tt/org_kerstballen_kleur.mp4",
-   "pids": [
-    "oc_4174003397361666",
-    "oc_4174003395592193",
-    "oc_4174003396820994"
-   ],
-   "tekst": "Wit, rood of goud: wat hangt er bij jou dit jaar? 26 glazen ballen per set.\n\nLink in bio, zoek op kerstballen.\n\n#kadoly #kerstdecoratie #kerstboom #kerst #wooninspiratie",
-   "tiktok_tekst": "Wit, rood of goud: wat hangt er bij jou dit jaar? 26 glazen ballen per set. #kerstdecoratie #christmasdecor #kerstboom #kerst #wooninspiratie",
-   "soort": "kleurkeuze"
-  },
-  {
-   "id": "17uur_donker",
-   "url": "https://propellerads-mcp.vercel.app/tt/org_17uur_donker.mp4",
-   "pids": [
-    "oc_4174002164744193",
-    "oc_4174003731251202"
-   ],
-   "tekst": "Het is 17:00 en al donker. Dit is ons plan: wollen deken en een vlam op tafel.\n\nLink in bio, zoek op tafelhaard.\n\n#kadoly #cozy #winter #tafelhaard #wooninspiratie",
-   "tiktok_tekst": "Het is 17:00 en al donker. Dit is ons plan. #cozy #winter #tafelhaard #wooninspiratie #hygge",
-   "soort": "pov"
-  },
-  {
-   "id": "kersthoek_set",
-   "url": "https://propellerads-mcp.vercel.app/tt/org_kersthoek_set.mp4",
-   "pids": [
-    "oc_4174003396820994",
-    "oc_4174003419430913",
-    "oc_4174003404046337"
-   ],
-   "tekst": "Je kersthoek in 3 stuks: gouden ballen, een zwarte lantaarn en een zachte plaid. Alles los te bestellen.\n\nLink in bio, zoek op kerst.\n\n#kadoly #kerstdecoratie #interieur #homedecor #kerst",
-   "tiktok_tekst": "Je kersthoek in 3 stuks. Alles los te bestellen, link in bio. #kerstdecoratie #christmasdecor #interieur #homedecor #kerst",
-   "soort": "set",
-   "gepost": "2026-11-18",
-   "platforms": {
-    "instagram": {
-     "zernio_id": "6afd654fdb8eca4ca14619cf",
-     "tijdvak": "21:00",
-     "status": "gepland"
+    {
+      "id": "kerstballen_kleur",
+      "url": "https://propellerads-mcp.vercel.app/tt/org_kerstballen_kleur.mp4",
+      "pids": [
+        "oc_4174003397361666",
+        "oc_4174003395592193",
+        "oc_4174003396820994"
+      ],
+      "tekst": "Wit, rood of goud: wat hangt er bij jou dit jaar? 26 glazen ballen per set.\n\nLink in bio, zoek op kerstballen.\n\n#kadoly #kerstdecoratie #kerstboom #kerst #wooninspiratie",
+      "tiktok_tekst": "Wit, rood of goud: wat hangt er bij jou dit jaar? 26 glazen ballen per set. #kerstdecoratie #christmasdecor #kerstboom #kerst #wooninspiratie",
+      "soort": "kleurkeuze",
+      "gepost": "2026-11-20",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b00081a32904255ecf2d034",
+          "tijdvak": "15:30",
+          "status": "gepland"
+        },
+        "facebook": {
+          "zernio_id": "6b00081a8520d7c330785f2b",
+          "tijdvak": "15:30",
+          "status": "gepland"
+        }
+      }
     },
-    "facebook": {
-     "zernio_id": "6afd6550bc74e5a61e5d31da",
-     "tijdvak": "21:00",
-     "status": "gepland"
+    {
+      "id": "17uur_donker",
+      "url": "https://propellerads-mcp.vercel.app/tt/org_17uur_donker.mp4",
+      "pids": [
+        "oc_4174002164744193",
+        "oc_4174003731251202"
+      ],
+      "tekst": "Het is 17:00 en al donker. Dit is ons plan: wollen deken en een vlam op tafel.\n\nLink in bio, zoek op tafelhaard.\n\n#kadoly #cozy #winter #tafelhaard #wooninspiratie",
+      "tiktok_tekst": "Het is 17:00 en al donker. Dit is ons plan. #cozy #winter #tafelhaard #wooninspiratie #hygge",
+      "soort": "pov"
+    },
+    {
+      "id": "kersthoek_set",
+      "url": "https://propellerads-mcp.vercel.app/tt/org_kersthoek_set.mp4",
+      "pids": [
+        "oc_4174003396820994",
+        "oc_4174003419430913",
+        "oc_4174003404046337"
+      ],
+      "tekst": "Je kersthoek in 3 stuks: gouden ballen, een zwarte lantaarn en een zachte plaid. Alles los te bestellen.\n\nLink in bio, zoek op kerst.\n\n#kadoly #kerstdecoratie #interieur #homedecor #kerst",
+      "tiktok_tekst": "Je kersthoek in 3 stuks. Alles los te bestellen, link in bio. #kerstdecoratie #christmasdecor #interieur #homedecor #kerst",
+      "soort": "set",
+      "gepost": "2026-11-18",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6afd654fdb8eca4ca14619cf",
+          "tijdvak": "21:00",
+          "status": "gepubliceerd"
+        },
+        "facebook": {
+          "zernio_id": "6afd6550bc74e5a61e5d31da",
+          "tijdvak": "21:00",
+          "status": "gepubliceerd"
+        }
+      },
+      "gemeten": {
+        "instagram": {
+          "weergaven": 2,
+          "dag": "2026-11-20"
+        },
+        "clickmind": {
+          "kliks": 6
+        }
+      }
+    },
+    {
+      "id": "kerstfinds",
+      "url": "https://propellerads-mcp.vercel.app/tt/org_kerstfinds.mp4",
+      "pids": [
+        "oc_4174003416580097",
+        "oc_4174003619020802",
+        "oc_4174003366658049"
+      ],
+      "tekst": "3 kerstfinds voor in huis: een gouden boompje, Bethlehem voor waxinelichtjes en een lantaarn van terracotta. Welke zet jij neer?\n\nLink in bio, zoek op kerst.\n\n#kadoly #kerstfinds #kerstdecoratie #wooninspiratie #kerst",
+      "tiktok_tekst": "3 kerstfinds voor in huis. Welke zet jij neer? #kerstfinds #kerstdecoratie #christmasdecor #finds #wooninspiratie",
+      "soort": "finds"
+    },
+    {
+      "id": "boho_set",
+      "url": "https://propellerads-mcp.vercel.app/tt/org_boho_set.mp4",
+      "pids": [
+        "oc_4173958185697282",
+        "oc_4173958191071233",
+        "oc_4173958218072065"
+      ],
+      "tekst": "Boho hoek in 3 stuks: bamboe mand, rieten spiegel en rieten hanglamp. Alles handgemaakt.\n\nLink in bio, zoek op boho.\n\n#kadoly #boho #wooninspiratie #interieurinspiratie #homedecor",
+      "tiktok_tekst": "Boho hoek in 3 stuks, alles handgemaakt van riet en bamboe. #boho #wooninspiratie #interieurinspiratie #homedecor #interieur",
+      "soort": "set",
+      "gepost": "2026-11-20",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b00081b8520d7c330785f31",
+          "tijdvak": "21:00",
+          "status": "gepland"
+        },
+        "facebook": {
+          "zernio_id": "6b00081b67b9e6405924eec5",
+          "tijdvak": "21:00",
+          "status": "gepland"
+        }
+      }
+    },
+    {
+      "id": "snoerloos_kleur",
+      "soort": "kleurkeuze",
+      "url": "https://propellerads-mcp.vercel.app/tt/org_snoerloos_kleur.mp4",
+      "pids": [
+        "oc_4173959237320705",
+        "oc_4173959237517313",
+        "oc_4173959219314689"
+      ],
+      "tekst": "Lampen zonder snoer. Welke kies jij?\n1. Groen, met laadstation\n2. Flamingo roze, met laadstation\n3. Alabaster, oplaadbaar\nZet je nummer in de reacties.\n\nLink in bio, zoek op Tavellio.\n\n#kadoly #verlichting #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "Lampen zonder snoer. Groen, roze of alabaster? #verlichting #wooninspiratie #interieur #homedecor #lamp"
+    },
+    {
+      "id": "steenlampen_set",
+      "soort": "set",
+      "url": "https://propellerads-mcp.vercel.app/tt/org_steenlampen_set.mp4",
+      "pids": [
+        "oc_4173959219101697",
+        "oc_4173959217643521",
+        "oc_4173959219544066"
+      ],
+      "tekst": "Lampen van alabaster en travertin:\n1. Leonardo alabaster lamp\n2. Alabaster lamp met gouden voet\n3. Travertin lamp met katoenen kap\n\nLink in bio, zoek op Tavellio.\n\n#kadoly #verlichting #interieur #wooninspiratie #homedecor",
+      "tiktok_tekst": "Lampen van alabaster en travertin. Welke kies jij? #verlichting #interieur #wooninspiratie #homedecor #interiordesign"
+    },
+    {
+      "id": "papieren_kerstboom",
+      "soort": "kleurkeuze",
+      "url": "https://propellerads-mcp.vercel.app/tt/org_papieren_kerstboom.mp4",
+      "pids": [
+        "oc_4174003357777921",
+        "oc_4174003327221761"
+      ],
+      "tekst": "Kerstboom van papier, opvouwbaar. Groen of donkergroen?\n\nLink in bio, zoek op kerstboom.\n\n#kadoly #kerstdecoratie #kerstboom #kerst #wooninspiratie",
+      "tiktok_tekst": "Kerstboom van papier, opvouwbaar. Groen of donkergroen? #kerstdecoratie #christmasdecor #kerstboom #kerst #wooninspiratie"
+    },
+    {
+      "id": "steengoed_tafel",
+      "soort": "set",
+      "url": "https://propellerads-mcp.vercel.app/tt/org_steengoed_tafel.mp4",
+      "pids": [
+        "oc_4174004740997121",
+        "oc_4174004740718593",
+        "oc_4174004737409025"
+      ],
+      "tekst": "De tafel klaar voor de feestdagen:\n1. Steengoed servies, gemengd\n2. Servies Ddoria van EDDA\n3. Brunchset van 12 delen\n\nLink in bio, zoek op steengoed.\n\n#kadoly #tafelstyling #servies #kerst #wooninspiratie",
+      "tiktok_tekst": "De tafel klaar voor de feestdagen. Welke set kies jij? #tafelstyling #servies #kersttafel #kerst #wooninspiratie"
+    },
+    {
+      "id": "boekenliefhebber",
+      "soort": "pov",
+      "url": "https://propellerads-mcp.vercel.app/tt/org_boekenliefhebber.mp4",
+      "pids": [
+        "oc_4174002212470785",
+        "oc_4174002211717121"
+      ],
+      "tekst": "Voor wie van boeken houdt: een kaarsenhouder als koffiekop op boeken, en een vaas in de vorm van een boek.\n\nLink in bio, zoek op Housevitamin.\n\n#kadoly #boekenliefhebber #wooninspiratie #interieur #cadeautip",
+      "tiktok_tekst": "Voor wie van boeken houdt. #boekenliefhebber #booktok #wooninspiratie #interieur #cadeautip"
+    },
+    {
+      "id": "n261117a",
+      "soort": "finds",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261117a.mp4",
+      "pids": [
+        "oc_4174002202804226",
+        "oc_4174002165055489",
+        "oc_4173958195789825"
+      ],
+      "tekst": "3 finds voor in huis:\n1. Ronde Tafelhaard Zwart Metaal Glas van Housevitamin\n2. Ronde Sand Tafelhaard 21cm voor Gezellige Sfeer van Housevitamin\n3. Grote Waterhyacint Wasmand met Deksel van Soeji\nWelke kies jij?\n\nLink in bio, zoek op Housevitamin.\n\n#kadoly #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 finds voor in huis. Welke kies jij? Link in bio. #kadoly #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261117b",
+      "soort": "kleurkeuze",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261117b.mp4",
+      "pids": [
+        "oc_4174003472498689",
+        "oc_4174003310755841",
+        "oc_4174003311493121"
+      ],
+      "tekst": "Welke kleur kies jij?\n1. Lichtbruine Bijzettafel Set van 3 IJzer Mica Decorations (lichtbruin)\n2. Stijlvolle Zwarte Bijzettafel Set met Houtnerf van Mica (zwart)\n3. Bruine Bijzettafel voor Planten, Set van 3 - Mica Decorations (bruin)\nZet je nummer in de reacties.\n\nLink in bio, zoek op Mica Decorations.\n\n#kadoly #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "Welke kleur kies jij: lichtbruin, zwart of bruin? Link in bio. #kadoly #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261117c",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261117c.mp4",
+      "pids": [
+        "oc_4239397464539137",
+        "oc_4239397468258305",
+        "oc_4239397464113153"
+      ],
+      "tekst": "3 favorieten van VEVOR:\n1. VEVOR Chamber Vacumeermachine voor Nat Voedsel en Vlees\n2. Popcornmaker in Bioscoopstijl met Kar, 8 Oz Ketel, VEVOR\n3. 2L Geen-IJs Slushie Machine met Zelfreiniging van VEVOR\nWelke kies jij?\n\nLink in bio, zoek op VEVOR.\n\n#kadoly #tafelstyling #keuken #homedecor",
+      "tiktok_tekst": "3 favorieten van VEVOR. Welke kies jij? Link in bio. #kadoly #tafelstyling #keuken #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261118a",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261118a.mp4",
+      "pids": [
+        "oc_4174002191351810",
+        "oc_4174002224513026",
+        "oc_4174002174476289"
+      ],
+      "tekst": "3 favorieten van Housevitamin:\n1. Reed Diffuser Kerstgeur 100ml Glas voor Feestelijke Huizen\n2. Ronde Wandspiegel 80 cm Taupe Metaal Frame\n3. Kandelaar Kleurrijk Snoepdesign 13x7x20cm Housevitamin\nWelke kies jij?\n\nLink in bio, zoek op Housevitamin.\n\n#kadoly #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 favorieten van Housevitamin. Welke kies jij? Link in bio. #kadoly #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261118b",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261118b.mp4",
+      "pids": [
+        "oc_4174003603652609",
+        "oc_4174003603947521",
+        "oc_4174003659309057"
+      ],
+      "tekst": "3 favorieten van Rostikal:\n1. Rustieke Stalen Vuurbak met Koeienkop Ontwerp voor de Tuin\n2. Pioenroos Vuurkorf Metaal Roestafwerking voor Tuin Rostikal\n3. Metalen Vuurschaal Cube Ontwerp voor Tuin Decoratie door Rostikal\nWelke kies jij?\n\nLink in bio, zoek op Rostikal.\n\n#kadoly #wooninspiratie #homedecor #cadeautip",
+      "tiktok_tekst": "3 favorieten van Rostikal. Welke kies jij? Link in bio. #kadoly #wooninspiratie #homedecor #cadeautip",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261118c",
+      "soort": "finds",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261118c.mp4",
+      "pids": [
+        "oc_4174003460014081",
+        "oc_4173957646450689",
+        "oc_4174003514015745"
+      ],
+      "tekst": "3 finds voor je planten:\n1. Hoge Eucalyptus Boom 175cm voor Binnen van Mica Decorations\n2. Vloeiende Plantenbak met Eiken Basis voor Luchtplanten\n3. Donker Rustieke Bloempot voor Moderne Interieurs van Vase The World\nWelke kies jij?\n\nLink in bio, zoek op Mica Decorations.\n\n#kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 finds voor je planten. Welke kies jij? Link in bio. #kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261119a",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261119a.mp4",
+      "pids": [
+        "oc_4174003731562498",
+        "oc_4174003731808258",
+        "oc_4174003732054018"
+      ],
+      "tekst": "3 favorieten van MoST Blankets:\n1. Wollen Deken met Levendig Zigzagpatroon 100% Wol\n2. Wollen Deken Multi-Kleur Groen Zigzagpatroon\n3. Wollen Deken Multikleur Rood Zigzagpatroon\nWelke kies jij?\n\nLink in bio, zoek op MoST Blankets.\n\n#kadoly #cozy #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 favorieten van MoST Blankets. Welke kies jij? Link in bio. #kadoly #cozy #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261119b",
+      "soort": "finds",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261119b.mp4",
+      "pids": [
+        "oc_4173958863470593",
+        "oc_4174003405553666",
+        "oc_4173958841024513"
+      ],
+      "tekst": "3 finds voor je planten:\n1. Orchidee Phalaenopsis Set van 4 Oranje Bloemen voor Huisdecoratie\n2. Bloempot Binnen Vrolijk Geel voor een Speelse Thuis\n3. Paarse Phalaenopsis Orchideeën Combi Deal - 2 Bloeiende Planten\nWelke kies jij?\n\nLink in bio, zoek op Kolibri Company.\n\n#kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 finds voor je planten. Welke kies jij? Link in bio. #kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261119c",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261119c.mp4",
+      "pids": [
+        "oc_4173958164185089",
+        "oc_4173958183206913",
+        "oc_4173958174097409"
+      ],
+      "tekst": "3 favorieten van Soeji:\n1. Grote Decoratieve Wasmand Geweven Waterhyacint Soeji\n2. Handgeweven Katoenen Boho Dekentje 110x200 cm van Soeji\n3. Waterhyacint Wasmand met Deksel - 3 Maten van Soeji\nWelke kies jij?\n\nLink in bio, zoek op Soeji.\n\n#kadoly #wanddecoratie #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 favorieten van Soeji. Welke kies jij? Link in bio. #kadoly #wanddecoratie #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261120a",
+      "soort": "finds",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261120a.mp4",
+      "pids": [
+        "oc_4174003357499393",
+        "oc_4174003271188481",
+        "oc_4173958188548097"
+      ],
+      "tekst": "3 finds voor in de keuken:\n1. Serviesset Antraciet 16-delig Tijdloos Design voor 4 Personen\n2. Servies Set Rustiek Steengoed 16-Delig voor 4 Personen\n3. Grote Rieten Serveertray voor Eten & Decor van Soeji\nWelke kies jij?\n\nLink in bio, zoek op Mica Decorations.\n\n#kadoly #tafelstyling #keuken #homedecor",
+      "tiktok_tekst": "3 finds voor in de keuken. Welke kies jij? Link in bio. #kadoly #tafelstyling #keuken #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261120b",
+      "soort": "kleurkeuze",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261120b.mp4",
+      "pids": [
+        "oc_4173959227441153",
+        "oc_4173959228096513"
+      ],
+      "tekst": "Welke kleur kies jij?\n1. Oplaadbare Lamp Donkerbruin Draadloos Ontwerp (donkerbruin)\n2. Oplaadbare Lamp Zwart Houten Draadloos Ontwerp (zwart)\nZet je nummer in de reacties.\n\nLink in bio, zoek op Tavellio - Amsterdam.\n\n#kadoly #bureau #interieur #gadgets",
+      "tiktok_tekst": "Welke kleur kies jij: donkerbruin of zwart? Link in bio. #kadoly #bureau #interieur #gadgets",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261120c",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261120c.mp4",
+      "pids": [
+        "oc_4173958834782209",
+        "oc_4173958834569217",
+        "oc_4173958825361409"
+      ],
+      "tekst": "3 favorieten van Kolibri Company:\n1. Kolibri Orchideeën Verrassingsdoos - 4 Unieke Orchideeën\n2. Verrassingsorchidee Box: 4 Prachtige Variëteiten van Kolibri\n3. Zwarte Zittende Aap Ornament Polystone Decor Kolibri Company\nWelke kies jij?\n\nLink in bio, zoek op Kolibri Company.\n\n#kadoly #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 favorieten van Kolibri Company. Welke kies jij? Link in bio. #kadoly #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
     }
-   }
-  },
-  {
-   "id": "kerstfinds",
-   "url": "https://propellerads-mcp.vercel.app/tt/org_kerstfinds.mp4",
-   "pids": [
-    "oc_4174003416580097",
-    "oc_4174003619020802",
-    "oc_4174003366658049"
-   ],
-   "tekst": "3 kerstfinds voor in huis: een gouden boompje, Bethlehem voor waxinelichtjes en een lantaarn van terracotta. Welke zet jij neer?\n\nLink in bio, zoek op kerst.\n\n#kadoly #kerstfinds #kerstdecoratie #wooninspiratie #kerst",
-   "tiktok_tekst": "3 kerstfinds voor in huis. Welke zet jij neer? #kerstfinds #kerstdecoratie #christmasdecor #finds #wooninspiratie",
-   "soort": "finds"
-  },
-  {
-   "id": "boho_set",
-   "url": "https://propellerads-mcp.vercel.app/tt/org_boho_set.mp4",
-   "pids": [
-    "oc_4173958185697282",
-    "oc_4173958191071233",
-    "oc_4173958218072065"
-   ],
-   "tekst": "Boho hoek in 3 stuks: bamboe mand, rieten spiegel en rieten hanglamp. Alles handgemaakt.\n\nLink in bio, zoek op boho.\n\n#kadoly #boho #wooninspiratie #interieurinspiratie #homedecor",
-   "tiktok_tekst": "Boho hoek in 3 stuks, alles handgemaakt van riet en bamboe. #boho #wooninspiratie #interieurinspiratie #homedecor #interieur",
-   "soort": "set"
-  },
-  {
-   "id": "snoerloos_kleur",
-   "soort": "kleurkeuze",
-   "url": "https://propellerads-mcp.vercel.app/tt/org_snoerloos_kleur.mp4",
-   "pids": [
-    "oc_4173959237320705",
-    "oc_4173959237517313",
-    "oc_4173959219314689"
-   ],
-   "tekst": "Lampen zonder snoer. Welke kies jij?\n1. Groen, met laadstation\n2. Flamingo roze, met laadstation\n3. Alabaster, oplaadbaar\nZet je nummer in de reacties.\n\nLink in bio, zoek op Tavellio.\n\n#kadoly #verlichting #wooninspiratie #interieur #homedecor",
-   "tiktok_tekst": "Lampen zonder snoer. Groen, roze of alabaster? #verlichting #wooninspiratie #interieur #homedecor #lamp"
-  },
-  {
-   "id": "steenlampen_set",
-   "soort": "set",
-   "url": "https://propellerads-mcp.vercel.app/tt/org_steenlampen_set.mp4",
-   "pids": [
-    "oc_4173959219101697",
-    "oc_4173959217643521",
-    "oc_4173959219544066"
-   ],
-   "tekst": "Lampen van alabaster en travertin:\n1. Leonardo alabaster lamp\n2. Alabaster lamp met gouden voet\n3. Travertin lamp met katoenen kap\n\nLink in bio, zoek op Tavellio.\n\n#kadoly #verlichting #interieur #wooninspiratie #homedecor",
-   "tiktok_tekst": "Lampen van alabaster en travertin. Welke kies jij? #verlichting #interieur #wooninspiratie #homedecor #interiordesign"
-  },
-  {
-   "id": "papieren_kerstboom",
-   "soort": "kleurkeuze",
-   "url": "https://propellerads-mcp.vercel.app/tt/org_papieren_kerstboom.mp4",
-   "pids": [
-    "oc_4174003357777921",
-    "oc_4174003327221761"
-   ],
-   "tekst": "Kerstboom van papier, opvouwbaar. Groen of donkergroen?\n\nLink in bio, zoek op kerstboom.\n\n#kadoly #kerstdecoratie #kerstboom #kerst #wooninspiratie",
-   "tiktok_tekst": "Kerstboom van papier, opvouwbaar. Groen of donkergroen? #kerstdecoratie #christmasdecor #kerstboom #kerst #wooninspiratie"
-  },
-  {
-   "id": "steengoed_tafel",
-   "soort": "set",
-   "url": "https://propellerads-mcp.vercel.app/tt/org_steengoed_tafel.mp4",
-   "pids": [
-    "oc_4174004740997121",
-    "oc_4174004740718593",
-    "oc_4174004737409025"
-   ],
-   "tekst": "De tafel klaar voor de feestdagen:\n1. Steengoed servies, gemengd\n2. Servies Ddoria van EDDA\n3. Brunchset van 12 delen\n\nLink in bio, zoek op steengoed.\n\n#kadoly #tafelstyling #servies #kerst #wooninspiratie",
-   "tiktok_tekst": "De tafel klaar voor de feestdagen. Welke set kies jij? #tafelstyling #servies #kersttafel #kerst #wooninspiratie"
-  },
-  {
-   "id": "boekenliefhebber",
-   "soort": "pov",
-   "url": "https://propellerads-mcp.vercel.app/tt/org_boekenliefhebber.mp4",
-   "pids": [
-    "oc_4174002212470785",
-    "oc_4174002211717121"
-   ],
-   "tekst": "Voor wie van boeken houdt: een kaarsenhouder als koffiekop op boeken, en een vaas in de vorm van een boek.\n\nLink in bio, zoek op Housevitamin.\n\n#kadoly #boekenliefhebber #wooninspiratie #interieur #cadeautip",
-   "tiktok_tekst": "Voor wie van boeken houdt. #boekenliefhebber #booktok #wooninspiratie #interieur #cadeautip"
-  },
-  {
-   "id": "n261117a",
-   "soort": "finds",
-   "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261117a.mp4",
-   "pids": [
-    "oc_4174002202804226",
-    "oc_4174002165055489",
-    "oc_4173958195789825"
-   ],
-   "tekst": "3 finds voor in huis:\n1. Ronde Tafelhaard Zwart Metaal Glas van Housevitamin\n2. Ronde Sand Tafelhaard 21cm voor Gezellige Sfeer van Housevitamin\n3. Grote Waterhyacint Wasmand met Deksel van Soeji\nWelke kies jij?\n\nLink in bio, zoek op Housevitamin.\n\n#kadoly #wooninspiratie #interieur #homedecor",
-   "tiktok_tekst": "3 finds voor in huis. Welke kies jij? Link in bio. #kadoly #wooninspiratie #interieur #homedecor",
-   "bron": "kadoly-video"
-  },
-  {
-   "id": "n261117b",
-   "soort": "kleurkeuze",
-   "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261117b.mp4",
-   "pids": [
-    "oc_4174003472498689",
-    "oc_4174003310755841",
-    "oc_4174003311493121"
-   ],
-   "tekst": "Welke kleur kies jij?\n1. Lichtbruine Bijzettafel Set van 3 IJzer Mica Decorations (lichtbruin)\n2. Stijlvolle Zwarte Bijzettafel Set met Houtnerf van Mica (zwart)\n3. Bruine Bijzettafel voor Planten, Set van 3 - Mica Decorations (bruin)\nZet je nummer in de reacties.\n\nLink in bio, zoek op Mica Decorations.\n\n#kadoly #wooninspiratie #interieur #homedecor",
-   "tiktok_tekst": "Welke kleur kies jij: lichtbruin, zwart of bruin? Link in bio. #kadoly #wooninspiratie #interieur #homedecor",
-   "bron": "kadoly-video"
-  },
-  {
-   "id": "n261117c",
-   "soort": "set",
-   "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261117c.mp4",
-   "pids": [
-    "oc_4239397464539137",
-    "oc_4239397468258305",
-    "oc_4239397464113153"
-   ],
-   "tekst": "3 favorieten van VEVOR:\n1. VEVOR Chamber Vacumeermachine voor Nat Voedsel en Vlees\n2. Popcornmaker in Bioscoopstijl met Kar, 8 Oz Ketel, VEVOR\n3. 2L Geen-IJs Slushie Machine met Zelfreiniging van VEVOR\nWelke kies jij?\n\nLink in bio, zoek op VEVOR.\n\n#kadoly #tafelstyling #keuken #homedecor",
-   "tiktok_tekst": "3 favorieten van VEVOR. Welke kies jij? Link in bio. #kadoly #tafelstyling #keuken #homedecor",
-   "bron": "kadoly-video"
-  },
-  {
-   "id": "n261118a",
-   "soort": "set",
-   "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261118a.mp4",
-   "pids": [
-    "oc_4174002191351810",
-    "oc_4174002224513026",
-    "oc_4174002174476289"
-   ],
-   "tekst": "3 favorieten van Housevitamin:\n1. Reed Diffuser Kerstgeur 100ml Glas voor Feestelijke Huizen\n2. Ronde Wandspiegel 80 cm Taupe Metaal Frame\n3. Kandelaar Kleurrijk Snoepdesign 13x7x20cm Housevitamin\nWelke kies jij?\n\nLink in bio, zoek op Housevitamin.\n\n#kadoly #wooninspiratie #interieur #homedecor",
-   "tiktok_tekst": "3 favorieten van Housevitamin. Welke kies jij? Link in bio. #kadoly #wooninspiratie #interieur #homedecor",
-   "bron": "kadoly-video"
-  },
-  {
-   "id": "n261118b",
-   "soort": "set",
-   "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261118b.mp4",
-   "pids": [
-    "oc_4174003603652609",
-    "oc_4174003603947521",
-    "oc_4174003659309057"
-   ],
-   "tekst": "3 favorieten van Rostikal:\n1. Rustieke Stalen Vuurbak met Koeienkop Ontwerp voor de Tuin\n2. Pioenroos Vuurkorf Metaal Roestafwerking voor Tuin Rostikal\n3. Metalen Vuurschaal Cube Ontwerp voor Tuin Decoratie door Rostikal\nWelke kies jij?\n\nLink in bio, zoek op Rostikal.\n\n#kadoly #wooninspiratie #homedecor #cadeautip",
-   "tiktok_tekst": "3 favorieten van Rostikal. Welke kies jij? Link in bio. #kadoly #wooninspiratie #homedecor #cadeautip",
-   "bron": "kadoly-video"
-  },
-  {
-   "id": "n261118c",
-   "soort": "finds",
-   "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261118c.mp4",
-   "pids": [
-    "oc_4174003460014081",
-    "oc_4173957646450689",
-    "oc_4174003514015745"
-   ],
-   "tekst": "3 finds voor je planten:\n1. Hoge Eucalyptus Boom 175cm voor Binnen van Mica Decorations\n2. Vloeiende Plantenbak met Eiken Basis voor Luchtplanten\n3. Donker Rustieke Bloempot voor Moderne Interieurs van Vase The World\nWelke kies jij?\n\nLink in bio, zoek op Mica Decorations.\n\n#kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
-   "tiktok_tekst": "3 finds voor je planten. Welke kies jij? Link in bio. #kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
-   "bron": "kadoly-video"
-  }
- ],
- "lerend": {
-  "tijdvakken_nl": [
-   "08:30",
-   "15:30",
-   "21:00"
   ],
-  "per_dag_per_platform": 3,
-  "soorten": {},
-  "besluiten": [
-   "2026-11-18: eerste video-dag; 08:30 al voorbij bij start van de ronde (09:41 NL), dus 2 per platform (15:30 kleurkeuze, 21:00 set). YouTube en TikTok nog niet in Zernio."
-  ]
- }
+  "lerend": {
+    "tijdvakken_nl": [
+      "08:30",
+      "15:30",
+      "21:00"
+    ],
+    "per_dag_per_platform": 3,
+    "soorten": {
+      "kleurkeuze": {
+        "videos_gemeten": 1,
+        "cm_kliks": 1,
+        "cm_echt": 1
+      },
+      "set": {
+        "videos_gemeten": 1,
+        "cm_kliks": 6
+      }
+    },
+    "besluiten": [
+      "2026-11-18: eerste video-dag; 08:30 al voorbij bij start van de ronde (09:41 NL), dus 2 per platform (15:30 kleurkeuze, 21:00 set). YouTube en TikTok nog niet in Zernio.",
+      "2026-11-20: 19 nov geen ronde. Vandaag 2 per platform (08:30 al voorbij): 15:30 kerstballen_kleur (kleurkeuze), 21:00 boho_set (set; set had de meeste Clickmind-kliks: kersthoek 6 tegen tafelhaard 1). Weergaven nog te laag om te leren (2 per reel)."
+    ]
+  }
 }
