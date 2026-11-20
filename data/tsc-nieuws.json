@@ -2,6 +2,81 @@
   "uitleg": "Ontwikkelingen per route voor de ochtendmail van todayin surgery (lib/tsc-mail.js). Elke dag zet de geplande Claude-taak hier nieuwe items bij: alleen echte feiten met bron en datum, nieuwste bovenaan. taal: en|nl|de|*; ingreep: hair|tummy|eyelid|lipo|breast|breast-reduction|*; naar: turkey|mexico|colombia|dominican-republic|thailand|south-korea|abroad|home|*; pagina: slug op todayin.email/surgery.",
   "items": [
     {
+      "id": "2026-11-20-en-turkey-prices",
+      "dag": "2026-11-20",
+      "taal": "en",
+      "ingreep": [
+        "hair",
+        "*"
+      ],
+      "naar": [
+        "turkey"
+      ],
+      "kop": "Turkey: plastic surgeon says the country has lost its price advantage",
+      "tekst": "In the Turkish business paper Capital, plastic surgeon Prof. Dr. Reha Yavuzer says Turkey has lost its price advantage in aesthetic care. Inflation and imported products and technology have pushed costs up, and once flights, hotel and food are added, Turkey ranks lower in the total cost comparisons of foreign patients. He sees more beauty and aesthetic clinics trying to sell or close. Compare the full trip price, not the operation price alone.",
+      "bron": "capitalTr",
+      "pagina": "hair-transplant-turkey",
+      "home_countries": [
+        "*"
+      ]
+    },
+    {
+      "id": "2026-11-20-nl-turkey-prices",
+      "dag": "2026-11-20",
+      "taal": "nl",
+      "ingreep": [
+        "hair",
+        "*"
+      ],
+      "naar": [
+        "turkey"
+      ],
+      "kop": "Turkije: plastisch chirurg zegt dat het land zijn prijsvoordeel kwijt is",
+      "tekst": "In het Turkse zakenblad Capital zegt plastisch chirurg prof. dr. Reha Yavuzer dat Turkije zijn prijsvoordeel in de esthetische zorg kwijt is. Door de inflatie en dure geïmporteerde producten en technologie zijn de kosten gestegen. Met vlucht, hotel en eten erbij scoort Turkije lager in de totaalvergelijkingen van buitenlandse patiënten. Hij ziet steeds meer klinieken die willen verkopen of sluiten. Vergelijk dus de prijs van de hele reis, niet alleen die van de ingreep.",
+      "bron": "capitalTr",
+      "pagina": "nl/haartransplantatie-turkije",
+      "home_countries": [
+        "NL"
+      ]
+    },
+    {
+      "id": "2026-11-20-de-turkey-prices",
+      "dag": "2026-11-20",
+      "taal": "de",
+      "ingreep": [
+        "hair",
+        "*"
+      ],
+      "naar": [
+        "turkey"
+      ],
+      "kop": "Türkei: Plastischer Chirurg sagt, das Land hat seinen Preisvorteil verloren",
+      "tekst": "In der türkischen Wirtschaftszeitung Capital sagt der plastische Chirurg Prof. Dr. Reha Yavuzer, die Türkei habe ihren Preisvorteil in der Ästhetik verloren. Inflation und teure importierte Produkte und Technik haben die Kosten erhöht. Rechnet man Flug, Hotel und Essen dazu, schneidet die Türkei in den Gesamtvergleichen ausländischer Patienten schlechter ab. Er sieht immer mehr Kliniken, die verkaufen oder schließen wollen. Vergleichen Sie den Preis der ganzen Reise, nicht nur den der Operation.",
+      "bron": "capitalTr",
+      "pagina": "de/haartransplantation-tuerkei",
+      "home_countries": [
+        "DE"
+      ]
+    },
+    {
+      "id": "2026-11-20-en-mexico-nuevo-laredo",
+      "dag": "2026-11-19",
+      "taal": "en",
+      "ingreep": [
+        "*"
+      ],
+      "naar": [
+        "mexico"
+      ],
+      "kop": "Mexico: prosecutors investigate death of a woman, 74, after cosmetic surgery in Nuevo Laredo",
+      "tekst": "A 74-year-old woman died in recovery after cosmetic surgery on 16 November at a private clinic in Nuevo Laredo, on the US border. Relatives were told she had a cardiorespiratory arrest and a fat clot; the family asked for an autopsy and the state prosecutor is investigating. Local plastic surgeons said the operation was done by people outside the specialty. Before you book, check that your surgeon has a specialist licence (cédula de especialista) and CMCPER certification.",
+      "bron": "mxNuevoLaredo",
+      "pagina": "check-surgeon-mexico",
+      "home_countries": [
+        "*"
+      ]
+    },
+    {
       "id": "2026-11-19-en-dr-closure",
       "dag": "2026-11-18",
       "taal": "en",
