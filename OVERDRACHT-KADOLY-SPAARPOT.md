@@ -126,6 +126,26 @@ Henkjan 20 nov: "Waar klik je precies op ? Daar kunnen we leer element in brenge
   - Na de klik staat dat product bovenaan je pagina met "Je koos: ...".
 - **Data (smaakpanel):** `op=dkstand` onder `smaak`, met de producten en soorten met de meeste 'meer' (vanaf 5 oordelen). Dit is ook waardevol voor merken, en die kunnen ervoor betalen (inkomsten voor de spaarrente).
 
+### 4.2d Doorsturen en advertenties (20 nov 2026)
+
+Henkjan 20 nov: "Eerst doorsturen op gang krijgen" en "We starten met prop ads die we totaal optimaliseren . Dat moet voor 0.10 per persoon kunnen."
+
+- **Wat we overnamen uit onderzoek** (Morning Brew, Harry's, WhatsApp-onderzoek, Mention Me):
+  - een concreet bedrag geven en krijgen ("Geef een vriend €5"; de vriend start met €5 via jouw link);
+  - WhatsApp als eerste en grote knop;
+  - delen bovenaan direct na het bevestigen (moment met de hoogste bereidheid);
+  - je link en je voortgang in elke ochtendmail;
+  - haalbare mijlpalen met een voortgangsbalk;
+  - fraude tegengaan met IP en dubbele opt-in.
+- **Mijlpalen.** Met 3 meegebrachte vrienden die meedoen mag je pot tot €50 (grotere cadeaus), met 10 tot €100 (`TREDEN`, `maxVan`, `p.nAct`). Kost niets extra tot het tegoed er is.
+- **Zelfde IP als de uitnodiger bij aanmelden.** De band telt voor het samen klikken, maar zonder vriendbonus en zonder trede (`zelfdeip`).
+- **Advertenties.**
+  - Het aanmeldformulier stuurt de klik mee (`n`, `z`, `c`, `s` uit de landings-URL). Het lid krijgt `bron` (advertentie, vriend of direct).
+  - Bij bevestigen gaat één terugmelding naar PropellerAds (`visitor_id = s`) of Mondiad. Dat doel van de CPA-campagne is een bevestigd lid. In de testwereld wordt hij alleen geteld (`pb-test-*`).
+  - Landings-URL voor een campagne: `https://gids.kadoly.com/api/gids?op=dk&n=propeller&z=<zone-macro>&c=<campagne-macro>&s=<klik-id-macro>` (macro's overnemen uit een werkende campagne).
+- **K-meter** in `op=dkstand` onder `doorsturen`: per bron het aantal leden, het aantal meegebrachte vrienden die meedoen, en K. Verder: gedeeld (WhatsApp vanaf pagina en mail), bezochte uitnodigingen, zelfde IP en terugmeldingen.
+- **Deeltekst (proef `deeltekst`).** a: "Via mijn link start je met €5 ..."; b: "Wie klikt er elke dag voor mij? ... via mijn link start je met €5".
+
 ### 4.3 Juridisch
 
 - **Geen kansspel**: er wordt niets verloot, iedereen krijgt wat hij spaart. De Gedragscode Promotionele Kansspelen, de einddatum, het plafond van €4.500 en kansspelbelasting gelden dus niet.
@@ -319,6 +339,8 @@ Henkjan 20 nov: "Kijk in quiz md wat wel en niet werkte en nu gaan we dit compou
 **Kern van Henkjan ("hoe meer mensen, hoe meer korting, tot 100%"):** het voorstel is "Samen naar 100%": je kiest een product, elke klik van een vriend geeft % korting op dat product en elke nieuwe vriend een grote stap; bij 100% is het gratis, daaronder is het korting in de kassa. Het aantal benodigde klikken hangt af van de kostprijs, zodat elke klik begrensd geld kost.
 
 ## 9. Logboek (nieuwste bovenaan)
+
+- 2026-11-20: Stap 1 van het doorstuurplan gebouwd (sectie 4.2d): "Geef een vriend €5", delen bovenaan na bevestigen, deelregel met voortgang in elke ochtendmail (via `dkgo&w=d` naar WhatsApp), uitnodiging toont de pot van de uitnodiger, mijlpalen €50/€100, zelfde-IP-regel, advertentieklik mee bij aanmelden, terugmelding aan PropellerAds en Mondiad bij bevestigen, K-meter. Lokaal getest (10 controles in viral.mjs, plus de bestaande tests).
 
 - 2026-11-20: Meer of minder van dit (sectie 4.2c): de klik van de dag is een oordeel over één product, beide knoppen geven hetzelfde tegoed, één oordeel per dag, product van morgen leert van alle oordelen en van je eigen smaak, smaakpanel in `op=dkstand`. Proef `mknop` is nu Meer/Minder tegen Ja, leuk/Niet mijn ding. Lokaal getest (9 controles: mail, twee knoppen, doorsturen, pagina, telling, één per dag, morgen ander product).
 
