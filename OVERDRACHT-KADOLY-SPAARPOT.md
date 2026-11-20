@@ -147,6 +147,18 @@ Henkjan 20 nov: "Eerst doorsturen op gang krijgen" en "We starten met prop ads d
 - **K-meter** in `op=dkstand` onder `doorsturen`: per bron het aantal leden, het aantal meegebrachte vrienden die meedoen, en K. Verder: gedeeld (WhatsApp vanaf pagina en mail), bezochte uitnodigingen, zelfde IP en terugmeldingen.
 - **Deeltekst (proef `deeltekst`).** a: "Via mijn link start je met €5 ..."; b: "Wie klikt er elke dag voor mij? ... via mijn link start je met €5".
 
+### 4.2e Je eigen doel en je smaak trainen (20 nov 2026)
+
+Henkjan 20 nov: "Ik vind het trainen van je eigen profiel een goed iets of je eigen cadeaus kiezen is ook al trainen en zoeken door site. De ander mobiliseren en zo houden wordt lastiger."
+
+- **Eigen doel** (`op=dkdoel`). Je kiest zelf je cadeau uit de cadeaus tot je mijlpaal-maximum, met een zoekvak (tot 400 cadeaus, op meeste cadeau per euro). `p.doel` en `p.doelNaam`.
+  - Pagina en ochtendmail tonen "Nog €X tot je doel" met een balk. Wisselen mag altijd.
+  - Zonder doel blijft "Nog €X, dan kies je … gratis", met een link "Kies zelf je cadeau".
+- **Delen met een doel** wordt concreet: "Help me sparen voor …. Via mijn link start je met €5 …".
+- **Smaak trainen** (`op=dktrain`). Na de klik van de dag kun je nog hooguit 10 producten per dag beoordelen (`TRAIN_MAX`).
+  - Dat levert geen tegoed op, alleen betere cadeau-ideeën. Het telt mee in het smaakpanel (tellers `train-meer` en `train-minder`).
+  - Onder je product van de dag staat "Jij kiest vaak meer van: …".
+
 ### 4.3 Juridisch
 
 - **Geen kansspel**: er wordt niets verloot, iedereen krijgt wat hij spaart. De Gedragscode Promotionele Kansspelen, de einddatum, het plafond van €4.500 en kansspelbelasting gelden dus niet.
@@ -340,6 +352,8 @@ Henkjan 20 nov: "Kijk in quiz md wat wel en niet werkte en nu gaan we dit compou
 **Kern van Henkjan ("hoe meer mensen, hoe meer korting, tot 100%"):** het voorstel is "Samen naar 100%": je kiest een product, elke klik van een vriend geeft % korting op dat product en elke nieuwe vriend een grote stap; bij 100% is het gratis, daaronder is het korting in de kassa. Het aantal benodigde klikken hangt af van de kostprijs, zodat elke klik begrensd geld kost.
 
 ## 9. Logboek (nieuwste bovenaan)
+
+- 2026-11-20: Eigen doel kiezen met zoeken (`op=dkdoel`), voortgang naar je doel in pagina en mail, delen met "Help me sparen voor …", smaak trainen tot 10 per dag zonder tegoed (`op=dktrain`). Lokaal getest (8 controles in doel.mjs; bestaande tests slagen).
 
 - 2026-11-20: Stap 1 van het doorstuurplan gebouwd (sectie 4.2d): "Geef een vriend €5", delen bovenaan na bevestigen, deelregel met voortgang in elke ochtendmail (via `dkgo&w=d` naar WhatsApp), uitnodiging toont de pot van de uitnodiger, mijlpalen €50/€100, zelfde-IP-regel, advertentieklik mee bij aanmelden, terugmelding aan PropellerAds en Mondiad bij bevestigen, K-meter. Lokaal getest (10 controles in viral.mjs, plus de bestaande tests).
 
