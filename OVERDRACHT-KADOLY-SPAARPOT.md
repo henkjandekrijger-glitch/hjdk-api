@@ -288,6 +288,11 @@ Henkjan 20 nov: "Maak het volkomen lerend . ALLE variabelen . /campagnes-henkjan
 
 8. **Winst op aankopen in de pot-economie**: de shop moet bij een betaalde bestelling die via een Spaarpot-link kwam (utm_source=spaarpot, Clickmind-klik van `op=dkgo`) `ecoVerkoop(test, winstCent)` aanroepen. Tot dan telt alleen het geld van nieuwe leden, merken en het startbudget.
 9. **Startbudget per dag** (Henkjans woord): bijvoorbeeld wat de advertenties voor dezelfde adressen zouden kosten. Zonder startbudget of merken zakt de spaarrente in de eerste weken naar 20% van de basis.
+11. **Eerst doorsturen op gang** (Henkjan 20 nov: "Eerst doorsturen op gang krijgen"). Plan in 3 stappen:
+    1. Bouwen in de testwereld: vier deelmomenten (na bevestigen, als een vriend voor je klikte, als je cadeau binnen bereik is, na je cadeau); WhatsApp-knop in de ochtendmail; uitnodigingspagina met de pot van de uitnodiger; "met 3 vrienden heb je je cadeau over X dagen"; K-meter per generatie in `op=dkstand`.
+    2. Live alleen warm zaaien, op Henkjans woord: Kadoly-kopers, de modal, en Henkjans eigen kring. Doel 50 tot 100 leden.
+    3. Advertenties pas als warm K ≥ 0,5 haalt.
+    Stand 20 nov: op de keuzehulpen deelt 0,3% van de bezoekers (1.381 bezoeken, 4 keer gedeeld, 3 binnen via een link).
 10. **Sites en verenigingen die het blokje plaatsen en meeverdienen** (Henkjan 20 nov): voorstel €0,50 per lezer die 3 dagen klikt plus 20% van de winst op hun aankopen; eerst op de eigen sites meten.
 
 ## 8. Assessment en economie (20 nov 2026)
