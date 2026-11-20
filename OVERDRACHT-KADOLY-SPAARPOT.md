@@ -12,18 +12,20 @@ Werk dit bestand bij in dezelfde commit als elke wijziging aan de Spaarpot: de j
 ## 1. In één alinea
 
 De Kadoly Spaarpot is een dagelijkse mail waarmee mensen samen tegoed sparen voor een gratis cadeau van Kadoly (kadoly.com).
-Elke ochtend krijg je één mail met je eigen link. Tik je erop, dan komt er €0,10 in je pot. Tikken jij en een vriend op dezelfde dag,
-dan krijgen jullie allebei €0,10 extra. Is je pot genoeg, dan kies je een cadeau tot €30 en sturen wij het gratis op, binnen 3 werkdagen thuis.
-Er is geen loting en geen kans: wat je spaart, is van jou. Daardoor is het geen kansspel en loopt het gewoon altijd door.
+Je start met een gevulde pot: bij je aanmelding staat er meteen €5 in. Elke ochtend krijg je één mail met wat je samen met je vrienden gespaard hebt.
+Klik je, dan krijg jij €0,10 en krijgt elke vriend €0,10. Klikt een vriend, dan krijg jij €0,10. Jij klikt voor hen, zij klikken voor jou.
+Na de klik staat het cadeau-idee van vandaag bovenaan (een product van Kadoly), zodat elke klik ook naar een product leidt.
+Is je pot genoeg, dan kies je een cadeau tot €30 en sturen wij het gratis op. Geen loting: wat je spaart, is van jou. Geen kansspel, dus het loopt gewoon altijd.
 
-## 2. Stand (17 nov 2026)
+## 2. Stand (20 nov 2026)
 
 | Onderdeel | Stand |
 |---|---|
-| Testwereld | Werkt, getest door Claude op 15 nov (aanmelden, tikken, vrienden, vriendentegoed, reeksbonus, cadeau kiezen, bestelmail, afmelden, vervallen). |
+| Testwereld | Werkt. Versie met startpot en samen klikken getest op 20 nov (lokaal en live). |
 | Live | **Staat uit.** Gaat pas aan op Henkjans woord (KV-sleutel `dk:aan`). |
 | Live-adres | Nog niet gekozen. Nu alleen bereikbaar via `/api/gids?op=dk` op de testhost. Bij de start komt er een nette route op gids.kadoly.com (voorstel: `/spaarpot`). |
-| Bedragen | Door Claude gekozen, nog niet door Henkjan bevestigd (zie 4.2). |
+| Advertenties | Acht advertenties voor e-mailadressen in NL gemaakt op 20 nov (zie logboek); nog niet geplaatst, netwerk en budget op Henkjans woord. |
+| Bedragen | Startpot €5 (Henkjan 20 nov: "We starten met een gevulde spaarpot"); de rest door Claude gekozen, nog niet bevestigd (zie 4.2). |
 | Pot als korting in de kassa | Nog niet mogelijk; de kassa van kadoly.com moet daarvoor een kortingscode kunnen maken (open punt). |
 
 ## 3. Hoe het zo gekomen is
@@ -34,21 +36,27 @@ Er is geen loting en geen kans: wat je spaart, is van jou. Daardoor is het geen 
 - Dezelfde avond, Henkjan: *"Je krijgt een tegoed met elkaar. We kunnen het nog slimmer maken een tegoed opbouwen gewoon samen zonder dat je win kans hebt."* en *"Gewoon altijd."*
 - Daarom is de loting vervangen door de **Spaarpot**: geen kans, dus geen kansspel, geen einddatum, geen prijzenplafond en geen kansspelbelasting. De Winterkans bestaat niet meer.
 - 17 nov 2026, Henkjan: *"Zet uitgebreide MD op vercel dan kan ik gaan testen in ander account."* Dit document.
+- 19 nov 2026, Henkjan: *"Niet duidelijk wat krijgen ze dan iedere ochtend?"* De ochtendmail bood alleen €0,10; te weinig om elke dag te openen.
+- 20 nov 2026, Henkjan: *"We starten met een gevulde spaarpot?"* en *"Iedere dag krijg je in je mail wat je SAMEN gespaard hebt dus als iemand klikt krijg je beiden een punt. Jij klikt voor hen. Zij klikken voor jou. En WEER klikken naar product."* Daarom: startpot €5, elke klik geeft direct ook al je vrienden €0,10, de ochtendmail toont wat je samen gespaard hebt, en na de klik staat het cadeau-idee van vandaag bovenaan. Vrienden van vrienden tellen niet meer mee (eenvoudiger).
 
 ## 4. Werking
 
 ### 4.1 Voor een deelnemer
 
-1. **Aanmelden** op de aanmeldpagina: e-mailadres plus vinkje "Ik ben 18 jaar of ouder en woon in Nederland". Kwam je via de link van een vriend, dan staat er "Een vriend nodigde je uit".
-2. **Bevestigen**: je krijgt een mail "Bevestig je Kadoly Spaarpot". De knop opent een pagina die zichzelf na 0,4 seconde bevestigt (zonder JavaScript: knop indrukken). Je eerste tik telt meteen: pot €0,10.
-3. **Elke ochtend** rond 07:04 Nederlandse tijd één mail: onderwerp "Je pot: €X · tik voor vandaag". In de mail: wat je vrienden gisteren voor je spaarden, hoeveel je nog nodig hebt voor het eerstvolgende cadeau, één knop "Tik voor vandaag".
-4. **Tikken**: de knop opent een pagina die na 0,3 seconde zelf de tik doorgeeft (POST). Bots en linkscanners krijgen die automatische tik niet; zonder JavaScript is er een knop. Daarna zie je je pot.
-5. **Je potpagina**:
+1. **Aanmelden** op de aanmeldpagina ("Start met een gevulde spaarpot"): e-mailadres plus vinkje "Ik ben 18 jaar of ouder en woon in Nederland". Kwam je via de link van een vriend, dan staat er "Een vriend nodigde je uit".
+2. **Bevestigen**: mail "Bevestig je Kadoly Spaarpot" ("je pot staat klaar, met €5 erin"). De knop opent een pagina die zichzelf na 0,4 seconde bevestigt. Pot: €5 startpot + €0,10 voor de eerste klik = €5,10.
+3. **Elke ochtend** rond 07:04 Nederlandse tijd één mail.
+   - Met vrienden: onderwerp "Samen gespaard: €X · klik voor je vrienden"; kop "Samen gespaard: €X" (jouw pot plus die van je vrienden), "Gisteren klikten N vrienden voor je: +€Y in jouw pot.", "Jouw pot: €Z. Nog €W, dan kies je <cadeau> gratis.", knop "Klik voor je vrienden", eronder "Jij krijgt €0,10 en je N vrienden krijgen elk €0,10."
+   - Zonder vrienden: onderwerp "Je pot: €X · klik voor vandaag"; knop "Klik voor vandaag"; eronder "Er komt €0,10 in je pot. Nodig een vriend uit, dan klikken jullie voor elkaar."
+   - Onderaan: hoe je Henkjan bereikt (antwoorden, of app of bel +31 6 55395630), voorwaarden, afmelden met één klik.
+4. **Klikken**: de knop opent een pagina die na 0,3 seconde zelf de klik doorgeeft (POST). Bots en linkscanners krijgen die automatische klik niet; zonder JavaScript is er een knop.
+5. **De potpagina na de klik**, in deze volgorde:
    - kop "Je pot: €X";
-   - blok **Vandaag**: wat er vandaag bij kwam (tik, reeksbonus, vriendentegoed van gisteren met hoeveel vrienden), "Dag N op rij" en wanneer de volgende €1 komt;
-   - blok **Nog €X** met balk en het cadeau dat je dan kunt kiezen, of **Je pot is genoeg voor een cadeau** met knop "Kies je cadeau";
-   - blok **Samen sparen**: met hoeveel vrienden en vrienden van vrienden je spaart, knop "Deel via WhatsApp" en je eigen link;
-   - blok **Vandaag bij Kadoly**: drie producten van de dag (links naar kadoly.com met `utm_source=spaarpot`);
+   - blok **Samen gespaard: €X** (of **Vandaag** zonder vrienden): "+€0,10 voor je klik, en je klik gaf N vrienden elk €0,10", "+€Y, want N vrienden klikten vandaag voor je", "Gisteren klikten N vrienden voor je", reeksbonus, "Dag N op rij";
+   - **Je pot is genoeg voor een cadeau** met knop "Kies je cadeau" (alleen als dat zo is);
+   - **Cadeau-idee van vandaag**: één product groot met foto, prijs en levertijd en knop "Bekijk bij Kadoly", plus twee kleine (links naar kadoly.com met `utm_source=spaarpot`);
+   - **Nog €X** met balk en het eerstvolgende cadeau (als de pot nog niet genoeg is);
+   - **Samen sparen**: met hoeveel vrienden je spaart, knop "Deel via WhatsApp" en je eigen link;
    - onderaan Voorwaarden en Afmelden.
 6. **Cadeau kiezen**: lijst met alle cadeaus die je pot nu dekt, met foto, prijs en levertijd. Kies één, vul naam en Nederlands adres in, klaar. Het bedrag gaat van je pot af; je spaart gewoon door.
 7. **Afmelden** met één klik onder elke mail (ook via de afmeldknop van de mailapp, List-Unsubscribe-Post). Per ongeluk? Knop "Meld me weer aan".
@@ -59,27 +67,26 @@ Alle bedragen staan in centen bovenaan `lib/dagkans.js` in `R`:
 
 | Regel | Waarde | In `R` |
 |---|---|---|
-| Per tik (per dag) | €0,10, direct | `tik: 10` |
+| Startpot bij aanmelding | €5, één keer per persoon | `start: 500` |
+| Per klik (per dag) | €0,10, direct | `tik: 10` |
 | Reeksbonus | €1 op elke 10e dag op rij | `reeksElke: 10`, `reeksBonus: 100` |
-| Per vriend die op dezelfde dag tikte | €0,10, de ochtend erna | `vriend: 10` |
-| Per vriend van een vriend die op dezelfde dag tikte | €0,05, de ochtend erna | `vv: 5` |
-| Vriendentegoed per dag | hooguit €0,90 | `vriendMax: 90` |
+| Per klik van een vriend | €0,10 voor jou, direct | `vriend: 10` |
+| Van vrienden samen per dag | hooguit €0,90 | `vriendMax: 90` |
 | Pot | hooguit €30 | `potMax: 3000` |
 | Cadeau | tot €30 incl. verzending, levertijd hooguit 3 werkdagen | `prijsMax: 30`, `leverMax: 3` |
-| Vriend telt mee na | 3 tikdagen van de nieuwe | `vriendDagen: 3` |
-| Geen ochtendmail meer na | 14 dagen zonder tik (link blijft werken) | `rustNa: 14` |
-| Pot vervalt na | 30 dagen zonder tik | `vervalNa: 30` |
+| Vriend telt mee na | 3 klikdagen van de nieuwe | `vriendDagen: 3` |
+| Geen ochtendmail meer na | 14 dagen zonder klik (link blijft werken) | `rustNa: 14` |
+| Pot vervalt na | 30 dagen zonder klik, ook wat vrienden spaarden | `vervalNa: 30` |
 
-- **Vrienden** zijn wie jou uitnodigde én wie jij uitnodigde. De band telt zodra de nieuwe 3 dagen heeft getikt (tegen nepadressen). Beide kanten sparen dus: "elke dag dat we allebei tikken, krijgen we allebei €0,10 extra".
-- **Vrienden van vrienden** zijn de vrienden van je vrienden, zonder jezelf en zonder je eigen vrienden.
-- Vriendentegoed krijg je **alleen als je die dag zelf ook tikte**.
+- **Vrienden** zijn wie jou uitnodigde én wie jij uitnodigde. De band telt zodra de nieuwe 3 dagen heeft geklikt (tegen nepadressen).
+- **Jij klikt voor hen, zij klikken voor jou**: elke klik geeft de klikker €0,10 en elke vriend direct €0,10. Een ontvanger hoeft daarvoor die dag niet zelf te klikken.
 - **Eén adres per persoon**: Gmail-punten en `+toevoegingen` tellen als hetzelfde adres.
 
-Rekenvoorbeeld (cadeaus beginnen nu rond €8,74):
-- Alleen, elke dag tikken: na 10 dagen €2, na 40 dagen €8. Eerste cadeau na ongeveer 6 weken.
-- Met 4 vrienden die elk 2 vrienden hebben en iedereen tikt: €0,10 + €0,80 per dag, plus €1 per 10 dagen. Eerste cadeau na ongeveer 10 dagen.
+Rekenvoorbeeld (cadeaus beginnen nu rond €8,74, de pot start op €5):
+- Alleen, elke dag klikken: na 10 dagen €5 + €1 + €1 reeks = €7, na ongeveer 18 dagen genoeg voor het eerste cadeau.
+- Met 4 vrienden die ook elke dag klikken: €0,10 + €0,40 per dag, eerste cadeau na ongeveer 7 dagen.
 
-Wat het kost: hooguit €1 tegoed per persoon per dag (plus €1 per 10 dagen reeks), pot nooit boven €30. Je betaalt alleen voor mensen die echt blijven tikken; een pot vervalt na 30 dagen zonder tik.
+Wat het kost: €5 startpot per bevestigd adres, maar die is pas te gebruiken als de pot een cadeau dekt; wie niet blijft klikken kost niets (pot vervalt na 30 dagen). Per actieve deelnemer verder hooguit €1 tegoed per dag (plus €1 per 10 dagen reeks); pot nooit boven €30.
 
 ### 4.3 Juridisch
 
@@ -115,14 +122,14 @@ Wat het kost: hooguit €1 tegoed per persoon per dag (plus €1 per 10 dagen re
 - Testmails gaan echt naar je inbox, met **[TEST]** voor het onderwerp. Afzender `Kadoly <nieuws@post.kadoly.com>`, antwoorden gaan naar Henkjan.
 - Bovenaan elke testpagina staat een **gestippeld testblok** met knoppen:
   - **Snel een testdeelnemer zonder mail**: maakt een deelnemer met een nepadres en opent zijn pot.
-  - **Volgende dag (vriendentegoed + dagmail)**: zet de testdag één dag verder, boekt het vriendentegoed van gisteren en stuurt de ochtendmail naar alle echte testadressen.
+  - **Volgende dag (vrienden klikken + ochtendmail)**: zet de testdag één dag verder, laat de testvrienden klikken en stuurt de ochtendmail naar alle echte testadressen.
   - **Volgende dag zonder mail**: hetzelfde zonder mail.
-  - **Maak 4 testvrienden (met elk 2 vrienden)**: 4 vrienden en 8 vrienden van vrienden die meteen meetellen en vandaag al tikten.
+  - **Maak 4 testvrienden**: 4 vrienden die meteen meetellen en vandaag al voor je klikten (+€0,40).
   - **Zet mijn reeks op 9**: de volgende dag levert de €1 reeksbonus op.
   - **Zet €10 in mijn pot**: om het cadeau kiezen te testen.
   - **Bekijk de mails**: de ochtendmail (met jouw pot) en de bevestigingsmail.
   - **Alle testdeelnemers** en **Alles wissen** (begint de testwereld opnieuw; geldt voor iedereen die test).
-- Testvrienden (adressen op `@voorbeeld.invalid`) krijgen nooit mail en tikken elke dag vanzelf.
+- Testvrienden (adressen op `@voorbeeld.invalid`) krijgen nooit mail en klikken elke dag vanzelf.
 - De testwereld loopt ook elke ochtend mee in de cron: wie zich met een echt adres aanmeldde, krijgt dus ook echt elke ochtend een [TEST]-mail, tot 14 dagen zonder tik of tot "Alles wissen".
 - Let op: de testdag kan voorlopen op de echte datum (elke "Volgende dag" zet hem een dag verder).
 
@@ -130,21 +137,21 @@ Wat het kost: hooguit €1 tegoed per persoon per dag (plus €1 per 10 dagen re
 
 | Stap | Doen | Verwacht |
 |---|---|---|
-| 1 | Open de aanmeldpagina, vul je adres in, vink 18+ aan, "Start mijn Spaarpot". | Tekst "Bijna klaar: bevestig via de mail die we je net stuurden." |
-| 2 | Open de mail "[TEST] Bevestig je Kadoly Spaarpot", tik "Start mijn Spaarpot". | Potpagina: "Je pot: €0,10", blok "Gelukt, je pot staat klaar", "Dag 1 op rij. Over 9 dagen krijg je €1 extra.", blok "Nog €X" met het goedkoopste cadeau. |
-| 3 | Zelfde adres nog eens aanmelden (ook met punten of `+test` bij Gmail). | Geen tweede mail; je bestaande pot blijft. |
-| 4 | "Maak 4 testvrienden". | "Je spaart samen met 4 vrienden en 8 vrienden van vrienden." |
-| 5 | "Volgende dag (vriendentegoed + dagmail)". | Pagina "Het is nu <datum>" met het vriendentegoed van gisteren. Mail "[TEST] Je pot: €0,90 · tik voor vandaag" met "Gisteren spaarden je vrienden €0,80 voor je." |
-| 6 | Tik in die mail op "Tik voor vandaag". | "Je pot: €1", met "+€0,10 voor je tik van vandaag." en "+€0,80 van gisteren, omdat 4 vrienden en 8 vrienden van vrienden ook tikten." |
-| 7 | Dezelfde dag nog eens tikken. | Pot blijft gelijk (één tik per dag). |
-| 8 | "Zet mijn reeks op 9", dan "Volgende dag", dan tikken. | "+€1 voor 10 dagen op rij." |
+| 1 | Open de aanmeldpagina, vul je adres in, vink 18+ aan, "Start mijn Spaarpot". | Kop "Start met een gevulde spaarpot"; daarna "Bijna klaar: bevestig via de mail die we je net stuurden." |
+| 2 | Open de mail "[TEST] Bevestig je Kadoly Spaarpot", klik "Start mijn Spaarpot". | Potpagina: "Je pot: €5,10", "+€5 startpot.", "+€0,10 voor je klik.", "Dag 1 op rij", cadeau-idee van vandaag, "Nog €X". |
+| 3 | Zelfde adres nog eens aanmelden (ook met punten of `+test` bij Gmail). | Geen tweede mail en geen tweede startpot. |
+| 4 | "Maak 4 testvrienden". | "Je pot: €5,50", "+€0,40, want 4 vrienden klikten vandaag voor je.", kop van het blok "Samen gespaard: €X". |
+| 5 | "Volgende dag (vrienden klikken + ochtendmail)". | Mail "[TEST] Samen gespaard: €X · klik voor je vrienden" met "Gisteren klikten 4 vrienden voor je: +€0,40 in jouw pot." en knop "Klik voor je vrienden". |
+| 6 | Klik in die mail op "Klik voor je vrienden". | "+€0,10 voor je klik, en je klik gaf 4 vrienden elk €0,10." en "+€0,40, want 4 vrienden klikten vandaag voor je." Cadeau-idee van vandaag staat boven Samen sparen. |
+| 7 | Dezelfde dag nog eens klikken. | Pot blijft gelijk (één klik per dag). |
+| 8 | "Zet mijn reeks op 9", dan "Volgende dag", dan klikken. | "+€1 voor 10 dagen op rij." |
 | 9 | "Zet €10 in mijn pot". | Blok "Je pot is genoeg voor een cadeau" met knop "Kies je cadeau". |
 | 10 | "Kies je cadeau", kies er een, vul een testadres in (postcode als 2805 AB). | "Top, je cadeau komt eraan", pot is met de prijs verlaagd. Henkjan krijgt de mail "[TEST] Spaarpot: bestel <product> voor <voornaam>". Laat dit Henkjan weten, zodat hij die niet echt bestelt. |
-| 11 | Open "Kies je cadeau" opnieuw na het kiezen (of met de terugknop het formulier nog eens versturen). | Alleen cadeaus die je overgebleven pot dekt, of "Nog even sparen" met het bedrag dat nog nodig is. Opnieuw versturen van een te duur cadeau: "Je pot is nog niet genoeg voor dit cadeau." |
-| 12 | "Deel via WhatsApp". | WhatsApp opent met: "Doe je mee met de Kadoly Spaarpot? Elke dag dat we allebei tikken, sparen we allebei €0,10 extra voor een gratis cadeau." plus je eigen link. |
-| 13 | Open je eigen link (uit "Je eigen link", zelfde browser mag) en meld een tweede adres aan. | Aanmeldpagina met "Een vriend nodigde je uit." Bij jou staat "1 vriend telt mee na 3 dagen tikken." Na bevestigen en 3 tikdagen van het tweede adres (Volgende dag, dan met beide adressen tikken) telt hij als vriend, voor jullie allebei: de ochtend erna krijgen jullie allebei €0,10 extra. |
-| 14 | Afmelden via de link onder de mail. | "Je bent afgemeld" met de knop "Per ongeluk? Meld me weer aan". Daarna "Volgende dag": geen mail meer voor dat adres. |
-| 15 | (optioneel) 31x "Volgende dag zonder mail" zonder te tikken, dan tikken. | Melding dat de vorige pot is vervallen; nieuwe pot €0,10. |
+| 11 | Open "Kies je cadeau" opnieuw na het kiezen. | Alleen cadeaus die je overgebleven pot dekt, of "Nog even sparen" met het bedrag dat nog nodig is. |
+| 12 | "Deel via WhatsApp". | WhatsApp opent met: "Doe je mee met de Kadoly Spaarpot? Je pot start gevuld. Klik jij, dan krijg ik €0,10. Klik ik, dan krijg jij €0,10. Zo sparen we samen voor een gratis cadeau." plus je eigen link. |
+| 13 | Open je eigen link en meld een tweede adres aan. | "Een vriend nodigde je uit." Bij jou: "1 vriend telt mee na 3 dagen klikken." Na 3 klikdagen van het tweede adres geeft elke klik van de een de ander direct €0,10. |
+| 14 | Afmelden via de link onder de mail. | "Je bent afgemeld"; daarna "Volgende dag": geen mail meer voor dat adres, en dat adres krijgt geen tegoed meer van vrienden. |
+| 15 | (optioneel) 31x "Volgende dag zonder mail" zonder te klikken, dan klikken. | Melding dat de vorige pot is vervallen; nieuwe pot €0,10 (de startpot is één keer). |
 | 16 | Bekijk de pagina's op een telefoon en in donkere modus. | Strak, geen grijs, knoppen in het eerste scherm, alles leesbaar. |
 
 ### 5.5 Terugmelden
@@ -158,7 +165,7 @@ Zet het in de chat met Henkjan of in het werklog: `https://hjdk-api-henq.vercel.
 
 | Bestand | Wat |
 |---|---|
-| `lib/dagkans.js` | Alles: regels (`R`), aanmelden, bevestigen, tikken, kring, vriendentegoed, cadeau kiezen, mails, pagina's, testwereld, routes (`dkOp`). |
+| `lib/dagkans.js` | Alles: regels (`R`), aanmelden, bevestigen, klikken, kring, samen klikken, cadeau kiezen, mails, pagina's, testwereld, routes (`dkOp`). |
 | `api/gids.js` | Stuurt elke `op=dk...` door: `if (/^dk[a-z]*$/.test(op)) return await (await import('../lib/dagkans.js')).dkOp(...)` en geeft `kaal`, `leesBody`, `isBot` mee. |
 | `lib/kadoly-nieuws.js` | Levert `stuurMails`, `mailSchil`, `knop`, `mailHenkjan`, `mailKlaar`, `KADOLY_BEDRIJF` (zelfde afzender en opmaak als de Kadoly-nieuwsbrief, via Resend). |
 | `vercel.json` | Cron `/api/gids?op=dkronde` om 06:04 UTC; `includeFiles` van `api/gids.js` voor dit bestand. |
@@ -190,27 +197,25 @@ Voorvoegsel `dk:` = live, `dkt<versie>:` = testwereld (`dktv` is de versie; "All
 
 | Sleutel | Inhoud |
 |---|---|
-| `p:<id>` | Deelnemer: `email, at, bevestigd, actief, af, link, code, van, reeks, laatste, dagen, act, pot (centen), log, samen, cadeaus, rust, vervallen`. `id` = `d` + hash van het genormaliseerde adres. |
+| `p:<id>` | Deelnemer: `email, at, bevestigd, actief, af, link, code, van, reeks, laatste, dagen, act, pot (centen), log, samen {D, n, c} (wat vrienden die dag voor je klikten), samenVorig (de dag ervoor), gaf {D, n} (hoeveel vrienden jouw klik iets gaf), cadeaus, rust, vervallen`. `id` = `d` + hash van het genormaliseerde adres. |
 | `link:<hash>`, `af:<hash>` | Eigen link en afmeldtoken naar id (alleen hashes opgeslagen). |
 | `code:<code>` | Deelcode (6 tekens) naar id. |
 | `pending:<hash>` | Aanmelding die nog bevestigd moet worden (2 dagen). |
 | `emails` | Set met alle actieve deelnemers. |
 | `kids:<id>` | Iedereen die via deze persoon binnenkwam. |
-| `act:<id>` | Uitgenodigden die al 3 dagen tikten (de vriendschapsband). |
-| `tik:<dag>` | Wie op die dag tikte (90 dagen). |
-| `samen:<dag>` | Slot: vriendentegoed van die dag is al geboekt. |
-| `tel:<dag>` | Tellers: `aanvraag, bevestigd, tik, samencent, dagmail, cadeau, cadeaucent, af`. |
+| `act:<id>` | Uitgenodigden die al 3 dagen klikten (de vriendschapsband). |
+| `tik:<dag>` | Wie op die dag klikte (90 dagen). |
+| `tel:<dag>` | Tellers: `aanvraag, bevestigd, tik, samencent (tegoed dat klikken aan vrienden gaf), dagmail, cadeau, cadeaucent, af`. |
 | `adres:<id>:<dag>` | Bezorgadres bij een cadeau (60 dagen). |
 | `offset` | Alleen test: hoeveel dagen de testwereld voorloopt. |
 | `dk:aan` | Live-schakelaar (alleen zetten op Henkjans woord). |
 
 Cadeaus komen uit de shopcatalogus `hjdk:shop:cat`: in voorraad, met foto, levertijd 1 tot 3 werkdagen, prijs incl. verzending tot €30, de populairste 30.
 
-### 6.4 De ochtendronde (`dkronde`, 06:04 UTC)
+### 6.4 De ochtendronde (`dkronde`, 06:04 UTC) en het samen klikken
 
-1. Vriendentegoed van gisteren boeken (één keer per dag, slot `samen:<dag>`): voor iedereen die gisteren tikte, vrienden en vrienden van vrienden tellen die ook tikten.
-2. Testwereld: testvrienden tikken voor vandaag.
-3. Ochtendmail aan elke actieve deelnemer die in de laatste 14 dagen tikte, in batches van 90 via Resend (idempotency-sleutel per dag), met List-Unsubscribe.
+- Samen klikken gebeurt direct bij elke klik (`tik` roept `geefVrienden` aan): elke actieve vriend krijgt `R.vriend`, tot `R.vriendMax` per ontvanger per dag.
+- De ronde: (1) testwereld: testvrienden klikken voor vandaag (en geven dus jou tegoed); (2) ochtendmail aan elke actieve deelnemer die in de laatste 14 dagen klikte, in batches van 90 via Resend (idempotency-sleutel per dag), met List-Unsubscribe. De mail rekent "samen gespaard" uit (eigen pot plus die van de vrienden) en leest "gisteren" uit `samen` of `samenVorig`.
 
 ### 6.5 Live zetten (alleen op Henkjans woord)
 
@@ -221,7 +226,7 @@ Cadeaus komen uit de shopcatalogus `hjdk:shop:cat`: in voorraad, met foto, lever
 
 ## 7. Open punten en beslissingen
 
-1. **Bedragen bevestigen** (Henkjan): €0,10 per tik, €0,10 per vriend, €0,05 per vriend van een vriend, €1 per 10 dagen, pot max €30.
+1. **Bedragen bevestigen** (Henkjan): startpot €5, €0,10 per klik, €0,10 per klik van een vriend (max €0,90 per dag), €1 per 10 dagen, pot max €30.
 2. **Pot als korting in de kassa** van kadoly.com: met €6 in je pot iets van €35 voor €29 kopen. Dat maakt elke pot een reden om te kopen (verkoop), maar vraagt een kortingscode in de kassa. Nog uitzoeken of de kassa dat kan.
 3. **Live-adres** op gids.kadoly.com en het startmoment.
 4. **Waar de aanmeldpagina komt**: modal op kadoly.com, de Kadoly-gidsen, de bevestigde nieuwsbrief-abonnees.
@@ -229,6 +234,7 @@ Cadeaus komen uit de shopcatalogus `hjdk:shop:cat`: in voorraad, met foto, lever
 
 ## 8. Logboek (nieuwste bovenaan)
 
+- 2026-11-20: Startpot €5 en samen klikken (elke klik geeft direct alle vrienden €0,10; vrienden van vrienden vervallen); ochtendmail "Samen gespaard" met wie gisteren voor je klikte en knop "Klik voor je vrienden"; na de klik het cadeau-idee van vandaag bovenaan; overal klik in plaats van tik; bereikbaarheid van Henkjan onder elke mail (regel uit de POST-lus). Acht advertenties voor e-mailadressen in NL gemaakt (beelden 492x328 en icoon 192x192), nog niet geplaatst.
 - 2026-11-17: Dit document gemaakt en live gezet op `op=dkoverdracht` (Henkjan: "Zet uitgebreide MD op vercel dan kan ik gaan testen in ander account").
 - 2026-11-15: Winterkans-loterij vervangen door de Spaarpot (geen kans, geen einddatum). Getest in de testwereld met echte catalogus: pot €0,10 na eerste tik, €1 op dag 2 met 4+8 testvrienden, ochtendmail, cadeau kiezen, bestelmail, afmelden, vervallen na 30 dagen.
 - 2026-11-14: Kadoly Winterkans gebouwd (dagelijkse loting met lootjes per vriend, drand), testwereld op `op=dk&test=1`.
