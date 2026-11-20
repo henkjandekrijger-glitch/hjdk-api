@@ -10,6 +10,7 @@
 import { regels, stand, meld, uitkomst, ronde, koppelUrl, koppelTerug, DAG, gmailLes, gmailRegels, klikAntwoord } from '../lib/postlus.js';
 import { leesSkill } from '../lib/skills.js';
 import { kv } from '../lib/db.js';
+import { beeldAntwoord, meetStand } from '../lib/mailopen.js';
 
 const mag = req => { const q = req.query || {}; const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''); const given = [q.token, req.headers['x-hjdk-token'], bearer].filter(Boolean);
   const ok = [process.env.ZICHT_TOKEN, process.env.GADS_TOKEN, process.env.HJDK_TOKEN].filter(Boolean); return given.some(g => ok.includes(g)) || /vercel-cron/i.test(String(req.headers['user-agent'] || '')); };
@@ -20,6 +21,8 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(204).end();
   const q = Object.assign({}, req.query || {}, typeof req.body === 'object' && req.body ? req.body : {}); const op = q.op || 'regels';
   try {
+    if (op === 'o') return await beeldAntwoord(req, res, String(q.code || ''));
+    if (op === 'meting') { const r = await meetStand(String(q.sleutel || '')); return res.status(r ? 200 : 404).json(r || { ok: false }); }
     if (op === 'k') return await klikAntwoord(req, res, String(q.code || ''));
     if (op === 'skill') { const t = leesSkill('mail-lerend'); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return t ? res.status(200).send(t) : res.status(404).send('skill niet gevonden'); }
     if (op === 'regels') {
