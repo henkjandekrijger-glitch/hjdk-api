@@ -41,6 +41,7 @@ function laadSchema() {
   const url = 'https://keuzehulp.best/laadpaal';
   return { '@context': 'https://schema.org', '@graph': [{ '@type': 'Article', headline: LAADPAAL_ITEM.h1, description: LAADPAAL_ITEM.intro, inLanguage: 'nl-NL', datePublished: UPDATED_TOOLS, dateModified: UPDATED_TOOLS, mainEntityOfPage: url, author: { '@type': 'Organization', name: 'Keuzehulp', url: 'https://keuzehulp.best' }, publisher: { '@type': 'Organization', name: 'Keuzehulp', url: 'https://keuzehulp.best' } }, { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Keuzehulp', item: 'https://keuzehulp.best/' }, { '@type': 'ListItem', position: 2, name: 'Laadpaal kiezen', item: url }] }] };
 }
+const BOT_UA=/bot|crawl|spider|slurp|headless|python|curl|wget|axios|node-fetch|httpclient|lighthouse/i;
 export default async function handler(req, res) {
   const url = new URL(req.url, 'https://keuzehulp.best'), q = url.searchParams; let op = q.get('op') || '';
   res.setHeader('x-content-type-options', 'nosniff');
@@ -90,6 +91,18 @@ export default async function handler(req, res) {
     if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/zorgverzekering">Zorgverzekering 2027 vergelijken</a></p>');}
     res.setHeader('cache-control','public, s-maxage=600, stale-while-revalidate=86400');return res.status(200).send(html);}
   if(q.get('tool')==='chatbewijs'){const Cb=await import('../lib/chatbewijs.js');res.setHeader('cache-control','public, s-maxage=60, stale-while-revalidate=120');res.setHeader('x-robots-tag','noindex');return res.status(200).json(await Cb.cijfers(q.get('s'),String(q.get('slug')||'').replace(/[^a-z0-9-]/g,'').slice(0,90)));} // cijfers bij de chat (lib/chatbewijs.js, 19 nov 2026)
+  if(q.get('tool')==='mij'){ // één chat die onthoudt, op al onze sites (lib/geheugen.js, 20 nov 2026)
+    const G=await import('../lib/geheugen.js');const op=String(q.get('op')||'');const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''));res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
+    if(op==='pagina'){const h=String(req.headers['x-forwarded-host']||req.headers.host||'');const tl=/whichtobuy/.test(h)?'us':/kaufberater/.test(h)?'de':(q.get('taal')==='us'||q.get('taal')==='de'?q.get('taal'):'nl');res.setHeader('content-type','text/html; charset=utf-8');return res.status(200).send(await G.mijPagina(tl));}
+    if(op==='stand')return res.status(200).json(await G.mijStand());
+    if(op==='herinner'){if(!beschermd)return res.status(403).json({ok:false});return res.status(200).json(await G.mijHerinneringen());}
+    if(req.method!=='POST')return res.status(405).json({ok:false});let b=req.body;try{if(typeof b==='string')b=JSON.parse(b.slice(0,4000));}catch{b={};}b=b||{};
+    if(BOT_UA.test(String(req.headers['user-agent']||'')))return res.status(200).json({ok:false});
+    if(op==='get')return res.status(200).json(await G.mijGet(String(b.pid||'')));
+    if(op==='wens')return res.status(200).json(await G.mijWens(b));
+    if(op==='vergeet')return res.status(200).json(await G.mijVergeet(b));
+    if(op==='contact')return res.status(200).json(await G.mijContact(b));
+    return res.status(404).json({ok:false});}
   if(q.get('tool')==='volg'){const Vg=await import('../lib/volgende.js');if(q.get('op')==='ctr'){res.setHeader('cache-control','public, s-maxage=900, stale-while-revalidate=3600');return res.status(200).json(await Vg.ctr(q.get('s')));}res.setHeader('cache-control','no-store');const x=await Vg.stand();if(q.get('vorm')==='tekst'){res.setHeader('content-type','text/plain; charset=utf-8');return res.status(200).send(Vg.standTekst(x));}return res.status(200).json(x);} // volgende gidsen per persoon en lerend (lib/volgende.js, 19 nov 2026)
   if(q.get('tool')==='deel'){const Dl=await import('../lib/deel.js');res.setHeader('cache-control','no-store');const x=await Dl.stand();if(q.get('vorm')==='tekst'){res.setHeader('content-type','text/plain; charset=utf-8');return res.status(200).send(Dl.standTekst(x));}return res.status(200).json(x);} // doorsturen per site en uur (lib/deel.js, 19 nov 2026)
   if(q.get('tool')==='rdam'){ // dienstengids Rotterdam (lib/rdam.js, 17 nov 2026)

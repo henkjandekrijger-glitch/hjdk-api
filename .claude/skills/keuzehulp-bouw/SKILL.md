@@ -252,6 +252,13 @@ Henkjan: "beste is geen pills vooraf zelfs denk ik of wel maar dan starten ze ch
   De rechter is intenties en contact per 100 bezoekers, niet het aantal tikken. Stand: `/api/mm/proefstand?site=kzuxnl&vorm=tekst`.
 
   Wint een arm (kans beste 95% vanaf 300 per arm), maak die de standaard in `lib/kzux.js`. Zet daarna de volgende uitdager erin. Doe dat met één factor tegelijk.
+- **Eén chat die onthoudt, op al onze sites** (Henkjan, 20 nov 2026: "ik heb altijd bedoeld maar 1 chat te hebben"). Elke chat (`lib/kzux.js`) laadt `lib/geheugen.js`:
+  1. Na het eerste nuttige antwoord vraagt de chat: "Zal ik onthouden dat je {wat} zoekt?" Eerst geven, dan vragen. Alleen na een ja wordt iets bewaard.
+  2. Daarna vraagt hij om een datum (de belangrijkste stap): wanneer het contract afloopt, wanneer het examen is, wanneer de verjaardag is, of wanneer het geregeld moet zijn.
+  3. Dan vraagt hij om contact, alleen voor een bericht als de datum dichtbij komt of er iets verandert.
+  4. Na het tweede antwoord vraagt hij: "Waar kan ik je nog meer mee helpen?"
+  5. Wie terugkomt ziet bovenaan de chat "Jij zocht" met zijn wensen en datums, en kan elke wens of alles vergeten. /mij is dezelfde chat zonder keuzehulp eromheen.
+- **Vertrouwen waar maken**: laat altijd zien wat we onthouden, vergeten wist ook op de server, geen naam of gezondheidsgegevens, en stuur alleen wat beloofd is. Factoren onthoud (na antwoord 1 of 2) en meer (wel of niet) leren mee in de proef; waarde onthoud 15, datum 30, contact 45. Stand: `/api/keuze-tools?tool=mij&op=stand`.
 - **Een nieuwe pagina** volgt de winnende start. Bouw geen eigen pill-stappen tenzij de pagina echte situaties heeft met verschillende antwoorden.
 
 **Tabellen.**

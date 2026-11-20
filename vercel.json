@@ -998,6 +998,36 @@
       "destination": "/api/keuze-tools?tool=huis"
     },
     {
+      "source": "/mij",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=mij&op=pagina"
+    },
+    {
+      "source": "/mij",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?whichtobuy\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=mij&op=pagina"
+    },
+    {
+      "source": "/mij",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?kaufberater\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=mij&op=pagina"
+    },
+    {
       "source": "/advocaat/sitemap.xml",
       "has": [
         {
