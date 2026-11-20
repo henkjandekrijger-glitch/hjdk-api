@@ -138,7 +138,8 @@ Henkjan: "ALs je hulp maakt is dat altijd door de pov vd gebruiker = dus zoek te
 | Productkeuzehulp, automatisch | NL `api/kzmaak.js` (onderwerp vastzetten: `STARTLIJST`), VS en DE `api/wtbmaak.js`. Moet de winkeltoets halen (bol of Amazon) | stekkerbatterij |
 | Productkeuzehulp, met de hand | NL `lib/kz-hand.js` via /api/kzmaak?op=hand (dry=1 toont de bol-toets), VS en DE `lib/wtb-hand.js` via /api/wtbmaak?op=hand | raamrobot |
 | Beslisgids: dienst, vergelijking of product dat de winkels niet verkopen | NL `lib/dienstgids.js` of een eigen module (`lib/energie-keuze.js`, `lib/huisdier.js`), VS `lib/wtb-dienst.js` en `lib/wtb-robot.js`, DE `lib/kb-dienst.js`. Direct live, zonder winkeltoets | zonnepanelen, massage near me, Tagesgeld |
-| Lokale gids met alle zaken | `lib/rdam.js` (Rotterdam, per dienst en per zaak) | /rotterdam/tandarts |
+| Lokale gids met alle zaken | `lib/rdam.js` (Rotterdam, per dienst en per zaak), `lib/advocaat.js` (heel NL) | /rotterdam/tandarts |
+| Ranglijst van klinieken en artsen (chirurgie, en/nl/de) | `lib/chirurgie.js` op de data van `lib/tsc-rank.js`. Chat zonder geheugen (`geenGeheugen`): een ingreep is een gezondheidsgegeven | /chirurgie/nl |
 | Rekenhulp | `lib/rekenhulp.js`, `lib/hypotheek.js` (rekenkern `lib/hypotheek-kern.js`) | kinderfiets-maat, hypotheek |
 
 Lukt het schrijven in de bouwmotor niet, dan komt het onderwerp in de handwachtrij (/api/kzmaak?op=status, onder handwachtrij). Die schrijf je met de hand in `lib/kz-hand.js`.
