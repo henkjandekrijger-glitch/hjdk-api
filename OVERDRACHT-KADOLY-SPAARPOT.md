@@ -187,6 +187,8 @@ Zet het in de chat met Henkjan of in het werklog: `https://hjdk-api-henq.vercel.
 | `dktest` | GET (alleen test) | `&actie=maak`, `volgende` (`&mail=0`), `vrienden&n=4`, `reeks&n=9`, `pot&n=1000` (centen), `lijst`, `wis`. |
 | `dkronde` | cron of beschermde host | Live ronde (doet niets zolang `dk:aan` ontbreekt); de cron draait ook de testwereld. |
 | `dkstand` | beschermde host | JSON: aan of uit, testdag, deelnemers, tegoed in potten, tellers per dag. |
+| `dkgo` | GET `&k=&w=t\|p` | Klik uit mail of pagina via Clickmind (register, `mmc`), daarna naar de klikpagina (`w=t`) of het product op kadoly.com (`w=p&p=<pid>`). |
+| `dkdeel` | beacon `&k=&kanaal=wa\|mail` | Deelknop getikt (proefstap deel, teller). |
 | `dkoverdracht` | beschermde host | Dit document met de live stand erboven (`&format=json` kan ook). |
 
 Live staat alles behalve `dkronde`, `dkstand` en `dkoverdracht` op "Niet gevonden" zolang `dk:aan` ontbreekt.
@@ -217,7 +219,19 @@ Cadeaus komen uit de shopcatalogus `hjdk:shop:cat`: in voorraad, met foto, lever
 - Samen klikken gebeurt direct bij elke klik (`tik` roept `geefVrienden` aan): elke actieve vriend krijgt `R.vriend`, tot `R.vriendMax` per ontvanger per dag.
 - De ronde: (1) testwereld: testvrienden klikken voor vandaag (en geven dus jou tegoed); (2) ochtendmail aan elke actieve deelnemer die in de laatste 14 dagen klikte, in batches van 90 via Resend (idempotency-sleutel per dag), met List-Unsubscribe. De mail rekent "samen gespaard" uit (eigen pot plus die van de vrienden) en leest "gisteren" uit `samen` of `samenVorig`.
 
-### 6.5 Live zetten (alleen op Henkjans woord)
+### 6.5 Lerend en Clickmind (20 nov 2026)
+
+Henkjan 20 nov: "Maak het volkomen lerend . ALLE variabelen . /campagnes-henkjan altijd via clickmind en de mail ook alle links ze moeten doorsturen via email of whats app ook al die moeten lerend zijn cta s etc."
+
+- Clickmind-proef `spaarpot` (live) en `spaarpottest` (testwereld) in `lib/proef.js`: elke deelnemer krijgt van elk onderdeel een versie (factorieel, Thompson sampling per apparaat, 30% verkennen tot 200 keer gezien, daarna 10%). Beslissing op de aanmeldpagina (cookie `dkpf`, 7 dagen), daarna op het record (`p.pf`).
+- Onderdelen (a = nu, b = uitdager): `kop` (Start met een gevulde spaarpot / Spaar samen voor een gratis cadeau), `knop` (Start mijn Spaarpot / Pak mijn gevulde pot), `onderwerp` van de ochtendmail (Samen gespaard / N vrienden klikten voor je · klik terug), `mknop` (Klik voor je vrienden / Klik terug), `deel` (alleen WhatsApp / WhatsApp en per mail), `deeltekst` (wederkerig / uitdaging "Wie klikt er elke dag voor mij?"), `product` (cadeau-idee na of voor Samen gespaard).
+- Waarde per deelnemer = de verste stap: aanvraag 2, deel 4, terug (klikt op een latere dag) 6, product 8, bevestigd 10, vriend (iemand bevestigt via zijn link) 30, koop 100. Bedragen leren bewust niet automatisch mee: de waarde telt de kosten nog niet.
+- Stand: `op=dkstand&test=1` (veld `proef`) of https://keuzehulp.best/api/mm/proefstand?site=spaarpot&vorm=tekst.
+- Clickmind: `cm.js` met `data-site=spaarpot` op elke pagina, met `data-net`, `data-zone`, `data-campaign`, `data-subid` uit de advertentielink (`n`, `z`, `c`, `s`). Elke link in de ochtendmail en elk product op de pagina loopt via `op=dkgo` (klik in het Clickmind-register: netwerk mail of web, campagne spaarpot, zone klik of product, sub = de versies van de deelnemer; doel krijgt `mmc`). Deelknoppen melden zich via `op=dkdeel` (sendBeacon).
+- Delen volgens de quizlessen (todayin `spel/leerlus/viraliteit`): één grote knop "Stuur via WhatsApp", eronder "WhatsApp opent: kies een vriend of groep en tik op verstuur", na de tik "Verstuurd? Stuur hem ook naar een tweede groep" en "Kopieer je link"; een vriend telt pas na een echte bevestiging.
+- Nog te doen bij de start van advertenties (campagne-skill): cmdata-route, `PAGINA_UIT` en `PROJECTEN` (lib/mensmeter.js, lib/lookalike.js), `puit` bij aanmelding, bron in lib/extern.js, en een Clickmind-advertentielink naar de aanmeldpagina.
+
+### 6.6 Live zetten (alleen op Henkjans woord)
 
 1. Kies het adres en zet een rewrite in `vercel.json` op host `gids.kadoly.com` (bijv. `/spaarpot` naar `/api/gids?op=dk`), plus de vervolgpagina's als dat netter is.
 2. Zet `dk:aan` in de KV.
@@ -226,14 +240,40 @@ Cadeaus komen uit de shopcatalogus `hjdk:shop:cat`: in voorraad, met foto, lever
 
 ## 7. Open punten en beslissingen
 
-1. **Bedragen bevestigen** (Henkjan): startpot €5, €0,10 per klik, €0,10 per klik van een vriend (max €0,90 per dag), €1 per 10 dagen, pot max €30.
-2. **Pot als korting in de kassa** van kadoly.com: met €6 in je pot iets van €35 voor €29 kopen. Dat maakt elke pot een reden om te kopen (verkoop), maar vraagt een kortingscode in de kassa. Nog uitzoeken of de kassa dat kan.
-3. **Live-adres** op gids.kadoly.com en het startmoment.
-4. **Waar de aanmeldpagina komt**: modal op kadoly.com, de Kadoly-gidsen, de bevestigde nieuwsbrief-abonnees.
-5. **De wekelijkse winactie** van de Kadoly-nieuwsbrief (`lib/kadoly-nieuws.js`) is wél een kansspel en heeft geen einddatum. Besluit van Henkjan: stoppen, einddatum geven, of ook ombouwen naar tegoed.
+1. **Kern "Samen naar 100%"** (Henkjan): pot tonen als % korting op een gekozen product, nieuwe vriend telt zwaarder dan een dagelijkse klik (voorstel: nieuwe vriend €1 voor beiden, dagelijkse klik €0,05). Zie sectie 8.
+2. **Korting in de kassa van kadoly.com**: zonder kortingscode kan de pot alleen naar een gratis cadeau, wat bij de huidige marges niet uit kan. Uitzoeken of de kassa een persoonlijke code kan maken.
+3. **Cadeaus met lage kostprijs en hoge waarde** kiezen voor 100% (eigen inkoop, bundels), in plaats van het goedkoopste product.
+4. **Bedragen bevestigen**: startpot €5, klik €0,10, vriend €0,10 (max €0,90 per dag), €1 per 10 dagen, pot max €30.
+5. **Eerst warm zaaien**: Kadoly-kopers, de modal op kadoly.com en de nieuwsbrief, daarna advertenties (netwerk, budget en start op Henkjans woord; campagne-skill, via Clickmind).
+6. **Live-adres** op gids.kadoly.com en het startmoment (`dk:aan`).
+7. **De wekelijkse winactie** van de Kadoly-nieuwsbrief is wél een kansspel zonder einddatum: stoppen, einddatum, of ombouwen naar tegoed.
 
-## 8. Logboek (nieuwste bovenaan)
+## 8. Assessment en economie (20 nov 2026)
 
+Henkjan 20 nov: "Kijk in quiz md wat wel en niet werkte en nu gaan we dit compounden . Doe verder onderzoek naar bestaande loyaltie programmas ... Hier is kern : Je klikt voor elkaar dus hoe meer mensen hoe meer korting of zelfs 100% korting . Doe totaal asessemnet ook even verder nog voor economics".
+
+**Economie (feiten):** Kadoly verdient nu ~€6,67 per verkoop (2 verkopen 11-12 nov, €106 omzet, ~€13 winst; lib/waarde.js) en per product bij de huidige prijzen €0 tot €2 (OVERDRACHT-YOORS-SHOP, 17 nov); bundels halen €15. Een gratis cadeau van €8,74 kost Kadoly dus bijna €8,74. Een echt mens via advertenties kost ~$0,03; een eerste antwoord in NL kostte in de quiz ~$0,023.
+
+**Economie (rekenvoorbeeld, aannames te meten):** per 100 bevestigde deelnemers €0,50 per adres = €50; 15 halen een cadeau = ~€131; samen €181. Terugverdienen vraagt ~27 verkopen (0,27 per deelnemer). Een dagelijkse mail haalt dat bij deze marges waarschijnlijk niet. Zo als gratis cadeau sluit de rekensom niet.
+
+**Wat de rekensom wel laat sluiten:**
+1. Tegoed als korting bij een aankoop (pot = % korting op een product, de rest betaal je): elke inwisseling brengt omzet mee. Vraagt een kortingscode in de kassa van kadoly.com.
+2. 100% alleen op cadeaus met een lage kostprijs en een hoge waarde (eigen inkoop, bundels), niet op een willekeurig product van €8,74.
+3. Geld naar nieuwe mensen, niet naar herhaling: een nieuwe vriend die meedoet is een adres zonder advertentiekosten (€0,25-0,75 waard); een dagelijkse klik van een bestaande vriend levert veel minder op. Voorstel: nieuwe vriend €1 voor beiden, dagelijkse klik €0,05.
+4. Eerst warm zaaien: in de quiz deelden advertentiespelers bijna niet (0,08 vrienden per maker) en spelers die via een vriend kwamen wel (0,61, de generatie daarna 1,86). Begin bij Kadoly-kopers, de modal op kadoly.com en nieuwsbrief-abonnees, daarna pas koude advertenties.
+5. Een plafond op het totaal: tegoed dat openstaat en cadeaus per maand hooguit wat Kadoly anders aan advertenties voor dezelfde adressen zou uitgeven.
+
+**Loyaliteitsprogramma's die werken (wat we overnemen):**
+- Gevulde start (Nunes & Drèze 2006, carwash): kaart met 2 van 10 stempels al gezet 34% maakt hem af, tegen 19% bij een lege kaart van 8. Hebben we (startpot); toon het ook als voortgang in procenten.
+- Dropbox: beloning voor beide kanten, gebracht als cadeau van een vriend en ingebouwd in elk moment van het product; blijvend 60% meer aanmeldingen, 35% van de dagelijkse aanmeldingen via doorverwijzing. Hebben we (wederkerig); delen ook in de welkomstmail en na elk cadeau.
+- Pinduoduo "help me de prijs omlaag": vrienden klikken de prijs naar nul, nieuwe gebruikers tellen zwaarder. Enorme groei, maar wantrouwen als de laatste procenten onhaalbaar zijn (een streamer bleef met naar eigen zeggen tot 60.000 helpers op 99,98% steken). Overnemen: nieuwe vrienden tellen zwaarder, procenten korting naar 100%; nooit een onhaalbare laatste stap.
+- AH digitaal sparen: zegels delen via WhatsApp kennen Nederlanders al. Les uit de koopzegels (NOS, aug 2026): woede als regels in het nadeel veranderen. Voorwaarden beloven 30 dagen vooraf melden en houden wat in de pot zit.
+
+**Kern van Henkjan ("hoe meer mensen, hoe meer korting, tot 100%"):** het voorstel is "Samen naar 100%": je kiest een product, elke klik van een vriend geeft % korting op dat product en elke nieuwe vriend een grote stap; bij 100% is het gratis, daaronder is het korting in de kassa. Het aantal benodigde klikken hangt af van de kostprijs, zodat elke klik begrensd geld kost.
+
+## 9. Logboek (nieuwste bovenaan)
+
+- 2026-11-20: Alles lerend: Clickmind-proef spaarpot met 7 onderdelen (kop, knop, onderwerp, mailknop, deelkanaal WhatsApp/mail, deeltekst, plek van het product), gebeurtenissen vanuit de server, cm.js op elke pagina, alle mail- en productlinks via op=dkgo in het Clickmind-register, deelknoppen via op=dkdeel; delen volgens de quizlessen. Assessment en economie in sectie 8.
 - 2026-11-20: Startpot €5 en samen klikken (elke klik geeft direct alle vrienden €0,10; vrienden van vrienden vervallen); ochtendmail "Samen gespaard" met wie gisteren voor je klikte en knop "Klik voor je vrienden"; na de klik het cadeau-idee van vandaag bovenaan; overal klik in plaats van tik; bereikbaarheid van Henkjan onder elke mail (regel uit de POST-lus). Acht advertenties voor e-mailadressen in NL gemaakt (beelden 492x328 en icoon 192x192), nog niet geplaatst.
 - 2026-11-17: Dit document gemaakt en live gezet op `op=dkoverdracht` (Henkjan: "Zet uitgebreide MD op vercel dan kan ik gaan testen in ander account").
 - 2026-11-15: Winterkans-loterij vervangen door de Spaarpot (geen kans, geen einddatum). Getest in de testwereld met echte catalogus: pot €0,10 na eerste tik, €1 op dag 2 met 4+8 testvrienden, ochtendmail, cadeau kiezen, bestelmail, afmelden, vervallen na 30 dagen.
