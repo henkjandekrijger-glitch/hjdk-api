@@ -246,7 +246,7 @@ Henkjan 20 nov: "Maak het volkomen lerend . ALLE variabelen . /campagnes-henkjan
 4. **Bedragen bevestigen**: startpot €5, klik €0,10, vriend €0,10 (max €0,90 per dag), €1 per 10 dagen, pot max €30.
 5. **Eerst warm zaaien**: Kadoly-kopers, de modal op kadoly.com en de nieuwsbrief, daarna advertenties (netwerk, budget en start op Henkjans woord; campagne-skill, via Clickmind).
 6. **Live-adres** op gids.kadoly.com en het startmoment (`dk:aan`).
-7. **De wekelijkse winactie** van de Kadoly-nieuwsbrief is wél een kansspel zonder einddatum: stoppen, einddatum, of ombouwen naar tegoed.
+7. ~~De wekelijkse winactie van de Kadoly-nieuwsbrief~~: gestopt op 20 nov 2026 (Henkjan: "stop wekelijks actie"). Er waren 0 aanmelders en geen trekkingen.
 
 ## 8. Assessment en economie (20 nov 2026)
 
