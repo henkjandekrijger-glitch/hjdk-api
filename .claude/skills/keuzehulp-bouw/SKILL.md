@@ -263,6 +263,7 @@ Henkjan: "beste is geen pills vooraf zelfs denk ik of wel maar dan starten ze ch
 - **Een nieuwe pagina** volgt de winnende start. Bouw geen eigen pill-stappen tenzij de pagina echte situaties heeft met verschillende antwoorden.
 
 **Tabellen.**
+- Altijd met lijnen: een rand om de tabel, een lijn onder elke rij, de kop met een dikke lijn; op mobiel is elke gestapelde rij een omlijnd blok. Nooit een grijze achtergrond, ook niet in de kop of om tabellen en antwoordblokken; een vlak is wit met een lijn (Henkjan, 20 nov 2026: "minimaal lijntje in of omlijning ... geen grijze achtergrond voer overal door"). Dat doet `LIJN_CSS` in `lib/huisstijl.js`, en het vangnet `grijsWeg` maakt lichtgrijze vlakken uit andere sjablonen wit met een lijn.
 - Hoogstens 3 kolommen op mobiel. Breder stapelt `TABEL_JS` vanzelf.
 - Geen knoppen in rijen, geen cel langer dan 140 tekens.
 - Een tabel waarin elke rij hetzelfde antwoord geeft, gaat eruit.
