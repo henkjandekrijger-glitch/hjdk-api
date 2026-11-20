@@ -126,6 +126,8 @@ export default async function handler(req, res) {
     if(op==='wens')return res.status(200).json(await G.mijWens(b));
     if(op==='vergeet')return res.status(200).json(await G.mijVergeet(b));
     if(op==='contact')return res.status(200).json(await G.mijContact(b));
+    if(op==='naam')return res.status(200).json(await G.mijNaam(b));
+    if(op==='tel')return res.status(200).json(await G.mijTel(b));
     return res.status(404).json({ok:false});}
   if(q.get('tool')==='volg'){const Vg=await import('../lib/volgende.js');if(q.get('op')==='ctr'){res.setHeader('cache-control','public, s-maxage=900, stale-while-revalidate=3600');return res.status(200).json(await Vg.ctr(q.get('s')));}res.setHeader('cache-control','no-store');const x=await Vg.stand();if(q.get('vorm')==='tekst'){res.setHeader('content-type','text/plain; charset=utf-8');return res.status(200).send(Vg.standTekst(x));}return res.status(200).json(x);} // volgende gidsen per persoon en lerend (lib/volgende.js, 19 nov 2026)
   if(q.get('tool')==='deel'){const Dl=await import('../lib/deel.js');res.setHeader('cache-control','no-store');const x=await Dl.stand();if(q.get('vorm')==='tekst'){res.setHeader('content-type','text/plain; charset=utf-8');return res.status(200).send(Dl.standTekst(x));}return res.status(200).json(x);} // doorsturen per site en uur (lib/deel.js, 19 nov 2026)
