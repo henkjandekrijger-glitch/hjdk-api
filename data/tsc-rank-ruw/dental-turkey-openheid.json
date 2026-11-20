@@ -1,0 +1,162 @@
+{
+  "gecontroleerd": "2026-11-20",
+  "opmerking": "Alles gelezen op 2026-11-20 via de eigen sites van de klinieken. Per kliniek is in het Engels en Turks gezocht naar nieuws over klachten, rechtszaken, sterfgevallen of ingrepen van toezichthouders; bij geen enkele genoemde kliniek is in betrouwbare media, rechtbanken of bij overheden iets gevonden (alleen klachtensites zoals Sikayetvar en Trustpilot, die tellen niet mee). Prijzen gelden zoals de site ze toont; in de prijsvelden staat wat erbij zit. Garantie op het implantaat zelf is vaak de fabrieksgarantie van het merk; voorwaarden staan alleen bij Smile Dental Turkey, Dental Centre Turkey en Elit Dental (Kusadasi).",
+  "niet_bereikbaar": [
+    "https://www.verasmile.com/ (de pagina's over implantaten gaven een fout bij de site zelf; ook /dental-implants/turkey/ en /dental-implants/failure/)",
+    "https://www.estetikinternational.com/treatments/dental/dental-implants (serverfout bij ophalen)",
+    "https://www.dentistkusadasi.net/prices/ (robots.txt niet te lezen; de garantiepagina van dezelfde site werkte wel)",
+    "https://www.smiledentalturkey.com/ en https://www.dentfixturkey.com/ (de homepage werd niet opgehaald; de pagina's over implantaten wel)",
+    "Dentistanbul: geen eigen site met implantaatprijzen gevonden"
+  ],
+  "algemeen": [
+    {"wat": "Enquete van de British Dental Association onder ruim 1.000 Britse tandartsen: meer dan 90% had patienten gezien die in het buitenland behandeld waren, 86% had problemen na zo'n behandeling hersteld; implantaten (85%) en kronen (87%) hadden het vaakst nazorg nodig; ruim 40% zei dat het herstel via de NHS ging.", "datum": "2022-07-14", "bron": "https://dentistry.co.uk/2022/07/14/dental-tourism-nine-in-10-dentists-have-treated-patients-who-travelled-abroad-for-treatment/"},
+    {"wat": "De BDA waarschuwt dat patienten de risico's van tandheelkundig toerisme moeten kennen (nazorg, communicatie, klachtrecht), met verwijzing naar de BBC-documentaire Turkey Teeth.", "datum": "2022", "bron": "https://www.bda.org/news-and-opinion/news/dental-tourism-patients-need-to-know-the-risks"},
+    {"wat": "Het Britse ministerie van Buitenlandse Zaken (FCDO) meldt 22 Britten die sinds januari 2019 in Turkije overleden na medisch toerisme en raadt aan alleen zorgverleners te kiezen die door het Turkse ministerie van Volksgezondheid zijn goedgekeurd.", "datum": "2022-12-22", "bron": "https://euronews.com/travel/2022/12/22/turkey-travel-warning-issued-by-uk-government-following-22-medical-tourism-deaths"},
+    {"wat": "Euronews: de Turkse tandartsenbond (TDB) schat 150.000 tot 250.000 buitenlandse tandpatienten per jaar; een woordvoerder noemde 3 tot 5% mislukte behandelingen acceptabel; een advocaat zegt dat verhaal halen ongeveer twee jaar duurt.", "datum": "2022-10-13", "bron": "https://www.euronews.com/2022/10/13/in-turkey-concerns-grow-over-flaws-in-its-booming-dental-tourism-industry"},
+    {"wat": "Nieuwe regeling van het Turkse ministerie van Volksgezondheid voor zorgtoerisme (Staatscourant): complicatieverzekering verplicht voor chirurgische ingrepen bij zorgtoeristen (uiterlijk eind 2025), bemiddelaars alleen met vergunning van USHAS en via het HealthTurkiye-platform, klinieken beoordeeld op klachten en tevredenheid, accreditatie verplicht uiterlijk eind 2026.", "datum": "2025-04-30", "bron": "https://www.dailysabah.com/turkiye/turkiyes-health-tourism-gets-major-upgrade-for-safety-quality/news"},
+    {"wat": "Lijkschouwing in het VK: een Britse man (48) overleed door zelfdoding nadat een kliniek in Turkije al zijn tanden had getrokken en hem zonder implantaten naar huis stuurde; de kliniek wordt niet genoemd (melding van The Telegraph).", "datum": "2026-04-14", "bron": "https://www.oralhealthgroup.com/dental-governance-regulations/uk-man-48-dies-by-suicide-after-botched-dental-surgery-in-turkey-1003995081/"},
+    {"wat": "Een Britse man overleed in Istanbul (Sisli) een dag na een haartransplantatie en een tandheelkundige behandeling; de doodsoorzaak is niet bekendgemaakt, de politie doet onderzoek; er wordt geen tandartskliniek genoemd.", "datum": "2025-11-14", "bron": "https://thenightly.com.au/world/mentor-rama-british-man-dies-after-hair-transplant-and-dental-treatment-in-turkey-c-20674853"}
+  ],
+  "klinieken": [
+    {
+      "naam": "Smile Dental Turkey",
+      "stad": "Antalya",
+      "site": "https://www.smiledentalturkey.com/",
+      "prijs": {"bedrag": "Enkel implantaat inclusief abutment en ingreep, contant: Neodent £392, Nobel Biocare £538, Straumann £632; zirkoniumkroon £167 extra; met kaart 10% hoger. All-on-4 per kaak, contant: Neodent £1.753, Nobel Biocare £2.442, Straumann £2.822 (definitieve kronen apart).", "bron": "https://www.smiledentalturkey.com/treatment/dental-implants/"},
+      "wie_opereert": {"tekst": "Noemt kaakchirurg Dr. Ozkan Ozkaynak (PhD, Ankara University) en Dr. Ceyda Ozkaynak; casussen op de site zeggen dat Dr. Ozkan Ozkaynak de implantaten plaatste, de site zegt niet dat hij elk implantaat zelf plaatst.", "arts_opereert": "deels", "bron": "https://www.smiledentalturkey.com/treatment/all-on-4-dental-implants/"},
+      "nazorg": {"tekst": "Levenslange fabrieksgarantie op het implantaat; jaar 1 een 'No Worries'-garantie voor een goedgekeurde revisie met vlucht tot £200, 6 hotelnachten en vervoer; daarna 4 jaar garantie op kronen en bruggen (5 jaar totaal); dekt o.a. niet ingroeien en breuk door materiaalfout of klinische fout; claims via de patientcoordinator.", "garantie": true, "bron": "https://www.smiledentalturkey.com/treatment/dental-implants/"},
+      "risico": [],
+      "toelichting": "Meest open van alle onderzochte klinieken: prijs per merk, wat erbij zit en garantievoorwaarden staan op de site (bijgewerkt september 2026)."
+    },
+    {
+      "naam": "Dentfix Clinic",
+      "stad": "Istanbul",
+      "site": "https://dentfixturkey.com/",
+      "prijs": {"bedrag": "Enkel implantaat: €272 tot €490 (standaard internationaal merk), €690 tot €890 (Straumann BLT/BLX of Nobel Biocare); plan noemt implantaat, abutment, kroon, scans en controles; botopbouw, sinuslift, extracties en CT apart. Geen All-on-4-prijs op deze pagina.", "bron": "https://dentfixturkey.com/dental-implants"},
+      "wie_opereert": {"tekst": "De implantatenpagina noemt kaakchirurg Dr. Siavash Abbasgholizadeh voor het plaatsen van implantaten; kronen gepland door prosthodontist Assoc. Prof. Dr. Ayse Atay.", "arts_opereert": "ja", "bron": "https://dentfixturkey.com/dental-implants"},
+      "nazorg": {"tekst": "'Implants carry a lifetime guarantee'; kronen en facings 5 tot 10 jaar, afhankelijk van behandeling en merk; voorwaarden niet op de pagina.", "garantie": true, "bron": "https://dentfixturkey.com/dental-implants"},
+      "risico": [],
+      "toelichting": "Pagina bijgewerkt 2026-09-02."
+    },
+    {
+      "naam": "Dental Centre Turkey (Antalya Dental Centre)",
+      "stad": "Antalya",
+      "site": "https://dentalcentreturkey.com/",
+      "prijs": {"bedrag": "Implantaat plus abutment: Osstem £529 / £476, Nobel £659 / £593, Straumann £769 / £692 (twee bedragen per regel zonder uitleg). All-on-4 Nobel Biocare Active per kaak £2.999 / £2.699. Prijslijst 2026.", "bron": "https://dentalcentreturkey.com/dental-treatment-prices-in-turkey"},
+      "wie_opereert": {"tekst": "Geen tandarts genoemd op prijs- of garantiepagina.", "arts_opereert": "", "bron": "https://dentalcentreturkey.com/dental-treatment-prices-in-turkey"},
+      "nazorg": {"tekst": "Levenslang tegen breuk van de implantaatschroef; vervalt bij botverlies, terugtrekkend tandvlees, migratie van het implantaat en afstoting van bottransplantaat; reis en verblijf voor herstel zijn voor de patient.", "garantie": true, "bron": "https://dentalcentreturkey.com/guarantee"},
+      "risico": [],
+      "toelichting": "Garantievoorwaarden staan helder op de site, inclusief wat niet gedekt is."
+    },
+    {
+      "naam": "DentaTur",
+      "stad": "Antalya",
+      "site": "https://dentatur.com/",
+      "prijs": {"bedrag": "Enkel implantaat vanaf £300 (Straumann Nuvo), Neodent £400, Medentica £490, Nobel Biocare £590; niet vermeld wat erbij zit. All-on-4 'from £1,600 per jaw' (elders op dezelfde pagina ook €1.815 en een pakket vanaf £3.200, tegenstrijdig).", "bron": "https://dentatur.com/blog/teeth-implants-turkey-antalya-cost-reviews/"},
+      "wie_opereert": {"tekst": "Noemt oprichter Dr. Sevil Kaderli als behandelaar van internationale patienten, niet wie de implantaten plaatst.", "arts_opereert": "", "bron": "https://dentatur.com/blog/teeth-implants-turkey-antalya-cost-reviews/"},
+      "nazorg": {"tekst": "'Lifetime guarantee on our dental implants' en 10 jaar garantie op kronen; geen voorwaarden genoemd.", "garantie": true, "bron": "https://dentatur.com/blog/teeth-implants-turkey-antalya-cost-reviews/"},
+      "risico": [],
+      "toelichting": "Pagina bijgewerkt 2026-10-05; prijzen voor All-on-4 spreken elkaar tegen."
+    },
+    {
+      "naam": "Dentakay",
+      "stad": "Istanbul",
+      "site": "https://dentakay.com/",
+      "prijs": {"bedrag": "Geen prijs voor een enkel implantaat. Volledige kaak 'From $3,949 - Up to $9,649' per kaak, met de opmerking dat startprijzen niet de totale kosten zijn; merk niet genoemd. Kronen in Turkije: zirkonium $200 tot $300, e.max $300 tot $400.", "bron": "https://dentakay.com/all-on-4-dental-implants-cost/"},
+      "wie_opereert": {"tekst": "Noemt implantoloog Dr. Ahmet Alper Kaya bij de artsen, maar zegt niet wie de implantaten plaatst; artikelen 'medically reviewed by Dr. Gulay Akay'.", "arts_opereert": "", "bron": "https://dentakay.com/dental-implant-cost-comparison"},
+      "nazorg": {"tekst": "Geen garantie op implantaten gevonden; wel 'ongoing support for up to two years' als nazorg.", "garantie": false, "bron": "https://dentakay.com/getting-dental-implants-in-turkey"},
+      "risico": [],
+      "toelichting": ""
+    },
+    {
+      "naam": "Hospitadent",
+      "stad": "Istanbul (keten met 18 vestigingen, ook Antalya, Alanya, Bodrum)",
+      "site": "https://www.hospitadent.com/en",
+      "prijs": {"bedrag": "Prijsgids, geen offerte: enkel implantaat compleet (titanium implantaat, abutment, keramische kroon, verdoving) $600 tot $1.200 in Turkije; All-on-4 per kaak $3.000 tot $5.500; merk niet genoemd.", "bron": "https://www.hospitadent.com/en/blog/dental-implant-cost"},
+      "wie_opereert": {"tekst": "Kaakchirurg Dr. Melike Kentkuran staat als auteur en medisch controleur, niet als wie de implantaten plaatst.", "arts_opereert": "", "bron": "https://www.hospitadent.com/en/blog/dental-implant-cost"},
+      "nazorg": {"tekst": "Geen eigen garantie op implantaten gevonden; de site raadt patienten alleen aan naar een schriftelijke garantie te vragen.", "garantie": false, "bron": "https://www.hospitadent.com/en/blog/is-dental-treatment-in-turkey-safe"},
+      "risico": [],
+      "toelichting": "Bedragen staan als marktprijzen in Turkije, niet duidelijk als eigen tarief."
+    },
+    {
+      "naam": "DentSpa",
+      "stad": "Antalya",
+      "site": "https://dentspa.com/",
+      "prijs": {"bedrag": "", "bron": "https://dentspa.com/blog/dental-tourism-packages-in-turkey/"},
+      "wie_opereert": {"tekst": "Kaakchirurg Dr. Serdar Yilmaz staat als auteur; de pagina zegt niet wie de implantaten plaatst.", "arts_opereert": "", "bron": "https://dentspa.com/blog/dental-tourism-packages-in-turkey/"},
+      "nazorg": {"tekst": "'Implant procedures at DentSpa are backed by a multi-year guarantee', zonder aantal jaren of voorwaarden.", "garantie": true, "bron": "https://dentspa.com/blog/dental-tourism-packages-in-turkey/"},
+      "risico": [],
+      "toelichting": "Alleen '75% less' dan het VK, geen eigen bedrag."
+    },
+    {
+      "naam": "Dentgroup Kosuyolu",
+      "stad": "Istanbul",
+      "site": "https://dentgroup.com.tr/en/kosuyolu-dental-clinic",
+      "prijs": {"bedrag": "", "bron": "https://dentgroup.com.tr/en/kosuyolu-dental-clinic"},
+      "wie_opereert": {"tekst": "Noemt het team met specialisme, o.a. kaakchirurg Murat Ozle, periodontoloog Dila Dagasan en prothetist Mazhar Unsal, maar niet wie de implantaten plaatst.", "arts_opereert": "", "bron": "https://dentgroup.com.tr/en/kosuyolu-dental-clinic"},
+      "nazorg": {"tekst": "Geen garantie op de pagina.", "garantie": false, "bron": "https://dentgroup.com.tr/en/kosuyolu-dental-clinic"},
+      "risico": [],
+      "toelichting": "Pagina bijgewerkt 13 oktober 2026. Niet te verwarren met DentGroup International in Antalya (dentgroupinternational.com)."
+    },
+    {
+      "naam": "Clinic Center",
+      "stad": "onbekend (site noemt alleen Turkije; Antalya niet bevestigd)",
+      "site": "https://cliniccenter.co.uk/",
+      "prijs": {"bedrag": "Implantaat £470 tot £560 (titanium, zirkonium, kort implantaat), merk niet genoemd; geen All-on-4-prijs.", "bron": "https://cliniccenter.co.uk/dental-implants-in-turkey/"},
+      "wie_opereert": {"tekst": "Tandarts Bilge controleerde de pagina, tandarts Nurullah staat in het team; niet gezegd wie implantaten plaatst.", "arts_opereert": "", "bron": "https://cliniccenter.co.uk/dental-implants-in-turkey/"},
+      "nazorg": {"tekst": "'Lifetime guarantee: Yes' in een overzichtstabel, zonder voorwaarden.", "garantie": true, "bron": "https://cliniccenter.co.uk/dental-implants-in-turkey/"},
+      "risico": [],
+      "toelichting": "Bijgewerkt 9 oktober 2026."
+    },
+    {
+      "naam": "Dentist Kusadasi",
+      "stad": "Kusadasi",
+      "site": "https://www.dentistkusadasi.com/",
+      "prijs": {"bedrag": "Enkel implantaat vanaf £405 (consult, CE-gecertificeerd titanium implantaat en nazorg); merken Straumann, Neodent, Nucle-Oss; geen All-on-4-prijs.", "bron": "https://www.dentistkusadasi.com/dental-implants-in-turkey.html"},
+      "wie_opereert": {"tekst": "Geen tandarts genoemd.", "arts_opereert": "", "bron": "https://www.dentistkusadasi.com/dental-implants-in-turkey.html"},
+      "nazorg": {"tekst": "Geen garantie vermeld op de implantatenpagina.", "garantie": false, "bron": "https://www.dentistkusadasi.com/dental-implants-in-turkey.html"},
+      "risico": [],
+      "toelichting": "Vanaf-prijs."
+    },
+    {
+      "naam": "Elit Dental Clinic (dentistkusadasi.net)",
+      "stad": "Kusadasi",
+      "site": "https://www.dentistkusadasi.net/",
+      "prijs": {"bedrag": "", "bron": "https://www.dentistkusadasi.net/prices/"},
+      "wie_opereert": {"tekst": "", "arts_opereert": "", "bron": ""},
+      "nazorg": {"tekst": "2 jaar garantie op het implantaat (alleen het product), alleen als de kliniek het hele werk afmaakt; vervalt o.a. bij slechte mondhygiene, overgeslagen jaarlijkse controle, roken, diabetes, terugtrekkend tandvlees of bot; botopbouw en schade door tandenknarsen uitgesloten.", "garantie": true, "bron": "https://www.dentistkusadasi.net/about/guarantee"},
+      "risico": [],
+      "toelichting": "Prijspagina niet bereikbaar."
+    },
+    {
+      "naam": "Vera Smile",
+      "stad": "Istanbul",
+      "site": "https://www.verasmile.com/",
+      "prijs": {"bedrag": "", "bron": ""},
+      "wie_opereert": {"tekst": "", "arts_opereert": "", "bron": ""},
+      "nazorg": {"tekst": "", "garantie": false, "bron": ""},
+      "risico": [],
+      "toelichting": "Site gaf een fout; niets gelezen. Opnieuw proberen."
+    },
+    {
+      "naam": "Estetik International (tandheelkunde)",
+      "stad": "Istanbul",
+      "site": "https://www.estetikinternational.com/treatments/dental",
+      "prijs": {"bedrag": "", "bron": ""},
+      "wie_opereert": {"tekst": "", "arts_opereert": "", "bron": ""},
+      "nazorg": {"tekst": "", "garantie": false, "bron": ""},
+      "risico": [],
+      "toelichting": "Implantatenpagina gaf een serverfout; niets gelezen."
+    },
+    {
+      "naam": "Dentistanbul",
+      "stad": "",
+      "site": "",
+      "prijs": {"bedrag": "", "bron": ""},
+      "wie_opereert": {"tekst": "", "arts_opereert": "", "bron": ""},
+      "nazorg": {"tekst": "", "garantie": false, "bron": ""},
+      "risico": [],
+      "toelichting": "Geen eigen site met implantaatgegevens gevonden."
+    }
+  ]
+}

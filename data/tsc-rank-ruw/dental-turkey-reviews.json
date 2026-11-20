@@ -1,0 +1,490 @@
+{
+ "gecontroleerd": "2026-11-20",
+ "methode": "WebSearch naar Trustpilot-profielen per kliniek en naar Trustpilot-pagina's met de melding 'breach of our guidelines'; elk profiel opgehaald met WebFetch (samenvatting van de pagina door een hulpmodel, dus cijfers zijn zoals op de pagina gelezen maar datums van laatste reviews waren soms tegenstrijdig en zijn dan null). pct_1ster = afgerond percentage 1-ster uit de verdeling ('<1%' als 0). WhatClinic- en RealSelf-lijstpagina's voor Istanbul en Antalya bekeken. Geen reviewteksten overgenomen. Makelaars (Bookimed e.d.) niet meegeteld.",
+ "niet_bereikbaar": [
+  "Tripadvisor (WebFetch geweigerd, zoeken leverde geen Tripadvisor-pagina's)",
+  "Doctify (geen Turkse tandklinieken gevonden)",
+  "Google Maps (niet betrouwbaar leesbaar, niet geprobeerd)",
+  "RealSelf: alleen artsenprofielen met 0 tot 12 reviews; Vera Clinic Istanbul 4,8 uit 105 is een haar/plastische-chirurgiekliniek, niet Vera Smile",
+  "Geen Trustpilot-profiel gevonden voor: DentSpa (Antalya), Dentgroup Kosuyolu, Clinic Center (Antalya), Estetik International, Dentistanbul",
+  "curl naar trustpilot.com geblokkeerd door de proxy (403)"
+ ],
+ "klinieken": [
+  {
+   "naam": "Dentakay Dental Clinic",
+   "stad": "Istanbul (ook Antalya, Ankara, Nish als locaties)",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 1700,
+     "pct_1ster": 14,
+     "laatste_review": "2026-11-15",
+     "waarschuwing": "",
+     "bron": "https://ca.trustpilot.com/review/dentakay.com/location/antalya",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Hoofdprofiel dentakay.com, geclaimd sinds feb 2021. Trustpilot: 'This company invites their customers to review, whether positive or negative'. Op uk.trustpilot.com/review/dentakay.com zelfde dag 1.658 reviews en dezelfde verdeling (5* 75%, 1* 14%); het verschil komt door de domeinversie. 859 reviews in de laatste 12 maanden. Onduidelijk of het totaal alle locaties omvat. Datum laatste review: laatste kalenderdatum die zichtbaar was; de pagina-datums waren niet eenduidig."
+    }
+   ]
+  },
+  {
+   "naam": "Smile Dental Turkey",
+   "stad": "Antalya",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 1190,
+     "pct_1ster": 0,
+     "laatste_review": "2026-11-13",
+     "waarschuwing": "",
+     "bron": "https://es.trustpilot.com/review/smiledentalturkey.com",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geclaimd sinds okt 2025, betaald Trustpilot-abonnement. Trustpilot: 'This company invites their customers to review, whether positive or negative'. Profiel is samengevoegd uit meerdere profielen. 1-ster is '<1%' (afgerond 0). Verdeling: 5* 98%."
+    }
+   ]
+  },
+  {
+   "naam": "Dentatur Dental Health Clinics",
+   "stad": "Antalya (ook Istanbul)",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 1261,
+     "pct_1ster": 0,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.trustpilot.com/review/dentatur.com?page=3",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geclaimd sinds mrt 2020, betaald Trustpilot-abonnement. Trustpilot: 'This company hasn't invited customers recently, so reviews may not be representative'. 1-ster '<1%', 5* 97%. Laatste review niet eenduidig vast te stellen (lijst toonde jun 2026, samenvatting toonde reviews tot 9 nov 2026)."
+    },
+    {
+     "platform": "WhatClinic",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": null,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.whatclinic.com/dentists/turkey/istanbul-province/all-on-4-dental-implants",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "WhatClinic is een aanvraag- en vergelijkingsplatform (offertes via WhatClinic), reviews heten 'verified'. Dentatur - Istanbul: ServiceScore 7,1 'Very Good', 58 interactions, geen sterren of aantal reviews getoond."
+    }
+   ]
+  },
+  {
+   "naam": "Hospitadent Dental Group",
+   "stad": "Istanbul (Mecidiyekoy, Sisli; keten)",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.4,
+     "schaal": "5 sterren",
+     "aantal": 453,
+     "pct_1ster": 5,
+     "laatste_review": "2026-10-16",
+     "waarschuwing": "",
+     "bron": "https://ca.trustpilot.com/review/hospitadent.com",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geclaimd sinds mei 2021. Trustpilot: 'This company hasn't invited customers recently, so reviews may not be representative'. 5* 89%."
+    }
+   ]
+  },
+  {
+   "naam": "Dentfix Clinic",
+   "stad": "Istanbul (Sisli)",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 138,
+     "pct_1ster": 10,
+     "laatste_review": "2026-10-19",
+     "waarschuwing": "",
+     "bron": "https://www.trustpilot.com/review/dentfixturkey.com",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geclaimd sinds okt 2021. Trustpilot: 'This company hasn't invited customers recently, so reviews may not be representative'. Trustpilot meldt 'Hasn't replied to negative reviews'. 5* 85%."
+    }
+   ]
+  },
+  {
+   "naam": "Vera Smile Dental Clinic",
+   "stad": "Istanbul (Kartal)",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.5,
+     "schaal": "5 sterren",
+     "aantal": 137,
+     "pct_1ster": 4,
+     "laatste_review": "2026-10-19",
+     "waarschuwing": "",
+     "bron": "https://nz.trustpilot.com/review/verasmile.com",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geclaimd sinds sep 2023. Trustpilot: 'This company hasn't invited customers recently, so reviews may not be representative'. Zoekresultaten tonen ook 158 en 159 reviews op andere domeinversies. 5* 92%."
+    }
+   ]
+  },
+  {
+   "naam": "Dentgroup International",
+   "stad": "Antalya",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 7,
+     "pct_1ster": 0,
+     "laatste_review": "2026-09-25",
+     "waarschuwing": "",
+     "bron": "https://uk.trustpilot.com/review/dentgroupinternational.com",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Te weinig reviews. Geclaimd sinds mei 2026. Trustpilot: 'This company hasn't invited customers recently, so reviews may not be representative'. Dit is Dentgroup International in Antalya; een Trustpilot-profiel van Dentgroup Kosuyolu (Istanbul) niet gevonden."
+    }
+   ]
+  },
+  {
+   "naam": "DCI Dental Center International",
+   "stad": "Antalya",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 159,
+     "pct_1ster": 5,
+     "laatste_review": "2026-09-09",
+     "waarschuwing": "",
+     "bron": "https://ca.trustpilot.com/review/dcidentalclinic.com",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Mogelijk de bedoelde 'Dental Center Turkey'/'Antalya Dental Centre'; niet bevestigd. Geclaimd sinds nov 2022, betaald abonnement. Trustpilot: 'This company invites their customers to review, whether positive or negative'."
+    }
+   ]
+  },
+  {
+   "naam": "Smile Team Turkey",
+   "stad": "Antalya",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 727,
+     "pct_1ster": 0,
+     "laatste_review": null,
+     "waarschuwing": "Trustpilot-waarschuwing: score niet beschikbaar wegens overtreding van de richtlijnen ('rating is unavailable due to a breach of our guidelines'); Trustpilot heeft een aantal nepreviews van dit bedrijf verwijderd ('We've removed a number of fake reviews for this company').",
+     "bron": "https://ca.trustpilot.com/review/smileteamturkey.com?page=3",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geen TrustScore getoond. Verdeling 5* 99%, 1* '<1%'. Paginametadata noemt 623 reviews."
+    }
+   ]
+  },
+  {
+   "naam": "Dental Design Turkey",
+   "stad": "Antalya",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 526,
+     "pct_1ster": 0,
+     "laatste_review": null,
+     "waarschuwing": "Trustpilot-waarschuwing: score niet beschikbaar wegens overtreding van de richtlijnen ('rating is unavailable due to a breach of our guidelines'); Trustpilot heeft een aantal nepreviews van dit bedrijf verwijderd ('We've removed a number of fake reviews for this company').",
+     "bron": "https://www.trustpilot.com/review/dentaldesignturkey.com?page=3",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geen TrustScore getoond. Verdeling 5* 100%, 1* '<1%'."
+    }
+   ]
+  },
+  {
+   "naam": "Natural Clinic Istanbul",
+   "stad": "Istanbul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 1132,
+     "pct_1ster": 17,
+     "laatste_review": null,
+     "waarschuwing": "Trustpilot-waarschuwing: score niet beschikbaar wegens overtreding van de richtlijnen ('rating is unavailable due to a breach of our guidelines'); Trustpilot heeft een aantal nepreviews van dit bedrijf verwijderd ('We've removed a number of fake reviews for this company').",
+     "bron": "https://uk.trustpilot.com/review/natural.clinic?page=4",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Hoofdcategorie tandkliniek, ook haartransplantatie en plastische chirurgie. 265 reviews in laatste 12 maanden. 5* 78%."
+    }
+   ]
+  },
+  {
+   "naam": "Serinsey Smile",
+   "stad": "Istanbul (Maltepe)",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "schaal": "5 sterren",
+     "aantal": 199,
+     "pct_1ster": 9,
+     "laatste_review": null,
+     "waarschuwing": "Trustpilot-waarschuwing: score niet beschikbaar wegens overtreding van de richtlijnen ('rating is unavailable due to a breach of our guidelines'); Trustpilot heeft een aantal nepreviews van dit bedrijf verwijderd ('We've removed a number of fake reviews for this company').",
+     "bron": "https://uk.trustpilot.com/review/serinsey.com?page=8",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geen TrustScore getoond. 5* 89%."
+    }
+   ]
+  },
+  {
+   "naam": "Smile Center Turkey",
+   "stad": "Antalya",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 905,
+     "pct_1ster": null,
+     "laatste_review": "2026-09-10",
+     "waarschuwing": "",
+     "bron": "https://se.trustpilot.com/review/smilecenterturkey.co",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Score uit paginatitel ('5'), verdeling niet getoond. Trustpilot meldt dat er geen reviews meer geschreven kunnen worden omdat de website van het bedrijf is opgeheven. Profiel samengevoegd. Noemt zich ook 'accredited medical travel organisation' (kliniek met reisdiensten). 199 reviews in laatste 12 maanden."
+    }
+   ]
+  },
+  {
+   "naam": "Phinova Clinic (profiel arpanumedical.com, tekst noemt CevreDent)",
+   "stad": "Istanbul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.3,
+     "schaal": "5 sterren",
+     "aantal": 678,
+     "pct_1ster": 2,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://uk.trustpilot.com/review/arpanumedical.com?page=7",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Naam op profiel 'Phinova CLinic', bedrijfstekst beschrijft CevreDent Clinic: identiteit onduidelijk. Geclaimd sinds jun 2021. Trustpilot: 'This company hasn't invited customers recently, so reviews may not be representative'. 'Hasn't replied to negative reviews'."
+    }
+   ]
+  },
+  {
+   "naam": "Antalya Smile Dental (ook Antalya Smile Designs)",
+   "stad": "Antalya (Konyaalti)",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 386,
+     "pct_1ster": 2,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.trustpilot.com/review/antalyasmiledesigns.com?page=6",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geclaimd (getoond 'Nov 2026'), betaald abonnement. Trustpilot: 'This company hasn't invited customers recently, so reviews may not be representative'. Profiel samengevoegd. Heeft Brits telefoonnummer en consultaties in het VK."
+    }
+   ]
+  },
+  {
+   "naam": "Ozdemir Dental Center",
+   "stad": "Antalya",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 300,
+     "pct_1ster": 0,
+     "laatste_review": "2026-11-11",
+     "waarschuwing": "",
+     "bron": "https://ca.trustpilot.com/review/ozdemirdentalcenter.com",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geclaimd sinds mei 2022. Trustpilot: 'This company hasn't invited customers recently, so reviews may not be representative'. 1* '<1%', 5* 98%. RealSelf: profiel zonder reviews."
+    }
+   ]
+  },
+  {
+   "naam": "Medical Dental Turkey",
+   "stad": "Antalya",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 253,
+     "pct_1ster": 0,
+     "laatste_review": "2026-10-07",
+     "waarschuwing": "",
+     "bron": "https://www.trustpilot.com/review/medicaldentalturkey.com",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geclaimd sinds nov 2021. Trustpilot: 'This company hasn't invited customers recently, so reviews may not be representative'. 1* '<1%'. Consultaties in Londen, Birmingham, Manchester."
+    }
+   ]
+  },
+  {
+   "naam": "Dent Adavista",
+   "stad": "Kusadasi",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 126,
+     "pct_1ster": 0,
+     "laatste_review": "2026-10-22",
+     "waarschuwing": "",
+     "bron": "https://ca.trustpilot.com/review/dentadavista.com",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geclaimd sinds jun 2022. Trustpilot: 'This company hasn't invited customers recently, so reviews may not be representative'. 1* '<1%', 2* 2%."
+    }
+   ]
+  },
+  {
+   "naam": "Tourmedical",
+   "stad": "Kusadasi",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.7,
+     "schaal": "5 sterren",
+     "aantal": 86,
+     "pct_1ster": 6,
+     "laatste_review": "2026-09-24",
+     "waarschuwing": "",
+     "bron": "https://ca.trustpilot.com/review/tourmedical.com",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Tandkliniek (categorie Dentist), implantaten. Geclaimd sinds aug 2016. Trustpilot: 'This company hasn't invited customers recently, so reviews may not be representative'."
+    }
+   ]
+  },
+  {
+   "naam": "Dr Smile Antalya Dental Clinic",
+   "stad": "Antalya",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "schaal": "5 sterren",
+     "aantal": 120,
+     "pct_1ster": 0,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://uk.trustpilot.com/review/drsmileantalya.com",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "Geclaimd sinds mrt 2025. Trustpilot: 'This company hasn't invited customers recently, so reviews may not be representative'. 5* 100%."
+    }
+   ]
+  },
+  {
+   "naam": "Clinic Prime Istanbul",
+   "stad": "Istanbul (Kartal)",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "WhatClinic",
+     "score": 5.0,
+     "schaal": "5 sterren",
+     "aantal": 152,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.whatclinic.com/dentists/turkey/istanbul-province/istanbul/dentistanbul-yildiz-hospital",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "WhatClinic is een aanvraag- en vergelijkingsplatform (offertes via WhatClinic), reviews heten 'verified'. Gezien op lijstpagina Istanbul (URL voor Dentistanbul gaf de lijst, geen Dentistanbul-profiel)."
+    }
+   ]
+  },
+  {
+   "naam": "Dr Cinik Hospital",
+   "stad": "Istanbul",
+   "arts": null,
+   "platforms": [
+    {
+     "platform": "WhatClinic",
+     "score": 4.8,
+     "schaal": "5 sterren",
+     "aantal": 98,
+     "pct_1ster": null,
+     "laatste_review": null,
+     "waarschuwing": "",
+     "bron": "https://www.whatclinic.com/dentists/turkey/istanbul-province/all-on-4-dental-implants",
+     "gezien": "2026-11-20",
+     "makelaar": false,
+     "scope": "organization",
+     "opmerking": "WhatClinic is een aanvraag- en vergelijkingsplatform (offertes via WhatClinic), reviews heten 'verified'. Lijst All-on-4 Istanbul; ServiceScore 10."
+    }
+   ]
+  }
+ ]
+}

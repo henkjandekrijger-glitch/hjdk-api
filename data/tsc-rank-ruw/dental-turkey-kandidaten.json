@@ -1,0 +1,668 @@
+{
+ "gecontroleerd": "2026-11-20",
+ "toelichting": "WebSearch (Engels en Turks) op nieuws (BBC, Guardian, Reuters, Daily Sabah, Hurriyet Daily News, City AM, Evening Standard, Euronews, Turkse pers), fora (Mumsnet, Expat.com, MoneySavingExpert, Tripadvisor, PistonHeads) en per kliniek; daarna WebFetch van de gevonden pagina's en van officiele teampagina's. Reddit was niet bereikbaar. Veel 'nieuws' over Turkse tandklinieken blijkt betaalde PR of lijstjes; die staan onder bewust_niet_of_let_op. Artsen komen bij voorkeur van de eigen site; waar die niet bereikbaar was van een directory (WhatClinic, Turkey Travel Planner), wat bij de bron te zien is. Grote ketens (Hospitadent, Dentgroup Koşuyolu, Dentfix, Vera Smile, DentSpa, Estetik International, Dentistanbul, Memorial) kregen geen onafhankelijke vermelding in nieuws of fora die ik kon lezen; Dentgroup Koşuyolu, DentSpa, Estetik International, Dentistanbul en Memorial heb ik niet kunnen verifieren en dus weggelaten. Klinieken in Ankara: alleen EOT Dental Clinic op een lead-gen-site, niet opgenomen.",
+ "niet_bereikbaar": [
+  "https://www.reddit.com/r/DentalTurkey: proxy weigert reddit.com (403) en toestemming WebFetch niet beantwoord",
+  "https://old.reddit.com: proxy 403",
+  "https://dentasey.com: toestemming WebFetch niet beantwoord",
+  "https://kuramdentalclinic.com: toestemming WebFetch niet beantwoord",
+  "https://esnandentalclinics.com: toestemming WebFetch niet beantwoord",
+  "https://dntroyal.com: toestemming WebFetch niet beantwoord",
+  "https://www.clinicadvisor.com/antalya/dental-centre-turkey-clinic: robots.txt verbiedt ophalen",
+  "https://www.scotsman.com/must-read/from-awkward-smiles-to-turkish-delight-why-brits-are-heading-to-istanbul-for-new-teeth-5429557: fout bij de site",
+  "curl vanuit de shell naar alle kliniekensites: geen verbinding via proxy"
+ ],
+ "bewust_niet_of_let_op": [
+  {
+   "naam": "Turkey Travel Planner (turkeytravelplanner.com)",
+   "reden": "Lijsten en kliniekpagina's met offerteformulieren (lead-gen), geen openbaarmaking van betaling; telt niet als vermelding. Noemt o.a. DentSpa, Kuram, Turkeyana, Natural Clinic, Clinic Prime, Magic Smile, Dentgroup International, EOT Dental Ankara, Dental Esthetic Center.",
+   "bron": "https://turkeytravelplanner.com/the-top-three-places-to-get-your-teeth-done-in-turkey/"
+  },
+  {
+   "naam": "Lema Dental Clinic",
+   "reden": "Artikel op NationalWorld leest als advertorial (contactgegevens, WhatsApp, geen bronnen); ook persberichten over uitbreiding.",
+   "bron": "https://www.nationalworld.com/must-read/brits-are-flying-to-turkey-for-new-teeth-and-saving-thousands-5276885"
+  },
+  {
+   "naam": "Molar City",
+   "reden": "Rangschikking door een tandtoerismeplatform dat sommige klinieken als klant markeert.",
+   "bron": "https://www.molarcity.com/top-dental-clinics-in-istanbul/"
+  },
+  {
+   "naam": "Top-10-lijstjes (The Source, Resident, AZ Big Media, BusinessABC, Clinicspots, LygosDental, International Plus)",
+   "reden": "Betaalde of door klinieken geplaatste lijstjes en persberichten.",
+   "bron": "https://thesource.com/2026/05/18/a-critical-review-of-turkeys-top-10-best-dental-implant-clinics-for-2026/"
+  },
+  {
+   "naam": "Vera Smile persberichten",
+   "reden": "EZ Newswire en ACCESSWIRE-berichten zijn eigen PR.",
+   "bron": "https://www.eznewswire.com/newsroom/celebrity-smile-transformations-vera-smile-nix-adams"
+  },
+  {
+   "naam": "Antlara Dental, Maltepe Dental Clinic, Aqua Dental Clinic",
+   "reden": "Persberichten via PR Newswire, Press Advantage en Barchart; geen onafhankelijke vermelding.",
+   "bron": "https://tools.prnewswire.com/en-us/live/20823/release/20260305EN02223"
+  },
+  {
+   "naam": "Dentordu (Health Tourism World)",
+   "reden": "Artikel zonder naam van journalist, alle claims van de kliniek zelf; lijkt aangeleverd.",
+   "bron": "https://www.htworld.co.uk/?p=43346"
+  },
+  {
+   "naam": "Dentakay in Saga en Luxury London",
+   "reden": "Geen openbaarmaking of de behandeling gratis of gesponsord was; Saga gebruikt foto's van Dentakay. Opgenomen als nieuws, maar met minder gewicht te wegen.",
+   "bron": "https://luxurylondon.co.uk/wellbeing/beauty/dentakay-dental-clinic-turkey/"
+  },
+  {
+   "naam": "Klachten op Şikayetvar (Dentafly, Seçil Dental Clinic Antalya, Clinimed & Dental Clinic)",
+   "reden": "Klachtenplatform met onbevestigde klachten over implantaten; niet als vermelding geteld, wel om te controleren.",
+   "bron": "https://www.sikayetvar.com/en/dentafly-dental-clinic-us/dentafly-clinics-implants-failedongoing-pain-no-accountability"
+  },
+  {
+   "naam": "Bookimed, WhatClinic, Qunomedical, Placidway, Flymedi, 123.clinic, Medical Tourism Co",
+   "reden": "Bemiddelaars en betaalde directories; alleen gebruikt om adres of artsnamen te vinden waar de eigen site niet bereikbaar was.",
+   "bron": "https://www.whatclinic.com/dentists/turkey/implants"
+  },
+  {
+   "naam": "Turkey teeth-nieuws zonder kliniek",
+   "reden": "AFP/Euronews (okt 2022), BBC News 'Turkey Teeth' (jul 2022), Posta (jan 2023, Antalya) en LADbible (apr 2026) noemen geen kliniek bij naam.",
+   "bron": "https://www.euronews.com/travel/2022/10/13/in-turkey-concerns-grow-over-flaws-in-its-booming-dental-tourism-industry"
+  },
+  {
+   "naam": "Reddit",
+   "reden": "Niet bereikbaar, dus geen Reddit-vermeldingen; een volgende ronde moet dit aanvullen.",
+   "bron": "https://www.reddit.com/r/DentalTurkey"
+  }
+ ],
+ "klinieken": [
+  {
+   "naam": "Dentakay Dental Clinic",
+   "stad_wijk": "Istanbul (Sisli e.a.), ook Antalya; consultatiekantoor Londen",
+   "site": "https://dentakay.com",
+   "chirurgen": [
+    {
+     "naam": "Gülay Akay",
+     "titel": "Dr.",
+     "specialisme": "oprichter, head cosmetic dentist",
+     "bron": "https://dentakay.com/our-doctors",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Ahmet Alper Kaya",
+     "titel": "Dr.",
+     "specialisme": "implantologist",
+     "bron": "https://dentakay.com/our-doctors",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Ali Ekemen",
+     "titel": "Dr.",
+     "specialisme": "oral and maxillofacial surgeon",
+     "bron": "https://dentakay.com/our-doctors",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Davut Göksu",
+     "titel": "Dr.",
+     "specialisme": "oral and maxillofacial surgeon",
+     "bron": "https://dentakay.com/our-doctors",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Turhan Bıçkı",
+     "titel": "Dr.",
+     "specialisme": "oral and maxillofacial surgeon",
+     "bron": "https://dentakay.com/our-doctors",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Cansın Çelebi Küccük",
+     "titel": "Dr.",
+     "specialisme": "prosthodontist",
+     "bron": "https://dentakay.com/our-doctors",
+     "gezien": "2026-11-20"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.cityam.com/?p=1923560",
+     "soort": "news",
+     "wat": "City AM (28 sep 2022) noemt Dentakay in Istanbul als voorbeeld van klinieken die profiteren van Britse tandartspatienten en citeert oprichter Gulay Akay.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    },
+    {
+     "url": "https://www.cityam.com/teeth-tourism-and-hairlines-is-turkey-the-future-of-british-healthcare/",
+     "soort": "news",
+     "wat": "City AM (19 apr 2025) noemt Dentakay als kliniek uit Istanbul met vestiging in Antalya en citeert de oprichter, zonder sponsorlabel.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    },
+    {
+     "url": "https://www.inkl.com/news/turkish-clinic-reports-surge-in-britons-seeking-dental-treatment",
+     "soort": "news",
+     "wat": "Evening Standard (via inkl, datum niet zichtbaar) meldt dat Dentakay een stijging van Britse patienten ziet en een consultatiecentrum in Londen plant.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    },
+    {
+     "url": "https://www.saga.co.uk/magazine/health-and-wellbeing/liz-jones-went-to-turkey-for-dental-treatment",
+     "soort": "news",
+     "wat": "Saga Magazine (17 apr 2025): columnist Liz Jones beschrijft haar behandeling bij Dentakay; de pagina zegt niet of de behandeling betaald of gesponsord was en gebruikt foto's van Dentakay.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    },
+    {
+     "url": "https://luxurylondon.co.uk/wellbeing/beauty/dentakay-dental-clinic-turkey/",
+     "soort": "news",
+     "wat": "Luxury London (29 jun 2026) beschrijft een behandeling bij Dentakay; geen vermelding wie de behandeling betaalde, leest als lifestyle-reportage.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Tower Dental Clinic",
+   "stad_wijk": "Istanbul, Bakırköy (Ataköy Towers)",
+   "site": null,
+   "chirurgen": [
+    {
+     "naam": "Ertan Etemoğlu",
+     "titel": "Dentist",
+     "specialisme": "implantologie, orale chirurgie (volgens directory)",
+     "bron": "https://www.whatclinic.com/dentists/turkey/istanbul-province/istanbul/bakirkoy/tower-dental-clinic",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Gamze Etemoğlu",
+     "titel": "Dentist",
+     "specialisme": "cosmetisch, parodontologie (volgens directory)",
+     "bron": "https://www.whatclinic.com/dentists/turkey/istanbul-province/istanbul/bakirkoy/tower-dental-clinic",
+     "gezien": "2026-11-20"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.dailysabah.com/business/economy/turkiye-among-hot-spots-as-more-brits-seek-dental-treatment-abroad",
+     "soort": "news",
+     "wat": "Reuters (via Daily Sabah, 11 dec 2023) volgt een Britse patiente die implantaten kreeg bij Tower Dental in Istanbul, behandeld door Ertan en Gamze Etemoğlu.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Dent Royal (DentRoyal Dental Clinic)",
+   "stad_wijk": "Izmir, Karşıyaka (Mavişehir)",
+   "site": null,
+   "chirurgen": [
+    {
+     "naam": "Ebru Önder",
+     "titel": "Dentist",
+     "specialisme": "orale en maxillofaciale chirurgie (volgens directory)",
+     "bron": "https://www.whatclinic.com/dentists/turkey/izmir-province/izmir/dent-royal-dental-clinic",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Levent Savran",
+     "titel": "Dr",
+     "specialisme": "algemeen, orale en maxillofaciale chirurgie (volgens directory)",
+     "bron": "https://www.whatclinic.com/dentists/turkey/izmir-province/izmir/dent-royal-dental-clinic",
+     "gezien": "2026-11-20"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.dailysabah.com/business/economy/turkiye-among-hot-spots-as-more-brits-seek-dental-treatment-abroad",
+     "soort": "news",
+     "wat": "Reuters (via Daily Sabah, 11 dec 2023) noemt Dent Royal in Izmir, dat dat jaar naar verwachting 600 Britse patienten boekte.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Smile Dental Turkey",
+   "stad_wijk": "Antalya, Muratpaşa (Fener/Lara)",
+   "site": "https://www.smiledentalturkey.com",
+   "chirurgen": [
+    {
+     "naam": "Özkan Özkaynak",
+     "titel": "D.D.S., Ph.D.",
+     "specialisme": "orale chirurgie, medeoprichter",
+     "bron": "https://smiledentalturkey.com",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Ceyda Özkaynak",
+     "titel": "D.D.S., Ph.D.",
+     "specialisme": "orale chirurgie",
+     "bron": "https://smiledentalturkey.com",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Fatma Uslu",
+     "titel": "D.D.S., Associate Professor",
+     "specialisme": "prosthodontie",
+     "bron": "https://smiledentalturkey.com",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Mehmet Fatih Özmen",
+     "titel": "D.D.S.",
+     "specialisme": "prosthodontie",
+     "bron": "https://smiledentalturkey.com",
+     "gezien": "2026-11-20"
+    }
+   ],
+   "vermeld_in": []
+  },
+  {
+   "naam": "DentaTur",
+   "stad_wijk": "Antalya, Muratpaşa (Çağlayan); ook Istanbul",
+   "site": "https://dentatur.com",
+   "chirurgen": [
+    {
+     "naam": "Eren Özil",
+     "titel": "Dt. Dr., DDS",
+     "specialisme": "oral and maxillofacial surgeon",
+     "bron": "https://dentatur.com/the-team/",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Ufuk Arısoy",
+     "titel": "Dt.",
+     "specialisme": "prosthetics specialist",
+     "bron": "https://dentatur.com/the-team/",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Sevil Kaderli",
+     "titel": "Dr.",
+     "specialisme": "chief physician, oprichter",
+     "bron": "https://dentatur.com/the-team/",
+     "gezien": "2026-11-20"
+    }
+   ],
+   "vermeld_in": []
+  },
+  {
+   "naam": "Hospitadent",
+   "stad_wijk": "Istanbul (Bağcılar, Fatih, Çamlıca, Pendik, Mecidiyeköy, Bakırköy, Şerifali), ook Ankara, Antalya, Alanya, Bodrum, Bursa, Kayseri, Kocaeli, Frankfurt, Den Haag",
+   "site": "https://www.hospitadent.com/en",
+   "chirurgen": [
+    {
+     "naam": "Mehmet Kaan Bilecen",
+     "titel": "Dr. Dt.",
+     "specialisme": "prosthetic dental treatment specialist",
+     "bron": "https://www.hospitadent.com/en/doctors",
+     "gezien": "2026-11-20"
+    }
+   ],
+   "vermeld_in": []
+  },
+  {
+   "naam": "Acıbadem (afdeling mond- en tandheelkunde)",
+   "stad_wijk": "Istanbul (o.a. Bakırköy, Atakent, Maslak, Kadıköy, Altunizade)",
+   "site": "https://acibademinternational.com/medical-units/dental-oral-health/",
+   "chirurgen": [
+    {
+     "naam": "Yeliz Çavuşoğlu Yüce",
+     "titel": "Assoc. Prof. Dr.",
+     "specialisme": "klinisch directeur; prothetiek en implantaatchirurgie",
+     "bron": "https://acibademinternational.com/medical-units/dental-oral-health/",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Ülkü Noyan",
+     "titel": "Prof. Dr.",
+     "specialisme": "parodontologie",
+     "bron": "https://acibademinternational.com/medical-units/dental-oral-health/",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Mutlu Keskin",
+     "titel": "Assoc. Prof. Dr.",
+     "specialisme": "parodontologie",
+     "bron": "https://acibademinternational.com/medical-units/dental-oral-health/",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Ferit Bayram",
+     "titel": "Assoc. Prof. Dr.",
+     "specialisme": "orale en maxillofaciale chirurgie",
+     "bron": "https://acibademinternational.com/medical-units/dental-oral-health/",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Beril Karakaya Gökçimen",
+     "titel": "Dt.",
+     "specialisme": "prosthodontie",
+     "bron": "https://acibademinternational.com/medical-units/dental-oral-health/",
+     "gezien": "2026-11-20"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.dailysabah.com/business/tourism/turkish-clinics-race-to-woo-brits-amid-booming-health-tourism",
+     "soort": "news",
+     "wat": "Daily Sabah (24 mrt 2025) noemt de Acıbadem-groep met een vertegenwoordiger op een zorgbeurs in Londen; geen tandartsafdeling of tandarts specifiek genoemd.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Medipol University Dental Hospital",
+   "stad_wijk": "Istanbul",
+   "site": "https://info.medipol.com.tr/implant_treatment",
+   "chirurgen": [
+    {
+     "naam": "Sina Uçkan",
+     "titel": "Prof.",
+     "specialisme": "orale, dentale en maxillofaciale chirurgie",
+     "bron": "https://info.medipol.com.tr/implant_treatment",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Gamze Şenol",
+     "titel": "Assist. Prof.",
+     "specialisme": "orale, dentale en maxillofaciale chirurgie",
+     "bron": "https://info.medipol.com.tr/implant_treatment",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Bilal Cemşit Sarı",
+     "titel": "Md.",
+     "specialisme": "orale en maxillofaciale chirurgie",
+     "bron": "https://info.medipol.com.tr/implant_treatment",
+     "gezien": "2026-11-20"
+    }
+   ],
+   "vermeld_in": []
+  },
+  {
+   "naam": "Esnan Dental Clinics",
+   "stad_wijk": "Istanbul (Sarıyer/Skyland, Şişli, Topkapı)",
+   "site": null,
+   "chirurgen": [
+    {
+     "naam": "Orhan Geçör",
+     "titel": "Dr. Dt.",
+     "specialisme": "geen specialisme vermeld; behandelt implantaatcasussen volgens de listing",
+     "bron": "https://www.whatclinic.com/dentists/turkey/istanbul-province/istanbul/sisli/esnan-dental-clinics",
+     "gezien": "2026-11-20"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.mumsnet.com/talk/am_i_being_unreasonable/5322524-anyone-have-recommendations-for-turkey-dentist",
+     "soort": "forum",
+     "wat": "Mumsnet-draad (apr tot sep 2025): een gebruiker noemt de implantaten van haar man bij Esnan redelijk, met een afgebroken kroon die gerepareerd moest worden.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    },
+    {
+     "url": "https://www.expat.com/en/forum/middle-east/turkey/931889-dental-work.html",
+     "soort": "forum",
+     "wat": "Expat.com-forum: een gebruiker is halverwege een facingbehandeling bij Esnan in Istanbul en is tot dan positief.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Dental Centre Turkey",
+   "stad_wijk": "Antalya",
+   "site": null,
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://www.mumsnet.com/talk/am_i_being_unreasonable/5322524-anyone-have-recommendations-for-turkey-dentist",
+     "soort": "forum",
+     "wat": "Mumsnet-draad (2025): een gebruiker noemt een goede ervaring bij Dental Centre Turkey in Antalya, met werk dat zes jaar meegaat.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Luxury Dental Clinic",
+   "stad_wijk": "Antalya",
+   "site": null,
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://www.mumsnet.com/talk/general_health/5118595-dental-implants-turkey",
+     "soort": "forum",
+     "wat": "Mumsnet-draad over implantaten in Turkije (jul 2024 tot jan 2025): een gebruiker koos na onderzoek voor Luxury Dental Clinic in Antalya vanwege goede reviews.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Smilepod Dental Clinic",
+   "stad_wijk": "Antalya",
+   "site": null,
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://www.ladbible.com/news/health/grandma-turkey-teeth-operation-bruised-face-647444-20241031",
+     "soort": "news",
+     "wat": "LADbible (31 okt 2024) beschrijft een 57-jarige patiente die bij Smilepod in Antalya implantaten en een prothese kreeg, gekneusd raakte en tevreden is met de uitkomst.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Dentasey Dental Care",
+   "stad_wijk": "Kuşadası, Cumhuriyet Mah., Turgut Özal Bulvarı",
+   "site": "https://www.dentalcarekusadasi.com",
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://www.expat.com/en/forum/middle-east/turkey/1033247-dentists-in-turkey.html",
+     "soort": "forum",
+     "wat": "Expat.com-forum: twee gebruikers zijn zeer positief over Dentasey in Kuşadası (Engelssprekende hoofdtandarts, lagere prijs); een van hen meldt geen financiele band.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    },
+    {
+     "url": "https://www.expat.com/en/forum/middle-east/turkey/931889-dental-work-p2.html",
+     "soort": "forum",
+     "wat": "Expat.com-forum (bericht 41): een gebruiker kreeg 28 kronen en 4 implantaten bij Dentasey in twee reizen en is positief.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "SmileTeam (Smile Team Turkey)",
+   "stad_wijk": "Antalya, Muratpaşa",
+   "site": null,
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://www.expat.com/en/forum/middle-east/turkey/931889-dental-work.html",
+     "soort": "forum",
+     "wat": "Expat.com-forum (berichten 13 en 29): een gebruiker kreeg implantaten bij SmileTeam in Antalya en is tevreden.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Catanlay (tandarts)",
+   "stad_wijk": "Alanya",
+   "site": null,
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://www.expat.com/en/forum/middle-east/turkey/931889-dental-work.html",
+     "soort": "forum",
+     "wat": "Expat.com-forum (bericht 7): een gebruiker kreeg in 2014 twee implantaten, een brug en kronen bij Dr. Catanlay in Alanya en had daarna geen problemen.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Zirconium Clinic",
+   "stad_wijk": "Antalya",
+   "site": null,
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://www.expat.com/en/forum/middle-east/turkey/931889-dental-work.html",
+     "soort": "forum",
+     "wat": "Expat.com-forum: een gebruiker noemt Zirconium Clinic in Antalya een kleine kliniek met redelijke prijzen en goed werk.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Holident",
+   "stad_wijk": "Fethiye",
+   "site": null,
+   "chirurgen": [
+    {
+     "naam": "Çağatay Aras (gespeld als Catagay Aras)",
+     "titel": "onbekend",
+     "specialisme": "cosmetische tandheelkunde volgens forumgebruiker",
+     "bron": "https://www.mumsnet.com/talk/am_i_being_unreasonable/5322524-anyone-have-recommendations-for-turkey-dentist",
+     "gezien": "2026-11-20"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.mumsnet.com/talk/am_i_being_unreasonable/5322524-anyone-have-recommendations-for-turkey-dentist",
+     "soort": "forum",
+     "wat": "Mumsnet-draad (2025): een gebruiker was zeer tevreden over een spoedextractie van een verstandskies bij Holident in Fethiye.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "VK Dental",
+   "stad_wijk": "Turkije (stad niet genoemd); kantoor in VK",
+   "site": null,
+   "chirurgen": [],
+   "vermeld_in": [
+    {
+     "url": "https://www.mumsnet.com/talk/am_i_being_unreasonable/5322524-anyone-have-recommendations-for-turkey-dentist",
+     "soort": "forum",
+     "wat": "Mumsnet-draad (2025): een gebruiker meldt dat een vriendin een goed resultaat en goede begeleiding had bij VK Dental.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Perfect Dental",
+   "stad_wijk": "Altınkum (Didim)",
+   "site": null,
+   "chirurgen": [
+    {
+     "naam": "Ekrem (achternaam niet genoemd)",
+     "titel": "tandarts",
+     "specialisme": "niet vermeld",
+     "bron": "https://forums.moneysavingexpert.com/discussion/4593673",
+     "gezien": "2026-11-20"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://forums.moneysavingexpert.com/discussion/4593673",
+     "soort": "forum",
+     "wat": "MoneySavingExpert-forum (10 mei 2013, oud): een gebruiker kreeg implantaten bij Perfect Dental in Altınkum en is zeer positief.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Dr. Cinik Diş Kliniği",
+   "stad_wijk": "Antalya",
+   "site": null,
+   "chirurgen": [
+    {
+     "naam": "Eda Tınaş",
+     "titel": "Dt.",
+     "specialisme": "niet vermeld",
+     "bron": "https://www.dha.com.tr/saglik-yasam/dr-cinik-antalyada-dis-tatili-konseptiyle-hizmet-veriyor-2836307",
+     "gezien": "2026-11-20"
+    }
+   ],
+   "vermeld_in": [
+    {
+     "url": "https://www.dha.com.tr/saglik-yasam/dr-cinik-antalyada-dis-tatili-konseptiyle-hizmet-veriyor-2836307",
+     "soort": "news",
+     "wat": "DHA (14 mrt 2026) beschrijft het tandvakantieconcept van Dr. Cinik in Antalya; alle informatie komt van de kliniek zelf, mogelijk promotioneel.",
+     "betaald": false,
+     "gezien": "2026-11-20"
+    }
+   ]
+  },
+  {
+   "naam": "Dentgroup International",
+   "stad_wijk": "Antalya (Lara volgens Turkey Travel Planner, Konyaaltı volgens Qunomedical)",
+   "site": null,
+   "chirurgen": [
+    {
+     "naam": "Emine Selin Erkan",
+     "titel": "Dt.",
+     "specialisme": "prosthodontie",
+     "bron": "https://turkeytravelplanner.com/dentgroup-international-dental-clinic",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Turgay Mutlu",
+     "titel": "Dt.",
+     "specialisme": "parodontologie",
+     "bron": "https://turkeytravelplanner.com/dentgroup-international-dental-clinic",
+     "gezien": "2026-11-20"
+    },
+    {
+     "naam": "Sercan Yılmaz",
+     "titel": "Dt.",
+     "specialisme": "orale, dentale en maxillofaciale chirurgie",
+     "bron": "https://turkeytravelplanner.com/dentgroup-international-dental-clinic",
+     "gezien": "2026-11-20"
+    }
+   ],
+   "vermeld_in": []
+  },
+  {
+   "naam": "Vera Smile",
+   "stad_wijk": "Istanbul (Kartal volgens WhatClinic)",
+   "site": "https://www.verasmile.com",
+   "chirurgen": [],
+   "vermeld_in": []
+  },
+  {
+   "naam": "Dentordu Oral and Dental Health Polyclinic",
+   "stad_wijk": "Izmir; voordiagnosekantoor Londen",
+   "site": null,
+   "chirurgen": [],
+   "vermeld_in": []
+  },
+  {
+   "naam": "Kuram Dental Clinic (Dr. Fuat Kuram)",
+   "stad_wijk": "Antalya, Muratpaşa",
+   "site": null,
+   "chirurgen": [],
+   "vermeld_in": []
+  },
+  {
+   "naam": "Dentfix Clinic",
+   "stad_wijk": "Istanbul (Beşiktaş/Şişli volgens directories)",
+   "site": null,
+   "chirurgen": [],
+   "vermeld_in": []
+  }
+ ]
+}
