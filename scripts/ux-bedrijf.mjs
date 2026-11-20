@@ -37,7 +37,7 @@ function lum(c) { const m = String(c).match(/\d+(\.\d+)?/g); if (!m) return null
 const b = await chromium.launch(); const uit = []; let fout = 0;
 for (const f of files) {
   const html = fs.readFileSync(f, 'utf8'), r = { pagina: path.basename(f), fouten: [] }, voeg = (code, waar) => { if (!r.fouten.some(x => x.code === code && x.waar === waar)) r.fouten.push({ code, wat: REGELS[code], waar: String(waar || '').slice(0, 120) }); };
-  if (!/class="rzk"/.test(html) || !/rzk-oud-weg/.test(html)) voeg('kop', /class="rzk"/.test(html) ? 'rustige kop zonder de stijl die de oude blokjes weghaalt' : 'oude kop');
+  if (!/class="rzk[ "]/.test(html) || !/rzk-oud-weg/.test(html)) voeg('kop', /class="rzk[ "]/.test(html) ? 'rustige kop zonder de stijl die de oude blokjes weghaalt' : 'oude kop');
   for (const [w, h, cs] of [[360, 640, 'light'], [390, 844, 'light'], [390, 844, 'dark']]) {
     const p = await b.newPage({ viewport: { width: w, height: h }, colorScheme: cs, deviceScaleFactor: 1 });
     await p.route('**/*', q => q.request().url().startsWith('file:') ? q.continue() : q.abort());
