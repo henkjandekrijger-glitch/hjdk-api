@@ -277,6 +277,10 @@
       "schedule": "25 * * * *"
     },
     {
+      "path": "/api/keuze-tools?tool=adv&op=nl",
+      "schedule": "11 3 * * 1"
+    },
+    {
       "path": "/api/keuze-tools?tool=adv&op=scan",
       "schedule": "3,23,43 * * * *"
     },
