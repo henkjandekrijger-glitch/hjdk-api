@@ -2263,7 +2263,7 @@
     },
     "api/shop.js": {
       "maxDuration": 300,
-      "includeFiles": "OVERDRACHT-YOORS-SHOP.md"
+      "includeFiles": "{OVERDRACHT-YOORS-SHOP.md,OVERDRACHT-KADOLY-TIKTOK.md}"
     },
     "api/gsc.js": {
       "maxDuration": 300
