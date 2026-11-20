@@ -143,6 +143,7 @@ Henkjan 20 nov: "Eerst doorsturen op gang krijgen" en "We starten met prop ads d
   - Het aanmeldformulier stuurt de klik mee (`n`, `z`, `c`, `s` uit de landings-URL). Het lid krijgt `bron` (advertentie, vriend of direct).
   - Bij bevestigen gaat één terugmelding naar PropellerAds (`visitor_id = s`) of Mondiad. Dat doel van de CPA-campagne is een bevestigd lid. In de testwereld wordt hij alleen geteld (`pb-test-*`).
   - Landings-URL voor een campagne: `https://gids.kadoly.com/api/gids?op=dk&n=propeller&z=<zone-macro>&c=<campagne-macro>&s=<klik-id-macro>` (macro's overnemen uit een werkende campagne).
+- **Controles (nooit vastlopen).** Een mislukte terugmelding probeert de ochtendronde opnieuw, hooguit 3 keer per lid. `op=dkstand` toont onder `lekken` het lek van gisteren met de actie: bevestigen (minder dan 30% van 20+ aanmeldingen), terugmelding mislukt, en niemand deelt bij 20+ kliks.
 - **K-meter** in `op=dkstand` onder `doorsturen`: per bron het aantal leden, het aantal meegebrachte vrienden die meedoen, en K. Verder: gedeeld (WhatsApp vanaf pagina en mail), bezochte uitnodigingen, zelfde IP en terugmeldingen.
 - **Deeltekst (proef `deeltekst`).** a: "Via mijn link start je met €5 ..."; b: "Wie klikt er elke dag voor mij? ... via mijn link start je met €5".
 
