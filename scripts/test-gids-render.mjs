@@ -8,6 +8,7 @@ import * as indexnow from '../lib/gids-indexnow.js';
 import * as bewijs from '../lib/gids-onderzoek.js';
 import * as alle from '../lib/gidsen-alle.js';
 import * as groei from '../lib/gids-groei.js';
+import * as redactie from '../lib/kadoly-redactie.js';
 import * as gidsen from '../lib/gidsen-kadoly.js';
 const catalog=(fs.existsSync('catalog-audit.json') ? JSON.parse(fs.readFileSync('catalog-audit.json','utf8')) : ['Witte Phalaenopsis Orchidee', 'Bloempot wit', 'Tafellamp oplaadbaar', 'Bamboe sokken', 'Kaars rood', '3D houten puzzel', 'Vaas glas', 'Serviesset beige', ...Array.from({length:25},(_,i)=>'Glazen mok '+i)].map((t,i)=>({id:'oc_'+i,t,vr:true}))).map(i=>({...i,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0}));
 for(const g of Object.values(gidsen.GIDSEN)) for(const k of g.keuze) if(k.pid&&!catalog.some(i=>i.id===k.pid)) catalog.push({id:k.pid,t:k.naam,vr:true,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0});
@@ -21,7 +22,7 @@ const synth=obj=>new vm.SyntheticModule(Object.keys(obj),function(){for(const [k
 const code=fs.readFileSync('api/gids.js','utf8');
 const kv={get:async k=>k==='hjdk:shop:cat'?{items:catalog}:null,set:async()=>{},raw:async()=>[],mget:async(...keys)=>keys.map(()=>null)};
 const nb=Object.fromEntries([...new Set([...code.matchAll(/NB\.([\w]+)/g)].map(m=>m[1]))].map(k=>[k,/^[A-Z_]+$/.test(k)?'':k==='blok'?()=>'':k==='mailKlaar'?async()=>false:k==='blokInfo'?async()=>({}):async()=>[]]));
-const stubs={'../lib/funnel.js':{funnelStap:async()=>null,funnelStand:async()=>({}),funnelHtml:()=>'',fnIdUitCookie:()=>null,isFnBot:()=>true,bronVan:()=>'',FN_JS:()=>''},'../lib/gidsen-alle.js':alle,'../lib/gids-indexnow.js':indexnow,'../lib/gids-catalogus.js':volledig,'../lib/db.js':{kv},'../lib/look.js':{lookNieuw:()=>''},'../lib/gidsen-kadoly.js':gidsen,'../lib/ai.js':{berichten:()=>{},HAIKU:'test'},'node:crypto':crypto,'../lib/kadoly-nieuws.js':nb,'../lib/gids-onderzoek.js':bewijs,'../lib/gids-groei.js':groei};
+const stubs={'../lib/kadoly-redactie.js':redactie,'../lib/kzux.js':{kzuxBlok:()=>''},'../lib/funnel.js':{funnelStap:async()=>null,funnelStand:async()=>({}),funnelHtml:()=>'',fnIdUitCookie:()=>null,isFnBot:()=>true,bronVan:()=>'',FN_JS:()=>''},'../lib/gidsen-alle.js':alle,'../lib/gids-indexnow.js':indexnow,'../lib/gids-catalogus.js':volledig,'../lib/db.js':{kv},'../lib/look.js':{lookNieuw:()=>''},'../lib/gidsen-kadoly.js':gidsen,'../lib/ai.js':{berichten:()=>{},HAIKU:'test'},'node:crypto':crypto,'../lib/kadoly-nieuws.js':nb,'../lib/gids-onderzoek.js':bewijs,'../lib/gids-groei.js':groei};
 const module=new vm.SourceTextModule(code,{context});await module.link(name=>{assert.ok(stubs[name],name);return synth(stubs[name]);});await module.evaluate();
 async function render(query,host='gids.kadoly.com'){let body='',status=200;const headers={};const res={setHeader:(k,v)=>headers[k]=v,status(n){status=n;return this;},send(x){body=x;return this;},json(x){body=x;return this;},end(){return this;}};await module.namespace.default({url:'/api/gids?'+query,method:'GET',headers:{host,'user-agent':'render-test-bot'}},res);assert.equal(status,200,typeof body==='string'?body.slice(0,200):JSON.stringify(body));if(typeof body==='string'&&body.includes('<html')){assert.equal((body.match(/<h1[ >]/g)||[]).length,1);for(const match of body.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g))JSON.parse(match[1]);}return {body,headers};}
 for(const p of bewijs.ONDERZOEK){const {body}=await render('slug=onderzoek-'+p.id);assert.ok(body.includes('Wat bewijst dit niet?'));assert.ok(body.includes('Bronnen en belangen'));assert.ok(body.includes('rel="canonical" href="https://gids.kadoly.com/onderzoek-'+p.id+'"'));}
@@ -197,3 +198,22 @@ assert.ok(babyHub.includes('instroom-19nov'));assert.ok(babyHub.includes('300 cm
 for(const id of ['dp_1010','dp_1013','dp_1017'])assert.ok(bewijs.bronLink({id}).includes('instroom-19nov'));
 assert.ok(gidsen.GIDSEN['grote-hanglamp'].faq.some(f=>f.a.includes('geen absolute voorwaarden')));
 console.log('19nov: serviesmatches/uitsluitingen, automatische bumpercheck, specifieke landrestricties en schema zonder NL-claim geslaagd.');
+
+const zoekBaby=(await render('op=zoek&q=bedbumper')).body;
+assert.ok(zoekBaby.includes('Geen NL-levering bevestigd'));
+assert.ok(zoekBaby.includes('Niet gebruiken als bedomrander'));
+const zoekJson=(await render('op=zoek&q=bedbumper&f=json')).body;
+const beperkt=zoekJson.producten.find(p=>p.pid==='oc_4174005539848193');assert.ok(beperkt);assert.equal(beperkt.datum,'');
+assert.equal(bewijs.aanbevelingToegestaan({id:'oc_andere',t:'Zachte Bedbumper voor Baby'}),false);
+assert.equal(bewijs.aanbevelingToegestaan({id:'oc_4174005519319041',t:'Jersey'}),false);
+assert.equal(bewijs.aanbevelingToegestaan({id:'ander',t:'Slaapzak'}),true);
+const nieuw20=(await render('slug=nieuw-bij-kadoly')).body;
+assert.ok(nieuw20.includes('Catalogusdatum'));assert.ok(!nieuw20.includes('Nieuw sinds <time'));
+assert.ok(nieuw20.includes('geen telling van bewezen nieuwe introducties'));
+assert.ok(!nieuw20.includes('producten kwamen er'));
+const bron20=(await render('slug=onderzoek-en-bronnen')).body;
+assert.ok(bron20.includes('meubels-20nov'));assert.ok(bron20.includes('71 kg'));
+for(const id of ['dp_1021','dp_1027','dp_1035','dp_1037'])assert.ok(bewijs.bronLink({id}).includes('meubels-20nov'));
+const catBron=(await render('op=nieuwstand','hjdk-api-henq.vercel.app')).body;
+assert.equal(catBron.catalogusBron.records,catalog.length);assert.equal(catBron.catalogusBron.dubbeleIds.length,0);
+console.log('20nov: zoekwaarschuwing/NL-datum, aanbevelingsuitsluiting, eerlijke catalogusdatum en vier meubelchecks geslaagd.');
