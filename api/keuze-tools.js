@@ -91,6 +91,18 @@ export default async function handler(req, res) {
     if(!html){res.setHeader('x-robots-tag','noindex');return res.status(404).send('<!doctype html><meta charset=utf-8><p>Niet gevonden. <a href="/zorgverzekering">Zorgverzekering 2027 vergelijken</a></p>');}
     res.setHeader('cache-control','public, s-maxage=600, stale-while-revalidate=86400');return res.status(200).send(html);}
   if(q.get('tool')==='chatbewijs'){const Cb=await import('../lib/chatbewijs.js');res.setHeader('cache-control','public, s-maxage=60, stale-while-revalidate=120');res.setHeader('x-robots-tag','noindex');return res.status(200).json(await Cb.cijfers(q.get('s'),String(q.get('slug')||'').replace(/[^a-z0-9-]/g,'').slice(0,90)));} // cijfers bij de chat (lib/chatbewijs.js, 19 nov 2026)
+  if(q.get('tool')==='tafel'){ // live tafel met de AI als gastvrouw (lib/tafel.js, 20 nov 2026)
+    const TF=await import('../lib/tafel.js');const op=String(q.get('op')||'');res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
+    if(op==='stand')return res.status(200).json(await TF.stand());
+    if(req.method!=='POST')return res.status(405).json({ok:false});let b=req.body;try{if(typeof b==='string')b=JSON.parse(b.slice(0,4000));}catch{b={};}b=b||{};
+    if(BOT_UA.test(String(req.headers['user-agent']||'')))return res.status(200).json({ok:false});
+    const oidc=String(req.headers['x-vercel-oidc-token']||process.env.VERCEL_OIDC_TOKEN||'');
+    if(op==='binnen')return res.status(200).json(await TF.binnen(b,oidc).catch(e=>({ok:false,fout:String(e.message||e).slice(0,80)})));
+    if(op==='zeg')return res.status(200).json(await TF.zeg(b,oidc).catch(e=>({ok:false,fout:String(e.message||e).slice(0,80)})));
+    if(op==='maak')return res.status(200).json(await TF.maak(b));
+    if(op==='volg')return res.status(200).json(await TF.volg(b));
+    return res.status(404).json({ok:false});
+  }
   if(q.get('tool')==='mij'){ // één chat die onthoudt, op al onze sites (lib/geheugen.js, 20 nov 2026)
     const G=await import('../lib/geheugen.js');const op=String(q.get('op')||'');const beschermd=/\.vercel\.app$/i.test(String(req.headers.host||''));res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
     if(op==='pagina'){const h=String(req.headers['x-forwarded-host']||req.headers.host||'');const tl=/whichtobuy/.test(h)?'us':/kaufberater/.test(h)?'de':(q.get('taal')==='us'||q.get('taal')==='de'?q.get('taal'):'nl');res.setHeader('content-type','text/html; charset=utf-8');return res.status(200).send(await G.mijPagina(tl));}
