@@ -4,6 +4,7 @@ on:
     branches: [main, codex/surgery-organic-20261116]
     paths:
       - 'lib/tsc*.js'
+      - 'lib/chirurgie.js'
       - 'data/tsc*.json'
       - 'lib/gsc-sitemap.js'
       - 'api/gsc.js'
