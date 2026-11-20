@@ -1136,5 +1136,17 @@
   "moeite": 1,
   "meten": "ouderDan7Dagen in /api/gsc?op=index blijft 0; uitGoogleGevallen toont wanneer pagina's wegvallen",
   "status": "actief"
+ },
+ {
+  "id": "meting-elke-aanvraag-tijdslimiet",
+  "les": "Elke externe aanvraag in een meetronde krijgt een eigen tijdslimiet, en de ronde stopt ruim voor de grens van het platform. Eén hangende aanvraag mag niet de hele meting van die dag kosten; een time-out per URL is een fout die de volgende ronde opnieuw bekijkt.",
+  "kanaal": "google",
+  "bewijs": "20 nov 2026: de indexcheck van kaufberater.best (cron 04:35) liep tegen 300 s van Vercel aan en bewaarde niets; de indexstand van DE bleef van 19 nov, terwijl NL en US (160 en 176 URL's) wel liepen bij 119 URL's voor DE. Oorzaak: fetch naar urlInspection zonder tijdslimiet, controle op de tijd alleen na elk blok van 8.",
+  "bron": "dagcontrole 20 nov 2026, get_runtime_errors /api/gsc en /api/zicht?op=stand&site=de (index.dag 2026-11-19)",
+  "sterkte": 2,
+  "effect": 2,
+  "moeite": 1,
+  "meten": "index.dag in /api/zicht?op=stand gelijk aan vandaag voor kz, us en de; geen Runtime Timeout op /api/gsc",
+  "status": "actief"
  }
 ]
