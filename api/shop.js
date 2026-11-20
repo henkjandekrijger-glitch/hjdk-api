@@ -44,6 +44,7 @@ import { gebruikerVan, koppel as cmKoppel, zoek as cmZoek, zetOpKlik as cmZetOpK
 import { prijsStand, prijsCsv } from '../lib/shopprijs.js';
 import { testRonde, testLabels, testTekst, TT_TEST } from '../lib/tttest.js';
 import { kiesBundel, bundelOpenbaar, bundelTekst, bundelCode, BUNDEL_REGEL } from '../lib/bundel.js';
+import { kiesPakketten, pakketTekst, PAKKET_SOORTEN } from '../lib/pakket.js';
 import { videoPlan, VIDEO_REGEL } from '../lib/kadolyvideoplan.js';
 import reels from '../kadoly/reels.json' with { type: 'json' };
 import trendKadoly from '../kadoly/trend.json' with { type: 'json' };
@@ -132,6 +133,24 @@ async function catalog(vers) {
   // sold out"). Clickmind meldt dat vanaf de afrekenpagina (op=uitverkocht); zo'n product telt 2 dagen als uitverkocht voor campagnes, dagkeuze en gids.
   try { const m = await kv.get(K_UIT); const nu = Date.now(); if (m) for (const it of c.items) if (m[it.id] && nu - m[it.id] < 2 * 864e5) { it.vr = false; it.uit = m[it.id]; } } catch (e) {}
   CAT = c; CAT_AT = Date.now(); return c;
+}
+// 20 nov (Henkjan: "zetten we die bundels klaar als in een pakket te koop"): per soort één pakket (lib/pakket.js), elke dag opnieuw
+// doorgerekend; staat onder hjdk:shop:bundel:<code> (zelfde vorm als de bundel van de dag, dus kadoly.com/bundel/<code> en op=bundel werken)
+// en de lijst onder hjdk:shop:pakket:nu. Aangeroepen door de bundelronde (cron 04:47 UTC) en via op=pakketten&ronde=1.
+async function pakketRonde(droog) {
+  const dag = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Amsterdam' }).format(new Date());
+  const cat = await catalog(true), kaart = (await kv.get(K_KOST).catch(() => null)) || {}; let markt = {};
+  try { const r = await fetch('https://demandradar-ivory.vercel.app/api/feed?shop=yoors&cc=NL&prices=1', { signal: AbortSignal.timeout(9000) }); if (r.ok) markt = ((await r.json()) || {}).items || {}; } catch (e) {}
+  const nu = (await kv.get('hjdk:shop:pakket:nu').catch(() => null)) || {}; const bestaand = {};
+  for (const [soort, code] of Object.entries(nu)) { const p = await kv.get('hjdk:shop:bundel:' + code).catch(() => null); if (p) bestaand[soort] = p; }
+  let recent = []; try { recent = ((await kv.raw(['LRANGE', 'hjdk:shop:bundel:hist', '0', '13'])) || []).flatMap(x => { try { return (typeof x === 'string' ? JSON.parse(x) : x).ids || []; } catch (e) { return []; } }); } catch (e) {}
+  const k = kiesPakketten(cat.items, kaart, markt, { dag, bestaand, recent });
+  if (!droog) {
+    const lijst = {}; for (const p of k.pakketten) { lijst[p.soort] = p.code; await kv.set('hjdk:shop:bundel:' + p.code, p, { ex: 60 * 86400 }).catch(() => {}); }
+    await kv.set('hjdk:shop:pakket:nu', lijst, { ex: 20 * 86400 }).catch(() => {});
+    const nieuw = k.log.filter(l => / nieuw | vervalt /.test(l)); if (nieuw.length) { try { await kv.raw(['LPUSH', 'mm:handover:log', JSON.stringify({ t: new Date().toISOString(), wie: 'pakket-ronde', tekst: 'Kadoly pakketten ' + dag + ': ' + k.pakketten.length + ' klaar. ' + nieuw.join('; ').slice(0, 900) })]); await kv.raw(['LTRIM', 'mm:handover:log', '0', '299']); } catch (e) {} }
+  }
+  return { dag, droog: !!droog, aantal: k.pakketten.length, soorten: PAKKET_SOORTEN.length, marktprijzen: Object.keys(markt).length, log: k.log, pakketten: k.pakketten };
 }
 async function bewaarCatalogus(items, bron, extra) {
   const c = Object.assign({ at: Date.now(), bron, items }, extra || {}); await kv.set(K.cat, c); CAT = c; CAT_AT = Date.now();
@@ -566,7 +585,7 @@ async function land(req, res, url) {
   if (net === 'wh') { const pf = [req.headers['sec-purpose'], req.headers['purpose'], req.headers['x-purpose'], req.headers['x-moz']].map(v => String(v || '').toLowerCase()).join(' '); if (/prefetch|preview|prerender/.test(pf)) laterAf(inc(['sh-wh-pf', 'sh-d' + D8() + '-wh-pf'])); } // 17 nov: Meta laadt de landingspagina soms vooraf (zonder klik); tellen om aankomsten zonder klik te verklaren
   if (net === 'wh' && cr && pid && !bot) { laterAf(kv.raw(['HSETNX', 'hjdk:whop:waidp', cr, pid]).catch(() => {})); if (whp && whp.wa) laterAf(kv.raw(['HSETNX', 'hjdk:whop:waidwa', cr, whId(whp.wa)]).catch(() => {})); } // 17 nov: Whop zet in waid een eigen nummer, niet de ad-id van de API; de ronde koppelt het via product (p) of onze eigen wa
   const ttKassa = net === 'tt' && !voorkant && !!pid && !/^ttx/.test(clickid) && parseInt(createHash('sha1').update(String(clickid)).digest('hex').slice(0, 2), 16) % 2 === 1; // 17 nov (Henkjan: "Los 1 -5 op"): 0 van 153 echte TikTok-bezoekers tikte op de koopknop; de helft (vast per klik) gaat direct naar de afrekenpagina
-  let bundel = ''; if (/^b20\d{6}$/.test(String(q.get('bundel') || ''))) { try { const bu = await kv.get('hjdk:shop:bundel:' + q.get('bundel')); if (bu && bu.items && bu.items[0]) { bundel = bu.code; pid = bu.items[0].id; } } catch (e) {} } // 17 nov: advertentie voor de bundel van de dag landt op kadoly.com/bundel/<code>
+  let bundel = ''; if (/^(b20\d{6}|p[a-z]{2,8}20\d{6})$/.test(String(q.get('bundel') || ''))) { try { const bu = await kv.get('hjdk:shop:bundel:' + q.get('bundel')); if (bu && bu.items && bu.items[0]) { bundel = bu.code; pid = bu.items[0].id; } } catch (e) {} } // 17 nov: advertentie voor de bundel van de dag landt op kadoly.com/bundel/<code>
   if (code && net === 'wh' && !bot) { const lq = new URLSearchParams(q); lq.delete('op'); const lurl = 'https://go.kadoly.com/shop' + (lq.toString() ? '?' + lq : ''); const wuid = leesCookie(req, '_wuid').replace(/[^A-Za-z0-9_.-]/g, '').slice(0, 80);
     laterAf(whPage({ clickid, url: lurl, wuid, referrer: String(req.headers.referer || '').slice(0, 300), ua: String(ua).slice(0, 400), fbclid: whp && whp.fbclid, utm_source: whp && whp.utm_source, utm_medium: whp && whp.utm_medium, utm_campaign: whp && whp.utm_campaign })
       .then(st => kv.raw(['INCR', 'sh-d' + D8() + '-wh-page-' + (st === 200 ? 'ok' : 'fout')]).then(() => st === 200 ? null : kv.set('hjdk:whop:pagefout', String(st).slice(0, 200), { ex: 86400 })).catch(() => {})).catch(() => {})); } // 19 nov: paginaweergave voor Whop op de doel-URL (lib/whop.js whPage)
@@ -1048,7 +1067,8 @@ export default async function handler(req, res) {
         const geldig = !b.geldigTot || b.geldigTot >= dagNL; return res.status(200).json(Object.assign({ ok: true, geldig }, bundelOpenbaar(b), intern ? { marge: b.marge, besparingPct: b.besparingPct, losMarkt: b.losMarkt, inkoop: b.items.map(x => x.c) } : {})); }
       const mag = /vercel-cron/i.test(ua) || beschermd || (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET); if (!mag) return res.status(404).send('Niet gevonden');
       const droog = !!url.searchParams.get('droog'), code = bundelCode(dagNL);
-      if (!droog && !url.searchParams.get('opnieuw')) { const al = await kv.get('hjdk:shop:bundel:' + code).catch(() => null); if (al) return res.status(200).json({ ok: true, al: true, tekst: bundelTekst(al) }); }
+      let pakket = null; try { pakket = await pakketRonde(droog); pakket = { aantal: pakket.aantal, log: pakket.log }; } catch (e) { pakket = { fout: String(e.message || e).slice(0, 200) }; } // 20 nov: pakketten in dezelfde ronde
+      if (!droog && !url.searchParams.get('opnieuw')) { const al = await kv.get('hjdk:shop:bundel:' + code).catch(() => null); if (al) return res.status(200).json({ ok: true, al: true, tekst: bundelTekst(al), pakket }); }
       const cat = await catalog(true), kaart = (await kv.get(K_KOST).catch(() => null)) || {}; let markt = {}; try { const r = await fetch('https://demandradar-ivory.vercel.app/api/feed?shop=yoors&cc=NL&prices=1', { signal: AbortSignal.timeout(9000) }); if (r.ok) markt = ((await r.json()) || {}).items || {}; } catch (e) {}
       let hist = []; try { hist = ((await kv.raw(['LRANGE', 'hjdk:shop:bundel:hist', '0', '59'])) || []).map(x => { try { return typeof x === 'string' ? JSON.parse(x) : x; } catch (e) { return null; } }).filter(Boolean); } catch (e) {}
       const grens = new Date(Date.now() - BUNDEL_REGEL.NIET_HERHALEN_DAGEN * 864e5).toISOString().slice(0, 10);
@@ -1059,7 +1079,42 @@ export default async function handler(req, res) {
       if (!droog && !b) { try { await kv.del(['hjdk:shop:bundel:' + code, 'hjdk:shop:bundel:nu']); } catch (e) {} } // geen set die de regels haalt: ook geen oude set van vandaag laten staan
       if (!droog && b) { try { await Promise.all([kv.set('hjdk:shop:bundel:' + code, b, { ex: 60 * 86400 }), kv.set('hjdk:shop:bundel:nu', code, { ex: 8 * 86400 })]); await kv.raw(['LPUSH', 'hjdk:shop:bundel:hist', JSON.stringify({ dag: dagNL, code, ids: b.items.map(i => i.id), totaal: b.totaal, marge: b.marge })]); await kv.raw(['LTRIM', 'hjdk:shop:bundel:hist', '0', '119']); } catch (e) {}
         try { await kv.raw(['LPUSH', 'mm:handover:log', JSON.stringify({ t: new Date().toISOString(), wie: 'bundel-ronde', tekst: 'Kadoly bundel ' + code + ': ' + b.titel + ', EUR ' + b.totaal.toFixed(2) + ' (bespaart EUR ' + b.besparing.toFixed(2) + '), marge EUR ' + b.marge.toFixed(2) })]); await kv.raw(['LTRIM', 'mm:handover:log', '0', '299']); } catch (e) {} }
-      return res.status(200).json({ ok: true, droog, info, tekst: bundelTekst(b, info), bundel: b }); }
+      return res.status(200).json({ ok: true, droog, info, tekst: bundelTekst(b, info), bundel: b, pakket }); }
+    if (op === 'gmclabels' || op === 'gmclabels.csv') { // 20 nov (Henkjan: "op shopping moeten we vet concurreren om bezoekers te trekken"): aanvullende bron voor Merchant Center Kadoly 5876502305 met labels per product,
+      // zodat de Shopping-campagne kan splitsen: custom_label_0 prijspositie all-in tegen bol/Amazon (goedkoopst, duurder, uniek = niet één-op-één elders, onbekend),
+      // custom_label_1 marge per bestelling (marge15, marge5, marge0, verlies, onbekend), custom_label_2 pakket (zit in een pakket van nu), custom_label_3 seizoen (kerst, sinterklaas).
+      // ID's komen uit de eigen Merchant-feed van de shop (varianten oc_X-Y krijgen de labels van oc_X); lukt die niet, dan alleen de basis-ID's (kop x-labels-bron).
+      const cat = await catalog(true); let markt = {}; try { const r = await fetch('https://demandradar-ivory.vercel.app/api/feed?shop=yoors&cc=NL&prices=1', { signal: AbortSignal.timeout(9000) }); if (r.ok) markt = ((await r.json()) || {}).items || {}; } catch (e) {}
+      const inPakket = new Set(); try { const nu = (await kv.get('hjdk:shop:pakket:nu')) || {}; for (const code of Object.values(nu)) { const pk0 = await kv.get('hjdk:shop:bundel:' + code); (pk0 && pk0.items || []).forEach(i => inPakket.add(i.id)); } } catch (e) {}
+      const lab = {}, tel = { goedkoopst: 0, duurder: 0, uniek: 0, onbekend: 0, marge15: 0, marge5: 0, marge0: 0, verlies: 0, pakket: 0 };
+      for (const it of cat.items) { const m = markt[it.id], nu0 = num(it.p) + (it.fs ? 0 : num(it.vk)); const l0 = !m ? 'onbekend' : m.lowSame ? (nu0 <= m.lowSame ? 'goedkoopst' : 'duurder') : 'uniek';
+        const mg = it.mg == null ? null : num(it.mg); const l1 = mg == null ? 'onbekend' : mg >= 15 ? 'marge15' : mg >= 5 ? 'marge5' : mg >= 0 ? 'marge0' : 'verlies';
+        const t = (it.t + ' ' + (it.c || '') + ' ' + (it.s || '')).toLowerCase(); const l3 = /sinterklaas|schoencadeau|pakjesavond/.test(t) ? 'sinterklaas' : /kerst|advent|christmas|kerstbal|kerstboom/.test(t) ? 'kerst' : '';
+        lab[it.id] = [l0, l1, inPakket.has(it.id) ? 'pakket' : '', l3]; tel[l0]++; if (tel[l1] != null) tel[l1]++; if (inPakket.has(it.id)) tel.pakket++; }
+      let ids = [], bron = 'feed'; try { const r = await fetch('https://cdn.kadoly.com/uploads/feeds/google-shopping-nl.xml', { headers: { 'user-agent': 'KadolyLabels/1.0 (+https://keuzehulp.best/api/shop/gmclabels)' }, signal: AbortSignal.timeout(25000) }); if (r.ok) { const x = await r.text(); ids = [...x.matchAll(/<g:id>\s*(?:<!\[CDATA\[)?([^<\]]+?)(?:\]\]>)?\s*<\/g:id>/g)].map(m => m[1].trim()); } else bron = 'feed ' + r.status; } catch (e) { bron = 'feed fout'; }
+      if (!ids.length) { ids = Object.keys(lab); bron = (bron === 'feed' ? 'feed leeg' : bron) + ', alleen basis-ID'; }
+      const rijen = ids.map(id => { const l = lab[id] || lab[String(id).split('-')[0]]; return l ? [id].concat(l) : null; }).filter(Boolean);
+      res.setHeader('x-labels-bron', bron); res.setHeader('cache-control', 'public, max-age=3600');
+      if (url.searchParams.get('vorm') === 'stand') return res.status(200).json({ ok: true, bron, ids: ids.length, metLabel: rijen.length, telling: tel, marktprijzen: Object.keys(markt).length });
+      res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('content-disposition', 'inline; filename="kadoly-labels.csv"');
+      return res.status(200).send('id,custom_label_0,custom_label_1,custom_label_2,custom_label_3\n' + rijen.map(r => r.join(',')).join('\n')); }
+    if (op === 'impuls') { // 20 nov (Henkjan: "Impuls campagne gaan we doen" en "Vind ook producten die nergens te vinden zijn"): wat een impulscampagne mag tonen. Alleen de beschermde host.
+      // uniek = Demand Radar vond hetzelfde product niet bij bol, Amazon.nl of Amazon.de (wel vergelijkbare), op voorraad, met foto, levertijd tot 7 werkdagen, marge per bestelling minstens EUR 10 (of &marge=)
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const minM = Number(url.searchParams.get('marge')) || 10; const cat = await catalog(true); let markt = {}; try { const r = await fetch('https://demandradar-ivory.vercel.app/api/feed?shop=yoors&cc=NL&prices=1', { signal: AbortSignal.timeout(9000) }); if (r.ok) markt = ((await r.json()) || {}).items || {}; } catch (e) {}
+      const uniek = cat.items.filter(it => { const m = markt[it.id]; return m && !m.lowSame && it.vr !== false && it.img && !(num(it.lt) > 7) && num(it.mg) >= minM; })
+        .map(it => ({ pid: it.id, titel: it.t, merk: it.b || null, cat: it.c || null, thuis: Math.round((num(it.p) + (it.fs ? 0 : num(it.vk))) * 100) / 100, marge: num(it.mg), vergelijkbaar: markt[it.id].medSimilar || null, levertijd: num(it.lt) || null, beeld: beeld(it.id, 'ig') }))
+        .sort((a, b) => b.marge - a.marge);
+      const nu = (await kv.get('hjdk:shop:pakket:nu').catch(() => null)) || {}; const pak = []; for (const code of Object.values(nu)) { const p0 = await kv.get('hjdk:shop:bundel:' + code).catch(() => null); if (p0) pak.push({ code: p0.code, naam: p0.naam, titel: p0.titel, totaal: p0.totaal, marge: p0.marge, link: 'https://go.kadoly.com/shop?bundel=' + p0.code }); }
+      res.setHeader('cache-control', 'no-store'); return res.status(200).json({ ok: true, regel: 'uniek = niet één-op-één bij bol/Amazon (wel kan de merksite of een andere winkel het hebben), marge >= ' + minM, pakketten: pak, uniek: uniek.slice(0, 60), aantalUniek: uniek.length }); }
+    if (op === 'pakketten') { // 20 nov: de pakketten van nu (lib/pakket.js). Openbaar: lijst voor de shop (kadoly.com/pakketten) zonder inkoop of marge. Beschermde host: &vorm=tekst met marge, &ronde=1 (&droog=1) rekent opnieuw
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0], intern = /\.vercel\.app$/i.test(host);
+      res.setHeader('cache-control', 'no-store'); res.setHeader('access-control-allow-origin', '*');
+      if (url.searchParams.get('ronde') && intern) { const r = await pakketRonde(!!url.searchParams.get('droog')); if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(r.log.join('\n') + '\n\n' + pakketTekst(r.pakketten)); } return res.status(200).json(Object.assign({ ok: true }, r)); }
+      const nu = (await kv.get('hjdk:shop:pakket:nu').catch(() => null)) || {}; const lijst = [];
+      for (const s of PAKKET_SOORTEN) { const code = nu[s.id]; if (!code) continue; const p = await kv.get('hjdk:shop:bundel:' + code).catch(() => null); if (p) lijst.push(p); }
+      if (url.searchParams.get('vorm') === 'tekst' && intern) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(pakketTekst(lijst)); }
+      return res.status(200).json({ ok: true, aantal: lijst.length, pakketten: lijst.map(p => Object.assign({ soort: p.soort, naam: p.naam, groot: !!p.groot, link: 'https://kadoly.com/bundel/' + p.code }, bundelOpenbaar(p), intern ? { marge: p.marge, margePct: p.margePct, vraag: p.vraag } : {})) }); }
     if (op === 'prijsadvies') { // 17 nov (Henkjan: "Adviseer gezonde marge die wel concurreert"): prijsadvies met marktprijzen (Demand Radar) en inkoop per product, compact; alleen via de beschermde vercel.app-host. ?q=termen (komma) of leeg voor alles
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const q = String(url.searchParams.get('q') || '').toLowerCase().split(/[,|]/).map(x => x.trim()).filter(Boolean).slice(0, 30);
