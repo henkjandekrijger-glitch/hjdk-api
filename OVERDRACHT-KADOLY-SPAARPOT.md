@@ -113,6 +113,19 @@ Henkjan 20 nov: "Maak het economisch totaal werkend en groeiende dus bij groei g
   - De rente stijgt mee als de inkomsten per lid stijgen, en dat maakt meedoen weer aantrekkelijker.
 - **Stand:** `op=dkeco` (beschermde host; `&test=1` voor de testwereld), met een `tekst` in gewone taal.
 
+### 4.2c Meer of minder van dit (20 nov 2026)
+
+Henkjan 20 nov: "Waar klik je precies op ? Daar kunnen we leer element in brengen . Meer of minder van dit . En zo verzamelen we ook data de handeling wordt betaald de uitkomst niet ."
+
+- **De klik in de ochtendmail is een oordeel.** De mail toont één product met twee even grote knoppen: Meer van dit en Minder van dit (proefvariant b: Ja, leuk en Niet mijn ding).
+  - Beide tellen als de klik van de dag en geven precies hetzelfde tegoed. Er staat bij: "Wat je ook kiest, je klik telt."
+  - Per persoon telt één oordeel per dag (`p.smaak`).
+- **Lerend.**
+  - Per product en per soort in `<ns>oordeel` (`pid|meer`, `pid|minder`, `soort:<cat>>sub|...`).
+  - Het product van morgen (`dagProductVoor`) kiest uit wat anderen vaak 'meer' gaven, wat bij jouw soorten past, plus verkenning, en nooit iets wat je al beoordeelde.
+  - Na de klik staat dat product bovenaan je pagina met "Je koos: ...".
+- **Data (smaakpanel):** `op=dkstand` onder `smaak`, met de producten en soorten met de meeste 'meer' (vanaf 5 oordelen). Dit is ook waardevol voor merken, en die kunnen ervoor betalen (inkomsten voor de spaarrente).
+
 ### 4.3 Juridisch
 
 - **Geen kansspel**: er wordt niets verloot, iedereen krijgt wat hij spaart. De Gedragscode Promotionele Kansspelen, de einddatum, het plafond van €4.500 en kansspelbelasting gelden dus niet.
@@ -301,6 +314,8 @@ Henkjan 20 nov: "Kijk in quiz md wat wel en niet werkte en nu gaan we dit compou
 **Kern van Henkjan ("hoe meer mensen, hoe meer korting, tot 100%"):** het voorstel is "Samen naar 100%": je kiest een product, elke klik van een vriend geeft % korting op dat product en elke nieuwe vriend een grote stap; bij 100% is het gratis, daaronder is het korting in de kassa. Het aantal benodigde klikken hangt af van de kostprijs, zodat elke klik begrensd geld kost.
 
 ## 9. Logboek (nieuwste bovenaan)
+
+- 2026-11-20: Meer of minder van dit (sectie 4.2c): de klik van de dag is een oordeel over één product, beide knoppen geven hetzelfde tegoed, één oordeel per dag, product van morgen leert van alle oordelen en van je eigen smaak, smaakpanel in `op=dkstand`. Proef `mknop` is nu Meer/Minder tegen Ja, leuk/Niet mijn ding. Lokaal getest (9 controles: mail, twee knoppen, doorsturen, pagina, telling, één per dag, morgen ander product).
 
 - 2026-11-20: Kosten van een cadeau = inkoop met btw + verzending die wij betalen (`hjdk:shop:kost`), anders geschat uit de marge. Cadeaulijst op meeste cadeau per uitgegeven euro, nooit duurder dan het tegoed. Bestelmail noemt de kosten. De spaarrente rekent hiermee.
 
