@@ -1515,6 +1515,16 @@
       "destination": "/api/gids?op=nbsw"
     },
     {
+      "source": "/samen/:g([a-f0-9]{10})",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=gc&g=:g"
+    },
+    {
       "source": "/:slug([a-z0-9-]+)",
       "has": [
         {

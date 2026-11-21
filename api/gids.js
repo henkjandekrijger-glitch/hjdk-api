@@ -7,6 +7,7 @@
 // Kliks naar de shop gaan via /naar/<pid> (api/shop.js op=gidsuit): Clickmind meet de keten tot betaald per gids.
 import { catalogusInhoud, normaliseerGidsProduct } from '../lib/gids-catalogus.js';
 import { gidsIndexPlan } from '../lib/gids-indexnow.js';
+import * as GC from '../lib/groepscadeau.js'; // groepscadeaus per moment (21 nov 2026), live pagina's op /<slug>, groepslinks op /samen/<id>
 import { kv } from '../lib/db.js';
 import { funnelStap, funnelStand, funnelHtml, fnIdUitCookie, isFnBot, bronVan, FN_JS } from '../lib/funnel.js'; // funnel per persoon (18 nov 2026)
 import { lookNieuw } from '../lib/look.js';
@@ -529,7 +530,7 @@ ${LEVENDE().length ? `<section class="si-sec" aria-labelledby="gidsen"><p class=
 <section class="si-sec" aria-labelledby="redactie"><p class="eb" id="redactie">Van de redactie</p><div class="si-l">${RED.nieuwsteEerst().slice(0, 3).map(a => siRij('/redactie/' + a.slug, a.titel)).join('')}${siRij('/redactie', 'Alle artikelen van de redactie')}</div></section>
 <section class="si-sec" aria-labelledby="rubrieken"><p class="eb" id="rubrieken">Per rubriek</p><div class="si-l">${R.map(r => siRij('/rubriek/' + r.c, r.naam, r.n + ' producten, ' + euro(r.min) + ' tot ' + euro(r.max) + ' inclusief btw en verzending')).join('')}${siRij('/alle-producten', 'Alle ' + alle + ' producten op een rij')}</div></section>
 ${NF.n ? `<section class="si-sec" aria-labelledby="nieuw"><p class="eb" id="nieuw">Nieuw bij Kadoly</p><p>${NF.n} producten met een recente winkelcatalogusdatum. Een herimportdatum bewijst geen nieuwe introductie.</p><ul class="nwl">${NF.L.slice(0, 4).map(i => nieuwRij(i, '_home')).join('')}</ul><div class="si-l">${siRij(NIEUW_PAD, 'Alles wat nieuw is, per rubriek')}</div></section>` : ''}
-<section class="si-sec" aria-labelledby="lijst"><p class="eb" id="lijst">Gratis hulpmiddelen</p><div class="si-l">${W_PAGINAS.map(x => siRij(x.pad, x.naam)).join('')}</div></section>
+<section class="si-sec" aria-labelledby="lijst"><p class="eb" id="lijst">Gratis hulpmiddelen</p><div class="si-l">${W_PAGINAS.concat(GC.gcLijst()).map(x => siRij(x.pad, x.naam)).join('')}</div></section>
 <section class="si-sec" aria-labelledby="koopchecks"><p class="eb" id="koopchecks">Eerst controleren, dan kiezen</p><p>We zijn de verkoper en gebruiken externe bronnen; we hebben de producten niet zelf getest.</p><div class="si-l">${siRij('/onderzoek-vaas-verse-bloemen', 'Vaas voor verse bloemen: water, opening en schoonmaken')}${siRij('/onderzoek-tafellamp-lumen', 'Tafellamp: genoeg leeslicht, accuduur en buitengebruik')}${siRij('/onderzoek-bamboe-textiel-claims', 'Bamboe textiel: vezels en onderbouwing van claims')}${siRij('/onderzoek-en-bronnen', 'Alle koopchecks en hun bronnen')}</div></section>
 <section class="si-sec" aria-labelledby="vragen"><p class="eb" id="vragen">Vragen over Kadoly</p>${faq.map(([v, a]) => `<details class="faq"><summary>${esc(v)}</summary><div class="a"><p>${esc(a)}</p></div></details>`).join('')}</section>${baken('_home')}` + VOET(null, kans, false);
 }
@@ -539,7 +540,7 @@ const W_PAGINAS = [{ pad: '/w', versie: 'w1', lm: '2026-11-13', naam: 'Verlangli
 async function sitemap() {
   const cat = await catalogus();
   const R = await rubrieken();
-  const u = [{ loc: HOST + '/', lm: null, img: [] }, ...W_PAGINAS.map(x => ({ loc: HOST + x.pad, lm: x.lm, img: [] })), ...RED.RED_PAGINAS().map(x => ({ loc: HOST + x.pad, lm: x.lm, img: [] })), {loc: HOST + '/alle-producten', lm:null, img:[] }].concat(LEVENDE().map(id => ({ loc: HOST + '/' + id, lm: GIDSEN[id].bijgewerkt, img: GIDSEN[id].keuze.map(k => cat[k.pid]).filter(i => i && i.img && i.vr !== false).map(i => i.img) }))).concat(R.map(r => ({ loc: HOST + '/rubriek/' + r.c, lm: null, img: r.items.slice().sort(rang({}, 0)).filter(i => i.img).slice(0, 5).map(i => i.img) })));
+  const u = [{ loc: HOST + '/', lm: null, img: [] }, ...W_PAGINAS.concat(GC.gcLijst()).map(x => ({ loc: HOST + x.pad, lm: x.lm, img: [] })), ...RED.RED_PAGINAS().map(x => ({ loc: HOST + x.pad, lm: x.lm, img: [] })), {loc: HOST + '/alle-producten', lm:null, img:[] }].concat(LEVENDE().map(id => ({ loc: HOST + '/' + id, lm: GIDSEN[id].bijgewerkt, img: GIDSEN[id].keuze.map(k => cat[k.pid]).filter(i => i && i.img && i.vr !== false).map(i => i.img) }))).concat(R.map(r => ({ loc: HOST + '/rubriek/' + r.c, lm: null, img: r.items.slice().sort(rang({}, 0)).filter(i => i.img).slice(0, 5).map(i => i.img) })));
   const NF = await nieuwFeiten(); if (NF.n) u.push({ loc: HOST + NIEUW_PAD, lm: null, img: NF.L.filter(i => i.img).slice(0, 20).map(i => i.img) }); // lastmod = dag van het nieuwste product (echte wijziging)
   u.push({ loc: HOST + '/onderzoek-en-bronnen', lm: ONDERZOEK_DAG, img: [] }, ...ONDERZOEK.map(p => ({ loc: HOST + '/onderzoek-' + p.id, lm: onderwerpDag(p), img: [] })));
   return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">' + u.map(x => `<url><loc>${x.loc}</loc>${x.lm ? '<lastmod>' + x.lm + '</lastmod>' : ''}${x.img.map(i => `<image:image><image:loc>${esc(i)}</image:loc></image:image>`).join('')}</url>`).join('') + '</urlset>';
@@ -571,6 +572,7 @@ async function llms() {
   let t = '# Kadoly gids\n\n> Keuzehulpen van Kadoly (kadoly.com), een Nederlandse webshop met producten van makers. Per gids: korte keuze, prijs inclusief btw en verzending en levertijd van vandaag, waarvoor een product niet geschikt is, en antwoorden op veelgestelde vragen.\n\n';
   t += '## Volledig aanbod\n\n' + HOST + '/alle-producten\nAlle beschikbare producten per rubriek, ook buiten Nieuw.\n\n';
   t += '## Gratis hulpmiddelen\n\n' + W_PAGINAS.map(x => '- ' + x.naam + ': ' + HOST + x.pad).join('\n') + '\nVerlanglijst zonder account met links uit elke winkel (gevers vinken stiekem af), lootjes trekken met uitzonderingen en een anonieme roddelbox, een Sinterklaasgedicht op maat en een cadeauzoeker over alle winkels. In vijf talen (nl, en, de, fr, es).\n\n';
+  t += GC.gcLlms(cat, HOST);
   const R = await rubrieken(); t += '## Rubrieken\n\n' + R.map(r => '- ' + r.naam + ': ' + r.n + ' producten van ' + r.merken.size + ' makers, ' + euro(r.min) + ' tot ' + euro(r.max) + ' inclusief btw en verzending, ' + HOST + '/rubriek/' + r.c).join('\n') + '\n\n';
   const NF = await nieuwFeiten(); if (NF.n) t += '## Nieuw bij Kadoly\n\n' + HOST + NIEUW_PAD + '\n\n' + NF.kort + ' De volledige lijst staat in ' + HOST + '/llms-full.txt.\n\n' + NF.L.slice(0, 20).map(i => llmRegel(i, true)).join('\n') + '\n\n';
   for (const id of LEVENDE()) { const g = GIDSEN[id]; t += '## ' + g.h1 + '\n\n' + HOST + '/' + id + '\n\n' + g.kort + '\n\n'; for (const k of g.keuze) { const i = cat[k.pid]; if (!i || i.vr === false) continue; t += '- ' + k.label + ': ' + (k.naam || i.t) + ', ' + euro(thuis(i)) + ' inclusief btw en verzending. ' + k.waarom + (k.beperking ? ' Let op: ' + k.beperking : '') + '\n'; } t += '\n'; }
@@ -592,6 +594,7 @@ async function feiten(pid) {
 const beschermdHost = h => /\.vercel\.app$/i.test(h);
 let MAILK = false, MAILK_AT = 0, NBI = {}; // staat het mailformulier aan (verzenddomein geverifieerd bij Resend)?
 const kaal = (titel, inhoud, script) => kop(titel + ' | Kadoly', titel, '/nieuws', '<meta name="robots" content="noindex">') + inhoud + '</main>' + SI_VOET + (script || '') + '</body></html>';
+const schil = (titel, besch, pad, extra, inhoud, script) => kop(titel, besch, pad, extra) + inhoud + '</main>' + SI_VOET + (script || '') + '</body></html>'; // indexeerbare pagina met eigen canonical (groepscadeaus)
 const gidsLijst = () => '<h2>Alvast lezen</h2><ul class="toc">' + NB.gidsenNieuw().slice(0, 5).map(g => `<li><a href="/${esc(g.slug)}">${esc(g.h1)}</a></li>`).join('') + '</ul>';
 async function winOpties() { // prijzen voor de winnaar: elk product uit een keuzehulp dat in de winkel staat, tot de prijsgrens inclusief btw en verzending
   const cat = await catalogus(), max = await NB.prijsMax(), uit = [], gezien = new Set();
@@ -663,7 +666,7 @@ export default async function handler(req, res) {
   try {
     if (/^(nieuws|nbbevestig|nbaf|nbpush|nbbericht|nbklik|nbsw|nbronde|nbnieuws|nbstand|nbdomein|nbdomeinweg|nbwin|nbregels|nbwinnaars)$/.test(op)) return await nieuwsOp(op, req, res, q, host, ua);
     if (/^cy[a-z]*$/.test(op)) return await (await import('../lib/curady.js')).cyOp(op, { req, res, q, host }); // Curady (curady.com), high-ticket tak, 18 nov 2026
-    if (op === 'gc') return await (await import('../lib/groepscadeau.js')).gcOp({ req, res, q, host, ua, kaal, leesBody, isBot }); // groepscadeaus per moment (21 nov 2026), concept alleen op de beschermde host tot LIVE
+    if (op === 'gc') return await GC.gcOp({ req, res, q, host, ua, kaal, schil, leesBody, isBot }); // groepscadeaus per moment (21 nov 2026), concept alleen op de beschermde host tot LIVE
     if (/^dk[a-z]*$/.test(op)) return await (await import('../lib/dagkans.js')).dkOp(op, { req, res, q, host, ua, kaal, leesBody, isBot }); // Kadoly Winterkans (14 nov 2026), testwereld met &test=1 op de beschermde host
     if (op === 'paginacheck') { if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden'); // nakijken zonder de hele pagina op te halen: maat, titel, kop, schema, rijen (beschermde host)
       const kans = await armKans(), R = await rubrieken(); const pag = { home: await home(kans), nieuw: await nieuwPagina(kans), ['rubriek-' + R[0].c]: await rubriekPagina(R[0].c, kans) }; const uit = {};
@@ -697,7 +700,7 @@ export default async function handler(req, res) {
       await groeiRonde(kv, items, req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN).catch(e => console.error('gids-groeimeting', String(e.message).slice(0,120)));
       const RR = await rubrieken(); const NF = await nieuwFeiten();
       let oud = null; try { oud = await kv.get('gk:indexnow'); } catch (e) {}
-      const plan = gidsIndexPlan({ host:HOST, items, gidsen:GIDS_IDS.map(id => GIDSEN[id]), onderzoek:ONDERZOEK, bronnen:BRONNEN, nieuw:NF.L, rubrieken:RR, vorig:oud, extra:W_PAGINAS.concat(RED.RED_PAGINAS()), versies:{home:'catalogusdatum-1120',checks:'vaas,lumen,bamboe',catalogus:'2-rubrieken-1121',rubrieken:'2-rubrieken-1121',nieuw:'3-catalogusdatum-1120',gidsen:'3-bestelbeleid-1118',onderzoek:ONDERZOEK_DAG} });
+      const plan = gidsIndexPlan({ host:HOST, items, gidsen:GIDS_IDS.map(id => GIDSEN[id]), onderzoek:ONDERZOEK, bronnen:BRONNEN, nieuw:NF.L, rubrieken:RR, vorig:oud, extra:W_PAGINAS.concat(GC.gcLijst(), RED.RED_PAGINAS()), versies:{home:'catalogusdatum-1120',checks:'vaas,lumen,bamboe',catalogus:'2-rubrieken-1121',rubrieken:'2-rubrieken-1121',nieuw:'3-catalogusdatum-1120',gidsen:'3-bestelbeleid-1118',onderzoek:ONDERZOEK_DAG} });
       try { const { cadeauTipsCheck } = await import('../lib/gidsen-cadeautips.js'); const weg = cadeauTipsCheck(GIDSEN, await catalogus()); if (weg.length) { await kv.raw(['LPUSH', 'mm:handover:log', JSON.stringify({ t: new Date().toISOString(), wie: 'cadeautips-check', tekst: 'Cadeautips op gids.kadoly.com noemen producten die niet leverbaar zijn; tekst aanpassen in lib/gidsen-cadeautips.js: ' + weg.map(x => x.slug + ' ' + x.naam).join('; ').slice(0, 800) })]); await kv.raw(['LTRIM', 'mm:handover:log', '0', '299']); } } catch (e) {} // 21 nov: controle, de cadeautips noemen vaste producten in het korte antwoord
       const urls = q.get('alles') === '1' ? [...new Set([...Object.keys(plan.paginas), ...plan.urls])] : plan.urls;
       if (!urls.length) return res.status(200).json({ ok:true, niets:true, gewijzigd:0 });
@@ -785,7 +788,8 @@ export default async function handler(req, res) {
       return res.status(200).json({ ok: true, gidsen: GIDS_IDS, perDag: uit, kliksPerProduct: geleerdPer, armproef: { kansAfrekenen: await armKans(), stand28d: await armStand(28) }, zoeken: { vragen: rij(/^(?!0\||o\||k\|)/), keuzes: rij(/^k\|/), zonderUitkomst: rij(/^0\|/), chatOnderwerpen: rij(/^o\|/) }, chatLaatste: chat, nieuws: await NB.stand(false).catch(() => null) }); }
     res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=0, s-maxage=300, stale-while-revalidate=600');
     const slug = String(q.get('slug') || '');
-    const rub = String(q.get('rubriek') || '').replace(/[^a-z0-9-]/g, '').slice(0, 30);
+    if (GC.LIVE.has(slug)) { q.set('s', slug); await telBot(ua, 'gc-' + slug); return await GC.gcOp({ req, res, q, host, ua, kaal, schil, leesBody, isBot, viaPad: true }); }
+    const rub =String(q.get('rubriek') || '').replace(/[^a-z0-9-]/g, '').slice(0, 30);
     if (rub) { const html = await rubriekPagina(rub, await armKans()); if (!html) { res.setHeader('cache-control', 'no-store'); return res.status(404).send(kop('Niet gevonden', 'Deze rubriek bestaat niet.', '/', '') + '<h1>Deze rubriek bestaat niet</h1><p><a href="/#rubrieken">Naar alle rubrieken</a></p>' + VOET(null, 0.5)); } await telBot(ua, 'r-' + rub); return res.status(200).send(html); }
     const red = String(q.get('red') || '').replace(/[^a-z0-9-]/g, '').slice(0, 120);
     if (slug === 'redactie' && !red) { await telBot(ua, 'redactie'); const ld = JSON.stringify({ '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Redactie van Kadoly', url: HOST + '/redactie', inLanguage: 'nl-NL', hasPart: RED.nieuwsteEerst().map(a => ({ '@type': 'Article', headline: a.titel, url: HOST + '/redactie/' + a.slug, datePublished: a.datum })) }).replace(/</g, '\\u003c');
