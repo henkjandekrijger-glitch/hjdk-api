@@ -261,6 +261,10 @@
       "schedule": "23 5 * * *"
     },
     {
+      "path": "/api/dp?op=shnacht",
+      "schedule": "33 5 * * *"
+    },
+    {
       "path": "/api/shop?op=ttproef",
       "schedule": "57 4 * * *"
     },
