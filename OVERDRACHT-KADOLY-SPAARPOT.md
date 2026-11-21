@@ -326,7 +326,8 @@ Henkjan 20 nov: "Maak het volkomen lerend . ALLE variabelen . /campagnes-henkjan
     2. Live alleen warm zaaien, op Henkjans woord: Kadoly-kopers, de modal, en Henkjans eigen kring. Doel 50 tot 100 leden.
     3. Advertenties pas als warm K ≥ 0,5 haalt.
     Stand 20 nov: op de keuzehulpen deelt 0,3% van de bezoekers (1.381 bezoeken, 4 keer gedeeld, 3 binnen via een link).
-10. **Sites en verenigingen die het blokje plaatsen en meeverdienen** (Henkjan 20 nov): voorstel €0,50 per lezer die 3 dagen klikt plus 20% van de winst op hun aankopen; eerst op de eigen sites meten.
+10. **Partners: clubs en sites** (20 nov, nog niet gebouwd; schermontwerpen: https://claude.ai/artifact/RiRsoJNbjMdiu69uJeuycX). Eén partnercode voor allebei: een club deelt de link via WhatsApp en een poster met QR-code, een site zet het blokje (`spaarpot.js` met `data-partner`) op de pagina. Zelfde beloning en partnerpagina. Een via een lid doorgestuurde vriend telt mee voor dezelfde partner.
+    **Sites en verenigingen die het blokje plaatsen en meeverdienen** (Henkjan 20 nov): voorstel €0,50 per lezer die 3 dagen klikt plus 20% van de winst op hun aankopen; eerst op de eigen sites meten.
 
 ## 8. Assessment en economie (20 nov 2026)
 
