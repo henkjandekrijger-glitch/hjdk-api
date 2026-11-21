@@ -1,0 +1,8 @@
+{
+  "_uitleg": "Goedgekeurde Awin-mails (Henkjan 21 nov 2026: 'Ja verstuur rustig aan een paar per keer'). Alleen ids hier gaan weg via /api/post?op=awinstuur (hoogstens 5 per keer, nooit dubbel, alleen als het merk (zoek) echt op de pagina staat). Adressen staan niet hier maar in de gemelde mail. Tekst: lib/awinmail.js.",
+  "mails": [
+    { "id": "ed64de439b64", "merk": "De'Longhi", "zoek": "Longhi", "link": "https://keuzehulp.best/m/qskbt" },
+    { "id": "19fa82d5b805", "merk": "EcoFlow", "link": "https://keuzehulp.best/m/vs9pr" },
+    { "id": "a76fe4ed15ca", "merk": "AEG", "link": "https://keuzehulp.best/m/jpnw7" }
+  ]
+}
