@@ -17,7 +17,7 @@ Deze skill is het bouwprotocol. Wat een zusterskill al regelt staat hier niet no
 | Lek zoeken van advertentie tot betaling (B = MAP) | skill `leerlus-henkjan` |
 | Advertentiecampagnes | skill `campagnes-henkjan` |
 | Elke mail die de deur uit gaat | skill `mail-lerend` |
-| Keuzehulpen en bedrijvengids op curacao.day | `CLAUDE.md`, sectie curacao.day (`lib/cur.js`, `lib/curux.js`) |
+| Keuzehulpen en bedrijvengids op curacao.day | `CLAUDE.md`, sectie curacao.day (`lib/cur.js`, `lib/curux.js`); de gidsen zelf volgen deze skill via `lib/curkh.js` (sinds 21 nov 2026) |
 | Keuzehulp chirurgie (todayin surgery) | https://todayin.email/surgery/overdracht |
 | Cadeaugidsen op gids.kadoly.com | `OVERDRACHT-KADOLY-GIDS.md` |
 
