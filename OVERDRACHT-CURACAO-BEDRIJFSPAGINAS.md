@@ -2,6 +2,15 @@
 
 Gemaakt 21 nov 2026. Live: https://hjdk-api-henq.vercel.app/curacao-gids?op=bzoverdracht (met de Vercel-tool `web_fetch_vercel_url`), en als bestand `OVERDRACHT-CURACAO-BEDRIJFSPAGINAS.md` in de repo hjdk-api. Werk dit bestand bij in dezelfde commit als elke wijziging, met een regel in het logboek onderaan (nieuwste bovenaan).
 
+## Uitvoering: stap 0 klaar voor review (21 november 2026)
+
+- Alleen branch codex/curacao-stap0-sealed, draft PR 7. Main en productie zijn door deze taak niet gewijzigd.
+- Preview: https://hjdk-3eo5xiui9-henq.vercel.app/curacao-gids?m=nl&s=bedrijven&b=pizza-restaurant&c=pizzarroni&v=sealed (Vercel-login of tijdelijke deellink nodig; deelcode niet in de repo bewaren).
+- Ontwerp: sealedintent.com als referentie, met de Curaçao-kop. De variant staat achter v=sealed; akkoord om die standaard te maken staat nog open.
+- Bewijs: GitHub Actions 44962147265 geslaagd. Echte Chromium-bezoeken met Googlebot-UA en webdriver schrijven niets; gewone bezoeken tellen bij tik/scroll/drie seconden zichtbaar. Redis bewaart exposure en eerste klik atomair en eenmaal. Gerenderde HTML gecontroleerd op 390/1280 px, zwarte chatpills, knoppen in eerste scherm en geen horizontaal scrollen. Telefoon en desktop: docs/preview/curacao-mobiel.png en curacao-desktop.png.
+- Previewchat werkt via de eigen handler. Tracking, bijdragen, aanmeldingen en reviews/claims worden daar niet naar productie doorgestuurd. De oude Google-renderer maakt de container leeg vóór opnieuw renderen.
+- De CI schrijft alleen artifacts; de eenmalig bewaarde screenshots staan op deze branch. Voor publicatie eerst Henkjans akkoord, dan de actuele main verwerken en tests draaien. Na publicatie de schone dagelijkse telling vergelijken met bzz herkomst (paginabezoeken, dezelfde periode); blokbeslissingen vanaf 200 bezoeken. Stap 1 volgt na deze meetbasis.
+
 ## 0. Opdracht
 
 Henkjan (21 nov 2026): "focus komende week op organische verkeer uit de bedrijven paginas . Check wat je daar kunt verbeteren en kom met voorstel wat ik aan andere chat kan geven om te verbouwen dus moet helemaal compleet zijn die handover en advies ."
