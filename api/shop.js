@@ -44,7 +44,8 @@ import { gebruikerVan, koppel as cmKoppel, zoek as cmZoek, zetOpKlik as cmZetOpK
 import { prijsStand, prijsCsv } from '../lib/shopprijs.js';
 import { testRonde, testLabels, testTekst, TT_TEST } from '../lib/tttest.js';
 import { kiesBundel, bundelOpenbaar, bundelTekst, bundelCode, BUNDEL_REGEL, bundelKandidaten, geldigeSets } from '../lib/bundel.js';
-import { kiesPakketten, pakketTekst, PAKKET_SOORTEN } from '../lib/pakket.js';
+import { kiesPakketten, pakketTekst, PAKKET_SOORTEN, pakketOpenbaar, soortVan } from '../lib/pakket.js';
+import { htmlStrip, htmlLijst, htmlDetail, htmlProduct, htmlMand, metaVan } from '../lib/pakketux.js';
 import { videoPlan, VIDEO_REGEL } from '../lib/kadolyvideoplan.js';
 import reels from '../kadoly/reels.json' with { type: 'json' };
 import trendKadoly from '../kadoly/trend.json' with { type: 'json' };
@@ -137,6 +138,7 @@ async function catalog(vers) {
 // 20 nov (Henkjan: "zetten we die bundels klaar als in een pakket te koop"): per soort één pakket (lib/pakket.js), elke dag opnieuw
 // doorgerekend; staat onder hjdk:shop:bundel:<code> (zelfde vorm als de bundel van de dag, dus kadoly.com/bundel/<code> en op=bundel werken)
 // en de lijst onder hjdk:shop:pakket:nu. Aangeroepen door de bundelronde (cron 04:47 UTC) en via op=pakketten&ronde=1.
+async function pakkettenNu() { const nu = (await kv.get('hjdk:shop:pakket:nu').catch(() => null)) || {}; const lijst = []; for (const s of PAKKET_SOORTEN) { const code = nu[s.id]; if (!code) continue; const p = await kv.get('hjdk:shop:bundel:' + code).catch(() => null); if (p) lijst.push(p); } return lijst; }
 async function pakketRonde(droog) {
   const dag = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Amsterdam' }).format(new Date());
   const cat = await catalog(true), kaart = (await kv.get(K_KOST).catch(() => null)) || {}; let markt = {};
@@ -507,8 +509,8 @@ async function direct(req, res, x) {
   let mmp = leesCookie(req, 'mmp'); const nieuwP = !/^[0-9a-f]{16}$/.test(mmp); if (nieuwP) mmp = nieuwId(8);
   let rec = null; try { rec = await kv.get(K.rec(code)); } catch (e) {}
   const cid = (rec && rec.mmc) || nieuwId(6);
-  if (!x.voorkant && !x.kassa && !x.bundel && pid) { try { x.slug = await slugVan(pid); } catch (e) {} } // 17 nov: meteen naar /product/<naam>, zonder de omleiding van /product/<id>
-  const doel = 'https://kadoly.com/' + (x.voorkant ? '' : x.bundel ? 'bundel/' + x.bundel : x.kassa ? 'checkout/' + encodeURIComponent(pid) : 'product/' + (x.slug || encodeURIComponent(pid))) + '?utm_source=' + (x.bron ? (x.bron.source || 'kadoly-gids') : NETTEN[net].toLowerCase()) + '&utm_medium=' + (x.bron ? x.bron.medium : (x.vorm || 'push')) + '&utm_campaign=' + (x.bron ? encodeURIComponent(x.bron.campaign) : 'shoplus') + '&utm_content=' + (x.voorkant ? 'voorkant' : encodeURIComponent(pk(pid))) + '&hj=' + code + '&mmc=' + cid + '&lang=' + (/^(nl|de|es|en)$/.test(x.taal || '') ? x.taal : 'nl') + (net === 'pi' && x.epik ? '&epik=' + encodeURIComponent(x.epik) : '') + (net === 'pi' ? '&pin_traffic=' + (rec && rec.pc || x.pinClass || 'unknown') + (x.pinClass === 'paid' ? '&pp=0' : x.pinClass === 'earned' ? '&pp=1' : '') : ''); // 16 nov: buitenlandse campagnes landen in de taal van hun land (shoptest geeft &lang= mee)
+  if (!x.voorkant && !x.kassa && !x.bundel && !x.pakket && pid) { try { x.slug = await slugVan(pid); } catch (e) {} } // 17 nov: meteen naar /product/<naam>, zonder de omleiding van /product/<id>
+  const doel = 'https://kadoly.com/' + (x.voorkant ? '' : x.pakket ? 'pakket/' + x.pakket : x.bundel ? 'bundel/' + x.bundel : x.kassa ? 'checkout/' + encodeURIComponent(pid) : 'product/' + (x.slug || encodeURIComponent(pid))) + '?utm_source=' + (x.bron ? (x.bron.source || 'kadoly-gids') : NETTEN[net].toLowerCase()) + '&utm_medium=' + (x.bron ? x.bron.medium : (x.vorm || 'push')) + '&utm_campaign=' + (x.bron ? encodeURIComponent(x.bron.campaign) : 'shoplus') + '&utm_content=' + (x.voorkant ? 'voorkant' : encodeURIComponent(pk(pid))) + '&hj=' + code + '&mmc=' + cid + '&lang=' + (/^(nl|de|es|en)$/.test(x.taal || '') ? x.taal : 'nl') + (net === 'pi' && x.epik ? '&epik=' + encodeURIComponent(x.epik) : '') + (net === 'pi' ? '&pin_traffic=' + (rec && rec.pc || x.pinClass || 'unknown') + (x.pinClass === 'paid' ? '&pp=0' : x.pinClass === 'earned' ? '&pp=1' : '') : ''); // 16 nov: buitenlandse campagnes landen in de taal van hun land (shoptest geeft &lang= mee)
   // Link previews get the same offer without a visitor record, measurement id or cookie.
   if (net === 'pi' && bot) {
     const preview = new URL(doel); preview.searchParams.delete('hj'); preview.searchParams.delete('mmc');
@@ -1060,11 +1062,12 @@ export default async function handler(req, res) {
       const s = await geheim(), sk = String(req.headers['x-shop-sleutel'] || req.headers['x-lus-key'] || ''); const intern = beschermd || (s && sk === s) || (process.env.SHOP_FEED_KEY && sk === process.env.SHOP_FEED_KEY);
       const dagNL = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Amsterdam' }).format(new Date());
       if (op === 'bundel') { // openbaar voor de shop (kadoly.com/bundel/<code>): producten, regelprijzen en totaal; inkoop en marge alleen intern
-        const code = String(url.searchParams.get('code') || '').replace(/[^a-z0-9]/g, '').slice(0, 20) || (await kv.get('hjdk:shop:bundel:nu').catch(() => null)) || bundelCode(dagNL);
+        const sl = soortVan(String(url.searchParams.get('slug') || '')); const slugCode = sl ? ((await kv.get('hjdk:shop:pakket:nu').catch(() => null)) || {})[sl.id] : null; // 21 nov: vast adres per pakket (kadoly.com/pakket/<slug>)
+        const code = slugCode || String(url.searchParams.get('code') || '').replace(/[^a-z0-9]/g, '').slice(0, 20) || (await kv.get('hjdk:shop:bundel:nu').catch(() => null)) || bundelCode(dagNL);
         const b = await kv.get('hjdk:shop:bundel:' + code).catch(() => null); res.setHeader('cache-control', 'no-store'); res.setHeader('access-control-allow-origin', '*');
         if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(intern ? bundelTekst(b) : (b ? bundelOpenbaar(b).titel : 'Geen bundel')); }
         if (!b) return res.status(404).json({ ok: false, fout: 'geen bundel met code ' + code });
-        const geldig = !b.geldigTot || b.geldigTot >= dagNL; return res.status(200).json(Object.assign({ ok: true, geldig }, bundelOpenbaar(b), intern ? { marge: b.marge, besparingPct: b.besparingPct, losMarkt: b.losMarkt, inkoop: b.items.map(x => x.c) } : {})); }
+        const geldig = !b.geldigTot || b.geldigTot >= dagNL; return res.status(200).json(Object.assign({ ok: true, geldig }, b.slug ? pakketOpenbaar(b) : bundelOpenbaar(b), intern ? { marge: b.marge, besparingPct: b.besparingPct, losMarkt: b.losMarkt, inkoop: b.items.map(x => x.c) } : {})); }
       const mag = /vercel-cron/i.test(ua) || beschermd || (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET); if (!mag) return res.status(404).send('Niet gevonden');
       const droog = !!url.searchParams.get('droog'), code = bundelCode(dagNL);
       let pakket = null; try { pakket = await pakketRonde(droog); pakket = { aantal: pakket.aantal, log: pakket.log }; } catch (e) { pakket = { fout: String(e.message || e).slice(0, 200) }; } // 20 nov: pakketten in dezelfde ronde
@@ -1126,10 +1129,16 @@ export default async function handler(req, res) {
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0], intern = /\.vercel\.app$/i.test(host);
       res.setHeader('cache-control', 'no-store'); res.setHeader('access-control-allow-origin', '*');
       if (url.searchParams.get('ronde') && intern) { const r = await pakketRonde(!!url.searchParams.get('droog')); if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(r.log.join('\n') + '\n\n' + pakketTekst(r.pakketten)); } return res.status(200).json(Object.assign({ ok: true }, r)); }
-      const nu = (await kv.get('hjdk:shop:pakket:nu').catch(() => null)) || {}; const lijst = [];
-      for (const s of PAKKET_SOORTEN) { const code = nu[s.id]; if (!code) continue; const p = await kv.get('hjdk:shop:bundel:' + code).catch(() => null); if (p) lijst.push(p); }
+      const lijst = await pakkettenNu();
       if (url.searchParams.get('vorm') === 'tekst' && intern) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(pakketTekst(lijst)); }
-      return res.status(200).json({ ok: true, aantal: lijst.length, pakketten: lijst.map(p => Object.assign({ soort: p.soort, naam: p.naam, groot: !!p.groot, link: 'https://kadoly.com/bundel/' + p.code }, bundelOpenbaar(p), intern ? { marge: p.marge, margePct: p.margePct, vraag: p.vraag } : {})) }); }
+      return res.status(200).json({ ok: true, aantal: lijst.length, pakketten: lijst.map(p => Object.assign(pakketOpenbaar(p), intern ? { marge: p.marge, margePct: p.margePct, vraag: p.vraag, gesnapt: p.gesnapt || null } : {})) }); }
+    if (op === 'pakkethtml') { // 21 nov (Henkjan: "deze pakketten mogen ook best een plek op de winkel zelf hebben . Geef daar goede Ux voor aan code"): HTML voor de shop (server-side ingevoegd, lib/pakketux.js). vorm = strip (homepage), lijst (/pakketten), detail (&slug), product (&pid), mand (&pids=a,b), meta (&slug, JSON)
+      const vorm = String(url.searchParams.get('vorm') || 'lijst'), dagNu = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Amsterdam' }).format(new Date());
+      const lijst = (await pakkettenNu()).map(pakketOpenbaar).filter(p => !p.geldigTot || p.geldigTot >= dagNu); const s = soortVan(String(url.searchParams.get('slug') || '')); const p = s ? lijst.find(x => x.soort === s.id) || null : null;
+      res.setHeader('access-control-allow-origin', '*'); res.setHeader('cache-control', 'public, max-age=300, s-maxage=600'); res.setHeader('x-robots-tag', 'noindex');
+      if (vorm === 'meta') return res.status(p ? 200 : 404).json(p ? Object.assign({ ok: true }, metaVan(p)) : { ok: false, fout: 'geen pakket' });
+      const html = vorm === 'strip' ? htmlStrip(lijst, dagNu) : vorm === 'detail' ? htmlDetail(p, lijst, dagNu) : vorm === 'product' ? htmlProduct(lijst, pidOk(url.searchParams.get('pid'))) : vorm === 'mand' ? htmlMand(lijst, String(url.searchParams.get('pids') || '').split(',').map(pidOk).filter(Boolean).slice(0, 30)) : htmlLijst(lijst, dagNu);
+      res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(vorm === 'detail' && !p ? 404 : 200).send(html); }
     if (op === 'prijsadvies') { // 17 nov (Henkjan: "Adviseer gezonde marge die wel concurreert"): prijsadvies met marktprijzen (Demand Radar) en inkoop per product, compact; alleen via de beschermde vercel.app-host. ?q=termen (komma) of leeg voor alles
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const q = String(url.searchParams.get('q') || '').toLowerCase().split(/[,|]/).map(x => x.trim()).filter(Boolean).slice(0, 30);
@@ -1200,14 +1209,14 @@ export default async function handler(req, res) {
       res.setHeader('cache-control', 'no-store'); if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(ketenTekst(kt)); } return res.status(200).json(kt); }
     if (op === 'org') { // 16 nov (Henkjan: "zorg dat alles via clickmind loopt"): organische kanalen (k = fb, ig, pin, tt, th, x, li, yt, tg, wa, gbp, nb) naar een product via Clickmind, zodat de keten tot betaald per kanaal (org:d:<dag>) en per post (c, org:p:<post>) gemeten wordt. Linkvoorbeelden (Facebook, WhatsApp, Pinterest ...) gaan door zonder klik te tellen, anders geen titel en foto in de post.
       const KAN = KAN_ORG;
-      const k = KAN[url.searchParams.get('k')] ? url.searchParams.get('k') : 'x'; const pid = pidOk(url.searchParams.get('p')); const post = String(url.searchParams.get('c') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40); const ua = String(req.headers['user-agent'] || '');
+      const k = KAN[url.searchParams.get('k')] ? url.searchParams.get('k') : 'x'; const pk = soortVan(String(url.searchParams.get('b') || '')); const pid = pk ? pk.kern[0] : pidOk(url.searchParams.get('p')); // b = pakket (21 nov), naar kadoly.com/pakket/<slug> const post = String(url.searchParams.get('c') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40); const ua = String(req.headers['user-agent'] || '');
       const tel = veld => laterAf(Promise.all([kv.raw(['HINCRBY', 'org:d:' + DAY(), k + '|' + veld, '1']), kv.raw(['EXPIRE', 'org:d:' + DAY(), String(120 * 86400)])]).catch(() => {}));
-      const kaal = 'https://kadoly.com/' + (pid ? 'product/' + encodeURIComponent(pid) + '?lang=nl&' : '?') + 'utm_source=' + KAN[k] + '&utm_medium=social&utm_campaign=' + encodeURIComponent(post || 'profiel');
+      const kaal = 'https://kadoly.com/' + (pk ? 'pakket/' + pk.slug + '?' : pid ? 'product/' + encodeURIComponent(pid) + '?lang=nl&' : '?') + 'utm_source=' + KAN[k] + '&utm_medium=social&utm_campaign=' + encodeURIComponent(post || 'profiel');
       if (/facebookexternalhit|facebot|twitterbot|pinterest|linkedinbot|slackbot|whatsapp|telegrambot|discordbot|redditbot|embedly|skypeuripreview|applebot|bytespider|tiktok/i.test(ua) && !/mobile safari|instagram|fban|fbav/i.test(ua)) { tel('voorbeeld'); res.statusCode = 302; res.setHeader('location', kaal); res.setHeader('cache-control', 'no-store'); return res.end(); }
       const bot = isBot(ua); if (!bot) { tel(pid ? 'uit' : 'profiel'); if (post && pid) laterAf(Promise.all([kv.raw(['HINCRBY', 'org:p:' + post, pid, '1']), kv.raw(['EXPIRE', 'org:p:' + post, String(180 * 86400)]), kv.raw(['SADD', 'org:posts', post])]).catch(() => {})); }
       if (!pid) { res.statusCode = 302; res.setHeader('location', kaal); res.setHeader('cache-control', 'no-store'); return res.end(); }
       const clickid = 'org-' + k + '-' + (post || 'x') + '-' + randomBytes(6).toString('hex');
-      return await direct(req, res, { net: 'x', clickid, zone: 'o' + k, cr: '', camp: post, pid, code: shortId('x:' + clickid), bot, vrij: true, bron: { source: KAN[k], medium: 'social', campaign: post || KAN[k] } }); } // zone = kanaal, camp = post: Clickmind telt de hele keten (klik, echt mens, actie, mandje, koop) per kanaal en per post (sh-x-zo<k>-<stap>, sh-x-k<post>-<stap>)
+      return await direct(req, res, { net: 'x', clickid, zone: 'o' + k, cr: '', camp: post, pid, pakket: pk ? pk.slug : null, code: shortId('x:' + clickid), bot, vrij: true, bron: { source: KAN[k], medium: 'social', campaign: post || KAN[k] } }); } // zone = kanaal, camp = post: Clickmind telt de hele keten (klik, echt mens, actie, mandje, koop) per kanaal en per post (sh-x-zo<k>-<stap>, sh-x-k<post>-<stap>)
     if (op === 'orgstand') { // openbaar, alleen totalen: kliks per organisch kanaal per dag (?dagen=7)
       const n = Math.min(30, Math.max(1, Number(url.searchParams.get('dagen')) || 7));
       return res.status(200).json(Object.assign({ ok: true, uitleg: 'kliks per dag (org:d), keten per kanaal en per post via Clickmind (kliks, echt mens, actie, mandje, koop; sinds 16 nov 23:00 UTC)' }, await orgStand(kv, n))); }
