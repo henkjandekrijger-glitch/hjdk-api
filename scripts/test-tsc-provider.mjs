@@ -61,8 +61,8 @@ for (const language of LANGS) {
   assert.match(summary, language === 'nl' ? /maatregel van een toezichthouder/ : language === 'de' ? /Aufsichtsmaßnahme/ : /regulator action/);
 }
 assert.match(linkLayer.rankSeoTitle(korea, 'nl'), /25 aanbieders vergeleken/);
-assert.match(linkLayer.rankSeoTitle(korea, 'en'), /25 providers compared/);
-assert.match(linkLayer.rankSeoTitle(korea, 'de'), /25 Anbieter im Vergleich/);
+assert.match(linkLayer.rankSeoTitle(korea, 'en'), /25 clinics and doctors compared/);
+assert.match(linkLayer.rankSeoTitle(korea, 'de'), /25 Kliniken und Ärzte im Vergleich/);
 ok('Korea-prijs noemt inclusies en open posten; FTC-maatregel heet geen medisch incident; artsen tellen niet als klinieken');
 
 for (const e of entries) for (const language of LANGS) {
