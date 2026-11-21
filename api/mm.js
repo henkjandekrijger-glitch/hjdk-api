@@ -224,7 +224,7 @@ export default async function handler(req, res) {
       cors(res); res.setHeader('cache-control', 'no-store'); if (req.method === 'OPTIONS') return res.status(204).end();
       const PF = await import('../lib/proef.js');
       if (op === 'proefkies') return res.status(200).json(await PF.proefBeslis(kv, { site: q('site'), ctx: q('c') }).catch(() => ({ ok: false })));
-      if (op === 'proefev') { const b = req.method === 'POST' ? (leesJson(req.body) || {}) : Object.fromEntries(url.searchParams); return res.status(200).json(await PF.proefEv(kv, b).catch(() => ({ ok: false }))); }
+      if (op === 'proefev') { const b = req.method === 'POST' ? (leesJson(req.body) || {}) : Object.fromEntries(url.searchParams); return res.status(200).json(await PF.proefEv(kv, b, req).catch(() => ({ ok: false }))); }
       if (op === 'proefstand') { const s = await PF.proefStand(kv, q('site') || 'kadoly'); if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(PF.proefTekst(s)); } return res.status(200).json(s); }
       if (!beschermd(req)) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde vercel.app-host' });
       return res.status(200).json(await PF.proefZet(kv, q('site') || 'kadoly', { aan: q('aan') == null ? null : q('aan') === '1', j: q('j') || (req.method === 'POST' ? leesJson(req.body) : null), ronde: q('ronde') === '1' }).catch(e => ({ ok: false, fout: String(e.message || e) })));
