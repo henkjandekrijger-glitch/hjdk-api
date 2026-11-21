@@ -1,15 +1,14 @@
 {
  "uitleg": "Producten die passen bij wat nu trending is op TikTok NL. De dagelijkse TikTok-trendscan (geplande taak 'Kadoly TikTok-trendscan') zet hier hoogstens 10 product-id's met de trend erbij; /api/shop?op=videoplan (lib/kadolyvideoplan.js) geeft ze voorrang in de video's van de nacht.",
- "bijgewerkt": "2026-11-20",
+ "bijgewerkt": "2026-11-21",
  "pids": [
   "oc_4174003419430913",
-  "oc_4174003419709441",
+  "oc_4174002164400133",
   "oc_4174003357777921",
   "oc_4174003356876801",
-  "oc_4174002164400133",
   "oc_4173959227441153",
   "oc_4174003357499393",
-  "oc_4174003731562498",
+  "oc_4174003419709441",
   "oc_4174002202804226",
   "oc_4174002165055489"
  ],
@@ -24,32 +23,26 @@
    ]
   },
   {
-   "hashtag": "schoentjezetten",
-   "rank_change": 22,
-   "woord": "klein cadeau (Sinterklaas); schoencadeau nieuw in top 50",
-   "pids": []
+   "hashtag": "fragrancetok",
+   "rank_change": 16,
+   "woord": "geur, diffuser (ook perfumetok +14)",
+   "pids": [
+    "oc_4174002164400133"
+   ]
   },
   {
    "hashtag": "christmastree",
-   "rank_change": 15,
+   "rank_change": 12,
    "woord": "kerstboom",
    "pids": [
     "oc_4174003357777921"
    ]
   },
   {
-   "hashtag": "sieraden",
+   "hashtag": "heatlesscurls",
    "rank_change": 10,
-   "woord": "sieraden (niets met marge 8)",
+   "woord": "krullen zonder hitte (niets in de shop met marge 8)",
    "pids": []
-  },
-  {
-   "hashtag": "fragrance",
-   "rank_change": 9,
-   "woord": "geur, diffuser",
-   "pids": [
-    "oc_4174002164400133"
-   ]
   },
   {
    "hashtag": "interieurstyling",
@@ -61,12 +54,18 @@
   },
   {
    "hashtag": "uitzet",
-   "rank_change": 8,
+   "rank_change": 7,
    "woord": "servies",
    "pids": [
     "oc_4174003356876801",
     "oc_4174003357499393"
    ]
+  },
+  {
+   "hashtag": "schoencadeau",
+   "rank_change": "NEW",
+   "woord": "klein cadeau (Sinterklaas); nieuw in top 50, geen match met marge 8",
+   "pids": []
   }
  ]
 }
