@@ -26,6 +26,8 @@ jobs:
         with:
           node-version: '24'
           package-manager-cache: false
+      - name: Install runtime dependencies
+        run: npm install --no-audit --no-fund
       - name: Core choices, signup, quote tools and rendered pages
         run: node scripts/test-tsc-choice.mjs
       - name: Provider pages, ranking summaries and data pages
