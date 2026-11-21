@@ -43,7 +43,7 @@ import { K_KOST, ontvang as margeOntvang, margeStand, zetMarge } from '../lib/sh
 import { gebruikerVan, koppel as cmKoppel, zoek as cmZoek, zetOpKlik as cmZetOpKlik, telMatch as cmTel } from '../lib/cmmatch.js'; // 20 nov: Clickmind-matching (verkopen terugvinden, herkenning zonder klik-id)
 import { prijsStand, prijsCsv } from '../lib/shopprijs.js';
 import { testRonde, testLabels, testTekst, TT_TEST } from '../lib/tttest.js';
-import { kiesBundel, bundelOpenbaar, bundelTekst, bundelCode, BUNDEL_REGEL } from '../lib/bundel.js';
+import { kiesBundel, bundelOpenbaar, bundelTekst, bundelCode, BUNDEL_REGEL, bundelKandidaten, geldigeSets } from '../lib/bundel.js';
 import { kiesPakketten, pakketTekst, PAKKET_SOORTEN } from '../lib/pakket.js';
 import { videoPlan, VIDEO_REGEL } from '../lib/kadolyvideoplan.js';
 import reels from '../kadoly/reels.json' with { type: 'json' };
@@ -1107,6 +1107,21 @@ export default async function handler(req, res) {
         .sort((a, b) => b.marge - a.marge);
       const nu = (await kv.get('hjdk:shop:pakket:nu').catch(() => null)) || {}; const pak = []; for (const code of Object.values(nu)) { const p0 = await kv.get('hjdk:shop:bundel:' + code).catch(() => null); if (p0) pak.push({ code: p0.code, naam: p0.naam, titel: p0.titel, totaal: p0.totaal, marge: p0.marge, link: 'https://go.kadoly.com/shop?bundel=' + p0.code }); }
       res.setHeader('cache-control', 'no-store'); return res.status(200).json({ ok: true, regel: 'uniek = niet één-op-één bij bol/Amazon (wel kan de merksite of een andere winkel het hebben), marge >= ' + minM, pakketten: pak, uniek: uniek.slice(0, 60), aantalUniek: uniek.length }); }
+    if (op === 'pakketlab') { // 21 nov (Henkjan: "Ga alle pakketten nog een keer beconomics na"): pakketten verkennen, alleen beschermde host. ?q=[{id,w:[woorden],niet:[..],merk,max,min,n,div,los}] (hooguit 12)
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      let Q = []; try { Q = JSON.parse(url.searchParams.get('q') || '[]').slice(0, 12); } catch (e) { return res.status(400).json({ ok: false, fout: 'q is geen JSON' }); }
+      const cat = await catalog(), kaart = (await kv.get(K_KOST).catch(() => null)) || {}; let markt = {};
+      try { const r = await fetch('https://demandradar-ivory.vercel.app/api/feed?shop=yoors&cc=NL&prices=1', { signal: AbortSignal.timeout(9000) }); if (r.ok) markt = ((await r.json()) || {}).items || {}; } catch (e) {}
+      const perId = {}; cat.items.forEach(i => { perId[i.id] = i; }); const r2l = v => Math.round(v * 100) / 100;
+      const kortItem = x => ({ id: x.id, t: String(x.t).slice(0, 80), b: x.b, nu: x.nu, mg: r2l(x.deel / 1.21 - x.c), lt: perId[x.id] && perId[x.id].lt != null ? perId[x.id].lt : null, so30: perId[x.id] ? perId[x.id].so30 || 0 : 0, i: x.interesse });
+      const uit = Q.map(q => {
+        const w = (q.w || []).map(s => String(s).toLowerCase()), niet = (q.niet || []).map(s => String(s).toLowerCase()), merk = String(q.merk || '').toLowerCase();
+        const kand = bundelKandidaten(cat.items, kaart, markt, w.length ? w : null, niet.length ? niet : null).filter(x => !merk || String(x.b).toLowerCase().includes(merk));
+        if (q.los) return { id: q.id, kandidaten: kand.length, los: kand.sort((a, b) => b.interesse - a.interesse).slice(0, Math.min(40, q.n || 20)).map(kortItem) };
+        const g = geldigeSets(kand, { maxTotaal: num(q.max) || 99.95, divers: q.div !== false });
+        return { id: q.id, kandidaten: kand.length, sets: g.goed.filter(s => s.totaal >= (num(q.min) || 0)).slice(0, Math.min(10, q.n || 5)).map(s => ({ merk: s.merk, totaal: s.totaal, marge: s.marge, losOns: s.losOns, bespaar: s.besparing, items: s.items.map(kortItem) })) };
+      });
+      res.setHeader('cache-control', 'no-store'); return res.status(200).json({ ok: true, items: cat.items.length, uit }); }
     if (op === 'pakketten') { // 20 nov: de pakketten van nu (lib/pakket.js). Openbaar: lijst voor de shop (kadoly.com/pakketten) zonder inkoop of marge. Beschermde host: &vorm=tekst met marge, &ronde=1 (&droog=1) rekent opnieuw
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0], intern = /\.vercel\.app$/i.test(host);
       res.setHeader('cache-control', 'no-store'); res.setHeader('access-control-allow-origin', '*');
