@@ -209,4 +209,13 @@ Nog te doen: hardcover (nu 137 p., wit, met bleed, drukprijs $7,29): zelfde binn
 3. Nieuwjaar: 2027-planners onder het LC-merk (habit tracker 2027, goal planner 2027), gebouwd met de LC-bouwer.
 4. Geen ads waar de ROAS onder break-even zit zonder dat de totale royalty stijgt.
 
+**Per boek (21 nov, nov 1-21 $413):** Teens maakt 63% van de royalty. De nieuwe titels (LC, WTT, For Men, Adventskalender, Moment mal) brachten in november $0. Les: ads op een titel zonder reviews verkopen niet; elk rapport begint met royalty per boek.
+
+**Gedaan 21 nov:**
+- Ads uit op de titels zonder reviews: KDP Wait Thats True EXACT | 12nov, KDP For Men KERST EXACT 0.45 | 13nov, KDP Feitenboeken PT concurrenten 0.35 | 13nov, KDP For Men CA PT op Teens. Alle vier op pauze. Pas weer aan met reviews.
+- Nieuw: KDP Bible Color AUTO 0.15 | 21nov (A05440301GA9J3I32O129), VS, auto, bod $0,15, $5/dag, down only, sites Amazon, geen bodverhoging op drukke dagen. Bible Color verkoopt organisch (41 reviews, $9,81). Na 7 dagen oordelen: ACOS boven de marge = uit.
+- Australië: de vier bestaande AU-campagnes staan op pauze (Australia auto Experiment A00584943OIP94V35W3YL op A$100/dag en drie op A$25/dag). Niet aanzetten; de Teens-test (A$10/dag, alleen Teens) wacht op Henkjans login op amazon.com.au.
+
+**Voorstel 21 nov, wacht op akkoord:** (1) Teens overal: CA-push door tot 20 dec, AU-test, VS/VK lage boden op concurrenten; (2) volg wat organisch verkoopt (Bible Color VS, Apocrypha VK); (3) geen ads op titels zonder reviews; (4) PIT BOSS 1 dec opnieuw met de 11 winnaars op $17,99.
+
 **Echt jetzt?! (kdp/bouw/teens_de):** 400 Duitse feiten in 20 hoofdstukken, gebaseerd op Teens maar gecorrigeerd: de vele mythes en dubbelingen uit het Engelse boek (o.a. Mona Lisa vrije dag, 17 spieren om te lachen, kauwgom 7 jaar) zijn vervangen door feiten die kloppen. 80 p. 6x9, wit, Wahr-oder-falsch-quiz. Omslag in de Teens-stijl (zwart, geel, emoji), geen rugtekst (80 p.), hardcover-omslag 13,944 x 10,417 in (rug 0,369, gelijk aan de Adventskalender; controleer in de KDP-calculator). Prijs EUR 9,99 (past in het wichtelbudget van 10 euro), hardcover EUR 17,99. Metadata en beschrijving: kdp.json. Bouwen: `python3 bouw_boek.py teens_de uit.pdf` (vanuit kdp/bouw) en `python3 omslag_cfg.py 80` / `python3 omslag_cfg.py 80 hard`.
