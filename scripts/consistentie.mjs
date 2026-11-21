@@ -46,6 +46,8 @@ const METEN = () => {
     // 5 gevulde knop in een andere kleur dan vlagblauw (WhatsApp en Telegram mogen hun eigen kleur)
     if ((e.tagName === 'BUTTON' || (e.tagName === 'A' && parseFloat(c.paddingLeft) >= 10)) && heeftBg && !wit(bg) && !gelijk(bg, VLAG) && !gelijk(bg, ZACHT) && !/wa\.me|t\.me|whatsapp|telegram/i.test((e.getAttribute('href') || '') + e.className) && !e.closest('.rz-ama,header')) f.push(['gevulde-knop', naam(e) + ' ' + c.backgroundColor]);
   }
+  // 5b de regel boven de titel (A Curaçao day · peildatum) blijft gewone tekst, geen hoofdletters (21 nov 2026)
+  { let k = document.querySelector('main h1'); while (k && (k = k.previousElementSibling) && !(k.classList && k.classList.contains('eyebrow'))); if (k && getComputedStyle(k).textTransform === 'uppercase') f.push(['kicker-hoofdletters', naam(k)]); }
   // 6 chat zonder de look van de site
   for (const e of document.querySelectorAll('[data-cw-ama]')) if (!e.closest('.rz-ama')) f.push(['chat-oud', naam(e)]);
   // 7 aanmeldvak twee keer zichtbaar
