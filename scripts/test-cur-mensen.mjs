@@ -119,6 +119,7 @@ try {
     assert.equal(await page.locator('h1').innerText(), 'Pizzarroni');
     assert(await page.locator('main .tik').evaluate(el => el.getBoundingClientRect().bottom <= 800), 'knoppen in eerste mobiele scherm');
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'geen horizontaal scrollen');
+    assert.equal(await page.locator('#bz-chat .ama-vb a').first().evaluate(el => getComputedStyle(el).color), 'rgb(17, 17, 19)', 'chatpills zwart');
     await page.screenshot({ path: 'curacao-mobiel.png', fullPage: true });
     await page.setViewportSize({ width: 1280, height: 900 });
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'desktop zonder horizontaal scrollen');
