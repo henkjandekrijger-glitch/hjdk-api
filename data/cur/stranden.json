@@ -2588,14 +2588,14 @@
     "bedrag": 3,
     "valuta": "USD",
     "eenheid": {
-     "nl": "per persoon, na 16:30 gratis",
-     "en": "per person, free after 4:30 p.m.",
-     "de": "pro Person, ab 16:30 Uhr frei",
-     "es": "por persona, gratis después de las 4:30 p. m.",
-     "pt": "por pessoa, grátis depois das 16h30"
+     "nl": "per persoon (3 gulden met sedula), na 16:30 gratis",
+     "en": "per person (3 guilders with a sedula), free after 16:30",
+     "de": "pro Person (3 Gulden mit Sedula), ab 16:30 frei",
+     "es": "por persona (3 florines con sedula), gratis después de las 16:30",
+     "pt": "por pessoa (3 florins com sedula), grátis depois das 16:30"
     },
-    "bron": "https://nomadicniko.com/curacao/beaches/",
-    "datum": "2026-01"
+    "bron": "https://www.janthielbeach.com/",
+    "datum": "2026-11"
    },
    "feiten": [
     {
