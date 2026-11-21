@@ -53,7 +53,7 @@ export default async function handler(req, res) {
       if (!beschermd && !lus && !cron) return res.status(404).send('Niet gevonden');
       const uit = { at: new Date().toISOString() };
       if (op === 'nacht') { try { await vraagIdx(true); } catch (e) {} uit.scan = await dpScan({ maxPaginas: 60, tijd: 220e3 }); }
-      const feed = await dpFeed(); uit.brug = Object.assign(keurStand(feed.producten), { vraagdata: feed.vraagdata, lijst: feed.producten.map(p => ({ sku: p.sku, titel: p.titel, categorie: p.categorie, prijs_kadoly: p.prijs_kadoly, keur: p.keur })).sort((a, b) => b.keur.score - a.keur.score) });
+      const feed = { producten: [], vraagdata: false }; for (let s = 0; s < 5000; s += 500) { const f = await dpFeed({ start: s, size: 500 }); feed.producten.push(...f.producten); feed.vraagdata = f.vraagdata; if (!f.volgende) break; } uit.brug = Object.assign(keurStand(feed.producten), { vraagdata: feed.vraagdata, lijst: feed.producten.map(p => ({ sku: p.sku, titel: p.titel, categorie: p.categorie, prijs_kadoly: p.prijs_kadoly, keur: p.keur })).sort((a, b) => b.keur.score - a.keur.score) });
       const inBrug = new Set(feed.producten.map(p => p.sku).filter(Boolean)); const titels = new Map(feed.producten.map(p => [p.sku, p.titel])); const onderdelen = new Set(feed.producten.filter(p => p.fitting_sku).map(p => p.fitting_sku));
       uit.catalogus = (op === 'nacht' || q.get('vers')) ? await dpKeurCatalogus({ inBrug, onderdelen, titels }) : (await dpKeurLaatste()) || { ok: false, fout: 'nog geen keuring van de catalogus (token of nachtronde)' };
       if (q.get('kort')) { uit.brug.lijst = uit.brug.lijst.slice(0, 40); if (uit.catalogus && uit.catalogus.importeer) uit.catalogus.importeer = uit.catalogus.importeer.slice(0, 60); }
@@ -61,7 +61,7 @@ export default async function handler(req, res) {
     }
     if (op === 'stand') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json(await dpStand()); }
     if (op === 'log') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json(await dpLog(Number(q.get('n')) || 100)); }
-    if (op === 'feed') { if (!beschermd && !lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' }); return res.status(200).json(await dpFeed()); }
+    if (op === 'feed') { if (!beschermd && !lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' }); return res.status(200).json(await dpFeed({ start: q.get('start'), size: q.get('size') })); }
     if (op === 'order') {
       if (!lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' });
       if (req.method !== 'POST') return res.status(405).json({ ok: false, fout: 'POST' });
