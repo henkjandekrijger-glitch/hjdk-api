@@ -100,14 +100,32 @@ try {
     await context.close();
   }
   // Ontwerpcontrole van de echte gerenderde pagina, wanneer een preview is opgegeven.
-  if (process.env.CUR_PREVIEW_URL) {
-    const page = await browser.newPage({ viewport: { width: 390, height: 800 } });
-    await page.goto(process.env.CUR_PREVIEW_URL);
+  if (process.env.CUR_PREVIEW_HTML) {
+    const html = readFileSync(process.env.CUR_PREVIEW_HTML, 'utf8');
+    const context = await browser.newContext({ viewport: { width: 390, height: 800 }, userAgent: UA, colorScheme: 'light' });
+    await context.addInitScript(() => Object.defineProperty(navigator, 'webdriver', { get: () => false }));
+    const page = await context.newPage(), fouten = [];
+    page.on('pageerror', e => fouten.push(e.message));
+    await page.route('**/*', async route => {
+      const request = route.request(), url = new URL(request.url());
+      if (url.pathname === '/nl/bedrijven/pizza-restaurant/pizzarroni') return route.fulfill({ status: 200, contentType: 'text/html', body: html });
+      if (url.pathname === '/api/cw' && url.searchParams.get('w') === 'chatjs') return route.continue();
+      if (request.method() !== 'GET' || url.pathname.startsWith('/api/')) return route.fulfill({ status: 200, contentType: 'application/json', body: '{}' });
+      return route.continue();
+    });
+    await page.goto('https://curacao.day/nl/bedrijven/pizza-restaurant/pizzarroni');
     await page.locator('#bedrijf-sealed-voorbeeld').waitFor({ state: 'attached' });
-    assert(await page.locator('h1').innerText());
+    await page.locator('#bz-chat .ama').waitFor({ state: 'visible', timeout: 15000 });
+    assert.equal(await page.locator('h1').innerText(), 'Pizzarroni');
+    assert(await page.locator('main .tik').evaluate(el => el.getBoundingClientRect().bottom <= 800), 'knoppen in eerste mobiele scherm');
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'geen horizontaal scrollen');
     await page.screenshot({ path: 'curacao-mobiel.png', fullPage: true });
     await page.setViewportSize({ width: 1280, height: 900 });
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'desktop zonder horizontaal scrollen');
     await page.screenshot({ path: 'curacao-desktop.png', fullPage: true });
+    console.log('OK volledige gerenderde preview op 390 en 1280 px; screenshots opgeslagen');
+    console.log('Paginafouten bij externe scripts: ' + JSON.stringify(fouten));
+    await context.close();
   }
 } finally {
   if (browser) await browser.close();

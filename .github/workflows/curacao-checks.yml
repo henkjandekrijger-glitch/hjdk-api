@@ -11,6 +11,8 @@ permissions:
   contents: read
 jobs:
   meting:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 10
     services:
@@ -36,3 +38,19 @@ jobs:
         env:
           VERCEL_ENV: preview
           CUR_REDIS_URL: redis://127.0.0.1:6379
+          CUR_PREVIEW_HTML: scripts/fixtures/curacao-bedrijf-preview.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: curacao-ontwerp
+          path: curacao-*.png
+      - name: Bewaar voorbeeldbeelden in deze previewbranch
+        env:
+          PREVIEW_BRANCH: codex/curacao-stap0-sealed
+        run: |
+          mkdir -p docs/preview
+          cp curacao-mobiel.png curacao-desktop.png docs/preview/
+          git config user.name "Codex preview"
+          git config user.email "noreply@openai.com"
+          git add docs/preview/curacao-mobiel.png docs/preview/curacao-desktop.png
+          git diff --cached --quiet || git commit -m "docs: mobile and desktop screenshots of Curaçao preview"
+          git push origin "HEAD:$PREVIEW_BRANCH"
