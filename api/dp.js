@@ -106,6 +106,21 @@ export default async function handler(req, res) {
       const r = await H.shAuthTerug(q); res.setHeader('content-type', 'text/html; charset=utf-8');
       return res.status(200).send(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Inkoopwinkel</title><body style="font:16px/1.5 system-ui;max-width:640px;margin:32px auto;padding:0 16px;color:#0b1620"><h1 style="font-size:24px">Kadoly Inkoop</h1>${r.ok ? `<p style="background:#e6f4ea;color:#0a5c2b;padding:12px;border-radius:8px"><b>Gekoppeld.</b> ${esc((r.winkel && r.winkel.name) || 'De winkel')} antwoordt, ${esc(String(r.producten == null ? 0 : r.producten))} producten. Je mag dit venster sluiten.</p>` : `<p style="background:#fde8e8;color:#8a1010;padding:12px;border-radius:8px"><b>Niet gelukt.</b> ${esc(r.fout)}</p>`}</body>`);
     }
+    if (op === 'shthemazip') { // Shopify haalt het thema op (openbare host, eenmalige sleutel van op=shthema&doe=maak)
+      const T = await import('../lib/shoptheme.js');
+      if (!(await T.themaZipSleutel(String(q.get('k') || '')))) return res.status(404).send('Niet gevonden');
+      const z = T.zip(await T.bouwThema()); res.setHeader('content-type', 'application/zip'); res.setHeader('content-disposition', 'attachment; filename="kadoly-thema.zip"'); return res.status(200).send(z);
+    }
+    if (op === 'shvernieuw' || op === 'shthema') {
+      if (!beschermd && !(cron && op === 'shthema' && q.get('doe') === 'sync')) return res.status(404).send('Niet gevonden');
+      if (op === 'shvernieuw') { const H = await import('../lib/shophub.js'); return res.status(200).json(await H.shVernieuw()); }
+      const T = await import('../lib/shoptheme.js'); const doe = String(q.get('doe') || 'stand');
+      if (doe === 'maak') return res.status(200).json(await T.themaMaak({}));
+      if (doe === 'sync') { const r = await T.themaSync({}); if (cron && !r.ok && r.fout !== 'nog geen thema (op=shthema&doe=maak)') await awLog('Kadoly-thema Shopify: bijwerken uit kadoly.com mislukt: ' + (r.fouten || [r.fout]).join('; ').slice(0, 200)); return res.status(200).json(r); }
+      if (doe === 'publiceer') { if (q.get('ja') !== 'henkjan') return res.status(400).json({ ok: false, fout: 'live zetten alleen op Henkjans woord: &ja=henkjan' }); return res.status(200).json(await T.themaPubliceer()); }
+      if (doe === 'bestand') { const f = await T.bouwThema(); const n = String(q.get('n') || ''); res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(f[n] ? 200 : 404).send(f[n] || Object.keys(f).map(k => k + ' ' + f[k].length).join('\n')); }
+      return res.status(200).json(await T.themaStand());
+    }
     if (op === 'shstand' || op === 'shscan' || op === 'shnacht' || op === 'shfeed' || op === 'shorder') {
       const H = await import('../lib/shophub.js');
       if (op === 'shstand') { if (!beschermd) return res.status(404).send('Niet gevonden'); const k = await H.shKeur(); delete k.lijst; return res.status(200).json({ toegang: await H.shStandToegang(), keuring: k, orders: await H.shOrders() }); }
