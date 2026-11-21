@@ -10,6 +10,6 @@
     "@vercel/blob": "2.8.0"
   },
   "scripts": {
-    "build": "node scripts/rooktest.mjs"
+    "rooktest": "node scripts/rooktest.mjs"
   }
 }
