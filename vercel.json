@@ -253,6 +253,10 @@
       "schedule": "47 4 * * *"
     },
     {
+      "path": "/api/dp?op=nacht",
+      "schedule": "53 4 * * *"
+    },
+    {
       "path": "/api/shop?op=ttproef",
       "schedule": "57 4 * * *"
     },
@@ -2340,6 +2344,9 @@
     "api/wtb.js": {
       "maxDuration": 30,
       "includeFiles": "{OVERDRACHT-KDP.md,OVERDRACHT-TANIAKROSS.md,kdp/rapport.md,kdp/wachtrij.md,kdp/boekwedstrijd.md}"
+    },
+    "api/dp.js": {
+      "maxDuration": 300
     },
     "api/shop.js": {
       "maxDuration": 300,
