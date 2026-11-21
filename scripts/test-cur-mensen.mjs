@@ -120,7 +120,10 @@ try {
     assert(await page.locator('main .tik').evaluate(el => el.getBoundingClientRect().bottom <= 800), 'knoppen in eerste mobiele scherm');
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'geen horizontaal scrollen');
     assert.equal(await page.locator('#bz-chat .ama-vb a').first().evaluate(el => getComputedStyle(el).color), 'rgb(17, 17, 19)', 'chatpills zwart');
-    await page.screenshot({ path: 'curacao-mobiel.png', fullPage: true });
+    await page.waitForTimeout(400);
+    assert(await page.locator('.cwg').evaluate(el => el.childElementCount <= 1), 'Google-aanmelding niet dubbel');
+    await page.screenshot({ path: 'curacao-mobiel-volledig.png', fullPage: true });
+    await page.screenshot({ path: 'curacao-mobiel.png', fullPage: false });
     await page.setViewportSize({ width: 1280, height: 900 });
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'desktop zonder horizontaal scrollen');
     await page.screenshot({ path: 'curacao-desktop.png', fullPage: true });
