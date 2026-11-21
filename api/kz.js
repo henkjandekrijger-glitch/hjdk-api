@@ -177,7 +177,8 @@ function herkomst(req, q) { // waar komt een (niet-betaalde) bezoeker vandaan: z
   if (/chatgpt\.com$|openai\.com$/.test(h)) return 'chatgpt'; if (/perplexity/.test(h)) return 'perplexity'; if (/copilot\.microsoft/.test(h)) return 'copilot'; if (/claude\.ai$/.test(h)) return 'claude'; if (/pinterest\./.test(h)) return 'pinterest';
   if (/facebook|instagram|t\.co$|x\.com$|twitter|linkedin|reddit|tiktok|whatsapp/.test(h)) return 'social'; return 'overig';
 }
-function botHits(req, wat) { const b = botName(String(req.headers['user-agent'] || '')); return b ? [['c:hjdk6-kz-bott-' + b, 1], ['c:hjdk6-kz-bot-' + b + '-' + wat, 1], ['c:hjdk6-kz-botd-' + DAYK() + '-' + b, 1]] : []; }
+function botHits(req, wat) { const b = botName(String(req.headers['user-agent'] || '')); return b ? [['c:hjdk6-kz-bott-' + b, 1], ['c:hjdk6-kz-bot-' + b + '-' + wat, 1]] : []; } // dagteller botd telt sinds 21 nov in de handler voor elke pagina (botDag)
+export function botDag(req) { const b = botName(String(req.headers['user-agent'] || '')); return b && b !== 'overig' && /^(GET|HEAD)$/.test(req.method || 'GET') ? [['c:hjdk6-kz-botd-' + DAYK() + '-' + b, 1]] : []; } // 21 nov 2026: Googlebot werd alleen op productpagina's geteld; voorpagina, categorieën en gidsen (api/keuze-tools) niet, waardoor de crawlstop onterecht aan bleef
 async function uitgelichtNu() { try { const u = await kv.get('hjdk:kz:uitgelicht'); if (u && u.dag && u.dag >= new Date(Date.now() - 2 * 864e5).toISOString().slice(0, 10) && Array.isArray(u.blokken)) return u.blokken.map(b => ({ naam: b.naam, waarom: b.waarom, slugs: b.slugs || [] })); } catch (e) {} return []; }
 function recent(items, n) { const lim = new Date(Date.now() - 864e5).toISOString().slice(0, 10); const r = items.filter(i => i.publishAt && i.publishAt >= lim && i.publishAt <= TODAY()).sort((a, b) => String(b.publishAt).localeCompare(String(a.publishAt))); return r.length ? r.slice(0, n) : (newest(items) ? [newest(items)] : []); }
 function newest(items) { const dated = items.filter(i => i.publishAt).sort((a, b) => String(b.publishAt).localeCompare(String(a.publishAt))); return dated[0] || items[items.length - 1] || null; }
@@ -801,6 +802,7 @@ export default async function handler(req, res) {
   ONTWERP2 = url.searchParams.get('ontwerp') !== '1'; // nieuwe huisstijl is standaard (Henkjan 20 okt), ?ontwerp=1 toont de oude
   const op = url.searchParams.get('op') || '';
   if (req.method === 'OPTIONS') return res.status(204).end();
+  { const bd = botDag(req); if (bd.length) { try { await kv.incrMany(bd); } catch (e) {} } }
   try { const host = String(req.headers.host || ''); if (SITE.domain && host === SITE.domain && !domainSeen) { domainSeen = true; await kv.set('hjdk:kz:domainok', { at: Date.now() }); } } catch (e) {} /* eigen domein gezien -> mails linken ernaar */
   const slug = (url.searchParams.get('slug') || '').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 60);
   try {

@@ -1148,5 +1148,17 @@
   "moeite": 1,
   "meten": "index.dag in /api/zicht?op=stand gelijk aan vandaag voor kz, us en de; geen Runtime Timeout op /api/gsc",
   "status": "actief"
+ },
+ {
+  "id": "crawlteller-elke-route",
+  "les": "Tel crawlers per domein op elke route die dat domein serveert, niet alleen in één handler. Een crawlteller die maar een deel van de pagina's ziet, meldt een instorting die er misschien niet is, en een rem die daarop reageert (geen nieuwe pagina's) blijft dan onterecht aan.",
+  "kanaal": "google",
+  "bewijs": "21 nov 2026: Googlebot op keuzehulp.best telde alleen in page() van api/kz.js (productkeuzehulpen). De voorpagina en ruim 60 routes (dienstgidsen, rekenhulpen, Rotterdam, advocaat, rijschool) lopen via api/keuze-tools en telden niet mee. Stand: 3 keer Googlebot in 7 dagen tegen 16 daarvoor, crawlStop en kernPauze aan, 0 nieuwe NL-pagina's; whichtobuy.best (teller in de hele handler) zag 80 in 7 dagen.",
+  "bron": "dagcontrole 21 nov 2026, /api/zicht?op=stand&site=kz (crawl.googlebot7d) en vercel.json rewrites voor keuzehulp.best",
+  "sterkte": 2,
+  "effect": 2,
+  "moeite": 1,
+  "meten": "crawl.googlebot7d voor kz in /api/zicht?op=stand vanaf 22 nov; stijgt hij boven 8 (helft van 16), dan gaat de crawlstop vanzelf uit. Blijft hij laag, dan is de instorting echt.",
+  "status": "actief"
  }
 ]
