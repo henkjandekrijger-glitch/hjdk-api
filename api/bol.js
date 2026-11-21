@@ -102,9 +102,10 @@ export default async function handler(req, res) {
       if (url.searchParams.get('only') === 'sites') return res.status(200).json({ ok: true, what, from, to, bySite: round(bySite), total: round(total).all });
       return res.status(200).json({ ok: true, what, from, to, n: rows.length, total: round(total).all, bySite: round(bySite), byDay: round(byDay), byDayBron, byDayGroup, byGroup: round(byGroup), byPct: round(byPct), byProduct: round(byProduct), subIds: subTop });
     }
+    if (op === 'inkomsten') { const I = await import('../lib/inkomsten.js'); if (url.searchParams.get('namen')) await I.awinNamen(); const x = await I.inkomsten(url.searchParams.get('dagen') || 30); if (url.searchParams.get('vorm') === 'html') { res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(I.inkomstenHtml(x)); } return res.status(200).json(x); } // één inkomstendashboard (21 nov 2026)
     if (op === 'awinprog') { const A = await import('../lib/aff.js'); return res.status(200).json(await A.awinProg(String(url.searchParams.get('rel') || 'rejected'), String(url.searchParams.get('land') || '').toUpperCase().slice(0, 2))); }
     if (op === 'learn') {
-      try { const A = await import('../lib/aff.js'); await A.awinSync(7); } catch (e) {} // Coolblue en andere Awin-verkopen mee in dezelfde 6-uursronde (21 nov 2026)
+      try { const A = await import('../lib/aff.js'); await A.awinSync(7); const I = await import('../lib/inkomsten.js'); await I.awinNamen(); } catch (e) {} // Coolblue en andere Awin-verkopen mee in dezelfde 6-uursronde (21 nov 2026)
       // Leren op ORDERS (cron elke 6 uur, ook handmatig): bol-orders van de laatste `days` dagen koppelen aan pagina/zone/lay-out/clickid,
       // elke nieuwe order als conversie goal=2 (payout = commissie) terugmelden aan het netwerk, en per zone/pagina orders + commissie per 1.000 kliks berekenen.
       const REP = 'https://api.bol.com/marketing/affiliate/reports/v2';
