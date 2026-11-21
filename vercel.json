@@ -257,6 +257,10 @@
       "schedule": "53 4 * * *"
     },
     {
+      "path": "/api/dp?op=awkeur",
+      "schedule": "23 5 * * *"
+    },
+    {
       "path": "/api/shop?op=ttproef",
       "schedule": "57 4 * * *"
     },

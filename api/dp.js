@@ -8,10 +8,13 @@
 //   /api/dp?op=token                               Droppery API-token plakken (beschermde host, POST; lib/dpapi.js, 21 nov 2026)
 //   /api/dp?op=api&pad=products&size=2             ruwe API-aanroep om de vorm te zien (beschermde host; token gaat nooit mee terug)
 //   /api/dp?op=scan | op=keur | op=nacht           catalogus inlezen, keuring (brug + catalogus), nachtronde (cron 04:53 UTC)
+//   AW Dropship EU (lib/awdrop.js, 21 nov 2026): op=awfeed (X-Lus-Key), op=awkeur (cron 05:23 UTC), op=awtoken, op=awstand,
+//   op=awapi (beschermde host), POST op=aworder (X-Lus-Key; mandje bij AW, betalen alleen met kv aw:order:auto = ja)
 import { wcRoute, dpSleutels, dpStand, dpLog, dpFeed, dpNieuweOrder, dpOrderStatus, DP_HOST } from '../lib/droppery.js';
 import { dpProbe, dpTokenZet, dpTokenStand, dpApi, dpScan, dpKeurCatalogus, dpKeurLaatste, vraagIdx } from '../lib/dpapi.js';
 import { keurStand } from '../lib/dpkeur.js';
 import { laterAf } from '../lib/mensmeter.js';
+import { awTokenZet, awTokenStand, awKeur, awKeurLaatste, awFeed, awApi, awNieuweOrder, awOrders, logRegel as awLog } from '../lib/awdrop.js';
 
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -58,6 +61,24 @@ export default async function handler(req, res) {
       uit.catalogus = (op === 'nacht' || q.get('vers')) ? await dpKeurCatalogus({ inBrug, onderdelen, titels }) : (await dpKeurLaatste()) || { ok: false, fout: 'nog geen keuring van de catalogus (token of nachtronde)' };
       if (q.get('kort')) { uit.brug.lijst = uit.brug.lijst.slice(0, 40); if (uit.catalogus && uit.catalogus.importeer) uit.catalogus.importeer = uit.catalogus.importeer.slice(0, 60); }
       return res.status(200).json(uit);
+    }
+    // AW Dropship EU (lib/awdrop.js, 21 nov 2026): eigen hoek "Rust & ritueel" in Kadoly
+    if (op === 'awtoken') {
+      if (!beschermd) return res.status(404).send('Niet gevonden');
+      let melding = '';
+      if (req.method === 'POST') { const b = typeof req.body === 'object' && req.body ? req.body : Object.fromEntries(new URLSearchParams(String(req.body || ''))); const r = await awTokenZet(b.token); melding = r.ok ? `<p style="background:#e6f4ea;color:#0a5c2b;padding:12px;border-radius:8px"><b>Gelukt.</b> AW antwoordt${r.profiel && r.profiel.naam ? ' (' + esc(r.profiel.naam) + ')' : ''}. Orders van Kadoly worden nu mandjes bij AW; je mag dit venster sluiten.</p>` : `<p style="background:#fde8e8;color:#8a1010;padding:12px;border-radius:8px"><b>Niet gelukt.</b> ${esc(r.fout)}</p>`; }
+      const st = await awTokenStand(); res.setHeader('content-type', 'text/html; charset=utf-8');
+      return res.status(200).send(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>AW API-token</title><body style="font:16px/1.5 system-ui;max-width:640px;margin:32px auto;padding:0 16px;color:#0b1620"><h1 style="font-size:24px">AW Dropship API-token voor Kadoly</h1>${melding}<p>${st.klaar ? 'Er staat al een token (sinds ' + esc(st.sinds || 'eerder') + '). Plak hieronder alleen een nieuw token als je het vervangt.' : 'Ga in <b>aw-dropship.eu</b> naar <b>Channels, Kadoly (Manual/API), Api</b>, druk op <b>Generate API token</b> en kopieer het hele token uit de popup. AW laat hem maar één keer zien.'}</p><form method="post"><p><label for="t"><b>Token</b></label><br><input id="t" name="token" type="password" autocomplete="off" required style="width:100%;font:16px monospace;padding:10px;border:2px solid #0b1620;border-radius:8px"></p><p><button style="font:700 16px system-ui;padding:12px 20px;border:0;border-radius:999px;background:#0b1620;color:#fff">Opslaan en testen</button></p></form><p>Het token wordt opgeslagen en nergens getoond. Deze pagina staat achter de Vercel-inlog.</p></body>`);
+    }
+    if (op === 'awkeur') { if (!beschermd && !lus && !cron) return res.status(404).send('Niet gevonden'); const k = await awKeur({ vers: true }); delete k.lijst; if (cron) await awLog('AW-keuring: ' + k.stand.inWinkel + ' van ' + k.inAanmerking + ' producten naar Rust & ritueel (' + Object.entries(k.perHoek).map(([h, n]) => h + ' ' + n).join(', ') + ')'); return res.status(200).json(k); }
+    if (op === 'awfeed') { if (!beschermd && !lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' }); return res.status(200).json(await awFeed({ start: q.get('start'), size: q.get('size'), alles: !!q.get('alles') && beschermd })); }
+    if (op === 'awstand') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json({ token: await awTokenStand(), keuring: await awKeurLaatste(), orders: await awOrders() }); }
+    if (op === 'awapi') { if (!beschermd) return res.status(404).send('Niet gevonden'); const pad = String(q.get('pad') || 'user-profile').replace(/[^a-z0-9/_-]/gi, '').slice(0, 80); const params = {}; for (const [k, v] of q.entries()) if (!['op', 'pad'].includes(k)) params[k] = v; const r = await awApi(pad, { params }); return res.status(200).json({ st: r.st, fout: r.fout || null, data: r.data, tekst: r.tekst }); }
+    if (op === 'aworder') {
+      if (!lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' });
+      if (req.method !== 'POST') return res.status(405).json({ ok: false, fout: 'POST' });
+      const b = typeof req.body === 'object' && req.body ? req.body : JSON.parse(req.body || '{}');
+      const r = await awNieuweOrder(b); return res.status(r.ok ? 200 : 400).json(r);
     }
     if (op === 'stand') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json(await dpStand()); }
     if (op === 'log') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json(await dpLog(Number(q.get('n')) || 100)); }
