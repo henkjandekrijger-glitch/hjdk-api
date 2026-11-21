@@ -14,7 +14,7 @@ import { wcRoute, dpSleutels, dpStand, dpLog, dpFeed, dpNieuweOrder, dpOrderStat
 import { dpProbe, dpTokenZet, dpTokenStand, dpApi, dpScan, dpKeurCatalogus, dpKeurLaatste, vraagIdx } from '../lib/dpapi.js';
 import { keurStand } from '../lib/dpkeur.js';
 import { laterAf } from '../lib/mensmeter.js';
-import { awTokenZet, awTokenStand, awKeur, awKeurLaatste, awFeed, awApi, awNieuweOrder, awOrders, logRegel as awLog } from '../lib/awdrop.js';
+import { awTokenZet, awTokenStand, awKeur, awKeurLaatste, awFeed, awApi, awNieuweOrder, awOrders, awZoek, awPakketten, logRegel as awLog } from '../lib/awdrop.js';
 
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -72,6 +72,8 @@ export default async function handler(req, res) {
     }
     if (op === 'awkeur') { if (!beschermd && !lus && !cron) return res.status(404).send('Niet gevonden'); const k = await awKeur({ vers: true }); delete k.lijst; if (cron) await awLog('AW-keuring: ' + k.stand.inWinkel + ' van ' + k.inAanmerking + ' producten naar Rust & ritueel (' + Object.entries(k.perHoek).map(([h, n]) => h + ' ' + n).join(', ') + ')'); return res.status(200).json(k); }
     if (op === 'awfeed') { if (!beschermd && !lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' }); return res.status(200).json(await awFeed({ start: q.get('start'), size: q.get('size'), alles: !!q.get('alles') && beschermd })); }
+    if (op === 'awzoek') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json(await awZoek({ q: q.get('q'), min: q.get('min'), max: q.get('max'), n: q.get('n') })); }
+    if (op === 'awpakket') { if (!beschermd && !lus) return res.status(404).send('Niet gevonden'); let kand = null; if (q.get('kern')) kand = [{ id: 'proef', slug: 'proef', naam: 'Proef', kern: q.get('kern').split(',').map(x => { const [s, n] = x.split('*'); return [s, Number(n) || 1]; }) }]; return res.status(200).json(await awPakketten({ kandidaten: kand })); }
     if (op === 'awstand') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json({ token: await awTokenStand(), keuring: await awKeurLaatste(), orders: await awOrders() }); }
     if (op === 'awapi') { if (!beschermd) return res.status(404).send('Niet gevonden'); const pad = String(q.get('pad') || 'user-profile').replace(/[^a-z0-9/_-]/gi, '').slice(0, 80); const params = {}; for (const [k, v] of q.entries()) if (!['op', 'pad'].includes(k)) params[k] = v; const r = await awApi(pad, { params }); return res.status(200).json({ st: r.st, fout: r.fout || null, data: r.data, tekst: r.tekst }); }
     if (op === 'aworder') {
