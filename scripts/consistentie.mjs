@@ -32,7 +32,7 @@ const METEN = () => {
   const rgb = s => (s.match(/\d+(\.\d+)?/g) || []).map(Number), naam = e => (e.tagName.toLowerCase() + (e.id ? '#' + e.id : '') + (e.className && typeof e.className === 'string' ? '.' + e.className.trim().split(/\s+/).slice(0, 2).join('.') : '')).slice(0, 60);
   const main = document.querySelector('main') || document.body;
   const ZACHT = [238, 241, 252], VLAG = [0, 43, 127], wit = c => c[0] > 245 && c[1] > 245 && c[2] > 245, gelijk = (a, b) => a.length >= 3 && Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]) + Math.abs(a[2] - b[2]) < 12;
-  const MAG_VLAK = el => el.closest('section.cwa,#aanmeld,.rz-ama,.ama,form.cwq,.dl-p,.mmm,[role=dialog]');
+  const MAG_VLAK = el => el.closest('section.cwa,#aanmeld,.rz-ama,.ama,form.cwq,.dl-p,.mmm,[role=dialog],.gh-lv,.gh-hero');
   for (const e of main.querySelectorAll('*')) {
     if (!zicht(e)) continue; const c = getComputedStyle(e), bg = rgb(c.backgroundColor), heeftBg = bg.length >= 3 && (bg.length < 4 || bg[3] > 0.05);
     // 1 zandvlak of crème

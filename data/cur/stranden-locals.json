@@ -1,76 +1,402 @@
 {
  "_uitleg": "Strandhulp voor locals (Henkjan 21 nov 2026: \"Strandhulp voor toeriste maken en voor locals en een pic niet deze stomme tekening\"). Zelfde 34 stranden als data/cur/stranden.json (lib/cur.js voegt ze samen), eigen kop, vragen, antwoorden en foto voor wie op Curaçao woont. Feiten over toegang en regels met bron in de antwoorden; geen gedachtestreepjes.",
  "id": "stranden-locals",
- "talen": ["nl", "en"],
+ "talen": [
+  "nl",
+  "en",
+  "es"
+ ],
  "peildatum": "2026-11-21",
- "onderwerp": {"nl": "strand", "en": "beach"},
- "h1": {"nl": "Stranden voor locals: gratis, met de familie of rustig", "en": "Beaches for locals: free, with the family or quiet"},
- "titel": {"nl": "Stranden Curaçao voor locals: {n} stranden, gratis en wat mag", "en": "Curaçao beaches for locals: {n} beaches, free and what is allowed"},
- "metaDesc": {"nl": "Welk strand op Curaçao past bij jou als local: welke 14 gratis zijn, waar je met de familie heen kunt, wat je betaalt en wat wel en niet mag op het strand.", "en": "Which Curaçao beach suits you as a local: which 14 are free, where to go with the family, what you pay and what is and is not allowed on the beach."},
+ "onderwerp": {
+  "nl": "strand",
+  "en": "beach",
+  "es": "playa"
+ },
+ "h1": {
+  "nl": "Stranden voor locals: gratis, met de familie of rustig",
+  "en": "Beaches for locals: free, with the family or quiet",
+  "es": "Playas para locales: gratis, en familia o tranquilas"
+ },
+ "titel": {
+  "nl": "Stranden Curaçao voor locals: {n} stranden, gratis en wat mag",
+  "en": "Curaçao beaches for locals: {n} beaches, free and what is allowed",
+  "es": "Playas de Curazao para locales: {n} playas, gratis y qué se puede"
+ },
+ "metaDesc": {
+  "nl": "Welk strand op Curaçao past bij jou als local: welke 14 gratis zijn, waar je met de familie heen kunt, wat je betaalt en wat wel en niet mag op het strand.",
+  "en": "Which Curaçao beach suits you as a local: which 14 are free, where to go with the family, what you pay and what is and is not allowed on the beach.",
+  "es": "Qué playa de Curazao te conviene como local: cuáles 14 son gratis, adónde ir en familia, cuánto pagas y qué se puede y qué no en la playa."
+ },
  "lede": {
   "nl": "14 van de 34 stranden kosten niets, vooral in Bandabou: Grote Knip, Kleine Knip, Playa Lagun, Jeremi, Piskado en Forti. Dichter bij de stad zijn Daaibooi, Boka Sami, Tugboat en Directors Bay gratis. Een strand van het Land is van iedereen: geld vragen mag voor ligbedden, toiletten en parkeren, niet voor de zee.",
-  "en": "14 of the 34 beaches cost nothing, mostly in Bandabou: Grote Knip, Kleine Knip, Playa Lagun, Jeremi, Piskado and Forti. Closer to town, Daaibooi, Boka Sami, Tugboat and Directors Bay are free. A beach owned by the Country belongs to everyone: operators may charge for loungers, toilets and parking, not for the sea."
+  "en": "14 of the 34 beaches cost nothing, mostly in Bandabou: Grote Knip, Kleine Knip, Playa Lagun, Jeremi, Piskado and Forti. Closer to town, Daaibooi, Boka Sami, Tugboat and Directors Bay are free. A beach owned by the Country belongs to everyone: operators may charge for loungers, toilets and parking, not for the sea.",
+  "es": "14 de las 34 playas no cuestan nada, sobre todo en Bandabou: Grote Knip, Kleine Knip, Playa Lagun, Jeremi, Piskado y Forti. Más cerca de la ciudad son gratis Daaibooi, Boka Sami, Tugboat y Directors Bay. Una playa del País es de todos: se puede cobrar por tumbonas, baños y estacionamiento, no por el mar."
  },
  "kort": {
   "nl": "14 van de 34 stranden kosten niets, vooral in Bandabou. Dichter bij de stad zijn Daaibooi, Boka Sami, Tugboat en Directors Bay gratis.",
-  "en": "14 of the 34 beaches cost nothing, mostly in Bandabou. Closer to town, Daaibooi, Boka Sami, Tugboat and Directors Bay are free."
+  "en": "14 of the 34 beaches cost nothing, mostly in Bandabou. Closer to town, Daaibooi, Boka Sami, Tugboat and Directors Bay are free.",
+  "es": "14 de las 34 playas no cuestan nada, sobre todo en Bandabou. Más cerca de la ciudad son gratis Daaibooi, Boka Sami, Tugboat y Directors Bay."
  },
  "hero": {
   "src": "https://curacao.day/api/cw?pf=864e0c54d7",
   "door": "Henkjan de Krijger · A Curaçao day",
-  "alt": {"nl": "Palapa en mensen op de kade bij zonsondergang op Curaçao", "en": "Palapa and people on the waterfront at sunset on Curaçao"},
+  "alt": {
+   "nl": "Palapa en mensen op de kade bij zonsondergang op Curaçao",
+   "en": "Palapa and people on the waterfront at sunset on Curaçao",
+   "es": "Palapa y gente en el malecón al atardecer en Curazao"
+  },
   "pos": "center 78%"
  },
  "vragen": [
-  {"q": {"nl": "Met wie ga je?", "en": "Who are you going with?"}, "opties": [
-   {"label": {"nl": "Met de familie", "en": "With the family"}, "plus": ["kinderen", "schaduw"], "min": [], "vereist": null},
-   {"label": {"nl": "Met vrienden", "en": "With friends"}, "plus": ["feest", "voorzieningen"], "min": [], "vereist": null},
-   {"label": {"nl": "Alleen of met z'n tweeën", "en": "Alone or as a couple"}, "plus": ["rustig", "natuur"], "min": ["feest"], "vereist": null},
-   {"label": {"nl": "Maakt niet uit", "en": "Does not matter"}, "plus": [], "min": [], "vereist": null}]},
-  {"q": {"nl": "Wat wil je doen?", "en": "What do you want to do?"}, "opties": [
-   {"label": {"nl": "Zwemmen en chillen", "en": "Swim and chill"}, "plus": [], "min": [], "vereist": null},
-   {"label": {"nl": "Snorkelen", "en": "Snorkeling"}, "plus": ["snorkelen", "schildpadden"], "min": [], "vereist": "snorkelen"},
-   {"label": {"nl": "Schaduw en picknicken", "en": "Shade and a picnic"}, "plus": ["schaduw"], "min": [], "vereist": null},
-   {"label": {"nl": "Duiken vanaf de kant", "en": "Shore diving"}, "plus": ["duiken-vanaf-strand"], "min": [], "vereist": "duiken-vanaf-strand"}]},
-  {"q": {"nl": "Waar woon je?", "en": "Where do you live?"}, "opties": [
-   {"label": {"nl": "Maakt niet uit, ik rijd", "en": "Does not matter, I will drive"}, "plus": [], "min": [], "vereist": null},
-   {"label": {"nl": "Bandabou", "en": "Bandabou"}, "plus": ["westpunt"], "min": [], "vereist": null},
-   {"label": {"nl": "Willemstad en midden", "en": "Willemstad and central"}, "plus": ["midden"], "min": [], "vereist": null},
-   {"label": {"nl": "Oost (Jan Thiel, Spaanse Water)", "en": "East (Jan Thiel, Spanish Water)"}, "plus": ["oost"], "min": [], "vereist": null}]},
-  {"q": {"nl": "Betalen?", "en": "Pay?"}, "opties": [
-   {"label": {"nl": "Alleen gratis", "en": "Free only"}, "plus": ["gratis"], "min": ["entree"], "vereist": null},
-   {"label": {"nl": "Maakt niet uit", "en": "Does not matter"}, "plus": [], "min": [], "vereist": null}]}
+  {
+   "q": {
+    "nl": "Met wie ga je?",
+    "en": "Who are you going with?",
+    "es": "¿Con quién vas?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Met de familie",
+      "en": "With the family",
+      "es": "En familia"
+     },
+     "plus": [
+      "kinderen",
+      "schaduw"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Met vrienden",
+      "en": "With friends",
+      "es": "Con amigos"
+     },
+     "plus": [
+      "feest",
+      "voorzieningen"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Alleen of met z'n tweeën",
+      "en": "Alone or as a couple",
+      "es": "Solo o en pareja"
+     },
+     "plus": [
+      "rustig",
+      "natuur"
+     ],
+     "min": [
+      "feest"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Does not matter",
+      "es": "Da igual"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat wil je doen?",
+    "en": "What do you want to do?",
+    "es": "¿Qué quieres hacer?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Zwemmen en chillen",
+      "en": "Swim and chill",
+      "es": "Nadar y relajarte"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Snorkelen",
+      "en": "Snorkeling",
+      "es": "Snorkel"
+     },
+     "plus": [
+      "snorkelen",
+      "schildpadden"
+     ],
+     "min": [],
+     "vereist": "snorkelen"
+    },
+    {
+     "label": {
+      "nl": "Schaduw en picknicken",
+      "en": "Shade and a picnic",
+      "es": "Sombra y pícnic"
+     },
+     "plus": [
+      "schaduw"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Duiken vanaf de kant",
+      "en": "Shore diving",
+      "es": "Buceo desde la orilla"
+     },
+     "plus": [
+      "duiken-vanaf-strand"
+     ],
+     "min": [],
+     "vereist": "duiken-vanaf-strand"
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Waar woon je?",
+    "en": "Where do you live?",
+    "es": "¿Dónde vives?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Maakt niet uit, ik rijd",
+      "en": "Does not matter, I will drive",
+      "es": "Da igual, voy en auto"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Bandabou",
+      "en": "Bandabou",
+      "es": "Bandabou"
+     },
+     "plus": [
+      "westpunt"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Willemstad en midden",
+      "en": "Willemstad and central",
+      "es": "Willemstad y centro"
+     },
+     "plus": [
+      "midden"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Oost (Jan Thiel, Spaanse Water)",
+      "en": "East (Jan Thiel, Spanish Water)",
+      "es": "Este (Jan Thiel, Spaanse Water)"
+     },
+     "plus": [
+      "oost"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Betalen?",
+    "en": "Pay?",
+    "es": "¿Pagar?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Alleen gratis",
+      "en": "Free only",
+      "es": "Solo gratis"
+     },
+     "plus": [
+      "gratis"
+     ],
+     "min": [
+      "entree"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Does not matter",
+      "es": "Da igual"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
  ],
  "faq": [
-  {"q": {"nl": "Welke stranden op Curaçao zijn gratis?", "en": "Which beaches on Curaçao are free?"},
-   "a": {"nl": "14 van de 34 in onze vergelijking: Grote Knip, Kleine Knip, Playa Lagun, Playa Jeremi, Playa Piskado, Playa Forti, Playa Santa Cruz, Playa Hundu, Daaibooi, Boka Sami, Tugboat, Directors Bay, Kokomo en Karakter. Bij Kokomo betaal je alleen voor ligbedden.",
-         "en": "14 of the 34 in our comparison: Grote Knip, Kleine Knip, Playa Lagun, Playa Jeremi, Playa Piskado, Playa Forti, Playa Santa Cruz, Playa Hundu, Daaibooi, Boka Sami, Tugboat, Directors Bay, Kokomo and Karakter. At Kokomo you only pay for loungers."}},
-  {"q": {"nl": "Mag een hotel of beachclub een strand afsluiten?", "en": "Can a hotel or beach club close off a beach?"},
-   "a": {"nl": "Niet zomaar. Een strand van het Land is openbaar en beperken mag alleen met een landsverordening (artikel 5:26 Burgerlijk Wetboek, volgens advocatenkantoor AVR, juni 2025). Bij Marriott mocht het strand 's nachts dicht onder een beheerovereenkomst, maar overdag moest het open blijven. Privégrond ervoor mag wel dicht: een pad erover heb je alleen met een erfdienstbaarheid of vergunning.",
-         "en": "Not just like that. A beach owned by the Country is public and may only be restricted by national ordinance (article 5:26 of the Civil Code, according to law firm AVR, June 2025). At the Marriott the beach could close at night under a management agreement, but had to stay open by day. Private land in front of it may be closed: you only have a path across with an easement or a permit."}},
-  {"q": {"nl": "Waarom betaal je bij Cas Abao, Porto Mari, Mambo en Jan Thiel?", "en": "Why do you pay at Cas Abao, Porto Mari, Mambo and Jan Thiel?"},
-   "a": {"nl": "De beheerders zeggen dat je betaalt voor voorzieningen zoals toiletten, douches, beveiliging en parkeren. Cas Abao kost $6 per auto, Porto Mari $3 per persoon, Mambo ongeveer $4,50 en Jan Thiel ANG 6. Volgens AVR mag geld voor voorzieningen, een toegangsheffing zonder wettelijke grond niet.",
-         "en": "Operators say you pay for facilities such as toilets, showers, security and parking. Cas Abao costs $6 per car, Porto Mari $3 per person, Mambo about $4.50 and Jan Thiel ANG 6. According to AVR, charging for facilities is allowed, an entry levy without a legal basis is not."}},
-  {"q": {"nl": "Wat mag niet op het strand?", "en": "What is not allowed on the beach?"},
-   "a": {"nl": "Sinds het strandbeleid van 21 augustus 2026: dieren voeren, koraal, schelpen, stenen of zand verzamelen om te verkopen, en ballonnen. Jetski's en motorboten blijven 100 meter uit de kust en nooit binnen de drijflijnen van een zwemzone. Verhuurders mogen stoelen niet vooraf neerzetten om plek te claimen (Curaçao Chronicle, juli en augustus 2026).",
-         "en": "Since the beach policy of 21 August 2026: feeding animals, collecting coral, shells, stones or sand to sell, and balloons. Jet skis and motorboats stay 100 metres off the coast and never inside the floating lines of a swimming zone. Rental operators may not set out chairs in advance to claim space (Curaçao Chronicle, July and August 2026)."}},
-  {"q": {"nl": "Mag je schildpadden aanraken of voeren?", "en": "Can you touch or feed turtles?"},
-   "a": {"nl": "Nee. WWF en Sea Turtle Conservation Curaçao vragen schildpadden niet te voeren, aan te raken of achterna te zwemmen; dat geeft stress en verspreidt bacteriën. Dat geldt vooral bij Playa Piskado.",
-         "en": "No. WWF and Sea Turtle Conservation Curaçao ask you not to feed, touch or chase turtles; it causes stress and spreads bacteria. This applies above all at Playa Piskado."}},
-  {"q": {"nl": "Wat speelt er rond de stranden?", "en": "What is going on around the beaches?"},
-   "a": {"nl": "In mei 2026 begon Kosta Liber een petitie voor een openbaar overzicht van alle stranden en hun toegang, en vroeg Fundashon Vishon Bándabou de Staten om onderzoek. MAN-PIN kondigde in september 2026 een initiatiefwet voor strandtoegang aan. De regering stelde in augustus 2026 hoogstens 65 vergunningen in voor kraampjes en verhuur op 18 openbare stranden.",
-         "en": "In May 2026 Kosta Liber started a petition for a public overview of all beaches and their access, and Fundashon Vishon Bándabou asked Parliament for an inquiry. MAN-PIN announced an initiative law on beach access in September 2026. In August 2026 the government set at most 65 permits for stands and rentals on 18 public beaches."}},
-  {"q": {"nl": "Waar is het op zondag druk?", "en": "Where is it busy on Sunday?"},
-   "a": {"nl": "Op zondag zitten Daaibooi en Grote Knip vol met lokale gezinnen. Wil je rust, ga dan vroeg of kies een kleiner strand zoals Playa Hundu of Playa Jeremi.",
-         "en": "On Sundays Daaibooi and Grote Knip fill up with local families. For quiet, go early or pick a smaller beach such as Playa Hundu or Playa Jeremi."}}
+  {
+   "q": {
+    "nl": "Welke stranden op Curaçao zijn gratis?",
+    "en": "Which beaches on Curaçao are free?",
+    "es": "¿Qué playas de Curazao son gratis?"
+   },
+   "a": {
+    "nl": "14 van de 34 in onze vergelijking: Grote Knip, Kleine Knip, Playa Lagun, Playa Jeremi, Playa Piskado, Playa Forti, Playa Santa Cruz, Playa Hundu, Daaibooi, Boka Sami, Tugboat, Directors Bay, Kokomo en Karakter. Bij Kokomo betaal je alleen voor ligbedden.",
+    "en": "14 of the 34 in our comparison: Grote Knip, Kleine Knip, Playa Lagun, Playa Jeremi, Playa Piskado, Playa Forti, Playa Santa Cruz, Playa Hundu, Daaibooi, Boka Sami, Tugboat, Directors Bay, Kokomo and Karakter. At Kokomo you only pay for loungers.",
+    "es": "14 de las 34 de nuestra comparación: Grote Knip, Kleine Knip, Playa Lagun, Playa Jeremi, Playa Piskado, Playa Forti, Playa Santa Cruz, Playa Hundu, Daaibooi, Boka Sami, Tugboat, Directors Bay, Kokomo y Karakter. En Kokomo solo pagas las tumbonas."
+   }
+  },
+  {
+   "q": {
+    "nl": "Mag een hotel of beachclub een strand afsluiten?",
+    "en": "Can a hotel or beach club close off a beach?",
+    "es": "¿Puede un hotel o beach club cerrar una playa?"
+   },
+   "a": {
+    "nl": "Niet zomaar. Een strand van het Land is openbaar en beperken mag alleen met een landsverordening (artikel 5:26 Burgerlijk Wetboek, volgens advocatenkantoor AVR, juni 2025). Bij Marriott mocht het strand 's nachts dicht onder een beheerovereenkomst, maar overdag moest het open blijven. Privégrond ervoor mag wel dicht: een pad erover heb je alleen met een erfdienstbaarheid of vergunning.",
+    "en": "Not just like that. A beach owned by the Country is public and may only be restricted by national ordinance (article 5:26 of the Civil Code, according to law firm AVR, June 2025). At the Marriott the beach could close at night under a management agreement, but had to stay open by day. Private land in front of it may be closed: you only have a path across with an easement or a permit.",
+    "es": "No así sin más. Una playa del País es pública y solo se puede limitar por ordenanza nacional (artículo 5:26 del Código Civil, según el bufete AVR, junio de 2025). En el Marriott la playa pudo cerrar de noche bajo un acuerdo de gestión, pero de día tenía que seguir abierta. El terreno privado delante sí se puede cerrar: solo tienes paso con una servidumbre o un permiso."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waarom betaal je bij Cas Abao, Porto Mari, Mambo en Jan Thiel?",
+    "en": "Why do you pay at Cas Abao, Porto Mari, Mambo and Jan Thiel?",
+    "es": "¿Por qué se paga en Cas Abao, Porto Mari, Mambo y Jan Thiel?"
+   },
+   "a": {
+    "nl": "De beheerders zeggen dat je betaalt voor voorzieningen zoals toiletten, douches, beveiliging en parkeren. Cas Abao kost $6 per auto, Porto Mari $3 per persoon, Mambo ongeveer $4,50 en Jan Thiel ANG 6. Volgens AVR mag geld voor voorzieningen, een toegangsheffing zonder wettelijke grond niet.",
+    "en": "Operators say you pay for facilities such as toilets, showers, security and parking. Cas Abao costs $6 per car, Porto Mari $3 per person, Mambo about $4.50 and Jan Thiel ANG 6. According to AVR, charging for facilities is allowed, an entry levy without a legal basis is not.",
+    "es": "Los operadores dicen que pagas por servicios como baños, duchas, seguridad y estacionamiento. Cas Abao cuesta $6 por auto, Porto Mari $3 por persona, Mambo unos $4,50 y Jan Thiel ANG 6. Según AVR se puede cobrar por servicios, pero no una tasa de entrada sin base legal."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat mag niet op het strand?",
+    "en": "What is not allowed on the beach?",
+    "es": "¿Qué no se puede hacer en la playa?"
+   },
+   "a": {
+    "nl": "Sinds het strandbeleid van 21 augustus 2026: dieren voeren, koraal, schelpen, stenen of zand verzamelen om te verkopen, en ballonnen. Jetski's en motorboten blijven 100 meter uit de kust en nooit binnen de drijflijnen van een zwemzone. Verhuurders mogen stoelen niet vooraf neerzetten om plek te claimen (Curaçao Chronicle, juli en augustus 2026).",
+    "en": "Since the beach policy of 21 August 2026: feeding animals, collecting coral, shells, stones or sand to sell, and balloons. Jet skis and motorboats stay 100 metres off the coast and never inside the floating lines of a swimming zone. Rental operators may not set out chairs in advance to claim space (Curaçao Chronicle, July and August 2026).",
+    "es": "Desde la política de playas del 21 de agosto de 2026: alimentar animales, recoger coral, conchas, piedras o arena para vender, y los globos. Las motos de agua y lanchas se quedan a 100 metros de la costa y nunca dentro de las líneas flotantes de una zona de baño. Los que alquilan no pueden colocar sillas antes para reservar sitio (Curaçao Chronicle, julio y agosto de 2026)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Mag je schildpadden aanraken of voeren?",
+    "en": "Can you touch or feed turtles?",
+    "es": "¿Se pueden tocar o alimentar las tortugas?"
+   },
+   "a": {
+    "nl": "Nee. WWF en Sea Turtle Conservation Curaçao vragen schildpadden niet te voeren, aan te raken of achterna te zwemmen; dat geeft stress en verspreidt bacteriën. Dat geldt vooral bij Playa Piskado.",
+    "en": "No. WWF and Sea Turtle Conservation Curaçao ask you not to feed, touch or chase turtles; it causes stress and spreads bacteria. This applies above all at Playa Piskado.",
+    "es": "No. WWF y Sea Turtle Conservation Curaçao piden no alimentar, tocar ni perseguir a las tortugas; les causa estrés y propaga bacterias. Sobre todo en Playa Piskado."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat speelt er rond de stranden?",
+    "en": "What is going on around the beaches?",
+    "es": "¿Qué pasa con las playas?"
+   },
+   "a": {
+    "nl": "In mei 2026 begon Kosta Liber een petitie voor een openbaar overzicht van alle stranden en hun toegang, en vroeg Fundashon Vishon Bándabou de Staten om onderzoek. MAN-PIN kondigde in september 2026 een initiatiefwet voor strandtoegang aan. De regering stelde in augustus 2026 hoogstens 65 vergunningen in voor kraampjes en verhuur op 18 openbare stranden.",
+    "en": "In May 2026 Kosta Liber started a petition for a public overview of all beaches and their access, and Fundashon Vishon Bándabou asked Parliament for an inquiry. MAN-PIN announced an initiative law on beach access in September 2026. In August 2026 the government set at most 65 permits for stands and rentals on 18 public beaches.",
+    "es": "En mayo de 2026 Kosta Liber lanzó una petición para un resumen público de todas las playas y su acceso, y Fundashon Vishon Bándabou pidió al Parlamento una investigación. MAN-PIN anunció en septiembre de 2026 una ley de iniciativa sobre el acceso a las playas. En agosto de 2026 el gobierno fijó como máximo 65 permisos para puestos y alquileres en 18 playas públicas."
+   }
+  },
+  {
+   "q": {
+    "nl": "Waar is het op zondag druk?",
+    "en": "Where is it busy on Sunday?",
+    "es": "¿Dónde hay mucha gente el domingo?"
+   },
+   "a": {
+    "nl": "Op zondag zitten Daaibooi en Grote Knip vol met lokale gezinnen. Wil je rust, ga dan vroeg of kies een kleiner strand zoals Playa Hundu of Playa Jeremi.",
+    "en": "On Sundays Daaibooi and Grote Knip fill up with local families. For quiet, go early or pick a smaller beach such as Playa Hundu or Playa Jeremi.",
+    "es": "Los domingos Daaibooi y Grote Knip se llenan de familias locales. Si buscas calma, ve temprano o elige una playa más pequeña como Playa Hundu o Playa Jeremi."
+   }
+  }
  ],
  "tips": [
-  {"nl": "Op zondag zitten Daaibooi en Grote Knip vol met lokale gezinnen.", "en": "On Sundays Daaibooi and Grote Knip fill up with local families."},
-  {"nl": "Laat niets zichtbaar in de auto bij gratis stranden aan de westkant.", "en": "Leave nothing visible in the car at free beaches on the west side."},
-  {"nl": "Ga niet onder manchinelbomen zitten (onder meer bij Kleine Knip); sap en vruchten zijn giftig.", "en": "Do not sit under manchineel trees (for example at Kleine Knip); the sap and fruit are poisonous."},
-  {"nl": "Jan Thiel is na 16:30 gratis.", "en": "Jan Thiel is free after 4:30 p.m."}
+  {
+   "nl": "Op zondag zitten Daaibooi en Grote Knip vol met lokale gezinnen.",
+   "en": "On Sundays Daaibooi and Grote Knip fill up with local families.",
+   "es": "Los domingos Daaibooi y Grote Knip se llenan de familias locales."
+  },
+  {
+   "nl": "Laat niets zichtbaar in de auto bij gratis stranden aan de westkant.",
+   "en": "Leave nothing visible in the car at free beaches on the west side.",
+   "es": "No dejes nada a la vista en el auto en las playas gratis del oeste."
+  },
+  {
+   "nl": "Ga niet onder manchinelbomen zitten (onder meer bij Kleine Knip); sap en vruchten zijn giftig.",
+   "en": "Do not sit under manchineel trees (for example at Kleine Knip); the sap and fruit are poisonous.",
+   "es": "No te sientes bajo los manzanillos (por ejemplo en Kleine Knip); la savia y la fruta son venenosas."
+  },
+  {
+   "nl": "Jan Thiel is na 16:30 gratis.",
+   "en": "Jan Thiel is free after 4:30 p.m.",
+   "es": "Jan Thiel es gratis después de las 16:30."
+  }
  ],
  "tussenpartijen": [],
- "zoekwoorden": {"nl": ["gratis stranden curaçao", "stranden curaçao locals", "strand toegang curaçao", "openbare stranden curaçao"], "en": ["free beaches curacao", "curacao beaches locals", "public beaches curacao"]},
- "llmVragen": {"nl": ["Welke stranden op Curaçao zijn gratis?", "Mag een hotel op Curaçao een strand afsluiten?"], "en": ["Which beaches on Curaçao are free?", "Are beaches in Curaçao public?"]}
+ "zoekwoorden": {
+  "nl": [
+   "gratis stranden curaçao",
+   "stranden curaçao locals",
+   "strand toegang curaçao",
+   "openbare stranden curaçao"
+  ],
+  "en": [
+   "free beaches curacao",
+   "curacao beaches locals",
+   "public beaches curacao"
+  ],
+  "es": [
+   "playas gratis curazao",
+   "playas curazao locales",
+   "acceso playas curazao"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Welke stranden op Curaçao zijn gratis?",
+   "Mag een hotel op Curaçao een strand afsluiten?"
+  ],
+  "en": [
+   "Which beaches on Curaçao are free?",
+   "Are beaches in Curaçao public?"
+  ],
+  "es": [
+   "¿Qué playas de Curazao son gratis?",
+   "¿Las playas de Curazao son públicas?"
+  ]
+ },
+ "live": {
+  "cam": "lagun",
+  "yt": "XHPX3vqxkCE",
+  "naam": "Playa Lagun"
+ }
 }
