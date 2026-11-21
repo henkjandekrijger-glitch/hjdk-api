@@ -9,7 +9,7 @@
 //   /api/dp?op=api&pad=products&size=2             ruwe API-aanroep om de vorm te zien (beschermde host; token gaat nooit mee terug)
 //   /api/dp?op=scan | op=keur | op=nacht           catalogus inlezen, keuring (brug + catalogus), nachtronde (cron 04:53 UTC)
 import { wcRoute, dpSleutels, dpStand, dpLog, dpFeed, dpNieuweOrder, dpOrderStatus, DP_HOST } from '../lib/droppery.js';
-import { dpTokenZet, dpTokenStand, dpApi, dpScan, dpKeurCatalogus, dpKeurLaatste, vraagIdx } from '../lib/dpapi.js';
+import { dpProbe, dpTokenZet, dpTokenStand, dpApi, dpScan, dpKeurCatalogus, dpKeurLaatste, vraagIdx } from '../lib/dpapi.js';
 import { keurStand } from '../lib/dpkeur.js';
 import { laterAf } from '../lib/mensmeter.js';
 
@@ -46,6 +46,7 @@ export default async function handler(req, res) {
       const pad = String(q.get('pad') || 'products').replace(/[^a-z0-9/_-]/gi, '').slice(0, 80); const params = {}; for (const [k, v] of q.entries()) if (!['op', 'pad'].includes(k)) params[k] = v;
       const r = await dpApi(pad, params); return res.status(200).json({ st: r.st, fout: r.fout || null, data: r.data, tekst: r.tekst });
     }
+    if (op === 'probe') { if (!beschermd) return res.status(404).send('Niet gevonden'); const p = q.getAll('p'); return res.status(200).json(await dpProbe(p.length ? p : ['api/v1/webshop/products?size=2&start=0', 'api/v1/webshop/product?size=2&start=0', 'api/v1/webshop', 'api/v1/webshop/orders?size=2&start=0', 'api/v1/products?size=2&start=0', 'api/webshop/v1/products?size=2', 'api/v1/webshop/products/list?size=2', 'api/v1/webshop/catalog?size=2', 'api/v1/webshop/supplier-products?size=2', 'api/v1/webshop/suppliers', 'api/v1/me', 'api/v1/webshop/me'])); }
     const cron = /vercel-cron/i.test(String(req.headers['user-agent'] || '')) || (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET);
     if (op === 'scan') { if (!beschermd && !cron) return res.status(404).send('Niet gevonden'); return res.status(200).json(await dpScan({ maxPaginas: Number(q.get('n')) || 30 })); }
     if (op === 'keur' || op === 'nacht') { // keuring van de brug (wat Droppery al naar Kadoly stuurt) en van de catalogus via de API
