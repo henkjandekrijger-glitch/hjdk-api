@@ -103,6 +103,15 @@ export default async function handler(req, res) {
     const doel=await A.klik({p:String(q.get('p')||''),s:q.get('s'),u:q.get('u'),mmc:q.get('mmc'),ua:req.headers['user-agent'],host:String(req.headers['x-forwarded-host']||req.headers.host||'')}).catch(()=>null);
     if(!doel)return res.status(404).send('Onbekende link');res.setHeader('location',doel);res.setHeader('referrer-policy','no-referrer-when-downgrade');return res.status(302).end();
   }
+  if(q.get('tool')==='haak'){ // haken in de chat: peiling, kennistest, uitdaging (lib/haak.js, 21 nov 2026)
+    const HK=await import('../lib/haak.js');const op=String(q.get('op')||'');res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
+    if(op==='stand')return res.status(200).json(await HK.stand());
+    if(op==='voorstel'){const mag=/\.vercel\.app$/i.test(String(req.headers.host||''))||/^vercel-cron/i.test(String(req.headers['user-agent']||''));if(!mag)return res.status(403).json({ok:false});return res.status(200).json(await HK.voorstel({droog:q.get('droog')==='1'}));}
+    if(req.method!=='POST')return res.status(405).json({ok:false});let b=req.body;try{if(typeof b==='string')b=JSON.parse(b.slice(0,2000));}catch{b={};}b=b||{};
+    if(BOT_UA.test(String(req.headers['user-agent']||'')))return res.status(200).json({ok:false});
+    if(op==='stem'||op==='quiz'||op==='match')return res.status(200).json(await HK[op](b).catch(()=>({ok:false})));
+    return res.status(404).json({ok:false});
+  }
   if(q.get('tool')==='tafel'){ // live tafel met de AI als gastvrouw (lib/tafel.js, 20 nov 2026)
     const TF=await import('../lib/tafel.js');const op=String(q.get('op')||'');res.setHeader('cache-control','no-store');res.setHeader('x-robots-tag','noindex');
     if(op==='stand')return res.status(200).json(await TF.stand());

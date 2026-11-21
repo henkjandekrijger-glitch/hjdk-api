@@ -307,7 +307,7 @@
     {
       "path": "/api/keuze-tools?tool=nexy&op=ronde",
       "schedule": "17 12 * * *"
-    }
+    }, {"path": "/api/keuze-tools?tool=haak&op=voorstel", "schedule": "33 */2 * * *"}
   ],
   "rewrites": [
     {
