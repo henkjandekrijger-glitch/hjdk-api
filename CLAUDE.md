@@ -71,5 +71,6 @@ De overdracht is de complete werking en stand (Henkjan 19 okt: "Zorg dat op verc
 
 ## Altijd
 
+- Kosten (Henkjan 21 nov 2026: "Dicht alle lekken en schedule dat om de 2 uur dat je dat blijft doen"): elke push naar main is een build en bouwen kostte $182 in november; deze repo bouwde 107 keer per dag. Eén push per afgeronde taak: commit zo vaak je wilt, push één keer als het werk af en getest is, niet elke kleine wijziging apart. Geen nieuw bestand in api/ als het ook een actie (op=...) in een bestaand eindpunt kan zijn: elk bestand in api/ is een eigen Vercel-functie en maakt elke build langer. De kostenwacht (opruimlus, elke 2 uur, code in todayin opruim/lib/kern.js) houdt de open lekken per post en project bij: https://opruimlus.vercel.app/overdracht. Open voor deze repo: de 39 bestanden in api/ achter één functie zetten, zoals todayin bzz/api/[bzzfn].js.
 - Altijd eerst `git pull --rebase`, daarna pushen naar main (Vercel rolt uit). Commit met expliciete bestandsnamen (nooit `git add -A`). Sleutels nooit in code, pagina's of URL's.
 - Harde grenzen (campagnes niet stoppen, bod, budget of planning niet wijzigen zonder Henkjans woord; hoogstens $10 per dag per campagne; geen conversie-postback naar PropellerAds voor de Amazon-blanket) staan in de handover en in de skill.
