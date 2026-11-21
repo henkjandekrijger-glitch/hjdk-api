@@ -22,6 +22,8 @@ jobs:
           - 6379:6379
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -53,4 +55,5 @@ jobs:
           git config user.email "noreply@openai.com"
           git add docs/preview/curacao-mobiel.png docs/preview/curacao-desktop.png
           git diff --cached --quiet || git commit -m "docs: mobile and desktop screenshots of Curaçao preview"
+          git pull --rebase origin "$PREVIEW_BRANCH"
           git push origin "HEAD:$PREVIEW_BRANCH"
