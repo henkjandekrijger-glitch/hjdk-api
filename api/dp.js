@@ -114,6 +114,7 @@ export default async function handler(req, res) {
     if (op === 'shvernieuw' || op === 'shthema') {
       if (!beschermd && !(cron && op === 'shthema' && q.get('doe') === 'sync')) return res.status(404).send('Niet gevonden');
       if (op === 'shvernieuw') { const H = await import('../lib/shophub.js'); return res.status(200).json(await H.shVernieuw()); }
+      if (q.get('doe') === 'verzend' || q.get('doe') === 'verzendzet') { const H = await import('../lib/shophub.js'); return res.status(200).json(q.get('doe') === 'verzend' ? await H.shVerzendStand() : await H.shVerzendZet({ proef: q.get('proef') === '1' })); }
       const T = await import('../lib/shoptheme.js'); const doe = String(q.get('doe') || 'stand');
       if (doe === 'maak') return res.status(200).json(await T.themaMaak({}));
       if (doe === 'sync') { const r = await T.themaSync({}); if (cron && !r.ok && r.fout !== 'nog geen thema (op=shthema&doe=maak)') await awLog('Kadoly-thema Shopify: bijwerken uit kadoly.com mislukt: ' + (r.fouten || [r.fout]).join('; ').slice(0, 200)); return res.status(200).json(r); }
