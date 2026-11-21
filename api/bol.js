@@ -103,6 +103,7 @@ export default async function handler(req, res) {
       return res.status(200).json({ ok: true, what, from, to, n: rows.length, total: round(total).all, bySite: round(bySite), byDay: round(byDay), byDayBron, byDayGroup, byGroup: round(byGroup), byPct: round(byPct), byProduct: round(byProduct), subIds: subTop });
     }
     if (op === 'learn') {
+      try { const A = await import('../lib/aff.js'); await A.awinSync(7); } catch (e) {} // Coolblue en andere Awin-verkopen mee in dezelfde 6-uursronde (21 nov 2026)
       // Leren op ORDERS (cron elke 6 uur, ook handmatig): bol-orders van de laatste `days` dagen koppelen aan pagina/zone/lay-out/clickid,
       // elke nieuwe order als conversie goal=2 (payout = commissie) terugmelden aan het netwerk, en per zone/pagina orders + commissie per 1.000 kliks berekenen.
       const REP = 'https://api.bol.com/marketing/affiliate/reports/v2';
