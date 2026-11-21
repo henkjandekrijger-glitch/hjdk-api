@@ -121,7 +121,18 @@
     "23678": "/robotstofzuiger",
     "86283": "/regendouche",
     "17191": null,
-    "8389": null
+    "8389": null,
+    "28437": "/pannenset",
+    "91325": "/rookmelder",
+    "85523": "/e-bike",
+    "16980": "/dagcreme",
+    "83285": "/internet-en-tv-vergelijken",
+    "8400": "/internet-en-tv-vergelijken",
+    "23414": "/internet-en-tv-vergelijken",
+    "107732": "/internet-en-tv-vergelijken",
+    "8275": "/internet-en-tv-vergelijken",
+    "8483": "/sim-only",
+    "25232": "/sim-only"
   },
   "nog_bouwen": {
     "pizzaoven": [
@@ -142,6 +153,23 @@
     ]
   },
   "niet_aanmelden": {
-    "8389": "Odido verbiedt advies aan de consument (Wft); een keuzehulp is advies"
+    "8389": "Odido verbiedt advies aan de consument (Wft); een keuzehulp is advies",
+    "8354": "verzekeraar: vergelijken of adviseren vraagt een AFM-vergunning (voorwaarden FBTO); AdsFair heeft die niet",
+    "9779": "verzekeraar: vergelijken of adviseren vraagt een AFM-vergunning (voorwaarden FBTO); AdsFair heeft die niet",
+    "85409": "verzekeraar: vergelijken of adviseren vraagt een AFM-vergunning (voorwaarden FBTO); AdsFair heeft die niet",
+    "9845": "verzekeraar: vergelijken of adviseren vraagt een AFM-vergunning (voorwaarden FBTO); AdsFair heeft die niet",
+    "8490": "verzekeraar: vergelijken of adviseren vraagt een AFM-vergunning (voorwaarden FBTO); AdsFair heeft die niet",
+    "8519": "verzekeraar: vergelijken of adviseren vraagt een AFM-vergunning (voorwaarden FBTO); AdsFair heeft die niet",
+    "8279": "verzekeraar: vergelijken of adviseren vraagt een AFM-vergunning (voorwaarden FBTO); AdsFair heeft die niet",
+    "8599": "verzekeraar: vergelijken of adviseren vraagt een AFM-vergunning (voorwaarden FBTO); AdsFair heeft die niet",
+    "107738": "verzekeraar: vergelijken of adviseren vraagt een AFM-vergunning (voorwaarden FBTO); AdsFair heeft die niet",
+    "8346": "verzekeraar: vergelijken of adviseren vraagt een AFM-vergunning (voorwaarden FBTO); AdsFair heeft die niet",
+    "25638": "verzekeraar: vergelijken of adviseren vraagt een AFM-vergunning (voorwaarden FBTO); AdsFair heeft die niet",
+    "119169": "verzekeraar: vergelijken of adviseren vraagt een AFM-vergunning (voorwaarden FBTO); AdsFair heeft die niet",
+    "77446": "verzekeraar: vergelijken of adviseren vraagt een AFM-vergunning (voorwaarden FBTO); AdsFair heeft die niet",
+    "106631": "gembersap, past bij geen keuzehulp",
+    "23093": "adult-resort VS",
+    "25635": "gokken",
+    "127855": "luxe mode VS"
   }
 }
