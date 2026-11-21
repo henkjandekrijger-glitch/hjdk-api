@@ -302,6 +302,36 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/favicon.ico",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(keuzehulp|whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/img/kzc/favicon.ico"
+    },
+    {
+      "source": "/favicon.svg",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(keuzehulp|whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/img/kzc/favicon.svg"
+    },
+    {
+      "source": "/apple-touch-icon.png",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?(keuzehulp|whichtobuy|kaufberater)\\.best"
+        }
+      ],
+      "destination": "/img/kzc/apple-touch-icon.png"
+    },
     {"source": "/mcp", "has": [{"type": "host", "value": "(www\\.)?(keuzehulp|whichtobuy|kaufberater)\\.best"}], "destination": "/api/kzmcp"},
     {"source": "/mcp", "has": [{"type": "host", "value": "hjdk-api.*\\.vercel\\.app"}], "destination": "/api/kzmcp"},
     {"source": "/koppel", "has": [{"type": "host", "value": "(www\\.)?keuzehulp\\.best"}], "destination": "/api/kzmcp?op=koppel&m=nl"},
