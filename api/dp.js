@@ -54,8 +54,8 @@ export default async function handler(req, res) {
       const uit = { at: new Date().toISOString() };
       if (op === 'nacht') { try { await vraagIdx(true); } catch (e) {} uit.scan = await dpScan({ maxPaginas: 60, tijd: 220e3 }); }
       const feed = await dpFeed(); uit.brug = Object.assign(keurStand(feed.producten), { vraagdata: feed.vraagdata, lijst: feed.producten.map(p => ({ sku: p.sku, titel: p.titel, categorie: p.categorie, prijs_kadoly: p.prijs_kadoly, keur: p.keur })).sort((a, b) => b.keur.score - a.keur.score) });
-      const inBrug = new Set(feed.producten.map(p => p.sku).filter(Boolean)); const onderdelen = new Set(feed.producten.filter(p => p.fitting_sku).map(p => p.fitting_sku));
-      uit.catalogus = (op === 'nacht' || q.get('vers')) ? await dpKeurCatalogus({ inBrug, onderdelen }) : (await dpKeurLaatste()) || { ok: false, fout: 'nog geen keuring van de catalogus (token of nachtronde)' };
+      const inBrug = new Set(feed.producten.map(p => p.sku).filter(Boolean)); const titels = new Map(feed.producten.map(p => [p.sku, p.titel])); const onderdelen = new Set(feed.producten.filter(p => p.fitting_sku).map(p => p.fitting_sku));
+      uit.catalogus = (op === 'nacht' || q.get('vers')) ? await dpKeurCatalogus({ inBrug, onderdelen, titels }) : (await dpKeurLaatste()) || { ok: false, fout: 'nog geen keuring van de catalogus (token of nachtronde)' };
       if (q.get('kort')) { uit.brug.lijst = uit.brug.lijst.slice(0, 40); if (uit.catalogus && uit.catalogus.importeer) uit.catalogus.importeer = uit.catalogus.importeer.slice(0, 60); }
       return res.status(200).json(uit);
     }
