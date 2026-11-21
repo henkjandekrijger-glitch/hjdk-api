@@ -1,0 +1,405 @@
+{
+ "_uitleg": "All-inclusive resorts op Curaçao (Henkjan 21 nov 2026: \"Ja zeker doen en totaal optimaliseren\"; Demand Radar 20 nov: \"all-inclusive resorts in curacao\" 351.700, \"curacao all inclusive resort\" 278.120 per maand in NL, DE en US). Zelfde resorts en scores als data/cur/hotels.json (lib/cur.js neemt de items met tag all-inclusive over), eigen kop, vragen, antwoorden en FAQ. Nieuwbouwrem: eerst alleen NL; EN en DE zodra de rem het toelaat (zet ze dan in talen).",
+ "id": "allinclusive",
+ "talen": [
+  "nl"
+ ],
+ "peildatum": "2026-11-21",
+ "kern": true,
+ "onderwerp": {
+  "nl": "all-inclusive resort",
+  "en": "all-inclusive resort",
+  "de": "All-inclusive-Resort"
+ },
+ "h1": {
+  "nl": "All-inclusive op Curaçao: welk resort past bij jou?",
+  "en": "All-inclusive in Curaçao: which resort is right for you?",
+  "de": "All-inclusive auf Curaçao: Welches Resort passt zu dir?"
+ },
+ "titel": {
+  "nl": "All-inclusive resorts Curaçao: {n} resorts vergeleken",
+  "en": "Curaçao all-inclusive resorts: {n} compared",
+  "de": "All-inclusive Curaçao: {n} Resorts im Vergleich"
+ },
+ "metaDesc": {
+  "nl": "Alle 10 all-inclusive resorts op Curaçao vergeleken met reviews en prijzen: The Rif scoort het hoogst, Kunuku is het voordeligst vanaf $172 per nacht.",
+  "en": "All 10 all-inclusive resorts in Curaçao compared with reviews and prices: The Rif scores highest, Kunuku is the cheapest from $172 a night.",
+  "de": "Alle 10 All-inclusive-Resorts auf Curaçao mit Bewertungen und Preisen: The Rif ist am besten bewertet, Kunuku am günstigsten ab 172 $ pro Nacht."
+ },
+ "lede": {
+  "nl": "Het best beoordeelde all-inclusive resort op Curaçao is The Rif at Mangrove Beach: 4,5 van 5 op Google uit 3.515 reviews. Voor gezinnen is Mangrove Beach Corendon ernaast de eerste keus (4,4 uit 7.594 reviews, strand aan het hotel), voor stellen Sandals Royal Curaçao (alleen 18+, 8,6 van 10). Het voordeligst is Kunuku Resort, vanaf $172 per nacht.",
+  "en": "The highest rated all-inclusive resort in Curaçao is The Rif at Mangrove Beach: 4.5 out of 5 on Google from 3,515 reviews. For families, Mangrove Beach Corendon next door is the first pick (4.4 from 7,594 reviews, beach at the hotel); for couples it is Sandals Royal Curaçao (adults 18+ only, 8.6 out of 10). The cheapest is Kunuku Resort, from $172 a night.",
+  "de": "Das am besten bewertete All-inclusive-Resort auf Curaçao ist The Rif at Mangrove Beach: 4,5 von 5 bei Google aus 3.515 Bewertungen. Für Familien ist das benachbarte Mangrove Beach Corendon die erste Wahl (4,4 aus 7.594 Bewertungen, Strand am Hotel), für Paare Sandals Royal Curaçao (nur ab 18, 8,6 von 10). Am günstigsten ist Kunuku Resort, ab 172 $ pro Nacht."
+ },
+ "kort": {
+  "nl": "10 all-inclusive resorts naast elkaar, met scores van Google, Tripadvisor en boekingssites. The Rif scoort het hoogst, Mangrove Beach Corendon is het beste voor gezinnen, Kunuku het voordeligst.",
+  "en": "10 all-inclusive resorts side by side, with scores from Google, Tripadvisor and booking sites. The Rif scores highest, Mangrove Beach Corendon is best for families, Kunuku is the cheapest.",
+  "de": "10 All-inclusive-Resorts im Vergleich, mit Bewertungen von Google, Tripadvisor und Buchungsseiten. The Rif ist am besten bewertet, Mangrove Beach Corendon am besten für Familien, Kunuku am günstigsten."
+ },
+ "vragen": [
+  {
+   "q": {
+    "nl": "Met wie ga je?",
+    "en": "Who are you traveling with?",
+    "de": "Mit wem reist du?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Met z'n tweeën",
+      "en": "As a couple",
+      "de": "Als Paar"
+     },
+     "plus": [
+      "adults-only",
+      "luxe"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Gezin met kinderen",
+      "en": "Family with kids",
+      "de": "Familie mit Kindern"
+     },
+     "plus": [
+      "kindvriendelijk",
+      "gezin"
+     ],
+     "min": [
+      "adults-only"
+     ],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Met vrienden",
+      "en": "With friends",
+      "de": "Mit Freunden"
+     },
+     "plus": [
+      "strand-aan-hotel"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter",
+      "de": "Egal"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Wat vind je het belangrijkst?",
+    "en": "What matters most?",
+    "de": "Was ist dir am wichtigsten?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Strand aan het hotel",
+      "en": "Beach at the hotel",
+      "de": "Strand am Hotel"
+     },
+     "plus": [
+      "strand-aan-hotel"
+     ],
+     "min": [],
+     "vereist": "strand-aan-hotel"
+    },
+    {
+     "label": {
+      "nl": "Zo voordelig mogelijk",
+      "en": "As cheap as possible",
+      "de": "Möglichst günstig"
+     },
+     "plus": [
+      "budget"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Luxe",
+      "en": "Luxury",
+      "de": "Luxus"
+     },
+     "plus": [
+      "luxe"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Duiken en snorkelen",
+      "en": "Diving and snorkeling",
+      "de": "Tauchen und Schnorcheln"
+     },
+     "plus": [
+      "duiken"
+     ],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  },
+  {
+   "q": {
+    "nl": "Waar wil je zitten?",
+    "en": "Where do you want to stay?",
+    "de": "Wo möchtest du wohnen?"
+   },
+   "opties": [
+    {
+     "label": {
+      "nl": "Dicht bij Willemstad",
+      "en": "Close to Willemstad",
+      "de": "Nah an Willemstad"
+     },
+     "plus": [
+      "otrobanda",
+      "piscadera",
+      "pietermaai-punda"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Bij Mambo Beach",
+      "en": "Near Mambo Beach",
+      "de": "Am Mambo Beach"
+     },
+     "plus": [
+      "mambo"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Rustig, ver van de stad",
+      "en": "Quiet, far from town",
+      "de": "Ruhig, weit weg von der Stadt"
+     },
+     "plus": [
+      "westpunt"
+     ],
+     "min": [],
+     "vereist": null
+    },
+    {
+     "label": {
+      "nl": "Maakt niet uit",
+      "en": "Doesn't matter",
+      "de": "Egal"
+     },
+     "plus": [],
+     "min": [],
+     "vereist": null
+    }
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": {
+    "nl": "Wat is het beste all-inclusive resort op Curaçao?",
+    "en": "What is the best all-inclusive resort in Curaçao?",
+    "de": "Was ist das beste All-inclusive-Resort auf Curaçao?"
+   },
+   "a": {
+    "nl": "The Rif at Mangrove Beach scoort het hoogst: 4,5 van 5 op Google uit 3.515 reviews en 8 van 10 op Travelocity. Voor gezinnen is Mangrove Beach Corendon ernaast de eerste keus, voor stellen Sandals Royal Curaçao.",
+    "en": "The Rif at Mangrove Beach scores highest: 4.5 out of 5 on Google from 3,515 reviews and 8 out of 10 on Travelocity. For families, Mangrove Beach Corendon next door is the first pick; for couples, Sandals Royal Curaçao.",
+    "de": "The Rif at Mangrove Beach ist am besten bewertet: 4,5 von 5 bei Google aus 3.515 Bewertungen und 8 von 10 bei Travelocity. Für Familien ist das benachbarte Mangrove Beach Corendon die erste Wahl, für Paare Sandals Royal Curaçao."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke all-inclusive resorts zijn er op Curaçao?",
+    "en": "Which all-inclusive resorts are there in Curaçao?",
+    "de": "Welche All-inclusive-Resorts gibt es auf Curaçao?"
+   },
+   "a": {
+    "nl": "Tien: The Rif at Mangrove Beach, Mangrove Beach Corendon, Sandals Royal Curaçao, Zoëtry Curaçao, Dreams Curaçao, Sunscape Curaçao, Kunuku Resort, TUI BLUE Curaçao, Kura Hulanda Lodge & Beach Club en het nieuwe The Pyrmont Curaçao.",
+    "en": "Ten: The Rif at Mangrove Beach, Mangrove Beach Corendon, Sandals Royal Curaçao, Zoëtry Curaçao, Dreams Curaçao, Sunscape Curaçao, Kunuku Resort, TUI BLUE Curaçao, Kura Hulanda Lodge & Beach Club and the new The Pyrmont Curaçao.",
+    "de": "Zehn: The Rif at Mangrove Beach, Mangrove Beach Corendon, Sandals Royal Curaçao, Zoëtry Curaçao, Dreams Curaçao, Sunscape Curaçao, Kunuku Resort, TUI BLUE Curaçao, Kura Hulanda Lodge & Beach Club und das neue The Pyrmont Curaçao."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat is het goedkoopste all-inclusive resort op Curaçao?",
+    "en": "What is the cheapest all-inclusive resort in Curaçao?",
+    "de": "Was ist das günstigste All-inclusive-Resort auf Curaçao?"
+   },
+   "a": {
+    "nl": "Kunuku Resort, vanaf $172 per nacht (Tripadvisor, oktober 2026). Het ligt in Daniel, midden op het eiland, en heeft geen eigen strand. Daarna komen Dreams Curaçao ($278) en TUI BLUE Curaçao ($294).",
+    "en": "Kunuku Resort, from $172 a night (Tripadvisor, October 2026). It is in Daniel, in the middle of the island, and has no beach of its own. Next are Dreams Curaçao ($278) and TUI BLUE Curaçao ($294).",
+    "de": "Kunuku Resort, ab 172 $ pro Nacht (Tripadvisor, Oktober 2026). Es liegt in Daniel in der Inselmitte und hat keinen eigenen Strand. Danach folgen Dreams Curaçao (278 $) und TUI BLUE Curaçao (294 $)."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welke all-inclusive resorts op Curaçao zijn alleen voor volwassenen?",
+    "en": "Which all-inclusive resorts in Curaçao are adults only?",
+    "de": "Welche All-inclusive-Resorts auf Curaçao sind nur für Erwachsene?"
+   },
+   "a": {
+    "nl": "Sandals Royal Curaçao (alleen stellen, 18+), Zoëtry Curaçao (18+) en het nieuwe The Pyrmont Curaçao.",
+    "en": "Sandals Royal Curaçao (couples only, 18+), Zoëtry Curaçao (18+) and the new The Pyrmont Curaçao.",
+    "de": "Sandals Royal Curaçao (nur Paare, ab 18), Zoëtry Curaçao (ab 18) und das neue The Pyrmont Curaçao."
+   }
+  },
+  {
+   "q": {
+    "nl": "Welk all-inclusive resort op Curaçao is het beste voor kinderen?",
+    "en": "Which all-inclusive resort in Curaçao is best for kids?",
+    "de": "Welches All-inclusive-Resort auf Curaçao ist am besten für Kinder?"
+   },
+   "a": {
+    "nl": "Mangrove Beach Corendon: 4,4 van 5 op Google uit 7.594 reviews, strand aan het hotel en dicht bij Willemstad. Ook kindvriendelijk: Dreams Curaçao, Sunscape Curaçao bij Mambo Beach en Kunuku Resort.",
+    "en": "Mangrove Beach Corendon: 4.4 out of 5 on Google from 7,594 reviews, a beach at the hotel and close to Willemstad. Also kid-friendly: Dreams Curaçao, Sunscape Curaçao near Mambo Beach and Kunuku Resort.",
+    "de": "Mangrove Beach Corendon: 4,4 von 5 bei Google aus 7.594 Bewertungen, Strand am Hotel und nah an Willemstad. Ebenfalls kinderfreundlich: Dreams Curaçao, Sunscape Curaçao am Mambo Beach und Kunuku Resort."
+   }
+  }
+ ],
+ "tips": [
+  {
+   "nl": "Bij all-inclusive zitten eten en drinken in de prijs; excursies, duiken en de taxi naar de stad meestal niet.",
+   "en": "All-inclusive covers food and drinks; tours, diving and the taxi into town usually are not included.",
+   "de": "Bei All-inclusive sind Essen und Getränke im Preis; Ausflüge, Tauchen und das Taxi in die Stadt meist nicht."
+  },
+  {
+   "nl": "The Rif en Mangrove Beach Corendon liggen naast elkaar in Otrobanda: je loopt zo Willemstad in.",
+   "en": "The Rif and Mangrove Beach Corendon are next to each other in Otrobanda: you can walk into Willemstad.",
+   "de": "The Rif und Mangrove Beach Corendon liegen nebeneinander in Otrobanda: zu Fuß bist du schnell in Willemstad."
+  },
+  {
+   "nl": "Prijzen zijn per nacht voor een standaardkamer en lopen tussen december en april flink op.",
+   "en": "Prices are per night for a standard room and go up sharply between December and April.",
+   "de": "Preise gelten pro Nacht für ein Standardzimmer und steigen zwischen Dezember und April deutlich."
+  }
+ ],
+ "tussenpartijen": [
+  {
+   "naam": "Booking.com",
+   "url": "https://www.booking.com/country/cw.html",
+   "uitleg": {
+    "nl": "Grootste aanbod, ook kleine appartementen en guesthouses; scores op 10 van geverifieerde gasten.",
+    "en": "Largest selection, including small apartments and guesthouses; scores out of 10 from verified guests.",
+    "de": "Größte Auswahl, auch kleine Apartments und Gästehäuser; Bewertung auf einer 10er-Skala von verifizierten Gästen.",
+    "es": "La mayor selección, incluidos apartamentos pequeños y casas de huéspedes; calificaciones sobre 10 de huéspedes verificados.",
+    "pt": "Maior seleção, incluindo apartamentos pequenos e pousadas; notas em escala de 10 de hóspedes verificados."
+   }
+  },
+  {
+   "naam": "Expedia / Hotels.com / Travelocity",
+   "url": "https://www.expedia.com/",
+   "uitleg": {
+    "nl": "Zelfde groep, vaak met pakketten vlucht plus hotel; scores op 10.",
+    "en": "Same company, often with flight plus hotel packages; scores out of 10.",
+    "de": "Dieselbe Firma, oft mit Flug-plus-Hotel-Paketen; Bewertung auf einer 10er-Skala.",
+    "es": "La misma empresa, a menudo con paquetes de vuelo más hotel; calificaciones sobre 10.",
+    "pt": "A mesma empresa, muitas vezes com pacotes de voo mais hotel; notas em escala de 10."
+   }
+  },
+  {
+   "naam": "Tripadvisor",
+   "url": "https://www.tripadvisor.com/",
+   "uitleg": {
+    "nl": "Meeste reviews per hotel en prijsvergelijking; score op 5.",
+    "en": "Most reviews per hotel plus price comparison; score out of 5.",
+    "de": "Die meisten Bewertungen pro Hotel plus Preisvergleich; Bewertung auf einer 5er-Skala.",
+    "es": "La mayor cantidad de reseñas por hotel y comparación de precios; calificación sobre 5.",
+    "pt": "Mais avaliações por hotel e comparação de preços; nota em escala de 5."
+   }
+  },
+  {
+   "naam": "Kayak / HotelsCombined",
+   "url": "https://www.kayak.com/",
+   "uitleg": {
+    "nl": "Zoekt prijzen bij veel boekingssites tegelijk; eigen score op 10.",
+    "en": "Searches many booking sites at once; own score out of 10.",
+    "de": "Durchsucht viele Buchungsseiten gleichzeitig; eigene Bewertung auf einer 10er-Skala.",
+    "es": "Busca en muchos sitios de reservas a la vez; calificación propia sobre 10.",
+    "pt": "Pesquisa vários sites de reserva ao mesmo tempo; nota própria em escala de 10."
+   }
+  },
+  {
+   "naam": "Trip.com",
+   "url": "https://www.trip.com/",
+   "uitleg": {
+    "nl": "Boekingssite met eigen reviewscores op 10.",
+    "en": "Booking site with its own review scores out of 10.",
+    "de": "Buchungsseite mit eigenen Bewertungen auf einer 10er-Skala.",
+    "es": "Sitio de reservas con sus propias calificaciones sobre 10.",
+    "pt": "Site de reservas com notas próprias em escala de 10."
+   }
+  },
+  {
+   "naam": "Corendon",
+   "url": "https://www.corendon.nl/",
+   "uitleg": {
+    "nl": "Nederlandse reisorganisatie met eigen resort (Mangrove Beach) en pakketreizen.",
+    "en": "Dutch tour operator that owns Mangrove Beach and sells packages.",
+    "de": "Niederländischer Reiseveranstalter, dem Mangrove Beach gehört und der Pauschalreisen verkauft.",
+    "es": "Operador turístico neerlandés que es dueño de Mangrove Beach y vende paquetes.",
+    "pt": "Operadora de turismo holandesa que é dona do Mangrove Beach e vende pacotes."
+   }
+  },
+  {
+   "naam": "TUI",
+   "url": "https://www.tui.nl/",
+   "uitleg": {
+    "nl": "Pakketreizen vanuit Nederland en België, vaak met eigen vluchten.",
+    "en": "Package trips from the Netherlands and Belgium, often with its own flights.",
+    "de": "Pauschalreisen aus den Niederlanden und Belgien, oft mit eigenen Flügen.",
+    "es": "Viajes en paquete desde los Países Bajos y Bélgica, a menudo con vuelos propios.",
+    "pt": "Pacotes de viagem da Holanda e da Bélgica, muitas vezes com voos próprios."
+   }
+  }
+ ],
+ "zoekwoorden": {
+  "nl": [
+   "all inclusive curaçao",
+   "all inclusive resorts curaçao",
+   "beste all inclusive curaçao",
+   "all inclusive curaçao met kinderen",
+   "adults only all inclusive curaçao"
+  ],
+  "en": [
+   "curacao all inclusive resorts",
+   "best all inclusive curacao",
+   "all inclusive curacao for families",
+   "adults only all inclusive curacao"
+  ],
+  "de": [
+   "all inclusive curaçao",
+   "curaçao all inclusive resort",
+   "curaçao all inclusive erwachsene"
+  ]
+ },
+ "llmVragen": {
+  "nl": [
+   "Wat is het beste all-inclusive resort op Curaçao?",
+   "Welk all-inclusive resort op Curaçao is goed voor gezinnen?"
+  ],
+  "en": [
+   "What is the best all-inclusive resort in Curaçao?",
+   "Which all-inclusive resort in Curaçao is best for families?"
+  ],
+  "de": [
+   "Was ist das beste All-inclusive-Resort auf Curaçao?"
+  ]
+ }
+}
