@@ -48,7 +48,7 @@ for (const e of entries) {
 for (const key of Object.keys(VELD)) for (const language of LANGS) assert.ok(VELD[key][language], key + ' mist ' + language);
 ok('elk gepubliceerd veld heeft lezerstekst in en, nl en de');
 
-const korea = LIJSTEN.find(l => l.id === 'plastic-korea');
+const korea = LIJSTEN['plastic-korea'];
 const view = korea.klinieken.find(k => k.id === 'view');
 assert.ok(view.openheid.prijs.includes('US$10.000 tot US$14.000 voor een borstvergroting met Motiva Ergonomix'));
 assert.ok(view.openheid.prijs.includes('implantaattechniek, endoscopische operatie en gespecialiseerde nazorg zijn inbegrepen'));
