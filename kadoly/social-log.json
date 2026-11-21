@@ -44,7 +44,8 @@
     "rotatie": "sieraad schuift elke dag één tijdvak op; 17 nov: 12:15 sieraad, 19:45 mandje; 18 nov: 12:15 mandje, 19:45 nieuw; 19 nov: 12:15 nieuw, 19:45 wonen; 20 nov: 12:15 wonen, 19:45 sieraad",
     "notities": [
       "2026-11-18: Zernio-analytics geven voor alle 6 posts van 16-17 nov overal 0 (ook bereik), terwijl Clickmind 7 kliks van Facebook telt (1117-sieraad 4 kliks/1 echt, 1117-mandje 3). Dus niet als gemeten genoteerd; morgen opnieuw. Volgers 0 op alle drie (17 nov).",
-      "2026-11-20: 19 nov geen ronde gedraaid (geen posts). Zernio geeft voor alle beeldposts op FB en IG nog 0 bereik, dus niet als gemeten genoteerd. Reels wel: tafelhaard IG 2 weergaven, FB 1; kersthoek IG 2. Clickmind: facebook 19 kliks/4 echt, pinterest 3 kliks; beste posts 1118-nieuw (2 echt) en v-kersthoek_set (6 kliks). Volgers niet opnieuw gemeten. Pinterest vandaag overgeslagen."
+      "2026-11-20: 19 nov geen ronde gedraaid (geen posts). Zernio geeft voor alle beeldposts op FB en IG nog 0 bereik, dus niet als gemeten genoteerd. Reels wel: tafelhaard IG 2 weergaven, FB 1; kersthoek IG 2. Clickmind: facebook 19 kliks/4 echt, pinterest 3 kliks; beste posts 1118-nieuw (2 echt) en v-kersthoek_set (6 kliks). Volgers niet opnieuw gemeten. Pinterest vandaag overgeslagen.",
+      "2026-11-21: Zernio-sync 06:34 UTC. FB- en IG-beeldposts nog steeds 0 bereik (niet als gemeten genoteerd); Clickmind telt wel FB-kliks (1120-wonen 3/1 echt, 1120-sieraad 2/1 echt). Pinterest: 1117-mandje 34 vertoningen/3 kliks, sinterklaaspin 29/4, strikoorbellen 10/1, 1118-nieuw 3/1; vijf kerstpins van 19 nov (buiten deze ronde) 2-3 vertoningen. Vandaag 3 pins (11:00 mandje plantenset, 15:00 wonen muursticker, 19:45 nieuw DIY wereldkaart). YouTube nog niet in Zernio. Geen reacties op posts."
     ]
   },
   "volgers": {
@@ -144,7 +145,11 @@
       "bord": "Sieraden",
       "post_id": "271060471319461242",
       "public_url": "https://nl.pinterest.com/pin/271060471319461242/",
-      "geverifieerd": "2026-11-17T13:51:55.255Z"
+      "geverifieerd": "2026-11-17T13:51:55.255Z",
+      "vertoningen": 10,
+      "bewaard": 1,
+      "klikken": 1,
+      "gemeten": "2026-11-21"
     },
     {
       "tijd": "2026-11-17T18:45:00Z",
@@ -261,7 +266,11 @@
       "zernio_id": "6afd6551bc74e5a61e5d31df",
       "status": "gepubliceerd",
       "bord": "Wonen en decoratie",
-      "code": "pin-1118-nieuw"
+      "code": "pin-1118-nieuw",
+      "vertoningen": 3,
+      "bewaard": 1,
+      "klikken": 1,
+      "gemeten": "2026-11-21"
     },
     {
       "tijd": "2026-11-20T11:15:00Z",
@@ -272,8 +281,9 @@
       "tijdvak": "12:15",
       "via": "zernio",
       "zernio_id": "6b00080d67b9e6405924ee7d",
-      "status": "gepland",
-      "link": "go.kadoly.com/o?k=fb&p=oc_4174003366658049&c=1120-wonen"
+      "status": "gepubliceerd",
+      "link": "go.kadoly.com/o?k=fb&p=oc_4174003366658049&c=1120-wonen",
+      "kliks_cm": 3
     },
     {
       "tijd": "2026-11-20T11:15:00Z",
@@ -284,7 +294,7 @@
       "tijdvak": "12:15",
       "via": "zernio",
       "zernio_id": "6b00080e8520d7c330785ee4",
-      "status": "gepland"
+      "status": "gepubliceerd"
     },
     {
       "tijd": "2026-11-20T18:45:00Z",
@@ -295,8 +305,9 @@
       "tijdvak": "19:45",
       "via": "zernio",
       "zernio_id": "6b00080f32904255ecf2cfcd",
-      "status": "gepland",
-      "link": "go.kadoly.com/o?k=fb&p=oc_4174005947219969&c=1120-sieraad"
+      "status": "gepubliceerd",
+      "link": "go.kadoly.com/o?k=fb&p=oc_4174005947219969&c=1120-sieraad",
+      "kliks_cm": 2
     },
     {
       "tijd": "2026-11-20T18:45:00Z",
@@ -307,7 +318,46 @@
       "tijdvak": "19:45",
       "via": "zernio",
       "zernio_id": "6b00080f32904255ecf2cfd3",
-      "status": "gepland"
+      "status": "gepubliceerd"
+    },
+    {
+      "tijd": "2026-11-21T10:00:00Z",
+      "dag": "2026-11-21",
+      "platform": "pinterest",
+      "soort": "mandje",
+      "pid": "oc_4173958884671489",
+      "tijdvak": "11:00",
+      "via": "zernio",
+      "zernio_id": "6b0159c4a17cd125e74ca9dc",
+      "status": "gepland",
+      "bord": "Wonen en decoratie",
+      "code": "pin-1121-mandje"
+    },
+    {
+      "tijd": "2026-11-21T14:00:00Z",
+      "dag": "2026-11-21",
+      "platform": "pinterest",
+      "soort": "wonen",
+      "pid": "oc_4174004461895681",
+      "tijdvak": "15:00",
+      "via": "zernio",
+      "zernio_id": "6b0159c4b301c29baa3f06db",
+      "status": "gepland",
+      "bord": "Wonen en decoratie",
+      "code": "pin-1121-wonen"
+    },
+    {
+      "tijd": "2026-11-21T18:45:00Z",
+      "dag": "2026-11-21",
+      "platform": "pinterest",
+      "soort": "nieuw",
+      "pid": "oc_4173957649006593",
+      "tijdvak": "19:45",
+      "via": "zernio",
+      "zernio_id": "6b0159c53faf4d9f340ca8a0",
+      "status": "gepland",
+      "bord": "Hobby en creatief",
+      "code": "pin-1121-nieuw"
     }
   ]
 }

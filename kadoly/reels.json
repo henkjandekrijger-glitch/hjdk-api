@@ -56,12 +56,25 @@
         "instagram": {
           "zernio_id": "6b00081a32904255ecf2d034",
           "tijdvak": "15:30",
-          "status": "gepland"
+          "status": "gepubliceerd"
         },
         "facebook": {
           "zernio_id": "6b00081a8520d7c330785f2b",
           "tijdvak": "15:30",
-          "status": "gepland"
+          "status": "gepubliceerd"
+        }
+      },
+      "gemeten": {
+        "instagram": {
+          "weergaven": 1,
+          "dag": "2026-11-21"
+        },
+        "facebook": {
+          "weergaven": 0,
+          "dag": "2026-11-21"
+        },
+        "clickmind": {
+          "kliks": 1
         }
       }
     },
@@ -74,7 +87,20 @@
       ],
       "tekst": "Het is 17:00 en al donker. Dit is ons plan: wollen deken en een vlam op tafel.\n\nLink in bio, zoek op tafelhaard.\n\n#kadoly #cozy #winter #tafelhaard #wooninspiratie",
       "tiktok_tekst": "Het is 17:00 en al donker. Dit is ons plan. #cozy #winter #tafelhaard #wooninspiratie #hygge",
-      "soort": "pov"
+      "soort": "pov",
+      "gepost": "2026-11-21",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b0159afb301c29baa3f0626",
+          "tijdvak": "15:30",
+          "status": "gepland"
+        },
+        "facebook": {
+          "zernio_id": "6b0159b0a17cd125e74ca93d",
+          "tijdvak": "15:30",
+          "status": "gepland"
+        }
+      }
     },
     {
       "id": "kersthoek_set",
@@ -138,12 +164,22 @@
         "instagram": {
           "zernio_id": "6b00081b8520d7c330785f31",
           "tijdvak": "21:00",
-          "status": "gepland"
+          "status": "gepubliceerd"
         },
         "facebook": {
           "zernio_id": "6b00081b67b9e6405924eec5",
           "tijdvak": "21:00",
-          "status": "gepland"
+          "status": "gepubliceerd"
+        }
+      },
+      "gemeten": {
+        "instagram": {
+          "weergaven": 1,
+          "dag": "2026-11-21"
+        },
+        "clickmind": {
+          "kliks": 1,
+          "echt": 1
         }
       }
     },
@@ -169,7 +205,20 @@
         "oc_4173959219544066"
       ],
       "tekst": "Lampen van alabaster en travertin:\n1. Leonardo alabaster lamp\n2. Alabaster lamp met gouden voet\n3. Travertin lamp met katoenen kap\n\nLink in bio, zoek op Tavellio.\n\n#kadoly #verlichting #interieur #wooninspiratie #homedecor",
-      "tiktok_tekst": "Lampen van alabaster en travertin. Welke kies jij? #verlichting #interieur #wooninspiratie #homedecor #interiordesign"
+      "tiktok_tekst": "Lampen van alabaster en travertin. Welke kies jij? #verlichting #interieur #wooninspiratie #homedecor #interiordesign",
+      "gepost": "2026-11-21",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b0159b0b301c29baa3f063a",
+          "tijdvak": "21:00",
+          "status": "gepland"
+        },
+        "facebook": {
+          "zernio_id": "6b0159b1b301c29baa3f0640",
+          "tijdvak": "21:00",
+          "status": "gepland"
+        }
+      }
     },
     {
       "id": "papieren_kerstboom",
@@ -359,6 +408,44 @@
       "tekst": "3 favorieten van Kolibri Company:\n1. Kolibri Orchideeën Verrassingsdoos - 4 Unieke Orchideeën\n2. Verrassingsorchidee Box: 4 Prachtige Variëteiten van Kolibri\n3. Zwarte Zittende Aap Ornament Polystone Decor Kolibri Company\nWelke kies jij?\n\nLink in bio, zoek op Kolibri Company.\n\n#kadoly #wooninspiratie #interieur #homedecor",
       "tiktok_tekst": "3 favorieten van Kolibri Company. Welke kies jij? Link in bio. #kadoly #wooninspiratie #interieur #homedecor",
       "bron": "kadoly-video"
+    },
+    {
+      "id": "n261121a",
+      "soort": "kleurkeuze",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261121a.mp4",
+      "pids": [
+        "oc_4174003356876801",
+        "oc_4174003276759042"
+      ],
+      "tekst": "Welke kleur kies jij?\n1. Serviesset Steengoed 16-Delig voor 4 Personen Grijs (grijs)\n2. Serviesset keramiek groen rustiek 16-delig Mica Decorations (groen)\nZet je nummer in de reacties.\n\nLink in bio, zoek op Mica Decorations.\n\n#kadoly #servies #tafelstyling #keuken #homedecor",
+      "tiktok_tekst": "Welke kleur kies jij: grijs of groen? Link in bio. #kadoly #servies #tafelstyling #keuken #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261121b",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261121b.mp4",
+      "pids": [
+        "oc_4174005523693569",
+        "oc_4174005512273921",
+        "oc_4174005530198017"
+      ],
+      "tekst": "3 favorieten van Nordic coast company:\n1. 4 in 1 Olijf Muslin Babydeken van Nordic Coast Company\n2. Grijze Gebreide Vlechtbedbumper voor Baby's van Nordic Coast\n3. Gevlochten Baby Nest 3 in 1 Ivoor Katoen XXL van Nordic Coast\nWelke kies jij?\n\nLink in bio, zoek op Nordic coast company.\n\n#kadoly #kinderkamer #babykamer #kids",
+      "tiktok_tekst": "3 favorieten van Nordic coast company. Welke kies jij? Link in bio. #kadoly #kinderkamer #babykamer #kids",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261121c",
+      "soort": "finds",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261121c.mp4",
+      "pids": [
+        "oc_4174002164400133",
+        "oc_4174002224791553",
+        "oc_4173959372324865"
+      ],
+      "tekst": "3 finds voor jezelf:\n1. Rietdiffuser Amsterdam Geur 500ml\n2. Reed Diffuser Via Savona Milaan 500ml van Housevitamin\n3. Wellness Cadeauset met Waterfles voor Zelfzorg\nWelke kies jij?\n\nLink in bio, zoek op Housevitamin.\n\n#kadoly #selfcare #beauty #cadeautip",
+      "tiktok_tekst": "3 finds voor jezelf. Welke kies jij? Link in bio. #kadoly #selfcare #beauty #cadeautip",
+      "bron": "kadoly-video"
     }
   ],
   "lerend": {
@@ -370,18 +457,20 @@
     "per_dag_per_platform": 3,
     "soorten": {
       "kleurkeuze": {
-        "videos_gemeten": 1,
-        "cm_kliks": 1,
+        "videos_gemeten": 2,
+        "cm_kliks": 2,
         "cm_echt": 1
       },
       "set": {
-        "videos_gemeten": 1,
-        "cm_kliks": 6
+        "videos_gemeten": 2,
+        "cm_kliks": 7,
+        "cm_echt": 1
       }
     },
     "besluiten": [
       "2026-11-18: eerste video-dag; 08:30 al voorbij bij start van de ronde (09:41 NL), dus 2 per platform (15:30 kleurkeuze, 21:00 set). YouTube en TikTok nog niet in Zernio.",
-      "2026-11-20: 19 nov geen ronde. Vandaag 2 per platform (08:30 al voorbij): 15:30 kerstballen_kleur (kleurkeuze), 21:00 boho_set (set; set had de meeste Clickmind-kliks: kersthoek 6 tegen tafelhaard 1). Weergaven nog te laag om te leren (2 per reel)."
+      "2026-11-20: 19 nov geen ronde. Vandaag 2 per platform (08:30 al voorbij): 15:30 kerstballen_kleur (kleurkeuze), 21:00 boho_set (set; set had de meeste Clickmind-kliks: kersthoek 6 tegen tafelhaard 1). Weergaven nog te laag om te leren (2 per reel).",
+      "2026-11-21: 08:30 al voorbij (ronde 09:41 NL), dus 2 per platform op IG en FB: 15:30 17uur_donker (pov, eerste test van die soort, past bij het tijdstip), 21:00 steenlampen_set (set: 7 Clickmind-kliks over 2 video's tegen kleurkeuze 2). Weergaven per reel nog 0 tot 2, te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd; wachtrij zonder gepost: 20."
     ]
   }
 }
