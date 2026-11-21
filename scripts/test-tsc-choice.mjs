@@ -49,7 +49,7 @@ await test('all public SSR pages: unique IDs, correct language, scripts and meta
   for(const cat of [false,true]){const html=render.home(data.SITE.base,tl,cat);assert.equal((html.match(/id="mail"/g)||[]).length,1);if(!cat)assert.ok(html.indexOf('id="mail"')>html.indexOf('id="ingrepen"'));scriptCheck(html);fs.writeFileSync(path.join(out,(cat?'catalog-':'home-')+tl+'.html'),html);}
   for(const [id,l] of Object.entries(LIJSTEN)){
    const slug=l.slugs[tl];if(!slug)continue;const html=render.rankPagina(data.SITE.base,slug,{id,taal:tl},{});
-   assert.equal((html.match(/<h1>/g)||[]).length,1);assert.ok(html.includes('lang="'+tl+'"'));assert.ok(html.includes('href="'+data.SITE.base+'/'+slug+'"'));assert.ok(!html.includes('data-compare'));
+   assert.equal((html.match(/<h1>/g)||[]).length,1);assert.ok(html.includes('lang="'+tl+'"'));assert.ok(html.includes('href="'+data.absUrl(slug)+'"'));assert.ok(!html.includes('data-compare'));
    assert.equal((html.match(/id="mail"/g)||[]).length,1);assert.ok(html.indexOf('id="mail"')<html.indexOf('id="clinics"'));
    const ids=[...html.matchAll(/\sid="([^"]+)"/g)].map(x=>x[1]);assert.equal(new Set(ids).size,ids.length,'duplicate ID '+slug);
    for(const [other,s] of Object.entries(l.slugs))assert.ok(html.includes('hreflang="'+other+'" href="'+data.absUrl(s)+'"'));
