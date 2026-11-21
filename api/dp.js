@@ -93,6 +93,12 @@ export default async function handler(req, res) {
       res.setHeader('content-type', 'text/html; charset=utf-8');
       return res.status(200).send(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Inkoopwinkel koppelen</title><body style="font:16px/1.5 system-ui;max-width:640px;margin:32px auto;padding:0 16px;color:#0b1620"><h1 style="font-size:24px">Kadoly Inkoop (Shopify) koppelen</h1>${melding}<p>${st.klaar ? 'Gekoppeld met ' + esc(st.winkel) + '.myshopify.com sinds ' + esc(st.sinds) + '. Vul alleen opnieuw in als je de app vervangt.' : 'Vul de gegevens van de app uit het Shopify Dev Dashboard in (Settings van de app).'}</p><form method="post">${veld('shop', 'Winkeladres (…myshopify.com)', 'text', q.get('shop') || (st.winkel ? st.winkel + '.myshopify.com' : ''))}${veld('id', 'Client ID', 'text', q.get('id') || '')}${veld('geheim', 'Client secret (Dev Dashboard, app Kadoly brug, Overview, Credentials: kopieerknop)', 'password')}<p><button style="font:700 16px system-ui;padding:12px 20px;border:0;border-radius:999px;background:#0b1620;color:#fff">Opslaan en testen</button></p></form><p>Wordt opgeslagen en nergens getoond. Deze pagina staat achter de Vercel-inlog.</p></body>`);
     }
+    if (op === 'kadolyhtml') { // 21 nov: vormgeving van kadoly.com ophalen voor het Shopify-thema (alleen beschermde host)
+      if (!beschermd) return res.status(404).send('Niet gevonden');
+      const pad = String(q.get('u') || '/').replace(/^https?:\/\/[^/]+/, ''); if (!/^\/[\w\-\/.?=&%]*$/.test(pad)) return res.status(400).send('pad');
+      const r = await fetch('https://kadoly.com' + pad, { headers: { 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36', 'accept-language': 'nl-NL,nl' }, signal: AbortSignal.timeout(20000) });
+      res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(r.status).send(await r.text());
+    }
     if (op === 'shauth') { // start (zonder code) of terugkeer van Shopify (met code)
       if (!beschermd) return res.status(404).send('Niet gevonden');
       const H = await import('../lib/shophub.js');
