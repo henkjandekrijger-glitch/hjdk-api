@@ -5,7 +5,7 @@
 // op harde feiten (maat, onderdelen, levertijd tegenover een deadline), want we hebben de producten niet zelf vastgehad (Henkjan: nog niet
 // zelf bestellen). Alles wat AI moet kunnen citeren staat in de HTML. Geen gedachtestreepjes. Prijzen live uit de shopcatalogus.
 // Kliks naar de shop gaan via /naar/<pid> (api/shop.js op=gidsuit): Clickmind meet de keten tot betaald per gids.
-import { catalogusInhoud } from '../lib/gids-catalogus.js';
+import { catalogusInhoud, normaliseerGidsProduct } from '../lib/gids-catalogus.js';
 import { gidsIndexPlan } from '../lib/gids-indexnow.js';
 import { kv } from '../lib/db.js';
 import { funnelStap, funnelStand, funnelHtml, fnIdUitCookie, isFnBot, bronVan, FN_JS } from '../lib/funnel.js'; // funnel per persoon (18 nov 2026)
@@ -15,7 +15,7 @@ import { alleVan } from '../lib/gidsen-alle.js'; // alles van een soort onder de
 import { berichten, HAIKU } from '../lib/ai.js';
 import { createHash } from 'node:crypto';
 import { ONDERZOEK, BRONNEN, ONDERZOEK_DAG, onderwerpDag, bronnenHtml, adviesBlok, bronLink, nieuwProductAdvies, leveringsBeperking, aanbevelingToegestaan, dekking, onderzoekHub, onderzoekPagina, onderzoekTekst } from '../lib/gids-onderzoek.js';
-import { bronScript, groeiRonde, groeiStand, groeiHtml } from '../lib/gids-groei.js';
+import { bronScript, groeiRonde, groeiStand, groeiHtml, actueleAiStand } from '../lib/gids-groei.js';
 import * as NB from '../lib/kadoly-nieuws.js'; // aanmelding mail en meldingen (2 nov 2026)
 import * as RED from '../lib/kadoly-redactie.js'; // redactie: elke dag een artikel (19 nov 2026)
 import { kzuxBlok } from '../lib/kzux.js'; // de lerende chat van de keuzehulpen, geleend (19 nov 2026)
@@ -38,7 +38,7 @@ let CAT = null, CAT_AT = 0, META = '', META_AT = 0; // META: Search Console-veri
 async function catalogus() {
   if (CAT && Date.now() - CAT_AT < 300000) return CAT;
   let c = null; try { c = await kv.get('hjdk:shop:cat'); } catch (e) {}
-  const m = {}; const ruw = (c && c.items) || []; const dubbel = new Set(); for (const i of ruw) { if (m[i.id]) dubbel.add(i.id); m[i.id] = i; } CAT_BRON = { records:ruw.length, uniekeIds:Object.keys(m).length, dubbeleIds:[...dubbel] };
+  const m = {}; const ruw = (c && c.items) || []; const dubbel = new Set(); for (const i of ruw) { if (m[i.id]) dubbel.add(i.id); m[i.id] = normaliseerGidsProduct(i); } CAT_BRON = { records:ruw.length, uniekeIds:Object.keys(m).length, dubbeleIds:[...dubbel], gecorrigeerdeRubrieken:Object.values(m).filter(i=>i.bronRubriek).length };
   try { vulPids(m); } catch (e) {} // keuzes met zoek (nieuwe Droppery-producten zonder vaste id) krijgen hun shop-id op titel (18 nov)
   // 18 nov: een gids zonder één leverbaar product (bijv. de 3D-puzzels en windspinners die uit de shop zijn) verdwijnt uit lijsten, sitemap en llms en geeft 410; bij een lege of kapotte catalogus blijven alle gidsen staan
   LEVEND = Object.keys(m).length >= 50 ? new Set(GIDS_IDS.filter(id => (GIDSEN[id].keuze || []).some(k => m[k.pid] && m[k.pid].vr !== false))) : null;
@@ -690,13 +690,13 @@ export default async function handler(req, res) {
       if (q.get('kort') === '1' && r.ok) return res.status(200).json({ ...r, kansen: r.kansen.slice(0, 15).map(x => ({ id: x.id, naam: x.naam, actie: x.actie, zoekenPerMaand: x.zoekenPerMaand, piekmaand: x.piekmaand, aanbod: x.aanbod, gidsen: x.gidsen, vragen: x.vragen.slice(0, 4).map(v => v.k + ' (' + v.perMaand + ')') })), weinig: undefined });
       return res.status(200).json(r);
     }
-    if (op === 'onderzoekstand') { const m = await kv.get('gk:groei:laatste').catch(() => null); res.setHeader('cache-control', 'no-store'); return res.status(200).json({ ok: true, ...dekking(Object.values(await catalogus())), meetbaarheid: { dag: m?.dag || null, google: m?.google?.status || 'nog-niet-gemeten', googleDagen: m?.google?.dagen?.length || 0, googleBlokkade: m?.google?.reden || null, ai: m?.ai?.status || 'nog-niet-gemeten', aiGeslaagd: m?.ai?.geslaagd || 0, aiBlokkade: m?.ai?.fouten?.[0] || null } }); }
+    if (op === 'onderzoekstand') { const m = await kv.get('gk:groei:laatste').catch(() => null); const ai = await actueleAiStand(kv); res.setHeader('cache-control', 'no-store'); return res.status(200).json({ ok: true, ...dekking(Object.values(await catalogus())), meetbaarheid: { dag: m?.dag || null, google: m?.google?.status || 'nog-niet-gemeten', googleDagen: m?.google?.dagen?.length || 0, googleBlokkade: m?.google?.reden || null, ai: ai?.status || 'ontbreekt', aiGeslaagd: ai?.geslaagd || 0, aiDag: ai?.dag || null, aiMomentopname: m?.ai?.status || null, aiBlokkade: ai?.fouten?.[0] || null } }); }
     if (op === 'indexnow') { // dagelijks: groeimeting zonder betaalde AI-aanroepen, daarna gewijzigde URLs aanmelden
       const items = Object.values(await catalogus());
       await groeiRonde(kv, items, req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN).catch(e => console.error('gids-groeimeting', String(e.message).slice(0,120)));
       const RR = await rubrieken(); const NF = await nieuwFeiten();
       let oud = null; try { oud = await kv.get('gk:indexnow'); } catch (e) {}
-      const plan = gidsIndexPlan({ host:HOST, items, gidsen:GIDS_IDS.map(id => GIDSEN[id]), onderzoek:ONDERZOEK, bronnen:BRONNEN, nieuw:NF.L, rubrieken:RR, vorig:oud, extra:W_PAGINAS.concat(RED.RED_PAGINAS()), versies:{home:'catalogusdatum-1120',checks:'vaas,lumen,bamboe',catalogus:'1',rubrieken:'1',nieuw:'3-catalogusdatum-1120',gidsen:'3-bestelbeleid-1118',onderzoek:ONDERZOEK_DAG} });
+      const plan = gidsIndexPlan({ host:HOST, items, gidsen:GIDS_IDS.map(id => GIDSEN[id]), onderzoek:ONDERZOEK, bronnen:BRONNEN, nieuw:NF.L, rubrieken:RR, vorig:oud, extra:W_PAGINAS.concat(RED.RED_PAGINAS()), versies:{home:'catalogusdatum-1120',checks:'vaas,lumen,bamboe',catalogus:'2-rubrieken-1121',rubrieken:'2-rubrieken-1121',nieuw:'3-catalogusdatum-1120',gidsen:'3-bestelbeleid-1118',onderzoek:ONDERZOEK_DAG} });
       try { const { cadeauTipsCheck } = await import('../lib/gidsen-cadeautips.js'); const weg = cadeauTipsCheck(GIDSEN, await catalogus()); if (weg.length) { await kv.raw(['LPUSH', 'mm:handover:log', JSON.stringify({ t: new Date().toISOString(), wie: 'cadeautips-check', tekst: 'Cadeautips op gids.kadoly.com noemen producten die niet leverbaar zijn; tekst aanpassen in lib/gidsen-cadeautips.js: ' + weg.map(x => x.slug + ' ' + x.naam).join('; ').slice(0, 800) })]); await kv.raw(['LTRIM', 'mm:handover:log', '0', '299']); } } catch (e) {} // 21 nov: controle, de cadeautips noemen vaste producten in het korte antwoord
       const urls = q.get('alles') === '1' ? [...new Set([...Object.keys(plan.paginas), ...plan.urls])] : plan.urls;
       if (!urls.length) return res.status(200).json({ ok:true, niets:true, gewijzigd:0 });
