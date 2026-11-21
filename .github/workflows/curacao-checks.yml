@@ -1,0 +1,45 @@
+name: Curacao meting
+on:
+  pull_request:
+    paths:
+      - 'lib/cur*.js'
+      - 'lib/proef.js'
+      - 'api/mm.js'
+      - 'scripts/test-cur-mensen.mjs'
+      - '.github/workflows/curacao-checks.yml'
+permissions:
+  contents: read
+jobs:
+  meting:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    services:
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm install --no-save playwright
+      - run: npx playwright install --with-deps chromium
+      - name: Syntaxis
+        run: |
+          node --check lib/curmens.js
+          node --check lib/cur.js
+          node --check lib/curux.js
+          node --check lib/proef.js
+          node --check api/mm.js
+      - run: node scripts/test-cur-mensen.mjs
+        env:
+          VERCEL_ENV: preview
+          CUR_REDIS_URL: redis://127.0.0.1:6379
+          CUR_PREVIEW_HTML: scripts/fixtures/curacao-bedrijf-preview.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: curacao-ontwerp
+          path: curacao-*.png
