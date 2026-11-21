@@ -666,7 +666,8 @@ export default async function handler(req, res) {
   try {
     if (/^(nieuws|nbbevestig|nbaf|nbpush|nbbericht|nbklik|nbsw|nbronde|nbnieuws|nbstand|nbdomein|nbdomeinweg|nbwin|nbregels|nbwinnaars)$/.test(op)) return await nieuwsOp(op, req, res, q, host, ua);
     if (/^cy[a-z]*$/.test(op)) return await (await import('../lib/curady.js')).cyOp(op, { req, res, q, host }); // Curady (curady.com), high-ticket tak, 18 nov 2026
-    if (op === 'gc') return await GC.gcOp({ req, res, q, host, ua, kaal, schil, leesBody, isBot }); // groepscadeaus per moment (21 nov 2026), concept alleen op de beschermde host tot LIVE
+    if (op === 'gc') return await GC.gcOp({ req, res, q, host, ua, kaal, schil, leesBody, isBot });
+    if (op === 'partner' || op === 'pt') { const PT = await import('../lib/partner.js'); return op === 'pt' ? await PT.ptOp({ req, res, q, host, ua, isBot, gc: GC }) : await PT.partnerOp({ req, res, q, host, ua, kaal, leesBody, isBot, gc: GC }); } // partnermodel (21 nov 2026): sites en verenigingen verdienen per bestelling, concept tot PT.LIVE // groepscadeaus per moment (21 nov 2026), concept alleen op de beschermde host tot LIVE
     if (/^dk[a-z]*$/.test(op)) return await (await import('../lib/dagkans.js')).dkOp(op, { req, res, q, host, ua, kaal, leesBody, isBot }); // Kadoly Winterkans (14 nov 2026), testwereld met &test=1 op de beschermde host
     if (op === 'paginacheck') { if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden'); // nakijken zonder de hele pagina op te halen: maat, titel, kop, schema, rijen (beschermde host)
       const kans = await armKans(), R = await rubrieken(); const pag = { home: await home(kans), nieuw: await nieuwPagina(kans), ['rubriek-' + R[0].c]: await rubriekPagina(R[0].c, kans) }; const uit = {};

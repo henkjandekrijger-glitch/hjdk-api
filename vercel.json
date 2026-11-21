@@ -1525,6 +1525,36 @@
       "destination": "/api/gids?op=gc&g=:g"
     },
     {
+      "source": "/partner",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=partner"
+    },
+    {
+      "source": "/p/:c([a-z0-9-]{3,30})",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=pt&c=:c"
+    },
+    {
+      "source": "/p/:c([a-z0-9-]{3,30})/:n([a-z0-9-]{1,80})",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=pt&c=:c&n=:n"
+    },
+    {
       "source": "/:slug([a-z0-9-]+)",
       "has": [
         {
