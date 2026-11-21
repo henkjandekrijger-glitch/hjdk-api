@@ -1841,6 +1841,16 @@
       "destination": "/api/keuze-tools?tool=dienstgids&g=internet-en-tv-vergelijken"
     },
     {
+      "source": "/sim-only",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=dienstgids&g=sim-only"
+    },
+    {
       "source": "/acai-bowl-maken",
       "has": [
         {
