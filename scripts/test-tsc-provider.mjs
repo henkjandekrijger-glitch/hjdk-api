@@ -6,6 +6,7 @@ import vm from 'node:vm';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as ui from '../lib/tsc-ranking-ui.js';
+import * as ranking from '../lib/tsc-reviewrank.js';
 import * as dental from '../lib/tsc-dental.js';
 import * as searchIntent from '../lib/tsc-search-intent.js';
 import * as catalog from '../lib/tsc-catalog.js';
@@ -22,7 +23,7 @@ import { metHuisstijl } from '../lib/huisstijl.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const raw = fs.readFileSync(path.join(root, 'lib/tsc.js'), 'utf8').replace(/^import\b[^;\n]*;[^\n]*\n/gm, '');
-const names = { ...data, SURGERY_FAVICON, ROUTES: JSON.parse(fs.readFileSync(path.join(root, 'data/tsc-routes.json'))), LIJSTEN, RANK_SLUGS, ...ui, ...catalog, ...signup, ...dental, ...searchIntent, ...provider, ...lookLayer, ...linkLayer, FN_JS, metHuisstijl };
+const names = { ...data, ...ranking, SURGERY_FAVICON, ROUTES: JSON.parse(fs.readFileSync(path.join(root, 'data/tsc-routes.json'))), LIJSTEN, RANK_SLUGS, ...ui, ...catalog, ...signup, ...dental, ...searchIntent, ...provider, ...lookLayer, ...linkLayer, FN_JS, metHuisstijl };
 const render = new Function(...Object.keys(names), raw.replace(/export /g, '') + ';return {home,rankPagina,extraPagina,llms,ALL,pageDate};')(...Object.values(names));
 const out = path.join(root, 'qa-render'); fs.mkdirSync(out, { recursive: true });
 const B = data.SITE.base, LANGS = ['en', 'nl', 'de'];
