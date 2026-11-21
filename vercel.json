@@ -1831,6 +1831,16 @@
       "destination": "/api/keuze-tools?tool=dienstgids&g=elektrische-auto"
     },
     {
+      "source": "/internet-en-tv-vergelijken",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?keuzehulp\\.best"
+        }
+      ],
+      "destination": "/api/keuze-tools?tool=dienstgids&g=internet-en-tv-vergelijken"
+    },
+    {
       "source": "/acai-bowl-maken",
       "has": [
         {
