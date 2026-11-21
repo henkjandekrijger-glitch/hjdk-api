@@ -20,11 +20,13 @@ import * as provider from '../lib/tsc-provider.js';
 import * as lookLayer from '../lib/tsc-look.js';
 import * as linkLayer from '../lib/tsc-links.js';
 import * as chirurgie from '../lib/chirurgie.js';
+import { FN_JS } from '../lib/funnel.js';
+import { metHuisstijl } from '../lib/huisstijl.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 let checks=0;
 async function test(name,fn){await fn();checks++;console.log('ok',name);}
 const raw=fs.readFileSync(path.join(root,'lib/tsc.js'),'utf8').replace(/^import\b[^;\n]*;[^\n]*\n/gm,'');
-const names={...data,SURGERY_FAVICON,ROUTES:JSON.parse(fs.readFileSync(path.join(root,'data/tsc-routes.json'))),LIJSTEN,RANK_SLUGS,...ui,...catalog,...signup,...dental,...searchIntent, ...provider, ...lookLayer, ...linkLayer };
+const names={...data,SURGERY_FAVICON,ROUTES:JSON.parse(fs.readFileSync(path.join(root,'data/tsc-routes.json'))),LIJSTEN,RANK_SLUGS,...ui,...catalog,...signup,...dental,...searchIntent,...ranking,FN_JS,metHuisstijl, ...provider, ...lookLayer, ...linkLayer };
 const render=new Function(...Object.keys(names),raw.replace(/export /g,'')+';return {home,rankPagina,pagina,checkPagina,extraPagina,llms,ALL,pageDate,tscHandler};')(...Object.values(names));
 const out=path.join(root,'qa-render');fs.mkdirSync(out,{recursive:true});
 const scriptCheck=html=>{for(const m of html.matchAll(/<script(?![^>]*application\/(?:ld\+)?json)[^>]*>([\s\S]*?)<\/script>/g))new vm.Script(m[1]);};
