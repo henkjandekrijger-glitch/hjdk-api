@@ -159,6 +159,23 @@ Henkjan 20 nov: "Ik vind het trainen van je eigen profiel een goed iets of je ei
   - Dat levert geen tegoed op, alleen betere cadeau-ideeën. Het telt mee in het smaakpanel (tellers `train-meer` en `train-minder`).
   - Onder je product van de dag staat "Jij kiest vaak meer van: …".
 
+### 4.2f Eindelijk betaald voor je data: trainen, verlanglijstje en verjaardagskalender (21 nov 2026)
+
+Henkjan 21 nov: "iedere keer als je de AI gaat trainen wat jij ok vindt krijg je 1 cent en de gene die je uitnodigde ook 1 cent", "Eindelijk betaald voor je data", "Er kunnen menselijk checks tussen de trainingen zitten. En je kunt alles vragen salaris etc", "Ja bouw het zo", "Ja zet er in gaan we testen of gebruikt wordt". Code: `lib/samen.js`, aangeroepen uit `dkOp`. Schermontwerp en klikbare proef: https://claude.ai/artifact/SRrfbrT18s9w7cgJUiAQte en https://claude.ai/artifact/PGaHs5K5zFEBRPZFNVpmnb.
+
+- **Trainen** (`op=dktik`). 100 kaarten, 10 per dag: per dag 7 cadeaus ("Wil ik" / "Niet voor mij"), 2 vragen over jezelf (20 vragen: leeftijd, verjaardagen, voor wie, budget, salaris in bandbreedte, lootjes, kerst, wonen, kinderen, stijl …) en 1 mens-check ("Tik op de kaars"). Elke kaart 1 cent voor jou en 1 cent voor wie je uitnodigde (`&v=<code>`). Een vraag overslaan levert niets op.
+  - Begint zonder formulier: de eerste kaart staat meteen op de pagina. Sessie in cookie `dktk` (testwereld `dktkt`), stand in `tk:<sessie>`.
+  - Een dag telt niet als iemand binnen 0,7 seconde tikt (`SNEL_MS`), de check mist, of cadeau 38 (kaart 54, een herhaling van cadeau 2) anders beoordeelt. Hij hoort alleen dat de ronde niet telde.
+  - "Jonger dan 18" stopt meteen (meedoen kan vanaf 18, zie voorwaarden).
+  - E-mailadres pas aan het eind van dag 1 ("Bewaar je centen en je lijstje"). Tot bevestigen staan de centen klaar (`ok`, `okVan`); `bevestig` boekt ze op de pot van het nieuwe lid en van wie uitnodigde (niet bij hetzelfde IP). Leden krijgen hun centen direct; wie uitnodigde hooguit 100 cent per dag (`VRIEND_MAX_DAG`).
+  - Elke "Wil ik" komt op een echte verlanglijst van gids.kadoly.com/w (`wl:l:<id>`, items met link naar kadoly.com/product). Daarmee werken delen, stiekem afvinken, samen geven en lootjes van die tool meteen.
+  - Antwoorden: per persoon in `tk:`, als totaal per vraag in `tikant:<vraag>` (voor merken later alleen totalen) en per cadeau in `tikoord`.
+- **Verjaardagskalender** (`op=dkkal`). Iemand maakt de kalender ("Familie De Vries") en zet de link in de familiegroep met de tekst "Wanneer ben jij jarig? Tik je dag aan, dat kost 5 seconden". Iedereen tikt maand en dag aan en typt zijn voornaam; daarna "Zet je gezin er meteen bij" en "Wil je een seintje?" (e-mail). Seintje 14 en 3 dagen vooraf; de jarige zelf krijgt "Stuur je verlanglijstje naar de familie". Alleen voornaam, dag en maand. `kal:<gid>`, set `kals`.
+- **Verjaardagen uit het trainen**: leden krijgen 14 dagen vooraf "Over twee weken is je moeder jarig" met drie cadeaus (via Clickmind, `dkgo`).
+- **Ingangen**: blok "Eindelijk betaald voor je data" op de ledenpagina, regel in de ochtendmail (`dkgo&w=k`), WhatsApp-knop "Laat een vriend ook verdienen" (`dktik&w=wa`), lootjes via gids.kadoly.com/w/lootjes.
+- **Controles** (`dkstand` → `lekken`): 50+ kaarten zonder e-mailadres; meer dan de helft van de dagen telt niet (checks te streng); 3+ kalenders zonder verjaardagen erin. Tellers: `tik-nieuw`, `tik-kaart`, `tik-wil`, `tik-vraag`, `tik-jarig`, `tik-dag`, `tik-dagmis`, `tik-mis-<reden>`, `tik-mail`, `tik-lid`, `tik-deel`, `tik-lijstdeel`, `kal-maak`, `kal-lid`, `kal-mail`, `kal-deel`, `kal-herinner`, `tik-herinner`.
+- **Wat we al wisten**: de verlanglijst- en lootjestool (sinds 13 nov) kreeg tussen 15 en 21 nov alleen bezoeken (lootjespagina 37, gedicht 26, zoeker 21), geen enkele lijst of trekking. Meten of het nu gebruikt wordt kan pas met echte bezoekers: live op Henkjans woord (`dk:aan`) en verkeer.
+
 ### 4.3 Juridisch
 
 - **Geen kansspel**: er wordt niets verloot, iedereen krijgt wat hij spaart. De Gedragscode Promotionele Kansspelen, de einddatum, het plafond van €4.500 en kansspelbelasting gelden dus niet.
@@ -329,6 +346,8 @@ Henkjan 20 nov: "Maak het volkomen lerend . ALLE variabelen . /campagnes-henkjan
 10. **Partners: clubs en sites** (20 nov, nog niet gebouwd; schermontwerpen: https://claude.ai/artifact/RiRsoJNbjMdiu69uJeuycX). Eén partnercode voor allebei: een club deelt de link via WhatsApp en een poster met QR-code, een site zet het blokje (`spaarpot.js` met `data-partner`) op de pagina. Zelfde beloning en partnerpagina. Een via een lid doorgestuurde vriend telt mee voor dezelfde partner.
     **Sites en verenigingen die het blokje plaatsen en meeverdienen** (Henkjan 20 nov): voorstel €0,50 per lezer die 3 dagen klikt plus 20% van de winst op hun aankopen; eerst op de eigen sites meten.
 
+12. **Trainen, verlanglijstje en kalender testen met echte mensen** (21 nov): gebouwd en getest in de testwereld (41 controles in tik.mjs). Live gaat het samen met de Spaarpot aan (`dk:aan`, Henkjans woord) en vraagt verkeer. De oude regels (startpot €5, €0,10 per dagelijkse klik, vriendbonus) staan er nog naast; Henkjan beslist of die eruit gaan nu "betaald voor je data" de kern is.
+
 ## 8. Assessment en economie (20 nov 2026)
 
 Henkjan 20 nov: "Kijk in quiz md wat wel en niet werkte en nu gaan we dit compounden . Doe verder onderzoek naar bestaande loyaltie programmas ... Hier is kern : Je klikt voor elkaar dus hoe meer mensen hoe meer korting of zelfs 100% korting . Doe totaal asessemnet ook even verder nog voor economics".
@@ -353,6 +372,8 @@ Henkjan 20 nov: "Kijk in quiz md wat wel en niet werkte en nu gaan we dit compou
 **Kern van Henkjan ("hoe meer mensen, hoe meer korting, tot 100%"):** het voorstel is "Samen naar 100%": je kiest een product, elke klik van een vriend geeft % korting op dat product en elke nieuwe vriend een grote stap; bij 100% is het gratis, daaronder is het korting in de kassa. Het aantal benodigde klikken hangt af van de kostprijs, zodat elke klik begrensd geld kost.
 
 ## 9. Logboek (nieuwste bovenaan)
+
+- 2026-11-21: "Eindelijk betaald voor je data" (sectie 4.2f): trainen voor centen (`op=dktik`, 100 kaarten, 10 per dag, cent voor jou en wie uitnodigde, mens-checks, 20 vragen), elke "Wil ik" op een echte verlanglijst van /w, verjaardagskalender voor de familie (`op=dkkal`) met seintjes 14 en 3 dagen vooraf, verjaardagen uit het trainen in de ochtendronde. Code `lib/samen.js`. Lokaal getest (41 controles in tik.mjs). Live uit tot `dk:aan`. Open: of de oude regels (startpot, dagklik, vriendbonus) blijven (punt 12).
 
 - 2026-11-20: Eigen doel kiezen met zoeken (`op=dkdoel`), voortgang naar je doel in pagina en mail, delen met "Help me sparen voor …", smaak trainen tot 10 per dag zonder tegoed (`op=dktrain`). Lokaal getest (8 controles in doel.mjs; bestaande tests slagen).
 
