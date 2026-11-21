@@ -17,10 +17,12 @@ import * as provider from '../lib/tsc-provider.js';
 import * as lookLayer from '../lib/tsc-look.js';
 import * as linkLayer from '../lib/tsc-links.js';
 import { VELD, veldTekst, conclusieTekst } from '../lib/tsc-provider-tekst.js';
+import { FN_JS } from '../lib/funnel.js';
+import { metHuisstijl } from '../lib/huisstijl.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const raw = fs.readFileSync(path.join(root, 'lib/tsc.js'), 'utf8').replace(/^import .*;\n/gm, '');
-const names = { ...data, SURGERY_FAVICON, ROUTES: JSON.parse(fs.readFileSync(path.join(root, 'data/tsc-routes.json'))), LIJSTEN, RANK_SLUGS, ...ui, ...catalog, ...signup, ...dental, ...searchIntent, ...provider, ...lookLayer, ...linkLayer };
+const raw = fs.readFileSync(path.join(root, 'lib/tsc.js'), 'utf8').replace(/^import\b[^;\n]*;[^\n]*\n/gm, '');
+const names = { ...data, SURGERY_FAVICON, ROUTES: JSON.parse(fs.readFileSync(path.join(root, 'data/tsc-routes.json'))), LIJSTEN, RANK_SLUGS, ...ui, ...catalog, ...signup, ...dental, ...searchIntent, ...provider, ...lookLayer, ...linkLayer, FN_JS, metHuisstijl };
 const render = new Function(...Object.keys(names), raw.replace(/export /g, '') + ';return {home,rankPagina,extraPagina,llms,ALL,pageDate};')(...Object.values(names));
 const out = path.join(root, 'qa-render'); fs.mkdirSync(out, { recursive: true });
 const B = data.SITE.base, LANGS = ['en', 'nl', 'de'];
@@ -68,8 +70,8 @@ for (const e of entries) for (const language of LANGS) {
   scripts(html);
   assert.equal((html.match(/<h1/g) || []).length, 1);
   assert.equal((html.match(/id="mail"/g) || []).length, 1, 'één aanmeldblok ' + slug);
-  assert.ok(html.includes('<link rel="canonical" href="' + B + '/' + slug + '">'));
-  for (const tl of LANGS) assert.ok(html.includes('hreflang="' + tl + '" href="' + B + '/' + e.slugs[tl] + '"'), 'hreflang ' + tl + ' op ' + slug);
+  assert.ok(html.includes('<link rel="canonical" href="' + data.absUrl(slug) + '">'));
+  for (const tl of LANGS) assert.ok(html.includes('hreflang="' + tl + '" href="' + data.absUrl(e.slugs[tl]) + '"'), 'hreflang ' + tl + ' op ' + slug);
   assert.ok(html.includes('index,follow'));
   assert.ok(!/aggregateRating/.test(html), 'geen aggregateRating');
   assert.ok(html.indexOf('class="answer"') < html.indexOf('id="mail"'), 'conclusie staat boven het aanmeldblok');
@@ -92,13 +94,13 @@ for (const [slug, language] of Object.entries(provider.ABOUT_SLUGS())) { const h
 for (const [slug, info] of Object.entries(provider.COMPARE_SLUGS())) {
   const pg = provider.comparePage(B, info.pair, info.taal), html = render.extraPagina(B, slug, info.taal, pg, {});
   scripts(html); assert.equal((html.match(/<h1/g) || []).length, 1); assert.equal((html.match(/id="mail"/g) || []).length, 1);
-  for (const tl of LANGS) assert.ok(html.includes('hreflang="' + tl + '" href="' + B + '/' + info.pair.slugs[tl] + '"'));
+  for (const tl of LANGS) assert.ok(html.includes('hreflang="' + tl + '" href="' + data.absUrl(info.pair.slugs[tl]) + '"'));
   if (info.taal !== 'nl') assert.ok(!NL_ONLY.test(text(html)), 'Nederlandse werknotitie op ' + slug);
   assert.ok(html.includes(info.pair.x.slugs[info.taal]) && html.includes(info.pair.y.slugs[info.taal]), 'vergelijking linkt naar beide aanbieders');
   if (slug === 'nl/vergelijk/smile-hair-clinic-vs-vera-clinic') fs.writeFileSync(path.join(out, 'compare-smile-vera-nl.html'), html);
 }
 assert.ok(Object.keys(provider.COMPARE_SLUGS()).length <= 18, 'hooguit zes paren: geen pagina per combinatie');
-const top = provider.mailTopThree(['hair', 'laser-eye'], 'nl', s => B + '/' + s);
+const top = provider.mailTopThree(['hair', 'laser-eye'], 'nl', s => data.absUrl(s));
 assert.ok(top.includes('/nl/klinieken/') && /\d,\d\d\/5/.test(top), 'maildeel noemt de top drie met cijfers en eigen pagina');
 assert.equal(provider.mailTopThree(['bestaat-niet'], 'en', s => s), '');
 for (const language of LANGS) assert.ok(render.extraPagina(B, provider.aboutSlug(language), language, provider.aboutPage(B, language)).includes('Henkjan de Krijger'), 'uitgever bij naam op over ons');
