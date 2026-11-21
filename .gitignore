@@ -1,3 +1,4 @@
 node_modules
 .vercel
 consistentie.md
+__pycache__/
