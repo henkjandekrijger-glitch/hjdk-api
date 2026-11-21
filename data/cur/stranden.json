@@ -23,11 +23,11 @@
   "pt": "Praias de Curaçao comparadas: {n} praias, entradas e avaliações"
  },
  "metaDesc": {
-  "nl": "{n} stranden op Curaçao met entreeprijs, voorzieningen, snorkelen en schildpadden. Welk strand past bij jou?",
-  "en": "{n} Curaçao beaches with entry fees, facilities, snorkeling and turtles. Find the beach that fits you.",
-  "de": "{n} Strände auf Curaçao mit Eintritt, Ausstattung, Schnorcheln und Schildkröten. Finde den Strand, der zu dir passt.",
-  "es": "{n} playas de Curazao con precio de entrada, servicios, snorkel y tortugas. Encuentra la playa que va contigo.",
-  "pt": "{n} praias de Curaçao com entrada, estrutura, snorkel e tartarugas. Encontre a praia que combina com você."
+  "nl": "{n} stranden op Curaçao vergeleken: wat Mambo Beach, Cas Abao en Porto Mari kosten, welke 14 gratis zijn en waar je schildpadden ziet.",
+  "en": "{n} Curaçao beaches compared: what Mambo Beach, Cas Abao and Porto Mari cost, which 14 are free and where to see turtles.",
+  "de": "{n} Strände auf Curaçao im Vergleich: was Mambo Beach, Cas Abao und Porto Mari kosten, welche 14 kostenlos sind und wo du Schildkröten siehst.",
+  "es": "{n} playas de Curazao comparadas: cuánto cuestan Mambo Beach, Cas Abao y Porto Mari, cuáles 14 son gratis y dónde ver tortugas.",
+  "pt": "{n} praias de Curaçao comparadas: quanto custam Mambo Beach, Cas Abao e Porto Mari, quais 14 são grátis e onde ver tartarugas."
  },
  "kort": {
   "nl": "We vergeleken {n} stranden op Curaçao. De meeste stranden aan de westkant zijn gratis; betaalde stranden kosten $3 tot $4,50 per persoon of $6 per auto (Cas Abao). Grote Knip scoort het best (4,5 uit 5.098 reviews), voor kinderen zijn Porto Mari en Cas Abao het fijnst en voor schildpadden ga je naar Playa Piskado of Playa Lagun.",
@@ -3252,23 +3252,16 @@
     "bedrag": 135,
     "valuta": "USD",
     "eenheid": {
-     "nl": "per persoon (boottocht, $135 tot $170)",
-     "en": "per person (boat trip, $135 to $170)",
-     "de": "pro Person (Bootsausflug, $135 bis $170)",
-     "es": "por persona (excursión en bote, $135 a $170)",
-     "pt": "por pessoa (passeio de barco, $135 a $170)"
+     "nl": "per persoon, boottocht tot $170",
+     "en": "per person, boat trip up to $170",
+     "de": "pro Person, Bootstour bis $170",
+     "es": "por persona, excursión en barco hasta $170",
+     "pt": "por pessoa, passeio de barco até $170"
     },
     "bron": "https://www.mycuracaoguide.com/klein-curacao",
     "datum": "2026-10"
    },
    "feiten": [
-    {
-     "nl": "Alleen per boot",
-     "en": "Boat access only",
-     "de": "Nur mit dem Boot erreichbar",
-     "es": "Solo se llega en bote",
-     "pt": "Acesso só de barco"
-    },
     {
      "nl": "Vuurtoren en scheepswrak",
      "en": "Lighthouse and shipwreck",
@@ -3491,7 +3484,7 @@
    }
   },
   {
-   "naam": "Tours met strandstops (Viator, GetYourGuide)",
+   "naam": "Viator, GetYourGuide",
    "url": "https://www.viator.com/Curacao-tours/4WD-ATV-and-Off-Road-Tours/d725-g9-c32",
    "uitleg": {
     "nl": "Zonder auto bereik je de westkant via een tour die entree vaak al inbegrijpt.",
@@ -3556,18 +3549,34 @@
  "faq": [
   {
    "q": {
-    "nl": "Wat is het mooiste strand van Curaçao?",
-    "en": "What's the most beautiful beach in Curaçao?",
-    "de": "Was ist der schönste Strand auf Curaçao?",
-    "es": "¿Cuál es la playa más bonita de Curazao?",
-    "pt": "Qual é a praia mais bonita de Curaçao?"
+    "nl": "Wat zijn de beste stranden van Curaçao?",
+    "en": "What are the best beaches in Curaçao?",
+    "de": "Was sind die besten Strände auf Curaçao?",
+    "es": "¿Cuáles son las mejores playas de Curazao?",
+    "pt": "Quais são as melhores praias de Curaçao?"
    },
    "a": {
-    "nl": "Grote Knip (Kenepa Grandi) scoort het best op Tripadvisor: 4,5 uit 5.098 reviews. Porto Mari volgt met 4,5 uit 1.833.",
-    "en": "Grote Knip (Kenepa Grandi) rates highest on Tripadvisor at 4.5 from 5,098 reviews. Porto Mari follows with 4.5 from 1,833.",
-    "de": "Grote Knip (Kenepa Grandi) ist bei Tripadvisor mit 4.5 bei 5,098 Bewertungen am besten bewertet. Porto Mari folgt mit 4.5 bei 1,833.",
-    "es": "Grote Knip (Kenepa Grandi) tiene la mejor calificación en Tripadvisor: 4.5 con 5,098 reseñas. Le sigue Porto Mari con 4.5 y 1,833.",
-    "pt": "Grote Knip (Kenepa Grandi) tem a melhor nota no Tripadvisor: 4.5 em 5,098 avaliações. Porto Mari vem em seguida, com 4.5 em 1,833."
+    "nl": "Kleine Knip (Kenepa Chiki) is de best beoordeelde die je met de auto bereikt: 4,6 uit 1.462 reviews en gratis. Daarna Porto Mari (4,5 uit 3.389, $3 per persoon) en Grote Knip (4,5 uit 7.693, gratis). Klein Curaçao scoort ook 4,6, maar daar kom je alleen met een boottocht vanaf $135.",
+    "en": "Kleine Knip (Kenepa Chiki) is the best rated beach you can drive to: 4.6 from 1,462 reviews, and free. Next are Porto Mari (4.5 from 3,389, $3 per person) and Grote Knip (4.5 from 7,693, free). Klein Curaçao also rates 4.6, but you only get there on a boat trip from $135.",
+    "de": "Kleine Knip (Kenepa Chiki) ist der am besten bewertete Strand, den du mit dem Auto erreichst: 4,6 aus 1.462 Bewertungen und kostenlos. Danach Porto Mari (4,5 aus 3.389, $3 pro Person) und Grote Knip (4,5 aus 7.693, kostenlos). Klein Curaçao hat auch 4,6, ist aber nur per Bootstour ab $135 erreichbar.",
+    "es": "Kleine Knip (Kenepa Chiki) es la playa mejor valorada a la que llegas en auto: 4,6 de 1.462 reseñas y gratis. Le siguen Porto Mari (4,5 de 3.389, $3 por persona) y Grote Knip (4,5 de 7.693, gratis). Klein Curaçao también tiene 4,6, pero solo se llega en barco, desde $135.",
+    "pt": "Kleine Knip (Kenepa Chiki) é a praia mais bem avaliada que você alcança de carro: 4,6 de 1.462 avaliações, e grátis. Depois vêm Porto Mari (4,5 de 3.389, $3 por pessoa) e Grote Knip (4,5 de 7.693, grátis). Klein Curaçao também tem 4,6, mas só se chega de barco, a partir de $135."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost Mambo Beach?",
+    "en": "How much is Mambo Beach?",
+    "de": "Wie viel kostet Mambo Beach?",
+    "es": "¿Cuánto cuesta Mambo Beach?",
+    "pt": "Quanto custa Mambo Beach?"
+   },
+   "a": {
+    "nl": "Ongeveer $4,50 per persoon. Ligbedden huur je apart bij de beachclubs; de boulevard met winkels is gratis.",
+    "en": "About $4.50 per person. Loungers are rented separately from the beach clubs; the shopping boulevard is free.",
+    "de": "Etwa $4.50 pro Person. Liegen werden separat von den Beach Clubs vermietet; die Einkaufsmeile ist kostenlos.",
+    "es": "Unos $4.50 por persona. Las tumbonas se alquilan aparte en los beach clubs; el bulevar comercial es gratis.",
+    "pt": "Cerca de $4.50 por pessoa. As espreguiçadeiras são alugadas à parte nos beach clubs; o boulevard de compras é gratuito."
    }
   },
   {
@@ -3584,6 +3593,38 @@
     "de": "Unter anderem Grote Knip, Kleine Knip, Playa Lagun, Playa Piskado, Playa Jeremi, Daaibooi, Kokomo und Tugboat Beach. Bei Kokomo zahlst du nur für Liegen.",
     "es": "Entre otras, Grote Knip, Kleine Knip, Playa Lagun, Playa Piskado, Playa Jeremi, Daaibooi, Kokomo y Tugboat Beach. En Kokomo solo pagas por las tumbonas.",
     "pt": "Entre outras, Grote Knip, Kleine Knip, Playa Lagun, Playa Piskado, Playa Jeremi, Daaibooi, Kokomo e Tugboat Beach. Em Kokomo você paga só pelas espreguiçadeiras."
+   }
+  },
+  {
+   "q": {
+    "nl": "Wat kost Papagayo Beach op Curaçao?",
+    "en": "How much is Papagayo Beach in Curaçao?",
+    "de": "Was kostet Papagayo Beach auf Curaçao?",
+    "es": "¿Cuánto cuesta Papagayo Beach en Curazao?",
+    "pt": "Quanto custa a Papagayo Beach em Curaçao?"
+   },
+   "a": {
+    "nl": "Papagayo Beach Club ligt aan Jan Thiel Beach. Je betaalt ANG 6 per persoon entree voor Jan Thiel Beach en ANG 10 voor een ligbed bij Papagayo. Gasten van het Papagayo-hotel betalen geen entree.",
+    "en": "Papagayo Beach Club is on Jan Thiel Beach. You pay ANG 6 per person to enter Jan Thiel Beach and ANG 10 for a lounger at Papagayo. Guests of the Papagayo hotel pay no entry.",
+    "de": "Papagayo Beach Club liegt am Jan Thiel Beach. Du zahlst ANG 6 pro Person Eintritt für Jan Thiel Beach und ANG 10 für eine Liege bei Papagayo. Gäste des Papagayo-Hotels zahlen keinen Eintritt.",
+    "es": "Papagayo Beach Club está en Jan Thiel Beach. Pagas ANG 6 por persona de entrada a Jan Thiel Beach y ANG 10 por una tumbona en Papagayo. Los huéspedes del hotel Papagayo no pagan entrada.",
+    "pt": "O Papagayo Beach Club fica na Jan Thiel Beach. Você paga ANG 6 por pessoa de entrada na Jan Thiel Beach e ANG 10 por uma espreguiçadeira no Papagayo. Hóspedes do hotel Papagayo não pagam entrada."
+   }
+  },
+  {
+   "q": {
+    "nl": "Hoe kom je op Klein Curaçao?",
+    "en": "How do you get to Klein Curaçao?",
+    "de": "Wie kommt man nach Klein Curaçao?",
+    "es": "¿Cómo se llega a Klein Curaçao?",
+    "pt": "Como chegar a Klein Curaçao?"
+   },
+   "a": {
+    "nl": "Alleen per boot. Klein Curaçao ligt 25 km ten zuidoosten van Curaçao; een boottocht kost $135 tot $170 per persoon. Het eiland scoort 4,6 uit 1.453 reviews, met snorkelen en schildpadden.",
+    "en": "Only by boat. Klein Curaçao lies 25 km southeast of Curaçao; a boat trip costs $135 to $170 per person. The island rates 4.6 from 1,453 reviews, with snorkeling and turtles.",
+    "de": "Nur mit dem Boot. Klein Curaçao liegt 25 km südöstlich von Curaçao; eine Bootstour kostet $135 bis $170 pro Person. Die Insel hat 4,6 aus 1.453 Bewertungen, mit Schnorcheln und Schildkröten.",
+    "es": "Solo en barco. Klein Curaçao está a 25 km al sureste de Curazao; una excursión en barco cuesta de $135 a $170 por persona. La isla tiene 4,6 de 1.453 reseñas, con snorkel y tortugas.",
+    "pt": "Só de barco. Klein Curaçao fica a 25 km a sudeste de Curaçao; um passeio de barco custa de $135 a $170 por pessoa. A ilha tem 4,6 de 1.453 avaliações, com snorkel e tartarugas."
    }
   },
   {
@@ -3652,22 +3693,6 @@
   },
   {
    "q": {
-    "nl": "Wat kost Mambo Beach?",
-    "en": "How much is Mambo Beach?",
-    "de": "Wie viel kostet Mambo Beach?",
-    "es": "¿Cuánto cuesta Mambo Beach?",
-    "pt": "Quanto custa Mambo Beach?"
-   },
-   "a": {
-    "nl": "Ongeveer $4,50 per persoon. Ligbedden huur je apart bij de beachclubs; de boulevard met winkels is gratis.",
-    "en": "About $4.50 per person. Loungers are rented separately from the beach clubs; the shopping boulevard is free.",
-    "de": "Etwa $4.50 pro Person. Liegen werden separat von den Beach Clubs vermietet; die Einkaufsmeile ist kostenlos.",
-    "es": "Unos $4.50 por persona. Las tumbonas se alquilan aparte en los beach clubs; el bulevar comercial es gratis.",
-    "pt": "Cerca de $4.50 por pessoa. As espreguiçadeiras são alugadas à parte nos beach clubs; o boulevard de compras é gratuito."
-   }
-  },
-  {
-   "q": {
     "nl": "Welk strand is het rustigst?",
     "en": "Which beach is the quietest?",
     "de": "Welcher Strand ist am ruhigsten?",
@@ -3690,7 +3715,12 @@
    "gratis stranden curaçao",
    "kindvriendelijke stranden curaçao",
    "snorkelen curaçao strand",
-   "entree cas abao"
+   "entree cas abao",
+   "mambo beach curaçao",
+   "papagayo beach curaçao",
+   "jan thiel curaçao",
+   "blue bay curaçao",
+   "klein curaçao"
   ],
   "en": [
    "curacao beaches",
@@ -3698,7 +3728,12 @@
    "free beaches curacao",
    "curacao beaches for families",
    "best snorkeling beach curacao",
-   "cas abao entrance fee"
+   "cas abao entrance fee",
+   "mambo beach curacao",
+   "papagayo beach curacao",
+   "blue bay beach curacao",
+   "klein curacao",
+   "jan thiel beach curacao"
   ],
   "es": [
    "playas de curazao",
@@ -3706,7 +3741,8 @@
    "playas gratis curazao",
    "playas de curazao para familias",
    "mejor playa para snorkel curazao",
-   "precio de entrada cas abao"
+   "precio de entrada cas abao",
+   "mambo beach curazao"
   ],
   "pt": [
    "praias de curaçao",
@@ -3714,7 +3750,8 @@
    "praias gratuitas curaçao",
    "praias de curaçao para famílias",
    "melhor praia para snorkel curaçao",
-   "preço de entrada cas abao"
+   "preço de entrada cas abao",
+   "mambo beach curaçao"
   ],
   "de": [
    "Strände Curaçao",
@@ -3722,7 +3759,13 @@
    "kostenlose Strände Curaçao",
    "Strände Curaçao für Familien",
    "bester Schnorchelstrand Curaçao",
-   "Cas Abao Eintritt"
+   "Cas Abao Eintritt",
+   "curacao strand",
+   "mambo beach curacao",
+   "playa porto marie curacao",
+   "blue bay curacao",
+   "playa kalki curacao",
+   "daaibooi curacao"
   ]
  },
  "llmVragen": {
@@ -3751,5 +3794,67 @@
    "Qual praia de Curaçao é a melhor para fazer snorkel com tartarugas?",
    "As praias de Curaçao cobram entrada?"
   ]
+ },
+ "lede": {
+  "nl": "Klein Curaçao scoort het hoogst (4,6), maar daar kom je alleen per boot vanaf $135; met de auto is Kleine Knip onze eerste keus: gratis en 4,6 uit 1.462 reviews. Porto Mari (4,5, $3) is het fijnst met kinderen en 14 van de 34 stranden zijn gratis, vooral aan de westkant. Mambo Beach, het strand waar het meest op gezocht wordt, kost ongeveer $4,50 en heeft beachclubs.",
+  "en": "Klein Curaçao rates highest (4.6), but you only get there by boat from $135; by car, Kleine Knip is our first pick: free and 4.6 from 1,462 reviews. Porto Mari (4.5, $3) is best with kids and 14 of the 34 beaches are free, mostly on the west side. Mambo Beach, the most searched beach, costs about $4.50 and has beach clubs.",
+  "de": "Klein Curaçao hat die beste Bewertung (4,6), ist aber nur per Boot ab $135 erreichbar; mit dem Auto ist Kleine Knip unsere erste Wahl: kostenlos und 4,6 aus 1.462 Bewertungen. Porto Mari (4,5, $3) ist am besten mit Kindern und 14 der 34 Strände sind kostenlos, vor allem im Westen. Mambo Beach, der meistgesuchte Strand, kostet etwa $4,50 und hat Beach Clubs.",
+  "es": "Klein Curaçao tiene la mejor nota (4,6), pero solo se llega en barco desde $135; en auto, Kleine Knip es nuestra primera opción: gratis y 4,6 de 1.462 reseñas. Porto Mari (4,5, $3) es la mejor con niños y 14 de las 34 playas son gratis, sobre todo en el oeste. Mambo Beach, la playa más buscada, cuesta unos $4,50 y tiene beach clubs.",
+  "pt": "Klein Curaçao tem a melhor nota (4,6), mas só se chega de barco a partir de $135; de carro, Kleine Knip é nossa primeira escolha: grátis e 4,6 de 1.462 avaliações. Porto Mari (4,5, $3) é a melhor com crianças e 14 das 34 praias são grátis, principalmente no oeste. Mambo Beach, a praia mais buscada, custa cerca de $4,50 e tem beach clubs."
+ },
+ "llmgat": {
+  "vraag": "What are the best beaches in Curaçao?",
+  "level": "generic",
+  "genoemd": [
+   "Grote Knip",
+   "Cas Abao",
+   "Playa Lagun",
+   "Porto Mari",
+   "Mambo Beach",
+   "Kleine Knip",
+   "Playa Piskado"
+  ],
+  "keus": "",
+  "ons": "een eerste keus met score en aantal reviews, 14 gratis stranden met bron en de entree per strand",
+  "gemeten": "2026-11-20, Claude zonder webzoeken; Demand Radar had deze vraag niet"
+ },
+ "zoekvraag": {
+  "bron": "Demand Radar /api/zoekvraag?thema=curacao",
+  "gemeten": "2026-11-20",
+  "top": {
+   "US": [
+    "mambo beach curacao 9.900",
+    "curacao beaches 8.100",
+    "blue bay (geen apart volume)"
+   ],
+   "NL": [
+    "mambo beach curaçao 8.100",
+    "papagayo beach curaçao 6.600",
+    "jan thiel curaçao 4.400",
+    "blue bay curaçao 3.600",
+    "klein curaçao 3.600"
+   ],
+   "DE": [
+    "mambo beach curacao 2.400",
+    "blue bay curacao 880",
+    "curacao beaches 720",
+    "klein curaçao 720",
+    "curacao strand 590",
+    "playa porto marie 480"
+   ]
+  }
+ },
+ "hero": {
+  "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Playa_Lagun_-_panoramio.jpg/1280px-Playa_Lagun_-_panoramio.jpg",
+  "door": "René Bongard",
+  "licentie": "Wikimedia Commons (CC BY-SA 3.0)",
+  "bron": "https://commons.wikimedia.org/wiki/File:Playa_Lagun_-_panoramio.jpg",
+  "alt": {
+   "nl": "Turquoise baai van Playa Lagun op Curaçao",
+   "en": "Turquoise cove of Playa Lagun on Curaçao",
+   "de": "Türkisfarbene Bucht der Playa Lagun auf Curaçao",
+   "es": "Cala turquesa de Playa Lagun en Curazao",
+   "pt": "Enseada turquesa da Playa Lagun em Curaçao"
+  }
  }
 }
