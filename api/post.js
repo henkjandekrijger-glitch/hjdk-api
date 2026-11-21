@@ -31,6 +31,7 @@ export default async function handler(req, res) {
       if (q.t) { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send((eigen.length ? 'Geleerd uit je eigen Gmail:\n' + eigen.map(x => '- ' + x).join('\n') + '\n\n' : '') + r.map((l, i) => (i + 1) + '. [' + (l.vast ? 'vast' : l.score) + '] ' + l.les + ' (' + l.id + '; ' + (l.verstuurd ? l.goed + ' van ' + l.verstuurd + ' mails met antwoord of klik' : l.bron) + ')').join('\n')); }
       return res.status(200).json({ ok: true, uitEigenGmail: eigen, regels: r });
     }
+    if (op === 'awindomein') { const A = await import('../lib/awinmail.js'); return res.status(200).json(await A.adsfairDomein(q.stap === 'maak' ? 'maak' : 'check')); }
     if (op === 'awinstuur') { const A = await import('../lib/awinmail.js'); return res.status(200).json(await A.stuurAwin(Math.max(1, Math.min(5, Number(q.max) || 3)), String(q.droog || '') === '1')); }
     if (op === 'stand') return res.status(200).json(await stand());
     if (op === 'meld' || op === 'uitkomst') {
