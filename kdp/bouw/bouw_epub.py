@@ -97,15 +97,26 @@ p{margin:0 0 0.7em;text-indent:0}
 """
 
 
+LANG = 'en'
+EN_T = dict(titelpagina='Title Page', inhoud='Contents', hlabel='CHAPTER {i2} \u2022 {label} {a}\u2013{b}', quiz_toc='Bonus: True or False? Quiz',
+            quiz_label='BONUS', quiz_titel='True or False?', quiz_teaser='{n} quick ones to test yourself or your friends. Decide true or false, then check the answers below.',
+            antworten='Answers', waar='TRUE', onwaar='FALSE', zie='see fact', ook='Also by {auteur}', reviewlink='Write your review on Amazon',
+            score='<b>Your score:</b> 25 or more: walking encyclopedia. 15 to 24: seriously sharp. Under 15: perfect excuse to read the book again.')
+DE_T = dict(titelpagina='Titelseite', reviewlink='Hier Rezension schreiben')
+
+
 def xhtml(titel, body):
     return ('<?xml version="1.0" encoding="utf-8"?>\n<!DOCTYPE html>\n'
-            '<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">\n'
+            '<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="' + LANG + '" xml:lang="' + LANG + '">\n'
             f'<head><meta charset="utf-8"/><title>{html.escape(titel)}</title>'
             '<link rel="stylesheet" type="text/css" href="style.css"/></head>\n'
             f'<body>\n{body}\n</body></html>\n')
 
 
 def maak(B, uit):
+    global LANG
+    LANG = B.get('taal', 'en')[:2]
+    T = dict(EN_T, **(DE_T if LANG == 'de' else {}), **{k: v for k, v in B.get('t', {}).items() if k in EN_T})
     titel = re.sub('<[^>]+>', '', B['titel_meta'])
     delen = []  # (id, bestandsnaam, kop, xhtml)
 
@@ -115,7 +126,7 @@ def maak(B, uit):
     body = (regels + f'<p class="sub">{opmaak(B["ondertitel"])}</p>'
             + (f'<p class="tag">{opmaak(B["tagline"])}</p>' if B.get('tagline') else '')
             + f'<p class="auteur">{platte_tekst(B["auteur"]).upper()}</p>')
-    delen.append(('titel', 'titel.xhtml', 'Title Page', xhtml(titel, body)))
+    delen.append(('titel', 'titel.xhtml', T['titelpagina'], xhtml(titel, body)))
     delen.append(('copy', 'copyright.xhtml', 'Copyright',
                   xhtml('Copyright', ''.join(f'<p class="klein">{opmaak(t)}</p>' for t in B['copyright']))))
     delen.append(('intro', 'intro.xhtml', re.sub('<[^>]+>', '', B['intro_kop']),
@@ -125,7 +136,7 @@ def maak(B, uit):
     modus = B['modus']
     for i, (naam, teaser, items) in enumerate(B['hoofdstukken'], 1):
         if modus == 'facts':
-            lab = f'CHAPTER {i:02d} \u2022 FACTS {nr+1}\u2013{nr+len(items)}'
+            lab = T['hlabel'].format(i2=f'{i:02d}', i=i, label=B.get('label', 'FACTS'), a=nr+1, b=nr+len(items)).replace('  ', ' ')
         else:
             lab = f'CHAPTER {i:02d}'
         body = f'<p class="label">{lab}</p><h2 style="page-break-before:avoid">{platte_tekst(naam)}</h2><p class="teaser">{platte_tekst(teaser)}</p>'
@@ -153,30 +164,32 @@ def maak(B, uit):
 
     if B.get('tf_quiz'):
         alle = [f for _, _, fs in B['hoofdstukken'] for f in fs]
-        body = ('<p class="label">BONUS</p><h2 style="page-break-before:avoid">True or False?</h2>'
-                f'<p class="teaser">{len(B["tf_quiz"])} quick ones to test yourself or your friends. Decide true or false, then check the answers below.</p>')
+        body = (f'<p class="label">{T["quiz_label"]}</p><h2 style="page-break-before:avoid">{T["quiz_titel"]}</h2>'
+                f'<p class="teaser">{T["quiz_teaser"].format(n=len(B["tf_quiz"]))}</p>')
         for i, (q, _, _) in enumerate(B['tf_quiz'], 1):
             body += f'<p class="f"><span class="n">{i}.</span> {platte_tekst(q)}</p>'
-        body += '<h2>Answers</h2>'
+        body += f'<h2>{T["antworten"]}</h2>'
         for i, (q, waar, zoek) in enumerate(B['tf_quiz'], 1):
             tr = [n for n, f in enumerate(alle, 1) if zoek.lower() in f.lower()]
             assert len(tr) == 1, (zoek, tr)
-            body += f'<p class="antw"><b>{i}. {"TRUE" if waar else "FALSE"}</b> \u2014 see <a href="{fact_bestand(B, tr[0])}#f{tr[0]}">fact {tr[0]}</a></p>'
-        body += '<p><b>Your score:</b> 25 or more: walking encyclopedia. 15 to 24: seriously sharp. Under 15: perfect excuse to read the book again.</p>'
-        delen.append(('quiz', 'quiz.xhtml', 'Bonus: True or False? Quiz', xhtml('True or False?', body)))
+            body += f'<p class="antw"><b>{i}. {T["waar"] if waar else T["onwaar"]}</b>: <a href="{fact_bestand(B, tr[0])}#f{tr[0]}">{T["zie"]} {tr[0]}</a></p>'
+        body += f'<p>{T["score"]}</p>'
+        delen.append(('quiz', 'quiz.xhtml', re.sub('<[^>]+>', '', T['quiz_toc']), xhtml(T['quiz_titel'], body)))
 
     body = f'<h2>{opmaak(B["slot_kop"])}</h2>' + ''.join(f'<p>{opmaak(t)}</p>' for t in B['slot'])
+    if B.get('review'):
+        body += f'<p><b><a href="{html.escape(B["review"])}">{T["reviewlink"]}</a></b></p>'
     if B.get('ook'):
-        body += f'<h3>Also by {platte_tekst(B["auteur"])}</h3>' + ''.join(
+        body += f'<h3>{T["ook"].format(auteur=platte_tekst(B["auteur"]))}</h3>' + ''.join(
             f'<p><b>{platte_tekst(t)}</b><br/>{platte_tekst(o)}</p>' for t, o in B['ook'])
     delen.append(('slot', 'slot.xhtml', re.sub('<[^>]+>', '', B['slot_kop']), xhtml(B['slot_kop'], body)))
 
     # navigatie
-    nav = ('<nav epub:type="toc" id="toc"><h1>Contents</h1><ol>'
+    nav = (f'<nav epub:type="toc" id="toc"><h1>{T["inhoud"]}</h1><ol>'
            + ''.join(f'<li><a href="{b}">{html.escape(k)}</a></li>' for _, b, k, _ in delen[2:]) + '</ol></nav>'
            '<nav epub:type="landmarks" hidden=""><ol><li><a epub:type="bodymatter" href="intro.xhtml">Start</a></li>'
-           '<li><a epub:type="toc" href="nav.xhtml">Contents</a></li></ol></nav>')
-    navx = xhtml('Contents', nav)
+           f'<li><a epub:type="toc" href="nav.xhtml">{T["inhoud"]}</a></li></ol></nav>')
+    navx = xhtml(T['inhoud'], nav)
     ncx = ('<?xml version="1.0" encoding="utf-8"?><ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">'
            f'<head><meta name="dtb:uid" content="urn:uuid:{B["_uid"]}"/></head><docTitle><text>{html.escape(titel)}</text></docTitle><navMap>'
            + ''.join(f'<navPoint id="n{i}" playOrder="{i}"><navLabel><text>{html.escape(k)}</text></navLabel><content src="{b}"/></navPoint>'
@@ -189,10 +202,10 @@ def maak(B, uit):
     spine = '<itemref idref="titel"/><itemref idref="copy"/><itemref idref="nav"/>' + ''.join(
         f'<itemref idref="{i}"/>' for i, _, _, _ in delen[2:])
     opf = ('<?xml version="1.0" encoding="utf-8"?>'
-           '<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="en">'
+           '<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="uid" xml:lang="' + LANG + '">'
            '<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">'
            f'<dc:identifier id="uid">urn:uuid:{B["_uid"]}</dc:identifier><dc:title>{html.escape(titel)}</dc:title>'
-           f'<dc:creator>{html.escape(B["auteur"])}</dc:creator><dc:language>en</dc:language>'
+           f'<dc:creator>{html.escape(B["auteur"])}</dc:creator><dc:language>' + LANG + '</dc:language>'
            f'<meta property="dcterms:modified">{date.today().isoformat()}T00:00:00Z</meta><meta name="cover" content="cover"/>'
            f'</metadata><manifest>{manifest}</manifest><spine toc="ncx">{spine}</spine></package>')
 
