@@ -62,7 +62,7 @@ BOEK = dict(
            quiz_teaser='{n} schnelle Fragen für dich oder deine Freunde. Kreuze W oder F an und prüfe dann die Antworten.',
            tf='W&nbsp;&nbsp;&nbsp;F', antworten='Antworten', waar='WAHR', onwaar='FALSCH', zie='siehe Fakt',
            score='<b>Deine Punkte:</b> 25 oder mehr: wandelndes Lexikon. 15 bis 24: richtig schlau. Unter 15: die perfekte Ausrede, das Buch gleich noch einmal zu lesen.',
-           ook='Ebenfalls von {auteur}'),
+           ook='Ebenfalls von {auteur}', scan='Scannen und Rezension schreiben'),
     copyright=[
         f'<b>{TITEL}</b> {ONDER}',
         'Copyright © 2026 Elias Grant. Alle Rechte vorbehalten.',
@@ -83,9 +83,10 @@ BOEK = dict(
         '•  Lies auf langen Autofahrten einen Fakt laut vor.<br/>'
         '•  Schick deine Lieblingsfakten in den Gruppenchat.',
         'Kleine Warnung: Du wirst öfter als einmal rufen: <b>Echt jetzt?!</b>'],
+    review='https://kaufberater.best/r/echtjetzt',
     slot_kop='Eine kleine Bitte',
     slot=[
-        'Wenn dir dieses Buch ein paar gute Lacher und Aha-Momente geschenkt hat, freue ich mich sehr über eine ehrliche Bewertung bei Amazon. Für einen kleinen Autor ist das die größte Hilfe, und andere finden so ein Geschenk, das wirklich gelesen wird.',
+        'Wie hat dir das Buch gefallen? Eine kurze, ehrliche Bewertung bei Amazon hilft anderen, ein Geschenk zu finden, das wirklich gelesen wird, und für einen kleinen Autor ist sie die größte Hilfe. Ein Satz reicht.',
         'Viel Spaß beim Weitererzählen!',
         'Elias Grant'],
     ook=[],

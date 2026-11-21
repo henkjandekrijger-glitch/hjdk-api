@@ -65,7 +65,7 @@ BOEK = dict(
            quiz_teaser='{n} schnelle Fragen für dich oder deine Freunde. Kreuze W oder F an und prüfe dann die Antworten.',
            tf='W&nbsp;&nbsp;&nbsp;F', antworten='Antworten', waar='WAHR', onwaar='FALSCH', zie='siehe Fakt',
            score='<b>Deine Punkte:</b> 22 oder mehr: wandelndes Lexikon. 15 bis 21: richtig scharf. Unter 15: die perfekte Ausrede, das Buch gleich noch einmal zu lesen.',
-           ook='Ebenfalls von {auteur}'),
+           ook='Ebenfalls von {auteur}', scan='Scannen und Rezension schreiben'),
     copyright=[
         f'<b>{TITEL}</b>. {ONDER}',
         'Copyright © 2026 Max Falk. Alle Rechte vorbehalten.',
@@ -86,9 +86,10 @@ BOEK = dict(
         '•  Teste deine Kumpels mit dem Wahr-oder-falsch-Quiz am Ende.<br/>'
         '•  Leg es dorthin, wo du fünf ruhige Minuten hast. Du weißt schon, wo.',
         'Kleine Warnung: Du wirst öfter als einmal rufen: <b>Moment mal, das stimmt?!</b>'],
+    review='https://kaufberater.best/r/momentmal',
     slot_kop='Eine kleine Bitte',
     slot=[
-        'Wenn dir dieses Buch ein paar gute Geschichten geschenkt hat, freue ich mich sehr über eine ehrliche Bewertung bei Amazon. Für einen kleinen Autor ist das die größte Hilfe, und andere finden so ein Geschenk, das wirklich gelesen wird.',
+        'Wie hat dir das Buch gefallen? Eine kurze, ehrliche Bewertung bei Amazon hilft anderen, ein Geschenk zu finden, das wirklich gelesen wird, und für einen kleinen Autor ist sie die größte Hilfe. Ein Satz reicht.',
         'Viel Spaß beim Weitererzählen!',
         'Max Falk'],
     ook=[('Adventskalender für Männer', '24 Tage kuriose Fakten, unglaubliche Geschichten und Angeberwissen')],

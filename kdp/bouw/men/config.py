@@ -100,10 +100,11 @@ BOEK = dict(
         ("Bull sharks can live in fresh water.", True, "Bull sharks can live in fresh water"),
         ("Einstein called compound interest the eighth wonder of the world.", False, "eighth wonder"),
     ],
+    review='https://whichtobuy.best/r/men',
     slot_kop='A Small Favor',
     slot=[
         'You made it through all 800 facts. (Or you skipped straight to the end. Your secret is safe.)',
-        'If this book gave you a few good stories, would you leave a short review on Amazon? It takes less than a minute and helps other people find the book. Even one sentence makes a real difference.',
+        'What did you think of it? A short, honest review on Amazon takes less than a minute and helps other people find the book. Even one sentence makes a real difference.',
         'Which fact surprised you most? Mention it in your review. We read every one.',
         '<b>— Elias Grant</b>'],
     ook=[("Wait, That's True?!", '1,000 Weird, Funny & Mind-Blowing Facts Nobody Told You'),

@@ -52,7 +52,7 @@ BOEK = dict(
            quiz_teaser='{n} Fragen, eine für jedes Türchen. Kreuze W oder F an und prüfe dann die Antworten. Perfekt für Heiligabend am Tisch.',
            tf='W&nbsp;&nbsp;&nbsp;F', antworten='Antworten', waar='WAHR', onwaar='FALSCH', zie='siehe Fakt',
            score='<b>Deine Punkte:</b> 20 oder mehr: wandelndes Lexikon. 12 bis 19: richtig scharf. Unter 12: die perfekte Ausrede, das Buch nächstes Jahr noch einmal zu lesen.',
-           ook='Ebenfalls von {auteur}'),
+           ook='Ebenfalls von {auteur}', scan='Scannen und Rezension schreiben'),
     copyright=[
         '<b>Adventskalender für Männer</b>. 24 Tage kuriose Fakten, unglaubliche Geschichten und Angeberwissen',
         'Copyright © 2026 Max Falk. Alle Rechte vorbehalten.',
@@ -68,10 +68,11 @@ BOEK = dict(
         'Lies jeden Tag ein Türchen, beim Frühstück, auf dem Sofa oder dort, wo Männer am liebsten lesen. Ein Türchen dauert keine fünf Minuten. Und wer nicht warten kann: Wir verraten nichts.',
         'Am Ende wartet ein <b>Bonus-Quiz</b> mit 24 Wahr-oder-falsch-Fragen, eine für jedes Türchen. Ideal, um am Heiligabend die ganze Familie herauszufordern.',
         'Viel Spaß beim Staunen, Angeben und Weitererzählen. Und wenn du beim Lesen ausrufst: Moment mal, das stimmt?!, dann hat dieses Buch seinen Job gemacht.'],
+    review='https://kaufberater.best/r/advent',
     slot_kop='Frohe Weihnachten!',
     slot=[
         'Geschafft: 24 Türchen, 480 Fakten und hoffentlich jede Menge Stoff zum Angeben unter dem Weihnachtsbaum.',
-        'Wenn dir dieser Adventskalender Spaß gemacht hat, freue ich mich sehr über eine ehrliche Bewertung bei Amazon. Für einen kleinen Autor ist das die größte Hilfe, und andere finden so ein Geschenk, das wirklich gelesen wird.',
+        'Wie hat dir das Buch gefallen? Eine kurze, ehrliche Bewertung bei Amazon hilft anderen, ein Geschenk zu finden, das wirklich gelesen wird, und für einen kleinen Autor ist sie die größte Hilfe. Ein Satz reicht.',
         'Frohe Weihnachten und einen guten Rutsch!',
         'Max Falk'],
     ook=[('Moment mal, das stimmt?! Für Männer', '400 verblüffende Fakten und kurioses Wissen für Männer, die schon alles haben')],

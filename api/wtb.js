@@ -216,6 +216,16 @@ export default async function handler(req, res) {
     out.log = ((await kv.get(K.log)) || []).slice(0, 30);
     res.setHeader('cache-control', 'no-store'); return res.status(200).json(out);
   }
+  if (op === 'rev') { // QR achterin de KDP-boeken (/r/<boek>) -> reviewscherm op Amazon; telt scans per boek per dag. Zonder ASIN: zoeken op Amazon (Henkjan 21 nov 2026: "Je kunt boeken bijna weggeven vr reviews . Vind een strategie daarvoor .")
+    const REV = { wtt: ['com', 'B0HRFY3TLB'], men: ['com', 'B0HRGNJ7CY'], teens: ['com', 'B0DJQLBM75'], advent: ['de', 'B0HRRCXTNV'], echtjetzt: ['de', '', 'Echt jetzt Elias Grant'], momentmal: ['de', '', 'Moment mal das stimmt Max Falk'] };
+    res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
+    if (q.get('stand')) { let h = []; try { h = (await kv.raw(['HGETALL', 'kdp:rev'])) || []; } catch (e) {} const o = {}; if (Array.isArray(h)) for (let i = 0; i < h.length; i += 2) o[h[i]] = Number(h[i + 1]); else Object.assign(o, h); return res.status(200).json({ ok: true, scans: o, boeken: REV }); }
+    const b = String(q.get('b') || '').toLowerCase(); const r = REV[b];
+    if (r) { try { await kv.raw(['HINCRBY', 'kdp:rev', b + ':' + new Date().toISOString().slice(0, 10), 1]); } catch (e) {} }
+    const dom = 'https://www.amazon.' + (r ? r[0] : 'com');
+    res.setHeader('location', !r ? dom + '/' : r[1] ? dom + '/review/create-review?asin=' + r[1] : dom + '/s?k=' + encodeURIComponent(r[2]) + '&i=stripbooks');
+    return res.status(302).end();
+  }
   if (op === 'kdpoverdracht') { // overdracht KDP-boeken voor een ander account of andere chat (Henkjan 19 nov 2026: "Zet handover op vercel zodat ander account kan overnemen .")
     const host = String(req.headers['x-forwarded-host'] || req.headers.host || ''); if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
     const lees = (f) => { for (const x of [join(process.cwd(), f), new URL('../' + f, import.meta.url).pathname]) { try { return readFileSync(x, 'utf8'); } catch (e) {} } return '(' + f + ' niet gevonden)'; };

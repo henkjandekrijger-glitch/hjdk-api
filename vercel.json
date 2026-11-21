@@ -890,6 +890,7 @@
       ],
       "destination": "/api/keuze-tools?tool=voorkant&market=de"
     },
+    { "source": "/r/:b([a-z0-9-]+)", "has": [{ "type": "host", "value": "(www\\.)?(whichtobuy|kaufberater|keuzehulp)\\.best" }], "destination": "/api/wtb?op=rev&b=:b" },
     {
       "source": "/all",
       "has": [

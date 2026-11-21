@@ -10,7 +10,9 @@ config.py levert BOEK = dict(...) met:
   tf_quiz: optioneel [(stelling, waar, zoekwoord)] (alleen facts)
   label: 'FACTS' / 'QUESTIONS' / 'JOKES'; groot: True voor large print
 """
-import re, sys, importlib.util
+import re, sys, io, importlib.util
+import segno
+from reportlab.platypus import Image as RLImage
 from reportlab.lib.pagesizes import inch
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
@@ -39,7 +41,7 @@ FW = W - IN - OUT
 
 
 TAAL = 'en'
-EN = dict(inhoud='Contents', hlabel='CHAPTER {i2}  \u2022  {label} {a}\u2013{b}', quiz_toc='Bonus: True or False? Quiz',
+EN = dict(scan='Scan to write your review', inhoud='Contents', hlabel='CHAPTER {i2}  \u2022  {label} {a}\u2013{b}', quiz_toc='Bonus: True or False? Quiz',
           quiz_kop='Bonus Quiz', quiz_label='BONUS', quiz_titel='True or False?',
           quiz_teaser='{n} quick ones to test yourself or your friends. Circle T or F, then check the answers.',
           tf='T&nbsp;&nbsp;&nbsp;F', antworten='Answers', waar='TRUE', onwaar='FALSE', zie='see fact',
@@ -263,6 +265,10 @@ def verhaal(B, toc):
     s += [PageBreak(), hoofdstuk(B['slot_kop']), markeer('_slot'), Spacer(1, 0.3*inch), Paragraph(mooi(B['slot_kop']), S['kop'])]
     for t in B['slot']:
         s.append(Paragraph(t, S['body']))
+    if B.get('review'):  # QR naar de reviewpagina via onze eigen /r/-link (telt scans, ASIN later in te vullen); Henkjan 21 nov 2026
+        buf = io.BytesIO(); segno.make(B['review'], error='m').save(buf, kind='png', scale=12, border=2); buf.seek(0)
+        s += [Spacer(1, 0.18*inch), RLImage(buf, 1.45*inch, 1.45*inch),
+              Paragraph(T['scan'], ParagraphStyle('qr', fontName='PopB', fontSize=11, leading=15, textColor=DONKER, alignment=TA_CENTER, spaceBefore=4))]
     if B.get('ook'):
         s += [Spacer(1, 0.3*inch), Lijn(46), Paragraph(T['ook'].format(auteur=B['auteur']),
                                                        ParagraphStyle('ab', fontName='PopB', fontSize=14, leading=19, textColor=DONKER, spaceAfter=8))]
