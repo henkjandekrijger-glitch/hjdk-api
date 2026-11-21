@@ -52,7 +52,7 @@ await test('all public SSR pages: unique IDs, correct language, scripts and meta
    assert.equal((html.match(/<h1>/g)||[]).length,1);assert.ok(html.includes('lang="'+tl+'"'));assert.ok(html.includes('href="'+data.SITE.base+'/'+slug+'"'));assert.ok(!html.includes('data-compare'));
    assert.equal((html.match(/id="mail"/g)||[]).length,1);assert.ok(html.indexOf('id="mail"')<html.indexOf('id="clinics"'));
    const ids=[...html.matchAll(/\sid="([^"]+)"/g)].map(x=>x[1]);assert.equal(new Set(ids).size,ids.length,'duplicate ID '+slug);
-   for(const [other,s] of Object.entries(l.slugs))assert.ok(html.includes('hreflang="'+other+'" href="'+data.SITE.base+'/'+s+'"'));
+   for(const [other,s] of Object.entries(l.slugs))assert.ok(html.includes('hreflang="'+other+'" href="'+data.absUrl(s)+'"'));
    const ld=JSON.parse(html.match(/application\/(?:ld\+)?json">([\s\S]*?)<\/script>/)[1]);const lists=ld['@graph'].filter(x=>x['@type']==='ItemList');assert.equal(lists.length,2);
    for(const [i,kind]of ['clinic','doctor'].entries()){const r=ranking.reviewRanking(l,kind);assert.deepEqual(lists[i].itemListElement.map(x=>x.name),r.ranked.map(x=>x.k.naam));for(const item of lists[i].itemListElement)assert.ok(html.includes('id="'+item.url.split('#')[1]+'"'));}
    assert.equal(html.includes('content="noindex"'),!!l.noindex);assert.ok(!html.includes('aggregateRating'));
