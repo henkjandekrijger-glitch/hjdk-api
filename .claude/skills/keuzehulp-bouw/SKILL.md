@@ -229,6 +229,7 @@ Op 390×800 staan het antwoord en de eerste actieknop in het eerste scherm.
 - Bijzaken (Stuur door, Jouw ervaring, Meer) als tekstlink van 14 px.
 - Dezelfde actie heeft overal dezelfde stijl.
 - Hoogstens 4 vraag-pills in de chat.
+- In de chat (Henkjan, 21 nov 2026: "duidelijker contrast", "rondere pill"): vraag-pills 2 px zwart omrand en helemaal rond, jouw vraag als zwarte ballon met witte tekst, het antwoord met een zwarte lijn links en wie er praat erboven, volgen als enige gevulde zwarte pill. Teksten in de taal van de pagina. Code: `KX_CONTRAST` in `lib/kzux.js`.
 
 **De chat: doel, pills en start (Henkjan, 20 nov 2026).**
 
