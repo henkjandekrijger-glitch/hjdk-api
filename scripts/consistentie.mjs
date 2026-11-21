@@ -55,6 +55,8 @@ const METEN = () => {
   // 8 nullen en lege beloftes in de tekst
   const t = main.innerText;
   for (const [k, re] of [['nul-prijs', /(^|\s)[$€]0(\s|$)/m], ['nog-geen', /\b(nog geen|no reviews found|noch keine|aún sin|ainda sem)\b/i]]) if (re.test(t)) f.push([k, (t.match(re) || [''])[0].trim()]);
+  // 9 foto die niet laadt (21 nov 2026, uitgaansgids: twee lege vlakken; Henkjan "Fout ."): rechtstreekse Commons-adressen laden niet, alles via de beeldproxy
+  for (const i of main.querySelectorAll('img')) if (zicht(i) && i.complete && i.naturalWidth === 0) f.push(['beeld-kapot', (i.getAttribute('src') || '').slice(0, 60)]);
   return f;
 };
 
@@ -67,7 +69,7 @@ const uit = [];
 for (const x of pag.slice(0, MAX)) {
   const r = await render(x.m, x.s).catch(e => ({ code: 0, body: '', fout: e.message }));
   if (r.code !== 200) { uit.push({ ...x, fouten: [['status', String(r.code) + (r.fout ? ' ' + r.fout : '')]] }); continue; }
-  html = r.body; await p.goto('https://curacao.day/__c', { waitUntil: 'load', timeout: 30000 }).catch(() => {}); await p.waitForTimeout(1200);
+  html = r.body; await p.goto('https://curacao.day/__c', { waitUntil: 'load', timeout: 30000 }).catch(() => {}); await p.waitForTimeout(1200); await p.evaluate(() => Promise.all([...document.images].map(i => i.complete ? 0 : new Promise(r => { i.onload = i.onerror = r; setTimeout(r, 4000); })))).catch(() => {});
   const f = await p.evaluate(METEN).catch(e => [['meetfout', e.message]]);
   const per = {}; for (const [k, w] of f) (per[k] ||= []).push(w);
   uit.push({ ...x, fouten: Object.entries(per).map(([k, l]) => [k, l.length + 'x: ' + [...new Set(l)].slice(0, 3).join(', ')]) });
