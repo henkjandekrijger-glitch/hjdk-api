@@ -62,6 +62,7 @@ await test('all public SSR pages: unique IDs, correct language, scripts and meta
  }
  for(const [slug,pg]of Object.entries(data.PAGES)){const html=render.pagina(data.SITE.base,slug,pg,{});scriptCheck(html);assert.equal((html.match(/id="mail"/g)||[]).length,1);}
 });
+assert.ok(!raw.includes('tsc:mail:aan'),'de bestaande ochtendmailcron mag niet achter een ad-hoc KV-schakelaar verdwijnen');
 await test('sitemap excludes sparse pages and uses page-specific dates',()=>{
  const all=render.ALL();for(const [slug,i]of Object.entries(RANK_SLUGS))assert.equal(all.includes(slug),!LIJSTEN[i.id].noindex);
  assert.equal(render.pageDate('check-surgeon-turkey'),'2026-11-14');assert.ok(!render.llms().includes('Profiles are ordered by documented fields'));
