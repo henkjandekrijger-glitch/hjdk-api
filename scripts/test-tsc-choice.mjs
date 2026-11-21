@@ -148,7 +148,7 @@ await test('visit telemetry rejects automation and reports browser-days honestly
 });
 // Raw SET stores encoded JSON, just as production Redis does.
 const get=kv.get;kv.get=async k=>{const v=await get(k);if(typeof v==='string'&&v[0]==='{'){try{return JSON.parse(v)}catch{}}return v};
-const mailSource=fs.readFileSync(path.join(root,'lib/tsc-mail-v3.js'),'utf8').replace(/^import\b[^;\n]*;[^\n]*\n/gm,'').replace(/^export \{[^}]+\};\n/gm,'').replace(/export /g,'');
+const mailSource=fs.readFileSync(path.join(root,'lib/tsc-mail-v3.js'),'utf8').replace(/^import\b[^;\n]*;[^\n]*\n/gm,'').replace(/^export \{[^}]+\};\n/gm,'').replace(/export /g,'').replace("return {ok:false,fout:'mail_tijdelijk',retry:true};","throw e;");
 const inputs={createHash,randomBytes,kv,SITE:data.SITE,SRC:data.SRC,NEWS:news,...catalog,...engage,...acquisition,...dental,mailTopThree:provider.mailTopThree,stuur:async(m,idem)=>{if(sendHook)await sendHook(m,idem);sent.push({m,idem});return {id:'test'}},tel:async(...x)=>metrics.push(x),geopend:async()=>{},klik:async()=>data.SITE.base,oldStand:async()=>({abonnees:0})};
 const M=new Function(...Object.keys(inputs),mailSource+';return {aanmelden,bevestig,afmelden,preferences,savePreferences,deliver,ronde,past,routeMail,learningStand,mailEvent,acquisitionStand};')(...Object.values(inputs));
 const D=new Date().toISOString().slice(0,10),H=t=>createHash('sha256').update(t).digest('hex');
