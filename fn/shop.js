@@ -721,7 +721,9 @@ const PX_SOORT = { koop: 'koop', cart: 'cart', afreken: 'afreken', betaal: 'beta
 // warm publiek: warmZet staat in lib/shopdirect.js (4 nov)
 async function pxVerwerk(code, wRuw, v, order, methode, bron, t, u) {
   const w = PX_SOORT[wRuw] || 'cart'; u = u || {}; let herv = false;
-  if (!code && w === 'koop' && (u.em || u.ph)) { const c = await cmZoek(kv, u); if (c) { code = c; herv = true; } } // 20 nov: bestelling zonder kenmerk, maar dezelfde e-mail of telefoon (hash) als bij een eerdere klik: die klik krijgt de verkoop const oud = w === 'koop' ? 'koop' : (w === 'cart' || w === 'afreken') ? 'cart' : null; // oud = de tellers van voor 17 okt
+  if (!code && w === 'koop' && (u.em || u.ph)) { const c = await cmZoek(kv, u); if (c) { code = c; herv = true; } } // 20 nov: bestelling zonder kenmerk, maar dezelfde e-mail of telefoon (hash) als bij een eerdere klik: die klik krijgt de verkoop
+  const oud = w === 'koop' ? 'koop' : (w === 'cart' || w === 'afreken') ? 'cart' : null; // oud = de tellers van voor 17 okt (22 nov: stond per ongeluk achter het commentaar van regel hierboven, waardoor oud niet bestond en elke melding met klik vastliep)
+  if (w === 'koop' && u.em && !/^test/i.test(String(code || ''))) { try { const { ssBestelling } = await import('../lib/samensparen.js'); await ssBestelling({ em: u.em, v, order, t }); } catch (e) {} } // Samen sparen (22 nov 2026): één zegel van €1 voor wie de koper uitnodigde, of €1 voor de site of vereniging, via de e-mailvingerafdruk
   const m = String(methode || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 16);
   if (bron !== 'feed') { const laatst = { at: Date.now(), test: /^test/i.test(code), bedrag: v, order: !!order, methode: m || null, bron: bron || 'shop' }; try { await kv.set('hjdk:shop:pxlaatst:' + w, laatst); if (m) await kv.set('hjdk:shop:pxlaatst:' + w + ':' + m, laatst, { ex: 60 * 86400 }); } catch (e) {} }
   if (!code) { if (bron !== 'feed') { await uurTel(kv, '?', [w].concat(m ? [w + ':' + m] : []), t); if (w === 'koop' && v > 0) await uurTel(kv, '?', 'omzet', t, Math.round(v * 100)); } // de feed-controle loopt elk uur: zonder kenmerk niet nog eens tellen
