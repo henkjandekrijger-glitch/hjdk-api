@@ -2590,7 +2590,7 @@
   "functions": {
     "api/*.js": {
       "maxDuration": 300,
-      "includeFiles": "{fn/**,data/lc/**,.claude/skills/**,data/post-priors.json,OVERDRACHT-KADOLY-SPAARPOT.md,OVERDRACHT-KDP.md,OVERDRACHT-TANIAKROSS.md,kdp/rapport.md,kdp/wachtrij.md,kdp/boekwedstrijd.md,OVERDRACHT-YOORS-SHOP.md,OVERDRACHT-KADOLY-TIKTOK.md,OVERDRACHT-KADOLY-SOCIAL.md}"
+      "includeFiles": "{fn/**,.claude/skills/**,data/post-priors.json,OVERDRACHT-KADOLY-SPAARPOT.md,OVERDRACHT-KDP.md,OVERDRACHT-TANIAKROSS.md,kdp/rapport.md,kdp/wachtrij.md,kdp/boekwedstrijd.md,OVERDRACHT-YOORS-SHOP.md,OVERDRACHT-KADOLY-TIKTOK.md,OVERDRACHT-KADOLY-SOCIAL.md}"
     }
   },
   "redirects": [
