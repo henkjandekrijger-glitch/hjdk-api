@@ -1,6 +1,10 @@
 {
   "crons": [
     {
+      "path": "/api/bs?op=dagrapport",
+      "schedule": "13 12 * * *"
+    },
+    {
       "path": "/api/gids?op=indexnow",
       "schedule": "55 6 * * *"
     },
@@ -606,6 +610,16 @@
         }
       ],
       "destination": "/api/bs?site=lc&op=fav"
+    },
+    {
+      "source": "/go/:a([A-Za-z0-9]{10})",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?lastingchange\\.works"
+        }
+      ],
+      "destination": "/api/bs?site=lc&op=go&a=:a"
     },
     {
       "source": "/thanks",

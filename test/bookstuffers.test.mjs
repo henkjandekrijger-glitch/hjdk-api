@@ -72,3 +72,15 @@ test('Lasting Change-funnel: alle pagina\'s door de keuring, PDF-knop alleen met
   assert.ok(LCF.checkDownload(q)); q.set('s', 'x'.repeat(32)); assert.ok(!LCF.checkDownload(q));
   assert.equal((await LCF.checkTransactie({ get: async () => ({}) }, 'nep')).ok, false);
 });
+
+test('LC-artikel: keuring weigert dun en accepteert een volledig stuk dat door de paginakeuring komt', async () => {
+  const LCF = await import('../lib/lcfunnel.js');
+  assert.ok(LCF.checkArtikel({ slug: 'x', titel: 'kort' }).length > 3);
+  const zin = 'Start with one habit so small that a busy day is not an excuse, and check in every evening for thirty days. ';
+  const a = { slug: 'how-to-stop-procrastinating', titel: 'How to Stop Procrastinating: 7 Steps That Work in 2027', desc: 'Why you procrastinate and seven steps that work: start tiny, plan the bad day, check in daily and give a new habit 66 days to stick.', h1: 'How to stop procrastinating', antwoord: zin.repeat(3), secties: [1, 2, 3, 4].map(i => ({ kop: 'Step ' + i, alineas: [zin.repeat(4), zin.repeat(3)], lijst: ['One', 'Two'] })), faq: [['Why do I procrastinate?', zin], ['How long does it take?', zin], ['Does a workbook help?', zin]], bronnen: [{ naam: 'Lally et al. 2010', url: 'https://doi.org/10.1002/ejsp.674' }], datum: '2026-11-23', status: 'live' };
+  assert.deepEqual(LCF.checkArtikel(a), []);
+  const h = LCF.renderArtikel({ echt: true, pdf: false, L: x => '/' + x, go: x => '/go/' + x }, a, [{ slug: 'other-guide', titel: 'Other guide' }]);
+  assert.deepEqual(keur(h, 'lc:artikel'), []);
+  assert.match(h, /href="\/other-guide"/); assert.match(h, /href="\/guides"/);
+  assert.deepEqual(keur(LCF.renderGidsen({ echt: true, pdf: true, L: x => '/' + x, go: x => '/go/' + x }, [a]), 'lc:gidsen'), []);
+});

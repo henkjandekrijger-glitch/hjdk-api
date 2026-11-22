@@ -10,6 +10,7 @@ import * as LCF from '../lib/lcfunnel.js';
 import { ImageResponse } from '@vercel/og';
 import { INTER_500, INTER_800 } from '../lib/pinfont.js';
 import { pinPlan, haakVan, vind, HAKEN, ACCOUNT as PIN_ACCOUNT } from '../lib/bspin.js';
+import { dagRapport, rapportTekst, BRON_OK } from '../lib/bsorganisch.js';
 const FONTS = [{ name: 'Inter', data: Buffer.from(INTER_500, 'base64'), weight: 500, style: 'normal' }, { name: 'Inter', data: Buffer.from(INTER_800, 'base64'), weight: 800, style: 'normal' }];
 const el = (type, style, children) => ({ type, props: { style: Object.assign({ display: 'flex' }, style), children } });
 const beschermd = req => /-henq\.vercel\.app$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]);
@@ -31,10 +32,26 @@ const ctx = echt => ({ echt, L: s => echt ? '/' + s : '/api/bs?p=' + encodeURICo
 const isLc = req => /(^|\.)lastingchange\.works$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]);
 async function lcHandler(req, res, q, echt) {
   const op = q.get('op') || '', pdf = !!(await LCF.paddleSleutel(kv));
-  const c = { echt, pdf, L: s => echt ? '/' + s : '/api/bs?site=lc&p=' + encodeURIComponent(s) };
+  const c = { echt, pdf, L: s => echt ? '/' + s : '/api/bs?site=lc&p=' + encodeURIComponent(s), go: a => echt ? '/go/' + a : '/api/bs?site=lc&op=go&a=' + a };
   const noidx = echt ? '' : 'noindex, nofollow';
+  // Artikelen (lib/lcfunnel.js): index lc:arts, stuk lc:art:<slug>, modus lc:art:modus
+  const index = (await kv.get('lc:arts').catch(() => null)) || [];
+  const live = index.filter(x => x.status === 'live').sort((a, b) => String(b.datum).localeCompare(String(a.datum)));
+  c.artikelen = live;
+  if (op === 'lcartikel' || op === 'lclive' || op === 'lcmodus') {
+    if (!beschermd(req)) return stuur(res, 403, 'application/json', '{"ok":false,"fout":"alleen via de beschermde host"}', { cache: 'no-store' });
+    if (op === 'lcmodus') { const m = q.get('m') === 'direct' ? 'direct' : 'eerst-zien'; await kv.set('lc:art:modus', m); return stuur(res, 200, 'application/json', JSON.stringify({ ok: true, modus: m }), { cache: 'no-store' }); }
+    if (op === 'lclive') { const sl = q.get('slug') || '', a = await kv.get('lc:art:' + sl).catch(() => null); if (!a) return stuur(res, 404, 'application/json', '{"ok":false}', { cache: 'no-store' }); a.status = q.get('live') === '0' ? 'concept' : 'live'; await kv.set('lc:art:' + sl, a); const i = index.find(x => x.slug === sl); if (i) i.status = a.status; await kv.set('lc:arts', index); return stuur(res, 200, 'text/html; charset=utf-8', `<p style="font:18px system-ui;padding:24px">${a.status === 'live' ? 'Live gezet' : 'Teruggezet naar concept'}: <a href="${LCF.BASE}/${sl}">${LCF.BASE}/${sl}</a></p>`, { cache: 'no-store', robots: 'noindex' }); }
+    let a = null; try { a = req.method === 'POST' ? (typeof req.body === 'object' && req.body ? req.body : JSON.parse(await new Promise(r => { let d = ''; req.on('data', x => d += x); req.on('end', () => r(d)); }))) : JSON.parse(q.get('j') || 'null'); } catch (e) {}
+    const fout = LCF.checkArtikel(a); if (fout.length) return stuur(res, 400, 'application/json', JSON.stringify({ ok: false, fout }), { cache: 'no-store' });
+    const modus = (await kv.get('lc:art:modus').catch(() => null)) || 'eerst-zien';
+    a.datum = a.datum || new Date().toISOString().slice(0, 10); a.status = modus === 'direct' ? 'live' : 'concept';
+    await kv.set('lc:art:' + a.slug, a); const rest = index.filter(x => x.slug !== a.slug); rest.push({ slug: a.slug, titel: a.titel, datum: a.datum, status: a.status, zoekterm: a.zoekterm || '', volume: a.volume || 0, gerelateerd: a.gerelateerd || [] }); await kv.set('lc:arts', rest);
+    return stuur(res, 200, 'application/json', JSON.stringify({ ok: true, slug: a.slug, status: a.status, voorbeeld: 'https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=' + a.slug + '&concept=1', liveZetten: 'https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=lclive&slug=' + a.slug }), { cache: 'no-store' });
+  }
+  if (op === 'lcartikelen') return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ modus: (await kv.get('lc:art:modus').catch(() => null)) || 'eerst-zien', artikelen: index }), { cache: 'no-store', robots: 'noindex' });
   if (op === 'robots') return stuur(res, 200, 'text/plain; charset=utf-8', echt ? LCF.ROBOTS : 'User-agent: *\nDisallow: /\n');
-  if (op === 'sitemap') return stuur(res, 200, 'application/xml; charset=utf-8', LCF.sitemap(), { robots: noidx });
+  if (op === 'sitemap') return stuur(res, 200, 'application/xml; charset=utf-8', LCF.sitemapMet(live), { robots: noidx });
   if (op === 'llms') return stuur(res, 200, 'text/plain; charset=utf-8', LCF.llms(), { robots: noidx });
   if (op === 'fav') return stuur(res, 200, 'image/svg+xml', LCF.FAVICON, { cache: 'public, max-age=86400' });
   if (op === 'gezond') {
@@ -59,6 +76,14 @@ async function lcHandler(req, res, q, echt) {
   }
   if (op === 'verkoop') { let h = []; try { h = await kv.raw(['HGETALL', 'lc:verkoop']); } catch (e) {} const o = {}; for (let i = 0; h && i < h.length; i += 2) o[h[i]] = +h[i + 1]; return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ pdfKnop: pdf, perDag: o }), { cache: 'no-store', robots: 'noindex' }); }
   const slug = String(q.get('p') || '').replace(/^\/+|\/+$/g, '');
+  if (slug === 'guides') return stuur(res, 200, 'text/html; charset=utf-8', LCF.renderGidsen(c, live), { robots: noidx || 'index, follow', cache: 'public, max-age=120, s-maxage=600' });
+  if (slug && !LCF.SLUGS.includes(slug)) {
+    const a = await kv.get('lc:art:' + slug).catch(() => null);
+    if (a && (a.status === 'live' || q.get('concept') === '1')) {
+      const rel = [...(a.gerelateerd || []).map(s => live.find(x => x.slug === s)).filter(Boolean), ...live.filter(x => x.slug !== a.slug && !(a.gerelateerd || []).includes(x.slug))].slice(0, 4);
+      return stuur(res, 200, 'text/html; charset=utf-8', LCF.renderArtikel(c, a, rel), { robots: a.status === 'live' ? (noidx || 'index, follow') : 'noindex, nofollow', cache: a.status === 'live' ? 'public, max-age=120, s-maxage=600' : 'no-store' });
+    }
+  }
   const html = LCF.renderLc(slug, c);
   if (html == null) { res.statusCode = 302; res.setHeader('Location', c.L('')); res.setHeader('Cache-Control', 'no-store'); return res.end(); }
   return stuur(res, 200, 'text/html; charset=utf-8', html, { robots: noidx || 'index, follow', cache: 'public, max-age=120, s-maxage=600' });
@@ -66,7 +91,7 @@ async function lcHandler(req, res, q, echt) {
 
 export default async function handler(req, res) {
   const u = new URL(req.url, 'https://' + HOST), q = u.searchParams, op = q.get('op') || '', echt = isEcht(req);
-  if (isLc(req) || q.get('site') === 'lc') return lcHandler(req, res, q, isLc(req));
+  if ((isLc(req) || q.get('site') === 'lc') && !['go', 'tel', 'dagrapport'].includes(op)) return lcHandler(req, res, q, isLc(req));
   const noidx = echt ? '' : 'noindex, nofollow';
   if (op === 'robots') return stuur(res, 200, 'text/plain; charset=utf-8', echt ? ROBOTS : 'User-agent: *\nDisallow: /\n');
   if (op === 'sitemap') return stuur(res, 200, 'application/xml; charset=utf-8', sitemap(), { robots: noidx });
@@ -89,6 +114,24 @@ export default async function handler(req, res) {
     return stuur(res, fouten.length ? 500 : 200, 'application/json; charset=utf-8', JSON.stringify({ ok: !fouten.length, paginas: SLUGS.length, boeken: TEL.boeken, fouten }), { cache: 'no-store', robots: 'noindex' });
   }
 
+  // Tel per paginabezoek (lib/bsorganisch.js meetJs): site|bron en site|p|pad per UTC-dag, 60 dagen. Bots tellen niet.
+  if (op === 'tel') {
+    const site = q.get('site') === 'lc' ? 'lc' : 'bs', bron = BRON_OK.test(q.get('s') || '') ? q.get('s') : 'overig', pad = String(q.get('p') || '/').slice(0, 80).replace(/[^a-z0-9\/-]/gi, '') || '/';
+    const bot = /bot|crawler|spider|headless|preview|slurp|facebookexternalhit/i.test(String(req.headers['user-agent'] || ''));
+    if (!bot && bron !== 'intern') { const k = 'bs:tel:' + new Date().toISOString().slice(0, 10); try { await kv.raw(['HINCRBY', k, site + '|' + bron, '1']); await kv.raw(['HINCRBY', k, site + '|p|' + pad, '1']); await kv.raw(['EXPIRE', k, String(60 * 86400)]); } catch (e) {} }
+    else if (!bot) { const k = 'bs:tel:' + new Date().toISOString().slice(0, 10); try { await kv.raw(['HINCRBY', k, site + '|p|' + pad, '1']); await kv.raw(['EXPIRE', k, String(60 * 86400)]); } catch (e) {} }
+    return stuur(res, 204, 'text/plain', '', { cache: 'no-store', robots: 'noindex' });
+  }
+  // Dagrapport organisch via Telegram (cron 12:13 UTC); &droog=1 laat de tekst zien zonder te versturen
+  if (op === 'dagrapport') {
+    const cron = /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+    if (!cron && !beschermd(req)) return stuur(res, 403, 'application/json', '{"ok":false}', { cache: 'no-store' });
+    let zicht = null; try { const z = await (await fetch('https://keuzehulp.best/api/zicht?op=stand&site=bookstuffers', { signal: AbortSignal.timeout(8000) })).json(); const l = z && z.sites && z.sites.bookstuffers && z.sites.bookstuffers.laatste; if (l) zicht = { imp: l.gsc && l.gsc.imp, clicks: l.gsc && l.gsc.clicks, geindexeerd: l.index && l.index.geindexeerd, ai: Array.isArray(l.llm) ? l.llm.filter(x => x.genoemd || x.geciteerd).length : 0 }; } catch (e) {}
+    let pins = null; try { const log = (await kv.get('bs:pinlog')) || [], st = (await kv.get('bs:pinstand')) || {}, gist = new Date(Date.now() - 864e5).toISOString().slice(0, 10); const t = Object.entries(st).reduce((a, [, v]) => ({ klik: a.klik + (v.klik || 0), saves: a.saves + (v.saves || 0) }), { klik: 0, saves: 0 }); const beste = Object.entries(st).sort((a, b) => ((b[1].klik || 0) + (b[1].saves || 0)) - ((a[1].klik || 0) + (a[1].saves || 0)))[0]; pins = { geplaatst: log.filter(x => String(x.t).startsWith(gist)).length, ...t, beste: beste && ((beste[1].klik || 0) + (beste[1].saves || 0)) > 0 ? beste[0] : '' }; } catch (e) {}
+    const arts = (await kv.get('lc:arts').catch(() => null)) || [];
+    const r = await dagRapport(kv, { droog: q.get('droog') === '1', extra: { zicht, pins, arts } });
+    return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(r), { cache: 'no-store', robots: 'noindex' });
+  }
   // Pinbeeld 1000x1500 in de huisstijl (wit, zwart, de omslag is de kleur): /pin/<ASIN>-<haak>.png op bookstuffers.com
   if (op === 'pinbeeld') {
     const m = String(q.get('f') || '').match(/^([A-Za-z0-9]{10})-([a-z0-9-]+?)(?:\.png)?$/), b = m && vind(m[1]), h = m && haakVan(m[2]);
@@ -137,7 +180,7 @@ export default async function handler(req, res) {
     const a = String(q.get('a') || '').toUpperCase();
     if (!BOEK_ASIN.has(a)) { res.statusCode = 302; res.setHeader('Location', echt ? '/' : '/api/bs?p='); res.setHeader('Cache-Control', 'no-store'); return res.end(); }
     const bot = /bot|crawler|spider|headless|preview|facebookexternalhit|slurp/i.test(String(req.headers['user-agent'] || ''));
-    if (!bot) { const k = 'bs:klik:' + new Date().toISOString().slice(0, 10); try { await kv.raw(['HINCRBY', k, a, '1']); await kv.raw(['EXPIRE', k, String(60 * 864e2)]); } catch (e) {} }
+    if (!bot) { const dg = new Date().toISOString().slice(0, 10), k = 'bs:klik:' + dg, bron = BRON_OK.test(q.get('s') || '') ? q.get('s') : 'onbekend'; try { await kv.raw(['HINCRBY', k, a, '1']); await kv.raw(['EXPIRE', k, String(60 * 864e2)]); await kv.raw(['HINCRBY', 'bs:gosrc:' + dg, (isLc(req) || q.get('site') === 'lc' ? 'lc' : 'bs') + '|' + bron, '1']); await kv.raw(['EXPIRE', 'bs:gosrc:' + dg, String(60 * 864e2)]); } catch (e) {} }
     res.statusCode = 302; res.setHeader('Location', amz(a)); res.setHeader('Cache-Control', 'no-store'); res.setHeader('X-Robots-Tag', 'noindex, nofollow'); res.setHeader('Referrer-Policy', 'no-referrer');
     return res.end();
   }
