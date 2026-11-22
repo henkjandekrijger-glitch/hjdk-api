@@ -71,7 +71,8 @@ Royalty per boek 2025 / okt-dec 2025: PIT BOSS $13.496 / $5.258; Lasting Change 
 | PIT BOSS - SP - Manual KW | A06472010M5G9DRRZ8PS | $10/dag, oude biedingen ($0,45/1,00/0,88/0,80): DUW |
 | Lasting change LASTING CHANGE KW | A04830353R9IVCG7VO45Z | $10/dag, 4 broad-woorden $1,02 (DUW sinds 17 nov), exacte woorden $0,57-0,66 |
 | B0F1SM1L5J-AUTO (LC) | A03228661CQIWZXX5IXLQ | Loose $0,60, andere groepen uit |
-| KDP LC NIEUWJAAR EXACT | A00430132MU3YXJN4IMNK | gepland 20 dec-31 jan, $10/dag |
+| KDP LC NIEUWJAAR EXACT | A00430132MU3YXJN4IMNK | loopt sinds 20 nov, $10/dag, tot 22 nov 0 vertoningen (bod te laag, kost dus niets); 20 dec omhoog, zie decemberplan |
+| KDP Adults US AUTO 0.38 \| 22nov | A039358795EOJP34ZDKI | nieuw 22 nov (Henkjan: "Ja adults aan"): $5/dag, automatisch, bod $0,38 (voorgesteld $0,31-0,54), down only, hoog-verkeerregel uit, alleen Adults B0DJQS1K5Z ($9,99, 74 reviews, royalty ~$3,40) |
 | KDP Wait Thats True EXACT | A05992682MW2DU09KSFTY | 10 woorden $0,35 |
 | KDP For Men KERST EXACT 0.45 | A094841238T75L5P00YDA | 12 kerstwoorden $0,45-0,50 |
 | KDP Feitenboeken PT concurrenten 0.35 | A002679099X7YQ0MNAMT | 11 boekpagina's $0,35 |
@@ -104,7 +105,10 @@ Royalty per boek 2025 / okt-dec 2025: PIT BOSS $13.496 / $5.258; Lasting Change 
 | PIT BOSS-duw 17-19 nov (prijs $14,99 sinds 17 nov) | 20 nov ronde A | PIT BOSS-royalty dagen 17-19 lager dan PIT BOSS-ads = alle biedingen terug naar $0,40. Dag 1: $8,95 ads, 1 verkoop, -$3,89 |
 | LC-duw (sinds 17 nov 13:00 UTC) | 18-20 nov | totale LC-royalty tegen LC-ads; lager = broad-woorden weer pauzeren. Piek LC is 27 dec-3 jan |
 | LC-prijs terug naar $24,99 | 20 dec ronde A | Henkjan 19 nov: akkoord op $19,99 bij de 2027-uitgave om rang op te bouwen, en op 20 dec (start KDP LC NIEUWJAAR EXACT) terug naar $24,99 (royalty $12,48). Ronde zet het prijsconcept klaar en stuurt Henkjan de link voor Publish |
-| Adults CA-test | 22 nov | Adults CA-royalty tegen Adults CA-ads |
+| Adults CA-test | 22 nov: 7 dagen CA$6,20, 11 kliks, 1 verkoop (CA$13,99, zoekterm "books"). Te weinig om een exacte campagne uit te oogsten; draait door (geeft ~CA$1,50/dag uit) | Adults CA-royalty tegen Adults CA-ads |
+| Adults US-test (sinds 22 nov) | 29 nov ronde A | Adults-ads (US + CA) hoogstens 50% van de Adults-royalty, anders US-test uit. Gehaald en ACOS onder ~35%: US naar $10/dag en de verkopende zoektermen als exacte woorden erbij (bod = voorgesteld) |
+| Cadeauboeken afbouwen | 19 dec ronde A | decemberplan sectie 11: Teens en Adults terug naar de biedingen van voor de push, Kindle blijft |
+| LC-omschakeling | 20 dec ronde A | decemberplan sectie 11: NIEUWJAAR naar voorgesteld bod, LC broad-woorden aan, elk hoogstens $10/dag tot 31 jan; rem 50% van LC-royalty over 3 dagen |
 | Apocrypha/Enoch VK | doorlopend | 2 dagen geen vertoningen = stap omhoog binnen de marge |
 
 Break-even ROAS: Teens CA 2,93; PIT BOSS ($14,99) 4,61; LC ($24,99) 2,10 (break-even ACOS 47,7%); Adults ongeveer als Teens. Volledige tabel met max CPC: draaiboek, ROI en ROAS.
@@ -237,6 +241,14 @@ Nog te doen: hardcover (nu 137 p., wit, met bleed, drukprijs $7,29): zelfde binn
   - Nieuw: KDP Teens US PT concurrenten 0.35 | 22nov (A0542953168TGZVTR79VN), $10/dag, down only, exacte producttargets op 8 concurrerende feitenboeken (B0B6XFT4RH, 1648451438, B0FTF7LH51, 164845044X, 1951806409, 1546595902, 1648451233, 1648451306).
   - Piekuren-biedingen bestaan niet in de console (geen schema voor biedingen); vervangen door top of search.
   - REM: Teens-royalty moet uiterlijk 26 nov >= $80-90/dag zijn en Teens-ads hoogstens 50% daarvan. Zo niet: WINNERS pauzeren, Loose terug naar 0,40, TOS 0%, US test uit. Dagcheck 12:40 UTC via send_later (23-26 nov).
+- DECEMBERPLAN RANG (BESLUITEN HENKJAN 22 nov 16:43 Curacao: "zetten we live en voorbereiden met campagnes op december met ranking ?" en "Ja adults aan"). Rang komt van veel verkopen in korte tijd, dus het geld gaat naar het venster waarin gekocht wordt: cadeauboeken tot 18 dec, LC van 20 dec tot eind januari.
+  - Nu: Henkjan publiceert LC 2027, Moment mal hardcover, Echt jetzt?! paperback en hardcover, Kindle WTT en For Men (links in het bericht van 22 nov). Daarna zet een ronde de Kindle-versies van Echt jetzt?! en Moment mal als concept klaar (EPUB en kindle_cover.jpg in kdp/bouw/teens_de en wissen, KDP Select aan) en vult de ASIN's in REV in fn/wtb.js.
+  - Adults: KDP Adults US AUTO 0.38 | 22nov aan ($5/dag); oordeel 29 nov (tabel 6).
+  - 1-5 dec: per Kindle-titel in KDP Select 2 gratis dagen (WTT, For Men, Echt jetzt?!, Moment mal), zodat de eerste reviews er voor de piek staan. Geen ads op titels zonder reviews (les 21 nov).
+  - 1-18 dec: Teens-push loopt door binnen de rem; Adults volgt als hij de check van 29 nov haalt.
+  - 19 dec ronde A: laatste dagen voor kerstbezorging van gedrukte boeken. Teens- en Adults-campagnes terug naar de biedingen van voor de push (Loose 0,40, TOS 0%, WINNERS en US-tests op pauze); Kindle-advertenties blijven.
+  - 20 dec ronde A, LC-omschakeling: KDP LC NIEUWJAAR EXACT naar het voorgestelde bod (had tot 22 nov 0 vertoningen), de 4 broad-woorden in Lasting change LASTING CHANGE KW weer aan, B0F1SM1L5J-AUTO Loose naar voorgesteld bod. Elk hoogstens $10/dag, tot 31 jan. Prijs naar $24,99 volgens besluit 19 nov (Publish bij Henkjan). Rem: LC-ads over 3 dagen hoogstens 50% van de LC-royalty, anders broad-woorden weer uit.
+  - Henkjan eenmalig: inloggen op advertising.amazon.de (Duitse titels, pas met reviews) en amazon.com.au (Teens AU-test).
 - Echt jetzt?! hardcover: prijzen staan wel bewaard (EUR 17,99), klaar voor Publish.
 - Keepa geeft "No active API plan": rondes die Keepa gebruiken zien geen rang en reviews meer.
 
