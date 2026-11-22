@@ -84,3 +84,20 @@ test('LC-artikel: keuring weigert dun en accepteert een volledig stuk dat door d
   assert.match(h, /href="\/other-guide"/); assert.match(h, /href="\/guides"/);
   assert.deepEqual(keur(LCF.renderGidsen({ echt: true, pdf: true, L: x => '/' + x, go: x => '/go/' + x }, [a]), 'lc:gidsen'), []);
 });
+
+test('LC-check: advies, vergelijking alleen met genoeg antwoorden, concept noindex', async () => {
+  const W = await import('../lib/lcwaarom.js');
+  const c = { echt: true, pdf: false, L: s => '/' + s, go: a => '/go/' + a, waaromLive: false };
+  const h = W.renderWaarom(c, {});
+  assert.match(h, /noindex/); assert.match(h, /id="chat"/); assert.doesNotMatch(h, /What 0 people/);
+  for (const r of W.REDENEN) assert.ok(h.includes(r[1].replace(/'/g, '&#39;')) || h.includes(r[1]), r[0]);
+  const weinig = W.advies({ doel: 'geld', fase: 'nooit', reden: 'teveel' }, { n: 5, 'r:teveel': 5 });
+  assert.equal(weinig.bench.length, 0);
+  const veel = W.advies({ doel: 'geld', fase: 'nooit', reden: 'teveel' }, { n: 50, 'r:teveel': 20, 'd:geld': 25, 'dr:geld:teveel': 10 });
+  assert.equal(veel.bench.length, 2); assert.match(veel.bench[0], /^40% /);
+  assert.ok(W.geldig({ doel: 'fit', fase: 'weken', reden: 'druk' })); assert.ok(!W.geldig({ doel: 'x', fase: 'weken', reden: 'druk' }));
+  assert.match('I want to end my life', W.ZORG);
+  assert.doesNotMatch(JSON.stringify(W.REDENEN) + JSON.stringify(W.DOELEN), /[—–]/);
+  const live = W.renderWaarom({ ...c, waaromLive: true }, { n: 40, 'r:druk': 12 });
+  assert.match(live, /index,follow/); assert.match(live, /What 40 people told us/);
+});
