@@ -23,6 +23,7 @@ const FN = {
   kzmcp: () => import('../fn/kzmcp.js'),
   lc: () => import('../fn/lc.js'),
   md: () => import('../fn/md.js'),
+  mm: () => import('../fn/mm.js'),
   nl: () => import('../fn/nl.js'),
   pin: () => import('../fn/pin.js'),
   "pin-connect": () => import('../fn/pin-connect.js'),

@@ -2,7 +2,7 @@
 // Maakt api/[hjdkfn].js: één Vercel-functie voor alle handlers in fn/.
 // Henkjan 21 nov 2026: "Dicht alle lekken" en "Zorg dat ook nooit meer een nieuwe kan ontstaan". Vercel bouwt elk bestand in api/
 // als losse functie; met 39 bestanden duurde een build ±65 s, 107 keer per dag. Nu staat de code van de eindpunten in fn/.
-// In api/ blijven alleen: [hjdkfn].js (deze router), mm.js (Clickmind, bewust een eigen functie) en de map hjdk/.
+// In api/ blijven alleen: [hjdkfn].js (deze router) en de map hjdk/. Ook Clickmind (fn/mm.js) loopt via de router.
 //
 //   node scripts/router-maak.mjs          schrijft de router opnieuw (na een nieuw bestand in fn/)
 //   node scripts/router-maak.mjs --check  faalt als de router niet bij fn/ past of er een los bestand in api/ staat
@@ -10,7 +10,7 @@ import fs from 'node:fs';
 
 const hier = new URL('.', import.meta.url);
 const fnDir = new URL('../fn/', hier), apiDir = new URL('../api/', hier), doel = new URL('../api/[hjdkfn].js', hier);
-export const LOS = ['[hjdkfn].js', 'mm.js', 'hjdk'];
+export const LOS = ['[hjdkfn].js', 'hjdk'];
 const namen = fs.readdirSync(fnDir).filter(f => /^[a-z0-9-]+\.js$/.test(f)).map(f => f.slice(0, -3)).sort();
 
 const inhoud = `// GEGENEREERD door scripts/router-maak.mjs. Niet met de hand wijzigen: draai dat script.

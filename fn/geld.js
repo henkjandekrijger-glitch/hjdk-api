@@ -19,7 +19,7 @@ const NETTEN = ['propeller', 'mondiad'];
 const K_STAND = 'mm:geld:stand', K_LOCK = 'mm:geld:lock', VERS_MS = 5 * 60e3;
 const PA = () => (process.env.PA_LUS_URL || 'https://propellerads-mcp.vercel.app');
 
-// beschermde host: zelfde check als api/mm.js (*.vercel.app zit achter de Vercel-inlog, ssoProtection all_except_custom_domains)
+// beschermde host: zelfde check als fn/mm.js (*.vercel.app zit achter de Vercel-inlog, ssoProtection all_except_custom_domains)
 const beschermd = req => /\.vercel\.app$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]) && /\.vercel\.app$/i.test(String(req.headers.host || '').split(':')[0]);
 
 // ---------- bronnen ----------
