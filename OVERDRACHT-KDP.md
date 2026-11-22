@@ -72,7 +72,7 @@ Royalty per boek 2025 / okt-dec 2025: PIT BOSS $13.496 / $5.258; Lasting Change 
 | Lasting change LASTING CHANGE KW | A04830353R9IVCG7VO45Z | $10/dag, 4 broad-woorden $1,02 (DUW sinds 17 nov), exacte woorden $0,57-0,66 |
 | B0F1SM1L5J-AUTO (LC) | A03228661CQIWZXX5IXLQ | Loose $0,60, andere groepen uit |
 | KDP LC NIEUWJAAR EXACT | A00430132MU3YXJN4IMNK | loopt sinds 20 nov, $10/dag, tot 22 nov 0 vertoningen (bod te laag, kost dus niets); 20 dec omhoog, zie decemberplan |
-| KDP Adults US AUTO 0.38 \| 22nov | A039358795EOJP34ZDKI | nieuw 22 nov (Henkjan: "Ja adults aan"): $5/dag, automatisch, bod $0,38 (voorgesteld $0,31-0,54), down only, hoog-verkeerregel uit, alleen Adults B0DJQS1K5Z ($9,99, 74 reviews, royalty ~$3,40) |
+| KDP Adults US AUTO 0.38 \| 22nov | A039358795EOJP34ZDKI | nieuw 22 nov (Henkjan: "Ja adults aan"): $5/dag, automatisch, bod $0,38 (voorgesteld $0,31-0,54), down only, hoog-verkeerregel uit, alleen Adults B0DJQS1K5Z ($9,99, 74 reviews). Let op: rang 22 nov 18:15 Curacao VS #1,2 mln, CA #15.490 (CA$13,99): Adults verkoopt in Canada, de VS-test is dus een proef op een nieuwe markt |
 | KDP Wait Thats True EXACT | A05992682MW2DU09KSFTY | 10 woorden $0,35 |
 | KDP For Men KERST EXACT 0.45 | A094841238T75L5P00YDA | 12 kerstwoorden $0,45-0,50 |
 | KDP Feitenboeken PT concurrenten 0.35 | A002679099X7YQ0MNAMT | 11 boekpagina's $0,35 |
