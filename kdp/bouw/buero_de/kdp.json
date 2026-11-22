@@ -1,0 +1,32 @@
+{
+ "titel": "Ich tu nur so, als ob",
+ "ondertitel": "Das Überlebensbuch fürs Büro mit Meeting-Übersetzer, Ausreden-Generator, Büro-Bingo und Rätseln. Das lustige Wichtelgeschenk für Kollegen",
+ "auteur": ["David", "Warrior"],
+ "taal": "German",
+ "primaire_markt": "Amazon.de",
+ "basis": "Eigen boek (Henkjan 22 nov 2026: \"Ok maak dit boek . Schrijver David Warrior .\"). Keuze via Keepa en Demand Radar: nieuwe Duitse humor-cadeauboeken voor collega's halen binnen weken de top 1.000; wichtelbudget 10 euro.",
+ "large_print": false,
+ "paginas": 102,
+ "trim": "6 x 9 in, wit papier, zwart-wit, geen bleed",
+ "zoekwoorden": [
+  "wichtelgeschenk für kollegen lustig",
+  "wichtelgeschenk unter 10 euro",
+  "geschenk für kollegen weihnachten büro",
+  "bullshit bingo meeting buch",
+  "lustiges geschenk büro arbeit humor",
+  "abschiedsgeschenk kollegen ruhestand jobwechsel",
+  "kleines geschenk chef kollegin kollege"
+ ],
+ "categorieen_de": [
+  ["Bücher", "Humor", "Arbeit & Beruf (of dichtstbijzijnde: Humor > Business)"],
+  ["Bücher", "Geschenkbücher (of: Humor > Geschenkbücher)"],
+  ["Bücher", "Freizeit, Haus & Garten", "Rätsel & Spiele (of: Humor > Rätsel)"]
+ ],
+ "prijzen": {"eur": "9,99"},
+ "prijs_waarom": "EUR 9,99 past binnen het gangbare wichtelbudget van 10 euro (impulsaankoop). Royalty-tier: zie kdp/rapport.md; bij 10,69 incl. btw is het 60% in plaats van 50%.",
+ "glanzend": true,
+ "papier": "wit",
+ "ai": {"teksten": "AI-generated, hele werk, tool Claude", "afbeeldingen": "geen (Noto Emoji, Apache 2.0; omslag en puzzels met code gemaakt)", "vertalingen": "geen"},
+ "review": "https://kaufberater.best/r/buero (REV in fn/wtb.js: zoekt op Amazon.de tot de ASIN bekend is)",
+ "beschrijving_html": "<p><b>Für alle, die im Meeting nicken und an Feierabend denken.</b></p><p><b>Ich tu nur so, als ob</b> ist das Überlebensbuch fürs Büro: ein Geschenk, über das Kollegen wirklich lachen, und das man heimlich im nächsten Meeting aufschlagen kann.</p><ul><li><b>Büro-Übersetzer:</b> 80 Sätze, die jeder kennt, und was sie wirklich bedeuten. „Lass uns das offline besprechen.“ heißt: Lass uns das nie besprechen.</li><li><b>Ausreden-Generator:</b> 8.000 Kombinationen zum Selberbauen und 42 fertige Ausreden für Zuspätkommen, Teamevents und die Weihnachtsfeier</li><li><b>Büro-Bingo:</b> 6 Spielkarten für Meetings, Videocalls, Montage, Rundmails, Teamevents und die Weihnachtsfeier, plus 2 leere Karten</li><li><b>Tests und Horoskop:</b> Welcher Bürotyp bist du? Wie reif bist du für den Urlaub? Wie gut sprichst du Büro?</li><li><b>Rätsel für lange Meetings:</b> 6 Wortsuchrätsel, 4 Labyrinthe und 24 Buchstabensalate, mit Lösungen</li><li><b>Zum Ausfüllen:</b> Kollegen-Steckbriefe, das Meeting-Protokoll für Ehrliche, Kaffee-Tracker, Beschwerdeformular und die Kündigung, die man nie abschickt</li><li><b>Außerdem:</b> Büro-Bucket-List mit 60 Missionen, 20 Abwesenheitsnotizen, 50 Büro-Weisheiten, Büro-Deutsch von A bis Z und der Überlebensguide für die Weihnachtsfeier</li></ul><p>Mit Widmungsseite zum Ausfüllen und einer Urkunde „Offiziell überlebt“. 102 Seiten, Taschenbuch im Format 15,2 x 22,9 cm.</p><p>Das perfekte Wichtelgeschenk unter 10 Euro, zum Schrottwichteln, zur Weihnachtsfeier, zum Abschied oder einfach für den Kollegen, der jeden Montag rettet.</p>"
+}
