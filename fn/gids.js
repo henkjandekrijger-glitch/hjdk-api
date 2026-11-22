@@ -699,6 +699,7 @@ export default async function handler(req, res) {
     }
     if (op === 'onderzoekstand') { const m = await kv.get('gk:groei:laatste').catch(() => null); const ai = await actueleAiStand(kv); res.setHeader('cache-control', 'no-store'); return res.status(200).json({ ok: true, ...dekking(Object.values(await catalogus())), meetbaarheid: { dag: m?.dag || null, google: m?.google?.status || 'nog-niet-gemeten', googleDagen: m?.google?.dagen?.length || 0, googleBlokkade: m?.google?.reden || null, ai: ai?.status || 'ontbreekt', aiGeslaagd: ai?.geslaagd || 0, aiDag: ai?.dag || null, aiMomentopname: m?.ai?.status || null, aiBlokkade: ai?.fouten?.[0] || null } }); }
     if (op === 'indexnow') { // dagelijks: groeimeting zonder betaalde AI-aanroepen, daarna gewijzigde URLs aanmelden
+      try { await (await import('../lib/samensparen.js')).ssRonde(); } catch (e) { console.error('samensparen-ronde', String(e.message).slice(0, 120)); } // 22 nov: geldigheid van zegels (6 maanden, dan 3 weken korting)
       const items = Object.values(await catalogus());
       await groeiRonde(kv, items, req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN).catch(e => console.error('gids-groeimeting', String(e.message).slice(0,120)));
       const RR = await rubrieken(); const NF = await nieuwFeiten();
