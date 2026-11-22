@@ -667,6 +667,7 @@ export default async function handler(req, res) {
     if (/^(nieuws|nbbevestig|nbaf|nbpush|nbbericht|nbklik|nbsw|nbronde|nbnieuws|nbstand|nbdomein|nbdomeinweg|nbwin|nbregels|nbwinnaars)$/.test(op)) return await nieuwsOp(op, req, res, q, host, ua);
     if (/^cy[a-z]*$/.test(op)) return await (await import('../lib/curady.js')).cyOp(op, { req, res, q, host }); // Curady (curady.com), high-ticket tak, 18 nov 2026
     if (op === 'gc') return await GC.gcOp({ req, res, q, host, ua, kaal, schil, leesBody, isBot });
+    if (op === 'ss') return await (await import('../lib/samensparen.js')).ssOp({ req, res, q, host, ua, kaal, leesBody, isBot }); // Samen sparen (22 nov 2026), concept tot LIVE
     if (op === 'spaar') return await (await import('../lib/spaaracties.js')).spaarOp({ req, res, q, host, ua, kaal, schil, isBot, telBot }); // spaaracties van deze week (22 nov 2026), concept tot LIVE
     if (op === 'partner' || op === 'pt') { const PT = await import('../lib/partner.js'); return op === 'pt' ? await PT.ptOp({ req, res, q, host, ua, isBot, gc: GC }) : await PT.partnerOp({ req, res, q, host, ua, kaal, leesBody, isBot, gc: GC }); } // partnermodel (21 nov 2026): sites en verenigingen verdienen per bestelling, concept tot PT.LIVE // groepscadeaus per moment (21 nov 2026), concept alleen op de beschermde host tot LIVE
     if (/^dk[a-z]*$/.test(op)) return await (await import('../lib/dagkans.js')).dkOp(op, { req, res, q, host, ua, kaal, leesBody, isBot }); // Kadoly Winterkans (14 nov 2026), testwereld met &test=1 op de beschermde host
@@ -790,6 +791,7 @@ export default async function handler(req, res) {
       return res.status(200).json({ ok: true, gidsen: GIDS_IDS, perDag: uit, kliksPerProduct: geleerdPer, armproef: { kansAfrekenen: await armKans(), stand28d: await armStand(28) }, zoeken: { vragen: rij(/^(?!0\||o\||k\|)/), keuzes: rij(/^k\|/), zonderUitkomst: rij(/^0\|/), chatOnderwerpen: rij(/^o\|/) }, chatLaatste: chat, nieuws: await NB.stand(false).catch(() => null) }); }
     res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=0, s-maxage=300, stale-while-revalidate=600');
     const slug = String(q.get('slug') || '');
+    if (slug === 'samen-sparen') { const SS = await import('../lib/samensparen.js'); if (SS.LIVE) return await SS.ssOp({ req, res, q, host, ua, kaal, leesBody, isBot }); }
     if (slug === 'spaaracties') { const SP = await import('../lib/spaaracties.js'); if (SP.LIVE) return await SP.spaarOp({ req, res, q, host, ua, kaal, schil, isBot, telBot, viaPad: true }); }
     if (GC.LIVE.has(slug)) { q.set('s', slug); await telBot(ua, 'gc-' + slug); return await GC.gcOp({ req, res, q, host, ua, kaal, schil, leesBody, isBot, viaPad: true }); }
     const rub =String(q.get('rubriek') || '').replace(/[^a-z0-9-]/g, '').slice(0, 30);
