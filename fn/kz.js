@@ -39,7 +39,7 @@ const SPEER = { speer: ['printer'], hubs: [], vind: [], at: 0 };
 // per week langs. Daarom: de sterkste keuzehulpen (in Google, vertoningen, gebruik, seizoen) blijven open en in de sitemap; de rest staat op noindex,follow
 // en uit de sitemap tot de kern goed in Google staat. Nooit dicht: wat Google al opnam, wat vertoningen heeft en pagina's van lopende gsc-proeven.
 // Groeien: staat 80% van de kern in Google, dan komen er elke 7 dagen 20 bij (de volgende op score). Opgeslagen in kv kz:kern; nieuwbouw pauzeert zolang
-// (lib/organic-policy.js), het verversen richt zich op de kern (api/kzmaak.js). Overzicht: /api/kz?op=kern.
+// (lib/organic-policy.js), het verversen richt zich op de kern (fn/kzmaak.js). Overzicht: /api/kz?op=kern.
 const KERN_N = 100, KERN_GROEI = 20;
 const KERNC = { at: 0, v: null };
 async function kernNu() { if (Date.now() - KERNC.at < 600000) return KERNC.v; try { const k = await kv.get('kz:kern'); KERNC.v = k && k.actief && Array.isArray(k.slugs) ? Object.assign({}, k, { set: new Set(k.slugs) }) : null; } catch (e) {} KERNC.at = Date.now(); return KERNC.v; }
@@ -300,7 +300,7 @@ const OV3_OUD = '<style>.ov{color:#3A3F47}.ov .crumbs{margin:0 0 26px!important}
   + '</style>';
 const ovKaart = (href, eb, titel, sub, meer) => `<a class="card ov-k" href="${esc(href)}">${eb ? `<span class="e">${esc(eb)}</span>` : ''}<b>${esc(titel)}</b>${sub ? `<span class="s">${esc(kortZin(sub, 120))}</span>` : ''}${meer ? `<span class="m">${esc(meer)} →</span>` : ''}</a>`;
 const ovRegel = (href, titel) => `<a class="card ov-r" href="${esc(href)}">${esc(titel)}<span aria-hidden="true">→</span></a>`;
-export { OV3_CSS, ovKaart, ovRegel, ovPil, kortZin }; // ook voor whichtobuy.best en kaufberater.best (api/wtb.js)
+export { OV3_CSS, ovKaart, ovRegel, ovPil, kortZin }; // ook voor whichtobuy.best en kaufberater.best (fn/wtb.js)
 const ovPil = (href, label, aan) => `<a class="card ov-c${aan ? ' on' : ''}" href="${esc(href)}">${esc(label)}</a>`;
 // Chat op een overzicht: geen eigen pagina, dus de vragen komen uit de keuzehulpen eronder en het antwoord wijst naar die keuzehulp
 function ovChat(term, ph, faq) {

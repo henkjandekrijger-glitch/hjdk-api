@@ -5,8 +5,8 @@ import { THEMA_GUIDES } from '../lib/thema-gidsen.js';
 import { portionCost, heatCost, themeAdvice, renderThema, themaSchema } from '../lib/thema-tools.js';
 import { normalizedUrl,visitSource,probeEvidence,reportDay,googleReport } from '../lib/vindbaarheid.js';
 import { kv } from '../lib/db.js';
-import handler from '../api/keuze-tools.js';
-import reportHandler from '../api/vindbaarheid.js';
+import handler from '../fn/keuze-tools.js';
+import reportHandler from '../fn/vindbaarheid.js';
 async function request(fn,url,body,method='GET',headers={}){let status=200,data;const h={};const res={setHeader(k,v){h[k.toLowerCase()]=v;},status(n){status=n;return this;},send(x){data=x;return this;},json(x){data=x;return this;},end(){return this;}};await fn({url,body,method,headers:{host:'keuzehulp.best',...headers}},res);return {status,data,headers:h};}
 test('four real theme endpoints provide crawlable content, reciprocal languages and matching structured answers',async()=>{
   for(const [theme,markets]of Object.entries(THEMA_GUIDES))for(const [market,g]of Object.entries(markets)){

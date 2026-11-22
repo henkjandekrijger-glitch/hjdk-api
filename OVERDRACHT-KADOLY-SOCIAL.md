@@ -40,7 +40,7 @@ Lees daarnaast: `kadoly/taak-social.md` (de dagelijkse opdracht, dat is de bron 
 - **Tekst**: Nederlands, kort, alleen feiten van de productpagina, geen prijs, geen levertijd, geen gedachtestreepjes, 3 tot 5 hashtags. Kadoly is een webshop voor alles, nooit als cadeauwinkel neerzetten.
 - **Meten via Clickmind** (Henkjan 16 nov: "zorg dat alles via clickmind loopt" en "leren met clikmind !"):
   - Facebook-links: `https://go.kadoly.com/o?k=fb&p=<pid>&c=<post>` (post = dag-soort, bijv. 1118-nieuw; video's `v-<id>`). Instagram: "Link in bio" met `go.kadoly.com/o?k=ig&c=bio`.
-  - Route: `vercel.json` stuurt `/o` naar `api/shop.js` `op=org`. Die telt per dag `org:d:<dag>` (`k|uit`, `k|profiel`, `k|voorbeeld`), per post `org:p:<post>`, en geeft de klik aan `direct()` met net `x`, zone `o<kanaal>` en camp `<post>`. Zo meet Clickmind de hele keten per kanaal en per post: kliks, echt mens, actie, mandje, koop. Linkvoorvertoningsbots krijgen een 302 zonder telling.
+  - Route: `vercel.json` stuurt `/o` naar `fn/shop.js` `op=org`. Die telt per dag `org:d:<dag>` (`k|uit`, `k|profiel`, `k|voorbeeld`), per post `org:p:<post>`, en geeft de klik aan `direct()` met net `x`, zone `o<kanaal>` en camp `<post>`. Zo meet Clickmind de hele keten per kanaal en per post: kliks, echt mens, actie, mandje, koop. Linkvoorvertoningsbots krijgen een 302 zonder telling.
   - Kanaalcodes (`KAN_ORG`): fb, ig, pin, tt, th, x, li, yt, tg, wa, gbp, nb, bs, rd. Een nieuw kanaal is alleen een nieuwe `k=`.
   - Stand: `https://keuzehulp.best/api/shop/orgstand` (openbaar, alleen totalen; `?dagen=` tot 30).
   - Maat per post: koop x100 > mandje x10 > echt x2 > kliks, per 1000 bereik.

@@ -254,9 +254,9 @@ Zet het in de chat met Henkjan of in het werklog: `https://hjdk-api-henq.vercel.
 | Bestand | Wat |
 |---|---|
 | `lib/dagkans.js` | Alles: regels (`R`), aanmelden, bevestigen, klikken, kring, samen klikken, cadeau kiezen, mails, pagina's, testwereld, routes (`dkOp`). |
-| `api/gids.js` | Stuurt elke `op=dk...` door: `if (/^dk[a-z]*$/.test(op)) return await (await import('../lib/dagkans.js')).dkOp(...)` en geeft `kaal`, `leesBody`, `isBot` mee. |
+| `fn/gids.js` | Stuurt elke `op=dk...` door: `if (/^dk[a-z]*$/.test(op)) return await (await import('../lib/dagkans.js')).dkOp(...)` en geeft `kaal`, `leesBody`, `isBot` mee. |
 | `lib/kadoly-nieuws.js` | Levert `stuurMails`, `mailSchil`, `knop`, `mailHenkjan`, `mailKlaar`, `KADOLY_BEDRIJF` (zelfde afzender en opmaak als de Kadoly-nieuwsbrief, via Resend). |
-| `vercel.json` | Cron `/api/gids?op=dkronde` om 06:04 UTC; `includeFiles` van `api/gids.js` voor dit bestand. |
+| `vercel.json` | Cron `/api/gids?op=dkronde` om 06:04 UTC; `includeFiles` van `fn/gids.js` voor dit bestand. |
 | `lib/werking.js` | Regel "Kadoly Spaarpot" in de werking van het geheel. |
 | `OVERDRACHT-KADOLY-SPAARPOT.md` | Dit document. |
 

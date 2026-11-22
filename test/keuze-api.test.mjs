@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import handler from '../api/keuze-tools.js';
+import handler from '../fn/keuze-tools.js';
 import { TOOL_CLIENT } from '../lib/keuze-client.js';
 import fs from 'node:fs/promises';
 

@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import vm from 'node:vm';
 
-const source = readFileSync(new URL('../api/shop.js', import.meta.url), 'utf8');
+const source = readFileSync(new URL('../fn/shop.js', import.meta.url), 'utf8');
 const directSource = readFileSync(new URL('../lib/shopdirect.js', import.meta.url), 'utf8');
 const line = prefix => source.split('\n').find(l => l.startsWith(prefix));
 function fn(name) {

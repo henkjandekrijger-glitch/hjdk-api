@@ -34,7 +34,7 @@ test('worker persists before POST, enforces quota/lease and does not retry uncer
  delete globalThis.__pinFixture;
 });
 test('management denies missing key and cross-site writes; health stays credential-free',async()=>{
- let src;try{src=await readFile(new URL('../api/pin-connect.js',import.meta.url),'utf8');}catch{src=await readFile(new URL('pin-connect.js',import.meta.url),'utf8');}
+ let src;try{src=await readFile(new URL('../fn/pin-connect.js',import.meta.url),'utf8');}catch{src=await readFile(new URL('pin-connect.js',import.meta.url),'utf8');}
  src=src.replace(/^import .*;\n/gm,'');
  src="import {timingSafeEqual,randomBytes} from 'node:crypto';\nconst kv={},getApp=async()=>null,authUrl=()=>'',REDIRECT='https://example.com/callback',CONFIG='test',directStatus=async()=>({pinterest:'niet verbonden'}),runDirect=async()=>({}),pinAnalytics=async()=>({}),validateConfig=x=>x;\n"+src;
  const h=(await import('data:text/javascript;base64,'+Buffer.from(src).toString('base64'))).default;

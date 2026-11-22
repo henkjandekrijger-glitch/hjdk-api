@@ -40,7 +40,7 @@ Volgorde, van boven naar beneden:
 1. Wat Henkjan vraagt en de open punten in de overdracht.
 2. Een bestaande pagina op plek 4 tot 20 in Google. Verbeteren gaat voor nieuw.
 3. Een AI-gat zonder eigen keuzehulp (hieronder).
-4. De rangorde van `onderwerpScore` (`lib/demandradar.js`): vraag maal stijging maal zwakte van de top 10, plus Google plek 4 tot 20, chatvragen en AI-gaten. De bouwmotors `api/kzmaak.js` en `api/wtbmaak.js` beginnen bij die rangorde.
+4. De rangorde van `onderwerpScore` (`lib/demandradar.js`): vraag maal stijging maal zwakte van de top 10, plus Google plek 4 tot 20, chatvragen en AI-gaten. De bouwmotors `fn/kzmaak.js` en `fn/wtbmaak.js` beginnen bij die rangorde.
 5. Een chatvraag zonder antwoord die vaak terugkomt, en wat mensen dit seizoen willen (Sinterklaas, Kerst, Black Friday, weer).
 
 ### AI-gaten: waar AI geen eerste keus heeft
@@ -124,7 +124,7 @@ Henkjan, 18 nov 2026: "Eerst vindbaar worden, dan pas meer pagina's."
 Henkjan: "ALs je hulp maakt is dat altijd door de pov vd gebruiker = dus zoek termen."
 
 - **Zoekvolume.** Haal de zoekvraag op uit Demand Radar: https://demandradar-ivory.vercel.app/api/zoekvraag?thema=<id>.
-  - Een nieuw thema voeg je toe in repo demand_radar (`THEMA` in `api/zoekvraag.js`).
+  - Een nieuw thema voeg je toe in repo demand_radar (`THEMA` in `fn/zoekvraag.js`).
   - Dit kost budget: één keer per thema, nooit in een lus.
 - **Nichescan.** https://demandradar-ivory.vercel.app/api/zoekvraag?niche=NL (ook US en DE) geeft koop- en vergelijkvragen met een situatiewoord (voor, zonder, met, onder) en hoe zwak de top 10 is.
 - **Titel en H1.** Zet de grootste zoekterm voorop. Een titel is hoogstens 60 tekens, de description hoogstens 155.
@@ -135,7 +135,7 @@ Henkjan: "ALs je hulp maakt is dat altijd door de pov vd gebruiker = dus zoek te
 
 | Soort | Waar | Voorbeeld |
 |---|---|---|
-| Productkeuzehulp, automatisch | NL `api/kzmaak.js` (onderwerp vastzetten: `STARTLIJST`), VS en DE `api/wtbmaak.js`. Moet de winkeltoets halen (bol of Amazon) | stekkerbatterij |
+| Productkeuzehulp, automatisch | NL `fn/kzmaak.js` (onderwerp vastzetten: `STARTLIJST`), VS en DE `fn/wtbmaak.js`. Moet de winkeltoets halen (bol of Amazon) | stekkerbatterij |
 | Productkeuzehulp, met de hand | NL `lib/kz-hand.js` via /api/kzmaak?op=hand (dry=1 toont de bol-toets), VS en DE `lib/wtb-hand.js` via /api/wtbmaak?op=hand | raamrobot |
 | Beslisgids: dienst, vergelijking of product dat de winkels niet verkopen | NL `lib/dienstgids.js` of een eigen module (`lib/energie-keuze.js`, `lib/huisdier.js`), VS `lib/wtb-dienst.js` en `lib/wtb-robot.js`, DE `lib/kb-dienst.js`. Direct live, zonder winkeltoets | zonnepanelen, massage near me, Tagesgeld |
 | Lokale gids met alle zaken | `lib/rdam.js` (Rotterdam, per dienst en per zaak), `lib/advocaat.js` (heel NL) | /rotterdam/tandarts |

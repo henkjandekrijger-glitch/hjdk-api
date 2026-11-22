@@ -291,7 +291,7 @@ async function maakPlan(d, extraUitsluiten) {
       if (thuis) { weg.push(p.slug + ' -> ' + thuis); plan.splice(i, 1); } }
     if (weg.length) await kv.set('hjdk:kz:maak:dubbel', { dag: d, weg }).catch(() => {}); } catch (e) {}
   start.forEach(s => { if (plan.length < Math.max(8, PER_DAG() * 2) && !plan.some(x => x.slug === s.slug)) plan.push(Object.assign({ bron: 'startlijst' }, s)); }); // vangnet
-  // Kernfase (18 nov 2026): verversen alleen binnen de kern (kv kz:kern, api/kz.js kernBereken), eerst wat nog niet in Google staat, per dag een ander stuk
+  // Kernfase (18 nov 2026): verversen alleen binnen de kern (kv kz:kern, fn/kz.js kernBereken), eerst wat nog niet in Google staat, per dag een ander stuk
   try { const kern = await kv.get('kz:kern'); if (kern && kern.actief && Array.isArray(kern.slugs) && kern.slugs.length) { const ks = new Set(kern.slugs); const eerst = [...(kern.nogNietInGoogle || []), ...kern.slugs.filter(s => !(kern.nogNietInGoogle || []).includes(s))];
     const st = (Math.floor(Date.now() / 864e5) * VERVERS()) % eerst.length; const rond = eerst.slice(st).concat(eerst.slice(0, st));
     plan.ververs = [...new Set([...(plan.ververs || []).filter(x => ks.has(x)), ...rond])].slice(0, VERVERS()); } } catch (e) {}

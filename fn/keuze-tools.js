@@ -45,7 +45,7 @@ const BOT_UA=/bot|crawl|spider|slurp|headless|python|curl|wget|axios|node-fetch|
 export default async function handler(req, res) {
   const url = new URL(req.url, 'https://keuzehulp.best'), q = url.searchParams; let op = q.get('op') || '';
   res.setHeader('x-content-type-options', 'nosniff');
-  { // 21 nov 2026: crawlers op keuzehulp.best tellen ook hier (voorpagina, gidsen, rekenhulpen), zelfde dagteller als api/kz.js; zonder dit zag de ZICHT-lus maar een deel van Googlebot en hield de crawlstop onterecht aan
+  { // 21 nov 2026: crawlers op keuzehulp.best tellen ook hier (voorpagina, gidsen, rekenhulpen), zelfde dagteller als fn/kz.js; zonder dit zag de ZICHT-lus maar een deel van Googlebot en hield de crawlstop onterecht aan
     const h = String(req.headers.host || '').replace(/^www\./, ''), ua = String(req.headers['user-agent'] || '');
     if (h === 'keuzehulp.best' && /^(GET|HEAD)$/.test(req.method || 'GET')) { const B = [['googlebot', /Googlebot|Google-InspectionTool|GoogleOther/i], ['bingbot', /bingbot/i], ['oai-searchbot', /OAI-SearchBot/i], ['chatgpt-user', /ChatGPT-User/i], ['gptbot', /GPTBot/i], ['claude-user', /Claude-User|Claude-SearchBot/i], ['claudebot', /ClaudeBot|anthropic-ai/i], ['perplexity-user', /Perplexity-User/i], ['perplexitybot', /PerplexityBot/i]].find(([, re]) => re.test(ua));
       if (B) { try { await kv.incrMany([['c:hjdk6-kz-botd-' + new Date().toISOString().slice(0, 10).replace(/-/g, '') + '-' + B[0], 1]]); } catch {} } }

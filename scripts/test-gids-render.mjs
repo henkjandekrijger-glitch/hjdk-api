@@ -19,7 +19,7 @@ catalog.push({id:'oc_4174005539848193',t:'Gevlochten Roze Bedbumper 2m Katoen vo
 catalog.push({id:'oc_4174005507129345',t:'Grijze Baby Slaapzak met Fleece',vr:true,p:20,vk:4.95,lt:8,c:'kids',s:'baby',l:Date.now()+60000,img:''});
 const context=vm.createContext({console,URL,Buffer,Date,Set,Map,process:{env:{}},AbortSignal,fetch:()=>{throw Error('Geen externe requests in rendertest');}});
 const synth=obj=>new vm.SyntheticModule(Object.keys(obj),function(){for(const [k,v]of Object.entries(obj))this.setExport(k,v);},{context});
-const code=fs.readFileSync('api/gids.js','utf8');
+const code=fs.readFileSync('fn/gids.js','utf8');
 const kv={get:async k=>k==='hjdk:shop:cat'?{items:catalog}:null,set:async()=>{},raw:async()=>[],mget:async(...keys)=>keys.map(()=>null)};
 const nb=Object.fromEntries([...new Set([...code.matchAll(/NB\.([\w]+)/g)].map(m=>m[1]))].map(k=>[k,/^[A-Z_]+$/.test(k)?'':k==='blok'?()=>'':k==='mailKlaar'?async()=>false:k==='blokInfo'?async()=>({}):async()=>[]]));
 const stubs={'../lib/kadoly-redactie.js':redactie,'../lib/kzux.js':{kzuxBlok:()=>''},'../lib/funnel.js':{funnelStap:async()=>null,funnelStand:async()=>({}),funnelHtml:()=>'',fnIdUitCookie:()=>null,isFnBot:()=>true,bronVan:()=>'',FN_JS:()=>''},'../lib/gidsen-alle.js':alle,'../lib/gids-indexnow.js':indexnow,'../lib/gids-catalogus.js':volledig,'../lib/db.js':{kv},'../lib/look.js':{lookNieuw:()=>''},'../lib/gidsen-kadoly.js':gidsen,'../lib/ai.js':{berichten:()=>{},HAIKU:'test'},'node:crypto':crypto,'../lib/kadoly-nieuws.js':nb,'../lib/gids-onderzoek.js':bewijs,'../lib/gids-groei.js':groei};

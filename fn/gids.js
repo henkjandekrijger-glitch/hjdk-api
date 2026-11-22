@@ -4,7 +4,7 @@
 // Regels: eerst de lijst met prijs en levertijd van vandaag, de keuzehulp als knop eronder; per product een eerlijke beperking; afraden alleen
 // op harde feiten (maat, onderdelen, levertijd tegenover een deadline), want we hebben de producten niet zelf vastgehad (Henkjan: nog niet
 // zelf bestellen). Alles wat AI moet kunnen citeren staat in de HTML. Geen gedachtestreepjes. Prijzen live uit de shopcatalogus.
-// Kliks naar de shop gaan via /naar/<pid> (api/shop.js op=gidsuit): Clickmind meet de keten tot betaald per gids.
+// Kliks naar de shop gaan via /naar/<pid> (fn/shop.js op=gidsuit): Clickmind meet de keten tot betaald per gids.
 import { catalogusInhoud, normaliseerGidsProduct } from '../lib/gids-catalogus.js';
 import { gidsIndexPlan } from '../lib/gids-indexnow.js';
 import * as GC from '../lib/groepscadeau.js'; // groepscadeaus per moment (21 nov 2026), live pagina's op /<slug>, groepslinks op /samen/<id>
@@ -535,7 +535,7 @@ ${NF.n ? `<section class="si-sec" aria-labelledby="nieuw"><p class="eb" id="nieu
 <section class="si-sec" aria-labelledby="vragen"><p class="eb" id="vragen">Vragen over Kadoly</p>${faq.map(([v, a]) => `<details class="faq"><summary>${esc(v)}</summary><div class="a"><p>${esc(a)}</p></div></details>`).join('')}</section>${baken('_home')}` + VOET(null, kans, false);
 }
 
-// 13 nov 2026 (Henkjan: verlanglijst voor alles, lootjes, cadeauzoeker; api/w.js): eigen pagina's op deze host, met de dag van de laatste echte inhoudswijziging
+// 13 nov 2026 (Henkjan: verlanglijst voor alles, lootjes, cadeauzoeker; fn/w.js): eigen pagina's op deze host, met de dag van de laatste echte inhoudswijziging
 const W_PAGINAS = [{ pad: '/w', versie: 'w1', lm: '2026-11-13', naam: 'Verlanglijstje maken: één lijst voor alles, uit elke winkel' }, { pad: '/w/lootjes', versie: 'w1', lm: '2026-11-13', naam: 'Lootjes trekken online, met ieders verlanglijst' }, { pad: '/w/gedicht', versie: 'w1', lm: '2026-11-14', naam: 'Sinterklaasgedicht maken: gratis gedichtengenerator' }, { pad: '/w/zoek', versie: 'w1', lm: '2026-11-13', naam: 'Cadeauzoeker: cadeau-ideeën uit alle winkels' }];
 async function sitemap() {
   const cat = await catalogus();

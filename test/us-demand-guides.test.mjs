@@ -35,7 +35,7 @@ test('SSR and advice API resolve manual catalog rows, share selections and prese
  const market={id:'us',host:'whichtobuy.best',locale:'en-US',name:'Which To Buy',s:{disc:'As an Amazon Associate we earn from qualifying purchases.',related:'More buying guides',q:'Answer 3 quick questions',guide:'What actually matters',mistakes:'Common mistakes',faq:'Questions people ask'},tag:()=> 'bl-t15-20'};
  const searchLink=(m,k)=>'https://www.amazon.com/s?k='+encodeURIComponent(k)+'&tag='+m.tag();
  globalThis.__wtbGuideTest={guideAnswers,guideDecision,decisionHtml,guideSections,kv,look:()=>'',ACCENTS:{whichtobuy:{}},colourTag:async()=>'',colourReport:async()=>({}),measureTag:()=>'',MARKETS:{us:market},marketFor:()=>market,K:{item:()=>'',index:()=>''},DAY:()=> '2026-10-17',esc,items:async()=>US_GUIDES,amzSearch:async()=>null,amzReady:()=>false,searchLink,INDEXNOW_KEY:'fixture',koopBlok:()=>'',koopMeetScript:()=>''};
- let src=await readFile(new URL('../api/wtb.js',import.meta.url),'utf8');
+ let src=await readFile(new URL('../fn/wtb.js',import.meta.url),'utf8');
  src=src.replace(/^import .*;\n/gm,'');src='const {'+Object.keys(globalThis.__wtbGuideTest).join(',')+'}=globalThis.__wtbGuideTest;\n'+src;
  const h=(await import('data:text/javascript;base64,'+Buffer.from(src).toString('base64'))).default;
  const response=()=>({setHeader(){},status(n){this.code=n;return this;},json(v){this.body=v;return this;},send(v){this.body=v;return this;},end(){}});

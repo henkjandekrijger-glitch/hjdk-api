@@ -5,7 +5,7 @@ description: Gebruik bij elke mail die namens Henkjan de deur uit gaat (koude ma
 
 # POST: elke mail eerst langs de lus
 
-Eén gedeelde, lerende lus in de cloud (Vercel-project hjdk-api, lib/postlus.js en api/post.js). Elke chat van elk account gebruikt dezelfde regels en voedt ze. De bron van deze skill is de repo (.claude/skills/mail-lerend/SKILL.md), niet een Claude-account.
+Eén gedeelde, lerende lus in de cloud (Vercel-project hjdk-api, lib/postlus.js en fn/post.js). Elke chat van elk account gebruikt dezelfde regels en voedt ze. De bron van deze skill is de repo (.claude/skills/mail-lerend/SKILL.md), niet een Claude-account.
 
 - Regels: https://hjdk-api-henq.vercel.app/api/post?op=regels&t=1
 - Stand: https://hjdk-api-henq.vercel.app/api/post?op=stand

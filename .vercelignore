@@ -1,0 +1,11 @@
+# Kosten (Henkjan 21 nov 2026: "Zorg dat ook nooit meer een nieuwe kan ontstaan !!!!"): elk bestand in api/ is een eigen
+# Vercel-functie en maakt elke build langer. In api/ gaan alleen mee: [hjdkfn].js (de router), mm.js (Clickmind) en de map hjdk/.
+# Elk ander bestand in api/ wordt weggelaten uit de uitrol en wordt dus nooit een functie. Code van eindpunten hoort in fn/.
+# Bewust zonder uitzonderingsregel (!): geen van deze patronen past op mm.js of [hjdkfn].js. Deze regels niet weghalen.
+/api/[a-ln-zA-Z0-9]*.js
+/api/m.js
+/api/m[a-ln-zA-Z0-9_-]*.js
+/api/mm[a-zA-Z0-9_-]*.js
+/api/[a-zA-Z0-9]*.mjs
+/api/[a-zA-Z0-9]*.cjs
+/api/[a-zA-Z0-9]*.ts

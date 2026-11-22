@@ -27,29 +27,29 @@ Live te lezen: https://hjdk-api-henq.vercel.app/api/wtb?op=tkoverdracht (met web
 - Vercel-project **simpele-site** (prj_647ggjACuojq0k8KCIJwMXIWrt7y), team henq (team_9EYxyAU5QDExrrrOSKamefJT). Domeinen: taniakross.media, www, taniakross.nl, taniakross.com, simpele-site-henq.vercel.app.
 - **Geen git-repo.** Uitrollen gaat met mcp__Vercel__create_deployment (target production, name en project simpele-site) met alle bestanden: ongewijzigde bestanden als {file, sha} uit list_deployment_files van de laatste productie-uitrol (pad zonder "src/"), gewijzigde bestanden inline (encoding utf-8). Daarna list_deployment_files van de nieuwe uitrol: de uid moet de sha1 van je lokale bestand zijn.
 - De volledige live bron staat op https://simpele-site-henq.vercel.app/api/bron (web_fetch_vercel_url; groot, opslaan en met python lezen). Zo haal je een bestand op om te wijzigen.
-- Bestanden waar een persoonlijk adres in staat (bijv. api/rapport.js, api/lijst.js, api/_intern/overdracht.html, api/_push.js) kun je **niet inline** uitrollen door de privacy-plugin: alleen per sha meenemen. Moet je er iets in wijzigen, haal dan eerst het adres eruit naar een Vercel-variabele (zoals bij api/nieuwsbrief.js op 20 nov).
+- Bestanden waar een persoonlijk adres in staat (bijv. fn/rapport.js, fn/lijst.js, api/_intern/overdracht.html, api/_push.js) kun je **niet inline** uitrollen door de privacy-plugin: alleen per sha meenemen. Moet je er iets in wijzigen, haal dan eerst het adres eruit naar een Vercel-variabele (zoals bij fn/nieuwsbrief.js op 20 nov).
 - De shell in de cloud kan taniakross.media niet bereiken (proxy); gebruik web_fetch_vercel_url op simpele-site-henq.vercel.app.
-- Laatste productie-uitrol: dpl_F1Z7GzbzA1d8qiHsgaTgvNK4aqLC (20 nov 14:47 UTC, READY): api/nieuwsbrief.js uid acf4a499eae8872de0927874d4ca2d2c704c0a29.
+- Laatste productie-uitrol: dpl_F1Z7GzbzA1d8qiHsgaTgvNK4aqLC (20 nov 14:47 UTC, READY): fn/nieuwsbrief.js uid acf4a499eae8872de0927874d4ca2d2c704c0a29.
 
 ## 4. Onderdelen van de site (bestanden in simpele-site)
 
-- api/home.js: homepage (kopie van Tania's eigen pagina met onze blokken). **Niet uitgerold, wacht nog:** sameAs in de Person-gegevens aanvullen met YouTube @Taniakrossmezzo en Facebook taniakrossmezzo (alleen lokaal gemaakt in de vorige chat, opnieuw doen).
-- api/podiumklassiek.js: pagina /podium-klassiek (live 20 nov). Special 27 okt 2026 (41 min), Talent Masterclass Operazang (NPO Cultuur), aflevering 27 sep 2026 met Floris Kortie. FAQ en TVEpisode-gegevens. Reden: Demand Radar 'podium klassiek' 5.400 zoekopdrachten per maand in NL, Search Console 'tania kross podium klassiek' op plek 9.
-- api/mezzosopraan.js: /mezzosopraan en /en/mezzo-soprano met aria's en bekende mezzo's (live, datePublished 16 nov, lastmod 20 nov).
-- api/kaart.js: sitemap-omhulsel om api/seo.js (seo.js is te groot om inline te zetten). ERBIJ voegt /podium-klassiek toe, DATUM zet lastmod van de mezzo-pagina's. vercel.json stuurt /sitemap.xml naar /api/kaart?a=sitemap.
-- api/llms.js: llms.txt met een Podium Klassiek-deel (metPK).
+- fn/home.js: homepage (kopie van Tania's eigen pagina met onze blokken). **Niet uitgerold, wacht nog:** sameAs in de Person-gegevens aanvullen met YouTube @Taniakrossmezzo en Facebook taniakrossmezzo (alleen lokaal gemaakt in de vorige chat, opnieuw doen).
+- fn/podiumklassiek.js: pagina /podium-klassiek (live 20 nov). Special 27 okt 2026 (41 min), Talent Masterclass Operazang (NPO Cultuur), aflevering 27 sep 2026 met Floris Kortie. FAQ en TVEpisode-gegevens. Reden: Demand Radar 'podium klassiek' 5.400 zoekopdrachten per maand in NL, Search Console 'tania kross podium klassiek' op plek 9.
+- fn/mezzosopraan.js: /mezzosopraan en /en/mezzo-soprano met aria's en bekende mezzo's (live, datePublished 16 nov, lastmod 20 nov).
+- fn/kaart.js: sitemap-omhulsel om fn/seo.js (seo.js is te groot om inline te zetten). ERBIJ voegt /podium-klassiek toe, DATUM zet lastmod van de mezzo-pagina's. vercel.json stuurt /sitemap.xml naar /api/kaart?a=sitemap.
+- fn/llms.js: llms.txt met een Podium Klassiek-deel (metPK).
 - vercel.json: rewrite /podium-klassiek, sitemap, crons (zie 6). Geen afsluitende nieuwe regel in het bestand (anders klopt de sha niet).
-- api/lijst.js (server) en lijst.js (browser): aanmelden, venster, modal, welkomstmail, afmelden, tellen. Zie 5.
+- fn/lijst.js (server) en lijst.js (browser): aanmelden, venster, modal, welkomstmail, afmelden, tellen. Zie 5.
 - api/_mailleer.js: lerende onderwerpen en linkteller voor alle mail (Thompson op kliks). Toegestane linkdoelen: taniakross.media, YouTube, Spotify, Apple Podcasts, en sinds 20 nov de Clickmind-wissel whichtobuy.best/w/tk-mail.
-- api/nieuwsbrief.js: wekelijkse podcastmail. Zie 6.
-- api/rapport.js: dagelijks verslag (cron 11:00 UTC) naar Tania en Henkjan. Gaat niet naar de lijst.
+- fn/nieuwsbrief.js: wekelijkse podcastmail. Zie 6.
+- fn/rapport.js: dagelijks verslag (cron 11:00 UTC) naar Tania en Henkjan. Gaat niet naar de lijst.
 - Wikidata en NL-Wikipedia: oude domeinen omgezet naar taniakross.media (door Henkjan gedaan, 20 nov).
 
 ## 5. De lijst en aanmelden
 
 - Leden staan als blob lijst/leden/<hash>.json. Geen dubbele opt-in meer: aanmelden is meteen lid (Henkjan 20 nov: "Ze hoeven niet te bevestigen").
 - Stand lezen: https://simpele-site-henq.vercel.app/api/lijst?a=stand (leden, armen, momenten, per herkomst, mail).
-- Overige eindpunten in api/lijst.js: a=aan (aanmelden, POST), a=kies (welke tekst), a=af (afmelden), a=k (linkteller), a=o (openpixel), a=ga (bestemming uit de welkomstmail), a=voorbeeld&v=<arm> (welkomstmail bekijken zonder te versturen), a=inhaal en a=omzet (beheer).
+- Overige eindpunten in fn/lijst.js: a=aan (aanmelden, POST), a=kies (welke tekst), a=af (afmelden), a=k (linkteller), a=o (openpixel), a=ga (bestemming uit de welkomstmail), a=voorbeeld&v=<arm> (welkomstmail bekijken zonder te versturen), a=inhaal en a=omzet (beheer).
 - **Teksten (armen)**, lerend per bezoeker:
   - Modal op de site: p1 tot p3 (podcast), m1 tot m4 (post van Tania, live), t1 tot t3, plus de cadeau-armen.
   - Cadeau-armen (sinds 20 nov): g1 "Barcelona, meteen in je mail" (Barcelona van Tania en Tommie Christiaan), g2 "Tania heeft iets voor je" (verrassing), g3 "Kijk meteen: Tania met <laatste gast>".
@@ -58,7 +58,7 @@ Live te lezen: https://hjdk-api-henq.vercel.app/api/wtb?op=tkoverdracht (met web
 - **Open fout:** de Barcelona-pagina (a=ga&d=barcelona) gebruikt een youtube-nocookie-embed (video Y420kVQ45GA) die bij sommige bezoekers om inloggen vraagt. Omzetten naar de gewone youtube.com-embed.
 - Stand 20 nov 15:12 UTC: 20 leden. Betaald verkeer: venster pv 4.418 getoond / 5 aan, pv3 1.782 / 4, pv2 1.758 / 1; cadeau g1 23 / 1, g2 30 / 1, g3 25 / 0, p1 35 / 0. Gewone modal: m1 20 / 2, p3 20 / 2, t1 14 / 1 (3 ja).
 
-## 6. Wekelijkse podcastmail (api/nieuwsbrief.js)
+## 6. Wekelijkse podcastmail (fn/nieuwsbrief.js)
 
 - Cron elke dag 14:30 UTC (vercel.json). Is de vorige mail minstens 6 dagen oud en staat er een nieuwe aflevering live (soort aflevering) of een gast met "Binnenkort" (soort binnenkort), dan gaat er een **voorbeeld** naar Tania en Henkjan met de knoppen Nu versturen en Niet versturen.
 - **Sinds 20 nov 14:47 UTC: niet meer vanzelf versturen.** De mail gaat alleen naar de lijst als iemand op Nu versturen klikt (a=ja met teken). Zonder klik vervalt het voorbeeld na 6 dagen en komt er een nieuw. Daarvoor ging hij na 23 uur vanzelf naar iedereen.

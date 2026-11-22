@@ -11,8 +11,8 @@ for(const text of ['<html>login</html>','<urlset></urlset>','<sitemapindex><site
 await assert.rejects(()=>sitemapTargets(site,async()=>({ok:false,status:503})));
 
 const zicht=readFileSync(new URL('../lib/zicht.js',import.meta.url),'utf8');
-const gsc=readFileSync(new URL('../api/gsc.js',import.meta.url),'utf8');
-const kz=readFileSync(new URL('../api/kz.js',import.meta.url),'utf8');
+const gsc=readFileSync(new URL('../fn/gsc.js',import.meta.url),'utf8');
+const kz=readFileSync(new URL('../fn/kz.js',import.meta.url),'utf8');
 const voorkant=readFileSync(new URL('../lib/cadeauvinder.js',import.meta.url),'utf8');
 assert.match(zicht,/P2\('surgery', 'keuzehulp\.best'[\s\S]{0,500}pathPrefix: '\/chirurgie'[\s\S]{0,300}sitemap: 'https:\/\/keuzehulp\.best\/chirurgie\/sitemap\.xml'/);
 assert.doesNotMatch(zicht,/P2\('surgery', 'todayin\.email'/);
