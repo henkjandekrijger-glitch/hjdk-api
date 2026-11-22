@@ -6,6 +6,7 @@ import { kv } from '../lib/db.js';
 import { render, SLUGS, ROBOTS, sitemap, llms, zichtJson, OVERDRACHT, FAVICON, INDEXNOW_KEY, BIJGEWERKT, HOST, BASE, TEL, amz, omslag, keur, BOEK_ASIN, LC_URL } from '../lib/bs.js';
 import { BOEKEN, LC, PRIJS_DATUM, ANDER } from '../lib/bs-data.js';
 import fs from 'node:fs';
+import zlib from 'node:zlib';
 import * as LCF from '../lib/lcfunnel.js';
 import { ImageResponse } from '@vercel/og';
 import { INTER_500, INTER_800 } from '../lib/pinfont.js';
@@ -42,7 +43,7 @@ async function lcHandler(req, res, q, echt) {
     if (!beschermd(req)) return stuur(res, 403, 'application/json', '{"ok":false,"fout":"alleen via de beschermde host"}', { cache: 'no-store' });
     if (op === 'lcmodus') { const m = q.get('m') === 'direct' ? 'direct' : 'eerst-zien'; await kv.set('lc:art:modus', m); return stuur(res, 200, 'application/json', JSON.stringify({ ok: true, modus: m }), { cache: 'no-store' }); }
     if (op === 'lclive') { const sl = q.get('slug') || '', a = await kv.get('lc:art:' + sl).catch(() => null); if (!a) return stuur(res, 404, 'application/json', '{"ok":false}', { cache: 'no-store' }); a.status = q.get('live') === '0' ? 'concept' : 'live'; await kv.set('lc:art:' + sl, a); const i = index.find(x => x.slug === sl); if (i) i.status = a.status; await kv.set('lc:arts', index); return stuur(res, 200, 'text/html; charset=utf-8', `<p style="font:18px system-ui;padding:24px">${a.status === 'live' ? 'Live gezet' : 'Teruggezet naar concept'}: <a href="${LCF.BASE}/${sl}">${LCF.BASE}/${sl}</a></p>`, { cache: 'no-store', robots: 'noindex' }); }
-    let a = null; try { a = req.method === 'POST' ? (typeof req.body === 'object' && req.body ? req.body : JSON.parse(await new Promise(r => { let d = ''; req.on('data', x => d += x); req.on('end', () => r(d)); }))) : JSON.parse(q.get('j') || 'null'); } catch (e) {}
+    let a = null; try { a = req.method === 'POST' ? (typeof req.body === 'object' && req.body ? req.body : JSON.parse(await new Promise(r => { let d = ''; req.on('data', x => d += x); req.on('end', () => r(d)); }))) : q.get('z') ? JSON.parse(zlib.inflateRawSync(Buffer.from(q.get('z'), 'base64url')).toString('utf8')) : JSON.parse(q.get('j') || 'null'); } catch (e) {}
     const fout = LCF.checkArtikel(a); if (fout.length) return stuur(res, 400, 'application/json', JSON.stringify({ ok: false, fout }), { cache: 'no-store' });
     const modus = (await kv.get('lc:art:modus').catch(() => null)) || 'eerst-zien';
     a.datum = a.datum || new Date().toISOString().slice(0, 10); a.status = modus === 'direct' ? 'live' : 'concept';
