@@ -1088,7 +1088,7 @@ export default async function handler(req, res) {
       return res.status(200).json({ ok: true, droog, info, tekst: bundelTekst(b, info), bundel: b, pakket }); }
     if (op === 'gmclabels' || op === 'gmclabels.csv') { // 20 nov (Henkjan: "op shopping moeten we vet concurreren om bezoekers te trekken"): aanvullende bron voor Merchant Center Kadoly 5876502305 met labels per product,
       // zodat de Shopping-campagne kan splitsen: custom_label_0 prijspositie all-in tegen bol/Amazon (goedkoopst, duurder, uniek = niet één-op-één elders, onbekend),
-      // custom_label_1 marge per bestelling (marge15, marge5, marge0, verlies, onbekend), custom_label_2 pakket (zit in een pakket van nu), custom_label_3 seizoen (kerst, sinterklaas).
+      // custom_label_1 marge per bestelling (marge15, marge5, marge0, verlies, onbekend), custom_label_4 pakket en/of seizoen (pakket, kerst, sinterklaas, pakket-kerst; sinds 22 nov in één kolom, want de shopfeed gebruikt custom_label_2 voor de hoek). Sinds 22 nov gekoppeld als aanvullende bron 'Kadoly labels' (op=mclabels in fn/gsc.js).
       // ID's komen uit de eigen Merchant-feed van de shop (varianten oc_X-Y krijgen de labels van oc_X); lukt die niet, dan alleen de basis-ID's (kop x-labels-bron).
       const cat = await catalog(true); let markt = {}; try { const r = await fetch('https://demandradar-ivory.vercel.app/api/feed?shop=yoors&cc=NL&prices=1', { signal: AbortSignal.timeout(9000) }); if (r.ok) markt = ((await r.json()) || {}).items || {}; } catch (e) {}
       const inPakket = new Set(); try { const nu = (await kv.get('hjdk:shop:pakket:nu')) || {}; for (const code of Object.values(nu)) { const pk0 = await kv.get('hjdk:shop:bundel:' + code); (pk0 && pk0.items || []).forEach(i => inPakket.add(i.id)); } } catch (e) {}
@@ -1103,7 +1103,7 @@ export default async function handler(req, res) {
       res.setHeader('x-labels-bron', bron); res.setHeader('cache-control', 'public, max-age=3600');
       if (url.searchParams.get('vorm') === 'stand') return res.status(200).json({ ok: true, bron, ids: ids.length, metLabel: rijen.length, telling: tel, marktprijzen: Object.keys(markt).length });
       res.setHeader('content-type', 'text/csv; charset=utf-8'); res.setHeader('content-disposition', 'inline; filename="kadoly-labels.csv"');
-      return res.status(200).send('id,custom_label_0,custom_label_1,custom_label_2,custom_label_3\n' + rijen.map(r => r.join(',')).join('\n')); }
+      return res.status(200).send('id,custom_label_0,custom_label_1,custom_label_4\n' + rijen.map(r => [r[0], r[1], r[2], [r[3], r[4]].filter(Boolean).join('-')].join(',')).join('\n')); } // 22 nov: pakket en seizoen samen in custom_label_4 (bijv. pakket-kerst), want de shopfeed gebruikt custom_label_2 al voor de hoek
     if (op === 'impuls') { // 20 nov (Henkjan: "Impuls campagne gaan we doen" en "Vind ook producten die nergens te vinden zijn"): wat een impulscampagne mag tonen. Alleen de beschermde host.
       // uniek = Demand Radar vond hetzelfde product niet bij bol, Amazon.nl of Amazon.de (wel vergelijkbare), op voorraad, met foto, levertijd tot 7 werkdagen, marge per bestelling minstens EUR 10 (of &marge=)
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');

@@ -151,6 +151,12 @@ export default async function handler(req, res) {
       const uit = wat === 'autofeed_uit' ? await M.autofeed(tk, acc, false) : wat === 'autofeed_aan' ? await M.autofeed(tk, acc, true) : wat === 'levertijd' ? await M.levertijd(tk, acc, { minVerwerking: n('vmin', 1), maxVerwerking: n('vmax', 2), minOnderweg: n('omin', 3), maxOnderweg: n('omax', 4) }) : { fout: 'wat=autofeed_uit|autofeed_aan|levertijd' };
       return res.status(200).json({ wat, uit });
     }
+    if (op === 'mclabels') { // 22 nov 2026: labelbron in Merchant Center Kadoly maken, koppelen en ophalen (&proef=1 alleen kijken), of &id=<offerId> de labels van één product teruglezen
+      if (!/vercel\.app$/.test(String(req.headers.host || ''))) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
+      const M = await import('../lib/merchant.js'); const { token } = await import('../lib/gsc.js'); const tk = await token(oidc, 'https://www.googleapis.com/auth/content'); const acc = url.searchParams.get('account') || '5876502305';
+      const id = url.searchParams.get('id'); if (id) return res.status(200).json(await M.productLabels(tk, acc, id));
+      return res.status(200).json(await M.labelBron(tk, acc, { proef: url.searchParams.get('proef') === '1' }));
+    }
     if (op === 'yoorsinhoud') { // 8 nov 2026 (Henkjan: "kijk welke content bij Yoors organisch goed werkte"): beste pagina's en zoekvragen van yoo.rs uit Search Console, 16 maanden
       if (!/vercel\.app$/.test(String(req.headers.host || '')) && !isToken) return res.status(403).json({ ok: false, fout: 'alleen via de beschermde host' });
       const l = await sites(oidc); const prop = propFor(l, 'yoo.rs'); if (!prop) return res.status(200).json({ ok: false, fout: 'geen toegang tot yoo.rs' });
