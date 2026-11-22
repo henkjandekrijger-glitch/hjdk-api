@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-11-16",
+  "checked_at": "2026-11-22",
   "note": "Source inventory and published-price snapshots. No complete market, licence, suitability, outcome or guaranteed-savings claim. Provider groups can span locations. Brand availability is explicitly sourced and may vary by practice. Amounts retain currency, unit, treatment scope and known omissions; no synthetic FX or country averages.",
   "providers": [
     {
@@ -730,6 +730,275 @@
           ]
         }
       }
+    },
+    {
+      "id": "weiss32-stuttgart",
+      "naam": "WEISS32",
+      "site": "https://www.weiss32.de",
+      "land": "DE",
+      "stad": "Stuttgart-Degerloch",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-22",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.weiss32.de/kosten/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "all-on-4": {
+          "source_url": "https://www.weiss32.de/kosten/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "veneers": {
+          "source_url": "https://www.weiss32.de/kosten/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "crowns": {
+          "source_url": "https://www.weiss32.de/kosten/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "whitening": {
+          "source_url": "https://www.weiss32.de/kosten/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "aligners": {
+          "source_url": "https://www.weiss32.de/kosten/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22",
+          "brands": [
+            "Invisalign"
+          ]
+        }
+      }
+    },
+    {
+      "id": "darc-antwerp",
+      "naam": "DARC",
+      "site": "https://www.darc.be",
+      "land": "BE",
+      "stad": "Antwerp",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-22",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.darc.be/prices",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "veneers": {
+          "source_url": "https://www.darc.be/prices",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "crowns": {
+          "source_url": "https://www.darc.be/prices",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "aligners": {
+          "source_url": "https://www.darc.be/prices",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        }
+      }
+    },
+    {
+      "id": "astradent-warsaw",
+      "naam": "Astra Dent",
+      "site": "https://astradent.pl/en/",
+      "land": "PL",
+      "stad": "Warsaw",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-22",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://astradent.pl/en/warsaw/prices/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "veneers": {
+          "source_url": "https://astradent.pl/en/warsaw/prices/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "crowns": {
+          "source_url": "https://astradent.pl/en/warsaw/prices/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "whitening": {
+          "source_url": "https://astradent.pl/en/warsaw/prices/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "aligners": {
+          "source_url": "https://astradent.pl/en/warsaw/prices/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22",
+          "brands": [
+            "Invisalign",
+            "Spark"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cdc-prague",
+      "naam": "Dental Clinic CDC",
+      "site": "https://www.cdc-klinika.cz/en/",
+      "land": "CZ",
+      "stad": "Prague 6 – Dejvice",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-22",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.cdc-klinika.cz/en/price-list/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "veneers": {
+          "source_url": "https://www.cdc-klinika.cz/en/price-list/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "crowns": {
+          "source_url": "https://www.cdc-klinika.cz/en/price-list/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "whitening": {
+          "source_url": "https://www.cdc-klinika.cz/en/price-list/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        }
+      }
+    },
+    {
+      "id": "datskiv-bratislava",
+      "naam": "DATSKIV Dental Clinic",
+      "site": "https://datskiv.sk/en/",
+      "land": "SK",
+      "stad": "Bratislava",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-22",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://datskiv.sk/en/price-list/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "all-on-4": {
+          "source_url": "https://datskiv.sk/en/price-list/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "veneers": {
+          "source_url": "https://datskiv.sk/en/price-list/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "crowns": {
+          "source_url": "https://datskiv.sk/en/price-list/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        }
+      }
+    },
+    {
+      "id": "as-clinicas-lisbon",
+      "naam": "AS Clínicas",
+      "site": "https://asclinicas.pt/en/",
+      "land": "PT",
+      "stad": "Lisbon",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-22",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://asclinicas.pt/en/prices-and-financing/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "crowns": {
+          "source_url": "https://asclinicas.pt/en/prices-and-financing/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "whitening": {
+          "source_url": "https://asclinicas.pt/en/prices-and-financing/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "aligners": {
+          "source_url": "https://asclinicas.pt/en/prices-and-financing/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        }
+      }
+    },
+    {
+      "id": "sanitas-dental-spain",
+      "naam": "Sanitas Dental",
+      "site": "https://www.sanitas.es/dental",
+      "land": "ES",
+      "stad": "Multiple locations in Spain",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-22",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "veneers": {
+          "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "crowns": {
+          "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "whitening": {
+          "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22"
+        },
+        "aligners": {
+          "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-22",
+          "brands": [
+            "Invisalign",
+            "Spark"
+          ]
+        }
+      }
     }
   ],
   "patches": [
@@ -996,6 +1265,594 @@
         "follow_up",
         "travel"
       ]
+    },
+    {
+      "provider": "weiss32-stuttgart",
+      "topic": "dental-implants",
+      "from": 3500,
+      "currency": "EUR",
+      "scope": "implant_with_crown",
+      "unit": "tooth",
+      "source_url": "https://www.weiss32.de/kosten/",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "implant",
+        "crown"
+      ],
+      "unknown": [
+        "abutment",
+        "diagnostics",
+        "bone_graft",
+        "travel"
+      ]
+    },
+    {
+      "provider": "weiss32-stuttgart",
+      "topic": "all-on-4",
+      "from": 14900,
+      "currency": "EUR",
+      "scope": "fixed_teeth_on_4_implants",
+      "unit": "arch",
+      "source_url": "https://www.weiss32.de/kosten/",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "4_implants",
+        "fixed_teeth"
+      ],
+      "unknown": [
+        "temporary_or_final_prosthesis",
+        "bone_graft",
+        "diagnostics",
+        "travel"
+      ]
+    },
+    {
+      "provider": "weiss32-stuttgart",
+      "topic": "veneers",
+      "from": 1500,
+      "currency": "EUR",
+      "scope": "ceramic_veneer",
+      "unit": "tooth",
+      "source_url": "https://www.weiss32.de/kosten/",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "preparation",
+        "diagnostics",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "weiss32-stuttgart",
+      "topic": "crowns",
+      "from": 1150,
+      "currency": "EUR",
+      "scope": "crown",
+      "unit": "tooth",
+      "source_url": "https://www.weiss32.de/kosten/",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "material",
+        "root_canal",
+        "diagnostics"
+      ]
+    },
+    {
+      "provider": "weiss32-stuttgart",
+      "topic": "aligners",
+      "from": 3400,
+      "currency": "EUR",
+      "scope": "invisalign_or_aligner_course",
+      "unit": "treatment",
+      "source_url": "https://www.weiss32.de/kosten/",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "diagnostics",
+        "case_complexity",
+        "retainers",
+        "extra_aligners",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "darc-antwerp",
+      "topic": "dental-implants",
+      "from": 1050,
+      "currency": "EUR",
+      "scope": "implant_placement",
+      "unit": "implant",
+      "source_url": "https://www.darc.be/prices",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "implant_placement"
+      ],
+      "unknown": [
+        "abutment",
+        "crown",
+        "bone_graft",
+        "diagnostics"
+      ]
+    },
+    {
+      "provider": "darc-antwerp",
+      "topic": "veneers",
+      "from": 950,
+      "currency": "EUR",
+      "scope": "porcelain_veneer",
+      "unit": "tooth",
+      "source_url": "https://www.darc.be/prices",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "preparation",
+        "diagnostics",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "darc-antwerp",
+      "topic": "crowns",
+      "from": 950,
+      "currency": "EUR",
+      "scope": "zirconia_or_emax_crown",
+      "unit": "tooth",
+      "source_url": "https://www.darc.be/prices",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "root_canal",
+        "diagnostics",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "darc-antwerp",
+      "topic": "aligners",
+      "from": 3000,
+      "to": 6500,
+      "currency": "EUR",
+      "scope": "aligner_course",
+      "unit": "treatment",
+      "source_url": "https://www.darc.be/prices",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "brand",
+        "diagnostics",
+        "retainers",
+        "extra_aligners",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "astradent-warsaw",
+      "topic": "dental-implants",
+      "from": 6300,
+      "currency": "PLN",
+      "scope": "megagen_anyone_implant_with_zirconia_crown",
+      "unit": "tooth",
+      "source_url": "https://astradent.pl/en/warsaw/prices/",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "implant_stage_1_and_2",
+        "zirconia_crown",
+        "cementation",
+        "scanning"
+      ],
+      "unknown": [
+        "bone_graft",
+        "travel",
+        "extra_visits"
+      ]
+    },
+    {
+      "provider": "astradent-warsaw",
+      "topic": "veneers",
+      "from": 2459,
+      "currency": "PLN",
+      "scope": "emax_veneer",
+      "unit": "tooth",
+      "source_url": "https://astradent.pl/en/warsaw/prices/",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "preparation",
+        "diagnostics",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "astradent-warsaw",
+      "topic": "crowns",
+      "from": 2000,
+      "currency": "PLN",
+      "scope": "zirconia_crown",
+      "unit": "tooth",
+      "source_url": "https://astradent.pl/en/warsaw/prices/",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "root_canal",
+        "diagnostics",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "astradent-warsaw",
+      "topic": "aligners",
+      "from": 11000,
+      "currency": "PLN",
+      "scope": "invisalign_course",
+      "unit": "treatment",
+      "source_url": "https://astradent.pl/en/warsaw/prices/",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "case_complexity",
+        "diagnostics",
+        "retainers",
+        "extra_aligners",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "cdc-prague",
+      "topic": "dental-implants",
+      "from": 37398,
+      "currency": "CZK",
+      "scope": "implant_surgery_with_crown",
+      "unit": "tooth",
+      "source_url": "https://www.cdc-klinika.cz/en/price-list/",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "implant_surgery",
+        "crown"
+      ],
+      "unknown": [
+        "abutment",
+        "bone_graft",
+        "diagnostics",
+        "extra_visits"
+      ]
+    },
+    {
+      "provider": "cdc-prague",
+      "topic": "veneers",
+      "from": 16649,
+      "currency": "CZK",
+      "scope": "ceramic_veneer",
+      "unit": "tooth",
+      "source_url": "https://www.cdc-klinika.cz/en/price-list/",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "preparation",
+        "diagnostics",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "cdc-prague",
+      "topic": "crowns",
+      "from": 14398,
+      "currency": "CZK",
+      "scope": "ceramic_crown",
+      "unit": "tooth",
+      "source_url": "https://www.cdc-klinika.cz/en/price-list/",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "root_canal",
+        "diagnostics",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "cdc-prague",
+      "topic": "whitening",
+      "from": 7425,
+      "currency": "CZK",
+      "scope": "pure_whitening",
+      "unit": "treatment",
+      "source_url": "https://www.cdc-klinika.cz/en/price-list/",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "sessions",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "datskiv-bratislava",
+      "topic": "dental-implants",
+      "from": 800,
+      "currency": "EUR",
+      "scope": "implant_placement",
+      "unit": "implant",
+      "source_url": "https://datskiv.sk/en/price-list/",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "implant_placement"
+      ],
+      "unknown": [
+        "abutment",
+        "crown",
+        "bone_graft",
+        "diagnostics"
+      ]
+    },
+    {
+      "provider": "datskiv-bratislava",
+      "topic": "dental-implants",
+      "from": 600,
+      "currency": "EUR",
+      "scope": "implant_crown",
+      "unit": "tooth",
+      "source_url": "https://datskiv.sk/en/price-list/",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "implant_crown"
+      ],
+      "unknown": [
+        "implant",
+        "abutment",
+        "diagnostics"
+      ]
+    },
+    {
+      "provider": "datskiv-bratislava",
+      "topic": "all-on-4",
+      "from": 7900,
+      "currency": "EUR",
+      "scope": "all_on_x_fixed_prosthesis",
+      "unit": "arch",
+      "source_url": "https://datskiv.sk/en/price-list/",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "fixed_prosthesis"
+      ],
+      "unknown": [
+        "number_of_implants",
+        "temporary_prosthesis",
+        "bone_graft",
+        "diagnostics"
+      ]
+    },
+    {
+      "provider": "datskiv-bratislava",
+      "topic": "veneers",
+      "from": 600,
+      "currency": "EUR",
+      "scope": "ceramic_veneer",
+      "unit": "tooth",
+      "source_url": "https://datskiv.sk/en/price-list/",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "preparation",
+        "diagnostics",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "datskiv-bratislava",
+      "topic": "crowns",
+      "from": 550,
+      "currency": "EUR",
+      "scope": "zirconia_or_ceramic_crown",
+      "unit": "tooth",
+      "source_url": "https://datskiv.sk/en/price-list/",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "root_canal",
+        "diagnostics",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "as-clinicas-lisbon",
+      "topic": "dental-implants",
+      "from": 650,
+      "currency": "EUR",
+      "scope": "implant_placement",
+      "unit": "implant",
+      "source_url": "https://asclinicas.pt/en/prices-and-financing/",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "implant"
+      ],
+      "unknown": [
+        "abutment",
+        "crown",
+        "bone_graft",
+        "diagnostics"
+      ]
+    },
+    {
+      "provider": "as-clinicas-lisbon",
+      "topic": "dental-implants",
+      "from": 650,
+      "currency": "EUR",
+      "scope": "crown_on_implant",
+      "unit": "tooth",
+      "source_url": "https://asclinicas.pt/en/prices-and-financing/",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "crown_on_implant"
+      ],
+      "unknown": [
+        "implant",
+        "abutment",
+        "diagnostics"
+      ]
+    },
+    {
+      "provider": "as-clinicas-lisbon",
+      "topic": "dental-implants",
+      "from": 6000,
+      "currency": "EUR",
+      "scope": "fixed_full_arch_rehabilitation",
+      "unit": "arch",
+      "source_url": "https://asclinicas.pt/en/prices-and-financing/",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "fixed_arch_prosthesis"
+      ],
+      "unknown": [
+        "number_of_implants",
+        "temporary_prosthesis",
+        "bone_graft",
+        "diagnostics"
+      ]
+    },
+    {
+      "provider": "as-clinicas-lisbon",
+      "topic": "aligners",
+      "from": 3500,
+      "currency": "EUR",
+      "scope": "orthodontic_aligner_course",
+      "unit": "treatment",
+      "source_url": "https://asclinicas.pt/en/prices-and-financing/",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "brand",
+        "diagnostics",
+        "retainers",
+        "extra_aligners",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "as-clinicas-lisbon",
+      "topic": "whitening",
+      "from": 500,
+      "currency": "EUR",
+      "scope": "philips_zoom_whitespeed_in_office",
+      "unit": "treatment",
+      "source_url": "https://asclinicas.pt/en/prices-and-financing/",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "sessions",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "sanitas-dental-spain",
+      "topic": "dental-implants",
+      "from": 1014.5,
+      "currency": "EUR",
+      "scope": "osseointegrated_implant_without_membership",
+      "unit": "implant",
+      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "implant"
+      ],
+      "unknown": [
+        "abutment",
+        "crown",
+        "bone_graft",
+        "diagnostics"
+      ],
+      "price_basis": "without_sanitas_dental_milenium"
+    },
+    {
+      "provider": "sanitas-dental-spain",
+      "topic": "dental-implants",
+      "from": 584.9,
+      "currency": "EUR",
+      "scope": "prosthetic_abutment_without_membership",
+      "unit": "tooth",
+      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "prosthetic_abutment"
+      ],
+      "unknown": [
+        "implant",
+        "crown"
+      ],
+      "price_basis": "without_sanitas_dental_milenium"
+    },
+    {
+      "provider": "sanitas-dental-spain",
+      "topic": "dental-implants",
+      "from": 664.5,
+      "currency": "EUR",
+      "scope": "monolithic_zirconia_crown_on_implant_without_membership",
+      "unit": "tooth",
+      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "crown_on_implant"
+      ],
+      "unknown": [
+        "implant",
+        "abutment"
+      ],
+      "price_basis": "without_sanitas_dental_milenium"
+    },
+    {
+      "provider": "sanitas-dental-spain",
+      "topic": "aligners",
+      "from": 5330.5,
+      "currency": "EUR",
+      "scope": "invisalign_lite_two_arches_up_to_14_aligners_without_membership",
+      "unit": "treatment",
+      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "up_to_14_aligners",
+        "two_arches"
+      ],
+      "unknown": [
+        "diagnostic_study",
+        "treatment_plan",
+        "retainers",
+        "extra_aligners",
+        "follow_up"
+      ],
+      "price_basis": "without_sanitas_dental_milenium"
+    },
+    {
+      "provider": "sanitas-dental-spain",
+      "topic": "veneers",
+      "from": 812.5,
+      "currency": "EUR",
+      "scope": "disilicate_veneer_with_digital_planning_without_membership",
+      "unit": "tooth",
+      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+      "checked_at": "2026-11-22",
+      "includes": [
+        "digital_planning"
+      ],
+      "unknown": [
+        "preparation",
+        "follow_up"
+      ],
+      "price_basis": "without_sanitas_dental_milenium"
+    },
+    {
+      "provider": "sanitas-dental-spain",
+      "topic": "crowns",
+      "from": 518.9,
+      "currency": "EUR",
+      "scope": "monolithic_zirconia_crown_on_tooth_without_membership",
+      "unit": "tooth",
+      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+      "checked_at": "2026-11-22",
+      "includes": [],
+      "unknown": [
+        "root_canal",
+        "diagnostics",
+        "follow_up"
+      ],
+      "price_basis": "without_sanitas_dental_milenium"
     }
   ]
 }
