@@ -3,6 +3,8 @@
 // label, de chat van de site (.rz-ama), één gevulde knop (vlagblauw), geen zandvlakken, geen gekleurde zijranden, geen tegels, geen nullen.
 // Rendert elke gids (hub en alle onderwerpen, nl en en) lokaal met lib/cur.js, haalt de kop van de site via bzz-henq.vercel.app en meet met
 // Playwright de echte stijl. Gebruik: node scripts/consistentie.mjs [talen=nl,en] [max]. Exit 1 bij fouten; uitkomst ook in consistentie.md.
+// Keuzehulpen in het skillformaat (main.kh, lib/curkh.js; Henkjan 21 nov 2026 22:30: "Ja zet alle keuzehulpen om", nieuwer dan de regel hierboven):
+// daar is de gevulde pill zwart (#111113, skill keuzehulp-bouw: per kaart één gevulde zwarte pill) en is een kh-knop met twee regels tekst geen tegel.
 // De nachtronde draait dit, repareert in lib/cur.js (blok RUSTIG in KLEUR) en draait opnieuw tot het slaagt.
 import fs from 'node:fs';
 import { createRequire } from 'node:module';
@@ -31,7 +33,7 @@ const METEN = () => {
   const f = [], zicht = e => { const r = e.getBoundingClientRect(), c = getComputedStyle(e); return r.width > 4 && r.height > 4 && c.visibility !== 'hidden' && c.display !== 'none' && +c.opacity > 0.1; };
   const rgb = s => (s.match(/\d+(\.\d+)?/g) || []).map(Number), naam = e => (e.tagName.toLowerCase() + (e.id ? '#' + e.id : '') + (e.className && typeof e.className === 'string' ? '.' + e.className.trim().split(/\s+/).slice(0, 2).join('.') : '')).slice(0, 60);
   const main = document.querySelector('main') || document.body;
-  const ZACHT = [238, 241, 252], VLAG = [0, 43, 127], wit = c => c[0] > 245 && c[1] > 245 && c[2] > 245, gelijk = (a, b) => a.length >= 3 && Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]) + Math.abs(a[2] - b[2]) < 12;
+  const ZACHT = [238, 241, 252], VLAG = [0, 43, 127], KHZW = [17, 17, 19], khZwart = (e, bg) => !!e.closest('main.kh') && gelijk(bg, KHZW), wit = c => c[0] > 245 && c[1] > 245 && c[2] > 245, gelijk = (a, b) => a.length >= 3 && Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]) + Math.abs(a[2] - b[2]) < 12;
   const MAG_VLAK = el => el.closest('section.cwa,#aanmeld,.rz-ama,.ama,form.cwq,.dl-p,.mmm,[role=dialog],.gh-lv,.gh-hero');
   for (const e of main.querySelectorAll('*')) {
     if (!zicht(e)) continue; const c = getComputedStyle(e), bg = rgb(c.backgroundColor), heeftBg = bg.length >= 3 && (bg.length < 4 || bg[3] > 0.05);
@@ -42,9 +44,9 @@ const METEN = () => {
     // 3 dikke gekleurde bovenrand (oude kaarten en secties)
     if (parseFloat(c.borderTopWidth) >= 3 && c.borderTopStyle !== 'none' && e.tagName !== 'HR' && !e.closest('.rz-tabs,header,nav')) f.push(['dikke-bovenrand', naam(e)]);
     // 4 gekleurd vlak met ronde hoeken buiten aanmeldvak en chat (oude tegels)
-    if (heeftBg && !wit(bg) && parseFloat(c.borderTopLeftRadius) >= 10 && !MAG_VLAK(e) && !/^(BUTTON|INPUT|IMG|PICTURE|SVG)$/.test(e.tagName) && e.getBoundingClientRect().height > 50) f.push(['tegel', naam(e)]);
+    if (heeftBg && !wit(bg) && parseFloat(c.borderTopLeftRadius) >= 10 && !MAG_VLAK(e) && !(e.classList.contains('kh-knop') && e.closest('main.kh')) && !/^(BUTTON|INPUT|IMG|PICTURE|SVG)$/.test(e.tagName) && e.getBoundingClientRect().height > 50) f.push(['tegel', naam(e)]);
     // 5 gevulde knop in een andere kleur dan vlagblauw (WhatsApp en Telegram mogen hun eigen kleur)
-    if ((e.tagName === 'BUTTON' || (e.tagName === 'A' && parseFloat(c.paddingLeft) >= 10)) && heeftBg && !wit(bg) && !gelijk(bg, VLAG) && !gelijk(bg, ZACHT) && !/wa\.me|t\.me|whatsapp|telegram/i.test((e.getAttribute('href') || '') + e.className) && !e.closest('.rz-ama,header')) f.push(['gevulde-knop', naam(e) + ' ' + c.backgroundColor]);
+    if ((e.tagName === 'BUTTON' || (e.tagName === 'A' && parseFloat(c.paddingLeft) >= 10)) && heeftBg && !wit(bg) && !gelijk(bg, VLAG) && !gelijk(bg, ZACHT) && !khZwart(e, bg) && !/wa\.me|t\.me|whatsapp|telegram/i.test((e.getAttribute('href') || '') + e.className) && !e.closest('.rz-ama,header')) f.push(['gevulde-knop', naam(e) + ' ' + c.backgroundColor]);
   }
   // 5b de regel boven de titel (A Curaçao day · peildatum) blijft gewone tekst, geen hoofdletters (21 nov 2026)
   { let k = document.querySelector('main h1'); while (k && (k = k.previousElementSibling) && !(k.classList && k.classList.contains('eyebrow'))); if (k && getComputedStyle(k).textTransform === 'uppercase') f.push(['kicker-hoofdletters', naam(k)]); }
