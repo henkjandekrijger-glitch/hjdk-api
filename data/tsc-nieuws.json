@@ -18,7 +18,8 @@
       "home_countries": [
         "*"
       ],
-      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales"
+      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+      "bron": "sanitasDental"
     },
     {
       "id": "2026-11-22-nl-sanitas-components",
@@ -38,7 +39,8 @@
         "NL",
         "BE"
       ],
-      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales"
+      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+      "bron": "sanitasDental"
     },
     {
       "id": "2026-11-22-de-sanitas-components",
@@ -59,7 +61,8 @@
         "AT",
         "CH"
       ],
-      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales"
+      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales",
+      "bron": "sanitasDental"
     },
     {
       "id": "2026-11-20-en-turkey-prices",
