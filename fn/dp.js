@@ -114,6 +114,8 @@ export default async function handler(req, res) {
     if (op === 'shvernieuw' || op === 'shthema') {
       if (!beschermd && !(cron && op === 'shthema' && q.get('doe') === 'sync')) return res.status(404).send('Niet gevonden');
       if (op === 'shvernieuw') { const H = await import('../lib/shophub.js'); return res.status(200).json(await H.shVernieuw()); }
+      if (q.get('doe') === 'levertijd') { const H = await import('../lib/shophub.js'); return res.status(200).json(await H.shLevertijd({ merk: q.get('merk') || '', min: q.get('min'), max: q.get('max') })); }
+      if (q.get('doe') === 'meta') { const H = await import('../lib/shophub.js'); return res.status(200).json(await H.shMeta()); }
       if (q.get('doe') === 'opschonen') { const H = await import('../lib/shophub.js'); return res.status(200).json(await H.shOpschonen({ proef: q.get('proef') === '1' })); }
       if (q.get('doe') === 'verzend' || q.get('doe') === 'verzendzet') { const H = await import('../lib/shophub.js'); return res.status(200).json(q.get('doe') === 'verzend' ? await H.shVerzendStand() : await H.shVerzendZet({ proef: q.get('proef') === '1' })); }
       const T = await import('../lib/shoptheme.js'); const doe = String(q.get('doe') || 'stand');
