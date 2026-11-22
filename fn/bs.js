@@ -41,7 +41,7 @@ async function lcHandler(req, res, q, echt) {
     const fouten = []; for (const s of LCF.SLUGS) { try { fouten.push(...keur(LCF.renderLc(s, { ...c, echt: true }), 'lc:' + (s || 'home'))); } catch (e) { fouten.push('lc:' + s + ': ' + e.message); } }
     let pdfBestand = false; try { pdfBestand = fs.statSync(LCF.PDF_PAD).size > 100000; } catch (e) {}
     if (!pdfBestand) fouten.push('PDF-bestand ontbreekt in de uitrol');
-    const st = { ok: !fouten.length, pdfKnop: pdf, pdfBestand, mail: !!process.env.RESEND_API_KEY, uitleg: pdf ? 'PDF-verkoop staat aan' : 'PDF-knop uit: PADDLE_API_KEY ontbreekt in Vercel (hjdk-api); alles verwijst naar Amazon', fouten };
+    const st = { ok: !fouten.length, pdfKnop: pdf, pdfBestand, mail: !!(await LCF.resendSleutel(kv)), uitleg: pdf ? 'PDF-verkoop staat aan' : 'PDF-knop uit: PADDLE_API_KEY ontbreekt in Vercel (hjdk-api); alles verwijst naar Amazon', fouten };
     return stuur(res, fouten.length ? 500 : 200, 'application/json; charset=utf-8', JSON.stringify(st), { cache: 'no-store', robots: 'noindex' });
   }
   if (op === 'download') {
@@ -54,7 +54,7 @@ async function lcHandler(req, res, q, echt) {
     const r = await LCF.checkTransactie(kv, txn);
     if (!r.ok) return stuur(res, 200, 'text/html; charset=utf-8', LCF.bedanktPagina(c, { ok: false, reden: r.reden }), { cache: 'no-store', robots: 'noindex' });
     const link = (echt ? LCF.BASE + '/download?' : 'https://' + (req.headers.host || HOST) + '/api/bs?site=lc&op=download&') + LCF.tekenDownload(txn);
-    try { const nieuw = await kv.raw(['SET', 'lc:koop:' + txn, new Date().toISOString(), 'NX', 'EX', String(400 * 86400)]); if (nieuw) { await kv.raw(['HINCRBY', 'lc:verkoop', new Date().toISOString().slice(0, 10), '1']); await LCF.mailDownload(r.email, link); } } catch (e) {}
+    try { const nieuw = await kv.raw(['SET', 'lc:koop:' + txn, new Date().toISOString(), 'NX', 'EX', String(400 * 86400)]); if (nieuw) { await kv.raw(['HINCRBY', 'lc:verkoop', new Date().toISOString().slice(0, 10), '1']); await LCF.mailDownload(kv, r.email, link); } } catch (e) {}
     return stuur(res, 200, 'text/html; charset=utf-8', LCF.bedanktPagina(c, { ok: true, link }), { cache: 'no-store', robots: 'noindex' });
   }
   if (op === 'verkoop') { let h = []; try { h = await kv.raw(['HGETALL', 'lc:verkoop']); } catch (e) {} const o = {}; for (let i = 0; h && i < h.length; i += 2) o[h[i]] = +h[i + 1]; return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ pdfKnop: pdf, perDag: o }), { cache: 'no-store', robots: 'noindex' }); }
