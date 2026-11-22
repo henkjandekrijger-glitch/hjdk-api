@@ -1,0 +1,8 @@
+{
+  "gecontroleerdOp": "2026-11-22T15:50:21.513Z",
+  "deployment": "38738727e04b6caffeb3bc07c986dc02a9a722fe",
+  "categorieen": 1344,
+  "bedrijven": 11906,
+  "fouten": [],
+  "uitleg": "Read-only controle van alle 1344 daadwerkelijke Blob-categorieën via proefversie; geen nieuwe verificatie bij alle bedrijven."
+}
