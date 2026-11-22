@@ -256,7 +256,7 @@ Nog te doen: hardcover (nu 137 p., wit, met bleed, drukprijs $7,29): zelfde binn
   - Rang 22 nov 18:15 Curacao: Teens CA #1.619 (#10 Curiosities & Wonders, #17 Trivia), VS #1,14 mln; Adults CA #15.490, VS #1,2 mln. Vorig jaar Teens CA 14 nov #840, 20 dec #99.
   - Gedaan 22 nov 22:40 UTC: KDP Adults CA AUTO Close match CA$0,65 -> 0,85 (voorgesteld 0,72; de enige groep met een verkoop, ACOS 9%), top of search 0% -> +30%. Loose blijft op pauze, Substitutes 0,55 en Complements 0,50 ongewijzigd.
   - Niet gedaan: Teens VS AUTO. Teens VS $9,99 heeft break-even max CPC $0,16 (kdp/rapport.md); alleen de PT-test van vandaag loopt.
-- Echt jetzt?! hardcover: prijzen staan wel bewaard (EUR 17,99), klaar voor Publish.
+- 22 nov avond door Henkjan gepubliceerd: LC 2027 paperback (updates in review), Moment mal hardcover (B0HSLVZT38), Echt jetzt?! hardcover (B0HSM3KSBN, ingevuld in REV) en paperback (in review), Kindle Wait That's True (in review). Kindle For Men (A34DE110B1IJJG) bleef Draft: Publish geeft een fout. Alle drie de pagina's slaan foutloos op; verborgen vinkje "geen DRM, downloaden mag" stond aan terwijl DRM aan staat, uitgezet. Paperbacks WTT en For Men staan nog op "Live with unpublished changes" ($9,99, besluit 20 nov): Publish bij Henkjan.
 - Keepa geeft "No active API plan": rondes die Keepa gebruiken zien geen rang en reviews meer.
 
 **Voorstel 21 nov, wacht op akkoord:** (1) Teens overal: CA-push door tot 20 dec, AU-test, VS/VK lage boden op concurrenten; (2) volg wat organisch verkoopt (Bible Color VS, Apocrypha VK); (3) geen ads op titels zonder reviews; (4) PIT BOSS 1 dec opnieuw met de 11 winnaars op $17,99.

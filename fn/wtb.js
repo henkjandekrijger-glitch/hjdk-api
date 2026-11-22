@@ -217,7 +217,7 @@ export default async function handler(req, res) {
     res.setHeader('cache-control', 'no-store'); return res.status(200).json(out);
   }
   if (op === 'rev') { // QR achterin de KDP-boeken (/r/<boek>) -> reviewscherm op Amazon; telt scans per boek per dag. Zonder ASIN: zoeken op Amazon (Henkjan 21 nov 2026: "Je kunt boeken bijna weggeven vr reviews . Vind een strategie daarvoor .")
-    const REV = { wtt: ['com', 'B0HRFY3TLB'], men: ['com', 'B0HRGNJ7CY'], teens: ['com', 'B0DJQLBM75'], advent: ['de', 'B0HRRCXTNV'], echtjetzt: ['de', '', 'Echt jetzt Elias Grant'], momentmal: ['de', 'B0HRY6CYMD'], buero: ['de', '', 'Ich tu nur so als ob David Warrior'] };
+    const REV = { wtt: ['com', 'B0HRFY3TLB'], men: ['com', 'B0HRGNJ7CY'], teens: ['com', 'B0DJQLBM75'], advent: ['de', 'B0HRRCXTNV'], echtjetzt: ['de', 'B0HSM3KSBN'], momentmal: ['de', 'B0HRY6CYMD'], buero: ['de', '', 'Ich tu nur so als ob David Warrior'] };
     res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
     if (q.get('stand')) { let h = []; try { h = (await kv.raw(['HGETALL', 'kdp:rev'])) || []; } catch (e) {} const o = {}; if (Array.isArray(h)) for (let i = 0; i < h.length; i += 2) o[h[i]] = Number(h[i + 1]); else Object.assign(o, h); return res.status(200).json({ ok: true, scans: o, boeken: REV }); }
     const b = String(q.get('b') || '').toLowerCase(); const r = REV[b];
