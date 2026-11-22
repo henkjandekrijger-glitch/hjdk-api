@@ -27,8 +27,13 @@
       },
       "gemeten": {
         "instagram": {
+          "dag": "2026-11-22",
           "weergaven": 2,
-          "dag": "2026-11-20"
+          "bereik": 2,
+          "likes": 0,
+          "reacties": 0,
+          "bewaard": 0,
+          "gedeeld": 0
         },
         "facebook": {
           "weergaven": 1,
@@ -36,7 +41,8 @@
         },
         "clickmind": {
           "kliks": 1,
-          "echt": 1
+          "echt": 1,
+          "stand": "2026-11-22"
         }
       }
     },
@@ -66,15 +72,23 @@
       },
       "gemeten": {
         "instagram": {
+          "dag": "2026-11-22",
           "weergaven": 1,
-          "dag": "2026-11-21"
+          "bereik": 1,
+          "likes": 0,
+          "reacties": 0,
+          "bewaard": 0,
+          "gedeeld": 0
         },
         "facebook": {
-          "weergaven": 0,
-          "dag": "2026-11-21"
+          "dag": "2026-11-22",
+          "weergaven": 1,
+          "bereik": 1
         },
         "clickmind": {
-          "kliks": 1
+          "kliks": 1,
+          "echt": 0,
+          "stand": "2026-11-22"
         }
       }
     },
@@ -128,11 +142,18 @@
       },
       "gemeten": {
         "instagram": {
+          "dag": "2026-11-22",
           "weergaven": 2,
-          "dag": "2026-11-20"
+          "bereik": 2,
+          "likes": 0,
+          "reacties": 0,
+          "bewaard": 0,
+          "gedeeld": 0
         },
         "clickmind": {
-          "kliks": 6
+          "kliks": 6,
+          "echt": 0,
+          "stand": "2026-11-22"
         }
       }
     },
@@ -146,7 +167,21 @@
       ],
       "tekst": "3 kerstfinds voor in huis: een gouden boompje, Bethlehem voor waxinelichtjes en een lantaarn van terracotta. Welke zet jij neer?\n\nLink in bio, zoek op kerst.\n\n#kadoly #kerstfinds #kerstdecoratie #wooninspiratie #kerst",
       "tiktok_tekst": "3 kerstfinds voor in huis. Welke zet jij neer? #kerstfinds #kerstdecoratie #christmasdecor #finds #wooninspiratie",
-      "soort": "finds"
+      "soort": "finds",
+      "gepost": "2026-11-22",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b02ab386f23a67c595f3e51",
+          "tijdvak": "15:30",
+          "status": "gepland"
+        },
+        "facebook": {
+          "zernio_id": "6b02ab3874725bbb2eab2e77",
+          "tijdvak": "15:30",
+          "status": "gepland",
+          "link": "go.kadoly.com/o?k=fb&p=oc_4174003416580097&c=v-kerstfinds"
+        }
+      }
     },
     {
       "id": "boho_set",
@@ -174,12 +209,18 @@
       },
       "gemeten": {
         "instagram": {
-          "weergaven": 1,
-          "dag": "2026-11-21"
+          "dag": "2026-11-22",
+          "weergaven": 4,
+          "bereik": 3,
+          "likes": 1,
+          "reacties": 0,
+          "bewaard": 0,
+          "gedeeld": 0
         },
         "clickmind": {
           "kliks": 1,
-          "echt": 1
+          "echt": 1,
+          "stand": "2026-11-22"
         }
       }
     },
@@ -343,7 +384,21 @@
       ],
       "tekst": "3 favorieten van MoST Blankets:\n1. Wollen Deken met Levendig Zigzagpatroon 100% Wol\n2. Wollen Deken Multi-Kleur Groen Zigzagpatroon\n3. Wollen Deken Multikleur Rood Zigzagpatroon\nWelke kies jij?\n\nLink in bio, zoek op MoST Blankets.\n\n#kadoly #cozy #wooninspiratie #interieur #homedecor",
       "tiktok_tekst": "3 favorieten van MoST Blankets. Welke kies jij? Link in bio. #kadoly #cozy #wooninspiratie #interieur #homedecor",
-      "bron": "kadoly-video"
+      "bron": "kadoly-video",
+      "gepost": "2026-11-22",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b02ab396f23a67c595f3e5b",
+          "tijdvak": "21:00",
+          "status": "gepland"
+        },
+        "facebook": {
+          "zernio_id": "6b02ab39ecdd9ed0beac4792",
+          "tijdvak": "21:00",
+          "status": "gepland",
+          "link": "go.kadoly.com/o?k=fb&p=oc_4174003731562498&c=v-n261119a"
+        }
+      }
     },
     {
       "id": "n261119b",
@@ -446,6 +501,45 @@
       "tekst": "3 finds voor jezelf:\n1. Rietdiffuser Amsterdam Geur 500ml\n2. Reed Diffuser Via Savona Milaan 500ml van Housevitamin\n3. Wellness Cadeauset met Waterfles voor Zelfzorg\nWelke kies jij?\n\nLink in bio, zoek op Housevitamin.\n\n#kadoly #selfcare #beauty #cadeautip",
       "tiktok_tekst": "3 finds voor jezelf. Welke kies jij? Link in bio. #kadoly #selfcare #beauty #cadeautip",
       "bron": "kadoly-video"
+    },
+    {
+      "id": "n261122a",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261122a.mp4",
+      "pids": [
+        "oc_4173959224754177",
+        "oc_4173959220264961",
+        "oc_4173959221608449"
+      ],
+      "tekst": "3 favorieten van Tavellio - Amsterdam:\n1. Donkerbruine Houten Oplaadbare Lamp Draadloos Ontwerp\n2. Tafellamp Donkerbruin met Linnenmix Kap\n3. Houten Lamp met Crème Kappen voor Warmte\nWelke kies jij?\n\nLink in bio, zoek op Tavellio - Amsterdam.\n\n#kadoly #verlichting #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 favorieten van Tavellio - Amsterdam. Welke kies jij? Link in bio. #kadoly #verlichting #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261122b",
+      "soort": "finds",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261122b.mp4",
+      "pids": [
+        "oc_4174004949532673",
+        "oc_4173958154862594",
+        "oc_4174003686408193"
+      ],
+      "tekst": "3 finds voor je planten:\n1. Gouden Gestreepte Polyresin Vaasje 36x90cm voor Elegante Decoratie\n2. Wasmand Waterhyacint met Handvatten voor Opslag\n3. Hoge Cortenstaal Plantenkolom met Grote Schaal van Rostikal\nWelke kies jij?\n\nLink in bio, zoek op Kadoly.\n\n#kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 finds voor je planten. Welke kies jij? Link in bio. #kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261122c",
+      "soort": "kleurkeuze",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261122c.mp4",
+      "pids": [
+        "oc_4174003711868930",
+        "oc_4174003712770050",
+        "oc_4174003723714561"
+      ],
+      "tekst": "Welke kleur kies jij?\n1. Wollen Plaid Nieuw-Zeelandse Wol Grijs, Luxe Florence (grijs)\n2. Wollen Plaid Groen Lucca Nieuw-Zeelandse Wol (groen)\n3. Wollen Bouclé Plaid Wit voor Elegante Warmte (wit)\nZet je nummer in de reacties.\n\nLink in bio, zoek op MoST Blankets.\n\n#kadoly #cozy #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "Welke kleur kies jij: grijs, groen of wit? Link in bio. #kadoly #cozy #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
     }
   ],
   "lerend": {
@@ -459,18 +553,28 @@
       "kleurkeuze": {
         "videos_gemeten": 2,
         "cm_kliks": 2,
-        "cm_echt": 1
+        "cm_echt": 1,
+        "ig_weergaven_per_video": 1.5
       },
       "set": {
         "videos_gemeten": 2,
         "cm_kliks": 7,
-        "cm_echt": 1
+        "cm_echt": 1,
+        "ig_weergaven_per_video": 3.0
+      },
+      "pov": {
+        "videos_gemeten": 0,
+        "ig_weergaven_eerste_18u": 12
+      },
+      "finds": {
+        "videos_gemeten": 0
       }
     },
     "besluiten": [
       "2026-11-18: eerste video-dag; 08:30 al voorbij bij start van de ronde (09:41 NL), dus 2 per platform (15:30 kleurkeuze, 21:00 set). YouTube en TikTok nog niet in Zernio.",
       "2026-11-20: 19 nov geen ronde. Vandaag 2 per platform (08:30 al voorbij): 15:30 kerstballen_kleur (kleurkeuze), 21:00 boho_set (set; set had de meeste Clickmind-kliks: kersthoek 6 tegen tafelhaard 1). Weergaven nog te laag om te leren (2 per reel).",
-      "2026-11-21: 08:30 al voorbij (ronde 09:41 NL), dus 2 per platform op IG en FB: 15:30 17uur_donker (pov, eerste test van die soort, past bij het tijdstip), 21:00 steenlampen_set (set: 7 Clickmind-kliks over 2 video's tegen kleurkeuze 2). Weergaven per reel nog 0 tot 2, te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd; wachtrij zonder gepost: 20."
+      "2026-11-21: 08:30 al voorbij (ronde 09:41 NL), dus 2 per platform op IG en FB: 15:30 17uur_donker (pov, eerste test van die soort, past bij het tijdstip), 21:00 steenlampen_set (set: 7 Clickmind-kliks over 2 video's tegen kleurkeuze 2). Weergaven per reel nog 0 tot 2, te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd; wachtrij zonder gepost: 20.",
+      "2026-11-22: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 kerstfinds (finds, eerste test van die soort) en 21:00 n261119a wollen dekens (set: 7 Clickmind-kliks over 2 video's, kleurkeuze 2). IG-reels van 21 nov kregen voor het eerst bereik: steenlampen_set 16 weergaven, 17uur_donker 12 (tegen 1 tot 4 eerder); nog niet 24 uur oud. FB-reels blijven 0 in Zernio terwijl Clickmind wel FB-kliks telt. Te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd."
     ]
   }
 }
