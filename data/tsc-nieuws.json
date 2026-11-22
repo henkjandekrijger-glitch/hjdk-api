@@ -2,6 +2,66 @@
   "uitleg": "Ontwikkelingen per route voor de ochtendmail van todayin surgery (lib/tsc-mail.js). Elke dag zet de geplande Claude-taak hier nieuwe items bij: alleen echte feiten met bron en datum, nieuwste bovenaan. taal: en|nl|de|*; ingreep: hair|tummy|eyelid|lipo|breast|breast-reduction|*; naar: turkey|mexico|colombia|dominican-republic|thailand|south-korea|abroad|home|*; pagina: slug op todayin.email/surgery.",
   "items": [
     {
+      "id": "2026-11-22-en-sanitas-components",
+      "dag": "2026-11-22",
+      "taal": "en",
+      "ingreep": [
+        "dental-implants",
+        "aligners"
+      ],
+      "naar": [
+        "spain"
+      ],
+      "kop": "Spain: Sanitas tariff separates implant, abutment and crown",
+      "tekst": "Newly checked primary source, 22 November: Sanitas Dental's official Spain tariff lists the non-member price of an osseointegrated implant (€1,014.50), prosthetic abutment (€584.90) and monolithic zirconia crown on the implant (€664.50) as separate units. Its Invisalign Lite example is €5,330.50 for two arches and up to 14 aligners; the diagnostic study (€105.50), treatment-plan design (€466.50) and optional Invisalign retainer (€676.50 per arch) are separate. These are published tariff items, not a quote or a country average.",
+      "pagina": "dental-implant-cost",
+      "home_countries": [
+        "*"
+      ],
+      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales"
+    },
+    {
+      "id": "2026-11-22-nl-sanitas-components",
+      "dag": "2026-11-22",
+      "taal": "nl",
+      "ingreep": [
+        "dental-implants",
+        "aligners"
+      ],
+      "naar": [
+        "spain"
+      ],
+      "kop": "Spanje: Sanitas-tarief splitst implantaat, abutment en kroon",
+      "tekst": "Nieuw gecontroleerde primaire bron, 22 november: de officiële Spaanse prijslijst van Sanitas Dental zet voor niet-leden een osseointegrerend implantaat (€ 1.014,50), het prothetische abutment (€ 584,90) en de monolithische zirkoniumkroon op het implantaat (€ 664,50) als losse posten. Het voorbeeld Invisalign Lite kost € 5.330,50 voor twee kaken en maximaal 14 aligners; diagnostiek (€ 105,50), het behandelplan (€ 466,50) en de optionele Invisalign-retainer (€ 676,50 per kaak) staan apart. Dit zijn gepubliceerde tariefposten, geen offerte of landgemiddelde.",
+      "pagina": "nl/tandimplantaat-kosten",
+      "home_countries": [
+        "NL",
+        "BE"
+      ],
+      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales"
+    },
+    {
+      "id": "2026-11-22-de-sanitas-components",
+      "dag": "2026-11-22",
+      "taal": "de",
+      "ingreep": [
+        "dental-implants",
+        "aligners"
+      ],
+      "naar": [
+        "spain"
+      ],
+      "kop": "Spanien: Sanitas-Tarif trennt Implantat, Abutment und Krone",
+      "tekst": "Neu geprüfte Primärquelle, 22. November: Die offizielle spanische Preisliste von Sanitas Dental nennt für Nichtmitglieder ein osseointegriertes Implantat (1.014,50 €), das prothetische Abutment (584,90 €) und die monolithische Zirkonkrone auf dem Implantat (664,50 €) als getrennte Positionen. Das Beispiel Invisalign Lite kostet 5.330,50 € für beide Kiefer und bis zu 14 Aligner; Diagnostik (105,50 €), Behandlungsplanung (466,50 €) und der optionale Invisalign-Retainer (676,50 € je Kiefer) stehen separat. Das sind veröffentlichte Tarifpositionen, kein Angebot und kein Landesdurchschnitt.",
+      "pagina": "de/zahnimplantat-kosten",
+      "home_countries": [
+        "DE",
+        "AT",
+        "CH"
+      ],
+      "source_url": "https://www.sanitas.es/dental/precios-tratamientos-dentales"
+    },
+    {
       "id": "2026-11-20-en-turkey-prices",
       "dag": "2026-11-20",
       "taal": "en",
