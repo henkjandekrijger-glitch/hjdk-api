@@ -31,3 +31,6 @@ CFG = dict(
 
 if __name__ == '__main__':
     maak(CFG)
+HARD = dict(spine=0.369, w=13.944, h=10.417)  # gelijk aan Adventskalender en Echt jetzt?! (80 p.)
+if __name__ == '__main__' and 'hard' in sys.argv:
+    maak(CFG, hard=HARD)
