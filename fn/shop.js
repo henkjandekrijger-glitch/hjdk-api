@@ -168,6 +168,18 @@ async function haalFeed() {
       st.orders = orders.slice(0, 500).map(o => ({ id: String(o.order_id || o.id || '').slice(0, 40), at: String(o.created_at || o.date || '').slice(0, 25), p: String(o.product_id || '').slice(0, 30), n: num(o.quantity || 1), v: num(o.amount), hj: String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14), s: String(o.status || '').slice(0, 20), m: String(o.payment_method || '').slice(0, 16) }));
       st.sleutels = Object.keys(j).slice(0, 20); st.prodVelden = prod[0] ? Object.keys(prod[0]).slice(0, 40) : []; st.orderVelden = orders[0] ? Object.keys(orders[0]).slice(0, 40) : [];
       st.betaald = st.orders.filter(o => /paid|betaald/i.test(o.s)).length; st.metHj = st.orders.filter(o => o.hj).length;
+      // Samen sparen en partners (22 nov 2026, Henkjan: "Mag geen lek in zitten"): spaarzegels en partnergeld alleen hier, waar de regels van de
+      // bestelling bekend zijn (zegels per product = kwart van de marge, lib/samensparen.js). Eén keer per bestelling; retour haalt ze eraf.
+      try { const SS = await import('../lib/samensparen.js'); const per = {}; let ssN = 0;
+        for (const o of orders.slice(0, 500)) { const id = String(o.order_id || o.id || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40); if (!id) continue; const x = per[id] = per[id] || { o, regels: [], uitItems: false };
+          const its = Array.isArray(o.items) ? o.items : []; if (its.length) { if (!x.uitItems) { x.uitItems = true; x.regels = its.map(i => ({ p: String((i && (i.product_id || i.id || i.pid)) || ''), n: num(i && (i.quantity || i.qty)) || 1 })).filter(r => r.p); } }
+          else if (!x.uitItems && o.product_id) x.regels.push({ p: String(o.product_id), n: num(o.quantity) || 1 }); }
+        for (const [id, x] of Object.entries(per)) { const o = x.o, s = String(o.status || '') + ' ' + String(o.shop_status || '');
+          if (/refund|return|retour|terug|cancel|chargeback/i.test(s)) { await SS.ssRetour(id); continue; }
+          if (!/paid|betaald/i.test(String(o.status || ''))) continue; const at = Date.parse(o.paid_at || o.created_at || '') || 0; if (at && Date.now() - at > 9 * 864e5) continue;
+          const hj = String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); let kp = null; if (hj) { try { const rec = await kv.get(K.rec(hj)); if (rec && !rec.t && /^p-/.test(String(rec.k || ''))) kp = rec.k; } catch (e) {} }
+          const r = await SS.ssBestelling({ em: gebruikerVan(o).em, order: id, t: at || undefined, regels: x.regels, klikPartner: kp }); if (r && r.zegels) ssN++; }
+        st.samenSparen = ssN; } catch (e) { st.samenSparenFout = String(e.message || e).slice(0, 120); }
       // controle achteraf: elke betaalde bestelling met kenmerk telt, ook als de directe melding vanuit de shop niet afging (hooguit 9 dagen terug)
       let nagemeld = 0; for (const o of orders.slice(0, 500)) { const hj = String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); const ou = gebruikerVan(o); if ((!hj && !ou.em && !ou.ph) || !/paid|betaald/i.test(String(o.status || ''))) continue; // 20 nov: ook zonder kenmerk als er een e-mail- of telefoonhash bij staat
         const at = Date.parse(o.paid_at || o.created_at || '') || 0; if (at && Date.now() - at > 9 * 864e5) continue; // 22 nov: stond sinds 20 nov achter het commentaar, waardoor at niet bestond en de controle achteraf geen enkele bestelling meer telde
@@ -724,7 +736,6 @@ async function pxVerwerk(code, wRuw, v, order, methode, bron, t, u) {
   const w = PX_SOORT[wRuw] || 'cart'; u = u || {}; let herv = false;
   if (!code && w === 'koop' && (u.em || u.ph)) { const c = await cmZoek(kv, u); if (c) { code = c; herv = true; } } // 20 nov: bestelling zonder kenmerk, maar dezelfde e-mail of telefoon (hash) als bij een eerdere klik: die klik krijgt de verkoop
   const oud = w === 'koop' ? 'koop' : (w === 'cart' || w === 'afreken') ? 'cart' : null; // oud = de tellers van voor 17 okt (22 nov: stond per ongeluk achter het commentaar van regel hierboven, waardoor oud niet bestond en elke melding met klik vastliep)
-  if (w === 'koop' && u.em && !/^test/i.test(String(code || ''))) { try { const { ssBestelling } = await import('../lib/samensparen.js'); await ssBestelling({ em: u.em, v, order, t }); } catch (e) {} } // Samen sparen (22 nov 2026): één zegel van €1 voor wie de koper uitnodigde, of €1 voor de site of vereniging, via de e-mailvingerafdruk
   const m = String(methode || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 16);
   if (bron !== 'feed') { const laatst = { at: Date.now(), test: /^test/i.test(code), bedrag: v, order: !!order, methode: m || null, bron: bron || 'shop' }; try { await kv.set('hjdk:shop:pxlaatst:' + w, laatst); if (m) await kv.set('hjdk:shop:pxlaatst:' + w + ':' + m, laatst, { ex: 60 * 86400 }); } catch (e) {} }
   if (!code) { if (bron !== 'feed') { await uurTel(kv, '?', [w].concat(m ? [w + ':' + m] : []), t); if (w === 'koop' && v > 0) await uurTel(kv, '?', 'omzet', t, Math.round(v * 100)); } // de feed-controle loopt elk uur: zonder kenmerk niet nog eens tellen
@@ -757,7 +768,6 @@ async function pxVerwerk(code, wRuw, v, order, methode, bron, t, u) {
     // Directe route (arm d): zolang cm.js op yoo.rs de eerste tik niet meldt, is de afrekenpagina (of de betaling) het hoofddoel,
     // anders leren PropellerAds en Mondiad op CPA niets. Eenmaal per klik (rec.conv), nooit voor testkliks.
     if (w === 'cart' || w === 'afreken' || w === 'betaal') { try { await kassaDoel(kv, rec); } catch (e) {} } // 5 nov: kassadoelen (PropellerAds doel 2 en terugval-hoofdconversie, MGID decision) alleen bij bewust afrekenen (lib/shopdirect.js isBewust); anders later, zodra cm.js een bewuste stap meldt
-    if (oud === 'koop' && !rec.t && /^p-/.test(String(rec.k || ''))) { try { const { boekBestelling } = await import('../lib/partner.js'); await boekBestelling(rec.k, { v, order, t }); } catch (e) {} } // partnermodel: bestelling voor de partner van deze klik
     if (oud === 'koop') { let st = 0; if (v > 0) { try { await kv.incrMany(pinCohortEntries(rec, [['c:sh-' + net + '-omzet', Math.round(v * 100)], ['c:sh-d' + D8() + '-' + net + '-omzet', Math.round(v * 100)]].concat(net === 'pi' && rec.a ? [['c:sh-pi-a' + rec.a + '-omzet', Math.round(v * 100)]] : []))); } catch (e) {} if (!rec.t) await uurTel(kv, net, 'omzet', t, Math.round(v * 100)); }
       if (net === 'tt' && rec.c && !rec.t && !rec.tk) { rec.tk = Date.now(); st = await ttEvent(rec, 'CompletePayment', v, null, { ip: u.ip, ua: u.ua }); rec.conv = rec.conv || Date.now(); } // TikTok: betaald met bedrag via de Events API (sinds 20 nov met e-mail- en telefoonhash, IP en browser als die er zijn)
       if (net === 'wh' && rec.c && !rec.t && !rec.wk) { rec.wk = Date.now(); st = await whEvent(rec, 'purchase', v); rec.conv = rec.conv || Date.now(); } // Whop (Meta): betaald met bedrag via de Events API van Whop
