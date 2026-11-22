@@ -49,6 +49,8 @@ const snapshot = [...stored.entries()].find(([key]) => key.endsWith('/cat/fast-f
 assert.equal(snapshot.find(x => x.place_id === 'a').slug, a.slug);
 assert.equal(snapshot.find(x => x.place_id === 'b').slug, b.slug);
 assert.equal(snapshot[0].gewijzigdOp, '2026-10-22');
+const changed = new Map(); await bewaarGids({ ...args, normaliseer: x => ({ ...x, adres: 'Officially corrected address' }), put: async (path, value) => changed.set(path, value) });
+assert.equal([...changed.entries()].find(([key]) => key.endsWith('/cat/fast-food-restaurant.json'))[1][0].gewijzigdOp, '2026-11-22');
 if (fs.existsSync('source/current-directory.json')) {
   const rows = JSON.parse(fs.readFileSync('source/current-directory.json')).items;
   const normalized = rows.map(x => gidsBedrijf(x, x.cs));
