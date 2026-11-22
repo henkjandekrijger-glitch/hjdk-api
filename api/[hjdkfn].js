@@ -8,6 +8,7 @@ const FN = {
   amz: () => import('../fn/amz.js'),
   b: () => import('../fn/b.js'),
   bol: () => import('../fn/bol.js'),
+  bs: () => import('../fn/bs.js'),
   distributie: () => import('../fn/distributie.js'),
   dp: () => import('../fn/dp.js'),
   gads: () => import('../fn/gads.js'),

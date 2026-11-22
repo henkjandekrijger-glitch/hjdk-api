@@ -432,6 +432,106 @@
       "has": [
         {
           "type": "host",
+          "value": "(www\\.)?bookstuffers\\.com"
+        }
+      ],
+      "destination": "/api/bs?p="
+    },
+    {
+      "source": "/robots.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bookstuffers\\.com"
+        }
+      ],
+      "destination": "/api/bs?op=robots"
+    },
+    {
+      "source": "/sitemap.xml",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bookstuffers\\.com"
+        }
+      ],
+      "destination": "/api/bs?op=sitemap"
+    },
+    {
+      "source": "/llms.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bookstuffers\\.com"
+        }
+      ],
+      "destination": "/api/bs?op=llms"
+    },
+    {
+      "source": "/zicht.json",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bookstuffers\\.com"
+        }
+      ],
+      "destination": "/api/bs?op=zicht"
+    },
+    {
+      "source": "/overdracht",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bookstuffers\\.com"
+        }
+      ],
+      "destination": "/api/bs?op=overdracht"
+    },
+    {
+      "source": "/favicon.svg",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bookstuffers\\.com"
+        }
+      ],
+      "destination": "/api/bs?op=fav"
+    },
+    {
+      "source": "/favicon.ico",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bookstuffers\\.com"
+        }
+      ],
+      "destination": "/api/bs?op=fav"
+    },
+    {
+      "source": "/5abf3f017f44047e41ec98545041a2cf.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bookstuffers\\.com"
+        }
+      ],
+      "destination": "/api/bs?op=key"
+    },
+    {
+      "source": "/:p([a-z0-9-]+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bookstuffers\\.com"
+        }
+      ],
+      "destination": "/api/bs?p=:p"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
           "value": "sealedintent\\.com"
         }
       ],
