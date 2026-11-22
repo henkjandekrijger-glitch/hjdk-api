@@ -4,6 +4,11 @@
 import fsRem from 'node:fs';
 // Kostenrem (Henkjan 21 nov 2026: "Zorg dat ook nooit meer een nieuwe kan ontstaan"): een los bestand in api/ is een extra Vercel-functie.
 { const los = fsRem.readdirSync(new URL('../api/', import.meta.url)).filter(f => !['[hjdkfn].js', 'hjdk'].includes(f)); if (los.length) { console.error('Build gestopt: los bestand in api/ (hoort in fn/, zie CLAUDE.md Kosten): ' + los.join(', ')); process.exit(1); } }
+// Syntaxcontrole van elk bestand in lib/ en fn/ (22 nov 2026: een apostrof in een tekst in lib/werking.js brak 10 minuten de overdracht;
+// zo'n bestand wordt pas bij gebruik geladen, dus de pagina's hieronder vingen het niet). Eén fout = build gestopt.
+{ const { spawnSync } = await import('node:child_process'); const kapot = [];
+  for (const map of ['lib', 'fn']) { const d = new URL('../' + map + '/', import.meta.url); for (const f of fsRem.readdirSync(d)) { if (!/\.m?js$/.test(f)) continue; const r = spawnSync(process.execPath, ['--check', new URL(f, d).pathname], { encoding: 'utf8' }); if (r.status !== 0) kapot.push(map + '/' + f + ': ' + String(r.stderr || '').split('\n').filter(Boolean).slice(-1)[0]); } }
+  if (kapot.length) { console.error('Build gestopt: syntaxfout in\n' + kapot.join('\n')); process.exit(1); } console.log('ok   syntax lib/ en fn/'); }
 const PAG = [['keuzehulp.best', '/api/kz?slug=airfryer'], ['keuzehulp.best', '/api/kz?slug=matras'], ['keuzehulp.best', '/api/kz']];
 const kz = (await import('../fn/kz.js')).default;
 let fout = 0;
