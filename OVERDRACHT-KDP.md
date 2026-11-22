@@ -89,7 +89,7 @@ Royalty per boek 2025 / okt-dec 2025: PIT BOSS $13.496 / $5.258; Lasting Change 
 | KDP Teens CA AUTO | A00785372M8F3DEDU6DQR | CA$20/dag; Close 0,65, Complements 0,50, Loose 0,58, Substitutes 0,85 |
 | KDP Teens CA PT concurrenten | A06071251IK63T2R1K3RO | CA$20/dag, 14 producttargets op voorgesteld bod |
 | KDP Teens CA EXACT | A00497891W6LJG83V0FN2 | gepauzeerd |
-| KDP Adults CA AUTO, 17nov | A07207233G0Q4GG7X0I10 | CA$10/dag, alleen Adults B0DJQS1K5Z, groepen 0,65/0,50/0,58/0,85; aan sinds 18 nov ~10:40 UTC |
+| KDP Adults CA AUTO, 17nov | A07207233G0Q4GG7X0I10 | CA$10/dag, alleen Adults B0DJQS1K5Z; Close 0,85 (sinds 22 nov), Complements 0,50, Loose pauze, Substitutes 0,55; top of search +30% (22 nov); aan sinds 18 nov ~10:40 UTC |
 
 **Amazon VK** (advertising.amazon.co.uk, entity ENTITY1PRAGR2NUXBCU): Aut Experiment UK (A0809704ERKZFTUU8LIM), GBP 8/dag, alleen Apocrypha B09YTZ72KZ en Enoch B0B5KV79N1; Close GBP 0,18, Loose 0,20, Substitutes 0,15, Complements uit. Vervangt PropellerAds Apocrypha.
 
@@ -249,6 +249,13 @@ Nog te doen: hardcover (nu 137 p., wit, met bleed, drukprijs $7,29): zelfde binn
   - 19 dec ronde A: laatste dagen voor kerstbezorging van gedrukte boeken. Teens- en Adults-campagnes terug naar de biedingen van voor de push (Loose 0,40, TOS 0%, WINNERS en US-tests op pauze); Kindle-advertenties blijven.
   - 20 dec ronde A, LC-omschakeling: KDP LC NIEUWJAAR EXACT naar het voorgestelde bod (had tot 22 nov 0 vertoningen), de 4 broad-woorden in Lasting change LASTING CHANGE KW weer aan, B0F1SM1L5J-AUTO Loose naar voorgesteld bod. Elk hoogstens $10/dag, tot 31 jan. Prijs naar $24,99 volgens besluit 19 nov (Publish bij Henkjan). Rem: LC-ads over 3 dagen hoogstens 50% van de LC-royalty, anders broad-woorden weer uit.
   - Henkjan eenmalig: inloggen op advertising.amazon.de (Duitse titels, pas met reviews) en amazon.com.au (Teens AU-test).
+- SCHAALREGEL (BESLUITEN HENKJAN 22 nov 18:25 Curacao: "Ok voor ranking opties door en agressief adverteren . Als het loont hoger budget per dag . ROAS moet dan stijgen ."), elke ronde A:
+  - Royalty-ROAS per boek = royalty van het boek in alle markten (KDP-dashboard) / ads van dat boek, 3 dagen.
+  - Omhoog: campagne gaf op 2 van de 3 dagen >= 80% van haar budget uit, royalty-ROAS >= 2 en hoger dan de 3 dagen ervoor: budget +30%. Mag dan boven $10/dag en boven de Teens CA-grens CA$40/dag.
+  - Terug: royalty-ROAS na een stap 2 dagen op rij lager: vorig budget. Hoogstens 1 stap per campagne per 2 dagen. Elke stap in het werklog met de cijfers.
+  - Rang 22 nov 18:15 Curacao: Teens CA #1.619 (#10 Curiosities & Wonders, #17 Trivia), VS #1,14 mln; Adults CA #15.490, VS #1,2 mln. Vorig jaar Teens CA 14 nov #840, 20 dec #99.
+  - Gedaan 22 nov 22:40 UTC: KDP Adults CA AUTO Close match CA$0,65 -> 0,85 (voorgesteld 0,72; de enige groep met een verkoop, ACOS 9%), top of search 0% -> +30%. Loose blijft op pauze, Substitutes 0,55 en Complements 0,50 ongewijzigd.
+  - Niet gedaan: Teens VS AUTO. Teens VS $9,99 heeft break-even max CPC $0,16 (kdp/rapport.md); alleen de PT-test van vandaag loopt.
 - Echt jetzt?! hardcover: prijzen staan wel bewaard (EUR 17,99), klaar voor Publish.
 - Keepa geeft "No active API plan": rondes die Keepa gebruiken zien geen rang en reviews meer.
 
