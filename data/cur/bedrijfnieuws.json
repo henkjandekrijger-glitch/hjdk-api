@@ -1,0 +1,23 @@
+{
+ "uitleg": "Nieuws over een zaak in de Curaçao-gidsen (lib/curnieuws.js). Eén neutrale regel met datum en bron op de kaart in elke gids en op de bedrijfspagina; telt niet mee in de score. match = item-ids in data/cur/<gids>.json. tot = laatste dag (standaard dag + 90). live false = alleen te zien met ?v=nieuws. Alleen echt nieuws van nieuwsmedia of officiële bronnen, met de bron erbij; beschuldigingen als beschuldigingen.",
+ "items": [
+  {
+   "id": "sandals-arbeid-2026-11",
+   "match": ["sandals-royal-curacao", "sandals-royal"],
+   "dag": "2026-11-20",
+   "tot": "2027-02-18",
+   "live": false,
+   "tekst": {
+    "nl": "Na klachten van Statenlid Quincy Girigorie (PAR) over onbetaalde schorsingen, nulurencontracten en werknemers die niet bij de SVB zijn aangemeld, doet Sandals een intern onderzoek naar de arbeidsomstandigheden.",
+    "en": "After complaints by MP Quincy Girigorie (PAR) about unpaid suspensions, zero-hour contracts and staff not registered with the SVB social insurance bank, Sandals is carrying out an internal investigation into working conditions.",
+    "es": "Tras las quejas del diputado Quincy Girigorie (PAR) sobre suspensiones sin sueldo, contratos de cero horas y empleados no inscritos en el SVB (seguro social), Sandals realiza una investigación interna sobre las condiciones laborales.",
+    "pt": "Após queixas do deputado Quincy Girigorie (PAR) sobre suspensões sem pagamento, contratos de zero horas e funcionários não registrados no SVB (seguro social), a Sandals faz uma investigação interna sobre as condições de trabalho.",
+    "de": "Nach Beschwerden des Abgeordneten Quincy Girigorie (PAR) über unbezahlte Suspendierungen, Null-Stunden-Verträge und nicht bei der Sozialversicherung SVB angemeldete Mitarbeiter untersucht Sandals intern die Arbeitsbedingungen."
+   },
+   "bronnen": [
+    { "naam": "nu.cw (Antilliaans Dagblad)", "url": "https://nu.cw/2026/11/20/sandals-doet-intern-onderzoek-naar-arbeidsomstandigheden/" },
+    { "naam": "curacao.nu", "url": "https://www.curacao.nu/nieuws/economie/98756/sandals-belooft-intern-onderzoek-na-klachten-over-arbeidsomstandigheden" }
+   ]
+  }
+ ]
+}
