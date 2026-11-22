@@ -17,13 +17,17 @@ for(let k=0;k<140;k++)catalog.push({id:'oc_pot'+k,t:(k%2?'Bloempot voor binnen':
 catalog.push({id:'oc_ring',t:'Metalen Paddenstoelring voor Plantenpotten',vr:true,p:20,vk:3,c:'wonen',s:'planten',lt:3,l:Date.now()});
 catalog.push({id:'oc_4174005539848193',t:'Gevlochten Roze Bedbumper 2m Katoen voor Baby',vr:true,p:20,vk:4.95,lt:8,c:'kids',s:'baby',l:Date.now()+60000,img:''});
 catalog.push({id:'oc_4174005507129345',t:'Grijze Baby Slaapzak met Fleece',vr:true,p:20,vk:4.95,lt:8,c:'kids',s:'baby',l:Date.now()+60000,img:''});
+catalog.push({id:'dp_1019',t:'Yakiniku BBQ Kamado 22 inch XL',vr:true,p:1629,vk:0,lt:8,c:'wonen',s:'tuin',l:Date.now(),img:''});
 const context=vm.createContext({console,URL,Buffer,Date,Set,Map,process:{env:{}},AbortSignal,fetch:()=>{throw Error('Geen externe requests in rendertest');}});
 const synth=obj=>new vm.SyntheticModule(Object.keys(obj),function(){for(const [k,v]of Object.entries(obj))this.setExport(k,v);},{context});
 const code=fs.readFileSync('fn/gids.js','utf8');
 const kv={get:async k=>k==='hjdk:shop:cat'?{items:catalog}:null,set:async()=>{},raw:async()=>[],mget:async(...keys)=>keys.map(()=>null)};
 const nb=Object.fromEntries([...new Set([...code.matchAll(/NB\.([\w]+)/g)].map(m=>m[1]))].map(k=>[k,/^[A-Z_]+$/.test(k)?'':k==='blok'?()=>'':k==='mailKlaar'?async()=>false:k==='blokInfo'?async()=>({}):async()=>[]]));
 const stubs={'../lib/kadoly-redactie.js':redactie,'../lib/kzux.js':{kzuxBlok:()=>''},'../lib/funnel.js':{funnelStap:async()=>null,funnelStand:async()=>({}),funnelHtml:()=>'',fnIdUitCookie:()=>null,isFnBot:()=>true,bronVan:()=>'',FN_JS:()=>''},'../lib/gidsen-alle.js':alle,'../lib/gids-indexnow.js':indexnow,'../lib/gids-catalogus.js':volledig,'../lib/db.js':{kv},'../lib/look.js':{lookNieuw:()=>''},'../lib/gidsen-kadoly.js':gidsen,'../lib/ai.js':{berichten:()=>{},HAIKU:'test'},'node:crypto':crypto,'../lib/kadoly-nieuws.js':nb,'../lib/gids-onderzoek.js':bewijs,'../lib/gids-groei.js':groei};
-const module=new vm.SourceTextModule(code,{context});await module.link(name=>{assert.ok(stubs[name],name);return synth(stubs[name]);});await module.evaluate();
+// Groepscadeaus horen niet bij deze SSR-proef; geen opslag, mail of betaalverkeer.
+stubs['../lib/groepscadeau.js']={gcLijst:()=>[],gcLlms:()=>'',LIVE:new Set(),gcOp:()=>{throw Error('Geen groepscadeau-acties in gidstest');}};
+const imports=[];
+const module=new vm.SourceTextModule(code,{context,importModuleDynamically:async name=>{imports.push(name);throw Error('Geen externe modules in routeproef');}});await module.link(name=>{assert.ok(stubs[name],name);return synth(stubs[name]);});await module.evaluate();
 async function render(query,host='gids.kadoly.com'){let body='',status=200;const headers={};const res={setHeader:(k,v)=>headers[k]=v,status(n){status=n;return this;},send(x){body=x;return this;},json(x){body=x;return this;},end(){return this;}};await module.namespace.default({url:'/api/gids?'+query,method:'GET',headers:{host,'user-agent':'render-test-bot'}},res);assert.equal(status,200,typeof body==='string'?body.slice(0,200):JSON.stringify(body));if(typeof body==='string'&&body.includes('<html')){assert.equal((body.match(/<h1[ >]/g)||[]).length,1);for(const match of body.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g))JSON.parse(match[1]);}return {body,headers};}
 for(const p of bewijs.ONDERZOEK){const {body}=await render('slug=onderzoek-'+p.id);assert.ok(body.includes('Wat bewijst dit niet?'));assert.ok(body.includes('Bronnen en belangen'));assert.ok(body.includes('rel="canonical" href="https://gids.kadoly.com/onderzoek-'+p.id+'"'));}
 assert.ok((await render('slug=onderzoek-en-bronnen')).body.includes('geen onafhankelijke testorganisatie'));
@@ -239,3 +243,26 @@ const foutAI=await groei.actueleAiStand({get:async()=>({dag:vandaag,llm:[{fout:'
 assert.ok(groei.groeiHtml(actuele).includes('vertoningen 3 → 1'));
 assert.ok((await render('slug=onderzoek-en-bronnen')).body.includes('Mint babyslaapzak'));
 console.log('21nov: gerichte rubriekscorrectie, mintlandbeperking, beide weekmetrics en later AI-panel zonder snapshotwijziging geslaagd.');
+
+// 22 november: kritische modelcheck in SSR en LLM-tekst, geen ongerelateerde match.
+const hub22=(await render('slug=onderzoek-en-bronnen')).body;
+assert.ok(hub22.includes('id="kamado-22nov"'));
+for(const id of ['kamadoGgd','kamadoMaker','kamadoManual'])assert.ok(hub22.includes(bewijs.BRONNEN[id].url));
+assert.ok(bewijs.bronLink({id:'dp_1019'}).includes('#kamado-22nov'));
+assert.ok(!bewijs.bronLink({id:'test',t:'Hoes voor kamado'}).includes('#kamado-22nov'));
+assert.ok((await render('op=llmsfull')).body.includes('Kamado 22 inch XL'));
+for(const q of ['', 'slug=nieuw-bij-kadoly', 'slug=whisky-set-cadeau']) {
+ const h=(await render(q)).body;
+ assert.ok(h.includes('tegenstrijdigheid'));
+ assert.ok(!h.includes('je krijgt een retourlabel en het hele bedrag terug'));
+ assert.ok(!h.includes('versturen met gratis retourlabel'));
+}
+assert.ok((await render('slug=alle-producten')).body.includes('#kamado-22nov'));
+// Handmatig aanmelden moet geen spaarmail uitvoeren; de normale cron blijft gelijk.
+// De route heeft de echte groeifunctie reeds gekoppeld. Een bestaande dagmeting
+// voorkomt een GSC-aanroep; alle opslag en fetch blijven geïsoleerd.
+const oudeGet=kv.get;kv.get=async k=>k==='gk:groei:laatste'?{dag:new Date().toISOString().slice(0,10)}:oudeGet(k);
+await render('op=indexnow&alleenGids=1','hjdk-api-henq.vercel.app');
+assert.ok(!imports.includes('../lib/samensparen.js'));
+kv.get=oudeGet;
+console.log('22nov: Kamado-bronnen/SSR/LLM, retourtegenstrijdigheid en gidsronde zonder spaarmail geslaagd.');
