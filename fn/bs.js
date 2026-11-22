@@ -7,6 +7,12 @@ import { render, SLUGS, ROBOTS, sitemap, llms, zichtJson, OVERDRACHT, FAVICON, I
 import { BOEKEN, LC, PRIJS_DATUM, ANDER } from '../lib/bs-data.js';
 import fs from 'node:fs';
 import * as LCF from '../lib/lcfunnel.js';
+import { ImageResponse } from '@vercel/og';
+import { INTER_500, INTER_800 } from '../lib/pinfont.js';
+import { pinPlan, haakVan, vind, HAKEN, ACCOUNT as PIN_ACCOUNT } from '../lib/bspin.js';
+const FONTS = [{ name: 'Inter', data: Buffer.from(INTER_500, 'base64'), weight: 500, style: 'normal' }, { name: 'Inter', data: Buffer.from(INTER_800, 'base64'), weight: 800, style: 'normal' }];
+const el = (type, style, children) => ({ type, props: { style: Object.assign({ display: 'flex' }, style), children } });
+const beschermd = req => /-henq\.vercel\.app$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]);
 
 function stuur(res, status, type, body, { cache = 'public, max-age=300, s-maxage=3600, stale-while-revalidate=86400', robots = '' } = {}) {
   res.statusCode = status;
@@ -81,6 +87,49 @@ export default async function handler(req, res) {
       for (let i = 0; i < lijst.length; i += 8) await Promise.all(lijst.slice(i, i + 8).map(b => fetch(omslag(b.i, 200), { method: 'HEAD', signal: AbortSignal.timeout(8000) }).then(r => { if (!r.ok) fouten.push(`omslag ${b.a}: ${r.status}`); }).catch(e => fouten.push(`omslag ${b.a}: ${e.message}`))));
     }
     return stuur(res, fouten.length ? 500 : 200, 'application/json; charset=utf-8', JSON.stringify({ ok: !fouten.length, paginas: SLUGS.length, boeken: TEL.boeken, fouten }), { cache: 'no-store', robots: 'noindex' });
+  }
+
+  // Pinbeeld 1000x1500 in de huisstijl (wit, zwart, de omslag is de kleur): /pin/<ASIN>-<haak>.png op bookstuffers.com
+  if (op === 'pinbeeld') {
+    const m = String(q.get('f') || '').match(/^([A-Za-z0-9]{10})-([a-z0-9-]+?)(?:\.png)?$/), b = m && vind(m[1]), h = m && haakVan(m[2]);
+    if (!b || !h) return stuur(res, 404, 'text/plain', 'onbekend', { cache: 'no-store' });
+    try {
+      const kop = h.kop(b), lc = h.bord === 'lc';
+      const beeld = el('div', { width: '100%', height: '100%', flexDirection: 'column', background: '#ffffff', fontFamily: 'Inter', color: '#111113', padding: '70px 72px 64px' }, [
+        el('div', { fontSize: 28, fontWeight: 800, letterSpacing: 4 }, lc ? 'LASTING CHANGE' : 'BOOKSTUFFERS'),
+        el('div', { fontSize: kop.length > 44 ? 66 : 80, fontWeight: 800, lineHeight: 1.06, marginTop: 26, letterSpacing: -2 }, kop),
+        el('div', { flexGrow: 1, alignItems: 'center', justifyContent: 'center', padding: '40px 0 30px' }, [{ type: 'img', props: { src: `https://m.media-amazon.com/images/I/${b.i}._SL900_.jpg`, height: 820, style: { objectFit: 'contain', boxShadow: '0 30px 60px rgba(17,17,19,.25)', borderRadius: 8 } } }]),
+        el('div', { alignItems: 'center', justifyContent: 'space-between' }, [
+          el('div', { background: '#111113', color: '#ffffff', fontSize: 36, fontWeight: 800, padding: '22px 40px', borderRadius: 999 }, lc ? 'Start Day 0 today' : h.bord === 'bijbel' ? 'Read the guide' : 'See the book'),
+          el('div', { fontSize: 32, fontWeight: 500 }, `${b.n} pages${b.c >= 10 ? ` · ${b.r}★` : ''}`)
+        ])
+      ]);
+      const buf = Buffer.from(await new ImageResponse(beeld, { width: 1000, height: 1500, fonts: FONTS }).arrayBuffer());
+      if (buf.length < 5000) throw new Error('leeg beeld');
+      res.statusCode = 200; res.setHeader('Content-Type', 'image/png'); res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=604800'); return res.end(buf);
+    } catch (e) { return stuur(res, 500, 'text/plain', 'beeld mislukt: ' + String(e.message || e).slice(0, 100), { cache: 'no-store' }); }
+  }
+  // Plan van vandaag (lezen mag iedereen); log en uitkomst alleen via de beschermde host (hjdk-api-henq.vercel.app)
+  if (op === 'pinplan' || op === 'pinstand') {
+    const stand = (await kv.get('bs:pinstand').catch(() => null)) || {}, log = (await kv.get('bs:pinlog').catch(() => null)) || [];
+    if (op === 'pinstand') return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ account: PIN_ACCOUNT, haken: HAKEN.map(h => ({ id: h.id, ...(stand[h.id] || {}) })), laatste: log.slice(-20) }), { cache: 'no-store', robots: 'noindex' });
+    const gisteren = log.filter(x => Date.now() - Date.parse(x.t) < 2 * 864e5).map(x => x.a);
+    return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ account: PIN_ACCOUNT, pins: pinPlan(stand, { aantal: Math.max(1, Math.min(8, +q.get('n') || 4)), gisteren }) }), { cache: 'no-store', robots: 'noindex' });
+  }
+  if (op === 'pinlog' || op === 'pinuitkomst') {
+    if (!beschermd(req)) return stuur(res, 403, 'application/json', '{"ok":false,"fout":"alleen via de beschermde host"}', { cache: 'no-store' });
+    const log = (await kv.get('bs:pinlog').catch(() => null)) || [], stand = (await kv.get('bs:pinstand').catch(() => null)) || {};
+    if (op === 'pinlog') {
+      const x = { id: String(q.get('id') || ''), haak: String(q.get('haak') || ''), a: String(q.get('a') || ''), post: String(q.get('post') || ''), t: new Date().toISOString() };
+      if (!haakVan(x.haak) || !vind(x.a) || log.some(y => y.id === x.id)) return stuur(res, 400, 'application/json', '{"ok":false}', { cache: 'no-store' });
+      log.push(x); (stand[x.haak] = stand[x.haak] || { pins: 0, klik: 0, saves: 0, imp: 0 }).pins++;
+    } else {
+      const x = log.find(y => y.id === q.get('id')); if (!x) return stuur(res, 404, 'application/json', '{"ok":false}', { cache: 'no-store' });
+      const oud = x.m || { klik: 0, saves: 0, imp: 0 }, nu = { klik: +q.get('klik') || 0, saves: +q.get('saves') || 0, imp: +q.get('imp') || 0 };
+      const s = stand[x.haak] = stand[x.haak] || { pins: 0, klik: 0, saves: 0, imp: 0 }; for (const k of ['klik', 'saves', 'imp']) s[k] += nu[k] - (oud[k] || 0); x.m = nu;
+    }
+    await kv.set('bs:pinlog', log.slice(-500)); await kv.set('bs:pinstand', stand);
+    return stuur(res, 200, 'application/json', JSON.stringify({ ok: true, stand }), { cache: 'no-store' });
   }
   // Klik naar Amazon (Henkjan 22 nov 2026: "Lerende modal voor naar amz te sturen"): één 302 zonder tussenpagina, telt de klik per boek per dag
   // (bs:klik:<dag> hash ASIN -> n, 60 dagen) zodat de modal en de pagina's op echte doorkliks leren. Alleen ASIN's van de eigen plank.

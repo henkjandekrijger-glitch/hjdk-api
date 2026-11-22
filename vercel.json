@@ -518,6 +518,16 @@
       "destination": "/api/bs?op=key"
     },
     {
+      "source": "/pin/:f([A-Za-z0-9-]+).png",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bookstuffers\\.com"
+        }
+      ],
+      "destination": "/api/bs?op=pinbeeld&f=:f"
+    },
+    {
       "source": "/go/:a([A-Za-z0-9]{10})",
       "has": [
         {
