@@ -60,3 +60,15 @@ test('sitemap, llms.txt en zicht.json', () => {
   assert.match(llms(), /# Bookstuffers/);
   assert.ok(Array.isArray(zichtJson().toegepast));
 });
+
+test('Lasting Change-funnel: alle pagina\'s door de keuring, PDF-knop alleen met sleutel, download alleen met geldige handtekening', async () => {
+  const LCF = await import('../lib/lcfunnel.js');
+  for (const pdf of [true, false]) for (const s of LCF.SLUGS) {
+    const h = LCF.renderLc(s, { echt: true, pdf, L: x => '/' + x });
+    assert.deepEqual(keur(h, 'lc:' + s), [], 'lc:' + s);
+    assert.equal(h.includes('data-koop='), pdf && s !== 'refund', 'koopknop ' + s + ' pdf=' + pdf);
+  }
+  const q = new URLSearchParams(LCF.tekenDownload('txn_01abcdefghij1234567890'));
+  assert.ok(LCF.checkDownload(q)); q.set('s', 'x'.repeat(32)); assert.ok(!LCF.checkDownload(q));
+  assert.equal((await LCF.checkTransactie({ get: async () => ({}) }, 'nep')).ok, false);
+});

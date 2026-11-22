@@ -1,0 +1,6 @@
+{
+ "_uitleg": "Openbaar client-token van Paddle (hoort in de browser). API-sleutel staat NIET hier maar in Vercel (PADDLE_API_KEY).",
+ "token": "live_9da9e82dfe1a3883f8ceef11e67",
+ "prijs": "pri_01m2efjns5zqm06k9rqnx6369m",
+ "bedrag": 9
+}

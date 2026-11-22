@@ -538,6 +538,96 @@
       "destination": "/api/bs?op=omslag&i=:i"
     },
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?lastingchange\\.works"
+        }
+      ],
+      "destination": "/api/bs?site=lc&p="
+    },
+    {
+      "source": "/robots.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?lastingchange\\.works"
+        }
+      ],
+      "destination": "/api/bs?site=lc&op=robots"
+    },
+    {
+      "source": "/sitemap.xml",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?lastingchange\\.works"
+        }
+      ],
+      "destination": "/api/bs?site=lc&op=sitemap"
+    },
+    {
+      "source": "/llms.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?lastingchange\\.works"
+        }
+      ],
+      "destination": "/api/bs?site=lc&op=llms"
+    },
+    {
+      "source": "/favicon.svg",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?lastingchange\\.works"
+        }
+      ],
+      "destination": "/api/bs?site=lc&op=fav"
+    },
+    {
+      "source": "/favicon.ico",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?lastingchange\\.works"
+        }
+      ],
+      "destination": "/api/bs?site=lc&op=fav"
+    },
+    {
+      "source": "/thanks",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?lastingchange\\.works"
+        }
+      ],
+      "destination": "/api/bs?site=lc&op=thanks"
+    },
+    {
+      "source": "/download",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?lastingchange\\.works"
+        }
+      ],
+      "destination": "/api/bs?site=lc&op=download"
+    },
+    {
+      "source": "/:p([a-z0-9-]+)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?lastingchange\\.works"
+        }
+      ],
+      "destination": "/api/bs?site=lc&p=:p"
+    },
+    {
       "source": "/:p([a-z0-9-]+)",
       "has": [
         {
@@ -2490,7 +2580,7 @@
   "functions": {
     "api/*.js": {
       "maxDuration": 300,
-      "includeFiles": "{fn/**,.claude/skills/**,data/post-priors.json,OVERDRACHT-KADOLY-SPAARPOT.md,OVERDRACHT-KDP.md,OVERDRACHT-TANIAKROSS.md,kdp/rapport.md,kdp/wachtrij.md,kdp/boekwedstrijd.md,OVERDRACHT-YOORS-SHOP.md,OVERDRACHT-KADOLY-TIKTOK.md,OVERDRACHT-KADOLY-SOCIAL.md}"
+      "includeFiles": "{fn/**,data/lc/**,.claude/skills/**,data/post-priors.json,OVERDRACHT-KADOLY-SPAARPOT.md,OVERDRACHT-KDP.md,OVERDRACHT-TANIAKROSS.md,kdp/rapport.md,kdp/wachtrij.md,kdp/boekwedstrijd.md,OVERDRACHT-YOORS-SHOP.md,OVERDRACHT-KADOLY-TIKTOK.md,OVERDRACHT-KADOLY-SOCIAL.md}"
     }
   },
   "redirects": [
