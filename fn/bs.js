@@ -6,11 +6,9 @@ import { kv } from '../lib/db.js';
 import { render, SLUGS, ROBOTS, sitemap, llms, zichtJson, OVERDRACHT, FAVICON, INDEXNOW_KEY, BIJGEWERKT, HOST, BASE, TEL, amz, omslag, keur, BOEK_ASIN, LC_URL } from '../lib/bs.js';
 import { BOEKEN, LC, PRIJS_DATUM, ANDER } from '../lib/bs-data.js';
 import fs from 'node:fs';
-import crypto from 'node:crypto';
 import zlib from 'node:zlib';
 import * as LCF from '../lib/lcfunnel.js';
 import * as LCW from '../lib/lcwaarom.js';
-import { berichten, HAIKU } from '../lib/ai.js';
 import { ImageResponse } from '@vercel/og';
 import { INTER_500, INTER_800 } from '../lib/pinfont.js';
 import { pinPlan, haakVan, vind, HAKEN, ACCOUNT as PIN_ACCOUNT } from '../lib/bspin.js';
@@ -53,22 +51,19 @@ async function lcHandler(req, res, q, echt) {
     await kv.set('lc:art:' + a.slug, a); const rest = index.filter(x => x.slug !== a.slug); rest.push({ slug: a.slug, titel: a.titel, datum: a.datum, status: a.status, zoekterm: a.zoekterm || '', volume: a.volume || 0, gerelateerd: a.gerelateerd || [] }); await kv.set('lc:arts', rest);
     return stuur(res, 200, 'application/json', JSON.stringify({ ok: true, slug: a.slug, status: a.status, voorbeeld: 'https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=' + a.slug + '&concept=1', liveZetten: 'https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=lclive&slug=' + a.slug }), { cache: 'no-store' });
   }
-  // Lerende chat "Why didn't it work this year?" (lib/lcwaarom.js)
+  // "Why didn't it work this year?" met de chat van de keuzehulpen (lib/lcwaarom.js)
   c.waaromLive = String(await kv.get('lc:w:live').catch(() => '')) === '1';
-  if (op === 'lcwaaromlive' || op === 'lcwaarom') {
+  if (op === 'lcwaaromlive') {
     if (!beschermd(req)) return stuur(res, 403, 'application/json', '{"ok":false,"fout":"alleen via de beschermde host"}', { cache: 'no-store' });
-    if (op === 'lcwaaromlive') { const aan = q.get('live') !== '0'; await kv.set('lc:w:live', aan ? '1' : '0'); return stuur(res, 200, 'application/json', JSON.stringify({ ok: true, live: aan, pagina: LCF.BASE + '/' + LCW.SLUG }), { cache: 'no-store' }); }
-    const tel = await hash('lc:w:tel'), arm = await hash('lc:w:arm'), log = ((await kv.raw(['LRANGE', 'lc:w:log', '0', '49']).catch(() => [])) || []).map(x => { try { return JSON.parse(x); } catch (e) { return null; } }).filter(Boolean);
-    return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ live: c.waaromLive, tel, arm, winnaar: await kv.get('lc:w:winnaar').catch(() => null), nieuweRedenen: await hash('lc:w:nieuw'), log }, null, 1), { cache: 'no-store', robots: 'noindex' });
+    { const aan = q.get('live') !== '0'; await kv.set('lc:w:live', aan ? '1' : '0'); return stuur(res, 200, 'application/json', JSON.stringify({ ok: true, live: aan, pagina: LCF.BASE + '/' + LCW.SLUG }), { cache: 'no-store' }); }
   }
-  if (op === 'lcchat') return lcChat(req, res);
   if (op === 'lcartikelen') return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ modus: (await kv.get('lc:art:modus').catch(() => null)) || 'eerst-zien', artikelen: index }), { cache: 'no-store', robots: 'noindex' });
   if (op === 'robots') return stuur(res, 200, 'text/plain; charset=utf-8', echt ? LCF.ROBOTS : 'User-agent: *\nDisallow: /\n');
   if (op === 'sitemap') return stuur(res, 200, 'application/xml; charset=utf-8', LCF.sitemapMet(c.waaromLive ? [{ slug: LCW.SLUG, datum: '2026-11-22' }, ...live] : live), { robots: noidx });
   if (op === 'llms') return stuur(res, 200, 'text/plain; charset=utf-8', LCF.llms(), { robots: noidx });
   if (op === 'fav') return stuur(res, 200, 'image/svg+xml', LCF.FAVICON, { cache: 'public, max-age=86400' });
   if (op === 'gezond') {
-    const fouten = []; try { fouten.push(...keur(LCW.renderWaarom({ ...c, echt: true }, {}), 'lc:check')); } catch (e) { fouten.push('lc:check: ' + e.message); } for (const s of LCF.SLUGS) { try { fouten.push(...keur(LCF.renderLc(s, { ...c, echt: true }), 'lc:' + (s || 'home'))); } catch (e) { fouten.push('lc:' + s + ': ' + e.message); } }
+    const fouten = []; try { fouten.push(...keur(LCW.renderWaarom({ ...c, echt: true }), 'lc:check')); } catch (e) { fouten.push('lc:check: ' + e.message); } for (const s of LCF.SLUGS) { try { fouten.push(...keur(LCF.renderLc(s, { ...c, echt: true }), 'lc:' + (s || 'home'))); } catch (e) { fouten.push('lc:' + s + ': ' + e.message); } }
     let pdfBestand = false; try { pdfBestand = fs.statSync(LCF.PDF_PAD).size > 100000; } catch (e) {}
     if (!pdfBestand) fouten.push('PDF-bestand ontbreekt in de uitrol');
     const st = { ok: !fouten.length, pdfKnop: pdf, pdfBestand, mail: !!(await LCF.resendSleutel(kv)), uitleg: pdf ? 'PDF-verkoop staat aan' : 'PDF-knop uit: PADDLE_API_KEY ontbreekt in Vercel (hjdk-api); alles verwijst naar Amazon', fouten };
@@ -99,56 +94,13 @@ async function lcHandler(req, res, q, echt) {
   }
   if (slug === LCW.SLUG) {
     if (!c.waaromLive && q.get('concept') !== '1') { res.statusCode = 302; res.setHeader('Location', c.L('')); res.setHeader('Cache-Control', 'no-store'); return res.end(); }
-    return stuur(res, 200, 'text/html; charset=utf-8', LCW.renderWaarom(c, await hash('lc:w:tel')), { robots: c.waaromLive ? (noidx || 'index, follow') : 'noindex, nofollow', cache: c.waaromLive ? 'public, max-age=60, s-maxage=300' : 'no-store' });
+    return stuur(res, 200, 'text/html; charset=utf-8', LCW.renderWaarom(c), { robots: c.waaromLive ? (noidx || 'index, follow') : 'noindex, nofollow', cache: c.waaromLive ? 'public, max-age=60, s-maxage=300' : 'no-store' });
   }
   const html = LCF.renderLc(slug, c);
   if (html == null) { res.statusCode = 302; res.setHeader('Location', c.L('')); res.setHeader('Cache-Control', 'no-store'); return res.end(); }
   return stuur(res, 200, 'text/html; charset=utf-8', html, { robots: noidx || 'index, follow', cache: 'public, max-age=120, s-maxage=600' });
 }
 
-async function hash(k) { const r = await kv.raw(['HGETALL', k]).catch(() => null), o = {}; if (Array.isArray(r)) for (let i = 0; i + 1 < r.length; i += 2) o[r[i]] = +r[i + 1] || 0; else if (r) for (const x in r) o[x] = +r[x] || 0; return o; }
-async function leesBody(req) { if (req.body && typeof req.body === 'object') return req.body; const t = typeof req.body === 'string' ? req.body : await new Promise(r => { let d = ''; req.on('data', x => { if (d.length < 8000) d += x; }); req.on('end', () => r(d)); req.on('error', () => r('')); }); try { return JSON.parse(t || '{}'); } catch (e) { return {}; } }
-
-// De chat: advies na drie tikken, een klik op de knop, of een persoonlijk antwoord op vrije tekst. Telt alles; nooit een leeg antwoord.
-async function lcChat(req, res) {
-  const json = (o, s = 200) => stuur(res, s, 'application/json; charset=utf-8', JSON.stringify(o), { cache: 'no-store', robots: 'noindex' });
-  if (req.method !== 'POST') return json({ ok: false }, 405);
-  const b = await leesBody(req), d = new Date().toISOString().slice(0, 10), sid = String(b.sid || '').replace(/[^a-z0-9]/gi, '').slice(0, 40);
-  const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim(), ih = crypto.createHash('sha256').update(ip + d).digest('hex').slice(0, 16);
-  if (/bot|crawler|spider|headless/i.test(String(req.headers['user-agent'] || ''))) return json({ ok: false }, 403);
-  const per = +(await kv.raw(['INCR', 'lc:w:ip:' + ih]).catch(() => 0)) || 0; if (per === 1) await kv.raw(['EXPIRE', 'lc:w:ip:' + ih, '86400']).catch(() => null);
-  if (per > 40) return json({ ok: false, fout: 'te veel' }, 429);
-  let arm = b.arm === 'b' ? 'b' : 'a'; const winnaar = await kv.get('lc:w:winnaar').catch(() => null);
-  if (b.ev === 'klik') { if (sid && (await kv.raw(['SET', 'lc:w:k:' + sid, '1', 'NX', 'EX', '86400']).catch(() => null)) === 'OK') { await kv.raw(['HINCRBY', 'lc:w:arm', arm + ':klik', '1']).catch(() => null); await kv.raw(['HINCRBY', 'lc:w:dag:' + d, 'klik', '1']).catch(() => null); } return json({ ok: true }); }
-  if (!LCW.geldig(b)) return json({ ok: false, fout: 'ongeldig' }, 400);
-  if (winnaar === 'a' || winnaar === 'b') arm = winnaar;
-  if (typeof b.tekst === 'string' && b.tekst.trim()) {
-    const tekst = b.tekst.trim().slice(0, 600);
-    if (LCW.ZORG.test(tekst)) return json({ ok: true, a: LCW.ZORG_ANTWOORD, zorg: true });
-    const reserve = () => { const a = LCW.advies(b); return a.oplossing + ' ' + a.vandaag; };
-    const pm = +(await kv.raw(['INCR', 'lc:w:m:' + ih]).catch(() => 0)) || 0; if (pm === 1) await kv.raw(['EXPIRE', 'lc:w:m:' + ih, '86400']).catch(() => null);
-    const tot = +(await kv.raw(['HINCRBY', 'lc:w:dag:' + d, 'model', '1']).catch(() => 0)) || 0;
-    let a = '', reden = '';
-    if (pm <= 4 && tot <= 400) {
-      try {
-        const r = await berichten({ fn: 'lc-waarom', model: HAIKU, system: LCW.SYSTEEM, user: `Goal: ${LCW.naam(LCW.DOELEN, b.doel)}. How far they got: ${LCW.naam(LCW.FASEN, b.fase)}. Reason they picked: ${LCW.naam(LCW.REDENEN, b.reden)}.\nIn their own words: ${tekst}`, max: 400, timeout: 20000 });
-        const m = String(r.txt || '').match(/\{[\s\S]*\}/); const j = m ? JSON.parse(m[0]) : null;
-        if (j && typeof j.a === 'string' && j.a.length > 40) { a = j.a.replace(/\s[—–]\s/g, ', ').trim(); reden = String(j.reden || '').toLowerCase().replace(/[^a-z ]/g, '').trim().slice(0, 40); }
-      } catch (e) {}
-    }
-    if (reden) { if (LCW.REDENEN.some(x => x[0] === reden)) await kv.raw(['HINCRBY', 'lc:w:tel', 'vrij:' + reden, '1']).catch(() => null); else await kv.raw(['HINCRBY', 'lc:w:nieuw', reden, '1']).catch(() => null); }
-    await kv.raw(['LPUSH', 'lc:w:log', JSON.stringify({ t: new Date().toISOString(), doel: b.doel, fase: b.fase, reden: b.reden, tekst, model: reden || '', a: a ? 1 : 0 })]).catch(() => null); await kv.raw(['LTRIM', 'lc:w:log', '0', '999']).catch(() => null);
-    await kv.raw(['HINCRBY', 'lc:w:dag:' + d, 'vrij', '1']).catch(() => null);
-    return json({ ok: true, a: a || reserve() });
-  }
-  if (sid && (await kv.raw(['SET', 'lc:w:s:' + sid, '1', 'NX', 'EX', '86400']).catch(() => null)) === 'OK') {
-    for (const v of LCW.telVelden(b)) await kv.raw(['HINCRBY', 'lc:w:tel', v, '1']).catch(() => null);
-    await kv.raw(['HINCRBY', 'lc:w:dag:' + d, 'n', '1']).catch(() => null); await kv.raw(['HINCRBY', 'lc:w:dag:' + d, 'r:' + b.reden, '1']).catch(() => null); await kv.raw(['EXPIRE', 'lc:w:dag:' + d, String(120 * 86400)]).catch(() => null);
-    const st = await hash('lc:w:arm'); await kv.raw(['HINCRBY', 'lc:w:arm', arm + ':toon', '1']).catch(() => null); st[arm + ':toon'] = (st[arm + ':toon'] || 0) + 1;
-    if (!winnaar && (st['a:toon'] || 0) >= 150 && (st['b:toon'] || 0) >= 150) { const ra = (st['a:klik'] || 0) / st['a:toon'], rb = (st['b:klik'] || 0) / st['b:toon']; if (Math.max(ra, rb) >= 1.3 * Math.min(ra, rb) && Math.max(ra, rb) > 0) await kv.set('lc:w:winnaar', ra > rb ? 'a' : 'b').catch(() => null); }
-  }
-  return json(Object.assign({ ok: true, arm }, LCW.advies({ ...b, arm }, await hash('lc:w:tel'))));
-}
 
 export default async function handler(req, res) {
   const u = new URL(req.url, 'https://' + HOST), q = u.searchParams, op = q.get('op') || '', echt = isEcht(req);

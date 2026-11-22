@@ -85,19 +85,13 @@ test('LC-artikel: keuring weigert dun en accepteert een volledig stuk dat door d
   assert.deepEqual(keur(LCF.renderGidsen({ echt: true, pdf: true, L: x => '/' + x, go: x => '/go/' + x }, [a]), 'lc:gidsen'), []);
 });
 
-test('LC-check: advies, vergelijking alleen met genoeg antwoorden, concept noindex', async () => {
+test('LC-check: keuzehulpchat met de zeven redenen, concept noindex, kennis in de catalogus', async () => {
   const W = await import('../lib/lcwaarom.js');
   const c = { echt: true, pdf: false, L: s => '/' + s, go: a => '/go/' + a, waaromLive: false };
-  const h = W.renderWaarom(c, {});
-  assert.match(h, /noindex/); assert.match(h, /id="chat"/); assert.doesNotMatch(h, /What 0 people/);
-  for (const r of W.REDENEN) assert.ok(h.includes(r[1].replace(/'/g, '&#39;')) || h.includes(r[1]), r[0]);
-  const weinig = W.advies({ doel: 'geld', fase: 'nooit', reden: 'teveel' }, { n: 5, 'r:teveel': 5 });
-  assert.equal(weinig.bench.length, 0);
-  const veel = W.advies({ doel: 'geld', fase: 'nooit', reden: 'teveel' }, { n: 50, 'r:teveel': 20, 'd:geld': 25, 'dr:geld:teveel': 10 });
-  assert.equal(veel.bench.length, 2); assert.match(veel.bench[0], /^40% /);
-  assert.ok(W.geldig({ doel: 'fit', fase: 'weken', reden: 'druk' })); assert.ok(!W.geldig({ doel: 'x', fase: 'weken', reden: 'druk' }));
-  assert.match('I want to end my life', W.ZORG);
-  assert.doesNotMatch(JSON.stringify(W.REDENEN) + JSON.stringify(W.DOELEN), /[—–]/);
-  const live = W.renderWaarom({ ...c, waaromLive: true }, { n: 40, 'r:druk': 12 });
-  assert.match(live, /index,follow/); assert.match(live, /What 40 people told us/);
+  const h = W.renderWaarom(c);
+  assert.match(h, /noindex/); assert.match(h, /id="kx"/); assert.match(h, /keuze-tools\?tool=intentie&op=chat/); assert.match(h, /What stopped you, honestly\?/);
+  for (const r of W.REDENEN) { assert.ok(r[1].length <= 40, r[0]); assert.ok(h.includes(r[1]), r[0]); }
+  const it = W.chatItems()[0]; assert.equal(it.slug, W.CHAT_SLUG); assert.match(it.pad, /^https:\/\/lastingchange\.works\//); assert.ok(it.uitleg.length < 2600, 'uitleg ' + it.uitleg.length);
+  assert.doesNotMatch(JSON.stringify(W.REDENEN) + it.kort + it.uitleg, /[—–]/);
+  assert.match(W.renderWaarom({ ...c, waaromLive: true }), /index,follow/);
 });
