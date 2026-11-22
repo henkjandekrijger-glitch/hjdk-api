@@ -98,10 +98,10 @@ export default async function handler(req, res) {
       const beeld = el('div', { width: '100%', height: '100%', flexDirection: 'column', background: '#ffffff', fontFamily: 'Inter', color: '#111113', padding: '70px 72px 64px' }, [
         el('div', { fontSize: 28, fontWeight: 800, letterSpacing: 4 }, lc ? 'LASTING CHANGE' : 'BOOKSTUFFERS'),
         el('div', { fontSize: kop.length > 44 ? 66 : 80, fontWeight: 800, lineHeight: 1.06, marginTop: 26, letterSpacing: -2 }, kop),
-        el('div', { flexGrow: 1, alignItems: 'center', justifyContent: 'center', padding: '40px 0 30px' }, [{ type: 'img', props: { src: `https://m.media-amazon.com/images/I/${b.i}._SL900_.jpg`, height: 820, style: { objectFit: 'contain', boxShadow: '0 30px 60px rgba(17,17,19,.25)', borderRadius: 8 } } }]),
+        el('div', { flexGrow: 1, alignItems: 'center', justifyContent: 'center', padding: '24px 0 20px' }, [{ type: 'img', props: { src: `https://m.media-amazon.com/images/I/${b.i}._SL1200_.jpg`, width: 640, height: 900, style: { objectFit: 'contain' } } }]),
         el('div', { alignItems: 'center', justifyContent: 'space-between' }, [
           el('div', { background: '#111113', color: '#ffffff', fontSize: 36, fontWeight: 800, padding: '22px 40px', borderRadius: 999 }, lc ? 'Start Day 0 today' : h.bord === 'bijbel' ? 'Read the guide' : 'See the book'),
-          el('div', { fontSize: 32, fontWeight: 500 }, `${b.n} pages${b.c >= 10 ? ` · ${b.r}★` : ''}`)
+          el('div', { fontSize: 32, fontWeight: 500 }, `${b.n} pages${b.c >= 10 ? ` · rated ${b.r}/5` : ''}`)
         ])
       ]);
       const buf = Buffer.from(await new ImageResponse(beeld, { width: 1000, height: 1500, fonts: FONTS }).arrayBuffer());
