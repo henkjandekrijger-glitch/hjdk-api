@@ -1,0 +1,25 @@
+name: Curaçao gegevens en keuzehulpen
+on:
+  pull_request:
+    paths:
+      - 'lib/cur*.js'
+      - 'data/cur/**'
+      - 'scripts/test-cur*.mjs'
+      - 'scripts/fixtures/cur-bedrijven.json'
+      - '.github/workflows/curacao-data.yml'
+permissions:
+  contents: read
+jobs:
+  consistentie:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm install --no-audit --no-fund
+      - run: node scripts/router-maak.mjs --check
+      - run: node scripts/test-cur-data.mjs
+      - run: node scripts/test-cur-consistent.mjs
+      - run: node scripts/test-cur-rang.mjs
