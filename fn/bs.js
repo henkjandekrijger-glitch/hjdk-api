@@ -156,11 +156,12 @@ export default async function handler(req, res) {
   if (op === 'indexnow') {
     if (!echt) return stuur(res, 400, 'application/json', '{"ok":false,"reden":"alleen op bookstuffers.com"}', { cache: 'no-store' });
     const oud = await kv.get('bs:indexnow').catch(() => null);
-    if (oud && oud.versie === BIJGEWERKT) return stuur(res, 200, 'application/json', JSON.stringify({ al: true, ...oud }), { cache: 'no-store' });
+    const versie = BIJGEWERKT + '-' + SLUGS.length;
+    if (oud && oud.versie === versie) return stuur(res, 200, 'application/json', JSON.stringify({ al: true, ...oud }), { cache: 'no-store' });
     const urlList = SLUGS.map(s => BASE + '/' + s);
     let status = 0;
     try { const r = await fetch('https://api.indexnow.org/indexnow', { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify({ host: HOST, key: INDEXNOW_KEY, keyLocation: `${BASE}/${INDEXNOW_KEY}.txt`, urlList }), signal: AbortSignal.timeout(15000) }); status = r.status; } catch (e) { status = String(e.message || e).slice(0, 80); }
-    if (status === 200 || status === 202) await kv.set('bs:indexnow', { versie: BIJGEWERKT, t: new Date().toISOString(), status, n: urlList.length }).catch(() => {});
+    if (status === 200 || status === 202) await kv.set('bs:indexnow', { versie, t: new Date().toISOString(), status, n: urlList.length }).catch(() => {});
     return stuur(res, 200, 'application/json', JSON.stringify({ status, n: urlList.length }), { cache: 'no-store' });
   }
   const slug = String(q.get('p') || '').replace(/^\/+|\/+$/g, '');
