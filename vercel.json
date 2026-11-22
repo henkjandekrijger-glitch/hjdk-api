@@ -518,6 +518,26 @@
       "destination": "/api/bs?op=key"
     },
     {
+      "source": "/go/:a([A-Za-z0-9]{10})",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bookstuffers\\.com"
+        }
+      ],
+      "destination": "/api/bs?op=go&a=:a"
+    },
+    {
+      "source": "/omslag/:i([A-Za-z0-9+-]{6,20}).jpg",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?bookstuffers\\.com"
+        }
+      ],
+      "destination": "/api/bs?op=omslag&i=:i"
+    },
+    {
       "source": "/:p([a-z0-9-]+)",
       "has": [
         {

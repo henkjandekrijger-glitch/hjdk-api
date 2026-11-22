@@ -34,7 +34,7 @@ test('ankers op de pagina bestaan', () => {
 
 test('voorbeeld buiten het domein is noindex en linkt binnen het voorbeeld', () => {
   const h = render('white-elephant-rules', voorbeeld);
-  assert.match(h, /name="robots" content="noindex,nofollow"/); assert.match(h, /href="\/api\/bs\?p=white-elephant-gifts-under-10"/);
+  assert.match(h, /name="robots" content="noindex,nofollow"/); assert.match(h, /href="\/api\/bs\?p=white-elephant-gifts-under-10"/); assert.match(h, /href="\/api\/bs\?op=go&a=B0/);
   assert.match(render('', echt), /name="robots" content="index,follow/);
 });
 
