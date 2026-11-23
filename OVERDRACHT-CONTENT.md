@@ -144,11 +144,17 @@ Rapport:
 - 12:13 UTC (08:13 Curaçao), Vercel-cron /api/bs?op=dagrapport, onafhankelijk van welk account dan ook:
   - één Telegram-bericht met organisch bezoek per site en bron, kliks naar Amazon (ook per bron), LC-verkopen, pins, ZICHT (vertoningen, kliks, geïndexeerd), nieuwe LC-artikelen en concepten met een bekijk- en live-zet-link, en de lekregel;
   - daarna een IndexNow-ping als de versie veranderd is.
-- 19:37 UTC: geplande taak trig_01Mh5ZacGxcLhJDZRbiQiyCV, Pinterest-pins volgens pinPlan.
-- 03:41 UTC: geplande taak trig_01EAQTfpmjosnYXwm9dNzrJB, één LC-artikel. Onderwerpen in deze volgorde: procrastination, start over, I wasted another year, get your life together, habit formation, self improvement books. Daarna de grootste vraag uit Demand Radar jaar-reset. Het komt als concept in het rapport.
-- Let op: de twee geplande taken horen bij het oude account. Maak ze in het nieuwe account opnieuw aan met dezelfde opdracht en zet de oude uit. Pas dan draait alles onder dit account.
+- 19:37 UTC (15:37 Curaçao): nieuwe ChatGPT-taak 'Boeken: Pinterest en leerlus', actief vanaf 23 nov. Maakt een conceptbatch volgens pinPlan en de leerlus; publiceert uitsluitend na expliciet akkoord op die batch. De oude taak trig_01Mh5ZacGxcLhJDZRbiQiyCV is vanuit dit account niet bereikbaar en kon niet worden uitgezet.
+- 03:41 UTC (23:41 Curaçao op de vorige kalenderdag): nieuwe ChatGPT-taak 'Lasting Change: artikel en leerlus', actief vanaf 23 nov. Eerst het idee tonen, na akkoord schrijven en als concept bewaren; nooit automatisch live. De oude taak trig_01EAQTfpmjosnYXwm9dNzrJB is vanuit dit account niet bereikbaar en kon niet worden uitgezet. Eén LC-artikel. Onderwerpen in deze volgorde: procrastination, start over, I wasted another year, get your life together, habit formation, self improvement books. Daarna de grootste vraag uit Demand Radar jaar-reset. Het komt als concept in het rapport.
+- Migratie nog niet volledig: de twee nieuwe taken zijn bevestigd actief. Zet de oude twee uit vanuit het oorspronkelijke account; de huidige tools vinden ze niet. Claim geen voltooide migratie tot dit bevestigd is.
 
 ## 7. De leerlus: elke dag meten, het grootste lek eerst
+
+### Meetcorrectie goedgekeurd op 23 nov 2026
+Het rapport van 23 nov over 22 nov bevat 7 geregistreerde pagina-openingen op Stocking Books, 13 op Lasting Change en 208 ruwe Amazonredirects. Dit zijn verschillende metingen, geen unieke personen of bewezen verkopen. De hoofdknoppen voor de LC-paperback omzeilen de /go-meting; alleen onder meer omslag en vaste balk gebruiken hem. Deze versie herstelt die hoofdknoppen, splitst Amazonverzoeken per site, noemt hun ruwe aard, en verwijdert het ongeldige percentage dat verzoeken van beide sites door alleen Stocking Books-openingen deelt. Zonder koppeling per pagina en klik blijft de inhoudelijke conversie onbekend.
+
+Controle bij akkoord: paperbackknoppen op home, gidsen en artikel gebruiken /go met site lc en bron; de test dekt PDF aan/uit en het beschermde voorbeeld. Geen menselijke unieke conversie of verkoop afleiden uit deze route alleen. Binnen 24 uur na live controle van bron- en siteverdeling, daarna dagelijks. Volgende stap is koppeling van klik aan pagina/browseractie; pas daarna inhoudsproef met controlegroep en oordeel na 14 tot 21 dagen. Geen betaalinstellingen, advertenties of campagnes aangepast.
+
 
 Meet elke dag in deze volgorde. Het rapport geeft het meeste; vul aan met de eindpunten.
 
@@ -234,6 +240,10 @@ Plak dit als eerste bericht:
 "Lees eerst de overdracht content en distributie: https://hjdk-api-henq.vercel.app/api/bs?op=content (Vercel-tool web_fetch_vercel_url) en de repo henkjandekrijger-glitch/hjdk-api (OVERDRACHT-CONTENT.md, CLAUDE.md). Jij doet vanaf nu alleen content en distributie voor stockingbooks.com, lastingchange.works en Pinterest, met de dagelijkse leerlus uit hoofdstuk 7 en de strategie uit hoofdstuk 7b. Maak de twee geplande taken uit hoofdstuk 6 opnieuw aan in dit account. Begin met het grootste lek uit het rapport van vandaag en laat me alles eerst zien voor het live gaat."
 
 ## Logboek (nieuwste bovenaan)
+
+- 2026-11-23, content-Codex: Henkjan geeft akkoord om door te werken. Meetcorrectie klaar voor uitrol: alle 14 bestaande/uitgebreide paginatests en 3 rapporttests slagen, inclusief LC-chat. Offline is alleen het ongebruikte Redis-clientimport vervangen door een blokkade die faalt bij aanroep; echte rendercode en rapportlogica getest. Productiecontrole volgt na deploy. Artikel blijft concept; bronverwijzingen en eigen startplan worden als verbeterde versie eerst getoond.
+
+- 2026-11-23, content-Codex: twee taken opnieuw aangemaakt met eerst-zien en de dagelijkse leerlus. Oude taken niet bereikbaar, dus uitzetten nog open. Meetlek onderzocht: LC-hoofdknoppen buiten /go en gemengde Amazonteller; correctie met regressiecontroles op aparte reviewbranch voorbereid, niet op main gezet. Bestaand artikel how-to-stop-procrastinating blijft concept. PDF en kopersmail blijven geblokkeerd door ontbrekende instellingen.
 
 - 2026-11-23: hoofdstuk 7b Strategie toegevoegd (onderzoek naar wat stapelt met AI: eigen cijfers, gratis tools, lijstjes van anderen, verversen, Pinterest, eigen publiek), met een werkvolgorde voor dit account.
 - 2026-11-23: overdracht geschreven voor het content-account. Bookstuffers heet Stocking Books (stockingbooks.com). Kerstmoppen, kerstquiz en kleurplaten zijn live. IndexNow loopt mee in de dagelijkse cron. Het LC-artikel begint met procrastination.
