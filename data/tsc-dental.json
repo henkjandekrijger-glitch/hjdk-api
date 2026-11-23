@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-11-22",
+  "checked_at": "2026-11-23",
   "note": "Source inventory and published-price snapshots. No complete market, licence, suitability, outcome or guaranteed-savings claim. Provider groups can span locations. Brand availability is explicitly sourced and may vary by practice. Amounts retain currency, unit, treatment scope and known omissions; no synthetic FX or country averages.",
   "providers": [
     {
@@ -999,6 +999,100 @@
           ]
         }
       }
+    },
+    {
+      "id": "alldent-budapest",
+      "naam": "AllDent Dental",
+      "site": "https://alldent.hu/en/",
+      "land": "HU",
+      "stad": "Budapest",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-23",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://alldent.hu/en/arlista",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-23"
+        },
+        "all-on-4": {
+          "source_url": "https://alldent.hu/en/arlista",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-23"
+        },
+        "veneers": {
+          "source_url": "https://alldent.hu/en/arlista",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-23"
+        },
+        "crowns": {
+          "source_url": "https://alldent.hu/en/arlista",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-23"
+        },
+        "whitening": {
+          "source_url": "https://alldent.hu/en/arlista",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-23"
+        },
+        "aligners": {
+          "source_url": "https://alldent.hu/en/arlista",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-23",
+          "brands": [
+            "Invisalign"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ident-zagreb",
+      "naam": "Poliklinika iDENT",
+      "site": "https://ident.hr/?lang=en",
+      "land": "HR",
+      "stad": "Zagreb",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-23",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://ident.hr/price-list/?lang=en",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-23"
+        },
+        "all-on-4": {
+          "source_url": "https://ident.hr/price-list/?lang=en",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-23"
+        },
+        "veneers": {
+          "source_url": "https://ident.hr/price-list/?lang=en",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-23"
+        },
+        "crowns": {
+          "source_url": "https://ident.hr/price-list/?lang=en",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-23"
+        },
+        "whitening": {
+          "source_url": "https://ident.hr/price-list/?lang=en",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-23"
+        },
+        "aligners": {
+          "source_url": "https://ident.hr/price-list/?lang=en",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-23",
+          "brands": [
+            "Invisalign"
+          ]
+        }
+      }
     }
   ],
   "patches": [
@@ -1853,6 +1947,482 @@
         "follow_up"
       ],
       "price_basis": "without_sanitas_dental_milenium"
+    },
+    {
+      "provider": "alldent-budapest",
+      "topic": "dental-implants",
+      "from": 159000,
+      "currency": "HUF",
+      "scope": "implant_placement_brand_unspecified",
+      "unit": "implant",
+      "source_url": "https://alldent.hu/en/arlista",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "implant_placement"
+      ],
+      "unknown": [
+        "implant_brand",
+        "abutment",
+        "crown",
+        "diagnostics",
+        "bone_graft",
+        "temporary_restoration",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "alldent-budapest",
+      "topic": "dental-implants",
+      "from": 115000,
+      "currency": "HUF",
+      "scope": "standard_implant_abutment",
+      "unit": "implant",
+      "source_url": "https://alldent.hu/en/arlista",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "standard_abutment"
+      ],
+      "unknown": [
+        "implant",
+        "crown",
+        "diagnostics",
+        "bone_graft",
+        "temporary_restoration",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "alldent-budapest",
+      "topic": "dental-implants",
+      "from": 79000,
+      "currency": "HUF",
+      "scope": "immediate_temporary_crown_on_implant",
+      "unit": "crown",
+      "source_url": "https://alldent.hu/en/arlista",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "temporary_crown"
+      ],
+      "unknown": [
+        "implant",
+        "abutment",
+        "final_crown",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "alldent-budapest",
+      "topic": "dental-implants",
+      "from": 124000,
+      "currency": "HUF",
+      "scope": "small_bone_graft",
+      "unit": "procedure",
+      "source_url": "https://alldent.hu/en/arlista",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "small_bone_graft"
+      ],
+      "unknown": [
+        "graft_material",
+        "implant",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "alldent-budapest",
+      "topic": "dental-implants",
+      "from": 237000,
+      "currency": "HUF",
+      "scope": "large_bone_graft",
+      "unit": "procedure",
+      "source_url": "https://alldent.hu/en/arlista",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "large_bone_graft"
+      ],
+      "unknown": [
+        "graft_material",
+        "implant",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "alldent-budapest",
+      "topic": "all-on-4",
+      "from": 490000,
+      "currency": "HUF",
+      "scope": "all_on_4_temporary_pmma_acrylic_fixed_bridge_only",
+      "unit": "bridge",
+      "source_url": "https://alldent.hu/en/arlista",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "temporary_fixed_bridge"
+      ],
+      "unknown": [
+        "implants",
+        "abutments",
+        "surgery",
+        "diagnostics",
+        "final_bridge",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "alldent-budapest",
+      "topic": "all-on-4",
+      "from": 849000,
+      "currency": "HUF",
+      "scope": "all_on_4_final_metal_ceramic_bridge_only",
+      "unit": "bridge",
+      "source_url": "https://alldent.hu/en/arlista",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "final_metal_ceramic_bridge"
+      ],
+      "unknown": [
+        "implants",
+        "abutments",
+        "surgery",
+        "diagnostics",
+        "temporary_bridge",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "alldent-budapest",
+      "topic": "crowns",
+      "from": 112000,
+      "currency": "HUF",
+      "scope": "zirconia_cad_cam_crown_or_bridge_unit",
+      "unit": "unit",
+      "source_url": "https://alldent.hu/en/arlista",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "zirconia_cad_cam_unit"
+      ],
+      "unknown": [
+        "tooth_preparation",
+        "root_canal",
+        "temporary_crown",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "alldent-budapest",
+      "topic": "veneers",
+      "from": 65000,
+      "currency": "HUF",
+      "scope": "direct_composite_veneer_front_tooth",
+      "unit": "tooth",
+      "source_url": "https://alldent.hu/en/arlista",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "direct_composite_veneer"
+      ],
+      "unknown": [
+        "preparation",
+        "mock_up",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "alldent-budapest",
+      "topic": "aligners",
+      "from": 150000,
+      "currency": "HUF",
+      "scope": "invisalign_digital_treatment_planning_itero_3d_xray_photos",
+      "unit": "treatment_plan",
+      "source_url": "https://alldent.hu/en/arlista",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "itero",
+        "3d_xray",
+        "photos",
+        "digital_treatment_plan"
+      ],
+      "unknown": [
+        "aligners",
+        "checks",
+        "retainers",
+        "refinements"
+      ]
+    },
+    {
+      "provider": "alldent-budapest",
+      "topic": "aligners",
+      "from": 1084000,
+      "currency": "HUF",
+      "scope": "invisalign_lite_14_aligners_both_arches",
+      "unit": "treatment",
+      "source_url": "https://alldent.hu/en/arlista",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "14_aligners",
+        "both_arches"
+      ],
+      "unknown": [
+        "digital_treatment_plan",
+        "checks",
+        "retainers",
+        "refinements"
+      ]
+    },
+    {
+      "provider": "alldent-budapest",
+      "topic": "aligners",
+      "from": 59000,
+      "currency": "HUF",
+      "scope": "removable_retainer_brand_unspecified",
+      "unit": "arch",
+      "source_url": "https://alldent.hu/en/arlista",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "removable_retainer"
+      ],
+      "unknown": [
+        "retainer_brand",
+        "number_of_sets",
+        "checks",
+        "replacement"
+      ]
+    },
+    {
+      "provider": "ident-zagreb",
+      "topic": "dental-implants",
+      "from": 760,
+      "currency": "EUR",
+      "scope": "mis_implant_placement",
+      "unit": "implant",
+      "source_url": "https://ident.hr/price-list/?lang=en",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "mis_implant_placement"
+      ],
+      "unknown": [
+        "abutment",
+        "crown",
+        "diagnostics",
+        "bone_graft",
+        "temporary_restoration",
+        "follow_up"
+      ],
+      "to": 860
+    },
+    {
+      "provider": "ident-zagreb",
+      "topic": "dental-implants",
+      "from": 860,
+      "currency": "EUR",
+      "scope": "nobel_implant_placement",
+      "unit": "implant",
+      "source_url": "https://ident.hr/price-list/?lang=en",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "nobel_implant_placement"
+      ],
+      "unknown": [
+        "abutment",
+        "crown",
+        "diagnostics",
+        "bone_graft",
+        "temporary_restoration",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "ident-zagreb",
+      "topic": "dental-implants",
+      "from": 210,
+      "currency": "EUR",
+      "scope": "titanium_abutment_on_implant",
+      "unit": "implant",
+      "source_url": "https://ident.hr/price-list/?lang=en",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "titanium_abutment"
+      ],
+      "unknown": [
+        "implant",
+        "crown",
+        "diagnostics",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "ident-zagreb",
+      "topic": "all-on-4",
+      "from": 5100,
+      "currency": "EUR",
+      "scope": "all_on_4_operative_procedure",
+      "unit": "procedure",
+      "source_url": "https://ident.hr/price-list/?lang=en",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "operative_procedure"
+      ],
+      "unknown": [
+        "prosthetic_phase",
+        "temporary_teeth",
+        "final_teeth",
+        "diagnostics",
+        "sedation",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "ident-zagreb",
+      "topic": "all-on-4",
+      "from": 3070,
+      "currency": "EUR",
+      "scope": "all_on_4_prosthetic_phase",
+      "unit": "prosthetic_phase",
+      "source_url": "https://ident.hr/price-list/?lang=en",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "prosthetic_phase"
+      ],
+      "unknown": [
+        "prosthesis_material",
+        "temporary_or_final",
+        "operative_procedure",
+        "follow_up"
+      ],
+      "to": 5870
+    },
+    {
+      "provider": "ident-zagreb",
+      "topic": "crowns",
+      "from": 40,
+      "currency": "EUR",
+      "scope": "provisional_crown_in_office_fabrication",
+      "unit": "crown",
+      "source_url": "https://ident.hr/price-list/?lang=en",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "provisional_crown"
+      ],
+      "unknown": [
+        "implant",
+        "abutment",
+        "final_crown",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "ident-zagreb",
+      "topic": "crowns",
+      "from": 70,
+      "currency": "EUR",
+      "scope": "provisional_crown_pmma_lab_fabrication",
+      "unit": "crown",
+      "source_url": "https://ident.hr/price-list/?lang=en",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "provisional_pmma_crown"
+      ],
+      "unknown": [
+        "implant",
+        "abutment",
+        "final_crown",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "ident-zagreb",
+      "topic": "crowns",
+      "from": 400,
+      "currency": "EUR",
+      "scope": "zirconia_ceramic_crown",
+      "unit": "crown",
+      "source_url": "https://ident.hr/price-list/?lang=en",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "zirconia_ceramic_crown"
+      ],
+      "unknown": [
+        "tooth_preparation",
+        "root_canal",
+        "temporary_crown",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "ident-zagreb",
+      "topic": "veneers",
+      "from": 450,
+      "currency": "EUR",
+      "scope": "glass_ceramic_veneer",
+      "unit": "tooth",
+      "source_url": "https://ident.hr/price-list/?lang=en",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "glass_ceramic_veneer"
+      ],
+      "unknown": [
+        "preparation",
+        "mock_up",
+        "temporary_veneer",
+        "follow_up"
+      ]
+    },
+    {
+      "provider": "ident-zagreb",
+      "topic": "aligners",
+      "from": 1700,
+      "currency": "EUR",
+      "scope": "invisalign_scope_not_published",
+      "unit": "treatment",
+      "source_url": "https://ident.hr/price-list/?lang=en",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "invisalign_brand"
+      ],
+      "unknown": [
+        "arches",
+        "aligner_count",
+        "diagnostics",
+        "checks",
+        "retainers",
+        "refinements"
+      ],
+      "to": 4500
+    },
+    {
+      "provider": "ident-zagreb",
+      "topic": "aligners",
+      "from": 120,
+      "currency": "EUR",
+      "scope": "essix_retainer",
+      "unit": "item",
+      "source_url": "https://ident.hr/price-list/?lang=en",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "essix_retainer"
+      ],
+      "unknown": [
+        "number_of_sets",
+        "checks",
+        "replacement"
+      ]
+    },
+    {
+      "provider": "ident-zagreb",
+      "topic": "whitening",
+      "from": 400,
+      "currency": "EUR",
+      "scope": "zoom_teeth_whitening",
+      "unit": "treatment",
+      "source_url": "https://ident.hr/price-list/?lang=en",
+      "checked_at": "2026-11-23",
+      "includes": [
+        "zoom_brand"
+      ],
+      "unknown": [
+        "number_of_sessions",
+        "take_home_products",
+        "sensitivity_checks",
+        "follow_up"
+      ]
     }
   ]
 }
