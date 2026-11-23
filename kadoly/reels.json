@@ -44,6 +44,10 @@
           "echt": 1,
           "stand": "2026-11-22"
         }
+      },
+      "clickmind": {
+        "kliks": 1,
+        "echt": 1
       }
     },
     {
@@ -72,7 +76,7 @@
       },
       "gemeten": {
         "instagram": {
-          "dag": "2026-11-22",
+          "dag": "2026-11-23",
           "weergaven": 1,
           "bereik": 1,
           "likes": 0,
@@ -81,15 +85,19 @@
           "gedeeld": 0
         },
         "facebook": {
-          "dag": "2026-11-22",
-          "weergaven": 1,
-          "bereik": 1
+          "dag": "2026-11-23",
+          "weergaven": 3,
+          "bereik": 3
         },
         "clickmind": {
           "kliks": 1,
           "echt": 0,
           "stand": "2026-11-22"
         }
+      },
+      "clickmind": {
+        "kliks": 1,
+        "echt": 0
       }
     },
     {
@@ -107,12 +115,24 @@
         "instagram": {
           "zernio_id": "6b0159afb301c29baa3f0626",
           "tijdvak": "15:30",
-          "status": "gepland"
+          "status": "gepubliceerd"
         },
         "facebook": {
           "zernio_id": "6b0159b0a17cd125e74ca93d",
           "tijdvak": "15:30",
-          "status": "gepland"
+          "status": "gepubliceerd"
+        }
+      },
+      "gemeten": {
+        "instagram": {
+          "weergaven": 12,
+          "bereik": 11,
+          "dag": "2026-11-23"
+        },
+        "facebook": {
+          "weergaven": 2,
+          "bereik": 1,
+          "dag": "2026-11-23"
         }
       }
     },
@@ -155,6 +175,10 @@
           "echt": 0,
           "stand": "2026-11-22"
         }
+      },
+      "clickmind": {
+        "kliks": 6,
+        "echt": 0
       }
     },
     {
@@ -173,14 +197,20 @@
         "instagram": {
           "zernio_id": "6b02ab386f23a67c595f3e51",
           "tijdvak": "15:30",
-          "status": "gepland"
+          "status": "gepubliceerd"
         },
         "facebook": {
           "zernio_id": "6b02ab3874725bbb2eab2e77",
           "tijdvak": "15:30",
-          "status": "gepland",
+          "status": "gepubliceerd",
           "link": "go.kadoly.com/o?k=fb&p=oc_4174003416580097&c=v-kerstfinds"
         }
+      },
+      "clickmind": {
+        "kliks": 1,
+        "echt": 1,
+        "actie": 1,
+        "mandje": 1
       }
     },
     {
@@ -209,7 +239,7 @@
       },
       "gemeten": {
         "instagram": {
-          "dag": "2026-11-22",
+          "dag": "2026-11-23",
           "weergaven": 4,
           "bereik": 3,
           "likes": 1,
@@ -221,7 +251,16 @@
           "kliks": 1,
           "echt": 1,
           "stand": "2026-11-22"
+        },
+        "facebook": {
+          "weergaven": 6,
+          "bereik": 1,
+          "dag": "2026-11-23"
         }
+      },
+      "clickmind": {
+        "kliks": 1,
+        "echt": 1
       }
     },
     {
@@ -252,12 +291,24 @@
         "instagram": {
           "zernio_id": "6b0159b0b301c29baa3f063a",
           "tijdvak": "21:00",
-          "status": "gepland"
+          "status": "gepubliceerd"
         },
         "facebook": {
           "zernio_id": "6b0159b1b301c29baa3f0640",
           "tijdvak": "21:00",
-          "status": "gepland"
+          "status": "gepubliceerd"
+        }
+      },
+      "gemeten": {
+        "instagram": {
+          "weergaven": 20,
+          "bereik": 17,
+          "dag": "2026-11-23"
+        },
+        "facebook": {
+          "weergaven": 2,
+          "bereik": 1,
+          "dag": "2026-11-23"
         }
       }
     },
@@ -345,7 +396,21 @@
       ],
       "tekst": "3 favorieten van Housevitamin:\n1. Reed Diffuser Kerstgeur 100ml Glas voor Feestelijke Huizen\n2. Ronde Wandspiegel 80 cm Taupe Metaal Frame\n3. Kandelaar Kleurrijk Snoepdesign 13x7x20cm Housevitamin\nWelke kies jij?\n\nLink in bio, zoek op Housevitamin.\n\n#kadoly #wooninspiratie #interieur #homedecor",
       "tiktok_tekst": "3 favorieten van Housevitamin. Welke kies jij? Link in bio. #kadoly #wooninspiratie #interieur #homedecor",
-      "bron": "kadoly-video"
+      "bron": "kadoly-video",
+      "gepost": "2026-11-23",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b03fca52043316f675f3772",
+          "tijdvak": "21:00",
+          "status": "gepland"
+        },
+        "facebook": {
+          "zernio_id": "6b03fca723b0c12a702f2e45",
+          "tijdvak": "21:00",
+          "status": "gepland",
+          "link": "go.kadoly.com/o?k=fb&p=oc_4174002191351810&c=v-n261118a"
+        }
+      }
     },
     {
       "id": "n261118b",
@@ -371,7 +436,21 @@
       ],
       "tekst": "3 finds voor je planten:\n1. Hoge Eucalyptus Boom 175cm voor Binnen van Mica Decorations\n2. Vloeiende Plantenbak met Eiken Basis voor Luchtplanten\n3. Donker Rustieke Bloempot voor Moderne Interieurs van Vase The World\nWelke kies jij?\n\nLink in bio, zoek op Mica Decorations.\n\n#kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
       "tiktok_tekst": "3 finds voor je planten. Welke kies jij? Link in bio. #kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
-      "bron": "kadoly-video"
+      "bron": "kadoly-video",
+      "gepost": "2026-11-23",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b03fca42043316f675f375f",
+          "tijdvak": "15:30",
+          "status": "gepland"
+        },
+        "facebook": {
+          "zernio_id": "6b03fca541c3ab5f8e38cdbe",
+          "tijdvak": "15:30",
+          "status": "gepland",
+          "link": "go.kadoly.com/o?k=fb&p=oc_4174003460014081&c=v-n261118c"
+        }
+      }
     },
     {
       "id": "n261119a",
@@ -390,14 +469,18 @@
         "instagram": {
           "zernio_id": "6b02ab396f23a67c595f3e5b",
           "tijdvak": "21:00",
-          "status": "gepland"
+          "status": "gepubliceerd"
         },
         "facebook": {
           "zernio_id": "6b02ab39ecdd9ed0beac4792",
           "tijdvak": "21:00",
-          "status": "gepland",
+          "status": "gepubliceerd",
           "link": "go.kadoly.com/o?k=fb&p=oc_4174003731562498&c=v-n261119a"
         }
+      },
+      "clickmind": {
+        "kliks": 5,
+        "echt": 1
       }
     },
     {
@@ -540,6 +623,44 @@
       "tekst": "Welke kleur kies jij?\n1. Wollen Plaid Nieuw-Zeelandse Wol Grijs, Luxe Florence (grijs)\n2. Wollen Plaid Groen Lucca Nieuw-Zeelandse Wol (groen)\n3. Wollen Bouclé Plaid Wit voor Elegante Warmte (wit)\nZet je nummer in de reacties.\n\nLink in bio, zoek op MoST Blankets.\n\n#kadoly #cozy #wooninspiratie #interieur #homedecor",
       "tiktok_tekst": "Welke kleur kies jij: grijs, groen of wit? Link in bio. #kadoly #cozy #wooninspiratie #interieur #homedecor",
       "bron": "kadoly-video"
+    },
+    {
+      "id": "n261123a",
+      "soort": "finds",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261123a.mp4",
+      "pids": [
+        "oc_4173958825099265",
+        "oc_4173958838009857",
+        "oc_4174004948533251"
+      ],
+      "tekst": "3 finds voor je planten:\n1. Houten Plantenstandaard Ø12cm voor Speelse Weergave van Kolibri Company\n2. Safari Pot 9cm Handgemaakt Keramiek Kolibri Thuis\n3. Hoge Matte Witte Polyresin Vaasje 89cm voor Stijlvolle Decoratie\nWelke kies jij?\n\nLink in bio, zoek op Kolibri Company.\n\n#kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 finds voor je planten. Welke kies jij? Link in bio. #kadoly #plantenliefde #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261123b",
+      "soort": "kleurkeuze",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261123b.mp4",
+      "pids": [
+        "oc_4174003712114691",
+        "oc_4174003720404993"
+      ],
+      "tekst": "Welke kleur kies jij?\n1. Wollen Deken Nieuw-Zeelandse Wol Grijs, Historisch Lucca (grijs)\n2. Wollen Deken Triangle Patroon Modern Blauw (blauw)\nZet je nummer in de reacties.\n\nLink in bio, zoek op MoST Blankets.\n\n#kadoly #cozy #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "Welke kleur kies jij: grijs of blauw? Link in bio. #kadoly #cozy #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261123c",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261123c.mp4",
+      "pids": [
+        "oc_4174003419709441",
+        "oc_4174003280101377",
+        "oc_4174003396214785"
+      ],
+      "tekst": "3 favorieten van Mica Decorations:\n1. Moderne zwarte lantaarn van Mica Decorations\n2. Handgemaakte lichtbruine bloempot voor een natuurlijke uitstraling\n3. Zacht Geel Fleece Dekentje voor Gezellige Avonden Mica\nWelke kies jij?\n\nLink in bio, zoek op Mica Decorations.\n\n#kadoly #kaarsen #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 favorieten van Mica Decorations. Welke kies jij? Link in bio. #kadoly #kaarsen #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video"
     }
   ],
   "lerend": {
@@ -557,24 +678,31 @@
         "ig_weergaven_per_video": 1.5
       },
       "set": {
-        "videos_gemeten": 2,
-        "cm_kliks": 7,
-        "cm_echt": 1,
-        "ig_weergaven_per_video": 3.0
+        "videos_gemeten": 4,
+        "cm_kliks": 12,
+        "cm_echt": 2,
+        "ig_weergaven_per_video": 6.8
       },
       "pov": {
-        "videos_gemeten": 0,
-        "ig_weergaven_eerste_18u": 12
+        "videos_gemeten": 1,
+        "ig_weergaven_eerste_18u": 12,
+        "ig_weergaven_per_video": 12,
+        "cm_kliks": 0
       },
       "finds": {
-        "videos_gemeten": 0
+        "videos_gemeten": 0,
+        "cm_kliks": 1,
+        "cm_echt": 1,
+        "cm_mandje": 1,
+        "opm": "kerstfinds (22 nov) eerste mandje via een video, nog geen 24 uur"
       }
     },
     "besluiten": [
       "2026-11-18: eerste video-dag; 08:30 al voorbij bij start van de ronde (09:41 NL), dus 2 per platform (15:30 kleurkeuze, 21:00 set). YouTube en TikTok nog niet in Zernio.",
       "2026-11-20: 19 nov geen ronde. Vandaag 2 per platform (08:30 al voorbij): 15:30 kerstballen_kleur (kleurkeuze), 21:00 boho_set (set; set had de meeste Clickmind-kliks: kersthoek 6 tegen tafelhaard 1). Weergaven nog te laag om te leren (2 per reel).",
       "2026-11-21: 08:30 al voorbij (ronde 09:41 NL), dus 2 per platform op IG en FB: 15:30 17uur_donker (pov, eerste test van die soort, past bij het tijdstip), 21:00 steenlampen_set (set: 7 Clickmind-kliks over 2 video's tegen kleurkeuze 2). Weergaven per reel nog 0 tot 2, te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd; wachtrij zonder gepost: 20.",
-      "2026-11-22: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 kerstfinds (finds, eerste test van die soort) en 21:00 n261119a wollen dekens (set: 7 Clickmind-kliks over 2 video's, kleurkeuze 2). IG-reels van 21 nov kregen voor het eerst bereik: steenlampen_set 16 weergaven, 17uur_donker 12 (tegen 1 tot 4 eerder); nog niet 24 uur oud. FB-reels blijven 0 in Zernio terwijl Clickmind wel FB-kliks telt. Te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd."
+      "2026-11-22: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 kerstfinds (finds, eerste test van die soort) en 21:00 n261119a wollen dekens (set: 7 Clickmind-kliks over 2 video's, kleurkeuze 2). IG-reels van 21 nov kregen voor het eerst bereik: steenlampen_set 16 weergaven, 17uur_donker 12 (tegen 1 tot 4 eerder); nog niet 24 uur oud. FB-reels blijven 0 in Zernio terwijl Clickmind wel FB-kliks telt. Te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd.",
+      "2026-11-23: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 n261118c (finds, planten; finds gaf met kerstfinds het eerste Clickmind-mandje via een video) en 21:00 n261118a (set, Housevitamin kerst; set heeft 12 Clickmind-kliks over 4 video's en 21:00 gaf de meeste IG-weergaven: steenlampen 20, n261119a 5 kliks). IG-weergaven per video: set 6,8, pov 12 (1 video), kleurkeuze 1,5. FB-reels 2 tot 8 weergaven. Te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd."
     ]
   }
 }
