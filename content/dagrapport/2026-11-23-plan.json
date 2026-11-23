@@ -7,7 +7,7 @@
     "topics": [
       "White elephant gifts under $10",
       "Stocking stuffers for men who have everything",
-      "Cozy Christmas puzzles",
+      "12 free printable Christmas word searches",
       "White elephant gifts people actually steal"
     ],
     "pins": [
@@ -38,11 +38,15 @@
         "haak": "sok-puzzel",
         "a": "B0DMNK1J5T",
         "bord": "271060540011963292",
-        "titel": "Christmas stocking stuffer: Cozy Christmas Sudoku",
-        "tekst": "Cozy Christmas Sudoku: $4.99, 55 pages of Christmas puzzles. Stocking stuffer for adults and seniors, plus 3 free printable Christmas word search puzzles on our site.",
-        "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_content=20261123-sok-puzzel-1j5t",
-        "beeld": "https://stockingbooks.com/pin/B0DMNK1J5T-sok-puzzel.png",
-        "kop": "Christmas puzzles for a quiet morning, $4.99"
+        "titel": "12 Free Printable Christmas Word Searches with Answer Keys",
+        "tekst": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+        "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
+        "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.svg",
+        "kop": "12 FREE Christmas Word Searches",
+        "status": "concept_waiting_for_preview_approval",
+        "beeld_formaat": "SVG 1000x1500; vóór Pinterestpublicatie verliesvrij omzetten naar PNG/JPEG en opnieuw controleren.",
+        "campaign_id": "sb-free-wordsearch-20261123",
+        "product_link_note": "Dit is een gratis-woordzoekerspin; a blijft uitsluitend bestaande haakadministratie. Geen sudokuboek of prijs in beeld/copy. Genereer niet opnieuw met de bestaande betaalde boektemplate."
       },
       {
         "id": "20261123-we-ideeen-t9jt",
@@ -60,7 +64,25 @@
       "Corrigeer bij de sudoku-pin het verouderde aantal gratis woordzoekers van 3 naar het daadwerkelijk aanwezige aantal (overdracht:12).",
       "Maak de afgekapt weergegeven mannenpintitel volledig leesbaar.",
       "Controleer prijs, leverbare editie, bord, bestemming en overlap met andere Kadoly-pins vóór plaatsing.",
-      "Dit zijn vier concepten, geen toestemming om het totale dagvolume te verhogen of direct te publiceren."
+      "Dit zijn vier concepten, geen toestemming om het totale dagvolume te verhogen of direct te publiceren.",
+      "Lees het trafficonderzoek en de concrete proef. Gebruik voor sok-puzzel de echte gratis-puzzelpreview; kopieer de oude betaalde boekafbeelding niet. Publicatie alleen na akkoord op concrete batch; zelfde gezamenlijke dagvolume."
+    ],
+    "revisions": [
+      {
+        "at": "2026-11-23T19:33:31.287Z",
+        "reason": "Henkjan vraagt aantoonbaar traffic te leren verwerven. Eén puzzelconcept afgestemd op de daadwerkelijke gratis bestemming; overige drie concepten blijven gelijk.",
+        "original_pin": {
+          "id": "20261123-sok-puzzel-1j5t",
+          "haak": "sok-puzzel",
+          "a": "B0DMNK1J5T",
+          "bord": "271060540011963292",
+          "titel": "Christmas stocking stuffer: Cozy Christmas Sudoku",
+          "tekst": "Cozy Christmas Sudoku: $4.99, 55 pages of Christmas puzzles. Stocking stuffer for adults and seniors, plus 3 free printable Christmas word search puzzles on our site.",
+          "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_content=20261123-sok-puzzel-1j5t",
+          "beeld": "https://stockingbooks.com/pin/B0DMNK1J5T-sok-puzzel.png",
+          "kop": "Christmas puzzles for a quiet morning, $4.99"
+        }
+      }
     ]
   },
   "lasting_change": {

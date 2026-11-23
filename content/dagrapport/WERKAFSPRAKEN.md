@@ -25,3 +25,13 @@ Henkjan geeft aan dat het oude bericht over verificatie van stockingbooks.com bl
 - Meld een afgeronde technische stap niet opnieuw als vandaag uitgevoerd of opgelost. Vergelijk met vorige ronde en het gedeelde dagboek; alleen een nieuwe concrete fout of statuswijziging met nieuw bronbewijs rechtvaardigt een nieuwe technische melding.
 - Het dagelijkse verkeersrapport blijft doorgaan. Als cijfers ontbreken, benoem de ontbrekende meting in plaats van de oude setup opnieuw te rapporteren. Geen belofte dat morgen cijfers beschikbaar zijn zonder bevestiging.
 - Nieuwe technische feiten opslaan met datum, bron en vorige/nieuwe status, zodat Pinterest-, artikel- en rapportageronde geen dubbele mijlpaalupdates sturen.
+
+## Traffic leren van andere makers (23 november 2026)
+
+Henkjan: "Zorg dat je traffic LEERT krijgen door uit te zoeken wat anderen doen om traffic te krijgen."
+
+- Lees per ronde minimaal één relevante primaire concurrentbron of bron met echte kanaalcijfers. Leg datum, concrete aanpak, echte cijfers, tegenbewijs en overdraagbaarheid vast. Een zichtbaar ontwerp bewijst geen verkeer; een zelfrapportage is geen onafhankelijk causaal bewijs.
+- Begin bij bestaand bruikbaar materiaal en een passende distributie-ingang. Ieder nieuw artikelconcept krijgt ook een voorgenomen zoekvraag, pin/andere ingang, bestemming en primaire verkeersmaat.
+- Lees de vorige proef terug. Maak per ronde één aantoonbare mismatch of kans concreet; nieuwe zichtbare inhoud eerst als preview. Behoud lopende controlegroepen en het gezamenlijke pinvolume.
+- Meet uitgaande Pinterestkliks, bereik en saves apart; vergelijk leeftijden, borden, bestemmingen en tijdvensters. Ontbrekende providerdata is onbekend. Geen winnaar op één pin of alleen op plaatsing.
+- Eerste brononderzoek en concept: content/dagrapport/2026-11-23-traffic-onderzoek.md en 2026-11-23-traffic-proef.json. De puzzelpin uit de dagplanning krijgt een passende gratis-woordzoekpreview. Status blijft concept tot akkoord.

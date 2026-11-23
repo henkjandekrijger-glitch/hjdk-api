@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "round": "traffic_research",
+  "observed_at_utc": "2026-11-23T19:33:31.287Z",
+  "scope": [
+    "stockingbooks.com",
+    "lastingchange.works",
+    "books Pinterest"
+  ],
+  "request": "Zorg dat je traffic LEERT krijgen door uit te zoeken wat anderen doen om traffic te krijgen.",
+  "reporting_period_utc": {
+    "start": "2026-11-22T00:00:00Z",
+    "end_exclusive": "2026-11-23T00:00:00Z"
+  },
+  "baseline": {
+    "source": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1",
+    "metric": "registered_page_openings",
+    "stockingbooks": 7,
+    "lastingchange": 13,
+    "unique_people": null,
+    "source_breakdown": null,
+    "comparable_days": 1,
+    "amazon_raw_redirect_requests": 208,
+    "amazon_unique_clickers": null
+  },
+  "pinterest": {
+    "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+    "logged_pins_on_report_day": 8,
+    "provider_impressions": null,
+    "provider_outbound_clicks": null,
+    "provider_saves": null,
+    "availability_note": "pinstand is interne cache zonder betrouwbare nieuwe performance-waarneming. Metricool getbrandsettings twee keer INVALID_ARGUMENT; pluginzoekactie levert geen Zernio-connector. Geen ontbrekende of ongedateerde waarden als nulperformance."
+  },
+  "google_index": {
+    "source": "https://hjdk-api-henq.vercel.app/api/gsc?op=index&site=bookstuffers&n=3&url=https%3A%2F%2Fstockingbooks.com%2Ffree-printable-christmas-word-search&url=https%3A%2F%2Fstockingbooks.com%2F&url=https%3A%2F%2Fstockingbooks.com%2Fstocking-stuffers",
+    "observed_date": "2026-11-23",
+    "in_sitemap": 17,
+    "inspected": 3,
+    "indexed_in_inspected_subset": 1,
+    "not_indexed": [
+      "https://stockingbooks.com/stocking-stuffers",
+      "https://stockingbooks.com/free-printable-christmas-word-search"
+    ],
+    "state": "Gevonden - momenteel niet geïndexeerd",
+    "limitation": "Slechts3van17gecontroleerd; geen totale indexgraad1/17afleiden. De indexstatus is een technische actuele waarneming, geen bezoekersmeting."
+  },
+  "sources": [
+    {
+      "id": "bourbon",
+      "url": "https://janefriedman.com/pinterest-is-my-best-kept-author-marketing-secret/",
+      "published": "2025-06-25",
+      "type": "first_person_case_with_dashboard",
+      "finding": "Organisch dashboard: 5.15k uitgaande kliks, 84.26k vertoningen en 1.02k saves; screenshot laatste30dagen, in artikel geplaatst onder december2024-januari2025. Aanpak: inhoud/gratis materiaal plus covers, verticale pins, borden per lezersinteresse.",
+      "limitation": "Zelfrapportage van auteur die ook een cursus aanbiedt, geen gecontroleerd experiment. Geen KDP-verkoop causaal aan Pinterest toegeschreven."
+    },
+    {
+      "id": "one-little-project",
+      "url": "https://onelittleproject.com/christmas-word-search/",
+      "published": "2026-11-18",
+      "type": "observed_competitor_page",
+      "finding": "Drie moeilijkheidsniveaus met antwoordbladen, concrete printinstructies en PDF-links. Dit domein wordt in ons vaste AI-panel bij de woordzoekvraag geciteerd.",
+      "limitation": "Geen verkeerscijfers openbaar op de gecontroleerde pagina. Bronvermelding in ons panel is geen bewijs van Google-positie of verkoopeffect."
+    },
+    {
+      "id": "nesslabs",
+      "url": "https://nesslabs.com/newsletter-curiosity-consistency",
+      "published": "2020-12",
+      "type": "first_person_historical_case",
+      "finding": "Maker beschrijft groei naar25000 nieuwsbriefabonnees en pieken na ProductHunt, HackerNews, een YouTube-vermelding en Calm. Bruikbare inhoud en externe distributie werken samen.",
+      "limitation": "Historisch, zelfgerapporteerd; abonnees zijn geen websitebezoekers. Geen groeigarantie of numerieke norm voor LC."
+    },
+    {
+      "id": "pinterest-chiara",
+      "url": "https://create.pinterest.com/en-ca/success-stories/chiara-celani/",
+      "published": null,
+      "type": "vendor_case",
+      "finding": "Pinterest rapporteert +165% uitgaande kliks over drie maanden bij Chiara Celani na een combinatie van planning en analyse.",
+      "limitation": "Marketingcasus van platform/partner, geen absolute aantallen, geen gecontroleerde oorzaak; geen specifieke kalenderperiode opgegeven."
+    },
+    {
+      "id": "pinterest-definitions",
+      "url": "https://help.pinterest.com/en/business/article/pinterest-analytics",
+      "type": "official_metric_definitions",
+      "finding": "Vertoningen, saves, pinopeningen en uitgaande kliks zijn aparte metingen. Uitgaande kliks gaan naar een bestemming buiten Pinterest.",
+      "limitation": "Uitgaande kliks bewijzen geen unieke bezoekers, landingspagina-openingen, Amazonklik of aankoop."
+    }
+  ],
+  "finding": {
+    "evidence": "De bestaande sok-puzzel-template noemt een betaald sudokuboek en3gratis puzzels, terwijl de doelpagina12gratis woordzoekers met antwoorden bevat. Onderzoek geeft een plausibele gratis-ingang, geen bewezen effect voor ons.",
+    "type": "confirmed_message_destination_mismatch",
+    "hypothesis": "Een pin die de echte gratis woordzoekers toont en dezelfde belofte als de doelpagina heeft kan relevante uitgaande kliks en pagina-openingen opleveren.",
+    "effect": "unknown"
+  },
+  "prepared": {
+    "pin": {
+      "id": "20261123-sok-puzzel-1j5t",
+      "haak": "sok-puzzel",
+      "a": "B0DMNK1J5T",
+      "bord": "271060540011963292",
+      "titel": "12 Free Printable Christmas Word Searches with Answer Keys",
+      "tekst": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+      "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
+      "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.svg",
+      "kop": "12 FREE Christmas Word Searches",
+      "status": "concept_waiting_for_preview_approval",
+      "beeld_formaat": "SVG 1000x1500; vóór Pinterestpublicatie verliesvrij omzetten naar PNG/JPEG en opnieuw controleren.",
+      "campaign_id": "sb-free-wordsearch-20261123",
+      "product_link_note": "Dit is een gratis-woordzoekerspin; a blijft uitsluitend bestaande haakadministratie. Geen sudokuboek of prijs in beeld/copy. Genereer niet opnieuw met de bestaande betaalde boektemplate."
+    },
+    "research_path": "content/dagrapport/2026-11-23-traffic-onderzoek.md",
+    "svg_path": "content/dagrapport/2026-11-23-pin-woordzoekers.svg",
+    "image_source": "Exacte eerste15x15woordzoeker van de bestaande eigen pagina; geen afbeelding of raster van concurrenten.",
+    "publication": "not_published"
+  },
+  "evaluation": {
+    "type": "exploratory_distribution_pilot",
+    "start": "date_of_actual_approved_publication",
+    "primary_metric": "Provider-confirmed organic outbound clicks to the exact campaign destination, with pin age and impressions.",
+    "secondary_metric": "Registered Pinterest-attributed openings of the exact landing page; not unique people.",
+    "separate_metrics": [
+      "impressions",
+      "saves",
+      "pin_clicks",
+      "outbound_clicks",
+      "registered_landing_page_openings",
+      "raw_amazon_redirect_requests",
+      "attributed_sales_if_available"
+    ],
+    "technical_check": "Direct na publicatie echte post-ID, beeldformaat, link, UTM en bereikbaarheid controleren. Binnen24uur providerdata opnieuw proberen.",
+    "early_check": "Na7dagen distributie bekijken. Weinig bereik is onvoldoende bewijs voor een slecht doorklikpercentage.",
+    "review": "Na14tot21dagen vanafwerkelijkeplaatsing en voldoende vergelijkbaredata. Geen winnaar bij ontbrekende providerstatistieken of één losse pin.",
+    "control": "Geen vergelijkbare historische puzzelpin gepubliceerd in de interne lijst. Daarom geen A/B-winstclaim. Bestaande content- en modalcontrolegroepen blijven ongewijzigd. Een latere eerlijke vergelijking binnen bestaande slots gebruikt dezelfde bestemming, leeftijd, bord en meetdefinitie.",
+    "no_extra_posts": true
+  },
+  "daily_learning_rule": "Lees per ronde minimaaléén relevante primaire concurrentbron of bron met echte kanaalcijfers; noteer bron/datum, bewezenwaarneming versus hypothese, watwij wel/nietovernemen, één concrete concept/proef en bij teruglezing de echte uitkomst. Geen nieuwartikel zonderdistributie-ingang en controlelink.",
+  "actual_changes": [
+    "Onderzoek en uitgewerkt pinconcept duurzaam voorbereid; interne planning wijzigt één concept, geen openbare site-/Pinterestpublicatie.",
+    "Dagelijkse taken worden aangevuld met teruglezen van dit onderzoek en verkeersleren met bewijs."
+  ],
+  "unchanged": [
+    "Geen advertenties/campagnes/budgetten/betaalinstellingen gewijzigd.",
+    "Geen outreach/e-mail/Telegramverstuurd.",
+    "Geen Gateway/DemandRadar-aankoop.",
+    "GeenDNS/rechtenwijziging en geenherhaaldeGoogle-verificatie."
+  ],
+  "next_priority": "Providerdata of paginabronnen aansluiten waar bestaande integratie dit levert; concept tonen en na exactakkoord binnenbestaande planning uitvoeren. Google-indexering van beide ontdekte ingangen apart volgen."
+}

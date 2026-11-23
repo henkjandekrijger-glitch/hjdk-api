@@ -498,6 +498,72 @@
         "pending_measurement_proposal": "content/dagrapport/2026-11-23-meetvoorstel.md"
       },
       "unchanged_settings": "Geen advertenties, campagnes, budgetten, betaalinstellingen, Telegram-cron of outreach gewijzigd."
+    },
+    {
+      "observed_at_utc": "2026-11-23T19:33:31.287Z",
+      "entry_type": "traffic_research_and_draft",
+      "reporting_period_utc": {
+        "start": "2026-11-22T00:00:00Z",
+        "end_exclusive": "2026-11-23T00:00:00Z"
+      },
+      "traffic": {
+        "source": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1",
+        "metric": "registered_page_openings",
+        "stockingbooks": 7,
+        "lastingchange": 13,
+        "unique_people": null,
+        "source_breakdown": null,
+        "comparable_days": 1,
+        "amazon_raw_redirect_requests": 208,
+        "amazon_unique_clickers": null
+      },
+      "google_index": {
+        "source": "https://hjdk-api-henq.vercel.app/api/gsc?op=index&site=bookstuffers&n=3&url=https%3A%2F%2Fstockingbooks.com%2Ffree-printable-christmas-word-search&url=https%3A%2F%2Fstockingbooks.com%2F&url=https%3A%2F%2Fstockingbooks.com%2Fstocking-stuffers",
+        "observed_date": "2026-11-23",
+        "in_sitemap": 17,
+        "inspected": 3,
+        "indexed_in_inspected_subset": 1,
+        "not_indexed": [
+          "https://stockingbooks.com/stocking-stuffers",
+          "https://stockingbooks.com/free-printable-christmas-word-search"
+        ],
+        "state": "Gevonden - momenteel niet geïndexeerd",
+        "limitation": "Slechts3van17gecontroleerd; geen totale indexgraad1/17afleiden. De indexstatus is een technische actuele waarneming, geen bezoekersmeting."
+      },
+      "lesson": {
+        "evidence": "De bestaande sok-puzzel-template noemt een betaald sudokuboek en3gratis puzzels, terwijl de doelpagina12gratis woordzoekers met antwoorden bevat. Onderzoek geeft een plausibele gratis-ingang, geen bewezen effect voor ons.",
+        "type": "confirmed_message_destination_mismatch",
+        "hypothesis": "Een pin die de echte gratis woordzoekers toont en dezelfde belofte als de doelpagina heeft kan relevante uitgaande kliks en pagina-openingen opleveren.",
+        "effect": "unknown"
+      },
+      "implemented": [
+        "Onderzoek, concrete pinpreview en interne planning voorbereid; ongepubliceerd."
+      ],
+      "concept_path": "content/dagrapport/2026-11-23-traffic-proef.json",
+      "next_check": {
+        "type": "exploratory_distribution_pilot",
+        "start": "date_of_actual_approved_publication",
+        "primary_metric": "Provider-confirmed organic outbound clicks to the exact campaign destination, with pin age and impressions.",
+        "secondary_metric": "Registered Pinterest-attributed openings of the exact landing page; not unique people.",
+        "separate_metrics": [
+          "impressions",
+          "saves",
+          "pin_clicks",
+          "outbound_clicks",
+          "registered_landing_page_openings",
+          "raw_amazon_redirect_requests",
+          "attributed_sales_if_available"
+        ],
+        "technical_check": "Direct na publicatie echte post-ID, beeldformaat, link, UTM en bereikbaarheid controleren. Binnen24uur providerdata opnieuw proberen.",
+        "early_check": "Na7dagen distributie bekijken. Weinig bereik is onvoldoende bewijs voor een slecht doorklikpercentage.",
+        "review": "Na14tot21dagen vanafwerkelijkeplaatsing en voldoende vergelijkbaredata. Geen winnaar bij ontbrekende providerstatistieken of één losse pin.",
+        "control": "Geen vergelijkbare historische puzzelpin gepubliceerd in de interne lijst. Daarom geen A/B-winstclaim. Bestaande content- en modalcontrolegroepen blijven ongewijzigd. Een latere eerlijke vergelijking binnen bestaande slots gebruikt dezelfde bestemming, leeftijd, bord en meetdefinitie.",
+        "no_extra_posts": true
+      },
+      "limitations": [
+        "Geen verse Pinterest-providerdata.",
+        "Geen verkeersgroei of verkoop aan onderzoek of concept toegeschreven."
+      ]
     }
   ]
 }
