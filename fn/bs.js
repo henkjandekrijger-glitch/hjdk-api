@@ -131,6 +131,19 @@ export default async function handler(req, res) {
   if (op === 'zicht') return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(zichtJson(), null, 1), { robots: 'noindex' });
   if (op === 'fav') return stuur(res, 200, 'image/svg+xml', FAVICON, { cache: 'public, max-age=86400' });
   if (op === 'key') return stuur(res, 200, 'text/plain; charset=utf-8', INDEXNOW_KEY, { robots: 'noindex' });
+  // Overdracht content en distributie (OVERDRACHT-CONTENT.md) met de live stand eronder; alleen op de beschermde host (Henkjan 23 nov 2026)
+  if (op === 'content') {
+    if (!/-henq\.vercel\.app$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0])) return stuur(res, 403, 'text/plain; charset=utf-8', 'alleen via de beschermde host', { cache: 'no-store' });
+    let tekst = ''; try { tekst = fs.readFileSync(new URL('../OVERDRACHT-CONTENT.md', import.meta.url), 'utf8'); } catch (e) { tekst = 'OVERDRACHT-CONTENT.md niet gevonden in de uitrol.'; }
+    if (q.get('format') === 'md') return stuur(res, 200, 'text/markdown; charset=utf-8', tekst, { cache: 'no-store', robots: 'noindex' });
+    const stand = [];
+    try { const r = await dagRapport(kv, { droog: true, extra: { arts: (await kv.get('lc:arts').catch(() => null)) || [] } }); stand.push('Rapport van vandaag (zoals Telegram):\n' + String((r && (r.tekst || r.text)) || JSON.stringify(r))); } catch (e) { stand.push('Rapport: ' + e.message); }
+    try { const fouten = []; for (const s of SLUGS) fouten.push(...keur(render(s, ctx(true)), s || 'home')); stand.push(`Stocking Books: ${SLUGS.length} pagina's, ${fouten.length ? fouten.length + ' fouten: ' + fouten.slice(0, 5).join('; ') : 'keuring in orde'}`); } catch (e) {}
+    try { const a = (await kv.get('lc:arts').catch(() => null)) || []; const live = a.filter(x => x.status === 'live').length, con = a.length - live; stand.push(`Lasting Change-artikelen: ${live} live` + (con ? `, ${con} wachten op ok` : '')); } catch (e) {}
+    try { const pdf = !!(await LCF.paddleSleutel(kv)), mail = !!(await LCF.resendSleutel(kv)); stand.push(`LC-PDF-knop: ${pdf ? 'aan' : 'uit (PADDLE_API_KEY ontbreekt)'}; mail aan kopers: ${mail ? 'aan' : 'uit (Resend-sleutel ontbreekt)'}; coach-chatpagina: ${String(await kv.get('lc:w:live').catch(() => '')) === '1' ? 'live' : 'concept'}`); } catch (e) {}
+    try { const ix = await kv.get('bs:indexnow').catch(() => null); if (ix) stand.push(`IndexNow laatst: ${ix.t} (${ix.n} URL's, status ${ix.status})`); } catch (e) {}
+    return stuur(res, 200, 'text/plain; charset=utf-8', tekst + '\n\n## STAND (live, ' + new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC)\n\n' + stand.join('\n\n') + '\n', { cache: 'no-store', robots: 'noindex' });
+  }
   if (op === 'overdracht') {
     const stand = { bijgewerkt: BIJGEWERKT, prijzenGelezen: PRIJS_DATUM, paginas: SLUGS.map(s => BASE + '/' + s), boeken: TEL.boeken, totVijfDollar: TEL.tot5, whiteElephantOnderTien: TEL.we10, lastingChange: amz(LC.a), live: echt ? 'bookstuffers.com' : 'voorbeeld', indexnow: await kv.get('bs:indexnow').catch(() => null) };
     if (q.get('format') === 'json') return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(stand, null, 1), { cache: 'no-store', robots: 'noindex' });
