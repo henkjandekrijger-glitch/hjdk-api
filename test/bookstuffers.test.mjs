@@ -57,7 +57,7 @@ test('woordzoekers: elk woord staat erin, vaste uitkomst per zaadje', () => {
 
 test('sitemap, llms.txt en zicht.json', () => {
   assert.equal((sitemap().match(/<loc>/g) || []).length, SLUGS.length);
-  assert.match(llms(), /# Bookstuffers/);
+  assert.match(llms(), /# Stocking Books/);
   assert.ok(Array.isArray(zichtJson().toegepast));
 });
 
@@ -94,4 +94,13 @@ test('LC-check: keuzehulpchat met de zeven redenen, concept noindex, kennis in d
   const it = W.chatItems()[0]; assert.equal(it.slug, W.CHAT_SLUG); assert.match(it.pad, /^https:\/\/lastingchange\.works\//); assert.ok(it.uitleg.length < 2600, 'uitleg ' + it.uitleg.length);
   assert.doesNotMatch(JSON.stringify(W.REDENEN) + it.kort + it.uitleg, /[—–]/);
   assert.match(W.renderWaarom({ ...c, waaromLive: true }), /index,follow/);
+});
+
+test('kerstpagina\'s: moppen, quiz en kleurplaten renderen en zijn gekeurd', async () => {
+  const B = await import('../lib/bs.js'), X = await import('../lib/bsxmas.js');
+  for (const s of B.NIEUW) { const h = B.render(s, echt); assert.ok(h, s); assert.deepEqual(B.keur(h, s), [], s); assert.ok(!B.SLUGS.includes(s), s + ' pas na ok in de sitemap'); }
+  const n = Object.values(X.MOPPEN).flat().length; assert.match(B.render('christmas-jokes', echt), new RegExp(`<title>Christmas Jokes: ${n} `));
+  assert.ok(X.KLEUR.length >= 10); for (const k of X.KLEUR) assert.match(k.svg, /^<svg[\s\S]*<\/svg>$/);
+  assert.doesNotMatch(JSON.stringify([X.MOPPEN, X.QUIZ]), /[—–]/);
+  assert.match(B.sitemap(['christmas-jokes']), /christmas-jokes/);
 });

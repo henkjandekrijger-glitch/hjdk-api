@@ -3,7 +3,7 @@
 // Acties: robots, sitemap, llms, zicht (zicht.json), overdracht (?format=text), fav, key (IndexNow-sleutel), gezond (controle, &omslagen=1
 // vraagt ook elke omslag op), indexnow (pingt alle URL's één keer per BIJGEWERKT; daarna alleen de bewaarde uitkomst, nooit in een lus).
 import { kv } from '../lib/db.js';
-import { render, SLUGS, ROBOTS, sitemap, llms, zichtJson, OVERDRACHT, FAVICON, INDEXNOW_KEY, BIJGEWERKT, HOST, BASE, TEL, amz, omslag, keur, BOEK_ASIN, LC_URL } from '../lib/bs.js';
+import { render, NIEUW, SLUGS, ROBOTS, sitemap, llms, zichtJson, OVERDRACHT, FAVICON, INDEXNOW_KEY, BIJGEWERKT, HOST, BASE, TEL, amz, omslag, keur, BOEK_ASIN, LC_URL } from '../lib/bs.js';
 import { BOEKEN, LC, PRIJS_DATUM, ANDER } from '../lib/bs-data.js';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
@@ -26,7 +26,7 @@ function stuur(res, status, type, body, { cache = 'public, max-age=300, s-maxage
   res.end(body);
 }
 
-const isEcht = req => /(^|\.)bookstuffers\.com$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]);
+const isEcht = req => /(^|\.)stockingbooks\.com$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]);
 const ctx = echt => ({ echt, L: s => echt ? '/' + s : '/api/bs?p=' + encodeURIComponent(s) });
 
 
@@ -107,8 +107,17 @@ export default async function handler(req, res) {
   if ((isLc(req) || q.get('site') === 'lc') && !['go', 'tel', 'dagrapport'].includes(op)) return lcHandler(req, res, q, isLc(req));
   const noidx = echt ? '' : 'noindex, nofollow';
   if (op === 'robots') return stuur(res, 200, 'text/plain; charset=utf-8', echt ? ROBOTS : 'User-agent: *\nDisallow: /\n');
-  if (op === 'sitemap') return stuur(res, 200, 'application/xml; charset=utf-8', sitemap(), { robots: noidx });
-  if (op === 'llms') return stuur(res, 200, 'text/plain; charset=utf-8', llms(), { robots: noidx });
+  const nieuwLive = ((await kv.get('bs:live').catch(() => null)) || []).filter(x => NIEUW.includes(x));
+  if (op === 'sitemap') return stuur(res, 200, 'application/xml; charset=utf-8', sitemap(nieuwLive), { robots: noidx });
+  if (op === 'llms') return stuur(res, 200, 'text/plain; charset=utf-8', llms() + (nieuwLive.length ? '\n## Free Christmas extras\n' + nieuwLive.map(x => `- ${BASE}/${x}`).join('\n') + '\n' : ''), { robots: noidx });
+  // Nieuwe pagina's live zetten na Henkjans ok (beschermde host): zet de slug in bs:live en meldt alleen die URL bij IndexNow.
+  if (op === 'bslive') {
+    if (!/-henq\.vercel\.app$/i.test(String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0])) return stuur(res, 403, 'application/json', '{"ok":false}', { cache: 'no-store' });
+    const sl = q.get('slug') || ''; if (!NIEUW.includes(sl)) return stuur(res, 400, 'application/json', JSON.stringify({ ok: false, kan: NIEUW }), { cache: 'no-store' });
+    const l = [...new Set([...nieuwLive, sl])]; await kv.set('bs:live', l);
+    let status = 0; try { const r = await fetch('https://api.indexnow.org/indexnow', { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify({ host: HOST, key: INDEXNOW_KEY, keyLocation: `${BASE}/${INDEXNOW_KEY}.txt`, urlList: [BASE + '/' + sl] }), signal: AbortSignal.timeout(15000) }); status = r.status; } catch (e) {}
+    return stuur(res, 200, 'application/json', JSON.stringify({ ok: true, live: l, pagina: BASE + '/' + sl, indexnow: status }), { cache: 'no-store' });
+  }
   if (op === 'zicht') return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(zichtJson(), null, 1), { robots: 'noindex' });
   if (op === 'fav') return stuur(res, 200, 'image/svg+xml', FAVICON, { cache: 'public, max-age=86400' });
   if (op === 'key') return stuur(res, 200, 'text/plain; charset=utf-8', INDEXNOW_KEY, { robots: 'noindex' });
@@ -119,7 +128,7 @@ export default async function handler(req, res) {
   }
   if (op === 'gezond') {
     const fouten = [];
-    for (const s of SLUGS) { try { fouten.push(...keur(render(s, ctx(true)), s || 'home')); } catch (e) { fouten.push(`${s || 'home'}: ${e.message}`); } }
+    for (const s of [...SLUGS, ...NIEUW]) { try { fouten.push(...keur(render(s, ctx(true)), s || 'home')); } catch (e) { fouten.push(`${s || 'home'}: ${e.message}`); } }
     if (q.get('omslagen') === '1') {
       const lijst = [...BOEKEN, ...ANDER, LC];
       for (let i = 0; i < lijst.length; i += 8) await Promise.all(lijst.slice(i, i + 8).map(b => fetch(omslag(b.i, 200), { method: 'HEAD', signal: AbortSignal.timeout(8000) }).then(r => { if (!r.ok) fouten.push(`omslag ${b.a}: ${r.status}`); }).catch(e => fouten.push(`omslag ${b.a}: ${e.message}`))));
@@ -210,7 +219,7 @@ export default async function handler(req, res) {
     return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify({ dagen: 14, totaal: lijst.reduce((x, y) => x + y.n, 0), boeken: lijst }), { cache: 'no-store', robots: 'noindex' });
   }
   if (op === 'indexnow') {
-    if (!echt) return stuur(res, 400, 'application/json', '{"ok":false,"reden":"alleen op bookstuffers.com"}', { cache: 'no-store' });
+    if (!echt) return stuur(res, 400, 'application/json', '{"ok":false,"reden":"alleen op stockingbooks.com"}', { cache: 'no-store' });
     const oud = await kv.get('bs:indexnow').catch(() => null);
     const versie = BIJGEWERKT + '-' + SLUGS.length;
     if (oud && oud.versie === versie) return stuur(res, 200, 'application/json', JSON.stringify({ al: true, ...oud }), { cache: 'no-store' });
@@ -222,7 +231,9 @@ export default async function handler(req, res) {
   }
   const slug = String(q.get('p') || '').replace(/^\/+|\/+$/g, '');
   if (slug === 'lasting-change') { res.statusCode = 301; res.setHeader('Location', LC_URL); res.setHeader('Cache-Control', 'public, max-age=3600'); return res.end(); }
-  const html = render(slug, ctx(echt));
+  let concept = false;
+  if (NIEUW.includes(slug) && !nieuwLive.includes(slug)) { if (q.get('concept') !== '1') { res.statusCode = 302; res.setHeader('Location', echt ? '/' : '/api/bs?p='); res.setHeader('Cache-Control', 'no-store'); return res.end(); } concept = true; }
+  const html = render(slug, ctx(echt && !concept));
   if (html == null) return stuur(res, 404, 'text/html; charset=utf-8', render('', ctx(echt)).replace('<main>', '<main><p class="meta">That page does not exist. Here is the shelf.</p>'), { robots: 'noindex', cache: 'public, max-age=60' });
-  return stuur(res, 200, 'text/html; charset=utf-8', html, { robots: noidx || 'index, follow' });
+  return stuur(res, 200, 'text/html; charset=utf-8', html, concept ? { robots: 'noindex, nofollow', cache: 'no-store' } : { robots: noidx || 'index, follow' });
 }

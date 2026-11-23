@@ -436,7 +436,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(www\\.)?bookstuffers\\.com"
+          "value": "(www\\.)?stockingbooks\\.com"
         }
       ],
       "destination": "/api/bs?p="
@@ -446,7 +446,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(www\\.)?bookstuffers\\.com"
+          "value": "(www\\.)?stockingbooks\\.com"
         }
       ],
       "destination": "/api/bs?op=robots"
@@ -456,7 +456,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(www\\.)?bookstuffers\\.com"
+          "value": "(www\\.)?stockingbooks\\.com"
         }
       ],
       "destination": "/api/bs?op=sitemap"
@@ -466,7 +466,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(www\\.)?bookstuffers\\.com"
+          "value": "(www\\.)?stockingbooks\\.com"
         }
       ],
       "destination": "/api/bs?op=llms"
@@ -476,7 +476,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(www\\.)?bookstuffers\\.com"
+          "value": "(www\\.)?stockingbooks\\.com"
         }
       ],
       "destination": "/api/bs?op=zicht"
@@ -486,7 +486,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(www\\.)?bookstuffers\\.com"
+          "value": "(www\\.)?stockingbooks\\.com"
         }
       ],
       "destination": "/api/bs?op=overdracht"
@@ -496,7 +496,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(www\\.)?bookstuffers\\.com"
+          "value": "(www\\.)?stockingbooks\\.com"
         }
       ],
       "destination": "/api/bs?op=fav"
@@ -506,7 +506,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(www\\.)?bookstuffers\\.com"
+          "value": "(www\\.)?stockingbooks\\.com"
         }
       ],
       "destination": "/api/bs?op=fav"
@@ -516,7 +516,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(www\\.)?bookstuffers\\.com"
+          "value": "(www\\.)?stockingbooks\\.com"
         }
       ],
       "destination": "/api/bs?op=key"
@@ -526,7 +526,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(www\\.)?bookstuffers\\.com"
+          "value": "(www\\.)?stockingbooks\\.com"
         }
       ],
       "destination": "/api/bs?op=pinbeeld&f=:f"
@@ -536,7 +536,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(www\\.)?bookstuffers\\.com"
+          "value": "(www\\.)?stockingbooks\\.com"
         }
       ],
       "destination": "/api/bs?op=go&a=:a"
@@ -546,7 +546,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(www\\.)?bookstuffers\\.com"
+          "value": "(www\\.)?stockingbooks\\.com"
         }
       ],
       "destination": "/api/bs?op=omslag&i=:i"
@@ -656,7 +656,7 @@
       "has": [
         {
           "type": "host",
-          "value": "(www\\.)?bookstuffers\\.com"
+          "value": "(www\\.)?stockingbooks\\.com"
         }
       ],
       "destination": "/api/bs?p=:p"
@@ -2608,6 +2608,12 @@
     }
   },
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "(www\\.)?bookstuffers\\.com" }],
+      "destination": "https://stockingbooks.com/:path*",
+      "permanent": true
+    },
     {
       "source": "/huisdierverzekering",
       "has": [{"type": "host", "value": "(www\\.)?keuzehulp\\.best"}],
