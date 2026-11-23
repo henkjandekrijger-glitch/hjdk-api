@@ -97,6 +97,10 @@ De crons draaien vanzelf (lijst in de overdracht onder "Automatische rondes"). D
    - logboek in `lib/overdracht-kz-tekst.js` (nieuwste bovenaan, één regel, nooit mailadressen);
    - verander je hoe iets werkt: `lib/werking.js` bijwerken en `WERKING_DATUM` op vandaag.
 
+**Werktempo vanaf 23 nov (Henkjan: "doe zoveel mogelijk op een dag")**: werk de volledige geprioriteerde ronde af; stop niet na één verbetering. Bundel onafhankelijke reparaties en verbeteringen in één geteste uitrol. Nieuwbouwrem, privacy, campagnebudgetten en één chatproeffactor per dag blijven gelden. Nieuwe ontwerpen eerst als werkend voorbeeld tonen. Meer werk is geen groeibewijs: meld bereik, bruikbaar advies, rekengebruik en bevestigde opbrengst afzonderlijk. Lees ook data/keuzehulpen-groei/voorkant-plan-2026-11-23.json voor de expliciet gevraagde complete voorkant en de geplande rekenhulpen; status gepland is niet gebouwd.
+
+Aanvullende werking van de avondronde: docs/keuzehulpen-groei-werking-2026-11-23.md. De oude volledige overdracht blijft intact; lees ook deze wijzigingsnotitie en het levende werklog.
+
 ## 5a. Onderwerpkeuze die leert (23 november 2026)
 
 Lees data/keuzehulpen-groei/potenties-2026-11-23.json voor de bevroren eerste rangorde, bronnen, tegenbewijs en ontwikkelopdracht. Begin bij thuisbatterij met stekker en de bestaande Marstek/HomeWizard/Anker-vergelijking (NL), daarna balkonopslag achteraf in DE en pompnoodstroom in de VS. Alle kandidaten bestaan al; controleer steeds de actuele catalogus en sitemap. Maak geen tweede pagina voor dezelfde keuzevraag.

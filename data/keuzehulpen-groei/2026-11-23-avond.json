@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-23",
+  "round": "avond",
+  "timezone": "America/Curacao",
+  "measured_at": "2026-11-23T21:20:31.809Z",
+  "catalogue": {
+    "nl": 511,
+    "us": 176,
+    "de": 131,
+    "total": 818
+  },
+  "organic": {
+    "kz": {
+      "indexed": 14,
+      "checked": 165,
+      "new_limit": 0
+    },
+    "us": {
+      "indexed": 10,
+      "checked": 190,
+      "new_limit": 1
+    },
+    "de": {
+      "indexed": 7,
+      "checked": 128,
+      "new_limit": 1
+    }
+  },
+  "audit": [
+    {
+      "market": "nl",
+      "url": "https://keuzehulp.best/stekkerbatterij",
+      "status": 200,
+      "canonical": "https://keuzehulp.best/stekkerbatterij",
+      "robots": "index,follow,max-snippet:-1,max-image-preview:large",
+      "h1": 1,
+      "chat": true,
+      "knownWrongBattery": false
+    },
+    {
+      "market": "nl",
+      "url": "https://keuzehulp.best/marstek-venus-e-3-vs-homewizard-vs-anker-solix",
+      "status": 200,
+      "canonical": "https://keuzehulp.best/marstek-venus-e-3-vs-homewizard-vs-anker-solix",
+      "robots": "index,follow,max-snippet:-1,max-image-preview:large",
+      "h1": 1,
+      "chat": true,
+      "knownWrongBattery": false
+    },
+    {
+      "market": "nl",
+      "url": "https://keuzehulp.best/energieleverancier-vergelijken",
+      "status": 200,
+      "canonical": "https://keuzehulp.best/energieleverancier-vergelijken",
+      "robots": "index,follow,max-image-preview:large",
+      "h1": 1,
+      "chat": true,
+      "knownWrongBattery": false
+    },
+    {
+      "market": "nl",
+      "url": "https://keuzehulp.best/zonnepanelen",
+      "status": 200,
+      "canonical": "https://keuzehulp.best/zonnepanelen",
+      "robots": "index,follow,max-image-preview:large",
+      "h1": 1,
+      "chat": true,
+      "knownWrongBattery": false
+    },
+    {
+      "market": "nl",
+      "url": "https://keuzehulp.best/airfryer",
+      "status": 200,
+      "canonical": "https://keuzehulp.best/airfryer",
+      "robots": "index,follow,max-snippet:-1,max-image-preview:large",
+      "h1": 1,
+      "chat": true,
+      "knownWrongBattery": false
+    },
+    {
+      "market": "nl",
+      "url": "https://keuzehulp.best/fietsmaat",
+      "status": 200,
+      "canonical": "https://keuzehulp.best/fietsmaat",
+      "robots": "index,follow,max-snippet:-1,max-image-preview:large",
+      "h1": 1,
+      "chat": true,
+      "knownWrongBattery": false
+    },
+    {
+      "market": "us",
+      "url": "https://whichtobuy.best/best-portable-power-stations-for-home-backup-2026",
+      "status": 200,
+      "canonical": "https://whichtobuy.best/best-portable-power-stations-for-home-backup-2026",
+      "robots": "index,follow,max-snippet:-1,max-image-preview:large",
+      "h1": 1,
+      "chat": true,
+      "knownWrongBattery": false
+    },
+    {
+      "market": "us",
+      "url": "https://whichtobuy.best/best-sump-pump-battery-backup-systems-2026",
+      "status": 200,
+      "canonical": "https://whichtobuy.best/best-sump-pump-battery-backup-systems-2026",
+      "robots": "index,follow,max-snippet:-1,max-image-preview:large",
+      "h1": 1,
+      "chat": true,
+      "knownWrongBattery": false
+    },
+    {
+      "market": "de",
+      "url": "https://kaufberater.best/balkonkraftwerk-speicher-2026-vergleich-anker-zendure-ecoflow-marstek",
+      "status": 200,
+      "canonical": "https://kaufberater.best/balkonkraftwerk-speicher-2026-vergleich-anker-zendure-ecoflow-marstek",
+      "robots": "index,follow,max-snippet:-1,max-image-preview:large",
+      "h1": 1,
+      "chat": true,
+      "knownWrongBattery": false
+    },
+    {
+      "market": "de",
+      "url": "https://kaufberater.best/tagesgeld-vergleich-zinsen-2026-ohne-neukundenbonus",
+      "status": 200,
+      "canonical": "https://kaufberater.best/tagesgeld-vergleich-zinsen-2026-ohne-neukundenbonus",
+      "robots": "index,follow,max-snippet:-1,max-image-preview:large",
+      "h1": 1,
+      "chat": true,
+      "knownWrongBattery": false
+    }
+  ],
+  "runtime": {
+    "window": "6h",
+    "routes": [
+      "/api/kz",
+      "/api/wtb",
+      "/api/keuze-tools"
+    ],
+    "errors_found": 0
+  },
+  "keuring": {
+    "at": "2026-11-23T06:45:19.540Z",
+    "paginas": 25,
+    "goed": 25,
+    "fout": 0,
+    "uit": [
+      {
+        "naam": "NL voorpagina",
+        "url": "https://keuzehulp.best/",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL categorie",
+        "url": "https://keuzehulp.best/categorie/koken",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL keuzehulp",
+        "url": "https://keuzehulp.best/bluetooth-speaker",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL kerstcadeau",
+        "url": "https://keuzehulp.best/kerstcadeau",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL deals",
+        "url": "https://keuzehulp.best/deals",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL over ons",
+        "url": "https://keuzehulp.best/keuzehulp/over",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL zorgverzekering",
+        "url": "https://keuzehulp.best/zorgverzekering",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL zorg subpagina",
+        "url": "https://keuzehulp.best/zorgverzekering/tandartsverzekering",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL Rotterdam",
+        "url": "https://keuzehulp.best/rotterdam",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL verzekeringen",
+        "url": "https://keuzehulp.best/verzekeringen",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL rekenhulp laadpaal",
+        "url": "https://keuzehulp.best/laadpaal",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL rekenhulp domeinnaam",
+        "url": "https://keuzehulp.best/domeinnaam-kiezen",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL energie",
+        "url": "https://keuzehulp.best/energieleverancier-vergelijken",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL temu",
+        "url": "https://keuzehulp.best/temu-alternatieven",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "NL stekkerbatterij",
+        "url": "https://keuzehulp.best/stekkerbatterij",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "US home",
+        "url": "https://whichtobuy.best/",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "US category",
+        "url": "https://whichtobuy.best/category/home-kitchen",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "US guide",
+        "url": "https://whichtobuy.best/glass-air-fryer",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "US about",
+        "url": "https://whichtobuy.best/about",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "US tool domain",
+        "url": "https://whichtobuy.best/domain-name",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "DE Startseite",
+        "url": "https://kaufberater.best/",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "DE Kaufberater",
+        "url": "https://kaufberater.best/kaffeevollautomat-unter-500-euro-milchschaum-2026",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "DE Impressum",
+        "url": "https://kaufberater.best/about",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "nexy.help",
+        "url": "https://nexy.help/",
+        "status": 200,
+        "fouten": []
+      },
+      {
+        "naam": "nexy.help vergelijk",
+        "url": "https://nexy.help/compare",
+        "status": 200,
+        "fouten": []
+      }
+    ]
+  },
+  "income_before": {
+    "ok": true,
+    "at": "2026-11-23T21:07:08.881Z",
+    "dagen": 30,
+    "vandaag": 0,
+    "week": 0,
+    "maand": 0,
+    "perBron": {
+      "bol": {
+        "ok": true,
+        "totaal": 0
+      },
+      "awin": {
+        "ok": false,
+        "totaal": 0,
+        "fout": "awin geen antwoord"
+      }
+    },
+    "awinPerMerk": {},
+    "awinStatus": {},
+    "rijen": [
+      {
+        "dag": "2026-11-23",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-22",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-21",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-20",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-19",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-18",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-17",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-16",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-15",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-14",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-13",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-12",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-11",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-10",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-09",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-08",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-07",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-06",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-05",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-04",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-03",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-02",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-11-01",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-10-31",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-10-30",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-10-29",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-10-28",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-10-27",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-10-26",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      },
+      {
+        "dag": "2026-10-25",
+        "totaal": 0,
+        "bol": 0,
+        "awin": 0
+      }
+    ]
+  },
+  "decisions": [
+    "Fix unavailable income source shown as zero; retain known partial sums separately.",
+    "No second experiment factor today; preserve registered SEO tests.",
+    "Prepare complete front page with existing chat, catalogues and truthful planned tools; show preview before homepage replacement."
+  ],
+  "claims": {
+    "organic_growth": "not demonstrated",
+    "revenue_growth": "not demonstrated"
+  },
+  "next_checks": {
+    "operation": "after deployment",
+    "coverage": "7 days",
+    "seo": "mature separate windows, about 35 days and enough observations"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "date": "2026-11-23",
+  "status": "preview requested; production home not replaced",
+  "preview_branch": "codex/keuzehulpen-voorkant-20261123",
+  "scope": [
+    "keuzehulp.best",
+    "whichtobuy.best",
+    "kaufberater.best"
+  ],
+  "approved_work": [
+    "Daily round with as much relevant work as possible within existing boundaries.",
+    "Build and show working complete front-page example with existing chat at top, full catalogue, tools and upcoming plans."
+  ],
+  "catalogue": {
+    "nl": 511,
+    "us": 176,
+    "de": 131,
+    "total": 818
+  },
+  "roadmap": {
+    "nl": [
+      {
+        "id": "zorgkosten-2027",
+        "kind": "improve",
+        "title": "Zorgverzekering: jouw totale jaarkosten",
+        "text": "Premie, eigen risico en aanvullende dekking naast elkaar, voor jouw verwachte zorg.",
+        "slug": "zorgverzekering",
+        "evidence": "Demand Radar 2026-11-23, zorgverzekering vergelijk 27100, decemberkans 97%; bestaande tool uitbreiden."
+      },
+      {
+        "id": "energie-2027",
+        "kind": "improve",
+        "title": "Zonnepanelen en batterij in 2027",
+        "text": "Vergelijk je energiekosten en besparing met jouw verbruik, tarieven en teruglevering.",
+        "slug": "stekkerbatterij",
+        "evidence": "Bestaand batterijcluster; officiële wijziging salderen 2027; radarvooruitzicht brede term vlak."
+      },
+      {
+        "id": "rekenchat",
+        "kind": "improve",
+        "title": "Rekenen in hetzelfde gesprek",
+        "text": "Eén vraag tegelijk. Je antwoorden gaan mee naar de berekening die bij je keuze hoort.",
+        "slug": "hypotheek-berekenen",
+        "evidence": "Bestaande rekeninterfaces en chat; gedeelde invoer per tool controleren en verbeteren."
+      }
+    ],
+    "us": [
+      {
+        "id": "wilds-switch-2",
+        "kind": "new",
+        "title": "Monster Hunter Wilds on Switch 2",
+        "text": "Choose the edition and platform that fit you, and compare the extra costs before you buy.",
+        "evidence": "Demand Radar coming 2026-11-23; Capcom release Nintendo Switch 2 2026-12-04. Specific Switch2 volume unknown."
+      },
+      {
+        "id": "backup-runtime",
+        "kind": "improve",
+        "title": "How long will your backup battery last?",
+        "text": "Add your devices and the hours you need. Work out usable battery capacity and power.",
+        "slug": "best-portable-power-stations-for-home-backup-2026",
+        "evidence": "Bestaand gebruik powerstation; rekentool ontbreekt op live pagina 2026-11-23."
+      },
+      {
+        "id": "pump-runtime",
+        "kind": "improve",
+        "title": "Size your sump pump battery backup",
+        "text": "Compare battery capacity, pump demand and how often the pump runs.",
+        "slug": "best-sump-pump-battery-backup-systems-2026",
+        "evidence": "Demand Radar batterij-detail 2026-11-18, sump pump battery backup 22200, jaar +50%; maandperiode onbekend."
+      }
+    ],
+    "de": [
+      {
+        "id": "fuehrerschein-umtausch",
+        "kind": "new",
+        "title": "Wann musst du deinen Führerschein umtauschen?",
+        "text": "Finde anhand deines Führerscheins die passende Frist und die nächsten Schritte.",
+        "evidence": "Demand Radar 2026-11-23, fuehrerschein umtauschen 165000, Januarkans 88%; Bundesregierung Fristen geprüft."
+      },
+      {
+        "id": "balkon-rechner",
+        "kind": "improve",
+        "title": "Welcher Speicher passt zu deinem Balkon?",
+        "text": "Berechne passende Kapazität, mögliche Ersparnis und Amortisation mit deinen Angaben.",
+        "slug": "balkonkraftwerk-speicher-2026-vergleich-anker-zendure-ecoflow-marstek",
+        "evidence": "Demand Radar 2026-11-23, breite term 110000, Monatsprognose flach; bestehende Nutzung."
+      },
+      {
+        "id": "tagesgeld-rechner",
+        "kind": "improve",
+        "title": "Tagesgeld mit Aktionszins durchrechnen",
+        "text": "Vergleiche den Ertrag für deinen Betrag und deine Laufzeit, auch nach dem Aktionszins.",
+        "slug": "tagesgeld-vergleich-zinsen-2026-ohne-neukundenbonus",
+        "evidence": "Demand Radar 2026-11-23, tagesgeld konto 301000; statische Beispiele vorhanden, numerischer Rechner fehlt."
+      }
+    ]
+  },
+  "priority_existing_tools": [
+    "NL zorgverzekering 2027",
+    "US powerstation capacity/runtime",
+    "DE balcony storage",
+    "NL energy scenarios 2027",
+    "DE Tagesgeld promo and follow-on interest",
+    "US sump pump battery runtime"
+  ],
+  "reserves": [
+    {
+      "topic": "NL weekend budget",
+      "status": "validate exact need and booking route; NL new-page pause"
+    },
+    {
+      "topic": "US cruise total cost",
+      "status": "brand search is not proven comparison demand"
+    }
+  ],
+  "workflow": [
+    "Deduplicate topic against catalogue, synonyms and truncated slugs.",
+    "If calculations improve the choice, include a shared math core and source/version alongside the guide.",
+    "Preview new UI before homepage replacement.",
+    "Measure search/AI traffic, completed advice/calculation, correct outbound action and attributed revenue separately."
+  ]
+}
