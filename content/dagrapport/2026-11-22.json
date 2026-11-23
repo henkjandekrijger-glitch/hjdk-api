@@ -425,6 +425,79 @@
       ],
       "raw_daily_report": "Organisch boeken, 2026-11-22 (UTC)\nstockingbooks.com: 7 geregistreerde pagina-openingen\nlastingchange.works: 13 geregistreerde pagina-openingen\nAmazonverzoeken: 208 (ruwe redirects, geen unieke personen)\nAmazonverzoeken per site: stockingbooks.com 1\nBeste pagina's: lastingchange.works/ 6, stockingbooks.com/ 6, lastingchange.works/why-it-didnt-work 6\nPinterest: 8 pins geplaatst\nMeetlek: pagina-openingen en Amazonverzoeken zijn niet per klik gekoppeld. Nog geen betrouwbaar doorklikpercentage; eerst meten, dan een inhoudsproef kiezen.\nDetails: https://stockingbooks.com/overdracht",
       "human_report": "Dagrapport over 22 november 2026 (UTC), gecontroleerd op 23 november.\nVerkeer: Stocking Books 7 pagina-openingen; Lasting Change 13. Dit zijn geen unieke bezoekers.\nGroei blijft onbeslist: er is slechts één vergelijkbare afgesloten meetdag.\nBronverdeling en Google-totalen ontbreken; AI-broncitaten zijn in de huidige panels nog niet bevestigd.\nPinterest: 8 pins geregistreerd. Verse weergaven, uitgaande kliks en saves zijn niet beschikbaar.\nAmazon: 208 ruwe redirectverzoeken. Hieruit zijn geen unieke klikkers of verkopen af te leiden.\nGeleerd: pagina-openingen en uitgaande klikken moeten eerst aan elkaar worden gekoppeld.\nVerbeterd op 23 november: de LC-kooproute en rapportlabels zijn hersteld; de werking is opnieuw gecontroleerd.\nHet uitstelartikel staat live en is indexeerbaar: https://lastingchange.works/how-to-stop-procrastinating\nVolgende stap: voorstel voor paginagebonden klikmeting staat klaar; werkingstoets binnen 24 uur na goedgekeurde uitrol.\nInhoudsoordeel volgt 7 tot 14 december bij voldoende data.\nOpen: GSC- en Pinterest-meettoegang ontbreken; PDF-verkoop en kopersmail wachten op instellingen."
+    },
+    {
+      "observed_at_utc": "2026-11-23T14:26:38.023Z",
+      "entry_type": "approved_amazon_button_publication",
+      "event_date_utc": "2026-11-23",
+      "reporting_period_utc": {
+        "start": "2026-11-22T00:00:00Z",
+        "end_exclusive": "2026-11-23T00:00:00Z"
+      },
+      "measurement_note": "Uitvoeringsaanvulling op de ronde van 23 november. De oorspronkelijke waarneming over 22 november blijft ongewijzigd; geen nieuwe verkeerscijfers gemeten in deze aanvulling.",
+      "approval": {
+        "request": "Amazonknoppen prominenter",
+        "preview": "https://hjdk-ajs7hglm4-henq.vercel.app/api/bs?p=stocking-stuffers",
+        "approved_reply": "yes",
+        "date": "2026-11-23"
+      },
+      "implemented_and_checked": [
+        {
+          "change": "Grotere gedeelde Amazonknoppen met expliciet label en pijl op iedere boekkaart en LC-kooppunten; volledig breed op mobiel, automatisch op nieuwe boekblokken en artikelen.",
+          "status": "live_verified",
+          "commit": "e865988331e2be019e48b8a6683f4310793fd974",
+          "pull_request": "https://github.com/henkjandekrijger-glitch/hjdk-api/pull/11",
+          "deployment": "dpl_CUbnfHsv7TeFrZE4pW1YXe49Dx21",
+          "checks": [
+            {
+              "source": "https://stockingbooks.com/stocking-stuffers",
+              "http_status": 200,
+              "visible_amazon_buttons": 44,
+              "all_checked_amazon_links_use_go": true,
+              "robots": "index, follow"
+            },
+            {
+              "source": "https://lastingchange.works/",
+              "http_status": 200,
+              "visible_amazon_buttons": 4,
+              "all_checked_amazon_links_use_go": true,
+              "robots": "index, follow"
+            },
+            {
+              "source": "https://lastingchange.works/how-to-stop-procrastinating",
+              "http_status": 200,
+              "visible_amazon_buttons": 1,
+              "all_checked_amazon_links_use_go": true,
+              "robots": "index, follow"
+            },
+            {
+              "source": "https://hjdk-api-henq.vercel.app/api/bs?op=gezond",
+              "http_status": 200,
+              "ok": true
+            },
+            {
+              "source": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=gezond",
+              "http_status": 200,
+              "ok": true
+            }
+          ],
+          "existing_tests_passed": 17,
+          "limitations": "Desktoppreview visueel gezien; mobiele CSS/rendering nagekeken zonder volledige mobiele screenshotcontrole. Geen uitgaande Amazonklik uitgevoerd door de agent."
+        }
+      ],
+      "lesson": {
+        "finding": "Een volledig aanklikbare boekkaart heeft nu ook een zichtbare actieknop; dit is een goedgekeurde ontwerpverbetering.",
+        "evidence": "Preview en openbare HTML met 44 expliciete knoppen op stocking-stuffers; LC-home en het uitstelartikel gebruiken dezelfde stijl en /go-route.",
+        "business_effect": "Onbekend. Een geslaagde deploy of zichtbare knop bewijst geen extra verkeer, kliks of verkoop."
+      },
+      "control": "Bestaande content- en modalcontrolegroepen behouden. Dit is geen afzonderlijk gerandomiseerd conversie-experiment.",
+      "next_check": {
+        "technical": "Binnen 24 uur de knop- en bronroutewerking opnieuw controleren.",
+        "primary_metric": "Paginagebonden Amazonklikfrequentie, pas nadat de voorgestelde pagina/browserklikkoppeling operationeel is; tot dan geen betrouwbare CTR.",
+        "effect_review_window": "2026-12-07/2026-12-14 bij voldoende vergelijkbare data.",
+        "pending_measurement_proposal": "content/dagrapport/2026-11-23-meetvoorstel.md"
+      },
+      "unchanged_settings": "Geen advertenties, campagnes, budgetten, betaalinstellingen, Telegram-cron of outreach gewijzigd."
     }
   ]
 }
