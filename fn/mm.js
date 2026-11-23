@@ -58,7 +58,7 @@ import { echteTag, verwerkBeacon, verwerkKlik, amazonBouw, armVoor, nieuwId, ser
 import { leesWissel, bewaarWissel, alleWissels, kiesArm, soortPersoon, bestemming, wisselKlik, cidKoppel, uitkomst, amazonUitkomst, wisselStand } from '../lib/wissel.js';
 import { leerRonde, instelling } from '../lib/leer.js';
 import { dossier, naarCsv, dagDossiers } from '../lib/terug.js';
-import { modalBeslis, modalEv, modalMail, modalGedrag, leesModal, bewaarModal, alleModals, modalStand, catalogus, bewaarCatalogus, zetModalAlias, VORMEN } from '../lib/modal.js';
+import { modalBeslis, modalEv, modalMail, modalGedrag, leesModal, bewaarModal, alleModals, modalStand, catalogus, bewaarCatalogus, zetModalAlias, VORMEN, modalUitkomst } from '../lib/modal.js';
 import { overdracht } from '../lib/overdracht.js';
 import { RT_JS, RT_GO_JS, rtBeslis, leesRt, zetRt, rtStand } from '../lib/retarget.js';
 import { whPixelHtml } from '../lib/whop.js';
@@ -131,6 +131,13 @@ const cors = res => { res.setHeader('access-control-allow-origin', '*'); res.set
 
 export default async function handler(req, res) {
   const url = new URL(req.url, 'http://x'); const op = String(url.searchParams.get('op') || '').toLowerCase(); const q = k => url.searchParams.get(k);
+  // Todayin AI reports only a verified opt-in, with its server-only shared key.
+  if (op === 'ai-confirm') {
+    res.setHeader('cache-control', 'no-store');
+    const { confirmAIOptin } = await import('../lib/ai-confirm.js');
+    const r = await confirmAIOptin({ kv, modalUitkomst, method: req.method, authorization: req.headers.authorization, body: leesJson(req.body), secret: process.env.CLICKMIND_AI_SECRET });
+    return res.status(r.status).json(r.body);
+  }
   if (op === 'cmradar') { // 21 nov 2026 (Henkjan: "Kijk naar clickmind"): Demand Radar leest mensen per zoekterm als eigen-vraag-meter; alleen project demand_radar (ondertekend Vercel OIDC-token)
     const { verifyVercelOidc } = await import('../lib/oidcverify.js');
     try { await verifyVercelOidc(String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''), { owner: 'henq', projects: ['demand_radar'] }); }
