@@ -998,6 +998,16 @@
       "destination": "/api/verzekeringen?op=out&id=:id"
     },
     {
+      "source": "/:p(nl|start|achtergrond|pers|vriendenloterij-opzeggen)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=dpagina&p=:p"
+    },
+    {
       "source": "/",
       "has": [
         {
