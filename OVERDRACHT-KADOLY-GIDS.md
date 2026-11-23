@@ -9,6 +9,10 @@ Regie (sinds 23 nov 2026): het groei-account van Kadoly is regisseur van alle or
 - Na het plan en een panel (psycholoog, kassa-conversie, SEO nieuwe domeinen, AI-vindbaarheid) koos Henkjan: plek **gids.kadoly.com** (niet een los domein; kadoly.help alleen kopen en doorsturen), Google Shopping repareren **later**, producten zelf bestellen **nog niet** (dus afraden alleen op harde feiten).
 - Inspiratie van Henkjan: vertrouwen groeit als de klant ziet hoe de winkel handelt wanneer zijn belang en het verkoopbelang uiteenlopen (geschiktheidscheck die kan afraden, zichtbare selectie, eerlijk over hoe we verdienen, retourroute vooraf, cadeauzekerheid).
 
+## Correctie betaaldiagnose, 23 november 2026
+
+De 5 historische betaalstarts zijn gebeurtenissen, geen aangetoonde vijf onafhankelijke klanten: 3 zijn op 3 november (bekende testdag), 1 op 7 november en 1 op 12 november. De gids `test-check` staat bovendien tussen de afrekenmeldingen. Niet verwijderen of achteraf als echte klant herlabelen. De 391 kliks zijn geen unieke bezoekers. Gebruik geen kansberekening 0 uit 5 tegen 85% zonder order-/providerkoppeling en testuitsluiting. In de huidige shopfeed zijn alle 22 verlopen orders van vóór 11 november; de twee orders van de laatste 7 dagen zijn betaald. Zie docs/kadoly-kassa-2026-11-23.md.
+
 ## Hoe het werkt
 - Code: fn/gids.js (pagina's, sitemap, robots, llms.txt, teller, op=feiten voor productfeiten via de beschermde vercel.app-host), gidsen in lib/gidsen-kadoly.js (met de hand geschreven op echte productfeiten), kliks via /naar/<pid> naar fn/shop.js op=gidsuit en dan Clickmind direct() naar kadoly.com met hj-code (net x, utm_source kadoly-gids, utm_medium gids, utm_campaign <gids>).
 - Routes in vercel.json voor host gids.kadoly.com. Testen kan al op https://hjdk-api-henq.vercel.app/api/gids?slug=<gids>.
