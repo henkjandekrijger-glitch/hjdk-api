@@ -14,7 +14,7 @@ Henkjan is niet technisch. Praat Nederlands, kort, één stap tegelijk, en doe h
 | Onderdeel | Stand |
 |---|---|
 | Ontwerp, alle schermen | Af, op https://ontwerp.wearemany.now (noindex, zwarte balk "Ontwerp") |
-| Stap 1 echt: melden, tellen, e-mail, vijf pagina's | Gebouwd en getest op de proefversie, branch `wam-dossier`. NIET op main, dus niet op wearemany.now |
+| Stap 1 echt: melden, tellen, e-mail, vijf pagina's | Live op wearemany.now sinds 23 nov 2026 (Henkjan: "Ja zet live"): /nl /start /achtergrond /pers /vriendenloterij-opzeggen. Noindex en nergens gelinkt tot `op=dlive&aan=1`. De root is nog Whoz |
 | Dossiers met cijfer en wet (Blendle, ANP, hosters) | Alleen ontwerp. Wacht op een jurist |
 | "Wij zeggen voor je op" | Alleen ontwerp. Wacht op een jurist |
 | Mails aan melders | Bestaan niet. Eerst langs de POST-lus en langs Henkjan |
@@ -71,7 +71,7 @@ Schermen in het ontwerp (achter `#`): voorkant, nu, melders, modal, gesprek, opg
 
 1. **Voorkant: bij elk van de tien kort hoe het bedrijf bekend staat, met "meer »" en de bronnen** (Henkjan 23 nov: "Zet bij alle dingen op voorkant ook kort hoe ze bekend staan met meer >> en de bronnen"). Nog niet gedaan: het vraagt per bedrijf echt bronnenonderzoek. Vorm: één neutrale regel per bedrijf met een feit en datum, uitklapbaar met `<details>` (twee of drie regels en de bronnen als links). Bronnen: klacht.nl (aantal, % opgelost, cijfer), Consumentenbond, Radar, Kassa, ACM, Trustpilot. Alleen wat op de bronpagina zelf staat, met datum. Geen oordeel van ons. Tien bedrijven: VriendenLoterij, Postcode Loterij, Videoland, Flanderijn, Ziggo, NS, PostNL, KPN, Intrum, ANWB.
 1b. **Bij elk dossier heel duidelijk de eindverantwoordelijken binnen het bedrijf** (Henkjan 23 nov: "Bij dossiers moeten heel duidelijk eindveranwoordelijken bij staan binnen het bedrijf"). In het ontwerp staat het blok al bovenaan elk dossier (Blendle, ANP, vijf hosters), nog zonder namen. Invullen per bedrijf: naam, functie, sinds wanneer, met bron en datum (Handelsregister, de eigen site van het bedrijf, jaarverslag). Eerst opzoeken wie het nu is, niet uit het geheugen. Alleen mensen in hun functie; geen privéadres, privénummer of privéaccounts. Brieven gaan op naam naar deze mensen. Ook dit langs de jurist.
-2. "ja live" van Henkjan: branch `wam-dossier` op main (eerst `git fetch` en rebase, test, dan push). Daarna `op=dstand` op de echte host nakijken en zelf één melding met foto doen.
+2. Gedaan op 23 nov: branch `wam-dossier` staat op main. Nog doen: één echte melding met foto of pdf via wearemany.now/start en daarna `op=dstand` nakijken (https://hjdk-api-henq.vercel.app/api/wam?op=dstand).
 3. Eigen opzegpagina voor de andere negen, zoals de VriendenLoterij, alleen met gecontroleerde opzegwegen. Gecontroleerd: Ziggo `ziggo.nl/opzeggen/formulier`, KPN `kpn.com/service/administratie/opzeggen`, Videoland `videoland.com/account` (alleen via de website). Niet gecontroleerd: telefoon en adres van de VriendenLoterij (088 020 10 20, Beethovenstraat 200, 1077 JZ Amsterdam, uit het reglement zoals aangehaald op een forum) en de opzeglinks van beide loterijen.
 4. Privacypagina (`op=privacy` in fn/wam.js) beschrijft alleen de chat: alinea over meldingen erbij.
 5. Bevestigingsmail na aanmelden, en de dagmail: eerst het concept.
@@ -103,6 +103,7 @@ Voorstel cijfer per bedrijf (1 tot 10): antwoord 3 punten (binnen 15 dagen), opl
 
 ## Logboek (nieuwste bovenaan)
 
+- 23 nov 2026: live op main op Henkjans woord ("Ja zet live"). Pagina's blijven noindex. Volgende: de voorkant meer inhoud geven (voorstel ligt bij Henkjan).
 - 23 nov 2026: blok "Eindverantwoordelijk" bovenaan de drie dossiers in het ontwerp (nog zonder namen), en de overdracht live via op=doverdracht.
 - 23 nov 2026: overdracht geschreven. Knop op de voorkant is "Plak je verhaal". Links werken op het proefadres. Contact op Pers via de chat, geen mailadres. Open: de regels "hoe ze bekend staan" met bronnen.
 - 23 nov 2026: stap 1 gebouwd op branch `wam-dossier` (melden, tellen, e-mail, vijf pagina's, dstand, dtest). Push naar main geweigerd zonder Henkjans woord.
