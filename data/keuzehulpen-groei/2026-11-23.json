@@ -1,0 +1,538 @@
+{
+  "date": "2026-11-23",
+  "observed_at_utc": "2026-11-23T15:02:00Z",
+  "scope": [
+    "keuzehulp.best",
+    "whichtobuy.best",
+    "kaufberater.best"
+  ],
+  "report_timezone": "America/Curacao",
+  "daily_report": {
+    "start_local": "2026-11-24 08:00",
+    "cadence": "daily",
+    "timing": "approximately"
+  },
+  "sites": {
+    "kz": {
+      "host": "keuzehulp.best",
+      "google_period": {
+        "startDate": "2026-10-25",
+        "endDate": "2026-11-21"
+      },
+      "google_site_total": {
+        "imp": 16,
+        "clicks": 0,
+        "ctr": 0,
+        "pos": 6.625
+      },
+      "own_guide_page_totals": {
+        "imp": 90,
+        "clicks": 0,
+        "basis": "paginatotalen zonder de naar curacao.day verhuisde Curaçao-pagina's"
+      },
+      "index": {
+        "dag": "2026-11-23",
+        "inSitemap": 165,
+        "bekeken": 165,
+        "geindexeerd": 14
+      },
+      "search_referrer_events_7d": {
+        "zoek": 1,
+        "ai": 4,
+        "perBron": {
+          "bing": 1,
+          "chatgpt": 4
+        }
+      },
+      "googlebot_user_agent_events_7d": 538,
+      "crawl_warning": null,
+      "new_page_budget": 0,
+      "index_reasons": {
+        "URL is onbekend bij Google": 62,
+        "Gecrawld - momenteel niet geïndexeerd": 88,
+        "Ingediend en geïndexeerd": 14,
+        "Gevonden - momenteel niet geïndexeerd": 1
+      },
+      "seo_experiments": {
+        "lopend": 81,
+        "klaar": [],
+        "perStatus": {
+          "loopt": 81,
+          "gestopt": 4,
+          "geen-data": 1
+        },
+        "verlengd": 32,
+        "eerstKlaar": "2026-11-24",
+        "nietBeoordeeld": [
+          {
+            "les": "interne-links-niet-geindexeerd",
+            "status": "gestopt",
+            "fout": null,
+            "toel": null,
+            "start": "2026-11-18"
+          },
+          {
+            "les": "interne-links-niet-geindexeerd",
+            "status": "gestopt",
+            "fout": null,
+            "toel": null,
+            "start": "2026-11-12"
+          },
+          {
+            "les": "interne-links-niet-geindexeerd",
+            "status": "gestopt",
+            "fout": null,
+            "toel": "Indexproef: getest 0/88 (88 gepland), controle 0/21 (21 gepland). Alleen metingen vanaf de uitslagdatum; zonder voldoende verse controle geen winnaar.",
+            "start": "2026-10-29"
+          },
+          {
+            "les": "rekenhulp-maatvragen",
+            "status": "geen-data",
+            "fout": null,
+            "toel": null,
+            "start": "2026-10-17"
+          },
+          {
+            "les": "interne-links-niet-geindexeerd",
+            "status": "gestopt",
+            "fout": null,
+            "toel": "Indexproef: getest 0/42 (42 gepland), controle 0/10 (10 gepland). Alleen metingen vanaf de uitslagdatum; zonder voldoende verse controle geen winnaar.",
+            "start": "2026-10-15"
+          }
+        ],
+        "langLopend": [
+          {
+            "les": "antwoord-bovenaan",
+            "start": "2026-10-21",
+            "klaar": "2026-12-02",
+            "verlengd": 1,
+            "toel": "Vereist hetzelfde AI-panel/model, minstens acht vergelijkbare vragen en vijf meetdagen per vraag vóór en na de wijziging."
+          },
+          {
+            "les": "onderwerpen-onderling-linken",
+            "start": "2026-10-21",
+            "klaar": "2026-11-25",
+            "verlengd": 1,
+            "toel": "Indexproef: getest 0/6 (6 gepland), controle 0/0 (0 gepland). Alleen metingen vanaf de uitslagdatum; zonder voldoende verse controle geen winnaar."
+          },
+          {
+            "les": "volledige-lokale-vergelijking-met-reviews",
+            "start": "2026-10-21",
+            "klaar": "2026-12-02",
+            "verlengd": 1,
+            "toel": "Vereist hetzelfde AI-panel/model, minstens acht vergelijkbare vragen en vijf meetdagen per vraag vóór en na de wijziging."
+          },
+          {
+            "les": "faq-uit-zoekvragen",
+            "start": "2026-10-20",
+            "klaar": "2026-11-24",
+            "verlengd": 1,
+            "toel": "Vertoningen getest 14 -> 21; controle 0 -> 0. Alleen vergelijkbare paginatotalen, gescheiden meetvensters en voldoende waarnemingen krijgen bewijsgewicht. Een gecontroleerd signaal bewijst geen gegarandeerd oorzakelijk SEO-effect."
+          },
+          {
+            "les": "faq-uit-zoekvragen",
+            "start": "2026-10-20",
+            "klaar": "2026-11-24",
+            "verlengd": 1,
+            "toel": "Vertoningen getest 6 -> 9; controle 0 -> 0. Alleen vergelijkbare paginatotalen, gescheiden meetvensters en voldoende waarnemingen krijgen bewijsgewicht. Een gecontroleerd signaal bewijst geen gegarandeerd oorzakelijk SEO-effect."
+          },
+          {
+            "les": "faq-uit-zoekvragen",
+            "start": "2026-10-20",
+            "klaar": "2026-11-24",
+            "verlengd": 1,
+            "toel": "Vertoningen getest 85 -> 97; controle 0 -> 0. Alleen vergelijkbare paginatotalen, gescheiden meetvensters en voldoende waarnemingen krijgen bewijsgewicht. Een gecontroleerd signaal bewijst geen gegarandeerd oorzakelijk SEO-effect."
+          },
+          {
+            "les": "faq-uit-zoekvragen",
+            "start": "2026-10-20",
+            "klaar": "2026-11-24",
+            "verlengd": 1,
+            "toel": "Vertoningen getest 34 -> 42; controle 0 -> 0. Alleen vergelijkbare paginatotalen, gescheiden meetvensters en voldoende waarnemingen krijgen bewijsgewicht. Een gecontroleerd signaal bewijst geen gegarandeerd oorzakelijk SEO-effect."
+          },
+          {
+            "les": "titel-zoekterm-voorop",
+            "start": "2026-10-20",
+            "klaar": "2026-11-24",
+            "verlengd": 1,
+            "toel": "Vertoningen getest 4 -> 12; controle 0 -> 0. Alleen vergelijkbare paginatotalen, gescheiden meetvensters en voldoende waarnemingen krijgen bewijsgewicht. Een gecontroleerd signaal bewijst geen gegarandeerd oorzakelijk SEO-effect."
+          },
+          {
+            "les": "faq-uit-zoekvragen",
+            "start": "2026-10-19",
+            "klaar": "2026-12-07",
+            "verlengd": 2,
+            "toel": "Vertoningen getest 64 -> 0; controle 0 -> 0. Alleen vergelijkbare paginatotalen, gescheiden meetvensters en voldoende waarnemingen krijgen bewijsgewicht. Een gecontroleerd signaal bewijst geen gegarandeerd oorzakelijk SEO-effect."
+          },
+          {
+            "les": "faq-uit-zoekvragen",
+            "start": "2026-10-19",
+            "klaar": "2026-12-07",
+            "verlengd": 2,
+            "toel": "Vertoningen getest 21 -> 0; controle 0 -> 0. Alleen vergelijkbare paginatotalen, gescheiden meetvensters en voldoende waarnemingen krijgen bewijsgewicht. Een gecontroleerd signaal bewijst geen gegarandeerd oorzakelijk SEO-effect."
+          }
+        ]
+      },
+      "llm_panel": {
+        "model": "perplexity/sonar",
+        "panel": "bf9ad93844276047",
+        "queries": 8,
+        "citations": 0
+      }
+    },
+    "us": {
+      "host": "whichtobuy.best",
+      "google_period": {
+        "startDate": "2026-10-25",
+        "endDate": "2026-11-21"
+      },
+      "google_site_total": {
+        "imp": 317,
+        "clicks": 4,
+        "ctr": 0.012618296529968454,
+        "pos": 21.217665615141957
+      },
+      "own_guide_page_totals": {
+        "imp": 18,
+        "clicks": 0,
+        "basis": "paginatotalen zonder de naar curacao.day verhuisde Curaçao-pagina's"
+      },
+      "index": {
+        "dag": "2026-11-23",
+        "inSitemap": 190,
+        "bekeken": 190,
+        "geindexeerd": 10
+      },
+      "search_referrer_events_7d": {
+        "zoek": 8,
+        "ai": 0,
+        "perBron": {
+          "bing": 6,
+          "google": 2
+        }
+      },
+      "googlebot_user_agent_events_7d": 47,
+      "crawl_warning": null,
+      "new_page_budget": 1,
+      "index_reasons": {
+        "URL is onbekend bij Google": 167,
+        "Gecrawld - momenteel niet geïndexeerd": 13,
+        "Ingediend en geïndexeerd": 10
+      },
+      "seo_experiments": {
+        "lopend": 18,
+        "klaar": [],
+        "perStatus": {
+          "loopt": 18
+        },
+        "verlengd": 2,
+        "eerstKlaar": "2026-11-25",
+        "nietBeoordeeld": [],
+        "langLopend": [
+          {
+            "les": "interne-links-niet-geindexeerd",
+            "start": "2026-11-06",
+            "klaar": "2026-12-04",
+            "verlengd": 1,
+            "toel": "Indexproef: getest 0/8 (97 gepland), controle 0/2 (28 gepland). Alleen metingen vanaf de uitslagdatum; zonder voldoende verse controle geen winnaar."
+          },
+          {
+            "les": "zusterlinks-ontdekking",
+            "start": "2026-10-17",
+            "klaar": "2026-12-05",
+            "verlengd": 2,
+            "toel": "Indexproef: getest 0/15 (15 gepland), controle 0/0 (0 gepland). Alleen metingen vanaf de uitslagdatum; zonder voldoende verse controle geen winnaar."
+          }
+        ]
+      },
+      "llm_panel": {
+        "model": "perplexity/sonar",
+        "panel": "5d836ba81bc3aba0",
+        "queries": 8,
+        "citations": 0
+      }
+    },
+    "de": {
+      "host": "kaufberater.best",
+      "google_period": {
+        "startDate": "2026-10-25",
+        "endDate": "2026-11-21"
+      },
+      "google_site_total": {
+        "imp": 883,
+        "clicks": 5,
+        "ctr": 0.0056625141562853904,
+        "pos": 11.951302378255946
+      },
+      "own_guide_page_totals": {
+        "imp": 11,
+        "clicks": 2,
+        "basis": "paginatotalen zonder de naar curacao.day verhuisde Curaçao-pagina's"
+      },
+      "index": {
+        "dag": "2026-11-23",
+        "inSitemap": 128,
+        "bekeken": 128,
+        "geindexeerd": 7
+      },
+      "search_referrer_events_7d": {
+        "zoek": 21,
+        "ai": 0,
+        "perBron": {
+          "bing": 19,
+          "google": 2
+        }
+      },
+      "googlebot_user_agent_events_7d": 6,
+      "crawl_warning": null,
+      "new_page_budget": 1,
+      "index_reasons": {
+        "URL is onbekend bij Google": 67,
+        "Gevonden - momenteel niet geïndexeerd": 38,
+        "Gecrawld - momenteel niet geïndexeerd": 16,
+        "Ingediend en geïndexeerd": 7
+      },
+      "seo_experiments": {
+        "lopend": 11,
+        "klaar": [],
+        "perStatus": {
+          "loopt": 11
+        },
+        "verlengd": 2,
+        "eerstKlaar": "2026-11-29",
+        "nietBeoordeeld": [],
+        "langLopend": [
+          {
+            "les": "interne-links-niet-geindexeerd",
+            "start": "2026-11-06",
+            "klaar": "2026-12-04",
+            "verlengd": 1,
+            "toel": "Indexproef: getest 0/0 (48 gepland), controle 0/0 (12 gepland). Alleen metingen vanaf de uitslagdatum; zonder voldoende verse controle geen winnaar."
+          },
+          {
+            "les": "zusterlinks-ontdekking",
+            "start": "2026-10-17",
+            "klaar": "2026-12-05",
+            "verlengd": 2,
+            "toel": "Indexproef: getest 1/12 (15 gepland), controle 0/0 (0 gepland). Alleen metingen vanaf de uitslagdatum; zonder voldoende verse controle geen winnaar."
+          }
+        ]
+      },
+      "llm_panel": {
+        "model": "perplexity/sonar",
+        "panel": "14fa35733fe92b11",
+        "queries": 8,
+        "citations": 0
+      }
+    }
+  },
+  "health": {
+    "style": {
+      "checked_at": "2026-11-23T06:45:19.540Z",
+      "passed": 25,
+      "total": 25
+    },
+    "builder": {
+      "completed_refreshes": [
+        "speelgoed-cadeau",
+        "adventskalender-volwassenen"
+      ],
+      "protected_pages_not_refreshed": [
+        "printer",
+        "thuisbatterij",
+        "airfryer"
+      ],
+      "last_error": "2026-11-21 historical; successful refreshes confirmed on 2026-11-22 and 2026-11-23",
+      "new_nl_pages": "paused by core-phase policy"
+    },
+    "runtime_errors": {
+      "window": "24h",
+      "groups": 1,
+      "occurrences": 2,
+      "message": "Failed to download dynamic font for star; unresolved route is generic /api/[hjdkfn], no choice-guide ownership confirmed"
+    }
+  },
+  "revenue": {
+    "window_days": 30,
+    "bol_eur": 0,
+    "awin_eur": 0,
+    "coverage_excludes": [
+      "Amazon",
+      "Daisycon",
+      "Impact"
+    ]
+  },
+  "affiliates": {
+    "joined_nl": [
+      {
+        "id": 8151,
+        "naam": "Lampen24 NL",
+        "url": "https://www.lampen24.nl/",
+        "sector": "Home & Garden",
+        "regio": "NL",
+        "status": "Active"
+      },
+      {
+        "id": 77356,
+        "naam": "Svensson",
+        "url": "https://www.svensson.club",
+        "sector": "Health & Beauty",
+        "regio": "NL",
+        "status": "Active"
+      },
+      {
+        "id": 85161,
+        "naam": "Coolblue NL",
+        "url": "https://www.coolblue.nl/",
+        "sector": "Electronic Superstore",
+        "regio": "NL",
+        "status": "Active"
+      },
+      {
+        "id": 86283,
+        "naam": "Sanitair Online NL",
+        "url": "https://sanitaironline.nl/",
+        "sector": "Home & Garden",
+        "regio": "NL",
+        "status": "Active"
+      },
+      {
+        "id": 102231,
+        "naam": "PartyPro NL",
+        "url": "https://partypro.nl",
+        "sector": "Toys & Games",
+        "regio": "NL",
+        "status": "Active"
+      },
+      {
+        "id": 114540,
+        "naam": "Moderne Raamdecoratie Groep",
+        "url": "https://www.doehetbudget.nl",
+        "sector": "Furniture & Soft Furnishings",
+        "regio": "NL",
+        "status": "Active"
+      },
+      {
+        "id": 120541,
+        "naam": "TP Link Store NL",
+        "url": "https://nl.store.tapo.com/",
+        "sector": "Electronic Accessories",
+        "regio": "NL",
+        "status": "Active"
+      },
+      {
+        "id": 123052,
+        "naam": "Superfietsen NL",
+        "url": "https://www.superfietsen.nl/",
+        "sector": "Sports Equipment",
+        "regio": "NL",
+        "status": "Active"
+      },
+      {
+        "id": 125964,
+        "naam": "ALLPOWERS NL",
+        "url": "https://iallpowers.nl/",
+        "sector": "Home & Garden",
+        "regio": "NL",
+        "status": "Active"
+      },
+      {
+        "id": 131578,
+        "naam": "Narwal EU",
+        "url": "https://eu.narwal.com/",
+        "sector": "Home & Garden",
+        "regio": "NL",
+        "status": "Active"
+      }
+    ],
+    "pending_nl_count": 92,
+    "comparison": "no previous daily snapshot available; joined list is a baseline, not ten new approvals"
+  },
+  "campaign": {
+    "id": 12171454,
+    "confirmed_in_handover": "2026-11-23T14:58Z stopped with user's authorization",
+    "direct_recheck": "unavailable: connected PropellerAds tool asks for SSP_API_TOKEN; do not request or expose credentials; no campaign mutation"
+  },
+  "decision": {
+    "factor": "pillflow",
+    "new_default": {
+      "kzuxus": "a",
+      "kzuxde": "a"
+    },
+    "disabled": {
+      "kzuxus": [
+        "b"
+      ],
+      "kzuxde": [
+        "b"
+      ]
+    },
+    "nl": "continue both arms; control has fewer than 300 observations",
+    "threshold": {
+      "min_seen_per_arm": 300,
+      "min_model_probability_pct": 95
+    },
+    "observations": {
+      "kzuxus": {
+        "a": {
+          "seen": 4432,
+          "value": 3.2,
+          "intents": 356
+        },
+        "b": {
+          "seen": 601,
+          "value": 0.69,
+          "intents": 5
+        },
+        "probability_a_pct": 100
+      },
+      "kzuxde": {
+        "a": {
+          "seen": 2056,
+          "value": 4.97,
+          "intents": 295
+        },
+        "b": {
+          "seen": 332,
+          "value": 1.16,
+          "intents": 2
+        },
+        "probability_a_pct": 100
+      },
+      "kzuxnl": {
+        "a": {
+          "seen": 120,
+          "value": 0.42,
+          "intents": 0
+        },
+        "b": {
+          "seen": 537,
+          "value": 2.14,
+          "intents": 29
+        }
+      }
+    },
+    "limits": [
+      "adaptive factorial model output is not proof of revenue growth",
+      "observations are browser decisions, not deduplicated people",
+      "mostly Android traffic; do not generalize to iPhone or other traffic sources",
+      "no new challenger invented; next challenger belongs with development chat",
+      "the post-deployment effect is unknown"
+    ]
+  },
+  "next_checks": [
+    "2026-11-24: confirm only arm a assigned in US/DE and NL still tests both",
+    "compare Google indexing with fresh inspections; do not equate corrected bot counts to search growth",
+    "review SEO experiments due on 2026-11-24 without changing their protected pages"
+  ],
+  "validation": {
+    "node": "24.22.3",
+    "smoke": "passed: all lib/fn syntax, config bounds, comment check; airfryer, matras and homepage render 200 without production credentials",
+    "router": "39 handlers behind one function; check passed",
+    "assignment": "US/DE a for 50 draws per device; NL retains both arms",
+    "generated_scripts": "parse passed for NL, US, DE, alias and unrelated site",
+    "cache": "only stale b decisions in US/DE are discarded; active choices and other markets keep their factors",
+    "browser_visual": "not completed: installed Chrome aborted under sandbox. No CSS or visible markup changed; do not claim mobile screenshot verification",
+    "post_deployment": "pending"
+  }
+}

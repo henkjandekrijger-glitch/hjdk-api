@@ -26,7 +26,7 @@ Niet van dit account (eigen overdracht, eigen chat): Curaçao-gidsen en bedrijve
 
 ## 1. Elke sessie eerst
 
-1. `git pull --rebase` in de repo.
+1. `git pull --rebase` in de repo. Is lokaal Git-netwerk niet beschikbaar, lees en schrijf via de GitHub-connector; gebruik bij de laatste stap de actuele main-SHA als lease en behoud werk van andere chats.
 2. Lees met de Vercel-tool `web_fetch_vercel_url` (curl naar deze domeinen wordt door de proxy geblokkeerd):
    - de levende overdracht van de keuzehulpen: https://hjdk-api-henq.vercel.app/api/kz?op=overdracht (groot, ruim 350.000 tekens: bewaar het resultaat en lees per kop; koppen: Stand nu, Dagmeting, Vindbaarheid per site, Proeven, Crons, Open punten, Logboek);
    - de algemene handover: https://hjdk-api-henq.vercel.app/api/mm/handover (werklog van alle chats, budget, slots);
@@ -77,12 +77,12 @@ Sleutels staan als gedeelde team-variabelen in Vercel. Nooit tonen, ontsleutelen
 
 - Gebruik van de gidsen (antwoord kiezen of advies versturen) 22 nov: NL 3, VS 108, DE 20.
 - Perplexity noemt ons in 0% van de testvragen; AI noemt wel coolblue.nl, beterbed.nl en dergelijke.
-- **Het knelpunt is ontdekt worden, niet kwaliteit.** Googlebot leest keuzehulp.best sinds 20 okt nauwelijks. Daarom geldt de nieuwbouwrem (`lib/organic-policy.js`): bij minder dan de helft in Google hoogstens 2 nieuwe pagina's NL, 1 VS en 1 DE per dag; op keuzehulp.best de kernfase (alleen de kern open en in de sitemap, de rest noindex). Verbeteren van pagina's op plek 4 tot 20 gaat voor nieuwbouw.
+- **Ontdekking en indexering blijven het gemeten knelpunt; inhoudskwaliteit is daarmee niet bewezen.** De hele-host-crawlteller meldt op 23 nov 538 Googlebot-UA-events in 7 dagen, na de tellercorrectie van 21 nov. Dat bewijst geen groei van zoekverkeer of indexering en is niet rechtstreeks vergelijkbaar met de oude onvolledige teller. Daarom geldt de nieuwbouwrem (`lib/organic-policy.js`): bij minder dan de helft in Google hoogstens 2 nieuwe pagina's NL, 1 VS en 1 DE per dag; op keuzehulp.best de kernfase (alleen de kern open en in de sitemap, de rest noindex). Verbeteren van pagina's op plek 4 tot 20 gaat voor nieuwbouw.
 - Inkomsten 30 dagen: €0 bij bol en Awin (dashboard hierboven). Elke eerste verkoop is nieuws.
 
 ## 5. De dagronde
 
-De crons draaien vanzelf (lijst in de overdracht onder "Automatische rondes"). Dit account doet elke dag, in deze volgorde:
+De crons draaien vanzelf (lijst in de overdracht onder "Automatische rondes"). De expliciet gevraagde dagelijkse ChatGPT-ronde staat vanaf 24 nov ingesteld rond 08.00 Curaçao; controleer de bestaande taak voordat je er een maakt. Bewaar elke dag een geaggregeerde beginstand en beslissing in data/keuzehulpen-groei/JJJJ-MM-DD.json, zonder persoonsgegevens. Dit account doet elke dag, in deze volgorde:
 
 1. **Lezen** (sectie 1). Wat is er sinds gisteren veranderd: vertoningen, kliks, pagina's in Google, gebruik, fouten.
 2. **Fouten eerst.** Runtime-fouten, mislukte crons, een bouwmotor die stilstaat ("Laatste fout in de bouwmotor" in de overdracht), de huisstijlkeuring (`/api/kz?op=keuring&lees=1`). Repareren, `node scripts/rooktest.mjs` draaien, uitrollen, live nakijken.
@@ -97,7 +97,9 @@ De crons draaien vanzelf (lijst in de overdracht onder "Automatische rondes"). D
    - logboek in `lib/overdracht-kz-tekst.js` (nieuwste bovenaan, één regel, nooit mailadressen);
    - verander je hoe iets werkt: `lib/werking.js` bijwerken en `WERKING_DATUM` op vandaag.
 
-## 6. Lopende proeven in de chat (stand 23 nov 14:55 UTC)
+## 6. Lopende proeven in de chat (stand 23 nov 15:02 UTC)
+
+Dagronde 23 nov: uitsluitend factor pillflow beslist voor VS en DE. In VS won a met waarde 3,20 tegen 0,69 (4.432 tegen 601 gezien; intenties 356 tegen 5); in DE 4,97 tegen 1,16 (2.056 tegen 332; intenties 295 tegen 2). Beide voldeden aan 300 per arm en 95% kans volgens het bestaande model. Versie a blijft de standaard; b staat in de code uit. Alleen oude b-beslissingen worden opnieuw opgehaald, zodat ze niet zes dagen doorlopen. Ronde 3 en de andere factoren blijven bewaard. NL wacht nog op 300 voor a. De meeste waarnemingen komen van Android; dit is geen omzetbewijs. Geen nieuwe variant verzonnen: geef een volgende uitdager door aan ontwikkelchat kz-chat.
 
 Proef kzuxnl (ronde 3). Waarde per bezoeker: tik 1, pill 2, vraag 4, quiz 6, winkel 10, blijf 12, onthoud 15, deel 25, intentie 30, datum 30, gekoppeld 40, contact 45.
 
