@@ -20,18 +20,56 @@
         "tekst": "Stuff I Forget Because I’m Old: Large Print Password Book: $4.99, 110 pages. One of 20 funny small books for a white elephant gift exchange with a $5 or $10 limit. White elephant gift ideas for adults, coworkers and family.",
         "link": "https://stockingbooks.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261123-we-onder10-fxb1",
         "beeld": "https://stockingbooks.com/pin/B0DP42FXB1-we-onder10.png",
-        "kop": "Funny white elephant gifts under $10"
+        "kop": "Funny white elephant gifts under $10",
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "board_name": "we, white elephant",
+        "hypothesis": {
+          "hypothesis": "Een duidelijk budget in de kop kan uitgaande kliks trekken van mensen met een vastgesteld cadeaubudget.",
+          "reference": "we-dad, geplaatst 22 november",
+          "limit": "Ander boek en andere kop; alleen richtinggevend, geen A/B-controle."
+        },
+        "status": "concept_not_approved",
+        "publish_hold": "Geen plaatsing door deze ronde. Vier boekposts vandaag in interne registratie; gedeelde Kadoly-afspraak noemt maximaal drie pins per dag. Eerst gezamenlijke planning en exacte goedkeuring afstemmen.",
+        "duplicate_registration": {
+          "id": "20261123-we-onder10-fxb1",
+          "haak": "we-onder10",
+          "a": "B0DP42FXB1",
+          "post": "6b04967fd511266d6a856c13",
+          "t": "2026-11-23T19:39:57.187Z"
+        },
+        "image_check": {
+          "width": 1000,
+          "height": 1500,
+          "visually_checked": true,
+          "legacy_branding": "BOOKSTUFFERS staat nog op bestaand referentiebeeld; nieuwe merkversie eerst tonen vóór eventuele plaatsing."
+        }
       },
       {
         "id": "20261123-sok-hem-j7cy",
         "haak": "sok-hem",
         "a": "B0HRGNJ7CY",
         "bord": "271060540011963292",
-        "titel": "Stocking stuffer for men: Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Wh",
+        "titel": "Stocking Stuffers for Men Who Have Everything: 800 Unusual Facts",
         "tekst": "Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Who Have Everything: $14.99, 96 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
         "link": "https://stockingbooks.com/stocking-stuffers?utm_source=pinterest&utm_content=20261123-sok-hem-j7cy#for-him",
         "beeld": "https://stockingbooks.com/pin/B0HRGNJ7CY-sok-hem.png",
-        "kop": "Stocking stuffer for the man who has everything"
+        "kop": "Stocking stuffer for the man who has everything",
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "board_name": "sok, stocking stuffers",
+        "hypothesis": {
+          "hypothesis": "De combinatie mannen die alles hebben en 800 feiten kan relevante uitgaande kliks naar de mannenkeuze opleveren.",
+          "reference": "sok-gids-hem, geplaatst 22 november",
+          "limit": "Productpin versus gids; onderwerp verwant maar geen gerandomiseerde vergelijking."
+        },
+        "status": "concept_not_approved",
+        "publish_hold": "Geen plaatsing door deze ronde. Vier boekposts vandaag in interne registratie; gedeelde Kadoly-afspraak noemt maximaal drie pins per dag. Eerst gezamenlijke planning en exacte goedkeuring afstemmen.",
+        "duplicate_registration": null,
+        "image_check": {
+          "width": 1000,
+          "height": 1500,
+          "visually_checked": true,
+          "legacy_branding": "BOOKSTUFFERS staat nog op bestaand referentiebeeld; nieuwe merkversie eerst tonen vóór eventuele plaatsing."
+        }
       },
       {
         "id": "20261123-sok-puzzel-1j5t",
@@ -41,12 +79,27 @@
         "titel": "12 Free Printable Christmas Word Searches with Answer Keys",
         "tekst": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
         "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
-        "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.svg",
+        "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.png",
         "kop": "12 FREE Christmas Word Searches",
-        "status": "concept_waiting_for_preview_approval",
-        "beeld_formaat": "SVG 1000x1500; vóór Pinterestpublicatie verliesvrij omzetten naar PNG/JPEG en opnieuw controleren.",
+        "status": "concept_not_approved",
+        "beeld_formaat": "PNG 1000x1500, gerasterd uit dezelfde SVG en visueel gecontroleerd op 23 november 2026.",
         "campaign_id": "sb-free-wordsearch-20261123",
-        "product_link_note": "Dit is een gratis-woordzoekerspin; a blijft uitsluitend bestaande haakadministratie. Geen sudokuboek of prijs in beeld/copy. Genereer niet opnieuw met de bestaande betaalde boektemplate."
+        "product_link_note": "Dit is een gratis-woordzoekerspin; a blijft uitsluitend bestaande haakadministratie. Geen sudokuboek of prijs in beeld/copy. Genereer niet opnieuw met de bestaande betaalde boektemplate.",
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "board_name": "sok, stocking stuffers",
+        "hypothesis": {
+          "hypothesis": "Een echte gratis puzzelpreview met 12 woordzoekers en antwoorden kan uitgaande kliks naar de passende gratis bestemming opleveren.",
+          "reference": "sok-puzzel, B0DN65PRD9, geregistreerd 23 november 19:39 UTC",
+          "limit": "Nieuwe registratie biedt een mogelijke referentie, maar echte providerbestemming, bereik en postleeftijd moeten nog gelijk worden gecontroleerd. Geen winnaar of A/B-winstclaim."
+        },
+        "publish_hold": "Geen plaatsing door deze ronde. Vier boekposts vandaag in interne registratie; gedeelde Kadoly-afspraak noemt maximaal drie pins per dag. Eerst gezamenlijke planning en exacte goedkeuring afstemmen.",
+        "duplicate_registration": null,
+        "image_check": {
+          "width": 1000,
+          "height": 1500,
+          "visually_checked": true,
+          "legacy_branding": null
+        }
       },
       {
         "id": "20261123-we-ideeen-t9jt",
@@ -57,7 +110,29 @@
         "tekst": "Funny white elephant gift ideas by price limit, plus the steal test: does it get a laugh, would people use it, can nobody guess it? Starring Dad Jokes & Facts (2 books in 1), $11.",
         "link": "https://stockingbooks.com/white-elephant-gift-ideas?utm_source=pinterest&utm_content=20261123-we-ideeen-t9jt",
         "beeld": "https://stockingbooks.com/pin/B0DNB1T9JT-we-ideeen.png",
-        "kop": "White elephant gifts people actually steal"
+        "kop": "White elephant gifts people actually steal",
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "board_name": "we, white elephant",
+        "hypothesis": {
+          "hypothesis": "Een herkenbare steal-test kan mensen naar de complete prijsvergelijking laten doorklikken.",
+          "reference": "we-ruzie, geplaatst 22 november",
+          "limit": "Verwante haak; andere bestemming/boek mogelijk. Alleen richtinggevend."
+        },
+        "status": "concept_not_approved",
+        "publish_hold": "Geen plaatsing door deze ronde. Vier boekposts vandaag in interne registratie; gedeelde Kadoly-afspraak noemt maximaal drie pins per dag. Eerst gezamenlijke planning en exacte goedkeuring afstemmen.",
+        "duplicate_registration": {
+          "id": "20261123-we-ideeen-t9jt",
+          "haak": "we-ideeen",
+          "a": "B0DNB1T9JT",
+          "post": "6b04967b5d67d2299ad22eb9",
+          "t": "2026-11-23T19:39:56.079Z"
+        },
+        "image_check": {
+          "width": 1000,
+          "height": 1500,
+          "visually_checked": true,
+          "legacy_branding": "BOOKSTUFFERS staat nog op bestaand referentiebeeld; nieuwe merkversie eerst tonen vóór eventuele plaatsing."
+        }
       }
     ],
     "editorial_checks": [
@@ -82,8 +157,99 @@
           "beeld": "https://stockingbooks.com/pin/B0DMNK1J5T-sok-puzzel.png",
           "kop": "Christmas puzzles for a quiet morning, $4.99"
         }
+      },
+      {
+        "at": "2026-11-23T19:47:05.080Z",
+        "reason": "Pinterest-ronde: SVG naar publiceerbaar PNG omgezet en gecontroleerd, afgekapt weergegeven mannennamentitel hersteld; batch blijft ongepubliceerd en wegens actuele plaatsingsregistratie geblokkeerd voor extra volume.",
+        "previous_pins": [
+          {
+            "id": "20261123-we-onder10-fxb1",
+            "haak": "we-onder10",
+            "a": "B0DP42FXB1",
+            "bord": "271060540011963291",
+            "titel": "Funny white elephant gift ideas under $10",
+            "tekst": "Stuff I Forget Because I’m Old: Large Print Password Book: $4.99, 110 pages. One of 20 funny small books for a white elephant gift exchange with a $5 or $10 limit. White elephant gift ideas for adults, coworkers and family.",
+            "link": "https://stockingbooks.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261123-we-onder10-fxb1",
+            "beeld": "https://stockingbooks.com/pin/B0DP42FXB1-we-onder10.png",
+            "kop": "Funny white elephant gifts under $10"
+          },
+          {
+            "id": "20261123-sok-hem-j7cy",
+            "haak": "sok-hem",
+            "a": "B0HRGNJ7CY",
+            "bord": "271060540011963292",
+            "titel": "Stocking stuffer for men: Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Wh",
+            "tekst": "Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Who Have Everything: $14.99, 96 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+            "link": "https://stockingbooks.com/stocking-stuffers?utm_source=pinterest&utm_content=20261123-sok-hem-j7cy#for-him",
+            "beeld": "https://stockingbooks.com/pin/B0HRGNJ7CY-sok-hem.png",
+            "kop": "Stocking stuffer for the man who has everything"
+          },
+          {
+            "id": "20261123-sok-puzzel-1j5t",
+            "haak": "sok-puzzel",
+            "a": "B0DMNK1J5T",
+            "bord": "271060540011963292",
+            "titel": "12 Free Printable Christmas Word Searches with Answer Keys",
+            "tekst": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+            "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
+            "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.svg",
+            "kop": "12 FREE Christmas Word Searches",
+            "status": "concept_waiting_for_preview_approval",
+            "beeld_formaat": "SVG 1000x1500; vóór Pinterestpublicatie verliesvrij omzetten naar PNG/JPEG en opnieuw controleren.",
+            "campaign_id": "sb-free-wordsearch-20261123",
+            "product_link_note": "Dit is een gratis-woordzoekerspin; a blijft uitsluitend bestaande haakadministratie. Geen sudokuboek of prijs in beeld/copy. Genereer niet opnieuw met de bestaande betaalde boektemplate."
+          },
+          {
+            "id": "20261123-we-ideeen-t9jt",
+            "haak": "we-ideeen",
+            "a": "B0DNB1T9JT",
+            "bord": "271060540011963291",
+            "titel": "White elephant gift ideas by price: under $5, $10, $25",
+            "tekst": "Funny white elephant gift ideas by price limit, plus the steal test: does it get a laugh, would people use it, can nobody guess it? Starring Dad Jokes & Facts (2 books in 1), $11.",
+            "link": "https://stockingbooks.com/white-elephant-gift-ideas?utm_source=pinterest&utm_content=20261123-we-ideeen-t9jt",
+            "beeld": "https://stockingbooks.com/pin/B0DNB1T9JT-we-ideeen.png",
+            "kop": "White elephant gifts people actually steal"
+          }
+        ]
       }
-    ]
+    ],
+    "account_coordination": {
+      "observed_at_utc": "2026-11-23T19:47:05.080Z",
+      "registered_book_posts_today": [
+        {
+          "id": "20261123-sok-puzzel-prd9",
+          "haak": "sok-puzzel",
+          "a": "B0DN65PRD9",
+          "post": "6b049678d511266d6a856bec",
+          "t": "2026-11-23T19:39:54.871Z"
+        },
+        {
+          "id": "20261123-we-ideeen-t9jt",
+          "haak": "we-ideeen",
+          "a": "B0DNB1T9JT",
+          "post": "6b04967b5d67d2299ad22eb9",
+          "t": "2026-11-23T19:39:56.079Z"
+        },
+        {
+          "id": "20261123-we-onder10-fxb1",
+          "haak": "we-onder10",
+          "a": "B0DP42FXB1",
+          "post": "6b04967fd511266d6a856c13",
+          "t": "2026-11-23T19:39:57.187Z"
+        },
+        {
+          "id": "20261123-lc-jaar-1l5j",
+          "haak": "lc-jaar",
+          "a": "B0F1SM1L5J",
+          "post": "6b049681d511266d6a856c28",
+          "t": "2026-11-23T19:39:58.268Z"
+        }
+      ],
+      "shared_account_source": "https://hjdk-api-henq.vercel.app/api/shop?op=socoverdracht",
+      "shared_guidance": "Week 1 en 2 hooguit 3 pins per dag; geen zelfde product binnen 14 dagen.",
+      "provider_scheduled_posts_available": false,
+      "action": "Geen nieuwe plaatsing of inplanning. Registraties zijn geen onafhankelijk gecontroleerde providerplaatsingen; herkomst van akkoord niet vastgesteld."
+    }
   },
   "lasting_change": {
     "time_curacao": "23:41",

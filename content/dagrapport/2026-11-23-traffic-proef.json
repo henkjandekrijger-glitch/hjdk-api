@@ -100,10 +100,10 @@
       "titel": "12 Free Printable Christmas Word Searches with Answer Keys",
       "tekst": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
       "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
-      "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.svg",
+      "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.png",
       "kop": "12 FREE Christmas Word Searches",
       "status": "concept_waiting_for_preview_approval",
-      "beeld_formaat": "SVG 1000x1500; vóór Pinterestpublicatie verliesvrij omzetten naar PNG/JPEG en opnieuw controleren.",
+      "beeld_formaat": "PNG 1000x1500, gerasterd uit dezelfde SVG en visueel gecontroleerd op 23 november 2026.",
       "campaign_id": "sb-free-wordsearch-20261123",
       "product_link_note": "Dit is een gratis-woordzoekerspin; a blijft uitsluitend bestaande haakadministratie. Geen sudokuboek of prijs in beeld/copy. Genereer niet opnieuw met de bestaande betaalde boektemplate."
     },
@@ -156,5 +156,23 @@
     "png_conversion": "nog niet afgerond",
     "png_block": "PNG-render niet afgerond: de beschikbare Swift-toolchain geeft moduleconflicten; sharp is niet bruikbaar in deze sessie. SVG1000x1500 is wel duurzaam bewaard als conceptpreview. Niet publiceren als Pinterestbeeld vóór correcte PNG/JPEG-conversie.",
     "publication": "not_published"
-  }
+  },
+  "execution_additions": [
+    {
+      "at": "2026-11-23T19:47:05.080Z",
+      "change": "SVG naar PNG omgezet via CairoSVG in cloudruntime; visueel gecontroleerd. Oude renderfout blijft als historische waarneming bewaard.",
+      "png_path": "content/dagrapport/2026-11-23-pin-woordzoekers.png",
+      "size": [
+        1000,
+        1500
+      ],
+      "published": false,
+      "new_overlap": [
+        "20261123-sok-puzzel-prd9",
+        "20261123-we-ideeen-t9jt",
+        "20261123-we-onder10-fxb1",
+        "20261123-lc-jaar-1l5j"
+      ]
+    }
+  ]
 }
