@@ -7,6 +7,7 @@ var MIN = 0.15, MAX = 1.20, START = 0.90;
 var BEWEZEN = ['oc_4173959244120065', 'oc_4174003417645057', 'oc_4174002164744193']; // al eens verkocht: nooit uit, nooit onder 0,60
 var MERKEN = ['ikea', 'blokker', 'action', 'hema', 'xenos', 'kwantum', 'leen bakker', 'jysk', 'klippan', 'tweedmill', 'marktplaats', 'tweedehands', 'bol.com', 'amazon'];
 var MAX_UIT_PER_UUR = 3;
+var VAST = { 'oc_4174002164400133': 0.60, 'oc_4174003456851970': 0.60, 'oc_4174002211717121': 0.60 }; // lokkers (23 nov, Henkjan: "Ja zet live"): vast bod, nooit uit; hun stopregel zit in de prijslijst (fn/shop.js lokkerStand)
 
 function r2(x) { return Math.round(x * 100) / 100; }
 function isBewezen(pg) { var v = String(pg.getValue() || '').toLowerCase(); return BEWEZEN.indexOf(v) >= 0; }
@@ -28,6 +29,7 @@ function main() {
     var naam = String(pg.getValue() || pg.getDimension());
     var item = /ITEM/i.test(String(pg.getDimension()));
     var bewezen = isBewezen(pg);
+    var vast = VAST[String(pg.getValue() || '').toLowerCase()]; if (vast) { if (bod !== vast) { pg.setMaxCpc(vast); log.push(naam + ' lokker: bod ' + bod + ' -> ' + vast); } continue; }
     if (conv >= 1) { var hoog = Math.min(MAX, Math.max(bod, 1.00)); if (hoog > bod) { pg.setMaxCpc(hoog); log.push(naam + ' verkocht: bod ' + bod + ' -> ' + hoog); } continue; }
     if (!item) continue; // groeistappen (custom_label_3: verkocht, trek, nieuw, kans, stil) wisselen elke nacht van producten; de labelbron zet een product zelf op uit na 12 betaalde kliks zonder verkoop
     if (kost >= 8 && !bewezen) { pg.exclude(); log.push(naam + ' uit: EUR ' + r2(kost) + ' in 14 dagen zonder verkoop'); continue; }
