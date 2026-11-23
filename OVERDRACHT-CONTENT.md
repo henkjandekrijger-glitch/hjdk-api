@@ -168,6 +168,49 @@ Waar je optimaliseert. Elke dag één lek, het grootste eerst, met een getal erb
 
 Elke wijziging is een proef met een controle. Na 14 tot 21 dagen beoordeelt ZICHT hem zelf. Wat je leert zet je als les in zicht.json en in dit document.
 
+## 7b. Strategie: wat stapelt en wat niet (onderzoek 23 nov 2026)
+
+Henkjan 23 nov 2026: "geef me aan hoe anderen werken met compounding inzet van LLM om distributie te verzorgen en compounding te verdienen". De kern: gebruik AI om iets te maken dat anderen niet hebben (eigen cijfers, gratis tools). Verspreid dat via kanalen die zichzelf blijven voeden. Massa maken werkt niet meer.
+
+Wat niet meer werkt:
+- Massa dunne pagina's. De update van Google van maart 2026 tegen massaal gemaakte inhoud kostte zulke sites 50 tot 80% van hun verkeer (madx.digital, digitalapplied.com).
+- Van 220 sites op AI-contentplatforms verloor 54% minstens 30% van het piekverkeer en 22% minstens 75% (Lily Ray, Search Engine Journal).
+- Dus geen pagina per zoekvariant, en nieuwe pagina's alleen bij gemeten vraag (Demand Radar) met eigen inhoud.
+
+Zeven patronen die stapelen, met bewijs:
+1. Eigen cijfers. Primair onderzoek krijgt per pagina 3,3 keer zoveel AI-vermeldingen, vooral als het een benchmark is (Search Engine Land, Gauge-data). Sites met eigen data werden 22% zichtbaarder terwijl massasites vielen.
+2. Gratis tools (engineering as marketing). Ze blijven verkeer en links trekken ("marketing assets with ongoing returns", Dharmesh Shah, HubSpot).
+3. Op lijstjes van anderen staan. 43,8% van de pagina's die ChatGPT citeert zijn "best X"-lijsten, en merken die hoog op meerdere lijsten staan worden vaker aanbevolen (Ahrefs, 26.283 bronnen). Merken worden 6,5 keer vaker via andere sites genoemd dan via hun eigen site (AirOps). Vermeldingen op YouTube hangen bij ChatGPT het sterkst samen met zichtbaarheid (Ahrefs, 75.000 merken).
+4. Bewijs op de pagina. Citaten gaven +41%, statistieken +31% en bronnen +28% zichtbaarheid in AI-antwoorden; zoekwoorden volproppen gaf −8% (GEO-studie Princeton, KDD 2024).
+5. Vers houden. Wat AI citeert is 25,7% verser dan de organische resultaten van Google (Ahrefs, 17 miljoen citaties). Bijgewerkte pagina's kregen gemiddeld +4,5% Google-bezoek en deden het beter dan vergelijkbare pagina's zonder update (Raptive, 103.000 pagina's). Seizoenspagina's werk je bij vóór de piek.
+6. Pinterest als bezit. Meer dan 60% van de saves komt van pins die ouder zijn dan een jaar (Tailwind). Plan vroeg voor seizoenspieken (kerst, nieuwjaar).
+7. Eigen publiek. Een e-maillijst met doorverwijzen: makers die elkaar aanbevelen groeien 2 keer zo snel (Kit). Doorverwijzen versnelt groei, maar schept die niet uit het niets.
+
+AI-verkeer: Adobe zag het in maart 2026 42% beter converteren dan ander verkeer. Een studie onder 973 webshops zag ChatGPT-verkeer juist slechter converteren dan Google. Meet het dus per bron; het dagrapport doet dat al. Het aandeel van Reddit in AI-citaties schommelt sterk (bij ChatGPT van ongeveer 60% naar 10% in zes weken eind 2025). Bouw daar niet op; alleen echte, eerlijke antwoorden.
+
+De lus van dit account:
+Demand Radar (vraag) → pagina met eigen cijfers of een gratis tool → ZICHT meet → bijwerken vóór de piek → Pinterest en vermeldingen op andere sites → e-mailadressen → wat gebruikers invoeren wordt nieuwe eigen cijfers → AI noemt je.
+
+Werkvolgorde, op opbrengst:
+1. Eigen cijfers uit wat er al is:
+   - De LC-coach-chat (waarom het mensen niet lukte) wordt een jaarlijkse benchmark: "Why resolutions fail: what N people told us". Pas vanaf genoeg gesprekken, en nooit met nullen.
+   - Uit de Secret Santa-generator: gemiddeld budget en groepsgrootte, anoniem en alleen tellingen.
+   - Uit Demand Radar: "de meest gezochte stocking stuffers, gemeten".
+2. Meer gratis tools in plaats van meer artikelen. Het model zijn de Secret Santa-generator, de kleurplaten, de quiz en de woordzoekers. Een volgende kan een printbare 30-dagenkaart voor gewoontes worden, met een link naar het werkboek.
+3. Vermeldingen buiten de eigen site:
+   - Stocking Books in cadeaugidsen van anderen ("best stocking stuffers under $10");
+   - Lasting Change in lijsten met de beste habit-werkboeken;
+   - korte YouTube-video's van de kleurplaten en de quiz;
+   - outreach eerst als concept aan Henkjan, via de skill mail-lerend.
+4. Bijwerkritme: elke seizoenspagina 4 tot 6 weken vóór de piek, met nieuwe cijfers en een eerlijke datum (kerst in oktober, voornemens in november).
+5. E-mail vastleggen:
+   - LC: de modal met dagelijkse tips;
+   - Stocking Books: "stuur me de kleurplaten van volgend jaar".
+
+Altijd via Resend, en elke mail eerst langs mail-lerend.
+
+Bronnen: arxiv.org/abs/2311.09735 (GEO), ahrefs.com/blog/best-lists-research, ahrefs.com/blog/fresh-content, airops.com/research/the-influence-of-offsite-signals-in-ai-search, searchengineland.com/why-most-original-data-never-gets-cited-481676, raptive.com/blog/refresh-analysis-and-google-traffic-growth, searchenginejournal.com/it-works-until-it-doesnt-ai-content-strategies-that-backfire/574820, tailwindapp.com/blog/pinterest-seo-in-2025, kit.com/features/creator-network, digitalapplied.com/blog/ai-traffic-converts-42-percent-better-2026-channel-strategy, searchengineland.com/llms-google-referral-conversion-study-463747.
+
 ## 8. Lopende proeven
 
 - bs-kerst-gratis-1123 (gsc, 21 dagen): christmas-jokes, christmas-trivia en christmas-coloring-pages, tegen de controle free-printable-christmas-word-search en white-elephant-rules.
@@ -188,8 +231,9 @@ Elke wijziging is een proef met een controle. Na 14 tot 21 dagen beoordeelt ZICH
 
 Plak dit als eerste bericht:
 
-"Lees eerst de overdracht content en distributie: https://hjdk-api-henq.vercel.app/api/bs?op=content (Vercel-tool web_fetch_vercel_url) en de repo henkjandekrijger-glitch/hjdk-api (OVERDRACHT-CONTENT.md, CLAUDE.md). Jij doet vanaf nu alleen content en distributie voor stockingbooks.com, lastingchange.works en Pinterest, met de dagelijkse leerlus uit hoofdstuk 7. Maak de twee geplande taken uit hoofdstuk 6 opnieuw aan in dit account. Begin met het grootste lek uit het rapport van vandaag en laat me alles eerst zien voor het live gaat."
+"Lees eerst de overdracht content en distributie: https://hjdk-api-henq.vercel.app/api/bs?op=content (Vercel-tool web_fetch_vercel_url) en de repo henkjandekrijger-glitch/hjdk-api (OVERDRACHT-CONTENT.md, CLAUDE.md). Jij doet vanaf nu alleen content en distributie voor stockingbooks.com, lastingchange.works en Pinterest, met de dagelijkse leerlus uit hoofdstuk 7 en de strategie uit hoofdstuk 7b. Maak de twee geplande taken uit hoofdstuk 6 opnieuw aan in dit account. Begin met het grootste lek uit het rapport van vandaag en laat me alles eerst zien voor het live gaat."
 
 ## Logboek (nieuwste bovenaan)
 
+- 2026-11-23: hoofdstuk 7b Strategie toegevoegd (onderzoek naar wat stapelt met AI: eigen cijfers, gratis tools, lijstjes van anderen, verversen, Pinterest, eigen publiek), met een werkvolgorde voor dit account.
 - 2026-11-23: overdracht geschreven voor het content-account. Bookstuffers heet Stocking Books (stockingbooks.com). Kerstmoppen, kerstquiz en kleurplaten zijn live. IndexNow loopt mee in de dagelijkse cron. Het LC-artikel begint met procrastination.
