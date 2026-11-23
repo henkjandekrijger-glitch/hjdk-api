@@ -266,3 +266,23 @@ await render('op=indexnow&alleenGids=1','hjdk-api-henq.vercel.app');
 assert.ok(!imports.includes('../lib/samensparen.js'));
 kv.get=oudeGet;
 console.log('22nov: Kamado-bronnen/SSR/LLM, retourtegenstrijdigheid en gidsronde zonder spaarmail geslaagd.');
+// 23 november: sieradenmatch is categorieadvies, geen metaal- of testgarantie.
+for(const t of ['14K Gouden Parel Oorbellen','Amelie Hoop Earrings','18k Gold Vermeil Smart Bracelet','Silver Ring','Halsketting met parel'])assert.ok(bewijs.sieraadMatch({t}),t);
+for(const t of ['Sieradendoos','Earring holder','Servetring','Napkin rings','Key ring','Tand bijtring'])assert.ok(!bewijs.sieraadMatch({t}),t);
+const sj=(await render('slug=onderzoek-en-bronnen')).body;
+assert.ok(sj.includes('id="sieraden-23nov"'));assert.ok(sj.includes('48 voldeden'));assert.ok(sj.includes('geen overeenkomst met deze modellen'));
+for(const id of ['sieraadNvwa','sieraadNvdv','sieraadEcha'])assert.ok(sj.includes(bewijs.BRONNEN[id].url));
+assert.ok((await render('op=llmsfull')).body.includes('verguld is geen allergievrijbewijs'));
+const sc=gidsen.GIDSEN['schoencadeautjes-sinterklaas'];
+for(const pid of ['oc_4174002187829249','oc_4173959383220225']){
+ assert.ok(!sc.keuze.some(k=>k.pid===pid));assert.ok(!sc.tabel.some(k=>k.pid===pid));assert.ok(!sc.check.regels.some(k=>k.pid===pid));
+}
+assert.ok(sc.keuze.some(k=>k.pid==='oc_4174004652687361'));
+const scHtml=(await render('slug=schoencadeautjes-sinterklaas')).body;
+assert.ok(scHtml.includes('/naar/oc_4174004652687361?g=schoencadeautjes-sinterklaas&b=tabel'));
+assert.ok(!scHtml.includes('uiterlijk maandag 30 november'));assert.ok(scHtml.includes('tegenstrijdigheid'));
+const kg=gidsen.GIDSEN.kerstcadeau;assert.equal(kg.bijgewerkt,'2026-11-23');
+assert.ok(!JSON.stringify(kg).includes('uiterlijk woensdag 16 december'));
+assert.ok((await render('slug=kerstcadeau')).body.includes('geen algemene uiterste besteldag'));
+for(const g of Object.values(gidsen.GIDSEN))assert.ok(!(g.faq||[]).some(f=>f.a.includes('Je krijgt een retourlabel en het hele bedrag terug.')));
+console.log('23nov: sieradenmatches/uitsluitingen, bronnen/llms, seizoensvoorraad/tabelprijs en retour-FAQ geslaagd.');
