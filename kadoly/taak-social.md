@@ -20,6 +20,8 @@ Vraag niets; kies bij twijfel de veiligste optie (liever een post minder dan een
 
 ## Stappen
 
+**Aanvulling 23 november 2026, na Henkjans UX-akkoord:** drie getoonde merkontwerpen (Housevitamin, Mica Decorations, Kolibri Company) zijn eenmalig gepubliceerd als stories op Facebook en Instagram en als drie extra Pinterestpins. Alle negen plaatsingen staan in social-log.json en kadoly/groei/2026-11-23-merken-live.json; niet opnieuw plaatsen of plannen. Dit concrete akkoord heft het vaste Pinterest-plafond niet voor volgende dagen op en herstart geen dagelijkse productfeed op Facebook/Instagram. De storyknop is beeld: Instagram Graph API ondersteunt geen linkstickers; storycaptions worden niet getoond. Facebook-custom-caption bevat de merkcode-link, maar een klikbare storylink is niet bevestigd. Alleen de pins hebben bevestigde directe productlinks met UTM. Leg de beschikbare story-inzichten vóór afloop van 24 uur vast; onbekende cijfers niet als nul invullen.
+
 (groei-account, 23 november 2026) Voorrang 23 tot 29 november:
 - Houd de huidige aantallen en het Pinterest-plafond van 3 pins per dag aan. Nog geen bewezen winnaar of reden voor opschalen. `v-kerstfinds` gaf één echt mens, één actie en één mandje bij één geregistreerde klik; behandel dit als vervolgsignaal binnen bestaande goedgekeurde videovormen.
 - Kies uit reeds goedgekeurde vormen eerst schoencadeautjes, kerstfinds en cadeau voor een collega. Controleer leverbaarheid en totaalprijs intern; beloof geen levering op 5 december zonder bevestiging per merk. Kopieer geen ongecontroleerde algemene besteldatum.

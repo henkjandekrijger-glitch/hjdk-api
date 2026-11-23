@@ -8,6 +8,12 @@ Live lezen: https://hjdk-api-henq.vercel.app/api/shop?op=socoverdracht (met web_
 
 Lees daarnaast: `kadoly/taak-social.md` (de dagelijkse opdracht, dat is de bron van de werkwijze), `OVERDRACHT-YOORS-SHOP.md` (shop en kassa), `OVERDRACHT-KADOLY-TIKTOK.md` (TikTok en het Clickmind-gezicht) en de algemene handover https://hjdk-api-henq.vercel.app/api/mm/handover.
 
+## Aanvulling 23 november 2026: goedgekeurde merkproef live
+
+Na "JA allemaal live netjes ." op de getoonde UX heeft groei drie merkontwerpen gepubliceerd: drie stories op Facebook, dezelfde drie op Instagram, en drie pins op Pinterest @kadolyshop (Cadeau-ideeën). Alle zes Zernio-postobjecten zijn Published; alle negen plaatsingen en de openbare links staan in `kadoly/groei/2026-11-23-merken-live.json` en `kadoly/social-log.json`. De bestaande dagronde niet herhaald. De drie bestaande productpins van vandaag zijn in het log van gepland naar gepubliceerd gezet na dashboardcontrole.
+
+Dit is een eenmalige extra proef met de drie goedgekeurde ontwerpen. Vaste frequentie blijft gelijk; geen borden, accounts of mail toegevoegd. De knop in de stories is beeld: Instagram Graph API ondersteunt geen linkstickers en toont geen captions. Facebook heeft de Clickmind-link in de custom caption, maar klikbaarheid is niet bevestigd. De pins hebben de juiste directe UTM-productlinks, openbaar HTTP 200. Geen bereik of koop uit publiceren afgeleid. De volgende ronde meet vóór de stories verlopen.
+
 ## 1. Wat het oplevert (16 tot en met 20 nov)
 
 | Kanaal | Volgers | Posts | Bereik | Kliks (Clickmind) | Echte mensen | Mandje | Verkoop |
@@ -67,6 +73,8 @@ Lees daarnaast: `kadoly/taak-social.md` (de dagelijkse opdracht, dat is de bron 
 6. **Centrale hub** voor alle kanalen van alle projecten via Clickmind (ontwerp 16 nov: één kanaalregister, één post-wachtrij, kruisposten, leren per kanaal, soort en tijdvak): wacht op Henkjans go. De meting (`op=org`, `KAN_ORG`) staat al klaar voor elk kanaal.
 
 ## 6. Logboek (nieuwste bovenaan)
+
+- 2026-11-23: concrete UX-goedkeuring uitgevoerd: zes merkstories en drie merkpins gepubliceerd via ingelogd Zernio, alle postobjecten Published; publieke pins en UTM-links gecontroleerd. Meetbeperking storylink vastgelegd en bestaande ronde niet herhaald.
 
 - 2026-11-20: overdracht geschreven, live op `/api/shop?op=socoverdracht`. Stand: 0 verkoop via social, Pinterest enige kanaal met bereik, firewall kadoly.com blokkeert Pinterest.
 - 2026-11-18: video's (reels) erbij in de dagronde, wachtrij `kadoly/reels.json`.
