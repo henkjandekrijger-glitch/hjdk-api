@@ -141,5 +141,290 @@
     "Oude twee taken niet bereikbaar en niet uitgezet.",
     "PDF-verkoop en kopersmail wachten op instellingen."
   ],
-  "raw_daily_report": "Organisch boeken, 2026-11-22 (UTC)\nstockingbooks.com: 7 geregistreerde pagina-openingen\nlastingchange.works: 13 geregistreerde pagina-openingen\nAmazonverzoeken: 208 (ruwe redirects, geen unieke personen)\nAmazonverzoeken per site: stockingbooks.com 1\nBeste pagina's: lastingchange.works/ 6, stockingbooks.com/ 6, lastingchange.works/why-it-didnt-work 6\nPinterest: 8 pins geplaatst\nWacht op jouw ok (1): How to Stop Procrastinating: 7 Steps and a 2-Minute Plan: bekijk https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-stop-procrastinating&concept=1 · live zetten https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=lclive&slug=how-to-stop-procrastinating\nMeetlek: pagina-openingen en Amazonverzoeken zijn niet per klik gekoppeld. Nog geen betrouwbaar doorklikpercentage; eerst meten, dan een inhoudsproef kiezen.\nDetails: https://stockingbooks.com/overdracht"
+  "raw_daily_report": "Organisch boeken, 2026-11-22 (UTC)\nstockingbooks.com: 7 geregistreerde pagina-openingen\nlastingchange.works: 13 geregistreerde pagina-openingen\nAmazonverzoeken: 208 (ruwe redirects, geen unieke personen)\nAmazonverzoeken per site: stockingbooks.com 1\nBeste pagina's: lastingchange.works/ 6, stockingbooks.com/ 6, lastingchange.works/why-it-didnt-work 6\nPinterest: 8 pins geplaatst\nWacht op jouw ok (1): How to Stop Procrastinating: 7 Steps and a 2-Minute Plan: bekijk https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-stop-procrastinating&concept=1 · live zetten https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=lclive&slug=how-to-stop-procrastinating\nMeetlek: pagina-openingen en Amazonverzoeken zijn niet per klik gekoppeld. Nog geen betrouwbaar doorklikpercentage; eerst meten, dan een inhoudsproef kiezen.\nDetails: https://stockingbooks.com/overdracht",
+  "additions": [
+    {
+      "observed_at_utc": "2026-11-23T13:42:27.189Z",
+      "reporting_period_utc": {
+        "start": "2026-11-22T00:00:00Z",
+        "end_exclusive": "2026-11-23T00:00:00Z"
+      },
+      "sources": {
+        "report": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1",
+        "pins": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+        "gsc_bs": "https://hjdk-api-henq.vercel.app/api/zicht?op=zoekvragen&site=bookstuffers&dagen=7",
+        "gsc_lc": "https://hjdk-api-henq.vercel.app/api/zicht?op=zoekvragen&site=lastingchange&dagen=7",
+        "lc_sales": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=verkoop"
+      },
+      "traffic": {
+        "metric": "registered_page_openings",
+        "stockingbooks_com": 7,
+        "lastingchange_works": 13,
+        "unique_people": null,
+        "channel_breakdown": null,
+        "comparison": "Slechts één gesloten meetdag beschikbaar. Herlezing van dezelfde dag is geen groeivergelijking."
+      },
+      "amazon": {
+        "raw_redirect_requests": 208,
+        "unique_clickers": null,
+        "organic_sales_attribution": null
+      },
+      "pinterest": {
+        "logged_posts": 8,
+        "provider_impressions": null,
+        "provider_outbound_clicks": null,
+        "provider_saves": null,
+        "cached_internal": {
+          "account": "6afb8a5d86e8bb18f844fc95",
+          "haken": [
+            {
+              "id": "we-ruzie",
+              "pins": 1,
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            },
+            {
+              "id": "we-dad",
+              "pins": 1,
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            },
+            {
+              "id": "we-onder10"
+            },
+            {
+              "id": "we-regels",
+              "pins": 1,
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            },
+            {
+              "id": "sok-haar",
+              "pins": 1,
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            },
+            {
+              "id": "sok-hem"
+            },
+            {
+              "id": "sok-tiener",
+              "pins": 1,
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            },
+            {
+              "id": "sok-puzzel"
+            },
+            {
+              "id": "ss-gen"
+            },
+            {
+              "id": "we-ideeen"
+            },
+            {
+              "id": "sok-gids-haar"
+            },
+            {
+              "id": "sok-gids-hem",
+              "pins": 1,
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            },
+            {
+              "id": "lc-jaar"
+            },
+            {
+              "id": "lc-66"
+            },
+            {
+              "id": "lc-stappen"
+            },
+            {
+              "id": "enoch-wat",
+              "pins": 1,
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            },
+            {
+              "id": "apo-14",
+              "pins": 1,
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            }
+          ],
+          "laatste": [
+            {
+              "id": "20261122-we-regels-1zjm",
+              "haak": "we-regels",
+              "a": "B0DNQ61ZJM",
+              "post": "6b03305e0c584efce0d64de2",
+              "t": "2026-11-22T18:12:10.118Z",
+              "m": {
+                "klik": 0,
+                "saves": 0,
+                "imp": 0
+              }
+            },
+            {
+              "id": "20261122-sok-tiener-bm75",
+              "haak": "sok-tiener",
+              "a": "B0DJQLBM75",
+              "post": "6b033065c4d17d4a0f103be1",
+              "t": "2026-11-22T18:12:11.081Z",
+              "m": {
+                "klik": 0,
+                "saves": 0,
+                "imp": 0
+              }
+            },
+            {
+              "id": "20261122-enoch-wat-79n1",
+              "haak": "enoch-wat",
+              "a": "B0B5KV79N1",
+              "post": "6b03306970f37227beb16166",
+              "t": "2026-11-22T18:12:12.629Z",
+              "m": {
+                "klik": 0,
+                "saves": 0,
+                "imp": 0
+              }
+            },
+            {
+              "id": "20261122-apo-14-xc9j",
+              "haak": "apo-14",
+              "a": "B0DDBTXC9J",
+              "post": "6b03306ec4d17d4a0f103bf2",
+              "t": "2026-11-22T18:12:13.608Z",
+              "m": {
+                "klik": 0,
+                "saves": 0,
+                "imp": 0
+              }
+            },
+            {
+              "id": "20261122-we-ruzie-z3g3",
+              "haak": "we-ruzie",
+              "a": "B0DNDQZ3G3",
+              "post": "6b0344b6783be3b4addd3e43",
+              "t": "2026-11-22T19:38:53.148Z"
+            },
+            {
+              "id": "20261122-sok-haar-mssk",
+              "haak": "sok-haar",
+              "a": "B0DMR1MSSK",
+              "post": "6b0344ba9978cd4d9a1ca580",
+              "t": "2026-11-22T19:38:54.191Z"
+            },
+            {
+              "id": "20261122-we-dad-syxw",
+              "haak": "we-dad",
+              "a": "B0DK3CSYXW",
+              "post": "6b0344bf56bdc437db134475",
+              "t": "2026-11-22T19:38:55.293Z"
+            },
+            {
+              "id": "20261122-sok-gids-hem-1fsp",
+              "haak": "sok-gids-hem",
+              "a": "B0DMP31FSP",
+              "post": "6b0344c49978cd4d9a1ca59e",
+              "t": "2026-11-22T19:38:56.288Z"
+            }
+          ]
+        },
+        "reason": "Interne pinstand bevat ongedateerde nulwaarden en ontbrekende metingen; geen verse Zernio-providerstatistieken beschikbaar. Connector niet in huidige tools; repo noemt externe Zernio-tools maar biedt geen uitleesproxy."
+      },
+      "search": {
+        "gsc_bs": {
+          "ok": true,
+          "ververst": null,
+          "site": "bookstuffers",
+          "dagen": 7,
+          "basis": "Search Console-regels per zoekvraag (geanonimiseerde zoekvragen ontbreken; site-totaal staat in op=stand)",
+          "perDag": [],
+          "zoekvragen": [],
+          "aantal": 0
+        },
+        "gsc_lc": {
+          "ok": true,
+          "ververst": null,
+          "site": "lastingchange",
+          "dagen": 7,
+          "basis": "Search Console-regels per zoekvraag (geanonimiseerde zoekvragen ontbreken; site-totaal staat in op=stand)",
+          "perDag": [],
+          "zoekvragen": [],
+          "aantal": 0
+        },
+        "site_totals_bs": null,
+        "site_totals_lc": null,
+        "interpretation": "Lege zoekvraagregels en ontbrekende totalen zijn geen bewijs van nulverkeer."
+      },
+      "ai": {
+        "observed_date": "2026-11-23",
+        "bookstuffers": {
+          "panel": "181bd30fa896a9bd",
+          "questions": 8,
+          "citations": 0
+        },
+        "lastingchange": {
+          "panel": "94af3b369c8c22c9",
+          "questions": 4,
+          "citations": 0
+        },
+        "limitation": "Twee verschillende vaste panels; LC-panel bevat geen specifieke procrastination-vraag. Geen artikel-specifieke citaatconclusie."
+      },
+      "sales": {
+        "pdf": {
+          "pdfKnop": false,
+          "perDag": {}
+        },
+        "paddle_enabled": false,
+        "mail_enabled": false,
+        "kdp_organic_attribution": null
+      },
+      "lesson": {
+        "finding": "Ruwe redirects en pagina-openingen hebben nog geen gezamenlijke noemer.",
+        "evidence": "Rapport plus broncode; publieke artikelknop gaat nu wel via /go.",
+        "business_effect": "Onbeslist"
+      },
+      "implemented_and_checked": [
+        {
+          "change": "LC-kooproute en rapportlabels eerder vandaag hersteld",
+          "status": "live_rechecked",
+          "verification": {
+            "status": 200,
+            "robots": "index, follow",
+            "checked_at": "Mon, 23 Nov 2026 13:41:10 GMT"
+          }
+        },
+        {
+          "change": "Uitstelartikel met eigen startplan, bronverwijzingen en zes FAQ-antwoorden",
+          "status": "live_rechecked",
+          "url": "https://lastingchange.works/how-to-stop-procrastinating",
+          "evaluation_window": "2026-12-07/2026-12-14"
+        }
+      ],
+      "prepared": {
+        "change": "Concreet voorstel koppeling pagina/browserklik met deduplicatie en regressievoorwaarden",
+        "status": "concept_not_deployed",
+        "path": "content/dagrapport/2026-11-23-meetvoorstel.md"
+      },
+      "next_check": "Volgende gesloten dag:24 november. Implementatiecheck binnen24uur na een goedgekeurde uitrol; inhoudsoordeel7-14december bij voldoende data.",
+      "limitations": [
+        "Geen verse bronverdeling of site-totalen van GSC.",
+        "Geen verse Zernio-providerstatistieken.",
+        "PDF-verkoop en kopersmail staan uit; instellingen niet aangepast."
+      ],
+      "raw_daily_report": "Organisch boeken, 2026-11-22 (UTC)\nstockingbooks.com: 7 geregistreerde pagina-openingen\nlastingchange.works: 13 geregistreerde pagina-openingen\nAmazonverzoeken: 208 (ruwe redirects, geen unieke personen)\nAmazonverzoeken per site: stockingbooks.com 1\nBeste pagina's: lastingchange.works/ 6, stockingbooks.com/ 6, lastingchange.works/why-it-didnt-work 6\nPinterest: 8 pins geplaatst\nMeetlek: pagina-openingen en Amazonverzoeken zijn niet per klik gekoppeld. Nog geen betrouwbaar doorklikpercentage; eerst meten, dan een inhoudsproef kiezen.\nDetails: https://stockingbooks.com/overdracht",
+      "human_report": "Dagrapport over 22 november 2026 (UTC), gecontroleerd op 23 november.\nVerkeer: Stocking Books 7 pagina-openingen; Lasting Change 13. Dit zijn geen unieke bezoekers.\nGroei blijft onbeslist: er is slechts één vergelijkbare afgesloten meetdag.\nBronverdeling en Google-totalen ontbreken; AI-broncitaten zijn in de huidige panels nog niet bevestigd.\nPinterest: 8 pins geregistreerd. Verse weergaven, uitgaande kliks en saves zijn niet beschikbaar.\nAmazon: 208 ruwe redirectverzoeken. Hieruit zijn geen unieke klikkers of verkopen af te leiden.\nGeleerd: pagina-openingen en uitgaande klikken moeten eerst aan elkaar worden gekoppeld.\nVerbeterd op 23 november: de LC-kooproute en rapportlabels zijn hersteld; de werking is opnieuw gecontroleerd.\nHet uitstelartikel staat live en is indexeerbaar: https://lastingchange.works/how-to-stop-procrastinating\nVolgende stap: voorstel voor paginagebonden klikmeting staat klaar; werkingstoets binnen 24 uur na goedgekeurde uitrol.\nInhoudsoordeel volgt 7 tot 14 december bij voldoende data.\nOpen: GSC- en Pinterest-meettoegang ontbreken; PDF-verkoop en kopersmail wachten op instellingen."
+    }
+  ]
 }
