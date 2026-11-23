@@ -13,7 +13,7 @@ export default async function handler(req,res){
   try{if((origin&&new URL(origin).host!==host)||req.headers?.['sec-fetch-site']==='cross-site')return res.status(403).json({ok:false});}catch{return res.status(403).json({ok:false});}
   if(!/^application\/json(?:;|$)/i.test(req.headers?.['content-type']||''))return res.status(415).json({ok:false});
   let body=req.body;try{if(typeof body==='string'){if(body.length>2000)return res.status(413).json({ok:false});body=JSON.parse(body);}if(!body||Array.isArray(body)||JSON.stringify(body).length>2000)return res.status(400).json({ok:false});}catch{return res.status(400).json({ok:false});}
-  const catalog=body.action==='update'?await loadFrontInventory(mk):{items:[]};
+  const catalog=body.action==='update'||body.action==='update-detail'?await loadFrontInventory(mk):{items:[]};
   const result=await writeFrontSignal(body,{market:mk,scope:'preview',targets:frontUpdateItems(catalog.items,mk),network:String(req.headers?.['x-forwarded-for']||req.headers?.['x-real-ip']||'unknown').split(',')[0].trim()});return res.status(result.status).json(result.body);
  }
  if(!['GET','HEAD'].includes(req.method||'GET'))return res.status(405).end();
