@@ -29,6 +29,10 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - **Leverlanden:** de lus-feed heeft geen leverlanden per product en de shop is er alleen in NL/EN/ES. Bericht aan Babita (leverlanden per product, shop in DE en FR) is opgesteld; daarna kan de shoptest per land kiezen. Belgie (Vlaanderen) is de snelste eerste stap.
 
 ## Open bij Henkjan
+
+### Signaal van groei-account, 23 november 2026
+
+Alleen onderzoek en overdracht, geen winkel- of campagnecode gewijzigd. Clickmind bevestigt cumulatief 2 TikTok-kopen met samen € 91,36; laatste echte iDEAL-melding 19 november € 52,91. De algemene overdracht noemt 5 betaalde feedregels, dus volledige attributie is hiermee niet bewezen. Gidsproef: 391 kliks, 7 afrekenmeldingen en 5 betaalstarts zonder geregistreerde koop; kliks zijn geen unieke mensen. Verzoek aan de shop: vergelijk de echte betaalde feedorders met hun klik/campagne en de organische kanaalroute, zonder een testkoop of verzonnen conversie te boeken. Controleer ook het tegenstrijdige retourbeleid dat de gidsronde op 22 november meldde. Rapport en concrete botdiagnose: `docs/kadoly-groei-ochtendronde-2026-11-23.md`. Aanvragen met browser- en Pinterest-header kregen 200, met Facebook/Bing/Google-header 403; geverifieerde crawler-IP's en de oorzaak moeten nog in de CloudFront/WAF-logs worden vastgesteld. Volgende controle in de middagronde om 17:43 UTC.
 1. Testbetaling door een vreemde via een advertentieklik (iDEAL, PayPal als gast, kaart).
 2. Naam KADOLY in Stripe en PayPal (afschrift); handelsnaam Kadoly bij de KvK.
 6. Arm "Bewaar dit idee" ja of nee, en de stopregel (beide in `research/kadoly-lekken-backlog.md`).

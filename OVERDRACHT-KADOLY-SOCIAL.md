@@ -35,6 +35,8 @@ Lees daarnaast: `kadoly/taak-social.md` (de dagelijkse opdracht, dat is de bron 
 
 ## 3. Hoe het werkt
 
+(groei-account, 23 november 2026) De concrete voorrangslijst voor deze week staat in `kadoly/taak-social.md`: bestaande vormen schoencadeautjes/kerstfinds/collega, huidige frequentie behouden en geen nieuwe borden zonder eerst tonen. `orgstand`-kanaal- en posttotalen zijn cumulatief, ook met dagen=7. Geen weekvergelijking uit deze totalen afleiden. De Pinterest-header kreeg nu 200; andere botheaders 403. Dat is geen verificatie van echte crawlers. Groei heeft zelf geen posts, borden of logdata van deze ronde gewijzigd.
+
 - **Dagronde**: geplande taak `trig_01Nv2F4rtiHPtLwVVxEG9oL3` "Kadoly Facebook en Instagram posten en leren", elke dag 08:41 UTC, staat AAN, laatste ronde 20 nov 08:44 UTC gelukt (19 nov niet gedraaid). Hij voert `kadoly/taak-social.md` uit: meten, leren, producten kiezen, posts inplannen via Zernio, vastleggen in `kadoly/social-log.json` en `kadoly/reels.json`, commit "Kadoly social <dag> (Claude)".
 - **Productposts**: 2 per dag per platform, 12:15 en 19:45 Nederlandse tijd, soorten sieraad, mandje (meeste mandjes), nieuw, wonen; elke dag schuiven de soorten één tijdvak op. Leren per soort en tijdvak, plafond 4 per dag.
 - **Video's (reels)**: wachtrij `kadoly/reels.json` (23 video's, 4 gepost), aangevuld uit het project kadoly-video (`https://kadoly-video-henq.vercel.app/api/lijst`, 3 per nacht). Tijdvakken 08:30, 15:30 en 21:00 NL.

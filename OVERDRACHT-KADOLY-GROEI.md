@@ -4,7 +4,14 @@ Live: https://hjdk-api-henq.vercel.app/api/shop?op=groeioverdracht (met de Click
 
 Opgezet op 23 nov 2026. Henkjan gaf de opdracht: "Maak een plan voor me voor organische groei dan ga ik die aan andere chat uitbesteden . We MOETEN ook met content marketing groeien ." en daarna: "Mag heel uitgebreid zijn met dagelijkse grote updates ik maak heel acccount vrij ervooor ."
 
-Dit plan wordt uitgevoerd door een eigen Claude-account (verder: het groei-account). Dat account werkt elke dag aan organische groei van kadoly.com en stuurt Henkjan elke dag één grote update.
+Dit plan wordt sinds 23 november uitgevoerd in een eigen ChatGPT-werkaccount (verder: het groei-account). Dat account werkt elke dag aan organische groei van kadoly.com en stuurt Henkjan elke dag één grote update. Twee geplande taken zijn actief om 09:43 en 17:43 UTC. De pushinstelling is via de beschikbare tools niet instelbaar of bevestigd.
+
+## Actuele meetafspraken (groei-account, 23 november 2026)
+- `orgstand?dagen=7` begrenst alleen dagelijkse kliktellers. Kanaal- en posttotalen zijn cumulatief sinds 16 november. Ze zijn geen weekcijfers. Dagelijkse snapshots staan vanaf nu in `kadoly/groei/`; weekvergelijkingen en opt-ins per motor blijven onbekend totdat er passend afgebakende data is.
+- Eerste onderzoek en beheerderstaak: `docs/kadoly-groei-ochtendronde-2026-11-23.md`. De botmeting simuleert headers vanaf één verbinding, geen echte provider-IP's. Pinterest krijgt inmiddels 200 op home en robots.txt; Facebook, Bing en Google krijgen daar 403. Blokkerende regel en echte crawlerstatus moeten nog in de logs en inspectietools worden vastgesteld.
+- Koopmeting: 2 TikTok-kopen voor samen € 91,36 bevestigd; organische kooproute en het verschil met 5 betaalde feedregels blijven onbewezen en zijn aan de shop overgedragen. Geen testkoop of conversie nagebootst.
+- Nieuwe lootjestool: concept in `docs/kadoly-lootjes-concept.html`, alleen lokaal en expliciet uitgesloten van Vercel. Geen echte groepen of deelnemerslinks, geen openbare route. Wacht op Henkjans ja.
+- Werktoegang: GitHub-connector heeft pushrecht. Bij ontbrekend lokaal Git-netwerk lees/schrijf via die connector, controleer de actuele main en alle betrokken bestands-SHA's, behoud andermans wijzigingen en werk in één geteste commit. De oude `/home/claude`-paden en `add_repo` zijn geen beschikbare tools in dit werkaccount. Zernio is hier niet beschikbaar, dus geen eigen socialpublicatie claimen.
 
 ## 0. Leesroute voor elke sessie
 1. Lees dit document helemaal, live via de link hierboven. Begin daarna bij de dagupdate van gisteren (onderaan).
@@ -105,14 +112,9 @@ Afspraak over bestanden: verander in de opdrachtbestanden van een andere ronde a
 Mailt de hoofdchat de eerste klanten persoonlijk (stond op 23 nov open), dan doet het groei-account dat niet nog eens.
 
 ## 5. Blokkades eerst (dag 1 en 2)
-1. **Firewall van kadoly.com.** Sinds ten minste 20 nov geeft de CloudFront/AWS WAF een 403 aan Pinterestbot, facebookexternalhit, Twitterbot en bingbot; browsers krijgen 200. Gevolgen:
-   - geen Pinterest-claim en geen catalogus;
-   - geen linkvoorvertoning op Facebook en WhatsApp;
-   - Bing leest de shop niet, en Bing is de bron van het webzoeken van ChatGPT en Copilot.
+1. **Bottoegang tot kadoly.com.** Meting 23 november: volledige browser- en Pinterest-header krijgen 200 op home en robots.txt; Facebook-, Bing- en Google-header krijgen 403 via CloudFront. Andere nagebootste zoekbotheaders geven een gemengd resultaat. Dit bewijst geen blokkade van echte geverifieerde crawler-IP's, geen specifieke WAF-regel en ook geen bevestigde mislukte Pinterest-claim.
 
-   Wat nodig is: een allow-regel voor die bots, vóór de botregel. Ook nodig voor OAI-SearchBot, ChatGPT-User, PerplexityBot, Applebot, Google-Extended en ClaudeBot.
-
-   Eerst opnieuw meten: vraag een pagina op met de user-agent van elke bot, bijvoorbeeld via een Vercel-functie. Is de blokkade er nog, vraag Henkjan dan wie de WAF beheert en geef een kant-en-klare regel mee. Dit is de grootste hefboom van het plan.
+   Eerst de beheerder en logregels rond 12:09 UTC vaststellen, dan echte crawlerinspectie en één product/feed controleren. Alleen de aangetoonde blokkade voor geverifieerde zoek- en previewbots op openbare pagina's aanpassen. Geen algemene allow op user-agent. AWS-labeluitzonderingen staan na de bestaande Bot Control-groep en vóór de betrokken volgende blokregel; exacte plaats pas na inspectie. Bescherming van betaal- en accountpaden behouden. Trainingbots zijn een aparte keuze. De concrete beheerderstaak en primaire AWS-bron staan in het onderzoeksverslag hierboven.
 2. **Wordt een organische koop gemeten?** De keten liep tot nu toe nooit tot koop. Controleer of een betaalde bestelling na een organische klik als koop in Clickmind komt (org:p, org:d). Gebruik als test de twee TikTok-bestellingen van 15 tot 20 nov: staan ze als koop in de keten van hun campagne? Zo niet, zoek waar de koop wegvalt en repareer dat eerst; zonder koopmeting leert niets.
 3. **Lek aan het eind.** In de gidsuitproef kwamen 5 mensen bij betalen en kocht er niemand. Zoek uit of dat meting is of echt afhaken (betaalmethoden, verzendkosten die pas laat komen, vertrouwen). Rapporteer het aan de shop (OVERDRACHT-YOORS-SHOP.md); de shop lost het op.
 4. **Na de firewall:**
@@ -370,7 +372,18 @@ Vraag ze één voor één, in deze volgorde, en alleen als het werk erop wacht.
 > Je bent het groei-account van Kadoly. Lees de overdracht: web_fetch_vercel_url https://hjdk-api-henq.vercel.app/api/shop?op=groeioverdracht&vorm=tekst en de dagupdate van vanochtend. Doe het tweede stuk werk van vandaag uit sectie 9 (middagronde) volgens sectie 8 en de regels in sectie 3. Controleer wat vanochtend live ging. Commit met bestandsnaam, hooguit 2 pushes, één regel in het werklog (wie=kadoly-groei). Alleen een bericht aan Henkjan als er iets brak of als een stuk klaar is om te laten zien.
 
 ## Dagupdates (nieuwste bovenaan)
-Hier komt elke ochtend de dagupdate van het groei-account (laatste 14 dagen).
+
+### Kadoly groei, maandag 23 november
+
+1. **Uitkomst:** cumulatief sinds 16 november Facebook 33 kliks, 9 echt, 2 acties en 1 mandje; gids 6 kliks, 1 echt en 1 actie; Pinterest 3 kliks. Gisteren registreerde Facebook 7 uitgaande kliks. Organische verkopen niet geregistreerd. Kooproute organisch nog niet bewezen. Adressen per kanaal en een week-op-week-vergelijking ontbreken; geen verzonnen pijl.
+2. **Opgeleverd:** eerste nulmeting `kadoly/groei/2026-11-23.json`, [volledig verslag](https://github.com/henkjandekrijger-glitch/hjdk-api/blob/main/docs/kadoly-groei-ochtendronde-2026-11-23.md), seizoenprioriteiten in de bestaande gids- en socialopdrachten, concrete attributie- en retourvragen in de shopoverdracht. Geen nieuwe openbare tool of derdenbericht. Lootjesconcept alleen ter beoordeling en uitgesloten van productie.
+3. **Geleerd:** twee TikTok-kopen staan in Clickmind, samen € 91,36. Dit bewijst de algemene betaalroute voor TikTok, niet de organische attributie of alle feedorders. `v-kerstfinds` gaf één echt mens en één mandje; te klein voor opschalen. De gids heeft 6 geïndexeerde pagina's uit 68 bekeken adressen; het Perplexity-panel met 8 vragen geeft nog geen citaat van de gids.
+4. **Grootste lek:** browser/Pinterest-header 200, Facebook/Bing/Google-header 403. Nagebootste headers bewijzen geen echte crawlerblokkade. Beheerderstaak en logtijd klaargezet, beheerder gevraagd. Volgende oordeel in de middagronde om 17:43 UTC, mits echte log-/inspectiedata beschikbaar is. Metingslek direct afgevangen door cumulatieve cijfers te labelen en de nulmeting te bewaren.
+5. **Vandaag en morgen:** middag controleert bottoegang en shopattributie, volgt de bestaande redactie/socialronde en verwerkt reactie beheerder. Morgen snapshots vergelijken en alleen na akkoord de lootjestool verder bouwen. Rooktest inclusief syntax, vercel.json en commentaarcheck geslaagd. Twee taken actief om 05:43 en 13:43 Curaçao; pushinstelling niet bevestigd.
+6. **Reactie Henkjan:** Tim beheert de firewall. Op zijn verzoek is een kort bericht voor Tim gemaakt en in de chat getoond. Niet verstuurd, want de opdracht was het bericht maken. Concept en beheerderstaak staan in het verslag; vervolg wacht op de echte log-/inspectie-uitkomst.
+
+**Weekbalans:** week 1 start vandaag. Streefwaarde 150 echte bezoekers en 30 adressen met toestemming. De bestaande bron geeft daarvoor nog geen vergelijkbare weekstand of adresuitsplitsing; dit is de nulmeting. Frequentie blijft gelijk en geen motor wordt op één datapunt tot winnaar verklaard.
 
 ## Logboek (nieuwste bovenaan)
+- 2026-11-23 (groei-account): repo met pushrecht en CLAUDE.md gelezen, ochtend- en middagtaak actief; botheaders en koopmeting onderzocht, cumulatieve kanaalcijfers afgebakend, nulmeting bewaard en bestaande gids/socialronde bijgestuurd. Shop krijgt attributie- en retoursignaal. Lootjesconcept lokaal ter beoordeling en uitgesloten van Vercel. Pushmeldingen niet bevestigd. Beheerder CloudFront/WAF gevraagd; volgende controle middagronde.
 - 2026-11-23: plan geschreven in de hoofdchat en live gezet op /api/shop?op=groeioverdracht. Startstand in sectie 1. Henkjan maakt een eigen account vrij voor de uitvoering, met elke dag een grote update.

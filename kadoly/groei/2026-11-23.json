@@ -1,0 +1,353 @@
+{
+  "schema": 1,
+  "at": "2026-11-23T12:09:06.627Z",
+  "source": "https://hjdk-api-henq.vercel.app/api/shop?op=orgstand&dagen=7",
+  "org": {
+    "ok": true,
+    "uitleg": "kliks per dag (org:d), keten per kanaal en per post via Clickmind (kliks, echt mens, actie, mandje, koop; sinds 16 nov 23:00 UTC)",
+    "dagen": {
+      "2026-11-22": {
+        "fb|uit": 7,
+        "fb|voorbeeld": 17
+      },
+      "2026-11-20": {
+        "pin|voorbeeld": 1,
+        "fb|voorbeeld": 63,
+        "fb|uit": 7
+      },
+      "2026-11-19": {
+        "pin|uit": 3
+      },
+      "2026-11-18": {
+        "fb|voorbeeld": 60,
+        "fb|uit": 12
+      },
+      "2026-11-17": {
+        "fb|voorbeeld": 30,
+        "fb|uit": 7
+      }
+    },
+    "kanalen": {
+      "facebook": {
+        "kliks": 33,
+        "echt": 9,
+        "actie": 2,
+        "mandje": 1
+      },
+      "pinterest": {
+        "kliks": 3
+      },
+      "gids": {
+        "kliks": 6,
+        "echt": 1,
+        "actie": 1
+      }
+    },
+    "posts": {
+      "1117-sieraad": {
+        "kliks": 4,
+        "echt": 1
+      },
+      "1117-mandje": {
+        "kliks": 3
+      },
+      "1118-mandje": {
+        "kliks": 3
+      },
+      "v-tafelhaard_kleur": {
+        "kliks": 1,
+        "echt": 1
+      },
+      "1118-nieuw": {
+        "kliks": 2,
+        "echt": 2
+      },
+      "v-kersthoek_set": {
+        "kliks": 6
+      },
+      "pin20261116scheerolie01": {
+        "kliks": 1
+      },
+      "pin20261116scheerset01": {
+        "kliks": 1
+      },
+      "pin20261116scheerkwast01": {
+        "kliks": 1
+      },
+      "1120-wonen": {
+        "kliks": 3,
+        "echt": 1
+      },
+      "v-kerstballen_kleur": {
+        "kliks": 1
+      },
+      "1120-sieraad": {
+        "kliks": 3,
+        "echt": 1,
+        "actie": 1
+      },
+      "v-boho_set": {
+        "kliks": 1,
+        "echt": 1
+      },
+      "g-claude-test": {
+        "kliks": 1
+      },
+      "g-dressoir": {
+        "kliks": 1,
+        "echt": 1,
+        "actie": 1
+      },
+      "v-kerstfinds": {
+        "kliks": 1,
+        "echt": 1,
+        "actie": 1,
+        "mandje": 1
+      },
+      "v-n261119a": {
+        "kliks": 5,
+        "echt": 1
+      },
+      "g-kz-cadeau-juf-meester": {
+        "kliks": 1
+      },
+      "g-kz-cadeau-oma-80-jaar": {
+        "kliks": 1
+      },
+      "g-kz-cadeau-voor-zwangere-vrouw": {
+        "kliks": 2
+      }
+    }
+  },
+  "measurement": {
+    "channelAndPostScope": "cumulative since 2026-11-16, not restricted by dagen",
+    "dailyScope": "dagen applies only to org:d clicks; no daily channel funnel or attributed opt-ins",
+    "weeklyComparison": null,
+    "optInsByMotor": null,
+    "knownPaidTikTok": {
+      "purchases": 2,
+      "revenueEUR": 91.36,
+      "source": "https://hjdk-api-henq.vercel.app/api/shop?op=trechter",
+      "scope": "lifetime counters"
+    },
+    "lastPurchase": {
+      "at": 1795122090357,
+      "test": false,
+      "bedrag": 52.91,
+      "order": true,
+      "methode": "ideal",
+      "bron": "shop"
+    },
+    "organicPurchaseEndToEndVerified": false
+  },
+  "gids": {
+    "indexed": 6,
+    "inspected": 68,
+    "source": "https://hjdk-api-henq.vercel.app/api/zicht?op=stand&site=kadolygids",
+    "panel": {
+      "model": "perplexity/sonar",
+      "questions": 8,
+      "citations": 0
+    }
+  },
+  "schedules": {
+    "timezone": "America/Curacao",
+    "morning": "05:43",
+    "afternoon": "13:43",
+    "pushVerified": false
+  },
+  "limitations": [
+    "UA probes are simulated from one connection, not real provider IP crawl verification",
+    "Zernio connector not present; plugin search returned no result",
+    "Local git network unavailable; repository read/write through GitHub connector"
+  ],
+  "botProbeSimple": {
+    "at": "2026-11-23T12:07:26.351Z",
+    "results": [
+      {
+        "ua": "Mozilla/5.0",
+        "status": 403,
+        "url": "https://kadoly.com/",
+        "server": "CloudFront",
+        "waf": null,
+        "title": "ERROR: The request could not be satisfied",
+        "bytes": 919
+      },
+      {
+        "ua": "Pinterestbot/1.0",
+        "status": 200,
+        "url": "https://kadoly.com/",
+        "server": "Apache/2.4.58 (Ubuntu)",
+        "waf": null,
+        "title": "Kadoly: special finds and gifts, ordered safely",
+        "bytes": 239694
+      },
+      {
+        "ua": "facebookexternalhit/1.1",
+        "status": 403,
+        "url": "https://kadoly.com/",
+        "server": "CloudFront",
+        "waf": null,
+        "title": "ERROR: The request could not be satisfied",
+        "bytes": 919
+      },
+      {
+        "ua": "Twitterbot/1.0",
+        "status": 403,
+        "url": "https://kadoly.com/",
+        "server": "CloudFront",
+        "waf": null,
+        "title": "ERROR: The request could not be satisfied",
+        "bytes": 919
+      },
+      {
+        "ua": "bingbot/2.0",
+        "status": 403,
+        "url": "https://kadoly.com/",
+        "server": "CloudFront",
+        "waf": null,
+        "title": "ERROR: The request could not be satisfied",
+        "bytes": 919
+      },
+      {
+        "ua": "OAI-SearchBot/1.0",
+        "status": 403,
+        "url": "https://kadoly.com/",
+        "server": "CloudFront",
+        "waf": null,
+        "title": "ERROR: The request could not be satisfied",
+        "bytes": 919
+      },
+      {
+        "ua": "ChatGPT-User/1.0",
+        "status": 403,
+        "url": "https://kadoly.com/",
+        "server": "CloudFront",
+        "waf": null,
+        "title": "ERROR: The request could not be satisfied",
+        "bytes": 919
+      },
+      {
+        "ua": "PerplexityBot/1.0",
+        "status": 200,
+        "url": "https://kadoly.com/",
+        "server": "Apache/2.4.58 (Ubuntu)",
+        "waf": null,
+        "title": "Kadoly: special finds and gifts, ordered safely",
+        "bytes": 239694
+      },
+      {
+        "ua": "Applebot/0.1",
+        "status": 403,
+        "url": "https://kadoly.com/",
+        "server": "CloudFront",
+        "waf": null,
+        "title": "ERROR: The request could not be satisfied",
+        "bytes": 919
+      },
+      {
+        "ua": "Googlebot/2.1",
+        "status": 403,
+        "url": "https://kadoly.com/",
+        "server": "CloudFront",
+        "waf": null,
+        "title": "ERROR: The request could not be satisfied",
+        "bytes": 919
+      },
+      {
+        "ua": "ClaudeBot/1.0",
+        "status": 200,
+        "url": "https://kadoly.com/",
+        "server": "Apache/2.4.58 (Ubuntu)",
+        "waf": null,
+        "title": "Kadoly: special finds and gifts, ordered safely",
+        "bytes": 239694
+      }
+    ]
+  },
+  "botProbeFull": {
+    "at": "2026-11-23T12:09:12.022Z",
+    "results": [
+      {
+        "name": "browser",
+        "path": "/",
+        "status": 200,
+        "server": "Apache/2.4.58 (Ubuntu)",
+        "bytes": 258951,
+        "title": "Kadoly: bijzondere spullen en cadeaus, veilig besteld"
+      },
+      {
+        "name": "browser",
+        "path": "/robots.txt",
+        "status": 200,
+        "server": "Apache/2.4.58 (Ubuntu)",
+        "bytes": 2288,
+        "robots": "# Crawlers that bring no visitors, only traffic: Amazon's crawler and SEO tools (Tim, on the live site)\nUser-agent: Amazonbot\nUser-agent: AhrefsBot\nUser-agent: SemrushBot\nUser-agent: MJ12bot\nUser-agent: DotBot\nUser-agent: PetalBot\nUser-agent: DataForSeoBot\nUser-agent: Bytespider\nDisallow: /\n\n# The user agents, AdsBot-Google had to be added separately.\nUser-agent: *\nUser-agent: AdsBot-Google\n\n# Which pages are not to be crawled.\n# Only these pages, not every address that starts with the same letters: a post at /search-engine-tips or\n# /messenger-tips is a page like any other ($ = the address ends there).\nDisallow: /smartsocialopen\nDisallow: /search$\nDisallow: /search?\nDisallow: /search/\n# tag pages sorted, filtered or further on: the same posts again (noindex); the tag page itself stays open\nDisallow: /y/*?\nDisallow: /tag/*?\nDisallow: /searchmorepostsbyuser/\nDisallow: /feed/\nDisallow: /analytics/\nDisallow: /loadmore\nDisallow: /notification/\nDisallow: /notifications/\nDisallow: /messenger$\nDisallow: /messenger/\nDisallow: /shop/inbox\nDisallow: /_profiler\n# Buying, orders, account and admin: only for the one logged in or paying, nothing to find (noindex too); keeps the\n# crawl for products and articles. /shop/api/ and /navbar stay open: Google needs them to see the shop in a page.\nDisallow: /checkout/\n# except the checkout links in the Google Shopping feed (g:checkout_link_template, ?via=google: GoogleShoppingFeed): Google's\n# shopping crawler (Storebot-Google) checks that each one opens the checkout with that product (Henkjan 14 Nov 2026)\nAllow: /checkout/*via=google\nDisallow: /bundle/checkout\nDisallow: /order/\nDisallow: /orders$\nDisallow: /orders?\nDisallow: /shop/bestelling/\nDisallow: /settings$\nDisallow: /settings?\nDisallow: /settings/\nDisallow: /account/\nDisallow: /dashboard/\nDisallow: /admin$\nDisallow: /admin/\n# the site's own beacons and the pop-up's calls, no pages; the shop block in articles stays open (shop-block-loader)\nDisallow: /t/\nDisallow: /learn/\nAllow: /learn/shop-block\n\n# The sitemap index (made from the database: SitemapController, /sitemap.xml)\nSitemap: https://kadoly.com/sitemap.xml\n\n# For AI assistants (ChatGPT, Claude, Perplexity…): what Kadoly is, the shop, delivery, returns and every main page\n# LLMs: https://kadoly.com/llms.txt\n"
+      },
+      {
+        "name": "pinterest",
+        "path": "/",
+        "status": 200,
+        "server": "Apache/2.4.58 (Ubuntu)",
+        "bytes": 258951,
+        "title": "Kadoly: bijzondere spullen en cadeaus, veilig besteld"
+      },
+      {
+        "name": "pinterest",
+        "path": "/robots.txt",
+        "status": 200,
+        "server": "Apache/2.4.58 (Ubuntu)",
+        "bytes": 2288,
+        "robots": "# Crawlers that bring no visitors, only traffic: Amazon's crawler and SEO tools (Tim, on the live site)\nUser-agent: Amazonbot\nUser-agent: AhrefsBot\nUser-agent: SemrushBot\nUser-agent: MJ12bot\nUser-agent: DotBot\nUser-agent: PetalBot\nUser-agent: DataForSeoBot\nUser-agent: Bytespider\nDisallow: /\n\n# The user agents, AdsBot-Google had to be added separately.\nUser-agent: *\nUser-agent: AdsBot-Google\n\n# Which pages are not to be crawled.\n# Only these pages, not every address that starts with the same letters: a post at /search-engine-tips or\n# /messenger-tips is a page like any other ($ = the address ends there).\nDisallow: /smartsocialopen\nDisallow: /search$\nDisallow: /search?\nDisallow: /search/\n# tag pages sorted, filtered or further on: the same posts again (noindex); the tag page itself stays open\nDisallow: /y/*?\nDisallow: /tag/*?\nDisallow: /searchmorepostsbyuser/\nDisallow: /feed/\nDisallow: /analytics/\nDisallow: /loadmore\nDisallow: /notification/\nDisallow: /notifications/\nDisallow: /messenger$\nDisallow: /messenger/\nDisallow: /shop/inbox\nDisallow: /_profiler\n# Buying, orders, account and admin: only for the one logged in or paying, nothing to find (noindex too); keeps the\n# crawl for products and articles. /shop/api/ and /navbar stay open: Google needs them to see the shop in a page.\nDisallow: /checkout/\n# except the checkout links in the Google Shopping feed (g:checkout_link_template, ?via=google: GoogleShoppingFeed): Google's\n# shopping crawler (Storebot-Google) checks that each one opens the checkout with that product (Henkjan 14 Nov 2026)\nAllow: /checkout/*via=google\nDisallow: /bundle/checkout\nDisallow: /order/\nDisallow: /orders$\nDisallow: /orders?\nDisallow: /shop/bestelling/\nDisallow: /settings$\nDisallow: /settings?\nDisallow: /settings/\nDisallow: /account/\nDisallow: /dashboard/\nDisallow: /admin$\nDisallow: /admin/\n# the site's own beacons and the pop-up's calls, no pages; the shop block in articles stays open (shop-block-loader)\nDisallow: /t/\nDisallow: /learn/\nAllow: /learn/shop-block\n\n# The sitemap index (made from the database: SitemapController, /sitemap.xml)\nSitemap: https://kadoly.com/sitemap.xml\n\n# For AI assistants (ChatGPT, Claude, Perplexity…): what Kadoly is, the shop, delivery, returns and every main page\n# LLMs: https://kadoly.com/llms.txt\n"
+      },
+      {
+        "name": "facebook",
+        "path": "/",
+        "status": 403,
+        "server": "CloudFront",
+        "bytes": 919,
+        "title": "ERROR: The request could not be satisfied"
+      },
+      {
+        "name": "facebook",
+        "path": "/robots.txt",
+        "status": 403,
+        "server": "CloudFront",
+        "bytes": 919,
+        "title": "ERROR: The request could not be satisfied"
+      },
+      {
+        "name": "bing",
+        "path": "/",
+        "status": 403,
+        "server": "CloudFront",
+        "bytes": 919,
+        "title": "ERROR: The request could not be satisfied"
+      },
+      {
+        "name": "bing",
+        "path": "/robots.txt",
+        "status": 403,
+        "server": "CloudFront",
+        "bytes": 919,
+        "title": "ERROR: The request could not be satisfied"
+      },
+      {
+        "name": "google",
+        "path": "/",
+        "status": 403,
+        "server": "CloudFront",
+        "bytes": 919,
+        "title": "ERROR: The request could not be satisfied"
+      },
+      {
+        "name": "google",
+        "path": "/robots.txt",
+        "status": 403,
+        "server": "CloudFront",
+        "bytes": 919,
+        "title": "ERROR: The request could not be satisfied"
+      }
+    ]
+  }
+}

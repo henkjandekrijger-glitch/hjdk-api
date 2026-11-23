@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lootjes trekken | Kadoly concept</title>
+<style>
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#111;background:#fff;line-height:1.6;color-scheme:light}*{box-sizing:border-box}body{margin:0}header,main,footer{max-width:680px;margin:auto;padding:20px}header{display:flex;justify-content:space-between;border-bottom:1px solid #ddd;gap:12px}a{color:inherit;text-underline-offset:4px}h1{font-size:clamp(30px,7vw,44px);letter-spacing:-.04em;line-height:1.12;margin:30px 0 18px}h2{font-size:23px;line-height:1.3;margin:0 0 12px}p{font-size:17px;margin:0 0 18px}.label,small{font-size:14px}.label{border:1px solid #111;border-radius:999px;padding:3px 12px}.row{display:flex;gap:12px;flex-wrap:wrap}.row>div{flex:1;min-width:130px}label{display:block;font-weight:700;font-size:16px;margin:16px 0 6px}input,textarea,select,button{font:inherit;font-size:17px;color:#111;width:100%;border:1px solid #777;border-radius:12px;padding:12px;background:#fff;min-height:48px}textarea{resize:vertical}button{border-radius:999px;background:#111;color:#fff;border-color:#111;font-weight:700;cursor:pointer;margin:18px 0 0}button.secondary{background:#fff;color:#111}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #111;outline-offset:4px}.panel{border:1px solid #ccc;border-radius:20px;padding:24px;margin:20px 0}.pillrow{display:flex;gap:8px;flex-wrap:wrap}.pillrow button{width:auto;flex:1;min-width:70px;background:#fff;color:#111;margin:0}.pillrow button[aria-pressed=true]{background:#111;color:#fff}.result{font-size:30px;line-height:1.3;font-weight:700;margin:10px 0 18px}.notice{border-left:3px solid #111;padding-left:14px;font-size:15px}.error{font-weight:700}.hidden,[hidden]{display:none!important}footer{border-top:1px solid #ddd;font-size:14px;margin-top:35px;padding-bottom:35px}@media(max-width:400px){.panel{padding:18px}header,main,footer{padding-left:18px;padding-right:18px}}
+</style>
+<header><strong>Kadoly</strong><span class="label">Voorbeeld ter beoordeling</span></header>
+<main>
+<section id="start">
+<h1>Wie trek jij dit jaar?</h1>
+<p>Lootjes trekken, wensen opschrijven en een cadeau vinden dat bij je budget past.</p>
+<p class="notice">Dit is een lokaal voorbeeld. Het maakt geen echte groep en verstuurt niets. In de uiteindelijke versie krijgt iedereen een eigen geheime link, ook zonder account.</p>
+<form id="group">
+<label for="names">Wie doen er mee?</label>
+<textarea id="names" rows="3" autocomplete="off" required>Noor
+Sam
+Alex
+Bo</textarea>
+<small>Voor dit voorbeeld: minimaal 3 en maximaal 12 verschillende voornamen, één per regel.</small>
+<label>Wat is het budget per cadeau?</label>
+<div class="pillrow" role="group" aria-label="Budget">
+<button type="button" data-budget="10" aria-pressed="false">€ 10</button><button type="button" data-budget="20" aria-pressed="true">€ 20</button><button type="button" data-budget="25" aria-pressed="false">€ 25</button>
+</div>
+<p><small>Bij de cadeaukeuzes telt verzending mee in het budget.</small></p>
+<label for="date">Wanneer geven jullie de cadeaus?</label>
+<input id="date" type="date" value="2026-12-05" required>
+<p id="error" class="error" role="alert"></p>
+<button type="submit">Bekijk de voorbeeldtrekking</button>
+</form>
+</section>
+<section id="draw" hidden>
+<h1>Je lootje is klaar.</h1>
+<p>Zo kan een deelnemer zijn eigen lootje bekijken.</p>
+<div class="panel">
+<label for="person">Bekijk als</label><select id="person"></select>
+<button id="reveal" type="button">Open mijn lootje</button>
+<div id="secret" hidden aria-live="polite"><p class="label" id="giver"></p><p class="result" id="recipient"></p><p id="details"></p><h2>Op het verlanglijstje</h2><p id="wish"></p><p class="notice">De echte versie toont hier beschikbare producten met hun actuele totaalprijs en bezorgschatting. In dit voorbeeld staan geen verzonnen producten of bestelknoppen.</p></div>
+</div>
+<div class="panel"><h2>Wat zou jij graag krijgen?</h2><label for="ownwish">Jouw wensen</label><textarea id="ownwish" rows="3" placeholder="Bijvoorbeeld iets voor op mijn bureau, of iets om zelf te maken"></textarea><button type="button" id="savewish" class="secondary">Bewaar in dit voorbeeld</button><p id="saved" role="status"></p></div>
+<p class="notice">Iedereen kan in deze demo van persoon wisselen. Dit is geen privacybeveiliging. De echte versie moet aparte, onraadbare links en toegangscontrole krijgen. De trekgegevens worden nooit naar de browser van de organisator gestuurd.</p>
+<button id="again" class="secondary" type="button">Terug naar het begin</button>
+</section>
+<section class="panel"><h2>De opzet</h2><p>Alleen voornamen. Zelf iets anders wensen mag ook. Een account of aankoop is niet nodig. Een herinnering per e-mail wordt een aparte, vrijwillige keuze.</p><p class="label">Nog te bouwen na akkoord</p><p>Geheime deelnemerslinks, uitsluitingen, verlanglijsten delen, productkeuzes en het automatisch wissen van een groep 30 dagen na de gekozen datum.</p></section>
+</main>
+<footer>Kadoly, een webshop van onafhankelijke merken. Dit concept wordt pas een openbare tool na akkoord van Henkjan.</footer>
+<script>
+let budget=20, assignments=[], wishes=new Map();
+const byId=id=>document.getElementById(id);
+function randomIndex(max){const x=new Uint32Array(1),limit=Math.floor(4294967296/max)*max;do{crypto.getRandomValues(x)}while(x[0]>=limit);return x[0]%max}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=randomIndex(i+1);[a[i],a[j]]=[a[j],a[i]]}return a}
+document.querySelectorAll('[data-budget]').forEach(button=>button.addEventListener('click',()=>{budget=Number(button.dataset.budget);document.querySelectorAll('[data-budget]').forEach(other=>other.setAttribute('aria-pressed',String(other===button)))}));
+byId('group').addEventListener('submit',e=>{e.preventDefault();const names=byId('names').value.split('\n').map(n=>n.trim()).filter(Boolean);const unique=new Set(names.map(n=>n.toLocaleLowerCase('nl')));if(names.length<3||names.length>12||unique.size!==names.length||names.some(n=>n.length>40)){byId('error').textContent='Vul 3 tot 12 verschillende voornamen in, maximaal 40 tekens per naam.';return}byId('error').textContent='';let targets;for(let attempt=0;attempt<10000;attempt++){targets=shuffle([...names]);if(targets.every((n,i)=>n!==names[i]))break;targets=null}if(!targets){byId('error').textContent='Deze trekking lukte niet. Probeer het opnieuw.';return}assignments=names.map((name,i)=>({name,target:targets[i]}));byId('person').replaceChildren(...names.map((name,i)=>{const o=document.createElement('option');o.value=String(i);o.textContent=name;return o}));byId('start').hidden=true;byId('draw').hidden=false;resetSecret();window.scrollTo(0,0)});
+function resetSecret(){byId('secret').hidden=true;const a=assignments[Number(byId('person').value)];byId('ownwish').value=wishes.get(a.name)||'';byId('saved').textContent=''}
+byId('person').addEventListener('change',resetSecret);
+byId('reveal').addEventListener('click',()=>{const a=assignments[Number(byId('person').value)];byId('giver').textContent='Voor '+a.name;byId('recipient').textContent='Jij geeft iets aan '+a.target+'.';const date=byId('date').value;byId('details').textContent='Budget € '+budget+'. Cadeaus geven op '+new Intl.DateTimeFormat('nl-NL',{day:'numeric',month:'long',year:'numeric'}).format(new Date(date+'T12:00:00'));byId('wish').textContent=wishes.get(a.target)||'Een wens verschijnt hier zodra deze deelnemer die heeft ingevuld.';byId('secret').hidden=false});
+byId('savewish').addEventListener('click',()=>{const a=assignments[Number(byId('person').value)];wishes.set(a.name,byId('ownwish').value.trim().slice(0,1000));byId('saved').textContent='Bewaard zolang dit voorbeeld openstaat.'});
+byId('again').addEventListener('click',()=>{byId('draw').hidden=true;byId('start').hidden=false;window.scrollTo(0,0)});
+</script>
+</html>
