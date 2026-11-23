@@ -37,3 +37,10 @@ test('startpagina: script is geldig JavaScript en de ops bestaan', () => {
   new Function(js); // gooit bij een syntaxfout
   for (const op of ['dmeld', 'dmail']) assert.ok(OPS.has(op) && js.includes("op:'" + op + "'"));
 });
+test('proefadres: links tussen de pagina\'s wijzen naar op=dpagina, op wearemany.now naar de korte paden', () => {
+  const proef = pagina('nl', false, true), echt = pagina('nl', false, false);
+  assert.ok(echt.includes('href="/start?b=Videoland"') && echt.includes('href="/vriendenloterij-opzeggen"'));
+  assert.ok(proef.includes('href="/api/wam?op=dpagina&amp;p=start&amp;b=Videoland"') && proef.includes('href="/api/wam?op=dpagina&amp;p=vriendenloterij-opzeggen"'));
+  assert.ok(!/href="\/(nl|start|achtergrond|pers|vriendenloterij-opzeggen)["?#]/.test(proef), 'geen kort pad meer op het proefadres');
+  assert.ok(pagina('pers', false, true).includes('href="https://wearemany.now/#henkjan"') && proef.includes('href="https://wearemany.now/privacy"'));
+});
