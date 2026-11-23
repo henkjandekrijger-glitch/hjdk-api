@@ -217,10 +217,10 @@ Altijd via Resend, en elke mail eerst langs mail-lerend.
 
 Bronnen: arxiv.org/abs/2311.09735 (GEO), ahrefs.com/blog/best-lists-research, ahrefs.com/blog/fresh-content, airops.com/research/the-influence-of-offsite-signals-in-ai-search, searchengineland.com/why-most-original-data-never-gets-cited-481676, raptive.com/blog/refresh-analysis-and-google-traffic-growth, searchenginejournal.com/it-works-until-it-doesnt-ai-content-strategies-that-backfire/574820, tailwindapp.com/blog/pinterest-seo-in-2025, kit.com/features/creator-network, digitalapplied.com/blog/ai-traffic-converts-42-percent-better-2026-channel-strategy, searchengineland.com/llms-google-referral-conversion-study-463747.
 
-### Amazonknoppen, voorstel 23 november
-De boekkaarten krijgen een zichtbare zwarte 'View on Amazon'-knop met pijl; op Lasting Change gebruikt de paperbackknop dezelfde gedeelde stijl. Op mobiel is de knop volledig breed. De kaart blijft één link, zonder geneste knoppen of extra tussenpagina. Nieuwe artikelen en boekblokken nemen dit automatisch over. Een beschikbare PDF houdt zijn eigen primaire koopknop; Amazon wordt dan een stevige omlijnde tweede optie. De bestaande vaste balk op de LC-home blijft behouden. Status: eerst bekijken, niet live.
+### Amazonknoppen, goedgekeurd 23 november
+De boekkaarten krijgen een zichtbare zwarte 'View on Amazon'-knop met pijl; op Lasting Change gebruikt de paperbackknop dezelfde gedeelde stijl. Op mobiel is de knop volledig breed. De kaart blijft één link, zonder geneste knoppen of extra tussenpagina. Nieuwe artikelen en boekblokken nemen dit automatisch over. Een beschikbare PDF houdt zijn eigen primaire koopknop; Amazon wordt dan een stevige omlijnde tweede optie. De bestaande vaste balk op de LC-home blijft behouden. Status: Henkjan keurde de getoonde preview op 23 november expliciet goed voor publicatie.
 
-Controle: bestaande pagina- en rapporttests plus visuele controle op mobiel en desktop; URL's en ASIN's blijven dezelfde /go-meetroute gebruiken. De CTR blijft onbekend zolang de koppeling tussen pagina en klik ontbreekt. Na akkoord eerst de werking controleren en daarna met vergelijkbare meetgegevens volgen; geen vroege winnaar of publiek klikbewijs uit ruwe redirects.
+Controle: 17 bestaande pagina- en rapporttests geslaagd, desktop visueel gecontroleerd; mobiele CSS en rendering nagekeken zonder volledige mobiele screenshotcontrole; URL's en ASIN's blijven dezelfde /go-meetroute gebruiken. De CTR blijft onbekend zolang de koppeling tussen pagina en klik ontbreekt. Na akkoord eerst de werking controleren en daarna met vergelijkbare meetgegevens volgen; geen vroege winnaar of publiek klikbewijs uit ruwe redirects.
 
 ## 8. Lopende proeven
 
@@ -245,6 +245,8 @@ Plak dit als eerste bericht:
 "Lees eerst de overdracht content en distributie: https://hjdk-api-henq.vercel.app/api/bs?op=content (Vercel-tool web_fetch_vercel_url) en de repo henkjandekrijger-glitch/hjdk-api (OVERDRACHT-CONTENT.md, CLAUDE.md). Jij doet vanaf nu alleen content en distributie voor stockingbooks.com, lastingchange.works en Pinterest, met de dagelijkse leerlus uit hoofdstuk 7 en de strategie uit hoofdstuk 7b. Maak de twee geplande taken uit hoofdstuk 6 opnieuw aan in dit account. Begin met het grootste lek uit het rapport van vandaag en laat me alles eerst zien voor het live gaat."
 
 ## Logboek (nieuwste bovenaan)
+
+- 2026-11-23, content-Codex: Henkjan geeft met 'yes' akkoord op de getoonde Amazonknoppen. Uitrol van precies die versie via PR #11; code en bestaande /go-meting blijven gelijk aan de gecontroleerde preview. Productie en beide gezondheidscontroles worden na uitrol gecontroleerd; geen gemeten klik- of verkoopwinst geclaimd.
 
 - 2026-11-23, content-Codex: op Henkjans verduidelijking 'Amazonknoppen prominenter' een visueel voorstel gemaakt. Gedeelde zwarte Amazonknop met pijl, minimumhoogte 56px, volle breedte op mobiel en een expliciete knop op iedere boekkaart. Dezelfde stijl werkt automatisch door in nieuwe boekblokken en LC-artikelen; PDF-knop en /go-meetroute blijven behouden. Geen klikvolumes als publiek bewijs getoond. Dit is een ontwerpwijziging, geen bewezen klik- of verkoopwinst. Eerst preview, nog niet op main/live.
 
