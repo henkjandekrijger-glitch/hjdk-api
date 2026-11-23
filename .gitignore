@@ -2,3 +2,11 @@ node_modules
 .vercel
 consistentie.md
 __pycache__/
+
+kdp/bouw/apocrypha/fonts/
+kdp/bouw/apocrypha/*.docx
+kdp/bouw/apocrypha/*.pdf
+kdp/bouw/apocrypha/*.html
+kdp/bouw/apocrypha/check/
+kdp/bouw/omslag2027/crop/
+kdp/bouw/omslag2027/omslag/
