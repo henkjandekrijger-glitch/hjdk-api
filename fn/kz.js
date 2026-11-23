@@ -198,6 +198,12 @@ async function usage() {
 function popScore(u) { const b = u || { page: 0, adv: 0, clk: 0 }; const s = b.clk * 5 + b.adv * 2 + b.page; const n = b.page + 1; const sample = Math.random(); return (s + 1) / n * (0.7 + 0.6 * sample) + Math.log(s + 1); }
 
 // antwoordroute -> filters -> 3 producten (beste, goedkoper, luxer); kliks per product leren mee
+function volledigeBatterijTitel(title) {
+  title = String(title || '');
+  return /thuis[\s-]?batterij|stekkerbatterij|plug[\s-]?in[\s-]?battery|solarbank|solarflow|venus\s+e\b/i.test(title)
+    && !/uitbreidingsaccu|uitbreidingsbatterij|expansion battery|accukabel|verlengkabel|aansluitkabel|montagebeugel|installatieservice/i.test(title);
+}
+
 async function advise(item, route, tag) {
   if (item.tool) return { term: item.term, products: [] };
   const picks = route.map((a, i) => (item.questions[i] && item.questions[i].options[a]) || null).filter(Boolean);
@@ -207,11 +213,7 @@ async function advise(item, route, tag) {
   try { const r = await searchCached(term.trim(), { country: 'NL', size: 48, sort: 'RELEVANCE' }); checkedAt = r.at || null; products = (r.products || []).filter(p => p.price != null && p.image); } catch (e) {}
   if(item.slug==='thuisbatterij')products=products.filter(p=>!/laten aansluiten|aansluitservice|installatieservice|zoofy|uitbreidingsaccu|expansion battery|accukabel|verlengkabel/i.test(String(p.title||'')));
   // 23 nov 2026: op deze batterijvergelijking werd een losse HomeWizard P1-meter het advies. Alleen herkenbare complete batterijen doorlaten.
-  if (item.slug === 'marstek-venus-e-3-vs-homewizard-vs-anker-solix') products = products.filter(p => {
-    const title = String(p.title || '');
-    return /thuis[\s-]?batterij|stekkerbatterij|plug[\s-]?in[\s-]?battery|solarbank|solarflow|venus\s+e\b/i.test(title)
-      && !/uitbreidingsaccu|uitbreidingsbatterij|expansion battery|accukabel|verlengkabel|aansluitkabel|montagebeugel|installatieservice/i.test(title);
-  });
+  if (item.slug === 'marstek-venus-e-3-vs-homewizard-vs-anker-solix') products = products.filter(p => volledigeBatterijTitel(p.title));
   /* harde antwoorden (optie.hard, bijv. de wielmaat bij kinderfiets): een product moet minstens één term van die optie in de titel hebben, anders wint een 26 inch stadsfiets met veel losse treffers bij een kind van 4 */
   const hard = picks.filter(o => o.hard && o.must && o.must.length).map(o => o.must.map(x => x.toLowerCase()));
   if (hard.length) { const ok = p => { const t = String(p.title).toLowerCase(); return hard.every(h => h.some(m => t.indexOf(m) >= 0)); }; const f = products.filter(ok); if (f.length) products = f; }
@@ -616,12 +618,12 @@ hit('hjdk6-kz-'+S+'-page');})();</script>`;
 const DATUM_NL = d => { const m = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december']; const x = new Date(d + 'T12:00:00Z'); return x.getUTCDate() + ' ' + m[x.getUTCMonth()] + ' ' + x.getUTCFullYear(); };
 const kortTitel = t => { const a = String(t || '').replace(/\s+/g, ' ').trim(); const k = a.split(/\s[-–|,(]\s?|\s\(/)[0].trim(); return (k.length >= 18 ? k : a).slice(0, 70); };
 async function situatieTabel(item) {
-  const k = 'hjdk:kz:sit:' + item.slug; try { const c = await kv.get(k); if (c && c.dag === TODAY() && (item.slug !== 'thuisbatterij' || !(c.rijen || []).some(r => /laten aansluiten|aansluitservice|installatieservice|zoofy|uitbreidingsaccu|expansion battery|accukabel|verlengkabel/i.test(String(r.titel || r.product || ''))))) return c; } catch (e) {}
+  const k = 'hjdk:kz:sit:' + item.slug; try { const c = await kv.get(k); if (c && c.dag === TODAY() && (item.slug !== 'marstek-venus-e-3-vs-homewizard-vs-anker-solix' || (c.rijen || []).every(r => volledigeBatterijTitel(r.titel || r.product))) && (item.slug !== 'thuisbatterij' || !(c.rijen || []).some(r => /laten aansluiten|aansluitservice|installatieservice|zoofy|uitbreidingsaccu|expansion battery|accukabel|verlengkabel/i.test(String(r.titel || r.product || ''))))) return c; } catch (e) {}
   const qs = item.questions || []; const routes = []; const zero = qs.map(() => 0);
   qs.forEach((q, qi) => { if (!q || !q.options || q.options.length < 2 || q.options.length > 6) return; q.options.forEach((o, oi) => { const r = zero.slice(); r[qi] = oi; routes.push({ r, vraag: q.q, situatie: o.label }); }); });
   const kies = routes.slice(0, 12); const rijen = [];
   await Promise.all(kies.map(async (x, i) => { try { const a = await advise(item, x.r, '-sit'); const b = (a.products || []).find(p => p.price != null && p.title); if (b) rijen[i] = { vraag: x.vraag, situatie: x.situatie, route: x.r.join('-'), product: kortTitel(b.title), titel: b.title, prijs: b.price, rating: b.rating, url: b.url }; } catch (e) {} }));
-  const uit = { dag: TODAY(), rijen: rijen.filter(Boolean) }; if (uit.rijen.length) { try { await kv.set(k, uit, { ex: 3 * 86400 }); } catch (e) {} } return uit;
+  const uit = { dag: TODAY(), rijen: rijen.filter(Boolean) }; if (uit.rijen.length || item.slug === 'marstek-venus-e-3-vs-homewizard-vs-anker-solix') { try { await kv.set(k, uit, { ex: 3 * 86400 }); } catch (e) {} } return uit;
 }
 function situatieHtml(item, t) {
   if (!t || !t.rijen || t.rijen.length < 2) return '';
@@ -1112,7 +1114,7 @@ self.addEventListener('notificationclick',function(e){e.notification.close();var
     if (op === 'llmsfull') { // llms-full.txt: alle keuzehulpen volledig uitgeschreven (vragen, wat elke keuze betekent, uitleg, fouten, FAQ) voor AI-assistenten
       const items = await allItems(); const base = baseOf(req); res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'public, max-age=3600');
       const opt = o => o.label + (o.min || o.max ? ' (prijsklasse ' + (o.min ? 'vanaf €' + o.min : '') + (o.min && o.max ? ' ' : '') + (o.max ? 'tot €' + o.max : '') + ')' : '');
-      const sits = {}; try { for (let k = 0; k < items.length; k += 200) { const part = items.slice(k, k + 200); const v = await kv.mget(...part.map(i => 'hjdk:kz:sit:' + i.slug)); part.forEach((i, j) => { if (v[j] && v[j].rijen && v[j].rijen.length) sits[i.slug] = v[j]; }); } } catch (e) {}
+      const sits = {}; try { for (let k = 0; k < items.length; k += 200) { const part = items.slice(k, k + 200); const v = await kv.mget(...part.map(i => 'hjdk:kz:sit:' + i.slug)); part.forEach((i, j) => { if (v[j] && v[j].rijen && v[j].rijen.length && (i.slug !== 'marstek-venus-e-3-vs-homewizard-vs-anker-solix' || v[j].rijen.every(r => volledigeBatterijTitel(r.titel || r.product)))) sits[i.slug] = v[j]; }); } } catch (e) {}
       const sitTxt = i => { const t = sits[i.slug]; if (!t) return ''; return '\n### Onze keuze per situatie (prijs bij bol op ' + t.dag + ')\n' + t.rijen.map(r => '- ' + r.vraag + ' ' + r.situatie + ': ' + r.product + ', ' + eur(r.prijs)).join('\n') + '\n'; };
       const one = i => '## ' + i.h1 + '\n\nURL: ' + base + pathOf(req, '/keuzehulp/' + i.slug) + '\nCategorie: ' + i.cat + '\n\n**In het kort:** ' + (i.kort || i.intro) + '\n\n' + i.intro + '\n\n### De vragen\n' + i.questions.map((q, qi) => (qi + 1) + '. ' + q.q + '\n' + q.options.map(o => '   - ' + opt(o)).join('\n')).join('\n') + '\n\n### Waar je op let\n' + i.uitleg + '\n\n### Veelgemaakte fouten\n' + (i.fouten || []).map(f => '- ' + f).join('\n') + '\n\n### Vragen en antwoorden\n' + (i.faq || []).map(f => '- **' + f.q + '** ' + f.a).join('\n') + '\n' + sitTxt(i);
       return res.status(200).send('# ' + SITE.name + ': alle keuzehulpen\n\n> ' + SITE.tagline + ' Onafhankelijk, in het Nederlands, uitgave van ' + SITE.owner + '. Bijgewerkt ' + TODAY() + '. Op de site zelf staat bij elke combinatie van antwoorden het passende product met de prijs van vandaag.\n\n' + items.map(one).join('\n---\n\n')); }

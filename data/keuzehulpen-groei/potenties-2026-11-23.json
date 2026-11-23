@@ -197,7 +197,8 @@
     "file": "fn/kz.js",
     "scope": "https://keuzehulp.best/marstek-venus-e-3-vs-homewizard-vs-anker-solix",
     "what": "Geen losse P1-meter/kabel als batterijadvies; alleen herkenbare complete batterijtypen in Bol-resultaten voor deze gids.",
-    "seo_interpretation": "Correctheidsreparatie is apart vastgelegd als mogelijke verstoring van de lopende cluster-proef; geen SEO-effect aan deze ingreep toeschrijven zonder passende analyse."
+    "seo_interpretation": "Correctheidsreparatie is apart vastgelegd als mogelijke verstoring van de lopende cluster-proef; geen SEO-effect aan deze ingreep toeschrijven zonder passende analyse.",
+    "cache_followup": "Live API was na de eerste uitrol correct; de server-rendered situatietabel had nog de P1-meter in de dagcache. Dezelfde batterijcontrole wordt nu vóór cachehergebruik toegepast; een lege geldige uitkomst vervangt de foute cache. llms-full slaat ongeldige oude tabelrijen over. Live bewijs volgt in het werklog."
   },
   "sources": [
     "https://demandradar-ivory.vercel.app/api/zoekvraag?thema=batterij&cc=NL",
