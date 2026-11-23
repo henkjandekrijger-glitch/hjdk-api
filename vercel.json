@@ -17,6 +17,14 @@
       "schedule": "4 6 * * *"
     },
     {
+      "path": "/api/gids?op=clubs&zoek=1",
+      "schedule": "41 */2 * * *"
+    },
+    {
+      "path": "/api/gids?op=clubs&ronde=1",
+      "schedule": "17 7-17/2 * * 1-5"
+    },
+    {
       "path": "/api/hjdk/iterate",
       "schedule": "17 */6 * * *"
     },
