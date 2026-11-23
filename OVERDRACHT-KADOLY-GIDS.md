@@ -2,6 +2,8 @@
 
 Werk je hieraan? Lees eerst dit bestand en de skill zicht-seo-llm. Werk in dezelfde commit de stand en het logboek hieronder bij (nieuwste boven).
 
+Regie (sinds 23 nov 2026): het groei-account van Kadoly is regisseur van alle organische groei en geeft de gidsronde en de redactie elke week een seizoensthema en een voorrangslijst mee in dit bestand (onder Nieuwe gids kiezen en Redactie). Plan: `OVERDRACHT-KADOLY-GROEI.md`, live https://hjdk-api-henq.vercel.app/api/shop?op=groeioverdracht.
+
 ## Opdracht (Henkjan, 30 okt 2026)
 - "We gaan Kadoly.help maken en daar keuzehulpen maken voor alle content van Kadoly ... dit gaat over long term de long game om te verkopen via SEO en LLM. Denk goed na over WAT klanten willen zien. Hoe we ze naar de kassa krijgen. Wat de onzekerheden zijn ... Dit is ons LAB ook voor Kadoly maar zeker dus ook content marketing."
 - Na het plan en een panel (psycholoog, kassa-conversie, SEO nieuwe domeinen, AI-vindbaarheid) koos Henkjan: plek **gids.kadoly.com** (niet een los domein; kadoly.help alleen kopen en doorsturen), Google Shopping repareren **later**, producten zelf bestellen **nog niet** (dus afraden alleen op harde feiten).

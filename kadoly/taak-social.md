@@ -6,6 +6,8 @@ Henkjan 16 nov 2026: "Maak af de Kadoly faceook en instagram we kunnen nu auto p
 
 Henkjan 20 nov 2026, na de eerste cijfers (productposts op Facebook en Instagram: geen bereik zonder volgers, 0 verkoop; Pinterest wel bereik): "Ga dat dus doen meteen minimaal 2 per dag ook Youtube . Maak een kanaal aan en post met zernio ." Sinds 20 nov dus: GEEN productposts meer op Facebook en Instagram, alleen video's (stap 7b), minstens 2 per dag per platform op Instagram, Facebook en YouTube (en TikTok zodra gekoppeld). Pinterest houdt productpins (stap 7). Overdracht: `OVERDRACHT-KADOLY-SOCIAL.md`, live https://hjdk-api-henq.vercel.app/api/shop?op=socoverdracht; werk die bij als de werkwijze verandert.
 
+Regie (sinds 23 nov 2026): het groei-account van Kadoly stuurt deze ronde bij via dit bestand (thema's, vormen, aantallen); zijn plan staat in `OVERDRACHT-KADOLY-GROEI.md` (live https://hjdk-api-henq.vercel.app/api/shop?op=groeioverdracht). Staat daar een seizoensthema of voorrangslijst, volg die bij het kiezen van producten en video's.
+
 Accounts (Zernio-profiel Kadoly, profile_id `6afaf9820c09220040d746f4`):
 - Facebook-pagina Kadoly (https://www.facebook.com/profile.php?id=61596079596846). Gebruikersnaam kan Facebook nog niet geven (nieuwe pagina); probeer het elke maandag in Chrome als dat werkt (Accounts Center > Kadoly > Username, `kadolyshop`).
 - Facebook in Zernio: account_id `6afafaf7446856cecd87324f`.

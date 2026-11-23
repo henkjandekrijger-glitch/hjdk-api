@@ -2,6 +2,8 @@
 
 Stand 20 nov 2026 15:30 UTC. Geschreven door de chat kadoly-social (account Henkjan) voor wie dit in een ander account oppakt. Henkjan 20 nov: "Ja zet hier zodat delen."
 
+Regie (sinds 23 nov 2026): het groei-account van Kadoly is regisseur van alle organische groei en stuurt deze lus bij via `kadoly/taak-social.md`. Plan: `OVERDRACHT-KADOLY-GROEI.md`, live https://hjdk-api-henq.vercel.app/api/shop?op=groeioverdracht.
+
 Live lezen: https://hjdk-api-henq.vercel.app/api/shop?op=socoverdracht (met web_fetch_vercel_url; `&vorm=tekst` voor platte tekst). Bovenaan staat dan de live stand uit Clickmind. Bron: `OVERDRACHT-KADOLY-SOCIAL.md` in repo henkjandekrijger-glitch/hjdk-api. Werk dit bestand bij in dezelfde commit als elke wijziging aan de social-lus, en schrijf een regel in het werklog: `https://hjdk-api-henq.vercel.app/api/mm/handover?log=<tekst>&wie=kadoly-social`.
 
 Lees daarnaast: `kadoly/taak-social.md` (de dagelijkse opdracht, dat is de bron van de werkwijze), `OVERDRACHT-YOORS-SHOP.md` (shop en kassa), `OVERDRACHT-KADOLY-TIKTOK.md` (TikTok en het Clickmind-gezicht) en de algemene handover https://hjdk-api-henq.vercel.app/api/mm/handover.

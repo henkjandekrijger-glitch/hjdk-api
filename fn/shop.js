@@ -52,7 +52,7 @@ import trendKadoly from '../kadoly/trend.json' with { type: 'json' };
 import bewezenKadoly from '../kadoly/bewezen.json' with { type: 'json' };
 import bewezenWhop from '../data/whop-bewezen.json' with { type: 'json' };
 import { uurTel, uurStand, lekkenPagina, uurAanvullen, uurRitme, verkoopUren } from '../lib/shopuur.js';
-import { overdrachtTekst, liveRegels, overdrachtPagina, ttOverdrachtTekst, socOverdrachtTekst } from '../lib/shopoverdracht.js';
+import { overdrachtTekst, liveRegels, overdrachtPagina, ttOverdrachtTekst, socOverdrachtTekst, groeiOverdrachtTekst } from '../lib/shopoverdracht.js';
 import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 const K_MAXLEV = 'hjdk:shop:maxlev'; // B4 (12 nov): hoogste levertijd in werkdagen voor de dagkeuze; ?maxlev=<dagen> op de beschermde host, 0 = geen grens
@@ -1242,6 +1242,12 @@ export default async function handler(req, res) {
       const md = socOverdrachtTekst(); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
       if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(md.replace(/\n## /, '\n' + lv + '\n## ')); }
       res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(overdrachtPagina('', md.replace(/\n## /, '\n' + lv + '\n## '), esc).replace('<title>Overdracht Yoors Shop</title>', '<title>Overdracht Kadoly social</title>')); }
+    if (op === 'groeioverdracht') { /* 23 nov: overdracht Kadoly organische groei en contentmarketing (eigen groei-account), live Clickmind-stand bovenaan; alleen beschermde vercel.app-host */
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      let lv = ''; try { lv = orgRegels(await orgStand(kv, 14)); } catch (e) { lv = '## Live stand Clickmind\n\n(niet te lezen: ' + String(e && e.message || e).slice(0, 80) + ')\n'; }
+      const md = groeiOverdrachtTekst().replace(/\n## /, '\n' + lv + '\n## '); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
+      if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(md); }
+      res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(overdrachtPagina('', md, esc).replace('<title>Overdracht Yoors Shop</title>', '<title>Overdracht Kadoly groei</title>')); }
     if (op === 'gidsuit') { // klik vanuit gids.kadoly.com naar een product: via Clickmind (direct), zodat de keten tot betaald per gids gemeten wordt (30 okt)
       const pid = pidOk(url.searchParams.get('p')); const g = String(url.searchParams.get('g') || '').replace(/[^a-z0-9-]/g, '').slice(0, 60); const b = String(url.searchParams.get('b') || '').replace(/[^a-z]/g, '').slice(0, 12);
       if (!pid) { res.statusCode = 302; res.setHeader('location', 'https://kadoly.com/'); return res.end(); }
