@@ -13,6 +13,8 @@ import fsRem from 'node:fs';
 { const v = JSON.parse(fsRem.readFileSync(new URL('../vercel.json', import.meta.url), 'utf8')); const te = Object.entries(v.functions || {}).filter(([, f]) => String(f.includeFiles || '').length > 256 || String(f.excludeFiles || '').length > 256).map(([k, f]) => k + ' (' + String(f.includeFiles || '').length + ' tekens)'); if (te.length) { console.error('Build gestopt: includeFiles/excludeFiles in vercel.json langer dan 256 tekens: ' + te.join(', ')); process.exit(1); } console.log('ok   vercel.json includeFiles binnen 256 tekens'); }
 // Code achter een //-commentaar (22 nov 2026, derde keer in twee dagen; scripts/commentaarcheck.mjs). Eén fout = build gestopt.
 { const { spawnSync } = await import('node:child_process'); const r = spawnSync(process.execPath, [new URL('./commentaarcheck.mjs', import.meta.url).pathname], { encoding: 'utf8' }); process.stdout.write(r.stdout || ''); if (r.status) { console.error(r.stderr || ''); process.exit(1); } }
+// Checkout: periodefilter en tellerbotsing mogen niet terugkeren.
+{ const { spawnSync } = await import('node:child_process'); const r = spawnSync(process.execPath, ['--test', new URL('./test-shopkassa.mjs', import.meta.url).pathname], { encoding: 'utf8' }); process.stdout.write(r.stdout || ''); if (r.status !== 0) { console.error(r.stderr || 'Checkoutregressietest mislukt'); process.exit(1); } }
 const PAG = [['keuzehulp.best', '/api/kz?slug=airfryer'], ['keuzehulp.best', '/api/kz?slug=matras'], ['keuzehulp.best', '/api/kz']];
 const kz = (await import('../fn/kz.js')).default;
 let fout = 0;
