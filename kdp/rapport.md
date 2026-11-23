@@ -176,6 +176,8 @@ Henkjan 23 nov: "Ja doe" op: "28 pagina's boeken op KDP: er is niets nieuws nodi
 
 ## Openstaand
 
+- 23 nov 13:30 UTC OMSLAGEN 2027: 11 van 101 omslagen hadden een oud jaartal. 9 nieuwe omslagen (CTA op voor- en achterkant) geupload en in de Previewer goedgekeurd; wachten op AI-vragen en Publish door Henkjan (OVERDRACHT-KDP 7b). Enoch: oud binnenwerk faalt op lettertypes, manuscript nodig. Manifest journal: jaartal in de titel, wordt nieuw boek. Les: een nieuwe omslag laat KDP ook het oude binnenwerk opnieuw keuren.
+
 - 22 nov NIEUW BOEK Ich tu nur so, als ob (David Warrior, kdp/bouw/buero_de, 102 p.): paperback-concept TVP91RHQFAW, ISBN 9798144943925, details, categorieen, zoekwoorden, binnenwerk en omslag in KDP. Op Henkjans woord gepubliceerd 22 nov ~17:20 UTC (In review): EUR 9,99 incl. btw (royalty EUR 2,62), UK GBP 7,99, US $10,24. Zodra live: ASIN in REV (fn/wtb.js, buero), boekgids op kaufberater.best, hardcover zondag 29 nov. Ads pas met reviews (les 21 nov).
 - 19 nov 21:20 UTC LC 2027 paperback klaargezet (6FFFY398EVH): papier groundwood -> wit, No Bleed, binnenwerk 126 p. en nieuwe omslag geupload, Previewer zonder meldingen en goedgekeurd, drukprijs $2,51; QR-zin in de beschrijving. Prijsconcept $19,99 (royalty $9,48; $24,99 geeft $12,48). Wacht op Henkjan: AI-antwoorden invullen (Texts entire work/minimal, Claude; Images one or a few/minimal, Claude; Translations none), vakje, Save and Continue, prijs kiezen, Publish: https://kdp.amazon.com/en_US/print-setup/paperback/6FFFY398EVH/content . Daarna hardcover (nu 137 p., $7,29 drukprijs).
 - Hardcovers Wait, That's True?! (B0HRKRTRFF) en For Men (B0HRHVDSRT) Live, $24,99 (gezien 14 nov 17:30 UTC).

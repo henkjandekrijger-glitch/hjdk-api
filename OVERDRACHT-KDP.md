@@ -159,7 +159,17 @@ Nog te doen: hardcover (nu 137 p., wit, met bleed, drukprijs $7,29): zelfde binn
 
 **Let op:** de geplande boekronde van zondag 22 nov 00:12 UTC (trig_01MxsrBoD9gioX5ZQd7kpUuB: Moment mal-hardcover en de volgende paperback) draait nog in de oude chat. Doet het nieuwe account die ronde zelf, dan zet Henkjan die taak uit (uitzetten vanuit de oude chat werd geblokkeerd).
 
+### 7b. Omslagen 2027 (23 nov 2026, Henkjan: "Check alle booeken en maak nieuwe covers 2027 als nodig", "Maak goede CTAs en fris voorkanten lekker op", "Ja maak alles en zet erin")
+
+Van 101 boeken hadden er 11 een oud jaartal op de omslag. Nieuwe omslag (voor, rug, achter met CTA) gebouwd met kdp/bouw/omslag2027 (zie LEESMIJ.md) en op de Content-pagina geupload; Previewer zonder fouten en Approve bij 9 boeken:
+Apocrypha JMB92DMKYAP, Griddle 4B9BMX0XG7J, High Blood Pressure M8308T2BWC9, Bariatric EXPECWTNR8Y, DBT 4F1NDPS3VAZ, Quantum 633CJ9Z9ND2, Mom's Word Search E8HW2RW0Q7A, 9000 Word Search J7A0BYZNPBT, Airbnb WWJH22W4BVX.
+- Henkjan per boek op de Content-pagina: AI-Generated Content = Yes; Images = One or a few AI-generated images (tool Claude; de omslag is door Claude opgemaakt); Texts = None, tenzij het binnenwerk ook met AI is gemaakt (weet hij); vakje "I confirm" aan; Save and Continue; Publish op de prijspagina.
+- Books of Enoch A7CVDBYEZGH: nieuwe omslag staat erin, maar de Previewer geeft een fout op het OUDE binnenwerk ("Unsupported fonts ... LucidaGrande"). Nodig: het manuscript (BOOKS OF ENOCH (1).pdf); dan lettertypes insluiten met ghostscript en opnieuw uploaden.
+- Manifest Your Sh*t journal (B0DMFSY1LR) heeft "for 2025" in de titel; titel van een gepubliceerde paperback kan niet veranderen, dus 2027 wordt een nieuw boek. Voorkant staat klaar in voor.py; binnenwerk moet nog.
+
 ## 8. Wacht op Henkjan
+
+- Omslagen 2027 (7b): AI-vragen en Publish voor 9 boeken; manuscript Books of Enoch aanleveren.
 
 - Chrome inloggen in zijn boekenaccount (KDP en Ads).
 - Moment mal Publish: https://kdp.amazon.com/en_US/print-setup/paperback/GHCXH02H6WW/content
@@ -184,12 +194,15 @@ Nog te doen: hardcover (nu 137 p., wit, met bleed, drukprijs $7,29): zelfde binn
 - Instellingen: Dynamic bids "down only" = LEGACY, alleen Amazon = MINIMIZE_SPEND.
 - KDP "An error occurred" bij Save and Continue van een nieuwe titel: eerst op de boekenplank kijken; het concept kan al bestaan (een tweede klik kost de weeklimiet). Weeklimiet: per formaat 2 nieuwe titels aanmaken en 2 indienen, reset zondag 00:00 UTC.
 - Chrome reageert niet: nieuw tabblad, oude sluiten. Onbereikbaar: kort melden en de rest doen.
+- Specs per boek: op de boekenplank zoekt het zoekvak ook op ASIN (paperback-id uit de content-link); op de Content-pagina geven de aangevinkte radio's papier (BW_WHITE, BW_CREAM, COLOR_WHITE = standaard kleur, COLOR_COLOR = premium kleur), bleed en glans; "Page count: n" en "Trim Size" staan in de tekst. Meerdere Previewers tegelijk kan in aparte tabbladen; Approve-knop via find (JS vindt hem niet).
+- Een nieuwe omslag laat de Previewer ook het oude binnenwerk opnieuw keuren: oude manuscripten met niet-ingesloten lettertypes geven dan een fout die eerder niet blokkeerde.
+- Amazon-omslagbeelden zijn hoogstens 1000 px breed: te klein om te drukken. Bouw de omslag opnieuw (tekst als vector) en vergroot alleen foto's.
 
 ## 10. Bestanden
 
 - kdp/rapport.md: draaiboek met campagnes, royalty per verkoop, ROI en ROAS, Organisch-log en openstaande punten (nieuwste onderaan in Openstaand staan per datum).
 - kdp/wachtrij.md en kdp/boekwedstrijd.md: welk boek als volgende (scorekaart van 100, elke ochtend 3 kandidaten).
-- kdp/bouw/: bouwers (bouw_boek.py binnenwerk, omslag_gen.py, bouw_epub.py), per boek een map met config, feiten en kdp.json; kdp/bouw/lc2027 voor de nieuwe LC.
+- kdp/bouw/: bouwers (bouw_boek.py binnenwerk, omslag_gen.py, bouw_epub.py), per boek een map met config, feiten en kdp.json; kdp/bouw/lc2027 voor de nieuwe LC; kdp/bouw/omslag2027 voor de omslagen 2027 (voor.py, wrap.py, voor-na.jpg).
 - lib/kdp-guides.js en /api/wtb?op=boekstand: boekgidsen op whichtobuy.best en kaufberater.best (organisch).
 - lib/werking.js: korte werking van het geheel (KDP-regels).
 
