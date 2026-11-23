@@ -104,3 +104,20 @@ test('kerstpagina\'s: moppen, quiz en kleurplaten renderen en zijn gekeurd', asy
   assert.doesNotMatch(JSON.stringify([X.MOPPEN, X.QUIZ]), /[—–]/);
   assert.match(B.sitemap(['christmas-jokes']), /christmas-jokes/);
 });
+test('LC-paperbackknoppen lopen via de meting op de site en in het beschermde voorbeeld', async () => {
+  const LCF = await import('../lib/lcfunnel.js');
+  for (const pdf of [false, true]) for (const go of [a => '/go/' + a, a => '/api/bs?site=lc&op=go&a=' + a]) {
+    const c = { echt: true, pdf, L: s => '/' + s, go };
+    const expected = go(LC.a);
+    const cards = LCF.kopen(c, 'boven');
+    assert.ok(cards.includes('href="' + expected + '"'), 'paperback mist de meetroute');
+    assert.doesNotMatch(cards, /href="https:\/\/www\.amazon\.com\/dp\//);
+    assert.equal(cards.includes('data-koop='), pdf, 'PDF-gating blijft intact');
+    for (const slug of ['', 'how-to-stick-to-new-years-resolutions']) {
+      const html = LCF.renderLc(slug, c);
+      assert.ok(html.includes('href="' + expected + '"'), slug);
+      assert.doesNotMatch(html, /<a[^>]*href="https:\/\/www\.amazon\.com\/dp\//, 'kooplinks buiten meting');
+    }
+    assert.ok(LCF.renderGidsen(c, []).includes('href="' + expected + '"'));
+  }
+});
