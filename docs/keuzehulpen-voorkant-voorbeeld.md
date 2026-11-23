@@ -35,3 +35,11 @@ Toelichtingen worden met de bestaande schoon-functie ontdaan van mailadressen, t
 Ontwerp op verzoek van Henkjan: 16px voor tekst, knoppen, labels, chatkoppen en kaartkoppen; alleen de paginatitel groter. Vraag vet, antwoord normaal, geen verticale antwoordlijnen of herhaalde afzenderlabels, geen gekleurde vraagballonnen en één rand rond het invoerveld. Opmaak voor dit voorbeeld in lib/chat-rust.js wordt uitsluitend door lib/voorkant-compleet.js geladen. lib/kzux.js blijft ongewijzigd. Voorlopig alleen deze previewbranch, bestaande productiehomepages zijn niet vervangen.
 
 De automatische goedkeuringscontrole blokkeerde het volledig terugschrijven van de gedeelde chatmodule wegens de bredere productiefunctionaliteit. De correctie gebruikt daarom alleen de bestaande publieke chatinterface en lokaal begrensde previewopmaak. De afgewezen module is niet gepusht.
+
+## Compact gesprek na tweede schermtest
+
+De gebruiker zag nog steeds een uitdijend gesprek met herhaalde vervolgvraag en veel witruimte. De voorkant heeft nu één eigen compacte presentatie in lib/voorkant-chat.js die rechtstreeks de bestaande keuzehulp-chat-API gebruikt. De gedeelde lib/kzux.js, AI-aansturing, veiligheids- en budgetcontroles blijven ongewijzigd. Er komen geen extra geheugen-, volg- of deelvragen uit de oudere chatpresentatie bij. De aanwezige rekenhulpen blijven bereikbaar via hun gewone links en de chat verwijst naar dezelfde hulp-API.
+
+Het gesprek is maximaal min(320px,45dvh) hoog, scrolt binnen dat vlak en houdt het invoerveld zichtbaar. Per antwoord één korte zin als samenvatting; alle overige inhoud staat onder Hele antwoord. Hoogstens één vervolgvraag en drie antwoordknoppen, één gewone link naar de gevonden hulp. Eerdere vragen staan ingeklapt onder Vorige vragen. De geschiedenis blijft beschikbaar in het gespreksvak en gaat mee naar dezelfde API. De intro blijft boven de chat staan. Stemmen, volledige catalogus, datums en updateverzoeken blijven intact.
+
+Een updateverzoek onderbreekt een eventueel nog lopend koopantwoord. De toelichting blijft in de afzonderlijke updatetoestand tot Nieuwe vraag. De werkomgeving-beveiliging is niet uitgezet of gewijzigd.
