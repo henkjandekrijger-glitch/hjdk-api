@@ -71,10 +71,10 @@ CSS = r'''
 @font-face { font-family: G; src: url(fonts/EBGaramond-SemiBold.ttf); font-weight: 600; font-style: normal; }
 @font-face { font-family: G; src: url(fonts/EBGaramond-Bold.ttf); font-weight: 700; font-style: normal; }
 @font-face { font-family: G; src: url(fonts/EBGaramond-Italic.ttf); font-weight: 400; font-style: italic; }
-@page { size: 8.625in 11.25in; margin: 0.82in 0.72in 0.8in 0.9in;
-  @top-center { content: string(kop); font: italic 9.5pt G; color: #000; }
-  @bottom-center { content: counter(page); font: 9.5pt G; color: #000; } }
-@page :left { margin: 0.82in 0.9in 0.8in 0.72in; }
+@page { size: 8.625in 11.25in; margin: 1.0in 0.72in 0.98in 0.9in;
+  @top-center { content: string(kop); font: italic 9.5pt G; color: #000; vertical-align: bottom; padding-bottom: 9pt; }
+  @bottom-center { content: counter(page); font: 9.5pt G; color: #000; vertical-align: top; padding-top: 9pt; } }
+@page :left { margin: 1.0in 0.9in 0.98in 0.72in; }
 @page voor { @top-center { content: none } @bottom-center { content: none } }
 @page boekstart { @top-center { content: none } }
 html { font-family: G; font-size: 10.5pt; line-height: 1.2; color: #000; hyphens: auto; }

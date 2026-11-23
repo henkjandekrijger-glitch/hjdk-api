@@ -14,7 +14,7 @@ DIK = {'BW_WHITE': .002252, 'BW_CREAM': .0025, 'COLOR_WHITE': .002252, 'COLOR_CO
 # asin: kdp-id, trim, papier, pagina's, auteur, kort (rug), thema
 BOEK = {
  'B0B5KV79N1': ('A7CVDBYEZGH', (8.5, 11), 'BW_CREAM', 121, 'Holy Reads', 'BOOKS OF ENOCH', 'perk'),
- 'B0DDBTXC9J': ('JMB92DMKYAP', (8.5, 11), 'BW_WHITE', 140, 'Holy Reads', 'THE DEFINITIVE APOCRYPHA', 'perk'),
+ 'B0DDBTXC9J': ('JMB92DMKYAP', (8.5, 11), 'BW_WHITE', 148, 'Holy Reads', 'THE DEFINITIVE APOCRYPHA', 'perk'),
  'B0CHL3MH5Q': ('4B9BMX0XG7J', (8.5, 11), 'COLOR_WHITE', 95, 'Alec Poole', 'THE OUTDOOR GRIDDLE BIBLE', 'grill'),
  'B0DR5Z8SLL': ('M8308T2BWC9', (8.5, 11), 'COLOR_WHITE', 157, 'Optima Health Press', 'HIGH BLOOD PRESSURE DIET COOKBOOK', 'kook'),
  'B0DPSS16X3': ('EXPECWTNR8Y', (8.5, 11), 'COLOR_WHITE', 123, 'Optima Health Press', 'BARIATRIC DIET COOKBOOK', 'kook'),
