@@ -8,7 +8,7 @@ Dit plan wordt sinds 23 november uitgevoerd in een eigen ChatGPT-werkaccount (ve
 
 ## Actuele meetafspraken (groei-account, 23 november 2026)
 - `orgstand?dagen=7` begrenst alleen dagelijkse kliktellers. Kanaal- en posttotalen zijn cumulatief sinds 16 november. Ze zijn geen weekcijfers. Dagelijkse snapshots staan vanaf nu in `kadoly/groei/`; weekvergelijkingen en opt-ins per motor blijven onbekend totdat er passend afgebakende data is.
-- Eerste onderzoek en beheerderstaak: `docs/kadoly-groei-ochtendronde-2026-11-23.md`. De botmeting simuleert headers vanaf één verbinding, geen echte provider-IP's. Pinterest krijgt inmiddels 200 op home en robots.txt; Facebook, Bing en Google krijgen daar 403. Blokkerende regel en echte crawlerstatus moeten nog in de logs en inspectietools worden vastgesteld.
+- Eerste onderzoek en beheerderstaak: `docs/kadoly-groei-ochtendronde-2026-11-23.md`. De botmeting simuleert headers vanaf één verbinding, geen echte provider-IP's. Ochtendmeting: Pinterest kreeg 200 op home en robots.txt; Facebook, Bing en Google kregen daar 403. Middagcontrole hieronder gebruikt een andere verbinding en vervangt geen echte crawlerinspectie. Blokkerende regel en echte crawlerstatus moeten nog in de logs en inspectietools worden vastgesteld.
 - Koopmeting: 2 TikTok-kopen voor samen € 91,36 bevestigd; organische kooproute en het verschil met 5 betaalde feedregels blijven onbewezen en zijn aan de shop overgedragen. Geen testkoop of conversie nagebootst.
 - Nieuwe lootjestool: concept in `docs/kadoly-lootjes-concept.html`, alleen lokaal en expliciet uitgesloten van Vercel. Geen echte groepen of deelnemerslinks, geen openbare route. Wacht op Henkjans ja.
 - Werktoegang: GitHub-connector heeft pushrecht. Bij ontbrekend lokaal Git-netwerk lees/schrijf via die connector, controleer de actuele main en alle betrokken bestands-SHA's, behoud andermans wijzigingen en werk in één geteste commit. De oude `/home/claude`-paden en `add_repo` zijn geen beschikbare tools in dit werkaccount. Zernio is hier niet beschikbaar, dus geen eigen socialpublicatie claimen.
@@ -373,6 +373,17 @@ Vraag ze één voor één, in deze volgorde, en alleen als het werk erop wacht.
 
 ## Dagupdates (nieuwste bovenaan)
 
+### Middagcontrole maandag 23 november 2026
+
+- Vanochtend opgeleverd werk staat nog live: groeioverdracht met de ochtendupdate, prioriteiten in gids/socialopdrachten en een gezonde router met 39 handlers. Het lootjesconcept blijft buiten productie (404), geen akkoord voor livegang ontvangen.
+- Momentopname circa 17:43 UTC: Facebook cumulatief 35 kliks, 11 echt, 2 acties en 2 mandjes; tegenover de ochtend +2 kliks, +2 als echt gemeten bezoeken en +1 mandje. Gids 37 kliks tegenover 6, maar nog steeds 1 echt en 1 actie. Pinterest blijft 3 kliks. Dit zijn tellerstanden en verschillen, geen bewezen unieke personen of weekgroei. De 31 extra gidskliks zijn geen reden om op te schalen; herkomst en eventuele controles nog niet gescheiden.
+- Laatste betaalmeldingen staan op test=true. Geen nieuwe echte verkoop uit afgeleid; organische kooproute nog niet bewezen. De foutlijst geeft niet voor elke rij een testmarkering: geen percentage echte betaalfouten uit afleiden. De aparte shopchat werkt inmiddels aan prijs/meting; geen winkel- of advertentiewerk overgenomen.
+- Botheaders krijgen nu op home en robots.txt allemaal 200 (browser, Pinterest, Bing en Facebook). Deze run gebruikt een andere verbinding met een envoy-tussenlaag dan de ochtend. Dit is geen bevestiging dat Tim de WAF heeft aangepast of dat echte crawler-IP's mogen crawlen. Geen antwoord van Tim gevonden in de gerichte mailzoekactie; zijn bericht niet verstuurd. Herstel blijft te verifiëren met echte logs/inspectie.
+- Tweede stuk werk klaar: drie deelconcepten voor Housevitamin, Mica Decorations en Kolibri Company met actuele productbron, echte foto, Pinteresttekst, storytekst en kanaalcorrecte meetlink. Bestand `docs/kadoly-groei-review/merken-deelconcepten-2026-11-23.html`, uitgesloten van productie. Foto's alle drie HTTP 200; review is opmaak in 9:16, nog geen geëxporteerde storybestanden. Geen prijzen, besteldeadlines, keurmerk- of reviewclaims in de kopij. Geen mails of socialposts verstuurd. Nieuwe borden en lootjestool wachten op akkoord; bestaande socialronde niet gedupliceerd.
+- Nieuwe snapshot `kadoly/groei/2026-11-23-middag.json`; ochtendsnapshot behouden. Bestaande redactie-stand toont nog de artikelen van 19 en 20 november, geen artikel met datum 23 november bevestigd. Dit blijft een opvolgpunt voor de bestaande redactieronde, geen tweede artikel vanuit groei aangemaakt.
+- Volgende controle: echte betaalattributie en botlogs; pas na akkoord de deelconcepten exporteren en elk bericht aan een merk afzonderlijk voorleggen. Pushinstelling nog steeds niet uitleesbaar. Geen vaste frequentie verhoogd en geen onderzoek of advertenties ingekocht.
+
+
 ### Kadoly groei, maandag 23 november
 
 1. **Uitkomst:** cumulatief sinds 16 november Facebook 33 kliks, 9 echt, 2 acties en 1 mandje; gids 6 kliks, 1 echt en 1 actie; Pinterest 3 kliks. Gisteren registreerde Facebook 7 uitgaande kliks. Organische verkopen niet geregistreerd. Kooproute organisch nog niet bewezen. Adressen per kanaal en een week-op-week-vergelijking ontbreken; geen verzonnen pijl.
@@ -385,5 +396,6 @@ Vraag ze één voor één, in deze volgorde, en alleen als het werk erop wacht.
 **Weekbalans:** week 1 start vandaag. Streefwaarde 150 echte bezoekers en 30 adressen met toestemming. De bestaande bron geeft daarvoor nog geen vergelijkbare weekstand of adresuitsplitsing; dit is de nulmeting. Frequentie blijft gelijk en geen motor wordt op één datapunt tot winnaar verklaard.
 
 ## Logboek (nieuwste bovenaan)
+- 2026-11-23 middag (groei-account): ochtendresultaat en router gecontroleerd, actuele tellerstanden met ochtendsnapshot vergeleken, betaaltests uitgesloten van koopconclusies, bots opnieuw bereikbaar met runtimevoorbehoud. Drie merkdeelconcepten ter beoordeling voorbereid en uitgesloten van productie; foto-URLs gecontroleerd, geen mail/post. Nieuwe middagsnapshot, bestaande redactieronde als opvolgpunt.
 - 2026-11-23 (groei-account): repo met pushrecht en CLAUDE.md gelezen, ochtend- en middagtaak actief; botheaders en koopmeting onderzocht, cumulatieve kanaalcijfers afgebakend, nulmeting bewaard en bestaande gids/socialronde bijgestuurd. Shop krijgt attributie- en retoursignaal. Lootjesconcept lokaal ter beoordeling en uitgesloten van Vercel. Pushmeldingen niet bevestigd. Beheerder CloudFront/WAF gevraagd; volgende controle middagronde.
 - 2026-11-23: plan geschreven in de hoofdchat en live gezet op /api/shop?op=groeioverdracht. Startstand in sectie 1. Henkjan maakt een eigen account vrij voor de uitvoering, met elke dag een grote update.

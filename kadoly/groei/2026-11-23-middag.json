@@ -1,0 +1,274 @@
+{
+  "schema": 1,
+  "at": "2026-11-23T17:46:06.351Z",
+  "morningAt": "2026-11-23T12:09:06.627Z",
+  "sources": {
+    "org": "https://hjdk-api-henq.vercel.app/api/shop?op=orgstand&dagen=7",
+    "payment": "https://hjdk-api-henq.vercel.app/api/shop?op=koopcheck&px=1"
+  },
+  "org": {
+    "ok": true,
+    "uitleg": "kliks per dag (org:d), keten per kanaal en per post via Clickmind (kliks, echt mens, actie, mandje, koop; sinds 16 nov 23:00 UTC)",
+    "dagen": {
+      "2026-11-23": {
+        "fb|voorbeeld": 18,
+        "fb|uit": 2
+      },
+      "2026-11-22": {
+        "fb|uit": 7,
+        "fb|voorbeeld": 17
+      },
+      "2026-11-20": {
+        "pin|voorbeeld": 1,
+        "fb|voorbeeld": 63,
+        "fb|uit": 7
+      },
+      "2026-11-19": {
+        "pin|uit": 3
+      },
+      "2026-11-18": {
+        "fb|voorbeeld": 60,
+        "fb|uit": 12
+      },
+      "2026-11-17": {
+        "fb|voorbeeld": 30,
+        "fb|uit": 7
+      }
+    },
+    "kanalen": {
+      "facebook": {
+        "kliks": 35,
+        "echt": 11,
+        "actie": 2,
+        "mandje": 2
+      },
+      "pinterest": {
+        "kliks": 3
+      },
+      "gids": {
+        "kliks": 37,
+        "echt": 1,
+        "actie": 1
+      }
+    },
+    "posts": {
+      "1117-sieraad": {
+        "kliks": 4,
+        "echt": 1
+      },
+      "1117-mandje": {
+        "kliks": 3
+      },
+      "1118-mandje": {
+        "kliks": 3
+      },
+      "v-tafelhaard_kleur": {
+        "kliks": 1,
+        "echt": 1
+      },
+      "1118-nieuw": {
+        "kliks": 2,
+        "echt": 2
+      },
+      "v-kersthoek_set": {
+        "kliks": 6
+      },
+      "pin20261116scheerolie01": {
+        "kliks": 1
+      },
+      "pin20261116scheerset01": {
+        "kliks": 1
+      },
+      "pin20261116scheerkwast01": {
+        "kliks": 1
+      },
+      "1120-wonen": {
+        "kliks": 3,
+        "echt": 1
+      },
+      "v-kerstballen_kleur": {
+        "kliks": 1
+      },
+      "1120-sieraad": {
+        "kliks": 3,
+        "echt": 2,
+        "actie": 1,
+        "mandje": 1
+      },
+      "v-boho_set": {
+        "kliks": 1,
+        "echt": 1
+      },
+      "g-claude-test": {
+        "kliks": 1
+      },
+      "g-dressoir": {
+        "kliks": 1,
+        "echt": 1,
+        "actie": 1
+      },
+      "v-kerstfinds": {
+        "kliks": 1,
+        "echt": 1,
+        "actie": 1,
+        "mandje": 1
+      },
+      "v-n261119a": {
+        "kliks": 5,
+        "echt": 1
+      },
+      "g-kz-cadeau-juf-meester": {
+        "kliks": 1
+      },
+      "g-kz-cadeau-oma-80-jaar": {
+        "kliks": 1
+      },
+      "g-kz-cadeau-voor-zwangere-vrouw": {
+        "kliks": 2
+      },
+      "v-n261118c": {
+        "kliks": 2,
+        "echt": 1
+      },
+      "g-sierpot-orchidee": {
+        "kliks": 7
+      },
+      "g-oplaadbare-tafellamp": {
+        "kliks": 7
+      },
+      "g-lantaarn-voor-binnen": {
+        "kliks": 8
+      },
+      "g-kerststal": {
+        "kliks": 2
+      },
+      "g-vaas-kiezen": {
+        "kliks": 4
+      },
+      "g-muursticker-kinderkamer": {
+        "kliks": 2
+      },
+      "g-kerstdecoratie": {
+        "kliks": 1
+      }
+    }
+  },
+  "deltaSinceMorning": {
+    "facebook": {
+      "kliks": 2,
+      "echt": 2,
+      "mandje": 1
+    },
+    "gids": {
+      "kliks": 31,
+      "echt": 0
+    },
+    "pinterest": {
+      "kliks": 0
+    }
+  },
+  "limits": [
+    "Aggregate counter deltas, not unique visitors or weekly totals",
+    "Guide click increase not confirmed human; do not scale on this signal",
+    "Latest payment marks all test:true; do not count as revenue",
+    "Bot probes from a different runtime than morning; 200 does not prove WAF repair",
+    "No new tool/brand post/mail/channel published"
+  ],
+  "concepts": [
+    {
+      "brand": "Housevitamin",
+      "pid": "oc_4174002194661377",
+      "source": "https://kadoly.com/product/flowerpot-swirl-red-pink-dolomite-12-5cm-housevitamin?lang=nl",
+      "photo": "https://cdn.kadoly.com/uploads/products/orderchamp/d7/d7b958e95ab9f0a3b91951d35f02e401.webp",
+      "status": "review-only"
+    },
+    {
+      "brand": "Mica Decorations",
+      "pid": "oc_4174003396820994",
+      "source": "https://kadoly.com/product/glass-baubles-gold-set-26-for-stylish-christmas?lang=nl",
+      "photo": "https://cdn.kadoly.com/uploads/products/orderchamp/77/7707c06c9d98fd0f90ed393ab78de229.jpg",
+      "status": "review-only"
+    },
+    {
+      "brand": "Kolibri Company",
+      "pid": "oc_4173958863880193",
+      "source": "https://kadoly.com/product/orchid-white-phalaenopsis-nazare-9cm-kolibri?lang=nl",
+      "photo": "https://cdn.kadoly.com/uploads/products/orderchamp/a8/a8348bc6378136b2789637ab4e4f4ffe.webp",
+      "status": "review-only"
+    }
+  ],
+  "botProbe": {
+    "at": "2026-11-23T17:45:08.231238+00:00",
+    "method": "simulated user-agent headers from one connection, no verified bot-IP test",
+    "results": [
+      {
+        "ua": "browser",
+        "path": "/",
+        "status": 200,
+        "server": "envoy"
+      },
+      {
+        "ua": "browser",
+        "path": "/robots.txt",
+        "status": 200,
+        "server": "envoy"
+      },
+      {
+        "ua": "pinterest",
+        "path": "/",
+        "status": 200,
+        "server": "envoy"
+      },
+      {
+        "ua": "pinterest",
+        "path": "/robots.txt",
+        "status": 200,
+        "server": "envoy"
+      },
+      {
+        "ua": "bing",
+        "path": "/",
+        "status": 200,
+        "server": "envoy"
+      },
+      {
+        "ua": "bing",
+        "path": "/robots.txt",
+        "status": 200,
+        "server": "envoy"
+      },
+      {
+        "ua": "facebook",
+        "path": "/",
+        "status": 200,
+        "server": "envoy"
+      },
+      {
+        "ua": "facebook",
+        "path": "/robots.txt",
+        "status": 200,
+        "server": "envoy"
+      }
+    ]
+  },
+  "photoChecks": [
+    {
+      "brand": "Housevitamin",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 69582
+    },
+    {
+      "brand": "Mica Decorations",
+      "status": 200,
+      "type": "image/jpeg",
+      "bytes": 458385
+    },
+    {
+      "brand": "Kolibri Company",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 36664
+    }
+  ]
+}
