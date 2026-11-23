@@ -29,8 +29,8 @@ function main() {
     var item = /ITEM/i.test(String(pg.getDimension()));
     var bewezen = isBewezen(pg);
     if (conv >= 1) { var hoog = Math.min(MAX, Math.max(bod, 1.00)); if (hoog > bod) { pg.setMaxCpc(hoog); log.push(naam + ' verkocht: bod ' + bod + ' -> ' + hoog); } continue; }
-    var drempelUit = item ? 8 : 15;
-    if (kost >= drempelUit && !bewezen) { pg.exclude(); log.push(naam + ' uit: EUR ' + r2(kost) + ' in 14 dagen zonder verkoop'); continue; }
+    if (!item) continue; // groeistappen (custom_label_3: verkocht, trek, nieuw, kans, stil) wisselen elke nacht van producten; de labelbron zet een product zelf op uit na 12 betaalde kliks zonder verkoop
+    if (kost >= 8 && !bewezen) { pg.exclude(); log.push(naam + ' uit: EUR ' + r2(kost) + ' in 14 dagen zonder verkoop'); continue; }
     if (kost >= 2) {
       var doel = r2(Math.max(MIN, START - 0.10 * Math.floor(kost / 2)));
       if (bewezen) doel = Math.max(doel, 0.60);
