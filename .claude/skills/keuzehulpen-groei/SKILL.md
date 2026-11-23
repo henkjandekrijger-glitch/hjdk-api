@@ -20,6 +20,8 @@ Elke dag de keuzehulpen beter laten scoren, gemeten in:
 3. **Intenties en contact per 100 bezoekers** in de chat (proef kzuxnl, kzuxus, kzuxde).
 4. **Inkomsten**: doorverwijzingen naar bol, Amazon, Awin en (vanaf nu) Daisycon. Dashboard: https://keuzehulp.best/api/bol?op=inkomsten&vorm=html
 
+**Taakverdeling** (Henkjan 23 nov 2026: "ontwikkeling blijven we hier doen"): dit account doet de dagelijkse groei: meten, repareren, verbeteren binnen wat er staat, proeven beslissen, nieuwbouw binnen de rem, aanmeldingen en melden. Nieuwe ontwikkeling (nieuwe functies zoals de haken, de chat voor je hele leven, de koppeling met sharedby, nieuwe soorten pagina's) blijft in de ontwikkelchat (werklog wie=kz-chat). Zie je daarvoor een kans of een lek dat om nieuwe bouw vraagt: zet het als voorstel in het werklog en meld het Henkjan, niet zelf bouwen.
+
 Niet van dit account (eigen overdracht, eigen chat): Curaçao-gidsen en bedrijvengids (curacao.day), chirurgie, Kadoly en de cadeaugids, Spaarpot, KDP, WAM, Sealed Intent, Clickmind zelf, de Amazon-blanket. Zie CLAUDE.md voor hun overdrachten. Raak hun campagnes en code niet aan; meld wat je ziet.
 
 ## 1. Elke sessie eerst
@@ -123,7 +125,7 @@ Proeven op vindbaarheid: zie de overdracht onder "Lopende en afgeronde proeven".
 - KEUZEHULP AIRFRYER CHAT NL, kopie van 12168044, In-Page, Android, NL, bod 0,03 (Henkjans woord), $10 per dag, $30 totaal, 8 creatives met knop "Vraag het", wissel kz-airfryer (Clickmind naar keuzehulp.best/airfryer, conversie = chatvraag). Advertentievragen als eerste pill in `lib/advraag.js`.
 - Grens: kost per chatvraag hoogstens 3x KB DE ($0,028), dus $0,084.
 - Stand 21 tot 23 nov: 229 kliks, 7 chatvragen, $2,39, dus $0,34 per vraag. Sinds de nieuwe chat (21 nov 12:40 UTC) ongeveer $0,28 per vraag. Beste creatives 27794351 ($0,12 per vraag) en 27794350 ($0,20); 27794352, 27794345, 27794349 en 27794348 zonder vraag.
-- **Besluit open.** Henkjan kreeg op 21 nov te horen: bij 100 kliks op de nieuwe chat onder $0,084 bod naar 0,05, anders stoppen. Die grens is gehaald en de uitkomst is stoppen. De stopopdracht vanuit de vorige chat werd door de beveiliging geweigerd, dus de campagne liep op 23 nov nog. Vraag Henkjan om "stop airfryer", of laat de stopregel van de connector het doen.
+- **Gestopt op 23 nov 2026** met Henkjans woord ("Ja stop airfriyer"): grens $0,084 per chatvraag, gemeten ongeveer $0,28 sinds de nieuwe chat. Niet zelf weer aanzetten. Wat geleerd is: dit In-Page-verkeer stelt weinig vragen; de chat op /airfryer en de haken lopen door op ander verkeer.
 
 ## 8. Geld: affiliate en inkomsten
 
