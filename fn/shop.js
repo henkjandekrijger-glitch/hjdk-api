@@ -169,7 +169,7 @@ async function haalFeed() {
       st.sleutels = Object.keys(j).slice(0, 20); st.prodVelden = prod[0] ? Object.keys(prod[0]).slice(0, 40) : []; st.orderVelden = orders[0] ? Object.keys(orders[0]).slice(0, 40) : [];
       st.betaald = st.orders.filter(o => /paid|betaald/i.test(o.s)).length; st.metHj = st.orders.filter(o => o.hj).length;
       // Samen sparen en partners (22 nov 2026, Henkjan: "Mag geen lek in zitten"): spaarzegels en partnergeld alleen hier, waar de regels van de
-      // bestelling bekend zijn (zegels per product = kwart van de marge, lib/samensparen.js). Eén keer per bestelling; retour haalt ze eraf.
+      // bestelling bekend zijn (23 nov: elke aankoop 1 zegel voor koper en uitnodiger, club €2, lib/samensparen.js). Eén keer per bestelling; retour haalt ze eraf.
       try { const SS = await import('../lib/samensparen.js'); const per = {}; let ssN = 0;
         for (const o of orders.slice(0, 500)) { const id = String(o.order_id || o.id || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40); if (!id) continue; const x = per[id] = per[id] || { o, regels: [], uitItems: false };
           const its = Array.isArray(o.items) ? o.items : []; if (its.length) { if (!x.uitItems) { x.uitItems = true; x.regels = its.map(i => ({ p: String((i && (i.product_id || i.id || i.pid)) || ''), n: num(i && (i.quantity || i.qty)) || 1 })).filter(r => r.p); } }
@@ -178,7 +178,7 @@ async function haalFeed() {
           if (/refund|return|retour|terug|cancel|chargeback/i.test(s)) { await SS.ssRetour(id); continue; }
           if (!/paid|betaald/i.test(String(o.status || ''))) continue; const at = Date.parse(o.paid_at || o.created_at || '') || 0; if (at && Date.now() - at > 9 * 864e5) continue;
           const hj = String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); let kp = null; if (hj) { try { const rec = await kv.get(K.rec(hj)); if (rec && !rec.t && /^p-/.test(String(rec.k || ''))) kp = rec.k; } catch (e) {} }
-          const r = await SS.ssBestelling({ em: gebruikerVan(o).em, order: id, t: at || undefined, regels: x.regels, klikPartner: kp }); if (r && r.zegels) ssN++; }
+          const r = await SS.ssBestelling({ em: gebruikerVan(o).em, order: id, t: at || undefined, regels: x.regels, klikPartner: kp, bedrag: o.amount != null ? num(o.amount) : undefined }); if (r && r.zegels) ssN++; }
         st.samenSparen = ssN; } catch (e) { st.samenSparenFout = String(e.message || e).slice(0, 120); }
       // controle achteraf: elke betaalde bestelling met kenmerk telt, ook als de directe melding vanuit de shop niet afging (hooguit 9 dagen terug)
       let nagemeld = 0; for (const o of orders.slice(0, 500)) { const hj = String(o.hj || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); const ou = gebruikerVan(o); if ((!hj && !ou.em && !ou.ph) || !/paid|betaald/i.test(String(o.status || ''))) continue; // 20 nov: ook zonder kenmerk als er een e-mail- of telefoonhash bij staat
