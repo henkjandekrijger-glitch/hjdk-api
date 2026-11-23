@@ -102,6 +102,16 @@ async function lcHandler(req, res, q, echt) {
 }
 
 
+// IndexNow voor alle pagina's, één keer per versie (BIJGEWERKT + aantal pagina's); ook vanuit de dagelijkse cron (dagrapport), nooit in een lus.
+async function indexNow() {
+  const oud = await kv.get('bs:indexnow').catch(() => null), versie = BIJGEWERKT + '-' + SLUGS.length;
+  if (oud && oud.versie === versie) return { al: true, ...oud };
+  const urlList = SLUGS.map(s => BASE + '/' + s); let status = 0;
+  try { const r = await fetch('https://api.indexnow.org/indexnow', { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify({ host: HOST, key: INDEXNOW_KEY, keyLocation: `${BASE}/${INDEXNOW_KEY}.txt`, urlList }), signal: AbortSignal.timeout(15000) }); status = r.status; } catch (e) {}
+  if (status === 200 || status === 202) await kv.set('bs:indexnow', { versie, t: new Date().toISOString(), status, n: urlList.length }).catch(() => {});
+  return { status, n: urlList.length };
+}
+
 export default async function handler(req, res) {
   const u = new URL(req.url, 'https://' + HOST), q = u.searchParams, op = q.get('op') || '', echt = isEcht(req);
   if ((isLc(req) || q.get('site') === 'lc') && !['go', 'tel', 'dagrapport'].includes(op)) return lcHandler(req, res, q, isLc(req));
@@ -151,6 +161,7 @@ export default async function handler(req, res) {
     let zicht = null; try { const z = await (await fetch('https://keuzehulp.best/api/zicht?op=stand&site=bookstuffers', { signal: AbortSignal.timeout(8000) })).json(); const l = z && z.sites && z.sites.bookstuffers && z.sites.bookstuffers.laatste; if (l) zicht = { imp: l.gsc && l.gsc.imp, clicks: l.gsc && l.gsc.clicks, geindexeerd: l.index && l.index.geindexeerd, ai: Array.isArray(l.llm) ? l.llm.filter(x => x.genoemd || x.geciteerd).length : 0 }; } catch (e) {}
     let pins = null; try { const log = (await kv.get('bs:pinlog')) || [], st = (await kv.get('bs:pinstand')) || {}, gist = new Date(Date.now() - 864e5).toISOString().slice(0, 10); const t = Object.entries(st).reduce((a, [, v]) => ({ klik: a.klik + (v.klik || 0), saves: a.saves + (v.saves || 0) }), { klik: 0, saves: 0 }); const beste = Object.entries(st).sort((a, b) => ((b[1].klik || 0) + (b[1].saves || 0)) - ((a[1].klik || 0) + (a[1].saves || 0)))[0]; pins = { geplaatst: log.filter(x => String(x.t).startsWith(gist)).length, ...t, beste: beste && ((beste[1].klik || 0) + (beste[1].saves || 0)) > 0 ? beste[0] : '' }; } catch (e) {}
     const arts = (await kv.get('lc:arts').catch(() => null)) || [];
+    if (q.get('droog') !== '1') await indexNow().catch(() => null);
     const r = await dagRapport(kv, { droog: q.get('droog') === '1', extra: { zicht, pins, arts } });
     return stuur(res, 200, 'application/json; charset=utf-8', JSON.stringify(r), { cache: 'no-store', robots: 'noindex' });
   }
@@ -220,14 +231,7 @@ export default async function handler(req, res) {
   }
   if (op === 'indexnow') {
     if (!echt) return stuur(res, 400, 'application/json', '{"ok":false,"reden":"alleen op stockingbooks.com"}', { cache: 'no-store' });
-    const oud = await kv.get('bs:indexnow').catch(() => null);
-    const versie = BIJGEWERKT + '-' + SLUGS.length;
-    if (oud && oud.versie === versie) return stuur(res, 200, 'application/json', JSON.stringify({ al: true, ...oud }), { cache: 'no-store' });
-    const urlList = SLUGS.map(s => BASE + '/' + s);
-    let status = 0;
-    try { const r = await fetch('https://api.indexnow.org/indexnow', { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify({ host: HOST, key: INDEXNOW_KEY, keyLocation: `${BASE}/${INDEXNOW_KEY}.txt`, urlList }), signal: AbortSignal.timeout(15000) }); status = r.status; } catch (e) { status = String(e.message || e).slice(0, 80); }
-    if (status === 200 || status === 202) await kv.set('bs:indexnow', { versie, t: new Date().toISOString(), status, n: urlList.length }).catch(() => {});
-    return stuur(res, 200, 'application/json', JSON.stringify({ status, n: urlList.length }), { cache: 'no-store' });
+    return stuur(res, 200, 'application/json', JSON.stringify(await indexNow()), { cache: 'no-store' });
   }
   const slug = String(q.get('p') || '').replace(/^\/+|\/+$/g, '');
   if (slug === 'lasting-change') { res.statusCode = 301; res.setHeader('Location', LC_URL); res.setHeader('Cache-Control', 'public, max-age=3600'); return res.end(); }
