@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "report_date_curacao": "2026-11-23",
+  "period_utc": {
+    "start": "2026-11-22T00:00:00Z",
+    "end_exclusive": "2026-11-23T00:00:00Z"
+  },
+  "observed_at_utc": "Mon, 23 Nov 2026 13:00:06 GMT",
+  "source": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1",
+  "traffic": {
+    "metric": "registered_page_openings",
+    "stockingbooks_com": 7,
+    "lastingchange_works": 13,
+    "unique_people": null,
+    "channel_breakdown": null
+  },
+  "amazon": {
+    "metric": "raw_redirect_requests",
+    "total": 208,
+    "reported_known_site_requests": {
+      "bs": 1
+    },
+    "unique_clickers": null,
+    "conversion_rate": null,
+    "warning": "Geen gekoppelde teller/noemer. Geen unieke personen of verkoop afleiden. De historische hoofdknoppen op LC omzeilden de meting."
+  },
+  "pinterest": {
+    "logged_posts": 8,
+    "recorded_hook_metrics": [
+      {
+        "id": "we-ruzie",
+        "pins": 1,
+        "klik": 0,
+        "saves": 0,
+        "imp": 0
+      },
+      {
+        "id": "we-dad",
+        "pins": 1,
+        "klik": 0,
+        "saves": 0,
+        "imp": 0
+      },
+      {
+        "id": "we-onder10"
+      },
+      {
+        "id": "we-regels",
+        "pins": 1,
+        "klik": 0,
+        "saves": 0,
+        "imp": 0
+      },
+      {
+        "id": "sok-haar",
+        "pins": 1,
+        "klik": 0,
+        "saves": 0,
+        "imp": 0
+      },
+      {
+        "id": "sok-hem"
+      },
+      {
+        "id": "sok-tiener",
+        "pins": 1,
+        "klik": 0,
+        "saves": 0,
+        "imp": 0
+      },
+      {
+        "id": "sok-puzzel"
+      },
+      {
+        "id": "ss-gen"
+      },
+      {
+        "id": "we-ideeen"
+      },
+      {
+        "id": "sok-gids-haar"
+      },
+      {
+        "id": "sok-gids-hem",
+        "pins": 1,
+        "klik": 0,
+        "saves": 0,
+        "imp": 0
+      },
+      {
+        "id": "lc-jaar"
+      },
+      {
+        "id": "lc-66"
+      },
+      {
+        "id": "lc-stappen"
+      },
+      {
+        "id": "enoch-wat",
+        "pins": 1,
+        "klik": 0,
+        "saves": 0,
+        "imp": 0
+      },
+      {
+        "id": "apo-14",
+        "pins": 1,
+        "klik": 0,
+        "saves": 0,
+        "imp": 0
+      }
+    ],
+    "fresh_provider_metrics_confirmed": false
+  },
+  "lessons": [
+    {
+      "finding": "Belangrijkste LC-paperbackknoppen moesten via de bestaande /go-meting lopen.",
+      "evidence": "Codecontrole en 17 regressies plus HTTP200 en HTML-controle na productie-uitrol.",
+      "business_effect": "Nog niet vastgesteld."
+    }
+  ],
+  "implemented": [
+    {
+      "change": "LC-paperbackroute geteld; dagrapport scheidt bekende sites en benoemt ruwe verzoeken.",
+      "status": "live_verified",
+      "commit": "6a1196f1c439a1be1918928260558ace2c1b3c89",
+      "verified": "2026-11-23"
+    }
+  ],
+  "pending": [
+    {
+      "change": "LLM-herziening procrastination met eigen startplan en zes FAQ-antwoorden",
+      "status": "concept_waiting_for_review",
+      "preview": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-stop-procrastinating&concept=1"
+    }
+  ],
+  "next_priority": "Klik aan pagina/browseractie koppelen; eerst voorstel en controle. Nog geen inhoudelijke conversiewinnaar kiezen.",
+  "limitations": [
+    "GSC/AI/verkoop ontbreken in dit rapportsnapshot; ontbrekend is geen nul.",
+    "Oude twee taken niet bereikbaar en niet uitgezet.",
+    "PDF-verkoop en kopersmail wachten op instellingen."
+  ],
+  "raw_daily_report": "Organisch boeken, 2026-11-22 (UTC)\nstockingbooks.com: 7 geregistreerde pagina-openingen\nlastingchange.works: 13 geregistreerde pagina-openingen\nAmazonverzoeken: 208 (ruwe redirects, geen unieke personen)\nAmazonverzoeken per site: stockingbooks.com 1\nBeste pagina's: lastingchange.works/ 6, stockingbooks.com/ 6, lastingchange.works/why-it-didnt-work 6\nPinterest: 8 pins geplaatst\nWacht op jouw ok (1): How to Stop Procrastinating: 7 Steps and a 2-Minute Plan: bekijk https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-stop-procrastinating&concept=1 · live zetten https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=lclive&slug=how-to-stop-procrastinating\nMeetlek: pagina-openingen en Amazonverzoeken zijn niet per klik gekoppeld. Nog geen betrouwbaar doorklikpercentage; eerst meten, dan een inhoudsproef kiezen.\nDetails: https://stockingbooks.com/overdracht"
+}
