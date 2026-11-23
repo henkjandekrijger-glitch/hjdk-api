@@ -16,3 +16,12 @@ Scope: stockingbooks.com, lastingchange.works en boeken-Pinterest. Hoofdstukken 
 - Nieuwe openbare artikelen, pins, zichtbare wijzigingen en outreach eerst tonen. De algemene autonomiewens is geen vrijbrief voor ongezien publiceren, campagnes, geld uitgeven of sleutels veranderen. Voor reeds goedgekeurde voorstellen het akkoord uitvoeren en daarna controleren.
 - De Vercel-cron geeft om 08:13 Curaçao het bestaande Telegram-cijferrapport. Niet wijzigen en geen dubbel Telegram-bericht sturen. Het uitgebreide ochtendrapport verschijnt in deze chat.
 - Leg uitgevoerde rondes ook kort vast via het bestaande /api/mm/handover?log=...&wie=content-dagrapport. Gebruik geen publicatie-eindpunten om alleen een URL te controleren.
+
+## Afgeronde Search Console-stap en herhalingen (23 november 2026)
+
+Henkjan geeft aan dat het oude bericht over verificatie van stockingbooks.com blijft terugkomen. Het door hem aangehaalde bericht meldt afgeronde verificatie, serviceaccounttoegang en sitemapindiening. Dit is de bron van de status 'reeds gemeld', geen nieuwe onafhankelijke providercontrole. De recente ZICHT-cache bevat nog geen verse Google-cijfers; ontbrekend is onbekend en bewijst geen verificatiefout. De Google-setupregel voor stockingbooks.com in hoofdstuk 9 van de hoofdcontentoverdracht is achterhaald als herhaalde actie. lastingchange.works apart blijven behandelen.
+
+- Geen herhaling van dit oude bericht en geen nieuwe DNS-, rechten- of verificatiestap. Hiervoor ook niet opnieuw Chrome op Henkjans computer openen; controles via bestaande cloud/API-bronnen.
+- Meld een afgeronde technische stap niet opnieuw als vandaag uitgevoerd of opgelost. Vergelijk met vorige ronde en het gedeelde dagboek; alleen een nieuwe concrete fout of statuswijziging met nieuw bronbewijs rechtvaardigt een nieuwe technische melding.
+- Het dagelijkse verkeersrapport blijft doorgaan. Als cijfers ontbreken, benoem de ontbrekende meting in plaats van de oude setup opnieuw te rapporteren. Geen belofte dat morgen cijfers beschikbaar zijn zonder bevestiging.
+- Nieuwe technische feiten opslaan met datum, bron en vorige/nieuwe status, zodat Pinterest-, artikel- en rapportageronde geen dubbele mijlpaalupdates sturen.
