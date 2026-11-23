@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "round": "artikel",
+  "event_date_utc": "2026-11-23",
+  "observed_at_utc": "Mon, 23 Nov 2026 13:04:39 GMT",
+  "authorization": {
+    "source": "current conversation",
+    "request": "Ga verder met het plan met de dagelijkse taken ... wees zo autonoom mogelijk",
+    "context": "Aangescherpte artikelpreview was vooraf getoond."
+  },
+  "change": {
+    "url": "https://lastingchange.works/how-to-stop-procrastinating",
+    "status": "live_verified",
+    "title": "How to Stop Procrastinating: 7 Steps and a 2-Minute Plan",
+    "features": [
+      "Direct antwoord",
+      "Eigen kopieerbaar startplan",
+      "Zes FAQ-antwoorden",
+      "Bronverwijzingen bij claims"
+    ]
+  },
+  "verification": {
+    "public_http": 200,
+    "x_robots_tag": "index, follow",
+    "canonical": "https://lastingchange.works/how-to-stop-procrastinating",
+    "worksheet": true,
+    "measured_paperback": true,
+    "listed_in_guides": true,
+    "listed_in_sitemap": true
+  },
+  "evaluation": {
+    "type": "observational_publication_follow_up",
+    "baseline": "Nieuwe openbare pagina, geen historisch vergelijkbaar Google-verkeer vastgesteld.",
+    "primary_metric": "GSC-kliks op deze URL, zodra GSC-data beschikbaar is",
+    "secondary_metric": "Geverifieerde broncitaten op een vast relevant AI-vragenpanel",
+    "comparison_url": "https://lastingchange.works/how-to-stick-to-new-years-resolutions",
+    "comparison_limitation": "Richtingsgevende vergelijking; geen gerandomiseerde controlegroep.",
+    "first_review": "2026-12-07",
+    "last_review": "2026-12-14",
+    "early_checks": "Dagelijks indexeerbaarheid, meetkwaliteit, bron- en paginastatistieken; geen vroege winnaar forceren.",
+    "effect": "Nog niet gemeten"
+  },
+  "learning": "Publicatie en indexeerbare HTML zijn gecontroleerd. Dat bewijst nog geen opname in zoekmachines, broncitaten of verkeer.",
+  "open": [
+    "GSC-metingen ontbreken in de LC-stand.",
+    "Bestaand LC-AI-panel heeft vier andere vragen; geen artikel-specifieke citeerclaim afleiden.",
+    "Nieuwe pinvoorstellen eerst tonen."
+  ]
+}
