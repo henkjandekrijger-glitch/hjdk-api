@@ -11,6 +11,33 @@ Lees daarnaast: de algemene handover https://hjdk-api-henq.vercel.app/api/mm/han
 - Doel Henkjan: Kadoly winstgevend laten verkopen, zo snel mogelijk ("laat me vandaag nog 2 verkopen zien", 20 nov). Adviseer hem, niet andersom ("Jij moet MIJ adviseren").
 - Werkwijze: Nederlands, kort, geen gedachtestreepjes. Campagnebudget, bod en optimalisatie alleen op zijn woord. Stoppen van advertenties en groepen zonder verkoop mag zelf (20 nov: "Veel sneller stoppen als geen verkoop"). Sleutels nooit in code of URL's. Adressen van mensen nooit in code, pagina's of werklog.
 
+## 1b. PAKKETTEST 3 DAGEN (vanaf 23 nov 2026, gaat voor alles hieronder)
+
+Henkjan 23 nov: "Ja doe de TT maar max 3 dagen ik wil het nu echt zien . Ad moet veel sneller uit . Pakket moet veel sneller uit . Alles stopt bij 40 zonder verkoop je moet echt betere ads maken en vaker . Ads maken kost niks slechte ads kosten geld ."
+Waarom: 17 tot 23 nov €145 voor 2 verkopen met samen €12,47 marge (losse producten ~€6 marge). Pakketten hebben €28 tot €55 marge, dus alleen pakketten.
+
+1. **Eerst** groep algemeen (1882048854125746) en alle andere groepen UIT. Daarna pas bijvullen (Henkjan doet dat: €40 prepaid = de harde grens).
+2. Twee nieuwe campagnes (kopie van de instellingen van algemeen: NL 25+, optimaliseren op INITIATE_ORDER), elk €10 per dag, met per pakket een eigen advertentiegroep van €5 per dag:
+   - KADOLY PAKKET WONEN: Sfeerset haard en geur (bundel phaardgeur20261121, marge €29,55) en Winteravond box (pwinteravond20261121, €37,01).
+   - KADOLY PAKKET CADEAU: Plantenhoek set (pplantenhoek20261121, €54,50) en Winterse verwenbox (pverwen20261121, €28,45).
+3. Landing per pakket: `https://go.kadoly.com/shop?bundel=<code>&utm_source=tiktok&utm_medium=video&utm_campaign=nl-pakket-<code>&arm=d&lang=nl&campaignid=__CAMPAIGN_ID__&zoneid=__AID__&creativeid=__CID__`. CTA SHOP_NOW.
+4. De 8 eerste advertenties (video's gemaakt 23 nov, `https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/ad/<id>.mp4`), elke advertentie met haar eigen tekst:
+   - pk_haard_a: "Geen open haard? Echt vuur op tafel en geurstokjes erbij. Bestel de sfeerset."
+   - pk_haard_b: "Zo maak je een winteravond af: vlammetje aan, geurstokjes erbij. Geef de sfeerset."
+   - pk_avond_a: "Bank, plaid, kaarsje aan. Lantaarn, plaid en kandelaar in één box. Bestel hem nu."
+   - pk_avond_b: "Cadeau voor mama? Lantaarn, plaid en kandelaar die ze elke avond gebruikt."
+   - pk_plant_a: "Kale hoek in huis? Houten standaard en twee witte potten. Maak je hoek af."
+   - pk_plant_b: "Plantenliefhebber in je leven? Standaard en twee potten, de planten kiest zij zelf."
+   - pk_verwen_a: "Cadeau voor haar? Alpacasokken, bad en zelfzorg in één verwenbox. Bestel hem nu."
+   - pk_verwen_b: "Lootje getrokken? Deze verwenbox met alpacasokken maakt haar blij."
+5. Stopregels (elk uur, Clickmind voor echt en kassa: /api/shop?op=clickmind&vorm=json&dagen=1):
+   - advertentie uit bij €1 zonder echte bezoeker, €2 zonder kassabezoek, of €3 zonder verkoop;
+   - pakket (groep) uit bij €10 zonder verkoop;
+   - ALLES uit bij €40 totaal zonder verkoop, en na 72 uur hoe dan ook (dan besluit Henkjan);
+   - met verkoop: blijft aan zolang de kosten per verkoop onder de marge van het pakket blijven.
+6. Meer en betere advertenties: elke uitgezette advertentie wordt in dezelfde ronde vervangen door een nieuwe met een andere haak voor hetzelfde pakket (video via kadoly-video `/api/advideo`, sectie 2), zodat er steeds 8 lopen. Haken: wie het voor is (mama, zus, collega, lootje), het moment (avond, eerste advent, Sinterklaas), het probleem (kale hoek, geen open haard). Tekst en beeld moeten kloppen: geen tekst over vuur op een foto van iets anders, geen planten of kaarsen beloven die er niet bij zitten. Geen prijs, geen levertijd, geen nep-urgentie.
+7. Elke ronde met een wijziging: één regel in het werklog (wie=tiktok-pakkettest). Bericht aan Henkjan alleen bij een verkoop, bij het stoppen van een pakket of bij de eindstand.
+
 ## 2. TikTok Ads
 
 Account Kadoly NL `7708796437043265537` (prepaid, valuta EUR, "Automatic payment paused": saldo bijvullen doet Henkjan; 20 nov ochtend €30 via PayPal). Werken via de MCP TikTok_for_Business (`tool_execute`, `report_integrated_get`).
@@ -89,6 +116,7 @@ colyn_b_ic 1882048961969153 (verkocht 19 nov, €52,91, 2 stuks), colyn_c 188232
 - Andere chats en vaste taken in dit account (KDP-rondes, curacao.day, keuzehulpen, MyLevel) lopen door; die vallen buiten deze overdracht.
 
 ## Logboek (nieuwste bovenaan)
+- 23 nov 13:15 UTC (kadoly-shopify-chat): pakkettest van 3 dagen klaargezet (sectie 1b), 8 pakketvideo's gemaakt en gecontroleerd. Wacht op: uitvoering in de chat met de TikTok-connector en €40 bijvullen door Henkjan.
 - 20 nov 14:50 UTC: overdracht geschreven; activiteit van deze chat gestopt tot maandag 23 nov 20:00 Curaçao.
 - 20 nov 14:26 UTC: tafelhaard_b_ic weer aan, 4 nieuwe advertenties (colyn_f, colyn_g, tafelhaard_c, kerstbal26_goud_a).
 - 20 nov 14:18 UTC: meubels en catalogus uit, swirl_a, colyn_d, servies_kerst_c uit. Clickmind toont echte mensen en afrekenpagina per advertentie; advies stop na €4 of €1,50 zonder afrekenpagina.
