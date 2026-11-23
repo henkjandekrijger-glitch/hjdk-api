@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>we are many now · ontwerp</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23111113'/%3E%3Ccircle cx='32' cy='21' r='6.5' fill='%23fff'/%3E%3Ccircle cx='21' cy='39' r='6.5' fill='%23fff'/%3E%3Ccircle cx='43' cy='39' r='6.5' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+/* layout: one 680px column, hairline rows, pill controls. Look taken from sealedintent.com. Black on white only. */
+--ink:#111113;
+--bg:#ffffff;
+--font:Inter,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+--body:17px;
+--label:13px;
+color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--ink)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.designbar{background:var(--ink);color:var(--bg);padding:10px 26px;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;font-size:var(--label);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.designbar nav{display:flex;flex-wrap:wrap;gap:8px}
+.designbar a{color:var(--bg);text-decoration:none;border:1px solid var(--bg);border-radius:999px;padding:4px 14px}
+.designbar a[aria-current="page"]{background:var(--bg);color:var(--ink)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 26px}
+.brand{display:flex;align-items:center;gap:9px;font-size:20px;font-weight:400;letter-spacing:-.02em;text-decoration:none}
+.brand b{font-weight:700}
+.top a.small{font-size:var(--label);font-weight:600;text-decoration:none}
+main{max-width:680px;margin:0 auto;padding:36px 26px 0}
+h1{font-size:30px;line-height:1.15;letter-spacing:-.03em;font-weight:700;margin:0 0 10px;text-wrap:balance}
+h2{font-size:22px;line-height:1.2;letter-spacing:-.02em;font-weight:700;margin:0 0 12px;text-wrap:balance}
+p{margin:0 0 14px}
+.eyebrow{font-size:var(--label);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin:0 0 14px}
+section{margin-top:56px}
+.clock{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:0 0 22px}
+.clock b{font-size:84px;line-height:.9;letter-spacing:-.05em;font-weight:700;font-variant-numeric:tabular-nums}
+.clock span{font-size:22px;font-weight:700;letter-spacing:-.02em}
+.solved{background:var(--ink);color:var(--bg);border-radius:22px;padding:22px 24px;margin:0 0 22px}
+.solved b{display:block;font-size:44px;line-height:1;letter-spacing:-.04em;margin-bottom:6px}
+.count{font-weight:700;font-size:22px;letter-spacing:-.02em;margin:22px 0 4px}
+.live{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 18px}
+.pill{display:inline-flex;border:1px solid var(--ink);border-radius:999px;padding:5px 14px;font-size:var(--label);font-weight:600;white-space:nowrap}
+.pill.on{background:var(--ink);color:var(--bg)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--bg);align-self:center;margin-right:8px}
+button,.btn{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--ink);border-radius:999px;padding:10px 20px;cursor:pointer;line-height:1.3;text-decoration:none;display:inline-block}
+button.primary,.btn.primary{background:var(--ink);color:var(--bg)}
+button.big{font-size:22px;font-weight:700;padding:14px 34px}
+.acts{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.line{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+input{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--ink);border-radius:999px;padding:10px 20px;min-width:0;flex:1 1 150px}
+input::placeholder{color:var(--ink);opacity:1}
+input:focus::placeholder,textarea:focus::placeholder{opacity:0}
+.msg{font-weight:600;margin-top:12px}
+.rows{border-bottom:1px solid var(--ink)}
+.row{display:grid;grid-template-columns:132px 1fr;gap:6px 18px;padding:16px 0;border-top:1px solid var(--ink)}
+.row>b{font-weight:600;font-variant-numeric:tabular-nums}
+.row p{margin:0}
+.row.link{grid-template-columns:1fr auto;text-decoration:none;font-weight:600}
+.row .sub{display:block;font-weight:400}
+.step{display:grid;grid-template-columns:64px 1fr auto;gap:6px 18px;align-items:center;padding:16px 0;border-top:1px solid var(--ink)}
+.step>b{font-size:22px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.box{border:1px solid var(--ink);border-radius:22px;padding:20px 22px;margin-top:14px}
+.box.on{background:var(--ink);color:var(--bg)}
+.box.on .btn{border-color:var(--bg)}
+.box p:last-child{margin:0}
+.note{font-size:var(--label);margin-top:10px}
+/* modal */
+.veil{position:fixed;inset:0;background:rgba(17,17,19,.72);display:flex;align-items:flex-end;justify-content:center;padding:16px;z-index:10}
+.modal{background:var(--bg);border-radius:22px;padding:26px 24px;width:100%;max-width:440px}
+.modal .btn,.modal button,.modal input{width:100%;text-align:center;margin-top:10px;flex:none}
+.or{font-size:var(--label);font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-align:center;margin:14px 0 0}
+/* clocks per party */
+.clocks{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+.ck{border:1px solid var(--ink);border-radius:22px;padding:16px 14px}
+.ck.on{background:var(--ink);color:var(--bg)}
+.ck b{font-size:44px;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.ck span{font-weight:700;margin-left:6px}
+.ck p{margin:8px 0 0;font-size:var(--label);font-weight:600;line-height:1.4}
+@media (max-width:560px){.clocks{grid-template-columns:1fr 1fr}}
+/* ads */
+.ads{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ad{border:1px solid var(--ink);border-radius:22px;padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+.ad b{font-weight:700}
+.ad .btn{align-self:flex-start;margin-top:6px;padding:6px 16px;font-size:var(--label);font-weight:600}
+.ad small{font-size:var(--label);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+/* mail */
+.mail{border:1px solid var(--ink);border-radius:22px;overflow:hidden}
+.mail header{padding:16px 22px;border-bottom:1px solid var(--ink)}
+.mail .body{padding:22px}
+footer{max-width:680px;margin:64px auto 0;padding:22px 26px 40px;border-top:1px solid var(--ink);font-size:var(--label)}
+[hidden]{display:none!important}
+@media (max-width:560px){
+.row{grid-template-columns:1fr}
+.row.link{grid-template-columns:1fr auto}
+.step{grid-template-columns:52px 1fr}
+.step .pill{grid-column:2;justify-self:start}
+.clock b{font-size:64px}
+h1{font-size:27px}
+.ads{grid-template-columns:1fr}
+}
+.case{display:grid;grid-template-columns:44px 1fr auto;gap:6px 18px;align-items:center;padding:16px 0;border-top:1px solid var(--ink);text-decoration:none;color:inherit}
+.case>b{font-size:22px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.case strong{font-weight:600}
+.case .sub{display:block}
+.grade{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:700;font-size:22px;letter-spacing:-.02em;font-variant-numeric:tabular-nums;flex:none}
+textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--ink);border-radius:22px;padding:16px 20px;width:100%;resize:vertical;display:block}
+textarea::placeholder{color:var(--ink);opacity:1}
+.pct{font-weight:700;font-size:22px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.bars{display:flex;align-items:flex-end;gap:4px;height:96px;margin-top:14px;border-bottom:1px solid var(--ink)}
+.bars i{flex:1;background:var(--ink);border-radius:6px 6px 0 0;display:block}
+.gradebox{display:flex;flex-direction:column;align-items:center;gap:2px}
+.glabel{font-size:var(--label);font-weight:600}
+.gradeline{display:flex;align-items:center;gap:14px;font-weight:700;font-size:22px;letter-spacing:-.02em;margin:0 0 16px}
+@media (max-width:560px){.case{grid-template-columns:30px 1fr auto;gap:6px 12px}}
+.check{display:flex;gap:12px;align-items:flex-start;flex-basis:100%;font-size:var(--label);line-height:1.5;cursor:pointer}
+.check input{flex:none;width:22px;height:22px;padding:0;margin:0;border-radius:6px;accent-color:var(--ink)}
+.up{position:relative;cursor:pointer}
+.up input{position:absolute;opacity:0;width:1px;height:1px;padding:0;border:0;min-width:0;flex:none}
+.up:focus-within{outline:2px solid var(--ink);outline-offset:3px}
+.mail+.mail{margin-top:22px}
+.mail header p{margin:0;font-size:var(--label)}
+.mail .body pre{font:inherit;white-space:pre-wrap;margin:0}
+.company-line{align-items:start}.company-line>div{min-width:0}.case-title{font-weight:600;text-decoration:none}.case-title:hover{text-decoration:underline}.company-line .sub{margin:2px 0 0}.company-more{margin-top:6px}.company-more>summary{list-style:none;cursor:pointer;display:inline-block;text-decoration:underline;min-height:30px}.company-more>summary::-webkit-details-marker{display:none}.company-more[open]>summary{margin-bottom:8px}.company-more p{margin-bottom:8px;overflow-wrap:anywhere}.company-more .note{margin-top:8px}.source-method{margin-top:16px}
+</style>
+</head>
+<body>
+<div class="designbar">
+<span>Ontwerp · melders en eigen cijfers zijn voorbeelden</span>
+<nav aria-label="Weergaven">
+<a href="#voorkant" data-state="voorkant">Voorkant</a>
+<a href="#nu" data-state="nu">Blendle vandaag</a>
+<a href="#melders" data-state="melders">Met melders</a>
+<a href="#modal" data-state="modal">Modal</a>
+<a href="#gesprek" data-state="gesprek">Gesprek</a>
+<a href="#opgelost" data-state="opgelost">Opgelost</a>
+<a href="#anp" data-state="anp">ANP</a>
+<a href="#hosters" data-state="hosters">Hosters</a>
+<a href="#vriendenloterij" data-state="vriendenloterij">VriendenLoterij</a>
+<a href="#opzegmails" data-state="opzegmails">Opzegmails</a>
+<a href="#over" data-state="over">Achtergrond</a>
+<a href="#pers" data-state="pers">Pers</a>
+<a href="#seo" data-state="seo">Vindbaarheid</a>
+<a href="#start" data-state="start">Start een dossier</a>
+<a href="#dagmail" data-state="dagmail">Dagmail</a>
+<a href="#advertenties" data-state="advertenties">Advertenties</a>
+</nav>
+</div>
+<div class="top">
+<a class="brand" href="#voorkant"><svg viewBox="0 0 64 64" width="26" height="26" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#111113"/><circle cx="32" cy="21" r="6.5" fill="#fff"/><circle cx="21" cy="39" r="6.5" fill="#fff"/><circle cx="43" cy="39" r="6.5" fill="#fff"/></svg><span class="wm">we are <b>many</b> now</span></a>
+<a class="small" href="#start">Start een dossier →</a>
+</div>
+<main data-page="voorkant" hidden>
+<p class="eyebrow">Nederland · <time datetime="2026-11-23">23 november 2026</time></p>
+<h1>Eén klacht wordt genegeerd. Honderd niet.</h1>
+<p>Opzeggen lukt niet, geld komt niet terug, of er ligt ineens een incassobrief. Plak je verhaal en zie of je meetelt.</p>
+<p><a class="btn primary" href="#start">Plak je verhaal: tel ik mee? →</a></p>
+<section>
+<p class="eyebrow">Onze dossiers · met bewijs, cijfer en wet</p>
+<div class="rows">
+<a class="case" href="#nu"><b>1</b><span><strong>Blendle</strong><span class="sub">Vier jaar op rij €99 afgeschreven, zonder één bericht.</span></span><span class="gradebox"><span class="grade">2</span><span class="glabel">cijfer</span></span></a>
+<a class="case" href="#anp"><b>2</b><span><strong>ANP</strong><span class="sub">€391 voor één foto, waarvan €260 voor het claimbureau.</span></span><span class="gradebox"><span class="grade">2</span><span class="glabel">cijfer</span></span></a>
+<a class="case" href="#hosters"><b>3</b><span><strong>Mijndomein en vier andere hosters</strong><span class="sub">Opgezegd en toch een incasso. Mijndomein lost 9% op, Hostnet 86%.</span></span><span class="gradebox"><span class="grade">1</span><span class="glabel">cijfer</span></span></a>
+</div>
+<p class="note">Een bedrijf krijgt pas een cijfer bij 10 melders en nadat het 15 dagen kon reageren. Deze drie cijfers zijn een voorstel.</p>
+</section>
+<section>
+<p class="eyebrow">Waar Nederland nu vastloopt · zo vaak gezocht per maand</p>
+<div class="rows">
+<div class="case company-line" id="bedrijf-vriendenloterij"><b>1</b><div><a class="case-title" href="#vriendenloterij">VriendenLoterij opzeggen</a><p class="sub">Trustpilot: 1,1/5 uit 1.188 reviews.</p><details class="company-more"><summary aria-label="Meer over de bronnen bij VriendenLoterij">meer »</summary><p>TrustScore voor het profiel vriendenloterij.nl, op een schaal van 1 tot 5. Het aantal betreft alle reviews op dit profiel.</p><p class="note"><a href="https://nl.trustpilot.com/review/vriendenloterij.nl" target="_blank" rel="noopener">Trustpilot · VriendenLoterij</a> · bronweergave bekeken op <time datetime="2026-11-23">23 november 2026</time>.</p><p class="note">Daarnaast vermeldt <a href="https://www.klacht.nl/Vriendenloterij/" target="_blank" rel="noopener">Klacht.nl</a> 2.471 klachten, waarvan 68 als opgelost geregistreerd. Bron bijgewerkt op <time datetime="2026-11-03">3 november 2026</time>. Deze registraties staan los van de TrustScore.</p></details></div><span class="pct" aria-label="33.100 zoekvragen per maand">33.100</span></div>
+<div class="case company-line" id="bedrijf-postcodeloterij"><b>2</b><div><a class="case-title" href="#start">Postcode Loterij opzeggen</a><p class="sub">Trustpilot: 1,2/5 uit 1.069 reviews.</p><details class="company-more"><summary aria-label="Meer over de bronnen bij Postcode Loterij">meer »</summary><p>TrustScore voor het profiel postcodeloterij.nl, op een schaal van 1 tot 5. Het aantal betreft alle reviews op dit profiel.</p><p class="note"><a href="https://nl.trustpilot.com/review/postcodeloterij.nl" target="_blank" rel="noopener">Trustpilot · Postcode Loterij</a> · bronweergave bekeken op <time datetime="2026-11-23">23 november 2026</time>.</p><p class="note">Daarnaast vermeldt <a href="https://www.klacht.nl/postcode-loterij/" target="_blank" rel="noopener">Klacht.nl</a> 6.064 klachten, waarvan 79 als opgelost geregistreerd. Bron bijgewerkt op <time datetime="2026-11-10">10 november 2026</time>. Deze registraties staan los van de TrustScore.</p></details></div><span class="pct" aria-label="22.200 zoekvragen per maand">22.200</span></div>
+<div class="case company-line" id="bedrijf-videoland"><b>3</b><div><a class="case-title" href="#start">Videoland opzeggen</a><p class="sub">Trustpilot: 1,3/5 uit 908 reviews.</p><details class="company-more"><summary aria-label="Meer over de bronnen bij Videoland">meer »</summary><p>TrustScore voor het profiel videoland.com, op een schaal van 1 tot 5. Het aantal betreft alle reviews op dit profiel.</p><p class="note"><a href="https://nl.trustpilot.com/review/videoland.com" target="_blank" rel="noopener">Trustpilot · Videoland</a> · bronweergave bekeken op <time datetime="2026-11-23">23 november 2026</time>.</p><p class="note">Daarnaast vermeldt <a href="https://www.klacht.nl/videoland/" target="_blank" rel="noopener">Klacht.nl</a> 1.438 klachten, waarvan 56 als opgelost geregistreerd. Bron bijgewerkt op <time datetime="2026-11-06">6 november 2026</time>. Deze registraties staan los van de TrustScore.</p></details></div><span class="pct" aria-label="18.100 zoekvragen per maand">18.100</span></div>
+<div class="case company-line" id="bedrijf-flanderijn"><b>4</b><div><a class="case-title" href="#start">Brief van Flanderijn</a><p class="sub">Trustpilot: 4,2/5 uit 721 reviews.</p><details class="company-more"><summary aria-label="Meer over de bronnen bij Flanderijn">meer »</summary><p>TrustScore voor het profiel flanderijn.nl, op een schaal van 1 tot 5. Het aantal betreft alle reviews op dit profiel.</p><p class="note"><a href="https://nl.trustpilot.com/review/flanderijn.nl" target="_blank" rel="noopener">Trustpilot · Flanderijn</a> · bronweergave bekeken op <time datetime="2026-11-23">23 november 2026</time>.</p></details></div><span class="pct" aria-label="14.800 zoekvragen per maand">14.800</span></div>
+<div class="case company-line" id="bedrijf-ziggo"><b>5</b><div><a class="case-title" href="#start">Ziggo opzeggen</a><p class="sub">Trustpilot: 1,4/5 uit 10.214 reviews.</p><details class="company-more"><summary aria-label="Meer over de bronnen bij Ziggo">meer »</summary><p>TrustScore voor het profiel www.ziggo.nl, op een schaal van 1 tot 5. Het aantal betreft alle reviews op dit profiel.</p><p class="note"><a href="https://nl.trustpilot.com/review/www.ziggo.nl" target="_blank" rel="noopener">Trustpilot · Ziggo</a> · bronweergave bekeken op <time datetime="2026-11-23">23 november 2026</time>.</p><p class="note">Daarnaast vermeldt <a href="https://www.klacht.nl/Ziggo/" target="_blank" rel="noopener">Klacht.nl</a> 8.394 klachten, waarvan 14 als opgelost geregistreerd. Bron bijgewerkt op <time datetime="2026-11-23">23 november 2026</time>. Deze registraties staan los van de TrustScore.</p></details></div><span class="pct" aria-label="9.900 zoekvragen per maand">9.900</span></div>
+<div class="case company-line" id="bedrijf-ns"><b>6</b><div><a class="case-title" href="#start">NS: geld terug bij vertraging</a><p class="sub">Trustpilot: 1,3/5 uit 3.447 reviews.</p><details class="company-more"><summary aria-label="Meer over de bronnen bij NS">meer »</summary><p>TrustScore voor het profiel www.ns.nl, op een schaal van 1 tot 5. Het aantal betreft alle reviews op dit profiel.</p><p class="note"><a href="https://nl.trustpilot.com/review/www.ns.nl" target="_blank" rel="noopener">Trustpilot · NS</a> · bronweergave bekeken op <time datetime="2026-11-23">23 november 2026</time>.</p><p class="note">Daarnaast vermeldt <a href="https://www.klacht.nl/ns/" target="_blank" rel="noopener">Klacht.nl</a> 8.789 klachten, waarvan 6.736 als opgelost geregistreerd. Bron bijgewerkt op <time datetime="2026-11-11">11 november 2026</time>. Deze registraties staan los van de TrustScore.</p></details></div><span class="pct" aria-label="9.900 zoekvragen per maand">9.900</span></div>
+<div class="case company-line" id="bedrijf-postnl"><b>7</b><div><a class="case-title" href="#start">Klacht over PostNL</a><p class="sub">Klacht.nl: 27.515 klachten, 21.700 als opgelost geregistreerd.</p><details class="company-more"><summary aria-label="Meer over de bronnen bij PostNL">meer »</summary><p>1.240 klachten in de afgelopen twaalf maanden. De 21.700 geregistreerde oplossingen horen bij het totaal over alle jaren.</p><p class="note"><a href="https://www.klacht.nl/postnl/" target="_blank" rel="noopener">Klacht.nl · PostNL</a> · bron bijgewerkt op <time datetime="2026-11-23">23 november 2026</time>, bekeken op 23 november 2026.</p><p class="note">Andere profielen, zoals PostNL Extra@Home en post.nl, zijn hier niet bij opgeteld.</p></details></div><span class="pct" aria-label="5.400 zoekvragen per maand">5.400</span></div>
+<div class="case company-line" id="bedrijf-kpn"><b>8</b><div><a class="case-title" href="#start">KPN opzeggen</a><p class="sub">Trustpilot: 1,4/5 uit 8.249 reviews.</p><details class="company-more"><summary aria-label="Meer over de bronnen bij KPN">meer »</summary><p>TrustScore voor het profiel www.kpn.com, op een schaal van 1 tot 5. Het aantal betreft alle reviews op dit profiel.</p><p class="note"><a href="https://nl.trustpilot.com/review/www.kpn.com" target="_blank" rel="noopener">Trustpilot · KPN</a> · bronweergave bekeken op <time datetime="2026-11-23">23 november 2026</time>.</p><p class="note">Daarnaast vermeldt <a href="https://www.klacht.nl/kpn/" target="_blank" rel="noopener">Klacht.nl</a> 3.934 klachten. Bron bijgewerkt op <time datetime="2026-10-27">27 oktober 2026</time>. Deze registraties staan los van de TrustScore.</p></details></div><span class="pct" aria-label="4.400 zoekvragen per maand">4.400</span></div>
+<div class="case company-line" id="bedrijf-intrum"><b>9</b><div><a class="case-title" href="#start">Brief van Intrum</a><p class="sub">Trustpilot: 1,1/5 uit 180 reviews.</p><details class="company-more"><summary aria-label="Meer over de bronnen bij Intrum">meer »</summary><p>TrustScore voor het profiel intrum.nl, op een schaal van 1 tot 5. Het aantal betreft alle reviews op dit profiel.</p><p class="note"><a href="https://nl.trustpilot.com/review/intrum.nl" target="_blank" rel="noopener">Trustpilot · Intrum</a> · bronweergave bekeken op <time datetime="2026-11-23">23 november 2026</time>.</p></details></div><span class="pct" aria-label="3.600 zoekvragen per maand">3.600</span></div>
+<div class="case company-line" id="bedrijf-anwb"><b>10</b><div><a class="case-title" href="#start">ANWB opzeggen</a><p class="sub">Trustpilot: 4,2/5 uit 9.116 reviews.</p><details class="company-more"><summary aria-label="Meer over de bronnen bij ANWB">meer »</summary><p>TrustScore voor het profiel www.anwb.nl, op een schaal van 1 tot 5. Het aantal betreft alle reviews op dit profiel.</p><p class="note"><a href="https://nl.trustpilot.com/review/www.anwb.nl" target="_blank" rel="noopener">Trustpilot · ANWB</a> · bronweergave bekeken op <time datetime="2026-11-23">23 november 2026</time>.</p><p class="note">Daarnaast vermeldt <a href="https://www.klacht.nl/ANWB/" target="_blank" rel="noopener">Klacht.nl</a> 3.577 klachten, waarvan 275 als opgelost geregistreerd. Bron bijgewerkt op <time datetime="2026-10-12">12 oktober 2026</time>. Deze registraties staan los van de TrustScore.</p></details></div><span class="pct" aria-label="3.600 zoekvragen per maand">3.600</span></div>
+</div>
+<details class="company-more source-method"><summary>Hoe lees je deze cijfers?</summary><p>De grote aantallen rechts zijn zoekvragen per maand, volgens Demand Radar. De regel bij elk bedrijf komt uit een externe bron.</p><p>Reviews zijn vrijwillig en vormen geen representatieve steekproef. Een TrustScore is geen oordeel van ons. Een klacht die op Klacht.nl als opgelost staat, zegt alleen iets over de registratie op dat platform.</p><p>De bronweergaven zijn bekeken op 23 november 2026. Telleraantallen kunnen intussen veranderen. Verschillende platforms, landen en bedrijfsprofielen zijn niet samengevoegd.</p></details>
+<p class="note">Zoekvragen per maand in Nederland · Demand Radar, november 2026. Zoekvolume zegt niets over het aantal klachten. <a href="#seo">Zo maken we dit vindbaar</a>.</p>
+</section>
+<section>
+<p class="eyebrow">Zo komt het cijfer tot stand</p>
+<div class="rows">
+<div class="row"><b>Antwoord<span class="sub">3 punten</span></b><p>Reageert het bedrijf binnen 15 dagen, met een echt antwoord?</p></div>
+<div class="row"><b>Oplossing<span class="sub">4 punten</span></b><p>Welk deel van de melders kreeg zijn geld of oplossing?</p></div>
+<div class="row"><b>Stopt het<span class="sub">2 punten</span></b><p>Komen er na de reactie nog nieuwe melders bij?</p></div>
+<div class="row"><b>Openheid<span class="sub">1 punt</span></b><p>Laat het bedrijf het bewijs zien waar om is gevraagd?</p></div>
+</div>
+<p style="margin-top:16px">Het laagste cijfer is 1. Elk punt is terug te verdienen. Wij tellen alleen wat te controleren is, geen meningen.</p>
+</section>
+</main>
+<main data-page="dossier">
+<p class="eyebrow">Blendle (Cafeyn)</p>
+<div class="clock" data-in="nu melders"><b id="days">14</b><span>dagen zonder oplossing</span></div>
+<div class="solved" data-in="opgelost"><b>Opgelost na 21 dagen</b>Blendle betaalde 37 mensen samen €7.326 terug.</div>
+<h1>Blendle schreef vier jaar op rij €99 af. Zonder één bericht.</h1>
+<p>Voor een abonnement dat sinds 2022 niet meer is geopend.</p>
+<p class="count" data-in="melders">37 mensen hebben dit ook. Samen €7.326.</p>
+<div class="live" data-in="melders">
+<span class="pill on"><span class="dot"></span>3 nieuwe melders vandaag</span>
+<span class="pill">4.210 keer bekeken</span>
+<span class="pill">312 keer gedeeld</span>
+<span class="pill">Laatste melding 12 minuten geleden</span>
+</div>
+<div data-in="nu melders">
+<div class="acts">
+<button class="primary big" type="button" id="metoo">Ik ook →</button>
+<button type="button" id="share">Deel dit dossier</button>
+</div>
+<p class="msg" id="act-msg" aria-live="polite"></p>
+</div>
+<section>
+<p class="eyebrow">Eindverantwoordelijk bij Blendle</p>
+<div class="rows"><div class="row"><b>Blendle</b><div><p><strong>Laurent Kayser</strong><br>Wettelijk vertegenwoordiger en publicatiedirecteur, volgens de juridische pagina van Blendle. Ook CEO van Cafeyn.</p><details class="company-more"><summary>Bronnen en sinds wanneer »</summary><p>Cafeyn vermeldt 7 oktober 2023 als begin van zijn CEO-functie. De benoemingsdatum als vertegenwoordiger van Blendle staat niet op de juridische pagina.</p><p class="note"><a href="https://www.blendle.com/nl/terms" target="_blank" rel="noopener">Blendle · juridische informatie</a> · bekeken 23 november 2026.<br><a href="https://communities.cafeyn.co/press/structuration-cafeyn" target="_blank" rel="noopener">Cafeyn · eigen benoemingsbericht</a> · 19 december 2023.</p></details></div></div></div>
+<p class="note">Functies en bronnen bekeken op <time datetime="2026-11-23">23 november 2026</time>. Een functie betekent niet dat deze persoon zelf bij jouw zaak betrokken was. Er is geen rechtstreeks Handelsregister-uittreksel gecontroleerd.</p>
+</section>
+<section data-in="nu melders">
+<p class="eyebrow">Haal eerst je geld terug</p>
+<div class="rows">
+<div class="row"><b>Binnen 8 weken</b><p>Open de afschrijving in je bank-app en kies terugboeken. Een reden is niet nodig.</p></div>
+<div class="row"><b>Tot 13 maanden</b><p>Meld bij je bank een onterechte incasso. De bank vraagt Blendle dan om je machtiging.</p></div>
+</div>
+<p style="margin-top:16px"><button type="button" id="refund">Ik heb teruggeboekt</button></p>
+<p class="note" data-in="melders" style="font-size:17px;font-weight:700">9 mensen boekten al terug.</p>
+</section>
+<section>
+<p class="eyebrow">Wat er gebeurt bij hoeveel melders</p>
+<div class="rows">
+<div class="step"><b>1</b><span>Dit dossier staat openbaar.</span><span class="pill on">Gedaan</span></div>
+<div class="step"><b>10</b><span>Naar de directie van Blendle: één verhaal namens 10 mensen.</span><span class="pill" data-in="nu">Volgt</span><span class="pill on" data-in="melders opgelost">Gedaan</span></div>
+<div class="step"><b>25</b><span>Naar de ACM: één verhaal namens 25 mensen.</span><span class="pill" data-in="nu">Volgt</span><span class="pill on" data-in="melders opgelost">Gedaan</span></div>
+<div class="step"><b>50</b><span>Naar Radar, Kassa en de vakpers: één verhaal namens 50 mensen.</span><span class="pill" data-in="nu">Volgt</span><span class="pill" data-in="melders">Nog 13</span><span class="pill" data-in="opgelost">Niet nodig</span></div>
+<div class="step"><b>100</b><span>Naar de Consumentenbond: één verhaal namens 100 mensen.</span><span class="pill" data-in="nu melders">Volgt</span><span class="pill" data-in="opgelost">Niet nodig</span></div>
+</div>
+<p style="margin-top:16px">Elke partij kan hier reageren. Die reactie gaat meteen naar alle melders. Iedereen kan dan reageren, en na de deadline gaat één gezamenlijke reactie terug. De klok van elke partij staat hier voor iedereen zichtbaar.</p>
+<p><a class="btn" href="#gesprek">Bekijk het gesprek →</a></p>
+</section>
+<section>
+<p class="eyebrow">Eén reactie, namens alle melders</p>
+<div class="box">
+<p><b>Wat vaststaat.</b> Voor geen van de afschrijvingen kwam een bericht. €99 ging in één keer, elk jaar in september.</p>
+<p><b>Wat wij vragen.</b> Betaal terug wat zonder bericht is afgeschreven. Stuur voortaan vóór elke afschrijving een bericht.</p>
+<p class="note" data-in="nu">Nu gebaseerd op het eerste dossier, van Henkjan de Krijger uit Gouda. Elke gecontroleerde melding telt mee. Losse reacties tonen we niet.</p>
+<p class="note" data-in="melders opgelost">Namens 37 gecontroleerde melders. Losse reacties tonen we niet.</p>
+</div>
+<div class="box on" data-in="nu melders">
+<p><b>Blendle heeft nog niet gereageerd.</b></p>
+<p>Betaal terug en de klok stopt. Dan staat bovenaan, even groot: opgelost.</p>
+<p><a class="btn" href="#opgelost" style="background:var(--bg);color:var(--ink)">Blendle, reageer hier →</a></p>
+</div>
+<div class="box on" data-in="opgelost">
+<p><b>Reactie van Blendle, 30 november 2026</b></p>
+<p>Hier staat de reactie van Blendle, ongewijzigd.</p>
+</div>
+</section>
+<section>
+<p class="eyebrow">Vergelijk met anderen</p>
+<div class="rows">
+<div class="row"><b>Blendle</b><p>Geen bericht vóór de jaarafschrijving.</p></div>
+<div class="row"><b>Andere leesabonnementen</b><p>Wij stellen elk dezelfde vraag: komt er een bericht vóór de afschrijving? Wie het wel doet, staat hier bovenaan.</p></div>
+</div>
+<p class="note">Wij noemen geen bedrijf zonder bewijs. De lijst vult zich met meldingen en met het antwoord van de bedrijven zelf.</p>
+</section>
+<section data-in="nu melders">
+<p class="eyebrow">Cijfer voor Blendle</p>
+<p class="gradeline"><span class="grade">2</span>van de 10</p>
+<div class="rows">
+<div class="row"><b>Antwoord<span class="sub">1 van 3</span></b><p>Antwoordde één keer. Op de vraag om terugbetaling kwam binnen de termijn niets.</p></div>
+<div class="row"><b>Oplossing<span class="sub">0 van 4</span></b><p>Niets terugbetaald.</p></div>
+<div class="row"><b>Stopt het<span class="sub">1 van 2</span></b><p>Het abonnement is gestopt. Of de stille verlenging voor anderen stopt, is onbekend.</p></div>
+<div class="row"><b>Openheid<span class="sub">0 van 1</span></b><p>Geen bewijs van een bericht vooraf.</p></div>
+</div>
+<p class="note">Voorstel. Elk punt is terug te verdienen: betaal terug en het cijfer stijgt.</p>
+</section>
+<section data-in="opgelost">
+<p class="eyebrow">Cijfer voor Blendle</p>
+<p class="gradeline"><span class="grade">9</span>van de 10 · was 2</p>
+<p>Blendle reageerde en betaalde iedereen terug. Het laatste punt komt erbij zodra het bericht vóór elke afschrijving is ingevoerd.</p>
+</section>
+<section>
+<p class="eyebrow">Waar het schuurt met de wet</p>
+<div class="rows">
+<div class="row"><b>Art. 6:236 j BW</b><p><b>De wet:</b> na de eerste periode mag een abonnement niet stil met een vaste periode van een jaar doorlopen. Je moet per maand kunnen opzeggen.<br><b>Hier:</b> elk jaar stil verlengd, €99 in één keer.</p></div>
+<div class="row"><b>SEPA-regels incasso</b><p><b>De regel:</b> het bedrijf meldt bedrag en datum vooraf, uiterlijk 14 dagen voor de afschrijving, tenzij een kortere termijn is afgesproken.<br><b>Hier:</b> vier keer afgeschreven, geen enkel bericht.</p></div>
+<div class="row"><b>Art. L215-1 Code de la consommation</b><p><b>De wet:</b> Blendle kiest in zijn voorwaarden zelf voor Frans recht. Dat eist een bericht één tot drie maanden voor de verlenging. Komt dat niet, dan mag je kosteloos stoppen en krijg je binnen 30 dagen terug wat je na de laatste verlenging betaalde.<br><b>Hier:</b> geen bericht, geen geld terug.</p></div>
+</div>
+<p class="note">Geen juridisch advies. Elke paragraaf wordt door een jurist nagekeken voordat een dossier live gaat. Het bedrijf kan hierop reageren.</p>
+</section>
+<section>
+<p class="eyebrow">Tijdlijn</p>
+<div class="rows">
+<div class="row"><b>2023 tot 2026</b><p>Elk jaar in september €99 afgeschreven.</p></div>
+<div class="row"><b>9 nov 2026</b><p>Opgezegd en geld teruggevraagd.</p></div>
+<div class="row"><b>12 nov 2026</b><p>Blendle stopt het abonnement, maar zegt geen terugbetaling toe.</p></div>
+<div class="row"><b>23 nov 2026</b><p>Termijn verlopen zonder antwoord. Dossier openbaar.</p></div>
+<div class="row" data-in="opgelost"><b>30 nov 2026</b><p>Blendle betaalt iedereen terug.</p></div>
+</div>
+</section>
+<section data-in="nu melders">
+<p class="eyebrow">Brief aan de directie</p>
+<div class="box" data-in="nu"><p>Elke maandag krijgt de directie van Blendle de cijfers van die week. De eerste brief gaat op 30 november.</p></div>
+<div class="box" data-in="melders">
+<p><b>Week 48, verstuurd op maandag</b></p>
+<p>Dit dossier is deze week 4.210 keer gelezen en 312 keer gedeeld. Er kwamen 12 melders bij. Negen mensen boekten hun geld terug via de bank.</p>
+<p><b>De brief is drie keer geopend. Er kwam geen antwoord.</b></p>
+</div>
+</section>
+<section>
+<p class="eyebrow">Sta jij machteloos tegen een ander bedrijf?</p>
+<div class="rows">
+<a class="row link" href="#start"><span>Start je eigen dossier<span class="sub">Eén klacht wordt genegeerd. Honderd niet.</span></span><span aria-hidden="true">→</span></a>
+</div>
+</section>
+</main>
+<main data-page="anp" hidden>
+<p class="eyebrow">ANP · fotoclaims</p>
+<div class="clock"><b id="anp-days">1.489</b><span>dagen wachten op bewijs dat de foto van ANP is</span></div>
+<h1>ANP vroeg €391,29 voor één foto. €260,04 daarvan was voor het claimbureau.</h1>
+<p>De foto zelf: €105. Betalen binnen 14 dagen.</p>
+<div class="acts">
+<button class="primary big" type="button" id="anp-metoo">Ik kreeg ook zo’n brief →</button>
+<button type="button" id="anp-share">Deel dit dossier</button>
+</div>
+<p class="msg" id="anp-msg" aria-live="polite"></p>
+<section>
+<p class="eyebrow">Eindverantwoordelijk bij ANP</p>
+<div class="rows">
+<div class="row"><b>Algemene directie</b><div><p><strong>Martha Riemsma</strong><br>Algemeen directeur, sinds half oktober 2024 volgens het benoemingsbericht.</p><details class="company-more"><summary>Bronnen »</summary><p>In haar eigen ingezonden brief van april 2026 beschrijft Riemsma Fair Licensing als een eigen team dat rechtstreeks onder ANP valt. Zij meldt ook dat de samenwerking met VRG/Copyright Agent in 2025 is beëindigd.</p><p class="note"><a href="https://www.villamedia.nl/artikel/martha-riemsma-is-de-nieuwe-directeur-van-het-anp" target="_blank" rel="noopener">Benoemingsbericht van ANP, via Villamedia</a> · 11 september 2024.<br><a href="https://www.stichtingrpo.nl/5-vragen-aan-martha-riemsma-directeur-bij-anp-en-voorzitter-van-bestuur-de-tegel/" target="_blank" rel="noopener">RPO · interview met Riemsma</a> · 20 januari 2026.<br><a href="https://www.villamedia.nl/artikel/ingezonden-anp-staat-voor-een-proportionele-redelijke-en-eerlijke-aanpak-van-onrechtmatig-gebruik-van-fotos" target="_blank" rel="noopener">Riemsma · eigen reactie over Fair Licensing</a> · 17 april 2026.</p></details></div></div>
+<div class="row"><b>Fair Licensing</b><div><p><strong>Robbert Buitenhuis</strong><br>Genoemd als hoofd International Photo Sales &amp; Infringements in een publicatie van 3 juli 2026. Zijn actuele functie is nog te bevestigen.</p><details class="company-more"><summary>Bron en controle »</summary><p>Dit is een gedateerde vermelding in een journalistieke publicatie. Een benoemingsdatum of actuele bevestiging door ANP is nog niet gevonden. De naam wordt daarom niet als bevestigd statutair bestuurder getoond.</p><p class="note"><a href="https://feitenradar.nl/2026/07/03/na-media-aandacht-trekt-anp-opnieuw-fotoclaim-tegen-hengelose-ijsclub-in/" target="_blank" rel="noopener">Feitenradar · verslag van een ingetrokken claim</a> · 3 juli 2026, bekeken 23 november 2026.</p></details></div></div>
+</div>
+<p class="note">Functies en bronnen bekeken op <time datetime="2026-11-23">23 november 2026</time>. Een functie betekent niet dat deze persoon zelf bij jouw zaak betrokken was. Er is geen rechtstreeks Handelsregister-uittreksel gecontroleerd.</p>
+</section>
+<section>
+<p class="eyebrow">De rekening, regel voor regel</p>
+<div class="rows">
+<div class="row"><b>€105,00</b><p>Licentie voor de foto, één jaar.</p></div>
+<div class="row"><b>€26,25</b><p>Verhoging omdat er vooraf geen toestemming was.</p></div>
+<div class="row"><b>€209,00</b><p>Opsporing, onderzoek en documentatie. Voor Visual Rights Group.</p></div>
+<div class="row"><b>€51,04</b><p>Buitengerechtelijke kosten. Voor Visual Rights Group.</p></div>
+<div class="row"><b>€22,50</b><p>Later erbij, voor de ingebrekestelling.</p></div>
+</div>
+<p class="note">Uit de brief van ANP en Visual Rights Group van 25 september 2024.</p>
+</section>
+<section>
+<p class="eyebrow">Kreeg jij ook zo’n brief?</p>
+<div class="rows">
+<div class="row"><b>Haal de foto weg</b><p>Dan is er geen nieuw gebruik meer.</p></div>
+<div class="row"><b>Vraag om bewijs</b><p>Vraag de akte waarin de fotograaf zijn rechten aan ANP geeft. Rechters wezen claims af omdat die ontbrak.</p></div>
+<div class="row"><b>Al betaald?</b><p>Meld het hier. Wij tellen op wat er samen is betaald.</p></div>
+</div>
+<p class="note">Dit is geen juridisch advies. Wie een foto zonder toestemming gebruikt, kan terecht een rekening krijgen.</p>
+</section>
+<section>
+<p class="eyebrow">Wat de rechter zei</p>
+<div class="rows">
+<div class="row"><b>28 aug 2025</b><p>Den Bosch. Claim van ruim €450 afgewezen. ANP betaalt de proceskosten.</p></div>
+<div class="row"><b>27 nov 2025</b><p>Eindhoven. ANP niet-ontvankelijk verklaard.</p></div>
+<div class="row"><b>14 jan 2026</b><p>Arnhem. Claim afgewezen. ANP betaalt rond €2.500 proceskosten.</p></div>
+<div class="row"><b>Maart 2026</b><p>Gelderland. Claim van €450 afgewezen. De akte van de fotograaf ontbrak.</p></div>
+<div class="row"><b>2026</b><p>ANP stopt met Visual Rights Group. De directeur zegt zelf dat de redelijkheid soms zoek was. ANP int nu zelf, als ANP Fair Licensing.</p></div>
+</div>
+<p class="note">ANP wint ook zaken. Bronnen: rechtspraak.nl en Dutch IT Channel.</p>
+</section>
+<section>
+<p class="eyebrow">Wat er gebeurt bij hoeveel melders</p>
+<div class="rows">
+<div class="step"><b>1</b><span>Dit dossier staat openbaar.</span><span class="pill on">Gedaan</span></div>
+<div class="step"><b>10</b><span>Naar de directie van ANP: één verhaal namens 10 mensen.</span><span class="pill">Volgt</span></div>
+<div class="step"><b>25</b><span>Naar Radar, Kassa en de vakpers: één verhaal namens 25 mensen.</span><span class="pill">Volgt</span></div>
+<div class="step"><b>50</b><span>Naar de redacties die ANP betalen: één verhaal namens 50 mensen.</span><span class="pill">Volgt</span></div>
+<div class="step"><b>100</b><span>Naar de Tweede Kamer: één verhaal namens 100 mensen.</span><span class="pill">Volgt</span></div>
+</div>
+<p style="margin-top:16px">Elke partij kan hier reageren. Die reactie gaat meteen naar alle melders. Na de deadline gaat één gezamenlijke reactie terug. De klok van elke partij is voor iedereen zichtbaar.</p>
+</section>
+<section>
+<p class="eyebrow">Eén reactie, namens alle melders</p>
+<div class="box">
+<p><b>Wat vaststaat.</b> ANP vroeg €391,29 voor één foto. €260,04 daarvan waren kosten van het claimbureau. Op onze vraag om bewijs kwam geen akte. In 2026 stopte ANP zelf met dit bureau. Het bureau is weg, de claims niet.</p>
+<p><b>Wat wij vragen.</b> Laat per foto de akte zien. Reken alleen de gewone prijs van de foto. Trek claims zonder akte in en betaal terug wie daarvoor betaalde.</p>
+<p class="note">Nu gebaseerd op het eerste dossier, van Adsfair B.V. uit Gouda. Elke gecontroleerde melding telt mee. Losse reacties tonen we niet.</p>
+</div>
+<div class="box on">
+<p><b>ANP heeft nog niet gereageerd.</b></p>
+<p>Laat de akte zien of trek de claim in, en de klok stopt. Dan staat bovenaan, even groot: opgelost.</p>
+<p><a class="btn" href="#anp" id="anp-reply" style="background:var(--bg);color:var(--ink)">ANP, reageer hier →</a></p>
+</div>
+</section>
+<section>
+<p class="eyebrow">Vergelijk met anderen</p>
+<div class="rows">
+<div class="row"><b>De gewone prijs</b><p>€105 voor een jaar. De claim is €391,29: 3,7 keer zoveel.</p></div>
+<div class="row"><b>Duitsland</b><p>Bij claims tegen consumenten zijn de kosten bij wet begrensd.</p></div>
+<div class="row"><b>Andere fotobureaus</b><p>Wij stellen elk dezelfde vraag: wat reken je bovenop de prijs van de foto? Wie het redelijk doet, staat hier bovenaan.</p></div>
+</div>
+<p class="note">Wij noemen geen bedrijf zonder bewijs.</p>
+</section>
+<section>
+<p class="eyebrow">Cijfer voor ANP</p>
+<p class="gradeline"><span class="grade">2</span>van de 10</p>
+<div class="rows">
+<div class="row"><b>Antwoord<span class="sub">1 van 3</span></b><p>Antwoordde in 2022 na acht weken. Daarna alleen herinneringen.</p></div>
+<div class="row"><b>Oplossing<span class="sub">0 van 4</span></b><p>Claim niet ingetrokken.</p></div>
+<div class="row"><b>Stopt het<span class="sub">1 van 2</span></b><p>Gestopt met het claimbureau. De claims zelf gaan door.</p></div>
+<div class="row"><b>Openheid<span class="sub">0 van 1</span></b><p>Geen akte laten zien.</p></div>
+</div>
+<p class="note">Voorstel. Elk punt is terug te verdienen: laat de akte zien of trek de claim in, en het cijfer stijgt.</p>
+</section>
+<section>
+<p class="eyebrow">Waar het schuurt met de wet</p>
+<div class="rows">
+<div class="row"><b>Art. 2 Auteurswet</b><p><b>De wet:</b> auteursrecht gaat alleen over met een akte, een ondertekend stuk van de fotograaf.<br><b>Hier:</b> wij vroegen erom, ANP stuurde geen akte. Rechters wezen claims van ANP hierop af.</p></div>
+<div class="row"><b>Art. 4 Auteurswet</b><p><b>De wet:</b> wie bij een foto als maker staat, geldt als de maker.<br><b>Hier:</b> ANP beroept zich op dit vermoeden. Maar staat in de beeldbank de naam van de fotograaf, dan wijst het naar de fotograaf en niet naar ANP.</p></div>
+<div class="row"><b>Art. 6:96 BW</b><p><b>De wet:</b> kosten voor opsporing en incasso moeten redelijk zijn.<br><b>Hier:</b> €260,04 aan kosten bij een foto van €105. Bijna 2,5 keer de prijs van de foto.</p></div>
+<div class="row"><b>Art. 1019h Rv</b><p><b>De wet:</b> wie een zaak over auteursrecht verliest, kan de volledige proceskosten van de ander betalen.<br><b>Hier:</b> dat risico maakt dat mensen betalen, ook als de claim niet klopt.</p></div>
+</div>
+<p class="note">Geen juridisch advies. Elke paragraaf wordt door een jurist nagekeken voordat een dossier live gaat. ANP kan hierop reageren.</p>
+</section>
+<section>
+<p class="eyebrow">Tijdlijn</p>
+<div class="rows">
+<div class="row"><b>26 okt 2022</b><p>Eerste brief van ANP en Visual Rights Group. Wij vragen dezelfde dag om bewijs van de rechten.</p></div>
+<div class="row"><b>20 dec 2022</b><p>ANP antwoordt na acht weken. Geen akte, wel een beroep op het wettelijk vermoeden. Wij vragen opnieuw om bewijs. Daarop komt geen antwoord.</p></div>
+<div class="row"><b>25 sep 2024</b><p>Nieuwe brief over een andere foto: €391,29.</p></div>
+<div class="row"><b>7 feb 2025</b><p>Herinnering.</p></div>
+<div class="row"><b>3 apr 2025</b><p>Ingebrekestelling. €22,50 erbij, en de waarschuwing dat het bedrag hoger wordt.</p></div>
+<div class="row"><b>2026</b><p>ANP stopt met Visual Rights Group en int nu zelf.</p></div>
+<div class="row"><b>23 nov 2026</b><p>Nog steeds geen bewijs. Dossier openbaar.</p></div>
+</div>
+</section>
+<section>
+<p class="eyebrow">Brief aan de directie</p>
+<div class="box"><p>Elke maandag krijgt de directie van ANP de cijfers van die week: hoe vaak dit is gelezen, gedeeld en hoeveel melders erbij kwamen.</p></div>
+</section>
+<section>
+<p class="eyebrow">Sta jij machteloos tegen een ander bedrijf?</p>
+<div class="rows">
+<a class="row link" href="#start"><span>Start je eigen dossier<span class="sub">Eén klacht wordt genegeerd. Honderd niet.</span></span><span aria-hidden="true">→</span></a>
+</div>
+</section>
+</main>
+<main data-page="hosters" hidden>
+<p class="eyebrow">Hosters · opgezegd en toch betalen</p>
+<h1>Mijndomein lost 9% van de klachten op. Hostnet 86%.</h1>
+<p>Zelfde soort product. Het kan dus wel.</p>
+<div class="acts" style="margin-top:22px">
+<button class="primary big" type="button" id="host-metoo">Ik ook →</button>
+<button type="button" id="host-share">Deel deze vergelijking</button>
+</div>
+<p class="msg" id="host-msg" aria-live="polite"></p>
+<section>
+<p class="eyebrow">Eindverantwoordelijk per hoster</p>
+<div class="rows">
+<div class="row"><b>Mijndomein</b><div><p><strong>Dion Goudkuil</strong><br>CEO, door Mijndomein zelf zo genoemd op 22 oktober 2026.</p><details class="company-more"><summary>Bron en sinds wanneer »</summary><p>De benoemingsdatum staat niet in het bedrijfsinterview.</p><p class="note"><a href="https://nieuws.mijndomein.nl/over-mijndomein/veiligheid-boven-beschikbaarheid/" target="_blank" rel="noopener">Mijndomein · interview met de eigen CEO</a> · 22 oktober 2026.</p></details></div></div>
+<div class="row"><b>STRATO</b><div><p><strong>Jens Reich, Hüseyin Dogan, Markus Leander Noga en Patrik Heider</strong><br>De directie van STRATO GmbH, volgens de eigen juridische pagina.</p><details class="company-more"><summary>Bronnen en sinds wanneer »</summary><p>Jens Reich: sinds september 2025. Hüseyin Dogan: sinds 2018 verantwoordelijk voor operationele taken. Markus Noga: sinds april 2023 voor technologie. Patrik Heider: sinds januari 2026 voor financiën en juridische zaken. Dit zijn de ingangsdata die STRATO voor hun functies vermeldt.</p><p class="note"><a href="https://www.strato.nl/imprint/" target="_blank" rel="noopener">STRATO · directie in het imprint</a> en <a href="https://www.strato.nl/over-ons/" target="_blank" rel="noopener">STRATO · management en ingangsdata</a> · bekeken 23 november 2026.</p></details></div></div>
+<div class="row"><b>Yourhosting</b><div><p><strong>Wouter Stoutjesdijk</strong><br>CEO, gestart begin 2025 volgens zijn eigen startbericht.</p><details class="company-more"><summary>Bronnen »</summary><p>Moederbedrijf Your.Online kondigde zijn benoeming aan. Een klantcase uit 2026 noemt hem eveneens CEO. De precieze ingangsdag is niet vastgesteld.</p><p class="note"><a href="https://www.linkedin.com/posts/youronline_koen-van-deudekom-promoted-to-general-manager-activity-7273260362043375616-lIdJ" target="_blank" rel="noopener">Your.Online · eigen benoemingsbericht</a>.<br><a href="https://nl.linkedin.com/posts/wouter-stoutjesdijk_deze-week-begon-ik-als-nieuwe-ceo-van-yourhosting-activity-7280968412770578432-HWUo" target="_blank" rel="noopener">Stoutjesdijk · eigen startbericht</a>.<br><a href="https://www.storyflow.be/stories/yourhosting" target="_blank" rel="noopener">Story Flow · klantcase met CEO Yourhosting</a> · 2026. Alle bronnen bekeken 23 november 2026.</p></details></div></div>
+<div class="row"><b>Vimexx</b><div><p><strong>Claudio Corbetta</strong><br>CEO van team.blue, de groep achter Vimexx. De actuele lokale directie van Vimexx is nog te bevestigen.</p><details class="company-more"><summary>Bronnen en lokale directie »</summary><p>De groepsfunctie van Corbetta staat op de eigen site van team.blue. Dit bevestigt geen bestuursfunctie bij Vimexx B.V.</p><p>Tom Denkers wordt als directeur van Vimexx geïnterviewd door BIT op 6 augustus 2024. Die oudere vermelding gebruiken we niet als bevestiging van zijn huidige directiefunctie.</p><p class="note"><a href="https://team.blue/leadership/claudio/" target="_blank" rel="noopener">team.blue · huidige CEO</a> en <a href="https://hub.team.blue/brand/vimexx?hsLang=en" target="_blank" rel="noopener">team.blue · Vimexx als groepsmerk</a> · bekeken 23 november 2026.<br><a href="https://www.bit.nl/referenties/vimexx/" target="_blank" rel="noopener">BIT · interview met Tom Denkers</a> · 6 augustus 2024.</p></details></div></div>
+<div class="row"><b>Hostnet</b><div><p><strong>René Oldenbeuving</strong><br>Directeur. Company.info vermeldt deze directiefunctie vanaf 2021.</p><details class="company-more"><summary>Bronnen »</summary><p>Company.info noemt R. Oldenbeuving als directeur en vermeldt KVK als bron, met brondatum 29 september 2026. Het interview van Emerce uit april 2026 geeft zijn volledige naam en functie.</p><p class="note"><a href="https://companyinfo.nl/organisatieprofiel/inrichten-van-computerinfrastructuur-gegevensverwerking-hosting-en-aanverwante-activiteiten/hostnet-b-v-amsterdam-34130993-000013828851" target="_blank" rel="noopener">Company.info · Hostnet B.V.</a> · KVK-brondatum 29 september 2026.<br><a href="https://www.emerce.nl/interviews/klanten-gewoon-helpt" target="_blank" rel="noopener">Emerce · interview met de directeur</a> · 21 april 2026. Bekeken 23 november 2026.</p></details></div></div>
+</div>
+<p class="note">Functies en bronnen bekeken op <time datetime="2026-11-23">23 november 2026</time>. Een functie betekent niet dat deze persoon zelf bij jouw zaak betrokken was. Er is geen rechtstreeks Handelsregister-uittreksel gecontroleerd.</p>
+</section>
+<section>
+<p class="eyebrow">Vijf hosters naast elkaar</p>
+<div class="rows">
+<div class="case"><b>1</b><span><strong>Hostnet</strong><span class="sub">95 klachten. Geen enkele in het laatste jaar.</span></span><span class="pct">86%</span></div>
+<div class="case"><b>2</b><span><strong>Strato</strong><span class="sub">417 klachten. Twee van de tien nieuwste: incasso na opzeggen.</span></span><span class="pct">74%</span></div>
+<div class="case"><b>3</b><span><strong>Yourhosting</strong><span class="sub">133 klachten. Drie in het laatste jaar.</span></span><span class="pct">48%</span></div>
+<div class="case"><b>4</b><span><strong>Vimexx</strong><span class="sub">28 klachten. Zes van de tien zichtbare: stille verlenging of afschrijving. Oplossingen niet gemeld.</span></span><span class="pct">?</span></div>
+<div class="case"><b>5</b><span><strong>Mijndomein</strong><span class="sub">272 klachten. Zes van de tien nieuwste: incasso of factuur na opzeggen.</span></span><span class="pct">9%</span></div>
+</div>
+<p class="note">Percentage opgeloste klachten op klacht.nl, stand 23 november 2026. Hoeveel klanten elke hoster heeft, is niet bekend.</p>
+</section>
+<section>
+<p class="eyebrow">Stap over</p>
+<div class="rows">
+<a class="row link" href="#hosters" id="host-switch"><span>Verhuis je domein naar een hoster die wel oplost<span class="sub">In tien minuten, met je verhuiscode. Wij tellen elke overstap.</span></span><span aria-hidden="true">→</span></a>
+</div>
+</section>
+<section>
+<p class="eyebrow">Eén reactie, namens alle melders</p>
+<div class="box">
+<p><b>Wat vaststaat.</b> Mensen zeggen op en krijgen toch een factuur of een incasso. Bij Mijndomein wordt 9% van de klachten opgelost, bij Hostnet 86%.</p>
+<p><b>Wat wij vragen.</b> Bevestig elke opzegging binnen een dag. Stuur geen incassobureau zolang een klacht openstaat. Betaal terug wat na de opzegging is afgeschreven.</p>
+</div>
+<div class="box on">
+<p><b>Elke maandag krijgen alle vijf directies dezelfde ranglijst.</b></p>
+<p>Wie stijgt, staat hier hoger. Wie niets doet, zakt, en ziet wie erboven staat.</p>
+<p><a class="btn" href="#hosters" id="host-reply" style="background:var(--bg);color:var(--ink)">Hoster, reageer hier →</a></p>
+</div>
+</section>
+<section>
+<p class="eyebrow">Waar het schuurt met de wet</p>
+<div class="rows">
+<div class="row"><b>Art. 6:236 j BW</b><p><b>De wet:</b> na de eerste periode moet je per maand kunnen opzeggen.<br><b>Hier:</b> pakketten worden stil met een jaar verlengd en volledig gefactureerd.</p></div>
+<div class="row"><b>SEPA-regels incasso</b><p><b>De regel:</b> zonder geldige machtiging mag er niet worden afgeschreven. Je bank boekt het tot 13 maanden terug.<br><b>Hier:</b> afschrijvingen na opzegging, en voor accounts die niet van de betaler zijn.</p></div>
+</div>
+<p class="note">Geen juridisch advies. Elke paragraaf wordt door een jurist nagekeken voordat een dossier live gaat. Elke hoster kan hierop reageren.</p>
+</section>
+<section>
+<p class="eyebrow">Sta jij machteloos tegen een ander bedrijf?</p>
+<div class="rows">
+<a class="row link" href="#start"><span>Plak je verhaal<span class="sub">Wij kijken meteen of je meetelt.</span></span><span aria-hidden="true">→</span></a>
+</div>
+</section>
+</main>
+<main data-page="vriendenloterij" hidden>
+<p class="eyebrow">VriendenLoterij · bijgewerkt <time datetime="2026-11-23">23 november 2026</time></p>
+<h1>VriendenLoterij opzeggen</h1>
+<p><b>Het korte antwoord.</b> Je mag opzeggen op dezelfde manier als je bent begonnen: online afgesloten is online opzeggen. De opzegtermijn is hooguit een maand. Opzeggen is gratis.</p>
+<div class="acts" style="margin-top:22px">
+<button class="primary big" type="button" id="vl-go">Zeg voor mij op →</button>
+<a class="btn" href="#vl-zelf">Liever zelf doen</a>
+</div>
+<section id="vl-help">
+<p class="eyebrow">Wij zeggen voor je op · gratis</p>
+<div id="vl-a">
+<p>Vul je e-mailadres in. Wij mailen de loterij namens jou, lezen de antwoorden en mailen je als het rond is.</p>
+<form class="line" id="vl-form" style="margin-top:0" novalidate>
+<input id="vl-email" type="email" autocomplete="email" placeholder="Je e-mailadres" aria-label="Je e-mailadres" style="flex-basis:100%">
+<button class="primary" type="submit" id="vl-next" style="flex-basis:100%">Zeg voor mij op →</button>
+</form>
+<form class="line" id="vl-form2" hidden novalidate>
+<p style="flex-basis:100%;margin:0"><b>Nog twee dingen, zodat de loterij je vindt.</b></p>
+<input id="vl-naam" type="text" autocomplete="name" placeholder="Je naam, zoals bij de loterij" aria-label="Je naam" style="flex-basis:100%">
+<input id="vl-adres" type="text" autocomplete="postal-code" placeholder="Postcode en huisnummer" aria-label="Postcode en huisnummer" style="flex-basis:100%">
+<label class="check"><input id="vl-ok" type="checkbox"><span>Ik ben zelf de deelnemer en machtig Adsfair B.V. (we are many now) om namens mij op te zeggen bij de VriendenLoterij, mijn machtiging voor automatische incasso daar in te trekken en daarover met de loterij te mailen tot de opzegging is bevestigd. Niets anders. Intrekken kan altijd.</span></label>
+<button class="primary" type="submit" style="flex-basis:100%">Verstuur →</button>
+</form>
+</div>
+<div class="box" id="vl-c" hidden>
+<p><b>Kijk in je mail.</b></p>
+<p>Wij mailden <b id="vl-to">je</b>. Tik daar op “Ja, zeg voor mij op”. Pas dan gaat er iets naar de loterij.</p>
+<p><button type="button" id="vl-conf">Ontwerp: ik tikte op ja</button></p>
+</div>
+<div id="vl-d" hidden>
+<p><b>Je opzegging loopt.</b> Wij houden hem in de gaten. Je hoeft niets te doen.</p>
+<div class="rows">
+<div class="step"><b>1</b><div><strong>Jij gaf opdracht</strong><br>Maandag 23 november, 14:02.</div><span class="pill on">Klaar</span></div>
+<div class="step"><b>2</b><div><strong>Verstuurd aan de VriendenLoterij</strong><br>Maandag 23 november, 14:03. Afgeleverd. Jij staat in de cc.</div><span class="pill on">Klaar</span></div>
+<div class="step"><b>3</b><div><strong>Antwoord van de loterij</strong><br>Dag 3, nog niets. Op dag 7 herinneren wij ze. Op dag 14 gaat er een brief per post.</div><span class="pill">Wij wachten</span></div>
+<div class="step"><b>4</b><div><strong>Afgerond</strong><br>Je krijgt een mail met de einddatum en het bewijs.</div><span class="pill">Straks</span></div>
+</div>
+<p class="note">Voorbeeld van dag 3. Deze pagina krijg je ook als link in je mail. <a href="#opzegmails">Bekijk de vier mails</a>.</p>
+</div>
+<p class="msg" id="vl-msg" aria-live="polite"></p>
+</section>
+<section>
+<p class="eyebrow">Zo is het geregeld</p>
+<div class="rows">
+<div class="row"><b>Eén opdracht</b><p>Je machtigt ons alleen om op te zeggen bij de VriendenLoterij. Niets anders. Intrekken kan altijd.</p></div>
+<div class="row"><b>Bewijs</b><p>Je bevestigt met één tik in je mail. Dat moment bewaren wij. Vraagt de loterij om bewijs van de machtiging, dan sturen wij het meteen.</p></div>
+<div class="row"><b>Jij leest mee</b><p>Je staat in de cc van elke mail. Antwoorden van de loterij komen bij ons en gaan door naar jou.</p></div>
+<div class="row"><b>Jij beslist</b><p>Biedt de loterij korting of iets anders aan, dan nemen wij niets aan. Wij sturen het door en jij kiest.</p></div>
+<div class="row"><b>Gegevens</b><p>Je naam, adres en de mails bewaren wij tot 30 dagen na afloop. Daarna houden wij alleen de telling.</p></div>
+<div class="row"><b>Gratis</b><p>Wij vragen geen geld en verdienen niets aan je opzegging.</p></div>
+</div>
+<p class="note">Geen juridisch advies. Opgezegd is het pas als de loterij het bevestigt. Tot dan houden wij het in de gaten.</p>
+</section>
+<section id="vl-zelf">
+<p class="eyebrow">Liever zelf doen · gratis en rechtstreeks</p>
+<div class="rows">
+<a class="row link" href="https://www.vriendenloterij.nl/over-opzeggen-2" target="_blank" rel="noopener"><span>Online, bij de VriendenLoterij zelf<span class="sub">Je logt in bij Mijn VriendenLoterij en zet je loten stop.</span></span><span aria-hidden="true">→</span></a>
+<a class="row link" href="tel:+31880201020"><span>Bellen: 088 020 10 20<span class="sub">Zeg één keer duidelijk dat je wilt stoppen en vraag om een bevestiging per mail.</span></span><span aria-hidden="true">→</span></a>
+<div class="row"><b>Per brief</b><p>VriendenLoterij, Beethovenstraat 200, 1077 JZ Amsterdam.</p></div>
+<div class="row"><b>Namens een overledene</b><p>Dat gaat per brief, met een kopie van de akte van overlijden. Vraag ook terug wat na het overlijden is afgeschreven.</p></div>
+<a class="row link" href="#start"><span>Opgezegd en toch afgeschreven?<span class="sub">Plak je verhaal en tel mee.</span></span><span aria-hidden="true">→</span></a>
+</div>
+<p style="margin-top:22px"><b>Zelf opgezegd. Is het gelukt?</b></p>
+<div class="acts">
+<button type="button" id="vl-ja">Ja, opgezegd</button>
+<button type="button" id="vl-nee">Nee, het lukt niet</button>
+</div>
+<p class="msg" id="vl-msg2" aria-live="polite"></p>
+<p class="note">Wij verdienen hier niets aan en controleren deze link elke week.</p>
+</section>
+<section>
+<p class="eyebrow">Je bent niet de enige</p>
+<p class="count" style="margin-top:0">33.100 keer per maand zoeken mensen hoe ze de VriendenLoterij opzeggen.</p>
+<div class="bars" role="img" aria-label="Zoekopdrachten per maand in de laatste twaalf maanden, tussen 27.100 en 49.500">
+<i style="height:82%"></i><i style="height:100%"></i><i style="height:100%"></i><i style="height:67%"></i><i style="height:82%"></i><i style="height:67%"></i><i style="height:67%"></i><i style="height:55%"></i><i style="height:55%"></i><i style="height:82%"></i><i style="height:55%"></i><i style="height:67%"></i>
+</div>
+<p class="note">Laatste twaalf maanden, tussen 27.100 en 49.500 per maand. Eigen meting voor Nederland.</p>
+</section>
+<section>
+<p class="eyebrow">Je recht</p>
+<div class="rows">
+<div class="row"><b>Zelfde manier</b><p>Je mag opzeggen op de manier waarop je het abonnement afsloot. Online afgesloten is online opzeggen. (Wet Van Dam, art. 6:236 onder o BW)</p></div>
+<div class="row"><b>Een maand</b><p>Na de eerste periode mag de opzegtermijn niet langer zijn dan een maand.</p></div>
+<div class="row"><b>Gratis</b><p>Opzeggen kost niets. Sites die er €29,95 voor vragen, doen niets wat je zelf niet kunt.</p></div>
+<div class="row"><b>Bewijs</b><p>Vraag een bevestiging per mail en bewaar die.</p></div>
+</div>
+<p class="note">Geen juridisch advies.</p>
+</section>
+<section>
+<p class="eyebrow">Wat anderen eerder meldden</p>
+<div class="rows">
+<div class="row"><b>Radar</b><p>Bij de Postcode Loterij, die dezelfde administratie heeft, kostte telefonisch opzeggen 26 minuten en moest de beller acht keer zeggen te willen stoppen.</p></div>
+<div class="row"><b>Consumentenbond, 2018</b><p>Telefonisch opzeggen bleek lastig, ook bij de VriendenLoterij.</p></div>
+<div class="row"><b>De loterij zelf</b><p>De Postcode Loterij zegt dat opzeggen online, via een gratis nummer en per brief kan.</p></div>
+</div>
+</section>
+<section>
+<p class="eyebrow">Mensen vragen ook</p>
+<div class="rows">
+<div class="row"><b>Kan het online?</b><p>Sloot je online af, dan moet online opzeggen kunnen. Dat volgt uit de wet.</p></div>
+<div class="row"><b>Moet ik betalen?</b><p>Nee. Zeg rechtstreeks op bij de loterij, niet via een betaalde opzegsite.</p></div>
+<div class="row"><b>Hoe lang speel ik nog mee?</b><p>Hooguit een maand na je opzegging.</p></div>
+</div>
+</section>
+<section>
+<p class="eyebrow">Cijfer voor de VriendenLoterij</p>
+<p>Nog geen cijfer. Dat komt bij 10 melders en nadat de loterij 15 dagen kon reageren.</p>
+</section>
+<section>
+<p class="eyebrow">Ook vaak gezocht</p>
+<div class="rows">
+<a class="row link" href="#start"><span>Postcode Loterij opzeggen<span class="sub">22.200 keer per maand</span></span><span aria-hidden="true">→</span></a>
+<a class="row link" href="#start"><span>Staatsloterij opzeggen<span class="sub">2.400 keer per maand</span></span><span aria-hidden="true">→</span></a>
+<a class="row link" href="#start"><span>Videoland opzeggen<span class="sub">18.100 keer per maand</span></span><span aria-hidden="true">→</span></a>
+<a class="row link" href="#voorkant"><span>Alle zaken<span class="sub">Onze dossiers en waar Nederland vastloopt</span></span><span aria-hidden="true">→</span></a>
+</div>
+</section>
+</main>
+<main data-page="opzegmails" hidden>
+<p class="eyebrow">Wij zeggen voor je op · de vier mails</p>
+<h1>Eén tik van jou. De rest doen wij.</h1>
+<p>Voorbeeld met een verzonnen naam. Niets hiervan wordt verstuurd.</p>
+<section>
+<p class="eyebrow">1 · Aan jou, meteen</p>
+<div class="mail">
+<header>
+<p><b>Tik één keer: VriendenLoterij opzeggen</b></p>
+<p>we are many now · opzeggen@wearemany.now</p>
+</header>
+<div class="body">
+<p>Hoi Sanne,</p>
+<p>Tik op de knop. Dan zeggen wij namens jou op bij de VriendenLoterij.</p>
+<p><a class="btn primary" href="#vriendenloterij">Ja, zeg voor mij op</a></p>
+<p>Daarmee machtig je Adsfair B.V. (we are many now) om namens jou op te zeggen bij de VriendenLoterij, je machtiging voor automatische incasso daar in te trekken en daarover met de loterij te mailen tot de opzegging is bevestigd. Niets anders. Intrekken kan altijd, met een antwoord op deze mail.</p>
+<p class="note">Niet jij? Doe niets. Dan gebeurt er niets.</p>
+</div>
+</div>
+</section>
+<section>
+<p class="eyebrow">2 · Aan de loterij, na jouw tik</p>
+<div class="mail">
+<header>
+<p><b>Opzegging deelname VriendenLoterij: Sanne Jansen, 1234 AB 12</b></p>
+<p>Van: Sanne Jansen via we are many now · opzeggen@wearemany.now</p>
+<p>Cc: sanne@voorbeeld.nl · Antwoord aan: zaak-7f3k@wearemany.now</p>
+</header>
+<div class="body">
+<p>Geachte heer, mevrouw,</p>
+<p>Namens Sanne Jansen, 1234 AB 12, zeggen wij de deelname aan de VriendenLoterij op, met alle loten op deze naam, per de eerst mogelijke datum. Vanaf die datum is ook de machtiging voor automatische incasso ingetrokken.</p>
+<p>Sanne Jansen heeft ons hiervoor gemachtigd op 23 november 2026 om 14:02 uur. De machtiging staat onder deze mail. Sanne Jansen leest mee in de cc.</p>
+<p>Wilt u de opzegging binnen 14 dagen bevestigen, met de einddatum? Een antwoord op deze mail is genoeg.</p>
+<p>Met vriendelijke groet,<br>we are many now, namens Sanne Jansen<br>Adsfair B.V., Albert Plesmanplein 20, 2805 AB Gouda</p>
+<p class="note"><b>Machtiging.</b> “Ik, Sanne Jansen, ben zelf de deelnemer en machtig Adsfair B.V. om namens mij op te zeggen bij de VriendenLoterij, mijn machtiging voor automatische incasso daar in te trekken en daarover met de loterij te mailen tot de opzegging is bevestigd.” Bevestigd op 23 november 2026, 14:02 uur, vanaf sanne@voorbeeld.nl. Kenmerk 7F3K.</p>
+</div>
+</div>
+</section>
+<section>
+<p class="eyebrow">3 · Ons antwoord als de loterij iets aanbiedt</p>
+<div class="mail">
+<header>
+<p><b>Re: Opzegging deelname VriendenLoterij: Sanne Jansen, 1234 AB 12</b></p>
+<p>Van: Sanne Jansen via we are many now · Cc: sanne@voorbeeld.nl</p>
+</header>
+<div class="body">
+<p>Geachte heer, mevrouw,</p>
+<p>Dank voor uw bericht. Sanne Jansen blijft bij de opzegging. Uw aanbod hebben wij doorgestuurd. Wij nemen namens Sanne Jansen geen aanbod aan.</p>
+<p>Wilt u de opzegging bevestigen, met de einddatum?</p>
+<p>Met vriendelijke groet,<br>we are many now, namens Sanne Jansen</p>
+</div>
+</div>
+</section>
+<section>
+<p class="eyebrow">4 · Aan jou, als het rond is</p>
+<div class="mail">
+<header>
+<p><b>Opgezegd: de VriendenLoterij stopt op 31 december</b></p>
+<p>we are many now · opzeggen@wearemany.now</p>
+</header>
+<div class="body">
+<p>Hoi Sanne,</p>
+<p><b>Het is rond.</b> De VriendenLoterij bevestigde je opzegging op 26 november. Je speelt mee tot en met 31 december. Daarna mag er niets meer worden afgeschreven.</p>
+<p><a class="btn primary" href="#vriendenloterij">Bekijk de bevestiging</a></p>
+<p>Toch nog een afschrijving? Antwoord op deze mail. Dan gaan wij erachteraan.</p>
+<p class="note">Je naam, adres en de mails wissen wij op 30 januari 2027.</p>
+</div>
+</div>
+</section>
+<section>
+<p class="eyebrow">Wat wij zelf beantwoorden</p>
+<div class="rows">
+<div class="row"><b>Vraag om bewijs</b><p>Wij sturen de machtiging meteen opnieuw, met tijdstip en kenmerk.</p></div>
+<div class="row"><b>Aanbod</b><p>Wij nemen niets aan en sturen het door naar jou.</p></div>
+<div class="row"><b>Geen antwoord</b><p>Dag 7 een herinnering. Dag 14 een brief per post.</p></div>
+<div class="row"><b>Al het andere</b><p>Gaat naar jou, met één vraag. Wij beslissen niets voor jou.</p></div>
+</div>
+</section>
+</main>
+<main data-page="seo" hidden>
+<p class="eyebrow">Vindbaarheid · plan voor de bouw</p>
+<h1>Eén pagina per bedrijf, met de zoekterm voorop.</h1>
+<p>Volgens de lessen van ZICHT. Niets hiervan is live.</p>
+<section>
+<p class="eyebrow">Pagina’s en titels</p>
+<div class="rows">
+<div class="row"><b>/vriendenloterij-opzeggen</b><p>VriendenLoterij opzeggen: zo doe je het, en tel mee als het niet lukt · 33.100 per maand</p></div>
+<div class="row"><b>/postcode-loterij-opzeggen</b><p>Postcode Loterij opzeggen: zo doe je het, en tel mee als het niet lukt · 22.200</p></div>
+<div class="row"><b>/videoland-opzeggen</b><p>Videoland opzeggen: zo doe je het, en tel mee als het niet lukt · 18.100</p></div>
+<div class="row"><b>/flanderijn-incasso</b><p>Brief van Flanderijn gekregen? Dit zijn je rechten, en tel mee · 14.800</p></div>
+<div class="row"><b>/ziggo-opzeggen</b><p>Ziggo opzeggen: zo doe je het, en tel mee als het niet lukt · 9.900</p></div>
+<div class="row"><b>/ns-geld-terug</b><p>NS: geld terug bij vertraging. Niet gekregen? Tel mee · 9.900</p></div>
+<div class="row"><b>/postnl-klacht</b><p>Klacht over PostNL: zo dien je hem in, en tel mee als er geen antwoord komt · 5.400</p></div>
+<div class="row"><b>/kpn-opzeggen</b><p>KPN opzeggen: zo doe je het, en tel mee als het niet lukt · 4.400</p></div>
+<div class="row"><b>/intrum-incasso</b><p>Brief van Intrum gekregen? Dit zijn je rechten, en tel mee · 3.600</p></div>
+<div class="row"><b>/anwb-opzeggen</b><p>ANWB opzeggen: zo doe je het, en tel mee als het niet lukt · 3.600</p></div>
+<div class="row"><b>/blendle · /anp-fotoclaim · /hosters</b><p>De drie dossiers, met bewijs, cijfer en wet.</p></div>
+</div>
+<p class="note">Eén pagina per bedrijf. Varianten als “online opzeggen” en “lot opzeggen” staan op dezelfde pagina, niet op aparte pagina’s.</p>
+</section>
+<section>
+<p class="eyebrow">Op elke pagina</p>
+<div class="rows">
+<div class="row"><b>Antwoord bovenaan</b><p>Het recht in drie zinnen, vóór al het andere.</p></div>
+<div class="row"><b>Eigen cijfers</b><p>Onze zoekdata per maand en het aantal melders. Dat heeft geen andere site.</p></div>
+<div class="row"><b>Datum</b><p>Zichtbaar “bijgewerkt op”, alleen aangepast bij een echte wijziging.</p></div>
+<div class="row"><b>Gewone HTML</b><p>Alle tekst staat in de pagina zelf, niet pas na het laden van scripts.</p></div>
+<div class="row"><b>Vragen van zoekers</b><p>De vragen die mensen echt typen, met een eerlijk antwoord.</p></div>
+<div class="row"><b>Links</b><p>Naar zes pagina’s uit dezelfde groep, twee uit een andere, en de voorkant.</p></div>
+<div class="row"><b>Directe opzeglink</b><p>Rechtstreeks naar het bedrijf zelf, gratis. Elke week automatisch gecontroleerd.</p></div>
+<div class="row"><b>Wij zeggen op</b><p>E-mailadres invullen, één tik in de mail. Wij mailen het bedrijf, volgen de antwoorden en mailen als het rond is.</p></div>
+</div>
+</section>
+<section>
+<p class="eyebrow">Wij zeggen op · zo is het juridisch dicht</p>
+<div class="rows">
+<div class="row"><b>Volmacht</b><p>Eén opdracht per bedrijf, met naam en tijdstip. Art. 3:60 BW.</p></div>
+<div class="row"><b>Bewijs</b><p>De machtiging staat in de mail zelf en de klant staat in de cc. Het bedrijf mag een opzegging door een gemachtigde alleen weigeren als het meteen om bewijs vraagt en dat niet snel krijgt. Art. 3:71 BW.</p></div>
+<div class="row"><b>Aangekomen</b><p>Een opzegging werkt pas als hij het bedrijf bereikt. Wij bewaren verzending en aflevering, herinneren op dag 7 en sturen op dag 14 een brief. Art. 3:37 lid 3 BW.</p></div>
+<div class="row"><b>Echte afzender</b><p>Wij mailen vanaf ons eigen adres, namens de klant. Nooit vanaf het adres van de klant zelf.</p></div>
+<div class="row"><b>Juiste persoon</b><p>Eerst een tik in de eigen mail, en de verklaring “ik ben zelf de deelnemer”. De bevestiging van het bedrijf gaat ook naar de klant.</p></div>
+<div class="row"><b>Geen besluiten</b><p>Wij nemen geen aanbod aan, sluiten niets af en ontvangen geen geld.</p></div>
+<div class="row"><b>Gegevens</b><p>Alleen wat het bedrijf nodig heeft. Weg 30 dagen na afloop. Adsfair B.V. is verantwoordelijk.</p></div>
+<div class="row"><b>Telt mee</b><p>Dagen tot bevestiging per bedrijf tellen mee in het cijfer.</p></div>
+</div>
+<p class="note">Nog te doen voor live: één jurist leest de machtiging en de voorwaarden, en per bedrijf controleren wij het juiste mailadres.</p>
+</section>
+<section>
+<p class="eyebrow">Directe opzeglinks</p>
+<div class="rows">
+<div class="row"><b>Ziggo</b><p>ziggo.nl/opzeggen/formulier · gecontroleerd</p></div>
+<div class="row"><b>KPN</b><p>kpn.com/service/administratie/opzeggen · gecontroleerd</p></div>
+<div class="row"><b>Videoland</b><p>videoland.com/account, onder Abonnement informatie. Alleen via de website, niet via de app.</p></div>
+<div class="row"><b>VriendenLoterij</b><p>vriendenloterij.nl/over-opzeggen-2 · nog controleren</p></div>
+<div class="row"><b>Postcode Loterij</b><p>postcodeloterij.nl/opzeggen · nog controleren</p></div>
+</div>
+</section>
+<section>
+<p class="eyebrow">Techniek</p>
+<div class="rows">
+<div class="row"><b>Zoek- en AI-bots</b><p>Toegelaten in robots.txt, en geen noindex via het gedeelde project.</p></div>
+<div class="row"><b>Sitemap</b><p>Met eerlijke wijzigingsdatum, aangemeld bij Google en Bing.</p></div>
+<div class="row"><b>IndexNow</b><p>Alleen voor nieuwe of gewijzigde pagina’s.</p></div>
+<div class="row"><b>Meten</b><p>De site meldt zich bij ZICHT. De tien pagina’s zijn de proef, de drie dossiers de controle.</p></div>
+</div>
+</section>
+</main>
+<div class="veil" id="veil" hidden>
+<div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-h">
+<h2 id="modal-h">Wil je weten of Blendle betaalt?</h2>
+<p>Eén mail per dag. Alleen als er iets verandert.</p>
+<button class="primary" type="button" data-close>Doorgaan met Google</button>
+<p class="or">of</p>
+<form id="modal-form">
+<input type="email" placeholder="Je e-mail" aria-label="Je e-mail">
+<button type="submit">Houd mij op de hoogte</button>
+</form>
+<p class="note" style="text-align:center">Geen wachtwoord. <a href="#melders" data-close>Nu niet</a></p>
+<p class="note" style="text-align:center">Lerend: vier koppen draaien door elkaar. De kop met de meeste aanmeldingen wint.</p>
+</div>
+</div>
+<main data-page="start" hidden>
+<h1>Tegen welk bedrijf sta jij machteloos?</h1>
+<p>Plak je mail, je afschrift of je verhaal. Of upload een foto of pdf. Wij kijken meteen of je meetelt.</p>
+<form id="start-form" style="margin-top:22px">
+<textarea id="s-what" rows="6" placeholder="Plak hier wat je hebt. Of typ in je eigen woorden wat er gebeurde." aria-label="Plak hier je mail, afschrift of verhaal"></textarea>
+<div class="acts" style="margin-top:12px">
+<label class="btn up"><input id="s-file" type="file" accept="image/*,application/pdf" multiple>Upload een foto of pdf</label>
+<b id="s-files" aria-live="polite"></b>
+</div>
+<div class="live" style="margin:12px 0 0">
+<button type="button" data-fill="Blendle heeft in september weer €99 afgeschreven. Ik kreeg geen mail en gebruik het al jaren niet.">Voorbeeld: afgeschreven</button>
+<button type="button" data-fill="Ik kreeg een brief van ANP over een foto op mijn site. Ik moet €419 betalen binnen 14 dagen.">Voorbeeld: fotoclaim</button>
+<button type="button" data-fill="Ik heb mijn sportschool opgezegd, maar ze verlengen het met een jaar.">Voorbeeld: nieuw bedrijf</button>
+</div>
+<p style="margin-top:16px"><button class="primary big" type="submit">Kijk of ik meetel →</button></p>
+<p class="note">Wij bewaren alleen het bedrijf, het bedrag en de datum. Namen en rekeningnummers halen we eruit. Je bestand gooien we na het lezen weg.</p>
+</form>
+<div id="start-hit" hidden>
+<div class="box on">
+<p><b id="hit-title">Je telt mee bij Blendle.</b></p>
+<p id="hit-read">Wij lazen: Blendle · €99 · september · geen bericht vooraf.</p>
+<p id="hit-count">Je bent melder 38. Jouw €99 telt mee in het totaal.</p>
+<p><a class="btn" id="hit-link" href="#melders" style="background:var(--bg);color:var(--ink)">Bekijk het dossier →</a></p>
+</div>
+</div>
+<div id="start-new" hidden>
+<div class="box">
+<p><b>Over dit bedrijf is nog geen dossier. Jij bent de eerste van 10.</b></p>
+<p>Bij 10 melders maken wij er een compleet dossier van, met tijdlijn, cijfer en juridische paragraaf.</p>
+</div>
+</div>
+<form class="line" id="start-mail" hidden>
+<p style="flex-basis:100%;margin:8px 0 0"><b>Waar mailen we je als het bedrijf beweegt?</b></p>
+<input type="email" placeholder="Je e-mail" aria-label="Je e-mail">
+<button class="primary" type="submit">Houd mij op de hoogte</button>
+<p class="or" style="flex-basis:100%;text-align:left">of <a href="#start" id="start-google">doorgaan met Google</a></p>
+</form>
+<p class="msg" id="start-msg" aria-live="polite"></p>
+<section>
+<p class="eyebrow">Wat wij ermee doen</p>
+<div class="rows">
+<div class="row"><b>1 · Lezen</b><p>De AI haalt het bedrijf, het bedrag en de datum uit wat je plakt of uploadt.</p></div>
+<div class="row"><b>2 · Tellen</b><p>Past het bij een dossier, dan tel je meteen mee.</p></div>
+<div class="row"><b>3 · Bouwen</b><p>Van alle meldingen samen maken wij één zaak voor het bedrijf: cijfers, tijdlijn en wet.</p></div>
+</div>
+</section>
+<section>
+<p class="eyebrow">Meeste melders nu</p>
+<div class="rows">
+<a class="row link" href="#melders"><span>Blendle schrijft jaarlijks af zonder bericht<span class="sub">Dossier · 37 melders · dag 14</span></span><span aria-hidden="true">→</span></a>
+<a class="row link" href="#hosters"><span>Hosters: opgezegd en toch betalen<span class="sub">Dossier · vijf hosters vergeleken</span></span><span aria-hidden="true">→</span></a>
+<a class="row link" href="#anp"><span>ANP vraagt €391 voor één foto<span class="sub">Dossier · wacht sinds 2022 op bewijs</span></span><span aria-hidden="true">→</span></a>
+</div>
+</section>
+</main>
+<main data-page="gesprek" hidden>
+<p class="eyebrow">Blendle (Cafeyn) · het gesprek</p>
+<h1>Eén stem namens 100 mensen. Elke partij heeft een klok.</h1>
+<div class="clocks">
+<div class="ck on"><b>24</b><span>dagen</span><p>Blendle<br>zonder reactie</p></div>
+<div class="ck on"><b>9</b><span>dagen</span><p>ACM<br>zonder reactie</p></div>
+<div class="ck"><b>3</b><span>dagen</span><p>Consumentenbond<br>reageerde</p></div>
+<div class="ck"><b>41</b><span>uur</span><p>Melders<br>om te reageren</p></div>
+</div>
+<section>
+<p class="eyebrow">Ronde 1 · 2 december</p>
+<div class="box">
+<p><b>Aan de Consumentenbond, namens 100 mensen</b></p>
+<p>Blendle schreef bij ons allemaal jaarlijks €99 af zonder enig bericht. Wij vragen terugbetaling en voortaan een bericht vóór elke afschrijving. Blendle reageert al 24 dagen niet. Wilt u Blendle sommeren?</p>
+<p class="note">Eén verhaal, samengesteld uit 100 gecontroleerde meldingen.</p>
+</div>
+</section>
+<section>
+<p class="eyebrow">Ronde 2 · 5 december</p>
+<div class="box on">
+<p><b>Reactie van de Consumentenbond</b></p>
+<p>Hier staat de reactie van de instantie, ongewijzigd.</p>
+<p class="note">Meteen gemaild aan alle 100 melders.</p>
+</div>
+</section>
+<section>
+<p class="eyebrow">Ronde 3 · jullie reactie · nog 41 uur</p>
+<p class="count" style="margin-top:0">64 van de 100 reageerden al.</p>
+<form class="line" id="talk-form">
+<input type="text" placeholder="Wat vind jij van deze reactie?" aria-label="Wat vind jij van deze reactie?" style="flex-basis:100%">
+<button class="primary" type="submit">Stuur mijn reactie →</button>
+</form>
+<p class="msg" id="talk-msg" aria-live="polite"></p>
+<p>Na de deadline maken we van alle reacties één gezamenlijke reactie en sturen die terug. Dan loopt de klok van de instantie weer.</p>
+</section>
+</main>
+<main data-page="dagmail" hidden>
+<p class="eyebrow">De dagelijkse mail</p>
+<div class="mail">
+<header>
+<p style="margin:0"><b>Blendle: dag 15, nog geen oplossing</b></p>
+<p class="note" style="margin:0">we are many now · dinsdag 24 november</p>
+</header>
+<div class="body">
+<p><b>Blendle · dag 15 zonder oplossing</b><br>3 nieuwe melders, nu 37. Nog 13 tot de pers.</p>
+<p><a class="btn primary" href="#melders">Deel dit dossier</a></p>
+<p style="margin-top:22px"><b>ANP · dag 1.490 zonder bewijs</b><br>2 nieuwe melders, nu 7. Bij 10 gaat één verhaal naar de directie.</p>
+<p><a class="btn" href="#anp">Bekijk het dossier</a></p>
+<p style="margin-top:22px"><a href="#start">Start je eigen dossier</a></p>
+<p class="note">Je krijgt deze mail omdat je meetelt in een dossier. <a href="#dagmail">Afmelden</a></p>
+</div>
+</div>
+<p class="note">Alleen dossiers waar die dag iets veranderde staan erin. Verandert er nergens iets, dan komt er geen mail.</p>
+</main>
+<main data-page="advertenties" hidden>
+<p class="eyebrow">Advertentiecampagne · voorstel</p>
+<h1>WAM NL push: start een dossier</h1>
+<div class="rows" style="margin-top:22px">
+<div class="row"><b>Waar</b><p>PropellerAds push, Nederland, alleen mobiel.</p></div>
+<div class="row"><b>Bod</b><p>CPA, start op $0,01. Omhoog alleen bij succes.</p></div>
+<div class="row"><b>Doel</b><p>Een melding met e-mailadres: een nieuw dossier, of “Ik ook”.</p></div>
+<div class="row"><b>Budget</b><p>Hoogstens $10 per dag. Testproject: tien dagen.</p></div>
+<div class="row"><b>Landing</b><p>De pagina “Start een dossier”, via Clickmind, zonder tussenpagina.</p></div>
+<div class="row"><b>Opzet</b><p>Kopie van een lopende Nederlandse pushcampagne, met deze acht advertenties.</p></div>
+</div>
+<section>
+<p class="eyebrow">Acht advertenties, elk een andere ergernis</p>
+<div class="ads">
+<div class="ad"><small>1 · abonnement</small><b>Abonnement dat stil doorloopt?</b><span>Je bent niet de enige. Meld het hier.</span><span class="btn primary">Meld het nu</span></div>
+<div class="ad"><small>2 · afschrijving</small><b>Afgeschreven zonder bericht?</b><span>Zet het erbij. Samen sta je sterker.</span><span class="btn primary">Ik ook</span></div>
+<div class="ad"><small>3 · klantenservice</small><b>Klantenservice neemt niet op?</b><span>Maak er een dossier van. Wij tellen mee.</span><span class="btn primary">Start dossier</span></div>
+<div class="ad"><small>4 · machteloos</small><b>Machteloos tegen een bedrijf?</b><span>Noem het bedrijf. Anderen sluiten aan.</span><span class="btn primary">Zeg het hier</span></div>
+<div class="ad"><small>5 · samen</small><b>Eén klacht wordt genegeerd</b><span>Honderd niet. Tel mee in één tik.</span><span class="btn primary">Tel mij mee</span></div>
+<div class="ad"><small>6 · geld terug</small><b>Wacht je nog op je geld terug?</b><span>Zie wie er nog meer wacht en doe mee.</span><span class="btn primary">Doe mee</span></div>
+<div class="ad"><small>7 · volgen</small><b>Zij zwijgen. Wij tellen.</b><span>Elke dag zie je of het bedrijf beweegt.</span><span class="btn primary">Volg het dossier</span></div>
+<div class="ad"><small>8 · opzeggen</small><b>Opzeggen lukt maar niet?</b><span>Meld het in één tik. Anderen volgen.</span><span class="btn primary">Meld het nu</span></div>
+</div>
+<p class="note">Geen bedrijfsnamen en geen bedragen in de advertenties. De advertentie belooft precies wat de landingspagina vraagt: zeg tegen welk bedrijf je machteloos staat.</p>
+</section>
+</main>
+<main data-page="over" hidden>
+<p class="eyebrow">Achtergrond</p>
+<h1>Een bedrijf is met velen. Jij bent alleen. Dat draaien wij om.</h1>
+<p>Een bedrijf heeft mensen, geld en juristen. Jij hebt één klacht. Die kost het bedrijf niets, dus er gebeurt niets. Honderd dezelfde klachten in één dossier kosten wel iets: klanten, omzet en naam.</p>
+<section>
+<p class="eyebrow">Wat wij doen</p>
+<div class="rows">
+<div class="row"><b>Bundelen</b><p>Iedereen met hetzelfde probleem bij hetzelfde bedrijf telt mee in één dossier.</p></div>
+<div class="row"><b>Bewijzen</b><p>Bedragen, data en brieven. Geen meningen.</p></div>
+<div class="row"><b>Eén stem</b><p>Het bedrijf krijgt één verhaal namens alle melders, en een klok die iedereen ziet.</p></div>
+<div class="row"><b>Vergelijken</b><p>Elk bedrijf staat naast zijn concurrenten. Wie het goed doet, staat bovenaan.</p></div>
+<div class="row"><b>Doen</b><p>Wij zeggen voor je op en volgen het tot het rond is. Gratis.</p></div>
+</div>
+</section>
+<section>
+<p class="eyebrow">Wij tellen daden</p>
+<p>Een miljoen mensen die het ermee eens zijn, is nog geen miljoen mensen die iets doen. Daarom tellen wij wat echt gebeurt: opzeggingen, terugboekingen en geld dat terugkwam.</p>
+</section>
+<section>
+<p class="eyebrow">Onze regels</p>
+<div class="rows">
+<div class="row"><b>Wederhoor</b><p>Elk bedrijf krijgt 15 dagen om te reageren. De reactie komt er ongewijzigd bij.</p></div>
+<div class="row"><b>Terug te verdienen</b><p>Elk punt van het cijfer is terug te verdienen. Opgelost staat even groot bovenaan als het probleem.</p></div>
+<div class="row"><b>Alleen feiten</b><p>Wij tellen wat te controleren is.</p></div>
+<div class="row"><b>Gratis</b><p>Wij verdienen niets aan je klacht of je opzegging.</p></div>
+<div class="row"><b>Weinig gegevens</b><p>Wij bewaren het bedrijf, het bedrag en de datum. Namen en rekeningnummers halen we eruit.</p></div>
+<div class="row"><b>Ook onze macht</b><p>Heeft grenzen. Deze regels staan openbaar en melders kiezen de volgende stap in een dossier.</p></div>
+</div>
+</section>
+<section>
+<p class="eyebrow">Waar het al werkt</p>
+<div class="rows">
+<div class="row"><b>Frankrijk</b><p>Bij SignalConso, het meldpunt van de overheid, antwoordt 85% van de bedrijven. In 2025 kwamen er 460.000 meldingen.</p></div>
+<div class="row"><b>Verenigde Staten</b><p>Bij toezichthouder CFPB heeft een bedrijf 15 dagen om te antwoorden. Daarna staat de klacht openbaar.</p></div>
+<div class="row"><b>Brazilië</b><p>Reclame Aqui geeft elk bedrijf een cijfer: antwoordt het, lost het op, en komt de klant terug?</p></div>
+<div class="row"><b>Duitsland</b><p>Meedoen aan een massaclaim is gratis. Tegen Vodafone sloten 116.000 mensen aan.</p></div>
+</div>
+<p class="note">Wij bouwen dit voor Nederland.</p>
+</section>
+<section>
+<p class="eyebrow">Wie dit maakt</p>
+<p>we are many now is van Adsfair B.V. in Gouda, opgericht door Henkjan de Krijger. Het begon met zijn eigen afschrijving bij Blendle: vier jaar €99, zonder één bericht. De eerste dossiers zijn zijn eigen zaken. Dat zeggen we erbij.</p>
+<div class="rows">
+<a class="row link" href="#pers"><span>Pers en contact<span class="sub">Cijfers, dossiers en één aanspreekpunt</span></span><span aria-hidden="true">→</span></a>
+</div>
+</section>
+</main>
+<main data-page="pers" hidden>
+<p class="eyebrow">Pers</p>
+<h1>Voor journalisten</h1>
+<p><b>In één zin.</b> we are many now bundelt losse klachten over hetzelfde bedrijf tot één dossier met bewijs, een cijfer en één stem.</p>
+<section>
+<p class="eyebrow">Cijfers die je mag gebruiken</p>
+<div class="rows">
+<div class="row"><b>33.100</b><p>Zo vaak per maand zoekt Nederland hoe je de VriendenLoterij opzegt.</p></div>
+<div class="row"><b>175% meer</b><p>Zoveel vaker dan een jaar geleden wordt gezocht op incassobureau Flanderijn: nu 14.800 keer per maand.</p></div>
+<div class="row"><b>9% tegen 86%</b><p>Opgeloste klachten bij Mijndomein en bij Hostnet, op klacht.nl.</p></div>
+<div class="row"><b>3,7 keer</b><p>ANP vroeg €391,29 voor een foto van €105.</p></div>
+</div>
+<p class="note">Bronnen: eigen zoekmeting voor Nederland, november 2026, en klacht.nl, stand 23 november 2026. Graag met bronvermelding: we are many now.</p>
+</section>
+<section>
+<p class="eyebrow">Wat wij kunnen leveren</p>
+<div class="rows">
+<div class="row"><b>Data</b><p>Zoekcijfers en meldingen per bedrijf, met de reeks per maand.</p></div>
+<div class="row"><b>Dossiers</b><p>Tijdlijn, brieven en de juridische paragraaf.</p></div>
+<div class="row"><b>Mensen</b><p>Melders die hun verhaal willen doen. Alleen met hun toestemming.</p></div>
+<div class="row"><b>Wederhoor</b><p>De reactie van het bedrijf, ongewijzigd.</p></div>
+</div>
+</section>
+<section>
+<p class="eyebrow">Naam</p>
+<p>De naam is we are many now: kleine letters, met spaties.</p>
+</section>
+<section>
+<p class="eyebrow">Contact</p>
+<div class="box on">
+<p><b>Henkjan de Krijger</b>, oprichter</p>
+<p><a class="btn" href="https://wearemany.now/#henkjan" style="background:var(--bg);color:var(--ink)">Stuur Henkjan een bericht →</a></p>
+</div>
+<p class="note">Wij zijn in opbouw. De eerste dossiers gaan open na controle door een jurist. <a href="#over">Lees de achtergrond</a>.</p>
+</section>
+</main>
+<footer>© 2026 we are many now · Adsfair B.V. · <a href="#over">Achtergrond</a> · <a href="#pers">Pers</a> · Het bedrijf kan altijd reageren, de reactie komt er ongewijzigd bij.</footer>
+<script>
+(function(){
+var dossierStates=["nu","melders","opgelost","modal"], pages=["start","dagmail","advertenties","gesprek","anp","voorkant","hosters","vriendenloterij","opzegmails","over","pers","seo"];
+function show(){
+var h=(location.hash||"").replace("#","");
+if(dossierStates.indexOf(h)<0&&pages.indexOf(h)<0)h="voorkant";
+var page=pages.indexOf(h)>=0?h:"dossier";
+var st=h==="modal"?"melders":h;
+document.querySelectorAll("[data-page]").forEach(function(el){el.hidden=el.getAttribute("data-page")!==page;});
+document.querySelectorAll("[data-in]").forEach(function(el){
+el.hidden=el.getAttribute("data-in").split(" ").indexOf(st)<0;
+});
+document.getElementById("veil").hidden=(h!=="modal");
+document.querySelectorAll(".designbar a").forEach(function(a){
+if(a.getAttribute("data-state")===h)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");
+});
+window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",show);show();
+var d=Math.floor((new Date()-new Date(2026,10,9))/86400000);
+if(d>=14)document.getElementById("days").textContent=d;
+var ad=Math.floor((new Date()-new Date(2022,9,26))/86400000);
+if(ad>=1489)document.getElementById("anp-days").textContent=ad.toLocaleString("nl-NL");
+var anpMsg=document.getElementById("anp-msg");
+document.getElementById("anp-metoo").addEventListener("click",function(){anpMsg.textContent="Hier opent hetzelfde venster als bij Blendle: “Wil je weten of ANP de claims intrekt?” Eén tik met Google of je e-mail.";});
+document.getElementById("anp-share").addEventListener("click",function(){anpMsg.textContent="Hier opent delen via WhatsApp, X, LinkedIn of een link. Elke keer delen telt mee.";});
+document.getElementById("anp-reply").addEventListener("click",function(e){e.preventDefault();anpMsg.textContent="Hier opent het reactieveld voor ANP. De reactie komt er ongewijzigd bij.";document.getElementById("anp-metoo").scrollIntoView({block:"center"});});
+var actMsg=document.getElementById("act-msg");
+document.getElementById("metoo").addEventListener("click",function(){location.hash="modal";});
+document.getElementById("share").addEventListener("click",function(){actMsg.textContent="Hier opent delen via WhatsApp, X, LinkedIn of een link. Elke keer delen telt mee.";});
+document.getElementById("refund").addEventListener("click",function(){actMsg.textContent="Geteld. (Ontwerp: er wordt nog niets opgeslagen.)";});
+document.querySelectorAll("[data-close]").forEach(function(el){el.addEventListener("click",function(e){e.preventDefault();location.hash="melders";});});
+document.getElementById("modal-form").addEventListener("submit",function(e){e.preventDefault();location.hash="melders";});
+document.querySelectorAll("[data-fill]").forEach(function(b){b.addEventListener("click",function(){var i=document.getElementById("s-what");i.value=b.getAttribute("data-fill");i.focus();});});
+var hit=document.getElementById("start-hit"),nw=document.getElementById("start-new"),sm=document.getElementById("start-mail"),smsg=document.getElementById("start-msg");
+var sfn=[],sfl=document.getElementById("s-files"),sfShow=function(){sfl.textContent=sfn.length?(sfn.length===1?sfn[0]:sfn.length+" bestanden")+" erbij":"";};
+document.getElementById("s-file").addEventListener("change",function(){for(var i=0;i<this.files.length;i++)sfn.push(this.files[i].name);sfShow();});
+document.getElementById("s-what").addEventListener("paste",function(e){var f=e.clipboardData&&e.clipboardData.files;if(f&&f.length){for(var i=0;i<f.length;i++)sfn.push(f[i].name||"afbeelding");sfShow();}});
+document.getElementById("start-form").addEventListener("submit",function(e){e.preventDefault();
+var tx=document.getElementById("s-what").value,t=(tx+" "+sfn.join(" ")).toLowerCase();smsg.textContent="";
+if(!t.trim()){smsg.textContent="Plak je verhaal, upload een bestand of kies een voorbeeld.";return;}
+var m=null;
+if(/blendle/.test(t))m=["Je telt mee bij Blendle.","Wij lazen: Blendle · €99 · september · geen bericht vooraf.","Je bent melder 38. Jouw €99 telt mee in het totaal.","#melders"];
+else if(/anp|visual rights|fotoclaim|foto/.test(t))m=["Je telt mee bij ANP.","Wij lazen: ANP · €419 · brief over één foto · 14 dagen.","Je bent melder 8. Nog 2 tot de brief aan de directie.","#anp"];
+else if(/mijndomein|strato|vimexx|yourhosting|hostnet|hosting|domein/.test(t))m=["Je telt mee bij de hosters.","Wij lazen: een hoster · factuur na opzegging.","Jouw melding telt mee in de vergelijking van vijf hosters.","#hosters"];
+if(!m&&!tx.trim()){hit.hidden=true;nw.hidden=true;sm.hidden=false;smsg.textContent="Ontvangen. Hier leest de AI straks je bestand en zie je of je meetelt. (Ontwerp: er wordt nog niets verstuurd.)";return;}
+hit.hidden=!m;nw.hidden=!!m;sm.hidden=false;
+if(m){document.getElementById("hit-title").textContent=m[0];document.getElementById("hit-read").textContent=m[1];document.getElementById("hit-count").textContent=m[2];document.getElementById("hit-link").setAttribute("href",m[3]);}
+(m?hit:nw).scrollIntoView({block:"center"});
+});
+sm.addEventListener("submit",function(e){e.preventDefault();smsg.textContent="Je staat erop. (Ontwerp: er wordt nog niets verstuurd.)";});
+var vlMsg=document.getElementById("vl-msg"),vlG=function(i){return document.getElementById(i);};
+vlG("vl-go").addEventListener("click",function(){vlG("vl-help").scrollIntoView({block:"start"});vlG("vl-email").focus();});
+vlG("vl-form").addEventListener("submit",function(e){e.preventDefault();
+var m=vlG("vl-email").value.trim();
+if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m)){vlMsg.textContent="Vul je e-mailadres in.";return;}
+vlMsg.textContent="";vlG("vl-next").hidden=true;vlG("vl-form2").hidden=false;vlG("vl-naam").focus();
+});
+vlG("vl-form2").addEventListener("submit",function(e){e.preventDefault();
+if(!vlG("vl-naam").value.trim()||!vlG("vl-adres").value.trim()){vlMsg.textContent="Vul je naam, postcode en huisnummer in.";return;}
+if(!vlG("vl-ok").checked){vlMsg.textContent="Vink de machtiging aan. Zonder mogen wij niet namens jou opzeggen.";return;}
+vlMsg.textContent="";vlG("vl-to").textContent=vlG("vl-email").value.trim();
+vlG("vl-a").hidden=true;vlG("vl-c").hidden=false;vlG("vl-c").scrollIntoView({block:"center"});
+});
+vlG("vl-conf").addEventListener("click",function(){vlG("vl-c").hidden=true;vlG("vl-d").hidden=false;vlG("vl-d").scrollIntoView({block:"start"});});
+vlG("vl-ja").addEventListener("click",function(){vlG("vl-msg2").textContent="Mooi. Geteld als gelukt. (Ontwerp: er wordt nog niets opgeslagen.)";});
+vlG("vl-nee").addEventListener("click",function(){location.hash="start";});
+var hmsg=document.getElementById("host-msg");
+document.getElementById("host-metoo").addEventListener("click",function(){location.hash="start";});
+document.getElementById("host-share").addEventListener("click",function(){hmsg.textContent="Hier opent delen via WhatsApp, X, LinkedIn of een link. Elke keer delen telt mee.";});
+document.getElementById("host-switch").addEventListener("click",function(e){e.preventDefault();hmsg.textContent="Hier opent de overstaphulp: verhuiscode opvragen en je domein verhuizen. Elke overstap wordt geteld.";document.getElementById("host-metoo").scrollIntoView({block:"center"});});
+document.getElementById("host-reply").addEventListener("click",function(e){e.preventDefault();hmsg.textContent="Hier opent het reactieveld voor de hoster. De reactie komt er ongewijzigd bij.";document.getElementById("host-metoo").scrollIntoView({block:"center"});});
+document.getElementById("talk-form").addEventListener("submit",function(e){e.preventDefault();document.getElementById("talk-msg").textContent="Je reactie telt mee in de gezamenlijke reactie. (Ontwerp: er wordt nog niets verstuurd.)";});
+document.getElementById("start-google").addEventListener("click",function(e){e.preventDefault();document.getElementById("start-msg").textContent="Hier opent de Google-knop: één tik, geen wachtwoord.";});
+})();
+</script>
+</body>
+</html>

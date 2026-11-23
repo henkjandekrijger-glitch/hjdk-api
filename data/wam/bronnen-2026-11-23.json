@@ -1,0 +1,394 @@
+{
+  "titel": "we are many now: bronnen bij bedrijven en directie",
+  "geraadpleegd": "2026-11-23",
+  "methode": "Cijfers uit geopende bronweergaven; de zoekindex toont soms recentere aantallen. Gebruik de geopende snapshot consequent. Geen representatieve steekproef; Klacht.nl toont registratiestatussen, niet alle afhandelingen. Geen gemiddelden over verschillende platforms, profielen of landen. Geen rechtstreeks Handelsregister-uittreksel gekocht of geraadpleegd. Functie of groepsleiding is geen vaststelling van persoonlijke betrokkenheid of aansprakelijkheid.",
+  "bedrijven": [
+    {
+      "id": "vriendenloterij",
+      "naam": "VriendenLoterij",
+      "titel": "VriendenLoterij opzeggen",
+      "naar": "#vriendenloterij",
+      "zoeken": 33100,
+      "score": 1.1,
+      "reviews": 1188,
+      "profiel": "vriendenloterij.nl",
+      "url": "https://nl.trustpilot.com/review/vriendenloterij.nl",
+      "ref": "turn487475873view0",
+      "klacht": {
+        "totaal": 2471,
+        "opgelost": 68,
+        "laatste12maanden": 20,
+        "bijgewerkt": "2026-11-03",
+        "url": "https://www.klacht.nl/Vriendenloterij/"
+      }
+    },
+    {
+      "id": "postcodeloterij",
+      "naam": "Postcode Loterij",
+      "titel": "Postcode Loterij opzeggen",
+      "naar": "#start",
+      "zoeken": 22200,
+      "score": 1.2,
+      "reviews": 1069,
+      "profiel": "postcodeloterij.nl",
+      "url": "https://nl.trustpilot.com/review/postcodeloterij.nl",
+      "ref": "turn487475873view1",
+      "klacht": {
+        "totaal": 6064,
+        "opgelost": 79,
+        "laatste12maanden": 8,
+        "bijgewerkt": "2026-11-10",
+        "url": "https://www.klacht.nl/postcode-loterij/"
+      }
+    },
+    {
+      "id": "videoland",
+      "naam": "Videoland",
+      "titel": "Videoland opzeggen",
+      "naar": "#start",
+      "zoeken": 18100,
+      "score": 1.3,
+      "reviews": 908,
+      "profiel": "videoland.com",
+      "url": "https://nl.trustpilot.com/review/videoland.com",
+      "ref": "turn487475873view2",
+      "klacht": {
+        "totaal": 1438,
+        "opgelost": 56,
+        "laatste12maanden": 8,
+        "bijgewerkt": "2026-11-06",
+        "url": "https://www.klacht.nl/videoland/"
+      }
+    },
+    {
+      "id": "flanderijn",
+      "naam": "Flanderijn",
+      "titel": "Brief van Flanderijn",
+      "naar": "#start",
+      "zoeken": 14800,
+      "score": 4.2,
+      "reviews": 721,
+      "profiel": "flanderijn.nl",
+      "url": "https://nl.trustpilot.com/review/flanderijn.nl",
+      "ref": "turn487475873view3"
+    },
+    {
+      "id": "ziggo",
+      "naam": "Ziggo",
+      "titel": "Ziggo opzeggen",
+      "naar": "#start",
+      "zoeken": 9900,
+      "score": 1.4,
+      "reviews": 10214,
+      "profiel": "www.ziggo.nl",
+      "url": "https://nl.trustpilot.com/review/www.ziggo.nl",
+      "ref": "turn487475873view4",
+      "klacht": {
+        "totaal": 8394,
+        "opgelost": 14,
+        "laatste12maanden": 203,
+        "bijgewerkt": "2026-11-23",
+        "url": "https://www.klacht.nl/Ziggo/"
+      }
+    },
+    {
+      "id": "ns",
+      "naam": "NS",
+      "titel": "NS: geld terug bij vertraging",
+      "naar": "#start",
+      "zoeken": 9900,
+      "score": 1.3,
+      "reviews": 3447,
+      "profiel": "www.ns.nl",
+      "url": "https://nl.trustpilot.com/review/www.ns.nl",
+      "ref": "turn487475873view5",
+      "klacht": {
+        "totaal": 8789,
+        "opgelost": 6736,
+        "laatste12maanden": 136,
+        "bijgewerkt": "2026-11-11",
+        "url": "https://www.klacht.nl/ns/"
+      }
+    },
+    {
+      "id": "postnl",
+      "naam": "PostNL",
+      "titel": "Klacht over PostNL",
+      "naar": "#start",
+      "zoeken": 5400,
+      "klacht": {
+        "totaal": 27515,
+        "opgelost": 21700,
+        "laatste12maanden": 1240,
+        "bijgewerkt": "2026-11-23",
+        "url": "https://www.klacht.nl/postnl/"
+      },
+      "ref": "turn501487352view6",
+      "scope": "Nederlandse klachtpagina. Trustpilot-profielen voor post.nl, postnl.com en Extra@Home niet als één cijfer samengevoegd."
+    },
+    {
+      "id": "kpn",
+      "naam": "KPN",
+      "titel": "KPN opzeggen",
+      "naar": "#start",
+      "zoeken": 4400,
+      "score": 1.4,
+      "reviews": 8249,
+      "profiel": "www.kpn.com",
+      "url": "https://nl.trustpilot.com/review/www.kpn.com",
+      "ref": "turn487475873view7",
+      "klacht": {
+        "totaal": 3934,
+        "laatste12maanden": 133,
+        "bijgewerkt": "2026-10-27",
+        "url": "https://www.klacht.nl/kpn/"
+      }
+    },
+    {
+      "id": "intrum",
+      "naam": "Intrum",
+      "titel": "Brief van Intrum",
+      "naar": "#start",
+      "zoeken": 3600,
+      "score": 1.1,
+      "reviews": 180,
+      "profiel": "intrum.nl",
+      "url": "https://nl.trustpilot.com/review/intrum.nl",
+      "ref": "turn487475873view8",
+      "scope": "Nederlands Trustpilot-profiel intrum.nl. Afwijkende totalen in de zoekindex en bronweergave van Klacht.nl niet overgenomen."
+    },
+    {
+      "id": "anwb",
+      "naam": "ANWB",
+      "titel": "ANWB opzeggen",
+      "naar": "#start",
+      "zoeken": 3600,
+      "score": 4.2,
+      "reviews": 9116,
+      "profiel": "www.anwb.nl",
+      "url": "https://nl.trustpilot.com/review/www.anwb.nl",
+      "ref": "turn487475873view9",
+      "klacht": {
+        "totaal": 3577,
+        "opgelost": 275,
+        "laatste12maanden": 30,
+        "bijgewerkt": "2026-10-12",
+        "url": "https://www.klacht.nl/ANWB/"
+      }
+    }
+  ],
+  "personen": [
+    {
+      "bedrijf": "Blendle",
+      "naam": "Laurent Kayser",
+      "functie": "Wettelijk vertegenwoordiger en publicatiedirecteur volgens Blendle; CEO Cafeyn",
+      "sinds": "2023-10-07",
+      "sinds_scope": "CEO Cafeyn. Startdatum vertegenwoordiging Blendle niet vermeld.",
+      "status": "eigen juridische pagina en groepsbericht",
+      "bronnen": [
+        {
+          "url": "https://www.blendle.com/nl/terms",
+          "ref": "turn891521482view0"
+        },
+        {
+          "url": "https://communities.cafeyn.co/press/structuration-cafeyn",
+          "datum": "2023-12-19",
+          "ref": "turn650402853view4"
+        }
+      ]
+    },
+    {
+      "bedrijf": "ANP",
+      "naam": "Martha Riemsma",
+      "functie": "Algemeen directeur",
+      "sinds": "2024-10",
+      "sinds_scope": "Half oktober 2024 volgens benoemingsbericht.",
+      "status": "bevestigd in eigen ingezonden brief april 2026 en RPO-interview",
+      "bronnen": [
+        {
+          "url": "https://www.villamedia.nl/artikel/martha-riemsma-is-de-nieuwe-directeur-van-het-anp",
+          "datum": "2024-09-11",
+          "ref": "turn665257332view1"
+        },
+        {
+          "url": "https://www.stichtingrpo.nl/5-vragen-aan-martha-riemsma-directeur-bij-anp-en-voorzitter-van-bestuur-de-tegel/",
+          "datum": "2026-01-20",
+          "ref": "turn932125081view5"
+        },
+        {
+          "url": "https://www.villamedia.nl/artikel/ingezonden-anp-staat-voor-een-proportionele-redelijke-en-eerlijke-aanpak-van-onrechtmatig-gebruik-van-fotos",
+          "datum": "2026-04-17",
+          "ref": "turn650402853view6"
+        }
+      ]
+    },
+    {
+      "bedrijf": "ANP Fair Licensing",
+      "naam": "Robbert Buitenhuis",
+      "functie": "Head of International Photo Sales & Infringements volgens publicatie 3 juli 2026",
+      "sinds": null,
+      "status": "actuele functie en startdatum nog door ANP of register te bevestigen; alleen gedateerde vermelding tonen",
+      "bronnen": [
+        {
+          "url": "https://feitenradar.nl/2026/07/03/na-media-aandacht-trekt-anp-opnieuw-fotoclaim-tegen-hengelose-ijsclub-in/",
+          "datum": "2026-07-03",
+          "ref": "turn665257332search8"
+        }
+      ]
+    },
+    {
+      "bedrijf": "Mijndomein",
+      "naam": "Dion Goudkuil",
+      "functie": "CEO",
+      "sinds": null,
+      "status": "eigen bedrijfsinterview 22 oktober 2026 bevestigt functie, benoemingsdatum niet vermeld",
+      "bronnen": [
+        {
+          "url": "https://nieuws.mijndomein.nl/over-mijndomein/veiligheid-boven-beschikbaarheid/",
+          "datum": "2026-10-22",
+          "ref": "turn932125081view0"
+        }
+      ]
+    },
+    {
+      "bedrijf": "STRATO GmbH",
+      "naam": "Jens Reich",
+      "functie": "Directeur",
+      "sinds": "2025-09",
+      "status": "eigen imprint en managementpagina",
+      "bronnen": [
+        {
+          "url": "https://www.strato.nl/imprint/",
+          "ref": "turn665257332view2"
+        },
+        {
+          "url": "https://www.strato.nl/over-ons/",
+          "ref": "turn650402853view3"
+        }
+      ]
+    },
+    {
+      "bedrijf": "STRATO GmbH",
+      "naam": "Hüseyin Dogan",
+      "functie": "Directie, operationele taken",
+      "sinds": "2018",
+      "status": "eigen imprint en managementpagina",
+      "bronnen": [
+        {
+          "url": "https://www.strato.nl/imprint/"
+        },
+        {
+          "url": "https://www.strato.nl/over-ons/"
+        }
+      ]
+    },
+    {
+      "bedrijf": "STRATO GmbH",
+      "naam": "Markus Leander Noga",
+      "functie": "Directie, technologie",
+      "sinds": "2023-04",
+      "status": "eigen imprint en managementpagina",
+      "bronnen": [
+        {
+          "url": "https://www.strato.nl/imprint/"
+        },
+        {
+          "url": "https://www.strato.nl/over-ons/"
+        }
+      ]
+    },
+    {
+      "bedrijf": "STRATO GmbH",
+      "naam": "Patrik Heider",
+      "functie": "Directie, financiën en juridische zaken",
+      "sinds": "2026-01",
+      "status": "eigen imprint en managementpagina",
+      "bronnen": [
+        {
+          "url": "https://www.strato.nl/imprint/"
+        },
+        {
+          "url": "https://www.strato.nl/over-ons/"
+        }
+      ]
+    },
+    {
+      "bedrijf": "Yourhosting",
+      "naam": "Wouter Stoutjesdijk",
+      "functie": "CEO",
+      "sinds": "2025",
+      "sinds_scope": "Begin 2025 volgens eigen startbericht en kick-off; exacte ingangsdag niet vastgesteld.",
+      "status": "benoeming door moederbedrijf, bevestigd in klantcase 2026",
+      "bronnen": [
+        {
+          "url": "https://www.linkedin.com/posts/youronline_koen-van-deudekom-promoted-to-general-manager-activity-7273260362043375616-lIdJ",
+          "ref": "turn932125081view2"
+        },
+        {
+          "url": "https://nl.linkedin.com/posts/wouter-stoutjesdijk_deze-week-begon-ik-als-nieuwe-ceo-van-yourhosting-activity-7280968412770578432-HWUo",
+          "ref": "turn733983613search8"
+        },
+        {
+          "url": "https://www.storyflow.be/stories/yourhosting",
+          "datum": "2026",
+          "ref": "turn932125081view3"
+        }
+      ]
+    },
+    {
+      "bedrijf": "Vimexx / team.blue",
+      "naam": "Claudio Corbetta",
+      "functie": "Group CEO team.blue",
+      "sinds": null,
+      "status": "huidige groepsfunctie op eigen site; geen claim dat hij statutair bestuurder van Vimexx B.V. is",
+      "bronnen": [
+        {
+          "url": "https://team.blue/leadership/claudio/",
+          "ref": "turn321979200view1"
+        },
+        {
+          "url": "https://hub.team.blue/brand/vimexx?hsLang=en",
+          "ref": "turn295993811search0"
+        }
+      ]
+    },
+    {
+      "bedrijf": "Vimexx",
+      "naam": "Tom Denkers",
+      "functie": "Directeur volgens interview 6 augustus 2024",
+      "sinds": null,
+      "status": "historisch; actuele directiefunctie niet bevestigd; alleen onder meer als gedateerde vermelding",
+      "bronnen": [
+        {
+          "url": "https://www.bit.nl/referenties/vimexx/",
+          "datum": "2024-08-06",
+          "ref": "turn932125081view4"
+        }
+      ]
+    },
+    {
+      "bedrijf": "Hostnet",
+      "naam": "René Oldenbeuving",
+      "functie": "Directeur",
+      "sinds": "2021",
+      "status": "Company.info vermeldt R. Oldenbeuving, directeur vanaf 2021, KVK-brondatum 29 september 2026; interview april 2026 geeft volledige naam",
+      "bronnen": [
+        {
+          "url": "https://companyinfo.nl/organisatieprofiel/inrichten-van-computerinfrastructuur-gegevensverwerking-hosting-en-aanverwante-activiteiten/hostnet-b-v-amsterdam-34130993-000013828851",
+          "datum": "2026-09-29",
+          "ref": "turn321979200view0"
+        },
+        {
+          "url": "https://www.emerce.nl/interviews/klanten-gewoon-helpt",
+          "datum": "2026-04-21",
+          "ref": "turn125667119search0"
+        }
+      ]
+    }
+  ],
+  "open": [
+    "Vimexx: actuele lokale/statutaire directie bevestigen.",
+    "ANP Fair Licensing: actuele functie Robbert Buitenhuis en benoemingsdatum bevestigen.",
+    "Benoemingsdatum Dion Goudkuil en ingangsdatum van de wettelijke vertegenwoordiging van Blendle nog niet gevonden."
+  ]
+}
