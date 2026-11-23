@@ -150,8 +150,8 @@ Rapport:
 
 ## 7. De leerlus: elke dag meten, het grootste lek eerst
 
-### Correctie ter beoordeling, nog niet live (23 nov 2026)
-Het rapport van 23 nov over 22 nov bevat 7 geregistreerde pagina-openingen op Stocking Books, 13 op Lasting Change en 208 ruwe Amazonredirects. Dit zijn verschillende metingen, geen unieke personen of bewezen verkopen. De hoofdknoppen voor de LC-paperback omzeilen de /go-meting; alleen onder meer omslag en vaste balk gebruiken hem. Het concept herstelt die hoofdknoppen, splitst Amazonverzoeken per site, noemt hun ruwe aard, en verwijdert het ongeldige percentage dat verzoeken van beide sites door alleen Stocking Books-openingen deelt. Zonder koppeling per pagina en klik blijft de inhoudelijke conversie onbekend.
+### Meetcorrectie goedgekeurd op 23 nov 2026
+Het rapport van 23 nov over 22 nov bevat 7 geregistreerde pagina-openingen op Stocking Books, 13 op Lasting Change en 208 ruwe Amazonredirects. Dit zijn verschillende metingen, geen unieke personen of bewezen verkopen. De hoofdknoppen voor de LC-paperback omzeilen de /go-meting; alleen onder meer omslag en vaste balk gebruiken hem. Deze versie herstelt die hoofdknoppen, splitst Amazonverzoeken per site, noemt hun ruwe aard, en verwijdert het ongeldige percentage dat verzoeken van beide sites door alleen Stocking Books-openingen deelt. Zonder koppeling per pagina en klik blijft de inhoudelijke conversie onbekend.
 
 Controle bij akkoord: paperbackknoppen op home, gidsen en artikel gebruiken /go met site lc en bron; de test dekt PDF aan/uit en het beschermde voorbeeld. Geen menselijke unieke conversie of verkoop afleiden uit deze route alleen. Binnen 24 uur na live controle van bron- en siteverdeling, daarna dagelijks. Volgende stap is koppeling van klik aan pagina/browseractie; pas daarna inhoudsproef met controlegroep en oordeel na 14 tot 21 dagen. Geen betaalinstellingen, advertenties of campagnes aangepast.
 
@@ -240,6 +240,8 @@ Plak dit als eerste bericht:
 "Lees eerst de overdracht content en distributie: https://hjdk-api-henq.vercel.app/api/bs?op=content (Vercel-tool web_fetch_vercel_url) en de repo henkjandekrijger-glitch/hjdk-api (OVERDRACHT-CONTENT.md, CLAUDE.md). Jij doet vanaf nu alleen content en distributie voor stockingbooks.com, lastingchange.works en Pinterest, met de dagelijkse leerlus uit hoofdstuk 7 en de strategie uit hoofdstuk 7b. Maak de twee geplande taken uit hoofdstuk 6 opnieuw aan in dit account. Begin met het grootste lek uit het rapport van vandaag en laat me alles eerst zien voor het live gaat."
 
 ## Logboek (nieuwste bovenaan)
+
+- 2026-11-23, content-Codex: Henkjan geeft akkoord om door te werken. Meetcorrectie klaar voor uitrol: alle 14 bestaande/uitgebreide paginatests en 3 rapporttests slagen, inclusief LC-chat. Offline is alleen het ongebruikte Redis-clientimport vervangen door een blokkade die faalt bij aanroep; echte rendercode en rapportlogica getest. Productiecontrole volgt na deploy. Artikel blijft concept; bronverwijzingen en eigen startplan worden als verbeterde versie eerst getoond.
 
 - 2026-11-23, content-Codex: twee taken opnieuw aangemaakt met eerst-zien en de dagelijkse leerlus. Oude taken niet bereikbaar, dus uitzetten nog open. Meetlek onderzocht: LC-hoofdknoppen buiten /go en gemengde Amazonteller; correctie met regressiecontroles op aparte reviewbranch voorbereid, niet op main gezet. Bestaand artikel how-to-stop-procrastinating blijft concept. PDF en kopersmail blijven geblokkeerd door ontbrekende instellingen.
 

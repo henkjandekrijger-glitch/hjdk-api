@@ -1,6 +1,6 @@
 # Voorstel content en distributie, 23 november 2026
 
-Dit voorstel staat los van de live websites. Publicatie wacht op Henkjans akkoord.
+Dit voorstel is op 23 november door Henkjan goedgekeurd. De meetcorrectie wordt uitgerold; de aangescherpte artikelversie wordt afzonderlijk als concept getoond.
 
 ## Eerste lek: de leerlus mist de belangrijkste LC-paperbackklikken
 
@@ -24,7 +24,7 @@ De teksten, prijzen en PDF-betaaltoegang veranderen niet. De PDF-route blijft ge
 
 De regressies dekken de paperbackroute met PDF aan en uit, op de publieke site en in het beschermde voorbeeld. De rapporttests voorkomen dat de genoemde 208 redirects als unieke kliks of als aangetoonde groei worden weergegeven, en dat LC-verzoeken een Stocking Books-lek bepalen.
 
-Uitgevoerd: drie rapporttests en dertien pagina-/linktests geslaagd. Eén bestaande coach-chattest niet uitgevoerd: de lokale bronmomentopname bevat niet alle chatdependencies. De volledige verplichte suite moet in de complete repo slagen vóór een eventuele push naar main.
+Uitgevoerd: alle veertien pagina-/linktests, inclusief de coach-chat, en drie rapporttests geslaagd. De lokale bronmomentopname is aangevuld met de echte chatdependencies. Omdat redis lokaal niet geïnstalleerd is, blokkeert een tijdelijke testloader uitsluitend de Redis-clientimport; elke clientaanroep zou de test laten falen. De echte rendercode en rapportlogica draaien volledig. Er zijn geen database- of betaaltransacties uitgevoerd. Productie wordt na uitrol aanvullend gecontroleerd.
 
 Na akkoord en uitrol: controle van site en bron binnen 24 uur. Daarna volgt de koppeling per pagina/browseractie, zodat een inhoudelijke proef een bruikbare teller en noemer krijgt. Deze correctie is meetherstel; er is nog geen verkoopeffect aangetoond. Een daaropvolgende inhoudsproef krijgt een controle en beoordeling na 14 tot 21 dagen.
 
