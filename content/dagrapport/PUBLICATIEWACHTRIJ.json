@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-23T20:05:14.794Z",
+  "updated_at_utc": "2026-11-23T23:39:37.521Z",
   "authorization": {
     "approved_at_utc": "2026-11-23T20:05:14.794Z",
     "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
@@ -113,7 +113,15 @@
         "post": "6b04967fd511266d6a856c13",
         "t": "2026-11-23T19:39:57.187Z"
       },
-      "requires_new_approval": false
+      "requires_new_approval": false,
+      "provider_confirmation": {
+        "provider_post_id": "6b04967fd511266d6a856c13",
+        "pin_url": "https://www.pinterest.com/pin/271060471319684942/",
+        "kind": "we-onder10",
+        "status_in_zernio": "Published",
+        "published_label": "Nov 23, 7:39 PM UTC",
+        "profile_in_zernio": "Kadoly"
+      }
     },
     {
       "id": "20261123-we-ideeen-t9jt",
@@ -138,7 +146,15 @@
         "post": "6b04967b5d67d2299ad22eb9",
         "t": "2026-11-23T19:39:56.079Z"
       },
-      "requires_new_approval": false
+      "requires_new_approval": false,
+      "provider_confirmation": {
+        "provider_post_id": "6b04967b5d67d2299ad22eb9",
+        "pin_url": "https://www.pinterest.com/pin/271060471319684940/",
+        "kind": "we-ideeen",
+        "status_in_zernio": "Published",
+        "published_label": "Nov 23, 7:39 PM UTC",
+        "profile_in_zernio": "Kadoly"
+      }
     }
   ],
   "publication_rules": [
@@ -165,8 +181,53 @@
   "execution": {
     "attempted_publications_today": [],
     "confirmed_new_posts_this_instruction": [],
-    "provider_access": "Zernio niet beschikbaar in huidige toolinventaris; pluginzoekactie vond uitsluitend de beschikbare Metricool-plugin. Reposearch vond gebruik via externe Zernio-connector, geen bestaande eigen publicatieproxy.",
+    "provider_access": "Bestaande ingelogde Zernio-browser in Chrome bevestigd. Interactieve controle van Kadoly-posts werkt; cloud-MCP-tool blijft niet beschikbaar. Browserlogin niet opnieuw als ontbrekend melden. Geen sleutels uitgelezen of aangemaakt.",
     "next_existing_round": "2026-11-24T15:37:00-04:00",
     "next_action": "Lees deze wachtrij eerst en voer de goedgekeurde pins uit zodra Zernio en resterende gedeelde dagruimte beschikbaar zijn; geen nieuwe publicatietoestemming vragen."
-  }
+  },
+  "access_observations": [
+    {
+      "observed_at_utc": "2026-11-23T23:39:37.521Z",
+      "user_request": "Ok geef me link dan log ik in en kan je gaan .",
+      "source": "Zernio-dashboard in bestaande ingelogde Chrome-sessie, rechtstreeks via zichtbare gebruikersinterface",
+      "url": "https://zernio.com/dashboard/posts-all",
+      "authenticated": true,
+      "provider_published_confirmations": [
+        {
+          "provider_post_id": "6b049681d511266d6a856c28",
+          "pin_url": "https://www.pinterest.com/pin/271060471319684943/",
+          "kind": "lc-jaar",
+          "status_in_zernio": "Published",
+          "published_label": "Nov 23, 7:39 PM UTC",
+          "profile_in_zernio": "Kadoly"
+        },
+        {
+          "provider_post_id": "6b04967fd511266d6a856c13",
+          "pin_url": "https://www.pinterest.com/pin/271060471319684942/",
+          "kind": "we-onder10",
+          "status_in_zernio": "Published",
+          "published_label": "Nov 23, 7:39 PM UTC",
+          "profile_in_zernio": "Kadoly"
+        },
+        {
+          "provider_post_id": "6b04967b5d67d2299ad22eb9",
+          "pin_url": "https://www.pinterest.com/pin/271060471319684940/",
+          "kind": "we-ideeen",
+          "status_in_zernio": "Published",
+          "published_label": "Nov 23, 7:39 PM UTC",
+          "profile_in_zernio": "Kadoly"
+        },
+        {
+          "provider_post_id": "6b049678d511266d6a856bec",
+          "pin_url": "https://www.pinterest.com/pin/271060471319684937/",
+          "kind": "sok-puzzel",
+          "status_in_zernio": "Published",
+          "published_label": "Nov 23, 7:39 PM UTC",
+          "profile_in_zernio": "Kadoly"
+        }
+      ],
+      "limitation": "Dit bevestigt interactieve browsertoegang en vier publicatiestatussen. Het herstelt niet automatisch de ontbrekende cloud-MCP-koppeling. Providerplanning en accountgezondheid niet volledig onderzocht.",
+      "new_posts_created": []
+    }
+  ]
 }
