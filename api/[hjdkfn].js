@@ -19,6 +19,7 @@ const FN = {
   "keuze-leerlus": () => import('../fn/keuze-leerlus.js'),
   "keuze-tools": () => import('../fn/keuze-tools.js'),
   "keuze-updates": () => import('../fn/keuze-updates.js'),
+  "keuze-voorkant": () => import('../fn/keuze-voorkant.js'),
   kz: () => import('../fn/kz.js'),
   kzmaak: () => import('../fn/kzmaak.js'),
   kzmcp: () => import('../fn/kzmcp.js'),
