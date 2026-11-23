@@ -331,5 +331,32 @@
     "Geen mainpush of websitebuild.",
     "Geen advertenties, campagnes, budgetten, betaalinstellingen, DNS of rechten gewijzigd.",
     "Geen Telegram, outreach, gatewaycontent of betaalde Radar-aanroep."
+  ],
+  "additions": [
+    {
+      "observed_at_utc": "2026-11-23T20:05:14.794Z",
+      "type": "user_publication_approval_and_traffic_priority",
+      "authorization": {
+        "approved_at_utc": "2026-11-23T20:05:14.794Z",
+        "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
+        "interpretation": "Akkoord voor publicatie van de vier reeds getoonde pinconcepten binnen de bestaande gezamenlijke limiet. Optimaliseren op verkeer. Geen nieuwe verhoging van de daglimiet, geen toestemming voor ongeziene nieuwe inhoud of advertenties.",
+        "reviewed_batch": "https://github.com/henkjandekrijger-glitch/hjdk-api/blob/codex/content-dagboek/content/dagrapport/2026-11-23-pinterest-concepten.md",
+        "reviewed_commit": "2a2a2303495baaad6fe2a2f7cf9c3ccef9614e88",
+        "scope": "Uitsluitend de getoonde beelden, titels, beschrijvingen, borden en bestemmingen. De oude merknaam in drie getoonde referentiebeelden is op zichzelf geen ontbrekend publicatieakkoord.",
+        "repeat_approval_required": false
+      },
+      "queue_path": "content/dagrapport/PUBLICATIEWACHTRIJ.json",
+      "remaining_capacity_today": 0,
+      "approved_pending": [
+        "20261123-sok-puzzel-1j5t",
+        "20261123-sok-hem-j7cy"
+      ],
+      "duplicates_skipped": [
+        "20261123-we-onder10-fxb1",
+        "20261123-we-ideeen-t9jt"
+      ],
+      "new_publications": [],
+      "limitation": "Publicatie vandaag geblokkeerd door opgebruikte gedeelde limiet; Zernio-tool momenteel niet beschikbaar. Akkoord zelf is geen blokkade meer."
+    }
   ]
 }

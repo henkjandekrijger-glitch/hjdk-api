@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "updated_at_utc": "2026-11-23T20:05:14.794Z",
+  "authorization": {
+    "approved_at_utc": "2026-11-23T20:05:14.794Z",
+    "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
+    "interpretation": "Akkoord voor publicatie van de vier reeds getoonde pinconcepten binnen de bestaande gezamenlijke limiet. Optimaliseren op verkeer. Geen nieuwe verhoging van de daglimiet, geen toestemming voor ongeziene nieuwe inhoud of advertenties.",
+    "reviewed_batch": "https://github.com/henkjandekrijger-glitch/hjdk-api/blob/codex/content-dagboek/content/dagrapport/2026-11-23-pinterest-concepten.md",
+    "reviewed_commit": "2a2a2303495baaad6fe2a2f7cf9c3ccef9614e88",
+    "scope": "Uitsluitend de getoonde beelden, titels, beschrijvingen, borden en bestemmingen. De oude merknaam in drie getoonde referentiebeelden is op zichzelf geen ontbrekend publicatieakkoord.",
+    "repeat_approval_required": false
+  },
+  "account": "6afb8a5d86e8bb18f844fc95",
+  "account_name": "kadolyshop",
+  "capacity": {
+    "source": "https://hjdk-api-henq.vercel.app/api/shop?op=socoverdracht",
+    "kind": "agreed_initial_operating_limit_not_pinterest_platform_limit",
+    "max_daily_pins_shared_account": 3,
+    "checked_date": "2026-11-23",
+    "registered_book_posts_today": [
+      {
+        "id": "20261123-sok-puzzel-prd9",
+        "haak": "sok-puzzel",
+        "a": "B0DN65PRD9",
+        "post": "6b049678d511266d6a856bec",
+        "t": "2026-11-23T19:39:54.871Z"
+      },
+      {
+        "id": "20261123-we-ideeen-t9jt",
+        "haak": "we-ideeen",
+        "a": "B0DNB1T9JT",
+        "post": "6b04967b5d67d2299ad22eb9",
+        "t": "2026-11-23T19:39:56.079Z"
+      },
+      {
+        "id": "20261123-we-onder10-fxb1",
+        "haak": "we-onder10",
+        "a": "B0DP42FXB1",
+        "post": "6b04967fd511266d6a856c13",
+        "t": "2026-11-23T19:39:57.187Z"
+      },
+      {
+        "id": "20261123-lc-jaar-1l5j",
+        "haak": "lc-jaar",
+        "a": "B0F1SM1L5J",
+        "post": "6b049681d511266d6a856c28",
+        "t": "2026-11-23T19:39:58.268Z"
+      }
+    ],
+    "remaining_capacity_today": 0,
+    "provider_schedule_verified": false,
+    "reason": "Vier registraties staan al in het boekenlog; dit is meer dan het afgesproken gezamenlijke plafond. Geen extra capaciteit aannemen uit ontbrekende providerbevestiging."
+  },
+  "pins": [
+    {
+      "id": "20261123-sok-puzzel-1j5t",
+      "haak": "sok-puzzel",
+      "rank": 1,
+      "state": "approved_waiting_for_capacity_and_provider",
+      "pin": {
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "bord": "271060540011963292",
+        "titel": "12 Free Printable Christmas Word Searches with Answer Keys",
+        "tekst": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+        "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
+        "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.png",
+        "a": "B0DMNK1J5T"
+      },
+      "content_identity": "free-christmas-word-search-12",
+      "traffic_basis": "Verkennende prioriteit: direct bruikbaar gratis materiaal, exacte aansluiting van beeld en bestemming; geen bewezen winnaar.",
+      "existing_registration": null,
+      "requires_new_approval": false
+    },
+    {
+      "id": "20261123-sok-hem-j7cy",
+      "haak": "sok-hem",
+      "rank": 2,
+      "state": "approved_waiting_for_capacity_and_provider",
+      "pin": {
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "bord": "271060540011963292",
+        "titel": "Stocking Stuffers for Men Who Have Everything: 800 Unusual Facts",
+        "tekst": "Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Who Have Everything: $14.99, 96 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+        "link": "https://stockingbooks.com/stocking-stuffers?utm_source=pinterest&utm_content=20261123-sok-hem-j7cy#for-him",
+        "beeld": "https://stockingbooks.com/pin/B0HRGNJ7CY-sok-hem.png",
+        "a": "B0HRGNJ7CY"
+      },
+      "content_identity": "book:B0HRGNJ7CY",
+      "traffic_basis": "Verkennende prioriteit: specifieke cadeaubehoefte met passende boekbestemming; geen bewezen winnaar.",
+      "existing_registration": null,
+      "requires_new_approval": false
+    },
+    {
+      "id": "20261123-we-onder10-fxb1",
+      "haak": "we-onder10",
+      "rank": 3,
+      "state": "already_registered_do_not_repost",
+      "pin": {
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "bord": "271060540011963291",
+        "titel": "Funny white elephant gift ideas under $10",
+        "tekst": "Stuff I Forget Because I’m Old: Large Print Password Book: $4.99, 110 pages. One of 20 funny small books for a white elephant gift exchange with a $5 or $10 limit. White elephant gift ideas for adults, coworkers and family.",
+        "link": "https://stockingbooks.com/white-elephant-gifts-under-10?utm_source=pinterest&utm_content=20261123-we-onder10-fxb1",
+        "beeld": "https://stockingbooks.com/pin/B0DP42FXB1-we-onder10.png",
+        "a": "B0DP42FXB1"
+      },
+      "content_identity": "book:B0DP42FXB1",
+      "traffic_basis": "Exacte pin-ID staat al geregistreerd; geen nieuwe plaatsing.",
+      "existing_registration": {
+        "id": "20261123-we-onder10-fxb1",
+        "haak": "we-onder10",
+        "a": "B0DP42FXB1",
+        "post": "6b04967fd511266d6a856c13",
+        "t": "2026-11-23T19:39:57.187Z"
+      },
+      "requires_new_approval": false
+    },
+    {
+      "id": "20261123-we-ideeen-t9jt",
+      "haak": "we-ideeen",
+      "rank": 4,
+      "state": "already_registered_do_not_repost",
+      "pin": {
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "bord": "271060540011963291",
+        "titel": "White elephant gift ideas by price: under $5, $10, $25",
+        "tekst": "Funny white elephant gift ideas by price limit, plus the steal test: does it get a laugh, would people use it, can nobody guess it? Starring Dad Jokes & Facts (2 books in 1), $11.",
+        "link": "https://stockingbooks.com/white-elephant-gift-ideas?utm_source=pinterest&utm_content=20261123-we-ideeen-t9jt",
+        "beeld": "https://stockingbooks.com/pin/B0DNB1T9JT-we-ideeen.png",
+        "a": "B0DNB1T9JT"
+      },
+      "content_identity": "book:B0DNB1T9JT",
+      "traffic_basis": "Exacte pin-ID staat al geregistreerd; geen nieuwe plaatsing.",
+      "existing_registration": {
+        "id": "20261123-we-ideeen-t9jt",
+        "haak": "we-ideeen",
+        "a": "B0DNB1T9JT",
+        "post": "6b04967b5d67d2299ad22eb9",
+        "t": "2026-11-23T19:39:56.079Z"
+      },
+      "requires_new_approval": false
+    }
+  ],
+  "publication_rules": [
+    "Controleer vlak vóór publicatie in Zernio accountgezondheid, echte geplaatste én geplande pins van het hele gedeelde account. Bestaande plannen reserveren capaciteit.",
+    "Plaats alle geschikte, reeds goedgekeurde pins die binnen de resterende gezamenlijke dagruimte passen, in verkeersvolgorde. Het dagplafond is een bovengrens, geen prestatiemaatstaf.",
+    "Geen exacte ID, identieke afbeelding/linkcombinatie of hetzelfde boekproduct binnen 14 dagen opnieuw plaatsen. Een andere bronparameter maakt een duplicaat niet nieuw.",
+    "Als echte providerplaatsing en de interne registratie verschillen, onderzoek eerst het verschil; verwijder geen publicatie en vul geen fictieve uitkomst in.",
+    "Gebruik uitsluitend Zernio voor kadolyshop en de bestaande boekenborden. Zonder beschikbare Zernio-koppeling geen plaatsing als gelukt registreren.",
+    "Controleer bestemmingsbereikbaarheid, afbeelding, titel, editie en prijs opnieuw. De gratis puzzelpin bevat geen prijs. Geen nieuwe copy of beelden publiceren zonder voorafgaande inzage, buiten routinecontrole van hetzelfde goedgekeurde voorstel.",
+    "Log uitsluitend echte geslaagde publicaties met provider-post-ID, tijdstip, exact beeld en bestemming. Bewaar de wachtrijstatus na iedere actie.",
+    "Vraag niet opnieuw om akkoord voor deze getoonde batch. Nieuwe inhoud blijft eerst-zien."
+  ],
+  "optimization": {
+    "objective": "Geverifieerde organische uitgaande kliks naar de eigen relevante pagina; daarnaast geregistreerde Pinterest-landingspagina-openingen per exacte bestemming.",
+    "not_objectives": [
+      "Aantal geplaatste pins",
+      "Pinopeningen op Pinterest",
+      "Vertoningen of saves zonder uitgaande kliks"
+    ],
+    "decision": "Gebruik beschikbare betrouwbare uitgaande kliks, vertoningen, leeftijd en vergelijkbare tijdvensters om de volgorde bij te sturen. Saves zijn een nevensignaal. pinPlan levert kandidaten, geen bewezen winnaars uit ongedateerde nulcaches.",
+    "missing_metrics": "Onbekend blijft onbekend. Zonder verse providerdata worden gratis-ingang en specifieke cadeaubehoefte als hypothesen verkend, zonder groeibelofte.",
+    "evaluation": "Na 14 tot 21 dagen vanaf echte plaatsing en voldoende vergelijkbare data; lopende controlegroepen blijven behouden. Eerst technische controle van link, post en meetbron."
+  },
+  "execution": {
+    "attempted_publications_today": [],
+    "confirmed_new_posts_this_instruction": [],
+    "provider_access": "Zernio niet beschikbaar in huidige toolinventaris; pluginzoekactie vond uitsluitend de beschikbare Metricool-plugin. Reposearch vond gebruik via externe Zernio-connector, geen bestaande eigen publicatieproxy.",
+    "next_existing_round": "2026-11-24T15:37:00-04:00",
+    "next_action": "Lees deze wachtrij eerst en voer de goedgekeurde pins uit zodra Zernio en resterende gedeelde dagruimte beschikbaar zijn; geen nieuwe publicatietoestemming vragen."
+  }
+}

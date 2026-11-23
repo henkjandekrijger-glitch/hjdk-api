@@ -28,8 +28,8 @@
           "reference": "we-dad, geplaatst 22 november",
           "limit": "Ander boek en andere kop; alleen richtinggevend, geen A/B-controle."
         },
-        "status": "concept_not_approved",
-        "publish_hold": "Geen plaatsing door deze ronde. Vier boekposts vandaag in interne registratie; gedeelde Kadoly-afspraak noemt maximaal drie pins per dag. Eerst gezamenlijke planning en exacte goedkeuring afstemmen.",
+        "status": "already_registered_do_not_repost",
+        "publish_hold": "Al geregistreerd; niet opnieuw plaatsen.",
         "duplicate_registration": {
           "id": "20261123-we-onder10-fxb1",
           "haak": "we-onder10",
@@ -42,7 +42,17 @@
           "height": 1500,
           "visually_checked": true,
           "legacy_branding": "BOOKSTUFFERS staat nog op bestaand referentiebeeld; nieuwe merkversie eerst tonen vóór eventuele plaatsing."
-        }
+        },
+        "publication_approval": {
+          "approved_at_utc": "2026-11-23T20:05:14.794Z",
+          "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
+          "interpretation": "Akkoord voor publicatie van de vier reeds getoonde pinconcepten binnen de bestaande gezamenlijke limiet. Optimaliseren op verkeer. Geen nieuwe verhoging van de daglimiet, geen toestemming voor ongeziene nieuwe inhoud of advertenties.",
+          "reviewed_batch": "https://github.com/henkjandekrijger-glitch/hjdk-api/blob/codex/content-dagboek/content/dagrapport/2026-11-23-pinterest-concepten.md",
+          "reviewed_commit": "2a2a2303495baaad6fe2a2f7cf9c3ccef9614e88",
+          "scope": "Uitsluitend de getoonde beelden, titels, beschrijvingen, borden en bestemmingen. De oude merknaam in drie getoonde referentiebeelden is op zichzelf geen ontbrekend publicatieakkoord.",
+          "repeat_approval_required": false
+        },
+        "traffic_rank": 3
       },
       {
         "id": "20261123-sok-hem-j7cy",
@@ -61,15 +71,25 @@
           "reference": "sok-gids-hem, geplaatst 22 november",
           "limit": "Productpin versus gids; onderwerp verwant maar geen gerandomiseerde vergelijking."
         },
-        "status": "concept_not_approved",
-        "publish_hold": "Geen plaatsing door deze ronde. Vier boekposts vandaag in interne registratie; gedeelde Kadoly-afspraak noemt maximaal drie pins per dag. Eerst gezamenlijke planning en exacte goedkeuring afstemmen.",
+        "status": "approved_waiting_for_capacity_and_provider",
+        "publish_hold": "Akkoord aanwezig. Wacht op resterende gezamenlijke dagruimte en werkende Zernio-toegang.",
         "duplicate_registration": null,
         "image_check": {
           "width": 1000,
           "height": 1500,
           "visually_checked": true,
           "legacy_branding": "BOOKSTUFFERS staat nog op bestaand referentiebeeld; nieuwe merkversie eerst tonen vóór eventuele plaatsing."
-        }
+        },
+        "publication_approval": {
+          "approved_at_utc": "2026-11-23T20:05:14.794Z",
+          "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
+          "interpretation": "Akkoord voor publicatie van de vier reeds getoonde pinconcepten binnen de bestaande gezamenlijke limiet. Optimaliseren op verkeer. Geen nieuwe verhoging van de daglimiet, geen toestemming voor ongeziene nieuwe inhoud of advertenties.",
+          "reviewed_batch": "https://github.com/henkjandekrijger-glitch/hjdk-api/blob/codex/content-dagboek/content/dagrapport/2026-11-23-pinterest-concepten.md",
+          "reviewed_commit": "2a2a2303495baaad6fe2a2f7cf9c3ccef9614e88",
+          "scope": "Uitsluitend de getoonde beelden, titels, beschrijvingen, borden en bestemmingen. De oude merknaam in drie getoonde referentiebeelden is op zichzelf geen ontbrekend publicatieakkoord.",
+          "repeat_approval_required": false
+        },
+        "traffic_rank": 2
       },
       {
         "id": "20261123-sok-puzzel-1j5t",
@@ -81,7 +101,7 @@
         "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
         "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.png",
         "kop": "12 FREE Christmas Word Searches",
-        "status": "concept_not_approved",
+        "status": "approved_waiting_for_capacity_and_provider",
         "beeld_formaat": "PNG 1000x1500, gerasterd uit dezelfde SVG en visueel gecontroleerd op 23 november 2026.",
         "campaign_id": "sb-free-wordsearch-20261123",
         "product_link_note": "Dit is een gratis-woordzoekerspin; a blijft uitsluitend bestaande haakadministratie. Geen sudokuboek of prijs in beeld/copy. Genereer niet opnieuw met de bestaande betaalde boektemplate.",
@@ -92,14 +112,24 @@
           "reference": "sok-puzzel, B0DN65PRD9, geregistreerd 23 november 19:39 UTC",
           "limit": "Nieuwe registratie biedt een mogelijke referentie, maar echte providerbestemming, bereik en postleeftijd moeten nog gelijk worden gecontroleerd. Geen winnaar of A/B-winstclaim."
         },
-        "publish_hold": "Geen plaatsing door deze ronde. Vier boekposts vandaag in interne registratie; gedeelde Kadoly-afspraak noemt maximaal drie pins per dag. Eerst gezamenlijke planning en exacte goedkeuring afstemmen.",
+        "publish_hold": "Akkoord aanwezig. Wacht op resterende gezamenlijke dagruimte en werkende Zernio-toegang.",
         "duplicate_registration": null,
         "image_check": {
           "width": 1000,
           "height": 1500,
           "visually_checked": true,
           "legacy_branding": null
-        }
+        },
+        "publication_approval": {
+          "approved_at_utc": "2026-11-23T20:05:14.794Z",
+          "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
+          "interpretation": "Akkoord voor publicatie van de vier reeds getoonde pinconcepten binnen de bestaande gezamenlijke limiet. Optimaliseren op verkeer. Geen nieuwe verhoging van de daglimiet, geen toestemming voor ongeziene nieuwe inhoud of advertenties.",
+          "reviewed_batch": "https://github.com/henkjandekrijger-glitch/hjdk-api/blob/codex/content-dagboek/content/dagrapport/2026-11-23-pinterest-concepten.md",
+          "reviewed_commit": "2a2a2303495baaad6fe2a2f7cf9c3ccef9614e88",
+          "scope": "Uitsluitend de getoonde beelden, titels, beschrijvingen, borden en bestemmingen. De oude merknaam in drie getoonde referentiebeelden is op zichzelf geen ontbrekend publicatieakkoord.",
+          "repeat_approval_required": false
+        },
+        "traffic_rank": 1
       },
       {
         "id": "20261123-we-ideeen-t9jt",
@@ -118,8 +148,8 @@
           "reference": "we-ruzie, geplaatst 22 november",
           "limit": "Verwante haak; andere bestemming/boek mogelijk. Alleen richtinggevend."
         },
-        "status": "concept_not_approved",
-        "publish_hold": "Geen plaatsing door deze ronde. Vier boekposts vandaag in interne registratie; gedeelde Kadoly-afspraak noemt maximaal drie pins per dag. Eerst gezamenlijke planning en exacte goedkeuring afstemmen.",
+        "status": "already_registered_do_not_repost",
+        "publish_hold": "Al geregistreerd; niet opnieuw plaatsen.",
         "duplicate_registration": {
           "id": "20261123-we-ideeen-t9jt",
           "haak": "we-ideeen",
@@ -132,7 +162,17 @@
           "height": 1500,
           "visually_checked": true,
           "legacy_branding": "BOOKSTUFFERS staat nog op bestaand referentiebeeld; nieuwe merkversie eerst tonen vóór eventuele plaatsing."
-        }
+        },
+        "publication_approval": {
+          "approved_at_utc": "2026-11-23T20:05:14.794Z",
+          "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
+          "interpretation": "Akkoord voor publicatie van de vier reeds getoonde pinconcepten binnen de bestaande gezamenlijke limiet. Optimaliseren op verkeer. Geen nieuwe verhoging van de daglimiet, geen toestemming voor ongeziene nieuwe inhoud of advertenties.",
+          "reviewed_batch": "https://github.com/henkjandekrijger-glitch/hjdk-api/blob/codex/content-dagboek/content/dagrapport/2026-11-23-pinterest-concepten.md",
+          "reviewed_commit": "2a2a2303495baaad6fe2a2f7cf9c3ccef9614e88",
+          "scope": "Uitsluitend de getoonde beelden, titels, beschrijvingen, borden en bestemmingen. De oude merknaam in drie getoonde referentiebeelden is op zichzelf geen ontbrekend publicatieakkoord.",
+          "repeat_approval_required": false
+        },
+        "traffic_rank": 4
       }
     ],
     "editorial_checks": [
@@ -211,6 +251,12 @@
             "kop": "White elephant gifts people actually steal"
           }
         ]
+      },
+      {
+        "at": "2026-11-23T20:05:14.794Z",
+        "reason": "Henkjan geeft akkoord op getoonde batch en kiest verkeer als doel. Niet opnieuw om hetzelfde akkoord vragen. Vier bestaande registraties tellen mee in het gedeelde dagplafond.",
+        "previous_status": "concept_not_approved",
+        "queue_path": "content/dagrapport/PUBLICATIEWACHTRIJ.json"
       }
     ],
     "account_coordination": {
@@ -249,7 +295,17 @@
       "shared_guidance": "Week 1 en 2 hooguit 3 pins per dag; geen zelfde product binnen 14 dagen.",
       "provider_scheduled_posts_available": false,
       "action": "Geen nieuwe plaatsing of inplanning. Registraties zijn geen onafhankelijk gecontroleerde providerplaatsingen; herkomst van akkoord niet vastgesteld."
-    }
+    },
+    "authorization": {
+      "approved_at_utc": "2026-11-23T20:05:14.794Z",
+      "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
+      "interpretation": "Akkoord voor publicatie van de vier reeds getoonde pinconcepten binnen de bestaande gezamenlijke limiet. Optimaliseren op verkeer. Geen nieuwe verhoging van de daglimiet, geen toestemming voor ongeziene nieuwe inhoud of advertenties.",
+      "reviewed_batch": "https://github.com/henkjandekrijger-glitch/hjdk-api/blob/codex/content-dagboek/content/dagrapport/2026-11-23-pinterest-concepten.md",
+      "reviewed_commit": "2a2a2303495baaad6fe2a2f7cf9c3ccef9614e88",
+      "scope": "Uitsluitend de getoonde beelden, titels, beschrijvingen, borden en bestemmingen. De oude merknaam in drie getoonde referentiebeelden is op zichzelf geen ontbrekend publicatieakkoord.",
+      "repeat_approval_required": false
+    },
+    "queue_path": "content/dagrapport/PUBLICATIEWACHTRIJ.json"
   },
   "lasting_change": {
     "time_curacao": "23:41",
