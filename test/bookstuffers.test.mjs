@@ -40,7 +40,7 @@ test('voorbeeld buiten het domein is noindex en linkt binnen het voorbeeld', () 
 
 test('tellingen in titels komen uit de data', () => {
   assert.match(render('white-elephant-gifts-under-10', echt), new RegExp(`<title>White Elephant Gifts Under \\$10: ${TEL.we10} `));
-  assert.match(render('stocking-stuffers', echt), new RegExp(`<title>Stocking Stuffer Books: ${TEL.boeken} `));
+  assert.match(render('stocking-stuffers', echt), new RegExp(`<title>Stocking Stuffers: ${TEL.boeken} `));
   assert.ok(TEL.we10 > 5 && TEL.tot5 > 5);
 });
 
