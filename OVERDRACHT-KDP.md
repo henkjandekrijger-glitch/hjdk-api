@@ -14,7 +14,7 @@ Werk je verder (ander account, andere chat)? Lees dit hele document, schrijf na 
 ## 2. Harde regels
 
 - Hoogstens $10 per dag per campagne. Uitzonderingen alleen met Henkjans woord ("Regel blijft vraag bij uitzonderingen"). Gekregen: Teens CA-duw (AUTO en PT elk CA$20/dag), PIT BOSS-duw (oordeel op totaal), LC-duw.
-- Margeregel: alle ads van een boek samen hoogstens 50% van de royalty van dat boek. Pushes worden beoordeeld op totale royalty tegen de basis.
+- Margeregel (40%-REGEL, BESLUIT HENKJAN 23 nov 17:27 Curacao: "Ja zet aan met 40% rule ! Geld voor alle campagnes."): alle ads van een boek samen hoogstens 40% van de royalty van dat boek (alle markten, KDP-dashboard), over 3 dagen; geldt voor elke KDP-campagne. Daarboven: biedingen van dat boek -20% of de duurste campagne op pauze. Was 50%. Pushes worden beoordeeld op totale royalty tegen de basis.
 - Alle ads samen hoogstens ~$100 per dag netto.
 - Amazon-campagnes: Dynamic bids down only, Limit reach to Amazon, "Increase bids for high-traffic days" uit. Geen bod boven max CPC (zie draaiboek, ROI en ROAS).
 - PropellerAds voor KDP: alleen wijzigen na Henkjans "ja" in de chat; geen conversie-postback naar PropellerAds voor KDP. Nu staat alles van KDP op PropellerAds uit.
@@ -67,8 +67,9 @@ Royalty per boek 2025 / okt-dec 2025: PIT BOSS $13.496 / $5.258; Lasting Change 
 
 | Campagne | Id | Stand |
 |---|---|---|
-| PIT BOSS EXACT | A043648439COJRMAUIRWM | $10/dag, oude biedingen (~350 woorden $1,02, 2 woorden $1,52): DUW 17-19 nov |
-| PIT BOSS - SP - Manual KW | A06472010M5G9DRRZ8PS | $10/dag, oude biedingen ($0,45/1,00/0,88/0,80): DUW |
+| PIT BOSS EXACT | A043648439COJRMAUIRWM | op pauze sinds 20 nov; lifetime 564 aankopen, $4.739 kosten, $9.770 omzet (ROAS 2,06) |
+| PIT BOSS - SP - Manual KW | A0647201OM5G9DRRZ8PS | op pauze sinds 20 nov; lifetime 169 aankopen, $1.526 kosten |
+| KDP PIT BOSS WINNERS EXACT 0.75 \| 1dec | A10251702YWIA92DHTHF6 | NIEUW 23 nov (Henkjan: "Ja zet aan met 40% rule !"), start 1 dec (LA), $10/dag, down only, hoog-verkeerregel uit, alleen PIT BOSS paperback B0BKRPL5JX. 11 exacte woorden op $0,75 (voorgesteld $1,13-1,37), de lifetime-winnaars uit PIT BOSS EXACT met kosten per aankoop onder ~$9: pellet grill cookbooks (28 aankopen), smoker cookbooks (28), pellet smoker cookbook (18), pit boss cookbook (14), smoker cookbooks best sellers (10), pitboss cookbook (9), smoker recipe books for men (8), pellet grill cook book (6), bbq book (6), smoker recipe book (5), cookbook for men (5). Niet: bbq cookbook ($10,72 per aankoop). Prijs: concept $17,99 (royalty $5,05) bewaard 23 nov, Publish bij Henkjan; check 30 nov (trig_01AHtHv8ccvkSXjvMgVveNPq), nog $14,99 op 1 dec = biedingen $0,50. Eerste oordeel 40%-regel 4 dec |
 | Lasting change LASTING CHANGE KW | A04830353R9IVCG7VO45Z | $10/dag, 4 broad-woorden $1,02 (DUW sinds 17 nov), exacte woorden $0,57-0,66 |
 | B0F1SM1L5J-AUTO (LC) | A03228661CQIWZXX5IXLQ | Loose $0,60, andere groepen uit |
 | KDP LC NIEUWJAAR EXACT | A00430132MU3YXJN4IMNK | loopt sinds 20 nov, $10/dag, tot 22 nov 0 vertoningen (bod te laag, kost dus niets); 20 dec omhoog, zie decemberplan |
@@ -107,9 +108,9 @@ Royalty per boek 2025 / okt-dec 2025: PIT BOSS $13.496 / $5.258; Lasting Change 
 | LC-duw (sinds 17 nov 13:00 UTC) | 18-20 nov | totale LC-royalty tegen LC-ads; lager = broad-woorden weer pauzeren. Piek LC is 27 dec-3 jan |
 | LC-prijs terug naar $24,99 | 20 dec ronde A | Henkjan 19 nov: akkoord op $19,99 bij de 2027-uitgave om rang op te bouwen, en op 20 dec (start KDP LC NIEUWJAAR EXACT) terug naar $24,99 (royalty $12,48). Ronde zet het prijsconcept klaar en stuurt Henkjan de link voor Publish |
 | Adults CA-test | 22 nov: 7 dagen CA$6,20, 11 kliks, 1 verkoop (CA$13,99, zoekterm "books"). Te weinig om een exacte campagne uit te oogsten; draait door (geeft ~CA$1,50/dag uit) | Adults CA-royalty tegen Adults CA-ads |
-| Adults US-test (sinds 22 nov) | 29 nov ronde A | Adults-ads (US + CA) hoogstens 50% van de Adults-royalty, anders US-test uit. Gehaald en ACOS onder ~35%: US naar $10/dag en de verkopende zoektermen als exacte woorden erbij (bod = voorgesteld) |
+| Adults US-test (sinds 22 nov) | 29 nov ronde A | Adults-ads (US + CA) hoogstens 40% van de Adults-royalty, anders US-test uit. Gehaald en ACOS onder ~35%: US naar $10/dag en de verkopende zoektermen als exacte woorden erbij (bod = voorgesteld) |
 | Cadeauboeken afbouwen | 19 dec ronde A | decemberplan sectie 11: Teens en Adults terug naar de biedingen van voor de push, Kindle blijft |
-| LC-omschakeling | 20 dec ronde A | decemberplan sectie 11: NIEUWJAAR naar voorgesteld bod, LC broad-woorden aan, elk hoogstens $10/dag tot 31 jan; rem 50% van LC-royalty over 3 dagen |
+| LC-omschakeling | 20 dec ronde A | decemberplan sectie 11: NIEUWJAAR naar voorgesteld bod, LC broad-woorden aan, elk hoogstens $10/dag tot 31 jan; rem 40% van LC-royalty over 3 dagen |
 | Apocrypha/Enoch VK | doorlopend | 2 dagen geen vertoningen = stap omhoog binnen de marge |
 
 Break-even ROAS: Teens CA 2,93; PIT BOSS ($14,99) 4,61; LC ($24,99) 2,10 (break-even ACOS 47,7%); Adults ongeveer als Teens. Volledige tabel met max CPC: draaiboek, ROI en ROAS.
@@ -258,7 +259,7 @@ Apocrypha JMB92DMKYAP, Griddle 4B9BMX0XG7J, High Blood Pressure M8308T2BWC9, Bar
   - Piekuren-biedingen bestaan niet in de console (geen schema voor biedingen); vervangen door top of search.
   - 23 nov 21:15 UTC (Henkjan 23 nov: "200 per dag moeten we naar toe ."): WINNERS kreeg in 1,5 dag 84 vertoningen en CA$0,43 uitgaven, biedingen lagen ver onder het voorgestelde bod. Nu: funny christmas gifts under 10 en stocking stuffers for teen boys CA$1,00 (voorgesteld 1,47 en 1,60, plafond 1,00), funny gifts for teen boys 0,87, gag gifts, stocking stuffers en teenage boy stuff 0,52, stocking stuffers for teen girls en teen stocking stuffers 0,61 (allemaal voorgesteld bod); stocking stuffers for teens (0,60, voorgesteld 0,56) en 14 year old male teen (geen voorstel) bleven. Budget blijft CA$15, rem hieronder geldt. Bulk: rijen aanvinken, Bulk actions, Adjust bid, Set bid to.
   - Stand 23 nov 21:10 UTC: vandaag $24,99 royalty (9 orders, Teens $22,27); november 54% Canada, 16% VK, 14% VS.
-  - REM: Teens-royalty moet uiterlijk 26 nov >= $80-90/dag zijn en Teens-ads hoogstens 50% daarvan. Zo niet: WINNERS pauzeren, Loose terug naar 0,40, TOS 0%, US test uit. Dagcheck 12:40 UTC via send_later (23-26 nov).
+  - REM: Teens-royalty moet uiterlijk 26 nov >= $80-90/dag zijn en Teens-ads hoogstens 40% daarvan (40%-regel). Zo niet: WINNERS pauzeren, Loose terug naar 0,40, TOS 0%, US test uit. Dagcheck 12:40 UTC via send_later (23-26 nov).
 - DECEMBERPLAN RANG (BESLUITEN HENKJAN 22 nov 16:43 Curacao: "zetten we live en voorbereiden met campagnes op december met ranking ?" en "Ja adults aan"). Rang komt van veel verkopen in korte tijd, dus het geld gaat naar het venster waarin gekocht wordt: cadeauboeken tot 18 dec, LC van 20 dec tot eind januari.
   - Nu: Henkjan publiceert LC 2027, Moment mal hardcover, Echt jetzt?! paperback en hardcover, Kindle WTT en For Men (links in het bericht van 22 nov). Daarna zet een ronde de Kindle-versies van Echt jetzt?! en Moment mal als concept klaar (EPUB en kindle_cover.jpg in kdp/bouw/teens_de en wissen, KDP Select aan) en vult de ASIN's in REV in fn/wtb.js.
   - Adults: KDP Adults US AUTO 0.38 | 22nov aan ($5/dag); oordeel 29 nov (tabel 6).
@@ -269,7 +270,7 @@ Apocrypha JMB92DMKYAP, Griddle 4B9BMX0XG7J, High Blood Pressure M8308T2BWC9, Bar
   - Henkjan eenmalig: inloggen op advertising.amazon.de (Duitse titels, pas met reviews) en amazon.com.au (Teens AU-test).
 - SCHAALREGEL (BESLUITEN HENKJAN 22 nov 18:25 Curacao: "Ok voor ranking opties door en agressief adverteren . Als het loont hoger budget per dag . ROAS moet dan stijgen ."), elke ronde A:
   - Royalty-ROAS per boek = royalty van het boek in alle markten (KDP-dashboard) / ads van dat boek, 3 dagen.
-  - Omhoog: campagne gaf op 2 van de 3 dagen >= 80% van haar budget uit, royalty-ROAS >= 2 en hoger dan de 3 dagen ervoor: budget +30%. Mag dan boven $10/dag en boven de Teens CA-grens CA$40/dag.
+  - Omhoog: campagne gaf op 2 van de 3 dagen >= 80% van haar budget uit, royalty-ROAS >= 2,5 (40%-regel) en hoger dan de 3 dagen ervoor: budget +30%. Mag dan boven $10/dag en boven de Teens CA-grens CA$40/dag.
   - Terug: royalty-ROAS na een stap 2 dagen op rij lager: vorig budget. Hoogstens 1 stap per campagne per 2 dagen. Elke stap in het werklog met de cijfers.
   - Rang 22 nov 18:15 Curacao: Teens CA #1.619 (#10 Curiosities & Wonders, #17 Trivia), VS #1,14 mln; Adults CA #15.490, VS #1,2 mln. Vorig jaar Teens CA 14 nov #840, 20 dec #99.
   - Gedaan 22 nov 22:40 UTC: KDP Adults CA AUTO Close match CA$0,65 -> 0,85 (voorgesteld 0,72; de enige groep met een verkoop, ACOS 9%), top of search 0% -> +30%. Loose blijft op pauze, Substitutes 0,55 en Complements 0,50 ongewijzigd.
@@ -281,6 +282,6 @@ Apocrypha JMB92DMKYAP, Griddle 4B9BMX0XG7J, High Blood Pressure M8308T2BWC9, Bar
   - Bible Color By Number (B0D2KZGWYJ): VS #688.459, 41 reviews, ~$2,68 per verkoop; leider Busy Kid #66.514 (228 reviews, $9,99). KDP Bible Color AUTO had 18 vertoningen in 7 dagen op $0,15: Close en Loose naar $0,25 (23 nov), budget $5. Seizoen is Pasen.
 - Keepa geeft "No active API plan": rondes die Keepa gebruiken zien geen rang en reviews meer.
 
-**Voorstel 21 nov, wacht op akkoord:** (1) Teens overal: CA-push door tot 20 dec, AU-test, VS/VK lage boden op concurrenten; (2) volg wat organisch verkoopt (Bible Color VS, Apocrypha VK); (3) geen ads op titels zonder reviews; (4) PIT BOSS 1 dec opnieuw met de 11 winnaars op $17,99.
+**Punt 4 akkoord 23 nov 17:27 Curacao ("Ja zet aan met 40% rule ! Geld voor alle campagnes."): PIT BOSS WINNERS staat klaar voor 1 dec, zie de campagnetabel.** **Voorstel 21 nov:** (1) Teens overal: CA-push door tot 20 dec, AU-test, VS/VK lage boden op concurrenten; (2) volg wat organisch verkoopt (Bible Color VS, Apocrypha VK); (3) geen ads op titels zonder reviews; (4) PIT BOSS 1 dec opnieuw met de 11 winnaars op $17,99.
 
 **Echt jetzt?! (kdp/bouw/teens_de):** 400 Duitse feiten in 20 hoofdstukken, gebaseerd op Teens maar gecorrigeerd: de vele mythes en dubbelingen uit het Engelse boek (o.a. Mona Lisa vrije dag, 17 spieren om te lachen, kauwgom 7 jaar) zijn vervangen door feiten die kloppen. 80 p. 6x9, wit, Wahr-oder-falsch-quiz. Omslag in de Teens-stijl (zwart, geel, emoji), geen rugtekst (80 p.), hardcover-omslag 13,944 x 10,417 in (rug 0,369, gelijk aan de Adventskalender; controleer in de KDP-calculator). Prijs EUR 9,99 (past in het wichtelbudget van 10 euro), hardcover EUR 17,99. Metadata en beschrijving: kdp.json. Bouwen: `python3 bouw_boek.py teens_de uit.pdf` (vanuit kdp/bouw) en `python3 omslag_cfg.py 80` / `python3 omslag_cfg.py 80 hard`.
