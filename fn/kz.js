@@ -206,6 +206,12 @@ async function advise(item, route, tag) {
   let products = [], checkedAt = null;
   try { const r = await searchCached(term.trim(), { country: 'NL', size: 48, sort: 'RELEVANCE' }); checkedAt = r.at || null; products = (r.products || []).filter(p => p.price != null && p.image); } catch (e) {}
   if(item.slug==='thuisbatterij')products=products.filter(p=>!/laten aansluiten|aansluitservice|installatieservice|zoofy|uitbreidingsaccu|expansion battery|accukabel|verlengkabel/i.test(String(p.title||'')));
+  // 23 nov 2026: op deze batterijvergelijking werd een losse HomeWizard P1-meter het advies. Alleen herkenbare complete batterijen doorlaten.
+  if (item.slug === 'marstek-venus-e-3-vs-homewizard-vs-anker-solix') products = products.filter(p => {
+    const title = String(p.title || '');
+    return /thuis[\s-]?batterij|stekkerbatterij|plug[\s-]?in[\s-]?battery|solarbank|solarflow|venus\s+e\b/i.test(title)
+      && !/uitbreidingsaccu|uitbreidingsbatterij|expansion battery|accukabel|verlengkabel|aansluitkabel|montagebeugel|installatieservice/i.test(title);
+  });
   /* harde antwoorden (optie.hard, bijv. de wielmaat bij kinderfiets): een product moet minstens één term van die optie in de titel hebben, anders wint een 26 inch stadsfiets met veel losse treffers bij een kind van 4 */
   const hard = picks.filter(o => o.hard && o.must && o.must.length).map(o => o.must.map(x => x.toLowerCase()));
   if (hard.length) { const ok = p => { const t = String(p.title).toLowerCase(); return hard.every(h => h.some(m => t.indexOf(m) >= 0)); }; const f = products.filter(ok); if (f.length) products = f; }

@@ -97,6 +97,14 @@ De crons draaien vanzelf (lijst in de overdracht onder "Automatische rondes"). D
    - logboek in `lib/overdracht-kz-tekst.js` (nieuwste bovenaan, één regel, nooit mailadressen);
    - verander je hoe iets werkt: `lib/werking.js` bijwerken en `WERKING_DATUM` op vandaag.
 
+## 5a. Onderwerpkeuze die leert (23 november 2026)
+
+Lees data/keuzehulpen-groei/potenties-2026-11-23.json voor de bevroren eerste rangorde, bronnen, tegenbewijs en ontwikkelopdracht. Begin bij thuisbatterij met stekker en de bestaande Marstek/HomeWizard/Anker-vergelijking (NL), daarna balkonopslag achteraf in DE en pompnoodstroom in de VS. Alle kandidaten bestaan al; controleer steeds de actuele catalogus en sitemap. Maak geen tweede pagina voor dezelfde keuzevraag.
+
+Behandel volume als een schatting per term, tel synoniemen niet op en noteer de bronversie. De nichedata van 23 nov is onvoldoende voor een zwakke-top-10-claim (89 van 90 teruggegeven rijen tonen alleen google.com in top3). Hotel near me zonder locatie is geen bewezen AI-gat. De bouwmotor vraagt /api/llmgap op dat nu 404 geeft; de actuele cache staat op /api/gaps?latest=1. De terugmeldfunctie meldUitkomst heeft geen gevonden aanroep in deze repo. Nieuwe koppeling en selectiecode gaan als concrete ontwikkelopdracht naar kz-chat; claim niet dat die al werkt.
+
+Leg vóór elke inzet vast: vraag, gekozen en afgewezen onderwerp, huidige beperking, URL, bron/venster, traffic-segment, teller/noemer, wijzigings- en blootstellingsdatum, verwachte uitkomst, tegenbewijs en evaluatiemoment. Onderzoek na 7 dagen eerst meetdekking en ontdekking. Een SEO-oordeel vereist volwassen gescheiden vensters, minimaal circa 35 dagen na de echte ingreep en voldoende data. Beoordeel later ook of de vooraf voorspelde onderwerpvolgorde klopt. Meer bots, pill-kliks of zoekvolume bewijst geen omzet. Bescherm lopende SEO-proeven; herstel een aantoonbaar fout product wel en leg die meetverstoring apart vast. Geen onbewezen tweede pagina of verplichte dagelijkse nieuwbouw.
+
 ## 6. Lopende proeven in de chat (stand 23 nov 15:02 UTC)
 
 Dagronde 23 nov: uitsluitend factor pillflow beslist voor VS en DE. In VS won a met waarde 3,20 tegen 0,69 (4.432 tegen 601 gezien; intenties 356 tegen 5); in DE 4,97 tegen 1,16 (2.056 tegen 332; intenties 295 tegen 2). Beide voldeden aan 300 per arm en 95% kans volgens het bestaande model. Versie a blijft de standaard; b staat in de code uit. Alleen oude b-beslissingen worden opnieuw opgehaald, zodat ze niet zes dagen doorlopen. Ronde 3 en de andere factoren blijven bewaard. NL wacht nog op 300 voor a. De meeste waarnemingen komen van Android; dit is geen omzetbewijs. Geen nieuwe variant verzonnen: geef een volgende uitdager door aan ontwikkelchat kz-chat.

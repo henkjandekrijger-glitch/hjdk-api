@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "decision_date": "2026-11-23",
+  "timezone": "America/Curacao",
+  "scope": [
+    "keuzehulp.best",
+    "whichtobuy.best",
+    "kaufberater.best"
+  ],
+  "objective": "Meer extern zoek- en AI-bezoek dat een passende beslissing, intentie of aantoonbare winkelactie oplevert; daarna toegeschreven opbrengst. Geen groeibelofte uit zoekvolume of bots.",
+  "evidence_cutoff": "2026-11-23",
+  "source_dates": {
+    "battery_detail": "2026-11-18T14:30:21.896Z",
+    "ai_questions": "2026-11-19",
+    "ai_snapshot": "2026-11-20",
+    "demand_overview": "2026-11-23",
+    "overview_volume_period": "2026-10",
+    "battery_detail_volume_period": "Niet expliciet in de detailrespons; niet automatisch aan oktober toeschrijven."
+  },
+  "volume_rules": [
+    "Schattingen per letterlijke term en markt; synoniemen niet optellen.",
+    "Detail- en overzichtsweergaven kunnen verschillende versies tonen: DE brede balkonkraftwerk mit speicher 135000 in detail tegen 110000 in overzicht; geen gladgestreken schijnprecisie.",
+    "Jaarverandering is een radarsignaal, geen kans op onze groei.",
+    "Zoekvolume is geen bereikbaar verkeer, Google-positie, koopintentie per gebruiker of omzet."
+  ],
+  "candidates": [
+    {
+      "rank": 1,
+      "cluster": "NL plug-in thuisbatterij",
+      "keyword": "thuisbatterij met stekker",
+      "monthly_volume": 8100,
+      "yoy_pct": 238,
+      "url": "https://keuzehulp.best/stekkerbatterij",
+      "exists": true,
+      "why": "Concrete koopvraag; bestaande vergelijking, bestaande rekenhulp en relevante winkelroutes aanwezig. Sluit aan op vragen in de chat.",
+      "action": "Maak de bestaande hulp betrouwbaar voor deze vraag: geschikte batterij en bundel, veilige aansluiting met primaire bronnen, scenario met eigen tarieven. Geen tweede generieke stekkerbatterijpagina.",
+      "protect": "Deze pagina is opgenomen als URL/controle in geregistreerde SEO-proeven; lopende stand vóór inhoudswijziging nakijken."
+    },
+    {
+      "rank": 2,
+      "cluster": "NL plug-in thuisbatterij",
+      "keyword": "marstek venus e 3.0",
+      "monthly_volume": 18100,
+      "yoy_pct": 654,
+      "url": "https://keuzehulp.best/marstek-venus-e-3-vs-homewizard-vs-anker-solix",
+      "exists": true,
+      "why": "Specifieke modelvraag die naar een echte vergelijking leidt.",
+      "action": "Correctheidsfout eerst: HomeWizard P1-meter van EUR33.50 staat als batterij in de situatietabel. Voor deze gids alleen volledige batterijen doorlaten; geen accessoire als vervanging wanneer de winkel geen batterij teruggeeft.",
+      "repair_scope": "Alleen Bol-kandidaten op deze exacte vergelijking; geen bredere claim dat modelcompatibiliteit, voorraad of alle winkellinks al zijn geverifieerd."
+    },
+    {
+      "rank": 3,
+      "cluster": "DE balkonopslag",
+      "keyword": "balkonkraftwerk speicher nachrüsten",
+      "monthly_volume": 2400,
+      "yoy_pct": -33,
+      "url": "https://kaufberater.best/balkonkraftwerk-speicher-2026-vergleich-anker-zendure-ecoflow-marstek",
+      "exists": true,
+      "why": "Duidelijke situatie met verschillende oplossingen: een bestaande installatie uitbreiden. Brede marktterm niet als makkelijk vindbaar presenteren.",
+      "action": "Bestaande AC/DC-uitleg en kooproute controleren op complete, beschikbare uitvoering; aantoonbaar betere keuze voor de eigen installatie. Geen onterechte testwinnaar of geclaimde eigen praktijktest.",
+      "protect": "Bestaande pagina staat in een geregistreerde cluster-linkproef; niet tussentijds een tweede SEO-ingreep toevoegen zonder het meetplan aan te passen."
+    },
+    {
+      "rank": 4,
+      "cluster": "US noodstroom pomp",
+      "keyword": "sump pump battery backup",
+      "monthly_volume": 22200,
+      "yoy_pct": 50,
+      "url": "https://whichtobuy.best/best-sump-pump-battery-backup-systems-2026",
+      "exists": true,
+      "why": "Concrete functie en koopbeslissing met minder brede bedoeling dan hotels of algemene portable power station.",
+      "action": "Eerst bestaande gids lezen: complete back-upset tegenover losse accu, passende pomp en werkelijk gecontroleerde uitvoering. Bevestig actieve affiliate- en omzetmeting vóór sturen op opbrengst.",
+      "protect": "Bestaande URL is opgenomen in een geregistreerde batterij-SEO-proef; live proefstand controleren."
+    },
+    {
+      "rank": 5,
+      "status": "reserve",
+      "cluster": "US noodstroom algemeen",
+      "keyword": "solar generator for home",
+      "monthly_volume": 22200,
+      "yoy_pct": 400,
+      "url": "https://whichtobuy.best/best-solar-generators-for-home-backup-and-camping-2026",
+      "exists": true,
+      "action": "Eerst de overlap met bestaande powerstation-, capaciteit- en noodstroomgidsen bepalen. Geen nieuwe pagina voor dezelfde vraag."
+    }
+  ],
+  "rejected_or_deferred": [
+    {
+      "topic": "hotel near me / coffee shop near me",
+      "reason": "Ontbrekende locatie maakt geen eerste keus een normaal antwoord. Het grote volume bewijst geen slecht beantwoorde keuzevraag of makkelijke ranking."
+    },
+    {
+      "topic": "dentists",
+      "reason": "Andere drie modellen kiezen in de bewaarde scan allemaal Zocdoc. Geen sterk gedeeld AI-gat."
+    },
+    {
+      "topic": "portable power station for camping",
+      "volume": 33100,
+      "yoy_pct": -93,
+      "reason": "Wel koopvraag maar sterke daling in deze bewaarde reeks; niet als groeitrend aanmerken. Bestaande gids aanwezig."
+    },
+    {
+      "topic": "winterjassen / iPhone / Black Friday / advent",
+      "reason": "Groot of tijdelijk volume, al aanwezige gidsen en weinig resterende indexeertijd. Geen voorrang boven concrete, bruikbare bestaande keuzes."
+    },
+    {
+      "topic": "verzekeringsvergelijkingen",
+      "reason": "Hoge CPC is geen commissie of uitvoerbare commerciële samenwerking. Bestaande afspraken en voorwaarden eerst."
+    },
+    {
+      "topic": "hanglamp",
+      "reason": "Actuele themavraag gaf HTTP503 daily data budget reached. Geen nieuwe groeicijfers ingevuld, geen extra budget uitgegeven."
+    }
+  ],
+  "radar_audit": {
+    "ai_feed_requested_by_builder": "/api/llmgap?cc=NL",
+    "ai_feed_observed_status": 404,
+    "available_cached_feed": "/api/gaps?latest=1",
+    "catalog_join": "Meerdere gidsen bestaan op live sitemap/catalogus terwijl het radarveld guide null is; null betekent onbekend, niet ongebouwd.",
+    "niche": {
+      "nl": {
+        "updated": "2026-11-23T16:26:38.277Z",
+        "total_terms": 1000,
+        "checked": 30,
+        "pending": 970,
+        "returned_rows": 30,
+        "rows_with_all_google_top3": 30,
+        "errors": [
+          "daily data budget reached"
+        ]
+      },
+      "us": {
+        "updated": "2026-11-21T03:01:05.265Z",
+        "total_terms": 1000,
+        "checked": 45,
+        "pending": 955,
+        "returned_rows": 45,
+        "rows_with_all_google_top3": 44,
+        "errors": [
+          "daily data budget reached"
+        ]
+      },
+      "de": {
+        "updated": "2026-11-21T03:02:45.363Z",
+        "total_terms": 1000,
+        "checked": 15,
+        "pending": 985,
+        "returned_rows": 15,
+        "rows_with_all_google_top3": 15,
+        "errors": [
+          "daily data budget reached"
+        ]
+      }
+    },
+    "niche_interpretation": "Bij 89 van 90 teruggegeven rijen staat google.com drie keer bij top3. De claim zwakke Google-top is hiermee niet betrouwbaar onderbouwd. Ruwe organische doel-URLs en classificatie moeten worden gecontroleerd; oorzaak niet vastgesteld.",
+    "outcome_code": "lib/demandradar.js definieert meldUitkomst(), maar in lib/, fn/ en scripts/ is geen aanroep of rechtstreekse /api/outcome-integratie gevonden. Geen volledige gesloten leerlus claimen.",
+    "daily_budget": "De bron meldde daily data budget reached. Stoppen met aanvullende scans en ontbrekende data als onbekend behandelen."
+  },
+  "operating_loop": {
+    "before_selection": [
+      "Lees bronversie en periode; controleer termbetekenis, synoniemen en trend.",
+      "Controleer eigen volledige catalogus én sitemap, niet alleen guide in radar.",
+      "Controleer primaire productinformatie en een bestaande, werkende kooproute.",
+      "Controleer actuele SEO-proeven en controlegroepen; kernfase en nieuwbouwplafonds blijven gelden."
+    ],
+    "focus": "Eerst één batterijcluster in NL; DE-balkonopslag en US-pompback-up als afzonderlijke volgende toetsen. Geen nieuwe duplicaten. Niet blind iedere dag een pagina verplichten.",
+    "forecast_to_freeze": [
+      "Gekozen vraag en vergelijking met reservekandidaten.",
+      "Waarom deze ingreep de huidige beperking moet oplossen.",
+      "URL, bron en periode, traffic-segment, teller/noemer, wijziging en blootstellingsdatum.",
+      "Wat de hypothese weerlegt, controlegroep waar zinvol, meetmoment en verantwoordelijke."
+    ],
+    "diagnose": [
+      "Niet geïndexeerd/ontdekt: indexeerbaarheid en gerichte ontdekking onderzoeken; copy niet automatisch herschrijven.",
+      "Impressies zonder kliks: aansluiting zoekvraag en getoond antwoord beoordelen.",
+      "Passend bezoek zonder gebruik: bruikbaarheid, antwoordroute, productvaliditeit en frictie toetsen.",
+      "Gebruik zonder winkelactie: werkelijke geschiktheid en controleerbare koopmogelijkheid toetsen.",
+      "Winkelactie zonder order: attributie en betaalde/afgekeurde orders controleren; kliks zijn geen inkomsten."
+    ],
+    "evaluate": "Na 7 dagen dekking, correctheid en distributie controleren. SEO-oordeel pas met volwassen, niet-overlappende vensters, minimaal circa 35 dagen vanaf echte wijziging en met voldoende waarnemingen. Ontbrekende blootstelling is geen weerlegging van inhoud of conversie.",
+    "selection_learning": "Bewaar de voorspelde volgorde vóór inzet. Vergelijk de uitkomsten van later gekozen onderwerpen met die voorspelling, inclusief afvallers en kosten. Pas de selectieregel niet aan op één klik of dezelfde voorbeelden waarmee de regel is bedacht.",
+    "ux": "Bestaande marktproeven houden eigen criteria: minstens 300 gezien per actieve versie en 95% modelkans. Eén factor per dag; gecorrigeerde productfouten zijn geen gerandomiseerde groeiproef."
+  },
+  "development_work_order": {
+    "owner": "kz-chat",
+    "priority": [
+      "Bestaande AI-invoer herstellen met de echte cache-respons en contextcontrole; geen locatie-onbekend als gat.",
+      "Guide-koppeling repareren met canonieke eigen URLs en taal/synoniemen.",
+      "SERP-doel-URLs en classificatie nakijken; onbetrouwbare zwaktescores uitsluiten.",
+      "Bestaande terugmeldfunctie verbinden met expliciet gemeten, geaggregeerde resultaten per onderwerp en venster; omzet ontbreekt is onbekend.",
+      "Forward-test selectie met bewaarde voorspelling en latere onderwerpen; geen bewezen optimaliteit claimen."
+    ],
+    "status": "Vastgelegd als ontwikkelopdracht; niet gebouwd of als actief beweerd in deze ronde."
+  },
+  "technical_repair": {
+    "status": "voor publicatie",
+    "file": "fn/kz.js",
+    "scope": "https://keuzehulp.best/marstek-venus-e-3-vs-homewizard-vs-anker-solix",
+    "what": "Geen losse P1-meter/kabel als batterijadvies; alleen herkenbare complete batterijtypen in Bol-resultaten voor deze gids.",
+    "seo_interpretation": "Correctheidsreparatie is apart vastgelegd als mogelijke verstoring van de lopende cluster-proef; geen SEO-effect aan deze ingreep toeschrijven zonder passende analyse."
+  },
+  "sources": [
+    "https://demandradar-ivory.vercel.app/api/zoekvraag?thema=batterij&cc=NL",
+    "https://demandradar-ivory.vercel.app/api/zoekvraag?thema=batterij&cc=DE",
+    "https://demandradar-ivory.vercel.app/api/zoekvraag?thema=batterij&cc=US",
+    "https://demandradar-ivory.vercel.app/api/gaps?latest=1",
+    "https://demandradar-ivory.vercel.app/api/demand?view=gaps&format=text",
+    "https://demandradar-ivory.vercel.app/api/zoekvraag?niche=NL",
+    "https://demandradar-ivory.vercel.app/api/zoekvraag?niche=US",
+    "https://demandradar-ivory.vercel.app/api/zoekvraag?niche=DE",
+    "https://hjdk-api-henq.vercel.app/api/kz?op=list",
+    "https://whichtobuy.best/sitemap.xml",
+    "https://kaufberater.best/sitemap.xml",
+    "https://hjdk-api-henq.vercel.app/api/keuze-tools?tool=groepen&vorm=tekst",
+    "https://hjdk-api-henq.vercel.app/api/zicht?op=organisch&t=1"
+  ]
+}
