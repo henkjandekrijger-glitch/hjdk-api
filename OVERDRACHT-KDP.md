@@ -212,6 +212,7 @@ Nog te doen: hardcover (nu 137 p., wit, met bleed, drukprijs $7,29): zelfde binn
 2. Teens overal waar hij verkoopt omhoog: Australië (test), VK en VS alleen met het model dat werkt (AUTO Substitutes, PT Interesting Facts); A+ vergelijkingstabel met de hele reeks.
 3. Nieuwjaar: 2027-planners onder het LC-merk (habit tracker 2027, goal planner 2027), gebouwd met de LC-bouwer.
 4. Geen ads waar de ROAS onder break-even zit zonder dat de totale royalty stijgt.
+5. Bestaande boeken beter laten werken (Henkjan 23 nov: "Ja doe"): elke maandag 2 instructieproeven op live boeken (beschrijving, zoekwoorden, categorieën, prijs of A+; één onderdeel per boek, oordeel na 14 dagen tegen controle), regels en logboek in kdp/rapport.md, sectie Instructieproeven. Boekwedstrijd: elke ochtend minstens 30 kandidaten bedenken, voorselectie met Demand Radar, Keepa alleen voor de top 5 (kdp/boekwedstrijd.md regel 1).
 
 **Per boek (21 nov, nov 1-21 $413):** Teens maakt 63% van de royalty. De nieuwe titels (LC, WTT, For Men, Adventskalender, Moment mal) brachten in november $0. Les: ads op een titel zonder reviews verkopen niet; elk rapport begint met royalty per boek.
 

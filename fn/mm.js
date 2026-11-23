@@ -75,7 +75,7 @@ U=q(function(){return new URL(location.href).searchParams}),
 P=function(){for(var i=0;i<arguments.length;i++){var v=U&&U.get(arguments[i]);if(v)return v}return''},
 O=q(function(){return new URL(S.src).origin})||location.origin,ua=N.userAgent||'',
 vid=q(function(){var a=new Uint8Array(8);crypto.getRandomValues(a);return hex(a)})||h32(ua+Math.random())+h32(Date.now()+'.'+Math.random()),
-d={v:1,vid:vid,mmc:P('mmc')||'',net:A('net')||P('src','net','utm_source'),zone:A('zone')||P('zone','z','zoneid'),camp:A('campaign')||P('campaign','c','cid','campaignid'),sub:A('subid')||P('subid','clickid','k'),cr:A('cr')||P('cr','creativeid'),via:A('via'),pg:location.host+location.pathname,ref:q(function(){return D.referrer?new URL(D.referrer).host:''})||'',ua:ua},
+d={v:1,vid:vid,mmc:P('mmc')||'',net:A('net')||P('src','net','utm_source'),zone:A('zone')||P('zone','z','zoneid'),camp:A('campaign')||P('campaign','c','cid','campaignid'),sub:A('subid')||P('subid','clickid','k'),cr:A('cr')||P('cr','creativeid','bannerid','b'),via:A('via'),pg:location.host+location.pathname,ref:q(function(){return D.referrer?new URL(D.referrer).host:''})||'',ua:ua},
 b={t1:null,tp:null,ts:null,tk:null,nt:0,nk:0,nw:0,mm:0,sc:0,nu:0,sd:0},pts=[],vis=0,vs=D.visibilityState==='visible'?0:null,mo={n:0,s:0,s2:0},sent={};
 M.vid=vid;
 d.wd=N.webdriver===true?1:0;d.pl=q(function(){return N.plugins.length});
@@ -170,6 +170,20 @@ export default async function handler(req, res) {
       if (op === 'distmaak') return res.status(200).json(await D.maak({ project: q('project'), kanaal: q('kanaal'), plek: q('plek'), plekUrl: q('plekurl'), onderwerp: q('onderwerp'), taal: q('taal'), doel: q('doel'), tekst: q('tekst'), wie: q('wie'), geplaatst: q('geplaatst') === '1' }));
       if (op === 'distzet') return res.status(200).json(await D.zet(q('id'), { geplaatst: q('geplaatst') === '1', plekUrl: q('plekurl'), uitkomst: q('uitkomst'), n: q('n') }));
       if (op === 'diststand') return res.status(200).json(await D.stand({ dagen: Math.min(90, Number(q('dagen')) || 30), project: q('project') || '' }));
+    }
+    if (op === 'vroeg' || op === 'vroeguit') { // vroege voorspeller (lib/vroeg.js, Henkjan 23 nov 2026: "Ja doe .")
+      const V = await import('../lib/vroeg.js'); res.setHeader('cache-control', 'no-store'); cors(res);
+      if (op === 'vroeguit') return res.status(200).json(await V.uitLijst(kv, { net: netNaam(q('net') || 'propeller') }));
+      if (q('run') === '1') {
+        const isCron = (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
+        if (!(isCron || beschermd(req))) return res.status(403).json({ ok: false, fout: 'alleen cron of de beschermde vercel.app-host' });
+        const r = await V.ronde(kv, { tijd: 220000 }).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 300) }));
+        return q('vorm') === 'tekst' ? res.status(200).send(V.tekst(r)) : res.status(200).json(r.ok ? { ok: true, t: r.t, volledig: r.volledig, rijen: r.rijen, tekst: V.tekst(r) } : r);
+      }
+      const v = await kv.get(V.VROEG).catch(() => null);
+      if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(V.tekst(v)); }
+      if (!beschermd(req)) return res.status(200).json({ ok: true, tekst: V.tekst(v) }); // details (gewichten, groepen) alleen op de beschermde host
+      return res.status(200).json(v || { ok: false, fout: 'nog geen ronde' });
     }
     if (op === 'proef') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(await proef(kv, { dagen: q('dagen'), camp: q('camp') || '' })); }
     if (op === 'export' || op === 'persoon') {

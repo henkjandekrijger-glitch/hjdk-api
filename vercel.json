@@ -177,6 +177,10 @@
       "schedule": "41 * * * *"
     },
     {
+      "path": "/api/mm?op=vroeg&run=1",
+      "schedule": "37 */3 * * *"
+    },
+    {
       "path": "/api/sealed?op=indexnow",
       "schedule": "10 7 * * *"
     },
