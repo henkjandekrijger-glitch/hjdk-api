@@ -817,7 +817,9 @@ async function plaatje(req, res, url) {
   try {
     // cdn.yoo.rs weigert sinds 22 okt kale server-verzoeken (403): vraag de foto op zoals een browser die op yoo.rs zit, en probeer anders zonder verwijzer
     const H = [{ 'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1', accept: 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8', referer: 'https://kadoly.com/' }, { 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36', accept: 'image/*,*/*;q=0.8' }, {}];
-    let r = null; for (const h of H) { r = await fetch(it.img, { headers: h, signal: AbortSignal.timeout(8000) }).catch(() => null); if (r && r.ok) break; }
+    let bronUrl = it.img; const fi = Math.max(0, Math.min(9, Number(url.searchParams.get('i')) || 0)); // 24 nov: i = n-de foto van de productpagina (vaak een foto om, aan of in de hand)
+    if (fi > 0) { try { const h = await (await fetch('https://kadoly.com/product/' + encodeURIComponent(it.id) + '?lang=nl', { headers: H[1], signal: AbortSignal.timeout(10000) })).text(); const alle = [...new Set([...h.matchAll(/"(?:serverUrl|src|url)":"(https:[^"]+?\.(?:webp|jpe?g|png)[^"]*)"/gi)].map(m => m[1].replace(/\\\//g, '/')).filter(u => !/logo|icon|avatar|favicon/i.test(u)))]; res.setHeader('x-beelden', String(alle.length)); if (alle[fi]) bronUrl = alle[fi]; } catch (e) {} }
+    let r = null; for (const h of H) { r = await fetch(bronUrl, { headers: h, signal: AbortSignal.timeout(8000) }).catch(() => null); if (r && r.ok) break; }
     if (!r || !r.ok) { // foto staat niet meer op die plek (catalogus achter): haal de huidige eerste foto van de productpagina
       const eerst = r ? r.status : 'geen antwoord'; let nu = null;
       try { const h = await (await fetch('https://kadoly.com/product/' + encodeURIComponent(it.id) + '?lang=nl', { headers: H[1], signal: AbortSignal.timeout(10000) })).text(); const m = h.match(/"(?:serverUrl|src)":"(https:[^"]+?\.(?:webp|jpe?g|png)[^"]*)"/i); if (m) nu = m[1].replace(/\\\//g, '/'); } catch (e) {}
@@ -830,7 +832,11 @@ async function plaatje(req, res, url) {
       const W = 1080, Hh = 1920, wit = await sharp(bron).flatten({ background: '#ffffff' });
       const fotoB64 = async (n, fit = 'contain') => 'data:image/jpeg;base64,' + (await wit.clone().resize(n, n, { fit, background: '#ffffff', position: 'centre' }).jpeg({ quality: 90 }).toBuffer()).toString('base64');
       let el;
-      if (f === 'zoom') { const meta = await wit.clone().metadata(); const z = Math.round(Math.min(meta.width || 1000, meta.height || 1000) * 0.62), l = Math.max(0, Math.round(((meta.width || z) - z) / 2)), t = Math.max(0, Math.round(((meta.height || z) - z) / 2));
+      if (f === 'native') { // zoals de best klikkende NL-sieradenads (TikTok Top Ads, nov 2026): beeldvullende foto, korte tekst als onderschrift van een gewone video
+        const vol = 'data:image/jpeg;base64,' + (await wit.clone().resize(W, Hh, { fit: 'cover', position: 'centre' }).jpeg({ quality: 90 }).toBuffer()).toString('base64');
+        el = hEl('div', { width: W, height: Hh, position: 'relative', fontFamily: 'Inter' }, [{ type: 'img', props: { src: vol, width: W, height: Hh, style: { position: 'absolute', top: 0, left: 0 } } },
+          hEl('div', { position: 'absolute', top: 360, left: 0, width: W, justifyContent: 'center', padding: '0 90px' }, [hEl('div', { background: 'rgba(255,255,255,0.94)', color: '#111111', fontSize: tk.length > 34 ? 52 : 60, fontWeight: 800, lineHeight: 1.2, padding: '22px 34px', borderRadius: 22, textAlign: 'center' }, tk || it.t.slice(0, 40))])]); }
+      else if (f === 'zoom') { const meta = await wit.clone().metadata(); const z = Math.round(Math.min(meta.width || 1000, meta.height || 1000) * 0.62), l = Math.max(0, Math.round(((meta.width || z) - z) / 2)), t = Math.max(0, Math.round(((meta.height || z) - z) / 2));
         const crop = 'data:image/jpeg;base64,' + (await wit.clone().extract({ left: l, top: t, width: Math.min(z, (meta.width || z) - l), height: Math.min(z, (meta.height || z) - t) }).resize(W, W, { fit: 'cover' }).jpeg({ quality: 90 }).toBuffer()).toString('base64');
         el = hEl('div', { width: W, height: Hh, flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#ffffff', fontFamily: 'Inter' }, [{ type: 'img', props: { src: crop, width: W, height: W } }, hEl('div', { fontSize: 54, fontWeight: 800, color: '#111827', marginTop: 70, padding: '0 70px', textAlign: 'center', lineHeight: 1.15 }, tk || it.t.slice(0, 44))]); }
       else if (f === 'feit') { const foto = await fotoB64(820);
