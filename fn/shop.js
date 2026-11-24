@@ -1085,6 +1085,12 @@ export default async function handler(req, res) {
 <p class="meta">"Per verkoop" is wat we overhouden (+) of verliezen (−) op de lokker zelf, na inkoop, onze verzending en betaalkosten. Live opgebouwd ${esc(new Date().toLocaleString('nl-NL', { timeZone: 'Europe/Amsterdam' }))} uit de datapagina van de shop en Demand Radar (${Object.keys(markt).length} marktprijzen).</p>
 <p class="meta">Voorstel Henkjan en Claude (20 okt): de 3D Houten Uil Spaarpot op €9,95 (thuis €16,40 tegen €35,50 elders). Lokkercampagne loopt sinds 20 okt (PropellerAds 12032438) met de prijs die nu in de shop staat; gaat de prijs omlaag, dan passen we de advertenties aan.</p>
 </main></body></html>`); }
+    if (op === 'chatgpt' || op === 'chatgpt.jsonl') { // 24 nov 2026: productfeed voor ChatGPT Shopping (lib/openaifeed.js); ?vorm=stand geeft alleen de telling
+      const cat = await catalog(true); if (cat.terugval) return res.status(503).json({ ok: false, fout: 'catalogus niet beschikbaar' });
+      const { openaiFeed, gidsPerPid } = await import('../lib/openaifeed.js'); const { GIDSEN } = await import('../lib/gidsen-kadoly.js');
+      const f = openaiFeed(cat.items, gidsPerPid(GIDSEN)); res.setHeader('cache-control', 'public, max-age=900');
+      if (url.searchParams.get('vorm') === 'stand') return res.status(200).json(Object.assign({ ok: true }, f.tel));
+      res.setHeader('content-type', 'application/jsonl; charset=utf-8'); res.setHeader('content-disposition', 'inline; filename="kadoly-chatgpt.jsonl"'); return res.status(200).send(f.jsonl); }
     if (op === 'ttfeed' || op === 'ttfeed.csv') { // 17 nov: productcatalogus voor TikTok (CSV, dagelijks opgehaald); ?vorm=stand geeft alleen de telling
       const cat = await catalog(true), kaart = Object.assign({}, (await kv.get(K_KOST).catch(() => null)) || {});
       try { // 19 nov: Droppery-producten (dp_<id>) kenden geen inkoop in de kostenkaart en vielen als 'onbekend' buiten de productset marge15; inkoop (excl. btw), verzending en de verplichte fitting komen uit de Droppery-feed

@@ -743,6 +743,11 @@ export default async function handler(req, res) {
       const r = await kies(c, sb, b, t); if (!r) return res.status(404).json({ ok: false });
       if (!isBot(ua)) { try { const d = 'gk:zq:' + DAG(); await kv.raw(['HINCRBY', d, 'k|' + [c, sb, b, t].join('|'), '1']); if (r.eerlijk) await kv.raw(['HINCRBY', d, '0|k|' + [c, sb, b, t].join('|'), '1']); await kv.raw(['EXPIRE', d, String(90 * 86400)]); } catch (e) {} }
       res.setHeader('cache-control', 'no-store'); return res.status(200).json(Object.assign({ ok: true }, r)); }
+    if (op === 'pidgids') { // 24 nov 2026: per product de gidsen waarin het staat, voor links op de productpagina van kadoly.com (TAAK G, lib/shopprompt.js)
+      const { gidsenPerPid } = await import('../lib/openaifeed.js'); const m = gidsenPerPid(GIDSEN); const lev = LEVENDE(); const ok = new Set(lev);
+      for (const k of Object.keys(m)) { m[k] = m[k].filter(x => ok.has(x.slug)); if (!m[k].length) delete m[k]; }
+      res.setHeader('cache-control', 'public, max-age=900, s-maxage=3600'); res.setHeader('access-control-allow-origin', '*');
+      return res.status(200).json({ ok: true, bijgewerkt: new Date().toISOString(), gidsen: lev.length, producten: Object.keys(m).length, perProduct: m }); }
     if (op === 'zoek') { const v = String(q.get('q') || '').replace(/\s+/g, ' ').trim().slice(0, 160);
       if (q.get('log') === '1') { res.setHeader('cache-control', 'no-store'); if (!isBot(ua) && v) { const r = await zoek(v, 8); await logZoek(r.k, !r.producten.length && !r.gidsen.length, String(q.get('g') || '')); } return res.status(204).end(); }
       if (q.get('f') === 'json') { res.setHeader('cache-control', 'public, max-age=60, s-maxage=300'); const r = await zoek(v, 8); return res.status(200).json({ ok: true, h: r.h, producten: r.producten, gidsen: r.gidsen }); }

@@ -2681,6 +2681,10 @@
       "destination": "/api/shop?op=img&p=:p&t=:t"
     },
     {
+      "source": "/api/shop/chatgpt.jsonl",
+      "destination": "/api/shop?op=chatgpt"
+    },
+    {
       "source": "/api/shop/ttfeed.csv",
       "destination": "/api/shop?op=ttfeed"
     },
@@ -3019,7 +3023,7 @@
       "permanent": true
     },
     {
-      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:bundel|pakketten|pakkethtml|gmclabels|ttvideo|ttfeed|beeld/|prijslijst|tlogo)|shop$|o$).+)",
+      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:bundel|pakketten|pakkethtml|gmclabels|ttvideo|ttfeed|chatgpt|beeld/|prijslijst|tlogo)|shop$|o$).+)",
       "has": [
         {
           "type": "host",
