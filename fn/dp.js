@@ -10,10 +10,13 @@
 //   /api/dp?op=scan | op=keur | op=nacht           catalogus inlezen, keuring (brug + catalogus), nachtronde (cron 04:53 UTC)
 //   AW Dropship EU (lib/awdrop.js, 21 nov 2026): op=awfeed (X-Lus-Key), op=awkeur (cron 05:23 UTC), op=awtoken, op=awstand,
 //   op=awapi (beschermde host), POST op=aworder (X-Lus-Key; mandje bij AW, betalen alleen met kv aw:order:auto = ja)
+//   CJdropshipping (lib/cj.js, 24 nov 2026): op=cjtoken (sleutel plakken), op=cjstand, op=cjzoek&q=&land=DE|CN&n=, op=cjkies&vid=&prijs=&titel_nl= (beschermde host),
+//   op=cjfeed (X-Lus-Key), POST op=cjorder (X-Lus-Key; order bij CJ aangemaakt met payType 3, betalen doet Henkjan in CJ), op=cjorders
 import { wcRoute, dpSleutels, dpStand, dpLog, dpFeed, dpNieuweOrder, dpOrderStatus, DP_HOST } from '../lib/droppery.js';
 import { dpProbe, dpTokenZet, dpTokenStand, dpApi, dpScan, dpKeurCatalogus, dpKeurLaatste, vraagIdx } from '../lib/dpapi.js';
 import { keurStand } from '../lib/dpkeur.js';
 import { laterAf } from '../lib/mensmeter.js';
+import { cjSleutelZet, cjStand, cjZoek, cjKies, cjFeed, cjNieuweOrder, cjOrders, cjOrderInfo } from '../lib/cj.js';
 import { awTokenZet, awTokenStand, awKeur, awKeurLaatste, awFeed, awApi, awNieuweOrder, awOrders, awZoek, awPakketten, logRegel as awLog } from '../lib/awdrop.js';
 
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -134,6 +137,24 @@ export default async function handler(req, res) {
     }
     if (op === 'awstand') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json({ token: await awTokenStand(), keuring: await awKeurLaatste(), orders: await awOrders() }); }
     if (op === 'awapi') { if (!beschermd) return res.status(404).send('Niet gevonden'); const pad = String(q.get('pad') || 'user-profile').replace(/[^a-z0-9/_-]/gi, '').slice(0, 80); const params = {}; for (const [k, v] of q.entries()) if (!['op', 'pad'].includes(k)) params[k] = v; const r = await awApi(pad, { params }); return res.status(200).json({ st: r.st, fout: r.fout || null, data: r.data, tekst: r.tekst }); }
+    if (op === 'cjtoken') {
+      if (!beschermd) return res.status(404).send('Niet gevonden');
+      let melding = '';
+      if (req.method === 'POST') { const b = typeof req.body === 'object' && req.body ? req.body : Object.fromEntries(new URLSearchParams(String(req.body || ''))); const r = await cjSleutelZet(b.sleutel); melding = r.ok ? '<p style="background:#e6f4ea;color:#0a5c2b;padding:12px;border-radius:8px"><b>Gelukt.</b> CJ geeft een token. Zoeken, vracht en orders werken nu; je mag dit venster sluiten.</p>' : '<p style="background:#fde8e8;color:#8a1010;padding:12px;border-radius:8px"><b>Niet gelukt.</b> ' + esc(r.fout) + '</p>'; }
+      const st = await cjStand(); res.setHeader('content-type', 'text/html; charset=utf-8');
+      return res.status(200).send('<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>CJ API-sleutel</title><body style="font:16px/1.5 system-ui;max-width:640px;margin:32px auto;padding:0 16px;color:#0b1620"><h1 style="font-size:24px">CJdropshipping API-sleutel voor Kadoly</h1>' + melding + '<p>' + (st.toegang.klaar ? 'Er staat al een sleutel (sinds ' + esc(st.toegang.sinds || 'eerder') + '). Plak hieronder alleen een nieuwe als je hem vervangt.' : 'Ga in <b>cjdropshipping.com</b> naar My CJ, Apps, installeer de app API, open het tabblad API, klik Add API (type API Key) en kopieer de sleutel met het kopieer-icoon.') + '</p><form method="post"><input name="sleutel" autocomplete="off" style="width:100%;padding:12px;font:inherit;border:2px solid #0b1620;border-radius:8px" placeholder="CJ...@api@..."><button style="margin-top:12px;padding:12px 18px;font:inherit;font-weight:700;background:#0b1620;color:#fff;border:0;border-radius:8px">Opslaan</button></form><p style="font-size:14px">Orders worden bij CJ alleen aangemaakt, niet betaald. Betalen doe je zelf in CJ.</p></body>');
+    }
+    if (op === 'cjstand') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json(await cjStand()); }
+    if (op === 'cjzoek') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json(await cjZoek({ q: q.get('q') || undefined, land: q.get('land') || undefined, n: q.get('n') || undefined, naar: q.get('naar') || undefined })); }
+    if (op === 'cjkies') { if (!beschermd) return res.status(404).send('Niet gevonden'); return res.status(200).json(await cjKies({ vid: q.get('vid'), prijs: q.get('prijs'), titel_nl: q.get('titel_nl'), categorie: q.get('categorie'), land: q.get('land'), weg: q.get('weg') === '1' })); }
+    if (op === 'cjfeed') { if (!beschermd && !lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' }); return res.status(200).json(await cjFeed()); }
+    if (op === 'cjorders') { if (!beschermd) return res.status(404).send('Niet gevonden'); const id = q.get('cj'); return res.status(200).json(id ? await cjOrderInfo(String(id).replace(/[^A-Za-z0-9_-]/g, '')) : await cjOrders()); }
+    if (op === 'cjorder') {
+      if (!lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' });
+      if (req.method !== 'POST') return res.status(405).json({ ok: false, fout: 'POST' });
+      const b = typeof req.body === 'object' && req.body ? req.body : JSON.parse(req.body || '{}');
+      const r = await cjNieuweOrder(b); return res.status(r.ok ? 200 : 400).json(r);
+    }
     if (op === 'aworder') {
       if (!lus) return res.status(401).json({ ok: false, fout: 'X-Lus-Key ontbreekt' });
       if (req.method !== 'POST') return res.status(405).json({ ok: false, fout: 'POST' });
