@@ -3,7 +3,7 @@
 Bijgewerkt: vrijdag 20 november 2026, 15:15 UTC (11:15 Curaçao), door chat-taniakross.
 Live te lezen: https://hjdk-api-henq.vercel.app/api/wtb?op=tkoverdracht (met web_fetch_vercel_url). Bovenaan staat dan het werklog van alle regels met wie=chat-taniakross of wie=tk-...
 
-**Afspraak Henkjan 20 nov 10:51 Curaçao: "geen activiteit tot maandag 20:00 hier".** Tot maandag 23 november 20:00 Curaçao (dinsdag 24 nov 00:00 UTC) doet niemand iets aan taniakross.media: geen uurstanden, geen dagronde, geen mails, geen nieuwe advertenties. De campagne loopt door zoals hij staat. De netwerkwacht van Clickmind blokkeert botzones vanzelf, dat is geen activiteit van een chat. Maandag na 20:00 eerst met Henkjan de Mailchimp-adressen bespreken (zie onderaan).
+Bijgewerkt 24 nov 2026 11:30 UTC: de pauze tot maandag 20:00 is voorbij. Campagne opgesplitst in BEWEZEN (12183102) en VERKENNER (12168319) met een dagelijkse leerronde (zie 7). De Mailchimp-adressen (zie 10) zijn nog niet besproken.
 
 ## 1. Wat het is
 
@@ -75,7 +75,18 @@ Live te lezen: https://hjdk-api-henq.vercel.app/api/wtb?op=tkoverdracht (met web
 - Link: Clickmind-wissel **/w/tk-podcast** (whichtobuy.best) met een url-arm naar taniakross.media (utm_source=propeller). pb {"propeller":"aanmelding"}: de PropellerAds-conversie gaat alleen terug bij een aanmelding.
 - Stand 14:05 UTC 20 nov: 20.102 vertoningen, 154 kliks, $0,26, 1 aanmelding (banner 27789106), Clickmind 37 echt, 28 actie. Rekensom: een klik kost ongeveer $0,0017. Voor $0,03 per adres moet 1 op 18 klikkers zich aanmelden; nu is dat ongeveer 1 op 80. Clickmind ziet maar ongeveer 20% van de klikkers als echt mens.
 - Henkjan 20 nov: "gebruik clickmind om juiste zones te vinden moet naar 0.03 cent per adres. Blijf leren op alle variabelen" (advertenties, venstertekst, moment, zones, mail). Zones: /api/mm/zones op hjdk-api-henq (wit, zwart, verdacht, mensPct). De netwerkwacht neemt het blokvoorstel van Clickmind vanzelf over.
-- Uurstand in de chat (send_later-keten "Uurstand TK PODCAST ADRES") is op 20 nov 15:12 UTC **gestopt** door de afspraak "geen activiteit tot maandag". De dagronde van 23:00 UTC (beste advertenties houden, 2 nieuwe erbij) draait tot maandag ook niet. Na maandag 20:00 opnieuw plannen als Henkjan dat wil.
+- Uurstand in de chat (send_later-keten "Uurstand TK PODCAST ADRES") is op 20 nov 15:12 UTC gestopt; sinds 24 nov is er een dagelijkse leerronde (hieronder).
+- **Uitslag 20-24 nov (12168319):** 564.313 vertoningen, 3.138 kliks, $5,14, 32 adressen ($0,16 per adres). Lijst van 20 naar 51 leden. **De 48 zones die Clickmind "wit" noemt (echt mens) gaven 27 van de 32 adressen voor $0,53 ($0,02 per adres); de andere ~1.100 zones 5 adressen voor $4,57 ($0,91 per adres).** Zone 10771611 alleen: 21 adressen op 583 kliks voor $0,32. Advertenties: "Nieuw van Tania Kross" (cr 1,69%), "Wie is Tania Kross echt?" (1,61%), "Muziek als medicijn" (1,46%), "Opera, maar dan anders" (1,33%) winnen; "Van Curaçao tot Concertgebouw" (0,25%) en "Winnaar van The Masked Singer" (0,27%) verliezen en staan uit. Venster: tekst g2 "Tania heeft iets voor je" wint (20 aanmeldingen op 922, 2,2%).
+- **Opzet sinds 24 nov (Henkjan: "verbeter campagne drastisch met wat je geleerd heb OF leer beter leren voor de campagne . Bod kan iets omhoog als je beter leert . Dus iedere dag gaat er betere campagne live"):**
+  - **BEWEZEN 12183102** "TK ADRES BEWEZEN NL": witte lijst van 53 zones (Clickmind-wit plus elke zone met een adres), de 4 winnende advertenties plus 4 nieuwe (Tania heeft iets voor je; Waarom muziek ons heelt; Opera zonder drempel; Het verhaal achter de stem), knop "Gratis in mail", **bod $0,05 per adres**, $10 per dag, $50 totaal.
+  - **VERKENNER 12168319**: blijft op $0,03 om nieuwe zones te vinden; de 53 bewezen zones staan daar op de zwarte lijst, zodat de twee niet tegen elkaar bieden.
+- **Dagelijkse leerronde** (send_later-keten "TK ADRES dagronde", rond 12:17 UTC, rapport in de chat van Henkjan):
+  1. Cijfers van de laatste 3 dagen per zone en per advertentie van BEWEZEN en VERKENNER (PropellerAds /adv/statistics, group_by zone_id en banner_id, tz +0000) plus Clickmind /api/mm/zones (lijst wit) en de lijststand.
+  2. Promoveren: een zone in de VERKENNER met een adres, of die Clickmind wit noemt, gaat naar de witte lijst van BEWEZEN en op de zwarte lijst van de VERKENNER.
+  3. Degraderen: een zone in BEWEZEN met 80 of meer kliks en geen adres gaat van de witte lijst af (zones_erbij_uitsluiten).
+  4. Advertenties: met 300 of meer kliks en minder dan de helft van de gemiddelde conversie van zijn campagne gaat uit; elke dag een nieuwe kopie van BEWEZEN met de beste advertenties plus 2 nieuwe (kopie_met_verse_creatives, knop hoogstens 15 tekens, dan witte lijst zetten, bod zetten, starten), de oude BEWEZEN uit zodra de nieuwe loopt.
+  5. Bod: BEWEZEN omhoog met $0,01 (hoogstens $0,08) alleen als de kosten per adres daar onder $0,05 blijven en hij minder dan $5 per dag uitgeeft; nooit boven $0,10 zonder Henkjan. Budget blijft $10 per dag.
+  6. Rapport, hooguit 6 regels: adressen gisteren per campagne, kosten per adres, leden totaal, wat er veranderde. Werklog met wie=chat-taniakross.
 - Advertentiebeelden op maat: https://hjdk-api-henq.vercel.app/api/advbeeld?u=<beeld>&t=icon|pa|mg.
 - Volledige werking van tk-podcast en tk-mail staat ook in lib/werking.js (regel taniakross.media podcast).
 
@@ -115,6 +126,8 @@ Henkjan vroeg 20 nov: "Check in mn mail naar adressen van tania ooit uit mailchi
 9. Boekingscontact op de site controleren met Henkjan (9).
 
 ## Logboek (nieuwste boven)
+
+- 24 nov 11:30 UTC chat-taniakross: les uit 20-24 nov: Clickmind-wit zones gaven 27 van 32 adressen voor $0,02 per adres. BEWEZEN 12183102 (53 zones, 8 advertenties, $0,05) gestart; VERKENNER 12168319 zonder die zones en zonder de 2 slechtste advertenties; dagelijkse leerronde gepland. Lijst 51 leden.
 
 - 20 nov 15:15 UTC chat-taniakross: overdracht geschreven. Podcastmail gaat niet meer vanzelf (alleen na Nu versturen), adressen naar Vercel-variabelen, uitrol dpl_F1Z7GzbzA1d8qiHsgaTgvNK4aqLC live. Mailchimp-exports gevonden. Uurstand gestopt tot maandag 20:00 Curaçao.
 - 20 nov chat-taniakross: welkomstmail met cadeau (Barcelona, verrassing, aflevering), wissel tk-mail, venster lerend; campagne 12168319 op CPA $0,03 per adres; /podium-klassiek, mezzo-aria's, sitemap en llms.txt live.
