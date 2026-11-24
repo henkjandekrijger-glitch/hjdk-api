@@ -45,3 +45,9 @@ Alleen de actuele vraag en reactie staan open. Eerdere beurten zijn ingeklapt en
 Een updateverzoek onderbreekt een eventueel nog lopend koopantwoord. De toelichting blijft in de afzonderlijke updatetoestand tot Nieuwe vraag. De werkomgeving-beveiliging is niet uitgezet of gewijzigd.
 
 Browsercontrole: 390px en1280px, vijf gespreksbeurten, twee actuele berichten en acht ingeklapte historische berichten, één vervolgvraag en drie opties; geen JavaScriptfouten of horizontale overflow. Updateknop voor fietsmaat en toelichting leveren uitsluitend feedback/update-detail op; Nieuwe vraag schakelt terug naar de gewone chat. Echte online chatvraag naar fietsmaatrekenhulp kreeg een antwoord via de bestaande API. Lange tekst is een kort fragment met Hele antwoord; samengestelde vragen worden beperkt tot het eerste gevraagde gegeven. De actuele vraag blijft bovenin het gespreksvak zichtbaar.
+
+## Onafhankelijke UX-review en correcties
+
+Vier AI-reviewers hebben visuele rust, gespreksbetrouwbaarheid, toegankelijkheid en taakvoltooiing onafhankelijk beoordeeld. Dit is geen onderzoek met echte bezoekers. Verslag: docs/keuzehulpen-ux-review-2026-11-23.md.
+
+Op basis van de concrete reproducties zijn verzoekvolgorde en pending-modus hersteld; toelichtingen kunnen niet meer door een vertraagd antwoord naar de verkeerde hulp gaan. Concepten blijven per koop-/updatemodus en per hulp apart bewaard. Een fout of vertraagde opslag overschrijft geen nieuw concept. De chat houdt de volledige antwoordtekst intact, toont een volledige eerste zin, heeft focusherstel na knoppen en benoemde historie. Update-/stemknoppen hebben onderwerp-specifieke toegankelijke labels. Mobiele uitlijning is recht en de hero-marge24px. Expliciete cadeau-/fietsmaatvragen hebben een veilige bestaande bestemming als het model die niet noemt. Gift-herkenning is taalgebonden, zodat giftig geen cadeauknop oplevert.
