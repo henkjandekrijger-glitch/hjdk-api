@@ -124,7 +124,7 @@ Henkjan vroeg 20 nov: "Check in mn mail naar adressen van tania ooit uit mailchi
   3. Stand: https://simpele-site-henq.vercel.app/api/mmart?op=stand (artikel vandaag en door wie, laatste 5, poging van vandaag, wat er in de wachtrij over is). Is de wachtrij op en draait er geen account, dan stopt het vanzelf (gemeld in het werklog): vul dan WACHTRIJ in api/mmart.js aan met gelezen bronnen.
   Prompt in het kort: stand lezen, onderwerp uit Demand Radar, bronnen lezen, JSON in NL en EN zoals data/mm/2026-11-24-slapen.json, alleen dat bestand inline uitrollen met de rest op sha, live controleren, werklog, drie regels aan Henkjan.
 - **Toegankelijke weergave**: knop met het toegankelijkheidsteken (figuur met gespreide armen in een cirkel) naast de zon/maan op elke pagina, of ?lees=1 (uit met ?lees=0). Exact de vormgeving van de live pagina sealedintent.com (Henkjan: "Ik vroeg sealedintent look . Exact"; niet de oude blauwe kleuren uit lib/sealed.js): zwart-wit (inkt #111113, lijnen #E5E7EB, vlak #F3F4F6), Inter 17px/1.6, kop 1040px met merk links (dichte cirkel + naam) en tekstlinks rechts, inhoud 680px, h1 24-30px, kleine kopjes 13px hoofdletters, rijen met een lijn ertussen, pilknoppen met rand (hoofdknop zwart), kaarten hoek 16, vlakken hoek 12, voet 13px, foto bovenaan klein (220px). Donker = omgekeerd. Alles in tk-extra.css onder html[data-tk-lees].
-- Laatste uitrol: dpl_G9rVHRKo7JUKEruUQkeMoUhf8Z3F (24 nov 13:22 UTC): tk-extra.css exact sealedintent.com (zwart-wit). Daarvoor dpl_ETPHTDPmPon4QApCeHeVBeg76Y9B: api/mmart.js (terugval), api/kaart.js, vercel.json (cron), tk.js (toegankelijkheidsteken).
+- Laatste uitrol: dpl_HJ7Tn2BWHze4j5zn1qr3HG3HLVRk (24 nov 13:38 UTC): tk-extra.css exact sealedintent.com (zwart-wit), vakgebieden-lijst in de kolom, geen streep onder blok-links. Controle: alle paginasoorten (home, podcast, optredens, pers, vragen, dossier, artikel) op 1280 en 390 px zonder te brede of uitstekende blokken. Daarvoor dpl_ETPHTDPmPon4QApCeHeVBeg76Y9B: api/mmart.js (terugval), api/kaart.js, vercel.json (cron), tk.js (toegankelijkheidsteken).
 
 ## 11. Open punten, op volgorde
 
@@ -140,6 +140,8 @@ Henkjan vroeg 20 nov: "Check in mn mail naar adressen van tania ooit uit mailchi
 10. Tania's persoonlijke noot in het dossier, daarna dossier linken, advertentie erheen, ZICHT-proef (12).
 
 ## Logboek (nieuwste boven)
+
+- 24 nov 13:38 UTC chat-taniakross: fout in toegankelijke weergave hersteld (vakgebieden Podcast, Radio, Concerten enz. stonden paginabreed met grote witruimte; nu een lijst in de kolom), streep onder hele gastblokken weg, kop op telefoon netter. Alle paginasoorten nagelopen. Uitrol dpl_HJ7Tn2BWHze4j5zn1qr3HG3HLVRk.
 
 - 24 nov 13:22 UTC chat-taniakross: toegankelijke weergave exact naar de live sealedintent.com (zwart-wit, 17px, 680px, lijnen, pilknoppen) in plaats van de oude blauwe kleuren. Uitrol dpl_G9rVHRKo7JUKEruUQkeMoUhf8Z3F.
 
