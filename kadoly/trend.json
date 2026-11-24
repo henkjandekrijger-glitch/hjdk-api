@@ -1,71 +1,71 @@
 {
  "uitleg": "Producten die passen bij wat nu trending is op TikTok NL. De dagelijkse TikTok-trendscan (geplande taak 'Kadoly TikTok-trendscan') zet hier hoogstens 10 product-id's met de trend erbij; /api/shop?op=videoplan (lib/kadolyvideoplan.js) geeft ze voorrang in de video's van de nacht.",
- "bijgewerkt": "2026-11-21",
+ "bijgewerkt": "2026-11-24",
  "pids": [
-  "oc_4174003419430913",
-  "oc_4174002164400133",
-  "oc_4174003357777921",
   "oc_4174003356876801",
-  "oc_4173959227441153",
+  "oc_4174003419430913",
   "oc_4174003357499393",
-  "oc_4174003419709441",
+  "oc_4174003357777921",
+  "oc_4173959227441153",
+  "oc_4174003271188481",
+  "oc_4173959224754177",
   "oc_4174002202804226",
   "oc_4174002165055489"
  ],
  "trends": [
   {
-   "hashtag": "deko",
-   "rank_change": 44,
-   "woord": "lantaarn",
-   "pids": [
-    "oc_4174003419430913",
-    "oc_4174003419709441"
-   ]
+   "hashtag": "bloemen",
+   "rank_change": 25,
+   "woord": "vaas, orchidee (alleen trend, nog geen lang lopende advertentie: telt nog niet)",
+   "pids": []
   },
   {
-   "hashtag": "fragrancetok",
+   "hashtag": "roomdecor",
    "rank_change": 16,
-   "woord": "geur, diffuser (ook perfumetok +14)",
+   "woord": "lamp (ook decoration +13); bewezen: Luminize 443 dagen",
    "pids": [
-    "oc_4174002164400133"
+    "oc_4173959227441153",
+    "oc_4173959224754177"
    ]
   },
   {
-   "hashtag": "christmastree",
-   "rank_change": 12,
-   "woord": "kerstboom",
+   "hashtag": "keukeninspiratie",
+   "rank_change": 10,
+   "woord": "servies (ook uitzet +5); bewezen: Karakushome 196 dagen, Mimo Homeware schaalt op",
+   "pids": [
+    "oc_4174003356876801",
+    "oc_4174003357499393",
+    "oc_4174003271188481"
+   ]
+  },
+  {
+   "hashtag": "christmasdecorations",
+   "rank_change": 9,
+   "woord": "kerstboom (ook christmastree +6); bewezen: Kerstland 46 dagen",
    "pids": [
     "oc_4174003357777921"
    ]
   },
   {
-   "hashtag": "heatlesscurls",
-   "rank_change": 10,
-   "woord": "krullen zonder hitte (niets in de shop met marge 8)",
+   "hashtag": "deko",
+   "rank_change": 8,
+   "woord": "lantaarn; bewezen: KoopjesHub 355 dagen, Love & Faith 359 dagen",
+   "pids": [
+    "oc_4174003419430913"
+   ]
+  },
+  {
+   "hashtag": "elfontheshelfideas",
+   "rank_change": 46,
+   "woord": "kerst met kinderen; geen product met marge 8",
    "pids": []
   },
   {
-   "hashtag": "interieurstyling",
-   "rank_change": 9,
-   "woord": "lamp",
-   "pids": [
-    "oc_4173959227441153"
-   ]
-  },
-  {
-   "hashtag": "uitzet",
-   "rank_change": 7,
-   "woord": "servies",
-   "pids": [
-    "oc_4174003356876801",
-    "oc_4174003357499393"
-   ]
-  },
-  {
-   "hashtag": "schoencadeau",
-   "rank_change": "NEW",
-   "woord": "klein cadeau (Sinterklaas); nieuw in top 50, geen match met marge 8",
+   "hashtag": "pressonnails",
+   "rank_change": 45,
+   "woord": "plaknagels; niets in de shop",
    "pids": []
   }
- ]
+ ],
+ "tafelhaard": "geen trend vandaag, wel bewezen en eigen verkoop (tafelhaard_b_ic 1 verkoop op TikTok): pids oc_4174002202804226, oc_4174002165055489"
 }
