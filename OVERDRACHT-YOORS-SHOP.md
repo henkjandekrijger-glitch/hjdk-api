@@ -18,7 +18,44 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - **Strategie van de dag** (Henkjan 19 okt: "Ik ga alle prijzen vandaag nog naar kostprijs brengen" en "En we kiezen strategieen iedere dag. Bijv iets heel goedkoops en dan een bundel laten maken die alles compenseert. Vooraf bundels samenstellen."): `auto` (standaard) kiest `kostprijs` zodra de helft van de catalogus geen 50 cent marge meer heeft; dan geen margefilter, wel 'niet duurder dan elders all-in'. Vastzetten: `/api/shop/kies?strategie=marge|kostprijs|auto` via de beschermde host. Volgende stap (voorstel): vooraf samengestelde bundels per merk (een keer verzending) als strategie 'lokker + bundel'; vraagt een bundellink in de shop.
 - **Slots**: eigen plafond SHOP-LUS 35 per dag (Henkjan: "Ik heb meer ruimte deze maand 100 slots").
 
-## Stand nu (11 nov 2026, 23:30 UTC)
+## Stand nu (24 nov 2026, 02:00 UTC): Google Shopping, marges, lokkers, nachtronde, sieraden
+Overdracht van de kadoly-shopify-chat (23 nov). Henkjan wil een eerste verkoop via Google ("IK MOET echt een google verkoop hebben"), geen verlies meer op gewone producten ("Geen verlies meer accepteren"), lokkers als apart proces, en een sieradencampagne voor de kerst. Praat met hem in gewone, korte Nederlandse zinnen zonder vaktaal of taakletters zonder uitleg ("doe even normaal").
+
+**Google Ads (Kadoly 460-749-3899, in Chrome met authuser=1)**
+- Campagne KADOLY SHOPPING NL 24521637835, advertentiegroep 199226110021, € 15 per dag, "Beperkt door budget". Budget, bod en planning alleen op Henkjans woord.
+- Productgroepen per groeistap (custom_label_3: lokker, verkocht, trek, nieuw, kans, stil, uit), elke nacht opnieuw uit de labelbron.
+- Script "KADOLY Shopping uurlus" (scriptId 12737974), elk uur, bron `kadoly/gads-uurlus.js`: verkocht = bod minstens 1,00; lokkers vast 0,60; los product € 8 in 14 dagen zonder verkoop = uit (behalve de drie bewezen producten); vanaf € 2 kosten stap voor stap lager (min 0,15); zoektermen van andere winkels (ikea, action, hema, bol.com, amazon enz.) en dure termen zonder verkoop uitsluiten, hoogstens 3 per uur. Wijzig je het script: plak de nieuwe versie in Google Ads (Tools, Scripts) en zet hem in dit bestand.
+- Uitsluitingen met de hand: via het rapport Zoektermen (de pagina met uitsluitingszoekwoorden laadt niet door een extensie in Chrome).
+- Meting: de enige conversie is de GA4-aankoop (G-6Z7SYN06FN, property 353972033). Google Ads zag nog nul aankopen, omdat bestellingen niet aan de Google-klik hangen. TAAK K in de briefing lost dat op (gclid, gbraid, wbraid, srsltid bij de order in de datapagina). Clickmind meet Google-bezoek al (`net` = google-ads of google-shopping), cm.js staat 1 dag in de edge-cache.
+- Performance Max: nog niet (antwoord aan Henkjan 23 nov). Pas als Google 15 tot 30 verkopen per maand ziet, dan als proef alleen met de productfeed naast Shopping. Voorstel dat op zijn ja wacht: elke nacht de bestellingen met de winst als waarde naar Google Ads sturen (offline conversies), zodra TAAK K de gclid levert.
+
+**Merchant Center Kadoly 5876502305**
+- Hoofdfeed van de winkel (cdn.kadoly.com/uploads/feeds/google-shopping-nl.xml) plus aanvullende bron "Kadoly labels" = `https://go.kadoly.com/api/shop/gmclabels.csv` (custom_label_0 prijs tegen de markt, 1 marge, 3 groeistap, 4); stand met `?vorm=stand`, opnieuw laten ophalen met `/api/gsc?op=mclabels`.
+- Diagnose `/api/gsc?op=mcdiag`: gratis vermeldingen geven bijna niets (1 klik in 28 dagen; de 11.439 "Organic Shopping"-sessies in GA4 waren geen gratis vermeldingen). Oorzaken: nieuwe winkel zonder winkelreviews, 95 van 354 producten meer dan 10% boven de marktprijs van Google. Google Klantenreviews staat in TAAK K punt 5.
+- Klantenservice in Merchant Center staat op Henkjans eigen e-mail en telefoon (23 nov).
+
+**Prijzen (de winkel leest `https://go.kadoly.com/api/shop/prijslijst` elke nacht in, TAAK Y)**
+- MARKTPRIJS (fn/shop.js): 8 producten naar de marktprijs van Google als er dan nog minstens € 5 marge blijft.
+- MARGE_VLOER: sieraden en horloges van GLAM & GLORY, Menthe à l'eau, LanLivia, Luxaa en Lisberg op minstens € 10 marge en 20% van de omzet zonder btw (409 producten; ze verdienden € 1,40 tot € 2,20). Nieuwe Orderchamp-producten nooit eronder (TAAK M).
+- LOKKER: rietdiffuser Amsterdam (oc_4174002164400133) € 15,95, ivory kaarsenhouder trio (oc_4174003456851970) € 29,95, bloemvaas boekvorm (oc_4174002211717121) € 13,95, alles met verzending. Henkjan: "Lokkers zijn niet geschrapt dat is een apart proces ." Stopregel: € 60 verlies of 14 dagen zonder extra product in dezelfde bestelling, dan vanzelf terug naar de gewone prijs. 1 per klant en "Maak het cadeau compleet" staan in TAAK L.
+- Controle: `/api/shop?op=lokkercheck` (beschermde host, `&vorm=json`): per lokker prijslijst, winkel, productpagina, Merchant Center, status per Google-kanaal, vertoningen en kliks. Stand 24 nov 02:00 UTC: de winkel en de productpagina's hebben de lokkerprijzen; kaarsenhouder staat in Merchant Center op € 29,95 en is goedgekeurd voor Shopping en gratis vermeldingen; rietdiffuser en vaas waren even niet te vinden in Merchant Center (waarschijnlijk in verwerking na de prijswijziging). Nakijken in de ochtend.
+
+**Nachtronde van de winkel (Henkjan 23 nov: "Maak iets zodat code die taak kan vinden en doorvoert een release doet op tijd iedere nacht .")**
+- De winkelcode staat lokaal bij Henkjan (Bitbucket, niet bereikbaar vanuit de cloud). Claude Code op die computer krijgt zijn werk zo: `https://go.kadoly.com/api/shop?op=nacht` is de eenmalige inrichting (nachtronde.md en een script met claude -p, elke nacht 05:00 UTC); de ronde haalt `op=taken&vorm=tekst` (header X-Lus-Key = SHOP_FEED_KEY), bouwt en test per taak, doet de release en meldt POST `op=taken`.
+- Taken = de briefing `/api/shop?op=prompt` (lib/shopprompt.js) in losse stukken met een versie. Nieuwe of gewijzigde taak zet je gewoon in lib/shopprompt.js; de ronde pakt hem de volgende nacht. Taken ouder dan 10 dagen alleen controleren, niet bouwen.
+- Stand: Henkjan plakte de inrichting op 23 nov rond 19:55 UTC; Claude Code stond daarna te wachten op zijn antwoord. De lokkerprijzen staan nu in de winkel, maar er kwam nog geen enkele melding binnen (`/api/shop?op=taken&kort=1`: laatsteRonde leeg, 31 open). Waarschijnlijk faalt de meldstap: de sleutel in de winkel wijkt af van SHOP_FEED_KEY op hjdk-api (dan krijgt hij "Niet gevonden"), of het script stuurt de sleutel niet mee. Eerste geplande ronde: 24 nov 05:00 UTC. Komt er daarna nog niets: vraag Henkjan wat Claude Code liet zien (of logs/nachtronde-<datum>.log in de winkelrepo) en los het aan deze kant op.
+- De shop-overdracht toont de laatste ronde en waarschuwt na 26 uur zonder melding of bij een mislukte release.
+
+**Sieradencampagne (Henkjan 23 nov: "zetten we jewlry campagne op voor niewe jewlry morgen echt verkoop zien. We doen dat op TT. Op PINT en op FB.")**
+- Voorstel, wacht op zijn budget: TikTok € 20 per dag, Facebook € 10, Pinterest € 10; per kanaal alles uit bij € 40 zonder verkoop; een advertentie stopt zodra hij de marge van zijn product heeft uitgegeven zonder verkoop. Na zijn ja: 8 sieraden met minstens € 10 marge na de vloer (`/api/shop?op=niche&q=...`), video's via kadoly-video /api/advideo, campagnes klaarzetten en eerst laten zien.
+- Facebook loopt via Whop (blijft zo; Henkjan vroeg of Zernio in plaats van Whop moest: nee). "KADOLY META NL test 20" liep op 23 nov met $ 38,54 uitgegeven en nog geen omzet.
+- TikTok (advertiser 7708796437043265537): eenmalig accountbudget € 40 moet omhoog en de bedrijfsverificatie loopt; de 8 advertenties van de Pakket-test (campagne 1882654677054529) stonden in de keuring.
+- Pinterest via Zernio (profiel 6afaf9820c09220040d746f4, posten 6afb8a5d86e8bb18f844fc95): het advertentieaccount 6b04918bfa28eedf05296013 mist de rechten ads:read en ads:write; Henkjan moet de nieuwe koppellink goedkeuren.
+- P&L's in Drive: niet gevonden; vraag de bestandsnaam of link als ze nodig zijn.
+
+**Black Friday:** Henkjan vroeg een statement dat we niet meedoen met een sympathiek verhaal, of een echt extreme aanbieding. Opties A en B liggen bij hem; nog geen keuze.
+
+## Stand PropellerAds-shoplus (laatst bijgewerkt 11 nov 2026, 23:30 UTC; sinds 28 okt staan alle SHOP-LUS-campagnes uit)
 - **Netwerk:** alleen PropellerAds. MGID, Mondiad en BOOST ZONES 12093795 uit.
 - **11 nov:** 10 campagnes (128842-128970 reeks) op 0,12, plafond $20 bereikt ($19,22). 5.204 kliks, 449 echte mensen (9%), 11 mandjes, 12 op de afrekenpagina, 0 betaald. Kosten per echt mens $0,043, per mandje $1,75.
 - **Geleerd:** op 0,03 (9 nov) ~500 kliks en ~2 mandjes per dollar, op 0,12 ~270 kliks en ~0,6 mandje per dollar; het plafond bindt toch, dus een lager bod geeft meer mensen voor hetzelfde geld en verkeer tot in de avond. Mandjes kwamen 2 dagen op rij van Sint & Piet muurcirkel, Kleine Prins wensbrievenbus, Harry Potter-bouwset, kerstboom, wereldkaart en handzeep; Plantenset, Puzzel Schildpad en Schoenzetmat XL gaven op 11 nov 0 mandjes.
@@ -29,6 +66,13 @@ Henkjan, 19 okt: "We gaan iedere dag 20 producten testen deze week. Lerend. Met 
 - **Leverlanden:** de lus-feed heeft geen leverlanden per product en de shop is er alleen in NL/EN/ES. Bericht aan Babita (leverlanden per product, shop in DE en FR) is opgesteld; daarna kan de shoptest per land kiezen. Belgie (Vlaanderen) is de snelste eerste stap.
 
 ## Open bij Henkjan
+
+### Kadoly, 24 nov 2026 (kadoly-shopify-chat)
+- Budget voor de sieradencampagne (TikTok, Facebook via Whop, Pinterest via Zernio).
+- Black Friday: A (niet meedoen, met verhaal) of B (extreme aanbieding).
+- Pinterest: nieuwe Zernio-koppellink met advertentierechten goedkeuren. TikTok: accountbudget omhoog, bedrijfsverificatie afronden.
+- Nachtronde winkel: wat liet Claude Code zien? Er komt nog geen melding binnen.
+- Ja of nee op offline conversies met winst als waarde naar Google Ads (na TAAK K).
 
 ### Signaal van groei-account, 23 november 2026
 
@@ -105,6 +149,7 @@ Alleen onderzoek en overdracht, geen winkel- of campagnecode gewijzigd. Clickmin
 - hjdk-api: dagkeuze `lib/shopkies.js` (+ VAST_DAG in `fn/shop.js`), teksten `lib/shopteksten-hand.js` en `lib/shoptekst.js`, bots `lib/shopbot.js`, niet geladen `lib/shopniet.js`, archief `lib/shcarchief.js`, kassadoel `lib/shopdirect.js`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 2026-11-24 02:00 UTC (kadoly-shopify-chat, Henkjan: "Zet uitgebreide overdracht klaar voor andere chat ."): stand bovenaan herschreven (Google Ads en uurscript, Merchant Center, prijzen, lokkers, nachtronde, sieradencampagne, Black Friday, open punten); oude PropellerAds-stand hernoemd. Lokkercontrole telt nu alleen Shopping en gratis vermeldingen (Demand Gen-afkeuring van de kaarsenhouder telt niet). Lokkerprijzen staan in de winkel; nachtronde meldde nog niets.
 - 2026-11-23 (spaar-chat, Henkjan: "Nu in echte kadoly look laten zien"): Samen sparen, clubpagina en clubdashboard in kop, voet en stijl van kadoly.com (lib/kadolylook.js); knoppen zoals kadoly.com (zwart #111827, hoeken 12px). Kop van kadoly.com heet nu ys-navbar ynav, niet meer ypn: lib/shoptheme.js kopBegin zoekt beide, anders faalde ook de nachtelijke thema-sync.
 - 2026-11-23 (spaar-chat, Henkjan: "2-4 bouwen . Alle schermen simpeler !! ZO min mogelijk op een scherm" en "Ja shop komt het in"): alle schermen en mails van Samen sparen en de club naar één kop, één zin, één zwarte knop, de rest onder Meer; clubs krijgen mail bij aanzetten, eerste €2, €10 en elke 1e van de maand; uitbetalen vast op de 1e vanaf €10, IBAN gevraagd bij de eerste €10, lijst voor Henkjan op op=partner&uitbetalen=1. Inwisselen in de kassa bouwt de shop (TAAK Z). Live blijft uit; 10 clubs per werkdag zodra de shop de zegels toont.
 - 2026-11-23 19:50 UTC (kadoly-shopify-chat, Henkjan: "Lokkers zijn niet geschrapt dat is een apart proces .", "Ik wil zien of dat werkt met GMC ." en "Maak iets zodat code die taak kan vinden en doorvoert een release doet op tijd iedere nacht ."): lokkers weer aan (TAAK L terug, margevloer geldt niet voor hen); lokkercontrole op=lokkercheck; nachtronde voor de winkel: op=nacht (eenmalige inrichting door Claude Code in de winkelcode, elke nacht 05:00 UTC), op=taken (GET open taken uit de briefing met versie, POST melding per taak en release; header X-Lus-Key). Wacht op Henkjan: één keer de inrichtzin in de Claude Code van de winkel plakken.

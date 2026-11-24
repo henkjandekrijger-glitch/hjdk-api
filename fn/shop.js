@@ -1269,12 +1269,12 @@ export default async function handler(req, res) {
         if (!it) return { id, wat: 'staat niet meer in de winkel', stap: 'fout' };
         const p = num(it.p), vk = num(it.vk), b = bm[id], totaal = !b || Math.abs(b[0] - (p + vk)) < 0.6 || Math.abs(b[0] - p) >= 0.6, doelP = r2(totaal ? L.prijs - vk : L.prijs);
         const S = Object.values(m.dagen || {}).reduce((a, x) => ({ gk: a.gk + x.gk, gv: a.gv + x.gv, bk: a.bk + x.bk, bv: a.bv + x.bv }), { gk: 0, gv: 0, bk: 0, bv: 0 });
-        const af = (m.kanalen || []).filter(k => k.stand === 'afgekeurd').map(k => k.kanaal), meld = (m.meldingen || []).filter(x => /DISAPPROVED|DEMOTED/i.test(String(x.ernst || ''))).map(x => x.wat || x.code);
+        const SH = /^(SHOPPING_ADS|FREE_LISTINGS)$/, af = (m.kanalen || []).filter(k => k.stand === 'afgekeurd' && SH.test(k.kanaal)).map(k => k.kanaal), meld = (m.meldingen || []).filter(x => /DISAPPROVED|DEMOTED/i.test(String(x.ernst || '')) && SH.test(String(x.kanaal || ''))).map(x => x.wat || x.code); /* alleen Shopping en de gratis vermeldingen tellen; Demand Gen en video doen we niet */
         let stap, wat;
         if (!stand.aan) { stap = 'uit'; wat = 'lokker staat uit: ' + stand.reden; }
         else if (!gelijk(p, doelP)) { stap = 'winkel'; wat = 'wacht op de winkel: die leest de prijslijst vannacht in (nu ' + e2(p) + ', wordt ' + e2(doelP) + ')'; }
         else if (pg.prijs != null && !gelijk(pg.prijs, p) && !gelijk(pg.prijs, p + vk)) { stap = 'pagina'; wat = 'productpagina toont ' + e2(pg.prijs) + ', de winkel rekent ' + e2(p) + ': dan keurt Google af'; }
-        else if (m.fout) { stap = 'google'; wat = 'niet gevonden in Merchant Center (' + String(m.fout).slice(0, 80) + ')'; }
+        else if (m.fout) { stap = 'google'; wat = 'nu niet in Merchant Center' + (/^\{\}$/.test(String(m.fout)) ? ': Google verwerkt waarschijnlijk de nieuwe prijs uit de feed, kijk over een paar uur opnieuw' : ' (' + String(m.fout).slice(0, 80) + ')'); }
         else if (!gelijk(m.prijs, L.prijs) && !gelijk(m.prijs, doelP)) { stap = 'google'; wat = 'wacht op Google: Merchant Center heeft nog ' + e2(m.prijs) + ' (Google haalt de feed elke dag op)'; }
         else if (af.length) { stap = 'afgekeurd'; wat = 'afgekeurd door Google in ' + af.join(', ') + (meld.length ? ': ' + meld.slice(0, 2).join('; ') : ''); }
         else { stap = 'live'; wat = 'live in Google Shopping voor ' + e2(m.prijs) + (S.gv + S.bv ? ', ' + (S.gv + S.bv) + ' keer getoond en ' + (S.gk + S.bk) + ' keer aangeklikt' : ', nog niet getoond'); }
