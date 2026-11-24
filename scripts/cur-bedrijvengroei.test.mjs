@@ -70,8 +70,8 @@ test('bronrefresh merkt wijziging binnen dezelfde omvang; gelijke bron houdt dat
 const pizza=JSON.parse(fs.readFileSync(new URL('../data/cur/pizza.json',import.meta.url)));
 const pv=pizza.items.find(x=>x.id==='pizzarroni');
 const bedrijf={naam:pv.naam,slug:pv.id,tel:'+59998430870',adres:'158 Oude Caracasbaaiweg',score:4.8,aantal:374,plaats:'Willemstad',uren:{mon:'11:00-22:00'},lat:12.1,lng:-68.9};
-const I={at:'2026-10-22T00:00:00Z',totaal:3,cats:{'pizza-restaurant':{n:3,en:'Pizza restaurants',t_nl:'Pizzeria’s',t_en:'Pizza restaurants'}}};
-globalThis.__CUR_FIXTURES={'cw/gids/index.json':I,'cw/gids/namen.json':[[pv.naam,'pizza-restaurant',pv.id,'Willemstad',4.8,374]]};
+const I={at:'2026-10-22T00:00:00Z',totaal:3,bronControle:{gewijzigd:0},cats:{'pizza-restaurant':{n:3,en:'Pizza restaurants',t_nl:'Pizzeria’s',t_en:'Pizza restaurants'}}};
+globalThis.__CUR_FIXTURES={'cw/gids/index.json':I,'cw/gids/namen.json':[[pv.naam,'pizza-restaurant',pv.id,'Willemstad',4.8,374,'2026-10-22T00:00:00Z']]};
 test('echte productie-renderer voegt bronnen en feiten toe zonder rating-schema van derden',async()=>{
  const h=C.renderGidsBedrijf('nl',I,'pizza-restaurant',[bedrijf],bedrijf);
  assert.match(h,/In het kort/);assert.match(h,/Basisvolgorde/);assert.match(h,/vegan/);assert.match(h,/Tripadvisor/);assert.match(h,/href="https:\/\/curacao.day\/nl\/pizza"/);
@@ -83,7 +83,7 @@ test('echte productie-renderer voegt bronnen en feiten toe zonder rating-schema 
  fs.mkdirSync(new URL('../../ux-checks/bedrijf-preview/',import.meta.url),{recursive:true});fs.writeFileSync(new URL('../../ux-checks/bedrijf-preview/pizzarroni.html',import.meta.url),h);
 });
 test('canonical resolveert pas na bestaande doelcontrole en kaarten wijzen dan naar dezelfde zaak',async()=>{
- const stand=await C.bedrijfGroeiStand();assert.equal(stand.gekoppeldeZaken,1);
+ const stand=await C.bedrijfGroeiStand();assert.equal(stand.gekoppeldeZaken,1);assert.equal(stand.bronMetWijzigingsdatum,1);assert.equal(stand.bronGewijzigd,0);
  const o=C.ONDERWERPEN.find(o=>o.id==='pizza');
  const h=C.renderBedrijf('nl',o,pizza,pv,null,null);
  assert.match(h,/<link rel="canonical" href="https:\/\/curacao.day\/nl\/bedrijven\/pizza-restaurant\/pizzarroni"/);

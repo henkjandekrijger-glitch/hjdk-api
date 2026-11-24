@@ -43,6 +43,21 @@
         "https://curacao.day/nl/bedrijven/fast-food-restaurant"
       ],
       "bewijs": "HTTP200, server-HTML, NL/EN-taalretour, kern, sitemapdatum; geen SEO-groei uit afgeleid"
+    },
+    {
+      "dag": "2026-11-23",
+      "id": "bedrijf-indexnow-20261123",
+      "melding": {
+        "urls": 646,
+        "verzoeken": 13,
+        "status": 200,
+        "betekenis": "melding geaccepteerd; geen bewijs van indexering"
+      },
+      "verificatie": "productie READY; NL/EN-canonical en taalretour; 390px gecontroleerd; 19 regressietests geslaagd",
+      "volgende_toets": [
+        "2026-12-07",
+        "2026-12-21"
+      ]
     }
   ]
 }
