@@ -95,5 +95,85 @@
       "https://business.pinterest.com/blog/beginner-pinterest-content-guide/",
       "https://policy.pinterest.com/en/community-guidelines"
     ]
+  },
+  "scope_expansion": {
+    "at_utc": "2026-11-24T22:25:29.709Z",
+    "user_instruction": "En ook content op site toch ? Gebruik ook kadoly instagram account via zernio want boeken zijn ook cadeaus .",
+    "instagram": "kadoly.shop",
+    "zernio_account": "6afb8787a26245ebf04dc7be",
+    "profile": "6afaf9820c09220040d746f4",
+    "permission": "Channel use for own books approved; exact new media/copy preview still required.",
+    "existing_other_workflows_unchanged": true
+  },
+  "site_content": {
+    "lastingchange": {
+      "daily": "Max1usefularticleconcept from actual unanswered cached demand, primarysources and existingarticleinventory; publishedarticles preserved.",
+      "live": [
+        "https://lastingchange.works/how-to-stop-procrastinating",
+        "https://lastingchange.works/how-to-start-over-in-life"
+      ],
+      "next_topic": "I wasted another year, only if cached specific demand supports useful distinct content.",
+      "publication": "Preview exact text before new publication."
+    },
+    "stockingbooks": {
+      "daily": "Inspect existing useful free material and gift guides; prepare1substantivegapfix/update, not a newpage quota.",
+      "next": "InspectChristmasquiz usability and printableanswerformat, identifyactualgapbeforeproposingchange. Reuseexistingresourcesforpins/Reels.",
+      "publication": "Show exact sitepreview before new visible change."
+    }
+  },
+  "instagram": {
+    "daily_concept_target": 1,
+    "format": "Short original Reel using real own book cover and verified actual interior material; no fake book interior.",
+    "account": "kadoly.shop",
+    "provider": "Zernio",
+    "status": "storyboard and caption concept; no video rendered or published yet",
+    "first_concept": {
+      "id": "20261125-ig-book-men-concept",
+      "asin": "B0HRGNJ7CY",
+      "title": "Een cadeau voor de man die alles heeft",
+      "destination": "https://stockingbooks.com/stocking-stuffers#for-him",
+      "language": "nl, identifies English language book honestly",
+      "storyboard": [
+        {
+          "seconds": "0to3",
+          "visual": "Real book cover, readable",
+          "overlay": "Een cadeau voor de man die alles heeft?"
+        },
+        {
+          "seconds": "3to8",
+          "visual": "Actual verified own interior page if available, otherwise cover detail only",
+          "overlay": "800 bijzondere weetjes in één Engelstalig boek"
+        },
+        {
+          "seconds": "8to12",
+          "visual": "Real cover and own domain",
+          "overlay": "Bekijk het boek op stockingbooks.com"
+        }
+      ],
+      "caption": "Voor de man die alles al heeft: een Engelstalig boek met 800 bijzondere weetjes. Een cadeau voor vader, partner of opa. Bekijk het op stockingbooks.com, bij For him.\\n\\n#kadoly #cadeauvoorhem #boekencadeau #kerstcadeau",
+      "review_requirement": "Render actualvideo and show fullcaption/CTA beforepublication. This storyboard is not a media preview.",
+      "traffic_link": {
+        "existing_bio_from_repo": "https://go.kadoly.com/o/ig",
+        "book_route_verified": false,
+        "no_false_link_in_bio_claim": true,
+        "no_caption_link_clickability_claim": true,
+        "proposal_for_review": {
+          "label": "Boeken als cadeau",
+          "url": "https://stockingbooks.com/stocking-stuffers?utm_source=instagram&utm_medium=organic_social&utm_campaign=kadoly-books&utm_content=bio"
+        },
+        "profile_change_made": false
+      },
+      "primary_metric": "Verified outgoing website clicks if available; otherwise unknown, with profile actions kept separate. Views/saves/shares supplementary."
+    },
+    "checks_before_publish": [
+      "CurrentcorrectZernioaccount/health",
+      "Actual published/plannedsharedInstagramqueue",
+      "No samevideo/productduplicate withinstandingwindow",
+      "Realmedia formatandreadabletext",
+      "Verified bookdetails no price/stock/shipping promises",
+      "Exactnewvideo/copy approval",
+      "Actual workable route beforeclaiminglinkinbio"
+    ],
+    "new_posts_created": []
   }
 }

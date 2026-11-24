@@ -72,3 +72,12 @@ Lees daarnaast: `kadoly/taak-social.md` (de dagelijkse opdracht, dat is de bron 
 - 2026-11-18: video's (reels) erbij in de dagronde, wachtrij `kadoly/reels.json`.
 - 2026-11-17: verkoop 17 nov bleek TikTok (tafelhaard, advertentie 1882048854125746), niet social.
 - 2026-11-16: Facebook-pagina ingevuld, hook-post, Instagram @kadoly.shop en Pinterest kadolyshop aangemaakt en in Zernio gekoppeld, Clickmind-route `go.kadoly.com/o` live, dagronde 08:41 UTC gestart.
+
+
+## Aanvulling Henkjan 24 november 2026: eigen boeken via Kadoly Instagram
+
+Henkjan vraagt expliciet Instagram @kadoly.shop via Zernio voor zijn eigen boeken, omdat boeken ook cadeaus zijn. Dit breidt de contentscope uit voorbij alleen de Kadolyshopcatalogus, zonder andere Kadoly-planningen te wijzigen. Account6afb8787a26245ebf04dc7be, profielKadoly6afaf9820c09220040d746f4. De contentronde leest de actuele taak-social en het gezamenlijke social-log, controleert werkelijk geplande/Publishedposts, voorkomt doublures en bereidt1eigenboeken-Reelconceptperdag voor. De bestaande videovorm blijft leidend; geen ongeziene nieuweReel publiceren zonder preciespreviewakkoord. Vierpinconcepten zijn niet vierInstagramposts.
+
+Plan/storyboard/caption: content/dagrapport/2026-11-25-plan.json op codex/content-dagboek. Eerstevoorstel:cadeauvoorhemmetechteomslag/inkijkvanEngelstalig800feitenboek. Statusidee/tekstconcept,noggeenrenderofplaatsing. Bestaandebio go.kadoly.com/o/ig is geenbewezenboekroute, dusnietzomaareenLinkinbio belofte; exactextraboeklinkvoorstel eersttonen. Geenbioofprofielverandering, geenDM,ads,budgetofbetaalwijziging.
+
+PerReel eigenproviderID/permalink/tijd/bron,bereik,weergaven,saves,delen,profielacties, echtewebsitekliksmetvensterwaarmeetbaar. Geenwebsiteverkeerafleidenuitviews,geenpinuitkomstvoorInstagram. Leerregisterenroundlogbijwerken nawerkelijkeplaatsing. Contentenrapporttaakbijgewerkt,geenextrataakgemaakt. Alleendatabranchbijgewerkt,geenmainbuildoflivepublicatie.

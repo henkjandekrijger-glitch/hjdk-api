@@ -250,6 +250,8 @@ Plak dit als eerste bericht:
 
 ## Logboek (nieuwste bovenaan)
 
+- 2026-11-24, content-Codex: Henkjan breidt scope uit naar Instagram @kadoly.shop voor eigen boeken via bestaand Zernio-account6afb8787a26245ebf04dc7be. Drie bestaande taken aangepast met sitecontent plus eigenReelconcept, sharedKadolyplanning en kanaalspecifiekleren. Nieuwebeelden/copy blijven eerst-zien; geen publicatie of bioverandering gedaan. Morgenplan bevat storyboard/caption voor mannenboek, nog geen gerenderdeReel. LC2artikelenlive opnieuwbevestigd; dagelijkse nuttigeStockingupdate en max1LCconcept behouden.
+
 - 2026-11-24, content-Codex: Henkjan vraagt blijven posten en maximaliseren. Bestaande Pinterest- en rapporttaak aangepast: vanaf25nov4uniekeconcepten als eerste werkvolume, geen bewezen optimum of verplicht quotum. Oude3cap niet opnieuw automatische blokkade; nieuwebeelden/copy eerst-zien, geen duplicaten. Plan aangevuld met kerstgrappen als vierde ingang. Officiële Pinterestbron: kwaliteit/relevantie gaat boven frequentie. Dagelijks per-pinleren, geen verkeerswinst uit volume afleiden.
 
 - 2026-11-24, content-Codex: beide goedgekeurde wachtende pins Published en openbaar gecontroleerd, echte IDs gelogd. Op Henkjans vervolgvraag alle18boekpins in leerregister gezet, drie bestaande dagtaken bijgewerkt en25novconceptplan vastgelegd. Gesloten23nov: Stocking32tegen7, LC12tegen13 geregistreerdeopeningen; Pinterest1siteopening. Geen bewezen organische groeitrend. Meetgat per-pinlandingen in bestaande bron/pagecounters aangetoond; nog geen live meetreparatie. Alleen databranch, geen sitebuild.
