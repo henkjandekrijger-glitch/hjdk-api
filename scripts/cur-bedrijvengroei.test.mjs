@@ -79,6 +79,7 @@ test('echte productie-renderer voegt bronnen en feiten toe zonder rating-schema 
  const data=[...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(x=>JSON.parse(x[1]));
  assert.equal(JSON.stringify(data).includes('aggregateRating'),false);
  assert.match(h,/"dateModified":"2026-11-23"/);
+ assert.ok(!h.includes('href="https://curacao.day/nl/bedrijven/pizza-restaurant/pizzarroni">Vergelijk in onze keuzehulp'));
  fs.mkdirSync(new URL('../../ux-checks/bedrijf-preview/',import.meta.url),{recursive:true});fs.writeFileSync(new URL('../../ux-checks/bedrijf-preview/pizzarroni.html',import.meta.url),h);
 });
 test('canonical resolveert pas na bestaande doelcontrole en kaarten wijzen dan naar dezelfde zaak',async()=>{
