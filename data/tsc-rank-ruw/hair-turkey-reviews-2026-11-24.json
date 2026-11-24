@@ -1,0 +1,977 @@
+{
+ "datum": "2026-11-24",
+ "klinieken": [
+  {
+   "id": "asmed",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.3,
+     "aantal": 87,
+     "pct_1ster": 5,
+     "waarschuwing": "This company hasn't invited customers recently, so reviews may not be representative | This profile was merged with one or more other Trustpilot profiles belonging to this company.",
+     "bron": "https://www.trustpilot.com/review/hairtransplantfue.org",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "aantal": 30,
+     "pct_1ster": null,
+     "waarschuwing": "This provider is not currently accepting consultations through RealSelf",
+     "bron": "https://www.realself.com/dr/koray-erdogan-istanbul-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Asmed Koray Erdogan hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Trustpilot profile now lives at hairtransplantfue.org (old URL asmed.com.tr not readable; numbers identical, profile merged)."
+  },
+  {
+   "id": "hlc",
+   "reviews": [],
+   "risico_nieuw": [],
+   "zoekopdracht": "HLC Hairline Clinic Ozgur Oztan hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "No Trustpilot profile found. RealSelf has profiles for Ozgur Oztan, MD and HLC Plastic and Reconstructive Surgery Centre - Ankara, both with 0 reviews (https://www.realself.com/find/Turkey/Ankara/Hair-Transplant)."
+  },
+  {
+   "id": "smile",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 4157,
+     "pct_1ster": 1,
+     "waarschuwing": "This company invites their customers to review, whether positive or negative",
+     "bron": "https://www.trustpilot.com/review/www.smilehairclinic.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 5,
+     "aantal": 594,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/smile-hair-clinic-istanbul",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "Bookimed",
+     "score": 4.7,
+     "aantal": 43,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://us-uk.bookimed.com/clinic/reviews/smile-hair-clinic/procedure=hair-transplant/",
+     "datum": "",
+     "ververst": false
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Smile Hair Clinic Istanbul hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Trustpilot count fell 4182 -> 4157 (domain www.smilehairclinic.com); RealSelf 598 -> 594. Bookimed is a booking site, not an allowed independent platform: not re-checked, suggest dropping it."
+  },
+  {
+   "id": "vera",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 1895,
+     "pct_1ster": 2,
+     "waarschuwing": "This company invites their customers to review, whether positive or negative",
+     "bron": "https://www.trustpilot.com/review/www.veraclinic.net",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "aantal": 104,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/vera-clinic-istanbul-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Vera Clinic Istanbul hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Trustpilot score 4.8 -> 4.9, count 1897 -> 1895."
+  },
+  {
+   "id": "cosmedica",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "aantal": 963,
+     "pct_1ster": 2,
+     "waarschuwing": "This company's rating is unavailable due to a breach of our guidelines. | We've removed a number of fake reviews for this company.",
+     "bron": "https://www.trustpilot.com/review/cosmedica.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 4,
+     "aantal": 22,
+     "pct_1ster": null,
+     "waarschuwing": "Doctor listing Levent Acar, MD shows \"Account Suspended\" | This provider is not currently accepting consultations through RealSelf",
+     "bron": "https://www.realself.com/practices/cosmedica-istanbul-marmara",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "aantal": 94,
+     "pct_1ster": null,
+     "waarschuwing": "Levent Acar, MD - Account Suspended | This provider is not currently accepting consultations through RealSelf",
+     "bron": "https://www.realself.com/dr/levent-acar-istanbul-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Cosmedica Levent Acar hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Unchanged; Trustpilot rating still withheld for fake reviews, RealSelf account of Dr Acar suspended (no reason given)."
+  },
+  {
+   "id": "aygin",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "aantal": 2437,
+     "pct_1ster": 5,
+     "waarschuwing": "This company's rating is unavailable due to a breach of our guidelines. | We've removed a number of fake reviews for this company.",
+     "bron": "https://www.trustpilot.com/review/www.drserkanaygin.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 4.4,
+     "aantal": 56,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/serkan-aygin-istanbul-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Serkan Aygin clinic hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Unchanged; Trustpilot rating still withheld (fake reviews removed). 1-star share now read: 5%."
+  },
+  {
+   "id": "pekiner",
+   "reviews": [],
+   "risico_nieuw": [],
+   "zoekopdracht": "Kaan Pekiner PHR Clinic hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "No Trustpilot or RealSelf profile found in one search (only individual RealSelf patient reviews mentioning Dr. Kaan Pekiner)."
+  },
+  {
+   "id": "yaman",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 3.4,
+     "aantal": 6,
+     "pct_1ster": 33,
+     "waarschuwing": "This company hasn't invited customers recently, so reviews may not be representative",
+     "bron": "https://www.trustpilot.com/review/resulyaman.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 4.6,
+     "aantal": 17,
+     "pct_1ster": null,
+     "waarschuwing": "Search result title reads \"Resul Yaman, MD - Account Suspended\"; the fetched profile page showed no such notice",
+     "bron": "https://www.realself.com/dr/resul-yaman-istanbul-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Resul Yaman hair clinic hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "RealSelf 16 -> 17 reviews. Possible RealSelf account suspension (seen only in search title), verify manually."
+  },
+  {
+   "id": "fuecapilar",
+   "reviews": [
+    {
+     "platform": "RealSelf",
+     "score": 5,
+     "aantal": 8,
+     "pct_1ster": null,
+     "waarschuwing": "This provider is not currently accepting consultations through RealSelf",
+     "bron": "https://www.realself.com/dr/dogan-turan-istanbul-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "FUECAPILAR Dogan Turan hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "New: RealSelf doctor profile Dogan Turan, MD (Kadikoy); practice name not listed on profile, patient reviews name FUECAPILAR. No Trustpilot profile found."
+  },
+  {
+   "id": "keser",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 3.8,
+     "aantal": 2,
+     "pct_1ster": 50,
+     "waarschuwing": "Dieses Unternehmen hat seine Kunden nicht zur Bewertungsabgabe eingeladen",
+     "bron": "https://www.trustpilot.com/review/www.drkeser.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Muttalip Keser Derma-Plast hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "New: Trustpilot profile drkeser.com (read via at.trustpilot.com), only 2 reviews. No RealSelf profile found."
+  },
+  {
+   "id": "elithair",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.7,
+     "aantal": 4542,
+     "pct_1ster": 4,
+     "waarschuwing": "This profile was merged with one or more other Trustpilot profiles belonging to this company.",
+     "bron": "https://www.trustpilot.com/review/elithair.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "Trustpilot",
+     "score": 4.8,
+     "aantal": 4766,
+     "pct_1ster": 4,
+     "waarschuwing": "Merged reviews and profile: This profile was merged with one or more other Trustpilot profiles belonging to this company.",
+     "bron": "https://www.trustpilot.com/review/www.elithairtransplant.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 5,
+     "aantal": 2,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/elithair-istanbul-turkey",
+     "datum": "",
+     "ververst": false
+    },
+    {
+     "platform": "RealSelf",
+     "score": 4.6,
+     "aantal": 12,
+     "pct_1ster": null,
+     "waarschuwing": "This provider is not currently accepting consultations through RealSelf",
+     "bron": "https://www.realself.com/dr/abdulaziz-balwi-istanbul-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Elithair hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Two merged Trustpilot profiles: elithair.com 4.7/4542 (was 4611) and www.elithairtransplant.com 4.8/4766 (matches clinic site); likely the same merged reviews, count only one (suggest www.elithairtransplant.com). RealSelf Dr Balwi changed 1.0/2 -> 4.6/12 (page also mentions 22 verified reviews). RealSelf practice page not readable."
+  },
+  {
+   "id": "bicer",
+   "reviews": [],
+   "risico_nieuw": [],
+   "zoekopdracht": "Ozlem Bicer clinic hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "No Trustpilot or RealSelf profile found."
+  },
+  {
+   "id": "ahd",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 3.2,
+     "aantal": 1,
+     "pct_1ster": 100,
+     "waarschuwing": "This company hasn't invited customers recently, so reviews may not be representative",
+     "bron": "https://www.trustpilot.com/review/ahdclinic.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 1,
+     "aantal": 1,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/hakan-doganay-antalya-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Hakan Doganay AHD Clinic Antalya hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "New: Trustpilot ahdclinic.com (1 review, 1 star) and RealSelf Hakan Doganay (1 review, 1.0). Too few reviews to be meaningful."
+  },
+  {
+   "id": "hermest",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 1339,
+     "pct_1ster": 1,
+     "waarschuwing": "",
+     "bron": "https://www.trustpilot.com/review/www.hermestclinic.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "aantal": 40,
+     "pct_1ster": null,
+     "waarschuwing": "This provider is not currently accepting consultations through RealSelf",
+     "bron": "https://www.realself.com/practices/hermest-hair-transplant-clinic-uskudar-istanbul",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Hermest Hair Clinic hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "RealSelf URL changed (slug now ...-uskudar-istanbul, address Kadikoy); 4.9/39 -> 4.8/40."
+  },
+  {
+   "id": "armamed",
+   "reviews": [],
+   "risico_nieuw": [],
+   "zoekopdracht": "Armamed Erkan Demirsoy hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "No Trustpilot or RealSelf profile page found (only individual RealSelf patient reviews)."
+  },
+  {
+   "id": "cinik",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.8,
+     "aantal": 6995,
+     "pct_1ster": 2,
+     "waarschuwing": "This company hasn't invited customers recently, so reviews may not be representative",
+     "bron": "https://www.trustpilot.com/review/emrahcinik.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "aantal": 1711,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/cinik-hospital-istanbul-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "aantal": 1748,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/dr/emrah-cinik-besiktas-istanbul-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Cinik hospital hair transplant death OR lawsuit OR investigation OR licence (plus follow-up: Cinik hospital Martyn Latchman death investigation 2026)",
+   "opmerking": "Trustpilot 6944 -> 6995. Extra RealSelf doctor profile Emrah Cinik, MD 4.9/1748 (read from RealSelf listing https://www.realself.com/find/Turkey/Ankara/Hair-Transplant), probably overlaps with practice reviews. No new development found on the July 2025 death investigation."
+  },
+  {
+   "id": "aslitarcan",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "aantal": 843,
+     "pct_1ster": 7,
+     "waarschuwing": "Warning: This company's rating is unavailable due to a breach of our guidelines. We've removed a number of fake reviews for this company.",
+     "bron": "https://www.trustpilot.com/review/aslitarcanclinic.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Asli Tarcan\" hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "New Trustpilot profile found: TrustScore hidden by Trustpilot for breach of guidelines and removal of fake reviews. No RealSelf practice page checked (only a single patient review found)."
+  },
+  {
+   "id": "hairofistanbul",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.7,
+     "aantal": 77,
+     "pct_1ster": 4,
+     "waarschuwing": "Asks customers to review: This company invites their customers to review, whether positive or negative; Please exercise caution when considering businesses offering medical and cosmetic surgery.",
+     "bron": "https://www.trustpilot.com/review/hairofistanbul.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Hair of Istanbul\" hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Unchanged."
+  },
+  {
+   "id": "clinicana",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 1573,
+     "pct_1ster": null,
+     "waarschuwing": "This company invites their customers to review, whether positive or negative",
+     "bron": "https://www.trustpilot.com/review/www.clinicana.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Clinicana\" hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Unchanged; 1-star shown as <1%. Trustpilot URL is /review/www.clinicana.com."
+  },
+  {
+   "id": "civas",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 3.4,
+     "aantal": 3,
+     "pct_1ster": 33,
+     "waarschuwing": "No recent history of asking for reviews; This company hasn't invited customers recently, so reviews may not be representative; Hasn't replied to negative reviews",
+     "bron": "https://www.trustpilot.com/review/civashairtransplant.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 4.4,
+     "aantal": 43,
+     "pct_1ster": null,
+     "waarschuwing": "Account Suspended (in profile name: 'Ekrem Civas, MD, FISHRS - Account Suspended'); This provider is not currently accepting consultations through RealSelf",
+     "bron": "https://www.realself.com/dr/ekrem-civas-ankara-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Ekrem Civas\" hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Trustpilot name: Civas&Akpinar Hair Transplant (only 3 reviews). RealSelf account suspended, no reason given on page."
+  },
+  {
+   "id": "drt",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 3.3,
+     "aantal": 22,
+     "pct_1ster": 23,
+     "waarschuwing": "This company hasn't invited customers recently, so reviews may not be representative",
+     "bron": "https://www.trustpilot.com/review/drthair.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 3.9,
+     "aantal": 16,
+     "pct_1ster": null,
+     "waarschuwing": "This provider is not currently accepting consultations through RealSelf",
+     "bron": "https://www.realself.com/dr/tayfun-oguzoglu-instanbul-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Tayfun Oğuzoğlu\" hair transplant death OR lawsuit OR investigation OR licence (also \"DrT Hair\")",
+   "opmerking": "New entries. Site likely drthair.com (Trustpilot domain)."
+  },
+  {
+   "id": "aek",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 3.1,
+     "aantal": 11,
+     "pct_1ster": 64,
+     "waarschuwing": "No recent history of asking for reviews; This company hasn't invited customers recently, so reviews may not be representative; Hasn't replied to negative reviews",
+     "bron": "https://ca.trustpilot.com/review/aekhairclinic.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 3.7,
+     "aantal": 79,
+     "pct_1ster": null,
+     "waarschuwing": "This provider is not currently accepting consultations through RealSelf",
+     "bron": "https://www.realself.com/dr/ali-emre-karadeniz-istanbul-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"AEK Hair\" hair transplant death OR lawsuit OR investigation OR licence (also \"Emre Karadeniz\")",
+   "opmerking": "New entries. Trustpilot 64% 1-star on 11 reviews. Site likely aekhairclinic.com."
+  },
+  {
+   "id": "getnewhair",
+   "reviews": [],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Get New Hair\" hair transplant death OR lawsuit OR investigation OR licence (also \"Kayıhan Şahinoğlu\")",
+   "opmerking": "No Trustpilot or RealSelf page found in one search."
+  },
+  {
+   "id": "estenove",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 1228,
+     "pct_1ster": 1,
+     "waarschuwing": "No recent history of asking for reviews; This company hasn't invited customers recently, so reviews may not be representative; Hasn't replied to negative reviews",
+     "bron": "https://www.trustpilot.com/review/estenove.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Estenove hair transplant Istanbul death OR lawsuit OR investigation OR licence",
+   "opmerking": "Count 1230 -> 1228 (read via ?page=3 of same profile)."
+  },
+  {
+   "id": "estemedical",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 10226,
+     "pct_1ster": null,
+     "waarschuwing": "No recent history of asking for reviews; This company hasn't invited customers recently, so reviews may not be representative; Hasn't replied to negative reviews",
+     "bron": "https://www.trustpilot.com/review/estemedicalgroup.uk",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Este Medical Group\" Istanbul death OR lawsuit OR investigation OR licence",
+   "opmerking": "Count 10127 -> 10226; 1-star <1%. Read via nz.trustpilot.com (same profile)."
+  },
+  {
+   "id": "estefavor",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.7,
+     "aantal": 67,
+     "pct_1ster": 3,
+     "waarschuwing": "This company invites their customers to review, whether positive or negative; Hasn't replied to negative reviews",
+     "bron": "https://www.trustpilot.com/review/estefavor.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Este Favor\" clinic Istanbul death OR lawsuit OR investigation OR licence",
+   "opmerking": "Unchanged."
+  },
+  {
+   "id": "sule",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "aantal": 706,
+     "pct_1ster": 3,
+     "waarschuwing": "Warning: This company's rating is unavailable due to a breach of our guidelines. We've removed a number of fake reviews for this company.",
+     "bron": "https://www.trustpilot.com/review/sule-hairtransplant.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Sule Hair\" clinic Istanbul death OR lawsuit OR investigation OR licence",
+   "opmerking": "New Trustpilot profile found: TrustScore hidden for breach of guidelines and removal of fake reviews."
+  },
+  {
+   "id": "hairmedico",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.5,
+     "aantal": 122,
+     "pct_1ster": 7,
+     "waarschuwing": "No recent history of asking for reviews; This company hasn't invited customers recently, so reviews may not be representative; Hasn't replied to negative reviews",
+     "bron": "https://www.trustpilot.com/review/hairmedico.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Hairmedico\" OR \"Arslan Musbeh\" hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Score 4.9 -> 4.5, count 121 -> 122, 7% 1-star. URL changed from ca. to www. (same profile)."
+  },
+  {
+   "id": "medart",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 289,
+     "pct_1ster": 2,
+     "waarschuwing": "No recent history of asking for reviews; This company hasn't invited customers recently, so reviews may not be representative",
+     "bron": "https://www.trustpilot.com/review/medarthair.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Medart Hair\" Istanbul death OR lawsuit OR investigation OR licence",
+   "opmerking": "Unchanged."
+  },
+  {
+   "id": "heva",
+   "reviews": [
+    {
+     "platform": "RealSelf",
+     "score": 5,
+     "aantal": 313,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/heva-clinic-istanbul-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "Trustpilot",
+     "score": 3.2,
+     "aantal": null,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://www.trustpilot.com/review/hevaclinic.com",
+     "datum": null,
+     "ververst": false
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Heva Clinic\" Istanbul death OR lawsuit OR investigation OR licence",
+   "opmerking": "RealSelf unchanged (100% 5-star). Trustpilot hevaclinic.com could not be read and did not show up in search; old values kept. Search did show dentalhairclinicturkey.com ('Cosmetic Clinic Turkey', 3.9/116), which Trustpilot lists as a different company, so not used."
+  },
+  {
+   "id": "cliniccenter",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.7,
+     "aantal": 3003,
+     "pct_1ster": 4,
+     "waarschuwing": "",
+     "bron": "https://www.trustpilot.com/review/cliniccenter.co.uk",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Clinic Center\" Istanbul hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "New Trustpilot entry: 4.7 from 3,003 reviews."
+  },
+  {
+   "id": "istanbulhaircenter",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.2,
+     "aantal": 6,
+     "pct_1ster": 0,
+     "waarschuwing": "This company hasn't invited customers recently, so reviews may not be representative",
+     "bron": "https://www.trustpilot.com/review/istanbulhaircenter.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Istanbul Hair Center\" clinic death OR lawsuit OR investigation OR licence",
+   "opmerking": "Unchanged; only 6 reviews."
+  },
+  {
+   "id": "naturalhair",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 2.9,
+     "aantal": 930,
+     "pct_1ster": 19,
+     "waarschuwing": "No recent history of asking for reviews; This company hasn't invited customers recently, so reviews may not be representative; Hasn't replied to negative reviews",
+     "bron": "https://ca.trustpilot.com/review/naturalhairturkey.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Natural Hair Turkey\" hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Trustpilot score down from 3.0 to 2.9 (929 -> 930 reviews). Read via ca.trustpilot.com mirror (same profile). Generic hits only: Dr. Cinik Clinic (Martyn Latchman, Jul 2025) and an unnamed clinic (Mentor Rama, Nov 2025); neither concerns this clinic."
+  },
+  {
+   "id": "hairneva",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.7,
+     "aantal": 340,
+     "pct_1ster": 2,
+     "waarschuwing": "",
+     "bron": "https://nl-be.trustpilot.com/review/hairneva.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "aantal": 448,
+     "pct_1ster": 0,
+     "waarschuwing": "",
+     "bron": "https://www.realself.com/practices/hairneva-clinic-istanbul-istanbul",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "HairNeva Guncel Ozturk hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Trustpilot profile name 'HairNeva - DRGO Hair Transplant Istanbul Turkey' (339 -> 340). RealSelf practice 'HairNeva Hair Transplantation by DRGO', doctor listed Guncel Ozturk, MD, FEBOPRAS (plastic surgeon); RealSelf distribution shows 100% 5-star while average is 4.9 (display inconsistency). Site: hairneva.com. Generic hits only: Dr. Cinik Clinic (Martyn Latchman, Jul 2025) and an unnamed clinic (Mentor Rama, Nov 2025); neither concerns this clinic."
+  },
+  {
+   "id": "capil",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.6,
+     "aantal": 200,
+     "pct_1ster": 7,
+     "waarschuwing": "No recent history of asking for reviews; This company hasn't invited customers recently, so reviews may not be representative",
+     "bron": "https://ca.trustpilot.com/review/capilclinic.es",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Capilclinic hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Unchanged (4.6, 200). No relevant news; search returned only unrelated Indian cases."
+  },
+  {
+   "id": "bht",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "aantal": 50,
+     "pct_1ster": 26,
+     "waarschuwing": "Warning: \"De score van dit bedrijf is niet beschikbaar vanwege een schending van onze richtlijnen.\" (This company's rating is unavailable due to a breach of our guidelines.) \"We hebben een aantal nepreviews over dit bedrijf verwijderd.\" (We've removed a number of fake reviews for this company.)",
+     "bron": "https://nl-be.trustpilot.com/review/bhtclinic.com.tr",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"BHT Clinic\" Tema Hospital hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Trustpilot rating still withheld for guideline breach; reviews 46 -> 50, 26% 1-star. Profile name 'BHT CLINIC TEMA HOSPITAL'. No relevant news (results were unrelated Ghana hospitals)."
+  },
+  {
+   "id": "idealofmed",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.8,
+     "aantal": 680,
+     "pct_1ster": null,
+     "waarschuwing": "",
+     "bron": "https://pl.trustpilot.com/review/idealofmed.com?page=9",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "IdealofMeD hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "679 -> 680 reviews. 1-star shown only as '<1%', so pct_1ster left null (page gives no exact figure; <1). No relevant news."
+  },
+  {
+   "id": "biohair",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4,
+     "aantal": 434,
+     "pct_1ster": 8,
+     "waarschuwing": "No recent history of asking for reviews; This company hasn't invited customers recently, so reviews may not be representative; Hasn't replied to negative reviews",
+     "bron": "https://ca.trustpilot.com/review/biohairclinic.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Bio Hair Clinic\" Istanbul hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "433 -> 434. Profile 'Bio Hair Clinic - Haartransplantation Türkei'. Generic hits only: Dr. Cinik Clinic (Martyn Latchman, Jul 2025) and an unnamed clinic (Mentor Rama, Nov 2025); neither concerns this clinic."
+  },
+  {
+   "id": "drhakan",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 225,
+     "pct_1ster": 0,
+     "waarschuwing": "Claimed profile, Paid Trustpilot subscription; Asks customers to review (This company invites their customers to review, whether positive or negative); Hasn't replied to negative reviews",
+     "bron": "https://ca.trustpilot.com/review/drhakanclinic.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Dr Hakan Clinic\" hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "227 -> 225 reviews (2 fewer). Invites reviews and has a paid Trustpilot subscription. Generic hits only: Dr. Cinik Clinic (Martyn Latchman, Jul 2025) and an unnamed clinic (Mentor Rama, Nov 2025); neither concerns this clinic."
+  },
+  {
+   "id": "istanbulvita",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": null,
+     "aantal": 302,
+     "pct_1ster": 3,
+     "waarschuwing": "Warning: \"This company's rating is unavailable due to a breach of our guidelines.\" \"We've removed a number of fake reviews for this company.\"",
+     "bron": "https://trustpilot.com/review/istanbulvita.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"Istanbul Vita\" hair clinic hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Rating still withheld for guideline breach (fake reviews removed); 302 reviews unchanged. Generic hits only: Dr. Cinik Clinic (Martyn Latchman, Jul 2025) and an unnamed clinic (Mentor Rama, Nov 2025); neither concerns this clinic."
+  },
+  {
+   "id": "hwt",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4.9,
+     "aantal": 148,
+     "pct_1ster": null,
+     "waarschuwing": "No recent history of asking for reviews; This company hasn't invited customers recently, so reviews may not be representative",
+     "bron": "https://ca.trustpilot.com/review/hwtclinic.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"HWT Clinic\" hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "Score 4.7 -> 4.9, reviews 141 -> 148. 1-star shown as '<1%' (pct_1ster null). Generic hits only: Dr. Cinik Clinic (Martyn Latchman, Jul 2025) and an unnamed clinic (Mentor Rama, Nov 2025); neither concerns this clinic."
+  },
+  {
+   "id": "gethair",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 1.4,
+     "aantal": 43,
+     "pct_1ster": 16,
+     "waarschuwing": "Profile renamed \"Not Actively Used For Reviews\"; 'Visit website' link points to thisreviewsitenotinuse.com; \"0 reviews in the last 12 months\"; No recent history of asking for reviews",
+     "bron": "https://uk.trustpilot.com/review/www.gethair.co.uk",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "GetHair Turkey hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "New Trustpilot entry found for www.gethair.co.uk: 1.4/5 on 43 reviews but the profile is labelled 'Not Actively Used For Reviews' (dormant); the page shows 16% 1-star, which looks inconsistent with a 1.4 score; treat with care. Generic hits only: Dr. Cinik Clinic (Martyn Latchman, Jul 2025) and an unnamed clinic (Mentor Rama, Nov 2025); neither concerns this clinic."
+  },
+  {
+   "id": "transmed",
+   "reviews": [
+    {
+     "platform": "RealSelf",
+     "score": 4,
+     "aantal": 4,
+     "pct_1ster": 25,
+     "waarschuwing": "Profile name includes \"Account Suspended\"; \"This provider is not currently accepting consultations through RealSelf.\"",
+     "bron": "https://www.realself.com/dr/melike-kulahci-istanbul-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Transmed Melike Külahçı hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "No Trustpilot profile found. New RealSelf entry (doctor profile, specialty Hair Restoration Surgeon, MD; ISHRS listing https://ishrs.org/doctor/37381); only 4 reviews and RealSelf account suspended. Generic hits only: Dr. Cinik Clinic (Martyn Latchman, Jul 2025) and an unnamed clinic (Mentor Rama, Nov 2025); neither concerns this clinic."
+  },
+  {
+   "id": "dkklinik",
+   "reviews": [],
+   "risico_nieuw": [],
+   "zoekopdracht": "\"DK Klinik\" Antalya Meltem Şentürk hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "No Trustpilot or RealSelf profile found in one search. ISHRS listing for Meltem Senturk MD: https://ishrs.org/doctor/meltem-senturk/. Only sponsored/PR hits in news search (eznewswire, scotsman sponsored), not reported."
+  },
+  {
+   "id": "serdaroglu",
+   "reviews": [
+    {
+     "platform": "Trustpilot",
+     "score": 4,
+     "aantal": 4,
+     "pct_1ster": 0,
+     "waarschuwing": "No recent history of asking for reviews; This company hasn't invited customers recently, so reviews may not be representative",
+     "bron": "https://www.trustpilot.com/review/ilhanserdaroglu.com",
+     "datum": "2026-11-24",
+     "ververst": true
+    },
+    {
+     "platform": "RealSelf",
+     "score": 4.9,
+     "aantal": 101,
+     "pct_1ster": 0,
+     "waarschuwing": "\"This provider is not currently accepting consultations through RealSelf.\"",
+     "bron": "https://www.realself.com/dr/ilhan-serdaroglu-suadiye-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Ilhan Serdaroglu hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "New entries: Trustpilot ilhanserdaroglu.com (4 reviews only) and RealSelf doctor profile (MD, plastic surgeon, Suadiye; 101 reviews). Site: ilhanserdaroglu.com. ISHRS: https://ishrs.org/doctor/51520. Generic hits only: Dr. Cinik Clinic (Martyn Latchman, Jul 2025) and an unnamed clinic (Mentor Rama, Nov 2025); neither concerns this clinic."
+  },
+  {
+   "id": "apaydin",
+   "reviews": [
+    {
+     "platform": "RealSelf",
+     "score": 4.8,
+     "aantal": 419,
+     "pct_1ster": 0,
+     "waarschuwing": "\"This provider is not currently accepting consultations through RealSelf.\"",
+     "bron": "https://www.realself.com/dr/ilker-apaydin-fulya-turkey",
+     "datum": "2026-11-24",
+     "ververst": true
+    }
+   ],
+   "risico_nieuw": [],
+   "zoekopdracht": "Ilker Apaydin hair transplant death OR lawsuit OR investigation OR licence",
+   "opmerking": "New RealSelf doctor profile (MD, Hair Restoration Surgeon, Nisantasi; linked to NewAge Clinic in review titles). Distribution shown 90% 5-star / 10% 4-star although negative reviews exist on RealSelf. No Trustpilot found. ISHRS: https://ishrs.org/doctor/49926/. Generic hits only: Dr. Cinik Clinic (Martyn Latchman, Jul 2025) and an unnamed clinic (Mentor Rama, Nov 2025); neither concerns this clinic."
+  }
+ ]
+}
