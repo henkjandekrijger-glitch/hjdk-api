@@ -12,7 +12,7 @@
 //   op=awapi (beschermde host), POST op=aworder (X-Lus-Key; mandje bij AW, betalen alleen met kv aw:order:auto = ja)
 //   CJdropshipping (lib/cj.js, 24 nov 2026): op=cjtoken (sleutel plakken), op=cjstand, op=cjzoek&q=&land=DE|CN&n=, op=cjkies&vid=&prijs=&titel_nl= (beschermde host),
 //   op=cjfeed (X-Lus-Key), POST op=cjorder (X-Lus-Key; order bij CJ aangemaakt met payType 3, betalen doet Henkjan in CJ), op=cjorders
-import { wcRoute, dpSleutels, dpStand, dpLog, dpFeed, dpNieuweOrder, dpOrderStatus, DP_HOST } from '../lib/droppery.js';
+import { WC_TENANT, wcHost, wcRoute, dpSleutels, dpStand, dpLog, dpFeed, dpNieuweOrder, dpOrderStatus, DP_HOST } from '../lib/droppery.js';
 import { dpProbe, dpTokenZet, dpTokenStand, dpApi, dpScan, dpKeurCatalogus, dpKeurLaatste, vraagIdx } from '../lib/dpapi.js';
 import { keurStand } from '../lib/dpkeur.js';
 import { laterAf } from '../lib/mensmeter.js';
@@ -28,12 +28,15 @@ export default async function handler(req, res) {
   const lus = !!process.env.SHOP_FEED_KEY && String(req.headers['x-lus-key'] || '') === process.env.SHOP_FEED_KEY;
   res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
   try {
-    if (q.has('wc')) return await wcRoute(req, res, q.get('wc') || '', q);
-    const op = q.get('op') || '';
+    if (q.has('wc')) { const t = q.get('tenant') === 'bv' ? 'bv' : 'dp'; return await WC_TENANT.run(t, () => wcRoute(req, res, q.get('wc') || '', q)); }
+    const op0 = q.get('op') || '';
+    // Branvas (24 nov 2026): zelfde WooCommerce-brug, eigen opslag. op=bvsleutels | bvstand | bvlog | bvfeed | POST bvorder | bvstatus.
+    if (/^bv(sleutels|stand|log|feed|order|status)$/.test(op0) && !WC_TENANT.getStore()) { q.set('op', op0.slice(2)); req.url = url.pathname + '?' + q.toString(); return await WC_TENANT.run('bv', () => handler(req, res)); }
+    const op = op0;
     if (op === 'sleutels') {
       if (!beschermd) return res.status(404).send('Niet gevonden');
-      const k = await dpSleutels(true); res.setHeader('content-type', 'text/html; charset=utf-8');
-      return res.status(200).send(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Droppery-koppeling Kadoly</title><body style="font:16px/1.5 system-ui;max-width:640px;margin:32px auto;padding:0 16px"><h1 style="font-size:24px">Droppery koppelen aan Kadoly</h1><p>Zet in Droppery onder <b>Settings, Base information</b> de Store URL op <code>${esc(DP_HOST)}</code> (webshop type WooCommerce). Zet daarna onder <b>Settings, API credentials</b>:</p><p>Consumer key<br><input readonly style="width:100%;font:14px monospace;padding:8px" value="${esc(k.key)}" onclick="this.select()"></p><p>Consumer secret<br><input readonly style="width:100%;font:14px monospace;padding:8px" value="${esc(k.secret)}" onclick="this.select()"></p><p>Druk op Submit. Deze pagina staat alleen achter de Vercel-inlog; deel de waarden niet.</p></body>`);
+      const k = await dpSleutels(true), bv = WC_TENANT.getStore() === 'bv'; res.setHeader('content-type', 'text/html; charset=utf-8');
+      return res.status(200).send(`<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>${bv ? 'Branvas' : 'Droppery'}-koppeling Kadoly</title><body style="font:16px/1.5 system-ui;max-width:640px;margin:32px auto;padding:0 16px"><h1 style="font-size:24px">${bv ? 'Branvas' : 'Droppery'} koppelen aan Kadoly</h1>${bv ? `<p>Ga in Branvas naar <b>Connect Store</b>, WooCommerce, <b>Connect</b>, en kies <b>Enter API keys manually instead</b>. Store URL: <code>${esc(wcHost())}</code>. Plak daarna:</p>` : `<p>Zet in Droppery onder <b>Settings, Base information</b> de Store URL op <code>${esc(DP_HOST)}</code> (webshop type WooCommerce). Zet daarna onder <b>Settings, API credentials</b>:</p>`}<p>Consumer key<br><input readonly style="width:100%;font:14px monospace;padding:8px" value="${esc(k.key)}" onclick="this.select()"></p><p>Consumer secret<br><input readonly style="width:100%;font:14px monospace;padding:8px" value="${esc(k.secret)}" onclick="this.select()"></p><p>Druk op Submit. Deze pagina staat alleen achter de Vercel-inlog; deel de waarden niet.</p></body>`);
     }
     if (op === 'token') { // 21 nov 2026 (Henkjan: "Heb je geen droppery API ?"): token uit platform.droppery.io, menu API token
       if (!beschermd) return res.status(404).send('Niet gevonden');

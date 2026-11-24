@@ -519,6 +519,26 @@
       "destination": "/api/dp?wc=:path*"
     },
     {
+      "source": "/bv/wp-json",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/dp?wc=&tenant=bv"
+    },
+    {
+      "source": "/bv/wp-json/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/dp?wc=:path*&tenant=bv"
+    },
+    {
       "source": "/dp/wp-json",
       "has": [
         {
