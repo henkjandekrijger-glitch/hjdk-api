@@ -29,7 +29,7 @@ Bijgewerkt 24 nov 2026 11:30 UTC: de pauze tot maandag 20:00 is voorbij. Campagn
 - De volledige live bron staat op https://simpele-site-henq.vercel.app/api/bron (web_fetch_vercel_url; groot, opslaan en met python lezen). Zo haal je een bestand op om te wijzigen.
 - Bestanden waar een persoonlijk adres in staat (bijv. fn/rapport.js, fn/lijst.js, api/_intern/overdracht.html, api/_push.js) kun je **niet inline** uitrollen door de privacy-plugin: alleen per sha meenemen. Moet je er iets in wijzigen, haal dan eerst het adres eruit naar een Vercel-variabele (zoals bij fn/nieuwsbrief.js op 20 nov).
 - De shell in de cloud kan taniakross.media niet bereiken (proxy); gebruik web_fetch_vercel_url op simpele-site-henq.vercel.app.
-- Laatste productie-uitrol: dpl_F1Z7GzbzA1d8qiHsgaTgvNK4aqLC (20 nov 14:47 UTC, READY): fn/nieuwsbrief.js uid acf4a499eae8872de0927874d4ca2d2c704c0a29.
+- Laatste productie-uitrol: zie sectie 12 (24 nov). Haal altijd zelf de laatste op met list_deployments.
 
 ## 4. Onderdelen van de site (bestanden in simpele-site)
 
@@ -113,6 +113,15 @@ Henkjan vroeg 20 nov: "Check in mn mail naar adressen van tania ooit uit mailchi
 - Voorstel (nog niet besloten): de adressen niet stil op de lijst zetten (aanmelding van jaren geleden, deels via import), maar één mail waarin ze zelf bevestigen ("Wil je de podcast van Tania blijven krijgen?"); alleen wie klikt komt op de lijst. Tekst eerst door Henkjan en Tania laten goedkeuren. Versturen via Resend in batches, met afmeldlink, eerst een kleine proef. Dit is in één keer genoeg voor het doel van 1.000.
 - Eerste stap maandag: vragen of je de zip mag downloaden om alleen te tellen (hoeveel actief, afgemeld, weggevallen), of dat Henkjan inlogt op Mailchimp voor de actuele stand.
 
+## 12. Muziek als medicijn, leesstand en dagartikelen (24 nov)
+
+- **Dossier** /muziek-als-medicijn en /en/music-as-medicine (api/muziek.js in simpele-site): verborgen (niet in menu of homepage), wel index,follow, in sitemap en llms.txt. Alles uit gelezen bronnen (Cochrane, Lancet, BJS, NIHR). Wacht op Tania's persoonlijke noot; dan ook Paleissymposium "Music and Mind, Music as Medicine" (2025, co-voorzitter met Ineke Sluiter) en "The Art of Healing" (Erasmus 2026) erbij, het dossier vanaf de site linken, de advertentie "Muziek als medicijn" erheen laten wijzen en een ZICHT-proef zetten.
+- **Dagartikelen** (Henkjan: "vul dit iedere dag aan met een artikel wat relevant is en verwijs dan naar dossier onderaan dat artikel"): api/mmart.js. Eén JSON per dag in data/mm/<datum>-<onderwerp>.json (nl en en). Adressen /muziek-als-medicijn/<slug> en /en/music-as-medicine/<slug>. Het dossier loopt ook via mmart.js (zet de lijst "Nieuwste artikelen" erin), zodat muziek.js nooit mee hoeft. Sitemap via api/kaart.js uit dezelfde map. Een nieuw artikel = alleen het nieuwe JSON-bestand inline uitrollen, de rest op sha.
+- Eerste artikel: /muziek-als-medicijn/muziek-om-in-slaap-te-vallen en /en/music-as-medicine/music-to-fall-asleep (Cochrane CD010459).
+- **Dagtaak** trig_01GBsTSx84bciUTnNr7qnpe1 "TK dagartikel muziek als medicijn", elke dag 10:37 UTC in de cloud: onderwerp uit Demand Radar thema muziek-medicijn plus AI-gaten, bronnen lezen, JSON schrijven, uitrollen, live controleren, werklog (wie=tk-dagartikel), bericht aan Henkjan. Regels: elk getal op een gelezen pagina, geen gedachtestreepjes, geen medisch advies, geen onderwerp twee keer, na een fout hooguit één nieuwe poging en anders terugrollen.
+- **Leesstand** (Henkjan: "duidelijk lezen versie ... in sealedintent.com look ... subtiel kunnen kiezen"): Aa-knop naast de zon/maan op elke pagina (tk.js), of ?lees=1 (uit met ?lees=0). Wit, donkerblauw #0B1640, blauw #2B47C4, Inter 18px, onderstreepte links, geen animaties; donker #0A1030 met #EEF1FC. Keuze onthouden in localStorage tk-lees, telling als gebeurtenis "lees". CSS in tk-extra.css, Tania's eigen opmaak blijft gelijk.
+- Laatste uitrol: dpl_3MwYR8v1xxjatXEUpHRbCQ4jhtLQ (24 nov 12:26 UTC, READY): api/mmart.js, api/kaart.js, vercel.json, tk.js, tk-extra.css, data/mm/2026-11-24-slapen.json.
+
 ## 11. Open punten, op volgorde
 
 1. Maandag na 20:00: Mailchimp-adressen bespreken (10).
@@ -124,8 +133,11 @@ Henkjan vroeg 20 nov: "Check in mn mail naar adressen van tania ooit uit mailchi
 7. Meta-leadformulier zodra Tania zelf kan inloggen (8).
 8. Profielmails en tv-pitch: marineren tot Henkjan zegt (9).
 9. Boekingscontact op de site controleren met Henkjan (9).
+10. Tania's persoonlijke noot in het dossier, daarna dossier linken, advertentie erheen, ZICHT-proef (12).
 
 ## Logboek (nieuwste boven)
+
+- 24 nov 12:30 UTC chat-taniakross: leesstand (Aa-knop, sealedintent-look) live op de hele site; dagartikelen bij het dossier (api/mmart.js), eerste artikel over muziek en slapen live; dagtaak trig_01GBsTSx84bciUTnNr7qnpe1 om 10:37 UTC.
 
 - 24 nov 11:30 UTC chat-taniakross: les uit 20-24 nov: Clickmind-wit zones gaven 27 van 32 adressen voor $0,02 per adres. BEWEZEN 12183102 (53 zones, 8 advertenties, $0,05) gestart; VERKENNER 12168319 zonder die zones en zonder de 2 slechtste advertenties; dagelijkse leerronde gepland. Lijst 51 leden.
 
