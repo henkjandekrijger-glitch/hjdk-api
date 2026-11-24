@@ -69,3 +69,10 @@ ok(R.code===303&&/op=partner&c=v-v-de-boys&k=/.test(R.h.location),'aangezet '+R.
 R=res(); await C2.clubOp({req:{method:'GET',headers:{}},res:R,q:new URLSearchParams('af='+cc.tok),host:'gids.kadoly.com',ua:'Mozilla',kaal,leesBody:async()=>({}),isBot}); ok(/geen mail meer/.test(R.body)&&(await kv.raw(['SCARD','cw:af']))===1,'afgemeld');
 const st=await C2.stand(); console.log(JSON.stringify({totaal:st.totaal,perOnderwerp:st.perOnderwerp,wacht:st.wachtOp}));
 ok(st.totaal.verstuurd===1&&st.totaal.aan===1&&st.perOnderwerp.o0.succes===1&&st.bezwaren.vertrouwen===1&&st.antwoorden.vraag===1,'stand telt '+JSON.stringify(st.antwoorden));
+// vindOsm: een provincie met time-outs houdt de rest niet tegen (24 nov 2026, Noord-Holland bleef hangen)
+{ await kv.set('cw:osm', { next: 1, n: 5, per: { 'NL-ZH': 5 }, leeg: {} });
+  globalThis.fetch = async (u, o) => { const b = decodeURIComponent(String(o && o.body || '')); if (/NL-NH|Noord-Holland/.test(b)) throw Object.assign(new Error('t'), { name: 'TimeoutError' }); return new Response(JSON.stringify({ elements: [] }), { status: 200, headers: { 'content-type': 'application/json' } }); };
+  const r1 = await C.vindOsm(30000), r2 = await C.vindOsm(30000), oo = await kv.get('cw:osm');
+  ok(r1.ok === false && r1.provincie === 'NL-NH' && r2.provincie === 'NL-UT' && oo.mis['NL-NH'] === 1, 'osm: mislukte provincie gaat achteraan ' + JSON.stringify([r1.provincie, r2.provincie]));
+  await kv.set('cw:osm', { ...oo, per: Object.fromEntries(['NL-ZH','NL-UT','NL-NB','NL-GE','NL-OV','NL-LI','NL-FR','NL-GR','NL-DR','NL-FL','NL-ZE'].map(x => [x, 3])), mis: { 'NL-NH': 4 } });
+  const r3 = await C.vindOsm(30000); ok(r3.klaar === true, 'osm: klaar als alleen een overgeslagen provincie over is'); }
