@@ -1,0 +1,49 @@
+{
+  "datum": "2026-11-24",
+  "gemeten_op": "2026-11-24T10:00:15Z",
+  "periode": {
+    "organisch": "cumulatief sinds 2026-11-16, tenzij anders vermeld",
+    "winkel": "laatste 24 uur en laatste 14 dagen, zoals per veld vermeld"
+  },
+  "organisch": {
+    "facebook": { "kliks": 39, "echt": 13, "acties": 2, "mandjes": 2, "gisteren": { "voorvertoningen": 37, "uitgaand": 6 } },
+    "pinterest": { "kliks": 3 },
+    "gids": { "kliks": 274, "echt": 1, "acties": 1 },
+    "verkopen": {
+      "toegeschreven_aan_organisch": 0,
+      "beperking": "De code schrijft een koop met bewaarde hj-cookie aan kanaal en post toe, maar vandaag is geen echte organische transactie gezien. Twee verkopen zonder klik in Clickmind mogen niet als organisch worden bestempeld."
+    },
+    "adressen_per_kanaal": null,
+    "vergelijking_week_ervoor": null
+  },
+  "winkel": {
+    "laatste_24_uur": { "aangekomen": 847, "echt": 65, "mandjes": 2, "checkout": 2, "betaalstart": 0, "betaald": 0 },
+    "laatste_14_dagen": {
+      "verkopen": 4,
+      "omzet": 197.54,
+      "tiktok": { "verkopen": 2, "omzet": 91.36 },
+      "zonder_klik": { "verkopen": 2, "omzet": 106.18, "uitleg": "direct, Google of later teruggekeerd; organische herkomst niet bewezen" }
+    }
+  },
+  "grootste_lek": {
+    "keten": "klik naar echt en koopmeting kunnen beoordelen",
+    "bewijs": "De gids telt 274 kliks maar slechts 1 echt bezoek en 1 actie. De koopcontrole testte standaard een verdwenen product en shopStand gebruikte een vervallen checkoutpad.",
+    "gedaan": [
+      "catalogus ververst: 3469 producten, alle met datum",
+      "koopcheck kiest voortaan een actueel leverbaar product en probeert bij een 404 maximaal vier volgende kandidaten",
+      "een expliciet product-id blijft exact getest, zodat een dode link zichtbaar blijft",
+      "shopStand controleert /checkout/<product-id>"
+    ]
+  },
+  "controles": {
+    "verdwenen_product": "oc_4174004347453441 geeft 404 op product en checkout en staat niet meer in de ververste catalogus",
+    "actueel_product": "oc_4174002194661377 geeft 301 naar de canonieke productpagina en 200 op checkout",
+    "botheaders": "Browser, Googlebot, Bingbot, Pinterestbot en facebookexternalhit kregen na herhaling 200 op home en robots.txt. Dit zijn nagebootste headers vanaf een verbinding, geen bewijs uit echte crawlerlogs.",
+    "zernio_story_inzichten": "onbekend; de beschikbare browser kwam op de Zernio-inlogpagina uit",
+    "pushmeldingen": "niet bevestigd"
+  },
+  "bestaande_rondes": {
+    "social": "De socialronde van 08:44 UTC had al drie pins en vier plaatsingen van twee reels ingepland. Groei heeft niets dubbel geplaatst.",
+    "gids_en_redactie": "Geen tweede gids- of redactieronde gestart. De actuele redactie-stand bevestigde nog geen artikel van 23 of 24 november."
+  }
+}
