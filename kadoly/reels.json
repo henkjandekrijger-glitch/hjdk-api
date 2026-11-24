@@ -211,6 +211,25 @@
         "echt": 1,
         "actie": 1,
         "mandje": 1
+      },
+      "gemeten": {
+        "instagram": {
+          "dag": "2026-11-24",
+          "weergaven": 3,
+          "bereik": 3
+        },
+        "facebook": {
+          "dag": "2026-11-24",
+          "weergaven": 10,
+          "bereik": 3
+        },
+        "clickmind": {
+          "kliks": 1,
+          "echt": 1,
+          "actie": 1,
+          "mandje": 1,
+          "stand": "2026-11-24"
+        }
       }
     },
     {
@@ -410,6 +429,13 @@
           "status": "gepland",
           "link": "go.kadoly.com/o?k=fb&p=oc_4174002191351810&c=v-n261118a"
         }
+      },
+      "gemeten": {
+        "clickmind": {
+          "kliks": 4,
+          "echt": 2,
+          "stand": "2026-11-24"
+        }
       }
     },
     {
@@ -450,6 +476,21 @@
           "status": "gepland",
           "link": "go.kadoly.com/o?k=fb&p=oc_4174003460014081&c=v-n261118c"
         }
+      },
+      "gemeten": {
+        "clickmind": {
+          "kliks": 2,
+          "echt": 1,
+          "stand": "2026-11-24"
+        },
+        "instagram_18u": {
+          "weergaven": 3,
+          "bereik": 3
+        },
+        "facebook_18u": {
+          "weergaven": 1,
+          "bereik": 1
+        }
       }
     },
     {
@@ -481,6 +522,23 @@
       "clickmind": {
         "kliks": 5,
         "echt": 1
+      },
+      "gemeten": {
+        "instagram": {
+          "dag": "2026-11-24",
+          "weergaven": 1,
+          "bereik": 1
+        },
+        "facebook": {
+          "dag": "2026-11-24",
+          "weergaven": 1,
+          "bereik": 1
+        },
+        "clickmind": {
+          "kliks": 5,
+          "echt": 1,
+          "stand": "2026-11-24"
+        }
       }
     },
     {
@@ -661,6 +719,74 @@
       "tekst": "3 favorieten van Mica Decorations:\n1. Moderne zwarte lantaarn van Mica Decorations\n2. Handgemaakte lichtbruine bloempot voor een natuurlijke uitstraling\n3. Zacht Geel Fleece Dekentje voor Gezellige Avonden Mica\nWelke kies jij?\n\nLink in bio, zoek op Mica Decorations.\n\n#kadoly #kaarsen #wooninspiratie #interieur #homedecor",
       "tiktok_tekst": "3 favorieten van Mica Decorations. Welke kies jij? Link in bio. #kadoly #kaarsen #wooninspiratie #interieur #homedecor",
       "bron": "kadoly-video"
+    },
+    {
+      "id": "n261124a",
+      "soort": "kleurkeuze",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261124a.mp4",
+      "pids": [
+        "oc_4254790849183745",
+        "oc_4254790825951233",
+        "oc_4254790827081729"
+      ],
+      "tekst": "Welke kleur kies jij?\n1. Heren Chrome Stalen Horloge Zwarte Wijzerplaat van Menthe à l'eau (zwart)\n2. Heren Precisie Horloge Blauwe Wijzerplaat Groene NATO Band Menthe à l'eau (blauw)\n3. Heren Precisie Horloge Bruin Leer Zwarte Wijzerplaat - Menthe à l'eau (bruin)\nZet je nummer in de reacties.\n\nLink in bio, zoek op Menthe à l'eau.\n\n#kadoly #wooninspiratie #homedecor #cadeautip",
+      "tiktok_tekst": "Welke kleur kies jij: zwart, blauw of bruin? Link in bio. #kadoly #wooninspiratie #homedecor #cadeautip",
+      "bron": "kadoly-video"
+    },
+    {
+      "id": "n261124b",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261124b.mp4",
+      "pids": [
+        "oc_4173959369080833",
+        "oc_4173959358185473",
+        "oc_4173959365558273"
+      ],
+      "tekst": "3 favorieten van Green-goose:\n1. Dames Alpaca Sokken, Feestelijk Rendier Design, 2 Paar\n2. Damesportemonnee Kurk Bloemblad Ontwerp green-goose\n3. Bamboe Herensokken met Dots 4-Pack, Green-Goose\nWelke kies jij?\n\nLink in bio, zoek op Green-goose.\n\n#kadoly #musthave #fashion #ootd",
+      "tiktok_tekst": "3 favorieten van Green-goose. Welke kies jij? Link in bio. #kadoly #musthave #fashion #ootd",
+      "bron": "kadoly-video",
+      "gepost": "2026-11-24",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b054e48513eec1383fc510c",
+          "tijdvak": "21:00",
+          "status": "gepland",
+          "opm": "hashtags in de post vervangen door #kadoly #sokken #schoencadeautje #mode"
+        },
+        "facebook": {
+          "zernio_id": "6b054e49513eec1383fc5113",
+          "tijdvak": "21:00",
+          "status": "gepland",
+          "link": "go.kadoly.com/o?k=fb&p=oc_4173959369080833&c=v-n261124b"
+        }
+      }
+    },
+    {
+      "id": "n261124c",
+      "soort": "finds",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261124c.mp4",
+      "pids": [
+        "oc_4173957638225921",
+        "oc_4174005096464385",
+        "oc_4174003462750209"
+      ],
+      "tekst": "3 finds voor in huis:\n1. Gedetailleerde Houten Kaart van Nederland 92x69cm door Wooden Amsterdam\n2. Kristallen 5-Lichts Kandelaar voor Elegante Decoratie - AULICA\n3. Deco Geluk Metaal Ornament voor Geluk, Zwarte Afwerking\nWelke kies jij?\n\nLink in bio, zoek op Wooden Amsterdam.\n\n#kadoly #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 finds voor in huis. Welke kies jij? Link in bio. #kadoly #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video",
+      "gepost": "2026-11-24",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b054e47be966c492abf1940",
+          "tijdvak": "15:30",
+          "status": "gepland"
+        },
+        "facebook": {
+          "zernio_id": "6b054e48be966c492abf1946",
+          "tijdvak": "15:30",
+          "status": "gepland",
+          "link": "go.kadoly.com/o?k=fb&p=oc_4173957638225921&c=v-n261124c"
+        }
+      }
     }
   ],
   "lerend": {
@@ -679,8 +805,8 @@
       },
       "set": {
         "videos_gemeten": 4,
-        "cm_kliks": 12,
-        "cm_echt": 2,
+        "cm_kliks": 16,
+        "cm_echt": 4,
         "ig_weergaven_per_video": 6.8
       },
       "pov": {
@@ -690,11 +816,12 @@
         "cm_kliks": 0
       },
       "finds": {
-        "videos_gemeten": 0,
-        "cm_kliks": 1,
-        "cm_echt": 1,
+        "videos_gemeten": 1,
+        "cm_kliks": 3,
+        "cm_echt": 2,
         "cm_mandje": 1,
-        "opm": "kerstfinds (22 nov) eerste mandje via een video, nog geen 24 uur"
+        "opm": "kerstfinds (22 nov) eerste mandje via een video, nog geen 24 uur",
+        "ig_weergaven_per_video": 3
       }
     },
     "besluiten": [
@@ -702,7 +829,8 @@
       "2026-11-20: 19 nov geen ronde. Vandaag 2 per platform (08:30 al voorbij): 15:30 kerstballen_kleur (kleurkeuze), 21:00 boho_set (set; set had de meeste Clickmind-kliks: kersthoek 6 tegen tafelhaard 1). Weergaven nog te laag om te leren (2 per reel).",
       "2026-11-21: 08:30 al voorbij (ronde 09:41 NL), dus 2 per platform op IG en FB: 15:30 17uur_donker (pov, eerste test van die soort, past bij het tijdstip), 21:00 steenlampen_set (set: 7 Clickmind-kliks over 2 video's tegen kleurkeuze 2). Weergaven per reel nog 0 tot 2, te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd; wachtrij zonder gepost: 20.",
       "2026-11-22: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 kerstfinds (finds, eerste test van die soort) en 21:00 n261119a wollen dekens (set: 7 Clickmind-kliks over 2 video's, kleurkeuze 2). IG-reels van 21 nov kregen voor het eerst bereik: steenlampen_set 16 weergaven, 17uur_donker 12 (tegen 1 tot 4 eerder); nog niet 24 uur oud. FB-reels blijven 0 in Zernio terwijl Clickmind wel FB-kliks telt. Te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd.",
-      "2026-11-23: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 n261118c (finds, planten; finds gaf met kerstfinds het eerste Clickmind-mandje via een video) en 21:00 n261118a (set, Housevitamin kerst; set heeft 12 Clickmind-kliks over 4 video's en 21:00 gaf de meeste IG-weergaven: steenlampen 20, n261119a 5 kliks). IG-weergaven per video: set 6,8, pov 12 (1 video), kleurkeuze 1,5. FB-reels 2 tot 8 weergaven. Te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd."
+      "2026-11-23: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 n261118c (finds, planten; finds gaf met kerstfinds het eerste Clickmind-mandje via een video) en 21:00 n261118a (set, Housevitamin kerst; set heeft 12 Clickmind-kliks over 4 video's en 21:00 gaf de meeste IG-weergaven: steenlampen 20, n261119a 5 kliks). IG-weergaven per video: set 6,8, pov 12 (1 video), kleurkeuze 1,5. FB-reels 2 tot 8 weergaven. Te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd.",
+      "2026-11-24: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 n261124c (finds, in huis; finds heeft het enige Clickmind-mandje via video, kerstfinds) en 21:00 n261124b (set, Green-goose sokken: past bij schoencadeautjes uit de voorrang van het groei-account; set nu 16 Clickmind-kliks, 4 echt). Weergaven per video blijven 1 tot 10 (kerstfinds FB 10, IG 3); te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd (n261124a horloges overgeslagen: hashtags passen niet)."
     ]
   }
 }

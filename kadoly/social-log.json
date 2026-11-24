@@ -40,7 +40,9 @@
       "nieuw",
       "wonen"
     ],
-    "besluiten": [],
+    "besluiten": [
+      "2026-11-24: Pinterest 3 pins volgens rotatie en de voorrang van het groei-account (kerst en schoencadeautjes): 11:00 wonen gouden kerstboom Mica (13 mandjes), 15:00 nieuw schoenzetmat rond Label2X, 19:45 sieraad moissanite kerstboomketting. Pinterest-pins blijven zonder bereik in Zernio; Clickmind pinterest 3 kliks totaal, facebook 39 kliks, 13 echt, 2 mandjes (cumulatief sinds 16 nov). Nog steeds pins van een ander project (White elephant, stocking stuffer) op het Kadoly-Pinterestaccount op 22 en 23 nov."
+    ],
     "rotatie": "sieraad schuift elke dag één tijdvak op; 17 nov: 12:15 sieraad, 19:45 mandje; 18 nov: 12:15 mandje, 19:45 nieuw; 19 nov: 12:15 nieuw, 19:45 wonen; 20 nov: 12:15 wonen, 19:45 sieraad",
     "notities": [
       "2026-11-18: Zernio-analytics geven voor alle 6 posts van 16-17 nov overal 0 (ook bereik), terwijl Clickmind 7 kliks van Facebook telt (1117-sieraad 4 kliks/1 echt, 1117-mandje 3). Dus niet als gemeten genoteerd; morgen opnieuw. Volgers 0 op alle drie (17 nov).",
@@ -656,6 +658,45 @@
       "bord_id": "271060540011940609",
       "asset": "kolibri-pin.png",
       "bewijs": "kadoly/groei/2026-11-23-merken-live.json"
+    },
+    {
+      "tijd": "2026-11-24T10:00:00Z",
+      "dag": "2026-11-24",
+      "platform": "pinterest",
+      "soort": "wonen",
+      "pid": "oc_4174003416580097",
+      "tijdvak": "11:00",
+      "via": "zernio",
+      "zernio_id": "6b054e32f5da4d813b2b4f1c",
+      "status": "gepland",
+      "bord": "Wonen en decoratie",
+      "code": "pin-1124-wonen"
+    },
+    {
+      "tijd": "2026-11-24T14:00:00Z",
+      "dag": "2026-11-24",
+      "platform": "pinterest",
+      "soort": "nieuw",
+      "pid": "oc_4174004650409987",
+      "tijdvak": "15:00",
+      "via": "zernio",
+      "zernio_id": "6b054e33513eec1383fc5096",
+      "status": "gepland",
+      "bord": "Cadeau-ideeën",
+      "code": "pin-1124-nieuw"
+    },
+    {
+      "tijd": "2026-11-24T18:45:00Z",
+      "dag": "2026-11-24",
+      "platform": "pinterest",
+      "soort": "sieraad",
+      "pid": "oc_4251974488932353",
+      "tijdvak": "19:45",
+      "via": "zernio",
+      "zernio_id": "6b054e331557319ba8408b04",
+      "status": "gepland",
+      "bord": "Sieraden",
+      "code": "pin-1124-sieraad"
     }
   ]
 }
