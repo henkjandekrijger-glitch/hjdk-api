@@ -29,6 +29,7 @@ const REGELS = {
   tikklein: 'knop of link kleiner dan 40 px hoog in het eerste scherm',
   chat: 'de chat van de site over deze zaak ontbreekt, of er staat nog een los vraagveld naast',
   kop: 'oude kop of oude stijl: de pagina mist de rustige kop van curacao.day (class rzk, todayin bzz ?w=kop) of toont nog gekleurde blokjes, een getekende kopplaat of gekleurde scorepillen (Henkjan 20 nov 2026: "Oude looks ? je consistency check werkt niet")',
+  taalkeuze: 'taalkeuze in de kop (EN, NL ...) onzichtbaar: een algemene regel voor details>summary kleurt hem blauw op de blauwe kop (nachtronde 24 nov 2026; lib/cur.js moet .rzk-t uitzonderen)',
   rust: 'meer dan de vaste typografie: lettermaat buiten 13/16/18/24 (30+ mag voor de titel), meer dan één labelstijl of meer dan één linkstijl (lib/currust.js)',
 };
 
@@ -37,6 +38,7 @@ function lum(c) { const m = String(c).match(/\d+(\.\d+)?/g); if (!m) return null
 const b = await chromium.launch(); const uit = []; let fout = 0;
 for (const f of files) {
   const html = fs.readFileSync(f, 'utf8'), r = { pagina: path.basename(f), fouten: [] }, voeg = (code, waar) => { if (!r.fouten.some(x => x.code === code && x.waar === waar)) r.fouten.push({ code, wat: REGELS[code], waar: String(waar || '').slice(0, 120) }); };
+  if (/class="rzk-t"/.test(html) && /details>summary\{[^}]*color:#002B7F!important/i.test(html)) voeg('taalkeuze', 'details>summary zonder :not(.rzk-t)');
   if (!/class="rzk[ "]/.test(html) || !/rzk-oud-weg/.test(html)) voeg('kop', /class="rzk[ "]/.test(html) ? 'rustige kop zonder de stijl die de oude blokjes weghaalt' : 'oude kop');
   for (const [w, h, cs] of [[360, 640, 'light'], [390, 844, 'light'], [390, 844, 'dark']]) {
     const p = await b.newPage({ viewport: { width: w, height: h }, colorScheme: cs, deviceScaleFactor: 1 });
