@@ -220,6 +220,7 @@ De volledige lijst staat in de overdracht onder "Open punten". De belangrijkste 
 - **Redis zit krap** (rond 250 MB). Nieuwe tellers altijd met een vervaltijd en per dag in een hash.
 - **De overdracht is groot.** Lees per kop, niet in één keer in de context.
 - **Een stopopdracht voor een campagne kan door de beveiliging worden geweigerd.** Vraag dan Henkjans letterlijke woord, of gebruik de stopregel.
+- **Een dagkopie naast een lopend CPA-origineel verliest (24 nov).** De kopieën van 20 nov converteerden 7 tot 17 keer slechter dan hun origineel (DE 12168047 2,6% vraag per klik tegen 19,5%, US 12168048 0,8% tegen 13,5%): het origineel met geschiedenis wint de goede zones. Maak een kopie pas als het origineel op is of stopt, en wijzig geen creative van een lopende winnaar (moderatie). Eerste kopie volgens die regel: US 12182934 (24 nov).
 
 ## 13. Melden aan Henkjan
 
