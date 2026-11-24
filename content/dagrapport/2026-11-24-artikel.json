@@ -1,0 +1,1627 @@
+{
+  "schema_version": 1,
+  "round": "artikel",
+  "event_date_utc": "2026-11-24",
+  "work_date_curacao": "2026-11-23",
+  "observed_at_utc": "2026-11-24T03:46:07.037Z",
+  "reporting_period_utc": {
+    "start": "2026-11-23T00:00:00Z",
+    "end_exclusive": "2026-11-24T00:00:00Z"
+  },
+  "authorization": {
+    "source": "Current scheduled article instruction; previously shown concrete start-over idea",
+    "scope": "Read, research, draft storage, checks and internal diary. No publication approval for this text."
+  },
+  "traffic": {
+    "definition": "Registered page openings emitted by bsmeet, not unique visitors.",
+    "period_utc": {
+      "start": "2026-11-23T00:00:00Z",
+      "end_exclusive": "2026-11-24T00:00:00Z"
+    },
+    "stockingbooks": {
+      "page_openings": 32,
+      "prior_measureday": "2026-11-22",
+      "prior_page_openings": 7,
+      "absolute_difference": 25,
+      "reliably_reported_sources": {
+        "pinterest": 1
+      },
+      "remaining_source_breakdown": null
+    },
+    "lastingchange": {
+      "page_openings": 12,
+      "prior_measureday": "2026-11-22",
+      "prior_page_openings": 13,
+      "absolute_difference": -1,
+      "source_breakdown": null
+    },
+    "reported_pages": [
+      {
+        "site": "stockingbooks.com",
+        "path": "/",
+        "openings": 20
+      },
+      {
+        "site": "lastingchange.works",
+        "path": "/why-it-didnt-work",
+        "openings": 5
+      },
+      {
+        "site": "lastingchange.works",
+        "path": "/",
+        "openings": 4
+      }
+    ],
+    "week_average": null,
+    "limitation": "Only two comparable closed days. Increase in registered openings is not a demonstrated effect of content, pins or technical changes. Pinterest opening cannot be assigned to a specific pin. Other page and source counts unavailable in the returned report."
+  },
+  "amazon": {
+    "definition": "Raw redirect requests, not unique human clickers, conversions or sales",
+    "period_utc": {
+      "start": "2026-11-23T00:00:00Z",
+      "end_exclusive": "2026-11-24T00:00:00Z"
+    },
+    "total": 630,
+    "stockingbooks": 627,
+    "lastingchange": 3,
+    "conversion_rate": null,
+    "prior_total": 208,
+    "prior_comparison": "Do not infer comparable human-click growth: prior site attribution was incomplete and routing changed on Nov23."
+  },
+  "pinterest": {
+    "logged_posts_on_measureday": 4,
+    "definition": "Publication action only",
+    "impressions": null,
+    "outbound_clicks": null,
+    "saves": null,
+    "provider_freshness": null,
+    "limitation": "pinstand has undated historical zero values and four recent posts with no metrics. No reliable current cloud provider statistics. Prior Zernio interactive publication verification is separate from analytics and not repeated. No posting or pinuitkomst call in this run."
+  },
+  "sales": {
+    "lc_pdf_enabled": false,
+    "lc_pdf_period_sales": null,
+    "lc_pdf_source_returns_empty_perDag": true,
+    "kdp_closed_day_sales": null,
+    "kdp_source": "https://hjdk-api-henq.vercel.app/api/wtb?op=kdpoverdracht",
+    "kdp_last_available_snapshot": {
+      "as_of": "2026-11-23T21:03:00Z",
+      "reported_royalty_usd": 24.99,
+      "status": "intraday, all KDP, attribution unavailable; not organic-site revenue"
+    }
+  },
+  "search": {
+    "gsc_queries": "No cached query rows or site totals available for either site; dates absent, not zero measured clicks.",
+    "index_stockingbooks": {
+      "measurement_day_utc": "2026-11-24",
+      "measured_at_utc": "2026-11-24T03:44:11.189Z",
+      "sitemap_urls": 17,
+      "checked": 17,
+      "checked_this_day": 17,
+      "indexed": 1,
+      "discovered_not_indexed": 12,
+      "unknown_to_google": 4,
+      "previous_observation": {
+        "day": "2026-11-23",
+        "checked": 3,
+        "indexed": 1
+      },
+      "limitation": "Coverage expanded from 3 to 17; do not call the expanded denominator an indexing decline. Provider statuses of stocking-stuffers and free wordsearch now unknown, prior discovered. No deindexing claim. This is index status, not traffic."
+    },
+    "index_lastingchange": {
+      "status": "provider_access_unavailable",
+      "error": "geen toegang tot lastingchange.works",
+      "observed_day_utc": "2026-11-24",
+      "action": "Logged once; no retry, credentials, DNS or permission changes. Does not block protected draft."
+    },
+    "ai": {
+      "measurement_day": "2026-11-23",
+      "provider": "perplexity/sonar",
+      "bookstuffers": {
+        "panel": "181bd30fa896a9bd",
+        "successful_questions": 8,
+        "citations": 0
+      },
+      "lastingchange": {
+        "panel": "94af3b369c8c22c9",
+        "successful_questions": 4,
+        "citations": 0
+      },
+      "limitation": "Fixed sample panels only; not total AI search reach. LC four-question panel is not an article-specific test."
+    }
+  },
+  "primary_bottleneck": {
+    "finding": "Stocking Books has 16 of 17 inspected sitemap URLs not indexed at the Nov24 observation.",
+    "evidence_source": "https://hjdk-api-henq.vercel.app/api/gsc?op=index&site=bookstuffers",
+    "impact": "Restricts Google entry points; lost clicks unknown.",
+    "hypothesis": "Investigating crawl discovery and the value of existing free-resource pages is more justified than mass production. No specific technical cause established.",
+    "control": "Keep bs-kerst-gratis-1123 test/control pages and all modal/chat trials unchanged.",
+    "actual_check": {
+      "url": "https://stockingbooks.com/free-printable-christmas-word-search",
+      "http": 200,
+      "robots": "index, follow",
+      "canonical": "https://stockingbooks.com/free-printable-christmas-word-search"
+    },
+    "next_action": "Read existing crawl/discovery evidence and preserve sample definition; prepare any concrete existing-page change for preview before publication. Do not repeat verification or add thin pages.",
+    "primary_metric": "Google URL Inspection indexed state for the same 17 URLs, with provider time; GSC clicks separately when available.",
+    "evaluation": "Technical check first. Any later approved content/index improvement judged after 14 to 21 days from that actual change and enough comparable observations. No intervention clock started."
+  },
+  "measurement_limitation": {
+    "finding": "Page openings and Amazon requests still have no click-level linkage",
+    "effect": "No conversion percentage or winning CTA inference",
+    "existing_proposal": "content/dagrapport/2026-11-23-meetvoorstel.md",
+    "action": "No second experiment or setting changed."
+  },
+  "learning": {
+    "strategy": "Chapter7b: one useful original free worksheet in already planned article, not mass variants. No own benchmark fabricated from tiny sample.",
+    "research_reused": "content/dagrapport/2026-11-23-traffic-onderzoek.md and 2026-11-23-traffic-proef.json, same Curaçao working day",
+    "maker_source": {
+      "url": "https://nesslabs.com/newsletter-curiosity-consistency",
+      "read_again_at_utc": "2026-11-24T03:46:07.037Z",
+      "published": "December 2020",
+      "observation": "Author describes 25,000 newsletter subscribers and acquisition spikes after external mentions; an existing self-report reused, no new measured result for us.",
+      "limits": "Subscribers are not visits; historic self-report, no causal control. Current page footer is not compared as like-for-like growth.",
+      "application": "A concrete free reset card makes a specific future distribution promise. No email gate while mail is disabled.",
+      "counterevidence": "Our current data has only one Pinterest-attributed opening, no usable provider outbound statistics; cannot validate the external approach yet."
+    },
+    "previous_pilot": {
+      "id": "sb-free-wordsearch-20261123",
+      "verified_outcome": "No approved revised free-resource pin publication confirmed in the internal cloud record; old puzzle-book post is different. No attributed traffic outcome known for the revised pilot.",
+      "do_not_claim": "One site Pinterest opening is not proof that this pilot worked."
+    }
+  },
+  "implemented": [
+    {
+      "change": "Stored one original start-over draft via existing lcartikel endpoint",
+      "status": "protected_concept_only",
+      "preview": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-start-over-in-life&concept=1",
+      "check": "HTTP200; status concept; mode eerst-zien; x-robots-tag noindex,nofollow; absent from sitemap; existing procrastination stays live."
+    }
+  ],
+  "live_changes": [],
+  "draft": {
+    "article": {
+      "slug": "how-to-start-over-in-life",
+      "titel": "How to Start Over in Life: A Practical 7-Day Reset Plan",
+      "h1": "How to Start Over in Life: A Practical 7-Day Reset Plan",
+      "desc": "Choose what to keep, what to change, and one realistic next step. Use this free seven-day reset plan with fill-in prompts and a simple weekly review.",
+      "datum": "2026-11-24",
+      "zoekterm": "how to start over in life",
+      "volume": 590,
+      "gerelateerd": [
+        "how-to-stop-procrastinating"
+      ],
+      "antwoord": "To start over in life, take stock of what is still working, choose one area to change, and turn that choice into a manageable first week. Keep your existing responsibilities visible. Use the seven-day plan below to make decisions and try one next step. Seven days is a planning window, not a promise that your life will be transformed.",
+      "secties": [
+        {
+          "kop": "Before you begin: define what starting over means",
+          "alineas": [
+            "You do not need to decide the rest of your life today. A reset can mean returning to a neglected interest, rebuilding a workable routine, or exploring a different direction. Name the situation you actually want to change. A sentence such as \"I want to explore work that uses my writing skills\" gives you something to investigate. \"Everything is wrong\" leaves the task undefined.",
+            "Use a notebook or copy the prompts below into a private document. You can write on paper; there is no form to submit or email address to provide. If a day needs more time, take it. The order is a practical structure created for this guide, not a tested seven-day treatment or a deadline for becoming a different person."
+          ]
+        },
+        {
+          "kop": "Day 1: take stock of the life you have",
+          "alineas": [
+            "Make three short lists: keep, change, and cannot change this week. Include relationships, skills, routines, commitments, and resources. Starting over should account for what supports you as well as what feels difficult. For example, you might keep a supportive friendship, change an overcrowded evening schedule, and work around a fixed caregiving commitment.",
+            "Finish by choosing one thing you will protect while you explore a change. This makes the plan specific enough to use when two priorities compete."
+          ],
+          "lijst": [
+            "Keep: One part of my life I value is _____. I will protect it by _____.",
+            "Change: The situation I want to be different is _____. A recent example is _____.",
+            "Work around: My fixed responsibility this week is _____. The time or help it requires is _____."
+          ]
+        },
+        {
+          "kop": "Day 2: choose one direction for this week",
+          "alineas": [
+            "Look at the change list and choose one area for this first pass. Ask which issue matters to you and has a next step within your current resources. Separate a direction from an outcome. Exploring a new line of work is a direction; receiving a job offer this week depends on other people.",
+            "Choose an action that will give you useful information. Someone considering a career change could compare the requirements in three real job descriptions. Someone wanting more connection could identify a local group and check its next meeting. Leave the other areas on a later list."
+          ],
+          "lijst": [
+            "This week I am exploring ____ because _____.",
+            "The question I need to answer first is _____.",
+            "For now, I am setting aside _____."
+          ]
+        },
+        {
+          "kop": "Day 3: fit the choice into your actual week",
+          "alineas": [
+            "Check your calendar before expanding the plan. Mark work, care, travel, and existing commitments. Then choose a realistic slot and a limited task. If Tuesday evening is usually unavailable, do not build a plan that depends on Tuesday evening.",
+            "Write down the resources you already have and the information you still need. Keep the first step reversible when possible. Researching a course can come before enrolling; talking about a possibility can come before making an irreversible commitment."
+          ],
+          "lijst": [
+            "My available slot is _____ on _____.",
+            "In that slot I will complete _____. I will stop when _____.",
+            "I already have _____. Before a bigger decision, I need to find out _____."
+          ]
+        },
+        {
+          "kop": "Day 4: make the first attempt",
+          "alineas": [
+            "Use the slot you selected and carry out the limited task. Record what actually happened, including a result that changes your mind. Finding that a course requires more time than you have is useful information. It gives you a reason to revise the plan.",
+            "Link the action to an identifiable situation: \"After I put away dinner on Wednesday, I will compare the three course schedules at the kitchen table.\" This uses the if-then planning approach described by Gollwitzer and Sheeran in Implementation Intentions, listed in Sources. The example and its place in this week plan are our practical application."
+          ],
+          "lijst": [
+            "My cue and action: If _____ happens, I will _____.",
+            "What I actually did: _____.",
+            "What I learned from the attempt: _____."
+          ]
+        },
+        {
+          "kop": "Day 5: adjust one obstacle",
+          "alineas": [
+            "Look back at the attempt. Was the difficulty a missing fact, an unrealistic time slot, an expense, or a need for help? Describe the obstacle plainly before changing the plan. Avoid turning one missed attempt into a judgment about your whole character.",
+            "Make one adjustment you can check. If the task took too long, narrow it. If you lacked information, write the question and identify where to find the answer. If you need another person's involvement, make a specific request rather than assuming their availability."
+          ],
+          "lijst": [
+            "The obstacle I observed was _____.",
+            "The adjustment I will try is _____.",
+            "If that obstacle appears again, my fallback is _____."
+          ]
+        },
+        {
+          "kop": "Day 6: identify the support you need",
+          "alineas": [
+            "Decide whether the next step is yours to take alone or requires another person, a service, or more time. You might need someone to explain a course requirement, share a responsibility, or listen while you sort through options. Name the role clearly.",
+            "Make any request small and answerable. \"Could you look at these two options with me for 15 minutes on Saturday?\" gives the other person something concrete to accept or decline. Keep your plan workable if they are unavailable; support cannot be assumed."
+          ],
+          "lijst": [
+            "The support or information I need is _____.",
+            "The person or service I can ask is _____. My specific question is _____.",
+            "If that help is unavailable, my next option is _____."
+          ]
+        },
+        {
+          "kop": "Day 7: review the evidence and choose the next week",
+          "alineas": [
+            "Review your notes. What did you do, what did you learn, and what remains unresolved? Count completed actions if that is useful, but also record whether those actions answered your question. Comparing three unsuitable courses can still prevent an unhelpful commitment.",
+            "Choose whether to continue, shrink, change, or pause this direction. Set a date for another review. Harkin and colleagues' meta-analysis found that interventions encouraging progress monitoring improved goal attainment on average across the included studies. That supports keeping a record; it does not establish that this particular worksheet will change your life."
+          ],
+          "lijst": [
+            "The evidence I have now is _____.",
+            "Next week I will continue, shrink, change, or pause _____ because _____.",
+            "My next action is _____ at _____. My review date is _____."
+          ]
+        },
+        {
+          "kop": "Your one-page reset card",
+          "alineas": [
+            "Copy these lines into a single note, or write them on a sheet of paper. Fill them in as you work through the week. Keep the card short enough to revisit without needing to reconstruct every decision."
+          ],
+          "lijst": [
+            "I want to change _____. I want to keep _____.",
+            "My main constraint is _____. My question for this week is _____.",
+            "My next action is _____. My time and place are _____.",
+            "My likely obstacle is _____. My fallback is _____.",
+            "The support I need is _____.",
+            "What happened: _____. What I learned: _____.",
+            "My next review is _____."
+          ]
+        },
+        {
+          "kop": "What the research supports, and what this plan adds",
+          "alineas": [
+            "Dai, Milkman, and Riis studied the fresh start effect in three archival field studies. They observed increases in diet searches, gym visits, and goal commitments around calendar landmarks. These findings concern starting behavior around dates such as a new week or year. They do not show that a fresh-start feeling guarantees lasting change.",
+            "The research sources below inform individual parts of this guide: choosing a starting point, connecting an action to a situation, and recording progress. The seven-day sequence, examples, and fill-in questions are our editorial structure. They have not been evaluated together as a program. You can begin on any day that fits your circumstances."
+          ]
+        },
+        {
+          "kop": "When a workbook may help",
+          "alineas": [
+            "If your review leads to one habit you want to practice repeatedly, a dedicated record may be useful. The Lasting Change Workbook paperback is an optional next step for readers who prefer a book for ongoing practice. Use the Amazon button to check its current listing and availability. You can also continue with your own notebook and this free reset card.",
+            "Keep the decisions you made this week in view. A workbook purchase is optional; the next action you identified can begin with the materials you already have."
+          ]
+        }
+      ],
+      "faq": [
+        [
+          "How do I start over when I do not know what I want?",
+          "Begin with a question you can explore. Write what you want to keep, what you want to change, and one constraint. Then choose an information-gathering step, such as comparing two possibilities. You do not need a complete long-term answer to investigate one direction."
+        ],
+        [
+          "Can I use this plan if I have very little spare time?",
+          "Spread the seven stages over a longer period and reduce the size of each task. Record your actual commitments first. The plan should reflect the time you have, including a realistic pause if another responsibility takes priority."
+        ],
+        [
+          "Do I need to wait for Monday or New Year's Day?",
+          "No. A meaningful date can serve as a reminder, but this worksheet can start on any day. Choose a time that works and put the first limited task on your calendar."
+        ],
+        [
+          "What if I miss a day or decide my goal is wrong?",
+          "Return to the last useful note. You can repeat a stage, change direction, or pause. Record the reason and choose the next review date. Completing the sequence without considering what you learned is not the purpose of the plan."
+        ],
+        [
+          "Is this the same as a habit tracker?",
+          "No. This reset plan helps you choose a direction and explore it during a first week. A habit tracker records repeated actions over time. You might use one after deciding which action is worth repeating."
+        ]
+      ],
+      "bronnen": [
+        {
+          "naam": "Dai, Milkman and Riis (2014). The Fresh Start Effect. Management Science. Three archival field studies.",
+          "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2014/06/Dai_Fresh_Start_2014_Mgmt_Sci.pdf"
+        },
+        {
+          "naam": "Gollwitzer and Sheeran (2008). Implementation Intentions. Author overview prepared for the National Cancer Institute.",
+          "url": "https://d-nb.info/1112336524/34"
+        },
+        {
+          "naam": "Harkin et al. (2016). Does Monitoring Goal Progress Promote Goal Attainment? Psychological Bulletin. Meta-analysis of experimental evidence.",
+          "url": "https://www.apa.org/pubs/journals/releases/bul-bul0000025.pdf"
+        }
+      ]
+    },
+    "word_count": 1539,
+    "sections": 11,
+    "faqs": 5,
+    "source_verification": [
+      {
+        "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2014/06/Dai_Fresh_Start_2014_Mgmt_Sci.pdf",
+        "type": "Primary research, 2014 three archival field studies",
+        "checked": "Opened author-hosted paper. Limited to starts around temporal landmarks, no promised persistence."
+      },
+      {
+        "url": "https://d-nb.info/1112336524/34",
+        "type": "Primary author overview, first published2008",
+        "checked": "Opened full author overview. Cue/action planning; not a test of our week sequence."
+      },
+      {
+        "url": "https://www.apa.org/pubs/journals/releases/bul-bul0000025.pdf",
+        "type": "Primary experimental meta-analysis,2016",
+        "checked": "Opened APA paper. Monitoring helps on average across included studies; not validation of this worksheet."
+      }
+    ],
+    "search_demand": {
+      "market": "US",
+      "term": "how to start over in life",
+      "monthly_estimate": 590,
+      "series": [
+        880,
+        590,
+        590,
+        590,
+        480,
+        590,
+        720,
+        590,
+        480,
+        590,
+        590,
+        590
+      ],
+      "cache_timestamp": "2026-11-23T00:14:01.941Z",
+      "cache_source": "content/dagrapport/2026-11-23-plan.json lasting_change",
+      "new_paid_call": false,
+      "limitation": "Estimate is not expected visits. Month labels were not in the plan; none assigned. Excludes ambiguous music/game/tax/software start-over queries."
+    },
+    "reader_goal": "Choose what to retain/change, identify constraints, try a first-week direction. Separate from live procrastination.",
+    "purchase_route": {
+      "optional_paperback_asin": "B0F1SM1L5J",
+      "preview_href": "/api/bs?site=lc&op=go&a=B0F1SM1L5J",
+      "checked_in_html": true,
+      "no_test_redirect_requested": true,
+      "pdf": false,
+      "mail": false,
+      "limitation": "Existing renderer displays paperback offer. No PDF checkout promise; no purchase or attributed sales test."
+    },
+    "distribution_proposal": {
+      "status": "not_published_or_scheduled",
+      "entry": "Search exact life-reset question; future approved Pinterest hook showing the real keep/change/first-week reset card",
+      "destination": "https://lastingchange.works/how-to-start-over-in-life",
+      "pin_board": "existing lc board only after separate image/copy approval and shared volume check",
+      "primary_traffic_metric": "GSC organic clicks to the exact article URL after approval/publication",
+      "secondary": "Registered page openings by source; genuine provider outbound Pinterest clicks only if a pin is later approved/published."
+    },
+    "hypothesis": "A specific usable worksheet matching the measured question can attract qualified organic visits; publication alone proves no effect.",
+    "comparison": {
+      "url": "https://lastingchange.works/how-to-stick-to-new-years-resolutions",
+      "status": "unchanged",
+      "type": "directional observational comparison",
+      "limitation": "Different topic and page age; not randomized and not a matched A/B test. Existing procrastination follow-up preserved."
+    },
+    "review": {
+      "start": "actual_approved_publication_time",
+      "days": [
+        14,
+        21
+      ],
+      "calendar_dates": null,
+      "minimum_evidence": "Both comparison periods complete and same definition; GSC access and sufficient exact-URL impressions/clicks for uncertainty assessment. Insufficient data means no winner; extend observation.",
+      "early_check": "After any approved publication, verify public route/sitemap/canonical and provider access before measuring traffic."
+    }
+  },
+  "checks": {
+    "checkArtikel": [],
+    "duplicate_slug": false,
+    "existing_live_article_unchanged": true,
+    "mode_before": "eerst-zien",
+    "mode_after": "eerst-zien",
+    "draft_status": "concept",
+    "preview_http": 200,
+    "preview_robots": "noindex, nofollow",
+    "draft_in_sitemap": false,
+    "primary_source_links_present": true,
+    "em_dash": false
+  },
+  "next_test": "Preview approval is required only for publication of this exact text. Continue independent measurement and existing controlled follow-ups meanwhile.",
+  "dependencies": [
+    "LC provider access error logged, not repaired without specific authorization.",
+    "PDF payment and buyer email remain disabled; paperback route available."
+  ],
+  "sources": {
+    "daily": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1",
+      "observed_at_utc": "Tue, 24 Nov 2026 03:40:16 GMT",
+      "http": 200,
+      "response": {
+        "droog": true,
+        "tekst": "Organisch boeken, 2026-11-23 (UTC)\nstockingbooks.com: 32 geregistreerde pagina-openingen (+25), organisch 1 (+1) (Pinterest 1)\nlastingchange.works: 12 geregistreerde pagina-openingen (-1)\nAmazonverzoeken: 630 (ruwe redirects, geen unieke personen)\nAmazonverzoeken per site: stockingbooks.com 627, lastingchange.works 3\nBeste pagina's: stockingbooks.com/ 20, lastingchange.works/why-it-didnt-work 5, lastingchange.works/ 4\nPinterest: 4 pins geplaatst\nNieuw LC-artikel: How to Stop Procrastinating: 7 Steps and a 2-Minute Plan (zoekvraag 135000/mnd) https://lastingchange.works/how-to-stop-procrastinating\nMeetlek: pagina-openingen en Amazonverzoeken zijn niet per klik gekoppeld. Nog geen betrouwbaar doorklikpercentage; eerst meten, dan een inhoudsproef kiezen.\nDetails: https://stockingbooks.com/overdracht"
+      }
+    },
+    "health": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=gezond",
+      "observed_at_utc": "Tue, 24 Nov 2026 03:40:34 GMT",
+      "http": 200,
+      "response": {
+        "ok": true,
+        "pdfKnop": false,
+        "pdfBestand": true,
+        "mail": false,
+        "uitleg": "PDF-knop uit: PADDLE_API_KEY ontbreekt in Vercel (hjdk-api); alles verwijst naar Amazon",
+        "fouten": []
+      }
+    },
+    "sales": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=verkoop",
+      "observed_at_utc": "Tue, 24 Nov 2026 03:40:29 GMT",
+      "http": 200,
+      "response": {
+        "pdfKnop": false,
+        "perDag": {}
+      }
+    },
+    "pinstand": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+      "observed_at_utc": "Tue, 24 Nov 2026 03:40:30 GMT",
+      "http": 200,
+      "response": {
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "haken": [
+          {
+            "id": "we-ruzie",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "we-dad",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "we-onder10",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "we-regels",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "sok-haar",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "sok-hem"
+          },
+          {
+            "id": "sok-tiener",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "sok-puzzel",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "ss-gen"
+          },
+          {
+            "id": "we-ideeen",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "sok-gids-haar"
+          },
+          {
+            "id": "sok-gids-hem",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "lc-jaar",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "lc-66"
+          },
+          {
+            "id": "lc-stappen"
+          },
+          {
+            "id": "enoch-wat",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "apo-14",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          }
+        ],
+        "laatste": [
+          {
+            "id": "20261122-we-regels-1zjm",
+            "haak": "we-regels",
+            "a": "B0DNQ61ZJM",
+            "post": "6b03305e0c584efce0d64de2",
+            "t": "2026-11-22T18:12:10.118Z",
+            "m": {
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            }
+          },
+          {
+            "id": "20261122-sok-tiener-bm75",
+            "haak": "sok-tiener",
+            "a": "B0DJQLBM75",
+            "post": "6b033065c4d17d4a0f103be1",
+            "t": "2026-11-22T18:12:11.081Z",
+            "m": {
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            }
+          },
+          {
+            "id": "20261122-enoch-wat-79n1",
+            "haak": "enoch-wat",
+            "a": "B0B5KV79N1",
+            "post": "6b03306970f37227beb16166",
+            "t": "2026-11-22T18:12:12.629Z",
+            "m": {
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            }
+          },
+          {
+            "id": "20261122-apo-14-xc9j",
+            "haak": "apo-14",
+            "a": "B0DDBTXC9J",
+            "post": "6b03306ec4d17d4a0f103bf2",
+            "t": "2026-11-22T18:12:13.608Z",
+            "m": {
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            }
+          },
+          {
+            "id": "20261122-we-ruzie-z3g3",
+            "haak": "we-ruzie",
+            "a": "B0DNDQZ3G3",
+            "post": "6b0344b6783be3b4addd3e43",
+            "t": "2026-11-22T19:38:53.148Z",
+            "m": {
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            }
+          },
+          {
+            "id": "20261122-sok-haar-mssk",
+            "haak": "sok-haar",
+            "a": "B0DMR1MSSK",
+            "post": "6b0344ba9978cd4d9a1ca580",
+            "t": "2026-11-22T19:38:54.191Z",
+            "m": {
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            }
+          },
+          {
+            "id": "20261122-we-dad-syxw",
+            "haak": "we-dad",
+            "a": "B0DK3CSYXW",
+            "post": "6b0344bf56bdc437db134475",
+            "t": "2026-11-22T19:38:55.293Z",
+            "m": {
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            }
+          },
+          {
+            "id": "20261122-sok-gids-hem-1fsp",
+            "haak": "sok-gids-hem",
+            "a": "B0DMP31FSP",
+            "post": "6b0344c49978cd4d9a1ca59e",
+            "t": "2026-11-22T19:38:56.288Z",
+            "m": {
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            }
+          },
+          {
+            "id": "20261123-sok-puzzel-prd9",
+            "haak": "sok-puzzel",
+            "a": "B0DN65PRD9",
+            "post": "6b049678d511266d6a856bec",
+            "t": "2026-11-23T19:39:54.871Z"
+          },
+          {
+            "id": "20261123-we-ideeen-t9jt",
+            "haak": "we-ideeen",
+            "a": "B0DNB1T9JT",
+            "post": "6b04967b5d67d2299ad22eb9",
+            "t": "2026-11-23T19:39:56.079Z"
+          },
+          {
+            "id": "20261123-we-onder10-fxb1",
+            "haak": "we-onder10",
+            "a": "B0DP42FXB1",
+            "post": "6b04967fd511266d6a856c13",
+            "t": "2026-11-23T19:39:57.187Z"
+          },
+          {
+            "id": "20261123-lc-jaar-1l5j",
+            "haak": "lc-jaar",
+            "a": "B0F1SM1L5J",
+            "post": "6b049681d511266d6a856c28",
+            "t": "2026-11-23T19:39:58.268Z"
+          }
+        ]
+      }
+    },
+    "bszicht": {
+      "url": "https://hjdk-api-henq.vercel.app/api/zicht?op=stand&site=bookstuffers",
+      "observed_at_utc": "Tue, 24 Nov 2026 03:40:18 GMT",
+      "http": 200,
+      "response": {
+        "ok": true,
+        "dag": "2026-11-24",
+        "sites": {
+          "bookstuffers": {
+            "host": "stockingbooks.com",
+            "laatste": {
+              "dag": "2026-11-23",
+              "site": "bookstuffers",
+              "host": "stockingbooks.com",
+              "aiBots": null,
+              "zoekvragen": null,
+              "bezoek": null,
+              "llmPanel": "181bd30fa896a9bd",
+              "llm": [
+                {
+                  "vraag": "What is the Book of Enoch?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "renew.org",
+                    "ebsco.com",
+                    "britannica.com"
+                  ]
+                },
+                {
+                  "vraag": "Which books are in the Apocrypha?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "en.wikipedia.org",
+                    "bibleodyssey.org"
+                  ]
+                },
+                {
+                  "vraag": "Where can I print free Christmas word search puzzles?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "yuzool.com",
+                    "onelittleproject.com",
+                    "daydreamintoreality.com"
+                  ]
+                },
+                {
+                  "vraag": "Christmas jokes for kids",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "jokesoftheday.com",
+                    "today.com"
+                  ]
+                },
+                {
+                  "vraag": "Christmas trivia questions and answers",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "triviaanywhere.com",
+                    "interobservers.com",
+                    "goodhousekeeping.com"
+                  ]
+                },
+                {
+                  "vraag": "Free printable Christmas coloring pages",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "giant.org",
+                    "justcoloringpages.net"
+                  ]
+                },
+                {
+                  "vraag": "What are good white elephant gifts under $10?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "eatingwell.com",
+                    "today.com",
+                    "giftrabbit.com",
+                    "creators.yahoo.com"
+                  ]
+                },
+                {
+                  "vraag": "What are good stocking stuffers for women?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "mysubscriptionaddiction.com",
+                    "hgtv.com",
+                    "sheknows.com"
+                  ]
+                }
+              ],
+              "llmRate": 0,
+              "llmCitatie": {
+                "model": "perplexity/sonar",
+                "panel": "181bd30fa896a9bd",
+                "geslaagd": 8,
+                "perVraag": [
+                  {
+                    "id": "79df91543fbc51d7",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "438b876797028be8",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "8c5fef7573e1ec5b",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "522ba70955d17463",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "e8278d8971f9aa5c",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "7787c049b90bc59b",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "4b65e326d7b05f2f",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "da5375d13d862e0f",
+                    "geciteerd": false
+                  }
+                ],
+                "geciteerd": 0,
+                "rate": 0
+              },
+              "winnaars": [
+                [
+                  "today.com",
+                  2
+                ],
+                [
+                  "renew.org",
+                  1
+                ],
+                [
+                  "ebsco.com",
+                  1
+                ],
+                [
+                  "britannica.com",
+                  1
+                ],
+                [
+                  "en.wikipedia.org",
+                  1
+                ],
+                [
+                  "bibleodyssey.org",
+                  1
+                ],
+                [
+                  "yuzool.com",
+                  1
+                ],
+                [
+                  "onelittleproject.com",
+                  1
+                ],
+                [
+                  "daydreamintoreality.com",
+                  1
+                ],
+                [
+                  "jokesoftheday.com",
+                  1
+                ]
+              ]
+            },
+            "historie": [
+              {
+                "dag": "2026-11-23",
+                "llmRate": 0,
+                "llmCitatie": {
+                  "model": "perplexity/sonar",
+                  "panel": "181bd30fa896a9bd",
+                  "geslaagd": 8,
+                  "perVraag": [
+                    {
+                      "id": "79df91543fbc51d7",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "438b876797028be8",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "8c5fef7573e1ec5b",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "522ba70955d17463",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "e8278d8971f9aa5c",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "7787c049b90bc59b",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "4b65e326d7b05f2f",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "da5375d13d862e0f",
+                      "geciteerd": false
+                    }
+                  ],
+                  "geciteerd": 0,
+                  "rate": 0
+                },
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              }
+            ],
+            "proeven": {
+              "lopend": 0,
+              "klaar": [],
+              "perStatus": {},
+              "verlengd": 0,
+              "eerstKlaar": null,
+              "nietBeoordeeld": [],
+              "langLopend": []
+            }
+          }
+        }
+      }
+    },
+    "lczicht": {
+      "url": "https://hjdk-api-henq.vercel.app/api/zicht?op=stand&site=lastingchange",
+      "observed_at_utc": "Tue, 24 Nov 2026 03:40:33 GMT",
+      "http": 200,
+      "response": {
+        "ok": true,
+        "dag": "2026-11-24",
+        "sites": {
+          "lastingchange": {
+            "host": "lastingchange.works",
+            "laatste": {
+              "dag": "2026-11-23",
+              "site": "lastingchange",
+              "host": "lastingchange.works",
+              "aiBots": null,
+              "zoekvragen": null,
+              "bezoek": null,
+              "llmPanel": "94af3b369c8c22c9",
+              "llm": [
+                {
+                  "vraag": "How do I stick to my New Year’s resolutions?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "nbcdfw.com",
+                    "auckland.ac.nz"
+                  ]
+                },
+                {
+                  "vraag": "What is a good habit workbook for the new year?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "penguin.co.nz"
+                  ]
+                },
+                {
+                  "vraag": "How long does it take to form a habit?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "ncbi.nlm.nih.gov"
+                  ]
+                },
+                {
+                  "vraag": "I did nothing this year, how do I start over in 2027?",
+                  "model": "perplexity/sonar",
+                  "genoemd": false,
+                  "geciteerd": false,
+                  "bronnen": [
+                    "youarecapableofmore.com",
+                    "mikemichalowicz.com"
+                  ]
+                }
+              ],
+              "llmRate": 0,
+              "llmCitatie": {
+                "model": "perplexity/sonar",
+                "panel": "94af3b369c8c22c9",
+                "geslaagd": 4,
+                "perVraag": [
+                  {
+                    "id": "2f5222f42e0b992e",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "3afce6eee7e68e2f",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "fab12185a259b35c",
+                    "geciteerd": false
+                  },
+                  {
+                    "id": "a2ab905318b52680",
+                    "geciteerd": false
+                  }
+                ],
+                "geciteerd": 0,
+                "rate": 0
+              },
+              "winnaars": [
+                [
+                  "nbcdfw.com",
+                  1
+                ],
+                [
+                  "auckland.ac.nz",
+                  1
+                ],
+                [
+                  "penguin.co.nz",
+                  1
+                ],
+                [
+                  "ncbi.nlm.nih.gov",
+                  1
+                ],
+                [
+                  "youarecapableofmore.com",
+                  1
+                ],
+                [
+                  "mikemichalowicz.com",
+                  1
+                ]
+              ]
+            },
+            "historie": [
+              {
+                "dag": "2026-11-23",
+                "llmRate": 0,
+                "llmCitatie": {
+                  "model": "perplexity/sonar",
+                  "panel": "94af3b369c8c22c9",
+                  "geslaagd": 4,
+                  "perVraag": [
+                    {
+                      "id": "2f5222f42e0b992e",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "3afce6eee7e68e2f",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "fab12185a259b35c",
+                      "geciteerd": false
+                    },
+                    {
+                      "id": "a2ab905318b52680",
+                      "geciteerd": false
+                    }
+                  ],
+                  "geciteerd": 0,
+                  "rate": 0
+                },
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-22",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-21",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-20",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-19",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-18",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-17",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-16",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-15",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-14",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-13",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null,
+                "eigenImp": null,
+                "eigenClicks": null
+              },
+              {
+                "dag": "2026-11-12",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null
+              },
+              {
+                "dag": "2026-11-11",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null
+              },
+              {
+                "dag": "2026-11-10",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null
+              },
+              {
+                "dag": "2026-11-09",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null
+              },
+              {
+                "dag": "2026-11-08",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null,
+                "googlebot7d": null
+              },
+              {
+                "dag": "2026-11-07",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-11-06",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-11-05",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-11-04",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-11-03",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-11-02",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-11-01",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-10-31",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-10-30",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-10-29",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-10-28",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-10-27",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-10-26",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              },
+              {
+                "dag": "2026-10-25",
+                "llmCitatie": null,
+                "aiBots": null,
+                "bezoekZoek7d": null,
+                "bezoekZoekBevestigd7d": null,
+                "bezoekAI7d": null
+              }
+            ],
+            "proeven": {
+              "lopend": 0,
+              "klaar": [],
+              "perStatus": {},
+              "verlengd": 0,
+              "eerstKlaar": null,
+              "nietBeoordeeld": [],
+              "langLopend": []
+            }
+          }
+        }
+      }
+    },
+    "queries-bookstuffers": {
+      "url": "https://hjdk-api-henq.vercel.app/api/zicht?op=zoekvragen&site=bookstuffers",
+      "observed_at_utc": "Tue, 24 Nov 2026 03:41:03 GMT",
+      "http": 200,
+      "response": {
+        "ok": true,
+        "ververst": null,
+        "site": "bookstuffers",
+        "dagen": 28,
+        "basis": "Search Console-regels per zoekvraag (geanonimiseerde zoekvragen ontbreken; site-totaal staat in op=stand)",
+        "perDag": [],
+        "zoekvragen": [],
+        "aantal": 0
+      }
+    },
+    "queries-lastingchange": {
+      "url": "https://hjdk-api-henq.vercel.app/api/zicht?op=zoekvragen&site=lastingchange",
+      "observed_at_utc": "Tue, 24 Nov 2026 03:41:04 GMT",
+      "http": 200,
+      "response": {
+        "ok": true,
+        "ververst": null,
+        "site": "lastingchange",
+        "dagen": 28,
+        "basis": "Search Console-regels per zoekvraag (geanonimiseerde zoekvragen ontbreken; site-totaal staat in op=stand)",
+        "perDag": [],
+        "zoekvragen": [],
+        "aantal": 0
+      }
+    },
+    "index-bookstuffers": {
+      "url": "https://hjdk-api-henq.vercel.app/api/gsc?op=index&site=bookstuffers",
+      "observed_at_utc": "Tue, 24 Nov 2026 03:44:11 GMT",
+      "http": 200,
+      "response": {
+        "ok": true,
+        "at": 1795491851189,
+        "dag": "2026-11-24",
+        "site": "stockingbooks.com",
+        "inSitemap": 17,
+        "bekeken": 17,
+        "vandaagBekeken": 17,
+        "geindexeerd": 1,
+        "perStaat": {
+          "Gevonden - momenteel niet geïndexeerd": 12,
+          "Ingediend en geïndexeerd": 1,
+          "URL is onbekend bij Google": 4
+        },
+        "ouderDan7Dagen": 0,
+        "uitGoogleGevallen": [],
+        "nietGeindexeerd": [
+          {
+            "url": "https://stockingbooks.com/christmas-jokes",
+            "staat": "Gevonden - momenteel niet geïndexeerd",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/christmas-trivia",
+            "staat": "Gevonden - momenteel niet geïndexeerd",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/christmas-coloring-pages",
+            "staat": "Gevonden - momenteel niet geïndexeerd",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/white-elephant-rules",
+            "staat": "Gevonden - momenteel niet geïndexeerd",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/white-elephant-gifts-under-10",
+            "staat": "Gevonden - momenteel niet geïndexeerd",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/stocking-stuffers",
+            "staat": "URL is onbekend bij Google",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/free-printable-christmas-word-search",
+            "staat": "URL is onbekend bij Google",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/book-of-enoch",
+            "staat": "Gevonden - momenteel niet geïndexeerd",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/apocrypha",
+            "staat": "Gevonden - momenteel niet geïndexeerd",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/all-books",
+            "staat": "Gevonden - momenteel niet geïndexeerd",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/about",
+            "staat": "Gevonden - momenteel niet geïndexeerd",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/stocking-stuffers-for-women",
+            "staat": "Gevonden - momenteel niet geïndexeerd",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/stocking-stuffers-for-men",
+            "staat": "URL is onbekend bij Google",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/stocking-stuffers-for-teens",
+            "staat": "Gevonden - momenteel niet geïndexeerd",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/white-elephant-gift-ideas",
+            "staat": "URL is onbekend bij Google",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          },
+          {
+            "url": "https://stockingbooks.com/secret-santa-generator",
+            "staat": "Gevonden - momenteel niet geïndexeerd",
+            "gecrawld": null,
+            "canoniek": null,
+            "robots": "ROBOTS_TXT_STATE_UNSPECIFIED",
+            "indexToegestaan": "INDEXING_STATE_UNSPECIFIED",
+            "opgehaald": "PAGE_FETCH_STATE_UNSPECIFIED"
+          }
+        ],
+        "historie": [
+          {
+            "dag": "2026-11-24",
+            "inSitemap": 17,
+            "bekeken": 17,
+            "geindexeerd": 1
+          },
+          {
+            "dag": "2026-11-23",
+            "inSitemap": 17,
+            "bekeken": 3,
+            "geindexeerd": 1
+          }
+        ]
+      }
+    },
+    "index-lastingchange": {
+      "url": "https://hjdk-api-henq.vercel.app/api/gsc?op=index&site=lastingchange",
+      "observed_at_utc": "Tue, 24 Nov 2026 03:44:12 GMT",
+      "http": 200,
+      "response": {
+        "ok": false,
+        "fout": "geen toegang tot lastingchange.works"
+      }
+    }
+  },
+  "additions": []
+}

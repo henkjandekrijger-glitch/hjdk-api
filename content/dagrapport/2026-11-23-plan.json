@@ -330,5 +330,16 @@
     "source": "Demand Radar jaar-reset; bijgewerkt2026-11-23T00:14:01.941Z",
     "deliverable": "Conceptartikel met een praktisch invulbaar plan voor de eerste week.",
     "publication": "Alleen na akkoord op de concepttekst."
-  }
+  },
+  "execution_additions": [
+    {
+      "at_utc": "2026-11-24T03:46:07.037Z",
+      "round": "artikel",
+      "status": "protected_concept_saved",
+      "slug": "how-to-start-over-in-life",
+      "preview": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-start-over-in-life&concept=1",
+      "publication_approved": false,
+      "record": "content/dagrapport/2026-11-24-artikel.json"
+    }
+  ]
 }
