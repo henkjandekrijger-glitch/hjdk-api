@@ -319,3 +319,17 @@ assert.ok(!JSON.stringify(kg).includes('uiterlijk woensdag 16 december'));
 assert.ok((await render('slug=kerstcadeau')).body.includes('geen algemene uiterste besteldag'));
 for(const g of Object.values(gidsen.GIDSEN))assert.ok(!(g.faq||[]).some(f=>f.a.includes('Je krijgt een retourlabel en het hele bedrag terug.')));
 console.log('23nov: sieradenmatches/uitsluitingen, bronnen/llms, seizoensvoorraad/tabelprijs en retour-FAQ geslaagd.');
+
+// 24nov: verdiept plantenadvies, bronkoppelingen en feitgrenzen zonder nieuwe pagina.
+const hp=(await render('slug=planten-home-staging')).body;
+assert.ok(hp.includes('soortafhankelijke behoeften'));
+assert.ok(!hp.includes('hangt slap als hij een week'));
+assert.ok(!hp.includes('Na een week vervangen.'));
+assert.ok(hp.includes('14,5 cm'));assert.ok(hp.includes('UV-bestendigheid'));
+assert.ok(hp.includes(bewijs.BRONNEN.hsVerzorging.url));
+const hpg=[...hp.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1])['@graph']||[]);
+assert.ok(hpg.find(x=>x['@type']==='Article').citation.includes(bewijs.BRONNEN.hsVerzorging.url));
+for(const id of ['oc_4174003378864129','oc_4174003512573953','oc_4174003371769857'])assert.ok(bewijs.bronLink({id}).includes('/planten-home-staging#uitleg'));
+assert.ok((await render('slug=onderzoek-en-bronnen')).body.includes('href="/tv-meubel-breedte-berekenen"'));
+assert.ok(!(await render('slug=nieuw-bij-kadoly')).body.includes('verzending, ;'));
+console.log('24nov: plantenbron/schema/modelgrenzen, bronhubontdekking en Nieuw-interpunctie geslaagd.');
