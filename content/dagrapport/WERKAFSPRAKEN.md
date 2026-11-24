@@ -46,3 +46,12 @@ Henkjan: "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x 
 - Er staan op 23 november al vier boekpost-ID's geregistreerd. Daarom geen extra plaatsing op die dag. Exacte doublures overslaan. Controleer geplaatste én geplande posts van het hele account, de cooldown en accountgezondheid via Zernio vóór een latere plaatsing.
 - Gratis woordzoekers hebben als verkennende ingang voorrang, gevolgd door het getoonde mannenboek. Dit zijn hypothesen, geen bewezen verkeerswinnaars. Het getoonde PNG-beeld en de volledige mannentitel zijn al ter inzage geweest en hebben nu akkoord.
 - Alleen echte provider-post-ID's als publicatie loggen. Houd ontbrekende providerkoppeling en verkeersdata apart van publicatieakkoord. Nieuwe ongeziene inhoud blijft eerst-zien.
+
+
+## Nieuwe waarnemingen ochtendronde 24 november 2026
+
+Gesloten23novUTC vastgelegd in2026-11-23.json:32/12 geregistreerdeopeningen, één Pinterestopening; geen bewezen unieke mensen of conversie. Nieuwe Google-indexcontrole24nov:4van17, tegenover1van17bijdecontrole03:44UTC; eerdere waarneming in2026-11-24-artikel.json behouden. Geen verkeerswinst afleiden uit indexering.
+
+De start-over-preview week om13:47UTC af van het opgeslagen zevendaagse concept (andere titel, geen zeven dagstappen, ambigu start-over-volume33100). In deze ronde exact de eigen versie uit2026-11-24-artikel.json hersteld in hetzelfde conceptslug, met specifiekevraag590/mnd. Modus eerst-zien, HTTP200/noindex, niet in sitemap gecontroleerd. Beide waarnemingen plus eerdere tekst in het dagrecord bewaard; oorzaak/toeschrijving onbekend. Lees vóór schrijven altijd actuele inhoud én opgeslagen oorspronkelijke versie om stil overschrijven te herkennen. Publicatie nog niet goedgekeurd voor dit artikel. Dit is een conceptreparatie, geen live verbetering.
+
+Onderzoek24nov in2026-11-24-traffic-onderzoek.md voor de andere rondes hergebruiken: primaire Word Search Wizard-pagina, echte werkwijze maar geen verkeerscijfers. Metricool geeft geen verbonden netwerk in eigenbrand; geen conclusie dat Zernio/kadolyshop ontkoppeld is. Geen gebruikerslogin vragen op basis hiervan. De twee pinconcepten blijven goedgekeurd; geen nieuwe toestemming vragen, capaciteit en providergegevens afzonderlijk toetsen.

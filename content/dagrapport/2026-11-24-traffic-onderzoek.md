@@ -1,0 +1,13 @@
+# Verkeersonderzoek 24 november 2026
+
+Gelezen 2026-11-24T13:50:03.380Z. Bron: https://wordsearchwizard.com/puzzles/easy-christmas-word-search/ . Gevonden als bron in het actuele Perplexity-woordzoekpanel van Stocking Books op 24 november. Dit is één steekproef, geen uitspraak over marktaandeel.
+
+Waarneming: de eigen pagina toont direct een echt raster, vermeldt niveau en aantal woorden, geeft een printvoorbeeld, legt zoekrichtingen uit en toont een antwoordblad. Een link biedt de antwoorden ook afzonderlijk. De pagina noemt persoonlijk en klassikaal printgebruik. Publicatiedatum niet vastgesteld; waarneming24nov. Geen websiteverkeerscijfers gevonden. Een weergegeven aantal plays is geen unieke bezoekersmeting en wordt niet als verkeersbewijs gebruikt.
+
+Overdraagbare hypothese: maak het nuttige eindresultaat meteen bruikbaar, met concrete invulprompts of een echte printpreview, voordat er een kooproute volgt. Dat is geen bewijs dat onze site hierdoor meer bezoekers krijgt. Vandaag toegepast als herstel van het eerder afgesproken LC-weekplan: zeven concrete dagstappen en een kopieerkaart teruggezet in hetzelfde beschermde concept. Geen nieuw artikel of extra pin gemaakt. Beschermde preview: https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-start-over-in-life&concept=1 . De inhoud is eigen werk uit de opgeslagen versie, geen gekopieerde puzzel of tekst.
+
+Tegenbewijs en beperkingen: de goedgekeurde gratis-woordzoekpilot heeft nog geen bevestigde plaatsing met zijn eigen ID in het cloudlog. Eén geregistreerde Pinterestopening op23nov kan dus niet als pilotresultaat worden gepresenteerd. Het oude betaalde-puzzelboek is een andere pin. Echte providerweergaven, uitgaande kliks en saves zijn onbekend; Metricool geeft INVALID_ARGUMENT met geen verbonden netwerk voor zijn eigen brand. Dat zegt niets over het bestaande kadolyshop-account via Zernio. Niet opnieuw om hetzelfde publicatieakkoord vragen.
+
+Grootste meetbare bereiklek: Google controleerde24nov alle17StockingURL's en rapporteert4geïndexeerd,13niet. De eerdere waarneming1van17van03:44UTC blijft behouden in2026-11-24-artikel.json. Zelfde denominator, maar indexering bewijst geen verkeer en geen effect van ons werk.
+
+Toepassing meten: de LC-conceptversie blijft ter inzage. Bij goedgekeurde publicatie primaire maat GSC-kliks op de exacte artikel-URL; vergelijk bestaande resolutionspagina alleen richtinggevend. Beoordeel14tot21dagen na werkelijke publicatie met voldoende vergelijkbare data. Voor woordzoekers blijft het bestaande goedgekeurde pinbeeld/copy/bestemming leidend; geen extra slot of nieuwe openbare proef. Bij indexering eerst technische werking en dezelfde17URL's volgen; geen inhoudswijziging voor groei claimen zonder proef.
