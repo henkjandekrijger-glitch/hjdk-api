@@ -1,4 +1,14 @@
-# Errezeta Publishing: bronstatus en publicatie
+# Errezeta Publishing: oproep en onderliggend dossier
+
+## Actueel: andere gedupeerden vinden
+
+Henkjan verduidelijkt op 24 november 2026 dat dit een ander soort zaak is: we moeten vragen of er andere gedupeerden zijn. De pagina op dezelfde URL heeft nu het type `oproep`, met de hoofdvraag **Ook gedupeerd door Errezeta Publishing?**. Het eerste scherm bevat één anoniem tekstveld voor wat is afgesproken, wat is betaald en wat daarna gebeurde. De voorkant stelt dezelfde vraag. De lezer hoeft geen algemene review of juridische beoordeling te schrijven.
+
+Doel: andere betrokken klanten vinden en meldingen met de bestaande stukken vergelijken. Ook een uiteindelijk opgeloste ervaring is welkom. De bestaande menselijke moderatie blijft gelden; alleen een gecontroleerde anonieme samenvatting verschijnt per onderwerp. Geen contactgegevens verplicht en geen automatisch gestarte procedure, aantallen of bestaande groep verondersteld. Wie stukken wil bespreken kan via /chat#henkjan de redactie benaderen.
+
+De eigen zaak van de WAM-oprichter is de aanleiding. De eerdere volledige feitelijke samenvatting, betalingsgegevens op hoofdlijnen, bronnen, wederzijdse correspondentie en het mogelijke afwikkelingsstuk blijven in een standaard HTML-uitklapper beschikbaar. De bewijsinhoud is dezelfde gedeelde renderer als bij de andere dossiers. De nieuwe oproep heeft een eigen volgkop en Article-sectie; URL, scope, moderatie en bewaartermijnen blijven gelijk. Mobiel390px: tekstveld geheel in eerste scherm, onderkant552px; onderbouwing open/dicht daadwerkelijk gecontroleerd. Desktop1280px: oproep op voorkant gecontroleerd. 40 gerichte tests en router-/commentaarcheck.
+
+De volgende secties beschrijven de bronbasis van de onderliggende eigen zaak.
 
 24 november 2026, America/Curacao. Henkjan vraagt zijn Errezeta-dossier in Drive te vinden en een dossier op WAM te maken, met meer concrete zaken op de voorkant. Dit geeft toestemming voor een veilige publieke samenvatting op WAM. Geen externe berichten of nieuwe juridische stappen uitgevoerd.
 
@@ -37,7 +47,7 @@ De actuele eigen website van het bedrijf was via de webzoektool niet leesbaar. D
 
 Publieke URL: `/dossier/errezeta`. Errezeta komt als extra concreet dossier naast de bestaande Blendle- en ANP-zaken op de voorkant en dossierindex. Hosters blijft thema in onderzoek. De datum van oude gebeurtenissen blijft 2023/2024/2026; de publicatiedatum maakt daarvan geen nieuw incident.
 
-De titel en hoofdsamenvatting gaan over €50.000, herstelbeloften en de onzekere afwikkeling. De melding van misleiding is toegeschreven aan Henkjan; geen strafrechtelijke schuld, bewezen oplichting, vastgestelde schadevergoeding of persoonlijke aansprakelijkheid gepubliceerd. Dat de melder WAM-oprichter en directeur van Adsfair is staat zichtbaar bij de feiten.
+De oproep vraagt naar andere gedupeerden; de onderliggende eigen zaak beschrijft €50.000, herstelbeloften en de onzekere afwikkeling. De melding van misleiding is toegeschreven aan Henkjan; geen strafrechtelijke schuld, bewezen oplichting, vastgestelde schadevergoeding of persoonlijke aansprakelijkheid gepubliceerd. Dat de melder WAM-oprichter en directeur van Adsfair is staat zichtbaar bij de feiten.
 
 De afwikkelingstekst is niet genegeerd: zichtbaar bij feiten, tijdlijn, stukkenoverzicht, FAQ en open punten. Henkjan is tijdens het werk gevraagd of deze tekst een concept bleef of is verstuurd/ondertekend. Zolang dat niet bevestigd is, blijft de status onbekend. Een latere bevestiging moet de inhoud aanpassen, niet alleen een interne notitie.
 
@@ -51,6 +61,6 @@ Inhoud in `data/wam/dossier-errezeta-2026-11-24.json`, generieke optionele betal
 
 Article/FAQ/Breadcrumb volgen zichtbare inhoud; sitemap en llms.txt nemen het nieuwe dossier over. IndexNow-lijst en de inhoudshash zijn bijgewerkt. Een observationele ontdekking/indexproef staat in het ZICHT-manifest, zonder zoekvolumebelofte of voorspelde rankingwinst. Het bestaande vier-vragenpanel blijft gelijk.
 
-39 gerichte tests: bestaande WAM-tests plus Errezeta-betalingen, correctie, tegenstuk, privacy, route/canonical/schema, alias, reactie naar moderatie en specifieke opt-in voor dit dossier. Router- en commentaarcheck. Mobiel 390px en desktop 1280px daadwerkelijk bekeken, 19/20px tekst en geen horizontale uitloop. De directe reactieknop bereikt het formulier en de volgknop richt zich op de Errezeta-opt-in. Een korte placeholder voorkomt afsnijden van de lange bedrijfsnaam. Onafhankelijke read-only audit uitgevoerd; de gevonden fout in de bevestigingslink is opgelost: bestaande dossiers krijgen het label Bekijk het dossier, de loterijroute behoudt Zo zeg je op. Feitelijke productiecontrole en IndexNow-resultaat worden in het centrale werklog vastgelegd.
+40 gerichte tests: bestaande WAM-tests plus Errezeta-betalingen, correctie, tegenstuk, privacy, route/canonical/schema, alias, reactie naar moderatie en specifieke opt-in voor dit dossier. Router- en commentaarcheck. Mobiel 390px en desktop 1280px daadwerkelijk bekeken, 19/20px tekst en geen horizontale uitloop. De directe reactieknop bereikt het formulier en de volgknop richt zich op de Errezeta-opt-in. Een korte placeholder voorkomt afsnijden van de lange bedrijfsnaam. Onafhankelijke read-only audit uitgevoerd; de gevonden fout in de bevestigingslink is opgelost: bestaande dossiers krijgen het label Bekijk het dossier, de loterijroute behoudt Zo zeg je op. Feitelijke productiecontrole en IndexNow-resultaat worden in het centrale werklog vastgelegd.
 
 Vervolg: status van de afwikkelingstekst verduidelijken; leveringen en accountopbrengsten per afspraak reconstrueren; eventuele Amazon-bevestiging en latere terugbetaling controleren. Geen afgeleide juridische beoordeling door WAM. Andere gedupeerden pas als afzonderlijke meldingen meetellen na echte inzendingen; geen verzonnen aantallen.

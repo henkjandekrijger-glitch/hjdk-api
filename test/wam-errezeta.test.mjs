@@ -51,12 +51,26 @@ test('ervaring insturen en het juiste dossier volgen zijn ook voor Errezeta toeg
   assert.equal(volgScope('/dossier/errezeta'),'errezeta');
   const h=pagina('dossier/errezeta',true);
   assert.ok(h.includes('data-bedrijf="errezeta"') && h.includes('data-scope="errezeta"'));
-  assert.ok(h.includes('href="#reageren">Deel je ervaring') && h.includes('data-volg>Volg dit dossier'));
-  assert.ok(h.includes('placeholder="Wat gebeurde er?"'));
+  assert.ok(h.includes('data-volg>Volg deze oproep'));
+  assert.ok(h.includes('placeholder="Wat is er bij jou gebeurd?"'));
   const calls=[], db={incr:async()=>1, raw:async a=>{calls.push(a);return a[0]==='EVAL'?'OK':1;}};
   const r=await bewaarReactie({bedrijf:'errezeta',thema:'uitvoering',ervaring:'aanvulling',tekst:'Een concrete ervaring die eerst door de redactie wordt gecontroleerd.',akkoord:true},'proef',db);
   assert.ok(r.ok && r.status==='wacht-op-moderatie');
   assert.ok(calls.some(a=>a[0]==='EVAL'));
   const a=await aanmelden({email:'lezer@example.invalid',scope:'errezeta',toestemming:true},'proef',{incr:async()=>1,raw:async()=>1});
   assert.ok(a.ok && a.nieuw);
+});
+test('oproep zoekt andere gedupeerden met één veld vooraan; eigen bewijs blijft uitklapbaar aanwezig', () => {
+  const h=pagina('dossier/errezeta',true), home=pagina('nl',true);
+  assert.equal(d.soort,'oproep');
+  assert.ok(h.includes('<h1>Ook gedupeerd door Errezeta Publishing?</h1>'));
+  assert.equal((h.match(/id="reageren"/g)||[]).length,1);
+  assert.equal((h.match(/data-bedrijf="errezeta"/g)||[]).length,1);
+  assert.ok(h.indexOf('id="reageren"') < h.indexOf('id="eigen-dossier"'));
+  assert.ok(h.includes('<details class="sources" id="eigen-dossier">'));
+  for(const t of ['De betalingen in de bankdocumenten','€40.000,00','€10.000,00','2026-06-22','afwikkelingstekst','gaat eerst naar de redactie']) assert.ok(h.includes(t),t);
+  assert.ok(h.includes('Volg deze oproep.</h2>'));
+  assert.ok(home.includes('Oproep aan andere gedupeerden') && home.includes('Wat is er bij jou gebeurd?'));
+  const graph=schemaVoorPagina('/dossier/errezeta',d.seoTitel,d.kort)['@graph'];
+  assert.equal(graph.find(x=>x['@type']==='Article').articleSection,'Oproep aan gedupeerden');
 });

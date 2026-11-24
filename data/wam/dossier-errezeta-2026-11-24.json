@@ -1,26 +1,40 @@
 {
   "id": "errezeta",
   "naam": "Errezeta Publishing",
-  "soort": "eigen dossier",
-  "onderwerp": "KDP-diensten en herstelbeloften",
+  "soort": "oproep",
+  "onderwerp": "Oproep aan andere gedupeerden",
   "uitgelicht": true,
   "directMeedoen": true,
   "bijgewerkt": "2026-11-24",
   "publicatie": "2026-11-24",
-  "titel": "Errezeta Publishing: €50.000 en de herstelbeloften",
-  "seoTitel": "Errezeta Publishing ervaringen: dossier €50.000 | WAM",
-  "kaartTitel": "Errezeta: €50.000 betaald, herstel beloofd",
-  "kort": "Twee bankdocumenten tonen €50.000 aan betalingen. Errezeta deed herstelvoorstellen; de melder vraagt terugbetaling. We onderzoeken de levering en de mogelijke eindafwikkeling.",
+  "titel": "Ook gedupeerd door Errezeta Publishing?",
+  "seoTitel": "Errezeta Publishing: oproep aan gedupeerden | WAM",
+  "kaartTitel": "Ook gedupeerd door Errezeta Publishing?",
+  "kort": "Heb je betaald aan Errezeta Publishing en problemen met de levering of afwikkeling? Vertel wat is afgesproken, wat je betaalde en wat er daarna gebeurde.",
   "laatsteStuk": "2026-08-29",
   "status": "Betalingsdocumenten ingezien · levering en eindafwikkeling in onderzoek",
   "bewijsStatus": "Bankdocumenten, contracttekst en correspondentie ingezien",
   "bedragen": [
-    {"label": "Twee betalingsdocumenten samen", "waarde": "€50.000"},
-    {"label": "Volgens Companies House", "waarde": "Ontbonden op 12 maart 2024"}
+    {
+      "label": "Twee betalingsdocumenten samen",
+      "waarde": "€50.000"
+    },
+    {
+      "label": "Volgens Companies House",
+      "waarde": "Ontbonden op 12 maart 2024"
+    }
   ],
   "betalingen": [
-    {"datum": "2023-12-22", "omschrijving": "Twee Platinum KDP-pakketten, volgens de betaalomschrijving", "bedrag": 40000},
-    {"datum": "2024-02-01", "omschrijving": "Factuurbetaling aan Errezeta Publishing", "bedrag": 10000}
+    {
+      "datum": "2023-12-22",
+      "omschrijving": "Twee Platinum KDP-pakketten, volgens de betaalomschrijving",
+      "bedrag": 40000
+    },
+    {
+      "datum": "2024-02-01",
+      "omschrijving": "Factuurbetaling aan Errezeta Publishing",
+      "bedrag": 10000
+    }
   ],
   "feiten": [
     "De melder is WAM-oprichter Henkjan de Krijger, directeur van Adsfair B.V. Hij stelt dat hij is misleid bij de aankoop van diensten rond Amazon Kindle Direct Publishing (KDP) en vraagt €50.000 terug. WAM heeft daarmee zelf een belang bij dit dossier.",
@@ -32,43 +46,165 @@
     "Companies House vermeldt Errezeta Publishing Ltd, nummer 13678815, als ontbonden op 12 maart 2024. De naam en het zakelijke correspondentieadres sluiten aan bij de contracttekst in Drive. De ontbinding is een registerfeit; zij bewijst op zichzelf geen oplichting en verklaart niet wie eventuele verplichtingen moet dragen."
   ],
   "tijdlijn": [
-    {"datum":"2023-11-11","kop":"Contracttekst voor boeken en beheer","tekst":"Een contracttekst in Drive beschrijft vijf boeken, vier maanden advertentiebeheer en VIP-dienstverlening voor €10.000. De tekst is gelezen; uitvoering en ondertekening zijn hiermee niet afzonderlijk geverifieerd. Deze contractprijs tellen we niet op bij de twee betalingsdocumenten.","bron":"Contracttekst in Drive, gedateerd 11 november 2023"},
-    {"datum":"2023-12-22","kop":"€40.000 aan Errezeta Publishing","tekst":"Het ingeziene transactiedocument vermeldt een afschrijving van €40.000 voor twee Platinum KDP-pakketten volgens afspraak.","bron":"ING-transactiedocument, tekst en weergave gecontroleerd"},
-    {"datum":"2023-12-26","kop":"Eerste aankondiging van doorhaling","tekst":"De indieningshistorie bij Companies House vermeldt een eerste Gazette-aankondiging voor compulsory strike-off. Dit is de aankondiging, niet de datum waarop de vennootschap is ontbonden.","bron":"Companies House, indieningshistorie"},
-    {"datum":"2024-02-01","kop":"Nog €10.000 betaald","tekst":"Een tweede transactiedocument vermeldt €10.000 aan Errezeta Publishing met een factuur als omschrijving. De twee hier gecontroleerde betalingen bedragen samen €50.000.","bron":"ING-transactiedocument, tekst en weergave gecontroleerd"},
-    {"datum":"2024-03-12","kop":"Vennootschap ontbonden","tekst":"Companies House registreert de ontbinding van Errezeta Publishing Ltd via compulsory strike-off. Het dossier stelt niet vast wat dit betekent voor individuele aanspraken.","bron":"Companies House, overzicht en indieningshistorie"},
-    {"datum":"2024-04-10","kop":"Klacht en voorstel voor herstel","tekst":"De melder vraagt om geld terug of een concreet herstelplan. Errezeta antwoordt met een voorstel voor overdracht van een volgens het bedrijf winstgevend KDP-account. De melder schrijft dat één goed account een mogelijke afsluiting van de afspraken kan zijn.","bron":"E-mailwisseling tussen de melder en Errezeta, ingezien"},
-    {"datum":"2024-04-11","kop":"Uitgebreider herstelplan","tekst":"Errezeta biedt twee accounts aan en noemt daarnaast IngramSpark en aanvullende boeken. Dit is een bedrijfsvoorstel; de genoemde winstgevendheid en waardering zijn niet onafhankelijk vastgesteld.","bron":"E-mail van Errezeta met onderwerp plan, ingezien"},
-    {"datum":"2024-04-27","kop":"Samenvoegverzoek gemeld, bevestiging gevraagd","tekst":"Errezeta meldt een account-samenvoegverzoek bij Amazon. De melder vraagt op 28 april om de ontbrekende bevestiging. Op 29 april antwoordt de supportafdeling dat zij de gekoppelde mailbox controleert. Deze uitwisseling stelt de geslaagde overdracht niet vast.","bron":"E-mailwisseling Merge confirmation, 27 tot en met 29 april 2024"},
-    {"datum":"2024-04-30","kop":"Afwikkelingstekst in Drive","tekst":"Het Drive-bestand met een tekst over vrijstelling van verdere verplichtingen is op deze datum bijgewerkt. Dat is de bestandsdatum, geen bewijs dat de brief toen is verzonden of ondertekend. De status en eventuele uitvoering blijven een open punt.","bron":"Drive-bestand: inhoud en wijzigingsdatum gecontroleerd"},
-    {"datum":"2026-06-22","kop":"Bedrag gecorrigeerd naar €50.000","tekst":"De melder corrigeert het eerder genoemde bedrag van €60.000 naar €50.000 en schrijft dat hij eerder met lijstprijzen rekende. WAM gebruikt de twee ingeziene betalingen, niet het hogere oude bedrag.","bron":"Verzonden correctiemail van de melder, ingezien"},
-    {"datum":"2026-08-29","kop":"Terugvordering herhaald","tekst":"De melder stuurt een factuur en terugvordering van €50.000 en verwijst daarbij naar de betalingen van 22 december 2023 en 1 februari 2024. Een ingediende vordering is geen uitspraak over aansprakelijkheid of bewijs van terugbetaling.","bron":"Verzonden e-mail van de melder, ingezien"}
+    {
+      "datum": "2023-11-11",
+      "kop": "Contracttekst voor boeken en beheer",
+      "tekst": "Een contracttekst in Drive beschrijft vijf boeken, vier maanden advertentiebeheer en VIP-dienstverlening voor €10.000. De tekst is gelezen; uitvoering en ondertekening zijn hiermee niet afzonderlijk geverifieerd. Deze contractprijs tellen we niet op bij de twee betalingsdocumenten.",
+      "bron": "Contracttekst in Drive, gedateerd 11 november 2023"
+    },
+    {
+      "datum": "2023-12-22",
+      "kop": "€40.000 aan Errezeta Publishing",
+      "tekst": "Het ingeziene transactiedocument vermeldt een afschrijving van €40.000 voor twee Platinum KDP-pakketten volgens afspraak.",
+      "bron": "ING-transactiedocument, tekst en weergave gecontroleerd"
+    },
+    {
+      "datum": "2023-12-26",
+      "kop": "Eerste aankondiging van doorhaling",
+      "tekst": "De indieningshistorie bij Companies House vermeldt een eerste Gazette-aankondiging voor compulsory strike-off. Dit is de aankondiging, niet de datum waarop de vennootschap is ontbonden.",
+      "bron": "Companies House, indieningshistorie"
+    },
+    {
+      "datum": "2024-02-01",
+      "kop": "Nog €10.000 betaald",
+      "tekst": "Een tweede transactiedocument vermeldt €10.000 aan Errezeta Publishing met een factuur als omschrijving. De twee hier gecontroleerde betalingen bedragen samen €50.000.",
+      "bron": "ING-transactiedocument, tekst en weergave gecontroleerd"
+    },
+    {
+      "datum": "2024-03-12",
+      "kop": "Vennootschap ontbonden",
+      "tekst": "Companies House registreert de ontbinding van Errezeta Publishing Ltd via compulsory strike-off. Het dossier stelt niet vast wat dit betekent voor individuele aanspraken.",
+      "bron": "Companies House, overzicht en indieningshistorie"
+    },
+    {
+      "datum": "2024-04-10",
+      "kop": "Klacht en voorstel voor herstel",
+      "tekst": "De melder vraagt om geld terug of een concreet herstelplan. Errezeta antwoordt met een voorstel voor overdracht van een volgens het bedrijf winstgevend KDP-account. De melder schrijft dat één goed account een mogelijke afsluiting van de afspraken kan zijn.",
+      "bron": "E-mailwisseling tussen de melder en Errezeta, ingezien"
+    },
+    {
+      "datum": "2024-04-11",
+      "kop": "Uitgebreider herstelplan",
+      "tekst": "Errezeta biedt twee accounts aan en noemt daarnaast IngramSpark en aanvullende boeken. Dit is een bedrijfsvoorstel; de genoemde winstgevendheid en waardering zijn niet onafhankelijk vastgesteld.",
+      "bron": "E-mail van Errezeta met onderwerp plan, ingezien"
+    },
+    {
+      "datum": "2024-04-27",
+      "kop": "Samenvoegverzoek gemeld, bevestiging gevraagd",
+      "tekst": "Errezeta meldt een account-samenvoegverzoek bij Amazon. De melder vraagt op 28 april om de ontbrekende bevestiging. Op 29 april antwoordt de supportafdeling dat zij de gekoppelde mailbox controleert. Deze uitwisseling stelt de geslaagde overdracht niet vast.",
+      "bron": "E-mailwisseling Merge confirmation, 27 tot en met 29 april 2024"
+    },
+    {
+      "datum": "2024-04-30",
+      "kop": "Afwikkelingstekst in Drive",
+      "tekst": "Het Drive-bestand met een tekst over vrijstelling van verdere verplichtingen is op deze datum bijgewerkt. Dat is de bestandsdatum, geen bewijs dat de brief toen is verzonden of ondertekend. De status en eventuele uitvoering blijven een open punt.",
+      "bron": "Drive-bestand: inhoud en wijzigingsdatum gecontroleerd"
+    },
+    {
+      "datum": "2026-06-22",
+      "kop": "Bedrag gecorrigeerd naar €50.000",
+      "tekst": "De melder corrigeert het eerder genoemde bedrag van €60.000 naar €50.000 en schrijft dat hij eerder met lijstprijzen rekende. WAM gebruikt de twee ingeziene betalingen, niet het hogere oude bedrag.",
+      "bron": "Verzonden correctiemail van de melder, ingezien"
+    },
+    {
+      "datum": "2026-08-29",
+      "kop": "Terugvordering herhaald",
+      "tekst": "De melder stuurt een factuur en terugvordering van €50.000 en verwijst daarbij naar de betalingen van 22 december 2023 en 1 februari 2024. Een ingediende vordering is geen uitspraak over aansprakelijkheid of bewijs van terugbetaling.",
+      "bron": "Verzonden e-mail van de melder, ingezien"
+    }
   ],
   "bronverantwoording": "Op 24 november 2026 zijn het dossier en de contracttekst uit Drive, twee transactiedocumenten, de e-mails over klacht en herstel in april 2024, de correctie van 22 juni 2026 en de terugvordering van 29 augustus 2026 nagelezen. De transactiedocumenten zijn ook visueel gecontroleerd. Alleen veilige samenvattingen staan hier; originele bankgegevens, privécontactgegevens, accountgegevens, handtekeningen en intern juridisch advies worden niet gepubliceerd. Er is geen volledige bankreconciliatie of KDP-accountaudit uitgevoerd. De afwikkelingstekst is expliciet meegenomen als mogelijk relevant tegenstuk.",
   "documenten": [
-    {"naam":"Contracttekst van 11 november 2023","status":"Boeken, advertentiebeheer en VIP-diensten; geen aanvullende betaling vastgesteld op basis van alleen deze tekst."},
-    {"naam":"Twee ING-transactiedocumenten","status":"Betalingen van €40.000 op 22 december 2023 en €10.000 op 1 februari 2024 aan Errezeta Publishing; privégegevens blijven besloten."},
-    {"naam":"Correspondentie uit april 2024","status":"Zowel de klacht van de melder als herstelvoorstellen en de gemelde samenvoegaanvraag van Errezeta gelezen."},
-    {"naam":"Afwikkelingstekst in Drive","status":"Inhoud en bestandsdatum gelezen; verzending, ondertekening en uitvoering niet vastgesteld."},
-    {"naam":"Verzonden mails van 22 juni en 29 augustus 2026","status":"Correctie naar €50.000 en latere terugvordering. Conceptmails gelden niet als verzonden klacht of bewezen procedure."}
+    {
+      "naam": "Contracttekst van 11 november 2023",
+      "status": "Boeken, advertentiebeheer en VIP-diensten; geen aanvullende betaling vastgesteld op basis van alleen deze tekst."
+    },
+    {
+      "naam": "Twee ING-transactiedocumenten",
+      "status": "Betalingen van €40.000 op 22 december 2023 en €10.000 op 1 februari 2024 aan Errezeta Publishing; privégegevens blijven besloten."
+    },
+    {
+      "naam": "Correspondentie uit april 2024",
+      "status": "Zowel de klacht van de melder als herstelvoorstellen en de gemelde samenvoegaanvraag van Errezeta gelezen."
+    },
+    {
+      "naam": "Afwikkelingstekst in Drive",
+      "status": "Inhoud en bestandsdatum gelezen; verzending, ondertekening en uitvoering niet vastgesteld."
+    },
+    {
+      "naam": "Verzonden mails van 22 juni en 29 augustus 2026",
+      "status": "Correctie naar €50.000 en latere terugvordering. Conceptmails gelden niet als verzonden klacht of bewezen procedure."
+    }
   ],
   "reactieBedrijf": "Errezeta heeft in april 2024 inhoudelijk gereageerd en herstel aangeboden. Het bedrijf beschreef een winstgevend vervangend account, werkte een plan uit en meldde een samenvoegverzoek. Dat wordt hier naast de klacht weergegeven. Een actuele inhoudelijke reactie op dit WAM-dossier is niet opgevraagd. Een latere terugbetaling, geslaagde overdracht of definitieve eindafwikkeling is in de hier gecontroleerde stukken niet vastgesteld.",
-  "volgendeStap": "We willen de levering en opbrengsten per afspraak, een eventuele overdrachtsbevestiging van Amazon en de status van de afwikkelingstekst naast elkaar leggen. Ook staat open welke partij de herstelvoorstellen na de ontbinding deed en of er later is terugbetaald. Andere klanten kunnen hun eigen ervaring hieronder toevoegen; ervaringen verschijnen pas na moderatie, anoniem en per onderwerp gebundeld.",
-  "bedrijven": ["Errezeta Publishing"],
+  "volgendeStap": "We onderzoeken de levering en opbrengsten per afspraak, een eventuele overdrachtsbevestiging van Amazon en de status van de afwikkelingstekst. Ook staat open welke partij de herstelvoorstellen na de ontbinding deed en of er later is terugbetaald. Ervaringen van andere klanten worden via de oproep verzameld en afzonderlijk gecontroleerd.",
+  "bedrijven": [
+    "Errezeta Publishing"
+  ],
   "leiding": [
-    {"naam":"Fabiana D’Amiano","functie":"Director van Errezeta Publishing Ltd volgens de historische registratie bij Companies House","bron":"https://find-and-update.company-information.service.gov.uk/company/13678815/officers","datum":"2026-11-24"}
+    {
+      "naam": "Fabiana D’Amiano",
+      "functie": "Director van Errezeta Publishing Ltd volgens de historische registratie bij Companies House",
+      "bron": "https://find-and-update.company-information.service.gov.uk/company/13678815/officers",
+      "datum": "2026-11-24"
+    }
   ],
   "bronnen": [
-    {"naam":"Companies House: Errezeta Publishing Ltd (13678815)","url":"https://find-and-update.company-information.service.gov.uk/company/13678815","uitleg":"Officiële registerstatus: ontbonden op 12 maart 2024. Dit is een registerfeit, geen oordeel over deze klacht."},
-    {"naam":"Companies House: indieningshistorie","url":"https://find-and-update.company-information.service.gov.uk/company/13678815/filing-history","uitleg":"Eerste aankondiging voor compulsory strike-off op 26 december 2023 en definitieve registratie op 12 maart 2024."},
-    {"naam":"Companies House: geregistreerde bestuurder","url":"https://find-and-update.company-information.service.gov.uk/company/13678815/officers","uitleg":"Fabiana D’Amiano staat vermeld als Director. WAM publiceert alleen naam en zakelijke functie, geen privégegevens."}
+    {
+      "naam": "Companies House: Errezeta Publishing Ltd (13678815)",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/13678815",
+      "uitleg": "Officiële registerstatus: ontbonden op 12 maart 2024. Dit is een registerfeit, geen oordeel over deze klacht."
+    },
+    {
+      "naam": "Companies House: indieningshistorie",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/13678815/filing-history",
+      "uitleg": "Eerste aankondiging voor compulsory strike-off op 26 december 2023 en definitieve registratie op 12 maart 2024."
+    },
+    {
+      "naam": "Companies House: geregistreerde bestuurder",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/13678815/officers",
+      "uitleg": "Fabiana D’Amiano staat vermeld als Director. WAM publiceert alleen naam en zakelijke functie, geen privégegevens."
+    }
   ],
   "vragen": [
-    {"vraag":"Wat is in dit Errezeta Publishing-dossier aangetoond?","antwoord":"Twee ingeziene transactiedocumenten tonen samen €50.000 aan betalingen aan Errezeta Publishing. Daarnaast zijn contracttekst, klachten, herstelvoorstellen en een latere terugvordering gelezen. De levering en definitieve afwikkeling zijn niet volledig vastgesteld."},
-    {"vraag":"Waarom noemt WAM €50.000 en geen €60.000?","antwoord":"De melder corrigeerde zijn eerdere bedrag op 22 juni 2026 naar €50.000. De twee hier ingeziene transactiedocumenten tonen €40.000 en €10.000. WAM neemt het oude hogere bedrag niet over en telt contractprijzen niet nog eens bij de betalingen op."},
-    {"vraag":"Wat heeft Errezeta zelf geantwoord?","antwoord":"In april 2024 bood Errezeta herstel aan via vervangende accounts en aanvullende diensten. Op 27 april meldde het bedrijf een samenvoegverzoek bij Amazon. Dat voorstel en die melding zijn geen zelfstandige bevestiging dat alle afgesproken prestaties zijn geleverd."},
-    {"vraag":"Is deze zaak definitief afgewikkeld?","antwoord":"Dat is niet vastgesteld. In Drive staat een afwikkelingstekst waarin ontvangst van een vervangend account en vrijstelling van verdere verplichtingen worden genoemd. Of die tekst is verzonden, ondertekend en uitgevoerd, wordt nog onderzocht."},
-    {"vraag":"Is oplichting juridisch vastgesteld?","antwoord":"De melder stelt dat hij is misleid. De hier getoonde betalingen, correspondentie en registerstatus bepalen niet met welke opzet is gehandeld. WAM heeft in dit dossier geen strafrechtelijk vonnis of definitief oordeel over aansprakelijkheid gecontroleerd."},
-    {"vraag":"Heb je ook een ervaring met Errezeta Publishing?","antwoord":"Deel hieronder wat er is afgesproken, wat je betaalde, wat is geleverd en of er een oplossing kwam. Ook een positieve ervaring of correctie is welkom. Laat namen, accountgegevens en andere privégegevens weg. De redactie controleert reacties vóór anonieme, gebundelde publicatie."}
-  ]
+    {
+      "vraag": "Hoe meld ik mij als gedupeerde van Errezeta Publishing?",
+      "antwoord": "Vertel in het veld bovenaan wat je met Errezeta had afgesproken, wat je betaalde, wat is geleverd en of er een oplossing kwam. Laat namen, accountgegevens en andere privégegevens weg. Je melding gaat eerst naar de redactie. Ook een ervaring die uiteindelijk goed is afgehandeld helpt bij het onderzoek."
+    },
+    {
+      "vraag": "Wat is in dit Errezeta Publishing-dossier aangetoond?",
+      "antwoord": "Twee ingeziene transactiedocumenten tonen samen €50.000 aan betalingen aan Errezeta Publishing. Daarnaast zijn contracttekst, klachten, herstelvoorstellen en een latere terugvordering gelezen. De levering en definitieve afwikkeling zijn niet volledig vastgesteld."
+    },
+    {
+      "vraag": "Waarom noemt WAM €50.000 en geen €60.000?",
+      "antwoord": "De melder corrigeerde zijn eerdere bedrag op 22 juni 2026 naar €50.000. De twee hier ingeziene transactiedocumenten tonen €40.000 en €10.000. WAM neemt het oude hogere bedrag niet over en telt contractprijzen niet nog eens bij de betalingen op."
+    },
+    {
+      "vraag": "Wat heeft Errezeta zelf geantwoord?",
+      "antwoord": "In april 2024 bood Errezeta herstel aan via vervangende accounts en aanvullende diensten. Op 27 april meldde het bedrijf een samenvoegverzoek bij Amazon. Dat voorstel en die melding zijn geen zelfstandige bevestiging dat alle afgesproken prestaties zijn geleverd."
+    },
+    {
+      "vraag": "Is deze zaak definitief afgewikkeld?",
+      "antwoord": "Dat is niet vastgesteld. In Drive staat een afwikkelingstekst waarin ontvangst van een vervangend account en vrijstelling van verdere verplichtingen worden genoemd. Of die tekst is verzonden, ondertekend en uitgevoerd, wordt nog onderzocht."
+    },
+    {
+      "vraag": "Is oplichting juridisch vastgesteld?",
+      "antwoord": "De melder stelt dat hij is misleid. De hier getoonde betalingen, correspondentie en registerstatus bepalen niet met welke opzet is gehandeld. WAM heeft in dit dossier geen strafrechtelijk vonnis of definitief oordeel over aansprakelijkheid gecontroleerd."
+    },
+    {
+      "vraag": "Heb je ook een ervaring met Errezeta Publishing?",
+      "antwoord": "Deel bovenaan wat er is afgesproken, wat je betaalde, wat is geleverd en of er een oplossing kwam. Ook een positieve ervaring of correctie is welkom. Laat namen, accountgegevens en andere privégegevens weg. De redactie controleert reacties vóór anonieme, gebundelde publicatie."
+    }
+  ],
+  "bewijsKort": "Twee bankdocumenten tonen €50.000 aan betalingen. Errezeta deed herstelvoorstellen; de melder vraagt terugbetaling. We onderzoeken de levering en de mogelijke eindafwikkeling.",
+  "oproep": {
+    "doel": "We zoeken andere klanten met een vergelijkbare ervaring. De redactie vergelijkt de meldingen met de bestaande stukken om te onderzoeken welke problemen terugkeren. Ook als het uiteindelijk is opgelost, horen we dat graag.",
+    "formulier": {
+      "zonderKop": true,
+      "placeholder": "Wat is er bij jou gebeurd?",
+      "knop": "Meld je ervaring met Errezeta Publishing"
+    },
+    "aanleiding": "Deze oproep komt voort uit de eigen zaak van WAM-oprichter Henkjan de Krijger. Twee ingeziene betalingsdocumenten tonen samen €50.000. Errezeta deed herstelvoorstellen; de levering en mogelijke eindafwikkeling worden nog onderzocht. We willen weten of andere klanten hetzelfde hebben meegemaakt.",
+    "voorblad": "We zoeken andere betrokken klanten. Je melding gaat eerst naar de redactie."
+  }
 }
