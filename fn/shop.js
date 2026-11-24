@@ -825,6 +825,32 @@ async function plaatje(req, res, url) {
       if (!r || !r.ok) throw new Error('foto ' + eerst + ' (' + String(it.img).replace(/^https?:\/\//, '').slice(0, 70) + ')' + (nu ? ', pagina-foto ' + (r ? r.status : '-') : ', geen foto op de pagina'));
     }
     const bron = Buffer.from(await r.arrayBuffer()), stijl = String(url.searchParams.get('s') || '');
+    if (stijl === 'st') { // 24 nov (Henkjan: "Dan moet jij dus betere ads maken !!!"): staand 1080x1920 voor TikTok-carrousels, Reels en Pinterest. f = haak | zoom | feit | eind; tk = grote regel, t2 = feiten (gescheiden door |)
+      const f = String(url.searchParams.get('f') || 'haak'), tk = String(url.searchParams.get('tk') || '').replace(/[<>]/g, '').slice(0, 60), t2 = String(url.searchParams.get('t2') || '').replace(/[<>]/g, '').slice(0, 160).split('|').map(x => x.trim()).filter(Boolean).slice(0, 3);
+      const W = 1080, Hh = 1920, wit = await sharp(bron).flatten({ background: '#ffffff' });
+      const fotoB64 = async (n, fit = 'contain') => 'data:image/jpeg;base64,' + (await wit.clone().resize(n, n, { fit, background: '#ffffff', position: 'centre' }).jpeg({ quality: 90 }).toBuffer()).toString('base64');
+      let el;
+      if (f === 'zoom') { const meta = await wit.clone().metadata(); const z = Math.round(Math.min(meta.width || 1000, meta.height || 1000) * 0.62), l = Math.max(0, Math.round(((meta.width || z) - z) / 2)), t = Math.max(0, Math.round(((meta.height || z) - z) / 2));
+        const crop = 'data:image/jpeg;base64,' + (await wit.clone().extract({ left: l, top: t, width: Math.min(z, (meta.width || z) - l), height: Math.min(z, (meta.height || z) - t) }).resize(W, W, { fit: 'cover' }).jpeg({ quality: 90 }).toBuffer()).toString('base64');
+        el = hEl('div', { width: W, height: Hh, flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#ffffff', fontFamily: 'Inter' }, [{ type: 'img', props: { src: crop, width: W, height: W } }, hEl('div', { fontSize: 54, fontWeight: 800, color: '#111827', marginTop: 70, padding: '0 70px', textAlign: 'center', lineHeight: 1.15 }, tk || it.t.slice(0, 44))]); }
+      else if (f === 'feit') { const foto = await fotoB64(820);
+        el = hEl('div', { width: W, height: Hh, flexDirection: 'column', alignItems: 'center', background: '#f3ece3', fontFamily: 'Inter', padding: '150px 80px 0' }, [
+          hEl('div', { width: 920, height: 920, alignItems: 'center', justifyContent: 'center', background: '#ffffff', borderRadius: 48 }, [{ type: 'img', props: { src: foto, width: 820, height: 820, style: { objectFit: 'contain' } } }]),
+          hEl('div', { flexDirection: 'column', width: 920, marginTop: 70 }, (t2.length ? t2 : [it.t.slice(0, 50)]).map(x => hEl('div', { alignItems: 'center', marginBottom: 28 }, [hEl('div', { width: 22, height: 22, borderRadius: 11, background: '#111827', marginRight: 26 }, []), hEl('div', { fontSize: 50, fontWeight: 800, color: '#111827', lineHeight: 1.15 }, x)])))]); }
+      else if (f === 'eind') { const foto = await fotoB64(560);
+        el = hEl('div', { width: W, height: Hh, flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#111827', fontFamily: 'Inter', padding: '0 80px' }, [
+          hEl('div', { width: 620, height: 620, alignItems: 'center', justifyContent: 'center', background: '#ffffff', borderRadius: 310 }, [{ type: 'img', props: { src: foto, width: 500, height: 500, style: { objectFit: 'contain' } } }]),
+          hEl('div', { fontSize: 66, fontWeight: 800, color: '#ffffff', marginTop: 80, textAlign: 'center', lineHeight: 1.12 }, tk || 'Bekijk hem op kadoly.com'),
+          hEl('div', { flexDirection: 'column', alignItems: 'center', marginTop: 50 }, ['Gratis retour', 'Betalen met iDEAL of Klarna'].map(x => hEl('div', { fontSize: 42, fontWeight: 500, color: '#e5e7eb', marginBottom: 14 }, x))),
+          hEl('div', { marginTop: 60, background: '#ffffff', color: '#111827', fontSize: 46, fontWeight: 800, padding: '28px 64px', borderRadius: 60 }, 'kadoly.com')]); }
+      else { const foto = await fotoB64(880);
+        el = hEl('div', { width: W, height: Hh, flexDirection: 'column', alignItems: 'center', background: '#f3ece3', fontFamily: 'Inter', padding: '170px 70px 0' }, [
+          hEl('div', { fontSize: tk.length > 30 ? 76 : 88, fontWeight: 800, color: '#111827', lineHeight: 1.08, textAlign: 'center', marginBottom: 80 }, tk || it.t.slice(0, 40)),
+          hEl('div', { width: 940, height: 940, alignItems: 'center', justifyContent: 'center', background: '#ffffff', borderRadius: 48 }, [{ type: 'img', props: { src: foto, width: 880, height: 880, style: { objectFit: 'contain' } } }])]); }
+      const png = Buffer.from(await new ImageResponse(el, { width: W, height: Hh, fonts: OG_FONTS }).arrayBuffer());
+      const jpg = await sharp(png).jpeg({ quality: 88, mozjpeg: true }).toBuffer();
+      res.setHeader('content-type', 'image/jpeg'); res.setHeader('cache-control', 'public, max-age=86400, s-maxage=86400'); return res.end(jpg);
+    }
     if (/^(band|warm)$/.test(stijl)) { // 19 nov (Henkjan: "betere creatives betere CTA"): advertentiebeeld 1080x1350 met één korte regel (data/whop-ctr.json)
       const tk = String(url.searchParams.get('tk') || '').replace(/[<>]/g, '').slice(0, 40), voet = String(url.searchParams.get('vt') || '').replace(/[<>]/g, '').slice(0, 60);
       const foto = 'data:image/jpeg;base64,' + (await sharp(bron).flatten({ background: '#ffffff' }).resize(1000, 1000, { fit: 'contain', background: '#ffffff' }).jpeg({ quality: 88 }).toBuffer()).toString('base64');
