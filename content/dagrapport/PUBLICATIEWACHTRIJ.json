@@ -391,5 +391,18 @@
       "setup_link_stored_in_repo": false,
       "publication_created": false
     }
+  ],
+  "review_observations": [
+    {
+      "at_utc": "2026-11-24T19:40:15.174Z",
+      "source_round": "content/dagrapport/2026-11-24-pinterest.json",
+      "approved_pins_retained": true,
+      "republishing_registered_pins": false,
+      "posts_created": [],
+      "provider_unavailable": true,
+      "three_shared_reservations": true,
+      "default_cap": 3,
+      "new_draft_not_added_to_approved_queue": true
+    }
   ]
 }

@@ -130,5 +130,53 @@
     "Cross-checked shared Kadoly log for duplicate planning and all three reserved slots",
     "Recorded concrete book publication priorities without exceeding volume"
   ],
-  "next_action": "Recheck whole-account provider schedule and cooldown at next permitted execution. If a reserved slot is truly released, use approved free wordsearch first, then men book. No automatic promise of publication today."
+  "next_action": "Recheck whole-account provider schedule and cooldown at next permitted execution. If a reserved slot is truly released, use approved free wordsearch first, then men book. No automatic promise of publication today.",
+  "additions": [
+    {
+      "at_utc": "2026-11-24T19:40:15.174Z",
+      "round": "pinterest",
+      "candidate_review": "content/dagrapport/2026-11-24-pinterest-concepten.md",
+      "approved_pending": [
+        "20261123-sok-puzzel-1j5t",
+        "20261123-sok-hem-j7cy"
+      ],
+      "new_draft": {
+        "id": "20261124-sok-gids-haar-pqg3",
+        "haak": "sok-gids-haar",
+        "a": "B0DMFBPQG3",
+        "bord": "271060540011963292",
+        "titel": "Stocking stuffers for women: ideas by price from $5",
+        "tekst": "Stocking stuffer ideas for women, mom and wife from $5 and under to $25, the five-slot rule and a free budget planner. Featured: Wine Not? A Journal for All My Wine-Driven Thoughts, $6.99.",
+        "link": "https://stockingbooks.com/stocking-stuffers-for-women?utm_source=pinterest&utm_content=20261124-sok-gids-haar-pqg3",
+        "beeld": "https://stockingbooks.com/pin/B0DMFBPQG3-sok-gids-haar.png",
+        "kop": "Stocking stuffers for women she will actually use",
+        "status": "concept_not_approved_not_scheduled",
+        "image_dimensions": {
+          "width": 1000,
+          "height": 1500,
+          "basis": "Current fn/bs.js ImageResponse dimensions; PNG HTTP200. Vercel returns binary decoded as text, so no new pixel/visual check claimed."
+        },
+        "hypothesis": "A recipient-specific women/mom gift guide with price bands may attract organic outbound clicks from readers selecting a small gift.",
+        "comparison": {
+          "hook": "sok-haar",
+          "published": "2026-11-22T19:38:54.191Z",
+          "limitation": "Different book/creative; descriptive comparison only, no matched A/B control. Match pin age, board and period before judging."
+        },
+        "primary_metric": "Provider-confirmed organic outbound clicks to exact destination",
+        "review": "14 to21days after actual approved publication and enough comparable data",
+        "fact_check": {
+          "landing_http": 200,
+          "canonical": "https://stockingbooks.com/stocking-stuffers-for-women",
+          "book_asin_present": true,
+          "site_list_price_usd": 6.99,
+          "amazon_checkout_price": "not independently refreshed",
+          "no_old_domain_links": true
+        },
+        "approval_required_for_publication": true
+      },
+      "postings": [],
+      "article_current_status": "live according to current lcartikelen inventory; original concept observation retained",
+      "no_shared_slots_verified_free": true
+    }
+  ]
 }
