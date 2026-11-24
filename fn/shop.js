@@ -35,7 +35,7 @@ import { adviesPagina } from '../lib/shopadvies.js';
 import { GIDSEN, GIDS_IDS, productenVoor, hulpPagina } from '../lib/cadeauhulp.js';
 import { pinCohortEntries, PB, CM_NET, MG_STAP, mgUrl, mgEvent, SOORTEN_DIRECT, GEDRAG, directInst, zetDirect, shopMeet, shopArm, landDeel, doorkliks, warmZet, isBewust, kassaDoel, ttEvent } from '../lib/shopdirect.js';
 import { ttFeedCsv, ttVideo, TT_VIDEO, TT_REGEL, TT_GROEPEN, ttSleutel, ttKoppelUrl, ttRuil, ttRapport, ttAds, ttUit, ttOordeel, ttMeld, ttTekst } from '../lib/tiktok.js';
-import { whSierBouw, whSierWacht, SIER as SIER_WH, WH_BUDGET_MAX, ctrRonde, sterkStart, ctrVan, WH_CTR, whLpvBouw, whPixelHtml, whPage, whopZetOptimalisatie, whEvent, whopKlaar, bewezenRonde, bewezenPlan, BEWEZEN_MARGE, whopUpload, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd, whProject, whLead, WH_PROJECTEN, koppelWaid, whopAan, whopZetDoel, whFormBouw, leadForm, whFormFix } from '../lib/whop.js';
+import { whSierBouw, whSier2Bouw, whSierWacht, SIER as SIER_WH, WH_BUDGET_MAX, ctrRonde, sterkStart, ctrVan, WH_CTR, whLpvBouw, whPixelHtml, whPage, whopZetOptimalisatie, whEvent, whopKlaar, bewezenRonde, bewezenPlan, BEWEZEN_MARGE, whopUpload, whopAds, whopCampagnes, whopPauze, meld as whMeld, oordeel as whOordeel, WH_REGEL, whId, WHOP_BIZ, waardenUit, roasLeer, ROAS_REGEL, whopApi, whopGroepen, whopZetBudget, verkenPlan, whopNieuweAd, whProject, whLead, WH_PROJECTEN, koppelWaid, whopAan, whopZetDoel, whFormBouw, leadForm, whFormFix } from '../lib/whop.js';
 import { verwerkKlik, serverSignalen, laterAf, nieuwId, laadDc, dcVan } from '../lib/mensmeter.js';
 import { isBotZone, botZonesVers, echteKlikId } from '../lib/shopbot.js';
 import { cidKoppel } from '../lib/wissel.js';
@@ -829,13 +829,13 @@ async function plaatje(req, res, url) {
     const bron = Buffer.from(await r.arrayBuffer()), stijl = String(url.searchParams.get('s') || '');
     if (stijl === 'st') { // 24 nov (Henkjan: "Dan moet jij dus betere ads maken !!!"): staand 1080x1920 voor TikTok-carrousels, Reels en Pinterest. f = haak | zoom | feit | eind; tk = grote regel, t2 = feiten (gescheiden door |)
       const f = String(url.searchParams.get('f') || 'haak'), tk = String(url.searchParams.get('tk') || '').replace(/[<>]/g, '').slice(0, 60), t2 = String(url.searchParams.get('t2') || '').replace(/[<>]/g, '').slice(0, 160).split('|').map(x => x.trim()).filter(Boolean).slice(0, 3);
-      const W = 1080, Hh = 1920, wit = await sharp(bron).flatten({ background: '#ffffff' });
+      const W = 1080, Hh = url.searchParams.get('fmt') === '45' ? 1350 : 1920, wit = await sharp(bron).flatten({ background: '#ffffff' }); // fmt=45: 1080x1350 voor de feed van Facebook en Instagram
       const fotoB64 = async (n, fit = 'contain') => 'data:image/jpeg;base64,' + (await wit.clone().resize(n, n, { fit, background: '#ffffff', position: 'centre' }).jpeg({ quality: 90 }).toBuffer()).toString('base64');
       let el;
       if (f === 'native') { // zoals de best klikkende NL-sieradenads (TikTok Top Ads, nov 2026): beeldvullende foto, korte tekst als onderschrift van een gewone video
         const vol = 'data:image/jpeg;base64,' + (await wit.clone().resize(W, Hh, { fit: 'cover', position: 'centre' }).jpeg({ quality: 90 }).toBuffer()).toString('base64');
         el = hEl('div', { width: W, height: Hh, position: 'relative', fontFamily: 'Inter' }, [{ type: 'img', props: { src: vol, width: W, height: Hh, style: { position: 'absolute', top: 0, left: 0 } } },
-          hEl('div', { position: 'absolute', top: 360, left: 0, width: W, justifyContent: 'center', padding: '0 90px' }, [hEl('div', { background: 'rgba(255,255,255,0.94)', color: '#111111', fontSize: tk.length > 34 ? 52 : 60, fontWeight: 800, lineHeight: 1.2, padding: '22px 34px', borderRadius: 22, textAlign: 'center' }, tk || it.t.slice(0, 40))])]); }
+          hEl('div', { position: 'absolute', top: Hh === 1350 ? 90 : 360, left: 0, width: W, justifyContent: 'center', padding: '0 90px' }, [hEl('div', { background: 'rgba(255,255,255,0.94)', color: '#111111', fontSize: tk.length > 34 ? 52 : 60, fontWeight: 800, lineHeight: 1.2, padding: '22px 34px', borderRadius: 22, textAlign: 'center' }, tk || it.t.slice(0, 40))])]); }
       else if (f === 'zoom') { const meta = await wit.clone().metadata(); const z = Math.round(Math.min(meta.width || 1000, meta.height || 1000) * 0.62), l = Math.max(0, Math.round(((meta.width || z) - z) / 2)), t = Math.max(0, Math.round(((meta.height || z) - z) / 2));
         const crop = 'data:image/jpeg;base64,' + (await wit.clone().extract({ left: l, top: t, width: Math.min(z, (meta.width || z) - l), height: Math.min(z, (meta.height || z) - t) }).resize(W, W, { fit: 'cover' }).jpeg({ quality: 90 }).toBuffer()).toString('base64');
         el = hEl('div', { width: W, height: Hh, flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#ffffff', fontFamily: 'Inter' }, [{ type: 'img', props: { src: crop, width: W, height: W } }, hEl('div', { fontSize: 54, fontWeight: 800, color: '#111827', marginTop: 70, padding: '0 70px', textAlign: 'center', lineHeight: 1.15 }, tk || it.t.slice(0, 44))]); }
@@ -1716,6 +1716,12 @@ export default async function handler(req, res) {
       const uit = []; for (const x of g.groepen) uit.push(Object.assign({ groep: x.id, was: x.conversion_event }, await whopZetDoel(x.id, ev)));
       try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'Meta stuurt nu op ' + ev + ' (Henkjan 17 nov: "Ja doen ."): ' + uit.map(u => u.groep + ' ' + (u.ok ? 'gelukt' : 'mislukt')).join(', ') })]); } catch (e) {}
       return res.status(200).json({ ok: uit.length > 0 && uit.every(u => u.ok), uit }); }
+    if (op === 'whsier2') { // 24 nov: sieradencampagne 2 in native stijl (lib/whop.js whSier2Bouw); zonder &bouw=1 droog; &aan=1 zet hem aan en de oude op pauze. Beschermde host.
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      if (!whopKlaar()) return res.status(200).json({ ok: false, fout: 'geen WHOP_API_KEY' });
+      const r = await whSier2Bouw(LAND(), { uitvoeren: url.searchParams.get('bouw') === '1', aan: url.searchParams.get('aan') === '1' });
+      if (r.ok && !r.droog) { try { await kv.raw(['LPUSH', 'hjdk:whop:log', JSON.stringify({ at: new Date().toISOString(), wat: 'sieradencampagne 2: ' + JSON.stringify(r.log).slice(0, 400) })]); } catch (e) {} }
+      return res.status(200).json(r); }
     if (op === 'whsier') { // 24 nov 2026 (Henkjan: "3 . Ja . bij 20 eruit zonder verkoop test ads zoveel mogelijk ."): sieradencampagne op Meta via Whop. Zonder bouw: stand en stopregel (droog). &bouw=1 maakt campagne, groep en advertenties (&van=&tot= per stuk producten, &aan=1 zet hem aan). Beschermde host.
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       if (!whopKlaar()) return res.status(200).json({ ok: false, fout: 'geen WHOP_API_KEY' });
