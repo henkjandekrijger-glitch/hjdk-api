@@ -1,0 +1,17 @@
+import { kv } from './lib/db.js'; import fs from 'node:fs';
+const ok=(c,m)=>{ if(!c){console.log('FOUT',m);process.exitCode=1;} else console.log('ok',m); };
+process.env.ZERNIO_API_KEY='x'; const zs=[];
+globalThis.fetch=async(u,o)=>{zs.push({u,b:o&&o.body&&JSON.parse(o.body)}); if(/\/accounts/.test(u)) return {ok:true,status:200,json:async()=>({accounts:[{_id:'acc1',platform:'google',username:'test@gmail.com'}]})}; return {ok:true,status:201,json:async()=>({id:'zm1'})};};
+const C=await import('./lib/clubwerf.js');
+await kv.raw(['HSET','cw:club','on9',JSON.stringify({id:'on9',n:'v.v. De Boys',m:'sponsoring@vvdeboys.nl',w:'https://vvdeboys.nl',mb:'https://vvdeboys.nl/sponsoring',mt:'sponsor',st:'klaar'})]); await kv.raw(['RPUSH','cw:rij','on9']);
+const res=()=>{const r={h:{},code:0,body:'',setHeader(k,v){r.h[k]=v},status(c){r.code=c;return r},send(b){r.body=b;return r},json(b){r.body=JSON.stringify(b);return r},end(){return r}};return r;};
+const kaal=(t,i)=>i, isBot=()=>false; const call=async(qs,method='GET',body={})=>{const R=res(); await C.clubOp({req:{method,headers:{}},res:R,q:new URLSearchParams(qs),host:'hjdk-api-henq.vercel.app',ua:'Mozilla',kaal,leesBody:async()=>body,isBot}); return R;};
+let R=await call('op=clubs&doorloop=1'); ok(R.code===200&&/Stuur de clubmail naar mij/.test(R.body),'doorloop-pagina');
+R=await call('op=clubs&doorloop=1&a=start','POST'); console.log('start', R.code, decodeURIComponent(R.h.location||''));
+const zm=zs.find(z=>z.b&&z.b.to); ok(zm&&/hjdk-api-henq\.vercel\.app\/api\/gids\?op=clubs&c=/.test(zm.b.text),'clubmail naar de eigen inbox met de clubpagina');
+const T=await kv.get('cw:test'); R=await call('op=clubs&c='+T.tok,'POST',{mail:'test@gmail.com',naam:'v.v. De Boys'}); console.log('aanzetten', R.code, R.h.location);
+const T2=await kv.get('cw:test'); ok(/^test-/.test(T2.code)&&(await kv.raw(['SMEMBERS','pt:alle'])).length===0,'proefpartner telt nergens mee');
+R=await call('op=clubs&doorloop=1'); ok(/Open het dashboard/.test(R.body),'stap 3 na aanzetten');
+fs.writeFileSync('doorloop.html','<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width"><body style="font:16px/1.6 system-ui;max-width:680px;margin:auto;padding:16px;color:#111113">'+R.body);
+R=await call('op=clubs&doorloop=1&a=koop','POST',{mail:'test+lid@gmail.com'}); console.log('koop zonder lid', decodeURIComponent(R.h.location));
+R=await call('op=clubs&doorloop=1&a=opruimen','POST',{extra:''}); ok(!(await kv.get('cw:test')),'alles opgeruimd');

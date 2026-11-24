@@ -1,0 +1,2 @@
+export const meldingen=[];export async function meld(b){const id=Math.random().toString(16).slice(2,14).padEnd(12,'0');meldingen.push({...b,id});return {ok:true,id,links:[{doel:b.links,gebruik:'https://gids.kadoly.com/m/abcde'}]};}
+export async function uitkomst(b){meldingen.push({uitkomst:b});return {ok:true};}
