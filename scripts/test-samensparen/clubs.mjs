@@ -76,3 +76,9 @@ ok(st.totaal.verstuurd===1&&st.totaal.aan===1&&st.perOnderwerp.o0.succes===1&&st
   ok(r1.ok === false && r1.provincie === 'NL-NH' && r2.provincie === 'NL-UT' && oo.mis['NL-NH'] === 1, 'osm: mislukte provincie gaat achteraan ' + JSON.stringify([r1.provincie, r2.provincie]));
   await kv.set('cw:osm', { ...oo, per: Object.fromEntries(['NL-ZH','NL-UT','NL-NB','NL-GE','NL-OV','NL-LI','NL-FR','NL-GR','NL-DR','NL-FL','NL-ZE'].map(x => [x, 3])), mis: { 'NL-NH': 4 } });
   const r3 = await C.vindOsm(30000); ok(r3.klaar === true, 'osm: klaar als alleen een overgeslagen provincie over is'); }
+// vindOsm: dode servers houden een werkende niet tegen, en een remark (time-out bij Overpass zelf) telt niet als leeg (24 nov 2026)
+{ await kv.set('cw:osm', { next: 1, n: 5, per: { 'NL-ZH': 5 }, leeg: {} });
+  globalThis.fetch = (u, o) => /openstreetmap\.fr/.test(String(u)) ? Promise.resolve(new Response(JSON.stringify({ elements: [{ type: 'node', id: 9, tags: { name: 'v.v. Racetest', club: 'sport', sport: 'soccer', website: 'https://racetest-vv.nl' } }] }), { status: 200 })) : new Promise((_, nee) => o.signal.addEventListener('abort', () => nee(Object.assign(new Error('a'), { name: 'AbortError' }))));
+  const t = Date.now(), r = await C.vindOsm(30000); ok(r.ok === true && r.nieuw === 1 && Date.now() - t < 3000, 'osm: werkende server wint van dode servers ' + JSON.stringify(r));
+  globalThis.fetch = async () => new Response(JSON.stringify({ elements: [], remark: 'runtime error: Query timed out in "query" at line 1 after 101 seconds.' }), { status: 200 });
+  const r2 = await C.vindOsm(30000), oo = await kv.get('cw:osm'); ok(r2.ok === false && !(oo.leeg && oo.leeg[r2.provincie]) && oo.mis[r2.provincie] === 1, 'osm: remark telt als mislukt, niet als leeg ' + JSON.stringify(r2)); }

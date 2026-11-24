@@ -157,6 +157,7 @@ Henkjan: Nederlands, kort, niet technisch, één stap tegelijk vragen, zuinig me
 - Elke 2 uur draait een cron: `op=clubs&zoek=1`.
 - Eens per 60 dagen worden alle clubs met een website uit OpenStreetMap gelezen.
   - Dat gaat per provincie via Overpass, met de ISO-code en anders de naam: Noord-Holland gaf 0 via de code.
+  - De vraag gaat naar 5 Overpass-servers tegelijk en het eerste goede antwoord telt (overpass.openstreetmap.fr voorop). Een antwoord met een `remark` is een time-out bij Overpass zelf en telt als mislukt, niet als leeg. Lukt de eerste provincie binnen 70 seconden, dan leest dezelfde ronde er nog een.
   - Bij een fout wacht de ronde een uur. Een mislukte provincie gaat achteraan zodat de rest doorloopt; na 4 keer wordt hij overgeslagen tot de volgende lezing (`cw:osm.mis`). Op 24 nov hield Noord-Holland met steeds een time-out de andere 9 tegen.
 - Daarna worden 40 sites per ronde gescand (`scanRonde`, `scanClub`) in deze volgorde:
   1. de sponsorpagina;
@@ -403,7 +404,7 @@ Vlaggen: `LIVE` in `lib/samensparen.js`, `lib/partner.js` en `lib/clubwerf.js`, 
 ## 9. Testen
 
 ```
-node scripts/test-samensparen.mjs                      # leden (43), clubs (41), doorloop (5): moet ALLES GOED geven
+node scripts/test-samensparen.mjs                      # leden (43), clubs (43), doorloop (5): moet ALLES GOED geven
 node scripts/test-samensparen.mjs --schermen /tmp/ss   # ook alle schermen en mails als HTML
 ```
 
@@ -489,6 +490,7 @@ Uitzetten kan altijd terug: `op=clubs&zet=1&aan=0`, of de `LIVE`-vlaggen terug o
 **Overpass (OpenStreetMap)**
 - Heel Nederland in één vraag geeft 406 of 504, daarom per provincie.
 - Een lege provincie wordt opnieuw gevraagd op naam.
+- **Het lag niet aan Noord-Holland maar aan de servers** (gemeten 24 nov vanuit een Vercel-sandbox): overpass-api.de, kumi en private.coffee gaven zelfs op een lege testvraag geen antwoord; overpass.openstreetmap.fr (36 s, 232 clubs in Utrecht) en maps.mail.ru wel. De code vroeg de servers na elkaar en de eerste at het hele budget op. Nu alle tegelijk. Blijft het falen: test de servers los met `[out:json];node(1);out;`.
 - Noord-Holland geeft op naam een time-out. Een mislukte provincie gaat daarom achteraan en na 4 keer wordt hij overgeslagen; de stand meldt dat als lek. Opnieuw proberen: zet `cw:osm.mis` voor die provincie op 0.
 
 **Look en kadoly.com**
@@ -502,6 +504,7 @@ Uitzetten kan altijd terug: `op=clubs&zet=1&aan=0`, of de `LIVE`-vlaggen terug o
 
 ## 13. Logboek (nieuwste bovenaan)
 
+- 2026-11-24 (spaar-chat2): de reparatie van vannacht hielp niet: ook Utrecht mislukte (2 van 12, 541 clubs). Oorzaak gemeten: 3 van de 4 Overpass-servers gaven niets terug en de eerste at het budget op. Nu 5 servers tegelijk met overpass.openstreetmap.fr erbij, een `remark` telt als mislukt, twee provincies per ronde als het snel gaat; tests erbij (clubs 43). Oordeel: de eerstvolgende zoekronde moet Utrecht lezen.
 - 2026-11-24 (spaar-chat): lek gevonden bij het maken van de overdracht: Noord-Holland gaf bij OpenStreetMap steeds een time-out en hield 9 provincies tegen (2 van 12 gelezen, 541 clubs). Nu gaat een mislukte provincie achteraan en na 4 keer overgeslagen; test erbij (clubs 41). Oordeel: de volgende zoekrondes, elke 2 uur, moeten Utrecht en verder lezen.
 - 2026-11-23 (spaar-chat, Henkjan: "Zet uitgebreide overdracht klaar voor andere chat"): dit bestand, live op `op=ss&overdracht=1` met de stand erboven; proeven in de repo (`scripts/test-samensparen.mjs`); regel in CLAUDE.md.
 - 2026-11-23 (spaar-chat, "Nu in echte kadoly look laten zien"): `lib/kadolylook.js`, kop en voet van kadoly.com, knoppen zoals kadoly.com; kopBegin in `lib/shoptheme.js` (ook de thema-sync); de 19 afdrukken vernieuwd.
