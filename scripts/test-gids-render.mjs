@@ -34,6 +34,14 @@ assert.ok((await render('slug=onderzoek-en-bronnen')).body.includes('geen onafha
 const all=(await render('slug=alle-producten')).body;assert.equal((all.match(/<tr id="product-/g)||[]).length,catalog.filter(i=>i.vr!==false).length); assert.ok(all.includes('/alle-producten'));
 const home=(await render('')).body;assert.ok(home.includes('/onderzoek-en-bronnen')); assert.ok(!home.includes('5% bij 2 producten')); assert.ok(!home.includes('eerste bestelling wordt gratis'));
 const leg=(await render('slug=houten-legpuzzel-volwassenen')).body;assert.ok(leg.includes('href="https://pubmed.ncbi.nlm.nih.gov/39842256/"'));assert.ok(leg.includes('Bronnen en beperkingen'));assert.ok(!leg.includes('snel mee klaar'));
+// 24 nov: home staging (lib/gidsen-homestaging.js): elke pagina rendert, noemt de eerste keus, linkt de andere vier en heeft de AI-vraag als eerste FAQ in FAQPage.
+{ const hs=await import('../lib/gidsen-homestaging.js');
+  for(const slug of hs.HS_SLUGS){ const {body:h}=await render('slug='+slug); const g=gidsen.GIDSEN[slug];
+    assert.ok(h.includes('<h1>'+g.h1.replace(/&/g,'&amp;')+'</h1>')||h.includes(g.h1.split(':')[0]),slug+' h1');
+    assert.ok(h.includes('id="meer-home-staging"'),slug+' cluster'); for(const o of hs.HS_SLUGS.filter(x=>x!==slug)) assert.ok(h.includes('href="/'+o+'"'),slug+' link '+o);
+    const graph=[...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>{const j=JSON.parse(m[1]);return j['@graph']||[j];});
+    const faq=graph.find(x=>x['@type']==='FAQPage'); assert.ok(faq,slug+' FAQPage'); assert.equal(faq.mainEntity[0].name,hs.HS_VRAGEN[slug]);
+ } }
 for(const slug of ['wollen-deken','kerstkrans','vaas-kiezen']) {
  const h=(await render('slug='+slug)).body;
  const graph=[...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1])['@graph']||[]);

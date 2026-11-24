@@ -1172,5 +1172,6 @@
   "moeite": 1,
   "meten": "proef oude-gidsurl-naar-index-taal-1124: vertoningen en kliks van curacao.day/nl/bedrijven/tire-shop/western-tires en vergunningenloket-bentana-di-informashon in /api/gsc?op=curvind vanaf 1 dec tegen 17 tot 23 nov.",
   "status": "actief"
- }
+ },
+ {"id": "ai-gat-eerste-keus", "les": "Bouw op een AI-gat (een koop- of doevraag waar AI-assistenten geen product, prijs of eigen bron noemen) één pagina per eigen vraag met één eerste keus bovenaan, de vraag letterlijk als eerste FAQ (FAQPage) en de pagina's van hetzelfde onderwerp onderling gelinkt. Meet elke week met dezelfde gatscan of de site als bron genoemd wordt.", "kanaal": "llm", "bewijs": "24 nov 2026, home staging NL: Demand Radar aiShelf liet GPT, Gemini, Perplexity en Claude alleen winkels noemen (IKEA, JYSK, Kwantum, Leen Bakker, Xenos, fonQ, Loods 5, Westwing); gatscan kadoly-homestaging (Perplexity, 10 vragen): 8 van 10 zonder NL-bron, 0 met product, 1 met prijs. Vijf pagina's op gids.kadoly.com als proef kadolygids-homestaging-1124; uitkomst nog te meten.", "bron": "hjdk-api /api/zicht?op=gapscan&naam=kadoly-homestaging, demand_radar /api/check?q=home staging&m=NL", "sterkte": 2, "effect": 2, "moeite": 2, "meten": "Wekelijks dezelfde gatscan: wordt gids.kadoly.com als bron genoemd, plus Search Console-vertoningen op de vijf pagina's tegen de controlegroep.", "status": "actief"}
 ]
