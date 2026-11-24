@@ -51,14 +51,14 @@ test('publicatie lekt de inzending niet en weigert een ongecontroleerde samenvat
 test('elk bedrijf heeft bronnen, een direct reactieformulier en een openbaar bronnenbeeld', () => {
   const h = pagina('bedrijven', true);
   assert.equal((h.match(/data-bedrijf=/g) || []).length, 10);
-  assert.equal((h.match(/Bronnen en afweging<\/summary>/g) || []).length, 10);
+  assert.equal((h.match(/bronnen en de afweging/g) || []).length, 10);
   assert.ok(!h.includes('meer »') && !h.includes('class="pct"'));
   assert.ok(h.includes('32% geeft één ster')); // het hoofdoordeel is geen losse score
   for (const b of SITE_BEDRIJVEN) {
     assert.ok(b.bronnen.length >= 2);
     for (const s of b.bronnen) assert.ok(/^https:\/\//.test(s.url) && s.datum === '2026-11-24');
     const p = pagina('bedrijven/' + b.id, true);
-    assert.ok(p.includes('Herken je dit beeld?') && p.includes('data-bedrijf="' + b.id + '"'));
+    assert.ok(p.includes('Jouw ervaring met ') && p.includes('data-bedrijf="' + b.id + '"'));
   }
 });
 test('moderatie escape’t de oorspronkelijke tekst en publiceert hem nooit automatisch', () => {

@@ -26,15 +26,16 @@ test('elke pagina: titel, canonical, geen grijs, geen gedachtestreepje, noindex 
     const h = pagina(p, false);
     assert.ok(h.includes('<title>') && h.includes('rel="canonical" href="https://wearemany.now' + (p === 'nl' ? '/' : '/' + p) + '"'), p);
     assert.ok(h.includes('noindex'), p + ' moet noindex zijn tot live');
-    assert.equal(pagina(p, true).includes('noindex'), p === 'reactie-wissen', p);
+    assert.equal(pagina(p, true).includes('noindex'), ['reactie-wissen', 'afmelden'].includes(p), p);
     assert.ok(!/—|#(8|9|a|b|c)[0-9a-f]{5}\b|gray|grey/i.test(h), p + ' grijs of gedachtestreepje');
     assert.ok(!/\b0 (melders|keer)\b/.test(h), p + ' nulteller');
   }
   assert.equal(pagina('bestaat-niet', false), null);
 });
 test('startpagina: script is geldig JavaScript en de ops bestaan', () => {
-  const h = pagina('start', false); const js = h.match(/<script>([\s\S]*?)<\/script>/)[1];
-  new Function(js); // gooit bij een syntaxfout
+  const h = pagina('start', false), scripts = [...h.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m => m[1]);
+  scripts.forEach(js => new Function(js)); // alle inline scripts, inclusief de meetinstelling
+  const js = scripts.find(js => js.includes("op:'dmeld'"));
   for (const op of ['dmeld', 'dmail']) assert.ok(OPS.has(op) && js.includes("op:'" + op + "'"));
 });
 test('proefadres: links tussen de pagina\'s wijzen naar op=dpagina, op wearemany.now naar de korte paden', () => {
