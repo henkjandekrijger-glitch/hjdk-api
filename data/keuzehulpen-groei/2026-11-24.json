@@ -7024,7 +7024,7 @@
     "eind": {
       "dataValidatie": true,
       "scorePeildatum": "2026-11-15",
-      "liveControle": "Na publicatie in algemeen werklog; vóór uitrol nog onbekend."
+      "liveControle": "Eerste publicatie READY en NL/EN zaakpagina's HTTP200, WhatsApp zichtbaar, zelfcanonical, taallink en primaire bronlink aanwezig. Algemene gidsen live gecontroleerd; aanvullende FAQ-correctie wordt apart in werklog bevestigd."
     },
     "zoekTerm": "aldo sambil / kledingwinkels curacao; eigen ALDO-vertoningen niet in teruggegeven topregels, dus onbekend.",
     "segment": "Bestaande NL/EN zaakpagina; categorie heeft zoekvertoningen. Geen gebruikersvraag geclaimd.",
@@ -7045,7 +7045,8 @@
       "Nine West: veel vertoningen maar niet in gekoppelde kledinglijst; geen naamkoppeling gokken.",
       "Flakos: primaire vestigingsbron onvoldoende bevestigd; geen menu/prijzen verzinnen."
     ],
-    "redactieBeloften": "todayin/bzz/data/cw/keuzehulp-kansen.json gelezen; bank bovenaan beloofd. Geen tweede bouwronde gestart."
+    "redactieBeloften": "todayin/bzz/data/cw/keuzehulp-kansen.json gelezen; bank bovenaan beloofd. Geen tweede bouwronde gestart.",
+    "correctieNaLivecontrole": "Na eerste publicatie bleken de oude ALDO-zondaguren ook in FAQ/JSON-LD en tip aanwezig. Die passages in vijf talen eveneens gecorrigeerd; geen malluren meer als ALDO-winkeluren. Zelfde bronronde/id, feitelijke correctie als proefverstoring vastgelegd."
   },
   "bronnen": [
     "/api/kz?op=overdracht",
@@ -7072,6 +7073,6 @@
       "pass": 19,
       "fail": 0
     },
-    "data": "JSON parse, alleen ALDO-item gewijzigd; alle scores/parentmetadata behouden; git diff --check PASS"
+    "data": "JSON parse; één zaakitem plus gerelateerde zondagtip en FAQ gewijzigd; scores, peildata en overige data behouden."
   }
 }

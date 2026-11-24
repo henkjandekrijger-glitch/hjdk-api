@@ -40,7 +40,8 @@
         "2026-12-01",
         "2026-12-29"
       ],
-      "liveControle": "Zie algemeen werklog kzgroei-20261124 na uitrol."
+      "liveControle": "Zie algemeen werklog kzgroei-20261124 na uitrol.",
+      "aanvullendeCorrectie": "Livecontrole trof oude ALDO-zondaguren tevens aan in tip en FAQ/JSON-LD van kledinggids. Beide passages in vijf talen gecorrigeerd; zelfde broncheck-id, geen extra dagronde."
     },
     {
       "dag": "2026-11-23",
