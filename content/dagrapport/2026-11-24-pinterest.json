@@ -255,6 +255,24 @@
       "state": "waiting_for_cloud_Zernio_signin",
       "independent_work": "Approved article published and verified; per-pin next-day learning plan saved",
       "no_fictional_post_id": true
+    },
+    {
+      "at_utc": "2026-11-24T18:57:01.030Z",
+      "user_instruction": "Ik wil dot niet doe gewoon in chrome .",
+      "execution": "Used native Google Chrome app, as explicitly requested. Browser connector name chrome unavailable, native Chrome UI accessible.",
+      "result": "Zernio posts dashboard and public root render a blank white page. Same issue in existing tab, new tab and after hard reload. No sign-in error or account disconnection observed.",
+      "attempts": [
+        "Existing Zernio posts tab inspected",
+        "Dashboard navigation",
+        "New Chrome tab",
+        "Hard reload without cache",
+        "Public Zernio root"
+      ],
+      "pins_published": [],
+      "new_post_ids": [],
+      "tinyfish_rejected": true,
+      "credentials_changed": false,
+      "next_step": "Retry existing Chrome Zernio UI when the page renders; preserve exact approved pins and one-off Nov24 authorization. Do not demand TinyFish setup. No publication log without real provider ID."
     }
   ]
 }
