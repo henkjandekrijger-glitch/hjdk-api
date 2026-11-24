@@ -37,8 +37,8 @@ const all=(await render('slug=alle-producten')).body;assert.equal((all.match(/<t
 const home=(await render('')).body;assert.ok(home.includes('/onderzoek-en-bronnen')); assert.ok(!home.includes('5% bij 2 producten')); assert.ok(!home.includes('eerste bestelling wordt gratis'));
 const leg=(await render('slug=houten-legpuzzel-volwassenen')).body;assert.ok(leg.includes('href="https://pubmed.ncbi.nlm.nih.gov/39842256/"'));assert.ok(leg.includes('Bronnen en beperkingen'));assert.ok(!leg.includes('snel mee klaar'));
 // 24 nov: rekenhulp tv-meubel: pagina rendert zonder JS met uitkomst, tabel, FAQPage en de link vanuit de dressoir-gids
-{ const tv=(await render('slug=tv-meubel-breedte-berekenen')).body; assert.ok(tv.includes('minstens 144 cm breed, mooi vanaf 174 cm')); assert.ok(tv.includes('<table class="tv-tab">')); assert.ok(tv.includes('"WebApplication"')); assert.ok(tv.includes('rel="canonical" href="https://gids.kadoly.com/tv-meubel-breedte-berekenen"'));
-  const tv75=(await render('slug=tv-meubel-breedte-berekenen&inch=75')).body; assert.ok(tv75.includes('minstens 167 cm breed, mooi vanaf 196 cm'));
+{ const tv=(await render('slug=tv-meubel-breedte-berekenen')).body; assert.ok(tv.includes('<b>144 cm</b>')&&tv.includes('<b>174 cm</b>')); assert.ok(!tv.includes('id="kx"'),'geen algemene chat'); assert.ok(tv.includes('<table class="tv-tab">')); assert.ok(tv.includes('"WebApplication"')); assert.ok(tv.includes('rel="canonical" href="https://gids.kadoly.com/tv-meubel-breedte-berekenen"'));
+  const tv75=(await render('slug=tv-meubel-breedte-berekenen&inch=75')).body; assert.ok(tv75.includes('<b>167 cm</b>')&&tv75.includes('<b>196 cm</b>'));
   if (gidsen.GIDSEN.dressoir) assert.ok((await render('slug=dressoir')).body.includes('href="/tv-meubel-breedte-berekenen"')); }
 // 24 nov: home staging (lib/gidsen-homestaging.js): elke pagina rendert, noemt de eerste keus, linkt de andere vier en heeft de AI-vraag als eerste FAQ in FAQPage.
 { const hs=await import('../lib/gidsen-homestaging.js');
