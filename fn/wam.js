@@ -9,7 +9,7 @@
 //   POST /api/wam?op=wareg|wain|wauit  WhatsApp-koppeling (sleutel van de koppeling, trust on first use); GET op=wastand (beschermde host)
 //   POST /api/wam?op=tg            Telegram-webhook (als WAM_TG_TOKEN er is); GET op=tgzet zet de webhook (beschermde host)
 //   GET  /privacy, /robots.txt, /llms.txt
-//   GET  /nl, /start, /achtergrond, /pers, /vriendenloterij-opzeggen  de dossiersite (op=dpagina, dmeld, dmail, dstand, dlive; lib/wam-dossier.js)
+//   GET  /, /nl, /bedrijven/<id>, /dossier/<id>, /start en informatiepagina’s: de dossiersite; oude chat op /chat (op=dpagina, dmeld, dmail, dstand, dlive; lib/wam-dossier.js)
 import * as PUSH from '../lib/wam-push.js';
 import { randomBytes, createHmac } from 'node:crypto';
 import * as W from '../lib/wam.js';
@@ -251,7 +251,7 @@ export default async function handler(req, res) {
   // AI Gateway via OIDC: Vercel geeft het token per verzoek in een kop (lib/ai.js leest VERCEL_OIDC_TOKEN)
   const oidc = req.headers['x-vercel-oidc-token']; if (oidc) process.env.VERCEL_OIDC_TOKEN = String(oidc);
   try {
-    if (DOS.OPS.has(op)) return await DOS.handel(op, req, res, { q, beschermd: beschermd(host), body: () => leesBody(req) }); // dossiersite (lib/wam-dossier.js)
+    if (DOS.OPS.has(op)) return await DOS.handel(op, req, res, { q, beschermd: beschermd(host) && beschermd(String(req.headers.host || '').toLowerCase()), body: () => leesBody(req) }); // dossiersite (lib/wam-dossier.js)
     if (op === 'pagina') {
       const ua = String(req.headers['user-agent'] || ''); const land = String(req.headers['x-vercel-ip-country'] || '').toUpperCase().slice(0, 2);
       const taal = W.taalVan(req.headers['accept-language'], land); const k = W.kanalen();

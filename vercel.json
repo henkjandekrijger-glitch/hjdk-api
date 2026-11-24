@@ -1295,7 +1295,7 @@
       "destination": "/api/verzekeringen?op=out&id=:id"
     },
     {
-      "source": "/:p(nl|start|achtergrond|pers|vriendenloterij-opzeggen)",
+      "source": "/:p(nl|start|achtergrond|pers|vriendenloterij-opzeggen|bedrijven|dossiers|werkwijze|privacy|reactie-wissen)",
       "has": [
         {
           "type": "host",
@@ -1305,7 +1305,7 @@
       "destination": "/api/wam?op=dpagina&p=:p"
     },
     {
-      "source": "/",
+      "source": "/chat",
       "has": [
         {
           "type": "host",
@@ -1315,6 +1315,56 @@
       "destination": "/api/wam?op=pagina"
     },
     {
+      "source": "/bedrijven/:bedrijf",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=dpagina&p=bedrijven/:bedrijf"
+    },
+    {
+      "source": "/dossier/:dossier",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=dpagina&p=dossier/:dossier"
+    },
+    {
+      "source": "/sitemap.xml",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=dsitemap"
+    },
+    {
+      "source": "/zicht.json",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=dzicht"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=dpagina&p=nl"
+    },
+    {
       "source": "/about",
       "has": [
         {
@@ -1322,7 +1372,7 @@
           "value": "(www\\.)?wearemany\\.now"
         }
       ],
-      "destination": "/api/wam?op=over"
+      "destination": "/api/wam?op=dpagina&p=achtergrond"
     },
     {
       "source": "/over",
@@ -1332,7 +1382,7 @@
           "value": "(www\\.)?wearemany\\.now"
         }
       ],
-      "destination": "/api/wam?op=over"
+      "destination": "/api/wam?op=dpagina&p=achtergrond"
     },
     {
       "source": "/privacy",
@@ -1342,7 +1392,7 @@
           "value": "(www\\.)?wearemany\\.now"
         }
       ],
-      "destination": "/api/wam?op=privacy"
+      "destination": "/api/wam?op=dpagina&p=privacy"
     },
     {
       "source": "/terms",
@@ -1372,7 +1422,7 @@
           "value": "(www\\.)?wearemany\\.now"
         }
       ],
-      "destination": "/api/wam?op=robots"
+      "destination": "/api/wam?op=drobots"
     },
     {
       "source": "/llms.txt",
@@ -1382,7 +1432,7 @@
           "value": "(www\\.)?wearemany\\.now"
         }
       ],
-      "destination": "/api/wam?op=llms"
+      "destination": "/api/wam?op=dllms"
     },
     {
       "source": "/chat",
@@ -2932,7 +2982,7 @@
   "functions": {
     "api/*.js": {
       "maxDuration": 300,
-      "includeFiles": "{fn/**,.claude/skills/**,data/post-priors.json,OVERDRACHT-*.md,kdp/rapport.md,kdp/wachtrij.md,kdp/boekwedstrijd.md,docs/curacao-bedrijven-groei.md}"
+      "includeFiles": "{fn/**,.claude/skills/**,data/post-priors.json,data/wam/**,OVERDRACHT-*.md,kdp/rapport.md,kdp/wachtrij.md,kdp/boekwedstrijd.md,docs/curacao-bedrijven-groei.md}"
     }
   },
   "redirects": [
@@ -3079,9 +3129,39 @@
       "destination": "https://curacao.day/nl/:s/:b/:c",
       "permanent": true
     },
-    {"source": "/curacao/firmen", "has": [{"type": "host", "value": "kaufberater.best"}], "destination": "https://curacao.day/nl/bedrijven", "permanent": true},
-    {"source": "/curacao/firmen/:b", "has": [{"type": "host", "value": "kaufberater.best"}], "destination": "https://curacao.day/nl/bedrijven/:b", "permanent": true},
-    {"source": "/curacao/firmen/:b/:c", "has": [{"type": "host", "value": "kaufberater.best"}], "destination": "https://curacao.day/nl/bedrijven/:b/:c", "permanent": true},
+    {
+      "source": "/curacao/firmen",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "https://curacao.day/nl/bedrijven",
+      "permanent": true
+    },
+    {
+      "source": "/curacao/firmen/:b",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "https://curacao.day/nl/bedrijven/:b",
+      "permanent": true
+    },
+    {
+      "source": "/curacao/firmen/:b/:c",
+      "has": [
+        {
+          "type": "host",
+          "value": "kaufberater.best"
+        }
+      ],
+      "destination": "https://curacao.day/nl/bedrijven/:b/:c",
+      "permanent": true
+    },
     {
       "source": "/curacao",
       "has": [
@@ -3170,10 +3250,50 @@
       "destination": "https://curacao.day/en/:s/:b/:c",
       "permanent": true
     },
-    {"source": "/es/curazao/empresas/:b", "has": [{"type": "host", "value": "whichtobuy.best"}], "destination": "https://curacao.day/en/businesses/:b", "permanent": true},
-    {"source": "/es/curazao/empresas/:b/:c", "has": [{"type": "host", "value": "whichtobuy.best"}], "destination": "https://curacao.day/en/businesses/:b/:c", "permanent": true},
-    {"source": "/pt/curacao/empresas/:b", "has": [{"type": "host", "value": "whichtobuy.best"}], "destination": "https://curacao.day/en/businesses/:b", "permanent": true},
-    {"source": "/pt/curacao/empresas/:b/:c", "has": [{"type": "host", "value": "whichtobuy.best"}], "destination": "https://curacao.day/en/businesses/:b/:c", "permanent": true},
+    {
+      "source": "/es/curazao/empresas/:b",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://curacao.day/en/businesses/:b",
+      "permanent": true
+    },
+    {
+      "source": "/es/curazao/empresas/:b/:c",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://curacao.day/en/businesses/:b/:c",
+      "permanent": true
+    },
+    {
+      "source": "/pt/curacao/empresas/:b",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://curacao.day/en/businesses/:b",
+      "permanent": true
+    },
+    {
+      "source": "/pt/curacao/empresas/:b/:c",
+      "has": [
+        {
+          "type": "host",
+          "value": "whichtobuy.best"
+        }
+      ],
+      "destination": "https://curacao.day/en/businesses/:b/:c",
+      "permanent": true
+    },
     {
       "source": "/es/curazao",
       "has": [

@@ -1,15 +1,36 @@
 # Overdracht we are many now: de dossiersite
 
 Voor een volgende chat of een ander account. Actuele overdracht op main, met live stand: https://hjdk-api-henq.vercel.app/api/wam?op=doverdracht (achter Vercel-inlog).
-Bijgewerkt: 23 november 2026. Werk dit bestand bij in dezelfde commit als elke wijziging, met een regel in het logboek onderaan.
+Bijgewerkt: 24 november 2026. Werk dit bestand bij in dezelfde commit als elke wijziging, met een regel in het logboek onderaan.
 
 ## Wat het is
 
-we are many now (wearemany.now, Adsfair B.V.) bundelt losse klachten over hetzelfde bedrijf tot één dossier met bewijs, een cijfer en één stem. Kader: "machteloos tegen een bedrijf", niet "erger je kapot". De naam schrijf je in kleine letters met spaties. Op wearemany.now draait ook Whoz, de chat (lib/wam.js); die blijft op de root staan tot Henkjan anders zegt.
+we are many now (wearemany.now, Adsfair B.V.) bundelt losse klachten over hetzelfde bedrijf tot één dossier met bewijs, een cijfer en één stem. Kader: "machteloos tegen een bedrijf", niet "erger je kapot". De naam schrijf je in kleine letters met spaties. Op / staat sinds 24 november de dossiersite. Whoz, de bestaande chat (lib/wam.js), staat op /chat; contact is /chat#henkjan.
 
 Henkjan is niet technisch. Praat Nederlands, kort, één stap tegelijk, en doe het technische werk zelf.
 
-## Publicatie van 23 november 2026
+## Publicatie van 24 november 2026: de volledige site en lezersreacties
+
+Henkjan verduidelijkte de opdracht: "zet hele site live", "vergeet artikel even", vormgeving volgens sealedintent.com, Flanderijn nader onderzoeken en een totaalbeeld uit reviews en andere signalen, met directe lezersreacties die gemodereerd en geconcentreerd worden gepubliceerd. Dit is de toestemming voor de hele publieke site op /; de vorige artikelpublicatie was niet de volledige opdracht.
+
+Sinds 24 november 2026 op Henkjans expliciete opdracht ('zet hele site live', 'volgens sealedintent.com design', bronnenconsensus en gemodereerde lezersreacties): / is de dossiersite; de bestaande chat staat op /chat en contact op /chat#henkjan. /nl is dezelfde voorkant met canonical /. Tien bedrijfspagina's /bedrijven/<id>, /dossiers en drie feitelijke dossierpagina's /dossier/blendle, /dossier/anp en /dossier/hosters. Geen eigen rapportcijfers of juridische oordelen uit het prototype als feiten gepubliceerd. De publieke vormgeving volgt sealedintent.com: maximaal 680 px, 17 px tekst, 13 px bronmetadata, kop 24-30 px, rustige lijnen en compacte bronuitklappers. Per bedrijf een redactionele synthese van 28 bronpagina's samen, met positieve ervaringen, kritiek, afweging, profielafbakening en datum 24 november 2026. Geen claim dat alle internetreviews zijn onderzocht; cijfers van platforms niet gemiddeld. Flanderijn 4,2/726 mét 56% vijf sterren, 32% één ster en eigen klachtenjaarverslag (2024: 155 intern, 62 door bedrijf terecht bevonden). Nieuwe modules lib/wam-voorkant.js en lib/wam-reacties.js; bronnen data/wam/bronnen-2026-11-24.json. Lezersformulier rechtstreeks bij elk bedrijf en dossier, alleen na toestemming; op=dreactie, dreacties en dreactiewis. Besloten wachtrij, menselijke moderatie op op=dmoderatie (beschermde vercel.app-host én werkelijke Host-header, CSRF-token); uitsluitend een geredigeerde zin van maximaal 240 tekens wordt per onderwerp/strekking gebundeld gepubliceerd. Origineel maximaal 30 dagen en direct weg na besluit; gepubliceerde zin afzonderlijk maximaal een jaar; persoonlijke wislink. IP-rem 8/uur, identieke inzendingen ontdubbeld, wachtrijcap 3000. Controle op=dstand waarschuwt na twee dagen wachten; op=dreactietest voert de hele Redis-route in een gewiste proefnaamruimte uit. /sitemap.xml, /robots.txt, /llms.txt en /zicht.json beschrijven de nieuwe site. wmn:live wordt bij deze uitrol op 1 gezet. Het artikel is niet het onderwerp van de voorkant. De bestaande groepsfavicon blijft. 
+
+### Bediening van lezersreacties
+
+- Publiek: `POST /api/wam?op=dreactie` met bedrijf, ervaring, onderwerp, tekst en expliciete toestemming. De bezoeker krijgt een wislink met een geheim in het fragment; geen naam of e-mail nodig. De inzending verschijnt nooit direct openbaar.
+- Redactie: https://hjdk-api-henq.vercel.app/api/wam?op=dmoderatie (Vercel-inlog). Lees origineel, kies onderwerp en strekking, schrijf een anonieme concrete samenvatting, controleer privacy en onbewezen beschuldigingen, publiceer of wijs af. Neem ook positieve ervaringen en correcties serieus.
+- Publiek verschijnen alleen goedgekeurde samenvattingen op de bedrijfspagina, gegroepeerd per onderwerp en strekking, maximaal drie verschillende zinnen per groep. Het aantal betreft inzendingen, geen uniek geverifieerde personen. Geen eigen reviews of nepreacties toegevoegd.
+- Origineel `wmn:r:<id>` EX 30 dagen; wachtrij `wmn:r:wacht` (ZSET, oude leden worden opgeruimd). Na moderatie verdwijnt het origineel direct. Publicatie `wmn:r:goedgekeurd:<id>` EX 365 dagen met per-bedrijfindex `wmn:r:pub:<bedrijf>`; geen glijdende bewaring van oude teksten.
+- Wisbewijs `wmn:r:bewijs:<id>` bevat alleen een tokenhash, bedrijf en ontdubbelsleutel; wordt bij publicatie één jaar verlengd. Wissen verwijdert zowel de inzending als publicatie, index en ontdubbelhash. Alleen goedgekeurde zinnen komen in `dreacties`; geen inzend-ID’s, tokens of oorspronkelijke teksten.
+- Beveiliging: maximaal 8 inzendingen per IP-hash per uur, verborgen botveld, identieke tekst 30 dagen ontdubbeld, wachtrijcap 3000, bekende bedrijven/onderwerpen, lengtegrenzen, HTML-escaping en herkenbare privégegevens weren. Publicatie heeft naast Vercel-bescherming een tijdelijk CSRF-token en expliciete redactiecontrole nodig. De werkelijke Host-header moet ook vercel.app zijn, zodat een aangeleverde x-forwarded-host niet volstaat.
+- Controle: `op=dstand` noemt de wachtrij en waarschuwt als de oudste inzending meer dan twee dagen wacht. `op=dreactietest` draait een echte Redis-proef van ontvangen, besloten houden, autorisatie, publicatie, concentratie, afwijzen en wissen in een eigen naamruimte die wordt opgeruimd. Dit levert geen publieke reacties, meldingen of tellers op.
+- Privacy en werkwijze staan op /privacy#lezersreacties en /werkwijze. Moderatie gaat niet automatisch via een AI-model en er worden geen mails verstuurd.
+
+### Validatie en beperkingen
+
+15 lokale tests slagen: bestaande meldparser, canonicals en interne navigatie van alle 23 publieke pagina’s, scriptsyntaxis, toestemming, brondekking, publieke afscherming, privégegevens, moderatiecontrole, concentratie en HTML-escaping. Routercontrole en commentaarcheck slagen. Nieuwe statische HTML en formulierstructuur worden aanvullend gecontroleerd. Volledige visuele controle in Chrome was geblokkeerd door gelijktijdig gebruik van de browser; er is geen afgeronde mobiele browsercontrole geclaimd. De uitrol en de echte Redis-proef worden daarna in het centrale werklog vastgelegd.
+
+## Publicatie van 23 november 2026 (historisch)
 
 Henkjan gaf opdracht: "Zet live op WAM en meteen goede favo ico". De bronregels en het goedgekeurde verhaal worden daarmee op main gepubliceerd. Op /nl staat de korte tekst met een link naar /achtergrond#waarom-afpoeieren. Het artikel beschrijft de aanpak als visie; verdere opvolging en bewijscontrole zijn nog niet gebouwd. Chat en dossiersite gebruiken één zwart-wit groepsicoon, met SVG, PNG (32), Apple (180) en een echt ICO (16/32/48). Favicon-adressen zijn uitsluitend voor de WAM-host herschreven naar op=dico. De root blijft de chat. Dossiers met cijfers en de opzegservice blijven ontwerp.
 
@@ -18,11 +39,11 @@ Henkjan gaf opdracht: "Zet live op WAM en meteen goede favo ico". De bronregels 
 | Onderdeel | Stand |
 |---|---|
 | Ontwerp, alle schermen | Af, op https://ontwerp.wearemany.now (noindex, zwarte balk "Ontwerp") |
-| Stap 1 echt: melden, tellen, e-mail, vijf pagina's | Live op wearemany.now sinds 23 nov 2026 (Henkjan: "Ja zet live"): /nl /start /achtergrond /pers /vriendenloterij-opzeggen. Noindex en nergens gelinkt tot `op=dlive&aan=1`. De root is nog Whoz |
-| Dossiers met cijfer en wet (Blendle, ANP, hosters) | Alleen ontwerp. Wacht op een jurist |
+| Volledige publieke site | / is de voorkant, /nl alias, /chat de bestaande chat. Tien bedrijfspagina’s, drie feitelijke dossiers, bronmethodiek, privacy, pers, achtergrond en werkende meld- en reactieroutes |
+| Dossiers | Feitelijke startpagina’s openbaar met bron, context en publiek vermelde leiding. Eigen rapportcijfer en juridische conclusies blijven bij de jurist |
 | "Wij zeggen voor je op" | Alleen ontwerp. Wacht op een jurist |
 | Mails aan melders | Bestaan niet. Eerst langs de POST-lus en langs Henkjan |
-| Vindbaarheid (ZICHT) | Lessen toegepast in de pagina's. Nog niet aangemeld, de pagina's zijn noindex |
+| Vindbaarheid | Canonicals, sitemap, robots, llms.txt en zicht.json voor de hele site. wmn:live wordt op 1 gezet; daadwerkelijke indexering volgt pas na bezoek door zoekmachines |
 
 ## Waar alles staat
 
@@ -72,8 +93,8 @@ Schermen in het ontwerp (achter `#`): voorkant, nu, melders, modal, gesprek, opg
 - Nooit grijs. Zo min mogelijk verschillende lettermaten en stijlen. Nooit nultellers. Geen gedachtestreepjes.
 - Kort, eenvoudig Nederlands. Eén vraag per keer. Zuinig met tokens en met builds.
 - Sleutels nooit lezen, tonen of gebruiken. Deze repo is openbaar.
-- Geen e-mailadres van Henkjan op pagina's: contact loopt via de chat (https://wearemany.now/#henkjan).
-- Advertentiecampagnes waar hij niet om vroeg niet wijzigen. De root van wearemany.now is Whoz en kan een landingspagina van campagnes zijn.
+- Geen e-mailadres van Henkjan op pagina's: contact loopt via https://wearemany.now/chat#henkjan.
+- Advertentiecampagnes waar hij niet om vroeg niet wijzigen. De root is sinds Henkjans expliciete besluit van 24 november de dossiersite; Whoz staat op /chat. Campagnes blijven uit en worden hier niet gewijzigd.
 - De ACM-melding tegen Blendle alleen op "ja ACM". De tweet aan Klöpping alleen op "ja tweet".
 - Het woord "scam" niet gebruiken. Bij ANP ook melden dat ANP zaken wint. Materiaal van derden die hem mailden over ANP niet gebruiken zonder hun toestemming.
 - Dossiers met cijfer en wetsparagraaf, en "wij zeggen voor je op", pas na één jurist. Henkjan mag dat zelf openbreken.
@@ -81,22 +102,16 @@ Schermen in het ontwerp (achter `#`): voorkant, nu, melders, modal, gesprek, opg
 
 ## Open punten, in deze volgorde
 
-1. **Voorkant: bronregels bij alle tien bedrijven toegevoegd aan het ontwerp en op Henkjans publicatieopdracht aan main op 23 november 2026.** Negen Trustpilot-profielen met TrustScore en aantal reviews; PostNL met de Nederlandse Klacht.nl-pagina. Elke regel heeft `meer »`, bronlinks en raadpleegdatum. Waar beschikbaar staan onder meer ook de afzonderlijke Klacht.nl-registraties met hun eigen brondatum. Positieve cijfers (Flanderijn en ANWB 4,2/5) worden eveneens getoond. De geopende bronweergave is leidend, niet een afwijkend nieuwer aantal uit de zoekindex. Geen platforms, profielen of landen samengevoegd; opgelost op Klacht.nl betekent geregistreerd als opgelost op dat platform. Dit zijn geen representatieve klanttevredenheidsmetingen.
-1b. **Directieblokken ingevuld met gedateerde bronnen in het ontwerp.** Blendle: Laurent Kayser (eigen juridische pagina noemt hem wettelijk vertegenwoordiger; CEO Cafeyn sinds 7 oktober 2023). ANP: Martha Riemsma (algemeen directeur vanaf half oktober 2024). Mijndomein: Dion Goudkuil (eigen interview 22 oktober 2026; benoemingsdatum onbekend). STRATO: Jens Reich, Hüseyin Dogan, Markus Leander Noga en Patrik Heider, volgens eigen imprint, met functie-ingangsdata uit de eigen managementpagina. Yourhosting: Wouter Stoutjesdijk (begin 2025; eigen en groepsbericht plus klantcase 2026). Hostnet: René Oldenbeuving (directeur vanaf 2021, via Company.info met KVK-brondatum 29 september 2026 en interview april 2026). Een direct Handelsregister-uittreksel is niet gecontroleerd.
-1c. **Nog te bevestigen:** lokale/statutaire directie Vimexx (groeps-CEO Claudio Corbetta is wel bevestigd op team.blue; Tom Denkers wordt alleen als historische vermelding uit BIT-interview 6 augustus 2024 genoemd). Actuele functie van Robbert Buitenhuis bij ANP Fair Licensing en zijn benoemingsdatum (publicatie 3 juli 2026 noemt hem hoofd International Photo Sales & Infringements; huidige functie nog niet door ANP of register bevestigd). Benoemingsdatum Dion Goudkuil en ingangsdatum vertegenwoordiging Blendle ontbreken. Deze beperkingen staan zichtbaar bij de namen. Ook dit langs de jurist voordat de dossiers publiek live gaan.
-
-2. Gedaan op 23 nov: branch `wam-dossier` staat op main. Nog doen: één echte melding met foto of pdf via wearemany.now/start en daarna `op=dstand` nakijken (https://hjdk-api-henq.vercel.app/api/wam?op=dstand).
-3. Eigen opzegpagina voor de andere negen, zoals de VriendenLoterij, alleen met gecontroleerde opzegwegen. Gecontroleerd: Ziggo `ziggo.nl/opzeggen/formulier`, KPN `kpn.com/service/administratie/opzeggen`, Videoland `videoland.com/account` (alleen via de website). Niet gecontroleerd: telefoon en adres van de VriendenLoterij (088 020 10 20, Beethovenstraat 200, 1077 JZ Amsterdam, uit het reglement zoals aangehaald op een forum) en de opzeglinks van beide loterijen.
-4. Privacypagina (`op=privacy` in fn/wam.js) beschrijft alleen de chat: alinea over meldingen erbij.
-5. Bevestigingsmail na aanmelden, en de dagmail: eerst het concept.
-6. Jurist: de machtiging en voorwaarden van "wij zeggen voor je op", het cijfer en de wetsparagrafen.
-7. "Wij zeggen voor je op" bouwen zoals in het ontwerp (#vriendenloterij, #opzegmails, #seo): e-mail, naam, postcode en huisnummer, één vinkje machtiging, één tik in de mail, wij mailen namens de klant vanaf ons eigen adres met de klant in de cc en een eigen antwoordadres, volgpagina, dag 7 herinnering, dag 14 brief (wie die brief betaalt is niet beslist). Wij nemen nooit een aanbod aan. Artikelen: 3:60, 3:71 en 3:37 lid 3 BW, 6:236 onder o BW. Per bedrijf pas aan als het mailadres gecontroleerd is.
-8. Idee uit Henkjans onderzoek naar collectieve macht, nog niet beslist: "ik zeg op als 100 anderen meedoen", en bij 100 gaan alle opzeggingen op één dag weg. En: de voorkant telt daden (opzeggingen, geld terug), niet sympathie.
-9. Na live: de site aanmelden bij ZICHT met `/zicht.json` (toegepast: titel-zoekterm-voorop, antwoord-bovenaan, statistieken-toevoegen, datum-recency-bias, ssr-gids-inhoud, geen-doorway-paginas, faq-uit-zoekvragen; proef: de zoekpagina's tegen de dossierpagina's, 21 dagen, metric gsc), sitemap, IndexNow, en dan pas `op=dlive&aan=1`.
-10. Wanneer de voorkant van wearemany.now de dossiersite wordt en Whoz naar een eigen pad gaat: Henkjans besluit, en eerst nagaan welke campagnes op de root landen.
-11. Open vragen aan Henkjan: zijn eigen band met een van de bedrijven in de dossiers vermelden op Achtergrond; het ANP-dossier op naam van Adsfair B.V. of op zijn eigen naam; uploads weggooien (nu) of bewaren als bewijs.
-12. Het logboek van Demand Radar heeft nog geen regel over het thema machteloos (dat vraagt de teamsleutel; die gebruiken wij niet zelf).
-13. Het project `wearemany-ontwerp` kan weg zodra de echte site live is en het ontwerp niet meer nodig is.
+1. Echte lezersreacties na binnenkomst modereren op op=dmoderatie; positieve, negatieve en corrigerende bijdragen even zorgvuldig behandelen. Na inhoudelijke nieuwe bronnen het bronnenbeeld en de datum bijwerken.
+2. Bronbereik uitbreiden wanneer andere afgebakende profielen of onafhankelijke signalen beschikbaar zijn. Niet claimen dat alle internetreviews zijn onderzocht. De huidige tien syntheses staan in data/wam/bronnen-2026-11-24.json, de bronlijst bij ieder bedrijf is leidend.
+3. Namen in het Handelsregister bevestigen waar nodig: lokale/statutaire directie Vimexx, huidige ANP Fair Licensing-functie en ingangsdata. Huidige publieke leidingblokken zijn expliciet op openbare bronnen gebaseerd, geen gecontroleerd Handelsregister-uittreksel.
+4. Jurist voor eigen dossiercijfers, juridische conclusies en de machtiging/voorwaarden van "wij zeggen voor je op". Geen automatische opzegservice of prototypebevestigingen gepubliceerd. ANP-wederhoor en eigen band met Mijndomein staan bij de dossiers.
+5. De bevestigingsmail en dagmail aan melders bestaan nog niet: eerst concept via de POST-lus en Henkjan. E-mail kan wel bij een melding worden opgeslagen.
+6. Aanvullende visuele en mobiele browsercontrole zodra de browser vrij is. De programmatische controles en productieproef moeten wel al slagen.
+7. Echte foto/pdf-meldroute nog apart volledig doorlopen zonder proefmeldingen in publieke aantallen te laten belanden. De bestaande droge tekstproef en parser zijn beschikbaar.
+8. Zoekmachine-indexering meten; sitemap en zicht.json worden bij deze uitrol gepubliceerd. Een vermelding in Google of een AI is geen automatisch gevolg van live zetten.
+9. Niet besloten: voorwaardelijke gezamenlijke opzegging, uploadbewaring als bewijs en wie een eventuele papieren brief betaalt. Uploads worden nu niet bewaard.
+10. Het aparte ontwerp kan later worden opgeruimd; niet verwijderd in deze taak.
 
 ## Cijfers en feiten die gebruikt zijn
 
@@ -116,6 +131,8 @@ Voorstel cijfer per bedrijf (1 tot 10): antwoord 3 punten (binnen 15 dagen), opl
 - Begin met CLAUDE.md van hjdk-api en de live handover https://hjdk-api-henq.vercel.app/api/mm/handover.
 
 ## Logboek (nieuwste bovenaan)
+
+- 24 nov 2026: hele site naar / op Henkjans expliciete opdracht; Sealed Intent-typografie, tien bronnenbeelden (28 bronnen), Flanderijn met sterverdeling en eigen klachtenjaarverslag, directe lezersreacties, besloten menselijke moderatie, geanonimiseerde concentratie en wislink. Drie feitelijke dossiers zonder prototypecijfers; bestaande chat naar /chat. 15 lokale tests, router en commentaarcheck geslaagd; productiecontrole volgt in centraal werklog.
 
 - 23 nov 2026: op Henkjans expliciete publicatieopdracht de tien bronregels en het verhaal vanuit support en PR op WAM gezet. Korte versie op /nl, volledig op /achtergrond#waarom-afpoeieren; onjuiste buitenlandse samenvattingen vervangen door precieze, gelinkte officiële bronnen. Nieuw centraal merkteken in lib/wam-merk.js voor chat en dossiersite, echte ICO-, SVG-, PNG- en Apple-varianten, serveractie dico zonder database of AI. Alleen WAM krijgt de favicon-rewrites. Geen automatische mails, ACM-melding of publicatie van juridische dossierpagina's toegevoegd.
 

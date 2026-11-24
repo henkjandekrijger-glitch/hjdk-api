@@ -24,9 +24,9 @@ test('AI-antwoord: alleen bruikbare velden', () => {
 test('elke pagina: titel, canonical, geen grijs, geen gedachtestreepje, noindex tot live', () => {
   for (const p of PADEN) {
     const h = pagina(p, false);
-    assert.ok(h.includes('<title>') && h.includes('rel="canonical" href="https://wearemany.now/' + p + '"'), p);
+    assert.ok(h.includes('<title>') && h.includes('rel="canonical" href="https://wearemany.now' + (p === 'nl' ? '/' : '/' + p) + '"'), p);
     assert.ok(h.includes('noindex'), p + ' moet noindex zijn tot live');
-    assert.ok(!pagina(p, true).includes('noindex'), p);
+    assert.equal(pagina(p, true).includes('noindex'), p === 'reactie-wissen', p);
     assert.ok(!/—|#(8|9|a|b|c)[0-9a-f]{5}\b|gray|grey/i.test(h), p + ' grijs of gedachtestreepje');
     assert.ok(!/\b0 (melders|keer)\b/.test(h), p + ' nulteller');
   }
@@ -39,8 +39,8 @@ test('startpagina: script is geldig JavaScript en de ops bestaan', () => {
 });
 test('proefadres: links tussen de pagina\'s wijzen naar op=dpagina, op wearemany.now naar de korte paden', () => {
   const proef = pagina('nl', false, true), echt = pagina('nl', false, false);
-  assert.ok(echt.includes('href="/start?b=Videoland"') && echt.includes('href="/vriendenloterij-opzeggen"'));
-  assert.ok(proef.includes('href="/api/wam?op=dpagina&amp;p=start&amp;b=Videoland"') && proef.includes('href="/api/wam?op=dpagina&amp;p=vriendenloterij-opzeggen"'));
+  assert.ok(echt.includes('href="/bedrijven/videoland"') && echt.includes('href="/dossiers"'));
+  assert.ok(proef.includes('href="/api/wam?op=dpagina&amp;p=bedrijven/videoland"') && proef.includes('href="/api/wam?op=dpagina&amp;p=dossiers"'));
   assert.ok(!/href="\/(nl|start|achtergrond|pers|vriendenloterij-opzeggen)["?#]/.test(proef), 'geen kort pad meer op het proefadres');
-  assert.ok(pagina('pers', false, true).includes('href="https://wearemany.now/#henkjan"') && proef.includes('href="https://wearemany.now/privacy"'));
+  assert.ok(pagina('pers', false, true).includes('href="https://wearemany.now/chat#henkjan"') && proef.includes('href="/api/wam?op=dpagina&amp;p=privacy"'));
 });
