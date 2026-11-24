@@ -339,6 +339,46 @@
       "has": [
         {
           "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=dico&f=ico"
+    },
+    {
+      "source": "/favicon.svg",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=dico&f=svg"
+    },
+    {
+      "source": "/favicon-32x32.png",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=dico&f=png"
+    },
+    {
+      "source": "/apple-touch-icon.png",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=dico&f=apple"
+    },
+    {
+      "source": "/favicon.ico",
+      "has": [
+        {
+          "type": "host",
           "value": "(www\\.)?(keuzehulp|whichtobuy|kaufberater)\\.best"
         }
       ],
@@ -3249,4 +3289,3 @@
     }
   ]
 }
-

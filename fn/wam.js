@@ -17,6 +17,7 @@ import * as LEER from '../lib/wam-leer.js';
 import { HOOKS, hookTekst, beeld, deelBeeld } from '../lib/wam-hooks.js';
 import * as POST from '../lib/wam-post.js';
 import * as DOS from '../lib/wam-dossier.js';
+import { ICON_LINKS } from '../lib/wam-merk.js';
 
 const beschermd = host => /\.vercel\.app$/i.test(host);
 const isCron = req => (process.env.CRON_SECRET && req.headers.authorization === 'Bearer ' + process.env.CRON_SECRET) || /vercel-cron/i.test(String(req.headers['user-agent'] || ''));
@@ -68,7 +69,7 @@ function pagina({ start, taal, kanalen, vapid, w, bord, erger, meta }) {
   return `<!doctype html><html lang="${esc(taal)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
 <title>${esc(meta ? meta.titel : NMV + ': ' + (P ? P.kop : u.sub))}</title><meta name="description" content="We Are Many is a free AI matchmaker chat: tell it what you offer or need (a room, work, a service, a better deal) and it connects you with people who match, anonymously until you both say yes.">
 <meta property="og:title" content="${esc(meta ? meta.titel : NMV)}"><meta property="og:description" content="${esc(meta ? meta.tekst : (P ? P.kop : u.sub))}">${meta && meta.beeld ? '<meta property="og:image" content="' + esc(meta.beeld) + '"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">' : ''}<meta name="theme-color" content="#FFFFFF">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232B47C4'/%3E%3Ctext x='32' y='42' font-size='26' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+${ICON_LINKS}
 <style>
 :root{--bg:#FFFFFF;--panel:#FFFFFF;--ink:#111113;--body:#3A3F47;--muted:#6B7280;--line:#E5E7EB;--line2:#B9BFC7;--accent:#2B47C4;--accent-ink:#FFFFFF;--soft:#EEF1FC;--ok:#1F7A4D;--warn:#B3261E;color-scheme:light}
 @media (prefers-color-scheme:dark){:root{--bg:#0F1116;--panel:#161922;--ink:#F2F3F5;--body:#C9CDD3;--muted:#8B929B;--line:#272C37;--line2:#4A5260;--accent:#93A6FF;--accent-ink:#0B1022;--soft:#1B2246;--ok:#71CF9E;--warn:#F08A7E;color-scheme:dark}}
