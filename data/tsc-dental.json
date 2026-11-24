@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checked_at": "2026-11-23",
+  "checked_at": "2026-11-24",
   "note": "Source inventory and published-price snapshots. No complete market, licence, suitability, outcome or guaranteed-savings claim. Provider groups can span locations. Brand availability is explicitly sourced and may vary by practice. Amounts retain currency, unit, treatment scope and known omissions; no synthetic FX or country averages.",
   "providers": [
     {
@@ -1091,6 +1091,78 @@
           "brands": [
             "Invisalign"
           ]
+        }
+      }
+    },
+    {
+      "id": "qualiteeth-malaysia",
+      "naam": "Qualiteeth Dental Clinic",
+      "site": "https://qualiteeth.com.my/",
+      "land": "MY",
+      "stad": "15 branches in Kuala Lumpur and Selangor",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-24",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://qualiteeth.com.my/harga-implan-gigi/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-24"
+        },
+        "all-on-4": {
+          "source_url": "https://qualiteeth.com.my/harga-implan-gigi/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-24"
+        },
+        "veneers": {
+          "source_url": "https://qualiteeth.com.my/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-24"
+        },
+        "whitening": {
+          "source_url": "https://qualiteeth.com.my/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-24"
+        },
+        "aligners": {
+          "source_url": "https://qualiteeth.com.my/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-24",
+          "brands": [
+            "Invisalign",
+            "Angel Aligner"
+          ]
+        }
+      }
+    },
+    {
+      "id": "sota-dental-mexico",
+      "naam": "SOTA Dental Mexico",
+      "site": "https://sotadental.com/",
+      "land": "MX",
+      "stad": "Cancun, Los Algodones, Tijuana and Playa del Carmen",
+      "kind": "clinic",
+      "scope": "organization",
+      "checked_at": "2026-11-24",
+      "artsen": [],
+      "reviews": [],
+      "offers": {
+        "dental-implants": {
+          "source_url": "https://sotadental.com/price-list/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-24"
+        },
+        "all-on-4": {
+          "source_url": "https://sotadental.com/price-list/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-24"
+        },
+        "veneers": {
+          "source_url": "https://sotadental.com/price-list/",
+          "source_type": "provider_website",
+          "checked_at": "2026-11-24"
         }
       }
     }
@@ -2423,6 +2495,353 @@
         "sensitivity_checks",
         "follow_up"
       ]
+    },
+    {
+      "provider": "bangkok-hospital-dental",
+      "topic": "veneers",
+      "from": 16000,
+      "currency": "THB",
+      "scope": "porcelain_veneer",
+      "unit": "tooth",
+      "source_url": "https://www.bangkokhospital.com/en/bangkok/package/dental-treatment-fees",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "porcelain_veneer"
+      ],
+      "unknown": [
+        "tooth_preparation",
+        "mock_up",
+        "temporary_veneer",
+        "follow_up"
+      ],
+      "to": 18000,
+      "location": "Bangkok Hospital Headquarter, Bangkok"
+    },
+    {
+      "provider": "bangkok-hospital-dental",
+      "topic": "crowns",
+      "from": 20000,
+      "currency": "THB",
+      "scope": "all_ceramic_crown",
+      "unit": "crown",
+      "source_url": "https://www.bangkokhospital.com/en/bangkok/package/dental-treatment-fees",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "all_ceramic_crown"
+      ],
+      "unknown": [
+        "tooth_preparation",
+        "root_canal",
+        "temporary_crown",
+        "follow_up"
+      ],
+      "to": 23000,
+      "location": "Bangkok Hospital Headquarter, Bangkok"
+    },
+    {
+      "provider": "bangkok-hospital-dental",
+      "topic": "dental-implants",
+      "from": 65000,
+      "currency": "THB",
+      "scope": "straumann_neodent_implant_including_crown",
+      "unit": "tooth",
+      "source_url": "https://www.bangkokhospital.com/en/bangkok/package/dental-treatment-fees",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "implant",
+        "crown_on_implant",
+        "Straumann Neodent named"
+      ],
+      "unknown": [
+        "abutment",
+        "diagnostics",
+        "bone_graft",
+        "temporary_crown",
+        "checks",
+        "repeat_trip"
+      ],
+      "location": "Bangkok Hospital Headquarter, Bangkok"
+    },
+    {
+      "provider": "bangkok-hospital-dental",
+      "topic": "all-on-4",
+      "from": 250000,
+      "currency": "THB",
+      "scope": "all_on_4_straumann_group_published_scope",
+      "unit": "published_package",
+      "source_url": "https://www.bangkokhospital.com/en/bangkok/package/dental-treatment-fees",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "All-on-4",
+        "Neodent, Roxolid SLA or BLX named"
+      ],
+      "unknown": [
+        "arch",
+        "temporary_teeth",
+        "final_teeth",
+        "prosthesis_material",
+        "extractions",
+        "bone_graft",
+        "checks",
+        "repeat_trip"
+      ],
+      "to": 590000,
+      "location": "Bangkok Hospital Headquarter, Bangkok"
+    },
+    {
+      "provider": "bangkok-hospital-dental",
+      "topic": "aligners",
+      "from": 95000,
+      "currency": "THB",
+      "scope": "invisalign_scope_not_published",
+      "unit": "treatment",
+      "source_url": "https://www.bangkokhospital.com/en/bangkok/package/dental-treatment-fees",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "Invisalign brand"
+      ],
+      "unknown": [
+        "arches",
+        "aligner_count",
+        "diagnostics",
+        "checks",
+        "refinements",
+        "retainers"
+      ],
+      "to": 220000,
+      "location": "Bangkok Hospital Headquarter, Bangkok"
+    },
+    {
+      "provider": "bangkok-hospital-dental",
+      "topic": "aligners",
+      "from": 3800,
+      "currency": "THB",
+      "scope": "clear_retainer",
+      "unit": "piece",
+      "source_url": "https://www.bangkokhospital.com/en/bangkok/package/dental-treatment-fees",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "clear_retainer"
+      ],
+      "unknown": [
+        "number_of_sets",
+        "checks",
+        "replacement"
+      ],
+      "to": 6900,
+      "location": "Bangkok Hospital Headquarter, Bangkok"
+    },
+    {
+      "provider": "qualiteeth-malaysia",
+      "topic": "dental-implants",
+      "from": 5000,
+      "currency": "MYR",
+      "scope": "single_implant_abutment_crown",
+      "unit": "tooth",
+      "source_url": "https://qualiteeth.com.my/harga-implan-gigi/",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "implant",
+        "abutment",
+        "crown"
+      ],
+      "unknown": [
+        "CBCT",
+        "bone_graft",
+        "extraction",
+        "temporary_tooth",
+        "checks",
+        "repeat_trip"
+      ],
+      "location": "15 branches in Kuala Lumpur and Selangor"
+    },
+    {
+      "provider": "qualiteeth-malaysia",
+      "topic": "all-on-4",
+      "from": 40000,
+      "currency": "MYR",
+      "scope": "all_on_4_or_all_on_6_fixed_full_arch",
+      "unit": "jaw",
+      "source_url": "https://qualiteeth.com.my/harga-implan-gigi/",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "fixed_full_arch",
+        "four_or_six_implants"
+      ],
+      "unknown": [
+        "temporary_teeth",
+        "final_teeth_material",
+        "extractions",
+        "bone_graft",
+        "checks",
+        "repeat_trip"
+      ],
+      "location": "15 branches in Kuala Lumpur and Selangor"
+    },
+    {
+      "provider": "qualiteeth-malaysia",
+      "topic": "aligners",
+      "from": 7900,
+      "currency": "MYR",
+      "scope": "clear_aligners_brand_option_not_separated",
+      "unit": "treatment",
+      "source_url": "https://qualiteeth.com.my/",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "Invisalign and Angel Aligner explicitly named"
+      ],
+      "unknown": [
+        "brand_at_starting_price",
+        "arches",
+        "aligner_count",
+        "diagnostics",
+        "checks",
+        "refinements",
+        "retainers"
+      ],
+      "location": "15 branches in Kuala Lumpur and Selangor"
+    },
+    {
+      "provider": "qualiteeth-malaysia",
+      "topic": "veneers",
+      "from": 2999,
+      "currency": "MYR",
+      "scope": "eight_veneers_package",
+      "unit": "8 veneers",
+      "source_url": "https://qualiteeth.com.my/",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "eight_veneers",
+        "digital_smile_design named"
+      ],
+      "unknown": [
+        "material",
+        "preparation",
+        "mock_up",
+        "temporary_veneers",
+        "checks"
+      ],
+      "location": "15 branches in Kuala Lumpur and Selangor"
+    },
+    {
+      "provider": "qualiteeth-malaysia",
+      "topic": "whitening",
+      "from": 399,
+      "currency": "MYR",
+      "scope": "in_clinic_whitening_with_scaling",
+      "unit": "treatment",
+      "source_url": "https://qualiteeth.com.my/",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "in_clinic_whitening",
+        "scaling"
+      ],
+      "unknown": [
+        "sessions",
+        "take_home_products",
+        "sensitivity_checks",
+        "follow_up"
+      ],
+      "location": "15 branches in Kuala Lumpur and Selangor"
+    },
+    {
+      "provider": "sota-dental-mexico",
+      "topic": "dental-implants",
+      "from": 1399,
+      "currency": "USD",
+      "scope": "implant_plus_crown_special_all_locations",
+      "unit": "tooth",
+      "source_url": "https://sotadental.com/price-list/",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "surgical_implant_placement",
+        "Neodent or similar implant",
+        "E-Max milled crown"
+      ],
+      "unknown": [
+        "abutment",
+        "diagnostics",
+        "bone_graft",
+        "temporary_crown",
+        "checks",
+        "repeat_trip"
+      ],
+      "location": "Cancun, Los Algodones, Tijuana and Playa del Carmen"
+    },
+    {
+      "provider": "sota-dental-mexico",
+      "topic": "all-on-4",
+      "from": 8499,
+      "currency": "USD",
+      "scope": "all_on_4_hybrid_prosthesis_tijuana",
+      "unit": "arch",
+      "source_url": "https://sotadental.com/price-list/",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "single_arch",
+        "extractions",
+        "four_implants",
+        "temporary_healing_denture",
+        "hybrid_final_prosthesis",
+        "2cc_bone_graft"
+      ],
+      "unknown": [
+        "implant_brand",
+        "checks",
+        "repeat_trip",
+        "travel"
+      ],
+      "location": "Tijuana"
+    },
+    {
+      "provider": "sota-dental-mexico",
+      "topic": "all-on-4",
+      "from": 10499,
+      "currency": "USD",
+      "scope": "all_on_4_nanoceramic_prosthesis_los_algodones",
+      "unit": "arch",
+      "source_url": "https://sotadental.com/price-list/",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "single_arch",
+        "extractions",
+        "four_implants",
+        "temporary_healing_denture",
+        "lab_milled_final_prosthesis",
+        "US warranty and after-service stated",
+        "2cc_bone_graft",
+        "accommodation stated"
+      ],
+      "unknown": [
+        "exact_nanoceramic_brand",
+        "checks",
+        "repeat_trip",
+        "flights",
+        "transfers"
+      ],
+      "location": "Los Algodones"
+    },
+    {
+      "provider": "sota-dental-mexico",
+      "topic": "veneers",
+      "from": 449,
+      "currency": "USD",
+      "scope": "multi_veneer_smile_makeover_special",
+      "unit": "veneer",
+      "source_url": "https://sotadental.com/price-list/",
+      "checked_at": "2026-11-24",
+      "includes": [
+        "price conditional on multiple veneers"
+      ],
+      "unknown": [
+        "minimum_number",
+        "material",
+        "preparation",
+        "temporaries",
+        "checks",
+        "travel"
+      ],
+      "location": "All SOTA Mexico locations"
     }
   ]
 }
