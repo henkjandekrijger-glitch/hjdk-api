@@ -1,0 +1,101 @@
+{
+  "postcodeloterij": {
+    "kop": "Postcode Loterij opzeggen.",
+    "seoTitel": "Postcode Loterij opzeggen: online en gratis | WAM",
+    "titel": "Zo zet je de juiste loten stop",
+    "anker": "opzeggen",
+    "bijgewerkt": "2026-11-24",
+    "kort": "Zeg rechtstreeks op in Mijn Postcode Loterij. Controleer per lotnummer wat je beëindigt.",
+    "antwoord": "Online opzeggen gaat via Mijn Postcode Loterij. De officiële opzegpagina linkt direct naar het overzicht van je loten. Zelf online opzeggen kost niets. Heb je meerdere loten, leg dan vast welke lotnummers je wilt stoppen en controleer de bevestiging per lot.",
+    "actie": {"naam": "Naar Mijn Postcode Loterij", "url": "https://mijn.postcodeloterij.nl/loten#abonnementwijzigen"},
+    "stappenTitel": "Controleer dit tijdens het opzeggen",
+    "stappen": [
+      "Open het lotenoverzicht via de officiële website en log zelf in. Geef WAM geen inloggegevens.",
+      "Noteer de lotnummers die je wilt beëindigen. Een lotnummer op je bankafschrift helpt om het juiste lot terug te vinden.",
+      "Bewaar de bevestiging en kijk welke lotnummers en einddatum erin staan. Wil je helemaal stoppen, controleer dan dat de bevestiging alle bedoelde loten omvat.",
+      "Komt er later een afschrijving? Vergelijk de omschrijving, het lotnummer en de betaalde periode met je bevestiging. Vraag de Ledenservice om uitleg als dat niet aansluit."
+    ],
+    "routes": [
+      {"situatie": "Online", "route": "Het lotenoverzicht in Mijn Postcode Loterij", "url": "https://mijn.postcodeloterij.nl/loten#abonnementwijzigen"},
+      {"situatie": "Telefonisch", "route": "De actuele opzegpagina noemt 088 020 1050", "url": "https://www.postcodeloterij.nl/opzeggen/telefonisch"},
+      {"situatie": "Per brief", "route": "De officiële uitleg voor schriftelijk opzeggen", "url": "https://www.postcodeloterij.nl/opzeggen/schriftelijk"}
+    ],
+    "noot": "Een opzegging, afmelding voor reclame en terugboeking via je bank zijn verschillende handelingen. Bewaar de bevestiging van wat je werkelijk hebt laten beëindigen.",
+    "bronnen": [
+      {"naam": "Postcode Loterij: actuele opzegpagina en veelgestelde vragen", "url": "https://www.postcodeloterij.nl/opzeggen?wmstepid=opzeggen", "uitleg": "Drie opzegwegen, de directe link naar je loten, gratis zelf opzeggen en lotnummer op het bankafschrift. Het telefoonnummer is dat van de actuele opzegpagina."}
+    ],
+    "vragen": [
+      {"vraag": "Hoe zeg ik de Postcode Loterij online op als ik meerdere loten heb?", "antwoord": "Ga naar het lotenoverzicht in Mijn Postcode Loterij. Controleer welke lotnummers je stopzet en bewaar de bevestiging. Wil je helemaal stoppen, vergelijk de bevestigde lotnummers met alle loten die je wilde beëindigen."},
+      {"vraag": "Is de Postcode Loterij zelf opzeggen gratis?", "antwoord": "Zelf online opzeggen is volgens de Postcode Loterij gratis. Voor bellen gelden je normale belkosten; voor een brief betaal je de verzending. Een betaalde opzegsite is voor deze directe routes niet nodig."},
+      {"vraag": "Ik heb opgezegd, maar zie nog een afschrijving. Wat controleer ik?", "antwoord": "Vergelijk het lotnummer en de periode op je afschrift met de bevestigde opzegging. Vraag de Ledenservice om de grondslag als die niet aansluiten. Alleen een afschrijving bewijst niet welke loten eerder zijn opgezegd."}
+    ]
+  },
+  "ns": {
+    "kop": "NS: geld terug bij vertraging.",
+    "seoTitel": "NS geld terug bij vertraging: betaalpas en OV-kaart | WAM",
+    "titel": "Kies de aanvraagroute voor jouw vervoerbewijs",
+    "anker": "aanvragen",
+    "bijgewerkt": "2026-11-24",
+    "kort": "Met je betaalpas gereisd? Gebruik het NS-formulier voor vertraging. Met een OV-chipkaart kan het ook via Mijn NS.",
+    "antwoord": "Voor een reis met je contactloze betaalpas, creditcard, telefoon of smartwatch verwijst NS naar het online vertragingsformulier. Voor de gewone NS-regeling geldt vanaf 30 minuten vertraging op je bestemming een aanvraagtermijn van drie maanden. De vergoeding hangt af van je vervoerbewijs en de voorwaarden.",
+    "actie": {"naam": "Naar het NS-aanvraagformulier", "url": "https://gtbv-formulier.ns.nl/"},
+    "stappenTitel": "Leg de juiste reisgegevens klaar",
+    "stappen": [
+      "Noteer je reisdatum, vertrek- en aankomststation en de vertraging op je bestemming. Controleer je check-in en check-uit.",
+      "Kies hieronder de route bij het vervoerbewijs waarmee je werkelijk reisde. Een aankoop via een andere verkoper kan een andere procedure hebben.",
+      "Bewaar de ontvangstbevestiging. NS zegt bij een online aanvraag binnen enkele minuten een ontvangstmail te sturen.",
+      "Heb je een maand na je aanvraag nog niets gehoord? De NS-servicepagina verwijst dan naar de klantenservice. Houd je aanvraag en ontvangstbevestiging bij de hand."
+    ],
+    "routes": [
+      {"situatie": "Betaalpas, creditcard, telefoon of smartwatch", "route": "Online formulier van NS", "url": "https://gtbv-formulier.ns.nl/"},
+      {"situatie": "OV-chipkaart of OV-pas", "route": "Mijn NS; zonder account het online formulier", "url": "https://www.ns.nl/service-en-contact/geld-terug/geld-terug-bij-vertraging"},
+      {"situatie": "NS-Business Card", "route": "Mijn NS Zakelijk, bij je gemaakte reizen", "url": "https://www.ns.nl/service-en-contact/geld-terug/geld-terug-bij-vertraging"},
+      {"situatie": "Internationaal vervoerbewijs of internationale reis", "route": "De aparte procedure van NS International", "url": "https://www.nsinternational.com/nl/na-de-reis/geld-terug-vragen"}
+    ],
+    "noot": "De gewone drempel is 30 minuten. Op de hogesnelheidslijn noemt NS een aparte regeling vanaf 15 minuten. NS noemt ook uitzonderingen, waaronder een vergoeding onder €2,30 en vooraf aangekondigde extra reistijd. Controleer de actuele voorwaarden voor jouw reis.",
+    "bronnen": [
+      {"naam": "NS: geld terug bij vertraging", "url": "https://www.ns.nl/service-en-contact/geld-terug/geld-terug-bij-vertraging", "uitleg": "Aanvraagroutes per vervoerbewijs, termijn van drie maanden en opvolging van je aanvraag."},
+      {"naam": "NS: voorwaarden van de vertragingsregeling", "url": "https://www.ns.nl/binaries/_ht_1754559946332/content/assets/ns-nl/voorwaarden/voorwaarden-geld-terug-bij-vertraging.pdf", "uitleg": "Drempel op de bestemming, geldigheid van het vervoerbewijs en voorwaarden voor restitutie."},
+      {"naam": "NS: welke vergoeding biedt NS?", "url": "https://www.ns.nl/service-en-contact/geld-terug/welke-vergoeding-biedt-ns", "uitleg": "De hoogte van de vergoeding verschilt per vervoerbewijs en vertragingsduur."}
+    ],
+    "vragen": [
+      {"vraag": "Hoe vraag ik geld terug bij NS-vertraging als ik met mijn betaalpas reisde?", "antwoord": "Gebruik het online formulier Geld terug bij vertraging van NS. Die route geldt ook voor een creditcard, telefoon of smartwatch. Dien de aanvraag binnen drie maanden na de reis in en controleer de voorwaarden voor jouw vervoerbewijs."},
+      {"vraag": "Is 30 minuten vertraging altijd genoeg voor geld terug?", "antwoord": "De gewone NS-regeling begint bij 30 minuten vertraging op de bestemming. Er gelden voorwaarden en uitzonderingen. Voor de hogesnelheidslijn noemt NS een aparte regeling vanaf 15 minuten; internationale reizen hebben een eigen route."},
+      {"vraag": "Hoeveel geld krijg ik terug bij een NS-vertraging?", "antwoord": "Dat hangt af van je vervoerbewijs, abonnement en vertragingsduur. Controleer de actuele vergoedingentabel van NS. Een los kaartje, abonnement en internationale reis hebben niet automatisch dezelfde vergoeding."}
+    ]
+  },
+  "flanderijn": {
+    "kop": "Brief van Flanderijn ontvangen?",
+    "seoTitel": "Brief van Flanderijn: bedrag, bezwaar en incassokosten | WAM",
+    "titel": "Begin met het soort brief en de opbouw van het bedrag",
+    "anker": "controle",
+    "bijgewerkt": "2026-11-24",
+    "kort": "Bepaal eerst welke brief je hebt. Controleer daarna de rekening, kosten, betaalbewijzen en reactietermijn.",
+    "antwoord": "Flanderijn onderscheidt betaalverzoeken, dagvaardingen, vonnissen en dwangbevelen. Die vragen niet allemaal om dezelfde reactie. Controleer wie het oorspronkelijke bedrag vraagt, waarvoor dat is en welke kosten erbij staan. Gebruik de route bij jouw document en houd de daarin genoemde termijn aan.",
+    "actie": {"naam": "Welke brief heb ik ontvangen?", "url": "https://www.flanderijn.nl/betalen/advies-of-bezwaar/post-of-exploot-ontvangen/"},
+    "stappenTitel": "Onze controlelijst bij een betaalverzoek",
+    "stappen": [
+      "Leg de brief naast de oorspronkelijke rekening en de betaalbewijzen. Noteer concreet welk bedrag of welke betaling volgens jou niet klopt.",
+      "Vraag om een uitsplitsing van de hoofdsom, rente en incassokosten als die niet duidelijk is. Het totaalbedrag alleen vertelt niet waar de kosten vandaan komen.",
+      "Vergelijk de afzonderlijke incassokosten met de wettelijke staffel. Bekijk ook of het om één rekening of terugkerende termijnbetalingen gaat; daarvoor kunnen andere regels gelden.",
+      "Controleer de ontvangst van de consumentenaanmaning en de gegeven betaaltermijn. Die controle is iets anders dan vaststellen of de hele vordering terecht is."
+    ],
+    "routes": [
+      {"situatie": "Bedrag of rekening klopt niet", "route": "Flanderijn: advies en bezwaar per fase", "url": "https://www.flanderijn.nl/betalen/advies-of-bezwaar/"},
+      {"situatie": "Eén losse consumentenrekening, incassokosten controleren", "route": "Bereken de wettelijke staffel", "url": "/incassokosten-berekenen"},
+      {"situatie": "Klacht over de behandeling", "route": "De eigen klachtenroute, apart van bezwaar tegen de rekening", "url": "https://www.flanderijn.nl/betalen/advies-of-bezwaar/"}
+    ],
+    "noot": "Een betaalverzoek is geen dagvaarding. Bij een dagvaarding, vonnis of dwangbevel passen andere stappen dan alleen de kosten narekenen. Gebruik de uitleg bij dat document en vraag zo nodig juridische hulp.",
+    "extra": {"kop": "Veertien dagen: het startmoment telt", "tekst": "Voor de consumentenaanmaning gaat het om veertien volle dagen vanaf de dag na ontvangst. De datum bovenaan de brief is dus niet automatisch het begin. De Rechtspraak noemt ook een formulering met vijftien dagen na ontvangst. Beoordeel daarom het startmoment en de volledige tekst, niet alleen het getal veertien of vijftien."},
+    "bronnen": [
+      {"naam": "Flanderijn: advies en bezwaar", "url": "https://www.flanderijn.nl/betalen/advies-of-bezwaar/", "uitleg": "Het bedrijf beschrijft verschillende documenten en maakt onderscheid tussen bezwaar tegen de vordering en een klacht over de behandeling."},
+      {"naam": "Rijksoverheid: incasso en aanmaningen", "url": "https://www.rijksoverheid.nl/themas/economie/bescherming-van-consumenten/vraag-en-antwoord/schulden/wanneer-incassobureau", "uitleg": "Voorwaarden rond de consumentenaanmaning en het verschil tussen incasso en deurwaardershandelingen."},
+      {"naam": "Rechtspraak: aanbeveling over de veertiendagenbrief", "url": "https://www.rechtspraak.nl/binaries/_rts_1768561338960/content/assets/lov/ri/lov-ri-aanbeveling-over-de-veertiendagenbrief.pdf", "uitleg": "Aanbeveling na het arrest van de Hoge Raad van 25 november 2016: volledige termijn en aansluiting bij ontvangst van de brief."}
+    ],
+    "vragen": [
+      {"vraag": "Een brief van Flanderijn ontvangen, hoe controleer ik de incassokosten?", "antwoord": "Controleer eerst het soort brief en de onderliggende rekening. Vergelijk daarna de apart vermelde incassokosten met de wettelijke staffel en de toepasselijke aanmaning. De rekenhulp van WAM berekent de staffel voor één losse consumentenrekening; zij beoordeelt niet of de vordering terecht is."},
+      {"vraag": "Is een klacht over Flanderijn hetzelfde als bezwaar tegen het bedrag?", "antwoord": "Nee. Flanderijn beschrijft bezwaar tegen de vordering en een klacht over de behandeling als verschillende routes. Maak duidelijk welke rekening of welk bedrag je betwist en welke klacht je eventueel daarnaast hebt."},
+      {"vraag": "Begint de veertiendagentermijn op de datum van de brief?", "antwoord": "Voor de consumentenaanmaning begint de volledige termijn op de dag na ontvangst. De formulering en de ontvangst zijn dus van belang; alleen de dagtekening geeft niet het hele antwoord. Voor gerechtelijke documenten gelden andere procedures en termijnen."}
+    ]
+  }
+}

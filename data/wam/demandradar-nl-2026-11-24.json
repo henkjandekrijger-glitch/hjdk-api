@@ -1,0 +1,176 @@
+{
+  "datum": "2026-11-24",
+  "tijdzone": "America/Curacao",
+  "demandRadar": {
+    "url": "https://demandradar-ivory.vercel.app/api/zoekvraag?thema=machteloos&cc=NL",
+    "bijgewerkt": "2026-11-23T20:15:24.364Z",
+    "kostenBestaandeMeting": 0.27,
+    "volumeNoot": "Schattingen per zoekterm en markt; synoniemen overlappen. Een ontbrekende term of markt bewijst geen nulvraag.",
+    "markt": {
+      "cc": "NL",
+      "taal": "nl",
+      "bron": "suggest"
+    },
+    "termen": [
+      {
+        "k": "opzeggen postcodeloterij",
+        "v": 22200,
+        "y": -18,
+        "i": null,
+        "c": 1.66,
+        "cp": 48,
+        "o": "sport en loterij",
+        "m": [
+          18100,
+          18100,
+          18100,
+          22200,
+          22200,
+          22200,
+          22200,
+          27100,
+          22200,
+          49500,
+          22200,
+          22200
+        ]
+      },
+      {
+        "k": "incasso flanderijn",
+        "v": 14800,
+        "y": 175,
+        "i": null,
+        "c": 4.57,
+        "cp": 0,
+        "o": "incasso en terugboeken",
+        "m": [
+          12100,
+          14800,
+          22200,
+          33100,
+          27100,
+          40500,
+          12100,
+          2900,
+          1900,
+          1900,
+          2400,
+          2400
+        ]
+      },
+      {
+        "k": "geld terug bij vertraging ns",
+        "v": 9900,
+        "y": -33,
+        "i": null,
+        "c": 3.25,
+        "cp": 1,
+        "o": "vervoer en reizen",
+        "m": [
+          8100,
+          9900,
+          8100,
+          8100,
+          9900,
+          8100,
+          8100,
+          8100,
+          8100,
+          12100,
+          9900,
+          12100
+        ]
+      },
+      {
+        "k": "incassokosten berekenen",
+        "v": 1300,
+        "y": -37,
+        "i": null,
+        "c": 2.18,
+        "cp": 22,
+        "o": "incasso en terugboeken",
+        "m": [
+          1000,
+          1000,
+          880,
+          1000,
+          1000,
+          1000,
+          1300,
+          1600,
+          1300,
+          1300,
+          1300,
+          1600
+        ]
+      }
+    ]
+  },
+  "aiDiagnose": {
+    "ok": true,
+    "naam": "wam-nl-content-20261124",
+    "model": "perplexity/sonar",
+    "vragen": 3,
+    "gelukt": 3,
+    "bronSoorten": {
+      "overig": 4
+    },
+    "metPrijs": 1,
+    "metGetal": 0,
+    "twijfel": 0,
+    "zonderLokaleBron": 0,
+    "zwaksteEerst": [
+      {
+        "zwakte": 3,
+        "vraag": "Hoe zeg ik de Postcode Loterij online op als ik meerdere loten heb?",
+        "bronnen": [
+          "datisnietnoodzakelijk.nl"
+        ],
+        "soorten": {
+          "overig": 1
+        },
+        "lokaal": 1,
+        "prijs": false,
+        "getal": false,
+        "twijfel": false,
+        "lengte": 223,
+        "kort": "Log in op **Mijn Postcode Loterij** en ga naar je loten om je deelname te wijzigen of op te zeggen. Wil je helemaal stoppen, controleer dan dat **alle** loten zijn beëindigd; je kunt ook alleen bepaalde loten opzeggen.[2] "
+      },
+      {
+        "zwakte": 3,
+        "vraag": "Hoe vraag ik geld terug bij NS-vertraging als ik met mijn betaalpas reisde?",
+        "bronnen": [
+          "ns.nl"
+        ],
+        "soorten": {
+          "overig": 1
+        },
+        "lokaal": 1,
+        "prijs": false,
+        "getal": false,
+        "twijfel": false,
+        "lengte": 302,
+        "kort": "Vul het online formulier **‘Geld terug bij vertraging’** in; dat geldt ook als je met een contactloze betaalpas, creditcard of telefoon/smartwatch hebt ingecheckt. NS vergoedt doorgaans vanaf 30 minuten vertraging: de helft bij 30–59 minuten en het volledige e"
+      },
+      {
+        "zwakte": 0.5,
+        "vraag": "Een brief van Flanderijn ontvangen, hoe controleer ik de incassokosten?",
+        "bronnen": [
+          "flanderijn.nl",
+          "kvk.nl"
+        ],
+        "soorten": {
+          "overig": 2
+        },
+        "lokaal": 2,
+        "prijs": true,
+        "getal": false,
+        "twijfel": false,
+        "lengte": 641,
+        "kort": "Controleer eerst of de oorspronkelijke rekening klopt en of je die al (deels) hebt betaald. Voor consumenten moet vóór incassokosten doorgaans een correcte aanmaning zijn gestuurd met 15 dagen om alsnog kosteloos te betalen. Vergelijk daarna de gevraagde koste"
+      }
+    ],
+    "fouten": []
+  },
+  "afbakening": "Keywordramingen, geen WAM-bezoeken. Zoekvarianten niet optellen. Flanderijn maandreeks wijkt sterk af van samenvatting. Eén AI-model, geen SEO- of citeerbewijs."
+}

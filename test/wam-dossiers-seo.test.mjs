@@ -8,8 +8,8 @@ const grafiek = html => JSON.parse(html.match(/<script type="application\/ld\+js
 test('de voorkant opent met concrete dossiers en linkt de reviews als achtergrond', () => {
   const h = pagina('nl', true), b = pagina('bedrijven', true);
   assert.equal((h.match(/class="dossier-teaser"/g) || []).length, 2);
-  assert.ok(h.indexOf('Blendle: abonnement gestopt') < h.indexOf('Reviews en andere signalen'));
-  assert.ok(h.indexOf('ANP: €391,29') < h.indexOf('Reviews en andere signalen'));
+  assert.ok(h.indexOf('Blendle: abonnement gestopt') < h.indexOf('Praktische hulp en ervaringen'));
+  assert.ok(h.indexOf('ANP: €391,29') < h.indexOf('Praktische hulp en ervaringen'));
   assert.ok(h.includes('href="/bedrijven"'));
   assert.equal((h.match(/class="company"/g) || []).length, 0);
   assert.equal((b.match(/class="company"/g) || []).length, 10);
