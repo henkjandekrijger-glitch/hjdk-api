@@ -2,6 +2,86 @@
   "uitleg": "Ontwikkelingen per route voor de ochtendmail van todayin surgery (lib/tsc-mail.js). Elke dag zet de geplande Claude-taak hier nieuwe items bij: alleen echte feiten met bron en datum, nieuwste bovenaan. taal: en|nl|de|*; ingreep: hair|tummy|eyelid|lipo|breast|breast-reduction|*; naar: turkey|mexico|colombia|dominican-republic|thailand|south-korea|abroad|home|*; pagina: slug op todayin.email/surgery.",
   "items": [
     {
+      "id": "2026-11-24-en-korea-vat",
+      "dag": "2026-11-24",
+      "taal": "en",
+      "ingreep": [
+        "*"
+      ],
+      "naar": [
+        "south-korea"
+      ],
+      "kop": "South Korea: no VAT refund for foreign cosmetic patients since the end of 2025",
+      "tekst": "The Korea Herald reports on 24 November that the VAT refund for foreign patients of cosmetic procedures ended at the close of 2025, so prices in Korea are effectively higher for visitors. Clinics want it back; a bill from April would bring it back until the end of 2027, but it has not passed. Korea had a record 2.01 million foreign medical patients.",
+      "pagina": "check-surgeon-south-korea",
+      "source_url": "https://www.koreaherald.com/article/10947687",
+      "bron": "heraldVat"
+    },
+    {
+      "id": "2026-11-24-nl-korea-vat",
+      "dag": "2026-11-24",
+      "taal": "nl",
+      "ingreep": [
+        "*"
+      ],
+      "naar": [
+        "south-korea"
+      ],
+      "kop": "Zuid-Korea: sinds eind 2025 geen btw-teruggave meer voor buitenlandse patiënten",
+      "tekst": "The Korea Herald meldt op 24 november dat de btw-teruggave voor buitenlandse patiënten van cosmetische ingrepen eind 2025 is gestopt. Voor bezoekers is een ingreep in Korea daardoor in feite duurder. Klinieken willen de regeling terug; een wetsvoorstel uit april zou hem tot eind 2027 terugbrengen, maar is nog niet aangenomen.",
+      "pagina": "check-surgeon-south-korea",
+      "source_url": "https://www.koreaherald.com/article/10947687",
+      "bron": "heraldVat"
+    },
+    {
+      "id": "2026-11-24-de-korea-vat",
+      "dag": "2026-11-24",
+      "taal": "de",
+      "ingreep": [
+        "*"
+      ],
+      "naar": [
+        "south-korea"
+      ],
+      "kop": "Südkorea: seit Ende 2025 keine Mehrwertsteuer-Erstattung mehr für ausländische Patienten",
+      "tekst": "Laut The Korea Herald vom 24. November endete die Mehrwertsteuer-Erstattung für ausländische Patienten kosmetischer Eingriffe Ende 2025. Für Besucher ist ein Eingriff in Korea damit faktisch teurer. Kliniken wollen die Regel zurück; ein Gesetzentwurf vom April würde sie bis Ende 2027 wieder einführen, ist aber noch nicht beschlossen.",
+      "pagina": "check-surgeon-south-korea",
+      "source_url": "https://www.koreaherald.com/article/10947687",
+      "bron": "heraldVat"
+    },
+    {
+      "id": "2026-11-19-nl-zk-aanvullend",
+      "dag": "2026-11-19",
+      "taal": "nl",
+      "ingreep": [
+        "*"
+      ],
+      "naar": [
+        "*"
+      ],
+      "kop": "Zilveren Kruis: aanvullende pakketten 2027 stijgen het hardst",
+      "tekst": "Bij Zilveren Kruis stijgen de aanvullende pakketten in 2027 gemiddeld met EUR 3,16 per maand, meer dan bij andere verzekeraars. Het tandpakket 3 sterren gaat van EUR 43,75 naar EUR 49,75 per maand. Wie een aanvullende polis kiest voor een vergoeding voor bijvoorbeeld ooglaseren of tandzorg: reken de premie mee.",
+      "pagina": "nl/ooglaseren-kosten",
+      "source_url": "https://www.welingelichtekringen.nl/samenleving/zilveren-kruis-heeft-de-goedkoopste-basispolis-van-de-grote-vier-maar-juist-je-aanvullende-pakket-stijgt-er-het-hardst",
+      "bron": "wkZk2027"
+    },
+    {
+      "id": "2026-11-21-de-tk-zusatzbeitrag",
+      "dag": "2026-11-21",
+      "taal": "de",
+      "ingreep": [
+        "*"
+      ],
+      "naar": [
+        "*"
+      ],
+      "kop": "TK will den Zusatzbeitrag 2027 bei 2,69 Prozent halten",
+      "tekst": "Die Techniker Krankenkasse plant, ihren Zusatzbeitrag 2027 stabil bei 2,69 Prozent zu halten. Der amtliche durchschnittliche Zusatzbeitrag für 2027 liegt bei 2,9 Prozent. Endgültig entscheidet der Verwaltungsrat der TK am 18. Dezember.",
+      "pagina": "de/augenlasern-kosten",
+      "source_url": "https://www.tk.de/presse/themen/gesundheitssystem/selbstverwaltung/zusatzbeitrag-2027-2229450",
+      "bron": "tkZb2027"
+    },
+    {
       "id": "2026-11-22-en-sanitas-components",
       "dag": "2026-11-22",
       "taal": "en",
