@@ -2064,6 +2064,77 @@
       "pinlog_called": false,
       "pinuitkomst_called": false,
       "next_step": "When actual Zernio connection/schedule available, verify account/boards14-day history and remaining capacity, then exact approved freewordsearch first and men second. No repeat approval. Newwomenconcept remains first-see. Next-day per-pin provider views/outbound/saves and exact landing-page openings separately; absent data stays unknown."
+    },
+    {
+      "at_utc": "2026-11-24T20:01:16.946Z",
+      "user_instruction": "Is gekoppeld in chrome .",
+      "method": "Native Google Chrome UI, existing signed-in Zernio posts dashboard",
+      "url": "https://zernio.com/dashboard/posts-all",
+      "authenticated": true,
+      "dashboard_loaded": true,
+      "prior_blank_page_resolved": true,
+      "published_confirmations": [
+        {
+          "post_id": "6b05e7ec6cf47dfab007ad4b",
+          "pin_url": "https://www.pinterest.com/pin/271060471319713895/",
+          "hook": "lc-stappen",
+          "status_in_Zernio": "Published",
+          "published_label": "Nov24,7:39PM UTC",
+          "profile_label": "Kadoly",
+          "observed_at_utc": "2026-11-24T20:01:16.946Z"
+        },
+        {
+          "post_id": "6b05e7e952ad165c265fa790",
+          "pin_url": "https://www.pinterest.com/pin/271060471319713892/",
+          "hook": "lc-66",
+          "status_in_Zernio": "Published",
+          "published_label": "Nov24,7:39PM UTC",
+          "profile_label": "Kadoly",
+          "observed_at_utc": "2026-11-24T20:01:16.946Z"
+        },
+        {
+          "post_id": "6b05e7e46cf47dfab007ad2f",
+          "pin_url": "https://www.pinterest.com/pin/271060471319713890/",
+          "hook": "sok-gids-haar",
+          "status_in_Zernio": "Published",
+          "published_label": "Nov24,7:39PM UTC",
+          "profile_label": "Kadoly",
+          "observed_at_utc": "2026-11-24T20:01:16.946Z"
+        },
+        {
+          "post_id": "6b05e7df7a6d18398505d60a",
+          "pin_url": "https://www.pinterest.com/pin/271060471319713889/",
+          "hook": "ss-gen",
+          "status_in_Zernio": "Published",
+          "published_label": "Nov24,7:39PM UTC",
+          "profile_label": "Kadoly",
+          "observed_at_utc": "2026-11-24T20:01:16.946Z"
+        }
+      ],
+      "other_confirmed_pin": {
+        "post_id": "6b054e331557319ba8408b04",
+        "pin_url": "https://www.pinterest.com/pin/271060471319712208/",
+        "published_label": "Nov24,6:45PM UTC",
+        "profile": "Kadoly"
+      },
+      "scope": "Read-only publication verification. Native UI focus changed to unrelated TikTok during a navigation, so no create/publish action was attempted. No private callback/token URLs stored.",
+      "provider_metrics": {
+        "impressions": null,
+        "outbound_clicks": null,
+        "saves": null,
+        "window": null
+      },
+      "new_posts_created_by_this_turn": [],
+      "registered_before_this_turn": true,
+      "no_pinlog_duplicate": true,
+      "authorization_for_observed_four": "Not established by this turn; observed four differ from the two specifically pending approved pins",
+      "capacity": "At least5Published Kadoly Pinterest cards verified now; repo also reserves2earlier Kadoly pins. The prior explicit exception covered2namedpins above3reservations, not an ongoing increase or unbounded additions. Reconcile unexpected four before adding more.",
+      "next_action": "Keep2specificapprovedpins as pending; resolve overlapping publisher and actual account/day total. Do not ask new approval for their content or claim connection is still missing.",
+      "round": "pinterest",
+      "lesson": "An available Chrome session resolves access but does not restore daily capacity. Provider-confirmed Published is not measured traffic.",
+      "implemented_internal": "Updatedqueue connection status and realpostURLs; kept content approval and original observation.",
+      "new_publications": [],
+      "next_measurement": "Check genuine per-pin provider impressions/outbound/saves with pin age nextday. Unknown staysunknown. No winner until14to21days and comparabledata."
     }
   ]
 }
