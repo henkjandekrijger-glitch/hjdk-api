@@ -2,6 +2,47 @@
   "versie": 1,
   "rondes": [
     {
+      "dag": "2026-11-24",
+      "id": "bedrijf-broncheck-20261124-aldo",
+      "at": "2026-11-24 12:21:43 UTC",
+      "soort": "primaire_broncorrectie",
+      "zaak": "aldo-sambil",
+      "bron": "https://www.sambil.cw/store/aldo",
+      "vastgesteld": [
+        "L-33",
+        "Cas Abou-ingang",
+        "telefoon +59997352927",
+        "WhatsApp +59996778757"
+      ],
+      "uren": "Winkelcentrumuren zijn geen bevestigde winkeluren; oude suggestie in gidsfeit vervangen.",
+      "behouden": [
+        "score 3.7/21, peildatum2026-11-15",
+        "ranking",
+        "bovenliggende peildatum",
+        "SEO-titels"
+      ],
+      "googlePagina28d": {
+        "imp": 19606,
+        "klik": 280,
+        "bedrijvenImp": 16892,
+        "bedrijvenKlik": 196
+      },
+      "googleZaak7d": {
+        "imp": 1143,
+        "klik": 8,
+        "vorigImp": 12373,
+        "vorigKlik": 115,
+        "paginasMetVertoningen": 234
+      },
+      "groei_bewezen": false,
+      "meting": "data/keuzehulpen-groei/2026-11-24.json",
+      "volgende_toets": [
+        "2026-12-01",
+        "2026-12-29"
+      ],
+      "liveControle": "Zie algemeen werklog kzgroei-20261124 na uitrol."
+    },
+    {
       "dag": "2026-11-23",
       "id": "bedrijf-kern-20261123",
       "soort": "technische_correctie_en_bronkoppeling",

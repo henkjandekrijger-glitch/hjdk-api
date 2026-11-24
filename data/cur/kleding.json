@@ -1586,6 +1586,13 @@
    "prijs": null,
    "feiten": [
     {
+     "nl": "Volgens de eigen winkelvermelding van Sambil: ALDO, unit L-33 bij de Cas Abou-ingang. Telefoon +599 9 735 2927; WhatsApp +599 9 677 8757. Bron gecontroleerd op 24 november 2026.",
+     "en": "Sambil's own store listing places ALDO in unit L-33 at the Cas Abou entrance. Phone +599 9 735 2927; WhatsApp +599 9 677 8757. Source checked on 24 November 2026.",
+     "de": "Laut Sambil befindet sich ALDO in Einheit L-33 am Eingang Cas Abou. Telefon +599 9 735 2927; WhatsApp +599 9 677 8757. Quelle geprüft am 24. November 2026.",
+     "es": "Según la ficha de Sambil, ALDO está en el local L-33, junto a la entrada Cas Abou. Teléfono +599 9 735 2927; WhatsApp +599 9 677 8757. Fuente consultada el 24 de noviembre de 2026.",
+     "pt": "Segundo a ficha do Sambil, a ALDO fica na unidade L-33, na entrada Cas Abou. Telefone +599 9 735 2927; WhatsApp +599 9 677 8757. Fonte consultada em 24 de novembro de 2026."
+    },
+    {
      "nl": "Modeschoenen, lederwaren en accessoires, in Sambil bij de Cas Abou-ingang (unit L-33)",
      "en": "Fashion footwear, leather goods and accessories, in Sambil at the Cas Abou entrance (unit L-33)",
      "de": "Modeschuhe, Lederwaren und Accessoires, im Sambil am Cas-Abou-Eingang (Unit L-33)",
@@ -1593,11 +1600,11 @@
      "pt": "Calçados de moda, artigos de couro e acessórios, no Sambil na entrada Cas Abou (unidade L-33)"
     },
     {
-     "nl": "Openingstijden (Sambil): ma-do 10:00-20:00, vr-za 10:00-21:00, zo 12:00-20:00",
-     "en": "Opening hours (Sambil): Mon-Thu 10:00-20:00, Fri-Sat 10:00-21:00, Sun 12:00-20:00",
-     "de": "Öffnungszeiten (Sambil): Mo-Do 10:00-20:00, Fr-Sa 10:00-21:00, So 12:00-20:00",
-     "es": "Horario (Sambil): lun-jue 10:00-20:00, vie-sáb 10:00-21:00, dom 12:00-20:00",
-     "pt": "Horário (Sambil): seg-qui 10:00-20:00, sex-sáb 10:00-21:00, dom 12:00-20:00"
+     "nl": "Sambil publiceert openingstijden van het winkelcentrum. Afzonderlijke openingstijden van ALDO zijn op deze bronpagina niet bevestigd; controleer die rechtstreeks bij de winkel.",
+     "en": "Sambil publishes the shopping centre's opening hours. This source page does not confirm ALDO's separate store hours; check directly with the store.",
+     "de": "Sambil veröffentlicht die Öffnungszeiten des Einkaufszentrums. Eigene Öffnungszeiten von ALDO sind auf dieser Quellseite nicht bestätigt; bitte direkt beim Geschäft nachfragen.",
+     "es": "Sambil publica el horario del centro comercial. Esta fuente no confirma el horario particular de ALDO; consúltalo directamente con la tienda.",
+     "pt": "O Sambil publica o horário do shopping. Esta fonte não confirma o horário específico da ALDO; consulte diretamente a loja."
     }
    ],
    "scores": [
@@ -1628,6 +1635,22 @@
     "https://curacao.day/en/businesses/clothing-store/aldo-sambil-curazao",
     "https://www.sambil.cw/store/aldo",
     "https://www.sambil.cw/directory"
+   ],
+   "broncontroles": [
+    {
+     "datum": "2026-11-24",
+     "url": "https://www.sambil.cw/store/aldo",
+     "bevestigd": [
+      "unit L-33",
+      "Cas Abou Entrance",
+      "telefoon +59997352927",
+      "WhatsApp +59996778757"
+     ],
+     "niet_bevestigd": [
+      "eigen openingstijden van ALDO"
+     ],
+     "soort": "primaire winkelvermelding door verhuurder"
+    }
    ]
   },
   {
