@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-24T20:01:16.946Z",
+  "updated_at_utc": "2026-11-24T20:59:05.921Z",
   "authorization": {
     "approved_at_utc": "2026-11-23T20:05:14.794Z",
     "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
@@ -56,7 +56,7 @@
       "id": "20261123-sok-puzzel-1j5t",
       "haak": "sok-puzzel",
       "rank": 1,
-      "state": "approved_waiting_for_reconciled_shared_capacity",
+      "state": "published_verified",
       "pin": {
         "account": "6afb8a5d86e8bb18f844fc95",
         "bord": "271060540011963292",
@@ -68,7 +68,13 @@
       },
       "content_identity": "free-christmas-word-search-12",
       "traffic_basis": "Verkennende prioriteit: direct bruikbaar gratis materiaal, exacte aansluiting van beeld en bestemming; geen bewezen winnaar.",
-      "existing_registration": null,
+      "existing_registration": {
+        "id": "20261123-sok-puzzel-1j5t",
+        "haak": "sok-puzzel",
+        "a": "B0DMNK1J5T",
+        "post": "6b05f89c3ea213a32f7d5a66",
+        "t": "2026-11-24T20:58:01.581Z"
+      },
       "requires_new_approval": false,
       "capacity_exception": {
         "at_utc": "2026-11-24T18:36:13.458Z",
@@ -99,13 +105,57 @@
         "unknown_is": null,
         "conversion": "No sale or human conversion from raw Amazon requests"
       },
-      "current_blocker": "Four different book pins were published at19:39UTC by another logged round; reconcile actual total and existing reservations first. Chrome access works."
+      "current_blocker": null,
+      "provider_confirmation": {
+        "id": "20261123-sok-puzzel-1j5t",
+        "haak": "sok-puzzel",
+        "a": "B0DMNK1J5T",
+        "post": "6b05f89c3ea213a32f7d5a66",
+        "t": "2026-11-24T20:58:01.581Z",
+        "published_label_local": "Nov 24, 4:54 PM",
+        "published_at_utc_minute": "2026-11-24T20:54Z",
+        "timestamp_precision": "minute; Zernio UI uses America/Curacao selected timezone; t above is pinlog registration time",
+        "pin_url": "https://www.pinterest.com/pin/271060471319715665/",
+        "provider_status": "Published",
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "bord": "271060540011963292",
+        "titel": "12 Free Printable Christmas Word Searches with Answer Keys",
+        "tekst": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+        "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
+        "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.png",
+        "board_name": "Stocking Stuffer Books",
+        "verified": {
+          "zernio_published": true,
+          "public_pinterest_title": true,
+          "public_pinterest_description": true,
+          "public_pinterest_exact_destination": true,
+          "board_selected_via_zernio_default": true,
+          "public_pin_board_selector": "Stocking Stuffer Books"
+        },
+        "metrics": {
+          "impressions": null,
+          "outbound_clicks": null,
+          "saves": null,
+          "site_openings": null,
+          "period": null,
+          "reason": "No fresh valid performance snapshot available at publication; Pinterest says stats not available yet and may vary for48hours. Do not use internal default zeros as performance."
+        }
+      },
+      "capacity_exception_latest": {
+        "at_utc": "2026-11-24T20:59:05.921Z",
+        "user_text": "Dat is onzin die dagruimte gewoon doorgaan .",
+        "interpretation": "Explicitly proceed with the two already approved pending pins today despite previously reported shared daily capacity. Supersedes capacity blocker for these2pins. No repeat approval required. No ongoing unbounded volume change inferred.",
+        "ids": [
+          "20261123-sok-puzzel-1j5t",
+          "20261123-sok-hem-j7cy"
+        ]
+      }
     },
     {
       "id": "20261123-sok-hem-j7cy",
       "haak": "sok-hem",
       "rank": 2,
-      "state": "approved_waiting_for_reconciled_shared_capacity",
+      "state": "published_verified",
       "pin": {
         "account": "6afb8a5d86e8bb18f844fc95",
         "bord": "271060540011963292",
@@ -117,7 +167,13 @@
       },
       "content_identity": "book:B0HRGNJ7CY",
       "traffic_basis": "Verkennende prioriteit: specifieke cadeaubehoefte met passende boekbestemming; geen bewezen winnaar.",
-      "existing_registration": null,
+      "existing_registration": {
+        "id": "20261123-sok-hem-j7cy",
+        "haak": "sok-hem",
+        "a": "B0HRGNJ7CY",
+        "post": "6b05f9fdacf4072f8e620181",
+        "t": "2026-11-24T20:58:03.317Z"
+      },
       "requires_new_approval": false,
       "capacity_exception": {
         "at_utc": "2026-11-24T18:36:13.458Z",
@@ -148,7 +204,51 @@
         "unknown_is": null,
         "conversion": "No sale or human conversion from raw Amazon requests"
       },
-      "current_blocker": "Four different book pins were published at19:39UTC by another logged round; reconcile actual total and existing reservations first. Chrome access works."
+      "current_blocker": null,
+      "provider_confirmation": {
+        "id": "20261123-sok-hem-j7cy",
+        "haak": "sok-hem",
+        "a": "B0HRGNJ7CY",
+        "post": "6b05f9fdacf4072f8e620181",
+        "t": "2026-11-24T20:58:03.317Z",
+        "published_label_local": "Nov 24, 4:56 PM",
+        "published_at_utc_minute": "2026-11-24T20:56Z",
+        "timestamp_precision": "minute; Zernio UI uses America/Curacao selected timezone; t above is pinlog registration time",
+        "pin_url": "https://www.pinterest.com/pin/271060471319715692/",
+        "provider_status": "Published",
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "bord": "271060540011963292",
+        "titel": "Stocking Stuffers for Men Who Have Everything: 800 Unusual Facts",
+        "tekst": "Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Who Have Everything: $14.99, 96 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+        "link": "https://stockingbooks.com/stocking-stuffers?utm_source=pinterest&utm_content=20261123-sok-hem-j7cy#for-him",
+        "beeld": "https://stockingbooks.com/pin/B0HRGNJ7CY-sok-hem.png",
+        "board_name": "Stocking Stuffer Books",
+        "verified": {
+          "zernio_published": true,
+          "public_pinterest_title": true,
+          "public_pinterest_description": true,
+          "public_pinterest_exact_destination": true,
+          "board_selected_via_zernio_default": true,
+          "public_pin_board_selector": "Stocking Stuffer Books"
+        },
+        "metrics": {
+          "impressions": null,
+          "outbound_clicks": null,
+          "saves": null,
+          "site_openings": null,
+          "period": null,
+          "reason": "No fresh valid performance snapshot available at publication; Pinterest says stats not available yet and may vary for48hours. Do not use internal default zeros as performance."
+        }
+      },
+      "capacity_exception_latest": {
+        "at_utc": "2026-11-24T20:59:05.921Z",
+        "user_text": "Dat is onzin die dagruimte gewoon doorgaan .",
+        "interpretation": "Explicitly proceed with the two already approved pending pins today despite previously reported shared daily capacity. Supersedes capacity blocker for these2pins. No repeat approval required. No ongoing unbounded volume change inferred.",
+        "ids": [
+          "20261123-sok-puzzel-1j5t",
+          "20261123-sok-hem-j7cy"
+        ]
+      }
     },
     {
       "id": "20261123-we-onder10-fxb1",
@@ -239,11 +339,95 @@
     "evaluation": "Na 14 tot 21 dagen vanaf echte plaatsing en voldoende vergelijkbare data; lopende controlegroepen blijven behouden. Eerst technische controle van link, post en meetbron."
   },
   "execution": {
-    "attempted_publications_today": [],
-    "confirmed_new_posts_this_instruction": [],
-    "provider_access": "Bestaande ingelogde Zernio-browser in Chrome bevestigd. Interactieve controle van Kadoly-posts werkt; cloud-MCP-tool blijft niet beschikbaar. Browserlogin niet opnieuw als ontbrekend melden. Geen sleutels uitgelezen of aangemaakt.",
+    "attempted_publications_today": [
+      {
+        "id": "20261123-sok-puzzel-1j5t",
+        "post": "6b05f89c3ea213a32f7d5a66",
+        "pin_url": "https://www.pinterest.com/pin/271060471319715665/",
+        "status": "Published"
+      },
+      {
+        "id": "20261123-sok-hem-j7cy",
+        "post": "6b05f9fdacf4072f8e620181",
+        "pin_url": "https://www.pinterest.com/pin/271060471319715692/",
+        "status": "Published"
+      }
+    ],
+    "confirmed_new_posts_this_instruction": [
+      {
+        "id": "20261123-sok-puzzel-1j5t",
+        "haak": "sok-puzzel",
+        "a": "B0DMNK1J5T",
+        "post": "6b05f89c3ea213a32f7d5a66",
+        "t": "2026-11-24T20:58:01.581Z",
+        "published_label_local": "Nov 24, 4:54 PM",
+        "published_at_utc_minute": "2026-11-24T20:54Z",
+        "timestamp_precision": "minute; Zernio UI uses America/Curacao selected timezone; t above is pinlog registration time",
+        "pin_url": "https://www.pinterest.com/pin/271060471319715665/",
+        "provider_status": "Published",
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "bord": "271060540011963292",
+        "titel": "12 Free Printable Christmas Word Searches with Answer Keys",
+        "tekst": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+        "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
+        "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.png",
+        "board_name": "Stocking Stuffer Books",
+        "verified": {
+          "zernio_published": true,
+          "public_pinterest_title": true,
+          "public_pinterest_description": true,
+          "public_pinterest_exact_destination": true,
+          "board_selected_via_zernio_default": true,
+          "public_pin_board_selector": "Stocking Stuffer Books"
+        },
+        "metrics": {
+          "impressions": null,
+          "outbound_clicks": null,
+          "saves": null,
+          "site_openings": null,
+          "period": null,
+          "reason": "No fresh valid performance snapshot available at publication; Pinterest says stats not available yet and may vary for48hours. Do not use internal default zeros as performance."
+        }
+      },
+      {
+        "id": "20261123-sok-hem-j7cy",
+        "haak": "sok-hem",
+        "a": "B0HRGNJ7CY",
+        "post": "6b05f9fdacf4072f8e620181",
+        "t": "2026-11-24T20:58:03.317Z",
+        "published_label_local": "Nov 24, 4:56 PM",
+        "published_at_utc_minute": "2026-11-24T20:56Z",
+        "timestamp_precision": "minute; Zernio UI uses America/Curacao selected timezone; t above is pinlog registration time",
+        "pin_url": "https://www.pinterest.com/pin/271060471319715692/",
+        "provider_status": "Published",
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "bord": "271060540011963292",
+        "titel": "Stocking Stuffers for Men Who Have Everything: 800 Unusual Facts",
+        "tekst": "Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Who Have Everything: $14.99, 96 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+        "link": "https://stockingbooks.com/stocking-stuffers?utm_source=pinterest&utm_content=20261123-sok-hem-j7cy#for-him",
+        "beeld": "https://stockingbooks.com/pin/B0HRGNJ7CY-sok-hem.png",
+        "board_name": "Stocking Stuffer Books",
+        "verified": {
+          "zernio_published": true,
+          "public_pinterest_title": true,
+          "public_pinterest_description": true,
+          "public_pinterest_exact_destination": true,
+          "board_selected_via_zernio_default": true,
+          "public_pin_board_selector": "Stocking Stuffer Books"
+        },
+        "metrics": {
+          "impressions": null,
+          "outbound_clicks": null,
+          "saves": null,
+          "site_openings": null,
+          "period": null,
+          "reason": "No fresh valid performance snapshot available at publication; Pinterest says stats not available yet and may vary for48hours. Do not use internal default zeros as performance."
+        }
+      }
+    ],
+    "provider_access": "Native Chrome signed-in Zernio UI used successfully. No TinyFish setup or new credentials. Both actual public Pinterest pages verified. No cloud Zernio connector was available.",
     "next_existing_round": "2026-11-24T15:37:00-04:00",
-    "next_action": "Lees deze wachtrij eerst en voer de goedgekeurde pins uit zodra Zernio en resterende gedeelde dagruimte beschikbaar zijn; geen nieuwe publicatietoestemming vragen."
+    "next_action": "Next daily round measure both actual provider pin IDs and exact destination openings separately; do not repost either ID. No capacity or approval blocker remains for this completed batch."
   },
   "access_observations": [
     {
@@ -372,6 +556,90 @@
       "authorization_for_observed_four": "Not established by this turn; observed four differ from the two specifically pending approved pins",
       "capacity": "At least5Published Kadoly Pinterest cards verified now; repo also reserves2earlier Kadoly pins. The prior explicit exception covered2namedpins above3reservations, not an ongoing increase or unbounded additions. Reconcile unexpected four before adding more.",
       "next_action": "Keep2specificapprovedpins as pending; resolve overlapping publisher and actual account/day total. Do not ask new approval for their content or claim connection is still missing."
+    },
+    {
+      "at_utc": "2026-11-24T20:59:05.921Z",
+      "user_instruction": "Dat is onzin die dagruimte gewoon doorgaan .",
+      "published": [
+        {
+          "id": "20261123-sok-puzzel-1j5t",
+          "haak": "sok-puzzel",
+          "a": "B0DMNK1J5T",
+          "post": "6b05f89c3ea213a32f7d5a66",
+          "t": "2026-11-24T20:58:01.581Z",
+          "published_label_local": "Nov 24, 4:54 PM",
+          "published_at_utc_minute": "2026-11-24T20:54Z",
+          "timestamp_precision": "minute; Zernio UI uses America/Curacao selected timezone; t above is pinlog registration time",
+          "pin_url": "https://www.pinterest.com/pin/271060471319715665/",
+          "provider_status": "Published",
+          "account": "6afb8a5d86e8bb18f844fc95",
+          "bord": "271060540011963292",
+          "titel": "12 Free Printable Christmas Word Searches with Answer Keys",
+          "tekst": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+          "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
+          "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.png",
+          "board_name": "Stocking Stuffer Books",
+          "verified": {
+            "zernio_published": true,
+            "public_pinterest_title": true,
+            "public_pinterest_description": true,
+            "public_pinterest_exact_destination": true,
+            "board_selected_via_zernio_default": true,
+            "public_pin_board_selector": "Stocking Stuffer Books"
+          },
+          "metrics": {
+            "impressions": null,
+            "outbound_clicks": null,
+            "saves": null,
+            "site_openings": null,
+            "period": null,
+            "reason": "No fresh valid performance snapshot available at publication; Pinterest says stats not available yet and may vary for48hours. Do not use internal default zeros as performance."
+          }
+        },
+        {
+          "id": "20261123-sok-hem-j7cy",
+          "haak": "sok-hem",
+          "a": "B0HRGNJ7CY",
+          "post": "6b05f9fdacf4072f8e620181",
+          "t": "2026-11-24T20:58:03.317Z",
+          "published_label_local": "Nov 24, 4:56 PM",
+          "published_at_utc_minute": "2026-11-24T20:56Z",
+          "timestamp_precision": "minute; Zernio UI uses America/Curacao selected timezone; t above is pinlog registration time",
+          "pin_url": "https://www.pinterest.com/pin/271060471319715692/",
+          "provider_status": "Published",
+          "account": "6afb8a5d86e8bb18f844fc95",
+          "bord": "271060540011963292",
+          "titel": "Stocking Stuffers for Men Who Have Everything: 800 Unusual Facts",
+          "tekst": "Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Who Have Everything: $14.99, 96 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+          "link": "https://stockingbooks.com/stocking-stuffers?utm_source=pinterest&utm_content=20261123-sok-hem-j7cy#for-him",
+          "beeld": "https://stockingbooks.com/pin/B0HRGNJ7CY-sok-hem.png",
+          "board_name": "Stocking Stuffer Books",
+          "verified": {
+            "zernio_published": true,
+            "public_pinterest_title": true,
+            "public_pinterest_description": true,
+            "public_pinterest_exact_destination": true,
+            "board_selected_via_zernio_default": true,
+            "public_pin_board_selector": "Stocking Stuffer Books"
+          },
+          "metrics": {
+            "impressions": null,
+            "outbound_clicks": null,
+            "saves": null,
+            "site_openings": null,
+            "period": null,
+            "reason": "No fresh valid performance snapshot available at publication; Pinterest says stats not available yet and may vary for48hours. Do not use internal default zeros as performance."
+          }
+        }
+      ],
+      "temporary_board_selection": {
+        "original_default": "Products",
+        "selected_for_two_posts": "Stocking Stuffer Books",
+        "restored_to": "Products",
+        "restoration_verified_in_zernio": true
+      },
+      "credentials_read": false,
+      "extra_telegram": false
     }
   ],
   "capacity_observations": [
@@ -447,6 +715,15 @@
         "20261123-sok-hem-j7cy"
       ],
       "standing_limit_unchanged": 3
+    },
+    {
+      "at_utc": "2026-11-24T20:59:05.921Z",
+      "user_text": "Dat is onzin die dagruimte gewoon doorgaan .",
+      "interpretation": "Explicitly proceed with the two already approved pending pins today despite previously reported shared daily capacity. Supersedes capacity blocker for these2pins. No repeat approval required. No ongoing unbounded volume change inferred.",
+      "ids": [
+        "20261123-sok-puzzel-1j5t",
+        "20261123-sok-hem-j7cy"
+      ]
     }
   ],
   "cloud_access_observations": [
@@ -518,5 +795,14 @@
       "lesson": "A separate logged publishing round chose four different pins outside the two pending approved queue candidates. Specific automation ID and approval source are unconfirmed. Current account's3content automations found via peek; old task notfound.",
       "automatic_task_changed": false
     }
-  ]
+  ],
+  "current_execution_status": {
+    "at_utc": "2026-11-24T20:59:05.921Z",
+    "pending_approved_ids": [],
+    "published_ids": [
+      "20261123-sok-puzzel-1j5t",
+      "20261123-sok-hem-j7cy"
+    ],
+    "capacity_blocker": false
+  }
 }

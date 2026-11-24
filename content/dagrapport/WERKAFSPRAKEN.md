@@ -73,3 +73,19 @@ PinPlan is geen publicatiekeuring: fn/bs.js geeft slechts twee dagen geschiedeni
 DeSecretSanta-templateisongeschiktvoorautomatischeplaatsing:betaaldboekomslagmetSee the booknaargratisgenerator. Eerstpassendtoolbeeldalsconcept,geenverkeerswinnaarafleiden.VandaagsbestaandegratiswoordzoekerPNGblijftgoedgekeurd. Nieuwvrouwenpinconceptalleenterinzagein2026-11-24-pinterest-concepten.md,nietindealgoedkeurdewachtrijplaatsenalsgoedgekeurd.
 
 Dezerondegeenplaatsingofpinuitkomst:geenverseZernioproviderdataofvolledigeplanningbeschikbaar.Driereporeserveringenblijvenmeetellenbijalgemenelimiet3;historischeeenmalige24novtoestemmingbewaardennietverbreed.Geengeheimeeindpunten,sleutels,TinyFishsetupofnativeChromeafhankelijkheidtoevoegenincloudrondes.NieuwekleinebroncontrolevanWordSearchWizardisherlezingvanhetgedeelde24novonderzoek,geennewcaseofvoorspeldewinst.
+
+
+## Twee goedgekeurde pins uitgevoerd, 24 november 2026
+
+Laatste opdracht Henkjan: "Dat is onzin die dagruimte gewoon doorgaan ." Dit bevestigt dat de twee al goedgekeurde wachtende pins vandaag extra moesten worden geplaatst. De oudere dagruimteblokkade is voor deze uitvoering achterhaald. Niet opnieuw om dat akkoord vragen of deze pins als wachtend melden.
+
+Beide zijn via de ingelogde Chrome-sessie in Zernio gepubliceerd en op de echte Pinterest-pagina gecontroleerd:
+
+- Gratis woordzoekers, https://www.pinterest.com/pin/271060471319715665/, Zernio-post 6b05f89c3ea213a32f7d5a66. Publicatielabel 24 november 16:54 Curaçao, 20:54 UTC, nauwkeurigheid één minuut.
+- Mannenboek met volledige titel, https://www.pinterest.com/pin/271060471319715692/, Zernio-post 6b05f9fdacf4072f8e620181. Publicatielabel 24 november 16:56 Curaçao, 20:56 UTC, nauwkeurigheid één minuut.
+
+Beide echte post-ID's met op=pinlog vastgelegd en met op=pinstand teruggelezen. De exacte beelden, titels, beschrijvingen, borden en meetlinks staan in PUBLICATIEWACHTRIJ.json en de aanvulling in 2026-11-24-pinterest.json. Geen van deze twee opnieuw plaatsen. Nieuwe ongeziene inhoud blijft eerst-zien. Dit legt geen structurele onbeperkte volumeverhoging vast.
+
+Zernio had standaardbord Products. Voor deze twee plaatsingen is tijdelijk het bestaande Stocking Stuffer Books gekozen, daarna Products hersteld en gecontroleerd. Geen nieuwe accounts, sleutels of borden gemaakt. Chrome-login werkt; geen nieuwe TinyFish-login vragen.
+
+Bij publicatie waren de Pinterest-statistieken nog niet beschikbaar. De nullen in de interne cache zijn geen verse providerwaarneming. Op 25 november per echte pin-ID de beschikbare vertoningen, uitgaande kliks en saves met periode lezen, naast Pinterest-pagina-openingen op de passende sitebestemming. Ontbrekend blijft onbekend. Eerste dagelijkse waarneming is geen gelijke volledige blootstellingsdag. Beoordeling na 14 tot 21 dagen, 8 tot 15 december, en voldoende vergelijkbare data. Geen verkeerswinst of verkoop uit plaatsing afleiden.

@@ -2135,6 +2135,176 @@
       "implemented_internal": "Updatedqueue connection status and realpostURLs; kept content approval and original observation.",
       "new_publications": [],
       "next_measurement": "Check genuine per-pin provider impressions/outbound/saves with pin age nextday. Unknown staysunknown. No winner until14to21days and comparabledata."
+    },
+    {
+      "at_utc": "2026-11-24T20:59:05.921Z",
+      "round": "pinterest",
+      "user_instruction": "Dat is onzin die dagruimte gewoon doorgaan .",
+      "authorization": "Exact2pendingapprovedpins permitted today despite older operational shared cap; executed without requesting same permission again.",
+      "sources": {
+        "zernio": "https://zernio.com/dashboard/posts-all",
+        "public_pins": [
+          "https://www.pinterest.com/pin/271060471319715665/",
+          "https://www.pinterest.com/pin/271060471319715692/"
+        ],
+        "verified_pinlog": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+        "approved_queue_blob": "e6d3af878d887574365f927e8a8d008c27fe4a7b",
+        "prewrite_branch_head": "2ea3f7f346a5b245e73f75ea0836d9662f0a1d04"
+      },
+      "measurement_definition": {
+        "publication": "Actual Published provider state plus actual public title/description/destination. pinlog t records registration, not exact publication second.",
+        "traffic": "Provider organic outbound clicks are primary; impressions/saves separate. Matching destination website page-openings by Pinterest source tracked separately. No raw Amazon request conversion."
+      },
+      "publications": [
+        {
+          "id": "20261123-sok-puzzel-1j5t",
+          "haak": "sok-puzzel",
+          "a": "B0DMNK1J5T",
+          "post": "6b05f89c3ea213a32f7d5a66",
+          "t": "2026-11-24T20:58:01.581Z",
+          "published_label_local": "Nov 24, 4:54 PM",
+          "published_at_utc_minute": "2026-11-24T20:54Z",
+          "timestamp_precision": "minute; Zernio UI uses America/Curacao selected timezone; t above is pinlog registration time",
+          "pin_url": "https://www.pinterest.com/pin/271060471319715665/",
+          "provider_status": "Published",
+          "account": "6afb8a5d86e8bb18f844fc95",
+          "bord": "271060540011963292",
+          "titel": "12 Free Printable Christmas Word Searches with Answer Keys",
+          "tekst": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+          "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
+          "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.png",
+          "board_name": "Stocking Stuffer Books",
+          "verified": {
+            "zernio_published": true,
+            "public_pinterest_title": true,
+            "public_pinterest_description": true,
+            "public_pinterest_exact_destination": true,
+            "board_selected_via_zernio_default": true,
+            "public_pin_board_selector": "Stocking Stuffer Books"
+          },
+          "metrics": {
+            "impressions": null,
+            "outbound_clicks": null,
+            "saves": null,
+            "site_openings": null,
+            "period": null,
+            "reason": "No fresh valid performance snapshot available at publication; Pinterest says stats not available yet and may vary for48hours. Do not use internal default zeros as performance."
+          }
+        },
+        {
+          "id": "20261123-sok-hem-j7cy",
+          "haak": "sok-hem",
+          "a": "B0HRGNJ7CY",
+          "post": "6b05f9fdacf4072f8e620181",
+          "t": "2026-11-24T20:58:03.317Z",
+          "published_label_local": "Nov 24, 4:56 PM",
+          "published_at_utc_minute": "2026-11-24T20:56Z",
+          "timestamp_precision": "minute; Zernio UI uses America/Curacao selected timezone; t above is pinlog registration time",
+          "pin_url": "https://www.pinterest.com/pin/271060471319715692/",
+          "provider_status": "Published",
+          "account": "6afb8a5d86e8bb18f844fc95",
+          "bord": "271060540011963292",
+          "titel": "Stocking Stuffers for Men Who Have Everything: 800 Unusual Facts",
+          "tekst": "Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Who Have Everything: $14.99, 96 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+          "link": "https://stockingbooks.com/stocking-stuffers?utm_source=pinterest&utm_content=20261123-sok-hem-j7cy#for-him",
+          "beeld": "https://stockingbooks.com/pin/B0HRGNJ7CY-sok-hem.png",
+          "board_name": "Stocking Stuffer Books",
+          "verified": {
+            "zernio_published": true,
+            "public_pinterest_title": true,
+            "public_pinterest_description": true,
+            "public_pinterest_exact_destination": true,
+            "board_selected_via_zernio_default": true,
+            "public_pin_board_selector": "Stocking Stuffer Books"
+          },
+          "metrics": {
+            "impressions": null,
+            "outbound_clicks": null,
+            "saves": null,
+            "site_openings": null,
+            "period": null,
+            "reason": "No fresh valid performance snapshot available at publication; Pinterest says stats not available yet and may vary for48hours. Do not use internal default zeros as performance."
+          }
+        }
+      ],
+      "actual_improvements": [
+        {
+          "status": "live",
+          "change": "Published2exactapproved pins with matching usable destination and unique approved UTM content",
+          "control_links": [
+            "https://www.pinterest.com/pin/271060471319715665/",
+            "https://www.pinterest.com/pin/271060471319715692/"
+          ]
+        },
+        {
+          "status": "internal_log",
+          "change": "pinlog accepted both true provider IDs; subsequent pinstand read confirms them",
+          "control_link": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand"
+        }
+      ],
+      "temporary_board_selection": {
+        "reason": "Zernio composer exposed title/link/caption but no per-post board selector; existing default was Products. Temporarily selected existing Stocking Stuffer Books for these2approvedposts, then restored Products.",
+        "restoration_verified": true,
+        "public_pin_selector_label": "Stocking Stuffer Books"
+      },
+      "lessons": [
+        {
+          "lesson": "Capacity was a superseded operational blocker. Latest explicit instruction authorizes execution of these2pins.",
+          "evidence": "User instruction plus both live provider/public confirmations."
+        },
+        {
+          "lesson": "The free entrance now has aligned puzzle preview, exact free title and free landing page. Traffic effect still unproven.",
+          "evidence": "Real public title/description/link confirmed, performance stats unavailable.",
+          "counter_evidence": "No comparable historical free puzzle pin, no proof of A/B win, no current outcome data."
+        }
+      ],
+      "controls": {
+        "existing_published_pins_unchanged": true,
+        "no_exact_duplicate_posts": true,
+        "no_new_unseen_content": true,
+        "no_extra_telegram": true,
+        "no_ads_or_budget_changes": true,
+        "no_paid_radar_calls": true,
+        "no_new_credentials": true,
+        "main_unchanged": true,
+        "source_image_dimensions": "Both Chrome image pages1000x1500"
+      },
+      "limitations": [
+        "New pins have no valid performance snapshot yet. Unknown values remain null; no pinuitkomst call with missing stats.",
+        "Public page selected-board label observed; board ID mapping from lib/bspin.js and exact approved metadata.",
+        "Pinlog registration time is later than provider publication label, precision minute.",
+        "Per-pin attributed landings may be unavailable in current site aggregate endpoint; do not manufacture missing utm-level counts."
+      ],
+      "concepts_remaining": {
+        "new_women_pin": "Unseen draft stays unapproved; not published."
+      },
+      "next_test": {
+        "first_snapshot_date_curacao": "2026-11-25",
+        "action": "Read both actual pin IDs in available provider analytics; record exact period/impressions/outbound_clicks/saves; compare exact landing/page/source independently. Unknown remains unknown.",
+        "primary_metric": "Verified organic Pinterest outbound clicks",
+        "judgment_from": "2026-12-08",
+        "judgment_until": "2026-12-15",
+        "requires": "14to21days from actual Nov24 publication and enough comparable same-age/board/topic data.",
+        "next_content_decision": "Use supported per-pin lesson in next approved slot; do not expand posting volume solely because these posts succeeded."
+      }
     }
-  ]
+  ],
+  "current_status": {
+    "at_utc": "2026-11-24T20:59:05.921Z",
+    "published": [
+      {
+        "id": "20261123-sok-puzzel-1j5t",
+        "post": "6b05f89c3ea213a32f7d5a66",
+        "pin_url": "https://www.pinterest.com/pin/271060471319715665/"
+      },
+      {
+        "id": "20261123-sok-hem-j7cy",
+        "post": "6b05f9fdacf4072f8e620181",
+        "pin_url": "https://www.pinterest.com/pin/271060471319715692/"
+      }
+    ],
+    "pending_approved_pins": 0,
+    "performance": "unknown",
+    "capacity_blocker": false
+  }
 }
