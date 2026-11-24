@@ -1,8 +1,55 @@
 # Overdracht KDP-boeken van Henkjan (Amazon KDP + Amazon Ads)
 
-Live: https://hjdk-api-henq.vercel.app/api/wtb?op=kdpoverdracht (Vercel-inlog; in een Claude-chat met de Vercel-tool web_fetch_vercel_url). Bovenaan staan de laatste KDP-regels uit het werklog, daarna dit bestand, het draaiboek (kdp/rapport.md), de wachtrij en de boekwedstrijd. Bron: OVERDRACHT-KDP.md in repo henkjandekrijger-glitch/hjdk-api. Bijgewerkt: 19 nov 2026.
+Live: https://hjdk-api-henq.vercel.app/api/wtb?op=kdpoverdracht (Vercel-inlog; in een Claude-chat met de Vercel-tool web_fetch_vercel_url). Bovenaan staan de laatste KDP-regels uit het werklog, daarna dit bestand, het draaiboek (kdp/rapport.md), de wachtrij en de boekwedstrijd. Bron: OVERDRACHT-KDP.md in repo henkjandekrijger-glitch/hjdk-api. Bijgewerkt: 24 nov 2026 (sectie 0, plan boekenplank).
 
 Werk je verder (ander account, andere chat)? Lees dit hele document, schrijf na elke stap een regel in het werklog (`/api/mm/handover?log=<tekst>&wie=kdp-<jouw chat>`) en zet nieuwe kennis in kdp/rapport.md (draaiboek) en zo nodig hier. Commit met expliciete bestandsnamen, eerst `git pull --rebase`, push naar main.
+
+## 0. Plan boekenplank (24 nov 2026, Henkjan: "Ok we werken je plann uit Zorg dat er een overdracht op vercel staat bij de boeken site zodat ik onafh van accounts kan werken .")
+
+Dit is het werkplan voor de hele plank. Elk account en elke chat werkt hieruit: lees deze sectie, kijk bij "Stand per stap" wat open staat, doe de bovenste open stap, zet de uitkomst terug in deze sectie (zelfde commit) en een regel in het werklog (`/api/mm/handover?log=...&wie=kdp-<chat>`).
+
+**De plank in cijfers (KDP Reports, royalty in USD, gemeten 24 nov 2026):**
+- 287 titels; 12 verdienen meer dan $100 per jaar, 27 meer dan $20.
+- Laatste 12 maanden $26.126, de 12 maanden ervoor $48.302.
+- Vier boeken maken 86%:
+
+| Boek | Laatste 12 mnd | Jaar ervoor | 25 nov-31 dec 2025 | Jan-feb 2026 | November 2026 tot 24 nov |
+|---|---|---|---|---|---|
+| Lasting Change (B0F1SM1L5J) | $9.444 | $6.539 | $3.857 | $3.543 | $0 |
+| PIT BOSS (B0BKRPL5JX) | $5.898 | $13.482 | $4.025 | $774 | $21 |
+| Teens (B0DJQLBM75) | $4.693 | $5.111 | $3.424 | $71 | $402 |
+| Complete Apocrypha (B09YTZ72KZ) | $2.370 | $2.102 | $431 | $391 | $58 |
+
+- Het venster 25 nov-31 dec leverde vorig jaar $12.763 op ($345 per dag). Nu: 17-23 nov gemiddeld $45,60 per dag, vrijwel alleen Teens.
+- Gezakt en dus eerst in de proeven: Adults $3.036 -> $529, Mom's Word Search $2.451 -> $536 (seizoen Moederdag), High Blood Pressure $663 -> $169, Bible Memory Verse $608 -> $60, Traeger $491 -> $22, Definitive Apocrypha $456 -> $54, Coin Collecting $380 -> $47, Analyze People $750 -> $359.
+- Royalty per dag 17-24 nov: $50,59 / $25,21 / $43,53 / $35,16 / $34,61 / $91,62 (22 nov: Teens $54,38, Adults $20,30) / $38,26 / 24 nov tot 11:40 UTC $22,75.
+- Ads 22-24 nov, alle landen: CA$44,14 (74 kliks). Teens-ads zijn 17% van de Teens-royalty, Adults-ads 34% (grens 40%).
+
+**Stappen (volgorde = volgorde van geld):**
+
+| # | Stap | Wat precies | Stand 24 nov | Wie beslist |
+|---|---|---|---|---|
+| 1 | PIT BOSS aan in het kerstvenster | KDP PIT BOSS WINNERS EXACT (A10251702YWIA92DHTHF6) krijgt op $0,75 geen kliks (voorgesteld $1,13-1,37). Voorstel: de 11 woorden naar het voorgestelde bod, $10/dag, na 3 dagen afrekenen op de 40%-regel over de totale PIT BOSS-royalty; twee keer boven 40% = terug naar $0,75 | OPEN: wacht op Henkjans "ja PIT BOSS" (gaat boven de max CPC) | Henkjan |
+| 2 | Lasting Change eerder starten | LC verkocht vorig jaar al in december ($3.857 in 25 nov-31 dec). Voorstel: de LC-omschakeling van 20 dec (sectie 11: NIEUWJAAR naar voorgesteld bod, 4 broad-woorden aan, AUTO Loose naar voorgesteld bod, elk hoogstens $10/dag) naar 1 dec halen; rem 40% van de LC-royalty over 3 dagen. Boek staat live: $19,99, In Stock, 130 reviews, rang 1,07 mln. De hardcover toont $49,92 op Amazon: nakijken in KDP (hardcover 6FFFY398EVH) | OPEN: wacht op Henkjans "ja LC 1 dec" | Henkjan |
+| 3 | Teens en Adults tot 18 dec | Teens-push loopt binnen de 40%-regel. De rem van 26 nov (royalty $80-90 per dag) is vervallen (Henkjan 24 nov: "Ok go"): niet terugschakelen zolang de Teens-ads onder 40% blijven. De campagnes maken hun budget niet op (AUTO CA$6 van CA$20), dus groei komt van bereik: extra concurrenttargets op KDP Teens CA PT concurrenten (werkt het best: 22-24 nov CA$5,85 voor 2 aankopen) | LOOPT; extra PT-targets nog te doen | rondes |
+| 4 | Australie | Zie "Australie" hieronder. Enoch alleen op het voorgestelde bod, Teens als nieuwe campagne | OPEN: wacht op Henkjans letterlijke opdracht | Henkjan |
+| 5 | Apocrypha | VK (Aut Experiment UK) laten lopen. VS: KDP Definitive Apocrypha US EXACT start 25 nov; check of de update live is, anders pauzeren (sectie 5) | LOOPT | rondes |
+| 6 | Gezakte boeken in de proeven | Elke maandag 2 instructieproeven (kdp/rapport.md, Instructieproeven) op de lijst "gezakt" hierboven, eerst Adults en Definitive Apocrypha, in het voorjaar Mom's Word Search | Eerste proeven: maandag 30 nov | rondes |
+| 7 | De overige ~270 titels | Geen ads. Alleen meenemen als een proef op een vergelijkbaar boek iets bewijst | Geen actie | - |
+
+**Australie (console open sinds 24 nov, zelfde console als de andere landen; AU-entity ENTITYG3L3N75UD42G):**
+- Australia auto Experiment (A00584943OIP94V35W3YL, ad group A05005042PMXKQXFDYQXB): op pauze, A$100/dag, automatisch, 4 groepen elk op A$1,00 terwijl Amazon A$0,13-0,15 voorstelt (0,10-0,19). Lifetime: A$4.176 kosten, 256 aankopen, A$6.482 omzet, ACOS 64%. Close 100 aankopen (ACOS 50%), Substitutes 144 (74%), Loose 12 (69%).
+- Enoch B0B5KV79N1 (A$25,70): A$3.978 voor 249 aankopen = A$16 per verkoop. Royalty per AU-verkoop ~US$4,21 (een verkoop van 13 nov, bij benadering). De advertenties kostten dus meer dan de royalty.
+- Enoch AU royalty: 2025 $679; feb-mei 2026 $95-140 per maand; juni $49; vanaf juli ~$4 per maand. Teens AU: dec 2025 $146, nov 2026 tot 24 nov $62 zonder ads.
+- Voorstel: (a) Enoch weer aan in dezelfde campagne met alle 4 groepen op het voorgestelde bod, budget A$10/dag, down only, alleen Amazon, alleen de Enoch-advertentie; (b) nieuwe campagne Teens AU, automatisch, A$10/dag, voorgesteld bod. Rem voor beide: 40%-regel over 3 dagen.
+- 24 nov is in AU NIETS gewijzigd. Wie dit uitvoert heeft Henkjans letterlijke opdracht in de chat nodig (bijvoorbeeld: "zet Enoch AU aan op voorgesteld bod, A$10 per dag, en maak Teens AU").
+
+**Rondes (4 geplande taken in het account dat de rondes draait):**
+- 23 nov liepen de 4 rondes pas op 24 nov 11:13 UTC en zonder Chrome: geen cijfers, geen wijzigingen. De rondes hebben Chrome met de extensie nodig op Henkjans iMac.
+- Alleen ronde D heeft sinds 24 nov de nieuwe taaktekst (40%-regel, Teens-rem vervallen, schrijft alleen in het werklog, KDP-cijfers via fetch). Rondes A, B en C noemen nog 50% en proberen naar de repo te pushen (lukt niet vanuit een geplande taak). Voor alle rondes geldt: de besluiten in het werklog en deze overdracht gaan voor de taaktekst.
+- Wie een ronde draait vanuit een gewone chat kan wel pushen (add_repo met push) en werkt dan kdp/rapport.md en deze sectie bij.
+
+**Onafhankelijk van accounts werken:** alles wat een chat nodig heeft staat hier (regels sectie 2, toegang sectie 3, campagnes met id sectie 5, plan sectie 0) en in het werklog bovenaan de live pagina. Een nieuw account heeft nodig: de Vercel-koppeling (deze pagina lezen, werklog schrijven), de repo henkjandekrijger-glitch/hjdk-api met push, en Claude in Chrome op de computer waar Henkjan in KDP en Amazon Ads is ingelogd.
 
 ## 1. Doel en opdracht van Henkjan
 
@@ -103,6 +150,7 @@ Royalty per boek 2025 / okt-dec 2025: PIT BOSS $13.496 / $5.258; Lasting Change 
 
 | Wat | Oordeel | Regel |
 |---|---|---|
+| Teens-rem 26 nov ($80-90 per dag) | VERVALLEN 24 nov (Henkjan: "Ok go") | alleen de 40%-regel geldt voor Teens |
 | Teens CA-duw (sinds 14 nov) | tussen 18 nov: +$52,49 extra royalty tegen $43,83 ads = door. Eind 21 nov (trig_01NZvwHBWJPUGeSsczafDMJA) | Teens CA-royalty boven basis $4,79/dag moet de Teens CA-ads dekken; verlengen alleen met Henkjans woord |
 | PIT BOSS-duw 17-19 nov (prijs $14,99 sinds 17 nov) | 20 nov ronde A | PIT BOSS-royalty dagen 17-19 lager dan PIT BOSS-ads = alle biedingen terug naar $0,40. Dag 1: $8,95 ads, 1 verkoop, -$3,89 |
 | LC-duw (sinds 17 nov 13:00 UTC) | 18-20 nov | totale LC-royalty tegen LC-ads; lager = broad-woorden weer pauzeren. Piek LC is 27 dec-3 jan |
