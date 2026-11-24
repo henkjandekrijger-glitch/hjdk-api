@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-23T23:39:37.521Z",
+  "updated_at_utc": "2026-11-24T18:19:36.710Z",
   "authorization": {
     "approved_at_utc": "2026-11-23T20:05:14.794Z",
     "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
@@ -227,6 +227,67 @@
         }
       ],
       "limitation": "Dit bevestigt interactieve browsertoegang en vier publicatiestatussen. Het herstelt niet automatisch de ontbrekende cloud-MCP-koppeling. Providerplanning en accountgezondheid niet volledig onderzocht.",
+      "new_posts_created": []
+    }
+  ],
+  "capacity_observations": [
+    {
+      "at_utc": "2026-11-24T18:19:36.710Z",
+      "date_curacao": "2026-11-24",
+      "source": {
+        "path": "kadoly/social-log.json",
+        "ref": "main",
+        "blob_sha": "4a07b75bc0ea320a8cca7bc9395b9e051c43e0f5"
+      },
+      "reserved_pins": [
+        {
+          "tijd": "2026-11-24T10:00:00Z",
+          "dag": "2026-11-24",
+          "platform": "pinterest",
+          "soort": "wonen",
+          "pid": "oc_4174003416580097",
+          "tijdvak": "11:00",
+          "via": "zernio",
+          "zernio_id": "6b054e32f5da4d813b2b4f1c",
+          "status": "gepland",
+          "bord": "Wonen en decoratie",
+          "code": "pin-1124-wonen"
+        },
+        {
+          "tijd": "2026-11-24T14:00:00Z",
+          "dag": "2026-11-24",
+          "platform": "pinterest",
+          "soort": "nieuw",
+          "pid": "oc_4174004650409987",
+          "tijdvak": "15:00",
+          "via": "zernio",
+          "zernio_id": "6b054e33513eec1383fc5096",
+          "status": "gepland",
+          "bord": "Cadeau-ideeën",
+          "code": "pin-1124-nieuw"
+        },
+        {
+          "tijd": "2026-11-24T18:45:00Z",
+          "dag": "2026-11-24",
+          "platform": "pinterest",
+          "soort": "sieraad",
+          "pid": "oc_4251974488932353",
+          "tijdvak": "19:45",
+          "via": "zernio",
+          "zernio_id": "6b054e331557319ba8408b04",
+          "status": "gepland",
+          "bord": "Sieraden",
+          "code": "pin-1124-sieraad"
+        }
+      ],
+      "shared_limit": 3,
+      "remaining_verified_capacity": 0,
+      "meaning": "Three provider post IDs reserved in shared repo plan. Live provider publication status not independently refreshed. Count reservations against cap; no extra posting or cancellation.",
+      "book_priority": [
+        "20261123-sok-puzzel-1j5t",
+        "20261123-sok-hem-j7cy"
+      ],
+      "approved": true,
       "new_posts_created": []
     }
   ]

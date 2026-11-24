@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "round": "pinterest",
+  "event_date_utc": "2026-11-24",
+  "observed_at_utc": "2026-11-24T18:19:36.710Z",
+  "user_request": "Ok ga verder bouwen wat ga je vandaag nog posten ?",
+  "sources": {
+    "handover": "https://hjdk-api-henq.vercel.app/api/bs?op=content",
+    "pins": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+    "pinplan": "https://hjdk-api-henq.vercel.app/api/bs?op=pinplan",
+    "queue_blob": "e6add874aa3a8fca2e29a31be9837c2dbc3c8257",
+    "social_log_blob": "4a07b75bc0ea320a8cca7bc9395b9e051c43e0f5"
+  },
+  "finding": {
+    "at_utc": "2026-11-24T18:19:36.710Z",
+    "date_curacao": "2026-11-24",
+    "source": {
+      "path": "kadoly/social-log.json",
+      "ref": "main",
+      "blob_sha": "4a07b75bc0ea320a8cca7bc9395b9e051c43e0f5"
+    },
+    "reserved_pins": [
+      {
+        "tijd": "2026-11-24T10:00:00Z",
+        "dag": "2026-11-24",
+        "platform": "pinterest",
+        "soort": "wonen",
+        "pid": "oc_4174003416580097",
+        "tijdvak": "11:00",
+        "via": "zernio",
+        "zernio_id": "6b054e32f5da4d813b2b4f1c",
+        "status": "gepland",
+        "bord": "Wonen en decoratie",
+        "code": "pin-1124-wonen"
+      },
+      {
+        "tijd": "2026-11-24T14:00:00Z",
+        "dag": "2026-11-24",
+        "platform": "pinterest",
+        "soort": "nieuw",
+        "pid": "oc_4174004650409987",
+        "tijdvak": "15:00",
+        "via": "zernio",
+        "zernio_id": "6b054e33513eec1383fc5096",
+        "status": "gepland",
+        "bord": "Cadeau-ideeën",
+        "code": "pin-1124-nieuw"
+      },
+      {
+        "tijd": "2026-11-24T18:45:00Z",
+        "dag": "2026-11-24",
+        "platform": "pinterest",
+        "soort": "sieraad",
+        "pid": "oc_4251974488932353",
+        "tijdvak": "19:45",
+        "via": "zernio",
+        "zernio_id": "6b054e331557319ba8408b04",
+        "status": "gepland",
+        "bord": "Sieraden",
+        "code": "pin-1124-sieraad"
+      }
+    ],
+    "shared_limit": 3,
+    "remaining_verified_capacity": 0,
+    "meaning": "Three provider post IDs reserved in shared repo plan. Live provider publication status not independently refreshed. Count reservations against cap; no extra posting or cancellation.",
+    "book_priority": [
+      "20261123-sok-puzzel-1j5t",
+      "20261123-sok-hem-j7cy"
+    ],
+    "approved": true,
+    "new_posts_created": []
+  },
+  "plan": {
+    "date_curacao": "2026-11-24",
+    "observed_at_utc": "2026-11-24T18:19:36.710Z",
+    "status": "approved_books_wait_for_shared_capacity",
+    "scope": [
+      "stockingbooks.com",
+      "lastingchange.works",
+      "book Pinterest"
+    ],
+    "pinterest": {
+      "shared_account": "kadolyshop",
+      "max_daily_pins": 3,
+      "already_reserved": [
+        {
+          "tijd": "2026-11-24T10:00:00Z",
+          "dag": "2026-11-24",
+          "platform": "pinterest",
+          "soort": "wonen",
+          "pid": "oc_4174003416580097",
+          "tijdvak": "11:00",
+          "via": "zernio",
+          "zernio_id": "6b054e32f5da4d813b2b4f1c",
+          "status": "gepland",
+          "bord": "Wonen en decoratie",
+          "code": "pin-1124-wonen"
+        },
+        {
+          "tijd": "2026-11-24T14:00:00Z",
+          "dag": "2026-11-24",
+          "platform": "pinterest",
+          "soort": "nieuw",
+          "pid": "oc_4174004650409987",
+          "tijdvak": "15:00",
+          "via": "zernio",
+          "zernio_id": "6b054e33513eec1383fc5096",
+          "status": "gepland",
+          "bord": "Cadeau-ideeën",
+          "code": "pin-1124-nieuw"
+        },
+        {
+          "tijd": "2026-11-24T18:45:00Z",
+          "dag": "2026-11-24",
+          "platform": "pinterest",
+          "soort": "sieraad",
+          "pid": "oc_4251974488932353",
+          "tijdvak": "19:45",
+          "via": "zernio",
+          "zernio_id": "6b054e331557319ba8408b04",
+          "status": "gepland",
+          "bord": "Sieraden",
+          "code": "pin-1124-sieraad"
+        }
+      ],
+      "remaining_capacity": 0,
+      "book_candidates": [
+        {
+          "id": "20261123-sok-puzzel-1j5t",
+          "haak": "sok-puzzel",
+          "rank": 1,
+          "state": "approved_waiting_for_capacity_and_provider",
+          "pin": {
+            "account": "6afb8a5d86e8bb18f844fc95",
+            "bord": "271060540011963292",
+            "titel": "12 Free Printable Christmas Word Searches with Answer Keys",
+            "tekst": "Print 12 free Christmas word search puzzles in large print, with an answer key for every puzzle. Choose Christmas Morning, Santa's Workshop, Christmas Baking and more. Print at home, no sign-up.",
+            "link": "https://stockingbooks.com/free-printable-christmas-word-search?utm_source=pinterest&utm_medium=organic_social&utm_campaign=sb-free-wordsearch-20261123&utm_content=20261123-sok-puzzel-1j5t",
+            "beeld": "https://raw.githubusercontent.com/henkjandekrijger-glitch/hjdk-api/codex/content-dagboek/content/dagrapport/2026-11-23-pin-woordzoekers.png",
+            "a": "B0DMNK1J5T"
+          },
+          "content_identity": "free-christmas-word-search-12",
+          "traffic_basis": "Verkennende prioriteit: direct bruikbaar gratis materiaal, exacte aansluiting van beeld en bestemming; geen bewezen winnaar.",
+          "existing_registration": null,
+          "requires_new_approval": false,
+          "destination_check": {
+            "at_utc": "2026-11-24T18:19:36.710Z",
+            "http": 200,
+            "status": "matching page",
+            "new_publication": false
+          }
+        },
+        {
+          "id": "20261123-sok-hem-j7cy",
+          "haak": "sok-hem",
+          "rank": 2,
+          "state": "approved_waiting_for_capacity_and_provider",
+          "pin": {
+            "account": "6afb8a5d86e8bb18f844fc95",
+            "bord": "271060540011963292",
+            "titel": "Stocking Stuffers for Men Who Have Everything: 800 Unusual Facts",
+            "tekst": "Wait, That’s True?! For Men: 800 Unusual Facts & Rare Knowledge for Men Who Have Everything: $14.99, 96 pages. Stocking stuffer ideas for men, dad, husband and grandpa who have everything.",
+            "link": "https://stockingbooks.com/stocking-stuffers?utm_source=pinterest&utm_content=20261123-sok-hem-j7cy#for-him",
+            "beeld": "https://stockingbooks.com/pin/B0HRGNJ7CY-sok-hem.png",
+            "a": "B0HRGNJ7CY"
+          },
+          "content_identity": "book:B0HRGNJ7CY",
+          "traffic_basis": "Verkennende prioriteit: specifieke cadeaubehoefte met passende boekbestemming; geen bewezen winnaar.",
+          "existing_registration": null,
+          "requires_new_approval": false,
+          "destination_check": {
+            "at_utc": "2026-11-24T18:19:36.710Z",
+            "http": 200,
+            "status": "matching page",
+            "new_publication": false
+          }
+        }
+      ],
+      "no_extra_slots": true,
+      "no_repeated_approval_needed": true
+    },
+    "lasting_change": {
+      "slug": "how-to-start-over-in-life",
+      "status": "protected_concept",
+      "preview": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-start-over-in-life&concept=1",
+      "preserve_seven_day_version": true,
+      "publication_approval": "not given for exact article text",
+      "extra_article_created": false
+    },
+    "measurement": {
+      "primary": "Provider-confirmed organic outbound clicks after actual publication; site Pinterest openings separately",
+      "review": "14 to21days from actual publication and enough comparable data",
+      "unknown": [
+        "Current provider Pinterest impressions",
+        "Outbound clicks",
+        "Saves"
+      ],
+      "no_growth_claim": true
+    },
+    "changes": [
+      "Checked approved destinations HTTP200; men-book ASIN present",
+      "Cross-checked shared Kadoly log for duplicate planning and all three reserved slots",
+      "Recorded concrete book publication priorities without exceeding volume"
+    ],
+    "next_action": "Recheck whole-account provider schedule and cooldown at next permitted execution. If a reserved slot is truly released, use approved free wordsearch first, then men book. No automatic promise of publication today."
+  },
+  "live_changes": [],
+  "hypothesis": "Useful own printable remains first exploratory book destination; not yet a traffic winner",
+  "control": "Do not change existing page trials or shared daily volume",
+  "lessons": [
+    "Three shared reservations consume today's agreed cap, even when book-only pinstand has no Nov24 posts. Reading only book log could lead to overscheduling.",
+    "pinPlan is a suggestion, not permission: two LC suggestions reuse the recently posted book and have no new exact approval. Do not auto-publish."
+  ],
+  "concepts": {
+    "slug": "how-to-start-over-in-life",
+    "status": "protected_concept",
+    "preview": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-start-over-in-life&concept=1",
+    "preserve_seven_day_version": true,
+    "publication_approval": "not given for exact article text",
+    "extra_article_created": false
+  },
+  "additions": []
+}
