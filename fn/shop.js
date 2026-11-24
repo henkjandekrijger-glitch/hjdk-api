@@ -837,10 +837,10 @@ async function plaatje(req, res, url) {
         el = hEl('div', { width: W, height: Hh, flexDirection: 'column', alignItems: 'center', background: '#f3ece3', fontFamily: 'Inter', padding: '150px 80px 0' }, [
           hEl('div', { width: 920, height: 920, alignItems: 'center', justifyContent: 'center', background: '#ffffff', borderRadius: 48 }, [{ type: 'img', props: { src: foto, width: 820, height: 820, style: { objectFit: 'contain' } } }]),
           hEl('div', { flexDirection: 'column', width: 920, marginTop: 70 }, (t2.length ? t2 : [it.t.slice(0, 50)]).map(x => hEl('div', { alignItems: 'center', marginBottom: 28 }, [hEl('div', { width: 22, height: 22, borderRadius: 11, background: '#111827', marginRight: 26 }, []), hEl('div', { fontSize: 50, fontWeight: 800, color: '#111827', lineHeight: 1.15 }, x)])))]); }
-      else if (f === 'eind') { const foto = await fotoB64(560);
+      else if (f === 'eind') { const foto = await fotoB64(620, 'cover');
         el = hEl('div', { width: W, height: Hh, flexDirection: 'column', alignItems: 'center', justifyContent: 'center', background: '#111827', fontFamily: 'Inter', padding: '0 80px' }, [
-          hEl('div', { width: 620, height: 620, alignItems: 'center', justifyContent: 'center', background: '#ffffff', borderRadius: 310 }, [{ type: 'img', props: { src: foto, width: 500, height: 500, style: { objectFit: 'contain' } } }]),
-          hEl('div', { fontSize: 66, fontWeight: 800, color: '#ffffff', marginTop: 80, textAlign: 'center', lineHeight: 1.12 }, tk || 'Bekijk hem op kadoly.com'),
+          { type: 'img', props: { src: foto, width: 620, height: 620, style: { objectFit: 'cover', borderRadius: 310 } } },
+          hEl('div', { fontSize: 66, fontWeight: 800, color: '#ffffff', marginTop: 80, textAlign: 'center', lineHeight: 1.12 }, tk || 'Nu op kadoly.com'),
           hEl('div', { flexDirection: 'column', alignItems: 'center', marginTop: 50 }, ['Gratis retour', 'Betalen met iDEAL of Klarna'].map(x => hEl('div', { fontSize: 42, fontWeight: 500, color: '#e5e7eb', marginBottom: 14 }, x))),
           hEl('div', { marginTop: 60, background: '#ffffff', color: '#111827', fontSize: 46, fontWeight: 800, padding: '28px 64px', borderRadius: 60 }, 'kadoly.com')]); }
       else { const foto = await fotoB64(880);
