@@ -1,0 +1,41 @@
+{
+  "datum": "2026-11-24",
+  "gemeten_op": "2026-11-24T17:49:43Z",
+  "ronde": "middag",
+  "vergelijking_met_ochtend": {
+    "facebook": {
+      "ochtend": { "kliks": 39, "echt": 13, "acties": 2, "mandjes": 2 },
+      "middag": { "kliks": 44, "echt": 14, "acties": 2, "mandjes": 2 },
+      "verschil": { "kliks": 5, "echt": 1, "acties": 0, "mandjes": 0 }
+    },
+    "pinterest": {
+      "ochtend": { "kliks": 3 },
+      "middag": { "kliks": 3 },
+      "verschil": { "kliks": 0 }
+    },
+    "gids": {
+      "ochtend": { "doorsturen": 274, "echt": 1, "acties": 1 },
+      "middag": { "doorsturen": 291, "echt": 1, "acties": 1 },
+      "verschil": { "doorsturen": 17, "echt": 0, "acties": 0 }
+    }
+  },
+  "geleerd": {
+    "facebook": "v-n261124c staat op 5 kliks en 1 echt bezoek. Dat is een nuttig signaal, maar minder dan vijf stukken en daarom geen opschalingsbesluit.",
+    "gids": "De gidswaarde meet aankomsten op de doorstuurroute. De 17 extra aankomsten leverden geen extra echt bezoek of actie op en kunnen controles of browserachtige ophalers bevatten. Daarom niet als 17 mensen rapporteren.",
+    "koop": "Geen nieuwe organische koop toegeschreven. Clickmind ziet over 14 dagen nog 4 betaalde verkopen voor EUR 197,54: 2 via TikTok en 2 zonder bekende klik. Zonder klik is niet automatisch organisch.",
+    "pushmeldingen": "Niet bevestigd."
+  },
+  "live_controle": {
+    "koopcontrole": { "pid": "dp_1021", "product_status": 200, "checkout_status": 200 },
+    "redactie": "https://gids.kadoly.com/redactie/laatste-besteldag-sinterklaas-2026-pakjesavond",
+    "rekenhulp": "https://gids.kadoly.com/tv-meubel-breedte-berekenen",
+    "home_staging_gidsen": 5,
+    "openai_productfeed": { "url": "https://go.kadoly.com/api/shop/chatgpt.jsonl", "producten": 3471 },
+    "status": "Alle gecontroleerde routes gaven HTTP 200."
+  },
+  "middagwerk": {
+    "gedaan": "De ochtendfix is live gecontroleerd, alle latere goedgekeurde contentrondes zijn geïnventariseerd en het meetverschil tussen doorsturen en echte bezoeken is vastgelegd zonder de rondes te verdubbelen.",
+    "niet_gedaan": "Geen nieuwe tool, pagina, mail, bord, kanaal, advertentie of extra socialpost gestart.",
+    "volgende": "Bestaande redactie kan lootjes en Secret Santa inhoudelijk behandelen. De lootjestool en nieuwe Pinterestborden blijven buiten productie tot Henkjans aparte akkoord."
+  }
+}
