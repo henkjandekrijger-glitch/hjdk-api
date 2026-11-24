@@ -1,0 +1,4 @@
+{
+  "versie": 1,
+  "rondes": [{"dag":"2026-11-23","id":"bedrijf-kern-20261123","soort":"technische_correctie_en_bronkoppeling","gsc_paginaoverzicht_28d":{"vertoningen":19413,"kliks":276,"bedrijven":{"vertoningen":16721,"kliks":192}},"opgehaald":"2026-11-24T00:06:00Z","groei_bewezen":false,"volgende_toets":["2026-12-07","2026-12-21"],"werking":"docs/curacao-bedrijven-groei.md"}]
+}

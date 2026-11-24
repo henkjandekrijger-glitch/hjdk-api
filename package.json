@@ -10,6 +10,7 @@
     "@vercel/blob": "2.8.0"
   },
   "scripts": {
-    "rooktest": "node scripts/rooktest.mjs"
+    "rooktest": "node scripts/rooktest.mjs",
+    "test:curbedrijven": "node --experimental-loader ./scripts/cur-test-loader.mjs --test scripts/cur-bedrijvengroei.test.mjs scripts/cur-redactielinks.test.mjs"
   }
 }

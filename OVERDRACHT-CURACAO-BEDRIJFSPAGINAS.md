@@ -2,6 +2,10 @@
 
 Gemaakt 21 nov 2026. Live: https://hjdk-api-henq.vercel.app/curacao-gids?op=bzoverdracht (met de Vercel-tool `web_fetch_vercel_url`), en als bestand `OVERDRACHT-CURACAO-BEDRIJFSPAGINAS.md` in de repo hjdk-api. Werk dit bestand bij in dezelfde commit als elke wijziging, met een regel in het logboek onderaan (nieuwste bovenaan).
 
+## Actueel: uitgevoerd op 23 november 2026
+
+Henkjan heeft opgedragen de zoekgroei via bedrijven en keuzehulpen door te voeren. De technische koppeling, de gegevenscorrecties en de gedeelde dagronde staan in [docs/curacao-bedrijven-groei.md](docs/curacao-bedrijven-groei.md). Dat bestand is de actuele aanvulling op de diagnose en het weekplan hieronder. De bestaande keuzehulpenronde leest dit dagelijks; het Curaçao-dagrapport meldt zoekresultaten en wat echt veranderde. Eigenaren zijn niet benaderd. Verversen gebruikt de bestaande cron; geen extra betaalde AI-aanroepen.
+
 ## 0. Opdracht
 
 Henkjan (21 nov 2026): "focus komende week op organische verkeer uit de bedrijven paginas . Check wat je daar kunt verbeteren en kom met voorstel wat ik aan andere chat kan geven om te verbouwen dus moet helemaal compleet zijn die handover en advies ."
@@ -195,6 +199,8 @@ Belangrijker dan het doel: elke stap heeft een proef of een controle, en het rap
 3. Voor indexeringsverzoeken in Search Console moet Henkjan één keer inloggen bij Google in de ingebouwde browser.
 
 ## Logboek (nieuwste bovenaan)
+- 2026-11-23: hreflang- en urencorrectie, exacte bedrijf/keuzehulp-koppeling met behouden feiten en lezersreviews, hoofd-URL alleen na doelcontrole, mensmeting met nieuwe ronde, inhoudshashes en eerlijke lastmod. Werking en dagafspraken: docs/curacao-bedrijven-groei.md. De brede operationele overdrachten zijn buiten deze gerichte wijziging gehouden.
 - 2026-11-23 (footer gepubliceerd na Henkjans expliciete akkoord ‘Netjes maak het live’): de compacte monochrome footer uit PR9 is nu de standaard via voetCD in lib/cur.js, op de gidsen, bedrijfspagina’s en eigenaarspagina’s in vijf talen. Powered by todayin en Contact/Privacy apart van Ook interessant met Kadoly, Nexy, sharedby.ai en Which To Buy (Engelstalige keuzehulpen, lang/hreflang=en). Normale tekst 14px, inline beschrijvingen, twee kolommen op desktop en één op mobiel; dunne onderstreping in tekstkleur ook na de rustlaag. Chatlader en de bestaande onafhankelijkheidsmelding behouden. Alleen deze goedgekeurde footer is gepubliceerd; datavoorstellen PR8 en meetvoorstellen PR7 blijven apart.
 - 2026-11-22 (curacao-chat): nieuws over een zaak (Henkjan bij Sandals: "Hier is wel nieuws over hoe zetten we dat erbij ? Dat ze niet zo goed zijn voor hun personeel ??", akkoord "JA"). data/cur/bedrijfnieuws.json + lib/curnieuws.js: één neutrale regel "In het nieuws" met datum en bron op de kaart in elke gids (lib/curkh.js), op de keuzehulp-bedrijfspagina onder de knoppen (lib/cur.js renderBedrijf) en in de context van de chat. Telt niet mee in de score, verdwijnt na `tot` (standaard 90 dagen); `live: false` = alleen te zien met ?v=nieuws. Eerste: Sandals Royal Curaçao (arbeidsomstandigheden, nu.cw en curacao.nu, 20 nov). Nog niet op de bedrijvengidspagina (renderGidsBedrijf). Ook: hoofdknop van de bedrijfspagina's in donkere modus vlaggeel met blauwe tekst (was blauw op donker, contrast 1,39).
 - 2026-11-21 (curacao-chat): overdracht gemaakt na de analyse van Search Console (28 en 7 dagen), de sitemaps, drie zaakpagina's (The Flakos Grill, Nine West Sambil, Domino's), de crawlers en de bzz-meting. Dezelfde dag: alle keuzehulpen in het skillformaat (`lib/curkh.js`), en `aggregateRating` uit de JSON-LD van de keuzehulpen gehaald (regel 5).
+
