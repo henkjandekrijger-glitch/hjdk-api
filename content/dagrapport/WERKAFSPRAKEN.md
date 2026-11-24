@@ -55,3 +55,12 @@ Gesloten23novUTC vastgelegd in2026-11-23.json:32/12 geregistreerdeopeningen, é�
 De start-over-preview week om13:47UTC af van het opgeslagen zevendaagse concept (andere titel, geen zeven dagstappen, ambigu start-over-volume33100). In deze ronde exact de eigen versie uit2026-11-24-artikel.json hersteld in hetzelfde conceptslug, met specifiekevraag590/mnd. Modus eerst-zien, HTTP200/noindex, niet in sitemap gecontroleerd. Beide waarnemingen plus eerdere tekst in het dagrecord bewaard; oorzaak/toeschrijving onbekend. Lees vóór schrijven altijd actuele inhoud én opgeslagen oorspronkelijke versie om stil overschrijven te herkennen. Publicatie nog niet goedgekeurd voor dit artikel. Dit is een conceptreparatie, geen live verbetering.
 
 Onderzoek24nov in2026-11-24-traffic-onderzoek.md voor de andere rondes hergebruiken: primaire Word Search Wizard-pagina, echte werkwijze maar geen verkeerscijfers. Metricool geeft geen verbonden netwerk in eigenbrand; geen conclusie dat Zernio/kadolyshop ontkoppeld is. Geen gebruikerslogin vragen op basis hiervan. De twee pinconcepten blijven goedgekeurd; geen nieuwe toestemming vragen, capaciteit en providergegevens afzonderlijk toetsen.
+
+
+## Akkoord en leren per pin, 24 november 2026
+
+Henkjan: "Die kun je prima doen leer van iedere pin wat het oplevert en neem dat mee de volgende dag . Ja artkel mag live ." Het exact getoonde zevendaagse artikel is24novlivegezet, openbareHTTP200/indexfollow/canonical/gidsen/sitemapgecontroleerd. Bronwaarneming en publicatietijd in2026-11-24-artikel.json additions; oorspronkelijkeconceptwaarnemingbehouden. Beoordeling8tot15decemberalleenmetvoldoendegegevens.
+
+Voor de twee concreet genoemde pins geldt dit als eenmalig akkoord om24novbovenop de drie gereserveerde Kadolyslots te plaatsen. Geen structurele verhogingvanlimiet3. ExacteIDs/wijziging inPUBLICATIEWACHTRIJ.json; opnieuw akkoordvragen nietnodig. CloudZerniotoegang is nogafhankelijkvanéén cloudsignin,linkaangeboden; bestaandeChrome-loginisgeencloudkoppeling. NietafhankelijkvanHenkjanscomputerwerken.
+
+Elkegeplaatstepin krijgt echtepostID/publicatieURL/tijd/bord/bestemming/copyversie. Devolgendedagperpinhetvorigesnapshotteruglezen: providerweergaven,uitgaandekliks,savesapart;siteopeningenapartmetzelfdebestemmingenperiode. Ontbrekendblijftonbekend. Neeméénonderbouwdlesjeovernaarvolgendgoedgekeurdslot; geenwinnaaruitéénpin. PublicatieaantalofruweAmazonredirectsgeenverkeerswinstofverkoop. Uitkomstpas14tot21dagenvanafwerkelijkeplaatsingenvoldoendegelijkedata.

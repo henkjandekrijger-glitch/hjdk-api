@@ -219,5 +219,42 @@
     "publication_approval": "not given for exact article text",
     "extra_article_created": false
   },
-  "additions": []
+  "additions": [
+    {
+      "at_utc": "2026-11-24T18:36:13.458Z",
+      "authorization": {
+        "at_utc": "2026-11-24T18:36:13.458Z",
+        "user_text": "Die kun je prima doen leer van iedere pin wat het oplevert en neem dat mee de volgende dag . Ja artkel mag live .",
+        "context": "Reply to two named approved book pins and today's three already-reserved Kadoly slots",
+        "scope": "One-off permission to publish these two named pins on Nov24 in addition to existing reservations. Not an ongoing volume increase.",
+        "date_curacao": "2026-11-24",
+        "ids": [
+          "20261123-sok-puzzel-1j5t",
+          "20261123-sok-hem-j7cy"
+        ],
+        "standing_limit_unchanged": 3
+      },
+      "measurement_plan": {
+        "per_pin": [
+          "Actual provider post ID and public Pinterest URL",
+          "Publication timestamp and pin age",
+          "Board, image/copy and exact UTM destination",
+          "Provider impressions",
+          "Provider organic outbound clicks",
+          "Provider saves",
+          "Site Pinterest-attributed openings on matching destination, measured separately",
+          "Measurement window and provider observation time"
+        ],
+        "primary": "Genuine organic outbound clicks to relevant landing page, not pin clicks or posts",
+        "daily": "Next day read previous snapshot, report actual arrivals and limitations, carry lesson into next approved slot. Do not declare a winner on one pin or missing statistics.",
+        "decision": "Compare same pin age/board/topic/period. Judge 14to21days from actual publication with enough comparable data.",
+        "unknown_is": null,
+        "conversion": "No sale or human conversion from raw Amazon requests"
+      },
+      "actual_publications": [],
+      "state": "waiting_for_cloud_Zernio_signin",
+      "independent_work": "Approved article published and verified; per-pin next-day learning plan saved",
+      "no_fictional_post_id": true
+    }
+  ]
 }

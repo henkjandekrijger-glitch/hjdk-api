@@ -1623,5 +1623,41 @@
       }
     }
   },
-  "additions": []
+  "additions": [
+    {
+      "observed_at_utc": "2026-11-24T18:36:13.458Z",
+      "authorization": {
+        "text": "Die kun je prima doen leer van iedere pin wat het oplevert en neem dat mee de volgende dag . Ja artkel mag live .",
+        "scope": "Publication of exact shown seven-day article"
+      },
+      "action": {
+        "type": "publish_existing_article",
+        "slug": "how-to-start-over-in-life",
+        "title": "How to Start Over in Life: A Practical 7-Day Reset Plan",
+        "published_at_utc": "Tue, 24 Nov 2026 18:34:31 GMT",
+        "status": "live_verified",
+        "url": "https://lastingchange.works/how-to-start-over-in-life"
+      },
+      "checks": {
+        "public_http": 200,
+        "robots": "index, follow",
+        "canonical": "https://lastingchange.works/how-to-start-over-in-life",
+        "day7": true,
+        "reset_card": true,
+        "sitemap_present": true,
+        "guides_present": true
+      },
+      "evaluation": {
+        "start": "Tue, 24 Nov 2026 18:34:31 GMT",
+        "primary": "GSC clicks on exact article URL once available; registered source/page openings separately",
+        "comparison": "how-to-stick-to-new-years-resolutions, directional only",
+        "review_window_utc": [
+          "2026-12-08",
+          "2026-12-15"
+        ],
+        "requires": "Enough comparable data; no winner merely from publication"
+      },
+      "business_effect": null
+    }
+  ]
 }
