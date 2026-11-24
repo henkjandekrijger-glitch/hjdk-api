@@ -1153,12 +1153,24 @@
   "id": "crawlteller-elke-route",
   "les": "Tel crawlers per domein op elke route die dat domein serveert, niet alleen in één handler. Een crawlteller die maar een deel van de pagina's ziet, meldt een instorting die er misschien niet is, en een rem die daarop reageert (geen nieuwe pagina's) blijft dan onterecht aan.",
   "kanaal": "google",
-  "bewijs": "21 nov 2026: Googlebot op keuzehulp.best telde alleen in page() van api/kz.js (productkeuzehulpen). De voorpagina en ruim 60 routes (dienstgidsen, rekenhulpen, Rotterdam, advocaat, rijschool) lopen via api/keuze-tools en telden niet mee. Stand: 3 keer Googlebot in 7 dagen tegen 16 daarvoor, crawlStop en kernPauze aan, 0 nieuwe NL-pagina's; whichtobuy.best (teller in de hele handler) zag 80 in 7 dagen.",
+  "bewijs": "21 nov 2026: Googlebot op keuzehulp.best telde alleen in page() van api/kz.js (productkeuzehulpen). De voorpagina en ruim 60 routes (dienstgidsen, rekenhulpen, Rotterdam, advocaat, rijschool) lopen via api/keuze-tools en telden niet mee. Stand: 3 keer Googlebot in 7 dagen tegen 16 daarvoor, crawlStop en kernPauze aan, 0 nieuwe NL-pagina's; whichtobuy.best (teller in de hele handler) zag 80 in 7 dagen. Uitkomst 24 nov: googlebot7d kz 995 (was 14), crawlStop uit; kernPauze blijft aan om de kernfase, niet om de teller.",
   "bron": "dagcontrole 21 nov 2026, /api/zicht?op=stand&site=kz (crawl.googlebot7d) en vercel.json rewrites voor keuzehulp.best",
   "sterkte": 2,
   "effect": 2,
   "moeite": 1,
   "meten": "crawl.googlebot7d voor kz in /api/zicht?op=stand vanaf 22 nov; stijgt hij boven 8 (helft van 16), dan gaat de crawlstop vanzelf uit. Blijft hij laag, dan is de instorting echt.",
+  "status": "actief"
+ },
+ {
+  "id": "doorsturen-naar-indexeerbare-pagina",
+  "les": "Stuur een verhuisde pagina altijd door naar een versie die zelf in Google mag (index, in de sitemap). Wordt het doel later noindex, verander dan meteen de doorverwijzing van de oude adressen naar de taalversie die wel geindexeerd is; anders gooit Google de vertoningen van de oude URL weg zodra hij de redirect volgt.",
+  "kanaal": "google",
+  "bewijs": "24 nov 2026: kaufberater.best/curacao/firmen/... gaf 773 vertoningen in 28 dagen op plek 11 tot 12 (western tires 85, bentana di informashon 79, vooral Nederlandse zoekvragen) maar stuurde door naar curacao.day/de/firmen/..., sinds 18 nov noindex,follow. Hetzelfde voor whichtobuy.best /es/curazao/empresas en /pt/curacao/empresas.",
+  "bron": "dagcontrole 24 nov 2026, /api/gsc?op=status (kaufberater laagCtr en verhuisd), vercel.json redirects, lib/cur.js GIDS_INDEX_TALEN",
+  "sterkte": 2,
+  "effect": 2,
+  "moeite": 1,
+  "meten": "proef oude-gidsurl-naar-index-taal-1124: vertoningen en kliks van curacao.day/nl/bedrijven/tire-shop/western-tires en vergunningenloket-bentana-di-informashon in /api/gsc?op=curvind vanaf 1 dec tegen 17 tot 23 nov.",
   "status": "actief"
  }
 ]

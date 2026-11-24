@@ -3079,6 +3079,9 @@
       "destination": "https://curacao.day/nl/:s/:b/:c",
       "permanent": true
     },
+    {"source": "/curacao/firmen", "has": [{"type": "host", "value": "kaufberater.best"}], "destination": "https://curacao.day/nl/bedrijven", "permanent": true},
+    {"source": "/curacao/firmen/:b", "has": [{"type": "host", "value": "kaufberater.best"}], "destination": "https://curacao.day/nl/bedrijven/:b", "permanent": true},
+    {"source": "/curacao/firmen/:b/:c", "has": [{"type": "host", "value": "kaufberater.best"}], "destination": "https://curacao.day/nl/bedrijven/:b/:c", "permanent": true},
     {
       "source": "/curacao",
       "has": [
@@ -3167,6 +3170,10 @@
       "destination": "https://curacao.day/en/:s/:b/:c",
       "permanent": true
     },
+    {"source": "/es/curazao/empresas/:b", "has": [{"type": "host", "value": "whichtobuy.best"}], "destination": "https://curacao.day/en/businesses/:b", "permanent": true},
+    {"source": "/es/curazao/empresas/:b/:c", "has": [{"type": "host", "value": "whichtobuy.best"}], "destination": "https://curacao.day/en/businesses/:b/:c", "permanent": true},
+    {"source": "/pt/curacao/empresas/:b", "has": [{"type": "host", "value": "whichtobuy.best"}], "destination": "https://curacao.day/en/businesses/:b", "permanent": true},
+    {"source": "/pt/curacao/empresas/:b/:c", "has": [{"type": "host", "value": "whichtobuy.best"}], "destination": "https://curacao.day/en/businesses/:b/:c", "permanent": true},
     {
       "source": "/es/curazao",
       "has": [
