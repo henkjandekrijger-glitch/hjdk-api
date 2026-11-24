@@ -46,6 +46,15 @@
       "hypothesis": "A usable week-plan preview may attract relevant readers beyond general habit slogans.",
       "primary_metric": "Verified organic outbound clicks",
       "status": "idea, actual image/copy still to show before publication"
+    },
+    {
+      "rank": 4,
+      "topic": "50 Christmas jokes for family",
+      "destination": "https://stockingbooks.com/christmas-jokes",
+      "creative": "Actual own joke preview from existing live page,1000x1500; complete title/caption/board/image first show.",
+      "hypothesis": "A concrete joke gives an immediate sample and reason to open full collection.",
+      "primary_metric": "Verified organic outbound clicks",
+      "status": "idea, not approved for publication"
     }
   ],
   "controls": {
@@ -72,5 +81,19 @@
     "Current day24Nov not yet closed",
     "Google query data not fresh enough to rank a traffic winner",
     "No comparable provider per-pin data yet"
-  ]
+  ],
+  "volume_update": {
+    "at_utc": "2026-11-24T22:01:42.893Z",
+    "user_instruction": "Bijf dus posten . En kan het meer worden kunen we maximeren . ?",
+    "daily_candidate_target": 4,
+    "meaning": "First working volume for distinct concepts, not optimal Pinterest volume or mandatory publishing quota.",
+    "old_shared_three_cap": "Superseded as automatic blocker by explicit scale-up request. Coordinate shared account for duplicates and actual provider limits, without changing other workflows.",
+    "new_material_first_seen": true,
+    "seven_day_check": "2026-12-02; execution/measurement readiness, not final traffic verdict",
+    "traffic_judgment": "14to21days after each actual publication plus enough comparable data",
+    "sources": [
+      "https://business.pinterest.com/blog/beginner-pinterest-content-guide/",
+      "https://policy.pinterest.com/en/community-guidelines"
+    ]
+  }
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at_utc": "2026-11-24T20:59:05.921Z",
+  "updated_at_utc": "2026-11-24T22:01:42.893Z",
   "authorization": {
     "approved_at_utc": "2026-11-23T20:05:14.794Z",
     "user_instruction": "Plaaat s wat. je max mag plaatsen maar optimsliseer op verkeer niet x plaatsigen .",
@@ -427,7 +427,7 @@
     ],
     "provider_access": "Native Chrome signed-in Zernio UI used successfully. No TinyFish setup or new credentials. Both actual public Pinterest pages verified. No cloud Zernio connector was available.",
     "next_existing_round": "2026-11-24T15:37:00-04:00",
-    "next_action": "Next daily round measure both actual provider pin IDs and exact destination openings separately; do not repost either ID. No capacity or approval blocker remains for this completed batch."
+    "next_action": "Daily prepare4distincthighqualityconcepts, show exact previews, publish eligible exactlyapproved material. Existing2pins alreadyPublished. Old3cap no automatic blocker after latest scale-up instruction; coordinate shared account and avoid duplicates."
   },
   "access_observations": [
     {
@@ -724,6 +724,20 @@
         "20261123-sok-puzzel-1j5t",
         "20261123-sok-hem-j7cy"
       ]
+    },
+    {
+      "at_utc": "2026-11-24T22:01:42.893Z",
+      "user_instruction": "Bijf dus posten . En kan het meer worden kunen we maximeren . ?",
+      "daily_candidate_target": 4,
+      "meaning": "First working volume for distinct concepts, not optimal Pinterest volume or mandatory publishing quota.",
+      "old_shared_three_cap": "Superseded as automatic blocker by explicit scale-up request. Coordinate shared account for duplicates and actual provider limits, without changing other workflows.",
+      "new_material_first_seen": true,
+      "seven_day_check": "2026-12-02; execution/measurement readiness, not final traffic verdict",
+      "traffic_judgment": "14to21days after each actual publication plus enough comparable data",
+      "sources": [
+        "https://business.pinterest.com/blog/beginner-pinterest-content-guide/",
+        "https://policy.pinterest.com/en/community-guidelines"
+      ]
     }
   ],
   "cloud_access_observations": [
@@ -804,5 +818,19 @@
       "20261123-sok-hem-j7cy"
     ],
     "capacity_blocker": false
+  },
+  "operating_volume": {
+    "at_utc": "2026-11-24T22:01:42.893Z",
+    "user_instruction": "Bijf dus posten . En kan het meer worden kunen we maximeren . ?",
+    "daily_candidate_target": 4,
+    "meaning": "First working volume for distinct concepts, not optimal Pinterest volume or mandatory publishing quota.",
+    "old_shared_three_cap": "Superseded as automatic blocker by explicit scale-up request. Coordinate shared account for duplicates and actual provider limits, without changing other workflows.",
+    "new_material_first_seen": true,
+    "seven_day_check": "2026-12-02; execution/measurement readiness, not final traffic verdict",
+    "traffic_judgment": "14to21days after each actual publication plus enough comparable data",
+    "sources": [
+      "https://business.pinterest.com/blog/beginner-pinterest-content-guide/",
+      "https://policy.pinterest.com/en/community-guidelines"
+    ]
   }
 }
