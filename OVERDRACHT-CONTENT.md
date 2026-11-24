@@ -217,6 +217,15 @@ Altijd via Resend, en elke mail eerst langs mail-lerend.
 
 Bronnen: arxiv.org/abs/2311.09735 (GEO), ahrefs.com/blog/best-lists-research, ahrefs.com/blog/fresh-content, airops.com/research/the-influence-of-offsite-signals-in-ai-search, searchengineland.com/why-most-original-data-never-gets-cited-481676, raptive.com/blog/refresh-analysis-and-google-traffic-growth, searchenginejournal.com/it-works-until-it-doesnt-ai-content-strategies-that-backfire/574820, tailwindapp.com/blog/pinterest-seo-in-2025, kit.com/features/creator-network, digitalapplied.com/blog/ai-traffic-converts-42-percent-better-2026-channel-strategy, searchengineland.com/llms-google-referral-conversion-study-463747.
 
+
+## Actuele aanvulling 24 november 2026: leren van iedere post
+
+Henkjan verlangt dagelijks leren van IEDERE post en blijven doorposten. De actuele uitvoeringsbron staat op branch codex/content-dagboek: WERKAFSPRAKEN.md, PUBLICATIEWACHTRIJ.json, PIN-LEERREGISTER.json en de datumplanning. De twee eerder wachtende pins zijn24nov daadwerkelijk gepubliceerd: https://www.pinterest.com/pin/271060471319715665/ en https://www.pinterest.com/pin/271060471319715692/. Het zeven-dagenartikel is ook live op https://lastingchange.works/how-to-start-over-in-life . Oudere concept- of dagruimteblokkades niet herhalen voor deze afgeronde acties.
+
+De drie bestaande ChatGPT-taken zijn bijgewerkt met één gedeeld ritme: ochtend09:15, Pinterest15:37, artikel23:41 Curaçao. Elke echte boekpin blijft in het leerregister met vorige en nieuwe verifieerbare providerperiode, pinleeftijd, vertoningen, organische uitgaande kliks en saves afzonderlijk. Iedere pin krijgt bewijs, les of onvoldoende data, en vervolgactie. Ontbrekende data blijven onbekend. Dagelijks bijsturen, inhoudelijk oordeel na14tot21dagen met voldoende vergelijkbare data. Nieuwe ongeziene beelden en copy eerst laten zien. Geen onbeperkte volumeverhoging uit de extra24novtoestemming afleiden.
+
+Nieuw aangetoond meetlek: lib/bsmeet.js bewaart geen utm_content, en fn/bs.js bewaart bron en pagina als afzonderlijke totalen. Geen pinlandingen uit deze marges afleiden. Eerst bestaande provider/Clickmind-data onderzoeken; zo nodig klein meetvoorstel met werkingstoets op aparte branch. Dit dagboek is geen live codewijziging of meetherstel. Morgen25nov worden conceptpreviews voorbereid voor gratis kerstkleurplaten, kerstquiz en het bestaande live weekplan; de actuele meting bepaalt de keuze.
+
 ## 8. Lopende proeven
 
 - bs-kerst-gratis-1123 (gsc, 21 dagen): christmas-jokes, christmas-trivia en christmas-coloring-pages, tegen de controle free-printable-christmas-word-search en white-elephant-rules.
@@ -240,6 +249,8 @@ Plak dit als eerste bericht:
 "Lees eerst de overdracht content en distributie: https://hjdk-api-henq.vercel.app/api/bs?op=content (Vercel-tool web_fetch_vercel_url) en de repo henkjandekrijger-glitch/hjdk-api (OVERDRACHT-CONTENT.md, CLAUDE.md). Jij doet vanaf nu alleen content en distributie voor stockingbooks.com, lastingchange.works en Pinterest, met de dagelijkse leerlus uit hoofdstuk 7 en de strategie uit hoofdstuk 7b. Maak de twee geplande taken uit hoofdstuk 6 opnieuw aan in dit account. Begin met het grootste lek uit het rapport van vandaag en laat me alles eerst zien voor het live gaat."
 
 ## Logboek (nieuwste bovenaan)
+
+- 2026-11-24, content-Codex: beide goedgekeurde wachtende pins Published en openbaar gecontroleerd, echte IDs gelogd. Op Henkjans vervolgvraag alle18boekpins in leerregister gezet, drie bestaande dagtaken bijgewerkt en25novconceptplan vastgelegd. Gesloten23nov: Stocking32tegen7, LC12tegen13 geregistreerdeopeningen; Pinterest1siteopening. Geen bewezen organische groeitrend. Meetgat per-pinlandingen in bestaande bron/pagecounters aangetoond; nog geen live meetreparatie. Alleen databranch, geen sitebuild.
 
 - 2026-11-24 UTC (23 november Curaçao), artikelronde: How to Start Over in Life: A Practical 7-Day Reset Plan als beschermd concept opgeslagen en gecontroleerd, 1539 woorden, zeven dagstappen, kopieerbare invulkaart, vijf FAQ en drie primaire bronnen. Modus eerst-zien; niet in sitemap; procrastination blijft live. Preview: https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=how-to-start-over-in-life&concept=1. Zoekvraag 590/mnd US uit bestaande Radar-cache. Oordeel pas 14 tot 21 dagen na eventuele goedgekeurde publicatie, GSC-kliks op exacte URL; bestaande resolutionspagina alleen richtinggevende vergelijking. Gesloten23nov:32/12 geregistreerde openingen, één Pinterestopening; geen unieke mensen/conversieclaim. Nieuwe indexcontrole24nov:17/17bekeken,1geïndexeerd; eerdere3URL-steekproef behouden. LC-provider meldt geen toegang, geen rechten gewijzigd. Volledige ronde en bronresponsen: content/dagrapport/2026-11-24-artikel.json op codex/content-dagboek. Dit is een dagboekaanvulling zonder mainpush/build of publicatie.
 

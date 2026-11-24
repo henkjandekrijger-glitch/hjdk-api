@@ -89,3 +89,16 @@ Beide echte post-ID's met op=pinlog vastgelegd en met op=pinstand teruggelezen. 
 Zernio had standaardbord Products. Voor deze twee plaatsingen is tijdelijk het bestaande Stocking Stuffer Books gekozen, daarna Products hersteld en gecontroleerd. Geen nieuwe accounts, sleutels of borden gemaakt. Chrome-login werkt; geen nieuwe TinyFish-login vragen.
 
 Bij publicatie waren de Pinterest-statistieken nog niet beschikbaar. De nullen in de interne cache zijn geen verse providerwaarneming. Op 25 november per echte pin-ID de beschikbare vertoningen, uitgaande kliks en saves met periode lezen, naast Pinterest-pagina-openingen op de passende sitebestemming. Ontbrekend blijft onbekend. Eerste dagelijkse waarneming is geen gelijke volledige blootstellingsdag. Beoordeling na 14 tot 21 dagen, 8 tot 15 december, en voldoende vergelijkbare data. Geen verkeerswinst of verkoop uit plaatsing afleiden.
+
+
+## Iedere post meten en doorposten, 24 november 2026
+
+Henkjan vraagt een zichtbaar lerend ritme en zegt "je moet leren van IEDERE post en doorposten". De drie bestaande taken zijn bijgewerkt zonder hun tijden te wijzigen. Geen dubbele taak gemaakt. Ochtend09:15, Pinterest15:37, artikel23:41 Curaçao.
+
+Lees PIN-LEERREGISTER.json vóór elke ronde. Alle 18 huidige boekpost-ID's staan erin, inclusief onbekende resultaten en concrete volgende meetactie. Voeg iedere echte plaatsing toe. Dagelijks per pin providerperiode, publicatieleeftijd, vertoningen, echte organische uitgaande kliks en saves apart; lees vorige snapshot, maak alleen vergelijkbare delta's. Iedere pin krijgt waarneming, onderbouwde les of onvoldoende data, en volgende keuze. Alleen publicatie bevestigt geen verkeer.
+
+Nieuw meetbewijs: lib/bsmeet.js stuurt site, bron en pad, maar geen utm_content. fn/bs.js telt bron en pagina apart. Hieruit geen individuele pinlandingen fabriceren. Eerst bestaande provider/Clickmind-data onderzoeken; anders klein meetvoorstel op reviewbranch met werkingstoets voorbereiden. Geen live meetwijziging of persoonlijke identificatie toegevoegd in deze ronde.
+
+Morgen25nov: gesloten24nov rapporteren, alle bestaande pins volgen, complete nieuwe conceptpreviews voorbereiden voor eigen gratis kleurplaten, kerstquiz en het live zevendaagse resetplan. Keuze bijsturen op echte uitgaande kliks, geen winnaar uit ontbrekende data. Goedgekeurde unieke geschikte inhoud blijven plaatsen; niet wachten tot14dagen om nieuwe inhoud voor te bereiden, wel14tot21dagen plus voldoende data voor een inhoudelijk oordeel. Nieuwe ongeziene beelden en copy blijven eerst-zien. Beide24novgoedgekeurde pins zijn alPublished; niet opnieuw plaatsen of als blokkade melden.
+
+Plan: content/dagrapport/2026-11-25-plan.json. De drie richtingen zijn ideeën, geen getoonde definitieve batch of nieuw publicatieakkoord. Dagvolume blijft een bovengrens en geen groeidoel. Het extra akkoord voor de twee afgeronde pins niet als onbeperkte structurele volumeverhoging uitleggen.

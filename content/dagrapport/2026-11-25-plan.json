@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "round": "pinterest",
+  "date_curacao": "2026-11-25",
+  "created_at_utc": "2026-11-24T21:15:26.296Z",
+  "status": "concept_plan_not_publication_approval",
+  "user_goal": "Leren van IEDERE post en doorposten. Verkeer en herhaalbare lessen, geen plaatsingsquotum als resultaat.",
+  "rhythm": [
+    {
+      "time_curacao": "09:15",
+      "action": "Report closed UTCday24Nov against23Nov using same definitions. Refresh every published book pin in PIN-LEERREGISTER.json; impressions/outboundclicks/saves separate, unknown remainsnull. Identify one real evidence-supported lesson."
+    },
+    {
+      "time_curacao": "15:37",
+      "action": "Check provider/account and duplicates; use measured lesson to prepare complete previews and execute exactly approved new candidates. Do not wait14days to keep publishing, do not call a winner prematurely."
+    },
+    {
+      "time_curacao": "23:41",
+      "action": "At most1useful LCconcept; use existingcached demand and liveinventory. Start-over7dayarticle already live, never overwrite. Include appropriate Pinterest/search distribution entrance."
+    }
+  ],
+  "candidate_briefs": [
+    {
+      "rank": 1,
+      "topic": "Free printable Christmas coloring pages",
+      "destination": "https://stockingbooks.com/christmas-coloring-pages",
+      "creative": "Actual own coloring-page preview,1000x1500, clear print promise consistent with12existingpages.",
+      "hypothesis": "Showing the printable result may attract more relevant outbound visits than a book cover for a free destination.",
+      "primary_metric": "Verified organic outbound clicks",
+      "status": "idea, actual image/copy still to show before publication"
+    },
+    {
+      "rank": 2,
+      "topic": "Free Christmas trivia questions and answers",
+      "destination": "https://stockingbooks.com/christmas-trivia",
+      "creative": "Preview of an actual question and answer format from the existing40questionquiz. No unsupported claims.",
+      "hypothesis": "Concrete family quiz use may match Pinterest holiday planning searches.",
+      "primary_metric": "Verified organic outbound clicks",
+      "status": "idea, actual image/copy still to show before publication"
+    },
+    {
+      "rank": 3,
+      "topic": "How to Start Over in Life: A Practical 7-Day Reset Plan",
+      "destination": "https://lastingchange.works/how-to-start-over-in-life",
+      "creative": "Actual sample day and fill-in question from approved live1539wordarticle. No guaranteed7dayoutcome or availablePDFcheckout promise.",
+      "hypothesis": "A usable week-plan preview may attract relevant readers beyond general habit slogans.",
+      "primary_metric": "Verified organic outbound clicks",
+      "status": "idea, actual image/copy still to show before publication"
+    }
+  ],
+  "controls": {
+    "retain_published_wordsearch_and_men_pins": true,
+    "no_exact_duplicates": true,
+    "one_variable_per_test": true,
+    "no_growth_claim_from_placement": true,
+    "new_content_first_seen": true,
+    "no_new_paid_calls": true
+  },
+  "largest_demonstrable_leak": {
+    "finding": "Per-pin outcome is missing from existing measurement loop.",
+    "evidence": [
+      "pinstand default or undated zero caches, no fresh impressions/outbound/saves snapshots",
+      "lib/bsmeet.js does not send utm_content to server; fn/bs.js source and page counters are separate"
+    ],
+    "next_action": "Fetch actual provider stats first. Check existing Clickmind evidence; if per-pin landings unavailable prepare minimal separate-branch measurement change for review, with pin ID + site/page/source/day aggregate and no personal identifiers. No invented endpoint, live code or setting change.",
+    "technical_test": "Verify2distinctapprovedtestUTMIDs map to correct site/page and no doublecount; then evaluate content14to21days.",
+    "primary": "Verified organic outbound Pinterestclicks, with page-openings separately"
+  },
+  "daily_research": "Reuse24Nov WordSearchWizardprimary observation;25Nov read at least1relevantprimarysource and record observed method versus traffic claims, counterevidence, applicability. No extra paid Radar.",
+  "publication_approval": "No new automatic permission inferred for unseen3briefs. Previously approved2pins alreadyPublished, not pending.",
+  "unknowns": [
+    "Current day24Nov not yet closed",
+    "Google query data not fresh enough to rank a traffic winner",
+    "No comparable provider per-pin data yet"
+  ]
+}

@@ -2287,6 +2287,84 @@
         "requires": "14to21days from actual Nov24 publication and enough comparable same-age/board/topic data.",
         "next_content_decision": "Use supported per-pin lesson in next approved slot; do not expand posting volume solely because these posts succeeded."
       }
+    },
+    {
+      "at_utc": "2026-11-24T21:15:26.296Z",
+      "user_request": "En het verkeer loopt het op en wat ik je plan morgen ik wil een lerend ritme zien je moet leren van IEDERE post en doorposten .",
+      "closed_day": "2026-11-23",
+      "comparison": {
+        "stockingbooks": {
+          "openings": 32,
+          "previous": 7,
+          "difference": 25,
+          "pinterest_attributed_openings": 1
+        },
+        "lastingchange": {
+          "openings": 12,
+          "previous": 13,
+          "difference": -1
+        },
+        "trend": "More Stocking registered openings, no established durable organic growth. Not unique visitors. Two days, no weekaverage."
+      },
+      "sources": {
+        "report": {
+          "url": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1",
+          "observed_at": "Tue, 24 Nov 2026 21:13:55 GMT",
+          "text": "Organisch boeken, 2026-11-23 (UTC)\nstockingbooks.com: 32 geregistreerde pagina-openingen (+25), organisch 1 (+1) (Pinterest 1)\nlastingchange.works: 12 geregistreerde pagina-openingen (-1)\nAmazonverzoeken: 630 (ruwe redirects, geen unieke personen)\nAmazonverzoeken per site: stockingbooks.com 627, lastingchange.works 3\nBeste pagina's: stockingbooks.com/ 20, lastingchange.works/why-it-didnt-work 5, lastingchange.works/ 4\nPinterest: 4 pins geplaatst\nNieuw LC-artikel: How to Stop Procrastinating: 7 Steps and a 2-Minute Plan (zoekvraag 135000/mnd) https://lastingchange.works/how-to-stop-procrastinating\n1 pagina's in Google\nMeetlek: pagina-openingen en Amazonverzoeken zijn niet per klik gekoppeld. Nog geen betrouwbaar doorklikpercentage; eerst meten, dan een inhoudsproef kiezen.\nDetails: https://stockingbooks.com/overdracht"
+        },
+        "provider": "Current pinstand has18bookregistrations, no valid fresh pinoutcome snapshots.2specificnewpins live confirmed previous round.",
+        "site_code": {
+          "path": "lib/bsmeet.js",
+          "blob": "5266a91b44985a44c58ecab01c5305588dd554be",
+          "fn_blob": "0149cd15542f8ccfd0ab511620a33da7fb780203"
+        },
+        "plugin_discovery": "No Zernio plugin available in this account catalog at observation; Chrome access already confirmed, do not claim disconnection."
+      },
+      "lessons": [
+        {
+          "finding": "Every pin must stay in learning loop even with missing or weak performance, not only bestpins.",
+          "evidence": "18registeredpins currently lack valid fresh outcome windows; cannot select winner from caches."
+        },
+        {
+          "finding": "PerpinUTM landing attribution is not captured by own site source/pagecounters.",
+          "evidence": "Inspected lib/bsmeet.js and fn/bs.js; utm_content not passed or stored. Source and page marginal totals cannot be joined as a pinarrival count."
+        }
+      ],
+      "actually_done": [
+        {
+          "type": "automation_update",
+          "ids": [
+            "Automation_78bd50f1177c819187c97dbc4098ab6e",
+            "Automation_8802f2dd9b548191980419acd21da2c3",
+            "Automation_8f852e3072108191aef0a233efe2a01c"
+          ],
+          "change": "Added allpin dailymeasurement/lesson/followup requirement, source limitations, currentpublishedstatus and concrete25Novplan; existing schedules preserved.",
+          "status": "updated_successfully"
+        },
+        {
+          "type": "internal_measurement_design",
+          "path": "content/dagrapport/PIN-LEERREGISTER.json",
+          "rows": 18,
+          "status": "new register with unknown metrics, not measurement repair live"
+        },
+        {
+          "type": "conceptplan",
+          "path": "content/dagrapport/2026-11-25-plan.json",
+          "status": "idea brief, no unseen image/copy approved"
+        }
+      ],
+      "new_publications_this_followup": [],
+      "next_test": {
+        "finding": "Per-pin outcome is missing from existing measurement loop.",
+        "evidence": [
+          "pinstand default or undated zero caches, no fresh impressions/outbound/saves snapshots",
+          "lib/bsmeet.js does not send utm_content to server; fn/bs.js source and page counters are separate"
+        ],
+        "next_action": "Fetch actual provider stats first. Check existing Clickmind evidence; if per-pin landings unavailable prepare minimal separate-branch measurement change for review, with pin ID + site/page/source/day aggregate and no personal identifiers. No invented endpoint, live code or setting change.",
+        "technical_test": "Verify2distinctapprovedtestUTMIDs map to correct site/page and no doublecount; then evaluate content14to21days.",
+        "primary": "Verified organic outbound Pinterestclicks, with page-openings separately"
+      },
+      "performance_unknown": true
     }
   ],
   "current_status": {
