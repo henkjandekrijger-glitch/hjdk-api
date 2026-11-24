@@ -375,6 +375,16 @@
       "destination": "/api/wam?op=dico&f=apple"
     },
     {
+      "source": "/wam-indexnow.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "(www\\.)?wearemany\\.now"
+        }
+      ],
+      "destination": "/api/wam?op=dindexkey"
+    },
+    {
       "source": "/favicon.ico",
       "has": [
         {

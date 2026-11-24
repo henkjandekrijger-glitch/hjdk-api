@@ -49,7 +49,7 @@ test('publicatie lekt de inzending niet en weigert een ongecontroleerde samenvat
   assert.ok(calls[0][1].includes("redis.call('DEL',KEYS[1])"));
 });
 test('elk bedrijf heeft bronnen, een direct reactieformulier en een openbaar bronnenbeeld', () => {
-  const h = pagina('nl', true);
+  const h = pagina('bedrijven', true);
   assert.equal((h.match(/data-bedrijf=/g) || []).length, 10);
   assert.equal((h.match(/Bronnen en afweging<\/summary>/g) || []).length, 10);
   assert.ok(!h.includes('meer »') && !h.includes('class="pct"'));

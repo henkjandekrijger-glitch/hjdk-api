@@ -39,8 +39,8 @@ test('startpagina: script is geldig JavaScript en de ops bestaan', () => {
 });
 test('proefadres: links tussen de pagina\'s wijzen naar op=dpagina, op wearemany.now naar de korte paden', () => {
   const proef = pagina('nl', false, true), echt = pagina('nl', false, false);
-  assert.ok(echt.includes('href="/bedrijven/videoland"') && echt.includes('href="/dossiers"'));
-  assert.ok(proef.includes('href="/api/wam?op=dpagina&amp;p=bedrijven/videoland"') && proef.includes('href="/api/wam?op=dpagina&amp;p=dossiers"'));
+  assert.ok(echt.includes('href="/dossier/blendle"') && echt.includes('href="/bedrijven"'));
+  assert.ok(proef.includes('href="/api/wam?op=dpagina&amp;p=dossier/blendle"') && proef.includes('href="/api/wam?op=dpagina&amp;p=bedrijven"'));
   assert.ok(!/href="\/(nl|start|achtergrond|pers|vriendenloterij-opzeggen)["?#]/.test(proef), 'geen kort pad meer op het proefadres');
   assert.ok(pagina('pers', false, true).includes('href="https://wearemany.now/chat#henkjan"') && proef.includes('href="/api/wam?op=dpagina&amp;p=privacy"'));
 });

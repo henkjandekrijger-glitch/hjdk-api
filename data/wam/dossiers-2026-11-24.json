@@ -1,0 +1,293 @@
+{
+  "bijgewerkt": "2026-11-24",
+  "publicatie": "2026-11-24",
+  "dossiers": [
+    {
+      "id": "blendle",
+      "naam": "Blendle",
+      "soort": "eigen dossier",
+      "onderwerp": "Abonnement en afschrijvingen",
+      "uitgelicht": true,
+      "titel": "Blendle afschrijving: opgezegd, terugbetaling gevraagd",
+      "seoTitel": "Blendle afschrijving: opgezegd, geld terug gevraagd | WAM",
+      "kaartTitel": "Blendle: abonnement gestopt, ticket ‘opgelost’, €297 teruggevraagd",
+      "kort": "Blendle bevestigt de opzegging. De terugbetaling van €297 is in de gelezen correspondentie niet bevestigd. Het ticketsysteem markeerde het verzoek intussen als opgelost.",
+      "laatsteStuk": "2026-11-19",
+      "status": "Opzegging bevestigd · terugbetaling niet bevestigd",
+      "bewijsStatus": "Primaire correspondentie ingezien",
+      "bedragen": [
+        {
+          "label": "Teruggevraagd door melder",
+          "waarde": "€297"
+        },
+        {
+          "label": "Bevestigd door Blendle",
+          "waarde": "Abonnement stopgezet"
+        }
+      ],
+      "feiten": [
+        "De melder, WAM-oprichter Henkjan de Krijger, beschrijft vier jaarlijkse bedragen van €99 over 2023 tot en met 2026: samen €396. Die bedragen staan in zijn correspondentie; de bankafschriften zijn niet afzonderlijk gecontroleerd.",
+        "De terugvraag in zijn e-mails bedraagt €297 voor 2023, 2024 en 2025. De betaling uit 2026 behandelt hij afzonderlijk via zijn bank. €396 aan gemelde afschrijvingen is dus een ander bedrag dan de €297 die hij van Blendle terugvraagt.",
+        "Blendle bevestigt op 12 november 2026 dat het abonnement is stopgezet en dat er geen nieuwe betalingen volgen. In een tweede antwoord bevestigt het bedrijf dat het de betaling uit september 2026 niet opnieuw zal incasseren.",
+        "Op 16 november 2026 meldt het ticketsysteem dat het verzoek als opgelost wordt gemarkeerd. De melder schrijft op 16 en 19 november dat de terugbetaling nog niet is afgehandeld. Een gesloten ticket bewijst hier geen terugbetaling."
+      ],
+      "tijdlijn": [
+        {
+          "datum": "2026-11-09",
+          "kop": "Opzegging en terugvraag",
+          "tekst": "De melder vraagt bevestiging van de opzegging en €297 terug voor drie eerdere jaren. Hij noemt daarnaast de afschrijving uit 2026 en een inzageverzoek.",
+          "bron": "E-mail van de melder, ingezien"
+        },
+        {
+          "datum": "2026-11-12",
+          "kop": "Blendle bevestigt de beëindiging",
+          "tekst": "De klantenservice bevestigt dat het abonnement is gestopt. De terugbetaling wordt volgens het bedrijf intern onderzocht; een betaling of concrete betaaltoezegging staat niet in dit antwoord.",
+          "bron": "Inhoudelijk antwoord van Blendle, ingezien"
+        },
+        {
+          "datum": "2026-11-12",
+          "kop": "Geen nieuwe incasso van de betaling uit 2026",
+          "tekst": "In een afzonderlijk antwoord bevestigt Blendle dat de betaling uit september 2026 niet opnieuw wordt geïncasseerd. Het inzageverzoek is volgens dit antwoord in behandeling.",
+          "bron": "Tweede inhoudelijk antwoord van Blendle, ingezien"
+        },
+        {
+          "datum": "2026-11-16",
+          "kop": "Ticket wordt als opgelost gemarkeerd",
+          "tekst": "Het ticketsysteem meldt dat een reactie ontbreekt en dat het ticket als opgelost wordt gemarkeerd. De melder betwist dat dezelfde dag en verwijst naar zijn antwoord van 12 november in een ander ticket.",
+          "bron": "Systeembericht en reactie van de melder, ingezien"
+        },
+        {
+          "datum": "2026-11-19",
+          "kop": "Terugbetaling opnieuw gevraagd",
+          "tekst": "De melder herhaalt zijn verzoek om €297. Dit is de laatste gelezen uitwisseling in dit dossier. Een bankbetaling is hiermee niet vastgesteld.",
+          "bron": "E-mail van de melder, ingezien"
+        }
+      ],
+      "bronverantwoording": "De redactie heeft de correspondentie van 9 tot en met 19 november 2026 op 24 november 2026 nagelezen. Hier staan geanonimiseerde samenvattingen; de originele e-mails met account- en betaalgegevens worden niet gepubliceerd. De aangehaalde bedragen uit de melderstekst zijn niet zelfstandig met bankafschriften vergeleken.",
+      "reactieBedrijf": "Blendle heeft inhoudelijk geantwoord: de opzegging en het niet opnieuw incasseren van de betaling uit 2026 zijn bevestigd. Over de terugbetaling en het inzageverzoek meldt het bedrijf dat die in behandeling zijn. Een latere uitkomst is in de gelezen stukken niet vastgesteld.",
+      "volgendeStap": "De nog te controleren stukken zijn een eventuele latere betaalbevestiging, de bijbehorende bankboeking en het antwoord op het inzageverzoek. We werken het dossier bij zodra die informatie is gecontroleerd.",
+      "bedrijven": [
+        "Blendle"
+      ],
+      "bronnen": [
+        {
+          "naam": "Blendle · abonnement opzeggen",
+          "url": "https://www.blendle.support/hc/nl/articles/15590196604433-Mijn-abonnement-opzeggen",
+          "uitleg": "De eigen opzegwegen van Blendle. De route verschilt bij een direct abonnement, Apple of een aanbieder."
+        },
+        {
+          "naam": "Blendle · verkoop- en gebruiksvoorwaarden",
+          "url": "https://www.blendle.com/nl/conditions",
+          "uitleg": "Algemene bedrijfsinformatie. De huidige voorwaarden bewijzen niet welke voorwaarden in eerdere jaren voor deze melder golden."
+        }
+      ],
+      "vragen": [
+        {
+          "vraag": "Blendle schrijft jaarlijks geld af voor een vergeten abonnement. Welke gegevens moet ik controleren?",
+          "antwoord": "Vergelijk per afschrijving het bedrag, de periode, het bijbehorende account, de factuur en de abonnementsstatus. Controleer ook of je rechtstreeks bij Blendle betaalde of via Apple of een andere aanbieder. Bewaar de opzegbevestiging. Alleen de app verwijderen beëindigt volgens Blendle het abonnement niet.",
+          "bron": 0
+        },
+        {
+          "vraag": "Is deze Blendle-zaak opgelost?",
+          "antwoord": "De opzegging is door Blendle bevestigd op 12 november 2026. Een terugbetaling van de gevraagde €297 is in de gelezen correspondentie tot en met 19 november niet bevestigd. De redactie heeft geen latere bankboeking gecontroleerd."
+        },
+        {
+          "vraag": "Waarom staan er zowel €396 als €297 in dit dossier?",
+          "antwoord": "De melder noemt vier jaarlijkse bedragen van €99: totaal €396. Van Blendle vraagt hij €297 terug voor 2023 tot en met 2025. De betaling uit 2026 behandelt hij afzonderlijk via de bank. Een terugvraag is nog geen vastgestelde aanspraak of ontvangen terugbetaling."
+        },
+        {
+          "vraag": "Waar kan ik Blendle rechtstreeks opzeggen?",
+          "antwoord": "Blendle beschrijft de routes via Mijn Account, Apple en andere aanbieders in het eigen helpcentrum. Controleer waar jouw abonnement is afgesloten en bewaar de bevestiging. De juiste route staat bij de officiële bron.",
+          "bron": 0
+        }
+      ]
+    },
+    {
+      "id": "anp",
+      "naam": "ANP",
+      "soort": "eigen dossier",
+      "onderwerp": "Fotoclaim en kosten",
+      "uitgelicht": true,
+      "titel": "Fotoclaim van ANP: waaruit bestaat €391,29?",
+      "seoTitel": "ANP fotoclaim: €391,29 en de kosten uitgesplitst | WAM",
+      "kaartTitel": "ANP: €391,29 voor een fotoclaim, waarvan €260,04 bureaukosten",
+      "kort": "De bijlage bij een echte ANP-claim splitst €391,29 uit in vijf posten. €260,04 staat bij diensten van Visual Rights Group. We laten de rekensom, de brieven en de open vragen zien.",
+      "laatsteStuk": "2025-04-03",
+      "status": "Claim en kostenopbouw ingezien · uitkomst niet vastgesteld",
+      "bewijsStatus": "Claimbrief en bijlage 1 ingezien",
+      "bedragen": [
+        {
+          "label": "Oorspronkelijk voorstel",
+          "waarde": "€391,29"
+        },
+        {
+          "label": "Diensten Visual Rights Group",
+          "waarde": "€260,04"
+        }
+      ],
+      "kosten": [
+        {
+          "post": "Gederfde licentievergoeding voor gebruik tot één jaar",
+          "bedrag": 105
+        },
+        {
+          "post": "Verhoging wegens ontnemen beschikkingsrecht",
+          "bedrag": 26.25
+        },
+        {
+          "post": "Subtotaal vergoeding ANP",
+          "bedrag": 131.25,
+          "subtotaal": true
+        },
+        {
+          "post": "Opsporing, onderzoek en documentatie",
+          "bedrag": 209
+        },
+        {
+          "post": "Buitengerechtelijke procedurekosten",
+          "bedrag": 51.04
+        },
+        {
+          "post": "Subtotaal diensten Visual Rights Group",
+          "bedrag": 260.04,
+          "subtotaal": true
+        },
+        {
+          "post": "Totaal oorspronkelijke voorstel",
+          "bedrag": 391.29,
+          "totaal": true
+        }
+      ],
+      "feiten": [
+        "De redactie heeft de oorspronkelijke brief van 25 september 2024 en de kostenopbouw in bijlage 1 ingezien. Het gevraagde totaal van €391,29 bestaat uit €131,25 vergoeding voor ANP en €260,04 voor diensten van Visual Rights Group.",
+        "De €131,25 voor ANP bestaat volgens de bijlage uit €105 licentievergoeding en €26,25 verhoging. De €260,04 voor Visual Rights Group bestaat uit €209 voor opsporing, onderzoek en documentatie en €51,04 buitengerechtelijke procedurekosten.",
+        "In de herinnering van 7 februari 2025 en de ingebrekestelling van 3 april 2025 wordt telkens €22,50 extra genoemd. Deze berichten bewijzen dat die kosten worden gevraagd; ze bewijzen niet dat iedere post juridisch verschuldigd is.",
+        "Deze kostenopbouw hoort bij deze specifieke claim. We maken er geen algemeen tarief voor alle ANP-fotoclaims van. Betaling, een schikking of een rechterlijk oordeel over deze zaak is in de nagelezen stukken niet vastgesteld."
+      ],
+      "tijdlijn": [
+        {
+          "datum": "2024-09-25",
+          "kop": "Oorspronkelijk schikkingsvoorstel",
+          "tekst": "ANP en Visual Rights Group sturen een claimbrief over fotogebruik. Bijlage 1 noemt het totaal van €391,29 en de afzonderlijke posten.",
+          "bron": "Oorspronkelijke brief en bijlage 1, ingezien"
+        },
+        {
+          "datum": "2025-02-07",
+          "kop": "Herinnering met extra kosten",
+          "tekst": "De herinnering verwijst naar het eerdere voorstel en noemt €22,50 extra voor de herinnering.",
+          "bron": "E-mail van ANP Legal Department en herinnering, ingezien"
+        },
+        {
+          "datum": "2025-04-03",
+          "kop": "Ingebrekestelling met extra kosten",
+          "tekst": "Het bericht vraagt nogmaals betaling en noemt nogmaals €22,50. Een definitieve uitkomst volgt niet uit dit bericht.",
+          "bron": "E-mail van ANP Legal Department, ingezien"
+        },
+        {
+          "datum": "2026-11-24",
+          "kop": "Kostenopbouw voor WAM gecontroleerd",
+          "tekst": "De redactie vergelijkt de oorspronkelijke kostenbijlage met de genoemde herinneringen. De datum van deze controle is geen nieuwe claimdatum.",
+          "bron": "Redactionele controle"
+        }
+      ],
+      "bronverantwoording": "De oorspronkelijke claimbrief en de tabel in bijlage 1 zijn op 24 november 2026 nagelezen. Ook de bedrijfsberichten van 7 februari en 3 april 2025 zijn gecontroleerd. De originele stukken bevatten onder meer persoonsgegevens en toegangsgegevens en worden hier niet integraal gepubliceerd. Privéadvies en materiaal van derden zijn niet gebruikt.",
+      "reactieBedrijf": "De claimbrief bevat het standpunt van ANP en Visual Rights Group: volgens hen was voor het aangetroffen fotogebruik geen toestemming verleend. Dat is hun stelling, geen oordeel van WAM over de zaak. In een openbare reactie van 17 april 2026 schrijft ANP dat het redelijk en proportioneel handhaaft en in procedures herhaaldelijk gelijk krijgt. Een nieuwe reactie op dit openbare WAM-dossier is nog niet opgenomen.",
+      "volgendeStap": "Voor een inhoudelijk vervolg moeten de gebruikte foto, de gebruikssituatie, eventuele toestemming of licentie en de onderbouwing per kostenpost naast elkaar worden gelegd. Een eventuele latere afhandeling van deze specifieke claim moet nog worden bevestigd.",
+      "bedrijven": [
+        "ANP"
+      ],
+      "bronnen": [
+        {
+          "naam": "ANP · openbare reactie over fotoclaims",
+          "url": "https://www.villamedia.nl/artikel/ingezonden-anp-staat-voor-een-proportionele-redelijke-en-eerlijke-aanpak-van-onrechtmatig-gebruik-van-fotos",
+          "uitleg": "Eigen standpunt van ANP, gepubliceerd op 17 april 2026. Dit is algemene wederhoorcontext en geen antwoord op deze individuele zaak."
+        }
+      ],
+      "vragen": [
+        {
+          "vraag": "ANP Fair Licensing fotoclaim ontvangen. Hoe controleer ik de opbouw van het bedrag?",
+          "antwoord": "Vraag of lees de specificatie per post: de bedoelde foto en het gebruik, de licentievergoeding, eventuele verhogingen en de kosten van onderzoek of afhandeling. Leg die bedragen naast de brief en eventuele latere herinneringen. In deze specifieke bijlage is het totaal €391,29, maar andere claims kunnen anders zijn."
+        },
+        {
+          "vraag": "Waarom gaat €260,04 naar Visual Rights Group?",
+          "antwoord": "In deze kostenbijlage staat €209 voor opsporing, onderzoek en documentatie en €51,04 voor buitengerechtelijke procedurekosten: samen €260,04. Dat is de gevraagde vergoeding in deze claim, geen oordeel dat die juridisch verschuldigd is."
+        },
+        {
+          "vraag": "Is €391,29 het vaste tarief van een ANP-fotoclaim?",
+          "antwoord": "Nee. Dit bedrag staat in één specifieke brief met een eigen kostenbijlage. De gebruikte foto, licentie, gebruikssituatie en opgevoerde kosten kunnen bij een andere claim verschillen."
+        },
+        {
+          "vraag": "Wint ANP ook rechtszaken over fotogebruik?",
+          "antwoord": "ANP schrijft in zijn openbare reactie van 17 april 2026 dat rechters het herhaaldelijk in het gelijk hebben gesteld. WAM beoordeelt daarmee niet de uitkomst of verschuldigdheid in deze individuele zaak.",
+          "bron": 0
+        }
+      ]
+    },
+    {
+      "id": "hosters",
+      "naam": "hosters",
+      "soort": "onderzoek",
+      "onderwerp": "Hosting en opzeggen",
+      "uitgelicht": false,
+      "titel": "Hosting opgezegd, toch een factuur ontvangen?",
+      "seoTitel": "Hosting opgezegd, toch een factuur? | WAM",
+      "kaartTitel": "Hosters: wat gebeurt er na een opzegging?",
+      "kort": "We onderzoeken facturen en afschrijvingen na een opzegging bij webhosters. Dit is een thema in onderzoek; er is hier nog geen afzonderlijke, volledig gecontroleerde zaak gepubliceerd.",
+      "status": "Thema in onderzoek · concrete zaken verzamelen",
+      "bewijsStatus": "Officiële opzeg- en factuurinformatie gelezen",
+      "bedragen": [],
+      "feiten": [
+        "Controleer eerst welk product op de factuur staat: een domeinnaam, hosting, e-mail of een combinatie. De productnaam en de factuurperiode zijn nodig om de opzegbevestiging met de factuur te vergelijken.",
+        "Mijndomein beschrijft in zijn eigen helpcentrum situaties waarin een factuur na een opzegging kan volgen en waar je de verlengdatum controleert. Dat is bedrijfsbeleid van die aanbieder; het is geen algemene regel voor iedere hoster of iedere overeenkomst.",
+        "Hetzelfde helpcentrum maakt onderscheid tussen een domeinnaam opzeggen en alleen een hosting- of e-mailpakket wijzigen. Controleer de gevolgen voor de producten die je wilt behouden voordat je iets beëindigt.",
+        "Henkjan de Krijger was eerder medeoprichter van Mijndomein. Die zakelijke achtergrond hoort bij de context van dit onderzoek."
+      ],
+      "tijdlijn": [
+        {
+          "datum": "2026-11-24",
+          "kop": "Onderzoek afgebakend",
+          "tekst": "De redactie scheidt de vergelijking van reviewprofielen van concrete individuele zaken. De controlelijst hieronder is gebaseerd op openbare helpdeskbronnen, niet op een bewezen overtreding.",
+          "bron": "Redactionele controle"
+        }
+      ],
+      "bronverantwoording": "De hieronder gelinkte officiële helpdeskbronnen zijn op 24 november 2026 gelezen. Historische klachtenpercentages worden niet als rapportcijfer voor alle klanten gebruikt. Lezers kunnen een concrete ervaring aanleveren voor moderatie.",
+      "reactieBedrijf": "Er is voor dit thema nog geen bedrijfsspecifiek wederhoor gepubliceerd. De officiële helpdeskbronnen laten wel zien wat Mijndomein zelf over opzeggen en factureren beschrijft.",
+      "volgendeStap": "Concrete meldingen vergelijken aan de hand van product, factuurperiode, datum van opzeggen en de opzegbevestiging. Pas na controle kan een individuele zaak als dossier worden uitgewerkt.",
+      "bedrijven": [
+        "Mijndomein",
+        "STRATO GmbH",
+        "Yourhosting",
+        "Vimexx / team.blue",
+        "Hostnet"
+      ],
+      "bronnen": [
+        {
+          "naam": "Mijndomein · factuur na opzeggen",
+          "url": "https://mijndomein.zendesk.com/hc/nl/articles/360006093778-Waarom-ontvang-ik-een-factuur-nadat-ik-mijn-pakket-heb-opgezegd",
+          "uitleg": "Officiële uitleg, bijgewerkt op 9 juli 2026. Bedrijfsbeleid, geen algemene juridische conclusie."
+        },
+        {
+          "naam": "Mijndomein · domeinnaam en hosting opzeggen",
+          "url": "https://mijndomein.zendesk.com/hc/nl/articles/200371512-Een-domeinnaam-opzeggen",
+          "uitleg": "Officiële product- en opzegstappen, met onderscheid tussen domeinnaam en extra pakketten."
+        }
+      ],
+      "vragen": [
+        {
+          "vraag": "Hosting opgezegd maar toch weer een factuur ontvangen. Wat moet ik controleren?",
+          "antwoord": "Leg vier gegevens naast elkaar: het product op de factuur, de periode waarvoor wordt gefactureerd, de datum van je opzegging en de einddatum in de bevestiging. Controleer of domeinnaam, hosting en e-mail afzonderlijk lopen. Vraag de aanbieder om uitleg wanneer die gegevens niet op elkaar aansluiten.",
+          "bron": 0
+        },
+        {
+          "vraag": "Is mijn domeinnaam automatisch weg als ik hosting opzeg?",
+          "antwoord": "Dat hangt af van het product en de aanbieder. Mijndomein beschrijft bijvoorbeeld een wijziging naar alleen domeinregistratie als je hosting of e-mail wilt stoppen en de domeinnaam wilt houden. Controleer daarom eerst wat je behoudt en wat je beëindigt.",
+          "bron": 1
+        },
+        {
+          "vraag": "Wat bewijst een laag oplossingspercentage op een klachtenwebsite?",
+          "antwoord": "Het zegt iets over geregistreerde klachten en oplossingen op dat platform, binnen de vermelde periode. Het bewijst geen overtreding in jouw zaak en is geen cijfer voor alle klanten van die hoster."
+        }
+      ]
+    }
+  ]
+}
