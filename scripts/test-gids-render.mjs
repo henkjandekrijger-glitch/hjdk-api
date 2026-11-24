@@ -10,6 +10,7 @@ import * as alle from '../lib/gidsen-alle.js';
 import * as groei from '../lib/gids-groei.js';
 import * as redactie from '../lib/kadoly-redactie.js';
 import * as gidsen from '../lib/gidsen-kadoly.js';
+import * as tvreken from '../lib/tvrekenhulp.js';
 const catalog=(fs.existsSync('catalog-audit.json') ? JSON.parse(fs.readFileSync('catalog-audit.json','utf8')) : ['Witte Phalaenopsis Orchidee', 'Bloempot wit', 'Tafellamp oplaadbaar', 'Bamboe sokken', 'Kaars rood', '3D houten puzzel', 'Vaas glas', 'Serviesset beige', ...Array.from({length:25},(_,i)=>'Glazen mok '+i)].map((t,i)=>({id:'oc_'+i,t,vr:true}))).map(i=>({...i,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0}));
 for(const g of Object.values(gidsen.GIDSEN)) for(const k of g.keuze) if(k.pid&&!catalog.some(i=>i.id===k.pid)) catalog.push({id:k.pid,t:k.naam,vr:true,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0});
 for(let k=0;k<140;k++)catalog.push({id:'oc_extra'+k,t:(k%2?'Mok':'Dinerbord')+' test '+k,vr:true,p:k+1,vk:3,c:'keuken',s:'servies',lt:3,l:Date.now()});
@@ -24,6 +25,7 @@ const code=fs.readFileSync('fn/gids.js','utf8');
 const kv={get:async k=>k==='hjdk:shop:cat'?{items:catalog}:null,set:async()=>{},raw:async()=>[],mget:async(...keys)=>keys.map(()=>null)};
 const nb=Object.fromEntries([...new Set([...code.matchAll(/NB\.([\w]+)/g)].map(m=>m[1]))].map(k=>[k,/^[A-Z_]+$/.test(k)?'':k==='blok'?()=>'':k==='mailKlaar'?async()=>false:k==='blokInfo'?async()=>({}):async()=>[]]));
 const stubs={'../lib/kadoly-redactie.js':redactie,'../lib/kzux.js':{kzuxBlok:()=>''},'../lib/funnel.js':{funnelStap:async()=>null,funnelStand:async()=>({}),funnelHtml:()=>'',fnIdUitCookie:()=>null,isFnBot:()=>true,bronVan:()=>'',FN_JS:()=>''},'../lib/gidsen-alle.js':alle,'../lib/gids-indexnow.js':indexnow,'../lib/gids-catalogus.js':volledig,'../lib/db.js':{kv},'../lib/look.js':{lookNieuw:()=>''},'../lib/gidsen-kadoly.js':gidsen,'../lib/ai.js':{berichten:()=>{},HAIKU:'test'},'node:crypto':crypto,'../lib/kadoly-nieuws.js':nb,'../lib/gids-onderzoek.js':bewijs,'../lib/gids-groei.js':groei};
+stubs['../lib/tvrekenhulp.js']=tvreken;
 // Groepscadeaus horen niet bij deze SSR-proef; geen opslag, mail of betaalverkeer.
 stubs['../lib/groepscadeau.js']={gcLijst:()=>[],gcLlms:()=>'',LIVE:new Set(),gcOp:()=>{throw Error('Geen groepscadeau-acties in gidstest');}};
 const imports=[];
@@ -34,6 +36,10 @@ assert.ok((await render('slug=onderzoek-en-bronnen')).body.includes('geen onafha
 const all=(await render('slug=alle-producten')).body;assert.equal((all.match(/<tr id="product-/g)||[]).length,catalog.filter(i=>i.vr!==false).length); assert.ok(all.includes('/alle-producten'));
 const home=(await render('')).body;assert.ok(home.includes('/onderzoek-en-bronnen')); assert.ok(!home.includes('5% bij 2 producten')); assert.ok(!home.includes('eerste bestelling wordt gratis'));
 const leg=(await render('slug=houten-legpuzzel-volwassenen')).body;assert.ok(leg.includes('href="https://pubmed.ncbi.nlm.nih.gov/39842256/"'));assert.ok(leg.includes('Bronnen en beperkingen'));assert.ok(!leg.includes('snel mee klaar'));
+// 24 nov: rekenhulp tv-meubel: pagina rendert zonder JS met uitkomst, tabel, FAQPage en de link vanuit de dressoir-gids
+{ const tv=(await render('slug=tv-meubel-breedte-berekenen')).body; assert.ok(tv.includes('minstens 144 cm breed, mooi vanaf 174 cm')); assert.ok(tv.includes('<table class="tv-tab">')); assert.ok(tv.includes('"WebApplication"')); assert.ok(tv.includes('rel="canonical" href="https://gids.kadoly.com/tv-meubel-breedte-berekenen"'));
+  const tv75=(await render('slug=tv-meubel-breedte-berekenen&inch=75')).body; assert.ok(tv75.includes('minstens 167 cm breed, mooi vanaf 196 cm'));
+  if (gidsen.GIDSEN.dressoir) assert.ok((await render('slug=dressoir')).body.includes('href="/tv-meubel-breedte-berekenen"')); }
 // 24 nov: home staging (lib/gidsen-homestaging.js): elke pagina rendert, noemt de eerste keus, linkt de andere vier en heeft de AI-vraag als eerste FAQ in FAQPage.
 { const hs=await import('../lib/gidsen-homestaging.js');
   for(const slug of hs.HS_SLUGS){ const {body:h}=await render('slug='+slug); const g=gidsen.GIDSEN[slug];

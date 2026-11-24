@@ -12,6 +12,7 @@ import { kv } from '../lib/db.js';
 import { funnelStap, funnelStand, funnelHtml, fnIdUitCookie, isFnBot, bronVan, FN_JS } from '../lib/funnel.js'; // funnel per persoon (18 nov 2026)
 import { lookNieuw } from '../lib/look.js';
 import { GIDSEN, GIDS_IDS, vulPids } from '../lib/gidsen-kadoly.js';
+import { TV_PAD, TV_TITEL, tvPagina, tvLd, tvLlms, tvKern } from '../lib/tvrekenhulp.js';
 import { alleVan } from '../lib/gidsen-alle.js'; // alles van een soort onder de keuze (10 nov 2026)
 import { berichten, HAIKU } from '../lib/ai.js';
 import { createHash } from 'node:crypto';
@@ -383,6 +384,7 @@ ${g.bronnen?.length ? `<section id="bronnen"><h2>Bronnen en beperkingen</h2><p>E
 ${g.faq && g.faq.length ? `<h2 id="vragen">Veelgestelde vragen</h2>${g.faq.map(f => `<details class="faq"><summary>${esc(f.v)}</summary><div class="a"><p>${esc(f.a)}</p></div></details>`).join('')}` : ''}
 ${alleHtml(g, A)}
 <p style="margin:28px 0 0"><a class="btn deel" href="${esc(delen)}" rel="nofollow noopener">Deel deze gids via WhatsApp</a></p>
+${g.slug === 'dressoir' ? `<section class="si-sec" id="rekenhulp"><p class="eb">Rekenhulp</p><div class="si-l"><a href="${TV_PAD}"><span><b>${esc(TV_TITEL)}</b></span><i aria-hidden="true">→</i></a></div></section>` : ''}
 ${(g.cluster || []).filter(id => GIDSEN[id]).length ? `<section class="si-sec" id="meer-home-staging"><p class="eb">Meer over home staging</p><div class="si-l">${g.cluster.filter(id => GIDSEN[id]).map(id => `<a href="/${esc(id)}"><span><b>${esc(GIDSEN[id].h1)}</b></span><i aria-hidden="true">→</i></a>`).join('')}</div></section>` : ''}
 ${andere.length ? `<section class="si-sec"><p class="eb">Andere gidsen van Kadoly</p><div class="si-l">${andere.slice(0, 8).map(a => `<a href="/${esc(a.slug)}"><span><b>${esc(a.h1)}</b></span><i aria-hidden="true">→</i></a>`).join('')}</div><p style="margin:14px 0 0"><a href="/">Alle ${andere.length + 1} gidsen</a></p></section>` : ''}</article>
 ${baken(g.slug)}` + VOET(g, await armKans());
@@ -537,7 +539,7 @@ ${NF.n ? `<section class="si-sec" aria-labelledby="nieuw"><p class="eb" id="nieu
 }
 
 // 13 nov 2026 (Henkjan: verlanglijst voor alles, lootjes, cadeauzoeker; fn/w.js): eigen pagina's op deze host, met de dag van de laatste echte inhoudswijziging
-const W_PAGINAS = [{ pad: '/w', versie: 'w1', lm: '2026-11-13', naam: 'Verlanglijstje maken: één lijst voor alles, uit elke winkel' }, { pad: '/w/lootjes', versie: 'w1', lm: '2026-11-13', naam: 'Lootjes trekken online, met ieders verlanglijst' }, { pad: '/w/gedicht', versie: 'w1', lm: '2026-11-14', naam: 'Sinterklaasgedicht maken: gratis gedichtengenerator' }, { pad: '/w/zoek', versie: 'w1', lm: '2026-11-13', naam: 'Cadeauzoeker: cadeau-ideeën uit alle winkels' }];
+const W_PAGINAS = [{ pad: TV_PAD, versie: 'tv1', lm: '2026-11-24', naam: TV_TITEL }, { pad: '/w', versie: 'w1', lm: '2026-11-13', naam: 'Verlanglijstje maken: één lijst voor alles, uit elke winkel' }, { pad: '/w/lootjes', versie: 'w1', lm: '2026-11-13', naam: 'Lootjes trekken online, met ieders verlanglijst' }, { pad: '/w/gedicht', versie: 'w1', lm: '2026-11-14', naam: 'Sinterklaasgedicht maken: gratis gedichtengenerator' }, { pad: '/w/zoek', versie: 'w1', lm: '2026-11-13', naam: 'Cadeauzoeker: cadeau-ideeën uit alle winkels' }];
 async function sitemap() {
   const cat = await catalogus();
   const R = await rubrieken();
@@ -572,6 +574,7 @@ async function llms() {
   const cat = await catalogus();
   let t = '# Kadoly gids\n\n> Keuzehulpen van Kadoly (kadoly.com), een Nederlandse webshop met producten van makers. Per gids: korte keuze, prijs inclusief btw en verzending en levertijd van vandaag, waarvoor een product niet geschikt is, en antwoorden op veelgestelde vragen.\n\n';
   t += '## Volledig aanbod\n\n' + HOST + '/alle-producten\nAlle beschikbare producten per rubriek, ook buiten Nieuw.\n\n';
+  t += tvLlms(HOST) + '\n';
   t += '## Gratis hulpmiddelen\n\n' + W_PAGINAS.map(x => '- ' + x.naam + ': ' + HOST + x.pad).join('\n') + '\nVerlanglijst zonder account met links uit elke winkel (gevers vinken stiekem af), lootjes trekken met uitzonderingen en een anonieme roddelbox, een Sinterklaasgedicht op maat en een cadeauzoeker over alle winkels. In vijf talen (nl, en, de, fr, es).\n\n';
   t += GC.gcLlms(cat, HOST);
   const R = await rubrieken(); t += '## Rubrieken\n\n' + R.map(r => '- ' + r.naam + ': ' + r.n + ' producten van ' + r.merken.size + ' makers, ' + euro(r.min) + ' tot ' + euro(r.max) + ' inclusief btw en verzending, ' + HOST + '/rubriek/' + r.c).join('\n') + '\n\n';
@@ -822,6 +825,9 @@ export default async function handler(req, res) {
       await telBot(ua, slug);
       return res.status(200).send(kop(title, p ? p.kort : 'Bronnen, beperkingen en koopchecks. Wij zijn de verkoper en laten zien wat wel en niet onderzocht is.', '/' + slug, '<script type="application/ld+json">' + ld + '</script>') + body + baken(slug) + VOET(null, await armKans()));
     }
+    if (slug === TV_PAD.slice(1)) { await telBot(ua, 'tv-rekenhulp'); const cat = await catalogus(); const inch = tvKern(q.get('inch')) ? Number(q.get('inch')) : 65; // 24 nov 2026: rekenhulp tv-meubel (lib/tvrekenhulp.js)
+      if (q.get('inch')) res.setHeader('cache-control', 'public, max-age=300');
+      return res.status(200).send(kop(TV_TITEL.replace(': welk meubel past bij jouw tv?', ' voor 32 tot 98 inch'), 'Reken je tv-maat om naar de breedte van het tv-meubel: 65 inch vraagt minstens 144 cm, mooi vanaf 174 cm. Met kijkafstand, hoogte en tabel.', TV_PAD, '<script type="application/ld+json">' + tvLd(HOST, ORG) + '</script>') + tvPagina({ esc, euro, cat, thuis, leverTekst: i => 'in huis ' + nlDatum(leverDatum(i.lt)) }, inch) + baken('tv-rekenhulp') + VOET(null, await armKans())); }
     if (slug === 'alle-producten') { await telBot(ua, '_catalogus'); return res.status(200).send(await alleProducten(await armKans())); }
     if (slug === NIEUW_PAD.slice(1)) { await telBot(ua, 'nieuw'); return res.status(200).send(await nieuwPagina(await armKans())); }
     const g = GIDSEN[slug]; if (!g) { res.setHeader('cache-control', 'no-store'); return res.status(404).send(kop('Niet gevonden', 'Deze gids bestaat niet.', '/', '') + '<h1>Deze gids bestaat (nog) niet</h1><p><a href="/">Naar alle gidsen</a></p>' + VOET(null, 0.5)); }
