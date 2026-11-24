@@ -32,6 +32,7 @@ test('onbekende nachttijden zijn geen etmaal, geen schema en geen gesloten claim
  assert.equal(H.statusNu(r,Date.parse('2026-11-24T16:00:00Z')),null);
  assert.equal(H.ohSchema(r).length,1);
  assert.doesNotMatch(H.weekRegel('nl',r),/di|00:00/);
+ const deels=H.rooster({mon:'09:00-17:00',wed:'09:00-17:00'});assert.equal(H.statusNu(deels,Date.parse('2026-11-23T22:00:00Z')),null);
 });
 test('bevestigd 24 uur en echte nachtdienst blijven behouden',()=>{
  const r=H.rooster({mon:'Open 24 hours'});const s=H.statusNu(r,Date.parse('2026-11-23T16:00:00Z'));
@@ -73,7 +74,7 @@ const I={at:'2026-10-22T00:00:00Z',totaal:3,cats:{'pizza-restaurant':{n:3,en:'Pi
 globalThis.__CUR_FIXTURES={'cw/gids/index.json':I,'cw/gids/namen.json':[[pv.naam,'pizza-restaurant',pv.id,'Willemstad',4.8,374]]};
 test('echte productie-renderer voegt bronnen en feiten toe zonder rating-schema van derden',async()=>{
  const h=C.renderGidsBedrijf('nl',I,'pizza-restaurant',[bedrijf],bedrijf);
- assert.match(h,/In het kort/);assert.match(h,/vegan/);assert.match(h,/Tripadvisor/);assert.match(h,/href="https:\/\/curacao.day\/nl\/pizza"/);
+ assert.match(h,/In het kort/);assert.match(h,/Basisvolgorde/);assert.match(h,/vegan/);assert.match(h,/Tripadvisor/);assert.match(h,/href="https:\/\/curacao.day\/nl\/pizza"/);
  assert.match(h,/hreflang="en" href="https:\/\/curacao.day\/en\/businesses\/pizza-restaurant\/pizzarroni"/);
  const data=[...h.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(x=>JSON.parse(x[1]));
  assert.equal(JSON.stringify(data).includes('aggregateRating'),false);

@@ -1,4 +1,48 @@
 {
   "versie": 1,
-  "rondes": [{"dag":"2026-11-23","id":"bedrijf-kern-20261123","soort":"technische_correctie_en_bronkoppeling","gsc_paginaoverzicht_28d":{"vertoningen":19413,"kliks":276,"bedrijven":{"vertoningen":16721,"kliks":192}},"opgehaald":"2026-11-24T00:06:00Z","groei_bewezen":false,"volgende_toets":["2026-12-07","2026-12-21"],"werking":"docs/curacao-bedrijven-groei.md"}]
+  "rondes": [
+    {
+      "dag": "2026-11-23",
+      "id": "bedrijf-kern-20261123",
+      "soort": "technische_correctie_en_bronkoppeling",
+      "gsc_paginaoverzicht_28d": {
+        "vertoningen": 19413,
+        "kliks": 276,
+        "bedrijven": {
+          "vertoningen": 16721,
+          "kliks": 192
+        }
+      },
+      "opgehaald": "2026-11-24T00:06:00Z",
+      "groei_bewezen": false,
+      "volgende_toets": [
+        "2026-12-07",
+        "2026-12-21"
+      ],
+      "werking": "docs/curacao-bedrijven-groei.md"
+    },
+    {
+      "dag": "2026-11-23",
+      "id": "bedrijf-broncheck-20261123",
+      "at": "2026-11-24T00:39:05.639Z",
+      "broncheck": {
+        "paginas": 13,
+        "bedrijven": 11906,
+        "categorieen": 1344,
+        "gewijzigd": 0,
+        "profielen_aangevuld": 324
+      },
+      "live_koppeling": {
+        "zaken": 323,
+        "hoofdadressen": 646,
+        "gidsen": 14
+      },
+      "live_gecontroleerd": [
+        "https://curacao.day/nl/bedrijven/pizza-restaurant/pizzarroni",
+        "https://curacao.day/nl/bedrijven/fast-food-restaurant/the-flakos-grill",
+        "https://curacao.day/nl/bedrijven/fast-food-restaurant"
+      ],
+      "bewijs": "HTTP200, server-HTML, NL/EN-taalretour, kern, sitemapdatum; geen SEO-groei uit afgeleid"
+    }
+  ]
 }
