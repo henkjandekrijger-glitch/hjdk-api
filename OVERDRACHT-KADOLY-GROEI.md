@@ -71,7 +71,7 @@ Streefcijfers per week (organisch, Clickmind). Stel ze bij na week 1 met de echt
 - **Positionering.** Kadoly is een webshop van onafhankelijke merken voor alles. Cadeauvragen zijn een goede ingang, maar noem Kadoly nooit een cadeauwinkel.
 - **Per medium.** Elk medium krijgt een stuk dat daarvoor gemaakt is, niet een tekstje dat overal hetzelfde is. Leer per medium.
 - **Clickmind in elke link**, behalve op Pinterest:
-  - vorm: `go.kadoly.com/o?k=<kanaal>&p=<pid>&c=<post>` (b=<pakket> voor een pakket);
+  - vorm: korte link `go.kadoly.com/o/<code>` uit `https://hjdk-api-henq.vercel.app/api/shop?op=orgkort&k=<kanaal>&p=<pid>&c=<post>&vorm=tekst` (b=<pakket> voor een pakket; sinds 24 nov, nooit meer de lange vorm met ?k= in een post); profiel- en biolinks: `go.kadoly.com/o/<kanaal>` (ig, tt, fb ...);
   - kanalen: fb, ig, pin, tt, th, x, li, yt, tg, wa, gbp, nb, bs, rd, g;
   - Pinterest linkt direct naar kadoly.com met utm (zie de social-overdracht), want doorstuurlinks ziet Pinterest als spam;
   - op gids.kadoly.com lopen de links via `/naar` en `op=gidsuit`.
@@ -327,7 +327,7 @@ Vraag ze één voor één, in deze volgorde, en alleen als het werk erop wacht.
 6. Komt er een WhatsApp-kanaal Kadoly vanuit zijn nummer?
 7. Mogen we zijn Facebook-vrienden uitnodigen om de Kadoly-pagina te volgen? (stond al open)
 8. Koppelt hij TikTok en YouTube in Zernio? (zijn stap; geef de link)
-9. Zet hij de Instagram-biolink `go.kadoly.com/o?k=ig&c=bio` in de app? (zijn stap)
+9. Zet hij de Instagram-biolink `go.kadoly.com/o/ig` in de app? (zijn stap)
 10. Komt er 10% tegoed voor een tweede aankoop? (stond al open in de hoofdchat)
 
 ## 12. Toegang die het groei-account nodig heeft

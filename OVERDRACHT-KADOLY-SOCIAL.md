@@ -34,7 +34,7 @@ Dit is een eenmalige extra proef met de drie goedgekeurde ontwerpen. Vaste frequ
 ## 2. Accounts (allemaal in Zernio, profiel Kadoly `6afaf9820c09220040d746f4`)
 
 - Facebook-pagina Kadoly: https://www.facebook.com/profile.php?id=61596079596846 (pagina-id 122111228361535986). Zernio account_id `6afafaf7446856cecd87324f`. Gebruikersnaam `kadolyshop` gaf Facebook nog niet (nieuwe pagina); de dagronde probeert het elke maandag.
-- Instagram @kadoly.shop, zakelijk, ig-id 17841476967447591. Zernio account_id `6afb8787a26245ebf04dc7be`. Biolink hoort te zijn `https://go.kadoly.com/o?k=ig&c=bio` (alleen in de app te zetten door Henkjan). Clickmind telt nog geen enkele biolinkklik: nakijken of hij er staat.
+- Instagram @kadoly.shop, zakelijk, ig-id 17841476967447591. Zernio account_id `6afb8787a26245ebf04dc7be`. Biolink hoort te zijn `https://go.kadoly.com/o/ig` (alleen in de app te zetten door Henkjan). Clickmind telt nog geen enkele biolinkklik: nakijken of hij er staat.
 - Pinterest kadolyshop (account Kadoly, nieuw sinds 16 nov). Zernio account_id `6afb8a5d86e8bb18f844fc95`. Borden: Sieraden 271060540011940606 (standaard), Wonen en decoratie 271060540011940607, Cadeau-ideeën 271060540011940609, Hobby en creatief 271060540011940610.
 - Oud Pinterest-account kadoly_shop (henkjan@kadoly.com): niet meer voor posts gebruiken. Daar staan nog Business Manager 450008325174655399, advertentierekening 549763863238 en campagne KADOLY PIN NL verkeer. Pas verwijderen als dat naar kadolyshop is overgezet.
 - Zernio: accounts 1 en 2 gratis, 3 tot 10 kosten $6 per maand per account. Betaalmethode heeft Henkjan op 16 nov toegevoegd. Op hetzelfde Zernio-account staan ook curacao.day en MyLevel (andere profielen); raak die niet aan.
@@ -49,7 +49,7 @@ Dit is een eenmalige extra proef met de drie goedgekeurde ontwerpen. Vaste frequ
 - **Producten**: `https://hjdk-api-henq.vercel.app/api/shop?op=kies&kort=1` (tractie, zonder wat elders goedkoper of uitverkocht is, met `beeld` 1080x1350) en voor sieraden `op=zoek&kort=1&q=ring,ketting,oorbel,...`. Beeld: `https://keuzehulp.best/api/shop/img?p=<pid>&t=ig` (1080x1350) of `t=sq` (1080x1080).
 - **Tekst**: Nederlands, kort, alleen feiten van de productpagina, geen prijs, geen levertijd, geen gedachtestreepjes, 3 tot 5 hashtags. Kadoly is een webshop voor alles, nooit als cadeauwinkel neerzetten.
 - **Meten via Clickmind** (Henkjan 16 nov: "zorg dat alles via clickmind loopt" en "leren met clikmind !"):
-  - Facebook-links: `https://go.kadoly.com/o?k=fb&p=<pid>&c=<post>` (post = dag-soort, bijv. 1118-nieuw; video's `v-<id>`). Instagram: "Link in bio" met `go.kadoly.com/o?k=ig&c=bio`.
+  - Facebook-links: korte link `go.kadoly.com/o/<code>` uit `https://hjdk-api-henq.vercel.app/api/shop?op=orgkort&k=fb&p=<pid>&c=<post>&vorm=tekst` (sinds 24 nov; de lange vorm met ?k= werkt nog maar komt niet meer in posts; post = dag-soort, bijv. 1118-nieuw; video's `v-<id>`). Instagram: "Link in bio" met `go.kadoly.com/o/ig`.
   - Route: `vercel.json` stuurt `/o` naar `fn/shop.js` `op=org`. Die telt per dag `org:d:<dag>` (`k|uit`, `k|profiel`, `k|voorbeeld`), per post `org:p:<post>`, en geeft de klik aan `direct()` met net `x`, zone `o<kanaal>` en camp `<post>`. Zo meet Clickmind de hele keten per kanaal en per post: kliks, echt mens, actie, mandje, koop. Linkvoorvertoningsbots krijgen een 302 zonder telling.
   - Kanaalcodes (`KAN_ORG`): fb, ig, pin, tt, th, x, li, yt, tg, wa, gbp, nb, bs, rd. Een nieuw kanaal is alleen een nieuwe `k=`.
   - Stand: `https://keuzehulp.best/api/shop/orgstand` (openbaar, alleen totalen; `?dagen=` tot 30).
@@ -67,7 +67,7 @@ Dit is een eenmalige extra proef met de drie goedgekeurde ontwerpen. Vaste frequ
 
 1. **Firewall kadoly.com** (grootste blokkade): de CloudFront/AWS WAF van kadoly.com geeft 403 aan bots (Pinterest, Pinterestbot, facebookexternalhit, Twitterbot, bingbot), browsers krijgen 200. Gevolg: Pinterest kan kadoly.com niet claimen en de feed `https://kadoly.com/pinterest.xml` niet lezen, Facebook en Pinterest tonen geen linkvoorvertoning en Bing kan de shop niet lezen. Nodig: een allow-regel voor die bots vóór de botregel, door de beheerder van kadoly.com (gevonden door distributie-chat, 20 nov 12:56 UTC).
 2. **Pinterest claim en catalogus** (na punt 1): kadoly.com opnieuw claimen op kadolyshop (meta-tag `p:domain_verify` 04b613fe3ca1840528bcedd649e8f946 staat al in de kop), dan catalogus Kadoly NL (4868048294986) koppelen aan de feed. Daarna advertentierekening en campagne van kadoly_shop overzetten.
-3. **Instagram-biolink** nakijken (Henkjan, in de app): `go.kadoly.com/o?k=ig&c=bio`.
+3. **Instagram-biolink** nakijken (Henkjan, in de app): `go.kadoly.com/o/ig`.
 4. **Besluit Henkjan**: Facebook en Instagram doorgaan, alleen reels, of stilzetten (zie 1).
 5. **Besluit Henkjan**: mogen we zijn Facebook-vrienden uitnodigen om de Kadoly-pagina te volgen (snelste manier aan de eerste volgers)?
 6. **Centrale hub** voor alle kanalen van alle projecten via Clickmind (ontwerp 16 nov: één kanaalregister, één post-wachtrij, kruisposten, leren per kanaal, soort en tijdvak): wacht op Henkjans go. De meting (`op=org`, `KAN_ORG`) staat al klaar voor elk kanaal.

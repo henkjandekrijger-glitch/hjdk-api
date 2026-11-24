@@ -86,6 +86,7 @@ async function lokkerStand() { // betaalde bestellingen met een lokker sinds de 
 const LAND = () => (process.env.SHOP_LAND || 'https://keuzehulp.best').replace(/\/$/, '');
 const SHOP = 'https://kadoly.com/shop';
 // Terugmeldlinks per netwerk (PB) staan in lib/shopdirect.js. Clickadu: zet de link in SHOP_PB_CLICKADU met {clickid} op de plek van de klik-id.
+const ORG_ABC = 'bcdfghjkmnpqrstvwxz23456789'; // korte organische links (op=orgkort, 24 nov)
 const KAN_ORG = { fb: 'facebook', ig: 'instagram', pin: 'pinterest', tt: 'tiktok', th: 'threads', x: 'x', li: 'linkedin', yt: 'youtube', tg: 'telegram', wa: 'whatsapp', gbp: 'google-business', nb: 'nieuwsbrief', bs: 'bluesky', rd: 'reddit', g: 'gids' }; // organische kanalen (op=org, 16 nov); g = gids.kadoly.com (op=gidsuit, 21 nov)
 // stand van het organische verkeer via Clickmind (op=orgstand en op=socoverdracht): kliks per dag, keten per kanaal en per post
 async function orgStand(kv, n) {
@@ -1375,6 +1376,22 @@ export default async function handler(req, res) {
     if (op === 'keten') { // openbaar, alleen totalen: de lekketen van de shop richting de kassa per dag (?dag=JJJJ-MM-DD, ?vorm=tekst)
       const { lekketen, ketenTekst } = await import('../lib/shopketen.js'); const dg = /^\d{4}-\d{2}-\d{2}$/.test(url.searchParams.get('dag') || '') ? url.searchParams.get('dag') : DAY(); const kt = await lekketen(kv, dg);
       res.setHeader('cache-control', 'no-store'); if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(ketenTekst(kt)); } return res.status(200).json(kt); }
+    if (op === 'orgkort') { /* 24 nov (Henkjan: "Moeten veel korteren clickmind links zijn", "Voer overal door"): korte link go.kadoly.com/o/<5 tekens> voor k, p, c, b van op=org; dezelfde invoer geeft altijd dezelfde code. ?vorm=tekst geeft alleen de link */
+      const k = KAN_ORG[url.searchParams.get('k')] ? url.searchParams.get('k') : ''; if (!k) return res.status(400).json({ ok: false, fout: 'k is een van: ' + Object.keys(KAN_ORG).join(', ') });
+      const b = soortVan(String(url.searchParams.get('b') || '')) ? String(url.searchParams.get('b')) : '', p = b ? '' : pidOk(url.searchParams.get('p')), c = String(url.searchParams.get('c') || '').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 40);
+      const sleutel = 'org:kortv:' + createHash('sha1').update([k, p, c, b].join('|')).digest('hex').slice(0, 20);
+      let code = await kv.get(sleutel);
+      if (!code) { for (let i = 0; i < 6 && !code; i++) { let x = ''; const r = randomBytes(5); for (let j = 0; j < 5; j++) x += ORG_ABC[r[j] % ORG_ABC.length]; if (!/[2-9]/.test(x) || await kv.get('org:kort:' + x)) continue; code = x; }
+        if (!code) return res.status(503).json({ ok: false, fout: 'geen vrije code' });
+        await kv.set('org:kort:' + code, { k, p, c, b }, { ex: 400 * 86400 }); await kv.set(sleutel, code, { ex: 400 * 86400 }); }
+      const kort = 'https://go.kadoly.com/o/' + code; res.setHeader('cache-control', 'no-store');
+      if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(kort); }
+      return res.status(200).json({ ok: true, kort, code, k, p, c, b }); }
+    if (op === 'org' && url.searchParams.get('kort')) { /* korte link: /o/<kanaal> = profiel- of biolink van dat kanaal, /o/<code> = opgeslagen k, p, c, b */
+      const kc = String(url.searchParams.get('kort')).toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 5);
+      const v = KAN_ORG[kc] ? { k: kc, c: 'bio' } : await kv.get('org:kort:' + kc).catch(() => null);
+      if (!v) { res.statusCode = 302; res.setHeader('location', 'https://kadoly.com/'); res.setHeader('cache-control', 'no-store'); return res.end(); }
+      for (const n of ['k', 'p', 'c', 'b']) { if (v[n]) url.searchParams.set(n, v[n]); else url.searchParams.delete(n); } }
     if (op === 'org') { // 16 nov (Henkjan: "zorg dat alles via clickmind loopt"): organische kanalen (k = fb, ig, pin, tt, th, x, li, yt, tg, wa, gbp, nb) naar een product via Clickmind, zodat de keten tot betaald per kanaal (org:d:<dag>) en per post (c, org:p:<post>) gemeten wordt. Linkvoorbeelden (Facebook, WhatsApp, Pinterest ...) gaan door zonder klik te tellen, anders geen titel en foto in de post.
       const KAN = KAN_ORG;
       const k = KAN[url.searchParams.get('k')] ? url.searchParams.get('k') : 'x'; const pk = soortVan(String(url.searchParams.get('b') || '')); const pid = pk ? pk.kern[0] : pidOk(url.searchParams.get('p')); /* b = pakket (21 nov), naar kadoly.com/pakket/<slug>; 22 nov: commentaar stond voor de rest van de regel, waardoor post en ua niet bestonden en elke organische link 'post is not defined' gaf */

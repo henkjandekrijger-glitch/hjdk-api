@@ -751,6 +751,10 @@
       "destination": "/api/shop?op=org"
     },
     {
+      "source": "/o/:kort([a-z0-9]{2,5})",
+      "destination": "/api/shop?op=org&kort=:kort"
+    },
+    {
       "source": "/",
       "has": [
         {
@@ -3023,7 +3027,7 @@
       "permanent": true
     },
     {
-      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:bundel|pakketten|pakkethtml|gmclabels|ttvideo|ttfeed|chatgpt|beeld/|prijslijst|tlogo)|shop$|o$).+)",
+      "source": "/((?!cm\\.js$|mmm\\.js$|api/mm/|api/shop/(?:bundel|pakketten|pakkethtml|gmclabels|ttvideo|ttfeed|chatgpt|beeld/|prijslijst|tlogo)|shop$|o$|o/[a-z0-9]{2,5}$).+)",
       "has": [
         {
           "type": "host",
