@@ -113,6 +113,8 @@ Voorstel cijfer per bedrijf (1 tot 10): antwoord 3 punten (binnen 15 dagen), opl
 
 ## Logboek (nieuwste bovenaan)
 
+- 23 nov 2026: conceptverhaal vanuit support en PR geschreven in docs/wam-waarom-afpoeieren-2026-11-23.md, met korte voorkanttekst, productlessen en primaire bronnen. Eerdere volmachtlinks over SignalConso zijn onjuist; 85% in het DGCCRF-persbericht 2024 betreft gelezen meldingen, geen causaal bewijs of percentage voor WAM. CFPB-vijftiendagentermijn is sectorspecifiek. Nog bouwen: controleerbare uitkomsten, opvolging en bewijscontrole; eerste versie bewaart geen uploads. Geen websitepublicatie of externe berichten in deze ronde.
+
 - 23 nov 2026: bronregels bij tien bedrijven en directieblokken in het ontwerp aangevuld. Ontwerpwijziging j.txt (sha1 f90ec3ceed2f32e658e3d327a68ed87db61d1a30, 22778 bytes); bronnenbestand /bronnen.json. UI gebruikt bestaande lettergroottes en zwart-wit; details staan buiten de hoofdlink. Inline-script syntaxis en HTML-interactiestructuur gecontroleerd. Dezelfde bronregels, bronfeiten en HTML-bron staan nu op codex/wam-bronnen-20261123. Henkjan gaf schrijftoestemming. Geen wijziging aan hjdk-api/main door deze ronde. De actuele hoofd-overdracht meldt dat stap 1 inmiddels live staat; oudere branch-overdracht is op dat punt achterhaald.
 
 - 23 nov 2026: live op main op Henkjans woord ("Ja zet live"). Pagina's blijven noindex. Volgende: de voorkant meer inhoud geven (voorstel ligt bij Henkjan).
