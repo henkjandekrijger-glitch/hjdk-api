@@ -333,3 +333,6 @@ for(const id of ['oc_4174003378864129','oc_4174003512573953','oc_417400337176985
 assert.ok((await render('slug=onderzoek-en-bronnen')).body.includes('href="/tv-meubel-breedte-berekenen"'));
 assert.ok(!(await render('slug=nieuw-bij-kadoly')).body.includes('verzending, ;'));
 console.log('24nov: plantenbron/schema/modelgrenzen, bronhubontdekking en Nieuw-interpunctie geslaagd.');
+
+for (const op of ['llms','llmsfull']) {const tekst=(await render('op='+op)).body;assert.ok(tekst.includes('tv-meubel-breedte-berekenen'));assert.ok(tekst.includes('geen fysieke passendheids- of veiligheidscheck'));}
+console.log('24nov: tv-rekenhulp en passende beperkingen staan in beide LLM-bestanden.');
