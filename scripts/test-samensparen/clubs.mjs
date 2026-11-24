@@ -82,3 +82,9 @@ ok(st.totaal.verstuurd===1&&st.totaal.aan===1&&st.perOnderwerp.o0.succes===1&&st
   const t = Date.now(), r = await C.vindOsm(30000); ok(r.ok === true && r.nieuw === 1 && Date.now() - t < 3000, 'osm: werkende server wint van dode servers ' + JSON.stringify(r));
   globalThis.fetch = async () => new Response(JSON.stringify({ elements: [], remark: 'runtime error: Query timed out in "query" at line 1 after 101 seconds.' }), { status: 200 });
   const r2 = await C.vindOsm(30000), oo = await kv.get('cw:osm'); ok(r2.ok === false && !(oo.leeg && oo.leeg[r2.provincie]) && oo.mis[r2.provincie] === 1, 'osm: remark telt als mislukt, niet als leeg ' + JSON.stringify(r2)); }
+// vindOsm: twee lichte delen per provincie (clubs, dan sport met eigen naamfilter); de provincie telt pas als beide binnen zijn (24 nov 2026)
+{ await kv.set('cw:osm', { next: 1, n: 5, per: { 'NL-ZH': 5 }, leeg: {} }); const vragen = [];
+  globalThis.fetch = async (u, o) => { const b = decodeURIComponent(String(o.body)); vragen.push(b); const sp = /nwr\["sport"\]/.test(b);
+    return new Response(JSON.stringify({ elements: sp ? [{ type: 'way', id: 21, tags: { name: 'Tennisvereniging Deeltest', sport: 'tennis', website: 'https://tv-deeltest.nl' } }, { type: 'way', id: 22, tags: { name: 'Sportpark Zuid', sport: 'soccer', website: 'https://sportparkzuid-test.nl' } }] : [{ type: 'node', id: 20, tags: { name: 'v.v. Deeltest', club: 'sport', sport: 'soccer', website: 'https://vv-deeltest.nl' } }] }), { status: 200 }); };
+  const a = await C.vindOsm(30000), tussen = await kv.get('cw:osm'), b = await C.vindOsm(30000), na = await kv.get('cw:osm');
+  ok(a.deel === 'c' && a.nieuw === 1 && tussen.per['NL-NH'] == null && b.deel === 's' && b.provincie === 'NL-NH' && b.nieuw === 1 && na.per['NL-NH'] === 2 && !/~/.test(vragen.join('')), 'osm: twee delen, naamfilter bij ons ' + JSON.stringify([a, b])); }
