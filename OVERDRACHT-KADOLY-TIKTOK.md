@@ -38,6 +38,9 @@ Waarom: 17 tot 23 nov €145 voor 2 verkopen met samen €12,47 marge (losse pro
 6. Meer en betere advertenties: elke uitgezette advertentie wordt in dezelfde ronde vervangen door een nieuwe met een andere haak voor hetzelfde pakket (video via kadoly-video `/api/advideo`, sectie 2), zodat er steeds 8 lopen. Haken: wie het voor is (mama, zus, collega, lootje), het moment (avond, eerste advent, Sinterklaas), het probleem (kale hoek, geen open haard). Tekst en beeld moeten kloppen: geen tekst over vuur op een foto van iets anders, geen planten of kaarsen beloven die er niet bij zitten. Geen prijs, geen levertijd, geen nep-urgentie.
 7. Elke ronde met een wijziging: één regel in het werklog (wie=tiktok-pakkettest). Bericht aan Henkjan alleen bij een verkoop, bij het stoppen van een pakket of bij de eindstand.
 
+## 1c. SIERADEN (vanaf 24 nov 2026)
+Henkjan 24 nov: "3 . Ja . bij 20 eruit zonder verkoop test ads zoveel mogelijk ." Campagne KADOLY SIERADEN NL 1882740270490866, groep NL 25+ sieraden afrekenpagina 1882740262442082 (€ 20 per dag, 25+, optimaliseert op INITIATE_ORDER, avond en dag zoals de pakkettest). 20 advertenties sier_<naam>_a (cadeau voor haar) en _b (kerst) voor tien sieraden met € 10,54 tot € 12,87 marge (lijst in lib/whop.js SIER). Regel: € 20 uitgegeven zonder verkoop = groep uit. Kost een advertentie € 4 zonder één afrekenpagina, dan die advertentie uit en een nieuwe haak erbij. Saldo was 24 nov € 0: loopt pas na opwaarderen. Bedrijfsverificatie 24 nov 11:49 UTC opnieuw ingediend (KVK-uittreksel als Official Business Register Extract).
+
 ## 2. TikTok Ads
 
 Account Kadoly NL `7708796437043265537` (prepaid, valuta EUR, "Automatic payment paused": saldo bijvullen doet Henkjan; 20 nov ochtend €30 via PayPal). Werken via de MCP TikTok_for_Business (`tool_execute`, `report_integrated_get`).
