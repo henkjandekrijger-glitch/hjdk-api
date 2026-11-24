@@ -12,7 +12,7 @@ import { kv } from '../lib/db.js';
 import { funnelStap, funnelStand, funnelHtml, fnIdUitCookie, isFnBot, bronVan, FN_JS } from '../lib/funnel.js'; // funnel per persoon (18 nov 2026)
 import { lookNieuw } from '../lib/look.js';
 import { GIDSEN, GIDS_IDS, vulPids } from '../lib/gidsen-kadoly.js';
-import { TV_PAD, TV_TITEL, tvPagina, tvLd, tvLlms, tvKern } from '../lib/tvrekenhulp.js';
+import { TV_PAD, TV_TITEL, TV_MEUBELS, tvPagina, tvLd, tvLlms, tvKern } from '../lib/tvrekenhulp.js';
 import { alleVan } from '../lib/gidsen-alle.js'; // alles van een soort onder de keuze (10 nov 2026)
 import { berichten, HAIKU } from '../lib/ai.js';
 import { createHash } from 'node:crypto';
@@ -741,16 +741,19 @@ export default async function handler(req, res) {
       if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const st = await funnelStand(Math.min(60, Number(q.get('dagen')) || 7), Math.min(300, Number(q.get('n')) || 60)); res.setHeader('cache-control', 'no-store');
       if (q.get('vorm') === 'json') return res.status(200).json(st); res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(funnelHtml(st)); }
-    if (op === 'tel') { const g = String(q.get('g') || ''); const s = String(q.get('s') || '').replace(/[^a-z0-9-]/g, '').slice(0, 30); if ((GIDSEN[g] || ONDERZOEK.some(p => 'onderzoek-' + p.id === g) || g === 'onderzoek-en-bronnen' || g === '_home' || g === '_zoek' || g === '_nieuw' || g === 'catalogus' || /^r-[a-z0-9-]{2,30}$/.test(g) || (/^red-/.test(g) && (RED.ART[g.slice(4)] || g === 'red-_overzicht'))) && s && !isBot(ua)) { await tel(g, s); if (/^v-/.test(s) && (GIDSEN[g] || /^r-/.test(g) || g === '_home')) { try { await kv.raw(['HINCRBY', 'gk:p:' + (g === '_home' ? 'home' : g), '_v', '1']); await kv.raw(['EXPIRE', 'gk:p:' + (g === '_home' ? 'home' : g), String(120 * 86400)]); } catch (e) {} } } return res.status(204).end(); }
+    if (op === 'tel') { const g = String(q.get('g') || ''); const s = String(q.get('s') || '').replace(/[^a-z0-9-]/g, '').slice(0, 30); if ((GIDSEN[g] || g === 'tv-rekenhulp' || ONDERZOEK.some(p => 'onderzoek-' + p.id === g) || g === 'onderzoek-en-bronnen' || g === '_home' || g === '_zoek' || g === '_nieuw' || g === 'catalogus' || /^r-[a-z0-9-]{2,30}$/.test(g) || (/^red-/.test(g) && (RED.ART[g.slice(4)] || g === 'red-_overzicht'))) && s && !isBot(ua)) { await tel(g, s); if (/^v-/.test(s) && (GIDSEN[g] || g === 'tv-rekenhulp' || /^r-/.test(g) || g === '_home')) { try { await kv.raw(['HINCRBY', 'gk:p:' + (g === '_home' ? 'home' : g), '_v', '1']); await kv.raw(['EXPIRE', 'gk:p:' + (g === '_home' ? 'home' : g), String(120 * 86400)]); } catch (e) {} } } return res.status(204).end(); }
     if (op === 'kies') { const c = String(q.get('c') || '').replace(/[^a-z0-9-]/g, '').slice(0, 30), sb = String(q.get('s') || 'alle').replace(/[^a-z0-9-]/g, '').slice(0, 30), b = ['u25', '25-50', 'o50'].includes(q.get('b')) ? q.get('b') : 'alle', t = ['snel', 'week'].includes(q.get('t')) ? q.get('t') : 'alle';
       const r = await kies(c, sb, b, t); if (!r) return res.status(404).json({ ok: false });
       if (!isBot(ua)) { try { const d = 'gk:zq:' + DAG(); await kv.raw(['HINCRBY', d, 'k|' + [c, sb, b, t].join('|'), '1']); if (r.eerlijk) await kv.raw(['HINCRBY', d, '0|k|' + [c, sb, b, t].join('|'), '1']); await kv.raw(['EXPIRE', d, String(90 * 86400)]); } catch (e) {} }
       res.setHeader('cache-control', 'no-store'); return res.status(200).json(Object.assign({ ok: true }, r)); }
     if (op === 'pidgids') { // 24 nov 2026: per product de gidsen waarin het staat, voor links op de productpagina van kadoly.com (TAAK G, lib/shopprompt.js)
-      const { gidsenPerPid } = await import('../lib/openaifeed.js'); const m = gidsenPerPid(GIDSEN); const lev = LEVENDE(); const ok = new Set(lev);
+      const { gidsenPerPid } = await import('../lib/openaifeed.js');
+      const tvSlug = TV_PAD.slice(1);
+      const m = gidsenPerPid({ [tvSlug]: { h1: TV_TITEL, keuze: TV_MEUBELS }, ...GIDSEN });
+      const lev = LEVENDE(); const ok = new Set([...lev, tvSlug]);
       for (const k of Object.keys(m)) { m[k] = m[k].filter(x => ok.has(x.slug)); if (!m[k].length) delete m[k]; }
       res.setHeader('cache-control', 'public, max-age=900, s-maxage=3600'); res.setHeader('access-control-allow-origin', '*');
-      return res.status(200).json({ ok: true, bijgewerkt: new Date().toISOString(), gidsen: lev.length, producten: Object.keys(m).length, perProduct: m }); }
+      return res.status(200).json({ ok: true, bijgewerkt: new Date().toISOString(), gidsen: lev.length, hulpmiddelen: 1, producten: Object.keys(m).length, perProduct: m }); }
     if (op === 'zoek') { const v = String(q.get('q') || '').replace(/\s+/g, ' ').trim().slice(0, 160);
       if (q.get('log') === '1') { res.setHeader('cache-control', 'no-store'); if (!isBot(ua) && v) { const r = await zoek(v, 8); await logZoek(r.k, !r.producten.length && !r.gidsen.length, String(q.get('g') || '')); } return res.status(204).end(); }
       if (q.get('f') === 'json') { res.setHeader('cache-control', 'public, max-age=60, s-maxage=300'); const r = await zoek(v, 8); return res.status(200).json({ ok: true, h: r.h, producten: r.producten, gidsen: r.gidsen }); }

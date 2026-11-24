@@ -373,6 +373,13 @@ Vraag ze één voor één, in deze volgorde, en alleen als het werk erop wacht.
 
 ## Dagupdates (nieuwste bovenaan)
 
+### Organisch vervolg dinsdag 24 november 2026
+
+- Henkjans woonanalyse verwerkt: eerst ontdekking en indexering van bestaande pagina's, daarna verdere kunstplantencontent. De tv-rekenhulp en home-stagingpagina's niet gedupliceerd. Google toont in de actuele meting 7 vertoningen in 28 dagen, niet per dag. Indexinspectie van 23 november: 6 van 67 bekeken URLs; sitemap op 24 november bevat 71 URLs. Deze verschillende momenten niet als indexverlies vergelijken.
+- Twee fouten gerepareerd bij de bestaande [tv-rekenhulp](https://gids.kadoly.com/tv-meubel-breedte-berekenen): de link ontbreekt niet langer in de export voor de vijf bijbehorende meubels, en het tel-eindpunt registreert nu bezoek en maatkeuzes. Beide routes getest met lokale opslag; bots en onbekende pagina's blijven buiten de telling. Historisch gebruik vóór de reparatie is onbekend, niet nul.
+- De winkelopdracht vraagt nu expliciet om de rekenhulplink op dp_1022 in de server-HTML te controleren. De opdracht staat klaar. De bestaande beschermde paginacontrole haalt robots.txt van kadoly.com met 200 op en bevestigt dat de gids-sitemap daar nog ontbreekt. Direct vanaf deze verbinding is er 403; dat bewijst geen blokkade van echte Googlebot-IP's. De nachtelijke winkelwijziging blijft dus een concreet opvolgpunt.
+- De [ChatGPT-feed](https://go.kadoly.com/api/shop/chatgpt.jsonl) gebruikt nu een bezorgschatting en verwijst naar het retourbeleid in plaats van onvoorwaardelijk gratis retourneren te beloven. Aanmelding en acceptatie bij OpenAI blijven onbevestigd. De indexcontrole van 28 november blijft het volgende beslismoment; er is geen extra betaalde scan of campagne gestart.
+
 ### Kadoly groei, dinsdag 24 november
 
 1. **Uitkomst:** gisteren kwamen via Facebook 6 uitgaande kliks en 37 voorvertoningen. Sinds 16 november staat Facebook op 39 kliks, 13 echte bezoeken, 2 acties en 2 mandjes. De gids staat op 274 kliks, maar slechts 1 echt bezoek en 1 actie; Pinterest op 3 kliks. Er is geen organische koop toegeschreven. Clickmind ziet in 14 dagen 4 kopen voor € 197,54: 2 via TikTok en 2 zonder bekende klik. Die laatste 2 mogen niet automatisch organisch heten. Adressen per kanaal en een vergelijkbare vorige week ontbreken.
@@ -425,6 +432,7 @@ Vraag ze één voor één, in deze volgorde, en alleen als het werk erop wacht.
 **Weekbalans:** week 1 start vandaag. Streefwaarde 150 echte bezoekers en 30 adressen met toestemming. De bestaande bron geeft daarvoor nog geen vergelijkbare weekstand of adresuitsplitsing; dit is de nulmeting. Frequentie blijft gelijk en geen motor wordt op één datapunt tot winnaar verklaard.
 
 ## Logboek (nieuwste bovenaan)
+- 2026-11-24 organisch vervolg: tv-rekenhulp toegevoegd aan product-gidsexport en bezoek/maatkeuzetelling hersteld; shopopdracht met concreet HTML-bewijs aangescherpt. Feedclaims over bezorging/retour gecorrigeerd. Bestaande pagina's eerst laten ontdekken, geen duplicaten of domeinverhuizing. 7 GSC-vertoningen zijn per 28 dagen. Winkeluitvoering en echte Googlebottoegang nog onbevestigd.
 - 2026-11-24 middag (groei-account): ochtendfix live gecontroleerd; Facebook +5 registraties en +1 echt bezoek, gids +17 doorsturen zonder extra echt bezoek. Bestaande redactie-, gids-, rekenhulp- en feedrondes gecontroleerd en niet verdubbeld. Geen organische koop bewezen, geen geld, mail, nieuw kanaal, bord, tool of extra publicatie. Pushmeldingen niet bevestigd.
 - 2026-11-24 ochtend (groei-account): verkeer, checkout en koopattributie gemeten; verouderde standaardkoopcontrole gevonden. Catalogus naar 3.469 actuele producten ververst, koopcheck op actuele producten en checkoutpad gezet, botheaders herhaald en bestaande social-, gids- en redactierondes niet verdubbeld. Geen geld, mail, nieuw kanaal of advertentie. Story-inzichten en pushmeldingen niet bevestigd.
 - 2026-11-23 na expliciet UX-akkoord: drie merkontwerpen geëxporteerd en als zes stories plus drie pins live gezet via de juiste Kadoly-accounts. Publicatiestatus en pinlinks gecontroleerd; bestaande ronde niet verdubbeld. Bewijs in kadoly/groei/2026-11-23-merken-live.json. Storylinkbeperking vastgelegd; geen mail, geld, nieuw kanaal of bord.
