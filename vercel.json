@@ -331,6 +331,10 @@
     {
       "path": "/api/keuze-tools?tool=haak&op=voorstel",
       "schedule": "33 */2 * * *"
+    },
+    {
+      "path": "/api/post?op=tkmc&ronde=1",
+      "schedule": "23 * * * *"
     }
   ],
   "rewrites": [

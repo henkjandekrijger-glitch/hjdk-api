@@ -104,16 +104,19 @@ Bijgewerkt 24 nov 2026 11:30 UTC: de pauze tot maandag 20:00 is voorbij. Campagn
 - **Pitch aan tv-redacties** voor de podcast. De tour was vorig jaar, dit jaar geen tour; Theaterbureau de Mannen niet noemen ("vergeet de mannen"). Haakjes: Tania als gast aan tafel, een liveliedje in december, cultuur en Caribische media, fragmenten van 60 seconden.
 - Open vraag aan Henkjan: klopt het boekingscontact (Dorien Scholtens, Theaterbureau de Mannen) nog op de homepage en op /podium-klassiek? Gezien "vergeet de mannen" misschien niet meer.
 
-## 10. Adressen uit Mailchimp (voor maandag na 20:00)
+## 10. Oude Mailchimp-lijst opnieuw vragen (lib/tkmc.js, sinds 25 nov)
 
-Henkjan vroeg 20 nov: "Check in mn mail naar adressen van tania ooit uit mailchimp gehaald". Gevonden in Henkjans Gmail:
-- **13 maart 2020**: twee imports in de Mailchimp-lijst (audience) "Tania Kross" op het account Adsfair BV: 1.714 adressen toegevoegd of bijgewerkt (323 stonden er al, 5 afgemeld) en 3.679 (682 stonden er al, 4 afgemeld, 3 met fouten).
-- **9 november 2020**: mail van Henkjan aan zichzelf "Adressen Tania Kross" met de bijlage members_export_839147311c.zip (ongeveer 1,2 MB): de export van die lijst.
-- **11 december 2018**: thread "export mailchimp" (met Culdy en de Mannen) met bijlage members_export_a1d14e592d.zip, de fanlijst van toen.
-- **7 oktober 2024**: Tania vroeg Henkjan Sherry-Ann toegang te geven tot zijn Mailchimp-account; Henkjan deed dat. Het account bestaat dus waarschijnlijk nog, met de nieuwste stand.
-- Niets gedownload, niets geïmporteerd, niets verstuurd. Henkjan wil dit maandag na 20:00 doen.
-- Voorstel (nog niet besloten): de adressen niet stil op de lijst zetten (aanmelding van jaren geleden, deels via import), maar één mail waarin ze zelf bevestigen ("Wil je de podcast van Tania blijven krijgen?"); alleen wie klikt komt op de lijst. Tekst eerst door Henkjan en Tania laten goedkeuren. Versturen via Resend in batches, met afmeldlink, eerst een kleine proef. Dit is in één keer genoeg voor het doel van 1.000.
-- Eerste stap maandag: vragen of je de zip mag downloaden om alleen te tellen (hoeveel actief, afgemeld, weggevallen), of dat Henkjan inlogt op Mailchimp voor de actuele stand.
+Henkjan 25 nov: "vind lijst van mailchimp in mijn email en stuur per dag een aantal met vraag of ze nog op lijst willen blijven lang niets gehoord van Tania zorg wel dat de mail super is . En fokking lerend dus iedere 20 wordt ie beter . Je kan in mijn inbox replies laten landen of vanaf mij Laten sturen . Wat slimste is."
+
+- **Bron:** members_export_839147311c.zip (Henkjan aan zichzelf, 9 nov 2020, lijst "Tania Kross" op Adsfair BV): 19.197 subscribed, 1.384 afgemeld, 1.466 cleaned. We nemen alleen subscribed met Mailchimp-score 3 tot 5: **13.724 adressen** (score 5: 1.318, 4: 6.823, 3: 5.583), eerst 5, dan 4, dan 3, binnen een score willekeurig. Aangemeld 2017 tot 2020. Ouder: export van 11 dec 2018 (fanlijst, niet gebruikt).
+- **Import:** /api/post?op=tkmc&import=1 (beschermde host) haalt de zip zelf uit Henkjans Gmail via Zernio en zet de adressen in kv tkmc:rij. Nooit adressen in code.
+- **Kanaal:** uit Henkjans eigen Gmail via Zernio (zoals de clubwerving). Resend verbiedt oude lijsten en daar loopt al het andere over; taniakross.media staat niet bij Resend (domeinlimiet van het gratis plan). Antwoorden landen vanzelf in zijn inbox. Zernio: gewone Gmail 200 per dag (400 na 14 schone dagen); 10 harde bounces in een uur of dezelfde tekst naar 50+ mensen in een uur zet de grens terug. Daarom hooguit 8 per uur, 9 tot 21 uur NL, eigen aanhef en jaartal per mail.
+- **Toestemming:** alleen wie ja zegt komt op de lijst: knop op taniakross.media/blijf/<tok> (bevestigt met JavaScript, dus linkscanners zetten niets aan) of "ja" terugmailen. Dan POST naar /api/lijst?a=aan met p=mailchimp-<variant>; de gewone welkomstmail volgt (bij een Barcelona-variant v=g1). Stop: taniakross.media/stop/<tok> en List-Unsubscribe. Niets doen = nooit meer mailen.
+- **Rewrite** in simpele-site/vercel.json: /blijf/:t en /stop/:t naar keuzehulp.best/api/post?op=tkmc&t=:t&w=ja|stop.
+- **Leren:** twee varianten tegelijk, Thompson op ja per verstuurde mail. Elke 20 verstuurde mails een leermoment: een variant met 20+ verstuurd die voor 80% de slechtste is gaat eruit, de volgende komt erbij; na 60 per variant zonder duidelijke winnaar valt de laagste toch af. Zes varianten klaar (o0 vraag plus podcast, o1 met Barcelona als cadeau, o2 "Lang niets van Tania Kross gehoord", o3 podcast voorop, o4 heel kort, o5 "We ruimen de lijst op" met Barcelona). Daarna uitdagers via op=tkmc&uitdager={"o":..,"t":..}; de TK-dagronde leest de antwoorden (op=tkmc&leer=1) en schrijft er een als de rij opraakt.
+- **Volume:** start 40 per dag; bounce onder 5% en stop onder 3% over 7 dagen (vanaf 40 mails): +10 per 2 dagen, tot 180; bounce 8% of stop 5%: halveren. Elke mail wordt gemeld in de POST-lus (project tk-mailchimp).
+- **Stand:** /api/post?op=tkmc&stand=1, voorbeeld van de echte mail: &voorbeeld=1 (beschermde host hjdk-api-henq.vercel.app).
+- **Live alleen op Henkjans "verstuur":** LIVE in lib/tkmc.js op true en /api/post?op=tkmc&zet=1&aan=1.
 
 ## 12. Muziek als medicijn, leesstand en dagartikelen (24 nov)
 
@@ -142,6 +145,8 @@ Henkjan vroeg 20 nov: "Check in mn mail naar adressen van tania ooit uit mailchi
 10. Tania's persoonlijke noot in het dossier, daarna dossier linken, advertentie erheen, ZICHT-proef (12).
 
 ## Logboek (nieuwste boven)
+
+- 25 nov 13:30 UTC chat-taniakross: oude Mailchimp-lijst (13.724 adressen, score 3-5) klaargezet om opnieuw te vragen, lerend, uit Henkjans Gmail via Zernio (lib/tkmc.js, /api/post?op=tkmc). Staat uit tot Henkjans verstuur.
 
 - 25 nov 11:40 UTC chat-taniakross: ochtendverslag krijgt blok E-mailadressen (nieuw gisteren met land en herkomst, totaal, 7 dagen) via api/_logboek.js, uitrol dpl_Tid8NwQqSRF2HjhjdLooKZZ25wJW. Campagnes: BEWEZEN 12183102 bod $0,06 en 44 zones, 2 advertenties uit, VERKENNER zone 12300292 geblokkeerd, nieuwe dagkopie 12187841 bij moderatie.
 
