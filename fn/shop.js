@@ -93,7 +93,7 @@ const DRAAGTEST = { paren: [
   { t: 'oc_4254790000459777', c: 'oc_4254790044041218', soort: 'oorbellen hoops' },
   { t: 'oc_4251973869322241', c: 'oc_4251974028165121', soort: 'armband hart' },
   { t: 'oc_4254790004621313', c: 'oc_4251974627524609', soort: 'ring' },
-  { t: 'oc_4254790012796929', c: 'oc_4254790057590785', soort: 'oorbellen parel' },
+  { t: 'oc_4251974419890177', c: 'oc_4254790057590785', soort: 'oorbellen steen' }, // 25 nov: Polly Parel eruit, die had al een gedragen hoofdfoto
   { t: 'oc_4254790079299585', c: 'oc_4254790005506049', soort: 'ketting munt' } ] };
 const LOKKER = { uit: null, start: '2026-11-23', max: 60, dagen: 14, items: { oc_4174002164400133: { prijs: 15.95, verlies: 3.55 }, oc_4174003456851970: { prijs: 29.95, verlies: 3.23 }, oc_4174002211717121: { prijs: 13.95, verlies: 3.46 }, oc_4174003712770050: { prijs: 42.95, verlies: 3.25 }, oc_4174003731562498: { prijs: 44.95, verlies: 3.35 }, oc_4174003462750209: { prijs: 22.95, verlies: 3.81 } } }; // 25 nov (Henkjan: "Vermeldingen met lokkers kan zeker werken"): drie woonlokkers erbij die in Google Shopping al vertoond en aangeklikt werden (wollen plaid 699/13, wollen deken 218/5, ornament 120/3), zelfde stopregel van EUR 60 in totaal
 async function lokkerStand() { // betaalde bestellingen met een lokker sinds de start, verlies en extra verkoop, en of de stopregel geldt
