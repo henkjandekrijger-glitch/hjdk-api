@@ -774,6 +774,28 @@ export default async function handler(req, res) {
       for (const k of Object.keys(m)) { m[k] = m[k].filter(x => ok.has(x.slug)); if (!m[k].length) delete m[k]; }
       res.setHeader('cache-control', 'public, max-age=900, s-maxage=3600'); res.setHeader('access-control-allow-origin', '*');
       return res.status(200).json({ ok: true, bijgewerkt: new Date().toISOString(), gidsen: lev.length, hulpmiddelen: 1, producten: Object.keys(m).length, perProduct: m }); }
+    if (op === 'winkelcontent') { // 25 nov 2026 (Henkjan: "ontwikkel ook manier om content in winkel zelf te plaatsen"): per product een kant-en-klaar
+      // inhoudsblok uit de gids (waarom dit product, kort antwoord, 3 vragen met FAQPage) dat kadoly.com serverkant onder de productomschrijving zet (TAAK C, lib/shopprompt.js).
+      // ?pid=<id> = één product (JSON met html), ?vorm=html&pid= = alleen het blok, zonder pid = alle producten { pid: { url, html } }.
+      const { gidsenPerPid } = await import('../lib/openaifeed.js');
+      const lev = new Set(LEVENDE()); const m = gidsenPerPid(GIDSEN);
+      const blok = pid => { const l = (m[pid] || []).filter(x => lev.has(x.slug)); if (!l.length) return null; const g = GIDSEN[l[0].slug]; if (!g) return null;
+        const k = (g.keuze || []).find(x => x.pid === pid) || {}; const faq = (g.faq || []).filter(f => f && f.v && f.a).slice(0, 3); const url = 'https://gids.kadoly.com/' + l[0].slug;
+        const ld = faq.length ? '<script type="application/ld+json">' + JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(f => ({ '@type': 'Question', name: f.v, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }).replace(/</g, '\\u003c') + '</script>' : '';
+        const html = '<section class="kd-gids" data-hoek="winkelcontent" style="margin:24px 0;padding:16px;border:1px solid #000;border-radius:8px;color:#000;background:#fff">' +
+          '<h2 style="font-size:18px;font-weight:700;margin:0 0 8px">Hulp bij kiezen</h2>' +
+          (k.waarom ? '<p style="font-size:16px;margin:0 0 8px"><strong>Waarom dit product' + (k.label ? ' (' + esc(k.label) + ')' : '') + ':</strong> ' + esc(k.waarom) + '</p>' : '') +
+          (g.kort ? '<p style="font-size:16px;margin:0 0 8px">' + esc(g.kort) + '</p>' : '') +
+          faq.map(f => '<details style="margin:6px 0"><summary style="font-size:16px;font-weight:700;cursor:pointer">' + esc(f.v) + '</summary><p style="font-size:16px;margin:6px 0 0">' + esc(f.a) + '</p></details>').join('') +
+          '<p style="font-size:16px;margin:10px 0 0"><a href="' + url + '" style="color:#000;text-decoration:underline">Lees de hele gids: ' + esc(g.h1 || g.titel || '') + '</a></p>' + ld + '</section>';
+        return { pid, gids: l[0].slug, url, bijgewerkt: g.bijgewerkt || null, html }; };
+      res.setHeader('access-control-allow-origin', '*'); res.setHeader('cache-control', 'public, max-age=900, s-maxage=3600');
+      const pid = String(q.get('pid') || '').trim();
+      if (pid) { if (!/^(?:oc|dp|c2b|aw|bjx|sh)_[\w-]{2,40}$/.test(pid)) return res.status(400).json({ ok: false, fout: 'pid' }); const b = blok(pid);
+        if (q.get('vorm') === 'html') { res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(b ? b.html : ''); }
+        return res.status(200).json({ ok: true, ...(b || { pid, html: '' }) }); }
+      const per = {}; for (const p of Object.keys(m)) { const b = blok(p); if (b) per[p] = { url: b.url, html: b.html }; }
+      return res.status(200).json({ ok: true, bijgewerkt: new Date().toISOString(), producten: Object.keys(per).length, perProduct: per }); }
     if (op === 'zoek') { const v = String(q.get('q') || '').replace(/\s+/g, ' ').trim().slice(0, 160);
       if (q.get('log') === '1') { res.setHeader('cache-control', 'no-store'); if (!isBot(ua) && v) { const r = await zoek(v, 8); await logZoek(r.k, !r.producten.length && !r.gidsen.length, String(q.get('g') || '')); } return res.status(204).end(); }
       if (q.get('f') === 'json') { res.setHeader('cache-control', 'public, max-age=60, s-maxage=300'); const r = await zoek(v, 8); return res.status(200).json({ ok: true, h: r.h, producten: r.producten, gidsen: r.gidsen }); }
