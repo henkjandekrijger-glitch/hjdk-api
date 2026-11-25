@@ -36,6 +36,10 @@ test('gedeelde professionele profielen verschijnen op de verschillende bestaande
  assert.ok(pagina('dossier/blendle', true).includes('https://uk.linkedin.com/in/laurentkayser'));
  assert.ok(!personenMedia('Chris Oomen').includes('linkedin.com/in/chrisoomen'));
  assert.ok(!pagina('dossier/errezeta', true).includes('linkedin.com/in/fabiana'));
+ const anp = pagina('dossier/anp', true), chris = anp.slice(anp.indexOf('<h3>Chris Oomen</h3>')).split('</article>')[0];
+ assert.ok(!chris.includes('hans-de-zwart'));
+ assert.equal((anp.match(/data-persoon="hans-de-zwart"/g) || []).length, 1);
+ assert.ok(anp.includes('https://nl.linkedin.com/in/edouardvanarem') && anp.includes('https://nl.linkedin.com/in/jessicavanderwaal'));
 });
 test('werkelijke wijzigingen hebben een bronlog; controledatum overschrijft ongewijzigde brondata niet', () => {
  assert.equal(inhoudGewijzigd('/bedrijven/kpn'), '');
