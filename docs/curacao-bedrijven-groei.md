@@ -1,6 +1,10 @@
 # Curaçao-bedrijven en keuzehulpen: gedeelde groeironde
 
-Bijgewerkt: 23 november 2026 (Curaçao). Opdracht Henkjan: veel meer zoekverkeer, vooral via de 11.906 bestaande Curaçao-bedrijven; samen met de keuzehulpen. Ontwikkeling blijft in deze chat. De bestaande dagelijkse keuzehulpenronde doet onderhoud aan data, zonder nieuwe functies of extra campagnes.
+Bijgewerkt: 25 november 2026 (Curaçao). Opdracht Henkjan: veel meer zoekverkeer, vooral via de 11.906 bestaande Curaçao-bedrijven; samen met de keuzehulpen. Ontwikkeling blijft in deze chat. De bestaande dagelijkse keuzehulpenronde doet onderhoud aan data, zonder nieuwe functies of extra campagnes.
+
+## Laatste gedeelde ronde
+
+Ronde `bedrijf-broncheck-20261125-smart-home-depot` werkt één bestaande gekoppelde zaak bij. Vooraf: query `japan nv curacao` 49 vertoningen, één klik, positie 7,4; zaakpagina 76 vertoningen, twee kliks, positie 7,8 over 28 dagen. De officiële site bevestigt dat Smart Home Depot op Curaçao meubels, deuren en ramen levert voor woon- en bedrijfsprojecten. Dit gecontroleerde feit en de bron zijn in vijf talen toegevoegd aan `data/cur/bouwmarkt.json`. Score, peildatum, rangschikking, titelproeven en canonieke URL's blijven ongewijzigd. Controle op dekking 2 december; SEO niet vóór 30 december. Geen groei geclaimd.
 
 ## Wat nu werkt
 

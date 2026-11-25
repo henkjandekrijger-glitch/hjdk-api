@@ -1410,6 +1410,13 @@
      "de": "Website (Google): smarthomedepot.online",
      "es": "Sitio web (Google): smarthomedepot.online",
      "pt": "Site (Google): smarthomedepot.online"
+    },
+    {
+     "nl": "De officiële site beschrijft Smart Home Depot als een Curaçaos bedrijf voor meubels, deuren en ramen voor woningen en bedrijfsprojecten (gecontroleerd 25 november 2026).",
+     "en": "The official site describes Smart Home Depot as a Curaçao business specialising in furniture, doors and windows for residential and commercial projects (checked 25 November 2026).",
+     "de": "Die offizielle Website beschreibt Smart Home Depot als Unternehmen auf Curaçao für Möbel, Türen und Fenster für Wohn- und Gewerbeprojekte (geprüft am 25. November 2026).",
+     "es": "El sitio oficial describe Smart Home Depot como una empresa de Curazao especializada en muebles, puertas y ventanas para proyectos residenciales y comerciales (comprobado el 25 de noviembre de 2026).",
+     "pt": "O site oficial descreve a Smart Home Depot como uma empresa de Curaçao especializada em móveis, portas e janelas para projetos residenciais e comerciais (verificado em 25 de novembro de 2026)."
     }
    ],
    "scores": [
@@ -1438,7 +1445,8 @@
    },
    "bronnen": [
     "https://curacao.day/en/businesses/hardware-store/smart-home-depot-japan-nv",
-    "http://smarthomedepot.online/"
+    "http://smarthomedepot.online/",
+    "https://www.smarthome-depot.com/"
    ]
   },
   {

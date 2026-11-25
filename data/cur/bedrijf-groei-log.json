@@ -2,6 +2,32 @@
   "versie": 1,
   "rondes": [
     {
+      "dag": "2026-11-25",
+      "id": "bedrijf-broncheck-20261125-smart-home-depot",
+      "at": "2026-11-25 13:05:00 UTC",
+      "soort": "primaire_bronverbetering",
+      "zaak": "smart-home-depot-japan-nv",
+      "bron": "https://www.smarthome-depot.com/",
+      "vastgesteld": [
+        "bedrijf op Curaçao",
+        "meubels, deuren en ramen",
+        "woon- en bedrijfsprojecten",
+        "telefoon +599 9 888 8545"
+      ],
+      "behouden": [
+        "score 4.0/254, peildatum2026-11-18",
+        "ranking",
+        "bovenliggende peildatum",
+        "SEO-titels en canonical"
+      ],
+      "googleQuery28d": {"term": "japan nv curacao", "imp": 49, "klik": 1, "positie": 7.4},
+      "googlePagina28d": {"imp": 76, "klik": 2, "positie": 7.8},
+      "groei_bewezen": false,
+      "meting": "data/keuzehulpen-groei/2026-11-25.json",
+      "volgende_toets": ["2026-12-02", "2026-12-30"],
+      "liveControle": "Volgt na productie-uitrol in algemeen werklog kzgroei-20261125."
+    },
+    {
       "dag": "2026-11-24",
       "id": "bedrijf-broncheck-20261124-aldo",
       "at": "2026-11-24 12:21:43 UTC",

@@ -1,0 +1,137 @@
+{
+  "datum": "2026-11-25",
+  "id": "kzgroei-20261125",
+  "opgehaald_vanaf": "2026-11-25T12:53:00Z",
+  "scope": "Dagronde bestaande keuzehulpen en gedeelde Curaçao-bedrijfsketen; geen tweede uitgever, artikel of homepagevervanging.",
+  "noordsterCuracao": {
+    "basis": {
+      "venster": ["2026-11-17", "2026-11-23"],
+      "organisch": 113,
+      "zoek": 54
+    },
+    "huidigeVolle7Dagen": {
+      "organisch": 112,
+      "zoek": 48,
+      "direct": 423,
+      "gscVertoningen": 910,
+      "gscKliks": 2
+    },
+    "vorige7Dagen": {
+      "organisch": 261,
+      "zoek": 216,
+      "gscVertoningen": 6885,
+      "gscKliks": 57
+    },
+    "doelUiterlijk2026-12-24": {
+      "organisch": 1130,
+      "zoek": 540
+    },
+    "laatsteVolleDag": {
+      "dag": "2026-11-24",
+      "organisch": 7,
+      "zoek": 2,
+      "direct": 63,
+      "gscVertoningen": 63,
+      "gscKliks": 0
+    },
+    "groeiBewezen": false,
+    "uitleg": "Organisch ligt één bezoek en zoek zes bezoeken onder de bevroren basis. Bots, schema, indexering en vertoningen zijn geen bezoekgroei."
+  },
+  "google28d": {
+    "nl": {"totaal": {"imp": 13, "klik": 0}, "eigen": {"imp": 13, "klik": 0}, "indexSteekproef": [11, 164]},
+    "us": {"totaal": {"imp": 242, "klik": 3}, "eigen": {"imp": 19, "klik": 0}, "verhuisdCuracao": {"imp": 223, "klik": 3}, "indexSteekproef": [10, 192]},
+    "de": {"totaal": {"imp": 522, "klik": 2}, "eigen": {"imp": 6, "klik": 2}, "verhuisdCuracao": {"imp": 516, "klik": 0}, "indexSteekproef": [7, 130]},
+    "curacao": {
+      "siteTotaal": {"imp": 18721, "klik": 282},
+      "paginaDimensie": {"imp": 19735, "klik": 284},
+      "bedrijvenPaginaDimensie": {"imp": 16994, "klik": 199, "paginasMetVertoningen": 2368},
+      "indexSteekproef": [109, 440]
+    }
+  },
+  "verwijzerEvents7d": {
+    "nl": {"zoek": 1, "ai": 3},
+    "us": {"zoek": 6, "ai": 0},
+    "de": {"zoek": 28, "ai": 0},
+    "curacao": {"zoek": 48, "ai": 0},
+    "uniekeMensen": null,
+    "aiCitatieTestPct": {"nl": 0, "us": 0, "de": 0}
+  },
+  "gebruikAfgeslotenDag": {
+    "datum": "2026-11-24",
+    "nl": {"bronweergaven": 7, "voorpagina": 1, "gebruik": 1},
+    "us": {"bronweergaven": 225, "gebruik": 2},
+    "de": {"bronweergaven": 1231, "gebruik": 32},
+    "uitleg": "Bronweergaven zijn niet exclusief zoekverkeer en geen unieke mensen."
+  },
+  "aantallenGidsen": {"nl": 511, "us": 178, "de": 133, "totaal": 822},
+  "gezondheid": {
+    "keuring": {"at": "2026-11-25T06:45:18.088Z", "paginas": 25, "goed": 25, "fout": 0},
+    "runtimeFouten24h": [],
+    "marstek": "Gerichte controle blijft vereist: complete batterijen moeten zichtbaar blijven en lege geschikte resultaten mogen geen accessoires terugzetten."
+  },
+  "chatbesluit": {
+    "site": "kzuxde",
+    "factor": "start",
+    "vooraf": {
+      "a": {"gezien": 430, "waarde": 3.95},
+      "c": {"gezien": 3045, "waarde": 5.76}
+    },
+    "modelkansBeste": {"c": 1},
+    "besluit": "c actief; a uit; b bleef uit",
+    "andereFactorenGewijzigd": false,
+    "uitleg": "Beide actieve armen boven 300 gezien en kans boven 95%. Alleen nieuwe toewijzingen volgen de winnaar; bestaande browserkeuzes kunnen zeven dagen blijven."
+  },
+  "curacaoVerbetering": {
+    "id": "bedrijf-broncheck-20261125-smart-home-depot",
+    "vraag": "japan nv curacao",
+    "voorafVoorspeldeVolgorde": ["nine west sambil willemstad", "japan nv curacao", "flakos curacao", "dominos curacao"],
+    "afvallers": [
+      {"onderwerp": "Nine West Sambil", "reden": "hoogste kans, maar officiële filiaalgegevens niet exact verifieerbaar en gekoppelde keuzehulp vraagt minstens vijf reviews; huidige zaak heeft vier"},
+      {"onderwerp": "The Flakos Grill", "reden": "bestaand filiaalconflict tussen bronnen; geen nieuwe primaire bevestiging"},
+      {"onderwerp": "Domino's Curaçao", "reden": "geen veilig nieuw primair feit gevonden"}
+    ],
+    "url": "https://curacao.day/nl/bedrijven/hardware-store/smart-home-depot-japan-nv",
+    "beginmeting": {
+      "venster": "28 dagen, twee dagen GSC-vertraging",
+      "query": {"imp": 49, "klik": 1, "positie": 7.4},
+      "pagina": {"imp": 76, "klik": 2, "positie": 7.8}
+    },
+    "trafficSegment": "Google-query en bestaande NL/EN-bedrijf- en bouwmarktkeuzehulppagina",
+    "tellerNoemer": "zoekkliks per vertoning; organische zoekbezoeken apart via de curacao.day-bronmeting",
+    "ingreep": "Officiële bron en gecontroleerd specialisme meubels, deuren en ramen voor woon- en bedrijfsprojecten toegevoegd in vijf talen; score, peildatum, ranking, titels en canonical behouden.",
+    "bron": "https://www.smarthome-depot.com/",
+    "blootstellingsdatum": "2026-11-25",
+    "verwachteUitkomst": "Meer bruikbare broninformatie op de bestaande zaak- en keuzehulppagina zonder extra URL.",
+    "weerlegging": "Geen betere dekking na zeven dagen of geen volwassen verbetering in gescheiden zoekvensters na minstens 35 dagen.",
+    "controlemomenten": ["2026-12-02", "2026-12-30"],
+    "groeiBewezen": false
+  },
+  "preview": {
+    "nl": {"votes": {"zorgkosten-2027": 0, "energie-2027": 0, "rekenchat": 0}, "updates": [{"slug": "cadeau-vinden", "count": 1, "lastAt": "2026-11-23T23:23:52.851Z"}]},
+    "us": {"votes": 0, "updates": 0},
+    "de": {"votes": 0, "updates": 0},
+    "onderhoudsdetails": 0,
+    "uitleg": "Eén bestaande preview-update blijft staan; geen nieuw bezoekerssignaal, koopintentie of groeibewijs."
+  },
+  "inkomen": {
+    "bolAwinCompleet": true,
+    "vandaag": 0,
+    "week": 0,
+    "maand": 0,
+    "andereBronnen": "onbekend",
+    "awinActief": 15,
+    "nieuweActieveProgrammasSindsVorigeMomentopname": ["Zendure EU Marketing", "Internetten.nl NL", "Sinocare"],
+    "koppeling": {"Zendure EU Marketing": "/stekkerbatterij", "Internetten.nl NL": "/internet-en-tv-vergelijken", "Sinocare": null},
+    "uitleg": "Sinocare wordt niet naar een onjuiste gids gestuurd; een passende bloedsuikermetergids bestaat nog niet. Geen klik als opbrengst geteld."
+  },
+  "onderwerpselectie": {
+    "bevrorenVolgorde": ["NL thuisbatterij-met-stekkercluster", "DE balkonopslag achteraf", "US sump-pump-back-up"],
+    "nieuwbouw": false,
+    "radarSoftwareNogTeBouwen": true
+  },
+  "todayinAfstemming": {
+    "taak": "A Curacao Day: posts en groei",
+    "artikelenDoorDezeRonde": 0,
+    "reden": "De bestaande taak verzorgt zes verschillende dagelijkse verhalen; deze ronde is alleen de gedeelde bedrijfs/keuzehulp-keten."
+  }
+}

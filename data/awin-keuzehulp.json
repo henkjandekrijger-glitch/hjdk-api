@@ -115,6 +115,8 @@
     "131024": "/thuisbatterij",
     "131072": null,
     "131338": "/winterjas",
+    "68786": "/stekkerbatterij",
+    "114180": null,
     "31671": "/bureaustoel",
     "99151": "/robotmaaier",
     "114590": "/verzekeringen",
@@ -150,6 +152,9 @@
     ],
     "camping-frankrijk": [
       17191
+    ],
+    "bloedsuikermeter": [
+      114180
     ]
   },
   "niet_aanmelden": {
