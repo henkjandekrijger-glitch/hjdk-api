@@ -180,6 +180,7 @@ Alleen onderzoek en overdracht, geen winkel- of campagnecode gewijzigd. Clickmin
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
 
+- 25 nov 2026 23:00 UTC (pa-uurcontrole): winactie 8 aanmeldingen, 1 bevestigd. Bevestigingsmail voor de winactie heeft nu onderwerp 'Nog één tik: doe mee met de winactie van Kadoly' en knop 'Ja, ik doe mee'; de bedankpagina noemt spam en heeft een knop Open je mail naar de webmail van het domein (Gmail, Outlook, Yahoo, iCloud, Ziggo, KPN). Oordeel: bevestigd per aanmelding in op=motorstand (aanvraag|winactie tegen bevestigd|winactie).
 - 25 nov 2026 (shop-chat): gedragen foto's voor sieraden gebouwd (lib/kadolydraag.js, op=draag, op=beeldblad&draag=1, DRAAGTEST met 6 paren). Beeldmodel via de AI Gateway, elke foto eerst met het oog gekeurd; alleen goedgekeurde gaan naar Google en de ads.
 - 25 november 2026 21:45 UTC: Lens en Discover doorgevoerd (Henkjan: "Ja voer nu alles in een keer door"). Fototest in Google Shopping: 6 paren, het testproduct krijgt een sfeerfoto of gedragen foto als hoofdfoto via de aanvullende bron Kadoly fototest (gmcbeeld.csv), oordeel op op=fototest na 14 dagen. Gids: max-image-preview:large op elke pagina, onderwerpkeuze van de redactie uit wat verkoopt (OVERDRACHT-KADOLY-GIDS.md). Nieuwe winkeltaak L: links vanaf kadoly.com naar de gids. Bevinding: de leveranciers van de sieraden (GLAM & GLORY) leveren bijna alleen kale productfoto's; voor de lookalike-proef met Lens zijn gedragen foto's nodig (Product Studio in Merchant Center of eigen foto's).
 
