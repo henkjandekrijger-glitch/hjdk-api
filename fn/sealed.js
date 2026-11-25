@@ -14,6 +14,7 @@ import { infoPagina, infoLinks, doorsturen } from '../lib/sealed-info.js';
 import { eigenaarPost, koperPost, gesprekkenLijst, maakMailer, bezorgWachtend } from '../lib/sealed-post.js';
 import { renderChatPage, renderManagePage, renderThreadPage, kleinePagina } from '../lib/sealed-chatpage.js';
 import * as MAIL from '../lib/sealed-mail.js';
+import { prijsTekst } from '../lib/sealed-prijs.js';
 import { chatStart, chatEv, chatVrij, chatVraag, chatStand, chatStandTekst, chatLeer } from '../lib/sealed-chat.js';
 import { berichten, HAIKU } from '../lib/ai.js';
 import { GROWTH_SCRIPT } from '../lib/sealed.js';
@@ -44,7 +45,10 @@ function stuur(res, status, type, body, cache = 'public, max-age=300, s-maxage=3
   res.setHeader('Referrer-Policy', 'no-referrer');
   res.setHeader('X-Content-Type-Options', 'nosniff');
   if (/html/.test(type)) { res.setHeader('X-Robots-Tag', robots || (status === 200 ? 'index, follow' : 'noindex')); if (taal) res.setHeader('Content-Language', taal); }
-  res.end(body);
+  // Prijszinnen gelijk aan de mails (lib/sealed-prijs.js): aan zodra SITE_PRIJS_GELIJK true is; res._prijsProef toont het vooraf op de beschermde host.
+  const nieuw = MAIL.SITE_PRIJS_GELIJK || res._prijsProef === true;
+  if (res._prijsProef === true) { res.setHeader('X-Robots-Tag', 'noindex, nofollow'); res.setHeader('Cache-Control', 'private, no-store'); }
+  res.end(nieuw && /html|json/.test(type) ? prijsTekst(body, true) : body);
 }
 const schoon = (s, n = 200) => String(s == null ? '' : s).replace(/[\u0000-\u001f<>]/g, ' ').trim().slice(0, n);
 
@@ -92,6 +96,7 @@ async function eigenaar(op, res) {
 
 export default async function handler(req, res) {
   const u = new URL(req.url, 'https://' + HOST), q = u.searchParams, op = q.get('op') || '';
+  if (q.get('prijs') === '1' && /\.vercel\.app$/i.test(String(req.headers.host || ''))) res._prijsProef = true;
   if(op==='growth'){const days=Array.from({length:7},(_,i)=>new Date(Date.now()-i*864e5).toISOString().slice(0,10)),counts={};for(const d of days){counts[d]={};for(const c of CHANNELS){const k='si:conversion:'+d+':'+c;counts[d][c]={browserSignals:+(await kv.get('si:visit:'+d+':'+c).catch(()=>0))||0,submissions:+(await kv.get(k).catch(()=>0))||0,intentSubmissions:+(await kv.get(k+':intent').catch(()=>0))||0,sampleReplySubmissions:+(await kv.get(k+':partner').catch(()=>0))||0,buyerCriteriaSubmissions:+(await kv.get('si:buyer-conv:'+d+':'+c).catch(()=>0))||0};}}return stuur(res,200,'application/json',JSON.stringify({basis:'Aggregate browser signals, not verified unique humans or confirmed search clicks. Anonymous submissions and buyer criteria are reported separately; test is an explicit QA channel.',segmentation:'Mode-specific anonymous counts start on 2026-11-17; earlier anonymous submissions remain only in submissions.',days:counts}),'no-store');}
   if(op==='visit'&&req.method==='POST'){const b=await leesBody(req);if(!CHANNELS.includes(b.channel)||/bot|crawler|spider|headless/i.test(String(req.headers['user-agent']||'')))return stuur(res,400,'application/json','{"ok":false}','no-store');const k='si:visit:'+new Date().toISOString().slice(0,10)+':'+b.channel;try{await kv.incr(k);await kv.raw(['EXPIRE',k,100*86400]);}catch{}return stuur(res,200,'application/json','{"ok":true}','no-store');}
   if (req.method === 'OPTIONS') return stuur(res, 204, 'text/plain', '', 'no-store');
