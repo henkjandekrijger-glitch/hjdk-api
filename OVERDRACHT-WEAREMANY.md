@@ -1,5 +1,20 @@
 # Overdracht we are many now: de dossiersite
 
+## Actueel: tijdlijn, bekeken-teller, deelknoppen en Blendle bijgewerkt (25 november 2026)
+
+25 november 2026, Claude-vervolgchat op Henkjans opdracht (de ChatGPT-chat zat vast). Sitecheck van alle 27 pagina's en het Blendle-dossier naast de echte mails gelegd; daarna gebouwd en live gezet:
+
+- Tijdlijn op elk dossier staat nu met het nieuwste bovenaan (sortering in lib/wam-dossiers.js; de data blijft chronologisch).
+- De vermelding "WAM-oprichter" is uit de dossiers Blendle en Errezeta gehaald (Henkjan: "Zet niet bij dat ik WAM oprichter ben"). Daarna ook zijn naam als melder weggehaald (Henkjan: "Haal overal uit dat ik indiener ben"): Blendle noemt alleen "de melder", Errezeta "een ondernemer" en "de eigen zaak van de redactie", en /achtergrond zegt niet meer dat het met zijn eigen afschrijving begon. Bij Errezeta staat nog wel "De redactie heeft zelf een belang bij dit dossier"; het label Eigen dossier blijft. Zijn naam staat alleen nog als contact, als oprichter op /achtergrond en /pers, en bij hosters als eerdere medeoprichter van Mijndomein.
+- Bekeken-teller als eerste prikkel: `wmn:bekeken` (Redis-hash per dossier), één keer per ip-hash per dag, zonder herkenbare bots en zonder het proefadres. De pagina toont "Ruim N00 keer bekeken" boven de titel en op de voorkant, maar pas vanaf 100 echte bezoeken. Daaronder staat er niets: geen nultellers en geen schatting. De teller begon op 25 november op nul.
+- Deelknoppen op elk dossier (WhatsApp, X, LinkedIn, e-mail, link kopiëren). Elke tik: `POST /api/wam?op=ddeel` telt `uit|<dossier>|<kanaal>` in `wmn:deel` en meldt de Clickmind-uitkomst actie (wamMeetActie). De gedeelde link draagt `?d=<kanaal>`; een bezoek daarmee telt als `in|<dossier>|<kanaal>`. Canonical blijft schoon. Stand: `op=dstand` (velden bekeken en gedeeld).
+- Blendle bijgewerkt uit de gelezen mails: eerste antwoord 9 november (geen actief abonnement gevonden, betaalbewijs gevraagd), 11 november eerste termijn verstreken, 12 november geen toezegging over terugbetaling, 23 november termijn verstreken zonder antwoord (mailbox gecontroleerd 25 november, spammap niet), inzagetermijn 9 december. Laatste gelezen stuk blijft 19 november. Dossiers hebben nu een eigen `bijgewerkt`.
+- Meldingen bij ACM ConsuWijzer, Europees Consumentencentrum en SignalConso: Henkjan zei "JA ACM en alles wat ik aangekondigd heb". Concepten zijn in de chat getoond. Pas na indienen in het dossier zetten als ingediend, met datum; niet eerder.
+- /pers: de regel "Flanderijn 14.800 per maand, 175% meer" is weg (eigen onderzoek: laatste vijf maanden 1.900 tot 2.900) en vervangen door Videoland opzeggen 18.100, met de zin dat het ramingen zijn.
+- Beschrijvingen voor zoekmachines eindigen niet meer midden in een zin: seoBeschrijving kapt op een zinseinde binnen 155 tekens. llms.txt: "opzeggen.:" hersteld.
+- 41 gerichte tests slagen. De dagelijkse ChatGPT-taak WAM content en groei is niet gewijzigd of gekopieerd.
+
+Dit is de nieuwste stand; eerdere uitbreidingen blijven hieronder staan.
 ## Actueel: dagronde PostNL en meetstand (25 november 2026)
 
 25 november 2026: de bestaande /bedrijven/postnl is verdiept voor de vraag wie een niet ontvangen pakket kan laten onderzoeken. Vraag vóór de wijziging gemeten met ZICHT `wam-postnl-20261125`, één Perplexity/sonar-antwoord. Het basisantwoord wees terecht naar de afzender, maar zette een bezorgklacht en het zendingsonderzoek te veel op één lijn. De pagina zegt nu bovenaan: een ontvanger kan een bezorgklacht melden, maar alleen de afzender kan volgens PostNL opdracht geven de zending op te sporen en krijgt de onderzoeksinformatie. Webwinkelklanten nemen daarom contact op met de verkoper als afzender. PostNL- en Rijksoverheidspagina’s nagelezen op 25 november. Geen claim dat het pakket verloren is of dat schadevergoeding verschuldigd is. Bestaande URL en reviewbeeld behouden; zichtbare FAQ, Article, llms.txt en IndexNow volgen de inhoud. Bronnotitie docs/wam-postnl-2026-11-25.md.
@@ -182,6 +197,7 @@ Voorstel cijfer per bedrijf (1 tot 10): antwoord 3 punten (binnen 15 dagen), opl
 
 ## Logboek (nieuwste bovenaan)
 
+- 25 nov 2026: tijdlijn nieuwste boven, oprichtersvermelding weg, echte bekeken-teller vanaf 100, deelknoppen met eigen teller en Clickmind-actie, Blendle bijgewerkt tot en met de verstreken termijn van 23 november, persfout Flanderijn hersteld, beschrijvingen en llms.txt gerepareerd. ACM/ECC/SignalConso: concepten in de chat, nog niet ingediend.
 - 25 nov 2026: dagronde WAM. Bestaande PostNL-pagina verdiept met het onderscheid tussen een bezorgklacht door de ontvanger en het zendingsonderzoek via de afzender; officiële PostNL- en Rijksoverheidbronnen, zichtbare FAQ, llms en IndexNow. ZICHT-basisantwoord was bruikbaar, geen groot AI-gat geclaimd. Geen afgesloten volledige Clickmind-dag; oude dagen onvolledig. Mini-aantallen in modal en knopproef leveren geen winnaar. GSC-toegang tot wearemany.now ontbreekt.
 
 - 24 nov 2026, volgende verbetering: echte dossiers naar de voorkant, hoofdtekst 20px en secundaire tekst 16px. Blendle-correspondentie en ANP-kostenbijlage gecontroleerd, tijdlijnen en bewijsstatus gepubliceerd; reviews naar /bedrijven, hosters eerlijk als onderzoek. Vier Perplexity-vragen als gatscan; vaste ZICHT-registratie/manifest, Article/FAQ/Breadcrumb en IndexNow. 21 tests en HTML/link/router/commentaarcheck slagen; visuele controle door browser-time-outs niet afgerond. Productie- en IndexNow-resultaten volgen in centraal werklog.

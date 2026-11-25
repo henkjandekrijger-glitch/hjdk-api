@@ -11,9 +11,9 @@
       "titel": "Blendle afschrijving: opgezegd, terugbetaling gevraagd",
       "seoTitel": "Blendle afschrijving: opgezegd, geld terug gevraagd | WAM",
       "kaartTitel": "Blendle: abonnement gestopt, ticket ‘opgelost’, €297 teruggevraagd",
-      "kort": "Blendle bevestigt de opzegging. De terugbetaling van €297 is in de gelezen correspondentie niet bevestigd. Het ticketsysteem markeerde het verzoek intussen als opgelost.",
+      "kort": "Blendle bevestigt de opzegging. De terugbetaling van €297 is niet bevestigd. De termijn van 23 november 2026 verstreek zonder antwoord.",
       "laatsteStuk": "2026-11-19",
-      "status": "Opzegging bevestigd · terugbetaling niet bevestigd",
+      "status": "Opzegging bevestigd · terugbetaling niet bevestigd · termijn van 23 november verstreken",
       "bewijsStatus": "Primaire correspondentie ingezien",
       "bedragen": [
         {
@@ -26,16 +26,30 @@
         }
       ],
       "feiten": [
-        "De melder, WAM-oprichter Henkjan de Krijger, beschrijft vier jaarlijkse bedragen van €99 over 2023 tot en met 2026: samen €396. Die bedragen staan in zijn correspondentie; de bankafschriften zijn niet afzonderlijk gecontroleerd.",
+        "De melder beschrijft vier jaarlijkse bedragen van €99 over 2023 tot en met 2026: samen €396. Die bedragen staan in zijn correspondentie; de bankafschriften zijn niet afzonderlijk gecontroleerd.",
         "De terugvraag in zijn e-mails bedraagt €297 voor 2023, 2024 en 2025. De betaling uit 2026 behandelt hij afzonderlijk via zijn bank. €396 aan gemelde afschrijvingen is dus een ander bedrag dan de €297 die hij van Blendle terugvraagt.",
-        "Blendle bevestigt op 12 november 2026 dat het abonnement is stopgezet en dat er geen nieuwe betalingen volgen. In een tweede antwoord bevestigt het bedrijf dat het de betaling uit september 2026 niet opnieuw zal incasseren.",
-        "Op 16 november 2026 meldt het ticketsysteem dat het verzoek als opgelost wordt gemarkeerd. De melder schrijft op 16 en 19 november dat de terugbetaling nog niet is afgehandeld. Een gesloten ticket bewijst hier geen terugbetaling."
+        "Het eerste antwoord van Blendle, op 9 november 2026, meldt dat op het e-mailadres van de melder geen actief Premium-abonnement is gevonden en vraagt om een betaalbewijs. De melder antwoordt dezelfde dag dat zijn account vier facturen van €99 toont.",
+        "Blendle bevestigt op 12 november 2026 dat het abonnement is stopgezet en dat er geen nieuwe betalingen volgen. In een tweede antwoord bevestigt het bedrijf dat het de betaling uit september 2026 niet opnieuw zal incasseren. Over de terugbetaling schrijft Blendle in dat tweede antwoord dat het op dat moment geen verdere informatie of toezeggingen kan geven.",
+        "Op 16 november 2026 meldt het ticketsysteem dat het verzoek als opgelost wordt gemarkeerd. De melder schrijft op 16 en 19 november dat de terugbetaling nog niet is afgehandeld. Een gesloten ticket bewijst hier geen terugbetaling.",
+        "De melder gaf Blendle tot 23 november 2026, 17.00 uur, de tijd om €297 terug te betalen of een betaaldatum toe te zeggen. Bij controle van zijn mailbox op 25 november 2026 is na 19 november geen bericht van Blendle aangetroffen."
       ],
       "tijdlijn": [
         {
           "datum": "2026-11-09",
           "kop": "Opzegging en terugvraag",
           "tekst": "De melder vraagt bevestiging van de opzegging en €297 terug voor drie eerdere jaren. Hij noemt daarnaast de afschrijving uit 2026 en een inzageverzoek.",
+          "bron": "E-mail van de melder, ingezien"
+        },
+        {
+          "datum": "2026-11-09",
+          "kop": "Blendle vindt geen actief abonnement",
+          "tekst": "De klantenservice schrijft dat op het e-mailadres van de melder geen actief Premium-abonnement is gevonden en vraagt om een betaalbewijs. De melder stuurt dezelfde dag de facturen uit zijn account en de gevraagde betaalgegevens.",
+          "bron": "Eerste antwoord van Blendle en reactie van de melder, ingezien"
+        },
+        {
+          "datum": "2026-11-11",
+          "kop": "Eerste termijn verstreken",
+          "tekst": "De melder schrijft dat zijn termijn van 11 november zonder reactie is verstreken. Hij geeft Blendle tot 12 november om de opzegging te bevestigen en €297 terug te betalen.",
           "bron": "E-mail van de melder, ingezien"
         },
         {
@@ -47,8 +61,8 @@
         {
           "datum": "2026-11-12",
           "kop": "Geen nieuwe incasso van de betaling uit 2026",
-          "tekst": "In een afzonderlijk antwoord bevestigt Blendle dat de betaling uit september 2026 niet opnieuw wordt geïncasseerd. Het inzageverzoek is volgens dit antwoord in behandeling.",
-          "bron": "Tweede inhoudelijk antwoord van Blendle, ingezien"
+          "tekst": "In een afzonderlijk antwoord bevestigt Blendle dat de betaling uit september 2026 niet opnieuw wordt geïncasseerd. Over de terugbetaling geeft dit antwoord geen verdere informatie of toezegging. Het inzageverzoek is volgens dit antwoord in behandeling. De melder houdt zijn aangekondigde meldingen aan tot 23 november 2026.",
+          "bron": "Tweede inhoudelijk antwoord van Blendle en reactie van de melder, ingezien"
         },
         {
           "datum": "2026-11-16",
@@ -59,13 +73,19 @@
         {
           "datum": "2026-11-19",
           "kop": "Terugbetaling opnieuw gevraagd",
-          "tekst": "De melder herhaalt zijn verzoek om €297. Dit is de laatste gelezen uitwisseling in dit dossier. Een bankbetaling is hiermee niet vastgesteld.",
+          "tekst": "De melder herhaalt zijn verzoek om €297 en zijn termijn van 23 november 2026. Hij kondigt meldingen aan bij ACM ConsuWijzer, het Europees Consumentencentrum en de Franse toezichthouder DGCCRF. Dit is het laatste gelezen stuk in dit dossier.",
           "bron": "E-mail van de melder, ingezien"
+        },
+        {
+          "datum": "2026-11-23",
+          "kop": "Termijn verstreken zonder antwoord",
+          "tekst": "De termijn van de melder liep af op 23 november 2026 om 17.00 uur. Bij controle van zijn mailbox op 25 november 2026 is na 19 november geen bericht van Blendle aangetroffen. De spammap is niet gecontroleerd. Een bankbetaling is niet vastgesteld.",
+          "bron": "Mailbox van de melder, gecontroleerd op 25 november 2026"
         }
       ],
-      "bronverantwoording": "De redactie heeft de correspondentie van 9 tot en met 19 november 2026 op 24 november 2026 nagelezen. Hier staan geanonimiseerde samenvattingen; de originele e-mails met account- en betaalgegevens worden niet gepubliceerd. De aangehaalde bedragen uit de melderstekst zijn niet zelfstandig met bankafschriften vergeleken.",
-      "reactieBedrijf": "Blendle heeft inhoudelijk geantwoord: de opzegging en het niet opnieuw incasseren van de betaling uit 2026 zijn bevestigd. Over de terugbetaling en het inzageverzoek meldt het bedrijf dat die in behandeling zijn. Een latere uitkomst is in de gelezen stukken niet vastgesteld.",
-      "volgendeStap": "De nog te controleren stukken zijn een eventuele latere betaalbevestiging, de bijbehorende bankboeking en het antwoord op het inzageverzoek. We werken het dossier bij zodra die informatie is gecontroleerd.",
+      "bronverantwoording": "De redactie heeft de correspondentie van 9 tot en met 19 november 2026 nagelezen op 24 en 25 november 2026. Op 25 november is de mailbox van de melder gecontroleerd op latere berichten van Blendle. Hier staan geanonimiseerde samenvattingen; de originele e-mails met account- en betaalgegevens worden niet gepubliceerd. De aangehaalde bedragen uit de melderstekst zijn niet zelfstandig met bankafschriften vergeleken.",
+      "reactieBedrijf": "Blendle heeft inhoudelijk geantwoord: de opzegging en het niet opnieuw incasseren van de betaling uit 2026 zijn bevestigd. Over de terugbetaling gaf Blendle op 12 november 2026 geen toezegging; het inzageverzoek is volgens het bedrijf in behandeling. Na 19 november is in de gecontroleerde mailbox geen reactie van Blendle aangetroffen.",
+      "volgendeStap": "Nog te controleren: een eventuele latere betaalbevestiging, de bijbehorende bankboeking en het antwoord op het inzageverzoek, waarvoor de wettelijke termijn op 9 december 2026 afloopt. De melder heeft meldingen bij ACM ConsuWijzer, het Europees Consumentencentrum en de DGCCRF aangekondigd. Zodra die zijn ingediend, staat dat hier.",
       "bedrijven": [
         "Blendle"
       ],
@@ -89,7 +109,7 @@
         },
         {
           "vraag": "Is deze Blendle-zaak opgelost?",
-          "antwoord": "De opzegging is door Blendle bevestigd op 12 november 2026. Een terugbetaling van de gevraagde €297 is in de gelezen correspondentie tot en met 19 november niet bevestigd. De redactie heeft geen latere bankboeking gecontroleerd."
+          "antwoord": "De opzegging is door Blendle bevestigd op 12 november 2026. Een terugbetaling van de gevraagde €297 is in de gelezen correspondentie niet bevestigd. De termijn die de melder stelde, 23 november 2026, verstreek zonder antwoord in zijn mailbox. De redactie heeft geen bankboeking gecontroleerd."
         },
         {
           "vraag": "Waarom staan er zowel €396 als €297 in dit dossier?",
@@ -100,7 +120,8 @@
           "antwoord": "Blendle beschrijft de routes via Mijn Account, Apple en andere aanbieders in het eigen helpcentrum. Controleer waar jouw abonnement is afgesloten en bewaar de bevestiging. De juiste route staat bij de officiële bron.",
           "bron": 0
         }
-      ]
+      ],
+      "bijgewerkt": "2026-11-25"
     },
     {
       "id": "anp",

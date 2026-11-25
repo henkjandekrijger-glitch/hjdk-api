@@ -66,3 +66,18 @@ test('een publieke bezoeker kan geen IndexNow-taak uitvoeren', async () => {
   await handel('dindexnow', { method: 'GET', headers: {} }, res, { beschermd: false });
   assert.equal(res.statusCode, 404);
 });
+
+test('tijdlijn nieuwste boven, echte bekeken-teller pas vanaf honderd, deelknoppen meetbaar, geen oprichtersvermelding', async () => {
+  const { bekekenRegel, DEEL_KANALEN } = await import('../lib/wam-dossiers.js');
+  const h = pagina('dossier/blendle', true, false, [], { bekeken: { blendle: 347 } });
+  const data = [...h.matchAll(/<li><p class="meta"><time datetime="([^"]+)"/g)].map(m => m[1]);
+  assert.ok(data.length >= 8 && data[0] === '2026-11-23');
+  assert.deepEqual(data, [...data].sort().reverse());
+  assert.equal(bekekenRegel(99), ''); assert.equal(bekekenRegel(0), ''); assert.ok(bekekenRegel(347).includes('Ruim 300 keer bekeken'));
+  assert.ok(h.includes('Ruim 300 keer bekeken') && !pagina('dossier/anp', true, false, [], { bekeken: { anp: 99 } }).includes('keer bekeken'));
+  for (const k of Object.keys(DEEL_KANALEN)) assert.ok(h.includes('data-deel="' + k + '"'), k);
+  assert.ok(h.includes("op=ddeel") && h.includes('wamMeetActie') && h.includes('dossier%2Fblendle%3Fd%3Dwa'));
+  for (const p of ['dossier/blendle', 'dossier/errezeta', 'nl', 'achtergrond']) assert.ok(!/WAM-oprichter|melder,? (is )?Henkjan|zaak van Henkjan|zijn eigen afschrijving/.test(pagina(p, true)), p);
+  const pers = pagina('pers', true); assert.ok(!pers.includes('175%') && !pers.includes('14.800'));
+  for (const p of ['nl', 'dossier/blendle', 'bedrijven/ns']) assert.ok(!/name="description" content="[^"]*…"/.test(pagina(p, true)), p);
+});
