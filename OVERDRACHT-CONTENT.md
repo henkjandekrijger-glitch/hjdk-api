@@ -256,3 +256,8 @@ Plak dit als eerste bericht:
 
 - 2026-11-23: hoofdstuk 7b Strategie toegevoegd (onderzoek naar wat stapelt met AI: eigen cijfers, gratis tools, lijstjes van anderen, verversen, Pinterest, eigen publiek), met een werkvolgorde voor dit account.
 - 2026-11-23: overdracht geschreven voor het content-account. Bookstuffers heet Stocking Books (stockingbooks.com). Kerstmoppen, kerstquiz en kleurplaten zijn live. IndexNow loopt mee in de dagelijkse cron. Het LC-artikel begint met procrastination.
+
+
+## 25 november 2026: publicatie bewaken, voorstel op reviewbranch
+De door Henkjan getoonde en goedgekeurde versie van `i-wasted-another-year` is op 25 november om 11:11:15 UTC live gezet en publiek gecontroleerd: HTTP 200, juiste reviewkaart, canonical, index/follow, guides en sitemap. Een latere variant met 30-dagenplan was vooraf aangetroffen en is niet als goedgekeurde tekst behandeld. Verantwoordelijke schrijver/proces onbekend.
+Voorstel `codex/lc-protect-published-20261125`: `op=lcartikel` leest de bestaande artikelwaarde en weigert conceptopslag op een al live slug met HTTP 409, zonder artikel/index te schrijven. Een verouderde index kan de live inhoud daardoor niet terugzetten. Nieuwe of nog ongepubliceerde concepten blijven mogelijk. Dit is geen CAS-transactie en geen bescherming tegen gelijktijdige conceptbewerkingen of expliciet depubliceren. Niet live: aparte reviewbranch, geen main-push. Vier opslagregressies; bestaande paginacontroles offline met Redis-netwerk geblokkeerd. Volledige provider/integratietest niet uitgevoerd. Lokale map was geen git-checkout, dus git pull --rebase kon niet; bronblobs en main-ref via remote connector gelezen vóór branchopbouw.
