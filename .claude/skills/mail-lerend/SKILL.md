@@ -20,6 +20,7 @@ Mailmind is de naam van het geheel (Henkjan 25 nov 2026: "Ik wil een intelligent
 - **Volume per stroom:** bounce onder 5% en stop onder 3%: +10 per 2 dagen tot het maximum; bounce 8% of stop 5%: halveren.
 - **Toestemming:** een oude lijst krijgt één vraag; alleen wie ja zegt komt op de lijst, niets doen = niet meer mailen.
 - **Live alleen op Henkjans "verstuur":** LIVE in de stroom én &s=<stroom>&zet=1&aan=1. Zonder dat wacht de ronde (stand: wachtOp).
+- **Vangen (de lerende modal hoort bij Mailmind):** adressen komen binnen via de lerende modal en aanmeldmotor van lib/modalmotor.js en lib/modal.js (Clickmind, per project aan te zetten met /api/mm/motorbeheer). Mailmind verstuurt en leert daarna; zet een nieuw project dus eerst op die modal, niet op een eigen venster. taniakross.media heeft nog een eigen lerend venster in lijst.js (simpele-site); overzetten staat open.
 - **Rapport:** elke dag dat er iets gebeurde een regel in het werklog (dashboard, wie <project>-mailmind); de dagronde van het project meldt ja, stops, bounces en de winnende variant in de chat.
 
 # POST: elke mail eerst langs de lus
