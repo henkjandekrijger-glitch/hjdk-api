@@ -172,6 +172,7 @@ Alleen onderzoek en overdracht, geen winkel- of campagnecode gewijzigd. Clickmin
 - hjdk-api: dagkeuze `lib/shopkies.js` (+ VAST_DAG in `fn/shop.js`), teksten `lib/shopteksten-hand.js` en `lib/shoptekst.js`, bots `lib/shopbot.js`, niet geladen `lib/shopniet.js`, archief `lib/shcarchief.js`, kassadoel `lib/shopdirect.js`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 2026-11-25 10:39 UTC (sieradencontrole): geen nieuwe verkoop. TikTok EUR 18,34, 48.067 vert, 305 kliks, 0 afrekenstap, geen nieuwe bloeders.
 - 2026-11-25 10:35 UTC (pa-uurcontrole): samen $0,41, 172 kliks, 0 koopknop, 0 verkoop; 3 lopen, 3 nog stil door de stopregel (wacht op Henkjan).
 - 2026-11-25 09:33 UTC (pa-uurcontrole): 6 PA-campagnes samen $0,36, 152 kliks, 142 aangekomen, 13 echt mens, 0 koopknop. Stopregel (propellerads-mcp) stopte 09:20 12186810, 12186813, 12186818 op $0,05-0,06 (P $0,0127 uit 12186814); ondergrens $1,50 staat klaar, wacht op Henkjans woord.
 - 2026-11-25 08:38 UTC (sieradencontrole): geen nieuwe verkoop. TikTok EUR 16,80, 45.063 vert, 283 kliks, 0 afrekenstap, geen nieuwe bloeders; Whop $11,81, 0 verkoop; Pinterest 56 vert, EUR 0. Bij EUR 20 zonder sieradenverkoop gaat de TikTok-groep uit.
