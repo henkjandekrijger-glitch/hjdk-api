@@ -21,6 +21,7 @@ Mailmind is de naam van het geheel (Henkjan 25 nov 2026: "Ik wil een intelligent
 - **Toestemming:** een oude lijst krijgt één vraag; alleen wie ja zegt komt op de lijst, niets doen = niet meer mailen.
 - **Live alleen op Henkjans "verstuur":** LIVE in de stroom én &s=<stroom>&zet=1&aan=1. Zonder dat wacht de ronde (stand: wachtOp).
 - **Vangen (de lerende modal hoort bij Mailmind):** adressen komen binnen via de lerende modal en aanmeldmotor van lib/modalmotor.js en lib/modal.js (Clickmind, per project aan te zetten met /api/mm/motorbeheer). Mailmind verstuurt en leert daarna; zet een nieuw project dus eerst op die modal, niet op een eigen venster. taniakross.media heeft nog een eigen lerend venster in lijst.js (simpele-site); overzetten staat open.
+- **Doel (dashboard, project mailmind; Henkjan 25 nov 2026: "We moeten mailmind een apart eigen doel geven"):** op 31-12-2026 krijgt 20% van de verstuurde mails een reactie (ja-klik of antwoord), met bounces onder 3% en stops onder 2%. Opens tellen niet: tekstmail heeft geen pixel en Gmail en Apple laden pixels zelf. Mailmind zet de meting elk uur zelf op het dashboard, en per stroom de projectmeting (tk: leden op de lijst).
 - **Rapport:** elke dag dat er iets gebeurde een regel in het werklog (dashboard, wie <project>-mailmind); de dagronde van het project meldt ja, stops, bounces en de winnende variant in de chat.
 
 # POST: elke mail eerst langs de lus

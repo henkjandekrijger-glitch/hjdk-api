@@ -81,7 +81,7 @@ Bijgewerkt 24 nov 2026 11:30 UTC: de pauze tot maandag 20:00 is voorbij. Campagn
 - **Opzet sinds 24 nov (Henkjan: "verbeter campagne drastisch met wat je geleerd heb OF leer beter leren voor de campagne . Bod kan iets omhoog als je beter leert . Dus iedere dag gaat er betere campagne live"):**
   - **BEWEZEN 12183102** "TK ADRES BEWEZEN NL": witte lijst van 53 zones (Clickmind-wit plus elke zone met een adres), de 4 winnende advertenties plus 4 nieuwe (Tania heeft iets voor je; Waarom muziek ons heelt; Opera zonder drempel; Het verhaal achter de stem), knop "Gratis in mail", **bod $0,05 per adres**, $10 per dag, $50 totaal.
   - **VERKENNER 12168319**: blijft op $0,03 om nieuwe zones te vinden; de 53 bewezen zones staan daar op de zwarte lijst, zodat de twee niet tegen elkaar bieden.
-- **Dagelijkse leerronde** (send_later-keten "TK ADRES dagronde", rond 12:17 UTC, rapport in de chat van Henkjan):
+- **Dagelijkse leerronde** (sinds 25 nov een cloudtaak "TK dagronde adressen (cloud)" trig_01Dxs5zUJ4mzjJUDJHPsS4Z3, 08:17 Curaçao, los van computer en account; doel 40 adressen per dag; de oude send_later-keten loopt na 26 nov niet meer door):
   1. Cijfers van de laatste 3 dagen per zone en per advertentie van BEWEZEN en VERKENNER (PropellerAds /adv/statistics, group_by zone_id en banner_id, tz +0000) plus Clickmind /api/mm/zones (lijst wit) en de lijststand.
   2. Promoveren: een zone in de VERKENNER met een adres, of die Clickmind wit noemt, gaat naar de witte lijst van BEWEZEN en op de zwarte lijst van de VERKENNER.
   3. Degraderen: een zone in BEWEZEN met 80 of meer kliks en geen adres gaat van de witte lijst af (zones_erbij_uitsluiten).
@@ -146,6 +146,8 @@ Henkjan 25 nov: "vind lijst van mailchimp in mijn email en stuur per dag een aan
 10. Tania's persoonlijke noot in het dossier, daarna dossier linken, advertentie erheen, ZICHT-proef (12).
 
 ## Logboek (nieuwste boven)
+
+- 25 nov 13:40 UTC chat-taniakross: op Henkjans "Ja ga naar 40 per dag . en verhoog dus": bod 12187841 van $0,01 (stond per ongeluk zo laag) naar $0,10, verkenner 12168319 van $0,03 naar $0,05. Uitzetten van de oude 12183102 werd door de veiligheidscontrole geweigerd; hij loopt nog. Dagronde nu als cloudtaak trig_01Dxs5zUJ4mzjJUDJHPsS4Z3 (08:17 Curaçao), los van computer en account. Doel en planning op het dashboard (project tk: 40 adressen per dag, op weg naar 1.000); Mailmind zet de ledenstand elk uur zelf op het dashboard.
 
 - 25 nov 13:50 UTC chat-taniakross: Mailmind gebouwd (lib/mailmind.js, één lerende mailmotor voor alle projecten); de Tania-lijst is de eerste stroom (tk-mailchimp), adressen in bakken die leren welk soort adres het best scoort. Clubwerving deelt de Gmail-poort en blokkeerlijst. Nog steeds uit tot Henkjans verstuur.
 
