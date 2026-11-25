@@ -220,6 +220,8 @@ Voorstel cijfer per bedrijf (1 tot 10): antwoord 3 punten (binnen 15 dagen), opl
 
 ## Logboek (nieuwste bovenaan)
 
+- 25 nov 2026 (Claude, 20:05 UTC, Henkjan "Vind meest gezochte dossier en maak campagne"): opzeggen postcodeloterij (22.200 zoekopdrachten per maand) krijgt campagne WAM LOTERIJ via wissel wmn-loterij; beelden loterij.
+
 - 25 nov 2026 (Claude, 19:50 UTC, Henkjan "Dit moet veel beter ik wil veel meer aanmelding"): blok Ja, ik ook bovenaan Blendle en ANP; Blendle geeft na ja de voorbeeldbrief om geld terug te vragen tegen een e-mailadres (pagina en welkomstmail), of één melding. Teller wmn:ikook.
 
 - 25 nov 2026 (Claude, 19:15 UTC, Henkjan "concretere ads per dossier ... lerende modal laat ze abonneren ... meer dossiers met een ad"): advertentiebeelden per dossier (op=adbeeld), wissels wmn-incasso en wmn-anp, campagnelijnen WAM INCASSO en WAM ANP, push-arm in de lerende modal op de WAM-volglijst. Machteloos v1 12189124 gestopt, bod 0,15 op 12189888 en 12189120.
