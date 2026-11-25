@@ -356,3 +356,25 @@ console.log('24nov: plantenbron/schema/modelgrenzen, bronhubontdekking en Nieuw-
 
 for (const op of ['llms','llmsfull']) {const tekst=(await render('op='+op)).body;assert.ok(tekst.includes('tv-meubel-breedte-berekenen'));assert.ok(tekst.includes('geen fysieke passendheids- of veiligheidscheck'));}
 console.log('24nov: tv-rekenhulp en passende beperkingen staan in beide LLM-bestanden.');
+
+// 25nov: eerste passende regel moet twijfel afvangen, ook bij klein budget of een andere stijl.
+const eersteRegel=(g,a)=>g.check.regels.find(r=>Object.entries(r.als).every(([k,v])=>v.includes(a[k])));
+for(const stijl of ['rust','kleur','tekst']) assert.equal(eersteRegel(gidsen.GIDSEN.tuinposter,{plek:'open',stijl}).pid,'');
+for(const huid of ['ja','weet']) for(const wat of ['bad','warm','sfeer','planten']) for(const budget of ['klein','gewoon']) assert.equal(eersteRegel(gidsen.GIDSEN['kerstcadeau-voor-haar'],{huid,wat,budget}).pid,'');
+assert.ok(eersteRegel(gidsen.GIDSEN['kerstcadeau-voor-haar'],{huid:'nee',wat:'bad',budget:'gewoon'}).pid);
+for(const slug of ['tuinposter','kunstboom','kerstcadeau-voor-haar']) {
+ const b=(await render('slug='+slug)).body;
+ assert.ok(!/zodat hij niet omvalt|voorkomt dat een hoge boom omvalt|neemt niets op uit de lucht|prijs hierboven is die van de kleinste maat/.test(b));
+ const graph=[...b.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1])['@graph']||[]);
+ const faq=graph.find(x=>x['@type']==='FAQPage');
+ for(const f of gidsen.GIDSEN[slug].faq) assert.ok(faq.mainEntity.some(x=>x.name===f.v&&x.acceptedAnswer.text===f.a));
+ if(slug==='kerstcadeau-voor-haar') for(const id of ['cadeauHuidAad','wolHuid','cadeauHuidEdf']) {assert.ok(b.includes(bewijs.BRONNEN[id].url));assert.ok(graph.find(x=>x['@type']==='Article').citation.includes(bewijs.BRONNEN[id].url));}
+}
+assert.ok(bewijs.tuinposterMatch({t:'Tuinposter Botanical A3'}));
+assert.ok(!bewijs.tuinposterMatch({t:'Ophangframe voor tuinposter'}));
+assert.ok(bewijs.kunstboomMatch({t:'Kunstolijfboom 150 cm'}));
+assert.ok(!bewijs.kunstboomMatch({t:'Hoes voor kunstboom'}));
+for(const id of ['oc_4174003312721921','oc_4174003313590273','oc_4174003465994242','oc_4174003411730433','oc_4174003414204417']) assert.ok(bewijs.bronLink({id}).includes('/kunstboom#uitleg'));
+assert.ok(bewijs.bronLink({id:'oc_4174003512573953'}).includes('/planten-home-staging#uitleg'));
+for(const query of ['slug=onderzoek-en-bronnen','op=llms','op=llmsfull']) {const b=(await render(query)).body;assert.ok(b.includes('tuinposter'));assert.ok(b.includes('kunstboom'));assert.ok(b.includes(bewijs.BRONNEN.cadeauHuidAad.url));}
+console.log('25nov: 19 adviesroutes zonder ongefundeerde aankoop, modelgrenzen, passende matches, FAQ/schema en bronnen in beide LLM-bestanden geslaagd.');
