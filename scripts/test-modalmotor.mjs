@@ -56,7 +56,7 @@ await ok('aanmelden spaarkaart via de modal: bevestigmail met de belofte en de t
 await ok('bevestigen: 3 zegels echt vastgelegd, welkomstmail in 2 zinnen, bevestigd geteld', async () => {
   const s = await MT.bevestig('kadoly', tok); assert.ok(s && s.actief && s.vt && s.freq === 'week'); const sid = await kv.get('ss:em:' + (await import('node:crypto')).createHash('sha256').update('lid@voorbeeld.nl').digest('hex'));
   const m = await kv.get('ss:m:' + sid); assert.equal(m.zegels.length, 3); const SS = await import('../lib/samensparen.js'); assert.equal(SS.stand(m).opKaart, 3);
-  const w = mails.find(x => /3 van de 5 zegels/.test(x.subject)); assert.ok(w, 'welkomstmail'); assert.ok(/test/.test(w.html) && /2 keer/.test(w.html)); assert.ok(w.headers['List-Unsubscribe']);
+  const w = mails.find(x => /3 van de 5 zegels/.test(x.subject)); assert.ok(w, 'welkomstmail'); assert.ok(/test/.test(w.html) && /2 bestellingen/.test(w.html)); assert.ok(w.headers['List-Unsubscribe']);
   assert.ok(/\/nieuws\/voorkeur\?t=/.test(w.html), 'voorkeurlink in de mail');
   const nog = await MT.bevestig('kadoly', tok); assert.ok(nog.al); });
 await ok('voorkeurencentrum: frequentie, onderwerpen, pauze, afmelden', async () => {
