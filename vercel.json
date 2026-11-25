@@ -1363,7 +1363,7 @@
       "destination": "/api/wam?op=dpagina&p=bedrijven/:bedrijf"
     },
     {
-      "source": "/v/:t/:w(e|d|o|x)",
+      "source": "/v/:t/:w(e|d|o|x|g|n|w)",
       "has": [
         {
           "type": "host",
