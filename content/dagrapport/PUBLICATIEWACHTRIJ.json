@@ -832,5 +832,21 @@
       "https://business.pinterest.com/blog/beginner-pinterest-content-guide/",
       "https://policy.pinterest.com/en/community-guidelines"
     ]
-  }
+  },
+  "review_candidates": [
+    {
+      "at_utc": "2026-11-25T19:45:32.046Z",
+      "approval_status": "not_approved_new_exact_previews_shown_in_this_round",
+      "batch": "content/dagrapport/2026-11-25-batch.json",
+      "preview": "content/dagrapport/2026-11-25-batch.md",
+      "pin_ids": [
+        "20261125-free-coloring",
+        "20261125-free-trivia",
+        "20261125-free-jokes",
+        "20261125-seven-day-reset"
+      ],
+      "instagram_id": "20261125-ig-men",
+      "does_not_change_existing_publication_approvals": true
+    }
+  ]
 }

@@ -1,0 +1,703 @@
+{
+  "schema_version": 1,
+  "round": "pinterest",
+  "event_date_utc": "2026-11-25",
+  "observed_at_utc": "2026-11-25T19:44:45.953Z",
+  "reporting_period_utc": {
+    "start": "2026-11-24T00:00:00Z",
+    "end_exclusive": "2026-11-25T00:00:00Z"
+  },
+  "traffic": {
+    "source": "https://hjdk-api-henq.vercel.app/api/bs?op=dagrapport&droog=1",
+    "observed_at": "Wed, 25 Nov 2026 19:35:49 GMT",
+    "definition": "Registered page-openings, not unique humans or proved organic visits.",
+    "stockingbooks": 42,
+    "lastingchange": 5,
+    "previous_day": "2026-11-23",
+    "previous_stockingbooks": 32,
+    "previous_lastingchange": 12,
+    "weekly_average": null,
+    "source_breakdown": null,
+    "amazon_raw_redirects": 30,
+    "stocking_amazon_raw": 27,
+    "lc_amazon_raw": 3,
+    "attributed_sales": null
+  },
+  "sources": {
+    "queue": {
+      "branch": "codex/content-dagboek",
+      "sha": "64cce059b71362f660050ac96bdd01a3cbf48247",
+      "status": "approved old batch published, no remaining approval/capacity blocker"
+    },
+    "pinplan": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?op=pinplan",
+      "response": {
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "pins": [
+          {
+            "id": "20261125-we-regels-1zjm",
+            "haak": "we-regels",
+            "a": "B0DNQ61ZJM",
+            "bord": "271060540011963291",
+            "titel": "White elephant rules: how to play + free printable",
+            "tekst": "The white elephant gift exchange rules in 8 steps, a rules card to print and a free number picker for the playing order. How many steals, when a gift is frozen and how the last turn works.",
+            "link": "https://stockingbooks.com/white-elephant-rules?utm_source=pinterest&utm_content=20261125-we-regels-1zjm",
+            "beeld": "https://stockingbooks.com/pin/B0DNQ61ZJM-we-regels.png",
+            "kop": "White elephant rules in 8 steps (free printable)"
+          },
+          {
+            "id": "20261125-lc-jaar-1l5j",
+            "haak": "lc-jaar",
+            "a": "B0F1SM1L5J",
+            "bord": "271060540011963293",
+            "titel": "How to stick to New Year’s resolutions: one habit, 30 days",
+            "tekst": "Did nothing this year? The Lasting Change Workbook: one habit, start tiny, a bad-day plan and a two-minute daily check-in for 30 days. Rated 4.2 out of 5 by 130 readers on Amazon. New Year's resolution ideas that stick.",
+            "link": "https://lastingchange.works/?utm_source=pinterest&utm_content=20261125-lc-jaar-1l5j",
+            "beeld": "https://stockingbooks.com/pin/B0F1SM1L5J-lc-jaar.png",
+            "kop": "Don’t throw away another year."
+          },
+          {
+            "id": "20261125-apo-14-xc9j",
+            "haak": "apo-14",
+            "a": "B0DDBTXC9J",
+            "bord": "271060540011963294",
+            "titel": "What is the Apocrypha? The books left out of the Bible",
+            "tekst": "The 14 books of the King James Apocrypha: Tobit, Judith, Wisdom, Sirach, Maccabees and more. Which Bibles include them and why Protestant Bibles left them out.",
+            "link": "https://stockingbooks.com/apocrypha?utm_source=pinterest&utm_content=20261125-apo-14-xc9j",
+            "beeld": "https://stockingbooks.com/pin/B0DDBTXC9J-apo-14.png",
+            "kop": "The 14 books left out of the Bible"
+          },
+          {
+            "id": "20261125-lc-stappen-1l5j",
+            "haak": "lc-stappen",
+            "a": "B0F1SM1L5J",
+            "bord": "271060540011963293",
+            "titel": "New Year’s resolutions that stick: 6 steps",
+            "tekst": "Pick one habit, start it so small you cannot say no, tie it to something you already do, plan the bad day, check in daily and give it 66 days. New Year goals, habit tracker ideas.",
+            "link": "https://lastingchange.works/how-to-stick-to-new-years-resolutions?utm_source=pinterest&utm_content=20261125-lc-stappen-1l5j",
+            "beeld": "https://stockingbooks.com/pin/B0F1SM1L5J-lc-stappen.png",
+            "kop": "6 steps to make a resolution stick"
+          }
+        ]
+      }
+    },
+    "pinstand": {
+      "url": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+      "observed_at": "Wed, 25 Nov 2026 19:41:17 GMT",
+      "response": {
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "haken": [
+          {
+            "id": "we-ruzie",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "we-dad",
+            "pins": 2,
+            "klik": 1,
+            "saves": 1,
+            "imp": 7
+          },
+          {
+            "id": "we-onder10",
+            "pins": 1,
+            "klik": 0,
+            "saves": 1,
+            "imp": 1
+          },
+          {
+            "id": "we-regels",
+            "pins": 1,
+            "klik": 0,
+            "saves": 1,
+            "imp": 6
+          },
+          {
+            "id": "sok-haar",
+            "pins": 1,
+            "klik": 0,
+            "saves": 1,
+            "imp": 7
+          },
+          {
+            "id": "sok-hem",
+            "pins": 2,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "sok-tiener",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "sok-puzzel",
+            "pins": 2,
+            "klik": 0,
+            "saves": 1,
+            "imp": 4
+          },
+          {
+            "id": "ss-gen",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "we-ideeen",
+            "pins": 1,
+            "klik": 0,
+            "saves": 1,
+            "imp": 1
+          },
+          {
+            "id": "sok-gids-haar",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "sok-gids-hem",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "lc-jaar",
+            "pins": 1,
+            "klik": 0,
+            "saves": 1,
+            "imp": 2
+          },
+          {
+            "id": "lc-66",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "lc-stappen",
+            "pins": 1,
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          {
+            "id": "enoch-wat",
+            "pins": 2,
+            "klik": 2,
+            "saves": 1,
+            "imp": 5
+          },
+          {
+            "id": "apo-14",
+            "pins": 2,
+            "klik": 1,
+            "saves": 1,
+            "imp": 5
+          }
+        ],
+        "laatste": [
+          {
+            "id": "20261122-enoch-wat-79n1",
+            "haak": "enoch-wat",
+            "a": "B0B5KV79N1",
+            "post": "6b03306970f37227beb16166",
+            "t": "2026-11-22T18:12:12.629Z",
+            "m": {
+              "klik": 2,
+              "saves": 1,
+              "imp": 5
+            }
+          },
+          {
+            "id": "20261122-apo-14-xc9j",
+            "haak": "apo-14",
+            "a": "B0DDBTXC9J",
+            "post": "6b03306ec4d17d4a0f103bf2",
+            "t": "2026-11-22T18:12:13.608Z",
+            "m": {
+              "klik": 1,
+              "saves": 1,
+              "imp": 5
+            }
+          },
+          {
+            "id": "20261122-we-ruzie-z3g3",
+            "haak": "we-ruzie",
+            "a": "B0DNDQZ3G3",
+            "post": "6b0344b6783be3b4addd3e43",
+            "t": "2026-11-22T19:38:53.148Z",
+            "m": {
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            }
+          },
+          {
+            "id": "20261122-sok-haar-mssk",
+            "haak": "sok-haar",
+            "a": "B0DMR1MSSK",
+            "post": "6b0344ba9978cd4d9a1ca580",
+            "t": "2026-11-22T19:38:54.191Z",
+            "m": {
+              "klik": 0,
+              "saves": 1,
+              "imp": 7
+            }
+          },
+          {
+            "id": "20261122-we-dad-syxw",
+            "haak": "we-dad",
+            "a": "B0DK3CSYXW",
+            "post": "6b0344bf56bdc437db134475",
+            "t": "2026-11-22T19:38:55.293Z",
+            "m": {
+              "klik": 1,
+              "saves": 1,
+              "imp": 7
+            }
+          },
+          {
+            "id": "20261122-sok-gids-hem-1fsp",
+            "haak": "sok-gids-hem",
+            "a": "B0DMP31FSP",
+            "post": "6b0344c49978cd4d9a1ca59e",
+            "t": "2026-11-22T19:38:56.288Z",
+            "m": {
+              "klik": 0,
+              "saves": 0,
+              "imp": 0
+            }
+          },
+          {
+            "id": "20261123-sok-puzzel-prd9",
+            "haak": "sok-puzzel",
+            "a": "B0DN65PRD9",
+            "post": "6b049678d511266d6a856bec",
+            "t": "2026-11-23T19:39:54.871Z",
+            "m": {
+              "klik": 0,
+              "saves": 1,
+              "imp": 4
+            }
+          },
+          {
+            "id": "20261123-we-ideeen-t9jt",
+            "haak": "we-ideeen",
+            "a": "B0DNB1T9JT",
+            "post": "6b04967b5d67d2299ad22eb9",
+            "t": "2026-11-23T19:39:56.079Z",
+            "m": {
+              "klik": 0,
+              "saves": 1,
+              "imp": 1
+            }
+          },
+          {
+            "id": "20261123-we-onder10-fxb1",
+            "haak": "we-onder10",
+            "a": "B0DP42FXB1",
+            "post": "6b04967fd511266d6a856c13",
+            "t": "2026-11-23T19:39:57.187Z",
+            "m": {
+              "klik": 0,
+              "saves": 1,
+              "imp": 1
+            }
+          },
+          {
+            "id": "20261123-lc-jaar-1l5j",
+            "haak": "lc-jaar",
+            "a": "B0F1SM1L5J",
+            "post": "6b049681d511266d6a856c28",
+            "t": "2026-11-23T19:39:58.268Z",
+            "m": {
+              "klik": 0,
+              "saves": 1,
+              "imp": 2
+            }
+          },
+          {
+            "id": "20261124-ss-gen-dhd6",
+            "haak": "ss-gen",
+            "a": "B0DNCLDHD6",
+            "post": "6b05e7df7a6d18398505d60a",
+            "t": "2026-11-24T19:39:35.087Z"
+          },
+          {
+            "id": "20261124-sok-gids-haar-lklt",
+            "haak": "sok-gids-haar",
+            "a": "B0DMNGLKLT",
+            "post": "6b05e7e46cf47dfab007ad2f",
+            "t": "2026-11-24T19:39:37.269Z"
+          },
+          {
+            "id": "20261124-lc-66-1l5j",
+            "haak": "lc-66",
+            "a": "B0F1SM1L5J",
+            "post": "6b05e7e952ad165c265fa790",
+            "t": "2026-11-24T19:39:38.366Z"
+          },
+          {
+            "id": "20261124-lc-stappen-1l5j",
+            "haak": "lc-stappen",
+            "a": "B0F1SM1L5J",
+            "post": "6b05e7ec6cf47dfab007ad4b",
+            "t": "2026-11-24T19:39:39.552Z"
+          },
+          {
+            "id": "20261123-sok-puzzel-1j5t",
+            "haak": "sok-puzzel",
+            "a": "B0DMNK1J5T",
+            "post": "6b05f89c3ea213a32f7d5a66",
+            "t": "2026-11-24T20:58:01.581Z"
+          },
+          {
+            "id": "20261123-sok-hem-j7cy",
+            "haak": "sok-hem",
+            "a": "B0HRGNJ7CY",
+            "post": "6b05f9fdacf4072f8e620181",
+            "t": "2026-11-24T20:58:03.317Z"
+          },
+          {
+            "id": "20261125-enoch-wat-79n1",
+            "haak": "enoch-wat",
+            "a": "B0B5KV79N1",
+            "post": "6b07397bcb651a6eadc070bb",
+            "t": "2026-11-25T19:39:50.426Z"
+          },
+          {
+            "id": "20261125-we-dad-syxw",
+            "haak": "we-dad",
+            "a": "B0DK3CSYXW",
+            "post": "6b073986be3f02dcc0ff44d7",
+            "t": "2026-11-25T19:40:07.517Z"
+          },
+          {
+            "id": "20261125-apo-14-xc9j",
+            "haak": "apo-14",
+            "a": "B0DDBTXC9J",
+            "post": "6b073998b436184d7f495f0b",
+            "t": "2026-11-25T19:40:19.109Z"
+          },
+          {
+            "id": "20261125-sok-hem-syxw",
+            "haak": "sok-hem",
+            "a": "B0DK3CSYXW",
+            "post": "6b0739a3be3f02dcc0ff4563",
+            "t": "2026-11-25T19:40:33.189Z"
+          }
+        ]
+      }
+    },
+    "other_round_log": {
+      "url": "https://hjdk-api-henq.vercel.app/api/mm/handover?vorm=json",
+      "at": "2026-11-25T19:40:40.259Z",
+      "who": "bookstuffers-pin",
+      "claim": "4pins placed;9measured viaZernio. Enoch2clicks5imp,Apocrypha1click,Dad1click;winnerclaim not accepted."
+    },
+    "bspin_sha": "c59e06919e277a5b1317098a21d0b4750de41a9f",
+    "shared_repo_social_log_sha": "d00153a740340f4688b87d68a375bc9a8f6734f6"
+  },
+  "provider_access": {
+    "zernio_connector_discovery": "No matching tool or plugin in fresh search",
+    "actual_health": null,
+    "actual_provider_shared_planned_posts": null,
+    "no_account_disconnection_claim": true,
+    "no_tinyfish_or_local_computer_dependency": true,
+    "repo_shared_planned25nov": [
+      "6b069fd5fd27defb6986ecd3",
+      "6b069fd69a384db5babfb86e",
+      "6b069fd6fd27defb6986ecec"
+    ],
+    "repo_reservations_not_complete_provider_queue": true
+  },
+  "pinterest": {
+    "learn_register_rows": 22,
+    "newly_observed_other_round_post_ids": [
+      {
+        "id": "20261125-enoch-wat-79n1",
+        "haak": "enoch-wat",
+        "a": "B0B5KV79N1",
+        "post": "6b07397bcb651a6eadc070bb",
+        "t": "2026-11-25T19:39:50.426Z"
+      },
+      {
+        "id": "20261125-we-dad-syxw",
+        "haak": "we-dad",
+        "a": "B0DK3CSYXW",
+        "post": "6b073986be3f02dcc0ff44d7",
+        "t": "2026-11-25T19:40:07.517Z"
+      },
+      {
+        "id": "20261125-apo-14-xc9j",
+        "haak": "apo-14",
+        "a": "B0DDBTXC9J",
+        "post": "6b073998b436184d7f495f0b",
+        "t": "2026-11-25T19:40:19.109Z"
+      },
+      {
+        "id": "20261125-sok-hem-syxw",
+        "haak": "sok-hem",
+        "a": "B0DK3CSYXW",
+        "post": "6b0739a3be3f02dcc0ff4563",
+        "t": "2026-11-25T19:40:33.189Z"
+      }
+    ],
+    "true_verified_organic_outbound_clicks": null,
+    "verified_period": null,
+    "reported_partial_clicks": {
+      "enoch": 2,
+      "apocrypha": 1,
+      "dad": 1,
+      "source": "Other round worklog and positive cache rows, incomplete definitions/window"
+    },
+    "no_pinuitkomst_written": true,
+    "new_posts_by_this_run": [],
+    "old_approved_pins_not_reposted": true
+  },
+  "largest_demonstrable_leak": {
+    "finding": "Shared same-product cooldown not enforced by candidate function; concurrent publisher repeats books.",
+    "evidence": "4new25novpostIDs use3ASINs all registered22nov;dadASIN appears twice this round. pinPlan only filters gisteren and falls back to first excluded candidate when all filtered.",
+    "hypothesis": "A shared14dayASIN guard and no excluded-product fallback would prevent this observed duplication without raising volume.",
+    "repair_status": "concrete technical proposal included in batch preview, not code/live",
+    "control": "Preserve existing publishedpins/controlgroups/otherworkflows; no deletion or republishing.",
+    "next_check": "Before any future approved publication reconcile actual provider planned/published book products and approvalIDs; code requires separate exact review and regression tests."
+  },
+  "actual_work": [
+    {
+      "status": "complete_concepts_not_live",
+      "pins": 4,
+      "image_dimensions": [
+        1000,
+        1500
+      ],
+      "actual_own_samples": true,
+      "editable_svg_and_png": true,
+      "metadata": "2026-11-25-batch.json",
+      "preview": "2026-11-25-batch.md"
+    },
+    {
+      "status": "complete_video_concept_not_live",
+      "account": "kadoly.shop",
+      "reel_dimensions": [
+        1080,
+        1920
+      ],
+      "duration_seconds": 12,
+      "codec": "h264",
+      "fps": 30,
+      "audio": "silent AAC",
+      "actual_cover": true,
+      "actual_interior": false,
+      "no_price_or_stock_claim": true,
+      "manual_domain_CTA": true,
+      "unverified_bio_route_no_claim": true
+    },
+    {
+      "status": "learning_records_updated",
+      "previous18preserved": true,
+      "new4added": true,
+      "no_false_winner": true
+    }
+  ],
+  "checks": {
+    "count_color12": true,
+    "count_trivia40": true,
+    "count_jokes50": true,
+    "reset_sample": "Own exact Day1question excerpt, source live article.",
+    "png_dimensions_verified": true,
+    "contact_sheet_visually_checked": true,
+    "reel_probe_verified": true,
+    "decoded_reel_frame_checked": true,
+    "cover_http": 200,
+    "men_destination_anchor_and_ASIN_present": true,
+    "source_pages_http200": true,
+    "no_legacy_bookstuffers_destinations": true,
+    "board_ids": "Configured from current bspin, provider verification pending."
+  },
+  "concepts": {
+    "observed_at_utc": "2026-11-25T19:43:59.472Z",
+    "status": "complete_previews_not_approved_not_published",
+    "pins": [
+      {
+        "id": "20261125-free-coloring",
+        "name": "pin-coloring",
+        "title": "12 Free Printable Christmas Coloring Pages for Kids",
+        "description": "Choose from 12 free Christmas coloring pages, including a tree, snowman and gingerbread man. Print one page at home for a family activity, classroom or party. No sign-up.",
+        "board": "271060540011963292",
+        "board_label": "Stocking Stuffer Books",
+        "url": "https://stockingbooks.com/christmas-coloring-pages",
+        "hypothesis": "A real printable sample and a clear free-print promise may earn relevant organic outbound clicks.",
+        "comparison": "Compare to the existing free-wordsearch hook only after matching age, board, time window and sufficient exposure; subjects differ, so this is exploration, not an A/B victory.",
+        "source": "lib/bsxmas.js KLEUR[0] and live coloring page",
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "asin": null,
+        "status": "complete_preview_pending_exact_approval",
+        "width": 1000,
+        "height": 1500,
+        "primary_metric": "Verified organic outbound Pinterest clicks; impressions and saves separate",
+        "destination": "https://stockingbooks.com/christmas-coloring-pages?utm_source=pinterest&utm_medium=organic_social&utm_campaign=books-free-20261125&utm_content=20261125-free-coloring",
+        "preview_png": "content/dagrapport/2026-11-25-media/pin-coloring.png",
+        "preview_svg": "content/dagrapport/2026-11-25-media/pin-coloring.svg",
+        "not_provider_verified_board_health": true
+      },
+      {
+        "id": "20261125-free-trivia",
+        "name": "pin-trivia",
+        "title": "40 Free Christmas Trivia Questions and Answers to Print",
+        "description": "Try 40 Christmas trivia questions across four rounds, with an easy kids round. Print a question sheet for players and the answers for the quizmaster. Start with this one: in Home Alone, where is the family flying?",
+        "board": "271060540011963292",
+        "board_label": "Stocking Stuffer Books",
+        "url": "https://stockingbooks.com/christmas-trivia",
+        "hypothesis": "Showing one actual question with its answer may make the free party resource more useful and attract relevant outbound clicks.",
+        "comparison": "Existing sok-puzzel printable hook is a directional reference; subject and exposure differ. Preserve it as control and do not claim a winner.",
+        "source": "lib/bsxmas.js QUIZ[0][1][4];40total, round counts11/5/16/8; no false10perroundclaim",
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "asin": null,
+        "status": "complete_preview_pending_exact_approval",
+        "width": 1000,
+        "height": 1500,
+        "primary_metric": "Verified organic outbound Pinterest clicks; impressions and saves separate",
+        "destination": "https://stockingbooks.com/christmas-trivia?utm_source=pinterest&utm_medium=organic_social&utm_campaign=books-free-20261125&utm_content=20261125-free-trivia",
+        "preview_png": "content/dagrapport/2026-11-25-media/pin-trivia.png",
+        "preview_svg": "content/dagrapport/2026-11-25-media/pin-trivia.svg",
+        "not_provider_verified_board_health": true
+      },
+      {
+        "id": "20261125-free-jokes",
+        "name": "pin-jokes",
+        "title": "50 Christmas Jokes for Kids, Dads and Family Gatherings",
+        "description": "What do snowmen eat for breakfast? Frosted Flakes. Find 50 Christmas jokes, including kids jokes, dad jokes and knock-knock jokes. Pick a favorite to read out at the table.",
+        "board": "271060540011963292",
+        "board_label": "Stocking Stuffer Books",
+        "url": "https://stockingbooks.com/christmas-jokes",
+        "hypothesis": "An immediate sample joke may give people a reason to click through to the complete collection.",
+        "comparison": "Compare directionally to the existing we-dad joke-book hook, but not as a matched experiment: destination is free material and board differs.",
+        "source": "lib/bsxmas.js MOPPEN.kids[0],50total",
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "asin": null,
+        "status": "complete_preview_pending_exact_approval",
+        "width": 1000,
+        "height": 1500,
+        "primary_metric": "Verified organic outbound Pinterest clicks; impressions and saves separate",
+        "destination": "https://stockingbooks.com/christmas-jokes?utm_source=pinterest&utm_medium=organic_social&utm_campaign=books-free-20261125&utm_content=20261125-free-jokes",
+        "preview_png": "content/dagrapport/2026-11-25-media/pin-jokes.png",
+        "preview_svg": "content/dagrapport/2026-11-25-media/pin-jokes.svg",
+        "not_provider_verified_board_health": true
+      },
+      {
+        "id": "20261125-seven-day-reset",
+        "name": "pin-reset",
+        "title": "How to Start Over in Life: A Practical 7-Day Reset Plan",
+        "description": "Start with three lists: what to keep, what to change and what to work around. This free guide includes a practical seven-day structure and fill-in questions. It helps you plan a first week, without promising a complete life change in seven days.",
+        "board": "271060540011963293",
+        "board_label": "Lasting Change books board, configured LC ID",
+        "url": "https://lastingchange.works/how-to-start-over-in-life",
+        "hypothesis": "A real Day1fill-in sample may earn more relevant organic outbound clicks than a general habit slogan.",
+        "comparison": "Reference lc-stappen only after matching age, board and period. Different free-article destination and sample-based hook; no duplicate book ASIN creative.",
+        "source": "Live approved how-to-start-over-in-life, Day1exact own prompts",
+        "account": "6afb8a5d86e8bb18f844fc95",
+        "asin": null,
+        "status": "complete_preview_pending_exact_approval",
+        "width": 1000,
+        "height": 1500,
+        "primary_metric": "Verified organic outbound Pinterest clicks; impressions and saves separate",
+        "destination": "https://lastingchange.works/how-to-start-over-in-life?utm_source=pinterest&utm_medium=organic_social&utm_campaign=books-free-20261125&utm_content=20261125-seven-day-reset",
+        "preview_png": "content/dagrapport/2026-11-25-media/pin-reset.png",
+        "preview_svg": "content/dagrapport/2026-11-25-media/pin-reset.svg",
+        "not_provider_verified_board_health": true
+      }
+    ],
+    "instagram": {
+      "id": "20261125-ig-men",
+      "status": "complete_video_preview_pending_exact_approval",
+      "account": "6afb8787a26245ebf04dc7be",
+      "profile": "6afaf9820c09220040d746f4",
+      "handle": "kadoly.shop",
+      "format": "1080x1920 H264 MP4,12seconds,30fps,silent AAC track",
+      "asin": "B0HRGNJ7CY",
+      "cover_source": "https://m.media-amazon.com/images/I/61pQMN-jT8L._SL700_.jpg",
+      "interior": "No verified own interior asset available; use genuine full cover only, not invented interior.",
+      "caption": "Voor de man die alles al heeft: Wait, That’s True?! For Men. Een Engelstalig boek met 800 bijzondere weetjes, voor vader, partner of opa. Bekijk het boek op stockingbooks.com bij Stocking stuffers, For him.\n\n#kadoly #cadeauvoorhem #boekencadeau #kerstcadeau",
+      "cta": "Bekijk het boek op stockingbooks.com, Stocking stuffers → For him.",
+      "destination": "https://stockingbooks.com/stocking-stuffers#for-him",
+      "proposed_tracked_route": "https://stockingbooks.com/stocking-stuffers?utm_source=instagram&utm_medium=organic_social&utm_campaign=kadoly-books-20261125&utm_content=20261125-ig-men#for-him",
+      "bio_route": "https://go.kadoly.com/o/ig",
+      "bio_book_route_verified": false,
+      "no_link_in_bio_claim": true,
+      "no_caption_clickable_link_claim": true,
+      "primary_metric": "Provider-distinguished actual outgoing website clicks if available; site openings by source separately. Views, reach, saves, shares and profile actions are supplementary.",
+      "hypothesis": "A real readable cover with a clear gift recipient may attract relevant profile/website interest. No existing comparable book-Reel performance available.",
+      "file": "content/dagrapport/2026-11-25-media/reel-men.mp4",
+      "live_health_and_shared_queue": "Unknown, existing provider UI/connector must be checked before any publishing; repo social log25nov3Pinterest reservations are not complete live account state."
+    },
+    "overlap": {
+      "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+      "new_registration_rows": [
+        {
+          "id": "20261125-enoch-wat-79n1",
+          "haak": "enoch-wat",
+          "a": "B0B5KV79N1",
+          "post": "6b07397bcb651a6eadc070bb",
+          "t": "2026-11-25T19:39:50.426Z"
+        },
+        {
+          "id": "20261125-we-dad-syxw",
+          "haak": "we-dad",
+          "a": "B0DK3CSYXW",
+          "post": "6b073986be3f02dcc0ff44d7",
+          "t": "2026-11-25T19:40:07.517Z"
+        },
+        {
+          "id": "20261125-apo-14-xc9j",
+          "haak": "apo-14",
+          "a": "B0DDBTXC9J",
+          "post": "6b073998b436184d7f495f0b",
+          "t": "2026-11-25T19:40:19.109Z"
+        },
+        {
+          "id": "20261125-sok-hem-syxw",
+          "haak": "sok-hem",
+          "a": "B0DK3CSYXW",
+          "post": "6b0739a3be3f02dcc0ff4563",
+          "t": "2026-11-25T19:40:33.189Z"
+        }
+      ],
+      "all_four_asins_previously_registered_on": "2026-11-22",
+      "two_same_round_asin": "B0DK3CSYXW",
+      "guard_proposal_not_live": true
+    }
+  },
+  "research": {
+    "reused": "2026-11-25-traffic-onderzoek.md",
+    "primary": "https://nesslabs.com/annual-review",
+    "lesson": "Usable own sample/tool as discovery entrance; no external traffic effect forecast.",
+    "counterevidence": "No verified performance for our new concepts; partial tiny otherround counts don't prove a winner.",
+    "paid_calls": 0
+  },
+  "next_test": {
+    "technical": "Test duplicate-ASIN guard in isolation after exact proposal approval; first validate measurement before traffic judgment.",
+    "content": "14to21days after actual approved publication plus enough matched board/topic/age/period exposure. Existing24novpins8to15dec; new drafts have no evaluation start yet.",
+    "primary_metric": "Verified organic outgoing Pinterest clicks, site registered UTMlandings separately when available."
+  },
+  "live_changes_this_run": [],
+  "constraints": {
+    "no_main_push": true,
+    "no_production_build": true,
+    "no_extra_telegram": true,
+    "no_ads_budget_payment_or_bio_changes": true,
+    "no_outreach": true
+  }
+}

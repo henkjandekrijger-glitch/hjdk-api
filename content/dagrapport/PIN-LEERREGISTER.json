@@ -5,11 +5,11 @@
     "lastingchange.works",
     "Pinterest books kadolyshop"
   ],
-  "updated_at_utc": "2026-11-25T13:53:44.344Z",
+  "updated_at_utc": "2026-11-25T19:43:05.625Z",
   "purpose": "Learn from every real published book pin; outbound traffic is primary, posting count is execution only.",
   "source": {
     "url": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
-    "observed_at_utc": "Wed, 25 Nov 2026 13:51:18 GMT"
+    "observed_at_utc": "Wed, 25 Nov 2026 19:41:17 GMT"
   },
   "rules": {
     "daily_all_pins": true,
@@ -69,19 +69,33 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": null,
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 67.7,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 73.5,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -123,19 +137,33 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": null,
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 67.7,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 73.5,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -177,19 +205,37 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": {
+            "klik": 2,
+            "saves": 1,
+            "imp": 5
+          },
+          "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 67.7,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 73.5,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -231,19 +277,37 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": {
+            "klik": 1,
+            "saves": 1,
+            "imp": 5
+          },
+          "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 67.7,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 73.5,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -285,19 +349,37 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 66.2,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 72.1,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -339,19 +421,37 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 7
+          },
+          "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 66.2,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 72.1,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -393,19 +493,37 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": {
+            "klik": 1,
+            "saves": 1,
+            "imp": 7
+          },
+          "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 66.2,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 72.1,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -447,19 +565,37 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 0,
+            "imp": 0
+          },
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 66.2,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 72.1,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -501,19 +637,37 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 4
+          },
+          "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 42.2,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 48.1,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -563,19 +717,37 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 1
+          },
+          "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 42.2,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 48.1,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -625,19 +797,37 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 1
+          },
+          "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 42.2,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 48.1,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -679,19 +869,37 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": {
+            "klik": 0,
+            "saves": 1,
+            "imp": 2
+          },
+          "secondary_provider_claim": "Other round worklog25nov19:40:40 says9pins measured viaZernio; exact provider field/outbound definition and window not supplied. Retain as reported, not verified organicoutbound snapshot.",
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Partial metrics updated; tiny counts/unknown definitions/window are not a winner.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 42.2,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 48.1,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -729,19 +937,33 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": null,
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 18.2,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 24.1,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -779,19 +1001,33 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": null,
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 18.2,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 24.1,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -829,19 +1065,33 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": null,
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 18.2,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 24.1,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -879,19 +1129,33 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": null,
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin."
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 18.2,
-        "basis": "registration_only_not_exact_pin_age"
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 24.1,
+        "basis": "registration_not_exact_publication"
       }
     },
     {
@@ -937,19 +1201,32 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": null,
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin.",
-        "exploratory_note": "Free printable matches destination; no comparable earlier free-wordsearch pin. No A/B winner."
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 17,
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 22.8,
         "basis": "verified_publication_minute"
       }
     },
@@ -996,21 +1273,194 @@
           "website_per_pin_openings": null,
           "provider_status": "No Zernio tool available in tool inventory or fresh plugin search. Existing repo pinstand is internal registration/cache, not provider analytics; no session on Henkjan computer used. Account connection not tested or declared broken.",
           "internal_registration_confirmed": true
+        },
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": null,
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
         }
       ],
       "lesson": {
-        "status": "insufficient_data",
-        "evidence": "Current registration read confirms existing post ID; provider metric window unavailable. Internal zero cache is not measured zero.",
-        "traffic_claim": null,
-        "next_action": "At next accessible existing Zernio analytics session fetch this exact post ID, cumulative impressions, organic outbound clicks and saves with provider window; preserve snapshot. Until then no performance rank or extra identical product pin.",
-        "exploratory_note": "Gift-for-men hook retained as exploratory; cannot compare to free printable on unmatched exposure."
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
       },
       "next_observation_curacao": "2026-11-26",
       "age_at_observation": {
-        "at_utc": "2026-11-25T13:53:44.344Z",
-        "hours": 17,
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 22.8,
         "basis": "verified_publication_minute"
       }
+    },
+    {
+      "id": "20261125-enoch-wat-79n1",
+      "provider_post_id": "6b07397bcb651a6eadc070bb",
+      "haak": "enoch-wat",
+      "asin": "B0B5KV79N1",
+      "registered_at_utc": "2026-11-25T19:39:50.426Z",
+      "registration_is_not_exact_publication_time": true,
+      "pin_url": null,
+      "published_at_utc_minute": null,
+      "metadata": null,
+      "snapshots": [
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": null,
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        }
+      ],
+      "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
+      "age_at_observation": {
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 0.1,
+        "basis": "registration_not_exact_publication"
+      },
+      "lesson": {
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
+      },
+      "next_observation_curacao": "2026-11-26"
+    },
+    {
+      "id": "20261125-we-dad-syxw",
+      "provider_post_id": "6b073986be3f02dcc0ff44d7",
+      "haak": "we-dad",
+      "asin": "B0DK3CSYXW",
+      "registered_at_utc": "2026-11-25T19:40:07.517Z",
+      "registration_is_not_exact_publication_time": true,
+      "pin_url": null,
+      "published_at_utc_minute": null,
+      "metadata": null,
+      "snapshots": [
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": null,
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        }
+      ],
+      "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
+      "age_at_observation": {
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 0,
+        "basis": "registration_not_exact_publication"
+      },
+      "lesson": {
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
+      },
+      "next_observation_curacao": "2026-11-26"
+    },
+    {
+      "id": "20261125-apo-14-xc9j",
+      "provider_post_id": "6b073998b436184d7f495f0b",
+      "haak": "apo-14",
+      "asin": "B0DDBTXC9J",
+      "registered_at_utc": "2026-11-25T19:40:19.109Z",
+      "registration_is_not_exact_publication_time": true,
+      "pin_url": null,
+      "published_at_utc_minute": null,
+      "metadata": null,
+      "snapshots": [
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": null,
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        }
+      ],
+      "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
+      "age_at_observation": {
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 0,
+        "basis": "registration_not_exact_publication"
+      },
+      "lesson": {
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
+      },
+      "next_observation_curacao": "2026-11-26"
+    },
+    {
+      "id": "20261125-sok-hem-syxw",
+      "provider_post_id": "6b0739a3be3f02dcc0ff4563",
+      "haak": "sok-hem",
+      "asin": "B0DK3CSYXW",
+      "registered_at_utc": "2026-11-25T19:40:33.189Z",
+      "registration_is_not_exact_publication_time": true,
+      "pin_url": null,
+      "published_at_utc_minute": null,
+      "metadata": null,
+      "snapshots": [
+        {
+          "observed_at_utc": "2026-11-25T19:43:05.625Z",
+          "source": "https://hjdk-api-henq.vercel.app/api/bs?op=pinstand",
+          "source_time": "Wed, 25 Nov 2026 19:41:17 GMT",
+          "impressions": null,
+          "organic_outbound_clicks": null,
+          "saves": null,
+          "period": null,
+          "definition": null,
+          "reported_internal_metrics": null,
+          "secondary_provider_claim": null,
+          "website_per_pin_openings": null,
+          "reason": "Zernio connector not available; partial secondary metrics lack complete definitions/window. No pinuitkomst written by this run."
+        }
+      ],
+      "publication_verification": "Internal pinlog plus separate round central worklog, not direct provider UI in this run.",
+      "age_at_observation": {
+        "at_utc": "2026-11-25T19:43:05.625Z",
+        "hours": 0,
+        "basis": "registration_not_exact_publication"
+      },
+      "lesson": {
+        "status": "insufficient_comparable_data",
+        "evidence": "Valid current provider outcome unavailable; no zero inference.",
+        "next_action": "Confirm provider definition/period for exact post, avoid same-product duplicates, compare14to21days with sufficient matched data.",
+        "traffic_claim": null
+      },
+      "next_observation_curacao": "2026-11-26"
     }
   ]
 }
