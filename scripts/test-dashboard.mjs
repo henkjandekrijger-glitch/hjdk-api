@@ -1,0 +1,17 @@
+import * as D from '../lib/dashboard.js';
+const m=new Map(), sets=new Map();
+const log=[{t:'2026-11-25T08:40:00Z',wie:'kdp-statuscheck',tekst:'LC naar voorgesteld bod <b>'},{t:'2026-11-25T07:00:00Z',wie:'deploy',tekst:'Live gezet abc: WAM: tijdlijn'},{t:'2026-11-24T07:00:00Z',wie:'wam-chat',tekst:'x'}];
+const kv={get:async k=>m.get(k)??null,set:async(k,v)=>{m.set(k,JSON.parse(JSON.stringify(v)))},raw:async a=>{if(a[0]==='SADD'){(sets.get(a[1])||sets.set(a[1],new Set()).get(a[1])).add(a[2]);return 1}if(a[0]==='SMEMBERS')return [...(sets.get(a[1])||[])];if(a[0]==='LRANGE')return log.map(x=>JSON.stringify(x));return null}};
+const ok=(c,n)=>{if(!c){console.log('FOUT',n);process.exitCode=1}};
+let d=await D.dashData(kv); const k=d.projecten.find(p=>p.id==='kdp');
+ok(k.pct===24,'pct');ok(k.log.length===1,'log kdp');ok(d.projecten.find(p=>p.id==='wam').log.length===2,'log wam');ok(d.agenda[0].d==='2026-11-27','agenda');
+ok((await D.zetDash(kv,{project:'kdp',nu:61.95,klaar:'pit boss'})).ok,'zet');
+ok(!(await D.zetDash(kv,{project:'kdp',klaar:'bestaat niet'})).ok,'klaar fout');
+ok(!(await D.zetDash(kv,{project:'nieuw'})).ok,'nieuw zonder naam');
+ok((await D.zetDash(kv,{project:'nieuw',naam:'Proef',doel:'x',erbij:{d:'2026-11-20',t:'oud'}})).ok,'nieuw');
+d=await D.dashData(kv); const k2=d.projecten.find(p=>p.id==='kdp');
+ok(k2.pct===31,'pct2 '+k2.pct);ok(k2.plan.filter(x=>x.klaar).length===1,'klaar');ok(k2.plan.length===8,'plan heel');
+ok(d.projecten.some(p=>p.id==='nieuw'&&p.telaat===1),'nieuw te laat');
+const h=D.dashHtml(d);ok(h.includes('&lt;b&gt;')&&!h.includes('<b>\''),'escape');ok(!/#(888|999|666|ccc|aaa)|gray|grey/i.test(h),'geen grijs');ok(!/[—–]/.test(h),'streepjes');
+const t=D.dashTekst(d,'kdp');ok(t.includes('Voortgang: 61,95 van 200'),'tekst');
+console.log('klaar',h.length,d.projecten.length);

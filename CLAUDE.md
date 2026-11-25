@@ -12,6 +12,13 @@ Werk hem bij aan het eind van elke chat en na elke grote stap:
 
 Elke nieuwe deploy zet zelf een regel met de commit in het werklog.
 
+Dashboard alle projecten (Henkjan 25 nov 2026: "Maak een klikbaar dashboard voor alle projecten met planning en overdractht logboeken en doel stelling En wat de progressie is . Die gebruik ik dus vr alle projecten ."): https://hjdk-api-henq.vercel.app/api/mm/dashboard (voor een chat `?vorm=tekst&project=<id>`). Elke chat en elke ronde houdt zijn project daar bij, in dezelfde beurt als het werk:
+- meting van vandaag: `/api/mm/dashboard?zet={"project":"<id>","nu":<getal>,"gemeten":"<datum of periode>"}`
+- planregel af of erbij: `?zet={"project":"<id>","klaar":"<tekst of datum>"}` en `?zet={"project":"<id>","erbij":{"d":"JJJJ-MM-DD","t":"wat"}}`
+- doel alleen op Henkjans woord: `?zet={"project":"<id>","doel":"...","doelgetal":<getal>,"eenheid":"..."}`
+- het logboek op het dashboard is het werklog: schrijf met `wie=<project>-<chat>` (kdp-, wam-, sealed-, surgery-, spaarpot-, spaar-, nexy-, tk-, kz-, cur-, shop-, content-, post-).
+Een nieuw project krijgt een regel in PROJECTEN (`lib/dashboard.js`) of meldt zich met `zet` en een naam.
+
 De overdracht is de complete werking en stand (Henkjan 19 okt: "Zorg dat op vercel een handover doc staat met complete status en dat dat handover doc altijd wordt bijgewerkt bestaat uit complete werking en status"):
 - Werking van het geheel staat in `lib/werking.js`. Verander je hoe iets werkt (regels, rondes, crons, ingrepen, projecten), werk dan in dezelfde commit `lib/werking.js` bij en zet `WERKING_DATUM` op vandaag.
 - Projecten met een eigen repo sturen elke 15 minuten hun stand en werking (POST /api/mm/handoverzet, gedeelde team-sleutel). MyLevel doet dat vanuit api/cron/lek.js met docs/werking.md. Een nieuw project hoort dat ook te doen.

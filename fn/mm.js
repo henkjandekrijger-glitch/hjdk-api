@@ -41,6 +41,7 @@
 //   /api/mm/bewezen[?sleutel=][&vers=1] bewezen zones per verkenner voor de aparte BEWEZEN-campagnes (80/20, 13 nov 2026; lib/lookalike.js)
 //   /api/mm/instelling[?j=<json>]       schakelaars, o.a. blokkeren aan/uit (beschermde host)
 //   /api/mm/overzicht                   alles op één pagina (beschermde host)
+//   /api/mm/dashboard                   dashboard alle projecten: doel, voortgang, planning, overdracht, logboek (beschermde host; lib/dashboard.js)
 //   /api/mm/terugbetaling?net=propeller&van=&tot=[&formaat=csv]   bewijs per klik voor een terugbetalingsverzoek (beschermde host; PropellerAds dient Clickmind sinds 13 nov zelf in, zie lib/terugauto.js)
 //   /api/mm/terugdag                    cron: elke dag het dossier van gisteren per netwerk
 //   /cm.js                              CLICKMIND in één regel (uitkomsten, mensmeter bij betaald verkeer, lerende modal)
@@ -311,6 +312,14 @@ export default async function handler(req, res) {
       const t = await H.handover(kv); res.setHeader('cache-control', 'no-store');
       if (q('vorm') === 'json') return res.status(200).json(t.json);
       res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(t.tekst); }
+    if (op === 'dashboard') { // dashboard voor alle projecten (Henkjan 25 nov 2026): doel, voortgang, planning, overdracht en logboek per project; ?zet=<JSON> werkt bij, ?vorm=json|tekst, ?project=<id>
+      if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
+      const D = await import('../lib/dashboard.js'); res.setHeader('cache-control', 'no-store');
+      if (q('zet')) { let b = null; try { b = JSON.parse(q('zet')); } catch (e) {} const u = b && typeof b === 'object' ? await D.zetDash(kv, b, q('wie') || '') : { ok: false, fout: 'zet=<JSON> met project en de velden die veranderen' }; return res.status(u.ok ? 200 : 400).json(u); }
+      const d = await D.dashData(kv);
+      if (q('vorm') === 'json') return res.status(200).json(d);
+      if (q('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(D.dashTekst(d, q('project') || '')); }
+      res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(D.dashHtml(d)); }
     if (op === 'overdracht') { // levende overdracht voor andere chats (Todayin-chat, Yoors Shop-chat): elke keer opnieuw opgebouwd uit de live instellingen en cijfers
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
       const t = await overdracht(kv, { project: q('project') || '' }); res.setHeader('content-type', 'text/plain; charset=utf-8'); res.setHeader('cache-control', 'no-store'); return res.status(200).send(t); }
