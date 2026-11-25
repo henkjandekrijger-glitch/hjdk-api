@@ -84,6 +84,41 @@ await ok('antwoordmotor: vraag krijgt AI-antwoord met CC, klacht gemarkeerd, sto
   r = await MT.mailIn(P('s1'), { haal, ai }); assert.equal(r.label, 'stop'); assert.equal((await kv.get('gk:nb:e:' + MT._test.idVan(cfg, 'lid@voorbeeld.nl'))).actief, false);
   const lg = await kv.raw(['LRANGE', 'mt:log:kadoly', 0, -1]); assert.ok(lg.length >= 3 && !lg.join(' ').includes('lid@voorbeeld.nl'), 'log zonder adres'); });
 await ok('controle: stand meet en noemt lekken', async () => { const st = await MT.stand('kadoly', kv); assert.ok(st.ok && Array.isArray(st.lekken) && st.sites.length === 2); assert.ok(st.lekken.some(l => /ontvangen/i.test(l))); assert.ok(st.tellers7d.bevestigd >= 1); });
+await ok('alle vormen en maten in beide sjablonen; xs en xl leren mee', async () => {
+  for (const site of ['kadoly', 'kadolygids']) { const m = await M.leesModal(kv, site, true); assert.deepEqual(m.vormen, M.VORMEN, site + ': alle vormen'); assert.deepEqual(m.factoren.grootte, ['xs', 's', 'm', 'l', 'xl']); assert.ok(m.armen.some(a => a.id === 'm-push' && a.soort === 'push'), site + ': push-arm'); }
+  const g = new Set(); for (let i = 0; i < 200; i++) { await kv.raw(['DEL', 'mm:mqc:kadolygids:qa' + String(i).padStart(15, '0')]); const r = await M.modalBeslis(kv, { site: 'kadolygids', q: 'a' + String(i).padStart(15, '0'), origin: 'https://gids.kadoly.com', pa: '/vaas-kiezen', pt: 'gids', v: 1, uur: 9 }); if (r.toon && r.arm.fx) g.add(r.arm.fx.grootte); }
+  assert.ok(g.has('xs') && g.has('xl'), [...g].join(',')); });
+await ok('controlegroep krijgt een schijnmoment (weg binnen 10 s eerlijk te vergelijken)', async () => {
+  let c = null; for (let i = 0; i < 400 && !c; i++) { const r = await M.modalBeslis(kv, { site: 'kadolygids', q: 'c' + String(i).padStart(15, '0'), origin: 'https://gids.kadoly.com', pa: '/', pt: 'home', v: 1, uur: 9 }); if (r.mid && !r.toon) c = r; }
+  assert.ok(c && c.schijn && c.arm.soort === 'geen' && /^(tijd|scroll|pag|stil|exit)/.test(c.arm.moment), JSON.stringify(c));
+  assert.ok((await M.modalEv(kv, { mid: c.mid, e: 'schijn' })).ok); assert.ok((await M.modalEv(kv, { mid: c.mid, e: 'weg10' })).ok); });
+await ok('push met één klik: alleen waar het kan, bewaard met belofte en toestemming, telt als bevestigde aanmelding', async () => {
+  const zoek = async (extra) => { for (let i = 0; i < 800; i++) { const r = await M.modalBeslis(kv, { site: 'kadolygids', q: (extra.k + 'e' + String(i)).padStart(16, '0'), ...extra, pa: '/vaas-kiezen', pt: 'gids', v: 1, uur: 9 }); if (r.toon && r.arm.soort === 'push') return r; } return null; };
+  assert.equal(await zoek({ k: '1', origin: 'https://gids.kadoly.com' }), null, 'zonder pu (browser kan het niet) nooit push');
+  assert.equal(await zoek({ k: '2', origin: 'https://kadoly.com', pu: true }), null, 'kadoly.com heeft nog geen service worker van ons');
+  const r = await zoek({ k: '3', origin: 'https://gids.kadoly.com', pu: true }); assert.ok(r, 'push-arm op gids.kadoly.com'); assert.equal(r.arm.sw, '/kadoly-sw.js'); assert.ok(r.arm.vapid && r.arm.vapid.length > 40); assert.ok(!r.arm.project);
+  assert.equal((await M.modalPush(kv, { mid: r.mid, endpoint: 'https://evil.example/x', ipNet: 'p1' })).ok, false, 'alleen echte push-diensten');
+  const ep = 'https://fcm.googleapis.com/fcm/send/abc123'; const p = await M.modalPush(kv, { mid: r.mid, endpoint: ep, host: 'gids.kadoly.com', ipNet: 'p1' }); assert.ok(p.ok, JSON.stringify(p));
+  const { subHash } = await import('../lib/push.js'); const rec = await kv.get('gk:nb:mp:' + subHash(ep)); assert.equal(rec.belofte, 'meldingen'); assert.ok(/meldingen/i.test(rec.toestemming)); assert.equal(rec.waar, 'modal-kadolygids-m-push');
+  assert.ok((await kv.get('gk:nb:p:' + subHash(ep))).actief, 'op de bestaande meldingenlijst van de gidsen');
+  const k = await kv.raw(['HGETALL', 'mm:cid:' + r.mid]); const o = {}; for (let i = 0; i < k.length; i += 2) o[k[i]] = k[i + 1]; assert.ok(o['u:aanmelding'] && o['mu:bevestigd'], 'aanmelding en bevestigd geteld');
+  const st = await MT.stand('kadoly', kv); assert.equal(st.pushAbonnees, 1); });
+await ok('niemand wegjagen: weg binnen 10 s per vorm en grootte, rem 7 dagen bij 80 tegen 80 en kans > 95%', async () => {
+  const { FEAT } = M, D = new Date().toISOString().slice(0, 10), x = mob => FEAT.map((f, i) => (i === 0 ? 1 : f === 'mob' ? mob : 0)), cmds = [];
+  let n = 0; const rij = (o, ev) => { const mid = (++n).toString(16).padStart(12, '0'); cmds.push(['RPUSH', 'mm:mdl:' + D, JSON.stringify({ mid, s: 'kadolygids', t: Date.now(), x: x(n % 2), pt: 'gids', ...o })]); for (const e of ev) cmds.push(['HSET', 'mm:mdv:' + D, mid + '|' + e, 1]); };
+  for (let i = 0; i < 120; i++) rij({ a: 'geen', ty: 'geen', hoe: 'controle', sm: 'tijd:12' }, ['schijn', 'verder'].concat(i % 10 === 0 ? ['weg10'] : []));
+  for (let i = 0; i < 120; i++) rij({ a: 'gids', ty: 'gids', hoe: 'model', m: 'tijd:12', f: 'vol', fx: 'grootte=m' }, ['toon', 'verder'].concat(i % 5 < 2 ? ['weg10'] : [])); // vol: 40% weg tegen 10%
+  for (let i = 0; i < 120; i++) rij({ a: 'gids', ty: 'gids', hoe: 'model', m: 'tijd:12', f: 'hoek', fx: 'grootte=xl' }, ['toon'].concat(i % 10 === 0 ? ['weg10'] : [])); // xl: niet vaker weg, wel minder verder
+  for (let i = 0; i < 120; i++) rij({ a: 'gids', ty: 'gids', hoe: 'model', m: 'tijd:12', f: 'onder', fx: 'grootte=s' }, ['toon', 'verder'].concat(i % 10 === 1 ? ['weg10'] : [])); // onder en s: zoals zonder modal
+  await kv.raw(['DEL', 'mm:mdl:' + D, 'mm:mdv:' + D]); for (const c of cmds) await kv.raw(c); // alleen deze rijen: de beslissingen van de tests hierboven hebben geen browser (nooit 'verder')
+  const m = await M.leesModal(kv, 'kadolygids', true), ws = M.wegStand(m, (await kv.raw(['LRANGE', 'mm:mdl:' + D, 0, -1])).map(s => JSON.parse(s)), new Map(Object.entries((await kv.raw(['HGETALL', 'mm:mdv:' + D])).reduce((o, v, i, a) => { if (i % 2 === 0) { const [mid, e] = v.split('|'); (o[mid] = o[mid] || new Set()).add(e); } return o; }, {}))));
+  const v = ws.weg10.find(y => y.key === '#vol'); assert.ok(v.n >= 80 && v.nC >= 80 && v.kansHoger > 0.95, JSON.stringify(v)); assert.ok(ws.weg10.find(y => y.key === '#onder').kansHoger < 0.95);
+  const L = M.wegLekken(ws).map(y => y.key); assert.ok(L.includes('#vol') && L.includes('%grootte=xl'), L.join(',')); assert.ok(!L.includes('#onder') && !L.includes('%grootte=s'), L.join(','));
+  await M.modalLeer(kv, { droog: false }); const n2 = await M.leesModal(kv, 'kadolygids', true);
+  assert.ok(n2.rem['#vol'] && /10 seconden/.test(n2.rem['#vol'].reden), JSON.stringify(n2.rem)); assert.ok(n2.rem['%grootte=xl'] && /verder/.test(n2.rem['%grootte=xl'].reden)); assert.ok(!n2.rem['#onder']); assert.ok(n2.wegMeting && n2.wegMeting.nControleSchijn >= 120);
+  let vol = 0, xl = 0, getoond = 0, vormen = new Set(); for (let i = 0; i < 150; i++) { const r = await M.modalBeslis(kv, { site: 'kadolygids', q: 'd' + String(i).padStart(15, '0'), origin: 'https://gids.kadoly.com', pa: '/', pt: 'home', v: 1, uur: 9 }); if (r.toon) { getoond++; vormen.add(r.arm.vorm); if (r.arm.vorm === 'vol') vol++; if (r.arm.fx && r.arm.fx.grootte === 'xl') xl++; } }
+  assert.ok(getoond > 80 && vormen.has('midden') && vormen.has('tab') && !vormen.has('hoek'), getoond + ' ' + [...vormen] + ' ' + Object.keys(n2.rem)); assert.equal(vol, 0, 'vol staat 7 dagen uit'); assert.equal(xl, 0, 'xl staat 7 dagen uit');
+  const st = await MT.stand('kadoly', kv); assert.ok(st.lekken.some(l => /vorm vol: jaagt mensen weg: \d+ van de 100 gingen binnen 10 seconden weg/.test(l) && /drempel: 80 tegen 80/.test(l)), st.lekken.join(' | ')); });
 await ok('kerstdag uit de catalogus ligt voor 23 december op een werkdag', async () => { const k = await MT.kerstDag(cfg); assert.ok(/^\d{4}-12-(0[1-9]|1\d|2[0-2])$/.test(k.dag), k.dag); const wd = new Date(k.dag + 'T12:00:00Z').getUTCDay(); assert.ok(wd >= 1 && wd <= 5); });
 globalThis.fetch = echteFetch; try { await kv.raw(['FLUSHDB']); } catch (e) {} if (srv) srv.kill();
 console.log(fout ? fout + ' FOUT(EN)' : 'ALLES GOED'); process.exit(fout ? 1 : 0);
