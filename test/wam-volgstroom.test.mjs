@@ -26,3 +26,9 @@ test('elke mail heeft een reply-CTA; updates per dossierstap; antwoordmotor met 
   assert.equal(M.soortAntwoord('nee, ik heb geen abonnement, klopt dat?', true), 'anders');
   assert.equal(M.soortAntwoord('graag afmelden', true), 'stop');
 });
+
+test('Volg-knop staat in het eerste scherm (direct onder de samenvatting) en opent het veld op de plek', async () => {
+  const { pagina } = await import('../lib/wam-dossier.js'), { VOLG_JS } = await import('../lib/wam-aanmelden.js');
+  for (const id of ['blendle', 'anp', 'hosters']) { const h = await pagina('dossier/' + id, true); assert.ok(h.indexOf('class="deel"') > 0 && h.indexOf('class="deel"') < h.indexOf('class="dossier-status"'), id); }
+  assert.ok(VOLG_JS.includes("waar:'knop'") && VOLG_JS.includes('volg-hier'));
+});
