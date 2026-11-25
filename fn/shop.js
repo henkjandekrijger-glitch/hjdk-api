@@ -78,7 +78,14 @@ const MARGE_VLOER = { min: 10, pct: 0.2, merken: /glam|menthe|lanlivia|luxaa|lis
 // in Merchant Center een andere hoofdfoto (i = n-de foto van de productpagina: aan het oor, om de pols, in de kamer), 1200x1200, via de aanvullende bron
 // 'Kadoly fototest' (go.kadoly.com/api/shop/gmcbeeld.csv). Het controleproduct blijft zoals het is. Oordeel op op=fototest: vertoningen, kliks en klikratio
 // per groep in Google (gratis en betaald) sinds start, en verkopen. Na 14 dagen: wint test (kans > 90%), dan krijgen alle sieraden en woonproducten de foto-regel.
-const FOTOTEST = { start: '2026-11-26', paren: [] };
+const FOTOTEST = { start: '2026-11-26', paren: [ // gekozen 25 nov op het contactvel (op=beeldblad): test had een kale productfoto voorop en een sfeerfoto in de galerij; controle lijkt erop en houdt zijn foto
+  { t: 'oc_4174003276759042', c: 'oc_4174003271188481', i: 1, soort: 'wonen servies, sfeerfoto aan tafel' },
+  { t: 'oc_4174003731251202', c: 'oc_4174003732054018', i: 1, soort: 'wonen deken, gedrapeerd' },
+  { t: 'oc_4173958844121089', c: 'oc_4173958863470593', i: 1, soort: 'wonen orchidee, in de kamer' },
+  { t: 'oc_4174002165055489', c: 'oc_4174002201985025', i: 2, soort: 'wonen tafelhaard, in de kamer' },
+  { t: 'oc_4174003357499393', c: 'oc_4174003356876801', i: 2, soort: 'wonen servies, gedekte tafel van boven' },
+  { t: 'oc_4251973775228929', c: 'oc_4254790010142721', i: 2, soort: 'sieraad ketting, gedragen' }
+] };
 const LOKKER = { uit: null, start: '2026-11-23', max: 60, dagen: 14, items: { oc_4174002164400133: { prijs: 15.95, verlies: 3.55 }, oc_4174003456851970: { prijs: 29.95, verlies: 3.23 }, oc_4174002211717121: { prijs: 13.95, verlies: 3.46 }, oc_4174003712770050: { prijs: 42.95, verlies: 3.25 }, oc_4174003731562498: { prijs: 44.95, verlies: 3.35 }, oc_4174003462750209: { prijs: 22.95, verlies: 3.81 } } }; // 25 nov (Henkjan: "Vermeldingen met lokkers kan zeker werken"): drie woonlokkers erbij die in Google Shopping al vertoond en aangeklikt werden (wollen plaid 699/13, wollen deken 218/5, ornament 120/3), zelfde stopregel van EUR 60 in totaal
 async function lokkerStand() { // betaalde bestellingen met een lokker sinds de start, verlies en extra verkoop, en of de stopregel geldt
   let stop = null; try { stop = await kv.get('hjdk:shop:lokker:stop'); } catch (e) {}
