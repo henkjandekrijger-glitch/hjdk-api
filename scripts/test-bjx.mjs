@@ -25,12 +25,18 @@ ok(BJX_KEUZE.every(k => k.titel.length <= 80), 'titels kort (hooguit 80 tekens)'
 ok(BJX_KEUZE.filter(k => k.hoek === 'naam').every(k => k.gravure && k.gravure.max > 0), 'elk stuk in Met naam heeft een gravure met tekstgrens');
 const pp = leesPp('<p>Dimensions: 24*20*2 mm</p><p>Prix public constaté : 24.90€ à 29.90€</p>'); ok(pp && pp.van === 24.9 && pp.tot === 29.9, 'prix public constaté lezen');
 ok(/39 cm/.test(leesMaat('Dimensions : 39 cm + 5 cm chainette réglable . Taille des pierres') || ''), 'maat lezen: ' + leesMaat('Dimensions : 39 cm + 5 cm chainette réglable . Taille des pierres'));
+ok(leesMaat('Pendentif : 28*25*2.5 Prix') === '28 x 25 x 2.5 mm', 'maat zonder eenheid krijgt mm');
 const n = bjxNorm({ handle: 'x', title: 'Pendentif acier', available: true, tags: ['Bijoux acier'], description: 'Prix public constaté : 14.90€ à 24.90€', images: ['//cdn.shopify.com/a.jpg?v=1'], variants: [{ id: 5, price: 129, available: true, weight: 1 }] });
 ok(n.prijs === 1.29 && n.beelden[0] === 'https://cdn.shopify.com/a.jpg' && n.materiaal_ok && n.pp.tot === 24.9, 'Shopify-product omzetten (prijs uit centen, https-beeld)');
 ok(!bjxNorm({ handle: 'y', title: 'Collier plaqué or', available: true, tags: [], description: '', images: [], variants: [{ price: 100, available: true }] }).materiaal_ok, 'verguld (plaqué or) valt af');
 ok(bjxNorm({ handle: 'z', title: 'Pendentif acier à personnaliser plaque militaire or 35*25', available: true, tags: [], description: '', images: [], variants: [{ price: 129, available: true }] }).materiaal_ok, 'plaque militaire (plaatje) is geen verguld');
 ok(mandjeLink([{ varianten: [[11, 1], [22, 1]] }, { varianten: [[11, 2]] }]) === 'https://grossiste-bijouxmode.com/cart/11:3,22:1', 'mandje-link telt varianten op');
 
+{ // verkeerde markt (Vercel in de VS kreeg 25 nov dollarprijzen): het gravuresupplement is dan niet 6,00 en de feed blijft leeg
+  const echt = globalThis.fetch; globalThis.fetch = async u => ({ status: 200, ok: true, json: async () => ({ handle: 'h', title: 'Pendentif acier', available: true, tags: [], description: 'Prix public constaté : 10€ à 30€', images: ['//x/a.jpg'], variants: [{ id: 1, price: 200, available: true }] }) });
+  const r = await bjxBouw({ vers: true }); globalThis.fetch = echt;
+  ok(r.producten.length === 0 && r.weg[0].id === 'alles' && /euro/.test(r.weg[0].reden[0]), 'verkeerde valuta of markt: geen producten, reden in de stand');
+}
 if (process.argv.includes('--live')) {
   const t0 = Date.now(); const { producten, weg, stand } = await bjxBouw({ vers: true });
   console.log('live: ' + producten.length + ' in de feed, ' + weg.length + ' weggelaten, ' + Object.keys(stand.fouten).length + ' leesfouten, ' + (Date.now() - t0) + ' ms');
