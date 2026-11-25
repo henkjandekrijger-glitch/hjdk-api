@@ -335,6 +335,9 @@ export default async function handler(req, res) {
         return res.status(200).json(await D.zetDash(kv, b, b.wie || 'project')); }
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
       const D = await import('../lib/dashboard.js'); res.setHeader('cache-control', 'no-store');
+      if (req.method === 'POST') { const b = leesJson(req.body) || {}; if (b.leerprompt == null) return res.status(400).json({ ok: false, fout: 'leerprompt ontbreekt' }); const u = await D.zetLeerprompt(kv, b.leerprompt, 'Henkjan (dashboard)'); return res.status(u.ok ? 200 : 400).json(u); }
+      if (q('leerprompt') === 'vorige') { const u = await D.vorigeLeerprompt(kv); if (!u.ok) return res.status(400).json(u); }
+      if (q('vorm') === 'leerprompt') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send((await D.leesLeerprompt(kv)).tekst + '\n'); }
       if (q('zet')) { let b = null; try { b = JSON.parse(q('zet')); } catch (e) {} const u = b && typeof b === 'object' ? await D.zetDash(kv, b, q('wie') || '') : { ok: false, fout: 'zet=<JSON> met project en de velden die veranderen' }; return res.status(u.ok ? 200 : 400).json(u); }
       let melding = null; // archiveren en terugzetten met één tik op de pagina (Henkjan 25 nov)
       if (q('archiveer') || q('terug')) { const id = q('archiveer') || q('terug'); const u = await D.zetDash(kv, { project: id, archief: !!q('archiveer') }, 'dashboard'); if (!u.ok) return res.status(400).json(u); melding = { id, aan: !!q('archiveer') }; }

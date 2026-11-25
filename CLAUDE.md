@@ -19,6 +19,7 @@ Dashboard alle projecten (Henkjan 25 nov 2026: "Maak een klikbaar dashboard voor
 - het logboek op het dashboard is het werklog: schrijf met `wie=<project>-<chat>` (kdp-, wam-, sealed-, surgery-, spaarpot-, spaar-, nexy-, tk-, kz-, cur-, shop-, content-, post-).
 - archiveren doet Henkjan zelf met de link Archiveer op de pagina (terug onder Archief); een chat archiveert alleen op zijn woord (`"archief":true`). De pagina houdt de vormgeving van sealedintent.com.
 - de knop Verder in Claude opent een nieuwe sessie met de opdracht al ingevuld; heeft een project een eigen Claude-project, zet dat dan met `"claude":"https://claude.ai/project/<id>"`.
+- Leerprompt (Henkjan 25 nov 2026: "intelligent autonoom compounding bouwen aan het doel 24/7"): onderaan `?vorm=tekst&project=<id>` staat de leerprompt die Henkjan op het dashboard beheert (los: `?vorm=leerprompt`). Werk daarnaar: jij bent eigenaar van het doel van je project. De regels in dit bestand en in de overdracht van je project gaan voor. Wijzig de leerprompt zelf niet; stel een wijziging voor aan Henkjan.
 Een nieuw project krijgt een regel in PROJECTEN (`lib/dashboard.js`) of meldt zich met `zet` en een naam.
 
 De overdracht is de complete werking en stand (Henkjan 19 okt: "Zorg dat op vercel een handover doc staat met complete status en dat dat handover doc altijd wordt bijgewerkt bestaat uit complete werking en status"):

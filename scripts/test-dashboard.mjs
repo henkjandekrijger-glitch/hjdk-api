@@ -5,7 +5,7 @@ m.set('mm:wachtuur:laatst',{eigen:{projecten:{todayin:{kliks:1894,aanmelding:48,
 const kv={get:async k=>m.get(k)??null,set:async(k,v)=>{m.set(k,JSON.parse(JSON.stringify(v)))},raw:async a=>{if(a[0]==='SADD'){(sets.get(a[1])||sets.set(a[1],new Set()).get(a[1])).add(a[2]);return 1}if(a[0]==='SMEMBERS')return [...(sets.get(a[1])||[])];if(a[0]==='LRANGE')return log.map(x=>JSON.stringify(x));return null}};
 const ok=(c,n)=>{if(!c){console.log('FOUT',n);process.exitCode=1}};
 let d=await D.dashData(kv); const k=d.projecten.find(p=>p.id==='kdp');
-ok(k.pct===24,'pct');ok(k.log.length===1,'log kdp');ok(d.projecten.find(p=>p.id==='wam').log.length===2,'log wam');ok(d.agenda[0].d==='2026-11-27','agenda');
+ok(k.pct===24,'pct');ok(k.log.length===1,'log kdp');ok(d.projecten.find(p=>p.id==='wam').log.length===2,'log wam');ok(d.agenda.some(a=>a.id==='kdp'&&a.d==='2026-11-27')&&d.agenda.every((a,i)=>!i||d.agenda[i-1].d<=a.d),'agenda');
 ok((await D.zetDash(kv,{project:'kdp',nu:61.95,klaar:'pit boss'})).ok,'zet');
 ok(!(await D.zetDash(kv,{project:'kdp',klaar:'bestaat niet'})).ok,'klaar fout');
 ok(!(await D.zetDash(kv,{project:'nieuw'})).ok,'nieuw zonder naam');
@@ -25,4 +25,9 @@ ok(d.projecten.find(p=>p.id==='tk').verder.startsWith('https://claude.ai/new?q='
 ok(!(await D.zetDash(kv,{project:'kdp',claude:'https://evil.example/x'})).ok,'claude url geweigerd');ok((await D.zetDash(kv,{project:'kdp',claude:'https://claude.ai/project/abc-123'})).ok,'claude url');
 ok((await D.dashData(kv)).projecten.find(p=>p.id==='kdp').verder.startsWith('https://claude.ai/project/abc-123?q='),'verder project');
 ok(D.dashHtml(d).includes('Verder in Claude'),'knop');
+ok(D.LEERPROMPT.length>2500&&D.LEERPROMPT.length<9000&&!/[—–]/.test(D.LEERPROMPT),'leerprompt '+D.LEERPROMPT.length);
+ok((await D.dashData(kv)).leerprompt.tekst===D.LEERPROMPT,'leerprompt standaard');ok(!(await D.zetLeerprompt(kv,'kort')).ok,'leerprompt te kort');
+ok((await D.zetLeerprompt(kv,'NIEUW '+'x'.repeat(300))).ok,'leerprompt zet');let dl=await D.dashData(kv);ok(dl.leerprompt.tekst.startsWith('NIEUW')&&dl.leerprompt.heeftVorige,'leerprompt gelezen');
+ok(D.dashTekst(dl,'kdp').includes('NIEUW xxx')&&D.dashHtml(dl).includes('id="lp"'),'leerprompt in tekst en pagina');
+ok((await D.vorigeLeerprompt(kv)).ok&&(await D.leesLeerprompt(kv)).tekst===D.LEERPROMPT,'leerprompt vorige terug');
 console.log('klaar',h.length,d.projecten.length);
