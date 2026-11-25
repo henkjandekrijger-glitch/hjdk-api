@@ -14,7 +14,7 @@ import * as PUSH from '../lib/wam-push.js';
 import { randomBytes, createHmac } from 'node:crypto';
 import * as W from '../lib/wam.js';
 import * as LEER from '../lib/wam-leer.js';
-import { HOOKS, hookTekst, beeld, deelBeeld } from '../lib/wam-hooks.js';
+import { HOOKS, hookTekst, beeld, deelBeeld, dossierBeeld } from '../lib/wam-hooks.js';
 import * as POST from '../lib/wam-post.js';
 import * as DOS from '../lib/wam-dossier.js';
 import { ICON_LINKS } from '../lib/wam-merk.js';
@@ -301,6 +301,10 @@ export default async function handler(req, res) {
     if (op === 'zegtest' && beschermd(host)) { const ss = await W.sessie(q('sid')); if (!ss || !(ss.ctx && ss.ctx.test)) return res.status(404).json({ ok: false }); if (q('ctx')) return res.status(200).json({ ok: true, ctx: ss.ctx }); if (q('staat')) return res.status(200).json({ ok: true, ra: ss.ra || '', raVeld: ss.raVeld || '', alertG: ss.alertG || 0, alertO: ss.alertO || null, alertKz: ss.alertKz || '', beurten: ss.beurten }); return res.status(200).json(q('inbox') ? await W.inbox(q('sid'), q('tok')) : await W.zeg({ sid: q('sid'), tok: q('tok'), x: q('x') || undefined, knop: q('knop') || undefined, ip: 'test' })); }
     if (op === 'beeld') {
       const img = await beeld(q('h'), q('t') || 'en', q('v') === 'icon' ? 'icon' : 'img'); const buf = Buffer.from(await img.arrayBuffer());
+      res.setHeader('content-type', 'image/png'); res.setHeader('cache-control', 'public, max-age=86400, s-maxage=604800'); return res.status(200).send(buf);
+    }
+    if (op === 'adbeeld') {
+      const img = await dossierBeeld(schoon(q('d'), /^[a-z]{2,12}$/), Number(q('i')) || 0, q('v') === 'icon' ? 'icon' : 'img'); const buf = Buffer.from(await img.arrayBuffer());
       res.setHeader('content-type', 'image/png'); res.setHeader('cache-control', 'public, max-age=86400, s-maxage=604800'); return res.status(200).send(buf);
     }
     if (op === 'kaart' && q('h')) { const m = await W.hulpMeta(schoon(q('h'), /^[0-9a-f]{8}$/)).catch(() => null); if (!m) return res.status(404).send('Niet gevonden'); const img = await deelBeeld(m.kop, m.zin, m.knop); const buf = Buffer.from(await img.arrayBuffer()); res.setHeader('content-type', 'image/png'); res.setHeader('cache-control', 'public, max-age=86400, s-maxage=604800'); return res.status(200).send(buf); }
