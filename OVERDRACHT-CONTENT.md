@@ -267,3 +267,10 @@ Plak dit als eerste bericht:
 
 - 2026-11-23: hoofdstuk 7b Strategie toegevoegd (onderzoek naar wat stapelt met AI: eigen cijfers, gratis tools, lijstjes van anderen, verversen, Pinterest, eigen publiek), met een werkvolgorde voor dit account.
 - 2026-11-23: overdracht geschreven voor het content-account. Bookstuffers heet Stocking Books (stockingbooks.com). Kerstmoppen, kerstquiz en kleurplaten zijn live. IndexNow loopt mee in de dagelijkse cron. Het LC-artikel begint met procrastination.
+
+
+## 25 november2026 2026-11-25T11:18:54.501Z: expliciet live-akkoord uitgevoerd en vast ritme
+I Wasted Another Year: A Fair Review and One Next Step is live sinds11:11:15UTC: https://lastingchange.works/i-wasted-another-year . Exact getoonde oorspronkelijke reviewkaartversie1294woorden, geen30dagenvariant. HTTP200, canonical,index/follow,guides/sitemap en drie liveartikelen gecontroleerd. Nooit deze slugs als nieuwe concepten opslaan. Oorspronkelijk dagrecord behouden; nieuwe waarnemingen in additions.
+Concrete nieuwe codeoplossing ter inzage: https://github.com/henkjandekrijger-glitch/hjdk-api/pull/13 . Bestaande liveartikelwaarde blokkeert conceptopslag met409;21offline tests slagen, geenCAS/liveKVtest. Nietgemerged/nietlive.
+Drie bestaande automations daadwerkelijk bijgewerkt, tijden09:15/15:37/23:41Curaçao behouden. Lees NOORDSTER.json: elkeoudepostdagelijks, snapshots+definitie, onbekend=null,14tot21dageneindoordeel, éénlek/variabele, primairebrononderzoek hergebruiken.30xambitie zondergeldigenulmeting enabsoluteeindwaarde/deadline:voortgangnietberekenbaar, geenverzonnenbezoekdoel.
+Geslotendag24nov:42SB/5LCpaginaopeningen versus32/12op23nov;geengroeibewijsorganisch. ActueleGooglecontrole25nov11:12UTC:11van17geïndexeerd versus4van17op24nov;oude1van17cacheachterhaald,geentrafiekresultaat. Per-pinoutboundenlandingenblijvenmeetlek. Vandaagresterendvierpinpreviews,échteReelpreview,quizupdatevoorstel,metingonderzoek,goedgekeurdmateriaaluitvoeren. Geenextrasocialplaatsingindezeronde.

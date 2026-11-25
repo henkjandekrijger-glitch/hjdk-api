@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "updated_at_utc": "2026-11-25T11:17:40.111Z",
+  "scope": [
+    "stockingbooks.com",
+    "lastingchange.works",
+    "Pinterest books kadolyshop",
+    "Instagram books kadoly.shop"
+  ],
+  "north_star": {
+    "status": "30x ambitie uit overdracht, nog geen geldige nulmeting of afgesproken absolute eindwaarde/deadline",
+    "metric": "Geregistreerde organische aankomsten op eigen sites per gesloten UTC-dag, apart per bron en site; geen unieke mensen claimen.",
+    "multiplier": 30,
+    "baseline": null,
+    "current_comparable_7day": null,
+    "target_absolute": null,
+    "deadline": null,
+    "rule": "Eerst 7 volledig gemeten dagen met dezelfde definitie. Rapporteer daarna vorige7dagen vs baseline7dagen en 30x-referentie. Zonder 7 betrouwbare dagen voortgang niet berekenbaar. Geen 30x-garantie. Verkoop apart met echte attributie.",
+    "conversion_sales": "Organisch toegeschreven verkoop alleen waar gekoppelde attributie bestaat; ruwe Amazonredirects en KDP-totalen blijven apart."
+  },
+  "cadence_curacao": [
+    {
+      "time": "09:15",
+      "work": "Dagrapport gesloten UTC-dag; alle eerdere posts bijwerken; één lek kiezen; North Star stand en meetbeperkingen zichtbaar."
+    },
+    {
+      "time": "15:37",
+      "work": "Providergegevens van elke eerdere pin/Reel, nieuwe volledige previews, precies goedgekeurde inhoud plaatsen, gedeelde planning en duplicaten controleren."
+    },
+    {
+      "time": "23:41",
+      "work": "Maximaal één nuttig LC-concept; één Stocking Books-verbetering uit bestaande inhoud voorbereiden. Bestaande live versies nooit overschrijven."
+    }
+  ],
+  "per_post_loop": {
+    "daily": "Iedere gepubliceerde pin en boek-Reel afzonderlijk teruglezen, vorig snapshot behouden, echte providergegevens met venster/definitie ophalen, waarneming/les/onzekerheid/volgende keuze opslaan; onbekend=null, geen post overslaan.",
+    "signals": "Vertoningen, saves, delen, profielacties, organische uitgaande kliks en geregistreerde website-openingen gescheiden. Geen per-pin landingen uit marginale bron/paginatellers afleiden.",
+    "decisions": "Eerste signalen dagelijks gebruiken voor hypotheses. Eén variabele wijzigen, controles behouden, geen winnaar bij lage/onvergelijkbare data. Eindoordeel 14 tot 21 dagen na echte publicatie plus voldoende data."
+  },
+  "daily_research": "Eén gedeeld onderzoek met relevante primaire bron of aantoonbare makerswerkwijze, bron/datum, claim versus waarneming, tegenbewijs en concrete toepassing. Cache hergebruiken, geen extra betaalde calls.",
+  "today": {
+    "live": "https://lastingchange.works/i-wasted-another-year",
+    "live_at_utc": "2026-11-25T11:11:15Z",
+    "code_proposal": "https://github.com/henkjandekrijger-glitch/hjdk-api/pull/13",
+    "next_measurement_proposal": "Providerstats ophalen en kleinste voorstel voor per-pin bron/landing-attributie ter inzage; geen nieuwe live meting zonder akkoord.",
+    "distribution_previews": [
+      "Gratis kerstkleurplaten",
+      "Kerstquiz met antwoorden",
+      "Kerstmoppen",
+      "Live zevendaagse resetplan"
+    ],
+    "instagram": "Eén echte boeken-Reelpreview met juiste omslag/inkijk/caption, geen onbewezen link-in-bio.",
+    "stocking": "Bestaande quiz-FAQcorrectie en antwoordgebruik concreet ter inzage; geen extra dunne pagina.",
+    "research_reused": "Ness Labs annual review primaire werkwijze uit 25nov artikelronde, geen bewezen kanaalwinst voor onze sites."
+  },
+  "milestones": [
+    {
+      "date": "2026-12-02",
+      "check": "Meetwerking en eerste geldige gesloten baseline; alleen berekenen als definitie/bronklassen aantoonbaar gelijk zijn."
+    },
+    {
+      "window": "2026-12-09/2026-12-16",
+      "check": "Eerste inhoudelijk oordeel artikel van25nov met voldoende relevante data. Pins elk vanaf hun eigen publicatiedatum."
+    }
+  ],
+  "approval": "Bestaande exacte goedkeuringen uitvoeren, nieuwe beelden/copy/sitecode vooraf concreet tonen; geen bulkpublicatietoestemming uit productiedoel."
+}

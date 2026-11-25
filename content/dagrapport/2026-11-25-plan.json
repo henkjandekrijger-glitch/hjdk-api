@@ -175,5 +175,59 @@
       "Actual workable route beforeclaiminglinkinbio"
     ],
     "new_posts_created": []
-  }
+  },
+  "additions": [
+    {
+      "at_utc": "2026-11-25T11:18:54.501Z",
+      "live_article": {
+        "slug": "i-wasted-another-year",
+        "title": "I Wasted Another Year: A Fair Review and One Next Step",
+        "live_at_utc": "2026-11-25T11:11:15Z",
+        "url": "https://lastingchange.works/i-wasted-another-year",
+        "before": {
+          "title": "I Wasted Another Year: What to Do Now (A 30-Day Plan)",
+          "status": "concept",
+          "cause": "Onbekende schrijver/proces; geen attributie uit tijdstip afleiden."
+        },
+        "action": "Exact goedgekeurde eigen reviewkaartversie uit oorspronkelijke dagrecord teruggezet en op expliciet akkoord gepubliceerd.",
+        "checks": {
+          "http": 200,
+          "canonical": "https://lastingchange.works/i-wasted-another-year",
+          "robots": "index,follow",
+          "review_card": true,
+          "in_guides": true,
+          "in_sitemap": true,
+          "inventory_source": "https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=lcartikelen",
+          "inventory_observed_at": "2026-11-25T11:18:13Z",
+          "all_three_live": true,
+          "mode": "eerst-zien"
+        }
+      },
+      "rhythm_source": "content/dagrapport/NOORDSTER.json",
+      "code_proposal": {
+        "status": "reviewproposal_not_live",
+        "url": "https://github.com/henkjandekrijger-glitch/hjdk-api/pull/13",
+        "branch": "codex/lc-protect-published-20261125",
+        "commit": "c3870853dc5a990d477c35fb9a3b31dae95332ff",
+        "scope": "Weiger conceptopslag op een bestaande live artikelwaarde met409; geen writes bij weigering.",
+        "validation": "Syntaxcheck plus21tests geslaagd met offline Redisloader die netwerk blokkeert;4opslagregressies. Geen liveKV/integratietest, geen CAS.",
+        "main_changed": false
+      },
+      "remaining_today": {
+        "live": "https://lastingchange.works/i-wasted-another-year",
+        "live_at_utc": "2026-11-25T11:11:15Z",
+        "code_proposal": "https://github.com/henkjandekrijger-glitch/hjdk-api/pull/13",
+        "next_measurement_proposal": "Providerstats ophalen en kleinste voorstel voor per-pin bron/landing-attributie ter inzage; geen nieuwe live meting zonder akkoord.",
+        "distribution_previews": [
+          "Gratis kerstkleurplaten",
+          "Kerstquiz met antwoorden",
+          "Kerstmoppen",
+          "Live zevendaagse resetplan"
+        ],
+        "instagram": "Eén echte boeken-Reelpreview met juiste omslag/inkijk/caption, geen onbewezen link-in-bio.",
+        "stocking": "Bestaande quiz-FAQcorrectie en antwoordgebruik concreet ter inzage; geen extra dunne pagina.",
+        "research_reused": "Ness Labs annual review primaire werkwijze uit 25nov artikelronde, geen bewezen kanaalwinst voor onze sites."
+      }
+    }
+  ]
 }
