@@ -8,6 +8,7 @@ import { BOEKEN, LC, PRIJS_DATUM, ANDER } from '../lib/bs-data.js';
 import fs from 'node:fs';
 import zlib from 'node:zlib';
 import * as LCF from '../lib/lcfunnel.js';
+import { bewaarArtikel } from '../lib/lcartikel-opslag.js';
 import * as LCW from '../lib/lcwaarom.js';
 import { ImageResponse } from '@vercel/og';
 import { INTER_500, INTER_800 } from '../lib/pinfont.js';
@@ -47,8 +48,8 @@ async function lcHandler(req, res, q, echt) {
     let a = null; try { a = req.method === 'POST' ? (typeof req.body === 'object' && req.body ? req.body : JSON.parse(await new Promise(r => { let d = ''; req.on('data', x => d += x); req.on('end', () => r(d)); }))) : q.get('z') ? JSON.parse(zlib.inflateRawSync(Buffer.from(q.get('z'), 'base64url')).toString('utf8')) : JSON.parse(q.get('j') || 'null'); } catch (e) {}
     const fout = LCF.checkArtikel(a); if (fout.length) return stuur(res, 400, 'application/json', JSON.stringify({ ok: false, fout }), { cache: 'no-store' });
     const modus = (await kv.get('lc:art:modus').catch(() => null)) || 'eerst-zien';
-    a.datum = a.datum || new Date().toISOString().slice(0, 10); a.status = modus === 'direct' ? 'live' : 'concept';
-    await kv.set('lc:art:' + a.slug, a); const rest = index.filter(x => x.slug !== a.slug); rest.push({ slug: a.slug, titel: a.titel, datum: a.datum, status: a.status, zoekterm: a.zoekterm || '', volume: a.volume || 0, gerelateerd: a.gerelateerd || [] }); await kv.set('lc:arts', rest);
+    const opslag = await bewaarArtikel(kv, a, index, modus);
+    if (!opslag.ok) return stuur(res, opslag.status, 'application/json', JSON.stringify({ ok: false, fout: opslag.fout }), { cache: 'no-store' });
     return stuur(res, 200, 'application/json', JSON.stringify({ ok: true, slug: a.slug, status: a.status, voorbeeld: 'https://hjdk-api-henq.vercel.app/api/bs?site=lc&p=' + a.slug + '&concept=1', liveZetten: 'https://hjdk-api-henq.vercel.app/api/bs?site=lc&op=lclive&slug=' + a.slug }), { cache: 'no-store' });
   }
   // "Why didn't it work this year?" met de chat van de keuzehulpen (lib/lcwaarom.js)
