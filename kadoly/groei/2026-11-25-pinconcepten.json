@@ -1,0 +1,57 @@
+{
+  "datum": "2026-11-25",
+  "status": "wacht-op-akkoord",
+  "publiceren": false,
+  "concepten": [
+    {
+      "id": "gids-tv-20261125",
+      "status": "wacht-op-akkoord",
+      "vorm": "Pinterest-gidspin",
+      "bord": "Wonen en decoratie",
+      "titel": "Tv-meubel voor 65 inch: bereken welke breedte past",
+      "beschrijving": "Een 65 inch tv heeft bij 16:9 een beeld van ongeveer 144 cm breed. De behuizing en voet komen daar nog bij. Bereken de beeldmaat en een richtlijn voor de meubelbreedte; vergelijk daarna de maten met je eigen tv.",
+      "bestemming": "https://gids.kadoly.com/tv-meubel-breedte-berekenen?utm_source=pinterest&utm_medium=organic_social&utm_campaign=gids-tv-20261125",
+      "bron": "https://gids.kadoly.com/tv-meubel-breedte-berekenen",
+      "product": "dp_1022",
+      "foto": "https://cdn.kadoly.com/uploads/products/droppery/79/7926ad064bbe04da89ac21a849aaf13a.jpg",
+      "foto_alt": "Tanner Vierdeurs Mediaconsole van Essenhout in Vlaskleur",
+      "kop": "65 inch tv?",
+      "uitkomst": "144 cm",
+      "eenheid": "breed beeld bij 16:9",
+      "regel": "Bereken je meubelbreedte",
+      "grens": "Zonder rand. Meet ook je tv-voet, diepte en draagvermogen."
+    },
+    {
+      "id": "gids-planten-20261125",
+      "status": "wacht-op-akkoord",
+      "vorm": "Pinterest-gidspin",
+      "bord": "Wonen en decoratie",
+      "titel": "Planten bij home staging: echt of kunst kiezen",
+      "beschrijving": "Een lege woning of woon je er nog? Vergelijk echte planten en kunstplanten voor home staging. De gids helpt kiezen op plek, maat en onderhoud, met actuele producten en hun beperkingen.",
+      "bestemming": "https://gids.kadoly.com/planten-home-staging?utm_source=pinterest&utm_medium=organic_social&utm_campaign=gids-planten-20261125",
+      "bron": "https://gids.kadoly.com/planten-home-staging",
+      "product": "oc_4174003512573953",
+      "foto": "https://cdn.kadoly.com/uploads/products/orderchamp/4a/4a3ea083c604df0aea98a452f0b84626.webp",
+      "foto_alt": "Raphis palm kunstplant van 150 cm van Mica Decorations",
+      "kop": "Echt of kunst?",
+      "uitkomst": "Groen in een lege woning",
+      "eenheid": "Kies op plek, maat en onderhoud",
+      "regel": "Bekijk de plantenkeuze",
+      "grens": "Afgebeeld: Raphis kunstplant van 150 cm. Geen eigen producttest."
+    }
+  ],
+  "publicatievoorwaarden": [
+    "Henkjans expliciete akkoord voor gids-pins en gidsbestemming.",
+    "Actuele bronfoto's en beschikbaarheid hercontroleren; definitieve 1000x1500-afbeeldingen exporteren uit de getoonde opmaak.",
+    "Pinterest-UTM bron en campagne doormeting controleren zonder echte gebruikerssignalen na te bootsen.",
+    "Huidig plafond van drie pins per dag behouden; geen dubbel ingeplande producten of gidsen."
+  ],
+  "metingen": {
+    "momenten": [
+      "24 uur",
+      "7 dagen"
+    ],
+    "rechter": "echte bezoeken, productkliks, mandjes, koop; Pinterestbereik apart",
+    "beperking": "Pinterest-UTM nog niet apart in gidsbronclassificatie. Geen meetresultaat uit concept afleiden."
+  }
+}

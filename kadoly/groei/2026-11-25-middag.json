@@ -1,0 +1,89 @@
+{
+  "datum": "2026-11-25",
+  "ronde": "middag",
+  "gemeten_op": "2026-11-25T17:44:04Z",
+  "organisch": {
+    "facebook": {
+      "kliks": 48,
+      "echt": 18,
+      "acties": 2,
+      "mandjes": 3,
+      "verschil_ochtend": {
+        "kliks": 0,
+        "echt": 0,
+        "mandjes": 0
+      }
+    },
+    "pinterest": {
+      "kliks": 3
+    },
+    "gids": {
+      "doorsturen": 587,
+      "echt": 1,
+      "acties": 1,
+      "verschil_ochtend": {
+        "doorsturen": 36,
+        "echt": 0
+      }
+    }
+  },
+  "koop": {
+    "bestellingen_14dagen": 4,
+    "perBron": {
+      "onbekend": {
+        "bestellingen": 2,
+        "omzet": 123.09
+      },
+      "tiktok": {
+        "bestellingen": 2,
+        "omzet": 91.36
+      }
+    },
+    "organisch": "Geen bewezen organische koop; onbekend blijft onbekend."
+  },
+  "ochtendcontrole": {
+    "product_dp_1022": {
+      "status": 200,
+      "gidslinks": []
+    },
+    "robots": {
+      "status": 200,
+      "gidsSitemap": false
+    },
+    "conclusie": "Ochtendinspectie werkt; winkelopdracht nog niet uitgevoerd."
+  },
+  "redactie": {
+    "nieuwe_pagina": "https://gids.kadoly.com/redactie/lootjes-cadeau-20-euro-tips-ruilen-secret-santa",
+    "datum": "2026-11-25",
+    "extern_link1": 1,
+    "beperking": "Eigen livecontrole door redactie, geen bezoekprestatie.",
+    "lezers": 0
+  },
+  "middagwerk": {
+    "gekozen": "Twee concrete Pinterest-gidsconcepten voorbereiden binnen bestaande contentthema’s, na akkoord in plaats van productpins.",
+    "afweging": [
+      {
+        "actie": "Winkelcode direct wijzigen",
+        "oordeel": "Buiten de rol; shop alleen lezen en constateringen overdragen."
+      },
+      {
+        "actie": "Nieuwe algemene gidspagina’s",
+        "oordeel": "Indexering nog lek en bestaande rondes publiceerden al; niet dupliceren."
+      },
+      {
+        "actie": "Deelpakket voor bestaande tv- en plantengids",
+        "oordeel": "Nieuwe distributieroute concreet reviewbaar maken; geen geld en geen livegang zonder akkoord."
+      }
+    ],
+    "verwachting": "Eerste proef meet of een nuttig antwoord meer echte gids-/winkelbezoeken geeft dan productpins. Geen stijgingspercentage voorspeld.",
+    "review": "docs/kadoly-groei-review/gids-pins-2026-11-25.html",
+    "gegevens": "kadoly/groei/2026-11-25-pinconcepten.json",
+    "geplaatst": false,
+    "meetvoorwaarde": "Pinterest-UTM apart herkennen en campagnebehoud controleren vóór publicatie; huidige gidsbron herkent alleen Flipboard-UTM."
+  },
+  "beperkingen": [
+    "Zernio-koppeling Facebook niet opnieuw bevestigd; ochtendmelding blijft open.",
+    "Pushmeldingen en organische aankoopmeting niet bevestigd.",
+    "Geen adressen per kanaal of vergelijkbare weekmeting."
+  ]
+}
