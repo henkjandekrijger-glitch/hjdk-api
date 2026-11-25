@@ -1,0 +1,1044 @@
+{
+  "bijgewerkt": "2026-11-25",
+  "titel": "ANP Fair Licensing: spelers, rechtszaken en crowdfunding",
+  "seoTitel": "ANP Fair Licensing: rechtszaken en crowdfunding | WAM",
+  "kort": "De fotoclaims, makers, claimpartijen en het verzet. Met Martine Bakx, Joke Kaviaar, twee crowdfundings, tien uitspraken en de eigen claim van €391,29.",
+  "laatsteStukLabel": "laatste eigen claimstuk",
+  "bronverantwoordingAanvulling": "De aanvulling met spelers en perspectieven gebruikt openbare publicaties van betrokkenen en bronnen. Processtellingen blijven toegeschreven. Sommige rechtstreeks onbereikbare uitspraakteksten zijn via openbare reproducties gelezen. De oorspronkelijke bestanden en metadata in de Kaviaar-zaak, een eindvonnis en de officiële zittingsoproeping zijn niet door WAM ingezien. Crowdfundingtellers zijn niet als actuele balans vastgesteld.",
+  "bronnen": [
+    {
+      "id": "anp-april",
+      "naam": "ANP · reactie van Martha Riemsma, 17 april 2026",
+      "url": "https://www.villamedia.nl/artikel/ingezonden-anp-staat-voor-een-proportionele-redelijke-en-eerlijke-aanpak-van-onrechtmatig-gebruik-van-fotos",
+      "uitleg": "Eigen bedrijfsstandpunt; bevat ook het perspectief van fotograaf Patricia Rehe.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "anp-augustus",
+      "naam": "ANP · reactie over historische beelden, 25 augustus 2026",
+      "url": "https://www.villamedia.nl/artikel/martha-Riemsma-anp-foto-kijkt-naar-casussen-waar-het-beeldrecht-rondom-historische-fotos-nog-ter-discussie-staat",
+      "uitleg": "Eigen bedrijfsreactie op Jurryt van de Vooren, met Sportgeschiedenis en Jingleweb.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "anp-gebruik",
+      "naam": "ANP Foto · wat mag je met een foto?",
+      "url": "https://www.anpfoto.nl/misc.pp?code=wat-mag-ik-met-een-foto",
+      "uitleg": "Officiële uitleg over licenties, publicatiekanalen en gebruik.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "anp-contact",
+      "naam": "ANP Foto · officieel contact",
+      "url": "https://www.anpfoto.nl/misc.pp?code=team",
+      "uitleg": "Verificatie van de eigen contactroute voor brieven van Fair Licensing of VRG.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "anp-voorwaarden",
+      "naam": "ANP Foto · algemene voorwaarden",
+      "url": "https://www.anpfoto.nl/misc.pp?code=algemene-voorwaarden-anp-foto",
+      "uitleg": "Huidige bedrijfsvoorwaarden; bewijzen niet vanzelf welke voorwaarden bij een oud fotogebruik golden.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "riemsma-benoeming",
+      "naam": "Villamedia · benoeming Riemsma, september 2024",
+      "url": "https://www.villamedia.nl/artikel/martha-riemsma-is-de-nieuwe-directeur-van-het-anp",
+      "uitleg": "Benoemingsbericht: opvolging van Martijn Bennis vanaf half oktober 2024; noemt Chris Oomen en toenmalig RvC-voorzitter Jacques Kuyf.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "oomen",
+      "naam": "NVJ · overname door Chris Oomen",
+      "url": "https://nvj.nl/actueel/nieuwe-eigenaar-oomen-wil-continuiteit-anp",
+      "uitleg": "Historische bron voor de eigenaarswisseling in 2021; geen bewijs van persoonlijke betrokkenheid bij een claim.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "fusie",
+      "naam": "Copyright Agent · samengaan met VRG",
+      "url": "https://www.copyrightagent.com/post/copyright-agent-and-visual-rights-group-announce-merger-to-create-a-global-leader-in-copyright-protection-content-management-and-data-insights",
+      "uitleg": "Bedrijfsaankondiging over samengaan en leiding. Paginadatum september 2025; berichttekst verwijst naar december 2024.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "pixray",
+      "naam": "PixRay · privacyverklaring voor webcrawling",
+      "url": "https://pixray.com/privacy-policy-webcrawling/",
+      "uitleg": "De leverancier beschrijft matching, menselijke controle van mogelijke matches en doorgifte aan klanten.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "pixray-leiding",
+      "naam": "PixRay · zakelijke vertegenwoordiging",
+      "url": "https://pixray.com/imprint/",
+      "uitleg": "Eigen bedrijfsvermelding van Dennis Wetzig als vertegenwoordiger.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "verify",
+      "naam": "Verify · klantverhaal over ANP",
+      "url": "https://verifydam.com/customer-stories/anp/",
+      "uitleg": "Leverancierspublicatie met Patrick Rasenberg als Product Manager Photo; over monitoring van beeldgebruik, geen bewijs voor de techniek achter elke claim.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "rasenberg",
+      "naam": "Feitenradar · kosten en reactie Patrick Rasenberg, 3 november 2026",
+      "url": "https://feitenradar.nl/2026/11/03/de-extreem-hoge-kosten-van-anp-schikkingsvoorstellen-vragen-om-een-uitleg/",
+      "uitleg": "Kritisch journalistiek artikel met aan ANP toegeschreven kostenuitleg; de algemene juridische conclusies zijn die van de auteur.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "sahibdin",
+      "naam": "Feit of Fake · correspondentie met Suraj Sahibdin",
+      "url": "https://feitoffake.wordpress.com/2026/04/09/anp-vraagt-geld-voor-gratis-te-gebruiken-public-domain-fotos/",
+      "uitleg": "Openbare weergave van ANP-reactie over menselijke controle; geen onafhankelijk onderzochte prestatiecijfers.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "bakx-archief",
+      "naam": "Martine Bakx · eigen zaak en herroepingspogingen",
+      "url": "https://www.fotoclaim.nl/2019/02/nieuwe-meetlat-met-de-kennis-van-nu.html",
+      "uitleg": "Partijpublicatie met updates over het vonnis van 2019 en latere herroepingspogingen.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "bakx-november",
+      "naam": "Martine Bakx · archiefupdate november 2026",
+      "url": "https://www.fotoclaim.nl/2026/11/",
+      "uitleg": "Geïndexeerde partijpublicatie van 12 november; beschrijft de stand van het cassatieverzoek. De pagina was niet rechtstreeks opnieuw op te halen.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "bakx-september",
+      "naam": "Martine Bakx · Kaviaar-procedure, 21 september 2026",
+      "url": "https://www.martinebakx.com/2026/09/omkering-van-de-bewijslast.html",
+      "uitleg": "Partijverslag van intrekking tweede claim, ANP-verweer en aangekondigde zitting op 21 januari 2027. Geen officieel zittingsbericht of eindvonnis ingezien.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "foundation",
+      "naam": "Martine Bakx · ANP Foundation, 29 oktober 2026",
+      "url": "https://www.martinebakx.com/2026/10/stichting-anp-foundation.html",
+      "uitleg": "Partijbron voor de rol van het oude archief en de stichting; geen actueel Handelsregister-uittreksel.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "kaviaar",
+      "naam": "Joke Kaviaar · eigen oproep en procedure",
+      "url": "https://jokekaviaar.nl/2026/05/02/anp-afpersburo-wil-geld-van-me-zien-help-procederen/",
+      "uitleg": "Eigen relaas over twee claims en gestart procederen. De kwalificaties in de oorspronkelijke titel zijn die van de auteur.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "crowd-bakx",
+      "naam": "GoFundMe · Strijd tegen onterechte fotoclaims",
+      "url": "https://www.gofundme.com/f/strijd-tegen-onterechte-fotoclaims",
+      "uitleg": "Afzonderlijke inzameling voor Bakx' eigen legbatterijfotozaak, gestart januari 2025. Tellerweergaven kunnen verschillen; geen actueel saldo door WAM vastgesteld.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "crowd-kaviaar",
+      "naam": "GoFundMe · Genoeg is genoeg: ik sleep ANP voor de rechter!",
+      "url": "https://www.gofundme.com/f/genoeg-is-genoeg-ik-sleep-anp-voor-de-rechter",
+      "uitleg": "Afzonderlijke inzameling uit mei 2026 voor de zaak rond Kaviaars foto. Streefbedrag €2.500; geen actuele stand van ontvangsten vastgesteld.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "doorbraak",
+      "naam": "Doorbraak · steunoproep, 14 mei 2026",
+      "url": "https://www.doorbraak.eu/steun-ook-de-rechtszaak-van-joke-kaviaar-en-martine-bakx-tegen-de-anp-fototrollen/",
+      "uitleg": "Activistisch medium dat de oproep en de tekst van Bakx overneemt; geen extra onafhankelijke zaak.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "petitie",
+      "naam": "Petities.nl · Stop onredelijke fotoclaims",
+      "url": "https://petities.nl/petitions/stop-onredelijke-fotoclaims?locale=nl",
+      "uitleg": "Petitie van Martine Bakx aan de Tweede Kamer, met voorstel voor een onafhankelijke commissie. Geen aangenomen wet of bestaande klachteninstantie.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "boek",
+      "naam": "MergenMetz · boekbespreking Fotorecht in het digitale tijdperk",
+      "url": "https://mergenmetz.nl/blog/fotorecht-en-fototrollen/",
+      "uitleg": "Bibliografische context: Martine Bakx, Artoek, juni 2026, ISBN 9789492779014. Geen juridische autoriteit of bewijs van een procesuitkomst.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "jurryt",
+      "naam": "Jurryt van de Vooren · opinie over digitaal erfgoed",
+      "url": "https://www.villamedia.nl/artikel/opinie-de-begintijd-van-het-digitale-erfgoed-was-een-zooitje-en-daarvan-maakt-anp-foto-nu-een-verdienmodel",
+      "uitleg": "Historicus en gebruiker aan het woord; te lezen naast de ANP-reactie van 25 augustus.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "kim",
+      "naam": "Kim van Keken · column, 9 april 2026",
+      "url": "https://www.villamedia.nl/artikel/column-kim-van-keken-het-anp-gaat-met-blafbrieven-achter-de-prooi-aan",
+      "uitleg": "Kritische column die aanleiding gaf tot ANP's ingezonden reactie. Een column is een perspectief, geen rechterlijk oordeel.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "hans",
+      "naam": "Hans de Zwart · open brief aan Chris Oomen, 2022",
+      "url": "https://blog.hansdezwart.nl/2022/03/04/open-brief-aan-chris-oomen-eigenaar-van-anp-over-auteursrechtentrol-permisssion-machine/",
+      "uitleg": "Eigen claimervaring met openbare correspondentie en verwijzing naar debat op BNR; historische zaak.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "ndr",
+      "naam": "NDR-Museum en Archief · eigen waarschuwing en rechtencontext",
+      "url": "https://www.archiefndr.nl/",
+      "uitleg": "Eigen publicatie over claimervaring en historische ANP-beelden. De claim uit 2026 is hier niet onafhankelijk aan ANP toegerekend.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "nvj",
+      "naam": "NVJ/NVF · overleg leidt tot betere fotocontracten",
+      "url": "https://nvj.nl/actueel/overleg-anp-leidt-tot-betere-fotocontracten",
+      "uitleg": "Beroepsorganisatie over exclusiviteit en ondernemingsvrijheid. Staat los van de uitkomst van één fotoclaim.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "nvf-tarief",
+      "naam": "NVF · minimumtarief in beeldbanken",
+      "url": "https://nvj.nl/actueel/stel-minimumtarief-hollandse-hoogte-en-anp",
+      "uitleg": "Beroepsorganisatie over lage beeldbankopbrengsten en zelf in te stellen minimumtarieven; historische context.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "belgie",
+      "naam": "Belgische Senaat · vraag 7-1707 en ministerieel antwoord, 2022",
+      "url": "https://www.senaat.be/www/?LANG=nl&LEG=7&MIval=Vragen%2FSVPrint&NR=1707",
+      "uitleg": "Officiële Belgische parlementaire bron over Permission Machine/VRG, informatieverplichtingen en kostenspecificatie. Geen Nederlands oordeel over de eigen ANP-claim.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "cc",
+      "naam": "Creative Commons · CC BY-NC-ND 4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.nl",
+      "uitleg": "Officiële samenvatting met link naar de juridische licentievoorwaarden.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "rijk",
+      "naam": "Rijksoverheid · werk van anderen gebruiken",
+      "url": "https://www.rijksoverheid.nl/documenten/vraag-en-antwoord/intellectueel-eigendom/mag-ik-teksten-muziek-of-foto-s-van-anderen-gebruiken",
+      "uitleg": "Officiële uitleg: een thuiskopie voor eigen gebruik is geen toestemming voor openbare verspreiding.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "rijk-beeld",
+      "naam": "Rijksoverheid · beeldmateriaal en copyright",
+      "url": "https://www.rijksoverheid.nl/service/copyright",
+      "uitleg": "Laat ook zien waarom een overheidswebsite niet betekent dat alle foto's vrij herbruikbaar zijn.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "renckhoff",
+      "naam": "HvJ EU · Renckhoff, C-161/17",
+      "url": "https://curia.europa.eu/site/upload/docs/application/pdf/2018-08/cp180123fr.pdf",
+      "uitleg": "Officieel persbericht over opnieuw uploaden van een al elders toegankelijke foto; geen ANP-procedure.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "framing",
+      "naam": "HvJ EU · VG Bild-Kunst, C-392/19",
+      "url": "https://curia.europa.eu/site/upload/docs/application/pdf/2021-03/cp210036de.pdf",
+      "uitleg": "Officieel persbericht over framing en het omzeilen van beschermende technische maatregelen; geen ANP-procedure.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "auteurswet",
+      "naam": "Auteurswet · officiële tekst",
+      "url": "https://wetten.overheid.nl/BWBR0001886/",
+      "uitleg": "Naslag voor onder meer citaatrecht. Rechtstreeks ophalen lukte niet; individuele conclusies zijn op de genoemde uitspraken en andere officiële uitleg gebaseerd.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "v2019",
+      "naam": "ECLI:NL:RBROT:2019:1573",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBROT:2019:1573",
+      "uitleg": "Officiële vindplaats. Waar rechtstreeks ophalen niet lukte, is de uitspraaktekst via de hier gelinkte reproductie gelezen.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "v2019-tekst",
+      "naam": "ECLI:NL:RBROT:2019:1573 · leesbare uitspraaktekst",
+      "url": "https://semantius.nl/uitspraken/ECLI:NL:RBROT:2019:1573",
+      "uitleg": "Openbare reproductie van de gepseudonimiseerde uitspraak, naast de officiële vindplaats.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "v8948",
+      "naam": "ECLI:NL:RBOBR:2025:8948",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBOBR:2025:8948",
+      "uitleg": "Officiële vindplaats. Waar rechtstreeks ophalen niet lukte, is de uitspraaktekst via de hier gelinkte reproductie gelezen.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "v8151",
+      "naam": "ECLI:NL:RBOBR:2025:8151",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBOBR:2025:8151",
+      "uitleg": "Officiële vindplaats. Waar rechtstreeks ophalen niet lukte, is de uitspraaktekst via de hier gelinkte reproductie gelezen.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "v8151-tekst",
+      "naam": "ECLI:NL:RBOBR:2025:8151 · leesbare uitspraaktekst",
+      "url": "https://www.zoekrechtspraak.nl/uitspraak/ECLI:NL:RBOBR:2025:8151",
+      "uitleg": "Openbare reproductie van de gepseudonimiseerde uitspraak, naast de officiële vindplaats.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "v7694",
+      "naam": "ECLI:NL:RBOVE:2025:7694",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBOVE:2025:7694",
+      "uitleg": "Officiële vindplaats. Waar rechtstreeks ophalen niet lukte, is de uitspraaktekst via de hier gelinkte reproductie gelezen.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "v178",
+      "naam": "ECLI:NL:RBGEL:2026:178",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBGEL:2026:178",
+      "uitleg": "Officiële vindplaats. Waar rechtstreeks ophalen niet lukte, is de uitspraaktekst via de hier gelinkte reproductie gelezen.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "v1023",
+      "naam": "ECLI:NL:RBZWB:2026:1023",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBZWB:2026:1023",
+      "uitleg": "Officiële vindplaats. Waar rechtstreeks ophalen niet lukte, is de uitspraaktekst via de hier gelinkte reproductie gelezen.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "v1023-tekst",
+      "naam": "ECLI:NL:RBZWB:2026:1023 · leesbare uitspraaktekst",
+      "url": "https://www.legalmomo.nl/jurisprudentie/ecli-nl-rbzwb-2026-1023/",
+      "uitleg": "Openbare reproductie van de gepseudonimiseerde uitspraak, naast de officiële vindplaats.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "v1937",
+      "naam": "ECLI:NL:RBGEL:2026:1937",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBGEL:2026:1937",
+      "uitleg": "Officiële vindplaats. Waar rechtstreeks ophalen niet lukte, is de uitspraaktekst via de hier gelinkte reproductie gelezen.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "v1937-tekst",
+      "naam": "ECLI:NL:RBGEL:2026:1937 · leesbare uitspraaktekst",
+      "url": "https://www.zoekrechtspraak.nl/uitspraak/ECLI:NL:RBGEL:2026:1937",
+      "uitleg": "Openbare reproductie van de gepseudonimiseerde uitspraak, naast de officiële vindplaats.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "v4658",
+      "naam": "ECLI:NL:RBOVE:2023:4658",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBOVE:2023:4658",
+      "uitleg": "Officiële vindplaats. Waar rechtstreeks ophalen niet lukte, is de uitspraaktekst via de hier gelinkte reproductie gelezen.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "bakx-toeschrijving",
+      "naam": "Martine Bakx · betwiste toeschrijving, 25 september 2026",
+      "url": "https://www.martinebakx.com/2026/09/toeschrijvingsfouten-op-anpfotonl.html",
+      "uitleg": "Partijpublicatie over voorgenomen betwisting van de maker; voorbeelden elders bewijzen niet dat deze foto verkeerd is toegeschreven.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "bakx-oktober",
+      "naam": "Martine Bakx · nieuw gesteld archiefbewijs, 1 oktober 2026",
+      "url": "https://www.martinebakx.com/2026/10/bewijs-van-onschuld.html",
+      "uitleg": "Partijverslag over watermerk en downloaddatum; origineel bestand en metadata zijn niet door WAM geverifieerd.",
+      "datum": "2026-11-25"
+    },
+    {
+      "id": "jingleweb",
+      "naam": "Jingleweb · eigen bericht over radiodebat, 18 augustus 2026",
+      "url": "https://www.jingleweb.nl/index.php/tag/jelle-boonstra/",
+      "uitleg": "Eigen aankondiging van Jelle Boonstra op NPO Radio 1 over ANP-claims en hobbyarchieven.",
+      "datum": "2026-11-25"
+    }
+  ],
+  "verdieping": [
+    {
+      "id": "kern",
+      "kop": "Waar gaat dit dossier werkelijk over?",
+      "alineas": [
+        "Fotografen hebben belang bij betaling en bescherming van hun werk. Tegelijk moeten ontvangers van een fotoclaim kunnen nagaan wie de rechten heeft, welk gebruik is vastgesteld en waarom een bedrag wordt gevraagd. Een match met een beeldbank is het begin van die controle.",
+        "Er lopen drie lijnen door dit dossier: de eigen claim van €391,29 uit 2024; het bredere debat over tarieven, bewijs en historische licenties; en het georganiseerde verzet met rechtszaken, crowdfunding en een petitie. De uitkomsten verschillen per zaak."
+      ],
+      "items": []
+    },
+    {
+      "id": "martine-bakx",
+      "kop": "Martine Bakx: drie verschillende juridische lijnen",
+      "alineas": [
+        "Bakx is publicist, actievoerder en beheerder van een jurisprudentiearchief over fotoclaims. In de Kaviaar-zaak treedt zij volgens haar publicaties op als gemachtigde. Haar analyses zijn een relevant tegenperspectief; zij zijn geen uitspraken van een rechter."
+      ],
+      "items": [
+        {
+          "kop": "De eigen legbatterijfotozaak uit 2019",
+          "alineas": [
+            "Op 15 februari 2019 werd in de Rotterdamse zaak over een legbatterijfoto €332,50 schadevergoeding, €50 buitengerechtelijke kosten en €331 proceskosten toegewezen, met daarnaast rente. Bakx identificeert dit gepseudonimiseerde vonnis als haar eigen zaak. De foto was via een schoolwerkstuk op haar blog gekomen. Het vonnis vormt dus ook een voorbeeld waarin de aangesproken gebruiker verloor."
+          ],
+          "bronIds": [
+            "v2019",
+            "v2019-tekst",
+            "bakx-archief"
+          ]
+        },
+        {
+          "kop": "Herroeping tegen ANP en ANP Holding",
+          "alineas": [
+            "Bakx beschrijft twee latere pogingen om het vonnis wegens vermeend bedrog te laten herroepen. Eén strandde volgens haar doordat zij ANP in plaats van ANP Holding als rechtsopvolger van Hollandse Hoogte had gedagvaard; ook de volgende poging slaagde volgens haar updates niet. Zij betwist onder meer de gestelde rechtenoverdracht en bevoegdheid om op eigen naam te procederen. Dat zijn haar bezwaren, geen hier vastgesteld bedrog."
+          ],
+          "bronIds": [
+            "bakx-archief"
+          ]
+        },
+        {
+          "kop": "Verzoek om cassatie in het belang der wet",
+          "alineas": [
+            "In een update van 12 november 2026 schrijft Bakx dat haar verzoek vooralsnog niet in behandeling wordt genomen. WAM heeft geen beslissing van de procureur-generaal of Hoge Raad over dat verzoek ingezien. Een verzoek is geen ingestelde gewone cassatieprocedure en geen vernietiging van het oorspronkelijke vonnis."
+          ],
+          "bronIds": [
+            "bakx-november"
+          ]
+        },
+        {
+          "kop": "De afzonderlijke zaak van Joke Kaviaar",
+          "alineas": [
+            "Kaviaar beschrijft een eerste voorstel van €419,36 in februari 2026 rond een foto van het graf van Hans Kok en een tweede voorstel van hetzelfde bedrag in april bij een Facebook-link. Kaviaar zegt de eerste claim met korting te hebben betaald. Bakx startte namens Kaviaar een procedure tegen ANP. De precieze inzet en stand moeten worden onderscheiden van Bakx' eigen legbatterijfotozaak."
+          ],
+          "bronIds": [
+            "kaviaar"
+          ]
+        },
+        {
+          "kop": "Processtand volgens Bakx, 21 september 2026",
+          "alineas": [
+            "Bakx meldt dat de tweede claim is ingetrokken, maar de procedure doorloopt. Volgens haar beroept ANP zich op een foto van Paul Vreeker in loondienst en een vroegere CC BY-NC-ND 4.0-licentie. ANP zou betwisten dat Kaviaar het beeld uit het archief verkreeg en de voorwaarden naleefde. Dit is het verslag van de wederpartij, zonder door WAM ingezien eindvonnis."
+          ],
+          "bronIds": [
+            "bakx-september"
+          ]
+        },
+        {
+          "kop": "Betwiste maker en nieuw gesteld archiefbewijs, september/oktober 2026",
+          "alineas": [
+            "Op 25 september schrijft Bakx dat zij de toeschrijving aan Paul Vreeker wil betwisten; voorbeelden van fouten elders bewijzen echter niet dat deze foto verkeerd is toegeschreven. Op 1 oktober noemt zij een ANP-watermerk en een downloaddatum van 28 december 2020 als nieuw bewijs voor herkomst uit ANP-archief. WAM heeft het oorspronkelijke bestand en de metadata niet geverifieerd; een rechterlijke aanvaarding is niet vastgesteld. In haar bijdrage van 29 oktober noemt Bakx opnieuw de zitting op 21 januari 2027 en de nog betwiste licentievoorwaarden."
+          ],
+          "bronIds": [
+            "bakx-toeschrijving",
+            "bakx-oktober",
+            "foundation"
+          ]
+        },
+        {
+          "kop": "ANP Foundation is een eigen onderdeel van de discussie",
+          "alineas": [
+            "Bakx bespreekt in oktober de stichting achter het voormalige historische archief. Zij benadrukt dat ANP Foundation geen procespartij is in de Kaviaar-zaak. De stichting, ANP B.V., ANP Holding en de fotograaf zijn geen uitwisselbare rechtspersonen of rechthebbenden. Juist de precieze licentie, contractpartij en rechtenketen verdienen controle."
+          ],
+          "bronIds": [
+            "foundation"
+          ]
+        },
+        {
+          "kop": "Archief, boek en petitie",
+          "alineas": [
+            "Naast haar procederen publiceert Bakx analyses op Fotoclaim.nl en Martinebakx.com. In juni 2026 verscheen Fotorecht in het digitale tijdperk bij Artoek, ISBN 9789492779014. Haar petitie vraagt om een onafhankelijke commissie voor fotoclaims. Dat voorstel is geen bestaande wettelijke beroepsmogelijkheid."
+          ],
+          "bronIds": [
+            "boek",
+            "petitie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crowdfunding",
+      "kop": "Twee crowdfundings, elk met een eigen doel",
+      "alineas": [
+        "Deze inzamelingen zijn van Martine Bakx, op GoFundMe vermeld als Martine van Artoek. WAM beheert de acties niet. De doelen en de actuele opbrengst zijn verschillende gegevens. Zoekresultaten en opgehaalde versies tonen niet steeds dezelfde teller; daarom publiceren we hier geen saldo als stand van vandaag."
+      ],
+      "items": [
+        {
+          "kop": "Strijd tegen onterechte fotoclaims",
+          "alineas": [
+            "Deze actie startte in januari 2025 voor Bakx' eigen juridische strijd rond de legbatterijfoto en haar herroepingspogingen. De campagnepagina vermeldt een doel van €3.500 en licht proces- en bijkomende kosten toe. Het is niet de inzameling voor Joke Kaviaar."
+          ],
+          "bronIds": [
+            "crowd-bakx"
+          ]
+        },
+        {
+          "kop": "Genoeg is genoeg: ik sleep ANP voor de rechter!",
+          "alineas": [
+            "Deze aparte actie startte in mei 2026 voor de procedure rond Kaviaar. De oproep noemt €2.500 als buffer voor procederen en een mogelijk kostenrisico bij verlies. Kaviaars eigen publicatie meldt later dat voldoende geld is opgehaald en ANP is gedagvaard. Een behaald fondsenwervingsdoel bewijst geen gewonnen rechtszaak."
+          ],
+          "bronIds": [
+            "crowd-kaviaar",
+            "kaviaar"
+          ]
+        },
+        {
+          "kop": "Petitie en publieke steun",
+          "alineas": [
+            "Doorbraak en Globalinfo hielpen de oproep verspreiden. Het gaat grotendeels om overname van dezelfde oproeptekst, niet om meerdere onafhankelijk onderzochte incidenten. De petitie Stop onredelijke fotoclaims richt zich op de Tweede Kamer. Een actueel aantal ondertekeningen is niet onafhankelijk herbevestigd."
+          ],
+          "bronIds": [
+            "doorbraak",
+            "petitie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rechtszaken",
+      "kop": "Aanvullende rechtspraak: Bakx en een vergelijking",
+      "alineas": [
+        "Het hoofdregister verderop bevat acht ANP-uitspraken. Deze twee aanvullingen behandelen Bakx' oorspronkelijke zaak en een andere fotoclaim ter vergelijking. Samen zijn dit tien verschillende uitspraken; de vergelijkingszaak uit 2023 is niet aan ANP toegeschreven."
+      ],
+      "items": [
+        {
+          "kop": "15 februari 2019 · Rotterdam · legbatterijfoto",
+          "alineas": [
+            "ECLI:NL:RBROT:2019:1573. De rechter acht de foto beschermd en het publiceren op het blog een inbreuk. Toegewezen: €332,50 schade, €50 buitengerechtelijke kosten en €331 proceskosten, plus rente. Bakx noemt dit haar eigen zaak; de uitspraak zelf is gepseudonimiseerd. Latere kritiek van een procespartij verandert deze beslissing niet zonder geslaagd rechtsmiddel."
+          ],
+          "bronIds": [
+            "v2019",
+            "v2019-tekst"
+          ]
+        },
+        {
+          "kop": "14 november 2023 · Overijssel · kosten begrensd",
+          "alineas": [
+            "ECLI:NL:RBOVE:2023:4658. Er was inbreuk, maar het particuliere tarief van €90 gold. Opslagen en onvoldoende op de concrete inbreuk toegespitste onderzoekskosten werden afgewezen; €61,05 buitengerechtelijke kosten werd wel toegewezen. De gepseudonimiseerde eiser is een marketing-/websitebedrijf. Deze uitspraak presenteren we niet als een zaak tegen ANP."
+          ],
+          "bronIds": [
+            "v4658"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spelers",
+      "kop": "Wie zijn de betrokken spelers?",
+      "alineas": [
+        "De kaart hieronder maakt onderscheid tussen handelen, vertegenwoordigen, techniek, toezicht en publiek debat. Een zakelijke functie bewijst geen persoonlijke betrokkenheid of aansprakelijkheid. Waar de bron historisch is, behandelen we de functie ook als historisch; er is geen volledige actuele Handelsregistercontrole uitgevoerd."
+      ],
+      "items": [
+        {
+          "kop": "ANP B.V. en ANP Holding",
+          "alineas": [
+            "De werkmaatschappij treedt in de genoemde ANP-fotoprocedures op. ANP Holding speelt volgens Bakx een afzonderlijke rol bij de rechtsopvolging van Hollandse Hoogte. Voor een proceshandeling telt de precieze rechtspersoon; alleen de handelsnaam ANP is onvoldoende."
+          ],
+          "bronIds": [
+            "v1937",
+            "bakx-archief"
+          ]
+        },
+        {
+          "kop": "Martha Riemsma, Martijn Bennis en toezicht",
+          "alineas": [
+            "Riemsma werd vanaf half oktober 2024 algemeen directeur. Bij de oorspronkelijke brief van 25 september 2024 was dus haar voorganger Martijn Bennis nog directeur volgens het benoemingsbericht. Dat bericht noemt Jacques Kuyf als toenmalig voorzitter van de raad van commissarissen. Huidige samenstelling van de raad is niet opnieuw met een register bevestigd."
+          ],
+          "bronIds": [
+            "riemsma-benoeming"
+          ]
+        },
+        {
+          "kop": "Chris Oomen",
+          "alineas": [
+            "De NVJ beschreef de overname van ANP door Oomen in 2021. Hij is ook geadresseerde van Hans de Zwarts openbare oproep om de handhaving te veranderen. Eigendom is relevante bestuurlijke context, geen bewijs dat hij deze claim liet versturen."
+          ],
+          "bronIds": [
+            "oomen",
+            "hans"
+          ]
+        },
+        {
+          "kop": "ANP Fair Licensing; Suraj Sahibdin",
+          "alineas": [
+            "Het eigen handhavingsteam van ANP behandelt voorstellen. In openbare correspondentie wordt Sahibdin als operationele contactpersoon genoemd. Zijn weergegeven reactie stelt dat detectiesoftware niet zonder menselijke beoordeling beslist. Die mededeling is geen onafhankelijke audit van alle dossiers."
+          ],
+          "bronIds": [
+            "sahibdin"
+          ]
+        },
+        {
+          "kop": "Patrick Rasenberg en ANP Foto",
+          "alineas": [
+            "Rasenberg wordt in een leverancierscase als Product Manager Photo aangeduid. Hij gaf volgens Feitenradar in november 2026 uitleg over kosten bij schikkingsvoorstellen. Een productfunctie en een publieke reactie zijn geen bewijs dat hij de afzender of beslisser in elk dossier is."
+          ],
+          "bronIds": [
+            "verify",
+            "rasenberg"
+          ]
+        },
+        {
+          "kop": "Fotografen: personeel en freelancers",
+          "alineas": [
+            "Zij maken de beelden en hebben belang bij vergoeding, zeggenschap en naamsvermelding. Hun rechtspositie kan verschillen door dienstverband, overdracht, licentie of lastgeving. Michiel Wijnbergh wordt in Bakx' legbatterijdossier genoemd; Paul Vreeker in haar verslag van de Kaviaar-procedure; Patricia Rehe lichtte haar makersperspectief toe in ANP's aprilreactie."
+          ],
+          "bronIds": [
+            "bakx-archief",
+            "bakx-september",
+            "anp-april"
+          ]
+        },
+        {
+          "kop": "ANP Foundation en het historische archief",
+          "alineas": [
+            "De stichting achter ANP-archief.nl is een eigen speler in de discussie over vroeger toegestaan hergebruik. Of een specifiek bestand onder een bepaalde licentie viel en aan de voorwaarden is voldaan, vraagt bewijs op bestandsniveau."
+          ],
+          "bronIds": [
+            "foundation",
+            "cc"
+          ]
+        },
+        {
+          "kop": "Bas van Beek en de historische foto-organisatie",
+          "alineas": [
+            "Bakx beschrijft Van Beeks eerdere leiding bij Hollandse Hoogte en ANP-fotozaken en noemt hem in de context van het bestuur van ANP Foundation. De huidige formele positie bij de stichting en de precieze bevoegdheden zijn door WAM niet met een actueel register bevestigd. Haar verwijten aan voormalige leidinggevenden blijven haar standpunt."
+          ],
+          "bronIds": [
+            "foundation"
+          ]
+        },
+        {
+          "kop": "Permission Machine, Visual Rights Group en Copyright Agent",
+          "alineas": [
+            "Permission Machine is de eerdere naam in oudere dossiers; VRG was de externe handhavingspartij in de eigen claim. Copyright Agent en VRG kondigden een samengaan aan. De aankondiging noemt Christoffer Feilberg en Ywein Van den Brande in groepsfuncties. Een groepsnaam vervangt geen controle van de juiste vennootschap."
+          ],
+          "bronIds": [
+            "fusie",
+            "belgie"
+          ]
+        },
+        {
+          "kop": "PixRay; Dennis Wetzig",
+          "alineas": [
+            "PixRay is de door ANP genoemde technologiepartner. De eigen verklaring beschrijft beeldmatching en menselijke controle van mogelijke matches. Het imprint noemt Dennis Wetzig als vertegenwoordiger. De technologie kan beeldgebruik vinden; zij beslist niet of een wettelijke uitzondering of oude licentie geldt."
+          ],
+          "bronIds": [
+            "pixray",
+            "pixray-leiding"
+          ]
+        },
+        {
+          "kop": "Verify en FrameSeek",
+          "alineas": [
+            "ANP wordt als klant genoemd voor monitoring van beeldhergebruik. Deze leverancierscase maakt een extra technische speler zichtbaar, naast PixRay. WAM heeft niet vastgesteld dat FrameSeek het systeem achter Fair Licensing is of bij deze eigen claim is gebruikt."
+          ],
+          "bronIds": [
+            "verify"
+          ]
+        },
+        {
+          "kop": "Rosmalen Gerechtsdeurwaarders en andere gemachtigden",
+          "alineas": [
+            "Rosmalen staat in meerdere besproken uitspraken als gemachtigde van ANP. Een incassogemachtigde vertegenwoordigt een partij; het is de rechter die over betwiste betaling beslist. Inschakeling van een deurwaarder is niet hetzelfde als een reeds uitgesproken veroordeling."
+          ],
+          "bronIds": [
+            "v7694",
+            "v1937"
+          ]
+        },
+        {
+          "kop": "Martine Bakx en Joke Kaviaar",
+          "alineas": [
+            "Bakx brengt kennis, publiciteit en procesvertegenwoordiging samen. Kaviaar is de aangesproken gebruiker die ANP zelf heeft laten dagvaarden. Hun procespositie en eigen publicaties zijn hierboven afzonderlijk uitgewerkt."
+          ],
+          "bronIds": [
+            "kaviaar",
+            "bakx-september"
+          ]
+        },
+        {
+          "kop": "NVJ en NVF",
+          "alineas": [
+            "De beroepsorganisaties behartigen journalistieke en fotografische belangen. Hun publicaties laten zien dat ook binnen de beroepsgroep discussie bestaat over contracten, exclusiviteit en vergoeding. Zij zijn niet automatisch vertegenwoordiger van een ontvanger van een claim."
+          ],
+          "bronIds": [
+            "nvj",
+            "nvf-tarief"
+          ]
+        },
+        {
+          "kop": "Jurryt van de Vooren, Sportgeschiedenis en Jelle Boonstra/Jingleweb",
+          "alineas": [
+            "Gebruikers van historische beelden brachten het risico voor digitaal erfgoed onder de aandacht. ANP bevestigde in augustus dat het dossier van Sportgeschiedenis was gesloten na inhoudelijke reactie en dat het met Boonstra sprak. Die bedrijfsmelding bewijst geen afwikkeling van alle vergelijkbare archiefzaken."
+          ],
+          "bronIds": [
+            "jurryt",
+            "anp-augustus",
+            "jingleweb"
+          ]
+        },
+        {
+          "kop": "Hans de Zwart en andere websitebeheerders",
+          "alineas": [
+            "De Zwart publiceerde in 2022 een claim en vragen aan Oomen; zijn tijdlijn vermeldt een BNR-gesprek met ANP-manager Edouard van Arem. Erfgoedbeheerders zoals het NDR-archief beschrijven eveneens problemen met historische foto's. Niet iedere genoemde claim is daarmee een geverifieerde ANP-zaak."
+          ],
+          "bronIds": [
+            "hans",
+            "ndr"
+          ]
+        },
+        {
+          "kop": "Kim van Keken, Villamedia, Marcel van den Berg en Feitenradar",
+          "alineas": [
+            "Columns, eigen onderzoek en wederhoor maken de werkwijze publiek. Feitenradar/Feit of Fake publiceert onder meer correspondentie; de opinie van een auteur blijft te onderscheiden van de geciteerde reactie van ANP. De media zijn ook distributeurs van de discussie."
+          ],
+          "bronIds": [
+            "kim",
+            "rasenberg",
+            "sahibdin"
+          ]
+        },
+        {
+          "kop": "Doorbraak, Globalinfo, GoFundMe en donateurs",
+          "alineas": [
+            "Actiemedia verspreiden de oproep; GoFundMe faciliteert inzameling; donateurs dragen kostenrisico. Dezelfde overgenomen oproep geldt niet als extra bewijs voor dezelfde gebeurtenis. WAM ontvangt hier geen donaties."
+          ],
+          "bronIds": [
+            "doorbraak",
+            "crowd-kaviaar"
+          ]
+        },
+        {
+          "kop": "Rechtbanken, de Hoge Raad en de procureur-generaal",
+          "alineas": [
+            "Rechtbanken beoordelen afzonderlijke geschillen. Een verzoek om cassatie in het belang der wet loopt via een andere route dan een gewone nieuwe procedure. Een kritische blog of petitie vernietigt een vonnis niet."
+          ],
+          "bronIds": [
+            "v2019",
+            "bakx-november"
+          ]
+        },
+        {
+          "kop": "Tweede Kamer, Belgische politiek en toezichthouders",
+          "alineas": [
+            "Bakx' petitie adresseert de Tweede Kamer. In België stelde Stephanie D'Hose vragen over Permission Machine/VRG; het ministeriële antwoord gaat over dat stelsel en informatieverplichtingen. Dat is geen Nederlands verbod op ANP's claims. In dit onderzoek is geen Nederlands handhavingsbesluit tegen ANP vastgesteld."
+          ],
+          "bronIds": [
+            "petitie",
+            "belgie"
+          ]
+        },
+        {
+          "kop": "WAM en lezers",
+          "alineas": [
+            "WAM heeft een eigen claim als aanleiding en dus een eigen belang bij dit onderwerp. De redactie bundelt openbare bronnen en geanonimiseerde ervaringen. Lezers, fotografen, ANP en andere betrokkenen kunnen feiten corrigeren of ook een goede afloop melden. Lezersreacties verschijnen pas na controle."
+          ],
+          "bronIds": []
+        }
+      ]
+    },
+    {
+      "id": "perspectieven",
+      "kop": "De perspectieven en belangen naast elkaar",
+      "alineas": [
+        "Dit is een redactionele ordening van het debat. Waar een perspectief uit een openbare verklaring komt, staat de bron erbij. De controlepunten zijn vragen voor verdere verificatie, geen toegeschreven uitspraken van iedere betrokkene."
+      ],
+      "items": [
+        {
+          "kop": "De fotograaf",
+          "alineas": [
+            "Zonder betaalde licenties en handhaving kan werk zonder vergoeding circuleren. Een maker wil ook invloed op de context en een correcte naam bij het beeld. Controlepunt: welk bedrag ontvangt de fotograaf daadwerkelijk uit een regeling, en op welke contractuele basis?"
+          ],
+          "bronIds": [
+            "anp-april",
+            "nvf-tarief"
+          ]
+        },
+        {
+          "kop": "ANP als exploitant en handhaver",
+          "alineas": [
+            "ANP verdedigt het innen van vergoedingen en het dragen van opsporings- en afhandelingskosten. Volgens de directie is maatwerk onderdeel van de aanpak. Controlepunt: met welke criteria worden maatschappelijke organisaties uitgezonderd en hoe worden fouten en bezwaren gecorrigeerd?"
+          ],
+          "bronIds": [
+            "anp-april"
+          ]
+        },
+        {
+          "kop": "De aangesproken particulier of kleine organisatie",
+          "alineas": [
+            "Een oud beeld kan leiden tot onverwachte kosten, terwijl bewijs van een vroegere licentie lastig te vinden is. Kaviaars verhaal laat ook zien hoe één beeld op een blog en bij een sociale link tot afzonderlijke dossiers kan leiden. Controlepunt: welk gebruik en welk kanaal worden precies geclaimd?"
+          ],
+          "bronIds": [
+            "kaviaar",
+            "hans"
+          ]
+        },
+        {
+          "kop": "De betalende licentienemer",
+          "alineas": [
+            "Wie vooraf toestemming koopt, heeft belang bij eerlijke concurrentie en voorspelbare tarieven. Als ongeoorloofd gebruik structureel goedkoper uitvalt, ontstaat een prikkelprobleem. Dat economische argument bewijst op zichzelf nog niet dat een opgevoerde opslag juridisch verschuldigd is."
+          ],
+          "bronIds": [
+            "anp-gebruik",
+            "v7694"
+          ]
+        },
+        {
+          "kop": "De erfgoedbeheerder en onderzoeker",
+          "alineas": [
+            "Publieke ontsluiting wordt moeilijker wanneer metadata of oude voorwaarden verdwijnen. De vraag is hoe toegang, hergebruik en bewijs bewaard blijven zonder het werk van makers toe te eigenen. Controlepunt: welke licentie stond werkelijk bij het gebruikte bestand?"
+          ],
+          "bronIds": [
+            "jurryt",
+            "foundation"
+          ]
+        },
+        {
+          "kop": "De criticus en procesvoerder",
+          "alineas": [
+            "Bakx bepleit scherpere toetsing van rechtenketens, schade en proceskosten. Een proefprocedure kan duidelijkheid geven, maar een mislukte herroeping of afgewezen vordering geeft ook de grenzen van die strategie aan. Controlepunt: wat staat in het dictum en wat is alleen het betoog van de partij?"
+          ],
+          "bronIds": [
+            "bakx-archief",
+            "v178"
+          ]
+        },
+        {
+          "kop": "De technologie- en claimdienstverlener",
+          "alineas": [
+            "Schaalbare detectie en dossierafhandeling zijn een dienstverlening en een verdienmodel. Een lage kostprijs van een extra match maakt niet alle concrete kosten nihil; algemene techniekuitgaven rechtvaardigen evenmin automatisch iedere opslag. Controlepunt: specificatie per dossier en voorkoming van dubbele kosten."
+          ],
+          "bronIds": [
+            "pixray",
+            "fusie",
+            "v4658"
+          ]
+        },
+        {
+          "kop": "De rechter",
+          "alineas": [
+            "Een vordering vraagt een voldoende onderbouwde bescherming, bevoegdheid, inbreuk en schade. Een procedurele fout kan een claim laten stranden zonder definitief antwoord op alle materiële vragen. Controlepunt: lees reden én beslissing, en trek geen universele conclusie uit één kantonvonnis."
+          ],
+          "bronIds": [
+            "v8151",
+            "v1937",
+            "v7694"
+          ]
+        },
+        {
+          "kop": "De beleidsmaker en samenleving",
+          "alineas": [
+            "Bescherming van makers, toegang tot de rechter en ruimte voor digitaal erfgoed kunnen botsen. Het commissievoorstel uit de petitie probeert een laagdrempelige toets te organiseren. Controlepunt: bevoegdheid, financiering, onafhankelijkheid en rechtsbescherming van zo'n commissie zijn nog uit te werken."
+          ],
+          "bronIds": [
+            "petitie",
+            "belgie"
+          ]
+        },
+        {
+          "kop": "De donateur",
+          "alineas": [
+            "Crowdfunding deelt het financiële risico van principieel procederen. Donateurs hebben belang bij een gescheiden doel, kostenverantwoording, procesupdates en duidelijkheid over eventueel overgebleven geld. Het bestaan van een actie is geen oordeel over de juridische slagingskans."
+          ],
+          "bronIds": [
+            "crowd-bakx",
+            "crowd-kaviaar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bewijsdiscussies",
+      "kop": "Extra context: oude licenties, publiek domein en online gebruik",
+      "alineas": [
+        "Deze controlepunten helpen een dossier compleet te maken. Zij voorspellen niet wat iemand in een specifieke zaak moet betalen."
+      ],
+      "items": [
+        {
+          "kop": "Oude CC-licentie, publiek domein en downloadbewijs",
+          "alineas": [
+            "CC BY-NC-ND 4.0 is geen publiek domein: naamsvermelding, niet-commercieel gebruik en beperkingen op het delen van bewerkingen blijven relevant. De licentiegever kan de toestemming niet intrekken zolang aan de voorwaarden wordt voldaan. Of een specifieke foto rechtsgeldig onder die licentie is verkregen en gebruikt, is een afzonderlijke bewijs- en toepassingsvraag."
+          ],
+          "bronIds": [
+            "cc"
+          ]
+        },
+        {
+          "kop": "Een archief, Wikipedia of overheidswebsite is geen vrijbrief",
+          "alineas": [
+            "Bewaar de itempagina en de rechtenvermelding van het bestand. Op dezelfde website kunnen verschillende licenties gelden. Ook Rijksoverheid maakt voor veel beeldmateriaal een voorbehoud. Alleen vindbaarheid, ouderdom of ontbreken van een copyrightsymbool bewijst geen vrije herbruikbaarheid."
+          ],
+          "bronIds": [
+            "rijk-beeld",
+            "cc"
+          ]
+        },
+        {
+          "kop": "Uploaden, embedden en een sociale preview",
+          "alineas": [
+            "Een bestand zelf kopiëren en opnieuw publiceren is juridisch iets anders dan linken of framing. Renckhoff gaat over opnieuw uploaden; VG Bild-Kunst onder meer over framing bij technische bescherming. Een screenshot of Facebook-preview is niet automatisch vrijgesteld. Techniek, bron, toestemming en context moeten samen worden beoordeeld."
+          ],
+          "bronIds": [
+            "renckhoff",
+            "framing"
+          ]
+        },
+        {
+          "kop": "Citaat en thuiskopie",
+          "alineas": [
+            "Een inhoudelijk functioneel citaat vraagt een eigen beoordeling van doel, omvang en bronvermelding. Een foto als losse versiering is niet vanzelf een citaat. De Rijksoverheid benadrukt dat een thuiskopie voor eigen gebruik niet openbaar verspreid mag worden; de term privéblog maakt een openbare publicatie niet automatisch een thuiskopie."
+          ],
+          "bronIds": [
+            "auteurswet",
+            "rijk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "openbare-tijdlijn",
+      "kop": "De openbare ontwikkeling naast de eigen claim",
+      "alineas": [
+        "Deze tijdlijn gaat over het bredere onderwerp. De tijdlijn van de eigen claim staat bij de afzonderlijke stukken."
+      ],
+      "items": [
+        {
+          "kop": "2019 · uitspraak in de legbatterijfotozaak",
+          "alineas": [
+            "De oorspronkelijke veroordeling waartegen Bakx later probeert op te komen."
+          ],
+          "bronIds": [
+            "v2019"
+          ]
+        },
+        {
+          "kop": "2022 · publiek debat over Permission Machine",
+          "alineas": [
+            "Hans de Zwart publiceert een open brief; de Belgische Senaat behandelt vragen over de partij die Visual Rights Group is gaan heten."
+          ],
+          "bronIds": [
+            "hans",
+            "belgie"
+          ]
+        },
+        {
+          "kop": "2025 · wijziging van handhaving",
+          "alineas": [
+            "Volgens ANP's latere aprilverklaring eindigt de samenwerking met VRG/Copyright Agent in 2025. In januari start de afzonderlijke inzameling voor Bakx' eigen strijd."
+          ],
+          "bronIds": [
+            "anp-april",
+            "crowd-bakx"
+          ]
+        },
+        {
+          "kop": "Februari tot mei 2026 · Kaviaar en nieuwe financiering",
+          "alineas": [
+            "Twee claimmomenten worden openbaar beschreven; een afzonderlijke inzameling voor procederen volgt. Het opstarten van een procedure en een einduitspraak blijven aparte gebeurtenissen."
+          ],
+          "bronIds": [
+            "kaviaar",
+            "crowd-kaviaar"
+          ]
+        },
+        {
+          "kop": "April en augustus 2026 · ANP reageert publiek",
+          "alineas": [
+            "In april reageert de directie op de kritiek van Van Keken; in augustus op historische beeldrechten. ANP meldt dat betwiste historische beelden eerder uit de opsporing zijn gehaald en noemt aanpassingen en overleg."
+          ],
+          "bronIds": [
+            "anp-april",
+            "anp-augustus"
+          ]
+        },
+        {
+          "kop": "September tot november 2026 · procesupdates en debat over kosten",
+          "alineas": [
+            "Bakx meldt intrekking van de tweede Kaviaar-claim en een zitting in januari 2027. Een novemberartikel bevat een reactie van Rasenberg over kostensoorten. Dit zijn verschillende bronnen met een verschillende bewijsstatus."
+          ],
+          "bronIds": [
+            "bakx-september",
+            "rasenberg"
+          ]
+        },
+        {
+          "kop": "21 januari 2027 · aangekondigde behandeling",
+          "alineas": [
+            "Bakx noemt deze datum voor een mondelinge behandeling in Den Haag. WAM heeft de oproeping niet ingezien; planning kan wijzigen. Een uitkomst wordt pas toegevoegd zodra een controleerbare beslissing of afwikkeling beschikbaar is."
+          ],
+          "bronIds": [
+            "foundation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vragen-aan-betrokkenen",
+      "kop": "Aanvullende vragen aan betrokkenen",
+      "alineas": [
+        "Naast de onderzoeksvragen verderop verdienen ook de precieze processtukken en de financiering van het verzet verduidelijking. Deze vragen zijn niet als nieuwe correspondentie verzonden."
+      ],
+      "items": [
+        {
+          "kop": "Aan de techniek- en claimpartijen",
+          "alineas": [
+            "Wie beoordeelt rechtmatig gebruik voordat een brief uitgaat? Welke leverancier doet welk onderdeel? Hoe worden een bestaande licentie, een doublure, een embed en een eerder gesloten dossier herkend?"
+          ],
+          "bronIds": []
+        },
+        {
+          "kop": "Aan Bakx en Kaviaar",
+          "alineas": [
+            "Kunnen processtukken, intrekking, zittingsbevestiging en later het vonnis geanonimiseerd worden aangeleverd? Welke punten zijn al erkend en welke blijven betwist? Welke kosten zijn per crowdfunding gemaakt en welk bedrag is nog beschikbaar?"
+          ],
+          "bronIds": []
+        }
+      ]
+    }
+  ],
+  "vragen": [
+    {
+      "vraag": "Wie is Martine Bakx en welke zaken voert zij rond ANP?",
+      "antwoord": "Bakx publiceert over fotoclaims. Haar eigen legbatterijfotozaak leidde in 2019 tot een veroordeling; volgens haar latere updates slaagden herroepingspogingen niet. Daarnaast treedt zij volgens haar publicaties op voor Joke Kaviaar tegen ANP. Dat zijn afzonderlijke juridische lijnen.",
+      "bronIds": [
+        "bakx-archief",
+        "bakx-september"
+      ]
+    },
+    {
+      "vraag": "Is de rechtszaak van Joke Kaviaar al gewonnen?",
+      "antwoord": "Een einduitspraak is door WAM niet ingezien. Bakx meldde in september 2026 intrekking van de tweede claim en een lopende procedure met een aangekondigde behandeling op 21 januari 2027. Dat is een partijverslag; intrekking van één claim is geen eindvonnis.",
+      "bronIds": [
+        "bakx-september",
+        "foundation"
+      ]
+    },
+    {
+      "vraag": "Welke crowdfunding hoort bij welke zaak?",
+      "antwoord": "Strijd tegen onterechte fotoclaims begon in januari 2025 voor Bakx' eigen strijd. Genoeg is genoeg: ik sleep ANP voor de rechter! begon in mei 2026 voor de Kaviaar-zaak, met een doel van €2.500. De twee acties mogen niet als één fonds worden beschreven.",
+      "bronIds": [
+        "crowd-bakx",
+        "crowd-kaviaar"
+      ]
+    },
+    {
+      "vraag": "Bewijst een oude CC-licentie dat een foto vrij is van auteursrecht?",
+      "antwoord": "Nee. Een Creative Commons-licentie geeft toestemming onder voorwaarden; publiek domein is iets anders. Bij CC BY-NC-ND 4.0 gelden onder meer naamsvermelding, niet-commercieel gebruik en voorwaarden rond bewerkingen. De precieze toepasselijkheid op het bestand en gebruik blijft te controleren.",
+      "bronIds": [
+        "cc"
+      ]
+    },
+    {
+      "vraag": "Is er al een onafhankelijke commissie voor deze fotoclaims?",
+      "antwoord": "De petitie van Bakx vraagt om zo'n commissie. De petitie is een beleidsvoorstel aan de Tweede Kamer en geen bestaande instantie die ANP-claims bindend beoordeelt.",
+      "bronIds": [
+        "petitie"
+      ]
+    }
+  ]
+}
+
