@@ -698,7 +698,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
   if (winPa) { let setNaam = '', bedrag = 0; if (bundel) { try { const bu = await kv.get('hjdk:shop:bundel:' + bundel); setNaam = (bu && (bu.naam || bu.titel)) || ''; bedrag = (bu && bu.totaal) || 0; } catch (e) {} }
     const keus = await KW.kiesKeus(kv, code, { a: cr, z: zone, k: camp, h: (u => /iPhone|iPad/.test(u) ? 'ios' : /Android/.test(u) ? 'android' : 'desktop')(String(req.headers['user-agent'] || '')) }); // lerend op elke variabele: stand per factor per klik, leermoment elke 50 bezoeken
-    const pot = keus.kans === 'aan' ? await KW.potGrootte(kv).catch(() => 0) : 0;
+    const pot = keus.kans === 'aan' || keus.mtekst === 'b' ? await KW.potGrootte(kv).catch(() => 0) : 0;
     return res.status(200).send(KW.winPagina({ held, set: setNaam, bedrag, code, uitHref: uit(pid, 'win'), look: look(ACC, { dark: false }), keus, pot })); }
   return res.status(200).send(html);
 }
@@ -714,11 +714,11 @@ async function winAanmeld(req, res) {
   try { const MM = await import('../lib/mailmind.js'); if (await MM.geblokkeerd(email)) return res.status(200).json({ ok: true }); } catch (e) {}
   const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim();
   const MT = await import('../lib/modalmotor.js');
-  const r = await MT.aanmelden('kadoly', { email, belofte: 'winactie', waar: 'win-' + net + (rec && rec.z ? '-z' + rec.z : ''), arm: 'win', site: 'go', ms: b.ms, website: b.website, mid: undefined,
+  const r = await MT.aanmelden('kadoly', { email, belofte: 'winactie', waar: 'win-' + net + (rec && rec.z ? '-z' + rec.z : '') + (b.bron === 'modal' ? '-modal' : ''), arm: 'win', site: 'go', ms: b.ms, website: b.website, mid: undefined,
     toestemming: 'Winactie go.kadoly.com: e-mailadres voor de winactie en de mail van Kadoly met sieraden en cadeautips; bevestigd via de link in de mail; afmelden met één klik.' }, ip).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 80) }));
   if (r.ok && rec) { try { await kv.raw(['HSET', 'kd:win:keus', email, String(rec.bu || rec.p || '')]); } catch (e) {} } // wat de winnaar krijgt: het product of de set van zijn actiepagina
   if (r.ok && r.al) { try { await KW.doeMee(kv, email); } catch (e) {} }
-  if (r.ok && code) { try { await KW.keusMail(kv, code); } catch (e) {} } // telt de aanmelding bij de versie van de pagina (lerend per 50) // al bevestigd op de lijst: meteen in de pot van deze week
+  if (r.ok && code) { try { await KW.keusMail(kv, code); if (b.bron === 'modal') await KW.keusTel(kv, code, 'mm'); } catch (e) {} } // telt de aanmelding bij de versie van de pagina (lerend per 50) // al bevestigd op de lijst: meteen in de pot van deze week
   if (r.ok && rec && !rec.ml) { rec.ml = Date.now(); const keys = ['sh-' + net + '-mail', 'sh-d' + D8() + '-' + net + '-mail']; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-mail'); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-mail'); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-mail');
     await inc(keys); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} }
   if (!r.ok) { try { await inc(['sh-win-fout', 'sh-win-fout-' + String(r.fout || 'x').replace(/[^a-z]/g, '').slice(0, 12)]); } catch (e) {} }
@@ -789,6 +789,7 @@ async function uitgang(req, res, url) {
 
 async function baken(req, res) {
   let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
+  if ((b.e === 'mtoon' || b.e === 'mweg') && !isBot(req.headers['user-agent'])) { const c = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); if (c) { try { await KW.keusTel(kv, c, b.e === 'mtoon' ? 't' : 'mx'); } catch (x) {} } return res.status(204).end(); } // winactie: vertrekmodal getoond of weggeklikt
   if (b.e === 'veld') { const c = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); if (c && !isBot(req.headers['user-agent'])) { try { await KW.keusVeld(kv, c); } catch (x) {} } return res.status(204).end(); } // winactie: tik in het e-mailveld = vroeg signaal voor het leren
   const code = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); const e = b.e === 'mens' ? 'mens' : b.e === 'eng' ? 'eng' : '';
   if (!e || isBot(req.headers['user-agent'])) return res.status(204).end();
