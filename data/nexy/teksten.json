@@ -1,0 +1,13 @@
+{
+  "ai-receptionist": {
+    "faq": [
+      ["Is there an AI receptionist for personal use?", "Yes: Nexy. The AI receptionists in this list are built for businesses, with a business number, call routing and monthly plans. Nexy is made for your own iPhone or Android: when you can't pick up, Nexy answers, asks what the call is about and puts a short summary in My Nexy. Free to start. Nexy is made by the team behind this guide."],
+      ["Is there an AI answering service for my personal phone?", "Nexy is the one built for that. It answers the calls you miss on your own phone and gives you a written summary instead of a voicemail, so you call back knowing what is needed. It runs on iPhone, Android and the web."]
+    ]
+  },
+  "ai-for-small-business": {
+    "faq": [
+      ["Is there an AI receptionist for a one person business?", "If you are a team of one and calls come in on your own phone, Nexy fits: it answers the calls you miss, asks what they are about and puts the summary in My Nexy. Free to start on iPhone, Android and the web. Nexy is made by the team behind this guide."]
+    ]
+  }
+}
