@@ -172,6 +172,7 @@ Alleen onderzoek en overdracht, geen winkel- of campagnecode gewijzigd. Clickmin
 - hjdk-api: dagkeuze `lib/shopkies.js` (+ VAST_DAG in `fn/shop.js`), teksten `lib/shopteksten-hand.js` en `lib/shoptekst.js`, bots `lib/shopbot.js`, niet geladen `lib/shopniet.js`, archief `lib/shcarchief.js`, kassadoel `lib/shopdirect.js`.
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
+- 2026-11-25 13:00 UTC (sieradencontrole): geen nieuwe verkoop; TikTok afrekengroep 1882740262442082: 12 ads in keuring, 0 vertoningen; oude groep vandaag EUR 9,77, 248 kliks (uit). Whop $11,93, 0 verkoop.
 - 2026-11-25 12:38 UTC (pa-uurcontrole): alle 6 aan, samen $0,56, 219 kliks, 17 echt mens, 1 winkelwagen-tik, 0 verkoop; niets gestopt.
 - 2026-11-25 11:37 UTC (pa-uurcontrole): alle 6 PA-campagnes aan op CPA $0,03; samen $0,45, 185 kliks, 15 echt mens, 1 winkelwagen-tik (Polly hoops 12186821), 0 verkoop.
 - 2026-11-25 11:22 UTC (kadoly-chat, Henkjan: "zet de afrekengroep aan"): TikTok-doel van een lopende groep is niet te wijzigen. Daarom groep NL 25+ sieraden afrekenpagina 1882740262442082 (INITIATE_ORDER, dag $20) aan met de 12 beste carrousels en native ads (waaronder 4 nieuwe v2), de 20 oude video-ads daarin uit; groep 1882742440888498 (doel bekijken: EUR 19,33, 318 kliks, 0 afrekenstap) uit. Les: op doel afrekenpagina kwamen de twee TikTok-verkopen van 17 en 19 nov (groep 1882048854125746); een groep op 'bekijken' levert kijkers, geen kopers.
