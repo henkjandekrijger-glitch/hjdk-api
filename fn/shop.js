@@ -697,7 +697,8 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 </body></html>`;
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
   if (winPa) { let setNaam = '', bedrag = 0; if (bundel) { try { const bu = await kv.get('hjdk:shop:bundel:' + bundel); setNaam = (bu && (bu.naam || bu.titel)) || ''; bedrag = (bu && bu.totaal) || 0; } catch (e) {} }
-    return res.status(200).send(KW.winPagina({ held, set: setNaam, bedrag, code, uitHref: uit(pid, 'win'), look: look(ACC, { dark: false }) })); }
+    const arm = await KW.kiesArm(kv, code); const pot = KW.VARIANTEN[arm] && KW.VARIANTEN[arm].pot ? await KW.potGrootte(kv) : 0; // lerende pagina: versie per klik, leermoment elke 50 bezoeken
+    return res.status(200).send(KW.winPagina({ held, set: setNaam, bedrag, code, uitHref: uit(pid, 'win'), look: look(ACC, { dark: false }), arm, pot })); }
   return res.status(200).send(html);
 }
 
@@ -715,7 +716,8 @@ async function winAanmeld(req, res) {
   const r = await MT.aanmelden('kadoly', { email, belofte: 'winactie', waar: 'win-' + net + (rec && rec.z ? '-z' + rec.z : ''), arm: 'win', site: 'go', ms: b.ms, website: b.website, mid: undefined,
     toestemming: 'Winactie go.kadoly.com: e-mailadres voor de winactie en de mail van Kadoly met sieraden en cadeautips; bevestigd via de link in de mail; afmelden met één klik.' }, ip).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 80) }));
   if (r.ok && rec) { try { await kv.raw(['HSET', 'kd:win:keus', email, String(rec.bu || rec.p || '')]); } catch (e) {} } // wat de winnaar krijgt: het product of de set van zijn actiepagina
-  if (r.ok && r.al) { try { await KW.doeMee(kv, email); } catch (e) {} } // al bevestigd op de lijst: meteen in de pot van deze week
+  if (r.ok && r.al) { try { await KW.doeMee(kv, email); } catch (e) {} }
+  if (r.ok && code) { try { await KW.armMail(kv, code); } catch (e) {} } // telt de aanmelding bij de versie van de pagina (lerend per 50) // al bevestigd op de lijst: meteen in de pot van deze week
   if (r.ok && rec && !rec.ml) { rec.ml = Date.now(); const keys = ['sh-' + net + '-mail', 'sh-d' + D8() + '-' + net + '-mail']; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-mail'); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-mail'); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-mail');
     await inc(keys); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} }
   if (!r.ok) { try { await inc(['sh-win-fout', 'sh-win-fout-' + String(r.fout || 'x').replace(/[^a-z]/g, '').slice(0, 12)]); } catch (e) {} }
@@ -1114,8 +1116,9 @@ export default async function handler(req, res) {
       const h = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(h)) return res.status(404).json({ ok: false });
       res.setHeader('cache-control', 'no-store'); const dag = /^\d{4}-\d{2}-\d{2}$/.test(String(url.searchParams.get('dag') || '')) ? url.searchParams.get('dag') : KW.trekking();
       if (op === 'winloting') return res.status(200).json(await KW.loting(kv, dag, { opnieuw: url.searchParams.get('opnieuw') === '1' }));
+      if (url.searchParams.get('leer') === '1') return res.status(200).json(await KW.leermoment(kv));
       const d8 = D8(); const tel = async k => Number(await kv.get('c:' + k).catch(() => 0)) || 0;
-      return res.status(200).json({ ok: true, trekking: dag, inDePot: await KW.potGrootte(kv, dag), paAanmeldingenTotaal: await tel('sh-pa-mail'), paAanmeldingenVandaag: await tel('sh-d' + d8 + '-pa-mail'), paBezoekVandaag: await tel('sh-d' + d8 + '-pa-view'), fouten: await tel('sh-win-fout') }); }
+      return res.status(200).json({ ok: true, trekking: dag, inDePot: await KW.potGrootte(kv, dag), paAanmeldingenTotaal: await tel('sh-pa-mail'), paAanmeldingenVandaag: await tel('sh-d' + d8 + '-pa-mail'), paBezoekVandaag: await tel('sh-d' + d8 + '-pa-view'), fouten: await tel('sh-win-fout'), proef: await KW.proefStand(kv) }); }
     if (op === 'b') return await baken(req, res);
     if (op === 'hb') return await hulpBaken(req, res);
     if (op === 'hulp') return await hulp(req, res, url);
