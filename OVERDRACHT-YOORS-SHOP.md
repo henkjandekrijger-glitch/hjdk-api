@@ -180,6 +180,8 @@ Alleen onderzoek en overdracht, geen winkel- of campagnecode gewijzigd. Clickmin
 
 ## Logboek (nieuwste bovenaan, één regel per wijziging)
 
+- 25 november 2026 17:20 UTC: LEK DICHT. Op go.kadoly.com/shop stuurde de knop "Bekijk in de shop" (/api/shop/uit) en het mensbaken (/api/shop/b) sinds 5 nov (commit d2fe5d4, go.kadoly.com alleen script) door naar kadoly.com/api/shop/uit = pagina "bestaat niet (meer)". Elke PA-bezoeker die wilde kopen kwam op een dode pagina (vandaag 1 tik, 0 afrekenpagina). vercel.json: uit, b en px blijven op go.kadoly.com. Ook PA-bod $0,03 naar $0,06 op Henkjans "Ok verhoog".
+
 - 25 november 2026: koopcheck en productgebonden retouruitleg gebouwd, 14 tests groen. Publicatie via cm.js; PHP-bronrelease en leveranciersbevestiging als open werk gemarkeerd. Toestemming: Henkjan “Go !!”.
 - 25 nov 14:50 UTC: Whop gestopt op Henkjans 'Stop whop of' (KADOLY SIERADEN NL 2 op pauze, de rest stond al op pauze; $11,93 voor 7 bezoekers, 1 echt mens, 0 verkoop). PropellerAds-bezoekers krijgen op kadoly.com nu altijd de spaarkaart-aanmelding (netArm in de modal kadoly, controlegroep 10% blijft), op 'Zorg dan dat ze aanmelden via propads'.
 - 25 nov 14:45 UTC: Henkjan zag een TikTok met de tafelhaard en 'eerste bestelling gratis verzonden', terwijl de verzending in alle prijzen zit. Oorzaak: de oude video's van 16-17 nov (tiktok/videos*.json) hadden die regel en een oude prijs in beeld. Alle nog aanstaande ads met die video's uit (4). Landingspagina go.kadoly.com, TikTok-catalogus en de kaarten in de cadeauhulp tonen nu de prijs incl. verzending en 'Verzending zit in de prijs'. Nieuwe tafelhaardvideo's zonder prijs en met 'Verzending zit in de prijs' (img/tt). Regel: nooit een verzendbelofte of prijs in beeld branden die kan verouderen.
