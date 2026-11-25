@@ -147,6 +147,7 @@ Henkjan 25 nov: "vind lijst van mailchimp in mijn email en stuur per dag een aan
 
 ## Logboek (nieuwste boven)
 
+- 25 nov 19:20 UTC chat-taniakross: Henkjan: "Ok Jij kiest en leert beste onderwerp vr hoogste conversie via mailmind en clickmind". Nieuwe onderwerpen (o0 Tania Kross in gesprek met <nieuwste gast>, o1 Barcelona van Tania Kross en Tommie Christiaan, o4 Nieuw van Tania Kross: haar podcast A Kross …, o5 Van Tania Kross: Barcelona en haar podcast). Mailmind leert op ja + 0,3 x klik. Tempo op zijn ok: 80 per dag nu, +25 per dag naar 150, 12 per uur, remmen bij 8% bounce of 5% stop. Doel 1.000 adressen voor 31 dec.
 - 25 nov 15:10 UTC chat-taniakross: Henkjan: "Zet de link naar de site erin met francis podcast in beeld en laat ze ook zien dat ze welkom zijn met welkom terug". Welkompagina in de stijl van de site op taniakross.media/blijf/<tok> (na ja: welkom terug, bevestiging, nieuwste aflevering live van de site, nu Francis Sling) en /blijf/<tok>?l=1 (kijklink: welkom terug, aflevering in beeld, ja-knop onder de video). Voorbeeld: /blijf/voorbeeld?l=1. De kijklink in de mail staat klaar maar uit tot Henkjans akkoord (kv tkmc:kijk, op=tkmc&kijk=1 op de beschermde host). Mailmind vervangt links nu langste eerst.
 - 25 nov 13:55 UTC chat-taniakross: Henkjan: "Verstuur". Mailmind-stroom tk-mailchimp aan (LIVE en aan=1); eerste mails in de uurronde van :23, 40 per dag, hooguit 7 per uur, 9 tot 21 uur NL. Elke link in de mail is nu een Clickmind-meetlink (taniakross.media/m/<code>, rewrite in simpele-site naar keuzehulp.best).
 
