@@ -43,4 +43,7 @@ ok(D.LEERPROMPT.includes('RANGORDE')&&D.LEERPROMPT.includes('WAARDE ALS ER NOG G
 ok(!(await D.zetDash(kv,{project:'curacao',waarde:{bedrag:0.5}})).ok,'waarde zonder waarom');ok((await D.zetDash(kv,{project:'curacao',waarde:{bedrag:0.5,per:'aanmelding',waarom:'proefschatting voor de test, lager dan de inkoopprijs'}})).ok,'waarde zet');
 await D.dashData(kv);let dw=await D.dashData(kv);const cw=dw.geld.perMunt[0].projecten.find(x=>x.id==='curacao');ok(cw.waarde===24&&cw.opbrengst===0&&dw.geld.perMunt[0].totaal.opbrengst===61.95,'waarde apart van opbrengst '+cw.waarde);
 ok(!dw.opvallend.some(o=>o.id==='curacao'&&/kosten/.test(o.tekst)),'waarde dekt kosten: niet opvallend');ok(D.dashHtml(dw).includes('geen omzet'),'waarde html');
+const tl=D.telLanden({dagen:[{dag:'2026-11-24',rijen:[{cc:'ve',s:3},{cc:'co',s:1},{s:2}]},{dag:'2026-11-25',rijen:[{cc:'ve',s:1},{cc:'cw',s:4},{cc:'nl',s:0}]}]});
+ok(tl.dag==='2026-11-25'&&tl.vandaag===5&&tl.totaal===11&&tl.landen[0].cc==='ve'&&tl.landen[0].totaal===4&&tl.landen.find(x=>x.cc==='cw').vandaag===4&&tl.landen.some(x=>x.cc==='??'),'landen tellen');ok(D.telLanden({})===null,'landen leeg');
+m.set('mm:dash:landen:curacao',Object.assign({t:Date.now()},tl));const dlnd=await D.dashData(kv);ok(D.dashTekst(dlnd,'curacao').includes('Venezuela: vandaag 1, totaal 4')&&D.dashHtml(dlnd).includes('Adressen per land'),'landen in tekst en pagina');
 console.log('klaar',h.length,d.projecten.length);
