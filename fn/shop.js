@@ -58,6 +58,7 @@ import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 const K_MAXLEV = 'hjdk:shop:maxlev'; // B4 (12 nov): hoogste levertijd in werkdagen voor de dagkeuze; ?maxlev=<dagen> op de beschermde host, 0 = geen grens
 import { demandRadar } from '../lib/demandradar.js';
+import * as KW from '../lib/kadolywin.js'; // 25 nov 2026: winactie voor PropellerAds-verkeer (mails verzamelen)
 const SHOP_UIT = false; // 27 okt: shop op kadoly.com; Henkjan: "Zet er 20 aan maar verander domeinnaam in kadoly.com" (ook propellerads-mcp lib/budget.ts SHOP_UIT)
 const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
 
@@ -648,7 +649,11 @@ async function land(req, res, url) {
     laterAf(whPage({ clickid, url: lurl, wuid, referrer: String(req.headers.referer || '').slice(0, 300), ua: String(ua).slice(0, 400), fbclid: whp && whp.fbclid, utm_source: whp && whp.utm_source, utm_medium: whp && whp.utm_medium, utm_campaign: whp && whp.utm_campaign })
       .then(st => kv.raw(['INCR', 'sh-d' + D8() + '-wh-page-' + (st === 200 ? 'ok' : 'fout')]).then(() => st === 200 ? null : kv.set('hjdk:whop:pagefout', String(st).slice(0, 200), { ex: 86400 })).catch(() => {})).catch(() => {})); } // 19 nov: paginaweergave voor Whop op de doel-URL (lib/whop.js whPage)
   if (!code && pakketSlug) { res.setHeader('cache-control', 'no-store'); res.setHeader('location', 'https://kadoly.com/pakket/' + pakketSlug + '?utm_source=' + encodeURIComponent(String(q.get('utm_source') || 'ad')) + '&utm_medium=paid&lang=' + taal); return res.status(302).end(); } // 24 nov: Meta keurde set-ads af omdat de controleur (zonder klik-id) de productpagina van één stuk zag; zonder klik-id gaat een set nu ook rechtstreeks naar het pakket
-  if (code) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt, taal, voorkant, bundel, pakket: pakketSlug, kassa: ttKassa && !bundel, epik: pinEpik, pinClass, bron: net === 'pi' ? { source: 'pinterest', medium: pinClass === 'earned' ? 'organic_social' : 'paid_social', campaign: camp || 'pinterest-test' } : undefined, wh: whp ? Object.assign({ pr: held && Number(held.p) > 0 ? Number(held.p) : undefined }, whp) : null });
+  // 25 nov 2026 (Henkjan: "ik wil mails verzamelen met prop ads . Dus zorg dat je CTA daar top is", keuze "Winactie"): PropellerAds landt niet meer
+  // in de winkel maar op de actiepagina (lib/kadolywin.js) met één veld en één knop; de regel van 28 okt (geen tussenpagina) gold de route naar de
+  // winkel, deze pagina is zelf het doel. Bots gaan nog steeds door direct() (die weert ze). Na de actie loopt de winkelroute via /api/shop/uit.
+  const winPa = net === 'pa' && !!code && !bot && KW.loopt();
+  if (code && !winPa) return await direct(req, res, { net, clickid, zone, cr, camp, pid, code, bot, vorm, extra, rt, taal, voorkant, bundel, pakket: pakketSlug, kassa: ttKassa && !bundel, epik: pinEpik, pinClass, bron: net === 'pi' ? { source: 'pinterest', medium: pinClass === 'earned' ? 'organic_social' : 'paid_social', campaign: camp || 'pinterest-test' } : undefined, wh: whp ? Object.assign({ pr: held && Number(held.p) > 0 ? Number(held.p) : undefined }, whp) : null });
   if (!bot) {
     let nieuw = true; if (code) { try { nieuw = !(await kv.get(K.rec(code))); if (nieuw) await kv.set(K.rec(code), { c: clickid, s: net, z: zone, a: cr, k: camp, p: pid, at: Date.now(), h: apparaat(req), arm: 'l' }, { ex: 7 * 86400 }); } catch (e) {} }
     if (nieuw) { const keys = ['sh-' + net + '-view', 'sh-d' + D8() + '-' + net + '-view', 'sh-u' + nlUur() + '-view', 'sh-p-' + pk(pid) + '-himp'].concat(meer.map(m => 'sh-p-' + pk(m.id) + '-imp'));
@@ -690,7 +695,29 @@ var iv=setInterval(function(){if(document.visibilityState==='visible')s++;if(s>=
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="/api/shop/uit"]');if(!a||a.dataset.k)return;a.dataset.k=1;window.__kk=1;a.href=a.getAttribute('href')+'&h='+(mens?1:0)+'&ms='+(Date.now()-t0)},true)})();</script>
 </body></html>`;
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
+  if (winPa) { let setNaam = ''; if (bundel) { try { const bu = await kv.get('hjdk:shop:bundel:' + bundel); setNaam = (bu && (bu.naam || bu.titel)) || ''; } catch (e) {} }
+    return res.status(200).send(KW.winPagina({ held, set: setNaam, code, uitHref: uit(pid, 'win'), look: look(ACC, { dark: false }) })); }
   return res.status(200).send(html);
+}
+
+// Aanmelding op de actiepagina (POST /api/shop/win {c, email, website, ms}): via de motor van de lijst (dubbele bevestiging, belofte winactie),
+// Mailmind-blokkeerlijst eerst; telt per net, plek, advertentie en campagne (sh-<net>-mail) zodat de lus op aanmeldingen kan sturen.
+async function winAanmeld(req, res) {
+  res.setHeader('cache-control', 'no-store'); if (req.method !== 'POST') return res.status(405).json({ ok: false });
+  let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
+  const email = String(b.email || '').trim().toLowerCase(); if (!/^[^\s@<>()",;]+@[^\s@<>()",;]+\.[a-z]{2,}$/i.test(email) || email.length > 120) return res.status(400).json({ ok: false, fout: 'email' });
+  if (isBot(req.headers['user-agent'])) return res.status(200).json({ ok: true });
+  const code = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); let rec = null; if (code) { try { rec = await kv.get(K.rec(code)); } catch (e) {} } const net = rec ? rec.s : 'x';
+  try { const MM = await import('../lib/mailmind.js'); if (await MM.geblokkeerd(email)) return res.status(200).json({ ok: true }); } catch (e) {}
+  const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim();
+  const MT = await import('../lib/modalmotor.js');
+  const r = await MT.aanmelden('kadoly', { email, belofte: 'winactie', waar: 'win-' + net + (rec && rec.z ? '-z' + rec.z : ''), arm: 'win', site: 'go', ms: b.ms, website: b.website, mid: undefined,
+    toestemming: 'Winactie go.kadoly.com: e-mailadres voor de winactie en de mail van Kadoly met sieraden en cadeautips; bevestigd via de link in de mail; afmelden met één klik.' }, ip).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 80) }));
+  if (r.ok && r.al) { try { await KW.doeMee(kv, email); } catch (e) {} } // al bevestigd op de lijst: meteen in de pot van deze week
+  if (r.ok && rec && !rec.ml) { rec.ml = Date.now(); const keys = ['sh-' + net + '-mail', 'sh-d' + D8() + '-' + net + '-mail']; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-mail'); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-mail'); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-mail');
+    await inc(keys); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} }
+  if (!r.ok) { try { await inc(['sh-win-fout', 'sh-win-fout-' + String(r.fout || 'x').replace(/[^a-z]/g, '').slice(0, 12)]); } catch (e) {} }
+  return res.status(r.ok ? 200 : r.fout === 'druk' ? 429 : 400).json({ ok: !!r.ok, fout: r.ok ? undefined : r.fout });
 }
 
 // ---------------- cadeau-keuzehulpen (keuzehulp.best/cadeau/<gids>) ----------------
@@ -1074,6 +1101,14 @@ export default async function handler(req, res) {
     if (op === 'rss') return await shopRss(req, res, LAND() + '/api/shop/rss');
     if (op === 'land') return await land(req, res, url);
     if (op === 'uit') return await uitgang(req, res, url);
+    if (op === 'win') return await winAanmeld(req, res);
+    if (op === 'winvoorwaarden') { res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 's-maxage=3600'); return res.status(200).send(KW.voorwaardenPagina()); }
+    if (op === 'winstand' || op === 'winloting') { // stand en trekking van de winactie, alleen via de beschermde vercel.app-host
+      const h = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(h)) return res.status(404).json({ ok: false });
+      res.setHeader('cache-control', 'no-store'); const dag = /^\d{4}-\d{2}-\d{2}$/.test(String(url.searchParams.get('dag') || '')) ? url.searchParams.get('dag') : KW.trekking();
+      if (op === 'winloting') return res.status(200).json(await KW.loting(kv, dag, { opnieuw: url.searchParams.get('opnieuw') === '1' }));
+      const d8 = D8(); const tel = async k => Number(await kv.get('c:' + k).catch(() => 0)) || 0;
+      return res.status(200).json({ ok: true, trekking: dag, inDePot: await KW.potGrootte(kv, dag), paAanmeldingenTotaal: await tel('sh-pa-mail'), paAanmeldingenVandaag: await tel('sh-d' + d8 + '-pa-mail'), paBezoekVandaag: await tel('sh-d' + d8 + '-pa-view'), fouten: await tel('sh-win-fout') }); }
     if (op === 'b') return await baken(req, res);
     if (op === 'hb') return await hulpBaken(req, res);
     if (op === 'hulp') return await hulp(req, res, url);
