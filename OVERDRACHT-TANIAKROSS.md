@@ -56,6 +56,7 @@ Bijgewerkt 24 nov 2026 11:30 UTC: de pauze tot maandag 20:00 is voorbij. Campagn
   - Videovenster voor betaald verkeer (bron=betaald&venster=1): armen g1, g2, g3, p1; vensterversie pv, pv2, pv3 wordt als moment geteld.
 - **Welkomstmail** (stuurWelkom in a=aan, gaat meteen bij elke aanmelding): houdt zich aan de belofte uit het venster (BELOOFD g1 = barcelona, g3 = aflevering). Varianten w1 tot w4 (lijst), b1/b2 (Barcelona), a1/a2 (aflevering). Elke link loopt via Clickmind-wissel tk-mail naar taniakross.media/api/lijst?a=ga (Barcelona-pagina met cm.js, of /podcast). Stand 20 nov: w1 2, w3 2, w2 1, w4 1, a2 1, b2 1 verstuurd; 0 kliks.
 - **Open fout:** de Barcelona-pagina (a=ga&d=barcelona) gebruikt een youtube-nocookie-embed (video Y420kVQ45GA) die bij sommige bezoekers om inloggen vraagt. Omzetten naar de gewone youtube.com-embed.
+- **Ochtendverslag (api/rapport.js) toont sinds 25 nov ook de e-mailadressen:** nieuwe adressen van gisteren (Curaçao-dag) met land en herkomst, totaal in de lijst en het aantal erbij in de 7 dagen daarvoor. Gebouwd in api/_logboek.js (recent() en mailBlok(), alleen door rapport.js gebruikt), omdat rapport.js adressen bevat en niet inline uitgerold kan worden. Adressen staan alleen in die mail, nergens op de site.
 - Stand 20 nov 15:12 UTC: 20 leden. Betaald verkeer: venster pv 4.418 getoond / 5 aan, pv3 1.782 / 4, pv2 1.758 / 1; cadeau g1 23 / 1, g2 30 / 1, g3 25 / 0, p1 35 / 0. Gewone modal: m1 20 / 2, p3 20 / 2, t1 14 / 1 (3 ja).
 
 ## 6. Wekelijkse podcastmail (fn/nieuwsbrief.js)
@@ -87,6 +88,7 @@ Bijgewerkt 24 nov 2026 11:30 UTC: de pauze tot maandag 20:00 is voorbij. Campagn
   4. Advertenties: met 300 of meer kliks en minder dan de helft van de gemiddelde conversie van zijn campagne gaat uit; elke dag een nieuwe kopie van BEWEZEN met de beste advertenties plus 2 nieuwe (kopie_met_verse_creatives, knop hoogstens 15 tekens, dan witte lijst zetten, bod zetten, starten), de oude BEWEZEN uit zodra de nieuwe loopt.
   5. Bod: BEWEZEN omhoog met $0,01 (hoogstens $0,08) alleen als de kosten per adres daar onder $0,05 blijven en hij minder dan $5 per dag uitgeeft; nooit boven $0,10 zonder Henkjan. Budget blijft $10 per dag.
   6. Rapport, hooguit 6 regels: adressen gisteren per campagne, kosten per adres, leden totaal, wat er veranderde. Werklog met wie=chat-taniakross.
+- **Stand 25 nov (dagronde, Henkjan: "optimaliseer en vernieuw campagen met geleerde"):** BEWEZEN 12183102 gaf 12 adressen voor ongeveer $0,057 per adres, maar won maar 0,2% van de veilingen (leverde te weinig), dus **bod $0,05 naar $0,06**. Witte lijst nu 44 zones (12219015 eraf, 11196806 erbij). Advertenties 27810196 en 27810200 uit. VERKENNER 12168319: zone 12300292 geblokkeerd; zonder de bewezen zones 1 adres voor $0,28. **Nieuwe dagkopie 12187841** met de 6 beste en 2 nieuwe advertenties, zelfde 44 zones, bod $0,06, $10 per dag, $50 totaal, bij moderatie ingediend; de oude BEWEZEN gaat uit zodra 12187841 loopt. Lijst van 51 naar 63 leden.
 - Advertentiebeelden op maat: https://hjdk-api-henq.vercel.app/api/advbeeld?u=<beeld>&t=icon|pa|mg.
 - Volledige werking van tk-podcast en tk-mail staat ook in lib/werking.js (regel taniakross.media podcast).
 
@@ -140,6 +142,8 @@ Henkjan vroeg 20 nov: "Check in mn mail naar adressen van tania ooit uit mailchi
 10. Tania's persoonlijke noot in het dossier, daarna dossier linken, advertentie erheen, ZICHT-proef (12).
 
 ## Logboek (nieuwste boven)
+
+- 25 nov 11:40 UTC chat-taniakross: ochtendverslag krijgt blok E-mailadressen (nieuw gisteren met land en herkomst, totaal, 7 dagen) via api/_logboek.js, uitrol dpl_Tid8NwQqSRF2HjhjdLooKZZ25wJW. Campagnes: BEWEZEN 12183102 bod $0,06 en 44 zones, 2 advertenties uit, VERKENNER zone 12300292 geblokkeerd, nieuwe dagkopie 12187841 bij moderatie.
 
 - 24 nov 13:38 UTC chat-taniakross: fout in toegankelijke weergave hersteld (vakgebieden Podcast, Radio, Concerten enz. stonden paginabreed met grote witruimte; nu een lijst in de kolom), streep onder hele gastblokken weg, kop op telefoon netter. Alle paginasoorten nagelopen. Uitrol dpl_HJ7Tn2BWHze4j5zn1qr3HG3HLVRk.
 
