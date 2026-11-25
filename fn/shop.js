@@ -199,7 +199,8 @@ async function verkoopWacht(alleenLezen = false, dagen = 3) {
   }
   let log = []; try { log = ((await kv.raw(['LRANGE', 'hjdk:verkoop:log', '0', '19'])) || []).map(x => { try { return typeof x === 'string' ? JSON.parse(x) : x; } catch (e) { return null; } }).filter(Boolean); } catch (e) {}
   const onbekend = lijst.filter(v => v.bron === 'onbekend').length;
-  return { ok: !feedFout, at: new Date().toISOString(), dagen, feedFout, betaald: lijst.length, nieuwGemeld: nieuw, onbekend, perBron: perBron(lijst), lijst, gemeld: log };
+  let clickmind = {}; try { const h = (await kv.raw(['HGETALL', 'cmv:tel'])) || []; for (let i = 0; i < h.length; i += 2) clickmind[h[i]] = Number(h[i + 1]) || 0; } catch (e) {}
+  return { ok: !feedFout, at: new Date().toISOString(), dagen, feedFout, betaald: lijst.length, nieuwGemeld: nieuw, onbekend, perBron: perBron(lijst), clickmindBezoeken: clickmind, lijst, gemeld: log };
 }
 async function haalFeed() {
   // datapagina van de shop (briefing bovenaan Babita's pagina): inkoop per product en de bestellingen met kenmerk
