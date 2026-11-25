@@ -697,7 +697,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 </body></html>`;
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
   if (winPa) { let setNaam = '', bedrag = 0; if (bundel) { try { const bu = await kv.get('hjdk:shop:bundel:' + bundel); setNaam = (bu && (bu.naam || bu.titel)) || ''; bedrag = (bu && bu.totaal) || 0; } catch (e) {} }
-    const keus = await KW.kiesKeus(kv, code, { a: cr, z: zone, k: camp, h: apparaat(req) }); // lerend op elke variabele: stand per factor per klik, leermoment elke 50 bezoeken
+    const keus = await KW.kiesKeus(kv, code, { a: cr, z: zone, k: camp, h: (u => /iPhone|iPad/.test(u) ? 'ios' : /Android/.test(u) ? 'android' : 'desktop')(String(req.headers['user-agent'] || '')) }); // lerend op elke variabele: stand per factor per klik, leermoment elke 50 bezoeken
     return res.status(200).send(KW.winPagina({ held, set: setNaam, bedrag, code, uitHref: uit(pid, 'win'), look: look(ACC, { dark: false }), keus })); }
   return res.status(200).send(html);
 }
