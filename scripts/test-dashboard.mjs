@@ -48,3 +48,9 @@ ok(tl.dag==='2026-11-25'&&tl.vandaag===5&&tl.totaal===11&&tl.landen[0].cc==='ve'
 m.set('mm:dash:landen:curacao',Object.assign({t:Date.now()},tl));const dlnd=await D.dashData(kv);ok(D.dashTekst(dlnd,'curacao').includes('Venezuela: vandaag 1, totaal 4')&&D.dashHtml(dlnd).includes('Adressen per land'),'landen in tekst en pagina');
 ok((await D.zetDash(kv,{project:'nexyplatform',vast:[{post:'AWS (70%)',perMaand:365,bron:'test'}]})).ok,'vast zet');const dv=await D.dashData(kv);const nv=dv.geld.perMunt[0].projecten.find(x=>x.id==='nexyplatform');ok(nv&&nv.kosten===84,'vast per dag in kasboek '+(nv&&nv.kosten));ok(D.dashHtml(dv).includes('AWS (70%) $365,00 per maand')&&D.dashTekst(dv,'nexyplatform').includes('Vaste kosten per maand'),'vast zichtbaar');
 console.log('klaar',h.length,d.projecten.length);
+
+// skills-overzicht (25 nov): elke skill in de lijst staat in de repo en is op te vragen
+{ const D = await import('../lib/dashboard.js'); const l = D.skillsLijst();
+  if (l.length < 9 || l.some(k => !k.staat)) throw new Error('skill ontbreekt: ' + l.filter(k => !k.staat).map(k => k.naam).join(', '));
+  if (!D.skillTekst('clickmind') || D.skillTekst('bestaat-niet') !== null || D.skillTekst('../../package') !== null) throw new Error('skillTekst');
+  console.log('skills ok', l.length); }

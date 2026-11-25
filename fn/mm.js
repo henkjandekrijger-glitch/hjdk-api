@@ -338,6 +338,7 @@ export default async function handler(req, res) {
       const D = await import('../lib/dashboard.js'); res.setHeader('cache-control', 'no-store');
       if (req.method === 'POST') { const b = leesJson(req.body) || {}; if (b.leerprompt == null) return res.status(400).json({ ok: false, fout: 'leerprompt ontbreekt' }); const u = await D.zetLeerprompt(kv, b.leerprompt, 'Henkjan (dashboard)'); return res.status(u.ok ? 200 : 400).json(u); }
       if (q('leerprompt') === 'vorige') { const u = await D.vorigeLeerprompt(kv); if (!u.ok) return res.status(400).json(u); }
+      if (q('vorm') === 'skill') { const t = D.skillTekst(String(q('naam') || '')); res.setHeader('content-type', 'text/markdown; charset=utf-8'); return t ? res.status(200).send(t) : res.status(404).send('skill niet gevonden; overzicht: ' + D.SKILLS.map(s => s.naam).join(', ')); }
       if (q('vorm') === 'leerprompt') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send((await D.leesLeerprompt(kv)).tekst + '\n'); }
       if (q('zet')) { let b = null; try { b = JSON.parse(q('zet')); } catch (e) {} const u = b && typeof b === 'object' ? await D.zetDash(kv, b, q('wie') || '') : { ok: false, fout: 'zet=<JSON> met project en de velden die veranderen' }; return res.status(u.ok ? 200 : 400).json(u); }
       let melding = null; // archiveren en terugzetten met één tik op de pagina (Henkjan 25 nov)
