@@ -672,14 +672,14 @@ h2{font-size:1.25rem;margin:34px 0 12px}.pg{display:grid;grid-template-columns:1
 .pt{display:block;padding:10px 12px 0;font-size:1rem;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.pp{display:block;padding:4px 12px 12px;font-weight:750;font-size:1.0625rem}
 .alles{display:block;text-align:center;margin:18px 0 0;padding:14px;border:1.5px solid var(--ink);border-radius:12px;color:var(--ink);font-weight:700;text-decoration:none}
 footer{margin-top:34px}</style>${whPixelHtml()}<script src="/cm.js" data-site="shop" async></script></head><body>
-<header class="topbar"><div class="wrap"><a class="mark" href="${esc(uit(pid, 'logo'))}">Kadoly</a><span class="tb">Verzonden vanuit Europa</span></div></header>
+<header class="topbar"><div class="wrap"><a class="mark" href="${esc(uit(pid, 'logo'))}">Kadoly</a><span class="tb">Verzending zit in de prijs</span></div></header>
 <main class="wrap">
 <a href="${esc(uit(pid, 'h'))}"><img class="hero-img" src="${esc(held.img)}" alt="${esc(held.t)}" width="460" height="460"></a>
 ${held.b ? `<p class="brand">${esc(held.b)}</p>` : '<p class="brand">Kadoly</p>'}
 <h1>${esc(held.t)}</h1>
-<p class="prijs">${held.pf ? '<small>vanaf </small>' : ''}${esc(eur(held.p))}</p>
+<p class="prijs">${held.pf ? '<small>vanaf </small>' : ''}${esc(eur(Math.round((num(held.p) + (num(held.vk) || 0)) * 100) / 100))} <small>incl. verzending</small></p>
 <a class="koop" href="${esc(uit(pid, 'h'))}">Bekijk in de shop</a>
-<ul class="zeker"><li>14 dagen retourneren: niet tevreden, geld terug</li><li>Betalen met iDEAL, PayPal of creditcard</li><li>Verzonden vanuit Europa, met track &amp; trace</li>${held.lt ? `<li>Bezorgd in ${held.lt} ${held.lt === 1 ? 'werkdag' : 'werkdagen'}</li>` : ''}${held.vk === 0 ? '<li>Gratis verzending</li>' : held.vk ? `<li>Verzending ${esc(eur(held.vk))}</li>` : ''}</ul>
+<ul class="zeker"><li>14 dagen retourneren: niet tevreden, geld terug</li><li>Betalen met iDEAL, PayPal of creditcard</li><li>Verzonden vanuit Europa, met track &amp; trace</li>${held.lt ? `<li>Bezorgd in ${held.lt} ${held.lt === 1 ? 'werkdag' : 'werkdagen'}</li>` : ''}<li>Verzending zit in de prijs, geen extra kosten bij de kassa</li></ul>
 ${meer.length ? `<h2>Ook populair vandaag</h2><div class="pg">${meer.map(kaart).join('')}</div>` : ''}
 <a class="alles" href="${esc('/api/shop/uit?p=alles' + (code ? '&c=' + code : '') + '&pos=alles')}">Bekijk alle ${cat.items.length >= 100 ? cat.items.length + ' ' : ''}producten</a>
 </main>
