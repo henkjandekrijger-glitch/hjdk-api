@@ -35,6 +35,17 @@ Eén gedeelde, lerende lus in de cloud (Vercel-project hjdk-api, lib/postlus.js 
 
 Ophalen met web_fetch_vercel_url (curl naar deze domeinen wordt vanuit de cloud geblokkeerd).
 
+## Reply-CTA en antwoordmotor (Henkjan 25 nov 2026)
+
+"Zorg dat er altijd een reply CTA in zit . Zodat de AI kan antwoorden of ik ... Mag altijd antwoorden als 100% zeker met antwoord binnen de context zet er bij AI antwoord en als Henkjan reactie nodig is dan moeten ze nog een keer replyen."
+
+- Elke mail van een stroom met `antwoord: true` heeft de regel "Vraag of opmerking? Antwoord gewoon op deze mail. Je krijgt antwoord." (`REPLY_CTA`; staat hij er niet in, dan zet Mailmind hem erin).
+- Elke uurronde leest Mailmind de replies (ook buiten de verzenduren) en antwoordt in dezelfde draad vanuit Henkjans Gmail (`beantwoord` in lib/mailmind.js). De AI (goedkoopste model, lib/ai.js) gebruikt alleen `D.kennis(a)` van de stroom en geeft {nodig, zeker, antwoord}.
+- Zeker: het antwoord met "AI-antwoord" erboven. Niet zeker: geen inhoud, alleen dat de AI het niet zeker weet. Beide eindigen met "Wil je dat Henkjan zelf reageert? Antwoord dan nog een keer op deze mail."
+- Een tweede reply na een AI-antwoord krijgt geen AI meer: teller `henkjan`, lijst `mlm:<stroom>:henkjan` en een regel in het werklog. Henkjan antwoordt zelf in zijn Gmail.
+- Stop alleen bij een expliciete afmelding (afmelden, uitschrijven, geen mail meer); "nee" in een vraag is geen stop. Grenzen: 3 AI-antwoorden per adres per dag, 100 per stroom per dag.
+- Een nieuwe stroom die antwoorden moet krijgen: zet `antwoord: true`, `kennis: a => <tekst met alleen feiten>` en eventueel `bijStop: a => ...` in de stroom.
+
 ## Vóór je een mail aan Henkjan laat zien
 
 1. Lees de regels (op=regels&t=1). De volgorde is de score: regels met [vast] gelden altijd, de rest staat op bewezen effect.
