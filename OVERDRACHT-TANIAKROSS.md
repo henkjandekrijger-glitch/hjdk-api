@@ -117,7 +117,7 @@ Henkjan 25 nov: "vind lijst van mailchimp in mijn email en stuur per dag een aan
 - **Leren:** twee varianten tegelijk, Thompson op ja per verstuurde mail. Elke 20 verstuurde mails een leermoment: een variant met 20+ verstuurd die voor 80% de slechtste is gaat eruit, de volgende komt erbij; na 60 per variant zonder duidelijke winnaar valt de laagste toch af. Zes varianten klaar (o0 vraag plus podcast, o1 met Barcelona als cadeau, o2 "Lang niets van Tania Kross gehoord", o3 podcast voorop, o4 heel kort, o5 "We ruimen de lijst op" met Barcelona). Daarna uitdagers via op=mailmind&s=tk-mailchimp&uitdager={"o":..,"t":..}; de TK-dagronde leest de antwoorden (op=mailmind&s=tk-mailchimp&leer=1) en schrijft er een als de rij opraakt.
 - **Volume:** start 40 per dag; bounce onder 5% en stop onder 3% over 7 dagen (vanaf 40 mails): +10 per 2 dagen, tot 180; bounce 8% of stop 5%: halveren. Elke mail wordt gemeld in de POST-lus (project tk-mailchimp).
 - **Stand:** /api/post?op=mailmind&s=tk-mailchimp (per variant, per bak, mailbox, lekken), voorbeeld van de echte mail: /api/post?op=tkmc&voorbeeld=1 (beschermde host hjdk-api-henq.vercel.app).
-- **Live alleen op Henkjans "verstuur":** LIVE in lib/tkmc.js op true en /api/post?op=mailmind&s=tk-mailchimp&zet=1&aan=1.
+- **Live sinds 25 nov 13:55 UTC** (Henkjan: "Verstuur en zorg voor updates hier en in dashboard ."): LIVE in lib/tkmc.js op true en /api/post?op=mailmind&s=tk-mailchimp&zet=1&aan=1. Uitzetten: &zet=1&aan=0.
 
 ## 12. Muziek als medicijn, leesstand en dagartikelen (24 nov)
 
@@ -146,6 +146,8 @@ Henkjan 25 nov: "vind lijst van mailchimp in mijn email en stuur per dag een aan
 10. Tania's persoonlijke noot in het dossier, daarna dossier linken, advertentie erheen, ZICHT-proef (12).
 
 ## Logboek (nieuwste boven)
+
+- 25 nov 13:55 UTC chat-taniakross: Henkjan: "Verstuur". Mailmind-stroom tk-mailchimp aan (LIVE en aan=1); eerste mails in de uurronde van :23, 40 per dag, hooguit 7 per uur, 9 tot 21 uur NL. Elke link in de mail is nu een Clickmind-meetlink (taniakross.media/m/<code>, rewrite in simpele-site naar keuzehulp.best).
 
 - 25 nov 13:40 UTC chat-taniakross: op Henkjans "Ja ga naar 40 per dag . en verhoog dus": bod 12187841 van $0,01 (stond per ongeluk zo laag) naar $0,10, verkenner 12168319 van $0,03 naar $0,05. Uitzetten van de oude 12183102 werd door de veiligheidscontrole geweigerd; hij loopt nog. Dagronde nu als cloudtaak trig_01Dxs5zUJ4mzjJUDJHPsS4Z3 (08:17 Curaçao), los van computer en account. Doel en planning op het dashboard (project tk: 40 adressen per dag, op weg naar 1.000); Mailmind zet de ledenstand elk uur zelf op het dashboard.
 
