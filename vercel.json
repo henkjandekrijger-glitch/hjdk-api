@@ -2221,6 +2221,16 @@
       "destination": "/api/gids?op=pt&c=:c&n=:n"
     },
     {
+      "source": "/beeld/:f([a-z0-9-]+).:x(jpg|webp|avif)",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=beeld&f=:f&x=:x"
+    },
+    {
       "source": "/:slug([a-z0-9-]+)",
       "has": [
         {

@@ -14,6 +14,7 @@ import * as tvreken from '../lib/tvrekenhulp.js';
 import * as openaifeed from '../lib/openaifeed.js';
 import * as ontdekking from '../lib/gids-ontdekking.js';
 import * as binnenkort from '../lib/binnenkort.js';
+import * as gidsbeeld from '../lib/gidsbeeld.js';
 const catalog=(fs.existsSync('catalog-audit.json') ? JSON.parse(fs.readFileSync('catalog-audit.json','utf8')) : ['Witte Phalaenopsis Orchidee', 'Bloempot wit', 'Tafellamp oplaadbaar', 'Bamboe sokken', 'Kaars rood', '3D houten puzzel', 'Vaas glas', 'Serviesset beige', ...Array.from({length:25},(_,i)=>'Glazen mok '+i)].map((t,i)=>({id:'oc_'+i,t,vr:true}))).map(i=>({...i,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0}));
 for(const g of Object.values(gidsen.GIDSEN)) for(const k of g.keuze) if(k.pid&&!catalog.some(i=>i.id===k.pid)) catalog.push({id:k.pid,t:k.naam,vr:true,p:20,vk:4.95,c:'wonen',s:'decoratie',lt:3,l:Date.now(),img:'',sc:0});
 for(let k=0;k<140;k++)catalog.push({id:'oc_extra'+k,t:(k%2?'Mok':'Dinerbord')+' test '+k,vr:true,p:k+1,vk:3,c:'keuken',s:'servies',lt:3,l:Date.now()});
@@ -32,6 +33,7 @@ const stubs={'../lib/kadoly-redactie.js':redactie,'../lib/kzux.js':{kzuxBlok:()=
 stubs['../lib/tvrekenhulp.js']=tvreken;
 stubs['../lib/gids-ontdekking.js']=ontdekking;
 stubs['../lib/binnenkort.js']=binnenkort;
+stubs['../lib/gidsbeeld.js']=gidsbeeld;
 // Groepscadeaus horen niet bij deze SSR-proef; geen opslag, mail of betaalverkeer.
 stubs['../lib/groepscadeau.js']={gcLijst:()=>[],gcLlms:()=>'',LIVE:new Set(),gcOp:()=>{throw Error('Geen groepscadeau-acties in gidstest');}};
 const imports=[];
@@ -39,6 +41,8 @@ const module=new vm.SourceTextModule(code,{context,importModuleDynamically:async
 async function render(query,host='gids.kadoly.com',opt={}){let body='',status=200;const headers={};const res={setHeader:(k,v)=>headers[k]=v,status(n){status=n;return this;},send(x){body=x;return this;},json(x){body=x;return this;},end(){return this;}};await module.namespace.default({url:'/api/gids?'+query,method:'GET',headers:{host,'user-agent':opt.ua||'render-test-bot'}},res);assert.equal(status,opt.status||200,typeof body==='string'?body.slice(0,200):JSON.stringify(body));if(typeof body==='string'&&body.includes('<html')){assert.equal((body.match(/<h1[ >]/g)||[]).length,1);for(const match of body.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g))JSON.parse(match[1]);}return {body,headers};}
 for(const p of bewijs.ONDERZOEK){const {body}=await render('slug=onderzoek-'+p.id);assert.ok(body.includes('Wat bewijst dit niet?'));assert.ok(body.includes('Bronnen en belangen'));assert.ok(body.includes('rel="canonical" href="https://gids.kadoly.com/onderzoek-'+p.id+'"'));}
 assert.ok((await render('slug=onderzoek-en-bronnen')).body.includes('geen onafhankelijke testorganisatie'));
+// 25 nov 2026: elke gids, binnenkort-pagina en artikel heeft een hoofdbeeld op een eigen adres, met maat, alt, og:image en ImageObject
+for (const sl of ['wollen-deken','sterrenkaart','foto-op-canvas']) { const b=(await render('slug='+sl)).body; assert.ok(b.includes('<figure class="gb"') && b.includes('/beeld/'+sl+'.avif') && /<img src="\/beeld\/[a-z0-9-]+\.jpg\?v=[^"]+"[^>]*width="1200" height="675" alt="[^"]{8,}"/.test(b), 'hoofdbeeld '+sl); assert.ok(b.includes('og:image" content="https://gids.kadoly.com/beeld/'+sl+'.jpg') && b.includes('"ImageObject"'), 'og en ImageObject '+sl); }
 const all=(await render('slug=alle-producten')).body;assert.equal((all.match(/<tr id="product-/g)||[]).length,catalog.filter(i=>i.vr!==false).length); assert.ok(all.includes('/alle-producten'));
 const home=(await render('')).body;assert.ok(home.includes('/onderzoek-en-bronnen')); assert.ok(!home.includes('5% bij 2 producten')); assert.ok(!home.includes('eerste bestelling wordt gratis'));
 // 25 nov 2026: lerende modal op elke gidspagina (cm.js kadolygids, async) en de chat-shim window.cwVraag; nooit twee cm.js-regels
