@@ -289,7 +289,7 @@ export default async function handler(req, res) {
     }
     if (op === 'push') { const b = leesBody(req); return res.status(200).json(await W.pushIn({ sid: b.sid, tok: b.tok, sub: b.sub })); }
     if (op === 'google') { if (req.method !== 'POST') return res.status(405).end(); const b = leesBody(req) || {}; return res.status(200).json(await W.googleIn({ sid: b.sid, tok: b.tok, cred: b.cred, ip: String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() })); }
-    if (op === 'pushinhoud') { res.setHeader('cache-control', 'no-store'); return res.status(200).json(await W.pushInhoud(q('e'))); }
+    if (op === 'pushinhoud') { res.setHeader('cache-control', 'no-store'); const dv = await import('../lib/wam-volgstroom.js').then(V => V.pushInhoudVolg(q('e'))).catch(() => null); return res.status(200).json(dv || await W.pushInhoud(q('e'))); } // eerst dossiervolgers (wmn:pv), dan de chat
     if (op === 'sw') { res.setHeader('content-type', 'application/javascript; charset=utf-8'); res.setHeader('cache-control', 'no-cache'); res.setHeader('service-worker-allowed', '/'); return res.status(200).send(PUSH.SW); }
     if (op === 'fototest' && beschermd(host)) { const sh = (await import('sharp')).default; const buf = await sh({ create: { width: 320, height: 240, channels: 3, background: { r: 43, g: 71, b: 196 } } }).jpeg({ quality: 80 }).toBuffer(); return res.status(200).json(await W.fotoWeb({ sid: q('sid'), tok: q('tok'), data: buf.toString('base64'), type: 'image/jpeg' })); }
     if (op === 'fotoup') { const b = leesBody(req); return res.status(200).json(await W.fotoWeb({ sid: b.sid, tok: b.tok, data: b.data, type: b.type })); }

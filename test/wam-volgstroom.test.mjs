@@ -32,3 +32,10 @@ test('Volg-knop staat in het eerste scherm (direct onder de samenvatting) en ope
   for (const id of ['blendle', 'anp', 'hosters']) { const h = await pagina('dossier/' + id, true); assert.ok(h.indexOf('class="deel"') > 0 && h.indexOf('class="deel"') < h.indexOf('class="dossier-status"'), id); }
   assert.ok(VOLG_JS.includes("waar:'knop'") && VOLG_JS.includes('volg-hier'));
 });
+
+test('volgen met één tik: browsermelding eerst, e-mail als terugval; pushVolg weigert een ongeldig meldadres', async () => {
+  const { VOLG_JS } = await import('../lib/wam-aanmelden.js'), V = await import('../lib/wam-volgstroom.js');
+  assert.ok(VOLG_JS.includes('requestPermission') && VOLG_JS.includes('op=dpushvolg') && VOLG_JS.includes('geenPush'));
+  const r = await V.pushVolg({ sub: { endpoint: 'https://evil.example/x' }, scope: 'blendle' }, () => false);
+  assert.equal(r.ok, false);
+});
