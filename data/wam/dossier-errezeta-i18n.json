@@ -198,7 +198,13 @@
       "ookOp": "Also on we are many now",
       "watIs": "we are many now bundles complaints about companies, so that hundreds or thousands of individual complaints get one voice.",
       "wis": "Keep this link to delete your response later."
-    }
+    },
+    "bronnenNaam": [
+      "Companies House: Errezeta Publishing Ltd (13678815)",
+      "Companies House: filing history",
+      "Companies House: registered director",
+      "Companies House: appointments of Fabiana D’Amiano"
+    ]
   },
   "de": {
     "taalNaam": "Deutsch",
@@ -398,7 +404,13 @@
       "ookOp": "Auch auf we are many now",
       "watIs": "we are many now bündelt Beschwerden über Unternehmen, damit Hunderte oder Tausende einzelne Beschwerden eine Stimme bekommen.",
       "wis": "Bewahren Sie diesen Link auf, um Ihre Reaktion später zu löschen."
-    }
+    },
+    "bronnenNaam": [
+      "Companies House: Errezeta Publishing Ltd (13678815)",
+      "Companies House: Einreichungshistorie",
+      "Companies House: eingetragene Direktorin",
+      "Companies House: Funktionen von Fabiana D’Amiano"
+    ]
   },
   "it": {
     "taalNaam": "Italiano",
@@ -598,6 +610,12 @@
       "ookOp": "Anche su we are many now",
       "watIs": "we are many now raccoglie i reclami sulle aziende, così centinaia o migliaia di reclami singoli hanno una sola voce.",
       "wis": "Conserva questo link per cancellare la tua risposta in seguito."
-    }
+    },
+    "bronnenNaam": [
+      "Companies House: Errezeta Publishing Ltd (13678815)",
+      "Companies House: storico dei depositi",
+      "Companies House: amministratrice registrata",
+      "Companies House: incarichi di Fabiana D’Amiano"
+    ]
   }
 }
