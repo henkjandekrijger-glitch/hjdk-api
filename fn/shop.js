@@ -713,6 +713,7 @@ async function winAanmeld(req, res) {
   const MT = await import('../lib/modalmotor.js');
   const r = await MT.aanmelden('kadoly', { email, belofte: 'winactie', waar: 'win-' + net + (rec && rec.z ? '-z' + rec.z : ''), arm: 'win', site: 'go', ms: b.ms, website: b.website, mid: undefined,
     toestemming: 'Winactie go.kadoly.com: e-mailadres voor de winactie en de mail van Kadoly met sieraden en cadeautips; bevestigd via de link in de mail; afmelden met één klik.' }, ip).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 80) }));
+  if (r.ok && rec) { try { await kv.raw(['HSET', 'kd:win:keus', email, String(rec.bu || rec.p || '')]); } catch (e) {} } // wat de winnaar krijgt: het product of de set van zijn actiepagina
   if (r.ok && r.al) { try { await KW.doeMee(kv, email); } catch (e) {} } // al bevestigd op de lijst: meteen in de pot van deze week
   if (r.ok && rec && !rec.ml) { rec.ml = Date.now(); const keys = ['sh-' + net + '-mail', 'sh-d' + D8() + '-' + net + '-mail']; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-mail'); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-mail'); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-mail');
     await inc(keys); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} }
