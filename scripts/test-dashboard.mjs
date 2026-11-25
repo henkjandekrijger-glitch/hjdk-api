@@ -18,7 +18,7 @@ const h=D.dashHtml(d);ok(h.includes('&lt;b&gt;')&&!h.includes('<b>\''),'escape')
 const t=D.dashTekst(d,'kdp');ok(t.includes('Voortgang: 61,95 van 200'),'tekst');
 ok((await D.zetDash(kv,{project:'wam',archief:true})).ok,'archiveer');
 d=await D.dashData(kv);ok(!d.projecten.some(p=>p.id==='wam')&&d.archief.some(a=>a.id==='wam'),'archief weg uit overzicht');ok(!d.agenda.some(a=>a.id==='wam'),'archief weg uit planning');
-const h2=D.dashHtml(d,{tekst:'x',terug:'wam'});ok(h2.includes('?terug=wam')&&h2.includes('<h2>Archief</h2>')&&!h2.includes('id="wam"'),'archief html');ok(h2.includes('?archiveer=kdp'),'archiveerknop');ok(!D.dashTekst(d).includes('## We Are Many'),'archief tekst');
+const h2=D.dashHtml(d,{tekst:'x',terug:'wam'});ok(h2.includes('?terug=wam')&&h2.includes('<b>Archief</b>')&&!h2.includes('id="wam"'),'archief html');ok(h2.includes('?archiveer=kdp'),'archiveerknop');ok(!D.dashTekst(d).includes('## We Are Many'),'archief tekst');
 ok((await D.zetDash(kv,{project:'wam',archief:false})).ok,'terug');d=await D.dashData(kv);ok(d.projecten.some(p=>p.id==='wam')&&!d.archief.length,'terug in overzicht');
 const c=d.projecten.find(p=>p.id==='clickmind');ok(c&&c.nu===2.3&&c.pct===46,'clickmind live '+(c&&c.nu));ok(c.advies&&!c.doel,'advies geen doel');
 const kk=d.projecten.find(p=>p.id==='kdp');ok(kk.verder.startsWith('https://claude.ai/code/new?q=')&&kk.verder.includes('&repo=henkjandekrijger-glitch%2Fhjdk-api')&&kk.verder.length<2500,'verder kdp '+kk.verder.length);ok(decodeURIComponent(kk.verder).includes('project=kdp'),'verder inhoud');
