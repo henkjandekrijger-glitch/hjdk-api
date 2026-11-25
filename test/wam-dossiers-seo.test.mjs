@@ -43,7 +43,7 @@ test('concrete tijdlijnen en bronstatus staan in HTML; privégegevens niet', () 
 test('dossier-Article en FAQ volgen zichtbare titels, data en antwoorden', () => {
   for (const d of DOSSIERLIJST) {
     const h = pagina('dossier/' + d.id, true), graph = grafiek(h), a = graph.find(x => x['@type'] === 'Article'), faq = graph.find(x => x['@type'] === 'FAQPage');
-    assert.equal(a.headline, d.titel); assert.equal(a.datePublished, '2026-11-24'); assert.equal(a.dateModified, '2026-11-24');
+    assert.equal(a.headline, d.titel); assert.equal(a.datePublished, d.publicatie || '2026-11-24'); assert.equal(a.dateModified, d.bijgewerkt || '2026-11-24');
     assert.equal(a.author['@type'], 'Organization');
     assert.equal(faq.mainEntity.length, d.vragen.length);
     for (const q of faq.mainEntity) assert.ok(h.includes(q.name) && h.includes(q.acceptedAnswer.text));
@@ -113,3 +113,4 @@ test('Errezeta staat er in het Engels, Duits en Italiaans met hreflang en een ei
   assert.ok(nl.includes('hreflang="it"') && nl.includes('taalregel') && nl.includes('Wat Google en AI-assistenten nu zeggen'));
   assert.ok(nl.includes('RZ Business Ltd'));
 });
+

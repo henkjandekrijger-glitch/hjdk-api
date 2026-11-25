@@ -1,0 +1,644 @@
+{
+  "id": "anp",
+  "naam": "ANP",
+  "soort": "eigen dossier",
+  "onderwerp": "Fotoclaim en kosten",
+  "uitgelicht": true,
+  "titel": "ANP Fair Licensing: fotoclaims, kosten en rechtspraak",
+  "seoTitel": "ANP Fair Licensing: fotoclaims, kosten en uitspraken | WAM",
+  "kaartTitel": "ANP: €391,29 voor een fotoclaim, naast acht uitspraken",
+  "kort": "Een brief van ANP Fair Licensing is een claim, nog geen rechterlijk oordeel. Controleer de foto, het gebruik, de rechten en iedere kostenpost. Dit dossier zet een eigen claim van €391,29 naast acht uitspraken en openbare ontwikkelingen tot november 2026.",
+  "laatsteStuk": "2025-04-03",
+  "status": "Eigen claim: uitkomst onbekend · openbaar onderzoek bijgewerkt 25 november 2026",
+  "bewijsStatus": "Eigen claimstukken ingezien op 24 november 2026; acht openbare vonnissen nagelezen op 25 november",
+  "bedragen": [
+    {
+      "label": "Oorspronkelijk eigen voorstel",
+      "waarde": "€391,29"
+    },
+    {
+      "label": "Nagelezen uitspraken",
+      "waarde": "8"
+    }
+  ],
+  "kosten": [
+    {
+      "post": "Gederfde licentievergoeding voor gebruik tot één jaar",
+      "bedrag": 105
+    },
+    {
+      "post": "Verhoging wegens ontnemen beschikkingsrecht",
+      "bedrag": 26.25
+    },
+    {
+      "post": "Subtotaal vergoeding ANP",
+      "bedrag": 131.25,
+      "subtotaal": true
+    },
+    {
+      "post": "Opsporing, onderzoek en documentatie",
+      "bedrag": 209
+    },
+    {
+      "post": "Buitengerechtelijke procedurekosten",
+      "bedrag": 51.04
+    },
+    {
+      "post": "Subtotaal diensten Visual Rights Group",
+      "bedrag": 260.04,
+      "subtotaal": true
+    },
+    {
+      "post": "Totaal oorspronkelijke voorstel",
+      "bedrag": 391.29,
+      "totaal": true
+    }
+  ],
+  "feiten": [
+    "De redactie heeft de oorspronkelijke brief van 25 september 2024 en de kostenopbouw in bijlage 1 ingezien. Het gevraagde totaal van €391,29 bestaat uit €131,25 vergoeding voor ANP en €260,04 voor diensten van Visual Rights Group.",
+    "De €131,25 voor ANP bestaat volgens de bijlage uit €105 licentievergoeding en €26,25 verhoging. De €260,04 voor Visual Rights Group bestaat uit €209 voor opsporing, onderzoek en documentatie en €51,04 buitengerechtelijke procedurekosten.",
+    "In de herinnering van 7 februari 2025 en de ingebrekestelling van 3 april 2025 wordt telkens €22,50 extra genoemd. Deze berichten bewijzen dat die kosten worden gevraagd; ze bewijzen niet dat iedere post juridisch verschuldigd is.",
+    "Deze kostenopbouw hoort bij deze specifieke claim. We maken er geen algemeen tarief voor alle ANP-fotoclaims van. Betaling, een schikking of een rechterlijk oordeel over deze zaak is in de nagelezen stukken niet vastgesteld."
+  ],
+  "tijdlijn": [
+    {
+      "datum": "2024-09-25",
+      "kop": "Oorspronkelijk schikkingsvoorstel",
+      "tekst": "ANP en Visual Rights Group sturen een claimbrief over fotogebruik. Bijlage 1 noemt het totaal van €391,29 en de afzonderlijke posten.",
+      "bron": "Oorspronkelijke brief en bijlage 1, ingezien"
+    },
+    {
+      "datum": "2025-02-07",
+      "kop": "Herinnering met extra kosten",
+      "tekst": "De herinnering verwijst naar het eerdere voorstel en noemt €22,50 extra voor de herinnering.",
+      "bron": "E-mail van ANP Legal Department en herinnering, ingezien"
+    },
+    {
+      "datum": "2025-04-03",
+      "kop": "Ingebrekestelling met extra kosten",
+      "tekst": "Het bericht vraagt nogmaals betaling en noemt nogmaals €22,50. Een definitieve uitkomst volgt niet uit dit bericht.",
+      "bron": "E-mail van ANP Legal Department, ingezien"
+    },
+    {
+      "datum": "2026-11-24",
+      "kop": "Kostenopbouw voor WAM gecontroleerd",
+      "tekst": "De redactie vergelijkt de oorspronkelijke kostenbijlage met de genoemde herinneringen. De datum van deze controle is geen nieuwe claimdatum.",
+      "bron": "Redactionele controle"
+    },
+    {
+      "datum": "2026-11-25",
+      "kop": "Dossier uitgebreid met openbaar onderzoek",
+      "tekst": "Acht volledige vonnissen, beide ANP-reacties en berichtgeving tot november 2026 toegevoegd. Dit is de onderzoeksdatum; geen nieuwe gebeurtenis in de eigen claim.",
+      "bron": "Redactionele broncontrole"
+    }
+  ],
+  "bronverantwoording": "De eigen claimbrief, bijlage 1 en berichten tot 3 april 2025 zijn door WAM beoordeeld op 24 november 2026. Het openbare onderzoek is op 25 november 2026 uitgebreid met acht volledige vonnissen uit de officiële Rechtspraak-datadienst, ANP-reacties, publieksvoorlichting en gedateerde berichtgeving. De laatste datum van het eigen claimstuk blijft 3 april 2025. Mediaberichten over andere ontvangers zijn als zodanig aangeduid; hun bankafschriften en besloten dossiers zijn niet door WAM gecontroleerd. De selectie van vonnissen is geen volledige of representatieve telling van alle ANP-zaken. Hoger beroep en onherroepelijkheid zijn niet voor iedere zaak vastgesteld. Originele privébrieven, persoonsgegevens en toegangscodes worden niet gepubliceerd.",
+  "reactieBedrijf": "ANP verdedigt op 17 april 2026 de bescherming van fotografen en beschrijft tekortkomingen in de oude samenwerking. Op 25 augustus bevestigt de directeur herbeoordeling van betwiste historische beelden. Beide reacties zijn algemene bedrijfsstandpunten. Een specifieke reactie op het eigen WAM-dossier is niet opgenomen.",
+  "volgendeStap": "In de eigen zaak moeten foto, publicatieduur, mogelijke toestemming, bevoegdheid en onderbouwing van de kosten nog inhoudelijk naast elkaar worden gelegd. Betaling, schikking of vonnis is niet bevestigd. Voor het algemene onderzoek ontbreken een gecontroleerde totale aantallentelling, een actuele uniforme tarieflijst en een onafhankelijke uitsplitsing van claimopbrengsten. Nieuwe uitspraken of gedocumenteerde correcties kunnen worden toegevoegd na broncontrole.",
+  "bedrijven": [
+    "ANP"
+  ],
+  "bronnen": [
+    {
+      "naam": "ANP · eigen reactie op de handhaving, 17 april 2026",
+      "url": "https://www.villamedia.nl/artikel/ingezonden-anp-staat-voor-een-proportionele-redelijke-en-eerlijke-aanpak-van-onrechtmatig-gebruik-van-fotos",
+      "uitleg": "Bedrijfsstandpunt van algemeen directeur Martha Riemsma. Geen onafhankelijk gemeten slagingspercentage.",
+      "soort": "bedrijfsreactie",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "ANP Foto · officieel contact voor Fair Licensing",
+      "url": "https://www.anpfoto.nl/misc.pp?code=team",
+      "uitleg": "De eigen contactpagina verwijst ontvangers van Fair Licensing- en VRG-brieven naar +31 70 4141 123.",
+      "soort": "officiële bedrijfsinformatie",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "ANP Foto · wat mag je met een foto?",
+      "url": "https://www.anpfoto.nl/misc.pp?code=wat-mag-ik-met-een-foto",
+      "uitleg": "Eigen uitleg over omvang, kanaal, duur en context van licenties.",
+      "soort": "officiële bedrijfsinformatie",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "ANP Foto · algemene voorwaarden",
+      "url": "https://www.anpfoto.nl/misc.pp?code=algemene-voorwaarden-anp-foto",
+      "uitleg": "Huidige contractvoorwaarden; geen bewijs dat deze voorwaarden in een oudere zaak zijn overeengekomen.",
+      "soort": "contractvoorwaarden",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "KVK · auteursrecht op foto's voor je website",
+      "url": "https://www.kvk.nl/wetten-en-regels/auteursrecht-op-fotos-voor-je-website/",
+      "uitleg": "Praktische voorlichting voor ondernemers over toestemming, citaatrecht en embedden.",
+      "soort": "publieksvoorlichting",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "Stichting Auteursrechtbelangen · checklist toegestaan gebruik",
+      "url": "https://www.auteursrecht.nl/Auteursrechtgids/Checklist-toegestaan-gebruik",
+      "uitleg": "Voorlichting over beperkingen, bronvermelding en legaal bronmateriaal.",
+      "soort": "publieksvoorlichting",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "Stichting Auteursrechtbelangen · citeren",
+      "url": "https://www.auteursrecht.nl/Auteursrechtwijzer/Citeren-wat-is-toegestaan",
+      "uitleg": "Uitleg over de functionele verhouding tussen citaat en eigen tekst; versiering is geen citaat.",
+      "soort": "publieksvoorlichting",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "ANP · reactie over historische foto's, 25 augustus 2026",
+      "url": "https://www.villamedia.nl/artikel/martha-Riemsma-anp-foto-kijkt-naar-casussen-waar-het-beeldrecht-rondom-historische-fotos-nog-ter-discussie-staat",
+      "uitleg": "Bedrijfsreactie op het erfgoeddebat, met bevestiging dat het dossier Sportgeschiedenis is gesloten.",
+      "soort": "bedrijfsreactie",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "Jurryt van de Vooren · eigen relaas over historisch beeld",
+      "url": "https://www.villamedia.nl/artikel/opinie-de-begintijd-van-het-digitale-erfgoed-was-een-zooitje-en-daarvan-maakt-anp-foto-nu-een-verdienmodel",
+      "uitleg": "Opiniestuk van 20 augustus 2026, bijgewerkt 24 augustus; een eigen ervaring, geen vonnis.",
+      "soort": "ervaringsverslag",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "Feitenradar · ingetrokken voorstellen, 9 september 2026",
+      "url": "https://feitenradar.nl/2026/09/09/anp-trekt-na-veel-kritiek-meerdere-schikkingsvoorstellen-wegens-vermeende-auteursrechtinbreuk-in/",
+      "uitleg": "Journalistiek bericht over zes bij de redactie bekende dossiers. De onderliggende stukken zijn niet door WAM ingezien.",
+      "soort": "journalistiek bericht",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "Feitenradar · Stichting Stofwisselkracht, 4 november 2026",
+      "url": "https://feitenradar.nl/2026/11/04/anp-vindt-het-heel-lastig-om-de-menselijke-maat-te-vinden-stichting-stofwisselkracht-krijgt-een-blafbrief-van-22552-euro/",
+      "uitleg": "Bericht over een voorstel voor twee foto's en de latere intrekking; geen rechterlijke uitspraak.",
+      "soort": "journalistiek bericht",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "Feitenradar · lagere bedragen in bepaalde dossiers, 28 augustus 2026",
+      "url": "https://feitenradar.nl/2026/08/28/anp-verlaagt-kosten-voor-retroactieve-fotolicentie-na-kritiek-op-opslagen/",
+      "uitleg": "Bericht met voorbeelden van retroactieve licenties. Geen door WAM geverifieerde algemene tarieflijst.",
+      "soort": "journalistiek bericht",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "Kassa · onderzoek naar fotoclaims, 11 april 2026",
+      "url": "https://www.bnnvara.nl/kassa/artikelen/foto-van-internet-gebruikt-pas-op-voor-torenhoge-dubieuze-claims",
+      "uitleg": "Breder onderzoek naar de beeldrechtenmarkt. De Franse claimbedrijven in dit artikel zijn geen ANP.",
+      "soort": "journalistiek bericht",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "RPO · Martha Riemsma, algemeen directeur ANP",
+      "url": "https://www.stichtingrpo.nl/5-vragen-aan-martha-riemsma-directeur-bij-anp-en-voorzitter-van-bestuur-de-tegel/",
+      "uitleg": "Interview van 20 januari 2026 waarin de zakelijke functie wordt vermeld.",
+      "soort": "functiebron",
+      "geraadpleegd": "2026-11-25"
+    },
+    {
+      "naam": "Rechtbank Rotterdam · ECLI:NL:RBROT:2020:123",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBROT:2020:123",
+      "uitleg": "Vonnis van 10 januari 2020; volledige tekst gecontroleerd via de openbare Rechtspraak-datadienst.",
+      "soort": "rechterlijke uitspraak",
+      "geraadpleegd": "2026-11-25",
+      "tekstUrl": "https://data.rechtspraak.nl/uitspraken/content?ID=ECLI:NL:RBROT:2020:123"
+    },
+    {
+      "naam": "Rechtbank Midden-Nederland · ECLI:NL:RBMNE:2024:5788",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBMNE:2024:5788",
+      "uitleg": "Vonnis van 9 oktober 2024; volledige primaire tekst gelezen.",
+      "soort": "rechterlijke uitspraak",
+      "geraadpleegd": "2026-11-25",
+      "tekstUrl": "https://data.rechtspraak.nl/uitspraken/content?ID=ECLI:NL:RBMNE:2024:5788"
+    },
+    {
+      "naam": "Rechtbank Oost-Brabant · ECLI:NL:RBOBR:2025:8948",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBOBR:2025:8948",
+      "uitleg": "Vonnis van 28 augustus 2025; volledige primaire tekst gelezen.",
+      "soort": "rechterlijke uitspraak",
+      "geraadpleegd": "2026-11-25",
+      "tekstUrl": "https://data.rechtspraak.nl/uitspraken/content?ID=ECLI:NL:RBOBR:2025:8948"
+    },
+    {
+      "naam": "Rechtbank Oost-Brabant · ECLI:NL:RBOBR:2025:8151",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBOBR:2025:8151",
+      "uitleg": "Vonnis van 27 november 2025, gepubliceerd 3 februari 2026; volledige primaire tekst gelezen.",
+      "soort": "rechterlijke uitspraak",
+      "geraadpleegd": "2026-11-25",
+      "tekstUrl": "https://data.rechtspraak.nl/uitspraken/content?ID=ECLI:NL:RBOBR:2025:8151"
+    },
+    {
+      "naam": "Rechtbank Overijssel · ECLI:NL:RBOVE:2025:7694",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBOVE:2025:7694",
+      "uitleg": "Vonnis van 30 december 2025, gepubliceerd 8 januari 2026; volledige primaire tekst gelezen.",
+      "soort": "rechterlijke uitspraak",
+      "geraadpleegd": "2026-11-25",
+      "tekstUrl": "https://data.rechtspraak.nl/uitspraken/content?ID=ECLI:NL:RBOVE:2025:7694"
+    },
+    {
+      "naam": "Rechtbank Gelderland · ECLI:NL:RBGEL:2026:178",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBGEL:2026:178",
+      "uitleg": "Vonnis van 14 januari 2026; volledige primaire tekst gelezen.",
+      "soort": "rechterlijke uitspraak",
+      "geraadpleegd": "2026-11-25",
+      "tekstUrl": "https://data.rechtspraak.nl/uitspraken/content?ID=ECLI:NL:RBGEL:2026:178"
+    },
+    {
+      "naam": "Rechtbank Zeeland-West-Brabant · ECLI:NL:RBZWB:2026:1023",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBZWB:2026:1023",
+      "uitleg": "Vonnis van 18 februari 2026; volledige primaire tekst gelezen.",
+      "soort": "rechterlijke uitspraak",
+      "geraadpleegd": "2026-11-25",
+      "tekstUrl": "https://data.rechtspraak.nl/uitspraken/content?ID=ECLI:NL:RBZWB:2026:1023"
+    },
+    {
+      "naam": "Rechtbank Gelderland · ECLI:NL:RBGEL:2026:1937",
+      "url": "https://uitspraken.rechtspraak.nl/details?id=ECLI:NL:RBGEL:2026:1937",
+      "uitleg": "Vonnis van 4 maart 2026; volledige primaire tekst gelezen.",
+      "soort": "rechterlijke uitspraak",
+      "geraadpleegd": "2026-11-25",
+      "tekstUrl": "https://data.rechtspraak.nl/uitspraken/content?ID=ECLI:NL:RBGEL:2026:1937"
+    },
+    {
+      "naam": "Feit of Fake · Busbrief, 20 juli 2026",
+      "url": "https://feitoffake.wordpress.com/2026/07/20/anp-betaalt-hobbyist-e1-300-terug-na-auteursrechtclaim-we-hopen-dat-u-uw-hobby-weer-oppakt/",
+      "uitleg": "Bericht met een geciteerde ANP-reactie over terugbetaling aan een hobbyist. Betaling niet zelfstandig door WAM gecontroleerd.",
+      "soort": "journalistiek bericht",
+      "geraadpleegd": "2026-11-25"
+    }
+  ],
+  "vragen": [
+    {
+      "vraag": "ANP Fair Licensing fotoclaim ontvangen. Hoe controleer ik de opbouw van het bedrag?",
+      "antwoord": "Splits de claim in licentievergoeding, opslag, opsporingskosten, incassokosten en eventuele rente. Vraag per post de berekening en onderbouwing. Controleer daarnaast de foto, het gebruik en de bevoegdheid. Het eigen voorstel van €391,29 op deze pagina is één concreet voorbeeld.",
+      "bron": 18
+    },
+    {
+      "vraag": "Wat is ANP Fair Licensing?",
+      "antwoord": "Volgens ANP is Fair Licensing het eigen team voor de afhandeling van ongeoorloofd fotogebruik, met PixRay als technologiepartner. Oudere stukken kunnen Permission Machine of Visual Rights Group noemen.",
+      "bron": 0
+    },
+    {
+      "vraag": "Is een mail van ANP Fair Licensing echt?",
+      "antwoord": "ANP Fair Licensing bestaat. Controleer de concrete afzender en vraag bij twijfel via het onafhankelijke contact op de officiële ANP Foto-site of het dossier bekend is. ANP vermeldt daarvoor +31 70 4141 123. Het bestaan van het team bewijst niet dat elke ontvangen mail echt is.",
+      "bron": 1
+    },
+    {
+      "vraag": "Verliest ANP ook rechtszaken over fotoclaims?",
+      "antwoord": "Ja. De hier opgenomen uitspraken bevatten afwijzingen wegens ontbrekende of onvoldoende onderbouwde feiten en rechten, en een niet-ontvankelijkverklaring. De reden verschilt per zaak. Deze selectie levert geen totaal verliespercentage op.",
+      "bron": 21
+    },
+    {
+      "vraag": "Wint ANP ook rechtszaken over fotogebruik?",
+      "antwoord": "Ja. Op 30 december 2025 kreeg ANP €391,29 toegewezen, plus rente en €463,73 proceskosten. De bijbehorende uitspraak staat in het overzicht. Het gaat niet om een bewezen uitkomst van de eigen WAM-claim.",
+      "bron": 18
+    },
+    {
+      "vraag": "Is €391,29 een vast ANP-tarief?",
+      "antwoord": "Nee. Dit bedrag hoort bij de eigen brief uit 2024 en komt ook voor in een afzonderlijke uitspraak. Dat maakt het geen algemene prijslijst. Andere foto's, periodes en dossiers kunnen andere bedragen en posten hebben."
+    },
+    {
+      "vraag": "Zijn opsporingskosten van Visual Rights Group altijd verschuldigd?",
+      "antwoord": "Dat volgt niet uit een brief. In de Overijsselse zaak werden €209 opsporingskosten toegewezen. De rechter beoordeelde de in die procedure overgelegde onderbouwing en het verweer. Dat beslist niet automatisch over een ander dossier.",
+      "bron": 18
+    },
+    {
+      "vraag": "Mag ik een foto gebruiken als ik de bron noem?",
+      "antwoord": "Een bronvermelding vervangt geen toestemming. Er kan wel een toepasselijke licentie of uitzondering zijn. Bij citaatrecht moet het beeld een inhoudelijke functie hebben en het gebruik aan de voorwaarden voldoen.",
+      "bron": 6
+    },
+    {
+      "vraag": "Is een screenshot van een foto vrij te gebruiken?",
+      "antwoord": "Niet automatisch. In de zaak over een still uit een televisie-uitzending stelde de rechtbank juist een inbreuk vast. Controleer de rechten op de afgebeelde foto en de concrete reden voor het gebruik.",
+      "bron": 15
+    },
+    {
+      "vraag": "Zijn historische foto's in de ANP-beeldbank altijd beschermd?",
+      "antwoord": "De beeldbank alleen geeft daarop geen sluitend antwoord. ANP erkende discussie over de rechten op een deel van het historische materiaal en bevestigde de sluiting van het dossier Sportgeschiedenis. Onderzoek de maker, de rechtenketen en de oorspronkelijke gebruiksvoorwaarden.",
+      "bron": 7
+    },
+    {
+      "vraag": "Ben ik ervan af als ik de foto verwijder?",
+      "antwoord": "Verwijderen is geen automatische afhandeling van een claim over eerder gebruik. Bewaar eerst het bewijs van de situatie. In de besproken Overijsselse zaak werd na verwijdering toch een vergoeding toegewezen.",
+      "bron": 18
+    },
+    {
+      "vraag": "Is de eigen claim van WAM opgelost?",
+      "antwoord": "Dat is niet vastgesteld. De eigen stukken eindigen op 3 april 2025. De openbare broncontrole van 25 november 2026 is een uitbreiding van dit dossier en geen bevestiging van betaling, schikking of rechterlijke uitkomst."
+    }
+  ],
+  "bijgewerkt": "2026-11-25",
+  "publicatie": "2026-11-24",
+  "intro": "Eigen claim en openbaar bronnenonderzoek",
+  "metaBeschrijving": "ANP-fotoclaim ontvangen? Controleer bewijs en kosten. Met acht uitspraken, ANP Fair Licensing, historische foto's en een echte claim van €391,29.",
+  "onderzoek": {
+    "controle": [
+      {
+        "kop": "Controleer of de brief echt is",
+        "tekst": "Bewaar de mail met bijlagen en afzendergegevens. Zoek het bedrijf zelf op. ANP Foto vermeldt voor vragen over Fair Licensing en Visual Rights Group het nummer +31 70 4141 123. Een echt bestaand team bewijst nog niet dat een concrete brief echt of de vordering juist is.",
+        "bronnen": [
+          1
+        ]
+      },
+      {
+        "kop": "Leg vast welke foto en publicatie worden bedoeld",
+        "tekst": "Noteer foto-ID, maker, exacte pagina, afbeeldingsadres, publicatiedatum en aangevoerde gebruiksduur. Bewaar eigen screenshots, bestanden en eventuele archiefversies. Vraag om de volledige bewijsstukken, zodat je dezelfde foto en periode vergelijkt.",
+        "bronnen": [
+          16,
+          18
+        ]
+      },
+      {
+        "kop": "Zoek toestemming en de oorspronkelijke voorwaarden terug",
+        "tekst": "Controleer facturen, de opdracht aan de webbouwer, schriftelijke toestemming en de licentie zoals die gold toen je de foto gebruikte. Leg vast voor welke website, toepassing, duur en bewerking toestemming bestond. Alleen een naamsvermelding is geen vervanging voor een licentie.",
+        "bronnen": [
+          2,
+          4
+        ]
+      },
+      {
+        "kop": "Vraag waarom deze partij mag optreden",
+        "tekst": "Vraag op welke overdracht, licentie, volmacht of lastgeving de aanspraak voor deze foto berust. ANP hoefde in de onderzochte zaken niet steeds zelf de maker te zijn; de onderbouwing van zijn bevoegdheid verschilde per dossier.",
+        "bronnen": [
+          17,
+          19,
+          21
+        ]
+      },
+      {
+        "kop": "Laat alle kosten afzonderlijk uitleggen",
+        "tekst": "Splits licentiederving, opslag, opsporing, incasso, rente en eventuele proceskosten. Vraag de tariefbasis, gebruiksperiode, verrichte werkzaamheden en reden voor iedere opslag. Een betalingsvoorstel is iets anders dan een door de rechter toegewezen bedrag.",
+        "bronnen": [
+          14,
+          18,
+          20
+        ]
+      },
+      {
+        "kop": "Controleer de gebruikssituatie en mogelijke uitzondering",
+        "tekst": "Een gekopieerde foto, een screenshot en een echte embed zijn verschillende situaties. Leg ook vast of je je beroept op citaatrecht of een al bestaande vrije licentie. Die begrippen zijn geen automatische vrijstelling; het concrete gebruik is bepalend.",
+        "bronnen": [
+          4,
+          5,
+          6,
+          15
+        ]
+      },
+      {
+        "kop": "Reageer op de inhoud en bewaak de termijn",
+        "tekst": "Zet concrete feitelijke bezwaren en ontbrekende stukken op een rij en bewaar je reactie. Neem een echte dagvaarding apart serieus: een verloren procedure kan boven op de claim rente en proceskosten opleveren. Alleen verwijderen of alleen zeggen dat de webbouwer het deed, lost de eerdere publicatie niet vanzelf op.",
+        "bronnen": [
+          18
+        ]
+      }
+    ],
+    "werkwijze": [
+      {
+        "tekst": "ANP en ANP Foto leveren en licentiëren beeldmateriaal. De toestemming kan per foto verschillen in medium, duur en context. De aanwezigheid van een foto in een beeldbank vertelt op zichzelf nog niet welke rechten voor jouw gebruik gelden.",
+        "bronnen": [
+          2,
+          3
+        ]
+      },
+      {
+        "tekst": "Permission Machine wordt in oudere vonnissen genoemd als opsporingspartner. In latere stukken staat Visual Rights Group. ANP noemt VRG inmiddels onderdeel van Copyright Agent. Een naam op een oudere brief moet daarom naast de datum en de concrete machtiging worden gelezen.",
+        "bronnen": [
+          0,
+          14,
+          18
+        ]
+      },
+      {
+        "tekst": "ANP schrijft op 17 april 2026 dat het de VRG-samenwerking in 2025 beëindigde wegens tekortschietende regie en proportionaliteit. Fair Licensing is volgens die verklaring een eigen team met technologiepartner PixRay. Enkele oude zaken liepen nog door.",
+        "bronnen": [
+          0
+        ]
+      },
+      {
+        "tekst": "De zakelijke leiding wordt publiek vermeld als Martha Riemsma, algemeen directeur. De voor dit onderwerp relevante beleidsreacties zijn op haar naam gepubliceerd. Een directiefunctie stelt geen persoonlijke aansprakelijkheid voor een individuele claim vast.",
+        "bronnen": [
+          13
+        ]
+      },
+      {
+        "tekst": "ANP Foto biedt een rechtstreeks contact voor ontvangers van een brief. Voor de huidige afhandeling is die officiële ingang beter controleerbaar dan een privéaccount of een contactadres uit een oud forum.",
+        "bronnen": [
+          1
+        ]
+      },
+      {
+        "tekst": "ANP zegt maatschappelijke organisaties bij voorbaat uit te sluiten. Het latere bericht over Stofwisselkracht maakt de toepassing van dat beleid relevant.",
+        "bronnen": [
+          0,
+          10
+        ]
+      }
+    ],
+    "rechtspraak": [
+      {
+        "ecli": "ECLI:NL:RBGEL:2026:1937",
+        "datum": "2026-03-04",
+        "instantie": "Gelderland",
+        "uitkomst": "Vordering afgewezen",
+        "bron": 21,
+        "kern": "De foto van lachgasflessen was volgens de rechter wél beschermd. ANP onderbouwde onvoldoende dat het de benodigde rechten van de fotograaf had verkregen.",
+        "grens": "Geen oordeel dat elke vergelijkbare foto rechtenvrij is. Ook geen algemene vaststelling dat ANP nooit mag handhaven."
+      },
+      {
+        "ecli": "ECLI:NL:RBZWB:2026:1023",
+        "datum": "2026-02-18",
+        "instantie": "Zeeland-West-Brabant",
+        "uitkomst": "Vordering toegewezen",
+        "bron": 20,
+        "kern": "ANP kreeg €401,88 toegewezen, plus €60,28 incassokosten en €476,23 proceskosten, met rente. Ook opsporingskosten maakten deel uit van de toegewezen schade.",
+        "grens": "Dat de gefotografeerde vrachtwagen eigendom van de aangesproken onderneming was, gaf die onderneming geen vrij gebruiksrecht op de foto."
+      },
+      {
+        "ecli": "ECLI:NL:RBGEL:2026:178",
+        "datum": "2026-01-14",
+        "instantie": "Gelderland",
+        "uitkomst": "Vordering afgewezen",
+        "bron": 19,
+        "kern": "De licentieovereenkomst gaf ANP bevoegdheid om op te treden. De gestelde auteursrechtinbreuk was tegenover het concrete verweer onvoldoende uitgewerkt en onderbouwd.",
+        "grens": "De rechter kende de gevraagde immateriële schadevergoeding aan de wederpartij niet toe. Een verloren claim levert niet vanzelf een tegenclaim op."
+      },
+      {
+        "ecli": "ECLI:NL:RBOVE:2025:7694",
+        "datum": "2025-12-30",
+        "instantie": "Overijssel",
+        "uitkomst": "€391,29 toegewezen",
+        "bron": 18,
+        "kern": "€105 licentiederving, €26,25 opslag, €209 opsporing en €51,04 incasso werden toegewezen. Daarnaast volgden €463,73 proceskosten en rente.",
+        "grens": "De opslag was voor ontbrekende naamsvermelding en bewerking; niet voor bestraffing of een apart zelfbeschikkingsrecht. Hetzelfde bedrag bewijst geen verband met de eigen WAM-zaak."
+      },
+      {
+        "ecli": "ECLI:NL:RBOBR:2025:8151",
+        "datum": "2025-11-27",
+        "instantie": "Oost-Brabant",
+        "uitkomst": "ANP niet-ontvankelijk",
+        "bron": 17,
+        "kern": "De dagvaarding en onderbouwing voldeden niet aan de besproken procesregels. De rechter wees op ontbrekende eis, onvoldoende specifieke feiten en niet vermelde eerdere verweren.",
+        "grens": "Niet-ontvankelijkheid is een andere uitkomst dan een inhoudelijk oordeel dat hergebruik vrij was. Aanvullende tariefoverwegingen waren zaakspecifiek en geen algemene ANP-prijslijst."
+      },
+      {
+        "ecli": "ECLI:NL:RBOBR:2025:8948",
+        "datum": "2025-08-28",
+        "instantie": "Oost-Brabant",
+        "uitkomst": "Vordering afgewezen",
+        "bron": 16,
+        "kern": "Het bewijs van het gestelde gebruik schoot tekort tegenover betwisting en tegenbewijs. De rechter kwam niet meer toe aan de vraag wie het auteursrecht had.",
+        "grens": "Deze uitspraak maakt webarchieven of screenshots niet in algemene zin waardeloos; hun betekenis moet per foto, pagina en datum worden getoetst."
+      },
+      {
+        "ecli": "ECLI:NL:RBMNE:2024:5788",
+        "datum": "2024-10-09",
+        "instantie": "Midden-Nederland",
+        "uitkomst": "Inbreuk vastgesteld",
+        "bron": 15,
+        "kern": "Een uit een televisie-uitzending genomen still met de ANP-foto mocht niet zonder toestemming op de website worden geplaatst. De rechter kende schadevergoeding toe.",
+        "grens": "Dat het door de websitehouder gemaakte kistje op de foto stond, gaf haar niet automatisch auteursrecht op de foto. Een screenshot wist de beeldrechten niet uit."
+      },
+      {
+        "ecli": "ECLI:NL:RBROT:2020:123",
+        "datum": "2020-01-10",
+        "instantie": "Rotterdam",
+        "uitkomst": "Schade deels toegewezen",
+        "bron": 14,
+        "kern": "De rechter begrootte de schade op €310,30 en kende afzonderlijk kosten toe. Een bestraffende verhoging werd niet aanvaard; een opslag voor ontbrekende naam wel.",
+        "grens": "Ook deze uitspraak maakt een opslag niet altijd ongeldig. De grond, de onderbouwing en de redelijkheid van de gevraagde posten blijven van belang."
+      }
+    ],
+    "rechtspraakNoot": "Dit is een inhoudelijke selectie van acht nagelezen uitspraken, geen inventarisatie van alle procedures. De uitspraakdatum staat bij elke zaak; die kan afwijken van de publicatiedatum. Uit deze selectie volgt geen betrouwbaar totaal win- of verliespercentage. De eigen WAM-claim is hiermee niet beslist.",
+    "kostenContext": [
+      {
+        "tekst": "Bij de eigen brief hoort de tabel hieronder. De labels van de afzender worden weergegeven zoals ze in die bijlage staan. Dat is iets anders dan de juridische grond die een rechter in een andere zaak aanvaardt.",
+        "bronnen": []
+      },
+      {
+        "tekst": "In het Overijsselse vonnis van 30 december 2025 werd dezelfde rekensom toegewezen. De rechter wees het bestraffende argument en afzonderlijke zelfbeschikkingsschade af, maar kende de opslag toe wegens naamsvermelding en bewerking. De €209 opsporing was in die zaak voldoende onderbouwd en de redelijkheid niet effectief bestreden.",
+        "bronnen": [
+          18
+        ]
+      },
+      {
+        "tekst": "Feitenradar berichtte op 28 augustus 2026 over lagere bedragen in bepaalde nieuwere voorstellen, waaronder €130 voor een retroactieve licentie. WAM heeft geen uniforme actuele ANP-tarieflijst vastgesteld. Gebruik daarom de foto, gebruiksduur, context, eventuele btw en specificatie uit je eigen dossier; neem het bedrag van een ander niet als norm over.",
+        "bronnen": [
+          11
+        ]
+      },
+      {
+        "tekst": "Een schikkingsaanbod, toestemming voor eerder gebruik en toestemming voor toekomstig gebruik zijn verschillende dingen. Controleer wat een eventuele regeling daadwerkelijk afdekt. De eigen ANP-uitleg koppelt een licentie aan het overeengekomen gebruik.",
+        "bronnen": [
+          2
+        ]
+      }
+    ],
+    "historisch": [
+      {
+        "tekst": "Bij historische foto's hoort de rechtenketen bij het onderzoek. Leg de toenmalige archiefpagina, maker, licentietekst en datum vast. Een huidige betaalde beeldbankvermelding beantwoordt niet vanzelf hoe het beeld jaren eerder is aangeboden.",
+        "bronnen": [
+          7,
+          8
+        ]
+      },
+      {
+        "tekst": "Jurryt van de Vooren beschreef op 20 augustus 2026 een claim van €2.752,75 voor Sportgeschiedenis en betwistte de rechten op de gebruikte historische beelden. Dat is zijn openbare relaas. ANP bevestigde op 25 augustus zelf dat het dossier na een inhoudelijke reactie werd gesloten.",
+        "bronnen": [
+          8,
+          7
+        ]
+      },
+      {
+        "tekst": "In dezelfde reactie schreef ANP dat het beelden met betwistbare historische rechten eerder uit de opsporingssystemen had gehaald. Het bedrijf erkende dat het gesprek over de bezwaren van Jingleweb eerder had moeten plaatsvinden.",
+        "bronnen": [
+          7
+        ]
+      },
+      {
+        "tekst": "Een vrije licentie kan voorwaarden bevatten over naamsvermelding, commercieel gebruik en bewerking. Bewaar bewijs van het aanbod en van naleving. Ook bij citaatrecht blijft de inhoudelijke functie van het beeld van belang; alleen een decoratief plaatje is geen fotocitaat.",
+        "bronnen": [
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "publiek": [
+      {
+        "datum": "2026-11-04",
+        "kop": "Stofwisselkracht: gemelde claim en intrekking",
+        "tekst": "Feitenradar beschrijft een voorstel van €225,52 voor twee foto's op een Facebookpagina van Stichting Stofwisselkracht en meldt dat ANP de claim eind oktober introk. Het is berichtgeving over een andere ontvanger; WAM heeft de besloten stukken niet ingezien.",
+        "bronnen": [
+          10
+        ]
+      },
+      {
+        "datum": "2026-09-09",
+        "kop": "Bericht over zes ingetrokken voorstellen",
+        "tekst": "De redactie van Feitenradar meldt zes bij haar bekende intrekkingen. Volgens het artikel bevestigt ANP dat voorstellen soms worden ingetrokken, zonder aantallen of bedragen te geven. Dat maakt de zes geen gecontroleerd totaal voor alle ANP-dossiers.",
+        "bronnen": [
+          9
+        ]
+      },
+      {
+        "datum": "2026-07-20",
+        "kop": "Busbrief: bericht over €1.300 terugbetaling",
+        "tekst": "Feit of Fake publiceert een ANP-reactie waarin €1.300 terugbetaling aan een hobbyist wordt aangekondigd. ANP handhaaft daarin het standpunt dat auteursrecht was geschonden, maar beschrijft een tegemoetkoming. Een coulancebetaling en erkenning dat een claim ongegrond was zijn verschillende zaken.",
+        "bronnen": [
+          22
+        ]
+      },
+      {
+        "datum": "2026-04-11",
+        "kop": "Kassa onderzoekt de bredere beeldrechtenmarkt",
+        "tekst": "Kassa behandelt hoge fotoclaims en de gevolgen voor particulieren en vrijwilligers. De besproken Franse bureaus zijn andere partijen dan ANP. Hun bedragen en werkwijze worden hier niet aan ANP toegeschreven.",
+        "bronnen": [
+          12
+        ]
+      }
+    ],
+    "uitleg": [
+      {
+        "kop": "Citaatrecht",
+        "tekst": "Een foto kan onder voorwaarden als citaat worden gebruikt bij een inhoudelijke bespreking. Bron en maker vermelden is nodig waar redelijkerwijs mogelijk, maar maakt een decoratief gebruik op zichzelf nog geen geldig citaat.",
+        "bronnen": [
+          5,
+          6
+        ]
+      },
+      {
+        "kop": "Screenshot en embed",
+        "tekst": "Een screenshot is een nieuwe vastlegging; een echte embed verwijst technisch naar een externe bron. Behandel die situaties afzonderlijk. Ook de rechtmatigheid van de bron en de precieze omstandigheden kunnen uitmaken.",
+        "bronnen": [
+          4,
+          5,
+          15
+        ]
+      },
+      {
+        "kop": "Webbouwer en verwijderen",
+        "tekst": "In de Overijsselse zaak bleef de websitehouder verantwoordelijk, hoewel een ander de site had gebouwd. Verwijderen beëindigt niet automatisch een discussie over het eerdere gebruik.",
+        "bronnen": [
+          18
+        ]
+      },
+      {
+        "kop": "Opslagen, incasso en proceskosten",
+        "tekst": "De rechter kan kosten toewijzen en beoordeelt de gevraagde posten afzonderlijk. De twee besproken recente toewijzingen bevatten naast schade ook incasso- en proceskosten. Een brief vraagt een bedrag; een vonnis beslist over die vordering.",
+        "bronnen": [
+          18,
+          20
+        ]
+      }
+    ],
+    "openVragen": [
+      "Hoe controleert ANP vóór verzending de rechten op iedere foto, inclusief historisch materiaal?",
+      "Welke actuele tariefbasis en verrichte werkzaamheden horen bij elke opslag of kostenpost?",
+      "Hoe worden de aangekondigde uitzonderingen en het maatwerk voor maatschappelijke organisaties toegepast?",
+      "Hoeveel dossiers worden na bezwaar gesloten, geschikt, toegewezen of afgewezen, met welke periode en definitie?",
+      "Welk deel van de ontvangen bedragen komt bij fotografen, agentschappen, ANP en eventuele dienstverleners terecht?"
+    ]
+  }
+}

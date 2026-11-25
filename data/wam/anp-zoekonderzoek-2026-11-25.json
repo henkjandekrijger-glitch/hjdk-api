@@ -1,0 +1,365 @@
+{
+  "datum": "2026-11-25",
+  "markt": "NL",
+  "source": "Demand Radar /api/check, ai=0; geen ruwe toegangssleutel gebruikt",
+  "algemeneMeting": {
+    "thema": "machteloos",
+    "bijgewerkt": "2026-11-23T20:15:24.364Z",
+    "termen": 1004,
+    "anpTermenGevonden": 0,
+    "betekenis": "Geen ANP-term in deze algemene steekproef is geen bewijs van nul vraag."
+  },
+  "gerichteMetingen": [
+    {
+      "vraag": "ANP fotoclaim",
+      "gegenereerd": "2026-11-25T15:25:48.258Z",
+      "volume": 0,
+      "periode": null,
+      "laatsteMaand": null,
+      "maandreeks": [],
+      "gerelateerd": [],
+      "bronStatus": [
+        {
+          "name": "Wikipedia interest",
+          "ok": false
+        },
+        {
+          "name": "GDELT world news",
+          "ok": false
+        },
+        {
+          "name": "Google trending searches",
+          "ok": true
+        },
+        {
+          "name": "Google suggestions",
+          "ok": true
+        },
+        {
+          "name": "YouTube suggestions",
+          "ok": true
+        },
+        {
+          "name": "YouTube creators",
+          "ok": false
+        },
+        {
+          "name": "Bing searches per week",
+          "ok": false
+        },
+        {
+          "name": "Amazon suggestions",
+          "ok": true
+        },
+        {
+          "name": "Reddit",
+          "ok": false
+        },
+        {
+          "name": "Hacker News",
+          "ok": true
+        },
+        {
+          "name": "Google News",
+          "ok": true
+        },
+        {
+          "name": "Weather forecast",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "vraag": "fotoclaim",
+      "gegenereerd": "2026-11-25T15:26:30.859Z",
+      "volume": 10,
+      "periode": "2026-10",
+      "laatsteMaand": 10,
+      "maandreeks": [
+        {
+          "y": 2025,
+          "m": 10,
+          "v": 10
+        },
+        {
+          "y": 2025,
+          "m": 11,
+          "v": 10
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "v": 20
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "v": 10
+        },
+        {
+          "y": 2026,
+          "m": 2,
+          "v": 10
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "v": 30
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "v": 40
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "v": 10
+        },
+        {
+          "y": 2026,
+          "m": 6,
+          "v": 10
+        },
+        {
+          "y": 2026,
+          "m": 7,
+          "v": 10
+        },
+        {
+          "y": 2026,
+          "m": 8,
+          "v": 10
+        },
+        {
+          "y": 2026,
+          "m": 9,
+          "v": 10
+        },
+        {
+          "y": 2026,
+          "m": 10,
+          "v": 10
+        }
+      ],
+      "gerelateerd": [],
+      "bronStatus": [
+        {
+          "name": "Wikipedia interest",
+          "ok": false
+        },
+        {
+          "name": "GDELT world news",
+          "ok": false
+        },
+        {
+          "name": "Google trending searches",
+          "ok": true
+        },
+        {
+          "name": "Google suggestions",
+          "ok": true
+        },
+        {
+          "name": "YouTube suggestions",
+          "ok": true
+        },
+        {
+          "name": "YouTube creators",
+          "ok": false
+        },
+        {
+          "name": "Bing searches per week",
+          "ok": false
+        },
+        {
+          "name": "Amazon suggestions",
+          "ok": true
+        },
+        {
+          "name": "Reddit",
+          "ok": false
+        },
+        {
+          "name": "Hacker News",
+          "ok": true
+        },
+        {
+          "name": "Google News",
+          "ok": true
+        },
+        {
+          "name": "Weather forecast",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "vraag": "anp fair licensing",
+      "gegenereerd": "2026-11-25T15:27:11.430Z",
+      "volume": 140,
+      "periode": "2026-10",
+      "laatsteMaand": 210,
+      "maandreeks": [
+        {
+          "y": 2025,
+          "m": 10,
+          "v": 70
+        },
+        {
+          "y": 2025,
+          "m": 11,
+          "v": 90
+        },
+        {
+          "y": 2025,
+          "m": 12,
+          "v": 50
+        },
+        {
+          "y": 2026,
+          "m": 1,
+          "v": 70
+        },
+        {
+          "y": 2026,
+          "m": 2,
+          "v": 170
+        },
+        {
+          "y": 2026,
+          "m": 3,
+          "v": 140
+        },
+        {
+          "y": 2026,
+          "m": 4,
+          "v": 210
+        },
+        {
+          "y": 2026,
+          "m": 5,
+          "v": 170
+        },
+        {
+          "y": 2026,
+          "m": 6,
+          "v": 170
+        },
+        {
+          "y": 2026,
+          "m": 7,
+          "v": 320
+        },
+        {
+          "y": 2026,
+          "m": 8,
+          "v": 110
+        },
+        {
+          "y": 2026,
+          "m": 9,
+          "v": 110
+        },
+        {
+          "y": 2026,
+          "m": 10,
+          "v": 210
+        }
+      ],
+      "gerelateerd": [
+        {
+          "k": "fair licensing anp spam",
+          "volume": 50,
+          "cpc": null
+        },
+        {
+          "k": "fair licensing anp nl",
+          "volume": 10,
+          "cpc": null
+        }
+      ],
+      "bronStatus": [
+        {
+          "name": "Wikipedia interest",
+          "ok": false
+        },
+        {
+          "name": "GDELT world news",
+          "ok": false
+        },
+        {
+          "name": "Google trending searches",
+          "ok": true
+        },
+        {
+          "name": "Google suggestions",
+          "ok": true
+        },
+        {
+          "name": "YouTube suggestions",
+          "ok": true
+        },
+        {
+          "name": "YouTube creators",
+          "ok": false
+        },
+        {
+          "name": "Bing searches per week",
+          "ok": false
+        },
+        {
+          "name": "Amazon suggestions",
+          "ok": true
+        },
+        {
+          "name": "Reddit",
+          "ok": false
+        },
+        {
+          "name": "Hacker News",
+          "ok": true
+        },
+        {
+          "name": "Google News",
+          "ok": true
+        },
+        {
+          "name": "Weather forecast",
+          "ok": true
+        }
+      ]
+    }
+  ],
+  "keuze": {
+    "hoofdterm": "ANP Fair Licensing",
+    "ondersteunend": [
+      "ANP fotoclaim",
+      "kosten fotoclaim",
+      "opsporingskosten Visual Rights Group",
+      "ANP rechtszaak",
+      "historische foto's ANP"
+    ],
+    "noot": "Ondersteunende onderwerpen komen uit claimstukken en bronnenonderzoek; niet alle termen hebben een afzonderlijk gemeten volume. Volumes en synoniemen niet optellen als unieke mensen. Nul voor exacte samengestelde term is een modelschatting, geen bewijs van afwezigheid van interesse."
+  },
+  "zichtBaseline": {
+    "dag": "2026-11-25",
+    "panel": "1a4a702f92150cae",
+    "vraag": "ANP Fair Licensing fotoclaim ontvangen. Hoe controleer ik de opbouw van het bedrag?",
+    "model": "perplexity/sonar",
+    "geciteerd": false,
+    "gsc": null
+  },
+  "hermeting": {
+    "eersteControle": "2026-12-02",
+    "beoordelenVanaf": "2026-12-16",
+    "cijfers": [
+      "indexstatus",
+      "zoekvertoningen en kliks als GSC-toegang bestaat",
+      "AI-broncitaten voor vast panel",
+      "echte organische landingen"
+    ],
+    "beperking": "Geen nieuwe automation. Bestaande ZICHT-lus en WAM-dagronde lezen het toegevoegde manifest. ANP heeft op verzoek een inhoudelijke interventie tijdens bestaande observationele proeven; geen causaal effect aan die oude periode toeschrijven."
+  }
+}
+
