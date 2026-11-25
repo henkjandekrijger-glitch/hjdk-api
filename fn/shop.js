@@ -1623,6 +1623,15 @@ export default async function handler(req, res) {
       const html = cmRender({ kop: 'Kadoly', periode: dagen === 1 ? 'Vandaag' : 'Laatste ' + dagen + ' dagen', totaal: tot, netten: nl, ads: al, orders, match, koppelingen, adviesTekst: adviesTekst || '', nu: new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC' });
       if (sp.get('vorm') === 'json') return res.status(200).json({ ok: true, dagen, totaal: tot, netten: nl, ads: al, orders, match, koppelingen });
       res.setHeader('content-type', 'text/html; charset=utf-8'); return res.status(200).send(html); }
+    if (op === 'gconv') { // 25 nov 2026 (Henkjan: "Meld terug aan google" en "stuur die verkopen ook nu nog naar google die er al waren"): betaalde bestellingen met een Google-klik (gclid) voor het Google Ads-script KADOLY Shopping uurlus, dat ze als offline conversie "Kadoly aankoop (server)" uploadt. Alleen klik-id, tijd en bedrag; geen persoonsgegevens. ?vorm=stand telt ook gbraid/wbraid/srsltid.
+      let feed = null; try { feed = await kv.get('hjdk:shop:lusfeed'); } catch (e) {} const grens = Date.now() - 90 * 864e5, uit = [], tel = { betaald: 0, gclid: 0, gbraid: 0, wbraid: 0, srsltid: 0 };
+      for (const o of ((feed && feed.orders) || [])) { if (!/paid|betaald|complete/i.test(String(o.s || ''))) continue; const at = Date.parse(o.at || '') || 0; if (!at || at < grens) continue; tel.betaald++; if (o.gs) tel.srsltid++; if (o.gt) tel[o.gt] = (tel[o.gt] || 0) + 1;
+        if (o.gt === 'gclid' && o.g) uit.push({ order: String(o.id || ''), gclid: o.g, tijd: new Date(at).toISOString().replace('T', ' ').slice(0, 19) + '+0000', waarde: Math.round(num(o.v) * 100) / 100 }); }
+      // één regel per bestelling (zelfde als de verkoopwacht: het bedrag van de eerste regel is het orderbedrag)
+      const per = {}; for (const u of uit) { const k = u.order || u.gclid + u.tijd; if (!per[k]) per[k] = u; }
+      res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex');
+      if (url.searchParams.get('vorm') === 'stand') return res.status(200).json({ ok: true, feedAt: feed && feed.at ? new Date(feed.at).toISOString() : null, dagen: 90, ...tel, teUploaden: Object.keys(per).length });
+      return res.status(200).json({ ok: true, conversie: 'Kadoly aankoop (server)', munt: 'EUR', lijst: Object.values(per).map(({ gclid, tijd, waarde }) => ({ gclid, tijd, waarde })) }); }
     if (op === 'verkopen') { // 25 nov (Henkjan: "Zorg dat je niets meer mist en altijd bron kan vinden !"): elke betaalde bestelling met bron, en wat de verkoopwacht al meldde. Beschermde host, geen persoonsgegevens
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const dagen = Math.max(1, Math.min(60, Number(url.searchParams.get('dagen')) || 14)); const r = await verkoopWacht(true, dagen);
