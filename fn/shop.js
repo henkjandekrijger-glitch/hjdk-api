@@ -695,8 +695,8 @@ var iv=setInterval(function(){if(document.visibilityState==='visible')s++;if(s>=
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="/api/shop/uit"]');if(!a||a.dataset.k)return;a.dataset.k=1;window.__kk=1;a.href=a.getAttribute('href')+'&h='+(mens?1:0)+'&ms='+(Date.now()-t0)},true)})();</script>
 </body></html>`;
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
-  if (winPa) { let setNaam = ''; if (bundel) { try { const bu = await kv.get('hjdk:shop:bundel:' + bundel); setNaam = (bu && (bu.naam || bu.titel)) || ''; } catch (e) {} }
-    return res.status(200).send(KW.winPagina({ held, set: setNaam, code, uitHref: uit(pid, 'win'), look: look(ACC, { dark: false }) })); }
+  if (winPa) { let setNaam = '', bedrag = 0; if (bundel) { try { const bu = await kv.get('hjdk:shop:bundel:' + bundel); setNaam = (bu && (bu.naam || bu.titel)) || ''; bedrag = (bu && bu.totaal) || 0; } catch (e) {} }
+    return res.status(200).send(KW.winPagina({ held, set: setNaam, bedrag, code, uitHref: uit(pid, 'win'), look: look(ACC, { dark: false }) })); }
   return res.status(200).send(html);
 }
 
