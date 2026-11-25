@@ -5,6 +5,8 @@ description: "Gebruik vóór je een campagne opzet of producten, angles en prijz
 
 # Vraagsignalen: vraag vinden vóór je geld uitgeeft
 
+Demand Radar is de dienst die deze vraagsignalen levert (Henkjan 25 nov 2026: "Zet demandradar er als aparte dienst uit. Dat is de vraag signalen."): https://demandradar-ivory.vercel.app/ (NL, DE, US; AI-gaten op /api/gaps?latest=1). Kijk daar eerst. Bouw geen losse verzameling ernaast: ontbreekt een bron uit deze skill, dan komt die in Demand Radar.
+
 Doel: voor een catalogus of een set aanbiedingen vooraf bepalen waar al vraag naar is, op welk moment, met welke boodschap en tegen welke prijs. Pas daarna gaat er iets de campagnes in. Deze skill levert de keuze; de skill `leerlus` test en meet. De uitkomsten van de leerlus stellen de weging van deze skill weer bij.
 
 Werk in de cloud (Vercel-cron, gegevens in KV), los van de laptop. Sleutels staan als gedeelde team-variabelen in Vercel. Rapporteer in gewone taal met ingevulde cijfers.
