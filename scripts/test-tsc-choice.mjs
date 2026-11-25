@@ -73,7 +73,7 @@ await test('review scope: doctor and facility figures cannot inflate clinic scor
 });
 await test('invalid, unavailable and suspended reviews excluded visibly',()=>{
  const p={reviews:[rv('A',5,100,'organization',{waarschuwing:'account suspended'}),rv('B',4,20,'organization',{rating_available:false})]};const r=ranking.experienceIndex(p);assert.equal(r.eligible,false);assert.equal(r.sources.excluded[0].reason,'platform_restriction');
- const actual=ranking.reviewRanking(LIJSTEN['hair-turkey'],'doctor');assert.ok(actual.unranked.some(r=>r.k.naam.includes('Serkan')));
+ assert.equal(r.sources.included.length,0);assert.deepEqual(r.sources.excluded.map(x=>x.reason).sort(),['platform_restriction','unavailable_or_invalid']);
 });
 await test('duplicate URL and multiple profiles from one platform count once',()=>{
  const a=rv('A',4,10),b={...a,bron:a.bron+'/branch',aantal:50},p={reviews:[a,a,b]};assert.equal(ranking.reviewSources(p).included.length,1);assert.equal(ranking.reviewSources(p).included[0].aantal,50);
