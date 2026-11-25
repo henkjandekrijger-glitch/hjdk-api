@@ -111,6 +111,12 @@
       "kop": "Terugvordering herhaald",
       "tekst": "De melder stuurt een factuur en terugvordering van €50.000 en verwijst daarbij naar de betalingen van 22 december 2023 en 1 februari 2024. Een ingediende vordering is geen uitspraak over aansprakelijkheid of bewijs van terugbetaling.",
       "bron": "Verzonden e-mail van de melder, ingezien"
+    },
+    {
+      "datum": "2026-11-25",
+      "kop": "Errezeta om reactie gevraagd",
+      "tekst": "Errezeta is per e-mail op twee bekende adressen gevraagd een feit te corrigeren of de eigen kant te geven, met de vraag of die reactie volledig naast het dossier mag staan. Een antwoord of oplossing wordt hier meteen gemeld. Termijn: 9 december 2026.",
+      "bron": "Verzonden e-mails van de redactie, 25 november 2026"
     }
   ],
   "bronverantwoording": "Op 24 november 2026 zijn het dossier en de contracttekst uit Drive, twee transactiedocumenten, de e-mails over klacht en herstel in april 2024, de correctie van 22 juni 2026 en de terugvordering van 29 augustus 2026 nagelezen. De transactiedocumenten zijn ook visueel gecontroleerd. Alleen veilige samenvattingen staan hier; originele bankgegevens, privécontactgegevens, accountgegevens, handtekeningen en intern juridisch advies worden niet gepubliceerd. Er is geen volledige bankreconciliatie of KDP-accountaudit uitgevoerd. De afwikkelingstekst is expliciet meegenomen als mogelijk relevant tegenstuk.",
@@ -136,7 +142,7 @@
       "status": "Correctie naar €50.000 en latere terugvordering. Conceptmails gelden niet als verzonden klacht of bewezen procedure."
     }
   ],
-  "reactieBedrijf": "Errezeta heeft in april 2024 inhoudelijk gereageerd en herstel aangeboden. Het bedrijf beschreef een winstgevend vervangend account, werkte een plan uit en meldde een samenvoegverzoek. Dat wordt hier naast de klacht weergegeven. Een actuele inhoudelijke reactie op dit WAM-dossier is niet opgevraagd. Een latere terugbetaling, geslaagde overdracht of definitieve eindafwikkeling is in de hier gecontroleerde stukken niet vastgesteld.",
+  "reactieBedrijf": "Errezeta heeft in april 2024 inhoudelijk gereageerd en herstel aangeboden. Het bedrijf beschreef een winstgevend vervangend account, werkte een plan uit en meldde een samenvoegverzoek. Dat wordt hier naast de klacht weergegeven. Op 25 november 2026 is Errezeta via het supportadres en het adres van de verkoper om een actuele reactie op dit dossier gevraagd, met de vraag of die volledig gepubliceerd mag worden. De reactietermijn loopt tot 9 december 2026. Een latere terugbetaling, geslaagde overdracht of definitieve eindafwikkeling is in de hier gecontroleerde stukken niet vastgesteld.",
   "volgendeStap": "We onderzoeken de levering en opbrengsten per afspraak, een eventuele overdrachtsbevestiging van Amazon en de status van de afwikkelingstekst. Ook staat open welke partij de herstelvoorstellen na de ontbinding deed en of er later is terugbetaald. Ervaringen van andere klanten worden via de oproep verzameld en afzonderlijk gecontroleerd.",
   "bedrijven": [
     "Errezeta Publishing"

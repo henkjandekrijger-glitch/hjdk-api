@@ -197,6 +197,8 @@ Voorstel cijfer per bedrijf (1 tot 10): antwoord 3 punten (binnen 15 dagen), opl
 
 ## Logboek (nieuwste bovenaan)
 
+- 25 nov 2026 (Claude, 15:15 UTC): op Henkjans woord verstuurd via Zernio (links heel): wederhoor aan support@errezetapublishing.com en david@buildingai.fm (termijn 9 dec), en Andy en Joshua in hun draad van 2024. Dossier vermeldt het verzoek in vier talen. Campagnes PropellerAds In-Page NL gestart (moderatie): 12189120 WAM BLENDLE (wissel wmn-blendle) en 12189124 WAM MACHTELOOS (wissel wmn-macht, voorkant ?h=macht), elk 8 ads met eigen CTA, $10/dag, CPA echt mens. propellerads-mcp: WAM_VONK = WAM BLENDLE, WAM MACHTELOOS; geen chathook-dagkopie voor deze lijnen.
+
 - 25 nov 2026 (Claude, middag): Errezeta vertaald naar EN/DE/IT met hreflang, zichtblok (Google, Trustpilot, AI) met datum, registerfeiten director en RZ Business Ltd. Privéadres van David en verblijfplaats van personen bewust niet gepubliceerd. Voorkant Blendle eerst en loterijtegel; ?h=macht voor campagne. Online geen publieke Errezeta-klantreviews gevonden (Google toont alleen registers). Wederhoor-mail aan Errezeta (support@ en david@buildingai.fm) als concept gemeld (3cebf28fa900, 06843b5e933c), wacht op verstuur.
 
 - 25 nov 2026 (Claude, vervolg): modalconfig wmn live gezet (versie 2); lib/modal.js bewaart nu ook m.volg (eigen volgtekst per taal), anders viel die bij opslaan weg. Errezeta-oproep: twee klanten uit Gmail gevonden (Andy, 5K-pakket; Joshua, due diligence jan 2024), concepten gemeld in POST (7e38a92a948e, dd03ea6f29eb), wachten op verstuur.

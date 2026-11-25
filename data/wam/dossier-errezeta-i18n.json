@@ -80,6 +80,11 @@
         "kop": "Claim repeated",
         "tekst": "The reporter sends an invoice and claim for €50,000, referring to the payments of 22 December 2023 and 1 February 2024. A claim filed is not a ruling on liability or proof of repayment.",
         "bron": "Email sent by the reporter, reviewed"
+      },
+      {
+        "kop": "Errezeta asked to respond",
+        "tekst": "Errezeta was asked by email at two known addresses to correct a fact or give its side, and whether that response may appear in full next to the dossier. Any answer or solution will be reported here straight away. Deadline: 9 December 2026.",
+        "bron": "Emails sent by the editors, 25 November 2026"
       }
     ],
     "bronverantwoording": "On 24 November 2026 the dossier and contract text from Drive, two transaction documents, the emails about the complaint and recovery in April 2024, the correction of 22 June 2026 and the claim of 29 August 2026 were reviewed. The transaction documents were also checked visually. Only safe summaries appear here; original bank details, private contact details, account details, signatures and internal legal advice are not published. No full bank reconciliation or KDP account audit was carried out. The settlement text was explicitly included as a possibly relevant counterpoint.",
@@ -105,7 +110,7 @@
         "status": "Correction to €50,000 and later claim. Draft emails do not count as a sent complaint or proven procedure."
       }
     ],
-    "reactieBedrijf": "In April 2024 Errezeta responded on substance and offered a remedy. The company described a profitable replacement account, worked out a plan and reported a merge request. That is shown here next to the complaint. A current response to this dossier has not been requested yet. A later repayment, completed transfer or final settlement has not been established in the documents checked here.",
+    "reactieBedrijf": "In April 2024 Errezeta responded on substance and offered a remedy. The company described a profitable replacement account, worked out a plan and reported a merge request. That is shown here next to the complaint. On 25 November 2026 Errezeta was asked, at its support address and the seller's address, for a current response to this dossier and whether it may be published in full. The deadline is 9 December 2026. A later repayment, completed transfer or final settlement has not been established in the documents checked here.",
     "volgendeStap": "We are investigating delivery and revenue per agreement, any transfer confirmation from Amazon and the status of the settlement text. It is also open which party made the recovery proposals after the dissolution and whether anything was repaid later. Experiences of other customers are collected through this call and checked separately.",
     "leidingFunctie": "Director of Errezeta Publishing Ltd since 14 October 2021 according to Companies House. The same register also lists her as director of RZ Business Ltd (12811363), also dissolved, and states Italian nationality and Italy as country of residence.",
     "bronnenUitleg": [
@@ -286,6 +291,11 @@
         "kop": "Rückforderung wiederholt",
         "tekst": "Der Melder sendet eine Rechnung und Rückforderung über 50.000 € und verweist auf die Zahlungen vom 22. Dezember 2023 und 1. Februar 2024. Eine eingereichte Forderung ist kein Urteil über die Haftung und kein Beleg einer Rückzahlung.",
         "bron": "Versendete E-Mail des Melders, geprüft"
+      },
+      {
+        "kop": "Errezeta um Stellungnahme gebeten",
+        "tekst": "Errezeta wurde per E-Mail an zwei bekannten Adressen gebeten, eine Tatsache zu korrigieren oder die eigene Sicht darzulegen, und gefragt, ob die Antwort vollständig neben dem Dossier stehen darf. Eine Antwort oder Lösung wird hier sofort gemeldet. Frist: 9. Dezember 2026.",
+        "bron": "Versendete E-Mails der Redaktion, 25. November 2026"
       }
     ],
     "bronverantwoording": "Am 24. November 2026 wurden das Dossier und der Vertragstext aus Drive, zwei Transaktionsbelege, die E-Mails zu Beschwerde und Wiedergutmachung im April 2024, die Korrektur vom 22. Juni 2026 und die Rückforderung vom 29. August 2026 gelesen. Die Transaktionsbelege wurden auch visuell geprüft. Hier stehen nur sichere Zusammenfassungen; Original-Bankdaten, private Kontaktdaten, Kontodaten, Unterschriften und interne Rechtsberatung werden nicht veröffentlicht. Es wurde keine vollständige Bankabstimmung und keine Prüfung der KDP-Konten durchgeführt. Der Abwicklungstext wurde ausdrücklich als möglicherweise relevantes Gegenstück einbezogen.",
@@ -311,7 +321,7 @@
         "status": "Korrektur auf 50.000 € und spätere Rückforderung. Entwürfe gelten nicht als versendete Beschwerde oder nachgewiesenes Verfahren."
       }
     ],
-    "reactieBedrijf": "Errezeta hat im April 2024 inhaltlich reagiert und Wiedergutmachung angeboten. Das Unternehmen beschrieb ein profitables Ersatzkonto, arbeitete einen Plan aus und meldete einen Zusammenführungsantrag. Das wird hier neben der Beschwerde gezeigt. Eine aktuelle Stellungnahme zu diesem Dossier wurde noch nicht angefragt. Eine spätere Rückzahlung, erfolgte Übertragung oder endgültige Abwicklung ist in den hier geprüften Unterlagen nicht festgestellt.",
+    "reactieBedrijf": "Errezeta hat im April 2024 inhaltlich reagiert und Wiedergutmachung angeboten. Das Unternehmen beschrieb ein profitables Ersatzkonto, arbeitete einen Plan aus und meldete einen Zusammenführungsantrag. Das wird hier neben der Beschwerde gezeigt. Am 25. November 2026 wurde Errezeta über die Support-Adresse und die Adresse des Verkäufers um eine aktuelle Stellungnahme gebeten, mit der Frage, ob sie vollständig veröffentlicht werden darf. Die Frist läuft bis zum 9. Dezember 2026. Eine spätere Rückzahlung, erfolgte Übertragung oder endgültige Abwicklung ist in den hier geprüften Unterlagen nicht festgestellt.",
     "volgendeStap": "Wir untersuchen Lieferung und Erträge je Vereinbarung, eine etwaige Übertragungsbestätigung von Amazon und den Status des Abwicklungstextes. Offen ist auch, welche Partei die Vorschläge nach der Auflösung machte und ob später etwas zurückgezahlt wurde. Erfahrungen anderer Kunden werden über diesen Aufruf gesammelt und gesondert geprüft.",
     "leidingFunctie": "Director der Errezeta Publishing Ltd seit dem 14. Oktober 2021 laut Companies House. Dasselbe Register führt sie auch als Director der RZ Business Ltd (12811363), ebenfalls aufgelöst, und nennt italienische Staatsangehörigkeit und Italien als Wohnsitzland.",
     "bronnenUitleg": [
@@ -492,6 +502,11 @@
         "kop": "Richiesta di restituzione ripetuta",
         "tekst": "Chi segnala invia una fattura e una richiesta di restituzione di 50.000 €, citando i pagamenti del 22 dicembre 2023 e del 1º febbraio 2024. Una richiesta presentata non è una decisione sulla responsabilità né la prova di un rimborso.",
         "bron": "E-mail inviata da chi segnala, esaminata"
+      },
+      {
+        "kop": "Chiesta una risposta a Errezeta",
+        "tekst": "A Errezeta è stato chiesto via e-mail, a due indirizzi noti, di correggere un fatto o dare la propria versione, e se la risposta possa comparire per intero accanto al dossier. Una risposta o una soluzione verrà segnalata qui subito. Termine: 9 dicembre 2026.",
+        "bron": "E-mail inviate dalla redazione, 25 novembre 2026"
       }
     ],
     "bronverantwoording": "Il 24 novembre 2026 sono stati letti il dossier e il testo del contratto in Drive, due documenti di transazione, le e-mail su reclamo e rimedio di aprile 2024, la correzione del 22 giugno 2026 e la richiesta di restituzione del 29 agosto 2026. I documenti di transazione sono stati verificati anche visivamente. Qui compaiono solo sintesi sicure; dati bancari originali, contatti privati, dati degli account, firme e consulenza legale interna non vengono pubblicati. Non è stata fatta una riconciliazione bancaria completa né una verifica degli account KDP. Il testo di chiusura è stato incluso espressamente come possibile elemento a favore dell'azienda.",
@@ -517,7 +532,7 @@
         "status": "Correzione a 50.000 € e successiva richiesta di restituzione. Le bozze non valgono come reclamo inviato o procedura provata."
       }
     ],
-    "reactieBedrijf": "Ad aprile 2024 Errezeta ha risposto nel merito e offerto un rimedio. L'azienda ha descritto un account sostitutivo redditizio, ha preparato un piano e ha segnalato una richiesta di unione. Lo mostriamo qui accanto al reclamo. Una risposta aggiornata a questo dossier non è ancora stata chiesta. Un rimborso successivo, un trasferimento avvenuto o una chiusura definitiva non risultano dai documenti esaminati qui.",
+    "reactieBedrijf": "Ad aprile 2024 Errezeta ha risposto nel merito e offerto un rimedio. L'azienda ha descritto un account sostitutivo redditizio, ha preparato un piano e ha segnalato una richiesta di unione. Lo mostriamo qui accanto al reclamo. Il 25 novembre 2026 è stata chiesta a Errezeta, all'indirizzo di assistenza e a quello del venditore, una risposta aggiornata a questo dossier e se possa essere pubblicata per intero. Il termine scade il 9 dicembre 2026. Un rimborso successivo, un trasferimento avvenuto o una chiusura definitiva non risultano dai documenti esaminati qui.",
     "volgendeStap": "Verifichiamo consegna e ricavi per ogni accordo, un'eventuale conferma di trasferimento da Amazon e lo stato del testo di chiusura. Resta aperto anche quale soggetto abbia fatto le proposte di rimedio dopo lo scioglimento e se in seguito sia stato rimborsato qualcosa. Le esperienze di altri clienti vengono raccolte con questo appello e verificate separatamente.",
     "leidingFunctie": "Director di Errezeta Publishing Ltd dal 14 ottobre 2021 secondo Companies House. Lo stesso registro la indica anche come director di RZ Business Ltd (12811363), anch'essa sciolta, e riporta nazionalità italiana e Italia come paese di residenza.",
     "bronnenUitleg": [
