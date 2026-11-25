@@ -8,7 +8,10 @@ const d = DOSSIERLIJST.find(d => d.id === 'anp');
 const html = pagina('dossier/anp', true);
 test('de oorspronkelijke claim en zijn tijdlijn blijven gescheiden van openbare procedures', () => {
   const basis = JSON.parse(fs.readFileSync(new URL('../data/wam/dossier-anp-2026-11-25.json', import.meta.url), 'utf8'));
-  for (const k of ['kosten', 'feiten', 'tijdlijn', 'bedragen', 'laatsteStuk']) assert.deepEqual(d[k], basis[k], k);
+  for (const k of ['kosten', 'feiten', 'tijdlijn', 'laatsteStuk']) assert.deepEqual(d[k], basis[k], k);
+  assert.deepEqual(d.bedragen[0], basis.bedragen[0], 'oorspronkelijk eigen voorstel');
+  const uitspraken = d.onderzoek.rechtspraak.length + d.verdieping.find(s => s.id === 'rechtszaken').items.length;
+  assert.equal(d.bedragen.find(b => b.label === 'Nagelezen uitspraken').waarde, String(uitspraken));
   assert.ok(html.indexOf('id="rechtszaken"') < html.indexOf('id="eigen-claim"'));
   assert.equal(d.onderzoek.rechtspraak.length, 8);
 });

@@ -2,6 +2,8 @@
 
 ## Actueel: ANP met spelers, perspectieven, Bakx en crowdfunding (25 november 2026)
 
+Nacontrole live: de teller bovenaan telt nu alle tien besproken uitspraken, inclusief Bakx en de vergelijkingszaak buiten ANP. De afzonderlijke tabel met acht ANP-uitspraken blijft correct als zodanig benoemd. De controle bewaakt dat de totaalteller overeenkomt met beide zaaklijsten; het oorspronkelijke eigen voorstel van €391,29 blijft ongewijzigd.
+
 Op Henkjans aanvullende verzoek is de eerdere ANP-uitbreiding behouden en verdiept. Het samengestelde dossier heeft 21 spelersgroepen, 10 perspectieven, 10 verschillende uitspraken, twee gescheiden crowdfundings en 62 bronverwijzingen. Bakx' eigen zaak/herroeping/PG-verzoek is gescheiden van Kaviaar/ANP; recente partijupdates25sept,1okt en29okt zijn opgenomen. Behandeling21jan2027 is alleen een aankondiging volgens Bakx; geen eigen ingezien eindvonnis, oproeping of geverifieerde bestandsmetadata. Bas van Beek en ANP Foundation met bronstatus. ANP-standpunten en makersbelang blijven zichtbaar. Geen actueel saldo van crowdfundings geschat, geen externe berichten verzonden.
 
 De eerdere dataset data/wam/dossier-anp-2026-11-25.json blijft intact; aanvulling data/wam/anp-perspectieven-2026-11-25.json. lib/wam-anp.js bewaart numerieke bronindices en voegt stabiele bronids toe; d.onderzoek blijft object, extra secties in d.verdieping. Eigen kosten en tijdlijn behouden; datum3apr2025 gelabeld als laatste eigen claimstuk. Bestaande gerichte Demand Radar-meting, ANP-proef en vast AI-panel behouden. Drie extra Perplexity-diagnosevragen3/3, geen ranking- of groeiclaim. Bron/auditnotitie docs/wam-anp-perspectieven-2026-11-25.md;21 gerichte tests en onafhankelijke read-only audit. Uitrolcontrole en IndexNow in centraal log.
