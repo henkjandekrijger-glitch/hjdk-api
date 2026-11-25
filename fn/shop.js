@@ -58,7 +58,8 @@ import { lokkers, kies, KIES_REGELS, STRATEGIEEN } from '../lib/shopkies.js';
 const K_STRATEGIE = 'hjdk:shop:strategie'; // strategie van de dag voor de shoptest (marge of kostprijs)
 const K_MAXLEV = 'hjdk:shop:maxlev'; // B4 (12 nov): hoogste levertijd in werkdagen voor de dagkeuze; ?maxlev=<dagen> op de beschermde host, 0 = geen grens
 import { demandRadar } from '../lib/demandradar.js';
-import * as KW from '../lib/kadolywin.js'; // 25 nov 2026: winactie voor PropellerAds-verkeer (mails verzamelen)
+import * as KW from '../lib/kadolywin.js';
+import { checkCatalogus, checkTekst } from '../lib/productcheck.js'; // 25 nov 2026: productcheck (titels, Waarborgwet, uitvoering, categorie) // 25 nov 2026: winactie voor PropellerAds-verkeer (mails verzamelen)
 const SHOP_UIT = false; // 27 okt: shop op kadoly.com; Henkjan: "Zet er 20 aan maar verander domeinnaam in kadoly.com" (ook propellerads-mcp lib/budget.ts SHOP_UIT)
 const K_GETEST = 'hjdk:shop:getest'; // { product-id: eerste testdag } (shoptest, lib/shopkies.js)
 
@@ -1102,6 +1103,11 @@ export default async function handler(req, res) {
     if (op === 'rss') return await shopRss(req, res, LAND() + '/api/shop/rss');
     if (op === 'land') return await land(req, res, url);
     if (op === 'uit') return await uitgang(req, res, url);
+    if (op === 'productcheck') { // 25 nov 2026 (Henkjan: "doe 2"): tegenstrijdigheden in de catalogus met per product een voorstel; de winkel past ze toe (TAAK F)
+      const cat = await catalog(); const r = checkCatalogus(cat.items || []); const soort = String(url.searchParams.get('soort') || ''); if (soort) r.rijen = r.rijen.filter(x => x.issues.includes(soort));
+      res.setHeader('cache-control', 's-maxage=1800'); res.setHeader('access-control-allow-origin', '*');
+      if (url.searchParams.get('vorm') === 'tekst') { res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(checkTekst(r, Number(url.searchParams.get('max')) || 40)); }
+      return res.status(200).json(Object.assign({ ok: true, at: new Date().toISOString(), uitleg: 'voorstel = nieuwe titel (null = titel blijft); uitvoering = twee materialen zonder keuze, eerst bij de leverancier bevestigen; categorie = voorgestelde categorie' }, r)); }
     if (op === 'win') return await winAanmeld(req, res);
     if (op === 'winvoorwaarden') { res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 's-maxage=3600'); return res.status(200).send(KW.voorwaardenPagina()); }
     if (op === 'winstand' || op === 'winloting') { // stand en trekking van de winactie, alleen via de beschermde vercel.app-host
