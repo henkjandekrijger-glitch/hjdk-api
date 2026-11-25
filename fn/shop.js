@@ -697,8 +697,8 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 </body></html>`;
   res.setHeader('content-type', 'text/html; charset=utf-8'); res.setHeader('cache-control', 'no-store'); res.setHeader('x-robots-tag', 'noindex, nofollow');
   if (winPa) { let setNaam = '', bedrag = 0; if (bundel) { try { const bu = await kv.get('hjdk:shop:bundel:' + bundel); setNaam = (bu && (bu.naam || bu.titel)) || ''; bedrag = (bu && bu.totaal) || 0; } catch (e) {} }
-    const arm = await KW.kiesArm(kv, code); const pot = KW.VARIANTEN[arm] && KW.VARIANTEN[arm].pot ? await KW.potGrootte(kv) : 0; // lerende pagina: versie per klik, leermoment elke 50 bezoeken
-    return res.status(200).send(KW.winPagina({ held, set: setNaam, bedrag, code, uitHref: uit(pid, 'win'), look: look(ACC, { dark: false }), arm, pot })); }
+    const keus = await KW.kiesKeus(kv, code, { a: cr, z: zone, k: camp, h: apparaat(req) }); // lerend op elke variabele: stand per factor per klik, leermoment elke 50 bezoeken
+    return res.status(200).send(KW.winPagina({ held, set: setNaam, bedrag, code, uitHref: uit(pid, 'win'), look: look(ACC, { dark: false }), keus })); }
   return res.status(200).send(html);
 }
 
@@ -717,7 +717,7 @@ async function winAanmeld(req, res) {
     toestemming: 'Winactie go.kadoly.com: e-mailadres voor de winactie en de mail van Kadoly met sieraden en cadeautips; bevestigd via de link in de mail; afmelden met één klik.' }, ip).catch(e => ({ ok: false, fout: String(e && e.message || e).slice(0, 80) }));
   if (r.ok && rec) { try { await kv.raw(['HSET', 'kd:win:keus', email, String(rec.bu || rec.p || '')]); } catch (e) {} } // wat de winnaar krijgt: het product of de set van zijn actiepagina
   if (r.ok && r.al) { try { await KW.doeMee(kv, email); } catch (e) {} }
-  if (r.ok && code) { try { await KW.armMail(kv, code); } catch (e) {} } // telt de aanmelding bij de versie van de pagina (lerend per 50) // al bevestigd op de lijst: meteen in de pot van deze week
+  if (r.ok && code) { try { await KW.keusMail(kv, code); } catch (e) {} } // telt de aanmelding bij de versie van de pagina (lerend per 50) // al bevestigd op de lijst: meteen in de pot van deze week
   if (r.ok && rec && !rec.ml) { rec.ml = Date.now(); const keys = ['sh-' + net + '-mail', 'sh-d' + D8() + '-' + net + '-mail']; if (rec.z) keys.push('sh-' + net + '-z' + rec.z + '-mail'); if (rec.a) keys.push('sh-' + net + '-a' + rec.a + '-mail'); if (rec.k) keys.push('sh-' + net + '-k' + rec.k + '-mail');
     await inc(keys); try { await kv.set(K.rec(code), rec, { ex: 7 * 86400 }); } catch (e) {} }
   if (!r.ok) { try { await inc(['sh-win-fout', 'sh-win-fout-' + String(r.fout || 'x').replace(/[^a-z]/g, '').slice(0, 12)]); } catch (e) {} }
@@ -788,6 +788,7 @@ async function uitgang(req, res, url) {
 
 async function baken(req, res) {
   let b = {}; try { b = typeof req.body === 'string' ? JSON.parse(req.body) : (req.body || {}); } catch (e) {}
+  if (b.e === 'veld') { const c = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); if (c && !isBot(req.headers['user-agent'])) { try { await KW.keusVeld(kv, c); } catch (x) {} } return res.status(204).end(); } // winactie: tik in het e-mailveld = vroeg signaal voor het leren
   const code = String(b.c || '').replace(/[^a-z0-9]/gi, '').slice(0, 14); const e = b.e === 'mens' ? 'mens' : b.e === 'eng' ? 'eng' : '';
   if (!e || isBot(req.headers['user-agent'])) return res.status(204).end();
   if (!code) { await inc(['sh-x-' + e, 'sh-d' + D8() + '-x-' + e]); return res.status(204).end(); }
@@ -1681,6 +1682,26 @@ export default async function handler(req, res) {
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const dagen = Math.max(1, Math.min(60, Number(url.searchParams.get('dagen')) || 14)); const r = await verkoopWacht(true, dagen);
       res.setHeader('cache-control', 'no-store'); return res.status(200).json(r); }
+    if (op === 'koperprofiel') { // 25 nov (Henkjan: "Onderzoek wat voor iemand het kocht en vorige keer ook zodat we gerichter kunnen adverteren."): per betaalde bestelling wat we weten zonder persoonsgegevens: producten, bedrag, moment, toestel en app, terugkerend, bron. Beschermde host
+      const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
+      const dagen = Math.max(1, Math.min(120, Number(url.searchParams.get('dagen')) || 90)); let orders = [], feedFout = null;
+      try { const r = await fetch(SHOP + '/api/lus-feed', { headers: shopKop(), signal: AbortSignal.timeout(20000) }); if (r.ok) { const j = await r.json(); orders = Array.isArray(j.orders) ? j.orders : []; } else feedFout = 'HTTP ' + r.status; } catch (e) { feedFout = String(e.message || e).slice(0, 80); }
+      let items = []; try { items = (await catalog()).items || []; } catch (e) {} const P = {}; for (const i of items) P[i.id] = i;
+      const uaVan = ua => { ua = String(ua || ''); const os = /iPhone|iPad/.test(ua) ? 'iPhone/iPad' : /Android/.test(ua) ? 'Android' : /Windows/.test(ua) ? 'Windows' : /Macintosh/.test(ua) ? 'Mac' : ua ? 'anders' : '-';
+        const app = /musical_ly|BytedanceWebview|TikTok/i.test(ua) ? 'TikTok-app' : /Instagram/.test(ua) ? 'Instagram-app' : /FBAN|FBAV|FB_IAB/.test(ua) ? 'Facebook-app' : /Pinterest/i.test(ua) ? 'Pinterest-app' : /GSA\//.test(ua) ? 'Google-app' : ua ? 'browser' : '-';
+        const m = ua.match(/OS (\d+)_/) || ua.match(/Android (\d+)/); return { os, app, versie: m ? m[1] : null, model: (ua.match(/; ([A-Z]{2,}[\w-]*?) Build/) || ua.match(/; (SM-[\w]+|Pixel [\w ]+)/) || [])[1] || null }; };
+      const nlTijd = t => { const d = new Date(t); const f = new Intl.DateTimeFormat('nl-NL', { timeZone: 'Europe/Amsterdam', weekday: 'long', hour: '2-digit', minute: '2-digit' }).format(d); return f; };
+      const herkomstHulp = { getRec: hj => kv.get(K.rec(hj)), zoekEm: async o => { const u = gebruikerVan(o); return (u.em || u.ph) ? await cmZoek(kv, u) : ''; }, bezoekVan: async o => { const u = gebruikerVan(o); if (!u.em) return null; const v = await kv.get('cmv:em:' + u.em); return v ? await kv.get('cmv:' + v) : null; } };
+      const vanaf = Date.now() - dagen * 864e5, betaald = orders.filter(o => /paid|betaald/i.test(String(o.status || '')) && (Date.parse(o.paid_at || o.created_at || '') || 0) >= vanaf).sort((a, b) => String(a.created_at).localeCompare(String(b.created_at)));
+      const perEm = {}, lijst = []; const nr = new Map(); let n = 0;
+      for (const o of betaald) { const u = gebruikerVan(o); const sleutel = u.em || u.ph || ''; const keer = sleutel ? (perEm[sleutel] = (perEm[sleutel] || 0) + 1) : 1; if (sleutel && !nr.has(sleutel)) nr.set(sleutel, ++n);
+        const its = Array.isArray(o.items) && o.items.length ? o.items.map(i => ({ p: String((i && (i.product_id || i.id || i.pid)) || ''), n: num(i && (i.quantity || i.qty)) || 1 })) : [{ p: String(o.product_id || ''), n: num(o.quantity) || 1 }];
+        let bron = null; try { bron = await bronVan(o, herkomstHulp); } catch (e) {} const t = o.paid_at || o.created_at;
+        lijst.push({ at: t, moment: t ? nlTijd(t) : null, bedrag: num(o.amount), methode: String(o.payment_method || ''), koper: sleutel ? 'koper ' + nr.get(sleutel) : 'onbekend', keerDatHijKocht: keer, telefoonGegeven: !!u.ph,
+          producten: its.map(r => { const i = P[r.p] || {}; return { id: r.p, stuks: r.n, titel: i.t || i.title || null, soort: i.c || i.cat || i.categorie || null, prijs: i.p != null ? num(i.p) : null, merk: i.m || i.merk || null }; }), toestel: uaVan(u.ua), bron: bron && (bron.bron || bron.net || bron) }); }
+      const tel = f => lijst.reduce((o, x) => { const k = f(x); o[k] = (o[k] || 0) + 1; return o; }, {});
+      res.setHeader('cache-control', 'no-store');
+      return res.status(200).json({ ok: true, dagen, feedFout, bestellingen: lijst.length, kopers: n, terugkerend: Object.values(perEm).filter(v => v > 1).length, samen: { toestel: tel(x => x.toestel.os), app: tel(x => x.toestel.app), methode: tel(x => x.methode), dag: tel(x => String(x.moment || '').split(' ')[0]), uur: tel(x => String(x.moment || '').split(' ')[1] ? String(x.moment).split(' ')[1].slice(0, 2) : '-') }, lijst: lijst.reverse() }); }
     if (op === 'kassalek') { // 16 nov (Henkjan: "Ja zoek maar uit maar ik denk dat het verkeersbron is ."): waar strandt het betalen, per verkeersbron. Alleen tellingen en bestellingen zonder persoonsgegevens, alleen via de beschermde vercel.app-host
       const host = String(req.headers['x-forwarded-host'] || req.headers.host || '').split(':')[0]; if (!/\.vercel\.app$/i.test(host)) return res.status(404).send('Niet gevonden');
       const dagen = Math.max(1, Math.min(60, Number(url.searchParams.get('dagen')) || 28));
