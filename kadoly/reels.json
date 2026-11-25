@@ -433,8 +433,7 @@
       "gemeten": {
         "clickmind": {
           "kliks": 4,
-          "echt": 2,
-          "stand": "2026-11-24"
+          "echt": 2
         }
       }
     },
@@ -488,6 +487,16 @@
           "bereik": 3
         },
         "facebook_18u": {
+          "weergaven": 1,
+          "bereik": 1
+        },
+        "instagram": {
+          "dag": "2026-11-25",
+          "weergaven": 4,
+          "bereik": 4
+        },
+        "facebook": {
+          "dag": "2026-11-24",
           "weergaven": 1,
           "bereik": 1
         }
@@ -759,6 +768,19 @@
           "status": "gepland",
           "link": "go.kadoly.com/o?k=fb&p=oc_4173959369080833&c=v-n261124b"
         }
+      },
+      "gemeten": {
+        "instagram_13u": {
+          "dag": "2026-11-25",
+          "weergaven": 5,
+          "bereik": 3,
+          "likes": 1
+        },
+        "clickmind": {
+          "kliks": 4,
+          "echt": 4,
+          "mandje": 1
+        }
       }
     },
     {
@@ -786,7 +808,82 @@
           "status": "gepland",
           "link": "go.kadoly.com/o?k=fb&p=oc_4173957638225921&c=v-n261124c"
         }
+      },
+      "gemeten": {
+        "instagram_18u": {
+          "dag": "2026-11-25",
+          "weergaven": 5,
+          "bereik": 3
+        },
+        "clickmind": {
+          "kliks": 5,
+          "echt": 1
+        }
       }
+    },
+    {
+      "id": "n261125a",
+      "soort": "set",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261125a.mp4",
+      "pids": [
+        "oc_4251974059147265",
+        "oc_4251974136053761",
+        "oc_4251974126206977"
+      ],
+      "tekst": "3 favorieten van LanLivia:\n1. Elegante Unisex Haringbeen Ketting 7mm van LanLivia\n2. Sterling Zilveren Cuban Schakelarmband met Zwarte Onyx\n3. Gedurfde Sterling Zilveren Cuban Schakelarmband LanLivia\nWelke kies jij?\n\nLink in bio, zoek op LanLivia.\n\n#kadoly #wooninspiratie #homedecor #cadeautip",
+      "tiktok_tekst": "3 favorieten van LanLivia. Welke kies jij? Link in bio. #kadoly #wooninspiratie #homedecor #cadeautip",
+      "bron": "kadoly-video",
+      "gepost": "2026-11-25",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b069fc7671b31137dcfcf3e",
+          "tijdvak": "21:00",
+          "status": "gepland",
+          "opm": "hashtags in de post vervangen door #kadoly #sieraden #zilver #armband"
+        },
+        "facebook": {
+          "status": "overgeslagen",
+          "opm": "Facebook-koppeling verlopen (Meta error 190)"
+        }
+      }
+    },
+    {
+      "id": "n261125b",
+      "soort": "finds",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261125b.mp4",
+      "pids": [
+        "oc_4174002162204675",
+        "oc_4174004464058373",
+        "oc_4174004624195585"
+      ],
+      "tekst": "3 finds voor je muur:\n1. Wandklok Mintgroen Koekoek 24x27cm voor Trendy Interieurs\n2. Wanddecoratie Laten We In Bed Blijven Dibond 120x20 cm\n3. Muurovaal Art Face Decoratie 40x25 cm voor Jouw Interieur\nWelke kies jij?\n\nLink in bio, zoek op Housevitamin.\n\n#kadoly #wanddecoratie #wooninspiratie #interieur #homedecor",
+      "tiktok_tekst": "3 finds voor je muur. Welke kies jij? Link in bio. #kadoly #wanddecoratie #wooninspiratie #interieur #homedecor",
+      "bron": "kadoly-video",
+      "gepost": "2026-11-25",
+      "platforms": {
+        "instagram": {
+          "zernio_id": "6b069fc69a384db5babfb774",
+          "tijdvak": "15:30",
+          "status": "gepland"
+        },
+        "facebook": {
+          "status": "overgeslagen",
+          "opm": "Facebook-koppeling verlopen (Meta error 190)"
+        }
+      }
+    },
+    {
+      "id": "n261125c",
+      "soort": "kleurkeuze",
+      "url": "https://ga3huwvh2mwrwypu.public.blob.vercel-storage.com/kadoly/video/n261125c.mp4",
+      "pids": [
+        "oc_4254790811123713",
+        "oc_4254790811467777",
+        "oc_4254790842564609"
+      ],
+      "tekst": "Welke kleur kies jij?\n1. Heren Precision Horloge Bruin Leer Witte Wijzerplaat - Menthe à l'eau (bruin)\n2. Heren Zwarte Leren Horloge Blauwe Wijzerplaat Multifunctioneel - Menthe à l'eau (zwart)\n3. Heren 24-Uur Horloge met Zwart- Oranje NATO Band (oranje)\nZet je nummer in de reacties.\n\nLink in bio, zoek op Menthe à l'eau.\n\n#kadoly #wooninspiratie #homedecor #cadeautip",
+      "tiktok_tekst": "Welke kleur kies jij: bruin, zwart of oranje? Link in bio. #kadoly #wooninspiratie #homedecor #cadeautip",
+      "bron": "kadoly-video"
     }
   ],
   "lerend": {
@@ -807,7 +904,8 @@
         "videos_gemeten": 4,
         "cm_kliks": 16,
         "cm_echt": 4,
-        "ig_weergaven_per_video": 6.8
+        "ig_weergaven_per_video": 6.8,
+        "opm": "25 nov: n261124b (Green-goose sokken) 4 kliks, 4 echt, 1 mandje binnen een dag: beste video tot nu toe"
       },
       "pov": {
         "videos_gemeten": 1,
@@ -820,7 +918,7 @@
         "cm_kliks": 3,
         "cm_echt": 2,
         "cm_mandje": 1,
-        "opm": "kerstfinds (22 nov) eerste mandje via een video, nog geen 24 uur",
+        "opm": "kerstfinds 1 mandje; 25 nov: n261124c 5 kliks, 1 echt",
         "ig_weergaven_per_video": 3
       }
     },
@@ -830,7 +928,8 @@
       "2026-11-21: 08:30 al voorbij (ronde 09:41 NL), dus 2 per platform op IG en FB: 15:30 17uur_donker (pov, eerste test van die soort, past bij het tijdstip), 21:00 steenlampen_set (set: 7 Clickmind-kliks over 2 video's tegen kleurkeuze 2). Weergaven per reel nog 0 tot 2, te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd; wachtrij zonder gepost: 20.",
       "2026-11-22: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 kerstfinds (finds, eerste test van die soort) en 21:00 n261119a wollen dekens (set: 7 Clickmind-kliks over 2 video's, kleurkeuze 2). IG-reels van 21 nov kregen voor het eerst bereik: steenlampen_set 16 weergaven, 17uur_donker 12 (tegen 1 tot 4 eerder); nog niet 24 uur oud. FB-reels blijven 0 in Zernio terwijl Clickmind wel FB-kliks telt. Te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd.",
       "2026-11-23: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 n261118c (finds, planten; finds gaf met kerstfinds het eerste Clickmind-mandje via een video) en 21:00 n261118a (set, Housevitamin kerst; set heeft 12 Clickmind-kliks over 4 video's en 21:00 gaf de meeste IG-weergaven: steenlampen 20, n261119a 5 kliks). IG-weergaven per video: set 6,8, pov 12 (1 video), kleurkeuze 1,5. FB-reels 2 tot 8 weergaven. Te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd.",
-      "2026-11-24: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 n261124c (finds, in huis; finds heeft het enige Clickmind-mandje via video, kerstfinds) en 21:00 n261124b (set, Green-goose sokken: past bij schoencadeautjes uit de voorrang van het groei-account; set nu 16 Clickmind-kliks, 4 echt). Weergaven per video blijven 1 tot 10 (kerstfinds FB 10, IG 3); te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd (n261124a horloges overgeslagen: hashtags passen niet)."
+      "2026-11-24: 08:30 al voorbij (ronde 09:43 NL), dus 2 per platform op IG en FB: 15:30 n261124c (finds, in huis; finds heeft het enige Clickmind-mandje via video, kerstfinds) en 21:00 n261124b (set, Green-goose sokken: past bij schoencadeautjes uit de voorrang van het groei-account; set nu 16 Clickmind-kliks, 4 echt). Weergaven per video blijven 1 tot 10 (kerstfinds FB 10, IG 3); te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd (n261124a horloges overgeslagen: hashtags passen niet).",
+      "2026-11-25: Facebook-koppeling in Zernio verlopen (Meta error 190 sinds 24 nov 23:34 UTC), dus vandaag alleen Instagram: 08:30 al voorbij (ronde 09:42 NL), 15:30 n261125b (finds, muurdecoratie Housevitamin) en 21:00 n261125a (set, LanLivia zilveren sieraden; set wint op Clickmind: n261124b sokken 4 echt en 1 mandje, n261118a 2 echt). IG-weergaven per video blijven 3 tot 5; te weinig om tijdvakken te schuiven. YouTube niet gekoppeld. 3 nieuwe video's uit kadoly-video toegevoegd (n261125a-c)."
     ]
   }
 }
