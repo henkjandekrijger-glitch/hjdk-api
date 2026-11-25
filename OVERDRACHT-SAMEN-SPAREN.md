@@ -461,6 +461,8 @@ Uitzetten kan altijd terug: `op=clubs&zet=1&aan=0`, of de `LIVE`-vlaggen terug o
 
 ## 11. Open punten
 
+- Spaarkaart-test uit de modal (25 nov): Henkjan bevestigt het gratis eerste cadeau = een cadeau uit de spaarcadeaus van één kaart (kost Kadoly tot €10). Tot de kassa kan inwisselen, regelt Henkjan het per mail (de motor mailt bij 5 zegels met CC).
+
 1. **Henkjans feedback op de 19 schermen** (per nummer). Daarna aanpassen en de afdrukken vernieuwen.
 2. **TAAK Z in de winkel**: zegels tonen, bedankpagina, bezorgd in /api/lus-feed, inwisselen in de kassa.
 3. **Knoppen in de Kadoly-mails**: rond, of hoeken van 12px zoals de site? Antwoord van Henkjan nodig. Het geldt voor alle Kadoly-mails (`lib/kadoly-nieuws.js` knop).
@@ -503,6 +505,8 @@ Uitzetten kan altijd terug: `op=clubs&zet=1&aan=0`, of de `LIVE`-vlaggen terug o
 - **Proefdata telt nergens mee**: orders `PROEF-...`, partners `test-...`, `ssBestelling` met `test`. Ruim op via doorloopstap 12.
 
 ## 13. Logboek (nieuwste bovenaan)
+
+- 2026-11-25 (spaar-modal, Henkjan: "aankondigen om te testen. Extreem korte uitleg en als ze nu inschrijven krijgen ze meteen 3 van de 5 en 5 is gratis eerste cadeau !!!"): nieuwe functie `ssModalStart` in lib/samensparen.js. Na een bevestigde aanmelding via de modal-arm m-spaar (lib/modalmotor.js) staat er een kaart met 3 zegels (o modal, mt 1; eenmalig per adres via ss:modal:<em>; bestaande kaart krijgt ze erbij; ss:los gaat mee). Ze tellen als aankoopzegels: uitzondering op regel 7 met Henkjans woord, alleen voor deze test. LIVE blijft false. De dagronde van de motor mailt bij een volle kaart (CC henkjan@kadoly.com); inwisselen gaat via Henkjan. Cadeau: uit de spaarcadeaus van één kaart (kost Kadoly tot 5 x zegelwaarde = €10); open punt voor Henkjan. test-samensparen voor en na: ALLES GOED.
 
 - 2026-11-24 (spaar-chat2): 5 servers tegelijk was niet genoeg: Noord-Brabant mislukte ook (504 en vier keer afgebroken na 100 s). Gemeten: de vraag was te zwaar. Nu twee lichte delen per provincie en het naamfilter bij ons, tot drie delen per ronde; test erbij (clubs 44). Oordeel: de eerstvolgende zoekronde moet clubs boven 541 geven.
 - 2026-11-24 (spaar-chat2): de reparatie van vannacht hielp niet: ook Utrecht mislukte (2 van 12, 541 clubs). Oorzaak gemeten: 3 van de 4 Overpass-servers gaven niets terug en de eerste at het budget op. Nu 5 servers tegelijk met overpass.openstreetmap.fr erbij, een `remark` telt als mislukt, twee provincies per ronde als het snel gaat; tests erbij (clubs 43). Oordeel: de eerstvolgende zoekronde moet Utrecht lezen.

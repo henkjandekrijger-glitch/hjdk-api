@@ -41,6 +41,8 @@ for(const p of bewijs.ONDERZOEK){const {body}=await render('slug=onderzoek-'+p.i
 assert.ok((await render('slug=onderzoek-en-bronnen')).body.includes('geen onafhankelijke testorganisatie'));
 const all=(await render('slug=alle-producten')).body;assert.equal((all.match(/<tr id="product-/g)||[]).length,catalog.filter(i=>i.vr!==false).length); assert.ok(all.includes('/alle-producten'));
 const home=(await render('')).body;assert.ok(home.includes('/onderzoek-en-bronnen')); assert.ok(!home.includes('5% bij 2 producten')); assert.ok(!home.includes('eerste bestelling wordt gratis'));
+// 25 nov 2026: lerende modal op elke gidspagina (cm.js kadolygids, async) en de chat-shim window.cwVraag; nooit twee cm.js-regels
+for (const h of [home, (await render('slug=alle-producten')).body]) { assert.equal((h.match(/cm\.js/g) || []).length, 1, 'precies één cm.js'); assert.ok(h.includes('data-modal="kadolygids"') && /cm\.js"[^>]*async/.test(h) && h.includes('window.cwVraag')); }
 // Alleen de bestaande beschermde inspectie geeft de volledige HTML-linkbewijzen terug.
 { const oudFetch=context.fetch;
   context.fetch=async()=>({status:200,headers:new Map(),text:async()=>'<a href="https://gids.kadoly.com/tv-meubel-breedte-berekenen">Bereken</a>'});

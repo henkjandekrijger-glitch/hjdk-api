@@ -2091,6 +2091,16 @@
       "destination": "/api/gids?op=nbaf"
     },
     {
+      "source": "/nieuws/voorkeur",
+      "has": [
+        {
+          "type": "host",
+          "value": "gids\\.kadoly\\.com"
+        }
+      ],
+      "destination": "/api/gids?op=nbvoorkeur"
+    },
+    {
       "source": "/nieuws/push",
       "has": [
         {
