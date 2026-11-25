@@ -321,6 +321,12 @@ export default async function handler(req, res) {
       if (q('vorm') === 'json') return res.status(200).json(t.json);
       res.setHeader('content-type', 'text/plain; charset=utf-8'); return res.status(200).send(t.tekst); }
     if (op === 'dashboard') { // dashboard voor alle projecten (Henkjan 25 nov 2026): doel, voortgang, planning, overdracht en logboek per project; ?zet=<JSON> werkt bij, ?vorm=json|tekst, ?project=<id>
+      if (req.method === 'POST' && !beschermd(req)) { // projecten zetten hun eigen voortgang bij vanuit de cloud (Henkjan 25 nov: "onafh comp en account"): alleen zet, met de gedeelde team-sleutel
+        const bearer = String(req.headers.authorization || '').replace(/^Bearer\s+/i, ''); const given = [req.headers['x-hjdk-token'], bearer].filter(Boolean);
+        const ok = [process.env.ZICHT_TOKEN, process.env.GADS_TOKEN, process.env.HJDK_TOKEN].filter(Boolean);
+        if (!given.some(g => ok.includes(g))) return res.status(401).json({ ok: false, fout: 'sleutel' });
+        const D = await import('../lib/dashboard.js'); const b = leesJson(req.body) || {};
+        return res.status(200).json(await D.zetDash(kv, b, b.wie || 'project')); }
       if (!beschermd(req)) return res.status(403).send('alleen via de beschermde vercel.app-host');
       const D = await import('../lib/dashboard.js'); res.setHeader('cache-control', 'no-store');
       if (q('zet')) { let b = null; try { b = JSON.parse(q('zet')); } catch (e) {} const u = b && typeof b === 'object' ? await D.zetDash(kv, b, q('wie') || '') : { ok: false, fout: 'zet=<JSON> met project en de velden die veranderen' }; return res.status(u.ok ? 200 : 400).json(u); }
