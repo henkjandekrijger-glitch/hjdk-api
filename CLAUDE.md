@@ -17,6 +17,7 @@ Dashboard alle projecten (Henkjan 25 nov 2026: "Maak een klikbaar dashboard voor
 - planregel af of erbij: `?zet={"project":"<id>","klaar":"<tekst of datum>"}` en `?zet={"project":"<id>","erbij":{"d":"JJJJ-MM-DD","t":"wat"}}`
 - doel alleen op Henkjans woord: `?zet={"project":"<id>","doel":"...","doelgetal":<getal>,"eenheid":"..."}`
 - het logboek op het dashboard is het werklog: schrijf met `wie=<project>-<chat>` (kdp-, wam-, sealed-, surgery-, spaarpot-, spaar-, nexy-, tk-, kz-, cur-, shop-, content-, post-).
+- archiveren doet Henkjan zelf met de link Archiveer op de pagina (terug onder Archief); een chat archiveert alleen op zijn woord (`"archief":true`). De pagina houdt de vormgeving van sealedintent.com.
 Een nieuw project krijgt een regel in PROJECTEN (`lib/dashboard.js`) of meldt zich met `zet` en een naam.
 
 De overdracht is de complete werking en stand (Henkjan 19 okt: "Zorg dat op vercel een handover doc staat met complete status en dat dat handover doc altijd wordt bijgewerkt bestaat uit complete werking en status"):

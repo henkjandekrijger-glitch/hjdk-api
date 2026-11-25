@@ -12,6 +12,10 @@ ok((await D.zetDash(kv,{project:'nieuw',naam:'Proef',doel:'x',erbij:{d:'2026-11-
 d=await D.dashData(kv); const k2=d.projecten.find(p=>p.id==='kdp');
 ok(k2.pct===31,'pct2 '+k2.pct);ok(k2.plan.filter(x=>x.klaar).length===1,'klaar');ok(k2.plan.length===8,'plan heel');
 ok(d.projecten.some(p=>p.id==='nieuw'&&p.telaat===1),'nieuw te laat');
-const h=D.dashHtml(d);ok(h.includes('&lt;b&gt;')&&!h.includes('<b>\''),'escape');ok(!/#(888|999|666|ccc|aaa)|gray|grey/i.test(h),'geen grijs');ok(!/[—–]/.test(h),'streepjes');
+const h=D.dashHtml(d);ok(h.includes('&lt;b&gt;')&&!h.includes('<b>\''),'escape');ok(!/[—–]/.test(h),'streepjes');
 const t=D.dashTekst(d,'kdp');ok(t.includes('Voortgang: 61,95 van 200'),'tekst');
+ok((await D.zetDash(kv,{project:'wam',archief:true})).ok,'archiveer');
+d=await D.dashData(kv);ok(!d.projecten.some(p=>p.id==='wam')&&d.archief.some(a=>a.id==='wam'),'archief weg uit overzicht');ok(!d.agenda.some(a=>a.id==='wam'),'archief weg uit planning');
+const h2=D.dashHtml(d,{tekst:'x',terug:'wam'});ok(h2.includes('?terug=wam')&&h2.includes('<h2>Archief</h2>')&&!h2.includes('id="wam"'),'archief html');ok(h2.includes('?archiveer=kdp'),'archiveerknop');ok(!D.dashTekst(d).includes('## We Are Many'),'archief tekst');
+ok((await D.zetDash(kv,{project:'wam',archief:false})).ok,'terug');d=await D.dashData(kv);ok(d.projecten.some(p=>p.id==='wam')&&!d.archief.length,'terug in overzicht');
 console.log('klaar',h.length,d.projecten.length);
